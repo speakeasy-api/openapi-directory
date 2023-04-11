@@ -1,10 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class DictlayerdataCommon extends SpeakeasyBase {
+    /**
+     * The display title and localized canonical name to use when searching for this entity on Google search.
+     */
     title?: string;
 }
 /**
  * The source, url and attribution for this dictionary data.
-**/
+ */
 export declare class DictlayerdataDictSource extends SpeakeasyBase {
     attribution?: string;
     url?: string;
@@ -65,7 +68,7 @@ export declare class DictlayerdataDictWordsSenses extends SpeakeasyBase {
 }
 /**
  * The words with different meanings but not related words, e.g. "go" (game) and "go" (verb).
-**/
+ */
 export declare class DictlayerdataDictWordsSource extends SpeakeasyBase {
     attribution?: string;
     url?: string;
@@ -74,9 +77,15 @@ export declare class DictlayerdataDictWords extends SpeakeasyBase {
     derivatives?: DictlayerdataDictWordsDerivatives[];
     examples?: DictlayerdataDictWordsExamples[];
     senses?: DictlayerdataDictWordsSenses[];
+    /**
+     * The words with different meanings but not related words, e.g. "go" (game) and "go" (verb).
+     */
     source?: DictlayerdataDictWordsSource;
 }
 export declare class DictlayerdataDict extends SpeakeasyBase {
+    /**
+     * The source, url and attribution for this dictionary data.
+     */
     source?: DictlayerdataDictSource;
     words?: DictlayerdataDictWords[];
 }

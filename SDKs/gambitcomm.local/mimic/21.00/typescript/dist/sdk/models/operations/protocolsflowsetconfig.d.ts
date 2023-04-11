@@ -1,14 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolSflowSetConfigPathParams extends SpeakeasyBase {
-    agentNum: number;
-    argument: string;
-    value: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolSflowSetConfigRequest extends SpeakeasyBase {
-    pathParams: ProtocolSflowSetConfigPathParams;
+    /**
+     * Agent to set the SFLOW configuration
+     */
+    agentNum: number;
+    /**
+     * Parameter to set the SFLOW configuration
+     */
+    argument: string;
+    /**
+     * Value to set the SFLOW configuration
+     */
+    value: string;
 }
 export declare class ProtocolSflowSetConfigResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolSflowSetConfig200ApplicationJSONString?: string;
 }

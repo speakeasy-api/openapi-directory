@@ -1,36 +1,59 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SaveRevisionUsingGetQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class SaveRevisionUsingGETRequest extends SpeakeasyBase {
     padID?: string;
     rev?: string;
 }
-export declare class SaveRevisionUsingGet200ApplicationJson extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class SaveRevisionUsingGet500ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class SaveRevisionUsingGet400ApplicationJson extends SpeakeasyBase {
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class SaveRevisionUsingGet401ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class SaveRevisionUsingGet401ApplicationJson extends SpeakeasyBase {
+/**
+ * generic api error (code 1)
+ */
+export declare class SaveRevisionUsingGet400ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class SaveRevisionUsingGet500ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class SaveRevisionUsingGet200ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class SaveRevisionUsingGetRequest extends SpeakeasyBase {
-    queryParams: SaveRevisionUsingGetQueryParams;
-}
-export declare class SaveRevisionUsingGetResponse extends SpeakeasyBase {
+export declare class SaveRevisionUsingGETResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    saveRevisionUsingGET200ApplicationJSONObject?: SaveRevisionUsingGet200ApplicationJson;
-    saveRevisionUsingGET400ApplicationJSONObject?: SaveRevisionUsingGet400ApplicationJson;
-    saveRevisionUsingGET401ApplicationJSONObject?: SaveRevisionUsingGet401ApplicationJson;
-    saveRevisionUsingGET500ApplicationJSONObject?: SaveRevisionUsingGet500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    saveRevisionUsingGET200ApplicationJSONObject?: SaveRevisionUsingGet200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    saveRevisionUsingGET400ApplicationJSONObject?: SaveRevisionUsingGet400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    saveRevisionUsingGET401ApplicationJSONObject?: SaveRevisionUsingGet401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    saveRevisionUsingGET500ApplicationJSONObject?: SaveRevisionUsingGet500ApplicationJSON;
 }

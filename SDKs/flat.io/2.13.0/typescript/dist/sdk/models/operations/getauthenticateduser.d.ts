@@ -1,18 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetAuthenticatedUserQueryParams extends SpeakeasyBase {
-    onlyId?: boolean;
-}
+import { AxiosResponse } from "axios";
 export declare class GetAuthenticatedUserSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class GetAuthenticatedUserRequest extends SpeakeasyBase {
-    queryParams: GetAuthenticatedUserQueryParams;
-    security: GetAuthenticatedUserSecurity;
+    /**
+     * Only return the user id
+     */
+    onlyId?: boolean;
 }
 export declare class GetAuthenticatedUserResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Error
+     */
     flatErrorResponse?: shared.FlatErrorResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Current user details
+     */
     userDetails?: shared.UserDetails;
 }

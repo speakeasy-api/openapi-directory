@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class GroupsVideos {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,21 +9,22 @@ export declare class GroupsVideos {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * addVideoToGroup - Add a video to a group
-    **/
-    addVideoToGroup(req: operations.AddVideoToGroupRequest, config?: AxiosRequestConfig): Promise<operations.AddVideoToGroupResponse>;
+     * Add a video to a group
+     */
+    addVideoToGroup(req: operations.AddVideoToGroupRequest, security: operations.AddVideoToGroupSecurity, config?: AxiosRequestConfig): Promise<operations.AddVideoToGroupResponse>;
     /**
-     * deleteVideoFromGroup - Remove a video from a group
-    **/
-    deleteVideoFromGroup(req: operations.DeleteVideoFromGroupRequest, config?: AxiosRequestConfig): Promise<operations.DeleteVideoFromGroupResponse>;
+     * Remove a video from a group
+     */
+    deleteVideoFromGroup(req: operations.DeleteVideoFromGroupRequest, security: operations.DeleteVideoFromGroupSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteVideoFromGroupResponse>;
     /**
-     * getGroupVideo - Get a specific video in a group
+     * Get a specific video in a group
      *
+     * @remarks
      * Check if a group has a video.
-    **/
+     */
     getGroupVideo(req: operations.GetGroupVideoRequest, config?: AxiosRequestConfig): Promise<operations.GetGroupVideoResponse>;
     /**
-     * getGroupVideos - Get all the videos in a group
-    **/
+     * Get all the videos in a group
+     */
     getGroupVideos(req: operations.GetGroupVideosRequest, config?: AxiosRequestConfig): Promise<operations.GetGroupVideosResponse>;
 }

@@ -1,0 +1,15 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { MaintenanceWindow } from "./maintenancewindow";
+/**
+ * MaintenancePolicy defines the maintenance policy to be used for the cluster.
+ */
+export declare class MaintenancePolicy extends SpeakeasyBase {
+    /**
+     * A hash identifying the version of this policy, so that updates to fields of the policy won't accidentally undo intermediate changes (and so that users of the API unaware of some fields won't accidentally remove other fields). Make a `get()` request to the cluster to get the current resource version and include it with requests to set the policy.
+     */
+    resourceVersion?: string;
+    /**
+     * MaintenanceWindow defines the maintenance window to be used for the cluster.
+     */
+    window?: MaintenanceWindow;
+}

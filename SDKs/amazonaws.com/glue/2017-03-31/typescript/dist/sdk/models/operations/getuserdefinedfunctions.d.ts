@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetUserDefinedFunctionsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum GetUserDefinedFunctionsXAmzTargetEnum {
-    AwsGlueGetUserDefinedFunctions = "AWSGlue.GetUserDefinedFunctions"
+    AWSGlueGetUserDefinedFunctions = "AWSGlue.GetUserDefinedFunctions"
 }
-export declare class GetUserDefinedFunctionsHeaders extends SpeakeasyBase {
+export declare class GetUserDefinedFunctionsRequest extends SpeakeasyBase {
+    getUserDefinedFunctionsRequest: shared.GetUserDefinedFunctionsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,18 +23,32 @@ export declare class GetUserDefinedFunctionsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetUserDefinedFunctionsXAmzTargetEnum;
 }
-export declare class GetUserDefinedFunctionsRequest extends SpeakeasyBase {
-    queryParams: GetUserDefinedFunctionsQueryParams;
-    headers: GetUserDefinedFunctionsHeaders;
-    request: shared.GetUserDefinedFunctionsRequest;
-}
 export declare class GetUserDefinedFunctionsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * Success
+     */
     getUserDefinedFunctionsResponse?: shared.GetUserDefinedFunctionsResponse;
+    /**
+     * GlueEncryptionException
+     */
     glueEncryptionException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

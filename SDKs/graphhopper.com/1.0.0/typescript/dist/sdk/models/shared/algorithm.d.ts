@@ -9,7 +9,7 @@ export declare enum AlgorithmProblemTypeEnum {
 }
 /**
  * Use `objectives` instead.
-**/
+ */
 export declare class Algorithm extends SpeakeasyBase {
     objective?: AlgorithmObjectiveEnum;
     problemType?: AlgorithmProblemTypeEnum;

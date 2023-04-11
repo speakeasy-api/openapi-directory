@@ -5,6 +5,9 @@ export declare enum WritableSiteStatusEnum {
     Retired = "retired"
 }
 export declare class WritableSiteInput extends SpeakeasyBase {
+    /**
+     * 32-bit autonomous system number
+     */
     asn?: number;
     comments?: string;
     contactEmail?: string;
@@ -12,8 +15,17 @@ export declare class WritableSiteInput extends SpeakeasyBase {
     contactPhone?: string;
     customFields?: Record<string, any>;
     description?: string;
+    /**
+     * Local facility ID or description
+     */
     facility?: string;
+    /**
+     * GPS coordinate (latitude)
+     */
     latitude?: string;
+    /**
+     * GPS coordinate (longitude)
+     */
     longitude?: string;
     name: string;
     physicalAddress?: string;

@@ -6,48 +6,50 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/cloudidentity/v1/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/cloudidentity/v1/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CloudidentityCustomersUserinvitationsCancelRequest, CloudidentityCustomersUserinvitationsCancelResponse } from "openapi/src/sdk/models/operations";
+import {
+  CloudidentityCustomersUserinvitationsCancelRequest,
+  CloudidentityCustomersUserinvitationsCancelResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: CloudidentityCustomersUserinvitationsCancelRequest = {
-  pathParams: {
-    name: "sit",
+  dollarXgafv: XgafvEnum.Two,
+  requestBody: {
+    "distinctio": "quibusdam",
+    "unde": "nulla",
+    "corrupti": "illum",
   },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
-    "debitis": "voluptatum",
-    "et": "ut",
-    "dolorem": "et",
-  },
+  accessToken: "vel",
+  alt: AltEnum.Media,
+  callback: "deserunt",
+  fields: "suscipit",
+  key: "iure",
+  name: "magnam",
+  oauthToken: "debitis",
+  prettyPrint: false,
+  quotaUser: "ipsa",
+  uploadType: "delectus",
+  uploadProtocol: "tempora",
 };
 
 sdk.customers.cloudidentityCustomersUserinvitationsCancel(req).then((res: CloudidentityCustomersUserinvitationsCancelResponse | AxiosError) => {
@@ -57,7 +59,8 @@ sdk.customers.cloudidentityCustomersUserinvitationsCancel(req).then((res: Cloudi
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### customers
 
@@ -85,17 +88,41 @@ sdk.customers.cloudidentityCustomersUserinvitationsCancel(req).then((res: Cloudi
 * `cloudidentityGroupsLookup` - Looks up the [resource name](https://cloud.google.com/apis/design/resource_names) of a `Group` by its `EntityKey`.
 * `cloudidentityGroupsMembershipsCheckTransitiveMembership` - Check a potential member for membership in a group. **Note:** This feature is only available to Google Workspace Enterprise Standard, Enterprise Plus, and Enterprise for Education; and Cloud Identity Premium accounts. If the account of the member is not one of these, a 403 (PERMISSION_DENIED) HTTP status code will be returned. A member has membership to a group as long as there is a single viewable transitive membership between the group and the member. The actor must have view permissions to at least one transitive membership between the member and group.
 * `cloudidentityGroupsMembershipsCreate` - Creates a `Membership`.
-* `cloudidentityGroupsMembershipsDelete` - Deletes a `Membership`.
-* `cloudidentityGroupsMembershipsGet` - Retrieves a `Membership`.
 * `cloudidentityGroupsMembershipsGetMembershipGraph` - Get a membership graph of just a member or both a member and a group. **Note:** This feature is only available to Google Workspace Enterprise Standard, Enterprise Plus, and Enterprise for Education; and Cloud Identity Premium accounts. If the account of the member is not one of these, a 403 (PERMISSION_DENIED) HTTP status code will be returned. Given a member, the response will contain all membership paths from the member. Given both a group and a member, the response will contain all membership paths between the group and the member.
 * `cloudidentityGroupsMembershipsList` - Lists the `Membership`s within a `Group`.
 * `cloudidentityGroupsMembershipsLookup` - Looks up the [resource name](https://cloud.google.com/apis/design/resource_names) of a `Membership` by its `EntityKey`.
 * `cloudidentityGroupsMembershipsModifyMembershipRoles` - Modifies the `MembershipRole`s of a `Membership`.
+* `cloudidentityGroupsMembershipsSearchDirectGroups` - Searches direct groups of a member.
 * `cloudidentityGroupsMembershipsSearchTransitiveGroups` - Search transitive groups of a member. **Note:** This feature is only available to Google Workspace Enterprise Standard, Enterprise Plus, and Enterprise for Education; and Cloud Identity Premium accounts. If the account of the member is not one of these, a 403 (PERMISSION_DENIED) HTTP status code will be returned. A transitive group is any group that has a direct or indirect membership to the member. Actor must have view permissions all transitive groups.
 * `cloudidentityGroupsMembershipsSearchTransitiveMemberships` - Search transitive memberships of a group. **Note:** This feature is only available to Google Workspace Enterprise Standard, Enterprise Plus, and Enterprise for Education; and Cloud Identity Premium accounts. If the account of the group is not one of these, a 403 (PERMISSION_DENIED) HTTP status code will be returned. A transitive membership is any direct or indirect membership of a group. Actor must have view permissions to all transitive memberships.
 * `cloudidentityGroupsSearch` - Searches for `Group` resources matching a specified query.
-* `cloudidentityGroupsUpdateSecuritySettings` - Update Security Settings
 
+### inboundSamlSsoProfiles
+
+* `cloudidentityInboundSamlSsoProfilesCreate` - Creates an InboundSamlSsoProfile for a customer.
+* `cloudidentityInboundSamlSsoProfilesIdpCredentialsAdd` - Adds an IdpCredential. Up to 2 credentials are allowed.
+* `cloudidentityInboundSamlSsoProfilesIdpCredentialsList` - Returns a list of IdpCredentials in an InboundSamlSsoProfile.
+* `cloudidentityInboundSamlSsoProfilesList` - Lists InboundSamlSsoProfiles for a customer.
+
+### inboundSsoAssignments
+
+* `cloudidentityInboundSsoAssignmentsCreate` - Creates an InboundSsoAssignment for users and devices in a `Customer` under a given `Group` or `OrgUnit`.
+* `cloudidentityInboundSsoAssignmentsDelete` - Deletes an InboundSsoAssignment. To disable SSO, Create (or Update) an assignment that has `sso_mode` == `SSO_OFF`.
+* `cloudidentityInboundSsoAssignmentsGet` - Gets an InboundSsoAssignment.
+* `cloudidentityInboundSsoAssignmentsList` - Lists the InboundSsoAssignments for a `Customer`.
+* `cloudidentityInboundSsoAssignmentsPatch` - Updates an InboundSsoAssignment. The body of this request is the `inbound_sso_assignment` field and the `update_mask` is relative to that. For example: a PATCH to `/v1/inboundSsoAssignments/0abcdefg1234567&update_mask=rank` with a body of `{ "rank": 1 }` moves that (presumably group-targeted) SSO assignment to the highest priority and shifts any other group-targeted assignments down in priority.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

@@ -1,7 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
+ * Configures the manner in which the template library is installed on the cluster. TODO (b/271878194): Decrement this
+ */
+export declare enum PolicyControllerTemplateLibraryConfigInstallationEnum {
+    InstallationUnspecified = "INSTALLATION_UNSPECIFIED",
+    NotInstalled = "NOT_INSTALLED",
+    All = "ALL"
+}
+/**
  * The config specifying which default library templates to install.
-**/
+ */
 export declare class PolicyControllerTemplateLibraryConfig extends SpeakeasyBase {
+    /**
+     * Whether the standard template library should be installed or not. TODO (b/271878194): Remove this
+     */
     included?: boolean;
+    /**
+     * Configures the manner in which the template library is installed on the cluster. TODO (b/271878194): Decrement this
+     */
+    installation?: PolicyControllerTemplateLibraryConfigInstallationEnum;
 }

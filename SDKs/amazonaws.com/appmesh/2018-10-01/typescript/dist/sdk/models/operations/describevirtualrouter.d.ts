@@ -1,10 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeVirtualRouterPathParams extends SpeakeasyBase {
-    meshName: string;
-    virtualRouterName: string;
-}
-export declare class DescribeVirtualRouterHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DescribeVirtualRouterRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,19 +9,45 @@ export declare class DescribeVirtualRouterHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DescribeVirtualRouterRequest extends SpeakeasyBase {
-    pathParams: DescribeVirtualRouterPathParams;
-    headers: DescribeVirtualRouterHeaders;
+    /**
+     * The name of the service mesh in which the virtual router resides.
+     */
+    meshName: string;
+    /**
+     * The name of the virtual router to describe.
+     */
+    virtualRouterName: string;
 }
 export declare class DescribeVirtualRouterResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     describeVirtualRouterOutput?: shared.DescribeVirtualRouterOutput;
+    /**
+     * ForbiddenException
+     */
     forbiddenException?: any;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
+    /**
+     * ServiceUnavailableException
+     */
     serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

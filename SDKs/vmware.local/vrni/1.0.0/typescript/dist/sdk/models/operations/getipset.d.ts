@@ -1,22 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetIpSetPathParams extends SpeakeasyBase {
-    id: string;
+import { AxiosResponse } from "axios";
+export declare class GetIPSetSecurity extends SpeakeasyBase {
+    apiKeyAuth: string;
 }
-export declare class GetIpSetQueryParams extends SpeakeasyBase {
+export declare class GetIPSetRequest extends SpeakeasyBase {
+    /**
+     * entity id
+     */
+    id: string;
+    /**
+     * time in epoch seconds
+     */
     time?: number;
 }
-export declare class GetIpSetSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
-}
-export declare class GetIpSetRequest extends SpeakeasyBase {
-    pathParams: GetIpSetPathParams;
-    queryParams: GetIpSetQueryParams;
-    security: GetIpSetSecurity;
-}
-export declare class GetIpSetResponse extends SpeakeasyBase {
+export declare class GetIPSetResponse extends SpeakeasyBase {
+    /**
+     * Bad Request
+     */
     apiError?: shared.ApiError;
-    baseIPSet?: shared.BaseIpSet;
+    /**
+     * OK
+     */
+    baseIPSet?: shared.BaseIPSet;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

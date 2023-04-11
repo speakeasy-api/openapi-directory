@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostGetTransitGatewayRouteTableAssociationsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTGetTransitGatewayRouteTableAssociationsActionEnum {
     GetTransitGatewayRouteTableAssociations = "GetTransitGatewayRouteTableAssociations"
 }
-export declare enum PostGetTransitGatewayRouteTableAssociationsVersionEnum {
+export declare enum POSTGetTransitGatewayRouteTableAssociationsVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostGetTransitGatewayRouteTableAssociationsQueryParams extends SpeakeasyBase {
-    action: PostGetTransitGatewayRouteTableAssociationsActionEnum;
+export declare class POSTGetTransitGatewayRouteTableAssociationsRequest extends SpeakeasyBase {
+    action: POSTGetTransitGatewayRouteTableAssociationsActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostGetTransitGatewayRouteTableAssociationsVersionEnum;
-}
-export declare class PostGetTransitGatewayRouteTableAssociationsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTGetTransitGatewayRouteTableAssociationsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostGetTransitGatewayRouteTableAssociationsHeaders extends 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostGetTransitGatewayRouteTableAssociationsRequest extends SpeakeasyBase {
-    queryParams: PostGetTransitGatewayRouteTableAssociationsQueryParams;
-    headers: PostGetTransitGatewayRouteTableAssociationsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostGetTransitGatewayRouteTableAssociationsResponse extends SpeakeasyBase {
+export declare class POSTGetTransitGatewayRouteTableAssociationsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Notifications {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,19 +9,19 @@ export declare class Notifications {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * storageNotificationsDelete - Permanently deletes a notification subscription.
-    **/
-    storageNotificationsDelete(req: operations.StorageNotificationsDeleteRequest, config?: AxiosRequestConfig): Promise<operations.StorageNotificationsDeleteResponse>;
+     * Permanently deletes a notification subscription.
+     */
+    storageNotificationsDelete(req: operations.StorageNotificationsDeleteRequest, security: operations.StorageNotificationsDeleteSecurity, config?: AxiosRequestConfig): Promise<operations.StorageNotificationsDeleteResponse>;
     /**
-     * storageNotificationsGet - View a notification configuration.
-    **/
-    storageNotificationsGet(req: operations.StorageNotificationsGetRequest, config?: AxiosRequestConfig): Promise<operations.StorageNotificationsGetResponse>;
+     * View a notification configuration.
+     */
+    storageNotificationsGet(req: operations.StorageNotificationsGetRequest, security: operations.StorageNotificationsGetSecurity, config?: AxiosRequestConfig): Promise<operations.StorageNotificationsGetResponse>;
     /**
-     * storageNotificationsInsert - Creates a notification subscription for a given bucket.
-    **/
-    storageNotificationsInsert(req: operations.StorageNotificationsInsertRequest, config?: AxiosRequestConfig): Promise<operations.StorageNotificationsInsertResponse>;
+     * Creates a notification subscription for a given bucket.
+     */
+    storageNotificationsInsert(req: operations.StorageNotificationsInsertRequest, security: operations.StorageNotificationsInsertSecurity, config?: AxiosRequestConfig): Promise<operations.StorageNotificationsInsertResponse>;
     /**
-     * storageNotificationsList - Retrieves a list of notification subscriptions for a given bucket.
-    **/
-    storageNotificationsList(req: operations.StorageNotificationsListRequest, config?: AxiosRequestConfig): Promise<operations.StorageNotificationsListResponse>;
+     * Retrieves a list of notification subscriptions for a given bucket.
+     */
+    storageNotificationsList(req: operations.StorageNotificationsListRequest, security: operations.StorageNotificationsListSecurity, config?: AxiosRequestConfig): Promise<operations.StorageNotificationsListResponse>;
 }

@@ -1,10 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class WebhookDeleteRequest extends SpeakeasyBase {
-    request: shared.SubscribeToEventBody;
-}
+import { AxiosResponse } from "axios";
 export declare class WebhookDeleteResponse extends SpeakeasyBase {
     contentType: string;
     eventSubscriptionsResponse?: shared.EventSubscriptionsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

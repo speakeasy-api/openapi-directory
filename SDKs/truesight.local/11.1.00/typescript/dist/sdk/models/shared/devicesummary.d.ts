@@ -103,30 +103,84 @@ export declare enum DeviceSummaryTypeEnum {
     SanProcessor = "SAN_PROCESSOR",
     VirtualServerRhl = "VIRTUAL_SERVER_RHL",
     VirtualServerWindows = "VIRTUAL_SERVER_WINDOWS",
-    EsXi = "ESXi",
+    ESXi = "ESXi",
     VirtualServer = "VIRTUAL_SERVER",
     Hypervisor = "HYPERVISOR",
     AwsAmi = "AWS_AMI",
     MsAzure = "MS_AZURE",
     Unknown = "UNKNOWN"
 }
+/**
+ * Successful operation
+ */
 export declare class DeviceSummary extends SpeakeasyBase {
+    /**
+     * The ID of the PATROL Agent the device is attached to.
+     */
     agentId?: number;
+    /**
+     * The name of the PATROL Agent the device is attached to.
+     */
     agentName?: string;
+    /**
+     * The ambient temperature of the device.
+     */
     ambientTemperature?: number;
+    /**
+     * The collection time of the heating margin (as an Epoch time, in seconds).<br><u>Note</u>:This field will only be present if a value could be found.
+     */
     collectTime?: string;
+    /**
+     * The TSMOKey of the device.
+     */
     deviceTSMOKey?: string;
+    /**
+     * The link to the device details.
+     */
     deviceUrl?: string;
+    /**
+     * The heating margin of the device.<br><u>Note</u>:This field will only be present if a value could be found.
+     */
     heatingMargin?: number;
+    /**
+     * The unit in which the heating margin of the device is being expressed.<br><u>Note</u>:This field will only be present if a value could be found.
+     */
     heatingMarginUnit?: string;
+    /**
+     * The ID of the device.
+     */
     id?: number;
+    /**
+     * The ID of the device.
+     */
     name?: string;
+    /**
+     * The power consumption of the device.
+     */
     powerConsumption?: number;
+    /**
+     * The unit in which the power consumption of the device is being expressed.
+     */
     powerConsumptionUnit?: string;
+    /**
+     * The Hardware Sentry KM version of the device's Monitor.<br><u>Note</u>:This field will only be present if a value could be found.
+     */
     productVersion?: string;
+    /**
+     * The ID of the server the device is attached to.
+     */
     serverId?: number;
+    /**
+     * The name of the server the device is attached to.
+     */
     serverName?: string;
+    /**
+     * The SID of the device.
+     */
     sid?: string;
     type?: DeviceSummaryTypeEnum;
+    /**
+     * The data collection time (as an Epoch time, in seconds).
+     */
     updateTimestamp?: number;
 }

@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListCrawlersQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListCrawlersXAmzTargetEnum {
-    AwsGlueListCrawlers = "AWSGlue.ListCrawlers"
+    AWSGlueListCrawlers = "AWSGlue.ListCrawlers"
 }
-export declare class ListCrawlersHeaders extends SpeakeasyBase {
+export declare class ListCrawlersRequest extends SpeakeasyBase {
+    listCrawlersRequest: shared.ListCrawlersRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,14 +23,16 @@ export declare class ListCrawlersHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListCrawlersXAmzTargetEnum;
 }
-export declare class ListCrawlersRequest extends SpeakeasyBase {
-    queryParams: ListCrawlersQueryParams;
-    headers: ListCrawlersHeaders;
-    request: shared.ListCrawlersRequest;
-}
 export declare class ListCrawlersResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     listCrawlersResponse?: shared.ListCrawlersResponse;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

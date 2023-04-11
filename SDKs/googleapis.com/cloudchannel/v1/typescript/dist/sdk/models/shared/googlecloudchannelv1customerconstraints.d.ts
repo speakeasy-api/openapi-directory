@@ -12,9 +12,18 @@ export declare enum GoogleCloudChannelV1CustomerConstraintsPromotionalOrderTypes
 }
 /**
  * Represents constraints required to purchase the Offer for a customer.
-**/
+ */
 export declare class GoogleCloudChannelV1CustomerConstraints extends SpeakeasyBase {
+    /**
+     * Allowed Customer Type.
+     */
     allowedCustomerTypes?: GoogleCloudChannelV1CustomerConstraintsAllowedCustomerTypesEnum[];
+    /**
+     * Allowed geographical regions of the customer.
+     */
     allowedRegions?: string[];
+    /**
+     * Allowed Promotional Order Type. Present for Promotional offers.
+     */
     promotionalOrderTypes?: GoogleCloudChannelV1CustomerConstraintsPromotionalOrderTypesEnum[];
 }

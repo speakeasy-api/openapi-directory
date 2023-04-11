@@ -1,25 +1,43 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CertificateDeletePathParams extends SpeakeasyBase {
-    thumbprint: string;
-    thumbprintAlgorithm: string;
-}
-export declare class CertificateDeleteQueryParams extends SpeakeasyBase {
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class CertificateDeleteRequest extends SpeakeasyBase {
+    /**
+     * Client API Version.
+     */
     apiVersion: string;
+    /**
+     * The caller-generated request identity, in the form of a GUID with no decoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
+     */
+    clientRequestId?: string;
+    /**
+     * The time the request was issued. If not specified, this header will be automatically populated with the current system clock time.
+     */
+    ocpDate?: string;
+    /**
+     * Whether the server should return the client-request-id identifier in the response.
+     */
+    returnClientRequestId?: boolean;
+    /**
+     * The thumbprint of the certificate to be deleted.
+     */
+    thumbprint: string;
+    /**
+     * The algorithm used to derive the thumbprint parameter. This must be sha1.
+     */
+    thumbprintAlgorithm: string;
+    /**
+     * The maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
+     */
     timeout?: number;
 }
-export declare class CertificateDeleteHeaders extends SpeakeasyBase {
-    clientRequestId?: string;
-    ocpDate?: string;
-    returnClientRequestId?: boolean;
-}
-export declare class CertificateDeleteRequest extends SpeakeasyBase {
-    pathParams: CertificateDeletePathParams;
-    queryParams: CertificateDeleteQueryParams;
-    headers: CertificateDeleteHeaders;
-}
 export declare class CertificateDeleteResponse extends SpeakeasyBase {
-    batchError?: any;
+    /**
+     * The error from the Batch service.
+     */
+    batchError?: shared.BatchError;
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

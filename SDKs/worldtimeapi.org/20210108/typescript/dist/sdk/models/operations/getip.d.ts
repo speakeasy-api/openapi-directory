@@ -1,7 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class GetIpResponse extends SpeakeasyBase {
     contentType: string;
-    dateTimeJsonResponse?: any;
-    errorJsonResponse?: any;
+    /**
+     * the current time for the timezone requested in JSON format
+     */
+    dateTimeJsonResponse?: shared.DateTimeJsonResponse;
+    /**
+     * an error response in JSON format
+     */
+    errorJsonResponse?: shared.ErrorJsonResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

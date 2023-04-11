@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteFpgaImageActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteFpgaImageActionEnum {
     DeleteFpgaImage = "DeleteFpgaImage"
 }
-export declare enum PostDeleteFpgaImageVersionEnum {
+export declare enum POSTDeleteFpgaImageVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDeleteFpgaImageQueryParams extends SpeakeasyBase {
-    action: PostDeleteFpgaImageActionEnum;
-    version: PostDeleteFpgaImageVersionEnum;
-}
-export declare class PostDeleteFpgaImageHeaders extends SpeakeasyBase {
+export declare class POSTDeleteFpgaImageRequest extends SpeakeasyBase {
+    action: POSTDeleteFpgaImageActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteFpgaImageVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteFpgaImageHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteFpgaImageRequest extends SpeakeasyBase {
-    queryParams: PostDeleteFpgaImageQueryParams;
-    headers: PostDeleteFpgaImageHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteFpgaImageResponse extends SpeakeasyBase {
+export declare class POSTDeleteFpgaImageResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

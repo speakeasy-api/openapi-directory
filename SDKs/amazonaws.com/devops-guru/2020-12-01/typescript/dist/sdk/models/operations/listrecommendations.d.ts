@@ -1,17 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListRecommendationsQueryParams extends SpeakeasyBase {
-    nextToken?: string;
-}
-export declare class ListRecommendationsHeaders extends SpeakeasyBase {
-    xAmzAlgorithm?: string;
-    xAmzContentSha256?: string;
-    xAmzCredential?: string;
-    xAmzDate?: string;
-    xAmzSecurityToken?: string;
-    xAmzSignature?: string;
-    xAmzSignedHeaders?: string;
-}
+import { AxiosResponse } from "axios";
+/**
+ * A locale that specifies the language to use for recommendations.
+ */
 export declare enum ListRecommendationsRequestBodyLocaleEnum {
     DeDe = "DE_DE",
     EnUs = "EN_US",
@@ -26,22 +18,63 @@ export declare enum ListRecommendationsRequestBodyLocaleEnum {
     ZhTw = "ZH_TW"
 }
 export declare class ListRecommendationsRequestBody extends SpeakeasyBase {
+    /**
+     * The ID of the Amazon Web Services account.
+     */
+    accountId?: string;
+    /**
+     *  The ID of the requested insight.
+     */
     insightId: string;
+    /**
+     * A locale that specifies the language to use for recommendations.
+     */
     locale?: ListRecommendationsRequestBodyLocaleEnum;
+    /**
+     * The pagination token to use to retrieve the next page of results for this operation. If this value is null, it retrieves the first page.
+     */
     nextToken?: string;
 }
 export declare class ListRecommendationsRequest extends SpeakeasyBase {
-    queryParams: ListRecommendationsQueryParams;
-    headers: ListRecommendationsHeaders;
-    request: ListRecommendationsRequestBody;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
+    requestBody: ListRecommendationsRequestBody;
+    xAmzAlgorithm?: string;
+    xAmzContentSha256?: string;
+    xAmzCredential?: string;
+    xAmzDate?: string;
+    xAmzSecurityToken?: string;
+    xAmzSignature?: string;
+    xAmzSignedHeaders?: string;
 }
 export declare class ListRecommendationsResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * Success
+     */
     listRecommendationsResponse?: shared.ListRecommendationsResponse;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

@@ -7,7 +7,7 @@ export declare class OrgHookConfig extends SpeakeasyBase {
 }
 /**
  * Org Hook
-**/
+ */
 export declare class OrgHook extends SpeakeasyBase {
     active: boolean;
     config: OrgHookConfig;

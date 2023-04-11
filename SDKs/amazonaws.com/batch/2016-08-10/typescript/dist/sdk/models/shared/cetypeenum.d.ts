@@ -1,4 +1,4 @@
-export declare enum CeTypeEnum {
+export declare enum CETypeEnum {
     Managed = "MANAGED",
     Unmanaged = "UNMANAGED"
 }

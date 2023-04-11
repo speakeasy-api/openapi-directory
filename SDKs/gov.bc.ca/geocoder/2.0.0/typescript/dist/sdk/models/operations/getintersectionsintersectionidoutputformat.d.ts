@@ -1,5 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetIntersectionsIntersectionIdOutputFormatOutputFormatEnum {
+import { AxiosResponse } from "axios";
+/**
+ * Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
+ *
+ * @remarks
+ *
+ * Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
+ */
+export declare enum GetIntersectionsIntersectionIDOutputFormatOutputFormatEnum {
     Json = "json",
     Geojson = "geojson",
     Xhtml = "xhtml",
@@ -8,18 +16,39 @@ export declare enum GetIntersectionsIntersectionIdOutputFormatOutputFormatEnum {
     Csv = "csv",
     Shpz = "shpz"
 }
-export declare class GetIntersectionsIntersectionIdOutputFormatPathParams extends SpeakeasyBase {
+/**
+ * The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
+ */
+export declare enum GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum {
+    FourThousandThreeHundredAndTwentySix = "4326",
+    FourThousandTwoHundredAndSixtyNine = "4269",
+    ThreeThousandAndFive = "3005",
+    TwentySixThousandNineHundredAndSeven = "26907",
+    TwentySixThousandNineHundredAndEight = "26908",
+    TwentySixThousandNineHundredAndNine = "26909",
+    TwentySixThousandNineHundredAndTen = "26910",
+    TwentySixThousandNineHundredAndEleven = "26911"
+}
+export declare class GetIntersectionsIntersectionIDOutputFormatRequest extends SpeakeasyBase {
+    /**
+     * A unique intersection identifier
+     */
     intersectionID: string;
-    outputFormat: GetIntersectionsIntersectionIdOutputFormatOutputFormatEnum;
+    /**
+     * Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
+     *
+     * @remarks
+     *
+     * Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
+     */
+    outputFormat: GetIntersectionsIntersectionIDOutputFormatOutputFormatEnum;
+    /**
+     * The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
+     */
+    outputSRS?: GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum;
 }
-export declare class GetIntersectionsIntersectionIdOutputFormatQueryParams extends SpeakeasyBase {
-    outputSRS?: number;
-}
-export declare class GetIntersectionsIntersectionIdOutputFormatRequest extends SpeakeasyBase {
-    pathParams: GetIntersectionsIntersectionIdOutputFormatPathParams;
-    queryParams: GetIntersectionsIntersectionIdOutputFormatQueryParams;
-}
-export declare class GetIntersectionsIntersectionIdOutputFormatResponse extends SpeakeasyBase {
+export declare class GetIntersectionsIntersectionIDOutputFormatResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,27 +1,38 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteEnvironmentPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteEnvironmentRequest extends SpeakeasyBase {
     environmentUid: string;
 }
-export declare class DeleteEnvironment200ApplicationJsonEnvironment extends SpeakeasyBase {
-    id?: string;
-    uid?: string;
-}
-export declare class DeleteEnvironment200ApplicationJson extends SpeakeasyBase {
-    environment?: DeleteEnvironment200ApplicationJsonEnvironment;
-}
-export declare class DeleteEnvironment404ApplicationJsonError extends SpeakeasyBase {
+export declare class DeleteEnvironment404ApplicationJSONError extends SpeakeasyBase {
     message?: string;
     name?: string;
 }
-export declare class DeleteEnvironment404ApplicationJson extends SpeakeasyBase {
-    error?: DeleteEnvironment404ApplicationJsonError;
+/**
+ * Environment Not Found
+ */
+export declare class DeleteEnvironment404ApplicationJSON extends SpeakeasyBase {
+    error?: DeleteEnvironment404ApplicationJSONError;
 }
-export declare class DeleteEnvironmentRequest extends SpeakeasyBase {
-    pathParams: DeleteEnvironmentPathParams;
+export declare class DeleteEnvironment200ApplicationJSONEnvironment extends SpeakeasyBase {
+    id?: string;
+    uid?: string;
+}
+/**
+ * Environment Deleted
+ */
+export declare class DeleteEnvironment200ApplicationJSON extends SpeakeasyBase {
+    environment?: DeleteEnvironment200ApplicationJSONEnvironment;
 }
 export declare class DeleteEnvironmentResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deleteEnvironment200ApplicationJSONObject?: DeleteEnvironment200ApplicationJson;
-    deleteEnvironment404ApplicationJSONObject?: DeleteEnvironment404ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Environment Deleted
+     */
+    deleteEnvironment200ApplicationJSONObject?: DeleteEnvironment200ApplicationJSON;
+    /**
+     * Environment Not Found
+     */
+    deleteEnvironment404ApplicationJSONObject?: DeleteEnvironment404ApplicationJSON;
 }

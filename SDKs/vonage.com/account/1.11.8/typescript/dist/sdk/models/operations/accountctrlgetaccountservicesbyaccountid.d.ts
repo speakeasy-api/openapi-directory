@@ -1,17 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AccountCtrlGetAccountServicesByAccountIdPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class AccountCtrlGetAccountServicesByAccountIDSecurity extends SpeakeasyBase {
+    bearerAuth: string;
+}
+export declare class AccountCtrlGetAccountServicesByAccountIDRequest extends SpeakeasyBase {
+    /**
+     * The Vonage Business Cloud account ID
+     */
     accountId: number;
 }
-export declare class AccountCtrlGetAccountServicesByAccountIdSecurity extends SpeakeasyBase {
-    bearerAuth: shared.SchemeBearerAuth;
-}
-export declare class AccountCtrlGetAccountServicesByAccountIdRequest extends SpeakeasyBase {
-    pathParams: AccountCtrlGetAccountServicesByAccountIdPathParams;
-    security: AccountCtrlGetAccountServicesByAccountIdSecurity;
-}
-export declare class AccountCtrlGetAccountServicesByAccountIdResponse extends SpeakeasyBase {
+export declare class AccountCtrlGetAccountServicesByAccountIDResponse extends SpeakeasyBase {
+    /**
+     * Success
+     */
     accountHalResponse?: shared.AccountHalResponse;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

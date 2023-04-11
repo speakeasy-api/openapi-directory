@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CircuitsProvidersUpdatePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class CircuitsProvidersUpdateRequest extends SpeakeasyBase {
-    pathParams: CircuitsProvidersUpdatePathParams;
-    request: shared.ProviderInput;
+    providerInput: shared.ProviderInput;
+    /**
+     * A unique integer value identifying this provider.
+     */
+    id: number;
 }
 export declare class CircuitsProvidersUpdateResponse extends SpeakeasyBase {
     contentType: string;
     provider?: shared.Provider;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

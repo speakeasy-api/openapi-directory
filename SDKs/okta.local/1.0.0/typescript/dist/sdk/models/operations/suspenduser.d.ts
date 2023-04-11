@@ -1,12 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SuspendUserPathParams extends SpeakeasyBase {
-    userId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class SuspendUserRequest extends SpeakeasyBase {
-    pathParams: SuspendUserPathParams;
-    request?: Uint8Array;
+    requestBody?: Uint8Array;
+    userId: string;
 }
 export declare class SuspendUserResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,6 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetAppliedSchemaVersionHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetAppliedSchemaVersionRequestBody extends SpeakeasyBase {
+    /**
+     * The ARN of the applied schema.
+     */
+    schemaArn: string;
+}
+export declare class GetAppliedSchemaVersionRequest extends SpeakeasyBase {
+    requestBody: GetAppliedSchemaVersionRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -9,22 +17,40 @@ export declare class GetAppliedSchemaVersionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetAppliedSchemaVersionRequestBody extends SpeakeasyBase {
-    schemaArn: string;
-}
-export declare class GetAppliedSchemaVersionRequest extends SpeakeasyBase {
-    headers: GetAppliedSchemaVersionHeaders;
-    request: GetAppliedSchemaVersionRequestBody;
-}
 export declare class GetAppliedSchemaVersionResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: shared.AccessDeniedException;
     contentType: string;
+    /**
+     * Success
+     */
     getAppliedSchemaVersionResponse?: shared.GetAppliedSchemaVersionResponse;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: shared.InternalServiceException;
+    /**
+     * InvalidArnException
+     */
     invalidArnException?: shared.InvalidArnException;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: shared.LimitExceededException;
-    resourceNotFoundException?: shared.ResourceNotFoundException;
-    retryableConflictException?: shared.RetryableConflictException;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: shared.ResourceNotFoundException;
+    /**
+     * RetryableConflictException
+     */
+    retryableConflictException?: shared.RetryableConflictException;
+    /**
+     * ValidationException
+     */
     validationException?: shared.ValidationException;
 }

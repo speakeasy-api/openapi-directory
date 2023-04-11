@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeDbInstanceAutomatedBackupsActionEnum {
-    DescribeDbInstanceAutomatedBackups = "DescribeDBInstanceAutomatedBackups"
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeDBInstanceAutomatedBackupsActionEnum {
+    DescribeDBInstanceAutomatedBackups = "DescribeDBInstanceAutomatedBackups"
 }
-export declare enum PostDescribeDbInstanceAutomatedBackupsVersionEnum {
+export declare enum POSTDescribeDBInstanceAutomatedBackupsVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class PostDescribeDbInstanceAutomatedBackupsQueryParams extends SpeakeasyBase {
-    action: PostDescribeDbInstanceAutomatedBackupsActionEnum;
+export declare class POSTDescribeDBInstanceAutomatedBackupsRequest extends SpeakeasyBase {
+    action: POSTDescribeDBInstanceAutomatedBackupsActionEnum;
+    /**
+     * Pagination token
+     */
     marker?: string;
+    /**
+     * Pagination limit
+     */
     maxRecords?: string;
-    version: PostDescribeDbInstanceAutomatedBackupsVersionEnum;
-}
-export declare class PostDescribeDbInstanceAutomatedBackupsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeDBInstanceAutomatedBackupsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeDbInstanceAutomatedBackupsHeaders extends Speak
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeDbInstanceAutomatedBackupsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeDbInstanceAutomatedBackupsQueryParams;
-    headers: PostDescribeDbInstanceAutomatedBackupsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeDbInstanceAutomatedBackupsResponse extends SpeakeasyBase {
+export declare class POSTDescribeDBInstanceAutomatedBackupsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

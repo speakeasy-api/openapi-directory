@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PatchOwnershipOwnershipIdPathParams extends SpeakeasyBase {
-    ownershipId: string;
-}
-export declare class PatchOwnershipOwnershipIdQueryParams extends SpeakeasyBase {
-    customData?: string;
-    expires?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class PatchOwnershipOwnershipIdRequest extends SpeakeasyBase {
-    pathParams: PatchOwnershipOwnershipIdPathParams;
-    queryParams: PatchOwnershipOwnershipIdQueryParams;
+    /**
+     * Custom JSON object that will be attached to this ownership record
+     */
+    customData?: string;
+    /**
+     * The date (in millis) of when this app ownership expires
+     */
+    expires?: number;
+    /**
+     * The id of the ownership to be updated
+     */
+    ownershipId: string;
 }
 export declare class PatchOwnershipOwnershipIdResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

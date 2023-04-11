@@ -1,21 +1,44 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetTargetsTargetIdScansIdReportDefaultPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetTargetsTargetIdScansIdReportDefaultRequest extends SpeakeasyBase {
+    /**
+     * Object Id
+     */
     id: string;
+    /**
+     * Target id
+     */
     targetId: string;
 }
-export declare class GetTargetsTargetIdScansIdReportDefault401ApplicationJson extends SpeakeasyBase {
+/**
+ * Not found
+ */
+export declare class GetTargetsTargetIdScansIdReportDefault404ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Not found.
+     */
     detail?: string;
 }
-export declare class GetTargetsTargetIdScansIdReportDefault404ApplicationJson extends SpeakeasyBase {
+/**
+ * Access token is missing or invalid
+ */
+export declare class GetTargetsTargetIdScansIdReportDefault401ApplicationJSON extends SpeakeasyBase {
     detail?: string;
-}
-export declare class GetTargetsTargetIdScansIdReportDefaultRequest extends SpeakeasyBase {
-    pathParams: GetTargetsTargetIdScansIdReportDefaultPathParams;
 }
 export declare class GetTargetsTargetIdScansIdReportDefaultResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Scan report PDF
+     */
     getTargetsTargetIdScansIdReportDefault200ApplicationPdfBinaryString?: Uint8Array;
-    getTargetsTargetIdScansIdReportDefault401ApplicationJSONObject?: GetTargetsTargetIdScansIdReportDefault401ApplicationJson;
-    getTargetsTargetIdScansIdReportDefault404ApplicationJSONObject?: GetTargetsTargetIdScansIdReportDefault404ApplicationJson;
+    /**
+     * Access token is missing or invalid
+     */
+    getTargetsTargetIdScansIdReportDefault401ApplicationJSONObject?: GetTargetsTargetIdScansIdReportDefault401ApplicationJSON;
+    /**
+     * Not found
+     */
+    getTargetsTargetIdScansIdReportDefault404ApplicationJSONObject?: GetTargetsTargetIdScansIdReportDefault404ApplicationJSON;
 }

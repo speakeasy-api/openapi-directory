@@ -1,16 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UsersListFollowedByAuthenticatedQueryParams extends SpeakeasyBase {
-    page?: number;
-    perPage?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class UsersListFollowedByAuthenticatedRequest extends SpeakeasyBase {
-    queryParams: UsersListFollowedByAuthenticatedQueryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    page?: number;
+    /**
+     * Results per page (max 100)
+     */
+    perPage?: number;
 }
 export declare class UsersListFollowedByAuthenticatedResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Requires authentication
+     */
     basicError?: shared.BasicError;
+    /**
+     * Response
+     */
     simpleUsers?: shared.SimpleUser[];
 }

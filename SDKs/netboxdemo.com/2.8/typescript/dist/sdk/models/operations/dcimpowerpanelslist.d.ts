@@ -1,12 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DcimPowerPanelsListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DcimPowerPanelsListRequest extends SpeakeasyBase {
     id?: string;
     idGt?: string;
     idGte?: string;
     idLt?: string;
     idLte?: string;
     idN?: string;
+    /**
+     * Number of results to return per page.
+     */
     limit?: number;
     name?: string;
     nameIc?: string;
@@ -18,6 +22,9 @@ export declare class DcimPowerPanelsListQueryParams extends SpeakeasyBase {
     nameNie?: string;
     nameNiew?: string;
     nameNisw?: string;
+    /**
+     * The initial index from which to return the results.
+     */
     offset?: number;
     q?: string;
     rackGroupId?: string;
@@ -31,17 +38,15 @@ export declare class DcimPowerPanelsListQueryParams extends SpeakeasyBase {
     siteId?: string;
     siteIdN?: string;
 }
-export declare class DcimPowerPanelsList200ApplicationJson extends SpeakeasyBase {
+export declare class DcimPowerPanelsList200ApplicationJSON extends SpeakeasyBase {
     count: number;
     next?: string;
     previous?: string;
     results: shared.PowerPanel[];
 }
-export declare class DcimPowerPanelsListRequest extends SpeakeasyBase {
-    queryParams: DcimPowerPanelsListQueryParams;
-}
 export declare class DcimPowerPanelsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dcimPowerPanelsList200ApplicationJSONObject?: DcimPowerPanelsList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    dcimPowerPanelsList200ApplicationJSONObject?: DcimPowerPanelsList200ApplicationJSON;
 }

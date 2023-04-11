@@ -1,14 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetPipelineVariableForTeamPathParams extends SpeakeasyBase {
-    username: string;
-    variableUuid: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetPipelineVariableForTeamRequest extends SpeakeasyBase {
-    pathParams: GetPipelineVariableForTeamPathParams;
+    /**
+     * The account.
+     */
+    username: string;
+    /**
+     * The UUID of the variable to retrieve.
+     */
+    variableUuid: string;
 }
 export declare class GetPipelineVariableForTeamResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The account or variable with the given UUID was not found.
+     */
     error?: Record<string, any>;
+    /**
+     * The variable.
+     */
     pipelineVariable?: Record<string, any>;
 }

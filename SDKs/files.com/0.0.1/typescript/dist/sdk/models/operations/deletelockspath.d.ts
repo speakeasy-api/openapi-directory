@@ -1,15 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteLocksPathPathParams extends SpeakeasyBase {
-    path: string;
-}
-export declare class DeleteLocksPathQueryParams extends SpeakeasyBase {
-    token: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteLocksPathRequest extends SpeakeasyBase {
-    pathParams: DeleteLocksPathPathParams;
-    queryParams: DeleteLocksPathQueryParams;
+    /**
+     * Path
+     */
+    path: string;
+    /**
+     * Lock token
+     */
+    token: string;
 }
 export declare class DeleteLocksPathResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

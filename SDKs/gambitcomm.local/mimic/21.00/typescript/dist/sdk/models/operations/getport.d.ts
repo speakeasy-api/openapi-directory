@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetPortPathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetPortRequest extends SpeakeasyBase {
-    pathParams: GetPortPathParams;
+    /**
+     * Agent to return the primary SNMP port
+     */
+    agentNum: number;
 }
 export declare class GetPortResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     getPort200ApplicationJSONString?: string;
 }

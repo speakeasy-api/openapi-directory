@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class EnterpriseAdminGetGithubActionsPermissionsEnterprisePathParams extends SpeakeasyBase {
-    enterprise: string;
-}
+import { AxiosResponse } from "axios";
 export declare class EnterpriseAdminGetGithubActionsPermissionsEnterpriseRequest extends SpeakeasyBase {
-    pathParams: EnterpriseAdminGetGithubActionsPermissionsEnterprisePathParams;
+    /**
+     * The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+     */
+    enterprise: string;
 }
 export declare class EnterpriseAdminGetGithubActionsPermissionsEnterpriseResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     actionsEnterprisePermissions?: shared.ActionsEnterprisePermissions;
 }

@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * OK
+ */
 export declare class Qtl extends SpeakeasyBase {
     chromosome?: string;
     flank1RgdId?: number;

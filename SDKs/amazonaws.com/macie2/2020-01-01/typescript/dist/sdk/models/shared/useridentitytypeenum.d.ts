@@ -1,8 +1,11 @@
+/**
+ * The type of entity that performed the action on the affected resource. Possible values are:
+ */
 export declare enum UserIdentityTypeEnum {
     AssumedRole = "AssumedRole",
-    IamUser = "IAMUser",
+    IAMUser = "IAMUser",
     FederatedUser = "FederatedUser",
     Root = "Root",
-    AwsAccount = "AWSAccount",
-    AwsService = "AWSService"
+    AWSAccount = "AWSAccount",
+    AWSService = "AWSService"
 }

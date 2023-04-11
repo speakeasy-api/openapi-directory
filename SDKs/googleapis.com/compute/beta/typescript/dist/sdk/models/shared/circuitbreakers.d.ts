@@ -1,0 +1,31 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { Duration } from "./duration";
+/**
+ * Settings controlling the volume of requests, connections and retries to this backend service.
+ */
+export declare class CircuitBreakers extends SpeakeasyBase {
+    /**
+     * A Duration represents a fixed-length span of time represented as a count of seconds and fractions of seconds at nanosecond resolution. It is independent of any calendar and concepts like "day" or "month". Range is approximately 10,000 years.
+     */
+    connectTimeout?: Duration;
+    /**
+     * The maximum number of connections to the backend service. If not specified, there is no limit. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+     */
+    maxConnections?: number;
+    /**
+     * The maximum number of pending requests allowed to the backend service. If not specified, there is no limit. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+     */
+    maxPendingRequests?: number;
+    /**
+     * The maximum number of parallel requests that allowed to the backend service. If not specified, there is no limit.
+     */
+    maxRequests?: number;
+    /**
+     * Maximum requests for a single connection to the backend service. This parameter is respected by both the HTTP/1.1 and HTTP/2 implementations. If not specified, there is no limit. Setting this parameter to 1 will effectively disable keep alive. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+     */
+    maxRequestsPerConnection?: number;
+    /**
+     * The maximum number of parallel retries allowed to the backend cluster. If not specified, the default is 1. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+     */
+    maxRetries?: number;
+}

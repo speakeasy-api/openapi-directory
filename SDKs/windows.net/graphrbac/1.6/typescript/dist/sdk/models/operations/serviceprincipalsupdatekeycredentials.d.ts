@@ -1,23 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ServicePrincipalsUpdateKeyCredentialsPathParams extends SpeakeasyBase {
-    objectId: string;
-    tenantID: string;
-}
-export declare class ServicePrincipalsUpdateKeyCredentialsQueryParams extends SpeakeasyBase {
-    apiVersion: string;
-}
-export declare class ServicePrincipalsUpdateKeyCredentialsRequests extends SpeakeasyBase {
-    keyCredentialsUpdateParameters?: shared.KeyCredentialsUpdateParameters;
-    keyCredentialsUpdateParameters1?: shared.KeyCredentialsUpdateParameters;
-}
+import { AxiosResponse } from "axios";
 export declare class ServicePrincipalsUpdateKeyCredentialsRequest extends SpeakeasyBase {
-    pathParams: ServicePrincipalsUpdateKeyCredentialsPathParams;
-    queryParams: ServicePrincipalsUpdateKeyCredentialsQueryParams;
-    request: ServicePrincipalsUpdateKeyCredentialsRequests;
+    /**
+     * Parameters to update the keyCredentials of an existing service principal.
+     */
+    keyCredentialsUpdateParameters: shared.KeyCredentialsUpdateParameters;
+    /**
+     * Client API version.
+     */
+    apiVersion: string;
+    /**
+     * The object ID for which to get service principal information.
+     */
+    objectId: string;
+    /**
+     * The tenant ID.
+     */
+    tenantID: string;
 }
 export declare class ServicePrincipalsUpdateKeyCredentialsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Error response describing why the operation failed.
+     */
     graphError?: shared.GraphError;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

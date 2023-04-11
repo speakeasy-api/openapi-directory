@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Information about tags
+ */
 export declare class Sources {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,21 +12,24 @@ export declare class Sources {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getResourcesSourcesJson - Get Sources
+     * Get Sources
      *
+     * @remarks
      * Source Listings
-    **/
+     */
     getResourcesSourcesJson(req: operations.GetResourcesSourcesJsonRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesSourcesJsonResponse>;
     /**
-     * getResourcesSourcesIdJson - Get Source by ID
+     * Get Source by ID
      *
+     * @remarks
      * Information about a specific source.
-    **/
+     */
     getResourcesSourcesIdJson(req: operations.GetResourcesSourcesIdJsonRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesSourcesIdJsonResponse>;
     /**
-     * getResourcesSourcesIdSyndicateFormat - Get MediaItems for Source
+     * Get MediaItems for Source
      *
+     * @remarks
      * MediaItem
-    **/
+     */
     getResourcesSourcesIdSyndicateFormat(req: operations.GetResourcesSourcesIdSyndicateFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesSourcesIdSyndicateFormatResponse>;
 }

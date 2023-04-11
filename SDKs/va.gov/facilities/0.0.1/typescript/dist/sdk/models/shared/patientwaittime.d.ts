@@ -23,9 +23,15 @@ export declare enum PatientWaitTimeServiceEnum {
 }
 /**
  * Expected wait times for new and established patients for a given health care service
-**/
+ */
 export declare class PatientWaitTime extends SpeakeasyBase {
+    /**
+     * Average number of days a patient who has already been to this location has to wait for a non-urgent appointment.
+     */
     established?: number;
+    /**
+     * Average number of days a Veteran who hasn't been to this location has to wait for a non-urgent appointment.
+     */
     new?: number;
     service: PatientWaitTimeServiceEnum;
 }

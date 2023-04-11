@@ -6,5 +6,6 @@ export declare enum BotLocaleStatusEnum {
     Failed = "Failed",
     Deleting = "Deleting",
     NotBuilt = "NotBuilt",
-    Importing = "Importing"
+    Importing = "Importing",
+    Processing = "Processing"
 }

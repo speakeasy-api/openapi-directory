@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetModifyAddressAttributeActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETModifyAddressAttributeActionEnum {
     ModifyAddressAttribute = "ModifyAddressAttribute"
 }
-export declare enum GetModifyAddressAttributeVersionEnum {
+export declare enum GETModifyAddressAttributeVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetModifyAddressAttributeQueryParams extends SpeakeasyBase {
-    action: GetModifyAddressAttributeActionEnum;
+export declare class GETModifyAddressAttributeRequest extends SpeakeasyBase {
+    action: GETModifyAddressAttributeActionEnum;
+    /**
+     * [EC2-VPC] The allocation ID.
+     */
     allocationId: string;
+    /**
+     * The domain name to modify for the IP address.
+     */
     domainName?: string;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
-    version: GetModifyAddressAttributeVersionEnum;
-}
-export declare class GetModifyAddressAttributeHeaders extends SpeakeasyBase {
+    version: GETModifyAddressAttributeVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +29,9 @@ export declare class GetModifyAddressAttributeHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetModifyAddressAttributeRequest extends SpeakeasyBase {
-    queryParams: GetModifyAddressAttributeQueryParams;
-    headers: GetModifyAddressAttributeHeaders;
-}
-export declare class GetModifyAddressAttributeResponse extends SpeakeasyBase {
+export declare class GETModifyAddressAttributeResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

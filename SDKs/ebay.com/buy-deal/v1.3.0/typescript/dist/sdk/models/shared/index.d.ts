@@ -8,6 +8,5 @@ export * from "./eventitemsearchresponse";
 export * from "./eventsearchresponse";
 export * from "./image";
 export * from "./marketingprice";
-export * from "./security";
 export * from "./shippingoption";
 export * from "./terms";

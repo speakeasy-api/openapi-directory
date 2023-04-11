@@ -1,17 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+/**
+ * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+ */
 export declare enum DfsSlatesByDateFormatEnum {
     Json = "json",
     Xml = "xml"
 }
-export declare class DfsSlatesByDatePathParams extends SpeakeasyBase {
-    date: string;
-    format: DfsSlatesByDateFormatEnum;
-}
 export declare class DfsSlatesByDateRequest extends SpeakeasyBase {
-    pathParams: DfsSlatesByDatePathParams;
+    /**
+     * The date of the game(s).
+     *
+     * @remarks
+     * <br>Examples: <code>2020-02-18</code>
+     *
+     */
+    date: string;
+    /**
+     * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+     */
+    format: DfsSlatesByDateFormatEnum;
 }
 export declare class DfsSlatesByDateResponse extends SpeakeasyBase {
     contentType: string;
-    dfsSlates?: any[];
+    dfsSlates?: shared.DfsSlate[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

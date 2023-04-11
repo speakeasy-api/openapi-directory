@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { TreatmentResource } from "./treatmentresource";
-import { CustomDeliveryConfiguration } from "./customdeliveryconfiguration";
-import { CampaignState } from "./campaignstate";
 import { CampaignHook } from "./campaignhook";
 import { CampaignLimits } from "./campaignlimits";
+import { CampaignState } from "./campaignstate";
+import { CustomDeliveryConfiguration } from "./customdeliveryconfiguration";
 import { MessageConfiguration } from "./messageconfiguration";
 import { Schedule } from "./schedule";
 import { TemplateConfiguration } from "./templateconfiguration";
+import { TreatmentResource } from "./treatmentresource";
 /**
  * Provides information about the status, configuration, and other settings for a campaign.
-**/
+ */
 export declare class CampaignResponse extends SpeakeasyBase {
     additionalTreatments?: TreatmentResource[];
     applicationId: string;

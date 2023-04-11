@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Notification {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +9,7 @@ export declare class Notification {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * booksNotificationGet - Returns notification details for a given notification id.
-    **/
-    booksNotificationGet(req: operations.BooksNotificationGetRequest, config?: AxiosRequestConfig): Promise<operations.BooksNotificationGetResponse>;
+     * Returns notification details for a given notification id.
+     */
+    booksNotificationGet(req: operations.BooksNotificationGetRequest, security: operations.BooksNotificationGetSecurity, config?: AxiosRequestConfig): Promise<operations.BooksNotificationGetResponse>;
 }

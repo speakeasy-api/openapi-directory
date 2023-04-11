@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetRejectVpcPeeringConnectionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETRejectVpcPeeringConnectionActionEnum {
     RejectVpcPeeringConnection = "RejectVpcPeeringConnection"
 }
-export declare enum GetRejectVpcPeeringConnectionVersionEnum {
+export declare enum GETRejectVpcPeeringConnectionVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetRejectVpcPeeringConnectionQueryParams extends SpeakeasyBase {
-    action: GetRejectVpcPeeringConnectionActionEnum;
+export declare class GETRejectVpcPeeringConnectionRequest extends SpeakeasyBase {
+    action: GETRejectVpcPeeringConnectionActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
-    version: GetRejectVpcPeeringConnectionVersionEnum;
+    version: GETRejectVpcPeeringConnectionVersionEnum;
+    /**
+     * The ID of the VPC peering connection.
+     */
     vpcPeeringConnectionId: string;
-}
-export declare class GetRejectVpcPeeringConnectionHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetRejectVpcPeeringConnectionHeaders extends SpeakeasyBase 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetRejectVpcPeeringConnectionRequest extends SpeakeasyBase {
-    queryParams: GetRejectVpcPeeringConnectionQueryParams;
-    headers: GetRejectVpcPeeringConnectionHeaders;
-}
-export declare class GetRejectVpcPeeringConnectionResponse extends SpeakeasyBase {
+export declare class GETRejectVpcPeeringConnectionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

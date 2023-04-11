@@ -1,5 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Webhooks {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,25 +10,28 @@ export declare class Webhooks {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteWebhooksId - Delete a webhook
-    **/
+     * Delete a webhook
+     */
     deleteWebhooksId(req: operations.DeleteWebhooksIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteWebhooksIdResponse>;
     /**
-     * getWebhooks - List webhooks
+     * List webhooks
      *
+     * @remarks
      * Contains a list of your webhooks
-    **/
-    getWebhooks(req: operations.GetWebhooksRequest, config?: AxiosRequestConfig): Promise<operations.GetWebhooksResponse>;
+     */
+    getWebhooks(config?: AxiosRequestConfig): Promise<operations.GetWebhooksResponse>;
     /**
-     * getWebhooksId - Read a webhook
-    **/
+     * Read a webhook
+     */
     getWebhooksId(req: operations.GetWebhooksIdRequest, config?: AxiosRequestConfig): Promise<operations.GetWebhooksIdResponse>;
     /**
-     * postWebhooks - Create a webhook
+     * Create a webhook
      *
+     * @remarks
      * A webhook is an URL that you can register when you want the BulkSMS system to notify you about your messages.
      * You can register multiple webhooks, and each one will be called.  (Note: you can also use our [Web App](https://www.bulksms.com/account/#!/advanced-settings/webhooks) to manage your webhooks interactively.)
      * If you want to be notified of `SENT` messages and `RECEIVED` messages you need to create two webhooks.
+     *
      *
      * ### Implementing your webhook
      *
@@ -47,7 +51,19 @@ export declare class Webhooks {
      * - It is good idea to add a secret to your URL in order to make it more secure. Here is an example:
      * `https://www.example.com/hook.php?secret=pass763265word`
      * - You can use a non-standard port if necessary, for example: `https://www.example.com:8321/hook.php?secret=pass763265word`
+     * - Your webhook can be called from a dynamic range of IP addresses, and you should be prepared to accept that the source IP can change in the future, without notice. This practice has become common with cloud-hosted solutions. If this is an insurmountable problem for your organisation, please contact support.
      *
+     * ### Testing and troubleshooting
+     *
+     * Use `curl` to test your webhook.  The command below is a template that shows how the BulkSMS system invokes your code. It must return `200` for your URL before you can register it as a webhook.
+     *
+     * ```
+     * curl -i -X POST 'YOUR_URL_HERE' --header 'Content-Type: application/json' --header 'User-Agent: BulkSMS Invoker' --data-raw '[]'
+     * ```
+     *
+     * When a `200` is returned for an empty array, modify the template to post multiple messages by adding JSON between the square brackets ('[]').
+     *
+     * After your webhook is successfully registered, you can send a message to `1111111` for an end-to-end test.  The delivery to this test number will fail, but your webhook will be invoked (and there are no charges).
      *
      * ### The retry process
      *
@@ -59,17 +75,17 @@ export declare class Webhooks {
      * ### Problem reports via email
      *
      * Your are strongly advised to provide an email address when you register your webhook.
-     * An notice will be sent to this email address to keep you in the loop whenever there are problems with your webhook.
+     * A notice will be sent to this email address to keep you in the loop whenever there are problems with your webhook.
      * In order to prevent your inbox from being flooded, the system sends a notice about an observed error no more than once in a 24 hour period.
      *
      * The following emails can be expected
      *  - A __message retrying__ email is sent after an invocation has failed with a retry-able error.  This email is an early warning, allowing you to investigate your systems.
      *  - A __message discarded__ email is sent after failure email is send when a message is discarded as a consequence of a non-retry-able error.
      *
-    **/
-    postWebhooks(req: operations.PostWebhooksRequest, config?: AxiosRequestConfig): Promise<operations.PostWebhooksResponse>;
+     */
+    postWebhooks(req: shared.WebhookEntry, security: operations.PostWebhooksSecurity, config?: AxiosRequestConfig): Promise<operations.PostWebhooksResponse>;
     /**
-     * postWebhooksId - Update a webhook
-    **/
+     * Update a webhook
+     */
     postWebhooksId(req: operations.PostWebhooksIdRequest, config?: AxiosRequestConfig): Promise<operations.PostWebhooksIdResponse>;
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostModifyTrafficMirrorFilterNetworkServicesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTModifyTrafficMirrorFilterNetworkServicesActionEnum {
     ModifyTrafficMirrorFilterNetworkServices = "ModifyTrafficMirrorFilterNetworkServices"
 }
-export declare enum PostModifyTrafficMirrorFilterNetworkServicesVersionEnum {
+export declare enum POSTModifyTrafficMirrorFilterNetworkServicesVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostModifyTrafficMirrorFilterNetworkServicesQueryParams extends SpeakeasyBase {
-    action: PostModifyTrafficMirrorFilterNetworkServicesActionEnum;
-    version: PostModifyTrafficMirrorFilterNetworkServicesVersionEnum;
-}
-export declare class PostModifyTrafficMirrorFilterNetworkServicesHeaders extends SpeakeasyBase {
+export declare class POSTModifyTrafficMirrorFilterNetworkServicesRequest extends SpeakeasyBase {
+    action: POSTModifyTrafficMirrorFilterNetworkServicesActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTModifyTrafficMirrorFilterNetworkServicesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostModifyTrafficMirrorFilterNetworkServicesHeaders extends
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostModifyTrafficMirrorFilterNetworkServicesRequest extends SpeakeasyBase {
-    queryParams: PostModifyTrafficMirrorFilterNetworkServicesQueryParams;
-    headers: PostModifyTrafficMirrorFilterNetworkServicesHeaders;
-    request?: Uint8Array;
-}
-export declare class PostModifyTrafficMirrorFilterNetworkServicesResponse extends SpeakeasyBase {
+export declare class POSTModifyTrafficMirrorFilterNetworkServicesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

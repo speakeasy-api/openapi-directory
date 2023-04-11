@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum CreatePredictorXAmzTargetEnum {
     AmazonForecastCreatePredictor = "AmazonForecast.CreatePredictor"
 }
-export declare class CreatePredictorHeaders extends SpeakeasyBase {
+export declare class CreatePredictorRequest extends SpeakeasyBase {
+    createPredictorRequest: shared.CreatePredictorRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class CreatePredictorHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: CreatePredictorXAmzTargetEnum;
 }
-export declare class CreatePredictorRequest extends SpeakeasyBase {
-    headers: CreatePredictorHeaders;
-    request: shared.CreatePredictorRequest;
-}
 export declare class CreatePredictorResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     createPredictorResponse?: shared.CreatePredictorResponse;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
-    resourceAlreadyExistsException?: any;
+    /**
+     * ResourceInUseException
+     */
     resourceInUseException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceAlreadyExistsException
+     */
+    resourceAlreadyExistsException?: any;
 }

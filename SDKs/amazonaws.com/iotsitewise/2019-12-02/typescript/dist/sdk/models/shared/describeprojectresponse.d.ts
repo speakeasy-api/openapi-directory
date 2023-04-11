@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class DescribeProjectResponse extends SpeakeasyBase {
     portalId: string;
     projectArn: string;

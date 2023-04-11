@@ -1,9 +1,33 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UpdateCachePolicy20200531PathParams extends SpeakeasyBase {
-    id: string;
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+/**
+ * <p>A cache policy configuration.</p> <p>This configuration determines the following:</p> <ul> <li> <p>The values that CloudFront includes in the cache key. These values can include HTTP headers, cookies, and URL query strings. CloudFront uses the cache key to find an object in its cache that it can return to the viewer.</p> </li> <li> <p>The default, minimum, and maximum time to live (TTL) values that you want objects to stay in the CloudFront cache.</p> </li> </ul> <p>The headers, cookies, and query strings that are included in the cache key are also included in requests that CloudFront sends to the origin. CloudFront sends a request when it can't find a valid object in its cache that matches the request's cache key. If you want to send values to the origin but <i>not</i> include them in the cache key, use <code>OriginRequestPolicy</code>.</p>
+ */
+export declare class UpdateCachePolicy20200531RequestBodyCachePolicyConfig extends SpeakeasyBase {
+    comment?: string;
+    defaultTTL?: number;
+    maxTTL?: number;
+    minTTL?: number;
+    name?: string;
+    parametersInCacheKeyAndForwardedToOrigin?: shared.ParametersInCacheKeyAndForwardedToOrigin;
 }
-export declare class UpdateCachePolicy20200531Headers extends SpeakeasyBase {
+export declare class UpdateCachePolicy20200531RequestBody extends SpeakeasyBase {
+    /**
+     * <p>A cache policy configuration.</p> <p>This configuration determines the following:</p> <ul> <li> <p>The values that CloudFront includes in the cache key. These values can include HTTP headers, cookies, and URL query strings. CloudFront uses the cache key to find an object in its cache that it can return to the viewer.</p> </li> <li> <p>The default, minimum, and maximum time to live (TTL) values that you want objects to stay in the CloudFront cache.</p> </li> </ul> <p>The headers, cookies, and query strings that are included in the cache key are also included in requests that CloudFront sends to the origin. CloudFront sends a request when it can't find a valid object in its cache that matches the request's cache key. If you want to send values to the origin but <i>not</i> include them in the cache key, use <code>OriginRequestPolicy</code>.</p>
+     */
+    cachePolicyConfig: UpdateCachePolicy20200531RequestBodyCachePolicyConfig;
+}
+export declare class UpdateCachePolicy20200531Request extends SpeakeasyBase {
+    /**
+     * The unique identifier for the cache policy that you are updating. The identifier is returned in a cache behavior's <code>CachePolicyId</code> field in the response to <code>GetDistributionConfig</code>.
+     */
+    id: string;
+    /**
+     * The version of the cache policy that you are updating. The version is returned in the cache policy's <code>ETag</code> field in the response to <code>GetCachePolicyConfig</code>.
+     */
     ifMatch?: string;
+    requestBody: Uint8Array;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,13 +36,9 @@ export declare class UpdateCachePolicy20200531Headers extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class UpdateCachePolicy20200531Request extends SpeakeasyBase {
-    pathParams: UpdateCachePolicy20200531PathParams;
-    headers: UpdateCachePolicy20200531Headers;
-    request: Uint8Array;
-}
 export declare class UpdateCachePolicy20200531Response extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Show {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class Show {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getShows - Returns scheduled shows optionally filtered by {start} and/or {end} datetimes
+     * Returns scheduled shows optionally filtered by {start} and/or {end} datetimes
      *
+     * @remarks
      * **Terminology**: Spinitron defines a *show* as a radio program. A show can have one or more *schedules*,
      * each of which may specify either an *occurence* or a *repetition*, which represents a set of occurences.
      * Thus scheduled shows have occurences that, for example, may be displayed in a calendar.
@@ -40,15 +41,16 @@ export declare class Show {
      *
      * Objects in `items` are ordered first by `datetime` and then by `id`.
      *
-    **/
+     */
     getShows(req: operations.GetShowsRequest, config?: AxiosRequestConfig): Promise<operations.GetShowsResponse>;
     /**
-     * getShowsId - Get a Show by id
+     * Get a Show by id
      *
+     * @remarks
      * The response object represents the next occurence of the show specified by {id}.
      *
      * Status 404 is returned if a show with {id} does not exist or if it does but all its scheduled occurences elapsed in the past.
      *
-    **/
+     */
     getShowsId(req: operations.GetShowsIdRequest, config?: AxiosRequestConfig): Promise<operations.GetShowsIdResponse>;
 }

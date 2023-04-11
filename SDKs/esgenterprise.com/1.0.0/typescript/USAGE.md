@@ -1,21 +1,16 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetSearchRequest, GetSearchResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetSearchRequest,
+  GetSearchResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetSearchRequest = {
-  security: {
-    apiKey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  },
-  queryParams: {
-    q: "sit",
-  },
+  q: "corrupti",
 };
 
 sdk.rating.getSearch(req).then((res: GetSearchResponse | AxiosError) => {

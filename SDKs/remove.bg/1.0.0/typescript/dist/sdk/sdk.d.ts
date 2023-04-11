@@ -1,14 +1,32 @@
-import { AxiosInstance } from "axios";
-import { Security } from "./models/shared";
 import { BackgroundRemoval } from "./backgroundremoval";
 import { FetchAccountInfo } from "./fetchaccountinfo";
 import { ImprovementProgram } from "./improvementprogram";
+import * as shared from "./models/shared";
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://api.remove.bg/v1.0"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * The security details required to authenticate the SDK
+     */
+    security?: shared.Security;
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    security?: Security;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * Remove the background of any image
+ */
 export declare class SDK {
     backgroundRemoval: BackgroundRemoval;
     fetchAccountInfo: FetchAccountInfo;
@@ -19,5 +37,6 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
 }

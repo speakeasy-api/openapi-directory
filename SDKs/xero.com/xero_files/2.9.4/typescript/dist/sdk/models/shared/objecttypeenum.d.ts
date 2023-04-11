@@ -1,3 +1,6 @@
+/**
+ * The Object Type
+ */
 export declare enum ObjectTypeEnum {
     Unknown = "Unknown",
     Accpay = "Accpay",

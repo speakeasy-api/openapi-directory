@@ -1,7 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PatchOrganizationPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PatchOrganizationRequestBodyAddress extends SpeakeasyBase {
     city?: string;
     country?: string;
@@ -43,6 +41,9 @@ export declare class PatchOrganizationRequestBodyThemeColors extends SpeakeasyBa
 export declare class PatchOrganizationRequestBodyTheme extends SpeakeasyBase {
     colors?: PatchOrganizationRequestBodyThemeColors;
 }
+/**
+ * Include organization properties to create here
+ */
 export declare class PatchOrganizationRequestBody extends SpeakeasyBase {
     active?: boolean;
     address?: PatchOrganizationRequestBodyAddress;
@@ -62,10 +63,17 @@ export declare class PatchOrganizationRequestBody extends SpeakeasyBase {
     theme?: PatchOrganizationRequestBodyTheme;
 }
 export declare class PatchOrganizationRequest extends SpeakeasyBase {
-    pathParams: PatchOrganizationPathParams;
-    request: PatchOrganizationRequestBody;
+    /**
+     * Include organization properties to create here
+     */
+    requestBody: PatchOrganizationRequestBody;
+    /**
+     * ID of organization that needs to be updated
+     */
+    id: string;
 }
 export declare class PatchOrganizationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

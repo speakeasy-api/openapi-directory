@@ -1,3 +1,6 @@
+/**
+ * LMS name
+ */
 export declare enum LmsNameEnum {
     Canvas = "canvas",
     Moodle = "moodle",

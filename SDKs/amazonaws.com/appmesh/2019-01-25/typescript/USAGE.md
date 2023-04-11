@@ -1,120 +1,126 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateGatewayRouteRequest, CreateGatewayRouteResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CreateGatewayRouteRequest,
+  CreateGatewayRouteResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  HttpMethodEnum,
+  DefaultGatewayRouteRewriteEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    hmac: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: CreateGatewayRouteRequest = {
-  pathParams: {
-    meshName: "sit",
-    virtualGatewayName: "voluptas",
-  },
-  queryParams: {
-    meshOwner: "culpa",
-  },
-  headers: {
-    xAmzAlgorithm: "expedita",
-    xAmzContentSha256: "consequuntur",
-    xAmzCredential: "dolor",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "voluptas",
-    xAmzSignature: "fugit",
-    xAmzSignedHeaders: "et",
-  },
-  request: {
-    clientToken: "nihil",
-    gatewayRouteName: "rerum",
+  requestBody: {
+    clientToken: "corrupti",
+    gatewayRouteName: "provident",
     spec: {
       grpcRoute: {
         action: {
           rewrite: {
             hostname: {
-              defaultTargetHostname: "DISABLED",
+              defaultTargetHostname: DefaultGatewayRouteRewriteEnum.Disabled,
             },
           },
           target: {
+            port: 844266,
             virtualService: {
-              virtualServiceName: "debitis",
+              virtualServiceName: "unde",
             },
           },
         },
         match: {
           hostname: {
-            exact: "voluptatum",
-            suffix: "et",
+            exact: "nulla",
+            suffix: "corrupti",
           },
           metadata: [
             {
-              invert: true,
-              match: {
-                exact: "et",
-                prefix: "voluptate",
-                range: {
-                  end: 3287288577352441706,
-                  start: 3930927879439176946,
-                },
-                regex: "totam",
-                suffix: "dolores",
-              },
-              name: "illum",
-            },
-            {
-              invert: true,
+              invert: false,
               match: {
                 exact: "vel",
-                prefix: "odio",
+                prefix: "error",
                 range: {
-                  end: 6303220950515014660,
-                  start: 4035568504096476779,
+                  end: 645894,
+                  start: 384382,
                 },
-                regex: "aspernatur",
-                suffix: "accusantium",
+                regex: "iure",
+                suffix: "magnam",
               },
-              name: "totam",
+              name: "debitis",
+            },
+            {
+              invert: false,
+              match: {
+                exact: "ipsa",
+                prefix: "delectus",
+                range: {
+                  end: 272656,
+                  start: 383441,
+                },
+                regex: "molestiae",
+                suffix: "minus",
+              },
+              name: "placeat",
+            },
+            {
+              invert: false,
+              match: {
+                exact: "voluptatum",
+                prefix: "iusto",
+                range: {
+                  end: 568045,
+                  start: 392785,
+                },
+                regex: "recusandae",
+                suffix: "temporibus",
+              },
+              name: "ab",
             },
             {
               invert: false,
               match: {
                 exact: "quis",
-                prefix: "est",
+                prefix: "veritatis",
                 range: {
-                  end: 5974317550424871033,
-                  start: 3317123977833389635,
+                  end: 648172,
+                  start: 20218,
                 },
-                regex: "non",
-                suffix: "voluptas",
+                regex: "ipsam",
+                suffix: "repellendus",
               },
-              name: "omnis",
+              name: "sapiente",
             },
           ],
-          serviceName: "aut",
+          port: 778157,
+          serviceName: "odit",
         },
       },
       http2Route: {
         action: {
           rewrite: {
             hostname: {
-              defaultTargetHostname: "ENABLED",
+              defaultTargetHostname: DefaultGatewayRouteRewriteEnum.Disabled,
             },
             path: {
-              exact: "sed",
+              exact: "at",
             },
             prefix: {
-              defaultPrefix: "DISABLED",
-              value: "autem",
+              defaultPrefix: DefaultGatewayRouteRewriteEnum.Disabled,
+              value: "molestiae",
             },
           },
           target: {
+            port: 799159,
             virtualService: {
-              virtualServiceName: "consectetur",
+              virtualServiceName: "quod",
             },
           },
         },
@@ -123,34 +129,61 @@ const req: CreateGatewayRouteRequest = {
             {
               invert: false,
               match: {
-                exact: "qui",
-                prefix: "recusandae",
+                exact: "totam",
+                prefix: "porro",
                 range: {
-                  end: 7561811714888168464,
-                  start: 3959279844101328186,
+                  end: 678880,
+                  start: 118274,
                 },
-                regex: "eveniet",
-                suffix: "modi",
+                regex: "nam",
+                suffix: "officia",
               },
-              name: "sint",
+              name: "occaecati",
+            },
+            {
+              invert: false,
+              match: {
+                exact: "fugit",
+                prefix: "deleniti",
+                range: {
+                  end: 944669,
+                  start: 758616,
+                },
+                regex: "totam",
+                suffix: "beatae",
+              },
+              name: "commodi",
             },
           ],
           hostname: {
-            exact: "inventore",
-            suffix: "ut",
+            exact: "molestiae",
+            suffix: "modi",
           },
-          method: "CONNECT",
+          method: HttpMethodEnum.Head,
           path: {
-            exact: "aut",
-            regex: "reprehenderit",
+            exact: "impedit",
+            regex: "cum",
           },
-          prefix: "tempore",
+          port: 456150,
+          prefix: "ipsum",
           queryParameters: [
             {
               match: {
-                exact: "incidunt",
+                exact: "aspernatur",
               },
-              name: "dolor",
+              name: "perferendis",
+            },
+            {
+              match: {
+                exact: "ad",
+              },
+              name: "natus",
+            },
+            {
+              match: {
+                exact: "sed",
+              },
+              name: "iste",
             },
           ],
         },
@@ -159,68 +192,106 @@ const req: CreateGatewayRouteRequest = {
         action: {
           rewrite: {
             hostname: {
-              defaultTargetHostname: "DISABLED",
+              defaultTargetHostname: DefaultGatewayRouteRewriteEnum.Enabled,
             },
             path: {
-              exact: "veritatis",
+              exact: "natus",
             },
             prefix: {
-              defaultPrefix: "ENABLED",
-              value: "et",
+              defaultPrefix: DefaultGatewayRouteRewriteEnum.Enabled,
+              value: "hic",
             },
           },
           target: {
+            port: 902599,
             virtualService: {
-              virtualServiceName: "omnis",
+              virtualServiceName: "fuga",
             },
           },
         },
         match: {
           headers: [
             {
-              invert: true,
+              invert: false,
               match: {
-                exact: "dolores",
-                prefix: "placeat",
+                exact: "corporis",
+                prefix: "iste",
                 range: {
-                  end: 2118716725206170867,
-                  start: 2587000937929698613,
+                  end: 437032,
+                  start: 902349,
                 },
-                regex: "mollitia",
-                suffix: "voluptas",
+                regex: "quidem",
+                suffix: "architecto",
               },
-              name: "quam",
+              name: "ipsa",
+            },
+            {
+              invert: false,
+              match: {
+                exact: "reiciendis",
+                prefix: "est",
+                range: {
+                  end: 653140,
+                  start: 670638,
+                },
+                regex: "dolores",
+                suffix: "dolorem",
+              },
+              name: "corporis",
             },
           ],
           hostname: {
-            exact: "reprehenderit",
-            suffix: "qui",
+            exact: "explicabo",
+            suffix: "nobis",
           },
-          method: "OPTIONS",
+          method: HttpMethodEnum.Post,
           path: {
-            exact: "unde",
-            regex: "in",
+            exact: "omnis",
+            regex: "nemo",
           },
-          prefix: "autem",
+          port: 325047,
+          prefix: "excepturi",
           queryParameters: [
             {
               match: {
-                exact: "ut",
+                exact: "iure",
               },
-              name: "itaque",
+              name: "culpa",
             },
           ],
         },
       },
-      priority: 2006924026344156168,
+      priority: 988374,
     },
     tags: [
       {
-        key: "ullam",
-        value: "et",
+        key: "architecto",
+        value: "mollitia",
+      },
+      {
+        key: "dolorem",
+        value: "culpa",
+      },
+      {
+        key: "consequuntur",
+        value: "repellat",
+      },
+      {
+        key: "mollitia",
+        value: "occaecati",
       },
     ],
   },
+  xAmzAlgorithm: "numquam",
+  xAmzContentSha256: "commodi",
+  xAmzCredential: "quam",
+  xAmzDate: "molestiae",
+  xAmzSecurityToken: "velit",
+  xAmzSignature: "error",
+  xAmzSignedHeaders: "quia",
+  meshName: "quis",
+  meshOwner: "vitae",
+  virtualGatewayName: "laborum",
 };
 
 sdk.createGatewayRoute(req).then((res: CreateGatewayRouteResponse | AxiosError) => {

@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ExtrasExportTemplatesPartialUpdatePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ExtrasExportTemplatesPartialUpdateRequest extends SpeakeasyBase {
-    pathParams: ExtrasExportTemplatesPartialUpdatePathParams;
-    request: shared.WritableExportTemplateInput;
+    writableExportTemplateInput: shared.WritableExportTemplateInput;
+    /**
+     * A unique integer value identifying this export template.
+     */
+    id: number;
 }
 export declare class ExtrasExportTemplatesPartialUpdateResponse extends SpeakeasyBase {
     contentType: string;
     exportTemplate?: shared.ExportTemplate;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum PutAlarmXAmzTargetEnum {
     Lightsail20161128PutAlarm = "Lightsail_20161128.PutAlarm"
 }
-export declare class PutAlarmHeaders extends SpeakeasyBase {
+export declare class PutAlarmRequest extends SpeakeasyBase {
+    putAlarmRequest: shared.PutAlarmRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class PutAlarmHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: PutAlarmXAmzTargetEnum;
 }
-export declare class PutAlarmRequest extends SpeakeasyBase {
-    headers: PutAlarmHeaders;
-    request: shared.PutAlarmRequest;
-}
 export declare class PutAlarmResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
+    /**
+     * OperationFailureException
+     */
     operationFailureException?: any;
+    /**
+     * Success
+     */
     putAlarmResult?: shared.PutAlarmResult;
+    /**
+     * ServiceException
+     */
     serviceException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnauthenticatedException
+     */
     unauthenticatedException?: any;
 }

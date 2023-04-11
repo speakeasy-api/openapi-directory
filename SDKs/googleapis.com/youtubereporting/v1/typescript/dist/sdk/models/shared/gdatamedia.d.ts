@@ -9,6 +9,9 @@ import { GdataDiffUploadResponse } from "./gdatadiffuploadresponse";
 import { GdataDiffVersionResponse } from "./gdatadiffversionresponse";
 import { GdataDownloadParameters } from "./gdatadownloadparameters";
 import { GdataObjectId } from "./gdataobjectid";
+/**
+ * gdata
+ */
 export declare enum GdataMediaReferenceTypeEnum {
     Path = "PATH",
     BlobRef = "BLOB_REF",
@@ -26,36 +29,126 @@ export declare enum GdataMediaReferenceTypeEnum {
 }
 /**
  * gdata
-**/
+ */
 export declare class GdataMedia extends SpeakeasyBase {
+    /**
+     * gdata
+     */
     algorithm?: string;
+    /**
+     * gdata
+     */
     bigstoreObjectRef?: string;
+    /**
+     * gdata
+     */
     blobRef?: string;
+    /**
+     * gdata
+     */
     blobstore2Info?: GdataBlobstore2Info;
+    /**
+     * gdata
+     */
     compositeMedia?: GdataCompositeMedia[];
+    /**
+     * gdata
+     */
     contentType?: string;
+    /**
+     * gdata
+     */
     contentTypeInfo?: GdataContentTypeInfo;
+    /**
+     * gdata
+     */
     cosmoBinaryReference?: string;
+    /**
+     * gdata
+     */
     crc32cHash?: number;
+    /**
+     * gdata
+     */
     diffChecksumsResponse?: GdataDiffChecksumsResponse;
+    /**
+     * gdata
+     */
     diffDownloadResponse?: GdataDiffDownloadResponse;
+    /**
+     * gdata
+     */
     diffUploadRequest?: GdataDiffUploadRequest;
+    /**
+     * gdata
+     */
     diffUploadResponse?: GdataDiffUploadResponse;
+    /**
+     * gdata
+     */
     diffVersionResponse?: GdataDiffVersionResponse;
+    /**
+     * gdata
+     */
     downloadParameters?: GdataDownloadParameters;
+    /**
+     * gdata
+     */
     filename?: string;
+    /**
+     * gdata
+     */
     hash?: string;
+    /**
+     * gdata
+     */
     hashVerified?: boolean;
+    /**
+     * gdata
+     */
     inline?: string;
+    /**
+     * gdata
+     */
     isPotentialRetry?: boolean;
+    /**
+     * gdata
+     */
     length?: string;
+    /**
+     * gdata
+     */
     md5Hash?: string;
+    /**
+     * gdata
+     */
     mediaId?: string;
+    /**
+     * gdata
+     */
     objectId?: GdataObjectId;
+    /**
+     * gdata
+     */
     path?: string;
+    /**
+     * gdata
+     */
     referenceType?: GdataMediaReferenceTypeEnum;
+    /**
+     * gdata
+     */
     sha1Hash?: string;
+    /**
+     * gdata
+     */
     sha256Hash?: string;
+    /**
+     * gdata
+     */
     timestamp?: string;
+    /**
+     * gdata
+     */
     token?: string;
 }

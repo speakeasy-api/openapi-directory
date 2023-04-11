@@ -1,20 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class ListScheduleQueryParams extends SpeakeasyBase {
-    aliases?: boolean;
-    channelId: string;
-    end?: string;
-    start: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ListScheduleSecurity extends SpeakeasyBase {
-    apikey: shared.SchemeApikey;
+    apikey: string;
 }
 export declare class ListScheduleRequest extends SpeakeasyBase {
-    queryParams: ListScheduleQueryParams;
-    security: ListScheduleSecurity;
+    /**
+     * Flag to display Legacy and Provider Ids.
+     */
+    aliases?: boolean;
+    /**
+     * The identifier for the selected channel.
+     */
+    channelId: string;
+    /**
+     * The End Date for the schedule.
+     */
+    end?: string;
+    /**
+     * The Start Date for the schedule.
+     */
+    start: string;
 }
 export declare class ListScheduleResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
     listSchedule200ApplicationJSONObject?: Record<string, any>;
 }

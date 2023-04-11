@@ -1,4 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
+/**
+ * The file format name extension used to represent the geomark download.
+ */
 export declare enum GetGeomarksGeomarkIdFileFormatExtensionFileFormatExtensionEnum {
     Json = "json",
     Xml = "xml",
@@ -8,20 +12,38 @@ export declare enum GetGeomarksGeomarkIdFileFormatExtensionFileFormatExtensionEn
     Shpz = "shpz",
     Geojson = "geojson",
     Gml = "gml",
+    Gpkg = "gpkg",
     Wkt = "wkt"
 }
-export declare class GetGeomarksGeomarkIdFileFormatExtensionPathParams extends SpeakeasyBase {
-    fileFormatExtension: GetGeomarksGeomarkIdFileFormatExtensionFileFormatExtensionEnum;
-    geomarkId: string;
-}
-export declare class GetGeomarksGeomarkIdFileFormatExtensionQueryParams extends SpeakeasyBase {
-    srid?: number;
+/**
+ * The srid of the coordinate system the geometry should be converted to.
+ */
+export declare enum GetGeomarksGeomarkIdFileFormatExtensionSridEnum {
+    FourThousandThreeHundredAndTwentySix = "4326",
+    ThreeThousandAndFive = "3005",
+    ThreeThousandEightHundredAndFiftySeven = "3857",
+    TwentySixThousandNineHundredAndSeven = "26907",
+    TwentySixThousandNineHundredAndEight = "26908",
+    TwentySixThousandNineHundredAndNine = "26909",
+    TwentySixThousandNineHundredAndTen = "26910",
+    TwentySixThousandNineHundredAndEleven = "26911"
 }
 export declare class GetGeomarksGeomarkIdFileFormatExtensionRequest extends SpeakeasyBase {
-    pathParams: GetGeomarksGeomarkIdFileFormatExtensionPathParams;
-    queryParams: GetGeomarksGeomarkIdFileFormatExtensionQueryParams;
+    /**
+     * The file format name extension used to represent the geomark download.
+     */
+    fileFormatExtension: GetGeomarksGeomarkIdFileFormatExtensionFileFormatExtensionEnum;
+    /**
+     * The unique identifier for the geomark.
+     */
+    geomarkId: string;
+    /**
+     * The srid of the coordinate system the geometry should be converted to.
+     */
+    srid?: GetGeomarksGeomarkIdFileFormatExtensionSridEnum;
 }
 export declare class GetGeomarksGeomarkIdFileFormatExtensionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -3,7 +3,7 @@ import { MigrationTypeValueEnum } from "./migrationtypevalueenum";
 import { ReplicationTaskStats } from "./replicationtaskstats";
 /**
  * Provides information that describes a replication task created by the <code>CreateReplicationTask</code> operation.
-**/
+ */
 export declare class ReplicationTask extends SpeakeasyBase {
     cdcStartPosition?: string;
     cdcStopPosition?: string;

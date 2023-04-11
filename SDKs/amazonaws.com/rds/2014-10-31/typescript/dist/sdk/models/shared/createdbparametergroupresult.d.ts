@@ -1,5 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbParameterGroup } from "./dbparametergroup";
-export declare class CreateDbParameterGroupResult extends SpeakeasyBase {
-    dbParameterGroup?: DbParameterGroup;
+import { DBParameterGroup } from "./dbparametergroup";
+/**
+ * Success
+ */
+export declare class CreateDBParameterGroupResult extends SpeakeasyBase {
+    /**
+     * <p>Contains the details of an Amazon RDS DB parameter group.</p> <p>This data type is used as a response element in the <code>DescribeDBParameterGroups</code> action.</p>
+     */
+    dbParameterGroup?: DBParameterGroup;
 }

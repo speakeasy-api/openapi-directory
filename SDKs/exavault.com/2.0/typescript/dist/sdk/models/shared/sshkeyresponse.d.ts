@@ -1,8 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { SshKey } from "./sshkey";
+import { SSHKey } from "./sshkey";
 import { User } from "./user";
-export declare class SshKeyResponse extends SpeakeasyBase {
-    data?: SshKey;
+/**
+ * Successful Operation
+ */
+export declare class SSHKeyResponse extends SpeakeasyBase {
+    /**
+     * Object representing an SSH Key associated with a user.
+     */
+    data?: SSHKey;
     included?: User[];
+    /**
+     * Http status code of the response.
+     */
     responseStatus?: number;
 }

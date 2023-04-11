@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListDatasetImportJobsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListDatasetImportJobsXAmzTargetEnum {
     AmazonPersonalizeListDatasetImportJobs = "AmazonPersonalize.ListDatasetImportJobs"
 }
-export declare class ListDatasetImportJobsHeaders extends SpeakeasyBase {
+export declare class ListDatasetImportJobsRequest extends SpeakeasyBase {
+    listDatasetImportJobsRequest: shared.ListDatasetImportJobsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,16 +14,29 @@ export declare class ListDatasetImportJobsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: ListDatasetImportJobsXAmzTargetEnum;
-}
-export declare class ListDatasetImportJobsRequest extends SpeakeasyBase {
-    queryParams: ListDatasetImportJobsQueryParams;
-    headers: ListDatasetImportJobsHeaders;
-    request: shared.ListDatasetImportJobsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class ListDatasetImportJobsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * Success
+     */
     listDatasetImportJobsResponse?: shared.ListDatasetImportJobsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

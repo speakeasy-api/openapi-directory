@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ActionsGetOrgPublicKeyPathParams extends SpeakeasyBase {
-    org: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ActionsGetOrgPublicKeyRequest extends SpeakeasyBase {
-    pathParams: ActionsGetOrgPublicKeyPathParams;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    org: string;
 }
 export declare class ActionsGetOrgPublicKeyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     actionsPublicKey?: shared.ActionsPublicKey;
 }

@@ -1,16 +1,16 @@
-import { AxiosInstance } from "axios";
-import { Security } from "./models/shared";
 import { Application } from "./application";
 import { ApplicationKeyCredentials } from "./applicationkeycredentials";
 import { ApplicationOwners } from "./applicationowners";
 import { ApplicationPasswordCredentials } from "./applicationpasswordcredentials";
+import { DeletedApplications } from "./deletedapplications";
 import { Domain } from "./domain";
 import { Group } from "./group";
 import { GroupOwners } from "./groupowners";
 import { GroupsOwners } from "./groupsowners";
+import * as shared from "./models/shared";
 import { OAuth2PermissionGrantCreate } from "./oauth2permissiongrantcreate";
-import { OAuth2PermissionGrantList } from "./oauth2permissiongrantlist";
 import { OAuth2PermissionGrantDelete } from "./oauth2permissiongrantdelete";
+import { OAuth2PermissionGrantList } from "./oauth2permissiongrantlist";
 import { Objects } from "./objects";
 import { ServicePrincipal } from "./serviceprincipal";
 import { ServicePrincipalAppRoleAssignedTo } from "./serviceprincipalapproleassignedto";
@@ -21,13 +21,31 @@ import { ServicePrincipalPasswordCredentials } from "./serviceprincipalpasswordc
 import { ServicePrincipalsByAppId } from "./serviceprincipalsbyappid";
 import { SignedInUser } from "./signedinuser";
 import { User } from "./user";
-import { DeletedApplications } from "./deletedapplications";
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://graph.windows.net"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * The security details required to authenticate the SDK
+     */
+    security?: shared.Security;
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    security?: Security;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * The Graph RBAC Management Client
+ */
 export declare class SDK {
     application: Application;
     applicationKeyCredentials: ApplicationKeyCredentials;
@@ -57,5 +75,6 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
 }

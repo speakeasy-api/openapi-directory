@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Reviews {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,15 +9,15 @@ export declare class Reviews {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * androidpublisherReviewsGet - Gets a single review.
-    **/
-    androidpublisherReviewsGet(req: operations.AndroidpublisherReviewsGetRequest, config?: AxiosRequestConfig): Promise<operations.AndroidpublisherReviewsGetResponse>;
+     * Gets a single review.
+     */
+    androidpublisherReviewsGet(req: operations.AndroidpublisherReviewsGetRequest, security: operations.AndroidpublisherReviewsGetSecurity, config?: AxiosRequestConfig): Promise<operations.AndroidpublisherReviewsGetResponse>;
     /**
-     * androidpublisherReviewsList - Lists all reviews.
-    **/
-    androidpublisherReviewsList(req: operations.AndroidpublisherReviewsListRequest, config?: AxiosRequestConfig): Promise<operations.AndroidpublisherReviewsListResponse>;
+     * Lists all reviews.
+     */
+    androidpublisherReviewsList(req: operations.AndroidpublisherReviewsListRequest, security: operations.AndroidpublisherReviewsListSecurity, config?: AxiosRequestConfig): Promise<operations.AndroidpublisherReviewsListResponse>;
     /**
-     * androidpublisherReviewsReply - Replies to a single review, or updates an existing reply.
-    **/
-    androidpublisherReviewsReply(req: operations.AndroidpublisherReviewsReplyRequest, config?: AxiosRequestConfig): Promise<operations.AndroidpublisherReviewsReplyResponse>;
+     * Replies to a single review, or updates an existing reply.
+     */
+    androidpublisherReviewsReply(req: operations.AndroidpublisherReviewsReplyRequest, security: operations.AndroidpublisherReviewsReplySecurity, config?: AxiosRequestConfig): Promise<operations.AndroidpublisherReviewsReplyResponse>;
 }

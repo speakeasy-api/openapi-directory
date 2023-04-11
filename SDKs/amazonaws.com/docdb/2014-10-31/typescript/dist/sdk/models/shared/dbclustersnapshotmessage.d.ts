@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbClusterSnapshotList } from "./dbclustersnapshotlist";
+import { DBClusterSnapshotList } from "./dbclustersnapshotlist";
 /**
  * Represents the output of <a>DescribeDBClusterSnapshots</a>.
-**/
-export declare class DbClusterSnapshotMessage extends SpeakeasyBase {
-    dbClusterSnapshots?: DbClusterSnapshotList[];
+ */
+export declare class DBClusterSnapshotMessage extends SpeakeasyBase {
+    dbClusterSnapshots?: DBClusterSnapshotList[];
     marker?: string;
 }

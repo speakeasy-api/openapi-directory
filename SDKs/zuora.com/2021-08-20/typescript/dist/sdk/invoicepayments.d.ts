@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class InvoicePayments {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,15 +9,15 @@ export declare class InvoicePayments {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * objectGetInvoicePayment - CRUD: Retrieve an invoice payment
-    **/
-    objectGetInvoicePayment(req: operations.ObjectGetInvoicePaymentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGetInvoicePaymentResponse>;
+     * CRUD: Retrieve an invoice payment
+     */
+    objectGETInvoicePayment(req: operations.ObjectGETInvoicePaymentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGETInvoicePaymentResponse>;
     /**
-     * objectPostInvoicePayment - CRUD: Create an invoice payment
-    **/
-    objectPostInvoicePayment(req: operations.ObjectPostInvoicePaymentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPostInvoicePaymentResponse>;
+     * CRUD: Create an invoice payment
+     */
+    objectPOSTInvoicePayment(req: operations.ObjectPOSTInvoicePaymentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPOSTInvoicePaymentResponse>;
     /**
-     * objectPutInvoicePayment - CRUD: Update an invoice payment
-    **/
-    objectPutInvoicePayment(req: operations.ObjectPutInvoicePaymentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPutInvoicePaymentResponse>;
+     * CRUD: Update an invoice payment
+     */
+    objectPUTInvoicePayment(req: operations.ObjectPUTInvoicePaymentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPUTInvoicePaymentResponse>;
 }

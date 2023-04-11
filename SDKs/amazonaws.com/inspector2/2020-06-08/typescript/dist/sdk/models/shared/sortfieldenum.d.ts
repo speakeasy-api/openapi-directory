@@ -1,0 +1,18 @@
+export declare enum SortFieldEnum {
+    AwsAccountId = "AWS_ACCOUNT_ID",
+    FindingType = "FINDING_TYPE",
+    Severity = "SEVERITY",
+    FirstObservedAt = "FIRST_OBSERVED_AT",
+    LastObservedAt = "LAST_OBSERVED_AT",
+    FindingStatus = "FINDING_STATUS",
+    ResourceType = "RESOURCE_TYPE",
+    EcrImagePushedAt = "ECR_IMAGE_PUSHED_AT",
+    EcrImageRepositoryName = "ECR_IMAGE_REPOSITORY_NAME",
+    EcrImageRegistry = "ECR_IMAGE_REGISTRY",
+    NetworkProtocol = "NETWORK_PROTOCOL",
+    ComponentType = "COMPONENT_TYPE",
+    VulnerabilityId = "VULNERABILITY_ID",
+    VulnerabilitySource = "VULNERABILITY_SOURCE",
+    InspectorScore = "INSPECTOR_SCORE",
+    VendorSeverity = "VENDOR_SEVERITY"
+}

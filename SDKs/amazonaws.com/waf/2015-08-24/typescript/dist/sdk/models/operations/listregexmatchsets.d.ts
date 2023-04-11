@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum ListRegexMatchSetsXAmzTargetEnum {
-    Awswaf20150824ListRegexMatchSets = "AWSWAF_20150824.ListRegexMatchSets"
+    AWSWAF20150824ListRegexMatchSets = "AWSWAF_20150824.ListRegexMatchSets"
 }
-export declare class ListRegexMatchSetsHeaders extends SpeakeasyBase {
+export declare class ListRegexMatchSetsRequest extends SpeakeasyBase {
+    listRegexMatchSetsRequest: shared.ListRegexMatchSetsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class ListRegexMatchSetsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListRegexMatchSetsXAmzTargetEnum;
 }
-export declare class ListRegexMatchSetsRequest extends SpeakeasyBase {
-    headers: ListRegexMatchSetsHeaders;
-    request: shared.ListRegexMatchSetsRequest;
-}
 export declare class ListRegexMatchSetsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     listRegexMatchSetsResponse?: shared.ListRegexMatchSetsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFInvalidAccountException
+     */
     wafInvalidAccountException?: any;
 }

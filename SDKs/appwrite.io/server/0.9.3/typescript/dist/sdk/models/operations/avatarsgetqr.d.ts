@@ -1,21 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class AvatarsGetQrQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class AvatarsGetQRSecurity extends SpeakeasyBase {
+    jwt: string;
+    key: string;
+    project: string;
+}
+export declare class AvatarsGetQRRequest extends SpeakeasyBase {
+    /**
+     * Return resulting image with 'Content-Disposition: attachment ' headers for the browser to start downloading it. Pass 0 for no header, or 1 for otherwise. Default value is set to 0.
+     */
     download?: boolean;
+    /**
+     * Margin from edge. Pass an integer between 0 to 10. Defaults to 1.
+     */
     margin?: number;
+    /**
+     * QR code size. Pass an integer between 0 to 1000. Defaults to 400.
+     */
     size?: number;
+    /**
+     * Plain text to be converted to QR code image.
+     */
     text: string;
 }
-export declare class AvatarsGetQrSecurity extends SpeakeasyBase {
-    jwt: shared.SchemeJwt;
-    key: shared.SchemeKey;
-    project: shared.SchemeProject;
-}
-export declare class AvatarsGetQrRequest extends SpeakeasyBase {
-    queryParams: AvatarsGetQrQueryParams;
-    security: AvatarsGetQrSecurity;
-}
-export declare class AvatarsGetQrResponse extends SpeakeasyBase {
+export declare class AvatarsGetQRResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,17 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DomainsGetPathParams extends SpeakeasyBase {
-    domainName: string;
-    tenantID: string;
-}
-export declare class DomainsGetQueryParams extends SpeakeasyBase {
-    apiVersion: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DomainsGetRequest extends SpeakeasyBase {
-    pathParams: DomainsGetPathParams;
-    queryParams: DomainsGetQueryParams;
+    /**
+     * Client API version.
+     */
+    apiVersion: string;
+    /**
+     * name of the domain.
+     */
+    domainName: string;
+    /**
+     * The tenant ID.
+     */
+    tenantID: string;
 }
 export declare class DomainsGetResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * OK. The operation was successful.
+     */
     domain?: Record<string, Record<string, any>>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

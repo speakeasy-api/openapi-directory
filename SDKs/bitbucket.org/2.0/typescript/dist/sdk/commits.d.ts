@@ -1,5 +1,12 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * These are the repository's commits. They are paginated and returned in
+ *
+ * @remarks
+ * reverse chronological order, similar to the output of git log.
+ *
+ */
 export declare class Commits {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +16,10 @@ export declare class Commits {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * bulkCreateOrUpdateAnnotations - Bulk upload of annotations.
+     * Bulk create or update annotations
+     *
+     * @remarks
+     * Bulk upload of annotations.
      * Annotations are individual findings that have been identified as part of a report, for example, a line of code that represents a vulnerability. These annotations can be attached to a specific file and even a specific line in that file, however, that is optional. Annotations are not mandatory and a report can contain up to 1000 annotations.
      *
      * Add the annotations you want to upload as objects in a JSON array and make sure each annotation has the external_id field set to a unique value. If you want to use an existing id from your own system, we recommend prefixing it with your system's name to avoid collisions, for example, mySystem-annotation001. The external id can later be used to identify the report as an alternative to the generated [UUID](https://developer.atlassian.com/bitbucket/api/2/reference/meta/uri-uuid#uuid). You can upload up to 100 annotations per POST request.
@@ -48,10 +58,13 @@ export declare class Commits {
      *
      * Please refer to the [Code Insights documentation](https://confluence.atlassian.com/bitbucket/code-insights-994316785.html) for more information.
      *
-    **/
+     */
     bulkCreateOrUpdateAnnotations(req: operations.BulkCreateOrUpdateAnnotationsRequest, config?: AxiosRequestConfig): Promise<operations.BulkCreateOrUpdateAnnotationsResponse>;
     /**
-     * createOrUpdateAnnotation - Creates or updates an individual annotation for the specified report.
+     * Create or update an annotation
+     *
+     * @remarks
+     * Creates or updates an individual annotation for the specified report.
      * Annotations are individual findings that have been identified as part of a report, for example, a line of code that represents a vulnerability. These annotations can be attached to a specific file and even a specific line in that file, however, that is optional. Annotations are not mandatory and a report can contain up to 1000 annotations.
      *
      * Just as reports, annotation needs to be uploaded with a unique ID that can later be used to identify the report as an alternative to the generated [UUID](https://developer.atlassian.com/bitbucket/api/2/reference/meta/uri-uuid#uuid). If you want to use an existing id from your own system, we recommend prefixing it with your system's name to avoid collisions, for example, mySystem-annotation001.
@@ -77,10 +90,13 @@ export declare class Commits {
      *
      * Please refer to the [Code Insights documentation](https://confluence.atlassian.com/bitbucket/code-insights-994316785.html) for more information.
      *
-    **/
+     */
     createOrUpdateAnnotation(req: operations.CreateOrUpdateAnnotationRequest, config?: AxiosRequestConfig): Promise<operations.CreateOrUpdateAnnotationResponse>;
     /**
-     * createOrUpdateReport - Creates or updates a report for the specified commit.
+     * Create or update a report
+     *
+     * @remarks
+     * Creates or updates a report for the specified commit.
      * To upload a report, make sure to generate an ID that is unique across all reports for that commit. If you want to use an existing id from your own system, we recommend prefixing it with your system's name to avoid collisions, for example, mySystem-001.
      *
      * ### Sample cURL request:
@@ -128,43 +144,80 @@ export declare class Commits {
      *
      * Please refer to the [Code Insights documentation](https://confluence.atlassian.com/bitbucket/code-insights-994316785.html) for more information.
      *
-    **/
+     */
     createOrUpdateReport(req: operations.CreateOrUpdateReportRequest, config?: AxiosRequestConfig): Promise<operations.CreateOrUpdateReportResponse>;
     /**
-     * deleteAnnotation - Deletes a single Annotation matching the provided ID.
-    **/
+     * Delete an annotation
+     *
+     * @remarks
+     * Deletes a single Annotation matching the provided ID.
+     */
     deleteAnnotation(req: operations.DeleteAnnotationRequest, config?: AxiosRequestConfig): Promise<operations.DeleteAnnotationResponse>;
     /**
-     * deleteReport - Deletes a single Report matching the provided ID.
-    **/
+     * Delete a report
+     *
+     * @remarks
+     * Deletes a single Report matching the provided ID.
+     */
     deleteReport(req: operations.DeleteReportRequest, config?: AxiosRequestConfig): Promise<operations.DeleteReportResponse>;
     /**
-     * deleteRepositoriesWorkspaceRepoSlugCommitCommitApprove - Redact the authenticated user's approval of the specified commit.
+     * Unapprove a commit
+     *
+     * @remarks
+     * Redact the authenticated user's approval of the specified commit.
      *
      * This operation is only available to users that have explicit access to
      * the repository. In contrast, just the fact that a repository is
      * publicly accessible to users does not give them the ability to approve
      * commits.
-    **/
-    deleteRepositoriesWorkspaceRepoSlugCommitCommitApprove(req: operations.DeleteRepositoriesWorkspaceRepoSlugCommitCommitApproveRequest, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoriesWorkspaceRepoSlugCommitCommitApproveResponse>;
+     */
+    deleteRepositoriesWorkspaceRepoSlugCommitCommitApprove(req: operations.DeleteRepositoriesWorkspaceRepoSlugCommitCommitApproveRequest, security: operations.DeleteRepositoriesWorkspaceRepoSlugCommitCommitApproveSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoriesWorkspaceRepoSlugCommitCommitApproveResponse>;
     /**
-     * getAnnotation - Returns a single Annotation matching the provided ID.
-    **/
+     * Delete a commit comment
+     *
+     * @remarks
+     * Deletes the specified commit comment.
+     *
+     * Note that deleting comments that have visible replies that point to
+     * them will not really delete the resource. This is to retain the integrity
+     * of the original comment tree. Instead, the `deleted` element is set to
+     * `true` and the content is blanked out. The comment will continue to be
+     * returned by the collections and self endpoints.
+     */
+    deleteRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentId(req: operations.DeleteRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIdRequest, security: operations.DeleteRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIdSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIdResponse>;
+    /**
+     * Get an annotation
+     *
+     * @remarks
+     * Returns a single Annotation matching the provided ID.
+     */
     getAnnotation(req: operations.GetAnnotationRequest, config?: AxiosRequestConfig): Promise<operations.GetAnnotationResponse>;
     /**
-     * getAnnotationsForReport - Returns a paginated list of Annotations for a specified report.
-    **/
+     * List annotations
+     *
+     * @remarks
+     * Returns a paginated list of Annotations for a specified report.
+     */
     getAnnotationsForReport(req: operations.GetAnnotationsForReportRequest, config?: AxiosRequestConfig): Promise<operations.GetAnnotationsForReportResponse>;
     /**
-     * getReport - Returns a single Report matching the provided ID.
-    **/
+     * Get a report
+     *
+     * @remarks
+     * Returns a single Report matching the provided ID.
+     */
     getReport(req: operations.GetReportRequest, config?: AxiosRequestConfig): Promise<operations.GetReportResponse>;
     /**
-     * getReportsForCommit - Returns a paginated list of Reports linked to this commit.
-    **/
+     * List reports
+     *
+     * @remarks
+     * Returns a paginated list of Reports linked to this commit.
+     */
     getReportsForCommit(req: operations.GetReportsForCommitRequest, config?: AxiosRequestConfig): Promise<operations.GetReportsForCommitResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugCommitCommit - Returns the specified commit.
+     * Get a commit
+     *
+     * @remarks
+     * Returns the specified commit.
      *
      * Example:
      *
@@ -268,38 +321,47 @@ export declare class Commits {
      *     "type": "commit"
      * }
      * ```
-    **/
-    getRepositoriesWorkspaceRepoSlugCommitCommit(req: operations.GetRepositoriesWorkspaceRepoSlugCommitCommitRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugCommitCommitResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugCommitCommit(req: operations.GetRepositoriesWorkspaceRepoSlugCommitCommitRequest, security: operations.GetRepositoriesWorkspaceRepoSlugCommitCommitSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugCommitCommitResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugCommitCommitComments - Returns the commit's comments.
+     * List a commit's comments
+     *
+     * @remarks
+     * Returns the commit's comments.
      *
      * This includes both global and inline comments.
      *
      * The default sorting is oldest to newest and can be overridden with
      * the `sort` query parameter.
-    **/
-    getRepositoriesWorkspaceRepoSlugCommitCommitComments(req: operations.GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugCommitCommitComments(req: operations.GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsRequest, security: operations.GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentId - Returns the specified commit comment.
-    **/
-    getRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentId(req: operations.GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIdRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIdResponse>;
+     * Get a commit comment
+     *
+     * @remarks
+     * Returns the specified commit comment.
+     */
+    getRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentId(req: operations.GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIdRequest, security: operations.GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIdSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIdResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugCommits - These are the repository's commits. They are paginated and returned
+     * List commits
+     *
+     * @remarks
+     * These are the repository's commits. They are paginated and returned
      * in reverse chronological order, similar to the output of `git log`.
      * Like these tools, the DAG can be filtered.
      *
-     * ## GET /repositories/{workspace}/{repo_slug}/commits/
+     * #### GET /repositories/{workspace}/{repo_slug}/commits/
      *
      * Returns all commits in the repo in topological order (newest commit
      * first). All branches and tags are included (similar to
      * `git log --all`).
      *
-     * ## GET /repositories/{workspace}/{repo_slug}/commits/?exclude=master
+     * #### GET /repositories/{workspace}/{repo_slug}/commits/?exclude=master
      *
      * Returns all commits in the repo that are not on master
      * (similar to `git log --all ^master`).
      *
-     * ## GET /repositories/{workspace}/{repo_slug}/commits/?include=foo&include=bar&exclude=fu&exclude=fubar
+     * #### GET /repositories/{workspace}/{repo_slug}/commits/?include=foo&include=bar&exclude=fu&exclude=fubar
      *
      * Returns all commits that are on refs `foo` or `bar`, but not on `fu` or
      * `fubar` (similar to `git log foo bar ^fu ^fubar`).
@@ -312,12 +374,12 @@ export declare class Commits {
      * returned by this endpoint may no longer be a DAG, parent commits that
      * do not modify the path will be omitted from the response.
      *
-     * ## GET /repositories/{workspace}/{repo_slug}/commits/?path=README.md&include=foo&include=bar&exclude=master
+     * #### GET /repositories/{workspace}/{repo_slug}/commits/?path=README.md&include=foo&include=bar&exclude=master
      *
      * Returns all commits that are on refs `foo` or `bar`, but not on `master`
      * that changed the file README.md.
      *
-     * ## GET /repositories/{workspace}/{repo_slug}/commits/?path=src/&include=foo&include=bar&exclude=master
+     * #### GET /repositories/{workspace}/{repo_slug}/commits/?path=src/&include=foo&include=bar&exclude=master
      *
      * Returns all commits that are on refs `foo` or `bar`, but not on `master`
      * that changed to a file in any file in the directory src or its children.
@@ -329,18 +391,21 @@ export declare class Commits {
      *
      * When the include and exclude parameters are more than can fit in a
      * query string, clients can use a `x-www-form-urlencoded` POST instead.
-    **/
-    getRepositoriesWorkspaceRepoSlugCommits(req: operations.GetRepositoriesWorkspaceRepoSlugCommitsRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugCommitsResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugCommits(req: operations.GetRepositoriesWorkspaceRepoSlugCommitsRequest, security: operations.GetRepositoriesWorkspaceRepoSlugCommitsSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugCommitsResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugCommitsRevision - These are the repository's commits. They are paginated and returned
+     * List commits for revision
+     *
+     * @remarks
+     * These are the repository's commits. They are paginated and returned
      * in reverse chronological order, similar to the output of `git log`.
      * Like these tools, the DAG can be filtered.
      *
-     * ## GET /repositories/{workspace}/{repo_slug}/commits/master
+     * #### GET /repositories/{workspace}/{repo_slug}/commits/master
      *
-     * Returns all commits on rev `master` (similar to `git log master`).
+     * Returns all commits on ref `master` (similar to `git log master`).
      *
-     * ## GET /repositories/{workspace}/{repo_slug}/commits/dev?include=foo&exclude=master
+     * #### GET /repositories/{workspace}/{repo_slug}/commits/dev?include=foo&exclude=master
      *
      * Returns all commits on ref `dev` or `foo`, except those that are reachable on
      * `master` (similar to `git log dev foo ^master`).
@@ -353,12 +418,12 @@ export declare class Commits {
      * returned by this endpoint may no longer be a DAG, parent commits that
      * do not modify the path will be omitted from the response.
      *
-     * ## GET /repositories/{workspace}/{repo_slug}/commits/dev?path=README.md&include=foo&include=bar&exclude=master
+     * #### GET /repositories/{workspace}/{repo_slug}/commits/dev?path=README.md&include=foo&include=bar&exclude=master
      *
      * Returns all commits that are on refs `dev` or `foo` or `bar`, but not on `master`
      * that changed the file README.md.
      *
-     * ## GET /repositories/{workspace}/{repo_slug}/commits/dev?path=src/&include=foo&exclude=master
+     * #### GET /repositories/{workspace}/{repo_slug}/commits/dev?path=src/&include=foo&exclude=master
      *
      * Returns all commits that are on refs `dev` or `foo`, but not on `master`
      * that changed to a file in any file in the directory src or its children.
@@ -370,10 +435,13 @@ export declare class Commits {
      *
      * When the include and exclude parameters are more than can fit in a
      * query string, clients can use a `x-www-form-urlencoded` POST instead.
-    **/
-    getRepositoriesWorkspaceRepoSlugCommitsRevision(req: operations.GetRepositoriesWorkspaceRepoSlugCommitsRevisionRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugCommitsRevisionResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugCommitsRevision(req: operations.GetRepositoriesWorkspaceRepoSlugCommitsRevisionRequest, security: operations.GetRepositoriesWorkspaceRepoSlugCommitsRevisionSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugCommitsRevisionResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugDiffSpec - Produces a raw git-style diff.
+     * Compare two commits
+     *
+     * @remarks
+     * Produces a raw git-style diff.
      *
      * #### Single commit spec
      *
@@ -383,15 +451,11 @@ export declare class Commits {
      * #### Two commit spec
      *
      * Two commits separated by `..` may be provided as the `spec`, e.g.,
-     * `3a8b42..9ff173`. When two commits are provided and the `merge` query
-     * parameter is true or absent, this API produces a 3-way diff, also
-     * referred to as a merge diff. This is equivalent to merging the left
-     * branch into the right branch and then computing the diff of the merge
-     * commit against its first parent (the right branch). These diffs have
-     * the same behavior as pull requests that show the 3-way diff, such as
-     * the [Bitbucket Cloud Pull
-     * Request](https://blog.developer.atlassian.com/a-better-pull-request/).
-     * For a simple git-style diff, add `merge=false` to the query.
+     * `3a8b42..9ff173`. When two commits are provided and the `topic` query
+     * parameter is true or absent, this API produces a 2-way three dot diff.
+     * This is the diff between source commit and the merge base of the source
+     * commit and the destination commit. When the `topic` query param is false,
+     * a simple git-style diff is produced.
      *
      * The two commits are interpreted as follows:
      *
@@ -413,10 +477,13 @@ export declare class Commits {
      * The raw diff is returned as-is, in whatever encoding the files in the
      * repository use. It is not decoded into unicode. As such, the
      * content-type is `text/plain`.
-    **/
-    getRepositoriesWorkspaceRepoSlugDiffSpec(req: operations.GetRepositoriesWorkspaceRepoSlugDiffSpecRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugDiffSpecResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugDiffSpec(req: operations.GetRepositoriesWorkspaceRepoSlugDiffSpecRequest, security: operations.GetRepositoriesWorkspaceRepoSlugDiffSpecSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugDiffSpecResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugDiffstatSpec - Produces a response in JSON format with a record for every path
+     * Compare two commit diff stats
+     *
+     * @remarks
+     * Produces a response in JSON format with a record for every path
      * modified, including information on the type of the change and the
      * number of lines added and removed.
      *
@@ -428,15 +495,11 @@ export declare class Commits {
      * #### Two commit spec
      *
      * Two commits separated by `..` may be provided as the `spec`, e.g.,
-     * `3a8b42..9ff173`. When two commits are provided and the `merge` query
-     * parameter is true or absent, this API produces a 3-way diff, also
-     * referred to as a merge diff. This is equivalent to merging the left
-     * branch into the right branch and then computing the diff of the merge
-     * commit against its first parent (the right branch). These diffs have
-     * the same behavior as pull requests that show the 3-way diff, such as
-     * the [Bitbucket Cloud Pull
-     * Request](https://blog.developer.atlassian.com/a-better-pull-request/).
-     * For a simple git-style diff, add `merge=false` to the query.
+     * `3a8b42..9ff173`. When two commits are provided and the `topic` query
+     * parameter is true or absent, this API produces a 2-way three dot diff.
+     * This is the diff between source commit and the merge base of the source
+     * commit and the destination commit. When the `topic` query param is false,
+     * a simple git-style diff is produced.
      *
      * The two commits are interpreted as follows:
      *
@@ -482,26 +545,31 @@ export declare class Commits {
      *     "size": 1
      * }
      * ```
-    **/
-    getRepositoriesWorkspaceRepoSlugDiffstatSpec(req: operations.GetRepositoriesWorkspaceRepoSlugDiffstatSpecRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugDiffstatSpecResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugDiffstatSpec(req: operations.GetRepositoriesWorkspaceRepoSlugDiffstatSpecRequest, security: operations.GetRepositoriesWorkspaceRepoSlugDiffstatSpecSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugDiffstatSpecResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugMergeBaseRevspec - Returns the best common ancestor between two commits, specified in a revspec
+     * Get the common ancestor between two commits
+     *
+     * @remarks
+     * Returns the best common ancestor between two commits, specified in a revspec
      * of 2 commits (e.g. 3a8b42..9ff173).
      *
      * If more than one best common ancestor exists, only one will be returned. It is
      * unspecified which will be returned.
-    **/
-    getRepositoriesWorkspaceRepoSlugMergeBaseRevspec(req: operations.GetRepositoriesWorkspaceRepoSlugMergeBaseRevspecRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugMergeBaseRevspecResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugMergeBaseRevspec(req: operations.GetRepositoriesWorkspaceRepoSlugMergeBaseRevspecRequest, security: operations.GetRepositoriesWorkspaceRepoSlugMergeBaseRevspecSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugMergeBaseRevspecResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugPatchSpec - Produces a raw patch for a single commit (diffed against its first
+     * Get a patch for two commits
+     *
+     * @remarks
+     * Produces a raw patch for a single commit (diffed against its first
      * parent), or a patch-series for a revspec of 2 commits (e.g.
      * `3a8b42..9ff173` where the first commit represents the source and the
      * second commit the destination).
      *
      * In case of the latter (diffing a revspec), a patch series is returned
      * for the commits on the source branch (`3a8b42` and its ancestors in
-     * our example). For Mercurial, a single patch is returned that combines
-     * the changes of all commits on the source branch.
+     * our example).
      *
      * While similar to diffs, patches:
      *
@@ -511,19 +579,25 @@ export declare class Commits {
      * The raw patch is returned as-is, in whatever encoding the files in the
      * repository use. It is not decoded into unicode. As such, the
      * content-type is `text/plain`.
-    **/
-    getRepositoriesWorkspaceRepoSlugPatchSpec(req: operations.GetRepositoriesWorkspaceRepoSlugPatchSpecRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugPatchSpecResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugPatchSpec(req: operations.GetRepositoriesWorkspaceRepoSlugPatchSpecRequest, security: operations.GetRepositoriesWorkspaceRepoSlugPatchSpecSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugPatchSpecResponse>;
     /**
-     * postRepositoriesWorkspaceRepoSlugCommitCommitApprove - Approve the specified commit as the authenticated user.
+     * Approve a commit
+     *
+     * @remarks
+     * Approve the specified commit as the authenticated user.
      *
      * This operation is only available to users that have explicit access to
      * the repository. In contrast, just the fact that a repository is
      * publicly accessible to users does not give them the ability to approve
      * commits.
-    **/
-    postRepositoriesWorkspaceRepoSlugCommitCommitApprove(req: operations.PostRepositoriesWorkspaceRepoSlugCommitCommitApproveRequest, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugCommitCommitApproveResponse>;
+     */
+    postRepositoriesWorkspaceRepoSlugCommitCommitApprove(req: operations.PostRepositoriesWorkspaceRepoSlugCommitCommitApproveRequest, security: operations.PostRepositoriesWorkspaceRepoSlugCommitCommitApproveSecurity, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugCommitCommitApproveResponse>;
     /**
-     * postRepositoriesWorkspaceRepoSlugCommitCommitComments - Creates new comment on the specified commit.
+     * Create comment for a commit
+     *
+     * @remarks
+     * Creates new comment on the specified commit.
      *
      * To post a reply to an existing comment, include the `parent.id` field:
      *
@@ -534,22 +608,42 @@ export declare class Commits {
      *   -d '{"content": {"raw": "One more thing!"},
      *        "parent": {"id": 5728901}}'
      * ```
-    **/
-    postRepositoriesWorkspaceRepoSlugCommitCommitComments(req: operations.PostRepositoriesWorkspaceRepoSlugCommitCommitCommentsRequest, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugCommitCommitCommentsResponse>;
+     */
+    postRepositoriesWorkspaceRepoSlugCommitCommitComments(req: operations.PostRepositoriesWorkspaceRepoSlugCommitCommitCommentsRequest, security: operations.PostRepositoriesWorkspaceRepoSlugCommitCommitCommentsSecurity, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugCommitCommitCommentsResponse>;
     /**
-     * postRepositoriesWorkspaceRepoSlugCommits - Identical to `GET /repositories/{workspace}/{repo_slug}/commits`,
+     * List commits with include/exclude
+     *
+     * @remarks
+     * Identical to `GET /repositories/{workspace}/{repo_slug}/commits`,
      * except that POST allows clients to place the include and exclude
      * parameters in the request body to avoid URL length issues.
      *
      * **Note that this resource does NOT support new commit creation.**
-    **/
-    postRepositoriesWorkspaceRepoSlugCommits(req: operations.PostRepositoriesWorkspaceRepoSlugCommitsRequest, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugCommitsResponse>;
+     */
+    postRepositoriesWorkspaceRepoSlugCommits(req: operations.PostRepositoriesWorkspaceRepoSlugCommitsRequest, security: operations.PostRepositoriesWorkspaceRepoSlugCommitsSecurity, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugCommitsResponse>;
     /**
-     * postRepositoriesWorkspaceRepoSlugCommitsRevision - Identical to `GET /repositories/{workspace}/{repo_slug}/commits/{revision}`,
+     * List commits for revision using include/exclude
+     *
+     * @remarks
+     * Identical to `GET /repositories/{workspace}/{repo_slug}/commits/{revision}`,
      * except that POST allows clients to place the include and exclude
      * parameters in the request body to avoid URL length issues.
      *
      * **Note that this resource does NOT support new commit creation.**
-    **/
-    postRepositoriesWorkspaceRepoSlugCommitsRevision(req: operations.PostRepositoriesWorkspaceRepoSlugCommitsRevisionRequest, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugCommitsRevisionResponse>;
+     */
+    postRepositoriesWorkspaceRepoSlugCommitsRevision(req: operations.PostRepositoriesWorkspaceRepoSlugCommitsRevisionRequest, security: operations.PostRepositoriesWorkspaceRepoSlugCommitsRevisionSecurity, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugCommitsRevisionResponse>;
+    /**
+     * Update a commit comment
+     *
+     * @remarks
+     * Used to update the contents of a comment. Only the content of the comment can be updated.
+     *
+     * ```
+     * $ curl https://api.bitbucket.org/2.0/repositories/atlassian/prlinks/commit/7f71b5/comments/5728901 \
+     *   -X PUT -u evzijst \
+     *   -H 'Content-Type: application/json' \
+     *   -d '{"content": {"raw": "One more thing!"}'
+     * ```
+     */
+    putRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentId(req: operations.PutRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIdRequest, security: operations.PutRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIdSecurity, config?: AxiosRequestConfig): Promise<operations.PutRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIdResponse>;
 }

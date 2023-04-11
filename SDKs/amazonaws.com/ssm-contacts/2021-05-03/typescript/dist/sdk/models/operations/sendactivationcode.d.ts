@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum SendActivationCodeXAmzTargetEnum {
-    SsmContactsSendActivationCode = "SSMContacts.SendActivationCode"
+    SSMContactsSendActivationCode = "SSMContacts.SendActivationCode"
 }
-export declare class SendActivationCodeHeaders extends SpeakeasyBase {
+export declare class SendActivationCodeRequest extends SpeakeasyBase {
+    sendActivationCodeRequest: shared.SendActivationCodeRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,19 +15,40 @@ export declare class SendActivationCodeHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: SendActivationCodeXAmzTargetEnum;
 }
-export declare class SendActivationCodeRequest extends SpeakeasyBase {
-    headers: SendActivationCodeHeaders;
-    request: shared.SendActivationCodeRequest;
-}
 export declare class SendActivationCodeResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * DataEncryptionException
+     */
     dataEncryptionException?: any;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
+    /**
+     * Success
+     */
     sendActivationCodeResult?: Record<string, any>;
+    /**
+     * ServiceQuotaExceededException
+     */
     serviceQuotaExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

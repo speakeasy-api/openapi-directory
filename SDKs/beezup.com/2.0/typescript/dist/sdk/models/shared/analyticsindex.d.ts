@@ -4,7 +4,7 @@ import { AnalyticsIndexLovLinks } from "./analyticsindexlovlinks";
 import { AnalyticsStoreIndex } from "./analyticsstoreindex";
 /**
  * The Analytics API operation index.
-**/
+ */
 export declare class AnalyticsIndex extends SpeakeasyBase {
     links: AnalyticsIndexLinks;
     lovLinks?: AnalyticsIndexLovLinks;

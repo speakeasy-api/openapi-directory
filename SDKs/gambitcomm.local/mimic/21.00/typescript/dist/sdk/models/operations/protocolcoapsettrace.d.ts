@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolCoapSetTracePathParams extends SpeakeasyBase {
-    agentNum: number;
-    enableOrNot: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolCoapSetTraceRequest extends SpeakeasyBase {
-    pathParams: ProtocolCoapSetTracePathParams;
+    /**
+     * Agent to set the COAP tracing
+     */
+    agentNum: number;
+    /**
+     * Value to set the COAP tracing
+     */
+    enableOrNot: string;
 }
 export declare class ProtocolCoapSetTraceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolCoapSetTrace200ApplicationJSONString?: string;
 }

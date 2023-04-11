@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { RdsDataSpec } from "./rdsdataspec";
-export declare class CreateDataSourceFromRdsInput extends SpeakeasyBase {
+import { RDSDataSpec } from "./rdsdataspec";
+export declare class CreateDataSourceFromRDSInput extends SpeakeasyBase {
     computeStatistics?: boolean;
     dataSourceId: string;
     dataSourceName?: string;
-    rdsData: RdsDataSpec;
+    rdsData: RDSDataSpec;
     roleARN: string;
 }

@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class ScheduleMesages {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class ScheduleMesages {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getUpcomingScheduledCampaignsAndCanvases - Get Upcoming Scheduled Campaigns and Canvases
+     * Get Upcoming Scheduled Campaigns and Canvases
      *
+     * @remarks
      * You can view a JSON list of upcoming and scheduled Campaigns and Canvases using the following information and parameters. The endpoint will return information about scheduled Campaigns and entry Canvases between now and the designated end_time (ISO 8601 format) specified in the request. Daily, recurring messages will only appear once with their next occurrence. Results returned in this endpoint are only for Campaigns and Canvases created and scheduled in Braze.
      *
      * ## Response
@@ -41,11 +42,12 @@ export declare class ScheduleMesages {
      *     ]
      * }
      * ```
-    **/
+     */
     getUpcomingScheduledCampaignsAndCanvases(req: operations.GetUpcomingScheduledCampaignsAndCanvasesRequest, config?: AxiosRequestConfig): Promise<operations.GetUpcomingScheduledCampaignsAndCanvasesResponse>;
     /**
-     * scheduleApiTriggeredCanvases - Schedule API Triggered Canvases
+     * Schedule API Triggered Canvases
      *
+     * @remarks
      * Use this endpoint to trigger API Triggered Canvases, which are created on the Dashboard and initiated via the API. You can pass in `canvas_entry_properties` that will be templated into the messages sent by the first steps of the Canvas.
      *
      * This endpoint allows you to schedule Canvas messages (up to 90 days in advance) via API Triggered delivery, allowing you to decide what action should trigger the message to be sent. Please note that to send messages with this endpoint, you must have a Canvas ID, created when you build a Canvas.
@@ -69,6 +71,6 @@ export declare class ScheduleMesages {
      * - [Broadcast](https://www.braze.com/docs/api/parameters/#broadcast)
      * - [Trigger Properties](https://www.braze.com/docs/api/objects_filters/trigger_properties_object/)
      * - [Schedule Object](https://www.braze.com/docs/api/objects_filters/schedule_object/)
-    **/
-    scheduleApiTriggeredCanvases(req: operations.ScheduleApiTriggeredCanvasesRequest, config?: AxiosRequestConfig): Promise<operations.ScheduleApiTriggeredCanvasesResponse>;
+     */
+    scheduleApiTriggeredCanvases(req: operations.ScheduleApiTriggeredCanvasesRequestBody, config?: AxiosRequestConfig): Promise<operations.ScheduleApiTriggeredCanvasesResponse>;
 }

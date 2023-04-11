@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Provides information about Amazon Pinpoint configuration settings for retrieving and processing data from a recommender model.
-**/
+ */
 export declare class RecommenderConfigurationResponse extends SpeakeasyBase {
     attributes?: Record<string, string>;
     creationDate: string;

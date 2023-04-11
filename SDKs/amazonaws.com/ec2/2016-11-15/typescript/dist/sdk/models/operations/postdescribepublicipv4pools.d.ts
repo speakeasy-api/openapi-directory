@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribePublicIpv4PoolsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribePublicIpv4PoolsActionEnum {
     DescribePublicIpv4Pools = "DescribePublicIpv4Pools"
 }
-export declare enum PostDescribePublicIpv4PoolsVersionEnum {
+export declare enum POSTDescribePublicIpv4PoolsVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDescribePublicIpv4PoolsQueryParams extends SpeakeasyBase {
-    action: PostDescribePublicIpv4PoolsActionEnum;
+export declare class POSTDescribePublicIpv4PoolsRequest extends SpeakeasyBase {
+    action: POSTDescribePublicIpv4PoolsActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostDescribePublicIpv4PoolsVersionEnum;
-}
-export declare class PostDescribePublicIpv4PoolsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribePublicIpv4PoolsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribePublicIpv4PoolsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribePublicIpv4PoolsRequest extends SpeakeasyBase {
-    queryParams: PostDescribePublicIpv4PoolsQueryParams;
-    headers: PostDescribePublicIpv4PoolsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribePublicIpv4PoolsResponse extends SpeakeasyBase {
+export declare class POSTDescribePublicIpv4PoolsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

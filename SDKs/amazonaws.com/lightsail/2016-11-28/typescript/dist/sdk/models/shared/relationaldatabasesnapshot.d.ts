@@ -4,7 +4,7 @@ import { ResourceTypeEnum } from "./resourcetypeenum";
 import { Tag } from "./tag";
 /**
  * Describes a database snapshot.
-**/
+ */
 export declare class RelationalDatabaseSnapshot extends SpeakeasyBase {
     arn?: string;
     createdAt?: Date;

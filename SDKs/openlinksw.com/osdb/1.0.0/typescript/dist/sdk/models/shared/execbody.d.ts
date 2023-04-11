@@ -1,15 +1,42 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * An OSDB-specific parameter controlling the action output type. If omitted, the native action output is returned.
+ */
 export declare enum ExecBodyOsdbOutputTypeEnum {
     UrlOnly = "url_only",
     GenerateRdf = "generate_rdf",
     DisplayRdf = "display_rdf"
 }
+/**
+ * Any parameters required by the action are supplied as a JSON object in the request body. The properties of this object depend on the service action being invoked.
+ */
 export declare class ExecBody extends SpeakeasyBase {
+    /**
+     * An example action specific property. There may be 0, 1 or more action specific properties, each holding an action specific parameter value.
+     */
     actionSpecificProperty1?: string;
+    /**
+     * An example action specific property. There may be 0, 1 or more action specific properties, each holding an action specific parameter value.
+     */
     actionSpecificProperty2?: string;
+    /**
+     * The media type of the data associated with osdb:body_data_raw or osdb:body_data_src_url. In the case of osdb:body_data_raw, this is the media type before base64 encoding.
+     */
     osdbBodyDataEncoding?: string;
+    /**
+     * Input data for the action (e.g. CSV data). The data must be base64 encoded by the client. Alternatively, clients can use osdb:body_data_src_url to supply the input data via a web-accessible document.
+     */
     osdbBodyDataRaw?: string;
+    /**
+     * URL of a resource containing input data for the action (e.g. CSV data). Clients can instead use osdb:body_data_raw to supply the input data directly.
+     */
     osdbBodyDataSrcUrl?: string;
+    /**
+     * An OSDB-specific parameter controlling the action output type. If omitted, the native action output is returned.
+     */
     osdbOutputType?: ExecBodyOsdbOutputTypeEnum;
+    /**
+     * Preferred response MIME type. This must be an output MIME type supported natively by the action or, if 'osdb:output_type' is set to 'generate_rdf', a Virtuoso Sponger output format. i.e. 'application/ld+json', 'text/turtle' or 'application/rdf+xml'.
+     */
     osdbResponseFormat?: string;
 }

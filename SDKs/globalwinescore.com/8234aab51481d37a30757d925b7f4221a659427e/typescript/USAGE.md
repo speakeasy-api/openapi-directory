@@ -1,34 +1,34 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetGlobalwinescoresLatestRequest, GetGlobalwinescoresLatestResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GetGlobalwinescoresLatestRequest,
+  GetGlobalwinescoresLatestResponse,
+  GetGlobalwinescoresLatestColorEnum,
+  GetGlobalwinescoresLatestOrderingEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    tokenAuthentication: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    tokenAuthentication: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: GetGlobalwinescoresLatestRequest = {
-  queryParams: {
-    color: "red",
-    isPrimeurs: false,
-    limit: 6050128673802995827,
-    lwin: "expedita",
-    lwin11: "consequuntur",
-    offset: 2669985732393126063,
-    ordering: "-score",
-    vintage: "voluptas",
-    wineId: [
-      1543572285742637646,
-    ],
-  },
-  headers: {
-    authorization: "nihil",
-  },
+  authorization: "corrupti",
+  color: GetGlobalwinescoresLatestColorEnum.White,
+  isPrimeurs: false,
+  limit: 715190,
+  lwin: "quibusdam",
+  lwin11: "unde",
+  offset: 857946,
+  ordering: GetGlobalwinescoresLatestOrderingEnum.Score,
+  vintage: "illum",
+  wineId: [
+    623564,
+    645894,
+  ],
 };
 
 sdk.globalWineScore.getGlobalwinescoresLatest(req).then((res: GetGlobalwinescoresLatestResponse | AxiosError) => {

@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Usage information for the identity pool.
-**/
+ */
 export declare class IdentityPoolUsage extends SpeakeasyBase {
     dataStorage?: number;
     identityPoolId?: string;

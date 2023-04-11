@@ -1,14 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { NestedRir } from "./nestedrir";
+import { NestedRIR } from "./nestedrir";
+export declare enum AggregateFamilyEnum {
+    Four = "4",
+    Six = "6"
+}
 export declare class Aggregate extends SpeakeasyBase {
     created?: Date;
     customFields?: Record<string, any>;
     dateAdded?: Date;
     description?: string;
-    family?: number;
+    family?: AggregateFamilyEnum;
     id?: number;
     lastUpdated?: Date;
     prefix: string;
-    rir: NestedRir;
+    rir: NestedRIR;
     tags?: string[];
 }

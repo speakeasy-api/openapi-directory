@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { ShardDetail } from "./sharddetail";
 /**
  * A list of cluster configuration options.
-**/
+ */
 export declare class ClusterConfiguration extends SpeakeasyBase {
     description?: string;
     engineVersion?: string;

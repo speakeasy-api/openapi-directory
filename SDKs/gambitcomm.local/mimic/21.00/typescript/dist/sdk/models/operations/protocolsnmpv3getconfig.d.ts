@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ProtocolSnmpv3GetConfigPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ProtocolSnmpv3GetConfigRequest extends SpeakeasyBase {
+    /**
+     * Agent to show the SNMPv3 configuration
+     */
     agentNum: number;
 }
-export declare class ProtocolSnmpv3GetConfigRequest extends SpeakeasyBase {
-    pathParams: ProtocolSnmpv3GetConfigPathParams;
-}
 export declare class ProtocolSnmpv3GetConfigResponse extends SpeakeasyBase {
-    configSNMPv3?: shared.ConfigSnmPv3;
+    /**
+     * successful operation
+     */
+    configSNMPv3?: shared.ConfigSNMPv3;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

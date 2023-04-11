@@ -3,7 +3,7 @@ import { ContactDetail } from "./contactdetail";
 import { Nameserver } from "./nameserver";
 /**
  * The TransferDomain request includes the following elements.
-**/
+ */
 export declare class TransferDomainRequest extends SpeakeasyBase {
     adminContact: ContactDetail;
     authCode?: string;

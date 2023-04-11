@@ -1,34 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { AuthorAssociationEnum } from "./authorassociationenum";
+import { NullableSimpleUser } from "./nullablesimpleuser";
 import { ReactionRollup } from "./reactionrollup";
 /**
- * Simple User
-**/
-export declare class CommitCommentSimpleUser extends SpeakeasyBase {
-    avatarUrl: string;
-    eventsUrl: string;
-    followersUrl: string;
-    followingUrl: string;
-    gistsUrl: string;
-    gravatarId: string;
-    htmlUrl: string;
-    id: number;
-    login: string;
-    nodeId: string;
-    organizationsUrl: string;
-    receivedEventsUrl: string;
-    reposUrl: string;
-    siteAdmin: boolean;
-    starredAt?: string;
-    starredUrl: string;
-    subscriptionsUrl: string;
-    type: string;
-    url: string;
-}
-/**
  * Commit Comment
-**/
+ */
 export declare class CommitComment extends SpeakeasyBase {
+    /**
+     * How the author is associated with the repository.
+     */
     authorAssociation: AuthorAssociationEnum;
     body: string;
     commitId: string;
@@ -42,5 +22,8 @@ export declare class CommitComment extends SpeakeasyBase {
     reactions?: ReactionRollup;
     updatedAt: Date;
     url: string;
-    user: CommitCommentSimpleUser;
+    /**
+     * A GitHub user.
+     */
+    user: NullableSimpleUser;
 }

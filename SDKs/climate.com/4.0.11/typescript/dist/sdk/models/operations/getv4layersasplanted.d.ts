@@ -1,30 +1,55 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetV4LayersAsPlantedQueryParams extends SpeakeasyBase {
-    occurredAfter?: Date;
-    occurredBefore?: Date;
-    resourceOwnerId?: string;
-    updatedAfter?: Date;
-}
-export declare class GetV4LayersAsPlantedHeaders extends SpeakeasyBase {
-    accept: string;
-    xLimit?: number;
-    xNextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetV4LayersAsPlantedSecurity extends SpeakeasyBase {
-    apiKey?: shared.SchemeApiKey;
-    oauth2AuthorizationCode?: shared.SchemeOauth2AuthorizationCode;
+    apiKey?: string;
+    oauth2AuthorizationCode?: string;
 }
 export declare class GetV4LayersAsPlantedRequest extends SpeakeasyBase {
-    queryParams: GetV4LayersAsPlantedQueryParams;
-    headers: GetV4LayersAsPlantedHeaders;
-    security: GetV4LayersAsPlantedSecurity;
+    /**
+     * Must be either \* /* or application/octet-stream,application/json
+     */
+    accept: string;
+    /**
+     * Max number of results to return per batch.  Must be between 1 and 100 inclusive.  Defaults to 100.
+     */
+    xLimit?: number;
+    /**
+     * Opaque string which allows for fetching the next batch of results.  Can be used to poll for changes.
+     */
+    xNextToken?: string;
+    /**
+     * Optional start time by which to filter layer results. Time must be in ISO 8601 format with time zone, e.g. 2016-05-13T00:00:00Z (https://tools.ietf.org/html/rfc3339). Layers with an end time at or after (inclusive) the specified time will match this filter. If both occurredAfter and occurredBefore are populated, occurredAfter must be <= occurredBefore.
+     */
+    occurredAfter?: Date;
+    /**
+     * Optional end time by which to filter layer results. Time must be in ISO 8601 format with time zone, e.g. 2016-05-13T00:00:00Z (https://tools.ietf.org/html/rfc3339). Layers with a start time at or before (inclusive) the specified time. If both occurredAfter and occurredBefore are populated, occurredAfter must be <= occurredBefore.
+     */
+    occurredBefore?: Date;
+    /**
+     * Optional unique identifier of the resource owner.  If resourceOwnerId is not specified, it defaults to the x-authenticated-user-uuid.
+     */
+    resourceOwnerId?: string;
+    /**
+     * Optional updated time by which to filter layer results. Time must be in ISO 8601 format with time zone, e.g. 2016-05-13T00:00:00Z (https://tools.ietf.org/html/rfc3339). Layers with a modification time at or after (inclusive) the specified time.
+     */
+    updatedAfter?: Date;
 }
 export declare class GetV4LayersAsPlantedResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Not Modified
+     */
     empty?: Record<string, any>;
+    /**
+     * Bad Input
+     */
     error?: shared.ErrorT;
-    headers: Record<string, string[]>;
-    plantingActivities?: any;
+    headers?: Record<string, string[]>;
+    /**
+     * OK
+     */
+    plantingActivities?: shared.PlantingActivities;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

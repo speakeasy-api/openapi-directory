@@ -1,5 +1,4 @@
-import { AxiosInstance } from "axios";
-import { ApiSpecification } from "./apispecification";
+import { APISpecification } from "./apispecification";
 import { Categories } from "./categories";
 import { Changelog } from "./changelog";
 import { CustomPages } from "./custompages";
@@ -8,13 +7,29 @@ import { Errors } from "./errors";
 import { Projects } from "./projects";
 import { Swagger } from "./swagger";
 import { Version } from "./version";
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://dash.readme.io/api/v1"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * Create beautiful product and API documentation with our developer friendly platform.
+ */
 export declare class SDK {
-    apiSpecification: ApiSpecification;
+    apiSpecification: APISpecification;
     categories: Categories;
     changelog: Changelog;
     customPages: CustomPages;
@@ -29,5 +44,6 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
 }

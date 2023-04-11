@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateTriggerXAmzTargetEnum {
-    AwsGlueUpdateTrigger = "AWSGlue.UpdateTrigger"
+    AWSGlueUpdateTrigger = "AWSGlue.UpdateTrigger"
 }
-export declare class UpdateTriggerHeaders extends SpeakeasyBase {
+export declare class UpdateTriggerRequest extends SpeakeasyBase {
+    updateTriggerRequest: shared.UpdateTriggerRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class UpdateTriggerHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateTriggerXAmzTargetEnum;
 }
-export declare class UpdateTriggerRequest extends SpeakeasyBase {
-    headers: UpdateTriggerHeaders;
-    request: shared.UpdateTriggerRequest;
-}
 export declare class UpdateTriggerResponse extends SpeakeasyBase {
+    /**
+     * ConcurrentModificationException
+     */
     concurrentModificationException?: any;
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     updateTriggerResponse?: shared.UpdateTriggerResponse;
 }

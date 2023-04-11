@@ -1,18 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetPromoteReadReplicaActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETPromoteReadReplicaActionEnum {
     PromoteReadReplica = "PromoteReadReplica"
 }
-export declare enum GetPromoteReadReplicaVersionEnum {
+export declare enum GETPromoteReadReplicaVersionEnum {
     TwoThousandAndFourteen0901 = "2014-09-01"
 }
-export declare class GetPromoteReadReplicaQueryParams extends SpeakeasyBase {
-    action: GetPromoteReadReplicaActionEnum;
+export declare class GETPromoteReadReplicaRequest extends SpeakeasyBase {
+    action: GETPromoteReadReplicaActionEnum;
     backupRetentionPeriod?: number;
     dbInstanceIdentifier: string;
     preferredBackupWindow?: string;
-    version: GetPromoteReadReplicaVersionEnum;
-}
-export declare class GetPromoteReadReplicaHeaders extends SpeakeasyBase {
+    version: GETPromoteReadReplicaVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +20,9 @@ export declare class GetPromoteReadReplicaHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetPromoteReadReplicaRequest extends SpeakeasyBase {
-    queryParams: GetPromoteReadReplicaQueryParams;
-    headers: GetPromoteReadReplicaHeaders;
-}
-export declare class GetPromoteReadReplicaResponse extends SpeakeasyBase {
+export declare class GETPromoteReadReplicaResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

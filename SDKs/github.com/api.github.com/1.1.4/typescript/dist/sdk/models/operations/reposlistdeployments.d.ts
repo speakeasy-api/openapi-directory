@@ -1,24 +1,47 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReposListDeploymentsPathParams extends SpeakeasyBase {
-    owner: string;
-    repo: string;
-}
-export declare class ReposListDeploymentsQueryParams extends SpeakeasyBase {
-    environment?: string;
-    page?: number;
-    perPage?: number;
-    ref?: string;
-    sha?: string;
-    task?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ReposListDeploymentsRequest extends SpeakeasyBase {
-    pathParams: ReposListDeploymentsPathParams;
-    queryParams: ReposListDeploymentsQueryParams;
+    /**
+     * The name of the environment that was deployed to (e.g., `staging` or `production`).
+     */
+    environment?: string;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    owner: string;
+    /**
+     * Page number of the results to fetch.
+     */
+    page?: number;
+    /**
+     * The number of results per page (max 100).
+     */
+    perPage?: number;
+    /**
+     * The name of the ref. This can be a branch, tag, or SHA.
+     */
+    ref?: string;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    repo: string;
+    /**
+     * The SHA recorded at creation time.
+     */
+    sha?: string;
+    /**
+     * The name of the task for the deployment (e.g., `deploy` or `deploy:migrations`).
+     */
+    task?: string;
 }
 export declare class ReposListDeploymentsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     deployments?: shared.Deployment[];
 }

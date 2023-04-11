@@ -1,43 +1,39 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { LocalservicesAccountReportsSearchRequest, LocalservicesAccountReportsSearchResponse } from "openapi/src/sdk/models/operations";
+import {
+  LocalservicesAccountReportsSearchRequest,
+  LocalservicesAccountReportsSearchResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: LocalservicesAccountReportsSearchRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "voluptas",
-    alt: "media",
-    callback: "expedita",
-    endDateDay: 3390393562759376202,
-    endDateMonth: 2669985732393126063,
-    endDateYear: 1774932891286980153,
-    fields: "voluptas",
-    key: "fugit",
-    oauthToken: "et",
-    pageSize: 2661732831099943416,
-    pageToken: "rerum",
-    prettyPrint: false,
-    query: "debitis",
-    quotaUser: "voluptatum",
-    startDateDay: 2339563716805116249,
-    startDateMonth: 7144924247938981575,
-    startDateYear: 161231572858529631,
-    uploadType: "et",
-    uploadProtocol: "voluptate",
-  },
+  dollarXgafv: XgafvEnum.Two,
+  accessToken: "provident",
+  alt: AltEnum.Proto,
+  callback: "quibusdam",
+  endDateDay: 602763,
+  endDateMonth: 857946,
+  endDateYear: 544883,
+  fields: "illum",
+  key: "vel",
+  oauthToken: "error",
+  pageSize: 645894,
+  pageToken: "suscipit",
+  prettyPrint: false,
+  query: "iure",
+  quotaUser: "magnam",
+  startDateDay: 891773,
+  startDateMonth: 56713,
+  startDateYear: 963663,
+  uploadType: "tempora",
+  uploadProtocol: "suscipit",
 };
 
 sdk.accountReports.localservicesAccountReportsSearch(req).then((res: LocalservicesAccountReportsSearchResponse | AxiosError) => {

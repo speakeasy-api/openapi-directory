@@ -1,25 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetMobilegentileV2LocationsTilesMobileGeneralizedZxyPbfGetPathParams extends SpeakeasyBase {
-    x: number;
-    y: number;
-    z: number;
-}
-export declare class GetMobilegentileV2LocationsTilesMobileGeneralizedZxyPbfGetQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetRequest extends SpeakeasyBase {
     isAnalysis?: boolean;
     isMobile?: boolean;
     lastUpdatedFrom?: any;
     lastUpdatedTo?: any;
+    /**
+     * limit data to location id
+     */
     location?: number[];
     parameter?: any;
     project?: number;
+    x: number;
+    y: number;
+    z: number;
 }
-export declare class GetMobilegentileV2LocationsTilesMobileGeneralizedZxyPbfGetRequest extends SpeakeasyBase {
-    pathParams: GetMobilegentileV2LocationsTilesMobileGeneralizedZxyPbfGetPathParams;
-    queryParams: GetMobilegentileV2LocationsTilesMobileGeneralizedZxyPbfGetQueryParams;
-}
-export declare class GetMobilegentileV2LocationsTilesMobileGeneralizedZxyPbfGetResponse extends SpeakeasyBase {
+export declare class GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetResponse extends SpeakeasyBase {
     contentType: string;
-    httpValidationError?: shared.HttpValidationError;
+    /**
+     * Validation Error
+     */
+    httpValidationError?: shared.HTTPValidationError;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,6 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DcimRacksListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DcimRacksListRequest extends SpeakeasyBase {
     assetTag?: string;
     assetTagIc?: string;
     assetTagIe?: string;
@@ -38,6 +39,9 @@ export declare class DcimRacksListQueryParams extends SpeakeasyBase {
     lastUpdated?: string;
     lastUpdatedGte?: string;
     lastUpdatedLte?: string;
+    /**
+     * Number of results to return per page.
+     */
     limit?: number;
     name?: string;
     nameIc?: string;
@@ -49,6 +53,9 @@ export declare class DcimRacksListQueryParams extends SpeakeasyBase {
     nameNie?: string;
     nameNiew?: string;
     nameNisw?: string;
+    /**
+     * The initial index from which to return the results.
+     */
     offset?: number;
     outerDepth?: string;
     outerDepthGt?: string;
@@ -101,17 +108,15 @@ export declare class DcimRacksListQueryParams extends SpeakeasyBase {
     width?: string;
     widthN?: string;
 }
-export declare class DcimRacksList200ApplicationJson extends SpeakeasyBase {
+export declare class DcimRacksList200ApplicationJSON extends SpeakeasyBase {
     count: number;
     next?: string;
     previous?: string;
     results: shared.Rack[];
 }
-export declare class DcimRacksListRequest extends SpeakeasyBase {
-    queryParams: DcimRacksListQueryParams;
-}
 export declare class DcimRacksListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dcimRacksList200ApplicationJSONObject?: DcimRacksList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    dcimRacksList200ApplicationJSONObject?: DcimRacksList200ApplicationJSON;
 }

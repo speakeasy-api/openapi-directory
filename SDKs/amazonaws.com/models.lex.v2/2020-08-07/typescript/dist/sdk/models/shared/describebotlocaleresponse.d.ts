@@ -2,6 +2,9 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { BotLocaleHistoryEvent } from "./botlocalehistoryevent";
 import { BotLocaleStatusEnum } from "./botlocalestatusenum";
 import { VoiceSettings } from "./voicesettings";
+/**
+ * Success
+ */
 export declare class DescribeBotLocaleResponse extends SpeakeasyBase {
     botId?: string;
     botLocaleHistoryEvents?: BotLocaleHistoryEvent[];
@@ -16,6 +19,7 @@ export declare class DescribeBotLocaleResponse extends SpeakeasyBase {
     localeId?: string;
     localeName?: string;
     nluIntentConfidenceThreshold?: number;
+    recommendedActions?: string[];
     slotTypesCount?: number;
     voiceSettings?: VoiceSettings;
 }

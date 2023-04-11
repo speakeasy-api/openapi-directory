@@ -11,5 +11,4 @@ export * from "./listgroupitemsresponse";
 export * from "./listgroupsresponse";
 export * from "./queryresponse";
 export * from "./resulttablecolumnheader";
-export * from "./security";
 export * from "./xgafvenum";

@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { Sentiment } from "./sentiment";
-import { TopicSentiment } from "./topicsentiment";
 import { Topic } from "./topic";
+import { TopicSentiment } from "./topicsentiment";
 export declare class TopicSentimentOutput extends SpeakeasyBase {
     id?: string;
     language?: string;

@@ -1,71 +1,73 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GkebackupProjectsLocationsBackupPlansBackupsCreateRequest, GkebackupProjectsLocationsBackupPlansBackupsCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  GkebackupProjectsLocationsBackupPlansBackupsCreateRequest,
+  GkebackupProjectsLocationsBackupPlansBackupsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GkebackupProjectsLocationsBackupPlansBackupsCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    backupId: "consequuntur",
-    callback: "dolor",
-    fields: "expedita",
-    key: "voluptas",
-    oauthToken: "fugit",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    uploadType: "rerum",
-    uploadProtocol: "dicta",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  backupInput: {
     clusterMetadata: {
-      anthosVersion: "debitis",
+      anthosVersion: "provident",
       backupCrdVersions: {
-        "et": "ut",
+        "quibusdam": "unde",
+        "nulla": "corrupti",
+        "illum": "vel",
       },
-      cluster: "dolorem",
-      gkeVersion: "et",
-      k8sVersion: "voluptate",
+      cluster: "error",
+      gkeVersion: "deserunt",
+      k8sVersion: "suscipit",
     },
-    deleteLockDays: 3287288577352441706,
-    description: "vitae",
+    deleteLockDays: 437587,
+    description: "magnam",
     encryptionKey: {
-      gcpKmsEncryptionKey: "totam",
+      gcpKmsEncryptionKey: "debitis",
     },
     labels: {
-      "illum": "debitis",
+      "delectus": "tempora",
     },
-    retainDays: 3706853784096366226,
+    retainDays: 383441,
     selectedApplications: {
       namespacedNames: [
         {
-          name: "dolore",
-          namespace: "id",
+          name: "minus",
+          namespace: "placeat",
+        },
+        {
+          name: "voluptatum",
+          namespace: "iusto",
         },
       ],
     },
     selectedNamespaces: {
       namespaces: [
-        "accusantium",
+        "nisi",
+        "recusandae",
+        "temporibus",
       ],
     },
   },
+  accessToken: "ab",
+  alt: AltEnum.Media,
+  backupId: "veritatis",
+  callback: "deserunt",
+  fields: "perferendis",
+  key: "ipsam",
+  oauthToken: "repellendus",
+  parent: "sapiente",
+  prettyPrint: false,
+  quotaUser: "quo",
+  uploadType: "odit",
+  uploadProtocol: "at",
 };
 
 sdk.projects.gkebackupProjectsLocationsBackupPlansBackupsCreate(req).then((res: GkebackupProjectsLocationsBackupPlansBackupsCreateResponse | AxiosError) => {

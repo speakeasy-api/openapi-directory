@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetTransactionCostPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetTransactionCostRequest extends SpeakeasyBase {
-    pathParams: GetTransactionCostPathParams;
+    /**
+     * The transaction id that needs to be fetched
+     */
+    id: string;
 }
 export declare class GetTransactionCostResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

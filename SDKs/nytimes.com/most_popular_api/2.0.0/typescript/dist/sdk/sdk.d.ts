@@ -1,10 +1,27 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["http://api.nytimes.com/svc/mostpopular/v2", "https://api.nytimes.com/svc/mostpopular/v2"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * Get lists of NYT Articles based on shares, emails, and views.
+ *
+ * @see {@link http://developer.nytimes.com/}
+ */
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -12,17 +29,18 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
     /**
-     * getMostemailedSectionTimePeriodJson - Most Emailed by Section & Time Period
-    **/
-    getMostemailedSectionTimePeriodJson(req: operations.GetMostemailedSectionTimePeriodJsonRequest, config?: AxiosRequestConfig): Promise<operations.GetMostemailedSectionTimePeriodJsonResponse>;
+     * Most Emailed by Section & Time Period
+     */
+    getMostemailedSectionTimePeriodJson(req: operations.GETMostemailedSectionTimePeriodJsonRequest, security: operations.GETMostemailedSectionTimePeriodJsonSecurity, config?: AxiosRequestConfig): Promise<operations.GETMostemailedSectionTimePeriodJsonResponse>;
     /**
-     * getMostsharedSectionTimePeriodJson - Most Shared by Section & Time Period
-    **/
-    getMostsharedSectionTimePeriodJson(req: operations.GetMostsharedSectionTimePeriodJsonRequest, config?: AxiosRequestConfig): Promise<operations.GetMostsharedSectionTimePeriodJsonResponse>;
+     * Most Shared by Section & Time Period
+     */
+    getMostsharedSectionTimePeriodJson(req: operations.GETMostsharedSectionTimePeriodJsonRequest, security: operations.GETMostsharedSectionTimePeriodJsonSecurity, config?: AxiosRequestConfig): Promise<operations.GETMostsharedSectionTimePeriodJsonResponse>;
     /**
-     * getMostviewedSectionTimePeriodJson - Most Viewed by Section & Time Period
-    **/
-    getMostviewedSectionTimePeriodJson(req: operations.GetMostviewedSectionTimePeriodJsonRequest, config?: AxiosRequestConfig): Promise<operations.GetMostviewedSectionTimePeriodJsonResponse>;
+     * Most Viewed by Section & Time Period
+     */
+    getMostviewedSectionTimePeriodJson(req: operations.GETMostviewedSectionTimePeriodJsonRequest, security: operations.GETMostviewedSectionTimePeriodJsonSecurity, config?: AxiosRequestConfig): Promise<operations.GETMostviewedSectionTimePeriodJsonResponse>;
 }

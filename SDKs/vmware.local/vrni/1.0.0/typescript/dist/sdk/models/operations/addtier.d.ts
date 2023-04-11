@@ -1,19 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AddTierPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class AddTierSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
+    apiKeyAuth: string;
 }
 export declare class AddTierRequest extends SpeakeasyBase {
-    pathParams: AddTierPathParams;
-    request: shared.TierRequest;
-    security: AddTierSecurity;
+    tierRequest: shared.TierRequest;
+    /**
+     * entity id
+     */
+    id: string;
 }
 export declare class AddTierResponse extends SpeakeasyBase {
+    /**
+     * Bad Request
+     */
     apiError?: shared.ApiError;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
     tier?: shared.Tier;
 }

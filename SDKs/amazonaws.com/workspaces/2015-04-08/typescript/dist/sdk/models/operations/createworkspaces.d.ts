@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum CreateWorkspacesXAmzTargetEnum {
     WorkspacesServiceCreateWorkspaces = "WorkspacesService.CreateWorkspaces"
 }
-export declare class CreateWorkspacesHeaders extends SpeakeasyBase {
+export declare class CreateWorkspacesRequest extends SpeakeasyBase {
+    createWorkspacesRequest: shared.CreateWorkspacesRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class CreateWorkspacesHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: CreateWorkspacesXAmzTargetEnum;
 }
-export declare class CreateWorkspacesRequest extends SpeakeasyBase {
-    headers: CreateWorkspacesHeaders;
-    request: shared.CreateWorkspacesRequest;
-}
 export declare class CreateWorkspacesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     createWorkspacesResult?: shared.CreateWorkspacesResult;
+    /**
+     * InvalidParameterValuesException
+     */
     invalidParameterValuesException?: any;
+    /**
+     * ResourceLimitExceededException
+     */
     resourceLimitExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,13 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListBrocadeSwitchesSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
-}
-export declare class ListBrocadeSwitchesRequest extends SpeakeasyBase {
-    security: ListBrocadeSwitchesSecurity;
-}
+import { AxiosResponse } from "axios";
 export declare class ListBrocadeSwitchesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * OK
+     */
     dataSourceListResponse?: shared.DataSourceListResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

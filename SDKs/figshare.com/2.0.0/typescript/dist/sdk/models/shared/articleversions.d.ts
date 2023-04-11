@@ -1,5 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class ArticleVersions extends SpeakeasyBase {
-    url?: string;
-    version?: number;
+    /**
+     * Api endpoint for the item version
+     */
+    url: string;
+    /**
+     * Version number
+     */
+    version: number;
 }

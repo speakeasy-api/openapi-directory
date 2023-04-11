@@ -1,5 +1,15 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Webhooks provide a mechanism for a configured URL to receive
+ *
+ * @remarks
+ * events when transaction activity occurs on Up. You can think of
+ * webhooks as being like push notifications for your server-side
+ * application.
+ *
+ */
 export declare class Webhooks {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,33 +19,37 @@ export declare class Webhooks {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteWebhooksId - Delete webhook
+     * Delete webhook
      *
+     * @remarks
      * Delete a specific webhook by providing its unique identifier. Once
      * deleted, webhook events will no longer be sent to the configured URL.
      *
-    **/
+     */
     deleteWebhooksId(req: operations.DeleteWebhooksIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteWebhooksIdResponse>;
     /**
-     * getWebhooks - List webhooks
+     * List webhooks
      *
+     * @remarks
      * Retrieve a list of configured webhooks. The returned list is
      * [paginated](#pagination) and can be scrolled by following the `next`
      * and `prev` links where present. Results are ordered oldest first to
      * newest last.
      *
-    **/
+     */
     getWebhooks(req: operations.GetWebhooksRequest, config?: AxiosRequestConfig): Promise<operations.GetWebhooksResponse>;
     /**
-     * getWebhooksId - Retrieve webhook
+     * Retrieve webhook
      *
+     * @remarks
      * Retrieve a specific webhook by providing its unique identifier.
      *
-    **/
+     */
     getWebhooksId(req: operations.GetWebhooksIdRequest, config?: AxiosRequestConfig): Promise<operations.GetWebhooksIdResponse>;
     /**
-     * getWebhooksWebhookIdLogs - List webhook logs
+     * List webhook logs
      *
+     * @remarks
      * Retrieve a list of delivery logs for a webhook by providing its unique
      * identifier. This is useful for analysis and debugging purposes. The
      * returned list is [paginated](#pagination) and can be scrolled by
@@ -43,11 +57,12 @@ export declare class Webhooks {
      * newest first to oldest last. Logs may be automatically purged after a
      * period of time.
      *
-    **/
+     */
     getWebhooksWebhookIdLogs(req: operations.GetWebhooksWebhookIdLogsRequest, config?: AxiosRequestConfig): Promise<operations.GetWebhooksWebhookIdLogsResponse>;
     /**
-     * postWebhooks - Create webhook
+     * Create webhook
      *
+     * @remarks
      * Create a new webhook with a given URL. The URL will receive webhook
      * events as JSON-encoded `POST` requests. The URL must respond with a HTTP
      * `200` status on success.
@@ -69,15 +84,16 @@ export declare class Webhooks {
      * [sending it a `PING` event](#post_webhooks_webhookId_ping) after creating
      * it.
      *
-    **/
-    postWebhooks(req: operations.PostWebhooksRequest, config?: AxiosRequestConfig): Promise<operations.PostWebhooksResponse>;
+     */
+    postWebhooks(req: shared.CreateWebhookRequest, config?: AxiosRequestConfig): Promise<operations.PostWebhooksResponse>;
     /**
-     * postWebhooksWebhookIdPing - Ping webhook
+     * Ping webhook
      *
+     * @remarks
      * Send a `PING` event to a webhook by providing its unique identifier.
      * This is useful for testing and debugging purposes. The event is delivered
      * asynchronously and its data is returned in the response to this request.
      *
-    **/
+     */
     postWebhooksWebhookIdPing(req: operations.PostWebhooksWebhookIdPingRequest, config?: AxiosRequestConfig): Promise<operations.PostWebhooksWebhookIdPingResponse>;
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostModifyClusterMaintenanceActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTModifyClusterMaintenanceActionEnum {
     ModifyClusterMaintenance = "ModifyClusterMaintenance"
 }
-export declare enum PostModifyClusterMaintenanceVersionEnum {
+export declare enum POSTModifyClusterMaintenanceVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostModifyClusterMaintenanceQueryParams extends SpeakeasyBase {
-    action: PostModifyClusterMaintenanceActionEnum;
-    version: PostModifyClusterMaintenanceVersionEnum;
-}
-export declare class PostModifyClusterMaintenanceHeaders extends SpeakeasyBase {
+export declare class POSTModifyClusterMaintenanceRequest extends SpeakeasyBase {
+    action: POSTModifyClusterMaintenanceActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTModifyClusterMaintenanceVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostModifyClusterMaintenanceHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostModifyClusterMaintenanceRequest extends SpeakeasyBase {
-    queryParams: PostModifyClusterMaintenanceQueryParams;
-    headers: PostModifyClusterMaintenanceHeaders;
-    request?: Uint8Array;
-}
-export declare class PostModifyClusterMaintenanceResponse extends SpeakeasyBase {
+export declare class POSTModifyClusterMaintenanceResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetAbortEnvironmentUpdateActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETAbortEnvironmentUpdateActionEnum {
     AbortEnvironmentUpdate = "AbortEnvironmentUpdate"
 }
-export declare enum GetAbortEnvironmentUpdateVersionEnum {
+export declare enum GETAbortEnvironmentUpdateVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetAbortEnvironmentUpdateQueryParams extends SpeakeasyBase {
-    action: GetAbortEnvironmentUpdateActionEnum;
+export declare class GETAbortEnvironmentUpdateRequest extends SpeakeasyBase {
+    action: GETAbortEnvironmentUpdateActionEnum;
+    /**
+     * This specifies the ID of the environment with the in-progress update that you want to cancel.
+     */
     environmentId?: string;
+    /**
+     * This specifies the name of the environment with the in-progress update that you want to cancel.
+     */
     environmentName?: string;
-    version: GetAbortEnvironmentUpdateVersionEnum;
-}
-export declare class GetAbortEnvironmentUpdateHeaders extends SpeakeasyBase {
+    version: GETAbortEnvironmentUpdateVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetAbortEnvironmentUpdateHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetAbortEnvironmentUpdateRequest extends SpeakeasyBase {
-    queryParams: GetAbortEnvironmentUpdateQueryParams;
-    headers: GetAbortEnvironmentUpdateHeaders;
-}
-export declare class GetAbortEnvironmentUpdateResponse extends SpeakeasyBase {
+export declare class GETAbortEnvironmentUpdateResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

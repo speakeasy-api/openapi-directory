@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostGetContextKeysForCustomPolicyActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTGetContextKeysForCustomPolicyActionEnum {
     GetContextKeysForCustomPolicy = "GetContextKeysForCustomPolicy"
 }
-export declare enum PostGetContextKeysForCustomPolicyVersionEnum {
+export declare enum POSTGetContextKeysForCustomPolicyVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostGetContextKeysForCustomPolicyQueryParams extends SpeakeasyBase {
-    action: PostGetContextKeysForCustomPolicyActionEnum;
-    version: PostGetContextKeysForCustomPolicyVersionEnum;
-}
-export declare class PostGetContextKeysForCustomPolicyHeaders extends SpeakeasyBase {
+export declare class POSTGetContextKeysForCustomPolicyRequest extends SpeakeasyBase {
+    action: POSTGetContextKeysForCustomPolicyActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTGetContextKeysForCustomPolicyVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostGetContextKeysForCustomPolicyHeaders extends SpeakeasyB
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostGetContextKeysForCustomPolicyRequest extends SpeakeasyBase {
-    queryParams: PostGetContextKeysForCustomPolicyQueryParams;
-    headers: PostGetContextKeysForCustomPolicyHeaders;
-    request?: Uint8Array;
-}
-export declare class PostGetContextKeysForCustomPolicyResponse extends SpeakeasyBase {
+export declare class POSTGetContextKeysForCustomPolicyResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

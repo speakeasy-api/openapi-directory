@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Courses {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,33 +9,38 @@ export declare class Courses {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getCourses - Find courses
+     * Find courses
      *
+     * @remarks
      * Responds with all courses (draft and published.)
-    **/
+     */
     getCourses(config?: AxiosRequestConfig): Promise<operations.GetCoursesResponse>;
     /**
-     * getCoursesContentId - Find course by contentId
+     * Find course by contentId
      *
+     * @remarks
      * Responds with a course matching the contentId.
-    **/
+     */
     getCoursesContentId(req: operations.GetCoursesContentIdRequest, config?: AxiosRequestConfig): Promise<operations.GetCoursesContentIdResponse>;
     /**
-     * getCoursesContentIdActivations - Find activations for a contentId
+     * Find activations for a contentId
      *
+     * @remarks
      * Responds with all activations for the contentId provided.
-    **/
+     */
     getCoursesContentIdActivations(req: operations.GetCoursesContentIdActivationsRequest, config?: AxiosRequestConfig): Promise<operations.GetCoursesContentIdActivationsResponse>;
     /**
-     * getCoursesContentIdPermissions - Find users who have access to the contentId provided
+     * Find users who have access to the contentId provided
      *
+     * @remarks
      * Responds with users who have access to a specific course by contentId.
-    **/
+     */
     getCoursesContentIdPermissions(req: operations.GetCoursesContentIdPermissionsRequest, config?: AxiosRequestConfig): Promise<operations.GetCoursesContentIdPermissionsResponse>;
     /**
-     * postCoursesRootContentIdPermissionsUserEmail - Update course access
+     * Update course access
      *
+     * @remarks
      * Provide a user with access to a specific course by rootContentId.
-    **/
+     */
     postCoursesRootContentIdPermissionsUserEmail(req: operations.PostCoursesRootContentIdPermissionsUserEmailRequest, config?: AxiosRequestConfig): Promise<operations.PostCoursesRootContentIdPermissionsUserEmailResponse>;
 }

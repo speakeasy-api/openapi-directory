@@ -1,6 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class ApIs {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+export declare class APIs {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,21 +9,24 @@ export declare class ApIs {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * alsfc - Application/ License for Factory
+     * Application/ License for Factory
      *
+     * @remarks
      * API to verify Application/ License for Factory.
-    **/
-    alsfc(req: operations.AlsfcRequest, config?: AxiosRequestConfig): Promise<operations.AlsfcResponse>;
+     */
+    alsfc(req: operations.AlsfcRequestBody, security: operations.AlsfcSecurity, config?: AxiosRequestConfig): Promise<operations.AlsfcResponse>;
     /**
-     * clcer - Registration Certificate for Contract Labour License
+     * Registration Certificate for Contract Labour License
      *
+     * @remarks
      * API to verify Registration Certificate for Contract Labour License.
-    **/
-    clcer(req: operations.ClcerRequest, config?: AxiosRequestConfig): Promise<operations.ClcerResponse>;
+     */
+    clcer(req: operations.ClcerRequestBody, security: operations.ClcerSecurity, config?: AxiosRequestConfig): Promise<operations.ClcerResponse>;
     /**
-     * srcer - Registration Certificate of Shops And Commercial Establishment
+     * Registration Certificate of Shops And Commercial Establishment
      *
+     * @remarks
      * API to verify Registration Certificate of Shops And Commercial Establishment.
-    **/
-    srcer(req: operations.SrcerRequest, config?: AxiosRequestConfig): Promise<operations.SrcerResponse>;
+     */
+    srcer(req: operations.SrcerRequestBody, security: operations.SrcerSecurity, config?: AxiosRequestConfig): Promise<operations.SrcerResponse>;
 }

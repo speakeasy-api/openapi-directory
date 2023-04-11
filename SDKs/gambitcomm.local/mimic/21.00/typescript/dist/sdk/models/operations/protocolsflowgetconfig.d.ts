@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ProtocolSflowGetConfigPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ProtocolSflowGetConfigRequest extends SpeakeasyBase {
+    /**
+     * Agent to show the SFLOW configuration
+     */
     agentNum: number;
 }
-export declare class ProtocolSflowGetConfigRequest extends SpeakeasyBase {
-    pathParams: ProtocolSflowGetConfigPathParams;
-}
 export declare class ProtocolSflowGetConfigResponse extends SpeakeasyBase {
-    configSFLOW?: shared.ConfigSflow;
+    /**
+     * successful operation
+     */
+    configSFLOW?: shared.ConfigSFLOW;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

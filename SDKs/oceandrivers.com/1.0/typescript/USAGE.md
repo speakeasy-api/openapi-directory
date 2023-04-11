@@ -1,16 +1,16 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CompareStationRequest, CompareStationResponse } from "openapi/src/sdk/models/operations";
+import {
+  CompareStationRequest,
+  CompareStationResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: CompareStationRequest = {
-  pathParams: {
-    stationName: "sit",
-  },
+  stationName: "corrupti",
 };
 
 sdk.odWeather.compareStation(req).then((res: CompareStationResponse | AxiosError) => {

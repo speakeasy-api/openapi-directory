@@ -1,11 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CustomEventsListQueryParams extends SpeakeasyBase {
-    page?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class CustomEventsListRequest extends SpeakeasyBase {
-    queryParams: CustomEventsListQueryParams;
+    /**
+     * (Optional) Integer
+     *
+     * @remarks
+     *
+     * The page of event names to return, defaults to 0 (returns the first set of up to 250)
+     */
+    page?: string;
 }
 export declare class CustomEventsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

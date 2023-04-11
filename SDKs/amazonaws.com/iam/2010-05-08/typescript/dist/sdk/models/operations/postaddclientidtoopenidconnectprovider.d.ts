@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostAddClientIdToOpenIdConnectProviderActionEnum {
-    AddClientIdToOpenIdConnectProvider = "AddClientIDToOpenIDConnectProvider"
+import { AxiosResponse } from "axios";
+export declare enum POSTAddClientIDToOpenIDConnectProviderActionEnum {
+    AddClientIDToOpenIDConnectProvider = "AddClientIDToOpenIDConnectProvider"
 }
-export declare enum PostAddClientIdToOpenIdConnectProviderVersionEnum {
+export declare enum POSTAddClientIDToOpenIDConnectProviderVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostAddClientIdToOpenIdConnectProviderQueryParams extends SpeakeasyBase {
-    action: PostAddClientIdToOpenIdConnectProviderActionEnum;
-    version: PostAddClientIdToOpenIdConnectProviderVersionEnum;
-}
-export declare class PostAddClientIdToOpenIdConnectProviderHeaders extends SpeakeasyBase {
+export declare class POSTAddClientIDToOpenIDConnectProviderRequest extends SpeakeasyBase {
+    action: POSTAddClientIDToOpenIDConnectProviderActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTAddClientIDToOpenIDConnectProviderVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostAddClientIdToOpenIdConnectProviderHeaders extends Speak
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostAddClientIdToOpenIdConnectProviderRequest extends SpeakeasyBase {
-    queryParams: PostAddClientIdToOpenIdConnectProviderQueryParams;
-    headers: PostAddClientIdToOpenIdConnectProviderHeaders;
-    request?: Uint8Array;
-}
-export declare class PostAddClientIdToOpenIdConnectProviderResponse extends SpeakeasyBase {
+export declare class POSTAddClientIDToOpenIDConnectProviderResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

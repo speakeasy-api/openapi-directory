@@ -6,185 +6,197 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/mcw.edu/1.1/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/mcw.edu/1.1/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetAffectedGenomicModelsUsingGetRequest, GetAffectedGenomicModelsUsingGetResponse } from "openapi/src/sdk/models/operations";
+import {
+  GETAffectedGenomicModelsUsingGETRequest,
+  GETAffectedGenomicModelsUsingGETResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: GetAffectedGenomicModelsUsingGetRequest = {
-  pathParams: {
-    taxonId: "sit",
-  },
+
+const req: GETAffectedGenomicModelsUsingGETRequest = {
+  taxonId: "corrupti",
 };
 
-sdk.agr.getAffectedGenomicModelsUsingGet(req).then((res: GetAffectedGenomicModelsUsingGetResponse | AxiosError) => {
+sdk.agr.getAffectedGenomicModelsUsingGET(req).then((res: GETAffectedGenomicModelsUsingGETResponse | AxiosError) => {
    // handle response
 });
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### AGR
 
-* `getAffectedGenomicModelsUsingGet` - Get affected genomic models (rat strains with gene alleles) submitted by RGD to AGR by taxonId
-* `getAllelesForTaxonUsingGet` - Get gene allele records submitted by RGD to AGR by taxonId
-* `getExpressionForTaxonUsingGet` - Get expression annotations submitted by RGD to AGR by taxonId
-* `getGenesForLatestAssemblyUsingGet` - Get gene records submitted by RGD to AGR by taxonId
-* `getPhenotypesForTaxonUsingGet` - Get phenotype annotations submitted by RGD to AGR by taxonId
-* `getVariantsForTaxonUsingGet` - Get basic variant records submitted by RGD to AGR by taxonId
+### agr
 
-### Annotation
+* `getAffectedGenomicModelsUsingGET` - Get affected genomic models (rat strains with gene alleles) submitted by RGD to AGR by taxonId
+* `getAllelesForTaxonUsingGET` - Get gene allele records submitted by RGD to AGR by taxonId
+* `getExpressionForTaxonUsingGET` - Get expression annotations submitted by RGD to AGR by taxonId
+* `getGenesForLatestAssemblyUsingGET` - Get gene records submitted by RGD to AGR by taxonId
+* `getPhenotypesForTaxonUsingGET` - Get phenotype annotations submitted by RGD to AGR by taxonId
+* `getVariantsForTaxonUsingGET` - Get basic variant records submitted by RGD to AGR by taxonId
 
-* `getAnnotationCountByAccIdAndObjectTypeUsingGet` - Returns annotation count for ontology accession ID and object type
-* `getAnnotationCountByAccIdAndSpeciesUsingGet` - Returns annotation count for ontology accession ID and speicies
-* `getAnnotationCountByAccIdUsingGet` - Returns annotation count for ontology accession ID
-* `getAnnotationsByAccIdAndRgdIdUsingGet` - Returns a list of annotations by RGD ID and ontology term accession ID
-* `getAnnotationsByRgdIdAndOntologyUsingGet` - Returns a list of annotations by RGD ID and ontology prefix
-* `getAnnotationsByRgdIdUsingGet` - Returns a list of annotations by RGD ID
-* `getAnnotationsUsingGet` - Returns a list annotations for an ontology term or a term and it's children
-* `getAnnotationsUsingPost` - Return a list of genes annotated to an ontology term
-* `getAnnotsByRefrerenceUsingGet` - Returns a list of annotations for a reference
-* `getTermAccIdsUsingGet` - Returns a list ontology term accession IDs annotated to an rgd object
+### annotation
 
-### Chromosome
+* `getAnnotationCountByAccIdAndObjectTypeUsingGET` - Returns annotation count for ontology accession ID and object type
+* `getAnnotationCountByAccIdAndSpeciesUsingGET` - Returns annotation count for ontology accession ID and speicies
+* `getAnnotationCountByAccIdUsingGET` - Returns annotation count for ontology accession ID
+* `getAnnotationsByAccIdAndRgdIdUsingGET` - Returns a list of annotations by RGD ID and ontology term accession ID
+* `getAnnotationsByRgdIdAndOntologyUsingGET` - Returns a list of annotations by RGD ID and ontology prefix
+* `getAnnotationsByRgdIdUsingGET` - Returns a list of annotations by RGD ID
+* `getAnnotationsUsingGET` - Returns a list annotations for an ontology term or a term and it's children
+* `getAnnotationsUsingPOST` - Return a list of genes annotated to an ontology term
+* `getAnnotsByRefrerenceUsingGET` - Returns a list of annotations for a reference
+* `getTermAccIdsUsingGET` - Returns a list ontology term accession IDs annotated to an rgd object
 
-* `getChromosomeByAssemblyUsingGet` - Return a list of chromosomes
-* `getChromosomesByAssemblyUsingGet` - Return a list of chromosomes
+### chromosome
 
-### Gene
+* `getChromosomeByAssemblyUsingGET` - Return a list of chromosomes
+* `getChromosomesByAssemblyUsingGET` - Return a list of chromosomes
 
-* `getAllAnnotatedGenesUsingGet` - Return a list of genes annotated to an ontology term
-* `getAnnotatedGenesUsingPost` - Return a list of genes annotated to an ontology term
-* `getGeneAllelesUsingGet` - Return a list of gene alleles
-* `getGeneByMapKeyUsingGet` - Return a list of all genes with position information for an assembly
-* `getGeneByRgdIdUsingGet` - Get a gene record by RGD ID
-* `getGeneBySymbolUsingGet` - Get a gene record by symbol and species type key
-* `getGeneOrthologsUsingGet` - Return a list of gene orthologs
-* `getGenesAnnotatedUsingGet` - Return a list of genes annotated to an ontology term
-* `getGenesByAffyIdUsingGet` - Return a list of genes for an affymetrix ID
-* `getGenesByAliasSymbolUsingGet` - Return a list of genes for an alias and species
-* `getGenesByKeywordUsingGet` - Return a list of genes by keyword and species type key
-* `getGenesByPositionUsingGet` - Return a list of genes position and map key
-* `getGenesBySpeciesUsingGet` - Return a list of all genes for a species in RGD
-* `getGenesInRegionUsingGet` - Return a list of genes in region
-* `getMappedGenesByPositionUsingGet` - Return a list of genes position and map key
-* `getOrthologsByListUsingPost` - Return a list of gene orthologs
+### gene
 
-### Lookup
+* `getAllAnnotatedGenesUsingGET` - Return a list of genes annotated to an ontology term
+* `getAnnotatedGenesUsingPOST` - Return a list of genes annotated to an ontology term
+* `getGeneAllelesUsingGET` - Return a list of gene alleles
+* `getGeneByMapKeyUsingGET` - Return a list of all genes with position information for an assembly
+* `getGeneByRgdIdUsingGET` - Get a gene record by RGD ID
+* `getGeneBySymbolUsingGET` - Get a gene record by symbol and species type key
+* `getGeneOrthologsUsingGET` - Return a list of gene orthologs
+* `getGenesAnnotatedUsingGET` - Return a list of genes annotated to an ontology term
+* `getGenesByAffyIdUsingGET` - Return a list of genes for an affymetrix ID
+* `getGenesByAliasSymbolUsingGET` - Return a list of genes for an alias and species
+* `getGenesByKeywordUsingGET` - Return a list of genes by keyword and species type key
+* `getGenesByPositionUsingGET` - Return a list of genes position and map key
+* `getGenesBySpeciesUsingGET` - Return a list of all genes for a species in RGD
+* `getGenesInRegionUsingGET` - Return a list of genes in region
+* `getMappedGenesByPositionUsingGET` - Return a list of genes position and map key
+* `getOrthologsByListUsingPOST` - Return a list of gene orthologs
 
-* `getEnsemblGeneMappingUsingGet` - Translate an RGD ID to an Ensembl Gene  ID
-* `getEnsemblGeneMappingUsingPost` - Translate RGD IDs to Ensembl Gene IDs
-* `getEnsemblProteinMappingUsingGet` - Translate an RGD ID to an Ensembl Protein ID
-* `getEnsemblProteinMappingUsingPost` - Translate RGD IDs to Ensembl Protein IDs
-* `getEnsemblTranscriptMappingUsingGet` - Translate an RGD ID to an Ensembl Transcript ID
-* `getEnsemblTranscriptMappingUsingPost` - Translate RGD IDs to Ensembl Transcript IDs
-* `getGtexMappingUsingGet` - Translate an RGD ID to an GTEx ID
-* `getGtexMappingUsingPost` - Translate RGD IDs to GTEx IDs
-* `getGenBankNucleotideMappingUsingGet` - Translate an RGD ID to a GenBank Nucleotide ID
-* `getGenBankNucleotideMappingUsingPost` - Translate RGD IDs to GenBank Nucleotide IDs
-* `getGenBankProteinMappingUsingGet` - Translate an RGD ID to a GenBank Protein ID
-* `getGenBankProteinMappingUsingPost` - Translate RGD IDs to GenBank Protein IDs
-* `getGeneTypesUsingGet` - Returns a list of gene types avialable in RGD
-* `getHgncMappingUsingGet` - Translate an RGD ID to an HGNC ID
-* `getHgncMappingUsingPost` - Translate RGD IDs to HGNC IDs
-* `getMgiMappingUsingGet` - Translate an RGD ID to an MGI ID
-* `getMgiMappingUsingPost` - Translate RGD IDs to MGI IDs
-* `getMapsUsingGet` - Return a list assembly maps for a species
-* `getMapsUsingGet1` - Return a standardUnit for an ontology if it exists
-* `getNcbiGeneMappingUsingGet` - Translate an RGD ID to an NCBI Gene ID
-* `getNcbiGeneMappingUsingPost` - Translate RGD IDs to NCBI Gene IDs
-* `getSpeciesTypesUsingGet` - Return a Map of species type keys available in RGD
-* `getUniProtMappingUsingGet` - Translate an RGD ID to a UniProt ID
-* `getUniProtMappingUsingPost` - Translate RGD IDs to UniProt IDs
+### lookup
 
-### Map
+* `getEnsemblGeneMappingUsingGET` - Translate an RGD ID to an Ensembl Gene  ID
+* `getEnsemblGeneMappingUsingPOST` - Translate RGD IDs to Ensembl Gene IDs
+* `getEnsemblProteinMappingUsingGET` - Translate an RGD ID to an Ensembl Protein ID
+* `getEnsemblProteinMappingUsingPOST` - Translate RGD IDs to Ensembl Protein IDs
+* `getEnsemblTranscriptMappingUsingGET` - Translate an RGD ID to an Ensembl Transcript ID
+* `getEnsemblTranscriptMappingUsingPOST` - Translate RGD IDs to Ensembl Transcript IDs
+* `getGTEXMappingUsingGET` - Translate an RGD ID to an GTEx ID
+* `getGTEXMappingUsingPOST` - Translate RGD IDs to GTEx IDs
+* `getGenBankNucleotideMappingUsingGET` - Translate an RGD ID to a GenBank Nucleotide ID
+* `getGenBankNucleotideMappingUsingPOST` - Translate RGD IDs to GenBank Nucleotide IDs
+* `getGenBankProteinMappingUsingGET` - Translate an RGD ID to a GenBank Protein ID
+* `getGenBankProteinMappingUsingPOST` - Translate RGD IDs to GenBank Protein IDs
+* `getGeneTypesUsingGET` - Returns a list of gene types avialable in RGD
+* `getHGNCMappingUsingGET` - Translate an RGD ID to an HGNC ID
+* `getHGNCMappingUsingPOST` - Translate RGD IDs to HGNC IDs
+* `getMGIMappingUsingGET` - Translate an RGD ID to an MGI ID
+* `getMGIMappingUsingPOST` - Translate RGD IDs to MGI IDs
+* `getMapsUsingGET` - Return a list assembly maps for a species
+* `getMapsUsingGET1` - Return a standardUnit for an ontology if it exists
+* `getNCBIGeneMappingUsingGET` - Translate an RGD ID to an NCBI Gene ID
+* `getNCBIGeneMappingUsingPOST` - Translate RGD IDs to NCBI Gene IDs
+* `getSpeciesTypesUsingGET` - Return a Map of species type keys available in RGD
+* `getUniProtMappingUsingGET` - Translate an RGD ID to a UniProt ID
+* `getUniProtMappingUsingPOST` - Translate RGD IDs to UniProt IDs
 
-* `getChromosomeByAssemblyUsingGet` - Return a list of chromosomes
-* `getChromosomesByAssemblyUsingGet` - Return a list of chromosomes
-* `getMapsBySpeciesUsingGet` - Return a list of assemblies
+### map
 
-### Ontology
+* `getChromosomeByAssemblyUsingGET` - Return a list of chromosomes
+* `getChromosomesByAssemblyUsingGET` - Return a list of chromosomes
+* `getMapsBySpeciesUsingGET` - Return a list of assemblies
 
-* `getOntDagsUsingGet` - Returns child and parent terms for Accession ID
-* `getTermUsingGet` - Returns term for Accession ID
-* `isDescendantOfUsingGet` - Returns true or false for terms
+### ontology
 
-### Pathway
+* `getOntDagsUsingGET` - Returns child and parent terms for Accession ID
+* `getTermUsingGET` - Returns term for Accession ID
+* `isDescendantOfUsingGET` - Returns true or false for terms
 
-* `getPathwaysWithDiagramsForCategoryUsingGet` - Return a list of pathways based on category provided
-* `searchPathwaysUsingGet` - Return a list of pathways based on search term
+### pathway
 
-### QTL
+* `getPathwaysWithDiagramsForCategoryUsingGET` - Return a list of pathways based on category provided
+* `searchPathwaysUsingGET` - Return a list of pathways based on search term
 
-* `getMappedQtlByPositionUsingGet` - Returns a list QTL for given position and assembly map
-* `getQtlByRgdIdUsingGet` - Return a QTL for provided RGD ID
-* `getQtlListByPositionUsingGet` - Returns a list QTL for given position and assembly map
+### qtl
 
-### Quantitative Phenotype
+* `getMappedQTLByPositionUsingGET` - Returns a list QTL for given position and assembly map
+* `getQTLByRgdIdUsingGET` - Return a QTL for provided RGD ID
+* `getQtlListByPositionUsingGET` - Returns a list QTL for given position and assembly map
 
-* `getChartInfoUsingGet` - Return a list of quantitative phenotypes values based on a combination of Clinical Measurement, Experimental Condition, Rat Strain, and/or Measurement Method ontology terms.  Results will be all records that match all terms submitted.  Ontology ids should be submitted as a comma delimited list (ex. RS:0000029,CMO:0000155,CMO:0000139).  Species type is an integer value (3=rat, 4=chinchilla).  Reference RGD ID for a study works like a filter.
-* `getChartInfoUsingGet1` - Return a list of quantitative phenotypes values based on a combination of Clinical Measurement, Experimental Condition, Rat Strain, and/or Measurement Method ontology terms.  Results will be all records that match all terms submitted.  Ontology ids should be submitted as a comma delimited list (ex. RS:0000029,CMO:0000155,CMO:0000139).  Species type is an integer value (3=rat, 4=chinchilla)
+### quantitativePhenotype
 
-### Rat Strain
+* `getChartInfoUsingGET` - Return a list of quantitative phenotypes values based on a combination of Clinical Measurement, Experimental Condition, Rat Strain, and/or Measurement Method ontology terms.  Results will be all records that match all terms submitted.  Ontology ids should be submitted as a comma delimited list (ex. RS:0000029,CMO:0000155,CMO:0000139).  Species type is an integer value (3=rat, 4=chinchilla).  Reference RGD ID for a study works like a filter.
+* `getChartInfoUsingGET1` - Return a list of quantitative phenotypes values based on a combination of Clinical Measurement, Experimental Condition, Rat Strain, and/or Measurement Method ontology terms.  Results will be all records that match all terms submitted.  Ontology ids should be submitted as a comma delimited list (ex. RS:0000029,CMO:0000155,CMO:0000139).  Species type is an integer value (3=rat, 4=chinchilla)
 
-* `getAllStrainsUsingGet` - Return all active strains in RGD
-* `getStrainByRgdIdUsingGet` - Return a strain by RGD ID
-* `getStrainsByPositionUsingGet` - Return all active strains by position
+### ratStrain
 
-### SSLP
+* `getAllStrainsUsingGET` - Return all active strains in RGD
+* `getStrainByRgdIdUsingGET` - Return a strain by RGD ID
+* `getStrainsByPositionUsingGET` - Return all active strains by position
 
-* `getMappedSslpByPositionUsingGet` - Returns a list SSLP for given position and assembly map
+### sslp
 
-### Statistics
+* `getMappedSSLPByPositionUsingGET` - Returns a list SSLP for given position and assembly map
 
-* `getActiveObjectCountUsingGet` - Count of active objects by type, for specified species and date
-* `getActiveObjectDiffUsingGet` - Count difference of active objects, by type, for specified species and date range
-* `getGeneTypeCountUsingGet` - Count of gene types, for specified species and date
-* `getGeneTypeDiffUsingGet` - Count difference of gene types, for specified species and date range
-* `getObjectStatusCountUsingGet` - Count of objects with given status, for specified species and date
-* `getObjectStatusDiffUsingGet` - Count difference of objects with given status, for specified species and date range
-* `getObjectsWithRefSeqCountUsingGet` - Count of objects with reference sequence(s), by object type, for specified species and date
-* `getObjectsWithRefSeqDiffUsingGet` - Count difference of objects with reference sequence(s), by object type, for specified species and date range
-* `getObjectsWithReferenceCountUsingGet` - Count of objects with reference, by object type, for specified species and date
-* `getObjectsWithReferenceDiffUsingGet` - Count difference of objects with reference, by object type, for specified species and date range
-* `getObjectsWithXdBsCountUsingGet` - Count of objects with external database ids, by database id, for specified species, object type and date
-* `getObjectsWithXdBsDiffUsingGet` - Count difference of objects with external database ids, by database id, for specified species, object type and date range
-* `getProteinInteractionCountUsingGet` - Count of protein interactions, for specified species and date
-* `getProteinInteractionDiffUsingGet` - Count difference of protein interactions, for specified species and date range
-* `getQtlInheritanceTypeCountUsingGet` - Count of strains, by qtl inheritance type, for specified species and date
-* `getQtlInheritanceTypeDiffUsingGet` - Count difference of strains, by qtl inheritance type, for specified species and date range
-* `getRetiredObjectCountUsingGet` - Count of retired objects by type, for specified species and date
-* `getRetiredObjectDiffUsingGet` - Count difference of retired objects, by type, for specified species and date range
-* `getStrainTypeCountUsingGet` - Count of strain types, for specified species and date
-* `getStrainTypeDiffUsingGet` - Count difference of strain types, for specified species and date range
-* `getTermStatsUsingGet` - getTermStats
-* `getWithdrawnObjectCountUsingGet` - Count of withdrawn objects by type, for specified species and date
-* `getWithdrawnObjectDiffUsingGet` - Count difference of withdrawn objects, by type, for specified species and date range
-* `getXdbsCountUsingGet` - Count of external database ids, for specied species and date
-* `getXdbsDiffUsingGet` - Count difference of external database ids, for specified species and date range
+### statistics
 
-### enrichment-web-service
+* `getActiveObjectCountUsingGET` - Count of active objects by type, for specified species and date
+* `getActiveObjectDiffUsingGET` - Count difference of active objects, by type, for specified species and date range
+* `getGeneTypeCountUsingGET` - Count of gene types, for specified species and date
+* `getGeneTypeDiffUsingGET` - Count difference of gene types, for specified species and date range
+* `getObjectStatusCountUsingGET` - Count of objects with given status, for specified species and date
+* `getObjectStatusDiffUsingGET` - Count difference of objects with given status, for specified species and date range
+* `getObjectsWithRefSeqCountUsingGET` - Count of objects with reference sequence(s), by object type, for specified species and date
+* `getObjectsWithRefSeqDiffUsingGET` - Count difference of objects with reference sequence(s), by object type, for specified species and date range
+* `getObjectsWithReferenceCountUsingGET` - Count of objects with reference, by object type, for specified species and date
+* `getObjectsWithReferenceDiffUsingGET` - Count difference of objects with reference, by object type, for specified species and date range
+* `getObjectsWithXDBsCountUsingGET` - Count of objects with external database ids, by database id, for specified species, object type and date
+* `getObjectsWithXDBsDiffUsingGET` - Count difference of objects with external database ids, by database id, for specified species, object type and date range
+* `getProteinInteractionCountUsingGET` - Count of protein interactions, for specified species and date
+* `getProteinInteractionDiffUsingGET` - Count difference of protein interactions, for specified species and date range
+* `getQtlInheritanceTypeCountUsingGET` - Count of strains, by qtl inheritance type, for specified species and date
+* `getQtlInheritanceTypeDiffUsingGET` - Count difference of strains, by qtl inheritance type, for specified species and date range
+* `getRetiredObjectCountUsingGET` - Count of retired objects by type, for specified species and date
+* `getRetiredObjectDiffUsingGET` - Count difference of retired objects, by type, for specified species and date range
+* `getStrainTypeCountUsingGET` - Count of strain types, for specified species and date
+* `getStrainTypeDiffUsingGET` - Count difference of strain types, for specified species and date range
+* `getTermStatsUsingGET` - getTermStats
+* `getWithdrawnObjectCountUsingGET` - Count of withdrawn objects by type, for specified species and date
+* `getWithdrawnObjectDiffUsingGET` - Count difference of withdrawn objects, by type, for specified species and date range
+* `getXdbsCountUsingGET` - Count of external database ids, for specied species and date
+* `getXdbsDiffUsingGET` - Count difference of external database ids, for specified species and date range
 
-* `getEnrichmentDataUsingPost` - Return a list of genes annotated to the term.Genes are rgdids separated by comma.Species type is an integer value.term is the ontology
-* `getEnrichmentDataUsingPost1` - Return a chart of ontology terms annotated to the genes.Genes are rgdids separated by comma.Species type is an integer value.Aspect is the Ontology group
+### enrichmentWebService
 
+* `getEnrichmentDataUsingPOST` - Return a list of genes annotated to the term.Genes are rgdids separated by comma.Species type is an integer value.term is the ontology
+* `getEnrichmentDataUsingPOST1` - Return a chart of ontology terms annotated to the genes.Genes are rgdids separated by comma.Species type is an integer value.Aspect is the Ontology group
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

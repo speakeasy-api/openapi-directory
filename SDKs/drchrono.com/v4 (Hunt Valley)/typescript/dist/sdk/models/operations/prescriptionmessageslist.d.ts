@@ -1,6 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PrescriptionMessagesListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class PrescriptionMessagesListSecurity extends SpeakeasyBase {
+    drchronoOauth2: string;
+}
+export declare class PrescriptionMessagesListRequest extends SpeakeasyBase {
     cursor?: string;
     doctor?: number;
     pageSize?: number;
@@ -8,23 +12,29 @@ export declare class PrescriptionMessagesListQueryParams extends SpeakeasyBase {
     patient?: number;
     since?: string;
 }
-export declare class PrescriptionMessagesListSecurity extends SpeakeasyBase {
-    drchronoOauth2: shared.SchemeDrchronoOauth2;
-}
 /**
  * Paginated Result
-**/
-export declare class PrescriptionMessagesList200ApplicationJson extends SpeakeasyBase {
+ */
+export declare class PrescriptionMessagesList200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * result data
+     */
     data?: shared.PrescriptionMessage[];
+    /**
+     * Next Paginated page
+     */
     next?: string;
+    /**
+     * Previous paginated page
+     */
     previous?: string;
-}
-export declare class PrescriptionMessagesListRequest extends SpeakeasyBase {
-    queryParams: PrescriptionMessagesListQueryParams;
-    security: PrescriptionMessagesListSecurity;
 }
 export declare class PrescriptionMessagesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    prescriptionMessagesList200ApplicationJSONObject?: PrescriptionMessagesList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
+    prescriptionMessagesList200ApplicationJSONObject?: PrescriptionMessagesList200ApplicationJSON;
 }

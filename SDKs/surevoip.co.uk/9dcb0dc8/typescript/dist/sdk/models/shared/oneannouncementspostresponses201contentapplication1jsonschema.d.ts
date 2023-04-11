@@ -14,6 +14,9 @@ export declare class OneannouncementsPostResponses201ContentApplication1jsonSche
     srcIpAddress?: string;
     url?: OneannouncementsPostResponses201ContentApplication1jsonSchemaAnnouncementUrl;
 }
+/**
+ * OK
+ */
 export declare class OneannouncementsPostResponses201ContentApplication1jsonSchema extends SpeakeasyBase {
     announcement?: OneannouncementsPostResponses201ContentApplication1jsonSchemaAnnouncement;
 }

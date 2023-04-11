@@ -1,10 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { DBProxyStatusEnum } from "./dbproxystatusenum";
 import { UserAuthConfigInfo } from "./userauthconfiginfo";
-import { DbProxyStatusEnum } from "./dbproxystatusenum";
 /**
  * <p>The data structure representing a proxy managed by the RDS Proxy.</p> <p>This data type is used as a response element in the <code>DescribeDBProxies</code> action.</p>
-**/
-export declare class DbProxy extends SpeakeasyBase {
+ */
+export declare class DBProxy extends SpeakeasyBase {
     auth?: UserAuthConfigInfo[];
     createdDate?: Date;
     dbProxyArn?: string;
@@ -15,7 +15,7 @@ export declare class DbProxy extends SpeakeasyBase {
     idleClientTimeout?: number;
     requireTLS?: boolean;
     roleArn?: string;
-    status?: DbProxyStatusEnum;
+    status?: DBProxyStatusEnum;
     updatedDate?: Date;
     vpcId?: string;
     vpcSecurityGroupIds?: string[];

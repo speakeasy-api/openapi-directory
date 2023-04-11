@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Response
+ */
 export declare class RunnerGroupsEnterprise extends SpeakeasyBase {
     allowsPublicRepositories: boolean;
     default: boolean;

@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetAcmeExternalAccountBindingPathParams extends SpeakeasyBase {
-    customerId: string;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class GetAcmeExternalAccountBindingRequest extends SpeakeasyBase {
-    pathParams: GetAcmeExternalAccountBindingPathParams;
+    /**
+     * An identifier for a customer
+     */
+    customerId: string;
 }
 export declare class GetAcmeExternalAccountBindingResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    externalAccountBinding?: any;
+    /**
+     * Acme key identifier and HMAC key for the external account binding. Directory URI is also provided for making ACME requests.
+     */
+    externalAccountBinding?: shared.ExternalAccountBinding;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

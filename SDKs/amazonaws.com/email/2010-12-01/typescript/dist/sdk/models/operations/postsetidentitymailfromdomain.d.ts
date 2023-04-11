@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostSetIdentityMailFromDomainActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTSetIdentityMailFromDomainActionEnum {
     SetIdentityMailFromDomain = "SetIdentityMailFromDomain"
 }
-export declare enum PostSetIdentityMailFromDomainVersionEnum {
+export declare enum POSTSetIdentityMailFromDomainVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostSetIdentityMailFromDomainQueryParams extends SpeakeasyBase {
-    action: PostSetIdentityMailFromDomainActionEnum;
-    version: PostSetIdentityMailFromDomainVersionEnum;
-}
-export declare class PostSetIdentityMailFromDomainHeaders extends SpeakeasyBase {
+export declare class POSTSetIdentityMailFromDomainRequest extends SpeakeasyBase {
+    action: POSTSetIdentityMailFromDomainActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTSetIdentityMailFromDomainVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostSetIdentityMailFromDomainHeaders extends SpeakeasyBase 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostSetIdentityMailFromDomainRequest extends SpeakeasyBase {
-    queryParams: PostSetIdentityMailFromDomainQueryParams;
-    headers: PostSetIdentityMailFromDomainHeaders;
-    request?: Uint8Array;
-}
-export declare class PostSetIdentityMailFromDomainResponse extends SpeakeasyBase {
+export declare class POSTSetIdentityMailFromDomainResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

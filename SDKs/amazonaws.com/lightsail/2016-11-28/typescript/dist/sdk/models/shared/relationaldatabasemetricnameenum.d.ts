@@ -1,5 +1,5 @@
 export declare enum RelationalDatabaseMetricNameEnum {
-    CpuUtilization = "CPUUtilization",
+    CPUUtilization = "CPUUtilization",
     DatabaseConnections = "DatabaseConnections",
     DiskQueueDepth = "DiskQueueDepth",
     FreeStorageSpace = "FreeStorageSpace",

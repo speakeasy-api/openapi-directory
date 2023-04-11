@@ -1,4 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * OK
+ */
 export declare class ArticleHandle extends SpeakeasyBase {
-    handle?: string;
+    /**
+     * Reserved Handle
+     */
+    handle: string;
 }

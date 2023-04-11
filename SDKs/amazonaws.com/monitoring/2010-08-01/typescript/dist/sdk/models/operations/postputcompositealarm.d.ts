@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostPutCompositeAlarmActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTPutCompositeAlarmActionEnum {
     PutCompositeAlarm = "PutCompositeAlarm"
 }
-export declare enum PostPutCompositeAlarmVersionEnum {
+export declare enum POSTPutCompositeAlarmVersionEnum {
     TwoThousandAndTen0801 = "2010-08-01"
 }
-export declare class PostPutCompositeAlarmQueryParams extends SpeakeasyBase {
-    action: PostPutCompositeAlarmActionEnum;
-    version: PostPutCompositeAlarmVersionEnum;
-}
-export declare class PostPutCompositeAlarmHeaders extends SpeakeasyBase {
+export declare class POSTPutCompositeAlarmRequest extends SpeakeasyBase {
+    action: POSTPutCompositeAlarmActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTPutCompositeAlarmVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostPutCompositeAlarmHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostPutCompositeAlarmRequest extends SpeakeasyBase {
-    queryParams: PostPutCompositeAlarmQueryParams;
-    headers: PostPutCompositeAlarmHeaders;
-    request?: Uint8Array;
-}
-export declare class PostPutCompositeAlarmResponse extends SpeakeasyBase {
+export declare class POSTPutCompositeAlarmResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

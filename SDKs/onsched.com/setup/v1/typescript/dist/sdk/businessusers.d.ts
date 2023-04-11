@@ -1,5 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class BusinessUsers {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,57 +10,57 @@ export declare class BusinessUsers {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteSetupV1BusinessusersId - Permanently deletes businessUser object.
+     * Delete User
      *
-     * Use this endpoint to permanently delete a businessUser.
-    **/
+     * @remarks
+     * <p>Use this endpoint to permanently <b>Delete</b> a Business User. A valid <b>businessUser id</b> is required.</p>
+     */
     deleteSetupV1BusinessusersId(req: operations.DeleteSetupV1BusinessusersIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteSetupV1BusinessusersIdResponse>;
     /**
-     * getSetupV1Businessusers - Returns a list of business users.
+     * List Users
      *
-     * The results are returned in pages. Use the offset and limit parameters to control the page start and size. Default offset is 0, and limit is 20.
-     * Use the other query parameters to optionally filter the results list.
-    **/
+     * @remarks
+     * <p>Use this endpoint to return a <b>List of Business Users and their Roles</b>. The results are returned in pages. Use the offset and limit parameters to control the page start and number of results. Default offset is 0, limit is 20, max is 100. Use the query parameters to filter the results further.</p>
+     */
     getSetupV1Businessusers(req: operations.GetSetupV1BusinessusersRequest, config?: AxiosRequestConfig): Promise<operations.GetSetupV1BusinessusersResponse>;
     /**
-     * getSetupV1BusinessusersPermissions - Returns a list of system roles and permission.
+     * List User Permissions
      *
-     * The results are returned in pages. Use the offset and limit parameters to control the page start and size. Default offset is 0, and limit is 20.
-     * Use the other query parameters to optionally filter the results list.
-    **/
+     * @remarks
+     * <p>Use this endpoint to return a <b>List of Business User Permissions by Role</b>. Results are returned in pages. Use the offset and limit parameters to control the page start and number of results. Default offset is 0, limit is 20, max is 100. Use the query parameters to filter the results further.</p>
+     */
     getSetupV1BusinessusersPermissions(req: operations.GetSetupV1BusinessusersPermissionsRequest, config?: AxiosRequestConfig): Promise<operations.GetSetupV1BusinessusersPermissionsResponse>;
     /**
-     * getSetupV1BusinessusersEmailCompanies - Returns a list of companies for the business user.
+     * List User Companies
      *
-     * The results are returned in pages. Use the offset and limit parameters to control the page start and size. Default offset is 0, and limit is 20.
-     * Use the other query parameters to optionally filter the results list.
-    **/
+     * @remarks
+     * <p>Use this endpoint to return a <b>List of Companies</b> associated with the business users email requested. A business user <b>email</b> address is required. Use the offset and limit parameters to control the page start and number of results. Default offset is 0, limit is 20, max is 100. Use the query parameters to filter the results further.</p>
+     */
     getSetupV1BusinessusersEmailCompanies(req: operations.GetSetupV1BusinessusersEmailCompaniesRequest, config?: AxiosRequestConfig): Promise<operations.GetSetupV1BusinessusersEmailCompaniesResponse>;
     /**
-     * getSetupV1BusinessusersId - Returns a businessUser object.
+     * Get User
      *
-     * The result returned is a single businessUser object. An id is required to find the businessUser. Find businessUser id's using the GET setup/v1/businessuserts end point,
-    **/
+     * @remarks
+     * <p>Use this endpoint to return a <b>Business User</b> object. A valid <b>businessUser id</b> is required. Find businessUser id's using the <i>GET /setup/v1/businessusers</i> endpoint.</p>
+     */
     getSetupV1BusinessusersId(req: operations.GetSetupV1BusinessusersIdRequest, config?: AxiosRequestConfig): Promise<operations.GetSetupV1BusinessusersIdResponse>;
     /**
-     * postSetupV1Businessusers - Creates a new businessUser object.
+     * Create User
      *
-     * Use this endpoint to create a new businessUser. If not specified the business location id defaults to the first location in the company.
-     * Name, Email Address and role are required for creating a new businessUser. If the businessUser is a bookable resource then resourceId is required.
-     * For role, use one of the values listed below. Do not include what is shown in brackets, this is there for description of the role only.
-     *
-     * Business Roles:
-     * bizowner (Business Owner)
-     * bizadmin (Business Administrator)
-     * bizresource (Business User - Bookable Resource)
-     * bizclerk (Business User - Portal Booking Privileges)
-     * bizuser (Business User - Portal View Only Privileges)
-    **/
-    postSetupV1Businessusers(req: operations.PostSetupV1BusinessusersRequest, config?: AxiosRequestConfig): Promise<operations.PostSetupV1BusinessusersResponse>;
+     * @remarks
+     * <p>Use this endpoint to <b>Create</b> a Business User. If not specified, the business location defaults to the primary business location. </p>
+     * <p>Required fields: <b>Name</b>, <b>Email</b> and <b>Role</b><b>Note:</b> If the businessUser is a bookable resource (bizresource) then a resourceId is required.</p>
+     * <p>For role, use one of the values listed. <b>Business Roles Include: bizowner</b> (Business Owner), <b>bizadmin</b> (Business Administrator), <b>bizresource</b> (Business User - Bookable Resource).</p>
+     * <p>The <b>sendRegistrationInvite</b> parameter is available to API consumers for their own use. It provides no added functionality in OnSched.</p>
+     */
+    postSetupV1Businessusers(req: shared.BusinessUserInputModel, config?: AxiosRequestConfig): Promise<operations.PostSetupV1BusinessusersResponse>;
     /**
-     * putSetupV1BusinessusersId - Updates a businessUser object.
+     * Update User
      *
-     * Use this endpoint to update a businessUser.
-    **/
+     * @remarks
+     * <p>Use this endpoint to <b>Update</b> a Business User. A valid <b>businessUser id</b> is required.</p>
+     * <p>
+     *   <b>Business Roles Include: bizowner</b> (Business Owner), <b>bizadmin</b> (Business Administrator), <b>bizresource</b> (Business User - Bookable Resource).</p>
+     */
     putSetupV1BusinessusersId(req: operations.PutSetupV1BusinessusersIdRequest, config?: AxiosRequestConfig): Promise<operations.PutSetupV1BusinessusersIdResponse>;
 }

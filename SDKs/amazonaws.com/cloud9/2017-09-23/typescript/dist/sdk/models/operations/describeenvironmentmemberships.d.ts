@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeEnvironmentMembershipsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum DescribeEnvironmentMembershipsXAmzTargetEnum {
-    AwsCloud9WorkspaceManagementServiceDescribeEnvironmentMemberships = "AWSCloud9WorkspaceManagementService.DescribeEnvironmentMemberships"
+    AWSCloud9WorkspaceManagementServiceDescribeEnvironmentMemberships = "AWSCloud9WorkspaceManagementService.DescribeEnvironmentMemberships"
 }
-export declare class DescribeEnvironmentMembershipsHeaders extends SpeakeasyBase {
+export declare class DescribeEnvironmentMembershipsRequest extends SpeakeasyBase {
+    describeEnvironmentMembershipsRequest: shared.DescribeEnvironmentMembershipsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,21 +14,49 @@ export declare class DescribeEnvironmentMembershipsHeaders extends SpeakeasyBase
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeEnvironmentMembershipsXAmzTargetEnum;
-}
-export declare class DescribeEnvironmentMembershipsRequest extends SpeakeasyBase {
-    queryParams: DescribeEnvironmentMembershipsQueryParams;
-    headers: DescribeEnvironmentMembershipsHeaders;
-    request: shared.DescribeEnvironmentMembershipsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class DescribeEnvironmentMembershipsResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     describeEnvironmentMembershipsResult?: shared.DescribeEnvironmentMembershipsResult;
+    /**
+     * ForbiddenException
+     */
     forbiddenException?: any;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

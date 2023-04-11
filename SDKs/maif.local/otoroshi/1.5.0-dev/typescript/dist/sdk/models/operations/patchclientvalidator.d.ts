@@ -1,18 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PatchClientValidatorPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PatchClientValidatorSecurity extends SpeakeasyBase {
-    otoroshiAuth: shared.SchemeOtoroshiAuth;
+    password: string;
+    username: string;
 }
 export declare class PatchClientValidatorRequest extends SpeakeasyBase {
-    pathParams: PatchClientValidatorPathParams;
-    request?: shared.Patch[];
-    security: PatchClientValidatorSecurity;
+    requestBody?: shared.Patch[];
+    /**
+     * The validation authorities id
+     */
+    id: string;
 }
 export declare class PatchClientValidatorResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful operation
+     */
     validationAuthority?: shared.ValidationAuthority;
 }

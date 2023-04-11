@@ -1,14 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ContainerProperties } from "./containerproperties";
+import { EksProperties } from "./eksproperties";
+import { JobTimeout } from "./jobtimeout";
 import { NodeProperties } from "./nodeproperties";
+import { OrchestrationTypeEnum } from "./orchestrationtypeenum";
 import { PlatformCapabilityEnum } from "./platformcapabilityenum";
 import { RetryStrategy } from "./retrystrategy";
-import { JobTimeout } from "./jobtimeout";
 /**
- * An object representing an Batch job definition.
-**/
+ * An object that represents an Batch job definition.
+ */
 export declare class JobDefinition extends SpeakeasyBase {
+    containerOrchestrationType?: OrchestrationTypeEnum;
     containerProperties?: ContainerProperties;
+    eksProperties?: EksProperties;
     jobDefinitionArn: string;
     jobDefinitionName: string;
     nodeProperties?: NodeProperties;
@@ -17,6 +21,7 @@ export declare class JobDefinition extends SpeakeasyBase {
     propagateTags?: boolean;
     retryStrategy?: RetryStrategy;
     revision: number;
+    schedulingPriority?: number;
     status?: string;
     tags?: Record<string, string>;
     timeout?: JobTimeout;

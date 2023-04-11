@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteNetworkInterfacePermissionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteNetworkInterfacePermissionActionEnum {
     DeleteNetworkInterfacePermission = "DeleteNetworkInterfacePermission"
 }
-export declare enum PostDeleteNetworkInterfacePermissionVersionEnum {
+export declare enum POSTDeleteNetworkInterfacePermissionVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDeleteNetworkInterfacePermissionQueryParams extends SpeakeasyBase {
-    action: PostDeleteNetworkInterfacePermissionActionEnum;
-    version: PostDeleteNetworkInterfacePermissionVersionEnum;
-}
-export declare class PostDeleteNetworkInterfacePermissionHeaders extends SpeakeasyBase {
+export declare class POSTDeleteNetworkInterfacePermissionRequest extends SpeakeasyBase {
+    action: POSTDeleteNetworkInterfacePermissionActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteNetworkInterfacePermissionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteNetworkInterfacePermissionHeaders extends Speakea
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteNetworkInterfacePermissionRequest extends SpeakeasyBase {
-    queryParams: PostDeleteNetworkInterfacePermissionQueryParams;
-    headers: PostDeleteNetworkInterfacePermissionHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteNetworkInterfacePermissionResponse extends SpeakeasyBase {
+export declare class POSTDeleteNetworkInterfacePermissionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

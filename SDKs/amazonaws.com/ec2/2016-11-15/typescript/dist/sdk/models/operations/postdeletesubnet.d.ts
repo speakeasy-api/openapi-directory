@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteSubnetActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteSubnetActionEnum {
     DeleteSubnet = "DeleteSubnet"
 }
-export declare enum PostDeleteSubnetVersionEnum {
+export declare enum POSTDeleteSubnetVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDeleteSubnetQueryParams extends SpeakeasyBase {
-    action: PostDeleteSubnetActionEnum;
-    version: PostDeleteSubnetVersionEnum;
-}
-export declare class PostDeleteSubnetHeaders extends SpeakeasyBase {
+export declare class POSTDeleteSubnetRequest extends SpeakeasyBase {
+    action: POSTDeleteSubnetActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteSubnetVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +18,8 @@ export declare class PostDeleteSubnetHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteSubnetRequest extends SpeakeasyBase {
-    queryParams: PostDeleteSubnetQueryParams;
-    headers: PostDeleteSubnetHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteSubnetResponse extends SpeakeasyBase {
+export declare class POSTDeleteSubnetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

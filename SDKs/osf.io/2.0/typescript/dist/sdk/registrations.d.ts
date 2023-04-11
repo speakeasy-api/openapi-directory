@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Registrations {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class Registrations {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * registrationsChildrenList - List all child registrations
+     * List all child registrations
      *
+     * @remarks
      *
      * A paginated list of children of a registration.
      *
@@ -30,19 +31,21 @@ export declare class Registrations {
      * Registrations may be filtered by their `id`, `title`, `category`, `description`, `public`, `tags`, `date_created`, `date_modified`, `root`, `parent`, and `contributors`.
      *
      * Most fields are string fields and will be filtered using simple substring matching. Public is a boolean field, and can be filtered using truthy values, such as **true**, **false**, **0** or **1**. Note that quoting true or false in the query will cause the match to fail.
-    **/
+     */
     registrationsChildrenList(req: operations.RegistrationsChildrenListRequest, config?: AxiosRequestConfig): Promise<operations.RegistrationsChildrenListResponse>;
     /**
-     * registrationsCitationRead - Retrieve a citation
+     * Retrieve a citation
      *
+     * @remarks
      * Retrieves the citation style details for a registration, in CSL format.
      * #### Returns
      * Returns a JSON object with a `data` key that contains the representation of the details necessary for the citation style.
-    **/
+     */
     registrationsCitationRead(req: operations.RegistrationsCitationReadRequest, config?: AxiosRequestConfig): Promise<operations.RegistrationsCitationReadResponse>;
     /**
-     * registrationsCitationsList - List all citation styles
+     * List all citation styles
      *
+     * @remarks
      *
      * A paginated list of the registration's alternative citation styles
      *
@@ -56,11 +59,12 @@ export declare class Registrations {
      * You can optionally request that the response only include citation styles that match your filters by utilizing the `filter` query parameter, e.g. https://api.osf.io/v2/registrations/wucr8/citations/?filter[title]=open.
      *
      * Citation styles may be filtered by their `id`, `title`, `short-title`, and `summary`.
-    **/
+     */
     registrationsCitationsList(req: operations.RegistrationsCitationsListRequest, config?: AxiosRequestConfig): Promise<operations.RegistrationsCitationsListResponse>;
     /**
-     * registrationsCommentsList - List all comments
+     * List all comments
      *
+     * @remarks
      *
      * A paginated list of the registration's comments.
      *
@@ -85,11 +89,12 @@ export declare class Registrations {
      * Comments may be filtered by their `deleted`, `target`, `date_created`, `date_modified`.
      *
      * Most fields are string fields and will be filtered using simple substring matching. Deleted is a boolean field, and can be filtered using truthy values, such as **true**, **false**, **0** or **1**. Note that quoting `true` or `false` in the query will cause the match to fail.
-    **/
+     */
     registrationsCommentsList(req: operations.RegistrationsCommentsListRequest, config?: AxiosRequestConfig): Promise<operations.RegistrationsCommentsListResponse>;
     /**
-     * registrationsContributorsList - List all contributors
+     * List all contributors
      *
+     * @remarks
      * A paginated list of all contributors on this registration.
      * The returned contributors are sorted by their index.
      *
@@ -109,22 +114,24 @@ export declare class Registrations {
      * You can optionally request that the response only include contributors that match your filters by utilizing the `filter` query parameter, e.g. https://api.osf.io/v2/registrations/wu3a4/contributors/?filter[bibliographic]=true.
      *
      * Contributors may be filtered by their `bibliographic` and `permission` attributes.
-    **/
+     */
     registrationsContributorsList(req: operations.RegistrationsContributorsListRequest, config?: AxiosRequestConfig): Promise<operations.RegistrationsContributorsListResponse>;
     /**
-     * registrationsContributorsRead - Retrieve a contributor
+     * Retrieve a contributor
      *
+     * @remarks
      * Retrieves the details of a contributor on this registration.
      *
      * #### Returns
      * Returns a JSON object with a `data` key containing the representation of the requested contributor, if the request is successful.
      *
      * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
-    **/
+     */
     registrationsContributorsRead(req: operations.RegistrationsContributorsReadRequest, config?: AxiosRequestConfig): Promise<operations.RegistrationsContributorsReadResponse>;
     /**
-     * registrationsFilesList - List all files
+     * List all files
      *
+     * @remarks
      * List of all the registration's files/folders for a given storage provider.
      *
      * #### Returns
@@ -140,21 +147,23 @@ export declare class Registrations {
      * You can optionally request that the response only include files that match your filters by utilizing the `filter` query parameter, e.g. https://api.osf.io/v2/registrations/wucr8/files/osfstorage/?filter[kind]=file
      *
      * Files may be filtered by `id`, `name`, `node`, `kind`, `path`, `provider`, `size`, and `last_touched`.
-    **/
+     */
     registrationsFilesList(req: operations.RegistrationsFilesListRequest, config?: AxiosRequestConfig): Promise<operations.RegistrationsFilesListResponse>;
     /**
-     * registrationsFilesRead - Retrieve a file
+     * Retrieve a file
      *
+     * @remarks
      * Retrieves the details of a registration file for the given storage provider.
      * #### Returns
      * Returns a JSON object with a `data` key containing the representation of the requested registration file object, if the request is successful.
      *
      * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
-    **/
+     */
     registrationsFilesRead(req: operations.RegistrationsFilesReadRequest, config?: AxiosRequestConfig): Promise<operations.RegistrationsFilesReadResponse>;
     /**
-     * registrationsForksCreate - Create a fork
+     * Create a fork
      *
+     * @remarks
      * Creates a fork of the given registration.
      *
      * Forking a project creates a copy of an existing registration and all of its contents. The fork always points back to the original registration, forming a network of registrations.
@@ -169,11 +178,12 @@ export declare class Registrations {
      * #### Returns
      * Returns a JSON object with a `data` key containing the complete representation of the forked registration, if the request is successful.
      * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
-    **/
+     */
     registrationsForksCreate(req: operations.RegistrationsForksCreateRequest, config?: AxiosRequestConfig): Promise<operations.RegistrationsForksCreateResponse>;
     /**
-     * registrationsForksList - List all forks
+     * List all forks
      *
+     * @remarks
      *
      * A paginated list of the registration’s forks
      *
@@ -186,11 +196,12 @@ export declare class Registrations {
      * The `data` key contains an array of up to 10 forks. If the current registration has no fork, the `data` key will contain an empty array. Each resource in the array is a separate registration object and contains the full representation of the registration's fork.
      *
      * The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
-    **/
+     */
     registrationsForksList(req: operations.RegistrationsForksListRequest, config?: AxiosRequestConfig): Promise<operations.RegistrationsForksListResponse>;
     /**
-     * registrationsIdentifiersList - List all identifiers
+     * List all identifiers
      *
+     * @remarks
      * A paginated list of the registration's identifiers.
      * #### Returns
      * Returns a JSON object containing `data` and `links` keys.
@@ -203,11 +214,12 @@ export declare class Registrations {
      * You can optionally request that the response only include registrations that match your filters by utilizing the `filter` query parameter, e.g. https://api.osf.io/v2/registrations/wucr8/identifiers/?filter[category]=ark
      *
      * Identifiers may be filtered by their `category` e.g `ark` or `doi`.
-    **/
+     */
     registrationsIdentifiersList(req: operations.RegistrationsIdentifiersListRequest, config?: AxiosRequestConfig): Promise<operations.RegistrationsIdentifiersListResponse>;
     /**
-     * registrationsInstitutionsList - List all institutions
+     * List all institutions
      *
+     * @remarks
      * A paginated list of institutions affiliated with the registration.
      * #### Returns
      * Returns a JSON object containing `data` and `links` keys.
@@ -215,11 +227,12 @@ export declare class Registrations {
      * The `data` key contains an array of up to 10 affiliated institutions. Each resource in the array is a separate institution object.
      *
      * The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
-    **/
+     */
     registrationsInstitutionsList(req: operations.RegistrationsInstitutionsListRequest, config?: AxiosRequestConfig): Promise<operations.RegistrationsInstitutionsListResponse>;
     /**
-     * registrationsLinkedNodesList - List all linked nodes
+     * List all linked nodes
      *
+     * @remarks
      * List of all nodes linked to the registration.
      * #### Returns
      * Returns a JSON object containing `data` and `links` keys.
@@ -231,11 +244,12 @@ export declare class Registrations {
      * You can optionally request that the response only include nodes that match your filters by utilizing the `filter` query parameter, e.g. https://api.osf.io/v2/registrations/wucr8/linked_nodes/?filter[title]=reproducibility/?filter[title]=reproducibility.
      *
      * Nodes may be filtered by their `title`, `category`, `description`, `public`, `registration`, or `tags`. `title`, `description`, and `category` are string fields and will be filteres using simple substring matching. `public`, `registration` are boolean and can be filtered using truthy values, such as `true`, `false`, `0`, `1`. `tags` is an array of simple strings.
-    **/
+     */
     registrationsLinkedNodesList(req: operations.RegistrationsLinkedNodesListRequest, config?: AxiosRequestConfig): Promise<operations.RegistrationsLinkedNodesListResponse>;
     /**
-     * registrationsList - List all registrations
+     * List all registrations
      *
+     * @remarks
      * A paginated list of registrations on the OSF to which the user has access.
      *
      * The returned registrations are those which are public or which the user has access to view.
@@ -261,11 +275,12 @@ export declare class Registrations {
      * You can optionally request that the response only include registrations that match your filters by utilizing the `filter` query parameter, e.g. https://api.osf.io/v2/registrations/?filter[title]=open.
      *
      * Registrations may be filtered by their `id`, `title`, `category`, `description`, `public`, `tags`, `date_created`, `date_modified`, `root`, `parent`, and `contributors`.
-    **/
+     */
     registrationsList(config?: AxiosRequestConfig): Promise<operations.RegistrationsListResponse>;
     /**
-     * registrationsLogsList - List all logs
+     * List all logs
      *
+     * @remarks
      * A paginated list of the registration's logs.
      *
      * The returned logs are sorted by their `date`, with the most recents logs appearing first.
@@ -280,11 +295,12 @@ export declare class Registrations {
      * You can optionally request that the response only include logs that match your filters by utilizing the `filter` query parameter, e.g. https://api.osf.io/v2/registrations/wucr8/logs/?filter[action]=made_private.
      *
      * Logs may be filtered by their `action`, and `date`.
-    **/
+     */
     registrationsLogsList(req: operations.RegistrationsLogsListRequest, config?: AxiosRequestConfig): Promise<operations.RegistrationsLogsListResponse>;
     /**
-     * registrationsPartialUpdate - Update a registration
+     * Update a registration
      *
+     * @remarks
      * Updates a registration's privacy from **private** to **public**.
      *
      * Registrations can be updated with either a **PUT** or **PATCH** request. The `public` field is the only field that can be modified on a registration
@@ -296,11 +312,12 @@ export declare class Registrations {
      * Returns a JSON object with a `data` key containing the new representation of the updated registration, if the request is successful.
      *
      * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
-    **/
+     */
     registrationsPartialUpdate(req: operations.RegistrationsPartialUpdateRequest, config?: AxiosRequestConfig): Promise<operations.RegistrationsPartialUpdateResponse>;
     /**
-     * registrationsProvidersList - List all storage providers
+     * List all storage providers
      *
+     * @remarks
      * A paginated list of storage providers enabled on the registration
      *
      * Users of the OSF may access their data on a [number of cloud-storage services](https://api.osf.io/v2/#storage-providers) that have integrations with the OSF. We call these **providers**. By default, every node has access to the OSF-provided storage but may use as many of the supported providers as desired.
@@ -314,11 +331,12 @@ export declare class Registrations {
      * The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
      *
      * Note: In the OSF filesystem model, providers are treated as folders, but with special properties that distinguish them from regular folders. Every provider folder is considered a root folder, and may not be deleted through the regular file API.
-    **/
+     */
     registrationsProvidersList(req: operations.RegistrationsProvidersListRequest, config?: AxiosRequestConfig): Promise<operations.RegistrationsProvidersListResponse>;
     /**
-     * registrationsRead - Retrieve a registration
+     * Retrieve a registration
      *
+     * @remarks
      * Retrieve the details of a given registration.
      * #### Permissions
      * Only project contributors may retrieve the details of a registration that is embargoed, or has not yet been made public. Attempting to retrieve a private registration for which you are not a contributor will result in a **403 Forbidden** response.
@@ -335,11 +353,12 @@ export declare class Registrations {
      * Returns a JSON object with a `data` key containing the representation of the requested registration, if the request is successful.
      *
      * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
-    **/
+     */
     registrationsRead(req: operations.RegistrationsReadRequest, config?: AxiosRequestConfig): Promise<operations.RegistrationsReadResponse>;
     /**
-     * registrationsViewOnlyLinksList - List all view only links
+     * List all view only links
      *
+     * @remarks
      * A paginated list of view only links created for this registration.
      * #### Returns
      * Returns a JSON object containing `data` and `links` keys.
@@ -357,11 +376,12 @@ export declare class Registrations {
      * You can optionally request that the response only include view only links that match your filters by utilizing the `filter` query parameter, e.g. https://api.osf.io/v2/registrations/wu3a4/view_only_links/?filter[anonymous]=true.
      *
      * View Only Links may be filtered based on their `name`, `anonymous` and `date_created` fields. Possible comparison operators include 'gt' (greater than), 'gte'(greater than or equal to), 'lt' (less than) and 'lte' (less than or equal to). The date must be in the format YYYY-MM-DD and the time is optional.
-    **/
+     */
     registrationsViewOnlyLinksList(req: operations.RegistrationsViewOnlyLinksListRequest, config?: AxiosRequestConfig): Promise<operations.RegistrationsViewOnlyLinksListResponse>;
     /**
-     * registrationsViewOnlyLinksRead - Retrieve a view only link
+     * Retrieve a view only link
      *
+     * @remarks
      * Retrieves the details of a view only link created from this registration.
      * #### Returns
      * Returns a JSON object with a `data` key containing the representation of the requested view only link, if the request is successful.
@@ -370,11 +390,12 @@ export declare class Registrations {
      * #### Permissions
      *
      * View only links on a registration, public or private, are readable and writeable only by users that are administrators on the registration.
-    **/
+     */
     registrationsViewOnlyLinksRead(req: operations.RegistrationsViewOnlyLinksReadRequest, config?: AxiosRequestConfig): Promise<operations.RegistrationsViewOnlyLinksReadResponse>;
     /**
-     * registrationsWikisList - List all wikis
+     * List all wikis
      *
+     * @remarks
      * A paginated list of the registration's wiki pages
      * #### Returns
      * A list of all registration's current wiki page versions ordered by their date_modified. Each resource contains the full representation of the wiki, meaning additional requests to an individual wiki's detail view are not necessary.
@@ -386,6 +407,6 @@ export declare class Registrations {
      * + `filter[date_modified][comparison_operator]=YYYY-MM-DDTH:M:S` -- filter wiki pages based on date modified.
      *
      * Possible comparison operators include 'gt' (greater than), 'gte'(greater than or equal to), 'lt' (less than) and 'lte' (less than or equal to). The date must be in the format YYYY-MM-DD and the time is optional.
-    **/
+     */
     registrationsWikisList(req: operations.RegistrationsWikisListRequest, config?: AxiosRequestConfig): Promise<operations.RegistrationsWikisListResponse>;
 }

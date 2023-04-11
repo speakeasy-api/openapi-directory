@@ -1,7 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { ExportSourceTypeEnum } from "./exportsourcetypeenum";
 /**
- * <p>Contains the details of a snapshot export to Amazon S3. </p> <p>This data type is used as a response element in the <code>DescribeExportTasks</code> action. </p>
-**/
+ * <p>Contains the details of a snapshot or cluster export to Amazon S3.</p> <p>This data type is used as a response element in the <code>DescribeExportTasks</code> action.</p>
+ */
 export declare class ExportTask extends SpeakeasyBase {
     exportOnly?: string[];
     exportTaskIdentifier?: string;
@@ -13,6 +14,7 @@ export declare class ExportTask extends SpeakeasyBase {
     s3Prefix?: string;
     snapshotTime?: Date;
     sourceArn?: string;
+    sourceType?: ExportSourceTypeEnum;
     status?: string;
     taskEndTime?: Date;
     taskStartTime?: Date;

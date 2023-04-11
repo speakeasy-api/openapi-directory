@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class PostBlockedNumbersSecurity extends SpeakeasyBase {
-    basicAuth: shared.SchemeBasicAuth;
-}
-export declare class PostBlockedNumbersRequest extends SpeakeasyBase {
-    request: string[];
-    security: PostBlockedNumbersSecurity;
+    password: string;
+    username: string;
 }
 export declare class PostBlockedNumbersResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

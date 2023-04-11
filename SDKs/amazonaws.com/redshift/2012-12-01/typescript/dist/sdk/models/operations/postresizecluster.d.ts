@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostResizeClusterActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTResizeClusterActionEnum {
     ResizeCluster = "ResizeCluster"
 }
-export declare enum PostResizeClusterVersionEnum {
+export declare enum POSTResizeClusterVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostResizeClusterQueryParams extends SpeakeasyBase {
-    action: PostResizeClusterActionEnum;
-    version: PostResizeClusterVersionEnum;
-}
-export declare class PostResizeClusterHeaders extends SpeakeasyBase {
+export declare class POSTResizeClusterRequest extends SpeakeasyBase {
+    action: POSTResizeClusterActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTResizeClusterVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostResizeClusterHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostResizeClusterRequest extends SpeakeasyBase {
-    queryParams: PostResizeClusterQueryParams;
-    headers: PostResizeClusterHeaders;
-    request?: Uint8Array;
-}
-export declare class PostResizeClusterResponse extends SpeakeasyBase {
+export declare class POSTResizeClusterResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

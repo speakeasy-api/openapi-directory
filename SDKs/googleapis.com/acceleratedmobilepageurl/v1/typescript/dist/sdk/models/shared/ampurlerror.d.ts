@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The error code of an API call.
+ */
 export declare enum AmpUrlErrorErrorCodeEnum {
     ErrorCodeUnspecified = "ERROR_CODE_UNSPECIFIED",
     InputUrlNotFound = "INPUT_URL_NOT_FOUND",
@@ -9,9 +12,18 @@ export declare enum AmpUrlErrorErrorCodeEnum {
 }
 /**
  * AMP URL Error resource for a requested URL that couldn't be found.
-**/
+ */
 export declare class AmpUrlError extends SpeakeasyBase {
+    /**
+     * The error code of an API call.
+     */
     errorCode?: AmpUrlErrorErrorCodeEnum;
+    /**
+     * An optional descriptive error message.
+     */
     errorMessage?: string;
+    /**
+     * The original non-AMP URL.
+     */
     originalUrl?: string;
 }

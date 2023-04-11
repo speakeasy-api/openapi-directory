@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeConfigurationRecordersXAmzTargetEnum {
     StarlingDoveServiceDescribeConfigurationRecorders = "StarlingDoveService.DescribeConfigurationRecorders"
 }
-export declare class DescribeConfigurationRecordersHeaders extends SpeakeasyBase {
+export declare class DescribeConfigurationRecordersRequest extends SpeakeasyBase {
+    describeConfigurationRecordersRequest: shared.DescribeConfigurationRecordersRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,13 +15,16 @@ export declare class DescribeConfigurationRecordersHeaders extends SpeakeasyBase
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeConfigurationRecordersXAmzTargetEnum;
 }
-export declare class DescribeConfigurationRecordersRequest extends SpeakeasyBase {
-    headers: DescribeConfigurationRecordersHeaders;
-    request: shared.DescribeConfigurationRecordersRequest;
-}
 export declare class DescribeConfigurationRecordersResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeConfigurationRecordersResponse?: shared.DescribeConfigurationRecordersResponse;
+    /**
+     * NoSuchConfigurationRecorderException
+     */
     noSuchConfigurationRecorderException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,25 +1,51 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
 export declare class PostEnterpriseAuthRefreshRequestBody extends SpeakeasyBase {
+    /**
+     * Authentication token
+     */
     token?: string;
 }
-export declare class PostEnterpriseAuthRefresh200ApplicationJson extends SpeakeasyBase {
-    token?: string;
-    ttl?: number;
+/**
+ * Internal server error
+ */
+export declare class PostEnterpriseAuthRefresh500ApplicationJSON extends SpeakeasyBase {
+    detail?: string;
 }
-export declare class PostEnterpriseAuthRefresh400ApplicationJson extends SpeakeasyBase {
+/**
+ * Bad Request
+ */
+export declare class PostEnterpriseAuthRefresh400ApplicationJSON extends SpeakeasyBase {
     lessThanFieldNameGreaterThan?: string[];
     nonFieldErrors?: string[];
 }
-export declare class PostEnterpriseAuthRefresh500ApplicationJson extends SpeakeasyBase {
-    detail?: string;
-}
-export declare class PostEnterpriseAuthRefreshRequest extends SpeakeasyBase {
-    request: PostEnterpriseAuthRefreshRequestBody;
+/**
+ * Token and respective time to live
+ */
+export declare class PostEnterpriseAuthRefresh200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Authentication token
+     */
+    token?: string;
+    /**
+     * Token time to live in seconds
+     */
+    ttl?: number;
 }
 export declare class PostEnterpriseAuthRefreshResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    postEnterpriseAuthRefresh200ApplicationJSONObject?: PostEnterpriseAuthRefresh200ApplicationJson;
-    postEnterpriseAuthRefresh400ApplicationJSONObject?: PostEnterpriseAuthRefresh400ApplicationJson;
-    postEnterpriseAuthRefresh500ApplicationJSONObject?: PostEnterpriseAuthRefresh500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Token and respective time to live
+     */
+    postEnterpriseAuthRefresh200ApplicationJSONObject?: PostEnterpriseAuthRefresh200ApplicationJSON;
+    /**
+     * Bad Request
+     */
+    postEnterpriseAuthRefresh400ApplicationJSONObject?: PostEnterpriseAuthRefresh400ApplicationJSON;
+    /**
+     * Internal server error
+     */
+    postEnterpriseAuthRefresh500ApplicationJSONObject?: PostEnterpriseAuthRefresh500ApplicationJSON;
 }

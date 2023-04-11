@@ -1,0 +1,24 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { Amount } from "./amount";
+import { FeeJurisdiction } from "./feejurisdiction";
+/**
+ * This type is used to display fees that are automatically deducted from seller payouts.
+ */
+export declare class Fee extends SpeakeasyBase {
+    /**
+     * This type is used to express the dollar value and currency used for any transaction retrieved with the <strong>Finances API</strong>, including an order total, a seller payout, a buyer refund, or a seller credit.
+     */
+    amount?: Amount;
+    /**
+     * This container returns jurisdiction information about region-specific fees that are charged to sellers.
+     */
+    feeJurisdiction?: FeeJurisdiction;
+    /**
+     * A description of the fee that was deducted from the seller payout.
+     */
+    feeMemo?: string;
+    /**
+     * The enumeration value returned here indicates the type of fee that was deducted from the seller payout. For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/finances/types/api:FeeTypeEnum'>eBay API documentation</a>
+     */
+    feeType?: string;
+}

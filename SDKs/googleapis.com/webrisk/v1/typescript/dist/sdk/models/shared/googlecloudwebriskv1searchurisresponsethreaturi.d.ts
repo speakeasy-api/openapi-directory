@@ -8,8 +8,14 @@ export declare enum GoogleCloudWebriskV1SearchUrisResponseThreatUriThreatTypesEn
 }
 /**
  * Contains threat information on a matching uri.
-**/
+ */
 export declare class GoogleCloudWebriskV1SearchUrisResponseThreatUri extends SpeakeasyBase {
+    /**
+     * The cache lifetime for the returned match. Clients must not cache this response past this timestamp to avoid false positives.
+     */
     expireTime?: string;
+    /**
+     * The ThreatList this threat belongs to.
+     */
     threatTypes?: GoogleCloudWebriskV1SearchUrisResponseThreatUriThreatTypesEnum[];
 }

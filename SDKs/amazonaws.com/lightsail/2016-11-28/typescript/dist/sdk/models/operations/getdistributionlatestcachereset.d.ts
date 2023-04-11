@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetDistributionLatestCacheResetXAmzTargetEnum {
     Lightsail20161128GetDistributionLatestCacheReset = "Lightsail_20161128.GetDistributionLatestCacheReset"
 }
-export declare class GetDistributionLatestCacheResetHeaders extends SpeakeasyBase {
+export declare class GetDistributionLatestCacheResetRequest extends SpeakeasyBase {
+    getDistributionLatestCacheResetRequest: shared.GetDistributionLatestCacheResetRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class GetDistributionLatestCacheResetHeaders extends SpeakeasyBas
     xAmzSignedHeaders?: string;
     xAmzTarget: GetDistributionLatestCacheResetXAmzTargetEnum;
 }
-export declare class GetDistributionLatestCacheResetRequest extends SpeakeasyBase {
-    headers: GetDistributionLatestCacheResetHeaders;
-    request: shared.GetDistributionLatestCacheResetRequest;
-}
 export declare class GetDistributionLatestCacheResetResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getDistributionLatestCacheResetResult?: shared.GetDistributionLatestCacheResetResult;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
+    /**
+     * OperationFailureException
+     */
     operationFailureException?: any;
+    /**
+     * ServiceException
+     */
     serviceException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnauthenticatedException
+     */
     unauthenticatedException?: any;
 }

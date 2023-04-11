@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetSampledRequestsXAmzTargetEnum {
-    AwswafRegional20161128GetSampledRequests = "AWSWAF_Regional_20161128.GetSampledRequests"
+    AWSWAFRegional20161128GetSampledRequests = "AWSWAF_Regional_20161128.GetSampledRequests"
 }
-export declare class GetSampledRequestsHeaders extends SpeakeasyBase {
+export declare class GetSampledRequestsRequest extends SpeakeasyBase {
+    getSampledRequestsRequest: shared.GetSampledRequestsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class GetSampledRequestsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetSampledRequestsXAmzTargetEnum;
 }
-export declare class GetSampledRequestsRequest extends SpeakeasyBase {
-    headers: GetSampledRequestsHeaders;
-    request: shared.GetSampledRequestsRequest;
-}
 export declare class GetSampledRequestsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getSampledRequestsResponse?: shared.GetSampledRequestsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFNonexistentItemException
+     */
     wafNonexistentItemException?: any;
 }

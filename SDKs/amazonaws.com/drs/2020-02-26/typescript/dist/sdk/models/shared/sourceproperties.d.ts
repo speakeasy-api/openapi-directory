@@ -1,0 +1,19 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { Cpu } from "./cpu";
+import { Disk } from "./disk";
+import { IdentificationHints } from "./identificationhints";
+import { NetworkInterface } from "./networkinterface";
+import { Os } from "./os";
+/**
+ * Properties of the Source Server machine.
+ */
+export declare class SourceProperties extends SpeakeasyBase {
+    cpus?: Cpu[];
+    disks?: Disk[];
+    identificationHints?: IdentificationHints;
+    lastUpdatedDateTime?: string;
+    networkInterfaces?: NetworkInterface[];
+    os?: Os;
+    ramBytes?: number;
+    recommendedInstanceType?: string;
+}

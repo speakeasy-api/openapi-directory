@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostSetRulePrioritiesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTSetRulePrioritiesActionEnum {
     SetRulePriorities = "SetRulePriorities"
 }
-export declare enum PostSetRulePrioritiesVersionEnum {
+export declare enum POSTSetRulePrioritiesVersionEnum {
     TwoThousandAndFifteen1201 = "2015-12-01"
 }
-export declare class PostSetRulePrioritiesQueryParams extends SpeakeasyBase {
-    action: PostSetRulePrioritiesActionEnum;
-    version: PostSetRulePrioritiesVersionEnum;
-}
-export declare class PostSetRulePrioritiesHeaders extends SpeakeasyBase {
+export declare class POSTSetRulePrioritiesRequest extends SpeakeasyBase {
+    action: POSTSetRulePrioritiesActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTSetRulePrioritiesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostSetRulePrioritiesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostSetRulePrioritiesRequest extends SpeakeasyBase {
-    queryParams: PostSetRulePrioritiesQueryParams;
-    headers: PostSetRulePrioritiesHeaders;
-    request?: Uint8Array;
-}
-export declare class PostSetRulePrioritiesResponse extends SpeakeasyBase {
+export declare class POSTSetRulePrioritiesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

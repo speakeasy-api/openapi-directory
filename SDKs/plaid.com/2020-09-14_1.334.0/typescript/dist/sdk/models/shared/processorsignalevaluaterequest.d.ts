@@ -1,0 +1,61 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { SignalDevice } from "./signaldevice";
+import { SignalUser } from "./signaluser";
+/**
+ * ProcessorSignalEvaluateRequest defines the request schema for `/processor/signal/evaluate`
+ */
+export declare class ProcessorSignalEvaluateRequest extends SpeakeasyBase {
+    /**
+     * The transaction amount, in USD (e.g. `102.05`)
+     */
+    amount: number;
+    /**
+     * Your Plaid API `client_id`. The `client_id` is required and may be provided either in the `PLAID-CLIENT-ID` header or as part of a request body.
+     */
+    clientId?: string;
+    /**
+     * The unique ID that you would like to use to refer to this transaction. For your convenience mapping your internal data, you could use your internal ID/identifier for this transaction. The max length for this field is 36 characters.
+     */
+    clientTransactionId: string;
+    /**
+     * A unique ID that identifies the end user in your system. This ID is used to correlate requests by a user with multiple Items. The max length for this field is 36 characters. Personally identifiable information, such as an email address or phone number, should not be used in the `client_user_id`.
+     */
+    clientUserId?: string;
+    /**
+     * The default ACH or non-ACH payment method to complete the transaction.
+     *
+     * @remarks
+     * `SAME_DAY_ACH`: Same Day ACH by NACHA. The debit transaction is processed and settled on the same day
+     * `NEXT_DAY_ACH`: Next Day ACH settlement for debit transactions, offered by some payment processors
+     * `STANDARD_ACH`: standard ACH by NACHA
+     * `REAL_TIME_PAYMENTS`: real-time payments such as RTP and FedNow
+     * `DEBIT_CARD`: if the default payment is over debit card networks
+     * `MULTIPLE_PAYMENT_METHODS`: if there is no default debit rail or there are multiple payment methods
+     * Possible values:  `SAME_DAY_ACH`, `NEXT_DAY_ACH`, `STANDARD_ACH`, `REAL_TIME_PAYMENTS`, `DEBIT_CARD`, `MULTIPLE_PAYMENT_METHODS`
+     */
+    defaultPaymentMethod?: string;
+    /**
+     * Details about the end user's device
+     */
+    device?: SignalDevice;
+    /**
+     * **true** if the ACH transaction is a recurring transaction; **false** otherwise
+     */
+    isRecurring?: boolean;
+    /**
+     * The processor token obtained from the Plaid integration partner. Processor tokens are in the format: `processor-<environment>-<identifier>`
+     */
+    processorToken: string;
+    /**
+     * Your Plaid API `secret`. The `secret` is required and may be provided either in the `PLAID-SECRET` header or as part of a request body.
+     */
+    secret?: string;
+    /**
+     * Details about the end user initiating the transaction (i.e., the account holder).
+     */
+    user?: SignalUser;
+    /**
+     * `true` if the end user is present while initiating the ACH transfer and the endpoint is being called; `false` otherwise (for example, when the ACH transfer is scheduled and the end user is not present, or you call this endpoint after the ACH transfer but before submitting the Nacha file for ACH processing).
+     */
+    userPresent?: boolean;
+}

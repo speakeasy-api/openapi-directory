@@ -1,15 +1,39 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
- * Information about the root volume replacement task.
-**/
-export declare class CreateReplaceRootVolumeTaskResultReplaceRootVolumeTask extends SpeakeasyBase {
-    completeTime?: Record<string, any>;
-    instanceId?: Record<string, any>;
-    replaceRootVolumeTaskId?: Record<string, any>;
-    startTime?: Record<string, any>;
-    tags?: Record<string, any>;
-    taskState?: Record<string, any>;
+ * Describes a tag.
+ */
+export declare class CreateReplaceRootVolumeTaskResultReplaceRootVolumeTaskTags extends SpeakeasyBase {
+    key?: string;
+    value?: string;
 }
+/**
+ * <p>The state of the task. The task can be in one of the following states:</p> <ul> <li> <p> <code>pending</code> - the replacement volume is being created.</p> </li> <li> <p> <code>in-progress</code> - the original volume is being detached and the replacement volume is being attached.</p> </li> <li> <p> <code>succeeded</code> - the replacement volume has been successfully attached to the instance and the instance is available.</p> </li> <li> <p> <code>failing</code> - the replacement task is in the process of failing.</p> </li> <li> <p> <code>failed</code> - the replacement task has failed but the original root volume is still attached.</p> </li> <li> <p> <code>failing-detached</code> - the replacement task is in the process of failing. The instance might have no root volume attached.</p> </li> <li> <p> <code>failed-detached</code> - the replacement task has failed and the instance has no root volume attached.</p> </li> </ul>
+ */
+export declare enum CreateReplaceRootVolumeTaskResultReplaceRootVolumeTaskTaskStateEnum {
+    Pending = "pending",
+    InProgress = "in-progress",
+    Failing = "failing",
+    Succeeded = "succeeded",
+    Failed = "failed",
+    FailedDetached = "failed-detached"
+}
+/**
+ * Information about the root volume replacement task.
+ */
+export declare class CreateReplaceRootVolumeTaskResultReplaceRootVolumeTask extends SpeakeasyBase {
+    completeTime?: string;
+    deleteReplacedRootVolume?: boolean;
+    imageId?: string;
+    instanceId?: string;
+    replaceRootVolumeTaskId?: string;
+    snapshotId?: string;
+    startTime?: string;
+    tags?: CreateReplaceRootVolumeTaskResultReplaceRootVolumeTaskTags[];
+    taskState?: CreateReplaceRootVolumeTaskResultReplaceRootVolumeTaskTaskStateEnum;
+}
+/**
+ * Success
+ */
 export declare class CreateReplaceRootVolumeTaskResult extends SpeakeasyBase {
     replaceRootVolumeTask?: CreateReplaceRootVolumeTaskResultReplaceRootVolumeTask;
 }

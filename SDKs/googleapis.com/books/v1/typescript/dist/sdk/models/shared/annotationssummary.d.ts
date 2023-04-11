@@ -6,6 +6,9 @@ export declare class AnnotationsSummaryLayers extends SpeakeasyBase {
     remainingCharacterCount?: number;
     updated?: string;
 }
+/**
+ * Successful response
+ */
 export declare class AnnotationsSummary extends SpeakeasyBase {
     kind?: string;
     layers?: AnnotationsSummaryLayers[];

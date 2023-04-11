@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class OnDemandBackgrounds {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,23 +9,23 @@ export declare class OnDemandBackgrounds {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createVodBackground - Add a background to an On Demand page
-    **/
-    createVodBackground(req: operations.CreateVodBackgroundRequest, config?: AxiosRequestConfig): Promise<operations.CreateVodBackgroundResponse>;
+     * Add a background to an On Demand page
+     */
+    createVodBackground(req: operations.CreateVodBackgroundRequest, security: operations.CreateVodBackgroundSecurity, config?: AxiosRequestConfig): Promise<operations.CreateVodBackgroundResponse>;
     /**
-     * deleteVodBackground - Remove a background from an On Demand page
-    **/
-    deleteVodBackground(req: operations.DeleteVodBackgroundRequest, config?: AxiosRequestConfig): Promise<operations.DeleteVodBackgroundResponse>;
+     * Remove a background from an On Demand page
+     */
+    deleteVodBackground(req: operations.DeleteVodBackgroundRequest, security: operations.DeleteVodBackgroundSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteVodBackgroundResponse>;
     /**
-     * editVodBackground - Edit a background of an On Demand page
-    **/
-    editVodBackground(req: operations.EditVodBackgroundRequest, config?: AxiosRequestConfig): Promise<operations.EditVodBackgroundResponse>;
+     * Edit a background of an On Demand page
+     */
+    editVodBackground(req: operations.EditVodBackgroundRequest, security: operations.EditVodBackgroundSecurity, config?: AxiosRequestConfig): Promise<operations.EditVodBackgroundResponse>;
     /**
-     * getVodBackground - Get a specific background of an On Demand page
-    **/
+     * Get a specific background of an On Demand page
+     */
     getVodBackground(req: operations.GetVodBackgroundRequest, config?: AxiosRequestConfig): Promise<operations.GetVodBackgroundResponse>;
     /**
-     * getVodBackgrounds - Get all the backgrounds of an On Demand page
-    **/
+     * Get all the backgrounds of an On Demand page
+     */
     getVodBackgrounds(req: operations.GetVodBackgroundsRequest, config?: AxiosRequestConfig): Promise<operations.GetVodBackgroundsResponse>;
 }

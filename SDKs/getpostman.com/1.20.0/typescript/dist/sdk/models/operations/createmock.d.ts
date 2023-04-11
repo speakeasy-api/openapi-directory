@@ -1,4 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
 export declare class CreateMockRequestBodyMock extends SpeakeasyBase {
     collection?: string;
     environment?: string;
@@ -6,7 +7,7 @@ export declare class CreateMockRequestBodyMock extends SpeakeasyBase {
 export declare class CreateMockRequestBody extends SpeakeasyBase {
     mock?: CreateMockRequestBodyMock;
 }
-export declare class CreateMock200ApplicationJsonMock extends SpeakeasyBase {
+export declare class CreateMock200ApplicationJSONMock extends SpeakeasyBase {
     collection?: string;
     environment?: string;
     id?: string;
@@ -14,14 +15,18 @@ export declare class CreateMock200ApplicationJsonMock extends SpeakeasyBase {
     owner?: string;
     uid?: string;
 }
-export declare class CreateMock200ApplicationJson extends SpeakeasyBase {
-    mock?: CreateMock200ApplicationJsonMock;
-}
-export declare class CreateMockRequest extends SpeakeasyBase {
-    request?: CreateMockRequestBody;
+/**
+ * Successful Response
+ */
+export declare class CreateMock200ApplicationJSON extends SpeakeasyBase {
+    mock?: CreateMock200ApplicationJSONMock;
 }
 export declare class CreateMockResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createMock200ApplicationJSONObject?: CreateMock200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful Response
+     */
+    createMock200ApplicationJSONObject?: CreateMock200ApplicationJSON;
 }

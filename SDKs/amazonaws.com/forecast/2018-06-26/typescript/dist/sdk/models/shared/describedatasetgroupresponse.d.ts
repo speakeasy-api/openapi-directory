@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { DomainEnum } from "./domainenum";
+/**
+ * Success
+ */
 export declare class DescribeDatasetGroupResponse extends SpeakeasyBase {
     creationTime?: Date;
     datasetArns?: string[];

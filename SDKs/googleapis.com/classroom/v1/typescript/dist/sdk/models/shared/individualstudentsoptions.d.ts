@@ -1,7 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Assignee details about a coursework/announcement. This field is set if and only if `assigneeMode` is `INDIVIDUAL_STUDENTS`.
-**/
+ */
 export declare class IndividualStudentsOptions extends SpeakeasyBase {
+    /**
+     * Identifiers for the students that have access to the coursework/announcement.
+     */
     studentIds?: string[];
 }

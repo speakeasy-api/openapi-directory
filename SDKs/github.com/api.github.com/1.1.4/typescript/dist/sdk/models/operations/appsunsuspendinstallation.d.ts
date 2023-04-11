@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AppsUnsuspendInstallationPathParams extends SpeakeasyBase {
-    installationId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class AppsUnsuspendInstallationRequest extends SpeakeasyBase {
-    pathParams: AppsUnsuspendInstallationPathParams;
+    /**
+     * The unique identifier of the installation.
+     */
+    installationId: number;
 }
 export declare class AppsUnsuspendInstallationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Resource not found
+     */
     basicError?: shared.BasicError;
 }

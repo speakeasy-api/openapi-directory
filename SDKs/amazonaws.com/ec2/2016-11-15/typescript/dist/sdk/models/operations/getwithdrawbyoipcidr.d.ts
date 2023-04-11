@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetWithdrawByoipCidrActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETWithdrawByoipCidrActionEnum {
     WithdrawByoipCidr = "WithdrawByoipCidr"
 }
-export declare enum GetWithdrawByoipCidrVersionEnum {
+export declare enum GETWithdrawByoipCidrVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetWithdrawByoipCidrQueryParams extends SpeakeasyBase {
-    action: GetWithdrawByoipCidrActionEnum;
+export declare class GETWithdrawByoipCidrRequest extends SpeakeasyBase {
+    action: GETWithdrawByoipCidrActionEnum;
+    /**
+     * The address range, in CIDR notation.
+     */
     cidr: string;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
-    version: GetWithdrawByoipCidrVersionEnum;
-}
-export declare class GetWithdrawByoipCidrHeaders extends SpeakeasyBase {
+    version: GETWithdrawByoipCidrVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetWithdrawByoipCidrHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetWithdrawByoipCidrRequest extends SpeakeasyBase {
-    queryParams: GetWithdrawByoipCidrQueryParams;
-    headers: GetWithdrawByoipCidrHeaders;
-}
-export declare class GetWithdrawByoipCidrResponse extends SpeakeasyBase {
+export declare class GETWithdrawByoipCidrResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

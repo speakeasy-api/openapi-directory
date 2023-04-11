@@ -1,17 +1,31 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetSearchQueryParams extends SpeakeasyBase {
-    q: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetSearchSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
+    apiKey: string;
 }
 export declare class GetSearchRequest extends SpeakeasyBase {
-    queryParams: GetSearchQueryParams;
-    security: GetSearchSecurity;
+    /**
+     * Company name or stock symbol
+     */
+    q: string;
+}
+/**
+ * An array of ESG Ratings
+ */
+export declare class GetSearch200ApplicationJSON extends SpeakeasyBase {
+    companyName?: string;
+    environmentScore?: number;
+    governanceScore?: number;
+    lastProcessingDate?: Date;
+    socialScore?: number;
+    total?: number;
 }
 export declare class GetSearchResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getSearch200ApplicationJSONAny?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * An array of ESG Ratings
+     */
+    getSearch200ApplicationJSONObject?: GetSearch200ApplicationJSON;
 }

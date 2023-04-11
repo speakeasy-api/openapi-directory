@@ -1,14 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListDetectorsPathParams extends SpeakeasyBase {
-    detectorModelName: string;
-}
-export declare class ListDetectorsQueryParams extends SpeakeasyBase {
-    maxResults?: number;
-    nextToken?: string;
-    stateName?: string;
-}
-export declare class ListDetectorsHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListDetectorsRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,19 +9,49 @@ export declare class ListDetectorsHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class ListDetectorsRequest extends SpeakeasyBase {
-    pathParams: ListDetectorsPathParams;
-    queryParams: ListDetectorsQueryParams;
-    headers: ListDetectorsHeaders;
+    /**
+     * The name of the detector model whose detectors (instances) are listed.
+     */
+    detectorModelName: string;
+    /**
+     * The maximum number of results to be returned per request.
+     */
+    maxResults?: number;
+    /**
+     * The token that you can use to return the next set of results.
+     */
+    nextToken?: string;
+    /**
+     * A filter that limits results to those detectors (instances) in the given state.
+     */
+    stateName?: string;
 }
 export declare class ListDetectorsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalFailureException
+     */
     internalFailureException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * Success
+     */
     listDetectorsResponse?: shared.ListDetectorsResponse;
-    resourceNotFoundException?: any;
+    /**
+     * ServiceUnavailableException
+     */
     serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

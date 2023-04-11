@@ -1,24 +1,34 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class FindListingRecommendationsQueryParams extends SpeakeasyBase {
-    filter?: string;
-    limit?: string;
-    offset?: string;
-}
-export declare class FindListingRecommendationsHeaders extends SpeakeasyBase {
-    xEBAYCMARKETPLACEID: string;
-}
+import { AxiosResponse } from "axios";
 export declare class FindListingRecommendationsSecurity extends SpeakeasyBase {
-    apiAuth: shared.SchemeApiAuth;
+    apiAuth: string;
 }
 export declare class FindListingRecommendationsRequest extends SpeakeasyBase {
-    queryParams: FindListingRecommendationsQueryParams;
-    headers: FindListingRecommendationsHeaders;
-    request?: shared.FindListingRecommendationRequest;
-    security: FindListingRecommendationsSecurity;
+    findListingRecommendationRequest?: shared.FindListingRecommendationRequest;
+    /**
+     * Use this header to specify the eBay marketplace where you list the items for which you want to get recommendations.
+     */
+    xEbayCMarketplaceId: string;
+    /**
+     * Provide a list of key-value pairs to specify the criteria you want to use to filter the response. In the list, separate each filter key from its associated value with a colon (&quot;:&quot;). Currently, the only supported filter value is recommendationTypes and it supports only the (&quot;AD&quot;) type. Follow the recommendationTypes specifier with the filter type(s) enclosed in curly braces (&quot;{ }&quot;), and separate multiple types with commas. Example: filter=recommendationTypes:{AD} Default: recommendationTypes:{AD}
+     */
+    filter?: string;
+    /**
+     * Use this query parameter to set the maximum number of ads to return on a page from the paginated response. Default: 10 Maximum: 500
+     */
+    limit?: string;
+    /**
+     * Specifies the number of ads to skip in the result set before returning the first ad in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. Default: 0
+     */
+    offset?: string;
 }
 export declare class FindListingRecommendationsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     pagedListingRecommendationCollection?: shared.PagedListingRecommendationCollection;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,15 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetSetupV1CalendarsQueryParams extends SpeakeasyBase {
-    deleted?: boolean;
-    limit?: number;
-    locationId?: string;
-    offset?: number;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class GetSetupV1CalendarsRequest extends SpeakeasyBase {
-    queryParams: GetSetupV1CalendarsQueryParams;
+    /**
+     * Filter by deleted status
+     */
+    deleted?: boolean;
+    /**
+     * Page limit default 20, max 100
+     */
+    limit?: number;
+    /**
+     * id of business location, defaults to primary business location
+     */
+    locationId?: string;
+    /**
+     * Starting row of page, default 0
+     */
+    offset?: number;
 }
 export declare class GetSetupV1CalendarsResponse extends SpeakeasyBase {
     contentType: string;
-    scheduleListViewModel?: Record<string, any>;
+    /**
+     * Success
+     */
+    scheduleListViewModel?: shared.ScheduleListViewModel;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

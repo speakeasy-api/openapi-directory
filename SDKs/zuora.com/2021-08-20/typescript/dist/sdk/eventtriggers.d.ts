@@ -1,5 +1,13 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * The Event Trigger service manages the business events and trigger conditions that are defined on [Zuora Business Object Model](http://knowledgecenter.zuora.com/BB_Introducing_Z_Business/D_Zuora_Business_Objects_Relationship). When a Zuora object changes, the trigger conditions defined on the object are evaluated, and if any condition qualifies, a business event will be triggered and turned into a notification.
+ *
+ * @remarks
+ *
+ * **Note**: Event Triggers operations are only applicable to custom events.
+ *
+ */
 export declare class EventTriggers {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,20 +17,21 @@ export declare class EventTriggers {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteEventTrigger - Delete an event trigger
-    **/
-    deleteEventTrigger(req: operations.DeleteEventTriggerRequest, config?: AxiosRequestConfig): Promise<operations.DeleteEventTriggerResponse>;
+     * Delete an event trigger
+     */
+    deleteEventTrigger(req: operations.DELETEEventTriggerRequest, config?: AxiosRequestConfig): Promise<operations.DELETEEventTriggerResponse>;
     /**
-     * getEventTrigger - Retrieve an event trigger
-    **/
-    getEventTrigger(req: operations.GetEventTriggerRequest, config?: AxiosRequestConfig): Promise<operations.GetEventTriggerResponse>;
+     * Retrieve an event trigger
+     */
+    getEventTrigger(req: operations.GETEventTriggerRequest, config?: AxiosRequestConfig): Promise<operations.GETEventTriggerResponse>;
     /**
-     * getEventTriggers - List event triggers
-    **/
-    getEventTriggers(req: operations.GetEventTriggersRequest, config?: AxiosRequestConfig): Promise<operations.GetEventTriggersResponse>;
+     * List event triggers
+     */
+    getEventTriggers(req: operations.GETEventTriggersRequest, config?: AxiosRequestConfig): Promise<operations.GETEventTriggersResponse>;
     /**
-     * postEventTrigger - Create an event trigger
+     * Create an event trigger
      *
+     * @remarks
      * When you create an event trigger, you must specify the base object and define the trigger condition.
      *
      * ### Specify the base object
@@ -116,10 +125,10 @@ export declare class EventTriggers {
      *
      * * The INSERT change type is not supported on SubscriptionProductFeature base objects.
      *
-    **/
-    postEventTrigger(req: operations.PostEventTriggerRequest, config?: AxiosRequestConfig): Promise<operations.PostEventTriggerResponse>;
+     */
+    postEventTrigger(req: operations.POSTEventTriggerRequest, config?: AxiosRequestConfig): Promise<operations.POSTEventTriggerResponse>;
     /**
-     * putEventTrigger - Update an event trigger
-    **/
-    putEventTrigger(req: operations.PutEventTriggerRequest, config?: AxiosRequestConfig): Promise<operations.PutEventTriggerResponse>;
+     * Update an event trigger
+     */
+    putEventTrigger(req: operations.PUTEventTriggerRequest, config?: AxiosRequestConfig): Promise<operations.PUTEventTriggerResponse>;
 }

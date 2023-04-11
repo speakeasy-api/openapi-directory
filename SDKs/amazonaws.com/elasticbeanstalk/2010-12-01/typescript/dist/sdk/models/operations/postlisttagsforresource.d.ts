@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostListTagsForResourceActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTListTagsForResourceActionEnum {
     ListTagsForResource = "ListTagsForResource"
 }
-export declare enum PostListTagsForResourceVersionEnum {
+export declare enum POSTListTagsForResourceVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostListTagsForResourceQueryParams extends SpeakeasyBase {
-    action: PostListTagsForResourceActionEnum;
-    version: PostListTagsForResourceVersionEnum;
-}
-export declare class PostListTagsForResourceHeaders extends SpeakeasyBase {
+export declare class POSTListTagsForResourceRequest extends SpeakeasyBase {
+    action: POSTListTagsForResourceActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTListTagsForResourceVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostListTagsForResourceHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostListTagsForResourceRequest extends SpeakeasyBase {
-    queryParams: PostListTagsForResourceQueryParams;
-    headers: PostListTagsForResourceHeaders;
-    request?: Uint8Array;
-}
-export declare class PostListTagsForResourceResponse extends SpeakeasyBase {
+export declare class POSTListTagsForResourceResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

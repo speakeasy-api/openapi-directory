@@ -1,9 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ParameterConstraints } from "./parameterconstraints";
+/**
+ * Success
+ */
 export declare class CreateRouteResponseResponse extends SpeakeasyBase {
-    modelSelectionExpression?: Record<string, any>;
+    modelSelectionExpression?: string;
     responseModels?: Record<string, string>;
     responseParameters?: Record<string, ParameterConstraints>;
-    routeResponseId?: Record<string, any>;
-    routeResponseKey?: Record<string, any>;
+    routeResponseId?: string;
+    routeResponseKey?: string;
 }

@@ -1,14 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetSettingsOrganizationsSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
-}
-export declare class GetSettingsOrganizationsRequest extends SpeakeasyBase {
-    security: GetSettingsOrganizationsSecurity;
-}
+import { AxiosResponse } from "axios";
 export declare class GetSettingsOrganizationsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
+    /**
+     * OK
+     */
     organizations?: shared.Organization[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

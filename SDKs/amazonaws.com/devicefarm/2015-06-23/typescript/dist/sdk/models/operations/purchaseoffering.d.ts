@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum PurchaseOfferingXAmzTargetEnum {
     DeviceFarm20150623PurchaseOffering = "DeviceFarm_20150623.PurchaseOffering"
 }
-export declare class PurchaseOfferingHeaders extends SpeakeasyBase {
+export declare class PurchaseOfferingRequest extends SpeakeasyBase {
+    purchaseOfferingRequest: shared.PurchaseOfferingRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class PurchaseOfferingHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: PurchaseOfferingXAmzTargetEnum;
 }
-export declare class PurchaseOfferingRequest extends SpeakeasyBase {
-    headers: PurchaseOfferingHeaders;
-    request: shared.PurchaseOfferingRequest;
-}
 export declare class PurchaseOfferingResponse extends SpeakeasyBase {
+    /**
+     * ArgumentException
+     */
     argumentException?: any;
     contentType: string;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * NotEligibleException
+     */
     notEligibleException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
+    /**
+     * Success
+     */
     purchaseOfferingResult?: shared.PurchaseOfferingResult;
+    /**
+     * ServiceAccountException
+     */
     serviceAccountException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

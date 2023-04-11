@@ -1,19 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetChannelColumnsPathParams extends SpeakeasyBase {
-    channelId: string;
-}
-export declare class GetChannelColumnsHeaders extends SpeakeasyBase {
-    acceptEncoding: string[];
-}
+import { AxiosResponse } from "axios";
 export declare class GetChannelColumnsRequest extends SpeakeasyBase {
-    pathParams: GetChannelColumnsPathParams;
-    headers: GetChannelColumnsHeaders;
-    request?: string[];
+    /**
+     * Indicates that the client accepts that the response will be compressed to reduce traffic size.
+     */
+    acceptEncoding: string[];
+    /**
+     * Allow you to filter the channel column identifier list your want to get
+     */
+    requestBody?: string[];
+    /**
+     * The channel identifier
+     */
+    channelId: string;
 }
 export declare class GetChannelColumnsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Channel columns
+     */
     channelColumns?: shared.ChannelColumn[];
 }

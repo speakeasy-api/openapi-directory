@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ConfigWeb extends SpeakeasyBase {
+/**
+ * successful operation
+ */
+export declare class ConfigWEB extends SpeakeasyBase {
     isPersistentConnections?: number;
     password?: string;
     port?: number;

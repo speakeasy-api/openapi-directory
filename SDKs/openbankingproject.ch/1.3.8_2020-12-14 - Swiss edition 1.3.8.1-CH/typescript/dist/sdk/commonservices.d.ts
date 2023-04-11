@@ -1,5 +1,16 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Processes on starting authorisations, update PSU identification or PSU authentication data and explicit
+ *
+ * @remarks
+ * authorisation of transactions by using SCA are very similar in PIS and AIS and signing baskets services.
+ * The API calls supporting these processes are described in the following independently from the service/endpoint.
+ * For reasons of clarity, the endpoints are defined always for the Payment Initiation Service, the payment cancellation,
+ * the Account Information Service (Consents), and Signing Baskets separately.
+ * These processes usually are used following a hyperlink of the ASPSP.
+ *
+ */
 export declare class CommonServices {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,72 +20,81 @@ export declare class CommonServices {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteSigningBasket - Delete the signing basket
+     * Delete the signing basket
      *
+     * @remarks
      * Delete the signing basket structure as long as no (partial) authorisation has yet been applied.
      * The undlerying transactions are not affected by this deletion.
      *
      * Remark: The signing basket as such is not deletable after a first (partial) authorisation has been applied.
      * Nevertheless, single transactions might be cancelled on an individual basis on the XS2A interface.
      *
-    **/
-    deleteSigningBasket(req: operations.DeleteSigningBasketRequest, config?: AxiosRequestConfig): Promise<operations.DeleteSigningBasketResponse>;
+     */
+    deleteSigningBasket(req: operations.DeleteSigningBasketRequest, security: operations.DeleteSigningBasketSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteSigningBasketResponse>;
     /**
-     * getConsentScaStatus - Read the SCA status of the consent authorisation
+     * Read the SCA status of the consent authorisation
      *
+     * @remarks
      * This method returns the SCA status of a consent initiation's authorisation sub-resource.
      *
-    **/
-    getConsentScaStatus(req: operations.GetConsentScaStatusRequest, config?: AxiosRequestConfig): Promise<operations.GetConsentScaStatusResponse>;
+     */
+    getConsentScaStatus(req: operations.GetConsentScaStatusRequest, security: operations.GetConsentScaStatusSecurity, config?: AxiosRequestConfig): Promise<operations.GetConsentScaStatusResponse>;
     /**
-     * getPaymentCancellationScaStatus - Read the SCA status of the payment cancellation's authorisation
+     * Read the SCA status of the payment cancellation's authorisation
      *
+     * @remarks
      * This method returns the SCA status of a payment initiation's authorisation sub-resource.
      *
-    **/
-    getPaymentCancellationScaStatus(req: operations.GetPaymentCancellationScaStatusRequest, config?: AxiosRequestConfig): Promise<operations.GetPaymentCancellationScaStatusResponse>;
+     */
+    getPaymentCancellationScaStatus(req: operations.GetPaymentCancellationScaStatusRequest, security: operations.GetPaymentCancellationScaStatusSecurity, config?: AxiosRequestConfig): Promise<operations.GetPaymentCancellationScaStatusResponse>;
     /**
-     * getPaymentInitiationAuthorisation - Get payment initiation authorisation sub-resources request
+     * Get payment initiation authorisation sub-resources request
      *
+     * @remarks
      * Read a list of all authorisation subresources IDs which have been created.
      *
      * This function returns an array of hyperlinks to all generated authorisation sub-resources.
      *
-    **/
-    getPaymentInitiationAuthorisation(req: operations.GetPaymentInitiationAuthorisationRequest, config?: AxiosRequestConfig): Promise<operations.GetPaymentInitiationAuthorisationResponse>;
+     */
+    getPaymentInitiationAuthorisation(req: operations.GetPaymentInitiationAuthorisationRequest, security: operations.GetPaymentInitiationAuthorisationSecurity, config?: AxiosRequestConfig): Promise<operations.GetPaymentInitiationAuthorisationResponse>;
     /**
-     * getPaymentInitiationScaStatus - Read the SCA status of the payment authorisation
+     * Read the SCA status of the payment authorisation
      *
+     * @remarks
      * This method returns the SCA status of a payment initiation's authorisation sub-resource.
      *
-    **/
-    getPaymentInitiationScaStatus(req: operations.GetPaymentInitiationScaStatusRequest, config?: AxiosRequestConfig): Promise<operations.GetPaymentInitiationScaStatusResponse>;
+     */
+    getPaymentInitiationScaStatus(req: operations.GetPaymentInitiationScaStatusRequest, security: operations.GetPaymentInitiationScaStatusSecurity, config?: AxiosRequestConfig): Promise<operations.GetPaymentInitiationScaStatusResponse>;
     /**
-     * getSigningBasketAuthorisation - Get signing basket authorisation sub-resources request
+     * Get signing basket authorisation sub-resources request
      *
+     * @remarks
      * Read a list of all authorisation subresources IDs which have been created.
      *
      * This function returns an array of hyperlinks to all generated authorisation sub-resources.
      *
-    **/
-    getSigningBasketAuthorisation(req: operations.GetSigningBasketAuthorisationRequest, config?: AxiosRequestConfig): Promise<operations.GetSigningBasketAuthorisationResponse>;
+     */
+    getSigningBasketAuthorisation(req: operations.GetSigningBasketAuthorisationRequest, security: operations.GetSigningBasketAuthorisationSecurity, config?: AxiosRequestConfig): Promise<operations.GetSigningBasketAuthorisationResponse>;
     /**
-     * getSigningBasketScaStatus - Read the SCA status of the signing basket authorisation
+     * Read the SCA status of the signing basket authorisation
      *
+     * @remarks
      * This method returns the SCA status of a signing basket's authorisation sub-resource.
      *
-    **/
-    getSigningBasketScaStatus(req: operations.GetSigningBasketScaStatusRequest, config?: AxiosRequestConfig): Promise<operations.GetSigningBasketScaStatusResponse>;
+     */
+    getSigningBasketScaStatus(req: operations.GetSigningBasketScaStatusRequest, security: operations.GetSigningBasketScaStatusSecurity, config?: AxiosRequestConfig): Promise<operations.GetSigningBasketScaStatusResponse>;
     /**
-     * getSigningBasketStatus - Read the status of the signing basket
+     * Read the status of the signing basket
      *
+     * @remarks
      * Returns the status of a signing basket object.
      *
-    **/
-    getSigningBasketStatus(req: operations.GetSigningBasketStatusRequest, config?: AxiosRequestConfig): Promise<operations.GetSigningBasketStatusResponse>;
+     */
+    getSigningBasketStatus(req: operations.GetSigningBasketStatusRequest, security: operations.GetSigningBasketStatusSecurity, config?: AxiosRequestConfig): Promise<operations.GetSigningBasketStatusResponse>;
     /**
-     * startConsentAuthorisation - Start the authorisation process for a consent
+     * Start the authorisation process for a consent
      *
+     * @remarks
      * Create an authorisation sub-resource and start the authorisation process of a consent.
      * The message might in addition transmit authentication and authorisation related data.
      *
@@ -108,11 +128,12 @@ export declare class CommonServices {
      *     executing the cancellation.
      *   * The signing basket needs to be authorised yet.
      *
-    **/
-    startConsentAuthorisation(req: operations.StartConsentAuthorisationRequest, config?: AxiosRequestConfig): Promise<operations.StartConsentAuthorisationResponse>;
+     */
+    startConsentAuthorisation(req: operations.StartConsentAuthorisationRequest, security: operations.StartConsentAuthorisationSecurity, config?: AxiosRequestConfig): Promise<operations.StartConsentAuthorisationResponse>;
     /**
-     * startPaymentAuthorisation - Start the authorisation process for a payment initiation
+     * Start the authorisation process for a payment initiation
      *
+     * @remarks
      * Create an authorisation sub-resource and start the authorisation process.
      * The message might in addition transmit authentication and authorisation related data.
      *
@@ -147,11 +168,12 @@ export declare class CommonServices {
      *     executing the cancellation.
      *   * The signing basket needs to be authorised yet.
      *
-    **/
-    startPaymentAuthorisation(req: operations.StartPaymentAuthorisationRequest, config?: AxiosRequestConfig): Promise<operations.StartPaymentAuthorisationResponse>;
+     */
+    startPaymentAuthorisation(req: operations.StartPaymentAuthorisationRequest, security: operations.StartPaymentAuthorisationSecurity, config?: AxiosRequestConfig): Promise<operations.StartPaymentAuthorisationResponse>;
     /**
-     * startPaymentInitiationCancellationAuthorisation - Start the authorisation process for the cancellation of the addressed payment
+     * Start the authorisation process for the cancellation of the addressed payment
      *
+     * @remarks
      * Creates an authorisation sub-resource and start the authorisation process of the cancellation of the addressed payment.
      * The message might in addition transmit authentication and authorisation related data.
      *
@@ -185,11 +207,12 @@ export declare class CommonServices {
      *     executing the cancellation.
      *   * The signing basket needs to be authorised yet.
      *
-    **/
-    startPaymentInitiationCancellationAuthorisation(req: operations.StartPaymentInitiationCancellationAuthorisationRequest, config?: AxiosRequestConfig): Promise<operations.StartPaymentInitiationCancellationAuthorisationResponse>;
+     */
+    startPaymentInitiationCancellationAuthorisation(req: operations.StartPaymentInitiationCancellationAuthorisationRequest, security: operations.StartPaymentInitiationCancellationAuthorisationSecurity, config?: AxiosRequestConfig): Promise<operations.StartPaymentInitiationCancellationAuthorisationResponse>;
     /**
-     * startSigningBasketAuthorisation - Start the authorisation process for a signing basket
+     * Start the authorisation process for a signing basket
      *
+     * @remarks
      * Create an authorisation sub-resource and start the authorisation process of a signing basket.
      * The message might in addition transmit authentication and authorisation related data.
      *
@@ -224,11 +247,12 @@ export declare class CommonServices {
      *     executing the cancellation.
      *   * The signing basket needs to be authorised yet.
      *
-    **/
-    startSigningBasketAuthorisation(req: operations.StartSigningBasketAuthorisationRequest, config?: AxiosRequestConfig): Promise<operations.StartSigningBasketAuthorisationResponse>;
+     */
+    startSigningBasketAuthorisation(req: operations.StartSigningBasketAuthorisationRequest, security: operations.StartSigningBasketAuthorisationSecurity, config?: AxiosRequestConfig): Promise<operations.StartSigningBasketAuthorisationResponse>;
     /**
-     * updateConsentsPsuData - Update PSU Data for consents
+     * Update PSU Data for consents
      *
+     * @remarks
      * This method update PSU data on the consents  resource if needed.
      * It may authorise a consent within the Embedded SCA Approach where needed.
      *
@@ -268,11 +292,12 @@ export declare class CommonServices {
      *     therefore many optional elements are not present.
      *     Maybe in a later version the access path will change.
      *
-    **/
-    updateConsentsPsuData(req: operations.UpdateConsentsPsuDataRequest, config?: AxiosRequestConfig): Promise<operations.UpdateConsentsPsuDataResponse>;
+     */
+    updateConsentsPsuData(req: operations.UpdateConsentsPsuDataRequest, security: operations.UpdateConsentsPsuDataSecurity, config?: AxiosRequestConfig): Promise<operations.UpdateConsentsPsuDataResponse>;
     /**
-     * updatePaymentCancellationPsuData - Update PSU data for payment initiation cancellation
+     * Update PSU data for payment initiation cancellation
      *
+     * @remarks
      * This method updates PSU data on the cancellation authorisation resource if needed.
      * It may authorise a cancellation of the payment within the Embedded SCA Approach where needed.
      *
@@ -312,11 +337,12 @@ export declare class CommonServices {
      *     therefore many optional elements are not present.
      *     Maybe in a later version the access path will change.
      *
-    **/
-    updatePaymentCancellationPsuData(req: operations.UpdatePaymentCancellationPsuDataRequest, config?: AxiosRequestConfig): Promise<operations.UpdatePaymentCancellationPsuDataResponse>;
+     */
+    updatePaymentCancellationPsuData(req: operations.UpdatePaymentCancellationPsuDataRequest, security: operations.UpdatePaymentCancellationPsuDataSecurity, config?: AxiosRequestConfig): Promise<operations.UpdatePaymentCancellationPsuDataResponse>;
     /**
-     * updatePaymentPsuData - Update PSU data for payment initiation
+     * Update PSU data for payment initiation
      *
+     * @remarks
      * This methods updates PSU data on the authorisation resource if needed.
      * It may authorise a payment within the Embedded SCA Approach where needed.
      *
@@ -356,11 +382,12 @@ export declare class CommonServices {
      *     therefore many optional elements are not present.
      *     Maybe in a later version the access path will change.
      *
-    **/
-    updatePaymentPsuData(req: operations.UpdatePaymentPsuDataRequest, config?: AxiosRequestConfig): Promise<operations.UpdatePaymentPsuDataResponse>;
+     */
+    updatePaymentPsuData(req: operations.UpdatePaymentPsuDataRequest, security: operations.UpdatePaymentPsuDataSecurity, config?: AxiosRequestConfig): Promise<operations.UpdatePaymentPsuDataResponse>;
     /**
-     * updateSigningBasketPsuData - Update PSU data for signing basket
+     * Update PSU data for signing basket
      *
+     * @remarks
      * This method update PSU data on the signing basket resource if needed.
      * It may authorise a igning basket within the embedded SCA approach where needed.
      *
@@ -400,6 +427,6 @@ export declare class CommonServices {
      *     therefore many optional elements are not present.
      *     Maybe in a later version the access path will change.
      *
-    **/
-    updateSigningBasketPsuData(req: operations.UpdateSigningBasketPsuDataRequest, config?: AxiosRequestConfig): Promise<operations.UpdateSigningBasketPsuDataResponse>;
+     */
+    updateSigningBasketPsuData(req: operations.UpdateSigningBasketPsuDataRequest, security: operations.UpdateSigningBasketPsuDataSecurity, config?: AxiosRequestConfig): Promise<operations.UpdateSigningBasketPsuDataResponse>;
 }

@@ -1,10 +1,25 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare const ServerList: readonly ["https://nrel.gov/api/transportation-incentives-laws"];
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
+export declare const ServerList: readonly ["/api/transportation-incentives-laws"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * Query our database of federal and state laws and incentives for alternative fuels and vehicles, air quality, fuel efficiency, and other transportation-related topics. This dataset powers the <a href="https://afdc.energy.gov/laws">Federal and State Laws and Incentives</a> on the Alternative Fuels Data Center.
+ */
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -12,21 +27,22 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
     /**
-     * getV1CategoryListOutputFormat - Return the law categories for a given category type.
-    **/
-    getV1CategoryListOutputFormat(req: operations.GetV1CategoryListOutputFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetV1CategoryListOutputFormatResponse>;
+     * Return a full list of laws and incentives that match your query.
+     */
+    transportationIncentivesLawsAll(req: operations.TransportationIncentivesLawsAllRequest, config?: AxiosRequestConfig): Promise<operations.TransportationIncentivesLawsAllResponse>;
     /**
-     * getV1PocsOutputFormat - Get the points of contact for a given jurisdiction.
-    **/
-    getV1PocsOutputFormat(req: operations.GetV1PocsOutputFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetV1PocsOutputFormatResponse>;
+     * Return the law categories for a given category type.
+     */
+    transportationIncentivesLawsCategories(req: operations.TransportationIncentivesLawsCategoriesRequest, config?: AxiosRequestConfig): Promise<operations.TransportationIncentivesLawsCategoriesResponse>;
     /**
-     * getV1IdOutputFormat - Fetch the details of a specific law given the law's ID.
-    **/
-    getV1IdOutputFormat(req: operations.GetV1IdOutputFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetV1IdOutputFormatResponse>;
+     * Fetch the details of a specific law given the law's ID.
+     */
+    transportationIncentivesLawsId(req: operations.TransportationIncentivesLawsIdRequest, config?: AxiosRequestConfig): Promise<operations.TransportationIncentivesLawsIdResponse>;
     /**
-     * transportationIncentivesLaws - Return a full list of laws and incentives that match your query.
-    **/
-    transportationIncentivesLaws(req: operations.TransportationIncentivesLawsRequest, config?: AxiosRequestConfig): Promise<operations.TransportationIncentivesLawsResponse>;
+     * Get the points of contact for a given jurisdiction.
+     */
+    transportationIncentivesLawsPocs(req: operations.TransportationIncentivesLawsPocsRequest, config?: AxiosRequestConfig): Promise<operations.TransportationIncentivesLawsPocsResponse>;
 }

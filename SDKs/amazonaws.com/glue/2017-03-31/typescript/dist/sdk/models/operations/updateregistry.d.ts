@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateRegistryXAmzTargetEnum {
-    AwsGlueUpdateRegistry = "AWSGlue.UpdateRegistry"
+    AWSGlueUpdateRegistry = "AWSGlue.UpdateRegistry"
 }
-export declare class UpdateRegistryHeaders extends SpeakeasyBase {
+export declare class UpdateRegistryRequest extends SpeakeasyBase {
+    updateRegistryInput: shared.UpdateRegistryInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class UpdateRegistryHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateRegistryXAmzTargetEnum;
 }
-export declare class UpdateRegistryRequest extends SpeakeasyBase {
-    headers: UpdateRegistryHeaders;
-    request: shared.UpdateRegistryInput;
-}
 export declare class UpdateRegistryResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConcurrentModificationException
+     */
     concurrentModificationException?: any;
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     updateRegistryResponse?: shared.UpdateRegistryResponse;
 }

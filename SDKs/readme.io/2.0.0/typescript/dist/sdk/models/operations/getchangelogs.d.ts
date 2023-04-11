@@ -1,18 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetChangelogsQueryParams extends SpeakeasyBase {
-    page?: number;
-    perPage?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetChangelogsSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
+    password: string;
+    username: string;
 }
 export declare class GetChangelogsRequest extends SpeakeasyBase {
-    queryParams: GetChangelogsQueryParams;
-    security: GetChangelogsSecurity;
+    /**
+     * Used to specify further pages (starts at 1)
+     */
+    page?: number;
+    /**
+     * Number of items to include in pagination (up to 100, defaults to 10)
+     */
+    perPage?: number;
 }
 export declare class GetChangelogsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

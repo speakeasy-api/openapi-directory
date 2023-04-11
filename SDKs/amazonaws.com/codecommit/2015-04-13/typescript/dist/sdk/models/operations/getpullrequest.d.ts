@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetPullRequestXAmzTargetEnum {
     CodeCommit20150413GetPullRequest = "CodeCommit_20150413.GetPullRequest"
 }
-export declare class GetPullRequestHeaders extends SpeakeasyBase {
+export declare class GetPullRequestRequest extends SpeakeasyBase {
+    getPullRequestInput: shared.GetPullRequestInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,20 +15,44 @@ export declare class GetPullRequestHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetPullRequestXAmzTargetEnum;
 }
-export declare class GetPullRequestRequest extends SpeakeasyBase {
-    headers: GetPullRequestHeaders;
-    request: shared.GetPullRequestInput;
-}
 export declare class GetPullRequestResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * EncryptionIntegrityChecksFailedException
+     */
     encryptionIntegrityChecksFailedException?: any;
+    /**
+     * EncryptionKeyAccessDeniedException
+     */
     encryptionKeyAccessDeniedException?: any;
+    /**
+     * EncryptionKeyDisabledException
+     */
     encryptionKeyDisabledException?: any;
+    /**
+     * EncryptionKeyNotFoundException
+     */
     encryptionKeyNotFoundException?: any;
+    /**
+     * EncryptionKeyUnavailableException
+     */
     encryptionKeyUnavailableException?: any;
+    /**
+     * Success
+     */
     getPullRequestOutput?: shared.GetPullRequestOutput;
+    /**
+     * InvalidPullRequestIdException
+     */
     invalidPullRequestIdException?: any;
+    /**
+     * PullRequestDoesNotExistException
+     */
     pullRequestDoesNotExistException?: any;
+    /**
+     * PullRequestIdRequiredException
+     */
     pullRequestIdRequiredException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

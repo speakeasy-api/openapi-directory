@@ -1,10 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetBackendApiModelsPathParams extends SpeakeasyBase {
-    appId: string;
-    backendEnvironmentName: string;
+import { AxiosResponse } from "axios";
+export declare class GetBackendAPIModelsRequestBody extends SpeakeasyBase {
+    /**
+     * The name of this resource.
+     */
+    resourceName: string;
 }
-export declare class GetBackendApiModelsHeaders extends SpeakeasyBase {
+export declare class GetBackendAPIModelsRequest extends SpeakeasyBase {
+    requestBody: GetBackendAPIModelsRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,21 +16,37 @@ export declare class GetBackendApiModelsHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
+    /**
+     * The app ID.
+     */
+    appId: string;
+    /**
+     * The name of the backend environment.
+     */
+    backendEnvironmentName: string;
 }
-export declare class GetBackendApiModelsRequestBody extends SpeakeasyBase {
-    resourceName: string;
-}
-export declare class GetBackendApiModelsRequest extends SpeakeasyBase {
-    pathParams: GetBackendApiModelsPathParams;
-    headers: GetBackendApiModelsHeaders;
-    request: GetBackendApiModelsRequestBody;
-}
-export declare class GetBackendApiModelsResponse extends SpeakeasyBase {
+export declare class GetBackendAPIModelsResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * GatewayTimeoutException
+     */
     gatewayTimeoutException?: any;
-    getBackendAPIModelsResponse?: shared.GetBackendApiModelsResponse;
+    /**
+     * Success
+     */
+    getBackendAPIModelsResponse?: shared.GetBackendAPIModelsResponse;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

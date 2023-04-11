@@ -1,28 +1,54 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetAccountsAccountIdStatementsStatementIdTransactionsPathParams extends SpeakeasyBase {
-    accountId: string;
-    statementId: string;
-}
-export declare class GetAccountsAccountIdStatementsStatementIdTransactionsHeaders extends SpeakeasyBase {
-    sandboxId: string;
-    xCustomerUserAgent?: string;
-    xFapiAuthDate?: string;
-    xFapiCustomerIpAddress?: string;
-    xFapiInteractionId?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetAccountsAccountIdStatementsStatementIdTransactionsSecurity extends SpeakeasyBase {
-    authorizationCodeToken: shared.SchemeAuthorizationCodeToken;
-    clientId: shared.SchemeClientId;
+    authorizationCodeToken: string;
+    clientId: string;
 }
 export declare class GetAccountsAccountIdStatementsStatementIdTransactionsRequest extends SpeakeasyBase {
-    pathParams: GetAccountsAccountIdStatementsStatementIdTransactionsPathParams;
-    headers: GetAccountsAccountIdStatementsStatementIdTransactionsHeaders;
-    security: GetAccountsAccountIdStatementsStatementIdTransactionsSecurity;
+    /**
+     * AccountId
+     */
+    accountId: string;
+    /**
+     * The unique id of the sandbox to be used
+     */
+    sandboxId: string;
+    /**
+     * StatementId
+     */
+    statementId: string;
+    /**
+     * Indicates the user-agent that the PSU is using.
+     */
+    xCustomerUserAgent?: string;
+    /**
+     * The time when the PSU last logged in with the TPP.
+     *
+     * @remarks
+     * All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below:
+     * Sun, 10 Sep 2017 19:43:31 UTC
+     */
+    xFapiAuthDate?: string;
+    /**
+     * The PSU's IP address if the PSU is currently logged in with the TPP.
+     */
+    xFapiCustomerIpAddress?: string;
+    /**
+     * An RFC4122 UID used as a correlation id.
+     */
+    xFapiInteractionId?: string;
 }
 export declare class GetAccountsAccountIdStatementsStatementIdTransactionsResponse extends SpeakeasyBase {
     contentType: string;
-    obErrorResponse1?: shared.ObErrorResponse1;
-    obReadTransaction6?: shared.ObReadTransaction6;
+    /**
+     * Bad request
+     */
+    obErrorResponse1?: shared.OBErrorResponse1;
+    /**
+     * Transactions Read
+     */
+    obReadTransaction6?: shared.OBReadTransaction6;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

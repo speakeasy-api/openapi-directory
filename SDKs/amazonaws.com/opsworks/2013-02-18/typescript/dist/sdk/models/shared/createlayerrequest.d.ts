@@ -1,8 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { CloudWatchLogsConfiguration } from "./cloudwatchlogsconfiguration";
-import { Recipes } from "./recipes";
-import { LifecycleEventConfiguration } from "./lifecycleeventconfiguration";
 import { LayerTypeEnum } from "./layertypeenum";
+import { LifecycleEventConfiguration } from "./lifecycleeventconfiguration";
+import { Recipes } from "./recipes";
 import { VolumeConfiguration } from "./volumeconfiguration";
 export declare class CreateLayerRequest extends SpeakeasyBase {
     attributes?: Record<string, string>;

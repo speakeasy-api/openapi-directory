@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetPlanXAmzTargetEnum {
-    AwsGlueGetPlan = "AWSGlue.GetPlan"
+    AWSGlueGetPlan = "AWSGlue.GetPlan"
 }
-export declare class GetPlanHeaders extends SpeakeasyBase {
+export declare class GetPlanRequest extends SpeakeasyBase {
+    getPlanRequest: shared.GetPlanRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class GetPlanHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetPlanXAmzTargetEnum;
 }
-export declare class GetPlanRequest extends SpeakeasyBase {
-    headers: GetPlanHeaders;
-    request: shared.GetPlanRequest;
-}
 export declare class GetPlanResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getPlanResponse?: shared.GetPlanResponse;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

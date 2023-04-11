@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DcimInventoryItemsUpdatePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DcimInventoryItemsUpdateRequest extends SpeakeasyBase {
-    pathParams: DcimInventoryItemsUpdatePathParams;
-    request: shared.WritableInventoryItemInput;
+    writableInventoryItemInput: shared.WritableInventoryItemInput;
+    /**
+     * A unique integer value identifying this inventory item.
+     */
+    id: number;
 }
 export declare class DcimInventoryItemsUpdateResponse extends SpeakeasyBase {
     contentType: string;
     inventoryItem?: shared.InventoryItem;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

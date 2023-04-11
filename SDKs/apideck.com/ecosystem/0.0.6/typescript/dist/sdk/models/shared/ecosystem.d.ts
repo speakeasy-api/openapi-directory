@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { CardSettings } from "./cardsettings";
-import { CtaSettings } from "./ctasettings";
+import { CTASettings } from "./ctasettings";
 import { CustomSettings } from "./customsettings";
 import { IntegrationSettings } from "./integrationsettings";
 import { LeadFormSettings } from "./leadformsettings";
@@ -39,7 +39,7 @@ export declare class Ecosystem extends SpeakeasyBase {
     collectionsTitle?: string;
     createLink?: string;
     createdAt?: Date;
-    ctaSettings?: CtaSettings;
+    ctaSettings?: CTASettings;
     customDomain?: string;
     customSettings?: CustomSettings;
     detailPagesEnabled?: boolean;

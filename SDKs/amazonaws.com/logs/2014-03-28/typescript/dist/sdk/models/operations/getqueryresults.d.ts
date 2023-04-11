@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetQueryResultsXAmzTargetEnum {
     Logs20140328GetQueryResults = "Logs_20140328.GetQueryResults"
 }
-export declare class GetQueryResultsHeaders extends SpeakeasyBase {
+export declare class GetQueryResultsRequest extends SpeakeasyBase {
+    getQueryResultsRequest: shared.GetQueryResultsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class GetQueryResultsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetQueryResultsXAmzTargetEnum;
 }
-export declare class GetQueryResultsRequest extends SpeakeasyBase {
-    headers: GetQueryResultsHeaders;
-    request: shared.GetQueryResultsRequest;
-}
 export declare class GetQueryResultsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getQueryResultsResponse?: shared.GetQueryResultsResponse;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
-    resourceNotFoundException?: any;
+    /**
+     * ServiceUnavailableException
+     */
     serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
 }

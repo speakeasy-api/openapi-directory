@@ -1,17 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class MeshQueryParams extends SpeakeasyBase {
-    name: string;
-    network: string;
-}
+import { AxiosResponse } from "axios";
 export declare class MeshSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
+    apiKeyAuth: string;
 }
 export declare class MeshRequest extends SpeakeasyBase {
-    queryParams: MeshQueryParams;
-    security: MeshSecurity;
+    /**
+     * Super layer name eg. National_map
+     */
+    name: string;
+    /**
+     * Network name eg. 100_BLUE_repeaters_nationwide
+     */
+    network: string;
 }
 export declare class MeshResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

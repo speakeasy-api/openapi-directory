@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum ListGitHubAccountTokenNamesXAmzTargetEnum {
     CodeDeploy20141006ListGitHubAccountTokenNames = "CodeDeploy_20141006.ListGitHubAccountTokenNames"
 }
-export declare class ListGitHubAccountTokenNamesHeaders extends SpeakeasyBase {
+export declare class ListGitHubAccountTokenNamesRequest extends SpeakeasyBase {
+    listGitHubAccountTokenNamesInput: shared.ListGitHubAccountTokenNamesInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class ListGitHubAccountTokenNamesHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListGitHubAccountTokenNamesXAmzTargetEnum;
 }
-export declare class ListGitHubAccountTokenNamesRequest extends SpeakeasyBase {
-    headers: ListGitHubAccountTokenNamesHeaders;
-    request: shared.ListGitHubAccountTokenNamesInput;
-}
 export declare class ListGitHubAccountTokenNamesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * Success
+     */
     listGitHubAccountTokenNamesOutput?: shared.ListGitHubAccountTokenNamesOutput;
+    /**
+     * OperationNotSupportedException
+     */
     operationNotSupportedException?: any;
-    resourceValidationException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceValidationException
+     */
+    resourceValidationException?: any;
 }

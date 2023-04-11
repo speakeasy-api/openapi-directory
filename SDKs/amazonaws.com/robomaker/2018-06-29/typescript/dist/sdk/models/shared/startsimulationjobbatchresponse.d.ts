@@ -1,10 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { BatchPolicy } from "./batchpolicy";
-import { SimulationJobSummary } from "./simulationjobsummary";
 import { FailedCreateSimulationJobRequest } from "./failedcreatesimulationjobrequest";
 import { SimulationJobBatchErrorCodeEnum } from "./simulationjobbatcherrorcodeenum";
-import { SimulationJobRequest } from "./simulationjobrequest";
 import { SimulationJobBatchStatusEnum } from "./simulationjobbatchstatusenum";
+import { SimulationJobRequest } from "./simulationjobrequest";
+import { SimulationJobSummary } from "./simulationjobsummary";
+/**
+ * Success
+ */
 export declare class StartSimulationJobBatchResponse extends SpeakeasyBase {
     arn?: string;
     batchPolicy?: BatchPolicy;

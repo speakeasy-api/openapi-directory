@@ -1,6 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class ApIs {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+export declare class APIs {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,9 +9,10 @@ export declare class ApIs {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * ilpmt - Inner Line Permit
+     * Inner Line Permit
      *
+     * @remarks
      * API to verify Inner Line Permit.
-    **/
-    ilpmt(req: operations.IlpmtRequest, config?: AxiosRequestConfig): Promise<operations.IlpmtResponse>;
+     */
+    ilpmt(req: operations.IlpmtRequestBody, security: operations.IlpmtSecurity, config?: AxiosRequestConfig): Promise<operations.IlpmtResponse>;
 }

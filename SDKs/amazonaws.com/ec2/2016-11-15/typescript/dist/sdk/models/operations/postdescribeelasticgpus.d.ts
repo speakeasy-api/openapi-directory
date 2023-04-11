@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeElasticGpusActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeElasticGpusActionEnum {
     DescribeElasticGpus = "DescribeElasticGpus"
 }
-export declare enum PostDescribeElasticGpusVersionEnum {
+export declare enum POSTDescribeElasticGpusVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDescribeElasticGpusQueryParams extends SpeakeasyBase {
-    action: PostDescribeElasticGpusActionEnum;
-    version: PostDescribeElasticGpusVersionEnum;
-}
-export declare class PostDescribeElasticGpusHeaders extends SpeakeasyBase {
+export declare class POSTDescribeElasticGpusRequest extends SpeakeasyBase {
+    action: POSTDescribeElasticGpusActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDescribeElasticGpusVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDescribeElasticGpusHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeElasticGpusRequest extends SpeakeasyBase {
-    queryParams: PostDescribeElasticGpusQueryParams;
-    headers: PostDescribeElasticGpusHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeElasticGpusResponse extends SpeakeasyBase {
+export declare class POSTDescribeElasticGpusResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

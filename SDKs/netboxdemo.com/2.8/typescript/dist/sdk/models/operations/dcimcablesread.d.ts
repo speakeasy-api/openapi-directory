@@ -1,13 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DcimCablesReadPathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DcimCablesReadRequest extends SpeakeasyBase {
-    pathParams: DcimCablesReadPathParams;
+    /**
+     * A unique integer value identifying this cable.
+     */
+    id: number;
 }
 export declare class DcimCablesReadResponse extends SpeakeasyBase {
     cable?: shared.Cable;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

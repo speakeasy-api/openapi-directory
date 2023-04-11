@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class OrgsRemoveOutsideCollaboratorPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class OrgsRemoveOutsideCollaboratorRequest extends SpeakeasyBase {
     org: string;
     username: string;
 }
-export declare class OrgsRemoveOutsideCollaborator422ApplicationJson extends SpeakeasyBase {
+/**
+ * Unprocessable Entity if user is a member of the organization
+ */
+export declare class OrgsRemoveOutsideCollaborator422ApplicationJSON extends SpeakeasyBase {
     documentationUrl?: string;
     message?: string;
-}
-export declare class OrgsRemoveOutsideCollaboratorRequest extends SpeakeasyBase {
-    pathParams: OrgsRemoveOutsideCollaboratorPathParams;
 }
 export declare class OrgsRemoveOutsideCollaboratorResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    orgsRemoveOutsideCollaborator422ApplicationJSONObject?: OrgsRemoveOutsideCollaborator422ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Unprocessable Entity if user is a member of the organization
+     */
+    orgsRemoveOutsideCollaborator422ApplicationJSONObject?: OrgsRemoveOutsideCollaborator422ApplicationJSON;
 }

@@ -1,13 +1,98 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetAccountByIdPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetAccountByIdRequest extends SpeakeasyBase {
     ican: number;
 }
-export declare class GetAccountByIdRequest extends SpeakeasyBase {
-    pathParams: GetAccountByIdPathParams;
+/**
+ * The three letter code for the currency - either `EUR` or `GBP`.
+ */
+export declare enum GetAccountByIdAccountCurrencyCodeEnum {
+    Eur = "EUR",
+    Gbp = "GBP"
+}
+/**
+ * The currency.
+ */
+export declare class GetAccountByIdAccountCurrency extends SpeakeasyBase {
+    /**
+     * The three letter code for the currency - either `EUR` or `GBP`.
+     */
+    code?: GetAccountByIdAccountCurrencyCodeEnum;
+    /**
+     * The name of the currency
+     */
+    description?: string;
+}
+/**
+ * Live accounts can be used as normal. Migrated accounts were used before Brexit and are read-only.
+ */
+export declare enum GetAccountByIdAccountStatusEnum {
+    Live = "LIVE",
+    BrexitMigrated = "BREXIT_MIGRATED"
+}
+/**
+ * An array of account objects.
+ */
+export declare class GetAccountByIdAccount extends SpeakeasyBase {
+    /**
+     * the balance of the account (in minor currency units - pence, cent etc. 434050 == 4,340.50 GBP for a GBP account).
+     */
+    balance?: number;
+    /**
+     * the BIC of the account (provided if currency is EUR).
+     */
+    cbic?: string;
+    /**
+     * the Account Number of the account.
+     */
+    ccan?: string;
+    /**
+     * the IBAN of the account (provided if currency is EUR).
+     */
+    ciban?: string;
+    /**
+     * the Sort Code of the account.
+     */
+    cnsc?: string;
+    /**
+     * Internal Use
+     */
+    colour?: string;
+    /**
+     * The currency.
+     */
+    currency?: GetAccountByIdAccountCurrency;
+    /**
+     * true if this is the default account for this currency. This will be the account that general fees are taken from (as opposed to per-transaction fees).
+     */
+    defaultAccount?: boolean;
+    /**
+     * Whether or not direct debits can be set up on this account.
+     */
+    directDebitsAllowed?: boolean;
+    /**
+     * Indicates that this account is for collecting Fire Open Payments only. All other payments to this account will be returned.
+     */
+    fopOnly?: boolean;
+    /**
+     * identifier for the fire.com account (assigned by fire.com)
+     */
+    ican?: number;
+    /**
+     * the name the user gives to the account to help them identify it.
+     */
+    name?: string;
+    /**
+     * Live accounts can be used as normal. Migrated accounts were used before Brexit and are read-only.
+     */
+    status?: GetAccountByIdAccountStatusEnum;
 }
 export declare class GetAccountByIdResponse extends SpeakeasyBase {
+    /**
+     * An array of account objects.
+     */
+    account?: GetAccountByIdAccount;
     contentType: string;
     statusCode: number;
-    oneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItems?: shared.OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItems;
+    rawResponse?: AxiosResponse;
 }

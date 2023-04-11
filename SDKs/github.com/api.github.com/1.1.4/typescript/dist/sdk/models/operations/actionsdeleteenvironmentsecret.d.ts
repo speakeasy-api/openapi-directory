@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ActionsDeleteEnvironmentSecretPathParams extends SpeakeasyBase {
-    environmentName: string;
-    repositoryId: number;
-    secretName: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ActionsDeleteEnvironmentSecretRequest extends SpeakeasyBase {
-    pathParams: ActionsDeleteEnvironmentSecretPathParams;
+    /**
+     * The name of the environment.
+     */
+    environmentName: string;
+    /**
+     * The unique identifier of the repository.
+     */
+    repositoryId: number;
+    /**
+     * The name of the secret.
+     */
+    secretName: string;
 }
 export declare class ActionsDeleteEnvironmentSecretResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

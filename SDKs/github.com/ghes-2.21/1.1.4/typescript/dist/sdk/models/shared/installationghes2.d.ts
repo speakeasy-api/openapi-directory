@@ -1,4 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { NullableSimpleUser } from "./nullablesimpleuser";
 export declare class InstallationGhes2Permissions extends SpeakeasyBase {
     checks?: string;
     contents?: string;
@@ -9,37 +10,16 @@ export declare class InstallationGhes2Permissions extends SpeakeasyBase {
     pullRequests?: string;
     statuses?: string;
 }
+/**
+ * Describe whether all repositories have been selected or there's a selection involved
+ */
 export declare enum InstallationGhes2RepositorySelectionEnum {
     All = "all",
     Selected = "selected"
 }
 /**
- * Simple User
-**/
-export declare class InstallationGhes2SimpleUser extends SpeakeasyBase {
-    avatarUrl: string;
-    eventsUrl: string;
-    followersUrl: string;
-    followingUrl: string;
-    gistsUrl: string;
-    gravatarId: string;
-    htmlUrl: string;
-    id: number;
-    login: string;
-    nodeId: string;
-    organizationsUrl: string;
-    receivedEventsUrl: string;
-    reposUrl: string;
-    siteAdmin: boolean;
-    starredAt?: string;
-    starredUrl: string;
-    subscriptionsUrl: string;
-    type: string;
-    url: string;
-}
-/**
  * Installation
-**/
+ */
 export declare class InstallationGhes2 extends SpeakeasyBase {
     accessTokensUrl: string;
     account: any;
@@ -49,13 +29,25 @@ export declare class InstallationGhes2 extends SpeakeasyBase {
     createdAt: Date;
     events: string[];
     htmlUrl: string;
+    /**
+     * The ID of the installation.
+     */
     id: number;
     permissions: InstallationGhes2Permissions;
     repositoriesUrl: string;
+    /**
+     * Describe whether all repositories have been selected or there's a selection involved
+     */
     repositorySelection: InstallationGhes2RepositorySelectionEnum;
     singleFileName: string;
     suspendedAt?: Date;
-    suspendedBy?: InstallationGhes2SimpleUser;
+    /**
+     * Simple User
+     */
+    suspendedBy?: NullableSimpleUser;
+    /**
+     * The ID of the user or organization this token is being scoped to.
+     */
     targetId: number;
     targetType: string;
     updatedAt: Date;

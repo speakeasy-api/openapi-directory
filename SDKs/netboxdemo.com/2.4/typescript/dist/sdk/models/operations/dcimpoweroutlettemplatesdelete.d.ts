@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DcimPowerOutletTemplatesDeletePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DcimPowerOutletTemplatesDeleteRequest extends SpeakeasyBase {
-    pathParams: DcimPowerOutletTemplatesDeletePathParams;
+    /**
+     * A unique integer value identifying this power outlet template.
+     */
+    id: number;
 }
 export declare class DcimPowerOutletTemplatesDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

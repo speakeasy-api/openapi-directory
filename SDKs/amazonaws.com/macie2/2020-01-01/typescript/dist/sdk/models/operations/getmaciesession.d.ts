@@ -1,6 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetMacieSessionHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetMacieSessionRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -9,18 +10,40 @@ export declare class GetMacieSessionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetMacieSessionRequest extends SpeakeasyBase {
-    headers: GetMacieSessionHeaders;
-}
 export declare class GetMacieSessionResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getMacieSessionResponse?: shared.GetMacieSessionResponse;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
+    /**
+     * ServiceQuotaExceededException
+     */
     serviceQuotaExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

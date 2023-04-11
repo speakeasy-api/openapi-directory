@@ -20,6 +20,9 @@ export declare class RetrieveDistributionLinksResponseResult extends SpeakeasyBa
     elements?: RetrieveDistributionLinksResponseResultElements[];
     nextPage?: any;
 }
+/**
+ * Generated list of links
+ */
 export declare class RetrieveDistributionLinksResponse extends SpeakeasyBase {
     meta?: RetrieveDistributionLinksResponseMeta;
     result?: RetrieveDistributionLinksResponseResult;

@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class ListSchemasRequest extends SpeakeasyBase {
-    clusterIdentifier: string;
+    clusterIdentifier?: string;
     connectedDatabase?: string;
     database: string;
     dbUser?: string;
@@ -8,4 +8,5 @@ export declare class ListSchemasRequest extends SpeakeasyBase {
     nextToken?: string;
     schemaPattern?: string;
     secretArn?: string;
+    workgroupName?: string;
 }

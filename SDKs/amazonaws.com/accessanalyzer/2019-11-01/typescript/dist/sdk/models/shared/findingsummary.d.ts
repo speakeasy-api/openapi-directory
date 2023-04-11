@@ -1,10 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ResourceTypeEnum } from "./resourcetypeenum";
 import { FindingSource } from "./findingsource";
 import { FindingStatusEnum } from "./findingstatusenum";
+import { ResourceTypeEnum } from "./resourcetypeenum";
 /**
  * Contains information about a finding.
-**/
+ */
 export declare class FindingSummary extends SpeakeasyBase {
     action?: string[];
     analyzedAt: Date;

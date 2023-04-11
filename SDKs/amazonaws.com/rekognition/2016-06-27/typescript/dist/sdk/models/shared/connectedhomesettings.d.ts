@@ -1,0 +1,8 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ *  Label detection settings to use on a streaming video. Defining the settings is required in the request parameter for <a>CreateStreamProcessor</a>. Including this setting in the <code>CreateStreamProcessor</code> request enables you to use the stream processor for label detection. You can then select what you want the stream processor to detect, such as people or pets. When the stream processor has started, one notification is sent for each object class specified. For example, if packages and pets are selected, one SNS notification is published the first time a package is detected and one SNS notification is published the first time a pet is detected, as well as an end-of-session summary.
+ */
+export declare class ConnectedHomeSettings extends SpeakeasyBase {
+    labels: string[];
+    minConfidence?: number;
+}

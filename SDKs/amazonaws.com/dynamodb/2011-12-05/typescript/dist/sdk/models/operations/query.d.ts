@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class QueryQueryParams extends SpeakeasyBase {
-    exclusiveStartKey?: string;
-    limit?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum QueryXAmzTargetEnum {
-    DynamoDb20111205Query = "DynamoDB_20111205.Query"
+    DynamoDB20111205Query = "DynamoDB_20111205.Query"
 }
-export declare class QueryHeaders extends SpeakeasyBase {
+export declare class QueryRequest extends SpeakeasyBase {
+    /**
+     * Pagination token
+     */
+    exclusiveStartKey?: string;
+    /**
+     * Pagination limit
+     */
+    limit?: string;
+    queryInput: shared.QueryInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,17 +23,28 @@ export declare class QueryHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: QueryXAmzTargetEnum;
 }
-export declare class QueryRequest extends SpeakeasyBase {
-    queryParams: QueryQueryParams;
-    headers: QueryHeaders;
-    request: shared.QueryInput;
-}
 export declare class QueryResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServerError
+     */
     internalServerError?: any;
+    /**
+     * ProvisionedThroughputExceededException
+     */
     provisionedThroughputExceededException?: any;
+    /**
+     * Success
+     */
     queryOutput?: shared.QueryOutput;
+    /**
+     * RequestLimitExceeded
+     */
     requestLimitExceeded?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
 }

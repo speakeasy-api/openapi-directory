@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum CreateCampaignXAmzTargetEnum {
     AmazonPersonalizeCreateCampaign = "AmazonPersonalize.CreateCampaign"
 }
-export declare class CreateCampaignHeaders extends SpeakeasyBase {
+export declare class CreateCampaignRequest extends SpeakeasyBase {
+    createCampaignRequest: shared.CreateCampaignRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,36 @@ export declare class CreateCampaignHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: CreateCampaignXAmzTargetEnum;
 }
-export declare class CreateCampaignRequest extends SpeakeasyBase {
-    headers: CreateCampaignHeaders;
-    request: shared.CreateCampaignRequest;
-}
 export declare class CreateCampaignResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     createCampaignResponse?: shared.CreateCampaignResponse;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * ResourceAlreadyExistsException
+     */
     resourceAlreadyExistsException?: any;
-    resourceInUseException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceInUseException
+     */
+    resourceInUseException?: any;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * TooManyTagsException
+     */
+    tooManyTagsException?: any;
 }

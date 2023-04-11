@@ -1,12 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Reference } from "./reference";
-import { IpV4Address } from "./ipv4address";
 import { EntityTypeEnum } from "./entitytypeenum";
 import { FirewallActionEnum } from "./firewallactionenum";
 import { FlowTagEnum } from "./flowtagenum";
+import { FlowTrafficTypeEnum } from "./flowtraffictypeenum";
+import { IpV4Address } from "./ipv4address";
 import { PortRange } from "./portrange";
 import { ProtocolEnum } from "./protocolenum";
-import { FlowTrafficTypeEnum } from "./flowtraffictypeenum";
+import { Reference } from "./reference";
+/**
+ * OK
+ */
 export declare class Flow extends SpeakeasyBase {
     destinationCluster?: Reference;
     destinationDatacenter?: Reference;

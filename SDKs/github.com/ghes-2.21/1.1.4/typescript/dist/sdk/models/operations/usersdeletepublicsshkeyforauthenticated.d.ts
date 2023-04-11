@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UsersDeletePublicSshKeyForAuthenticatedPathParams extends SpeakeasyBase {
-    keyId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class UsersDeletePublicSshKeyForAuthenticatedRequest extends SpeakeasyBase {
-    pathParams: UsersDeletePublicSshKeyForAuthenticatedPathParams;
+    /**
+     * key_id parameter
+     */
+    keyId: number;
 }
 export declare class UsersDeletePublicSshKeyForAuthenticatedResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Requires authentication
+     */
     basicError?: shared.BasicError;
 }

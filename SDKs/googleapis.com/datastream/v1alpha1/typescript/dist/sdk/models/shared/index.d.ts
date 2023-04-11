@@ -38,7 +38,6 @@ export * from "./oracletable";
 export * from "./privateconnection";
 export * from "./privateconnectivity";
 export * from "./route";
-export * from "./security";
 export * from "./sourceconfig";
 export * from "./sourceobjectidentifier";
 export * from "./startbackfilljobresponse";

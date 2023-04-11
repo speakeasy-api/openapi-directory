@@ -1,8 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteServiceLinkedRole20170325PathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteServiceLinkedRole20170325Request extends SpeakeasyBase {
     roleName: string;
-}
-export declare class DeleteServiceLinkedRole20170325Headers extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,12 +10,9 @@ export declare class DeleteServiceLinkedRole20170325Headers extends SpeakeasyBas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeleteServiceLinkedRole20170325Request extends SpeakeasyBase {
-    pathParams: DeleteServiceLinkedRole20170325PathParams;
-    headers: DeleteServiceLinkedRole20170325Headers;
-}
 export declare class DeleteServiceLinkedRole20170325Response extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

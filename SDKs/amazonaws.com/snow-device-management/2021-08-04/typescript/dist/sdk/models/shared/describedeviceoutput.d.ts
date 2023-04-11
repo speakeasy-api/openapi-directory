@@ -1,8 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { Capacity } from "./capacity";
-import { UnlockStateEnum } from "./unlockstateenum";
 import { PhysicalNetworkInterface } from "./physicalnetworkinterface";
 import { SoftwareInformation } from "./softwareinformation";
+import { UnlockStateEnum } from "./unlockstateenum";
+/**
+ * Success
+ */
 export declare class DescribeDeviceOutput extends SpeakeasyBase {
     associatedWithJob?: string;
     deviceCapacities?: Capacity[];

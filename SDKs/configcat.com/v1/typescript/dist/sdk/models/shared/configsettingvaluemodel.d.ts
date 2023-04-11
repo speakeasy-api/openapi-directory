@@ -8,10 +8,19 @@ export declare class ConfigSettingValueModel extends SpeakeasyBase {
     integrationLinks?: IntegrationLinkModel[];
     lastUpdaterUserEmail?: string;
     lastUpdaterUserFullName?: string;
+    /**
+     * The percentage rule collection.
+     */
     rolloutPercentageItems?: RolloutPercentageItemModel[];
+    /**
+     * The targeting rule collection.
+     */
     rolloutRules?: RolloutRuleModel[];
     setting?: SettingDataModel;
     settingTags?: SettingTagModel[];
     updatedAt?: Date;
-    value?: Record<string, any>;
+    /**
+     * The value to serve. It must respect the setting type.
+     */
+    value?: any;
 }

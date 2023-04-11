@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteFloatingIpsIdPathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteFloatingIpsIdRequest extends SpeakeasyBase {
-    pathParams: DeleteFloatingIpsIdPathParams;
+    /**
+     * ID of the Floating IP
+     */
+    id: number;
 }
 export declare class DeleteFloatingIpsIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

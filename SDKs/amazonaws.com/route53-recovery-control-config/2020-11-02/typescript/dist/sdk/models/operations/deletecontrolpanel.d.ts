@@ -1,8 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteControlPanelPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteControlPanelRequest extends SpeakeasyBase {
+    /**
+     * The Amazon Resource Name (ARN) of the control panel.
+     */
     controlPanelArn: string;
-}
-export declare class DeleteControlPanelHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,18 +13,36 @@ export declare class DeleteControlPanelHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeleteControlPanelRequest extends SpeakeasyBase {
-    pathParams: DeleteControlPanelPathParams;
-    headers: DeleteControlPanelHeaders;
-}
 export declare class DeleteControlPanelResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteControlPanelResponse?: Record<string, any>;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

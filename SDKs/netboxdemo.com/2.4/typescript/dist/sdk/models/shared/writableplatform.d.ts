@@ -1,14 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum WritablePlatformLegacyRpcClientEnum {
+export declare enum WritablePlatformLegacyRPCClientEnum {
     JuniperJunos = "juniper-junos",
     CiscoIos = "cisco-ios",
     Opengear = "opengear"
 }
 export declare class WritablePlatformInput extends SpeakeasyBase {
+    /**
+     * Optionally limit this platform to devices of a certain manufacturer
+     */
     manufacturer?: number;
     name: string;
+    /**
+     * Additional arguments to pass when initiating the NAPALM driver (JSON format)
+     */
     napalmArgs?: string;
+    /**
+     * The name of the NAPALM driver to use when interacting with devices
+     */
     napalmDriver?: string;
-    rpcClient?: WritablePlatformLegacyRpcClientEnum;
+    rpcClient?: WritablePlatformLegacyRPCClientEnum;
     slug: string;
 }

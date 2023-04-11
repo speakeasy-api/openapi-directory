@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { MlModelTypeEnum } from "./mlmodeltypeenum";
-export declare class CreateMlModelInput extends SpeakeasyBase {
+import { MLModelTypeEnum } from "./mlmodeltypeenum";
+export declare class CreateMLModelInput extends SpeakeasyBase {
     mlModelId: string;
     mlModelName?: string;
-    mlModelType: MlModelTypeEnum;
+    mlModelType: MLModelTypeEnum;
     parameters?: Record<string, string>;
     recipe?: string;
     recipeUri?: string;

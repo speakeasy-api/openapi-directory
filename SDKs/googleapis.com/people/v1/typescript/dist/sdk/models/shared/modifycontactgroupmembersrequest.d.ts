@@ -1,8 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * A request to modify an existing contact group's members. Contacts can be removed from any group but they can only be added to a user group or "myContacts" or "starred" system groups.
-**/
+ */
 export declare class ModifyContactGroupMembersRequest extends SpeakeasyBase {
+    /**
+     * Optional. The resource names of the contact people to add in the form of `people/{person_id}`. The total number of resource names in `resource_names_to_add` and `resource_names_to_remove` must be less than or equal to 1000.
+     */
     resourceNamesToAdd?: string[];
+    /**
+     * Optional. The resource names of the contact people to remove in the form of `people/{person_id}`. The total number of resource names in `resource_names_to_add` and `resource_names_to_remove` must be less than or equal to 1000.
+     */
     resourceNamesToRemove?: string[];
 }

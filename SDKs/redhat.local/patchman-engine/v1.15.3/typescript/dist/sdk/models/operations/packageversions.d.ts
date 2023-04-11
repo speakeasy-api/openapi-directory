@@ -1,22 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PackageVersionsPathParams extends SpeakeasyBase {
-    packageName: string;
-}
-export declare class PackageVersionsQueryParams extends SpeakeasyBase {
-    limit?: number;
-    offset?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class PackageVersionsSecurity extends SpeakeasyBase {
-    rhIdentity: shared.SchemeRhIdentity;
+    rhIdentity: string;
 }
 export declare class PackageVersionsRequest extends SpeakeasyBase {
-    pathParams: PackageVersionsPathParams;
-    queryParams: PackageVersionsQueryParams;
-    security: PackageVersionsSecurity;
+    /**
+     * Limit for paging, set -1 to return all
+     */
+    limit?: number;
+    /**
+     * Offset for paging
+     */
+    offset?: number;
+    /**
+     * Package name
+     */
+    packageName: string;
 }
 export declare class PackageVersionsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
     controllersPackageVersionsResponse?: shared.ControllersPackageVersionsResponse;
 }

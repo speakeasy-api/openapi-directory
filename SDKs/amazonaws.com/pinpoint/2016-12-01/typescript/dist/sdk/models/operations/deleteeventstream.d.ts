@@ -1,9 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteEventStreamPathParams extends SpeakeasyBase {
-    applicationId: string;
-}
-export declare class DeleteEventStreamHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteEventStreamRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,20 +9,45 @@ export declare class DeleteEventStreamHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DeleteEventStreamRequest extends SpeakeasyBase {
-    pathParams: DeleteEventStreamPathParams;
-    headers: DeleteEventStreamHeaders;
+    /**
+     * The unique identifier for the application. This identifier is displayed as the <b>Project ID</b> on the Amazon Pinpoint console.
+     */
+    applicationId: string;
 }
 export declare class DeleteEventStreamResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteEventStreamResponse?: shared.DeleteEventStreamResponse;
+    /**
+     * ForbiddenException
+     */
     forbiddenException?: any;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
+    /**
+     * MethodNotAllowedException
+     */
     methodNotAllowedException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
+    /**
+     * PayloadTooLargeException
+     */
     payloadTooLargeException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

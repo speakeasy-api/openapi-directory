@@ -1,32 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AnalyticsManagementUploadsListPathParams extends SpeakeasyBase {
-    accountId: string;
-    customDataSourceId: string;
-    webPropertyId: string;
-}
-export declare class AnalyticsManagementUploadsListQueryParams extends SpeakeasyBase {
-    alt?: shared.AltEnum;
-    fields?: string;
-    key?: string;
-    maxResults?: number;
-    oauthToken?: string;
-    prettyPrint?: boolean;
-    quotaUser?: string;
-    startIndex?: number;
-    userIp?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class AnalyticsManagementUploadsListSecurityOption1 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class AnalyticsManagementUploadsListSecurityOption2 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class AnalyticsManagementUploadsListSecurityOption3 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class AnalyticsManagementUploadsListSecurity extends SpeakeasyBase {
     option1?: AnalyticsManagementUploadsListSecurityOption1;
@@ -34,12 +19,61 @@ export declare class AnalyticsManagementUploadsListSecurity extends SpeakeasyBas
     option3?: AnalyticsManagementUploadsListSecurityOption3;
 }
 export declare class AnalyticsManagementUploadsListRequest extends SpeakeasyBase {
-    pathParams: AnalyticsManagementUploadsListPathParams;
-    queryParams: AnalyticsManagementUploadsListQueryParams;
-    security: AnalyticsManagementUploadsListSecurity;
+    /**
+     * Account Id for the uploads to retrieve.
+     */
+    accountId: string;
+    /**
+     * Data format for the response.
+     */
+    alt?: shared.AltEnum;
+    /**
+     * Custom data source Id for uploads to retrieve.
+     */
+    customDataSourceId: string;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * The maximum number of uploads to include in this response.
+     */
+    maxResults?: number;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauthToken?: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * A 1-based index of the first upload to retrieve. Use this parameter as a pagination mechanism along with the max-results parameter.
+     */
+    startIndex?: number;
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    userIp?: string;
+    /**
+     * Web property Id for the uploads to retrieve.
+     */
+    webPropertyId: string;
 }
 export declare class AnalyticsManagementUploadsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful response
+     */
     uploads?: shared.Uploads;
 }

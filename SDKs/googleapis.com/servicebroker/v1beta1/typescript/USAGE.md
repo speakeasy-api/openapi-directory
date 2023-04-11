@@ -1,43 +1,37 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { ServicebrokerProjectsBrokersCreateRequest, ServicebrokerProjectsBrokersCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  ServicebrokerProjectsBrokersCreateRequest,
+  ServicebrokerProjectsBrokersCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: ServicebrokerProjectsBrokersCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
+  dollarXgafv: XgafvEnum.Two,
+  googleCloudServicebrokerV1beta1Broker: {
+    createTime: "provident",
+    name: "distinctio",
+    title: "Dr.",
+    url: "unde",
   },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
-    createTime: "dicta",
-    name: "debitis",
-    title: "voluptatum",
-    url: "et",
-  },
+  accessToken: "nulla",
+  alt: AltEnum.Media,
+  callback: "illum",
+  fields: "vel",
+  key: "error",
+  oauthToken: "deserunt",
+  parent: "suscipit",
+  prettyPrint: false,
+  quotaUser: "iure",
+  uploadType: "magnam",
+  uploadProtocol: "debitis",
 };
 
 sdk.projects.servicebrokerProjectsBrokersCreate(req).then((res: ServicebrokerProjectsBrokersCreateResponse | AxiosError) => {

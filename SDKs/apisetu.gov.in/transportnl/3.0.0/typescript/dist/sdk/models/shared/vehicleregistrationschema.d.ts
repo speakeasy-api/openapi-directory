@@ -90,6 +90,9 @@ export declare class VehicleRegistrationSchemaIssuedToPerson extends SpeakeasyBa
 export declare class VehicleRegistrationSchemaIssuedTo extends SpeakeasyBase {
     person: VehicleRegistrationSchemaIssuedToPerson;
 }
+/**
+ * The certificate data in response body in PDF, XML or JSON format as requested in format parameter.
+ */
 export declare class VehicleRegistrationSchema extends SpeakeasyBase {
     certificateData: VehicleRegistrationSchemaCertificateData;
     issuedBy: VehicleRegistrationSchemaIssuedBy;

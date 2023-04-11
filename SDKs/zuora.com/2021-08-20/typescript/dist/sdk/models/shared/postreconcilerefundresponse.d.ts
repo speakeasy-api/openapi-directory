@@ -1,5 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostReconcileRefundResponseFinanceInformationTransferredToAccountingEnum {
+/**
+ * Whether the refund was transferred to an external accounting system. Use this field for integration with accounting systems, such as NetSuite.
+ *
+ * @remarks
+ *
+ */
+export declare enum POSTReconcileRefundResponseFinanceInformationTransferredToAccountingEnum {
     Processing = "Processing",
     Yes = "Yes",
     No = "No",
@@ -9,19 +15,65 @@ export declare enum PostReconcileRefundResponseFinanceInformationTransferredToAc
 /**
  * Container for the finance information related to the refund.
  *
-**/
-export declare class PostReconcileRefundResponseFinanceInformation extends SpeakeasyBase {
+ * @remarks
+ *
+ */
+export declare class POSTReconcileRefundResponseFinanceInformation extends SpeakeasyBase {
+    /**
+     * The accounting code that maps to a bank account in your accounting system.
+     *
+     * @remarks
+     *
+     */
     bankAccountAccountingCode?: string;
+    /**
+     * The type of the accounting code that maps to a bank account in your accounting system.
+     *
+     * @remarks
+     *
+     *
+     */
     bankAccountAccountingCodeType?: string;
-    transferredToAccounting?: PostReconcileRefundResponseFinanceInformationTransferredToAccountingEnum;
+    /**
+     * Whether the refund was transferred to an external accounting system. Use this field for integration with accounting systems, such as NetSuite.
+     *
+     * @remarks
+     *
+     */
+    transferredToAccounting?: POSTReconcileRefundResponseFinanceInformationTransferredToAccountingEnum;
+    /**
+     * The accounting code for the unapplied payment.
+     *
+     * @remarks
+     *
+     */
     unappliedPaymentAccountingCode?: string;
+    /**
+     * The type of the accounting code for the unapplied payment.
+     *
+     * @remarks
+     *
+     *
+     */
     unappliedPaymentAccountingCodeType?: string;
 }
-export declare enum PostReconcileRefundResponseGatewayStateEnum {
+/**
+ * The status of the refund in the gateway; used for reconciliation.
+ *
+ * @remarks
+ *
+ */
+export declare enum POSTReconcileRefundResponseGatewayStateEnum {
     Settled = "Settled",
     FailedToSettle = "FailedToSettle"
 }
-export declare enum PostReconcileRefundResponseMethodTypeEnum {
+/**
+ * How an external refund was issued to a customer.
+ *
+ * @remarks
+ *
+ */
+export declare enum POSTReconcileRefundResponseMethodTypeEnum {
     Ach = "ACH",
     Cash = "Cash",
     Check = "Check",
@@ -33,45 +85,264 @@ export declare enum PostReconcileRefundResponseMethodTypeEnum {
     BankTransfer = "BankTransfer",
     Other = "Other"
 }
-export declare enum PostReconcileRefundResponseTypeEnum {
+/**
+ * The type of the refund.
+ *
+ * @remarks
+ *
+ */
+export declare enum POSTReconcileRefundResponseTypeEnum {
     External = "External",
     Electronic = "Electronic"
 }
-export declare class PostReconcileRefundResponse extends SpeakeasyBase {
+export declare class POSTReconcileRefundResponse extends SpeakeasyBase {
+    /**
+     * The ID of the customer account that the refund is for.
+     *
+     * @remarks
+     *
+     */
     accountId?: string;
+    /**
+     * The total amount of the refund.
+     *
+     * @remarks
+     *
+     */
     amount?: number;
+    /**
+     * The date and time when the transaction was cancelled, in `yyyy-mm-dd hh:mm:ss` format.
+     *
+     * @remarks
+     *
+     */
     cancelledOn?: Date;
+    /**
+     * Comments about the refund.
+     *
+     * @remarks
+     *
+     */
     comment?: string;
+    /**
+     * The ID of the Zuora user who created the refund.
+     *
+     * @remarks
+     *
+     */
     createdById?: string;
+    /**
+     * The date and time when the refund is created, in `yyyy-mm-dd hh:mm:ss` format.
+     *
+     * @remarks
+     *
+     */
     createdDate?: Date;
+    /**
+     * The ID of the credit memo that is refunded.
+     *
+     * @remarks
+     *
+     */
     creditMemoId?: string;
-    financeInformation?: PostReconcileRefundResponseFinanceInformation;
+    /**
+     * Container for the finance information related to the refund.
+     *
+     * @remarks
+     *
+     */
+    financeInformation?: POSTReconcileRefundResponseFinanceInformation;
+    /**
+     * The ID of the gateway instance that processes the refund.
+     *
+     * @remarks
+     *
+     */
     gatewayId?: string;
+    /**
+     * The reason of gateway reconciliation.
+     *
+     * @remarks
+     *
+     */
     gatewayReconciliationReason?: string;
+    /**
+     * The status of gateway reconciliation.
+     *
+     * @remarks
+     *
+     */
     gatewayReconciliationStatus?: string;
+    /**
+     * The message returned from the payment gateway for the refund. This message is gateway-dependent.
+     *
+     * @remarks
+     *
+     */
     gatewayResponse?: string;
+    /**
+     * The code returned from the payment gateway for the refund. This code is gateway-dependent.
+     *
+     * @remarks
+     *
+     */
     gatewayResponseCode?: string;
-    gatewayState?: PostReconcileRefundResponseGatewayStateEnum;
+    /**
+     * The status of the refund in the gateway; used for reconciliation.
+     *
+     * @remarks
+     *
+     */
+    gatewayState?: POSTReconcileRefundResponseGatewayStateEnum;
+    /**
+     * The ID of the refund.
+     *
+     * @remarks
+     *
+     */
     id?: string;
+    /**
+     * The date and time when a refund was marked and waiting for batch submission to the payment process, in `yyyy-mm-dd hh:mm:ss` format.
+     *
+     * @remarks
+     *
+     */
     markedForSubmissionOn?: Date;
-    methodType?: PostReconcileRefundResponseMethodTypeEnum;
+    /**
+     * How an external refund was issued to a customer.
+     *
+     * @remarks
+     *
+     */
+    methodType?: POSTReconcileRefundResponseMethodTypeEnum;
+    /**
+     * The unique identification number of the refund. For example, R-00000001.
+     *
+     * @remarks
+     *
+     */
     number?: string;
+    /**
+     * The ID of the payment that is refunded.
+     *
+     * @remarks
+     *
+     */
     paymentId?: string;
+    /**
+     * The unique ID of the payment method that the customer used to make the refund.
+     *
+     * @remarks
+     *
+     */
     paymentMethodId?: string;
+    /**
+     * The unique ID of the payment method snapshot which is a copy of the particular Payment Method used in a transaction.
+     *
+     * @remarks
+     *
+     */
     paymentMethodSnapshotId?: string;
+    /**
+     * The payout ID of the refund from the gateway side.
+     *
+     * @remarks
+     *
+     */
     payoutId?: string;
+    /**
+     * A code identifying the reason for the transaction.
+     *
+     * @remarks
+     *
+     */
     reasonCode?: string;
+    /**
+     * The transaction ID returned by the payment gateway for an electronic refund. Use this field to reconcile refunds between your gateway and Zuora Payments.
+     *
+     * @remarks
+     *
+     */
     referenceId?: string;
+    /**
+     * The date when the refund takes effect, in `yyyy-mm-dd` format. For example, 2020-03-01.
+     *
+     * @remarks
+     *
+     */
     refundDate?: Date;
+    /**
+     * The date and time when the refund was issued, in `yyyy-mm-dd hh:mm:ss` format.
+     *
+     * @remarks
+     *
+     */
     refundTransactionTime?: Date;
+    /**
+     * The transaction ID returned by the payment gateway if there is an additional refund.
+     *
+     * @remarks
+     *
+     */
     secondRefundReferenceId?: string;
+    /**
+     * The date and time when the transaction is settled, in `yyyy-mm-dd hh:mm:ss` format.
+     *
+     * @remarks
+     *
+     */
     settledOn?: Date;
+    /**
+     * A payment gateway-specific field that maps Zuora to other gateways.
+     *
+     * @remarks
+     *
+     */
     softDescriptor?: string;
+    /**
+     * A payment gateway-specific field that maps Zuora to other gateways.
+     *
+     * @remarks
+     *
+     */
     softDescriptorPhone?: string;
+    /**
+     * The status of the refund.
+     *
+     * @remarks
+     *
+     */
     status?: string;
+    /**
+     * The date and time when the refund was submitted, in yyyy-mm-dd hh:mm:ss format.
+     *
+     * @remarks
+     *
+     */
     submittedOn?: Date;
+    /**
+     * Indicates if the request is processed successfully.
+     */
     success?: boolean;
-    type?: PostReconcileRefundResponseTypeEnum;
+    /**
+     * The type of the refund.
+     *
+     * @remarks
+     *
+     */
+    type?: POSTReconcileRefundResponseTypeEnum;
+    /**
+     * The ID of the Zuora user who last updated the refund.
+     *
+     * @remarks
+     *
+     */
     updatedById?: string;
+    /**
+     * The date and time when the refund was last updated, in `yyyy-mm-dd hh:mm:ss` format.
+     *
+     * @remarks
+     *
+     */
     updatedDate?: Date;
 }

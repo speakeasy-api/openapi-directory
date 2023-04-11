@@ -1,6 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DcimPowerFeedsListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DcimPowerFeedsListRequest extends SpeakeasyBase {
     amperage?: string;
     amperageGt?: string;
     amperageGte?: string;
@@ -19,6 +20,9 @@ export declare class DcimPowerFeedsListQueryParams extends SpeakeasyBase {
     lastUpdated?: string;
     lastUpdatedGte?: string;
     lastUpdatedLte?: string;
+    /**
+     * Number of results to return per page.
+     */
     limit?: number;
     maxUtilization?: string;
     maxUtilizationGt?: string;
@@ -36,6 +40,9 @@ export declare class DcimPowerFeedsListQueryParams extends SpeakeasyBase {
     nameNie?: string;
     nameNiew?: string;
     nameNisw?: string;
+    /**
+     * The initial index from which to return the results.
+     */
     offset?: number;
     phase?: string;
     phaseN?: string;
@@ -67,17 +74,15 @@ export declare class DcimPowerFeedsListQueryParams extends SpeakeasyBase {
     voltageLte?: string;
     voltageN?: string;
 }
-export declare class DcimPowerFeedsList200ApplicationJson extends SpeakeasyBase {
+export declare class DcimPowerFeedsList200ApplicationJSON extends SpeakeasyBase {
     count: number;
     next?: string;
     previous?: string;
     results: shared.PowerFeed[];
 }
-export declare class DcimPowerFeedsListRequest extends SpeakeasyBase {
-    queryParams: DcimPowerFeedsListQueryParams;
-}
 export declare class DcimPowerFeedsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dcimPowerFeedsList200ApplicationJSONObject?: DcimPowerFeedsList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    dcimPowerFeedsList200ApplicationJSONObject?: DcimPowerFeedsList200ApplicationJSON;
 }

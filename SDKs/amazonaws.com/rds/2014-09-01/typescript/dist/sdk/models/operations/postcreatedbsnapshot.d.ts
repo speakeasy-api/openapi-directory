@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateDbSnapshotActionEnum {
-    CreateDbSnapshot = "CreateDBSnapshot"
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateDBSnapshotActionEnum {
+    CreateDBSnapshot = "CreateDBSnapshot"
 }
-export declare enum PostCreateDbSnapshotVersionEnum {
+export declare enum POSTCreateDBSnapshotVersionEnum {
     TwoThousandAndFourteen0901 = "2014-09-01"
 }
-export declare class PostCreateDbSnapshotQueryParams extends SpeakeasyBase {
-    action: PostCreateDbSnapshotActionEnum;
-    version: PostCreateDbSnapshotVersionEnum;
-}
-export declare class PostCreateDbSnapshotHeaders extends SpeakeasyBase {
+export declare class POSTCreateDBSnapshotRequest extends SpeakeasyBase {
+    action: POSTCreateDBSnapshotActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateDBSnapshotVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateDbSnapshotHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateDbSnapshotRequest extends SpeakeasyBase {
-    queryParams: PostCreateDbSnapshotQueryParams;
-    headers: PostCreateDbSnapshotHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateDbSnapshotResponse extends SpeakeasyBase {
+export declare class POSTCreateDBSnapshotResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

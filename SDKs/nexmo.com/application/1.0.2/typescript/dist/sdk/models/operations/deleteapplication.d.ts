@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteApplicationPathParams extends SpeakeasyBase {
-    appId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteApplicationRequest extends SpeakeasyBase {
-    pathParams: DeleteApplicationPathParams;
+    /**
+     * The ID allocated to your application by Nexmo.
+     */
+    appId: string;
 }
 export declare class DeleteApplicationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

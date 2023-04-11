@@ -1,41 +1,35 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { ChromemanagementCustomersAppsCountChromeAppRequestsRequest, ChromemanagementCustomersAppsCountChromeAppRequestsResponse } from "openapi/src/sdk/models/operations";
+import {
+  ChromemanagementCustomersAppsCountChromeAppRequestsRequest,
+  ChromemanagementCustomersAppsCountChromeAppRequestsResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: ChromemanagementCustomersAppsCountChromeAppRequestsRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    customer: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    orderBy: "fugit",
-    orgUnitId: "et",
-    pageSize: 2661732831099943416,
-    pageToken: "rerum",
-    prettyPrint: false,
-    quotaUser: "debitis",
-    uploadType: "voluptatum",
-    uploadProtocol: "et",
-  },
+  dollarXgafv: XgafvEnum.Two,
+  accessToken: "provident",
+  alt: AltEnum.Proto,
+  callback: "quibusdam",
+  customer: "unde",
+  fields: "nulla",
+  key: "corrupti",
+  oauthToken: "illum",
+  orderBy: "vel",
+  orgUnitId: "error",
+  pageSize: 645894,
+  pageToken: "suscipit",
+  prettyPrint: false,
+  quotaUser: "iure",
+  uploadType: "magnam",
+  uploadProtocol: "debitis",
 };
 
 sdk.customers.chromemanagementCustomersAppsCountChromeAppRequests(req).then((res: ChromemanagementCustomersAppsCountChromeAppRequestsResponse | AxiosError) => {

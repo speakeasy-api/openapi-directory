@@ -5,7 +5,7 @@ import { LogFormatEnum } from "./logformatenum";
 import { LogTypeEnum } from "./logtypeenum";
 /**
  * The log delivery configurations being modified
-**/
+ */
 export declare class PendingLogDeliveryConfiguration extends SpeakeasyBase {
     destinationDetails?: DestinationDetails;
     destinationType?: DestinationTypeEnum;

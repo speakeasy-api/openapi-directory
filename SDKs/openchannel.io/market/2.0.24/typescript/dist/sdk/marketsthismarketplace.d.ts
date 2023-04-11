@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class MarketsThisMarketplace {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +9,7 @@ export declare class MarketsThisMarketplace {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getMarketsThis - Returns the current marketplace
-    **/
+     * Returns the current marketplace
+     */
     getMarketsThis(config?: AxiosRequestConfig): Promise<operations.GetMarketsThisResponse>;
 }

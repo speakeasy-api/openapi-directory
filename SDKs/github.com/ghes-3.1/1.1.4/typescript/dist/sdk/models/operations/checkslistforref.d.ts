@@ -1,29 +1,62 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ChecksListForRefPathParams extends SpeakeasyBase {
-    owner: string;
-    ref: string;
-    repo: string;
+import { AxiosResponse } from "axios";
+/**
+ * Filters check runs by their `completed_at` timestamp. `latest` returns the most recent check runs.
+ */
+export declare enum ChecksListForRefFilterEnum {
+    Latest = "latest",
+    All = "all"
 }
-export declare class ChecksListForRefQueryParams extends SpeakeasyBase {
+export declare class ChecksListForRefRequest extends SpeakeasyBase {
     appId?: number;
+    /**
+     * Returns check runs with the specified `name`.
+     */
     checkName?: string;
-    filter?: shared.StatusEnum1;
+    /**
+     * Filters check runs by their `completed_at` timestamp. `latest` returns the most recent check runs.
+     */
+    filter?: ChecksListForRefFilterEnum;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    owner: string;
+    /**
+     * Page number of the results to fetch.
+     */
     page?: number;
+    /**
+     * The number of results per page (max 100).
+     */
     perPage?: number;
+    /**
+     * ref parameter
+     */
+    ref: string;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    repo: string;
+    /**
+     * Returns check runs with the specified `status`.
+     */
     status?: shared.StatusEnum;
 }
-export declare class ChecksListForRef200ApplicationJson extends SpeakeasyBase {
+/**
+ * Response
+ */
+export declare class ChecksListForRef200ApplicationJSON extends SpeakeasyBase {
     checkRuns: shared.CheckRun[];
     totalCount: number;
 }
-export declare class ChecksListForRefRequest extends SpeakeasyBase {
-    pathParams: ChecksListForRefPathParams;
-    queryParams: ChecksListForRefQueryParams;
-}
 export declare class ChecksListForRefResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
-    checksListForRef200ApplicationJSONObject?: ChecksListForRef200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
+    checksListForRef200ApplicationJSONObject?: ChecksListForRef200ApplicationJSON;
 }

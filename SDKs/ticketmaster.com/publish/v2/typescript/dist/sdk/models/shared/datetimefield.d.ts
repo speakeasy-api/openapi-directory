@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DurationField } from "./durationfield";
 import { DateTimeFieldType } from "./datetimefieldtype";
+import { DurationField } from "./durationfield";
 export declare class DateTimeField extends SpeakeasyBase {
     durationField?: DurationField;
     leapDurationField?: DurationField;

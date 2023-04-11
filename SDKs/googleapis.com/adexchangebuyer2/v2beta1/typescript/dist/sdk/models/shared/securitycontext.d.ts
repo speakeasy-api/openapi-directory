@@ -5,7 +5,10 @@ export declare enum SecurityContextSecuritiesEnum {
 }
 /**
  * Output only. A security context.
-**/
+ */
 export declare class SecurityContext extends SpeakeasyBase {
+    /**
+     * The security types in this context.
+     */
     securities?: SecurityContextSecuritiesEnum[];
 }

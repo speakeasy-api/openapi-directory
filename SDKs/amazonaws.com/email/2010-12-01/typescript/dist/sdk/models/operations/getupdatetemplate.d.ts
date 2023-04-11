@@ -1,25 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetUpdateTemplateActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETUpdateTemplateActionEnum {
     UpdateTemplate = "UpdateTemplate"
 }
 /**
  * The content of the email, composed of a subject line, an HTML part, and a text-only part.
-**/
-export declare class GetUpdateTemplateTemplate extends SpeakeasyBase {
+ */
+export declare class GETUpdateTemplateTemplate extends SpeakeasyBase {
     htmlPart?: string;
     subjectPart?: string;
     templateName: string;
     textPart?: string;
 }
-export declare enum GetUpdateTemplateVersionEnum {
+export declare enum GETUpdateTemplateVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetUpdateTemplateQueryParams extends SpeakeasyBase {
-    action: GetUpdateTemplateActionEnum;
-    template: GetUpdateTemplateTemplate;
-    version: GetUpdateTemplateVersionEnum;
-}
-export declare class GetUpdateTemplateHeaders extends SpeakeasyBase {
+export declare class GETUpdateTemplateRequest extends SpeakeasyBase {
+    action: GETUpdateTemplateActionEnum;
+    /**
+     * The content of the email, composed of a subject line, an HTML part, and a text-only part.
+     */
+    template: GETUpdateTemplateTemplate;
+    version: GETUpdateTemplateVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -28,12 +30,9 @@ export declare class GetUpdateTemplateHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetUpdateTemplateRequest extends SpeakeasyBase {
-    queryParams: GetUpdateTemplateQueryParams;
-    headers: GetUpdateTemplateHeaders;
-}
-export declare class GetUpdateTemplateResponse extends SpeakeasyBase {
+export declare class GETUpdateTemplateResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -3,5 +3,6 @@ export declare enum CrawlStateEnum {
     Cancelling = "CANCELLING",
     Cancelled = "CANCELLED",
     Succeeded = "SUCCEEDED",
-    Failed = "FAILED"
+    Failed = "FAILED",
+    Error = "ERROR"
 }

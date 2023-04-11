@@ -1,19 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetMessengerAccountPathParams extends SpeakeasyBase {
-    externalId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetMessengerAccountSecurity extends SpeakeasyBase {
-    bearerAuth?: shared.SchemeBearerAuth;
     basicAuth?: shared.SchemeBasicAuth;
+    bearerAuth?: string;
 }
 export declare class GetMessengerAccountRequest extends SpeakeasyBase {
-    pathParams: GetMessengerAccountPathParams;
-    security: GetMessengerAccountSecurity;
+    /**
+     * External id of the account you want to retrieve. In this case it is the Facebook Page ID.
+     */
+    externalId: string;
 }
 export declare class GetMessengerAccountResponse extends SpeakeasyBase {
+    /**
+     * Unauthorized.
+     */
     fourHundredAndOneResponse?: shared.FourHundredAndOneResponse;
     contentType: string;
+    /**
+     * OK.
+     */
     messengerAccountResponse?: shared.MessengerAccountResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

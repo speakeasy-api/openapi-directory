@@ -6,130 +6,431 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/androidpublisher/v3/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/androidpublisher/v3/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AndroidpublisherApplicationsDeviceTierConfigsCreateRequest, AndroidpublisherApplicationsDeviceTierConfigsCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  AndroidpublisherApplicationsDeviceTierConfigsCreateRequest,
+  AndroidpublisherApplicationsDeviceTierConfigsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: AndroidpublisherApplicationsDeviceTierConfigsCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    packageName: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    allowUnknownDevices: false,
-    alt: "proto",
-    callback: "dolor",
-    fields: "expedita",
-    key: "voluptas",
-    oauthToken: "fugit",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    uploadType: "rerum",
-    uploadProtocol: "dicta",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  deviceTierConfigInput: {
     deviceGroups: [
       {
         deviceSelectors: [
           {
             deviceRam: {
-              maxBytes: "et",
-              minBytes: "ut",
+              maxBytes: "quibusdam",
+              minBytes: "unde",
             },
             excludedDeviceIds: [
               {
-                buildBrand: "et",
-                buildDevice: "voluptate",
+                buildBrand: "corrupti",
+                buildDevice: "illum",
               },
               {
-                buildBrand: "iste",
-                buildDevice: "vitae",
+                buildBrand: "vel",
+                buildDevice: "error",
               },
               {
-                buildBrand: "totam",
-                buildDevice: "dolores",
+                buildBrand: "deserunt",
+                buildDevice: "suscipit",
+              },
+              {
+                buildBrand: "iure",
+                buildDevice: "magnam",
               },
             ],
             forbiddenSystemFeatures: [
               {
-                name: "debitis",
+                name: "ipsa",
               },
               {
-                name: "vel",
+                name: "delectus",
               },
               {
-                name: "odio",
+                name: "tempora",
+              },
+              {
+                name: "suscipit",
               },
             ],
             includedDeviceIds: [
               {
-                buildBrand: "id",
-                buildDevice: "aspernatur",
+                buildBrand: "minus",
+                buildDevice: "placeat",
               },
               {
-                buildBrand: "accusantium",
-                buildDevice: "totam",
+                buildBrand: "voluptatum",
+                buildDevice: "iusto",
               },
             ],
             requiredSystemFeatures: [
               {
-                name: "quis",
+                name: "nisi",
               },
               {
-                name: "est",
+                name: "recusandae",
+              },
+              {
+                name: "temporibus",
+              },
+            ],
+          },
+          {
+            deviceRam: {
+              maxBytes: "ab",
+              minBytes: "quis",
+            },
+            excludedDeviceIds: [
+              {
+                buildBrand: "deserunt",
+                buildDevice: "perferendis",
+              },
+            ],
+            forbiddenSystemFeatures: [
+              {
+                name: "repellendus",
+              },
+              {
+                name: "sapiente",
+              },
+            ],
+            includedDeviceIds: [
+              {
+                buildBrand: "odit",
+                buildDevice: "at",
+              },
+              {
+                buildBrand: "at",
+                buildDevice: "maiores",
+              },
+              {
+                buildBrand: "molestiae",
+                buildDevice: "quod",
+              },
+              {
+                buildBrand: "quod",
+                buildDevice: "esse",
+              },
+            ],
+            requiredSystemFeatures: [
+              {
+                name: "porro",
+              },
+              {
+                name: "dolorum",
+              },
+              {
+                name: "dicta",
+              },
+            ],
+          },
+          {
+            deviceRam: {
+              maxBytes: "nam",
+              minBytes: "officia",
+            },
+            excludedDeviceIds: [
+              {
+                buildBrand: "fugit",
+                buildDevice: "deleniti",
+              },
+              {
+                buildBrand: "hic",
+                buildDevice: "optio",
+              },
+              {
+                buildBrand: "totam",
+                buildDevice: "beatae",
+              },
+            ],
+            forbiddenSystemFeatures: [
+              {
+                name: "molestiae",
+              },
+              {
+                name: "modi",
+              },
+            ],
+            includedDeviceIds: [
+              {
+                buildBrand: "impedit",
+                buildDevice: "cum",
+              },
+            ],
+            requiredSystemFeatures: [
+              {
+                name: "ipsum",
+              },
+              {
+                name: "excepturi",
               },
             ],
           },
         ],
-        name: "aut",
+        name: "aspernatur",
+      },
+      {
+        deviceSelectors: [
+          {
+            deviceRam: {
+              maxBytes: "ad",
+              minBytes: "natus",
+            },
+            excludedDeviceIds: [
+              {
+                buildBrand: "iste",
+                buildDevice: "dolor",
+              },
+            ],
+            forbiddenSystemFeatures: [
+              {
+                name: "laboriosam",
+              },
+              {
+                name: "hic",
+              },
+              {
+                name: "saepe",
+              },
+            ],
+            includedDeviceIds: [
+              {
+                buildBrand: "in",
+                buildDevice: "corporis",
+              },
+              {
+                buildBrand: "iste",
+                buildDevice: "iure",
+              },
+              {
+                buildBrand: "saepe",
+                buildDevice: "quidem",
+              },
+            ],
+            requiredSystemFeatures: [
+              {
+                name: "ipsa",
+              },
+            ],
+          },
+        ],
+        name: "reiciendis",
+      },
+      {
+        deviceSelectors: [
+          {
+            deviceRam: {
+              maxBytes: "mollitia",
+              minBytes: "laborum",
+            },
+            excludedDeviceIds: [
+              {
+                buildBrand: "dolorem",
+                buildDevice: "corporis",
+              },
+            ],
+            forbiddenSystemFeatures: [
+              {
+                name: "nobis",
+              },
+            ],
+            includedDeviceIds: [
+              {
+                buildBrand: "omnis",
+                buildDevice: "nemo",
+              },
+              {
+                buildBrand: "minima",
+                buildDevice: "excepturi",
+              },
+            ],
+            requiredSystemFeatures: [
+              {
+                name: "iure",
+              },
+            ],
+          },
+          {
+            deviceRam: {
+              maxBytes: "culpa",
+              minBytes: "doloribus",
+            },
+            excludedDeviceIds: [
+              {
+                buildBrand: "architecto",
+                buildDevice: "mollitia",
+              },
+              {
+                buildBrand: "dolorem",
+                buildDevice: "culpa",
+              },
+              {
+                buildBrand: "consequuntur",
+                buildDevice: "repellat",
+              },
+              {
+                buildBrand: "mollitia",
+                buildDevice: "occaecati",
+              },
+            ],
+            forbiddenSystemFeatures: [
+              {
+                name: "commodi",
+              },
+              {
+                name: "quam",
+              },
+            ],
+            includedDeviceIds: [
+              {
+                buildBrand: "velit",
+                buildDevice: "error",
+              },
+              {
+                buildBrand: "quia",
+                buildDevice: "quis",
+              },
+            ],
+            requiredSystemFeatures: [
+              {
+                name: "laborum",
+              },
+            ],
+          },
+          {
+            deviceRam: {
+              maxBytes: "animi",
+              minBytes: "enim",
+            },
+            excludedDeviceIds: [
+              {
+                buildBrand: "quo",
+                buildDevice: "sequi",
+              },
+            ],
+            forbiddenSystemFeatures: [
+              {
+                name: "ipsam",
+              },
+              {
+                name: "id",
+              },
+              {
+                name: "possimus",
+              },
+              {
+                name: "aut",
+              },
+            ],
+            includedDeviceIds: [
+              {
+                buildBrand: "error",
+                buildDevice: "temporibus",
+              },
+            ],
+            requiredSystemFeatures: [
+              {
+                name: "quasi",
+              },
+              {
+                name: "reiciendis",
+              },
+              {
+                name: "voluptatibus",
+              },
+            ],
+          },
+        ],
+        name: "vero",
       },
     ],
     deviceTierSet: {
       deviceTiers: [
         {
           deviceGroupNames: [
-            "voluptas",
+            "voluptatibus",
+            "ipsa",
             "omnis",
-            "aut",
           ],
-          level: 6972732843819909978,
+          level: 451159,
         },
         {
           deviceGroupNames: [
-            "officiis",
-            "autem",
-            "consectetur",
+            "perferendis",
+            "doloremque",
+            "reprehenderit",
           ],
-          level: 8683452355129068124,
+          level: 282807,
         },
       ],
     },
+    userCountrySets: [
+      {
+        countryCodes: [
+          "corporis",
+        ],
+        name: "dolore",
+      },
+      {
+        countryCodes: [
+          "dicta",
+          "harum",
+        ],
+        name: "enim",
+      },
+      {
+        countryCodes: [
+          "commodi",
+          "repudiandae",
+          "quae",
+          "ipsum",
+        ],
+        name: "quidem",
+      },
+      {
+        countryCodes: [
+          "excepturi",
+          "pariatur",
+          "modi",
+        ],
+        name: "praesentium",
+      },
+    ],
   },
+  accessToken: "rem",
+  allowUnknownDevices: false,
+  alt: AltEnum.Proto,
+  callback: "quasi",
+  fields: "repudiandae",
+  key: "sint",
+  oauthToken: "veritatis",
+  packageName: "itaque",
+  prettyPrint: false,
+  quotaUser: "incidunt",
+  uploadType: "enim",
+  uploadProtocol: "consequatur",
 };
 
 sdk.applications.androidpublisherApplicationsDeviceTierConfigsCreate(req).then((res: AndroidpublisherApplicationsDeviceTierConfigsCreateResponse | AxiosError) => {
@@ -139,7 +440,8 @@ sdk.applications.androidpublisherApplicationsDeviceTierConfigsCreate(req).then((
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### applications
 
@@ -237,6 +539,7 @@ sdk.applications.androidpublisherApplicationsDeviceTierConfigsCreate(req).then((
 ### purchases
 
 * `androidpublisherPurchasesProductsAcknowledge` - Acknowledges a purchase of an inapp item.
+* `androidpublisherPurchasesProductsConsume` - Consumes a purchase for an inapp item.
 * `androidpublisherPurchasesProductsGet` - Checks the purchase and consumption status of an inapp item.
 * `androidpublisherPurchasesSubscriptionsAcknowledge` - Acknowledges a subscription purchase.
 * `androidpublisherPurchasesSubscriptionsCancel` - Cancels a user's subscription purchase. The subscription remains valid until its expiration time.
@@ -266,7 +569,18 @@ sdk.applications.androidpublisherApplicationsDeviceTierConfigsCreate(req).then((
 * `androidpublisherUsersDelete` - Removes all access for the user to the given developer account.
 * `androidpublisherUsersList` - Lists all users with access to a developer account.
 * `androidpublisherUsersPatch` - Updates access for the user to the developer account.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

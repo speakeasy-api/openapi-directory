@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class InteractionsRemoveRestrictionsForOrgPathParams extends SpeakeasyBase {
-    org: string;
-}
+import { AxiosResponse } from "axios";
 export declare class InteractionsRemoveRestrictionsForOrgRequest extends SpeakeasyBase {
-    pathParams: InteractionsRemoveRestrictionsForOrgPathParams;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    org: string;
 }
 export declare class InteractionsRemoveRestrictionsForOrgResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

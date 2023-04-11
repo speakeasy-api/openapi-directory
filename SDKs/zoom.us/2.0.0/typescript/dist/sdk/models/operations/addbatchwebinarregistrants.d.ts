@@ -1,50 +1,97 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class AddBatchWebinarRegistrantsPathParams extends SpeakeasyBase {
-    webinarId: string;
-}
-export declare class AddBatchWebinarRegistrantsApplicationJsonRegistrants extends SpeakeasyBase {
-    email: string;
-    firstName: string;
-    lastName?: string;
-}
-export declare class AddBatchWebinarRegistrantsApplicationJson extends SpeakeasyBase {
-    autoApprove?: boolean;
-    registrants?: AddBatchWebinarRegistrantsApplicationJsonRegistrants[];
-}
-export declare class AddBatchWebinarRegistrantsMultipartFormDataRegistrants extends SpeakeasyBase {
-    email: string;
-    firstName: string;
-    lastName?: string;
-}
-export declare class AddBatchWebinarRegistrantsMultipartFormData1 extends SpeakeasyBase {
-    autoApprove?: boolean;
-    registrants?: AddBatchWebinarRegistrantsMultipartFormDataRegistrants[];
-}
-export declare class AddBatchWebinarRegistrantsRequests extends SpeakeasyBase {
-    object?: AddBatchWebinarRegistrantsApplicationJson;
-    object1?: AddBatchWebinarRegistrantsMultipartFormData1;
-}
+import { AxiosResponse } from "axios";
 export declare class AddBatchWebinarRegistrantsSecurity extends SpeakeasyBase {
-    oAuth?: shared.SchemeOAuth;
-    bearer?: shared.SchemeBearer;
+    bearer?: string;
+    oAuth?: string;
 }
-export declare class AddBatchWebinarRegistrants200ApplicationJsonRegistrants extends SpeakeasyBase {
-    email?: string;
-    joinUrl?: string;
-    registrantId?: string;
+export declare class AddBatchWebinarRegistrantsApplicationJSONRegistrants extends SpeakeasyBase {
+    /**
+     * Email address of the registrant.
+     */
+    email: string;
+    /**
+     * First name of the registrant.
+     */
+    firstName: string;
+    /**
+     * Last name of the registrant.
+     */
+    lastName?: string;
 }
-export declare class AddBatchWebinarRegistrants200ApplicationJson extends SpeakeasyBase {
-    registrants?: AddBatchWebinarRegistrants200ApplicationJsonRegistrants[];
+export declare class AddBatchWebinarRegistrantsApplicationJSON extends SpeakeasyBase {
+    /**
+     * If a meeting was scheduled with approval_type `1` (manual approval), but you would like to automatically approve the registrants that are added via this API, you can set the value of this field to `true`.
+     *
+     * @remarks
+     *
+     * You **cannot** use this field to change approval setting for a meeting  that was originally scheduled with approval_type `0` (automatic approval).
+     */
+    autoApprove?: boolean;
+    registrants?: AddBatchWebinarRegistrantsApplicationJSONRegistrants[];
 }
 export declare class AddBatchWebinarRegistrantsRequest extends SpeakeasyBase {
-    pathParams: AddBatchWebinarRegistrantsPathParams;
-    request?: AddBatchWebinarRegistrantsRequests;
-    security: AddBatchWebinarRegistrantsSecurity;
+    requestBody?: AddBatchWebinarRegistrantsApplicationJSON;
+    /**
+     * Unique identifier of the webinar.
+     */
+    webinarId: string;
+}
+export declare class AddBatchWebinarRegistrants200ApplicationXMLRegistrants extends SpeakeasyBase {
+    /**
+     * Email address of the registrant.
+     */
+    email?: string;
+    /**
+     * Unique URL using which registrant can join the webinar.
+     */
+    joinUrl?: string;
+    /**
+     * Unique identifier of the registrant.
+     */
+    registrantId?: string;
+}
+/**
+ * **HTTP Status Code:** `200` **OK** <br>
+ *
+ * @remarks
+ * Registrants added.
+ */
+export declare class AddBatchWebinarRegistrants200ApplicationXML extends SpeakeasyBase {
+    registrants?: AddBatchWebinarRegistrants200ApplicationXMLRegistrants[];
+}
+export declare class AddBatchWebinarRegistrants200ApplicationJSONRegistrants extends SpeakeasyBase {
+    /**
+     * Email address of the registrant.
+     */
+    email?: string;
+    /**
+     * Unique URL using which registrant can join the webinar.
+     */
+    joinUrl?: string;
+    /**
+     * Unique identifier of the registrant.
+     */
+    registrantId?: string;
+}
+/**
+ * **HTTP Status Code:** `200` **OK** <br>
+ *
+ * @remarks
+ * Registrants added.
+ */
+export declare class AddBatchWebinarRegistrants200ApplicationJSON extends SpeakeasyBase {
+    registrants?: AddBatchWebinarRegistrants200ApplicationJSONRegistrants[];
 }
 export declare class AddBatchWebinarRegistrantsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    addBatchWebinarRegistrants200ApplicationJSONObject?: AddBatchWebinarRegistrants200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * **HTTP Status Code:** `200` **OK** <br>
+     *
+     * @remarks
+     * Registrants added.
+     */
+    addBatchWebinarRegistrants200ApplicationJSONObject?: AddBatchWebinarRegistrants200ApplicationJSON;
 }

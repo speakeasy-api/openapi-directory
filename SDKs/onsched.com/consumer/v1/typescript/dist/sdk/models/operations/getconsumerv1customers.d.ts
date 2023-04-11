@@ -1,18 +1,42 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetConsumerV1CustomersQueryParams extends SpeakeasyBase {
-    deleted?: boolean;
-    email?: string;
-    groupId?: string;
-    lastname?: string;
-    limit?: number;
-    locationId?: string;
-    offset?: number;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class GetConsumerV1CustomersRequest extends SpeakeasyBase {
-    queryParams: GetConsumerV1CustomersQueryParams;
+    /**
+     * Filter by deleted status
+     */
+    deleted?: boolean;
+    /**
+     * Filter by email address
+     */
+    email?: string;
+    /**
+     * Filter by groupId
+     */
+    groupId?: string;
+    /**
+     * Filter by lastname
+     */
+    lastname?: string;
+    /**
+     * Page limit default 20, max 100
+     */
+    limit?: number;
+    /**
+     * id of business location, defaults to primary business location
+     */
+    locationId?: string;
+    /**
+     * Starting row of page, default 0
+     */
+    offset?: number;
 }
 export declare class GetConsumerV1CustomersResponse extends SpeakeasyBase {
     contentType: string;
-    customerListViewModel?: Record<string, any>;
+    /**
+     * Success
+     */
+    customerListViewModel?: shared.CustomerListViewModel;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

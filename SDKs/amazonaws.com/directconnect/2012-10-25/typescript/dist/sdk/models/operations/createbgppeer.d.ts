@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum CreateBgpPeerXAmzTargetEnum {
-    OvertureServiceCreateBgpPeer = "OvertureService.CreateBGPPeer"
+import { AxiosResponse } from "axios";
+export declare enum CreateBGPPeerXAmzTargetEnum {
+    OvertureServiceCreateBGPPeer = "OvertureService.CreateBGPPeer"
 }
-export declare class CreateBgpPeerHeaders extends SpeakeasyBase {
+export declare class CreateBGPPeerRequest extends SpeakeasyBase {
+    createBGPPeerRequest: shared.CreateBGPPeerRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,16 +13,22 @@ export declare class CreateBgpPeerHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: CreateBgpPeerXAmzTargetEnum;
+    xAmzTarget: CreateBGPPeerXAmzTargetEnum;
 }
-export declare class CreateBgpPeerRequest extends SpeakeasyBase {
-    headers: CreateBgpPeerHeaders;
-    request: shared.CreateBgpPeerRequest;
-}
-export declare class CreateBgpPeerResponse extends SpeakeasyBase {
+export declare class CreateBGPPeerResponse extends SpeakeasyBase {
     contentType: string;
-    createBGPPeerResponse?: shared.CreateBgpPeerResponse;
+    /**
+     * Success
+     */
+    createBGPPeerResponse?: shared.CreateBGPPeerResponse;
+    /**
+     * DirectConnectClientException
+     */
     directConnectClientException?: any;
+    /**
+     * DirectConnectServerException
+     */
     directConnectServerException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

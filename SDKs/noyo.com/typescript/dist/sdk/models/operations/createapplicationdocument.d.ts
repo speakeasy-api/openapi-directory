@@ -1,14 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreateApplicationDocumentPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class CreateApplicationDocumentRequest extends SpeakeasyBase {
+    applicationDocumentCreateRequest: shared.ApplicationDocumentCreateRequest;
+    /**
+     * The unique identifier of the application in Noyo
+     */
     applicationId: string;
 }
-export declare class CreateApplicationDocumentRequest extends SpeakeasyBase {
-    pathParams: CreateApplicationDocumentPathParams;
-    request: shared.ApplicationDocumentCreateRequest;
-}
 export declare class CreateApplicationDocumentResponse extends SpeakeasyBase {
+    /**
+     * Successful Response - Returns the new Application Document
+     */
     applicationDocumentResult?: shared.ApplicationDocumentResult;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { RecommendationPreferences } from "./recommendationpreferences";
 import { MetricStatisticEnum } from "./metricstatisticenum";
+import { RecommendationPreferences } from "./recommendationpreferences";
 export declare class GetEc2RecommendationProjectedMetricsRequest extends SpeakeasyBase {
     endTime: Date;
     instanceArn: string;

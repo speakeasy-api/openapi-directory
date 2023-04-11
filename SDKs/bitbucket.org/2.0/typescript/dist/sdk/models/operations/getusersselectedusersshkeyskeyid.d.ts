@@ -1,21 +1,35 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetUsersSelectedUserSshKeysKeyIdPathParams extends SpeakeasyBase {
-    keyId: string;
-    selectedUser: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetUsersSelectedUserSshKeysKeyIdSecurity extends SpeakeasyBase {
-    oauth2?: shared.SchemeOauth2;
+    apiKey?: string;
     basic?: shared.SchemeBasic;
-    apiKey?: shared.SchemeApiKey;
+    oauth2?: string;
 }
 export declare class GetUsersSelectedUserSshKeysKeyIdRequest extends SpeakeasyBase {
-    pathParams: GetUsersSelectedUserSshKeysKeyIdPathParams;
-    security: GetUsersSelectedUserSshKeysKeyIdSecurity;
+    /**
+     * The SSH key's UUID value.
+     */
+    keyId: string;
+    /**
+     * This can either be the UUID of the account, surrounded by curly-braces, for
+     *
+     * @remarks
+     * example: `{account UUID}`, OR an Atlassian Account ID.
+     *
+     */
+    selectedUser: string;
 }
 export declare class GetUsersSelectedUserSshKeysKeyIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * If the specified user or key does not exist
+     */
     error?: Record<string, any>;
+    /**
+     * The specific SSH key matching the user and UUID
+     */
     sshAccountKey?: Record<string, any>;
 }

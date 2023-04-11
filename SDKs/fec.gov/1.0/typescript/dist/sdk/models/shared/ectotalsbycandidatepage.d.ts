@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { ECTotalsByCandidate } from "./ectotalsbycandidate";
 import { OffsetInfo } from "./offsetinfo";
-import { EcTotalsByCandidate } from "./ectotalsbycandidate";
-export declare class EcTotalsByCandidatePage extends SpeakeasyBase {
+export declare class ECTotalsByCandidatePage extends SpeakeasyBase {
     pagination?: OffsetInfo;
-    results?: EcTotalsByCandidate[];
+    results?: ECTotalsByCandidate[];
 }

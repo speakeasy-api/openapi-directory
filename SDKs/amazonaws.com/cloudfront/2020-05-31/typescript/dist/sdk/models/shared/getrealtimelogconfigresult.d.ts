@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { RealtimeLogConfig } from "./realtimelogconfig";
+/**
+ * Success
+ */
 export declare class GetRealtimeLogConfigResult extends SpeakeasyBase {
     realtimeLogConfig?: RealtimeLogConfig;
 }

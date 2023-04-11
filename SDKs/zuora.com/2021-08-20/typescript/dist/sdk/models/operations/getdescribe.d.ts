@@ -1,19 +1,49 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetDescribePathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETDescribeRequest extends SpeakeasyBase {
+    /**
+     * An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+     *
+     * @remarks
+     *
+     */
+    zuoraEntityIds?: string;
+    /**
+     * A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+     *
+     * @remarks
+     *
+     * The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+     *
+     */
+    zuoraTrackId?: string;
+    /**
+     * API name of an object in your Zuora tenant. For example, `InvoiceItem`. See [Zuora Object Model](https://www.zuora.com/developer/api-reference/#section/Zuora-Object-Model) for the list of valid object names.
+     *
+     * @remarks
+     *
+     * Depending on the features enabled in your Zuora tenant, you may not be able to list the fields of some objects.
+     *
+     */
     object: string;
 }
-export declare class GetDescribeHeaders extends SpeakeasyBase {
-    zuoraEntityIds?: string;
-    zuoraTrackId?: string;
-}
-export declare class GetDescribeRequest extends SpeakeasyBase {
-    pathParams: GetDescribePathParams;
-    headers: GetDescribeHeaders;
-}
-export declare class GetDescribeResponse extends SpeakeasyBase {
+export declare class GETDescribeResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Returns an XML document that lists the fields of the specified object
+     *
+     * @remarks
+     *
+     */
     getDescribe200TextXMLString?: string;
+    /**
+     * Returns an XML document that indicates the error
+     *
+     * @remarks
+     *
+     */
     getDescribe404TextXMLString?: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

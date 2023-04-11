@@ -1,26 +1,31 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdateSettingValuePathParams extends SpeakeasyBase {
-    environmentId: string;
-    settingId: number;
-}
-export declare class UpdateSettingValueQueryParams extends SpeakeasyBase {
-    reason?: string;
-}
-export declare class UpdateSettingValueRequests extends SpeakeasyBase {
-    operations?: shared.Operation[];
-    operations1?: shared.Operation[];
-    operations2?: shared.Operation[];
-    operations3?: shared.Operation[];
-}
+import { AxiosResponse } from "axios";
 export declare class UpdateSettingValueRequest extends SpeakeasyBase {
-    pathParams: UpdateSettingValuePathParams;
-    queryParams: UpdateSettingValueQueryParams;
-    request: UpdateSettingValueRequests;
+    jsonPatchInput: shared.JsonPatchInput;
+    /**
+     * The identifier of the Environment.
+     */
+    environmentId: string;
+    /**
+     * The reason note for the Audit Log if the Product's "Config changes require a reason" preference is turned on.
+     */
+    reason?: string;
+    /**
+     * The id of the Setting.
+     */
+    settingId: number;
 }
 export declare class UpdateSettingValueResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * When the patch was successful.
+     */
     settingValueModel?: shared.SettingValueModel;
+    /**
+     * When the patch was successful.
+     */
     settingValueModelHaljson?: shared.SettingValueModelHaljson;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

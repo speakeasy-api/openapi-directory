@@ -1,116 +1,174 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class PecerSecurity extends SpeakeasyBase {
+    apiKey: string;
+    clientId: string;
+}
 export declare class PecerRequestBodyCertificateParameters extends SpeakeasyBase {
+    /**
+     * Date of birth in DD-MM-YYYY format
+     */
     dob: string;
+    /**
+     * PPO NO
+     */
     ppono: string;
 }
+/**
+ * The format of the certificate in response.
+ */
 export declare enum PecerRequestBodyFormatEnum {
     Pdf = "pdf"
 }
+/**
+ * Request format
+ */
 export declare class PecerRequestBody extends SpeakeasyBase {
     certificateParameters?: PecerRequestBodyCertificateParameters;
-    consentArtifact?: any;
+    consentArtifact?: shared.ConsentArtifactSchema;
+    /**
+     * The format of the certificate in response.
+     */
     format: PecerRequestBodyFormatEnum;
+    /**
+     * A unique transaction id for this request in UUID format. It is used for tracking the request.
+     */
     txnId: string;
 }
-export declare class PecerSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
-    clientId: shared.SchemeClientId;
+export declare enum Pecer504ApplicationJSONErrorEnum {
+    GatewayTimeout = "gateway_timeout"
 }
-export declare enum Pecer400ApplicationJsonErrorEnum {
+export declare enum Pecer504ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
+}
+/**
+ * Gateway timeout
+ */
+export declare class Pecer504ApplicationJSON extends SpeakeasyBase {
+    error?: Pecer504ApplicationJSONErrorEnum;
+    errorDescription?: Pecer504ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Pecer503ApplicationJSONErrorEnum {
+    ServiceUnavailable = "service_unavailable"
+}
+export declare enum Pecer503ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
+}
+/**
+ * Service unavailable
+ */
+export declare class Pecer503ApplicationJSON extends SpeakeasyBase {
+    error?: Pecer503ApplicationJSONErrorEnum;
+    errorDescription?: Pecer503ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Pecer502ApplicationJSONErrorEnum {
+    BadGatewy = "bad_gatewy"
+}
+export declare enum Pecer502ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
+}
+/**
+ * Bad gateway
+ */
+export declare class Pecer502ApplicationJSON extends SpeakeasyBase {
+    error?: Pecer502ApplicationJSONErrorEnum;
+    errorDescription?: Pecer502ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Pecer500ApplicationJSONErrorEnum {
+    InternalServerError = "internal_server_error"
+}
+export declare enum Pecer500ApplicationJSONErrorDescriptionEnum {
+    InternalServerError = "Internal server error"
+}
+/**
+ * Internal server error
+ */
+export declare class Pecer500ApplicationJSON extends SpeakeasyBase {
+    error?: Pecer500ApplicationJSONErrorEnum;
+    errorDescription?: Pecer500ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Pecer404ApplicationJSONErrorEnum {
+    RecordNotFound = "record_not_found",
+    UrlNotFound = "url_not_found"
+}
+export declare enum Pecer404ApplicationJSONErrorDescriptionEnum {
+    NoRecordFound = "No record found",
+    YourAPIUrlOrPathIsIncorrect = "Your API url or path is incorrect"
+}
+/**
+ * No record found
+ */
+export declare class Pecer404ApplicationJSON extends SpeakeasyBase {
+    error?: Pecer404ApplicationJSONErrorEnum;
+    errorDescription?: Pecer404ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Pecer401ApplicationJSONErrorEnum {
+    InvalidAuthentication = "invalid_authentication",
+    InvalidAuthorization = "invalid_authorization"
+}
+export declare enum Pecer401ApplicationJSONErrorDescriptionEnum {
+    AuthenticationFailed = "Authentication failed",
+    YouAreNotAuthorizedToUseThisAPI = "You are not authorized to use this API"
+}
+/**
+ * Unauthorized access
+ */
+export declare class Pecer401ApplicationJSON extends SpeakeasyBase {
+    error?: Pecer401ApplicationJSONErrorEnum;
+    errorDescription?: Pecer401ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Pecer400ApplicationJSONErrorEnum {
     MissingParameter = "missing_parameter",
     InvalidParameter = "invalid_parameter",
     InvalidFormat = "invalid_format",
     InvalidTxnid = "invalid_txnid",
     InvalidConsentid = "invalid_consentid"
 }
-export declare enum Pecer400ApplicationJsonErrorDescriptionEnum {
+export declare enum Pecer400ApplicationJSONErrorDescriptionEnum {
     PleaseProvideAllMandatoryParameters = "Please provide all mandatory parameters",
     BadRequest = "Bad request",
     TheFormatParameterIsInvalid = "The format parameter is invalid",
-    TheTxnIdParameterMustBeInUuidFormat = "The txnId parameter must be in UUID format",
-    TheConsentIdParameterMustBeInUuidFormat = "The consentId parameter must be in UUID format"
+    TheTxnIdParameterMustBeInUUIDFormat = "The txnId parameter must be in UUID format",
+    TheConsentIdParameterMustBeInUUIDFormat = "The consentId parameter must be in UUID format"
 }
-export declare class Pecer400ApplicationJson extends SpeakeasyBase {
-    error?: Pecer400ApplicationJsonErrorEnum;
-    errorDescription?: Pecer400ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Pecer401ApplicationJsonErrorEnum {
-    InvalidAuthentication = "invalid_authentication",
-    InvalidAuthorization = "invalid_authorization"
-}
-export declare enum Pecer401ApplicationJsonErrorDescriptionEnum {
-    AuthenticationFailed = "Authentication failed",
-    YouAreNotAuthorizedToUseThisApi = "You are not authorized to use this API"
-}
-export declare class Pecer401ApplicationJson extends SpeakeasyBase {
-    error?: Pecer401ApplicationJsonErrorEnum;
-    errorDescription?: Pecer401ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Pecer404ApplicationJsonErrorEnum {
-    RecordNotFound = "record_not_found",
-    UrlNotFound = "url_not_found"
-}
-export declare enum Pecer404ApplicationJsonErrorDescriptionEnum {
-    NoRecordFound = "No record found",
-    YourApiUrlOrPathIsIncorrect = "Your API url or path is incorrect"
-}
-export declare class Pecer404ApplicationJson extends SpeakeasyBase {
-    error?: Pecer404ApplicationJsonErrorEnum;
-    errorDescription?: Pecer404ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Pecer500ApplicationJsonErrorEnum {
-    InternalServerError = "internal_server_error"
-}
-export declare enum Pecer500ApplicationJsonErrorDescriptionEnum {
-    InternalServerError = "Internal server error"
-}
-export declare class Pecer500ApplicationJson extends SpeakeasyBase {
-    error?: Pecer500ApplicationJsonErrorEnum;
-    errorDescription?: Pecer500ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Pecer502ApplicationJsonErrorEnum {
-    BadGatewy = "bad_gatewy"
-}
-export declare enum Pecer502ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
-}
-export declare class Pecer502ApplicationJson extends SpeakeasyBase {
-    error?: Pecer502ApplicationJsonErrorEnum;
-    errorDescription?: Pecer502ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Pecer503ApplicationJsonErrorEnum {
-    ServiceUnavailable = "service_unavailable"
-}
-export declare enum Pecer503ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
-}
-export declare class Pecer503ApplicationJson extends SpeakeasyBase {
-    error?: Pecer503ApplicationJsonErrorEnum;
-    errorDescription?: Pecer503ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Pecer504ApplicationJsonErrorEnum {
-    GatewayTimeout = "gateway_timeout"
-}
-export declare enum Pecer504ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
-}
-export declare class Pecer504ApplicationJson extends SpeakeasyBase {
-    error?: Pecer504ApplicationJsonErrorEnum;
-    errorDescription?: Pecer504ApplicationJsonErrorDescriptionEnum;
-}
-export declare class PecerRequest extends SpeakeasyBase {
-    request?: PecerRequestBody;
-    security: PecerSecurity;
+/**
+ * Bad request
+ */
+export declare class Pecer400ApplicationJSON extends SpeakeasyBase {
+    error?: Pecer400ApplicationJSONErrorEnum;
+    errorDescription?: Pecer400ApplicationJSONErrorDescriptionEnum;
 }
 export declare class PecerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    pecer400ApplicationJSONObject?: Pecer400ApplicationJson;
-    pecer401ApplicationJSONObject?: Pecer401ApplicationJson;
-    pecer404ApplicationJSONObject?: Pecer404ApplicationJson;
-    pecer500ApplicationJSONObject?: Pecer500ApplicationJson;
-    pecer502ApplicationJSONObject?: Pecer502ApplicationJson;
-    pecer503ApplicationJSONObject?: Pecer503ApplicationJson;
-    pecer504ApplicationJSONObject?: Pecer504ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad request
+     */
+    pecer400ApplicationJSONObject?: Pecer400ApplicationJSON;
+    /**
+     * Unauthorized access
+     */
+    pecer401ApplicationJSONObject?: Pecer401ApplicationJSON;
+    /**
+     * No record found
+     */
+    pecer404ApplicationJSONObject?: Pecer404ApplicationJSON;
+    /**
+     * Internal server error
+     */
+    pecer500ApplicationJSONObject?: Pecer500ApplicationJSON;
+    /**
+     * Bad gateway
+     */
+    pecer502ApplicationJSONObject?: Pecer502ApplicationJSON;
+    /**
+     * Service unavailable
+     */
+    pecer503ApplicationJSONObject?: Pecer503ApplicationJSON;
+    /**
+     * Gateway timeout
+     */
+    pecer504ApplicationJSONObject?: Pecer504ApplicationJSON;
 }

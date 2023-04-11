@@ -30,7 +30,6 @@ export * from "./restoreconfig";
 export * from "./restoreplan";
 export * from "./retentionpolicy";
 export * from "./schedule";
-export * from "./security";
 export * from "./setiampolicyrequest";
 export * from "./substitutionrule";
 export * from "./testiampermissionsrequest";

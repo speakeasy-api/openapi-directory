@@ -1,17 +1,17 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetcountrymatchRequest, GetcountrymatchResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetcountrymatchRequest,
+  GetcountrymatchResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetcountrymatchRequest = {
-  queryParams: {
-    country: "sit",
-    license: "voluptas",
-  },
+  country: "Malta",
+  license: "provident",
 };
 
 sdk.countryMatchSimilarityKey.getcountrymatch(req).then((res: GetcountrymatchResponse | AxiosError) => {

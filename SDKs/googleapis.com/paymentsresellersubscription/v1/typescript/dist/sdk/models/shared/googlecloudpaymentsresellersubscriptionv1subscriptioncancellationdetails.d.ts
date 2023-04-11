@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The reason of the cancellation.
+ */
 export declare enum GoogleCloudPaymentsResellerSubscriptionV1SubscriptionCancellationDetailsReasonEnum {
     CancellationReasonUnspecified = "CANCELLATION_REASON_UNSPECIFIED",
     CancellationReasonFraud = "CANCELLATION_REASON_FRAUD",
@@ -12,7 +15,10 @@ export declare enum GoogleCloudPaymentsResellerSubscriptionV1SubscriptionCancell
 }
 /**
  * Describes the details of a cancelled or cancelling subscription.
-**/
+ */
 export declare class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionCancellationDetails extends SpeakeasyBase {
+    /**
+     * The reason of the cancellation.
+     */
     reason?: GoogleCloudPaymentsResellerSubscriptionV1SubscriptionCancellationDetailsReasonEnum;
 }

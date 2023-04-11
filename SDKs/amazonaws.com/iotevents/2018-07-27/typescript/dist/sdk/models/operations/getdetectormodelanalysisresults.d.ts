@@ -1,13 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetDetectorModelAnalysisResultsPathParams extends SpeakeasyBase {
-    analysisId: string;
-}
-export declare class GetDetectorModelAnalysisResultsQueryParams extends SpeakeasyBase {
-    maxResults?: number;
-    nextToken?: string;
-}
-export declare class GetDetectorModelAnalysisResultsHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetDetectorModelAnalysisResultsRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -15,19 +9,45 @@ export declare class GetDetectorModelAnalysisResultsHeaders extends SpeakeasyBas
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class GetDetectorModelAnalysisResultsRequest extends SpeakeasyBase {
-    pathParams: GetDetectorModelAnalysisResultsPathParams;
-    queryParams: GetDetectorModelAnalysisResultsQueryParams;
-    headers: GetDetectorModelAnalysisResultsHeaders;
+    /**
+     * The ID of the analysis result that you want to retrieve.
+     */
+    analysisId: string;
+    /**
+     * The maximum number of results to be returned per request.
+     */
+    maxResults?: number;
+    /**
+     * The token that you can use to return the next set of results.
+     */
+    nextToken?: string;
 }
 export declare class GetDetectorModelAnalysisResultsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getDetectorModelAnalysisResultsResponse?: shared.GetDetectorModelAnalysisResultsResponse;
+    /**
+     * InternalFailureException
+     */
     internalFailureException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
-    resourceNotFoundException?: any;
+    /**
+     * ServiceUnavailableException
+     */
     serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

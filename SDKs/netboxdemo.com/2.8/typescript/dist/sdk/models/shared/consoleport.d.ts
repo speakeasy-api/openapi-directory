@@ -5,9 +5,13 @@ export declare enum ConsolePortConnectionStatusLabelEnum {
     NotConnected = "Not Connected",
     Connected = "Connected"
 }
+export declare enum ConsolePortConnectionStatusValueEnum {
+    False = "false",
+    True = "true"
+}
 export declare class ConsolePortConnectionStatus extends SpeakeasyBase {
     label: ConsolePortConnectionStatusLabelEnum;
-    value: boolean;
+    value: ConsolePortConnectionStatusValueEnum;
 }
 export declare enum ConsolePortTypeLabelEnum {
     De9 = "DE-9",
@@ -15,13 +19,13 @@ export declare enum ConsolePortTypeLabelEnum {
     Rj11 = "RJ-11",
     Rj12 = "RJ-12",
     Rj45 = "RJ-45",
-    UsbTypeA = "USB Type A",
-    UsbTypeB = "USB Type B",
-    UsbTypeC = "USB Type C",
-    UsbMiniA = "USB Mini A",
-    UsbMiniB = "USB Mini B",
-    UsbMicroA = "USB Micro A",
-    UsbMicroB = "USB Micro B",
+    USBTypeA = "USB Type A",
+    USBTypeB = "USB Type B",
+    USBTypeC = "USB Type C",
+    USBMiniA = "USB Mini A",
+    USBMiniB = "USB Mini B",
+    USBMicroA = "USB Micro A",
+    USBMicroB = "USB Micro B",
     Other = "Other"
 }
 export declare enum ConsolePortTypeValueEnum {
@@ -45,6 +49,12 @@ export declare class ConsolePortType extends SpeakeasyBase {
 }
 export declare class ConsolePort extends SpeakeasyBase {
     cable?: NestedCable;
+    /**
+     *
+     * @remarks
+     * Return the appropriate serializer for the type of connected object.
+     *
+     */
     connectedEndpoint?: Record<string, string>;
     connectedEndpointType?: string;
     connectionStatus?: ConsolePortConnectionStatus;

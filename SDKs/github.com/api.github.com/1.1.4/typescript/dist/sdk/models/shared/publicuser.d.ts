@@ -7,7 +7,7 @@ export declare class PublicUserPlan extends SpeakeasyBase {
 }
 /**
  * Public User
-**/
+ */
 export declare class PublicUser extends SpeakeasyBase {
     avatarUrl: string;
     bio: string;

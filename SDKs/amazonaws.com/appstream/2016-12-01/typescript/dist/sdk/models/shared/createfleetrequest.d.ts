@@ -1,0 +1,31 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { ComputeCapacity } from "./computecapacity";
+import { DomainJoinInfo } from "./domainjoininfo";
+import { FleetTypeEnum } from "./fleettypeenum";
+import { PlatformTypeEnum } from "./platformtypeenum";
+import { S3Location } from "./s3location";
+import { StreamViewEnum } from "./streamviewenum";
+import { VpcConfig } from "./vpcconfig";
+export declare class CreateFleetRequest extends SpeakeasyBase {
+    computeCapacity?: ComputeCapacity;
+    description?: string;
+    disconnectTimeoutInSeconds?: number;
+    displayName?: string;
+    domainJoinInfo?: DomainJoinInfo;
+    enableDefaultInternetAccess?: boolean;
+    fleetType?: FleetTypeEnum;
+    iamRoleArn?: string;
+    idleDisconnectTimeoutInSeconds?: number;
+    imageArn?: string;
+    imageName?: string;
+    instanceType: string;
+    maxConcurrentSessions?: number;
+    maxUserDurationInSeconds?: number;
+    name: string;
+    platform?: PlatformTypeEnum;
+    sessionScriptS3Location?: S3Location;
+    streamView?: StreamViewEnum;
+    tags?: Record<string, string>;
+    usbDeviceFilterStrings?: string[];
+    vpcConfig?: VpcConfig;
+}

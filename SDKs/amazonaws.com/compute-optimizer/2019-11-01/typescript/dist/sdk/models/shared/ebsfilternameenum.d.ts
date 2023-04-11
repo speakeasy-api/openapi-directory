@@ -1,3 +1,3 @@
-export declare enum EbsFilterNameEnum {
+export declare enum EBSFilterNameEnum {
     Finding = "Finding"
 }

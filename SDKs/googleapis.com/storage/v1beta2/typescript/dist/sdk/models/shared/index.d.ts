@@ -9,4 +9,3 @@ export * from "./object";
 export * from "./objectaccesscontrol";
 export * from "./objectaccesscontrols";
 export * from "./objects";
-export * from "./security";

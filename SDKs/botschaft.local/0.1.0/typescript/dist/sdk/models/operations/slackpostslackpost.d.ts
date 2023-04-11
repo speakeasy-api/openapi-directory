@@ -1,15 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class SlackPostSlackPostHeaders extends SpeakeasyBase {
-    authorization?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class SlackPostSlackPostRequest extends SpeakeasyBase {
-    headers: SlackPostSlackPostHeaders;
-    request: shared.SlackMessageRequest;
+    slackMessageRequest: shared.SlackMessageRequest;
+    authorization?: string;
 }
 export declare class SlackPostSlackPostResponse extends SpeakeasyBase {
     contentType: string;
-    httpValidationError?: shared.HttpValidationError;
+    /**
+     * Validation Error
+     */
+    httpValidationError?: shared.HTTPValidationError;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful Response
+     */
     slackPostSlackPost200ApplicationJSONAny?: any;
 }

@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Route } from "./route";
 import { ExpectedRoute } from "./expectedroute";
+import { Route } from "./route";
 /**
  * Violation detail for the subnet for which internet traffic that hasn't been inspected.
-**/
+ */
 export declare class NetworkFirewallInternetTrafficNotInspectedViolation extends SpeakeasyBase {
     actualFirewallSubnetRoutes?: Route[];
     actualInternetGatewayRoutes?: Route[];

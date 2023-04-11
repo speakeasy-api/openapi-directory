@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Create a charge for a customer
+ */
 export declare class Charges {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,11 +12,11 @@ export declare class Charges {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getCharges - List charges
-    **/
+     * List charges
+     */
     getCharges(config?: AxiosRequestConfig): Promise<operations.GetChargesResponse>;
     /**
-     * postCharges - Create charges for invoices
-    **/
+     * Create charges for invoices
+     */
     postCharges(config?: AxiosRequestConfig): Promise<operations.PostChargesResponse>;
 }

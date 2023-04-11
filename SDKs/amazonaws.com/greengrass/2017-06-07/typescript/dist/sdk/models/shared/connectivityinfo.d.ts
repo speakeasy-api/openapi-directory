@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Information about a Greengrass core's connectivity.
-**/
+ */
 export declare class ConnectivityInfo extends SpeakeasyBase {
     hostAddress?: string;
     id?: string;

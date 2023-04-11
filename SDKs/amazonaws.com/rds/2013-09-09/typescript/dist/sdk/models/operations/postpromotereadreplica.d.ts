@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostPromoteReadReplicaActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTPromoteReadReplicaActionEnum {
     PromoteReadReplica = "PromoteReadReplica"
 }
-export declare enum PostPromoteReadReplicaVersionEnum {
+export declare enum POSTPromoteReadReplicaVersionEnum {
     TwoThousandAndThirteen0909 = "2013-09-09"
 }
-export declare class PostPromoteReadReplicaQueryParams extends SpeakeasyBase {
-    action: PostPromoteReadReplicaActionEnum;
-    version: PostPromoteReadReplicaVersionEnum;
-}
-export declare class PostPromoteReadReplicaHeaders extends SpeakeasyBase {
+export declare class POSTPromoteReadReplicaRequest extends SpeakeasyBase {
+    action: POSTPromoteReadReplicaActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTPromoteReadReplicaVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostPromoteReadReplicaHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostPromoteReadReplicaRequest extends SpeakeasyBase {
-    queryParams: PostPromoteReadReplicaQueryParams;
-    headers: PostPromoteReadReplicaHeaders;
-    request?: Uint8Array;
-}
-export declare class PostPromoteReadReplicaResponse extends SpeakeasyBase {
+export declare class POSTPromoteReadReplicaResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

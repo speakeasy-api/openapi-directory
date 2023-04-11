@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetModifyAuthenticationProfileActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETModifyAuthenticationProfileActionEnum {
     ModifyAuthenticationProfile = "ModifyAuthenticationProfile"
 }
-export declare enum GetModifyAuthenticationProfileVersionEnum {
+export declare enum GETModifyAuthenticationProfileVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class GetModifyAuthenticationProfileQueryParams extends SpeakeasyBase {
-    action: GetModifyAuthenticationProfileActionEnum;
+export declare class GETModifyAuthenticationProfileRequest extends SpeakeasyBase {
+    action: GETModifyAuthenticationProfileActionEnum;
+    /**
+     * The new content of the authentication profile in JSON format. The maximum length of the JSON string is determined by a quota for your account.
+     */
     authenticationProfileContent: string;
+    /**
+     * The name of the authentication profile to replace.
+     */
     authenticationProfileName: string;
-    version: GetModifyAuthenticationProfileVersionEnum;
-}
-export declare class GetModifyAuthenticationProfileHeaders extends SpeakeasyBase {
+    version: GETModifyAuthenticationProfileVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetModifyAuthenticationProfileHeaders extends SpeakeasyBase
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetModifyAuthenticationProfileRequest extends SpeakeasyBase {
-    queryParams: GetModifyAuthenticationProfileQueryParams;
-    headers: GetModifyAuthenticationProfileHeaders;
-}
-export declare class GetModifyAuthenticationProfileResponse extends SpeakeasyBase {
+export declare class GETModifyAuthenticationProfileResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

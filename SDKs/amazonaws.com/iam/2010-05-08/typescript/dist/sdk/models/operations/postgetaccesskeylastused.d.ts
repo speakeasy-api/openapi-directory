@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostGetAccessKeyLastUsedActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTGetAccessKeyLastUsedActionEnum {
     GetAccessKeyLastUsed = "GetAccessKeyLastUsed"
 }
-export declare enum PostGetAccessKeyLastUsedVersionEnum {
+export declare enum POSTGetAccessKeyLastUsedVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostGetAccessKeyLastUsedQueryParams extends SpeakeasyBase {
-    action: PostGetAccessKeyLastUsedActionEnum;
-    version: PostGetAccessKeyLastUsedVersionEnum;
-}
-export declare class PostGetAccessKeyLastUsedHeaders extends SpeakeasyBase {
+export declare class POSTGetAccessKeyLastUsedRequest extends SpeakeasyBase {
+    action: POSTGetAccessKeyLastUsedActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTGetAccessKeyLastUsedVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostGetAccessKeyLastUsedHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostGetAccessKeyLastUsedRequest extends SpeakeasyBase {
-    queryParams: PostGetAccessKeyLastUsedQueryParams;
-    headers: PostGetAccessKeyLastUsedHeaders;
-    request?: Uint8Array;
-}
-export declare class PostGetAccessKeyLastUsedResponse extends SpeakeasyBase {
+export declare class POSTGetAccessKeyLastUsedResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

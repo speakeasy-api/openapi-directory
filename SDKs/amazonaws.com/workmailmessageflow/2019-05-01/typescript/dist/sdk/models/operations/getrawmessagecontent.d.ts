@@ -1,9 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetRawMessageContentPathParams extends SpeakeasyBase {
-    messageId: string;
-}
-export declare class GetRawMessageContentHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetRawMessageContentRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,14 +9,21 @@ export declare class GetRawMessageContentHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class GetRawMessageContentRequest extends SpeakeasyBase {
-    pathParams: GetRawMessageContentPathParams;
-    headers: GetRawMessageContentHeaders;
+    /**
+     * The identifier of the email message to retrieve.
+     */
+    messageId: string;
 }
 export declare class GetRawMessageContentResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getRawMessageContentResponse?: shared.GetRawMessageContentResponse;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeIdentityIdFormatActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeIdentityIdFormatActionEnum {
     DescribeIdentityIdFormat = "DescribeIdentityIdFormat"
 }
-export declare enum PostDescribeIdentityIdFormatVersionEnum {
+export declare enum POSTDescribeIdentityIdFormatVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDescribeIdentityIdFormatQueryParams extends SpeakeasyBase {
-    action: PostDescribeIdentityIdFormatActionEnum;
-    version: PostDescribeIdentityIdFormatVersionEnum;
-}
-export declare class PostDescribeIdentityIdFormatHeaders extends SpeakeasyBase {
+export declare class POSTDescribeIdentityIdFormatRequest extends SpeakeasyBase {
+    action: POSTDescribeIdentityIdFormatActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDescribeIdentityIdFormatVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDescribeIdentityIdFormatHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeIdentityIdFormatRequest extends SpeakeasyBase {
-    queryParams: PostDescribeIdentityIdFormatQueryParams;
-    headers: PostDescribeIdentityIdFormatHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeIdentityIdFormatResponse extends SpeakeasyBase {
+export declare class POSTDescribeIdentityIdFormatResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

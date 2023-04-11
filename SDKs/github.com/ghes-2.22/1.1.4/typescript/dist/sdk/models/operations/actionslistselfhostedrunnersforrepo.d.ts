@@ -1,24 +1,32 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ActionsListSelfHostedRunnersForRepoPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ActionsListSelfHostedRunnersForRepoRequest extends SpeakeasyBase {
     owner: string;
+    /**
+     * Page number of the results to fetch.
+     */
+    page?: number;
+    /**
+     * Results per page (max 100)
+     */
+    perPage?: number;
     repo: string;
 }
-export declare class ActionsListSelfHostedRunnersForRepoQueryParams extends SpeakeasyBase {
-    page?: number;
-    perPage?: number;
-}
-export declare class ActionsListSelfHostedRunnersForRepo200ApplicationJson extends SpeakeasyBase {
+/**
+ * Response
+ */
+export declare class ActionsListSelfHostedRunnersForRepo200ApplicationJSON extends SpeakeasyBase {
     runners: shared.RunnerNoLabels[];
     totalCount: number;
 }
-export declare class ActionsListSelfHostedRunnersForRepoRequest extends SpeakeasyBase {
-    pathParams: ActionsListSelfHostedRunnersForRepoPathParams;
-    queryParams: ActionsListSelfHostedRunnersForRepoQueryParams;
-}
 export declare class ActionsListSelfHostedRunnersForRepoResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
-    actionsListSelfHostedRunnersForRepo200ApplicationJSONObject?: ActionsListSelfHostedRunnersForRepo200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
+    actionsListSelfHostedRunnersForRepo200ApplicationJSONObject?: ActionsListSelfHostedRunnersForRepo200ApplicationJSON;
 }

@@ -1,13 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class StoryIdFileOoxmlautomationidDeletePathParams extends SpeakeasyBase {
-    id: string;
-    ooxmlAutomationId: string;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class StoryIdFileOoxmlautomationidDeleteRequest extends SpeakeasyBase {
-    pathParams: StoryIdFileOoxmlautomationidDeletePathParams;
+    /**
+     * the id from the story object
+     */
+    id: string;
+    /**
+     * the id of the ooxml_automation object
+     */
+    ooxmlAutomationId: string;
 }
 export declare class StoryIdFileOoxmlautomationidDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    problemDetail?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad Request
+     */
+    problemDetail?: shared.ProblemDetail;
 }

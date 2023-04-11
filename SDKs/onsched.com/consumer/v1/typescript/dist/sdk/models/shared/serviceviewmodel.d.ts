@@ -1,5 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { CustomFieldInputModel } from "./customfieldinputmodel";
+import { ServiceHoursViewModel } from "./servicehoursviewmodel";
+/**
+ * Success
+ */
 export declare class ServiceViewModel extends SpeakeasyBase {
+    availability?: ServiceHoursViewModel;
     bookAheadUnit?: number;
     bookAheadValue?: number;
     bookInAdvance?: number;
@@ -11,6 +17,7 @@ export declare class ServiceViewModel extends SpeakeasyBase {
     cancellationFeeTaxable?: boolean;
     companyId?: string;
     consumerPadding?: boolean;
+    customFields?: CustomFieldInputModel;
     dailyBookingLimitCount?: number;
     dailyBookingLimitMinutes?: number;
     defaultService?: boolean;
@@ -32,7 +39,7 @@ export declare class ServiceViewModel extends SpeakeasyBase {
     mediaPageUrl?: string;
     name?: string;
     nonRefundable?: boolean;
-    objectName?: string;
+    object?: string;
     padding?: number;
     roundRobin?: number;
     serviceGroupId?: number;

@@ -1,9 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ResetAuthorizersCachePathParams extends SpeakeasyBase {
-    apiId: string;
-    stageName: string;
-}
-export declare class ResetAuthorizersCacheHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ResetAuthorizersCacheRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,14 +8,25 @@ export declare class ResetAuthorizersCacheHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class ResetAuthorizersCacheRequest extends SpeakeasyBase {
-    pathParams: ResetAuthorizersCachePathParams;
-    headers: ResetAuthorizersCacheHeaders;
+    /**
+     * The API identifier.
+     */
+    apiId: string;
+    /**
+     * The stage name. Stage names can contain only alphanumeric characters, hyphens, and underscores, or be $default. Maximum length is 128 characters.
+     */
+    stageName: string;
 }
 export declare class ResetAuthorizersCacheResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

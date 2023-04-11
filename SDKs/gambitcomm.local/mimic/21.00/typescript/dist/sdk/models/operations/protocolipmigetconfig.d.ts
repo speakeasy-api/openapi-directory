@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ProtocolIpmiGetConfigPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ProtocolIpmiGetConfigRequest extends SpeakeasyBase {
+    /**
+     * Agent to show the IPMI configuration
+     */
     agentNum: number;
 }
-export declare class ProtocolIpmiGetConfigRequest extends SpeakeasyBase {
-    pathParams: ProtocolIpmiGetConfigPathParams;
-}
 export declare class ProtocolIpmiGetConfigResponse extends SpeakeasyBase {
-    configIPMI?: shared.ConfigIpmi;
+    /**
+     * successful operation
+     */
+    configIPMI?: shared.ConfigIPMI;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

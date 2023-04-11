@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { WebAcl } from "./webacl";
-export declare class GetWebAclResponse extends SpeakeasyBase {
-    webACL?: WebAcl;
+import { WebACL } from "./webacl";
+/**
+ * Success
+ */
+export declare class GetWebACLResponse extends SpeakeasyBase {
+    webACL?: WebACL;
 }

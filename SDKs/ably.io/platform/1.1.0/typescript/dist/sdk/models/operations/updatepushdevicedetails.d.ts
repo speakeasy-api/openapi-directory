@@ -1,23 +1,31 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdatePushDeviceDetailsPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class UpdatePushDeviceDetailsRequest extends SpeakeasyBase {
+    /**
+     * The version of the API you wish to use.
+     */
+    xAblyVersion?: string;
+    /**
+     * Device's ID.
+     */
     deviceId: string;
-}
-export declare class UpdatePushDeviceDetailsQueryParams extends SpeakeasyBase {
+    /**
+     * The response format you would like
+     */
     format?: shared.ResponseFormatEnum;
 }
-export declare class UpdatePushDeviceDetailsHeaders extends SpeakeasyBase {
-    xAblyVersion?: string;
-}
-export declare class UpdatePushDeviceDetailsRequest extends SpeakeasyBase {
-    pathParams: UpdatePushDeviceDetailsPathParams;
-    queryParams: UpdatePushDeviceDetailsQueryParams;
-    headers: UpdatePushDeviceDetailsHeaders;
-}
-export declare class UpdatePushDeviceDetailsResponseOutput extends SpeakeasyBase {
+export declare class UpdatePushDeviceDetailsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
+    /**
+     * OK
+     */
     deviceDetails?: shared.DeviceDetailsOutput;
+    /**
+     * Error
+     */
     error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

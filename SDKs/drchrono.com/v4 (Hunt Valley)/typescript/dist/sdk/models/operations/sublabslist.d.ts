@@ -1,26 +1,36 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class SublabsListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class SublabsListSecurity extends SpeakeasyBase {
+    drchronoOauth2: string;
+}
+export declare class SublabsListRequest extends SpeakeasyBase {
     cursor?: string;
     pageSize?: number;
 }
-export declare class SublabsListSecurity extends SpeakeasyBase {
-    drchronoOauth2: shared.SchemeDrchronoOauth2;
-}
 /**
  * Paginated Result
-**/
-export declare class SublabsList200ApplicationJson extends SpeakeasyBase {
+ */
+export declare class SublabsList200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * result data
+     */
     data?: shared.LabVendorLocation[];
+    /**
+     * Next Paginated page
+     */
     next?: string;
+    /**
+     * Previous paginated page
+     */
     previous?: string;
-}
-export declare class SublabsListRequest extends SpeakeasyBase {
-    queryParams: SublabsListQueryParams;
-    security: SublabsListSecurity;
 }
 export declare class SublabsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    sublabsList200ApplicationJSONObject?: SublabsList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
+    sublabsList200ApplicationJSONObject?: SublabsList200ApplicationJSON;
 }

@@ -1,0 +1,111 @@
+import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+export declare class Projects {
+    _defaultClient: AxiosInstance;
+    _securityClient: AxiosInstance;
+    _serverURL: string;
+    _language: string;
+    _sdkVersion: string;
+    _genVersion: string;
+    constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
+    /**
+     * Creates a dataset.
+     */
+    automlProjectsLocationsDatasetsCreate(req: operations.AutomlProjectsLocationsDatasetsCreateRequest, security: operations.AutomlProjectsLocationsDatasetsCreateSecurity, config?: AxiosRequestConfig): Promise<operations.AutomlProjectsLocationsDatasetsCreateResponse>;
+    /**
+     * Exports dataset's data to the provided output location. Returns an empty response in the response field when it completes.
+     */
+    automlProjectsLocationsDatasetsExportData(req: operations.AutomlProjectsLocationsDatasetsExportDataRequest, security: operations.AutomlProjectsLocationsDatasetsExportDataSecurity, config?: AxiosRequestConfig): Promise<operations.AutomlProjectsLocationsDatasetsExportDataResponse>;
+    /**
+     * Imports data into a dataset. For Tables this method can only be called on an empty Dataset. For Tables: * A schema_inference_version parameter must be explicitly set. Returns an empty response in the response field when it completes.
+     */
+    automlProjectsLocationsDatasetsImportData(req: operations.AutomlProjectsLocationsDatasetsImportDataRequest, security: operations.AutomlProjectsLocationsDatasetsImportDataSecurity, config?: AxiosRequestConfig): Promise<operations.AutomlProjectsLocationsDatasetsImportDataResponse>;
+    /**
+     * Lists datasets in a project.
+     */
+    automlProjectsLocationsDatasetsList(req: operations.AutomlProjectsLocationsDatasetsListRequest, security: operations.AutomlProjectsLocationsDatasetsListSecurity, config?: AxiosRequestConfig): Promise<operations.AutomlProjectsLocationsDatasetsListResponse>;
+    /**
+     * Lists column specs in a table spec.
+     */
+    automlProjectsLocationsDatasetsTableSpecsColumnSpecsList(req: operations.AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsListRequest, security: operations.AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsListSecurity, config?: AxiosRequestConfig): Promise<operations.AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsListResponse>;
+    /**
+     * Updates a column spec.
+     */
+    automlProjectsLocationsDatasetsTableSpecsColumnSpecsPatch(req: operations.AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsPatchRequest, security: operations.AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsPatchSecurity, config?: AxiosRequestConfig): Promise<operations.AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsPatchResponse>;
+    /**
+     * Lists table specs in a dataset.
+     */
+    automlProjectsLocationsDatasetsTableSpecsList(req: operations.AutomlProjectsLocationsDatasetsTableSpecsListRequest, security: operations.AutomlProjectsLocationsDatasetsTableSpecsListSecurity, config?: AxiosRequestConfig): Promise<operations.AutomlProjectsLocationsDatasetsTableSpecsListResponse>;
+    /**
+     * Lists information about the supported locations for this service.
+     */
+    automlProjectsLocationsList(req: operations.AutomlProjectsLocationsListRequest, security: operations.AutomlProjectsLocationsListSecurity, config?: AxiosRequestConfig): Promise<operations.AutomlProjectsLocationsListResponse>;
+    /**
+     * Perform a batch prediction. Unlike the online Predict, batch prediction result won't be immediately available in the response. Instead, a long running operation object is returned. User can poll the operation result via GetOperation method. Once the operation is done, BatchPredictResult is returned in the response field. Available for following ML problems: * Image Classification * Image Object Detection * Video Classification * Video Object Tracking * Text Extraction * Tables
+     */
+    automlProjectsLocationsModelsBatchPredict(req: operations.AutomlProjectsLocationsModelsBatchPredictRequest, security: operations.AutomlProjectsLocationsModelsBatchPredictSecurity, config?: AxiosRequestConfig): Promise<operations.AutomlProjectsLocationsModelsBatchPredictResponse>;
+    /**
+     * Creates a model. Returns a Model in the response field when it completes. When you create a model, several model evaluations are created for it: a global evaluation, and one evaluation for each annotation spec.
+     */
+    automlProjectsLocationsModelsCreate(req: operations.AutomlProjectsLocationsModelsCreateRequest, security: operations.AutomlProjectsLocationsModelsCreateSecurity, config?: AxiosRequestConfig): Promise<operations.AutomlProjectsLocationsModelsCreateResponse>;
+    /**
+     * Deploys a model. If a model is already deployed, deploying it with the same parameters has no effect. Deploying with different parametrs (as e.g. changing node_number) will reset the deployment state without pausing the model's availability. Only applicable for Text Classification, Image Object Detection , Tables, and Image Segmentation; all other domains manage deployment automatically. Returns an empty response in the response field when it completes.
+     */
+    automlProjectsLocationsModelsDeploy(req: operations.AutomlProjectsLocationsModelsDeployRequest, security: operations.AutomlProjectsLocationsModelsDeploySecurity, config?: AxiosRequestConfig): Promise<operations.AutomlProjectsLocationsModelsDeployResponse>;
+    /**
+     * Exports a trained, "export-able", model to a user specified Google Cloud Storage location. A model is considered export-able if and only if it has an export format defined for it in ModelExportOutputConfig. Returns an empty response in the response field when it completes.
+     */
+    automlProjectsLocationsModelsExport(req: operations.AutomlProjectsLocationsModelsExportRequest, security: operations.AutomlProjectsLocationsModelsExportSecurity, config?: AxiosRequestConfig): Promise<operations.AutomlProjectsLocationsModelsExportResponse>;
+    /**
+     * Exports examples on which the model was evaluated (i.e. which were in the TEST set of the dataset the model was created from), together with their ground truth annotations and the annotations created (predicted) by the model. The examples, ground truth and predictions are exported in the state they were at the moment the model was evaluated. This export is available only for 30 days since the model evaluation is created. Currently only available for Tables. Returns an empty response in the response field when it completes.
+     */
+    automlProjectsLocationsModelsExportEvaluatedExamples(req: operations.AutomlProjectsLocationsModelsExportEvaluatedExamplesRequest, security: operations.AutomlProjectsLocationsModelsExportEvaluatedExamplesSecurity, config?: AxiosRequestConfig): Promise<operations.AutomlProjectsLocationsModelsExportEvaluatedExamplesResponse>;
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     */
+    automlProjectsLocationsModelsGetIamPolicy(req: operations.AutomlProjectsLocationsModelsGetIamPolicyRequest, security: operations.AutomlProjectsLocationsModelsGetIamPolicySecurity, config?: AxiosRequestConfig): Promise<operations.AutomlProjectsLocationsModelsGetIamPolicyResponse>;
+    /**
+     * Lists models.
+     */
+    automlProjectsLocationsModelsList(req: operations.AutomlProjectsLocationsModelsListRequest, security: operations.AutomlProjectsLocationsModelsListSecurity, config?: AxiosRequestConfig): Promise<operations.AutomlProjectsLocationsModelsListResponse>;
+    /**
+     * Lists model evaluations.
+     */
+    automlProjectsLocationsModelsModelEvaluationsList(req: operations.AutomlProjectsLocationsModelsModelEvaluationsListRequest, security: operations.AutomlProjectsLocationsModelsModelEvaluationsListSecurity, config?: AxiosRequestConfig): Promise<operations.AutomlProjectsLocationsModelsModelEvaluationsListResponse>;
+    /**
+     * Perform an online prediction. The prediction result will be directly returned in the response. Available for following ML problems, and their expected request payloads: * Image Classification - Image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB. * Image Object Detection - Image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB. * Text Classification - TextSnippet, content up to 60,000 characters, UTF-8 encoded. * Text Extraction - TextSnippet, content up to 30,000 characters, UTF-8 NFC encoded. * Translation - TextSnippet, content up to 25,000 characters, UTF-8 encoded. * Tables - Row, with column values matching the columns of the model, up to 5MB. Not available for FORECASTING prediction_type. * Text Sentiment - TextSnippet, content up 500 characters, UTF-8 encoded.
+     */
+    automlProjectsLocationsModelsPredict(req: operations.AutomlProjectsLocationsModelsPredictRequest, security: operations.AutomlProjectsLocationsModelsPredictSecurity, config?: AxiosRequestConfig): Promise<operations.AutomlProjectsLocationsModelsPredictResponse>;
+    /**
+     * Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+     */
+    automlProjectsLocationsModelsSetIamPolicy(req: operations.AutomlProjectsLocationsModelsSetIamPolicyRequest, security: operations.AutomlProjectsLocationsModelsSetIamPolicySecurity, config?: AxiosRequestConfig): Promise<operations.AutomlProjectsLocationsModelsSetIamPolicyResponse>;
+    /**
+     * Undeploys a model. If the model is not deployed this method has no effect. Only applicable for Text Classification, Image Object Detection and Tables; all other domains manage deployment automatically. Returns an empty response in the response field when it completes.
+     */
+    automlProjectsLocationsModelsUndeploy(req: operations.AutomlProjectsLocationsModelsUndeployRequest, security: operations.AutomlProjectsLocationsModelsUndeploySecurity, config?: AxiosRequestConfig): Promise<operations.AutomlProjectsLocationsModelsUndeployResponse>;
+    /**
+     * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
+     */
+    automlProjectsLocationsOperationsCancel(req: operations.AutomlProjectsLocationsOperationsCancelRequest, security: operations.AutomlProjectsLocationsOperationsCancelSecurity, config?: AxiosRequestConfig): Promise<operations.AutomlProjectsLocationsOperationsCancelResponse>;
+    /**
+     * Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
+     */
+    automlProjectsLocationsOperationsDelete(req: operations.AutomlProjectsLocationsOperationsDeleteRequest, security: operations.AutomlProjectsLocationsOperationsDeleteSecurity, config?: AxiosRequestConfig): Promise<operations.AutomlProjectsLocationsOperationsDeleteResponse>;
+    /**
+     * Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
+     */
+    automlProjectsLocationsOperationsGet(req: operations.AutomlProjectsLocationsOperationsGetRequest, security: operations.AutomlProjectsLocationsOperationsGetSecurity, config?: AxiosRequestConfig): Promise<operations.AutomlProjectsLocationsOperationsGetResponse>;
+    /**
+     * Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
+     */
+    automlProjectsLocationsOperationsList(req: operations.AutomlProjectsLocationsOperationsListRequest, security: operations.AutomlProjectsLocationsOperationsListSecurity, config?: AxiosRequestConfig): Promise<operations.AutomlProjectsLocationsOperationsListResponse>;
+    /**
+     * Waits until the specified long-running operation is done or reaches at most a specified timeout, returning the latest state. If the operation is already done, the latest state is immediately returned. If the timeout specified is greater than the default HTTP/RPC timeout, the HTTP/RPC timeout is used. If the server does not support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Note that this method is on a best-effort basis. It may return the latest state before the specified timeout (including immediately), meaning even an immediate response is no guarantee that the operation is done.
+     */
+    automlProjectsLocationsOperationsWait(req: operations.AutomlProjectsLocationsOperationsWaitRequest, security: operations.AutomlProjectsLocationsOperationsWaitSecurity, config?: AxiosRequestConfig): Promise<operations.AutomlProjectsLocationsOperationsWaitResponse>;
+    /**
+     * Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
+     */
+    automlProjectsLocationsTestIamPermissions(req: operations.AutomlProjectsLocationsTestIamPermissionsRequest, security: operations.AutomlProjectsLocationsTestIamPermissionsSecurity, config?: AxiosRequestConfig): Promise<operations.AutomlProjectsLocationsTestIamPermissionsResponse>;
+}

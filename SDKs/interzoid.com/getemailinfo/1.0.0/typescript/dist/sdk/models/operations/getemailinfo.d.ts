@@ -1,9 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetemailinfoQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetemailinfoRequest extends SpeakeasyBase {
+    /**
+     * Email address to retrieve validation information
+     */
     email: string;
+    /**
+     * Your Interzoid license API key. Register at www.interzoid.com/register
+     */
     license: string;
 }
-export declare class Getemailinfo200ApplicationJson extends SpeakeasyBase {
+/**
+ * Email validation and demographic information
+ */
+export declare class Getemailinfo200ApplicationJSON extends SpeakeasyBase {
     code?: string;
     credits?: string;
     email?: string;
@@ -17,11 +27,12 @@ export declare class Getemailinfo200ApplicationJson extends SpeakeasyBase {
     isVulgar?: string;
     response?: string;
 }
-export declare class GetemailinfoRequest extends SpeakeasyBase {
-    queryParams: GetemailinfoQueryParams;
-}
 export declare class GetemailinfoResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getemailinfo200ApplicationJSONObject?: Getemailinfo200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Email validation and demographic information
+     */
+    getemailinfo200ApplicationJSONObject?: Getemailinfo200ApplicationJSON;
 }

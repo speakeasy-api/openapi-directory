@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Everything about Otoroshi api keys
+ */
 export declare class Apikeys {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,109 +12,126 @@ export declare class Apikeys {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * allApiKeys - Get all api keys
-     *
      * Get all api keys
-    **/
-    allApiKeys(req: operations.AllApiKeysRequest, config?: AxiosRequestConfig): Promise<operations.AllApiKeysResponse>;
-    /**
-     * apiKey - Get an api key
      *
+     * @remarks
+     * Get all api keys
+     */
+    allApiKeys(config?: AxiosRequestConfig): Promise<operations.AllApiKeysResponse>;
+    /**
+     * Get an api key
+     *
+     * @remarks
      * Get an api key for a specified service descriptor
-    **/
-    apiKey(req: operations.ApiKeyRequest, config?: AxiosRequestConfig): Promise<operations.ApiKeyResponse>;
+     */
+    apiKey(req: operations.ApiKeyRequest, security: operations.ApiKeySecurity, config?: AxiosRequestConfig): Promise<operations.ApiKeyResponse>;
     /**
-     * apiKeyFromGroup - Get an api key
+     * Get an api key
      *
+     * @remarks
      * Get an api key for a specified service group
-    **/
-    apiKeyFromGroup(req: operations.ApiKeyFromGroupRequest, config?: AxiosRequestConfig): Promise<operations.ApiKeyFromGroupResponse>;
+     */
+    apiKeyFromGroup(req: operations.ApiKeyFromGroupRequest, security: operations.ApiKeyFromGroupSecurity, config?: AxiosRequestConfig): Promise<operations.ApiKeyFromGroupResponse>;
     /**
-     * apiKeyFromGroupQuotas - Get the quota state of an api key
-     *
      * Get the quota state of an api key
-    **/
-    apiKeyFromGroupQuotas(req: operations.ApiKeyFromGroupQuotasRequest, config?: AxiosRequestConfig): Promise<operations.ApiKeyFromGroupQuotasResponse>;
-    /**
-     * apiKeyGroup - Get the group of an api key
      *
+     * @remarks
+     * Get the quota state of an api key
+     */
+    apiKeyFromGroupQuotas(req: operations.ApiKeyFromGroupQuotasRequest, security: operations.ApiKeyFromGroupQuotasSecurity, config?: AxiosRequestConfig): Promise<operations.ApiKeyFromGroupQuotasResponse>;
+    /**
      * Get the group of an api key
-    **/
-    apiKeyGroup(req: operations.ApiKeyGroupRequest, config?: AxiosRequestConfig): Promise<operations.ApiKeyGroupResponse>;
-    /**
-     * apiKeyQuotas - Get the quota state of an api key
      *
+     * @remarks
+     * Get the group of an api key
+     */
+    apiKeyGroup(req: operations.ApiKeyGroupRequest, security: operations.ApiKeyGroupSecurity, config?: AxiosRequestConfig): Promise<operations.ApiKeyGroupResponse>;
+    /**
      * Get the quota state of an api key
-    **/
-    apiKeyQuotas(req: operations.ApiKeyQuotasRequest, config?: AxiosRequestConfig): Promise<operations.ApiKeyQuotasResponse>;
-    /**
-     * apiKeys - Get all api keys for the group of a service
      *
+     * @remarks
+     * Get the quota state of an api key
+     */
+    apiKeyQuotas(req: operations.ApiKeyQuotasRequest, security: operations.ApiKeyQuotasSecurity, config?: AxiosRequestConfig): Promise<operations.ApiKeyQuotasResponse>;
+    /**
      * Get all api keys for the group of a service
-    **/
-    apiKeys(req: operations.ApiKeysRequest, config?: AxiosRequestConfig): Promise<operations.ApiKeysResponse>;
-    /**
-     * apiKeysFromGroup - Get all api keys for the group of a service
      *
+     * @remarks
      * Get all api keys for the group of a service
-    **/
-    apiKeysFromGroup(req: operations.ApiKeysFromGroupRequest, config?: AxiosRequestConfig): Promise<operations.ApiKeysFromGroupResponse>;
+     */
+    apiKeys(req: operations.ApiKeysRequest, security: operations.ApiKeysSecurity, config?: AxiosRequestConfig): Promise<operations.ApiKeysResponse>;
     /**
-     * createApiKey - Create a new api key for a service
-    **/
-    createApiKey(req: operations.CreateApiKeyRequest, config?: AxiosRequestConfig): Promise<operations.CreateApiKeyResponse>;
-    /**
-     * createApiKeyFromGroup - Create a new api key for a group
+     * Get all api keys for the group of a service
      *
+     * @remarks
+     * Get all api keys for the group of a service
+     */
+    apiKeysFromGroup(req: operations.ApiKeysFromGroupRequest, security: operations.ApiKeysFromGroupSecurity, config?: AxiosRequestConfig): Promise<operations.ApiKeysFromGroupResponse>;
+    /**
+     * Create a new api key for a service
+     */
+    createApiKey(req: operations.CreateApiKeyRequest, security: operations.CreateApiKeySecurity, config?: AxiosRequestConfig): Promise<operations.CreateApiKeyResponse>;
+    /**
      * Create a new api key for a group
-    **/
-    createApiKeyFromGroup(req: operations.CreateApiKeyFromGroupRequest, config?: AxiosRequestConfig): Promise<operations.CreateApiKeyFromGroupResponse>;
-    /**
-     * deleteApiKey - Delete an api key
      *
+     * @remarks
+     * Create a new api key for a group
+     */
+    createApiKeyFromGroup(req: operations.CreateApiKeyFromGroupRequest, security: operations.CreateApiKeyFromGroupSecurity, config?: AxiosRequestConfig): Promise<operations.CreateApiKeyFromGroupResponse>;
+    /**
+     * Delete an api key
+     *
+     * @remarks
      * Delete an api key for a specified service descriptor
-    **/
-    deleteApiKey(req: operations.DeleteApiKeyRequest, config?: AxiosRequestConfig): Promise<operations.DeleteApiKeyResponse>;
+     */
+    deleteApiKey(req: operations.DeleteApiKeyRequest, security: operations.DeleteApiKeySecurity, config?: AxiosRequestConfig): Promise<operations.DeleteApiKeyResponse>;
     /**
-     * deleteApiKeyFromGroup - Delete an api key
+     * Delete an api key
      *
+     * @remarks
      * Delete an api key for a specified service group
-    **/
-    deleteApiKeyFromGroup(req: operations.DeleteApiKeyFromGroupRequest, config?: AxiosRequestConfig): Promise<operations.DeleteApiKeyFromGroupResponse>;
+     */
+    deleteApiKeyFromGroup(req: operations.DeleteApiKeyFromGroupRequest, security: operations.DeleteApiKeyFromGroupSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteApiKeyFromGroupResponse>;
     /**
-     * patchApiKey - Update an api key with a diff
+     * Update an api key with a diff
      *
+     * @remarks
      * Update an api key for a specified service descriptor with a diff
-    **/
-    patchApiKey(req: operations.PatchApiKeyRequest, config?: AxiosRequestConfig): Promise<operations.PatchApiKeyResponse>;
+     */
+    patchApiKey(req: operations.PatchApiKeyRequest, security: operations.PatchApiKeySecurity, config?: AxiosRequestConfig): Promise<operations.PatchApiKeyResponse>;
     /**
-     * patchApiKeyFromGroup - Update an api key with a diff
+     * Update an api key with a diff
      *
+     * @remarks
      * Update an api key for a specified service descriptor with a diff
-    **/
-    patchApiKeyFromGroup(req: operations.PatchApiKeyFromGroupRequest, config?: AxiosRequestConfig): Promise<operations.PatchApiKeyFromGroupResponse>;
+     */
+    patchApiKeyFromGroup(req: operations.PatchApiKeyFromGroupRequest, security: operations.PatchApiKeyFromGroupSecurity, config?: AxiosRequestConfig): Promise<operations.PatchApiKeyFromGroupResponse>;
     /**
-     * resetApiKeyFromGroupQuotas - Reset the quota state of an api key
-     *
      * Reset the quota state of an api key
-    **/
-    resetApiKeyFromGroupQuotas(req: operations.ResetApiKeyFromGroupQuotasRequest, config?: AxiosRequestConfig): Promise<operations.ResetApiKeyFromGroupQuotasResponse>;
-    /**
-     * resetApiKeyQuotas - Reset the quota state of an api key
      *
+     * @remarks
      * Reset the quota state of an api key
-    **/
-    resetApiKeyQuotas(req: operations.ResetApiKeyQuotasRequest, config?: AxiosRequestConfig): Promise<operations.ResetApiKeyQuotasResponse>;
+     */
+    resetApiKeyFromGroupQuotas(req: operations.ResetApiKeyFromGroupQuotasRequest, security: operations.ResetApiKeyFromGroupQuotasSecurity, config?: AxiosRequestConfig): Promise<operations.ResetApiKeyFromGroupQuotasResponse>;
     /**
-     * updateApiKey - Update an api key
+     * Reset the quota state of an api key
      *
+     * @remarks
+     * Reset the quota state of an api key
+     */
+    resetApiKeyQuotas(req: operations.ResetApiKeyQuotasRequest, security: operations.ResetApiKeyQuotasSecurity, config?: AxiosRequestConfig): Promise<operations.ResetApiKeyQuotasResponse>;
+    /**
+     * Update an api key
+     *
+     * @remarks
      * Update an api key for a specified service descriptor
-    **/
-    updateApiKey(req: operations.UpdateApiKeyRequest, config?: AxiosRequestConfig): Promise<operations.UpdateApiKeyResponse>;
+     */
+    updateApiKey(req: operations.UpdateApiKeyRequest, security: operations.UpdateApiKeySecurity, config?: AxiosRequestConfig): Promise<operations.UpdateApiKeyResponse>;
     /**
-     * updateApiKeyFromGroup - Update an api key
+     * Update an api key
      *
+     * @remarks
      * Update an api key for a specified service group
-    **/
-    updateApiKeyFromGroup(req: operations.UpdateApiKeyFromGroupRequest, config?: AxiosRequestConfig): Promise<operations.UpdateApiKeyFromGroupResponse>;
+     */
+    updateApiKeyFromGroup(req: operations.UpdateApiKeyFromGroupRequest, security: operations.UpdateApiKeyFromGroupSecurity, config?: AxiosRequestConfig): Promise<operations.UpdateApiKeyFromGroupResponse>;
 }

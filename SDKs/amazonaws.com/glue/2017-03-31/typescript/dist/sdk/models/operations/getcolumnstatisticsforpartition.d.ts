@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetColumnStatisticsForPartitionXAmzTargetEnum {
-    AwsGlueGetColumnStatisticsForPartition = "AWSGlue.GetColumnStatisticsForPartition"
+    AWSGlueGetColumnStatisticsForPartition = "AWSGlue.GetColumnStatisticsForPartition"
 }
-export declare class GetColumnStatisticsForPartitionHeaders extends SpeakeasyBase {
+export declare class GetColumnStatisticsForPartitionRequest extends SpeakeasyBase {
+    getColumnStatisticsForPartitionRequest: shared.GetColumnStatisticsForPartitionRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class GetColumnStatisticsForPartitionHeaders extends SpeakeasyBas
     xAmzSignedHeaders?: string;
     xAmzTarget: GetColumnStatisticsForPartitionXAmzTargetEnum;
 }
-export declare class GetColumnStatisticsForPartitionRequest extends SpeakeasyBase {
-    headers: GetColumnStatisticsForPartitionHeaders;
-    request: shared.GetColumnStatisticsForPartitionRequest;
-}
 export declare class GetColumnStatisticsForPartitionResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * Success
+     */
     getColumnStatisticsForPartitionResponse?: shared.GetColumnStatisticsForPartitionResponse;
+    /**
+     * GlueEncryptionException
+     */
     glueEncryptionException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

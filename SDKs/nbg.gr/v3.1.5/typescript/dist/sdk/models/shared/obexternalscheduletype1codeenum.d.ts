@@ -1,4 +1,4 @@
-export declare enum ObExternalScheduleType1CodeEnum {
+export declare enum OBExternalScheduleType1CodeEnum {
     Arrival = "Arrival",
     Execution = "Execution"
 }

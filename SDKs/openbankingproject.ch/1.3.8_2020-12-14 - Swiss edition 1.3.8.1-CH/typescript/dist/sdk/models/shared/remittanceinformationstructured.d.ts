@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum RemittanceInformationStructuredScoRorQrRorIpiEnum {
+export declare enum RemittanceInformationStructuredSCORorQRRorIPIEnum {
     Scor = "SCOR",
     Qrr = "QRR",
     Ipi = "IPI"
@@ -7,9 +7,11 @@ export declare enum RemittanceInformationStructuredScoRorQrRorIpiEnum {
 /**
  * Structured remittance information.
  *
-**/
+ * @remarks
+ *
+ */
 export declare class RemittanceInformationStructured extends SpeakeasyBase {
-    scoRorQRRorIPI?: RemittanceInformationStructuredScoRorQrRorIpiEnum;
+    scoRorQRRorIPI?: RemittanceInformationStructuredSCORorQRRorIPIEnum;
     additionalRemittanceInformation?: string;
     reference: string;
     referenceIssuer?: string;

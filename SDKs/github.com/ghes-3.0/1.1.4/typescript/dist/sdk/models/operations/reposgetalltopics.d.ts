@@ -1,25 +1,39 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReposGetAllTopicsPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ReposGetAllTopicsRequest extends SpeakeasyBase {
     owner: string;
+    /**
+     * Page number of the results to fetch.
+     */
+    page?: number;
+    /**
+     * Results per page (max 100)
+     */
+    perPage?: number;
     repo: string;
 }
-export declare class ReposGetAllTopicsQueryParams extends SpeakeasyBase {
-    page?: number;
-    perPage?: number;
-}
-export declare class ReposGetAllTopics415ApplicationJson extends SpeakeasyBase {
+/**
+ * Preview header missing
+ */
+export declare class ReposGetAllTopics415ApplicationJSON extends SpeakeasyBase {
     documentationUrl: string;
     message: string;
-}
-export declare class ReposGetAllTopicsRequest extends SpeakeasyBase {
-    pathParams: ReposGetAllTopicsPathParams;
-    queryParams: ReposGetAllTopicsQueryParams;
 }
 export declare class ReposGetAllTopicsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Resource not found
+     */
     basicError?: shared.BasicError;
-    reposGetAllTopics415ApplicationJSONObject?: ReposGetAllTopics415ApplicationJson;
+    /**
+     * Preview header missing
+     */
+    reposGetAllTopics415ApplicationJSONObject?: ReposGetAllTopics415ApplicationJSON;
+    /**
+     * Response
+     */
     topic?: shared.Topic;
 }

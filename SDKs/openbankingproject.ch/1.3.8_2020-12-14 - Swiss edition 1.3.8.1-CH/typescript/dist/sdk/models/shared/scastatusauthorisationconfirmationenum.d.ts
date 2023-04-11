@@ -1,3 +1,14 @@
+/**
+ * This data element is containing information about the status of the SCA method in an authorisation confirmation response.
+ *
+ * @remarks
+ *
+ * The following codes are defined for this data type.
+ *
+ *   * 'finalised': if the transaction authorisation and confirmation was successfule.
+ *   * 'failed': if the transaction authorisation or confirmation was not successful.
+ *
+ */
 export declare enum ScaStatusAuthorisationConfirmationEnum {
     Finalised = "finalised",
     Failed = "failed"

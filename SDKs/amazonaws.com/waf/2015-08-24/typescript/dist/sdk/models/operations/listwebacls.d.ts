@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum ListWebAcLsXAmzTargetEnum {
-    Awswaf20150824ListWebAcLs = "AWSWAF_20150824.ListWebACLs"
+import { AxiosResponse } from "axios";
+export declare enum ListWebACLsXAmzTargetEnum {
+    AWSWAF20150824ListWebACLs = "AWSWAF_20150824.ListWebACLs"
 }
-export declare class ListWebAcLsHeaders extends SpeakeasyBase {
+export declare class ListWebACLsRequest extends SpeakeasyBase {
+    listWebACLsRequest: shared.ListWebACLsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,16 +13,22 @@ export declare class ListWebAcLsHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: ListWebAcLsXAmzTargetEnum;
+    xAmzTarget: ListWebACLsXAmzTargetEnum;
 }
-export declare class ListWebAcLsRequest extends SpeakeasyBase {
-    headers: ListWebAcLsHeaders;
-    request: shared.ListWebAcLsRequest;
-}
-export declare class ListWebAcLsResponse extends SpeakeasyBase {
+export declare class ListWebACLsResponse extends SpeakeasyBase {
     contentType: string;
-    listWebACLsResponse?: shared.ListWebAcLsResponse;
+    /**
+     * Success
+     */
+    listWebACLsResponse?: shared.ListWebACLsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFInvalidAccountException
+     */
     wafInvalidAccountException?: any;
 }

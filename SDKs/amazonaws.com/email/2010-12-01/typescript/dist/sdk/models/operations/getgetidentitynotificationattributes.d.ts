@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetGetIdentityNotificationAttributesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETGETIdentityNotificationAttributesActionEnum {
     GetIdentityNotificationAttributes = "GetIdentityNotificationAttributes"
 }
-export declare enum GetGetIdentityNotificationAttributesVersionEnum {
+export declare enum GETGETIdentityNotificationAttributesVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetGetIdentityNotificationAttributesQueryParams extends SpeakeasyBase {
-    action: GetGetIdentityNotificationAttributesActionEnum;
+export declare class GETGETIdentityNotificationAttributesRequest extends SpeakeasyBase {
+    action: GETGETIdentityNotificationAttributesActionEnum;
+    /**
+     * A list of one or more identities. You can specify an identity by using its name or by using its Amazon Resource Name (ARN). Examples: <code>user@example.com</code>, <code>example.com</code>, <code>arn:aws:ses:us-east-1:123456789012:identity/example.com</code>.
+     */
     identities: string[];
-    version: GetGetIdentityNotificationAttributesVersionEnum;
-}
-export declare class GetGetIdentityNotificationAttributesHeaders extends SpeakeasyBase {
+    version: GETGETIdentityNotificationAttributesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetGetIdentityNotificationAttributesHeaders extends Speakea
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetGetIdentityNotificationAttributesRequest extends SpeakeasyBase {
-    queryParams: GetGetIdentityNotificationAttributesQueryParams;
-    headers: GetGetIdentityNotificationAttributesHeaders;
-}
-export declare class GetGetIdentityNotificationAttributesResponse extends SpeakeasyBase {
+export declare class GETGETIdentityNotificationAttributesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

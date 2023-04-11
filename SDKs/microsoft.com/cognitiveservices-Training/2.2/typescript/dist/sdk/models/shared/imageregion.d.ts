@@ -4,6 +4,9 @@ export declare class ImageRegion extends SpeakeasyBase {
     height?: number;
     left?: number;
     regionId?: string;
+    /**
+     * Id of the tag associated with this region.
+     */
     tagId?: string;
     tagName?: string;
     top?: number;

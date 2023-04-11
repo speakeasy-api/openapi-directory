@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Group {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,47 +9,47 @@ export declare class Group {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createGroupIfNotExistsForUsingGet - this functions helps you to map your application group ids to Etherpad group ids
-    **/
-    createGroupIfNotExistsForUsingGet(req: operations.CreateGroupIfNotExistsForUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.CreateGroupIfNotExistsForUsingGetResponse>;
+     * this functions helps you to map your application group ids to Etherpad group ids
+     */
+    createGroupIfNotExistsForUsingGET(req: operations.CreateGroupIfNotExistsForUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.CreateGroupIfNotExistsForUsingGETResponse>;
     /**
-     * createGroupIfNotExistsForUsingPost - this functions helps you to map your application group ids to Etherpad group ids
-    **/
-    createGroupIfNotExistsForUsingPost(req: operations.CreateGroupIfNotExistsForUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.CreateGroupIfNotExistsForUsingPostResponse>;
+     * this functions helps you to map your application group ids to Etherpad group ids
+     */
+    createGroupIfNotExistsForUsingPOST(req: operations.CreateGroupIfNotExistsForUsingPOSTRequest, config?: AxiosRequestConfig): Promise<operations.CreateGroupIfNotExistsForUsingPOSTResponse>;
     /**
-     * createGroupPadUsingGet - creates a new pad in this group
-    **/
-    createGroupPadUsingGet(req: operations.CreateGroupPadUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.CreateGroupPadUsingGetResponse>;
+     * creates a new pad in this group
+     */
+    createGroupPadUsingGET(req: operations.CreateGroupPadUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.CreateGroupPadUsingGETResponse>;
     /**
-     * createGroupPadUsingPost - creates a new pad in this group
-    **/
-    createGroupPadUsingPost(req: operations.CreateGroupPadUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.CreateGroupPadUsingPostResponse>;
+     * creates a new pad in this group
+     */
+    createGroupPadUsingPOST(req: operations.CreateGroupPadUsingPOSTRequest, config?: AxiosRequestConfig): Promise<operations.CreateGroupPadUsingPOSTResponse>;
     /**
-     * createGroupUsingGet - creates a new group
-    **/
-    createGroupUsingGet(config?: AxiosRequestConfig): Promise<operations.CreateGroupUsingGetResponse>;
+     * creates a new group
+     */
+    createGroupUsingGET(config?: AxiosRequestConfig): Promise<operations.CreateGroupUsingGETResponse>;
     /**
-     * createGroupUsingPost - creates a new group
-    **/
-    createGroupUsingPost(config?: AxiosRequestConfig): Promise<operations.CreateGroupUsingPostResponse>;
+     * creates a new group
+     */
+    createGroupUsingPOST(config?: AxiosRequestConfig): Promise<operations.CreateGroupUsingPOSTResponse>;
     /**
-     * deleteGroupUsingGet - deletes a group
-    **/
-    deleteGroupUsingGet(req: operations.DeleteGroupUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.DeleteGroupUsingGetResponse>;
+     * deletes a group
+     */
+    deleteGroupUsingGET(req: operations.DeleteGroupUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.DeleteGroupUsingGETResponse>;
     /**
-     * deleteGroupUsingPost - deletes a group
-    **/
-    deleteGroupUsingPost(req: operations.DeleteGroupUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.DeleteGroupUsingPostResponse>;
-    listAllGroupsUsingGet(config?: AxiosRequestConfig): Promise<operations.ListAllGroupsUsingGetResponse>;
-    listAllGroupsUsingPost(config?: AxiosRequestConfig): Promise<operations.ListAllGroupsUsingPostResponse>;
+     * deletes a group
+     */
+    deleteGroupUsingPOST(req: operations.DeleteGroupUsingPOSTRequest, config?: AxiosRequestConfig): Promise<operations.DeleteGroupUsingPOSTResponse>;
+    listAllGroupsUsingGET(config?: AxiosRequestConfig): Promise<operations.ListAllGroupsUsingGETResponse>;
+    listAllGroupsUsingPOST(config?: AxiosRequestConfig): Promise<operations.ListAllGroupsUsingPOSTResponse>;
     /**
-     * listPadsUsingGet - returns all pads of this group
-    **/
-    listPadsUsingGet(req: operations.ListPadsUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.ListPadsUsingGetResponse>;
+     * returns all pads of this group
+     */
+    listPadsUsingGET(req: operations.ListPadsUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.ListPadsUsingGETResponse>;
     /**
-     * listPadsUsingPost - returns all pads of this group
-    **/
-    listPadsUsingPost(req: operations.ListPadsUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.ListPadsUsingPostResponse>;
-    listSessionsOfGroupUsingGet(req: operations.ListSessionsOfGroupUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.ListSessionsOfGroupUsingGetResponse>;
-    listSessionsOfGroupUsingPost(req: operations.ListSessionsOfGroupUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.ListSessionsOfGroupUsingPostResponse>;
+     * returns all pads of this group
+     */
+    listPadsUsingPOST(req: operations.ListPadsUsingPOSTRequest, config?: AxiosRequestConfig): Promise<operations.ListPadsUsingPOSTResponse>;
+    listSessionsOfGroupUsingGET(req: operations.ListSessionsOfGroupUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.ListSessionsOfGroupUsingGETResponse>;
+    listSessionsOfGroupUsingPOST(req: operations.ListSessionsOfGroupUsingPOSTRequest, config?: AxiosRequestConfig): Promise<operations.ListSessionsOfGroupUsingPOSTResponse>;
 }

@@ -1,14 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ProductsApiListQueryParams extends SpeakeasyBase {
-    page?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ProductsApiListRequest extends SpeakeasyBase {
-    queryParams: ProductsApiListQueryParams;
-    request: any;
+    requestBody: any;
+    page?: number;
 }
 export declare class ProductsApiListResponse extends SpeakeasyBase {
     contentType: string;
     productViews?: shared.ProductView[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

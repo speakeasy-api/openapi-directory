@@ -1,41 +1,64 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class RetrieveBalanceTransfersPathParams extends SpeakeasyBase {
-    apiKey: string;
+import { AxiosResponse } from "axios";
+export declare class RetrieveBalanceTransfersSecurity extends SpeakeasyBase {
+    password: string;
+    username: string;
 }
-export declare class RetrieveBalanceTransfersQueryParams extends SpeakeasyBase {
+export declare class RetrieveBalanceTransfersRequest extends SpeakeasyBase {
+    /**
+     * ID of the primary account.
+     */
+    apiKey: string;
+    /**
+     * End of the retrieval period. If absent then all transfers until now is returned.
+     */
     endDate?: string;
+    /**
+     * Start of the retrieval period.
+     */
     startDate: string;
+    /**
+     * Subaccount to filter by. You may send this multiple times to filter on multiple subaccounts
+     */
     subaccount?: string;
 }
-export declare class RetrieveBalanceTransfersSecurity extends SpeakeasyBase {
-    basicAuth: shared.SchemeBasicAuth;
-}
-export declare class RetrieveBalanceTransfers401ApplicationJson extends SpeakeasyBase {
+/**
+ * Invalid API Key
+ */
+export declare class RetrieveBalanceTransfers404ApplicationJSON extends SpeakeasyBase {
     detail: string;
     instance: string;
     title: string;
     type: string;
 }
 /**
- * Invalid API Key
-**/
-export declare class RetrieveBalanceTransfers404ApplicationJson extends SpeakeasyBase {
+ * Credential is missing or invalid
+ */
+export declare class RetrieveBalanceTransfers401ApplicationJSON extends SpeakeasyBase {
     detail: string;
     instance: string;
     title: string;
     type: string;
 }
-export declare class RetrieveBalanceTransfersRequest extends SpeakeasyBase {
-    pathParams: RetrieveBalanceTransfersPathParams;
-    queryParams: RetrieveBalanceTransfersQueryParams;
-    security: RetrieveBalanceTransfersSecurity;
-}
 export declare class RetrieveBalanceTransfersResponse extends SpeakeasyBase {
     contentType: string;
-    listBalanceTransfersResponse?: any;
+    /**
+     * List balance transfers response
+     */
+    listBalanceTransfersResponse?: shared.ListBalanceTransfersResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Action is forbidden
+     */
     unprovisionedErrorResponse?: shared.UnprovisionedErrorResponse;
-    retrieveBalanceTransfers401ApplicationJSONObject?: RetrieveBalanceTransfers401ApplicationJson;
-    retrieveBalanceTransfers404ApplicationJSONObject?: RetrieveBalanceTransfers404ApplicationJson;
+    /**
+     * Credential is missing or invalid
+     */
+    retrieveBalanceTransfers401ApplicationJSONObject?: RetrieveBalanceTransfers401ApplicationJSON;
+    /**
+     * The account ID provided does not exist in our system or you do not have access
+     */
+    retrieveBalanceTransfers404ApplicationJSONObject?: RetrieveBalanceTransfers404ApplicationJSON;
 }

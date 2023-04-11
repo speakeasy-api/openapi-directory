@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteNotificationConfigurationActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteNotificationConfigurationActionEnum {
     DeleteNotificationConfiguration = "DeleteNotificationConfiguration"
 }
-export declare enum GetDeleteNotificationConfigurationVersionEnum {
+export declare enum GETDeleteNotificationConfigurationVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class GetDeleteNotificationConfigurationQueryParams extends SpeakeasyBase {
-    action: GetDeleteNotificationConfigurationActionEnum;
+export declare class GETDeleteNotificationConfigurationRequest extends SpeakeasyBase {
+    action: GETDeleteNotificationConfigurationActionEnum;
+    /**
+     * The name of the Auto Scaling group.
+     */
     autoScalingGroupName: string;
+    /**
+     * The Amazon Resource Name (ARN) of the Amazon SNS topic.
+     */
     topicARN: string;
-    version: GetDeleteNotificationConfigurationVersionEnum;
-}
-export declare class GetDeleteNotificationConfigurationHeaders extends SpeakeasyBase {
+    version: GETDeleteNotificationConfigurationVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetDeleteNotificationConfigurationHeaders extends Speakeasy
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteNotificationConfigurationRequest extends SpeakeasyBase {
-    queryParams: GetDeleteNotificationConfigurationQueryParams;
-    headers: GetDeleteNotificationConfigurationHeaders;
-}
-export declare class GetDeleteNotificationConfigurationResponse extends SpeakeasyBase {
+export declare class GETDeleteNotificationConfigurationResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

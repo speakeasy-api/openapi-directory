@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class VideosEssentials {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,43 +9,43 @@ export declare class VideosEssentials {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * checkIfUserOwnsVideo - Check if a user owns a video
-    **/
+     * Check if a user owns a video
+     */
     checkIfUserOwnsVideo(req: operations.CheckIfUserOwnsVideoRequest, config?: AxiosRequestConfig): Promise<operations.CheckIfUserOwnsVideoResponse>;
     /**
-     * checkIfUserOwnsVideoAlt1 - Check if a user owns a video
-    **/
+     * Check if a user owns a video
+     */
     checkIfUserOwnsVideoAlt1(req: operations.CheckIfUserOwnsVideoAlt1Request, config?: AxiosRequestConfig): Promise<operations.CheckIfUserOwnsVideoAlt1Response>;
     /**
-     * deleteVideo - Delete a video
-    **/
-    deleteVideo(req: operations.DeleteVideoRequest, config?: AxiosRequestConfig): Promise<operations.DeleteVideoResponse>;
+     * Delete a video
+     */
+    deleteVideo(req: operations.DeleteVideoRequest, security: operations.DeleteVideoSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteVideoResponse>;
     /**
-     * editVideo - Edit a video
-    **/
-    editVideo(req: operations.EditVideoRequest, config?: AxiosRequestConfig): Promise<operations.EditVideoResponse>;
+     * Edit a video
+     */
+    editVideo(req: operations.EditVideoRequest, security: operations.EditVideoSecurity, config?: AxiosRequestConfig): Promise<operations.EditVideoResponse>;
     /**
-     * getAppearances - Get all the videos in which a user appears
-    **/
+     * Get all the videos in which a user appears
+     */
     getAppearances(req: operations.GetAppearancesRequest, config?: AxiosRequestConfig): Promise<operations.GetAppearancesResponse>;
     /**
-     * getAppearancesAlt1 - Get all the videos in which a user appears
-    **/
+     * Get all the videos in which a user appears
+     */
     getAppearancesAlt1(req: operations.GetAppearancesAlt1Request, config?: AxiosRequestConfig): Promise<operations.GetAppearancesAlt1Response>;
     /**
-     * getVideo - Get a specific video
-    **/
+     * Get a specific video
+     */
     getVideo(req: operations.GetVideoRequest, config?: AxiosRequestConfig): Promise<operations.GetVideoResponse>;
     /**
-     * getVideos - Get all the videos that a user has uploaded
-    **/
+     * Get all the videos that a user has uploaded
+     */
     getVideos(req: operations.GetVideosRequest, config?: AxiosRequestConfig): Promise<operations.GetVideosResponse>;
     /**
-     * getVideosAlt1 - Get all the videos that a user has uploaded
-    **/
+     * Get all the videos that a user has uploaded
+     */
     getVideosAlt1(req: operations.GetVideosAlt1Request, config?: AxiosRequestConfig): Promise<operations.GetVideosAlt1Response>;
     /**
-     * searchVideos - Search for videos
-    **/
+     * Search for videos
+     */
     searchVideos(req: operations.SearchVideosRequest, config?: AxiosRequestConfig): Promise<operations.SearchVideosResponse>;
 }

@@ -1,7 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class Role extends SpeakeasyBase {
-    category?: string;
-    description?: string;
-    id?: number;
-    name?: string;
+    /**
+     * Role category
+     */
+    category: string;
+    /**
+     * Role description
+     */
+    description: string;
+    /**
+     * Role id
+     */
+    id: number;
+    /**
+     * Role name
+     */
+    name: string;
 }

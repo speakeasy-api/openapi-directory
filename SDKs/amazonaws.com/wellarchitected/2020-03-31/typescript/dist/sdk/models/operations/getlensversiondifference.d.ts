@@ -1,12 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetLensVersionDifferencePathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetLensVersionDifferenceRequest extends SpeakeasyBase {
+    /**
+     * The base version of the lens.
+     */
+    baseLensVersion?: string;
     lensAlias: string;
-}
-export declare class GetLensVersionDifferenceQueryParams extends SpeakeasyBase {
-    baseLensVersion: string;
-}
-export declare class GetLensVersionDifferenceHeaders extends SpeakeasyBase {
+    /**
+     * The lens version to target a difference for.
+     */
+    targetLensVersion?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -15,18 +19,32 @@ export declare class GetLensVersionDifferenceHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetLensVersionDifferenceRequest extends SpeakeasyBase {
-    pathParams: GetLensVersionDifferencePathParams;
-    queryParams: GetLensVersionDifferenceQueryParams;
-    headers: GetLensVersionDifferenceHeaders;
-}
 export declare class GetLensVersionDifferenceResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getLensVersionDifferenceOutput?: shared.GetLensVersionDifferenceOutput;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

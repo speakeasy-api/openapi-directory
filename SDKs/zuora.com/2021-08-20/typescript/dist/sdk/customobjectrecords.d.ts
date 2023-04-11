@@ -1,5 +1,22 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * With Custom Objects service, you can create, update, delete and find custom object records.
+ *
+ * @remarks
+ *
+ * If you use Postman, you can import the custom objects endpoints as a collection into your Postman app and try out different requests to learn how the API works. Click the following button to get started:
+ *
+ * [![Run in Postman](https://run.pstmn.io/button.svg)](https://www.getpostman.com/run-collection/1f068ba43651bf63c0d4)
+ *
+ * You can sign up for a free account on the [Postman website](https://identity.getpostman.com/signup) and download the app in case you do not use Postman yet.
+ *
+ * Note that the Custom Object Records API is versioned by `Zuora-Version` in the request header. The response may be different for the same request with a different API version. Specify `Zuora-Version` in the request header if you expect a specific response schema.
+ *
+ * ### Error handling
+ * If the Custom Objects API call fails, an error code will be returned in the response body. See [Custom Objects API error code](https://knowledgecenter.zuora.com/Central_Platform/Custom_Objects/Z_Custom_Objects_API#Custom_Objects_API_error_code) for details.
+ *
+ */
 export declare class CustomObjectRecords {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,21 +26,23 @@ export declare class CustomObjectRecords {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteCustomObjectRecordById - Delete a custom object record
+     * Delete a custom object record
      *
+     * @remarks
      * Deletes a custom object record of the given type and ID.
      *
      * Note that 200 response will be returned under either of the following conditions:
      * * The record is identified and successfully deleted
      * * The record could not be found
      *
-     * Note that the record is deleted immediately and, therefore, will not be retained upon successful deletion.
+     * Note that the record is deleted immediately and, therefore, will not be retained upon successful deletion.
      *
-    **/
-    deleteCustomObjectRecordById(req: operations.DeleteCustomObjectRecordByIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteCustomObjectRecordByIdResponse>;
+     */
+    deleteCustomObjectRecordByID(req: operations.DeleteCustomObjectRecordByIDRequest, config?: AxiosRequestConfig): Promise<operations.DeleteCustomObjectRecordByIDResponse>;
     /**
-     * getAllRecordsForCustomObjectType - List records for a custom object
+     * List records for a custom object
      *
+     * @remarks
      * Lists all object records of the given type. You can also use the `q` query parameter to filter the output records.
      *
      * ## Limitations
@@ -31,18 +50,20 @@ export declare class CustomObjectRecords {
      * This call has the following limitations:
      * * When a record is created, there will be a delay before it is available for search. For example, if you create 5 records and perform a query that these 5 records satisfy the query conditions, there will be a delay between when the 5 records are created, and when all the 5 records can be returned in the query result.
      *
-    **/
-    getAllRecordsForCustomObjectType(req: operations.GetAllRecordsForCustomObjectTypeRequest, config?: AxiosRequestConfig): Promise<operations.GetAllRecordsForCustomObjectTypeResponse>;
+     */
+    getAllRecordsForCustomObjectType(req: operations.GETAllRecordsForCustomObjectTypeRequest, config?: AxiosRequestConfig): Promise<operations.GETAllRecordsForCustomObjectTypeResponse>;
     /**
-     * getCustomObjectRecordById - Retrieve a custom object record
+     * Retrieve a custom object record
      *
+     * @remarks
      * Retrieves a record of a given type by ID.
      *
-    **/
-    getCustomObjectRecordById(req: operations.GetCustomObjectRecordByIdRequest, config?: AxiosRequestConfig): Promise<operations.GetCustomObjectRecordByIdResponse>;
+     */
+    getCustomObjectRecordByID(req: operations.GETCustomObjectRecordByIDRequest, config?: AxiosRequestConfig): Promise<operations.GETCustomObjectRecordByIDResponse>;
     /**
-     * postCustomObjectRecords - Create custom object records
+     * Create custom object records
      *
+     * @remarks
      * Creates custom object records with the given type.
      *
      * Upon creating records of a custom object type, the 200 response contains a list of records that have been successfully processed and stored.
@@ -64,11 +85,12 @@ export declare class CustomObjectRecords {
      *   }
      *   ```
      *
-    **/
-    postCustomObjectRecords(req: operations.PostCustomObjectRecordsRequest, config?: AxiosRequestConfig): Promise<operations.PostCustomObjectRecordsResponse>;
+     */
+    postCustomObjectRecords(req: operations.POSTCustomObjectRecordsRequest, config?: AxiosRequestConfig): Promise<operations.POSTCustomObjectRecordsResponse>;
     /**
-     * postCustomObjectRecordsBatchUpdateOrDelete - Update or delete custom object records
+     * Update or delete custom object records
      *
+     * @remarks
      * Makes a batch update or delete of custom object records.
      * ## Limitations
      *
@@ -90,11 +112,12 @@ export declare class CustomObjectRecords {
      *   }
      *   ```
      *
-    **/
-    postCustomObjectRecordsBatchUpdateOrDelete(req: operations.PostCustomObjectRecordsBatchUpdateOrDeleteRequest, config?: AxiosRequestConfig): Promise<operations.PostCustomObjectRecordsBatchUpdateOrDeleteResponse>;
+     */
+    postCustomObjectRecordsBatchUpdateOrDelete(req: operations.POSTCustomObjectRecordsBatchUpdateOrDeleteRequest, config?: AxiosRequestConfig): Promise<operations.POSTCustomObjectRecordsBatchUpdateOrDeleteResponse>;
     /**
-     * putCustomObjectRecord - Update a custom object record
+     * Update a custom object record
      *
+     * @remarks
      * Updates a record of the given type and ID.
      *
      * ## Limitations
@@ -111,11 +134,12 @@ export declare class CustomObjectRecords {
      *   }
      *   ```
      *
-    **/
-    putCustomObjectRecord(req: operations.PutCustomObjectRecordRequest, config?: AxiosRequestConfig): Promise<operations.PutCustomObjectRecordResponse>;
+     */
+    putCustomObjectRecord(req: operations.PUTCustomObjectRecordRequest, config?: AxiosRequestConfig): Promise<operations.PUTCustomObjectRecordResponse>;
     /**
-     * patchPartialUpdateCustomObjectRecord - Partially update a custom object record
+     * Partially update a custom object record
      *
+     * @remarks
      * Updates one or many fields of a custom object record. Patch update uses JSON Merge Patch as specified in [RFC 7386](https://tools.ietf.org/html/rfc7386).
      *
      * ## Limitations
@@ -132,6 +156,6 @@ export declare class CustomObjectRecords {
      *   }
      *   ```
      *
-    **/
+     */
     patchPartialUpdateCustomObjectRecord(req: operations.PatchPartialUpdateCustomObjectRecordRequest, config?: AxiosRequestConfig): Promise<operations.PatchPartialUpdateCustomObjectRecordResponse>;
 }

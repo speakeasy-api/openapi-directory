@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeCasesQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum DescribeCasesXAmzTargetEnum {
-    AwsSupport20130415DescribeCases = "AWSSupport_20130415.DescribeCases"
+    AWSSupport20130415DescribeCases = "AWSSupport_20130415.DescribeCases"
 }
-export declare class DescribeCasesHeaders extends SpeakeasyBase {
+export declare class DescribeCasesRequest extends SpeakeasyBase {
+    describeCasesRequest: shared.DescribeCasesRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,16 +14,29 @@ export declare class DescribeCasesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeCasesXAmzTargetEnum;
-}
-export declare class DescribeCasesRequest extends SpeakeasyBase {
-    queryParams: DescribeCasesQueryParams;
-    headers: DescribeCasesHeaders;
-    request: shared.DescribeCasesRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class DescribeCasesResponse extends SpeakeasyBase {
+    /**
+     * CaseIdNotFound
+     */
     caseIdNotFound?: any;
     contentType: string;
+    /**
+     * Success
+     */
     describeCasesResponse?: shared.DescribeCasesResponse;
+    /**
+     * InternalServerError
+     */
     internalServerError?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

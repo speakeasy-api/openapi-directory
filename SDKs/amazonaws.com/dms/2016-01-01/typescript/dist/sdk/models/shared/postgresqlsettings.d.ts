@@ -2,8 +2,8 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { PluginNameValueEnum } from "./pluginnamevalueenum";
 /**
  * Provides information that defines a PostgreSQL endpoint.
-**/
-export declare class PostgreSqlSettings extends SpeakeasyBase {
+ */
+export declare class PostgreSQLSettings extends SpeakeasyBase {
     afterConnectScript?: string;
     captureDdls?: boolean;
     databaseName?: string;
@@ -13,6 +13,7 @@ export declare class PostgreSqlSettings extends SpeakeasyBase {
     heartbeatEnable?: boolean;
     heartbeatFrequency?: number;
     heartbeatSchema?: string;
+    mapBooleanAsBoolean?: boolean;
     maxFileSize?: number;
     password?: string;
     pluginName?: PluginNameValueEnum;
@@ -21,5 +22,6 @@ export declare class PostgreSqlSettings extends SpeakeasyBase {
     secretsManagerSecretId?: string;
     serverName?: string;
     slotName?: string;
+    trimSpaceInChar?: boolean;
     username?: string;
 }

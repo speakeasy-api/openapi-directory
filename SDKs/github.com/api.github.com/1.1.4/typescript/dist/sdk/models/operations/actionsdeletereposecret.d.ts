@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ActionsDeleteRepoSecretPathParams extends SpeakeasyBase {
-    owner: string;
-    repo: string;
-    secretName: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ActionsDeleteRepoSecretRequest extends SpeakeasyBase {
-    pathParams: ActionsDeleteRepoSecretPathParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    owner: string;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    repo: string;
+    /**
+     * The name of the secret.
+     */
+    secretName: string;
 }
 export declare class ActionsDeleteRepoSecretResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

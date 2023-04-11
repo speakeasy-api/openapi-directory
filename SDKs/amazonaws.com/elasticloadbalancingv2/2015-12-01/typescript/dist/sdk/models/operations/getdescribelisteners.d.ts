@@ -1,19 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeListenersActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeListenersActionEnum {
     DescribeListeners = "DescribeListeners"
 }
-export declare enum GetDescribeListenersVersionEnum {
+export declare enum GETDescribeListenersVersionEnum {
     TwoThousandAndFifteen1201 = "2015-12-01"
 }
-export declare class GetDescribeListenersQueryParams extends SpeakeasyBase {
-    action: GetDescribeListenersActionEnum;
+export declare class GETDescribeListenersRequest extends SpeakeasyBase {
+    action: GETDescribeListenersActionEnum;
+    /**
+     * The Amazon Resource Names (ARN) of the listeners.
+     */
     listenerArns?: string[];
+    /**
+     * The Amazon Resource Name (ARN) of the load balancer.
+     */
     loadBalancerArn?: string;
+    /**
+     * The marker for the next set of results. (You received this marker from a previous call.)
+     */
     marker?: string;
+    /**
+     * The maximum number of results to return with this call.
+     */
     pageSize?: number;
-    version: GetDescribeListenersVersionEnum;
-}
-export declare class GetDescribeListenersHeaders extends SpeakeasyBase {
+    version: GETDescribeListenersVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -22,12 +33,9 @@ export declare class GetDescribeListenersHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeListenersRequest extends SpeakeasyBase {
-    queryParams: GetDescribeListenersQueryParams;
-    headers: GetDescribeListenersHeaders;
-}
-export declare class GetDescribeListenersResponse extends SpeakeasyBase {
+export declare class GETDescribeListenersResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

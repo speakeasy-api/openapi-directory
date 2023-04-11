@@ -1,5 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbClusterParameterGroup } from "./dbclusterparametergroup";
-export declare class CreateDbClusterParameterGroupResult extends SpeakeasyBase {
-    dbClusterParameterGroup?: DbClusterParameterGroup;
+import { DBClusterParameterGroup } from "./dbclusterparametergroup";
+/**
+ * Success
+ */
+export declare class CreateDBClusterParameterGroupResult extends SpeakeasyBase {
+    /**
+     * Detailed information about a cluster parameter group.
+     */
+    dbClusterParameterGroup?: DBClusterParameterGroup;
 }

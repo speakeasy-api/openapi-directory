@@ -1,17 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class DeleteTaxRatePathParams extends SpeakeasyBase {
-    taxRateUuid: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteTaxRateSecurity extends SpeakeasyBase {
-    zettleApiKey?: shared.SchemeZettleApiKey;
-    zettleOauth?: shared.SchemeZettleOauth;
+    zettleOauth: string;
 }
 export declare class DeleteTaxRateRequest extends SpeakeasyBase {
-    pathParams: DeleteTaxRatePathParams;
-    security: DeleteTaxRateSecurity;
+    taxRateUuid: string;
 }
 export declare class DeleteTaxRateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

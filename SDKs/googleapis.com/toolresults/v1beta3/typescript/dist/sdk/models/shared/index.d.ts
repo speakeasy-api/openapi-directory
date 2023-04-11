@@ -51,7 +51,6 @@ export * from "./resultsstorage";
 export * from "./safehtmlproto";
 export * from "./screen";
 export * from "./screenshotcluster";
-export * from "./security";
 export * from "./shardsummary";
 export * from "./skippeddetail";
 export * from "./specification";

@@ -1,6 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class ApIs {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+export declare class APIs {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,87 +9,101 @@ export declare class ApIs {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * agcer - Agriculture/ Agriculturist Certificate
+     * Agriculture/ Agriculturist Certificate
      *
+     * @remarks
      * API to verify Agriculture/ Agriculturist Certificate.
-    **/
-    agcer(req: operations.AgcerRequest, config?: AxiosRequestConfig): Promise<operations.AgcerResponse>;
+     */
+    agcer(req: operations.AgcerRequestBody, security: operations.AgcerSecurity, config?: AxiosRequestConfig): Promise<operations.AgcerResponse>;
     /**
-     * bacer - Backward Area Certificate
+     * Backward Area Certificate
      *
+     * @remarks
      * API to verify Backward Area Certificate.
-    **/
-    bacer(req: operations.BacerRequest, config?: AxiosRequestConfig): Promise<operations.BacerResponse>;
+     */
+    bacer(req: operations.BacerRequestBody, security: operations.BacerSecurity, config?: AxiosRequestConfig): Promise<operations.BacerResponse>;
     /**
-     * bhcer - Bonafide Certificate
+     * Bonafide Certificate
      *
+     * @remarks
      * API to verify Bonafide Certificate.
-    **/
-    bhcer(req: operations.BhcerRequest, config?: AxiosRequestConfig): Promise<operations.BhcerResponse>;
+     */
+    bhcer(req: operations.BhcerRequestBody, security: operations.BhcerSecurity, config?: AxiosRequestConfig): Promise<operations.BhcerResponse>;
     /**
-     * chcer - Character Certificate
+     * Character Certificate
      *
+     * @remarks
      * API to verify Character Certificate.
-    **/
-    chcer(req: operations.ChcerRequest, config?: AxiosRequestConfig): Promise<operations.ChcerResponse>;
+     */
+    chcer(req: operations.ChcerRequestBody, security: operations.ChcerSecurity, config?: AxiosRequestConfig): Promise<operations.ChcerResponse>;
     /**
-     * dccer - Dogra Class Certificate
+     * Dogra Class Certificate
      *
+     * @remarks
      * API to verify Dogra Class Certificate.
-    **/
-    dccer(req: operations.DccerRequest, config?: AxiosRequestConfig): Promise<operations.DccerResponse>;
+     */
+    dccer(req: operations.DccerRequestBody, security: operations.DccerSecurity, config?: AxiosRequestConfig): Promise<operations.DccerResponse>;
     /**
-     * ffcer - Freedom Fighter Certificate
+     * Freedom Fighter Certificate
      *
+     * @remarks
      * API to verify Freedom Fighter Certificate.
-    **/
-    ffcer(req: operations.FfcerRequest, config?: AxiosRequestConfig): Promise<operations.FfcerResponse>;
+     */
+    ffcer(req: operations.FfcerRequestBody, security: operations.FfcerSecurity, config?: AxiosRequestConfig): Promise<operations.FfcerResponse>;
     /**
-     * incer - Income Certificate
+     * Income Certificate
      *
+     * @remarks
      * API to verify Income Certificate.
-    **/
-    incer(req: operations.IncerRequest, config?: AxiosRequestConfig): Promise<operations.IncerResponse>;
+     */
+    incer(req: operations.IncerRequestBody, security: operations.IncerSecurity, config?: AxiosRequestConfig): Promise<operations.IncerResponse>;
     /**
-     * lhcer - Legal Heir Certificate
+     * Legal Heir Certificate
      *
+     * @remarks
      * API to verify Legal Heir Certificate.
-    **/
-    lhcer(req: operations.LhcerRequest, config?: AxiosRequestConfig): Promise<operations.LhcerResponse>;
+     */
+    lhcer(req: operations.LhcerRequestBody, security: operations.LhcerSecurity, config?: AxiosRequestConfig): Promise<operations.LhcerResponse>;
     /**
-     * mncer - Minority Certificate
+     * Minority Certificate
      *
+     * @remarks
      * API to verify Minority Certificate.
-    **/
-    mncer(req: operations.MncerRequest, config?: AxiosRequestConfig): Promise<operations.MncerResponse>;
+     */
+    mncer(req: operations.MncerRequestBody, security: operations.MncerSecurity, config?: AxiosRequestConfig): Promise<operations.MncerResponse>;
     /**
-     * obcer - OBC Certificate
+     * OBC Certificate
      *
+     * @remarks
      * API to verify OBC Certificate.
-    **/
-    obcer(req: operations.ObcerRequest, config?: AxiosRequestConfig): Promise<operations.ObcerResponse>;
+     */
+    obcer(req: operations.ObcerRequestBody, security: operations.ObcerSecurity, config?: AxiosRequestConfig): Promise<operations.ObcerResponse>;
     /**
-     * psprt - Passport/ Passport Verification
+     * Passport/ Passport Verification
      *
+     * @remarks
      * API to verify Passport/ Passport Verification.
-    **/
-    psprt(req: operations.PsprtRequest, config?: AxiosRequestConfig): Promise<operations.PsprtResponse>;
+     */
+    psprt(req: operations.PsprtRequestBody, security: operations.PsprtSecurity, config?: AxiosRequestConfig): Promise<operations.PsprtResponse>;
     /**
-     * racer - Rural Area Certificate
+     * Rural Area Certificate
      *
+     * @remarks
      * API to verify Rural Area Certificate.
-    **/
-    racer(req: operations.RacerRequest, config?: AxiosRequestConfig): Promise<operations.RacerResponse>;
+     */
+    racer(req: operations.RacerRequestBody, security: operations.RacerSecurity, config?: AxiosRequestConfig): Promise<operations.RacerResponse>;
     /**
-     * rmcer - Marriage Certificate
+     * Marriage Certificate
      *
+     * @remarks
      * API to verify Marriage Certificate.
-    **/
-    rmcer(req: operations.RmcerRequest, config?: AxiosRequestConfig): Promise<operations.RmcerResponse>;
+     */
+    rmcer(req: operations.RmcerRequestBody, security: operations.RmcerSecurity, config?: AxiosRequestConfig): Promise<operations.RmcerResponse>;
     /**
-     * shcer - SC/ST  Certificate
+     * SC/ST  Certificate
      *
+     * @remarks
      * API to verify SC/ST  Certificate.
-    **/
-    shcer(req: operations.ShcerRequest, config?: AxiosRequestConfig): Promise<operations.ShcerResponse>;
+     */
+    shcer(req: operations.ShcerRequestBody, security: operations.ShcerSecurity, config?: AxiosRequestConfig): Promise<operations.ShcerResponse>;
 }

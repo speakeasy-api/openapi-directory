@@ -1,0 +1,28 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * &#128640; Since v4.30.0
+ *
+ * @remarks
+ *
+ * Minimum classification that causes download shares to require a password. `0` means no password will be enforced.
+ */
+export declare enum ShareClassificationPoliciesClassificationRequiresSharePasswordEnum {
+    Zero = "0",
+    One = "1",
+    Two = "2",
+    Three = "3",
+    Four = "4"
+}
+/**
+ * Shares classification policies
+ */
+export declare class ShareClassificationPolicies extends SpeakeasyBase {
+    /**
+     * &#128640; Since v4.30.0
+     *
+     * @remarks
+     *
+     * Minimum classification that causes download shares to require a password. `0` means no password will be enforced.
+     */
+    classificationRequiresSharePassword?: ShareClassificationPoliciesClassificationRequiresSharePasswordEnum;
+}

@@ -29,7 +29,13 @@ export declare class SeriesSeries extends SpeakeasyBase {
     subscriptionId?: string;
     title?: string;
 }
+/**
+ * Successful response
+ */
 export declare class Series extends SpeakeasyBase {
+    /**
+     * Resource type.
+     */
     kind?: string;
     series?: SeriesSeries[];
 }

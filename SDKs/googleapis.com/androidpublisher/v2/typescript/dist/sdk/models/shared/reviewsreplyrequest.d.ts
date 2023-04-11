@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class ReviewsReplyRequest extends SpeakeasyBase {
+    /**
+     * The text to set as the reply. Replies of more than approximately 350 characters will be rejected. HTML tags will be stripped.
+     */
     replyText?: string;
 }

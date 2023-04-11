@@ -1,0 +1,37 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { MobileAppInput } from "./mobileapp";
+/**
+ * Required. The type of the line item.
+ */
+export declare enum GenerateDefaultLineItemRequestLineItemTypeEnum {
+    LineItemTypeUnspecified = "LINE_ITEM_TYPE_UNSPECIFIED",
+    LineItemTypeDisplayDefault = "LINE_ITEM_TYPE_DISPLAY_DEFAULT",
+    LineItemTypeDisplayMobileAppInstall = "LINE_ITEM_TYPE_DISPLAY_MOBILE_APP_INSTALL",
+    LineItemTypeVideoDefault = "LINE_ITEM_TYPE_VIDEO_DEFAULT",
+    LineItemTypeVideoMobileAppInstall = "LINE_ITEM_TYPE_VIDEO_MOBILE_APP_INSTALL",
+    LineItemTypeDisplayMobileAppInventory = "LINE_ITEM_TYPE_DISPLAY_MOBILE_APP_INVENTORY",
+    LineItemTypeVideoMobileAppInventory = "LINE_ITEM_TYPE_VIDEO_MOBILE_APP_INVENTORY",
+    LineItemTypeAudioDefault = "LINE_ITEM_TYPE_AUDIO_DEFAULT",
+    LineItemTypeVideoOverTheTop = "LINE_ITEM_TYPE_VIDEO_OVER_THE_TOP"
+}
+/**
+ * Request message for LineItemService.GenerateDefaultLineItem.
+ */
+export declare class GenerateDefaultLineItemRequestInput extends SpeakeasyBase {
+    /**
+     * Required. The display name of the line item. Must be UTF-8 encoded with a maximum size of 240 bytes.
+     */
+    displayName?: string;
+    /**
+     * Required. The unique ID of the insertion order that the line item belongs to.
+     */
+    insertionOrderId?: string;
+    /**
+     * Required. The type of the line item.
+     */
+    lineItemType?: GenerateDefaultLineItemRequestLineItemTypeEnum;
+    /**
+     * A mobile app promoted by a mobile app install line item.
+     */
+    mobileApp?: MobileAppInput;
+}

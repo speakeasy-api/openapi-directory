@@ -1,18 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class DeleteCommonAreaPhonePathParams extends SpeakeasyBase {
-    commonAreaPhoneId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteCommonAreaPhoneSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
+    oAuth: string;
 }
 export declare class DeleteCommonAreaPhoneRequest extends SpeakeasyBase {
-    pathParams: DeleteCommonAreaPhonePathParams;
-    security: DeleteCommonAreaPhoneSecurity;
+    /**
+     * Unique Identifier of the common area phone.
+     */
+    commonAreaPhoneId: string;
 }
 export declare class DeleteCommonAreaPhoneResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * **HTTP Status Code:** `204` **No Content**<br>
+     *
+     * @remarks
+     * Common Area Phone deleted successfully.
+     */
     deleteCommonAreaPhone204ApplicationJSONAny?: any;
 }

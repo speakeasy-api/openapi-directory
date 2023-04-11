@@ -1,16 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetNumbersPrimeIsPerfectQueryParams extends SpeakeasyBase {
-    number?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetNumbersPrimeIsPerfectSecurity extends SpeakeasyBase {
-    xMathtoolsApiSecret: shared.SchemeXMathtoolsApiSecret;
+    xMathtoolsApiSecret: string;
 }
 export declare class GetNumbersPrimeIsPerfectRequest extends SpeakeasyBase {
-    queryParams: GetNumbersPrimeIsPerfectQueryParams;
-    security: GetNumbersPrimeIsPerfectSecurity;
+    /**
+     * Number to check
+     */
+    number?: number;
 }
 export declare class GetNumbersPrimeIsPerfectResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

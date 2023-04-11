@@ -1,19 +1,28 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetQuoteAuthorsPopularQueryParams extends SpeakeasyBase {
-    detailed?: boolean;
-    language?: string;
-    limit?: number;
-    start?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetQuoteAuthorsPopularSecurity extends SpeakeasyBase {
-    xTheySaidSoApiSecret: shared.SchemeXTheySaidSoApiSecret;
+    xTheySaidSoApiSecret: string;
 }
 export declare class GetQuoteAuthorsPopularRequest extends SpeakeasyBase {
-    queryParams: GetQuoteAuthorsPopularQueryParams;
-    security: GetQuoteAuthorsPopularSecurity;
+    /**
+     * Should return detailed author information such as `birthday`, `death date`, `occupation`, `description` etc. Only available at certain subscription levels.
+     */
+    detailed?: boolean;
+    /**
+     * Language. A same author may have quotes in two or more different languages. So for example 'Mahatma Gandhi' may be returned for language "en"(English), and "மஹாத்மா காந்தி" may be returned when the language is "ta" (Tamil).
+     */
+    language?: string;
+    /**
+     * Response is paged. This parameter controls how many is returned in the result. The maximum depends on the subscription level.
+     */
+    limit?: number;
+    /**
+     * Response is paged. This parameter controls where response starts the listing at
+     */
+    start?: number;
 }
 export declare class GetQuoteAuthorsPopularResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,14 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class SubscriptionsApiListQueryParams extends SpeakeasyBase {
-    page?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class SubscriptionsApiListRequest extends SpeakeasyBase {
-    queryParams: SubscriptionsApiListQueryParams;
-    request: any;
+    requestBody: any;
+    page?: number;
 }
 export declare class SubscriptionsApiListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
     subscriptionViews?: shared.SubscriptionView[];
 }

@@ -1,12 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class StoryIdDeletePathParams extends SpeakeasyBase {
-    id: string;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class StoryIdDeleteRequest extends SpeakeasyBase {
-    pathParams: StoryIdDeletePathParams;
+    /**
+     * the id from the story object
+     */
+    id: string;
 }
 export declare class StoryIdDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    problemDetail?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad Request
+     */
+    problemDetail?: shared.ProblemDetail;
 }

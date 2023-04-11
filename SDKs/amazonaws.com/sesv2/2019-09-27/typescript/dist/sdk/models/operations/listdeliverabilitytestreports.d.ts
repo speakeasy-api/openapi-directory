@@ -1,10 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListDeliverabilityTestReportsQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListDeliverabilityTestReportsRequest extends SpeakeasyBase {
+    /**
+     * A token returned from a previous call to <code>ListDeliverabilityTestReports</code> to indicate the position in the list of predictive inbox placement tests.
+     */
     nextToken?: string;
+    /**
+     * <p>The number of results to show in a single call to <code>ListDeliverabilityTestReports</code>. If the number of results is larger than the number you specified in this parameter, then the response includes a <code>NextToken</code> element, which you can use to obtain additional results.</p> <p>The value you specify has to be at least 0, and can be no more than 1000.</p>
+     */
     pageSize?: number;
-}
-export declare class ListDeliverabilityTestReportsHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +18,24 @@ export declare class ListDeliverabilityTestReportsHeaders extends SpeakeasyBase 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class ListDeliverabilityTestReportsRequest extends SpeakeasyBase {
-    queryParams: ListDeliverabilityTestReportsQueryParams;
-    headers: ListDeliverabilityTestReportsHeaders;
-}
 export declare class ListDeliverabilityTestReportsResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     listDeliverabilityTestReportsResponse?: shared.ListDeliverabilityTestReportsResponse;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

@@ -1,13 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DcimPowerPanelsReadPathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DcimPowerPanelsReadRequest extends SpeakeasyBase {
-    pathParams: DcimPowerPanelsReadPathParams;
+    /**
+     * A unique integer value identifying this power panel.
+     */
+    id: number;
 }
 export declare class DcimPowerPanelsReadResponse extends SpeakeasyBase {
     contentType: string;
     powerPanel?: shared.PowerPanel;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

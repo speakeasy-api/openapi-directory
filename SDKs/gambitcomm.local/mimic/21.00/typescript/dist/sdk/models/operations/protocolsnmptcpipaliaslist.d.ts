@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ProtocolSnmptcpIpaliasListPathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolSnmptcpIpaliasListRequest extends SpeakeasyBase {
-    pathParams: ProtocolSnmptcpIpaliasListPathParams;
+    /**
+     * Agent to manipulate SNMPTCP IP alias
+     */
+    agentNum: number;
 }
 export declare class ProtocolSnmptcpIpaliasListResponse extends SpeakeasyBase {
     contentType: string;
-    ipAliases?: shared.IpAlias[];
+    /**
+     * successful operation
+     */
+    ipAliases?: shared.IPAlias[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

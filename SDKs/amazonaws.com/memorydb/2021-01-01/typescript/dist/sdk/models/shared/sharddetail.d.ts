@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { ShardConfiguration } from "./shardconfiguration";
 /**
  * Provides details of a shard in a snapshot
-**/
+ */
 export declare class ShardDetail extends SpeakeasyBase {
     configuration?: ShardConfiguration;
     name?: string;

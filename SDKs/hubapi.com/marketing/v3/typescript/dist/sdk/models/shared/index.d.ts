@@ -21,7 +21,6 @@ export * from "./marketingeventpublicreadresponse";
 export * from "./marketingeventsubscriber";
 export * from "./marketingeventupdaterequestparams";
 export * from "./propertyvalue";
-export * from "./security";
 export * from "./standarderror";
 export * from "./subscriberemailresponse";
 export * from "./subscribervidresponse";

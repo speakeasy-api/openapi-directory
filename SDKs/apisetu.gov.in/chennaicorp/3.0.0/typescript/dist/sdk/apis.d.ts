@@ -1,6 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class ApIs {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+export declare class APIs {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,15 +9,17 @@ export declare class ApIs {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * btcer - Birth Certificate
+     * Birth Certificate
      *
+     * @remarks
      * API to verify Birth Certificate.
-    **/
-    btcer(req: operations.BtcerRequest, config?: AxiosRequestConfig): Promise<operations.BtcerResponse>;
+     */
+    btcer(req: operations.BtcerRequestBody, security: operations.BtcerSecurity, config?: AxiosRequestConfig): Promise<operations.BtcerResponse>;
     /**
-     * dtcer - Death Certificate
+     * Death Certificate
      *
+     * @remarks
      * API to verify Death Certificate.
-    **/
-    dtcer(req: operations.DtcerRequest, config?: AxiosRequestConfig): Promise<operations.DtcerResponse>;
+     */
+    dtcer(req: operations.DtcerRequestBody, security: operations.DtcerSecurity, config?: AxiosRequestConfig): Promise<operations.DtcerResponse>;
 }

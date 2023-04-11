@@ -1,560 +1,669 @@
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-
-
-
-export class UpdateSettingTemplatePathParams extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=templateId" })
-  templateId: string;
-}
-
-
-export class UpdateSettingTemplateApplicationJsonPolicyAdHocCallRecording extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=enable" })
-  enable?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=recording_start_prompt" })
-  recordingStartPrompt?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=recording_transcription" })
-  recordingTranscription?: boolean;
-}
-
-export enum UpdateSettingTemplateApplicationJsonPolicyAutoCallRecordingRecordingCallsEnum {
-    Inbound = "inbound",
-    Outbound = "outbound",
-    Both = "both"
-}
-
-
-export class UpdateSettingTemplateApplicationJsonPolicyAutoCallRecording extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=enable" })
-  enable?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=recording_calls" })
-  recordingCalls?: UpdateSettingTemplateApplicationJsonPolicyAutoCallRecordingRecordingCallsEnum;
-
-  @SpeakeasyMetadata({ data: "json, name=recording_start_prompt" })
-  recordingStartPrompt?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=recording_transcription" })
-  recordingTranscription?: boolean;
-}
-
-
-export class UpdateSettingTemplateApplicationJsonPolicySms extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=enable" })
-  enable?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=international_sms" })
-  internationalSms?: boolean;
-}
-
-
-export class UpdateSettingTemplateApplicationJsonPolicyVoicemail extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=allow_transcription" })
-  allowTranscription?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=enable" })
-  enable?: boolean;
-}
-
-
-export class UpdateSettingTemplateApplicationJsonPolicy extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=ad_hoc_call_recording" })
-  adHocCallRecording?: UpdateSettingTemplateApplicationJsonPolicyAdHocCallRecording;
-
-  @SpeakeasyMetadata({ data: "json, name=auto_call_recording" })
-  autoCallRecording?: UpdateSettingTemplateApplicationJsonPolicyAutoCallRecording;
-
-  @SpeakeasyMetadata({ data: "json, name=sms" })
-  sms?: UpdateSettingTemplateApplicationJsonPolicySms;
-
-  @SpeakeasyMetadata({ data: "json, name=voicemail" })
-  voicemail?: UpdateSettingTemplateApplicationJsonPolicyVoicemail;
-}
-
-
-export class UpdateSettingTemplateApplicationJsonProfile extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=area_code" })
-  areaCode?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=country" })
-  country?: string;
-}
-
-export enum UpdateSettingTemplateApplicationJsonUserSettingsCallHandlingBusinessHoursConnectToOperatorTypeEnum {
-    User = "user",
-    ZoomRoom = "zoomRoom",
-    CommonAreaPhone = "commonAreaPhone",
-    AutoReceptionist = "autoReceptionist",
-    CallQueue = "callQueue",
-    SharedLineGroup = "sharedLineGroup"
-}
-
-
-// UpdateSettingTemplateApplicationJsonUserSettingsCallHandlingBusinessHoursConnectToOperator
-/** 
- * Allow callers to press Zero to reach an operator or press One to leave a message, or allow neither of these options.
-**/
-export class UpdateSettingTemplateApplicationJsonUserSettingsCallHandlingBusinessHoursConnectToOperator extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=enable" })
-  enable?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=id" })
-  id?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=type" })
-  type?: UpdateSettingTemplateApplicationJsonUserSettingsCallHandlingBusinessHoursConnectToOperatorTypeEnum;
-}
-
-
-export class UpdateSettingTemplateApplicationJsonUserSettingsCallHandlingBusinessHoursCustomHours extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=from" })
-  from?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=to" })
-  to?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=type" })
-  type?: number;
-
-  @SpeakeasyMetadata({ data: "json, name=weekday" })
-  weekday?: number;
-}
-
-export enum UpdateSettingTemplateApplicationJsonUserSettingsCallHandlingBusinessHoursRingTypeEnum {
-    Zero = "0",
-    One = "1"
-}
-
-export enum UpdateSettingTemplateApplicationJsonUserSettingsCallHandlingBusinessHoursRingingDurationEnum {
-    Fifteen = "15",
-    Twenty = "20",
-    TwentyFive = "25",
-    Thirty = "30",
-    ThirtyFive = "35",
-    Forty = "40",
-    FortyFive = "45",
-    Fifty = "50",
-    FiftyFive = "55",
-    Sixty = "60"
-}
-
-
-export class UpdateSettingTemplateApplicationJsonUserSettingsCallHandlingBusinessHours extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=business_hour_action" })
-  businessHourAction?: number;
-
-  @SpeakeasyMetadata({ data: "json, name=connect_to_operator" })
-  connectToOperator?: UpdateSettingTemplateApplicationJsonUserSettingsCallHandlingBusinessHoursConnectToOperator;
-
-  @SpeakeasyMetadata({ data: "json, name=custom_hours", elemType: UpdateSettingTemplateApplicationJsonUserSettingsCallHandlingBusinessHoursCustomHours })
-  customHours?: UpdateSettingTemplateApplicationJsonUserSettingsCallHandlingBusinessHoursCustomHours[];
-
-  @SpeakeasyMetadata({ data: "json, name=ring_type" })
-  ringType?: UpdateSettingTemplateApplicationJsonUserSettingsCallHandlingBusinessHoursRingTypeEnum;
-
-  @SpeakeasyMetadata({ data: "json, name=ringing_duration" })
-  ringingDuration?: UpdateSettingTemplateApplicationJsonUserSettingsCallHandlingBusinessHoursRingingDurationEnum;
-
-  @SpeakeasyMetadata({ data: "json, name=type" })
-  type?: number;
-}
-
-export enum UpdateSettingTemplateApplicationJsonUserSettingsCallHandlingCloseHoursConnectToOperatorTypeEnum {
-    User = "user",
-    ZoomRoom = "zoomRoom",
-    CommonAreaPhone = "commonAreaPhone",
-    AutoReceptionist = "autoReceptionist",
-    CallQueue = "callQueue",
-    SharedLineGroup = "sharedLineGroup"
-}
-
-
-// UpdateSettingTemplateApplicationJsonUserSettingsCallHandlingCloseHoursConnectToOperator
-/** 
- * Allow callers to press Zero to reach an operator or press One to leave a message, or allow neither of these options.
-**/
-export class UpdateSettingTemplateApplicationJsonUserSettingsCallHandlingCloseHoursConnectToOperator extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=enable" })
-  enable?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=id" })
-  id?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=type" })
-  type?: UpdateSettingTemplateApplicationJsonUserSettingsCallHandlingCloseHoursConnectToOperatorTypeEnum;
-}
-
-export enum UpdateSettingTemplateApplicationJsonUserSettingsCallHandlingCloseHoursMaxWaitTimeEnum {
-    Fifteen = "15",
-    Twenty = "20",
-    TwentyFive = "25",
-    Thirty = "30",
-    ThirtyFive = "35",
-    Forty = "40",
-    FortyFive = "45",
-    Fifty = "50",
-    FiftyFive = "55",
-    Sixty = "60"
-}
-
-
-export class UpdateSettingTemplateApplicationJsonUserSettingsCallHandlingCloseHours extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=close_hour_action" })
-  closeHourAction?: number;
-
-  @SpeakeasyMetadata({ data: "json, name=connect_to_operator" })
-  connectToOperator?: UpdateSettingTemplateApplicationJsonUserSettingsCallHandlingCloseHoursConnectToOperator;
-
-  @SpeakeasyMetadata({ data: "json, name=max_wait_time" })
-  maxWaitTime?: UpdateSettingTemplateApplicationJsonUserSettingsCallHandlingCloseHoursMaxWaitTimeEnum;
-}
-
-
-export class UpdateSettingTemplateApplicationJsonUserSettingsCallHandling extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=business_hours" })
-  businessHours?: UpdateSettingTemplateApplicationJsonUserSettingsCallHandlingBusinessHours;
-
-  @SpeakeasyMetadata({ data: "json, name=close_hours" })
-  closeHours?: UpdateSettingTemplateApplicationJsonUserSettingsCallHandlingCloseHours;
-}
-
-
-export class UpdateSettingTemplateApplicationJsonUserSettingsDeskPhone extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=pin_code" })
-  pinCode?: string;
-}
-
-export enum UpdateSettingTemplateApplicationJsonUserSettingsHoldMusicEnum {
-    Default = "default",
-    Disable = "disable"
-}
-
-
-export class UpdateSettingTemplateApplicationJsonUserSettings extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=audio_prompt_language" })
-  audioPromptLanguage?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=block_calls_without_caller_id" })
-  blockCallsWithoutCallerId?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=call_handling" })
-  callHandling?: UpdateSettingTemplateApplicationJsonUserSettingsCallHandling;
-
-  @SpeakeasyMetadata({ data: "json, name=desk_phone" })
-  deskPhone?: UpdateSettingTemplateApplicationJsonUserSettingsDeskPhone;
-
-  @SpeakeasyMetadata({ data: "json, name=hold_music" })
-  holdMusic?: UpdateSettingTemplateApplicationJsonUserSettingsHoldMusicEnum;
-}
-
-
-export class UpdateSettingTemplateApplicationJson extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=description" })
-  description?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=name" })
-  name?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=policy" })
-  policy?: UpdateSettingTemplateApplicationJsonPolicy;
-
-  @SpeakeasyMetadata({ data: "json, name=profile" })
-  profile?: UpdateSettingTemplateApplicationJsonProfile;
-
-  @SpeakeasyMetadata({ data: "json, name=user_settings" })
-  userSettings?: UpdateSettingTemplateApplicationJsonUserSettings;
-}
-
-
-export class UpdateSettingTemplateMultipartFormDataPolicyAdHocCallRecording extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=enable" })
-  enable?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=recording_start_prompt" })
-  recordingStartPrompt?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=recording_transcription" })
-  recordingTranscription?: boolean;
-}
-
-export enum UpdateSettingTemplateMultipartFormDataPolicyAutoCallRecordingRecordingCallsEnum {
-    Inbound = "inbound",
-    Outbound = "outbound",
-    Both = "both"
-}
-
-
-export class UpdateSettingTemplateMultipartFormDataPolicyAutoCallRecording extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=enable" })
-  enable?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=recording_calls" })
-  recordingCalls?: UpdateSettingTemplateMultipartFormDataPolicyAutoCallRecordingRecordingCallsEnum;
-
-  @SpeakeasyMetadata({ data: "json, name=recording_start_prompt" })
-  recordingStartPrompt?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=recording_transcription" })
-  recordingTranscription?: boolean;
-}
-
-
-export class UpdateSettingTemplateMultipartFormDataPolicySms extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=enable" })
-  enable?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=international_sms" })
-  internationalSms?: boolean;
-}
-
-
-export class UpdateSettingTemplateMultipartFormDataPolicyVoicemail extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=allow_transcription" })
-  allowTranscription?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=enable" })
-  enable?: boolean;
-}
-
-
-export class UpdateSettingTemplateMultipartFormDataPolicy extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=ad_hoc_call_recording" })
-  adHocCallRecording?: UpdateSettingTemplateMultipartFormDataPolicyAdHocCallRecording;
-
-  @SpeakeasyMetadata({ data: "json, name=auto_call_recording" })
-  autoCallRecording?: UpdateSettingTemplateMultipartFormDataPolicyAutoCallRecording;
-
-  @SpeakeasyMetadata({ data: "json, name=sms" })
-  sms?: UpdateSettingTemplateMultipartFormDataPolicySms;
-
-  @SpeakeasyMetadata({ data: "json, name=voicemail" })
-  voicemail?: UpdateSettingTemplateMultipartFormDataPolicyVoicemail;
-}
-
-
-export class UpdateSettingTemplateMultipartFormDataProfile extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=area_code" })
-  areaCode?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=country" })
-  country?: string;
-}
-
-export enum UpdateSettingTemplateMultipartFormDataUserSettingsCallHandlingBusinessHoursConnectToOperatorTypeEnum {
-    User = "user",
-    ZoomRoom = "zoomRoom",
-    CommonAreaPhone = "commonAreaPhone",
-    AutoReceptionist = "autoReceptionist",
-    CallQueue = "callQueue",
-    SharedLineGroup = "sharedLineGroup"
-}
-
-
-// UpdateSettingTemplateMultipartFormDataUserSettingsCallHandlingBusinessHoursConnectToOperator
-/** 
- * Allow callers to press Zero to reach an operator or press One to leave a message, or allow neither of these options.
-**/
-export class UpdateSettingTemplateMultipartFormDataUserSettingsCallHandlingBusinessHoursConnectToOperator extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=enable" })
-  enable?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=id" })
-  id?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=type" })
-  type?: UpdateSettingTemplateMultipartFormDataUserSettingsCallHandlingBusinessHoursConnectToOperatorTypeEnum;
-}
-
-
-export class UpdateSettingTemplateMultipartFormDataUserSettingsCallHandlingBusinessHoursCustomHours extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=from" })
-  from?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=to" })
-  to?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=type" })
-  type?: number;
-
-  @SpeakeasyMetadata({ data: "json, name=weekday" })
-  weekday?: number;
-}
-
-export enum UpdateSettingTemplateMultipartFormDataUserSettingsCallHandlingBusinessHoursRingTypeEnum {
-    Zero = "0",
-    One = "1"
-}
-
-export enum UpdateSettingTemplateMultipartFormDataUserSettingsCallHandlingBusinessHoursRingingDurationEnum {
-    Fifteen = "15",
-    Twenty = "20",
-    TwentyFive = "25",
-    Thirty = "30",
-    ThirtyFive = "35",
-    Forty = "40",
-    FortyFive = "45",
-    Fifty = "50",
-    FiftyFive = "55",
-    Sixty = "60"
-}
-
-
-export class UpdateSettingTemplateMultipartFormDataUserSettingsCallHandlingBusinessHours extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=business_hour_action" })
-  businessHourAction?: number;
-
-  @SpeakeasyMetadata({ data: "json, name=connect_to_operator" })
-  connectToOperator?: UpdateSettingTemplateMultipartFormDataUserSettingsCallHandlingBusinessHoursConnectToOperator;
-
-  @SpeakeasyMetadata({ data: "json, name=custom_hours", elemType: UpdateSettingTemplateMultipartFormDataUserSettingsCallHandlingBusinessHoursCustomHours })
-  customHours?: UpdateSettingTemplateMultipartFormDataUserSettingsCallHandlingBusinessHoursCustomHours[];
-
-  @SpeakeasyMetadata({ data: "json, name=ring_type" })
-  ringType?: UpdateSettingTemplateMultipartFormDataUserSettingsCallHandlingBusinessHoursRingTypeEnum;
-
-  @SpeakeasyMetadata({ data: "json, name=ringing_duration" })
-  ringingDuration?: UpdateSettingTemplateMultipartFormDataUserSettingsCallHandlingBusinessHoursRingingDurationEnum;
-
-  @SpeakeasyMetadata({ data: "json, name=type" })
-  type?: number;
-}
-
-export enum UpdateSettingTemplateMultipartFormDataUserSettingsCallHandlingCloseHoursConnectToOperatorTypeEnum {
-    User = "user",
-    ZoomRoom = "zoomRoom",
-    CommonAreaPhone = "commonAreaPhone",
-    AutoReceptionist = "autoReceptionist",
-    CallQueue = "callQueue",
-    SharedLineGroup = "sharedLineGroup"
-}
-
-
-// UpdateSettingTemplateMultipartFormDataUserSettingsCallHandlingCloseHoursConnectToOperator
-/** 
- * Allow callers to press Zero to reach an operator or press One to leave a message, or allow neither of these options.
-**/
-export class UpdateSettingTemplateMultipartFormDataUserSettingsCallHandlingCloseHoursConnectToOperator extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=enable" })
-  enable?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=id" })
-  id?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=type" })
-  type?: UpdateSettingTemplateMultipartFormDataUserSettingsCallHandlingCloseHoursConnectToOperatorTypeEnum;
-}
-
-export enum UpdateSettingTemplateMultipartFormDataUserSettingsCallHandlingCloseHoursMaxWaitTimeEnum {
-    Fifteen = "15",
-    Twenty = "20",
-    TwentyFive = "25",
-    Thirty = "30",
-    ThirtyFive = "35",
-    Forty = "40",
-    FortyFive = "45",
-    Fifty = "50",
-    FiftyFive = "55",
-    Sixty = "60"
-}
-
-
-export class UpdateSettingTemplateMultipartFormDataUserSettingsCallHandlingCloseHours extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=close_hour_action" })
-  closeHourAction?: number;
-
-  @SpeakeasyMetadata({ data: "json, name=connect_to_operator" })
-  connectToOperator?: UpdateSettingTemplateMultipartFormDataUserSettingsCallHandlingCloseHoursConnectToOperator;
-
-  @SpeakeasyMetadata({ data: "json, name=max_wait_time" })
-  maxWaitTime?: UpdateSettingTemplateMultipartFormDataUserSettingsCallHandlingCloseHoursMaxWaitTimeEnum;
-}
-
-
-export class UpdateSettingTemplateMultipartFormDataUserSettingsCallHandling extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=business_hours" })
-  businessHours?: UpdateSettingTemplateMultipartFormDataUserSettingsCallHandlingBusinessHours;
-
-  @SpeakeasyMetadata({ data: "json, name=close_hours" })
-  closeHours?: UpdateSettingTemplateMultipartFormDataUserSettingsCallHandlingCloseHours;
-}
-
-
-export class UpdateSettingTemplateMultipartFormDataUserSettingsDeskPhone extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=pin_code" })
-  pinCode?: string;
-}
-
-export enum UpdateSettingTemplateMultipartFormDataUserSettingsHoldMusicEnum {
-    Default = "default",
-    Disable = "disable"
-}
-
-
-export class UpdateSettingTemplateMultipartFormDataUserSettings extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=audio_prompt_language" })
-  audioPromptLanguage?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=block_calls_without_caller_id" })
-  blockCallsWithoutCallerId?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=call_handling" })
-  callHandling?: UpdateSettingTemplateMultipartFormDataUserSettingsCallHandling;
-
-  @SpeakeasyMetadata({ data: "json, name=desk_phone" })
-  deskPhone?: UpdateSettingTemplateMultipartFormDataUserSettingsDeskPhone;
-
-  @SpeakeasyMetadata({ data: "json, name=hold_music" })
-  holdMusic?: UpdateSettingTemplateMultipartFormDataUserSettingsHoldMusicEnum;
-}
-
-
-export class UpdateSettingTemplateMultipartFormData extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "multipart_form, name=description" })
-  description?: string;
-
-  @SpeakeasyMetadata({ data: "multipart_form, name=name" })
-  name?: string;
-
-  @SpeakeasyMetadata({ data: "multipart_form, name=policy;json=true" })
-  policy?: UpdateSettingTemplateMultipartFormDataPolicy;
-
-  @SpeakeasyMetadata({ data: "multipart_form, name=profile;json=true" })
-  profile?: UpdateSettingTemplateMultipartFormDataProfile;
-
-  @SpeakeasyMetadata({ data: "multipart_form, name=user_settings;json=true" })
-  userSettings?: UpdateSettingTemplateMultipartFormDataUserSettings;
-}
-
-
-export class UpdateSettingTemplateRequests extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  object?: UpdateSettingTemplateApplicationJson;
-
-  @SpeakeasyMetadata({ data: "request, media_type=multipart/form-data" })
-  object1?: UpdateSettingTemplateMultipartFormData;
-}
-
+/*
+ * Code generated by Speakeasy (https://speakeasyapi.dev). DO NOT EDIT.
+ */
+
+import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class UpdateSettingTemplateSecurity extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" })
-  oAuth: shared.SchemeOAuth;
+  @SpeakeasyMetadata({
+    data: "security, scheme=true;type=oauth2;name=Authorization",
+  })
+  oAuth: string;
 }
 
+export class UpdateSettingTemplateApplicationJSONPolicyAdHocCallRecording extends SpeakeasyBase {
+  /**
+   * Allow current extension to record and save calls in the cloud.
+   */
+  @SpeakeasyMetadata()
+  @Expose({ name: "enable" })
+  enable?: boolean;
+
+  /**
+   * Play a prompt to call participants when the recording has started.
+   */
+  @SpeakeasyMetadata()
+  @Expose({ name: "recording_start_prompt" })
+  recordingStartPrompt?: boolean;
+
+  /**
+   * Allow call recording transcription.
+   */
+  @SpeakeasyMetadata()
+  @Expose({ name: "recording_transcription" })
+  recordingTranscription?: boolean;
+}
+
+/**
+ * Values: inbound, outbound, both.
+ */
+export enum UpdateSettingTemplateApplicationJSONPolicyAutoCallRecordingRecordingCallsEnum {
+  Inbound = "inbound",
+  Outbound = "outbound",
+  Both = "both",
+}
+
+export class UpdateSettingTemplateApplicationJSONPolicyAutoCallRecording extends SpeakeasyBase {
+  /**
+   * Automatic call recording.
+   */
+  @SpeakeasyMetadata()
+  @Expose({ name: "enable" })
+  enable?: boolean;
+
+  /**
+   * Values: inbound, outbound, both.
+   */
+  @SpeakeasyMetadata()
+  @Expose({ name: "recording_calls" })
+  recordingCalls?: UpdateSettingTemplateApplicationJSONPolicyAutoCallRecordingRecordingCallsEnum;
+
+  /**
+   * Play a prompt to call participants when the recording has started.
+   */
+  @SpeakeasyMetadata()
+  @Expose({ name: "recording_start_prompt" })
+  recordingStartPrompt?: boolean;
+
+  /**
+   * Allow call recording transcription.
+   */
+  @SpeakeasyMetadata()
+  @Expose({ name: "recording_transcription" })
+  recordingTranscription?: boolean;
+}
+
+export class UpdateSettingTemplateApplicationJSONPolicySms extends SpeakeasyBase {
+  /**
+   * Allow user to send and receive messages.
+   */
+  @SpeakeasyMetadata()
+  @Expose({ name: "enable" })
+  enable?: boolean;
+
+  /**
+   * Whether or not SMS is international.
+   */
+  @SpeakeasyMetadata()
+  @Expose({ name: "international_sms" })
+  internationalSms?: boolean;
+}
+
+export class UpdateSettingTemplateApplicationJSONPolicyVoicemail extends SpeakeasyBase {
+  /**
+   * Allow voicemail transcription.
+   */
+  @SpeakeasyMetadata()
+  @Expose({ name: "allow_transcription" })
+  allowTranscription?: boolean;
+
+  /**
+   * Allow current extension to access, receive, or share voicemail.
+   */
+  @SpeakeasyMetadata()
+  @Expose({ name: "enable" })
+  enable?: boolean;
+}
+
+export class UpdateSettingTemplateApplicationJSONPolicy extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  @Expose({ name: "ad_hoc_call_recording" })
+  @Type(() => UpdateSettingTemplateApplicationJSONPolicyAdHocCallRecording)
+  adHocCallRecording?: UpdateSettingTemplateApplicationJSONPolicyAdHocCallRecording;
+
+  @SpeakeasyMetadata()
+  @Expose({ name: "auto_call_recording" })
+  @Type(() => UpdateSettingTemplateApplicationJSONPolicyAutoCallRecording)
+  autoCallRecording?: UpdateSettingTemplateApplicationJSONPolicyAutoCallRecording;
+
+  @SpeakeasyMetadata()
+  @Expose({ name: "sms" })
+  @Type(() => UpdateSettingTemplateApplicationJSONPolicySms)
+  sms?: UpdateSettingTemplateApplicationJSONPolicySms;
+
+  @SpeakeasyMetadata()
+  @Expose({ name: "voicemail" })
+  @Type(() => UpdateSettingTemplateApplicationJSONPolicyVoicemail)
+  voicemail?: UpdateSettingTemplateApplicationJSONPolicyVoicemail;
+}
+
+export class UpdateSettingTemplateApplicationJSONProfile extends SpeakeasyBase {
+  /**
+   * The area code from which the phone account was created.
+   */
+  @SpeakeasyMetadata()
+  @Expose({ name: "area_code" })
+  areaCode?: string;
+
+  /**
+   * Name of the country where the template was created.
+   */
+  @SpeakeasyMetadata()
+  @Expose({ name: "country" })
+  country?: string;
+}
+
+/**
+ * When a call is not answered:<br>
+ *
+ * @remarks
+ * 0-Forward to voicemail;<br>
+ * 1-Play a message, then disconnect; <br>
+ * 9-Disconnect; <br>
+ * 26-Forward to External Contacts; <br>
+ * 50-Forward to another extension
+ */
+export enum UpdateSettingTemplateApplicationJSONUserSettingsCallHandlingBusinessHoursBusinessHourActionEnum {
+  Zero = "0",
+  One = "1",
+  Nine = "9",
+  TwentySix = "26",
+  Fifty = "50",
+}
+
+/**
+ * Values:<br>
+ *
+ * @remarks
+ * 1-user,<br>
+ * 2-callQueue, <br>
+ * 3-autoReceptionist,<br>
+ * 4-commonAreaPhone,<br>
+ * 5-zoomRoom, <br>
+ * 7-sharedLineGroup
+ */
+export enum UpdateSettingTemplateApplicationJSONUserSettingsCallHandlingBusinessHoursConnectToOperatorTypeEnum {
+  User = "user",
+  ZoomRoom = "zoomRoom",
+  CommonAreaPhone = "commonAreaPhone",
+  AutoReceptionist = "autoReceptionist",
+  CallQueue = "callQueue",
+  SharedLineGroup = "sharedLineGroup",
+}
+
+/**
+ * Allow callers to press Zero to reach an operator or press One to leave a message, or allow neither of these options.
+ */
+export class UpdateSettingTemplateApplicationJSONUserSettingsCallHandlingBusinessHoursConnectToOperator extends SpeakeasyBase {
+  /**
+   * Enable connect to operator.
+   */
+  @SpeakeasyMetadata()
+  @Expose({ name: "enable" })
+  enable?: boolean;
+
+  /**
+   * Extension ID of user, zoomRoom, commonAreaPhone, autoReceptionist, callQueue or sharedLineGroup. This ID is passed along with the `type` if the `close_hour_action` was not set with a value of *26*.
+   */
+  @SpeakeasyMetadata()
+  @Expose({ name: "id" })
+  id?: string;
+
+  /**
+   * Values:<br>
+   *
+   * @remarks
+   * 1-user,<br>
+   * 2-callQueue, <br>
+   * 3-autoReceptionist,<br>
+   * 4-commonAreaPhone,<br>
+   * 5-zoomRoom, <br>
+   * 7-sharedLineGroup
+   */
+  @SpeakeasyMetadata()
+  @Expose({ name: "type" })
+  type?: UpdateSettingTemplateApplicationJSONUserSettingsCallHandlingBusinessHoursConnectToOperatorTypeEnum;
+}
+
+/**
+ * Values:<br>
+ *
+ * @remarks
+ * 1-24 Hours,<br>
+ * 2-customized hours
+ */
+export enum UpdateSettingTemplateApplicationJSONUserSettingsCallHandlingBusinessHoursCustomHoursTypeEnum {
+  One = "1",
+  Two = "2",
+}
+
+/**
+ * Values: 1-7 sun-sat
+ */
+export enum UpdateSettingTemplateApplicationJSONUserSettingsCallHandlingBusinessHoursCustomHoursWeekdayEnum {
+  One = "1",
+  Two = "2",
+  Three = "3",
+  Four = "4",
+  Five = "5",
+  Six = "6",
+  Seven = "7",
+}
+
+export class UpdateSettingTemplateApplicationJSONUserSettingsCallHandlingBusinessHoursCustomHours extends SpeakeasyBase {
+  /**
+   * Values:<br>
+   *
+   * @remarks
+   * hh:mm
+   */
+  @SpeakeasyMetadata()
+  @Expose({ name: "from" })
+  from?: string;
+
+  /**
+   * Values:<br>
+   *
+   * @remarks
+   * hh:mm
+   */
+  @SpeakeasyMetadata()
+  @Expose({ name: "to" })
+  to?: string;
+
+  /**
+   * Values:<br>
+   *
+   * @remarks
+   * 1-24 Hours,<br>
+   * 2-customized hours
+   */
+  @SpeakeasyMetadata()
+  @Expose({ name: "type" })
+  type?: UpdateSettingTemplateApplicationJSONUserSettingsCallHandlingBusinessHoursCustomHoursTypeEnum;
+
+  /**
+   * Values: 1-7 sun-sat
+   */
+  @SpeakeasyMetadata()
+  @Expose({ name: "weekday" })
+  weekday?: UpdateSettingTemplateApplicationJSONUserSettingsCallHandlingBusinessHoursCustomHoursWeekdayEnum;
+}
+
+/**
+ * Call Handling Ring Mode:<br>
+ *
+ * @remarks
+ * 0-Simultaneous,<br>
+ * 1-Sequential
+ */
+export enum UpdateSettingTemplateApplicationJSONUserSettingsCallHandlingBusinessHoursRingTypeEnum {
+  Zero = "0",
+  One = "1",
+}
+
+/**
+ * Ringing Duration for Each Device, in seconds. Values:<br>
+ *
+ * @remarks
+ * 15,20,25,30,35,40,45,50,55,60
+ */
+export enum UpdateSettingTemplateApplicationJSONUserSettingsCallHandlingBusinessHoursRingingDurationEnum {
+  Fifteen = "15",
+  Twenty = "20",
+  TwentyFive = "25",
+  Thirty = "30",
+  ThirtyFive = "35",
+  Forty = "40",
+  FortyFive = "45",
+  Fifty = "50",
+  FiftyFive = "55",
+  Sixty = "60",
+}
+
+/**
+ * Values:<br>
+ *
+ * @remarks
+ * 1-24 Hours, 7 Days a Week;<br>
+ * 2-Custom Hours
+ */
+export enum UpdateSettingTemplateApplicationJSONUserSettingsCallHandlingBusinessHoursTypeEnum {
+  One = "1",
+  Two = "2",
+}
+
+export class UpdateSettingTemplateApplicationJSONUserSettingsCallHandlingBusinessHours extends SpeakeasyBase {
+  /**
+   * When a call is not answered:<br>
+   *
+   * @remarks
+   * 0-Forward to voicemail;<br>
+   * 1-Play a message, then disconnect; <br>
+   * 9-Disconnect; <br>
+   * 26-Forward to External Contacts; <br>
+   * 50-Forward to another extension
+   */
+  @SpeakeasyMetadata()
+  @Expose({ name: "business_hour_action" })
+  businessHourAction?: UpdateSettingTemplateApplicationJSONUserSettingsCallHandlingBusinessHoursBusinessHourActionEnum;
+
+  /**
+   * Allow callers to press Zero to reach an operator or press One to leave a message, or allow neither of these options.
+   */
+  @SpeakeasyMetadata()
+  @Expose({ name: "connect_to_operator" })
+  @Type(
+    () =>
+      UpdateSettingTemplateApplicationJSONUserSettingsCallHandlingBusinessHoursConnectToOperator
+  )
+  connectToOperator?: UpdateSettingTemplateApplicationJSONUserSettingsCallHandlingBusinessHoursConnectToOperator;
+
+  @SpeakeasyMetadata({
+    elemType:
+      UpdateSettingTemplateApplicationJSONUserSettingsCallHandlingBusinessHoursCustomHours,
+  })
+  @Expose({ name: "custom_hours" })
+  @Type(
+    () =>
+      UpdateSettingTemplateApplicationJSONUserSettingsCallHandlingBusinessHoursCustomHours
+  )
+  customHours?: UpdateSettingTemplateApplicationJSONUserSettingsCallHandlingBusinessHoursCustomHours[];
+
+  /**
+   * Call Handling Ring Mode:<br>
+   *
+   * @remarks
+   * 0-Simultaneous,<br>
+   * 1-Sequential
+   */
+  @SpeakeasyMetadata()
+  @Expose({ name: "ring_type" })
+  ringType?: UpdateSettingTemplateApplicationJSONUserSettingsCallHandlingBusinessHoursRingTypeEnum;
+
+  /**
+   * Ringing Duration for Each Device, in seconds. Values:<br>
+   *
+   * @remarks
+   * 15,20,25,30,35,40,45,50,55,60
+   */
+  @SpeakeasyMetadata()
+  @Expose({ name: "ringing_duration" })
+  ringingDuration?: UpdateSettingTemplateApplicationJSONUserSettingsCallHandlingBusinessHoursRingingDurationEnum;
+
+  /**
+   * Values:<br>
+   *
+   * @remarks
+   * 1-24 Hours, 7 Days a Week;<br>
+   * 2-Custom Hours
+   */
+  @SpeakeasyMetadata()
+  @Expose({ name: "type" })
+  type?: UpdateSettingTemplateApplicationJSONUserSettingsCallHandlingBusinessHoursTypeEnum;
+}
+
+/**
+ * Action to take when a call is not answered:<br>
+ *
+ * @remarks
+ * 0-Forward to voicemail; <br>
+ * 1-Play a message, then disconnect; <br>
+ * 9-Disconnect; <br>
+ * 26-Forward to External Contacts; <br>
+ * 50-Forward to another extension
+ *
+ */
+export enum UpdateSettingTemplateApplicationJSONUserSettingsCallHandlingCloseHoursCloseHourActionEnum {
+  Zero = "0",
+  One = "1",
+  Nine = "9",
+  TwentySix = "26",
+  Fifty = "50",
+}
+
+/**
+ * Values:<br>
+ *
+ * @remarks
+ * 1-user,<br>
+ * 2-callQueue, <br>
+ * 3-autoReceptionist,<br>
+ * 4-commonAreaPhone,<br>
+ * 5-zoomRoom, <br>
+ * 7-sharedLineGroup
+ */
+export enum UpdateSettingTemplateApplicationJSONUserSettingsCallHandlingCloseHoursConnectToOperatorTypeEnum {
+  User = "user",
+  ZoomRoom = "zoomRoom",
+  CommonAreaPhone = "commonAreaPhone",
+  AutoReceptionist = "autoReceptionist",
+  CallQueue = "callQueue",
+  SharedLineGroup = "sharedLineGroup",
+}
+
+/**
+ * Allow callers to press Zero to reach an operator or press One to leave a message, or allow neither of these options.
+ */
+export class UpdateSettingTemplateApplicationJSONUserSettingsCallHandlingCloseHoursConnectToOperator extends SpeakeasyBase {
+  /**
+   * Enable connect to operator.
+   */
+  @SpeakeasyMetadata()
+  @Expose({ name: "enable" })
+  enable?: boolean;
+
+  /**
+   * Extension ID of user, zoomRoom, commonAreaPhone, autoReceptionist, callQueue or sharedLineGroup. This ID is passed along with the `type` if the `close_hour_action` was not set with a value of *26*.
+   */
+  @SpeakeasyMetadata()
+  @Expose({ name: "id" })
+  id?: string;
+
+  /**
+   * Values:<br>
+   *
+   * @remarks
+   * 1-user,<br>
+   * 2-callQueue, <br>
+   * 3-autoReceptionist,<br>
+   * 4-commonAreaPhone,<br>
+   * 5-zoomRoom, <br>
+   * 7-sharedLineGroup
+   */
+  @SpeakeasyMetadata()
+  @Expose({ name: "type" })
+  type?: UpdateSettingTemplateApplicationJSONUserSettingsCallHandlingCloseHoursConnectToOperatorTypeEnum;
+}
+
+/**
+ * Maximum wait time, in seconds. Values:<br>
+ *
+ * @remarks
+ * 15,20,25,30,35,40,45,50,55,60
+ */
+export enum UpdateSettingTemplateApplicationJSONUserSettingsCallHandlingCloseHoursMaxWaitTimeEnum {
+  Fifteen = "15",
+  Twenty = "20",
+  TwentyFive = "25",
+  Thirty = "30",
+  ThirtyFive = "35",
+  Forty = "40",
+  FortyFive = "45",
+  Fifty = "50",
+  FiftyFive = "55",
+  Sixty = "60",
+}
+
+export class UpdateSettingTemplateApplicationJSONUserSettingsCallHandlingCloseHours extends SpeakeasyBase {
+  /**
+   * Action to take when a call is not answered:<br>
+   *
+   * @remarks
+   * 0-Forward to voicemail; <br>
+   * 1-Play a message, then disconnect; <br>
+   * 9-Disconnect; <br>
+   * 26-Forward to External Contacts; <br>
+   * 50-Forward to another extension
+   *
+   */
+  @SpeakeasyMetadata()
+  @Expose({ name: "close_hour_action" })
+  closeHourAction?: UpdateSettingTemplateApplicationJSONUserSettingsCallHandlingCloseHoursCloseHourActionEnum;
+
+  /**
+   * Allow callers to press Zero to reach an operator or press One to leave a message, or allow neither of these options.
+   */
+  @SpeakeasyMetadata()
+  @Expose({ name: "connect_to_operator" })
+  @Type(
+    () =>
+      UpdateSettingTemplateApplicationJSONUserSettingsCallHandlingCloseHoursConnectToOperator
+  )
+  connectToOperator?: UpdateSettingTemplateApplicationJSONUserSettingsCallHandlingCloseHoursConnectToOperator;
+
+  /**
+   * Maximum wait time, in seconds. Values:<br>
+   *
+   * @remarks
+   * 15,20,25,30,35,40,45,50,55,60
+   */
+  @SpeakeasyMetadata()
+  @Expose({ name: "max_wait_time" })
+  maxWaitTime?: UpdateSettingTemplateApplicationJSONUserSettingsCallHandlingCloseHoursMaxWaitTimeEnum;
+}
+
+export class UpdateSettingTemplateApplicationJSONUserSettingsCallHandling extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  @Expose({ name: "business_hours" })
+  @Type(
+    () =>
+      UpdateSettingTemplateApplicationJSONUserSettingsCallHandlingBusinessHours
+  )
+  businessHours?: UpdateSettingTemplateApplicationJSONUserSettingsCallHandlingBusinessHours;
+
+  @SpeakeasyMetadata()
+  @Expose({ name: "close_hours" })
+  @Type(
+    () => UpdateSettingTemplateApplicationJSONUserSettingsCallHandlingCloseHours
+  )
+  closeHours?: UpdateSettingTemplateApplicationJSONUserSettingsCallHandlingCloseHours;
+}
+
+export class UpdateSettingTemplateApplicationJSONUserSettingsDeskPhone extends SpeakeasyBase {
+  /**
+   * Pin code.
+   */
+  @SpeakeasyMetadata()
+  @Expose({ name: "pin_code" })
+  pinCode?: string;
+}
+
+/**
+ * The value of this field can be either `default` or `disable`.
+ *
+ * @remarks
+ *
+ * * `default`: This means that the hold music can be set using the [audio library](https://support.zoom.us/hc/en-us/articles/360028212652-Using-the-audio-library-to-customize-greetings-and-hold-music).
+ *
+ * * `disable`: This means that the hold music is disabled.
+ */
+export enum UpdateSettingTemplateApplicationJSONUserSettingsHoldMusicEnum {
+  Default = "default",
+  Disable = "disable",
+}
+
+export class UpdateSettingTemplateApplicationJSONUserSettings extends SpeakeasyBase {
+  /**
+   * Audio prompt language code.<br> American English: `en-US`<br>
+   *
+   * @remarks
+   * British English: `en-GB`<br>
+   * Español americano: `es-US`<br>
+   * Français canadien: `fr-CA`<br>
+   * Dansk: `da-DK`<br>
+   * Deutsch: `de-DE`<br>
+   * Español: `es-ES`<br>
+   * Français: `fr-FR`<br>
+   * Italiano: `it-IT`<br>
+   * Nederlands: `nl-NL`<br>
+   * Portugues portugal: `pt-PT`<br>
+   * Japanese: `ja-JP`<br>
+   * Korean: `ko-KO`<br>
+   * Portugues brasil: `pt-BR`<br>
+   * Chinese: `zh-CN`<br>
+   * Taiwanese: `zh-TW`<br>
+   */
+  @SpeakeasyMetadata()
+  @Expose({ name: "audio_prompt_language" })
+  audioPromptLanguage?: string;
+
+  /**
+   * Block Calls without Caller ID.
+   */
+  @SpeakeasyMetadata()
+  @Expose({ name: "block_calls_without_caller_id" })
+  blockCallsWithoutCallerId?: boolean;
+
+  @SpeakeasyMetadata()
+  @Expose({ name: "call_handling" })
+  @Type(() => UpdateSettingTemplateApplicationJSONUserSettingsCallHandling)
+  callHandling?: UpdateSettingTemplateApplicationJSONUserSettingsCallHandling;
+
+  @SpeakeasyMetadata()
+  @Expose({ name: "desk_phone" })
+  @Type(() => UpdateSettingTemplateApplicationJSONUserSettingsDeskPhone)
+  deskPhone?: UpdateSettingTemplateApplicationJSONUserSettingsDeskPhone;
+
+  /**
+   * The value of this field can be either `default` or `disable`.
+   *
+   * @remarks
+   *
+   * * `default`: This means that the hold music can be set using the [audio library](https://support.zoom.us/hc/en-us/articles/360028212652-Using-the-audio-library-to-customize-greetings-and-hold-music).
+   *
+   * * `disable`: This means that the hold music is disabled.
+   */
+  @SpeakeasyMetadata()
+  @Expose({ name: "hold_music" })
+  holdMusic?: UpdateSettingTemplateApplicationJSONUserSettingsHoldMusicEnum;
+}
+
+export class UpdateSettingTemplateApplicationJSON extends SpeakeasyBase {
+  /**
+   * The description of the template.
+   */
+  @SpeakeasyMetadata()
+  @Expose({ name: "description" })
+  description?: string;
+
+  /**
+   * Specify the name of the template.
+   */
+  @SpeakeasyMetadata()
+  @Expose({ name: "name" })
+  name?: string;
+
+  @SpeakeasyMetadata()
+  @Expose({ name: "policy" })
+  @Type(() => UpdateSettingTemplateApplicationJSONPolicy)
+  policy?: UpdateSettingTemplateApplicationJSONPolicy;
+
+  @SpeakeasyMetadata()
+  @Expose({ name: "profile" })
+  @Type(() => UpdateSettingTemplateApplicationJSONProfile)
+  profile?: UpdateSettingTemplateApplicationJSONProfile;
+
+  @SpeakeasyMetadata()
+  @Expose({ name: "user_settings" })
+  @Type(() => UpdateSettingTemplateApplicationJSONUserSettings)
+  userSettings?: UpdateSettingTemplateApplicationJSONUserSettings;
+}
 
 export class UpdateSettingTemplateRequest extends SpeakeasyBase {
-  @SpeakeasyMetadata()
-  pathParams: UpdateSettingTemplatePathParams;
+  @SpeakeasyMetadata({ data: "request, media_type=application/json" })
+  requestBody?: UpdateSettingTemplateApplicationJSON;
 
-  @SpeakeasyMetadata()
-  request?: UpdateSettingTemplateRequests;
-
-  @SpeakeasyMetadata()
-  security: UpdateSettingTemplateSecurity;
+  /**
+   * The Template ID.
+   */
+  @SpeakeasyMetadata({
+    data: "pathParam, style=simple;explode=false;name=templateId",
+  })
+  templateId: string;
 }
-
 
 export class UpdateSettingTemplateResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
@@ -566,6 +675,15 @@ export class UpdateSettingTemplateResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
   statusCode: number;
 
+  @SpeakeasyMetadata()
+  rawResponse?: AxiosResponse;
+
+  /**
+   * **HTTP Status Code:** `204`<br>
+   *
+   * @remarks
+   * No Content. Request was successful.
+   */
   @SpeakeasyMetadata()
   updateSettingTemplate204ApplicationJSONAny?: any;
 }

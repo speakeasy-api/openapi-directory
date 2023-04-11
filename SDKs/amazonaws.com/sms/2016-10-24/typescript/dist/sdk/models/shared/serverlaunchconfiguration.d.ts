@@ -5,9 +5,12 @@ import { Server } from "./server";
 import { UserData } from "./userdata";
 /**
  * Launch configuration for a server.
-**/
+ */
 export declare class ServerLaunchConfiguration extends SpeakeasyBase {
     associatePublicIpAddress?: boolean;
+    /**
+     * Location of an Amazon S3 object.
+     */
     configureScript?: S3Location;
     configureScriptType?: ScriptTypeEnum;
     ec2KeyName?: string;

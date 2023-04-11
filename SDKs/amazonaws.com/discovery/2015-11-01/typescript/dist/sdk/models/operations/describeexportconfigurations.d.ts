@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeExportConfigurationsXAmzTargetEnum {
-    AwsPoseidonServiceV20151101DescribeExportConfigurations = "AWSPoseidonService_V2015_11_01.DescribeExportConfigurations"
+    AWSPoseidonServiceV20151101DescribeExportConfigurations = "AWSPoseidonService_V2015_11_01.DescribeExportConfigurations"
 }
-export declare class DescribeExportConfigurationsHeaders extends SpeakeasyBase {
+export declare class DescribeExportConfigurationsRequest extends SpeakeasyBase {
+    describeExportConfigurationsRequest: shared.DescribeExportConfigurationsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class DescribeExportConfigurationsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeExportConfigurationsXAmzTargetEnum;
 }
-export declare class DescribeExportConfigurationsRequest extends SpeakeasyBase {
-    headers: DescribeExportConfigurationsHeaders;
-    request: shared.DescribeExportConfigurationsRequest;
-}
 export declare class DescribeExportConfigurationsResponse extends SpeakeasyBase {
+    /**
+     * AuthorizationErrorException
+     */
     authorizationErrorException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     describeExportConfigurationsResponse?: shared.DescribeExportConfigurationsResponse;
+    /**
+     * HomeRegionNotSetException
+     */
     homeRegionNotSetException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
-    resourceNotFoundException?: any;
-    serverInternalErrorException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ServerInternalErrorException
+     */
+    serverInternalErrorException?: any;
 }

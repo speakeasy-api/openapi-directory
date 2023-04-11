@@ -1,4 +1,4 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteMlModelInput extends SpeakeasyBase {
+export declare class DeleteMLModelInput extends SpeakeasyBase {
     mlModelId: string;
 }

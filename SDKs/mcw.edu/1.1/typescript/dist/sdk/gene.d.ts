@@ -1,5 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Gene {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,67 +10,67 @@ export declare class Gene {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getAllAnnotatedGenesUsingGet - Return a list of genes annotated to an ontology term
-    **/
-    getAllAnnotatedGenesUsingGet(req: operations.GetAllAnnotatedGenesUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetAllAnnotatedGenesUsingGetResponse>;
+     * Return a list of genes annotated to an ontology term
+     */
+    getAllAnnotatedGenesUsingGET(req: operations.GETAllAnnotatedGenesUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETAllAnnotatedGenesUsingGETResponse>;
     /**
-     * getAnnotatedGenesUsingPost - Return a list of genes annotated to an ontology term
-    **/
-    getAnnotatedGenesUsingPost(req: operations.GetAnnotatedGenesUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.GetAnnotatedGenesUsingPostResponse>;
+     * Return a list of genes annotated to an ontology term
+     */
+    getAnnotatedGenesUsingPOST(req: shared.AnnotatedGeneRequest, config?: AxiosRequestConfig): Promise<operations.GetAnnotatedGenesUsingPOSTResponse>;
     /**
-     * getGeneAllelesUsingGet - Return a list of gene alleles
-    **/
-    getGeneAllelesUsingGet(req: operations.GetGeneAllelesUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetGeneAllelesUsingGetResponse>;
+     * Return a list of gene alleles
+     */
+    getGeneAllelesUsingGET(req: operations.GETGeneAllelesUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETGeneAllelesUsingGETResponse>;
     /**
-     * getGeneByMapKeyUsingGet - Return a list of all genes with position information for an assembly
-    **/
-    getGeneByMapKeyUsingGet(req: operations.GetGeneByMapKeyUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetGeneByMapKeyUsingGetResponse>;
+     * Return a list of all genes with position information for an assembly
+     */
+    getGeneByMapKeyUsingGET(req: operations.GETGeneByMapKeyUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETGeneByMapKeyUsingGETResponse>;
     /**
-     * getGeneByRgdIdUsingGet - Get a gene record by RGD ID
-    **/
-    getGeneByRgdIdUsingGet(req: operations.GetGeneByRgdIdUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetGeneByRgdIdUsingGetResponse>;
+     * Get a gene record by RGD ID
+     */
+    getGeneByRgdIdUsingGET(req: operations.GETGeneByRgdIdUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETGeneByRgdIdUsingGETResponse>;
     /**
-     * getGeneBySymbolUsingGet - Get a gene record by symbol and species type key
-    **/
-    getGeneBySymbolUsingGet(req: operations.GetGeneBySymbolUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetGeneBySymbolUsingGetResponse>;
+     * Get a gene record by symbol and species type key
+     */
+    getGeneBySymbolUsingGET(req: operations.GETGeneBySymbolUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETGeneBySymbolUsingGETResponse>;
     /**
-     * getGeneOrthologsUsingGet - Return a list of gene orthologs
-    **/
-    getGeneOrthologsUsingGet(req: operations.GetGeneOrthologsUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetGeneOrthologsUsingGetResponse>;
+     * Return a list of gene orthologs
+     */
+    getGeneOrthologsUsingGET(req: operations.GETGeneOrthologsUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETGeneOrthologsUsingGETResponse>;
     /**
-     * getGenesAnnotatedUsingGet - Return a list of genes annotated to an ontology term
-    **/
-    getGenesAnnotatedUsingGet(req: operations.GetGenesAnnotatedUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetGenesAnnotatedUsingGetResponse>;
+     * Return a list of genes annotated to an ontology term
+     */
+    getGenesAnnotatedUsingGET(req: operations.GETGenesAnnotatedUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETGenesAnnotatedUsingGETResponse>;
     /**
-     * getGenesByAffyIdUsingGet - Return a list of genes for an affymetrix ID
-    **/
-    getGenesByAffyIdUsingGet(req: operations.GetGenesByAffyIdUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetGenesByAffyIdUsingGetResponse>;
+     * Return a list of genes for an affymetrix ID
+     */
+    getGenesByAffyIdUsingGET(req: operations.GETGenesByAffyIdUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETGenesByAffyIdUsingGETResponse>;
     /**
-     * getGenesByAliasSymbolUsingGet - Return a list of genes for an alias and species
-    **/
-    getGenesByAliasSymbolUsingGet(req: operations.GetGenesByAliasSymbolUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetGenesByAliasSymbolUsingGetResponse>;
+     * Return a list of genes for an alias and species
+     */
+    getGenesByAliasSymbolUsingGET(req: operations.GETGenesByAliasSymbolUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETGenesByAliasSymbolUsingGETResponse>;
     /**
-     * getGenesByKeywordUsingGet - Return a list of genes by keyword and species type key
-    **/
-    getGenesByKeywordUsingGet(req: operations.GetGenesByKeywordUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetGenesByKeywordUsingGetResponse>;
+     * Return a list of genes by keyword and species type key
+     */
+    getGenesByKeywordUsingGET(req: operations.GETGenesByKeywordUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETGenesByKeywordUsingGETResponse>;
     /**
-     * getGenesByPositionUsingGet - Return a list of genes position and map key
-    **/
-    getGenesByPositionUsingGet(req: operations.GetGenesByPositionUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetGenesByPositionUsingGetResponse>;
+     * Return a list of genes position and map key
+     */
+    getGenesByPositionUsingGET(req: operations.GETGenesByPositionUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETGenesByPositionUsingGETResponse>;
     /**
-     * getGenesBySpeciesUsingGet - Return a list of all genes for a species in RGD
-    **/
-    getGenesBySpeciesUsingGet(req: operations.GetGenesBySpeciesUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetGenesBySpeciesUsingGetResponse>;
+     * Return a list of all genes for a species in RGD
+     */
+    getGenesBySpeciesUsingGET(req: operations.GETGenesBySpeciesUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETGenesBySpeciesUsingGETResponse>;
     /**
-     * getGenesInRegionUsingGet - Return a list of genes in region
-    **/
-    getGenesInRegionUsingGet(req: operations.GetGenesInRegionUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetGenesInRegionUsingGetResponse>;
+     * Return a list of genes in region
+     */
+    getGenesInRegionUsingGET(req: operations.GETGenesInRegionUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETGenesInRegionUsingGETResponse>;
     /**
-     * getMappedGenesByPositionUsingGet - Return a list of genes position and map key
-    **/
-    getMappedGenesByPositionUsingGet(req: operations.GetMappedGenesByPositionUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetMappedGenesByPositionUsingGetResponse>;
+     * Return a list of genes position and map key
+     */
+    getMappedGenesByPositionUsingGET(req: operations.GETMappedGenesByPositionUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETMappedGenesByPositionUsingGETResponse>;
     /**
-     * getOrthologsByListUsingPost - Return a list of gene orthologs
-    **/
-    getOrthologsByListUsingPost(req: operations.GetOrthologsByListUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.GetOrthologsByListUsingPostResponse>;
+     * Return a list of gene orthologs
+     */
+    getOrthologsByListUsingPOST(req: shared.OrthologRequest, config?: AxiosRequestConfig): Promise<operations.GetOrthologsByListUsingPOSTResponse>;
 }

@@ -1,3 +1,9 @@
+/**
+ * License of the creation. Read more about the Creative Commons licenses on https://creativecommons.org/licenses/
+ *
+ * @remarks
+ *
+ */
 export declare enum ScoreLicenseEnum {
     Copyright = "copyright",
     Cc0 = "cc0",

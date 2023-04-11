@@ -1,12 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { LicenseTypeEnum } from "./licensetypeenum";
+import { ReplicationJobStateEnum } from "./replicationjobstateenum";
 import { ReplicationRun } from "./replicationrun";
 import { ServerTypeEnum } from "./servertypeenum";
-import { ReplicationJobStateEnum } from "./replicationjobstateenum";
 import { VmServer } from "./vmserver";
 /**
  * Represents a replication job.
-**/
+ */
 export declare class ReplicationJob extends SpeakeasyBase {
     description?: string;
     encrypted?: boolean;

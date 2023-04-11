@@ -1,5 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { NestedCableInput } from "./nestedcable";
+export declare enum WritablePowerPortConnectionStatusEnum {
+    False = "false",
+    True = "true"
+}
+/**
+ * Physical port type
+ */
 export declare enum WritablePowerPortTypeEnum {
     Iec60320C6 = "iec-60320-c6",
     Iec60320C8 = "iec-60320-c8",
@@ -69,13 +76,22 @@ export declare enum WritablePowerPortTypeEnum {
     ItaO = "ita-o"
 }
 export declare class WritablePowerPortInput extends SpeakeasyBase {
+    /**
+     * Allocated power draw (watts)
+     */
     allocatedDraw?: number;
     cable?: NestedCableInput;
-    connectionStatus?: boolean;
+    connectionStatus?: WritablePowerPortConnectionStatusEnum;
     description?: string;
     device: number;
+    /**
+     * Maximum power draw (watts)
+     */
     maximumDraw?: number;
     name: string;
     tags?: string[];
+    /**
+     * Physical port type
+     */
     type?: WritablePowerPortTypeEnum;
 }

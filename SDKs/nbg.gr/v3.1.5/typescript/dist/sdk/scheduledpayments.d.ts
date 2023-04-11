@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class ScheduledPayments {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +9,10 @@ export declare class ScheduledPayments {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getAccountsAccountIdScheduledPayments - Get Scheduled Payments
+     * Get Scheduled Payments
      *
+     * @remarks
      * Get Scheduled Payments by Account ID
-    **/
-    getAccountsAccountIdScheduledPayments(req: operations.GetAccountsAccountIdScheduledPaymentsRequest, config?: AxiosRequestConfig): Promise<operations.GetAccountsAccountIdScheduledPaymentsResponse>;
+     */
+    getAccountsAccountIdScheduledPayments(req: operations.GetAccountsAccountIdScheduledPaymentsRequest, security: operations.GetAccountsAccountIdScheduledPaymentsSecurity, config?: AxiosRequestConfig): Promise<operations.GetAccountsAccountIdScheduledPaymentsResponse>;
 }

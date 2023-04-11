@@ -6,118 +6,81 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/remove.bg/1.0.0/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/remove.bg/1.0.0/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { PostRemovebgRequest, PostRemovebgResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  shared.RemoveBgJson,
+  PostRemovebgFormResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  RemoveBgJsonChannelsEnum,
+  RemoveBgJsonFormatEnum,
+  RemoveBgJsonSizeEnum,
+  RemoveBgJsonTypeEnum,
+  RemoveBgJsonTypeLevelEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    apiKeyHeader: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: PostRemovebgRequest = {
-  request: {
-    removeBgJson: {
-      addShadow: false,
-      bgColor: "voluptas",
-      bgImageUrl: "culpa",
-      channels: "rgba",
-      crop: true,
-      cropMargin: "dolor",
-      format: "zip",
-      imageFileB64: "voluptas",
-      imageUrl: "fugit",
-      position: "et",
-      roi: "nihil",
-      scale: "rerum",
-      semitransparency: false,
-      size: "preview",
-      type: "auto",
-      typeLevel: "2",
-    },
-    removeBgJson1: {
-      addShadow: false,
-      bgColor: "dolorem",
-      bgImageUrl: "et",
-      channels: "rgba",
-      crop: true,
-      cropMargin: "vitae",
-      format: "jpg",
-      imageFileB64: "dolores",
-      imageUrl: "illum",
-      position: "debitis",
-      roi: "vel",
-      scale: "odio",
-      semitransparency: true,
-      size: "full",
-      type: "person",
-      typeLevel: "none",
-    },
-    removeBgMultipart: {
-      addShadow: false,
-      bgColor: "commodi",
-      bgImageFile: {
-        bgImageFile: "quis",
-        content: "est".encode(),
-      },
-      bgImageUrl: "aut",
-      channels: "rgba",
-      crop: true,
-      cropMargin: "voluptas",
-      format: "zip",
-      imageFile: {
-        content: "aut".encode(),
-        imageFile: "illo",
-      },
-      imageFileB64: "sed",
-      imageUrl: "officiis",
-      position: "autem",
-      roi: "consectetur",
-      scale: "nobis",
-      semitransparency: false,
-      size: "preview",
-      type: "product",
-      typeLevel: "none",
-    },
+    apiKeyHeader: "YOUR_API_KEY_HERE",
   },
+});
+
+const req: shared.RemoveBgJson = {
+  addShadow: false,
+  bgColor: "corrupti",
+  bgImageUrl: "provident",
+  channels: RemoveBgJsonChannelsEnum.Alpha,
+  crop: false,
+  cropMargin: "quibusdam",
+  format: RemoveBgJsonFormatEnum.Jpg,
+  imageFileB64: "nulla",
+  imageUrl: "https://www.remove.bg/example-hd.jpg",
+  position: "corrupti",
+  roi: "illum",
+  scale: "vel",
+  semitransparency: false,
+  size: RemoveBgJsonSizeEnum.Full,
+  type: RemoveBgJsonTypeEnum.Product,
+  typeLevel: RemoveBgJsonTypeLevelEnum.One,
 };
 
-sdk.backgroundRemoval.postRemovebg(req).then((res: PostRemovebgResponse | AxiosError) => {
+sdk.backgroundRemoval.postRemovebgForm(req).then((res: PostRemovebgFormResponse | AxiosError) => {
    // handle response
 });
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### Background Removal
 
-* `postRemovebg` - Remove the background of an image
+### backgroundRemoval
 
-### Fetch account info
+* `postRemovebgForm` - Remove the background of an image
+* `postRemovebgJson` - Remove the background of an image
+* `postRemovebgMultipart` - Remove the background of an image
+
+### fetchAccountInfo
 
 * `getAccount` - Fetch credit balance and free API calls.
 
-### Improvement Program
+### improvementProgram
 
-* `postImprove` - Submit an image to the remove.bg Improvement program
+* `postImproveForm` - Submit an image to the remove.bg Improvement program
 * Contribute an image that remove.bg is currently not able to remove the background from properly
 * Help us make remove.bg better
 * Get better results for similiar images in the future
@@ -125,13 +88,52 @@ sdk.backgroundRemoval.postRemovebg(req).then((res: PostRemovebgResponse | AxiosE
 Notes:
   * By submitting images through the API you agree to the <a target="_blank" rel="noopener" href="/ipc">Improvement Program Conditions</a>
   * File size: up to 12MB
-  * up to 100 files per day (up to 1000 for Enterprise customers). <br> Higher Rate Limits are available <a href="/support/contact?subject=Improvement+Program+Rate+Limit">upon request</a>.
+  * up to 100 files per day. <br> Higher Rate Limits are available for Enterprise customers <a href="/support/contact?subject=Improvement+Program+Rate+Limit">upon request</a>.
 
 Requires either an API Key to be provided in the `X-API-Key` request header or an OAuth 2.0 access token to be provided in the `Authorization` request header.
 
 Please note that submissions are used on a best-effort basis and the extent of expected improvement varies depending on many factors, including the number of provided images, their complexity and visual similarity. Improvements usually take several weeks to become effective.
 
+* `postImproveJson` - Submit an image to the remove.bg Improvement program
+* Contribute an image that remove.bg is currently not able to remove the background from properly
+* Help us make remove.bg better
+* Get better results for similiar images in the future
+
+Notes:
+  * By submitting images through the API you agree to the <a target="_blank" rel="noopener" href="/ipc">Improvement Program Conditions</a>
+  * File size: up to 12MB
+  * up to 100 files per day. <br> Higher Rate Limits are available for Enterprise customers <a href="/support/contact?subject=Improvement+Program+Rate+Limit">upon request</a>.
+
+Requires either an API Key to be provided in the `X-API-Key` request header or an OAuth 2.0 access token to be provided in the `Authorization` request header.
+
+Please note that submissions are used on a best-effort basis and the extent of expected improvement varies depending on many factors, including the number of provided images, their complexity and visual similarity. Improvements usually take several weeks to become effective.
+
+* `postImproveMultipart` - Submit an image to the remove.bg Improvement program
+* Contribute an image that remove.bg is currently not able to remove the background from properly
+* Help us make remove.bg better
+* Get better results for similiar images in the future
+
+Notes:
+  * By submitting images through the API you agree to the <a target="_blank" rel="noopener" href="/ipc">Improvement Program Conditions</a>
+  * File size: up to 12MB
+  * up to 100 files per day. <br> Higher Rate Limits are available for Enterprise customers <a href="/support/contact?subject=Improvement+Program+Rate+Limit">upon request</a>.
+
+Requires either an API Key to be provided in the `X-API-Key` request header or an OAuth 2.0 access token to be provided in the `Authorization` request header.
+
+Please note that submissions are used on a best-effort basis and the extent of expected improvement varies depending on many factors, including the number of provided images, their complexity and visual similarity. Improvements usually take several weeks to become effective.
 
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

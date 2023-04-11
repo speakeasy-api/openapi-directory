@@ -1,17 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetChargeStationPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class GetChargeStationQueryParams extends SpeakeasyBase {
-    includeEvses?: boolean;
-    includeLocation?: boolean;
-    includeOrganization?: boolean;
-}
+import { AxiosResponse } from "axios";
 export declare class GetChargeStationRequest extends SpeakeasyBase {
-    pathParams: GetChargeStationPathParams;
-    queryParams: GetChargeStationQueryParams;
+    /**
+     * The charge station id that needs to be fetched
+     */
+    id: string;
+    /**
+     * Populate evses
+     */
+    includeEvses?: boolean;
+    /**
+     * Populate location
+     */
+    includeLocation?: boolean;
+    /**
+     * Populate organization
+     */
+    includeOrganization?: boolean;
 }
 export declare class GetChargeStationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

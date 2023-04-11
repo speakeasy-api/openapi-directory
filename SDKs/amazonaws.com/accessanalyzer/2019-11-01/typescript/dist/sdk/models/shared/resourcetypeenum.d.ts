@@ -1,9 +1,15 @@
 export declare enum ResourceTypeEnum {
-    AwsS3Bucket = "AWS::S3::Bucket",
-    AwsIamRole = "AWS::IAM::Role",
-    AwsSqsQueue = "AWS::SQS::Queue",
-    AwsLambdaFunction = "AWS::Lambda::Function",
-    AwsLambdaLayerVersion = "AWS::Lambda::LayerVersion",
-    AwsKmsKey = "AWS::KMS::Key",
-    AwsSecretsManagerSecret = "AWS::SecretsManager::Secret"
+    AWSS3Bucket = "AWS::S3::Bucket",
+    AWSIAMRole = "AWS::IAM::Role",
+    AWSSQSQueue = "AWS::SQS::Queue",
+    AWSLambdaFunction = "AWS::Lambda::Function",
+    AWSLambdaLayerVersion = "AWS::Lambda::LayerVersion",
+    AWSKMSKey = "AWS::KMS::Key",
+    AWSSecretsManagerSecret = "AWS::SecretsManager::Secret",
+    AWSEFSFileSystem = "AWS::EFS::FileSystem",
+    AWSEc2Snapshot = "AWS::EC2::Snapshot",
+    AWSECRRepository = "AWS::ECR::Repository",
+    AWSRDSDBSnapshot = "AWS::RDS::DBSnapshot",
+    AWSRDSDBClusterSnapshot = "AWS::RDS::DBClusterSnapshot",
+    AWSSNSTopic = "AWS::SNS::Topic"
 }

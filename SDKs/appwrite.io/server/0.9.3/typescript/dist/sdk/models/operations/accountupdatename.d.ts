@@ -1,18 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AccountUpdateNameRequestBody extends SpeakeasyBase {
-    name: string;
-}
+import { AxiosResponse } from "axios";
 export declare class AccountUpdateNameSecurity extends SpeakeasyBase {
-    jwt: shared.SchemeJwt;
-    project: shared.SchemeProject;
+    jwt: string;
+    project: string;
 }
-export declare class AccountUpdateNameRequest extends SpeakeasyBase {
-    request?: AccountUpdateNameRequestBody;
-    security: AccountUpdateNameSecurity;
+export declare class AccountUpdateNameRequestBody extends SpeakeasyBase {
+    /**
+     * User name. Max length: 128 chars.
+     */
+    name: string;
 }
 export declare class AccountUpdateNameResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * User
+     */
     user?: shared.User;
 }

@@ -1,48 +1,71 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class TransferCreditPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class TransferCreditSecurity extends SpeakeasyBase {
+    password: string;
+    username: string;
+}
+export declare class TransferCreditRequest extends SpeakeasyBase {
+    transferBalanceOrCreditRequest: shared.TransferBalanceOrCreditRequest;
+    /**
+     * ID of the primary account
+     */
     apiKey: string;
 }
-export declare class TransferCreditSecurity extends SpeakeasyBase {
-    basicAuth: shared.SchemeBasicAuth;
+export declare class TransferCredit422ApplicationJSONInvalidParameters extends SpeakeasyBase {
+    name?: string;
+    reason?: string;
 }
-export declare class TransferCredit401ApplicationJson extends SpeakeasyBase {
+/**
+ * Validation Error
+ */
+export declare class TransferCredit422ApplicationJSON extends SpeakeasyBase {
+    detail: string;
+    instance: string;
+    invalidParameters: TransferCredit422ApplicationJSONInvalidParameters[];
+    title: string;
+    type: string;
+}
+/**
+ * Invalid API Key
+ */
+export declare class TransferCredit404ApplicationJSON extends SpeakeasyBase {
     detail: string;
     instance: string;
     title: string;
     type: string;
 }
 /**
- * Invalid API Key
-**/
-export declare class TransferCredit404ApplicationJson extends SpeakeasyBase {
+ * Credential is missing or invalid
+ */
+export declare class TransferCredit401ApplicationJSON extends SpeakeasyBase {
     detail: string;
     instance: string;
     title: string;
     type: string;
-}
-export declare class TransferCredit422ApplicationJsonInvalidParameters extends SpeakeasyBase {
-    name?: string;
-    reason?: string;
-}
-export declare class TransferCredit422ApplicationJson extends SpeakeasyBase {
-    detail: string;
-    instance: string;
-    invalidParameters: TransferCredit422ApplicationJsonInvalidParameters[];
-    title: string;
-    type: string;
-}
-export declare class TransferCreditRequest extends SpeakeasyBase {
-    pathParams: TransferCreditPathParams;
-    request: shared.TransferBalanceOrCreditRequest;
-    security: TransferCreditSecurity;
 }
 export declare class TransferCreditResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    transferCreditResponse?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * Credit transfer response
+     */
+    transferCreditResponse?: shared.TransferCreditResponse;
+    /**
+     * Action is forbidden
+     */
     unprovisionedErrorResponse?: shared.UnprovisionedErrorResponse;
-    transferCredit401ApplicationJSONObject?: TransferCredit401ApplicationJson;
-    transferCredit404ApplicationJSONObject?: TransferCredit404ApplicationJson;
-    transferCredit422ApplicationJSONObject?: TransferCredit422ApplicationJson;
+    /**
+     * Credential is missing or invalid
+     */
+    transferCredit401ApplicationJSONObject?: TransferCredit401ApplicationJSON;
+    /**
+     * The account ID provided does not exist in our system or you do not have access
+     */
+    transferCredit404ApplicationJSONObject?: TransferCredit404ApplicationJSON;
+    /**
+     * Validation Error
+     */
+    transferCredit422ApplicationJSONObject?: TransferCredit422ApplicationJSON;
 }

@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Ontology Web Service
+ */
 export declare class Ontology {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,15 +12,15 @@ export declare class Ontology {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getOntDagsUsingGet - Returns child and parent terms for Accession ID
-    **/
-    getOntDagsUsingGet(req: operations.GetOntDagsUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetOntDagsUsingGetResponse>;
+     * Returns child and parent terms for Accession ID
+     */
+    getOntDagsUsingGET(req: operations.GETOntDagsUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETOntDagsUsingGETResponse>;
     /**
-     * getTermUsingGet - Returns term for Accession ID
-    **/
-    getTermUsingGet(req: operations.GetTermUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetTermUsingGetResponse>;
+     * Returns term for Accession ID
+     */
+    getTermUsingGET(req: operations.GETTermUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETTermUsingGETResponse>;
     /**
-     * isDescendantOfUsingGet - Returns true or false for terms
-    **/
-    isDescendantOfUsingGet(req: operations.IsDescendantOfUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.IsDescendantOfUsingGetResponse>;
+     * Returns true or false for terms
+     */
+    isDescendantOfUsingGET(req: operations.IsDescendantOfUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.IsDescendantOfUsingGETResponse>;
 }

@@ -1,4 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Code | Text | Description
+ *
+ * @remarks
+ * -- | -- | --
+ * 0 | Success | The request was successfully accepted by Vonage.
+ * 1 | Throttled | You are trying to send more than the maximum of 30 requests per second.
+ * 2 | Your request is incomplete and missing the mandatory parameter `$parameter` | The stated parameter is missing.
+ * 3 | Invalid value for parameter `$parameter` | Invalid value for parameter. If you see Facility not allowed in the error text, check that you are using the correct Base URL in your request.
+ * 4 | Invalid credentials were provided | The supplied API key or secret in the request is either invalid or disabled.
+ * 5 | Internal Error | An error occurred processing this request in the Cloud Communications Platform.
+ * 6 | The Vonage platform was unable to process this message for the following reason: `$reason` | The request could not be routed.
+ * 16 | The code inserted does not match the expected value |
+ * 17 | The wrong code was provided too many times | You can run Verify check on a specific `request_id` up to three times unless a new verification code is generated. If you check a request more than three times, it is set to FAILED and you cannot check it again.
+ *
+ */
 export declare enum CheckErrorResponseStatusEnum {
     Zero = "0",
     One = "1",
@@ -12,9 +28,31 @@ export declare enum CheckErrorResponseStatusEnum {
 }
 /**
  * Error
-**/
+ */
 export declare class CheckErrorResponse extends SpeakeasyBase {
+    /**
+     * If the `status` is non-zero, this explains the error encountered.
+     */
     errorText?: string;
+    /**
+     * The `request_id` that you received in the response to the Verify request and used in the Verify check request.
+     */
     requestId?: string;
+    /**
+     * Code | Text | Description
+     *
+     * @remarks
+     * -- | -- | --
+     * 0 | Success | The request was successfully accepted by Vonage.
+     * 1 | Throttled | You are trying to send more than the maximum of 30 requests per second.
+     * 2 | Your request is incomplete and missing the mandatory parameter `$parameter` | The stated parameter is missing.
+     * 3 | Invalid value for parameter `$parameter` | Invalid value for parameter. If you see Facility not allowed in the error text, check that you are using the correct Base URL in your request.
+     * 4 | Invalid credentials were provided | The supplied API key or secret in the request is either invalid or disabled.
+     * 5 | Internal Error | An error occurred processing this request in the Cloud Communications Platform.
+     * 6 | The Vonage platform was unable to process this message for the following reason: `$reason` | The request could not be routed.
+     * 16 | The code inserted does not match the expected value |
+     * 17 | The wrong code was provided too many times | You can run Verify check on a specific `request_id` up to three times unless a new verification code is generated. If you check a request more than three times, it is set to FAILED and you cannot check it again.
+     *
+     */
     status?: CheckErrorResponseStatusEnum;
 }

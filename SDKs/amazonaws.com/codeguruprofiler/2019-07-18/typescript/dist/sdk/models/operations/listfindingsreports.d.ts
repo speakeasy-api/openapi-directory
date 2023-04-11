@@ -1,16 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListFindingsReportsPathParams extends SpeakeasyBase {
-    profilingGroupName: string;
-}
-export declare class ListFindingsReportsQueryParams extends SpeakeasyBase {
-    dailyReportsOnly?: boolean;
-    endTime: Date;
-    maxResults?: number;
-    nextToken?: string;
-    startTime: Date;
-}
-export declare class ListFindingsReportsHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListFindingsReportsRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,18 +9,53 @@ export declare class ListFindingsReportsHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class ListFindingsReportsRequest extends SpeakeasyBase {
-    pathParams: ListFindingsReportsPathParams;
-    queryParams: ListFindingsReportsQueryParams;
-    headers: ListFindingsReportsHeaders;
+    /**
+     * A <code>Boolean</code> value indicating whether to only return reports from daily profiles. If set to <code>True</code>, only analysis data from daily profiles is returned. If set to <code>False</code>, analysis data is returned from smaller time windows (for example, one hour).
+     */
+    dailyReportsOnly?: boolean;
+    /**
+     *  The end time of the profile to get analysis data about. You must specify <code>startTime</code> and <code>endTime</code>. This is specified using the ISO 8601 format. For example, 2020-06-01T13:15:02.001Z represents 1 millisecond past June 1, 2020 1:15:02 PM UTC.
+     */
+    endTime: Date;
+    /**
+     * The maximum number of report results returned by <code>ListFindingsReports</code> in paginated output. When this parameter is used, <code>ListFindingsReports</code> only returns <code>maxResults</code> results in a single page along with a <code>nextToken</code> response element. The remaining results of the initial request can be seen by sending another <code>ListFindingsReports</code> request with the returned <code>nextToken</code> value.
+     */
+    maxResults?: number;
+    /**
+     * <p>The <code>nextToken</code> value returned from a previous paginated <code>ListFindingsReportsRequest</code> request where <code>maxResults</code> was used and the results exceeded the value of that parameter. Pagination continues from the end of the previous results that returned the <code>nextToken</code> value. </p> <note> <p>This token should be treated as an opaque identifier that is only used to retrieve the next items in a list and not for other programmatic purposes.</p> </note>
+     */
+    nextToken?: string;
+    /**
+     * The name of the profiling group from which to search for analysis data.
+     */
+    profilingGroupName: string;
+    /**
+     *  The start time of the profile to get analysis data about. You must specify <code>startTime</code> and <code>endTime</code>. This is specified using the ISO 8601 format. For example, 2020-06-01T13:15:02.001Z represents 1 millisecond past June 1, 2020 1:15:02 PM UTC.
+     */
+    startTime: Date;
 }
 export declare class ListFindingsReportsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * Success
+     */
     listFindingsReportsResponse?: shared.ListFindingsReportsResponse;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

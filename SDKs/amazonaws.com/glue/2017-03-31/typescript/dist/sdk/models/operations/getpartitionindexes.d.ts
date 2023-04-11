@@ -1,12 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetPartitionIndexesQueryParams extends SpeakeasyBase {
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum GetPartitionIndexesXAmzTargetEnum {
-    AwsGlueGetPartitionIndexes = "AWSGlue.GetPartitionIndexes"
+    AWSGlueGetPartitionIndexes = "AWSGlue.GetPartitionIndexes"
 }
-export declare class GetPartitionIndexesHeaders extends SpeakeasyBase {
+export declare class GetPartitionIndexesRequest extends SpeakeasyBase {
+    getPartitionIndexesRequest: shared.GetPartitionIndexesRequest;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,18 +19,32 @@ export declare class GetPartitionIndexesHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetPartitionIndexesXAmzTargetEnum;
 }
-export declare class GetPartitionIndexesRequest extends SpeakeasyBase {
-    queryParams: GetPartitionIndexesQueryParams;
-    headers: GetPartitionIndexesHeaders;
-    request: shared.GetPartitionIndexesRequest;
-}
 export declare class GetPartitionIndexesResponse extends SpeakeasyBase {
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * Success
+     */
     getPartitionIndexesResponse?: shared.GetPartitionIndexesResponse;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

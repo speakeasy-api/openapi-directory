@@ -15,7 +15,7 @@ import { BatchListPolicyAttachments } from "./batchlistpolicyattachments";
 import { BatchLookupPolicy } from "./batchlookuppolicy";
 /**
  * Represents the output of a <code>BatchRead</code> operation.
-**/
+ */
 export declare class BatchReadOperation extends SpeakeasyBase {
     getLinkAttributes?: BatchGetLinkAttributes;
     getObjectAttributes?: BatchGetObjectAttributes;

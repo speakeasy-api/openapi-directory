@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { EventTrackerSummary } from "./eventtrackersummary";
+/**
+ * Success
+ */
 export declare class ListEventTrackersResponse extends SpeakeasyBase {
     eventTrackers?: EventTrackerSummary[];
     nextToken?: string;

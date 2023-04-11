@@ -1,5 +1,24 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * In Probely, a target is what defines what is being scanned.
+ *
+ * @remarks
+ * Connected to a target there are two other objects: a site and a list of
+ * assets.
+ *
+ * The site is the where the scan starts and will usually be the main
+ * entry point for your web application.
+ *
+ * As things are today, a single URL is not enough to describe all of the
+ * resources an application uses.
+ * For example, a modern single page web application might load the main
+ * page from one domain and make AJAX requests to one or more other domains.
+ * This where assets come in, they are used to add extra domains that
+ * our scanner should follow.
+ *
+ */
 export declare class Targets {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,27 +28,27 @@ export declare class Targets {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteTargetsId - Delete target
-    **/
+     * Delete target
+     */
     deleteTargetsId(req: operations.DeleteTargetsIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteTargetsIdResponse>;
     /**
-     * getTargets - List targets
-    **/
+     * List targets
+     */
     getTargets(req: operations.GetTargetsRequest, config?: AxiosRequestConfig): Promise<operations.GetTargetsResponse>;
     /**
-     * getTargetsId - Retrieve target
-    **/
+     * Retrieve target
+     */
     getTargetsId(req: operations.GetTargetsIdRequest, config?: AxiosRequestConfig): Promise<operations.GetTargetsIdResponse>;
     /**
-     * patchTargetsId - Partial update target
-    **/
+     * Partial update target
+     */
     patchTargetsId(req: operations.PatchTargetsIdRequest, config?: AxiosRequestConfig): Promise<operations.PatchTargetsIdResponse>;
     /**
-     * postTargets - Create target
-    **/
-    postTargets(req: operations.PostTargetsRequest, config?: AxiosRequestConfig): Promise<operations.PostTargetsResponse>;
+     * Create target
+     */
+    postTargets(req: shared.TargetInput, config?: AxiosRequestConfig): Promise<operations.PostTargetsResponse>;
     /**
-     * putTargetsId - Update target
-    **/
+     * Update target
+     */
     putTargetsId(req: operations.PutTargetsIdRequest, config?: AxiosRequestConfig): Promise<operations.PutTargetsIdResponse>;
 }

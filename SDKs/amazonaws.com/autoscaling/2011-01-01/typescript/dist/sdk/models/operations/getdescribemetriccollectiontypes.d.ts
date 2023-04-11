@@ -1,15 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeMetricCollectionTypesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeMetricCollectionTypesActionEnum {
     DescribeMetricCollectionTypes = "DescribeMetricCollectionTypes"
 }
-export declare enum GetDescribeMetricCollectionTypesVersionEnum {
+export declare enum GETDescribeMetricCollectionTypesVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class GetDescribeMetricCollectionTypesQueryParams extends SpeakeasyBase {
-    action: GetDescribeMetricCollectionTypesActionEnum;
-    version: GetDescribeMetricCollectionTypesVersionEnum;
-}
-export declare class GetDescribeMetricCollectionTypesHeaders extends SpeakeasyBase {
+export declare class GETDescribeMetricCollectionTypesRequest extends SpeakeasyBase {
+    action: GETDescribeMetricCollectionTypesActionEnum;
+    version: GETDescribeMetricCollectionTypesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +17,9 @@ export declare class GetDescribeMetricCollectionTypesHeaders extends SpeakeasyBa
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeMetricCollectionTypesRequest extends SpeakeasyBase {
-    queryParams: GetDescribeMetricCollectionTypesQueryParams;
-    headers: GetDescribeMetricCollectionTypesHeaders;
-}
-export declare class GetDescribeMetricCollectionTypesResponse extends SpeakeasyBase {
+export declare class GETDescribeMetricCollectionTypesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

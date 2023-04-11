@@ -1,4 +1,3 @@
-import { AxiosInstance } from "axios";
 import { AchievementDefinitions } from "./achievementdefinitions";
 import { Achievements } from "./achievements";
 import { Applications } from "./applications";
@@ -10,11 +9,29 @@ import { Revisions } from "./revisions";
 import { Scores } from "./scores";
 import { Snapshots } from "./snapshots";
 import { Stats } from "./stats";
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://games.googleapis.com/"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * The Google Play games service allows developers to enhance games with social leaderboards, achievements, game state, sign-in with Google, and more.
+ *
+ * @see {@link https://developers.google.com/games/}
+ */
 export declare class SDK {
     achievementDefinitions: AchievementDefinitions;
     achievements: Achievements;
@@ -33,5 +50,6 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
 }

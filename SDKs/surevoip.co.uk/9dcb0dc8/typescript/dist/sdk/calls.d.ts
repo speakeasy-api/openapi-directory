@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Create phone calls via an API
+ */
 export declare class Calls {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,11 +12,11 @@ export declare class Calls {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getCalls - Validate a phone number by calling it once
-    **/
+     * Validate a phone number by calling it once
+     */
     getCalls(req: operations.GetCallsRequest, config?: AxiosRequestConfig): Promise<operations.GetCallsResponse>;
     /**
-     * postCalls - Create phone calls with or without announcements and scheduled hangups
-    **/
-    postCalls(req: operations.PostCallsRequest, config?: AxiosRequestConfig): Promise<operations.PostCallsResponse>;
+     * Create phone calls with or without announcements and scheduled hangups
+     */
+    postCalls(req: operations.PostCallsRequestBody, config?: AxiosRequestConfig): Promise<operations.PostCallsResponse>;
 }

@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
- * A custom key-value pair associated with a resource such as a CloudTrail trail.
-**/
+ * A custom key-value pair associated with a resource such as a CloudTrail trail, event data store, or channel.
+ */
 export declare class Tag extends SpeakeasyBase {
     key: string;
     value?: string;

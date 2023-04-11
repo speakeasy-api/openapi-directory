@@ -1,6 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class IpamVrfsListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class IpamVrfsListRequest extends SpeakeasyBase {
     created?: string;
     createdGte?: string;
     createdLte?: string;
@@ -14,6 +15,9 @@ export declare class IpamVrfsListQueryParams extends SpeakeasyBase {
     lastUpdated?: string;
     lastUpdatedGte?: string;
     lastUpdatedLte?: string;
+    /**
+     * Number of results to return per page.
+     */
     limit?: number;
     name?: string;
     nameIc?: string;
@@ -25,6 +29,9 @@ export declare class IpamVrfsListQueryParams extends SpeakeasyBase {
     nameNie?: string;
     nameNiew?: string;
     nameNisw?: string;
+    /**
+     * The initial index from which to return the results.
+     */
     offset?: number;
     q?: string;
     rd?: string;
@@ -48,17 +55,15 @@ export declare class IpamVrfsListQueryParams extends SpeakeasyBase {
     tenantId?: string;
     tenantIdN?: string;
 }
-export declare class IpamVrfsList200ApplicationJson extends SpeakeasyBase {
+export declare class IpamVrfsList200ApplicationJSON extends SpeakeasyBase {
     count: number;
     next?: string;
     previous?: string;
     results: shared.Vrf[];
 }
-export declare class IpamVrfsListRequest extends SpeakeasyBase {
-    queryParams: IpamVrfsListQueryParams;
-}
 export declare class IpamVrfsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    ipamVrfsList200ApplicationJSONObject?: IpamVrfsList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    ipamVrfsList200ApplicationJSONObject?: IpamVrfsList200ApplicationJSON;
 }

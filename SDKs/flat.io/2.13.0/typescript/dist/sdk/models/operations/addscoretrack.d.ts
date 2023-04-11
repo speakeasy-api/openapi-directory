@@ -1,19 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AddScoreTrackPathParams extends SpeakeasyBase {
-    score: string;
-}
+import { AxiosResponse } from "axios";
 export declare class AddScoreTrackSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class AddScoreTrackRequest extends SpeakeasyBase {
-    pathParams: AddScoreTrackPathParams;
-    request: shared.ScoreTrackCreation;
-    security: AddScoreTrackSecurity;
+    scoreTrackCreation: shared.ScoreTrackCreation;
+    /**
+     * Unique identifier of the score document. This can be a Flat Score unique identifier (i.e. `ScoreDetails.id`) or, if the score is also a Google Drive file, the Drive file unique identifier prefixed with `drive-` (e.g. `drive-0B000000000`).
+     *
+     * @remarks
+     *
+     */
+    score: string;
 }
 export declare class AddScoreTrackResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Not granted to access to this score
+     */
     flatErrorResponse?: shared.FlatErrorResponse;
+    /**
+     * Created track
+     */
     scoreTrack?: shared.ScoreTrack;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

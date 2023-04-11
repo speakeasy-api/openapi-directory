@@ -34,4 +34,3 @@ export * from "./controllerssystemsadvisoriesrequest";
 export * from "./controllerssystemsadvisoriesresponse";
 export * from "./controllerssystemsresponse";
 export * from "./modelspackageupdate";
-export * from "./security";

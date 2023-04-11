@@ -1,10 +1,27 @@
-import { AxiosInstance } from "axios";
 import { Assets } from "./assets";
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://cloudasset.googleapis.com/"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * The Cloud Asset API manages the history and inventory of Google Cloud resources.
+ *
+ * @see {@link https://cloud.google.com/asset-inventory/docs/quickstart}
+ */
 export declare class SDK {
     assets: Assets;
     _defaultClient: AxiosInstance;
@@ -13,5 +30,6 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
 }

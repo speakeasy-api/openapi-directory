@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Credentials for the provided identity ID.
-**/
+ */
 export declare class Credentials extends SpeakeasyBase {
     accessKeyId?: string;
     expiration?: Date;

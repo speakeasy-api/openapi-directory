@@ -1,22 +1,43 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetRepositoriesWorkspaceRepoSlugDeployKeysKeyIdPathParams extends SpeakeasyBase {
-    keyId: string;
-    repoSlug: string;
-    workspace: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetRepositoriesWorkspaceRepoSlugDeployKeysKeyIdSecurity extends SpeakeasyBase {
-    oauth2?: shared.SchemeOauth2;
+    apiKey?: string;
     basic?: shared.SchemeBasic;
-    apiKey?: shared.SchemeApiKey;
+    oauth2?: string;
 }
 export declare class GetRepositoriesWorkspaceRepoSlugDeployKeysKeyIdRequest extends SpeakeasyBase {
-    pathParams: GetRepositoriesWorkspaceRepoSlugDeployKeysKeyIdPathParams;
-    security: GetRepositoriesWorkspaceRepoSlugDeployKeysKeyIdSecurity;
+    /**
+     * The key ID matching the deploy key.
+     */
+    keyId: string;
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     *
+     * @remarks
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     *
+     */
+    repoSlug: string;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     *
+     * @remarks
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     *
+     */
+    workspace: string;
 }
 export declare class GetRepositoriesWorkspaceRepoSlugDeployKeysKeyIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Deploy key matching the key ID
+     */
     deployKey?: Record<string, any>;
+    /**
+     * If the specified user or repository does not exist
+     */
     error?: Record<string, any>;
 }

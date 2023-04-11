@@ -1,0 +1,9 @@
+export declare enum DocumentTypeEnum {
+    NativePdf = "NATIVE_PDF",
+    ScannedPdf = "SCANNED_PDF",
+    MsWord = "MS_WORD",
+    Image = "IMAGE",
+    PlainText = "PLAIN_TEXT",
+    TextractDetectDocumentTextJson = "TEXTRACT_DETECT_DOCUMENT_TEXT_JSON",
+    TextractAnalyzeDocumentJson = "TEXTRACT_ANALYZE_DOCUMENT_JSON"
+}

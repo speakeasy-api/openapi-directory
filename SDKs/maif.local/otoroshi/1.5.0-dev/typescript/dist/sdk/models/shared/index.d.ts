@@ -61,7 +61,6 @@ export * from "./rsalgosettings";
 export * from "./script";
 export * from "./scriptcompilationerror";
 export * from "./scriptcompilationresult";
-export * from "./security";
 export * from "./service";
 export * from "./sign";
 export * from "./snowmonkeyconfig";

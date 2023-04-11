@@ -1,42 +1,35 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AnalyticsDataGetRequest, AnalyticsDataGetResponse } from "openapi/src/sdk/models/operations";
+import {
+  AnalyticsDataGetRequest,
+  AnalyticsDataGetResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: AnalyticsDataGetRequest = {
-  security: {
-    option1: {
-      oauth2: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-      oauth2c: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-    },
-  },
-  queryParams: {
-    alt: "atom",
-    dimensions: "voluptas",
-    endDate: "culpa",
-    fields: "expedita",
-    filters: "consequuntur",
-    ids: "dolor",
-    key: "expedita",
-    maxResults: 6044372234677422456,
-    metrics: "fugit",
-    oauthToken: "et",
-    prettyPrint: true,
-    quotaUser: "rerum",
-    segment: "dicta",
-    sort: "debitis",
-    startDate: "voluptatum",
-    startIndex: 2339563716805116249,
-    userIp: "ut",
-  },
+  alt: AltEnum.Atom,
+  dimensions: "corrupti",
+  endDate: "provident",
+  fields: "distinctio",
+  filters: "quibusdam",
+  ids: "unde",
+  key: "nulla",
+  maxResults: 544883,
+  metrics: "illum",
+  oauthToken: "vel",
+  prettyPrint: false,
+  quotaUser: "error",
+  segment: "deserunt",
+  sort: "suscipit",
+  startDate: "iure",
+  startIndex: 297534,
+  userIp: "debitis",
 };
 
 sdk.data.analyticsDataGet(req).then((res: AnalyticsDataGetResponse | AxiosError) => {

@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Projects {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,115 +9,123 @@ export declare class Projects {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * baremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetch - Get instance provisioning settings for a given project. This is hidden method used by UI only.
-    **/
-    baremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetch(req: operations.BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchRequest, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchResponse>;
+     * Get instance provisioning settings for a given project. This is hidden method used by UI only.
+     */
+    baremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetch(req: operations.BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchRequest, security: operations.BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchSecurity, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchResponse>;
     /**
-     * baremetalsolutionProjectsLocationsInstancesCreate - Create an Instance.
-    **/
-    baremetalsolutionProjectsLocationsInstancesCreate(req: operations.BaremetalsolutionProjectsLocationsInstancesCreateRequest, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsInstancesCreateResponse>;
+     * Create an Instance.
+     */
+    baremetalsolutionProjectsLocationsInstancesCreate(req: operations.BaremetalsolutionProjectsLocationsInstancesCreateRequest, security: operations.BaremetalsolutionProjectsLocationsInstancesCreateSecurity, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsInstancesCreateResponse>;
     /**
-     * baremetalsolutionProjectsLocationsInstancesDetachLun - Detach LUN from Instance.
-    **/
-    baremetalsolutionProjectsLocationsInstancesDetachLun(req: operations.BaremetalsolutionProjectsLocationsInstancesDetachLunRequest, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsInstancesDetachLunResponse>;
+     * Detach LUN from Instance.
+     */
+    baremetalsolutionProjectsLocationsInstancesDetachLun(req: operations.BaremetalsolutionProjectsLocationsInstancesDetachLunRequest, security: operations.BaremetalsolutionProjectsLocationsInstancesDetachLunSecurity, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsInstancesDetachLunResponse>;
     /**
-     * baremetalsolutionProjectsLocationsInstancesDisableInteractiveSerialConsole - Disable the interactive serial console feature on an instance.
-    **/
-    baremetalsolutionProjectsLocationsInstancesDisableInteractiveSerialConsole(req: operations.BaremetalsolutionProjectsLocationsInstancesDisableInteractiveSerialConsoleRequest, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsInstancesDisableInteractiveSerialConsoleResponse>;
+     * Disable the interactive serial console feature on an instance.
+     */
+    baremetalsolutionProjectsLocationsInstancesDisableInteractiveSerialConsole(req: operations.BaremetalsolutionProjectsLocationsInstancesDisableInteractiveSerialConsoleRequest, security: operations.BaremetalsolutionProjectsLocationsInstancesDisableInteractiveSerialConsoleSecurity, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsInstancesDisableInteractiveSerialConsoleResponse>;
     /**
-     * baremetalsolutionProjectsLocationsInstancesEnableInteractiveSerialConsole - Enable the interactive serial console feature on an instance.
-    **/
-    baremetalsolutionProjectsLocationsInstancesEnableInteractiveSerialConsole(req: operations.BaremetalsolutionProjectsLocationsInstancesEnableInteractiveSerialConsoleRequest, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsInstancesEnableInteractiveSerialConsoleResponse>;
+     * Enable the interactive serial console feature on an instance.
+     */
+    baremetalsolutionProjectsLocationsInstancesEnableInteractiveSerialConsole(req: operations.BaremetalsolutionProjectsLocationsInstancesEnableInteractiveSerialConsoleRequest, security: operations.BaremetalsolutionProjectsLocationsInstancesEnableInteractiveSerialConsoleSecurity, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsInstancesEnableInteractiveSerialConsoleResponse>;
     /**
-     * baremetalsolutionProjectsLocationsInstancesList - List servers in a given project and location.
-    **/
-    baremetalsolutionProjectsLocationsInstancesList(req: operations.BaremetalsolutionProjectsLocationsInstancesListRequest, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsInstancesListResponse>;
+     * List servers in a given project and location.
+     */
+    baremetalsolutionProjectsLocationsInstancesList(req: operations.BaremetalsolutionProjectsLocationsInstancesListRequest, security: operations.BaremetalsolutionProjectsLocationsInstancesListSecurity, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsInstancesListResponse>;
     /**
-     * baremetalsolutionProjectsLocationsInstancesReset - Perform an ungraceful, hard reset on a server. Equivalent to shutting the power off and then turning it back on.
-    **/
-    baremetalsolutionProjectsLocationsInstancesReset(req: operations.BaremetalsolutionProjectsLocationsInstancesResetRequest, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsInstancesResetResponse>;
+     * Perform an ungraceful, hard reset on a server. Equivalent to shutting the power off and then turning it back on.
+     */
+    baremetalsolutionProjectsLocationsInstancesReset(req: operations.BaremetalsolutionProjectsLocationsInstancesResetRequest, security: operations.BaremetalsolutionProjectsLocationsInstancesResetSecurity, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsInstancesResetResponse>;
     /**
-     * baremetalsolutionProjectsLocationsInstancesStart - Starts a server that was shutdown.
-    **/
-    baremetalsolutionProjectsLocationsInstancesStart(req: operations.BaremetalsolutionProjectsLocationsInstancesStartRequest, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsInstancesStartResponse>;
+     * Starts a server that was shutdown.
+     */
+    baremetalsolutionProjectsLocationsInstancesStart(req: operations.BaremetalsolutionProjectsLocationsInstancesStartRequest, security: operations.BaremetalsolutionProjectsLocationsInstancesStartSecurity, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsInstancesStartResponse>;
     /**
-     * baremetalsolutionProjectsLocationsInstancesStop - Stop a running server.
-    **/
-    baremetalsolutionProjectsLocationsInstancesStop(req: operations.BaremetalsolutionProjectsLocationsInstancesStopRequest, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsInstancesStopResponse>;
+     * Stop a running server.
+     */
+    baremetalsolutionProjectsLocationsInstancesStop(req: operations.BaremetalsolutionProjectsLocationsInstancesStopRequest, security: operations.BaremetalsolutionProjectsLocationsInstancesStopSecurity, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsInstancesStopResponse>;
     /**
-     * baremetalsolutionProjectsLocationsList - Lists information about the supported locations for this service.
-    **/
-    baremetalsolutionProjectsLocationsList(req: operations.BaremetalsolutionProjectsLocationsListRequest, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsListResponse>;
+     * Lists information about the supported locations for this service.
+     */
+    baremetalsolutionProjectsLocationsList(req: operations.BaremetalsolutionProjectsLocationsListRequest, security: operations.BaremetalsolutionProjectsLocationsListSecurity, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsListResponse>;
     /**
-     * baremetalsolutionProjectsLocationsNetworksList - List network in a given project and location.
-    **/
-    baremetalsolutionProjectsLocationsNetworksList(req: operations.BaremetalsolutionProjectsLocationsNetworksListRequest, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsNetworksListResponse>;
+     * List network in a given project and location.
+     */
+    baremetalsolutionProjectsLocationsNetworksList(req: operations.BaremetalsolutionProjectsLocationsNetworksListRequest, security: operations.BaremetalsolutionProjectsLocationsNetworksListSecurity, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsNetworksListResponse>;
     /**
-     * baremetalsolutionProjectsLocationsNetworksListNetworkUsage - List all Networks (and used IPs for each Network) in the vendor account associated with the specified project.
-    **/
-    baremetalsolutionProjectsLocationsNetworksListNetworkUsage(req: operations.BaremetalsolutionProjectsLocationsNetworksListNetworkUsageRequest, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsNetworksListNetworkUsageResponse>;
+     * List all Networks (and used IPs for each Network) in the vendor account associated with the specified project.
+     */
+    baremetalsolutionProjectsLocationsNetworksListNetworkUsage(req: operations.BaremetalsolutionProjectsLocationsNetworksListNetworkUsageRequest, security: operations.BaremetalsolutionProjectsLocationsNetworksListNetworkUsageSecurity, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsNetworksListNetworkUsageResponse>;
     /**
-     * baremetalsolutionProjectsLocationsNfsSharesCreate - Create an NFS share.
-    **/
-    baremetalsolutionProjectsLocationsNfsSharesCreate(req: operations.BaremetalsolutionProjectsLocationsNfsSharesCreateRequest, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsNfsSharesCreateResponse>;
+     * Create an NFS share.
+     */
+    baremetalsolutionProjectsLocationsNfsSharesCreate(req: operations.BaremetalsolutionProjectsLocationsNfsSharesCreateRequest, security: operations.BaremetalsolutionProjectsLocationsNfsSharesCreateSecurity, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsNfsSharesCreateResponse>;
     /**
-     * baremetalsolutionProjectsLocationsNfsSharesList - List NFS shares.
-    **/
-    baremetalsolutionProjectsLocationsNfsSharesList(req: operations.BaremetalsolutionProjectsLocationsNfsSharesListRequest, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsNfsSharesListResponse>;
+     * List NFS shares.
+     */
+    baremetalsolutionProjectsLocationsNfsSharesList(req: operations.BaremetalsolutionProjectsLocationsNfsSharesListRequest, security: operations.BaremetalsolutionProjectsLocationsNfsSharesListSecurity, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsNfsSharesListResponse>;
     /**
-     * baremetalsolutionProjectsLocationsProvisioningConfigsCreate - Create new ProvisioningConfig.
-    **/
-    baremetalsolutionProjectsLocationsProvisioningConfigsCreate(req: operations.BaremetalsolutionProjectsLocationsProvisioningConfigsCreateRequest, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsProvisioningConfigsCreateResponse>;
+     * Create new ProvisioningConfig.
+     */
+    baremetalsolutionProjectsLocationsProvisioningConfigsCreate(req: operations.BaremetalsolutionProjectsLocationsProvisioningConfigsCreateRequest, security: operations.BaremetalsolutionProjectsLocationsProvisioningConfigsCreateSecurity, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsProvisioningConfigsCreateResponse>;
     /**
-     * baremetalsolutionProjectsLocationsProvisioningConfigsSubmit - Submit a provisiong configuration for a given project.
-    **/
-    baremetalsolutionProjectsLocationsProvisioningConfigsSubmit(req: operations.BaremetalsolutionProjectsLocationsProvisioningConfigsSubmitRequest, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsProvisioningConfigsSubmitResponse>;
+     * Submit a provisiong configuration for a given project.
+     */
+    baremetalsolutionProjectsLocationsProvisioningConfigsSubmit(req: operations.BaremetalsolutionProjectsLocationsProvisioningConfigsSubmitRequest, security: operations.BaremetalsolutionProjectsLocationsProvisioningConfigsSubmitSecurity, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsProvisioningConfigsSubmitResponse>;
     /**
-     * baremetalsolutionProjectsLocationsProvisioningQuotasList - List the budget details to provision resources on a given project.
-    **/
-    baremetalsolutionProjectsLocationsProvisioningQuotasList(req: operations.BaremetalsolutionProjectsLocationsProvisioningQuotasListRequest, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsProvisioningQuotasListResponse>;
+     * List the budget details to provision resources on a given project.
+     */
+    baremetalsolutionProjectsLocationsProvisioningQuotasList(req: operations.BaremetalsolutionProjectsLocationsProvisioningQuotasListRequest, security: operations.BaremetalsolutionProjectsLocationsProvisioningQuotasListSecurity, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsProvisioningQuotasListResponse>;
     /**
-     * baremetalsolutionProjectsLocationsSshKeysCreate - Register a public SSH key in the specified project for use with the interactive serial console feature.
-    **/
-    baremetalsolutionProjectsLocationsSshKeysCreate(req: operations.BaremetalsolutionProjectsLocationsSshKeysCreateRequest, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsSshKeysCreateResponse>;
+     * Register a public SSH key in the specified project for use with the interactive serial console feature.
+     */
+    baremetalsolutionProjectsLocationsSshKeysCreate(req: operations.BaremetalsolutionProjectsLocationsSshKeysCreateRequest, security: operations.BaremetalsolutionProjectsLocationsSshKeysCreateSecurity, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsSshKeysCreateResponse>;
     /**
-     * baremetalsolutionProjectsLocationsSshKeysList - Lists the public SSH keys registered for the specified project. These SSH keys are used only for the interactive serial console feature.
-    **/
-    baremetalsolutionProjectsLocationsSshKeysList(req: operations.BaremetalsolutionProjectsLocationsSshKeysListRequest, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsSshKeysListResponse>;
+     * Lists the public SSH keys registered for the specified project. These SSH keys are used only for the interactive serial console feature.
+     */
+    baremetalsolutionProjectsLocationsSshKeysList(req: operations.BaremetalsolutionProjectsLocationsSshKeysListRequest, security: operations.BaremetalsolutionProjectsLocationsSshKeysListSecurity, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsSshKeysListResponse>;
     /**
-     * baremetalsolutionProjectsLocationsVolumesList - List storage volumes in a given project and location.
-    **/
-    baremetalsolutionProjectsLocationsVolumesList(req: operations.BaremetalsolutionProjectsLocationsVolumesListRequest, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsVolumesListResponse>;
+     * List storage volumes in a given project and location.
+     */
+    baremetalsolutionProjectsLocationsVolumesList(req: operations.BaremetalsolutionProjectsLocationsVolumesListRequest, security: operations.BaremetalsolutionProjectsLocationsVolumesListSecurity, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsVolumesListResponse>;
     /**
-     * baremetalsolutionProjectsLocationsVolumesLunsList - List storage volume luns for given storage volume.
-    **/
-    baremetalsolutionProjectsLocationsVolumesLunsList(req: operations.BaremetalsolutionProjectsLocationsVolumesLunsListRequest, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsVolumesLunsListResponse>;
+     * Skips lun's cooloff and deletes it now. Lun must be in cooloff state.
+     */
+    baremetalsolutionProjectsLocationsVolumesLunsEvict(req: operations.BaremetalsolutionProjectsLocationsVolumesLunsEvictRequest, security: operations.BaremetalsolutionProjectsLocationsVolumesLunsEvictSecurity, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsVolumesLunsEvictResponse>;
     /**
-     * baremetalsolutionProjectsLocationsVolumesPatch - Update details of a single storage volume.
-    **/
-    baremetalsolutionProjectsLocationsVolumesPatch(req: operations.BaremetalsolutionProjectsLocationsVolumesPatchRequest, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsVolumesPatchResponse>;
+     * List storage volume luns for given storage volume.
+     */
+    baremetalsolutionProjectsLocationsVolumesLunsList(req: operations.BaremetalsolutionProjectsLocationsVolumesLunsListRequest, security: operations.BaremetalsolutionProjectsLocationsVolumesLunsListSecurity, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsVolumesLunsListResponse>;
     /**
-     * baremetalsolutionProjectsLocationsVolumesResize - Emergency Volume resize.
-    **/
-    baremetalsolutionProjectsLocationsVolumesResize(req: operations.BaremetalsolutionProjectsLocationsVolumesResizeRequest, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsVolumesResizeResponse>;
+     * Update details of a single storage volume.
+     */
+    baremetalsolutionProjectsLocationsVolumesPatch(req: operations.BaremetalsolutionProjectsLocationsVolumesPatchRequest, security: operations.BaremetalsolutionProjectsLocationsVolumesPatchSecurity, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsVolumesPatchResponse>;
     /**
-     * baremetalsolutionProjectsLocationsVolumesSnapshotsCreate - Takes a snapshot of a boot volume. Returns INVALID_ARGUMENT if called for a non-boot volume.
-    **/
-    baremetalsolutionProjectsLocationsVolumesSnapshotsCreate(req: operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsCreateRequest, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsCreateResponse>;
+     * RenameVolume sets a new name for a volume. Use with caution, previous names become immediately invalidated.
+     */
+    baremetalsolutionProjectsLocationsVolumesRename(req: operations.BaremetalsolutionProjectsLocationsVolumesRenameRequest, security: operations.BaremetalsolutionProjectsLocationsVolumesRenameSecurity, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsVolumesRenameResponse>;
     /**
-     * baremetalsolutionProjectsLocationsVolumesSnapshotsDelete - Deletes a volume snapshot. Returns INVALID_ARGUMENT if called for a non-boot volume.
-    **/
-    baremetalsolutionProjectsLocationsVolumesSnapshotsDelete(req: operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsDeleteRequest, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsDeleteResponse>;
+     * Emergency Volume resize.
+     */
+    baremetalsolutionProjectsLocationsVolumesResize(req: operations.BaremetalsolutionProjectsLocationsVolumesResizeRequest, security: operations.BaremetalsolutionProjectsLocationsVolumesResizeSecurity, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsVolumesResizeResponse>;
     /**
-     * baremetalsolutionProjectsLocationsVolumesSnapshotsGet - Returns the specified snapshot resource. Returns INVALID_ARGUMENT if called for a non-boot volume.
-    **/
-    baremetalsolutionProjectsLocationsVolumesSnapshotsGet(req: operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsGetRequest, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsGetResponse>;
+     * Takes a snapshot of a boot volume. Returns INVALID_ARGUMENT if called for a non-boot volume.
+     */
+    baremetalsolutionProjectsLocationsVolumesSnapshotsCreate(req: operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsCreateRequest, security: operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsCreateSecurity, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsCreateResponse>;
     /**
-     * baremetalsolutionProjectsLocationsVolumesSnapshotsList - Retrieves the list of snapshots for the specified volume. Returns a response with an empty list of snapshots if called for a non-boot volume.
-    **/
-    baremetalsolutionProjectsLocationsVolumesSnapshotsList(req: operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsListRequest, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsListResponse>;
+     * Deletes a volume snapshot. Returns INVALID_ARGUMENT if called for a non-boot volume.
+     */
+    baremetalsolutionProjectsLocationsVolumesSnapshotsDelete(req: operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsDeleteRequest, security: operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsDeleteSecurity, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsDeleteResponse>;
     /**
-     * baremetalsolutionProjectsLocationsVolumesSnapshotsRestoreVolumeSnapshot - Uses the specified snapshot to restore its parent volume. Returns INVALID_ARGUMENT if called for a non-boot volume.
-    **/
-    baremetalsolutionProjectsLocationsVolumesSnapshotsRestoreVolumeSnapshot(req: operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsRestoreVolumeSnapshotRequest, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsRestoreVolumeSnapshotResponse>;
+     * Returns the specified snapshot resource. Returns INVALID_ARGUMENT if called for a non-boot volume.
+     */
+    baremetalsolutionProjectsLocationsVolumesSnapshotsGet(req: operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsGetRequest, security: operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsGetSecurity, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsGetResponse>;
+    /**
+     * Retrieves the list of snapshots for the specified volume. Returns a response with an empty list of snapshots if called for a non-boot volume.
+     */
+    baremetalsolutionProjectsLocationsVolumesSnapshotsList(req: operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsListRequest, security: operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsListSecurity, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsListResponse>;
+    /**
+     * Uses the specified snapshot to restore its parent volume. Returns INVALID_ARGUMENT if called for a non-boot volume.
+     */
+    baremetalsolutionProjectsLocationsVolumesSnapshotsRestoreVolumeSnapshot(req: operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsRestoreVolumeSnapshotRequest, security: operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsRestoreVolumeSnapshotSecurity, config?: AxiosRequestConfig): Promise<operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsRestoreVolumeSnapshotResponse>;
 }

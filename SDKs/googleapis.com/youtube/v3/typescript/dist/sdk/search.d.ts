@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Search {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +9,7 @@ export declare class Search {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * youtubeSearchList - Retrieves a list of search resources
-    **/
-    youtubeSearchList(req: operations.YoutubeSearchListRequest, config?: AxiosRequestConfig): Promise<operations.YoutubeSearchListResponse>;
+     * Retrieves a list of search resources
+     */
+    youtubeSearchList(req: operations.YoutubeSearchListRequest, security: operations.YoutubeSearchListSecurity, config?: AxiosRequestConfig): Promise<operations.YoutubeSearchListResponse>;
 }

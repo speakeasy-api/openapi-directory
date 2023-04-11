@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class EventsFindEvents {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,10 +9,11 @@ export declare class EventsFindEvents {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getEventsEventId - Returns an event
+     * Returns an event
      *
+     * @remarks
      * - Results are returned for the market provided within the basic authentication credentials
      *
-    **/
+     */
     getEventsEventId(req: operations.GetEventsEventIdRequest, config?: AxiosRequestConfig): Promise<operations.GetEventsEventIdResponse>;
 }

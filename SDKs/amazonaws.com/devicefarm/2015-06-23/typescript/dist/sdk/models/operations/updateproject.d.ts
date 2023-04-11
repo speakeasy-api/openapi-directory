@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateProjectXAmzTargetEnum {
     DeviceFarm20150623UpdateProject = "DeviceFarm_20150623.UpdateProject"
 }
-export declare class UpdateProjectHeaders extends SpeakeasyBase {
+export declare class UpdateProjectRequest extends SpeakeasyBase {
+    updateProjectRequest: shared.UpdateProjectRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class UpdateProjectHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateProjectXAmzTargetEnum;
 }
-export declare class UpdateProjectRequest extends SpeakeasyBase {
-    headers: UpdateProjectHeaders;
-    request: shared.UpdateProjectRequest;
-}
 export declare class UpdateProjectResponse extends SpeakeasyBase {
+    /**
+     * ArgumentException
+     */
     argumentException?: any;
     contentType: string;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
-    serviceAccountException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceAccountException
+     */
+    serviceAccountException?: any;
+    /**
+     * Success
+     */
     updateProjectResult?: shared.UpdateProjectResult;
 }

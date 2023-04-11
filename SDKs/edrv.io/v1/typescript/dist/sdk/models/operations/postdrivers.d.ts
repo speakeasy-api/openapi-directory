@@ -1,4 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
 export declare class PostDriversRequestBodyAddress extends SpeakeasyBase {
     city?: string;
     country?: string;
@@ -16,6 +17,9 @@ export declare enum PostDriversRequestBodySourceEnum {
     Telegram = "telegram",
     Sms = "sms"
 }
+/**
+ * Include driver properties to create here
+ */
 export declare class PostDriversRequestBody extends SpeakeasyBase {
     active?: boolean;
     address?: PostDriversRequestBodyAddress;
@@ -25,16 +29,20 @@ export declare class PostDriversRequestBody extends SpeakeasyBase {
     phone?: PostDriversRequestBodyPhone;
     source: PostDriversRequestBodySourceEnum;
 }
-export declare class PostDrivers200ApplicationJson extends SpeakeasyBase {
+/**
+ * Returns the newly created driver object
+ */
+export declare class PostDrivers200ApplicationJSON extends SpeakeasyBase {
     message?: string;
     ok?: boolean;
     result?: Record<string, any>;
 }
-export declare class PostDriversRequest extends SpeakeasyBase {
-    request: PostDriversRequestBody;
-}
 export declare class PostDriversResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    postDrivers200ApplicationJSONObject?: PostDrivers200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Returns the newly created driver object
+     */
+    postDrivers200ApplicationJSONObject?: PostDrivers200ApplicationJSON;
 }

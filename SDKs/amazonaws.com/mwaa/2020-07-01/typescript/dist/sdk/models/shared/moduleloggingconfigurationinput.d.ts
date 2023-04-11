@@ -1,8 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { LoggingLevelEnum } from "./logginglevelenum";
 /**
- * Defines the type of logs to send for the Apache Airflow log type (e.g. <code>DagProcessingLogs</code>). Valid values: <code>CloudWatchLogGroupArn</code>, <code>Enabled</code>, <code>LogLevel</code>.
-**/
+ * Enables the Apache Airflow log type (e.g. <code>DagProcessingLogs</code>) and defines the log level to send to CloudWatch Logs (e.g. <code>INFO</code>).
+ */
 export declare class ModuleLoggingConfigurationInput extends SpeakeasyBase {
     enabled: boolean;
     logLevel: LoggingLevelEnum;

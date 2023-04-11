@@ -1,32 +1,55 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class SendimmessagesQueryParams extends SpeakeasyBase {
-    chatUser?: string;
-}
-export declare class SendimmessagesApplicationJson extends SpeakeasyBase {
-    message?: string;
-}
-export declare class SendimmessagesMultipartFormData extends SpeakeasyBase {
-    message?: string;
-}
-export declare class SendimmessagesRequests extends SpeakeasyBase {
-    object?: SendimmessagesApplicationJson;
-    object1?: SendimmessagesMultipartFormData;
-}
+import { AxiosResponse } from "axios";
 export declare class SendimmessagesSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
+    oAuth: string;
 }
-export declare class Sendimmessages201ApplicationJson extends SpeakeasyBase {
-    id?: string;
+export declare class SendimmessagesApplicationJSON extends SpeakeasyBase {
+    /**
+     * IM message content.
+     */
+    message?: string;
 }
 export declare class SendimmessagesRequest extends SpeakeasyBase {
-    queryParams: SendimmessagesQueryParams;
-    request?: SendimmessagesRequests;
-    security: SendimmessagesSecurity;
+    requestBody?: SendimmessagesApplicationJSON;
+    /**
+     * The email address (registered with Zoom) or the userId of the chat user.
+     */
+    chatUser?: string;
+}
+/**
+ * **HTTP Status Code:** `201`<br>
+ *
+ * @remarks
+ * Message Sent.
+ */
+export declare class Sendimmessages201ApplicationXML extends SpeakeasyBase {
+    /**
+     * IM message UUID.
+     */
+    id?: string;
+}
+/**
+ * **HTTP Status Code:** `201`<br>
+ *
+ * @remarks
+ * Message Sent.
+ */
+export declare class Sendimmessages201ApplicationJSON extends SpeakeasyBase {
+    /**
+     * IM message UUID.
+     */
+    id?: string;
 }
 export declare class SendimmessagesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    sendimmessages201ApplicationJSONObject?: Sendimmessages201ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * **HTTP Status Code:** `201`<br>
+     *
+     * @remarks
+     * Message Sent.
+     */
+    sendimmessages201ApplicationJSONObject?: Sendimmessages201ApplicationJSON;
 }

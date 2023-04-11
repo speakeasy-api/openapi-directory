@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostModifySnapshotCopyRetentionPeriodActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTModifySnapshotCopyRetentionPeriodActionEnum {
     ModifySnapshotCopyRetentionPeriod = "ModifySnapshotCopyRetentionPeriod"
 }
-export declare enum PostModifySnapshotCopyRetentionPeriodVersionEnum {
+export declare enum POSTModifySnapshotCopyRetentionPeriodVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostModifySnapshotCopyRetentionPeriodQueryParams extends SpeakeasyBase {
-    action: PostModifySnapshotCopyRetentionPeriodActionEnum;
-    version: PostModifySnapshotCopyRetentionPeriodVersionEnum;
-}
-export declare class PostModifySnapshotCopyRetentionPeriodHeaders extends SpeakeasyBase {
+export declare class POSTModifySnapshotCopyRetentionPeriodRequest extends SpeakeasyBase {
+    action: POSTModifySnapshotCopyRetentionPeriodActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTModifySnapshotCopyRetentionPeriodVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostModifySnapshotCopyRetentionPeriodHeaders extends Speake
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostModifySnapshotCopyRetentionPeriodRequest extends SpeakeasyBase {
-    queryParams: PostModifySnapshotCopyRetentionPeriodQueryParams;
-    headers: PostModifySnapshotCopyRetentionPeriodHeaders;
-    request?: Uint8Array;
-}
-export declare class PostModifySnapshotCopyRetentionPeriodResponse extends SpeakeasyBase {
+export declare class POSTModifySnapshotCopyRetentionPeriodResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

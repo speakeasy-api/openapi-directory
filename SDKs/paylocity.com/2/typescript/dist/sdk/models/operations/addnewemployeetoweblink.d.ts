@@ -1,19 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AddNewEmployeeToWebLinkPathParams extends SpeakeasyBase {
-    companyId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class AddNewEmployeeToWebLinkSecurity extends SpeakeasyBase {
-    paylocityAuth: shared.SchemePaylocityAuth;
+    paylocityAuth: string;
 }
 export declare class AddNewEmployeeToWebLinkRequest extends SpeakeasyBase {
-    pathParams: AddNewEmployeeToWebLinkPathParams;
-    request: shared.StagedEmployee;
-    security: AddNewEmployeeToWebLinkSecurity;
+    /**
+     * Company Id
+     */
+    companyId: string;
+    /**
+     * StagedEmployee Model
+     */
+    stagedEmployee: shared.StagedEmployee;
 }
 export declare class AddNewEmployeeToWebLinkResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad Request
+     */
     errors?: shared.ErrorT[];
+    /**
+     * Successfully Added
+     */
     trackingNumberResponses?: shared.TrackingNumberResponse[];
 }

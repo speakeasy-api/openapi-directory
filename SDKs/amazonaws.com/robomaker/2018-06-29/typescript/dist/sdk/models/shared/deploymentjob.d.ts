@@ -5,7 +5,7 @@ import { DeploymentJobErrorCodeEnum } from "./deploymentjoberrorcodeenum";
 import { DeploymentStatusEnum } from "./deploymentstatusenum";
 /**
  * Information about a deployment job.
-**/
+ */
 export declare class DeploymentJob extends SpeakeasyBase {
     arn?: string;
     createdAt?: Date;

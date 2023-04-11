@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Search API for 'Before and After Images' entry type
+ */
 export declare class TypeBeforeafter {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,10 @@ export declare class TypeBeforeafter {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * searchBeforeafter - Search API for 'Before and After Images' entry type
+     * Search API for 'Before and After Images' entry type
      *
+     * @remarks
      * API to search for entries of type Before and After Images
-    **/
+     */
     searchBeforeafter(req: operations.SearchBeforeafterRequest, config?: AxiosRequestConfig): Promise<operations.SearchBeforeafterResponse>;
 }

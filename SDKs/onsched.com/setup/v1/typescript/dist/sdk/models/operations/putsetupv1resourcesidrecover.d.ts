@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PutSetupV1ResourcesIdRecoverPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class PutSetupV1ResourcesIdRecoverQueryParams extends SpeakeasyBase {
-    googleAuthReturnUrl?: string;
-    outlookAuthReturnUrl?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PutSetupV1ResourcesIdRecoverRequest extends SpeakeasyBase {
-    pathParams: PutSetupV1ResourcesIdRecoverPathParams;
-    queryParams: PutSetupV1ResourcesIdRecoverQueryParams;
+    /**
+     * Google calendar authorization return url
+     */
+    googleAuthReturnUrl?: string;
+    /**
+     * id of resource object
+     */
+    id: string;
+    /**
+     * Outlook calendar authorization return url
+     */
+    outlookAuthReturnUrl?: string;
 }
 export declare class PutSetupV1ResourcesIdRecoverResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     resourceViewModel?: shared.ResourceViewModel;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

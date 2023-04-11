@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Series {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,11 +9,11 @@ export declare class Series {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * booksSeriesGet - Returns Series metadata for the given series ids.
-    **/
-    booksSeriesGet(req: operations.BooksSeriesGetRequest, config?: AxiosRequestConfig): Promise<operations.BooksSeriesGetResponse>;
+     * Returns Series metadata for the given series ids.
+     */
+    booksSeriesGet(req: operations.BooksSeriesGetRequest, security: operations.BooksSeriesGetSecurity, config?: AxiosRequestConfig): Promise<operations.BooksSeriesGetResponse>;
     /**
-     * booksSeriesMembershipGet - Returns Series membership data given the series id.
-    **/
-    booksSeriesMembershipGet(req: operations.BooksSeriesMembershipGetRequest, config?: AxiosRequestConfig): Promise<operations.BooksSeriesMembershipGetResponse>;
+     * Returns Series membership data given the series id.
+     */
+    booksSeriesMembershipGet(req: operations.BooksSeriesMembershipGetRequest, security: operations.BooksSeriesMembershipGetSecurity, config?: AxiosRequestConfig): Promise<operations.BooksSeriesMembershipGetResponse>;
 }

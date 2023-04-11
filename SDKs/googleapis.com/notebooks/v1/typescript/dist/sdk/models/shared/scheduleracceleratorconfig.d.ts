@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Type of this accelerator.
+ */
 export declare enum SchedulerAcceleratorConfigTypeEnum {
     SchedulerAcceleratorTypeUnspecified = "SCHEDULER_ACCELERATOR_TYPE_UNSPECIFIED",
     NvidiaTeslaK80 = "NVIDIA_TESLA_K80",
@@ -12,8 +15,14 @@ export declare enum SchedulerAcceleratorConfigTypeEnum {
 }
 /**
  * Definition of a hardware accelerator. Note that not all combinations of `type` and `core_count` are valid. Check [GPUs on Compute Engine](https://cloud.google.com/compute/docs/gpus) to find a valid combination. TPUs are not supported.
-**/
+ */
 export declare class SchedulerAcceleratorConfig extends SpeakeasyBase {
+    /**
+     * Count of cores of this accelerator.
+     */
     coreCount?: string;
+    /**
+     * Type of this accelerator.
+     */
     type?: SchedulerAcceleratorConfigTypeEnum;
 }

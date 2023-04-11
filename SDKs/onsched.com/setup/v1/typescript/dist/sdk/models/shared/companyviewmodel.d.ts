@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class CompanyViewModel extends SpeakeasyBase {
     addressLine1?: string;
     addressLine2?: string;
@@ -17,7 +20,7 @@ export declare class CompanyViewModel extends SpeakeasyBase {
     name?: string;
     notificationFromEmailAddress?: string;
     notificationFromName?: string;
-    objectName?: string;
+    object?: string;
     phone?: string;
     postalCode?: string;
     registrationDate?: string;
@@ -26,5 +29,7 @@ export declare class CompanyViewModel extends SpeakeasyBase {
     resourceWebhookUrl?: string;
     state?: string;
     timezoneId?: string;
+    timezoneName?: string;
+    webhookSignatureHash?: string;
     website?: string;
 }

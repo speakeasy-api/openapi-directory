@@ -1,6 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PublishSchemaHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class PublishSchemaRequestBody extends SpeakeasyBase {
+    /**
+     * The minor version under which the schema will be published. This parameter is recommended. Schemas have both a major and minor version associated with them.
+     */
+    minorVersion?: string;
+    /**
+     * The new name under which the schema will be published. If this is not provided, the development schema is considered.
+     */
+    name?: string;
+    /**
+     * The major version under which the schema will be published. Schemas have both a major and minor version associated with them.
+     */
+    version: string;
+}
+export declare class PublishSchemaRequest extends SpeakeasyBase {
+    requestBody: PublishSchemaRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -8,27 +24,49 @@ export declare class PublishSchemaHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
+    /**
+     * The Amazon Resource Name (ARN) that is associated with the development schema. For more information, see <a>arns</a>.
+     */
     xAmzDataPartition: string;
 }
-export declare class PublishSchemaRequestBody extends SpeakeasyBase {
-    minorVersion?: string;
-    name?: string;
-    version: string;
-}
-export declare class PublishSchemaRequest extends SpeakeasyBase {
-    headers: PublishSchemaHeaders;
-    request: PublishSchemaRequestBody;
-}
 export declare class PublishSchemaResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidArnException
+     */
     invalidArnException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * Success
+     */
     publishSchemaResponse?: shared.PublishSchemaResponse;
-    resourceNotFoundException?: any;
-    retryableConflictException?: any;
-    schemaAlreadyPublishedException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * RetryableConflictException
+     */
+    retryableConflictException?: any;
+    /**
+     * SchemaAlreadyPublishedException
+     */
+    schemaAlreadyPublishedException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

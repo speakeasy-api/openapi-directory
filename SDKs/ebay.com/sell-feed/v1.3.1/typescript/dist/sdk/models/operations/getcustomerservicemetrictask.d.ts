@@ -1,17 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetCustomerServiceMetricTaskPathParams extends SpeakeasyBase {
-    taskId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetCustomerServiceMetricTaskSecurity extends SpeakeasyBase {
-    apiAuth: shared.SchemeApiAuth;
+    apiAuth: string;
 }
 export declare class GetCustomerServiceMetricTaskRequest extends SpeakeasyBase {
-    pathParams: GetCustomerServiceMetricTaskPathParams;
-    security: GetCustomerServiceMetricTaskSecurity;
+    /**
+     * Use this path parameter to specify the task ID value for the customer service metric task to retrieve.
+     */
+    taskId: string;
 }
 export declare class GetCustomerServiceMetricTaskResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     serviceMetricsTask?: shared.ServiceMetricsTask;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

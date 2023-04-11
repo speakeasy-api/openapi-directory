@@ -1,24 +1,33 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { SshKeyAttributes } from "./sshkeyattributes";
-export declare class SshKeyRelationshipsOwnerUserData extends SpeakeasyBase {
+import { SSHKeyAttributes } from "./sshkeyattributes";
+export declare class SSHKeyRelationshipsOwnerUserData extends SpeakeasyBase {
     id?: number;
     type?: string;
 }
-export declare class SshKeyRelationshipsOwnerUser extends SpeakeasyBase {
-    data?: SshKeyRelationshipsOwnerUserData;
+export declare class SSHKeyRelationshipsOwnerUser extends SpeakeasyBase {
+    data?: SSHKeyRelationshipsOwnerUserData;
 }
-export declare class SshKeyRelationships extends SpeakeasyBase {
-    ownerUser?: SshKeyRelationshipsOwnerUser;
+export declare class SSHKeyRelationships extends SpeakeasyBase {
+    ownerUser?: SSHKeyRelationshipsOwnerUser;
 }
-export declare enum SshKeyTypeEnum {
+/**
+ * Type of the object.
+ */
+export declare enum SSHKeyTypeEnum {
     SshKey = "sshKey"
 }
 /**
  * Object representing an SSH Key associated with a user.
-**/
-export declare class SshKey extends SpeakeasyBase {
-    attributes?: SshKeyAttributes;
+ */
+export declare class SSHKey extends SpeakeasyBase {
+    attributes?: SSHKeyAttributes;
+    /**
+     * ID of the key.
+     */
     id?: number;
-    relationships?: SshKeyRelationships;
-    type?: SshKeyTypeEnum;
+    relationships?: SSHKeyRelationships;
+    /**
+     * Type of the object.
+     */
+    type?: SSHKeyTypeEnum;
 }

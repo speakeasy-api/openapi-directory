@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class GetConsoleOutputResult extends SpeakeasyBase {
-    instanceId?: Record<string, any>;
-    output?: Record<string, any>;
-    timestamp?: Record<string, any>;
+    instanceId?: string;
+    output?: string;
+    timestamp?: Date;
 }

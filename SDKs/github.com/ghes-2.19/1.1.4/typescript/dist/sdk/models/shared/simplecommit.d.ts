@@ -9,7 +9,7 @@ export declare class SimpleCommitCommitter extends SpeakeasyBase {
 }
 /**
  * Simple Commit
-**/
+ */
 export declare class SimpleCommit extends SpeakeasyBase {
     author: SimpleCommitAuthor;
     committer: SimpleCommitCommitter;

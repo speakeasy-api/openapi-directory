@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostGetCoipPoolUsageActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTGetCoipPoolUsageActionEnum {
     GetCoipPoolUsage = "GetCoipPoolUsage"
 }
-export declare enum PostGetCoipPoolUsageVersionEnum {
+export declare enum POSTGetCoipPoolUsageVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostGetCoipPoolUsageQueryParams extends SpeakeasyBase {
-    action: PostGetCoipPoolUsageActionEnum;
-    version: PostGetCoipPoolUsageVersionEnum;
-}
-export declare class PostGetCoipPoolUsageHeaders extends SpeakeasyBase {
+export declare class POSTGetCoipPoolUsageRequest extends SpeakeasyBase {
+    action: POSTGetCoipPoolUsageActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTGetCoipPoolUsageVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostGetCoipPoolUsageHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostGetCoipPoolUsageRequest extends SpeakeasyBase {
-    queryParams: PostGetCoipPoolUsageQueryParams;
-    headers: PostGetCoipPoolUsageHeaders;
-    request?: Uint8Array;
-}
-export declare class PostGetCoipPoolUsageResponse extends SpeakeasyBase {
+export declare class POSTGetCoipPoolUsageResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

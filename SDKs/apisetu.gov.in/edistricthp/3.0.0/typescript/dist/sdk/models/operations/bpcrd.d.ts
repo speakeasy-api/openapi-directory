@@ -1,115 +1,170 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class BpcrdSecurity extends SpeakeasyBase {
+    apiKey: string;
+    clientId: string;
+}
 export declare class BpcrdRequestBodyCertificateParameters extends SpeakeasyBase {
+    /**
+     * ApplicationNumber
+     */
     udf1: string;
 }
+/**
+ * The format of the certificate in response.
+ */
 export declare enum BpcrdRequestBodyFormatEnum {
     Pdf = "pdf"
 }
+/**
+ * Request format
+ */
 export declare class BpcrdRequestBody extends SpeakeasyBase {
     certificateParameters?: BpcrdRequestBodyCertificateParameters;
-    consentArtifact?: any;
+    consentArtifact?: shared.ConsentArtifactSchema;
+    /**
+     * The format of the certificate in response.
+     */
     format: BpcrdRequestBodyFormatEnum;
+    /**
+     * A unique transaction id for this request in UUID format. It is used for tracking the request.
+     */
     txnId: string;
 }
-export declare class BpcrdSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
-    clientId: shared.SchemeClientId;
+export declare enum Bpcrd504ApplicationJSONErrorEnum {
+    GatewayTimeout = "gateway_timeout"
 }
-export declare enum Bpcrd400ApplicationJsonErrorEnum {
+export declare enum Bpcrd504ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
+}
+/**
+ * Gateway timeout
+ */
+export declare class Bpcrd504ApplicationJSON extends SpeakeasyBase {
+    error?: Bpcrd504ApplicationJSONErrorEnum;
+    errorDescription?: Bpcrd504ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Bpcrd503ApplicationJSONErrorEnum {
+    ServiceUnavailable = "service_unavailable"
+}
+export declare enum Bpcrd503ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
+}
+/**
+ * Service unavailable
+ */
+export declare class Bpcrd503ApplicationJSON extends SpeakeasyBase {
+    error?: Bpcrd503ApplicationJSONErrorEnum;
+    errorDescription?: Bpcrd503ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Bpcrd502ApplicationJSONErrorEnum {
+    BadGatewy = "bad_gatewy"
+}
+export declare enum Bpcrd502ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
+}
+/**
+ * Bad gateway
+ */
+export declare class Bpcrd502ApplicationJSON extends SpeakeasyBase {
+    error?: Bpcrd502ApplicationJSONErrorEnum;
+    errorDescription?: Bpcrd502ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Bpcrd500ApplicationJSONErrorEnum {
+    InternalServerError = "internal_server_error"
+}
+export declare enum Bpcrd500ApplicationJSONErrorDescriptionEnum {
+    InternalServerError = "Internal server error"
+}
+/**
+ * Internal server error
+ */
+export declare class Bpcrd500ApplicationJSON extends SpeakeasyBase {
+    error?: Bpcrd500ApplicationJSONErrorEnum;
+    errorDescription?: Bpcrd500ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Bpcrd404ApplicationJSONErrorEnum {
+    RecordNotFound = "record_not_found",
+    UrlNotFound = "url_not_found"
+}
+export declare enum Bpcrd404ApplicationJSONErrorDescriptionEnum {
+    NoRecordFound = "No record found",
+    YourAPIUrlOrPathIsIncorrect = "Your API url or path is incorrect"
+}
+/**
+ * No record found
+ */
+export declare class Bpcrd404ApplicationJSON extends SpeakeasyBase {
+    error?: Bpcrd404ApplicationJSONErrorEnum;
+    errorDescription?: Bpcrd404ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Bpcrd401ApplicationJSONErrorEnum {
+    InvalidAuthentication = "invalid_authentication",
+    InvalidAuthorization = "invalid_authorization"
+}
+export declare enum Bpcrd401ApplicationJSONErrorDescriptionEnum {
+    AuthenticationFailed = "Authentication failed",
+    YouAreNotAuthorizedToUseThisAPI = "You are not authorized to use this API"
+}
+/**
+ * Unauthorized access
+ */
+export declare class Bpcrd401ApplicationJSON extends SpeakeasyBase {
+    error?: Bpcrd401ApplicationJSONErrorEnum;
+    errorDescription?: Bpcrd401ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Bpcrd400ApplicationJSONErrorEnum {
     MissingParameter = "missing_parameter",
     InvalidParameter = "invalid_parameter",
     InvalidFormat = "invalid_format",
     InvalidTxnid = "invalid_txnid",
     InvalidConsentid = "invalid_consentid"
 }
-export declare enum Bpcrd400ApplicationJsonErrorDescriptionEnum {
+export declare enum Bpcrd400ApplicationJSONErrorDescriptionEnum {
     PleaseProvideAllMandatoryParameters = "Please provide all mandatory parameters",
     BadRequest = "Bad request",
     TheFormatParameterIsInvalid = "The format parameter is invalid",
-    TheTxnIdParameterMustBeInUuidFormat = "The txnId parameter must be in UUID format",
-    TheConsentIdParameterMustBeInUuidFormat = "The consentId parameter must be in UUID format"
+    TheTxnIdParameterMustBeInUUIDFormat = "The txnId parameter must be in UUID format",
+    TheConsentIdParameterMustBeInUUIDFormat = "The consentId parameter must be in UUID format"
 }
-export declare class Bpcrd400ApplicationJson extends SpeakeasyBase {
-    error?: Bpcrd400ApplicationJsonErrorEnum;
-    errorDescription?: Bpcrd400ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Bpcrd401ApplicationJsonErrorEnum {
-    InvalidAuthentication = "invalid_authentication",
-    InvalidAuthorization = "invalid_authorization"
-}
-export declare enum Bpcrd401ApplicationJsonErrorDescriptionEnum {
-    AuthenticationFailed = "Authentication failed",
-    YouAreNotAuthorizedToUseThisApi = "You are not authorized to use this API"
-}
-export declare class Bpcrd401ApplicationJson extends SpeakeasyBase {
-    error?: Bpcrd401ApplicationJsonErrorEnum;
-    errorDescription?: Bpcrd401ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Bpcrd404ApplicationJsonErrorEnum {
-    RecordNotFound = "record_not_found",
-    UrlNotFound = "url_not_found"
-}
-export declare enum Bpcrd404ApplicationJsonErrorDescriptionEnum {
-    NoRecordFound = "No record found",
-    YourApiUrlOrPathIsIncorrect = "Your API url or path is incorrect"
-}
-export declare class Bpcrd404ApplicationJson extends SpeakeasyBase {
-    error?: Bpcrd404ApplicationJsonErrorEnum;
-    errorDescription?: Bpcrd404ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Bpcrd500ApplicationJsonErrorEnum {
-    InternalServerError = "internal_server_error"
-}
-export declare enum Bpcrd500ApplicationJsonErrorDescriptionEnum {
-    InternalServerError = "Internal server error"
-}
-export declare class Bpcrd500ApplicationJson extends SpeakeasyBase {
-    error?: Bpcrd500ApplicationJsonErrorEnum;
-    errorDescription?: Bpcrd500ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Bpcrd502ApplicationJsonErrorEnum {
-    BadGatewy = "bad_gatewy"
-}
-export declare enum Bpcrd502ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
-}
-export declare class Bpcrd502ApplicationJson extends SpeakeasyBase {
-    error?: Bpcrd502ApplicationJsonErrorEnum;
-    errorDescription?: Bpcrd502ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Bpcrd503ApplicationJsonErrorEnum {
-    ServiceUnavailable = "service_unavailable"
-}
-export declare enum Bpcrd503ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
-}
-export declare class Bpcrd503ApplicationJson extends SpeakeasyBase {
-    error?: Bpcrd503ApplicationJsonErrorEnum;
-    errorDescription?: Bpcrd503ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Bpcrd504ApplicationJsonErrorEnum {
-    GatewayTimeout = "gateway_timeout"
-}
-export declare enum Bpcrd504ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
-}
-export declare class Bpcrd504ApplicationJson extends SpeakeasyBase {
-    error?: Bpcrd504ApplicationJsonErrorEnum;
-    errorDescription?: Bpcrd504ApplicationJsonErrorDescriptionEnum;
-}
-export declare class BpcrdRequest extends SpeakeasyBase {
-    request?: BpcrdRequestBody;
-    security: BpcrdSecurity;
+/**
+ * Bad request
+ */
+export declare class Bpcrd400ApplicationJSON extends SpeakeasyBase {
+    error?: Bpcrd400ApplicationJSONErrorEnum;
+    errorDescription?: Bpcrd400ApplicationJSONErrorDescriptionEnum;
 }
 export declare class BpcrdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    bpcrd400ApplicationJSONObject?: Bpcrd400ApplicationJson;
-    bpcrd401ApplicationJSONObject?: Bpcrd401ApplicationJson;
-    bpcrd404ApplicationJSONObject?: Bpcrd404ApplicationJson;
-    bpcrd500ApplicationJSONObject?: Bpcrd500ApplicationJson;
-    bpcrd502ApplicationJSONObject?: Bpcrd502ApplicationJson;
-    bpcrd503ApplicationJSONObject?: Bpcrd503ApplicationJson;
-    bpcrd504ApplicationJSONObject?: Bpcrd504ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad request
+     */
+    bpcrd400ApplicationJSONObject?: Bpcrd400ApplicationJSON;
+    /**
+     * Unauthorized access
+     */
+    bpcrd401ApplicationJSONObject?: Bpcrd401ApplicationJSON;
+    /**
+     * No record found
+     */
+    bpcrd404ApplicationJSONObject?: Bpcrd404ApplicationJSON;
+    /**
+     * Internal server error
+     */
+    bpcrd500ApplicationJSONObject?: Bpcrd500ApplicationJSON;
+    /**
+     * Bad gateway
+     */
+    bpcrd502ApplicationJSONObject?: Bpcrd502ApplicationJSON;
+    /**
+     * Service unavailable
+     */
+    bpcrd503ApplicationJSONObject?: Bpcrd503ApplicationJSON;
+    /**
+     * Gateway timeout
+     */
+    bpcrd504ApplicationJSONObject?: Bpcrd504ApplicationJSON;
 }

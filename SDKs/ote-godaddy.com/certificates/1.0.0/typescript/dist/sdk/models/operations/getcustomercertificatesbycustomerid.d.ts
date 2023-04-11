@@ -1,18 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetCustomerCertificatesByCustomerIdPathParams extends SpeakeasyBase {
-    customerId: string;
-}
-export declare class GetCustomerCertificatesByCustomerIdQueryParams extends SpeakeasyBase {
-    limit?: number;
-    offset?: number;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class GetCustomerCertificatesByCustomerIdRequest extends SpeakeasyBase {
-    pathParams: GetCustomerCertificatesByCustomerIdPathParams;
-    queryParams: GetCustomerCertificatesByCustomerIdQueryParams;
+    /**
+     * An identifier for a customer
+     */
+    customerId: string;
+    /**
+     * Maximum number of items to return
+     */
+    limit?: number;
+    /**
+     * Number of results to skip for pagination
+     */
+    offset?: number;
 }
 export declare class GetCustomerCertificatesByCustomerIdResponse extends SpeakeasyBase {
     body?: Uint8Array;
-    certificateSummariesV2?: any;
+    /**
+     * Customer certificate information retrieved.
+     */
+    certificateSummariesV2?: shared.CertificateSummariesV2;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

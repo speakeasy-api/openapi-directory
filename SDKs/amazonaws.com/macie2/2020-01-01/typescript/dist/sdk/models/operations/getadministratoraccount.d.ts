@@ -1,6 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetAdministratorAccountHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetAdministratorAccountRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -9,18 +10,40 @@ export declare class GetAdministratorAccountHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetAdministratorAccountRequest extends SpeakeasyBase {
-    headers: GetAdministratorAccountHeaders;
-}
 export declare class GetAdministratorAccountResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getAdministratorAccountResponse?: shared.GetAdministratorAccountResponse;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
+    /**
+     * ServiceQuotaExceededException
+     */
     serviceQuotaExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

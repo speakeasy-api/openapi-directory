@@ -1,116 +1,174 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class NooclSecurity extends SpeakeasyBase {
+    apiKey: string;
+    clientId: string;
+}
 export declare class NooclRequestBodyCertificateParameters extends SpeakeasyBase {
+    /**
+     * Reference No.
+     */
     refNo: string;
+    /**
+     * Token ID
+     */
     tokenNo: string;
 }
+/**
+ * The format of the certificate in response.
+ */
 export declare enum NooclRequestBodyFormatEnum {
     Pdf = "pdf"
 }
+/**
+ * Request format
+ */
 export declare class NooclRequestBody extends SpeakeasyBase {
     certificateParameters?: NooclRequestBodyCertificateParameters;
-    consentArtifact?: any;
+    consentArtifact?: shared.ConsentArtifactSchema;
+    /**
+     * The format of the certificate in response.
+     */
     format: NooclRequestBodyFormatEnum;
+    /**
+     * A unique transaction id for this request in UUID format. It is used for tracking the request.
+     */
     txnId: string;
 }
-export declare class NooclSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
-    clientId: shared.SchemeClientId;
+export declare enum Noocl504ApplicationJSONErrorEnum {
+    GatewayTimeout = "gateway_timeout"
 }
-export declare enum Noocl400ApplicationJsonErrorEnum {
+export declare enum Noocl504ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
+}
+/**
+ * Gateway timeout
+ */
+export declare class Noocl504ApplicationJSON extends SpeakeasyBase {
+    error?: Noocl504ApplicationJSONErrorEnum;
+    errorDescription?: Noocl504ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Noocl503ApplicationJSONErrorEnum {
+    ServiceUnavailable = "service_unavailable"
+}
+export declare enum Noocl503ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
+}
+/**
+ * Service unavailable
+ */
+export declare class Noocl503ApplicationJSON extends SpeakeasyBase {
+    error?: Noocl503ApplicationJSONErrorEnum;
+    errorDescription?: Noocl503ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Noocl502ApplicationJSONErrorEnum {
+    BadGatewy = "bad_gatewy"
+}
+export declare enum Noocl502ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
+}
+/**
+ * Bad gateway
+ */
+export declare class Noocl502ApplicationJSON extends SpeakeasyBase {
+    error?: Noocl502ApplicationJSONErrorEnum;
+    errorDescription?: Noocl502ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Noocl500ApplicationJSONErrorEnum {
+    InternalServerError = "internal_server_error"
+}
+export declare enum Noocl500ApplicationJSONErrorDescriptionEnum {
+    InternalServerError = "Internal server error"
+}
+/**
+ * Internal server error
+ */
+export declare class Noocl500ApplicationJSON extends SpeakeasyBase {
+    error?: Noocl500ApplicationJSONErrorEnum;
+    errorDescription?: Noocl500ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Noocl404ApplicationJSONErrorEnum {
+    RecordNotFound = "record_not_found",
+    UrlNotFound = "url_not_found"
+}
+export declare enum Noocl404ApplicationJSONErrorDescriptionEnum {
+    NoRecordFound = "No record found",
+    YourAPIUrlOrPathIsIncorrect = "Your API url or path is incorrect"
+}
+/**
+ * No record found
+ */
+export declare class Noocl404ApplicationJSON extends SpeakeasyBase {
+    error?: Noocl404ApplicationJSONErrorEnum;
+    errorDescription?: Noocl404ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Noocl401ApplicationJSONErrorEnum {
+    InvalidAuthentication = "invalid_authentication",
+    InvalidAuthorization = "invalid_authorization"
+}
+export declare enum Noocl401ApplicationJSONErrorDescriptionEnum {
+    AuthenticationFailed = "Authentication failed",
+    YouAreNotAuthorizedToUseThisAPI = "You are not authorized to use this API"
+}
+/**
+ * Unauthorized access
+ */
+export declare class Noocl401ApplicationJSON extends SpeakeasyBase {
+    error?: Noocl401ApplicationJSONErrorEnum;
+    errorDescription?: Noocl401ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Noocl400ApplicationJSONErrorEnum {
     MissingParameter = "missing_parameter",
     InvalidParameter = "invalid_parameter",
     InvalidFormat = "invalid_format",
     InvalidTxnid = "invalid_txnid",
     InvalidConsentid = "invalid_consentid"
 }
-export declare enum Noocl400ApplicationJsonErrorDescriptionEnum {
+export declare enum Noocl400ApplicationJSONErrorDescriptionEnum {
     PleaseProvideAllMandatoryParameters = "Please provide all mandatory parameters",
     BadRequest = "Bad request",
     TheFormatParameterIsInvalid = "The format parameter is invalid",
-    TheTxnIdParameterMustBeInUuidFormat = "The txnId parameter must be in UUID format",
-    TheConsentIdParameterMustBeInUuidFormat = "The consentId parameter must be in UUID format"
+    TheTxnIdParameterMustBeInUUIDFormat = "The txnId parameter must be in UUID format",
+    TheConsentIdParameterMustBeInUUIDFormat = "The consentId parameter must be in UUID format"
 }
-export declare class Noocl400ApplicationJson extends SpeakeasyBase {
-    error?: Noocl400ApplicationJsonErrorEnum;
-    errorDescription?: Noocl400ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Noocl401ApplicationJsonErrorEnum {
-    InvalidAuthentication = "invalid_authentication",
-    InvalidAuthorization = "invalid_authorization"
-}
-export declare enum Noocl401ApplicationJsonErrorDescriptionEnum {
-    AuthenticationFailed = "Authentication failed",
-    YouAreNotAuthorizedToUseThisApi = "You are not authorized to use this API"
-}
-export declare class Noocl401ApplicationJson extends SpeakeasyBase {
-    error?: Noocl401ApplicationJsonErrorEnum;
-    errorDescription?: Noocl401ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Noocl404ApplicationJsonErrorEnum {
-    RecordNotFound = "record_not_found",
-    UrlNotFound = "url_not_found"
-}
-export declare enum Noocl404ApplicationJsonErrorDescriptionEnum {
-    NoRecordFound = "No record found",
-    YourApiUrlOrPathIsIncorrect = "Your API url or path is incorrect"
-}
-export declare class Noocl404ApplicationJson extends SpeakeasyBase {
-    error?: Noocl404ApplicationJsonErrorEnum;
-    errorDescription?: Noocl404ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Noocl500ApplicationJsonErrorEnum {
-    InternalServerError = "internal_server_error"
-}
-export declare enum Noocl500ApplicationJsonErrorDescriptionEnum {
-    InternalServerError = "Internal server error"
-}
-export declare class Noocl500ApplicationJson extends SpeakeasyBase {
-    error?: Noocl500ApplicationJsonErrorEnum;
-    errorDescription?: Noocl500ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Noocl502ApplicationJsonErrorEnum {
-    BadGatewy = "bad_gatewy"
-}
-export declare enum Noocl502ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
-}
-export declare class Noocl502ApplicationJson extends SpeakeasyBase {
-    error?: Noocl502ApplicationJsonErrorEnum;
-    errorDescription?: Noocl502ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Noocl503ApplicationJsonErrorEnum {
-    ServiceUnavailable = "service_unavailable"
-}
-export declare enum Noocl503ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
-}
-export declare class Noocl503ApplicationJson extends SpeakeasyBase {
-    error?: Noocl503ApplicationJsonErrorEnum;
-    errorDescription?: Noocl503ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Noocl504ApplicationJsonErrorEnum {
-    GatewayTimeout = "gateway_timeout"
-}
-export declare enum Noocl504ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
-}
-export declare class Noocl504ApplicationJson extends SpeakeasyBase {
-    error?: Noocl504ApplicationJsonErrorEnum;
-    errorDescription?: Noocl504ApplicationJsonErrorDescriptionEnum;
-}
-export declare class NooclRequest extends SpeakeasyBase {
-    request?: NooclRequestBody;
-    security: NooclSecurity;
+/**
+ * Bad request
+ */
+export declare class Noocl400ApplicationJSON extends SpeakeasyBase {
+    error?: Noocl400ApplicationJSONErrorEnum;
+    errorDescription?: Noocl400ApplicationJSONErrorDescriptionEnum;
 }
 export declare class NooclResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    noocl400ApplicationJSONObject?: Noocl400ApplicationJson;
-    noocl401ApplicationJSONObject?: Noocl401ApplicationJson;
-    noocl404ApplicationJSONObject?: Noocl404ApplicationJson;
-    noocl500ApplicationJSONObject?: Noocl500ApplicationJson;
-    noocl502ApplicationJSONObject?: Noocl502ApplicationJson;
-    noocl503ApplicationJSONObject?: Noocl503ApplicationJson;
-    noocl504ApplicationJSONObject?: Noocl504ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad request
+     */
+    noocl400ApplicationJSONObject?: Noocl400ApplicationJSON;
+    /**
+     * Unauthorized access
+     */
+    noocl401ApplicationJSONObject?: Noocl401ApplicationJSON;
+    /**
+     * No record found
+     */
+    noocl404ApplicationJSONObject?: Noocl404ApplicationJSON;
+    /**
+     * Internal server error
+     */
+    noocl500ApplicationJSONObject?: Noocl500ApplicationJSON;
+    /**
+     * Bad gateway
+     */
+    noocl502ApplicationJSONObject?: Noocl502ApplicationJSON;
+    /**
+     * Service unavailable
+     */
+    noocl503ApplicationJSONObject?: Noocl503ApplicationJSON;
+    /**
+     * Gateway timeout
+     */
+    noocl504ApplicationJSONObject?: Noocl504ApplicationJSON;
 }

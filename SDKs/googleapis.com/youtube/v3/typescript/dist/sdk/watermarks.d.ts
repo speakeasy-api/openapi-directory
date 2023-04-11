@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Watermarks {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,11 +9,11 @@ export declare class Watermarks {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * youtubeWatermarksSet - Allows upload of watermark image and setting it for a channel.
-    **/
-    youtubeWatermarksSet(req: operations.YoutubeWatermarksSetRequest, config?: AxiosRequestConfig): Promise<operations.YoutubeWatermarksSetResponse>;
+     * Allows upload of watermark image and setting it for a channel.
+     */
+    youtubeWatermarksSet(req: operations.YoutubeWatermarksSetRequest, security: operations.YoutubeWatermarksSetSecurity, config?: AxiosRequestConfig): Promise<operations.YoutubeWatermarksSetResponse>;
     /**
-     * youtubeWatermarksUnset - Allows removal of channel watermark.
-    **/
-    youtubeWatermarksUnset(req: operations.YoutubeWatermarksUnsetRequest, config?: AxiosRequestConfig): Promise<operations.YoutubeWatermarksUnsetResponse>;
+     * Allows removal of channel watermark.
+     */
+    youtubeWatermarksUnset(req: operations.YoutubeWatermarksUnsetRequest, security: operations.YoutubeWatermarksUnsetSecurity, config?: AxiosRequestConfig): Promise<operations.YoutubeWatermarksUnsetResponse>;
 }

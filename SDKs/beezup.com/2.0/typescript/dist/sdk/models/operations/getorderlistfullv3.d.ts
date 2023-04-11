@@ -1,16 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetOrderListFullV3Headers extends SpeakeasyBase {
-    acceptEncoding: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetOrderListFullV3Request extends SpeakeasyBase {
-    headers: GetOrderListFullV3Headers;
-    request: shared.OrderListRequest;
+    /**
+     * Allows the client to indicate wether it accepts a compressed encoding to reduce traffic size
+     */
+    acceptEncoding: string;
+    orderListRequest: shared.OrderListRequest;
 }
 export declare class GetOrderListFullV3Response extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     * Occurs when something goes wrong
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Could not process request for given parameters values. Please check error message for more details.
+     */
     errorResponseMessage?: shared.ErrorResponseMessage;
+    /**
+     * Successfully fetched the full list of Orders
+     */
     orderListFullWithLinks?: shared.OrderListFullWithLinks;
 }

@@ -1,4 +1,3 @@
-import { AxiosInstance } from "axios";
 import { About } from "./about";
 import { Changes } from "./changes";
 import { Channels } from "./channels";
@@ -9,11 +8,29 @@ import { Permissions } from "./permissions";
 import { Replies } from "./replies";
 import { Revisions } from "./revisions";
 import { Teamdrives } from "./teamdrives";
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://www.googleapis.com/drive/v3"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * Manages files in Drive including uploading, downloading, searching, detecting changes, and updating sharing permissions.
+ *
+ * @see {@link https://developers.google.com/drive/}
+ */
 export declare class SDK {
     about: About;
     changes: Changes;
@@ -31,5 +48,6 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
 }

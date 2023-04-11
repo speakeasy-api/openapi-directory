@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteByteMatchSetXAmzTargetEnum {
-    AwswafRegional20161128DeleteByteMatchSet = "AWSWAF_Regional_20161128.DeleteByteMatchSet"
+    AWSWAFRegional20161128DeleteByteMatchSet = "AWSWAF_Regional_20161128.DeleteByteMatchSet"
 }
-export declare class DeleteByteMatchSetHeaders extends SpeakeasyBase {
+export declare class DeleteByteMatchSetRequest extends SpeakeasyBase {
+    deleteByteMatchSetRequest: shared.DeleteByteMatchSetRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class DeleteByteMatchSetHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteByteMatchSetXAmzTargetEnum;
 }
-export declare class DeleteByteMatchSetRequest extends SpeakeasyBase {
-    headers: DeleteByteMatchSetHeaders;
-    request: shared.DeleteByteMatchSetRequest;
-}
 export declare class DeleteByteMatchSetResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deleteByteMatchSetResponse?: shared.DeleteByteMatchSetResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFInvalidAccountException
+     */
     wafInvalidAccountException?: any;
+    /**
+     * WAFNonEmptyEntityException
+     */
     wafNonEmptyEntityException?: any;
+    /**
+     * WAFNonexistentItemException
+     */
     wafNonexistentItemException?: any;
+    /**
+     * WAFReferencedItemException
+     */
     wafReferencedItemException?: any;
+    /**
+     * WAFStaleDataException
+     */
     wafStaleDataException?: any;
 }

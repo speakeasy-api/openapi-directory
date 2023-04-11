@@ -1,39 +1,49 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AddTagsToOnPremisesInstancesRequest, AddTagsToOnPremisesInstancesResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  AddTagsToOnPremisesInstancesRequest,
+  AddTagsToOnPremisesInstancesResponse,
+  AddTagsToOnPremisesInstancesXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: AddTagsToOnPremisesInstancesRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "CodeDeploy_20141006.AddTagsToOnPremisesInstances",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
+});
+
+const req: AddTagsToOnPremisesInstancesRequest = {
+  addTagsToOnPremisesInstancesInput: {
     instanceNames: [
-      "et",
+      "provident",
+      "distinctio",
+      "quibusdam",
     ],
     tags: [
       {
-        key: "rerum",
-        value: "dicta",
+        key: "nulla",
+        value: "corrupti",
+      },
+      {
+        key: "illum",
+        value: "vel",
+      },
+      {
+        key: "error",
+        value: "deserunt",
       },
     ],
   },
+  xAmzAlgorithm: "suscipit",
+  xAmzContentSha256: "iure",
+  xAmzCredential: "magnam",
+  xAmzDate: "debitis",
+  xAmzSecurityToken: "ipsa",
+  xAmzSignature: "delectus",
+  xAmzSignedHeaders: "tempora",
+  xAmzTarget: AddTagsToOnPremisesInstancesXAmzTargetEnum.CodeDeploy20141006AddTagsToOnPremisesInstances,
 };
 
 sdk.addTagsToOnPremisesInstances(req).then((res: AddTagsToOnPremisesInstancesResponse | AxiosError) => {

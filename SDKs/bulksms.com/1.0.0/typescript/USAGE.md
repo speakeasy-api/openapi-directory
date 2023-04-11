@@ -1,29 +1,17 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { PostRmmPreSignAttachmentRequest, PostRmmPreSignAttachmentResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  shared.PreSignRequest,
+  PostRmmPreSignAttachmentResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
-  security: {
-    basicAuth: {
-      password: "YOUR_PASSWORD_HERE",
-      username: "YOUR_USERNAME_HERE",
-    },
-  }
-));
-    
-const req: PostRmmPreSignAttachmentRequest = {
-  security: {
-    basicAuth: {
-      password: "YOUR_PASSWORD_HERE",
-      username: "YOUR_USERNAME_HERE",
-    },
-  },
-  request: {
-    fileExtension: "sit",
-    mediaType: "voluptas",
-  },
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK();
+
+const req: shared.PreSignRequest = {
+  fileExtension: "pdf",
+  mediaType: "application/pdf",
 };
 
 sdk.attachments.postRmmPreSignAttachment(req).then((res: PostRmmPreSignAttachmentResponse | AxiosError) => {

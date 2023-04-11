@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class CategoriesSubscriptions {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,35 +9,35 @@ export declare class CategoriesSubscriptions {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * checkIfUserSubscribedToCategory - Check if a user follows a category
-    **/
-    checkIfUserSubscribedToCategory(req: operations.CheckIfUserSubscribedToCategoryRequest, config?: AxiosRequestConfig): Promise<operations.CheckIfUserSubscribedToCategoryResponse>;
+     * Check if a user follows a category
+     */
+    checkIfUserSubscribedToCategory(req: operations.CheckIfUserSubscribedToCategoryRequest, security: operations.CheckIfUserSubscribedToCategorySecurity, config?: AxiosRequestConfig): Promise<operations.CheckIfUserSubscribedToCategoryResponse>;
     /**
-     * checkIfUserSubscribedToCategoryAlt1 - Check if a user follows a category
-    **/
-    checkIfUserSubscribedToCategoryAlt1(req: operations.CheckIfUserSubscribedToCategoryAlt1Request, config?: AxiosRequestConfig): Promise<operations.CheckIfUserSubscribedToCategoryAlt1Response>;
+     * Check if a user follows a category
+     */
+    checkIfUserSubscribedToCategoryAlt1(req: operations.CheckIfUserSubscribedToCategoryAlt1Request, security: operations.CheckIfUserSubscribedToCategoryAlt1Security, config?: AxiosRequestConfig): Promise<operations.CheckIfUserSubscribedToCategoryAlt1Response>;
     /**
-     * getCategorySubscriptions - Get all the categories that a user follows
-    **/
-    getCategorySubscriptions(req: operations.GetCategorySubscriptionsRequest, config?: AxiosRequestConfig): Promise<operations.GetCategorySubscriptionsResponse>;
+     * Get all the categories that a user follows
+     */
+    getCategorySubscriptions(req: operations.GetCategorySubscriptionsRequest, security: operations.GetCategorySubscriptionsSecurity, config?: AxiosRequestConfig): Promise<operations.GetCategorySubscriptionsResponse>;
     /**
-     * getCategorySubscriptionsAlt1 - Get all the categories that a user follows
-    **/
-    getCategorySubscriptionsAlt1(req: operations.GetCategorySubscriptionsAlt1Request, config?: AxiosRequestConfig): Promise<operations.GetCategorySubscriptionsAlt1Response>;
+     * Get all the categories that a user follows
+     */
+    getCategorySubscriptionsAlt1(req: operations.GetCategorySubscriptionsAlt1Request, security: operations.GetCategorySubscriptionsAlt1Security, config?: AxiosRequestConfig): Promise<operations.GetCategorySubscriptionsAlt1Response>;
     /**
-     * subscribeToCategory - Subscribe a user to a single category
-    **/
-    subscribeToCategory(req: operations.SubscribeToCategoryRequest, config?: AxiosRequestConfig): Promise<operations.SubscribeToCategoryResponse>;
+     * Subscribe a user to a single category
+     */
+    subscribeToCategory(req: operations.SubscribeToCategoryRequest, security: operations.SubscribeToCategorySecurity, config?: AxiosRequestConfig): Promise<operations.SubscribeToCategoryResponse>;
     /**
-     * subscribeToCategoryAlt1 - Subscribe a user to a single category
-    **/
-    subscribeToCategoryAlt1(req: operations.SubscribeToCategoryAlt1Request, config?: AxiosRequestConfig): Promise<operations.SubscribeToCategoryAlt1Response>;
+     * Subscribe a user to a single category
+     */
+    subscribeToCategoryAlt1(req: operations.SubscribeToCategoryAlt1Request, security: operations.SubscribeToCategoryAlt1Security, config?: AxiosRequestConfig): Promise<operations.SubscribeToCategoryAlt1Response>;
     /**
-     * unsubscribeFromCategory - Unsubscribe a user from a category
-    **/
-    unsubscribeFromCategory(req: operations.UnsubscribeFromCategoryRequest, config?: AxiosRequestConfig): Promise<operations.UnsubscribeFromCategoryResponse>;
+     * Unsubscribe a user from a category
+     */
+    unsubscribeFromCategory(req: operations.UnsubscribeFromCategoryRequest, security: operations.UnsubscribeFromCategorySecurity, config?: AxiosRequestConfig): Promise<operations.UnsubscribeFromCategoryResponse>;
     /**
-     * unsubscribeFromCategoryAlt1 - Unsubscribe a user from a category
-    **/
-    unsubscribeFromCategoryAlt1(req: operations.UnsubscribeFromCategoryAlt1Request, config?: AxiosRequestConfig): Promise<operations.UnsubscribeFromCategoryAlt1Response>;
+     * Unsubscribe a user from a category
+     */
+    unsubscribeFromCategoryAlt1(req: operations.UnsubscribeFromCategoryAlt1Request, security: operations.UnsubscribeFromCategoryAlt1Security, config?: AxiosRequestConfig): Promise<operations.UnsubscribeFromCategoryAlt1Response>;
 }

@@ -1,0 +1,32 @@
+<!-- Start SDK Example Usage -->
+```typescript
+import {
+  CancelJobRunRequest,
+  CancelJobRunResponse
+} from "openapi/dist/sdk/models/operations";
+
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
+  security: {
+    hmac: "YOUR_API_KEY_HERE",
+  },
+});
+
+const req: CancelJobRunRequest = {
+  xAmzAlgorithm: "corrupti",
+  xAmzContentSha256: "provident",
+  xAmzCredential: "distinctio",
+  xAmzDate: "quibusdam",
+  xAmzSecurityToken: "unde",
+  xAmzSignature: "nulla",
+  xAmzSignedHeaders: "corrupti",
+  applicationId: "illum",
+  jobRunId: "vel",
+};
+
+sdk.cancelJobRun(req).then((res: CancelJobRunResponse | AxiosError) => {
+   // handle response
+});
+```
+<!-- End SDK Example Usage -->

@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteScheduledActionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteScheduledActionActionEnum {
     DeleteScheduledAction = "DeleteScheduledAction"
 }
-export declare enum GetDeleteScheduledActionVersionEnum {
+export declare enum GETDeleteScheduledActionVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class GetDeleteScheduledActionQueryParams extends SpeakeasyBase {
-    action: GetDeleteScheduledActionActionEnum;
+export declare class GETDeleteScheduledActionRequest extends SpeakeasyBase {
+    action: GETDeleteScheduledActionActionEnum;
+    /**
+     * The name of the Auto Scaling group.
+     */
     autoScalingGroupName: string;
+    /**
+     * The name of the action to delete.
+     */
     scheduledActionName: string;
-    version: GetDeleteScheduledActionVersionEnum;
-}
-export declare class GetDeleteScheduledActionHeaders extends SpeakeasyBase {
+    version: GETDeleteScheduledActionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetDeleteScheduledActionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteScheduledActionRequest extends SpeakeasyBase {
-    queryParams: GetDeleteScheduledActionQueryParams;
-    headers: GetDeleteScheduledActionHeaders;
-}
-export declare class GetDeleteScheduledActionResponse extends SpeakeasyBase {
+export declare class GETDeleteScheduledActionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class DirectDeposit {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +9,10 @@ export declare class DirectDeposit {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getAllDirectDeposit - Get All Direct Deposit
+     * Get All Direct Deposit
      *
+     * @remarks
      * Get All Direct Deposit returns main direct deposit and all additional direct depositsfor the selected employee.
-    **/
-    getAllDirectDeposit(req: operations.GetAllDirectDepositRequest, config?: AxiosRequestConfig): Promise<operations.GetAllDirectDepositResponse>;
+     */
+    getAllDirectDeposit(req: operations.GetAllDirectDepositRequest, security: operations.GetAllDirectDepositSecurity, config?: AxiosRequestConfig): Promise<operations.GetAllDirectDepositResponse>;
 }

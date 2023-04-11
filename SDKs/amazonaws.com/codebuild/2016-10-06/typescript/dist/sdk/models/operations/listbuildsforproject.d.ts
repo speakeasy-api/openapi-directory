@@ -1,12 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListBuildsForProjectQueryParams extends SpeakeasyBase {
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListBuildsForProjectXAmzTargetEnum {
     CodeBuild20161006ListBuildsForProject = "CodeBuild_20161006.ListBuildsForProject"
 }
-export declare class ListBuildsForProjectHeaders extends SpeakeasyBase {
+export declare class ListBuildsForProjectRequest extends SpeakeasyBase {
+    listBuildsForProjectInput: shared.ListBuildsForProjectInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -15,16 +14,25 @@ export declare class ListBuildsForProjectHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: ListBuildsForProjectXAmzTargetEnum;
-}
-export declare class ListBuildsForProjectRequest extends SpeakeasyBase {
-    queryParams: ListBuildsForProjectQueryParams;
-    headers: ListBuildsForProjectHeaders;
-    request: shared.ListBuildsForProjectInput;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class ListBuildsForProjectResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * Success
+     */
     listBuildsForProjectOutput?: shared.ListBuildsForProjectOutput;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
 }

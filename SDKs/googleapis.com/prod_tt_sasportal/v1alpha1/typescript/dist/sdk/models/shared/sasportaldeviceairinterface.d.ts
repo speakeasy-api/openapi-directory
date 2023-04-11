@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Conditional. This field specifies the radio access technology that is used for the CBSD.
+ */
 export declare enum SasPortalDeviceAirInterfaceRadioTechnologyEnum {
     RadioTechnologyUnspecified = "RADIO_TECHNOLOGY_UNSPECIFIED",
     EUtra = "E_UTRA",
@@ -12,8 +15,14 @@ export declare enum SasPortalDeviceAirInterfaceRadioTechnologyEnum {
 }
 /**
  * Information about the device's air interface.
-**/
+ */
 export declare class SasPortalDeviceAirInterface extends SpeakeasyBase {
+    /**
+     * Conditional. This field specifies the radio access technology that is used for the CBSD.
+     */
     radioTechnology?: SasPortalDeviceAirInterfaceRadioTechnologyEnum;
+    /**
+     * Optional. This field is related to the `radioTechnology` and provides the air interface specification that the CBSD is compliant with at the time of registration.
+     */
     supportedSpec?: string;
 }

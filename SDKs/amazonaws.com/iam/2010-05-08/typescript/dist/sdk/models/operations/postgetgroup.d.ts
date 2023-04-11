@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostGetGroupActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTGetGroupActionEnum {
     GetGroup = "GetGroup"
 }
-export declare enum PostGetGroupVersionEnum {
+export declare enum POSTGetGroupVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostGetGroupQueryParams extends SpeakeasyBase {
-    action: PostGetGroupActionEnum;
+export declare class POSTGetGroupRequest extends SpeakeasyBase {
+    action: POSTGetGroupActionEnum;
+    /**
+     * Pagination token
+     */
     marker?: string;
+    /**
+     * Pagination limit
+     */
     maxItems?: string;
-    version: PostGetGroupVersionEnum;
-}
-export declare class PostGetGroupHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTGetGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostGetGroupHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostGetGroupRequest extends SpeakeasyBase {
-    queryParams: PostGetGroupQueryParams;
-    headers: PostGetGroupHeaders;
-    request?: Uint8Array;
-}
-export declare class PostGetGroupResponse extends SpeakeasyBase {
+export declare class POSTGetGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

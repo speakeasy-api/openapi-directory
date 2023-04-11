@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Projects {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,87 +9,99 @@ export declare class Projects {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * clouddeployProjectsLocationsDeliveryPipelinesCreate - Creates a new DeliveryPipeline in a given project and location.
-    **/
-    clouddeployProjectsLocationsDeliveryPipelinesCreate(req: operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateRequest, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateResponse>;
+     * Creates a new DeliveryPipeline in a given project and location.
+     */
+    clouddeployProjectsLocationsDeliveryPipelinesCreate(req: operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateRequest, security: operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateSecurity, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateResponse>;
     /**
-     * clouddeployProjectsLocationsDeliveryPipelinesList - Lists DeliveryPipelines in a given project and location.
-    **/
-    clouddeployProjectsLocationsDeliveryPipelinesList(req: operations.ClouddeployProjectsLocationsDeliveryPipelinesListRequest, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsDeliveryPipelinesListResponse>;
+     * Lists DeliveryPipelines in a given project and location.
+     */
+    clouddeployProjectsLocationsDeliveryPipelinesList(req: operations.ClouddeployProjectsLocationsDeliveryPipelinesListRequest, security: operations.ClouddeployProjectsLocationsDeliveryPipelinesListSecurity, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsDeliveryPipelinesListResponse>;
     /**
-     * clouddeployProjectsLocationsDeliveryPipelinesReleasesAbandon - Abandons a Release in the Delivery Pipeline.
-    **/
-    clouddeployProjectsLocationsDeliveryPipelinesReleasesAbandon(req: operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesAbandonRequest, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesAbandonResponse>;
+     * Abandons a Release in the Delivery Pipeline.
+     */
+    clouddeployProjectsLocationsDeliveryPipelinesReleasesAbandon(req: operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesAbandonRequest, security: operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesAbandonSecurity, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesAbandonResponse>;
     /**
-     * clouddeployProjectsLocationsDeliveryPipelinesReleasesCreate - Creates a new Release in a given project and location.
-    **/
-    clouddeployProjectsLocationsDeliveryPipelinesReleasesCreate(req: operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesCreateRequest, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesCreateResponse>;
+     * Creates a new Release in a given project and location.
+     */
+    clouddeployProjectsLocationsDeliveryPipelinesReleasesCreate(req: operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesCreateRequest, security: operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesCreateSecurity, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesCreateResponse>;
     /**
-     * clouddeployProjectsLocationsDeliveryPipelinesReleasesList - Lists Releases in a given project and location.
-    **/
-    clouddeployProjectsLocationsDeliveryPipelinesReleasesList(req: operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesListRequest, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesListResponse>;
+     * Lists Releases in a given project and location.
+     */
+    clouddeployProjectsLocationsDeliveryPipelinesReleasesList(req: operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesListRequest, security: operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesListSecurity, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesListResponse>;
     /**
-     * clouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApprove - Approves a Rollout.
-    **/
-    clouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApprove(req: operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApproveRequest, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApproveResponse>;
+     * Advances a Rollout in a given project and location.
+     */
+    clouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsAdvance(req: operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsAdvanceRequest, security: operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsAdvanceSecurity, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsAdvanceResponse>;
     /**
-     * clouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsCreate - Creates a new Rollout in a given project and location.
-    **/
-    clouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsCreate(req: operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsCreateRequest, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsCreateResponse>;
+     * Approves a Rollout.
+     */
+    clouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApprove(req: operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApproveRequest, security: operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApproveSecurity, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApproveResponse>;
     /**
-     * clouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsList - Lists JobRuns in a given project and location.
-    **/
-    clouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsList(req: operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsListRequest, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsListResponse>;
+     * Creates a new Rollout in a given project and location.
+     */
+    clouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsCreate(req: operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsCreateRequest, security: operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsCreateSecurity, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsCreateResponse>;
     /**
-     * clouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsList - Lists Rollouts in a given project and location.
-    **/
-    clouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsList(req: operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsListRequest, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsListResponse>;
+     * Ignores the specified Job in a Rollout.
+     */
+    clouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsIgnoreJob(req: operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsIgnoreJobRequest, security: operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsIgnoreJobSecurity, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsIgnoreJobResponse>;
     /**
-     * clouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsRetryJob - Retries the specified Job in a Rollout.
-    **/
-    clouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsRetryJob(req: operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsRetryJobRequest, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsRetryJobResponse>;
+     * Lists JobRuns in a given project and location.
+     */
+    clouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsList(req: operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsListRequest, security: operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsListSecurity, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsListResponse>;
     /**
-     * clouddeployProjectsLocationsList - Lists information about the supported locations for this service.
-    **/
-    clouddeployProjectsLocationsList(req: operations.ClouddeployProjectsLocationsListRequest, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsListResponse>;
+     * Terminates a Job Run in a given project and location.
+     */
+    clouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsTerminate(req: operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsTerminateRequest, security: operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsTerminateSecurity, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsTerminateResponse>;
     /**
-     * clouddeployProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-    **/
-    clouddeployProjectsLocationsOperationsCancel(req: operations.ClouddeployProjectsLocationsOperationsCancelRequest, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsOperationsCancelResponse>;
+     * Lists Rollouts in a given project and location.
+     */
+    clouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsList(req: operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsListRequest, security: operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsListSecurity, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsListResponse>;
     /**
-     * clouddeployProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/* /operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
-    **/
-    clouddeployProjectsLocationsOperationsList(req: operations.ClouddeployProjectsLocationsOperationsListRequest, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsOperationsListResponse>;
+     * Retries the specified Job in a Rollout.
+     */
+    clouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsRetryJob(req: operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsRetryJobRequest, security: operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsRetryJobSecurity, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsRetryJobResponse>;
     /**
-     * clouddeployProjectsLocationsTargetsCreate - Creates a new Target in a given project and location.
-    **/
-    clouddeployProjectsLocationsTargetsCreate(req: operations.ClouddeployProjectsLocationsTargetsCreateRequest, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsTargetsCreateResponse>;
+     * Lists information about the supported locations for this service.
+     */
+    clouddeployProjectsLocationsList(req: operations.ClouddeployProjectsLocationsListRequest, security: operations.ClouddeployProjectsLocationsListSecurity, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsListResponse>;
     /**
-     * clouddeployProjectsLocationsTargetsDelete - Deletes a single Target.
-    **/
-    clouddeployProjectsLocationsTargetsDelete(req: operations.ClouddeployProjectsLocationsTargetsDeleteRequest, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsTargetsDeleteResponse>;
+     * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
+     */
+    clouddeployProjectsLocationsOperationsCancel(req: operations.ClouddeployProjectsLocationsOperationsCancelRequest, security: operations.ClouddeployProjectsLocationsOperationsCancelSecurity, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsOperationsCancelResponse>;
     /**
-     * clouddeployProjectsLocationsTargetsGet - Gets details of a single Target.
-    **/
-    clouddeployProjectsLocationsTargetsGet(req: operations.ClouddeployProjectsLocationsTargetsGetRequest, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsTargetsGetResponse>;
+     * Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
+     */
+    clouddeployProjectsLocationsOperationsList(req: operations.ClouddeployProjectsLocationsOperationsListRequest, security: operations.ClouddeployProjectsLocationsOperationsListSecurity, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsOperationsListResponse>;
     /**
-     * clouddeployProjectsLocationsTargetsGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-    **/
-    clouddeployProjectsLocationsTargetsGetIamPolicy(req: operations.ClouddeployProjectsLocationsTargetsGetIamPolicyRequest, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsTargetsGetIamPolicyResponse>;
+     * Creates a new Target in a given project and location.
+     */
+    clouddeployProjectsLocationsTargetsCreate(req: operations.ClouddeployProjectsLocationsTargetsCreateRequest, security: operations.ClouddeployProjectsLocationsTargetsCreateSecurity, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsTargetsCreateResponse>;
     /**
-     * clouddeployProjectsLocationsTargetsList - Lists Targets in a given project and location.
-    **/
-    clouddeployProjectsLocationsTargetsList(req: operations.ClouddeployProjectsLocationsTargetsListRequest, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsTargetsListResponse>;
+     * Deletes a single Target.
+     */
+    clouddeployProjectsLocationsTargetsDelete(req: operations.ClouddeployProjectsLocationsTargetsDeleteRequest, security: operations.ClouddeployProjectsLocationsTargetsDeleteSecurity, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsTargetsDeleteResponse>;
     /**
-     * clouddeployProjectsLocationsTargetsPatch - Updates the parameters of a single Target.
-    **/
-    clouddeployProjectsLocationsTargetsPatch(req: operations.ClouddeployProjectsLocationsTargetsPatchRequest, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsTargetsPatchResponse>;
+     * Gets details of a single Target.
+     */
+    clouddeployProjectsLocationsTargetsGet(req: operations.ClouddeployProjectsLocationsTargetsGetRequest, security: operations.ClouddeployProjectsLocationsTargetsGetSecurity, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsTargetsGetResponse>;
     /**
-     * clouddeployProjectsLocationsTargetsSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
-    **/
-    clouddeployProjectsLocationsTargetsSetIamPolicy(req: operations.ClouddeployProjectsLocationsTargetsSetIamPolicyRequest, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsTargetsSetIamPolicyResponse>;
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     */
+    clouddeployProjectsLocationsTargetsGetIamPolicy(req: operations.ClouddeployProjectsLocationsTargetsGetIamPolicyRequest, security: operations.ClouddeployProjectsLocationsTargetsGetIamPolicySecurity, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsTargetsGetIamPolicyResponse>;
     /**
-     * clouddeployProjectsLocationsTargetsTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-    **/
-    clouddeployProjectsLocationsTargetsTestIamPermissions(req: operations.ClouddeployProjectsLocationsTargetsTestIamPermissionsRequest, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsTargetsTestIamPermissionsResponse>;
+     * Lists Targets in a given project and location.
+     */
+    clouddeployProjectsLocationsTargetsList(req: operations.ClouddeployProjectsLocationsTargetsListRequest, security: operations.ClouddeployProjectsLocationsTargetsListSecurity, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsTargetsListResponse>;
+    /**
+     * Updates the parameters of a single Target.
+     */
+    clouddeployProjectsLocationsTargetsPatch(req: operations.ClouddeployProjectsLocationsTargetsPatchRequest, security: operations.ClouddeployProjectsLocationsTargetsPatchSecurity, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsTargetsPatchResponse>;
+    /**
+     * Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+     */
+    clouddeployProjectsLocationsTargetsSetIamPolicy(req: operations.ClouddeployProjectsLocationsTargetsSetIamPolicyRequest, security: operations.ClouddeployProjectsLocationsTargetsSetIamPolicySecurity, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsTargetsSetIamPolicyResponse>;
+    /**
+     * Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
+     */
+    clouddeployProjectsLocationsTargetsTestIamPermissions(req: operations.ClouddeployProjectsLocationsTargetsTestIamPermissionsRequest, security: operations.ClouddeployProjectsLocationsTargetsTestIamPermissionsSecurity, config?: AxiosRequestConfig): Promise<operations.ClouddeployProjectsLocationsTargetsTestIamPermissionsResponse>;
 }

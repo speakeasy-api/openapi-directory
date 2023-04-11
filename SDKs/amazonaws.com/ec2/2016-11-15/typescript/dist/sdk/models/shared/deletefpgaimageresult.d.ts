@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class DeleteFpgaImageResult extends SpeakeasyBase {
-    return?: Record<string, any>;
+    return?: boolean;
 }

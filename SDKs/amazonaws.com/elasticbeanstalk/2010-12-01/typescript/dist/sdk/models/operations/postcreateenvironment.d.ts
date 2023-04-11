@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateEnvironmentActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateEnvironmentActionEnum {
     CreateEnvironment = "CreateEnvironment"
 }
-export declare enum PostCreateEnvironmentVersionEnum {
+export declare enum POSTCreateEnvironmentVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostCreateEnvironmentQueryParams extends SpeakeasyBase {
-    action: PostCreateEnvironmentActionEnum;
-    version: PostCreateEnvironmentVersionEnum;
-}
-export declare class PostCreateEnvironmentHeaders extends SpeakeasyBase {
+export declare class POSTCreateEnvironmentRequest extends SpeakeasyBase {
+    action: POSTCreateEnvironmentActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateEnvironmentVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateEnvironmentHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateEnvironmentRequest extends SpeakeasyBase {
-    queryParams: PostCreateEnvironmentQueryParams;
-    headers: PostCreateEnvironmentHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateEnvironmentResponse extends SpeakeasyBase {
+export declare class POSTCreateEnvironmentResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

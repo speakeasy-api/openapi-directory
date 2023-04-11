@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class TeamsGetMemberLegacyPathParams extends SpeakeasyBase {
-    teamId: number;
-    username: string;
-}
+import { AxiosResponse } from "axios";
 export declare class TeamsGetMemberLegacyRequest extends SpeakeasyBase {
-    pathParams: TeamsGetMemberLegacyPathParams;
+    /**
+     * The unique identifier of the team.
+     */
+    teamId: number;
+    /**
+     * The handle for the GitHub user account.
+     */
+    username: string;
 }
 export declare class TeamsGetMemberLegacyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

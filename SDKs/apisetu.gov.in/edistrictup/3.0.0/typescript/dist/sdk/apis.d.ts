@@ -1,6 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class ApIs {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+export declare class APIs {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,39 +9,45 @@ export declare class ApIs {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * btcer - Birth Certificate
+     * Birth Certificate
      *
+     * @remarks
      * API to verify Birth Certificate.
-    **/
-    btcer(req: operations.BtcerRequest, config?: AxiosRequestConfig): Promise<operations.BtcerResponse>;
+     */
+    btcer(req: operations.BtcerRequestBody, security: operations.BtcerSecurity, config?: AxiosRequestConfig): Promise<operations.BtcerResponse>;
     /**
-     * ctcer - Caste Certificate
+     * Caste Certificate
      *
+     * @remarks
      * API to verify Caste Certificate.
-    **/
-    ctcer(req: operations.CtcerRequest, config?: AxiosRequestConfig): Promise<operations.CtcerResponse>;
+     */
+    ctcer(req: operations.CtcerRequestBody, security: operations.CtcerSecurity, config?: AxiosRequestConfig): Promise<operations.CtcerResponse>;
     /**
-     * dmcer - Domicile Certificate
+     * Domicile Certificate
      *
+     * @remarks
      * API to verify Domicile Certificate.
-    **/
-    dmcer(req: operations.DmcerRequest, config?: AxiosRequestConfig): Promise<operations.DmcerResponse>;
+     */
+    dmcer(req: operations.DmcerRequestBody, security: operations.DmcerSecurity, config?: AxiosRequestConfig): Promise<operations.DmcerResponse>;
     /**
-     * dpicr - Disabled Person Identity Card/ Certificate
+     * Disabled Person Identity Card/ Certificate
      *
+     * @remarks
      * API to verify Disabled Person Identity Card/ Certificate.
-    **/
-    dpicr(req: operations.DpicrRequest, config?: AxiosRequestConfig): Promise<operations.DpicrResponse>;
+     */
+    dpicr(req: operations.DpicrRequestBody, security: operations.DpicrSecurity, config?: AxiosRequestConfig): Promise<operations.DpicrResponse>;
     /**
-     * dtcer - Death Certificate
+     * Death Certificate
      *
+     * @remarks
      * API to verify Death Certificate.
-    **/
-    dtcer(req: operations.DtcerRequest, config?: AxiosRequestConfig): Promise<operations.DtcerResponse>;
+     */
+    dtcer(req: operations.DtcerRequestBody, security: operations.DtcerSecurity, config?: AxiosRequestConfig): Promise<operations.DtcerResponse>;
     /**
-     * incer - Income Certificate
+     * Income Certificate
      *
+     * @remarks
      * API to verify Income Certificate.
-    **/
-    incer(req: operations.IncerRequest, config?: AxiosRequestConfig): Promise<operations.IncerResponse>;
+     */
+    incer(req: operations.IncerRequestBody, security: operations.IncerSecurity, config?: AxiosRequestConfig): Promise<operations.IncerResponse>;
 }

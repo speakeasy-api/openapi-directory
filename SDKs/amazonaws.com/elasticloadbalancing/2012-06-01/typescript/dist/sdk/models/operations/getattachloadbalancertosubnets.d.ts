@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetAttachLoadBalancerToSubnetsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETAttachLoadBalancerToSubnetsActionEnum {
     AttachLoadBalancerToSubnets = "AttachLoadBalancerToSubnets"
 }
-export declare enum GetAttachLoadBalancerToSubnetsVersionEnum {
+export declare enum GETAttachLoadBalancerToSubnetsVersionEnum {
     TwoThousandAndTwelve0601 = "2012-06-01"
 }
-export declare class GetAttachLoadBalancerToSubnetsQueryParams extends SpeakeasyBase {
-    action: GetAttachLoadBalancerToSubnetsActionEnum;
+export declare class GETAttachLoadBalancerToSubnetsRequest extends SpeakeasyBase {
+    action: GETAttachLoadBalancerToSubnetsActionEnum;
+    /**
+     * The name of the load balancer.
+     */
     loadBalancerName: string;
+    /**
+     * The IDs of the subnets to add. You can add only one subnet per Availability Zone.
+     */
     subnets: string[];
-    version: GetAttachLoadBalancerToSubnetsVersionEnum;
-}
-export declare class GetAttachLoadBalancerToSubnetsHeaders extends SpeakeasyBase {
+    version: GETAttachLoadBalancerToSubnetsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetAttachLoadBalancerToSubnetsHeaders extends SpeakeasyBase
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetAttachLoadBalancerToSubnetsRequest extends SpeakeasyBase {
-    queryParams: GetAttachLoadBalancerToSubnetsQueryParams;
-    headers: GetAttachLoadBalancerToSubnetsHeaders;
-}
-export declare class GetAttachLoadBalancerToSubnetsResponse extends SpeakeasyBase {
+export declare class GETAttachLoadBalancerToSubnetsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

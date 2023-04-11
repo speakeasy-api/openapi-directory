@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetTermStatsUsingGetPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETTermStatsUsingGETRequest extends SpeakeasyBase {
+    /**
+     * accId
+     */
     accId: string;
+    /**
+     * filterAccId
+     */
     filterAccId: string;
 }
-export declare class GetTermStatsUsingGetRequest extends SpeakeasyBase {
-    pathParams: GetTermStatsUsingGetPathParams;
-}
-export declare class GetTermStatsUsingGetResponse extends SpeakeasyBase {
+export declare class GETTermStatsUsingGETResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

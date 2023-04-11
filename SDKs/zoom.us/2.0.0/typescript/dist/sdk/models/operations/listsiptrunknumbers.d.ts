@@ -1,22 +1,61 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class ListSipTrunkNumbersSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
-}
-export declare class ListSipTrunkNumbers200ApplicationJsonPhoneNumbers extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListSipTrunkNumbers200ApplicationXMLPhoneNumbers extends SpeakeasyBase {
+    /**
+     * Country ID (example: US)
+     */
     country?: string;
+    /**
+     * Phone number
+     */
     number?: string;
 }
-export declare class ListSipTrunkNumbers200ApplicationJson extends SpeakeasyBase {
-    phoneNumbers?: ListSipTrunkNumbers200ApplicationJsonPhoneNumbers[];
+/**
+ * * **HTTP Status Code:** `200` **OK**<br>
+ *
+ * @remarks
+ * List of numbers returned.
+ */
+export declare class ListSipTrunkNumbers200ApplicationXML extends SpeakeasyBase {
+    phoneNumbers?: ListSipTrunkNumbers200ApplicationXMLPhoneNumbers[];
+    /**
+     * Total number of records returned.
+     */
     totalRecords?: number;
 }
-export declare class ListSipTrunkNumbersRequest extends SpeakeasyBase {
-    security: ListSipTrunkNumbersSecurity;
+export declare class ListSipTrunkNumbers200ApplicationJSONPhoneNumbers extends SpeakeasyBase {
+    /**
+     * Country ID (example: US)
+     */
+    country?: string;
+    /**
+     * Phone number
+     */
+    number?: string;
+}
+/**
+ * * **HTTP Status Code:** `200` **OK**<br>
+ *
+ * @remarks
+ * List of numbers returned.
+ */
+export declare class ListSipTrunkNumbers200ApplicationJSON extends SpeakeasyBase {
+    phoneNumbers?: ListSipTrunkNumbers200ApplicationJSONPhoneNumbers[];
+    /**
+     * Total number of records returned.
+     */
+    totalRecords?: number;
 }
 export declare class ListSipTrunkNumbersResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    listSipTrunkNumbers200ApplicationJSONObject?: ListSipTrunkNumbers200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * * **HTTP Status Code:** `200` **OK**<br>
+     *
+     * @remarks
+     * List of numbers returned.
+     */
+    listSipTrunkNumbers200ApplicationJSONObject?: ListSipTrunkNumbers200ApplicationJSON;
 }

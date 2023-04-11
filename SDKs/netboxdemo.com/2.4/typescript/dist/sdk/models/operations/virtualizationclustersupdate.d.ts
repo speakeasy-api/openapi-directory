@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class VirtualizationClustersUpdatePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class VirtualizationClustersUpdateRequest extends SpeakeasyBase {
-    pathParams: VirtualizationClustersUpdatePathParams;
-    request: shared.WritableClusterInput;
+    writableClusterInput: shared.WritableClusterInput;
+    /**
+     * A unique integer value identifying this cluster.
+     */
+    id: number;
 }
 export declare class VirtualizationClustersUpdateResponse extends SpeakeasyBase {
     cluster?: shared.Cluster;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

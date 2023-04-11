@@ -1,18 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreatePayrollCalendarHeaders extends SpeakeasyBase {
-    xeroTenantId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class CreatePayrollCalendarSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class CreatePayrollCalendarRequest extends SpeakeasyBase {
-    headers: CreatePayrollCalendarHeaders;
-    request: shared.PayrollCalendarInput[];
-    security: CreatePayrollCalendarSecurity;
+    requestBody: shared.PayrollCalendarInput[];
+    /**
+     * Xero identifier for Tenant
+     */
+    xeroTenantId: string;
 }
 export declare class CreatePayrollCalendarResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * A successful request
+     */
     payrollCalendars?: shared.PayrollCalendars;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

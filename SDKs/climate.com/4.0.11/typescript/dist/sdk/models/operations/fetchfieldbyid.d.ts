@@ -1,20 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class FetchFieldByIdPathParams extends SpeakeasyBase {
-    fieldId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class FetchFieldByIdSecurity extends SpeakeasyBase {
-    apiKey?: shared.SchemeApiKey;
-    oauth2AuthorizationCode?: shared.SchemeOauth2AuthorizationCode;
+    apiKey?: string;
+    oauth2AuthorizationCode?: string;
 }
 export declare class FetchFieldByIdRequest extends SpeakeasyBase {
-    pathParams: FetchFieldByIdPathParams;
-    security: FetchFieldByIdSecurity;
+    /**
+     * Unique identifier of the Field.
+     */
+    fieldId: string;
 }
 export declare class FetchFieldByIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Bad Input
+     */
     error?: shared.ErrorT;
-    field?: any;
-    headers: Record<string, string[]>;
+    /**
+     * Returns the requested Field.
+     */
+    field?: shared.Field;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

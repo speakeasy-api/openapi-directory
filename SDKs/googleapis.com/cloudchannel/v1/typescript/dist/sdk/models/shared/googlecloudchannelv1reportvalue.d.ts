@@ -1,16 +1,34 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { GoogleTypeDateTime } from "./googletypedatetime";
 import { GoogleTypeDate } from "./googletypedate";
+import { GoogleTypeDateTime } from "./googletypedatetime";
 import { GoogleTypeDecimal } from "./googletypedecimal";
 import { GoogleTypeMoney } from "./googletypemoney";
 /**
  * A single report value.
-**/
+ */
 export declare class GoogleCloudChannelV1ReportValue extends SpeakeasyBase {
+    /**
+     * Represents civil time (or occasionally physical time). This type can represent a civil time in one of a few possible ways: * When utc_offset is set and time_zone is unset: a civil time on a calendar day with a particular offset from UTC. * When time_zone is set and utc_offset is unset: a civil time on a calendar day in a particular time zone. * When neither time_zone nor utc_offset is set: a civil time on a calendar day in local time. The date is relative to the Proleptic Gregorian Calendar. If year, month, or day are 0, the DateTime is considered not to have a specific year, month, or day respectively. This type may also be used to represent a physical time if all the date and time fields are set and either case of the `time_offset` oneof is set. Consider using `Timestamp` message for physical time instead. If your use case also would like to store the user's timezone, that can be done in another field. This type is more flexible than some applications may want. Make sure to document and validate your application's limitations.
+     */
     dateTimeValue?: GoogleTypeDateTime;
+    /**
+     * Represents a whole or partial calendar date, such as a birthday. The time of day and time zone are either specified elsewhere or are insignificant. The date is relative to the Gregorian Calendar. This can represent one of the following: * A full date, with non-zero year, month, and day values. * A month and day, with a zero year (for example, an anniversary). * A year on its own, with a zero month and a zero day. * A year and month, with a zero day (for example, a credit card expiration date). Related types: * google.type.TimeOfDay * google.type.DateTime * google.protobuf.Timestamp
+     */
     dateValue?: GoogleTypeDate;
+    /**
+     * A representation of a decimal value, such as 2.5. Clients may convert values into language-native decimal formats, such as Java's BigDecimal or Python's decimal.Decimal. [BigDecimal]: https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/math/BigDecimal.html [decimal.Decimal]: https://docs.python.org/3/library/decimal.html
+     */
     decimalValue?: GoogleTypeDecimal;
+    /**
+     * A value of type `int`.
+     */
     intValue?: string;
+    /**
+     * Represents an amount of money with its currency type.
+     */
     moneyValue?: GoogleTypeMoney;
+    /**
+     * A value of type `string`.
+     */
     stringValue?: string;
 }

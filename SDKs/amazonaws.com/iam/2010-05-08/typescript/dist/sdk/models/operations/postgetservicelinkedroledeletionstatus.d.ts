@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostGetServiceLinkedRoleDeletionStatusActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTGetServiceLinkedRoleDeletionStatusActionEnum {
     GetServiceLinkedRoleDeletionStatus = "GetServiceLinkedRoleDeletionStatus"
 }
-export declare enum PostGetServiceLinkedRoleDeletionStatusVersionEnum {
+export declare enum POSTGetServiceLinkedRoleDeletionStatusVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostGetServiceLinkedRoleDeletionStatusQueryParams extends SpeakeasyBase {
-    action: PostGetServiceLinkedRoleDeletionStatusActionEnum;
-    version: PostGetServiceLinkedRoleDeletionStatusVersionEnum;
-}
-export declare class PostGetServiceLinkedRoleDeletionStatusHeaders extends SpeakeasyBase {
+export declare class POSTGetServiceLinkedRoleDeletionStatusRequest extends SpeakeasyBase {
+    action: POSTGetServiceLinkedRoleDeletionStatusActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTGetServiceLinkedRoleDeletionStatusVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostGetServiceLinkedRoleDeletionStatusHeaders extends Speak
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostGetServiceLinkedRoleDeletionStatusRequest extends SpeakeasyBase {
-    queryParams: PostGetServiceLinkedRoleDeletionStatusQueryParams;
-    headers: PostGetServiceLinkedRoleDeletionStatusHeaders;
-    request?: Uint8Array;
-}
-export declare class PostGetServiceLinkedRoleDeletionStatusResponse extends SpeakeasyBase {
+export declare class POSTGetServiceLinkedRoleDeletionStatusResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

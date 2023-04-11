@@ -1,17 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetFactOnthisdayBornQueryParams extends SpeakeasyBase {
-    day?: string;
-    month?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetFactOnthisdayBornSecurity extends SpeakeasyBase {
-    xFungeneratorsApiSecret: shared.SchemeXFungeneratorsApiSecret;
+    xFungeneratorsApiSecret: string;
 }
 export declare class GetFactOnthisdayBornRequest extends SpeakeasyBase {
-    queryParams: GetFactOnthisdayBornQueryParams;
-    security: GetFactOnthisdayBornSecurity;
+    /**
+     * Optional day of the month (1- 28/30/31 based on the month). Defaults to current day of the month.
+     */
+    day?: string;
+    /**
+     * Optional month (1-12). Defaults to current month
+     */
+    month?: string;
 }
 export declare class GetFactOnthisdayBornResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

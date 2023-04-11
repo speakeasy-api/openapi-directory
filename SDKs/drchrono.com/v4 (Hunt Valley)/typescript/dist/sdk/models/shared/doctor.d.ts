@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Two-letter conutry code. Default is `US`
+ */
 export declare enum DoctorCountryEnum {
     Bd = "BD",
     Wf = "WF",
@@ -256,23 +259,38 @@ export declare enum DoctorJobTitleEnum {
     ProviderStaffHospital = "Provider/Staff (Hospital)",
     PatientsInterviewCandidate = "Patients/Interview Candidate",
     EducatorStudent = "Educator/Student",
-    ApiDeveloper = "API/Developer",
+    APIDeveloper = "API/Developer",
     Consultant = "Consultant",
     Other = "Other"
 }
+/**
+ * OK
+ */
 export declare class Doctor extends SpeakeasyBase {
     cellPhone?: string;
+    /**
+     * Two-letter conutry code. Default is `US`
+     */
     country?: DoctorCountryEnum;
     email?: string;
     firstName?: string;
     groupNpiNumber?: string;
     homePhone?: string;
     id?: number;
+    /**
+     * Indicates the doctor's account is suspended or not
+     */
     isAccountSuspended?: boolean;
     jobTitle?: DoctorJobTitleEnum;
     lastName?: string;
+    /**
+     * If both this field and `group_npi_number` are set, prefer this field
+     */
     npiNumber?: string;
     officePhone?: string;
+    /**
+     * The ID of the practice group this user belongs to. This can be used to identify users in the same practice.
+     */
     practiceGroup?: string;
     practiceGroupName?: string;
     profilePicture?: string;

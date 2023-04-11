@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class FinalizeDeviceClaimResponse extends SpeakeasyBase {
-    state?: Record<string, any>;
+    state?: string;
 }

@@ -1,55 +1,74 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateIdentityPoolRequest, CreateIdentityPoolResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CreateIdentityPoolRequest,
+  CreateIdentityPoolResponse,
+  CreateIdentityPoolXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: CreateIdentityPoolRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "AWSCognitoIdentityService.CreateIdentityPool",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
-    allowClassicFlow: true,
+});
+
+const req: CreateIdentityPoolRequest = {
+  createIdentityPoolInput: {
+    allowClassicFlow: false,
     allowUnauthenticatedIdentities: false,
     cognitoIdentityProviders: [
       {
-        clientId: "rerum",
-        providerName: "dicta",
-        serverSideTokenCheck: true,
+        clientId: "provident",
+        providerName: "distinctio",
+        serverSideTokenCheck: false,
+      },
+      {
+        clientId: "quibusdam",
+        providerName: "unde",
+        serverSideTokenCheck: false,
+      },
+      {
+        clientId: "nulla",
+        providerName: "corrupti",
+        serverSideTokenCheck: false,
       },
     ],
-    developerProviderName: "voluptatum",
-    identityPoolName: "et",
+    developerProviderName: "illum",
+    identityPoolName: "vel",
     identityPoolTags: {
-      "dolorem": "et",
-      "voluptate": "iste",
-      "vitae": "totam",
+      "deserunt": "suscipit",
+      "iure": "magnam",
+      "debitis": "ipsa",
     },
     openIdConnectProviderARNs: [
-      "illum",
+      "tempora",
+      "suscipit",
+      "molestiae",
+      "minus",
     ],
     samlProviderARNs: [
-      "vel",
+      "voluptatum",
+      "iusto",
+      "excepturi",
+      "nisi",
     ],
     supportedLoginProviders: {
-      "dolore": "id",
+      "temporibus": "ab",
+      "quis": "veritatis",
+      "deserunt": "perferendis",
+      "ipsam": "repellendus",
     },
   },
+  xAmzAlgorithm: "sapiente",
+  xAmzContentSha256: "quo",
+  xAmzCredential: "odit",
+  xAmzDate: "at",
+  xAmzSecurityToken: "at",
+  xAmzSignature: "maiores",
+  xAmzSignedHeaders: "molestiae",
+  xAmzTarget: CreateIdentityPoolXAmzTargetEnum.AWSCognitoIdentityServiceCreateIdentityPool,
 };
 
 sdk.createIdentityPool(req).then((res: CreateIdentityPoolResponse | AxiosError) => {

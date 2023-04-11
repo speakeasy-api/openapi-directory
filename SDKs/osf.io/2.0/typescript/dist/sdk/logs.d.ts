@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Logs {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class Logs {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * logsActions - Actions
+     * Actions
      *
+     * @remarks
      *
      * A log can have one of many actions. The complete list of loggable actions (in the format {identifier}: {description}) is as follows:
      * * `project_created`: A Node is created
@@ -74,17 +75,18 @@ export declare class Logs {
      * * `registration_initiated`: A Registration of a Node is proposed
      * * `registration_approved`: A proposed Registration is approved
      * * `registration_cancelled`: A proposed Registration is cancelled
-    **/
+     */
     logsActions(config?: AxiosRequestConfig): Promise<operations.LogsActionsResponse>;
     /**
-     * logsRead - Retrieve a log
+     * Retrieve a log
      *
+     * @remarks
      * Retrieves the details of a log.
      * A log is permanent immutable record of a node's history. A log is created when a user performs one of many actions. See the [actions](#Logs_logs_actions) section for more details.
      * #### Returns
      * Returns a JSON object with a `data` key containing the representation of the requested log, if the request was successful.
      *
      * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
-    **/
+     */
     logsRead(req: operations.LogsReadRequest, config?: AxiosRequestConfig): Promise<operations.LogsReadResponse>;
 }

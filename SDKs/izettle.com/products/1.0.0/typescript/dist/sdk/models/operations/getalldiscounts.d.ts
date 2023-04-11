@@ -1,18 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetAllDiscountsPathParams extends SpeakeasyBase {
-    organizationUuid: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetAllDiscountsSecurity extends SpeakeasyBase {
-    zettleApiKey?: shared.SchemeZettleApiKey;
-    zettleOauth?: shared.SchemeZettleOauth;
+    zettleOauth: string;
 }
 export declare class GetAllDiscountsRequest extends SpeakeasyBase {
-    pathParams: GetAllDiscountsPathParams;
-    security: GetAllDiscountsSecurity;
+    organizationUuid: string;
 }
 export declare class GetAllDiscountsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * List of all discounts
+     */
     discountResponses?: shared.DiscountResponse[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,0 +1,22 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Defines the behavior for checking service usage when disabling a service.
+ */
+export declare enum DisableServiceRequestCheckIfServiceHasUsageEnum {
+    CheckIfServiceHasUsageUnspecified = "CHECK_IF_SERVICE_HAS_USAGE_UNSPECIFIED",
+    Skip = "SKIP",
+    Check = "CHECK"
+}
+/**
+ * Request message for the `DisableService` method.
+ */
+export declare class DisableServiceRequest extends SpeakeasyBase {
+    /**
+     * Defines the behavior for checking service usage when disabling a service.
+     */
+    checkIfServiceHasUsage?: DisableServiceRequestCheckIfServiceHasUsageEnum;
+    /**
+     * Indicates if services that are enabled and which depend on this service should also be disabled. If not set, an error will be generated if any enabled services depend on the service to be disabled. When set, the service, and any enabled services that depend on it, will be disabled together.
+     */
+    disableDependentServices?: boolean;
+}

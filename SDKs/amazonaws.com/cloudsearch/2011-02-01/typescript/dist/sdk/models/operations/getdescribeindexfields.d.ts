@@ -1,17 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeIndexFieldsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeIndexFieldsActionEnum {
     DescribeIndexFields = "DescribeIndexFields"
 }
-export declare enum GetDescribeIndexFieldsVersionEnum {
+export declare enum GETDescribeIndexFieldsVersionEnum {
     TwoThousandAndEleven0201 = "2011-02-01"
 }
-export declare class GetDescribeIndexFieldsQueryParams extends SpeakeasyBase {
-    action: GetDescribeIndexFieldsActionEnum;
+export declare class GETDescribeIndexFieldsRequest extends SpeakeasyBase {
+    action: GETDescribeIndexFieldsActionEnum;
     domainName: string;
+    /**
+     * Limits the <code>DescribeIndexFields</code> response to the specified fields.
+     */
     fieldNames?: string[];
-    version: GetDescribeIndexFieldsVersionEnum;
-}
-export declare class GetDescribeIndexFieldsHeaders extends SpeakeasyBase {
+    version: GETDescribeIndexFieldsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +22,9 @@ export declare class GetDescribeIndexFieldsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeIndexFieldsRequest extends SpeakeasyBase {
-    queryParams: GetDescribeIndexFieldsQueryParams;
-    headers: GetDescribeIndexFieldsHeaders;
-}
-export declare class GetDescribeIndexFieldsResponse extends SpeakeasyBase {
+export declare class GETDescribeIndexFieldsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

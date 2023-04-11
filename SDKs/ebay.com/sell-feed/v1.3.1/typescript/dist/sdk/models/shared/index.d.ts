@@ -15,7 +15,6 @@ export * from "./ordertask";
 export * from "./ordertaskcollection";
 export * from "./scheduletemplatecollection";
 export * from "./scheduletemplateresponse";
-export * from "./security";
 export * from "./servicemetricstask";
 export * from "./supportedconfiguration";
 export * from "./task";

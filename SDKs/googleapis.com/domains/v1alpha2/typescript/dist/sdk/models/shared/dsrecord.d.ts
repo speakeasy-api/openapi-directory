@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The algorithm used to generate the referenced DNSKEY.
+ */
 export declare enum DsRecordAlgorithmEnum {
     AlgorithmUnspecified = "ALGORITHM_UNSPECIFIED",
     Rsamd5 = "RSAMD5",
@@ -19,6 +22,9 @@ export declare enum DsRecordAlgorithmEnum {
     Privatedns = "PRIVATEDNS",
     Privateoid = "PRIVATEOID"
 }
+/**
+ * The hash function used to generate the digest of the referenced DNSKEY.
+ */
 export declare enum DsRecordDigestTypeEnum {
     DigestTypeUnspecified = "DIGEST_TYPE_UNSPECIFIED",
     Sha1 = "SHA1",
@@ -28,10 +34,22 @@ export declare enum DsRecordDigestTypeEnum {
 }
 /**
  * Defines a Delegation Signer (DS) record, which is needed to enable DNSSEC for a domain. It contains a digest (hash) of a DNSKEY record that must be present in the domain's DNS zone.
-**/
+ */
 export declare class DsRecord extends SpeakeasyBase {
+    /**
+     * The algorithm used to generate the referenced DNSKEY.
+     */
     algorithm?: DsRecordAlgorithmEnum;
+    /**
+     * The digest generated from the referenced DNSKEY.
+     */
     digest?: string;
+    /**
+     * The hash function used to generate the digest of the referenced DNSKEY.
+     */
     digestType?: DsRecordDigestTypeEnum;
+    /**
+     * The key tag of the record. Must be set in range 0 -- 65535.
+     */
     keyTag?: number;
 }

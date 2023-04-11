@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteHsmConfigurationActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteHsmConfigurationActionEnum {
     DeleteHsmConfiguration = "DeleteHsmConfiguration"
 }
-export declare enum PostDeleteHsmConfigurationVersionEnum {
+export declare enum POSTDeleteHsmConfigurationVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostDeleteHsmConfigurationQueryParams extends SpeakeasyBase {
-    action: PostDeleteHsmConfigurationActionEnum;
-    version: PostDeleteHsmConfigurationVersionEnum;
-}
-export declare class PostDeleteHsmConfigurationHeaders extends SpeakeasyBase {
+export declare class POSTDeleteHsmConfigurationRequest extends SpeakeasyBase {
+    action: POSTDeleteHsmConfigurationActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteHsmConfigurationVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteHsmConfigurationHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteHsmConfigurationRequest extends SpeakeasyBase {
-    queryParams: PostDeleteHsmConfigurationQueryParams;
-    headers: PostDeleteHsmConfigurationHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteHsmConfigurationResponse extends SpeakeasyBase {
+export declare class POSTDeleteHsmConfigurationResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

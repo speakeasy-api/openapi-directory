@@ -38,15 +38,26 @@ export declare enum GoogleSecuritySafebrowsingV4ThreatInfoThreatTypesEnum {
     Suspicious = "SUSPICIOUS",
     TrickToBill = "TRICK_TO_BILL",
     HighConfidenceAllowlist = "HIGH_CONFIDENCE_ALLOWLIST",
-    AccuracyTips = "ACCURACY_TIPS",
-    SocialEngineeringLowerPrecision = "SOCIAL_ENGINEERING_LOWER_PRECISION"
+    AccuracyTips = "ACCURACY_TIPS"
 }
 /**
  * The information regarding one or more threats that a client submits when checking for matches in threat lists.
-**/
+ */
 export declare class GoogleSecuritySafebrowsingV4ThreatInfo extends SpeakeasyBase {
+    /**
+     * The platform types to be checked.
+     */
     platformTypes?: GoogleSecuritySafebrowsingV4ThreatInfoPlatformTypesEnum[];
+    /**
+     * The threat entries to be checked.
+     */
     threatEntries?: GoogleSecuritySafebrowsingV4ThreatEntry[];
+    /**
+     * The entry types to be checked.
+     */
     threatEntryTypes?: GoogleSecuritySafebrowsingV4ThreatInfoThreatEntryTypesEnum[];
+    /**
+     * The threat types to be checked.
+     */
     threatTypes?: GoogleSecuritySafebrowsingV4ThreatInfoThreatTypesEnum[];
 }

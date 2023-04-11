@@ -1,27 +1,21 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest, CargoGetRouteFromDateProductCodeByOriginAndDestinationGetResponse } from "openapi/src/sdk/models/operations";
+import {
+  CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest,
+  CargoGetRouteFromDateProductCodeByOriginAndDestinationGetResponse,
+  CargoGetRouteFromDateProductCodeByOriginAndDestinationGetProductCodeEnum,
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest = {
-  security: {
-    auth: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    destination: "sit",
-    fromDate: "voluptas",
-    origin: "culpa",
-    productCode: "FUN",
-  },
-  headers: {
-    accept: "consequuntur",
-  },
+  accept: "corrupti",
+  destination: "provident",
+  fromDate: "distinctio",
+  origin: "quibusdam",
+  productCode: CargoGetRouteFromDateProductCodeByOriginAndDestinationGetProductCodeEnum.Ynb,
 };
 
 sdk.cargo.cargoGetRouteFromDateProductCodeByOriginAndDestinationGet(req).then((res: CargoGetRouteFromDateProductCodeByOriginAndDestinationGetResponse | AxiosError) => {

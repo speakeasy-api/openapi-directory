@@ -1,7 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetFloatingIpsIdActionsPathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
+/**
+ * Can be used multiple times.
+ */
 export declare enum GetFloatingIpsIdActionsSortParameterSortEnum {
     Id = "id",
     IdAsc = "id:asc",
@@ -22,50 +23,105 @@ export declare enum GetFloatingIpsIdActionsSortParameterSortEnum {
     FinishedAsc = "finished:asc",
     FinishedDesc = "finished:desc"
 }
+/**
+ * Can be used multiple times, the response will contain only Actions with specified statuses
+ */
 export declare enum GetFloatingIpsIdActionsStatusParameterStatusEnum {
     Running = "running",
     Success = "success",
     Error = "error"
 }
-export declare class GetFloatingIpsIdActionsQueryParams extends SpeakeasyBase {
+export declare class GetFloatingIpsIdActionsRequest extends SpeakeasyBase {
+    /**
+     * ID of the Floating IP
+     */
+    id: number;
+    /**
+     * Can be used multiple times.
+     */
     sort?: GetFloatingIpsIdActionsSortParameterSortEnum;
+    /**
+     * Can be used multiple times, the response will contain only Actions with specified statuses
+     */
     status?: GetFloatingIpsIdActionsStatusParameterStatusEnum;
 }
 /**
  * Error message for the Action if error occurred, otherwise null
-**/
-export declare class GetFloatingIpsIdActions200ApplicationJsonActionError extends SpeakeasyBase {
+ */
+export declare class GetFloatingIpsIdActions200ApplicationJSONActionError extends SpeakeasyBase {
+    /**
+     * Fixed machine readable code
+     */
     code: string;
+    /**
+     * Humanized error message
+     */
     message: string;
 }
-export declare class GetFloatingIpsIdActions200ApplicationJsonActionResources extends SpeakeasyBase {
+export declare class GetFloatingIpsIdActions200ApplicationJSONActionResources extends SpeakeasyBase {
+    /**
+     * ID of the Resource
+     */
     id: number;
+    /**
+     * Type of resource referenced
+     */
     type: string;
 }
-export declare enum GetFloatingIpsIdActions200ApplicationJsonActionStatusEnum {
+/**
+ * Status of the Action
+ */
+export declare enum GetFloatingIpsIdActions200ApplicationJSONActionStatusEnum {
     Success = "success",
     Running = "running",
     Error = "error"
 }
-export declare class GetFloatingIpsIdActions200ApplicationJsonAction extends SpeakeasyBase {
+export declare class GetFloatingIpsIdActions200ApplicationJSONAction extends SpeakeasyBase {
+    /**
+     * Command executed in the Action
+     */
     command: string;
-    error: GetFloatingIpsIdActions200ApplicationJsonActionError;
+    /**
+     * Error message for the Action if error occurred, otherwise null
+     */
+    error: GetFloatingIpsIdActions200ApplicationJSONActionError;
+    /**
+     * Point in time when the Action was finished (in ISO-8601 format). Only set if the Action is finished otherwise null.
+     */
     finished: string;
+    /**
+     * ID of the Resource
+     */
     id: number;
+    /**
+     * Progress of Action in percent
+     */
     progress: number;
-    resources: GetFloatingIpsIdActions200ApplicationJsonActionResources[];
+    /**
+     * Resources the Action relates to
+     */
+    resources: GetFloatingIpsIdActions200ApplicationJSONActionResources[];
+    /**
+     * Point in time when the Action was started (in ISO-8601 format)
+     */
     started: string;
-    status: GetFloatingIpsIdActions200ApplicationJsonActionStatusEnum;
+    /**
+     * Status of the Action
+     */
+    status: GetFloatingIpsIdActions200ApplicationJSONActionStatusEnum;
 }
-export declare class GetFloatingIpsIdActions200ApplicationJson extends SpeakeasyBase {
-    actions: GetFloatingIpsIdActions200ApplicationJsonAction[];
-}
-export declare class GetFloatingIpsIdActionsRequest extends SpeakeasyBase {
-    pathParams: GetFloatingIpsIdActionsPathParams;
-    queryParams: GetFloatingIpsIdActionsQueryParams;
+/**
+ * The `actions` key contains a list of Actions
+ */
+export declare class GetFloatingIpsIdActions200ApplicationJSON extends SpeakeasyBase {
+    actions: GetFloatingIpsIdActions200ApplicationJSONAction[];
 }
 export declare class GetFloatingIpsIdActionsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getFloatingIpsIdActions200ApplicationJSONObject?: GetFloatingIpsIdActions200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * The `actions` key contains a list of Actions
+     */
+    getFloatingIpsIdActions200ApplicationJSONObject?: GetFloatingIpsIdActions200ApplicationJSON;
 }

@@ -1,34 +1,33 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { BatchGetChannelRequest, BatchGetChannelResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  BatchGetChannelRequest,
+  BatchGetChannelResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: BatchGetChannelRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
+});
+
+const req: BatchGetChannelRequest = {
+  requestBody: {
     arns: [
-      "fugit",
-      "et",
-      "nihil",
+      "provident",
+      "distinctio",
+      "quibusdam",
     ],
   },
+  xAmzAlgorithm: "unde",
+  xAmzContentSha256: "nulla",
+  xAmzCredential: "corrupti",
+  xAmzDate: "illum",
+  xAmzSecurityToken: "vel",
+  xAmzSignature: "error",
+  xAmzSignedHeaders: "deserunt",
 };
 
 sdk.batchGetChannel(req).then((res: BatchGetChannelResponse | AxiosError) => {

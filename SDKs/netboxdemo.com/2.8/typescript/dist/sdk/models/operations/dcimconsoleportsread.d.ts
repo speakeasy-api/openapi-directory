@@ -1,13 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DcimConsolePortsReadPathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DcimConsolePortsReadRequest extends SpeakeasyBase {
-    pathParams: DcimConsolePortsReadPathParams;
+    /**
+     * A unique integer value identifying this console port.
+     */
+    id: number;
 }
 export declare class DcimConsolePortsReadResponse extends SpeakeasyBase {
     consolePort?: shared.ConsolePort;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

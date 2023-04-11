@@ -1,11 +1,99 @@
-import { AxiosInstance } from "axios";
 import { Facilities } from "./facilities";
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://sandbox-api.va.gov/services/va_facilities/{version}", "https://api.va.gov/services/va_facilities/{version}"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * ## Background
+ *
+ * @remarks
+ *
+ * This RESTful API provides information about physical VA facilities. Information available includes
+ * geographic location, address, phone, hours of operation, and available services.
+ *
+ * VA operates several different types of facilities, the types represented in this API include:
+ * - Health Facilities (vha)
+ * - Benefits Facilities (vba)
+ * - Cemeteries (nca)
+ * - Vet Centers (vc)
+ *
+ * To read an FAQ on how wait times are calculated, click the "For more information" link on [this page](https://www.accesstocare.va.gov/PWT/SearchWaitTimes).
+ *
+ * ## Getting Started
+ *
+ * ### Base URLs
+ *
+ * The base URLs for the VA Facilities API in the various environments are:
+ * - Sandbox: `https://sandbox-api.va.gov/services/va_facilities/v0`
+ * - Production: `https://api.va.gov/services/va_facilities/v0`
+ *
+ * ### Authorization
+ *
+ * API requests are authorized through a symmetric API token, provided in an HTTP header with name `apikey`.
+ *
+ * ### Response Formats
+ *
+ * Clients may request several response formats by setting the `Accept` header.
+ * - `application/json` - The default JSON response format complies with JSON API. This media type is *not* available for bulk requests using the `/facilities/all` endpoint. It will return `406 Not Acceptable`.
+ * - `application/geo+json` - GeoJSON-compliant format, representing each facility as a feature with a point geometry.
+ * - `application/vnd.geo+json` - Deprecated. Prefer application/geo+json.
+ * - `text/csv` - Available for the bulk download operation only. Some structured fields are omitted from the CSV response.
+ *
+ * ### Response Elements
+ *
+ * Some data elements within the response are only present for facilities of a given type:
+ * - The patient satisfaction scores contained in the `satisfaction` element are only applicable
+ *   to VA health facilities.
+ * - The patient wait time values contained in the `wait_times` element are only applicable to
+ *   VA health facilities.
+ * - The list of available services in the `services` element is only applicable to VA health and
+ *   benefits facilities.
+ * - The operational hours special instructions contained in the `operational_hours_special_instructions` element is only applicable to VA health and Vet Center facilities.
+ *
+ * ### Facility ID Formats and Constraints
+ *
+ * A facility ID has the format `prefix_stationNumber`. The prefix is one of nca, vc, vba, or vha. Cemeteries may be national (VA) or non-national; non-national cemeteries have the station number prefixed with an `s`. There are no other constraints on the format. Examples:
+ * - Health: `vha_402GA`
+ * - Benefits: `vba_539GB`
+ * - National cemetery: `nca_063`
+ * - Non-national cemetery: `nca_s1082`
+ * - Vet center: `vc_0872MVC`
+ *
+ *
+ * ### Mobile Facilities
+ *
+ * The mobile health facilities move regularly within a region. If a facility comes back from this API with `"mobile": "true"`, the latitude/longitude and address could be inaccurate. To get the exact current location, please call the number listed.
+ *
+ * ## Deprecations
+ *
+ * - `active_status` field is deprecated and replaced with `operating_status`.
+ * - `application/vnd.geo+json` media type is deprecated and replaced by `application/geo+json`
+ *
+ *
+ * ## Reference
+ *
+ * - [Raw VA Facilities Open API Spec](https://api.va.gov/services/va_facilities/docs/v0/api)
+ * - [GeoJSON Format](https://tools.ietf.org/html/rfc7946)
+ * - [JSON API Format](https://jsonapi.org/format/)
+ */
 export declare class SDK {
+    /**
+     * VA Facilities API
+     */
     facilities: Facilities;
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -13,5 +101,6 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
 }

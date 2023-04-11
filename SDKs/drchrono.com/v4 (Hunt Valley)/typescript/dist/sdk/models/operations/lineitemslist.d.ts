@@ -1,6 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class LineItemsListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class LineItemsListSecurity extends SpeakeasyBase {
+    drchronoOauth2: string;
+}
+export declare class LineItemsListRequest extends SpeakeasyBase {
     appointment?: number;
     cursor?: string;
     doctor?: number;
@@ -11,23 +15,29 @@ export declare class LineItemsListQueryParams extends SpeakeasyBase {
     serviceDate?: string;
     since?: string;
 }
-export declare class LineItemsListSecurity extends SpeakeasyBase {
-    drchronoOauth2: shared.SchemeDrchronoOauth2;
-}
 /**
  * Paginated Result
-**/
-export declare class LineItemsList200ApplicationJson extends SpeakeasyBase {
+ */
+export declare class LineItemsList200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * result data
+     */
     data?: shared.BillingLineItem[];
+    /**
+     * Next Paginated page
+     */
     next?: string;
+    /**
+     * Previous paginated page
+     */
     previous?: string;
-}
-export declare class LineItemsListRequest extends SpeakeasyBase {
-    queryParams: LineItemsListQueryParams;
-    security: LineItemsListSecurity;
 }
 export declare class LineItemsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    lineItemsList200ApplicationJSONObject?: LineItemsList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
+    lineItemsList200ApplicationJSONObject?: LineItemsList200ApplicationJSON;
 }

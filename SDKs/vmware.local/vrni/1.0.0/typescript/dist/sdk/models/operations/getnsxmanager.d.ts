@@ -1,22 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetNsxManagerPathParams extends SpeakeasyBase {
-    id: string;
+import { AxiosResponse } from "axios";
+export declare class GetNSXManagerSecurity extends SpeakeasyBase {
+    apiKeyAuth: string;
 }
-export declare class GetNsxManagerQueryParams extends SpeakeasyBase {
+export declare class GetNSXManagerRequest extends SpeakeasyBase {
+    /**
+     * entity id
+     */
+    id: string;
+    /**
+     * time in epoch seconds
+     */
     time?: number;
 }
-export declare class GetNsxManagerSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
-}
-export declare class GetNsxManagerRequest extends SpeakeasyBase {
-    pathParams: GetNsxManagerPathParams;
-    queryParams: GetNsxManagerQueryParams;
-    security: GetNsxManagerSecurity;
-}
-export declare class GetNsxManagerResponse extends SpeakeasyBase {
+export declare class GetNSXManagerResponse extends SpeakeasyBase {
+    /**
+     * Bad Request
+     */
     apiError?: shared.ApiError;
+    /**
+     * OK
+     */
     baseEntity?: shared.BaseEntity;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

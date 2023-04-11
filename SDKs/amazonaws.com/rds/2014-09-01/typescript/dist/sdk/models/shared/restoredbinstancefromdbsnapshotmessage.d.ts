@@ -1,0 +1,22 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { TagList } from "./taglist";
+export declare class RestoreDBInstanceFromDBSnapshotMessage extends SpeakeasyBase {
+    autoMinorVersionUpgrade?: boolean;
+    availabilityZone?: string;
+    dbInstanceClass?: string;
+    dbInstanceIdentifier: string;
+    dbName?: string;
+    dbSnapshotIdentifier: string;
+    dbSubnetGroupName?: string;
+    engine?: string;
+    iops?: number;
+    licenseModel?: string;
+    multiAZ?: boolean;
+    optionGroupName?: string;
+    port?: number;
+    publiclyAccessible?: boolean;
+    storageType?: string;
+    tags?: TagList[];
+    tdeCredentialArn?: string;
+    tdeCredentialPassword?: string;
+}

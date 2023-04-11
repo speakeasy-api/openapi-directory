@@ -1,5 +1,22 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * With these endpoints you can manage your Feature Flags or Settings within a Config.
+ *
+ * @remarks
+ * However you can't use them for manipulating the values of your Feature Flags and Settings,
+ * to do that please visit the [Feature Flag & Setting values using SDK Key](#tag/Feature-Flag-and-Setting-values-using-SDK-Key)
+ * and [Feature Flag & Setting values](#tag/Feature-Flag-and-Setting-values) sections of the API.
+ *
+ * For using these endpoints, first you have to select which Config you want to work with by its `configId`
+ * which can be obtained from the [List Configs](#operation/get-configs) endpoint.
+ * Then you can use it to create new Feature Flags or to get information about existing ones.
+ *
+ * Then you can obtain the `settingId` or `key` of your desired Feature Flag or Setting
+ * to use them for further operations in this API.
+ *
+ * <a href="https://configcat.com/docs/main-concepts/#setting" target="_blank" rel="noopener noreferrer">Here</a> you can read more about the concept of Settings.
+ */
 export declare class FeatureFlagsAndSettings {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,38 +26,43 @@ export declare class FeatureFlagsAndSettings {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createSetting - Create Flag
+     * Create Flag
      *
+     * @remarks
      * This endpoint creates a new Feature Flag or Setting in a specified Config
      * identified by the `configId` parameter.
      *
      * **Important:** The `key` attribute must be unique within the given Config.
-    **/
+     */
     createSetting(req: operations.CreateSettingRequest, config?: AxiosRequestConfig): Promise<operations.CreateSettingResponse>;
     /**
-     * deleteSetting - Delete Flag
+     * Delete Flag
      *
+     * @remarks
      * This endpoint removes a Feature Flag or Setting from a specified Config,
      * identified by the `configId` parameter.
-    **/
+     */
     deleteSetting(req: operations.DeleteSettingRequest, config?: AxiosRequestConfig): Promise<operations.DeleteSettingResponse>;
     /**
-     * getSetting - Get Flag
+     * Get Flag
      *
+     * @remarks
      * This endpoint returns the metadata attributes of a Feature Flag or Setting
      * identified by the `settingId` parameter.
-    **/
+     */
     getSetting(req: operations.GetSettingRequest, config?: AxiosRequestConfig): Promise<operations.GetSettingResponse>;
     /**
-     * getSettings - List Flags
+     * List Flags
      *
+     * @remarks
      * This endpoint returns the list of the Feature Flags and Settings defined in a
      * specified Config, identified by the `configId` parameter.
-    **/
+     */
     getSettings(req: operations.GetSettingsRequest, config?: AxiosRequestConfig): Promise<operations.GetSettingsResponse>;
     /**
-     * updateSetting - Update Flag
+     * Update Flag
      *
+     * @remarks
      * This endpoint updates the metadata of a Feature Flag or Setting
      * with a collection of [JSON Patch](http://jsonpatch.com) operations in a specified Config.
      *
@@ -105,6 +127,6 @@ export declare class FeatureFlagsAndSettings {
      * 	]
      * }
      * ```
-    **/
+     */
     updateSetting(req: operations.UpdateSettingRequest, config?: AxiosRequestConfig): Promise<operations.UpdateSettingResponse>;
 }

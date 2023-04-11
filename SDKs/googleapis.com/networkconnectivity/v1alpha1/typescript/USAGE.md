@@ -1,50 +1,45 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { NetworkconnectivityProjectsLocationsGlobalHubsCreateRequest, NetworkconnectivityProjectsLocationsGlobalHubsCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  NetworkconnectivityProjectsLocationsGlobalHubsCreateRequest,
+  NetworkconnectivityProjectsLocationsGlobalHubsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: NetworkconnectivityProjectsLocationsGlobalHubsCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    hubId: "expedita",
-    key: "voluptas",
-    oauthToken: "fugit",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    requestId: "rerum",
-    uploadType: "dicta",
-    uploadProtocol: "debitis",
-  },
-  request: {
-    createTime: "voluptatum",
-    description: "et",
+  dollarXgafv: XgafvEnum.Two,
+  hubInput: {
+    createTime: "provident",
+    description: "distinctio",
     labels: {
-      "dolorem": "et",
-      "voluptate": "iste",
-      "vitae": "totam",
+      "unde": "nulla",
+      "corrupti": "illum",
+      "vel": "error",
+      "deserunt": "suscipit",
     },
-    name: "dolores",
-    updateTime: "illum",
+    name: "iure",
+    updateTime: "magnam",
   },
+  accessToken: "debitis",
+  alt: AltEnum.Json,
+  callback: "delectus",
+  fields: "tempora",
+  hubId: "suscipit",
+  key: "molestiae",
+  oauthToken: "minus",
+  parent: "placeat",
+  prettyPrint: false,
+  quotaUser: "voluptatum",
+  requestId: "iusto",
+  uploadType: "excepturi",
+  uploadProtocol: "nisi",
 };
 
 sdk.projects.networkconnectivityProjectsLocationsGlobalHubsCreate(req).then((res: NetworkconnectivityProjectsLocationsGlobalHubsCreateResponse | AxiosError) => {

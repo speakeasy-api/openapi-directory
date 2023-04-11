@@ -1,6 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class ApIs {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+export declare class APIs {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,9 +9,10 @@ export declare class ApIs {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * cvcer - Caste Validity Certificate
+     * Caste Validity Certificate
      *
+     * @remarks
      * API to verify Caste Validity Certificate.
-    **/
-    cvcer(req: operations.CvcerRequest, config?: AxiosRequestConfig): Promise<operations.CvcerResponse>;
+     */
+    cvcer(req: operations.CvcerRequestBody, security: operations.CvcerSecurity, config?: AxiosRequestConfig): Promise<operations.CvcerResponse>;
 }

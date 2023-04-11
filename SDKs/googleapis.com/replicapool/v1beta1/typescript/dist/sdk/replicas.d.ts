@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Replicas {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,19 +9,19 @@ export declare class Replicas {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * replicapoolReplicasDelete - Deletes a replica from the pool.
-    **/
-    replicapoolReplicasDelete(req: operations.ReplicapoolReplicasDeleteRequest, config?: AxiosRequestConfig): Promise<operations.ReplicapoolReplicasDeleteResponse>;
+     * Deletes a replica from the pool.
+     */
+    replicapoolReplicasDelete(req: operations.ReplicapoolReplicasDeleteRequest, security: operations.ReplicapoolReplicasDeleteSecurity, config?: AxiosRequestConfig): Promise<operations.ReplicapoolReplicasDeleteResponse>;
     /**
-     * replicapoolReplicasGet - Gets information about a specific replica.
-    **/
-    replicapoolReplicasGet(req: operations.ReplicapoolReplicasGetRequest, config?: AxiosRequestConfig): Promise<operations.ReplicapoolReplicasGetResponse>;
+     * Gets information about a specific replica.
+     */
+    replicapoolReplicasGet(req: operations.ReplicapoolReplicasGetRequest, security: operations.ReplicapoolReplicasGetSecurity, config?: AxiosRequestConfig): Promise<operations.ReplicapoolReplicasGetResponse>;
     /**
-     * replicapoolReplicasList - Lists all replicas in a pool.
-    **/
-    replicapoolReplicasList(req: operations.ReplicapoolReplicasListRequest, config?: AxiosRequestConfig): Promise<operations.ReplicapoolReplicasListResponse>;
+     * Lists all replicas in a pool.
+     */
+    replicapoolReplicasList(req: operations.ReplicapoolReplicasListRequest, security: operations.ReplicapoolReplicasListSecurity, config?: AxiosRequestConfig): Promise<operations.ReplicapoolReplicasListResponse>;
     /**
-     * replicapoolReplicasRestart - Restarts a replica in a pool.
-    **/
-    replicapoolReplicasRestart(req: operations.ReplicapoolReplicasRestartRequest, config?: AxiosRequestConfig): Promise<operations.ReplicapoolReplicasRestartResponse>;
+     * Restarts a replica in a pool.
+     */
+    replicapoolReplicasRestart(req: operations.ReplicapoolReplicasRestartRequest, security: operations.ReplicapoolReplicasRestartSecurity, config?: AxiosRequestConfig): Promise<operations.ReplicapoolReplicasRestartResponse>;
 }

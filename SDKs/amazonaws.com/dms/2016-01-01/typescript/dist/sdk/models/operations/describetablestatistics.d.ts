@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeTableStatisticsQueryParams extends SpeakeasyBase {
-    marker?: string;
-    maxRecords?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum DescribeTableStatisticsXAmzTargetEnum {
-    AmazonDmSv20160101DescribeTableStatistics = "AmazonDMSv20160101.DescribeTableStatistics"
+    AmazonDMSv20160101DescribeTableStatistics = "AmazonDMSv20160101.DescribeTableStatistics"
 }
-export declare class DescribeTableStatisticsHeaders extends SpeakeasyBase {
+export declare class DescribeTableStatisticsRequest extends SpeakeasyBase {
+    describeTableStatisticsMessage: shared.DescribeTableStatisticsMessage;
+    /**
+     * Pagination token
+     */
+    marker?: string;
+    /**
+     * Pagination limit
+     */
+    maxRecords?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,15 +23,20 @@ export declare class DescribeTableStatisticsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeTableStatisticsXAmzTargetEnum;
 }
-export declare class DescribeTableStatisticsRequest extends SpeakeasyBase {
-    queryParams: DescribeTableStatisticsQueryParams;
-    headers: DescribeTableStatisticsHeaders;
-    request: shared.DescribeTableStatisticsMessage;
-}
 export declare class DescribeTableStatisticsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeTableStatisticsResponse?: shared.DescribeTableStatisticsResponse;
+    /**
+     * InvalidResourceStateFault
+     */
     invalidResourceStateFault?: any;
+    /**
+     * ResourceNotFoundFault
+     */
     resourceNotFoundFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Surveys {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +9,7 @@ export declare class Surveys {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * surveysList - returns a list of active surveys
-    **/
+     * returns a list of active surveys
+     */
     surveysList(config?: AxiosRequestConfig): Promise<operations.SurveysListResponse>;
 }

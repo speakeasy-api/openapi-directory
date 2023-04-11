@@ -4,7 +4,7 @@ import { TaskList } from "./tasklist";
 import { WorkflowType } from "./workflowtype";
 /**
  * Provides the details of the <code>WorkflowExecutionContinuedAsNew</code> event.
-**/
+ */
 export declare class WorkflowExecutionContinuedAsNewEventAttributes extends SpeakeasyBase {
     childPolicy: ChildPolicyEnum;
     decisionTaskCompletedEventId: number;

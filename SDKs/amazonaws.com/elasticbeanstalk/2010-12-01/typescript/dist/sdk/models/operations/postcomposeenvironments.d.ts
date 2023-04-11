@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostComposeEnvironmentsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTComposeEnvironmentsActionEnum {
     ComposeEnvironments = "ComposeEnvironments"
 }
-export declare enum PostComposeEnvironmentsVersionEnum {
+export declare enum POSTComposeEnvironmentsVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostComposeEnvironmentsQueryParams extends SpeakeasyBase {
-    action: PostComposeEnvironmentsActionEnum;
-    version: PostComposeEnvironmentsVersionEnum;
-}
-export declare class PostComposeEnvironmentsHeaders extends SpeakeasyBase {
+export declare class POSTComposeEnvironmentsRequest extends SpeakeasyBase {
+    action: POSTComposeEnvironmentsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTComposeEnvironmentsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostComposeEnvironmentsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostComposeEnvironmentsRequest extends SpeakeasyBase {
-    queryParams: PostComposeEnvironmentsQueryParams;
-    headers: PostComposeEnvironmentsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostComposeEnvironmentsResponse extends SpeakeasyBase {
+export declare class POSTComposeEnvironmentsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

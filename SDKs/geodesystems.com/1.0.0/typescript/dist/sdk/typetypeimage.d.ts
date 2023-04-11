@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Search API for 'Image' entry type
+ */
 export declare class TypeTypeImage {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,10 @@ export declare class TypeTypeImage {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * searchTypeImage - Search API for 'Image' entry type
+     * Search API for 'Image' entry type
      *
+     * @remarks
      * API to search for entries of type Image
-    **/
+     */
     searchTypeImage(req: operations.SearchTypeImageRequest, config?: AxiosRequestConfig): Promise<operations.SearchTypeImageResponse>;
 }

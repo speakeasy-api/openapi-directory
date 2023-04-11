@@ -1,6 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DcimInventoryItemsListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DcimInventoryItemsListRequest extends SpeakeasyBase {
     assetTag?: string;
     assetTagIc?: string;
     assetTagIe?: string;
@@ -22,6 +23,9 @@ export declare class DcimInventoryItemsListQueryParams extends SpeakeasyBase {
     idLt?: string;
     idLte?: string;
     idN?: string;
+    /**
+     * Number of results to return per page.
+     */
     limit?: number;
     manufacturer?: string;
     manufacturerN?: string;
@@ -37,6 +41,9 @@ export declare class DcimInventoryItemsListQueryParams extends SpeakeasyBase {
     nameNie?: string;
     nameNiew?: string;
     nameNisw?: string;
+    /**
+     * The initial index from which to return the results.
+     */
     offset?: number;
     parentId?: string;
     parentIdN?: string;
@@ -63,17 +70,15 @@ export declare class DcimInventoryItemsListQueryParams extends SpeakeasyBase {
     tag?: string;
     tagN?: string;
 }
-export declare class DcimInventoryItemsList200ApplicationJson extends SpeakeasyBase {
+export declare class DcimInventoryItemsList200ApplicationJSON extends SpeakeasyBase {
     count: number;
     next?: string;
     previous?: string;
     results: shared.InventoryItem[];
 }
-export declare class DcimInventoryItemsListRequest extends SpeakeasyBase {
-    queryParams: DcimInventoryItemsListQueryParams;
-}
 export declare class DcimInventoryItemsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dcimInventoryItemsList200ApplicationJSONObject?: DcimInventoryItemsList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    dcimInventoryItemsList200ApplicationJSONObject?: DcimInventoryItemsList200ApplicationJSON;
 }

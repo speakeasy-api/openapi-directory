@@ -1,0 +1,14 @@
+/**
+ * Status of an instance resource. It can hold one of the values: 1. opened 2. signing, 3. signed LOA, 4. canceled, 5. failed. See the section entitled [Status Values](https://www.twilio.com/docs/api/phone-numbers/hosted-number-authorization-documents#status-values) for more information on each of these statuses.
+ */
+export declare enum DependentHostedNumberOrderEnumStatusEnum {
+    Received = "received",
+    PendingVerification = "pending-verification",
+    Verified = "verified",
+    PendingLoa = "pending-loa",
+    CarrierProcessing = "carrier-processing",
+    Testing = "testing",
+    Completed = "completed",
+    Failed = "failed",
+    ActionRequired = "action-required"
+}

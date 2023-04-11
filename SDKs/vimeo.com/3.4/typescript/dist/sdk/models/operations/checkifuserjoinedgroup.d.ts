@@ -1,14 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CheckIfUserJoinedGroupPathParams extends SpeakeasyBase {
-    groupId: number;
-    userId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class CheckIfUserJoinedGroupRequest extends SpeakeasyBase {
-    pathParams: CheckIfUserJoinedGroupPathParams;
+    /**
+     * The ID of the group.
+     */
+    groupId: number;
+    /**
+     * The ID of the user.
+     */
+    userId: number;
 }
 export declare class CheckIfUserJoinedGroupResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * * No such group exists.
+     *
+     * @remarks
+     * * The authenticated user isn't a member of this group.
+     */
     legacyError?: shared.LegacyError;
 }

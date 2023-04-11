@@ -1,11 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { EfsVolumeConfiguration } from "./efsvolumeconfiguration";
+import { EFSVolumeConfiguration } from "./efsvolumeconfiguration";
 import { Host } from "./host";
 /**
- * A data volume used in a job's container properties.
-**/
+ * A data volume that's used in a job's container properties.
+ */
 export declare class Volume extends SpeakeasyBase {
-    efsVolumeConfiguration?: EfsVolumeConfiguration;
+    efsVolumeConfiguration?: EFSVolumeConfiguration;
     host?: Host;
     name?: string;
 }

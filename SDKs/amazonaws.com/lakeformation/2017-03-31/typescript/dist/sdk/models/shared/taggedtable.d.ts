@@ -1,13 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { LfTagPair } from "./lftagpair";
-import { ColumnLfTag } from "./columnlftag";
+import { ColumnLFTag } from "./columnlftag";
+import { LFTagPair } from "./lftagpair";
 import { TableResource } from "./tableresource";
 /**
- * A structure describing a table resource with tags.
-**/
+ * A structure describing a table resource with LF-tags.
+ */
 export declare class TaggedTable extends SpeakeasyBase {
-    lfTagOnDatabase?: LfTagPair[];
-    lfTagsOnColumns?: ColumnLfTag[];
-    lfTagsOnTable?: LfTagPair[];
+    lfTagOnDatabase?: LFTagPair[];
+    lfTagsOnColumns?: ColumnLFTag[];
+    lfTagsOnTable?: LFTagPair[];
     table?: TableResource;
 }

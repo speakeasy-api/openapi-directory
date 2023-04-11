@@ -1,14 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolSshIpaliasDisablePathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ProtocolSshIpaliasDisableRequest extends SpeakeasyBase {
+    /**
+     * Agent to manipulate SSH IP alias
+     */
     agentNum: number;
     ipaddress: string;
     port: number;
 }
-export declare class ProtocolSshIpaliasDisableRequest extends SpeakeasyBase {
-    pathParams: ProtocolSshIpaliasDisablePathParams;
-}
 export declare class ProtocolSshIpaliasDisableResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolSshIpaliasDisable200ApplicationJSONString?: string;
 }

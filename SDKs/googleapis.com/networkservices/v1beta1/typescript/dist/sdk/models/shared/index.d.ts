@@ -50,7 +50,6 @@ export * from "./metadatalabelmatcher";
 export * from "./metadatalabels";
 export * from "./operation";
 export * from "./policy";
-export * from "./security";
 export * from "./servicebinding";
 export * from "./setiampolicyrequest";
 export * from "./status";

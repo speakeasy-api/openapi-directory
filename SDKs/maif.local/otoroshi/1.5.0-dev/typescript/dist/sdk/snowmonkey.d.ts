@@ -1,5 +1,9 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Everything about Otoroshi Snow Monkey
+ */
 export declare class Snowmonkey {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,45 +13,52 @@ export declare class Snowmonkey {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getSnowMonkeyConfig - Get current Snow Monkey config
-     *
      * Get current Snow Monkey config
-    **/
-    getSnowMonkeyConfig(req: operations.GetSnowMonkeyConfigRequest, config?: AxiosRequestConfig): Promise<operations.GetSnowMonkeyConfigResponse>;
-    /**
-     * getSnowMonkeyOutages - Get all current Snow Monkey ourages
      *
+     * @remarks
+     * Get current Snow Monkey config
+     */
+    getSnowMonkeyConfig(config?: AxiosRequestConfig): Promise<operations.GetSnowMonkeyConfigResponse>;
+    /**
      * Get all current Snow Monkey ourages
-    **/
-    getSnowMonkeyOutages(req: operations.GetSnowMonkeyOutagesRequest, config?: AxiosRequestConfig): Promise<operations.GetSnowMonkeyOutagesResponse>;
-    /**
-     * patchSnowMonkey - Update current Snow Monkey config
      *
+     * @remarks
+     * Get all current Snow Monkey ourages
+     */
+    getSnowMonkeyOutages(config?: AxiosRequestConfig): Promise<operations.GetSnowMonkeyOutagesResponse>;
+    /**
      * Update current Snow Monkey config
-    **/
-    patchSnowMonkey(req: operations.PatchSnowMonkeyRequest, config?: AxiosRequestConfig): Promise<operations.PatchSnowMonkeyResponse>;
-    /**
-     * resetSnowMonkey - Reset Snow Monkey Outages for the day
      *
+     * @remarks
+     * Update current Snow Monkey config
+     */
+    patchSnowMonkey(req: shared.Group, security: operations.PatchSnowMonkeySecurity, config?: AxiosRequestConfig): Promise<operations.PatchSnowMonkeyResponse>;
+    /**
      * Reset Snow Monkey Outages for the day
-    **/
-    resetSnowMonkey(req: operations.ResetSnowMonkeyRequest, config?: AxiosRequestConfig): Promise<operations.ResetSnowMonkeyResponse>;
-    /**
-     * startSnowMonkey - Start the Snow Monkey
      *
+     * @remarks
+     * Reset Snow Monkey Outages for the day
+     */
+    resetSnowMonkey(config?: AxiosRequestConfig): Promise<operations.ResetSnowMonkeyResponse>;
+    /**
      * Start the Snow Monkey
-    **/
-    startSnowMonkey(req: operations.StartSnowMonkeyRequest, config?: AxiosRequestConfig): Promise<operations.StartSnowMonkeyResponse>;
-    /**
-     * stopSnowMonkey - Stop the Snow Monkey
      *
+     * @remarks
+     * Start the Snow Monkey
+     */
+    startSnowMonkey(config?: AxiosRequestConfig): Promise<operations.StartSnowMonkeyResponse>;
+    /**
      * Stop the Snow Monkey
-    **/
-    stopSnowMonkey(req: operations.StopSnowMonkeyRequest, config?: AxiosRequestConfig): Promise<operations.StopSnowMonkeyResponse>;
-    /**
-     * updateSnowMonkey - Update current Snow Monkey config
      *
+     * @remarks
+     * Stop the Snow Monkey
+     */
+    stopSnowMonkey(config?: AxiosRequestConfig): Promise<operations.StopSnowMonkeyResponse>;
+    /**
      * Update current Snow Monkey config
-    **/
-    updateSnowMonkey(req: operations.UpdateSnowMonkeyRequest, config?: AxiosRequestConfig): Promise<operations.UpdateSnowMonkeyResponse>;
+     *
+     * @remarks
+     * Update current Snow Monkey config
+     */
+    updateSnowMonkey(req: shared.Group, security: operations.UpdateSnowMonkeySecurity, config?: AxiosRequestConfig): Promise<operations.UpdateSnowMonkeyResponse>;
 }

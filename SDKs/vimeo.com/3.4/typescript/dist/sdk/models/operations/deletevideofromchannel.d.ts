@@ -1,18 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteVideoFromChannelPathParams extends SpeakeasyBase {
-    channelId: number;
-    videoId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteVideoFromChannelSecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
+    oauth2: string;
 }
 export declare class DeleteVideoFromChannelRequest extends SpeakeasyBase {
-    pathParams: DeleteVideoFromChannelPathParams;
-    security: DeleteVideoFromChannelSecurity;
+    /**
+     * The ID of the channel.
+     */
+    channelId: number;
+    /**
+     * The ID of the video.
+     */
+    videoId: number;
 }
 export declare class DeleteVideoFromChannelResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The authenticated user isn't a moderator of this channel.
+     */
     legacyError?: shared.LegacyError;
 }

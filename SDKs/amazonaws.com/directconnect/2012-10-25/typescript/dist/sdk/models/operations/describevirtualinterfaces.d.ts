@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeVirtualInterfacesXAmzTargetEnum {
     OvertureServiceDescribeVirtualInterfaces = "OvertureService.DescribeVirtualInterfaces"
 }
-export declare class DescribeVirtualInterfacesHeaders extends SpeakeasyBase {
+export declare class DescribeVirtualInterfacesRequest extends SpeakeasyBase {
+    describeVirtualInterfacesRequest: shared.DescribeVirtualInterfacesRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class DescribeVirtualInterfacesHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeVirtualInterfacesXAmzTargetEnum;
 }
-export declare class DescribeVirtualInterfacesRequest extends SpeakeasyBase {
-    headers: DescribeVirtualInterfacesHeaders;
-    request: shared.DescribeVirtualInterfacesRequest;
-}
 export declare class DescribeVirtualInterfacesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * DirectConnectClientException
+     */
     directConnectClientException?: any;
+    /**
+     * DirectConnectServerException
+     */
     directConnectServerException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     virtualInterfaces?: shared.VirtualInterfaces;
 }

@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { OffsetInfo } from "./offsetinfo";
 import { AuditPrimaryCategory } from "./auditprimarycategory";
+import { OffsetInfo } from "./offsetinfo";
 export declare class AuditPrimaryCategoryPage extends SpeakeasyBase {
     pagination?: OffsetInfo;
     results?: AuditPrimaryCategory[];

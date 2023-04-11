@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { CustomPluginStateEnum } from "./custompluginstateenum";
 import { CustomPluginRevisionSummary } from "./custompluginrevisionsummary";
+import { CustomPluginStateEnum } from "./custompluginstateenum";
 /**
  * A summary of the custom plugin.
-**/
+ */
 export declare class CustomPluginSummary extends SpeakeasyBase {
     creationTime?: Date;
     customPluginArn?: string;

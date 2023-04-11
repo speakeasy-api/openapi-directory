@@ -1,0 +1,47 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { GoogleAppsCardV1Action } from "./googleappscardv1action";
+import { GoogleAppsCardV1Suggestions } from "./googleappscardv1suggestions";
+/**
+ * How a text input field appears in the user interface. For example, whether the field is single or multi-line.
+ */
+export declare enum GoogleAppsCardV1TextInputTypeEnum {
+    SingleLine = "SINGLE_LINE",
+    MultipleLine = "MULTIPLE_LINE"
+}
+/**
+ * A field in which users can enter text. Supports suggestions and on-change actions. Chat apps receive and can process the value of entered text during form input events. For details about working with form inputs, see [Receive form data](https://developers.google.com/chat/how-tos/dialogs#receive_form_data_from_dialogs). When you need to collect abstract data from users, use a text input. To collect defined data from users, use the selection input widget instead.
+ */
+export declare class GoogleAppsCardV1TextInput extends SpeakeasyBase {
+    /**
+     * An action that describes the behavior when the form is submitted. For example, an Apps Script can be invoked to handle the form. If the action is triggered, the form values are sent to the server.
+     */
+    autoCompleteAction?: GoogleAppsCardV1Action;
+    /**
+     * Text that appears below the text input field meant to assist users by prompting them to enter a certain value. This text is always visible. Required if `label` is unspecified. Otherwise, optional.
+     */
+    hintText?: string;
+    /**
+     * Suggested values that users can enter. These values appear when users click inside the text input field. As users type, the suggested values dynamically filter to match what the users have typed. For example, a text input field for programming language might suggest Java, JavaScript, Python, and C++. When users start typing "Jav", the list of suggestions filters to show just Java and JavaScript. Suggested values help guide users to enter values that your app can make sense of. When referring to JavaScript, some users might enter "javascript" and others "java script". Suggesting "JavaScript" can standardize how users interact with your app. When specified, `TextInput.type` is always `SINGLE_LINE`, even if it is set to `MULTIPLE_LINE`.
+     */
+    initialSuggestions?: GoogleAppsCardV1Suggestions;
+    /**
+     * The text that appears above the text input field in the user interface. Specify text that helps the user enter the information your app needs. For example, if you are asking someone's name, but specifically need their surname, write "surname" instead of "name". Required if `hintText` is unspecified. Otherwise, optional.
+     */
+    label?: string;
+    /**
+     * The name by which the text input is identified in a form input event. For details about working with form inputs, see [Receive form data](https://developers.google.com/chat/how-tos/dialogs#receive_form_data_from_dialogs).
+     */
+    name?: string;
+    /**
+     * An action that describes the behavior when the form is submitted. For example, an Apps Script can be invoked to handle the form. If the action is triggered, the form values are sent to the server.
+     */
+    onChangeAction?: GoogleAppsCardV1Action;
+    /**
+     * How a text input field appears in the user interface. For example, whether the field is single or multi-line.
+     */
+    type?: GoogleAppsCardV1TextInputTypeEnum;
+    /**
+     * The value entered by a user, returned as part of a form input event. For details about working with form inputs, see [Receive form data](https://developers.google.com/chat/how-tos/dialogs#receive_form_data_from_dialogs).
+     */
+    value?: string;
+}

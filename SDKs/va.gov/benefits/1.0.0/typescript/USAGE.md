@@ -1,21 +1,16 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetBenefitsDocumentUploadDownloadRequest, GetBenefitsDocumentUploadDownloadResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetBenefitsDocumentUploadDownloadRequest,
+  GetBenefitsDocumentUploadDownloadResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetBenefitsDocumentUploadDownloadRequest = {
-  security: {
-    apikey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  },
-  pathParams: {
-    id: "sit",
-  },
+  id: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
 };
 
 sdk.vbaDocuments.getBenefitsDocumentUploadDownload(req).then((res: GetBenefitsDocumentUploadDownloadResponse | AxiosError) => {

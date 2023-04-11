@@ -1,26 +1,28 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateBankAccountRequest, CreateBankAccountResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  shared.BankAccountInput,
+  CreateBankAccountResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  CurrencyEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    apiKey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: CreateBankAccountRequest = {
-  request: {
-    accountNumber: "sit",
-    accountNumberIban: "voluptas",
-    currency: "HRK",
-    name: "expedita",
-    needQr: true,
-    swift: "dolor",
+    apiKey: "YOUR_API_KEY_HERE",
   },
+});
+
+const req: shared.BankAccountInput = {
+  accountNumber: "corrupti",
+  accountNumberIban: "provident",
+  currency: CurrencyEnum.Pln,
+  name: "quibusdam",
+  needQr: false,
+  swift: "unde",
 };
 
 sdk.bankAccount.createBankAccount(req).then((res: CreateBankAccountResponse | AxiosError) => {

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetSpeechSynthesisTaskPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetSpeechSynthesisTaskRequest extends SpeakeasyBase {
+    /**
+     * The Amazon Polly generated identifier for a speech synthesis task.
+     */
     taskId: string;
-}
-export declare class GetSpeechSynthesisTaskHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,15 +14,24 @@ export declare class GetSpeechSynthesisTaskHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetSpeechSynthesisTaskRequest extends SpeakeasyBase {
-    pathParams: GetSpeechSynthesisTaskPathParams;
-    headers: GetSpeechSynthesisTaskHeaders;
-}
 export declare class GetSpeechSynthesisTaskResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getSpeechSynthesisTaskOutput?: shared.GetSpeechSynthesisTaskOutput;
+    /**
+     * InvalidTaskIdException
+     */
     invalidTaskIdException?: any;
-    serviceFailureException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceFailureException
+     */
+    serviceFailureException?: any;
+    /**
+     * SynthesisTaskNotFoundException
+     */
     synthesisTaskNotFoundException?: any;
 }

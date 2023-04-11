@@ -9,6 +9,9 @@ export declare class Aquifer extends SpeakeasyBase {
     knownWaterUseDescription?: string;
     lithoStratographicUnit?: string;
     locationDescription?: string;
+    /**
+     * Use the following format:
+     */
     mappingYear?: number;
     material?: string;
     materialDescription?: string;

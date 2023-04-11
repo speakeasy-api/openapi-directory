@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Conflict } from "./conflict";
 import { BatchDescribeMergeConflictsError } from "./batchdescribemergeconflictserror";
+import { Conflict } from "./conflict";
+/**
+ * Success
+ */
 export declare class BatchDescribeMergeConflictsOutput extends SpeakeasyBase {
     baseCommitId?: string;
     conflicts: Conflict[];

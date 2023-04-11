@@ -1,0 +1,9 @@
+export declare enum AuthenticationDecisionEnum {
+    Accept = "ACCEPT",
+    Reject = "REJECT",
+    NotEnoughSpeech = "NOT_ENOUGH_SPEECH",
+    SpeakerNotEnrolled = "SPEAKER_NOT_ENROLLED",
+    SpeakerOptedOut = "SPEAKER_OPTED_OUT",
+    SpeakerIdNotProvided = "SPEAKER_ID_NOT_PROVIDED",
+    SpeakerExpired = "SPEAKER_EXPIRED"
+}

@@ -1,13 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { Column } from "./column";
+import { Order } from "./order";
 import { SchemaReference } from "./schemareference";
 import { SerDeInfo } from "./serdeinfo";
 import { SkewedInfo } from "./skewedinfo";
-import { Order } from "./order";
 /**
  * Describes the physical storage of table data.
-**/
+ */
 export declare class StorageDescriptor extends SpeakeasyBase {
+    additionalLocations?: string[];
     bucketColumns?: string[];
     columns?: Column[];
     compressed?: boolean;

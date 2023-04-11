@@ -1,11 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class LogLocationRequest extends SpeakeasyBase {
-    request?: shared.LocationUpdateContent;
-}
+import { AxiosResponse } from "axios";
 export declare class LogLocationResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * UserNotFound
+     */
     error?: shared.ErrorT;
+    /**
+     * Successful operation
+     */
     operationStatus?: shared.OperationStatus;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

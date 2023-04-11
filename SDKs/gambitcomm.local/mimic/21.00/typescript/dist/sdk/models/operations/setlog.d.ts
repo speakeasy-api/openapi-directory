@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SetLogRequest extends SpeakeasyBase {
-    request: string;
-}
+import { AxiosResponse } from "axios";
 export declare class SetLogResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     setLog200ApplicationJSONString?: string;
 }

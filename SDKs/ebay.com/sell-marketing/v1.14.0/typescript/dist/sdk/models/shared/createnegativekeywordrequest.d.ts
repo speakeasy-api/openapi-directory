@@ -1,0 +1,22 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * A type that defines the fields for the <b>CreateNegativeKeyword</b> request.
+ */
+export declare class CreateNegativeKeywordRequest extends SpeakeasyBase {
+    /**
+     * This adGroupId is created when an ad group is first created and associated with a campaign. This is the ad group to which the corresponding negative keyword will be added.<br /><br /><span class="tablenote"><b>Note:</b> You can call the  <a href="/api-docs/sell/marketing/resources/adgroup/methods/getAdGroups">getAdGroups</a> method to retrieve the ad group IDs for a seller.</span><br /><br /><i>Required if</i> the negative keyword is being created at the ad group level.
+     */
+    adGroupId?: string;
+    /**
+     * A unique eBay-assigned ID for a campaign. This ID is generated when a campaign is created.<br /><br /><i>Required if</i> the negative keyword is being created at the ad group level.
+     */
+    campaignId?: string;
+    /**
+     * A field that defines the match type for the negative keyword.<br /><br /><span class="tablenote"><span style="color:#004680"><strong>Note:</strong></span> Broad matching of negative keywords is not currently supported.</span><br /><b>Valid Values:</b><ul><li><code>EXACT</code></li><li><code>PHRASE</code></li></ul> For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/marketing/types/pls:NegativeKeywordMatchTypeEnum'>eBay API documentation</a>
+     */
+    negativeKeywordMatchType?: string;
+    /**
+     * The negative keyword text.
+     */
+    negativeKeywordText?: string;
+}

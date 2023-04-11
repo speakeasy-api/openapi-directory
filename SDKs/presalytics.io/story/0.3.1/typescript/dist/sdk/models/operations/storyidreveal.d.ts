@@ -1,14 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class StoryIdRevealPathParams extends SpeakeasyBase {
-    id: string;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class StoryIdRevealRequest extends SpeakeasyBase {
-    pathParams: StoryIdRevealPathParams;
+    /**
+     * the id from the story object
+     */
+    id: string;
 }
 export declare class StoryIdRevealResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * An html document containing a login button
+     */
     loginButton?: string;
     statusCode: number;
-    problemDetail?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad Request
+     */
+    problemDetail?: shared.ProblemDetail;
+    /**
+     * An html document containing a reveal.js represenation of the story
+     */
     revealJsPresenation?: string;
 }

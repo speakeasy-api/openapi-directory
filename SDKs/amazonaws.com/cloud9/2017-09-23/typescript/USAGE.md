@@ -1,50 +1,57 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateEnvironmentEc2Request, CreateEnvironmentEc2Response } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CreateEnvironmentEc2Request,
+  CreateEnvironmentEc2Response,
+  CreateEnvironmentEc2XAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
+import {
+  ConnectionTypeEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: CreateEnvironmentEc2Request = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "AWSCloud9WorkspaceManagementService.CreateEnvironmentEC2",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
-    automaticStopTimeMinutes: 8274930044578894929,
-    clientRequestToken: "et",
-    connectionType: "CONNECT_SSH",
-    description: "rerum",
+});
+
+const req: CreateEnvironmentEc2Request = {
+  createEnvironmentEc2Request: {
+    automaticStopTimeMinutes: 548814,
+    clientRequestToken: "provident",
+    connectionType: ConnectionTypeEnum.ConnectSsm,
+    description: "quibusdam",
     dryRun: false,
-    imageId: "debitis",
-    instanceType: "voluptatum",
-    name: "et",
-    ownerArn: "ut",
-    subnetId: "dolorem",
+    imageId: "unde",
+    instanceType: "nulla",
+    name: "corrupti",
+    ownerArn: "illum",
+    subnetId: "vel",
     tags: [
       {
-        key: "voluptate",
-        value: "iste",
+        key: "deserunt",
+        value: "suscipit",
       },
       {
-        key: "vitae",
-        value: "totam",
+        key: "iure",
+        value: "magnam",
+      },
+      {
+        key: "debitis",
+        value: "ipsa",
       },
     ],
   },
+  xAmzAlgorithm: "delectus",
+  xAmzContentSha256: "tempora",
+  xAmzCredential: "suscipit",
+  xAmzDate: "molestiae",
+  xAmzSecurityToken: "minus",
+  xAmzSignature: "placeat",
+  xAmzSignedHeaders: "voluptatum",
+  xAmzTarget: CreateEnvironmentEc2XAmzTargetEnum.AWSCloud9WorkspaceManagementServiceCreateEnvironmentEc2,
 };
 
 sdk.createEnvironmentEc2(req).then((res: CreateEnvironmentEc2Response | AxiosError) => {

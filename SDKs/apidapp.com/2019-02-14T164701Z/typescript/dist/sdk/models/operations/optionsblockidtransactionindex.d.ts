@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class OptionsBlockIdTransactionIndexPathParams extends SpeakeasyBase {
-    id: string;
-    index: string;
-}
+import { AxiosResponse } from "axios";
 export declare class OptionsBlockIdTransactionIndexRequest extends SpeakeasyBase {
-    pathParams: OptionsBlockIdTransactionIndexPathParams;
+    /**
+     * Automatically added
+     */
+    id: string;
+    /**
+     * Automatically added
+     */
+    index: string;
 }
 export declare class OptionsBlockIdTransactionIndexResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * 200 response
+     */
     empty?: Record<string, any>;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

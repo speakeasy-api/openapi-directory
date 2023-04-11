@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UntagResourcesXAmzTargetEnum {
-    ResourceGroupsTaggingApi20170126UntagResources = "ResourceGroupsTaggingAPI_20170126.UntagResources"
+    ResourceGroupsTaggingAPI20170126UntagResources = "ResourceGroupsTaggingAPI_20170126.UntagResources"
 }
-export declare class UntagResourcesHeaders extends SpeakeasyBase {
+export declare class UntagResourcesRequest extends SpeakeasyBase {
+    untagResourcesInput: shared.UntagResourcesInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class UntagResourcesHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UntagResourcesXAmzTargetEnum;
 }
-export declare class UntagResourcesRequest extends SpeakeasyBase {
-    headers: UntagResourcesHeaders;
-    request: shared.UntagResourcesInput;
-}
 export declare class UntagResourcesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottledException
+     */
     throttledException?: any;
+    /**
+     * Success
+     */
     untagResourcesOutput?: shared.UntagResourcesOutput;
 }

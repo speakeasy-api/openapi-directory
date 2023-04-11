@@ -1,19 +1,19 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { ConvertcurrencyRequest, ConvertcurrencyResponse } from "openapi/src/sdk/models/operations";
+import {
+  ConvertcurrencyRequest,
+  ConvertcurrencyResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: ConvertcurrencyRequest = {
-  queryParams: {
-    amount: "sit",
-    from: "voluptas",
-    license: "culpa",
-    to: "expedita",
-  },
+  amount: "corrupti",
+  from: "provident",
+  license: "distinctio",
+  to: "quibusdam",
 };
 
 sdk.liveCurrencyRateConversion.convertcurrency(req).then((res: ConvertcurrencyResponse | AxiosError) => {

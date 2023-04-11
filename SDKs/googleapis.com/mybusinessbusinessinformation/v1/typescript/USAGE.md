@@ -1,214 +1,164 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { MybusinessbusinessinformationAccountsLocationsCreateRequest, MybusinessbusinessinformationAccountsLocationsCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  MybusinessbusinessinformationAccountsLocationsCreateRequest,
+  MybusinessbusinessinformationAccountsLocationsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  ServiceAreaBusinessBusinessTypeEnum,
+  RelevantLocationRelationTypeEnum,
+  TimePeriodCloseDayEnum,
+  TimePeriodOpenDayEnum,
+  OpenInfoStatusEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: MybusinessbusinessinformationAccountsLocationsCreateRequest = {
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    requestId: "nihil",
-    uploadType: "rerum",
-    uploadProtocol: "dicta",
-    validateOnly: true,
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  locationInput: {
     adWordsLocationExtensions: {
-      adPhone: "voluptatum",
+      adPhone: "provident",
     },
     categories: {
       additionalCategories: [
         {
-          name: "ut",
+          name: "quibusdam",
+        },
+        {
+          name: "unde",
+        },
+        {
+          name: "nulla",
         },
       ],
       primaryCategory: {
-        name: "dolorem",
+        name: "corrupti",
       },
     },
     labels: [
-      "voluptate",
-      "iste",
+      "vel",
+      "error",
+      "deserunt",
+      "suscipit",
     ],
-    languageCode: "vitae",
+    languageCode: "iure",
     latlng: {
-      latitude: 66.099998,
-      longitude: 1.100000,
+      latitude: 2975.34,
+      longitude: 8917.73,
     },
     moreHours: [
       {
-        hoursTypeId: "odio",
+        hoursTypeId: "delectus",
         periods: [
           {
-            closeDay: "THURSDAY",
+            closeDay: TimePeriodCloseDayEnum.Wednesday,
             closeTime: {
-              hours: 959367522974354090,
-              minutes: 2914295034816259174,
-              nanos: 1395437218309923052,
-              seconds: 6745438398739480977,
+              hours: 477665,
+              minutes: 791725,
+              nanos: 812169,
+              seconds: 528895,
             },
-            openDay: "SATURDAY",
+            openDay: TimePeriodOpenDayEnum.Wednesday,
             openTime: {
-              hours: 3398579248012586914,
-              minutes: 5974317550424871033,
-              nanos: 3317123977833389635,
-              seconds: 5001958211167890979,
+              hours: 568045,
+              minutes: 392785,
+              nanos: 925597,
+              seconds: 836079,
             },
           },
           {
-            closeDay: "TUESDAY",
+            closeDay: TimePeriodCloseDayEnum.DayOfWeekUnspecified,
             closeTime: {
-              hours: 4778690082005258714,
-              minutes: 1059542851699319360,
-              nanos: 6972732843819909978,
-              seconds: 5558237345453186302,
+              hours: 337396,
+              minutes: 87129,
+              nanos: 648172,
+              seconds: 20218,
             },
-            openDay: "SUNDAY",
+            openDay: TimePeriodOpenDayEnum.Tuesday,
             openTime: {
-              hours: 771642788862502430,
-              minutes: 8514850266767180993,
-              nanos: 8683452355129068124,
-              seconds: 4345851588384648695,
-            },
-          },
-        ],
-      },
-      {
-        hoursTypeId: "qui",
-        periods: [
-          {
-            closeDay: "DAY_OF_WEEK_UNSPECIFIED",
-            closeTime: {
-              hours: 3959279844101328186,
-              minutes: 8902041070398994519,
-              nanos: 303089054982227392,
-              seconds: 7338728586234333996,
-            },
-            openDay: "MONDAY",
-            openTime: {
-              hours: 7847956203786849690,
-              minutes: 406703151708498928,
-              nanos: 4756106358532488297,
-              seconds: 5837486892148644279,
-            },
-          },
-          {
-            closeDay: "WEDNESDAY",
-            closeTime: {
-              hours: 2264299874001785192,
-              minutes: 1061380815263676471,
-              nanos: 7242748068272024738,
-              seconds: 7719717197379695442,
-            },
-            openDay: "SUNDAY",
-            openTime: {
-              hours: 2671030200101705776,
-              minutes: 3508963237347473586,
-              nanos: 8565714761387219319,
-              seconds: 4564823113789767141,
-            },
-          },
-          {
-            closeDay: "SATURDAY",
-            closeTime: {
-              hours: 7014402135919778893,
-              minutes: 3983722386484812742,
-              nanos: 2118716725206170867,
-              seconds: 2587000937929698613,
-            },
-            openDay: "MONDAY",
-            openTime: {
-              hours: 1938800996802160635,
-              minutes: 8097022081922209513,
-              nanos: 7481608503761597087,
-              seconds: 6056649900269286653,
+              hours: 832620,
+              minutes: 957156,
+              nanos: 778157,
+              seconds: 140350,
             },
           },
         ],
       },
     ],
-    name: "qui",
+    name: "at",
     openInfo: {
       openingDate: {
-        day: 4308690457412179793,
-        month: 7663837986485606015,
-        year: 7132033595893905170,
+        day: 870088,
+        month: 978619,
+        year: 473608,
       },
-      status: "OPEN",
+      status: OpenInfoStatusEnum.ClosedTemporarily,
     },
     phoneNumbers: {
       additionalPhones: [
-        "itaque",
-        "ab",
-        "neque",
+        "esse",
+        "totam",
+        "porro",
+        "dolorum",
       ],
-      primaryPhone: "ullam",
+      primaryPhone: "dicta",
     },
     profile: {
-      description: "et",
+      description: "nam",
     },
     regularHours: {
       periods: [
         {
-          closeDay: "THURSDAY",
+          closeDay: TimePeriodCloseDayEnum.Thursday,
           closeTime: {
-            hours: 5902760509050140210,
-            minutes: 9021104375654741729,
-            nanos: 3604381780091280195,
-            seconds: 2066195468801476818,
+            hours: 143353,
+            minutes: 537373,
+            nanos: 944669,
+            seconds: 758616,
           },
-          openDay: "TUESDAY",
+          openDay: TimePeriodOpenDayEnum.Thursday,
           openTime: {
-            hours: 759605945513541974,
-            minutes: 2408550365227740434,
-            nanos: 5521202747878656476,
-            seconds: 5596430475431407243,
+            hours: 105907,
+            minutes: 414662,
+            nanos: 473600,
+            seconds: 264555,
           },
         },
         {
-          closeDay: "FRIDAY",
+          closeDay: TimePeriodCloseDayEnum.Monday,
           closeTime: {
-            hours: 8482125374365136680,
-            minutes: 7862762095958642309,
-            nanos: 4391202566038595699,
-            seconds: 6215632031706852400,
+            hours: 774234,
+            minutes: 736918,
+            nanos: 456150,
+            seconds: 216550,
           },
-          openDay: "TUESDAY",
+          openDay: TimePeriodOpenDayEnum.Thursday,
           openTime: {
-            hours: 7442289190031176026,
-            minutes: 5364953311572054685,
-            nanos: 7945398411639602224,
-            seconds: 1925401661646756611,
+            hours: 135218,
+            minutes: 18789,
+            nanos: 324141,
+            seconds: 617636,
           },
         },
         {
-          closeDay: "SUNDAY",
+          closeDay: TimePeriodCloseDayEnum.Monday,
           closeTime: {
-            hours: 4989862523986425397,
-            minutes: 2803285039048912676,
-            nanos: 950400323440343118,
-            seconds: 6430969915190400444,
+            hours: 612096,
+            minutes: 222321,
+            nanos: 616934,
+            seconds: 386489,
           },
-          openDay: "DAY_OF_WEEK_UNSPECIFIED",
+          openDay: TimePeriodOpenDayEnum.Sunday,
           openTime: {
-            hours: 6604365855503062775,
-            minutes: 1836598054518427835,
-            nanos: 7540276489530073149,
-            seconds: 7638413271565042464,
+            hours: 902599,
+            minutes: 681820,
+            nanos: 449950,
+            seconds: 359508,
           },
         },
       ],
@@ -216,54 +166,73 @@ const req: MybusinessbusinessinformationAccountsLocationsCreateRequest = {
     relationshipData: {
       childrenLocations: [
         {
-          placeId: "laudantium",
-          relationType: "RELATION_TYPE_UNSPECIFIED",
+          placeId: "iure",
+          relationType: RelevantLocationRelationTypeEnum.IndependentEstablishmentIn,
+        },
+        {
+          placeId: "quidem",
+          relationType: RelevantLocationRelationTypeEnum.RelationTypeUnspecified,
         },
         {
           placeId: "ipsa",
-          relationType: "DEPARTMENT_OF",
-        },
-        {
-          placeId: "doloremque",
-          relationType: "DEPARTMENT_OF",
+          relationType: RelevantLocationRelationTypeEnum.IndependentEstablishmentIn,
         },
       ],
-      parentChain: "atque",
+      parentChain: "est",
       parentLocation: {
-        placeId: "ratione",
-        relationType: "INDEPENDENT_ESTABLISHMENT_IN",
+        placeId: "mollitia",
+        relationType: RelevantLocationRelationTypeEnum.IndependentEstablishmentIn,
       },
     },
     serviceArea: {
-      businessType: "CUSTOMER_AND_BUSINESS_LOCATION",
+      businessType: ServiceAreaBusinessBusinessTypeEnum.BusinessTypeUnspecified,
       places: {
         placeInfos: [
           {
-            placeId: "maxime",
-            placeName: "eum",
+            placeId: "corporis",
+            placeName: "explicabo",
           },
         ],
       },
-      regionCode: "perferendis",
+      regionCode: "nobis",
     },
     serviceItems: [
       {
         freeFormServiceItem: {
-          category: "rerum",
+          category: "omnis",
           label: {
-            description: "reiciendis",
-            displayName: "quis",
-            languageCode: "cumque",
+            description: "nemo",
+            displayName: "minima",
+            languageCode: "excepturi",
           },
         },
         price: {
-          currencyCode: "minima",
-          nanos: 2333048574390956331,
-          units: "est",
+          currencyCode: "accusantium",
+          nanos: 438601,
+          units: "culpa",
         },
         structuredServiceItem: {
-          description: "quis",
-          serviceTypeId: "eum",
+          description: "doloribus",
+          serviceTypeId: "sapiente",
+        },
+      },
+      {
+        freeFormServiceItem: {
+          category: "architecto",
+          label: {
+            description: "mollitia",
+            displayName: "dolorem",
+            languageCode: "culpa",
+          },
+        },
+        price: {
+          currencyCode: "consequuntur",
+          nanos: 995300,
+          units: "mollitia",
+        },
+        structuredServiceItem: {
+          description: "occaecati",
+          serviceTypeId: "numquam",
         },
       },
     ],
@@ -271,53 +240,91 @@ const req: MybusinessbusinessinformationAccountsLocationsCreateRequest = {
       specialHourPeriods: [
         {
           closeTime: {
-            hours: 544981646038740619,
-            minutes: 4814861198247358488,
-            nanos: 4975249678507640420,
-            seconds: 8953538234431013647,
+            hours: 466311,
+            minutes: 474697,
+            nanos: 244425,
+            seconds: 623510,
           },
-          closed: true,
+          closed: false,
           endDate: {
-            day: 5310832663795041070,
-            month: 1363585710475529225,
-            year: 8279128640960530079,
+            day: 158969,
+            month: 338007,
+            year: 110375,
           },
           openTime: {
-            hours: 1011676084465510524,
-            minutes: 8764227983217623240,
-            nanos: 4745905187492708501,
-            seconds: 7941830299651147569,
+            hours: 674752,
+            minutes: 656330,
+            nanos: 317202,
+            seconds: 138183,
           },
           startDate: {
-            day: 157519078836327761,
-            month: 2867593906384393455,
-            year: 7506934391669544280,
+            day: 778346,
+            month: 196582,
+            year: 949572,
+          },
+        },
+        {
+          closeTime: {
+            hours: 368725,
+            minutes: 662527,
+            nanos: 820994,
+            seconds: 13571,
+          },
+          closed: false,
+          endDate: {
+            day: 97101,
+            month: 622846,
+            year: 837945,
+          },
+          openTime: {
+            hours: 673660,
+            minutes: 96098,
+            nanos: 971945,
+            seconds: 976460,
+          },
+          startDate: {
+            day: 878194,
+            month: 468651,
+            year: 509624,
           },
         },
       ],
     },
-    storeCode: "vel",
+    storeCode: "voluptatibus",
     storefrontAddress: {
       addressLines: [
-        "placeat",
-        "qui",
+        "omnis",
       ],
-      administrativeArea: "nisi",
-      languageCode: "quis",
-      locality: "adipisci",
-      organization: "porro",
-      postalCode: "rerum",
+      administrativeArea: "voluptate",
+      languageCode: "cum",
+      locality: "perferendis",
+      organization: "doloremque",
+      postalCode: "29132",
       recipients: [
-        "accusamus",
+        "dicta",
+        "harum",
       ],
-      regionCode: "numquam",
-      revision: 2223751782546645906,
-      sortingCode: "rerum",
-      sublocality: "ut",
+      regionCode: "enim",
+      revision: 880476,
+      sortingCode: "commodi",
+      sublocality: "repudiandae",
     },
-    title: "laborum",
-    websiteUri: "fugit",
+    title: "Mr.",
+    websiteUri: "ipsum",
   },
+  accessToken: "quidem",
+  alt: AltEnum.Media,
+  callback: "excepturi",
+  fields: "pariatur",
+  key: "modi",
+  oauthToken: "praesentium",
+  parent: "rem",
+  prettyPrint: false,
+  quotaUser: "voluptates",
+  requestId: "quasi",
+  uploadType: "repudiandae",
+  uploadProtocol: "sint",
+  validateOnly: false,
 };
 
 sdk.accounts.mybusinessbusinessinformationAccountsLocationsCreate(req).then((res: MybusinessbusinessinformationAccountsLocationsCreateResponse | AxiosError) => {

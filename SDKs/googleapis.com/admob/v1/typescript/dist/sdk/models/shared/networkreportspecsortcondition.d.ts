@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Sort by the specified dimension.
+ */
 export declare enum NetworkReportSpecSortConditionDimensionEnum {
     DimensionUnspecified = "DIMENSION_UNSPECIFIED",
     Date = "DATE",
@@ -11,10 +14,13 @@ export declare enum NetworkReportSpecSortConditionDimensionEnum {
     Format = "FORMAT",
     Platform = "PLATFORM",
     MobileOsVersion = "MOBILE_OS_VERSION",
-    GmaSdkVersion = "GMA_SDK_VERSION",
+    GmaSDKVersion = "GMA_SDK_VERSION",
     AppVersionName = "APP_VERSION_NAME",
     ServingRestriction = "SERVING_RESTRICTION"
 }
+/**
+ * Sort by the specified metric.
+ */
 export declare enum NetworkReportSpecSortConditionMetricEnum {
     MetricUnspecified = "METRIC_UNSPECIFIED",
     AdRequests = "AD_REQUESTS",
@@ -27,6 +33,9 @@ export declare enum NetworkReportSpecSortConditionMetricEnum {
     MatchRate = "MATCH_RATE",
     ShowRate = "SHOW_RATE"
 }
+/**
+ * Sorting order of the dimension or metric.
+ */
 export declare enum NetworkReportSpecSortConditionOrderEnum {
     SortOrderUnspecified = "SORT_ORDER_UNSPECIFIED",
     Ascending = "ASCENDING",
@@ -34,9 +43,18 @@ export declare enum NetworkReportSpecSortConditionOrderEnum {
 }
 /**
  * Sorting direction to be applied on a dimension or a metric.
-**/
+ */
 export declare class NetworkReportSpecSortCondition extends SpeakeasyBase {
+    /**
+     * Sort by the specified dimension.
+     */
     dimension?: NetworkReportSpecSortConditionDimensionEnum;
+    /**
+     * Sort by the specified metric.
+     */
     metric?: NetworkReportSpecSortConditionMetricEnum;
+    /**
+     * Sorting order of the dimension or metric.
+     */
     order?: NetworkReportSpecSortConditionOrderEnum;
 }

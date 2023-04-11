@@ -1,20 +1,31 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ClearMerchantOrderInfoV3PathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ClearMerchantOrderInfoV3Request extends SpeakeasyBase {
     accountId: number;
+    /**
+     * The BeezUP Order identifier
+     */
     beezUPOrderId: string;
+    /**
+     * The marketplace technical code
+     */
     marketplaceTechnicalCode: string;
-}
-export declare class ClearMerchantOrderInfoV3QueryParams extends SpeakeasyBase {
+    /**
+     * If true, the operation will be not be sent to marketplace. But the validation will be taken in account.
+     */
     testMode?: boolean;
 }
-export declare class ClearMerchantOrderInfoV3Request extends SpeakeasyBase {
-    pathParams: ClearMerchantOrderInfoV3PathParams;
-    queryParams: ClearMerchantOrderInfoV3QueryParams;
-}
 export declare class ClearMerchantOrderInfoV3Response extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     * Occurs when something goes wrong
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Could not update Order merchant information. Please see body for more information.
+     */
     errorResponseMessage?: shared.ErrorResponseMessage;
 }

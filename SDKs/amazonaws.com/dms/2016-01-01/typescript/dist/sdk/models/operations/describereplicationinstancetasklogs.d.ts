@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeReplicationInstanceTaskLogsQueryParams extends SpeakeasyBase {
-    marker?: string;
-    maxRecords?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum DescribeReplicationInstanceTaskLogsXAmzTargetEnum {
-    AmazonDmSv20160101DescribeReplicationInstanceTaskLogs = "AmazonDMSv20160101.DescribeReplicationInstanceTaskLogs"
+    AmazonDMSv20160101DescribeReplicationInstanceTaskLogs = "AmazonDMSv20160101.DescribeReplicationInstanceTaskLogs"
 }
-export declare class DescribeReplicationInstanceTaskLogsHeaders extends SpeakeasyBase {
+export declare class DescribeReplicationInstanceTaskLogsRequest extends SpeakeasyBase {
+    describeReplicationInstanceTaskLogsMessage: shared.DescribeReplicationInstanceTaskLogsMessage;
+    /**
+     * Pagination token
+     */
+    marker?: string;
+    /**
+     * Pagination limit
+     */
+    maxRecords?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,15 +23,20 @@ export declare class DescribeReplicationInstanceTaskLogsHeaders extends Speakeas
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeReplicationInstanceTaskLogsXAmzTargetEnum;
 }
-export declare class DescribeReplicationInstanceTaskLogsRequest extends SpeakeasyBase {
-    queryParams: DescribeReplicationInstanceTaskLogsQueryParams;
-    headers: DescribeReplicationInstanceTaskLogsHeaders;
-    request: shared.DescribeReplicationInstanceTaskLogsMessage;
-}
 export declare class DescribeReplicationInstanceTaskLogsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeReplicationInstanceTaskLogsResponse?: shared.DescribeReplicationInstanceTaskLogsResponse;
+    /**
+     * InvalidResourceStateFault
+     */
     invalidResourceStateFault?: any;
+    /**
+     * ResourceNotFoundFault
+     */
     resourceNotFoundFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

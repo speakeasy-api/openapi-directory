@@ -1,0 +1,10 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { SearchForTextResult } from "./searchfortextresult";
+import { SearchPlaceIndexForTextSummary } from "./searchplaceindexfortextsummary";
+/**
+ * Success
+ */
+export declare class SearchPlaceIndexForTextResponse extends SpeakeasyBase {
+    results: SearchForTextResult[];
+    summary: SearchPlaceIndexForTextSummary;
+}

@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteEnvironmentConfigurationActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteEnvironmentConfigurationActionEnum {
     DeleteEnvironmentConfiguration = "DeleteEnvironmentConfiguration"
 }
-export declare enum GetDeleteEnvironmentConfigurationVersionEnum {
+export declare enum GETDeleteEnvironmentConfigurationVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetDeleteEnvironmentConfigurationQueryParams extends SpeakeasyBase {
-    action: GetDeleteEnvironmentConfigurationActionEnum;
+export declare class GETDeleteEnvironmentConfigurationRequest extends SpeakeasyBase {
+    action: GETDeleteEnvironmentConfigurationActionEnum;
+    /**
+     * The name of the application the environment is associated with.
+     */
     applicationName: string;
+    /**
+     * The name of the environment to delete the draft configuration from.
+     */
     environmentName: string;
-    version: GetDeleteEnvironmentConfigurationVersionEnum;
-}
-export declare class GetDeleteEnvironmentConfigurationHeaders extends SpeakeasyBase {
+    version: GETDeleteEnvironmentConfigurationVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,11 +25,8 @@ export declare class GetDeleteEnvironmentConfigurationHeaders extends SpeakeasyB
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteEnvironmentConfigurationRequest extends SpeakeasyBase {
-    queryParams: GetDeleteEnvironmentConfigurationQueryParams;
-    headers: GetDeleteEnvironmentConfigurationHeaders;
-}
-export declare class GetDeleteEnvironmentConfigurationResponse extends SpeakeasyBase {
+export declare class GETDeleteEnvironmentConfigurationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetOrdersOrderIdPathParams extends SpeakeasyBase {
-    orderId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetOrdersOrderIdRequest extends SpeakeasyBase {
-    pathParams: GetOrdersOrderIdPathParams;
+    /**
+     * UUID of the `order` to get
+     */
+    orderId: string;
 }
 export declare class GetOrdersOrderIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * OK
+     */
     getOrder?: shared.GetOrder;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,5 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlSearchSearchStringAspectIdEnum {
+import { AxiosResponse } from "axios";
+/**
+ * The identifier of the 'aspect' (content group) to search
+ */
+export declare enum GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDXmlSearchSearchStringAspectIDEnum {
     Complete = "complete",
     Corpreg = "corpreg",
     Bcgaz1 = "bcgaz1",
@@ -10,16 +14,26 @@ export declare enum GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlSearchSea
     Hscr = "hscr",
     ArchOic = "arch_oic"
 }
-export declare class GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlSearchSearchStringPathParams extends SpeakeasyBase {
-    aspectId: GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlSearchSearchStringAspectIdEnum;
-    civixDocumentId: string;
-    civixIndexId: string;
-    searchString: string;
-}
 export declare class GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlSearchSearchStringRequest extends SpeakeasyBase {
-    pathParams: GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlSearchSearchStringPathParams;
+    /**
+     * The identifier of the 'aspect' (content group) to search
+     */
+    aspectId: GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDXmlSearchSearchStringAspectIDEnum;
+    /**
+     * The document identification code for an index or directory
+     */
+    civixDocumentId: string;
+    /**
+     * Index identification code
+     */
+    civixIndexId: string;
+    /**
+     * The text to search for within the document
+     */
+    searchString: string;
 }
 export declare class GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlSearchSearchStringResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

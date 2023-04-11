@@ -1,17 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteRepostsTracksTrackIdPathParams extends SpeakeasyBase {
-    trackId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteRepostsTracksTrackIdSecurity extends SpeakeasyBase {
-    authHeader: shared.SchemeAuthHeader;
+    authHeader: string;
 }
 export declare class DeleteRepostsTracksTrackIdRequest extends SpeakeasyBase {
-    pathParams: DeleteRepostsTracksTrackIdPathParams;
-    security: DeleteRepostsTracksTrackIdSecurity;
+    /**
+     * SoundCloud Track id
+     */
+    trackId: number;
 }
 export declare class DeleteRepostsTracksTrackIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Unauthorized
+     */
     error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

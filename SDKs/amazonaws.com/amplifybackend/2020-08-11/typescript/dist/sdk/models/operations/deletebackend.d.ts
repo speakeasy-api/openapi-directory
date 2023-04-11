@@ -1,10 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteBackendPathParams extends SpeakeasyBase {
-    appId: string;
-    backendEnvironmentName: string;
-}
-export declare class DeleteBackendHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteBackendRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,17 +9,37 @@ export declare class DeleteBackendHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DeleteBackendRequest extends SpeakeasyBase {
-    pathParams: DeleteBackendPathParams;
-    headers: DeleteBackendHeaders;
+    /**
+     * The app ID.
+     */
+    appId: string;
+    /**
+     * The name of the backend environment.
+     */
+    backendEnvironmentName: string;
 }
 export declare class DeleteBackendResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteBackendResponse?: shared.DeleteBackendResponse;
+    /**
+     * GatewayTimeoutException
+     */
     gatewayTimeoutException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

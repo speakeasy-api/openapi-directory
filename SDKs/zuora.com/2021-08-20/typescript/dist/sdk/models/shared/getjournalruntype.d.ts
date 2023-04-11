@@ -1,6 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { GetJournalRunTransactionType } from "./getjournalruntransactiontype";
-export declare enum GetJournalRunTypeStatusEnum {
+import { GETJournalRunTransactionType } from "./getjournalruntransactiontype";
+/**
+ * Status of the journal run.
+ *
+ * @remarks
+ *
+ */
+export declare enum GETJournalRunTypeStatusEnum {
     Pending = "Pending",
     Processing = "Processing",
     Completed = "Completed",
@@ -9,16 +15,76 @@ export declare enum GetJournalRunTypeStatusEnum {
     Cancelled = "Cancelled",
     DeleteInprogress = "DeleteInprogress"
 }
-export declare class GetJournalRunType extends SpeakeasyBase {
+export declare class GETJournalRunType extends SpeakeasyBase {
     aggregateCurrency?: boolean;
+    /**
+     * Date and time the journal run was executed.
+     *
+     * @remarks
+     *
+     */
     executedOn?: Date;
+    /**
+     * Date of the journal entry.
+     *
+     * @remarks
+     *
+     */
     journalEntryDate?: Date;
+    /**
+     * Journal run number.
+     *
+     * @remarks
+     *
+     */
     number?: string;
+    /**
+     * Name of GL segmentation rule used in the journal run.
+     *
+     * @remarks
+     *
+     */
     segmentationRuleName?: string;
-    status?: GetJournalRunTypeStatusEnum;
+    /**
+     * Status of the journal run.
+     *
+     * @remarks
+     *
+     */
+    status?: GETJournalRunTypeStatusEnum;
+    /**
+     * Returns `true` if the request was processed successfully.
+     *
+     * @remarks
+     *
+     */
     success?: boolean;
+    /**
+     * The target end date of the journal run.
+     *
+     * @remarks
+     *
+     */
     targetEndDate?: Date;
+    /**
+     * The target start date of the journal run.
+     *
+     * @remarks
+     *
+     */
     targetStartDate?: Date;
+    /**
+     * Total number of journal entries in the journal run.
+     *
+     * @remarks
+     *
+     */
     totalJournalEntryCount?: number;
-    transactionTypes?: GetJournalRunTransactionType[];
+    /**
+     * Transaction types included in the journal run.
+     *
+     * @remarks
+     *
+     */
+    transactionTypes?: GETJournalRunTransactionType[];
 }

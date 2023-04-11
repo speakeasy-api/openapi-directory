@@ -1,31 +1,66 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PostTargetsTargetIdWebhooksPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class PostTargetsTargetIdWebhooksRequest extends SpeakeasyBase {
+    webhookInput: shared.WebhookInput;
+    /**
+     * Target id
+     */
     targetId: string;
 }
-export declare class PostTargetsTargetIdWebhooks400ApplicationJson extends SpeakeasyBase {
+/**
+ * Not found
+ */
+export declare class PostTargetsTargetIdWebhooks404ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Not found.
+     */
+    detail?: string;
+}
+/**
+ * Not allowed to perform operation
+ */
+export declare class PostTargetsTargetIdWebhooks403ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error message.
+     */
+    detail?: string;
+}
+/**
+ * Access token is missing or invalid
+ */
+export declare class PostTargetsTargetIdWebhooks401ApplicationJSON extends SpeakeasyBase {
+    detail?: string;
+}
+/**
+ * Bad Request
+ */
+export declare class PostTargetsTargetIdWebhooks400ApplicationJSON extends SpeakeasyBase {
     lessThanFieldNameGreaterThan?: string[];
     nonFieldErrors?: string[];
-}
-export declare class PostTargetsTargetIdWebhooks401ApplicationJson extends SpeakeasyBase {
-    detail?: string;
-}
-export declare class PostTargetsTargetIdWebhooks403ApplicationJson extends SpeakeasyBase {
-    detail?: string;
-}
-export declare class PostTargetsTargetIdWebhooks404ApplicationJson extends SpeakeasyBase {
-    detail?: string;
-}
-export declare class PostTargetsTargetIdWebhooksRequest extends SpeakeasyBase {
-    pathParams: PostTargetsTargetIdWebhooksPathParams;
-    request: shared.WebhookInput;
 }
 export declare class PostTargetsTargetIdWebhooksResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Webhooks
+     */
     webhook?: shared.Webhook;
-    postTargetsTargetIdWebhooks400ApplicationJSONObject?: PostTargetsTargetIdWebhooks400ApplicationJson;
-    postTargetsTargetIdWebhooks401ApplicationJSONObject?: PostTargetsTargetIdWebhooks401ApplicationJson;
-    postTargetsTargetIdWebhooks403ApplicationJSONObject?: PostTargetsTargetIdWebhooks403ApplicationJson;
-    postTargetsTargetIdWebhooks404ApplicationJSONObject?: PostTargetsTargetIdWebhooks404ApplicationJson;
+    /**
+     * Bad Request
+     */
+    postTargetsTargetIdWebhooks400ApplicationJSONObject?: PostTargetsTargetIdWebhooks400ApplicationJSON;
+    /**
+     * Access token is missing or invalid
+     */
+    postTargetsTargetIdWebhooks401ApplicationJSONObject?: PostTargetsTargetIdWebhooks401ApplicationJSON;
+    /**
+     * Not allowed to perform operation
+     */
+    postTargetsTargetIdWebhooks403ApplicationJSONObject?: PostTargetsTargetIdWebhooks403ApplicationJSON;
+    /**
+     * Not found
+     */
+    postTargetsTargetIdWebhooks404ApplicationJSONObject?: PostTargetsTargetIdWebhooks404ApplicationJSON;
 }

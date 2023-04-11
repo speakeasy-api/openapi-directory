@@ -1,21 +1,38 @@
-import { AxiosInstance } from "axios";
-import { Security } from "./models/shared";
 import { Health } from "./health";
-import { StripePlans } from "./stripeplans";
-export declare const ServerList: readonly ["https://onsched.com"];
+import * as shared from "./models/shared";
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
+export declare const ServerList: readonly ["https://sandbox-api.onsched.com/"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * The security details required to authenticate the SDK
+     */
+    security?: shared.Security;
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    security?: Security;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * Endpoints for system utilities. e.g.Health
+ */
 export declare class SDK {
     health: Health;
-    stripePlans: StripePlans;
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
 }

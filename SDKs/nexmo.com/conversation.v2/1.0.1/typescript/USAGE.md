@@ -1,18 +1,21 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetUsersRequest, GetUsersResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetUsersRequest,
+  GetUsersResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  OrderEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetUsersRequest = {
-  queryParams: {
-    cursor: "sit",
-    order: "asc",
-    pageSize: 6050128673802995827,
-  },
+  cursor: "corrupti",
+  order: OrderEnum.Desc,
+  pageSize: 715190,
 };
 
 sdk.getUsers(req).then((res: GetUsersResponse | AxiosError) => {

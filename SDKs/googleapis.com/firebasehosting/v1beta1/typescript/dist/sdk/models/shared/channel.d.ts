@@ -1,0 +1,72 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { Release } from "./release";
+/**
+ * A `Channel` represents a stream of releases for a site. All sites have a default `live` channel that serves content to the Firebase-provided subdomains and any connected custom domains.
+ */
+export declare class Channel extends SpeakeasyBase {
+    /**
+     * Output only. The time at which the channel was created.
+     */
+    createTime?: string;
+    /**
+     * The time at which the channel will be automatically deleted. If null, the channel will not be automatically deleted. This field is present in the output whether it's set directly or via the `ttl` field.
+     */
+    expireTime?: string;
+    /**
+     * Text labels used for extra metadata and/or filtering.
+     */
+    labels?: Record<string, string>;
+    /**
+     * The fully-qualified resource name for the channel, in the format: sites/ SITE_ID/channels/CHANNEL_ID
+     */
+    name?: string;
+    /**
+     *  A `Release` is a particular [collection of configurations and files](sites.versions) that is set to be public at a particular time.
+     */
+    release?: Release;
+    /**
+     * The number of previous releases to retain on the channel for rollback or other purposes. Must be a number between 1-100. Defaults to 10 for new channels.
+     */
+    retainedReleaseCount?: number;
+    /**
+     * Input only. A time-to-live for this channel. Sets `expire_time` to the provided duration past the time of the request.
+     */
+    ttl?: string;
+    /**
+     * Output only. The time at which the channel was last updated.
+     */
+    updateTime?: string;
+    /**
+     * Output only. The URL at which the content of this channel's current release can be viewed. This URL is a Firebase-provided subdomain of `web.app`. The content of this channel's current release can also be viewed at the Firebase-provided subdomain of `firebaseapp.com`. If this channel is the `live` channel for the Hosting site, then the content of this channel's current release can also be viewed at any connected custom domains.
+     */
+    url?: string;
+}
+/**
+ * A `Channel` represents a stream of releases for a site. All sites have a default `live` channel that serves content to the Firebase-provided subdomains and any connected custom domains.
+ */
+export declare class ChannelInput extends SpeakeasyBase {
+    /**
+     * The time at which the channel will be automatically deleted. If null, the channel will not be automatically deleted. This field is present in the output whether it's set directly or via the `ttl` field.
+     */
+    expireTime?: string;
+    /**
+     * Text labels used for extra metadata and/or filtering.
+     */
+    labels?: Record<string, string>;
+    /**
+     * The fully-qualified resource name for the channel, in the format: sites/ SITE_ID/channels/CHANNEL_ID
+     */
+    name?: string;
+    /**
+     *  A `Release` is a particular [collection of configurations and files](sites.versions) that is set to be public at a particular time.
+     */
+    release?: Release;
+    /**
+     * The number of previous releases to retain on the channel for rollback or other purposes. Must be a number between 1-100. Defaults to 10 for new channels.
+     */
+    retainedReleaseCount?: number;
+    /**
+     * Input only. A time-to-live for this channel. Sets `expire_time` to the provided duration past the time of the request.
+     */
+    ttl?: string;
+}

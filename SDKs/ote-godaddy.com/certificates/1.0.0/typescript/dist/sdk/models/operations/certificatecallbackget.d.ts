@@ -1,13 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CertificateCallbackGetPathParams extends SpeakeasyBase {
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class CertificateCallbackGetRequest extends SpeakeasyBase {
+    /**
+     * Certificate id to register for stateful action callback
+     */
     certificateId: string;
 }
-export declare class CertificateCallbackGetRequest extends SpeakeasyBase {
-    pathParams: CertificateCallbackGetPathParams;
-}
 export declare class CertificateCallbackGetResponse extends SpeakeasyBase {
-    certificateCallback?: any;
+    /**
+     * Callback registered
+     */
+    certificateCallback?: shared.CertificateCallback;
     contentType: string;
-    error?: any;
+    /**
+     * Request was malformed
+     */
+    error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

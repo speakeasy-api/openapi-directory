@@ -1,17 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetFoodBrandedBarcodePhpQueryParams extends SpeakeasyBase {
-    code: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetFoodBrandedBarcodePhpSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
+    apiKeyAuth: string;
 }
 export declare class GetFoodBrandedBarcodePhpRequest extends SpeakeasyBase {
-    queryParams: GetFoodBrandedBarcodePhpQueryParams;
-    security: GetFoodBrandedBarcodePhpSecurity;
+    /**
+     * #### UPC/EAN barcode
+     *
+     * @remarks
+     *
+     * **Example**
+     * > ```&code=0842234000988```
+     *
+     */
+    code: string;
 }
 export declare class GetFoodBrandedBarcodePhpResponse extends SpeakeasyBase {
+    /**
+     * **Valid** - Will return an object containing any matching foods.
+     *
+     * @remarks
+     *
+     */
     brandedFoodObject?: shared.BrandedFoodObject;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

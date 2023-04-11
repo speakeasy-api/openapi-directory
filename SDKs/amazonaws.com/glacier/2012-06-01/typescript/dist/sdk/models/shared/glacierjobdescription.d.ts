@@ -6,7 +6,7 @@ import { SelectParameters } from "./selectparameters";
 import { StatusCodeEnum } from "./statuscodeenum";
 /**
  * Contains the description of an Amazon S3 Glacier job.
-**/
+ */
 export declare class GlacierJobDescription extends SpeakeasyBase {
     action?: ActionCodeEnum;
     archiveId?: string;

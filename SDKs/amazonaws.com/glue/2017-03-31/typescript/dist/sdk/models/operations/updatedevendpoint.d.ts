@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateDevEndpointXAmzTargetEnum {
-    AwsGlueUpdateDevEndpoint = "AWSGlue.UpdateDevEndpoint"
+    AWSGlueUpdateDevEndpoint = "AWSGlue.UpdateDevEndpoint"
 }
-export declare class UpdateDevEndpointHeaders extends SpeakeasyBase {
+export declare class UpdateDevEndpointRequest extends SpeakeasyBase {
+    updateDevEndpointRequest: shared.UpdateDevEndpointRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class UpdateDevEndpointHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateDevEndpointXAmzTargetEnum;
 }
-export declare class UpdateDevEndpointRequest extends SpeakeasyBase {
-    headers: UpdateDevEndpointHeaders;
-    request: shared.UpdateDevEndpointRequest;
-}
 export declare class UpdateDevEndpointResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     updateDevEndpointResponse?: Record<string, any>;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

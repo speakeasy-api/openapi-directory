@@ -1,0 +1,219 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { CertificateContact } from "./certificatecontact";
+import { CertificateOrganization } from "./certificateorganization";
+/**
+ * Root type:
+ *
+ * @remarks
+ *   * `GODADDY_SHA_1` - GoDaddy (Secure Hash Algorithm 1) SHA-1 root type
+ *   * `GODADDY_SHA_2` - GoDaddy (Secure Hash Algorithm 2) SHA-2 root type
+ *   * `STARFIELD_SHA_1` - Starfield SHA-1 root type
+ *   * `STARFIELD_SHA_2` - Starfield SHA-2 root type
+ *
+ */
+export declare enum CertificateDetailV2RootTypeEnum {
+    GodaddySha1 = "GODADDY_SHA_1",
+    GodaddySha2 = "GODADDY_SHA_2",
+    StarfieldSha1 = "STARFIELD_SHA_1",
+    StarfieldSha2 = "STARFIELD_SHA_2"
+}
+/**
+ * Number of subject alternative names (SAN) to be included in certificate (if UCC):
+ *
+ * @remarks
+ *   * `FIVE` - Five slot UCC request
+ *   * `TEN` - Ten slot UCC request
+ *   * `FIFTEEN` - Fifteen slot UCC request
+ *   * `TWENTY` - Twenty slot UCC request
+ *   * `THIRTY` - Thirty slot UCC request
+ *   * `FOURTY` - Fourty slot UCC request
+ *   * `FIFTY` - Fifty slot UCC request
+ *   * `ONE_HUNDRED` - One hundred slot UCC request
+ *
+ */
+export declare enum CertificateDetailV2SlotSizeEnum {
+    Five = "FIVE",
+    Ten = "TEN",
+    Fifteen = "FIFTEEN",
+    Twenty = "TWENTY",
+    Thirty = "THIRTY",
+    Fourty = "FOURTY",
+    Fifty = "FIFTY",
+    OneHundred = "ONE_HUNDRED"
+}
+/**
+ * Certificate status (if issued or revoked):
+ *
+ * @remarks
+ *   * `CANCELED` - Certificate request was canceled by customer
+ *   * `DENIED` - Certificate request was denied by customer\n  * `EXPIRED` - Issued certificate has exceeded the valid end date
+ *   * `ISSUED` - Certificate has been issued and is within validity period
+ *   * `PENDING_ISSUANCE` - Certificate request has completed domain verification and is in the process of being issued
+ *   * `PENDING_REKEY` - Previously issued certificate was rekeyed by customer and is in the process of being reissued
+ *   * `PENDING_REVOCATION` - Previously issued certificate is in the process of being revoked
+ *   * `REVOKED` - Issued certificate has been revoked\n  * `UNUSED` - Certificate in an error state
+ *
+ */
+export declare enum CertificateDetailV2StatusEnum {
+    PendingIssuance = "PENDING_ISSUANCE",
+    Issued = "ISSUED",
+    Revoked = "REVOKED",
+    Canceled = "CANCELED",
+    Denied = "DENIED",
+    PendingRevocation = "PENDING_REVOCATION",
+    PendingRekey = "PENDING_REKEY",
+    Unused = "UNUSED",
+    Expired = "EXPIRED"
+}
+/**
+ * Certificate type:
+ *
+ * @remarks
+ *   * `DV_SSL` - (Domain Validated Secure Sockets Layer) SSL certificate validated using domain name only
+ *   * `DV_WILDCARD_SSL` - SSL certificate containing subdomains which is validated using domain name only
+ *   * `EV_SSL` - (Extended Validation) SSL certificate validated using organization information, domain name, business legal status, and other factors
+ *   * `OV_CODE_SIGNING` - Code signing SSL certificate used by software developers to digitally sign apps. Validated using organization information
+ *   * `OV_DRIVER_SIGNING` - Driver signing SSL certificate request used by software developers to digitally sign secure code for Windows hardware drivers. Validated using organization information
+ *   * `OV_SSL` - SSL certificate validated using organization information and domain name
+ *   * `OV_WILDCARD_SSL` - SSL certificate containing subdomains which is validated using organization information and domain name
+ *   * `UCC_DV_SSL` - (Unified Communication Certificate) Multi domain SSL certificate validated using domain name only
+ *   * `UCC_EV_SSL` - Multi domain SSL certificate validated using organization information, domain name, business legal status, and other factors
+ *   * `UCC_OV_SSL` - Multi domain SSL certificate validated using organization information and domain name
+ *
+ */
+export declare enum CertificateDetailV2TypeEnum {
+    DvSsl = "DV_SSL",
+    DvWildcardSsl = "DV_WILDCARD_SSL",
+    EvSsl = "EV_SSL",
+    OvCodeSigning = "OV_CODE_SIGNING",
+    OvDriverSigning = "OV_DRIVER_SIGNING",
+    OvSsl = "OV_SSL",
+    OvWildcardSsl = "OV_WILDCARD_SSL",
+    UccDvSsl = "UCC_DV_SSL",
+    UccEvSsl = "UCC_EV_SSL",
+    UccOvSsl = "UCC_OV_SSL"
+}
+/**
+ * Certificate details retrieved
+ */
+export declare class CertificateDetailV2 extends SpeakeasyBase {
+    /**
+     * The unique identifier of the certificate request. Only present if no errors returned
+     */
+    certificateId: string;
+    /**
+     * Common name of certificate
+     */
+    commonName: string;
+    /**
+     * The date the certificate request completed processing.
+     */
+    completedAt?: string;
+    contact: CertificateContact;
+    /**
+     * The date the certificate was ordered.
+     */
+    createdAt: string;
+    /**
+     * Certificate signing request (if present) in PEM format
+     */
+    csr?: string;
+    /**
+     * Only present if certificate order has been denied
+     */
+    deniedReason?: string;
+    organization?: CertificateOrganization;
+    /**
+     * Validity period of order. Specified in years
+     */
+    period: number;
+    /**
+     * Percentage of completion for certificate vetting
+     */
+    progress?: number;
+    /**
+     * Only returned when a renewal is available.
+     */
+    renewalAvailable?: boolean;
+    /**
+     * The revocation date of certificate (if revoked).
+     */
+    revokedAt?: string;
+    /**
+     * Root type:
+     *
+     * @remarks
+     *   * `GODADDY_SHA_1` - GoDaddy (Secure Hash Algorithm 1) SHA-1 root type
+     *   * `GODADDY_SHA_2` - GoDaddy (Secure Hash Algorithm 2) SHA-2 root type
+     *   * `STARFIELD_SHA_1` - Starfield SHA-1 root type
+     *   * `STARFIELD_SHA_2` - Starfield SHA-2 root type
+     *
+     */
+    rootType?: CertificateDetailV2RootTypeEnum;
+    /**
+     * Serial number of certificate (if issued or revoked)
+     */
+    serialNumber?: string;
+    /**
+     * Hexadecmial format for Serial number of certificate(if issued or revoked)
+     */
+    serialNumberHex?: string;
+    /**
+     * Number of subject alternative names (SAN) to be included in certificate (if UCC):
+     *
+     * @remarks
+     *   * `FIVE` - Five slot UCC request
+     *   * `TEN` - Ten slot UCC request
+     *   * `FIFTEEN` - Fifteen slot UCC request
+     *   * `TWENTY` - Twenty slot UCC request
+     *   * `THIRTY` - Thirty slot UCC request
+     *   * `FOURTY` - Fourty slot UCC request
+     *   * `FIFTY` - Fifty slot UCC request
+     *   * `ONE_HUNDRED` - One hundred slot UCC request
+     *
+     */
+    slotSize?: CertificateDetailV2SlotSizeEnum;
+    /**
+     * Certificate status (if issued or revoked):
+     *
+     * @remarks
+     *   * `CANCELED` - Certificate request was canceled by customer
+     *   * `DENIED` - Certificate request was denied by customer\n  * `EXPIRED` - Issued certificate has exceeded the valid end date
+     *   * `ISSUED` - Certificate has been issued and is within validity period
+     *   * `PENDING_ISSUANCE` - Certificate request has completed domain verification and is in the process of being issued
+     *   * `PENDING_REKEY` - Previously issued certificate was rekeyed by customer and is in the process of being reissued
+     *   * `PENDING_REVOCATION` - Previously issued certificate is in the process of being revoked
+     *   * `REVOKED` - Issued certificate has been revoked\n  * `UNUSED` - Certificate in an error state
+     *
+     */
+    status: CertificateDetailV2StatusEnum;
+    /**
+     * Subject Alternative names. Collection of subjectAlternativeNames to be included in certificate.
+     */
+    subjectAlternativeNames?: string[];
+    /**
+     * Certificate type:
+     *
+     * @remarks
+     *   * `DV_SSL` - (Domain Validated Secure Sockets Layer) SSL certificate validated using domain name only
+     *   * `DV_WILDCARD_SSL` - SSL certificate containing subdomains which is validated using domain name only
+     *   * `EV_SSL` - (Extended Validation) SSL certificate validated using organization information, domain name, business legal status, and other factors
+     *   * `OV_CODE_SIGNING` - Code signing SSL certificate used by software developers to digitally sign apps. Validated using organization information
+     *   * `OV_DRIVER_SIGNING` - Driver signing SSL certificate request used by software developers to digitally sign secure code for Windows hardware drivers. Validated using organization information
+     *   * `OV_SSL` - SSL certificate validated using organization information and domain name
+     *   * `OV_WILDCARD_SSL` - SSL certificate containing subdomains which is validated using organization information and domain name
+     *   * `UCC_DV_SSL` - (Unified Communication Certificate) Multi domain SSL certificate validated using domain name only
+     *   * `UCC_EV_SSL` - Multi domain SSL certificate validated using organization information, domain name, business legal status, and other factors
+     *   * `UCC_OV_SSL` - Multi domain SSL certificate validated using organization information and domain name
+     *
+     */
+    type: CertificateDetailV2TypeEnum;
+    /**
+     * The end date of the certificate's validity (if issued or revoked).
+     */
+    validEndAt?: string;
+    /**
+     * The start date of the certificate's validity (if issued or revoked).
+     */
+    validStartAt?: string;
+}

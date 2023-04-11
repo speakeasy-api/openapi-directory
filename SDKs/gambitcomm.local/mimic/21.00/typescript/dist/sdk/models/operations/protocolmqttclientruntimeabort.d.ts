@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolMqttClientRuntimeAbortPathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolMqttClientRuntimeAbortRequest extends SpeakeasyBase {
-    pathParams: ProtocolMqttClientRuntimeAbortPathParams;
+    /**
+     * Agent to set MQTT behavior
+     */
+    agentNum: number;
 }
 export declare class ProtocolMqttClientRuntimeAbortResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolMqttClientRuntimeAbort200ApplicationJSONStrings?: string[];
 }

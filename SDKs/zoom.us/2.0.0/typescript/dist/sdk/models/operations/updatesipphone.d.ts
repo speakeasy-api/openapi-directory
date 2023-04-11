@@ -1,93 +1,115 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class UpdateSipPhonePathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class UpdateSIPPhoneSecurity extends SpeakeasyBase {
+    oAuth: string;
+}
+/**
+ * Protocols supported by the SIP provider.<br> The value must be either `UDP`, `TCP`, `TLS`, `AUTO`.
+ */
+export declare enum UpdateSIPPhoneApplicationJSONTransportProtocolEnum {
+    Udp = "UDP",
+    Tcp = "TCP",
+    Tls = "TLS",
+    Auto = "AUTO"
+}
+/**
+ * Protocols supported by the SIP provider.<br> The value must be either `UDP`, `TCP`, `TLS`, `AUTO`.
+ */
+export declare enum UpdateSIPPhoneApplicationJSONTransportProtocol2Enum {
+    Udp = "UDP",
+    Tcp = "TCP",
+    Tls = "TLS",
+    Auto = "AUTO"
+}
+/**
+ * Protocols supported by the SIP provider.<br> The value must be either `UDP`, `TCP`, `TLS`, `AUTO`.
+ */
+export declare enum UpdateSIPPhoneApplicationJSONTransportProtocol3Enum {
+    Udp = "UDP",
+    Tcp = "TCP",
+    Tls = "TLS",
+    Auto = "AUTO"
+}
+export declare class UpdateSIPPhoneApplicationJSON extends SpeakeasyBase {
+    /**
+     * Authorization name of the user  registered for SIP Phone.
+     */
+    authorizationName: string;
+    /**
+     * The name or IP address of your provider’s SIP domain. (example: CDC.WEB).
+     */
+    domain: string;
+    /**
+     * The password generated for the user in the SIP account.
+     */
+    password: string;
+    /**
+     * IP address of the proxy server for SIP requests. Note that if you are using the UDP transport protocol, the default port is 5060. If you are using UDP with a different port number, that port number must be included with the IP address. If you are not using a proxy server, this value can be the same as the Register Server.
+     */
+    proxyServer: string;
+    /**
+     * IP address of the proxy server for SIP requests. Note that if you are using the UDP transport protocol, the default port is 5060. If you are using UDP with a different port number, that port number must be included with the IP address. If you are not using a proxy server, this value can be the same as the Register Server.
+     */
+    proxyServer2: string;
+    /**
+     * IP address of the proxy server for SIP requests. Note that if you are using the UDP transport protocol, the default port is 5060. If you are using UDP with a different port number, that port number must be included with the IP address. If you are not using a proxy server, this value can be the same as the Register Server.
+     */
+    proxyServer3: string;
+    /**
+     * IP address of the server that accepts REGISTER requests. Note that if you are using the UDP transport protocol, the default port is 5060. If you are using UDP with a different port number, that port number must be included with the IP address.
+     */
+    registerServer: string;
+    /**
+     * IP address of the server that accepts REGISTER requests. Note that if you are using the UDP transport protocol, the default port is 5060. If you are using UDP with a different port number, that port number must be included with the IP address.
+     */
+    registerServer2: string;
+    /**
+     * IP address of the server that accepts REGISTER requests. Note that if you are using the UDP transport protocol, the default port is 5060. If you are using UDP with a different port number, that port number must be included with the IP address.
+     */
+    registerServer3: string;
+    /**
+     * The number of minutes after which the SIP registration of the Zoom client user will expire, and the client will auto register to the SIP server.
+     */
+    registrationExpireTime?: number;
+    /**
+     * Protocols supported by the SIP provider.<br> The value must be either `UDP`, `TCP`, `TLS`, `AUTO`.
+     */
+    transportProtocol?: UpdateSIPPhoneApplicationJSONTransportProtocolEnum;
+    /**
+     * Protocols supported by the SIP provider.<br> The value must be either `UDP`, `TCP`, `TLS`, `AUTO`.
+     */
+    transportProtocol2?: UpdateSIPPhoneApplicationJSONTransportProtocol2Enum;
+    /**
+     * Protocols supported by the SIP provider.<br> The value must be either `UDP`, `TCP`, `TLS`, `AUTO`.
+     */
+    transportProtocol3?: UpdateSIPPhoneApplicationJSONTransportProtocol3Enum;
+    /**
+     * The phone number associated with the user in the SIP account.
+     */
+    userName: string;
+    /**
+     * The number to dial for checking voicemail.
+     */
+    voiceMail: string;
+}
+export declare class UpdateSIPPhoneRequest extends SpeakeasyBase {
+    requestBody?: UpdateSIPPhoneApplicationJSON;
+    /**
+     * Unique Identifier of the SIP Phone. This can be retrieved from the List SIP Phones API.
+     */
     phoneId: string;
 }
-export declare enum UpdateSipPhoneApplicationJsonTransportProtocolEnum {
-    Udp = "UDP",
-    Tcp = "TCP",
-    Tls = "TLS",
-    Auto = "AUTO"
-}
-export declare enum UpdateSipPhoneApplicationJsonTransportProtocol2Enum {
-    Udp = "UDP",
-    Tcp = "TCP",
-    Tls = "TLS",
-    Auto = "AUTO"
-}
-export declare enum UpdateSipPhoneApplicationJsonTransportProtocol3Enum {
-    Udp = "UDP",
-    Tcp = "TCP",
-    Tls = "TLS",
-    Auto = "AUTO"
-}
-export declare class UpdateSipPhoneApplicationJson extends SpeakeasyBase {
-    authorizationName: string;
-    domain: string;
-    password: string;
-    proxyServer: string;
-    proxyServer2: string;
-    proxyServer3: string;
-    registerServer: string;
-    registerServer2: string;
-    registerServer3: string;
-    registrationExpireTime?: number;
-    transportProtocol?: UpdateSipPhoneApplicationJsonTransportProtocolEnum;
-    transportProtocol2?: UpdateSipPhoneApplicationJsonTransportProtocol2Enum;
-    transportProtocol3?: UpdateSipPhoneApplicationJsonTransportProtocol3Enum;
-    userName: string;
-    voiceMail: string;
-}
-export declare enum UpdateSipPhoneMultipartFormDataTransportProtocolEnum {
-    Udp = "UDP",
-    Tcp = "TCP",
-    Tls = "TLS",
-    Auto = "AUTO"
-}
-export declare enum UpdateSipPhoneMultipartFormDataTransportProtocol2Enum {
-    Udp = "UDP",
-    Tcp = "TCP",
-    Tls = "TLS",
-    Auto = "AUTO"
-}
-export declare enum UpdateSipPhoneMultipartFormDataTransportProtocol3Enum {
-    Udp = "UDP",
-    Tcp = "TCP",
-    Tls = "TLS",
-    Auto = "AUTO"
-}
-export declare class UpdateSipPhoneMultipartFormData extends SpeakeasyBase {
-    authorizationName: string;
-    domain: string;
-    password: string;
-    proxyServer: string;
-    proxyServer2: string;
-    proxyServer3: string;
-    registerServer: string;
-    registerServer2: string;
-    registerServer3: string;
-    registrationExpireTime?: number;
-    transportProtocol?: UpdateSipPhoneMultipartFormDataTransportProtocolEnum;
-    transportProtocol2?: UpdateSipPhoneMultipartFormDataTransportProtocol2Enum;
-    transportProtocol3?: UpdateSipPhoneMultipartFormDataTransportProtocol3Enum;
-    userName: string;
-    voiceMail: string;
-}
-export declare class UpdateSipPhoneRequests extends SpeakeasyBase {
-    object?: UpdateSipPhoneApplicationJson;
-    object1?: UpdateSipPhoneMultipartFormData;
-}
-export declare class UpdateSipPhoneSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
-}
-export declare class UpdateSipPhoneRequest extends SpeakeasyBase {
-    pathParams: UpdateSipPhonePathParams;
-    request?: UpdateSipPhoneRequests;
-    security: UpdateSipPhoneSecurity;
-}
-export declare class UpdateSipPhoneResponse extends SpeakeasyBase {
+export declare class UpdateSIPPhoneResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * **HTTP Status Code:** `204`<br>
+     *
+     * @remarks
+     * SIP Phone information updated successfully.
+     *
+     */
     updateSIPPhone204ApplicationJSONObject?: Record<string, any>;
 }

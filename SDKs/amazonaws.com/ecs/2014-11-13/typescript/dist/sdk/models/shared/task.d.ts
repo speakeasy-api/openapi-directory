@@ -7,12 +7,12 @@ import { EphemeralStorage } from "./ephemeralstorage";
 import { HealthStatusEnum } from "./healthstatusenum";
 import { InferenceAccelerator } from "./inferenceaccelerator";
 import { LaunchTypeEnum } from "./launchtypeenum";
+import { Tag } from "./tag";
 import { TaskOverride } from "./taskoverride";
 import { TaskStopCodeEnum } from "./taskstopcodeenum";
-import { Tag } from "./tag";
 /**
  * Details on a task in a cluster.
-**/
+ */
 export declare class Task extends SpeakeasyBase {
     attachments?: Attachment[];
     attributes?: Attribute[];
@@ -36,6 +36,7 @@ export declare class Task extends SpeakeasyBase {
     launchType?: LaunchTypeEnum;
     memory?: string;
     overrides?: TaskOverride;
+    platformFamily?: string;
     platformVersion?: string;
     pullStartedAt?: Date;
     pullStoppedAt?: Date;

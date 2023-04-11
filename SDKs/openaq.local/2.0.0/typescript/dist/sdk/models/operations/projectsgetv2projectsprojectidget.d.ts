@@ -1,33 +1,78 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ProjectsGetV2ProjectsProjectIdGetPathParams extends SpeakeasyBase {
-    projectId: number;
+import { AxiosResponse } from "axios";
+/**
+ * An enumeration.
+ */
+export declare enum ProjectsGetV2ProjectsProjectIdGetOrderByProjectsOrderEnum {
+    Id = "id",
+    Name = "name",
+    Subtitle = "subtitle",
+    FirstUpdated = "firstUpdated",
+    LastUpdated = "lastUpdated"
 }
-export declare class ProjectsGetV2ProjectsProjectIdGetQueryParams extends SpeakeasyBase {
+/**
+ * An enumeration.
+ */
+export declare enum ProjectsGetV2ProjectsProjectIdGetSortSortEnum {
+    Asc = "asc",
+    Desc = "desc"
+}
+export declare class ProjectsGetV2ProjectsProjectIdGetRequest extends SpeakeasyBase {
+    /**
+     *
+     * @remarks
+     *         Limit results by a certain country using two letter country code.
+     *         (ex. ?country=US or ?country=US&country=MX)
+     *
+     */
     country?: string[];
+    /**
+     *
+     * @remarks
+     *         Limit results by a certain country using two letter country code.
+     *         (ex. /US)
+     *
+     */
     countryId?: string;
     entity?: string;
     isAnalysis?: boolean;
     isMobile?: boolean;
+    /**
+     * Change the number of results returned.
+     */
     limit?: number;
     offset?: number;
-    orderBy?: Record<string, any>;
+    /**
+     * An enumeration.
+     */
+    orderBy?: ProjectsGetV2ProjectsProjectIdGetOrderByProjectsOrderEnum;
+    /**
+     * Paginate through results.
+     */
     page?: number;
     parameter?: any[];
     parameterId?: number;
     project?: any[];
+    projectId: number;
     sensorType?: string;
-    sort?: Record<string, any>;
+    /**
+     * Define sort order.
+     */
+    sort?: ProjectsGetV2ProjectsProjectIdGetSortSortEnum;
     sourceName?: string[];
     unit?: string[];
 }
-export declare class ProjectsGetV2ProjectsProjectIdGetRequest extends SpeakeasyBase {
-    pathParams: ProjectsGetV2ProjectsProjectIdGetPathParams;
-    queryParams: ProjectsGetV2ProjectsProjectIdGetQueryParams;
-}
 export declare class ProjectsGetV2ProjectsProjectIdGetResponse extends SpeakeasyBase {
     contentType: string;
-    httpValidationError?: shared.HttpValidationError;
-    openAQProjectsResult?: shared.OpenAqProjectsResult;
+    /**
+     * Validation Error
+     */
+    httpValidationError?: shared.HTTPValidationError;
+    /**
+     * Successful Response
+     */
+    openAQProjectsResult?: shared.OpenAQProjectsResult;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

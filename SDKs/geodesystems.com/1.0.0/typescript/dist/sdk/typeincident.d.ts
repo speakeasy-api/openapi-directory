@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Search API for 'Incident' entry type
+ */
 export declare class TypeIncident {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,10 @@ export declare class TypeIncident {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * searchIncident - Search API for 'Incident' entry type
+     * Search API for 'Incident' entry type
      *
+     * @remarks
      * API to search for entries of type Incident
-    **/
+     */
     searchIncident(req: operations.SearchIncidentRequest, config?: AxiosRequestConfig): Promise<operations.SearchIncidentResponse>;
 }

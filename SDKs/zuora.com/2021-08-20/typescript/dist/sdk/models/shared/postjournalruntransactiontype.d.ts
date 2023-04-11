@@ -1,5 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostJournalRunTransactionTypeTypeEnum {
+/**
+ * Transaction type. Invoice Adjustment is deprecated on Production. Zuora recommends that you use the Invoice Item Adjustment instead.
+ *
+ * @remarks
+ *
+ * If you enable the Invoice Settlement feature, Debit Memo Item, Credit Memo Item, and Credit Memo Application Item are available, Payment and Refund will be replaced by Payment Application and Refund Application.
+ *
+ * If you enable both the Invoice Settlement feature and the Invoice Item Settlement feature, Payment and Refund will be replaced by Payment Application Item and Refund Application Item.
+ *
+ */
+export declare enum POSTJournalRunTransactionTypeTypeEnum {
     InvoiceItem = "Invoice Item",
     TaxationItem = "Taxation Item",
     InvoiceItemAdjustmentInvoice = "Invoice Item Adjustment (Invoice)",
@@ -30,6 +40,16 @@ export declare enum PostJournalRunTransactionTypeTypeEnum {
     ElectronicRefundApplicationItem = "Electronic Refund Application Item",
     ExternalRefundApplicationItem = "External Refund Application Item"
 }
-export declare class PostJournalRunTransactionType extends SpeakeasyBase {
-    type: PostJournalRunTransactionTypeTypeEnum;
+export declare class POSTJournalRunTransactionType extends SpeakeasyBase {
+    /**
+     * Transaction type. Invoice Adjustment is deprecated on Production. Zuora recommends that you use the Invoice Item Adjustment instead.
+     *
+     * @remarks
+     *
+     * If you enable the Invoice Settlement feature, Debit Memo Item, Credit Memo Item, and Credit Memo Application Item are available, Payment and Refund will be replaced by Payment Application and Refund Application.
+     *
+     * If you enable both the Invoice Settlement feature and the Invoice Item Settlement feature, Payment and Refund will be replaced by Payment Application Item and Refund Application Item.
+     *
+     */
+    type: POSTJournalRunTransactionTypeTypeEnum;
 }

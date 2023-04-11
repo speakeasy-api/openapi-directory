@@ -1,17 +1,17 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { ActivityCheckRepoIsStarredByAuthenticatedUserRequest, ActivityCheckRepoIsStarredByAuthenticatedUserResponse } from "openapi/src/sdk/models/operations";
+import {
+  ActivityCheckRepoIsStarredByAuthenticatedUserRequest,
+  ActivityCheckRepoIsStarredByAuthenticatedUserResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: ActivityCheckRepoIsStarredByAuthenticatedUserRequest = {
-  pathParams: {
-    owner: "sit",
-    repo: "voluptas",
-  },
+  owner: "corrupti",
+  repo: "provident",
 };
 
 sdk.activity.activityCheckRepoIsStarredByAuthenticatedUser(req).then((res: ActivityCheckRepoIsStarredByAuthenticatedUserResponse | AxiosError) => {

@@ -1,14 +1,33 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class PepMonitorListSecurity extends SpeakeasyBase {
-    userKey: shared.SchemeUserKey;
+import { AxiosResponse } from "axios";
+/**
+ * Detailed information about the error
+ */
+export declare class PepMonitorListDefaultApplicationJSON extends SpeakeasyBase {
+    code: number;
+    fault?: string;
+    message: string;
+    tag: string;
 }
-export declare class PepMonitorListRequest extends SpeakeasyBase {
-    security: PepMonitorListSecurity;
+export declare class PepMonitorList200ApplicationJSON extends SpeakeasyBase {
+    active?: boolean;
+    caseId?: string;
+    created?: Date;
+    identifier?: string;
+    structured?: string;
+    updated?: string;
+    webhook?: string;
 }
 export declare class PepMonitorListResponse extends SpeakeasyBase {
     contentType: string;
-    pepMonitorList200ApplicationJSONAnies?: any[];
-    pepMonitorListDefaultApplicationJSONAny?: any;
+    /**
+     * View Pep Sanction Report monitors
+     */
+    pepMonitorList200ApplicationJSONObjects?: PepMonitorList200ApplicationJSON[];
+    /**
+     * Detailed information about the error
+     */
+    pepMonitorListDefaultApplicationJSONObject?: PepMonitorListDefaultApplicationJSON;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

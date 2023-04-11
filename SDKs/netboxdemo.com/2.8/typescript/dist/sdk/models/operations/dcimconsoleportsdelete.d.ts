@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DcimConsolePortsDeletePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DcimConsolePortsDeleteRequest extends SpeakeasyBase {
-    pathParams: DcimConsolePortsDeletePathParams;
+    /**
+     * A unique integer value identifying this console port.
+     */
+    id: number;
 }
 export declare class DcimConsolePortsDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

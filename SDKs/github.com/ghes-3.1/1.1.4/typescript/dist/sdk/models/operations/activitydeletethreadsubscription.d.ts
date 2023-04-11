@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ActivityDeleteThreadSubscriptionPathParams extends SpeakeasyBase {
-    threadId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ActivityDeleteThreadSubscriptionRequest extends SpeakeasyBase {
-    pathParams: ActivityDeleteThreadSubscriptionPathParams;
+    /**
+     * The unique identifier of the pull request thread.
+     */
+    threadId: number;
 }
 export declare class ActivityDeleteThreadSubscriptionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Requires authentication
+     */
     basicError?: shared.BasicError;
 }

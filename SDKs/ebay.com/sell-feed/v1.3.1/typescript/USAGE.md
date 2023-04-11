@@ -1,37 +1,34 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateCustomerServiceMetricTaskRequest, CreateCustomerServiceMetricTaskResponse } from "openapi/src/sdk/models/operations";
+import {
+  CreateCustomerServiceMetricTaskRequest,
+  CreateCustomerServiceMetricTaskResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: CreateCustomerServiceMetricTaskRequest = {
-  security: {
-    apiAuth: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  headers: {
-    acceptLanguage: "sit",
-  },
-  request: {
-    feedType: "voluptas",
+  createServiceMetricsTaskRequest: {
+    feedType: "corrupti",
     filterCriteria: {
-      customerServiceMetricType: "culpa",
-      evaluationMarketplaceId: "expedita",
+      customerServiceMetricType: "provident",
+      evaluationMarketplaceId: "distinctio",
       listingCategories: [
-        "dolor",
-        "expedita",
-        "voluptas",
+        "unde",
+        "nulla",
+        "corrupti",
+        "illum",
       ],
       shippingRegions: [
-        "et",
+        "error",
+        "deserunt",
       ],
     },
-    schemaVersion: "nihil",
+    schemaVersion: "suscipit",
   },
+  acceptLanguage: "iure",
 };
 
 sdk.customerServiceMetricTask.createCustomerServiceMetricTask(req).then((res: CreateCustomerServiceMetricTaskResponse | AxiosError) => {

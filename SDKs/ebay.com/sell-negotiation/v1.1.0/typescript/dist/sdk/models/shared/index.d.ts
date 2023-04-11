@@ -4,7 +4,6 @@ export * from "./eligibleitem";
 export * from "./offer";
 export * from "./offereditem";
 export * from "./pagedeligibleitemcollection";
-export * from "./security";
 export * from "./sendoffertointerestedbuyerscollectionresponse";
 export * from "./timeduration";
 export * from "./user";

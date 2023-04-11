@@ -1,20 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class InsertSalesActivityPathParams extends SpeakeasyBase {
-    id: number;
-}
-export declare class InsertSalesActivityRequestBody extends SpeakeasyBase {
-    subject?: string;
-    timestamp?: number;
-    type?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class InsertSalesActivityRequest extends SpeakeasyBase {
-    pathParams: InsertSalesActivityPathParams;
-    request?: InsertSalesActivityRequestBody;
+    newSalesActivity?: shared.NewSalesActivity;
+    /**
+     * Project ID
+     */
+    id: number;
 }
 export declare class InsertSalesActivityResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * BadRequest
+     */
     error?: shared.ErrorT;
+    /**
+     * Acvitity inserted successfully
+     */
     operationStatus?: shared.OperationStatus;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

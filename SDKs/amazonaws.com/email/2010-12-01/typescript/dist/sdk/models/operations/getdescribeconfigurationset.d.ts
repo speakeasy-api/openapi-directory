@@ -1,18 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum GetDescribeConfigurationSetActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeConfigurationSetActionEnum {
     DescribeConfigurationSet = "DescribeConfigurationSet"
 }
-export declare enum GetDescribeConfigurationSetVersionEnum {
+export declare enum GETDescribeConfigurationSetVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetDescribeConfigurationSetQueryParams extends SpeakeasyBase {
-    action: GetDescribeConfigurationSetActionEnum;
+export declare class GETDescribeConfigurationSetRequest extends SpeakeasyBase {
+    action: GETDescribeConfigurationSetActionEnum;
+    /**
+     * A list of configuration set attributes to return.
+     */
     configurationSetAttributeNames?: shared.ConfigurationSetAttributeEnum[];
+    /**
+     * The name of the configuration set to describe.
+     */
     configurationSetName: string;
-    version: GetDescribeConfigurationSetVersionEnum;
-}
-export declare class GetDescribeConfigurationSetHeaders extends SpeakeasyBase {
+    version: GETDescribeConfigurationSetVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +26,9 @@ export declare class GetDescribeConfigurationSetHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeConfigurationSetRequest extends SpeakeasyBase {
-    queryParams: GetDescribeConfigurationSetQueryParams;
-    headers: GetDescribeConfigurationSetHeaders;
-}
-export declare class GetDescribeConfigurationSetResponse extends SpeakeasyBase {
+export declare class GETDescribeConfigurationSetResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

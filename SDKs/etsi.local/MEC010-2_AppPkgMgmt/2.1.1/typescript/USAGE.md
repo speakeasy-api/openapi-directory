@@ -1,26 +1,24 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AppDgetRequest, AppDgetResponse } from "openapi/src/sdk/models/operations";
+import {
+  AppDGETRequest,
+  AppDGETResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: AppDgetRequest = {
-  pathParams: {
-    appDId: "sit",
-  },
-  queryParams: {
-    allFields: "voluptas",
-    excludeDefault: "culpa",
-    excludeFields: "expedita",
-    fields: "consequuntur",
-    filter: "dolor",
-  },
+
+const req: AppDGETRequest = {
+  allFields: "corrupti",
+  appDId: "provident",
+  excludeDefault: "distinctio",
+  excludeFields: "quibusdam",
+  fields: "unde",
+  filter: "nulla",
 };
 
-sdk.appPkgm.appDget(req).then((res: AppDgetResponse | AxiosError) => {
+sdk.appPkgm.appDGET(req).then((res: AppDGETResponse | AxiosError) => {
    // handle response
 });
 ```

@@ -1,9 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PostOriginKeysRequest extends SpeakeasyBase {
-    request?: any;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class PostOriginKeysResponse extends SpeakeasyBase {
-    checkoutUtilityResponse?: any;
+    /**
+     * OK - the request has succeeded.
+     */
+    checkoutUtilityResponse?: shared.CheckoutUtilityResponse;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

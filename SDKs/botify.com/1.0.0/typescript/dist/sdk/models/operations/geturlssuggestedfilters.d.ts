@@ -1,25 +1,36 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetUrlsSuggestedFiltersPathParams extends SpeakeasyBase {
-    analysisSlug: string;
-    projectSlug: string;
-    username: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum GetUrlsSuggestedFiltersAreaEnum {
     Current = "current",
     New = "new"
 }
-export declare class GetUrlsSuggestedFiltersQueryParams extends SpeakeasyBase {
-    area?: GetUrlsSuggestedFiltersAreaEnum;
-}
 export declare class GetUrlsSuggestedFiltersRequest extends SpeakeasyBase {
-    pathParams: GetUrlsSuggestedFiltersPathParams;
-    queryParams: GetUrlsSuggestedFiltersQueryParams;
-    request?: shared.UrlsAggsQuery;
+    urlsAggsQuery?: shared.UrlsAggsQuery;
+    /**
+     * Analysis' identifier
+     */
+    analysisSlug: string;
+    area?: GetUrlsSuggestedFiltersAreaEnum;
+    /**
+     * Project's identifier
+     */
+    projectSlug: string;
+    /**
+     * User's identifier
+     */
+    username: string;
 }
 export declare class GetUrlsSuggestedFiltersResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * error payload
+     */
     defaultPayload?: shared.DefaultPayload;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful operation
+     */
     urlsAggsQuery?: shared.UrlsAggsQuery;
 }

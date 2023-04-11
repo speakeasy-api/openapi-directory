@@ -1,35 +1,85 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetTargetsTargetIdKeysPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetTargetsTargetIdKeysRequest extends SpeakeasyBase {
+    /**
+     * Number of results to return per page
+     */
+    length?: number;
+    /**
+     * Which field to use when ordering the results, prefix with `-` to invert ordering.
+     *
+     * @remarks
+     *
+     */
+    ordering?: string;
+    /**
+     * Page number within the paginated result set
+     */
+    page?: number;
+    /**
+     * Search term
+     */
+    search?: string;
+    /**
+     * Target id
+     */
     targetId: string;
 }
-export declare class GetTargetsTargetIdKeysQueryParams extends SpeakeasyBase {
-    length?: number;
-    ordering?: string;
-    page?: number;
-    search?: string;
+/**
+ * Not found
+ */
+export declare class GetTargetsTargetIdKeys404ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Not found.
+     */
+    detail?: string;
 }
-export declare class GetTargetsTargetIdKeys200ApplicationJson extends SpeakeasyBase {
+/**
+ * Access token is missing or invalid
+ */
+export declare class GetTargetsTargetIdKeys401ApplicationJSON extends SpeakeasyBase {
+    detail?: string;
+}
+/**
+ * API Key list
+ */
+export declare class GetTargetsTargetIdKeys200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Number of objects in the response.
+     */
     count?: number;
+    /**
+     * Number of objects per page.
+     */
     length?: number;
+    /**
+     * Current page.
+     */
     page?: number;
+    /**
+     * Number of pages.
+     */
     pageTotal?: number;
+    /**
+     * API key objects
+     */
     results?: shared.Key[];
-}
-export declare class GetTargetsTargetIdKeys401ApplicationJson extends SpeakeasyBase {
-    detail?: string;
-}
-export declare class GetTargetsTargetIdKeys404ApplicationJson extends SpeakeasyBase {
-    detail?: string;
-}
-export declare class GetTargetsTargetIdKeysRequest extends SpeakeasyBase {
-    pathParams: GetTargetsTargetIdKeysPathParams;
-    queryParams: GetTargetsTargetIdKeysQueryParams;
 }
 export declare class GetTargetsTargetIdKeysResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getTargetsTargetIdKeys200ApplicationJSONObject?: GetTargetsTargetIdKeys200ApplicationJson;
-    getTargetsTargetIdKeys401ApplicationJSONObject?: GetTargetsTargetIdKeys401ApplicationJson;
-    getTargetsTargetIdKeys404ApplicationJSONObject?: GetTargetsTargetIdKeys404ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * API Key list
+     */
+    getTargetsTargetIdKeys200ApplicationJSONObject?: GetTargetsTargetIdKeys200ApplicationJSON;
+    /**
+     * Access token is missing or invalid
+     */
+    getTargetsTargetIdKeys401ApplicationJSONObject?: GetTargetsTargetIdKeys401ApplicationJSON;
+    /**
+     * Not found
+     */
+    getTargetsTargetIdKeys404ApplicationJSONObject?: GetTargetsTargetIdKeys404ApplicationJSON;
 }

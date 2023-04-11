@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum ConfirmConnectionXAmzTargetEnum {
     OvertureServiceConfirmConnection = "OvertureService.ConfirmConnection"
 }
-export declare class ConfirmConnectionHeaders extends SpeakeasyBase {
+export declare class ConfirmConnectionRequest extends SpeakeasyBase {
+    confirmConnectionRequest: shared.ConfirmConnectionRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class ConfirmConnectionHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ConfirmConnectionXAmzTargetEnum;
 }
-export declare class ConfirmConnectionRequest extends SpeakeasyBase {
-    headers: ConfirmConnectionHeaders;
-    request: shared.ConfirmConnectionRequest;
-}
 export declare class ConfirmConnectionResponse extends SpeakeasyBase {
+    /**
+     * Success
+     */
     confirmConnectionResponse?: shared.ConfirmConnectionResponse;
     contentType: string;
+    /**
+     * DirectConnectClientException
+     */
     directConnectClientException?: any;
+    /**
+     * DirectConnectServerException
+     */
     directConnectServerException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

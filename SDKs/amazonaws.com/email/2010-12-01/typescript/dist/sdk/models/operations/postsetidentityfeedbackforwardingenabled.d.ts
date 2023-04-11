@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostSetIdentityFeedbackForwardingEnabledActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTSetIdentityFeedbackForwardingEnabledActionEnum {
     SetIdentityFeedbackForwardingEnabled = "SetIdentityFeedbackForwardingEnabled"
 }
-export declare enum PostSetIdentityFeedbackForwardingEnabledVersionEnum {
+export declare enum POSTSetIdentityFeedbackForwardingEnabledVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostSetIdentityFeedbackForwardingEnabledQueryParams extends SpeakeasyBase {
-    action: PostSetIdentityFeedbackForwardingEnabledActionEnum;
-    version: PostSetIdentityFeedbackForwardingEnabledVersionEnum;
-}
-export declare class PostSetIdentityFeedbackForwardingEnabledHeaders extends SpeakeasyBase {
+export declare class POSTSetIdentityFeedbackForwardingEnabledRequest extends SpeakeasyBase {
+    action: POSTSetIdentityFeedbackForwardingEnabledActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTSetIdentityFeedbackForwardingEnabledVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostSetIdentityFeedbackForwardingEnabledHeaders extends Spe
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostSetIdentityFeedbackForwardingEnabledRequest extends SpeakeasyBase {
-    queryParams: PostSetIdentityFeedbackForwardingEnabledQueryParams;
-    headers: PostSetIdentityFeedbackForwardingEnabledHeaders;
-    request?: Uint8Array;
-}
-export declare class PostSetIdentityFeedbackForwardingEnabledResponse extends SpeakeasyBase {
+export declare class POSTSetIdentityFeedbackForwardingEnabledResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

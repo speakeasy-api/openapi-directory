@@ -1,5 +1,6 @@
 export * from "./deletedocument";
 export * from "./deletepolicymodule";
+export * from "./getconfig";
 export * from "./getdocument";
 export * from "./getdocumentwithpath";
 export * from "./getdocumentwithwebhook";

@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DcimVirtualChassisDeletePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DcimVirtualChassisDeleteRequest extends SpeakeasyBase {
-    pathParams: DcimVirtualChassisDeletePathParams;
+    /**
+     * A unique integer value identifying this virtual chassis.
+     */
+    id: number;
 }
 export declare class DcimVirtualChassisDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

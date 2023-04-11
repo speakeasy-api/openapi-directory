@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetRotateEncryptionKeyActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETRotateEncryptionKeyActionEnum {
     RotateEncryptionKey = "RotateEncryptionKey"
 }
-export declare enum GetRotateEncryptionKeyVersionEnum {
+export declare enum GETRotateEncryptionKeyVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class GetRotateEncryptionKeyQueryParams extends SpeakeasyBase {
-    action: GetRotateEncryptionKeyActionEnum;
+export declare class GETRotateEncryptionKeyRequest extends SpeakeasyBase {
+    action: GETRotateEncryptionKeyActionEnum;
+    /**
+     * <p>The unique identifier of the cluster that you want to rotate the encryption keys for.</p> <p>Constraints: Must be the name of valid cluster that has encryption enabled.</p>
+     */
     clusterIdentifier: string;
-    version: GetRotateEncryptionKeyVersionEnum;
-}
-export declare class GetRotateEncryptionKeyHeaders extends SpeakeasyBase {
+    version: GETRotateEncryptionKeyVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetRotateEncryptionKeyHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetRotateEncryptionKeyRequest extends SpeakeasyBase {
-    queryParams: GetRotateEncryptionKeyQueryParams;
-    headers: GetRotateEncryptionKeyHeaders;
-}
-export declare class GetRotateEncryptionKeyResponse extends SpeakeasyBase {
+export declare class GETRotateEncryptionKeyResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

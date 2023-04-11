@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateFirewallDeleteProtectionXAmzTargetEnum {
     NetworkFirewall20201112UpdateFirewallDeleteProtection = "NetworkFirewall_20201112.UpdateFirewallDeleteProtection"
 }
-export declare class UpdateFirewallDeleteProtectionHeaders extends SpeakeasyBase {
+export declare class UpdateFirewallDeleteProtectionRequest extends SpeakeasyBase {
+    updateFirewallDeleteProtectionRequest: shared.UpdateFirewallDeleteProtectionRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class UpdateFirewallDeleteProtectionHeaders extends SpeakeasyBase
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateFirewallDeleteProtectionXAmzTargetEnum;
 }
-export declare class UpdateFirewallDeleteProtectionRequest extends SpeakeasyBase {
-    headers: UpdateFirewallDeleteProtectionHeaders;
-    request: shared.UpdateFirewallDeleteProtectionRequest;
-}
 export declare class UpdateFirewallDeleteProtectionResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServerError
+     */
     internalServerError?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * InvalidTokenException
+     */
     invalidTokenException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
-    resourceOwnerCheckException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceOwnerCheckException
+     */
+    resourceOwnerCheckException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * Success
+     */
     updateFirewallDeleteProtectionResponse?: shared.UpdateFirewallDeleteProtectionResponse;
 }

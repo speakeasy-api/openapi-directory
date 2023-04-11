@@ -1,5 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbCluster } from "./dbcluster";
-export declare class FailoverDbClusterResult extends SpeakeasyBase {
-    dbCluster?: DbCluster;
+import { DBCluster } from "./dbcluster";
+/**
+ * Success
+ */
+export declare class FailoverDBClusterResult extends SpeakeasyBase {
+    /**
+     * <p>Contains the details of an Amazon Neptune DB cluster.</p> <p>This data type is used as a response element in the <a>DescribeDBClusters</a> action.</p>
+     */
+    dbCluster?: DBCluster;
 }

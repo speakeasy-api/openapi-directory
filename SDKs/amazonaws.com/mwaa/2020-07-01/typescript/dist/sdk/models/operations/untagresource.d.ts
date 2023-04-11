@@ -1,11 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UntagResourcePathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class UntagResourceRequest extends SpeakeasyBase {
+    /**
+     * The Amazon Resource Name (ARN) of the Amazon MWAA environment. For example, <code>arn:aws:airflow:us-east-1:123456789012:environment/MyMWAAEnvironment</code>.
+     */
     resourceArn: string;
-}
-export declare class UntagResourceQueryParams extends SpeakeasyBase {
-    tagKeys: string[];
-}
-export declare class UntagResourceHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +12,29 @@ export declare class UntagResourceHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class UntagResourceRequest extends SpeakeasyBase {
-    pathParams: UntagResourcePathParams;
-    queryParams: UntagResourceQueryParams;
-    headers: UntagResourceHeaders;
+    /**
+     * The key-value tag pair you want to remove. For example, <code>"Environment": "Staging"</code>.
+     */
+    tagKeys: string[];
 }
 export declare class UntagResourceResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * Success
+     */
     untagResourceOutput?: Record<string, any>;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

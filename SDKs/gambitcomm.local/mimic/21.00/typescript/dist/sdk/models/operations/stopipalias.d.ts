@@ -1,14 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class StopIpaliasPathParams extends SpeakeasyBase {
-    ip: string;
-    agentNum: number;
-    port: number;
-}
+import { AxiosResponse } from "axios";
 export declare class StopIpaliasRequest extends SpeakeasyBase {
-    pathParams: StopIpaliasPathParams;
+    /**
+     * IP address , IPv4 or IPv6
+     */
+    ip: string;
+    /**
+     * Agent to stop the IP alias
+     */
+    agentNum: number;
+    /**
+     * SNMP port , 0 or empty for default
+     */
+    port: number;
 }
 export declare class StopIpaliasResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     stopIpalias200ApplicationJSONString?: string;
 }

@@ -2,6 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class StartQueryRequest extends SpeakeasyBase {
     endTime: number;
     limit?: number;
+    logGroupIdentifiers?: string[];
     logGroupName?: string;
     logGroupNames?: string[];
     queryString: string;

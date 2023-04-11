@@ -1,16 +1,16 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CertificateActionRetrieveRequest, CertificateActionRetrieveResponse } from "openapi/src/sdk/models/operations";
+import {
+  CertificateActionRetrieveRequest,
+  CertificateActionRetrieveResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: CertificateActionRetrieveRequest = {
-  pathParams: {
-    certificateId: "sit",
-  },
+  certificateId: "corrupti",
 };
 
 sdk.v1.certificateActionRetrieve(req).then((res: CertificateActionRetrieveResponse | AxiosError) => {

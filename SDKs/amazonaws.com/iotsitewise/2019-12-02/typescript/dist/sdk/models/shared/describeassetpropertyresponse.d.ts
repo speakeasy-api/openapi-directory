@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Property } from "./property";
 import { CompositeModelProperty } from "./compositemodelproperty";
+import { Property } from "./property";
+/**
+ * Success
+ */
 export declare class DescribeAssetPropertyResponse extends SpeakeasyBase {
     assetId: string;
     assetModelId: string;

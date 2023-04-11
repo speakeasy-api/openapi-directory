@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Incident Manager engaging a contact's contact channel.
-**/
+ */
 export declare class Page extends SpeakeasyBase {
     contactArn: string;
     deliveryTime?: Date;

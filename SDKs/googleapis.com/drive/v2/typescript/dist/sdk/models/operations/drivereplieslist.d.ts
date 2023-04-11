@@ -1,32 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DriveRepliesListPathParams extends SpeakeasyBase {
-    commentId: string;
-    fileId: string;
-}
-export declare class DriveRepliesListQueryParams extends SpeakeasyBase {
-    alt?: shared.AltEnum;
-    fields?: string;
-    includeDeleted?: boolean;
-    key?: string;
-    maxResults?: number;
-    oauthToken?: string;
-    pageToken?: string;
-    prettyPrint?: boolean;
-    quotaUser?: string;
-    userIp?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DriveRepliesListSecurityOption1 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class DriveRepliesListSecurityOption2 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class DriveRepliesListSecurityOption3 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class DriveRepliesListSecurity extends SpeakeasyBase {
     option1?: DriveRepliesListSecurityOption1;
@@ -34,12 +19,61 @@ export declare class DriveRepliesListSecurity extends SpeakeasyBase {
     option3?: DriveRepliesListSecurityOption3;
 }
 export declare class DriveRepliesListRequest extends SpeakeasyBase {
-    pathParams: DriveRepliesListPathParams;
-    queryParams: DriveRepliesListQueryParams;
-    security: DriveRepliesListSecurity;
+    /**
+     * Data format for the response.
+     */
+    alt?: shared.AltEnum;
+    /**
+     * The ID of the comment.
+     */
+    commentId: string;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * The ID of the file.
+     */
+    fileId: string;
+    /**
+     * If set, all replies, including deleted replies (with content stripped) will be returned.
+     */
+    includeDeleted?: boolean;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * The maximum number of replies to include in the response, used for paging.
+     */
+    maxResults?: number;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauthToken?: string;
+    /**
+     * The continuation token, used to page through large result sets. To get the next page of results, set this parameter to the value of "nextPageToken" from the previous response.
+     */
+    pageToken?: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    userIp?: string;
 }
 export declare class DriveRepliesListResponse extends SpeakeasyBase {
+    /**
+     * Successful response
+     */
     commentReplyList?: shared.CommentReplyList;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

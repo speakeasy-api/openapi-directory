@@ -1,19 +1,36 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteKeysIdPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteKeysIdRequest extends SpeakeasyBase {
+    /**
+     * Object Id
+     */
     id: string;
 }
-export declare class DeleteKeysId401ApplicationJson extends SpeakeasyBase {
+/**
+ * Not allowed to perform operation
+ */
+export declare class DeleteKeysId403ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error message.
+     */
     detail?: string;
 }
-export declare class DeleteKeysId403ApplicationJson extends SpeakeasyBase {
+/**
+ * Access token is missing or invalid
+ */
+export declare class DeleteKeysId401ApplicationJSON extends SpeakeasyBase {
     detail?: string;
-}
-export declare class DeleteKeysIdRequest extends SpeakeasyBase {
-    pathParams: DeleteKeysIdPathParams;
 }
 export declare class DeleteKeysIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deleteKeysId401ApplicationJSONObject?: DeleteKeysId401ApplicationJson;
-    deleteKeysId403ApplicationJSONObject?: DeleteKeysId403ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Access token is missing or invalid
+     */
+    deleteKeysId401ApplicationJSONObject?: DeleteKeysId401ApplicationJSON;
+    /**
+     * Not allowed to perform operation
+     */
+    deleteKeysId403ApplicationJSONObject?: DeleteKeysId403ApplicationJSON;
 }

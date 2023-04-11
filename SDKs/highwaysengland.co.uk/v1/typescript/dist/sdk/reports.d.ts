@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Reports {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,15 +9,17 @@ export declare class Reports {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * reportsIndex - Gets the daily report.
+     * Gets the daily report.
      *
+     * @remarks
      * Get's the report.
-    **/
+     */
     reportsIndex(req: operations.ReportsIndexRequest, config?: AxiosRequestConfig): Promise<operations.ReportsIndexResponse>;
     /**
-     * getVVersionReportsStartDateToEndDateReportType - Gets the daily report.
+     * Gets the daily report.
      *
+     * @remarks
      * Get's the report.
-    **/
+     */
     getVVersionReportsStartDateToEndDateReportType(req: operations.GetVVersionReportsStartDateToEndDateReportTypeRequest, config?: AxiosRequestConfig): Promise<operations.GetVVersionReportsStartDateToEndDateReportTypeResponse>;
 }

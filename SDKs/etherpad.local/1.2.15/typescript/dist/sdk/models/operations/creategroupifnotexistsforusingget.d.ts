@@ -1,38 +1,61 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CreateGroupIfNotExistsForUsingGetQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class CreateGroupIfNotExistsForUsingGETRequest extends SpeakeasyBase {
     groupMapper?: string;
 }
-export declare class CreateGroupIfNotExistsForUsingGet200ApplicationJsonData extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class CreateGroupIfNotExistsForUsingGet500ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class CreateGroupIfNotExistsForUsingGet401ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+/**
+ * generic api error (code 1)
+ */
+export declare class CreateGroupIfNotExistsForUsingGet400ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+export declare class CreateGroupIfNotExistsForUsingGet200ApplicationJSONData extends SpeakeasyBase {
     groupID?: string;
 }
-export declare class CreateGroupIfNotExistsForUsingGet200ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class CreateGroupIfNotExistsForUsingGet200ApplicationJSON extends SpeakeasyBase {
     code?: number;
-    data?: CreateGroupIfNotExistsForUsingGet200ApplicationJsonData;
+    data?: CreateGroupIfNotExistsForUsingGet200ApplicationJSONData;
     message?: string;
 }
-export declare class CreateGroupIfNotExistsForUsingGet400ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class CreateGroupIfNotExistsForUsingGet401ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class CreateGroupIfNotExistsForUsingGet500ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class CreateGroupIfNotExistsForUsingGetRequest extends SpeakeasyBase {
-    queryParams: CreateGroupIfNotExistsForUsingGetQueryParams;
-}
-export declare class CreateGroupIfNotExistsForUsingGetResponse extends SpeakeasyBase {
+export declare class CreateGroupIfNotExistsForUsingGETResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createGroupIfNotExistsForUsingGET200ApplicationJSONObject?: CreateGroupIfNotExistsForUsingGet200ApplicationJson;
-    createGroupIfNotExistsForUsingGET400ApplicationJSONObject?: CreateGroupIfNotExistsForUsingGet400ApplicationJson;
-    createGroupIfNotExistsForUsingGET401ApplicationJSONObject?: CreateGroupIfNotExistsForUsingGet401ApplicationJson;
-    createGroupIfNotExistsForUsingGET500ApplicationJSONObject?: CreateGroupIfNotExistsForUsingGet500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    createGroupIfNotExistsForUsingGET200ApplicationJSONObject?: CreateGroupIfNotExistsForUsingGet200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    createGroupIfNotExistsForUsingGET400ApplicationJSONObject?: CreateGroupIfNotExistsForUsingGet400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    createGroupIfNotExistsForUsingGET401ApplicationJSONObject?: CreateGroupIfNotExistsForUsingGet401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    createGroupIfNotExistsForUsingGET500ApplicationJSONObject?: CreateGroupIfNotExistsForUsingGet500ApplicationJSON;
 }

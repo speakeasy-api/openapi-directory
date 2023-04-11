@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Describes an event notification subscription created by the <code>CreateEventSubscription</code> operation.
-**/
+ */
 export declare class EventSubscription extends SpeakeasyBase {
     custSubscriptionId?: string;
     customerAwsId?: string;

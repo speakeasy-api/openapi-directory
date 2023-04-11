@@ -1,48 +1,110 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetNetworksIdPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetNetworksIdRequest extends SpeakeasyBase {
+    /**
+     * ID of the network
+     */
     id: number;
 }
 /**
  * Protection configuration for the Network
-**/
-export declare class GetNetworksId200ApplicationJsonNetworkProtection extends SpeakeasyBase {
+ */
+export declare class GetNetworksId200ApplicationJSONNetworkProtection extends SpeakeasyBase {
+    /**
+     * If true, prevents the Network from being deleted
+     */
     delete: boolean;
 }
-export declare class GetNetworksId200ApplicationJsonNetworkRoutes extends SpeakeasyBase {
+export declare class GetNetworksId200ApplicationJSONNetworkRoutes extends SpeakeasyBase {
+    /**
+     * Destination network or host of this route. Must not overlap with an existing ip_range in any subnets or with any destinations in other routes or with the first IP of the networks ip_range or with 172.31.1.1. Must be one of the private IPv4 ranges of RFC1918.
+     */
     destination: string;
+    /**
+     * Gateway for the route. Cannot be the first IP of the networks ip_range and also cannot be 172.31.1.1 as this IP is being used as a gateway for the public network interface of Servers.
+     */
     gateway: string;
 }
-export declare enum GetNetworksId200ApplicationJsonNetworkSubnetsTypeEnum {
+/**
+ * Type of Subnetwork
+ */
+export declare enum GetNetworksId200ApplicationJSONNetworkSubnetsTypeEnum {
     Cloud = "cloud",
     Server = "server",
     Vswitch = "vswitch"
 }
-export declare class GetNetworksId200ApplicationJsonNetworkSubnets extends SpeakeasyBase {
+export declare class GetNetworksId200ApplicationJSONNetworkSubnets extends SpeakeasyBase {
+    /**
+     * Gateway for Servers attached to this subnet. For subnets of type Server this is always the first IP of the network IP range.
+     */
     gateway: string;
+    /**
+     * Range to allocate IPs from. Must be a Subnet of the ip_range of the parent network object and must not overlap with any other subnets or with any destinations in routes. Minimum Network size is /30. We suggest that you pick a bigger Network with a /24 netmask.
+     */
     ipRange?: string;
+    /**
+     * Name of Network zone. The Location object contains the `network_zone` property each Location belongs to.
+     */
     networkZone: string;
-    type: GetNetworksId200ApplicationJsonNetworkSubnetsTypeEnum;
+    /**
+     * Type of Subnetwork
+     */
+    type: GetNetworksId200ApplicationJSONNetworkSubnetsTypeEnum;
 }
-export declare class GetNetworksId200ApplicationJsonNetwork extends SpeakeasyBase {
+export declare class GetNetworksId200ApplicationJSONNetwork extends SpeakeasyBase {
+    /**
+     * Point in time when the Network was created (in ISO-8601 format)
+     */
     created: string;
+    /**
+     * ID of the Network
+     */
     id: number;
+    /**
+     * IPv4 prefix of the whole Network
+     */
     ipRange: string;
+    /**
+     * User-defined labels (key-value pairs)
+     */
     labels: Record<string, any>;
+    /**
+     * Array of IDs of Load Balancers attached to this Network
+     */
     loadBalancers?: number[];
+    /**
+     * Name of the Network
+     */
     name: string;
-    protection: GetNetworksId200ApplicationJsonNetworkProtection;
-    routes: GetNetworksId200ApplicationJsonNetworkRoutes[];
+    /**
+     * Protection configuration for the Network
+     */
+    protection: GetNetworksId200ApplicationJSONNetworkProtection;
+    /**
+     * Array of routes set in this Network
+     */
+    routes: GetNetworksId200ApplicationJSONNetworkRoutes[];
+    /**
+     * Array of IDs of Servers attached to this Network
+     */
     servers: number[];
-    subnets: GetNetworksId200ApplicationJsonNetworkSubnets[];
+    /**
+     * Array subnets allocated in this Network
+     */
+    subnets: GetNetworksId200ApplicationJSONNetworkSubnets[];
 }
-export declare class GetNetworksId200ApplicationJson extends SpeakeasyBase {
-    network?: GetNetworksId200ApplicationJsonNetwork;
-}
-export declare class GetNetworksIdRequest extends SpeakeasyBase {
-    pathParams: GetNetworksIdPathParams;
+/**
+ * The `network` key contains the network
+ */
+export declare class GetNetworksId200ApplicationJSON extends SpeakeasyBase {
+    network?: GetNetworksId200ApplicationJSONNetwork;
 }
 export declare class GetNetworksIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworksId200ApplicationJSONObject?: GetNetworksId200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * The `network` key contains the network
+     */
+    getNetworksId200ApplicationJSONObject?: GetNetworksId200ApplicationJSON;
 }

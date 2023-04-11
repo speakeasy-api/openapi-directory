@@ -13,7 +13,6 @@ export * from "./reportstateandnotificationdevice";
 export * from "./reportstateandnotificationrequest";
 export * from "./reportstateandnotificationresponse";
 export * from "./requestsyncdevicesrequest";
-export * from "./security";
 export * from "./stateandnotificationpayload";
 export * from "./syncrequest";
 export * from "./syncresponse";

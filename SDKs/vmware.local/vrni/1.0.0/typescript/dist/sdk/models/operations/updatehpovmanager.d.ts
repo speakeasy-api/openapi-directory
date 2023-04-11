@@ -1,19 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdateHpovManagerPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UpdateHpovManagerSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
+    apiKeyAuth: string;
 }
 export declare class UpdateHpovManagerRequest extends SpeakeasyBase {
-    pathParams: UpdateHpovManagerPathParams;
-    request?: shared.SwitchDataSource;
-    security: UpdateHpovManagerSecurity;
+    switchDataSource?: shared.SwitchDataSource;
+    /**
+     * entity id
+     */
+    id: string;
 }
 export declare class UpdateHpovManagerResponse extends SpeakeasyBase {
+    /**
+     * Bad Request
+     */
     apiError?: shared.ApiError;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
     switchDataSource?: shared.SwitchDataSource;
 }

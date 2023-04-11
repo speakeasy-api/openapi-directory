@@ -1,16 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetQuoteImageFontListQueryParams extends SpeakeasyBase {
-    start?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetQuoteImageFontListSecurity extends SpeakeasyBase {
-    xTheySaidSoApiSecret: shared.SchemeXTheySaidSoApiSecret;
+    xTheySaidSoApiSecret: string;
 }
 export declare class GetQuoteImageFontListRequest extends SpeakeasyBase {
-    queryParams: GetQuoteImageFontListQueryParams;
-    security: GetQuoteImageFontListSecurity;
+    /**
+     * Response is paged. This parameter determines where the response should start.
+     */
+    start?: number;
 }
 export declare class GetQuoteImageFontListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

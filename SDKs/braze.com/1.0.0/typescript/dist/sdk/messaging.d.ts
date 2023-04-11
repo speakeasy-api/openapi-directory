@@ -1,5 +1,16 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * The Braze messaging API provides you with two distinct options for sending messages to your users. You can provide the message contents and configuration in the API request with the /messages/send and /messages/schedule endpoints. Alternatively, you can manage the details of your message with an API-Triggered Delivery campaign in the dashboard and just control when and to whom it is sent with the campaigns/trigger/send and campaigns/trigger/schedule endpoints. The following sections will detail the request specification for both methods.
+ *
+ * @remarks
+ *
+ * The examples below contain the URL https://rest.iad-01.braze.com, but some customers will need to use a different endpoint URL, for example if you are hosted in Braze’s EU data center or have a dedicated Braze installation. Your Success Manager will inform you if you should use a different endpoint URL.
+ *
+ * Similarly to other campaigns, you can limit the number of times a particular user can receive a Messaging API campaign by configuring re-eligibility settings in the Braze Dashboard. Braze will not deliver API messages to users that haven’t become re-eligible for the campaign regardless of how many API requests are sent.
+ *
+ *
+ */
 export declare class Messaging {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +20,9 @@ export declare class Messaging {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getUpcomingScheduledCampaignsAndCanvases - Get Upcoming Scheduled Campaigns and Canvases
+     * Get Upcoming Scheduled Campaigns and Canvases
      *
+     * @remarks
      * You can view a JSON list of upcoming and scheduled Campaigns and Canvases using the following information and parameters. The endpoint will return information about scheduled Campaigns and entry Canvases between now and the designated end_time (ISO 8601 format) specified in the request. Daily, recurring messages will only appear once with their next occurrence. Results returned in this endpoint are only for Campaigns and Canvases created and scheduled in Braze.
      *
      * ## Response
@@ -41,11 +53,12 @@ export declare class Messaging {
      *     ]
      * }
      * ```
-    **/
+     */
     getUpcomingScheduledCampaignsAndCanvases(req: operations.GetUpcomingScheduledCampaignsAndCanvasesRequest, config?: AxiosRequestConfig): Promise<operations.GetUpcomingScheduledCampaignsAndCanvasesResponse>;
     /**
-     * scheduleApiTriggeredCanvases - Schedule API Triggered Canvases
+     * Schedule API Triggered Canvases
      *
+     * @remarks
      * Use this endpoint to trigger API Triggered Canvases, which are created on the Dashboard and initiated via the API. You can pass in `canvas_entry_properties` that will be templated into the messages sent by the first steps of the Canvas.
      *
      * This endpoint allows you to schedule Canvas messages (up to 90 days in advance) via API Triggered delivery, allowing you to decide what action should trigger the message to be sent. Please note that to send messages with this endpoint, you must have a Canvas ID, created when you build a Canvas.
@@ -69,6 +82,6 @@ export declare class Messaging {
      * - [Broadcast](https://www.braze.com/docs/api/parameters/#broadcast)
      * - [Trigger Properties](https://www.braze.com/docs/api/objects_filters/trigger_properties_object/)
      * - [Schedule Object](https://www.braze.com/docs/api/objects_filters/schedule_object/)
-    **/
-    scheduleApiTriggeredCanvases(req: operations.ScheduleApiTriggeredCanvasesRequest, config?: AxiosRequestConfig): Promise<operations.ScheduleApiTriggeredCanvasesResponse>;
+     */
+    scheduleApiTriggeredCanvases(req: operations.ScheduleApiTriggeredCanvasesRequestBody, config?: AxiosRequestConfig): Promise<operations.ScheduleApiTriggeredCanvasesResponse>;
 }

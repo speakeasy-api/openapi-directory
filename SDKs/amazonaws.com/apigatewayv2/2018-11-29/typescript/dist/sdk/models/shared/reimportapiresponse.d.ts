@@ -1,30 +1,40 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * A CORS configuration. Supported only for HTTP APIs.
-**/
+ */
 export declare class ReimportApiResponseCorsConfiguration extends SpeakeasyBase {
-    allowCredentials?: Record<string, any>;
-    allowHeaders?: Record<string, any>;
-    allowMethods?: Record<string, any>;
-    allowOrigins?: Record<string, any>;
-    exposeHeaders?: Record<string, any>;
-    maxAge?: Record<string, any>;
+    allowCredentials?: boolean;
+    allowHeaders?: string[];
+    allowMethods?: string[];
+    allowOrigins?: string[];
+    exposeHeaders?: string[];
+    maxAge?: number;
 }
+/**
+ * The API protocol.
+ */
+export declare enum ReimportApiResponseProtocolTypeEnum {
+    Websocket = "WEBSOCKET",
+    Http = "HTTP"
+}
+/**
+ * Success
+ */
 export declare class ReimportApiResponse extends SpeakeasyBase {
-    apiEndpoint?: Record<string, any>;
-    apiGatewayManaged?: Record<string, any>;
-    apiId?: Record<string, any>;
-    apiKeySelectionExpression?: Record<string, any>;
+    apiEndpoint?: string;
+    apiGatewayManaged?: boolean;
+    apiId?: string;
+    apiKeySelectionExpression?: string;
     corsConfiguration?: ReimportApiResponseCorsConfiguration;
-    createdDate?: Record<string, any>;
-    description?: Record<string, any>;
-    disableExecuteApiEndpoint?: Record<string, any>;
-    disableSchemaValidation?: Record<string, any>;
-    importInfo?: Record<string, any>;
-    name?: Record<string, any>;
-    protocolType?: Record<string, any>;
-    routeSelectionExpression?: Record<string, any>;
+    createdDate?: Date;
+    description?: string;
+    disableExecuteApiEndpoint?: boolean;
+    disableSchemaValidation?: boolean;
+    importInfo?: string[];
+    name?: string;
+    protocolType?: ReimportApiResponseProtocolTypeEnum;
+    routeSelectionExpression?: string;
     tags?: Record<string, string>;
-    version?: Record<string, any>;
-    warnings?: Record<string, any>;
+    version?: string;
+    warnings?: string[];
 }

@@ -6,34 +6,37 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/apigee.net/marketcheck-cars/2.01/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/apigee.net/marketcheck-cars/2.01/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CrmCheckRequest, CrmCheckResponse } from "openapi/src/sdk/models/operations";
+import {
+  CrmCheckRequest,
+  CrmCheckResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
+  security: {
+    password: "YOUR_PASSWORD_HERE",
+    username: "YOUR_USERNAME_HERE",
+  },
+});
 
-
-const sdk = new SDK();
-    
 const req: CrmCheckRequest = {
-  pathParams: {
-    vin: "sit",
-  },
-  queryParams: {
-    apiKey: "voluptas",
-    saleDate: "culpa",
-  },
+  apiKey: "corrupti",
+  saleDate: "provident",
+  vin: "distinctio",
 };
 
 sdk.crmCleanseAPI.crmCheck(req).then((res: CrmCheckResponse | AxiosError) => {
@@ -43,17 +46,18 @@ sdk.crmCleanseAPI.crmCheck(req).then((res: CrmCheckResponse | AxiosError) => {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### CRM Cleanse API
+
+### crmCleanseAPI
 
 * `crmCheck` - CRM check of a particular vin
 
-### Car Cached Image
+### carCachedImage
 
 * `getCachedImage` - Fetch cached image
 
-### Car Search
+### carSearch
 
 * `autoComplete` - API for auto-completion of inputs
 * `getListing` - Listing by id
@@ -64,36 +68,47 @@ sdk.crmCleanseAPI.crmCheck(req).then((res: CrmCheckResponse | AxiosError) => {
 * `getListingCarFsboId` - Listing by id
 * `getListingCarFsboIdExtra` - Long text Listings attributes for Listing with the given id
 * `getListingCarFsboIdMedia` - Listing media by id
+* `getListingCarUkId` - Listing by id
+* `getListingCarUkIdExtra` - Long text Listings attributes for Listing with the given id
+* `getListingCarUkIdMedia` - Listing media by id
 * `getListingCarIdExtra` - Long text Listings attributes for Listing with the given id
 * `getListingCarIdMedia` - Listing media by id
+* `getSearchCarActive` - Gets active car listings for the given search criteria
 * `getSearchCarAuctionActive` - Gets active auction car listings for the given search criteria
 * `getSearchCarFsboActive` - Gets active private party car listings for the given search criteria
 * `getSearchCarRecents` - Gets Recent car listings for the given search criteria
-* `search` - Gets active car listings for the given search criteria
+* `getSearchCarUkRecents` - Gets Recent UK car listings for the given search criteria
+* `search` - Gets active car listings in UK for the given search criteria
 
-### Cars History API
+### carsHistoryAPI
 
 * `getCarHistory` - Get a cars online listing history
+* `getHistoryCarUkVrm` - Get a cars online listing history
 
-### Cars Market API
+### carsMarketAPI
 
+* `fareValue` - Predict fare value of car for UK based on YMMT & miles
 * `getDailyStats` - Price, Miles and Days on Market stats
-* `getMds` - Market Days Supply
+* `getMDS` - Market Days Supply
 * `getPopularCars` - Get make model wise top 50 popular cars on national, state, city level
 * `getSalesCount` - Get sales count by make, model, year, trim or taxonomy vin
+* `predictCarPrice` - Predict car price based on it's specifications
+* `predictUkCarPrice` - Predict car price for UK based on it's specifications
 
-### Dealer API
+### dealerAPI
 
 * `dealerSearch` - Find car dealers around
 * `getDealer` - Dealer by id
+* `getDealerCarUkId` - Dealer by id
 * `getDealerHeavyEquipmentId` - Dealer by id
 * `getDealerMotorcycleId` - Dealer by id
 * `getDealerRvId` - Dealer by id
+* `getDealersCarUk` - Find car dealers around
 * `getDealersHeavyEquipment` - Find car dealers around
 * `getDealersMotorcycle` - Find car dealers around
 * `getDealersRv` - Find car dealers around
 
-### Heavy Equipment Search
+### heavyEquipmentSearch
 
 * `getListingHeavyEquipmentId` - Heavy equipment listing by id
 * `getListingHeavyEquipmentIdExtra` - Long text Heavy equipment Listings attributes for Listing with the given id
@@ -101,7 +116,7 @@ sdk.crmCleanseAPI.crmCheck(req).then((res: CrmCheckResponse | AxiosError) => {
 * `getSearchHeavyEquipmentActive` - Gets active heavy equipment listings for the given search criteria
 * `getSearchHeavyEquipmentAutoComplete` - API for auto-completion of inputs
 
-### Motorcycle Search
+### motorcycleSearch
 
 * `getListingMotorcycleId` - Motorcycle listing by id
 * `getListingMotorcycleIdExtra` - Long text Motorcycle Listings attributes for Listing with the given id
@@ -109,34 +124,55 @@ sdk.crmCleanseAPI.crmCheck(req).then((res: CrmCheckResponse | AxiosError) => {
 * `getSearchMotorcycleActive` - Gets active motorcycle listings for the given search criteria
 * `getSearchMotorcycleAutoComplete` - API for auto-completion of inputs
 
-### OEM Incentive Search
+### oemIncentiveSearch
 
-* `getSearchCarIncentiveOem` - Gets oem incentive listings for the given search criteria
+* `oemSearch` - Gets oem incentive listings for the given search criteria
 
-### RV Search
+### rvSearch
 
+* `getListingRvUkId` - RV listing by id
+* `getListingRvUkIdExtra` - Long text RV Listings attributes for Listing with the given id
+* `getListingRvUkIdMedia` - Listing media by id
 * `getListingRvId` - RV listing by id
 * `getListingRvIdExtra` - Long text RV Listings attributes for Listing with the given id
 * `getListingRvIdMedia` - Listing media by id
 * `getSearchRvActive` - Gets active RV listings for the given search criteria
 * `getSearchRvAutoComplete` - API for auto-completion of inputs
+* `getSearchRvUkActive` - Gets active RV listings for the given search criteria
 
-### Rank Car Listings
+### rankCarListings
 
 * `rankCar` - Compute relative rank for car listings.
 * `searchAndRankCar` - Compute relative rank for car listings.
 
-### Recall Search
+### recallSearch
 
 * `getRecallHistory` - Recall info by vin
 
-### VIN Decoder API
+### vinDecoderAPI
 
 * `decode` - VIN Decoder
-* `decodeViaEpi` - EPI VIN Decoder
+* `decodeViaEPI` - EPI VIN Decoder
+* `decodeViaNeoVIN` - NeoVIN Decoder
 * `getTaxonomyTerms` - API for getting terms from taxonomy
 * `getSpecsCarAutoComplete` - API for auto-completion of inputs based on taxonomy
 
+### clientFilters
+
+* `get` - get client filters
+* `set` - set client filters
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

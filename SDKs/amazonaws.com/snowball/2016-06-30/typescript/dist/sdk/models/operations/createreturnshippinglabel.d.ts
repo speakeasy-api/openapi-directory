@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum CreateReturnShippingLabelXAmzTargetEnum {
-    AwsieSnowballJobManagementServiceCreateReturnShippingLabel = "AWSIESnowballJobManagementService.CreateReturnShippingLabel"
+    AWSIESnowballJobManagementServiceCreateReturnShippingLabel = "AWSIESnowballJobManagementService.CreateReturnShippingLabel"
 }
-export declare class CreateReturnShippingLabelHeaders extends SpeakeasyBase {
+export declare class CreateReturnShippingLabelRequest extends SpeakeasyBase {
+    createReturnShippingLabelRequest: shared.CreateReturnShippingLabelRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class CreateReturnShippingLabelHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: CreateReturnShippingLabelXAmzTargetEnum;
 }
-export declare class CreateReturnShippingLabelRequest extends SpeakeasyBase {
-    headers: CreateReturnShippingLabelHeaders;
-    request: shared.CreateReturnShippingLabelRequest;
-}
 export declare class CreateReturnShippingLabelResponse extends SpeakeasyBase {
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     createReturnShippingLabelResult?: shared.CreateReturnShippingLabelResult;
+    /**
+     * InvalidInputCombinationException
+     */
     invalidInputCombinationException?: any;
+    /**
+     * InvalidJobStateException
+     */
     invalidJobStateException?: any;
+    /**
+     * InvalidResourceException
+     */
     invalidResourceException?: any;
+    /**
+     * ReturnShippingLabelAlreadyExistsException
+     */
     returnShippingLabelAlreadyExistsException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

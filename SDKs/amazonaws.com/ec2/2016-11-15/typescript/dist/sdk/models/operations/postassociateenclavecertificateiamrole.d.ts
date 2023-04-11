@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostAssociateEnclaveCertificateIamRoleActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTAssociateEnclaveCertificateIamRoleActionEnum {
     AssociateEnclaveCertificateIamRole = "AssociateEnclaveCertificateIamRole"
 }
-export declare enum PostAssociateEnclaveCertificateIamRoleVersionEnum {
+export declare enum POSTAssociateEnclaveCertificateIamRoleVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostAssociateEnclaveCertificateIamRoleQueryParams extends SpeakeasyBase {
-    action: PostAssociateEnclaveCertificateIamRoleActionEnum;
-    version: PostAssociateEnclaveCertificateIamRoleVersionEnum;
-}
-export declare class PostAssociateEnclaveCertificateIamRoleHeaders extends SpeakeasyBase {
+export declare class POSTAssociateEnclaveCertificateIamRoleRequest extends SpeakeasyBase {
+    action: POSTAssociateEnclaveCertificateIamRoleActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTAssociateEnclaveCertificateIamRoleVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostAssociateEnclaveCertificateIamRoleHeaders extends Speak
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostAssociateEnclaveCertificateIamRoleRequest extends SpeakeasyBase {
-    queryParams: PostAssociateEnclaveCertificateIamRoleQueryParams;
-    headers: PostAssociateEnclaveCertificateIamRoleHeaders;
-    request?: Uint8Array;
-}
-export declare class PostAssociateEnclaveCertificateIamRoleResponse extends SpeakeasyBase {
+export declare class POSTAssociateEnclaveCertificateIamRoleResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

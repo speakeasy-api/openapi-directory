@@ -1,0 +1,49 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeTagsActionEnum {
+    DescribeTags = "DescribeTags"
+}
+export declare enum GETDescribeTagsVersionEnum {
+    TwoThousandAndTwelve1201 = "2012-12-01"
+}
+export declare class GETDescribeTagsRequest extends SpeakeasyBase {
+    action: GETDescribeTagsActionEnum;
+    /**
+     * A value that indicates the starting point for the next set of response records in a subsequent request. If a value is returned in a response, you can retrieve the next set of records by providing this returned marker value in the <code>marker</code> parameter and retrying the command. If the <code>marker</code> field is empty, all response records have been retrieved for the request.
+     */
+    marker?: string;
+    /**
+     * The maximum number or response records to return in each call. If the number of remaining response records exceeds the specified <code>MaxRecords</code> value, a value is returned in a <code>marker</code> field of the response. You can retrieve the next set of records by retrying the command with the returned <code>marker</code> value.
+     */
+    maxRecords?: number;
+    /**
+     * The Amazon Resource Name (ARN) for which you want to describe the tag or tags. For example, <code>arn:aws:redshift:us-east-2:123456789:cluster:t1</code>.
+     */
+    resourceName?: string;
+    /**
+     * <p>The type of resource with which you want to view tags. Valid resource types are: </p> <ul> <li> <p>Cluster</p> </li> <li> <p>CIDR/IP</p> </li> <li> <p>EC2 security group</p> </li> <li> <p>Snapshot</p> </li> <li> <p>Cluster security group</p> </li> <li> <p>Subnet group</p> </li> <li> <p>HSM connection</p> </li> <li> <p>HSM certificate</p> </li> <li> <p>Parameter group</p> </li> <li> <p>Snapshot copy grant</p> </li> </ul> <p>For more information about Amazon Redshift resource types and constructing ARNs, go to <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-overview.html#redshift-iam-access-control-specify-actions">Specifying Policy Elements: Actions, Effects, Resources, and Principals</a> in the Amazon Redshift Cluster Management Guide. </p>
+     */
+    resourceType?: string;
+    /**
+     * A tag key or keys for which you want to return all matching resources that are associated with the specified key or keys. For example, suppose that you have resources tagged with keys called <code>owner</code> and <code>environment</code>. If you specify both of these tag keys in the request, Amazon Redshift returns a response with all resources that have either or both of these tag keys associated with them.
+     */
+    tagKeys?: string[];
+    /**
+     * A tag value or values for which you want to return all matching resources that are associated with the specified value or values. For example, suppose that you have resources tagged with values called <code>admin</code> and <code>test</code>. If you specify both of these tag values in the request, Amazon Redshift returns a response with all resources that have either or both of these tag values associated with them.
+     */
+    tagValues?: string[];
+    version: GETDescribeTagsVersionEnum;
+    xAmzAlgorithm?: string;
+    xAmzContentSha256?: string;
+    xAmzCredential?: string;
+    xAmzDate?: string;
+    xAmzSecurityToken?: string;
+    xAmzSignature?: string;
+    xAmzSignedHeaders?: string;
+}
+export declare class GETDescribeTagsResponse extends SpeakeasyBase {
+    body?: Uint8Array;
+    contentType: string;
+    statusCode: number;
+    rawResponse?: AxiosResponse;
+}

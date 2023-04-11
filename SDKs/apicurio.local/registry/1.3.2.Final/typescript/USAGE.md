@@ -1,20 +1,23 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateArtifactRuleRequest, CreateArtifactRuleResponse } from "openapi/src/sdk/models/operations";
+import {
+  CreateArtifactRuleRequest,
+  CreateArtifactRuleResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  RuleTypeEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: CreateArtifactRuleRequest = {
-  pathParams: {
-    artifactId: "sit",
+  rule: {
+    config: "corrupti",
+    type: RuleTypeEnum.Validity,
   },
-  request: {
-    config: "voluptas",
-    type: "COMPATIBILITY",
-  },
+  artifactId: "provident",
 };
 
 sdk.artifactRules.createArtifactRule(req).then((res: CreateArtifactRuleResponse | AxiosError) => {

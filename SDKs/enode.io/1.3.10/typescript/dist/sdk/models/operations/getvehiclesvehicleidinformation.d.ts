@@ -1,27 +1,42 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetVehiclesVehicleidInformationPathParams extends SpeakeasyBase {
-    vehicleId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetVehiclesVehicleidInformationSecurity extends SpeakeasyBase {
-    userAccessToken?: shared.SchemeUserAccessToken;
-    userAccessToken1?: shared.SchemeUserAccessToken;
+    userAccessToken?: string;
+    userAccessToken1?: string;
+}
+export declare class GetVehiclesVehicleidInformationRequest extends SpeakeasyBase {
+    /**
+     * ID of the Vehicle
+     */
+    vehicleId: string;
 }
 /**
  * Descriptive information about the Vehicle
-**/
-export declare class GetVehiclesVehicleidInformation200ApplicationJson extends SpeakeasyBase {
+ */
+export declare class GetVehiclesVehicleidInformation200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Vehicle brand
+     */
     brand?: string;
+    /**
+     * Vehicle ID
+     */
     id?: string;
+    /**
+     * Vehicle model
+     */
     model?: string;
+    /**
+     * Vehicle production year
+     */
     year?: number;
-}
-export declare class GetVehiclesVehicleidInformationRequest extends SpeakeasyBase {
-    pathParams: GetVehiclesVehicleidInformationPathParams;
-    security: GetVehiclesVehicleidInformationSecurity;
 }
 export declare class GetVehiclesVehicleidInformationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getVehiclesVehicleidInformation200ApplicationJSONObject?: GetVehiclesVehicleidInformation200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Descriptive information about the Vehicle
+     */
+    getVehiclesVehicleidInformation200ApplicationJSONObject?: GetVehiclesVehicleidInformation200ApplicationJSON;
 }

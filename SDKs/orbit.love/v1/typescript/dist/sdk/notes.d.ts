@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Notes {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,15 +9,15 @@ export declare class Notes {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getWorkspaceIdMembersMemberIdNotes - Get the member's notes
-    **/
-    getWorkspaceIdMembersMemberIdNotes(req: operations.GetWorkspaceIdMembersMemberIdNotesRequest, config?: AxiosRequestConfig): Promise<operations.GetWorkspaceIdMembersMemberIdNotesResponse>;
+     * Get the member's notes
+     */
+    getWorkspaceSlugMembersMemberSlugNotes(req: operations.GetWorkspaceSlugMembersMemberSlugNotesRequest, security: operations.GetWorkspaceSlugMembersMemberSlugNotesSecurity, config?: AxiosRequestConfig): Promise<operations.GetWorkspaceSlugMembersMemberSlugNotesResponse>;
     /**
-     * postWorkspaceIdMembersMemberIdNotes - Create a note
-    **/
-    postWorkspaceIdMembersMemberIdNotes(req: operations.PostWorkspaceIdMembersMemberIdNotesRequest, config?: AxiosRequestConfig): Promise<operations.PostWorkspaceIdMembersMemberIdNotesResponse>;
+     * Create a note
+     */
+    postWorkspaceSlugMembersMemberSlugNotes(req: operations.PostWorkspaceSlugMembersMemberSlugNotesRequest, security: operations.PostWorkspaceSlugMembersMemberSlugNotesSecurity, config?: AxiosRequestConfig): Promise<operations.PostWorkspaceSlugMembersMemberSlugNotesResponse>;
     /**
-     * putWorkspaceIdMembersMemberIdNotesId - Update a note
-    **/
-    putWorkspaceIdMembersMemberIdNotesId(req: operations.PutWorkspaceIdMembersMemberIdNotesIdRequest, config?: AxiosRequestConfig): Promise<operations.PutWorkspaceIdMembersMemberIdNotesIdResponse>;
+     * Update a note
+     */
+    putWorkspaceSlugMembersMemberSlugNotesId(req: operations.PutWorkspaceSlugMembersMemberSlugNotesIdRequest, security: operations.PutWorkspaceSlugMembersMemberSlugNotesIdSecurity, config?: AxiosRequestConfig): Promise<operations.PutWorkspaceSlugMembersMemberSlugNotesIdResponse>;
 }

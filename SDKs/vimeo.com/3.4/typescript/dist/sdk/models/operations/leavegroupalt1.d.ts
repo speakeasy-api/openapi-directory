@@ -1,17 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class LeaveGroupAlt1PathParams extends SpeakeasyBase {
-    groupId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class LeaveGroupAlt1Security extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
+    oauth2: string;
 }
 export declare class LeaveGroupAlt1Request extends SpeakeasyBase {
-    pathParams: LeaveGroupAlt1PathParams;
-    security: LeaveGroupAlt1Security;
+    /**
+     * The ID of the group.
+     */
+    groupId: number;
 }
 export declare class LeaveGroupAlt1Response extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The authenticated user owns the group. To remove this user, first apply a new group owner through PATCH.
+     */
     legacyError?: shared.LegacyError;
 }

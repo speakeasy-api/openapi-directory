@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ApplicationStateEnum } from "./applicationstateenum";
+/**
+ * Success
+ */
 export declare class DescribeApplicationResponse extends SpeakeasyBase {
     applicationArn: string;
     applicationCreationDate: number;

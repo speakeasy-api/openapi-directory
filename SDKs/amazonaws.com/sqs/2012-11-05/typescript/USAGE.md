@@ -1,40 +1,47 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetChangeMessageVisibilityRequest, GetChangeMessageVisibilityResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GETAddPermissionRequest,
+  GETAddPermissionResponse,
+  GETAddPermissionActionEnum,
+  GETAddPermissionVersionEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: GetChangeMessageVisibilityRequest = {
-  pathParams: {
-    accountNumber: 8717895732742165505,
-    queueName: "voluptas",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  queryParams: {
-    action: "ChangeMessageVisibility",
-    receiptHandle: "expedita",
-    version: "2012-11-05",
-    visibilityTimeout: 2669985732393126063,
-  },
-  headers: {
-    xAmzAlgorithm: "expedita",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "fugit",
-    xAmzDate: "et",
-    xAmzSecurityToken: "nihil",
-    xAmzSignature: "rerum",
-    xAmzSignedHeaders: "dicta",
-  },
+});
+
+const req: GETAddPermissionRequest = {
+  awsAccountIds: [
+    "provident",
+    "distinctio",
+    "quibusdam",
+  ],
+  accountNumber: 602763,
+  action: GETAddPermissionActionEnum.AddPermission,
+  actions: [
+    "corrupti",
+    "illum",
+    "vel",
+    "error",
+  ],
+  label: "deserunt",
+  queueName: "suscipit",
+  version: GETAddPermissionVersionEnum.TwoThousandAndTwelve1105,
+  xAmzAlgorithm: "iure",
+  xAmzContentSha256: "magnam",
+  xAmzCredential: "debitis",
+  xAmzDate: "ipsa",
+  xAmzSecurityToken: "delectus",
+  xAmzSignature: "tempora",
+  xAmzSignedHeaders: "suscipit",
 };
 
-sdk.getChangeMessageVisibility(req).then((res: GetChangeMessageVisibilityResponse | AxiosError) => {
+sdk.getAddPermission(req).then((res: GETAddPermissionResponse | AxiosError) => {
    // handle response
 });
 ```

@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListGroupsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListGroupsXAmzTargetEnum {
-    AwsIdentityStoreListGroups = "AWSIdentityStore.ListGroups"
+    AWSIdentityStoreListGroups = "AWSIdentityStore.ListGroups"
 }
-export declare class ListGroupsHeaders extends SpeakeasyBase {
+export declare class ListGroupsRequest extends SpeakeasyBase {
+    listGroupsRequest: shared.ListGroupsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,18 +23,32 @@ export declare class ListGroupsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListGroupsXAmzTargetEnum;
 }
-export declare class ListGroupsRequest extends SpeakeasyBase {
-    queryParams: ListGroupsQueryParams;
-    headers: ListGroupsHeaders;
-    request: shared.ListGroupsRequest;
-}
 export declare class ListGroupsResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * Success
+     */
     listGroupsResponse?: shared.ListGroupsResponse;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeValidDbInstanceModificationsActionEnum {
-    DescribeValidDbInstanceModifications = "DescribeValidDBInstanceModifications"
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeValidDBInstanceModificationsActionEnum {
+    DescribeValidDBInstanceModifications = "DescribeValidDBInstanceModifications"
 }
-export declare enum GetDescribeValidDbInstanceModificationsVersionEnum {
+export declare enum GETDescribeValidDBInstanceModificationsVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class GetDescribeValidDbInstanceModificationsQueryParams extends SpeakeasyBase {
-    action: GetDescribeValidDbInstanceModificationsActionEnum;
+export declare class GETDescribeValidDBInstanceModificationsRequest extends SpeakeasyBase {
+    action: GETDescribeValidDBInstanceModificationsActionEnum;
+    /**
+     * The customer identifier or the ARN of your DB instance.
+     */
     dbInstanceIdentifier: string;
-    version: GetDescribeValidDbInstanceModificationsVersionEnum;
-}
-export declare class GetDescribeValidDbInstanceModificationsHeaders extends SpeakeasyBase {
+    version: GETDescribeValidDBInstanceModificationsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDescribeValidDbInstanceModificationsHeaders extends Spea
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeValidDbInstanceModificationsRequest extends SpeakeasyBase {
-    queryParams: GetDescribeValidDbInstanceModificationsQueryParams;
-    headers: GetDescribeValidDbInstanceModificationsHeaders;
-}
-export declare class GetDescribeValidDbInstanceModificationsResponse extends SpeakeasyBase {
+export declare class GETDescribeValidDBInstanceModificationsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,54 +1,63 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateNotificationRuleRequest, CreateNotificationRuleResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CreateNotificationRuleRequest,
+  CreateNotificationRuleResponse,
+  CreateNotificationRuleRequestBodyDetailTypeEnum,
+  CreateNotificationRuleRequestBodyStatusEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: CreateNotificationRuleRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
-    clientRequestToken: "voluptas",
-    detailType: "BASIC",
+});
+
+const req: CreateNotificationRuleRequest = {
+  requestBody: {
+    clientRequestToken: "corrupti",
+    detailType: CreateNotificationRuleRequestBodyDetailTypeEnum.Full,
     eventTypeIds: [
-      "nihil",
+      "quibusdam",
+      "unde",
+      "nulla",
     ],
-    name: "rerum",
-    resource: "dicta",
-    status: "ENABLED",
+    name: "corrupti",
+    resource: "illum",
+    status: CreateNotificationRuleRequestBodyStatusEnum.Enabled,
     tags: {
-      "et": "ut",
+      "deserunt": "suscipit",
+      "iure": "magnam",
+      "debitis": "ipsa",
     },
     targets: [
       {
-        targetAddress: "et",
-        targetType: "voluptate",
+        targetAddress: "tempora",
+        targetType: "suscipit",
       },
       {
-        targetAddress: "iste",
-        targetType: "vitae",
+        targetAddress: "molestiae",
+        targetType: "minus",
       },
       {
-        targetAddress: "totam",
-        targetType: "dolores",
+        targetAddress: "placeat",
+        targetType: "voluptatum",
+      },
+      {
+        targetAddress: "iusto",
+        targetType: "excepturi",
       },
     ],
   },
+  xAmzAlgorithm: "nisi",
+  xAmzContentSha256: "recusandae",
+  xAmzCredential: "temporibus",
+  xAmzDate: "ab",
+  xAmzSecurityToken: "quis",
+  xAmzSignature: "veritatis",
+  xAmzSignedHeaders: "deserunt",
 };
 
 sdk.createNotificationRule(req).then((res: CreateNotificationRuleResponse | AxiosError) => {

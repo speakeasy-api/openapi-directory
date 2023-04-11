@@ -1,10 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListCustomVerificationEmailTemplatesQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListCustomVerificationEmailTemplatesRequest extends SpeakeasyBase {
+    /**
+     * A token returned from a previous call to <code>ListCustomVerificationEmailTemplates</code> to indicate the position in the list of custom verification email templates.
+     */
     nextToken?: string;
+    /**
+     * <p>The number of results to show in a single call to <code>ListCustomVerificationEmailTemplates</code>. If the number of results is larger than the number you specified in this parameter, then the response includes a <code>NextToken</code> element, which you can use to obtain additional results.</p> <p>The value you specify has to be at least 1, and can be no more than 50.</p>
+     */
     pageSize?: number;
-}
-export declare class ListCustomVerificationEmailTemplatesHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +18,20 @@ export declare class ListCustomVerificationEmailTemplatesHeaders extends Speakea
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class ListCustomVerificationEmailTemplatesRequest extends SpeakeasyBase {
-    queryParams: ListCustomVerificationEmailTemplatesQueryParams;
-    headers: ListCustomVerificationEmailTemplatesHeaders;
-}
 export declare class ListCustomVerificationEmailTemplatesResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     listCustomVerificationEmailTemplatesResponse?: shared.ListCustomVerificationEmailTemplatesResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

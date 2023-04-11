@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Provides information about a pending maintenance action for a resource.
-**/
+ */
 export declare class PendingMaintenanceActionDetails extends SpeakeasyBase {
     action?: string;
     autoAppliedAfterDate?: Date;

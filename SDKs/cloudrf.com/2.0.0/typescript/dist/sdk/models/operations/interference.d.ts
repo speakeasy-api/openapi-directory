@@ -1,17 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class InterferenceQueryParams extends SpeakeasyBase {
-    name: string;
-    network: string;
-}
+import { AxiosResponse } from "axios";
 export declare class InterferenceSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
+    apiKeyAuth: string;
 }
 export declare class InterferenceRequest extends SpeakeasyBase {
-    queryParams: InterferenceQueryParams;
-    security: InterferenceSecurity;
+    /**
+     * Interference layer name eg. QRM_map
+     */
+    name: string;
+    /**
+     * Network name eg. Overlapping broadcast stations
+     */
+    network: string;
 }
 export declare class InterferenceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

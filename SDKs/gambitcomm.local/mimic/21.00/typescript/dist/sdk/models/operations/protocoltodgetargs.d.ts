@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolTodGetArgsPathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolTodGetArgsRequest extends SpeakeasyBase {
-    pathParams: ProtocolTodGetArgsPathParams;
+    /**
+     * Agent to show the TOD argument structure
+     */
+    agentNum: number;
 }
 export declare class ProtocolTodGetArgsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolTodGetArgs200ApplicationJSONObject?: Record<string, any>;
 }

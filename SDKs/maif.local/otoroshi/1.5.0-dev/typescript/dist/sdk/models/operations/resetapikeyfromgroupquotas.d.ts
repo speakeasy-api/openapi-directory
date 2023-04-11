@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ResetApiKeyFromGroupQuotasPathParams extends SpeakeasyBase {
-    clientId: string;
-    groupId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ResetApiKeyFromGroupQuotasSecurity extends SpeakeasyBase {
-    otoroshiAuth: shared.SchemeOtoroshiAuth;
+    password: string;
+    username: string;
 }
 export declare class ResetApiKeyFromGroupQuotasRequest extends SpeakeasyBase {
-    pathParams: ResetApiKeyFromGroupQuotasPathParams;
-    security: ResetApiKeyFromGroupQuotasSecurity;
+    /**
+     * the api key id
+     */
+    clientId: string;
+    /**
+     * The api key group id
+     */
+    groupId: string;
 }
 export declare class ResetApiKeyFromGroupQuotasResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful operation
+     */
     quotas?: shared.Quotas;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -40,7 +40,6 @@ export * from "./request";
 export * from "./response";
 export * from "./rowquestion";
 export * from "./scalequestion";
-export * from "./security";
 export * from "./textanswer";
 export * from "./textanswers";
 export * from "./textlink";

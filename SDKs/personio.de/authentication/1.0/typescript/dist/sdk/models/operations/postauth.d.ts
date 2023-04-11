@@ -1,14 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PostAuthQueryParams extends SpeakeasyBase {
-    clientId: string;
-    clientSecret: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PostAuthRequest extends SpeakeasyBase {
-    queryParams: PostAuthQueryParams;
+    /**
+     * Client id of the downloaded credentials file
+     */
+    clientId: string;
+    /**
+     * Client secret of the downloaded credentials file
+     */
+    clientSecret: string;
 }
 export declare class PostAuthResponse extends SpeakeasyBase {
     authenticationTokenResponse?: shared.AuthenticationTokenResponse;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

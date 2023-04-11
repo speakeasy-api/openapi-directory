@@ -1,10 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListGatewaysQueryParams extends SpeakeasyBase {
-    maxResults?: number;
-    nextToken?: string;
-}
-export declare class ListGatewaysHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListGatewaysRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,16 +9,33 @@ export declare class ListGatewaysHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class ListGatewaysRequest extends SpeakeasyBase {
-    queryParams: ListGatewaysQueryParams;
-    headers: ListGatewaysHeaders;
+    /**
+     * <p>The maximum number of results to return for each paginated request.</p> <p>Default: 50</p>
+     */
+    maxResults?: number;
+    /**
+     * The token to be used for the next set of paginated results.
+     */
+    nextToken?: string;
 }
 export declare class ListGatewaysResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalFailureException
+     */
     internalFailureException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * Success
+     */
     listGatewaysResponse?: shared.ListGatewaysResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

@@ -1,12 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * The state of the association.
-**/
-export declare class AssociateRouteTableResultAssociationState extends SpeakeasyBase {
-    state?: Record<string, any>;
-    statusMessage?: Record<string, any>;
+ */
+export declare enum AssociateRouteTableResultAssociationStateStateEnum {
+    Associating = "associating",
+    Associated = "associated",
+    Disassociating = "disassociating",
+    Disassociated = "disassociated",
+    Failed = "failed"
 }
+/**
+ * The state of the association.
+ */
+export declare class AssociateRouteTableResultAssociationState extends SpeakeasyBase {
+    state?: AssociateRouteTableResultAssociationStateStateEnum;
+    statusMessage?: string;
+}
+/**
+ * Success
+ */
 export declare class AssociateRouteTableResult extends SpeakeasyBase {
-    associationId?: Record<string, any>;
+    associationId?: string;
     associationState?: AssociateRouteTableResultAssociationState;
 }

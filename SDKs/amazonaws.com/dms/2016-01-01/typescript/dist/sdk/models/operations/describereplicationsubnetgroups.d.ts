@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeReplicationSubnetGroupsQueryParams extends SpeakeasyBase {
-    marker?: string;
-    maxRecords?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum DescribeReplicationSubnetGroupsXAmzTargetEnum {
-    AmazonDmSv20160101DescribeReplicationSubnetGroups = "AmazonDMSv20160101.DescribeReplicationSubnetGroups"
+    AmazonDMSv20160101DescribeReplicationSubnetGroups = "AmazonDMSv20160101.DescribeReplicationSubnetGroups"
 }
-export declare class DescribeReplicationSubnetGroupsHeaders extends SpeakeasyBase {
+export declare class DescribeReplicationSubnetGroupsRequest extends SpeakeasyBase {
+    describeReplicationSubnetGroupsMessage: shared.DescribeReplicationSubnetGroupsMessage;
+    /**
+     * Pagination token
+     */
+    marker?: string;
+    /**
+     * Pagination limit
+     */
+    maxRecords?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,14 +23,16 @@ export declare class DescribeReplicationSubnetGroupsHeaders extends SpeakeasyBas
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeReplicationSubnetGroupsXAmzTargetEnum;
 }
-export declare class DescribeReplicationSubnetGroupsRequest extends SpeakeasyBase {
-    queryParams: DescribeReplicationSubnetGroupsQueryParams;
-    headers: DescribeReplicationSubnetGroupsHeaders;
-    request: shared.DescribeReplicationSubnetGroupsMessage;
-}
 export declare class DescribeReplicationSubnetGroupsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeReplicationSubnetGroupsResponse?: shared.DescribeReplicationSubnetGroupsResponse;
+    /**
+     * ResourceNotFoundFault
+     */
     resourceNotFoundFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

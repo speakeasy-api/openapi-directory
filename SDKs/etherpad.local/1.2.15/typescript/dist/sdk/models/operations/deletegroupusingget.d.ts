@@ -1,35 +1,58 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteGroupUsingGetQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteGroupUsingGETRequest extends SpeakeasyBase {
     groupID?: string;
 }
-export declare class DeleteGroupUsingGet200ApplicationJson extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class DeleteGroupUsingGet500ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class DeleteGroupUsingGet400ApplicationJson extends SpeakeasyBase {
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class DeleteGroupUsingGet401ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class DeleteGroupUsingGet401ApplicationJson extends SpeakeasyBase {
+/**
+ * generic api error (code 1)
+ */
+export declare class DeleteGroupUsingGet400ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class DeleteGroupUsingGet500ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class DeleteGroupUsingGet200ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class DeleteGroupUsingGetRequest extends SpeakeasyBase {
-    queryParams: DeleteGroupUsingGetQueryParams;
-}
-export declare class DeleteGroupUsingGetResponse extends SpeakeasyBase {
+export declare class DeleteGroupUsingGETResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deleteGroupUsingGET200ApplicationJSONObject?: DeleteGroupUsingGet200ApplicationJson;
-    deleteGroupUsingGET400ApplicationJSONObject?: DeleteGroupUsingGet400ApplicationJson;
-    deleteGroupUsingGET401ApplicationJSONObject?: DeleteGroupUsingGet401ApplicationJson;
-    deleteGroupUsingGET500ApplicationJSONObject?: DeleteGroupUsingGet500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    deleteGroupUsingGET200ApplicationJSONObject?: DeleteGroupUsingGet200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    deleteGroupUsingGET400ApplicationJSONObject?: DeleteGroupUsingGet400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    deleteGroupUsingGET401ApplicationJSONObject?: DeleteGroupUsingGet401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    deleteGroupUsingGET500ApplicationJSONObject?: DeleteGroupUsingGet500ApplicationJSON;
 }

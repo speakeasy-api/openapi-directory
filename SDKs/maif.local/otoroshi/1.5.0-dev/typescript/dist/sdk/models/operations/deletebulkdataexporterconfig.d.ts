@@ -1,25 +1,38 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class DeletebulkDataExporterConfigSecurity extends SpeakeasyBase {
-    otoroshiAuth: shared.SchemeOtoroshiAuth;
+    password: string;
+    username: string;
 }
-export declare enum DeletebulkDataExporterConfig200ApplicationJsonStatusEnum {
+/**
+ * Status
+ */
+export declare enum DeletebulkDataExporterConfig200ApplicationJSONStatusEnum {
     TwoHundred = "200"
 }
 /**
  * The bulk response
-**/
-export declare class DeletebulkDataExporterConfig200ApplicationJson extends SpeakeasyBase {
+ */
+export declare class DeletebulkDataExporterConfig200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Whether the action was carried out correctly or not
+     */
     deleted?: boolean;
+    /**
+     * Data exporter id
+     */
     id?: boolean;
-    status?: DeletebulkDataExporterConfig200ApplicationJsonStatusEnum;
-}
-export declare class DeletebulkDataExporterConfigRequest extends SpeakeasyBase {
-    request?: shared.Patch[];
-    security: DeletebulkDataExporterConfigSecurity;
+    /**
+     * Status
+     */
+    status?: DeletebulkDataExporterConfig200ApplicationJSONStatusEnum;
 }
 export declare class DeletebulkDataExporterConfigResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deletebulkDataExporterConfig200ApplicationJSONObjects?: DeletebulkDataExporterConfig200ApplicationJson[];
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful operation
+     */
+    deletebulkDataExporterConfig200ApplicationJSONObjects?: DeletebulkDataExporterConfig200ApplicationJSON[];
 }

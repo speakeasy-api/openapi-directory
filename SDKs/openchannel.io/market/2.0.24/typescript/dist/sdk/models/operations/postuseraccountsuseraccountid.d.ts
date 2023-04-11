@@ -1,19 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PostUserAccountsUserAccountIdPathParams extends SpeakeasyBase {
-    userAccountId: string;
-}
-export declare class PostUserAccountsUserAccountIdQueryParams extends SpeakeasyBase {
-    customData?: string;
-    email?: string;
-    name?: string;
-    userId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PostUserAccountsUserAccountIdRequest extends SpeakeasyBase {
-    pathParams: PostUserAccountsUserAccountIdPathParams;
-    queryParams: PostUserAccountsUserAccountIdQueryParams;
+    /**
+     * A custom JSON object that you can create and attach to this record
+     */
+    customData?: string;
+    /**
+     * The contact email address
+     */
+    email?: string;
+    /**
+     * The user account name
+     */
+    name?: string;
+    /**
+     * The id of the user account to be updated
+     */
+    userAccountId: string;
+    /**
+     * The Id of the user that this account belongs to
+     */
+    userId: string;
 }
 export declare class PostUserAccountsUserAccountIdResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

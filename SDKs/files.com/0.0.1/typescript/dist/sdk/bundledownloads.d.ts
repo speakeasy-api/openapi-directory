@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Operations about bundle_downloads
+ */
 export declare class BundleDownloads {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,10 @@ export declare class BundleDownloads {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getBundleDownloads - List Bundle Downloads
-     *
      * List Bundle Downloads
-    **/
+     *
+     * @remarks
+     * List Bundle Downloads
+     */
     getBundleDownloads(req: operations.GetBundleDownloadsRequest, config?: AxiosRequestConfig): Promise<operations.GetBundleDownloadsResponse>;
 }

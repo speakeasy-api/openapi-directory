@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeSafetyRulePathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DescribeSafetyRuleRequest extends SpeakeasyBase {
+    /**
+     * The ARN of the safety rule.
+     */
     safetyRuleArn: string;
-}
-export declare class DescribeSafetyRuleHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,14 +14,20 @@ export declare class DescribeSafetyRuleHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DescribeSafetyRuleRequest extends SpeakeasyBase {
-    pathParams: DescribeSafetyRulePathParams;
-    headers: DescribeSafetyRuleHeaders;
-}
 export declare class DescribeSafetyRuleResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeSafetyRuleResponse?: shared.DescribeSafetyRuleResponse;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

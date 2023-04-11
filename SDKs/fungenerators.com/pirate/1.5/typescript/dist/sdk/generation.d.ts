@@ -1,5 +1,10 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Generate names, insults, lorem ipsum etc
+ *
+ * @see {@link http://fungenerators.com/api/pirate/} - Find out more
+ */
 export declare class Generation {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,15 +14,15 @@ export declare class Generation {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getPirateGenerateInsult - Generate random pirate insults.
-    **/
-    getPirateGenerateInsult(req: operations.GetPirateGenerateInsultRequest, config?: AxiosRequestConfig): Promise<operations.GetPirateGenerateInsultResponse>;
+     * Generate random pirate insults.
+     */
+    getPirateGenerateInsult(req: operations.GetPirateGenerateInsultRequest, security: operations.GetPirateGenerateInsultSecurity, config?: AxiosRequestConfig): Promise<operations.GetPirateGenerateInsultResponse>;
     /**
-     * getPirateGenerateLoremIpsum - Generate pirate lorem ipsum.
-    **/
-    getPirateGenerateLoremIpsum(req: operations.GetPirateGenerateLoremIpsumRequest, config?: AxiosRequestConfig): Promise<operations.GetPirateGenerateLoremIpsumResponse>;
+     * Generate pirate lorem ipsum.
+     */
+    getPirateGenerateLoremIpsum(req: operations.GetPirateGenerateLoremIpsumRequest, security: operations.GetPirateGenerateLoremIpsumSecurity, config?: AxiosRequestConfig): Promise<operations.GetPirateGenerateLoremIpsumResponse>;
     /**
-     * getPirateGenerateName - Generate random pirate names.
-    **/
-    getPirateGenerateName(req: operations.GetPirateGenerateNameRequest, config?: AxiosRequestConfig): Promise<operations.GetPirateGenerateNameResponse>;
+     * Generate random pirate names.
+     */
+    getPirateGenerateName(req: operations.GetPirateGenerateNameRequest, security: operations.GetPirateGenerateNameSecurity, config?: AxiosRequestConfig): Promise<operations.GetPirateGenerateNameResponse>;
 }

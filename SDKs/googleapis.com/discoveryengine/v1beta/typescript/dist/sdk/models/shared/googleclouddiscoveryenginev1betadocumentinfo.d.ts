@@ -1,10 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Detailed document information associated with a user event.
-**/
+ */
 export declare class GoogleCloudDiscoveryengineV1betaDocumentInfo extends SpeakeasyBase {
+    /**
+     * Required. The Document resource ID.
+     */
     id?: string;
+    /**
+     * Required. The Document resource full name, of the form: projects/{project\_id}/locations/{location}/collections/{collection\_id}/dataStores/{data\_store\_id}/branches/{branch\_id}/documents/{document\_id}
+     */
     name?: string;
+    /**
+     * The promotion IDs associated with this Document. Currently, this field is restricted to at most one ID.
+     */
     promotionIds?: string[];
+    /**
+     * Quantity of the Document associated with the user event. Defaults to 1. For example, this field will be 2 if two quantities of the same Document are involved in a `add-to-cart` event. Required for events of the following event types: * `add-to-cart` * `purchase`
+     */
     quantity?: number;
 }

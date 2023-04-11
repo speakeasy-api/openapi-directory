@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum ModifyBackupAttributesXAmzTargetEnum {
     BaldrApiServiceModifyBackupAttributes = "BaldrApiService.ModifyBackupAttributes"
 }
-export declare class ModifyBackupAttributesHeaders extends SpeakeasyBase {
+export declare class ModifyBackupAttributesRequest extends SpeakeasyBase {
+    modifyBackupAttributesRequest: shared.ModifyBackupAttributesRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class ModifyBackupAttributesHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ModifyBackupAttributesXAmzTargetEnum;
 }
-export declare class ModifyBackupAttributesRequest extends SpeakeasyBase {
-    headers: ModifyBackupAttributesHeaders;
-    request: shared.ModifyBackupAttributesRequest;
-}
 export declare class ModifyBackupAttributesResponse extends SpeakeasyBase {
+    /**
+     * CloudHsmAccessDeniedException
+     */
     cloudHsmAccessDeniedException?: any;
+    /**
+     * CloudHsmInternalFailureException
+     */
     cloudHsmInternalFailureException?: any;
+    /**
+     * CloudHsmInvalidRequestException
+     */
     cloudHsmInvalidRequestException?: any;
+    /**
+     * CloudHsmResourceNotFoundException
+     */
     cloudHsmResourceNotFoundException?: any;
+    /**
+     * CloudHsmServiceException
+     */
     cloudHsmServiceException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     modifyBackupAttributesResponse?: shared.ModifyBackupAttributesResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

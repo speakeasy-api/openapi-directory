@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostStopActivityStreamActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTStopActivityStreamActionEnum {
     StopActivityStream = "StopActivityStream"
 }
-export declare enum PostStopActivityStreamVersionEnum {
+export declare enum POSTStopActivityStreamVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class PostStopActivityStreamQueryParams extends SpeakeasyBase {
-    action: PostStopActivityStreamActionEnum;
-    version: PostStopActivityStreamVersionEnum;
-}
-export declare class PostStopActivityStreamHeaders extends SpeakeasyBase {
+export declare class POSTStopActivityStreamRequest extends SpeakeasyBase {
+    action: POSTStopActivityStreamActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTStopActivityStreamVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostStopActivityStreamHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostStopActivityStreamRequest extends SpeakeasyBase {
-    queryParams: PostStopActivityStreamQueryParams;
-    headers: PostStopActivityStreamHeaders;
-    request?: Uint8Array;
-}
-export declare class PostStopActivityStreamResponse extends SpeakeasyBase {
+export declare class POSTStopActivityStreamResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,16 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PostContainersFloatingIpsIpReleasePathParams extends SpeakeasyBase {
-    ip: string;
-}
-export declare class PostContainersFloatingIpsIpReleaseHeaders extends SpeakeasyBase {
-    xAuthProjectId: string;
-    xAuthToken: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PostContainersFloatingIpsIpReleaseRequest extends SpeakeasyBase {
-    pathParams: PostContainersFloatingIpsIpReleasePathParams;
-    headers: PostContainersFloatingIpsIpReleaseHeaders;
+    /**
+     * The unique ID of your organization space where you want to create or work with your containers. Run `cf space <space_name> --guid`, where `<space_name>` is the name of your space, to retrieve your space ID.
+     */
+    xAuthProjectId: string;
+    /**
+     * The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
+     */
+    xAuthToken: string;
+    /**
+     * The public IP address that you want to release. Run `cf ic ip list` or call the `GET /containers/floating-ips?all=true` endpoint to review all public IP address that are allocated to your space. After a public IP address is released, it will no longer be allocated to your space.
+     */
+    ip: string;
 }
 export declare class PostContainersFloatingIpsIpReleaseResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

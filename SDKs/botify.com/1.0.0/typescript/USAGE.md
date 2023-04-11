@@ -1,51 +1,46 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateUrlsExportRequest, CreateUrlsExportResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CreateUrlsExportRequest,
+  CreateUrlsExportResponse,
+  CreateUrlsExportAreaEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    djangoRestToken: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    djangoRestToken: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: CreateUrlsExportRequest = {
-  pathParams: {
-    analysisSlug: "sit",
-    projectSlug: "voluptas",
-    username: "culpa",
-  },
-  queryParams: {
-    area: "new",
-  },
-  request: {
+  urlsQuery: {
     fields: [
-      "dolor",
-      "expedita",
-      "voluptas",
+      "provident",
+      "distinctio",
+      "quibusdam",
     ],
     filters: {
-      "et": "nihil",
+      "nulla": "corrupti",
+      "illum": "vel",
+      "error": "deserunt",
     },
     sort: [
       {
-        "debitis": "voluptatum",
-        "et": "ut",
-        "dolorem": "et",
+        "magnam": "debitis",
+        "ipsa": "delectus",
       },
       {
-        "iste": "vitae",
-      },
-      {
-        "dolores": "illum",
-        "debitis": "vel",
-        "odio": "dolore",
+        "suscipit": "molestiae",
+        "minus": "placeat",
       },
     ],
   },
+  analysisSlug: "voluptatum",
+  area: CreateUrlsExportAreaEnum.Disappeared,
+  projectSlug: "excepturi",
+  username: "Glen.Walsh33",
 };
 
 sdk.analysis.createUrlsExport(req).then((res: CreateUrlsExportResponse | AxiosError) => {

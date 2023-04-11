@@ -1,16 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class PostPaymentInstrumentGroupsSecurity extends SpeakeasyBase {
+    apiKeyAuth?: string;
     basicAuth?: shared.SchemeBasicAuth;
-    apiKeyAuth?: shared.SchemeApiKeyAuth;
-}
-export declare class PostPaymentInstrumentGroupsRequest extends SpeakeasyBase {
-    request?: any;
-    security: PostPaymentInstrumentGroupsSecurity;
 }
 export declare class PostPaymentInstrumentGroupsResponse extends SpeakeasyBase {
     contentType: string;
-    paymentInstrumentGroup?: any;
-    restServiceError?: any;
+    /**
+     * OK - the request has succeeded.
+     */
+    paymentInstrumentGroup?: shared.PaymentInstrumentGroup;
+    /**
+     * Bad Request - a problem reading or understanding the request.
+     */
+    restServiceError?: shared.RestServiceError;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

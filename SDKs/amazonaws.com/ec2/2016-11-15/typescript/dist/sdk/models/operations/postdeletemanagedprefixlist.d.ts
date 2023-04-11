@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteManagedPrefixListActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteManagedPrefixListActionEnum {
     DeleteManagedPrefixList = "DeleteManagedPrefixList"
 }
-export declare enum PostDeleteManagedPrefixListVersionEnum {
+export declare enum POSTDeleteManagedPrefixListVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDeleteManagedPrefixListQueryParams extends SpeakeasyBase {
-    action: PostDeleteManagedPrefixListActionEnum;
-    version: PostDeleteManagedPrefixListVersionEnum;
-}
-export declare class PostDeleteManagedPrefixListHeaders extends SpeakeasyBase {
+export declare class POSTDeleteManagedPrefixListRequest extends SpeakeasyBase {
+    action: POSTDeleteManagedPrefixListActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteManagedPrefixListVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteManagedPrefixListHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteManagedPrefixListRequest extends SpeakeasyBase {
-    queryParams: PostDeleteManagedPrefixListQueryParams;
-    headers: PostDeleteManagedPrefixListHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteManagedPrefixListResponse extends SpeakeasyBase {
+export declare class POSTDeleteManagedPrefixListResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

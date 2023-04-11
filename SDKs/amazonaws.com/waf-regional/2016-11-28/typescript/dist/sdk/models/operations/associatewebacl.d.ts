@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum AssociateWebAclxAmzTargetEnum {
-    AwswafRegional20161128AssociateWebAcl = "AWSWAF_Regional_20161128.AssociateWebACL"
+import { AxiosResponse } from "axios";
+export declare enum AssociateWebACLXAmzTargetEnum {
+    AWSWAFRegional20161128AssociateWebACL = "AWSWAF_Regional_20161128.AssociateWebACL"
 }
-export declare class AssociateWebAclHeaders extends SpeakeasyBase {
+export declare class AssociateWebACLRequest extends SpeakeasyBase {
+    associateWebACLRequest: shared.AssociateWebACLRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,19 +13,34 @@ export declare class AssociateWebAclHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: AssociateWebAclxAmzTargetEnum;
+    xAmzTarget: AssociateWebACLXAmzTargetEnum;
 }
-export declare class AssociateWebAclRequest extends SpeakeasyBase {
-    headers: AssociateWebAclHeaders;
-    request: shared.AssociateWebAclRequest;
-}
-export declare class AssociateWebAclResponse extends SpeakeasyBase {
+export declare class AssociateWebACLResponse extends SpeakeasyBase {
+    /**
+     * Success
+     */
     associateWebACLResponse?: Record<string, any>;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFInvalidAccountException
+     */
     wafInvalidAccountException?: any;
+    /**
+     * WAFInvalidParameterException
+     */
     wafInvalidParameterException?: any;
+    /**
+     * WAFNonexistentItemException
+     */
     wafNonexistentItemException?: any;
+    /**
+     * WAFUnavailableEntityException
+     */
     wafUnavailableEntityException?: any;
 }

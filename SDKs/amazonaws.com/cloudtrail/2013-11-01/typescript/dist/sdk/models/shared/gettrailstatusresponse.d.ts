@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Returns the objects or data listed below if successful. Otherwise, returns an error.
-**/
+ */
 export declare class GetTrailStatusResponse extends SpeakeasyBase {
     isLogging?: boolean;
     latestCloudWatchLogsDeliveryError?: string;

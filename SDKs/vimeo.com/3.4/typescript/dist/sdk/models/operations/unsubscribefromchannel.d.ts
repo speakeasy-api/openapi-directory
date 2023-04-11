@@ -1,18 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UnsubscribeFromChannelPathParams extends SpeakeasyBase {
-    channelId: number;
-    userId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class UnsubscribeFromChannelSecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
+    oauth2: string;
 }
 export declare class UnsubscribeFromChannelRequest extends SpeakeasyBase {
-    pathParams: UnsubscribeFromChannelPathParams;
-    security: UnsubscribeFromChannelSecurity;
+    /**
+     * The ID of the channel.
+     */
+    channelId: number;
+    /**
+     * The ID of the user.
+     */
+    userId: number;
 }
 export declare class UnsubscribeFromChannelResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * No such channel exists.
+     */
     legacyError?: shared.LegacyError;
 }

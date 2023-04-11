@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeApplicationsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeApplicationsActionEnum {
     DescribeApplications = "DescribeApplications"
 }
-export declare enum GetDescribeApplicationsVersionEnum {
+export declare enum GETDescribeApplicationsVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetDescribeApplicationsQueryParams extends SpeakeasyBase {
-    action: GetDescribeApplicationsActionEnum;
+export declare class GETDescribeApplicationsRequest extends SpeakeasyBase {
+    action: GETDescribeApplicationsActionEnum;
+    /**
+     * If specified, AWS Elastic Beanstalk restricts the returned descriptions to only include those with the specified names.
+     */
     applicationNames?: string[];
-    version: GetDescribeApplicationsVersionEnum;
-}
-export declare class GetDescribeApplicationsHeaders extends SpeakeasyBase {
+    version: GETDescribeApplicationsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDescribeApplicationsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeApplicationsRequest extends SpeakeasyBase {
-    queryParams: GetDescribeApplicationsQueryParams;
-    headers: GetDescribeApplicationsHeaders;
-}
-export declare class GetDescribeApplicationsResponse extends SpeakeasyBase {
+export declare class GETDescribeApplicationsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

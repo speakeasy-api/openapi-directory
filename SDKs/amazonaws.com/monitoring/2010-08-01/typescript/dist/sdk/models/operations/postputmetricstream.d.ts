@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostPutMetricStreamActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTPutMetricStreamActionEnum {
     PutMetricStream = "PutMetricStream"
 }
-export declare enum PostPutMetricStreamVersionEnum {
+export declare enum POSTPutMetricStreamVersionEnum {
     TwoThousandAndTen0801 = "2010-08-01"
 }
-export declare class PostPutMetricStreamQueryParams extends SpeakeasyBase {
-    action: PostPutMetricStreamActionEnum;
-    version: PostPutMetricStreamVersionEnum;
-}
-export declare class PostPutMetricStreamHeaders extends SpeakeasyBase {
+export declare class POSTPutMetricStreamRequest extends SpeakeasyBase {
+    action: POSTPutMetricStreamActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTPutMetricStreamVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostPutMetricStreamHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostPutMetricStreamRequest extends SpeakeasyBase {
-    queryParams: PostPutMetricStreamQueryParams;
-    headers: PostPutMetricStreamHeaders;
-    request?: Uint8Array;
-}
-export declare class PostPutMetricStreamResponse extends SpeakeasyBase {
+export declare class POSTPutMetricStreamResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

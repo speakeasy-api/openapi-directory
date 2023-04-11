@@ -1,19 +1,40 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class KeyRevokeNosecretQueryParams extends SpeakeasyBase {
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class KeyRevokeNosecretRequest extends SpeakeasyBase {
+    /**
+     * verification code sent by email
+     */
     code?: string;
+    /**
+     * primary email associated to Key (ID)
+     */
     email: string;
+    /**
+     * primary phone number, international representation
+     */
     phone: string;
 }
-export declare class KeyRevokeNosecret200ApplicationJson extends SpeakeasyBase {
+/**
+ * Successfully deleted
+ */
+export declare class KeyRevokeNosecret200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * pending or done
+     */
     status?: string;
-}
-export declare class KeyRevokeNosecretRequest extends SpeakeasyBase {
-    queryParams: KeyRevokeNosecretQueryParams;
 }
 export declare class KeyRevokeNosecretResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    error?: any;
+    /**
+     * Authentication error `auth-error`
+     */
+    error?: shared.ErrorT;
     statusCode: number;
-    keyRevokeNosecret200ApplicationJSONObject?: KeyRevokeNosecret200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successfully deleted
+     */
+    keyRevokeNosecret200ApplicationJSONObject?: KeyRevokeNosecret200ApplicationJSON;
 }

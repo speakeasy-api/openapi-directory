@@ -1,17 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class DeleteVideoThumbnailPathParams extends SpeakeasyBase {
-    pictureId: number;
-    videoId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteVideoThumbnailSecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
+    oauth2: string;
 }
 export declare class DeleteVideoThumbnailRequest extends SpeakeasyBase {
-    pathParams: DeleteVideoThumbnailPathParams;
-    security: DeleteVideoThumbnailSecurity;
+    /**
+     * The ID of the picture.
+     */
+    pictureId: number;
+    /**
+     * The ID of the video.
+     */
+    videoId: number;
 }
 export declare class DeleteVideoThumbnailResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

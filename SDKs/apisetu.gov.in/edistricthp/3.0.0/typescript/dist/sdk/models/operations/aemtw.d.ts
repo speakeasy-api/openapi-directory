@@ -1,115 +1,170 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class AemtwSecurity extends SpeakeasyBase {
+    apiKey: string;
+    clientId: string;
+}
 export declare class AemtwRequestBodyCertificateParameters extends SpeakeasyBase {
+    /**
+     * ApplicationNumber
+     */
     udf1: string;
 }
+/**
+ * The format of the certificate in response.
+ */
 export declare enum AemtwRequestBodyFormatEnum {
     Pdf = "pdf"
 }
+/**
+ * Request format
+ */
 export declare class AemtwRequestBody extends SpeakeasyBase {
     certificateParameters?: AemtwRequestBodyCertificateParameters;
-    consentArtifact?: any;
+    consentArtifact?: shared.ConsentArtifactSchema;
+    /**
+     * The format of the certificate in response.
+     */
     format: AemtwRequestBodyFormatEnum;
+    /**
+     * A unique transaction id for this request in UUID format. It is used for tracking the request.
+     */
     txnId: string;
 }
-export declare class AemtwSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
-    clientId: shared.SchemeClientId;
+export declare enum Aemtw504ApplicationJSONErrorEnum {
+    GatewayTimeout = "gateway_timeout"
 }
-export declare enum Aemtw400ApplicationJsonErrorEnum {
+export declare enum Aemtw504ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
+}
+/**
+ * Gateway timeout
+ */
+export declare class Aemtw504ApplicationJSON extends SpeakeasyBase {
+    error?: Aemtw504ApplicationJSONErrorEnum;
+    errorDescription?: Aemtw504ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Aemtw503ApplicationJSONErrorEnum {
+    ServiceUnavailable = "service_unavailable"
+}
+export declare enum Aemtw503ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
+}
+/**
+ * Service unavailable
+ */
+export declare class Aemtw503ApplicationJSON extends SpeakeasyBase {
+    error?: Aemtw503ApplicationJSONErrorEnum;
+    errorDescription?: Aemtw503ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Aemtw502ApplicationJSONErrorEnum {
+    BadGatewy = "bad_gatewy"
+}
+export declare enum Aemtw502ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
+}
+/**
+ * Bad gateway
+ */
+export declare class Aemtw502ApplicationJSON extends SpeakeasyBase {
+    error?: Aemtw502ApplicationJSONErrorEnum;
+    errorDescription?: Aemtw502ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Aemtw500ApplicationJSONErrorEnum {
+    InternalServerError = "internal_server_error"
+}
+export declare enum Aemtw500ApplicationJSONErrorDescriptionEnum {
+    InternalServerError = "Internal server error"
+}
+/**
+ * Internal server error
+ */
+export declare class Aemtw500ApplicationJSON extends SpeakeasyBase {
+    error?: Aemtw500ApplicationJSONErrorEnum;
+    errorDescription?: Aemtw500ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Aemtw404ApplicationJSONErrorEnum {
+    RecordNotFound = "record_not_found",
+    UrlNotFound = "url_not_found"
+}
+export declare enum Aemtw404ApplicationJSONErrorDescriptionEnum {
+    NoRecordFound = "No record found",
+    YourAPIUrlOrPathIsIncorrect = "Your API url or path is incorrect"
+}
+/**
+ * No record found
+ */
+export declare class Aemtw404ApplicationJSON extends SpeakeasyBase {
+    error?: Aemtw404ApplicationJSONErrorEnum;
+    errorDescription?: Aemtw404ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Aemtw401ApplicationJSONErrorEnum {
+    InvalidAuthentication = "invalid_authentication",
+    InvalidAuthorization = "invalid_authorization"
+}
+export declare enum Aemtw401ApplicationJSONErrorDescriptionEnum {
+    AuthenticationFailed = "Authentication failed",
+    YouAreNotAuthorizedToUseThisAPI = "You are not authorized to use this API"
+}
+/**
+ * Unauthorized access
+ */
+export declare class Aemtw401ApplicationJSON extends SpeakeasyBase {
+    error?: Aemtw401ApplicationJSONErrorEnum;
+    errorDescription?: Aemtw401ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Aemtw400ApplicationJSONErrorEnum {
     MissingParameter = "missing_parameter",
     InvalidParameter = "invalid_parameter",
     InvalidFormat = "invalid_format",
     InvalidTxnid = "invalid_txnid",
     InvalidConsentid = "invalid_consentid"
 }
-export declare enum Aemtw400ApplicationJsonErrorDescriptionEnum {
+export declare enum Aemtw400ApplicationJSONErrorDescriptionEnum {
     PleaseProvideAllMandatoryParameters = "Please provide all mandatory parameters",
     BadRequest = "Bad request",
     TheFormatParameterIsInvalid = "The format parameter is invalid",
-    TheTxnIdParameterMustBeInUuidFormat = "The txnId parameter must be in UUID format",
-    TheConsentIdParameterMustBeInUuidFormat = "The consentId parameter must be in UUID format"
+    TheTxnIdParameterMustBeInUUIDFormat = "The txnId parameter must be in UUID format",
+    TheConsentIdParameterMustBeInUUIDFormat = "The consentId parameter must be in UUID format"
 }
-export declare class Aemtw400ApplicationJson extends SpeakeasyBase {
-    error?: Aemtw400ApplicationJsonErrorEnum;
-    errorDescription?: Aemtw400ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Aemtw401ApplicationJsonErrorEnum {
-    InvalidAuthentication = "invalid_authentication",
-    InvalidAuthorization = "invalid_authorization"
-}
-export declare enum Aemtw401ApplicationJsonErrorDescriptionEnum {
-    AuthenticationFailed = "Authentication failed",
-    YouAreNotAuthorizedToUseThisApi = "You are not authorized to use this API"
-}
-export declare class Aemtw401ApplicationJson extends SpeakeasyBase {
-    error?: Aemtw401ApplicationJsonErrorEnum;
-    errorDescription?: Aemtw401ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Aemtw404ApplicationJsonErrorEnum {
-    RecordNotFound = "record_not_found",
-    UrlNotFound = "url_not_found"
-}
-export declare enum Aemtw404ApplicationJsonErrorDescriptionEnum {
-    NoRecordFound = "No record found",
-    YourApiUrlOrPathIsIncorrect = "Your API url or path is incorrect"
-}
-export declare class Aemtw404ApplicationJson extends SpeakeasyBase {
-    error?: Aemtw404ApplicationJsonErrorEnum;
-    errorDescription?: Aemtw404ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Aemtw500ApplicationJsonErrorEnum {
-    InternalServerError = "internal_server_error"
-}
-export declare enum Aemtw500ApplicationJsonErrorDescriptionEnum {
-    InternalServerError = "Internal server error"
-}
-export declare class Aemtw500ApplicationJson extends SpeakeasyBase {
-    error?: Aemtw500ApplicationJsonErrorEnum;
-    errorDescription?: Aemtw500ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Aemtw502ApplicationJsonErrorEnum {
-    BadGatewy = "bad_gatewy"
-}
-export declare enum Aemtw502ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
-}
-export declare class Aemtw502ApplicationJson extends SpeakeasyBase {
-    error?: Aemtw502ApplicationJsonErrorEnum;
-    errorDescription?: Aemtw502ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Aemtw503ApplicationJsonErrorEnum {
-    ServiceUnavailable = "service_unavailable"
-}
-export declare enum Aemtw503ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
-}
-export declare class Aemtw503ApplicationJson extends SpeakeasyBase {
-    error?: Aemtw503ApplicationJsonErrorEnum;
-    errorDescription?: Aemtw503ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Aemtw504ApplicationJsonErrorEnum {
-    GatewayTimeout = "gateway_timeout"
-}
-export declare enum Aemtw504ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
-}
-export declare class Aemtw504ApplicationJson extends SpeakeasyBase {
-    error?: Aemtw504ApplicationJsonErrorEnum;
-    errorDescription?: Aemtw504ApplicationJsonErrorDescriptionEnum;
-}
-export declare class AemtwRequest extends SpeakeasyBase {
-    request?: AemtwRequestBody;
-    security: AemtwSecurity;
+/**
+ * Bad request
+ */
+export declare class Aemtw400ApplicationJSON extends SpeakeasyBase {
+    error?: Aemtw400ApplicationJSONErrorEnum;
+    errorDescription?: Aemtw400ApplicationJSONErrorDescriptionEnum;
 }
 export declare class AemtwResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    aemtw400ApplicationJSONObject?: Aemtw400ApplicationJson;
-    aemtw401ApplicationJSONObject?: Aemtw401ApplicationJson;
-    aemtw404ApplicationJSONObject?: Aemtw404ApplicationJson;
-    aemtw500ApplicationJSONObject?: Aemtw500ApplicationJson;
-    aemtw502ApplicationJSONObject?: Aemtw502ApplicationJson;
-    aemtw503ApplicationJSONObject?: Aemtw503ApplicationJson;
-    aemtw504ApplicationJSONObject?: Aemtw504ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad request
+     */
+    aemtw400ApplicationJSONObject?: Aemtw400ApplicationJSON;
+    /**
+     * Unauthorized access
+     */
+    aemtw401ApplicationJSONObject?: Aemtw401ApplicationJSON;
+    /**
+     * No record found
+     */
+    aemtw404ApplicationJSONObject?: Aemtw404ApplicationJSON;
+    /**
+     * Internal server error
+     */
+    aemtw500ApplicationJSONObject?: Aemtw500ApplicationJSON;
+    /**
+     * Bad gateway
+     */
+    aemtw502ApplicationJSONObject?: Aemtw502ApplicationJSON;
+    /**
+     * Service unavailable
+     */
+    aemtw503ApplicationJSONObject?: Aemtw503ApplicationJSON;
+    /**
+     * Gateway timeout
+     */
+    aemtw504ApplicationJSONObject?: Aemtw504ApplicationJSON;
 }

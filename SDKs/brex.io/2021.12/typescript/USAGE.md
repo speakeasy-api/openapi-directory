@@ -1,29 +1,24 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CompanyAlternativeSearchRequest, CompanyAlternativeSearchResponse } from "openapi/src/sdk/models/operations";
+import {
+  CompanyAlternativeSearchRequest,
+  CompanyAlternativeSearchResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: CompanyAlternativeSearchRequest = {
-  security: {
-    userKey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
+  requestBody: {
+    address: "5786 Little Streets",
+    name: "vel",
+    number: "error",
+    phone: "1-542-909-2347 x8545",
+    url: "nisi",
+    vat: "recusandae",
   },
-  pathParams: {
-    country: "sit",
-  },
-  request: {
-    address: "voluptas",
-    name: "culpa",
-    number: "expedita",
-    phone: "consequuntur",
-    url: "dolor",
-    vat: "expedita",
-  },
+  country: "temporibus",
 };
 
 sdk.v1Company.companyAlternativeSearch(req).then((res: CompanyAlternativeSearchResponse | AxiosError) => {

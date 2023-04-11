@@ -1,10 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetEndpointPathParams extends SpeakeasyBase {
-    applicationId: string;
-    endpointId: string;
-}
-export declare class GetEndpointHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetEndpointRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,20 +9,49 @@ export declare class GetEndpointHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class GetEndpointRequest extends SpeakeasyBase {
-    pathParams: GetEndpointPathParams;
-    headers: GetEndpointHeaders;
+    /**
+     * The unique identifier for the application. This identifier is displayed as the <b>Project ID</b> on the Amazon Pinpoint console.
+     */
+    applicationId: string;
+    /**
+     * The unique identifier for the endpoint.
+     */
+    endpointId: string;
 }
 export declare class GetEndpointResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * ForbiddenException
+     */
     forbiddenException?: any;
+    /**
+     * Success
+     */
     getEndpointResponse?: shared.GetEndpointResponse;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
+    /**
+     * MethodNotAllowedException
+     */
     methodNotAllowedException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
+    /**
+     * PayloadTooLargeException
+     */
     payloadTooLargeException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

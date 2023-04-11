@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeOrganizationConformancePackStatusesQueryParams extends SpeakeasyBase {
-    limit?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum DescribeOrganizationConformancePackStatusesXAmzTargetEnum {
     StarlingDoveServiceDescribeOrganizationConformancePackStatuses = "StarlingDoveService.DescribeOrganizationConformancePackStatuses"
 }
-export declare class DescribeOrganizationConformancePackStatusesHeaders extends SpeakeasyBase {
+export declare class DescribeOrganizationConformancePackStatusesRequest extends SpeakeasyBase {
+    describeOrganizationConformancePackStatusesRequest: shared.DescribeOrganizationConformancePackStatusesRequest;
+    /**
+     * Pagination limit
+     */
+    limit?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,17 +23,28 @@ export declare class DescribeOrganizationConformancePackStatusesHeaders extends 
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeOrganizationConformancePackStatusesXAmzTargetEnum;
 }
-export declare class DescribeOrganizationConformancePackStatusesRequest extends SpeakeasyBase {
-    queryParams: DescribeOrganizationConformancePackStatusesQueryParams;
-    headers: DescribeOrganizationConformancePackStatusesHeaders;
-    request: shared.DescribeOrganizationConformancePackStatusesRequest;
-}
 export declare class DescribeOrganizationConformancePackStatusesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeOrganizationConformancePackStatusesResponse?: shared.DescribeOrganizationConformancePackStatusesResponse;
+    /**
+     * InvalidLimitException
+     */
     invalidLimitException?: any;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * NoSuchOrganizationConformancePackException
+     */
     noSuchOrganizationConformancePackException?: any;
+    /**
+     * OrganizationAccessDeniedException
+     */
     organizationAccessDeniedException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

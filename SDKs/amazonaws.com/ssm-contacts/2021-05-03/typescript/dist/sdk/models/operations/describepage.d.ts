@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribePageXAmzTargetEnum {
-    SsmContactsDescribePage = "SSMContacts.DescribePage"
+    SSMContactsDescribePage = "SSMContacts.DescribePage"
 }
-export declare class DescribePageHeaders extends SpeakeasyBase {
+export declare class DescribePageRequest extends SpeakeasyBase {
+    describePageRequest: shared.DescribePageRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class DescribePageHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribePageXAmzTargetEnum;
 }
-export declare class DescribePageRequest extends SpeakeasyBase {
-    headers: DescribePageHeaders;
-    request: shared.DescribePageRequest;
-}
 export declare class DescribePageResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * DataEncryptionException
+     */
     dataEncryptionException?: any;
+    /**
+     * Success
+     */
     describePageResult?: shared.DescribePageResult;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

@@ -1,5 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbClusterSnapshotAttributesResult } from "./dbclustersnapshotattributesresult";
-export declare class ModifyDbClusterSnapshotAttributeResult extends SpeakeasyBase {
-    dbClusterSnapshotAttributesResult?: DbClusterSnapshotAttributesResult;
+import { DBClusterSnapshotAttributesResult } from "./dbclustersnapshotattributesresult";
+/**
+ * Success
+ */
+export declare class ModifyDBClusterSnapshotAttributeResult extends SpeakeasyBase {
+    /**
+     * Detailed information about the attributes that are associated with a cluster snapshot.
+     */
+    dbClusterSnapshotAttributesResult?: DBClusterSnapshotAttributesResult;
 }

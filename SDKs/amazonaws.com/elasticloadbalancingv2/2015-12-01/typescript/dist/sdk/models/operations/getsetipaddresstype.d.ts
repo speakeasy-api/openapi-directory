@@ -1,21 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetSetIpAddressTypeActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETSetIpAddressTypeActionEnum {
     SetIpAddressType = "SetIpAddressType"
 }
-export declare enum GetSetIpAddressTypeIpAddressTypeEnum {
+/**
+ * The IP address type. The possible values are <code>ipv4</code> (for IPv4 addresses) and <code>dualstack</code> (for IPv4 and IPv6 addresses). You can’t specify <code>dualstack</code> for a load balancer with a UDP or TCP_UDP listener.
+ */
+export declare enum GETSetIPAddressTypeIPAddressTypeEnum {
     Ipv4 = "ipv4",
     Dualstack = "dualstack"
 }
-export declare enum GetSetIpAddressTypeVersionEnum {
+export declare enum GETSetIpAddressTypeVersionEnum {
     TwoThousandAndFifteen1201 = "2015-12-01"
 }
-export declare class GetSetIpAddressTypeQueryParams extends SpeakeasyBase {
-    action: GetSetIpAddressTypeActionEnum;
-    ipAddressType: GetSetIpAddressTypeIpAddressTypeEnum;
+export declare class GETSetIpAddressTypeRequest extends SpeakeasyBase {
+    action: GETSetIpAddressTypeActionEnum;
+    /**
+     * The IP address type. The possible values are <code>ipv4</code> (for IPv4 addresses) and <code>dualstack</code> (for IPv4 and IPv6 addresses). You can’t specify <code>dualstack</code> for a load balancer with a UDP or TCP_UDP listener.
+     */
+    ipAddressType: GETSetIPAddressTypeIPAddressTypeEnum;
+    /**
+     * The Amazon Resource Name (ARN) of the load balancer.
+     */
     loadBalancerArn: string;
-    version: GetSetIpAddressTypeVersionEnum;
-}
-export declare class GetSetIpAddressTypeHeaders extends SpeakeasyBase {
+    version: GETSetIpAddressTypeVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -24,12 +32,9 @@ export declare class GetSetIpAddressTypeHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetSetIpAddressTypeRequest extends SpeakeasyBase {
-    queryParams: GetSetIpAddressTypeQueryParams;
-    headers: GetSetIpAddressTypeHeaders;
-}
-export declare class GetSetIpAddressTypeResponse extends SpeakeasyBase {
+export declare class GETSetIpAddressTypeResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

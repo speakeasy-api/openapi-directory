@@ -50,6 +50,9 @@ export declare class GameSingle extends SpeakeasyBase {
     id?: number;
     metacritic?: number;
     metacriticPlatforms?: GamePlatformMetacritic[];
+    /**
+     * For example "http://www.metacritic.com/game/playstation-4/the-witcher-3-wild-hunt"
+     */
     metacriticUrl?: string;
     moviesCount?: number;
     name?: string;
@@ -57,6 +60,9 @@ export declare class GameSingle extends SpeakeasyBase {
     parentAchievementsCount?: string;
     parentsCount?: number;
     platforms?: GameSinglePlatforms[];
+    /**
+     * in hours
+     */
     playtime?: number;
     rating: number;
     ratingTop?: number;
@@ -67,6 +73,9 @@ export declare class GameSingle extends SpeakeasyBase {
     redditDescription?: string;
     redditLogo?: string;
     redditName?: string;
+    /**
+     * For example "https://www.reddit.com/r/uncharted/" or "uncharted"
+     */
     redditUrl?: string;
     released?: Date;
     reviewsTextCount?: string;

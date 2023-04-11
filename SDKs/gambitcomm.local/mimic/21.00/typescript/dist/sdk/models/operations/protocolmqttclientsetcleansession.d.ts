@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolMqttClientSetCleansessionPathParams extends SpeakeasyBase {
-    agentNum: number;
-    cleanOrNot: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolMqttClientSetCleansessionRequest extends SpeakeasyBase {
-    pathParams: ProtocolMqttClientSetCleansessionPathParams;
+    /**
+     * Agent to set MQTT config
+     */
+    agentNum: number;
+    /**
+     * Clean session
+     */
+    cleanOrNot: number;
 }
 export declare class ProtocolMqttClientSetCleansessionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolMqttClientSetCleansession200ApplicationJSONInt32Integers?: number[];
 }

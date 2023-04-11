@@ -1,24 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class AvatarsGetFlagPathParams extends SpeakeasyBase {
-    code: string;
-}
-export declare class AvatarsGetFlagQueryParams extends SpeakeasyBase {
-    height?: number;
-    quality?: number;
-    width?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class AvatarsGetFlagSecurity extends SpeakeasyBase {
-    jwt: shared.SchemeJwt;
-    key: shared.SchemeKey;
-    project: shared.SchemeProject;
+    jwt: string;
+    key: string;
+    project: string;
 }
 export declare class AvatarsGetFlagRequest extends SpeakeasyBase {
-    pathParams: AvatarsGetFlagPathParams;
-    queryParams: AvatarsGetFlagQueryParams;
-    security: AvatarsGetFlagSecurity;
+    /**
+     * Country Code. ISO Alpha-2 country code format.
+     */
+    code: string;
+    /**
+     * Image height. Pass an integer between 0 to 2000. Defaults to 100.
+     */
+    height?: number;
+    /**
+     * Image quality. Pass an integer between 0 to 100. Defaults to 100.
+     */
+    quality?: number;
+    /**
+     * Image width. Pass an integer between 0 to 2000. Defaults to 100.
+     */
+    width?: number;
 }
 export declare class AvatarsGetFlagResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

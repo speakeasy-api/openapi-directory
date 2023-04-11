@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetSetLoadBalancerPoliciesForBackendServerActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETSetLoadBalancerPoliciesForBackendServerActionEnum {
     SetLoadBalancerPoliciesForBackendServer = "SetLoadBalancerPoliciesForBackendServer"
 }
-export declare enum GetSetLoadBalancerPoliciesForBackendServerVersionEnum {
+export declare enum GETSetLoadBalancerPoliciesForBackendServerVersionEnum {
     TwoThousandAndTwelve0601 = "2012-06-01"
 }
-export declare class GetSetLoadBalancerPoliciesForBackendServerQueryParams extends SpeakeasyBase {
-    action: GetSetLoadBalancerPoliciesForBackendServerActionEnum;
+export declare class GETSetLoadBalancerPoliciesForBackendServerRequest extends SpeakeasyBase {
+    action: GETSetLoadBalancerPoliciesForBackendServerActionEnum;
+    /**
+     * The port number associated with the EC2 instance.
+     */
     instancePort: number;
+    /**
+     * The name of the load balancer.
+     */
     loadBalancerName: string;
+    /**
+     * The names of the policies. If the list is empty, then all current polices are removed from the EC2 instance.
+     */
     policyNames: string[];
-    version: GetSetLoadBalancerPoliciesForBackendServerVersionEnum;
-}
-export declare class GetSetLoadBalancerPoliciesForBackendServerHeaders extends SpeakeasyBase {
+    version: GETSetLoadBalancerPoliciesForBackendServerVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +29,9 @@ export declare class GetSetLoadBalancerPoliciesForBackendServerHeaders extends S
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetSetLoadBalancerPoliciesForBackendServerRequest extends SpeakeasyBase {
-    queryParams: GetSetLoadBalancerPoliciesForBackendServerQueryParams;
-    headers: GetSetLoadBalancerPoliciesForBackendServerHeaders;
-}
-export declare class GetSetLoadBalancerPoliciesForBackendServerResponse extends SpeakeasyBase {
+export declare class GETSetLoadBalancerPoliciesForBackendServerResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

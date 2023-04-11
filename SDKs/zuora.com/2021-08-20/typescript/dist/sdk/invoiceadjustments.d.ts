@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class InvoiceAdjustments {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,19 +9,19 @@ export declare class InvoiceAdjustments {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * objectDeleteInvoiceAdjustment - CRUD: Delete an invoice adjustment
-    **/
-    objectDeleteInvoiceAdjustment(req: operations.ObjectDeleteInvoiceAdjustmentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectDeleteInvoiceAdjustmentResponse>;
+     * CRUD: Delete an invoice adjustment
+     */
+    objectDELETEInvoiceAdjustment(req: operations.ObjectDELETEInvoiceAdjustmentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectDELETEInvoiceAdjustmentResponse>;
     /**
-     * objectGetInvoiceAdjustment - CRUD: Retrieve an invoice adjustment
-    **/
-    objectGetInvoiceAdjustment(req: operations.ObjectGetInvoiceAdjustmentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGetInvoiceAdjustmentResponse>;
+     * CRUD: Retrieve an invoice adjustment
+     */
+    objectGETInvoiceAdjustment(req: operations.ObjectGETInvoiceAdjustmentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGETInvoiceAdjustmentResponse>;
     /**
-     * objectPostInvoiceAdjustment - CRUD: Create an invoice adjustment
-    **/
-    objectPostInvoiceAdjustment(req: operations.ObjectPostInvoiceAdjustmentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPostInvoiceAdjustmentResponse>;
+     * CRUD: Create an invoice adjustment
+     */
+    objectPOSTInvoiceAdjustment(req: operations.ObjectPOSTInvoiceAdjustmentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPOSTInvoiceAdjustmentResponse>;
     /**
-     * objectPutInvoiceAdjustment - CRUD: Update an invoice adjustment
-    **/
-    objectPutInvoiceAdjustment(req: operations.ObjectPutInvoiceAdjustmentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPutInvoiceAdjustmentResponse>;
+     * CRUD: Update an invoice adjustment
+     */
+    objectPUTInvoiceAdjustment(req: operations.ObjectPUTInvoiceAdjustmentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPUTInvoiceAdjustmentResponse>;
 }

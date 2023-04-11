@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetBinIdPathParams extends SpeakeasyBase {
-    id: string;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class GetBinIdRequest extends SpeakeasyBase {
-    pathParams: GetBinIdPathParams;
+    id: string;
 }
 export declare class GetBinIdResponse extends SpeakeasyBase {
     contentType: string;
-    error?: any;
+    /**
+     * Bin not found
+     */
+    error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bin data
+     */
     getBinId200ApplicationJSONObject?: Record<string, any>;
 }

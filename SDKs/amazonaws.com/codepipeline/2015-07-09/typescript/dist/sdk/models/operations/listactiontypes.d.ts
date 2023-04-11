@@ -1,12 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListActionTypesQueryParams extends SpeakeasyBase {
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListActionTypesXAmzTargetEnum {
     CodePipeline20150709ListActionTypes = "CodePipeline_20150709.ListActionTypes"
 }
-export declare class ListActionTypesHeaders extends SpeakeasyBase {
+export declare class ListActionTypesRequest extends SpeakeasyBase {
+    listActionTypesInput: shared.ListActionTypesInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -15,16 +14,25 @@ export declare class ListActionTypesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: ListActionTypesXAmzTargetEnum;
-}
-export declare class ListActionTypesRequest extends SpeakeasyBase {
-    queryParams: ListActionTypesQueryParams;
-    headers: ListActionTypesHeaders;
-    request: shared.ListActionTypesInput;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class ListActionTypesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * Success
+     */
     listActionTypesOutput?: shared.ListActionTypesOutput;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

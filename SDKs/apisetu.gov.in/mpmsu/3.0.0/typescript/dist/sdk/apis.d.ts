@@ -1,6 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class ApIs {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+export declare class APIs {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,15 +9,17 @@ export declare class ApIs {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * micer - Migration Certificate
+     * Migration Certificate
      *
+     * @remarks
      * API to verify Migration Certificate.
-    **/
-    micer(req: operations.MicerRequest, config?: AxiosRequestConfig): Promise<operations.MicerResponse>;
+     */
+    micer(req: operations.MicerRequestBody, security: operations.MicerSecurity, config?: AxiosRequestConfig): Promise<operations.MicerResponse>;
     /**
-     * pvcer - Provisional Certificate
+     * Provisional Certificate
      *
+     * @remarks
      * API to verify Provisional Certificate.
-    **/
-    pvcer(req: operations.PvcerRequest, config?: AxiosRequestConfig): Promise<operations.PvcerResponse>;
+     */
+    pvcer(req: operations.PvcerRequestBody, security: operations.PvcerSecurity, config?: AxiosRequestConfig): Promise<operations.PvcerResponse>;
 }

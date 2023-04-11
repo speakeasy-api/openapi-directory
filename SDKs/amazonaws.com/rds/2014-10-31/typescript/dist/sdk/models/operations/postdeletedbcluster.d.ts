@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteDbClusterActionEnum {
-    DeleteDbCluster = "DeleteDBCluster"
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteDBClusterActionEnum {
+    DeleteDBCluster = "DeleteDBCluster"
 }
-export declare enum PostDeleteDbClusterVersionEnum {
+export declare enum POSTDeleteDBClusterVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class PostDeleteDbClusterQueryParams extends SpeakeasyBase {
-    action: PostDeleteDbClusterActionEnum;
-    version: PostDeleteDbClusterVersionEnum;
-}
-export declare class PostDeleteDbClusterHeaders extends SpeakeasyBase {
+export declare class POSTDeleteDBClusterRequest extends SpeakeasyBase {
+    action: POSTDeleteDBClusterActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteDBClusterVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteDbClusterHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteDbClusterRequest extends SpeakeasyBase {
-    queryParams: PostDeleteDbClusterQueryParams;
-    headers: PostDeleteDbClusterHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteDbClusterResponse extends SpeakeasyBase {
+export declare class POSTDeleteDBClusterResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum ExportEbsVolumeRecommendationsXAmzTargetEnum {
-    ComputeOptimizerServiceExportEbsVolumeRecommendations = "ComputeOptimizerService.ExportEBSVolumeRecommendations"
+import { AxiosResponse } from "axios";
+export declare enum ExportEBSVolumeRecommendationsXAmzTargetEnum {
+    ComputeOptimizerServiceExportEBSVolumeRecommendations = "ComputeOptimizerService.ExportEBSVolumeRecommendations"
 }
-export declare class ExportEbsVolumeRecommendationsHeaders extends SpeakeasyBase {
+export declare class ExportEBSVolumeRecommendationsRequest extends SpeakeasyBase {
+    exportEBSVolumeRecommendationsRequest: shared.ExportEBSVolumeRecommendationsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,22 +13,46 @@ export declare class ExportEbsVolumeRecommendationsHeaders extends SpeakeasyBase
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: ExportEbsVolumeRecommendationsXAmzTargetEnum;
+    xAmzTarget: ExportEBSVolumeRecommendationsXAmzTargetEnum;
 }
-export declare class ExportEbsVolumeRecommendationsRequest extends SpeakeasyBase {
-    headers: ExportEbsVolumeRecommendationsHeaders;
-    request: shared.ExportEbsVolumeRecommendationsRequest;
-}
-export declare class ExportEbsVolumeRecommendationsResponse extends SpeakeasyBase {
+export declare class ExportEBSVolumeRecommendationsResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
-    exportEBSVolumeRecommendationsResponse?: shared.ExportEbsVolumeRecommendationsResponse;
+    /**
+     * Success
+     */
+    exportEBSVolumeRecommendationsResponse?: shared.ExportEBSVolumeRecommendationsResponse;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * MissingAuthenticationToken
+     */
     missingAuthenticationToken?: any;
+    /**
+     * OptInRequiredException
+     */
     optInRequiredException?: any;
-    serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceUnavailableException
+     */
+    serviceUnavailableException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

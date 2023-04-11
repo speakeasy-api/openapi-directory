@@ -1,14 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class HarvestAllQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class HarvestAllRequest extends SpeakeasyBase {
+    /**
+     * The StoreId to filter by
+     */
     storeId?: string;
 }
-export declare class HarvestAllRequest extends SpeakeasyBase {
-    queryParams: HarvestAllQueryParams;
-}
 export declare class HarvestAllResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     * Requested Store could not be found
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

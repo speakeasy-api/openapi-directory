@@ -1,9 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListProvisionedCapacityPathParams extends SpeakeasyBase {
-    accountId: string;
-}
-export declare class ListProvisionedCapacityHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListProvisionedCapacityRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,16 +9,29 @@ export declare class ListProvisionedCapacityHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class ListProvisionedCapacityRequest extends SpeakeasyBase {
-    pathParams: ListProvisionedCapacityPathParams;
-    headers: ListProvisionedCapacityHeaders;
+    /**
+     * The AWS account ID of the account that owns the vault. You can either specify an AWS account ID or optionally a single '-' (hyphen), in which case Amazon S3 Glacier uses the AWS account ID associated with the credentials used to sign the request. If you use an account ID, don't include any hyphens ('-') in the ID.
+     */
+    accountId: string;
 }
 export declare class ListProvisionedCapacityResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
+    /**
+     * Success
+     */
     listProvisionedCapacityOutput?: shared.ListProvisionedCapacityOutput;
+    /**
+     * MissingParameterValueException
+     */
     missingParameterValueException?: any;
-    serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceUnavailableException
+     */
+    serviceUnavailableException?: any;
 }

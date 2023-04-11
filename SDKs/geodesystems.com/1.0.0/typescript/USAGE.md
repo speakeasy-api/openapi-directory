@@ -1,18 +1,18 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { MediaTabularExtractsheetRequest, MediaTabularExtractsheetResponse } from "openapi/src/sdk/models/operations";
+import {
+  MediaTabularExtractsheetRequest,
+  MediaTabularExtractsheetResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: MediaTabularExtractsheetRequest = {
-  queryParams: {
-    arg1: "sit",
-    entryid: "voluptas",
-    output: "culpa",
-  },
+  arg1: "corrupti",
+  entryid: "provident",
+  output: "distinctio",
 };
 
 sdk.serviceMediaTabularExtractsheet.mediaTabularExtractsheet(req).then((res: MediaTabularExtractsheetResponse | AxiosError) => {

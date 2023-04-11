@@ -1,9 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { MessageFormatValueEnum } from "./messageformatvalueenum";
+import { KafkaSaslMechanismEnum } from "./kafkasaslmechanismenum";
 import { KafkaSecurityProtocolEnum } from "./kafkasecurityprotocolenum";
+import { MessageFormatValueEnum } from "./messageformatvalueenum";
 /**
  * Provides information that describes an Apache Kafka endpoint. This information includes the output format of records applied to the endpoint and details of transaction and control table data information.
-**/
+ */
 export declare class KafkaSettings extends SpeakeasyBase {
     broker?: string;
     includeControlDetails?: boolean;
@@ -15,6 +16,7 @@ export declare class KafkaSettings extends SpeakeasyBase {
     messageMaxBytes?: number;
     noHexPrefix?: boolean;
     partitionIncludeSchemaTable?: boolean;
+    saslMechanism?: KafkaSaslMechanismEnum;
     saslPassword?: string;
     saslUsername?: string;
     securityProtocol?: KafkaSecurityProtocolEnum;

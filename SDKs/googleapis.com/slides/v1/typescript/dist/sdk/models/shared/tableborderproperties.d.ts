@@ -1,0 +1,32 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { Dimension } from "./dimension";
+import { TableBorderFill } from "./tableborderfill";
+/**
+ * The dash style of the border.
+ */
+export declare enum TableBorderPropertiesDashStyleEnum {
+    DashStyleUnspecified = "DASH_STYLE_UNSPECIFIED",
+    Solid = "SOLID",
+    Dot = "DOT",
+    Dash = "DASH",
+    DashDot = "DASH_DOT",
+    LongDash = "LONG_DASH",
+    LongDashDot = "LONG_DASH_DOT"
+}
+/**
+ * The border styling properties of the TableBorderCell.
+ */
+export declare class TableBorderProperties extends SpeakeasyBase {
+    /**
+     * The dash style of the border.
+     */
+    dashStyle?: TableBorderPropertiesDashStyleEnum;
+    /**
+     * The fill of the border.
+     */
+    tableBorderFill?: TableBorderFill;
+    /**
+     * A magnitude in a single direction in the specified units.
+     */
+    weight?: Dimension;
+}

@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class EnterpriseAdminCreateImpersonationOAuthTokenPathParams extends SpeakeasyBase {
-    username: string;
-}
+import { AxiosResponse } from "axios";
 export declare class EnterpriseAdminCreateImpersonationOAuthTokenRequestBody extends SpeakeasyBase {
+    /**
+     * A list of [scopes](https://docs.github.com/enterprise-server@3.0/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+     */
     scopes?: string[];
 }
 export declare class EnterpriseAdminCreateImpersonationOAuthTokenRequest extends SpeakeasyBase {
-    pathParams: EnterpriseAdminCreateImpersonationOAuthTokenPathParams;
-    request?: EnterpriseAdminCreateImpersonationOAuthTokenRequestBody;
+    requestBody: EnterpriseAdminCreateImpersonationOAuthTokenRequestBody;
+    username: string;
 }
 export declare class EnterpriseAdminCreateImpersonationOAuthTokenResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     authorization?: shared.Authorization;
 }

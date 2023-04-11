@@ -1,18 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeDbParameterGroupsActionEnum {
-    DescribeDbParameterGroups = "DescribeDBParameterGroups"
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeDBParameterGroupsActionEnum {
+    DescribeDBParameterGroups = "DescribeDBParameterGroups"
 }
-export declare enum GetDescribeDbParameterGroupsVersionEnum {
+export declare enum GETDescribeDBParameterGroupsVersionEnum {
     TwoThousandAndThirteen0110 = "2013-01-10"
 }
-export declare class GetDescribeDbParameterGroupsQueryParams extends SpeakeasyBase {
-    action: GetDescribeDbParameterGroupsActionEnum;
+export declare class GETDescribeDBParameterGroupsRequest extends SpeakeasyBase {
+    action: GETDescribeDBParameterGroupsActionEnum;
     dbParameterGroupName?: string;
     marker?: string;
     maxRecords?: number;
-    version: GetDescribeDbParameterGroupsVersionEnum;
-}
-export declare class GetDescribeDbParameterGroupsHeaders extends SpeakeasyBase {
+    version: GETDescribeDBParameterGroupsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +20,9 @@ export declare class GetDescribeDbParameterGroupsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeDbParameterGroupsRequest extends SpeakeasyBase {
-    queryParams: GetDescribeDbParameterGroupsQueryParams;
-    headers: GetDescribeDbParameterGroupsHeaders;
-}
-export declare class GetDescribeDbParameterGroupsResponse extends SpeakeasyBase {
+export declare class GETDescribeDBParameterGroupsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,25 +1,17 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AccountCreateRecoveryRequest, AccountCreateRecoveryResponse } from "openapi/src/sdk/models/operations";
+import {
+  AccountCreateRecoveryRequestBody,
+  AccountCreateRecoveryResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: AccountCreateRecoveryRequest = {
-  security: {
-    jwt: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-    project: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  },
-  request: {
-    email: "sit",
-    url: "voluptas",
-  },
+
+const req: AccountCreateRecoveryRequestBody = {
+  email: "Larue_Rau85@yahoo.com",
+  url: "corrupti",
 };
 
 sdk.account.accountCreateRecovery(req).then((res: AccountCreateRecoveryResponse | AxiosError) => {

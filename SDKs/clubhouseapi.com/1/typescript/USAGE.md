@@ -1,16 +1,16 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetCheckForUpdateRequest, GetCheckForUpdateResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetCheckForUpdateRequest,
+  GetCheckForUpdateResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetCheckForUpdateRequest = {
-  queryParams: {
-    isTestflight: 8717895732742165505,
-  },
+  isTestflight: 548814,
 };
 
 sdk.getCheckForUpdate(req).then((res: GetCheckForUpdateResponse | AxiosError) => {

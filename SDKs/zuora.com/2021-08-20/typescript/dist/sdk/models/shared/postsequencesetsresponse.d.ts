@@ -1,6 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { GetSequenceSetResponse } from "./getsequencesetresponse";
-export declare class PostSequenceSetsResponse extends SpeakeasyBase {
-    sequenceSets?: GetSequenceSetResponse[];
+import { GETSequenceSetResponse } from "./getsequencesetresponse";
+export declare class POSTSequenceSetsResponse extends SpeakeasyBase {
+    /**
+     * Array of sequence sets configured for billing documents, payments, and refunds.
+     *
+     * @remarks
+     *
+     */
+    sequenceSets?: GETSequenceSetResponse[];
+    /**
+     * Indicates whether the call succeeded.
+     *
+     * @remarks
+     *
+     */
     success?: boolean;
 }

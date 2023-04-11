@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateReservedInstancesListingActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateReservedInstancesListingActionEnum {
     CreateReservedInstancesListing = "CreateReservedInstancesListing"
 }
-export declare enum PostCreateReservedInstancesListingVersionEnum {
+export declare enum POSTCreateReservedInstancesListingVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostCreateReservedInstancesListingQueryParams extends SpeakeasyBase {
-    action: PostCreateReservedInstancesListingActionEnum;
-    version: PostCreateReservedInstancesListingVersionEnum;
-}
-export declare class PostCreateReservedInstancesListingHeaders extends SpeakeasyBase {
+export declare class POSTCreateReservedInstancesListingRequest extends SpeakeasyBase {
+    action: POSTCreateReservedInstancesListingActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateReservedInstancesListingVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateReservedInstancesListingHeaders extends Speakeasy
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateReservedInstancesListingRequest extends SpeakeasyBase {
-    queryParams: PostCreateReservedInstancesListingQueryParams;
-    headers: PostCreateReservedInstancesListingHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateReservedInstancesListingResponse extends SpeakeasyBase {
+export declare class POSTCreateReservedInstancesListingResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

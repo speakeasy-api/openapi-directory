@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteClientVpnEndpointActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteClientVpnEndpointActionEnum {
     DeleteClientVpnEndpoint = "DeleteClientVpnEndpoint"
 }
-export declare enum GetDeleteClientVpnEndpointVersionEnum {
+export declare enum GETDeleteClientVpnEndpointVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetDeleteClientVpnEndpointQueryParams extends SpeakeasyBase {
-    action: GetDeleteClientVpnEndpointActionEnum;
+export declare class GETDeleteClientVpnEndpointRequest extends SpeakeasyBase {
+    action: GETDeleteClientVpnEndpointActionEnum;
+    /**
+     * The ID of the Client VPN to be deleted.
+     */
     clientVpnEndpointId: string;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
-    version: GetDeleteClientVpnEndpointVersionEnum;
-}
-export declare class GetDeleteClientVpnEndpointHeaders extends SpeakeasyBase {
+    version: GETDeleteClientVpnEndpointVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetDeleteClientVpnEndpointHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteClientVpnEndpointRequest extends SpeakeasyBase {
-    queryParams: GetDeleteClientVpnEndpointQueryParams;
-    headers: GetDeleteClientVpnEndpointHeaders;
-}
-export declare class GetDeleteClientVpnEndpointResponse extends SpeakeasyBase {
+export declare class GETDeleteClientVpnEndpointResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

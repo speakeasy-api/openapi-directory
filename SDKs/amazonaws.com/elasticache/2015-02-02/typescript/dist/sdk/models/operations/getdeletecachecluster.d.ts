@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteCacheClusterActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteCacheClusterActionEnum {
     DeleteCacheCluster = "DeleteCacheCluster"
 }
-export declare enum GetDeleteCacheClusterVersionEnum {
+export declare enum GETDeleteCacheClusterVersionEnum {
     TwoThousandAndFifteen0202 = "2015-02-02"
 }
-export declare class GetDeleteCacheClusterQueryParams extends SpeakeasyBase {
-    action: GetDeleteCacheClusterActionEnum;
+export declare class GETDeleteCacheClusterRequest extends SpeakeasyBase {
+    action: GETDeleteCacheClusterActionEnum;
+    /**
+     * The cluster identifier for the cluster to be deleted. This parameter is not case sensitive.
+     */
     cacheClusterId: string;
+    /**
+     * The user-supplied name of a final cluster snapshot. This is the unique name that identifies the snapshot. ElastiCache creates the snapshot, and then deletes the cluster immediately afterward.
+     */
     finalSnapshotIdentifier?: string;
-    version: GetDeleteCacheClusterVersionEnum;
-}
-export declare class GetDeleteCacheClusterHeaders extends SpeakeasyBase {
+    version: GETDeleteCacheClusterVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetDeleteCacheClusterHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteCacheClusterRequest extends SpeakeasyBase {
-    queryParams: GetDeleteCacheClusterQueryParams;
-    headers: GetDeleteCacheClusterHeaders;
-}
-export declare class GetDeleteCacheClusterResponse extends SpeakeasyBase {
+export declare class GETDeleteCacheClusterResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

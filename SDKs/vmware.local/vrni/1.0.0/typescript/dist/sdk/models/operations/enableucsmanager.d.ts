@@ -1,16 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class EnableUcsManagerPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class EnableUcsManagerSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
+    apiKeyAuth: string;
 }
 export declare class EnableUcsManagerRequest extends SpeakeasyBase {
-    pathParams: EnableUcsManagerPathParams;
-    security: EnableUcsManagerSecurity;
+    /**
+     * entity id
+     */
+    id: string;
 }
 export declare class EnableUcsManagerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetModifyDbSnapshotActionEnum {
-    ModifyDbSnapshot = "ModifyDBSnapshot"
+import { AxiosResponse } from "axios";
+export declare enum GETModifyDBSnapshotActionEnum {
+    ModifyDBSnapshot = "ModifyDBSnapshot"
 }
-export declare enum GetModifyDbSnapshotVersionEnum {
+export declare enum GETModifyDBSnapshotVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class GetModifyDbSnapshotQueryParams extends SpeakeasyBase {
-    action: GetModifyDbSnapshotActionEnum;
+export declare class GETModifyDBSnapshotRequest extends SpeakeasyBase {
+    action: GETModifyDBSnapshotActionEnum;
+    /**
+     * The identifier of the DB snapshot to modify.
+     */
     dbSnapshotIdentifier: string;
+    /**
+     * <p>The engine version to upgrade the DB snapshot to.</p> <p>The following are the database engines and engine versions that are available when you upgrade a DB snapshot.</p> <p> <b>MySQL</b> </p> <ul> <li> <p> <code>5.5.46</code> (supported for 5.1 DB snapshots)</p> </li> </ul> <p> <b>Oracle</b> </p> <ul> <li> <p> <code>12.1.0.2.v8</code> (supported for 12.1.0.1 DB snapshots)</p> </li> <li> <p> <code>11.2.0.4.v12</code> (supported for 11.2.0.2 DB snapshots)</p> </li> <li> <p> <code>11.2.0.4.v11</code> (supported for 11.2.0.3 DB snapshots)</p> </li> </ul> <p> <b>PostgreSQL</b> </p> <p>For the list of engine versions that are available for upgrading a DB snapshot, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.PostgreSQL.html#USER_UpgradeDBInstance.PostgreSQL.MajorVersion"> Upgrading the PostgreSQL DB Engine for Amazon RDS</a>.</p>
+     */
     engineVersion?: string;
+    /**
+     * <p>The option group to identify with the upgraded DB snapshot.</p> <p>You can specify this parameter when you upgrade an Oracle DB snapshot. The same option group considerations apply when upgrading a DB snapshot as when upgrading a DB instance. For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Oracle.html#USER_UpgradeDBInstance.Oracle.OGPG.OG">Option group considerations</a> in the <i>Amazon RDS User Guide.</i> </p>
+     */
     optionGroupName?: string;
-    version: GetModifyDbSnapshotVersionEnum;
-}
-export declare class GetModifyDbSnapshotHeaders extends SpeakeasyBase {
+    version: GETModifyDBSnapshotVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +29,9 @@ export declare class GetModifyDbSnapshotHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetModifyDbSnapshotRequest extends SpeakeasyBase {
-    queryParams: GetModifyDbSnapshotQueryParams;
-    headers: GetModifyDbSnapshotHeaders;
-}
-export declare class GetModifyDbSnapshotResponse extends SpeakeasyBase {
+export declare class GETModifyDBSnapshotResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,64 +1,69 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateItemDraftRequest, CreateItemDraftResponse } from "openapi/src/sdk/models/operations";
+import {
+  CreateItemDraftRequest,
+  CreateItemDraftResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: CreateItemDraftRequest = {
-  security: {
-    apiAuth: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  headers: {
-    contentLanguage: "sit",
-    xEBAYCMARKETPLACEID: "voluptas",
-  },
-  request: {
-    categoryId: "culpa",
+  contentLanguage: "corrupti",
+  itemDraft: {
+    categoryId: "provident",
     charity: {
-      charityId: "expedita",
-      donationPercentage: "consequuntur",
+      charityId: "distinctio",
+      donationPercentage: "quibusdam",
     },
-    condition: "dolor",
-    format: "expedita",
+    condition: "unde",
+    format: "nulla",
     pricingSummary: {
       auctionReservePrice: {
-        currency: "voluptas",
-        value: "fugit",
+        currency: "corrupti",
+        value: "illum",
       },
       auctionStartPrice: {
-        currency: "et",
-        value: "nihil",
+        currency: "vel",
+        value: "error",
       },
       price: {
-        currency: "rerum",
-        value: "dicta",
+        currency: "deserunt",
+        value: "suscipit",
       },
     },
     product: {
       aspects: [
         {
-          name: "voluptatum",
+          name: "magnam",
           values: [
-            "ut",
+            "ipsa",
+            "delectus",
+            "tempora",
+            "suscipit",
+          ],
+        },
+        {
+          name: "molestiae",
+          values: [
+            "placeat",
+            "voluptatum",
+            "iusto",
+            "excepturi",
           ],
         },
       ],
-      brand: "dolorem",
-      description: "et",
-      epid: "voluptate",
+      brand: "nisi",
+      description: "recusandae",
+      epid: "temporibus",
       imageUrls: [
-        "vitae",
-        "totam",
-        "dolores",
+        "quis",
       ],
-      title: "illum",
+      title: "Mr.",
     },
   },
+  xEbayCMarketplaceId: "deserunt",
 };
 
 sdk.itemDraft.createItemDraft(req).then((res: CreateItemDraftResponse | AxiosError) => {

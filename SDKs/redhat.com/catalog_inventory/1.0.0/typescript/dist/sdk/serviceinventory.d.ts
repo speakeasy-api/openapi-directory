@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class ServiceInventory {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,33 +9,38 @@ export declare class ServiceInventory {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * listServiceInventories - List ServiceInventories
+     * List ServiceInventories
      *
+     * @remarks
      * Returns an array of ServiceInventory objects
-    **/
+     */
     listServiceInventories(req: operations.ListServiceInventoriesRequest, config?: AxiosRequestConfig): Promise<operations.ListServiceInventoriesResponse>;
     /**
-     * listServiceInventoryTags - List Tags for ServiceInventory
+     * List Tags for ServiceInventory
      *
+     * @remarks
      * Returns an array of Tag objects
-    **/
+     */
     listServiceInventoryTags(req: operations.ListServiceInventoryTagsRequest, config?: AxiosRequestConfig): Promise<operations.ListServiceInventoryTagsResponse>;
     /**
-     * showServiceInventory - Show an existing ServiceInventory
+     * Show an existing ServiceInventory
      *
+     * @remarks
      * Returns a ServiceInventory object
-    **/
+     */
     showServiceInventory(req: operations.ShowServiceInventoryRequest, config?: AxiosRequestConfig): Promise<operations.ShowServiceInventoryResponse>;
     /**
-     * tagServiceInventory - Tag a ServiceInventory
+     * Tag a ServiceInventory
      *
+     * @remarks
      * Tags a ServiceInventory object
-    **/
+     */
     tagServiceInventory(req: operations.TagServiceInventoryRequest, config?: AxiosRequestConfig): Promise<operations.TagServiceInventoryResponse>;
     /**
-     * untagServiceInventory - Untag a ServiceInventory
+     * Untag a ServiceInventory
      *
+     * @remarks
      * Untags a ServiceInventory object
-    **/
+     */
     untagServiceInventory(req: operations.UntagServiceInventoryRequest, config?: AxiosRequestConfig): Promise<operations.UntagServiceInventoryResponse>;
 }

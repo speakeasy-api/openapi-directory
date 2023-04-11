@@ -1,19 +1,19 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { KeywordSearchRequest, KeywordSearchResponse } from "openapi/src/sdk/models/operations";
+import {
+  KeywordSearchRequest,
+  KeywordSearchResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: KeywordSearchRequest = {
-  queryParams: {
-    domainCode: "sit",
-    keyword: "voluptas",
-    numberOfProducts: 6050128673802995827,
-    sortBy: "expedita",
-  },
+  domainCode: "corrupti",
+  keyword: "provident",
+  numberOfProducts: 715190,
+  sortBy: "quibusdam",
 };
 
 sdk.amz.keywordSearch(req).then((res: KeywordSearchResponse | AxiosError) => {

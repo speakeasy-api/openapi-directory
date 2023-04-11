@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetApplyPendingMaintenanceActionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETApplyPendingMaintenanceActionActionEnum {
     ApplyPendingMaintenanceAction = "ApplyPendingMaintenanceAction"
 }
-export declare enum GetApplyPendingMaintenanceActionVersionEnum {
+export declare enum GETApplyPendingMaintenanceActionVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class GetApplyPendingMaintenanceActionQueryParams extends SpeakeasyBase {
-    action: GetApplyPendingMaintenanceActionActionEnum;
+export declare class GETApplyPendingMaintenanceActionRequest extends SpeakeasyBase {
+    action: GETApplyPendingMaintenanceActionActionEnum;
+    /**
+     * <p>The pending maintenance action to apply to this resource.</p> <p>Valid values: <code>system-update</code>, <code>db-upgrade</code> </p>
+     */
     applyAction: string;
+    /**
+     * <p>A value that specifies the type of opt-in request or undoes an opt-in request. An opt-in request of type <code>immediate</code> can't be undone.</p> <p>Valid values:</p> <ul> <li> <p> <code>immediate</code> - Apply the maintenance action immediately.</p> </li> <li> <p> <code>next-maintenance</code> - Apply the maintenance action during the next maintenance window for the resource. </p> </li> <li> <p> <code>undo-opt-in</code> - Cancel any existing <code>next-maintenance</code> opt-in requests.</p> </li> </ul>
+     */
     optInType: string;
+    /**
+     * The Amazon Resource Name (ARN) of the resource that the pending maintenance action applies to.
+     */
     resourceIdentifier: string;
-    version: GetApplyPendingMaintenanceActionVersionEnum;
-}
-export declare class GetApplyPendingMaintenanceActionHeaders extends SpeakeasyBase {
+    version: GETApplyPendingMaintenanceActionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +29,9 @@ export declare class GetApplyPendingMaintenanceActionHeaders extends SpeakeasyBa
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetApplyPendingMaintenanceActionRequest extends SpeakeasyBase {
-    queryParams: GetApplyPendingMaintenanceActionQueryParams;
-    headers: GetApplyPendingMaintenanceActionHeaders;
-}
-export declare class GetApplyPendingMaintenanceActionResponse extends SpeakeasyBase {
+export declare class GETApplyPendingMaintenanceActionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteVpcActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteVpcActionEnum {
     DeleteVpc = "DeleteVpc"
 }
-export declare enum GetDeleteVpcVersionEnum {
+export declare enum GETDeleteVpcVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetDeleteVpcQueryParams extends SpeakeasyBase {
-    action: GetDeleteVpcActionEnum;
+export declare class GETDeleteVpcRequest extends SpeakeasyBase {
+    action: GETDeleteVpcActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
-    version: GetDeleteVpcVersionEnum;
+    version: GETDeleteVpcVersionEnum;
+    /**
+     * The ID of the VPC.
+     */
     vpcId: string;
-}
-export declare class GetDeleteVpcHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,11 +25,8 @@ export declare class GetDeleteVpcHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteVpcRequest extends SpeakeasyBase {
-    queryParams: GetDeleteVpcQueryParams;
-    headers: GetDeleteVpcHeaders;
-}
-export declare class GetDeleteVpcResponse extends SpeakeasyBase {
+export declare class GETDeleteVpcResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

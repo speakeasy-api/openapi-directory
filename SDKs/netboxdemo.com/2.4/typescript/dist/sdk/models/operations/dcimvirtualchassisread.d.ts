@@ -1,13 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DcimVirtualChassisReadPathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DcimVirtualChassisReadRequest extends SpeakeasyBase {
-    pathParams: DcimVirtualChassisReadPathParams;
+    /**
+     * A unique integer value identifying this virtual chassis.
+     */
+    id: number;
 }
 export declare class DcimVirtualChassisReadResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
     virtualChassis?: shared.VirtualChassis;
 }

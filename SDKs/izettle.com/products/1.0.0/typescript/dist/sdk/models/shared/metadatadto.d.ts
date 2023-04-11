@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { SourceDto } from "./sourcedto";
-export declare class MetadataDto extends SpeakeasyBase {
+import { SourceDTO } from "./sourcedto";
+export declare class MetadataDTO extends SpeakeasyBase {
     inPos: boolean;
-    source?: SourceDto;
+    source?: SourceDTO;
 }

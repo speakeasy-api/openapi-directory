@@ -1,18 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdateNsxvManagerPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UpdateNsxvManagerSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
+    apiKeyAuth: string;
 }
 export declare class UpdateNsxvManagerRequest extends SpeakeasyBase {
-    pathParams: UpdateNsxvManagerPathParams;
-    request?: shared.NsxvManagerDataSource;
-    security: UpdateNsxvManagerSecurity;
+    nsxvManagerDataSource?: shared.NSXVManagerDataSource;
+    /**
+     * entity id
+     */
+    id: string;
 }
 export declare class UpdateNsxvManagerResponse extends SpeakeasyBase {
     contentType: string;
-    nsxvManagerDataSource?: shared.NsxvManagerDataSource;
+    /**
+     * OK
+     */
+    nsxvManagerDataSource?: shared.NSXVManagerDataSource;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

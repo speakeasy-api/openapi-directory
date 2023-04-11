@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ActivityStreamModeEnum } from "./activitystreammodeenum";
 import { ActivityStreamStatusEnum } from "./activitystreamstatusenum";
+/**
+ * Success
+ */
 export declare class StartActivityStreamResponse extends SpeakeasyBase {
     applyImmediately?: boolean;
     engineNativeAuditFieldsIncluded?: boolean;

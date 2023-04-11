@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class OptionsBlockIdTransactionPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class OptionsBlockIdTransactionRequest extends SpeakeasyBase {
-    pathParams: OptionsBlockIdTransactionPathParams;
+    /**
+     * Automatically added
+     */
+    id: string;
 }
 export declare class OptionsBlockIdTransactionResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * 200 response
+     */
     empty?: Record<string, any>;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

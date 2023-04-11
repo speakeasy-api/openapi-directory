@@ -1,30 +1,33 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { IpAddressInterface } from "./ipaddressinterface";
-import { NestedIpAddress } from "./nestedipaddress";
+import { IPAddressInterface } from "./ipaddressinterface";
+import { NestedIPAddress } from "./nestedipaddress";
 import { NestedTenant } from "./nestedtenant";
-import { NestedVrf } from "./nestedvrf";
-export declare class IpAddressRole extends SpeakeasyBase {
+import { NestedVRF } from "./nestedvrf";
+export declare class IPAddressRole extends SpeakeasyBase {
     label: string;
     value: number;
 }
-export declare class IpAddressStatus extends SpeakeasyBase {
+export declare class IPAddressStatus extends SpeakeasyBase {
     label: string;
     value: number;
 }
-export declare class IpAddress extends SpeakeasyBase {
+export declare class IPAddress extends SpeakeasyBase {
+    /**
+     * IPv4 or IPv6 address (with mask)
+     */
     address: string;
     created?: Date;
     customFields?: Record<string, any>;
     description?: string;
     family?: number;
     id?: number;
-    interface?: IpAddressInterface;
+    interface?: IPAddressInterface;
     lastUpdated?: Date;
-    natInside?: NestedIpAddress;
-    natOutside?: NestedIpAddress;
-    role?: IpAddressRole;
-    status?: IpAddressStatus;
+    natInside?: NestedIPAddress;
+    natOutside?: NestedIPAddress;
+    role?: IPAddressRole;
+    status?: IPAddressStatus;
     tags?: string[];
     tenant?: NestedTenant;
-    vrf?: NestedVrf;
+    vrf?: NestedVRF;
 }

@@ -1,14 +1,54 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListObjectAttributesQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
+import { AxiosResponse } from "axios";
+/**
+ * A facet.
+ */
+export declare class ListObjectAttributesRequestBodyFacetFilter extends SpeakeasyBase {
+    facetName?: string;
+    schemaArn?: string;
 }
+/**
+ * The reference that identifies an object.
+ */
+export declare class ListObjectAttributesRequestBodyObjectReference extends SpeakeasyBase {
+    selector?: string;
+}
+export declare class ListObjectAttributesRequestBody extends SpeakeasyBase {
+    /**
+     * A facet.
+     */
+    facetFilter?: ListObjectAttributesRequestBodyFacetFilter;
+    /**
+     * The maximum number of items to be retrieved in a single call. This is an approximate number.
+     */
+    maxResults?: number;
+    /**
+     * The pagination token.
+     */
+    nextToken?: string;
+    /**
+     * The reference that identifies an object.
+     */
+    objectReference: ListObjectAttributesRequestBodyObjectReference;
+}
+/**
+ * Represents the manner and timing in which the successful write or update of an object is reflected in a subsequent read operation of that same object.
+ */
 export declare enum ListObjectAttributesXAmzConsistencyLevelEnum {
     Serializable = "SERIALIZABLE",
     Eventual = "EVENTUAL"
 }
-export declare class ListObjectAttributesHeaders extends SpeakeasyBase {
+export declare class ListObjectAttributesRequest extends SpeakeasyBase {
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
+    requestBody: ListObjectAttributesRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,45 +56,61 @@ export declare class ListObjectAttributesHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
+    /**
+     * Represents the manner and timing in which the successful write or update of an object is reflected in a subsequent read operation of that same object.
+     */
     xAmzConsistencyLevel?: ListObjectAttributesXAmzConsistencyLevelEnum;
+    /**
+     * The Amazon Resource Name (ARN) that is associated with the <a>Directory</a> where the object resides. For more information, see <a>arns</a>.
+     */
     xAmzDataPartition: string;
 }
-/**
- * A facet.
-**/
-export declare class ListObjectAttributesRequestBodyFacetFilter extends SpeakeasyBase {
-    facetName?: string;
-    schemaArn?: string;
-}
-/**
- * The reference that identifies an object.
-**/
-export declare class ListObjectAttributesRequestBodyObjectReference extends SpeakeasyBase {
-    selector?: string;
-}
-export declare class ListObjectAttributesRequestBody extends SpeakeasyBase {
-    facetFilter?: ListObjectAttributesRequestBodyFacetFilter;
-    maxResults?: number;
-    nextToken?: string;
-    objectReference: ListObjectAttributesRequestBodyObjectReference;
-}
-export declare class ListObjectAttributesRequest extends SpeakeasyBase {
-    queryParams: ListObjectAttributesQueryParams;
-    headers: ListObjectAttributesHeaders;
-    request: ListObjectAttributesRequestBody;
-}
 export declare class ListObjectAttributesResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: shared.AccessDeniedException;
     contentType: string;
+    /**
+     * DirectoryNotEnabledException
+     */
     directoryNotEnabledException?: shared.DirectoryNotEnabledException;
+    /**
+     * FacetValidationException
+     */
     facetValidationException?: shared.FacetValidationException;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: shared.InternalServiceException;
+    /**
+     * InvalidArnException
+     */
     invalidArnException?: shared.InvalidArnException;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: shared.InvalidNextTokenException;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: shared.LimitExceededException;
+    /**
+     * Success
+     */
     listObjectAttributesResponse?: shared.ListObjectAttributesResponse;
-    resourceNotFoundException?: shared.ResourceNotFoundException;
-    retryableConflictException?: shared.RetryableConflictException;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: shared.ResourceNotFoundException;
+    /**
+     * RetryableConflictException
+     */
+    retryableConflictException?: shared.RetryableConflictException;
+    /**
+     * ValidationException
+     */
     validationException?: shared.ValidationException;
 }

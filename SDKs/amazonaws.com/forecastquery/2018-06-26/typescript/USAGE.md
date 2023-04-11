@@ -1,37 +1,39 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { QueryForecastRequest, QueryForecastResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  QueryForecastRequest,
+  QueryForecastResponse,
+  QueryForecastXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    hmac: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: QueryForecastRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "AmazonForecastRuntime.QueryForecast",
-  },
-  request: {
-    endDate: "fugit",
+  queryForecastRequest: {
+    endDate: "corrupti",
     filters: {
-      "nihil": "rerum",
+      "distinctio": "quibusdam",
+      "unde": "nulla",
+      "corrupti": "illum",
     },
-    forecastArn: "dicta",
-    nextToken: "debitis",
-    startDate: "voluptatum",
+    forecastArn: "vel",
+    nextToken: "error",
+    startDate: "deserunt",
   },
+  xAmzAlgorithm: "suscipit",
+  xAmzContentSha256: "iure",
+  xAmzCredential: "magnam",
+  xAmzDate: "debitis",
+  xAmzSecurityToken: "ipsa",
+  xAmzSignature: "delectus",
+  xAmzSignedHeaders: "tempora",
+  xAmzTarget: QueryForecastXAmzTargetEnum.AmazonForecastRuntimeQueryForecast,
 };
 
 sdk.queryForecast(req).then((res: QueryForecastResponse | AxiosError) => {

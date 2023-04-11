@@ -1,40 +1,34 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { PlayintegrityDecodeIntegrityTokenRequest, PlayintegrityDecodeIntegrityTokenResponse } from "openapi/src/sdk/models/operations";
+import {
+  PlayintegrityDecodeIntegrityTokenRequest,
+  PlayintegrityDecodeIntegrityTokenResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: PlayintegrityDecodeIntegrityTokenRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
+  dollarXgafv: XgafvEnum.Two,
+  decodeIntegrityTokenRequest: {
+    integrityToken: "provident",
   },
-  pathParams: {
-    packageName: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
-    integrityToken: "dicta",
-  },
+  accessToken: "distinctio",
+  alt: AltEnum.Proto,
+  callback: "unde",
+  fields: "nulla",
+  key: "corrupti",
+  oauthToken: "illum",
+  packageName: "vel",
+  prettyPrint: false,
+  quotaUser: "error",
+  uploadType: "deserunt",
+  uploadProtocol: "suscipit",
 };
 
 sdk.v1.playintegrityDecodeIntegrityToken(req).then((res: PlayintegrityDecodeIntegrityTokenResponse | AxiosError) => {

@@ -1,15 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PostStringsRequestBody extends SpeakeasyBase {
-    contents?: string[];
-    sourceLanguage?: string;
-    targetLanguages?: string[];
-}
-export declare class PostStringsRequest extends SpeakeasyBase {
-    request?: PostStringsRequestBody;
-}
+import { AxiosResponse } from "axios";
 export declare class PostStringsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Machine Translated Strings in JSON
+     */
     machineTranslatedStrings?: shared.MachineTranslatedStrings;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,21 +1,41 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
 export declare class PostSetpasswordRequestBody extends SpeakeasyBase {
-    confpassword: Record<string, any>;
-    password: Record<string, any>;
+    confpassword: string;
+    password: string;
+    /**
+     * Reset token received in the user email
+     */
     token: string;
 }
-export declare class PostSetpassword200ApplicationJson extends SpeakeasyBase {
-    message?: string;
-}
-export declare class PostSetpassword400ApplicationJson extends SpeakeasyBase {
+/**
+ * Bad Request
+ */
+export declare class PostSetpassword400ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error message
+     */
     error?: string;
 }
-export declare class PostSetpasswordRequest extends SpeakeasyBase {
-    request: PostSetpasswordRequestBody;
+/**
+ * Success
+ */
+export declare class PostSetpassword200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Message
+     */
+    message?: string;
 }
 export declare class PostSetpasswordResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    postSetpassword200ApplicationJSONObject?: PostSetpassword200ApplicationJson;
-    postSetpassword400ApplicationJSONObject?: PostSetpassword400ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
+    postSetpassword200ApplicationJSONObject?: PostSetpassword200ApplicationJSON;
+    /**
+     * Bad Request
+     */
+    postSetpassword400ApplicationJSONObject?: PostSetpassword400ApplicationJSON;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum UpdateAclxAmzTargetEnum {
-    AmazonMemoryDbUpdateAcl = "AmazonMemoryDB.UpdateACL"
+import { AxiosResponse } from "axios";
+export declare enum UpdateACLXAmzTargetEnum {
+    AmazonMemoryDBUpdateACL = "AmazonMemoryDB.UpdateACL"
 }
-export declare class UpdateAclHeaders extends SpeakeasyBase {
+export declare class UpdateACLRequest extends SpeakeasyBase {
+    updateACLRequest: shared.UpdateACLRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,21 +13,42 @@ export declare class UpdateAclHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: UpdateAclxAmzTargetEnum;
+    xAmzTarget: UpdateACLXAmzTargetEnum;
 }
-export declare class UpdateAclRequest extends SpeakeasyBase {
-    headers: UpdateAclHeaders;
-    request: shared.UpdateAclRequest;
-}
-export declare class UpdateAclResponse extends SpeakeasyBase {
+export declare class UpdateACLResponse extends SpeakeasyBase {
+    /**
+     * ACLNotFoundFault
+     */
     aclNotFoundFault?: any;
     contentType: string;
+    /**
+     * DefaultUserRequired
+     */
     defaultUserRequired?: any;
+    /**
+     * DuplicateUserNameFault
+     */
     duplicateUserNameFault?: any;
+    /**
+     * InvalidACLStateFault
+     */
     invalidACLStateFault?: any;
+    /**
+     * InvalidParameterCombinationException
+     */
     invalidParameterCombinationException?: any;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
     statusCode: number;
-    updateACLResponse?: shared.UpdateAclResponse;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
+    updateACLResponse?: shared.UpdateACLResponse;
+    /**
+     * UserNotFoundFault
+     */
     userNotFoundFault?: any;
 }

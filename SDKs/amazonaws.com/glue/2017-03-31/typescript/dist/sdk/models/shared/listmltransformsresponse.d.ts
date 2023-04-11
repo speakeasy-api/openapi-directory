@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ListMlTransformsResponse extends SpeakeasyBase {
+/**
+ * Success
+ */
+export declare class ListMLTransformsResponse extends SpeakeasyBase {
     nextToken?: string;
     transformIds: string[];
 }

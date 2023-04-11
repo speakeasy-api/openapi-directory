@@ -1,12 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetKeyQueryParams extends SpeakeasyBase {
-    token?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetKeyRequest extends SpeakeasyBase {
-    queryParams: GetKeyQueryParams;
+    token?: string;
 }
 export declare class GetKeyResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * 200 response
+     */
     empty?: Record<string, any>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

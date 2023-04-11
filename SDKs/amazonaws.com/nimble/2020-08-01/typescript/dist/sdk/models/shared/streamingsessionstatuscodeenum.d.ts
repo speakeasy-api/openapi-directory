@@ -9,5 +9,10 @@ export declare enum StreamingSessionStatusCodeEnum {
     NetworkConnectionError = "NETWORK_CONNECTION_ERROR",
     InitializationScriptError = "INITIALIZATION_SCRIPT_ERROR",
     DecryptStreamingImageError = "DECRYPT_STREAMING_IMAGE_ERROR",
-    NetworkInterfaceError = "NETWORK_INTERFACE_ERROR"
+    NetworkInterfaceError = "NETWORK_INTERFACE_ERROR",
+    StreamingSessionStopped = "STREAMING_SESSION_STOPPED",
+    StreamingSessionStarted = "STREAMING_SESSION_STARTED",
+    StreamingSessionStopInProgress = "STREAMING_SESSION_STOP_IN_PROGRESS",
+    StreamingSessionStartInProgress = "STREAMING_SESSION_START_IN_PROGRESS",
+    AmiValidationError = "AMI_VALIDATION_ERROR"
 }

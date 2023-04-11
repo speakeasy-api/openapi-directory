@@ -1,12 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetOntDagsUsingGetPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETOntDagsUsingGETRequest extends SpeakeasyBase {
+    /**
+     * Accession ID
+     */
     accId: string;
 }
-export declare class GetOntDagsUsingGetRequest extends SpeakeasyBase {
-    pathParams: GetOntDagsUsingGetPathParams;
-}
-export declare class GetOntDagsUsingGetResponse extends SpeakeasyBase {
+export declare class GETOntDagsUsingGETResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

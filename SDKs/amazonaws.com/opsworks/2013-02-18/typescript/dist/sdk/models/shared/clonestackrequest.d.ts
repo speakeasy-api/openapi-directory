@@ -1,8 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ChefConfiguration } from "./chefconfiguration";
-import { StackConfigurationManager } from "./stackconfigurationmanager";
-import { Source } from "./source";
 import { RootDeviceTypeEnum } from "./rootdevicetypeenum";
+import { Source } from "./source";
+import { StackConfigurationManager } from "./stackconfigurationmanager";
 export declare class CloneStackRequest extends SpeakeasyBase {
     agentVersion?: string;
     attributes?: Record<string, string>;

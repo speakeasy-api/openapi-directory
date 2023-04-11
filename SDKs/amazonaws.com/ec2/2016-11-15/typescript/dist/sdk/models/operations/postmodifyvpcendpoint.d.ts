@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostModifyVpcEndpointActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTModifyVpcEndpointActionEnum {
     ModifyVpcEndpoint = "ModifyVpcEndpoint"
 }
-export declare enum PostModifyVpcEndpointVersionEnum {
+export declare enum POSTModifyVpcEndpointVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostModifyVpcEndpointQueryParams extends SpeakeasyBase {
-    action: PostModifyVpcEndpointActionEnum;
-    version: PostModifyVpcEndpointVersionEnum;
-}
-export declare class PostModifyVpcEndpointHeaders extends SpeakeasyBase {
+export declare class POSTModifyVpcEndpointRequest extends SpeakeasyBase {
+    action: POSTModifyVpcEndpointActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTModifyVpcEndpointVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostModifyVpcEndpointHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostModifyVpcEndpointRequest extends SpeakeasyBase {
-    queryParams: PostModifyVpcEndpointQueryParams;
-    headers: PostModifyVpcEndpointHeaders;
-    request?: Uint8Array;
-}
-export declare class PostModifyVpcEndpointResponse extends SpeakeasyBase {
+export declare class POSTModifyVpcEndpointResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,24 +1,44 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetTargetsTargetIdScheduledscansExpandedPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetTargetsTargetIdScheduledscansExpandedRequest extends SpeakeasyBase {
+    /**
+     * Number of results to return per page
+     */
+    length?: number;
+    /**
+     * Target id
+     */
     targetId: string;
 }
-export declare class GetTargetsTargetIdScheduledscansExpandedQueryParams extends SpeakeasyBase {
-    length?: number;
-}
-export declare class GetTargetsTargetIdScheduledscansExpanded200ApplicationJson extends SpeakeasyBase {
-    results?: shared.Scheduled[];
-}
-export declare class GetTargetsTargetIdScheduledscansExpanded404ApplicationJson extends SpeakeasyBase {
+/**
+ * Not found
+ */
+export declare class GetTargetsTargetIdScheduledscansExpanded404ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Not found.
+     */
     detail?: string;
 }
-export declare class GetTargetsTargetIdScheduledscansExpandedRequest extends SpeakeasyBase {
-    pathParams: GetTargetsTargetIdScheduledscansExpandedPathParams;
-    queryParams: GetTargetsTargetIdScheduledscansExpandedQueryParams;
+/**
+ * Next scheduled scans
+ */
+export declare class GetTargetsTargetIdScheduledscansExpanded200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Scheduled scan objects
+     */
+    results?: shared.Scheduled[];
 }
 export declare class GetTargetsTargetIdScheduledscansExpandedResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getTargetsTargetIdScheduledscansExpanded200ApplicationJSONObject?: GetTargetsTargetIdScheduledscansExpanded200ApplicationJson;
-    getTargetsTargetIdScheduledscansExpanded404ApplicationJSONObject?: GetTargetsTargetIdScheduledscansExpanded404ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Next scheduled scans
+     */
+    getTargetsTargetIdScheduledscansExpanded200ApplicationJSONObject?: GetTargetsTargetIdScheduledscansExpanded200ApplicationJSON;
+    /**
+     * Not found
+     */
+    getTargetsTargetIdScheduledscansExpanded404ApplicationJSONObject?: GetTargetsTargetIdScheduledscansExpanded404ApplicationJSON;
 }

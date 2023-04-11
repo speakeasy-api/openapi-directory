@@ -1,22 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreateFileAssociationPathParams extends SpeakeasyBase {
-    fileId: string;
-}
-export declare class CreateFileAssociationHeaders extends SpeakeasyBase {
-    xeroTenantId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class CreateFileAssociationSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class CreateFileAssociationRequest extends SpeakeasyBase {
-    pathParams: CreateFileAssociationPathParams;
-    headers: CreateFileAssociationHeaders;
-    request?: shared.Association;
-    security: CreateFileAssociationSecurity;
+    association?: shared.Association;
+    /**
+     * File id for single object
+     */
+    fileId: string;
+    /**
+     * Xero identifier for Tenant
+     */
+    xeroTenantId: string;
 }
 export declare class CreateFileAssociationResponse extends SpeakeasyBase {
+    /**
+     * A successful request
+     */
     association?: shared.Association;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

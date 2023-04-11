@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Input to the GetId action.
-**/
+ */
 export declare class GetIdInput extends SpeakeasyBase {
     accountId?: string;
     identityPoolId: string;

@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Activity {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,41 +9,53 @@ export declare class Activity {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getActivities - Get a list of realtime activities.
+     * Monitor project activities
      *
-     * Get a list of realtime activities on the project, such as translation suggestion and translation approval.
-    **/
+     * @remarks
+     * Get a list of real-time activities in the project, such as translation suggestion and translation approval.
+     */
     getActivities(req: operations.GetActivitiesRequest, config?: AxiosRequestConfig): Promise<operations.GetActivitiesResponse>;
     /**
-     * getActivity - Get a single realtime activity.
+     * View an activity
      *
-     * Get a single realtime activity.
-    **/
+     * @remarks
+     * View the details of an activity in the project.
+     */
     getActivity(req: operations.GetActivityRequest, config?: AxiosRequestConfig): Promise<operations.GetActivityResponse>;
     /**
-     * getActivityComments - Get a list of comments belonging to this activity.
+     * View activity comments
      *
-     * Get a list of comments belonging to this activity.
-    **/
+     * @remarks
+     * View a list of comments added to this activity.
+     */
     getActivityComments(req: operations.GetActivityCommentsRequest, config?: AxiosRequestConfig): Promise<operations.GetActivityCommentsResponse>;
     /**
-     * getComments - Get a list of activity comments throughout the whole project.
+     * View all project comments
      *
-     * Get a list of activity comments throughout the whole project.
-    **/
+     * @remarks
+     * View a list of activity comments in the project.
+     */
     getComments(req: operations.GetCommentsRequest, config?: AxiosRequestConfig): Promise<operations.GetCommentsResponse>;
     /**
-     * getSalesActivities - Get sales activities for a project
-    **/
+     * Get sales activities for a project
+     */
     getSalesActivities(req: operations.GetSalesActivitiesRequest, config?: AxiosRequestConfig): Promise<operations.GetSalesActivitiesResponse>;
     /**
-     * insertSalesActivity - Insert sales activity for a project
-    **/
+     * Insert sales activity for a project
+     */
     insertSalesActivity(req: operations.InsertSalesActivityRequest, config?: AxiosRequestConfig): Promise<operations.InsertSalesActivityResponse>;
     /**
-     * submitComment - Submit a comment to an activity.
+     * Submit comment to an activity
      *
-     * Submit a comment to an activity.
-    **/
-    submitComment(req: operations.SubmitCommentRequest, config?: AxiosRequestConfig): Promise<operations.SubmitCommentResponse>;
+     * @remarks
+     * Submit a comment to an activity in the project, such as translation or editing.
+     */
+    submitCommentJson(req: operations.SubmitCommentJsonRequest, config?: AxiosRequestConfig): Promise<operations.SubmitCommentJsonResponse>;
+    /**
+     * Submit comment to an activity
+     *
+     * @remarks
+     * Submit a comment to an activity in the project, such as translation or editing.
+     */
+    submitCommentMultipart(req: operations.SubmitCommentMultipartRequest, config?: AxiosRequestConfig): Promise<operations.SubmitCommentMultipartResponse>;
 }

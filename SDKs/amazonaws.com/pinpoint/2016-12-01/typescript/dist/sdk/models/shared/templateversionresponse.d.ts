@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Provides information about a specific version of a message template.
-**/
+ */
 export declare class TemplateVersionResponse extends SpeakeasyBase {
     creationDate: string;
     defaultSubstitutions?: string;

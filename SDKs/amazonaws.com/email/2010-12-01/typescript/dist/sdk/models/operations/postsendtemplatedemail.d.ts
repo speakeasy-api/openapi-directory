@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostSendTemplatedEmailActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTSendTemplatedEmailActionEnum {
     SendTemplatedEmail = "SendTemplatedEmail"
 }
-export declare enum PostSendTemplatedEmailVersionEnum {
+export declare enum POSTSendTemplatedEmailVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostSendTemplatedEmailQueryParams extends SpeakeasyBase {
-    action: PostSendTemplatedEmailActionEnum;
-    version: PostSendTemplatedEmailVersionEnum;
-}
-export declare class PostSendTemplatedEmailHeaders extends SpeakeasyBase {
+export declare class POSTSendTemplatedEmailRequest extends SpeakeasyBase {
+    action: POSTSendTemplatedEmailActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTSendTemplatedEmailVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostSendTemplatedEmailHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostSendTemplatedEmailRequest extends SpeakeasyBase {
-    queryParams: PostSendTemplatedEmailQueryParams;
-    headers: PostSendTemplatedEmailHeaders;
-    request?: Uint8Array;
-}
-export declare class PostSendTemplatedEmailResponse extends SpeakeasyBase {
+export declare class POSTSendTemplatedEmailResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

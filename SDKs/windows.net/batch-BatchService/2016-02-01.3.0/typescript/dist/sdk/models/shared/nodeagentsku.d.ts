@@ -1,0 +1,27 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { ImageReference } from "./imagereference";
+/**
+ * The type of operating system compatible with the node agent SKU.
+ */
+export declare enum NodeAgentSkuOsTypeEnum {
+    Linux = "linux",
+    Windows = "windows",
+    Unmapped = "unmapped"
+}
+/**
+ * A node agent SKU supported by the Batch service. The Batch node agent is a program that runs on each node in the pool, and provides the command-and-control interface between the node and the Batch service. There are different implementations of the node agent, known as SKUs, for different operating systems.
+ */
+export declare class NodeAgentSku extends SpeakeasyBase {
+    /**
+     * The node agent SKU id.
+     */
+    id?: string;
+    /**
+     * The type of operating system compatible with the node agent SKU.
+     */
+    osType?: NodeAgentSkuOsTypeEnum;
+    /**
+     * The list of images verified to be compatible with this node agent SKU. This collection is not exhaustive (the node agent may be compatible with other images).
+     */
+    verifiedImageReferences?: ImageReference[];
+}

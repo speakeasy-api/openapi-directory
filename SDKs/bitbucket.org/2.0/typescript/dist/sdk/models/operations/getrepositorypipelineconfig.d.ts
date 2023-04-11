@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetRepositoryPipelineConfigPathParams extends SpeakeasyBase {
-    repoSlug: string;
-    workspace: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetRepositoryPipelineConfigRequest extends SpeakeasyBase {
-    pathParams: GetRepositoryPipelineConfigPathParams;
+    /**
+     * The repository.
+     */
+    repoSlug: string;
+    /**
+     * The account.
+     */
+    workspace: string;
 }
 export declare class GetRepositoryPipelineConfigResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The repository pipelines configuration.
+     */
     pipelinesConfig?: Record<string, any>;
 }

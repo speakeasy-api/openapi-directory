@@ -1,12 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PanVerificationRecordSchemaCertificateDataPanVerificationRecord extends SpeakeasyBase {
+export declare class PANVerificationRecordSchemaCertificateDataPANVerificationRecord extends SpeakeasyBase {
     num: string;
     verifiedOn: string;
 }
-export declare class PanVerificationRecordSchemaCertificateData extends SpeakeasyBase {
-    panVerificationRecord?: PanVerificationRecordSchemaCertificateDataPanVerificationRecord;
+export declare class PANVerificationRecordSchemaCertificateData extends SpeakeasyBase {
+    panVerificationRecord?: PANVerificationRecordSchemaCertificateDataPANVerificationRecord;
 }
-export declare class PanVerificationRecordSchemaIssuedByOrganizationAddress extends SpeakeasyBase {
+export declare class PANVerificationRecordSchemaIssuedByOrganizationAddress extends SpeakeasyBase {
     country: string;
     district: string;
     house: string;
@@ -19,18 +19,18 @@ export declare class PanVerificationRecordSchemaIssuedByOrganizationAddress exte
     type: string;
     vtc: string;
 }
-export declare class PanVerificationRecordSchemaIssuedByOrganization extends SpeakeasyBase {
-    address: PanVerificationRecordSchemaIssuedByOrganizationAddress;
+export declare class PANVerificationRecordSchemaIssuedByOrganization extends SpeakeasyBase {
+    address: PANVerificationRecordSchemaIssuedByOrganizationAddress;
     code: string;
     name: string;
     tin: string;
     type: string;
     uid: string;
 }
-export declare class PanVerificationRecordSchemaIssuedBy extends SpeakeasyBase {
-    organization: PanVerificationRecordSchemaIssuedByOrganization;
+export declare class PANVerificationRecordSchemaIssuedBy extends SpeakeasyBase {
+    organization: PANVerificationRecordSchemaIssuedByOrganization;
 }
-export declare class PanVerificationRecordSchemaIssuedToPersonAddress extends SpeakeasyBase {
+export declare class PANVerificationRecordSchemaIssuedToPersonAddress extends SpeakeasyBase {
     country: string;
     district: string;
     house: string;
@@ -43,12 +43,12 @@ export declare class PanVerificationRecordSchemaIssuedToPersonAddress extends Sp
     type: string;
     vtc: string;
 }
-export declare class PanVerificationRecordSchemaIssuedToPersonPhoto extends SpeakeasyBase {
+export declare class PANVerificationRecordSchemaIssuedToPersonPhoto extends SpeakeasyBase {
     format: string;
 }
-export declare class PanVerificationRecordSchemaIssuedToPerson extends SpeakeasyBase {
-    address: PanVerificationRecordSchemaIssuedToPersonAddress;
-    photo: PanVerificationRecordSchemaIssuedToPersonPhoto;
+export declare class PANVerificationRecordSchemaIssuedToPerson extends SpeakeasyBase {
+    address: PANVerificationRecordSchemaIssuedToPersonAddress;
+    photo: PANVerificationRecordSchemaIssuedToPersonPhoto;
     dob: string;
     email: string;
     gender: string;
@@ -61,13 +61,16 @@ export declare class PanVerificationRecordSchemaIssuedToPerson extends Speakeasy
     title: string;
     uid: string;
 }
-export declare class PanVerificationRecordSchemaIssuedTo extends SpeakeasyBase {
-    person: PanVerificationRecordSchemaIssuedToPerson;
+export declare class PANVerificationRecordSchemaIssuedTo extends SpeakeasyBase {
+    person: PANVerificationRecordSchemaIssuedToPerson;
 }
-export declare class PanVerificationRecordSchema extends SpeakeasyBase {
-    certificateData: PanVerificationRecordSchemaCertificateData;
-    issuedBy: PanVerificationRecordSchemaIssuedBy;
-    issuedTo: PanVerificationRecordSchemaIssuedTo;
+/**
+ * The certificate data in response body in PDF, XML or JSON format as requested in format parameter.
+ */
+export declare class PANVerificationRecordSchema extends SpeakeasyBase {
+    certificateData: PANVerificationRecordSchemaCertificateData;
+    issuedBy: PANVerificationRecordSchemaIssuedBy;
+    issuedTo: PANVerificationRecordSchemaIssuedTo;
     issueDate: string;
     issuedAt: string;
     language: string;

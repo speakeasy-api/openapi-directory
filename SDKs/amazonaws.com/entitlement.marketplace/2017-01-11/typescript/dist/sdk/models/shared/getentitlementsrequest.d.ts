@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * The GetEntitlementsRequest contains parameters for the GetEntitlements operation.
-**/
+ */
 export declare class GetEntitlementsRequest extends SpeakeasyBase {
     filter?: Record<string, string[]>;
     maxResults?: number;

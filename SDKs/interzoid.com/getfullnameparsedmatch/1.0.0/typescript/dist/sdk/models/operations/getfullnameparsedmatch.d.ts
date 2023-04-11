@@ -1,19 +1,33 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetfullnameparsedmatchQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetfullnameparsedmatchRequest extends SpeakeasyBase {
+    /**
+     * First name from which to generate similarity key
+     */
     firstname: string;
+    /**
+     * Last name from which to generate similarity key
+     */
     lastname: string;
+    /**
+     * Your Interzoid license API key. Register at www.interzoid.com/register
+     */
     license: string;
 }
-export declare class Getfullnameparsedmatch200ApplicationJson extends SpeakeasyBase {
+/**
+ * Generated similarity key for parsed full name data
+ */
+export declare class Getfullnameparsedmatch200ApplicationJSON extends SpeakeasyBase {
     code?: string;
     credits?: string;
     simkey?: string;
 }
-export declare class GetfullnameparsedmatchRequest extends SpeakeasyBase {
-    queryParams: GetfullnameparsedmatchQueryParams;
-}
 export declare class GetfullnameparsedmatchResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getfullnameparsedmatch200ApplicationJSONObject?: Getfullnameparsedmatch200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Generated similarity key for parsed full name data
+     */
+    getfullnameparsedmatch200ApplicationJSONObject?: Getfullnameparsedmatch200ApplicationJSON;
 }

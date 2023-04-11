@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum DeleteIpSetXAmzTargetEnum {
-    Awswaf20150824DeleteIpSet = "AWSWAF_20150824.DeleteIPSet"
+import { AxiosResponse } from "axios";
+export declare enum DeleteIPSetXAmzTargetEnum {
+    AWSWAF20150824DeleteIPSet = "AWSWAF_20150824.DeleteIPSet"
 }
-export declare class DeleteIpSetHeaders extends SpeakeasyBase {
+export declare class DeleteIPSetRequest extends SpeakeasyBase {
+    deleteIPSetRequest: shared.DeleteIPSetRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,20 +13,38 @@ export declare class DeleteIpSetHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: DeleteIpSetXAmzTargetEnum;
+    xAmzTarget: DeleteIPSetXAmzTargetEnum;
 }
-export declare class DeleteIpSetRequest extends SpeakeasyBase {
-    headers: DeleteIpSetHeaders;
-    request: shared.DeleteIpSetRequest;
-}
-export declare class DeleteIpSetResponse extends SpeakeasyBase {
+export declare class DeleteIPSetResponse extends SpeakeasyBase {
     contentType: string;
-    deleteIPSetResponse?: shared.DeleteIpSetResponse;
+    /**
+     * Success
+     */
+    deleteIPSetResponse?: shared.DeleteIPSetResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFInvalidAccountException
+     */
     wafInvalidAccountException?: any;
+    /**
+     * WAFNonEmptyEntityException
+     */
     wafNonEmptyEntityException?: any;
+    /**
+     * WAFNonexistentItemException
+     */
     wafNonexistentItemException?: any;
+    /**
+     * WAFReferencedItemException
+     */
     wafReferencedItemException?: any;
+    /**
+     * WAFStaleDataException
+     */
     wafStaleDataException?: any;
 }

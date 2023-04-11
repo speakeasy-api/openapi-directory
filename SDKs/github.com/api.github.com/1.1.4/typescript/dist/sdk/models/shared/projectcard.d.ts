@@ -1,40 +1,28 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-/**
- * Simple User
-**/
-export declare class ProjectCardSimpleUser extends SpeakeasyBase {
-    avatarUrl: string;
-    eventsUrl: string;
-    followersUrl: string;
-    followingUrl: string;
-    gistsUrl: string;
-    gravatarId: string;
-    htmlUrl: string;
-    id: number;
-    login: string;
-    nodeId: string;
-    organizationsUrl: string;
-    receivedEventsUrl: string;
-    reposUrl: string;
-    siteAdmin: boolean;
-    starredAt?: string;
-    starredUrl: string;
-    subscriptionsUrl: string;
-    type: string;
-    url: string;
-}
+import { NullableSimpleUser } from "./nullablesimpleuser";
 /**
  * Project cards represent a scope of work.
-**/
+ */
 export declare class ProjectCard extends SpeakeasyBase {
+    /**
+     * Whether or not the card is archived
+     */
     archived?: boolean;
+    columnName?: string;
     columnUrl: string;
     contentUrl?: string;
     createdAt: Date;
-    creator: ProjectCardSimpleUser;
+    /**
+     * A GitHub user.
+     */
+    creator: NullableSimpleUser;
+    /**
+     * The project card's ID
+     */
     id: number;
     nodeId: string;
     note: string;
+    projectId?: string;
     projectUrl: string;
     updatedAt: Date;
     url: string;

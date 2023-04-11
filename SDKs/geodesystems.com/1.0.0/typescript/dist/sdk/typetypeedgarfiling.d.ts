@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Search API for 'SEC EDGAR Filing' entry type
+ */
 export declare class TypeTypeEdgarFiling {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,10 @@ export declare class TypeTypeEdgarFiling {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * searchTypeEdgarFiling - Search API for 'SEC EDGAR Filing' entry type
+     * Search API for 'SEC EDGAR Filing' entry type
      *
+     * @remarks
      * API to search for entries of type SEC EDGAR Filing
-    **/
+     */
     searchTypeEdgarFiling(req: operations.SearchTypeEdgarFilingRequest, config?: AxiosRequestConfig): Promise<operations.SearchTypeEdgarFilingResponse>;
 }

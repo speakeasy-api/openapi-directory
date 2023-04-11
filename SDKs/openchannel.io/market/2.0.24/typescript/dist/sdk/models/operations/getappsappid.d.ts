@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetAppsAppIdPathParams extends SpeakeasyBase {
-    appId: string;
-}
-export declare class GetAppsAppIdQueryParams extends SpeakeasyBase {
-    trackViews?: boolean;
-    userId?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetAppsAppIdRequest extends SpeakeasyBase {
-    pathParams: GetAppsAppIdPathParams;
-    queryParams: GetAppsAppIdQueryParams;
+    /**
+     * The id of the App to be located
+     */
+    appId: string;
+    /**
+     * Whether this call should be tracked as a 'view' for this app. Default is false.
+     */
+    trackViews?: boolean;
+    /**
+     * The unique id of the user that is requesting this resource
+     */
+    userId?: string;
 }
 export declare class GetAppsAppIdResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

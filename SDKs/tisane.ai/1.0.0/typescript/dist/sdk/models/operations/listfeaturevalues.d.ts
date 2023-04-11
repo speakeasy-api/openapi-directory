@@ -1,14 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ListFeatureValuesQueryParams extends SpeakeasyBase {
-    description?: string;
-    language?: string;
-    type?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ListFeatureValuesRequest extends SpeakeasyBase {
-    queryParams: ListFeatureValuesQueryParams;
+    /**
+     * {{apiKeyDescription}}
+     */
+    ocpApimSubscriptionKey?: string;
+    /**
+     * (Required) Feature list name (localized)
+     */
+    description?: string;
+    /**
+     * (Required) Language code
+     */
+    language?: string;
+    /**
+     * (Required) Feature type
+     */
+    type?: string;
 }
 export declare class ListFeatureValuesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * List entity subtypes
+     */
     listFeatureValues200ApplicationJSONStrings?: string[];
 }

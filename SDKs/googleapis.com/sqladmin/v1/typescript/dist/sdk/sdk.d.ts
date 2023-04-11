@@ -1,4 +1,3 @@
-import { AxiosInstance } from "axios";
 import { BackupRuns } from "./backupruns";
 import { Connect } from "./connect";
 import { Databases } from "./databases";
@@ -9,11 +8,29 @@ import { Projects } from "./projects";
 import { SslCerts } from "./sslcerts";
 import { Tiers } from "./tiers";
 import { Users } from "./users";
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://sqladmin.googleapis.com/"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * API for Cloud SQL database instance management
+ *
+ * @see {@link https://developers.google.com/cloud-sql/}
+ */
 export declare class SDK {
     backupRuns: BackupRuns;
     connect: Connect;
@@ -31,5 +48,6 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
 }

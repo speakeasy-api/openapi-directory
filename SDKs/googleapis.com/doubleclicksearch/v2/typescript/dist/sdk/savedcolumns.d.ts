@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class SavedColumns {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +9,7 @@ export declare class SavedColumns {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * doubleclicksearchSavedColumnsList - Retrieve the list of saved columns for a specified advertiser.
-    **/
-    doubleclicksearchSavedColumnsList(req: operations.DoubleclicksearchSavedColumnsListRequest, config?: AxiosRequestConfig): Promise<operations.DoubleclicksearchSavedColumnsListResponse>;
+     * Retrieve the list of saved columns for a specified advertiser.
+     */
+    doubleclicksearchSavedColumnsList(req: operations.DoubleclicksearchSavedColumnsListRequest, security: operations.DoubleclicksearchSavedColumnsListSecurity, config?: AxiosRequestConfig): Promise<operations.DoubleclicksearchSavedColumnsListResponse>;
 }

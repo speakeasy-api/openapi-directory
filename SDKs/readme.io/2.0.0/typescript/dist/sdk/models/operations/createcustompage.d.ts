@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class CreateCustomPageSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
-}
-export declare class CreateCustomPageRequest extends SpeakeasyBase {
-    request: shared.CustomPage;
-    security: CreateCustomPageSecurity;
+    password: string;
+    username: string;
 }
 export declare class CreateCustomPageResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

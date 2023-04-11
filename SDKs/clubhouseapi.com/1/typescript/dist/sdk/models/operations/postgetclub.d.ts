@@ -1,8 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PostGetClubRequest extends SpeakeasyBase {
-    request?: Record<string, any>;
-}
+import { AxiosResponse } from "axios";
 export declare class PostGetClubResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

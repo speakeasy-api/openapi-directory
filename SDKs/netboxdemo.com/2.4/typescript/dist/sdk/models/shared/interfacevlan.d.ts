@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class InterfaceVlan extends SpeakeasyBase {
+export declare class InterfaceVLAN extends SpeakeasyBase {
     displayName?: string;
     id?: number;
     name: string;

@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * successful operation
+ */
 export declare class AccessTokenInfoResponse extends SpeakeasyBase {
     appId: number;
     expiresIn: number;

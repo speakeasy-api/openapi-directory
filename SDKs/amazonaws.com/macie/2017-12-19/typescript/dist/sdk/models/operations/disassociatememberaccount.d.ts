@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DisassociateMemberAccountXAmzTargetEnum {
     MacieServiceDisassociateMemberAccount = "MacieService.DisassociateMemberAccount"
 }
-export declare class DisassociateMemberAccountHeaders extends SpeakeasyBase {
+export declare class DisassociateMemberAccountRequest extends SpeakeasyBase {
+    disassociateMemberAccountRequest: shared.DisassociateMemberAccountRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,13 +15,16 @@ export declare class DisassociateMemberAccountHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DisassociateMemberAccountXAmzTargetEnum;
 }
-export declare class DisassociateMemberAccountRequest extends SpeakeasyBase {
-    headers: DisassociateMemberAccountHeaders;
-    request: shared.DisassociateMemberAccountRequest;
-}
 export declare class DisassociateMemberAccountResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalException
+     */
     internalException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

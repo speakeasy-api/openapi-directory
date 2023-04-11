@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateFpgaImageActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateFpgaImageActionEnum {
     CreateFpgaImage = "CreateFpgaImage"
 }
-export declare enum PostCreateFpgaImageVersionEnum {
+export declare enum POSTCreateFpgaImageVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostCreateFpgaImageQueryParams extends SpeakeasyBase {
-    action: PostCreateFpgaImageActionEnum;
-    version: PostCreateFpgaImageVersionEnum;
-}
-export declare class PostCreateFpgaImageHeaders extends SpeakeasyBase {
+export declare class POSTCreateFpgaImageRequest extends SpeakeasyBase {
+    action: POSTCreateFpgaImageActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateFpgaImageVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateFpgaImageHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateFpgaImageRequest extends SpeakeasyBase {
-    queryParams: PostCreateFpgaImageQueryParams;
-    headers: PostCreateFpgaImageHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateFpgaImageResponse extends SpeakeasyBase {
+export declare class POSTCreateFpgaImageResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

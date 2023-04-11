@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { CatalogTarget } from "./catalogtarget";
-import { DynamoDbTarget } from "./dynamodbtarget";
+import { DeltaTarget } from "./deltatarget";
+import { DynamoDBTarget } from "./dynamodbtarget";
 import { JdbcTarget } from "./jdbctarget";
-import { MongoDbTarget } from "./mongodbtarget";
+import { MongoDBTarget } from "./mongodbtarget";
 import { S3Target } from "./s3target";
 /**
  * Specifies data stores to crawl.
-**/
+ */
 export declare class CrawlerTargets extends SpeakeasyBase {
     catalogTargets?: CatalogTarget[];
-    dynamoDBTargets?: DynamoDbTarget[];
+    deltaTargets?: DeltaTarget[];
+    dynamoDBTargets?: DynamoDBTarget[];
     jdbcTargets?: JdbcTarget[];
-    mongoDBTargets?: MongoDbTarget[];
+    mongoDBTargets?: MongoDBTarget[];
     s3Targets?: S3Target[];
 }

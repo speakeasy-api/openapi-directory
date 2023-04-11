@@ -1,23 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class TranslatePathParams extends SpeakeasyBase {
-    id: number;
-    targetLanguage: string;
-}
-export declare class TranslateRequestBody extends SpeakeasyBase {
-    contents?: string[];
-    documents?: shared.FileAsData[];
-    meta?: Record<string, any>;
-}
-export declare class Translate200ApplicationJson extends SpeakeasyBase {
-    results?: any;
-}
+import { AxiosResponse } from "axios";
 export declare class TranslateRequest extends SpeakeasyBase {
-    pathParams: TranslatePathParams;
-    request?: TranslateRequestBody;
+    instantTranslationRequest?: shared.InstantTranslationRequest;
+    /**
+     * Continuous project ID
+     */
+    id: number;
+    /**
+     * Target language that you want to instantly translate your file into.
+     */
+    targetLanguage: string;
 }
 export declare class TranslateResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Instant translation result. It may return a list of translated strings, or a list of translated files.
+     */
+    instantTranslationResult?: any;
     statusCode: number;
-    translate200ApplicationJSONObject?: Translate200ApplicationJson;
+    rawResponse?: AxiosResponse;
 }

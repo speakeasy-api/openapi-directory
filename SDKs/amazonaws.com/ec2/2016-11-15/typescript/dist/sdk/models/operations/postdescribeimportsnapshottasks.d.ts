@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeImportSnapshotTasksActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeImportSnapshotTasksActionEnum {
     DescribeImportSnapshotTasks = "DescribeImportSnapshotTasks"
 }
-export declare enum PostDescribeImportSnapshotTasksVersionEnum {
+export declare enum POSTDescribeImportSnapshotTasksVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDescribeImportSnapshotTasksQueryParams extends SpeakeasyBase {
-    action: PostDescribeImportSnapshotTasksActionEnum;
+export declare class POSTDescribeImportSnapshotTasksRequest extends SpeakeasyBase {
+    action: POSTDescribeImportSnapshotTasksActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostDescribeImportSnapshotTasksVersionEnum;
-}
-export declare class PostDescribeImportSnapshotTasksHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeImportSnapshotTasksVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeImportSnapshotTasksHeaders extends SpeakeasyBas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeImportSnapshotTasksRequest extends SpeakeasyBase {
-    queryParams: PostDescribeImportSnapshotTasksQueryParams;
-    headers: PostDescribeImportSnapshotTasksHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeImportSnapshotTasksResponse extends SpeakeasyBase {
+export declare class POSTDescribeImportSnapshotTasksResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,30 +1,55 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AndroidpublisherEditsListingsGetPathParams extends SpeakeasyBase {
-    editId: string;
-    language: string;
-    packageName: string;
-}
-export declare class AndroidpublisherEditsListingsGetQueryParams extends SpeakeasyBase {
-    alt?: shared.AltEnum;
-    fields?: string;
-    key?: string;
-    oauthToken?: string;
-    prettyPrint?: boolean;
-    quotaUser?: string;
-    userIp?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class AndroidpublisherEditsListingsGetSecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class AndroidpublisherEditsListingsGetRequest extends SpeakeasyBase {
-    pathParams: AndroidpublisherEditsListingsGetPathParams;
-    queryParams: AndroidpublisherEditsListingsGetQueryParams;
-    security: AndroidpublisherEditsListingsGetSecurity;
+    /**
+     * Data format for the response.
+     */
+    alt?: shared.AltEnum;
+    /**
+     * Unique identifier for this edit.
+     */
+    editId: string;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * The language code (a BCP-47 language tag) of the localized listing to read or modify. For example, to select Austrian German, pass "de-AT".
+     */
+    language: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauthToken?: string;
+    /**
+     * Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+     */
+    packageName: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    userIp?: string;
 }
 export declare class AndroidpublisherEditsListingsGetResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -6,9 +6,13 @@ export declare enum CircuitTerminationConnectionStatusLabelEnum {
     NotConnected = "Not Connected",
     Connected = "Connected"
 }
+export declare enum CircuitTerminationConnectionStatusValueEnum {
+    False = "false",
+    True = "true"
+}
 export declare class CircuitTerminationConnectionStatus extends SpeakeasyBase {
     label: CircuitTerminationConnectionStatusLabelEnum;
-    value: boolean;
+    value: CircuitTerminationConnectionStatusValueEnum;
 }
 export declare enum CircuitTerminationTerminationEnum {
     A = "A",
@@ -17,6 +21,12 @@ export declare enum CircuitTerminationTerminationEnum {
 export declare class CircuitTermination extends SpeakeasyBase {
     cable?: NestedCable;
     circuit: NestedCircuit;
+    /**
+     *
+     * @remarks
+     * Return the appropriate serializer for the type of connected object.
+     *
+     */
     connectedEndpoint?: Record<string, string>;
     connectedEndpointType?: string;
     connectionStatus?: CircuitTerminationConnectionStatus;
@@ -26,6 +36,9 @@ export declare class CircuitTermination extends SpeakeasyBase {
     ppInfo?: string;
     site: NestedSite;
     termSide: CircuitTerminationTerminationEnum;
+    /**
+     * Upstream speed, if different from port speed
+     */
     upstreamSpeed?: number;
     xconnectId?: string;
 }

@@ -1,20 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetSentencesFromBookPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetSentencesFromBookRequest extends SpeakeasyBase {
+    /**
+     * Book ID
+     */
     id: string;
-}
-export declare class GetSentencesFromBookQueryParams extends SpeakeasyBase {
     limit?: number;
 }
-export declare class GetSentencesFromBook200ApplicationJson extends SpeakeasyBase {
+export declare class GetSentencesFromBook200ApplicationJSON extends SpeakeasyBase {
     data?: shared.Sentence[];
-}
-export declare class GetSentencesFromBookRequest extends SpeakeasyBase {
-    pathParams: GetSentencesFromBookPathParams;
-    queryParams: GetSentencesFromBookQueryParams;
 }
 export declare class GetSentencesFromBookResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getSentencesFromBook200ApplicationJSONObject?: GetSentencesFromBook200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    getSentencesFromBook200ApplicationJSONObject?: GetSentencesFromBook200ApplicationJSON;
 }

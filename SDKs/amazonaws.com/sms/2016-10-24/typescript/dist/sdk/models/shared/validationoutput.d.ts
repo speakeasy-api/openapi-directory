@@ -4,7 +4,7 @@ import { ServerValidationOutput } from "./servervalidationoutput";
 import { ValidationStatusEnum } from "./validationstatusenum";
 /**
  * Contains validation output.
-**/
+ */
 export declare class ValidationOutput extends SpeakeasyBase {
     appValidationOutput?: AppValidationOutput;
     latestValidationTime?: Date;

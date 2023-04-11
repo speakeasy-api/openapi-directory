@@ -1,19 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PutAddonLinkersLinkerKeyValuesPathParams extends SpeakeasyBase {
-    linkerKey: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PutAddonLinkersLinkerKeyValuesSecurity extends SpeakeasyBase {
-    oauth2?: shared.SchemeOauth2;
+    apiKey?: string;
     basic?: shared.SchemeBasic;
-    apiKey?: shared.SchemeApiKey;
+    oauth2?: string;
 }
 export declare class PutAddonLinkersLinkerKeyValuesRequest extends SpeakeasyBase {
-    pathParams: PutAddonLinkersLinkerKeyValuesPathParams;
-    security: PutAddonLinkersLinkerKeyValuesSecurity;
+    /**
+     * The unique key of a [linker module](/cloud/bitbucket/modules/linker/)
+     *
+     * @remarks
+     * as defined in an application descriptor.
+     */
+    linkerKey: string;
 }
 export declare class PutAddonLinkersLinkerKeyValuesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Invalid input.
+     */
     error?: Record<string, any>;
 }

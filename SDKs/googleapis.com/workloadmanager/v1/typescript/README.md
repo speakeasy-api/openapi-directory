@@ -6,92 +6,96 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/workloadmanager/v1/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/workloadmanager/v1/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { WorkloadmanagerProjectsLocationsEvaluationsCreateRequest, WorkloadmanagerProjectsLocationsEvaluationsCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  WorkloadmanagerProjectsLocationsEvaluationsCreateRequest,
+  WorkloadmanagerProjectsLocationsEvaluationsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  ResourceStatusStateEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: WorkloadmanagerProjectsLocationsEvaluationsCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    evaluationId: "dolor",
-    fields: "expedita",
-    key: "voluptas",
-    oauthToken: "fugit",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    requestId: "rerum",
-    uploadType: "dicta",
-    uploadProtocol: "debitis",
-  },
-  request: {
-    description: "voluptatum",
+  dollarXgafv: XgafvEnum.Two,
+  evaluationInput: {
+    description: "provident",
     labels: {
-      "ut": "dolorem",
+      "quibusdam": "unde",
+      "nulla": "corrupti",
+      "illum": "vel",
     },
-    name: "et",
+    name: "error",
     resourceFilter: {
       gceInstanceFilter: {
         serviceAccounts: [
-          "iste",
+          "suscipit",
+          "iure",
+          "magnam",
         ],
       },
       inclusionLabels: {
-        "totam": "dolores",
+        "ipsa": "delectus",
+        "tempora": "suscipit",
+        "molestiae": "minus",
+        "placeat": "voluptatum",
       },
       resourceIdPatterns: [
-        "debitis",
-        "vel",
-        "odio",
+        "excepturi",
+        "nisi",
       ],
       scopes: [
-        "id",
-        "aspernatur",
+        "temporibus",
+        "ab",
+        "quis",
+        "veritatis",
       ],
     },
     resourceStatus: {
       rulesNewerVersions: [
-        "totam",
-        "commodi",
-        "quis",
+        "perferendis",
+        "ipsam",
+        "repellendus",
       ],
-      state: "CREATING",
+      state: ResourceStatusStateEnum.Deleting,
     },
     ruleNames: [
       "odit",
-      "non",
-      "voluptas",
+      "at",
+      "at",
+      "maiores",
     ],
   },
+  accessToken: "molestiae",
+  alt: AltEnum.Proto,
+  callback: "quod",
+  evaluationId: "esse",
+  fields: "totam",
+  key: "porro",
+  oauthToken: "dolorum",
+  parent: "dicta",
+  prettyPrint: false,
+  quotaUser: "nam",
+  requestId: "officia",
+  uploadType: "occaecati",
+  uploadProtocol: "fugit",
 };
 
 sdk.projects.workloadmanagerProjectsLocationsEvaluationsCreate(req).then((res: WorkloadmanagerProjectsLocationsEvaluationsCreateResponse | AxiosError) => {
@@ -101,18 +105,31 @@ sdk.projects.workloadmanagerProjectsLocationsEvaluationsCreate(req).then((res: W
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### projects
 
 * `workloadmanagerProjectsLocationsEvaluationsCreate` - Creates a new Evaluation in a given project and location.
 * `workloadmanagerProjectsLocationsEvaluationsList` - Lists Evaluations in a given project and location.
+* `workloadmanagerProjectsLocationsInsightsWriteInsight` - Write the data insights to workload manager data warehouse.
 * `workloadmanagerProjectsLocationsList` - Lists information about the supported locations for this service.
 * `workloadmanagerProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 * `workloadmanagerProjectsLocationsOperationsDelete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 * `workloadmanagerProjectsLocationsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-* `workloadmanagerProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
-
+* `workloadmanagerProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

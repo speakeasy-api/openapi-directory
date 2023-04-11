@@ -1,16 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class DisableVcenterPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DisableVcenterSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
+    apiKeyAuth: string;
 }
 export declare class DisableVcenterRequest extends SpeakeasyBase {
-    pathParams: DisableVcenterPathParams;
-    security: DisableVcenterSecurity;
+    /**
+     * entity id
+     */
+    id: string;
 }
 export declare class DisableVcenterResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum CreateAddressXAmzTargetEnum {
-    AwsieSnowballJobManagementServiceCreateAddress = "AWSIESnowballJobManagementService.CreateAddress"
+    AWSIESnowballJobManagementServiceCreateAddress = "AWSIESnowballJobManagementService.CreateAddress"
 }
-export declare class CreateAddressHeaders extends SpeakeasyBase {
+export declare class CreateAddressRequest extends SpeakeasyBase {
+    createAddressRequest: shared.CreateAddressRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class CreateAddressHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: CreateAddressXAmzTargetEnum;
 }
-export declare class CreateAddressRequest extends SpeakeasyBase {
-    headers: CreateAddressHeaders;
-    request: shared.CreateAddressRequest;
-}
 export declare class CreateAddressResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     createAddressResult?: shared.CreateAddressResult;
+    /**
+     * InvalidAddressException
+     */
     invalidAddressException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnsupportedAddressException
+     */
     unsupportedAddressException?: any;
 }

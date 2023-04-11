@@ -1,12 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ActionsDeleteOrgSecretPathParams extends SpeakeasyBase {
-    org: string;
-    secretName: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ActionsDeleteOrgSecretRequest extends SpeakeasyBase {
-    pathParams: ActionsDeleteOrgSecretPathParams;
+    org: string;
+    /**
+     * secret_name parameter
+     */
+    secretName: string;
 }
 export declare class ActionsDeleteOrgSecretResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

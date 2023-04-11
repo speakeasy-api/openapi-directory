@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { AutoScalingGroupRecommendation } from "./autoscalinggrouprecommendation";
 import { GetRecommendationError } from "./getrecommendationerror";
+/**
+ * Success
+ */
 export declare class GetAutoScalingGroupRecommendationsResponse extends SpeakeasyBase {
     autoScalingGroupRecommendations?: AutoScalingGroupRecommendation[];
     errors?: GetRecommendationError[];

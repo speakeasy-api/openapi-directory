@@ -1,6 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class ApIs {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+export declare class APIs {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,63 +9,73 @@ export declare class ApIs {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * cripc - Insurance Policy - Car
+     * Insurance Policy - Car
      *
+     * @remarks
      * API to verify Insurance Policy - Car.
-    **/
-    cripc(req: operations.CripcRequest, config?: AxiosRequestConfig): Promise<operations.CripcResponse>;
+     */
+    cripc(req: operations.CripcRequestBody, security: operations.CripcSecurity, config?: AxiosRequestConfig): Promise<operations.CripcResponse>;
     /**
-     * cvipc - Insurance Policy - Commercial Vehicle
+     * Insurance Policy - Commercial Vehicle
      *
+     * @remarks
      * API to verify Insurance Policy - Commercial Vehicle.
-    **/
-    cvipc(req: operations.CvipcRequest, config?: AxiosRequestConfig): Promise<operations.CvipcResponse>;
+     */
+    cvipc(req: operations.CvipcRequestBody, security: operations.CvipcSecurity, config?: AxiosRequestConfig): Promise<operations.CvipcResponse>;
     /**
-     * egipc - Insurance Policy - Engineering
+     * Insurance Policy - Engineering
      *
+     * @remarks
      * API to verify Insurance Policy - Engineering.
-    **/
-    egipc(req: operations.EgipcRequest, config?: AxiosRequestConfig): Promise<operations.EgipcResponse>;
+     */
+    egipc(req: operations.EgipcRequestBody, security: operations.EgipcSecurity, config?: AxiosRequestConfig): Promise<operations.EgipcResponse>;
     /**
-     * gicer - Insurance Policy - Group
+     * Insurance Policy - Group
      *
+     * @remarks
      * API to verify Insurance Policy - Group.
-    **/
-    gicer(req: operations.GicerRequest, config?: AxiosRequestConfig): Promise<operations.GicerResponse>;
+     */
+    gicer(req: operations.GicerRequestBody, security: operations.GicerSecurity, config?: AxiosRequestConfig): Promise<operations.GicerResponse>;
     /**
-     * hlipc - Insurance Policy - Health
+     * Insurance Policy - Health
      *
+     * @remarks
      * API to verify Insurance Policy - Health.
-    **/
-    hlipc(req: operations.HlipcRequest, config?: AxiosRequestConfig): Promise<operations.HlipcResponse>;
+     */
+    hlipc(req: operations.HlipcRequestBody, security: operations.HlipcSecurity, config?: AxiosRequestConfig): Promise<operations.HlipcResponse>;
     /**
-     * hmipc - Insurance Policy - Home
+     * Insurance Policy - Home
      *
+     * @remarks
      * API to verify Insurance Policy - Home.
-    **/
-    hmipc(req: operations.HmipcRequest, config?: AxiosRequestConfig): Promise<operations.HmipcResponse>;
+     */
+    hmipc(req: operations.HmipcRequestBody, security: operations.HmipcSecurity, config?: AxiosRequestConfig): Promise<operations.HmipcResponse>;
     /**
-     * miipc - Insurance Policy - Miscellaneous
+     * Insurance Policy - Miscellaneous
      *
+     * @remarks
      * API to verify Insurance Policy - Miscellaneous.
-    **/
-    miipc(req: operations.MiipcRequest, config?: AxiosRequestConfig): Promise<operations.MiipcResponse>;
+     */
+    miipc(req: operations.MiipcRequestBody, security: operations.MiipcSecurity, config?: AxiosRequestConfig): Promise<operations.MiipcResponse>;
     /**
-     * mripc - Insurance Policy - Marine
+     * Insurance Policy - Marine
      *
+     * @remarks
      * API to verify Insurance Policy - Marine.
-    **/
-    mripc(req: operations.MripcRequest, config?: AxiosRequestConfig): Promise<operations.MripcResponse>;
+     */
+    mripc(req: operations.MripcRequestBody, security: operations.MripcSecurity, config?: AxiosRequestConfig): Promise<operations.MripcResponse>;
     /**
-     * pripc - Insurance Policy - Property
+     * Insurance Policy - Property
      *
+     * @remarks
      * API to verify Insurance Policy - Property.
-    **/
-    pripc(req: operations.PripcRequest, config?: AxiosRequestConfig): Promise<operations.PripcResponse>;
+     */
+    pripc(req: operations.PripcRequestBody, security: operations.PripcSecurity, config?: AxiosRequestConfig): Promise<operations.PripcResponse>;
     /**
-     * twipc - Insurance Policy - Two Wheeler
+     * Insurance Policy - Two Wheeler
      *
+     * @remarks
      * API to verify Insurance Policy - Two Wheeler.
-    **/
-    twipc(req: operations.TwipcRequest, config?: AxiosRequestConfig): Promise<operations.TwipcResponse>;
+     */
+    twipc(req: operations.TwipcRequestBody, security: operations.TwipcSecurity, config?: AxiosRequestConfig): Promise<operations.TwipcResponse>;
 }

@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Operations about automations
+ */
 export declare class Automations {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,33 +12,38 @@ export declare class Automations {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteAutomationsId - Delete Automation
-     *
      * Delete Automation
-    **/
+     *
+     * @remarks
+     * Delete Automation
+     */
     deleteAutomationsId(req: operations.DeleteAutomationsIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteAutomationsIdResponse>;
     /**
-     * getAutomations - List Automations
-     *
      * List Automations
-    **/
+     *
+     * @remarks
+     * List Automations
+     */
     getAutomations(req: operations.GetAutomationsRequest, config?: AxiosRequestConfig): Promise<operations.GetAutomationsResponse>;
     /**
-     * getAutomationsId - Show Automation
-     *
      * Show Automation
-    **/
+     *
+     * @remarks
+     * Show Automation
+     */
     getAutomationsId(req: operations.GetAutomationsIdRequest, config?: AxiosRequestConfig): Promise<operations.GetAutomationsIdResponse>;
     /**
-     * patchAutomationsId - Update Automation
-     *
      * Update Automation
-    **/
+     *
+     * @remarks
+     * Update Automation
+     */
     patchAutomationsId(req: operations.PatchAutomationsIdRequest, config?: AxiosRequestConfig): Promise<operations.PatchAutomationsIdResponse>;
     /**
-     * postAutomations - Create Automation
-     *
      * Create Automation
-    **/
-    postAutomations(req: operations.PostAutomationsRequest, config?: AxiosRequestConfig): Promise<operations.PostAutomationsResponse>;
+     *
+     * @remarks
+     * Create Automation
+     */
+    postAutomations(req: operations.PostAutomationsRequestBody, config?: AxiosRequestConfig): Promise<operations.PostAutomationsResponse>;
 }

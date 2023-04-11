@@ -6,144 +6,123 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/digitalassetlinks/v1/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/digitalassetlinks/v1/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DigitalassetlinksAssetlinksBulkCheckRequest, DigitalassetlinksAssetlinksBulkCheckResponse } from "openapi/src/sdk/models/operations";
+import {
+  DigitalassetlinksAssetlinksBulkCheckRequest,
+  DigitalassetlinksAssetlinksBulkCheckResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: DigitalassetlinksAssetlinksBulkCheckRequest = {
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "voluptas",
-    alt: "media",
-    callback: "expedita",
-    fields: "consequuntur",
-    key: "dolor",
-    oauthToken: "expedita",
-    prettyPrint: true,
-    quotaUser: "fugit",
-    uploadType: "et",
-    uploadProtocol: "nihil",
-  },
-  request: {
-    allowGoogleInternalDataSources: true,
-    defaultRelation: "dicta",
+  dollarXgafv: XgafvEnum.Two,
+  bulkCheckRequest: {
+    allowGoogleInternalDataSources: false,
+    defaultRelation: "provident",
     defaultSource: {
       androidApp: {
         certificate: {
-          sha256Fingerprint: "debitis",
+          sha256Fingerprint: "distinctio",
         },
-        packageName: "voluptatum",
+        packageName: "quibusdam",
       },
       web: {
-        site: "et",
+        site: "unde",
       },
     },
     defaultTarget: {
       androidApp: {
         certificate: {
-          sha256Fingerprint: "ut",
+          sha256Fingerprint: "nulla",
         },
-        packageName: "dolorem",
+        packageName: "corrupti",
       },
       web: {
-        site: "et",
+        site: "illum",
       },
     },
     skipCacheLookup: false,
     statements: [
       {
-        relation: "vitae",
+        relation: "error",
         source: {
           androidApp: {
             certificate: {
-              sha256Fingerprint: "totam",
+              sha256Fingerprint: "deserunt",
             },
-            packageName: "dolores",
+            packageName: "suscipit",
           },
           web: {
-            site: "illum",
+            site: "iure",
           },
         },
         target: {
           androidApp: {
             certificate: {
-              sha256Fingerprint: "debitis",
+              sha256Fingerprint: "magnam",
             },
-            packageName: "vel",
+            packageName: "debitis",
           },
           web: {
-            site: "odio",
+            site: "ipsa",
           },
         },
       },
       {
-        relation: "dolore",
+        relation: "delectus",
         source: {
           androidApp: {
             certificate: {
-              sha256Fingerprint: "id",
+              sha256Fingerprint: "tempora",
             },
-            packageName: "aspernatur",
+            packageName: "suscipit",
           },
           web: {
-            site: "accusantium",
+            site: "molestiae",
           },
         },
         target: {
           androidApp: {
             certificate: {
-              sha256Fingerprint: "totam",
+              sha256Fingerprint: "minus",
             },
-            packageName: "commodi",
+            packageName: "placeat",
           },
           web: {
-            site: "quis",
-          },
-        },
-      },
-      {
-        relation: "est",
-        source: {
-          androidApp: {
-            certificate: {
-              sha256Fingerprint: "aut",
-            },
-            packageName: "odit",
-          },
-          web: {
-            site: "non",
-          },
-        },
-        target: {
-          androidApp: {
-            certificate: {
-              sha256Fingerprint: "voluptas",
-            },
-            packageName: "omnis",
-          },
-          web: {
-            site: "aut",
+            site: "voluptatum",
           },
         },
       },
     ],
   },
+  accessToken: "iusto",
+  alt: AltEnum.Media,
+  callback: "nisi",
+  fields: "recusandae",
+  key: "temporibus",
+  oauthToken: "ab",
+  prettyPrint: false,
+  quotaUser: "quis",
+  uploadType: "veritatis",
+  uploadProtocol: "deserunt",
 };
 
 sdk.assetlinks.digitalassetlinksAssetlinksBulkCheck(req).then((res: DigitalassetlinksAssetlinksBulkCheckResponse | AxiosError) => {
@@ -153,7 +132,8 @@ sdk.assetlinks.digitalassetlinksAssetlinksBulkCheck(req).then((res: Digitalasset
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### assetlinks
 
@@ -163,7 +143,18 @@ sdk.assetlinks.digitalassetlinksAssetlinksBulkCheck(req).then((res: Digitalasset
 ### statements
 
 * `digitalassetlinksStatementsList` - Retrieves a list of all statements from a given source that match the specified target and statement string. The API guarantees that all statements with secure source assets, such as HTTPS websites or Android apps, have been made in a secure way by the owner of those assets, as described in the [Digital Asset Links technical design specification](https://github.com/google/digitalassetlinks/blob/master/well-known/details.md). Specifically, you should consider that for insecure websites (that is, where the URL starts with `http://` instead of `https://`), this guarantee cannot be made. The `List` command is most useful in cases where the API client wants to know all the ways in which two assets are related, or enumerate all the relationships from a particular source asset. Example: a feature that helps users navigate to related items. When a mobile app is running on a device, the feature would make it easy to navigate to the corresponding web site or Google+ profile.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

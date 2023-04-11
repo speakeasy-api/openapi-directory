@@ -4,7 +4,7 @@ import { PolicyRole } from "./policyrole";
 import { PolicyUser } from "./policyuser";
 /**
  * Contains the response to a successful <a>ListEntitiesForPolicy</a> request.
-**/
+ */
 export declare class ListEntitiesForPolicyResponse extends SpeakeasyBase {
     isTruncated?: boolean;
     marker?: string;

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostModifyCacheSubnetGroupActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTModifyCacheSubnetGroupActionEnum {
     ModifyCacheSubnetGroup = "ModifyCacheSubnetGroup"
 }
-export declare enum PostModifyCacheSubnetGroupVersionEnum {
+export declare enum POSTModifyCacheSubnetGroupVersionEnum {
     TwoThousandAndFifteen0202 = "2015-02-02"
 }
-export declare class PostModifyCacheSubnetGroupQueryParams extends SpeakeasyBase {
-    action: PostModifyCacheSubnetGroupActionEnum;
-    version: PostModifyCacheSubnetGroupVersionEnum;
-}
-export declare class PostModifyCacheSubnetGroupHeaders extends SpeakeasyBase {
+export declare class POSTModifyCacheSubnetGroupRequest extends SpeakeasyBase {
+    action: POSTModifyCacheSubnetGroupActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTModifyCacheSubnetGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostModifyCacheSubnetGroupHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostModifyCacheSubnetGroupRequest extends SpeakeasyBase {
-    queryParams: PostModifyCacheSubnetGroupQueryParams;
-    headers: PostModifyCacheSubnetGroupHeaders;
-    request?: Uint8Array;
-}
-export declare class PostModifyCacheSubnetGroupResponse extends SpeakeasyBase {
+export declare class POSTModifyCacheSubnetGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

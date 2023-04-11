@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteVpnConnectionRouteActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteVpnConnectionRouteActionEnum {
     DeleteVpnConnectionRoute = "DeleteVpnConnectionRoute"
 }
-export declare enum PostDeleteVpnConnectionRouteVersionEnum {
+export declare enum POSTDeleteVpnConnectionRouteVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDeleteVpnConnectionRouteQueryParams extends SpeakeasyBase {
-    action: PostDeleteVpnConnectionRouteActionEnum;
-    version: PostDeleteVpnConnectionRouteVersionEnum;
-}
-export declare class PostDeleteVpnConnectionRouteHeaders extends SpeakeasyBase {
+export declare class POSTDeleteVpnConnectionRouteRequest extends SpeakeasyBase {
+    action: POSTDeleteVpnConnectionRouteActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteVpnConnectionRouteVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +18,8 @@ export declare class PostDeleteVpnConnectionRouteHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteVpnConnectionRouteRequest extends SpeakeasyBase {
-    queryParams: PostDeleteVpnConnectionRouteQueryParams;
-    headers: PostDeleteVpnConnectionRouteHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteVpnConnectionRouteResponse extends SpeakeasyBase {
+export declare class POSTDeleteVpnConnectionRouteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

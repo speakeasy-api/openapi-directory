@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDisableInsightRulesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDisableInsightRulesActionEnum {
     DisableInsightRules = "DisableInsightRules"
 }
-export declare enum GetDisableInsightRulesVersionEnum {
+export declare enum GETDisableInsightRulesVersionEnum {
     TwoThousandAndTen0801 = "2010-08-01"
 }
-export declare class GetDisableInsightRulesQueryParams extends SpeakeasyBase {
-    action: GetDisableInsightRulesActionEnum;
+export declare class GETDisableInsightRulesRequest extends SpeakeasyBase {
+    action: GETDisableInsightRulesActionEnum;
+    /**
+     * An array of the rule names to disable. If you need to find out the names of your rules, use <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_DescribeInsightRules.html">DescribeInsightRules</a>.
+     */
     ruleNames: string[];
-    version: GetDisableInsightRulesVersionEnum;
-}
-export declare class GetDisableInsightRulesHeaders extends SpeakeasyBase {
+    version: GETDisableInsightRulesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDisableInsightRulesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDisableInsightRulesRequest extends SpeakeasyBase {
-    queryParams: GetDisableInsightRulesQueryParams;
-    headers: GetDisableInsightRulesHeaders;
-}
-export declare class GetDisableInsightRulesResponse extends SpeakeasyBase {
+export declare class GETDisableInsightRulesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,13 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteResourcePolicyStatementPathParams extends SpeakeasyBase {
-    resourceArn: string;
-    statementId: string;
-}
-export declare class DeleteResourcePolicyStatementQueryParams extends SpeakeasyBase {
-    expectedRevisionId?: string;
-}
-export declare class DeleteResourcePolicyStatementHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteResourcePolicyStatementRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -15,18 +9,41 @@ export declare class DeleteResourcePolicyStatementHeaders extends SpeakeasyBase 
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DeleteResourcePolicyStatementRequest extends SpeakeasyBase {
-    pathParams: DeleteResourcePolicyStatementPathParams;
-    queryParams: DeleteResourcePolicyStatementQueryParams;
-    headers: DeleteResourcePolicyStatementHeaders;
+    /**
+     * <p>The identifier of the revision of the policy to delete the statement from. If this revision ID doesn't match the current revision ID, Amazon Lex throws an exception.</p> <p>If you don't specify a revision, Amazon Lex removes the current contents of the statement. </p>
+     */
+    expectedRevisionId?: string;
+    /**
+     * The Amazon Resource Name (ARN) of the bot or bot alias that the resource policy is attached to.
+     */
+    resourceArn: string;
+    /**
+     * The name of the statement (SID) to delete from the policy.
+     */
+    statementId: string;
 }
 export declare class DeleteResourcePolicyStatementResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deleteResourcePolicyStatementResponse?: shared.DeleteResourcePolicyStatementResponse;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * PreconditionFailedException
+     */
     preconditionFailedException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

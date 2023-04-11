@@ -4,7 +4,7 @@ import { Headers } from "./headers";
 import { QueryStringCacheKeys } from "./querystringcachekeys";
 /**
  * A complex type that specifies how CloudFront handles query strings, cookies, and HTTP headers.
-**/
+ */
 export declare class ForwardedValues extends SpeakeasyBase {
     cookies: CookiePreference;
     headers?: Headers;

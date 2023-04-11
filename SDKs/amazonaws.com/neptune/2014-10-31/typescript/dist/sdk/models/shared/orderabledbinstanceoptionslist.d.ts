@@ -2,8 +2,8 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { AvailabilityZoneList } from "./availabilityzonelist";
 /**
  * <p>Contains a list of available options for a DB instance.</p> <p> This data type is used as a response element in the <a>DescribeOrderableDBInstanceOptions</a> action.</p>
-**/
-export declare class OrderableDbInstanceOptionsList extends SpeakeasyBase {
+ */
+export declare class OrderableDBInstanceOptionsList extends SpeakeasyBase {
     availabilityZones?: AvailabilityZoneList[];
     dbInstanceClass?: string;
     engine?: string;
@@ -19,6 +19,7 @@ export declare class OrderableDbInstanceOptionsList extends SpeakeasyBase {
     readReplicaCapable?: boolean;
     storageType?: string;
     supportsEnhancedMonitoring?: boolean;
+    supportsGlobalDatabases?: boolean;
     supportsIAMDatabaseAuthentication?: boolean;
     supportsIops?: boolean;
     supportsPerformanceInsights?: boolean;

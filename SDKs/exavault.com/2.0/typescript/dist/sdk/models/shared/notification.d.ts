@@ -31,8 +31,11 @@ export declare class NotificationRelationships extends SpeakeasyBase {
 }
 /**
  * Object containing notification properties.
-**/
+ */
 export declare class Notification extends SpeakeasyBase {
+    /**
+     * Attributes for the notification including the path, recipients, and share data.
+     */
     attributes?: NotificationAttributes;
     id?: number;
     relationships?: NotificationRelationships;

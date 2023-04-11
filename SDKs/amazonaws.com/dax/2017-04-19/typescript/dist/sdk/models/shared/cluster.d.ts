@@ -1,14 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Endpoint } from "./endpoint";
 import { ClusterEndpointEncryptionTypeEnum } from "./clusterendpointencryptiontypeenum";
+import { Endpoint } from "./endpoint";
 import { Node } from "./node";
 import { NotificationConfiguration } from "./notificationconfiguration";
 import { ParameterGroupStatus } from "./parametergroupstatus";
-import { SseDescription } from "./ssedescription";
 import { SecurityGroupMembership } from "./securitygroupmembership";
+import { SSEDescription } from "./ssedescription";
 /**
  * Contains all of the attributes of a specific DAX cluster.
-**/
+ */
 export declare class Cluster extends SpeakeasyBase {
     activeNodes?: number;
     clusterArn?: string;
@@ -23,7 +23,7 @@ export declare class Cluster extends SpeakeasyBase {
     notificationConfiguration?: NotificationConfiguration;
     parameterGroup?: ParameterGroupStatus;
     preferredMaintenanceWindow?: string;
-    sseDescription?: SseDescription;
+    sseDescription?: SSEDescription;
     securityGroups?: SecurityGroupMembership[];
     status?: string;
     subnetGroup?: string;

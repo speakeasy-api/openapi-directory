@@ -2,6 +2,9 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { NestedDevice } from "./nesteddevice";
 import { NestedManufacturer } from "./nestedmanufacturer";
 export declare class InventoryItem extends SpeakeasyBase {
+    /**
+     * A unique tag used to identify this item
+     */
     assetTag?: string;
     description?: string;
     device: NestedDevice;

@@ -1,5 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { Stage } from "./stage";
+/**
+ * Success
+ */
 export declare class GetStagesResponse extends SpeakeasyBase {
-    items?: Record<string, any>;
-    nextToken?: Record<string, any>;
+    items?: Stage[];
+    nextToken?: string;
 }

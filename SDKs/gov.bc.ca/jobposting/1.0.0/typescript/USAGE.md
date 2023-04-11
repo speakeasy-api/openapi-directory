@@ -1,10 +1,11 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetIndustriesResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetIndustriesResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
 
 sdk.jobFeed.getIndustries().then((res: GetIndustriesResponse | AxiosError) => {

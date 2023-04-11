@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetEnableAvailabilityZonesForLoadBalancerActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETEnableAvailabilityZonesForLoadBalancerActionEnum {
     EnableAvailabilityZonesForLoadBalancer = "EnableAvailabilityZonesForLoadBalancer"
 }
-export declare enum GetEnableAvailabilityZonesForLoadBalancerVersionEnum {
+export declare enum GETEnableAvailabilityZonesForLoadBalancerVersionEnum {
     TwoThousandAndTwelve0601 = "2012-06-01"
 }
-export declare class GetEnableAvailabilityZonesForLoadBalancerQueryParams extends SpeakeasyBase {
-    action: GetEnableAvailabilityZonesForLoadBalancerActionEnum;
+export declare class GETEnableAvailabilityZonesForLoadBalancerRequest extends SpeakeasyBase {
+    action: GETEnableAvailabilityZonesForLoadBalancerActionEnum;
+    /**
+     * The Availability Zones. These must be in the same region as the load balancer.
+     */
     availabilityZones: string[];
+    /**
+     * The name of the load balancer.
+     */
     loadBalancerName: string;
-    version: GetEnableAvailabilityZonesForLoadBalancerVersionEnum;
-}
-export declare class GetEnableAvailabilityZonesForLoadBalancerHeaders extends SpeakeasyBase {
+    version: GETEnableAvailabilityZonesForLoadBalancerVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetEnableAvailabilityZonesForLoadBalancerHeaders extends Sp
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetEnableAvailabilityZonesForLoadBalancerRequest extends SpeakeasyBase {
-    queryParams: GetEnableAvailabilityZonesForLoadBalancerQueryParams;
-    headers: GetEnableAvailabilityZonesForLoadBalancerHeaders;
-}
-export declare class GetEnableAvailabilityZonesForLoadBalancerResponse extends SpeakeasyBase {
+export declare class GETEnableAvailabilityZonesForLoadBalancerResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

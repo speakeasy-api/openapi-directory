@@ -1,9 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
- * Simple User
-**/
+ * A GitHub user.
+ */
 export declare class SimpleUser extends SpeakeasyBase {
     avatarUrl: string;
+    email?: string;
     eventsUrl: string;
     followersUrl: string;
     followingUrl: string;
@@ -12,6 +13,7 @@ export declare class SimpleUser extends SpeakeasyBase {
     htmlUrl: string;
     id: number;
     login: string;
+    name?: string;
     nodeId: string;
     organizationsUrl: string;
     receivedEventsUrl: string;

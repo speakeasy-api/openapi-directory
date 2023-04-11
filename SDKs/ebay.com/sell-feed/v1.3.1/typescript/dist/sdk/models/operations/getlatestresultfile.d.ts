@@ -1,18 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetLatestResultFilePathParams extends SpeakeasyBase {
-    scheduleId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetLatestResultFileSecurity extends SpeakeasyBase {
-    apiAuth: shared.SchemeApiAuth;
+    apiAuth: string;
 }
 export declare class GetLatestResultFileRequest extends SpeakeasyBase {
-    pathParams: GetLatestResultFilePathParams;
-    security: GetLatestResultFileSecurity;
+    /**
+     * The ID of the schedule for which to retrieve the latest result file. This ID is generated when the schedule was created by the <strong>createSchedule</strong> method.
+     */
+    scheduleId: string;
 }
 export declare class GetLatestResultFileResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

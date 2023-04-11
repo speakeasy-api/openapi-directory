@@ -1,41 +1,34 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { ManufacturersAccountsProductsDeleteRequest, ManufacturersAccountsProductsDeleteResponse } from "openapi/src/sdk/models/operations";
+import {
+  ManufacturersAccountsLanguagesProductCertificationsDeleteRequest,
+  ManufacturersAccountsLanguagesProductCertificationsDeleteResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: ManufacturersAccountsProductsDeleteRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    name: "sit",
-    parent: "voluptas",
-  },
-  queryParams: {
-    dollarXgafv: "2",
-    accessToken: "expedita",
-    alt: "proto",
-    callback: "dolor",
-    fields: "expedita",
-    key: "voluptas",
-    oauthToken: "fugit",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    uploadType: "rerum",
-    uploadProtocol: "dicta",
-  },
+
+const req: ManufacturersAccountsLanguagesProductCertificationsDeleteRequest = {
+  dollarXgafv: XgafvEnum.Two,
+  accessToken: "provident",
+  alt: AltEnum.Proto,
+  callback: "quibusdam",
+  fields: "unde",
+  key: "nulla",
+  name: "corrupti",
+  oauthToken: "illum",
+  prettyPrint: false,
+  quotaUser: "vel",
+  uploadType: "error",
+  uploadProtocol: "deserunt",
 };
 
-sdk.accounts.manufacturersAccountsProductsDelete(req).then((res: ManufacturersAccountsProductsDeleteResponse | AxiosError) => {
+sdk.accounts.manufacturersAccountsLanguagesProductCertificationsDelete(req).then((res: ManufacturersAccountsLanguagesProductCertificationsDeleteResponse | AxiosError) => {
    // handle response
 });
 ```

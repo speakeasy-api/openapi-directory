@@ -1,6 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetServiceRoleForAccountHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetServiceRoleForAccountRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -9,12 +10,16 @@ export declare class GetServiceRoleForAccountHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetServiceRoleForAccountRequest extends SpeakeasyBase {
-    headers: GetServiceRoleForAccountHeaders;
-}
 export declare class GetServiceRoleForAccountResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getServiceRoleForAccountResponse?: shared.GetServiceRoleForAccountResponse;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

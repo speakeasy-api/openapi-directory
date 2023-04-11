@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Represents the average latency for the slowest X percent of requests over the last 10 seconds.
-**/
+ */
 export declare class Latency extends SpeakeasyBase {
     p10?: number;
     p50?: number;

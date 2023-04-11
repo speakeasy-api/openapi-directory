@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateNotificationSettingsXAmzTargetEnum {
     MTurkRequesterServiceV20170117UpdateNotificationSettings = "MTurkRequesterServiceV20170117.UpdateNotificationSettings"
 }
-export declare class UpdateNotificationSettingsHeaders extends SpeakeasyBase {
+export declare class UpdateNotificationSettingsRequest extends SpeakeasyBase {
+    updateNotificationSettingsRequest: shared.UpdateNotificationSettingsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class UpdateNotificationSettingsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateNotificationSettingsXAmzTargetEnum;
 }
-export declare class UpdateNotificationSettingsRequest extends SpeakeasyBase {
-    headers: UpdateNotificationSettingsHeaders;
-    request: shared.UpdateNotificationSettingsRequest;
-}
 export declare class UpdateNotificationSettingsResponse extends SpeakeasyBase {
     contentType: string;
-    requestError?: any;
-    serviceFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * RequestError
+     */
+    requestError?: any;
+    /**
+     * ServiceFault
+     */
+    serviceFault?: any;
+    /**
+     * Success
+     */
     updateNotificationSettingsResponse?: Record<string, any>;
 }

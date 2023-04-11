@@ -1,17 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+/**
+ * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+ */
 export declare enum PlayerSeasonStatsWWorldGolfRankingsFormatEnum {
     Xml = "XML",
     Json = "JSON"
 }
-export declare class PlayerSeasonStatsWWorldGolfRankingsPathParams extends SpeakeasyBase {
-    format: PlayerSeasonStatsWWorldGolfRankingsFormatEnum;
-    season: string;
-}
 export declare class PlayerSeasonStatsWWorldGolfRankingsRequest extends SpeakeasyBase {
-    pathParams: PlayerSeasonStatsWWorldGolfRankingsPathParams;
+    /**
+     * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+     */
+    format: PlayerSeasonStatsWWorldGolfRankingsFormatEnum;
+    /**
+     * Year of the season.
+     *
+     * @remarks
+     * <br>Examples: <code>2016</code>, <code>2017</code>.
+     */
+    season: string;
 }
 export declare class PlayerSeasonStatsWWorldGolfRankingsResponse extends SpeakeasyBase {
     contentType: string;
-    playerSeasons?: any[];
+    playerSeasons?: shared.PlayerSeason[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

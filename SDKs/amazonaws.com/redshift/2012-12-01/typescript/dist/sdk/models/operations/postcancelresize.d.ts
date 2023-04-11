@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCancelResizeActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCancelResizeActionEnum {
     CancelResize = "CancelResize"
 }
-export declare enum PostCancelResizeVersionEnum {
+export declare enum POSTCancelResizeVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostCancelResizeQueryParams extends SpeakeasyBase {
-    action: PostCancelResizeActionEnum;
-    version: PostCancelResizeVersionEnum;
-}
-export declare class PostCancelResizeHeaders extends SpeakeasyBase {
+export declare class POSTCancelResizeRequest extends SpeakeasyBase {
+    action: POSTCancelResizeActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCancelResizeVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCancelResizeHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCancelResizeRequest extends SpeakeasyBase {
-    queryParams: PostCancelResizeQueryParams;
-    headers: PostCancelResizeHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCancelResizeResponse extends SpeakeasyBase {
+export declare class POSTCancelResizeResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

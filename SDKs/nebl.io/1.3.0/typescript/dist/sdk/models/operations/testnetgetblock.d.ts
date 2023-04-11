@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class TestnetGetBlockPathParams extends SpeakeasyBase {
-    blockhash: string;
-}
+import { AxiosResponse } from "axios";
 export declare class TestnetGetBlockRequest extends SpeakeasyBase {
-    pathParams: TestnetGetBlockPathParams;
+    /**
+     * Block Hash
+     */
+    blockhash: string;
 }
 export declare class TestnetGetBlockResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Object containing all information on a blockchain block
+     */
     getBlockResponse?: shared.GetBlockResponse;
 }

@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListTagsForResourceQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListTagsForResourceXAmzTargetEnum {
     FmrsServiceListTagsForResource = "FmrsService.ListTagsForResource"
 }
-export declare class ListTagsForResourceHeaders extends SpeakeasyBase {
+export declare class ListTagsForResourceRequest extends SpeakeasyBase {
+    listTagsForResourceRequest: shared.ListTagsForResourceRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,15 +23,20 @@ export declare class ListTagsForResourceHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListTagsForResourceXAmzTargetEnum;
 }
-export declare class ListTagsForResourceRequest extends SpeakeasyBase {
-    queryParams: ListTagsForResourceQueryParams;
-    headers: ListTagsForResourceHeaders;
-    request: shared.ListTagsForResourceRequest;
-}
 export declare class ListTagsForResourceResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalException
+     */
     internalException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * Success
+     */
     listTagsForResourceResponse?: shared.ListTagsForResourceResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

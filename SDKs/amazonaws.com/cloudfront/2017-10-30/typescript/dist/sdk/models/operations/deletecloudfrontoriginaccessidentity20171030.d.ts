@@ -1,8 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteCloudFrontOriginAccessIdentity20171030PathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteCloudFrontOriginAccessIdentity20171030Request extends SpeakeasyBase {
+    /**
+     * The origin access identity's ID.
+     */
     id: string;
-}
-export declare class DeleteCloudFrontOriginAccessIdentity20171030Headers extends SpeakeasyBase {
+    /**
+     * The value of the <code>ETag</code> header you received from a previous <code>GET</code> or <code>PUT</code> request. For example: <code>E2QWRUHAPOMQZL</code>.
+     */
     ifMatch?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
@@ -12,12 +17,9 @@ export declare class DeleteCloudFrontOriginAccessIdentity20171030Headers extends
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeleteCloudFrontOriginAccessIdentity20171030Request extends SpeakeasyBase {
-    pathParams: DeleteCloudFrontOriginAccessIdentity20171030PathParams;
-    headers: DeleteCloudFrontOriginAccessIdentity20171030Headers;
-}
 export declare class DeleteCloudFrontOriginAccessIdentity20171030Response extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

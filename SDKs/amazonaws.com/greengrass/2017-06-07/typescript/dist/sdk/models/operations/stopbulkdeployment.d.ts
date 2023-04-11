@@ -1,8 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class StopBulkDeploymentPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class StopBulkDeploymentRequest extends SpeakeasyBase {
+    /**
+     * The ID of the bulk deployment.
+     */
     bulkDeploymentId: string;
-}
-export declare class StopBulkDeploymentHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,13 +13,16 @@ export declare class StopBulkDeploymentHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class StopBulkDeploymentRequest extends SpeakeasyBase {
-    pathParams: StopBulkDeploymentPathParams;
-    headers: StopBulkDeploymentHeaders;
-}
 export declare class StopBulkDeploymentResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     stopBulkDeploymentResponse?: Record<string, any>;
 }

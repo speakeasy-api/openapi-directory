@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { EventFilter } from "./eventfilter";
+/**
+ * Success
+ */
 export declare class GetEventIntegrationResponse extends SpeakeasyBase {
     description?: string;
     eventBridgeBus?: string;

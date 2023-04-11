@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateProjectVisibilityXAmzTargetEnum {
     CodeBuild20161006UpdateProjectVisibility = "CodeBuild_20161006.UpdateProjectVisibility"
 }
-export declare class UpdateProjectVisibilityHeaders extends SpeakeasyBase {
+export declare class UpdateProjectVisibilityRequest extends SpeakeasyBase {
+    updateProjectVisibilityInput: shared.UpdateProjectVisibilityInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class UpdateProjectVisibilityHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateProjectVisibilityXAmzTargetEnum;
 }
-export declare class UpdateProjectVisibilityRequest extends SpeakeasyBase {
-    headers: UpdateProjectVisibilityHeaders;
-    request: shared.UpdateProjectVisibilityInput;
-}
 export declare class UpdateProjectVisibilityResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     updateProjectVisibilityOutput?: shared.UpdateProjectVisibilityOutput;
 }

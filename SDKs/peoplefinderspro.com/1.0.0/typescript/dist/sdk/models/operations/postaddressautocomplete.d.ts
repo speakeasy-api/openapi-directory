@@ -1,17 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PostAddressAutocompleteHeaders extends SpeakeasyBase {
-    galaxyApName?: string;
-    galaxyApPassword?: string;
-    galaxySearchType?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PostAddressAutocompleteRequestBody extends SpeakeasyBase {
     input?: string;
 }
 export declare class PostAddressAutocompleteRequest extends SpeakeasyBase {
-    headers: PostAddressAutocompleteHeaders;
-    request?: PostAddressAutocompleteRequestBody;
+    requestBody?: PostAddressAutocompleteRequestBody;
+    /**
+     * e.g. Key
+     */
+    galaxyApName?: string;
+    /**
+     * e.g. Secret
+     */
+    galaxyApPassword?: string;
+    /**
+     * e.g. DevAPIAddressAutoComplete
+     */
+    galaxySearchType?: string;
 }
 export declare class PostAddressAutocompleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

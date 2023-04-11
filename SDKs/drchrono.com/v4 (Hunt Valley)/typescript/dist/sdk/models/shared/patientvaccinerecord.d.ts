@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Vaccination status, can be `CP`(Complete), `RE`(Refused), `NA`(Not administered), `PA`(Partially administered)
+ */
 export declare enum PatientVaccineRecordVaccinationStatusEnum {
     Cp = "CP",
     Re = "RE",
@@ -7,13 +10,16 @@ export declare enum PatientVaccineRecordVaccinationStatusEnum {
 }
 /**
  * Vaccine dose ID
-**/
+ */
 export declare class PatientVaccineRecordVaccineDose extends SpeakeasyBase {
     id?: number;
     maxAgeMonths?: number;
     minAgeMonths?: number;
     title?: string;
 }
+/**
+ * The funding program that should pay for a given immunization
+ */
 export declare enum PatientVaccineRecordFundingEligibilityEnum {
     V01 = "V01",
     V02 = "V02",
@@ -58,22 +64,61 @@ export declare enum PatientVaccineRecordRecordTypeEnum {
     Seven = "07",
     Eight = "08"
 }
+/**
+ * Created
+ */
 export declare class PatientVaccineRecord extends SpeakeasyBase {
+    /**
+     * ID of `/api/offices` where the administration happened
+     */
     administeredAt?: number;
+    /**
+     * ID of `/api/users` who performs the administration
+     */
     administeredBy?: string;
+    /**
+     * Datetime when the administration starts
+     */
     administrationStart?: string;
+    /**
+     * Amount of vaccine administered
+     */
     amount?: number;
     comments?: string;
+    /**
+     * Vaccination status, can be `CP`(Complete), `RE`(Refused), `NA`(Not administered), `PA`(Partially administered)
+     */
     completionStatus?: PatientVaccineRecordVaccinationStatusEnum;
+    /**
+     * Consent form related with vaccine record
+     */
     consentForm?: number;
+    /**
+     * Vaccine cpt code
+     */
     cptCode?: string;
     createdAt?: string;
+    /**
+     * Vaccine cvx code
+     */
     cvxCode: string;
+    /**
+     * Vaccine dose IDs received in consent form signed hook
+     */
     doses?: PatientVaccineRecordVaccineDose[];
+    /**
+     * ID of user who created the record
+     */
     enteredBy?: string;
+    /**
+     * The funding program that should pay for a given immunization
+     */
     fundingEligibility?: PatientVaccineRecordFundingEligibilityEnum;
     id?: number;
     name: string;
+    /**
+     * Date for next dose of vaccine
+     */
     nextDoseDate?: string;
     observedImmunity?: PatientVaccineRecordObservedImmunityEnum;
     orderingDoctor?: number;
@@ -83,6 +128,12 @@ export declare class PatientVaccineRecord extends SpeakeasyBase {
     site?: string;
     units?: string;
     updatedAt?: string;
+    /**
+     * ID of `/api/vaccine_inventories` the vaccine is from
+     */
     vaccineInventory?: number;
+    /**
+     * Related vaccine information statement
+     */
     vis?: string;
 }

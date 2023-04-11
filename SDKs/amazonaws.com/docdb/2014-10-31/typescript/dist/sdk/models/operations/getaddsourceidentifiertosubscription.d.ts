@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetAddSourceIdentifierToSubscriptionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETAddSourceIdentifierToSubscriptionActionEnum {
     AddSourceIdentifierToSubscription = "AddSourceIdentifierToSubscription"
 }
-export declare enum GetAddSourceIdentifierToSubscriptionVersionEnum {
+export declare enum GETAddSourceIdentifierToSubscriptionVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class GetAddSourceIdentifierToSubscriptionQueryParams extends SpeakeasyBase {
-    action: GetAddSourceIdentifierToSubscriptionActionEnum;
+export declare class GETAddSourceIdentifierToSubscriptionRequest extends SpeakeasyBase {
+    action: GETAddSourceIdentifierToSubscriptionActionEnum;
+    /**
+     * <p>The identifier of the event source to be added:</p> <ul> <li> <p>If the source type is an instance, a <code>DBInstanceIdentifier</code> must be provided.</p> </li> <li> <p>If the source type is a security group, a <code>DBSecurityGroupName</code> must be provided.</p> </li> <li> <p>If the source type is a parameter group, a <code>DBParameterGroupName</code> must be provided.</p> </li> <li> <p>If the source type is a snapshot, a <code>DBSnapshotIdentifier</code> must be provided.</p> </li> </ul>
+     */
     sourceIdentifier: string;
+    /**
+     * The name of the Amazon DocumentDB event notification subscription that you want to add a source identifier to.
+     */
     subscriptionName: string;
-    version: GetAddSourceIdentifierToSubscriptionVersionEnum;
-}
-export declare class GetAddSourceIdentifierToSubscriptionHeaders extends SpeakeasyBase {
+    version: GETAddSourceIdentifierToSubscriptionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetAddSourceIdentifierToSubscriptionHeaders extends Speakea
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetAddSourceIdentifierToSubscriptionRequest extends SpeakeasyBase {
-    queryParams: GetAddSourceIdentifierToSubscriptionQueryParams;
-    headers: GetAddSourceIdentifierToSubscriptionHeaders;
-}
-export declare class GetAddSourceIdentifierToSubscriptionResponse extends SpeakeasyBase {
+export declare class GETAddSourceIdentifierToSubscriptionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

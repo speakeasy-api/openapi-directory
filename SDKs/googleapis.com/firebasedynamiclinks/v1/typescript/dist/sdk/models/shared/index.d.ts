@@ -20,7 +20,6 @@ export * from "./iosinfo";
 export * from "./itunesconnectanalytics";
 export * from "./managedshortlink";
 export * from "./navigationinfo";
-export * from "./security";
 export * from "./socialmetataginfo";
 export * from "./suffix";
 export * from "./xgafvenum";

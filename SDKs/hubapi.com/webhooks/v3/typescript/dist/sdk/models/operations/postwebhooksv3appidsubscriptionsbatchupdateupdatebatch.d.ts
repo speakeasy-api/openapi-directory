@@ -1,20 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchPathParams extends SpeakeasyBase {
-    appId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchSecurity extends SpeakeasyBase {
-    developerHapikey: shared.SchemeDeveloperHapikey;
+    developerHapikey: string;
 }
 export declare class PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchRequest extends SpeakeasyBase {
-    pathParams: PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchPathParams;
-    request: shared.BatchInputSubscriptionBatchUpdateRequest;
-    security: PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchSecurity;
+    batchInputSubscriptionBatchUpdateRequest: shared.BatchInputSubscriptionBatchUpdateRequest;
+    appId: number;
 }
 export declare class PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchResponse extends SpeakeasyBase {
+    /**
+     * successful operation
+     */
     batchResponseSubscriptionResponse?: shared.BatchResponseSubscriptionResponse;
+    /**
+     * multiple statuses
+     */
     batchResponseSubscriptionResponseWithErrors?: shared.BatchResponseSubscriptionResponseWithErrors;
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

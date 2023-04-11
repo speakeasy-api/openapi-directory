@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetProjectTranslationsPathParams extends SpeakeasyBase {
-    projectId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetProjectTranslationsRequest extends SpeakeasyBase {
-    pathParams: GetProjectTranslationsPathParams;
+    /**
+     * Project ID
+     */
+    projectId: number;
 }
 export declare class GetProjectTranslationsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response for strings and their translations
+     */
     stringList?: shared.StringList;
 }

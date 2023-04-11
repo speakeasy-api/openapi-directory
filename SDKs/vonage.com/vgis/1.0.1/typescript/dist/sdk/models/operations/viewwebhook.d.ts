@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ViewWebhookPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ViewWebhookRequest extends SpeakeasyBase {
-    pathParams: ViewWebhookPathParams;
+    /**
+     * Unique identifier of the webhook
+     */
+    id: string;
 }
 export declare class ViewWebhookResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Bad Request: The client should not repeat the request without modifications
+     */
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful
+     */
     webhook?: shared.Webhook;
 }

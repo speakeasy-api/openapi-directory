@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateParameterGroupXAmzTargetEnum {
     AmazonDaxv3UpdateParameterGroup = "AmazonDAXV3.UpdateParameterGroup"
 }
-export declare class UpdateParameterGroupHeaders extends SpeakeasyBase {
+export declare class UpdateParameterGroupRequest extends SpeakeasyBase {
+    updateParameterGroupRequest: shared.UpdateParameterGroupRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class UpdateParameterGroupHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateParameterGroupXAmzTargetEnum;
 }
-export declare class UpdateParameterGroupRequest extends SpeakeasyBase {
-    headers: UpdateParameterGroupHeaders;
-    request: shared.UpdateParameterGroupRequest;
-}
 export declare class UpdateParameterGroupResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidParameterCombinationException
+     */
     invalidParameterCombinationException?: any;
+    /**
+     * InvalidParameterGroupStateFault
+     */
     invalidParameterGroupStateFault?: any;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
+    /**
+     * ParameterGroupNotFoundFault
+     */
     parameterGroupNotFoundFault?: any;
+    /**
+     * ServiceLinkedRoleNotFoundFault
+     */
     serviceLinkedRoleNotFoundFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     updateParameterGroupResponse?: shared.UpdateParameterGroupResponse;
 }

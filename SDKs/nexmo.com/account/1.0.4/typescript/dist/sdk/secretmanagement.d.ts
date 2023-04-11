@@ -1,5 +1,11 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Many of the Vonage APIs are accessed using an API key and secret. It is recommended that you change or "rotate" your secrets from time to time for security purposes. This section provides the API interface for achieving this.
+ *
+ * @remarks
+ * Note: to work on secrets for your secondary accounts, you may authenticate with your primary credentials and supply the secondary API keys as URL parameters to these API endpoints.
+ */
 export declare class SecretManagement {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,19 +15,19 @@ export declare class SecretManagement {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createApiSecret - Create API Secret
-    **/
-    createApiSecret(req: operations.CreateApiSecretRequest, config?: AxiosRequestConfig): Promise<operations.CreateApiSecretResponse>;
+     * Create API Secret
+     */
+    createAPISecret(req: operations.CreateAPISecretRequest, security: operations.CreateAPISecretSecurity, config?: AxiosRequestConfig): Promise<operations.CreateAPISecretResponse>;
     /**
-     * retrieveApiSecret - Retrieve one API Secret
-    **/
-    retrieveApiSecret(req: operations.RetrieveApiSecretRequest, config?: AxiosRequestConfig): Promise<operations.RetrieveApiSecretResponse>;
+     * Retrieve one API Secret
+     */
+    retrieveAPISecret(req: operations.RetrieveAPISecretRequest, security: operations.RetrieveAPISecretSecurity, config?: AxiosRequestConfig): Promise<operations.RetrieveAPISecretResponse>;
     /**
-     * retrieveApiSecrets - Retrieve API Secrets
-    **/
-    retrieveApiSecrets(req: operations.RetrieveApiSecretsRequest, config?: AxiosRequestConfig): Promise<operations.RetrieveApiSecretsResponse>;
+     * Retrieve API Secrets
+     */
+    retrieveAPISecrets(req: operations.RetrieveAPISecretsRequest, security: operations.RetrieveAPISecretsSecurity, config?: AxiosRequestConfig): Promise<operations.RetrieveAPISecretsResponse>;
     /**
-     * revokeApiSecret - Revoke an API Secret
-    **/
-    revokeApiSecret(req: operations.RevokeApiSecretRequest, config?: AxiosRequestConfig): Promise<operations.RevokeApiSecretResponse>;
+     * Revoke an API Secret
+     */
+    revokeAPISecret(req: operations.RevokeAPISecretRequest, security: operations.RevokeAPISecretSecurity, config?: AxiosRequestConfig): Promise<operations.RevokeAPISecretResponse>;
 }

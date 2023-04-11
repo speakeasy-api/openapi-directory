@@ -1,18 +1,18 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GlobalpageloadRequest, GlobalpageloadResponse } from "openapi/src/sdk/models/operations";
+import {
+  GlobalpageloadRequest,
+  GlobalpageloadResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GlobalpageloadRequest = {
-  queryParams: {
-    license: "sit",
-    origin: "voluptas",
-    url: "culpa",
-  },
+  license: "corrupti",
+  origin: "provident",
+  url: "distinctio",
 };
 
 sdk.pageLoadPerformanceTime.globalpageload(req).then((res: GlobalpageloadResponse | AxiosError) => {

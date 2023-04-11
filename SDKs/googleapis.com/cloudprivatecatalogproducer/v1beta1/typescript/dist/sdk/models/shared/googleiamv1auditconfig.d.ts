@@ -2,6 +2,8 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { GoogleIamV1AuditLogConfig } from "./googleiamv1auditlogconfig";
 /**
  * Specifies the audit configuration for a service.
+ *
+ * @remarks
  * The configuration determines which permission types are logged, and what
  * identities, if any, are exempted from logging.
  * An AuditConfig must have one or more AuditLogConfigs.
@@ -52,8 +54,18 @@ import { GoogleIamV1AuditLogConfig } from "./googleiamv1auditlogconfig";
  * For sampleservice, this policy enables DATA_READ, DATA_WRITE and ADMIN_READ
  * logging. It also exempts jose@example.com from DATA_READ logging, and
  * aliya@example.com from DATA_WRITE logging.
-**/
+ */
 export declare class GoogleIamV1AuditConfig extends SpeakeasyBase {
+    /**
+     * The configuration for logging of each type of permission.
+     */
     auditLogConfigs?: GoogleIamV1AuditLogConfig[];
+    /**
+     * Specifies a service that will be enabled for audit logging.
+     *
+     * @remarks
+     * For example, `storage.googleapis.com`, `cloudsql.googleapis.com`.
+     * `allServices` is a special value that covers all services.
+     */
     service?: string;
 }

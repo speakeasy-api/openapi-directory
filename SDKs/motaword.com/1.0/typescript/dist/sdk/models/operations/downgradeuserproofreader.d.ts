@@ -1,18 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DowngradeUserProofreaderPathParams extends SpeakeasyBase {
-    userId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DowngradeUserProofreaderSecurity extends SpeakeasyBase {
-    mwoAuth: shared.SchemeMwoAuth;
+    mwoAuth: string;
 }
 export declare class DowngradeUserProofreaderRequest extends SpeakeasyBase {
-    pathParams: DowngradeUserProofreaderPathParams;
-    security: DowngradeUserProofreaderSecurity;
+    /**
+     * User ID
+     */
+    userId: number;
 }
 export declare class DowngradeUserProofreaderResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * VendorNotFound
+     */
     error?: shared.ErrorT;
+    /**
+     * Successful operation
+     */
     operationStatus?: shared.OperationStatus;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

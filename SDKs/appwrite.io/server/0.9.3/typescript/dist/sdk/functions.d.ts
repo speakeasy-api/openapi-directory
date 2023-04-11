@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * The Functions Service allows you view, create and manage your Cloud Functions.
+ */
 export declare class Functions {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,85 +12,98 @@ export declare class Functions {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * functionsCreate - Create Function
+     * Create Function
      *
+     * @remarks
      * Create a new function. You can pass a list of [permissions](/docs/permissions) to allow different project users or team with access to execute the function using the client API.
-    **/
-    functionsCreate(req: operations.FunctionsCreateRequest, config?: AxiosRequestConfig): Promise<operations.FunctionsCreateResponse>;
+     */
+    functionsCreate(req: operations.FunctionsCreateRequestBody, security: operations.FunctionsCreateSecurity, config?: AxiosRequestConfig): Promise<operations.FunctionsCreateResponse>;
     /**
-     * functionsCreateExecution - Create Execution
+     * Create Execution
      *
+     * @remarks
      * Trigger a function execution. The returned object will return you the current execution status. You can ping the `Get Execution` endpoint to get updates on the current execution status. Once this endpoint is called, your function execution process will start asynchronously.
-    **/
-    functionsCreateExecution(req: operations.FunctionsCreateExecutionRequest, config?: AxiosRequestConfig): Promise<operations.FunctionsCreateExecutionResponse>;
+     */
+    functionsCreateExecution(req: operations.FunctionsCreateExecutionRequest, security: operations.FunctionsCreateExecutionSecurity, config?: AxiosRequestConfig): Promise<operations.FunctionsCreateExecutionResponse>;
     /**
-     * functionsCreateTag - Create Tag
+     * Create Tag
      *
+     * @remarks
      * Create a new function code tag. Use this endpoint to upload a new version of your code function. To execute your newly uploaded code, you'll need to update the function's tag to use your new tag UID.
      *
      * This endpoint accepts a tar.gz file compressed with your code. Make sure to include any dependencies your code has within the compressed file. You can learn more about code packaging in the [Appwrite Cloud Functions tutorial](/docs/functions).
      *
      * Use the "command" param to set the entry point used to execute your code.
-    **/
-    functionsCreateTag(req: operations.FunctionsCreateTagRequest, config?: AxiosRequestConfig): Promise<operations.FunctionsCreateTagResponse>;
+     */
+    functionsCreateTag(req: operations.FunctionsCreateTagRequest, security: operations.FunctionsCreateTagSecurity, config?: AxiosRequestConfig): Promise<operations.FunctionsCreateTagResponse>;
     /**
-     * functionsDelete - Delete Function
+     * Delete Function
      *
+     * @remarks
      * Delete a function by its unique ID.
-    **/
-    functionsDelete(req: operations.FunctionsDeleteRequest, config?: AxiosRequestConfig): Promise<operations.FunctionsDeleteResponse>;
+     */
+    functionsDelete(req: operations.FunctionsDeleteRequest, security: operations.FunctionsDeleteSecurity, config?: AxiosRequestConfig): Promise<operations.FunctionsDeleteResponse>;
     /**
-     * functionsDeleteTag - Delete Tag
+     * Delete Tag
      *
+     * @remarks
      * Delete a code tag by its unique ID.
-    **/
-    functionsDeleteTag(req: operations.FunctionsDeleteTagRequest, config?: AxiosRequestConfig): Promise<operations.FunctionsDeleteTagResponse>;
+     */
+    functionsDeleteTag(req: operations.FunctionsDeleteTagRequest, security: operations.FunctionsDeleteTagSecurity, config?: AxiosRequestConfig): Promise<operations.FunctionsDeleteTagResponse>;
     /**
-     * functionsGet - Get Function
+     * Get Function
      *
+     * @remarks
      * Get a function by its unique ID.
-    **/
-    functionsGet(req: operations.FunctionsGetRequest, config?: AxiosRequestConfig): Promise<operations.FunctionsGetResponse>;
+     */
+    functionsGet(req: operations.FunctionsGetRequest, security: operations.FunctionsGetSecurity, config?: AxiosRequestConfig): Promise<operations.FunctionsGetResponse>;
     /**
-     * functionsGetExecution - Get Execution
+     * Get Execution
      *
+     * @remarks
      * Get a function execution log by its unique ID.
-    **/
-    functionsGetExecution(req: operations.FunctionsGetExecutionRequest, config?: AxiosRequestConfig): Promise<operations.FunctionsGetExecutionResponse>;
+     */
+    functionsGetExecution(req: operations.FunctionsGetExecutionRequest, security: operations.FunctionsGetExecutionSecurity, config?: AxiosRequestConfig): Promise<operations.FunctionsGetExecutionResponse>;
     /**
-     * functionsGetTag - Get Tag
+     * Get Tag
      *
+     * @remarks
      * Get a code tag by its unique ID.
-    **/
-    functionsGetTag(req: operations.FunctionsGetTagRequest, config?: AxiosRequestConfig): Promise<operations.FunctionsGetTagResponse>;
+     */
+    functionsGetTag(req: operations.FunctionsGetTagRequest, security: operations.FunctionsGetTagSecurity, config?: AxiosRequestConfig): Promise<operations.FunctionsGetTagResponse>;
     /**
-     * functionsList - List Functions
+     * List Functions
      *
+     * @remarks
      * Get a list of all the project's functions. You can use the query params to filter your results.
-    **/
-    functionsList(req: operations.FunctionsListRequest, config?: AxiosRequestConfig): Promise<operations.FunctionsListResponse>;
+     */
+    functionsList(req: operations.FunctionsListRequest, security: operations.FunctionsListSecurity, config?: AxiosRequestConfig): Promise<operations.FunctionsListResponse>;
     /**
-     * functionsListExecutions - List Executions
+     * List Executions
      *
+     * @remarks
      * Get a list of all the current user function execution logs. You can use the query params to filter your results. On admin mode, this endpoint will return a list of all of the project's executions. [Learn more about different API modes](/docs/admin).
-    **/
-    functionsListExecutions(req: operations.FunctionsListExecutionsRequest, config?: AxiosRequestConfig): Promise<operations.FunctionsListExecutionsResponse>;
+     */
+    functionsListExecutions(req: operations.FunctionsListExecutionsRequest, security: operations.FunctionsListExecutionsSecurity, config?: AxiosRequestConfig): Promise<operations.FunctionsListExecutionsResponse>;
     /**
-     * functionsListTags - List Tags
+     * List Tags
      *
+     * @remarks
      * Get a list of all the project's code tags. You can use the query params to filter your results.
-    **/
-    functionsListTags(req: operations.FunctionsListTagsRequest, config?: AxiosRequestConfig): Promise<operations.FunctionsListTagsResponse>;
+     */
+    functionsListTags(req: operations.FunctionsListTagsRequest, security: operations.FunctionsListTagsSecurity, config?: AxiosRequestConfig): Promise<operations.FunctionsListTagsResponse>;
     /**
-     * functionsUpdate - Update Function
+     * Update Function
      *
+     * @remarks
      * Update function by its unique ID.
-    **/
-    functionsUpdate(req: operations.FunctionsUpdateRequest, config?: AxiosRequestConfig): Promise<operations.FunctionsUpdateResponse>;
+     */
+    functionsUpdate(req: operations.FunctionsUpdateRequest, security: operations.FunctionsUpdateSecurity, config?: AxiosRequestConfig): Promise<operations.FunctionsUpdateResponse>;
     /**
-     * functionsUpdateTag - Update Function Tag
+     * Update Function Tag
      *
+     * @remarks
      * Update the function code tag ID using the unique function ID. Use this endpoint to switch the code tag that should be executed by the execution endpoint.
-    **/
-    functionsUpdateTag(req: operations.FunctionsUpdateTagRequest, config?: AxiosRequestConfig): Promise<operations.FunctionsUpdateTagResponse>;
+     */
+    functionsUpdateTag(req: operations.FunctionsUpdateTagRequest, security: operations.FunctionsUpdateTagSecurity, config?: AxiosRequestConfig): Promise<operations.FunctionsUpdateTagResponse>;
 }

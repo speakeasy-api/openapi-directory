@@ -1,16 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReposGetCollaboratorPermissionLevelPathParams extends SpeakeasyBase {
-    owner: string;
-    repo: string;
-    username: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ReposGetCollaboratorPermissionLevelRequest extends SpeakeasyBase {
-    pathParams: ReposGetCollaboratorPermissionLevelPathParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    owner: string;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    repo: string;
+    /**
+     * The handle for the GitHub user account.
+     */
+    username: string;
 }
 export declare class ReposGetCollaboratorPermissionLevelResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Resource not found
+     */
     basicError?: shared.BasicError;
+    /**
+     * if user has admin permissions
+     */
     repositoryCollaboratorPermission?: shared.RepositoryCollaboratorPermission;
 }

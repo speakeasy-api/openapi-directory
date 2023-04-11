@@ -1,105 +1,65 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DatafusionProjectsLocationsInstancesCreateRequest, DatafusionProjectsLocationsInstancesCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  DatafusionProjectsLocationsInstancesCreateRequest,
+  DatafusionProjectsLocationsInstancesCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  InstanceTypeEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: DatafusionProjectsLocationsInstancesCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    instanceId: "expedita",
-    key: "voluptas",
-    oauthToken: "fugit",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    uploadType: "rerum",
-    uploadProtocol: "dicta",
-  },
-  request: {
-    accelerators: [
-      {
-        acceleratorType: "ACCELERATOR_TYPE_UNSPECIFIED",
-        state: "DISABLED",
-      },
-    ],
-    availableVersion: [
-      {
-        availableFeatures: [
-          "et",
-          "voluptate",
-          "iste",
-        ],
-        defaultVersion: true,
-        type: "TYPE_GENERAL_AVAILABILITY",
-        versionNumber: "dolores",
-      },
-      {
-        availableFeatures: [
-          "debitis",
-          "vel",
-          "odio",
-        ],
-        defaultVersion: true,
-        type: "TYPE_PREVIEW",
-        versionNumber: "aspernatur",
-      },
-      {
-        availableFeatures: [
-          "totam",
-          "commodi",
-          "quis",
-        ],
-        defaultVersion: false,
-        type: "TYPE_GENERAL_AVAILABILITY",
-        versionNumber: "odit",
-      },
-    ],
+  dollarXgafv: XgafvEnum.Two,
+  instanceInput: {
     cryptoKeyConfig: {
-      keyReference: "non",
+      keyReference: "provident",
     },
-    dataprocServiceAccount: "voluptas",
-    description: "omnis",
-    displayName: "aut",
-    enableRbac: true,
+    dataprocServiceAccount: "distinctio",
+    description: "quibusdam",
+    displayName: "unde",
+    enableRbac: false,
     enableStackdriverLogging: false,
     enableStackdriverMonitoring: false,
+    enableZoneSeparation: false,
     eventPublishConfig: {
-      enabled: true,
-      topic: "consectetur",
+      enabled: false,
+      topic: "nulla",
     },
     labels: {
-      "odio": "qui",
+      "illum": "vel",
+      "error": "deserunt",
+      "suscipit": "iure",
     },
     networkConfig: {
-      ipAllocation: "recusandae",
-      network: "at",
+      ipAllocation: "magnam",
+      network: "debitis",
     },
     options: {
-      "eveniet": "modi",
+      "delectus": "tempora",
     },
-    privateInstance: true,
-    type: "BASIC",
-    version: "ut",
-    zone: "exercitationem",
+    privateInstance: false,
+    type: InstanceTypeEnum.Basic,
+    version: "molestiae",
+    zone: "minus",
   },
+  accessToken: "placeat",
+  alt: AltEnum.Media,
+  callback: "iusto",
+  fields: "excepturi",
+  instanceId: "nisi",
+  key: "recusandae",
+  oauthToken: "temporibus",
+  parent: "ab",
+  prettyPrint: false,
+  quotaUser: "quis",
+  uploadType: "veritatis",
+  uploadProtocol: "deserunt",
 };
 
 sdk.projects.datafusionProjectsLocationsInstancesCreate(req).then((res: DatafusionProjectsLocationsInstancesCreateResponse | AxiosError) => {

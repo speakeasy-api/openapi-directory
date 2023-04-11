@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeCoipPoolsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeCoipPoolsActionEnum {
     DescribeCoipPools = "DescribeCoipPools"
 }
-export declare enum PostDescribeCoipPoolsVersionEnum {
+export declare enum POSTDescribeCoipPoolsVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDescribeCoipPoolsQueryParams extends SpeakeasyBase {
-    action: PostDescribeCoipPoolsActionEnum;
+export declare class POSTDescribeCoipPoolsRequest extends SpeakeasyBase {
+    action: POSTDescribeCoipPoolsActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostDescribeCoipPoolsVersionEnum;
-}
-export declare class PostDescribeCoipPoolsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeCoipPoolsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeCoipPoolsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeCoipPoolsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeCoipPoolsQueryParams;
-    headers: PostDescribeCoipPoolsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeCoipPoolsResponse extends SpeakeasyBase {
+export declare class POSTDescribeCoipPoolsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

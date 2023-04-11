@@ -1,15 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class TeamsGetDiscussionCommentLegacyPathParams extends SpeakeasyBase {
-    commentNumber: number;
-    discussionNumber: number;
-    teamId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class TeamsGetDiscussionCommentLegacyRequest extends SpeakeasyBase {
-    pathParams: TeamsGetDiscussionCommentLegacyPathParams;
+    /**
+     * The number that identifies the comment.
+     */
+    commentNumber: number;
+    /**
+     * The number that identifies the discussion.
+     */
+    discussionNumber: number;
+    /**
+     * The unique identifier of the team.
+     */
+    teamId: number;
 }
 export declare class TeamsGetDiscussionCommentLegacyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     teamDiscussionComment?: shared.TeamDiscussionComment;
 }

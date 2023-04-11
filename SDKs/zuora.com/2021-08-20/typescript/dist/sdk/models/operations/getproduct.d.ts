@@ -1,19 +1,41 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetProductPathParams extends SpeakeasyBase {
-    productId: string;
-}
-export declare class GetProductHeaders extends SpeakeasyBase {
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class GETProductRequest extends SpeakeasyBase {
+    /**
+     * An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+     *
+     * @remarks
+     *
+     */
     zuoraEntityIds?: string;
+    /**
+     * A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+     *
+     * @remarks
+     *
+     * The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+     *
+     */
     zuoraTrackId?: string;
+    /**
+     * The unique ID of the product you want to retrieve. For example, 8a808255575bdae4015774e9602e16fe.
+     */
+    productId: string;
+    /**
+     * The minor version of the Zuora REST API.
+     *
+     * @remarks
+     *
+     * You only need to set this parameter if you use the `productRatePlans` field.
+     *
+     */
     zuoraVersion?: string;
 }
-export declare class GetProductRequest extends SpeakeasyBase {
-    pathParams: GetProductPathParams;
-    headers: GetProductHeaders;
-}
-export declare class GetProductResponse extends SpeakeasyBase {
+export declare class GETProductResponse extends SpeakeasyBase {
     contentType: string;
-    getProductType?: Record<string, any>;
-    headers: Record<string, string[]>;
+    getProductType?: shared.GETProductType;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,3 +1,6 @@
+/**
+ * 3 letter alpha code for the ISO-4217 currency code, e.g. USD, AUD.
+ */
 export declare enum CurrencyCodeEnum {
     Aed = "AED",
     Afn = "AFN",

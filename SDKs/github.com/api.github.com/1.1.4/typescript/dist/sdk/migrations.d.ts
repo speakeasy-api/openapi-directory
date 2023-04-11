@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Move projects to or from GitHub.
+ */
 export declare class Migrations {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,40 +12,45 @@ export declare class Migrations {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * migrationsCancelImport - Cancel an import
+     * Cancel an import
      *
+     * @remarks
      * Stop an import for a repository.
      *
-     * https://docs.github.com/rest/reference/migrations#cancel-an-import - API method documentation
-    **/
+     * @see {@link https://docs.github.com/rest/migrations/source-imports#cancel-an-import} - API method documentation
+     */
     migrationsCancelImport(req: operations.MigrationsCancelImportRequest, config?: AxiosRequestConfig): Promise<operations.MigrationsCancelImportResponse>;
     /**
-     * migrationsDeleteArchiveForAuthenticatedUser - Delete a user migration archive
+     * Delete a user migration archive
      *
-     * Deletes a previous migration archive. Downloadable migration archives are automatically deleted after seven days. Migration metadata, which is returned in the [List user migrations](https://docs.github.com/rest/reference/migrations#list-user-migrations) and [Get a user migration status](https://docs.github.com/rest/reference/migrations#get-a-user-migration-status) endpoints, will continue to be available even after an archive is deleted.
+     * @remarks
+     * Deletes a previous migration archive. Downloadable migration archives are automatically deleted after seven days. Migration metadata, which is returned in the [List user migrations](https://docs.github.com/rest/migrations/users#list-user-migrations) and [Get a user migration status](https://docs.github.com/rest/migrations/users#get-a-user-migration-status) endpoints, will continue to be available even after an archive is deleted.
      *
-     * https://docs.github.com/rest/reference/migrations#delete-a-user-migration-archive - API method documentation
-    **/
+     * @see {@link https://docs.github.com/rest/migrations/users#delete-a-user-migration-archive} - API method documentation
+     */
     migrationsDeleteArchiveForAuthenticatedUser(req: operations.MigrationsDeleteArchiveForAuthenticatedUserRequest, config?: AxiosRequestConfig): Promise<operations.MigrationsDeleteArchiveForAuthenticatedUserResponse>;
     /**
-     * migrationsDeleteArchiveForOrg - Delete an organization migration archive
+     * Delete an organization migration archive
      *
+     * @remarks
      * Deletes a previous migration archive. Migration archives are automatically deleted after seven days.
      *
-     * https://docs.github.com/rest/reference/migrations#delete-an-organization-migration-archive - API method documentation
-    **/
+     * @see {@link https://docs.github.com/rest/migrations/orgs#delete-an-organization-migration-archive} - API method documentation
+     */
     migrationsDeleteArchiveForOrg(req: operations.MigrationsDeleteArchiveForOrgRequest, config?: AxiosRequestConfig): Promise<operations.MigrationsDeleteArchiveForOrgResponse>;
     /**
-     * migrationsDownloadArchiveForOrg - Download an organization migration archive
+     * Download an organization migration archive
      *
+     * @remarks
      * Fetches the URL to a migration archive.
      *
-     * https://docs.github.com/rest/reference/migrations#download-an-organization-migration-archive - API method documentation
-    **/
+     * @see {@link https://docs.github.com/rest/migrations/orgs#download-an-organization-migration-archive} - API method documentation
+     */
     migrationsDownloadArchiveForOrg(req: operations.MigrationsDownloadArchiveForOrgRequest, config?: AxiosRequestConfig): Promise<operations.MigrationsDownloadArchiveForOrgResponse>;
     /**
-     * migrationsGetArchiveForAuthenticatedUser - Download a user migration archive
+     * Download a user migration archive
      *
+     * @remarks
      * Fetches the URL to download the migration archive as a `tar.gz` file. Depending on the resources your repository uses, the migration archive can contain JSON files with data for these objects:
      *
      * *   attachments
@@ -65,22 +73,24 @@ export declare class Migrations {
      *
      * The archive will also contain an `attachments` directory that includes all attachment files uploaded to GitHub.com and a `repositories` directory that contains the repository's Git data.
      *
-     * https://docs.github.com/rest/reference/migrations#download-a-user-migration-archive - API method documentation
-    **/
+     * @see {@link https://docs.github.com/rest/migrations/users#download-a-user-migration-archive} - API method documentation
+     */
     migrationsGetArchiveForAuthenticatedUser(req: operations.MigrationsGetArchiveForAuthenticatedUserRequest, config?: AxiosRequestConfig): Promise<operations.MigrationsGetArchiveForAuthenticatedUserResponse>;
     /**
-     * migrationsGetCommitAuthors - Get commit authors
+     * Get commit authors
      *
+     * @remarks
      * Each type of source control system represents authors in a different way. For example, a Git commit author has a display name and an email address, but a Subversion commit author just has a username. The GitHub Importer will make the author information valid, but the author might not be correct. For example, it will change the bare Subversion username `hubot` into something like `hubot <hubot@12341234-abab-fefe-8787-fedcba987654>`.
      *
-     * This endpoint and the [Map a commit author](https://docs.github.com/rest/reference/migrations#map-a-commit-author) endpoint allow you to provide correct Git author information.
+     * This endpoint and the [Map a commit author](https://docs.github.com/rest/migrations/source-imports#map-a-commit-author) endpoint allow you to provide correct Git author information.
      *
-     * https://docs.github.com/rest/reference/migrations#get-commit-authors - API method documentation
-    **/
+     * @see {@link https://docs.github.com/rest/migrations/source-imports#get-commit-authors} - API method documentation
+     */
     migrationsGetCommitAuthors(req: operations.MigrationsGetCommitAuthorsRequest, config?: AxiosRequestConfig): Promise<operations.MigrationsGetCommitAuthorsResponse>;
     /**
-     * migrationsGetImportStatus - Get an import status
+     * Get an import status
      *
+     * @remarks
      * View the progress of an import.
      *
      * **Import status**
@@ -97,11 +107,11 @@ export declare class Migrations {
      *
      * If there are problems, you will see one of these in the `status` field:
      *
-     * *   `auth_failed` - the import requires authentication in order to connect to the original repository. To update authentication for the import, please see the [Update an import](https://docs.github.com/rest/reference/migrations#update-an-import) section.
-     * *   `error` - the import encountered an error. The import progress response will include the `failed_step` and an error message. Contact [GitHub Support](https://support.github.com/contact) or [GitHub Premium Support](https://premium.githubsupport.com) for more information.
-     * *   `detection_needs_auth` - the importer requires authentication for the originating repository to continue detection. To update authentication for the import, please see the [Update an import](https://docs.github.com/rest/reference/migrations#update-an-import) section.
-     * *   `detection_found_nothing` - the importer didn't recognize any source control at the URL. To resolve, [Cancel the import](https://docs.github.com/rest/reference/migrations#cancel-an-import) and [retry](https://docs.github.com/rest/reference/migrations#start-an-import) with the correct URL.
-     * *   `detection_found_multiple` - the importer found several projects or repositories at the provided URL. When this is the case, the Import Progress response will also include a `project_choices` field with the possible project choices as values. To update project choice, please see the [Update an import](https://docs.github.com/rest/reference/migrations#update-an-import) section.
+     * *   `auth_failed` - the import requires authentication in order to connect to the original repository. To update authentication for the import, please see the [Update an import](https://docs.github.com/rest/migrations/source-imports#update-an-import) section.
+     * *   `error` - the import encountered an error. The import progress response will include the `failed_step` and an error message. Contact [GitHub Support](https://support.github.com/contact?tags=dotcom-rest-api) for more information.
+     * *   `detection_needs_auth` - the importer requires authentication for the originating repository to continue detection. To update authentication for the import, please see the [Update an import](https://docs.github.com/rest/migrations/source-imports#update-an-import) section.
+     * *   `detection_found_nothing` - the importer didn't recognize any source control at the URL. To resolve, [Cancel the import](https://docs.github.com/rest/migrations/source-imports#cancel-an-import) and [retry](https://docs.github.com/rest/migrations/source-imports#start-an-import) with the correct URL.
+     * *   `detection_found_multiple` - the importer found several projects or repositories at the provided URL. When this is the case, the Import Progress response will also include a `project_choices` field with the possible project choices as values. To update project choice, please see the [Update an import](https://docs.github.com/rest/migrations/source-imports#update-an-import) section.
      *
      * **The project_choices field**
      *
@@ -116,20 +126,22 @@ export declare class Migrations {
      * *   `large_files_size` - the total size in gigabytes of files larger than 100MB found in the originating repository.
      * *   `large_files_count` - the total number of files larger than 100MB found in the originating repository. To see a list of these files, make a "Get Large Files" request.
      *
-     * https://docs.github.com/rest/reference/migrations#get-an-import-status - API method documentation
-    **/
+     * @see {@link https://docs.github.com/rest/migrations/source-imports#get-an-import-status} - API method documentation
+     */
     migrationsGetImportStatus(req: operations.MigrationsGetImportStatusRequest, config?: AxiosRequestConfig): Promise<operations.MigrationsGetImportStatusResponse>;
     /**
-     * migrationsGetLargeFiles - Get large files
+     * Get large files
      *
+     * @remarks
      * List files larger than 100MB found during the import
      *
-     * https://docs.github.com/rest/reference/migrations#get-large-files - API method documentation
-    **/
+     * @see {@link https://docs.github.com/rest/migrations/source-imports#get-large-files} - API method documentation
+     */
     migrationsGetLargeFiles(req: operations.MigrationsGetLargeFilesRequest, config?: AxiosRequestConfig): Promise<operations.MigrationsGetLargeFilesResponse>;
     /**
-     * migrationsGetStatusForAuthenticatedUser - Get a user migration status
+     * Get a user migration status
      *
+     * @remarks
      * Fetches a single user migration. The response includes the `state` of the migration, which can be one of the following values:
      *
      * *   `pending` - the migration hasn't started yet.
@@ -137,14 +149,15 @@ export declare class Migrations {
      * *   `exported` - the migration finished successfully.
      * *   `failed` - the migration failed.
      *
-     * Once the migration has been `exported` you can [download the migration archive](https://docs.github.com/rest/reference/migrations#download-a-user-migration-archive).
+     * Once the migration has been `exported` you can [download the migration archive](https://docs.github.com/rest/migrations/users#download-a-user-migration-archive).
      *
-     * https://docs.github.com/rest/reference/migrations#get-a-user-migration-status - API method documentation
-    **/
+     * @see {@link https://docs.github.com/rest/migrations/users#get-a-user-migration-status} - API method documentation
+     */
     migrationsGetStatusForAuthenticatedUser(req: operations.MigrationsGetStatusForAuthenticatedUserRequest, config?: AxiosRequestConfig): Promise<operations.MigrationsGetStatusForAuthenticatedUserResponse>;
     /**
-     * migrationsGetStatusForOrg - Get an organization migration status
+     * Get an organization migration status
      *
+     * @remarks
      * Fetches the status of a migration.
      *
      * The `state` of a migration can be one of the following values:
@@ -154,104 +167,122 @@ export declare class Migrations {
      * *   `exported`, which means the migration finished successfully.
      * *   `failed`, which means the migration failed.
      *
-     * https://docs.github.com/rest/reference/migrations#get-an-organization-migration-status - API method documentation
-    **/
+     * @see {@link https://docs.github.com/rest/migrations/orgs#get-an-organization-migration-status} - API method documentation
+     */
     migrationsGetStatusForOrg(req: operations.MigrationsGetStatusForOrgRequest, config?: AxiosRequestConfig): Promise<operations.MigrationsGetStatusForOrgResponse>;
     /**
-     * migrationsListForAuthenticatedUser - List user migrations
+     * List user migrations
      *
+     * @remarks
      * Lists all migrations a user has started.
      *
-     * https://docs.github.com/rest/reference/migrations#list-user-migrations - API method documentation
-    **/
+     * @see {@link https://docs.github.com/rest/migrations/users#list-user-migrations} - API method documentation
+     */
     migrationsListForAuthenticatedUser(req: operations.MigrationsListForAuthenticatedUserRequest, config?: AxiosRequestConfig): Promise<operations.MigrationsListForAuthenticatedUserResponse>;
     /**
-     * migrationsListForOrg - List organization migrations
+     * List organization migrations
      *
-     * Lists the most recent migrations.
+     * @remarks
+     * Lists the most recent migrations, including both exports (which can be started through the REST API) and imports (which cannot be started using the REST API).
      *
-     * https://docs.github.com/rest/reference/migrations#list-organization-migrations - API method documentation
-    **/
+     * A list of `repositories` is only returned for export migrations.
+     *
+     * @see {@link https://docs.github.com/rest/migrations/orgs#list-organization-migrations} - API method documentation
+     */
     migrationsListForOrg(req: operations.MigrationsListForOrgRequest, config?: AxiosRequestConfig): Promise<operations.MigrationsListForOrgResponse>;
     /**
-     * migrationsListReposForOrg - List repositories in an organization migration
+     * List repositories for a user migration
      *
-     * List all the repositories for this organization migration.
-     *
-     * https://docs.github.com/rest/reference/migrations#list-repositories-in-an-organization-migration - API method documentation
-    **/
-    migrationsListReposForOrg(req: operations.MigrationsListReposForOrgRequest, config?: AxiosRequestConfig): Promise<operations.MigrationsListReposForOrgResponse>;
-    /**
-     * migrationsListReposForUser - List repositories for a user migration
-     *
+     * @remarks
      * Lists all the repositories for this user migration.
      *
-     * https://docs.github.com/rest/reference/migrations#list-repositories-for-a-user-migration - API method documentation
-    **/
-    migrationsListReposForUser(req: operations.MigrationsListReposForUserRequest, config?: AxiosRequestConfig): Promise<operations.MigrationsListReposForUserResponse>;
+     * @see {@link https://docs.github.com/rest/migrations/users#list-repositories-for-a-user-migration} - API method documentation
+     */
+    migrationsListReposForAuthenticatedUser(req: operations.MigrationsListReposForAuthenticatedUserRequest, config?: AxiosRequestConfig): Promise<operations.MigrationsListReposForAuthenticatedUserResponse>;
     /**
-     * migrationsMapCommitAuthor - Map a commit author
+     * List repositories in an organization migration
      *
+     * @remarks
+     * List all the repositories for this organization migration.
+     *
+     * @see {@link https://docs.github.com/rest/migrations/orgs#list-repositories-in-an-organization-migration} - API method documentation
+     */
+    migrationsListReposForOrg(req: operations.MigrationsListReposForOrgRequest, config?: AxiosRequestConfig): Promise<operations.MigrationsListReposForOrgResponse>;
+    /**
+     * Map a commit author
+     *
+     * @remarks
      * Update an author's identity for the import. Your application can continue updating authors any time before you push new commits to the repository.
      *
-     * https://docs.github.com/rest/reference/migrations#map-a-commit-author - API method documentation
-    **/
+     * @see {@link https://docs.github.com/rest/migrations/source-imports#map-a-commit-author} - API method documentation
+     */
     migrationsMapCommitAuthor(req: operations.MigrationsMapCommitAuthorRequest, config?: AxiosRequestConfig): Promise<operations.MigrationsMapCommitAuthorResponse>;
     /**
-     * migrationsSetLfsPreference - Update Git LFS preference
+     * Update Git LFS preference
      *
-     * You can import repositories from Subversion, Mercurial, and TFS that include files larger than 100MB. This ability is powered by [Git LFS](https://git-lfs.github.com). You can learn more about our LFS feature and working with large files [on our help site](https://help.github.com/articles/versioning-large-files/).
+     * @remarks
+     * You can import repositories from Subversion, Mercurial, and TFS that include files larger than 100MB. This ability is powered by [Git LFS](https://git-lfs.com). You can learn more about our LFS feature and working with large files [on our help site](https://docs.github.com/repositories/working-with-files/managing-large-files).
      *
-     * https://docs.github.com/rest/reference/migrations#update-git-lfs-preference - API method documentation
-    **/
+     * @see {@link https://docs.github.com/rest/migrations/source-imports#update-git-lfs-preference} - API method documentation
+     */
     migrationsSetLfsPreference(req: operations.MigrationsSetLfsPreferenceRequest, config?: AxiosRequestConfig): Promise<operations.MigrationsSetLfsPreferenceResponse>;
     /**
-     * migrationsStartForAuthenticatedUser - Start a user migration
+     * Start a user migration
      *
+     * @remarks
      * Initiates the generation of a user migration archive.
      *
-     * https://docs.github.com/rest/reference/migrations#start-a-user-migration - API method documentation
-    **/
-    migrationsStartForAuthenticatedUser(req: operations.MigrationsStartForAuthenticatedUserRequest, config?: AxiosRequestConfig): Promise<operations.MigrationsStartForAuthenticatedUserResponse>;
+     * @see {@link https://docs.github.com/rest/migrations/users#start-a-user-migration} - API method documentation
+     */
+    migrationsStartForAuthenticatedUser(req: operations.MigrationsStartForAuthenticatedUserRequestBody, config?: AxiosRequestConfig): Promise<operations.MigrationsStartForAuthenticatedUserResponse>;
     /**
-     * migrationsStartForOrg - Start an organization migration
+     * Start an organization migration
      *
+     * @remarks
      * Initiates the generation of a migration archive.
      *
-     * https://docs.github.com/rest/reference/migrations#start-an-organization-migration - API method documentation
-    **/
+     * @see {@link https://docs.github.com/rest/migrations/orgs#start-an-organization-migration} - API method documentation
+     */
     migrationsStartForOrg(req: operations.MigrationsStartForOrgRequest, config?: AxiosRequestConfig): Promise<operations.MigrationsStartForOrgResponse>;
     /**
-     * migrationsStartImport - Start an import
+     * Start an import
      *
-     * Start a source import to a GitHub repository using GitHub Importer.
+     * @remarks
+     * Start a source import to a GitHub repository using GitHub Importer. Importing into a GitHub repository with GitHub Actions enabled is not supported and will return a status `422 Unprocessable Entity` response.
      *
-     * https://docs.github.com/rest/reference/migrations#start-an-import - API method documentation
-    **/
+     * @see {@link https://docs.github.com/rest/migrations/source-imports#start-an-import} - API method documentation
+     */
     migrationsStartImport(req: operations.MigrationsStartImportRequest, config?: AxiosRequestConfig): Promise<operations.MigrationsStartImportResponse>;
     /**
-     * migrationsUnlockRepoForAuthenticatedUser - Unlock a user repository
+     * Unlock a user repository
      *
-     * Unlocks a repository. You can lock repositories when you [start a user migration](https://docs.github.com/rest/reference/migrations#start-a-user-migration). Once the migration is complete you can unlock each repository to begin using it again or [delete the repository](https://docs.github.com/rest/reference/repos#delete-a-repository) if you no longer need the source data. Returns a status of `404 Not Found` if the repository is not locked.
+     * @remarks
+     * Unlocks a repository. You can lock repositories when you [start a user migration](https://docs.github.com/rest/migrations/users#start-a-user-migration). Once the migration is complete you can unlock each repository to begin using it again or [delete the repository](https://docs.github.com/rest/repos/repos#delete-a-repository) if you no longer need the source data. Returns a status of `404 Not Found` if the repository is not locked.
      *
-     * https://docs.github.com/rest/reference/migrations#unlock-a-user-repository - API method documentation
-    **/
+     * @see {@link https://docs.github.com/rest/migrations/users#unlock-a-user-repository} - API method documentation
+     */
     migrationsUnlockRepoForAuthenticatedUser(req: operations.MigrationsUnlockRepoForAuthenticatedUserRequest, config?: AxiosRequestConfig): Promise<operations.MigrationsUnlockRepoForAuthenticatedUserResponse>;
     /**
-     * migrationsUnlockRepoForOrg - Unlock an organization repository
+     * Unlock an organization repository
      *
-     * Unlocks a repository that was locked for migration. You should unlock each migrated repository and [delete them](https://docs.github.com/rest/reference/repos#delete-a-repository) when the migration is complete and you no longer need the source data.
+     * @remarks
+     * Unlocks a repository that was locked for migration. You should unlock each migrated repository and [delete them](https://docs.github.com/rest/repos/repos#delete-a-repository) when the migration is complete and you no longer need the source data.
      *
-     * https://docs.github.com/rest/reference/migrations#unlock-an-organization-repository - API method documentation
-    **/
+     * @see {@link https://docs.github.com/rest/migrations/orgs#unlock-an-organization-repository} - API method documentation
+     */
     migrationsUnlockRepoForOrg(req: operations.MigrationsUnlockRepoForOrgRequest, config?: AxiosRequestConfig): Promise<operations.MigrationsUnlockRepoForOrgResponse>;
     /**
-     * migrationsUpdateImport - Update an import
+     * Update an import
      *
+     * @remarks
      * An import can be updated with credentials or a project choice by passing in the appropriate parameters in this API
      * request. If no parameters are provided, the import will be restarted.
      *
-     * https://docs.github.com/rest/reference/migrations#update-an-import - API method documentation
-    **/
+     * Some servers (e.g. TFS servers) can have several projects at a single URL. In those cases the import progress will
+     * have the status `detection_found_multiple` and the Import Progress response will include a `project_choices` array.
+     * You can select the project to import by providing one of the objects in the `project_choices` array in the update request.
+     *
+     * @see {@link https://docs.github.com/rest/migrations/source-imports#update-an-import} - API method documentation
+     */
     migrationsUpdateImport(req: operations.MigrationsUpdateImportRequest, config?: AxiosRequestConfig): Promise<operations.MigrationsUpdateImportResponse>;
 }

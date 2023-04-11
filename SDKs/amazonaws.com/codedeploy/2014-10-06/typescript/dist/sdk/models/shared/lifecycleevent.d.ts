@@ -3,7 +3,7 @@ import { Diagnostics } from "./diagnostics";
 import { LifecycleEventStatusEnum } from "./lifecycleeventstatusenum";
 /**
  * Information about a deployment lifecycle event.
-**/
+ */
 export declare class LifecycleEvent extends SpeakeasyBase {
     diagnostics?: Diagnostics;
     endTime?: Date;

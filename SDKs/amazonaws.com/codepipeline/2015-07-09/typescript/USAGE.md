@@ -1,32 +1,32 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AcknowledgeJobRequest, AcknowledgeJobResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  AcknowledgeJobRequest,
+  AcknowledgeJobResponse,
+  AcknowledgeJobXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    hmac: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: AcknowledgeJobRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "CodePipeline_20150709.AcknowledgeJob",
+  acknowledgeJobInput: {
+    jobId: "corrupti",
+    nonce: "provident",
   },
-  request: {
-    jobId: "fugit",
-    nonce: "et",
-  },
+  xAmzAlgorithm: "distinctio",
+  xAmzContentSha256: "quibusdam",
+  xAmzCredential: "unde",
+  xAmzDate: "nulla",
+  xAmzSecurityToken: "corrupti",
+  xAmzSignature: "illum",
+  xAmzSignedHeaders: "vel",
+  xAmzTarget: AcknowledgeJobXAmzTargetEnum.CodePipeline20150709AcknowledgeJob,
 };
 
 sdk.acknowledgeJob(req).then((res: AcknowledgeJobResponse | AxiosError) => {

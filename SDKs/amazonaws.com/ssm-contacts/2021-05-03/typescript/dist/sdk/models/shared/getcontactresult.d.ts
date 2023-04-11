@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Plan } from "./plan";
 import { ContactTypeEnum } from "./contacttypeenum";
+import { Plan } from "./plan";
+/**
+ * Success
+ */
 export declare class GetContactResult extends SpeakeasyBase {
     alias: string;
     contactArn: string;

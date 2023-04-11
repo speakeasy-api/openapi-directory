@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum ListLoggingConfigurationsXAmzTargetEnum {
-    AwswafRegional20161128ListLoggingConfigurations = "AWSWAF_Regional_20161128.ListLoggingConfigurations"
+    AWSWAFRegional20161128ListLoggingConfigurations = "AWSWAF_Regional_20161128.ListLoggingConfigurations"
 }
-export declare class ListLoggingConfigurationsHeaders extends SpeakeasyBase {
+export declare class ListLoggingConfigurationsRequest extends SpeakeasyBase {
+    listLoggingConfigurationsRequest: shared.ListLoggingConfigurationsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class ListLoggingConfigurationsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListLoggingConfigurationsXAmzTargetEnum;
 }
-export declare class ListLoggingConfigurationsRequest extends SpeakeasyBase {
-    headers: ListLoggingConfigurationsHeaders;
-    request: shared.ListLoggingConfigurationsRequest;
-}
 export declare class ListLoggingConfigurationsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     listLoggingConfigurationsResponse?: shared.ListLoggingConfigurationsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFInvalidParameterException
+     */
     wafInvalidParameterException?: any;
+    /**
+     * WAFNonexistentItemException
+     */
     wafNonexistentItemException?: any;
 }

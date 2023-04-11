@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { CodeOfConduct } from "./codeofconduct";
+import { NullableRepository } from "./nullablerepository";
+import { SimpleUser } from "./simpleuser";
 export declare class MinimalRepositoryLicense extends SpeakeasyBase {
     key?: string;
     name?: string;
@@ -6,279 +9,18 @@ export declare class MinimalRepositoryLicense extends SpeakeasyBase {
     spdxId?: string;
     url?: string;
 }
-/**
- * Simple User
-**/
-export declare class MinimalRepositorySimpleUser extends SpeakeasyBase {
-    avatarUrl: string;
-    eventsUrl: string;
-    followersUrl: string;
-    followingUrl: string;
-    gistsUrl: string;
-    gravatarId: string;
-    htmlUrl: string;
-    id: number;
-    login: string;
-    nodeId: string;
-    organizationsUrl: string;
-    receivedEventsUrl: string;
-    reposUrl: string;
-    siteAdmin: boolean;
-    starredAt?: string;
-    starredUrl: string;
-    subscriptionsUrl: string;
-    type: string;
-    url: string;
-}
 export declare class MinimalRepositoryPermissions extends SpeakeasyBase {
     admin?: boolean;
-    pull?: boolean;
-    push?: boolean;
-}
-/**
- * License Simple
-**/
-export declare class MinimalRepositoryRepositoryLicenseSimple extends SpeakeasyBase {
-    htmlUrl?: string;
-    key: string;
-    name: string;
-    nodeId: string;
-    spdxId: string;
-    url: string;
-}
-/**
- * Simple User
-**/
-export declare class MinimalRepositoryRepositorySimpleUser extends SpeakeasyBase {
-    avatarUrl: string;
-    eventsUrl: string;
-    followersUrl: string;
-    followingUrl: string;
-    gistsUrl: string;
-    gravatarId: string;
-    htmlUrl: string;
-    id: number;
-    login: string;
-    nodeId: string;
-    organizationsUrl: string;
-    receivedEventsUrl: string;
-    reposUrl: string;
-    siteAdmin: boolean;
-    starredAt?: string;
-    starredUrl: string;
-    subscriptionsUrl: string;
-    type: string;
-    url: string;
-}
-export declare class MinimalRepositoryRepositoryPermissions extends SpeakeasyBase {
-    admin: boolean;
     maintain?: boolean;
-    pull: boolean;
-    push: boolean;
-    triage?: boolean;
-}
-export declare class MinimalRepositoryRepositoryTemplateRepositoryOwner extends SpeakeasyBase {
-    avatarUrl?: string;
-    eventsUrl?: string;
-    followersUrl?: string;
-    followingUrl?: string;
-    gistsUrl?: string;
-    gravatarId?: string;
-    htmlUrl?: string;
-    id?: number;
-    login?: string;
-    nodeId?: string;
-    organizationsUrl?: string;
-    receivedEventsUrl?: string;
-    reposUrl?: string;
-    siteAdmin?: boolean;
-    starredUrl?: string;
-    subscriptionsUrl?: string;
-    type?: string;
-    url?: string;
-}
-export declare class MinimalRepositoryRepositoryTemplateRepositoryPermissions extends SpeakeasyBase {
-    admin?: boolean;
     pull?: boolean;
     push?: boolean;
-}
-export declare class MinimalRepositoryRepositoryTemplateRepository extends SpeakeasyBase {
-    allowMergeCommit?: boolean;
-    allowRebaseMerge?: boolean;
-    allowSquashMerge?: boolean;
-    anonymousAccessEnabled?: boolean;
-    archiveUrl?: string;
-    archived?: boolean;
-    assigneesUrl?: string;
-    blobsUrl?: string;
-    branchesUrl?: string;
-    cloneUrl?: string;
-    collaboratorsUrl?: string;
-    commentsUrl?: string;
-    commitsUrl?: string;
-    compareUrl?: string;
-    contentsUrl?: string;
-    contributorsUrl?: string;
-    createdAt?: string;
-    defaultBranch?: string;
-    deploymentsUrl?: string;
-    description?: string;
-    disabled?: boolean;
-    downloadsUrl?: string;
-    eventsUrl?: string;
-    fork?: boolean;
-    forksCount?: number;
-    forksUrl?: string;
-    fullName?: string;
-    gitCommitsUrl?: string;
-    gitRefsUrl?: string;
-    gitTagsUrl?: string;
-    gitUrl?: string;
-    hasDownloads?: boolean;
-    hasIssues?: boolean;
-    hasPages?: boolean;
-    hasProjects?: boolean;
-    hasWiki?: boolean;
-    homepage?: string;
-    hooksUrl?: string;
-    htmlUrl?: string;
-    id?: number;
-    isTemplate?: boolean;
-    issueCommentUrl?: string;
-    issueEventsUrl?: string;
-    issuesUrl?: string;
-    keysUrl?: string;
-    labelsUrl?: string;
-    language?: string;
-    languagesUrl?: string;
-    mergesUrl?: string;
-    milestonesUrl?: string;
-    mirrorUrl?: string;
-    name?: string;
-    networkCount?: number;
-    nodeId?: string;
-    notificationsUrl?: string;
-    openIssuesCount?: number;
-    owner?: MinimalRepositoryRepositoryTemplateRepositoryOwner;
-    permissions?: MinimalRepositoryRepositoryTemplateRepositoryPermissions;
-    private?: boolean;
-    pullsUrl?: string;
-    pushedAt?: string;
-    releasesUrl?: string;
-    size?: number;
-    sshUrl?: string;
-    stargazersCount?: number;
-    stargazersUrl?: string;
-    statusesUrl?: string;
-    subscribersCount?: number;
-    subscribersUrl?: string;
-    subscriptionUrl?: string;
-    svnUrl?: string;
-    tagsUrl?: string;
-    teamsUrl?: string;
-    topics?: string[];
-    treesUrl?: string;
-    updatedAt?: string;
-    url?: string;
-    visibility?: string;
-    watchersCount?: number;
-}
-/**
- * A git repository
-**/
-export declare class MinimalRepositoryRepository extends SpeakeasyBase {
-    allowMergeCommit?: boolean;
-    allowRebaseMerge?: boolean;
-    allowSquashMerge?: boolean;
-    anonymousAccessEnabled?: boolean;
-    archiveUrl: string;
-    archived: boolean;
-    assigneesUrl: string;
-    blobsUrl: string;
-    branchesUrl: string;
-    cloneUrl: string;
-    collaboratorsUrl: string;
-    commentsUrl: string;
-    commitsUrl: string;
-    compareUrl: string;
-    contentsUrl: string;
-    contributorsUrl: string;
-    createdAt: Date;
-    defaultBranch: string;
-    deploymentsUrl: string;
-    description: string;
-    disabled: boolean;
-    downloadsUrl: string;
-    eventsUrl: string;
-    fork: boolean;
-    forks: number;
-    forksCount: number;
-    forksUrl: string;
-    fullName: string;
-    gitCommitsUrl: string;
-    gitRefsUrl: string;
-    gitTagsUrl: string;
-    gitUrl: string;
-    hasDownloads: boolean;
-    hasIssues: boolean;
-    hasPages: boolean;
-    hasProjects: boolean;
-    hasWiki: boolean;
-    homepage: string;
-    hooksUrl: string;
-    htmlUrl: string;
-    id: number;
-    isTemplate?: boolean;
-    issueCommentUrl: string;
-    issueEventsUrl: string;
-    issuesUrl: string;
-    keysUrl: string;
-    labelsUrl: string;
-    language: string;
-    languagesUrl: string;
-    license: MinimalRepositoryRepositoryLicenseSimple;
-    masterBranch?: string;
-    mergesUrl: string;
-    milestonesUrl: string;
-    mirrorUrl: string;
-    name: string;
-    networkCount?: number;
-    nodeId: string;
-    notificationsUrl: string;
-    openIssues: number;
-    openIssuesCount: number;
-    organization?: MinimalRepositoryRepositorySimpleUser;
-    owner: MinimalRepositoryRepositorySimpleUser;
-    permissions?: MinimalRepositoryRepositoryPermissions;
-    private: boolean;
-    pullsUrl: string;
-    pushedAt: Date;
-    releasesUrl: string;
-    size: number;
-    sshUrl: string;
-    stargazersCount: number;
-    stargazersUrl: string;
-    starredAt?: string;
-    statusesUrl: string;
-    subscribersCount?: number;
-    subscribersUrl: string;
-    subscriptionUrl: string;
-    svnUrl: string;
-    tagsUrl: string;
-    teamsUrl: string;
-    templateRepository?: MinimalRepositoryRepositoryTemplateRepository;
-    topics?: string[];
-    treesUrl: string;
-    updatedAt: Date;
-    url: string;
-    visibility?: string;
-    watchers: number;
-    watchersCount: number;
+    triage?: boolean;
 }
 /**
  * Minimal Repository
-**/
+ */
 export declare class MinimalRepository extends SpeakeasyBase {
+    allowForking?: boolean;
     anonymousAccessEnabled?: boolean;
     archiveUrl: string;
     archived?: boolean;
@@ -286,6 +28,10 @@ export declare class MinimalRepository extends SpeakeasyBase {
     blobsUrl: string;
     branchesUrl: string;
     cloneUrl?: string;
+    /**
+     * Code Of Conduct
+     */
+    codeOfConduct?: CodeOfConduct;
     collaboratorsUrl: string;
     commentsUrl: string;
     commitsUrl: string;
@@ -335,7 +81,10 @@ export declare class MinimalRepository extends SpeakeasyBase {
     notificationsUrl: string;
     openIssues?: number;
     openIssuesCount?: number;
-    owner: MinimalRepositorySimpleUser;
+    /**
+     * Simple User
+     */
+    owner: SimpleUser;
     permissions?: MinimalRepositoryPermissions;
     private: boolean;
     pullsUrl: string;
@@ -352,7 +101,10 @@ export declare class MinimalRepository extends SpeakeasyBase {
     svnUrl?: string;
     tagsUrl: string;
     teamsUrl: string;
-    templateRepository?: MinimalRepositoryRepository;
+    /**
+     * A git repository
+     */
+    templateRepository?: NullableRepository;
     topics?: string[];
     treesUrl: string;
     updatedAt?: Date;

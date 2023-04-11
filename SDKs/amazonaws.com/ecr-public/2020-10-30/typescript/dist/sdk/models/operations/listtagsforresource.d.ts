@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum ListTagsForResourceXAmzTargetEnum {
     SpencerFrontendServiceListTagsForResource = "SpencerFrontendService.ListTagsForResource"
 }
-export declare class ListTagsForResourceHeaders extends SpeakeasyBase {
+export declare class ListTagsForResourceRequest extends SpeakeasyBase {
+    listTagsForResourceRequest: shared.ListTagsForResourceRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,28 @@ export declare class ListTagsForResourceHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListTagsForResourceXAmzTargetEnum;
 }
-export declare class ListTagsForResourceRequest extends SpeakeasyBase {
-    headers: ListTagsForResourceHeaders;
-    request: shared.ListTagsForResourceRequest;
-}
 export declare class ListTagsForResourceResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * Success
+     */
     listTagsForResourceResponse?: shared.ListTagsForResourceResponse;
-    repositoryNotFoundException?: any;
+    /**
+     * ServerException
+     */
     serverException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * RepositoryNotFoundException
+     */
+    repositoryNotFoundException?: any;
+    /**
+     * UnsupportedCommandException
+     */
+    unsupportedCommandException?: any;
 }

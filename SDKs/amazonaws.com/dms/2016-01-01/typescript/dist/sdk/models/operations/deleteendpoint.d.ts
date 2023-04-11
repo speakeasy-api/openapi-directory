@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteEndpointXAmzTargetEnum {
-    AmazonDmSv20160101DeleteEndpoint = "AmazonDMSv20160101.DeleteEndpoint"
+    AmazonDMSv20160101DeleteEndpoint = "AmazonDMSv20160101.DeleteEndpoint"
 }
-export declare class DeleteEndpointHeaders extends SpeakeasyBase {
+export declare class DeleteEndpointRequest extends SpeakeasyBase {
+    deleteEndpointMessage: shared.DeleteEndpointMessage;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class DeleteEndpointHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteEndpointXAmzTargetEnum;
 }
-export declare class DeleteEndpointRequest extends SpeakeasyBase {
-    headers: DeleteEndpointHeaders;
-    request: shared.DeleteEndpointMessage;
-}
 export declare class DeleteEndpointResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deleteEndpointResponse?: shared.DeleteEndpointResponse;
+    /**
+     * InvalidResourceStateFault
+     */
     invalidResourceStateFault?: any;
+    /**
+     * ResourceNotFoundFault
+     */
     resourceNotFoundFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

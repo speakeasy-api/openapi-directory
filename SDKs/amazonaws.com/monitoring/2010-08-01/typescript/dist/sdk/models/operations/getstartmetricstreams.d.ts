@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetStartMetricStreamsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETStartMetricStreamsActionEnum {
     StartMetricStreams = "StartMetricStreams"
 }
-export declare enum GetStartMetricStreamsVersionEnum {
+export declare enum GETStartMetricStreamsVersionEnum {
     TwoThousandAndTen0801 = "2010-08-01"
 }
-export declare class GetStartMetricStreamsQueryParams extends SpeakeasyBase {
-    action: GetStartMetricStreamsActionEnum;
+export declare class GETStartMetricStreamsRequest extends SpeakeasyBase {
+    action: GETStartMetricStreamsActionEnum;
+    /**
+     * <p>The array of the names of metric streams to start streaming.</p> <p>This is an "all or nothing" operation. If you do not have permission to access all of the metric streams that you list here, then none of the streams that you list in the operation will start streaming.</p>
+     */
     names: string[];
-    version: GetStartMetricStreamsVersionEnum;
-}
-export declare class GetStartMetricStreamsHeaders extends SpeakeasyBase {
+    version: GETStartMetricStreamsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetStartMetricStreamsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetStartMetricStreamsRequest extends SpeakeasyBase {
-    queryParams: GetStartMetricStreamsQueryParams;
-    headers: GetStartMetricStreamsHeaders;
-}
-export declare class GetStartMetricStreamsResponse extends SpeakeasyBase {
+export declare class GETStartMetricStreamsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,20 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdateTagPathParams extends SpeakeasyBase {
-    tagId: number;
-}
-export declare class UpdateTagRequests extends SpeakeasyBase {
-    updateTagModel?: shared.UpdateTagModel;
-    updateTagModel1?: shared.UpdateTagModel;
-    updateTagModel2?: shared.UpdateTagModel;
-}
+import { AxiosResponse } from "axios";
 export declare class UpdateTagRequest extends SpeakeasyBase {
-    pathParams: UpdateTagPathParams;
-    request: UpdateTagRequests;
+    updateTagModel: shared.UpdateTagModel;
+    /**
+     * The identifier of the Tag.
+     */
+    tagId: number;
 }
 export declare class UpdateTagResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
     tagModel?: shared.TagModel;
     tagModelHaljson?: shared.TagModelHaljson;
 }

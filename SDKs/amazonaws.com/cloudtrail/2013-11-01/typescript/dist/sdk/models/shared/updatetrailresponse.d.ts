@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Returns the objects or data listed below if successful. Otherwise, returns an error.
-**/
+ */
 export declare class UpdateTrailResponse extends SpeakeasyBase {
     cloudWatchLogsLogGroupArn?: string;
     cloudWatchLogsRoleArn?: string;
@@ -14,6 +14,6 @@ export declare class UpdateTrailResponse extends SpeakeasyBase {
     s3BucketName?: string;
     s3KeyPrefix?: string;
     snsTopicARN?: string;
-    snsTopicName?: Record<string, any>;
+    snsTopicName?: string;
     trailARN?: string;
 }

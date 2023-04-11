@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeComponentConfigurationRecommendationXAmzTargetEnum {
     Ec2WindowsBarleyServiceDescribeComponentConfigurationRecommendation = "EC2WindowsBarleyService.DescribeComponentConfigurationRecommendation"
 }
-export declare class DescribeComponentConfigurationRecommendationHeaders extends SpeakeasyBase {
+export declare class DescribeComponentConfigurationRecommendationRequest extends SpeakeasyBase {
+    describeComponentConfigurationRecommendationRequest: shared.DescribeComponentConfigurationRecommendationRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class DescribeComponentConfigurationRecommendationHeaders extends
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeComponentConfigurationRecommendationXAmzTargetEnum;
 }
-export declare class DescribeComponentConfigurationRecommendationRequest extends SpeakeasyBase {
-    headers: DescribeComponentConfigurationRecommendationHeaders;
-    request: shared.DescribeComponentConfigurationRecommendationRequest;
-}
 export declare class DescribeComponentConfigurationRecommendationResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeComponentConfigurationRecommendationResponse?: shared.DescribeComponentConfigurationRecommendationResponse;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

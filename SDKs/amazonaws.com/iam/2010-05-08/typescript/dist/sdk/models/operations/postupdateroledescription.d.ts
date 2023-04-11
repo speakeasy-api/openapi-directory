@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostUpdateRoleDescriptionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTUpdateRoleDescriptionActionEnum {
     UpdateRoleDescription = "UpdateRoleDescription"
 }
-export declare enum PostUpdateRoleDescriptionVersionEnum {
+export declare enum POSTUpdateRoleDescriptionVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostUpdateRoleDescriptionQueryParams extends SpeakeasyBase {
-    action: PostUpdateRoleDescriptionActionEnum;
-    version: PostUpdateRoleDescriptionVersionEnum;
-}
-export declare class PostUpdateRoleDescriptionHeaders extends SpeakeasyBase {
+export declare class POSTUpdateRoleDescriptionRequest extends SpeakeasyBase {
+    action: POSTUpdateRoleDescriptionActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTUpdateRoleDescriptionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostUpdateRoleDescriptionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostUpdateRoleDescriptionRequest extends SpeakeasyBase {
-    queryParams: PostUpdateRoleDescriptionQueryParams;
-    headers: PostUpdateRoleDescriptionHeaders;
-    request?: Uint8Array;
-}
-export declare class PostUpdateRoleDescriptionResponse extends SpeakeasyBase {
+export declare class POSTUpdateRoleDescriptionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

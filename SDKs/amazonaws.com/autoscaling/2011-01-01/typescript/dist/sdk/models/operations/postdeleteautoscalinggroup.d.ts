@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteAutoScalingGroupActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteAutoScalingGroupActionEnum {
     DeleteAutoScalingGroup = "DeleteAutoScalingGroup"
 }
-export declare enum PostDeleteAutoScalingGroupVersionEnum {
+export declare enum POSTDeleteAutoScalingGroupVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class PostDeleteAutoScalingGroupQueryParams extends SpeakeasyBase {
-    action: PostDeleteAutoScalingGroupActionEnum;
-    version: PostDeleteAutoScalingGroupVersionEnum;
-}
-export declare class PostDeleteAutoScalingGroupHeaders extends SpeakeasyBase {
+export declare class POSTDeleteAutoScalingGroupRequest extends SpeakeasyBase {
+    action: POSTDeleteAutoScalingGroupActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteAutoScalingGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteAutoScalingGroupHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteAutoScalingGroupRequest extends SpeakeasyBase {
-    queryParams: PostDeleteAutoScalingGroupQueryParams;
-    headers: PostDeleteAutoScalingGroupHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteAutoScalingGroupResponse extends SpeakeasyBase {
+export declare class POSTDeleteAutoScalingGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

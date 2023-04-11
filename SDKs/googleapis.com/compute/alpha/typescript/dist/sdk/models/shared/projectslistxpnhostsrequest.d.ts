@@ -1,0 +1,11 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+export declare class ProjectsListXpnHostsRequest extends SpeakeasyBase {
+    /**
+     * Optional organization ID managed by Cloud Resource Manager, for which to list shared VPC host projects. If not specified, the organization will be inferred from the project.
+     */
+    organization?: string;
+    /**
+     * Opt-in for partial page behavior which provides a partial filled page (number of items on which may be smaller than maxResults) within the API deadline. If opt-in, then the user should rely on if nextPageToken is empty in the response to determine if there is a next page. Empty page is also valid and possible. The default value is false.
+     */
+    returnPartialPage?: boolean;
+}

@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { EntityId } from "./entityid";
+/**
+ * OK
+ */
 export declare class PagedListResponse extends SpeakeasyBase {
     cursor?: string;
     endTime?: number;

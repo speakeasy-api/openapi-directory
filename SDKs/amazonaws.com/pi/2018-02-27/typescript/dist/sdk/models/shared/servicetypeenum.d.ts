@@ -1,3 +1,4 @@
 export declare enum ServiceTypeEnum {
-    Rds = "RDS"
+    Rds = "RDS",
+    Docdb = "DOCDB"
 }

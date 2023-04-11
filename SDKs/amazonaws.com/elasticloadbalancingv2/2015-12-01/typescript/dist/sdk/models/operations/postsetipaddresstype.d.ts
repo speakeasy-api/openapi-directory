@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostSetIpAddressTypeActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTSetIpAddressTypeActionEnum {
     SetIpAddressType = "SetIpAddressType"
 }
-export declare enum PostSetIpAddressTypeVersionEnum {
+export declare enum POSTSetIpAddressTypeVersionEnum {
     TwoThousandAndFifteen1201 = "2015-12-01"
 }
-export declare class PostSetIpAddressTypeQueryParams extends SpeakeasyBase {
-    action: PostSetIpAddressTypeActionEnum;
-    version: PostSetIpAddressTypeVersionEnum;
-}
-export declare class PostSetIpAddressTypeHeaders extends SpeakeasyBase {
+export declare class POSTSetIpAddressTypeRequest extends SpeakeasyBase {
+    action: POSTSetIpAddressTypeActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTSetIpAddressTypeVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostSetIpAddressTypeHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostSetIpAddressTypeRequest extends SpeakeasyBase {
-    queryParams: PostSetIpAddressTypeQueryParams;
-    headers: PostSetIpAddressTypeHeaders;
-    request?: Uint8Array;
-}
-export declare class PostSetIpAddressTypeResponse extends SpeakeasyBase {
+export declare class POSTSetIpAddressTypeResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

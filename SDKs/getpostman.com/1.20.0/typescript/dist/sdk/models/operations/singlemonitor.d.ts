@@ -1,74 +1,85 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SingleMonitorPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class SingleMonitorRequest extends SpeakeasyBase {
     monitorUid: string;
 }
-export declare class SingleMonitor200ApplicationJsonMonitorLastRunStatsAssertions extends SpeakeasyBase {
+export declare class SingleMonitor404ApplicationJSONError extends SpeakeasyBase {
+    message?: string;
+    name?: string;
+}
+/**
+ * Monitor Not Found
+ */
+export declare class SingleMonitor404ApplicationJSON extends SpeakeasyBase {
+    error?: SingleMonitor404ApplicationJSONError;
+}
+export declare class SingleMonitor200ApplicationJSONMonitorLastRunStatsAssertions extends SpeakeasyBase {
     failed?: number;
     total?: number;
 }
-export declare class SingleMonitor200ApplicationJsonMonitorLastRunStatsRequests extends SpeakeasyBase {
+export declare class SingleMonitor200ApplicationJSONMonitorLastRunStatsRequests extends SpeakeasyBase {
     total?: number;
 }
-export declare class SingleMonitor200ApplicationJsonMonitorLastRunStats extends SpeakeasyBase {
-    assertions?: SingleMonitor200ApplicationJsonMonitorLastRunStatsAssertions;
-    requests?: SingleMonitor200ApplicationJsonMonitorLastRunStatsRequests;
+export declare class SingleMonitor200ApplicationJSONMonitorLastRunStats extends SpeakeasyBase {
+    assertions?: SingleMonitor200ApplicationJSONMonitorLastRunStatsAssertions;
+    requests?: SingleMonitor200ApplicationJSONMonitorLastRunStatsRequests;
 }
-export declare class SingleMonitor200ApplicationJsonMonitorLastRun extends SpeakeasyBase {
+export declare class SingleMonitor200ApplicationJSONMonitorLastRun extends SpeakeasyBase {
     finishedAt?: string;
     startedAt?: string;
-    stats?: SingleMonitor200ApplicationJsonMonitorLastRunStats;
+    stats?: SingleMonitor200ApplicationJSONMonitorLastRunStats;
     status?: string;
 }
-export declare class SingleMonitor200ApplicationJsonMonitorNotificationsOnError extends SpeakeasyBase {
+export declare class SingleMonitor200ApplicationJSONMonitorNotificationsOnError extends SpeakeasyBase {
     email?: string;
 }
-export declare class SingleMonitor200ApplicationJsonMonitorNotificationsOnFailure extends SpeakeasyBase {
+export declare class SingleMonitor200ApplicationJSONMonitorNotificationsOnFailure extends SpeakeasyBase {
     email?: string;
 }
-export declare class SingleMonitor200ApplicationJsonMonitorNotifications extends SpeakeasyBase {
-    onError?: SingleMonitor200ApplicationJsonMonitorNotificationsOnError[];
-    onFailure?: SingleMonitor200ApplicationJsonMonitorNotificationsOnFailure[];
+export declare class SingleMonitor200ApplicationJSONMonitorNotifications extends SpeakeasyBase {
+    onError?: SingleMonitor200ApplicationJSONMonitorNotificationsOnError[];
+    onFailure?: SingleMonitor200ApplicationJSONMonitorNotificationsOnFailure[];
 }
-export declare class SingleMonitor200ApplicationJsonMonitorOptions extends SpeakeasyBase {
+export declare class SingleMonitor200ApplicationJSONMonitorOptions extends SpeakeasyBase {
     followRedirects?: boolean;
     requestDelay?: number;
     requestTimeout?: number;
     strictSSL?: boolean;
 }
-export declare class SingleMonitor200ApplicationJsonMonitorSchedule extends SpeakeasyBase {
+export declare class SingleMonitor200ApplicationJSONMonitorSchedule extends SpeakeasyBase {
     cron?: string;
     nextRun?: string;
     timezone?: string;
 }
-export declare class SingleMonitor200ApplicationJsonMonitor extends SpeakeasyBase {
+export declare class SingleMonitor200ApplicationJSONMonitor extends SpeakeasyBase {
     collectionUid?: string;
     distribution?: any[];
     environmentUid?: string;
     id?: string;
-    lastRun?: SingleMonitor200ApplicationJsonMonitorLastRun;
+    lastRun?: SingleMonitor200ApplicationJSONMonitorLastRun;
     name?: string;
-    notifications?: SingleMonitor200ApplicationJsonMonitorNotifications;
-    options?: SingleMonitor200ApplicationJsonMonitorOptions;
+    notifications?: SingleMonitor200ApplicationJSONMonitorNotifications;
+    options?: SingleMonitor200ApplicationJSONMonitorOptions;
     owner?: string;
-    schedule?: SingleMonitor200ApplicationJsonMonitorSchedule;
+    schedule?: SingleMonitor200ApplicationJSONMonitorSchedule;
     uid?: string;
 }
-export declare class SingleMonitor200ApplicationJson extends SpeakeasyBase {
-    monitor?: SingleMonitor200ApplicationJsonMonitor;
-}
-export declare class SingleMonitor404ApplicationJsonError extends SpeakeasyBase {
-    message?: string;
-    name?: string;
-}
-export declare class SingleMonitor404ApplicationJson extends SpeakeasyBase {
-    error?: SingleMonitor404ApplicationJsonError;
-}
-export declare class SingleMonitorRequest extends SpeakeasyBase {
-    pathParams: SingleMonitorPathParams;
+/**
+ * Successful Response
+ */
+export declare class SingleMonitor200ApplicationJSON extends SpeakeasyBase {
+    monitor?: SingleMonitor200ApplicationJSONMonitor;
 }
 export declare class SingleMonitorResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    singleMonitor200ApplicationJSONObject?: SingleMonitor200ApplicationJson;
-    singleMonitor404ApplicationJSONObject?: SingleMonitor404ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful Response
+     */
+    singleMonitor200ApplicationJSONObject?: SingleMonitor200ApplicationJSON;
+    /**
+     * Monitor Not Found
+     */
+    singleMonitor404ApplicationJSONObject?: SingleMonitor404ApplicationJSON;
 }

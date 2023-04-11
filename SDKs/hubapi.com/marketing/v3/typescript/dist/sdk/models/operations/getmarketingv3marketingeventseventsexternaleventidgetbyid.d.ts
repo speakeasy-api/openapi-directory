@@ -1,23 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdPathParams extends SpeakeasyBase {
-    externalEventId: string;
-}
-export declare class GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdQueryParams extends SpeakeasyBase {
-    externalAccountId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdSecurity extends SpeakeasyBase {
-    oauth2Legacy?: shared.SchemeOauth2Legacy;
-    privateAppsLegacy?: shared.SchemePrivateAppsLegacy;
+    oauth2Legacy?: string;
+    privateAppsLegacy?: string;
 }
 export declare class GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdRequest extends SpeakeasyBase {
-    pathParams: GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdPathParams;
-    queryParams: GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdQueryParams;
-    security: GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdSecurity;
+    externalAccountId: string;
+    externalEventId: string;
 }
 export declare class GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
+    /**
+     * successful operation
+     */
     marketingEventPublicReadResponse?: shared.MarketingEventPublicReadResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

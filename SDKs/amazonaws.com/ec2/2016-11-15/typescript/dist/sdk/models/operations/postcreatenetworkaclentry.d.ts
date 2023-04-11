@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateNetworkAclEntryActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateNetworkAclEntryActionEnum {
     CreateNetworkAclEntry = "CreateNetworkAclEntry"
 }
-export declare enum PostCreateNetworkAclEntryVersionEnum {
+export declare enum POSTCreateNetworkAclEntryVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostCreateNetworkAclEntryQueryParams extends SpeakeasyBase {
-    action: PostCreateNetworkAclEntryActionEnum;
-    version: PostCreateNetworkAclEntryVersionEnum;
-}
-export declare class PostCreateNetworkAclEntryHeaders extends SpeakeasyBase {
+export declare class POSTCreateNetworkAclEntryRequest extends SpeakeasyBase {
+    action: POSTCreateNetworkAclEntryActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateNetworkAclEntryVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +18,8 @@ export declare class PostCreateNetworkAclEntryHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateNetworkAclEntryRequest extends SpeakeasyBase {
-    queryParams: PostCreateNetworkAclEntryQueryParams;
-    headers: PostCreateNetworkAclEntryHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateNetworkAclEntryResponse extends SpeakeasyBase {
+export declare class POSTCreateNetworkAclEntryResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

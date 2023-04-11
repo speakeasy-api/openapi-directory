@@ -1,32 +1,66 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AdsensehostAccountsAdunitsListPathParams extends SpeakeasyBase {
-    accountId: string;
-    adClientId: string;
-}
-export declare class AdsensehostAccountsAdunitsListQueryParams extends SpeakeasyBase {
-    alt?: shared.AltEnum;
-    fields?: string;
-    includeInactive?: boolean;
-    key?: string;
-    maxResults?: number;
-    oauthToken?: string;
-    pageToken?: string;
-    prettyPrint?: boolean;
-    quotaUser?: string;
-    userIp?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class AdsensehostAccountsAdunitsListSecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class AdsensehostAccountsAdunitsListRequest extends SpeakeasyBase {
-    pathParams: AdsensehostAccountsAdunitsListPathParams;
-    queryParams: AdsensehostAccountsAdunitsListQueryParams;
-    security: AdsensehostAccountsAdunitsListSecurity;
+    /**
+     * Account which contains the ad client.
+     */
+    accountId: string;
+    /**
+     * Ad client for which to list ad units.
+     */
+    adClientId: string;
+    /**
+     * Data format for the response.
+     */
+    alt?: shared.AltEnum;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * Whether to include inactive ad units. Default: true.
+     */
+    includeInactive?: boolean;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * The maximum number of ad units to include in the response, used for paging.
+     */
+    maxResults?: number;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauthToken?: string;
+    /**
+     * A continuation token, used to page through ad units. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
+     */
+    pageToken?: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    userIp?: string;
 }
 export declare class AdsensehostAccountsAdunitsListResponse extends SpeakeasyBase {
+    /**
+     * Successful response
+     */
     adUnits?: shared.AdUnits;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

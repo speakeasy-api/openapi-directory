@@ -1,0 +1,102 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * If specified, this subscription will only receive webhooks for Events with the specified `category`.
+ */
+export declare enum EventSubscriptionSelectedEventCategoryEnum {
+    AccountCreated = "account.created",
+    AccountUpdated = "account.updated",
+    AccountNumberCreated = "account_number.created",
+    AccountNumberUpdated = "account_number.updated",
+    AccountStatementCreated = "account_statement.created",
+    AccountTransferCreated = "account_transfer.created",
+    AccountTransferUpdated = "account_transfer.updated",
+    AchPrenotificationCreated = "ach_prenotification.created",
+    AchPrenotificationUpdated = "ach_prenotification.updated",
+    AchTransferCreated = "ach_transfer.created",
+    AchTransferUpdated = "ach_transfer.updated",
+    CardCreated = "card.created",
+    CardUpdated = "card.updated",
+    CardDisputeCreated = "card_dispute.created",
+    CardDisputeUpdated = "card_dispute.updated",
+    CheckDepositCreated = "check_deposit.created",
+    CheckDepositUpdated = "check_deposit.updated",
+    CheckTransferCreated = "check_transfer.created",
+    CheckTransferUpdated = "check_transfer.updated",
+    DeclinedTransactionCreated = "declined_transaction.created",
+    DigitalWalletTokenCreated = "digital_wallet_token.created",
+    DigitalWalletTokenUpdated = "digital_wallet_token.updated",
+    DocumentCreated = "document.created",
+    EntityCreated = "entity.created",
+    EntityUpdated = "entity.updated",
+    ExternalAccountCreated = "external_account.created",
+    FileCreated = "file.created",
+    GroupUpdated = "group.updated",
+    GroupHeartbeat = "group.heartbeat",
+    InboundAchTransferReturnCreated = "inbound_ach_transfer_return.created",
+    InboundAchTransferReturnUpdated = "inbound_ach_transfer_return.updated",
+    InboundWireDrawdownRequestCreated = "inbound_wire_drawdown_request.created",
+    OauthConnectionCreated = "oauth_connection.created",
+    OauthConnectionDeactivated = "oauth_connection.deactivated",
+    PendingTransactionCreated = "pending_transaction.created",
+    PendingTransactionUpdated = "pending_transaction.updated",
+    RealTimeDecisionCardAuthorizationRequested = "real_time_decision.card_authorization_requested",
+    RealTimeDecisionDigitalWalletTokenRequested = "real_time_decision.digital_wallet_token_requested",
+    RealTimeDecisionDigitalWalletAuthenticationRequested = "real_time_decision.digital_wallet_authentication_requested",
+    RealTimePaymentsTransferCreated = "real_time_payments_transfer.created",
+    RealTimePaymentsTransferUpdated = "real_time_payments_transfer.updated",
+    RealTimePaymentsRequestForPaymentCreated = "real_time_payments_request_for_payment.created",
+    RealTimePaymentsRequestForPaymentUpdated = "real_time_payments_request_for_payment.updated",
+    TransactionCreated = "transaction.created",
+    WireDrawdownRequestCreated = "wire_drawdown_request.created",
+    WireDrawdownRequestUpdated = "wire_drawdown_request.updated",
+    WireTransferCreated = "wire_transfer.created",
+    WireTransferUpdated = "wire_transfer.updated"
+}
+/**
+ * This indicates if we'll send notifications to this subscription.
+ */
+export declare enum EventSubscriptionStatusEnum {
+    Active = "active",
+    Disabled = "disabled",
+    Deleted = "deleted",
+    RequiresAttention = "requires_attention"
+}
+/**
+ * A constant representing the object's type. For this resource it will always be `event_subscription`.
+ */
+export declare enum EventSubscriptionTypeEnum {
+    EventSubscription = "event_subscription"
+}
+/**
+ * Webhooks are event notifications we send to you by HTTPS POST requests. Event Subscriptions are how you configure your application to listen for them. You can create an Event Subscription through your [developer dashboard](https://dashboard.increase.com/developers/webhooks) or the API. For more information, see our [webhooks guide](https://increase.com/documentation/webhooks).
+ */
+export declare class EventSubscription extends SpeakeasyBase {
+    /**
+     * The time the event subscription was created.
+     */
+    createdAt: Date;
+    /**
+     * The event subscription identifier.
+     */
+    id: string;
+    /**
+     * If specified, this subscription will only receive webhooks for Events with the specified `category`.
+     */
+    selectedEventCategory: EventSubscriptionSelectedEventCategoryEnum;
+    /**
+     * The key that will be used to sign webhooks.
+     */
+    sharedSecret: string;
+    /**
+     * This indicates if we'll send notifications to this subscription.
+     */
+    status: EventSubscriptionStatusEnum;
+    /**
+     * A constant representing the object's type. For this resource it will always be `event_subscription`.
+     */
+    type: EventSubscriptionTypeEnum;
+    /**
+     * The webhook url where we'll send notifications.
+     */
+    url: string;
+}

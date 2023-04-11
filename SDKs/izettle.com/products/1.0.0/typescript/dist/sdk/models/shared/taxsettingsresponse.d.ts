@@ -8,6 +8,9 @@ export declare enum TaxSettingsResponseTaxationTypeEnum {
     SalesTax = "SALES_TAX",
     Vat = "VAT"
 }
+/**
+ * Tax settings
+ */
 export declare class TaxSettingsResponse extends SpeakeasyBase {
     organizationUuid?: string;
     taxationMode?: TaxSettingsResponseTaxationModeEnum;

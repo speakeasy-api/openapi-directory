@@ -1,34 +1,116 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ProductPhotosQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ProductPhotosRequest extends SpeakeasyBase {
+    /**
+     * Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
+     *
+     * @remarks
+     *
+     */
+    acceptLanguage: string;
+    /**
+     * **unique alphanumeric identifier** of the product
+     */
     code?: string;
+    /**
+     * **specifier** as to whether or not to show 'unavailable' products:
+     *
+     * @remarks
+     *
+     *   - `true`: return *both* available and unavailable products
+     *   - `false`: return *only* available products (default)
+     *
+     */
     showUnavailable?: boolean;
+    /**
+     * **start and end rows** to return in the format {start}-{end}
+     *
+     * @remarks
+     * - e.g. `'1-10'`, `'11-20'`
+     *
+     * **Note**:
+     * - the maximum number of rows per request is 100; therefore, `'100-400'` will return the same as `'100-200'`
+     * - if `topX` is not specified, the default is `'1-100'`
+     *
+     */
     topX?: string;
 }
-export declare class ProductPhotosHeaders extends SpeakeasyBase {
-    acceptLanguage: string;
-}
-export declare class ProductPhotos200ApplicationJson extends SpeakeasyBase {
+/**
+ * Success
+ */
+export declare class ProductPhotos200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * **array** of photo objects
+     */
     data?: shared.PhotoObject[];
+    /**
+     * **timestamp** of *this* response
+     */
     dateStamp?: string;
+    /**
+     * **array** of error codes pertaining to *this* error
+     *
+     * @remarks
+     * - See: [Viator API error codes](#section/Appendices/Viator-API-error-codes) for a list of possible error codes
+     *
+     */
     errorCodes?: string[];
+    /**
+     * **array** of error message strings
+     */
     errorMessage?: any[];
+    /**
+     * **array** of error message strings in plain text
+     */
     errorMessageText?: string;
+    /**
+     * **name** of *this* type of error
+     */
     errorName?: string;
+    /**
+     * **reference number** of *this* error
+     */
     errorReference?: string;
+    /**
+     * **code** specifying the type of error
+     */
     errorType?: string;
+    /**
+     * ignore (Viator only)
+     */
     extraInfo?: Record<string, any>;
+    /**
+     * ignore (Viator only)
+     */
     extraObject?: Record<string, any>;
+    /**
+     * **boolean indicator** of *this* request's outcome
+     *
+     * @remarks
+     * - `true`: the request was successful with no errors
+     * - `false`: an error was encountered
+     *
+     */
     success?: boolean;
+    /**
+     * **number** of results available for *this* service
+     *
+     * @remarks
+     *
+     */
     totalCount?: number;
+    /**
+     * **unique numeric id** of the server that processed *this* request
+     */
     vmid?: string;
-}
-export declare class ProductPhotosRequest extends SpeakeasyBase {
-    queryParams: ProductPhotosQueryParams;
-    headers: ProductPhotosHeaders;
 }
 export declare class ProductPhotosResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    productPhotos200ApplicationJSONObject?: ProductPhotos200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
+    productPhotos200ApplicationJSONObject?: ProductPhotos200ApplicationJSON;
 }

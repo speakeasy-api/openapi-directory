@@ -1,20 +1,16 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { PostAccountHolderBalanceRequest, PostAccountHolderBalanceResponse } from "openapi/src/sdk/models/operations";
+import {
+  shared.AccountHolderBalanceRequest,
+  PostAccountHolderBalanceResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: PostAccountHolderBalanceRequest = {
-  security: {
-    basicAuth: {
-      password: "YOUR_PASSWORD_HERE",
-      username: "YOUR_USERNAME_HERE",
-    },
-  },
-  request: "sit",
+
+const req: shared.AccountHolderBalanceRequest = {
+  accountHolderCode: "corrupti",
 };
 
 sdk.general.postAccountHolderBalance(req).then((res: PostAccountHolderBalanceResponse | AxiosError) => {

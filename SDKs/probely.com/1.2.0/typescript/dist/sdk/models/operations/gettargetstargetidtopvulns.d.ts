@@ -1,16 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetTargetsTargetIdTopVulnsPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetTargetsTargetIdTopVulnsRequest extends SpeakeasyBase {
+    /**
+     * Target id
+     */
     targetId: string;
 }
-export declare class GetTargetsTargetIdTopVulns200ApplicationJson extends SpeakeasyBase {
+export declare class GetTargetsTargetIdTopVulns200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Vulnerability name
+     */
     zero?: string;
+    /**
+     * Vulnerability count
+     */
     one?: string;
-}
-export declare class GetTargetsTargetIdTopVulnsRequest extends SpeakeasyBase {
-    pathParams: GetTargetsTargetIdTopVulnsPathParams;
 }
 export declare class GetTargetsTargetIdTopVulnsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getTargetsTargetIdTopVulns200ApplicationJSONObjects?: GetTargetsTargetIdTopVulns200ApplicationJson[];
+    rawResponse?: AxiosResponse;
+    /**
+     * Top vulnerabilities plot data
+     */
+    getTargetsTargetIdTopVulns200ApplicationJSONObjects?: GetTargetsTargetIdTopVulns200ApplicationJSON[];
 }

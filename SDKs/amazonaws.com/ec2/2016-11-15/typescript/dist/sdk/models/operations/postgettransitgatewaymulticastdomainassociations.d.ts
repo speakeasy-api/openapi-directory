@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostGetTransitGatewayMulticastDomainAssociationsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTGetTransitGatewayMulticastDomainAssociationsActionEnum {
     GetTransitGatewayMulticastDomainAssociations = "GetTransitGatewayMulticastDomainAssociations"
 }
-export declare enum PostGetTransitGatewayMulticastDomainAssociationsVersionEnum {
+export declare enum POSTGetTransitGatewayMulticastDomainAssociationsVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostGetTransitGatewayMulticastDomainAssociationsQueryParams extends SpeakeasyBase {
-    action: PostGetTransitGatewayMulticastDomainAssociationsActionEnum;
+export declare class POSTGetTransitGatewayMulticastDomainAssociationsRequest extends SpeakeasyBase {
+    action: POSTGetTransitGatewayMulticastDomainAssociationsActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostGetTransitGatewayMulticastDomainAssociationsVersionEnum;
-}
-export declare class PostGetTransitGatewayMulticastDomainAssociationsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTGetTransitGatewayMulticastDomainAssociationsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostGetTransitGatewayMulticastDomainAssociationsHeaders ext
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostGetTransitGatewayMulticastDomainAssociationsRequest extends SpeakeasyBase {
-    queryParams: PostGetTransitGatewayMulticastDomainAssociationsQueryParams;
-    headers: PostGetTransitGatewayMulticastDomainAssociationsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostGetTransitGatewayMulticastDomainAssociationsResponse extends SpeakeasyBase {
+export declare class POSTGetTransitGatewayMulticastDomainAssociationsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

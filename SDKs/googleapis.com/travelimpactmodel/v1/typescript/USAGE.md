@@ -1,63 +1,67 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { TravelimpactmodelFlightsComputeFlightEmissionsRequest, TravelimpactmodelFlightsComputeFlightEmissionsResponse } from "openapi/src/sdk/models/operations";
+import {
+  TravelimpactmodelFlightsComputeFlightEmissionsRequest,
+  TravelimpactmodelFlightsComputeFlightEmissionsResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: TravelimpactmodelFlightsComputeFlightEmissionsRequest = {
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "voluptas",
-    alt: "media",
-    callback: "expedita",
-    fields: "consequuntur",
-    key: "dolor",
-    oauthToken: "expedita",
-    prettyPrint: true,
-    quotaUser: "fugit",
-    uploadType: "et",
-    uploadProtocol: "nihil",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  computeFlightEmissionsRequest: {
     flights: [
       {
         departureDate: {
-          day: 7837839688282259259,
-          month: 2518412263346885298,
-          year: 5617773211005988520,
+          day: 715190,
+          month: 844266,
+          year: 602763,
         },
-        destination: "et",
-        flightNumber: 7144924247938981575,
-        operatingCarrierCode: "dolorem",
-        origin: "et",
-      },
-      {
-        departureDate: {
-          day: 7373105480197164748,
-          month: 3287288577352441706,
-          year: 3930927879439176946,
-        },
-        destination: "totam",
-        flightNumber: 2217592893536642650,
+        destination: "nulla",
+        flightNumber: 544883,
         operatingCarrierCode: "illum",
-        origin: "debitis",
+        origin: "vel",
       },
       {
         departureDate: {
-          day: 3706853784096366226,
-          month: 2627038740284806767,
-          year: 6303220950515014660,
+          day: 623564,
+          month: 645894,
+          year: 384382,
         },
-        destination: "id",
-        flightNumber: 959367522974354090,
-        operatingCarrierCode: "accusantium",
-        origin: "totam",
+        destination: "iure",
+        flightNumber: 297534,
+        operatingCarrierCode: "debitis",
+        origin: "ipsa",
+      },
+      {
+        departureDate: {
+          day: 963663,
+          month: 272656,
+          year: 383441,
+        },
+        destination: "molestiae",
+        flightNumber: 791725,
+        operatingCarrierCode: "placeat",
+        origin: "voluptatum",
       },
     ],
   },
+  accessToken: "iusto",
+  alt: AltEnum.Media,
+  callback: "nisi",
+  fields: "recusandae",
+  key: "temporibus",
+  oauthToken: "ab",
+  prettyPrint: false,
+  quotaUser: "quis",
+  uploadType: "veritatis",
+  uploadProtocol: "deserunt",
 };
 
 sdk.flights.travelimpactmodelFlightsComputeFlightEmissions(req).then((res: TravelimpactmodelFlightsComputeFlightEmissionsResponse | AxiosError) => {

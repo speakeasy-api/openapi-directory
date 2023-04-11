@@ -1,14 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetDomainInformationByCertificateIdPathParams extends SpeakeasyBase {
-    certificateId: string;
-    customerId: string;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class GetDomainInformationByCertificateIdRequest extends SpeakeasyBase {
-    pathParams: GetDomainInformationByCertificateIdPathParams;
+    /**
+     * Certificate id to lookup
+     */
+    certificateId: string;
+    /**
+     * An identifier for a customer
+     */
+    customerId: string;
 }
 export declare class GetDomainInformationByCertificateIdResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    domainVerificationSummaries?: any[];
+    /**
+     * Domain verification status list for specified certificateId.
+     */
+    domainVerificationSummaries?: shared.DomainVerificationSummary[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { NestedCluster } from "./nestedcluster";
-import { NestedPlatform } from "./nestedplatform";
-import { VirtualMachineIpAddress } from "./virtualmachineipaddress";
 import { NestedDeviceRole } from "./nesteddevicerole";
+import { NestedPlatform } from "./nestedplatform";
 import { NestedTenant } from "./nestedtenant";
+import { VirtualMachineIPAddress } from "./virtualmachineipaddress";
 export declare class VirtualMachineWithConfigContextStatus extends SpeakeasyBase {
     label: string;
     value: number;
@@ -21,9 +21,9 @@ export declare class VirtualMachineWithConfigContext extends SpeakeasyBase {
     memory?: number;
     name: string;
     platform?: NestedPlatform;
-    primaryIp?: VirtualMachineIpAddress;
-    primaryIp4?: VirtualMachineIpAddress;
-    primaryIp6?: VirtualMachineIpAddress;
+    primaryIp?: VirtualMachineIPAddress;
+    primaryIp4?: VirtualMachineIPAddress;
+    primaryIp6?: VirtualMachineIPAddress;
     role?: NestedDeviceRole;
     status?: VirtualMachineWithConfigContextStatus;
     tags?: string[];

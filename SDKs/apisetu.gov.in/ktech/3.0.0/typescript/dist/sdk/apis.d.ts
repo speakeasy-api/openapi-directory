@@ -1,6 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class ApIs {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+export declare class APIs {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,15 +9,17 @@ export declare class ApIs {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * cocer - Company Related Certificate
+     * Company Related Certificate
      *
+     * @remarks
      * API to verify Company Related Certificate.
-    **/
-    cocer(req: operations.CocerRequest, config?: AxiosRequestConfig): Promise<operations.CocerResponse>;
+     */
+    cocer(req: operations.CocerRequestBody, security: operations.CocerSecurity, config?: AxiosRequestConfig): Promise<operations.CocerResponse>;
     /**
-     * rfcer - Registration Certificate of Firm/ Company
+     * Registration Certificate of Firm/ Company
      *
+     * @remarks
      * API to verify Registration Certificate of Firm/ Company.
-    **/
-    rfcer(req: operations.RfcerRequest, config?: AxiosRequestConfig): Promise<operations.RfcerResponse>;
+     */
+    rfcer(req: operations.RfcerRequestBody, security: operations.RfcerSecurity, config?: AxiosRequestConfig): Promise<operations.RfcerResponse>;
 }

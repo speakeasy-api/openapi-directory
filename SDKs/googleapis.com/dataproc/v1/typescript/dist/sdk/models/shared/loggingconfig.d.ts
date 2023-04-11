@@ -12,7 +12,10 @@ export declare enum LoggingConfigDriverLogLevelsEnum {
 }
 /**
  * The runtime logging config of the job.
-**/
+ */
 export declare class LoggingConfig extends SpeakeasyBase {
+    /**
+     * The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
+     */
     driverLogLevels?: Record<string, LoggingConfigDriverLogLevelsEnum>;
 }

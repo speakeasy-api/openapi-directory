@@ -1,12 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { BeezUpCommonCatalogCategoryFilter } from "./beezupcommoncatalogcategoryfilter";
-import { BeezUpCommonChannelCategoryFilter } from "./beezupcommonchannelcategoryfilter";
-import { ProductSetVisibilityCriteria } from "./productsetvisibilitycriteria";
+import { BeezUPCommonCatalogCategoryFilter } from "./beezupcommoncatalogcategoryfilter";
+import { BeezUPCommonChannelCategoryFilter } from "./beezupcommonchannelcategoryfilter";
 import { ChannelCatalogProductFilters } from "./channelcatalogproductfilters";
+import { ProductSetVisibilityCriteria } from "./productsetvisibilitycriteria";
+/**
+ * The channel catalog product list filter
+ */
 export declare class GetChannelCatalogProductInfoListRequest extends SpeakeasyBase {
-    catalogCategoryFilter?: BeezUpCommonCatalogCategoryFilter;
-    channelCategoryFilter?: BeezUpCommonChannelCategoryFilter;
+    catalogCategoryFilter?: BeezUPCommonCatalogCategoryFilter;
+    channelCategoryFilter?: BeezUPCommonChannelCategoryFilter;
     criteria: ProductSetVisibilityCriteria;
+    /**
+     * Search overridden products. If null the filter will not be taken in account.
+     */
     overridden?: boolean;
     pageNumber: number;
     pageSize: number;

@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class ActivityTypes {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +9,7 @@ export declare class ActivityTypes {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getWorkspaceIdActivityTypes - List all activity types for a workspace
-    **/
-    getWorkspaceIdActivityTypes(req: operations.GetWorkspaceIdActivityTypesRequest, config?: AxiosRequestConfig): Promise<operations.GetWorkspaceIdActivityTypesResponse>;
+     * List all activity types for a workspace
+     */
+    getWorkspaceSlugActivityTypes(req: operations.GetWorkspaceSlugActivityTypesRequest, security: operations.GetWorkspaceSlugActivityTypesSecurity, config?: AxiosRequestConfig): Promise<operations.GetWorkspaceSlugActivityTypesResponse>;
 }

@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ResetPathParams extends SpeakeasyBase {
-    deviceId: number;
-}
-export declare class ResetQueryParams extends SpeakeasyBase {
-    monitorClass: string;
-    monitorSid: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ResetRequest extends SpeakeasyBase {
-    pathParams: ResetPathParams;
-    queryParams: ResetQueryParams;
+    /**
+     * The ID of the device.
+     */
+    deviceId: number;
+    /**
+     * The Monitor Class of the device.
+     */
+    monitorClass: string;
+    /**
+     * The Monitor SID of the device.
+     */
+    monitorSid: string;
 }
 export declare class ResetResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

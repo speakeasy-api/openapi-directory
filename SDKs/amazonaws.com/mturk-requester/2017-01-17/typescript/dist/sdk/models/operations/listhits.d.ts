@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListHiTsQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare enum ListHITsXAmzTargetEnum {
+    MTurkRequesterServiceV20170117ListHITs = "MTurkRequesterServiceV20170117.ListHITs"
+}
+export declare class ListHITsRequest extends SpeakeasyBase {
+    listHITsRequest: shared.ListHITsRequest;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-}
-export declare enum ListHiTsXAmzTargetEnum {
-    MTurkRequesterServiceV20170117ListHiTs = "MTurkRequesterServiceV20170117.ListHITs"
-}
-export declare class ListHiTsHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -15,17 +21,22 @@ export declare class ListHiTsHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: ListHiTsXAmzTargetEnum;
+    xAmzTarget: ListHITsXAmzTargetEnum;
 }
-export declare class ListHiTsRequest extends SpeakeasyBase {
-    queryParams: ListHiTsQueryParams;
-    headers: ListHiTsHeaders;
-    request: shared.ListHiTsRequest;
-}
-export declare class ListHiTsResponse extends SpeakeasyBase {
+export declare class ListHITsResponse extends SpeakeasyBase {
     contentType: string;
-    listHITsResponse?: shared.ListHiTsResponse;
+    /**
+     * Success
+     */
+    listHITsResponse?: shared.ListHITsResponse;
+    /**
+     * RequestError
+     */
     requestError?: any;
+    /**
+     * ServiceFault
+     */
     serviceFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

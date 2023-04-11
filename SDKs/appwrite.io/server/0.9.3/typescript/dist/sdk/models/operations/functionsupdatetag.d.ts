@@ -1,22 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class FunctionsUpdateTagPathParams extends SpeakeasyBase {
-    functionId: string;
+import { AxiosResponse } from "axios";
+export declare class FunctionsUpdateTagSecurity extends SpeakeasyBase {
+    key: string;
+    project: string;
 }
 export declare class FunctionsUpdateTagRequestBody extends SpeakeasyBase {
+    /**
+     * Tag unique ID.
+     */
     tag: string;
 }
-export declare class FunctionsUpdateTagSecurity extends SpeakeasyBase {
-    key: shared.SchemeKey;
-    project: shared.SchemeProject;
-}
 export declare class FunctionsUpdateTagRequest extends SpeakeasyBase {
-    pathParams: FunctionsUpdateTagPathParams;
-    request?: FunctionsUpdateTagRequestBody;
-    security: FunctionsUpdateTagSecurity;
+    requestBody?: FunctionsUpdateTagRequestBody;
+    /**
+     * Function unique ID.
+     */
+    functionId: string;
 }
 export declare class FunctionsUpdateTagResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    function?: shared.Function;
+    rawResponse?: AxiosResponse;
+    /**
+     * Function
+     */
+    function?: shared.FunctionT;
 }

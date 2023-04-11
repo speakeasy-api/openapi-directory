@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PostWebhooksWebhookIdPingPathParams extends SpeakeasyBase {
-    webhookId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PostWebhooksWebhookIdPingRequest extends SpeakeasyBase {
-    pathParams: PostWebhooksWebhookIdPingPathParams;
+    /**
+     * The unique identifier for the webhook.
+     *
+     * @remarks
+     *
+     */
+    webhookId: string;
 }
 export declare class PostWebhooksWebhookIdPingResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful response
+     */
     webhookEventCallback?: shared.WebhookEventCallback;
 }

@@ -1,18 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeletePlaylistsPlaylistIdPathParams extends SpeakeasyBase {
-    playlistId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DeletePlaylistsPlaylistIdSecurity extends SpeakeasyBase {
-    authHeader: shared.SchemeAuthHeader;
-    clientId: shared.SchemeClientId;
+    authHeader: string;
+    clientId: string;
 }
 export declare class DeletePlaylistsPlaylistIdRequest extends SpeakeasyBase {
-    pathParams: DeletePlaylistsPlaylistIdPathParams;
-    security: DeletePlaylistsPlaylistIdSecurity;
+    /**
+     * SoundCloud playlist id
+     */
+    playlistId: number;
 }
 export declare class DeletePlaylistsPlaylistIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Not Found
+     */
     error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

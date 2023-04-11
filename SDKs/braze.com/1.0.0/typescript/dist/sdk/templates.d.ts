@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Templates {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class Templates {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * listAvailableContentBlocks - List Available Content Blocks
+     * List Available Content Blocks
      *
+     * @remarks
      * This endpoint will list existing Content Block information.
      *
      * ### Successful Response Properties
@@ -57,11 +58,12 @@ export declare class Templates {
      *
      * - `Offset must be greater than 0.`
      * The `offset` parameter must be an integer (positive number) greater than 0.
-    **/
+     */
     listAvailableContentBlocks(req: operations.ListAvailableContentBlocksRequest, config?: AxiosRequestConfig): Promise<operations.ListAvailableContentBlocksResponse>;
     /**
-     * listAvailableEmailTemplates - List Available Email Templates
+     * List Available Email Templates
      *
+     * @remarks
      * Use this endpoint to get a list of available templates in your Braze account.
      *
      * Use the Template REST APIs to programmatically manage the email templates that you have stored on the Braze dashboard, on the Templates & Media page. Braze provides two endpoints for creating and updating your email templates.
@@ -78,11 +80,12 @@ export declare class Templates {
      *     "tags": (array of strings) tags appended to the template
      * }
      *   ```
-    **/
+     */
     listAvailableEmailTemplates(req: operations.ListAvailableEmailTemplatesRequest, config?: AxiosRequestConfig): Promise<operations.ListAvailableEmailTemplatesResponse>;
     /**
-     * seeContentBlockInformation - See Content Block Information
+     * See Content Block Information
      *
+     * @remarks
      * This endpoint will call information for an existing Content Block.
      *
      * ### Successful Response Properties
@@ -111,17 +114,18 @@ export declare class Templates {
      * - `Content Block has been deleted - content not available.` - This Content Block, though it may have existed earlier, has been deleted.
      *
      * - `Include Inclusion Data - error` - One of true or false is not provided.
-    **/
+     */
     seeContentBlockInformation(req: operations.SeeContentBlockInformationRequest, config?: AxiosRequestConfig): Promise<operations.SeeContentBlockInformationResponse>;
     /**
-     * seeEmailTemplateInformation - See Email Template Information
+     * See Email Template Information
      *
+     * @remarks
      * Use to get information on your email templates.
      *
      * Use the Template REST APIs to programmatically manage the email templates that you have stored on the Braze dashboard, on the Templates & Media page. Braze provides two endpoints for creating and updating your email templates.
      *
      * ### Request Components
      * - [Template Identifier](https://www.braze.com/docs/api/identifier_types/)
-    **/
+     */
     seeEmailTemplateInformation(req: operations.SeeEmailTemplateInformationRequest, config?: AxiosRequestConfig): Promise<operations.SeeEmailTemplateInformationResponse>;
 }

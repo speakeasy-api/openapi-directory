@@ -5,7 +5,7 @@ import { NodeTypeSpecificValue } from "./nodetypespecificvalue";
 import { ParameterTypeEnum } from "./parametertypeenum";
 /**
  * Describes an individual setting that controls some aspect of DAX behavior.
-**/
+ */
 export declare class Parameter extends SpeakeasyBase {
     allowedValues?: string;
     changeType?: ChangeTypeEnum;

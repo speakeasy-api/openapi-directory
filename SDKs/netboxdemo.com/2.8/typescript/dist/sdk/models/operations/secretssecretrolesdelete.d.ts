@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SecretsSecretRolesDeletePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class SecretsSecretRolesDeleteRequest extends SpeakeasyBase {
-    pathParams: SecretsSecretRolesDeletePathParams;
+    /**
+     * A unique integer value identifying this secret role.
+     */
+    id: number;
 }
 export declare class SecretsSecretRolesDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

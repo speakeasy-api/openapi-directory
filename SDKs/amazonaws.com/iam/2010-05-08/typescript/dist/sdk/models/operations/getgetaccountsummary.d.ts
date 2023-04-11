@@ -1,15 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetGetAccountSummaryActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETGETAccountSummaryActionEnum {
     GetAccountSummary = "GetAccountSummary"
 }
-export declare enum GetGetAccountSummaryVersionEnum {
+export declare enum GETGETAccountSummaryVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class GetGetAccountSummaryQueryParams extends SpeakeasyBase {
-    action: GetGetAccountSummaryActionEnum;
-    version: GetGetAccountSummaryVersionEnum;
-}
-export declare class GetGetAccountSummaryHeaders extends SpeakeasyBase {
+export declare class GETGETAccountSummaryRequest extends SpeakeasyBase {
+    action: GETGETAccountSummaryActionEnum;
+    version: GETGETAccountSummaryVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +17,9 @@ export declare class GetGetAccountSummaryHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetGetAccountSummaryRequest extends SpeakeasyBase {
-    queryParams: GetGetAccountSummaryQueryParams;
-    headers: GetGetAccountSummaryHeaders;
-}
-export declare class GetGetAccountSummaryResponse extends SpeakeasyBase {
+export declare class GETGETAccountSummaryResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

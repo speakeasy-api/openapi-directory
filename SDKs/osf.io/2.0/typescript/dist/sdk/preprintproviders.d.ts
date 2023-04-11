@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class PreprintProviders {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class PreprintProviders {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * preprintProviderDetail - Retrieve a preprint provider
+     * Retrieve a preprint provider
      *
+     * @remarks
      * Retrieves the details of a preprint provider.
      * #### Returns
      * Returns a JSON object with a `data` key containing the representation of the requested preprint provider, if the request is successful.
@@ -57,13 +58,14 @@ export declare class PreprintProviders {
      *     ]
      *
      * The above structure would allow Architecture, Architectural Engineering, all of Architectural Engineering's children, Engineering, Aerospace Engineering, and Aerodynamics and Fluid Mechanics.
-    **/
+     */
     preprintProviderDetail(req: operations.PreprintProviderDetailRequest, config?: AxiosRequestConfig): Promise<operations.PreprintProviderDetailResponse>;
     /**
-     * preprintProviderLicensesList - List all licenses
+     * List all licenses
      *
+     * @remarks
      *
-     * A paginated list of the licenses allowed bya preprint provider.
+     * A paginated list of the licenses allowed by a preprint provider.
      * #### Returns
      * Returns a JSON object containing `data` and `links` keys.
      *
@@ -72,11 +74,12 @@ export declare class PreprintProviders {
      * The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
      *
      * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
-    **/
+     */
     preprintProviderLicensesList(req: operations.PreprintProviderLicensesListRequest, config?: AxiosRequestConfig): Promise<operations.PreprintProviderLicensesListResponse>;
     /**
-     * preprintProviderList - List all preprint providers
+     * List all preprint providers
      *
+     * @remarks
      *
      * A paginated list of all preprint providers. The returned preprint providers are sorted by their creation date, with the most recent preprints appearing first.
      * #### Returns
@@ -91,11 +94,12 @@ export declare class PreprintProviders {
      * You can optionally request that the response only include preprint providers that match your filters by utilizing the `filter` query parameter, e.g. https://api.osf.io/v2/preprint_providers/?filter[id]=osf.
      *
      * Preprint Providers may be filtered by their `id`, `name`,  and `description`
-    **/
+     */
     preprintProviderList(config?: AxiosRequestConfig): Promise<operations.PreprintProviderListResponse>;
     /**
-     * preprintProviderTaxonomiesList - List all taxonomies
+     * List all taxonomies
      *
+     * @remarks
      *
      * A paginated list of the taxonomies for a preprint provider. The returned preprint providers taxonomies are sorted by their creation date, with the most recent preprints appearing first.
      * #### Returns
@@ -106,11 +110,12 @@ export declare class PreprintProviders {
      * The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
      *
      * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
-    **/
+     */
     preprintProviderTaxonomiesList(req: operations.PreprintProviderTaxonomiesListRequest, config?: AxiosRequestConfig): Promise<operations.PreprintProviderTaxonomiesListResponse>;
     /**
-     * preprintProvidersPreprintsList - List all preprints
+     * List all preprints
      *
+     * @remarks
      *
      * A paginated list of preprints from the specified preprint provider. The returned preprints are sorted by their creation date, with the most recent preprints appearing first.
      * #### Returns
@@ -126,6 +131,6 @@ export declare class PreprintProviders {
      * You can optionally request that the response only include preprints that match your filters by utilizing the `filter` query parameter, e.g. https://api.osf.io/v2/preprint_providers/osf/preprints/?filter[is_published]=true.
      *
      * Preprints may be filtered by their `id`, `is_published`, `date_created`, `date_modified`, and `provider`.
-    **/
+     */
     preprintProvidersPreprintsList(req: operations.PreprintProvidersPreprintsListRequest, config?: AxiosRequestConfig): Promise<operations.PreprintProvidersPreprintsListResponse>;
 }

@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { Acl } from "./acl";
-export declare class UpdateAclResponse extends SpeakeasyBase {
+/**
+ * Success
+ */
+export declare class UpdateACLResponse extends SpeakeasyBase {
     acl?: Acl;
 }

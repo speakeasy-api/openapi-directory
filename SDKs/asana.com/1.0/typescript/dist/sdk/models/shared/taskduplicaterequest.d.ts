@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The fields that will be duplicated to the new task.
+ */
 export declare enum TaskDuplicateRequestIncludeEnum {
     Notes = "notes",
     Assignee = "assignee",
@@ -12,6 +15,12 @@ export declare enum TaskDuplicateRequestIncludeEnum {
     Parent = "parent"
 }
 export declare class TaskDuplicateRequest extends SpeakeasyBase {
+    /**
+     * The fields that will be duplicated to the new task.
+     */
     include?: TaskDuplicateRequestIncludeEnum;
+    /**
+     * The name of the new task.
+     */
     name?: string;
 }

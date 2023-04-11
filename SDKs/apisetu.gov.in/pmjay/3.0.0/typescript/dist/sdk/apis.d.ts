@@ -1,6 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class ApIs {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+export declare class APIs {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,9 +9,10 @@ export declare class ApIs {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * pmjay - Pradhan Mantri Jan Arogya Yojana
+     * Pradhan Mantri Jan Arogya Yojana
      *
+     * @remarks
      * API to verify Pradhan Mantri Jan Arogya Yojana.
-    **/
-    pmjay(req: operations.PmjayRequest, config?: AxiosRequestConfig): Promise<operations.PmjayResponse>;
+     */
+    pmjay(req: operations.PmjayRequestBody, security: operations.PmjaySecurity, config?: AxiosRequestConfig): Promise<operations.PmjayResponse>;
 }

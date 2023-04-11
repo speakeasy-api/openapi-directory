@@ -1,0 +1,18 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * ListLabelsRequest holds all parameters of the Prometheus upstream API for returning a list of label names.
+ */
+export declare class ListLabelsRequest extends SpeakeasyBase {
+    /**
+     * The end time to evaluate the query for. Either floating point UNIX seconds or RFC3339 formatted timestamp.
+     */
+    end?: string;
+    /**
+     * A list of matchers encoded in the Prometheus label matcher format to constrain the values to series that satisfy them.
+     */
+    match?: string;
+    /**
+     * The start time to evaluate the query for. Either floating point UNIX seconds or RFC3339 formatted timestamp.
+     */
+    start?: string;
+}

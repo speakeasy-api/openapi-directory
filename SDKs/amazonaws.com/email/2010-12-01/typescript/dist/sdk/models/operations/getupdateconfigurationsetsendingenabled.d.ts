@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetUpdateConfigurationSetSendingEnabledActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETUpdateConfigurationSetSendingEnabledActionEnum {
     UpdateConfigurationSetSendingEnabled = "UpdateConfigurationSetSendingEnabled"
 }
-export declare enum GetUpdateConfigurationSetSendingEnabledVersionEnum {
+export declare enum GETUpdateConfigurationSetSendingEnabledVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetUpdateConfigurationSetSendingEnabledQueryParams extends SpeakeasyBase {
-    action: GetUpdateConfigurationSetSendingEnabledActionEnum;
+export declare class GETUpdateConfigurationSetSendingEnabledRequest extends SpeakeasyBase {
+    action: GETUpdateConfigurationSetSendingEnabledActionEnum;
+    /**
+     * The name of the configuration set that you want to update.
+     */
     configurationSetName: string;
+    /**
+     * Describes whether email sending is enabled or disabled for the configuration set.
+     */
     enabled: boolean;
-    version: GetUpdateConfigurationSetSendingEnabledVersionEnum;
-}
-export declare class GetUpdateConfigurationSetSendingEnabledHeaders extends SpeakeasyBase {
+    version: GETUpdateConfigurationSetSendingEnabledVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetUpdateConfigurationSetSendingEnabledHeaders extends Spea
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetUpdateConfigurationSetSendingEnabledRequest extends SpeakeasyBase {
-    queryParams: GetUpdateConfigurationSetSendingEnabledQueryParams;
-    headers: GetUpdateConfigurationSetSendingEnabledHeaders;
-}
-export declare class GetUpdateConfigurationSetSendingEnabledResponse extends SpeakeasyBase {
+export declare class GETUpdateConfigurationSetSendingEnabledResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetReorderReceiptRuleSetActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETReorderReceiptRuleSetActionEnum {
     ReorderReceiptRuleSet = "ReorderReceiptRuleSet"
 }
-export declare enum GetReorderReceiptRuleSetVersionEnum {
+export declare enum GETReorderReceiptRuleSetVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetReorderReceiptRuleSetQueryParams extends SpeakeasyBase {
-    action: GetReorderReceiptRuleSetActionEnum;
+export declare class GETReorderReceiptRuleSetRequest extends SpeakeasyBase {
+    action: GETReorderReceiptRuleSetActionEnum;
+    /**
+     * A list of the specified receipt rule set's receipt rules in the order that you want to put them.
+     */
     ruleNames: string[];
+    /**
+     * The name of the receipt rule set to reorder.
+     */
     ruleSetName: string;
-    version: GetReorderReceiptRuleSetVersionEnum;
-}
-export declare class GetReorderReceiptRuleSetHeaders extends SpeakeasyBase {
+    version: GETReorderReceiptRuleSetVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetReorderReceiptRuleSetHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetReorderReceiptRuleSetRequest extends SpeakeasyBase {
-    queryParams: GetReorderReceiptRuleSetQueryParams;
-    headers: GetReorderReceiptRuleSetHeaders;
-}
-export declare class GetReorderReceiptRuleSetResponse extends SpeakeasyBase {
+export declare class GETReorderReceiptRuleSetResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

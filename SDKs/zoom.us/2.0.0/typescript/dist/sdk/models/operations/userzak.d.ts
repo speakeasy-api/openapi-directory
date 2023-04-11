@@ -1,17 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class UserZakSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
-}
-export declare class UserZak200ApplicationJson extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+/**
+ * OK
+ */
+export declare class UserZak200ApplicationXML extends SpeakeasyBase {
+    /**
+     * The user's ZAK.
+     */
     token?: string;
 }
-export declare class UserZakRequest extends SpeakeasyBase {
-    security: UserZakSecurity;
+/**
+ * OK
+ */
+export declare class UserZak200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * The user's ZAK.
+     */
+    token?: string;
 }
 export declare class UserZakResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    userZak200ApplicationJSONObject?: UserZak200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
+    userZak200ApplicationJSONObject?: UserZak200ApplicationJSON;
 }

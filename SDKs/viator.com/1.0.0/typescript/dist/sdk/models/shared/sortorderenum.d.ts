@@ -1,3 +1,15 @@
+/**
+ * **sort order** in which to return the results that is *one of*:
+ *
+ * @remarks
+ *
+ *   - `'TOP_SELLERS'`: the top sellers
+ *   - `'REVIEW_AVG_RATING_A'`: ascending by average traveler rating (low -&gt; high)
+ *   - `'REVIEW_AVG_RATING_D'`: descending by average traveler rating (high -&gt; low)
+ *   - `'PRICE_FROM_A'`: ascending by price (low -&gt; high)
+ *   - `'PRICE_FROM_D'`: descending by price (high -&gt; low)
+ *
+ */
 export declare enum SortOrderEnum {
     TopSellers = "TOP_SELLERS",
     ReviewAvgRatingA = "REVIEW_AVG_RATING_A",

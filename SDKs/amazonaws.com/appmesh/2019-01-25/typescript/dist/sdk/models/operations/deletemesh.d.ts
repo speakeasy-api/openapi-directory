@@ -1,9 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteMeshPathParams extends SpeakeasyBase {
-    meshName: string;
-}
-export declare class DeleteMeshHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteMeshRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,20 +9,45 @@ export declare class DeleteMeshHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DeleteMeshRequest extends SpeakeasyBase {
-    pathParams: DeleteMeshPathParams;
-    headers: DeleteMeshHeaders;
+    /**
+     * The name of the service mesh to delete.
+     */
+    meshName: string;
 }
 export declare class DeleteMeshResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteMeshOutput?: shared.DeleteMeshOutput;
+    /**
+     * ForbiddenException
+     */
     forbiddenException?: any;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
-    resourceInUseException?: any;
-    serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceInUseException
+     */
+    resourceInUseException?: any;
+    /**
+     * ServiceUnavailableException
+     */
+    serviceUnavailableException?: any;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

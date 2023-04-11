@@ -1,4 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CollectionDoi extends SpeakeasyBase {
-    doi?: string;
+/**
+ * OK
+ */
+export declare class CollectionDOI extends SpeakeasyBase {
+    /**
+     * Reserved DOI
+     */
+    doi: string;
 }

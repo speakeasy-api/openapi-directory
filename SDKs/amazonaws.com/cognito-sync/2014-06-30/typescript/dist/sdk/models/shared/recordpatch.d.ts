@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { OperationEnum } from "./operationenum";
 /**
  * An update operation for a record.
-**/
+ */
 export declare class RecordPatch extends SpeakeasyBase {
     deviceLastModifiedDate?: Date;
     key: string;

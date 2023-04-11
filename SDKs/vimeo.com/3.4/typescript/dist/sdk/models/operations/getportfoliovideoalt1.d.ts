@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetPortfolioVideoAlt1PathParams extends SpeakeasyBase {
-    portfolioId: number;
-    videoId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetPortfolioVideoAlt1Request extends SpeakeasyBase {
-    pathParams: GetPortfolioVideoAlt1PathParams;
+    /**
+     * The ID of the portfolio.
+     */
+    portfolioId: number;
+    /**
+     * The ID of the video.
+     */
+    videoId: number;
 }
 export declare class GetPortfolioVideoAlt1Response extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The video was returned.
+     */
     video?: shared.Video;
 }

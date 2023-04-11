@@ -1,3 +1,6 @@
+/**
+ * Indicate how the product sku are compared for the duplication check.
+ */
 export declare enum CompareOptionsEnum {
     None = "None",
     IgnoreCase = "IgnoreCase",

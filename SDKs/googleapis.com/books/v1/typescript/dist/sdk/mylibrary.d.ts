@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Mylibrary {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,59 +9,59 @@ export declare class Mylibrary {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * booksMylibraryAnnotationsDelete - Deletes an annotation.
-    **/
-    booksMylibraryAnnotationsDelete(req: operations.BooksMylibraryAnnotationsDeleteRequest, config?: AxiosRequestConfig): Promise<operations.BooksMylibraryAnnotationsDeleteResponse>;
+     * Deletes an annotation.
+     */
+    booksMylibraryAnnotationsDelete(req: operations.BooksMylibraryAnnotationsDeleteRequest, security: operations.BooksMylibraryAnnotationsDeleteSecurity, config?: AxiosRequestConfig): Promise<operations.BooksMylibraryAnnotationsDeleteResponse>;
     /**
-     * booksMylibraryAnnotationsInsert - Inserts a new annotation.
-    **/
-    booksMylibraryAnnotationsInsert(req: operations.BooksMylibraryAnnotationsInsertRequest, config?: AxiosRequestConfig): Promise<operations.BooksMylibraryAnnotationsInsertResponse>;
+     * Inserts a new annotation.
+     */
+    booksMylibraryAnnotationsInsert(req: operations.BooksMylibraryAnnotationsInsertRequest, security: operations.BooksMylibraryAnnotationsInsertSecurity, config?: AxiosRequestConfig): Promise<operations.BooksMylibraryAnnotationsInsertResponse>;
     /**
-     * booksMylibraryAnnotationsList - Retrieves a list of annotations, possibly filtered.
-    **/
-    booksMylibraryAnnotationsList(req: operations.BooksMylibraryAnnotationsListRequest, config?: AxiosRequestConfig): Promise<operations.BooksMylibraryAnnotationsListResponse>;
+     * Retrieves a list of annotations, possibly filtered.
+     */
+    booksMylibraryAnnotationsList(req: operations.BooksMylibraryAnnotationsListRequest, security: operations.BooksMylibraryAnnotationsListSecurity, config?: AxiosRequestConfig): Promise<operations.BooksMylibraryAnnotationsListResponse>;
     /**
-     * booksMylibraryAnnotationsSummary - Gets the summary of specified layers.
-    **/
-    booksMylibraryAnnotationsSummary(req: operations.BooksMylibraryAnnotationsSummaryRequest, config?: AxiosRequestConfig): Promise<operations.BooksMylibraryAnnotationsSummaryResponse>;
+     * Gets the summary of specified layers.
+     */
+    booksMylibraryAnnotationsSummary(req: operations.BooksMylibraryAnnotationsSummaryRequest, security: operations.BooksMylibraryAnnotationsSummarySecurity, config?: AxiosRequestConfig): Promise<operations.BooksMylibraryAnnotationsSummaryResponse>;
     /**
-     * booksMylibraryAnnotationsUpdate - Updates an existing annotation.
-    **/
-    booksMylibraryAnnotationsUpdate(req: operations.BooksMylibraryAnnotationsUpdateRequest, config?: AxiosRequestConfig): Promise<operations.BooksMylibraryAnnotationsUpdateResponse>;
+     * Updates an existing annotation.
+     */
+    booksMylibraryAnnotationsUpdate(req: operations.BooksMylibraryAnnotationsUpdateRequest, security: operations.BooksMylibraryAnnotationsUpdateSecurity, config?: AxiosRequestConfig): Promise<operations.BooksMylibraryAnnotationsUpdateResponse>;
     /**
-     * booksMylibraryBookshelvesAddVolume - Adds a volume to a bookshelf.
-    **/
-    booksMylibraryBookshelvesAddVolume(req: operations.BooksMylibraryBookshelvesAddVolumeRequest, config?: AxiosRequestConfig): Promise<operations.BooksMylibraryBookshelvesAddVolumeResponse>;
+     * Adds a volume to a bookshelf.
+     */
+    booksMylibraryBookshelvesAddVolume(req: operations.BooksMylibraryBookshelvesAddVolumeRequest, security: operations.BooksMylibraryBookshelvesAddVolumeSecurity, config?: AxiosRequestConfig): Promise<operations.BooksMylibraryBookshelvesAddVolumeResponse>;
     /**
-     * booksMylibraryBookshelvesClearVolumes - Clears all volumes from a bookshelf.
-    **/
-    booksMylibraryBookshelvesClearVolumes(req: operations.BooksMylibraryBookshelvesClearVolumesRequest, config?: AxiosRequestConfig): Promise<operations.BooksMylibraryBookshelvesClearVolumesResponse>;
+     * Clears all volumes from a bookshelf.
+     */
+    booksMylibraryBookshelvesClearVolumes(req: operations.BooksMylibraryBookshelvesClearVolumesRequest, security: operations.BooksMylibraryBookshelvesClearVolumesSecurity, config?: AxiosRequestConfig): Promise<operations.BooksMylibraryBookshelvesClearVolumesResponse>;
     /**
-     * booksMylibraryBookshelvesGet - Retrieves metadata for a specific bookshelf belonging to the authenticated user.
-    **/
-    booksMylibraryBookshelvesGet(req: operations.BooksMylibraryBookshelvesGetRequest, config?: AxiosRequestConfig): Promise<operations.BooksMylibraryBookshelvesGetResponse>;
+     * Retrieves metadata for a specific bookshelf belonging to the authenticated user.
+     */
+    booksMylibraryBookshelvesGet(req: operations.BooksMylibraryBookshelvesGetRequest, security: operations.BooksMylibraryBookshelvesGetSecurity, config?: AxiosRequestConfig): Promise<operations.BooksMylibraryBookshelvesGetResponse>;
     /**
-     * booksMylibraryBookshelvesList - Retrieves a list of bookshelves belonging to the authenticated user.
-    **/
-    booksMylibraryBookshelvesList(req: operations.BooksMylibraryBookshelvesListRequest, config?: AxiosRequestConfig): Promise<operations.BooksMylibraryBookshelvesListResponse>;
+     * Retrieves a list of bookshelves belonging to the authenticated user.
+     */
+    booksMylibraryBookshelvesList(req: operations.BooksMylibraryBookshelvesListRequest, security: operations.BooksMylibraryBookshelvesListSecurity, config?: AxiosRequestConfig): Promise<operations.BooksMylibraryBookshelvesListResponse>;
     /**
-     * booksMylibraryBookshelvesMoveVolume - Moves a volume within a bookshelf.
-    **/
-    booksMylibraryBookshelvesMoveVolume(req: operations.BooksMylibraryBookshelvesMoveVolumeRequest, config?: AxiosRequestConfig): Promise<operations.BooksMylibraryBookshelvesMoveVolumeResponse>;
+     * Moves a volume within a bookshelf.
+     */
+    booksMylibraryBookshelvesMoveVolume(req: operations.BooksMylibraryBookshelvesMoveVolumeRequest, security: operations.BooksMylibraryBookshelvesMoveVolumeSecurity, config?: AxiosRequestConfig): Promise<operations.BooksMylibraryBookshelvesMoveVolumeResponse>;
     /**
-     * booksMylibraryBookshelvesRemoveVolume - Removes a volume from a bookshelf.
-    **/
-    booksMylibraryBookshelvesRemoveVolume(req: operations.BooksMylibraryBookshelvesRemoveVolumeRequest, config?: AxiosRequestConfig): Promise<operations.BooksMylibraryBookshelvesRemoveVolumeResponse>;
+     * Removes a volume from a bookshelf.
+     */
+    booksMylibraryBookshelvesRemoveVolume(req: operations.BooksMylibraryBookshelvesRemoveVolumeRequest, security: operations.BooksMylibraryBookshelvesRemoveVolumeSecurity, config?: AxiosRequestConfig): Promise<operations.BooksMylibraryBookshelvesRemoveVolumeResponse>;
     /**
-     * booksMylibraryBookshelvesVolumesList - Gets volume information for volumes on a bookshelf.
-    **/
-    booksMylibraryBookshelvesVolumesList(req: operations.BooksMylibraryBookshelvesVolumesListRequest, config?: AxiosRequestConfig): Promise<operations.BooksMylibraryBookshelvesVolumesListResponse>;
+     * Gets volume information for volumes on a bookshelf.
+     */
+    booksMylibraryBookshelvesVolumesList(req: operations.BooksMylibraryBookshelvesVolumesListRequest, security: operations.BooksMylibraryBookshelvesVolumesListSecurity, config?: AxiosRequestConfig): Promise<operations.BooksMylibraryBookshelvesVolumesListResponse>;
     /**
-     * booksMylibraryReadingpositionsGet - Retrieves my reading position information for a volume.
-    **/
-    booksMylibraryReadingpositionsGet(req: operations.BooksMylibraryReadingpositionsGetRequest, config?: AxiosRequestConfig): Promise<operations.BooksMylibraryReadingpositionsGetResponse>;
+     * Retrieves my reading position information for a volume.
+     */
+    booksMylibraryReadingpositionsGet(req: operations.BooksMylibraryReadingpositionsGetRequest, security: operations.BooksMylibraryReadingpositionsGetSecurity, config?: AxiosRequestConfig): Promise<operations.BooksMylibraryReadingpositionsGetResponse>;
     /**
-     * booksMylibraryReadingpositionsSetPosition - Sets my reading position information for a volume.
-    **/
-    booksMylibraryReadingpositionsSetPosition(req: operations.BooksMylibraryReadingpositionsSetPositionRequest, config?: AxiosRequestConfig): Promise<operations.BooksMylibraryReadingpositionsSetPositionResponse>;
+     * Sets my reading position information for a volume.
+     */
+    booksMylibraryReadingpositionsSetPosition(req: operations.BooksMylibraryReadingpositionsSetPositionRequest, security: operations.BooksMylibraryReadingpositionsSetPositionSecurity, config?: AxiosRequestConfig): Promise<operations.BooksMylibraryReadingpositionsSetPositionResponse>;
 }

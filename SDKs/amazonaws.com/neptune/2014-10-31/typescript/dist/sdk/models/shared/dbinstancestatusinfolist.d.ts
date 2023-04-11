@@ -1,8 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Provides a list of status information for a DB instance.
-**/
-export declare class DbInstanceStatusInfoList extends SpeakeasyBase {
+ */
+export declare class DBInstanceStatusInfoList extends SpeakeasyBase {
     message?: string;
     normal?: boolean;
     status?: string;

@@ -1,7 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Additional information about the reasons for the failure.
-**/
+ */
 export declare class FailureDetail extends SpeakeasyBase {
+    /**
+     * A description of the failure.
+     */
     description?: string;
 }

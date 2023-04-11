@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteCacheParameterGroupActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteCacheParameterGroupActionEnum {
     DeleteCacheParameterGroup = "DeleteCacheParameterGroup"
 }
-export declare enum PostDeleteCacheParameterGroupVersionEnum {
+export declare enum POSTDeleteCacheParameterGroupVersionEnum {
     TwoThousandAndFifteen0202 = "2015-02-02"
 }
-export declare class PostDeleteCacheParameterGroupQueryParams extends SpeakeasyBase {
-    action: PostDeleteCacheParameterGroupActionEnum;
-    version: PostDeleteCacheParameterGroupVersionEnum;
-}
-export declare class PostDeleteCacheParameterGroupHeaders extends SpeakeasyBase {
+export declare class POSTDeleteCacheParameterGroupRequest extends SpeakeasyBase {
+    action: POSTDeleteCacheParameterGroupActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteCacheParameterGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteCacheParameterGroupHeaders extends SpeakeasyBase 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteCacheParameterGroupRequest extends SpeakeasyBase {
-    queryParams: PostDeleteCacheParameterGroupQueryParams;
-    headers: PostDeleteCacheParameterGroupHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteCacheParameterGroupResponse extends SpeakeasyBase {
+export declare class POSTDeleteCacheParameterGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

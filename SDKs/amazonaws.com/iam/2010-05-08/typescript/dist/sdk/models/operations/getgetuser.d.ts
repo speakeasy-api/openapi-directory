@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetGetUserActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETGETUserActionEnum {
     GetUser = "GetUser"
 }
-export declare enum GetGetUserVersionEnum {
+export declare enum GETGETUserVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class GetGetUserQueryParams extends SpeakeasyBase {
-    action: GetGetUserActionEnum;
+export declare class GETGETUserRequest extends SpeakeasyBase {
+    action: GETGETUserActionEnum;
+    /**
+     * <p>The name of the user to get information about.</p> <p>This parameter is optional. If it is not included, it defaults to the user making the request. This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
+     */
     userName?: string;
-    version: GetGetUserVersionEnum;
-}
-export declare class GetGetUserHeaders extends SpeakeasyBase {
+    version: GETGETUserVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetGetUserHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetGetUserRequest extends SpeakeasyBase {
-    queryParams: GetGetUserQueryParams;
-    headers: GetGetUserHeaders;
-}
-export declare class GetGetUserResponse extends SpeakeasyBase {
+export declare class GETGETUserResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

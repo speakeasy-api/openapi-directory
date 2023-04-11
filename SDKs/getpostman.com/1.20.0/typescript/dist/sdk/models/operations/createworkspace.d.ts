@@ -1,4 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
 export declare class CreateWorkspaceRequestBodyWorkspaceCollections extends SpeakeasyBase {
     id?: string;
     name?: string;
@@ -27,26 +28,36 @@ export declare class CreateWorkspaceRequestBodyWorkspace extends SpeakeasyBase {
 export declare class CreateWorkspaceRequestBody extends SpeakeasyBase {
     workspace?: CreateWorkspaceRequestBodyWorkspace;
 }
-export declare class CreateWorkspace200ApplicationJsonWorkspace extends SpeakeasyBase {
-    id?: string;
-    name?: string;
-}
-export declare class CreateWorkspace200ApplicationJson extends SpeakeasyBase {
-    workspace?: CreateWorkspace200ApplicationJsonWorkspace;
-}
-export declare class CreateWorkspace400ApplicationJsonError extends SpeakeasyBase {
+export declare class CreateWorkspace400ApplicationJSONError extends SpeakeasyBase {
     message?: string;
     name?: string;
 }
-export declare class CreateWorkspace400ApplicationJson extends SpeakeasyBase {
-    error?: CreateWorkspace400ApplicationJsonError;
+/**
+ * Instance supplied not found
+ */
+export declare class CreateWorkspace400ApplicationJSON extends SpeakeasyBase {
+    error?: CreateWorkspace400ApplicationJSONError;
 }
-export declare class CreateWorkspaceRequest extends SpeakeasyBase {
-    request?: CreateWorkspaceRequestBody;
+export declare class CreateWorkspace200ApplicationJSONWorkspace extends SpeakeasyBase {
+    id?: string;
+    name?: string;
+}
+/**
+ * Successful Response
+ */
+export declare class CreateWorkspace200ApplicationJSON extends SpeakeasyBase {
+    workspace?: CreateWorkspace200ApplicationJSONWorkspace;
 }
 export declare class CreateWorkspaceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createWorkspace200ApplicationJSONObject?: CreateWorkspace200ApplicationJson;
-    createWorkspace400ApplicationJSONObject?: CreateWorkspace400ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful Response
+     */
+    createWorkspace200ApplicationJSONObject?: CreateWorkspace200ApplicationJSON;
+    /**
+     * Instance supplied not found
+     */
+    createWorkspace400ApplicationJSONObject?: CreateWorkspace400ApplicationJSON;
 }

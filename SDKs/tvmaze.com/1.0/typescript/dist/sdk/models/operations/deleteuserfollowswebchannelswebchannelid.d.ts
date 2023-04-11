@@ -1,11 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteUserFollowsWebchannelsWebchannelIdPathParams extends SpeakeasyBase {
-    webchannelId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteUserFollowsWebchannelsWebchannelIdRequest extends SpeakeasyBase {
-    pathParams: DeleteUserFollowsWebchannelsWebchannelIdPathParams;
+    webchannelId: number;
 }
 export declare class DeleteUserFollowsWebchannelsWebchannelIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostUpdateConfigurationSetSendingEnabledActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTUpdateConfigurationSetSendingEnabledActionEnum {
     UpdateConfigurationSetSendingEnabled = "UpdateConfigurationSetSendingEnabled"
 }
-export declare enum PostUpdateConfigurationSetSendingEnabledVersionEnum {
+export declare enum POSTUpdateConfigurationSetSendingEnabledVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostUpdateConfigurationSetSendingEnabledQueryParams extends SpeakeasyBase {
-    action: PostUpdateConfigurationSetSendingEnabledActionEnum;
-    version: PostUpdateConfigurationSetSendingEnabledVersionEnum;
-}
-export declare class PostUpdateConfigurationSetSendingEnabledHeaders extends SpeakeasyBase {
+export declare class POSTUpdateConfigurationSetSendingEnabledRequest extends SpeakeasyBase {
+    action: POSTUpdateConfigurationSetSendingEnabledActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTUpdateConfigurationSetSendingEnabledVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostUpdateConfigurationSetSendingEnabledHeaders extends Spe
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostUpdateConfigurationSetSendingEnabledRequest extends SpeakeasyBase {
-    queryParams: PostUpdateConfigurationSetSendingEnabledQueryParams;
-    headers: PostUpdateConfigurationSetSendingEnabledHeaders;
-    request?: Uint8Array;
-}
-export declare class PostUpdateConfigurationSetSendingEnabledResponse extends SpeakeasyBase {
+export declare class POSTUpdateConfigurationSetSendingEnabledResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

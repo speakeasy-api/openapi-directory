@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetGetSerialConsoleAccessStatusActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETGETSerialConsoleAccessStatusActionEnum {
     GetSerialConsoleAccessStatus = "GetSerialConsoleAccessStatus"
 }
-export declare enum GetGetSerialConsoleAccessStatusVersionEnum {
+export declare enum GETGETSerialConsoleAccessStatusVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetGetSerialConsoleAccessStatusQueryParams extends SpeakeasyBase {
-    action: GetGetSerialConsoleAccessStatusActionEnum;
+export declare class GETGETSerialConsoleAccessStatusRequest extends SpeakeasyBase {
+    action: GETGETSerialConsoleAccessStatusActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
-    version: GetGetSerialConsoleAccessStatusVersionEnum;
-}
-export declare class GetGetSerialConsoleAccessStatusHeaders extends SpeakeasyBase {
+    version: GETGETSerialConsoleAccessStatusVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetGetSerialConsoleAccessStatusHeaders extends SpeakeasyBas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetGetSerialConsoleAccessStatusRequest extends SpeakeasyBase {
-    queryParams: GetGetSerialConsoleAccessStatusQueryParams;
-    headers: GetGetSerialConsoleAccessStatusHeaders;
-}
-export declare class GetGetSerialConsoleAccessStatusResponse extends SpeakeasyBase {
+export declare class GETGETSerialConsoleAccessStatusResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

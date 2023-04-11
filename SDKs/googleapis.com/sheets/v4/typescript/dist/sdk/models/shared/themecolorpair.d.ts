@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ColorStyle } from "./colorstyle";
+/**
+ * The type of the spreadsheet theme color.
+ */
 export declare enum ThemeColorPairColorTypeEnum {
     ThemeColorTypeUnspecified = "THEME_COLOR_TYPE_UNSPECIFIED",
     Text = "TEXT",
@@ -14,8 +17,14 @@ export declare enum ThemeColorPairColorTypeEnum {
 }
 /**
  * A pair mapping a spreadsheet theme color type to the concrete color it represents.
-**/
+ */
 export declare class ThemeColorPair extends SpeakeasyBase {
+    /**
+     * A color value.
+     */
     color?: ColorStyle;
+    /**
+     * The type of the spreadsheet theme color.
+     */
     colorType?: ThemeColorPairColorTypeEnum;
 }

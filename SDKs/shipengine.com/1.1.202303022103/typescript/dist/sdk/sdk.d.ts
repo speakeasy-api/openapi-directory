@@ -1,0 +1,216 @@
+import { Addresses } from "./addresses";
+import { Batches } from "./batches";
+import { CarrierAccounts } from "./carrieraccounts";
+import { Carriers } from "./carriers";
+import { Downloads } from "./downloads";
+import { Insurance } from "./insurance";
+import { Labels } from "./labels";
+import { Manifests } from "./manifests";
+import * as shared from "./models/shared";
+import { PackagePickups } from "./packagepickups";
+import { PackageTypes } from "./packagetypes";
+import { Rates } from "./rates";
+import { ServicePoints } from "./servicepoints";
+import { Shipments } from "./shipments";
+import { Tags } from "./tags";
+import { Tokens } from "./tokens";
+import { Tracking } from "./tracking";
+import { Warehouses } from "./warehouses";
+import { Webhooks } from "./webhooks";
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
+export declare const ServerList: readonly ["https://api.shipengine.com"];
+/**
+ * The available configuration options for the SDK
+ */
+export type SDKProps = {
+    /**
+     * The security details required to authenticate the SDK
+     */
+    security?: shared.Security;
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
+    defaultClient?: AxiosInstance;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
+};
+/**
+ * ShipEngine's easy-to-use REST API lets you manage all of your shipping needs without worrying about the complexities of different carrier APIs and protocols. We handle all the heavy lifting so you can focus on providing a first-class shipping experience for your customers at the best possible prices.
+ *
+ * @remarks
+ *
+ * Each of ShipEngine's features can be used by itself or in conjunction with each other to build powerful shipping functionality into your application or service.
+ *
+ * ## Getting Started
+ * If you're new to REST APIs then be sure to read our [introduction to REST](https://www.shipengine.com/docs/rest/) to understand the basics.  Learn how to [authenticate yourself to ShipEngine](https://www.shipengine.com/docs/auth/), and then use our [sandbox environment](https://www.shipengine.com/docs/sandbox/) to kick the tires and get familiar with our API. If you run into any problems, then be sure to check the [error handling guide](https://www.shipengine.com/docs/errors/) for tips.
+ *
+ * Here are some step-by-step **tutorials** to get you started:
+ *
+ *   - [Learn how to create your first shipping label](https://www.shipengine.com/docs/labels/create-a-label/)
+ *   - [Calculate shipping costs and compare rates across carriers](https://www.shipengine.com/docs/rates/)
+ *   - [Track packages on-demand or in real time](https://www.shipengine.com/docs/tracking/)
+ *   - [Validate mailing addresses anywhere on Earth](https://www.shipengine.com/docs/addresses/validation/)
+ *
+ *
+ * ## Shipping Labels for Every Major Carrier
+ * ShipEngine makes it easy to [create shipping labels for any carrier](https://www.shipengine.com/docs/labels/create-a-label/) and [download them](https://www.shipengine.com/docs/labels/downloading/) in a [variety of file formats](https://www.shipengine.com/docs/labels/formats/). You can even customize labels with your own [messages](https://www.shipengine.com/docs/labels/messages/) and [images](https://www.shipengine.com/docs/labels/branding/).
+ *
+ *
+ * ## Real-Time Package Tracking
+ * With ShipEngine you can [get the current status of a package](https://www.shipengine.com/docs/tracking/) or [subscribe to real-time tracking updates](https://www.shipengine.com/docs/tracking/webhooks/) via webhooks. You can also create [custimized tracking pages](https://www.shipengine.com/docs/tracking/branded-tracking-page/) with your own branding so your customers will always know where their package is.
+ *
+ *
+ * ## Compare Shipping Costs Across Carriers
+ * Make sure you ship as cost-effectively as possible by [comparing rates across carriers](https://www.shipengine.com/docs/rates/get-shipment-rates/) using the ShipEngine Rates API. Or if you don't know the full shipment details yet, then you can [get rate estimates](https://www.shipengine.com/docs/rates/estimate/) with limited address info.
+ *
+ *
+ * ## Worldwide Address Validation
+ * ShipEngine supports [address validation](https://www.shipengine.com/docs/addresses/validation/) for virtually [every country on Earth](https://www.shipengine.com/docs/addresses/validation/countries/), including the United States, Canada, Great Britain, Australia, Germany, France, Norway, Spain, Sweden, Israel, Italy, and over 160 others.
+ *
+ *
+ * @see {@link https://www.shipengine.com/docs/} - ShipEngine's documentation is designed to help you start shipping as quickly as possible. With easy-to-follow tutorials, detailed reference docs, and ready-made recipes for common use cases, you'll see real results in no time at all.
+ *
+ */
+export declare class SDK {
+    /**
+     * No matter your shipping volume, failed deliveries and address change surcharges cut into your bottom line and damage perception with customers. Our address validation services ensure your packages make it to the right place the first time. [Learn how to leverage our address validation services here.](https://www.shipengine.com/docs/addresses/validation/)
+     *
+     * @remarks
+     *
+     * ShipEngine supports address validation for virtually every country on Earth, including the United States, Canada, Great Britain, Australia, Germany, France, Norway, Spain, Sweden, Israel, Italy, and over 160 others.
+     *
+     *
+     * @see {@link https://www.shipengine.com/docs/addresses/validation/} - Address validation ensures accurate addresses and can lead to reduced shipping costs by preventing address correction surcharges. ShipEngine cross references multiple databases to validate addresses and identify potential deliverability issues.
+     *
+     */
+    addresses: Addresses;
+    /**
+     * batches
+     *
+     * @remarks
+     *
+     */
+    batches: Batches;
+    /**
+     * carrier accounts
+     *
+     * @remarks
+     *
+     */
+    carrierAccounts: CarrierAccounts;
+    /**
+     * carriers
+     *
+     * @remarks
+     *
+     */
+    carriers: Carriers;
+    /**
+     * downloads
+     *
+     * @remarks
+     *
+     */
+    downloads: Downloads;
+    /**
+     * insurance
+     *
+     * @remarks
+     *
+     */
+    insurance: Insurance;
+    /**
+     * Print shipping labels for any of the top global carriers in minutes—instead of weeks. Simply [connect your existing carrier accounts](https://www.shipengine.com/docs/carriers/setup/) in the API dashboard, and then [begin creating labels](https://www.shipengine.com/docs/shipping/use-a-carrier-service/).
+     *
+     * @remarks
+     *
+     *
+     * @see {@link https://www.shipengine.com/docs/labels/create-a-label/} - Follow this quick start guide to create your first shipping label with ShipEngine
+     */
+    labels: Labels;
+    /**
+     * manifests
+     *
+     * @remarks
+     *
+     */
+    manifests: Manifests;
+    /**
+     * Scheduled package pickups
+     */
+    packagePickups: PackagePickups;
+    /**
+     * custom package types
+     *
+     * @remarks
+     *
+     */
+    packageTypes: PackageTypes;
+    /**
+     * Make sure you ship as cost-effectively as possible by [quickly comparing rates](https://www.shipengine.com/docs/rates/) using the ShipEngine Rates API. As long as you have the carrier connected to your account, you'll be able to see and compare different rates and services.
+     *
+     * @remarks
+     *
+     *
+     * @see {@link https://www.shipengine.com/docs/rates/} - This quick start guide shows you how to get shipping rates for multiple carriers so you can choose the fastest, cheapest, or most reliable option.
+     *
+     */
+    rates: Rates;
+    servicePoints: ServicePoints;
+    /**
+     * Shipments are at the center of the ShipEngine API.  A shipment is the first step in [creating a shipping label](https://www.shipengine.com/docs/labels/create-a-label/), or [creating a manifest](https://www.shipengine.com/docs/shipping/manifests/).  It's also essential for [getting shipping rates](https://www.shipengine.com/docs/rates/).
+     *
+     * @remarks
+     *
+     *
+     * @see {@link https://www.shipengine.com/docs/shipping/create-a-shipment/} - Learn about the shipment object model concept, and how to persist and re-use shipment data inside ShipEngine.
+     *
+     */
+    shipments: Shipments;
+    /**
+     * tags
+     *
+     * @remarks
+     *
+     */
+    tags: Tags;
+    tokens: Tokens;
+    /**
+     * [Track packages](https://www.shipengine.com/docs/tracking/) across any of our 20+ supported carrier accounts and create tracking events to keep your customers up-to-date. Easily integrate real-time tracking information for shipments into your app, email, or SMS.
+     *
+     * @remarks
+     *
+     *
+     * @see {@link https://www.shipengine.com/docs/tracking/} - Learn how to use ShipEngine to track any package with a carrier and a tracking number
+     */
+    tracking: Tracking;
+    /**
+     * warehouses
+     *
+     * @remarks
+     *
+     */
+    warehouses: Warehouses;
+    /**
+     * [Webhooks](https://www.shipengine.com/docs/tracking/webhooks/) are a powerful feature of ShipEngine that can save you from sending repeated polling requests to check on the state of something.  With webhooks, ShipEngine will automatically contact your servers when the stage changes.  This can include [parcel tracking](https://www.shipengine.com/docs/tracking/) events, notification of the completion of a [batch operation](https://www.shipengine.com/docs/labels/bulk/),  or new [salses orders](https://www.shipengine.com/docs/orders/).
+     *
+     * @remarks
+     *
+     *
+     * @see {@link https://www.shipengine.com/docs/tracking/webhooks/} - Learn how to setup webhooks and start listening to ShipEngine events.
+     */
+    webhooks: Webhooks;
+    _defaultClient: AxiosInstance;
+    _securityClient: AxiosInstance;
+    _serverURL: string;
+    private _language;
+    private _sdkVersion;
+    private _genVersion;
+    private _globals;
+    constructor(props?: SDKProps);
+}

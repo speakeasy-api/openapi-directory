@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Search API for 'Candidates' entry type
+ */
 export declare class TypeFeccandidates {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,10 @@ export declare class TypeFeccandidates {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * searchFeccandidates - Search API for 'Candidates' entry type
+     * Search API for 'Candidates' entry type
      *
+     * @remarks
      * API to search for entries of type Candidates
-    **/
+     */
     searchFeccandidates(req: operations.SearchFeccandidatesRequest, config?: AxiosRequestConfig): Promise<operations.SearchFeccandidatesResponse>;
 }

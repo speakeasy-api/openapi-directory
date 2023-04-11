@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostSetQueueAttributesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTSetQueueAttributesActionEnum {
     SetQueueAttributes = "SetQueueAttributes"
 }
-export declare enum PostSetQueueAttributesVersionEnum {
+export declare enum POSTSetQueueAttributesVersionEnum {
     TwoThousandAndTwelve1105 = "2012-11-05"
 }
-export declare class PostSetQueueAttributesQueryParams extends SpeakeasyBase {
-    action: PostSetQueueAttributesActionEnum;
-    version: PostSetQueueAttributesVersionEnum;
-}
-export declare class PostSetQueueAttributesHeaders extends SpeakeasyBase {
+export declare class POSTSetQueueAttributesRequest extends SpeakeasyBase {
+    action: POSTSetQueueAttributesActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTSetQueueAttributesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostSetQueueAttributesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostSetQueueAttributesRequest extends SpeakeasyBase {
-    queryParams: PostSetQueueAttributesQueryParams;
-    headers: PostSetQueueAttributesHeaders;
-    request?: Uint8Array;
-}
-export declare class PostSetQueueAttributesResponse extends SpeakeasyBase {
+export declare class POSTSetQueueAttributesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -30,6 +30,9 @@ export declare class ProfilesProfiles extends SpeakeasyBase {
     name?: string;
     profileConfig?: ProfilesProfilesProfileConfig;
 }
+/**
+ * successful operation
+ */
 export declare class Profiles extends SpeakeasyBase {
     profiles?: ProfilesProfiles[];
 }

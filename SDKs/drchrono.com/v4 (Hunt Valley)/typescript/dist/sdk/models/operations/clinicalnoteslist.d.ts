@@ -1,6 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ClinicalNotesListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ClinicalNotesListSecurity extends SpeakeasyBase {
+    drchronoOauth2: string;
+}
+export declare class ClinicalNotesListRequest extends SpeakeasyBase {
     cursor?: string;
     date?: string;
     dateRange?: string;
@@ -10,23 +14,29 @@ export declare class ClinicalNotesListQueryParams extends SpeakeasyBase {
     patient?: number;
     since?: string;
 }
-export declare class ClinicalNotesListSecurity extends SpeakeasyBase {
-    drchronoOauth2: shared.SchemeDrchronoOauth2;
-}
 /**
  * Paginated Result
-**/
-export declare class ClinicalNotesList200ApplicationJson extends SpeakeasyBase {
+ */
+export declare class ClinicalNotesList200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * result data
+     */
     data?: shared.ClinicalNote[];
+    /**
+     * Next Paginated page
+     */
     next?: string;
+    /**
+     * Previous paginated page
+     */
     previous?: string;
-}
-export declare class ClinicalNotesListRequest extends SpeakeasyBase {
-    queryParams: ClinicalNotesListQueryParams;
-    security: ClinicalNotesListSecurity;
 }
 export declare class ClinicalNotesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    clinicalNotesList200ApplicationJSONObject?: ClinicalNotesList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
+    clinicalNotesList200ApplicationJSONObject?: ClinicalNotesList200ApplicationJSON;
 }

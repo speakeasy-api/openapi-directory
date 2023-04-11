@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { PlatformStatusEnum } from "./platformstatusenum";
 /**
  * Summary information about a platform version.
-**/
+ */
 export declare class PlatformSummary extends SpeakeasyBase {
     operatingSystemName?: string;
     operatingSystemVersion?: string;

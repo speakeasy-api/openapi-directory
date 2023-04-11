@@ -1,642 +1,472 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { ApplicationsCreateRequest, ApplicationsCreateResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  ApplicationsCreateRequest,
+  ApplicationsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  GroupMembershipClaimsEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    azureAuth: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  }
-));
-    
+    azureAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
+  },
+});
+
 const req: ApplicationsCreateRequest = {
-  pathParams: {
-    tenantID: "sit",
-  },
-  queryParams: {
-    apiVersion: "voluptas",
-  },
-  request: {
-    applicationCreateParameters: {
-      allowGuestsSignIn: true,
-      allowPassthroughUsers: false,
-      appLogoUrl: "consequuntur",
-      appPermissions: [
-        "expedita",
-        "voluptas",
-      ],
-      appRoles: [
-        {
-          allowedMemberTypes: [
-            "nihil",
-          ],
-          description: "rerum",
-          displayName: "dicta",
-          id: "debitis",
-          isEnabled: true,
-          value: "et",
-        },
-      ],
-      availableToOtherTenants: false,
-      displayName: "dolorem",
-      errorUrl: "et",
-      groupMembershipClaims: "None",
-      homepage: "iste",
-      identifierUris: [
-        "totam",
-      ],
-      informationalUrls: {
-        marketing: "dolores",
-        privacy: "illum",
-        support: "debitis",
-        termsOfService: "vel",
+  applicationCreateParameters: {
+    allowGuestsSignIn: false,
+    allowPassthroughUsers: false,
+    appLogoUrl: "corrupti",
+    appPermissions: [
+      "distinctio",
+      "quibusdam",
+      "unde",
+    ],
+    appRoles: [
+      {
+        allowedMemberTypes: [
+          "illum",
+          "vel",
+          "error",
+        ],
+        description: "deserunt",
+        displayName: "suscipit",
+        id: "iure",
+        isEnabled: false,
+        value: "magnam",
       },
-      isDeviceOnlyAuthSupported: false,
-      keyCredentials: [
-        {
-          "aspernatur": {
-            "totam": "commodi",
-            "quis": "est",
-            "aut": "odit",
-          },
-          "non": {
-            "omnis": "aut",
-          },
-        },
-        {
-          "sed": {
-            "autem": "consectetur",
-            "nobis": "odio",
-          },
-        },
-      ],
-      knownClientApplications: [
-        "recusandae",
-      ],
-      logoutUrl: "at",
-      oauth2AllowImplicitFlow: false,
-      oauth2AllowUrlPathMatching: true,
-      oauth2Permissions: [
-        {
-          adminConsentDescription: "sint",
-          adminConsentDisplayName: "inventore",
-          id: "ut",
-          isEnabled: false,
-          type: "aut",
-          userConsentDescription: "reprehenderit",
-          userConsentDisplayName: "tempore",
-          value: "maiores",
-        },
-        {
-          adminConsentDescription: "incidunt",
-          adminConsentDisplayName: "dolor",
-          id: "beatae",
-          isEnabled: true,
-          type: "in",
-          userConsentDescription: "et",
-          userConsentDisplayName: "omnis",
-          value: "ipsum",
-        },
-      ],
-      oauth2RequirePostResponse: true,
-      optionalClaims: {
-        accessToken: [
-          {
-            additionalProperties: {
-              "vel": "rerum",
-            },
-            essential: true,
-            name: "voluptas",
-            source: "quam",
-          },
-          {
-            additionalProperties: {
-              "qui": "qui",
-            },
-            essential: false,
-            name: "in",
-            source: "autem",
-          },
-          {
-            additionalProperties: {
-              "ut": "itaque",
-            },
-            essential: false,
-            name: "neque",
-            source: "ullam",
-          },
+      {
+        allowedMemberTypes: [
+          "ipsa",
+          "delectus",
+          "tempora",
+          "suscipit",
         ],
-        idToken: [
-          {
-            additionalProperties: {
-              "esse": "architecto",
-              "quam": "velit",
-              "cumque": "soluta",
-            },
-            essential: true,
-            name: "voluptates",
-            source: "magni",
-          },
-          {
-            additionalProperties: {
-              "optio": "qui",
-              "earum": "illo",
-              "omnis": "ut",
-            },
-            essential: false,
-            name: "dolor",
-            source: "commodi",
-          },
-          {
-            additionalProperties: {
-              "reprehenderit": "consectetur",
-            },
-            essential: true,
-            name: "ut",
-            source: "laboriosam",
-          },
-        ],
-        samlToken: [
-          {
-            additionalProperties: {
-              "soluta": "aut",
-            },
-            essential: true,
-            name: "consequuntur",
-            source: "laudantium",
-          },
-          {
-            additionalProperties: {
-              "ipsa": "expedita",
-            },
-            essential: false,
-            name: "perferendis",
-            source: "atque",
-          },
-          {
-            additionalProperties: {
-              "quisquam": "explicabo",
-            },
-            essential: true,
-            name: "maxime",
-            source: "eum",
-          },
-        ],
+        description: "molestiae",
+        displayName: "minus",
+        id: "placeat",
+        isEnabled: false,
+        value: "voluptatum",
       },
-      orgRestrictions: [
-        "et",
-        "rerum",
-      ],
-      passwordCredentials: [
-        {
-          "cumque": {
-            "necessitatibus": "est",
-          },
-          "quis": {
-            "labore": "et",
-          },
-          "impedit": {
-            "expedita": "vel",
-            "qui": "modi",
-            "nihil": "tempora",
-          },
-        },
-        {
-          "eaque": {
-            "sit": "autem",
-            "quis": "vel",
-          },
-        },
-        {
-          "placeat": {
-            "nisi": "quis",
-          },
-          "adipisci": {
-            "rerum": "et",
-            "accusamus": "numquam",
-            "laborum": "rerum",
-          },
-        },
-      ],
-      preAuthorizedApplications: [
-        {
-          appId: "laborum",
-          extensions: [
-            {
-              conditions: [
-                "minus",
-                "soluta",
-                "aperiam",
-              ],
-            },
-          ],
-          permissions: [
-            {
-              accessGrants: [
-                "mollitia",
-              ],
-              directAccessGrant: true,
-            },
-            {
-              accessGrants: [
-                "ipsa",
-              ],
-              directAccessGrant: false,
-            },
-            {
-              accessGrants: [
-                "ut",
-                "aliquam",
-              ],
-              directAccessGrant: false,
-            },
-          ],
-        },
-        {
-          appId: "sed",
-          extensions: [
-            {
-              conditions: [
-                "consequuntur",
-                "non",
-                "cupiditate",
-              ],
-            },
-            {
-              conditions: [
-                "molestiae",
-                "pariatur",
-                "quasi",
-              ],
-            },
-            {
-              conditions: [
-                "enim",
-                "qui",
-                "sit",
-              ],
-            },
-          ],
-          permissions: [
-            {
-              accessGrants: [
-                "neque",
-                "consequuntur",
-              ],
-              directAccessGrant: true,
-            },
-            {
-              accessGrants: [
-                "est",
-                "occaecati",
-              ],
-              directAccessGrant: false,
-            },
-            {
-              accessGrants: [
-                "quia",
-                "temporibus",
-              ],
-              directAccessGrant: false,
-            },
-          ],
-        },
-      ],
-      publicClient: false,
-      publisherDomain: "est",
-      replyUrls: [
-        "necessitatibus",
-        "in",
-        "possimus",
-      ],
-      requiredResourceAccess: [
-        {
-          "doloribus": {
-            "sunt": "earum",
-            "et": "ut",
-            "asperiores": "et",
-          },
-        },
-        {
-          "ipsum": {
-            "voluptas": "nihil",
-          },
-        },
-        {
-          "suscipit": {
-            "non": "magnam",
-            "ut": "possimus",
-          },
-        },
-      ],
-      samlMetadataUrl: "illo",
-      signInAudience: "qui",
-      wwwHomepage: "quia",
+      {
+        allowedMemberTypes: [
+          "excepturi",
+          "nisi",
+        ],
+        description: "recusandae",
+        displayName: "temporibus",
+        id: "ab",
+        isEnabled: false,
+        value: "quis",
+      },
+      {
+        allowedMemberTypes: [
+          "deserunt",
+        ],
+        description: "perferendis",
+        displayName: "ipsam",
+        id: "repellendus",
+        isEnabled: false,
+        value: "sapiente",
+      },
+    ],
+    availableToOtherTenants: false,
+    displayName: "quo",
+    errorUrl: "odit",
+    groupMembershipClaims: GroupMembershipClaimsEnum.All,
+    homepage: "at",
+    identifierUris: [
+      "molestiae",
+      "quod",
+      "quod",
+      "esse",
+    ],
+    informationalUrls: {
+      marketing: "totam",
+      privacy: "porro",
+      support: "dolorum",
+      termsOfService: "dicta",
     },
-    applicationCreateParameters1: {
-      allowGuestsSignIn: false,
-      allowPassthroughUsers: false,
-      appLogoUrl: "enim",
-      appPermissions: [
-        "distinctio",
-        "delectus",
-      ],
-      appRoles: [
-        {
-          allowedMemberTypes: [
-            "repellat",
-            "velit",
-          ],
-          description: "officia",
-          displayName: "modi",
-          id: "sunt",
-          isEnabled: false,
-          value: "amet",
+    isDeviceOnlyAuthSupported: false,
+    keyCredentials: [
+      {
+        "occaecati": {
+          "deleniti": "hic",
         },
-        {
-          allowedMemberTypes: [
-            "a",
-            "qui",
-            "excepturi",
-          ],
-          description: "autem",
-          displayName: "corporis",
-          id: "dicta",
-          isEnabled: true,
-          value: "doloremque",
+        "optio": {
+          "beatae": "commodi",
+          "molestiae": "modi",
+          "qui": "impedit",
         },
-      ],
-      availableToOtherTenants: false,
-      displayName: "nisi",
-      errorUrl: "recusandae",
-      groupMembershipClaims: "None",
-      homepage: "minus",
-      identifierUris: [
-        "rerum",
-        "ut",
-        "rem",
-      ],
-      informationalUrls: {
-        marketing: "eos",
-        privacy: "et",
-        support: "reiciendis",
-        termsOfService: "aspernatur",
+        "cum": {
+          "ipsum": "excepturi",
+          "aspernatur": "perferendis",
+        },
       },
-      isDeviceOnlyAuthSupported: true,
-      keyCredentials: [
-        {
-          "adipisci": {
-            "illum": "accusantium",
-            "atque": "amet",
-            "nisi": "quidem",
-          },
+      {
+        "natus": {
+          "iste": "dolor",
         },
-        {
-          "quo": {
-            "alias": "totam",
-            "deserunt": "eius",
-          },
-          "repellat": {
-            "omnis": "totam",
-            "aut": "et",
-            "magni": "necessitatibus",
-          },
+        "natus": {
+          "hic": "saepe",
+          "fuga": "in",
         },
-        {
-          "culpa": {
-            "voluptas": "ut",
-          },
-          "veniam": {
-            "molestias": "rerum",
-            "quo": "et",
-          },
-        },
-      ],
-      knownClientApplications: [
-        "commodi",
-        "in",
-        "quibusdam",
-      ],
-      logoutUrl: "asperiores",
-      oauth2AllowImplicitFlow: false,
-      oauth2AllowUrlPathMatching: true,
-      oauth2Permissions: [
-        {
-          adminConsentDescription: "tempora",
-          adminConsentDisplayName: "commodi",
-          id: "blanditiis",
-          isEnabled: true,
-          type: "in",
-          userConsentDescription: "et",
-          userConsentDisplayName: "odit",
-          value: "est",
-        },
-      ],
-      oauth2RequirePostResponse: true,
-      optionalClaims: {
-        accessToken: [
-          {
-            additionalProperties: {
-              "perspiciatis": "et",
-            },
-            essential: true,
-            name: "voluptatem",
-            source: "ex",
-          },
-        ],
-        idToken: [
-          {
-            additionalProperties: {
-              "distinctio": "cumque",
-              "ea": "non",
-            },
-            essential: false,
-            name: "nam",
-            source: "beatae",
-          },
-          {
-            additionalProperties: {
-              "qui": "magni",
-            },
-            essential: true,
-            name: "sit",
-            source: "aut",
-          },
-          {
-            additionalProperties: {
-              "iusto": "quia",
-            },
-            essential: false,
-            name: "debitis",
-            source: "autem",
-          },
-        ],
-        samlToken: [
-          {
-            additionalProperties: {
-              "ut": "non",
-              "nihil": "laborum",
-              "recusandae": "nihil",
-            },
-            essential: false,
-            name: "iste",
-            source: "perferendis",
-          },
-          {
-            additionalProperties: {
-              "autem": "hic",
-              "voluptatem": "omnis",
-              "libero": "qui",
-            },
-            essential: false,
-            name: "minus",
-            source: "nostrum",
-          },
-        ],
       },
-      orgRestrictions: [
-        "sit",
-        "repellat",
-      ],
-      passwordCredentials: [
+      {
+        "iste": {
+          "saepe": "quidem",
+          "architecto": "ipsa",
+        },
+        "reiciendis": {
+          "mollitia": "laborum",
+          "dolores": "dolorem",
+          "corporis": "explicabo",
+        },
+      },
+    ],
+    knownClientApplications: [
+      "enim",
+      "omnis",
+      "nemo",
+      "minima",
+    ],
+    logoutUrl: "excepturi",
+    oauth2AllowImplicitFlow: false,
+    oauth2AllowUrlPathMatching: false,
+    oauth2Permissions: [
+      {
+        adminConsentDescription: "iure",
+        adminConsentDisplayName: "culpa",
+        id: "doloribus",
+        isEnabled: false,
+        type: "sapiente",
+        userConsentDescription: "architecto",
+        userConsentDisplayName: "mollitia",
+        value: "dolorem",
+      },
+    ],
+    oauth2RequirePostResponse: false,
+    optionalClaims: {
+      accessToken: [
         {
-          "laboriosam": {
-            "ea": "tempore",
-            "fugit": "aut",
+          additionalProperties: {
+            "repellat": "mollitia",
           },
-        },
-      ],
-      preAuthorizedApplications: [
-        {
-          appId: "aliquid",
-          extensions: [
-            {
-              conditions: [
-                "magni",
-                "recusandae",
-                "illum",
-              ],
-            },
-            {
-              conditions: [
-                "dolores",
-                "hic",
-              ],
-            },
-          ],
-          permissions: [
-            {
-              accessGrants: [
-                "ex",
-                "iure",
-                "et",
-              ],
-              directAccessGrant: false,
-            },
-            {
-              accessGrants: [
-                "explicabo",
-              ],
-              directAccessGrant: false,
-            },
-          ],
+          essential: false,
+          name: "occaecati",
+          source: "numquam",
         },
         {
-          appId: "veniam",
-          extensions: [
-            {
-              conditions: [
-                "odit",
-                "molestias",
-                "corporis",
-              ],
-            },
-          ],
-          permissions: [
-            {
-              accessGrants: [
-                "similique",
-                "mollitia",
-              ],
-              directAccessGrant: false,
-            },
-            {
-              accessGrants: [
-                "quam",
-                "maiores",
-                "totam",
-              ],
-              directAccessGrant: false,
-            },
-            {
-              accessGrants: [
-                "repellendus",
-                "sunt",
-              ],
-              directAccessGrant: true,
-            },
-          ],
-        },
-        {
-          appId: "earum",
-          extensions: [
-            {
-              conditions: [
-                "aut",
-                "dolor",
-                "quia",
-              ],
-            },
-          ],
-          permissions: [
-            {
-              accessGrants: [
-                "et",
-                "expedita",
-              ],
-              directAccessGrant: true,
-            },
-            {
-              accessGrants: [
-                "qui",
-              ],
-              directAccessGrant: false,
-            },
-          ],
-        },
-      ],
-      publicClient: true,
-      publisherDomain: "cupiditate",
-      replyUrls: [
-        "saepe",
-        "sed",
-        "voluptatem",
-      ],
-      requiredResourceAccess: [
-        {
-          "nesciunt": {
-            "qui": "quis",
-            "eligendi": "velit",
-            "fuga": "aliquid",
+          additionalProperties: {
+            "quam": "molestiae",
+            "velit": "error",
           },
-          "vero": {
-            "et": "voluptatem",
-          },
+          essential: false,
+          name: "quia",
+          source: "quis",
         },
         {
-          "quae": {
-            "vitae": "rerum",
+          additionalProperties: {
+            "laborum": "animi",
           },
+          essential: false,
+          name: "enim",
+          source: "odit",
         },
       ],
-      samlMetadataUrl: "officiis",
-      signInAudience: "commodi",
-      wwwHomepage: "sed",
+      idToken: [
+        {
+          additionalProperties: {
+            "tenetur": "ipsam",
+          },
+          essential: false,
+          name: "id",
+          source: "possimus",
+        },
+        {
+          additionalProperties: {
+            "quasi": "error",
+          },
+          essential: false,
+          name: "temporibus",
+          source: "laborum",
+        },
+        {
+          additionalProperties: {
+            "reiciendis": "voluptatibus",
+          },
+          essential: false,
+          name: "vero",
+          source: "nihil",
+        },
+        {
+          additionalProperties: {
+            "voluptatibus": "ipsa",
+            "omnis": "voluptate",
+            "cum": "perferendis",
+          },
+          essential: false,
+          name: "doloremque",
+          source: "reprehenderit",
+        },
+      ],
+      samlToken: [
+        {
+          additionalProperties: {
+            "dicta": "corporis",
+            "dolore": "iusto",
+            "dicta": "harum",
+            "enim": "accusamus",
+          },
+          essential: false,
+          name: "commodi",
+          source: "repudiandae",
+        },
+        {
+          additionalProperties: {
+            "ipsum": "quidem",
+          },
+          essential: false,
+          name: "molestias",
+          source: "excepturi",
+        },
+      ],
     },
+    orgRestrictions: [
+      "modi",
+      "praesentium",
+      "rem",
+      "voluptates",
+    ],
+    passwordCredentials: [
+      {
+        "sint": {
+          "itaque": "incidunt",
+        },
+        "enim": {
+          "est": "quibusdam",
+        },
+        "explicabo": {
+          "distinctio": "quibusdam",
+          "labore": "modi",
+          "qui": "aliquid",
+        },
+        "cupiditate": {
+          "perferendis": "magni",
+          "assumenda": "ipsam",
+          "alias": "fugit",
+        },
+      },
+    ],
+    preAuthorizedApplications: [
+      {
+        appId: "excepturi",
+        extensions: [
+          {
+            conditions: [
+              "tempore",
+              "labore",
+              "delectus",
+            ],
+          },
+          {
+            conditions: [
+              "non",
+              "eligendi",
+            ],
+          },
+        ],
+        permissions: [
+          {
+            accessGrants: [
+              "provident",
+              "necessitatibus",
+            ],
+            directAccessGrant: false,
+          },
+          {
+            accessGrants: [
+              "officia",
+              "dolor",
+              "debitis",
+            ],
+            directAccessGrant: false,
+          },
+          {
+            accessGrants: [
+              "dolorum",
+              "in",
+              "in",
+              "illum",
+            ],
+            directAccessGrant: false,
+          },
+        ],
+      },
+      {
+        appId: "maiores",
+        extensions: [
+          {
+            conditions: [
+              "magnam",
+            ],
+          },
+          {
+            conditions: [
+              "facere",
+              "ea",
+              "aliquid",
+              "laborum",
+            ],
+          },
+          {
+            conditions: [
+              "non",
+              "occaecati",
+              "enim",
+              "accusamus",
+            ],
+          },
+        ],
+        permissions: [
+          {
+            accessGrants: [
+              "provident",
+              "nam",
+              "id",
+            ],
+            directAccessGrant: false,
+          },
+          {
+            accessGrants: [
+              "deleniti",
+              "sapiente",
+              "amet",
+            ],
+            directAccessGrant: false,
+          },
+          {
+            accessGrants: [
+              "nisi",
+              "vel",
+              "natus",
+            ],
+            directAccessGrant: false,
+          },
+          {
+            accessGrants: [
+              "molestiae",
+              "perferendis",
+              "nihil",
+            ],
+            directAccessGrant: false,
+          },
+        ],
+      },
+      {
+        appId: "magnam",
+        extensions: [
+          {
+            conditions: [
+              "labore",
+              "labore",
+              "suscipit",
+            ],
+          },
+          {
+            conditions: [
+              "nobis",
+              "eum",
+              "vero",
+            ],
+          },
+          {
+            conditions: [
+              "architecto",
+            ],
+          },
+        ],
+        permissions: [
+          {
+            accessGrants: [
+              "excepturi",
+            ],
+            directAccessGrant: false,
+          },
+          {
+            accessGrants: [
+              "provident",
+              "quos",
+            ],
+            directAccessGrant: false,
+          },
+        ],
+      },
+    ],
+    publicClient: false,
+    publisherDomain: "sint",
+    replyUrls: [
+      "mollitia",
+    ],
+    requiredResourceAccess: [
+      {
+        "ad": {
+          "dolor": "necessitatibus",
+          "odit": "nemo",
+        },
+        "quasi": {
+          "doloribus": "debitis",
+          "eius": "maxime",
+        },
+        "deleniti": {
+          "in": "architecto",
+          "architecto": "repudiandae",
+          "ullam": "expedita",
+        },
+      },
+      {
+        "repellat": {
+          "sed": "saepe",
+          "pariatur": "accusantium",
+          "consequuntur": "praesentium",
+          "natus": "magni",
+        },
+        "sunt": {
+          "illum": "pariatur",
+          "maxime": "ea",
+          "excepturi": "odit",
+          "ea": "accusantium",
+        },
+      },
+      {
+        "maiores": {
+          "ipsam": "voluptate",
+          "autem": "nam",
+          "eaque": "pariatur",
+        },
+      },
+      {
+        "voluptatibus": {
+          "fugiat": "amet",
+        },
+        "aut": {
+          "corporis": "hic",
+          "libero": "nobis",
+          "dolores": "quis",
+          "totam": "dignissimos",
+        },
+      },
+    ],
+    samlMetadataUrl: "eaque",
+    signInAudience: "quis",
+    wwwHomepage: "nesciunt",
   },
+  apiVersion: "eos",
+  tenantID: "perferendis",
 };
 
 sdk.application.applicationsCreate(req).then((res: ApplicationsCreateResponse | AxiosError) => {

@@ -1,15 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AppsCreateFromManifestPathParams extends SpeakeasyBase {
-    code: string;
-}
+import { AxiosResponse } from "axios";
 export declare class AppsCreateFromManifestRequest extends SpeakeasyBase {
-    pathParams: AppsCreateFromManifestPathParams;
+    code: string;
 }
 export declare class AppsCreateFromManifestResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Response
+     */
     gitHubApp?: Record<string, any>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Resource not found
+     */
     basicError?: shared.BasicError;
+    /**
+     * Validation failed, or the endpoint has been spammed.
+     */
     validationErrorSimple?: shared.ValidationErrorSimple;
 }

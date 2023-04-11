@@ -1,6 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class ApIs {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+export declare class APIs {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,147 +9,171 @@ export declare class ApIs {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * cmcer - Community Certificate
+     * Community Certificate
      *
+     * @remarks
      * API to verify Community Certificate.
-    **/
-    cmcer(req: operations.CmcerRequest, config?: AxiosRequestConfig): Promise<operations.CmcerResponse>;
+     */
+    cmcer(req: operations.CmcerRequestBody, security: operations.CmcerSecurity, config?: AxiosRequestConfig): Promise<operations.CmcerResponse>;
     /**
-     * cncer - Conversion Certificate
+     * Conversion Certificate
      *
+     * @remarks
      * API to verify Conversion Certificate.
-    **/
-    cncer(req: operations.CncerRequest, config?: AxiosRequestConfig): Promise<operations.CncerResponse>;
+     */
+    cncer(req: operations.CncerRequestBody, security: operations.CncerSecurity, config?: AxiosRequestConfig): Promise<operations.CncerResponse>;
     /**
-     * ctcer - Caste Certificate
+     * Caste Certificate
      *
+     * @remarks
      * API to verify Caste Certificate.
-    **/
-    ctcer(req: operations.CtcerRequest, config?: AxiosRequestConfig): Promise<operations.CtcerResponse>;
+     */
+    ctcer(req: operations.CtcerRequestBody, security: operations.CtcerSecurity, config?: AxiosRequestConfig): Promise<operations.CtcerResponse>;
     /**
-     * dmcer - Domicile Certificate
+     * Domicile Certificate
      *
+     * @remarks
      * API to verify Domicile Certificate.
-    **/
-    dmcer(req: operations.DmcerRequest, config?: AxiosRequestConfig): Promise<operations.DmcerResponse>;
+     */
+    dmcer(req: operations.DmcerRequestBody, security: operations.DmcerSecurity, config?: AxiosRequestConfig): Promise<operations.DmcerResponse>;
     /**
-     * dpcer - Dependency Certificate
+     * Dependency Certificate
      *
+     * @remarks
      * API to verify Dependency Certificate.
-    **/
-    dpcer(req: operations.DpcerRequest, config?: AxiosRequestConfig): Promise<operations.DpcerResponse>;
+     */
+    dpcer(req: operations.DpcerRequestBody, security: operations.DpcerSecurity, config?: AxiosRequestConfig): Promise<operations.DpcerResponse>;
     /**
-     * dscer - Destitute Certificate
+     * Destitute Certificate
      *
+     * @remarks
      * API to verify Destitute Certificate.
-    **/
-    dscer(req: operations.DscerRequest, config?: AxiosRequestConfig): Promise<operations.DscerResponse>;
+     */
+    dscer(req: operations.DscerRequestBody, security: operations.DscerSecurity, config?: AxiosRequestConfig): Promise<operations.DscerResponse>;
     /**
-     * fmcer - Family Membership Certificate
+     * Family Membership Certificate
      *
+     * @remarks
      * API to verify Family Membership Certificate.
-    **/
-    fmcer(req: operations.FmcerRequest, config?: AxiosRequestConfig): Promise<operations.FmcerResponse>;
+     */
+    fmcer(req: operations.FmcerRequestBody, security: operations.FmcerSecurity, config?: AxiosRequestConfig): Promise<operations.FmcerResponse>;
     /**
-     * idcer - Identification Certificate
+     * Identification Certificate
      *
+     * @remarks
      * API to verify Identification Certificate.
-    **/
-    idcer(req: operations.IdcerRequest, config?: AxiosRequestConfig): Promise<operations.IdcerResponse>;
+     */
+    idcer(req: operations.IdcerRequestBody, security: operations.IdcerSecurity, config?: AxiosRequestConfig): Promise<operations.IdcerResponse>;
     /**
-     * imcer - Inter-Caste Marriage Certificate
+     * Inter-Caste Marriage Certificate
      *
+     * @remarks
      * API to verify Inter-Caste Marriage Certificate.
-    **/
-    imcer(req: operations.ImcerRequest, config?: AxiosRequestConfig): Promise<operations.ImcerResponse>;
+     */
+    imcer(req: operations.ImcerRequestBody, security: operations.ImcerSecurity, config?: AxiosRequestConfig): Promise<operations.ImcerResponse>;
     /**
-     * incer - Income Certificate
+     * Income Certificate
      *
+     * @remarks
      * API to verify Income Certificate.
-    **/
-    incer(req: operations.IncerRequest, config?: AxiosRequestConfig): Promise<operations.IncerResponse>;
+     */
+    incer(req: operations.IncerRequestBody, security: operations.IncerSecurity, config?: AxiosRequestConfig): Promise<operations.IncerResponse>;
     /**
-     * lfcer - Life Certificate
+     * Life Certificate
      *
+     * @remarks
      * API to verify Life Certificate.
-    **/
-    lfcer(req: operations.LfcerRequest, config?: AxiosRequestConfig): Promise<operations.LfcerResponse>;
+     */
+    lfcer(req: operations.LfcerRequestBody, security: operations.LfcerSecurity, config?: AxiosRequestConfig): Promise<operations.LfcerResponse>;
     /**
-     * lhcer - Legal Heir Certificate
+     * Legal Heir Certificate
      *
+     * @remarks
      * API to verify Legal Heir Certificate.
-    **/
-    lhcer(req: operations.LhcerRequest, config?: AxiosRequestConfig): Promise<operations.LhcerResponse>;
+     */
+    lhcer(req: operations.LhcerRequestBody, security: operations.LhcerSecurity, config?: AxiosRequestConfig): Promise<operations.LhcerResponse>;
     /**
-     * locer - Location Certificate
+     * Location Certificate
      *
+     * @remarks
      * API to verify Location Certificate.
-    **/
-    locer(req: operations.LocerRequest, config?: AxiosRequestConfig): Promise<operations.LocerResponse>;
+     */
+    locer(req: operations.LocerRequestBody, security: operations.LocerSecurity, config?: AxiosRequestConfig): Promise<operations.LocerResponse>;
     /**
-     * mncer - Minority Certificate
+     * Minority Certificate
      *
+     * @remarks
      * API to verify Minority Certificate.
-    **/
-    mncer(req: operations.MncerRequest, config?: AxiosRequestConfig): Promise<operations.MncerResponse>;
+     */
+    mncer(req: operations.MncerRequestBody, security: operations.MncerSecurity, config?: AxiosRequestConfig): Promise<operations.MncerResponse>;
     /**
-     * nrcer - Non-Remarriage Certificate
+     * Non-Remarriage Certificate
      *
+     * @remarks
      * API to verify Non-Remarriage Certificate.
-    **/
-    nrcer(req: operations.NrcerRequest, config?: AxiosRequestConfig): Promise<operations.NrcerResponse>;
+     */
+    nrcer(req: operations.NrcerRequestBody, security: operations.NrcerSecurity, config?: AxiosRequestConfig): Promise<operations.NrcerResponse>;
     /**
-     * ntcer - Nativity Certificate
+     * Nativity Certificate
      *
+     * @remarks
      * API to verify Nativity Certificate.
-    **/
-    ntcer(req: operations.NtcerRequest, config?: AxiosRequestConfig): Promise<operations.NtcerResponse>;
+     */
+    ntcer(req: operations.NtcerRequestBody, security: operations.NtcerSecurity, config?: AxiosRequestConfig): Promise<operations.NtcerResponse>;
     /**
-     * oscer - One and the Same Certificate
+     * One and the Same Certificate
      *
+     * @remarks
      * API to verify One and the Same Certificate.
-    **/
-    oscer(req: operations.OscerRequest, config?: AxiosRequestConfig): Promise<operations.OscerResponse>;
+     */
+    oscer(req: operations.OscerRequestBody, security: operations.OscerSecurity, config?: AxiosRequestConfig): Promise<operations.OscerResponse>;
     /**
-     * pncer - Possession and Non-Attachment Certificate
+     * Possession and Non-Attachment Certificate
      *
+     * @remarks
      * API to verify Possession and Non-Attachment Certificate.
-    **/
-    pncer(req: operations.PncerRequest, config?: AxiosRequestConfig): Promise<operations.PncerResponse>;
+     */
+    pncer(req: operations.PncerRequestBody, security: operations.PncerSecurity, config?: AxiosRequestConfig): Promise<operations.PncerResponse>;
     /**
-     * pscer - Possession Certificate
+     * Possession Certificate
      *
+     * @remarks
      * API to verify Possession Certificate.
-    **/
-    pscer(req: operations.PscerRequest, config?: AxiosRequestConfig): Promise<operations.PscerResponse>;
+     */
+    pscer(req: operations.PscerRequestBody, security: operations.PscerSecurity, config?: AxiosRequestConfig): Promise<operations.PscerResponse>;
     /**
-     * rlcer - Relationship Certificate
+     * Relationship Certificate
      *
+     * @remarks
      * API to verify Relationship Certificate.
-    **/
-    rlcer(req: operations.RlcerRequest, config?: AxiosRequestConfig): Promise<operations.RlcerResponse>;
+     */
+    rlcer(req: operations.RlcerRequestBody, security: operations.RlcerSecurity, config?: AxiosRequestConfig): Promise<operations.RlcerResponse>;
     /**
-     * rscer - Residence Certificate
+     * Residence Certificate
      *
+     * @remarks
      * API to verify Residence Certificate.
-    **/
-    rscer(req: operations.RscerRequest, config?: AxiosRequestConfig): Promise<operations.RscerResponse>;
+     */
+    rscer(req: operations.RscerRequestBody, security: operations.RscerSecurity, config?: AxiosRequestConfig): Promise<operations.RscerResponse>;
     /**
-     * slcer - Solvency Certificate
+     * Solvency Certificate
      *
+     * @remarks
      * API to verify Solvency Certificate.
-    **/
-    slcer(req: operations.SlcerRequest, config?: AxiosRequestConfig): Promise<operations.SlcerResponse>;
+     */
+    slcer(req: operations.SlcerRequestBody, security: operations.SlcerSecurity, config?: AxiosRequestConfig): Promise<operations.SlcerResponse>;
     /**
-     * vlcer - Valuation Certificate
+     * Valuation Certificate
      *
+     * @remarks
      * API to verify Valuation Certificate.
-    **/
-    vlcer(req: operations.VlcerRequest, config?: AxiosRequestConfig): Promise<operations.VlcerResponse>;
+     */
+    vlcer(req: operations.VlcerRequestBody, security: operations.VlcerSecurity, config?: AxiosRequestConfig): Promise<operations.VlcerResponse>;
     /**
-     * wwcer - Widow-Widower Certificate
+     * Widow-Widower Certificate
      *
+     * @remarks
      * API to verify Widow-Widower Certificate.
-    **/
-    wwcer(req: operations.WwcerRequest, config?: AxiosRequestConfig): Promise<operations.WwcerResponse>;
+     */
+    wwcer(req: operations.WwcerRequestBody, security: operations.WwcerSecurity, config?: AxiosRequestConfig): Promise<operations.WwcerResponse>;
 }

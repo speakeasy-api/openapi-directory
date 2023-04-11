@@ -1,5 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { PostSequenceSetRequest } from "./postsequencesetrequest";
-export declare class PostSequenceSetsRequest extends SpeakeasyBase {
-    sequenceSets?: PostSequenceSetRequest[];
+import { POSTSequenceSetRequest } from "./postsequencesetrequest";
+export declare class POSTSequenceSetsRequest extends SpeakeasyBase {
+    /**
+     * Array of sequence sets configured for billing documents, payments, and refunds.
+     *
+     * @remarks
+     *
+     */
+    sequenceSets?: POSTSequenceSetRequest[];
 }

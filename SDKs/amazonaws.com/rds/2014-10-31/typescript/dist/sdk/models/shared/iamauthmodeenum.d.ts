@@ -1,4 +1,5 @@
-export declare enum IamAuthModeEnum {
+export declare enum IAMAuthModeEnum {
     Disabled = "DISABLED",
-    Required = "REQUIRED"
+    Required = "REQUIRED",
+    Enabled = "ENABLED"
 }

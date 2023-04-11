@@ -1,25 +1,36 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetBng2latlongEastingNorthingPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetBng2latlongEastingNorthingRequest extends SpeakeasyBase {
+    /**
+     * An OSGB36 (British National Grid) easting.
+     */
     easting: number;
+    /**
+     * An OSGB36 (British National Grid) northing.
+     */
     northing: number;
 }
-export declare enum GetBng2latlongEastingNorthing200ApplicationJsonStatusEnum {
+export declare enum GetBng2latlongEastingNorthing200ApplicationJSONStatusEnum {
     Ok = "ok",
     Error = "error"
 }
-export declare class GetBng2latlongEastingNorthing200ApplicationJson extends SpeakeasyBase {
+/**
+ * A JSON object containing the original easting and northing, and the converted latitude and longitude.
+ */
+export declare class GetBng2latlongEastingNorthing200ApplicationJSON extends SpeakeasyBase {
     easting?: number;
     error?: string;
     latitude?: number;
     longitude?: number;
     northing?: number;
-    status?: GetBng2latlongEastingNorthing200ApplicationJsonStatusEnum;
-}
-export declare class GetBng2latlongEastingNorthingRequest extends SpeakeasyBase {
-    pathParams: GetBng2latlongEastingNorthingPathParams;
+    status?: GetBng2latlongEastingNorthing200ApplicationJSONStatusEnum;
 }
 export declare class GetBng2latlongEastingNorthingResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getBng2latlongEastingNorthing200ApplicationJSONObject?: GetBng2latlongEastingNorthing200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * A JSON object containing the original easting and northing, and the converted latitude and longitude.
+     */
+    getBng2latlongEastingNorthing200ApplicationJSONObject?: GetBng2latlongEastingNorthing200ApplicationJSON;
 }

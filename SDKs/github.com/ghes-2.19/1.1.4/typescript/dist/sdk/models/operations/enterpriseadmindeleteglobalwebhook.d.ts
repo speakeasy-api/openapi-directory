@@ -1,15 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class EnterpriseAdminDeleteGlobalWebhookPathParams extends SpeakeasyBase {
-    hookId: number;
-}
-export declare class EnterpriseAdminDeleteGlobalWebhookHeaders extends SpeakeasyBase {
-    accept: string;
-}
+import { AxiosResponse } from "axios";
 export declare class EnterpriseAdminDeleteGlobalWebhookRequest extends SpeakeasyBase {
-    pathParams: EnterpriseAdminDeleteGlobalWebhookPathParams;
-    headers: EnterpriseAdminDeleteGlobalWebhookHeaders;
+    /**
+     * This API is under preview and subject to change.
+     */
+    accept: string;
+    hookId: number;
 }
 export declare class EnterpriseAdminDeleteGlobalWebhookResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

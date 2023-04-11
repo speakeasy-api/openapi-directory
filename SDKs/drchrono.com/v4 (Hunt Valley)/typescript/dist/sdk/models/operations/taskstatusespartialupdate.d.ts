@@ -1,20 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class TaskStatusesPartialUpdatePathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class TaskStatusesPartialUpdateQueryParams extends SpeakeasyBase {
-    since?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class TaskStatusesPartialUpdateSecurity extends SpeakeasyBase {
-    drchronoOauth2: shared.SchemeDrchronoOauth2;
+    drchronoOauth2: string;
 }
 export declare class TaskStatusesPartialUpdateRequest extends SpeakeasyBase {
-    pathParams: TaskStatusesPartialUpdatePathParams;
-    queryParams: TaskStatusesPartialUpdateQueryParams;
-    security: TaskStatusesPartialUpdateSecurity;
+    id: string;
+    since?: string;
 }
 export declare class TaskStatusesPartialUpdateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

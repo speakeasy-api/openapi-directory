@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { OptionRestrictionRegex } from "./optionrestrictionregex";
 import { ConfigurationOptionValueTypeEnum } from "./configurationoptionvaluetypeenum";
+import { OptionRestrictionRegex } from "./optionrestrictionregex";
 /**
  * Describes the possible values for a configuration option.
-**/
+ */
 export declare class ConfigurationOptionDescription extends SpeakeasyBase {
     changeSeverity?: string;
     defaultValue?: string;

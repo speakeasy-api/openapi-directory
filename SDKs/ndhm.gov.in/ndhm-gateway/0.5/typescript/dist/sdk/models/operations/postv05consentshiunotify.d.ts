@@ -1,16 +1,28 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PostV05ConsentsHiuNotifyHeaders extends SpeakeasyBase {
-    authorization: string;
-    xHIUID: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PostV05ConsentsHiuNotifyRequest extends SpeakeasyBase {
-    headers: PostV05ConsentsHiuNotifyHeaders;
-    request: shared.HiuConsentNotificationEvent;
+    /**
+     * Access token which was issued after successful login with gateway auth server.
+     */
+    authorization: string;
+    hiuConsentNotificationEvent: shared.HIUConsentNotificationEvent;
+    /**
+     * Identifier of the health information user to which the request was intended.
+     */
+    xHiuId: string;
 }
 export declare class PostV05ConsentsHiuNotifyResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
+    /**
+     * **Causes:**
+     *
+     * @remarks
+     *   * Invalid/Expired/Empty token.
+     *
+     */
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

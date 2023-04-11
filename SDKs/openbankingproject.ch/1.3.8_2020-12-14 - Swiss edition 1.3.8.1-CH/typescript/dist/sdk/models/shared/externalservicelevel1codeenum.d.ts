@@ -1,3 +1,6 @@
+/**
+ * Specifies the external service level code in the format of character string with a maximum length of 4 characters.
+ */
 export declare enum ExternalServiceLevel1CodeEnum {
     Sepa = "SEPA",
     Prpt = "PRPT",

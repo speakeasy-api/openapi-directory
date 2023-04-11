@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteSamlProviderActionEnum {
-    DeleteSamlProvider = "DeleteSAMLProvider"
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteSAMLProviderActionEnum {
+    DeleteSAMLProvider = "DeleteSAMLProvider"
 }
-export declare enum GetDeleteSamlProviderVersionEnum {
+export declare enum GETDeleteSAMLProviderVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class GetDeleteSamlProviderQueryParams extends SpeakeasyBase {
-    action: GetDeleteSamlProviderActionEnum;
+export declare class GETDeleteSAMLProviderRequest extends SpeakeasyBase {
+    action: GETDeleteSAMLProviderActionEnum;
+    /**
+     * The Amazon Resource Name (ARN) of the SAML provider to delete.
+     */
     samlProviderArn: string;
-    version: GetDeleteSamlProviderVersionEnum;
-}
-export declare class GetDeleteSamlProviderHeaders extends SpeakeasyBase {
+    version: GETDeleteSAMLProviderVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDeleteSamlProviderHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteSamlProviderRequest extends SpeakeasyBase {
-    queryParams: GetDeleteSamlProviderQueryParams;
-    headers: GetDeleteSamlProviderHeaders;
-}
-export declare class GetDeleteSamlProviderResponse extends SpeakeasyBase {
+export declare class GETDeleteSAMLProviderResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

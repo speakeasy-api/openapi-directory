@@ -1,21 +1,16 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { FindFormByFormNameRequest, FindFormByFormNameResponse } from "openapi/src/sdk/models/operations";
+import {
+  FindFormByFormNameRequest,
+  FindFormByFormNameResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: FindFormByFormNameRequest = {
-  security: {
-    apikey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  },
-  pathParams: {
-    formName: "sit",
-  },
+  formName: "corrupti",
 };
 
 sdk.forms.findFormByFormName(req).then((res: FindFormByFormNameResponse | AxiosError) => {

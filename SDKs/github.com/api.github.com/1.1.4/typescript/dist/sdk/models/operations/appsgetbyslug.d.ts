@@ -1,19 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AppsGetBySlugPathParams extends SpeakeasyBase {
-    appSlug: string;
-}
-export declare class AppsGetBySlug415ApplicationJson extends SpeakeasyBase {
-    documentationUrl: string;
-    message: string;
-}
+import { AxiosResponse } from "axios";
 export declare class AppsGetBySlugRequest extends SpeakeasyBase {
-    pathParams: AppsGetBySlugPathParams;
+    appSlug: string;
 }
 export declare class AppsGetBySlugResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    appsGetBySlug415ApplicationJSONObject?: AppsGetBySlug415ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Forbidden
+     */
     basicError?: shared.BasicError;
-    integration?: Record<string, any>;
+    /**
+     * Response
+     */
+    integration?: shared.Integration;
 }

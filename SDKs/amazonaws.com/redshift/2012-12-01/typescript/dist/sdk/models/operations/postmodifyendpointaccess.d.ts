@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostModifyEndpointAccessActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTModifyEndpointAccessActionEnum {
     ModifyEndpointAccess = "ModifyEndpointAccess"
 }
-export declare enum PostModifyEndpointAccessVersionEnum {
+export declare enum POSTModifyEndpointAccessVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostModifyEndpointAccessQueryParams extends SpeakeasyBase {
-    action: PostModifyEndpointAccessActionEnum;
-    version: PostModifyEndpointAccessVersionEnum;
-}
-export declare class PostModifyEndpointAccessHeaders extends SpeakeasyBase {
+export declare class POSTModifyEndpointAccessRequest extends SpeakeasyBase {
+    action: POSTModifyEndpointAccessActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTModifyEndpointAccessVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostModifyEndpointAccessHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostModifyEndpointAccessRequest extends SpeakeasyBase {
-    queryParams: PostModifyEndpointAccessQueryParams;
-    headers: PostModifyEndpointAccessHeaders;
-    request?: Uint8Array;
-}
-export declare class PostModifyEndpointAccessResponse extends SpeakeasyBase {
+export declare class POSTModifyEndpointAccessResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

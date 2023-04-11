@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The new job state.
+ */
 export declare enum MessageNewJobStateEnum {
     StateUnspecified = "STATE_UNSPECIFIED",
     Queued = "QUEUED",
@@ -8,6 +11,9 @@ export declare enum MessageNewJobStateEnum {
     Failed = "FAILED",
     DeletionInProgress = "DELETION_IN_PROGRESS"
 }
+/**
+ * The new task state.
+ */
 export declare enum MessageNewTaskStateEnum {
     StateUnspecified = "STATE_UNSPECIFIED",
     Pending = "PENDING",
@@ -16,6 +22,9 @@ export declare enum MessageNewTaskStateEnum {
     Failed = "FAILED",
     Succeeded = "SUCCEEDED"
 }
+/**
+ * The message type.
+ */
 export declare enum MessageTypeEnum {
     TypeUnspecified = "TYPE_UNSPECIFIED",
     JobStateChanged = "JOB_STATE_CHANGED",
@@ -23,9 +32,18 @@ export declare enum MessageTypeEnum {
 }
 /**
  * Message details. Describe the attribute that a message should have. Without specified message attributes, no message will be sent by default.
-**/
+ */
 export declare class Message extends SpeakeasyBase {
+    /**
+     * The new job state.
+     */
     newJobState?: MessageNewJobStateEnum;
+    /**
+     * The new task state.
+     */
     newTaskState?: MessageNewTaskStateEnum;
+    /**
+     * The message type.
+     */
     type?: MessageTypeEnum;
 }

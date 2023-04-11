@@ -1,18 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PrivateArticleCategoriesReplacePathParams extends SpeakeasyBase {
-    articleId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class PrivateArticleCategoriesReplaceSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class PrivateArticleCategoriesReplaceRequest extends SpeakeasyBase {
-    pathParams: PrivateArticleCategoriesReplacePathParams;
-    request: shared.CategoriesCreator;
-    security: PrivateArticleCategoriesReplaceSecurity;
+    categoriesCreator: shared.CategoriesCreator;
+    /**
+     * Article unique identifier
+     */
+    articleId: number;
 }
 export declare class PrivateArticleCategoriesReplaceResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Forbidden
+     */
     errorMessage?: shared.ErrorMessage;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

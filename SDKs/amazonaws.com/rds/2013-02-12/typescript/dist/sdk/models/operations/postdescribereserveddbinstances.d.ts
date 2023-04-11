@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeReservedDbInstancesActionEnum {
-    DescribeReservedDbInstances = "DescribeReservedDBInstances"
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeReservedDBInstancesActionEnum {
+    DescribeReservedDBInstances = "DescribeReservedDBInstances"
 }
-export declare enum PostDescribeReservedDbInstancesVersionEnum {
+export declare enum POSTDescribeReservedDBInstancesVersionEnum {
     TwoThousandAndThirteen0212 = "2013-02-12"
 }
-export declare class PostDescribeReservedDbInstancesQueryParams extends SpeakeasyBase {
-    action: PostDescribeReservedDbInstancesActionEnum;
+export declare class POSTDescribeReservedDBInstancesRequest extends SpeakeasyBase {
+    action: POSTDescribeReservedDBInstancesActionEnum;
+    /**
+     * Pagination token
+     */
     marker?: string;
+    /**
+     * Pagination limit
+     */
     maxRecords?: string;
-    version: PostDescribeReservedDbInstancesVersionEnum;
-}
-export declare class PostDescribeReservedDbInstancesHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeReservedDBInstancesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeReservedDbInstancesHeaders extends SpeakeasyBas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeReservedDbInstancesRequest extends SpeakeasyBase {
-    queryParams: PostDescribeReservedDbInstancesQueryParams;
-    headers: PostDescribeReservedDbInstancesHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeReservedDbInstancesResponse extends SpeakeasyBase {
+export declare class POSTDescribeReservedDBInstancesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

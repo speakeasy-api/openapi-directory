@@ -3,7 +3,7 @@ import { OsTypeEnum } from "./ostypeenum";
 import { TierEnum } from "./tierenum";
 /**
  * Describes a standalone resource or similarly grouped resources that the application is made up of.
-**/
+ */
 export declare class ApplicationComponent extends SpeakeasyBase {
     componentName?: string;
     componentRemarks?: string;

@@ -1,19 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CatalogGetCategoriesPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class CatalogGetCategoriesRequest extends SpeakeasyBase {
+    /**
+     * Indicates that the client accepts that the response will be compressed to reduce traffic size.
+     */
+    acceptEncoding: string[];
+    /**
+     * Your store identifier
+     */
     storeId: string;
 }
-export declare class CatalogGetCategoriesHeaders extends SpeakeasyBase {
-    acceptEncoding: string[];
-}
-export declare class CatalogGetCategoriesRequest extends SpeakeasyBase {
-    pathParams: CatalogGetCategoriesPathParams;
-    headers: CatalogGetCategoriesHeaders;
-}
 export declare class CatalogGetCategoriesResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     * StoreId not found
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Categories
+     */
     categoryList?: shared.CategoryList;
 }

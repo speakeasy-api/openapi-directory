@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetSigninSigninIdPathParams extends SpeakeasyBase {
-    signinId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetSigninSigninIdRequest extends SpeakeasyBase {
-    pathParams: GetSigninSigninIdPathParams;
+    /**
+     * The ID of the signin record to be retrieved.
+     */
+    signinId: number;
 }
 export declare class GetSigninSigninIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Unauthorized
+     */
     invalidToken?: shared.InvalidToken;
+    /**
+     * Success
+     */
     signin?: shared.Signin;
 }

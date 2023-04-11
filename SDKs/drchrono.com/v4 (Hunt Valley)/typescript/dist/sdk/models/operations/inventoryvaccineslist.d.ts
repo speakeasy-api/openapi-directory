@@ -1,6 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class InventoryVaccinesListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class InventoryVaccinesListSecurity extends SpeakeasyBase {
+    drchronoOauth2: string;
+}
+export declare class InventoryVaccinesListRequest extends SpeakeasyBase {
     cursor?: string;
     cvxCode?: string;
     doctor?: number;
@@ -8,23 +12,29 @@ export declare class InventoryVaccinesListQueryParams extends SpeakeasyBase {
     since?: string;
     status?: string;
 }
-export declare class InventoryVaccinesListSecurity extends SpeakeasyBase {
-    drchronoOauth2: shared.SchemeDrchronoOauth2;
-}
 /**
  * Paginated Result
-**/
-export declare class InventoryVaccinesList200ApplicationJson extends SpeakeasyBase {
+ */
+export declare class InventoryVaccinesList200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * result data
+     */
     data?: shared.InventoryVaccine[];
+    /**
+     * Next Paginated page
+     */
     next?: string;
+    /**
+     * Previous paginated page
+     */
     previous?: string;
-}
-export declare class InventoryVaccinesListRequest extends SpeakeasyBase {
-    queryParams: InventoryVaccinesListQueryParams;
-    security: InventoryVaccinesListSecurity;
 }
 export declare class InventoryVaccinesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    inventoryVaccinesList200ApplicationJSONObject?: InventoryVaccinesList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
+    inventoryVaccinesList200ApplicationJSONObject?: InventoryVaccinesList200ApplicationJSON;
 }

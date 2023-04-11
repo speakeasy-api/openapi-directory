@@ -1,21 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class PostQuoteImageFontSecurity extends SpeakeasyBase {
+    xTheySaidSoApiSecret: string;
+}
 export declare class PostQuoteImageFontRequestBodyFont extends SpeakeasyBase {
     content: Uint8Array;
     font: string;
 }
 export declare class PostQuoteImageFontRequestBody extends SpeakeasyBase {
+    /**
+     * Font file to add to your collection (ttf/otf are supported)
+     */
     font: PostQuoteImageFontRequestBodyFont;
+    /**
+     * Optional comma separated tags
+     */
     tags?: string;
-}
-export declare class PostQuoteImageFontSecurity extends SpeakeasyBase {
-    xTheySaidSoApiSecret: shared.SchemeXTheySaidSoApiSecret;
-}
-export declare class PostQuoteImageFontRequest extends SpeakeasyBase {
-    request?: PostQuoteImageFontRequestBody;
-    security: PostQuoteImageFontSecurity;
 }
 export declare class PostQuoteImageFontResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

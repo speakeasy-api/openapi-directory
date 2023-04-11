@@ -1,8 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetTrackQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetTrackRequest extends SpeakeasyBase {
     trackingNumber?: string;
 }
+/**
+ * the geometry type
+ */
 export declare enum GetTrackTrackingResponseFeatureGeometryTypeEnum {
     Point = "Point",
     LineString = "LineString",
@@ -13,10 +17,14 @@ export declare enum GetTrackTrackingResponseFeatureGeometryTypeEnum {
 }
 /**
  * GeoJSon geometry
- * http://geojson.org/geojson-spec.html#geometry-objects
-**/
+ *
+ * @see {@link http://geojson.org/geojson-spec.html#geometry-objects}
+ */
 export declare class GetTrackTrackingResponseFeatureGeometry extends SpeakeasyBase {
     coordinates: any;
+    /**
+     * the geometry type
+     */
     type: GetTrackTrackingResponseFeatureGeometryTypeEnum;
 }
 export declare class GetTrackTrackingResponseFeatureProperties extends SpeakeasyBase {
@@ -27,11 +35,18 @@ export declare enum GetTrackTrackingResponseFeatureTypeEnum {
 }
 /**
  * GeoJSon Feature
- * https://tools.ietf.org/html/rfc7946#section-3.2
-**/
+ *
+ * @see {@link https://tools.ietf.org/html/rfc7946#section-3.2}
+ */
 export declare class GetTrackTrackingResponseFeature extends SpeakeasyBase {
     bbox?: any[];
+    /**
+     * GeoJSon geometry
+     */
     centerline?: shared.OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometry;
+    /**
+     * GeoJSon geometry
+     */
     geometry: GetTrackTrackingResponseFeatureGeometry;
     id?: number;
     properties: GetTrackTrackingResponseFeatureProperties;
@@ -46,6 +61,9 @@ export declare class GetTrackTrackingResponseTrackingEventV2 extends SpeakeasyBa
     eventCategory?: string;
     eventCategoryCode?: number;
     eventDateTime?: Date;
+    /**
+     * GeoJSon Feature
+     */
     eventLocation?: shared.OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOrigin;
     eventSource?: GetTrackTrackingResponseTrackingEventV2EventSourceEnum;
     eventStatus?: string;
@@ -54,17 +72,32 @@ export declare class GetTrackTrackingResponseTrackingNumberV2CarrierSimpleV2 ext
     id: number;
 }
 export declare class GetTrackTrackingResponseTrackingNumberV2 extends SpeakeasyBase {
+    /**
+     * The computer readable alternative to the human readable
+     */
     barcodeScanValue?: string;
     carrier?: GetTrackTrackingResponseTrackingNumberV2CarrierSimpleV2;
+    /**
+     * The human readable tracking number recipients (consignee) expect
+     */
     value?: string;
 }
+/**
+ * OK
+ */
 export declare class GetTrackTrackingResponse extends SpeakeasyBase {
+    /**
+     * GeoJSon Feature
+     */
     destination?: shared.OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOrigin;
     fdcOrderId?: number;
     firstCheckedDateTime?: Date;
     firstTransitEvent?: Date;
     lastCheckedDateTime?: Date;
     lastUpdatedDateTime?: Date;
+    /**
+     * GeoJSon Feature
+     */
     origin?: GetTrackTrackingResponseFeature;
     status?: string;
     statusCategoryCode?: number;
@@ -73,11 +106,12 @@ export declare class GetTrackTrackingResponse extends SpeakeasyBase {
     trackedEvents?: GetTrackTrackingResponseTrackingEventV2[];
     trackingNumber?: GetTrackTrackingResponseTrackingNumberV2;
 }
-export declare class GetTrackRequest extends SpeakeasyBase {
-    queryParams: GetTrackQueryParams;
-}
 export declare class GetTrackResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
     trackingResponse?: GetTrackTrackingResponse;
 }

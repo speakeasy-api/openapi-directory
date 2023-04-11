@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetUserContentByDateJsonQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETUserContentByDateJsonSecurity extends SpeakeasyBase {
+    apiKey: string;
+}
+export declare class GETUserContentByDateJsonRequest extends SpeakeasyBase {
     date?: string;
 }
-export declare class GetUserContentByDateJsonSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
-}
-export declare class GetUserContentByDateJson200ApplicationJsonDebug extends SpeakeasyBase {
+export declare class GETUserContentByDateJson200ApplicationJSONDebug extends SpeakeasyBase {
     version?: number;
 }
-export declare class GetUserContentByDateJson200ApplicationJsonResultsComments extends SpeakeasyBase {
+export declare class GETUserContentByDateJson200ApplicationJSONResultsComments extends SpeakeasyBase {
     approveDate?: string;
     assetID?: number;
     assetURL?: string;
@@ -35,24 +35,21 @@ export declare class GetUserContentByDateJson200ApplicationJsonResultsComments e
     userTitle?: string;
     userURL?: number;
 }
-export declare class GetUserContentByDateJson200ApplicationJsonResults extends SpeakeasyBase {
+export declare class GETUserContentByDateJson200ApplicationJSONResults extends SpeakeasyBase {
     apiTimestamp?: string;
-    comments?: GetUserContentByDateJson200ApplicationJsonResultsComments[];
+    comments?: GETUserContentByDateJson200ApplicationJSONResultsComments[];
     totalCommentsFound?: number;
     totalCommentsReturned?: number;
 }
-export declare class GetUserContentByDateJson200ApplicationJson extends SpeakeasyBase {
+export declare class GETUserContentByDateJson200ApplicationJSON extends SpeakeasyBase {
     copyright?: string;
-    debug?: GetUserContentByDateJson200ApplicationJsonDebug;
-    results?: GetUserContentByDateJson200ApplicationJsonResults;
+    debug?: GETUserContentByDateJson200ApplicationJSONDebug;
+    results?: GETUserContentByDateJson200ApplicationJSONResults;
     status?: string;
 }
-export declare class GetUserContentByDateJsonRequest extends SpeakeasyBase {
-    queryParams: GetUserContentByDateJsonQueryParams;
-    security: GetUserContentByDateJsonSecurity;
-}
-export declare class GetUserContentByDateJsonResponse extends SpeakeasyBase {
+export declare class GETUserContentByDateJsonResponse extends SpeakeasyBase {
     contentType: string;
-    getUserContentByDateJSON200ApplicationJSONObject?: GetUserContentByDateJson200ApplicationJson;
+    getUserContentByDateJSON200ApplicationJSONObject?: GETUserContentByDateJson200ApplicationJSON;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

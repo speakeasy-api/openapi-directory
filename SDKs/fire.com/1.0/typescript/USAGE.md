@@ -1,30 +1,30 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateApiApplicationRequest, CreateApiApplicationResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CreateApiApplicationNewApiApplication,
+  CreateApiApplicationResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    bearerAuth: {
-      authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-    },
-  }
-));
-    
-const req: CreateApiApplicationRequest = {
-  request: {
-    applicationName: "sit",
-    enabled: false,
-    expiry: "1978-05-13T03:50:47Z",
-    ican: 501233450539197794,
-    numberOfPayeeApprovalsRequired: 3390393562759376202,
-    numberOfPaymentApprovalsRequired: 2669985732393126063,
-    permissions: [
-      "voluptas",
-      "fugit",
-    ],
+    bearerAuth: "Bearer YOUR_BEARER_TOKEN_HERE",
   },
+});
+
+const req: CreateApiApplicationNewApiApplication = {
+  applicationName: "Batch Processing API",
+  enabled: true,
+  expiry: "2019-08-22T07:48:56.460Z",
+  ican: 548814,
+  numberOfPayeeApprovalsRequired: 1,
+  numberOfPaymentApprovalsRequired: 1,
+  permissions: [
+    "distinctio",
+    "quibusdam",
+    "unde",
+  ],
 };
 
 sdk.api.createApiApplication(req).then((res: CreateApiApplicationResponse | AxiosError) => {

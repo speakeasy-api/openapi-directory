@@ -1,22 +1,28 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetUuidVersionVersionPathParams extends SpeakeasyBase {
-    version: number;
-}
-export declare class GetUuidVersionVersionQueryParams extends SpeakeasyBase {
-    count?: number;
-    text?: string;
-    type?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetUuidVersionVersionSecurity extends SpeakeasyBase {
-    xFungeneratorsApiSecret: shared.SchemeXFungeneratorsApiSecret;
+    xFungeneratorsApiSecret: string;
 }
 export declare class GetUuidVersionVersionRequest extends SpeakeasyBase {
-    pathParams: GetUuidVersionVersionPathParams;
-    queryParams: GetUuidVersionVersionQueryParams;
-    security: GetUuidVersionVersionSecurity;
+    /**
+     * Number of UUID's to generate (defaults to 1)
+     */
+    count?: number;
+    /**
+     * For v3 and v5 of UUID Spec supply the text value for the type specified dns/url/oid/x500/nil. For example specify a dns/domain string if the type is "dns"
+     */
+    text?: string;
+    /**
+     * For v3 and v5 of UUID Spec you can supply the type (dns/url/oid/x500/nil).
+     */
+    type?: string;
+    /**
+     * Version of the UUID spec to use. (0-5), Use '0' for nil (00000000-0000-0000-0000-000000000000) UUID.
+     */
+    version: number;
 }
 export declare class GetUuidVersionVersionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

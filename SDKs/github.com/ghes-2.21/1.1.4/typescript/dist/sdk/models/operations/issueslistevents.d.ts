@@ -1,22 +1,33 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class IssuesListEventsPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class IssuesListEventsRequest extends SpeakeasyBase {
+    /**
+     * issue_number parameter
+     */
     issueNumber: number;
     owner: string;
-    repo: string;
-}
-export declare class IssuesListEventsQueryParams extends SpeakeasyBase {
+    /**
+     * Page number of the results to fetch.
+     */
     page?: number;
+    /**
+     * Results per page (max 100)
+     */
     perPage?: number;
-}
-export declare class IssuesListEventsRequest extends SpeakeasyBase {
-    pathParams: IssuesListEventsPathParams;
-    queryParams: IssuesListEventsQueryParams;
+    repo: string;
 }
 export declare class IssuesListEventsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Gone
+     */
     basicError?: shared.BasicError;
-    issueEventForIssues?: shared.IssueEventForIssue[];
+    /**
+     * Response
+     */
+    issueEventForIssues?: any[];
 }

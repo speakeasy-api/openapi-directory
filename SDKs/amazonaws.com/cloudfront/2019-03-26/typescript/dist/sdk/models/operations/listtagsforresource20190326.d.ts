@@ -1,8 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ListTagsForResource20190326QueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListTagsForResource20190326Request extends SpeakeasyBase {
+    /**
+     *  An ARN of a CloudFront resource.
+     */
     resource: string;
-}
-export declare class ListTagsForResource20190326Headers extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,12 +13,9 @@ export declare class ListTagsForResource20190326Headers extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class ListTagsForResource20190326Request extends SpeakeasyBase {
-    queryParams: ListTagsForResource20190326QueryParams;
-    headers: ListTagsForResource20190326Headers;
-}
 export declare class ListTagsForResource20190326Response extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,43 +1,38 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class MeetingRecordingRegistrantStatusPathParams extends SpeakeasyBase {
-    meetingId: number;
-}
-export declare enum MeetingRecordingRegistrantStatusApplicationJsonActionEnum {
-    Approve = "approve",
-    Deny = "deny"
-}
-/**
- * Registrant Status
-**/
-export declare class MeetingRecordingRegistrantStatusApplicationJson extends SpeakeasyBase {
-    action: MeetingRecordingRegistrantStatusApplicationJsonActionEnum;
-    registrants?: any[];
-}
-export declare enum MeetingRecordingRegistrantStatusMultipartFormDataActionEnum {
-    Approve = "approve",
-    Deny = "deny"
-}
-/**
- * Registrant Status
-**/
-export declare class MeetingRecordingRegistrantStatusMultipartFormData extends SpeakeasyBase {
-    action: MeetingRecordingRegistrantStatusMultipartFormDataActionEnum;
-    registrants?: any[];
-}
-export declare class MeetingRecordingRegistrantStatusRequests extends SpeakeasyBase {
-    object?: MeetingRecordingRegistrantStatusApplicationJson;
-    object1?: MeetingRecordingRegistrantStatusMultipartFormData;
-}
+import { AxiosResponse } from "axios";
 export declare class MeetingRecordingRegistrantStatusSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
+    oAuth: string;
+}
+export declare enum MeetingRecordingRegistrantStatusApplicationJSONActionEnum {
+    Approve = "approve",
+    Deny = "deny"
+}
+export declare class MeetingRecordingRegistrantStatusApplicationJSONRegistrants extends SpeakeasyBase {
+    id?: string;
+}
+/**
+ * Registrant Status
+ */
+export declare class MeetingRecordingRegistrantStatusApplicationJSON extends SpeakeasyBase {
+    action: MeetingRecordingRegistrantStatusApplicationJSONActionEnum;
+    /**
+     * List of registrants
+     */
+    registrants?: MeetingRecordingRegistrantStatusApplicationJSONRegistrants[];
 }
 export declare class MeetingRecordingRegistrantStatusRequest extends SpeakeasyBase {
-    pathParams: MeetingRecordingRegistrantStatusPathParams;
-    request: MeetingRecordingRegistrantStatusRequests;
-    security: MeetingRecordingRegistrantStatusSecurity;
+    requestBody: MeetingRecordingRegistrantStatusApplicationJSON;
+    /**
+     * The meeting ID in **long** format. The data type of this field is "long"(represented as int64 in JSON).
+     *
+     * @remarks
+     *
+     * While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
+     */
+    meetingId: number;
 }
 export declare class MeetingRecordingRegistrantStatusResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

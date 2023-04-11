@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteNetworkAclEntryActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteNetworkAclEntryActionEnum {
     DeleteNetworkAclEntry = "DeleteNetworkAclEntry"
 }
-export declare enum PostDeleteNetworkAclEntryVersionEnum {
+export declare enum POSTDeleteNetworkAclEntryVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDeleteNetworkAclEntryQueryParams extends SpeakeasyBase {
-    action: PostDeleteNetworkAclEntryActionEnum;
-    version: PostDeleteNetworkAclEntryVersionEnum;
-}
-export declare class PostDeleteNetworkAclEntryHeaders extends SpeakeasyBase {
+export declare class POSTDeleteNetworkAclEntryRequest extends SpeakeasyBase {
+    action: POSTDeleteNetworkAclEntryActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteNetworkAclEntryVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +18,8 @@ export declare class PostDeleteNetworkAclEntryHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteNetworkAclEntryRequest extends SpeakeasyBase {
-    queryParams: PostDeleteNetworkAclEntryQueryParams;
-    headers: PostDeleteNetworkAclEntryHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteNetworkAclEntryResponse extends SpeakeasyBase {
+export declare class POSTDeleteNetworkAclEntryResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

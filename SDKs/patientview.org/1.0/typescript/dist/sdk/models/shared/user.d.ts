@@ -1,0 +1,38 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { ApiKey } from "./apikey";
+import { BaseGroup } from "./basegroup";
+import { GroupRole } from "./grouprole";
+import { UserFeature } from "./userfeature";
+/**
+ * OK
+ */
+export declare class User extends SpeakeasyBase {
+    apiKey?: ApiKey;
+    canSwitchUser?: boolean;
+    changePassword?: boolean;
+    contactNumber?: string;
+    created?: Date;
+    currentLogin?: Date;
+    currentLoginIpAddress?: string;
+    dateOfBirth?: Date;
+    deleted?: boolean;
+    dummy?: boolean;
+    email?: string;
+    emailVerified?: boolean;
+    forename?: string;
+    groupRoles?: GroupRole[];
+    hideSecretWordNotification?: boolean;
+    id?: number;
+    identifiers?: Record<string, any>[];
+    lastLogin?: Date;
+    lastLoginIpAddress?: string;
+    latestDataReceivedBy?: BaseGroup;
+    latestDataReceivedDate?: Date;
+    locked?: boolean;
+    picture?: string;
+    roleDescription?: string;
+    secretWordIsSet?: boolean;
+    surname?: string;
+    userFeatures?: UserFeature[];
+    username?: string;
+}

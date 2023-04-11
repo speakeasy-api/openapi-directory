@@ -1,21 +1,16 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetFactFodRequest, GetFactFodResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetFactFodRequest,
+  GetFactFodResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetFactFodRequest = {
-  security: {
-    xFungeneratorsApiSecret: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  },
-  queryParams: {
-    category: "sit",
-  },
+  category: "corrupti",
 };
 
 sdk.factOfTheDay.getFactFod(req).then((res: GetFactFodResponse | AxiosError) => {

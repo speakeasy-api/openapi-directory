@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The parse label for the token.
+ */
 export declare enum DependencyEdgeLabelEnum {
     Unknown = "UNKNOWN",
     Abbrev = "ABBREV",
@@ -86,8 +89,14 @@ export declare enum DependencyEdgeLabelEnum {
 }
 /**
  * Represents dependency parse tree information for a token.
-**/
+ */
 export declare class DependencyEdge extends SpeakeasyBase {
+    /**
+     * Represents the head of this token in the dependency tree. This is the index of the token which has an arc going to this token. The index is the position of the token in the array of tokens returned by the API method. If this token is a root token, then the `head_token_index` is its own index.
+     */
     headTokenIndex?: number;
+    /**
+     * The parse label for the token.
+     */
     label?: DependencyEdgeLabelEnum;
 }

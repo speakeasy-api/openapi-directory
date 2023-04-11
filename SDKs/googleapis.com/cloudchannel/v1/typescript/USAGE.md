@@ -1,62 +1,49 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateRequest, CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateRequest,
+  CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  GoogleCloudChannelV1RepricingConfigRebillingBasisEnum,
+  GoogleCloudChannelV1ConditionalOverrideRebillingBasisEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  googleCloudChannelV1ChannelPartnerRepricingConfigInput: {
     repricingConfig: {
       adjustment: {
         percentageAdjustment: {
           percentage: {
-            value: "dicta",
+            value: "provident",
           },
         },
       },
       channelPartnerGranularity: {
-        "voluptatum": "et",
+        "quibusdam": "unde",
+        "nulla": "corrupti",
+        "illum": "vel",
       },
       conditionalOverrides: [
         {
           adjustment: {
             percentageAdjustment: {
               percentage: {
-                value: "dolorem",
+                value: "deserunt",
               },
             },
           },
-          rebillingBasis: "COST_AT_LIST",
+          rebillingBasis: GoogleCloudChannelV1ConditionalOverrideRebillingBasisEnum.CostAtList,
           repricingCondition: {
             skuGroupCondition: {
-              skuGroup: "voluptate",
+              skuGroup: "iure",
             },
           },
         },
@@ -64,14 +51,14 @@ const req: CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigs
           adjustment: {
             percentageAdjustment: {
               percentage: {
-                value: "iste",
+                value: "magnam",
               },
             },
           },
-          rebillingBasis: "REBILLING_BASIS_UNSPECIFIED",
+          rebillingBasis: GoogleCloudChannelV1ConditionalOverrideRebillingBasisEnum.DirectCustomerCost,
           repricingCondition: {
             skuGroupCondition: {
-              skuGroup: "totam",
+              skuGroup: "ipsa",
             },
           },
         },
@@ -79,29 +66,40 @@ const req: CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigs
           adjustment: {
             percentageAdjustment: {
               percentage: {
-                value: "dolores",
+                value: "delectus",
               },
             },
           },
-          rebillingBasis: "DIRECT_CUSTOMER_COST",
+          rebillingBasis: GoogleCloudChannelV1ConditionalOverrideRebillingBasisEnum.RebillingBasisUnspecified,
           repricingCondition: {
             skuGroupCondition: {
-              skuGroup: "debitis",
+              skuGroup: "suscipit",
             },
           },
         },
       ],
       effectiveInvoiceMonth: {
-        day: 3706853784096366226,
-        month: 2627038740284806767,
-        year: 6303220950515014660,
+        day: 477665,
+        month: 791725,
+        year: 812169,
       },
       entitlementGranularity: {
-        entitlement: "id",
+        entitlement: "voluptatum",
       },
-      rebillingBasis: "REBILLING_BASIS_UNSPECIFIED",
+      rebillingBasis: GoogleCloudChannelV1RepricingConfigRebillingBasisEnum.CostAtList,
     },
   },
+  accessToken: "excepturi",
+  alt: AltEnum.Media,
+  callback: "recusandae",
+  fields: "temporibus",
+  key: "ab",
+  oauthToken: "quis",
+  parent: "veritatis",
+  prettyPrint: false,
+  quotaUser: "deserunt",
+  uploadType: "perferendis",
+  uploadProtocol: "ipsam",
 };
 
 sdk.accounts.cloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreate(req).then((res: CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateResponse | AxiosError) => {

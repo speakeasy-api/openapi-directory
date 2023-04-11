@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostBacktrackDbClusterActionEnum {
-    BacktrackDbCluster = "BacktrackDBCluster"
+import { AxiosResponse } from "axios";
+export declare enum POSTBacktrackDBClusterActionEnum {
+    BacktrackDBCluster = "BacktrackDBCluster"
 }
-export declare enum PostBacktrackDbClusterVersionEnum {
+export declare enum POSTBacktrackDBClusterVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class PostBacktrackDbClusterQueryParams extends SpeakeasyBase {
-    action: PostBacktrackDbClusterActionEnum;
-    version: PostBacktrackDbClusterVersionEnum;
-}
-export declare class PostBacktrackDbClusterHeaders extends SpeakeasyBase {
+export declare class POSTBacktrackDBClusterRequest extends SpeakeasyBase {
+    action: POSTBacktrackDBClusterActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTBacktrackDBClusterVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostBacktrackDbClusterHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostBacktrackDbClusterRequest extends SpeakeasyBase {
-    queryParams: PostBacktrackDbClusterQueryParams;
-    headers: PostBacktrackDbClusterHeaders;
-    request?: Uint8Array;
-}
-export declare class PostBacktrackDbClusterResponse extends SpeakeasyBase {
+export declare class POSTBacktrackDBClusterResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

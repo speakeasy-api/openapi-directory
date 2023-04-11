@@ -1,14 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class TrapConfigDelPathParams extends SpeakeasyBase {
-    ip: string;
-    agentNum: number;
-    port: number;
-}
+import { AxiosResponse } from "axios";
 export declare class TrapConfigDelRequest extends SpeakeasyBase {
-    pathParams: TrapConfigDelPathParams;
+    /**
+     * IP of the destination
+     */
+    ip: string;
+    /**
+     * Agent to delete the destination
+     */
+    agentNum: number;
+    /**
+     * port of the destination
+     */
+    port: number;
 }
 export declare class TrapConfigDelResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     trapConfigDel200ApplicationJSONString?: string;
 }

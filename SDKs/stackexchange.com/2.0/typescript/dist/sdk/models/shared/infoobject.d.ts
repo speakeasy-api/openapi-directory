@@ -24,6 +24,9 @@ export declare class InfoObjectSite extends SpeakeasyBase {
     styling?: InfoObjectSiteStyling;
     twitterAccount?: string;
 }
+/**
+ * OK
+ */
 export declare class InfoObject extends SpeakeasyBase {
     answersPerMinute?: number;
     apiRevision?: string;

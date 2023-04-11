@@ -1,0 +1,35 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { CustomerQuery } from "./customerquery";
+/**
+ * Defines the fields that are included in the request body of a request to the
+ *
+ * @remarks
+ * `SearchCustomers` endpoint.
+ */
+export declare class SearchCustomersRequest extends SpeakeasyBase {
+    /**
+     * Include the pagination cursor in subsequent calls to this endpoint to retrieve
+     *
+     * @remarks
+     * the next set of results associated with the original query.
+     *
+     * For more information, see [Pagination](https://developer.squareup.com/docs/working-with-apis/pagination).
+     */
+    cursor?: string;
+    /**
+     * The maximum number of results to return in a single page. This limit is advisory. The response might contain more or fewer results.
+     *
+     * @remarks
+     * The limit is ignored if it is less than the minimum or greater than the maximum value. The default value is 100.
+     *
+     * For more information, see [Pagination](https://developer.squareup.com/docs/working-with-apis/pagination).
+     */
+    limit?: number;
+    /**
+     * Represents a query (including filtering criteria, sorting criteria, or both) used to search
+     *
+     * @remarks
+     * for customer profiles.
+     */
+    query?: CustomerQuery;
+}

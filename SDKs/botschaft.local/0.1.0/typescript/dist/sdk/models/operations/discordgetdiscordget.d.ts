@@ -1,20 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DiscordGetDiscordGetQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DiscordGetDiscordGetRequest extends SpeakeasyBase {
+    authorization?: string;
     base64Message?: string;
     channel: string;
     message?: string;
 }
-export declare class DiscordGetDiscordGetHeaders extends SpeakeasyBase {
-    authorization?: string;
-}
-export declare class DiscordGetDiscordGetRequest extends SpeakeasyBase {
-    queryParams: DiscordGetDiscordGetQueryParams;
-    headers: DiscordGetDiscordGetHeaders;
-}
 export declare class DiscordGetDiscordGetResponse extends SpeakeasyBase {
     contentType: string;
-    httpValidationError?: shared.HttpValidationError;
+    /**
+     * Validation Error
+     */
+    httpValidationError?: shared.HTTPValidationError;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful Response
+     */
     discordGetDiscordGet200ApplicationJSONAny?: any;
 }

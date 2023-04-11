@@ -1,12 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetOneApplicationPathParams extends SpeakeasyBase {
-    applicationId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetOneApplicationRequest extends SpeakeasyBase {
-    pathParams: GetOneApplicationPathParams;
+    /**
+     * The ID of the application.
+     */
+    applicationId: string;
 }
 export declare class GetOneApplicationResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

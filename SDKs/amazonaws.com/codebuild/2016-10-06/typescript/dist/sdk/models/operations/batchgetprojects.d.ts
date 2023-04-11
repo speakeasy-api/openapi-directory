@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum BatchGetProjectsXAmzTargetEnum {
     CodeBuild20161006BatchGetProjects = "CodeBuild_20161006.BatchGetProjects"
 }
-export declare class BatchGetProjectsHeaders extends SpeakeasyBase {
+export declare class BatchGetProjectsRequest extends SpeakeasyBase {
+    batchGetProjectsInput: shared.BatchGetProjectsInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,13 +15,16 @@ export declare class BatchGetProjectsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: BatchGetProjectsXAmzTargetEnum;
 }
-export declare class BatchGetProjectsRequest extends SpeakeasyBase {
-    headers: BatchGetProjectsHeaders;
-    request: shared.BatchGetProjectsInput;
-}
 export declare class BatchGetProjectsResponse extends SpeakeasyBase {
+    /**
+     * Success
+     */
     batchGetProjectsOutput?: shared.BatchGetProjectsOutput;
     contentType: string;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

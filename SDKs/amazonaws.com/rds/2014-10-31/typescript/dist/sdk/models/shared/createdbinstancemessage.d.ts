@@ -1,0 +1,63 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { ProcessorFeatureList } from "./processorfeaturelist";
+import { TagList } from "./taglist";
+/**
+ * <p/>
+ */
+export declare class CreateDBInstanceMessage extends SpeakeasyBase {
+    allocatedStorage?: number;
+    autoMinorVersionUpgrade?: boolean;
+    availabilityZone?: string;
+    backupRetentionPeriod?: number;
+    backupTarget?: string;
+    caCertificateIdentifier?: string;
+    characterSetName?: string;
+    copyTagsToSnapshot?: boolean;
+    customIamInstanceProfile?: string;
+    dbClusterIdentifier?: string;
+    dbInstanceClass: string;
+    dbInstanceIdentifier: string;
+    dbName?: string;
+    dbParameterGroupName?: string;
+    dbSecurityGroups?: string[];
+    dbSubnetGroupName?: string;
+    deletionProtection?: boolean;
+    domain?: string;
+    domainIAMRoleName?: string;
+    enableCloudwatchLogsExports?: string[];
+    enableCustomerOwnedIp?: boolean;
+    enableIAMDatabaseAuthentication?: boolean;
+    enablePerformanceInsights?: boolean;
+    engine: string;
+    engineVersion?: string;
+    iops?: number;
+    kmsKeyId?: string;
+    licenseModel?: string;
+    manageMasterUserPassword?: boolean;
+    masterUserPassword?: string;
+    masterUserSecretKmsKeyId?: string;
+    masterUsername?: string;
+    maxAllocatedStorage?: number;
+    monitoringInterval?: number;
+    monitoringRoleArn?: string;
+    multiAZ?: boolean;
+    ncharCharacterSetName?: string;
+    networkType?: string;
+    optionGroupName?: string;
+    performanceInsightsKMSKeyId?: string;
+    performanceInsightsRetentionPeriod?: number;
+    port?: number;
+    preferredBackupWindow?: string;
+    preferredMaintenanceWindow?: string;
+    processorFeatures?: ProcessorFeatureList[];
+    promotionTier?: number;
+    publiclyAccessible?: boolean;
+    storageEncrypted?: boolean;
+    storageThroughput?: number;
+    storageType?: string;
+    tags?: TagList[];
+    tdeCredentialArn?: string;
+    tdeCredentialPassword?: string;
+    timezone?: string;
+    vpcSecurityGroupIds?: string[];
+}

@@ -2,8 +2,8 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { TemplateTypeEnum } from "./templatetypeenum";
 /**
  * Provides information about the content and settings for a message template that can be used in text messages that are sent through the SMS channel.
-**/
-export declare class SmsTemplateResponse extends SpeakeasyBase {
+ */
+export declare class SMSTemplateResponse extends SpeakeasyBase {
     arn?: string;
     body?: string;
     creationDate: string;

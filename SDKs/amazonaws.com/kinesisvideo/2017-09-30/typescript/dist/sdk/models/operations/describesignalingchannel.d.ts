@@ -1,6 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeSignalingChannelHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DescribeSignalingChannelRequestBody extends SpeakeasyBase {
+    /**
+     * The ARN of the signaling channel that you want to describe.
+     */
+    channelARN?: string;
+    /**
+     * The name of the signaling channel that you want to describe.
+     */
+    channelName?: string;
+}
+export declare class DescribeSignalingChannelRequest extends SpeakeasyBase {
+    requestBody: DescribeSignalingChannelRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -9,20 +21,28 @@ export declare class DescribeSignalingChannelHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DescribeSignalingChannelRequestBody extends SpeakeasyBase {
-    channelARN?: string;
-    channelName?: string;
-}
-export declare class DescribeSignalingChannelRequest extends SpeakeasyBase {
-    headers: DescribeSignalingChannelHeaders;
-    request: DescribeSignalingChannelRequestBody;
-}
 export declare class DescribeSignalingChannelResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ClientLimitExceededException
+     */
     clientLimitExceededException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     describeSignalingChannelOutput?: shared.DescribeSignalingChannelOutput;
+    /**
+     * InvalidArgumentException
+     */
     invalidArgumentException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
 }

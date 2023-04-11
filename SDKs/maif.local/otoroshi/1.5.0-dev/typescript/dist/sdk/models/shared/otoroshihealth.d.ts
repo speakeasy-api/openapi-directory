@@ -11,7 +11,7 @@ export declare enum OtoroshiHealthOtoroshiEnum {
 }
 /**
  * The structure that represent current Otoroshi health
-**/
+ */
 export declare class OtoroshiHealth extends SpeakeasyBase {
     datastore: OtoroshiHealthDatastoreEnum;
     otoroshi: OtoroshiHealthOtoroshiEnum;

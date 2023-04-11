@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribePrefixListsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribePrefixListsActionEnum {
     DescribePrefixLists = "DescribePrefixLists"
 }
-export declare enum PostDescribePrefixListsVersionEnum {
+export declare enum POSTDescribePrefixListsVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDescribePrefixListsQueryParams extends SpeakeasyBase {
-    action: PostDescribePrefixListsActionEnum;
+export declare class POSTDescribePrefixListsRequest extends SpeakeasyBase {
+    action: POSTDescribePrefixListsActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostDescribePrefixListsVersionEnum;
-}
-export declare class PostDescribePrefixListsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribePrefixListsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribePrefixListsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribePrefixListsRequest extends SpeakeasyBase {
-    queryParams: PostDescribePrefixListsQueryParams;
-    headers: PostDescribePrefixListsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribePrefixListsResponse extends SpeakeasyBase {
+export declare class POSTDescribePrefixListsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

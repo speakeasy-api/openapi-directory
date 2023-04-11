@@ -1,0 +1,7 @@
+export * from "./customersall";
+export * from "./customersone";
+export * from "./ordersall";
+export * from "./ordersone";
+export * from "./productsall";
+export * from "./productsone";
+export * from "./storesone";

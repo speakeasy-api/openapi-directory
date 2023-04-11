@@ -1,5 +1,5 @@
 export declare enum SavingsPlanRateUnitEnum {
     Hrs = "Hrs",
-    LambdaGbSecond = "Lambda-GB-Second",
+    LambdaGBSecond = "Lambda-GB-Second",
     Request = "Request"
 }

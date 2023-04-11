@@ -1,7 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetRelatedWordsPathParams extends SpeakeasyBase {
-    word: string;
-}
+import { AxiosResponse } from "axios";
+/**
+ * Limits the total results per type of relationship type
+ */
 export declare enum GetRelatedWordsRelationshipTypesEnum {
     Synonym = "synonym",
     Antonym = "antonym",
@@ -21,21 +22,34 @@ export declare enum GetRelatedWordsRelationshipTypesEnum {
     VerbStem = "verb-stem",
     HasTopic = "has_topic"
 }
+/**
+ * If true will try to return the correct word root ('cats' -> 'cat'). If false returns exactly what was requested.
+ */
 export declare enum GetRelatedWordsUseCanonicalEnum {
     False = "false",
     True = "true"
 }
-export declare class GetRelatedWordsQueryParams extends SpeakeasyBase {
-    limitPerRelationshipType?: number;
-    relationshipTypes?: GetRelatedWordsRelationshipTypesEnum;
-    useCanonical?: GetRelatedWordsUseCanonicalEnum;
-}
 export declare class GetRelatedWordsRequest extends SpeakeasyBase {
-    pathParams: GetRelatedWordsPathParams;
-    queryParams: GetRelatedWordsQueryParams;
+    /**
+     * Restrict to the supplied relationship types
+     */
+    limitPerRelationshipType?: number;
+    /**
+     * Limits the total results per type of relationship type
+     */
+    relationshipTypes?: GetRelatedWordsRelationshipTypesEnum;
+    /**
+     * If true will try to return the correct word root ('cats' -> 'cat'). If false returns exactly what was requested.
+     */
+    useCanonical?: GetRelatedWordsUseCanonicalEnum;
+    /**
+     * Word to fetch relationships for
+     */
+    word: string;
 }
 export declare class GetRelatedWordsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

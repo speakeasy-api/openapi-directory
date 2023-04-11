@@ -1,25 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GamesDevelopmentTeamListPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GamesDevelopmentTeamListRequest extends SpeakeasyBase {
     gamePk: string;
-}
-export declare class GamesDevelopmentTeamListQueryParams extends SpeakeasyBase {
+    /**
+     * Which field to use when ordering the results.
+     */
     ordering?: string;
+    /**
+     * A page number within the paginated result set.
+     */
     page?: number;
+    /**
+     * Number of results to return per page.
+     */
     pageSize?: number;
 }
-export declare class GamesDevelopmentTeamList200ApplicationJson extends SpeakeasyBase {
+export declare class GamesDevelopmentTeamList200ApplicationJSON extends SpeakeasyBase {
     count: number;
     next?: string;
     previous?: string;
     results: shared.GamePersonList[];
 }
-export declare class GamesDevelopmentTeamListRequest extends SpeakeasyBase {
-    pathParams: GamesDevelopmentTeamListPathParams;
-    queryParams: GamesDevelopmentTeamListQueryParams;
-}
 export declare class GamesDevelopmentTeamListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    gamesDevelopmentTeamList200ApplicationJSONObject?: GamesDevelopmentTeamList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    gamesDevelopmentTeamList200ApplicationJSONObject?: GamesDevelopmentTeamList200ApplicationJSON;
 }

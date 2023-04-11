@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Tasks {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,31 +9,31 @@ export declare class Tasks {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * taskAdd - Adds a task to the specified job.
-    **/
+     * Adds a task to the specified job.
+     */
     taskAdd(req: operations.TaskAddRequest, config?: AxiosRequestConfig): Promise<operations.TaskAddResponse>;
     /**
-     * taskDelete - Deletes a task from the specified job.
-    **/
+     * Deletes a task from the specified job.
+     */
     taskDelete(req: operations.TaskDeleteRequest, config?: AxiosRequestConfig): Promise<operations.TaskDeleteResponse>;
     /**
-     * taskGet - Gets information about the specified task.
-    **/
+     * Gets information about the specified task.
+     */
     taskGet(req: operations.TaskGetRequest, config?: AxiosRequestConfig): Promise<operations.TaskGetResponse>;
     /**
-     * taskList - Lists all of the tasks that are associated with the specified job.
-    **/
+     * Lists all of the tasks that are associated with the specified job.
+     */
     taskList(req: operations.TaskListRequest, config?: AxiosRequestConfig): Promise<operations.TaskListResponse>;
     /**
-     * taskListSubtasks - Lists all of the subtasks that are associated with the specified multi-instance task.
-    **/
+     * Lists all of the subtasks that are associated with the specified multi-instance task.
+     */
     taskListSubtasks(req: operations.TaskListSubtasksRequest, config?: AxiosRequestConfig): Promise<operations.TaskListSubtasksResponse>;
     /**
-     * taskTerminate - Terminates the specified task.
-    **/
+     * Terminates the specified task.
+     */
     taskTerminate(req: operations.TaskTerminateRequest, config?: AxiosRequestConfig): Promise<operations.TaskTerminateResponse>;
     /**
-     * taskUpdate - Updates the properties of the specified task.
-    **/
+     * Updates the properties of the specified task.
+     */
     taskUpdate(req: operations.TaskUpdateRequest, config?: AxiosRequestConfig): Promise<operations.TaskUpdateResponse>;
 }

@@ -1,11 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetVersionIncidentsIdFormatPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETVersionIncidentsIdFormatRequest extends SpeakeasyBase {
+    /**
+     * <p>Incident ID</p>
+     *
+     * @remarks
+     *
+     */
     id: number;
 }
-export declare class GetVersionIncidentsIdFormatRequest extends SpeakeasyBase {
-    pathParams: GetVersionIncidentsIdFormatPathParams;
-}
-export declare class GetVersionIncidentsIdFormatResponse extends SpeakeasyBase {
+export declare class GETVersionIncidentsIdFormatResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

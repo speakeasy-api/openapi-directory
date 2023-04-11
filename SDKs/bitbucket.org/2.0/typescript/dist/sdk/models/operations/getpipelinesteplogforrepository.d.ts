@@ -1,15 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetPipelineStepLogForRepositoryPathParams extends SpeakeasyBase {
-    pipelineUuid: string;
-    repoSlug: string;
-    stepUuid: string;
-    workspace: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetPipelineStepLogForRepositoryRequest extends SpeakeasyBase {
-    pathParams: GetPipelineStepLogForRepositoryPathParams;
+    /**
+     * The UUID of the pipeline.
+     */
+    pipelineUuid: string;
+    /**
+     * The repository.
+     */
+    repoSlug: string;
+    /**
+     * The UUID of the step.
+     */
+    stepUuid: string;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
+     */
+    workspace: string;
 }
 export declare class GetPipelineStepLogForRepositoryResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

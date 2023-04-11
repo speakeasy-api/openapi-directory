@@ -1,9 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum DescribeAcLsXAmzTargetEnum {
-    AmazonMemoryDbDescribeAcLs = "AmazonMemoryDB.DescribeACLs"
+import { AxiosResponse } from "axios";
+export declare enum DescribeACLsXAmzTargetEnum {
+    AmazonMemoryDBDescribeACLs = "AmazonMemoryDB.DescribeACLs"
 }
-export declare class DescribeAcLsHeaders extends SpeakeasyBase {
+export declare class DescribeACLsRequest extends SpeakeasyBase {
+    describeACLsRequest: shared.DescribeACLsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,16 +21,22 @@ export declare class DescribeAcLsHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: DescribeAcLsXAmzTargetEnum;
+    xAmzTarget: DescribeACLsXAmzTargetEnum;
 }
-export declare class DescribeAcLsRequest extends SpeakeasyBase {
-    headers: DescribeAcLsHeaders;
-    request: shared.DescribeAcLsRequest;
-}
-export declare class DescribeAcLsResponse extends SpeakeasyBase {
+export declare class DescribeACLsResponse extends SpeakeasyBase {
+    /**
+     * ACLNotFoundFault
+     */
     aclNotFoundFault?: any;
     contentType: string;
-    describeACLsResponse?: shared.DescribeAcLsResponse;
+    /**
+     * Success
+     */
+    describeACLsResponse?: shared.DescribeACLsResponse;
+    /**
+     * InvalidParameterCombinationException
+     */
     invalidParameterCombinationException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

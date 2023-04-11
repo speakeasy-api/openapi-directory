@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetTimezoneAreaTxtPathParams extends SpeakeasyBase {
-    area: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetTimezoneAreaTxtRequest extends SpeakeasyBase {
-    pathParams: GetTimezoneAreaTxtPathParams;
+    area: string;
 }
 export declare class GetTimezoneAreaTxtResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * an error response in plain text
+     */
     errorTextResponse?: string;
+    /**
+     * the list of available timezones in plain text
+     */
     listTextResponse?: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

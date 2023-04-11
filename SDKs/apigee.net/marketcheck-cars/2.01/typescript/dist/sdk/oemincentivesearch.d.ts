@@ -1,6 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class OemIncentiveSearch {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+export declare class OEMIncentiveSearch {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,8 +9,9 @@ export declare class OemIncentiveSearch {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getSearchCarIncentiveOem - Gets oem incentive listings for the given search criteria
+     * Gets oem incentive listings for the given search criteria
      *
+     * @remarks
      * This endpoint is the meat of the API and serves many purposes. This API produces a list of currently active oem incentive from the market for the given search criteria. The API results are limited to allow pagination upto 10000 rows.
      *  The search API facilitates the following use cases -
      * 1. Search Cars around a given geo-point within a given radius
@@ -23,6 +24,6 @@ export declare class OemIncentiveSearch {
      * 8. Search cars for a given City / State combination
      * 9. Get Facets to build the search drill downs
      * 10. Get Market averages for price/miles/dom for your search
-    **/
-    getSearchCarIncentiveOem(req: operations.GetSearchCarIncentiveOemRequest, config?: AxiosRequestConfig): Promise<operations.GetSearchCarIncentiveOemResponse>;
+     */
+    oemSearch(req: operations.OemSearchRequest, config?: AxiosRequestConfig): Promise<operations.OemSearchResponse>;
 }

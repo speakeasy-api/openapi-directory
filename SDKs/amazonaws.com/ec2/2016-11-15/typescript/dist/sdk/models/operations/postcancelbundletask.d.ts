@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCancelBundleTaskActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCancelBundleTaskActionEnum {
     CancelBundleTask = "CancelBundleTask"
 }
-export declare enum PostCancelBundleTaskVersionEnum {
+export declare enum POSTCancelBundleTaskVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostCancelBundleTaskQueryParams extends SpeakeasyBase {
-    action: PostCancelBundleTaskActionEnum;
-    version: PostCancelBundleTaskVersionEnum;
-}
-export declare class PostCancelBundleTaskHeaders extends SpeakeasyBase {
+export declare class POSTCancelBundleTaskRequest extends SpeakeasyBase {
+    action: POSTCancelBundleTaskActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCancelBundleTaskVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCancelBundleTaskHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCancelBundleTaskRequest extends SpeakeasyBase {
-    queryParams: PostCancelBundleTaskQueryParams;
-    headers: PostCancelBundleTaskHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCancelBundleTaskResponse extends SpeakeasyBase {
+export declare class POSTCancelBundleTaskResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

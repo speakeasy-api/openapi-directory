@@ -1,9 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UserStatisticsAccumulatedValueV1StatisticsIndividualQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class UserStatisticsAccumulatedValueV1StatisticsIndividualRequest extends SpeakeasyBase {
     endDate?: string;
     startDate?: string;
 }
-export declare class UserStatisticsAccumulatedValueV1StatisticsIndividual200ApplicationJsonResult extends SpeakeasyBase {
+export declare class UserStatisticsAccumulatedValueV1StatisticsIndividual200ApplicationJSONResult extends SpeakeasyBase {
     accelerationCount?: number;
     appId?: string;
     averageSpeedKmh?: number;
@@ -33,18 +34,22 @@ export declare class UserStatisticsAccumulatedValueV1StatisticsIndividual200Appl
     totalSpeedingMile?: number;
     tripsCount?: number;
 }
-export declare class UserStatisticsAccumulatedValueV1StatisticsIndividual200ApplicationJson extends SpeakeasyBase {
+/**
+ * Success
+ */
+export declare class UserStatisticsAccumulatedValueV1StatisticsIndividual200ApplicationJSON extends SpeakeasyBase {
     errors?: any[];
-    result?: UserStatisticsAccumulatedValueV1StatisticsIndividual200ApplicationJsonResult;
+    result?: UserStatisticsAccumulatedValueV1StatisticsIndividual200ApplicationJSONResult;
     status?: number;
     title?: string;
 }
-export declare class UserStatisticsAccumulatedValueV1StatisticsIndividualRequest extends SpeakeasyBase {
-    queryParams: UserStatisticsAccumulatedValueV1StatisticsIndividualQueryParams;
-}
 export declare class UserStatisticsAccumulatedValueV1StatisticsIndividualResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
-    userStatisticsAccumulatedValueV1StatisticsIndividual200ApplicationJSONObject?: UserStatisticsAccumulatedValueV1StatisticsIndividual200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
+    userStatisticsAccumulatedValueV1StatisticsIndividual200ApplicationJSONObject?: UserStatisticsAccumulatedValueV1StatisticsIndividual200ApplicationJSON;
 }

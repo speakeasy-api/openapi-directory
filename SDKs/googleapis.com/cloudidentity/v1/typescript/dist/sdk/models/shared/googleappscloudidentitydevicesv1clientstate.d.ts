@@ -1,10 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { GoogleAppsCloudidentityDevicesV1CustomAttributeValue } from "./googleappscloudidentitydevicesv1customattributevalue";
+/**
+ * The compliance state of the resource as specified by the API client.
+ */
 export declare enum GoogleAppsCloudidentityDevicesV1ClientStateComplianceStateEnum {
     ComplianceStateUnspecified = "COMPLIANCE_STATE_UNSPECIFIED",
     Compliant = "COMPLIANT",
     NonCompliant = "NON_COMPLIANT"
 }
+/**
+ * The Health score of the resource. The Health score is the callers specification of the condition of the device from a usability point of view. For example, a third-party device management provider may specify a health score based on its compliance with organizational policies.
+ */
 export declare enum GoogleAppsCloudidentityDevicesV1ClientStateHealthScoreEnum {
     HealthScoreUnspecified = "HEALTH_SCORE_UNSPECIFIED",
     VeryPoor = "VERY_POOR",
@@ -13,11 +19,17 @@ export declare enum GoogleAppsCloudidentityDevicesV1ClientStateHealthScoreEnum {
     Good = "GOOD",
     VeryGood = "VERY_GOOD"
 }
+/**
+ * The management state of the resource as specified by the API client.
+ */
 export declare enum GoogleAppsCloudidentityDevicesV1ClientStateManagedEnum {
     ManagedStateUnspecified = "MANAGED_STATE_UNSPECIFIED",
     Managed = "MANAGED",
     Unmanaged = "UNMANAGED"
 }
+/**
+ * Output only. The owner of the ClientState
+ */
 export declare enum GoogleAppsCloudidentityDevicesV1ClientStateOwnerTypeEnum {
     OwnerTypeUnspecified = "OWNER_TYPE_UNSPECIFIED",
     OwnerTypeCustomer = "OWNER_TYPE_CUSTOMER",
@@ -25,18 +37,54 @@ export declare enum GoogleAppsCloudidentityDevicesV1ClientStateOwnerTypeEnum {
 }
 /**
  * Represents the state associated with an API client calling the Devices API. Resource representing ClientState and supports updates from API users
-**/
+ */
 export declare class GoogleAppsCloudidentityDevicesV1ClientState extends SpeakeasyBase {
+    /**
+     * The caller can specify asset tags for this resource
+     */
     assetTags?: string[];
+    /**
+     * The compliance state of the resource as specified by the API client.
+     */
     complianceState?: GoogleAppsCloudidentityDevicesV1ClientStateComplianceStateEnum;
+    /**
+     * Output only. The time the client state data was created.
+     */
     createTime?: string;
+    /**
+     * This field may be used to store a unique identifier for the API resource within which these CustomAttributes are a field.
+     */
     customId?: string;
+    /**
+     * The token that needs to be passed back for concurrency control in updates. Token needs to be passed back in UpdateRequest
+     */
     etag?: string;
+    /**
+     * The Health score of the resource. The Health score is the callers specification of the condition of the device from a usability point of view. For example, a third-party device management provider may specify a health score based on its compliance with organizational policies.
+     */
     healthScore?: GoogleAppsCloudidentityDevicesV1ClientStateHealthScoreEnum;
+    /**
+     * The map of key-value attributes stored by callers specific to a device. The total serialized length of this map may not exceed 10KB. No limit is placed on the number of attributes in a map.
+     */
     keyValuePairs?: Record<string, GoogleAppsCloudidentityDevicesV1CustomAttributeValue>;
+    /**
+     * Output only. The time the client state data was last updated.
+     */
     lastUpdateTime?: string;
+    /**
+     * The management state of the resource as specified by the API client.
+     */
     managed?: GoogleAppsCloudidentityDevicesV1ClientStateManagedEnum;
+    /**
+     * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the ClientState in format: `devices/{device}/deviceUsers/{device_user}/clientState/{partner}`, where partner corresponds to the partner storing the data. For partners belonging to the "BeyondCorp Alliance", this is the partner ID specified to you by Google. For all other callers, this is a string of the form: `{customer}-suffix`, where `customer` is your customer ID. The *suffix* is any string the caller specifies. This string will be displayed verbatim in the administration console. This suffix is used in setting up Custom Access Levels in Context-Aware Access. Your organization's customer ID can be obtained from the URL: `GET https://www.googleapis.com/admin/directory/v1/customers/my_customer` The `id` field in the response contains the customer ID starting with the letter 'C'. The customer ID to be used in this API is the string after the letter 'C' (not including 'C')
+     */
     name?: string;
+    /**
+     * Output only. The owner of the ClientState
+     */
     ownerType?: GoogleAppsCloudidentityDevicesV1ClientStateOwnerTypeEnum;
+    /**
+     * A descriptive cause of the health score.
+     */
     scoreReason?: string;
 }

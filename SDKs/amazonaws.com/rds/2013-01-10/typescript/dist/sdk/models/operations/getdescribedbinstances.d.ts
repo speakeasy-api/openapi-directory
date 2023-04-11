@@ -1,18 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeDbInstancesActionEnum {
-    DescribeDbInstances = "DescribeDBInstances"
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeDBInstancesActionEnum {
+    DescribeDBInstances = "DescribeDBInstances"
 }
-export declare enum GetDescribeDbInstancesVersionEnum {
+export declare enum GETDescribeDBInstancesVersionEnum {
     TwoThousandAndThirteen0110 = "2013-01-10"
 }
-export declare class GetDescribeDbInstancesQueryParams extends SpeakeasyBase {
-    action: GetDescribeDbInstancesActionEnum;
+export declare class GETDescribeDBInstancesRequest extends SpeakeasyBase {
+    action: GETDescribeDBInstancesActionEnum;
     dbInstanceIdentifier?: string;
     marker?: string;
     maxRecords?: number;
-    version: GetDescribeDbInstancesVersionEnum;
-}
-export declare class GetDescribeDbInstancesHeaders extends SpeakeasyBase {
+    version: GETDescribeDBInstancesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +20,9 @@ export declare class GetDescribeDbInstancesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeDbInstancesRequest extends SpeakeasyBase {
-    queryParams: GetDescribeDbInstancesQueryParams;
-    headers: GetDescribeDbInstancesHeaders;
-}
-export declare class GetDescribeDbInstancesResponse extends SpeakeasyBase {
+export declare class GETDescribeDBInstancesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

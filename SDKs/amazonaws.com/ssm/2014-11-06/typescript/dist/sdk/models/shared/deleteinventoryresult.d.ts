@@ -1,0 +1,10 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { InventoryDeletionSummary } from "./inventorydeletionsummary";
+/**
+ * Success
+ */
+export declare class DeleteInventoryResult extends SpeakeasyBase {
+    deletionId?: string;
+    deletionSummary?: InventoryDeletionSummary;
+    typeName?: string;
+}

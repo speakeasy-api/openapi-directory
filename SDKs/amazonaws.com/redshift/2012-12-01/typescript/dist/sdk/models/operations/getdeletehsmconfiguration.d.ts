@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteHsmConfigurationActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteHsmConfigurationActionEnum {
     DeleteHsmConfiguration = "DeleteHsmConfiguration"
 }
-export declare enum GetDeleteHsmConfigurationVersionEnum {
+export declare enum GETDeleteHsmConfigurationVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class GetDeleteHsmConfigurationQueryParams extends SpeakeasyBase {
-    action: GetDeleteHsmConfigurationActionEnum;
+export declare class GETDeleteHsmConfigurationRequest extends SpeakeasyBase {
+    action: GETDeleteHsmConfigurationActionEnum;
+    /**
+     * The identifier of the Amazon Redshift HSM configuration to be deleted.
+     */
     hsmConfigurationIdentifier: string;
-    version: GetDeleteHsmConfigurationVersionEnum;
-}
-export declare class GetDeleteHsmConfigurationHeaders extends SpeakeasyBase {
+    version: GETDeleteHsmConfigurationVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDeleteHsmConfigurationHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteHsmConfigurationRequest extends SpeakeasyBase {
-    queryParams: GetDeleteHsmConfigurationQueryParams;
-    headers: GetDeleteHsmConfigurationHeaders;
-}
-export declare class GetDeleteHsmConfigurationResponse extends SpeakeasyBase {
+export declare class GETDeleteHsmConfigurationResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

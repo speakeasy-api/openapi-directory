@@ -1,10 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetNcbiGeneMappingUsingPostRequest extends SpeakeasyBase {
-    request?: shared.RgdidListRequest;
-}
-export declare class GetNcbiGeneMappingUsingPostResponse extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetNCBIGeneMappingUsingPOSTResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

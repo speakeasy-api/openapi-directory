@@ -1,21 +1,23 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { ThreeGetEstimatedPriceRequest, ThreeGetEstimatedPriceResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetAllTransfersRequest,
+  GetAllTransfersResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: ThreeGetEstimatedPriceRequest = {
-  queryParams: {
-    amount: "sit",
-    currencyFrom: "voluptas",
-    currencyTo: "culpa",
-  },
+
+const req: GetAllTransfersRequest = {
+  id: "111",
+  limit: "10",
+  offset: "0",
+  order: "ASC",
+  status: "CREATED",
 };
 
-sdk.threeGetEstimatedPrice(req).then((res: ThreeGetEstimatedPriceResponse | AxiosError) => {
+sdk.billingSubPartnerAPI.getAllTransfers(req).then((res: GetAllTransfersResponse | AxiosError) => {
    // handle response
 });
 ```

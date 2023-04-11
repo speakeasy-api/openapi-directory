@@ -2,8 +2,8 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { RotationRulesType } from "./rotationrulestype";
 import { Tag } from "./tag";
 /**
- * A structure that contains the details about a secret. It does not include the encrypted <code>SecretString</code> and <code>SecretBinary</code> values. To get those values, use the <a>GetSecretValue</a> operation.
-**/
+ * A structure that contains the details about a secret. It does not include the encrypted <code>SecretString</code> and <code>SecretBinary</code> values. To get those values, use <a href="https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_GetSecretValue.html">GetSecretValue</a> .
+ */
 export declare class SecretListEntry extends SpeakeasyBase {
     arn?: string;
     createdDate?: Date;
@@ -14,6 +14,7 @@ export declare class SecretListEntry extends SpeakeasyBase {
     lastChangedDate?: Date;
     lastRotatedDate?: Date;
     name?: string;
+    nextRotationDate?: Date;
     owningService?: string;
     primaryRegion?: string;
     rotationEnabled?: boolean;

@@ -8,7 +8,10 @@ export declare enum GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessmentLab
 }
 /**
  * Account defender risk assessment.
-**/
+ */
 export declare class GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment extends SpeakeasyBase {
+    /**
+     * Labels for this request.
+     */
     labels?: GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessmentLabelsEnum[];
 }

@@ -8,7 +8,7 @@ export declare enum WorkflowStateEnum {
 }
 /**
  * A GitHub Actions workflow
-**/
+ */
 export declare class Workflow extends SpeakeasyBase {
     badgeUrl: string;
     createdAt: Date;

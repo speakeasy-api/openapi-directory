@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Entities {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class Entities {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteEntities - Multi-entity: Delete an entity
+     * Multi-entity: Delete an entity
      *
+     * @remarks
      * **Note:** The Multi-entity feature is in **Limited Availability**. If you wish to have access to the feature, submit a request at [Zuora Global Support](http://support.zuora.com/).
      *
      * Removes an entity and its sub-entities from a multi-entity hierarchy. You can only remove unprovisioned entities. An error occurred when you remove a provisioned entity.
@@ -18,11 +19,12 @@ export declare class Entities {
      * ## User Access Permission
      * You must make the call as a global entity administrator.
      *
-    **/
-    deleteEntities(req: operations.DeleteEntitiesRequest, config?: AxiosRequestConfig): Promise<operations.DeleteEntitiesResponse>;
+     */
+    deleteEntities(req: operations.DELETEEntitiesRequest, config?: AxiosRequestConfig): Promise<operations.DELETEEntitiesResponse>;
     /**
-     * getEntities - Multi-entity: List entities
+     * Multi-entity: List entities
      *
+     * @remarks
      * **Note:** The Multi-entity feature is in **Limited Availability**. If you wish to have access to the feature, submit a request at [Zuora Global Support](http://support.zuora.com/).
      *
      *
@@ -41,11 +43,12 @@ export declare class Entities {
      *
      * You can make the call as any entity user.
      *
-    **/
-    getEntities(req: operations.GetEntitiesRequest, config?: AxiosRequestConfig): Promise<operations.GetEntitiesResponse>;
+     */
+    getEntities(req: operations.GETEntitiesRequest, config?: AxiosRequestConfig): Promise<operations.GETEntitiesResponse>;
     /**
-     * getEntityById - Multi-entity: Retrieve an entity
+     * Multi-entity: Retrieve an entity
      *
+     * @remarks
      * **Note:** The Multi-entity feature is in **Limited Availability**. If you wish to have access to the feature, submit a request at [Zuora Global Support](http://support.zuora.com/).
      *
      * Retrieves detailed information about a specified entity.
@@ -53,11 +56,12 @@ export declare class Entities {
      * ## User Access Permission
      * You can make the call as any entity user.
      *
-    **/
-    getEntityById(req: operations.GetEntityByIdRequest, config?: AxiosRequestConfig): Promise<operations.GetEntityByIdResponse>;
+     */
+    getEntityById(req: operations.GETEntityByIdRequest, config?: AxiosRequestConfig): Promise<operations.GETEntityByIdResponse>;
     /**
-     * postEntities - Multi-entity: Create an entity
+     * Multi-entity: Create an entity
      *
+     * @remarks
      * **Note:** The Multi-entity feature is in **Limited Availability**. If you wish to have access to the feature, submit a request at [Zuora Global Support](http://support.zuora.com/).
      *
      * Creates an entity in a multi-entity hierarchy.
@@ -68,11 +72,12 @@ export declare class Entities {
      * ## Notes
      * * We recommend that you assign only one administrator to manage the entity hierarchy, because an administrator of the global entity by default can only access to the entities that are created by themselves.
      *
-    **/
-    postEntities(req: operations.PostEntitiesRequest, config?: AxiosRequestConfig): Promise<operations.PostEntitiesResponse>;
+     */
+    postEntities(req: operations.POSTEntitiesRequest, config?: AxiosRequestConfig): Promise<operations.POSTEntitiesResponse>;
     /**
-     * putEntities - Multi-entity: Update an entity
+     * Multi-entity: Update an entity
      *
+     * @remarks
      * **Note:** The Multi-entity feature is in **Limited Availability**. If you wish to have access to the feature, submit a request at [Zuora Global Support](http://support.zuora.com/).
      *
      * Edits the following information about an unprovisioned entity:
@@ -92,11 +97,12 @@ export declare class Entities {
      * * You are not allowed to edit the locale and time zone of the provisioned entities through the REST API.
      * * You are not allowed to edit the display name of the global entity.
      *
-    **/
-    putEntities(req: operations.PutEntitiesRequest, config?: AxiosRequestConfig): Promise<operations.PutEntitiesResponse>;
+     */
+    putEntities(req: operations.PUTEntitiesRequest, config?: AxiosRequestConfig): Promise<operations.PUTEntitiesResponse>;
     /**
-     * putProvisionEntity - Multi-entity: Provision an entity
+     * Multi-entity: Provision an entity
      *
+     * @remarks
      * **Note:** The Multi-entity feature is in **Limited Availability**. If you wish to have access to the feature, submit a request at [Zuora Global Support](http://support.zuora.com/).
      *
      * Provisions an entity. You can only provision an entity if its parent entity is provisioned.
@@ -107,6 +113,6 @@ export declare class Entities {
      * ## Notes
      * * Zuora does not allow you to remove a provisioned entity from the multi-entity hierarchy. So before you provision an entity, make sure that you put the entity in the correct place in the multi-entity hierarchy.
      *
-    **/
-    putProvisionEntity(req: operations.PutProvisionEntityRequest, config?: AxiosRequestConfig): Promise<operations.PutProvisionEntityResponse>;
+     */
+    putProvisionEntity(req: operations.PUTProvisionEntityRequest, config?: AxiosRequestConfig): Promise<operations.PUTProvisionEntityResponse>;
 }

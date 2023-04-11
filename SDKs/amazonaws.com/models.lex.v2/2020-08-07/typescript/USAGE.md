@@ -1,35 +1,51 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { BuildBotLocaleRequest, BuildBotLocaleResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  BatchCreateCustomVocabularyItemRequest,
+  BatchCreateCustomVocabularyItemResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: BuildBotLocaleRequest = {
-  pathParams: {
-    botId: "sit",
-    botVersion: "voluptas",
-    localeId: "culpa",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  headers: {
-    xAmzAlgorithm: "expedita",
-    xAmzContentSha256: "consequuntur",
-    xAmzCredential: "dolor",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "voluptas",
-    xAmzSignature: "fugit",
-    xAmzSignedHeaders: "et",
+});
+
+const req: BatchCreateCustomVocabularyItemRequest = {
+  requestBody: {
+    customVocabularyItemList: [
+      {
+        displayAs: "provident",
+        phrase: "distinctio",
+        weight: 844266,
+      },
+      {
+        displayAs: "unde",
+        phrase: "nulla",
+        weight: 544883,
+      },
+      {
+        displayAs: "illum",
+        phrase: "vel",
+        weight: 623564,
+      },
+    ],
   },
+  xAmzAlgorithm: "deserunt",
+  xAmzContentSha256: "suscipit",
+  xAmzCredential: "iure",
+  xAmzDate: "magnam",
+  xAmzSecurityToken: "debitis",
+  xAmzSignature: "ipsa",
+  xAmzSignedHeaders: "delectus",
+  botId: "tempora",
+  botVersion: "suscipit",
+  localeId: "molestiae",
 };
 
-sdk.buildBotLocale(req).then((res: BuildBotLocaleResponse | AxiosError) => {
+sdk.batchCreateCustomVocabularyItem(req).then((res: BatchCreateCustomVocabularyItemResponse | AxiosError) => {
    // handle response
 });
 ```

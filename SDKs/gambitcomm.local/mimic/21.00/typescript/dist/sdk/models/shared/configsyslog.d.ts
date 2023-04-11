@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ConfigSyslog extends SpeakeasyBase {
+/**
+ * successful operation
+ */
+export declare class ConfigSYSLOG extends SpeakeasyBase {
     client?: string;
     hostname?: string;
     localport?: number;

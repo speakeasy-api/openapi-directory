@@ -1,17 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetMeTracksTrackIdPathParams extends SpeakeasyBase {
-    trackId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetMeTracksTrackIdSecurity extends SpeakeasyBase {
-    authHeader: shared.SchemeAuthHeader;
+    authHeader: string;
 }
 export declare class GetMeTracksTrackIdRequest extends SpeakeasyBase {
-    pathParams: GetMeTracksTrackIdPathParams;
-    security: GetMeTracksTrackIdSecurity;
+    /**
+     * SoundCloud Track id
+     */
+    trackId: number;
 }
 export declare class GetMeTracksTrackIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     track?: shared.Track;
 }

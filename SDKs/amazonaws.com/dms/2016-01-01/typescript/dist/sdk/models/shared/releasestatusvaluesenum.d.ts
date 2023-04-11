@@ -1,3 +1,4 @@
 export declare enum ReleaseStatusValuesEnum {
-    Beta = "beta"
+    Beta = "beta",
+    Prod = "prod"
 }

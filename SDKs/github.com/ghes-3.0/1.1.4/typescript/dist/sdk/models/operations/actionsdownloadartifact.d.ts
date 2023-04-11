@@ -1,15 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ActionsDownloadArtifactPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ActionsDownloadArtifactRequest extends SpeakeasyBase {
     archiveFormat: string;
+    /**
+     * artifact_id parameter
+     */
     artifactId: number;
     owner: string;
     repo: string;
 }
-export declare class ActionsDownloadArtifactRequest extends SpeakeasyBase {
-    pathParams: ActionsDownloadArtifactPathParams;
-}
 export declare class ActionsDownloadArtifactResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

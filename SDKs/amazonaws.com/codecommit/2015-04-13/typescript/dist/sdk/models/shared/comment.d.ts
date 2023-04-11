@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Returns information about a specific comment.
-**/
+ */
 export declare class Comment extends SpeakeasyBase {
     authorArn?: string;
     callerReactions?: string[];

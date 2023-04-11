@@ -175,22 +175,37 @@ export declare enum MappingJobStateCodeEnum {
 }
 /**
  * For V3: securityType2 is required when idType is BASE_TICKER or ID_EXCH_SYMBOL.  expiration is required when securityType2 is Option or Warrant.  maturity is required when securityType2 is Pool.
-**/
+ */
 export declare class MappingJob extends SpeakeasyBase {
+    /**
+     * At least one entry should be non-null.
+     */
     contractSize?: number[];
+    /**
+     * At least one entry should be non-null.
+     */
     coupon?: number[];
     currency?: string;
     exchCode?: string;
+    /**
+     * At least one entry should be non-null.
+     */
     expiration?: Date[];
     idType: MappingJobIdTypeEnum;
     idValue: any;
     includeUnlistedEquities?: boolean;
     marketSecDes?: string;
+    /**
+     * At least one entry should be non-null.
+     */
     maturity?: Date[];
     micCode?: string;
     optionType?: MappingJobOptionTypeEnum;
     securityType?: string;
     securityType2?: string;
     stateCode?: MappingJobStateCodeEnum;
+    /**
+     * At least one entry should be non-null.
+     */
     strike?: number[];
 }

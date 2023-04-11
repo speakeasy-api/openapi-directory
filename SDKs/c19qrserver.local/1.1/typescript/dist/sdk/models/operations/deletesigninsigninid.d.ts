@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteSigninSigninIdPathParams extends SpeakeasyBase {
-    signinId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteSigninSigninIdRequest extends SpeakeasyBase {
-    pathParams: DeleteSigninSigninIdPathParams;
+    /**
+     * The ID of the signin record to be deleted.
+     */
+    signinId: number;
 }
 export declare class DeleteSigninSigninIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Unauthorized
+     */
     invalidToken?: shared.InvalidToken;
 }

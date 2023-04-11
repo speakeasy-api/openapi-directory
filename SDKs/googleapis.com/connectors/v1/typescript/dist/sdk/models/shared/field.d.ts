@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The data type of the Field.
+ */
 export declare enum FieldDataTypeEnum {
     DataTypeUnspecified = "DATA_TYPE_UNSPECIFIED",
     DataTypeInt = "DATA_TYPE_INT",
@@ -48,14 +51,38 @@ export declare enum FieldDataTypeEnum {
 }
 /**
  * Metadata of an entity field.
-**/
+ */
 export declare class Field extends SpeakeasyBase {
+    /**
+     * The following map contains fields that are not explicitly mentioned above,this give connectors the flexibility to add new metadata fields.
+     */
     additionalDetails?: Record<string, any>;
+    /**
+     * The data type of the Field.
+     */
     dataType?: FieldDataTypeEnum;
+    /**
+     * The following field specifies the default value of the Field provided by the external system if a value is not provided.
+     */
     defaultValue?: any;
+    /**
+     * A brief description of the Field.
+     */
     description?: string;
+    /**
+     * Name of the Field.
+     */
     field?: string;
+    /**
+     * The following boolean field specifies if the current Field acts as a primary key or id if the parent is of type entity.
+     */
     key?: boolean;
+    /**
+     * Specifies whether a null value is allowed.
+     */
     nullable?: boolean;
+    /**
+     * Specifies if the Field is readonly.
+     */
     readonly?: boolean;
 }

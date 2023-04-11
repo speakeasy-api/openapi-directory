@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { AvailabilityZoneList } from "./availabilityzonelist";
-export declare class OrderableDbInstanceOptionsList extends SpeakeasyBase {
+export declare class OrderableDBInstanceOptionsList extends SpeakeasyBase {
     availabilityZones?: AvailabilityZoneList[];
     dbInstanceClass?: string;
     engine?: string;

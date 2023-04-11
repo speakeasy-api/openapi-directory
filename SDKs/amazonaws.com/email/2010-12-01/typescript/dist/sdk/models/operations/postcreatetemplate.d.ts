@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateTemplateActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateTemplateActionEnum {
     CreateTemplate = "CreateTemplate"
 }
-export declare enum PostCreateTemplateVersionEnum {
+export declare enum POSTCreateTemplateVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostCreateTemplateQueryParams extends SpeakeasyBase {
-    action: PostCreateTemplateActionEnum;
-    version: PostCreateTemplateVersionEnum;
-}
-export declare class PostCreateTemplateHeaders extends SpeakeasyBase {
+export declare class POSTCreateTemplateRequest extends SpeakeasyBase {
+    action: POSTCreateTemplateActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateTemplateVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateTemplateHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateTemplateRequest extends SpeakeasyBase {
-    queryParams: PostCreateTemplateQueryParams;
-    headers: PostCreateTemplateHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateTemplateResponse extends SpeakeasyBase {
+export declare class POSTCreateTemplateResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

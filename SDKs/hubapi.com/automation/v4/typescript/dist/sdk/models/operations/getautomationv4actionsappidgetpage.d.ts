@@ -1,24 +1,31 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetAutomationV4ActionsAppIdGetPagePathParams extends SpeakeasyBase {
-    appId: number;
-}
-export declare class GetAutomationV4ActionsAppIdGetPageQueryParams extends SpeakeasyBase {
-    after?: string;
-    archived?: boolean;
-    limit?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetAutomationV4ActionsAppIdGetPageSecurity extends SpeakeasyBase {
-    developerHapikey: shared.SchemeDeveloperHapikey;
+    developerHapikey: string;
 }
 export declare class GetAutomationV4ActionsAppIdGetPageRequest extends SpeakeasyBase {
-    pathParams: GetAutomationV4ActionsAppIdGetPagePathParams;
-    queryParams: GetAutomationV4ActionsAppIdGetPageQueryParams;
-    security: GetAutomationV4ActionsAppIdGetPageSecurity;
+    /**
+     * The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+     */
+    after?: string;
+    appId: number;
+    /**
+     * Whether to include archived custom actions.
+     */
+    archived?: boolean;
+    /**
+     * Maximum number of results per page.
+     */
+    limit?: number;
 }
 export declare class GetAutomationV4ActionsAppIdGetPageResponse extends SpeakeasyBase {
     body?: Uint8Array;
+    /**
+     * successful operation
+     */
     collectionResponseExtensionActionDefinitionForwardPaging?: shared.CollectionResponseExtensionActionDefinitionForwardPaging;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

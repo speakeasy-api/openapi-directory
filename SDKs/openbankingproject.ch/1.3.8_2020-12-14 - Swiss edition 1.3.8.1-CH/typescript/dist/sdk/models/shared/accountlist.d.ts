@@ -3,7 +3,9 @@ import { AccountDetails } from "./accountdetails";
 /**
  * List of accounts with details.
  *
-**/
+ * @remarks
+ *
+ */
 export declare class AccountList extends SpeakeasyBase {
     accounts: AccountDetails[];
 }

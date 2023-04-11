@@ -1,11 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { HrefType } from "./hreftype";
-import { TppMessage404Sbs } from "./tppmessage404sbs";
+import { TppMessage404SBS } from "./tppmessage404sbs";
 /**
  * NextGen specific definition of reporting error information in case of a HTTP error code 404.
  *
-**/
-export declare class Error404NgSbs extends SpeakeasyBase {
+ * @remarks
+ *
+ */
+export declare class Error404NGSBS extends SpeakeasyBase {
+    /**
+     * A _link object with all availabel link types.
+     *
+     * @remarks
+     *
+     */
     links?: Record<string, HrefType>;
-    tppMessages?: TppMessage404Sbs[];
+    tppMessages?: TppMessage404SBS[];
 }

@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * <p/>
-**/
+ */
 export declare class StartReplicationTaskAssessmentRunMessage extends SpeakeasyBase {
     assessmentRunName: string;
     exclude?: string[];

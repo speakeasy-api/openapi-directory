@@ -6,32 +6,34 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/hetzner.cloud/1.0.0/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/hetzner.cloud/1.0.0/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetActionsRequest, GetActionsResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetActionsRequest,
+  GetActionsResponse,
+  GetActionsSortParameterSortEnum,
+  GetActionsStatusParameterStatusEnum,
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetActionsRequest = {
-  queryParams: {
-    id: 8717895732742165505,
-    sort: "id",
-    status: "success",
-  },
+  id: 548814,
+  sort: GetActionsSortParameterSortEnum.ProgressAsc,
+  status: GetActionsStatusParameterStatusEnum.Error,
 };
 
 sdk.actions.getActions(req).then((res: GetActionsResponse | AxiosError) => {
@@ -41,20 +43,21 @@ sdk.actions.getActions(req).then((res: GetActionsResponse | AxiosError) => {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### Actions
+
+### actions
 
 * `getActions` - Get all Actions
 * `getActionsId` - Get an Action
 
-### Certificate Actions
+### certificateActions
 
 * `getCertificatesIdActions` - Get all Actions for a Certificate
 * `getCertificatesIdActionsActionId` - Get an Action for a Certificate
 * `postCertificatesIdActionsRetry` - Retry Issuance or Renewal
 
-### Certificates
+### certificates
 
 * `deleteCertificatesId` - Delete a Certificate
 * `getCertificates` - Get all Certificates
@@ -62,12 +65,12 @@ sdk.actions.getActions(req).then((res: GetActionsResponse | AxiosError) => {
 * `postCertificates` - Create a Certificate
 * `putCertificatesId` - Update a Certificate
 
-### Datacenters
+### datacenters
 
 * `getDatacenters` - Get all Datacenters
 * `getDatacentersId` - Get a Datacenter
 
-### Firewall Actions
+### firewallActions
 
 * `getFirewallsIdActions` - Get all Actions for a Firewall
 * `getFirewallsIdActionsActionId` - Get an Action for a Firewall
@@ -75,7 +78,7 @@ sdk.actions.getActions(req).then((res: GetActionsResponse | AxiosError) => {
 * `postFirewallsIdActionsRemoveFromResources` - Remove from Resources
 * `postFirewallsIdActionsSetRules` - Set Rules
 
-### Firewalls
+### firewalls
 
 * `deleteFirewallsId` - Delete a Firewall
 * `getFirewalls` - Get all Firewalls
@@ -83,7 +86,7 @@ sdk.actions.getActions(req).then((res: GetActionsResponse | AxiosError) => {
 * `postFirewalls` - Create a Firewall
 * `putFirewallsId` - Update a Firewall
 
-### Floating IP Actions
+### floatingIPActions
 
 * `getFloatingIpsIdActions` - Get all Actions for a Floating IP
 * `getFloatingIpsIdActionsActionId` - Get an Action for a Floating IP
@@ -92,7 +95,7 @@ sdk.actions.getActions(req).then((res: GetActionsResponse | AxiosError) => {
 * `postFloatingIpsIdActionsChangeProtection` - Change Floating IP Protection
 * `postFloatingIpsIdActionsUnassign` - Unassign a Floating IP
 
-### Floating IPs
+### floatingIPs
 
 * `deleteFloatingIpsId` - Delete a Floating IP
 * `getFloatingIps` - Get all Floating IPs
@@ -100,25 +103,25 @@ sdk.actions.getActions(req).then((res: GetActionsResponse | AxiosError) => {
 * `postFloatingIps` - Create a Floating IP
 * `putFloatingIpsId` - Update a Floating IP
 
-### ISOs
+### isOs
 
 * `getIsos` - Get all ISOs
 * `getIsosId` - Get an ISO
 
-### Image Actions
+### imageActions
 
 * `getImagesIdActions` - Get all Actions for an Image
 * `getImagesIdActionsActionId` - Get an Action for an Image
 * `postImagesIdActionsChangeProtection` - Change Image Protection
 
-### Images
+### images
 
 * `deleteImagesId` - Delete an Image
 * `getImages` - Get all Images
 * `getImagesId` - Get an Image
 * `putImagesId` - Update an Image
 
-### Load Balancer Actions
+### loadBalancerActions
 
 * `getLoadBalancersIdActions` - Get all Actions for a Load Balancer
 * `getLoadBalancersIdActionsActionId` - Get an Action for a Load Balancer
@@ -136,12 +139,12 @@ sdk.actions.getActions(req).then((res: GetActionsResponse | AxiosError) => {
 * `postLoadBalancersIdActionsRemoveTarget` - Remove Target
 * `postLoadBalancersIdActionsUpdateService` - Update Service
 
-### Load Balancer Types
+### loadBalancerTypes
 
 * `getLoadBalancerTypes` - Get all Load Balancer Types
 * `getLoadBalancerTypesId` - Get a Load Balancer Type
 
-### Load Balancers
+### loadBalancers
 
 * `deleteLoadBalancersId` - Delete a Load Balancer
 * `getLoadBalancers` - Get all Load Balancers
@@ -150,12 +153,12 @@ sdk.actions.getActions(req).then((res: GetActionsResponse | AxiosError) => {
 * `postLoadBalancers` - Create a Load Balancer
 * `putLoadBalancersId` - Update a Load Balancer
 
-### Locations
+### locations
 
 * `getLocations` - Get all Locations
 * `getLocationsId` - Get a Location
 
-### Network Actions
+### networkActions
 
 * `getNetworksIdActions` - Get all Actions for a Network
 * `getNetworksIdActionsActionId` - Get an Action for a Network
@@ -166,7 +169,7 @@ sdk.actions.getActions(req).then((res: GetActionsResponse | AxiosError) => {
 * `postNetworksIdActionsDeleteRoute` - Delete a route from a Network
 * `postNetworksIdActionsDeleteSubnet` - Delete a subnet from a Network
 
-### Networks
+### networks
 
 * `deleteNetworksId` - Delete a Network
 * `getNetworks` - Get all Networks
@@ -174,7 +177,7 @@ sdk.actions.getActions(req).then((res: GetActionsResponse | AxiosError) => {
 * `postNetworks` - Create a Network
 * `putNetworksId` - Update a Network
 
-### Placement Groups
+### placementGroups
 
 * `deletePlacementGroupsId` - Delete a PlacementGroup
 * `getPlacementGroups` - Get all PlacementGroups
@@ -182,11 +185,26 @@ sdk.actions.getActions(req).then((res: GetActionsResponse | AxiosError) => {
 * `postPlacementGroups` - Create a PlacementGroup
 * `putPlacementGroupsId` - Update a PlacementGroup
 
-### Pricing
+### pricing
 
 * `getPricing` - Get all prices
 
-### SSH Keys
+### primaryIPActions
+
+* `postPrimaryIpsIdActionsAssign` - Assign a Primary IP to a resource
+* `postPrimaryIpsIdActionsChangeDnsPtr` - Change reverse DNS entry for a Primary IP
+* `postPrimaryIpsIdActionsChangeProtection` - Change Primary IP Protection
+* `postPrimaryIpsIdActionsUnassign` - Unassign a Primary IP from a resource
+
+### primaryIPs
+
+* `deletePrimaryIpsId` - Delete a Primary IP
+* `getPrimaryIps` - Get all Primary IPs
+* `getPrimaryIpsId` - Get a Primary IP
+* `postPrimaryIps` - Create a Primary IP
+* `putPrimaryIpsId` - Update a Primary IP
+
+### sshKeys
 
 * `deleteSshKeysId` - Delete an SSH key
 * `getSshKeys` - Get all SSH keys
@@ -194,7 +212,7 @@ sdk.actions.getActions(req).then((res: GetActionsResponse | AxiosError) => {
 * `postSshKeys` - Create an SSH key
 * `putSshKeysId` - Update an SSH key
 
-### Server Actions
+### serverActions
 
 * `getServersIdActions` - Get all Actions for a Server
 * `getServersIdActionsActionId` - Get an Action for a Server
@@ -222,12 +240,12 @@ sdk.actions.getActions(req).then((res: GetActionsResponse | AxiosError) => {
 * `postServersIdActionsResetPassword` - Reset root Password of a Server
 * `postServersIdActionsShutdown` - Shutdown a Server
 
-### Server Types
+### serverTypes
 
 * `getServerTypes` - Get all Server Types
 * `getServerTypesId` - Get a Server Type
 
-### Servers
+### servers
 
 * `deleteServersId` - Delete a Server
 * `getServers` - Get all Servers
@@ -236,7 +254,7 @@ sdk.actions.getActions(req).then((res: GetActionsResponse | AxiosError) => {
 * `postServers` - Create a Server
 * `putServersId` - Update a Server
 
-### Volume Actions
+### volumeActions
 
 * `getVolumesIdActions` - Get all Actions for a Volume
 * `getVolumesIdActionsActionId` - Get an Action for a Volume
@@ -245,14 +263,25 @@ sdk.actions.getActions(req).then((res: GetActionsResponse | AxiosError) => {
 * `postVolumesIdActionsDetach` - Detach Volume
 * `postVolumesIdActionsResize` - Resize Volume
 
-### Volumes
+### volumes
 
 * `deleteVolumesId` - Delete a Volume
 * `getVolumes` - Get all Volumes
 * `getVolumesId` - Get a Volume
 * `postVolumes` - Create a Volume
 * `putVolumesId` - Update a Volume
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class InvoiceItemAdjustments {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,11 +9,11 @@ export declare class InvoiceItemAdjustments {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * objectDeleteInvoiceItemAdjustment - CRUD: Delete an invoice item adjustment
-    **/
-    objectDeleteInvoiceItemAdjustment(req: operations.ObjectDeleteInvoiceItemAdjustmentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectDeleteInvoiceItemAdjustmentResponse>;
+     * CRUD: Delete an invoice item adjustment
+     */
+    objectDELETEInvoiceItemAdjustment(req: operations.ObjectDELETEInvoiceItemAdjustmentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectDELETEInvoiceItemAdjustmentResponse>;
     /**
-     * objectGetInvoiceItemAdjustment - CRUD: Retrieve an invoice item adjustment
-    **/
-    objectGetInvoiceItemAdjustment(req: operations.ObjectGetInvoiceItemAdjustmentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGetInvoiceItemAdjustmentResponse>;
+     * CRUD: Retrieve an invoice item adjustment
+     */
+    objectGETInvoiceItemAdjustment(req: operations.ObjectGETInvoiceItemAdjustmentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGETInvoiceItemAdjustmentResponse>;
 }

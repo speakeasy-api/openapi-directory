@@ -1,18 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class DeleteABlockedListPathParams extends SpeakeasyBase {
-    blockedListId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteABlockedListSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
+    oAuth: string;
 }
 export declare class DeleteABlockedListRequest extends SpeakeasyBase {
-    pathParams: DeleteABlockedListPathParams;
-    security: DeleteABlockedListSecurity;
+    /**
+     * Unique Identifier of the blocked list. This can be retrieved from the List Blocked List API.
+     */
+    blockedListId: string;
 }
 export declare class DeleteABlockedListResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * **HTTP Status Code:** `204` **No Content**<br>
+     *
+     * @remarks
+     * Blocked list deleted successfully.
+     */
     deleteABlockedList204ApplicationJSONAny?: any;
 }

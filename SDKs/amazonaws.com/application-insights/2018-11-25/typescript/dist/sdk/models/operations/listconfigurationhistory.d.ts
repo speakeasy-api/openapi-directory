@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListConfigurationHistoryQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListConfigurationHistoryXAmzTargetEnum {
     Ec2WindowsBarleyServiceListConfigurationHistory = "EC2WindowsBarleyService.ListConfigurationHistory"
 }
-export declare class ListConfigurationHistoryHeaders extends SpeakeasyBase {
+export declare class ListConfigurationHistoryRequest extends SpeakeasyBase {
+    listConfigurationHistoryRequest: shared.ListConfigurationHistoryRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,16 +23,24 @@ export declare class ListConfigurationHistoryHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListConfigurationHistoryXAmzTargetEnum;
 }
-export declare class ListConfigurationHistoryRequest extends SpeakeasyBase {
-    queryParams: ListConfigurationHistoryQueryParams;
-    headers: ListConfigurationHistoryHeaders;
-    request: shared.ListConfigurationHistoryRequest;
-}
 export declare class ListConfigurationHistoryResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * Success
+     */
     listConfigurationHistoryResponse?: shared.ListConfigurationHistoryResponse;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

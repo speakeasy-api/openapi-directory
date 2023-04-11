@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteTrafficMirrorFilterRuleActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteTrafficMirrorFilterRuleActionEnum {
     DeleteTrafficMirrorFilterRule = "DeleteTrafficMirrorFilterRule"
 }
-export declare enum PostDeleteTrafficMirrorFilterRuleVersionEnum {
+export declare enum POSTDeleteTrafficMirrorFilterRuleVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDeleteTrafficMirrorFilterRuleQueryParams extends SpeakeasyBase {
-    action: PostDeleteTrafficMirrorFilterRuleActionEnum;
-    version: PostDeleteTrafficMirrorFilterRuleVersionEnum;
-}
-export declare class PostDeleteTrafficMirrorFilterRuleHeaders extends SpeakeasyBase {
+export declare class POSTDeleteTrafficMirrorFilterRuleRequest extends SpeakeasyBase {
+    action: POSTDeleteTrafficMirrorFilterRuleActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteTrafficMirrorFilterRuleVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteTrafficMirrorFilterRuleHeaders extends SpeakeasyB
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteTrafficMirrorFilterRuleRequest extends SpeakeasyBase {
-    queryParams: PostDeleteTrafficMirrorFilterRuleQueryParams;
-    headers: PostDeleteTrafficMirrorFilterRuleHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteTrafficMirrorFilterRuleResponse extends SpeakeasyBase {
+export declare class POSTDeleteTrafficMirrorFilterRuleResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

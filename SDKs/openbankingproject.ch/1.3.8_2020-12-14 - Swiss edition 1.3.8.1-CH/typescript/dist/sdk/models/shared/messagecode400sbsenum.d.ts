@@ -1,4 +1,7 @@
-export declare enum MessageCode400SbsEnum {
+/**
+ * Message codes defined for signing baskets for HTTP Error code 400 (BAD_REQUEST).
+ */
+export declare enum MessageCode400SBSEnum {
     FormatError = "FORMAT_ERROR",
     ParameterNotConsistent = "PARAMETER_NOT_CONSISTENT",
     ParameterNotSupported = "PARAMETER_NOT_SUPPORTED",

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostEnableVolumeIoActionEnum {
-    EnableVolumeIo = "EnableVolumeIO"
+import { AxiosResponse } from "axios";
+export declare enum POSTEnableVolumeIOActionEnum {
+    EnableVolumeIO = "EnableVolumeIO"
 }
-export declare enum PostEnableVolumeIoVersionEnum {
+export declare enum POSTEnableVolumeIOVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostEnableVolumeIoQueryParams extends SpeakeasyBase {
-    action: PostEnableVolumeIoActionEnum;
-    version: PostEnableVolumeIoVersionEnum;
-}
-export declare class PostEnableVolumeIoHeaders extends SpeakeasyBase {
+export declare class POSTEnableVolumeIORequest extends SpeakeasyBase {
+    action: POSTEnableVolumeIOActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTEnableVolumeIOVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +18,8 @@ export declare class PostEnableVolumeIoHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostEnableVolumeIoRequest extends SpeakeasyBase {
-    queryParams: PostEnableVolumeIoQueryParams;
-    headers: PostEnableVolumeIoHeaders;
-    request?: Uint8Array;
-}
-export declare class PostEnableVolumeIoResponse extends SpeakeasyBase {
+export declare class POSTEnableVolumeIOResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

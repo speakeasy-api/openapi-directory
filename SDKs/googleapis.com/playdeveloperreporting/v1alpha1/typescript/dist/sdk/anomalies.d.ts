@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Anomalies {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +9,7 @@ export declare class Anomalies {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * playdeveloperreportingAnomaliesList - Lists anomalies in any of the datasets.
-    **/
-    playdeveloperreportingAnomaliesList(req: operations.PlaydeveloperreportingAnomaliesListRequest, config?: AxiosRequestConfig): Promise<operations.PlaydeveloperreportingAnomaliesListResponse>;
+     * Lists anomalies in any of the datasets.
+     */
+    playdeveloperreportingAnomaliesList(req: operations.PlaydeveloperreportingAnomaliesListRequest, security: operations.PlaydeveloperreportingAnomaliesListSecurity, config?: AxiosRequestConfig): Promise<operations.PlaydeveloperreportingAnomaliesListResponse>;
 }

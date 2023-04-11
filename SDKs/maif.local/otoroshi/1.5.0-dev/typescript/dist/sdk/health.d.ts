@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Everything about Otoroshi health status
+ */
 export declare class Health {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,10 @@ export declare class Health {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * health - Return current Otoroshi health
+     * Return current Otoroshi health
      *
+     * @remarks
      * Import the full state of Otoroshi as a file
-    **/
+     */
     health(config?: AxiosRequestConfig): Promise<operations.HealthResponse>;
 }

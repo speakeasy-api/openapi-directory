@@ -1,22 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetPayrollCalendarPathParams extends SpeakeasyBase {
-    payrollCalendarID: string;
-}
-export declare class GetPayrollCalendarHeaders extends SpeakeasyBase {
-    xeroTenantId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetPayrollCalendarSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class GetPayrollCalendarRequest extends SpeakeasyBase {
-    pathParams: GetPayrollCalendarPathParams;
-    headers: GetPayrollCalendarHeaders;
-    security: GetPayrollCalendarSecurity;
+    /**
+     * Payroll Calendar id for single object
+     */
+    payrollCalendarID: string;
+    /**
+     * Xero identifier for Tenant
+     */
+    xeroTenantId: string;
 }
 export declare class GetPayrollCalendarResponse extends SpeakeasyBase {
-    apiException?: shared.ApiException;
+    /**
+     * validation error for a bad request
+     */
+    apiException?: shared.APIException;
     contentType: string;
+    /**
+     * search results matching criteria
+     */
     payrollCalendars?: shared.PayrollCalendars;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

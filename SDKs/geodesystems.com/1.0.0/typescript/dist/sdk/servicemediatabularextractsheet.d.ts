@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ *  API for Extract sheets
+ */
 export declare class ServiceMediaTabularExtractsheet {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,10 @@ export declare class ServiceMediaTabularExtractsheet {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * mediaTabularExtractsheet - API for Extract sheets
+     * API for Extract sheets
      *
+     * @remarks
      * API to call: Extract sheets
-    **/
+     */
     mediaTabularExtractsheet(req: operations.MediaTabularExtractsheetRequest, config?: AxiosRequestConfig): Promise<operations.MediaTabularExtractsheetResponse>;
 }

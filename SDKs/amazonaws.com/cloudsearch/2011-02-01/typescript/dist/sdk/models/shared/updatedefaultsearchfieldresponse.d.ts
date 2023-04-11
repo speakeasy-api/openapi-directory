@@ -2,7 +2,10 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { DefaultSearchFieldStatus } from "./defaultsearchfieldstatus";
 /**
  * A response message that contains the status of an updated default search field.
-**/
+ */
 export declare class UpdateDefaultSearchFieldResponse extends SpeakeasyBase {
+    /**
+     * The value of the <code>DefaultSearchField</code> configured for this search domain and its current status.
+     */
     defaultSearchField: DefaultSearchFieldStatus;
 }

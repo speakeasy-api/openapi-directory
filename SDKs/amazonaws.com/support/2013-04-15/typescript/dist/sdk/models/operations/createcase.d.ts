@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum CreateCaseXAmzTargetEnum {
-    AwsSupport20130415CreateCase = "AWSSupport_20130415.CreateCase"
+    AWSSupport20130415CreateCase = "AWSSupport_20130415.CreateCase"
 }
-export declare class CreateCaseHeaders extends SpeakeasyBase {
+export declare class CreateCaseRequest extends SpeakeasyBase {
+    createCaseRequest: shared.CreateCaseRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class CreateCaseHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: CreateCaseXAmzTargetEnum;
 }
-export declare class CreateCaseRequest extends SpeakeasyBase {
-    headers: CreateCaseHeaders;
-    request: shared.CreateCaseRequest;
-}
 export declare class CreateCaseResponse extends SpeakeasyBase {
+    /**
+     * AttachmentSetExpired
+     */
     attachmentSetExpired?: any;
+    /**
+     * AttachmentSetIdNotFound
+     */
     attachmentSetIdNotFound?: any;
+    /**
+     * CaseCreationLimitExceeded
+     */
     caseCreationLimitExceeded?: any;
     contentType: string;
+    /**
+     * Success
+     */
     createCaseResponse?: shared.CreateCaseResponse;
+    /**
+     * InternalServerError
+     */
     internalServerError?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

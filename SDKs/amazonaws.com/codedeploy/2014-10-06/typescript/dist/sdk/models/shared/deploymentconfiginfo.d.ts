@@ -4,7 +4,7 @@ import { MinimumHealthyHosts } from "./minimumhealthyhosts";
 import { TrafficRoutingConfig } from "./trafficroutingconfig";
 /**
  * Information about a deployment configuration.
-**/
+ */
 export declare class DeploymentConfigInfo extends SpeakeasyBase {
     computePlatform?: ComputePlatformEnum;
     createTime?: Date;

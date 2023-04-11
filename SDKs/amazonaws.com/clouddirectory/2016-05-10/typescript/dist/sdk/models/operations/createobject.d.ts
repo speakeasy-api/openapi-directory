@@ -1,6 +1,32 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreateObjectHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+/**
+ * The reference that identifies an object.
+ */
+export declare class CreateObjectRequestBodyParentReference extends SpeakeasyBase {
+    selector?: string;
+}
+export declare class CreateObjectRequestBody extends SpeakeasyBase {
+    /**
+     * The name of link that is used to attach this object to a parent.
+     */
+    linkName?: string;
+    /**
+     * The attribute map whose attribute ARN contains the key and attribute value as the map value.
+     */
+    objectAttributeList?: shared.AttributeKeyAndValue[];
+    /**
+     * The reference that identifies an object.
+     */
+    parentReference?: CreateObjectRequestBodyParentReference;
+    /**
+     * A list of schema facets to be associated with the object. Do not provide minor version components. See <a>SchemaFacet</a> for details.
+     */
+    schemaFacets: shared.SchemaFacet[];
+}
+export declare class CreateObjectRequest extends SpeakeasyBase {
+    requestBody: CreateObjectRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -8,37 +34,61 @@ export declare class CreateObjectHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
+    /**
+     * The Amazon Resource Name (ARN) that is associated with the <a>Directory</a> in which the object will be created. For more information, see <a>arns</a>.
+     */
     xAmzDataPartition: string;
 }
-/**
- * The reference that identifies an object.
-**/
-export declare class CreateObjectRequestBodyParentReference extends SpeakeasyBase {
-    selector?: string;
-}
-export declare class CreateObjectRequestBody extends SpeakeasyBase {
-    linkName?: string;
-    objectAttributeList?: shared.AttributeKeyAndValue[];
-    parentReference?: CreateObjectRequestBodyParentReference;
-    schemaFacets: shared.SchemaFacet[];
-}
-export declare class CreateObjectRequest extends SpeakeasyBase {
-    headers: CreateObjectHeaders;
-    request: CreateObjectRequestBody;
-}
 export declare class CreateObjectResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: shared.AccessDeniedException;
     contentType: string;
+    /**
+     * Success
+     */
     createObjectResponse?: shared.CreateObjectResponse;
+    /**
+     * DirectoryNotEnabledException
+     */
     directoryNotEnabledException?: shared.DirectoryNotEnabledException;
+    /**
+     * FacetValidationException
+     */
     facetValidationException?: shared.FacetValidationException;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: shared.InternalServiceException;
+    /**
+     * InvalidArnException
+     */
     invalidArnException?: shared.InvalidArnException;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: shared.LimitExceededException;
+    /**
+     * LinkNameAlreadyInUseException
+     */
     linkNameAlreadyInUseException?: shared.LinkNameAlreadyInUseException;
-    resourceNotFoundException?: shared.ResourceNotFoundException;
-    retryableConflictException?: shared.RetryableConflictException;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: shared.ResourceNotFoundException;
+    /**
+     * RetryableConflictException
+     */
+    retryableConflictException?: shared.RetryableConflictException;
+    /**
+     * UnsupportedIndexTypeException
+     */
     unsupportedIndexTypeException?: shared.UnsupportedIndexTypeException;
+    /**
+     * ValidationException
+     */
     validationException?: shared.ValidationException;
 }

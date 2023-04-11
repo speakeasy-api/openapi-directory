@@ -1,51 +1,55 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateDevicePoolRequest, CreateDevicePoolResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CreateDevicePoolRequest,
+  CreateDevicePoolResponse,
+  CreateDevicePoolXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
+import {
+  RuleOperatorEnum,
+  DeviceAttributeEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: CreateDevicePoolRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "DeviceFarm_20150623.CreateDevicePool",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
-    description: "fugit",
-    maxDevices: 1543572285742637646,
-    name: "nihil",
-    projectArn: "rerum",
+});
+
+const req: CreateDevicePoolRequest = {
+  createDevicePoolRequest: {
+    description: "corrupti",
+    maxDevices: 592845,
+    name: "distinctio",
+    projectArn: "quibusdam",
     rules: [
       {
-        attribute: "REMOTE_ACCESS_ENABLED",
-        operator: "EQUALS",
-        value: "et",
+        attribute: DeviceAttributeEnum.Model,
+        operator: RuleOperatorEnum.GreaterThanOrEquals,
+        value: "illum",
       },
       {
-        attribute: "ARN",
-        operator: "LESS_THAN_OR_EQUALS",
-        value: "et",
+        attribute: DeviceAttributeEnum.RemoteDebugEnabled,
+        operator: RuleOperatorEnum.GreaterThanOrEquals,
+        value: "deserunt",
       },
       {
-        attribute: "FORM_FACTOR",
-        operator: "GREATER_THAN",
-        value: "vitae",
+        attribute: DeviceAttributeEnum.RemoteAccessEnabled,
+        operator: RuleOperatorEnum.GreaterThan,
+        value: "magnam",
       },
     ],
   },
+  xAmzAlgorithm: "debitis",
+  xAmzContentSha256: "ipsa",
+  xAmzCredential: "delectus",
+  xAmzDate: "tempora",
+  xAmzSecurityToken: "suscipit",
+  xAmzSignature: "molestiae",
+  xAmzSignedHeaders: "minus",
+  xAmzTarget: CreateDevicePoolXAmzTargetEnum.DeviceFarm20150623CreateDevicePool,
 };
 
 sdk.createDevicePool(req).then((res: CreateDevicePoolResponse | AxiosError) => {

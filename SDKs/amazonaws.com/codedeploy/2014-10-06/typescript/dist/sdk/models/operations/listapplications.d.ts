@@ -1,12 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListApplicationsQueryParams extends SpeakeasyBase {
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListApplicationsXAmzTargetEnum {
     CodeDeploy20141006ListApplications = "CodeDeploy_20141006.ListApplications"
 }
-export declare class ListApplicationsHeaders extends SpeakeasyBase {
+export declare class ListApplicationsRequest extends SpeakeasyBase {
+    listApplicationsInput: shared.ListApplicationsInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -15,15 +14,21 @@ export declare class ListApplicationsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: ListApplicationsXAmzTargetEnum;
-}
-export declare class ListApplicationsRequest extends SpeakeasyBase {
-    queryParams: ListApplicationsQueryParams;
-    headers: ListApplicationsHeaders;
-    request: shared.ListApplicationsInput;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class ListApplicationsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * Success
+     */
     listApplicationsOutput?: shared.ListApplicationsOutput;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

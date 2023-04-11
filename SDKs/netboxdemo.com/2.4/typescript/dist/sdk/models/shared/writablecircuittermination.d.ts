@@ -10,6 +10,9 @@ export declare class WritableCircuitTerminationInput extends SpeakeasyBase {
     ppInfo?: string;
     site: number;
     termSide: WritableCircuitTerminationTerminationEnum;
+    /**
+     * Upstream speed, if different from port speed
+     */
     upstreamSpeed?: number;
     xconnectId?: string;
 }

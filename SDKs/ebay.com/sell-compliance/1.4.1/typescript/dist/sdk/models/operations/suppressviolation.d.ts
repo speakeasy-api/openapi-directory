@@ -1,13 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class SuppressViolationSecurity extends SpeakeasyBase {
-    apiAuth: shared.SchemeApiAuth;
-}
-export declare class SuppressViolationRequest extends SpeakeasyBase {
-    request: shared.SuppressViolationRequest;
-    security: SuppressViolationSecurity;
+    apiAuth: string;
 }
 export declare class SuppressViolationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

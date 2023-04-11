@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Information about a core.
-**/
+ */
 export declare class Core extends SpeakeasyBase {
     certificateArn: string;
     id: string;

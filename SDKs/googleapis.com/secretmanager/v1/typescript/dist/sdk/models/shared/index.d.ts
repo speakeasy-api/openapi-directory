@@ -25,7 +25,6 @@ export * from "./rotation";
 export * from "./secret";
 export * from "./secretpayload";
 export * from "./secretversion";
-export * from "./security";
 export * from "./setiampolicyrequest";
 export * from "./testiampermissionsrequest";
 export * from "./testiampermissionsresponse";

@@ -1,18 +1,18 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetV1Request, GetV1Response } from "openapi/src/sdk/models/operations";
+import {
+  GetV1Request,
+  GetV1Response
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetV1Request = {
-  queryParams: {
-    apiKey: "sit",
-    fields: "voluptas",
-    ipAddress: "culpa",
-  },
+  apiKey: "corrupti",
+  fields: "country,city,timezone",
+  ipAddress: "195.154.25.40",
 };
 
 sdk.getV1(req).then((res: GetV1Response | AxiosError) => {

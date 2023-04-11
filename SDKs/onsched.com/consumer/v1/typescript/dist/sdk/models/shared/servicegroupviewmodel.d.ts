@@ -1,11 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class ServiceGroupViewModel extends SpeakeasyBase {
     companyId?: string;
     description?: string;
     id?: string;
     imageUrl?: string;
-    label?: string;
+    isDeleted?: boolean;
     locationId?: string;
     name?: string;
-    objectName?: string;
+    object?: string;
+    type?: number;
 }

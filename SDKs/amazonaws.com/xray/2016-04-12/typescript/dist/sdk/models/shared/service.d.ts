@@ -1,10 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { HistogramEntry } from "./histogramentry";
 import { Edge } from "./edge";
+import { HistogramEntry } from "./histogramentry";
 import { ServiceStatistics } from "./servicestatistics";
 /**
  * Information about an application that processed requests, users that made requests, or downstream services, resources, and applications that an application used.
-**/
+ */
 export declare class Service extends SpeakeasyBase {
     accountId?: string;
     durationHistogram?: HistogramEntry[];

@@ -1,9 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum ExportConfigurationsXAmzTargetEnum {
-    AwsPoseidonServiceV20151101ExportConfigurations = "AWSPoseidonService_V2015_11_01.ExportConfigurations"
+    AWSPoseidonServiceV20151101ExportConfigurations = "AWSPoseidonService_V2015_11_01.ExportConfigurations"
 }
-export declare class ExportConfigurationsHeaders extends SpeakeasyBase {
+export declare class ExportConfigurationsRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +14,36 @@ export declare class ExportConfigurationsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ExportConfigurationsXAmzTargetEnum;
 }
-export declare class ExportConfigurationsRequest extends SpeakeasyBase {
-    headers: ExportConfigurationsHeaders;
-}
 export declare class ExportConfigurationsResponse extends SpeakeasyBase {
+    /**
+     * AuthorizationErrorException
+     */
     authorizationErrorException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     exportConfigurationsResponse?: shared.ExportConfigurationsResponse;
+    /**
+     * HomeRegionNotSetException
+     */
     homeRegionNotSetException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
+    /**
+     * OperationNotPermittedException
+     */
     operationNotPermittedException?: any;
+    /**
+     * ServerInternalErrorException
+     */
     serverInternalErrorException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

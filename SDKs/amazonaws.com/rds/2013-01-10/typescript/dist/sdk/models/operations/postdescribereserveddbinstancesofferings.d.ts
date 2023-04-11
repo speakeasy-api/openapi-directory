@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeReservedDbInstancesOfferingsActionEnum {
-    DescribeReservedDbInstancesOfferings = "DescribeReservedDBInstancesOfferings"
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeReservedDBInstancesOfferingsActionEnum {
+    DescribeReservedDBInstancesOfferings = "DescribeReservedDBInstancesOfferings"
 }
-export declare enum PostDescribeReservedDbInstancesOfferingsVersionEnum {
+export declare enum POSTDescribeReservedDBInstancesOfferingsVersionEnum {
     TwoThousandAndThirteen0110 = "2013-01-10"
 }
-export declare class PostDescribeReservedDbInstancesOfferingsQueryParams extends SpeakeasyBase {
-    action: PostDescribeReservedDbInstancesOfferingsActionEnum;
+export declare class POSTDescribeReservedDBInstancesOfferingsRequest extends SpeakeasyBase {
+    action: POSTDescribeReservedDBInstancesOfferingsActionEnum;
+    /**
+     * Pagination token
+     */
     marker?: string;
+    /**
+     * Pagination limit
+     */
     maxRecords?: string;
-    version: PostDescribeReservedDbInstancesOfferingsVersionEnum;
-}
-export declare class PostDescribeReservedDbInstancesOfferingsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeReservedDBInstancesOfferingsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeReservedDbInstancesOfferingsHeaders extends Spe
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeReservedDbInstancesOfferingsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeReservedDbInstancesOfferingsQueryParams;
-    headers: PostDescribeReservedDbInstancesOfferingsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeReservedDbInstancesOfferingsResponse extends SpeakeasyBase {
+export declare class POSTDescribeReservedDBInstancesOfferingsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

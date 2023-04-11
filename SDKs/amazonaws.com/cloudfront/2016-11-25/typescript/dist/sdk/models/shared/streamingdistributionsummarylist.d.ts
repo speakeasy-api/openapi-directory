@@ -5,7 +5,7 @@ import { S3Origin } from "./s3origin";
 import { TrustedSigners } from "./trustedsigners";
 /**
  *  A summary of the information for an Amazon CloudFront streaming distribution.
-**/
+ */
 export declare class StreamingDistributionSummaryList extends SpeakeasyBase {
     arn: string;
     aliases: Aliases;

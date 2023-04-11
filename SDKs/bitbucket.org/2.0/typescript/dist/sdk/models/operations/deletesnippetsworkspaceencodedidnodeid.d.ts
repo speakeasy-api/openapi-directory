@@ -1,21 +1,35 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteSnippetsWorkspaceEncodedIdNodeIdPathParams extends SpeakeasyBase {
-    encodedId: string;
-    nodeId: string;
-    workspace: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteSnippetsWorkspaceEncodedIdNodeIdSecurity extends SpeakeasyBase {
-    oauth2?: shared.SchemeOauth2;
+    apiKey?: string;
     basic?: shared.SchemeBasic;
-    apiKey?: shared.SchemeApiKey;
+    oauth2?: string;
 }
 export declare class DeleteSnippetsWorkspaceEncodedIdNodeIdRequest extends SpeakeasyBase {
-    pathParams: DeleteSnippetsWorkspaceEncodedIdNodeIdPathParams;
-    security: DeleteSnippetsWorkspaceEncodedIdNodeIdSecurity;
+    /**
+     * The snippet id.
+     */
+    encodedId: string;
+    /**
+     * A commit revision (SHA1).
+     */
+    nodeId: string;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     *
+     * @remarks
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     *
+     */
+    workspace: string;
 }
 export declare class DeleteSnippetsWorkspaceEncodedIdNodeIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * If the snippet is private and the request was not authenticated.
+     */
     error?: Record<string, any>;
 }

@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { Comment } from "./comment";
 import { Location } from "./location";
+/**
+ * Success
+ */
 export declare class PostCommentForComparedCommitOutput extends SpeakeasyBase {
     afterBlobId?: string;
     afterCommitId?: string;

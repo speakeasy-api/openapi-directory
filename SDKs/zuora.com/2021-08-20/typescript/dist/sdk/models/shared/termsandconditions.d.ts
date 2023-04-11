@@ -8,9 +8,14 @@ export declare enum TermsAndConditionsRenewalSettingEnum {
 /**
  * Information about an order action of type `TermsAndConditions`.
  *
-**/
+ * @remarks
+ *
+ */
 export declare class TermsAndConditions extends SpeakeasyBase {
     autoRenew?: boolean;
+    /**
+     * The length of the period for the current subscription term.
+     */
     initialTerm?: InitialTerm;
     renewalSetting?: TermsAndConditionsRenewalSettingEnum;
     renewalTerms?: RenewalTerm[];

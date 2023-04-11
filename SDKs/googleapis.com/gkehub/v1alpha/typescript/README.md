@@ -6,413 +6,182 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/gkehub/v1alpha/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/gkehub/v1alpha/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GkehubProjectsLocationsFeaturesCreateRequest, GkehubProjectsLocationsFeaturesCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  GkehubProjectsLocationsFeaturesCreateRequest,
+  GkehubProjectsLocationsFeaturesCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  FeatureStateCodeEnum,
+  StatusCodeEnum,
+  FeatureSpecProvisionGoogleCaEnum,
+  MembershipSpecCertificateManagementEnum,
+  MultiClusterIngressFeatureSpecBillingEnum,
+  FeatureResourceStateStateEnum,
+  PolicyControllerHubConfigInstallSpecEnum,
+  PolicyControllerTemplateLibraryConfigInstallationEnum,
+  PolicyControllerBundleInstallSpecManagementEnum,
+  PolicyControllerMonitoringConfigBackendsEnum,
+  ServiceMeshMembershipSpecControlPlaneEnum,
+  ServiceMeshMembershipSpecDefaultChannelEnum,
+  ServiceMeshMembershipSpecManagementEnum,
+  ConfigManagementPolicyControllerMonitoringBackendsEnum,
+  CloudBuildMembershipSpecSecurityPolicyEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GkehubProjectsLocationsFeaturesCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
+  dollarXgafv: XgafvEnum.Two,
+  featureInput: {
+    fleetDefaultMemberConfig: {
+      identityservice: {
+        authMethods: [
+          {
+            azureadConfig: {
+              clientId: "distinctio",
+              clientSecret: "quibusdam",
+              kubectlRedirectUri: "unde",
+              tenant: "nulla",
+            },
+            googleConfig: {
+              disable: false,
+            },
+            name: "corrupti",
+            oidcConfig: {
+              certificateAuthorityData: "illum",
+              clientId: "vel",
+              clientSecret: "error",
+              deployCloudConsoleProxy: false,
+              enableAccessToken: false,
+              extraParams: "deserunt",
+              groupPrefix: "suscipit",
+              groupsClaim: "iure",
+              issuerUri: "magnam",
+              kubectlRedirectUri: "debitis",
+              scopes: "ipsa",
+              userClaim: "delectus",
+              userPrefix: "tempora",
+            },
+            proxy: "suscipit",
+          },
+          {
+            azureadConfig: {
+              clientId: "molestiae",
+              clientSecret: "minus",
+              kubectlRedirectUri: "placeat",
+              tenant: "voluptatum",
+            },
+            googleConfig: {
+              disable: false,
+            },
+            name: "iusto",
+            oidcConfig: {
+              certificateAuthorityData: "excepturi",
+              clientId: "nisi",
+              clientSecret: "recusandae",
+              deployCloudConsoleProxy: false,
+              enableAccessToken: false,
+              extraParams: "temporibus",
+              groupPrefix: "ab",
+              groupsClaim: "quis",
+              issuerUri: "veritatis",
+              kubectlRedirectUri: "deserunt",
+              scopes: "perferendis",
+              userClaim: "ipsam",
+              userPrefix: "repellendus",
+            },
+            proxy: "sapiente",
+          },
+          {
+            azureadConfig: {
+              clientId: "quo",
+              clientSecret: "odit",
+              kubectlRedirectUri: "at",
+              tenant: "at",
+            },
+            googleConfig: {
+              disable: false,
+            },
+            name: "maiores",
+            oidcConfig: {
+              certificateAuthorityData: "molestiae",
+              clientId: "quod",
+              clientSecret: "quod",
+              deployCloudConsoleProxy: false,
+              enableAccessToken: false,
+              extraParams: "esse",
+              groupPrefix: "totam",
+              groupsClaim: "porro",
+              issuerUri: "dolorum",
+              kubectlRedirectUri: "dicta",
+              scopes: "nam",
+              userClaim: "officia",
+              userPrefix: "occaecati",
+            },
+            proxy: "fugit",
+          },
+        ],
+      },
     },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    featureId: "dolor",
-    fields: "expedita",
-    key: "voluptas",
-    oauthToken: "fugit",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    requestId: "rerum",
-    uploadType: "dicta",
-    uploadProtocol: "debitis",
-  },
-  request: {
     labels: {
-      "et": "ut",
+      "hic": "optio",
+      "totam": "beatae",
+      "commodi": "molestiae",
     },
     membershipSpecs: {
-      "et": {
+      "qui": {
         anthosobservability: {
           doNotOptimizeMetrics: false,
-          enableStackdriverOnApplications: true,
-          version: "vitae",
+          enableStackdriverOnApplications: false,
+          version: "impedit",
         },
         cloudbuild: {
-          securityPolicy: "PRIVILEGED",
-          version: "dolores",
+          securityPolicy: CloudBuildMembershipSpecSecurityPolicyEnum.Privileged,
+          version: "esse",
         },
         configmanagement: {
           binauthz: {
             enabled: false,
-          },
-          configSync: {
-            allowVerticalScale: true,
-            enabled: false,
-            git: {
-              gcpServiceAccountEmail: "odio",
-              httpsProxy: "dolore",
-              policyDir: "id",
-              secretType: "aspernatur",
-              syncBranch: "accusantium",
-              syncRepo: "totam",
-              syncRev: "commodi",
-              syncWaitSecs: "quis",
-            },
-            oci: {
-              gcpServiceAccountEmail: "est",
-              policyDir: "aut",
-              secretType: "odit",
-              syncRepo: "non",
-              syncWaitSecs: "voluptas",
-            },
-            preventDrift: true,
-            sourceFormat: "aut",
-          },
-          hierarchyController: {
-            enableHierarchicalResourceQuota: true,
-            enablePodTreeLabels: false,
-            enabled: false,
-          },
-          policyController: {
-            auditIntervalSeconds: "autem",
-            enabled: true,
-            exemptableNamespaces: [
-              "odio",
-            ],
-            logDeniesEnabled: false,
-            monitoring: {
-              backends: [
-                "PROMETHEUS",
-                "MONITORING_BACKEND_UNSPECIFIED",
-                "PROMETHEUS",
-              ],
-            },
-            mutationEnabled: false,
-            referentialRulesEnabled: true,
-            templateLibraryInstalled: true,
-          },
-          version: "ut",
-        },
-        fleetInherited: false,
-        fleetobservability: {
-          "reprehenderit": "tempore",
-          "maiores": "incidunt",
-          "dolor": "beatae",
-        },
-        identityservice: {
-          authMethods: [
-            {
-              azureadConfig: {
-                clientId: "in",
-                clientSecret: "et",
-                kubectlRedirectUri: "omnis",
-                tenant: "ipsum",
-              },
-              googleConfig: {
-                disable: true,
-              },
-              name: "dolores",
-              oidcConfig: {
-                certificateAuthorityData: "placeat",
-                clientId: "vel",
-                clientSecret: "rerum",
-                deployCloudConsoleProxy: true,
-                enableAccessToken: true,
-                extraParams: "quam",
-                groupPrefix: "reprehenderit",
-                groupsClaim: "qui",
-                issuerUri: "qui",
-                kubectlRedirectUri: "unde",
-                scopes: "in",
-                userClaim: "autem",
-                userPrefix: "qui",
-              },
-              proxy: "ut",
-            },
-            {
-              azureadConfig: {
-                clientId: "itaque",
-                clientSecret: "ab",
-                kubectlRedirectUri: "neque",
-                tenant: "ullam",
-              },
-              googleConfig: {
-                disable: true,
-              },
-              name: "accusantium",
-              oidcConfig: {
-                certificateAuthorityData: "esse",
-                clientId: "architecto",
-                clientSecret: "quam",
-                deployCloudConsoleProxy: false,
-                enableAccessToken: false,
-                extraParams: "soluta",
-                groupPrefix: "sunt",
-                groupsClaim: "voluptates",
-                issuerUri: "magni",
-                kubectlRedirectUri: "et",
-                scopes: "optio",
-                userClaim: "qui",
-                userPrefix: "earum",
-              },
-              proxy: "illo",
-            },
-          ],
-        },
-        mesh: {
-          controlPlane: "AUTOMATIC",
-          defaultChannel: "REGULAR",
-          management: "MANAGEMENT_MANUAL",
-        },
-        policycontroller: {
-          policyControllerHubConfig: {
-            auditIntervalSeconds: "dolor",
-            exemptableNamespaces: [
-              "error",
-              "reprehenderit",
-            ],
-            installSpec: "INSTALL_SPEC_SUSPENDED",
-            logDeniesEnabled: true,
-            monitoring: {
-              backends: [
-                "CLOUD_MONITORING",
-              ],
-            },
-            mutationEnabled: true,
-            referentialRulesEnabled: false,
-            templateLibraryConfig: {
-              included: true,
-            },
-          },
-          version: "aut",
-        },
-        workloadcertificate: {
-          certificateManagement: "ENABLED",
-        },
-      },
-      "consequuntur": {
-        anthosobservability: {
-          doNotOptimizeMetrics: false,
-          enableStackdriverOnApplications: true,
-          version: "ipsa",
-        },
-        cloudbuild: {
-          securityPolicy: "NON_PRIVILEGED",
-          version: "doloremque",
-        },
-        configmanagement: {
-          binauthz: {
-            enabled: true,
           },
           configSync: {
             allowVerticalScale: false,
-            enabled: true,
-            git: {
-              gcpServiceAccountEmail: "quisquam",
-              httpsProxy: "explicabo",
-              policyDir: "ea",
-              secretType: "maxime",
-              syncBranch: "eum",
-              syncRepo: "perferendis",
-              syncRev: "et",
-              syncWaitSecs: "rerum",
-            },
-            oci: {
-              gcpServiceAccountEmail: "reiciendis",
-              policyDir: "quis",
-              secretType: "cumque",
-              syncRepo: "minima",
-              syncWaitSecs: "necessitatibus",
-            },
-            preventDrift: true,
-            sourceFormat: "quis",
-          },
-          hierarchyController: {
-            enableHierarchicalResourceQuota: true,
-            enablePodTreeLabels: false,
             enabled: false,
-          },
-          policyController: {
-            auditIntervalSeconds: "impedit",
-            enabled: true,
-            exemptableNamespaces: [
-              "vel",
-              "qui",
-            ],
-            logDeniesEnabled: false,
-            monitoring: {
-              backends: [
-                "CLOUD_MONITORING",
-              ],
-            },
-            mutationEnabled: true,
-            referentialRulesEnabled: false,
-            templateLibraryInstalled: false,
-          },
-          version: "sit",
-        },
-        fleetInherited: false,
-        fleetobservability: {
-          "vel": "vel",
-          "placeat": "qui",
-          "nisi": "quis",
-        },
-        identityservice: {
-          authMethods: [
-            {
-              azureadConfig: {
-                clientId: "porro",
-                clientSecret: "rerum",
-                kubectlRedirectUri: "et",
-                tenant: "accusamus",
-              },
-              googleConfig: {
-                disable: true,
-              },
-              name: "laborum",
-              oidcConfig: {
-                certificateAuthorityData: "rerum",
-                clientId: "ut",
-                clientSecret: "laborum",
-                deployCloudConsoleProxy: false,
-                enableAccessToken: false,
-                extraParams: "minus",
-                groupPrefix: "soluta",
-                groupsClaim: "aperiam",
-                issuerUri: "consequuntur",
-                kubectlRedirectUri: "excepturi",
-                scopes: "mollitia",
-                userClaim: "inventore",
-                userPrefix: "delectus",
-              },
-              proxy: "ipsa",
-            },
-            {
-              azureadConfig: {
-                clientId: "animi",
-                clientSecret: "animi",
-                kubectlRedirectUri: "ut",
-                tenant: "aliquam",
-              },
-              googleConfig: {
-                disable: false,
-              },
-              name: "sed",
-              oidcConfig: {
-                certificateAuthorityData: "sed",
-                clientId: "et",
-                clientSecret: "consequuntur",
-                deployCloudConsoleProxy: false,
-                enableAccessToken: true,
-                extraParams: "provident",
-                groupPrefix: "molestiae",
-                groupsClaim: "pariatur",
-                issuerUri: "quasi",
-                kubectlRedirectUri: "corrupti",
-                scopes: "enim",
-                userClaim: "qui",
-                userPrefix: "sit",
-              },
-              proxy: "possimus",
-            },
-          ],
-        },
-        mesh: {
-          controlPlane: "AUTOMATIC",
-          defaultChannel: "REGULAR",
-          management: "MANAGEMENT_MANUAL",
-        },
-        policycontroller: {
-          policyControllerHubConfig: {
-            auditIntervalSeconds: "quia",
-            exemptableNamespaces: [
-              "est",
-              "occaecati",
-            ],
-            installSpec: "INSTALL_SPEC_NOT_INSTALLED",
-            logDeniesEnabled: true,
-            monitoring: {
-              backends: [
-                "CLOUD_MONITORING",
-                "MONITORING_BACKEND_UNSPECIFIED",
-                "MONITORING_BACKEND_UNSPECIFIED",
-              ],
-            },
-            mutationEnabled: false,
-            referentialRulesEnabled: true,
-            templateLibraryConfig: {
-              included: true,
-            },
-          },
-          version: "in",
-        },
-        workloadcertificate: {
-          certificateManagement: "ENABLED",
-        },
-      },
-      "voluptatem": {
-        anthosobservability: {
-          doNotOptimizeMetrics: true,
-          enableStackdriverOnApplications: true,
-          version: "saepe",
-        },
-        cloudbuild: {
-          securityPolicy: "NON_PRIVILEGED",
-          version: "earum",
-        },
-        configmanagement: {
-          binauthz: {
-            enabled: true,
-          },
-          configSync: {
-            allowVerticalScale: true,
-            enabled: true,
             git: {
-              gcpServiceAccountEmail: "et",
-              httpsProxy: "est",
-              policyDir: "ipsum",
-              secretType: "quam",
-              syncBranch: "voluptas",
-              syncRepo: "nihil",
-              syncRev: "dolores",
-              syncWaitSecs: "suscipit",
+              gcpServiceAccountEmail: "ipsum",
+              httpsProxy: "excepturi",
+              policyDir: "aspernatur",
+              secretType: "perferendis",
+              syncBranch: "ad",
+              syncRepo: "natus",
+              syncRev: "sed",
+              syncWaitSecs: "iste",
             },
             oci: {
-              gcpServiceAccountEmail: "impedit",
-              policyDir: "non",
-              secretType: "magnam",
-              syncRepo: "ut",
-              syncWaitSecs: "possimus",
+              gcpServiceAccountEmail: "dolor",
+              policyDir: "natus",
+              secretType: "laboriosam",
+              syncRepo: "hic",
+              syncWaitSecs: "saepe",
             },
-            preventDrift: true,
-            sourceFormat: "qui",
+            preventDrift: false,
+            sourceFormat: "fuga",
           },
           hierarchyController: {
             enableHierarchicalResourceQuota: false,
@@ -420,192 +189,664 @@ const req: GkehubProjectsLocationsFeaturesCreateRequest = {
             enabled: false,
           },
           policyController: {
-            auditIntervalSeconds: "enim",
-            enabled: true,
+            auditIntervalSeconds: "in",
+            enabled: false,
             exemptableNamespaces: [
-              "delectus",
+              "iste",
+              "iure",
             ],
-            logDeniesEnabled: true,
+            logDeniesEnabled: false,
             monitoring: {
               backends: [
-                "MONITORING_BACKEND_UNSPECIFIED",
-                "MONITORING_BACKEND_UNSPECIFIED",
+                ConfigManagementPolicyControllerMonitoringBackendsEnum.CloudMonitoring,
+                ConfigManagementPolicyControllerMonitoringBackendsEnum.MonitoringBackendUnspecified,
+                ConfigManagementPolicyControllerMonitoringBackendsEnum.MonitoringBackendUnspecified,
+                ConfigManagementPolicyControllerMonitoringBackendsEnum.CloudMonitoring,
               ],
             },
             mutationEnabled: false,
-            referentialRulesEnabled: true,
+            referentialRulesEnabled: false,
             templateLibraryInstalled: false,
           },
-          version: "voluptas",
+          version: "est",
         },
         fleetInherited: false,
         fleetobservability: {
-          "a": "qui",
-          "excepturi": "autem",
-          "corporis": "dicta",
+          "laborum": "dolores",
+          "dolorem": "corporis",
+          "explicabo": "nobis",
         },
         identityservice: {
           authMethods: [
             {
               azureadConfig: {
-                clientId: "doloremque",
-                clientSecret: "quae",
-                kubectlRedirectUri: "nisi",
-                tenant: "recusandae",
+                clientId: "omnis",
+                clientSecret: "nemo",
+                kubectlRedirectUri: "minima",
+                tenant: "excepturi",
               },
               googleConfig: {
                 disable: false,
               },
-              name: "minus",
+              name: "accusantium",
               oidcConfig: {
-                certificateAuthorityData: "et",
-                clientId: "rerum",
-                clientSecret: "ut",
-                deployCloudConsoleProxy: true,
+                certificateAuthorityData: "iure",
+                clientId: "culpa",
+                clientSecret: "doloribus",
+                deployCloudConsoleProxy: false,
                 enableAccessToken: false,
-                extraParams: "et",
-                groupPrefix: "reiciendis",
-                groupsClaim: "aspernatur",
-                issuerUri: "praesentium",
-                kubectlRedirectUri: "porro",
-                scopes: "nihil",
-                userClaim: "adipisci",
-                userPrefix: "consequatur",
+                extraParams: "sapiente",
+                groupPrefix: "architecto",
+                groupsClaim: "mollitia",
+                issuerUri: "dolorem",
+                kubectlRedirectUri: "culpa",
+                scopes: "consequuntur",
+                userClaim: "repellat",
+                userPrefix: "mollitia",
               },
-              proxy: "illum",
+              proxy: "occaecati",
             },
             {
               azureadConfig: {
-                clientId: "accusantium",
-                clientSecret: "atque",
-                kubectlRedirectUri: "amet",
-                tenant: "nisi",
+                clientId: "numquam",
+                clientSecret: "commodi",
+                kubectlRedirectUri: "quam",
+                tenant: "molestiae",
               },
               googleConfig: {
-                disable: true,
+                disable: false,
               },
-              name: "est",
+              name: "velit",
               oidcConfig: {
-                certificateAuthorityData: "quo",
-                clientId: "vero",
-                clientSecret: "alias",
+                certificateAuthorityData: "error",
+                clientId: "quia",
+                clientSecret: "quis",
                 deployCloudConsoleProxy: false,
-                enableAccessToken: true,
-                extraParams: "eius",
-                groupPrefix: "repellat",
-                groupsClaim: "beatae",
-                issuerUri: "omnis",
-                kubectlRedirectUri: "totam",
-                scopes: "aut",
-                userClaim: "et",
-                userPrefix: "magni",
+                enableAccessToken: false,
+                extraParams: "vitae",
+                groupPrefix: "laborum",
+                groupsClaim: "animi",
+                issuerUri: "enim",
+                kubectlRedirectUri: "odit",
+                scopes: "quo",
+                userClaim: "sequi",
+                userPrefix: "tenetur",
               },
-              proxy: "necessitatibus",
+              proxy: "ipsam",
             },
           ],
         },
         mesh: {
-          controlPlane: "AUTOMATIC",
-          defaultChannel: "REGULAR",
-          management: "MANAGEMENT_UNSPECIFIED",
+          controlPlane: ServiceMeshMembershipSpecControlPlaneEnum.Automatic,
+          defaultChannel: ServiceMeshMembershipSpecDefaultChannelEnum.Stable,
+          management: ServiceMeshMembershipSpecManagementEnum.ManagementUnspecified,
         },
         policycontroller: {
           policyControllerHubConfig: {
-            auditIntervalSeconds: "voluptas",
+            auditIntervalSeconds: "quasi",
+            constraintViolationLimit: "error",
+            deploymentConfigs: {
+              "laborum": {
+                containerResources: {
+                  limits: {
+                    cpu: "quasi",
+                    memory: "reiciendis",
+                  },
+                  requests: {
+                    cpu: "voluptatibus",
+                    memory: "vero",
+                  },
+                },
+                podAntiAffinity: false,
+                podTolerations: [
+                  {
+                    effect: "praesentium",
+                    key: "voluptatibus",
+                    operator: "ipsa",
+                    value: "omnis",
+                  },
+                  {
+                    effect: "voluptate",
+                    key: "cum",
+                    operator: "perferendis",
+                    value: "doloremque",
+                  },
+                ],
+                replicaCount: "reprehenderit",
+              },
+              "ut": {
+                containerResources: {
+                  limits: {
+                    cpu: "maiores",
+                    memory: "dicta",
+                  },
+                  requests: {
+                    cpu: "corporis",
+                    memory: "dolore",
+                  },
+                },
+                podAntiAffinity: false,
+                podTolerations: [
+                  {
+                    effect: "dicta",
+                    key: "harum",
+                    operator: "enim",
+                    value: "accusamus",
+                  },
+                  {
+                    effect: "commodi",
+                    key: "repudiandae",
+                    operator: "quae",
+                    value: "ipsum",
+                  },
+                ],
+                replicaCount: "quidem",
+              },
+              "molestias": {
+                containerResources: {
+                  limits: {
+                    cpu: "excepturi",
+                    memory: "pariatur",
+                  },
+                  requests: {
+                    cpu: "modi",
+                    memory: "praesentium",
+                  },
+                },
+                podAntiAffinity: false,
+                podTolerations: [
+                  {
+                    effect: "voluptates",
+                    key: "quasi",
+                    operator: "repudiandae",
+                    value: "sint",
+                  },
+                  {
+                    effect: "veritatis",
+                    key: "itaque",
+                    operator: "incidunt",
+                    value: "enim",
+                  },
+                  {
+                    effect: "consequatur",
+                    key: "est",
+                    operator: "quibusdam",
+                    value: "explicabo",
+                  },
+                ],
+                replicaCount: "deserunt",
+              },
+              "distinctio": {
+                containerResources: {
+                  limits: {
+                    cpu: "quibusdam",
+                    memory: "labore",
+                  },
+                  requests: {
+                    cpu: "modi",
+                    memory: "qui",
+                  },
+                },
+                podAntiAffinity: false,
+                podTolerations: [
+                  {
+                    effect: "cupiditate",
+                    key: "quos",
+                    operator: "perferendis",
+                    value: "magni",
+                  },
+                  {
+                    effect: "assumenda",
+                    key: "ipsam",
+                    operator: "alias",
+                    value: "fugit",
+                  },
+                ],
+                replicaCount: "dolorum",
+              },
+            },
             exemptableNamespaces: [
-              "veniam",
-              "architecto",
+              "tempora",
+              "facilis",
+              "tempore",
             ],
-            installSpec: "INSTALL_SPEC_SUSPENDED",
+            installSpec: PolicyControllerHubConfigInstallSpecEnum.InstallSpecNotInstalled,
             logDeniesEnabled: false,
             monitoring: {
               backends: [
-                "MONITORING_BACKEND_UNSPECIFIED",
-                "CLOUD_MONITORING",
-                "PROMETHEUS",
+                PolicyControllerMonitoringConfigBackendsEnum.Prometheus,
+                PolicyControllerMonitoringConfigBackendsEnum.MonitoringBackendUnspecified,
+                PolicyControllerMonitoringConfigBackendsEnum.CloudMonitoring,
+                PolicyControllerMonitoringConfigBackendsEnum.Prometheus,
               ],
             },
-            mutationEnabled: true,
-            referentialRulesEnabled: true,
+            mutationEnabled: false,
+            policyContent: {
+              bundles: {
+                "provident": {
+                  exemptedNamespaces: [
+                    "sint",
+                    "officia",
+                    "dolor",
+                    "debitis",
+                  ],
+                  management: PolicyControllerBundleInstallSpecManagementEnum.Installed,
+                },
+                "dolorum": {
+                  exemptedNamespaces: [
+                    "in",
+                    "illum",
+                  ],
+                  management: PolicyControllerBundleInstallSpecManagementEnum.Installed,
+                },
+              },
+              templateLibrary: {
+                included: false,
+                installation: PolicyControllerTemplateLibraryConfigInstallationEnum.All,
+              },
+            },
+            referentialRulesEnabled: false,
             templateLibraryConfig: {
-              included: true,
+              included: false,
+              installation: PolicyControllerTemplateLibraryConfigInstallationEnum.InstallationUnspecified,
             },
           },
-          version: "quo",
+          version: "magnam",
         },
         workloadcertificate: {
-          certificateManagement: "CERTIFICATE_MANAGEMENT_UNSPECIFIED",
+          certificateManagement: MembershipSpecCertificateManagementEnum.Enabled,
+        },
+      },
+      "facere": {
+        anthosobservability: {
+          doNotOptimizeMetrics: false,
+          enableStackdriverOnApplications: false,
+          version: "ea",
+        },
+        cloudbuild: {
+          securityPolicy: CloudBuildMembershipSpecSecurityPolicyEnum.NonPrivileged,
+          version: "laborum",
+        },
+        configmanagement: {
+          binauthz: {
+            enabled: false,
+          },
+          configSync: {
+            allowVerticalScale: false,
+            enabled: false,
+            git: {
+              gcpServiceAccountEmail: "accusamus",
+              httpsProxy: "non",
+              policyDir: "occaecati",
+              secretType: "enim",
+              syncBranch: "accusamus",
+              syncRepo: "delectus",
+              syncRev: "quidem",
+              syncWaitSecs: "provident",
+            },
+            oci: {
+              gcpServiceAccountEmail: "nam",
+              policyDir: "id",
+              secretType: "blanditiis",
+              syncRepo: "deleniti",
+              syncWaitSecs: "sapiente",
+            },
+            preventDrift: false,
+            sourceFormat: "amet",
+          },
+          hierarchyController: {
+            enableHierarchicalResourceQuota: false,
+            enablePodTreeLabels: false,
+            enabled: false,
+          },
+          policyController: {
+            auditIntervalSeconds: "deserunt",
+            enabled: false,
+            exemptableNamespaces: [
+              "vel",
+              "natus",
+            ],
+            logDeniesEnabled: false,
+            monitoring: {
+              backends: [
+                ConfigManagementPolicyControllerMonitoringBackendsEnum.Prometheus,
+                ConfigManagementPolicyControllerMonitoringBackendsEnum.MonitoringBackendUnspecified,
+                ConfigManagementPolicyControllerMonitoringBackendsEnum.Prometheus,
+              ],
+            },
+            mutationEnabled: false,
+            referentialRulesEnabled: false,
+            templateLibraryInstalled: false,
+          },
+          version: "magnam",
+        },
+        fleetInherited: false,
+        fleetobservability: {
+          "id": "labore",
+          "labore": "suscipit",
+          "natus": "nobis",
+        },
+        identityservice: {
+          authMethods: [
+            {
+              azureadConfig: {
+                clientId: "vero",
+                clientSecret: "aspernatur",
+                kubectlRedirectUri: "architecto",
+                tenant: "magnam",
+              },
+              googleConfig: {
+                disable: false,
+              },
+              name: "et",
+              oidcConfig: {
+                certificateAuthorityData: "excepturi",
+                clientId: "ullam",
+                clientSecret: "provident",
+                deployCloudConsoleProxy: false,
+                enableAccessToken: false,
+                extraParams: "quos",
+                groupPrefix: "sint",
+                groupsClaim: "accusantium",
+                issuerUri: "mollitia",
+                kubectlRedirectUri: "reiciendis",
+                scopes: "mollitia",
+                userClaim: "ad",
+                userPrefix: "eum",
+              },
+              proxy: "dolor",
+            },
+            {
+              azureadConfig: {
+                clientId: "necessitatibus",
+                clientSecret: "odit",
+                kubectlRedirectUri: "nemo",
+                tenant: "quasi",
+              },
+              googleConfig: {
+                disable: false,
+              },
+              name: "iure",
+              oidcConfig: {
+                certificateAuthorityData: "doloribus",
+                clientId: "debitis",
+                clientSecret: "eius",
+                deployCloudConsoleProxy: false,
+                enableAccessToken: false,
+                extraParams: "maxime",
+                groupPrefix: "deleniti",
+                groupsClaim: "facilis",
+                issuerUri: "in",
+                kubectlRedirectUri: "architecto",
+                scopes: "architecto",
+                userClaim: "repudiandae",
+                userPrefix: "ullam",
+              },
+              proxy: "expedita",
+            },
+          ],
+        },
+        mesh: {
+          controlPlane: ServiceMeshMembershipSpecControlPlaneEnum.Automatic,
+          defaultChannel: ServiceMeshMembershipSpecDefaultChannelEnum.Stable,
+          management: ServiceMeshMembershipSpecManagementEnum.ManagementManual,
+        },
+        policycontroller: {
+          policyControllerHubConfig: {
+            auditIntervalSeconds: "sed",
+            constraintViolationLimit: "saepe",
+            deploymentConfigs: {
+              "accusantium": {
+                containerResources: {
+                  limits: {
+                    cpu: "consequuntur",
+                    memory: "praesentium",
+                  },
+                  requests: {
+                    cpu: "natus",
+                    memory: "magni",
+                  },
+                },
+                podAntiAffinity: false,
+                podTolerations: [
+                  {
+                    effect: "quo",
+                    key: "illum",
+                    operator: "pariatur",
+                    value: "maxime",
+                  },
+                ],
+                replicaCount: "ea",
+              },
+              "excepturi": {
+                containerResources: {
+                  limits: {
+                    cpu: "odit",
+                    memory: "ea",
+                  },
+                  requests: {
+                    cpu: "accusantium",
+                    memory: "ab",
+                  },
+                },
+                podAntiAffinity: false,
+                podTolerations: [
+                  {
+                    effect: "quidem",
+                    key: "ipsam",
+                    operator: "voluptate",
+                    value: "autem",
+                  },
+                  {
+                    effect: "nam",
+                    key: "eaque",
+                    operator: "pariatur",
+                    value: "nemo",
+                  },
+                  {
+                    effect: "voluptatibus",
+                    key: "perferendis",
+                    operator: "fugiat",
+                    value: "amet",
+                  },
+                  {
+                    effect: "aut",
+                    key: "cumque",
+                    operator: "corporis",
+                    value: "hic",
+                  },
+                ],
+                replicaCount: "libero",
+              },
+              "nobis": {
+                containerResources: {
+                  limits: {
+                    cpu: "dolores",
+                    memory: "quis",
+                  },
+                  requests: {
+                    cpu: "totam",
+                    memory: "dignissimos",
+                  },
+                },
+                podAntiAffinity: false,
+                podTolerations: [
+                  {
+                    effect: "quis",
+                    key: "nesciunt",
+                    operator: "eos",
+                    value: "perferendis",
+                  },
+                ],
+                replicaCount: "dolores",
+              },
+              "minus": {
+                containerResources: {
+                  limits: {
+                    cpu: "quam",
+                    memory: "dolor",
+                  },
+                  requests: {
+                    cpu: "vero",
+                    memory: "nostrum",
+                  },
+                },
+                podAntiAffinity: false,
+                podTolerations: [
+                  {
+                    effect: "recusandae",
+                    key: "omnis",
+                    operator: "facilis",
+                    value: "perspiciatis",
+                  },
+                  {
+                    effect: "voluptatem",
+                    key: "porro",
+                    operator: "consequuntur",
+                    value: "blanditiis",
+                  },
+                  {
+                    effect: "error",
+                    key: "eaque",
+                    operator: "occaecati",
+                    value: "rerum",
+                  },
+                  {
+                    effect: "adipisci",
+                    key: "asperiores",
+                    operator: "earum",
+                    value: "modi",
+                  },
+                ],
+                replicaCount: "iste",
+              },
+            },
+            exemptableNamespaces: [
+              "deleniti",
+              "pariatur",
+              "provident",
+            ],
+            installSpec: PolicyControllerHubConfigInstallSpecEnum.InstallSpecSuspended,
+            logDeniesEnabled: false,
+            monitoring: {
+              backends: [
+                PolicyControllerMonitoringConfigBackendsEnum.CloudMonitoring,
+                PolicyControllerMonitoringConfigBackendsEnum.MonitoringBackendUnspecified,
+                PolicyControllerMonitoringConfigBackendsEnum.Prometheus,
+              ],
+            },
+            mutationEnabled: false,
+            policyContent: {
+              bundles: {
+                "dolorem": {
+                  exemptedNamespaces: [
+                    "dolor",
+                  ],
+                  management: PolicyControllerBundleInstallSpecManagementEnum.ManagementUnspecified,
+                },
+                "ipsum": {
+                  exemptedNamespaces: [
+                    "excepturi",
+                    "cum",
+                    "voluptate",
+                    "dignissimos",
+                  ],
+                  management: PolicyControllerBundleInstallSpecManagementEnum.Installed,
+                },
+              },
+              templateLibrary: {
+                included: false,
+                installation: PolicyControllerTemplateLibraryConfigInstallationEnum.InstallationUnspecified,
+              },
+            },
+            referentialRulesEnabled: false,
+            templateLibraryConfig: {
+              included: false,
+              installation: PolicyControllerTemplateLibraryConfigInstallationEnum.All,
+            },
+          },
+          version: "numquam",
+        },
+        workloadcertificate: {
+          certificateManagement: MembershipSpecCertificateManagementEnum.CertificateManagementUnspecified,
         },
       },
     },
     resourceState: {
-      state: "STATE_UNSPECIFIED",
+      state: FeatureResourceStateStateEnum.StateUnspecified,
     },
     scopeSpecs: {
-      "commodi": {
-        "facere": "in",
-        "et": "odit",
-      },
-      "est": {
-        "ipsum": "aut",
-        "perspiciatis": "et",
-        "vero": "voluptatem",
-      },
-      "ex": {
-        "vero": "distinctio",
-        "cumque": "ea",
-        "non": "non",
+      "iure": {
+        "quaerat": "accusamus",
+        "quidem": "voluptatibus",
       },
     },
     spec: {
       anthosobservability: {
         defaultMembershipSpec: {
-          doNotOptimizeMetrics: true,
-          enableStackdriverOnApplications: true,
-          version: "quae",
+          doNotOptimizeMetrics: false,
+          enableStackdriverOnApplications: false,
+          version: "voluptas",
         },
       },
       appdevexperience: {
-        "magni": "minus",
+        "eos": "atque",
+        "sit": "fugiat",
+        "ab": "soluta",
       },
       cloudauditlogging: {
         allowlistedServiceAccounts: [
-          "aut",
+          "iusto",
+          "voluptate",
+          "dolorum",
         ],
       },
       fleetobservability: {
-        "iusto": "quia",
+        "omnis": "necessitatibus",
+        "distinctio": "asperiores",
+        "nihil": "ipsum",
       },
       multiclusteringress: {
-        billing: "PAY_AS_YOU_GO",
-        configMembership: "debitis",
+        billing: MultiClusterIngressFeatureSpecBillingEnum.PayAsYouGo,
+        configMembership: "id",
       },
       workloadcertificate: {
         defaultConfig: {
-          certificateManagement: "CERTIFICATE_MANAGEMENT_UNSPECIFIED",
+          certificateManagement: MembershipSpecCertificateManagementEnum.Enabled,
         },
-        provisionGoogleCa: "DISABLED",
+        provisionGoogleCa: FeatureSpecProvisionGoogleCaEnum.GoogleCaProvisioningUnspecified,
       },
     },
     state: {
       appdevexperience: {
         networkingInstallSucceeded: {
-          code: "OK",
-          description: "ut",
+          code: StatusCodeEnum.CodeUnspecified,
+          description: "perferendis",
         },
       },
       fleetobservability: {
-        "nihil": "laborum",
-        "recusandae": "nihil",
-        "exercitationem": "iste",
+        "optio": "accusamus",
       },
       state: {
-        code: "ERROR",
-        description: "id",
-        updateTime: "autem",
+        code: FeatureStateCodeEnum.Ok,
+        description: "saepe",
+        updateTime: "suscipit",
       },
     },
   },
+  accessToken: "deserunt",
+  alt: AltEnum.Media,
+  callback: "minima",
+  featureId: "repellendus",
+  fields: "totam",
+  key: "similique",
+  oauthToken: "alias",
+  parent: "at",
+  prettyPrint: false,
+  quotaUser: "quaerat",
+  requestId: "tempora",
+  uploadType: "vel",
+  uploadProtocol: "quod",
 };
 
 sdk.projects.gkehubProjectsLocationsFeaturesCreate(req).then((res: GkehubProjectsLocationsFeaturesCreateResponse | AxiosError) => {
@@ -615,7 +856,8 @@ sdk.projects.gkehubProjectsLocationsFeaturesCreate(req).then((res: GkehubProject
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### projects
 
@@ -624,20 +866,39 @@ sdk.projects.gkehubProjectsLocationsFeaturesCreate(req).then((res: GkehubProject
 * `gkehubProjectsLocationsFleetsCreate` - Creates a fleet.
 * `gkehubProjectsLocationsFleetsList` - Returns all fleets within an organization or a project that the caller has access to.
 * `gkehubProjectsLocationsList` - Lists information about the supported locations for this service.
+* `gkehubProjectsLocationsMembershipsBindingsCreate` - Creates a MembershipBinding.
+* `gkehubProjectsLocationsMembershipsBindingsList` - Lists MembershipBindings.
 * `gkehubProjectsLocationsMembershipsCreate` - Creates a new Membership. **This is currently only supported for GKE clusters on Google Cloud**. To register other clusters, follow the instructions at https://cloud.google.com/anthos/multicluster-management/connect/registering-a-cluster.
 * `gkehubProjectsLocationsMembershipsGenerateConnectManifest` - Generates the manifest for deployment of the GKE connect agent. **This method is used internally by Google-provided libraries.** Most clients should not need to call this method directly.
 * `gkehubProjectsLocationsMembershipsGetIamPolicy` - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
 * `gkehubProjectsLocationsMembershipsList` - Lists Memberships in a given project and location.
 * `gkehubProjectsLocationsMembershipsListAdmin` - Lists Memberships of admin clusters in a given project and location. **This method is only used internally**.
-* `gkehubProjectsLocationsMembershipsPatch` - Updates an existing Membership.
 * `gkehubProjectsLocationsMembershipsSetIamPolicy` - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
 * `gkehubProjectsLocationsMembershipsTestIamPermissions` - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 * `gkehubProjectsLocationsMembershipsValidateCreate` - ValidateCreateMembership is a preflight check for CreateMembership. It checks the following: 1. Caller has the required `gkehub.memberships.create` permission. 2. The membership_id is still available.
+* `gkehubProjectsLocationsNamespacesCreate` - Creates a fleet namespace.
+* `gkehubProjectsLocationsNamespacesList` - Lists fleet namespaces.
+* `gkehubProjectsLocationsNamespacesRbacrolebindingsCreate` - Creates a RBACRoleBinding.
+* `gkehubProjectsLocationsNamespacesRbacrolebindingsList` - Lists RBACRoleBinding.
 * `gkehubProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-* `gkehubProjectsLocationsOperationsDelete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-* `gkehubProjectsLocationsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-* `gkehubProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
-
+* `gkehubProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
+* `gkehubProjectsLocationsScopesCreate` - Creates a Scope.
+* `gkehubProjectsLocationsScopesDelete` - Deletes a Scope.
+* `gkehubProjectsLocationsScopesGet` - Returns the details of a Scope.
+* `gkehubProjectsLocationsScopesList` - Lists Scopes.
+* `gkehubProjectsLocationsScopesPatch` - Updates a scopes.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

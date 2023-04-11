@@ -1,0 +1,9 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { SourceCodeVersionTypeEnum } from "./sourcecodeversiontypeenum";
+/**
+ * Identifies a version of code that App Runner refers to within a source code repository.
+ */
+export declare class SourceCodeVersion extends SpeakeasyBase {
+    type: SourceCodeVersionTypeEnum;
+    value: string;
+}

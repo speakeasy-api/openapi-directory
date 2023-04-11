@@ -1,19 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ChargeBearerEnum } from "./chargebearerenum";
-import { AccountReference16Ch } from "./accountreference16ch";
+import { AccountReference16CH } from "./accountreference16ch";
 import { Address } from "./address";
-import { CreditorAgent7Ch } from "./creditoragent7ch";
-import { DayOfExecutionEnum } from "./dayofexecutionenum";
-import { DebtorAgent7Ch } from "./debtoragent7ch";
 import { Amount } from "./amount";
+import { ChargeBearerEnum } from "./chargebearerenum";
+import { CreditorAgent7CH } from "./creditoragent7ch";
+import { DayOfExecutionEnum } from "./dayofexecutionenum";
+import { DebtorAgent7CH } from "./debtoragent7ch";
 import { ExchangeRateInformation1 } from "./exchangerateinformation1";
 import { ExecutionRuleEnum } from "./executionruleenum";
+import { ExternalServiceLevel1CodeEnum } from "./externalservicelevel1codeenum";
 import { FrequencyCodeEnum } from "./frequencycodeenum";
 import { PurposeCodeEnum } from "./purposecodeenum";
 import { RemittanceInformationStructured } from "./remittanceinformationstructured";
-import { ExternalServiceLevel1CodeEnum } from "./externalservicelevel1codeenum";
 /**
  * Generic Body for a periodic payment initation via JSON.
+ *
+ * @remarks
  *
  * This generic JSON body can be used to represent valid periodic payment initiations for the following JSON based payment product,
  * which where defined in the Implementation Guidelines:
@@ -97,35 +99,187 @@ import { ExternalServiceLevel1CodeEnum } from "./externalservicelevel1codeenum";
  *   * If one uses this data types for some payment products he has to ensure that the used data type is
  *     valid according to the underlying payment product, e.g. by some appropriate validations.
  *
-**/
+ */
 export declare class PeriodicPaymentInitiationJson extends SpeakeasyBase {
+    /**
+     * Charge Bearer. ChargeBearerType1Code from ISO20022.
+     */
     chargeBearer?: ChargeBearerEnum;
-    creditorAccount: AccountReference16Ch;
+    /**
+     * Reference to an account by either
+     *
+     * @remarks
+     *   * IBAN, of a payment accounts, or
+     *   * otherAccountIdentification, for payment accounts if there is no IBAN
+     * adapted from ISO pain.001.001.03.ch.02 CashAccount16-CH_IdTpCcy
+     *
+     */
+    creditorAccount: AccountReference16CH;
     creditorAddress?: Address;
-    creditorAgent?: CreditorAgent7Ch;
+    /**
+     * Reference to an creditorAgent by either
+     *
+     * @remarks
+     *   * BIC, of the creditor bank, or
+     *   * IID, of the creditor bank, or
+     *   * IID and optional name and address of the creditor bank or
+     *   * Name and address of the creditor bank
+     * adapted from ISO pain.001.001.03.ch.02 FinancialInstitutionIdentification7-CH
+     *
+     */
+    creditorAgent?: CreditorAgent7CH;
+    /**
+     * Creditor agent name.
+     */
     creditorAgentName?: string;
+    /**
+     * Identification of Creditors, e.g. a SEPA Creditor ID.
+     */
     creditorId?: string;
+    /**
+     * Creditor name.
+     */
     creditorName: string;
+    /**
+     * Creditor Name and Address in a free text field.
+     */
     creditorNameAndAddress?: string;
+    /**
+     * Day of execution as string.
+     *
+     * @remarks
+     *
+     * This string consists of up two characters.
+     * Leading zeroes are not allowed.
+     *
+     * 31 is ultimo of the month.
+     *
+     */
     dayOfExecution?: DayOfExecutionEnum;
-    debtorAccount: AccountReference16Ch;
-    debtorAgent?: DebtorAgent7Ch;
+    /**
+     * Reference to an account by either
+     *
+     * @remarks
+     *   * IBAN, of a payment accounts, or
+     *   * otherAccountIdentification, for payment accounts if there is no IBAN
+     * adapted from ISO pain.001.001.03.ch.02 CashAccount16-CH_IdTpCcy
+     *
+     */
+    debtorAccount: AccountReference16CH;
+    /**
+     * Reference to an debtorAgent by either
+     *
+     * @remarks
+     *   * BIC, of the debtor bank, or
+     *   * IID, of the debtor bank
+     * adapted from ISO pain.001.001.03.ch.02 FinancialInstitutionIdentification7-CH_BicOrClrId
+     *
+     */
+    debtorAgent?: DebtorAgent7CH;
+    /**
+     * Debtor Id.
+     */
     debtorId?: string;
+    /**
+     * Debtor name.
+     */
     debtorName: string;
+    /**
+     * The last applicable day of execution.
+     *
+     * @remarks
+     * If not given, it is an infinite standing order.
+     *
+     */
     endDate?: Date;
     endToEndIdentification: string;
     equivalentAmount?: Amount;
+    /**
+     * as in ISO pain.001.001.03.ch.02 ExchangeRateInformation1
+     */
     exchangeRateInformation?: ExchangeRateInformation1;
+    /**
+     * "following" or "preceding" supported as values.
+     *
+     * @remarks
+     * This data attribute defines the behaviour when recurring payment dates falls on a weekend or bank holiday.
+     * The payment is then executed either the "preceding" or "following" working day.
+     * ASPSP might reject the request due to the communicated value, if rules in Online-Banking are not supporting
+     * this execution rule.
+     *
+     */
     executionRule?: ExecutionRuleEnum;
+    /**
+     * The following codes from the "EventFrequency7Code" of ISO 20022 are supported:
+     *
+     * @remarks
+     * - "Daily"
+     * - "Weekly"
+     * - "EveryTwoWeeks"
+     * - "Monthly"
+     * - "EveryTwoMonths"
+     * - "Quarterly"
+     * - "SemiAnnual"
+     * - "Annual"
+     * - "MonthlyVariable"
+     *
+     */
     frequency: FrequencyCodeEnum;
     instructedAmount?: Amount;
+    /**
+     * BICFI
+     *
+     * @remarks
+     *
+     */
     intermediaryAgent?: string;
+    /**
+     * ExternalPurpose1Code from ISO 20022.
+     *
+     * @remarks
+     *
+     * Values from ISO 20022 External Code List ExternalCodeSets_1Q2018 June 2018.
+     *
+     */
     purposeCode?: PurposeCodeEnum;
+    /**
+     * Structured remittance information.
+     *
+     * @remarks
+     *
+     */
     remittanceInformationStructured?: RemittanceInformationStructured;
+    /**
+     * Unstructured remittance information.
+     *
+     * @remarks
+     *
+     */
     remittanceInformationUnstructured?: string;
+    /**
+     * Specifies the external service level code in the format of character string with a maximum length of 4 characters.
+     */
     serviceLevel?: ExternalServiceLevel1CodeEnum;
+    /**
+     * The first applicable day of execution starting from this date is the first payment.
+     *
+     * @remarks
+     *
+     */
     startDate: Date;
+    /**
+     * ISO 4217 Alpha 3 currency code.
+     *
+     * @remarks
+     *
+     */
     transactionCurrency?: string;
+    /**
+     * Ultimate creditor.
+     */
     ultimateCreditor?: string;
+    /**
+     * Ultimate debtor.
+     */
     ultimateDebtor?: string;
 }

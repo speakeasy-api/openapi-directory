@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum AttachElasticLoadBalancerXAmzTargetEnum {
     OpsWorks20130218AttachElasticLoadBalancer = "OpsWorks_20130218.AttachElasticLoadBalancer"
 }
-export declare class AttachElasticLoadBalancerHeaders extends SpeakeasyBase {
+export declare class AttachElasticLoadBalancerRequest extends SpeakeasyBase {
+    attachElasticLoadBalancerRequest: shared.AttachElasticLoadBalancerRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,13 +15,16 @@ export declare class AttachElasticLoadBalancerHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: AttachElasticLoadBalancerXAmzTargetEnum;
 }
-export declare class AttachElasticLoadBalancerRequest extends SpeakeasyBase {
-    headers: AttachElasticLoadBalancerHeaders;
-    request: shared.AttachElasticLoadBalancerRequest;
-}
 export declare class AttachElasticLoadBalancerResponse extends SpeakeasyBase {
     contentType: string;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { Tag } from "./tag";
-export declare class ListSamlProviderTagsResponse extends SpeakeasyBase {
+/**
+ * Success
+ */
+export declare class ListSAMLProviderTagsResponse extends SpeakeasyBase {
     isTruncated?: boolean;
     marker?: string;
     tags: Tag[];

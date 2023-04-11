@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class RgdidListRequest extends SpeakeasyBase {
+/**
+ * data
+ */
+export declare class RGDIDListRequest extends SpeakeasyBase {
     rgdIds?: number[];
 }

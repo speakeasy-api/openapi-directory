@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostGetAccountAuthorizationDetailsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTGetAccountAuthorizationDetailsActionEnum {
     GetAccountAuthorizationDetails = "GetAccountAuthorizationDetails"
 }
-export declare enum PostGetAccountAuthorizationDetailsVersionEnum {
+export declare enum POSTGetAccountAuthorizationDetailsVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostGetAccountAuthorizationDetailsQueryParams extends SpeakeasyBase {
-    action: PostGetAccountAuthorizationDetailsActionEnum;
+export declare class POSTGetAccountAuthorizationDetailsRequest extends SpeakeasyBase {
+    action: POSTGetAccountAuthorizationDetailsActionEnum;
+    /**
+     * Pagination token
+     */
     marker?: string;
+    /**
+     * Pagination limit
+     */
     maxItems?: string;
-    version: PostGetAccountAuthorizationDetailsVersionEnum;
-}
-export declare class PostGetAccountAuthorizationDetailsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTGetAccountAuthorizationDetailsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostGetAccountAuthorizationDetailsHeaders extends Speakeasy
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostGetAccountAuthorizationDetailsRequest extends SpeakeasyBase {
-    queryParams: PostGetAccountAuthorizationDetailsQueryParams;
-    headers: PostGetAccountAuthorizationDetailsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostGetAccountAuthorizationDetailsResponse extends SpeakeasyBase {
+export declare class POSTGetAccountAuthorizationDetailsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListBonusPaymentsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListBonusPaymentsXAmzTargetEnum {
     MTurkRequesterServiceV20170117ListBonusPayments = "MTurkRequesterServiceV20170117.ListBonusPayments"
 }
-export declare class ListBonusPaymentsHeaders extends SpeakeasyBase {
+export declare class ListBonusPaymentsRequest extends SpeakeasyBase {
+    listBonusPaymentsRequest: shared.ListBonusPaymentsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,15 +23,20 @@ export declare class ListBonusPaymentsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListBonusPaymentsXAmzTargetEnum;
 }
-export declare class ListBonusPaymentsRequest extends SpeakeasyBase {
-    queryParams: ListBonusPaymentsQueryParams;
-    headers: ListBonusPaymentsHeaders;
-    request: shared.ListBonusPaymentsRequest;
-}
 export declare class ListBonusPaymentsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     listBonusPaymentsResponse?: shared.ListBonusPaymentsResponse;
+    /**
+     * RequestError
+     */
     requestError?: any;
+    /**
+     * ServiceFault
+     */
     serviceFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

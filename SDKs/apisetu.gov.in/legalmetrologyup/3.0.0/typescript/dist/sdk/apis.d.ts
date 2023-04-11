@@ -1,6 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class ApIs {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+export declare class APIs {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,27 +9,31 @@ export declare class ApIs {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * delcs - Dealer License
+     * Dealer License
      *
+     * @remarks
      * API to verify Dealer License.
-    **/
-    delcs(req: operations.DelcsRequest, config?: AxiosRequestConfig): Promise<operations.DelcsResponse>;
+     */
+    delcs(req: operations.DelcsRequestBody, security: operations.DelcsSecurity, config?: AxiosRequestConfig): Promise<operations.DelcsResponse>;
     /**
-     * malcs - Manufacturer License
+     * Manufacturer License
      *
+     * @remarks
      * API to verify Manufacturer License.
-    **/
-    malcs(req: operations.MalcsRequest, config?: AxiosRequestConfig): Promise<operations.MalcsResponse>;
+     */
+    malcs(req: operations.MalcsRequestBody, security: operations.MalcsSecurity, config?: AxiosRequestConfig): Promise<operations.MalcsResponse>;
     /**
-     * palcs - Packers License
+     * Packers License
      *
+     * @remarks
      * API to verify Packers License.
-    **/
-    palcs(req: operations.PalcsRequest, config?: AxiosRequestConfig): Promise<operations.PalcsResponse>;
+     */
+    palcs(req: operations.PalcsRequestBody, security: operations.PalcsSecurity, config?: AxiosRequestConfig): Promise<operations.PalcsResponse>;
     /**
-     * relcs - Repairer License
+     * Repairer License
      *
+     * @remarks
      * API to verify Repairer License.
-    **/
-    relcs(req: operations.RelcsRequest, config?: AxiosRequestConfig): Promise<operations.RelcsResponse>;
+     */
+    relcs(req: operations.RelcsRequestBody, security: operations.RelcsSecurity, config?: AxiosRequestConfig): Promise<operations.RelcsResponse>;
 }

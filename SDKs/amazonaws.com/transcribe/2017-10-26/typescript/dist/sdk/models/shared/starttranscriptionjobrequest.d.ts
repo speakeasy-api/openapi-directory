@@ -1,0 +1,32 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { ContentRedaction } from "./contentredaction";
+import { JobExecutionSettings } from "./jobexecutionsettings";
+import { LanguageCodeEnum } from "./languagecodeenum";
+import { LanguageIdSettings } from "./languageidsettings";
+import { Media } from "./media";
+import { MediaFormatEnum } from "./mediaformatenum";
+import { ModelSettings } from "./modelsettings";
+import { Settings } from "./settings";
+import { Subtitles } from "./subtitles";
+import { Tag } from "./tag";
+export declare class StartTranscriptionJobRequest extends SpeakeasyBase {
+    contentRedaction?: ContentRedaction;
+    identifyLanguage?: boolean;
+    identifyMultipleLanguages?: boolean;
+    jobExecutionSettings?: JobExecutionSettings;
+    kmsEncryptionContext?: Record<string, string>;
+    languageCode?: LanguageCodeEnum;
+    languageIdSettings?: Record<string, LanguageIdSettings>;
+    languageOptions?: LanguageCodeEnum[];
+    media: Media;
+    mediaFormat?: MediaFormatEnum;
+    mediaSampleRateHertz?: number;
+    modelSettings?: ModelSettings;
+    outputBucketName?: string;
+    outputEncryptionKMSKeyId?: string;
+    outputKey?: string;
+    settings?: Settings;
+    subtitles?: Subtitles;
+    tags?: Tag[];
+    transcriptionJobName: string;
+}

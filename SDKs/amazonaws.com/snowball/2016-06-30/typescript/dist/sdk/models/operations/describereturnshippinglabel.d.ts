@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeReturnShippingLabelXAmzTargetEnum {
-    AwsieSnowballJobManagementServiceDescribeReturnShippingLabel = "AWSIESnowballJobManagementService.DescribeReturnShippingLabel"
+    AWSIESnowballJobManagementServiceDescribeReturnShippingLabel = "AWSIESnowballJobManagementService.DescribeReturnShippingLabel"
 }
-export declare class DescribeReturnShippingLabelHeaders extends SpeakeasyBase {
+export declare class DescribeReturnShippingLabelRequest extends SpeakeasyBase {
+    describeReturnShippingLabelRequest: shared.DescribeReturnShippingLabelRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class DescribeReturnShippingLabelHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeReturnShippingLabelXAmzTargetEnum;
 }
-export declare class DescribeReturnShippingLabelRequest extends SpeakeasyBase {
-    headers: DescribeReturnShippingLabelHeaders;
-    request: shared.DescribeReturnShippingLabelRequest;
-}
 export declare class DescribeReturnShippingLabelResponse extends SpeakeasyBase {
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     describeReturnShippingLabelResult?: shared.DescribeReturnShippingLabelResult;
+    /**
+     * InvalidJobStateException
+     */
     invalidJobStateException?: any;
+    /**
+     * InvalidResourceException
+     */
     invalidResourceException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

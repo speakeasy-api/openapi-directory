@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetCostEstimationQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetCostEstimationRequest extends SpeakeasyBase {
+    /**
+     * The pagination token to use to retrieve the next page of results for this operation. If this value is null, it retrieves the first page.
+     */
     nextToken?: string;
-}
-export declare class GetCostEstimationHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,17 +14,32 @@ export declare class GetCostEstimationHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetCostEstimationRequest extends SpeakeasyBase {
-    queryParams: GetCostEstimationQueryParams;
-    headers: GetCostEstimationHeaders;
-}
 export declare class GetCostEstimationResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getCostEstimationResponse?: shared.GetCostEstimationResponse;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeletedApplicationsHardDeletePathParams extends SpeakeasyBase {
-    applicationObjectId: string;
-    tenantID: string;
-}
-export declare class DeletedApplicationsHardDeleteQueryParams extends SpeakeasyBase {
-    apiVersion: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeletedApplicationsHardDeleteRequest extends SpeakeasyBase {
-    pathParams: DeletedApplicationsHardDeletePathParams;
-    queryParams: DeletedApplicationsHardDeleteQueryParams;
+    /**
+     * Client API version.
+     */
+    apiVersion: string;
+    /**
+     * Application object ID.
+     */
+    applicationObjectId: string;
+    /**
+     * The tenant ID.
+     */
+    tenantID: string;
 }
 export declare class DeletedApplicationsHardDeleteResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Error response describing why the operation failed.
+     */
     graphError?: shared.GraphError;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

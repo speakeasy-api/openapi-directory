@@ -1,6 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { KeyValuePair } from "./keyvaluepair";
+import { EphemeralStorage } from "./ephemeralstorage";
 import { FargatePlatformConfiguration } from "./fargateplatformconfiguration";
+import { KeyValuePair } from "./keyvaluepair";
 import { LinuxParameters } from "./linuxparameters";
 import { LogConfiguration } from "./logconfiguration";
 import { MountPoint } from "./mountpoint";
@@ -10,11 +11,12 @@ import { Secret } from "./secret";
 import { Ulimit } from "./ulimit";
 import { Volume } from "./volume";
 /**
- * Container properties are used in job definitions to describe the container that's launched as part of a job.
-**/
+ * Container properties are used for Amazon ECS based job definitions. These properties to describe the container that's launched as part of a job.
+ */
 export declare class ContainerProperties extends SpeakeasyBase {
     command?: string[];
     environment?: KeyValuePair[];
+    ephemeralStorage?: EphemeralStorage;
     executionRoleArn?: string;
     fargatePlatformConfiguration?: FargatePlatformConfiguration;
     image?: string;
@@ -22,7 +24,7 @@ export declare class ContainerProperties extends SpeakeasyBase {
     jobRoleArn?: string;
     linuxParameters?: LinuxParameters;
     logConfiguration?: LogConfiguration;
-    memory?: Record<string, any>;
+    memory?: number;
     mountPoints?: MountPoint[];
     networkConfiguration?: NetworkConfiguration;
     privileged?: boolean;
@@ -31,6 +33,6 @@ export declare class ContainerProperties extends SpeakeasyBase {
     secrets?: Secret[];
     ulimits?: Ulimit[];
     user?: string;
-    vcpus?: Record<string, any>;
+    vcpus?: number;
     volumes?: Volume[];
 }

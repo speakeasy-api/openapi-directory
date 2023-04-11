@@ -1,14 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetCertificateDetailByCertIdentifierPathParams extends SpeakeasyBase {
-    certificateId: string;
-    customerId: string;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class GetCertificateDetailByCertIdentifierRequest extends SpeakeasyBase {
-    pathParams: GetCertificateDetailByCertIdentifierPathParams;
+    /**
+     * Certificate id to lookup
+     */
+    certificateId: string;
+    /**
+     * An identifier for a customer
+     */
+    customerId: string;
 }
 export declare class GetCertificateDetailByCertIdentifierResponse extends SpeakeasyBase {
     body?: Uint8Array;
-    certificateDetailV2?: any;
+    /**
+     * Certificate details retrieved
+     */
+    certificateDetailV2?: shared.CertificateDetailV2;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,6 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AttachToIndexHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+/**
+ * The reference that identifies an object.
+ */
+export declare class AttachToIndexRequestBodyIndexReference extends SpeakeasyBase {
+    selector?: string;
+}
+/**
+ * The reference that identifies an object.
+ */
+export declare class AttachToIndexRequestBodyTargetReference extends SpeakeasyBase {
+    selector?: string;
+}
+export declare class AttachToIndexRequestBody extends SpeakeasyBase {
+    /**
+     * The reference that identifies an object.
+     */
+    indexReference: AttachToIndexRequestBodyIndexReference;
+    /**
+     * The reference that identifies an object.
+     */
+    targetReference: AttachToIndexRequestBodyTargetReference;
+}
+export declare class AttachToIndexRequest extends SpeakeasyBase {
+    requestBody: AttachToIndexRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -8,42 +32,65 @@ export declare class AttachToIndexHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
+    /**
+     * The Amazon Resource Name (ARN) of the directory where the object and index exist.
+     */
     xAmzDataPartition: string;
 }
-/**
- * The reference that identifies an object.
-**/
-export declare class AttachToIndexRequestBodyIndexReference extends SpeakeasyBase {
-    selector?: string;
-}
-/**
- * The reference that identifies an object.
-**/
-export declare class AttachToIndexRequestBodyTargetReference extends SpeakeasyBase {
-    selector?: string;
-}
-export declare class AttachToIndexRequestBody extends SpeakeasyBase {
-    indexReference: AttachToIndexRequestBodyIndexReference;
-    targetReference: AttachToIndexRequestBodyTargetReference;
-}
-export declare class AttachToIndexRequest extends SpeakeasyBase {
-    headers: AttachToIndexHeaders;
-    request: AttachToIndexRequestBody;
-}
 export declare class AttachToIndexResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: shared.AccessDeniedException;
+    /**
+     * Success
+     */
     attachToIndexResponse?: shared.AttachToIndexResponse;
     contentType: string;
+    /**
+     * DirectoryNotEnabledException
+     */
     directoryNotEnabledException?: shared.DirectoryNotEnabledException;
+    /**
+     * IndexedAttributeMissingException
+     */
     indexedAttributeMissingException?: shared.IndexedAttributeMissingException;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: shared.InternalServiceException;
+    /**
+     * InvalidArnException
+     */
     invalidArnException?: shared.InvalidArnException;
+    /**
+     * InvalidAttachmentException
+     */
     invalidAttachmentException?: shared.InvalidAttachmentException;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: shared.LimitExceededException;
+    /**
+     * LinkNameAlreadyInUseException
+     */
     linkNameAlreadyInUseException?: shared.LinkNameAlreadyInUseException;
+    /**
+     * NotIndexException
+     */
     notIndexException?: shared.NotIndexException;
-    resourceNotFoundException?: shared.ResourceNotFoundException;
-    retryableConflictException?: shared.RetryableConflictException;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: shared.ResourceNotFoundException;
+    /**
+     * RetryableConflictException
+     */
+    retryableConflictException?: shared.RetryableConflictException;
+    /**
+     * ValidationException
+     */
     validationException?: shared.ValidationException;
 }

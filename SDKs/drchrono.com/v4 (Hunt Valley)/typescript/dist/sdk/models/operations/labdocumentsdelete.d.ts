@@ -1,21 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class LabDocumentsDeletePathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class LabDocumentsDeleteQueryParams extends SpeakeasyBase {
-    doctor?: number;
-    since?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class LabDocumentsDeleteSecurity extends SpeakeasyBase {
-    drchronoOauth2: shared.SchemeDrchronoOauth2;
+    drchronoOauth2: string;
 }
 export declare class LabDocumentsDeleteRequest extends SpeakeasyBase {
-    pathParams: LabDocumentsDeletePathParams;
-    queryParams: LabDocumentsDeleteQueryParams;
-    security: LabDocumentsDeleteSecurity;
+    doctor?: number;
+    id: string;
+    since?: string;
 }
 export declare class LabDocumentsDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

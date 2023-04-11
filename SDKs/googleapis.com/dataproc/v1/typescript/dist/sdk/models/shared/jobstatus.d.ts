@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Output only. A state message specifying the overall job state.
+ */
 export declare enum JobStatusStateEnum {
     StateUnspecified = "STATE_UNSPECIFIED",
     Pending = "PENDING",
@@ -11,6 +14,9 @@ export declare enum JobStatusStateEnum {
     Error = "ERROR",
     AttemptFailure = "ATTEMPT_FAILURE"
 }
+/**
+ * Output only. Additional state information, which includes status reported by the agent.
+ */
 export declare enum JobStatusSubstateEnum {
     Unspecified = "UNSPECIFIED",
     Submitted = "SUBMITTED",
@@ -19,10 +25,22 @@ export declare enum JobStatusSubstateEnum {
 }
 /**
  * Dataproc job status.
-**/
+ */
 export declare class JobStatus extends SpeakeasyBase {
+    /**
+     * Optional. Output only. Job state details, such as an error description if the state is ERROR.
+     */
     details?: string;
+    /**
+     * Output only. A state message specifying the overall job state.
+     */
     state?: JobStatusStateEnum;
+    /**
+     * Output only. The time when this state was entered.
+     */
     stateStartTime?: string;
+    /**
+     * Output only. Additional state information, which includes status reported by the agent.
+     */
     substate?: JobStatusSubstateEnum;
 }

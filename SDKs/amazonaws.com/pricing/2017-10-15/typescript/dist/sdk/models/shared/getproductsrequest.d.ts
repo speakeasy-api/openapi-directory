@@ -5,5 +5,5 @@ export declare class GetProductsRequest extends SpeakeasyBase {
     formatVersion?: string;
     maxResults?: number;
     nextToken?: string;
-    serviceCode?: string;
+    serviceCode: string;
 }

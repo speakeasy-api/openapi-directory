@@ -1,6 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class ApIs {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+export declare class APIs {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,15 +9,17 @@ export declare class ApIs {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * pecer - Pension Certificate
+     * Pension Certificate
      *
+     * @remarks
      * API to verify Pension Certificate.
-    **/
-    pecer(req: operations.PecerRequest, config?: AxiosRequestConfig): Promise<operations.PecerResponse>;
+     */
+    pecer(req: operations.PecerRequestBody, security: operations.PecerSecurity, config?: AxiosRequestConfig): Promise<operations.PecerResponse>;
     /**
-     * prfnd - Provident Fund
+     * Provident Fund
      *
+     * @remarks
      * API to verify Provident Fund.
-    **/
-    prfnd(req: operations.PrfndRequest, config?: AxiosRequestConfig): Promise<operations.PrfndResponse>;
+     */
+    prfnd(req: operations.PrfndRequestBody, security: operations.PrfndSecurity, config?: AxiosRequestConfig): Promise<operations.PrfndResponse>;
 }

@@ -5,4 +5,6 @@ export declare class GetTablesRequest extends SpeakeasyBase {
     expression?: string;
     maxResults?: number;
     nextToken?: string;
+    queryAsOfTime?: Date;
+    transactionId?: string;
 }

@@ -1,10 +1,11 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetDescriptionResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetDescriptionResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
 
 sdk.description.getDescription().then((res: GetDescriptionResponse | AxiosError) => {

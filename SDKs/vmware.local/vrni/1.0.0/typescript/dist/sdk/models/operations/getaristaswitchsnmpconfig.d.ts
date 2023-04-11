@@ -1,17 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetAristaSwitchSnmpConfigPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetAristaSwitchSnmpConfigSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
+    apiKeyAuth: string;
 }
 export declare class GetAristaSwitchSnmpConfigRequest extends SpeakeasyBase {
-    pathParams: GetAristaSwitchSnmpConfigPathParams;
-    security: GetAristaSwitchSnmpConfigSecurity;
+    /**
+     * entity id
+     */
+    id: string;
 }
 export declare class GetAristaSwitchSnmpConfigResponse extends SpeakeasyBase {
     contentType: string;
-    snmpConfig?: shared.SnmpConfig;
+    /**
+     * OK
+     */
+    snmpConfig?: shared.SNMPConfig;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

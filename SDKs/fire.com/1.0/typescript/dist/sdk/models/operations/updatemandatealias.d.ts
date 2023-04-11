@@ -1,11 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UpdateMandateAliasPathParams extends SpeakeasyBase {
-    mandateUuid: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UpdateMandateAliasRequest extends SpeakeasyBase {
-    pathParams: UpdateMandateAliasPathParams;
+    mandateUuid: string;
 }
 export declare class UpdateMandateAliasResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

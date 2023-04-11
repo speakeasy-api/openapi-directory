@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UpdateMlTransformResponse extends SpeakeasyBase {
+/**
+ * Success
+ */
+export declare class UpdateMLTransformResponse extends SpeakeasyBase {
     transformId?: string;
 }

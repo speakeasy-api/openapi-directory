@@ -1,4 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum CreateBatchRequestBodyOperationEnum {
     Whois = "whois",
     Check = "check"
@@ -16,11 +18,12 @@ export declare class CreateBatchRequestBody extends SpeakeasyBase {
     operation: CreateBatchRequestBodyOperationEnum;
     options?: CreateBatchRequestBodyOptions;
 }
-export declare class CreateBatchRequest extends SpeakeasyBase {
-    request: CreateBatchRequestBody;
-}
 export declare class CreateBatchResponse extends SpeakeasyBase {
-    batch?: any;
+    /**
+     * OK
+     */
+    batch?: shared.Batch;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

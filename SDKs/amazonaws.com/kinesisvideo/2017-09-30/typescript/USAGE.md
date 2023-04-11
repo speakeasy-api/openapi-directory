@@ -1,40 +1,52 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateSignalingChannelRequest, CreateSignalingChannelResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CreateSignalingChannelRequest,
+  CreateSignalingChannelResponse,
+  CreateSignalingChannelRequestBodyChannelTypeEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: CreateSignalingChannelRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
-    channelName: "voluptas",
-    channelType: "SINGLE_MASTER",
+});
+
+const req: CreateSignalingChannelRequest = {
+  requestBody: {
+    channelName: "corrupti",
+    channelType: CreateSignalingChannelRequestBodyChannelTypeEnum.FullMesh,
     singleMasterConfiguration: {
-      messageTtlSeconds: 1543572285742637646,
+      messageTtlSeconds: 715190,
     },
     tags: [
       {
-        key: "rerum",
-        value: "dicta",
+        key: "unde",
+        value: "nulla",
+      },
+      {
+        key: "corrupti",
+        value: "illum",
+      },
+      {
+        key: "vel",
+        value: "error",
+      },
+      {
+        key: "deserunt",
+        value: "suscipit",
       },
     ],
   },
+  xAmzAlgorithm: "iure",
+  xAmzContentSha256: "magnam",
+  xAmzCredential: "debitis",
+  xAmzDate: "ipsa",
+  xAmzSecurityToken: "delectus",
+  xAmzSignature: "tempora",
+  xAmzSignedHeaders: "suscipit",
 };
 
 sdk.createSignalingChannel(req).then((res: CreateSignalingChannelResponse | AxiosError) => {

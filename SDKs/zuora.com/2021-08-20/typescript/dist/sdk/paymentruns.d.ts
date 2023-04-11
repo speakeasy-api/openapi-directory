@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class PaymentRuns {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,37 +9,42 @@ export declare class PaymentRuns {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deletePaymentRun - Delete a payment run
+     * Delete a payment run
      *
+     * @remarks
      * Deletes a payment run. Only payment runs with the Canceled or Error status can be deleted.
      *
-    **/
-    deletePaymentRun(req: operations.DeletePaymentRunRequest, config?: AxiosRequestConfig): Promise<operations.DeletePaymentRunResponse>;
+     */
+    deletePaymentRun(req: operations.DELETEPaymentRunRequest, config?: AxiosRequestConfig): Promise<operations.DELETEPaymentRunResponse>;
     /**
-     * getPaymentRun - Retrieve a payment run
+     * Retrieve a payment run
      *
+     * @remarks
      * Retrives the information about a specific payment run.
      *
-    **/
-    getPaymentRun(req: operations.GetPaymentRunRequest, config?: AxiosRequestConfig): Promise<operations.GetPaymentRunResponse>;
+     */
+    getPaymentRun(req: operations.GETPaymentRunRequest, config?: AxiosRequestConfig): Promise<operations.GETPaymentRunResponse>;
     /**
-     * getPaymentRunData - Retrieve payment run data
+     * Retrieve payment run data
      *
+     * @remarks
      * Retrieves payment run data and the processing result with details, if the `data` field was specified in the Create payment run operation.
      *
      *
-    **/
-    getPaymentRunData(req: operations.GetPaymentRunDataRequest, config?: AxiosRequestConfig): Promise<operations.GetPaymentRunDataResponse>;
+     */
+    getPaymentRunData(req: operations.GETPaymentRunDataRequest, config?: AxiosRequestConfig): Promise<operations.GETPaymentRunDataResponse>;
     /**
-     * getPaymentRunSummary - Retrieve a payment run summary
+     * Retrieve a payment run summary
      *
+     * @remarks
      * Retrives the summary of a payment run.
      *
-    **/
-    getPaymentRunSummary(req: operations.GetPaymentRunSummaryRequest, config?: AxiosRequestConfig): Promise<operations.GetPaymentRunSummaryResponse>;
+     */
+    getPaymentRunSummary(req: operations.GETPaymentRunSummaryRequest, config?: AxiosRequestConfig): Promise<operations.GETPaymentRunSummaryResponse>;
     /**
-     * getPaymentRuns - List payment runs
+     * List payment runs
      *
+     * @remarks
      * Retrieves the information about all payment runs. You can define filterable fields to restrict the data returned in the response.
      *
      * ### Filtering
@@ -56,11 +61,12 @@ export declare class PaymentRuns {
      *
      * - /v1/payment-runs?status=Completed&sort=+updatedDate
      *
-    **/
-    getPaymentRuns(req: operations.GetPaymentRunsRequest, config?: AxiosRequestConfig): Promise<operations.GetPaymentRunsResponse>;
+     */
+    getPaymentRuns(req: operations.GETPaymentRunsRequest, config?: AxiosRequestConfig): Promise<operations.GETPaymentRunsResponse>;
     /**
-     * postPaymentRun - Create a payment run
+     * Create a payment run
      *
+     * @remarks
      * Creates a payment run. You can create a payment run to be executed immediately after it is created, or a scheduled payment run to be executed in future.
      *
      * To filter the payments to be collected for a payment run, you can use either of the following methods but not both:
@@ -70,15 +76,16 @@ export declare class PaymentRuns {
      *
      * If no filter criteria are specified in the request body, the payment run collects payments for all accounts.
      *
-    **/
-    postPaymentRun(req: operations.PostPaymentRunRequest, config?: AxiosRequestConfig): Promise<operations.PostPaymentRunResponse>;
+     */
+    postPaymentRun(req: operations.POSTPaymentRunRequest, config?: AxiosRequestConfig): Promise<operations.POSTPaymentRunResponse>;
     /**
-     * putPaymentRun - Update a payment run
+     * Update a payment run
      *
+     * @remarks
      * Updates the information about an unexecuted payment run. Only pending payment runs can be updated.
      *
      * If none of the **accountId**, **batch**, **billCycleDay**, **currency**, **paymentGatewayId**, and **billingRunId** fields is specified in the request body, the corresponding payment run collects payments for all accounts.
      *
-    **/
-    putPaymentRun(req: operations.PutPaymentRunRequest, config?: AxiosRequestConfig): Promise<operations.PutPaymentRunResponse>;
+     */
+    putPaymentRun(req: operations.PUTPaymentRunRequest, config?: AxiosRequestConfig): Promise<operations.PUTPaymentRunResponse>;
 }

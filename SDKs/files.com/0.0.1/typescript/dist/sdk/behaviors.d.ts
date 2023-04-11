@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Operations about behaviors
+ */
 export declare class Behaviors {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,45 +12,52 @@ export declare class Behaviors {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * behaviorListForPath - List Behaviors by path
-     *
      * List Behaviors by path
-    **/
+     *
+     * @remarks
+     * List Behaviors by path
+     */
     behaviorListForPath(req: operations.BehaviorListForPathRequest, config?: AxiosRequestConfig): Promise<operations.BehaviorListForPathResponse>;
     /**
-     * deleteBehaviorsId - Delete Behavior
-     *
      * Delete Behavior
-    **/
+     *
+     * @remarks
+     * Delete Behavior
+     */
     deleteBehaviorsId(req: operations.DeleteBehaviorsIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteBehaviorsIdResponse>;
     /**
-     * getBehaviors - List Behaviors
-     *
      * List Behaviors
-    **/
+     *
+     * @remarks
+     * List Behaviors
+     */
     getBehaviors(req: operations.GetBehaviorsRequest, config?: AxiosRequestConfig): Promise<operations.GetBehaviorsResponse>;
     /**
-     * getBehaviorsId - Show Behavior
-     *
      * Show Behavior
-    **/
+     *
+     * @remarks
+     * Show Behavior
+     */
     getBehaviorsId(req: operations.GetBehaviorsIdRequest, config?: AxiosRequestConfig): Promise<operations.GetBehaviorsIdResponse>;
     /**
-     * patchBehaviorsId - Update Behavior
-     *
      * Update Behavior
-    **/
+     *
+     * @remarks
+     * Update Behavior
+     */
     patchBehaviorsId(req: operations.PatchBehaviorsIdRequest, config?: AxiosRequestConfig): Promise<operations.PatchBehaviorsIdResponse>;
     /**
-     * postBehaviors - Create Behavior
-     *
      * Create Behavior
-    **/
-    postBehaviors(req: operations.PostBehaviorsRequest, config?: AxiosRequestConfig): Promise<operations.PostBehaviorsResponse>;
-    /**
-     * postBehaviorsWebhookTest - Test webhook.
      *
+     * @remarks
+     * Create Behavior
+     */
+    postBehaviors(req: operations.PostBehaviorsRequestBody, config?: AxiosRequestConfig): Promise<operations.PostBehaviorsResponse>;
+    /**
      * Test webhook.
-    **/
-    postBehaviorsWebhookTest(req: operations.PostBehaviorsWebhookTestRequest, config?: AxiosRequestConfig): Promise<operations.PostBehaviorsWebhookTestResponse>;
+     *
+     * @remarks
+     * Test webhook.
+     */
+    postBehaviorsWebhookTest(req: operations.PostBehaviorsWebhookTestRequestBody, config?: AxiosRequestConfig): Promise<operations.PostBehaviorsWebhookTestResponse>;
 }

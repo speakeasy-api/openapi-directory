@@ -4,7 +4,7 @@ import { WorkflowExecutionInfo } from "./workflowexecutioninfo";
 import { WorkflowExecutionOpenCounts } from "./workflowexecutionopencounts";
 /**
  * Contains details about a workflow execution.
-**/
+ */
 export declare class WorkflowExecutionDetail extends SpeakeasyBase {
     executionConfiguration: WorkflowExecutionConfiguration;
     executionInfo: WorkflowExecutionInfo;

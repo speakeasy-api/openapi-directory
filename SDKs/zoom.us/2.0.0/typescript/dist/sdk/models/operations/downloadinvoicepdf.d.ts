@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DownloadInvoicePdfPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DownloadInvoicePDFRequest extends SpeakeasyBase {
     invoiceId: string;
 }
-export declare class DownloadInvoicePdfRequest extends SpeakeasyBase {
-    pathParams: DownloadInvoicePdfPathParams;
-}
-export declare class DownloadInvoicePdfResponse extends SpeakeasyBase {
+export declare class DownloadInvoicePDFResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * **HTTP Status Code:** `200`<br>
+     *
+     * @remarks
+     * Account billing invoice PDF returned.
+     */
     downloadInvoicePDF200ApplicationJSONAny?: any;
 }

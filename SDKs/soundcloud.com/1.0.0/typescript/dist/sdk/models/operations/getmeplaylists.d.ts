@@ -1,18 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetMePlaylistsQueryParams extends SpeakeasyBase {
-    limit?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetMePlaylistsSecurity extends SpeakeasyBase {
-    authHeader: shared.SchemeAuthHeader;
+    authHeader: string;
 }
 export declare class GetMePlaylistsRequest extends SpeakeasyBase {
-    queryParams: GetMePlaylistsQueryParams;
-    security: GetMePlaylistsSecurity;
+    /**
+     * Number of results to return in the collection.
+     */
+    limit?: number;
 }
 export declare class GetMePlaylistsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Unauthorized
+     */
     error?: shared.ErrorT;
+    /**
+     * Success
+     */
     playlistsArray?: shared.Playlist[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

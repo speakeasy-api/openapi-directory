@@ -1,11 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class EnterpriseAdminDeleteImpersonationOAuthTokenPathParams extends SpeakeasyBase {
-    username: string;
-}
+import { AxiosResponse } from "axios";
 export declare class EnterpriseAdminDeleteImpersonationOAuthTokenRequest extends SpeakeasyBase {
-    pathParams: EnterpriseAdminDeleteImpersonationOAuthTokenPathParams;
+    username: string;
 }
 export declare class EnterpriseAdminDeleteImpersonationOAuthTokenResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

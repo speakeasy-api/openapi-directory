@@ -99,6 +99,9 @@ export declare class AcademicCertificateSchemaIssuedToPerson extends SpeakeasyBa
 export declare class AcademicCertificateSchemaIssuedTo extends SpeakeasyBase {
     person: AcademicCertificateSchemaIssuedToPerson;
 }
+/**
+ * The certificate data in response body in PDF, XML or JSON format as requested in format parameter.
+ */
 export declare class AcademicCertificateSchema extends SpeakeasyBase {
     certificateData: AcademicCertificateSchemaCertificateData;
     issuedBy: AcademicCertificateSchemaIssuedBy;

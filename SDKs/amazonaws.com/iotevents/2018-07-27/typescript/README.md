@@ -6,180 +6,350 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/amazonaws.com/iotevents/2018-07-27/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/amazonaws.com/iotevents/2018-07-27/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateAlarmModelRequest, CreateAlarmModelResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CreateAlarmModelRequest,
+  CreateAlarmModelResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  ComparisonOperatorEnum,
+  PayloadTypeEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: CreateAlarmModelRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
+});
+
+const req: CreateAlarmModelRequest = {
+  requestBody: {
     alarmCapabilities: {
       acknowledgeFlow: {
-        enabled: true,
+        enabled: false,
       },
       initializationConfiguration: {
-        disabledOnInitialization: true,
+        disabledOnInitialization: false,
       },
     },
     alarmEventActions: {
       alarmActions: [
         {
           dynamoDB: {
-            hashKeyField: "nihil",
-            hashKeyType: "rerum",
-            hashKeyValue: "dicta",
-            operation: "debitis",
+            hashKeyField: "provident",
+            hashKeyType: "distinctio",
+            hashKeyValue: "quibusdam",
+            operation: "unde",
             payload: {
-              contentExpression: "voluptatum",
-              type: "STRING",
+              contentExpression: "nulla",
+              type: PayloadTypeEnum.Json,
             },
-            payloadField: "ut",
-            rangeKeyField: "dolorem",
-            rangeKeyType: "et",
-            rangeKeyValue: "voluptate",
-            tableName: "iste",
+            payloadField: "illum",
+            rangeKeyField: "vel",
+            rangeKeyType: "error",
+            rangeKeyValue: "deserunt",
+            tableName: "suscipit",
           },
           dynamoDBv2: {
             payload: {
-              contentExpression: "vitae",
-              type: "STRING",
+              contentExpression: "iure",
+              type: PayloadTypeEnum.String,
             },
-            tableName: "dolores",
+            tableName: "debitis",
           },
           firehose: {
-            deliveryStreamName: "illum",
+            deliveryStreamName: "ipsa",
             payload: {
-              contentExpression: "debitis",
-              type: "STRING",
+              contentExpression: "delectus",
+              type: PayloadTypeEnum.String,
             },
-            separator: "odio",
+            separator: "suscipit",
           },
           iotEvents: {
-            inputName: "dolore",
+            inputName: "molestiae",
             payload: {
-              contentExpression: "id",
-              type: "JSON",
+              contentExpression: "minus",
+              type: PayloadTypeEnum.Json,
             },
           },
           iotSiteWise: {
-            assetId: "accusantium",
-            entryId: "totam",
-            propertyAlias: "commodi",
-            propertyId: "quis",
+            assetId: "voluptatum",
+            entryId: "iusto",
+            propertyAlias: "excepturi",
+            propertyId: "nisi",
             propertyValue: {
-              quality: "est",
+              quality: "recusandae",
               timestamp: {
-                offsetInNanos: "aut",
-                timeInSeconds: "odit",
+                offsetInNanos: "temporibus",
+                timeInSeconds: "ab",
               },
               value: {
-                booleanValue: "non",
-                doubleValue: "voluptas",
-                integerValue: "omnis",
-                stringValue: "aut",
+                booleanValue: "quis",
+                doubleValue: "veritatis",
+                integerValue: "deserunt",
+                stringValue: "perferendis",
               },
             },
           },
           iotTopicPublish: {
-            mqttTopic: "illo",
+            mqttTopic: "ipsam",
             payload: {
-              contentExpression: "sed",
-              type: "JSON",
+              contentExpression: "repellendus",
+              type: PayloadTypeEnum.Json,
             },
           },
           lambda: {
-            functionArn: "autem",
+            functionArn: "quo",
             payload: {
-              contentExpression: "consectetur",
-              type: "STRING",
+              contentExpression: "odit",
+              type: PayloadTypeEnum.Json,
             },
           },
           sns: {
             payload: {
-              contentExpression: "odio",
-              type: "JSON",
+              contentExpression: "at",
+              type: PayloadTypeEnum.Json,
             },
-            targetArn: "recusandae",
+            targetArn: "molestiae",
           },
           sqs: {
             payload: {
-              contentExpression: "at",
-              type: "STRING",
+              contentExpression: "quod",
+              type: PayloadTypeEnum.Json,
             },
-            queueUrl: "eveniet",
+            queueUrl: "esse",
+            useBase64: false,
+          },
+        },
+        {
+          dynamoDB: {
+            hashKeyField: "totam",
+            hashKeyType: "porro",
+            hashKeyValue: "dolorum",
+            operation: "dicta",
+            payload: {
+              contentExpression: "nam",
+              type: PayloadTypeEnum.Json,
+            },
+            payloadField: "occaecati",
+            rangeKeyField: "fugit",
+            rangeKeyType: "deleniti",
+            rangeKeyValue: "hic",
+            tableName: "optio",
+          },
+          dynamoDBv2: {
+            payload: {
+              contentExpression: "totam",
+              type: PayloadTypeEnum.String,
+            },
+            tableName: "commodi",
+          },
+          firehose: {
+            deliveryStreamName: "molestiae",
+            payload: {
+              contentExpression: "modi",
+              type: PayloadTypeEnum.String,
+            },
+            separator: "impedit",
+          },
+          iotEvents: {
+            inputName: "cum",
+            payload: {
+              contentExpression: "esse",
+              type: PayloadTypeEnum.String,
+            },
+          },
+          iotSiteWise: {
+            assetId: "excepturi",
+            entryId: "aspernatur",
+            propertyAlias: "perferendis",
+            propertyId: "ad",
+            propertyValue: {
+              quality: "natus",
+              timestamp: {
+                offsetInNanos: "sed",
+                timeInSeconds: "iste",
+              },
+              value: {
+                booleanValue: "dolor",
+                doubleValue: "natus",
+                integerValue: "laboriosam",
+                stringValue: "hic",
+              },
+            },
+          },
+          iotTopicPublish: {
+            mqttTopic: "saepe",
+            payload: {
+              contentExpression: "fuga",
+              type: PayloadTypeEnum.String,
+            },
+          },
+          lambda: {
+            functionArn: "corporis",
+            payload: {
+              contentExpression: "iste",
+              type: PayloadTypeEnum.String,
+            },
+          },
+          sns: {
+            payload: {
+              contentExpression: "saepe",
+              type: PayloadTypeEnum.Json,
+            },
+            targetArn: "architecto",
+          },
+          sqs: {
+            payload: {
+              contentExpression: "ipsa",
+              type: PayloadTypeEnum.Json,
+            },
+            queueUrl: "est",
+            useBase64: false,
+          },
+        },
+        {
+          dynamoDB: {
+            hashKeyField: "mollitia",
+            hashKeyType: "laborum",
+            hashKeyValue: "dolores",
+            operation: "dolorem",
+            payload: {
+              contentExpression: "corporis",
+              type: PayloadTypeEnum.String,
+            },
+            payloadField: "nobis",
+            rangeKeyField: "enim",
+            rangeKeyType: "omnis",
+            rangeKeyValue: "nemo",
+            tableName: "minima",
+          },
+          dynamoDBv2: {
+            payload: {
+              contentExpression: "excepturi",
+              type: PayloadTypeEnum.String,
+            },
+            tableName: "iure",
+          },
+          firehose: {
+            deliveryStreamName: "culpa",
+            payload: {
+              contentExpression: "doloribus",
+              type: PayloadTypeEnum.Json,
+            },
+            separator: "architecto",
+          },
+          iotEvents: {
+            inputName: "mollitia",
+            payload: {
+              contentExpression: "dolorem",
+              type: PayloadTypeEnum.Json,
+            },
+          },
+          iotSiteWise: {
+            assetId: "consequuntur",
+            entryId: "repellat",
+            propertyAlias: "mollitia",
+            propertyId: "occaecati",
+            propertyValue: {
+              quality: "numquam",
+              timestamp: {
+                offsetInNanos: "commodi",
+                timeInSeconds: "quam",
+              },
+              value: {
+                booleanValue: "molestiae",
+                doubleValue: "velit",
+                integerValue: "error",
+                stringValue: "quia",
+              },
+            },
+          },
+          iotTopicPublish: {
+            mqttTopic: "quis",
+            payload: {
+              contentExpression: "vitae",
+              type: PayloadTypeEnum.Json,
+            },
+          },
+          lambda: {
+            functionArn: "animi",
+            payload: {
+              contentExpression: "enim",
+              type: PayloadTypeEnum.String,
+            },
+          },
+          sns: {
+            payload: {
+              contentExpression: "quo",
+              type: PayloadTypeEnum.String,
+            },
+            targetArn: "tenetur",
+          },
+          sqs: {
+            payload: {
+              contentExpression: "ipsam",
+              type: PayloadTypeEnum.Json,
+            },
+            queueUrl: "possimus",
             useBase64: false,
           },
         },
       ],
     },
-    alarmModelDescription: "sint",
-    alarmModelName: "inventore",
+    alarmModelDescription: "aut",
+    alarmModelName: "quasi",
     alarmNotification: {
       notificationActions: [
         {
           action: {
             lambdaAction: {
-              functionArn: "exercitationem",
+              functionArn: "temporibus",
               payload: {
-                contentExpression: "aut",
-                type: "STRING",
+                contentExpression: "laborum",
+                type: PayloadTypeEnum.String,
               },
             },
           },
           emailConfigurations: [
             {
               content: {
-                additionalMessage: "maiores",
-                subject: "incidunt",
+                additionalMessage: "voluptatibus",
+                subject: "vero",
               },
-              from: "dolor",
+              from: "nihil",
               recipients: {
                 to: [
                   {
                     ssoIdentity: {
-                      identityStoreId: "veritatis",
-                      userId: "in",
+                      identityStoreId: "voluptatibus",
+                      userId: "ipsa",
                     },
                   },
                   {
                     ssoIdentity: {
-                      identityStoreId: "et",
-                      userId: "omnis",
+                      identityStoreId: "omnis",
+                      userId: "voluptate",
                     },
                   },
                   {
                     ssoIdentity: {
-                      identityStoreId: "ipsum",
-                      userId: "ex",
+                      identityStoreId: "cum",
+                      userId: "perferendis",
                     },
                   },
                 ],
@@ -187,28 +357,34 @@ const req: CreateAlarmModelRequest = {
             },
             {
               content: {
-                additionalMessage: "dolores",
-                subject: "placeat",
+                additionalMessage: "doloremque",
+                subject: "reprehenderit",
               },
-              from: "vel",
+              from: "ut",
               recipients: {
                 to: [
                   {
                     ssoIdentity: {
-                      identityStoreId: "mollitia",
-                      userId: "voluptas",
+                      identityStoreId: "dicta",
+                      userId: "corporis",
                     },
                   },
                   {
                     ssoIdentity: {
-                      identityStoreId: "quam",
-                      userId: "reprehenderit",
+                      identityStoreId: "dolore",
+                      userId: "iusto",
                     },
                   },
                   {
                     ssoIdentity: {
-                      identityStoreId: "qui",
-                      userId: "qui",
+                      identityStoreId: "dicta",
+                      userId: "harum",
+                    },
+                  },
+                  {
+                    ssoIdentity: {
+                      identityStoreId: "enim",
+                      userId: "accusamus",
                     },
                   },
                 ],
@@ -216,16 +392,45 @@ const req: CreateAlarmModelRequest = {
             },
             {
               content: {
-                additionalMessage: "unde",
-                subject: "in",
+                additionalMessage: "commodi",
+                subject: "repudiandae",
               },
-              from: "autem",
+              from: "quae",
               recipients: {
                 to: [
                   {
                     ssoIdentity: {
-                      identityStoreId: "ut",
-                      userId: "itaque",
+                      identityStoreId: "quidem",
+                      userId: "molestias",
+                    },
+                  },
+                ],
+              },
+            },
+            {
+              content: {
+                additionalMessage: "excepturi",
+                subject: "pariatur",
+              },
+              from: "modi",
+              recipients: {
+                to: [
+                  {
+                    ssoIdentity: {
+                      identityStoreId: "rem",
+                      userId: "voluptates",
+                    },
+                  },
+                  {
+                    ssoIdentity: {
+                      identityStoreId: "quasi",
+                      userId: "repudiandae",
+                    },
+                  },
+                  {
+                    ssoIdentity: {
+                      identityStoreId: "sint",
+                      userId: "veritatis",
                     },
                   },
                 ],
@@ -234,54 +439,132 @@ const req: CreateAlarmModelRequest = {
           ],
           smsConfigurations: [
             {
-              additionalMessage: "neque",
+              additionalMessage: "incidunt",
               recipients: [
                 {
                   ssoIdentity: {
-                    identityStoreId: "et",
-                    userId: "accusantium",
+                    identityStoreId: "consequatur",
+                    userId: "est",
                   },
                 },
                 {
                   ssoIdentity: {
-                    identityStoreId: "esse",
-                    userId: "architecto",
-                  },
-                },
-                {
-                  ssoIdentity: {
-                    identityStoreId: "quam",
-                    userId: "velit",
+                    identityStoreId: "quibusdam",
+                    userId: "explicabo",
                   },
                 },
               ],
-              senderId: "cumque",
+              senderId: "deserunt",
+            },
+            {
+              additionalMessage: "distinctio",
+              recipients: [
+                {
+                  ssoIdentity: {
+                    identityStoreId: "labore",
+                    userId: "modi",
+                  },
+                },
+                {
+                  ssoIdentity: {
+                    identityStoreId: "qui",
+                    userId: "aliquid",
+                  },
+                },
+                {
+                  ssoIdentity: {
+                    identityStoreId: "cupiditate",
+                    userId: "quos",
+                  },
+                },
+                {
+                  ssoIdentity: {
+                    identityStoreId: "perferendis",
+                    userId: "magni",
+                  },
+                },
+              ],
+              senderId: "assumenda",
+            },
+            {
+              additionalMessage: "ipsam",
+              recipients: [
+                {
+                  ssoIdentity: {
+                    identityStoreId: "fugit",
+                    userId: "dolorum",
+                  },
+                },
+              ],
+              senderId: "excepturi",
+            },
+            {
+              additionalMessage: "tempora",
+              recipients: [
+                {
+                  ssoIdentity: {
+                    identityStoreId: "tempore",
+                    userId: "labore",
+                  },
+                },
+                {
+                  ssoIdentity: {
+                    identityStoreId: "delectus",
+                    userId: "eum",
+                  },
+                },
+                {
+                  ssoIdentity: {
+                    identityStoreId: "non",
+                    userId: "eligendi",
+                  },
+                },
+              ],
+              senderId: "sint",
             },
           ],
         },
         {
           action: {
             lambdaAction: {
-              functionArn: "soluta",
+              functionArn: "aliquid",
               payload: {
-                contentExpression: "sunt",
-                type: "JSON",
+                contentExpression: "provident",
+                type: PayloadTypeEnum.Json,
               },
             },
           },
           emailConfigurations: [
             {
               content: {
-                additionalMessage: "et",
-                subject: "optio",
+                additionalMessage: "officia",
+                subject: "dolor",
               },
-              from: "qui",
+              from: "debitis",
               recipients: {
                 to: [
                   {
                     ssoIdentity: {
-                      identityStoreId: "illo",
-                      userId: "omnis",
+                      identityStoreId: "dolorum",
+                      userId: "in",
+                    },
+                  },
+                  {
+                    ssoIdentity: {
+                      identityStoreId: "in",
+                      userId: "illum",
+                    },
+                  },
+                  {
+                    ssoIdentity: {
+                      identityStoreId: "maiores",
+                      userId: "rerum",
+                    },
+                  },
+                  {
+                    ssoIdentity: {
+                      identityStoreId: "dicta",
+                      userId: "magnam",
                     },
                   },
                 ],
@@ -289,22 +572,22 @@ const req: CreateAlarmModelRequest = {
             },
             {
               content: {
-                additionalMessage: "ut",
-                subject: "consequatur",
+                additionalMessage: "cumque",
+                subject: "facere",
               },
-              from: "dolor",
+              from: "ea",
               recipients: {
                 to: [
                   {
                     ssoIdentity: {
-                      identityStoreId: "error",
-                      userId: "reprehenderit",
+                      identityStoreId: "laborum",
+                      userId: "accusamus",
                     },
                   },
                   {
                     ssoIdentity: {
-                      identityStoreId: "consectetur",
-                      userId: "nostrum",
+                      identityStoreId: "non",
+                      userId: "occaecati",
                     },
                   },
                 ],
@@ -312,16 +595,28 @@ const req: CreateAlarmModelRequest = {
             },
             {
               content: {
-                additionalMessage: "ut",
-                subject: "laboriosam",
+                additionalMessage: "enim",
+                subject: "accusamus",
               },
-              from: "sed",
+              from: "delectus",
               recipients: {
                 to: [
                   {
                     ssoIdentity: {
-                      identityStoreId: "soluta",
-                      userId: "aut",
+                      identityStoreId: "provident",
+                      userId: "nam",
+                    },
+                  },
+                  {
+                    ssoIdentity: {
+                      identityStoreId: "id",
+                      userId: "blanditiis",
+                    },
+                  },
+                  {
+                    ssoIdentity: {
+                      identityStoreId: "deleniti",
+                      userId: "sapiente",
                     },
                   },
                 ],
@@ -330,120 +625,208 @@ const req: CreateAlarmModelRequest = {
           ],
           smsConfigurations: [
             {
-              additionalMessage: "consequuntur",
+              additionalMessage: "deserunt",
               recipients: [
                 {
                   ssoIdentity: {
-                    identityStoreId: "autem",
-                    userId: "ipsa",
+                    identityStoreId: "vel",
+                    userId: "natus",
+                  },
+                },
+                {
+                  ssoIdentity: {
+                    identityStoreId: "omnis",
+                    userId: "molestiae",
+                  },
+                },
+              ],
+              senderId: "perferendis",
+            },
+          ],
+        },
+        {
+          action: {
+            lambdaAction: {
+              functionArn: "nihil",
+              payload: {
+                contentExpression: "magnam",
+                type: PayloadTypeEnum.Json,
+              },
+            },
+          },
+          emailConfigurations: [
+            {
+              content: {
+                additionalMessage: "labore",
+                subject: "labore",
+              },
+              from: "suscipit",
+              recipients: {
+                to: [
+                  {
+                    ssoIdentity: {
+                      identityStoreId: "nobis",
+                      userId: "eum",
+                    },
+                  },
+                  {
+                    ssoIdentity: {
+                      identityStoreId: "vero",
+                      userId: "aspernatur",
+                    },
+                  },
+                  {
+                    ssoIdentity: {
+                      identityStoreId: "architecto",
+                      userId: "magnam",
+                    },
+                  },
+                ],
+              },
+            },
+            {
+              content: {
+                additionalMessage: "et",
+                subject: "excepturi",
+              },
+              from: "ullam",
+              recipients: {
+                to: [
+                  {
+                    ssoIdentity: {
+                      identityStoreId: "quos",
+                      userId: "sint",
+                    },
+                  },
+                  {
+                    ssoIdentity: {
+                      identityStoreId: "accusantium",
+                      userId: "mollitia",
+                    },
+                  },
+                  {
+                    ssoIdentity: {
+                      identityStoreId: "reiciendis",
+                      userId: "mollitia",
+                    },
+                  },
+                ],
+              },
+            },
+            {
+              content: {
+                additionalMessage: "ad",
+                subject: "eum",
+              },
+              from: "dolor",
+              recipients: {
+                to: [
+                  {
+                    ssoIdentity: {
+                      identityStoreId: "odit",
+                      userId: "nemo",
+                    },
+                  },
+                  {
+                    ssoIdentity: {
+                      identityStoreId: "quasi",
+                      userId: "iure",
+                    },
+                  },
+                  {
+                    ssoIdentity: {
+                      identityStoreId: "doloribus",
+                      userId: "debitis",
+                    },
+                  },
+                  {
+                    ssoIdentity: {
+                      identityStoreId: "eius",
+                      userId: "maxime",
+                    },
+                  },
+                ],
+              },
+            },
+          ],
+          smsConfigurations: [
+            {
+              additionalMessage: "facilis",
+              recipients: [
+                {
+                  ssoIdentity: {
+                    identityStoreId: "architecto",
+                    userId: "architecto",
+                  },
+                },
+                {
+                  ssoIdentity: {
+                    identityStoreId: "repudiandae",
+                    userId: "ullam",
                   },
                 },
               ],
               senderId: "expedita",
             },
             {
-              additionalMessage: "doloremque",
+              additionalMessage: "nihil",
               recipients: [
                 {
                   ssoIdentity: {
-                    identityStoreId: "atque",
-                    userId: "ratione",
+                    identityStoreId: "quibusdam",
+                    userId: "sed",
                   },
                 },
                 {
                   ssoIdentity: {
-                    identityStoreId: "quisquam",
-                    userId: "explicabo",
+                    identityStoreId: "saepe",
+                    userId: "pariatur",
+                  },
+                },
+                {
+                  ssoIdentity: {
+                    identityStoreId: "accusantium",
+                    userId: "consequuntur",
+                  },
+                },
+                {
+                  ssoIdentity: {
+                    identityStoreId: "praesentium",
+                    userId: "natus",
                   },
                 },
               ],
-              senderId: "ea",
+              senderId: "magni",
             },
             {
-              additionalMessage: "maxime",
+              additionalMessage: "sunt",
               recipients: [
                 {
                   ssoIdentity: {
-                    identityStoreId: "perferendis",
-                    userId: "et",
+                    identityStoreId: "illum",
+                    userId: "pariatur",
+                  },
+                },
+                {
+                  ssoIdentity: {
+                    identityStoreId: "maxime",
+                    userId: "ea",
+                  },
+                },
+                {
+                  ssoIdentity: {
+                    identityStoreId: "excepturi",
+                    userId: "odit",
+                  },
+                },
+                {
+                  ssoIdentity: {
+                    identityStoreId: "ea",
+                    userId: "accusantium",
                   },
                 },
               ],
-              senderId: "rerum",
-            },
-          ],
-        },
-        {
-          action: {
-            lambdaAction: {
-              functionArn: "reiciendis",
-              payload: {
-                contentExpression: "quis",
-                type: "JSON",
-              },
-            },
-          },
-          emailConfigurations: [
-            {
-              content: {
-                additionalMessage: "necessitatibus",
-                subject: "est",
-              },
-              from: "quis",
-              recipients: {
-                to: [
-                  {
-                    ssoIdentity: {
-                      identityStoreId: "labore",
-                      userId: "et",
-                    },
-                  },
-                ],
-              },
-            },
-          ],
-          smsConfigurations: [
-            {
-              additionalMessage: "ad",
-              recipients: [
-                {
-                  ssoIdentity: {
-                    identityStoreId: "vel",
-                    userId: "qui",
-                  },
-                },
-                {
-                  ssoIdentity: {
-                    identityStoreId: "modi",
-                    userId: "nihil",
-                  },
-                },
-              ],
-              senderId: "tempora",
-            },
-            {
-              additionalMessage: "deserunt",
-              recipients: [
-                {
-                  ssoIdentity: {
-                    identityStoreId: "sunt",
-                    userId: "sit",
-                  },
-                },
-                {
-                  ssoIdentity: {
-                    identityStoreId: "autem",
-                    userId: "quis",
-                  },
-                },
-                {
-                  ssoIdentity: {
-                    identityStoreId: "vel",
-                    userId: "vel",
-                  },
-                },
-              ],
-              senderId: "placeat",
+              senderId: "ab",
             },
           ],
         },
@@ -451,21 +834,28 @@ const req: CreateAlarmModelRequest = {
     },
     alarmRule: {
       simpleRule: {
-        comparisonOperator: "LESS_OR_EQUAL",
-        inputProperty: "nisi",
-        threshold: "quis",
+        comparisonOperator: ComparisonOperatorEnum.NotEqual,
+        inputProperty: "quidem",
+        threshold: "ipsam",
       },
     },
-    key: "adipisci",
-    roleArn: "porro",
-    severity: 4230816687517220040,
+    key: "voluptate",
+    roleArn: "autem",
+    severity: 722056,
     tags: [
       {
-        key: "accusamus",
-        value: "numquam",
+        key: "pariatur",
+        value: "nemo",
       },
     ],
   },
+  xAmzAlgorithm: "voluptatibus",
+  xAmzContentSha256: "perferendis",
+  xAmzCredential: "fugiat",
+  xAmzDate: "amet",
+  xAmzSecurityToken: "aut",
+  xAmzSignature: "cumque",
+  xAmzSignedHeaders: "corporis",
 };
 
 sdk.createAlarmModel(req).then((res: CreateAlarmModelResponse | AxiosError) => {
@@ -475,7 +865,7 @@ sdk.createAlarmModel(req).then((res: CreateAlarmModelResponse | AxiosError) => {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
@@ -505,7 +895,18 @@ sdk.createAlarmModel(req).then((res: CreateAlarmModelResponse | AxiosError) => {
 * `updateAlarmModel` - Updates an alarm model. Any alarms that were created based on the previous version are deleted and then created again as new data arrives.
 * `updateDetectorModel` - Updates a detector model. Detectors (instances) spawned by the previous version are deleted and then re-created as new inputs arrive.
 * `updateInput` - Updates an input.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

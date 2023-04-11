@@ -5,6 +5,9 @@ export declare enum BucketByTimePeriodTypeEnum {
     Month = "month"
 }
 export declare class BucketByTimePeriod extends SpeakeasyBase {
+    /**
+     * org.joda.timezone.DateTimeZone
+     */
     timeZoneId?: string;
     type?: BucketByTimePeriodTypeEnum;
     value?: number;

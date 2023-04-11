@@ -1,12 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListDestinationsForWorkspaceRequest extends SpeakeasyBase {
-    request: shared.WorkspaceIdRequestBody;
-}
+import { AxiosResponse } from "axios";
 export declare class ListDestinationsForWorkspaceResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful operation
+     */
     destinationReadList?: shared.DestinationReadList;
+    /**
+     * Input failed validation
+     */
     invalidInputExceptionInfo?: shared.InvalidInputExceptionInfo;
+    /**
+     * Object with given id was not found.
+     */
     notFoundKnownExceptionInfo?: shared.NotFoundKnownExceptionInfo;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,15 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetHookEventsSecurity extends SpeakeasyBase {
-    oauth2?: shared.SchemeOauth2;
-    basic?: shared.SchemeBasic;
-    apiKey?: shared.SchemeApiKey;
-}
-export declare class GetHookEventsRequest extends SpeakeasyBase {
-    security: GetHookEventsSecurity;
-}
+import { AxiosResponse } from "axios";
 export declare class GetHookEventsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * A mapping of resource/subject types pointing to their individual event types.
+     */
     subjectTypes?: shared.SubjectTypes;
 }

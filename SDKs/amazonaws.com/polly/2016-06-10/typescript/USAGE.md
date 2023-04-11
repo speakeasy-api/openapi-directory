@@ -1,30 +1,27 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DeleteLexiconRequest, DeleteLexiconResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  DeleteLexiconRequest,
+  DeleteLexiconResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    hmac: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: DeleteLexiconRequest = {
-  pathParams: {
-    lexiconName: "sit",
-  },
-  headers: {
-    xAmzAlgorithm: "voluptas",
-    xAmzContentSha256: "culpa",
-    xAmzCredential: "expedita",
-    xAmzDate: "consequuntur",
-    xAmzSecurityToken: "dolor",
-    xAmzSignature: "expedita",
-    xAmzSignedHeaders: "voluptas",
-  },
+  lexiconName: "corrupti",
+  xAmzAlgorithm: "provident",
+  xAmzContentSha256: "distinctio",
+  xAmzCredential: "quibusdam",
+  xAmzDate: "unde",
+  xAmzSecurityToken: "nulla",
+  xAmzSignature: "corrupti",
+  xAmzSignedHeaders: "illum",
 };
 
 sdk.deleteLexicon(req).then((res: DeleteLexiconResponse | AxiosError) => {

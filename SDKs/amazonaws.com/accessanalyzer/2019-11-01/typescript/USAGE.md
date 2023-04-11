@@ -1,32 +1,31 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { ApplyArchiveRuleRequest, ApplyArchiveRuleResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  ApplyArchiveRuleRequest,
+  ApplyArchiveRuleResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    hmac: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: ApplyArchiveRuleRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
+  requestBody: {
+    analyzerArn: "corrupti",
+    clientToken: "provident",
+    ruleName: "distinctio",
   },
-  request: {
-    analyzerArn: "voluptas",
-    clientToken: "fugit",
-    ruleName: "et",
-  },
+  xAmzAlgorithm: "quibusdam",
+  xAmzContentSha256: "unde",
+  xAmzCredential: "nulla",
+  xAmzDate: "corrupti",
+  xAmzSecurityToken: "illum",
+  xAmzSignature: "vel",
+  xAmzSignedHeaders: "error",
 };
 
 sdk.applyArchiveRule(req).then((res: ApplyArchiveRuleResponse | AxiosError) => {

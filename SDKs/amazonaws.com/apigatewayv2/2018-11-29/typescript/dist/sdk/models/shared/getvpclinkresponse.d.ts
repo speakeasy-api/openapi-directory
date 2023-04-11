@@ -1,12 +1,31 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The status of the VPC link.
+ */
+export declare enum GetVpcLinkResponseVpcLinkStatusEnum {
+    Pending = "PENDING",
+    Available = "AVAILABLE",
+    Deleting = "DELETING",
+    Failed = "FAILED",
+    Inactive = "INACTIVE"
+}
+/**
+ * The version of the VPC link.
+ */
+export declare enum GetVpcLinkResponseVpcLinkVersionEnum {
+    V2 = "V2"
+}
+/**
+ * Success
+ */
 export declare class GetVpcLinkResponse extends SpeakeasyBase {
-    createdDate?: Record<string, any>;
-    name?: Record<string, any>;
-    securityGroupIds?: Record<string, any>;
-    subnetIds?: Record<string, any>;
+    createdDate?: Date;
+    name?: string;
+    securityGroupIds?: string[];
+    subnetIds?: string[];
     tags?: Record<string, string>;
-    vpcLinkId?: Record<string, any>;
-    vpcLinkStatus?: Record<string, any>;
-    vpcLinkStatusMessage?: Record<string, any>;
-    vpcLinkVersion?: Record<string, any>;
+    vpcLinkId?: string;
+    vpcLinkStatus?: GetVpcLinkResponseVpcLinkStatusEnum;
+    vpcLinkStatusMessage?: string;
+    vpcLinkVersion?: GetVpcLinkResponseVpcLinkVersionEnum;
 }

@@ -1,17 +1,17 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreatorRolesListRequest, CreatorRolesListResponse } from "openapi/src/sdk/models/operations";
+import {
+  CreatorRolesListRequest,
+  CreatorRolesListResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: CreatorRolesListRequest = {
-  queryParams: {
-    page: 8717895732742165505,
-    pageSize: 2259404117704393152,
-  },
+  page: 548814,
+  pageSize: 592845,
 };
 
 sdk.creatorRoles.creatorRolesList(req).then((res: CreatorRolesListResponse | AxiosError) => {

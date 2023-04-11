@@ -1,12 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class TeamsActivePathParams extends SpeakeasyBase {
-    format: string;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class TeamsActiveRequest extends SpeakeasyBase {
-    pathParams: TeamsActivePathParams;
+    /**
+     * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+     */
+    format: string;
 }
 export declare class TeamsActiveResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    teams?: any[];
+    rawResponse?: AxiosResponse;
+    teams?: shared.Team[];
 }

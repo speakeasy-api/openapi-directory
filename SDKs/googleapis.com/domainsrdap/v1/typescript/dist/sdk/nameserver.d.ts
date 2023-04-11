@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Nameserver {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +9,7 @@ export declare class Nameserver {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * domainsrdapNameserverGet - The RDAP API recognizes this command from the RDAP specification but does not support it. The response is a formatted 501 error.
-    **/
+     * The RDAP API recognizes this command from the RDAP specification but does not support it. The response is a formatted 501 error.
+     */
     domainsrdapNameserverGet(req: operations.DomainsrdapNameserverGetRequest, config?: AxiosRequestConfig): Promise<operations.DomainsrdapNameserverGetResponse>;
 }

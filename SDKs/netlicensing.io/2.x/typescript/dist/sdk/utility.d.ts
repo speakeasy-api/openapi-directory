@@ -1,5 +1,10 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Utility operations
+ *
+ * @see {@link https://netlicensing.io/wiki/utility-services} - Utility Services
+ */
 export declare class Utility {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,15 +14,17 @@ export declare class Utility {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * licenseTypes - List License Types
+     * List License Types
      *
+     * @remarks
      * Return a list of all License Types supported by the service
-    **/
-    licenseTypes(req: operations.LicenseTypesRequest, config?: AxiosRequestConfig): Promise<operations.LicenseTypesResponse>;
+     */
+    licenseTypes(config?: AxiosRequestConfig): Promise<operations.LicenseTypesResponse>;
     /**
-     * licensingModels - List Licensing Models
+     * List Licensing Models
      *
+     * @remarks
      * Return a list of all licensing models supported by the service
-    **/
-    licensingModels(req: operations.LicensingModelsRequest, config?: AxiosRequestConfig): Promise<operations.LicensingModelsResponse>;
+     */
+    licensingModels(config?: AxiosRequestConfig): Promise<operations.LicensingModelsResponse>;
 }

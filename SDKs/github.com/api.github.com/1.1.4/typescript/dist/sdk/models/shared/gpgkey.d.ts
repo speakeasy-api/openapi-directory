@@ -16,11 +16,12 @@ export declare class GpgKeySubkeys extends SpeakeasyBase {
     primaryKeyId?: number;
     publicKey?: string;
     rawKey?: string;
+    revoked?: boolean;
     subkeys?: any[];
 }
 /**
  * A unique encryption key
-**/
+ */
 export declare class GpgKey extends SpeakeasyBase {
     canCertify: boolean;
     canEncryptComms: boolean;
@@ -31,8 +32,10 @@ export declare class GpgKey extends SpeakeasyBase {
     expiresAt: Date;
     id: number;
     keyId: string;
+    name?: string;
     primaryKeyId: number;
     publicKey: string;
     rawKey: string;
+    revoked: boolean;
     subkeys: GpgKeySubkeys[];
 }

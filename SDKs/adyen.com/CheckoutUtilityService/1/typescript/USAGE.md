@@ -1,14 +1,20 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { PostOriginKeysRequest, PostOriginKeysResponse } from "openapi/src/sdk/models/operations";
+import {
+  shared.CheckoutUtilityRequest,
+  PostOriginKeysResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: PostOriginKeysRequest = {
-  request: "sit",
+
+const req: shared.CheckoutUtilityRequest = {
+  originDomains: [
+    "provident",
+    "distinctio",
+    "quibusdam",
+  ],
 };
 
 sdk.postOriginKeys(req).then((res: PostOriginKeysResponse | AxiosError) => {

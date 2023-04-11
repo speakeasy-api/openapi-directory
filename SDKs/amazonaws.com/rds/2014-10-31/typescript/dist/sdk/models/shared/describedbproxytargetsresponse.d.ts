@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbProxyTarget } from "./dbproxytarget";
-export declare class DescribeDbProxyTargetsResponse extends SpeakeasyBase {
+import { DBProxyTarget } from "./dbproxytarget";
+/**
+ * Success
+ */
+export declare class DescribeDBProxyTargetsResponse extends SpeakeasyBase {
     marker?: string;
-    targets?: DbProxyTarget[];
+    targets?: DBProxyTarget[];
 }

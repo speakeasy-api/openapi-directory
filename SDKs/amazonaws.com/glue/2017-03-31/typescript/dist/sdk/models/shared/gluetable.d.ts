@@ -1,8 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * The database and table in the Glue Data Catalog that is used for input or output data.
-**/
+ */
 export declare class GlueTable extends SpeakeasyBase {
+    additionalOptions?: Record<string, string>;
     catalogId?: string;
     connectionName?: string;
     databaseName: string;

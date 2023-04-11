@@ -37,7 +37,6 @@ export * from "./resourcequotasremaining";
 export * from "./screenviewdata";
 export * from "./searchuseractivityrequest";
 export * from "./searchuseractivityresponse";
-export * from "./security";
 export * from "./segment";
 export * from "./segmentdefinition";
 export * from "./segmentdimensionfilter";

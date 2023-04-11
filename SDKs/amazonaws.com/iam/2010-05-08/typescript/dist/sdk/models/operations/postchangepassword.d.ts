@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostChangePasswordActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTChangePasswordActionEnum {
     ChangePassword = "ChangePassword"
 }
-export declare enum PostChangePasswordVersionEnum {
+export declare enum POSTChangePasswordVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostChangePasswordQueryParams extends SpeakeasyBase {
-    action: PostChangePasswordActionEnum;
-    version: PostChangePasswordVersionEnum;
-}
-export declare class PostChangePasswordHeaders extends SpeakeasyBase {
+export declare class POSTChangePasswordRequest extends SpeakeasyBase {
+    action: POSTChangePasswordActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTChangePasswordVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostChangePasswordHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostChangePasswordRequest extends SpeakeasyBase {
-    queryParams: PostChangePasswordQueryParams;
-    headers: PostChangePasswordHeaders;
-    request?: Uint8Array;
-}
-export declare class PostChangePasswordResponse extends SpeakeasyBase {
+export declare class POSTChangePasswordResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

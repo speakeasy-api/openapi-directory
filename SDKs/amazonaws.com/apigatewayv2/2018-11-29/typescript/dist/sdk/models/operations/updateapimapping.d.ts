@@ -1,10 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdateApiMappingPathParams extends SpeakeasyBase {
-    apiMappingId: string;
-    domainName: string;
+import { AxiosResponse } from "axios";
+export declare class UpdateApiMappingRequestBody extends SpeakeasyBase {
+    /**
+     * The identifier.
+     */
+    apiId: string;
+    /**
+     * After evaluating a selection expression, the result is compared against one or more selection keys to find a matching key. See <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-apikey-selection-expressions">Selection Expressions</a> for a list of expressions and each expression's associated selection key type.
+     */
+    apiMappingKey?: string;
+    /**
+     * A string with a length between [1-128].
+     */
+    stage?: string;
 }
-export declare class UpdateApiMappingHeaders extends SpeakeasyBase {
+export declare class UpdateApiMappingRequest extends SpeakeasyBase {
+    requestBody: UpdateApiMappingRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,23 +24,37 @@ export declare class UpdateApiMappingHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class UpdateApiMappingRequestBody extends SpeakeasyBase {
-    apiId: string;
-    apiMappingKey?: string;
-    stage?: string;
-}
-export declare class UpdateApiMappingRequest extends SpeakeasyBase {
-    pathParams: UpdateApiMappingPathParams;
-    headers: UpdateApiMappingHeaders;
-    request: UpdateApiMappingRequestBody;
+    /**
+     * The API mapping identifier.
+     */
+    apiMappingId: string;
+    /**
+     * The domain name.
+     */
+    domainName: string;
 }
 export declare class UpdateApiMappingResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
+    /**
+     * Success
+     */
     updateApiMappingResponse?: shared.UpdateApiMappingResponse;
 }

@@ -1,22 +1,21 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AquiferCodesDemandListRequest, AquiferCodesDemandListResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  AquiferCodesDemandListRequest,
+  AquiferCodesDemandListResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    bearer: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: AquiferCodesDemandListRequest = {
-  queryParams: {
-    limit: 8717895732742165505,
-    offset: 2259404117704393152,
+    bearer: "YOUR_API_KEY_HERE",
   },
+});
+
+const req: AquiferCodesDemandListRequest = {
+  limit: 548814,
+  offset: 592845,
 };
 
 sdk.aquiferCodes.aquiferCodesDemandList(req).then((res: AquiferCodesDemandListResponse | AxiosError) => {

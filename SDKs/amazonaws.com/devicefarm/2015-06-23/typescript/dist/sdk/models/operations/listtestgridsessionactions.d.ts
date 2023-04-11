@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListTestGridSessionActionsQueryParams extends SpeakeasyBase {
-    maxResult?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListTestGridSessionActionsXAmzTargetEnum {
     DeviceFarm20150623ListTestGridSessionActions = "DeviceFarm_20150623.ListTestGridSessionActions"
 }
-export declare class ListTestGridSessionActionsHeaders extends SpeakeasyBase {
+export declare class ListTestGridSessionActionsRequest extends SpeakeasyBase {
+    listTestGridSessionActionsRequest: shared.ListTestGridSessionActionsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,17 +14,33 @@ export declare class ListTestGridSessionActionsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: ListTestGridSessionActionsXAmzTargetEnum;
-}
-export declare class ListTestGridSessionActionsRequest extends SpeakeasyBase {
-    queryParams: ListTestGridSessionActionsQueryParams;
-    headers: ListTestGridSessionActionsHeaders;
-    request: shared.ListTestGridSessionActionsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResult?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class ListTestGridSessionActionsResponse extends SpeakeasyBase {
+    /**
+     * ArgumentException
+     */
     argumentException?: any;
     contentType: string;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * Success
+     */
     listTestGridSessionActionsResult?: shared.ListTestGridSessionActionsResult;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,13 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class WellsReadPathParams extends SpeakeasyBase {
-    wellTagNumber: number;
-}
+import { AxiosResponse } from "axios";
 export declare class WellsReadRequest extends SpeakeasyBase {
-    pathParams: WellsReadPathParams;
+    /**
+     * A unique integer value identifying this well.
+     */
+    wellTagNumber: number;
 }
 export declare class WellsReadResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
     wellDetail?: shared.WellDetail;
 }

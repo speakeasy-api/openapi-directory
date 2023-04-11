@@ -1,13 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ReposDeleteDeployKeyPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ReposDeleteDeployKeyRequest extends SpeakeasyBase {
+    /**
+     * key_id parameter
+     */
     keyId: number;
     owner: string;
     repo: string;
 }
-export declare class ReposDeleteDeployKeyRequest extends SpeakeasyBase {
-    pathParams: ReposDeleteDeployKeyPathParams;
-}
 export declare class ReposDeleteDeployKeyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

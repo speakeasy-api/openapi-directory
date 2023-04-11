@@ -1,29 +1,55 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetStatsUsingPost200ApplicationJson extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+/**
+ * internal api error (code 2)
+ */
+export declare class GetStatsUsingPost500ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class GetStatsUsingPost400ApplicationJson extends SpeakeasyBase {
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class GetStatsUsingPost401ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class GetStatsUsingPost401ApplicationJson extends SpeakeasyBase {
+/**
+ * generic api error (code 1)
+ */
+export declare class GetStatsUsingPost400ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class GetStatsUsingPost500ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class GetStatsUsingPost200ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class GetStatsUsingPostResponse extends SpeakeasyBase {
+export declare class GetStatsUsingPOSTResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getStatsUsingPOST200ApplicationJSONObject?: GetStatsUsingPost200ApplicationJson;
-    getStatsUsingPOST400ApplicationJSONObject?: GetStatsUsingPost400ApplicationJson;
-    getStatsUsingPOST401ApplicationJSONObject?: GetStatsUsingPost401ApplicationJson;
-    getStatsUsingPOST500ApplicationJSONObject?: GetStatsUsingPost500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    getStatsUsingPOST200ApplicationJSONObject?: GetStatsUsingPost200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    getStatsUsingPOST400ApplicationJSONObject?: GetStatsUsingPost400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    getStatsUsingPOST401ApplicationJSONObject?: GetStatsUsingPost401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    getStatsUsingPOST500ApplicationJSONObject?: GetStatsUsingPost500ApplicationJSON;
 }

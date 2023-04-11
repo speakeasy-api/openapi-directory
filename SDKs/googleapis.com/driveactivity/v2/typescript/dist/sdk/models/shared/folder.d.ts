@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * This field is deprecated; please see `DriveFolder.type` instead.
+ */
 export declare enum FolderTypeEnum {
     TypeUnspecified = "TYPE_UNSPECIFIED",
     MyDriveRoot = "MY_DRIVE_ROOT",
@@ -7,7 +10,10 @@ export declare enum FolderTypeEnum {
 }
 /**
  * This item is deprecated; please see `DriveFolder` instead.
-**/
+ */
 export declare class Folder extends SpeakeasyBase {
+    /**
+     * This field is deprecated; please see `DriveFolder.type` instead.
+     */
     type?: FolderTypeEnum;
 }

@@ -1,21 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class DeleteProductsPathParams extends SpeakeasyBase {
-    organizationUuid: string;
-}
-export declare class DeleteProductsQueryParams extends SpeakeasyBase {
-    uuid: string[];
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteProductsSecurity extends SpeakeasyBase {
-    zettleApiKey?: shared.SchemeZettleApiKey;
-    zettleOauth?: shared.SchemeZettleOauth;
+    zettleOauth: string;
 }
 export declare class DeleteProductsRequest extends SpeakeasyBase {
-    pathParams: DeleteProductsPathParams;
-    queryParams: DeleteProductsQueryParams;
-    security: DeleteProductsSecurity;
+    organizationUuid: string;
+    /**
+     * List of product UUIDs to be deleted
+     */
+    uuid: string[];
 }
 export declare class DeleteProductsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

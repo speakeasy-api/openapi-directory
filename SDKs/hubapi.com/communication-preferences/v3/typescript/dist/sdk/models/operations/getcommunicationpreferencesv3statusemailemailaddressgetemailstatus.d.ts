@@ -1,22 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusPathParams extends SpeakeasyBase {
-    emailAddress: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusSecurity extends SpeakeasyBase {
-    hapikey?: shared.SchemeHapikey;
-    privateAppsLegacy?: shared.SchemePrivateAppsLegacy;
-    oauth2Legacy?: shared.SchemeOauth2Legacy;
-    privateAppsLegacy1?: shared.SchemePrivateAppsLegacy;
-    oauth2Legacy1?: shared.SchemeOauth2Legacy;
+    hapikey?: string;
+    oauth2Legacy?: string;
+    oauth2Legacy1?: string;
+    privateAppsLegacy?: string;
+    privateAppsLegacy1?: string;
 }
 export declare class GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusRequest extends SpeakeasyBase {
-    pathParams: GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusPathParams;
-    security: GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusSecurity;
+    emailAddress: string;
 }
 export declare class GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
+    /**
+     * successful operation
+     */
     publicSubscriptionStatusesResponse?: shared.PublicSubscriptionStatusesResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

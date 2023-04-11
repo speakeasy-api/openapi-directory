@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeDatabaseXAmzTargetEnum {
     Timestream20181101DescribeDatabase = "Timestream_20181101.DescribeDatabase"
 }
-export declare class DescribeDatabaseHeaders extends SpeakeasyBase {
+export declare class DescribeDatabaseRequest extends SpeakeasyBase {
+    describeDatabaseRequest: shared.DescribeDatabaseRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class DescribeDatabaseHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeDatabaseXAmzTargetEnum;
 }
-export declare class DescribeDatabaseRequest extends SpeakeasyBase {
-    headers: DescribeDatabaseHeaders;
-    request: shared.DescribeDatabaseRequest;
-}
 export declare class DescribeDatabaseResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     describeDatabaseResponse?: shared.DescribeDatabaseResponse;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidEndpointException
+     */
     invalidEndpointException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

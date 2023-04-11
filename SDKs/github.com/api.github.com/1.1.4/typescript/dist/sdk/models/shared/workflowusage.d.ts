@@ -1,21 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class WorkflowUsageBillableMacos extends SpeakeasyBase {
+export declare class WorkflowUsageBillableMACOS extends SpeakeasyBase {
     totalMs?: number;
 }
-export declare class WorkflowUsageBillableUbuntu extends SpeakeasyBase {
+export declare class WorkflowUsageBillableUBUNTU extends SpeakeasyBase {
     totalMs?: number;
 }
-export declare class WorkflowUsageBillableWindows extends SpeakeasyBase {
+export declare class WorkflowUsageBillableWINDOWS extends SpeakeasyBase {
     totalMs?: number;
 }
 export declare class WorkflowUsageBillable extends SpeakeasyBase {
-    macos?: WorkflowUsageBillableMacos;
-    ubuntu?: WorkflowUsageBillableUbuntu;
-    windows?: WorkflowUsageBillableWindows;
+    macos?: WorkflowUsageBillableMACOS;
+    ubuntu?: WorkflowUsageBillableUBUNTU;
+    windows?: WorkflowUsageBillableWINDOWS;
 }
 /**
  * Workflow Usage
-**/
+ */
 export declare class WorkflowUsage extends SpeakeasyBase {
     billable: WorkflowUsageBillable;
 }

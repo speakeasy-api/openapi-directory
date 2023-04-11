@@ -1,37 +1,60 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CreateGroupPadUsingGetQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class CreateGroupPadUsingGETRequest extends SpeakeasyBase {
     groupID?: string;
     padName?: string;
     text?: string;
 }
-export declare class CreateGroupPadUsingGet200ApplicationJson extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class CreateGroupPadUsingGet500ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class CreateGroupPadUsingGet400ApplicationJson extends SpeakeasyBase {
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class CreateGroupPadUsingGet401ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class CreateGroupPadUsingGet401ApplicationJson extends SpeakeasyBase {
+/**
+ * generic api error (code 1)
+ */
+export declare class CreateGroupPadUsingGet400ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class CreateGroupPadUsingGet500ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class CreateGroupPadUsingGet200ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class CreateGroupPadUsingGetRequest extends SpeakeasyBase {
-    queryParams: CreateGroupPadUsingGetQueryParams;
-}
-export declare class CreateGroupPadUsingGetResponse extends SpeakeasyBase {
+export declare class CreateGroupPadUsingGETResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createGroupPadUsingGET200ApplicationJSONObject?: CreateGroupPadUsingGet200ApplicationJson;
-    createGroupPadUsingGET400ApplicationJSONObject?: CreateGroupPadUsingGet400ApplicationJson;
-    createGroupPadUsingGET401ApplicationJSONObject?: CreateGroupPadUsingGet401ApplicationJson;
-    createGroupPadUsingGET500ApplicationJSONObject?: CreateGroupPadUsingGet500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    createGroupPadUsingGET200ApplicationJSONObject?: CreateGroupPadUsingGet200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    createGroupPadUsingGET400ApplicationJSONObject?: CreateGroupPadUsingGet400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    createGroupPadUsingGET401ApplicationJSONObject?: CreateGroupPadUsingGet401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    createGroupPadUsingGET500ApplicationJSONObject?: CreateGroupPadUsingGet500ApplicationJSON;
 }

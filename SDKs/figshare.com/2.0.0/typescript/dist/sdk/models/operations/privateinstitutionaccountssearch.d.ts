@@ -1,15 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class PrivateInstitutionAccountsSearchSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
-}
-export declare class PrivateInstitutionAccountsSearchRequest extends SpeakeasyBase {
-    request: shared.InstitutionAccountsSearch;
-    security: PrivateInstitutionAccountsSearchSecurity;
+    oAuth2: string;
 }
 export declare class PrivateInstitutionAccountsSearchResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Forbidden
+     */
     errorMessage?: shared.ErrorMessage;
+    /**
+     * OK. An array of Accounts
+     */
     shortAccounts?: shared.ShortAccount[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

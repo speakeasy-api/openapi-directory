@@ -1,19 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetCrmV3ExtensionsCardsAppIdCardIdGetByIdPathParams extends SpeakeasyBase {
-    appId: number;
-    cardId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetCrmV3ExtensionsCardsAppIdCardIdGetByIdSecurity extends SpeakeasyBase {
-    developerHapikey: shared.SchemeDeveloperHapikey;
+    developerHapikey: string;
 }
 export declare class GetCrmV3ExtensionsCardsAppIdCardIdGetByIdRequest extends SpeakeasyBase {
-    pathParams: GetCrmV3ExtensionsCardsAppIdCardIdGetByIdPathParams;
-    security: GetCrmV3ExtensionsCardsAppIdCardIdGetByIdSecurity;
+    /**
+     * The ID of the target app.
+     */
+    appId: number;
+    /**
+     * The ID of the target card.
+     */
+    cardId: string;
 }
 export declare class GetCrmV3ExtensionsCardsAppIdCardIdGetByIdResponse extends SpeakeasyBase {
     body?: Uint8Array;
+    /**
+     * successful operation
+     */
     cardResponse?: shared.CardResponse;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

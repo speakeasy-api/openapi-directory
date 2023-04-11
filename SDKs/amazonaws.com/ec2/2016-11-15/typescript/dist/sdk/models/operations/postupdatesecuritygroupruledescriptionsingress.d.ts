@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostUpdateSecurityGroupRuleDescriptionsIngressActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTUpdateSecurityGroupRuleDescriptionsIngressActionEnum {
     UpdateSecurityGroupRuleDescriptionsIngress = "UpdateSecurityGroupRuleDescriptionsIngress"
 }
-export declare enum PostUpdateSecurityGroupRuleDescriptionsIngressVersionEnum {
+export declare enum POSTUpdateSecurityGroupRuleDescriptionsIngressVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostUpdateSecurityGroupRuleDescriptionsIngressQueryParams extends SpeakeasyBase {
-    action: PostUpdateSecurityGroupRuleDescriptionsIngressActionEnum;
-    version: PostUpdateSecurityGroupRuleDescriptionsIngressVersionEnum;
-}
-export declare class PostUpdateSecurityGroupRuleDescriptionsIngressHeaders extends SpeakeasyBase {
+export declare class POSTUpdateSecurityGroupRuleDescriptionsIngressRequest extends SpeakeasyBase {
+    action: POSTUpdateSecurityGroupRuleDescriptionsIngressActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTUpdateSecurityGroupRuleDescriptionsIngressVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostUpdateSecurityGroupRuleDescriptionsIngressHeaders exten
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostUpdateSecurityGroupRuleDescriptionsIngressRequest extends SpeakeasyBase {
-    queryParams: PostUpdateSecurityGroupRuleDescriptionsIngressQueryParams;
-    headers: PostUpdateSecurityGroupRuleDescriptionsIngressHeaders;
-    request?: Uint8Array;
-}
-export declare class PostUpdateSecurityGroupRuleDescriptionsIngressResponse extends SpeakeasyBase {
+export declare class POSTUpdateSecurityGroupRuleDescriptionsIngressResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

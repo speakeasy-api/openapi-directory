@@ -1,21 +1,20 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetContentJsonRequest, GetContentJsonResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GetContentJsonRequest,
+  GetContentJsonResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    apikey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: GetContentJsonRequest = {
-  queryParams: {
-    url: "sit",
+    apikey: "YOUR_API_KEY_HERE",
   },
+});
+
+const req: GetContentJsonRequest = {
+  url: "corrupti",
 };
 
 sdk.getContentJson(req).then((res: GetContentJsonResponse | AxiosError) => {

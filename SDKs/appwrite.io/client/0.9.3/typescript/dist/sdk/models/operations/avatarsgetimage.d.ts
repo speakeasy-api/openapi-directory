@@ -1,19 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class AvatarsGetImageQueryParams extends SpeakeasyBase {
-    height?: number;
-    url: string;
-    width?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class AvatarsGetImageSecurity extends SpeakeasyBase {
-    jwt: shared.SchemeJwt;
-    project: shared.SchemeProject;
+    jwt: string;
+    project: string;
 }
 export declare class AvatarsGetImageRequest extends SpeakeasyBase {
-    queryParams: AvatarsGetImageQueryParams;
-    security: AvatarsGetImageSecurity;
+    /**
+     * Resize preview image height, Pass an integer between 0 to 2000.
+     */
+    height?: number;
+    /**
+     * Image URL which you want to crop.
+     */
+    url: string;
+    /**
+     * Resize preview image width, Pass an integer between 0 to 2000.
+     */
+    width?: number;
 }
 export declare class AvatarsGetImageResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

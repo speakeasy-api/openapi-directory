@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class ImagePredictionApi {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,19 +9,35 @@ export declare class ImagePredictionApi {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * predictImage - Predict an image and saves the result
-    **/
+     * Predict an image and saves the result
+     */
     predictImage(req: operations.PredictImageRequest, config?: AxiosRequestConfig): Promise<operations.PredictImageResponse>;
     /**
-     * predictImageUrl - Predict an image url and saves the result
-    **/
-    predictImageUrl(req: operations.PredictImageUrlRequest, config?: AxiosRequestConfig): Promise<operations.PredictImageUrlResponse>;
+     * Predict an image url without saving the result
+     */
+    predictImageUrlWithNoStoreForm(req: operations.PredictImageUrlWithNoStoreFormRequest, config?: AxiosRequestConfig): Promise<operations.PredictImageUrlWithNoStoreFormResponse>;
     /**
-     * predictImageUrlWithNoStore - Predict an image url without saving the result
-    **/
-    predictImageUrlWithNoStore(req: operations.PredictImageUrlWithNoStoreRequest, config?: AxiosRequestConfig): Promise<operations.PredictImageUrlWithNoStoreResponse>;
+     * Predict an image url without saving the result
+     */
+    predictImageUrlWithNoStoreJson(req: operations.PredictImageUrlWithNoStoreJsonRequest, config?: AxiosRequestConfig): Promise<operations.PredictImageUrlWithNoStoreJsonResponse>;
     /**
-     * predictImageWithNoStore - Predict an image without saving the result
-    **/
+     * Predict an image url without saving the result
+     */
+    predictImageUrlWithNoStoreRaw(req: operations.PredictImageUrlWithNoStoreRawRequest, config?: AxiosRequestConfig): Promise<operations.PredictImageUrlWithNoStoreRawResponse>;
+    /**
+     * Predict an image url and saves the result
+     */
+    predictImageUrlForm(req: operations.PredictImageUrlFormRequest, config?: AxiosRequestConfig): Promise<operations.PredictImageUrlFormResponse>;
+    /**
+     * Predict an image url and saves the result
+     */
+    predictImageUrlJson(req: operations.PredictImageUrlJsonRequest, config?: AxiosRequestConfig): Promise<operations.PredictImageUrlJsonResponse>;
+    /**
+     * Predict an image url and saves the result
+     */
+    predictImageUrlRaw(req: operations.PredictImageUrlRawRequest, config?: AxiosRequestConfig): Promise<operations.PredictImageUrlRawResponse>;
+    /**
+     * Predict an image without saving the result
+     */
     predictImageWithNoStore(req: operations.PredictImageWithNoStoreRequest, config?: AxiosRequestConfig): Promise<operations.PredictImageWithNoStoreResponse>;
 }

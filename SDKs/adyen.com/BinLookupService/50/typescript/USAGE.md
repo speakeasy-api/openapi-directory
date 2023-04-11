@@ -1,20 +1,30 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { PostGet3dsAvailabilityRequest, PostGet3dsAvailabilityResponse } from "openapi/src/sdk/models/operations";
+import {
+  shared.ThreeDSAvailabilityRequest,
+  PostGet3dsAvailabilityResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: PostGet3dsAvailabilityRequest = {
-  security: {
-    basicAuth: {
-      password: "YOUR_PASSWORD_HERE",
-      username: "YOUR_USERNAME_HERE",
-    },
+
+const req: shared.ThreeDSAvailabilityRequest = {
+  additionalData: {
+    "provident": "distinctio",
+    "quibusdam": "unde",
+    "nulla": "corrupti",
   },
-  request: "sit",
+  brands: [
+    "vel",
+    "error",
+    "deserunt",
+    "suscipit",
+  ],
+  cardNumber: "iure",
+  merchantAccount: "magnam",
+  recurringDetailReference: "debitis",
+  shopperReference: "ipsa",
 };
 
 sdk.general.postGet3dsAvailability(req).then((res: PostGet3dsAvailabilityResponse | AxiosError) => {

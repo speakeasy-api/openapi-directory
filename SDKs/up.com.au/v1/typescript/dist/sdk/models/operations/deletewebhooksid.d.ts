@@ -1,11 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteWebhooksIdPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteWebhooksIdRequest extends SpeakeasyBase {
-    pathParams: DeleteWebhooksIdPathParams;
+    /**
+     * The unique identifier for the webhook.
+     *
+     * @remarks
+     *
+     */
+    id: string;
 }
 export declare class DeleteWebhooksIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

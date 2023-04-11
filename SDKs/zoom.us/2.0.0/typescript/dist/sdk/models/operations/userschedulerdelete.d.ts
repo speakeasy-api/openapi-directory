@@ -1,17 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class UserSchedulerDeletePathParams extends SpeakeasyBase {
-    schedulerId: string;
-    userId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UserSchedulerDeleteSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
+    oAuth: string;
 }
 export declare class UserSchedulerDeleteRequest extends SpeakeasyBase {
-    pathParams: UserSchedulerDeletePathParams;
-    security: UserSchedulerDeleteSecurity;
+    /**
+     * Scheduler's ID.
+     */
+    schedulerId: string;
+    /**
+     * The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+     */
+    userId: string;
 }
 export declare class UserSchedulerDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

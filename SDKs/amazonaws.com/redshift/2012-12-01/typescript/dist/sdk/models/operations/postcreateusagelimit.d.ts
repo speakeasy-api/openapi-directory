@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateUsageLimitActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateUsageLimitActionEnum {
     CreateUsageLimit = "CreateUsageLimit"
 }
-export declare enum PostCreateUsageLimitVersionEnum {
+export declare enum POSTCreateUsageLimitVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostCreateUsageLimitQueryParams extends SpeakeasyBase {
-    action: PostCreateUsageLimitActionEnum;
-    version: PostCreateUsageLimitVersionEnum;
-}
-export declare class PostCreateUsageLimitHeaders extends SpeakeasyBase {
+export declare class POSTCreateUsageLimitRequest extends SpeakeasyBase {
+    action: POSTCreateUsageLimitActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateUsageLimitVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateUsageLimitHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateUsageLimitRequest extends SpeakeasyBase {
-    queryParams: PostCreateUsageLimitQueryParams;
-    headers: PostCreateUsageLimitHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateUsageLimitResponse extends SpeakeasyBase {
+export declare class POSTCreateUsageLimitResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

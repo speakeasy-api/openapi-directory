@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateReplaceRootVolumeTaskActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateReplaceRootVolumeTaskActionEnum {
     CreateReplaceRootVolumeTask = "CreateReplaceRootVolumeTask"
 }
-export declare enum PostCreateReplaceRootVolumeTaskVersionEnum {
+export declare enum POSTCreateReplaceRootVolumeTaskVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostCreateReplaceRootVolumeTaskQueryParams extends SpeakeasyBase {
-    action: PostCreateReplaceRootVolumeTaskActionEnum;
-    version: PostCreateReplaceRootVolumeTaskVersionEnum;
-}
-export declare class PostCreateReplaceRootVolumeTaskHeaders extends SpeakeasyBase {
+export declare class POSTCreateReplaceRootVolumeTaskRequest extends SpeakeasyBase {
+    action: POSTCreateReplaceRootVolumeTaskActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateReplaceRootVolumeTaskVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateReplaceRootVolumeTaskHeaders extends SpeakeasyBas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateReplaceRootVolumeTaskRequest extends SpeakeasyBase {
-    queryParams: PostCreateReplaceRootVolumeTaskQueryParams;
-    headers: PostCreateReplaceRootVolumeTaskHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateReplaceRootVolumeTaskResponse extends SpeakeasyBase {
+export declare class POSTCreateReplaceRootVolumeTaskResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

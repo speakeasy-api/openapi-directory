@@ -1,17 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetNumbersCurrencyQueryParams extends SpeakeasyBase {
-    language?: string;
-    number?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetNumbersCurrencySecurity extends SpeakeasyBase {
-    xMathtoolsApiSecret: shared.SchemeXMathtoolsApiSecret;
+    xMathtoolsApiSecret: string;
 }
 export declare class GetNumbersCurrencyRequest extends SpeakeasyBase {
-    queryParams: GetNumbersCurrencyQueryParams;
-    security: GetNumbersCurrencySecurity;
+    /**
+     * Language to use
+     */
+    language?: string;
+    /**
+     * Number to spell
+     */
+    number?: number;
 }
 export declare class GetNumbersCurrencyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

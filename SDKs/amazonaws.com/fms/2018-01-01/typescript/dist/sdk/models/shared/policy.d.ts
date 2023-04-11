@@ -3,16 +3,18 @@ import { ResourceTag } from "./resourcetag";
 import { SecurityServicePolicyData } from "./securityservicepolicydata";
 /**
  * An Firewall Manager policy.
-**/
+ */
 export declare class Policy extends SpeakeasyBase {
     deleteUnusedFMManagedResources?: boolean;
     excludeMap?: Record<string, string[]>;
     excludeResourceTags: boolean;
     includeMap?: Record<string, string[]>;
+    policyDescription?: string;
     policyId?: string;
     policyName: string;
     policyUpdateToken?: string;
     remediationEnabled: boolean;
+    resourceSetIds?: string[];
     resourceTags?: ResourceTag[];
     resourceType: string;
     resourceTypeList?: string[];

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeDatasetXAmzTargetEnum {
     AmazonPersonalizeDescribeDataset = "AmazonPersonalize.DescribeDataset"
 }
-export declare class DescribeDatasetHeaders extends SpeakeasyBase {
+export declare class DescribeDatasetRequest extends SpeakeasyBase {
+    describeDatasetRequest: shared.DescribeDatasetRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class DescribeDatasetHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeDatasetXAmzTargetEnum;
 }
-export declare class DescribeDatasetRequest extends SpeakeasyBase {
-    headers: DescribeDatasetHeaders;
-    request: shared.DescribeDatasetRequest;
-}
 export declare class DescribeDatasetResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeDatasetResponse?: shared.DescribeDatasetResponse;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
 }

@@ -1,0 +1,81 @@
+import { Contact } from "./contact";
+import { Country } from "./country";
+import { DeactivationReason } from "./deactivationreason";
+import { Estimate } from "./estimate";
+import { ExchangeRate } from "./exchangerate";
+import { File } from "./file";
+import { Invoice } from "./invoice";
+import { MyInfo } from "./myinfo";
+import { Order } from "./order";
+import { Project } from "./project";
+import { ProjectCategory } from "./projectcategory";
+import { ProjectStatus } from "./projectstatus";
+import { Quote } from "./quote";
+import { Rfe } from "./rfe";
+import { Rfq } from "./rfq";
+import { Shipment } from "./shipment";
+import { Spec } from "./spec";
+import { SpecTemplate } from "./spectemplate";
+import { Task } from "./task";
+import { TeamMember } from "./teammember";
+import { TeamMemberRole } from "./teammemberrole";
+import { TimeCard } from "./timecard";
+import { UserFields } from "./userfields";
+import { Workgroup } from "./workgroup";
+import { WorkgroupMembers } from "./workgroupmembers";
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
+export declare const ServerList: readonly ["http://example.com:80/v1"];
+/**
+ * The available configuration options for the SDK
+ */
+export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
+    defaultClient?: AxiosInstance;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
+};
+/**
+ * Full description of Noosh API
+ */
+export declare class SDK {
+    contact: Contact;
+    country: Country;
+    deactivationReason: DeactivationReason;
+    estimate: Estimate;
+    exchangeRate: ExchangeRate;
+    file: File;
+    invoice: Invoice;
+    myInfo: MyInfo;
+    order: Order;
+    project: Project;
+    projectCategory: ProjectCategory;
+    projectStatus: ProjectStatus;
+    quote: Quote;
+    rfe: Rfe;
+    rfq: Rfq;
+    shipment: Shipment;
+    spec: Spec;
+    specTemplate: SpecTemplate;
+    task: Task;
+    teamMember: TeamMember;
+    teamMemberRole: TeamMemberRole;
+    timeCard: TimeCard;
+    userFields: UserFields;
+    workgroup: Workgroup;
+    workgroupMembers: WorkgroupMembers;
+    _defaultClient: AxiosInstance;
+    _securityClient: AxiosInstance;
+    _serverURL: string;
+    private _language;
+    private _sdkVersion;
+    private _genVersion;
+    private _globals;
+    constructor(props?: SDKProps);
+}

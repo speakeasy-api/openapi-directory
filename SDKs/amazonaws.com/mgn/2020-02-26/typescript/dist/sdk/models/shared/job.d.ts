@@ -1,11 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { InitiatedByEnum } from "./initiatedbyenum";
-import { ParticipatingServer } from "./participatingserver";
 import { JobStatusEnum } from "./jobstatusenum";
 import { JobTypeEnum } from "./jobtypeenum";
+import { ParticipatingServer } from "./participatingserver";
 /**
  * Job.
-**/
+ */
 export declare class Job extends SpeakeasyBase {
     arn?: string;
     creationDateTime?: string;

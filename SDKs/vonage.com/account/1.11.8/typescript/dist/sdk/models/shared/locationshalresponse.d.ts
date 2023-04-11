@@ -1,7 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { LocationsEmbeddedObject } from "./locationsembeddedobject";
 import { Links } from "./links";
+import { LocationsEmbeddedObject } from "./locationsembeddedobject";
+/**
+ * Success
+ */
 export declare class LocationsHalResponse extends SpeakeasyBase {
+    /**
+     * Collection of location objects
+     */
     embedded?: LocationsEmbeddedObject;
     links?: Links;
     page?: number;

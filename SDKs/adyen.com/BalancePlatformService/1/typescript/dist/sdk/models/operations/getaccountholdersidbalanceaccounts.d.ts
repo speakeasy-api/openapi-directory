@@ -1,24 +1,34 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetAccountHoldersIdBalanceAccountsPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class GetAccountHoldersIdBalanceAccountsQueryParams extends SpeakeasyBase {
-    limit?: number;
-    offset?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetAccountHoldersIdBalanceAccountsSecurity extends SpeakeasyBase {
+    apiKeyAuth?: string;
     basicAuth?: shared.SchemeBasicAuth;
-    apiKeyAuth?: shared.SchemeApiKeyAuth;
 }
 export declare class GetAccountHoldersIdBalanceAccountsRequest extends SpeakeasyBase {
-    pathParams: GetAccountHoldersIdBalanceAccountsPathParams;
-    queryParams: GetAccountHoldersIdBalanceAccountsQueryParams;
-    security: GetAccountHoldersIdBalanceAccountsSecurity;
+    /**
+     * The unique identifier of the account holder.
+     */
+    id: string;
+    /**
+     * The number of items returned per page, maximum 100 items. By default, the response returns 10 items per page.
+     */
+    limit?: number;
+    /**
+     * The number of items that you want to skip.
+     */
+    offset?: number;
 }
 export declare class GetAccountHoldersIdBalanceAccountsResponse extends SpeakeasyBase {
     contentType: string;
-    paginatedBalanceAccountsResponse?: any;
-    restServiceError?: any;
+    /**
+     * OK - the request has succeeded.
+     */
+    paginatedBalanceAccountsResponse?: shared.PaginatedBalanceAccountsResponse;
+    /**
+     * Bad Request - a problem reading or understanding the request.
+     */
+    restServiceError?: shared.RestServiceError;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

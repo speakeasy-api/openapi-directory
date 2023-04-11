@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Profile {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,17 +9,35 @@ export declare class Profile {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * postV05PatientsProfileOnShare - Response to patient's share profile request
+     * Response to patient's share profile request
      *
+     * @remarks
      * Result of patient share profile request at HIP end.
      *
-    **/
-    postV05PatientsProfileOnShare(req: operations.PostV05PatientsProfileOnShareRequest, config?: AxiosRequestConfig): Promise<operations.PostV05PatientsProfileOnShareResponse>;
+     */
+    postV05PatientsProfileOnShareJson(req: operations.PostV05PatientsProfileOnShareJsonRequest, config?: AxiosRequestConfig): Promise<operations.PostV05PatientsProfileOnShareJsonResponse>;
     /**
-     * postV05PatientsProfileShare - Share patient profile details
+     * Response to patient's share profile request
      *
+     * @remarks
+     * Result of patient share profile request at HIP end.
+     *
+     */
+    postV05PatientsProfileOnShareRaw(req: operations.PostV05PatientsProfileOnShareRawRequest, config?: AxiosRequestConfig): Promise<operations.PostV05PatientsProfileOnShareRawResponse>;
+    /**
+     * Share patient profile details
+     *
+     * @remarks
      * Request for sharing patient's profile details to HIP
      *
-    **/
-    postV05PatientsProfileShare(req: operations.PostV05PatientsProfileShareRequest, config?: AxiosRequestConfig): Promise<operations.PostV05PatientsProfileShareResponse>;
+     */
+    postV05PatientsProfileShareJson(req: operations.PostV05PatientsProfileShareJsonRequest, serverURL?: string, config?: AxiosRequestConfig): Promise<operations.PostV05PatientsProfileShareJsonResponse>;
+    /**
+     * Share patient profile details
+     *
+     * @remarks
+     * Request for sharing patient's profile details to HIP
+     *
+     */
+    postV05PatientsProfileShareRaw(req: operations.PostV05PatientsProfileShareRawRequest, serverURL?: string, config?: AxiosRequestConfig): Promise<operations.PostV05PatientsProfileShareRawResponse>;
 }

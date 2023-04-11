@@ -1,15 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetValuePathParams extends SpeakeasyBase {
-    agentNum: number;
-    instance: string;
-    object: string;
-    variable: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetValueRequest extends SpeakeasyBase {
-    pathParams: GetValuePathParams;
+    /**
+     * Agent of the value space
+     */
+    agentNum: number;
+    /**
+     * Object (column) of the table in the agent's value space
+     */
+    instance: string;
+    /**
+     * Object (column) of the table in the agent's value space
+     */
+    object: string;
+    /**
+     * Object (column) of the table in the agent's value space
+     */
+    variable: string;
 }
 export declare class GetValueResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     getValue200ApplicationJSONString?: string;
 }

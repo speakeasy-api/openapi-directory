@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeTableRestoreStatusActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeTableRestoreStatusActionEnum {
     DescribeTableRestoreStatus = "DescribeTableRestoreStatus"
 }
-export declare enum PostDescribeTableRestoreStatusVersionEnum {
+export declare enum POSTDescribeTableRestoreStatusVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostDescribeTableRestoreStatusQueryParams extends SpeakeasyBase {
-    action: PostDescribeTableRestoreStatusActionEnum;
+export declare class POSTDescribeTableRestoreStatusRequest extends SpeakeasyBase {
+    action: POSTDescribeTableRestoreStatusActionEnum;
+    /**
+     * Pagination token
+     */
     marker?: string;
+    /**
+     * Pagination limit
+     */
     maxRecords?: string;
-    version: PostDescribeTableRestoreStatusVersionEnum;
-}
-export declare class PostDescribeTableRestoreStatusHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeTableRestoreStatusVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeTableRestoreStatusHeaders extends SpeakeasyBase
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeTableRestoreStatusRequest extends SpeakeasyBase {
-    queryParams: PostDescribeTableRestoreStatusQueryParams;
-    headers: PostDescribeTableRestoreStatusHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeTableRestoreStatusResponse extends SpeakeasyBase {
+export declare class POSTDescribeTableRestoreStatusResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

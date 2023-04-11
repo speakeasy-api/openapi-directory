@@ -1,18 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeDbSubnetGroupsActionEnum {
-    DescribeDbSubnetGroups = "DescribeDBSubnetGroups"
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeDBSubnetGroupsActionEnum {
+    DescribeDBSubnetGroups = "DescribeDBSubnetGroups"
 }
-export declare enum GetDescribeDbSubnetGroupsVersionEnum {
+export declare enum GETDescribeDBSubnetGroupsVersionEnum {
     TwoThousandAndThirteen0212 = "2013-02-12"
 }
-export declare class GetDescribeDbSubnetGroupsQueryParams extends SpeakeasyBase {
-    action: GetDescribeDbSubnetGroupsActionEnum;
+export declare class GETDescribeDBSubnetGroupsRequest extends SpeakeasyBase {
+    action: GETDescribeDBSubnetGroupsActionEnum;
     dbSubnetGroupName?: string;
     marker?: string;
     maxRecords?: number;
-    version: GetDescribeDbSubnetGroupsVersionEnum;
-}
-export declare class GetDescribeDbSubnetGroupsHeaders extends SpeakeasyBase {
+    version: GETDescribeDBSubnetGroupsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +20,9 @@ export declare class GetDescribeDbSubnetGroupsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeDbSubnetGroupsRequest extends SpeakeasyBase {
-    queryParams: GetDescribeDbSubnetGroupsQueryParams;
-    headers: GetDescribeDbSubnetGroupsHeaders;
-}
-export declare class GetDescribeDbSubnetGroupsResponse extends SpeakeasyBase {
+export declare class GETDescribeDBSubnetGroupsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

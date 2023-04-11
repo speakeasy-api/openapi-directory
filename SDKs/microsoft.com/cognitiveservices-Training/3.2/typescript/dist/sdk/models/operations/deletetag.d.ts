@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteTagPathParams extends SpeakeasyBase {
-    projectId: string;
-    tagId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteTagRequest extends SpeakeasyBase {
-    pathParams: DeleteTagPathParams;
+    /**
+     * The project id.
+     */
+    projectId: string;
+    /**
+     * Id of the tag to be deleted.
+     */
+    tagId: string;
 }
 export declare class DeleteTagResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteListenerActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteListenerActionEnum {
     DeleteListener = "DeleteListener"
 }
-export declare enum GetDeleteListenerVersionEnum {
+export declare enum GETDeleteListenerVersionEnum {
     TwoThousandAndFifteen1201 = "2015-12-01"
 }
-export declare class GetDeleteListenerQueryParams extends SpeakeasyBase {
-    action: GetDeleteListenerActionEnum;
+export declare class GETDeleteListenerRequest extends SpeakeasyBase {
+    action: GETDeleteListenerActionEnum;
+    /**
+     * The Amazon Resource Name (ARN) of the listener.
+     */
     listenerArn: string;
-    version: GetDeleteListenerVersionEnum;
-}
-export declare class GetDeleteListenerHeaders extends SpeakeasyBase {
+    version: GETDeleteListenerVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDeleteListenerHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteListenerRequest extends SpeakeasyBase {
-    queryParams: GetDeleteListenerQueryParams;
-    headers: GetDeleteListenerHeaders;
-}
-export declare class GetDeleteListenerResponse extends SpeakeasyBase {
+export declare class GETDeleteListenerResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

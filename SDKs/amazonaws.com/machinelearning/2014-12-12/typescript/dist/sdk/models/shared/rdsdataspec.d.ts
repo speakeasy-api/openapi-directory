@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { RdsDatabaseCredentials } from "./rdsdatabasecredentials";
-import { RdsDatabase } from "./rdsdatabase";
+import { RDSDatabase } from "./rdsdatabase";
+import { RDSDatabaseCredentials } from "./rdsdatabasecredentials";
 /**
  * The data specification of an Amazon Relational Database Service (Amazon RDS) <code>DataSource</code>.
-**/
-export declare class RdsDataSpec extends SpeakeasyBase {
+ */
+export declare class RDSDataSpec extends SpeakeasyBase {
     dataRearrangement?: string;
     dataSchema?: string;
     dataSchemaUri?: string;
-    databaseCredentials: RdsDatabaseCredentials;
-    databaseInformation: RdsDatabase;
+    databaseCredentials: RDSDatabaseCredentials;
+    databaseInformation: RDSDatabase;
     resourceRole: string;
     s3StagingLocation: string;
     securityGroupIds: string[];

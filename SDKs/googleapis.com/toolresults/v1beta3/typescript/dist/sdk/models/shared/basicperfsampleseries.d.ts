@@ -31,7 +31,7 @@ export declare enum BasicPerfSampleSeriesSampleSeriesLabelEnum {
 }
 /**
  * Encapsulates the metadata for basic sample series represented by a line chart
-**/
+ */
 export declare class BasicPerfSampleSeries extends SpeakeasyBase {
     perfMetricType?: BasicPerfSampleSeriesPerfMetricTypeEnum;
     perfUnit?: BasicPerfSampleSeriesPerfUnitEnum;

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteIpGroupXAmzTargetEnum {
     WorkspacesServiceDeleteIpGroup = "WorkspacesService.DeleteIpGroup"
 }
-export declare class DeleteIpGroupHeaders extends SpeakeasyBase {
+export declare class DeleteIpGroupRequest extends SpeakeasyBase {
+    deleteIpGroupRequest: shared.DeleteIpGroupRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class DeleteIpGroupHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteIpGroupXAmzTargetEnum;
 }
-export declare class DeleteIpGroupRequest extends SpeakeasyBase {
-    headers: DeleteIpGroupHeaders;
-    request: shared.DeleteIpGroupRequest;
-}
 export declare class DeleteIpGroupResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteIpGroupResult?: Record<string, any>;
+    /**
+     * InvalidParameterValuesException
+     */
     invalidParameterValuesException?: any;
+    /**
+     * ResourceAssociatedException
+     */
     resourceAssociatedException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
 }

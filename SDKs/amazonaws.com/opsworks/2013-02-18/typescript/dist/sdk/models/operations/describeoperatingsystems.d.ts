@@ -1,9 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeOperatingSystemsXAmzTargetEnum {
     OpsWorks20130218DescribeOperatingSystems = "OpsWorks_20130218.DescribeOperatingSystems"
 }
-export declare class DescribeOperatingSystemsHeaders extends SpeakeasyBase {
+export declare class DescribeOperatingSystemsRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,11 +14,12 @@ export declare class DescribeOperatingSystemsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeOperatingSystemsXAmzTargetEnum;
 }
-export declare class DescribeOperatingSystemsRequest extends SpeakeasyBase {
-    headers: DescribeOperatingSystemsHeaders;
-}
 export declare class DescribeOperatingSystemsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeOperatingSystemsResponse?: shared.DescribeOperatingSystemsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

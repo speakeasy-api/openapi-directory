@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class OrgsGetWebhookConfigForOrgPathParams extends SpeakeasyBase {
-    hookId: number;
-    org: string;
-}
+import { AxiosResponse } from "axios";
 export declare class OrgsGetWebhookConfigForOrgRequest extends SpeakeasyBase {
-    pathParams: OrgsGetWebhookConfigForOrgPathParams;
+    /**
+     * The unique identifier of the hook.
+     */
+    hookId: number;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    org: string;
 }
 export declare class OrgsGetWebhookConfigForOrgResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     webhookConfig?: shared.WebhookConfig;
 }

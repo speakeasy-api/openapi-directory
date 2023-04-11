@@ -2,12 +2,13 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { BillingMethodEnum } from "./billingmethodenum";
 import { Device } from "./device";
 import { DeviceMinutes } from "./deviceminutes";
-import { InteractionModeEnum } from "./interactionmodeenum";
 import { ExecutionResultEnum } from "./executionresultenum";
 import { ExecutionStatusEnum } from "./executionstatusenum";
+import { InteractionModeEnum } from "./interactionmodeenum";
+import { VpcConfig } from "./vpcconfig";
 /**
  * Represents information about the remote access session.
-**/
+ */
 export declare class RemoteAccessSession extends SpeakeasyBase {
     arn?: string;
     billingMethod?: BillingMethodEnum;
@@ -30,4 +31,5 @@ export declare class RemoteAccessSession extends SpeakeasyBase {
     started?: Date;
     status?: ExecutionStatusEnum;
     stopped?: Date;
+    vpcConfig?: VpcConfig;
 }

@@ -1,0 +1,30 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+/**
+ * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+ */
+export declare enum ProjectedPlayerSeasonStatsWAdpFormatEnum {
+    Xml = "XML",
+    Json = "JSON"
+}
+export declare class ProjectedPlayerSeasonStatsWAdpRequest extends SpeakeasyBase {
+    /**
+     * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+     */
+    format: ProjectedPlayerSeasonStatsWAdpFormatEnum;
+    /**
+     * Year of the season and the season type. If no season type is provided, then the default is regular season.
+     *
+     * @remarks
+     *           <br>Examples: <code>2015REG</code>, <code>2015PRE</code>, <code>2015POST</code>.
+     *
+     */
+    season: string;
+}
+export declare class ProjectedPlayerSeasonStatsWAdpResponse extends SpeakeasyBase {
+    contentType: string;
+    playerSeasonProjections?: shared.PlayerSeasonProjection[];
+    statusCode: number;
+    rawResponse?: AxiosResponse;
+}

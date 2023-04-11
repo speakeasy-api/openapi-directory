@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteCustomVerificationEmailTemplateActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteCustomVerificationEmailTemplateActionEnum {
     DeleteCustomVerificationEmailTemplate = "DeleteCustomVerificationEmailTemplate"
 }
-export declare enum GetDeleteCustomVerificationEmailTemplateVersionEnum {
+export declare enum GETDeleteCustomVerificationEmailTemplateVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetDeleteCustomVerificationEmailTemplateQueryParams extends SpeakeasyBase {
-    action: GetDeleteCustomVerificationEmailTemplateActionEnum;
+export declare class GETDeleteCustomVerificationEmailTemplateRequest extends SpeakeasyBase {
+    action: GETDeleteCustomVerificationEmailTemplateActionEnum;
+    /**
+     * The name of the custom verification email template that you want to delete.
+     */
     templateName: string;
-    version: GetDeleteCustomVerificationEmailTemplateVersionEnum;
-}
-export declare class GetDeleteCustomVerificationEmailTemplateHeaders extends SpeakeasyBase {
+    version: GETDeleteCustomVerificationEmailTemplateVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,11 +21,8 @@ export declare class GetDeleteCustomVerificationEmailTemplateHeaders extends Spe
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteCustomVerificationEmailTemplateRequest extends SpeakeasyBase {
-    queryParams: GetDeleteCustomVerificationEmailTemplateQueryParams;
-    headers: GetDeleteCustomVerificationEmailTemplateHeaders;
-}
-export declare class GetDeleteCustomVerificationEmailTemplateResponse extends SpeakeasyBase {
+export declare class GETDeleteCustomVerificationEmailTemplateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

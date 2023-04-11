@@ -1,8 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class TagResourcePathParams extends SpeakeasyBase {
-    resourceArn: string;
+import { AxiosResponse } from "axios";
+export declare class TagResourceRequestBody extends SpeakeasyBase {
+    /**
+     * The key-value tag pairs you want to associate to your environment. For example, <code>"Environment": "Staging"</code>. To learn more, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services resources</a>.
+     */
+    tags: Record<string, string>;
 }
-export declare class TagResourceHeaders extends SpeakeasyBase {
+export declare class TagResourceRequest extends SpeakeasyBase {
+    requestBody: TagResourceRequestBody;
+    /**
+     * The Amazon Resource Name (ARN) of the Amazon MWAA environment. For example, <code>arn:aws:airflow:us-east-1:123456789012:environment/MyMWAAEnvironment</code>.
+     */
+    resourceArn: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,19 +20,24 @@ export declare class TagResourceHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class TagResourceRequestBody extends SpeakeasyBase {
-    tags: Record<string, string>;
-}
-export declare class TagResourceRequest extends SpeakeasyBase {
-    pathParams: TagResourcePathParams;
-    headers: TagResourceHeaders;
-    request: TagResourceRequestBody;
-}
 export declare class TagResourceResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * Success
+     */
     tagResourceOutput?: Record<string, any>;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

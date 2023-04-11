@@ -3,7 +3,7 @@ import { LongTermPricingTypeEnum } from "./longtermpricingtypeenum";
 import { SnowballTypeEnum } from "./snowballtypeenum";
 /**
  * Each <code>LongTermPricingListEntry</code> object contains information about a long-term pricing type.
-**/
+ */
 export declare class LongTermPricingListEntry extends SpeakeasyBase {
     currentActiveJob?: string;
     isLongTermPricingAutoRenew?: boolean;

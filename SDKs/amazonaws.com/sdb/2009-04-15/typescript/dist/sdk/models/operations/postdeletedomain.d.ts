@@ -1,25 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteDomainActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteDomainActionEnum {
     DeleteDomain = "DeleteDomain"
 }
-export declare enum PostDeleteDomainVersionEnum {
+export declare enum POSTDeleteDomainVersionEnum {
     TwoThousandAndNine0415 = "2009-04-15"
 }
-export declare class PostDeleteDomainQueryParams extends SpeakeasyBase {
+export declare class POSTDeleteDomainRequest extends SpeakeasyBase {
     awsAccessKeyId: string;
-    action: PostDeleteDomainActionEnum;
+    action: POSTDeleteDomainActionEnum;
+    requestBody?: Uint8Array;
     signature: string;
     signatureMethod: string;
     signatureVersion: string;
     timestamp: string;
-    version: PostDeleteDomainVersionEnum;
+    version: POSTDeleteDomainVersionEnum;
 }
-export declare class PostDeleteDomainRequest extends SpeakeasyBase {
-    queryParams: PostDeleteDomainQueryParams;
-    request?: Uint8Array;
-}
-export declare class PostDeleteDomainResponse extends SpeakeasyBase {
+export declare class POSTDeleteDomainResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

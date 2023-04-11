@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * VA Facilities API
+ */
 export declare class Facilities {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,14 +12,16 @@ export declare class Facilities {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getAllFacilities - Bulk download information for all facilities
+     * Bulk download information for all facilities
      *
+     * @remarks
      * Retrieve all available facilities in a single operation, formatted as either a GeoJSON FeatureCollection or as a CSV. Due to the complexity of the facility resource type, the CSV response contains a subset of available facility data - specifically it omits the available services, patient satisfaction, and patient wait time data.
-    **/
-    getAllFacilities(req: operations.GetAllFacilitiesRequest, config?: AxiosRequestConfig): Promise<operations.GetAllFacilitiesResponse>;
+     */
+    getAllFacilities(req: operations.GetAllFacilitiesRequest, security: operations.GetAllFacilitiesSecurity, config?: AxiosRequestConfig): Promise<operations.GetAllFacilitiesResponse>;
     /**
-     * getFacilitiesByLocation - Query facilities by location or IDs, with optional filters
+     * Query facilities by location or IDs, with optional filters
      *
+     * @remarks
      * Query facilities by bounding box, latitude and longitude, state, visn, or zip code. Bounding box is specified as four `bbox[]` parameters, long1, lat1, long2, lat2. (Relative order is unimportant.)
      *
      * A query by latitude and longitude returns all facilities in the system, sorted by distance from that location.
@@ -43,21 +48,23 @@ export declare class Facilities {
      * - `zip`, with the option of any combination of `type`, `services[]`, or `mobile`
      *
      *  Invalid combinations will return `400 Bad Request`.
-    **/
-    getFacilitiesByLocation(req: operations.GetFacilitiesByLocationRequest, config?: AxiosRequestConfig): Promise<operations.GetFacilitiesByLocationResponse>;
+     */
+    getFacilitiesByLocation(req: operations.GetFacilitiesByLocationRequest, security: operations.GetFacilitiesByLocationSecurity, config?: AxiosRequestConfig): Promise<operations.GetFacilitiesByLocationResponse>;
     /**
-     * getFacilityById - Retrieve a specific facility by ID
-    **/
-    getFacilityById(req: operations.GetFacilityByIdRequest, config?: AxiosRequestConfig): Promise<operations.GetFacilityByIdResponse>;
+     * Retrieve a specific facility by ID
+     */
+    getFacilityById(req: operations.GetFacilityByIdRequest, security: operations.GetFacilityByIdSecurity, config?: AxiosRequestConfig): Promise<operations.GetFacilityByIdResponse>;
     /**
-     * getFacilityIds - Bulk download of all facility IDs
+     * Bulk download of all facility IDs
      *
+     * @remarks
      * Retrieves all available facility IDs only
-    **/
-    getFacilityIds(req: operations.GetFacilityIdsRequest, config?: AxiosRequestConfig): Promise<operations.GetFacilityIdsResponse>;
+     */
+    getFacilityIds(req: operations.GetFacilityIdsRequest, security: operations.GetFacilityIdsSecurity, config?: AxiosRequestConfig): Promise<operations.GetFacilityIdsResponse>;
     /**
-     * getNearbyFacilities - Retrieve all VA health facilities reachable by driving within the specified time period
+     * Retrieve all VA health facilities reachable by driving within the specified time period
      *
+     * @remarks
      * Retrieve all VA health facilities that are located within a specified drive time from a specified location based on address (`street_address`, `city`, `state`, and `zip`) or coordinates (`lat` and `lng`). Optional filter parameters include `drive_time` and `services[]`.
      *
      * Results of this operation are paginated. Responses include pagination information in the standard JSON API "links" and "meta" elements.
@@ -65,6 +72,6 @@ export declare class Facilities {
      * The "attributes" element has information about the drive-time band that contains the requested location for each facility in the response. The values of `min_time` and `max_time` are in minutes. For example, a facility returned with a matched `min_time` of 10 and `max_time` of 20 is a 10 to 20 minute drive from the requested location.
      *
      * To retrieve full details for nearby facilities, see the documentation for `/facilities?ids`.
-    **/
-    getNearbyFacilities(req: operations.GetNearbyFacilitiesRequest, config?: AxiosRequestConfig): Promise<operations.GetNearbyFacilitiesResponse>;
+     */
+    getNearbyFacilities(req: operations.GetNearbyFacilitiesRequest, security: operations.GetNearbyFacilitiesSecurity, config?: AxiosRequestConfig): Promise<operations.GetNearbyFacilitiesResponse>;
 }

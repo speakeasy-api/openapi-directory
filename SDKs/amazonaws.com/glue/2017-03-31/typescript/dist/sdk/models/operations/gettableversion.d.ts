@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetTableVersionXAmzTargetEnum {
-    AwsGlueGetTableVersion = "AWSGlue.GetTableVersion"
+    AWSGlueGetTableVersion = "AWSGlue.GetTableVersion"
 }
-export declare class GetTableVersionHeaders extends SpeakeasyBase {
+export declare class GetTableVersionRequest extends SpeakeasyBase {
+    getTableVersionRequest: shared.GetTableVersionRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class GetTableVersionHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetTableVersionXAmzTargetEnum;
 }
-export declare class GetTableVersionRequest extends SpeakeasyBase {
-    headers: GetTableVersionHeaders;
-    request: shared.GetTableVersionRequest;
-}
 export declare class GetTableVersionResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * Success
+     */
     getTableVersionResponse?: shared.GetTableVersionResponse;
+    /**
+     * GlueEncryptionException
+     */
     glueEncryptionException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

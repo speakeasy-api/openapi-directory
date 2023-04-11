@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ActionsAddSelfHostedRunnerToGroupForOrgPathParams extends SpeakeasyBase {
-    org: string;
-    runnerGroupId: number;
-    runnerId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ActionsAddSelfHostedRunnerToGroupForOrgRequest extends SpeakeasyBase {
-    pathParams: ActionsAddSelfHostedRunnerToGroupForOrgPathParams;
+    org: string;
+    /**
+     * Unique identifier of the self-hosted runner group.
+     */
+    runnerGroupId: number;
+    /**
+     * Unique identifier of the self-hosted runner.
+     */
+    runnerId: number;
 }
 export declare class ActionsAddSelfHostedRunnerToGroupForOrgResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,9 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetConnectionPathParams extends SpeakeasyBase {
-    connectionId: string;
-}
-export declare class GetConnectionHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetConnectionRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,16 +9,26 @@ export declare class GetConnectionHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class GetConnectionRequest extends SpeakeasyBase {
-    pathParams: GetConnectionPathParams;
-    headers: GetConnectionHeaders;
+    connectionId: string;
 }
 export declare class GetConnectionResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * ForbiddenException
+     */
     forbiddenException?: any;
+    /**
+     * Success
+     */
     getConnectionResponse?: shared.GetConnectionResponse;
+    /**
+     * GoneException
+     */
     goneException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

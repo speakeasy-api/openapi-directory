@@ -1,12 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetUniProtMappingUsingGetPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETUniProtMappingUsingGETRequest extends SpeakeasyBase {
+    /**
+     * RGD ID
+     */
     rgdId: number;
 }
-export declare class GetUniProtMappingUsingGetRequest extends SpeakeasyBase {
-    pathParams: GetUniProtMappingUsingGetPathParams;
-}
-export declare class GetUniProtMappingUsingGetResponse extends SpeakeasyBase {
+export declare class GETUniProtMappingUsingGETResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

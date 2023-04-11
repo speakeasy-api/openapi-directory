@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetHlsStreamingSessionUrlOutput extends SpeakeasyBase {
+/**
+ * Success
+ */
+export declare class GetHLSStreamingSessionURLOutput extends SpeakeasyBase {
     hlsStreamingSessionURL?: string;
 }

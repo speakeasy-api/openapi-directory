@@ -1,0 +1,35 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { LaunchTemplateSpecification } from "./launchtemplatespecification";
+import { LifecycleHookSpecification } from "./lifecyclehookspecification";
+import { MixedInstancesPolicy } from "./mixedinstancespolicy";
+import { Tag } from "./tag";
+import { TrafficSourceIdentifier } from "./trafficsourceidentifier";
+export declare class CreateAutoScalingGroupType extends SpeakeasyBase {
+    autoScalingGroupName: string;
+    availabilityZones?: string[];
+    capacityRebalance?: boolean;
+    context?: string;
+    defaultCooldown?: number;
+    defaultInstanceWarmup?: number;
+    desiredCapacity?: number;
+    desiredCapacityType?: string;
+    healthCheckGracePeriod?: number;
+    healthCheckType?: string;
+    instanceId?: string;
+    launchConfigurationName?: string;
+    launchTemplate?: LaunchTemplateSpecification;
+    lifecycleHookSpecificationList?: LifecycleHookSpecification[];
+    loadBalancerNames?: string[];
+    maxInstanceLifetime?: number;
+    maxSize: number;
+    minSize: number;
+    mixedInstancesPolicy?: MixedInstancesPolicy;
+    newInstancesProtectedFromScaleIn?: boolean;
+    placementGroup?: string;
+    serviceLinkedRoleARN?: string;
+    tags?: Tag[];
+    targetGroupARNs?: string[];
+    terminationPolicies?: string[];
+    trafficSources?: TrafficSourceIdentifier[];
+    vpcZoneIdentifier?: string;
+}

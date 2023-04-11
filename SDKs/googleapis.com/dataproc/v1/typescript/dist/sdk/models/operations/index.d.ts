@@ -8,6 +8,8 @@ export * from "./dataprocprojectsregionsclustersdiagnose";
 export * from "./dataprocprojectsregionsclustersget";
 export * from "./dataprocprojectsregionsclustersinjectcredentials";
 export * from "./dataprocprojectsregionsclusterslist";
+export * from "./dataprocprojectsregionsclustersnodegroupscreate";
+export * from "./dataprocprojectsregionsclustersnodegroupsresize";
 export * from "./dataprocprojectsregionsclusterspatch";
 export * from "./dataprocprojectsregionsclustersrepair";
 export * from "./dataprocprojectsregionsclustersstart";

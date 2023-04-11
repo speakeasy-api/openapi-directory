@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Filmography {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class Filmography {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * filmographySearchRead - Return filmography search result
+     * Return filmography search result
      *
+     * @remarks
      * Return filmography search result
      *
      * ### Response Class (Status 200)
@@ -20,11 +21,12 @@ export declare class Filmography {
      *
      * For more details on how filmographies are listed [see here][ref].
      * [ref]: https://etmdb.com/en/movie-list/-updated_date
-    **/
+     */
     filmographySearchRead(req: operations.FilmographySearchReadRequest, config?: AxiosRequestConfig): Promise<operations.FilmographySearchReadResponse>;
     /**
-     * filmographySearchallRead - Return filmography search result
+     * Return filmography search result
      *
+     * @remarks
      * Return filmography search result
      *
      * ### Response Class (Status 200)
@@ -37,6 +39,6 @@ export declare class Filmography {
      *
      * For more details on how filmographies are listed [see here][ref].
      * [ref]: https://etmdb.com/en/movie-list/-updated_date
-    **/
+     */
     filmographySearchallRead(req: operations.FilmographySearchallReadRequest, config?: AxiosRequestConfig): Promise<operations.FilmographySearchallReadResponse>;
 }

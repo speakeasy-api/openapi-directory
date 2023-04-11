@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class MasterEmailTemplateSettingsViewModel extends SpeakeasyBase {
     centerEmailContent?: boolean;
     centerEmailContentPanel?: boolean;

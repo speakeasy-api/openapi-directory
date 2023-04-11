@@ -1,19 +1,20 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetRequest, GetResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetRequest,
+  GetResponse,
+  GetFormatEnum,
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetRequest = {
-  queryParams: {
-    format: "json",
-    ip: "voluptas",
-    key: "culpa",
-    package: "expedita",
-  },
+  format: GetFormatEnum.Xml,
+  ip: "provident",
+  key: "distinctio",
+  package: "quibusdam",
 };
 
 sdk.get(req).then((res: GetResponse | AxiosError) => {

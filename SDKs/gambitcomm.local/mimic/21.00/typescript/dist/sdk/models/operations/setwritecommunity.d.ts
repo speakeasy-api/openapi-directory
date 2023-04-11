@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SetWriteCommunityPathParams extends SpeakeasyBase {
-    agentNum: number;
-    write: string;
-}
+import { AxiosResponse } from "axios";
 export declare class SetWriteCommunityRequest extends SpeakeasyBase {
-    pathParams: SetWriteCommunityPathParams;
+    /**
+     * Agent to set the SNMP write community string
+     */
+    agentNum: number;
+    /**
+     * SNMP write community string
+     */
+    write: string;
 }
 export declare class SetWriteCommunityResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     setWriteCommunity200ApplicationJSONString?: string;
 }

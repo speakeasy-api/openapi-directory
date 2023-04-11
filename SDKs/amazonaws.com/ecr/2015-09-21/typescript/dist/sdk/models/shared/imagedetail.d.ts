@@ -3,7 +3,7 @@ import { ImageScanFindingsSummary } from "./imagescanfindingssummary";
 import { ImageScanStatus } from "./imagescanstatus";
 /**
  * An object that describes an image returned by a <a>DescribeImages</a> operation.
-**/
+ */
 export declare class ImageDetail extends SpeakeasyBase {
     artifactMediaType?: string;
     imageDigest?: string;
@@ -13,6 +13,7 @@ export declare class ImageDetail extends SpeakeasyBase {
     imageScanStatus?: ImageScanStatus;
     imageSizeInBytes?: number;
     imageTags?: string[];
+    lastRecordedPullTime?: Date;
     registryId?: string;
     repositoryName?: string;
 }

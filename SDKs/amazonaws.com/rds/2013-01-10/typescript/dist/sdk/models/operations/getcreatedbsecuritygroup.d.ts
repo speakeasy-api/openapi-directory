@@ -1,17 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetCreateDbSecurityGroupActionEnum {
-    CreateDbSecurityGroup = "CreateDBSecurityGroup"
+import { AxiosResponse } from "axios";
+export declare enum GETCreateDBSecurityGroupActionEnum {
+    CreateDBSecurityGroup = "CreateDBSecurityGroup"
 }
-export declare enum GetCreateDbSecurityGroupVersionEnum {
+export declare enum GETCreateDBSecurityGroupVersionEnum {
     TwoThousandAndThirteen0110 = "2013-01-10"
 }
-export declare class GetCreateDbSecurityGroupQueryParams extends SpeakeasyBase {
-    action: GetCreateDbSecurityGroupActionEnum;
+export declare class GETCreateDBSecurityGroupRequest extends SpeakeasyBase {
+    action: GETCreateDBSecurityGroupActionEnum;
     dbSecurityGroupDescription: string;
     dbSecurityGroupName: string;
-    version: GetCreateDbSecurityGroupVersionEnum;
-}
-export declare class GetCreateDbSecurityGroupHeaders extends SpeakeasyBase {
+    version: GETCreateDBSecurityGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +19,9 @@ export declare class GetCreateDbSecurityGroupHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetCreateDbSecurityGroupRequest extends SpeakeasyBase {
-    queryParams: GetCreateDbSecurityGroupQueryParams;
-    headers: GetCreateDbSecurityGroupHeaders;
-}
-export declare class GetCreateDbSecurityGroupResponse extends SpeakeasyBase {
+export declare class GETCreateDBSecurityGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

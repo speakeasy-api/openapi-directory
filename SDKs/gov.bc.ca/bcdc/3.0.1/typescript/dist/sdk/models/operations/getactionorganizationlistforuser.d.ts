@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetActionOrganizationListForUserQueryParams extends SpeakeasyBase {
-    permission?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetActionOrganizationListForUserRequest extends SpeakeasyBase {
-    queryParams: GetActionOrganizationListForUserQueryParams;
+    /**
+     * The permission the user has against the returned organization
+     */
+    permission?: string;
 }
 export declare class GetActionOrganizationListForUserResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

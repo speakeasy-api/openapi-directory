@@ -1,11 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CircuitsChoicesReadPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class CircuitsChoicesReadRequest extends SpeakeasyBase {
-    pathParams: CircuitsChoicesReadPathParams;
+    id: string;
 }
 export declare class CircuitsChoicesReadResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

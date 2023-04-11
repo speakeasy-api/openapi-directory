@@ -1,17 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetFactRandomQueryParams extends SpeakeasyBase {
-    category?: string;
-    subcategory?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetFactRandomSecurity extends SpeakeasyBase {
-    xFungeneratorsApiSecret: shared.SchemeXFungeneratorsApiSecret;
+    xFungeneratorsApiSecret: string;
 }
 export declare class GetFactRandomRequest extends SpeakeasyBase {
-    queryParams: GetFactRandomQueryParams;
-    security: GetFactRandomSecurity;
+    /**
+     * Category to get the fact from
+     */
+    category?: string;
+    /**
+     * Sub Category to get the fact from
+     */
+    subcategory?: string;
 }
 export declare class GetFactRandomResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

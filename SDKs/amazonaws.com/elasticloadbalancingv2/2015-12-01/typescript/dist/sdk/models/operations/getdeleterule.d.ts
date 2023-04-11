@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteRuleActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteRuleActionEnum {
     DeleteRule = "DeleteRule"
 }
-export declare enum GetDeleteRuleVersionEnum {
+export declare enum GETDeleteRuleVersionEnum {
     TwoThousandAndFifteen1201 = "2015-12-01"
 }
-export declare class GetDeleteRuleQueryParams extends SpeakeasyBase {
-    action: GetDeleteRuleActionEnum;
+export declare class GETDeleteRuleRequest extends SpeakeasyBase {
+    action: GETDeleteRuleActionEnum;
+    /**
+     * The Amazon Resource Name (ARN) of the rule.
+     */
     ruleArn: string;
-    version: GetDeleteRuleVersionEnum;
-}
-export declare class GetDeleteRuleHeaders extends SpeakeasyBase {
+    version: GETDeleteRuleVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDeleteRuleHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteRuleRequest extends SpeakeasyBase {
-    queryParams: GetDeleteRuleQueryParams;
-    headers: GetDeleteRuleHeaders;
-}
-export declare class GetDeleteRuleResponse extends SpeakeasyBase {
+export declare class GETDeleteRuleResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

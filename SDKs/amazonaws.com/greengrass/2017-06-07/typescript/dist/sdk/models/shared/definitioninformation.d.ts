@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Information about a definition.
-**/
+ */
 export declare class DefinitionInformation extends SpeakeasyBase {
     arn?: string;
     creationTimestamp?: string;

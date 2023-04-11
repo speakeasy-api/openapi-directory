@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Send faxes - Not in service
+ */
 export declare class Faxes {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +12,7 @@ export declare class Faxes {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getFaxes - List global ongoing faxes
-    **/
+     * List global ongoing faxes
+     */
     getFaxes(config?: AxiosRequestConfig): Promise<operations.GetFaxesResponse>;
 }

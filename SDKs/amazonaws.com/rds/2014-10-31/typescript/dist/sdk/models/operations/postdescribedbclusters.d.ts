@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeDbClustersActionEnum {
-    DescribeDbClusters = "DescribeDBClusters"
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeDBClustersActionEnum {
+    DescribeDBClusters = "DescribeDBClusters"
 }
-export declare enum PostDescribeDbClustersVersionEnum {
+export declare enum POSTDescribeDBClustersVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class PostDescribeDbClustersQueryParams extends SpeakeasyBase {
-    action: PostDescribeDbClustersActionEnum;
+export declare class POSTDescribeDBClustersRequest extends SpeakeasyBase {
+    action: POSTDescribeDBClustersActionEnum;
+    /**
+     * Pagination token
+     */
     marker?: string;
+    /**
+     * Pagination limit
+     */
     maxRecords?: string;
-    version: PostDescribeDbClustersVersionEnum;
-}
-export declare class PostDescribeDbClustersHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeDBClustersVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeDbClustersHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeDbClustersRequest extends SpeakeasyBase {
-    queryParams: PostDescribeDbClustersQueryParams;
-    headers: PostDescribeDbClustersHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeDbClustersResponse extends SpeakeasyBase {
+export declare class POSTDescribeDBClustersResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

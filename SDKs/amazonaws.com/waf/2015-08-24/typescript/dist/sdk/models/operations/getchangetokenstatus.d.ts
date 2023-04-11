@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetChangeTokenStatusXAmzTargetEnum {
-    Awswaf20150824GetChangeTokenStatus = "AWSWAF_20150824.GetChangeTokenStatus"
+    AWSWAF20150824GetChangeTokenStatus = "AWSWAF_20150824.GetChangeTokenStatus"
 }
-export declare class GetChangeTokenStatusHeaders extends SpeakeasyBase {
+export declare class GetChangeTokenStatusRequest extends SpeakeasyBase {
+    getChangeTokenStatusRequest: shared.GetChangeTokenStatusRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class GetChangeTokenStatusHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetChangeTokenStatusXAmzTargetEnum;
 }
-export declare class GetChangeTokenStatusRequest extends SpeakeasyBase {
-    headers: GetChangeTokenStatusHeaders;
-    request: shared.GetChangeTokenStatusRequest;
-}
 export declare class GetChangeTokenStatusResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getChangeTokenStatusResponse?: shared.GetChangeTokenStatusResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFNonexistentItemException
+     */
     wafNonexistentItemException?: any;
 }

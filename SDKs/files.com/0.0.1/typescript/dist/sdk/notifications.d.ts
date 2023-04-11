@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Operations about notifications
+ */
 export declare class Notifications {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,33 +12,38 @@ export declare class Notifications {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteNotificationsId - Delete Notification
-     *
      * Delete Notification
-    **/
+     *
+     * @remarks
+     * Delete Notification
+     */
     deleteNotificationsId(req: operations.DeleteNotificationsIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteNotificationsIdResponse>;
     /**
-     * getNotifications - List Notifications
-     *
      * List Notifications
-    **/
+     *
+     * @remarks
+     * List Notifications
+     */
     getNotifications(req: operations.GetNotificationsRequest, config?: AxiosRequestConfig): Promise<operations.GetNotificationsResponse>;
     /**
-     * getNotificationsId - Show Notification
-     *
      * Show Notification
-    **/
+     *
+     * @remarks
+     * Show Notification
+     */
     getNotificationsId(req: operations.GetNotificationsIdRequest, config?: AxiosRequestConfig): Promise<operations.GetNotificationsIdResponse>;
     /**
-     * patchNotificationsId - Update Notification
-     *
      * Update Notification
-    **/
+     *
+     * @remarks
+     * Update Notification
+     */
     patchNotificationsId(req: operations.PatchNotificationsIdRequest, config?: AxiosRequestConfig): Promise<operations.PatchNotificationsIdResponse>;
     /**
-     * postNotifications - Create Notification
-     *
      * Create Notification
-    **/
-    postNotifications(req: operations.PostNotificationsRequest, config?: AxiosRequestConfig): Promise<operations.PostNotificationsResponse>;
+     *
+     * @remarks
+     * Create Notification
+     */
+    postNotifications(req: operations.PostNotificationsRequestBody, config?: AxiosRequestConfig): Promise<operations.PostNotificationsResponse>;
 }

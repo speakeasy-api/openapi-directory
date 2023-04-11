@@ -82,15 +82,20 @@ export declare enum PropertyValueSourceEnum {
 }
 export declare class PropertyValue extends SpeakeasyBase {
     name: string;
+    persistenceTimestamp?: number;
     requestId: string;
     selectedByUser: boolean;
     selectedByUserTimestamp: number;
     source: PropertyValueSourceEnum;
     sourceId: string;
     sourceLabel: string;
+    /**
+     * Source metadata encoded as a base64 string. For example: `ZXhhbXBsZSBzdHJpbmc=`
+     */
     sourceMetadata: string;
     sourceVid: number[];
     timestamp: number;
     updatedByUserId?: number;
+    useTimestampAsPersistenceTimestamp?: boolean;
     value: string;
 }

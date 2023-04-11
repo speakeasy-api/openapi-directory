@@ -1,8 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteGroupPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteGroupRequest extends SpeakeasyBase {
+    /**
+     * The ID of the Greengrass group.
+     */
     groupId: string;
-}
-export declare class DeleteGroupHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,13 +13,16 @@ export declare class DeleteGroupHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeleteGroupRequest extends SpeakeasyBase {
-    pathParams: DeleteGroupPathParams;
-    headers: DeleteGroupHeaders;
-}
 export declare class DeleteGroupResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteGroupResponse?: Record<string, any>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

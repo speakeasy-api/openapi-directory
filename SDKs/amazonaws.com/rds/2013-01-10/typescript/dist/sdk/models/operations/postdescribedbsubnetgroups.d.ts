@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeDbSubnetGroupsActionEnum {
-    DescribeDbSubnetGroups = "DescribeDBSubnetGroups"
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeDBSubnetGroupsActionEnum {
+    DescribeDBSubnetGroups = "DescribeDBSubnetGroups"
 }
-export declare enum PostDescribeDbSubnetGroupsVersionEnum {
+export declare enum POSTDescribeDBSubnetGroupsVersionEnum {
     TwoThousandAndThirteen0110 = "2013-01-10"
 }
-export declare class PostDescribeDbSubnetGroupsQueryParams extends SpeakeasyBase {
-    action: PostDescribeDbSubnetGroupsActionEnum;
+export declare class POSTDescribeDBSubnetGroupsRequest extends SpeakeasyBase {
+    action: POSTDescribeDBSubnetGroupsActionEnum;
+    /**
+     * Pagination token
+     */
     marker?: string;
+    /**
+     * Pagination limit
+     */
     maxRecords?: string;
-    version: PostDescribeDbSubnetGroupsVersionEnum;
-}
-export declare class PostDescribeDbSubnetGroupsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeDBSubnetGroupsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeDbSubnetGroupsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeDbSubnetGroupsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeDbSubnetGroupsQueryParams;
-    headers: PostDescribeDbSubnetGroupsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeDbSubnetGroupsResponse extends SpeakeasyBase {
+export declare class POSTDescribeDBSubnetGroupsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

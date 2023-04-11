@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsActionEnum {
     DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociations = "DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociations"
 }
-export declare enum PostDescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsVersionEnum {
+export declare enum POSTDescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsQueryParams extends SpeakeasyBase {
-    action: PostDescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsActionEnum;
+export declare class POSTDescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequest extends SpeakeasyBase {
+    action: POSTDescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostDescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsVersionEnum;
-}
-export declare class PostDescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeLocalGatewayRouteTableVirtualInterfaceGroupAsso
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsQueryParams;
-    headers: PostDescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsResponse extends SpeakeasyBase {
+export declare class POSTDescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

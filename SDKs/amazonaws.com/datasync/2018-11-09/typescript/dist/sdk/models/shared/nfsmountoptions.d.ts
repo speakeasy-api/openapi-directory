@@ -1,8 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { NfsVersionEnum } from "./nfsversionenum";
 /**
- * Represents the mount options that are available for DataSync to access an NFS location.
-**/
+ * Specifies how DataSync can access a location using the NFS protocol.
+ */
 export declare class NfsMountOptions extends SpeakeasyBase {
     version?: NfsVersionEnum;
 }

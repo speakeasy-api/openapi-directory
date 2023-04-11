@@ -1,5 +1,10 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Transaction operations
+ *
+ * @see {@link https://netlicensing.io/wiki/transaction-services} - Transaction Services
+ */
 export declare class Transaction {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,27 +14,31 @@ export declare class Transaction {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createTransaction - Create Transaction
+     * Create Transaction
      *
+     * @remarks
      * Creates a new Transaction
-    **/
-    createTransaction(req: operations.CreateTransactionRequest, config?: AxiosRequestConfig): Promise<operations.CreateTransactionResponse>;
+     */
+    createTransaction(req: operations.CreateTransactionRequestBody, security: operations.CreateTransactionSecurity, config?: AxiosRequestConfig): Promise<operations.CreateTransactionResponse>;
     /**
-     * getTransaction - Get Transaction
+     * Get Transaction
      *
+     * @remarks
      * Return a Transaction by 'transactionNumber'
-    **/
-    getTransaction(req: operations.GetTransactionRequest, config?: AxiosRequestConfig): Promise<operations.GetTransactionResponse>;
+     */
+    getTransaction(req: operations.GetTransactionRequest, security: operations.GetTransactionSecurity, config?: AxiosRequestConfig): Promise<operations.GetTransactionResponse>;
     /**
-     * listTransactions - List Transactions
+     * List Transactions
      *
+     * @remarks
      * Return a list of all Transactions for the current Vendor
-    **/
-    listTransactions(req: operations.ListTransactionsRequest, config?: AxiosRequestConfig): Promise<operations.ListTransactionsResponse>;
+     */
+    listTransactions(config?: AxiosRequestConfig): Promise<operations.ListTransactionsResponse>;
     /**
-     * updateTransaction - Update Transaction
+     * Update Transaction
      *
+     * @remarks
      * Sets the provided properties to a Transaction. Return an updated Transaction
-    **/
-    updateTransaction(req: operations.UpdateTransactionRequest, config?: AxiosRequestConfig): Promise<operations.UpdateTransactionResponse>;
+     */
+    updateTransaction(req: operations.UpdateTransactionRequest, security: operations.UpdateTransactionSecurity, config?: AxiosRequestConfig): Promise<operations.UpdateTransactionResponse>;
 }

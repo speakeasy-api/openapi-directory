@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostAssociateRouteTableActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTAssociateRouteTableActionEnum {
     AssociateRouteTable = "AssociateRouteTable"
 }
-export declare enum PostAssociateRouteTableVersionEnum {
+export declare enum POSTAssociateRouteTableVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostAssociateRouteTableQueryParams extends SpeakeasyBase {
-    action: PostAssociateRouteTableActionEnum;
-    version: PostAssociateRouteTableVersionEnum;
-}
-export declare class PostAssociateRouteTableHeaders extends SpeakeasyBase {
+export declare class POSTAssociateRouteTableRequest extends SpeakeasyBase {
+    action: POSTAssociateRouteTableActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTAssociateRouteTableVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostAssociateRouteTableHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostAssociateRouteTableRequest extends SpeakeasyBase {
-    queryParams: PostAssociateRouteTableQueryParams;
-    headers: PostAssociateRouteTableHeaders;
-    request?: Uint8Array;
-}
-export declare class PostAssociateRouteTableResponse extends SpeakeasyBase {
+export declare class POSTAssociateRouteTableResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostSendBulkTemplatedEmailActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTSendBulkTemplatedEmailActionEnum {
     SendBulkTemplatedEmail = "SendBulkTemplatedEmail"
 }
-export declare enum PostSendBulkTemplatedEmailVersionEnum {
+export declare enum POSTSendBulkTemplatedEmailVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostSendBulkTemplatedEmailQueryParams extends SpeakeasyBase {
-    action: PostSendBulkTemplatedEmailActionEnum;
-    version: PostSendBulkTemplatedEmailVersionEnum;
-}
-export declare class PostSendBulkTemplatedEmailHeaders extends SpeakeasyBase {
+export declare class POSTSendBulkTemplatedEmailRequest extends SpeakeasyBase {
+    action: POSTSendBulkTemplatedEmailActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTSendBulkTemplatedEmailVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostSendBulkTemplatedEmailHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostSendBulkTemplatedEmailRequest extends SpeakeasyBase {
-    queryParams: PostSendBulkTemplatedEmailQueryParams;
-    headers: PostSendBulkTemplatedEmailHeaders;
-    request?: Uint8Array;
-}
-export declare class PostSendBulkTemplatedEmailResponse extends SpeakeasyBase {
+export declare class POSTSendBulkTemplatedEmailResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

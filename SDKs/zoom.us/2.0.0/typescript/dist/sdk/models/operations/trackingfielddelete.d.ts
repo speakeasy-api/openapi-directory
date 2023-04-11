@@ -1,16 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class TrackingfieldDeletePathParams extends SpeakeasyBase {
-    fieldId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class TrackingfieldDeleteSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
+    oAuth: string;
 }
 export declare class TrackingfieldDeleteRequest extends SpeakeasyBase {
-    pathParams: TrackingfieldDeletePathParams;
-    security: TrackingfieldDeleteSecurity;
+    /**
+     * The Tracking Field ID
+     */
+    fieldId: string;
 }
 export declare class TrackingfieldDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

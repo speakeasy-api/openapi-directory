@@ -1,7 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { ImportResourceSpecification } from "./importresourcespecification";
 import { ImportStatusEnum } from "./importstatusenum";
 import { MergeStrategyEnum } from "./mergestrategyenum";
-import { ImportResourceSpecification } from "./importresourcespecification";
+/**
+ * Success
+ */
 export declare class StartImportResponse extends SpeakeasyBase {
     creationDateTime?: Date;
     importId?: string;

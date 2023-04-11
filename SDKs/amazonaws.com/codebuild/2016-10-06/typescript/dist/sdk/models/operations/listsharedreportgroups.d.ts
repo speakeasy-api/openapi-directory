@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListSharedReportGroupsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListSharedReportGroupsXAmzTargetEnum {
     CodeBuild20161006ListSharedReportGroups = "CodeBuild_20161006.ListSharedReportGroups"
 }
-export declare class ListSharedReportGroupsHeaders extends SpeakeasyBase {
+export declare class ListSharedReportGroupsRequest extends SpeakeasyBase {
+    listSharedReportGroupsInput: shared.ListSharedReportGroupsInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,15 +14,25 @@ export declare class ListSharedReportGroupsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: ListSharedReportGroupsXAmzTargetEnum;
-}
-export declare class ListSharedReportGroupsRequest extends SpeakeasyBase {
-    queryParams: ListSharedReportGroupsQueryParams;
-    headers: ListSharedReportGroupsHeaders;
-    request: shared.ListSharedReportGroupsInput;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class ListSharedReportGroupsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * Success
+     */
     listSharedReportGroupsOutput?: shared.ListSharedReportGroupsOutput;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

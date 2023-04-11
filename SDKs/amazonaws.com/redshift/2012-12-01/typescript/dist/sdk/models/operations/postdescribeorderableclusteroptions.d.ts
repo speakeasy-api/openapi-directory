@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeOrderableClusterOptionsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeOrderableClusterOptionsActionEnum {
     DescribeOrderableClusterOptions = "DescribeOrderableClusterOptions"
 }
-export declare enum PostDescribeOrderableClusterOptionsVersionEnum {
+export declare enum POSTDescribeOrderableClusterOptionsVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostDescribeOrderableClusterOptionsQueryParams extends SpeakeasyBase {
-    action: PostDescribeOrderableClusterOptionsActionEnum;
+export declare class POSTDescribeOrderableClusterOptionsRequest extends SpeakeasyBase {
+    action: POSTDescribeOrderableClusterOptionsActionEnum;
+    /**
+     * Pagination token
+     */
     marker?: string;
+    /**
+     * Pagination limit
+     */
     maxRecords?: string;
-    version: PostDescribeOrderableClusterOptionsVersionEnum;
-}
-export declare class PostDescribeOrderableClusterOptionsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeOrderableClusterOptionsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeOrderableClusterOptionsHeaders extends Speakeas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeOrderableClusterOptionsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeOrderableClusterOptionsQueryParams;
-    headers: PostDescribeOrderableClusterOptionsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeOrderableClusterOptionsResponse extends SpeakeasyBase {
+export declare class POSTDescribeOrderableClusterOptionsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

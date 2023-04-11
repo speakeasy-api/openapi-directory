@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { Actor } from "./actor";
 import { IssueComment } from "./issuecomment";
 import { IssueSimple } from "./issuesimple";
-import { Actor } from "./actor";
 export declare class EventPayloadPages extends SpeakeasyBase {
     action?: string;
     htmlUrl?: string;
@@ -12,7 +12,13 @@ export declare class EventPayloadPages extends SpeakeasyBase {
 }
 export declare class EventPayload extends SpeakeasyBase {
     action?: string;
+    /**
+     * Comments provide a way for people to collaborate on an issue.
+     */
     comment?: IssueComment;
+    /**
+     * Issue Simple
+     */
     issue?: IssueSimple;
     pages?: EventPayloadPages[];
 }
@@ -23,11 +29,17 @@ export declare class EventRepo extends SpeakeasyBase {
 }
 /**
  * Event
-**/
+ */
 export declare class Event extends SpeakeasyBase {
+    /**
+     * Actor
+     */
     actor: Actor;
     createdAt: Date;
     id: string;
+    /**
+     * Actor
+     */
     org?: Actor;
     payload: EventPayload;
     public: boolean;

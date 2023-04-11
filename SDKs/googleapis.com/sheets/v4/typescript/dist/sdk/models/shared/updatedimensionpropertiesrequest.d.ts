@@ -4,10 +4,22 @@ import { DimensionProperties } from "./dimensionproperties";
 import { DimensionRange } from "./dimensionrange";
 /**
  * Updates properties of dimensions within the specified range.
-**/
+ */
 export declare class UpdateDimensionPropertiesRequest extends SpeakeasyBase {
+    /**
+     * A range along a single dimension on a DATA_SOURCE sheet.
+     */
     dataSourceSheetRange?: DataSourceSheetDimensionRange;
+    /**
+     * The fields that should be updated. At least one field must be specified. The root `properties` is implied and should not be specified. A single `"*"` can be used as short-hand for listing every field.
+     */
     fields?: string;
+    /**
+     * Properties about a dimension.
+     */
     properties?: DimensionProperties;
+    /**
+     * A range along a single dimension on a sheet. All indexes are zero-based. Indexes are half open: the start index is inclusive and the end index is exclusive. Missing indexes indicate the range is unbounded on that side.
+     */
     range?: DimensionRange;
 }

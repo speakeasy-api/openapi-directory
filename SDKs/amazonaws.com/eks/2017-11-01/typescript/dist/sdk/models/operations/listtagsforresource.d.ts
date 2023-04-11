@@ -1,9 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListTagsForResourcePathParams extends SpeakeasyBase {
-    resourceArn: string;
-}
-export declare class ListTagsForResourceHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListTagsForResourceRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,15 +9,25 @@ export declare class ListTagsForResourceHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class ListTagsForResourceRequest extends SpeakeasyBase {
-    pathParams: ListTagsForResourcePathParams;
-    headers: ListTagsForResourceHeaders;
+    /**
+     * The Amazon Resource Name (ARN) that identifies the resource for which to list the tags. Currently, the supported resources are Amazon EKS clusters and managed node groups.
+     */
+    resourceArn: string;
 }
 export declare class ListTagsForResourceResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     listTagsForResourceResponse?: shared.ListTagsForResourceResponse;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

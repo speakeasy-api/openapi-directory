@@ -1,11 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
+ * Describes a tag.
+ */
+export declare class KeyPairTags extends SpeakeasyBase {
+    key?: string;
+    value?: string;
+}
+/**
  * Describes a key pair.
-**/
+ */
 export declare class KeyPair extends SpeakeasyBase {
-    keyFingerprint?: Record<string, any>;
-    keyMaterial?: Record<string, any>;
-    keyName?: Record<string, any>;
-    keyPairId?: Record<string, any>;
-    tags?: Record<string, any>;
+    keyFingerprint?: string;
+    keyMaterial?: string;
+    keyName?: string;
+    keyPairId?: string;
+    tags?: KeyPairTags[];
 }

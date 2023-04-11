@@ -1,18 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class DatabaseDeleteDocumentPathParams extends SpeakeasyBase {
-    collectionId: string;
-    documentId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DatabaseDeleteDocumentSecurity extends SpeakeasyBase {
-    jwt: shared.SchemeJwt;
-    project: shared.SchemeProject;
+    jwt: string;
+    project: string;
 }
 export declare class DatabaseDeleteDocumentRequest extends SpeakeasyBase {
-    pathParams: DatabaseDeleteDocumentPathParams;
-    security: DatabaseDeleteDocumentSecurity;
+    /**
+     * Collection unique ID. You can create a new collection with validation rules using the Database service [server integration](/docs/server/database#createCollection).
+     */
+    collectionId: string;
+    /**
+     * Document unique ID.
+     */
+    documentId: string;
 }
 export declare class DatabaseDeleteDocumentResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

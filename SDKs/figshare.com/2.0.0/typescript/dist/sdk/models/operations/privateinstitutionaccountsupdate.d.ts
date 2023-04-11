@@ -1,19 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PrivateInstitutionAccountsUpdatePathParams extends SpeakeasyBase {
-    accountId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class PrivateInstitutionAccountsUpdateSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class PrivateInstitutionAccountsUpdateRequest extends SpeakeasyBase {
-    pathParams: PrivateInstitutionAccountsUpdatePathParams;
-    request: shared.AccountUpdate;
-    security: PrivateInstitutionAccountsUpdateSecurity;
+    /**
+     * Account description
+     */
+    accountUpdate: shared.AccountUpdate;
+    /**
+     * Account identifier the user is associated to
+     */
+    accountId: number;
 }
 export declare class PrivateInstitutionAccountsUpdateResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Forbidden
+     */
     errorMessage?: shared.ErrorMessage;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

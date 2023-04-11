@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Projects {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,47 +9,47 @@ export declare class Projects {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * websecurityscannerProjectsScanConfigsCreate - Creates a new ScanConfig.
-    **/
-    websecurityscannerProjectsScanConfigsCreate(req: operations.WebsecurityscannerProjectsScanConfigsCreateRequest, config?: AxiosRequestConfig): Promise<operations.WebsecurityscannerProjectsScanConfigsCreateResponse>;
+     * Creates a new ScanConfig.
+     */
+    websecurityscannerProjectsScanConfigsCreate(req: operations.WebsecurityscannerProjectsScanConfigsCreateRequest, security: operations.WebsecurityscannerProjectsScanConfigsCreateSecurity, config?: AxiosRequestConfig): Promise<operations.WebsecurityscannerProjectsScanConfigsCreateResponse>;
     /**
-     * websecurityscannerProjectsScanConfigsDelete - Deletes an existing ScanConfig and its child resources.
-    **/
-    websecurityscannerProjectsScanConfigsDelete(req: operations.WebsecurityscannerProjectsScanConfigsDeleteRequest, config?: AxiosRequestConfig): Promise<operations.WebsecurityscannerProjectsScanConfigsDeleteResponse>;
+     * Deletes an existing ScanConfig and its child resources.
+     */
+    websecurityscannerProjectsScanConfigsDelete(req: operations.WebsecurityscannerProjectsScanConfigsDeleteRequest, security: operations.WebsecurityscannerProjectsScanConfigsDeleteSecurity, config?: AxiosRequestConfig): Promise<operations.WebsecurityscannerProjectsScanConfigsDeleteResponse>;
     /**
-     * websecurityscannerProjectsScanConfigsList - Lists ScanConfigs under a given project.
-    **/
-    websecurityscannerProjectsScanConfigsList(req: operations.WebsecurityscannerProjectsScanConfigsListRequest, config?: AxiosRequestConfig): Promise<operations.WebsecurityscannerProjectsScanConfigsListResponse>;
+     * Lists ScanConfigs under a given project.
+     */
+    websecurityscannerProjectsScanConfigsList(req: operations.WebsecurityscannerProjectsScanConfigsListRequest, security: operations.WebsecurityscannerProjectsScanConfigsListSecurity, config?: AxiosRequestConfig): Promise<operations.WebsecurityscannerProjectsScanConfigsListResponse>;
     /**
-     * websecurityscannerProjectsScanConfigsPatch - Updates a ScanConfig. This method support partial update of a ScanConfig.
-    **/
-    websecurityscannerProjectsScanConfigsPatch(req: operations.WebsecurityscannerProjectsScanConfigsPatchRequest, config?: AxiosRequestConfig): Promise<operations.WebsecurityscannerProjectsScanConfigsPatchResponse>;
+     * Updates a ScanConfig. This method support partial update of a ScanConfig.
+     */
+    websecurityscannerProjectsScanConfigsPatch(req: operations.WebsecurityscannerProjectsScanConfigsPatchRequest, security: operations.WebsecurityscannerProjectsScanConfigsPatchSecurity, config?: AxiosRequestConfig): Promise<operations.WebsecurityscannerProjectsScanConfigsPatchResponse>;
     /**
-     * websecurityscannerProjectsScanConfigsScanRunsCrawledUrlsList - List CrawledUrls under a given ScanRun.
-    **/
-    websecurityscannerProjectsScanConfigsScanRunsCrawledUrlsList(req: operations.WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsListRequest, config?: AxiosRequestConfig): Promise<operations.WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsListResponse>;
+     * List CrawledUrls under a given ScanRun.
+     */
+    websecurityscannerProjectsScanConfigsScanRunsCrawledUrlsList(req: operations.WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsListRequest, security: operations.WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsListSecurity, config?: AxiosRequestConfig): Promise<operations.WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsListResponse>;
     /**
-     * websecurityscannerProjectsScanConfigsScanRunsFindingTypeStatsList - List all FindingTypeStats under a given ScanRun.
-    **/
-    websecurityscannerProjectsScanConfigsScanRunsFindingTypeStatsList(req: operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingTypeStatsListRequest, config?: AxiosRequestConfig): Promise<operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingTypeStatsListResponse>;
+     * List all FindingTypeStats under a given ScanRun.
+     */
+    websecurityscannerProjectsScanConfigsScanRunsFindingTypeStatsList(req: operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingTypeStatsListRequest, security: operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingTypeStatsListSecurity, config?: AxiosRequestConfig): Promise<operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingTypeStatsListResponse>;
     /**
-     * websecurityscannerProjectsScanConfigsScanRunsFindingsGet - Gets a Finding.
-    **/
-    websecurityscannerProjectsScanConfigsScanRunsFindingsGet(req: operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsGetRequest, config?: AxiosRequestConfig): Promise<operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsGetResponse>;
+     * Gets a Finding.
+     */
+    websecurityscannerProjectsScanConfigsScanRunsFindingsGet(req: operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsGetRequest, security: operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsGetSecurity, config?: AxiosRequestConfig): Promise<operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsGetResponse>;
     /**
-     * websecurityscannerProjectsScanConfigsScanRunsFindingsList - List Findings under a given ScanRun.
-    **/
-    websecurityscannerProjectsScanConfigsScanRunsFindingsList(req: operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsListRequest, config?: AxiosRequestConfig): Promise<operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsListResponse>;
+     * List Findings under a given ScanRun.
+     */
+    websecurityscannerProjectsScanConfigsScanRunsFindingsList(req: operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsListRequest, security: operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsListSecurity, config?: AxiosRequestConfig): Promise<operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsListResponse>;
     /**
-     * websecurityscannerProjectsScanConfigsScanRunsList - Lists ScanRuns under a given ScanConfig, in descending order of ScanRun stop time.
-    **/
-    websecurityscannerProjectsScanConfigsScanRunsList(req: operations.WebsecurityscannerProjectsScanConfigsScanRunsListRequest, config?: AxiosRequestConfig): Promise<operations.WebsecurityscannerProjectsScanConfigsScanRunsListResponse>;
+     * Lists ScanRuns under a given ScanConfig, in descending order of ScanRun stop time.
+     */
+    websecurityscannerProjectsScanConfigsScanRunsList(req: operations.WebsecurityscannerProjectsScanConfigsScanRunsListRequest, security: operations.WebsecurityscannerProjectsScanConfigsScanRunsListSecurity, config?: AxiosRequestConfig): Promise<operations.WebsecurityscannerProjectsScanConfigsScanRunsListResponse>;
     /**
-     * websecurityscannerProjectsScanConfigsScanRunsStop - Stops a ScanRun. The stopped ScanRun is returned.
-    **/
-    websecurityscannerProjectsScanConfigsScanRunsStop(req: operations.WebsecurityscannerProjectsScanConfigsScanRunsStopRequest, config?: AxiosRequestConfig): Promise<operations.WebsecurityscannerProjectsScanConfigsScanRunsStopResponse>;
+     * Stops a ScanRun. The stopped ScanRun is returned.
+     */
+    websecurityscannerProjectsScanConfigsScanRunsStop(req: operations.WebsecurityscannerProjectsScanConfigsScanRunsStopRequest, security: operations.WebsecurityscannerProjectsScanConfigsScanRunsStopSecurity, config?: AxiosRequestConfig): Promise<operations.WebsecurityscannerProjectsScanConfigsScanRunsStopResponse>;
     /**
-     * websecurityscannerProjectsScanConfigsStart - Start a ScanRun according to the given ScanConfig.
-    **/
-    websecurityscannerProjectsScanConfigsStart(req: operations.WebsecurityscannerProjectsScanConfigsStartRequest, config?: AxiosRequestConfig): Promise<operations.WebsecurityscannerProjectsScanConfigsStartResponse>;
+     * Start a ScanRun according to the given ScanConfig.
+     */
+    websecurityscannerProjectsScanConfigsStart(req: operations.WebsecurityscannerProjectsScanConfigsStartRequest, security: operations.WebsecurityscannerProjectsScanConfigsStartSecurity, config?: AxiosRequestConfig): Promise<operations.WebsecurityscannerProjectsScanConfigsStartResponse>;
 }

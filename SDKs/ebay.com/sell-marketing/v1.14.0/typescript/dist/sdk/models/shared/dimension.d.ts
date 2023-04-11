@@ -1,0 +1,14 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * This type defines the annotation and dimension key used by the report. For information on how to set these values, see <a href="/api-docs/sell/static/marketing/pl-reports.html">Promoted Listings reporting</a>.
+ */
+export declare class Dimension extends SpeakeasyBase {
+    /**
+     * A list of annotations associated with the dimension of the report.
+     */
+    annotationKeys?: string[];
+    /**
+     * The name of the dimension on which the report is based. <p>A dimension is an attribute to which the report data applies.</p>
+     */
+    dimensionKey?: string;
+}

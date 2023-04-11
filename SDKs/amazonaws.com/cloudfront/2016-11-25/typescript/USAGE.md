@@ -1,28 +1,27 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateCloudFrontOriginAccessIdentity20161125Request, CreateCloudFrontOriginAccessIdentity20161125Response } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CreateCloudFrontOriginAccessIdentity20161125Request,
+  CreateCloudFrontOriginAccessIdentity20161125Response
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: CreateCloudFrontOriginAccessIdentity20161125Request = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: "voluptas".encode(),
+});
+
+const req: CreateCloudFrontOriginAccessIdentity20161125Request = {
+  requestBody: "corrupti".encode(),
+  xAmzAlgorithm: "provident",
+  xAmzContentSha256: "distinctio",
+  xAmzCredential: "quibusdam",
+  xAmzDate: "unde",
+  xAmzSecurityToken: "nulla",
+  xAmzSignature: "corrupti",
+  xAmzSignedHeaders: "illum",
 };
 
 sdk.createCloudFrontOriginAccessIdentity20161125(req).then((res: CreateCloudFrontOriginAccessIdentity20161125Response | AxiosError) => {

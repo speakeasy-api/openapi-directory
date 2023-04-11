@@ -6,68 +6,71 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/gov.bc.ca/geocoder/2.0.0/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/gov.bc.ca/geocoder/2.0.0/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetAddressesOutputFormatRequest, GetAddressesOutputFormatResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GetAddressesOutputFormatRequest,
+  GetAddressesOutputFormatResponse,
+  GetAddressesOutputFormatInterpolationEnum,
+  GetAddressesOutputFormatLocationDescriptorEnum,
+  GetAddressesOutputFormatOutputFormatEnum,
+  GetAddressesOutputFormatOutputSrsEnum,
+  GetAddressesOutputFormatStreetDirectionEnum,
+  GetAddressesOutputFormatUnitDesignatorEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    apikey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    apikey: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: GetAddressesOutputFormatRequest = {
-  pathParams: {
-    outputFormat: "csv",
-  },
-  queryParams: {
-    addressString: "voluptas",
-    autoComplete: true,
-    bbox: "expedita",
-    brief: true,
-    centre: "dolor",
-    civicNumber: "expedita",
-    civicNumberSuffix: "voluptas",
-    echo: true,
-    extrapolate: false,
-    interpolation: "adaptive",
-    localities: "rerum",
-    localityName: "dicta",
-    locationDescriptor: "any",
-    matchPrecision: "voluptatum",
-    matchPrecisionNot: "et",
-    maxDistance: 11.100000,
-    maxResults: 7259475919510918339,
-    minScore: 7373105480197164748,
-    notLocalities: "iste",
-    outputSRS: 3930927879439176946,
-    parcelPoint: "totam",
-    provinceCode: "dolores",
-    setBack: 1929546706668609706,
-    siteName: "debitis",
-    streetDirection: "N",
-    streetName: "odio",
-    streetQualifier: "dolore",
-    streetType: "id",
-    unitDesignator: "TH",
-    unitNumber: "accusantium",
-    unitNumberSuffix: "totam",
-  },
+  addressString: "corrupti",
+  autoComplete: false,
+  bbox: "provident",
+  brief: false,
+  centre: "distinctio",
+  civicNumber: "quibusdam",
+  civicNumberSuffix: "unde",
+  echo: false,
+  extrapolate: false,
+  interpolation: GetAddressesOutputFormatInterpolationEnum.None,
+  localities: "corrupti",
+  localityName: "illum",
+  locationDescriptor: GetAddressesOutputFormatLocationDescriptorEnum.FrontDoorPoint,
+  matchPrecision: "error",
+  matchPrecisionNot: "deserunt",
+  maxDistance: 3843.82,
+  maxResults: 437587,
+  minScore: 297534,
+  notLocalities: "debitis",
+  outputFormat: GetAddressesOutputFormatOutputFormatEnum.Json,
+  outputSRS: GetAddressesOutputFormatOutputSrsEnum.TwentySixThousandNineHundredAndEleven,
+  parcelPoint: "tempora",
+  provinceCode: "suscipit",
+  setBack: 477665,
+  siteName: "minus",
+  streetDirection: GetAddressesOutputFormatStreetDirectionEnum.Se,
+  streetName: "voluptatum",
+  streetQualifier: "iusto",
+  streetType: "excepturi",
+  unitDesignator: GetAddressesOutputFormatUnitDesignatorEnum.Pad,
+  unitNumber: "recusandae",
+  unitNumberSuffix: "temporibus",
 };
 
 sdk.intersections.getAddressesOutputFormat(req).then((res: GetAddressesOutputFormatResponse | AxiosError) => {
@@ -77,7 +80,8 @@ sdk.intersections.getAddressesOutputFormat(req).then((res: GetAddressesOutputFor
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### intersections
 
@@ -85,7 +89,7 @@ sdk.intersections.getAddressesOutputFormat(req).then((res: GetAddressesOutputFor
 * `getIntersectionsNearOutputFormat` - Find intersections near to a geographic point
 * `getIntersectionsNearestOutputFormat` - Find nearest intersection to a geographic point
 * `getIntersectionsWithinOutputFormat` - Find intersections in a geographic area
-* `getIntersectionsIntersectionIdOutputFormat` - Get an intersection by its unique ID
+* `getIntersectionsIntersectionIDOutputFormat` - Get an intersection by its unique ID
 
 ### occupants
 
@@ -93,11 +97,11 @@ sdk.intersections.getAddressesOutputFormat(req).then((res: GetAddressesOutputFor
 * `getOccupantsNearOutputFormat` - Find occupants of sites near to a geographic point
 * `getOccupantsNearestOutputFormat` - Find occupants of the site nearest to a geographic point
 * `getOccupantsWithinOutputFormat` - Find occupants of sites in a geographic area
-* `getOccupantsOccupantIdOutputFormat` - Get an occupant (of a site) by its unique ID
+* `getOccupantsOccupantIDOutputFormat` - Get an occupant (of a site) by its unique ID
 
 ### parcels
 
-* `getParcelsPidsSiteIdOutputFormat` - Get a comma-separated string of all pids for a given site
+* `getParcelsPidsSiteIDOutputFormat` - Get a comma-separated string of all pids for a given site
 
 ### sites
 
@@ -105,9 +109,20 @@ sdk.intersections.getAddressesOutputFormat(req).then((res: GetAddressesOutputFor
 * `getSitesNearOutputFormat` - Find sites near to a geographic point
 * `getSitesNearestOutputFormat` - Find the site nearest to a geographic point
 * `getSitesWithinOutputFormat` - Find sites in a geographic area
-* `getSitesSiteIdOutputFormat` - Get a site by its unique ID
-* `getSitesSiteIdSubsitesOutputFormat` - Represents all subsites of a given site
-
+* `getSitesSiteIDOutputFormat` - Get a site by its unique ID
+* `getSitesSiteIDSubsitesOutputFormat` - Represents all subsites of a given site
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

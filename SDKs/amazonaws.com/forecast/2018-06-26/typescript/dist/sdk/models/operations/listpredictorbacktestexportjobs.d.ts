@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListPredictorBacktestExportJobsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListPredictorBacktestExportJobsXAmzTargetEnum {
     AmazonForecastListPredictorBacktestExportJobs = "AmazonForecast.ListPredictorBacktestExportJobs"
 }
-export declare class ListPredictorBacktestExportJobsHeaders extends SpeakeasyBase {
+export declare class ListPredictorBacktestExportJobsRequest extends SpeakeasyBase {
+    listPredictorBacktestExportJobsRequest: shared.ListPredictorBacktestExportJobsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,15 +23,20 @@ export declare class ListPredictorBacktestExportJobsHeaders extends SpeakeasyBas
     xAmzSignedHeaders?: string;
     xAmzTarget: ListPredictorBacktestExportJobsXAmzTargetEnum;
 }
-export declare class ListPredictorBacktestExportJobsRequest extends SpeakeasyBase {
-    queryParams: ListPredictorBacktestExportJobsQueryParams;
-    headers: ListPredictorBacktestExportJobsHeaders;
-    request: shared.ListPredictorBacktestExportJobsRequest;
-}
 export declare class ListPredictorBacktestExportJobsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * Success
+     */
     listPredictorBacktestExportJobsResponse?: shared.ListPredictorBacktestExportJobsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

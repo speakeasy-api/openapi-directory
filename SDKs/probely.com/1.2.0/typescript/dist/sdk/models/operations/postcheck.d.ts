@@ -1,19 +1,39 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
 export declare class PostCheckRequestBody extends SpeakeasyBase {
+    /**
+     * Reset token received in the user email
+     */
     token: string;
 }
-export declare class PostCheck200ApplicationJson extends SpeakeasyBase {
-    message?: string;
-}
-export declare class PostCheck400ApplicationJson extends SpeakeasyBase {
+/**
+ * Bad Request
+ */
+export declare class PostCheck400ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error message
+     */
     error?: string;
 }
-export declare class PostCheckRequest extends SpeakeasyBase {
-    request: PostCheckRequestBody;
+/**
+ * Success
+ */
+export declare class PostCheck200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Message
+     */
+    message?: string;
 }
 export declare class PostCheckResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    postCheck200ApplicationJSONObject?: PostCheck200ApplicationJson;
-    postCheck400ApplicationJSONObject?: PostCheck400ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
+    postCheck200ApplicationJSONObject?: PostCheck200ApplicationJSON;
+    /**
+     * Bad Request
+     */
+    postCheck400ApplicationJSONObject?: PostCheck400ApplicationJSON;
 }

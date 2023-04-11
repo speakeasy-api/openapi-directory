@@ -1,7 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { WorldExportJobErrorCodeEnum } from "./worldexportjoberrorcodeenum";
 import { OutputLocation } from "./outputlocation";
+import { WorldExportJobErrorCodeEnum } from "./worldexportjoberrorcodeenum";
 import { WorldExportJobStatusEnum } from "./worldexportjobstatusenum";
+/**
+ * Success
+ */
 export declare class DescribeWorldExportJobResponse extends SpeakeasyBase {
     arn?: string;
     clientRequestToken?: string;
@@ -9,6 +12,9 @@ export declare class DescribeWorldExportJobResponse extends SpeakeasyBase {
     failureCode?: WorldExportJobErrorCodeEnum;
     failureReason?: string;
     iamRole?: string;
+    /**
+     * The output location.
+     */
     outputLocation?: OutputLocation;
     status?: WorldExportJobStatusEnum;
     tags?: Record<string, string>;

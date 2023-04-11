@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostRemoveSourceIdentifierFromSubscriptionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTRemoveSourceIdentifierFromSubscriptionActionEnum {
     RemoveSourceIdentifierFromSubscription = "RemoveSourceIdentifierFromSubscription"
 }
-export declare enum PostRemoveSourceIdentifierFromSubscriptionVersionEnum {
+export declare enum POSTRemoveSourceIdentifierFromSubscriptionVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class PostRemoveSourceIdentifierFromSubscriptionQueryParams extends SpeakeasyBase {
-    action: PostRemoveSourceIdentifierFromSubscriptionActionEnum;
-    version: PostRemoveSourceIdentifierFromSubscriptionVersionEnum;
-}
-export declare class PostRemoveSourceIdentifierFromSubscriptionHeaders extends SpeakeasyBase {
+export declare class POSTRemoveSourceIdentifierFromSubscriptionRequest extends SpeakeasyBase {
+    action: POSTRemoveSourceIdentifierFromSubscriptionActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTRemoveSourceIdentifierFromSubscriptionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostRemoveSourceIdentifierFromSubscriptionHeaders extends S
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostRemoveSourceIdentifierFromSubscriptionRequest extends SpeakeasyBase {
-    queryParams: PostRemoveSourceIdentifierFromSubscriptionQueryParams;
-    headers: PostRemoveSourceIdentifierFromSubscriptionHeaders;
-    request?: Uint8Array;
-}
-export declare class PostRemoveSourceIdentifierFromSubscriptionResponse extends SpeakeasyBase {
+export declare class POSTRemoveSourceIdentifierFromSubscriptionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

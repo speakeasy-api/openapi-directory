@@ -18,6 +18,7 @@ export declare class BranchRestrictionPolicyAppsOwner extends SpeakeasyBase {
     publicMembersUrl?: string;
     receivedEventsUrl?: string;
     reposUrl?: string;
+    siteAdmin?: boolean;
     starredUrl?: string;
     subscriptionsUrl?: string;
     type?: string;
@@ -79,7 +80,7 @@ export declare class BranchRestrictionPolicyUsers extends SpeakeasyBase {
 }
 /**
  * Branch Restriction Policy
-**/
+ */
 export declare class BranchRestrictionPolicy extends SpeakeasyBase {
     apps: BranchRestrictionPolicyApps[];
     appsUrl: string;

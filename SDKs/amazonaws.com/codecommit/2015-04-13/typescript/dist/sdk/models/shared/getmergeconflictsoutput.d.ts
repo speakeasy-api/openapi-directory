@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ConflictMetadata } from "./conflictmetadata";
+/**
+ * Success
+ */
 export declare class GetMergeConflictsOutput extends SpeakeasyBase {
     baseCommitId?: string;
     conflictMetadataList: ConflictMetadata[];

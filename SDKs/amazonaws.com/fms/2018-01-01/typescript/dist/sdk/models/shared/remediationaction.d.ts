@@ -6,9 +6,10 @@ import { Ec2CreateRouteTableAction } from "./ec2createroutetableaction";
 import { Ec2DeleteRouteAction } from "./ec2deleterouteaction";
 import { Ec2ReplaceRouteAction } from "./ec2replacerouteaction";
 import { Ec2ReplaceRouteTableAssociationAction } from "./ec2replaceroutetableassociationaction";
+import { FMSPolicyUpdateFirewallCreationConfigAction } from "./fmspolicyupdatefirewallcreationconfigaction";
 /**
  * Information about an individual action you can take to remediate a violation.
-**/
+ */
 export declare class RemediationAction extends SpeakeasyBase {
     description?: string;
     ec2AssociateRouteTableAction?: Ec2AssociateRouteTableAction;
@@ -18,4 +19,5 @@ export declare class RemediationAction extends SpeakeasyBase {
     ec2DeleteRouteAction?: Ec2DeleteRouteAction;
     ec2ReplaceRouteAction?: Ec2ReplaceRouteAction;
     ec2ReplaceRouteTableAssociationAction?: Ec2ReplaceRouteTableAssociationAction;
+    fmsPolicyUpdateFirewallCreationConfigAction?: FMSPolicyUpdateFirewallCreationConfigAction;
 }

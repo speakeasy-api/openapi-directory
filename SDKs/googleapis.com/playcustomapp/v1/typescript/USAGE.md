@@ -1,38 +1,32 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { PlaycustomappAccountsCustomAppsCreateRequest, PlaycustomappAccountsCustomAppsCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  PlaycustomappAccountsCustomAppsCreateRequest,
+  PlaycustomappAccountsCustomAppsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: PlaycustomappAccountsCustomAppsCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    account: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: "dicta".encode(),
+  dollarXgafv: XgafvEnum.Two,
+  requestBody: "provident".encode(),
+  accessToken: "distinctio",
+  account: "quibusdam",
+  alt: AltEnum.Media,
+  callback: "nulla",
+  fields: "corrupti",
+  key: "illum",
+  oauthToken: "vel",
+  prettyPrint: false,
+  quotaUser: "error",
+  uploadType: "deserunt",
+  uploadProtocol: "suscipit",
 };
 
 sdk.accounts.playcustomappAccountsCustomAppsCreate(req).then((res: PlaycustomappAccountsCustomAppsCreateResponse | AxiosError) => {

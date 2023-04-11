@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ImportationGetManualUpdateLastInputConfigPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ImportationGetManualUpdateLastInputConfigRequest extends SpeakeasyBase {
+    /**
+     * Your store identifier
+     */
     storeId: string;
 }
-export declare class ImportationGetManualUpdateLastInputConfigRequest extends SpeakeasyBase {
-    pathParams: ImportationGetManualUpdateLastInputConfigPathParams;
-}
 export declare class ImportationGetManualUpdateLastInputConfigResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     * StoreId or Manual Update last configuration not found
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
     lastManualImportInputConfiguration?: shared.LastManualImportInputConfiguration;
 }

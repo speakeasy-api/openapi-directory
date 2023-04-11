@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum PutLogEventsXAmzTargetEnum {
     Logs20140328PutLogEvents = "Logs_20140328.PutLogEvents"
 }
-export declare class PutLogEventsHeaders extends SpeakeasyBase {
+export declare class PutLogEventsRequest extends SpeakeasyBase {
+    putLogEventsRequest: shared.PutLogEventsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class PutLogEventsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: PutLogEventsXAmzTargetEnum;
 }
-export declare class PutLogEventsRequest extends SpeakeasyBase {
-    headers: PutLogEventsHeaders;
-    request: shared.PutLogEventsRequest;
-}
 export declare class PutLogEventsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * DataAlreadyAcceptedException
+     */
     dataAlreadyAcceptedException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * InvalidSequenceTokenException
+     */
     invalidSequenceTokenException?: any;
+    /**
+     * Success
+     */
     putLogEventsResponse?: shared.PutLogEventsResponse;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
+    /**
+     * ServiceUnavailableException
+     */
     serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnrecognizedClientException
+     */
     unrecognizedClientException?: any;
 }

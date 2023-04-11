@@ -1,4 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
 export declare enum GetListOrganismsFormatEnum {
     Json = "json",
     Xml = "xml",
@@ -7,13 +8,11 @@ export declare enum GetListOrganismsFormatEnum {
     Jpg = "jpg",
     Pdf = "pdf"
 }
-export declare class GetListOrganismsQueryParams extends SpeakeasyBase {
-    format?: GetListOrganismsFormatEnum;
-}
 export declare class GetListOrganismsRequest extends SpeakeasyBase {
-    queryParams: GetListOrganismsQueryParams;
+    format?: GetListOrganismsFormatEnum;
 }
 export declare class GetListOrganismsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

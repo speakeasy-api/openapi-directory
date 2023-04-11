@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class IsDescendantOfUsingGetPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class IsDescendantOfUsingGETRequest extends SpeakeasyBase {
+    /**
+     * Child Term Accession ID
+     */
     accId1: string;
+    /**
+     * Parent Term Accession ID
+     */
     accId2: string;
 }
-export declare class IsDescendantOfUsingGetRequest extends SpeakeasyBase {
-    pathParams: IsDescendantOfUsingGetPathParams;
-}
-export declare class IsDescendantOfUsingGetResponse extends SpeakeasyBase {
+export declare class IsDescendantOfUsingGETResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

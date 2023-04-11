@@ -5,6 +5,9 @@ export declare class BelegeBelegeGruppe extends SpeakeasyBase {
     signaturzertifikat: string;
     zertifizierungsstellen: string[];
 }
+/**
+ * The `Beleg` collection from the "Datenerfassungsprotokoll".
+ */
 export declare class Belege extends SpeakeasyBase {
     belege?: Beleg[];
     belegeGruppe?: BelegeBelegeGruppe[];

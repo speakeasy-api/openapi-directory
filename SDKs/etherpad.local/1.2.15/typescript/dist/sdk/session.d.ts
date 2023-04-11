@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Session {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,27 +9,27 @@ export declare class Session {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createSessionUsingGet - creates a new session. validUntil is an unix timestamp in seconds
-    **/
-    createSessionUsingGet(req: operations.CreateSessionUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.CreateSessionUsingGetResponse>;
+     * creates a new session. validUntil is an unix timestamp in seconds
+     */
+    createSessionUsingGET(req: operations.CreateSessionUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.CreateSessionUsingGETResponse>;
     /**
-     * createSessionUsingPost - creates a new session. validUntil is an unix timestamp in seconds
-    **/
-    createSessionUsingPost(req: operations.CreateSessionUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.CreateSessionUsingPostResponse>;
+     * creates a new session. validUntil is an unix timestamp in seconds
+     */
+    createSessionUsingPOST(req: operations.CreateSessionUsingPOSTRequest, config?: AxiosRequestConfig): Promise<operations.CreateSessionUsingPOSTResponse>;
     /**
-     * deleteSessionUsingGet - deletes a session
-    **/
-    deleteSessionUsingGet(req: operations.DeleteSessionUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.DeleteSessionUsingGetResponse>;
+     * deletes a session
+     */
+    deleteSessionUsingGET(req: operations.DeleteSessionUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.DeleteSessionUsingGETResponse>;
     /**
-     * deleteSessionUsingPost - deletes a session
-    **/
-    deleteSessionUsingPost(req: operations.DeleteSessionUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.DeleteSessionUsingPostResponse>;
+     * deletes a session
+     */
+    deleteSessionUsingPOST(req: operations.DeleteSessionUsingPOSTRequest, config?: AxiosRequestConfig): Promise<operations.DeleteSessionUsingPOSTResponse>;
     /**
-     * getSessionInfoUsingGet - returns informations about a session
-    **/
-    getSessionInfoUsingGet(req: operations.GetSessionInfoUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetSessionInfoUsingGetResponse>;
+     * returns informations about a session
+     */
+    getSessionInfoUsingGET(req: operations.GETSessionInfoUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETSessionInfoUsingGETResponse>;
     /**
-     * getSessionInfoUsingPost - returns informations about a session
-    **/
-    getSessionInfoUsingPost(req: operations.GetSessionInfoUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.GetSessionInfoUsingPostResponse>;
+     * returns informations about a session
+     */
+    getSessionInfoUsingPOST(req: operations.GetSessionInfoUsingPOSTRequest, config?: AxiosRequestConfig): Promise<operations.GetSessionInfoUsingPOSTResponse>;
 }

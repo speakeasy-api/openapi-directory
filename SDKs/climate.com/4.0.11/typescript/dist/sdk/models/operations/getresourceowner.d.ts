@@ -1,20 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetResourceOwnerPathParams extends SpeakeasyBase {
-    resourceOwnerId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetResourceOwnerSecurity extends SpeakeasyBase {
-    apiKey?: shared.SchemeApiKey;
-    oauth2AuthorizationCode?: shared.SchemeOauth2AuthorizationCode;
+    apiKey?: string;
+    oauth2AuthorizationCode?: string;
 }
 export declare class GetResourceOwnerRequest extends SpeakeasyBase {
-    pathParams: GetResourceOwnerPathParams;
-    security: GetResourceOwnerSecurity;
+    /**
+     * Unique identifier of the resource owner.
+     */
+    resourceOwnerId: string;
 }
 export declare class GetResourceOwnerResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Bad Input
+     */
     error?: shared.ErrorT;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
+    /**
+     * OK
+     */
     resourceOwner?: shared.ResourceOwner;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

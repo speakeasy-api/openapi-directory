@@ -1,4 +1,4 @@
-export declare enum CeStateEnum {
+export declare enum CEStateEnum {
     Enabled = "ENABLED",
     Disabled = "DISABLED"
 }

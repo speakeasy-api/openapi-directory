@@ -1,12 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { HiTypeEnumEnum } from "./hitypeenumenum";
-import { ConsentManagerPatientId } from "./consentmanagerpatientid";
-import { Permission } from "./permission";
-import { UsePurpose } from "./usepurpose";
-import { Requester } from "./requester";
+import { ConsentManagerPatientID } from "./consentmanagerpatientid";
 import { ConsentStatusEnum } from "./consentstatusenum";
 import { ErrorT } from "./error";
+import { HITypeEnumEnum } from "./hitypeenumenum";
+import { Permission } from "./permission";
+import { Requester } from "./requester";
 import { RequestReference } from "./requestreference";
+import { UsePurpose } from "./usepurpose";
 export declare class ConsentArtefactResponseConsentConsentDetailCareContexts extends SpeakeasyBase {
     careContextReference: string;
     patientReference: string;
@@ -25,10 +25,10 @@ export declare class ConsentArtefactResponseConsentConsentDetail extends Speakea
     consentId: string;
     consentManager: ConsentArtefactResponseConsentConsentDetailConsentManager;
     createdAt: Date;
-    hiTypes: HiTypeEnumEnum[];
+    hiTypes: HITypeEnumEnum[];
     hip: ConsentArtefactResponseConsentConsentDetailHip;
     hiu: ConsentArtefactResponseConsentConsentDetailHiu;
-    patient: ConsentManagerPatientId;
+    patient: ConsentManagerPatientID;
     permission: Permission;
     purpose: UsePurpose;
     requester: Requester;
@@ -42,7 +42,13 @@ export declare class ConsentArtefactResponseConsent extends SpeakeasyBase {
 export declare class ConsentArtefactResponse extends SpeakeasyBase {
     consent?: ConsentArtefactResponseConsent;
     error?: ErrorT;
+    /**
+     * a nonce, unique for each HTTP request
+     */
     requestId: string;
     resp: RequestReference;
+    /**
+     * Date time format in UTC, includes miliseconds YYYY-MM-DDThh:mm:ss.vZ
+     */
     timestamp: Date;
 }

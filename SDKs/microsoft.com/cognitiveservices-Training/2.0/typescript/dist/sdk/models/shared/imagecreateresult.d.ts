@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { Image } from "./image";
 export declare enum ImageCreateResultStatusEnum {
     Ok = "OK",
-    OkDuplicate = "OKDuplicate",
+    OKDuplicate = "OKDuplicate",
     ErrorSource = "ErrorSource",
     ErrorImageFormat = "ErrorImageFormat",
     ErrorImageSize = "ErrorImageSize",
@@ -13,6 +13,9 @@ export declare enum ImageCreateResultStatusEnum {
     ErrorUnknown = "ErrorUnknown"
 }
 export declare class ImageCreateResult extends SpeakeasyBase {
+    /**
+     * Image model to be sent as JSON
+     */
     image?: Image;
     sourceUrl?: string;
     status?: ImageCreateResultStatusEnum;

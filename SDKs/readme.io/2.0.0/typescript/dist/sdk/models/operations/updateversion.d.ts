@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdateVersionPathParams extends SpeakeasyBase {
-    versionId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UpdateVersionSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
+    password: string;
+    username: string;
 }
 export declare class UpdateVersionRequest extends SpeakeasyBase {
-    pathParams: UpdateVersionPathParams;
-    request: shared.Version;
-    security: UpdateVersionSecurity;
+    /**
+     * Version object
+     */
+    version: shared.Version;
+    /**
+     * Semver version indentifier
+     */
+    versionId: string;
 }
 export declare class UpdateVersionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

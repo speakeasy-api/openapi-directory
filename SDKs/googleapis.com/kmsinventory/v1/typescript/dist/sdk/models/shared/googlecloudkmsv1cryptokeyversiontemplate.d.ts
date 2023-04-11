@@ -1,0 +1,58 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Required. Algorithm to use when creating a CryptoKeyVersion based on this template. For backwards compatibility, GOOGLE_SYMMETRIC_ENCRYPTION is implied if both this field is omitted and CryptoKey.purpose is ENCRYPT_DECRYPT.
+ */
+export declare enum GoogleCloudKmsV1CryptoKeyVersionTemplateAlgorithmEnum {
+    CryptoKeyVersionAlgorithmUnspecified = "CRYPTO_KEY_VERSION_ALGORITHM_UNSPECIFIED",
+    GoogleSymmetricEncryption = "GOOGLE_SYMMETRIC_ENCRYPTION",
+    RsaSignPss2048Sha256 = "RSA_SIGN_PSS_2048_SHA256",
+    RsaSignPss3072Sha256 = "RSA_SIGN_PSS_3072_SHA256",
+    RsaSignPss4096Sha256 = "RSA_SIGN_PSS_4096_SHA256",
+    RsaSignPss4096Sha512 = "RSA_SIGN_PSS_4096_SHA512",
+    RsaSignPkcs12048Sha256 = "RSA_SIGN_PKCS1_2048_SHA256",
+    RsaSignPkcs13072Sha256 = "RSA_SIGN_PKCS1_3072_SHA256",
+    RsaSignPkcs14096Sha256 = "RSA_SIGN_PKCS1_4096_SHA256",
+    RsaSignPkcs14096Sha512 = "RSA_SIGN_PKCS1_4096_SHA512",
+    RsaSignRawPkcs12048 = "RSA_SIGN_RAW_PKCS1_2048",
+    RsaSignRawPkcs13072 = "RSA_SIGN_RAW_PKCS1_3072",
+    RsaSignRawPkcs14096 = "RSA_SIGN_RAW_PKCS1_4096",
+    RsaDecryptOaep2048Sha256 = "RSA_DECRYPT_OAEP_2048_SHA256",
+    RsaDecryptOaep3072Sha256 = "RSA_DECRYPT_OAEP_3072_SHA256",
+    RsaDecryptOaep4096Sha256 = "RSA_DECRYPT_OAEP_4096_SHA256",
+    RsaDecryptOaep4096Sha512 = "RSA_DECRYPT_OAEP_4096_SHA512",
+    RsaDecryptOaep2048Sha1 = "RSA_DECRYPT_OAEP_2048_SHA1",
+    RsaDecryptOaep3072Sha1 = "RSA_DECRYPT_OAEP_3072_SHA1",
+    RsaDecryptOaep4096Sha1 = "RSA_DECRYPT_OAEP_4096_SHA1",
+    EcSignP256Sha256 = "EC_SIGN_P256_SHA256",
+    EcSignP384Sha384 = "EC_SIGN_P384_SHA384",
+    EcSignSecp256K1Sha256 = "EC_SIGN_SECP256K1_SHA256",
+    HmacSha256 = "HMAC_SHA256",
+    HmacSha1 = "HMAC_SHA1",
+    HmacSha384 = "HMAC_SHA384",
+    HmacSha512 = "HMAC_SHA512",
+    HmacSha224 = "HMAC_SHA224",
+    ExternalSymmetricEncryption = "EXTERNAL_SYMMETRIC_ENCRYPTION"
+}
+/**
+ * ProtectionLevel to use when creating a CryptoKeyVersion based on this template. Immutable. Defaults to SOFTWARE.
+ */
+export declare enum GoogleCloudKmsV1CryptoKeyVersionTemplateProtectionLevelEnum {
+    ProtectionLevelUnspecified = "PROTECTION_LEVEL_UNSPECIFIED",
+    Software = "SOFTWARE",
+    Hsm = "HSM",
+    External = "EXTERNAL",
+    ExternalVpc = "EXTERNAL_VPC"
+}
+/**
+ * A CryptoKeyVersionTemplate specifies the properties to use when creating a new CryptoKeyVersion, either manually with CreateCryptoKeyVersion or automatically as a result of auto-rotation.
+ */
+export declare class GoogleCloudKmsV1CryptoKeyVersionTemplate extends SpeakeasyBase {
+    /**
+     * Required. Algorithm to use when creating a CryptoKeyVersion based on this template. For backwards compatibility, GOOGLE_SYMMETRIC_ENCRYPTION is implied if both this field is omitted and CryptoKey.purpose is ENCRYPT_DECRYPT.
+     */
+    algorithm?: GoogleCloudKmsV1CryptoKeyVersionTemplateAlgorithmEnum;
+    /**
+     * ProtectionLevel to use when creating a CryptoKeyVersion based on this template. Immutable. Defaults to SOFTWARE.
+     */
+    protectionLevel?: GoogleCloudKmsV1CryptoKeyVersionTemplateProtectionLevelEnum;
+}

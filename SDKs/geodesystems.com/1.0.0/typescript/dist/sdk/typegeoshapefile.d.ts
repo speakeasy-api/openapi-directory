@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Search API for 'Shapefile' entry type
+ */
 export declare class TypeGeoShapefile {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,10 @@ export declare class TypeGeoShapefile {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * searchGeoShapefile - Search API for 'Shapefile' entry type
+     * Search API for 'Shapefile' entry type
      *
+     * @remarks
      * API to search for entries of type Shapefile
-    **/
+     */
     searchGeoShapefile(req: operations.SearchGeoShapefileRequest, config?: AxiosRequestConfig): Promise<operations.SearchGeoShapefileResponse>;
 }

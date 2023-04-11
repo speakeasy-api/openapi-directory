@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Orders {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class Orders {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteOrder - Delete an order
+     * Delete an order
      *
+     * @remarks
      * **Note:** This operation is only available if you have the [Orders](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders/AA_Overview_of_Orders#Orders) feature enabled. Orders is now generally available as of Zuora Billing Release 284 (August 2020). If you are an existing Zuora Subscribe and Amend customer and want to adopt Orders, see [What is Orders Harmonization](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Orders_Harmonization/Orders_Harmonization#What_is_Orders_Harmonization.3F) and join the [Orders Harmonization community group](https://community.zuora.com/t5/Orders-Harmonization/gp-p/Orders-Harmonization) for more information. If you want to enable Orders, submit a request at [Zuora Global Support](https://support.zuora.com/).
      *
      * **Note:** The [Order Line Items](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Order_Line_Items/AA_Overview_of_Order_Line_Items) feature is in the **Early Adopter** phase. We are actively soliciting feedback from a small set of early adopters before releasing it as generally available. If you want to join this early adopter program, submit a request at [Zuora Global Support](https://support.zuora.com/).
@@ -23,11 +24,12 @@ export declare class Orders {
      *
      * You are not allowed to delete an order if the charges that are affected by this order are invoiced.
      *
-    **/
-    deleteOrder(req: operations.DeleteOrderRequest, config?: AxiosRequestConfig): Promise<operations.DeleteOrderResponse>;
+     */
+    deleteOrder(req: operations.DELETEOrderRequest, config?: AxiosRequestConfig): Promise<operations.DELETEOrderResponse>;
     /**
-     * getAllOrders - List orders
+     * List orders
      *
+     * @remarks
      * **Note:** This feature is only available if you have the [Order Metrics](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders/AA_Overview_of_Orders#Order_Metrics) feature enabled. As of Zuora Billing Release 284, Orders is generally available and the Order Metrics feature is no longer available as a standalone feature. If you are an existing Subscribe and Amend customer and want Order Metrics only, you must turn on [Orders Harmonization](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Orders_Harmonization/Orders_Harmonization). You can still keep the existing Subscribe and Amend API integrations to create and manage subscriptions.
      *
      * **Note:** The [Order Line Items](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Order_Line_Items/AA_Overview_of_Order_Line_Items) feature is in the **Early Adopter** phase. We are actively soliciting feedback from a small set of early adopters before releasing it as generally available. If you want to join this early adopter program, submit a request at [Zuora Global Support](https://support.zuora.com/).
@@ -35,33 +37,36 @@ export declare class Orders {
      *
      * Retrieves information about all orders in your tenant. By default, it returns the first page of the orders.
      *
-    **/
-    getAllOrders(req: operations.GetAllOrdersRequest, config?: AxiosRequestConfig): Promise<operations.GetAllOrdersResponse>;
+     */
+    getAllOrders(req: operations.GETAllOrdersRequest, config?: AxiosRequestConfig): Promise<operations.GETAllOrdersResponse>;
     /**
-     * getJobStatusAndResponse - Retrieve the status and response of a job
+     * Retrieve the status and response of a job
      *
+     * @remarks
      * **Note:** This operation is only available if you have the [Orders](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders/AA_Overview_of_Orders#Orders) feature enabled. Orders is now generally available as of Zuora Billing Release 284 (August 2020). If you are an existing Zuora Subscribe and Amend customer and want to adopt Orders, see [What is Orders Harmonization](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Orders_Harmonization/Orders_Harmonization#What_is_Orders_Harmonization.3F) and join the [Orders Harmonization community group](https://community.zuora.com/t5/Orders-Harmonization/gp-p/Orders-Harmonization) for more information. If you want to enable Orders, submit a request at [Zuora Global Support](https://support.zuora.com/).
      *
      * **Note:** The [Order Line Items](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Order_Line_Items/AA_Overview_of_Order_Line_Items) feature is in the **Early Adopter** phase. We are actively soliciting feedback from a small set of early adopters before releasing it as generally available. If you want to join this early adopter program, submit a request at [Zuora Global Support](https://support.zuora.com/).
      *
      * Get the status and response of an asynchronous job. Currently, an asynchronous job created by "Create an order asynchronously" or "Preview an order asynchronously" is supported.
      *
-    **/
-    getJobStatusAndResponse(req: operations.GetJobStatusAndResponseRequest, config?: AxiosRequestConfig): Promise<operations.GetJobStatusAndResponseResponse>;
+     */
+    getJobStatusAndResponse(req: operations.GETJobStatusAndResponseRequest, config?: AxiosRequestConfig): Promise<operations.GETJobStatusAndResponseResponse>;
     /**
-     * getOrder - Retrieve an order
+     * Retrieve an order
      *
+     * @remarks
      * **Note:** This feature is only available if you have the [Order Metrics](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders/AA_Overview_of_Orders#Order_Metrics) feature enabled. As of Zuora Billing Release 284, Orders is generally available and the Order Metrics feature is no longer available as a standalone feature. If you are an existing Subscribe and Amend customer and want Order Metrics only, you must turn on [Orders Harmonization](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Orders_Harmonization/Orders_Harmonization). You can still keep the existing Subscribe and Amend API integrations to create and manage subscriptions.
      *
      * **Note:** The [Order Line Items](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Order_Line_Items/AA_Overview_of_Order_Line_Items) feature is in the **Early Adopter** phase. We are actively soliciting feedback from a small set of early adopters before releasing it as generally available. If you want to join this early adopter program, submit a request at [Zuora Global Support](https://support.zuora.com/).
      *
      * Retrieves the detailed information about a specified order.
      *
-    **/
-    getOrder(req: operations.GetOrderRequest, config?: AxiosRequestConfig): Promise<operations.GetOrderResponse>;
+     */
+    getOrder(req: operations.GETOrderRequest, config?: AxiosRequestConfig): Promise<operations.GETOrderResponse>;
     /**
-     * getOrderMetricsforEvergreenSubscription - List order metrics for an evergreen subscription
+     * List order metrics for an evergreen subscription
      *
+     * @remarks
      * **Note:** This feature is only available if you have the [Order Metrics](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders/AA_Overview_of_Orders#Order_Metrics) feature enabled. As of Zuora Billing Release 284, Orders is generally available and the Order Metrics feature is no longer available as a standalone feature. If you are an existing Subscribe and Amend customer and want Order Metrics only, you must turn on [Orders Harmonization](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Orders_Harmonization/Orders_Harmonization). You can still keep the existing Subscribe and Amend API integrations to create and manage subscriptions.
      *
      * **Note:** As of Zuora Billing Release 306, Zuora has upgraded the methodologies for calculating metrics in [Orders](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders). The new methodologies are reflected in the following Order Delta Metrics objects.
@@ -78,53 +83,58 @@ export declare class Orders {
      *
      * Retrieves the metrics of an evergreen subscription in a specified order.
      *
-    **/
-    getOrderMetricsforEvergreenSubscription(req: operations.GetOrderMetricsforEvergreenSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.GetOrderMetricsforEvergreenSubscriptionResponse>;
+     */
+    getOrderMetricsforEvergreenSubscription(req: operations.GETOrderMetricsforEvergreenSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.GETOrderMetricsforEvergreenSubscriptionResponse>;
     /**
-     * getOrdersByInvoiceOwner - List orders of an invoice owner
+     * List orders of an invoice owner
      *
+     * @remarks
      * **Note:** This feature is only available if you have the [Order Metrics](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders/AA_Overview_of_Orders#Order_Metrics) feature enabled. As of Zuora Billing Release 284, Orders is generally available and the Order Metrics feature is no longer available as a standalone feature. If you are an existing Subscribe and Amend customer and want Order Metrics only, you must turn on [Orders Harmonization](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Orders_Harmonization/Orders_Harmonization). You can still keep the existing Subscribe and Amend API integrations to create and manage subscriptions.
      *
      * **Note:** The [Order Line Items](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Order_Line_Items/AA_Overview_of_Order_Line_Items) feature is in the **Early Adopter** phase. We are actively soliciting feedback from a small set of early adopters before releasing it as generally available. If you want to join this early adopter program, submit a request at [Zuora Global Support](https://support.zuora.com/).
      *
      * Retrieves the detailed information about all orders for a specified invoice owner.
      *
-    **/
-    getOrdersByInvoiceOwner(req: operations.GetOrdersByInvoiceOwnerRequest, config?: AxiosRequestConfig): Promise<operations.GetOrdersByInvoiceOwnerResponse>;
+     */
+    getOrdersByInvoiceOwner(req: operations.GETOrdersByInvoiceOwnerRequest, config?: AxiosRequestConfig): Promise<operations.GETOrdersByInvoiceOwnerResponse>;
     /**
-     * getOrdersBySubscriptionNumber - List orders by subscription number
+     * List orders by subscription number
      *
+     * @remarks
      * **Note:** This feature is only available if you have the [Order Metrics](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders/AA_Overview_of_Orders#Order_Metrics) feature enabled. As of Zuora Billing Release 284, Orders is generally available and the Order Metrics feature is no longer available as a standalone feature. If you are an existing Subscribe and Amend customer and want Order Metrics only, you must turn on [Orders Harmonization](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Orders_Harmonization/Orders_Harmonization). You can still keep the existing Subscribe and Amend API integrations to create and manage subscriptions.
      *
      * **Note:** The [Order Line Items](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Order_Line_Items/AA_Overview_of_Order_Line_Items) feature is in the **Early Adopter** phase. We are actively soliciting feedback from a small set of early adopters before releasing it as generally available. If you want to join this early adopter program, submit a request at [Zuora Global Support](https://support.zuora.com/).
      *
      * Retrieves the detailed information about all orders for a specified subscription. Any orders containing the changes on the specified subscription are returned.
      *
-    **/
-    getOrdersBySubscriptionNumber(req: operations.GetOrdersBySubscriptionNumberRequest, config?: AxiosRequestConfig): Promise<operations.GetOrdersBySubscriptionNumberResponse>;
+     */
+    getOrdersBySubscriptionNumber(req: operations.GETOrdersBySubscriptionNumberRequest, config?: AxiosRequestConfig): Promise<operations.GETOrdersBySubscriptionNumberResponse>;
     /**
-     * getOrdersBySubscriptionOwner - List orders of a subscription owner
+     * List orders of a subscription owner
      *
+     * @remarks
      * **Note:** This feature is only available if you have the [Order Metrics](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders/AA_Overview_of_Orders#Order_Metrics) feature enabled. As of Zuora Billing Release 284, Orders is generally available and the Order Metrics feature is no longer available as a standalone feature. If you are an existing Subscribe and Amend customer and want Order Metrics only, you must turn on [Orders Harmonization](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Orders_Harmonization/Orders_Harmonization). You can still keep the existing Subscribe and Amend API integrations to create and manage subscriptions.
      *
      * **Note:** The [Order Line Items](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Order_Line_Items/AA_Overview_of_Order_Line_Items) feature is in the **Early Adopter** phase. We are actively soliciting feedback from a small set of early adopters before releasing it as generally available. If you want to join this early adopter program, submit a request at [Zuora Global Support](https://support.zuora.com/).
      *
      * Retrieves the detailed information about all orders for a specified subscription owner. Any orders containing the changes on the subscriptions owned by this account are returned.
      *
-    **/
-    getOrdersBySubscriptionOwner(req: operations.GetOrdersBySubscriptionOwnerRequest, config?: AxiosRequestConfig): Promise<operations.GetOrdersBySubscriptionOwnerResponse>;
+     */
+    getOrdersBySubscriptionOwner(req: operations.GETOrdersBySubscriptionOwnerRequest, config?: AxiosRequestConfig): Promise<operations.GETOrdersBySubscriptionOwnerResponse>;
     /**
-     * getSubscriptionTermInfo - List subscription terms
+     * List subscription terms
      *
+     * @remarks
      * **Note:** This feature is only available if you have the [Order Metrics](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders/AA_Overview_of_Orders#Order_Metrics) feature enabled. As of Zuora Billing Release 284, Orders is generally available and the Order Metrics feature is no longer available as a standalone feature. If you are an existing Subscribe and Amend customer and want Order Metrics only, you must turn on [Orders Harmonization](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Orders_Harmonization/Orders_Harmonization). You can still keep the existing Subscribe and Amend API integrations to create and manage subscriptions.
      *
      * Retrieves the terms of the specified subscription.
      *
-    **/
-    getSubscriptionTermInfo(req: operations.GetSubscriptionTermInfoRequest, config?: AxiosRequestConfig): Promise<operations.GetSubscriptionTermInfoResponse>;
+     */
+    getSubscriptionTermInfo(req: operations.GETSubscriptionTermInfoRequest, config?: AxiosRequestConfig): Promise<operations.GETSubscriptionTermInfoResponse>;
     /**
-     * postCreateOrderAsynchronously - Create an order asynchronously
+     * Create an order asynchronously
      *
+     * @remarks
      * **Note:** This operation is only available if you have the [Orders](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders/AA_Overview_of_Orders#Orders) feature enabled. Orders is now generally available as of Zuora Billing Release 284 (August 2020). If you are an existing Zuora Subscribe and Amend customer and want to adopt Orders, see [What is Orders Harmonization](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Orders_Harmonization/Orders_Harmonization#What_is_Orders_Harmonization.3F) and join the [Orders Harmonization community group](https://community.zuora.com/t5/Orders-Harmonization/gp-p/Orders-Harmonization) for more information. If you want to enable Orders, submit a request at [Zuora Global Support](https://support.zuora.com/).
      *
      * **Note:** The [Order Line Items](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Order_Line_Items/AA_Overview_of_Order_Line_Items) feature is in the **Early Adopter** phase. We are actively soliciting feedback from a small set of early adopters before releasing it as generally available. If you want to join this early adopter program, submit a request at [Zuora Global Support](https://support.zuora.com/).
@@ -152,11 +162,12 @@ export declare class Orders {
      *
      * If you have a need for a large order that exceeds any limits of the above, you can request a limit increase for the Orders asynchronous API by submitting a request at [Zuora Global Support](https://support.zuora.com).
      *
-    **/
-    postCreateOrderAsynchronously(req: operations.PostCreateOrderAsynchronouslyRequest, config?: AxiosRequestConfig): Promise<operations.PostCreateOrderAsynchronouslyResponse>;
+     */
+    postCreateOrderAsynchronously(req: operations.POSTCreateOrderAsynchronouslyRequest, config?: AxiosRequestConfig): Promise<operations.POSTCreateOrderAsynchronouslyResponse>;
     /**
-     * postOrder - Create an order
+     * Create an order
      *
+     * @remarks
      * **Note:** This operation is only available if you have the [Orders](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders/AA_Overview_of_Orders#Orders) feature enabled. Orders is now generally available as of Zuora Billing Release 284 (August 2020). If you are an existing Zuora Subscribe and Amend customer and want to adopt Orders, see [What is Orders Harmonization](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Orders_Harmonization/Orders_Harmonization#What_is_Orders_Harmonization.3F) and join the [Orders Harmonization community group](https://community.zuora.com/t5/Orders-Harmonization/gp-p/Orders-Harmonization) for more information. If you want to enable Orders, submit a request at [Zuora Global Support](https://support.zuora.com/).
      *
      * **Note:** The [Order Line Items](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Order_Line_Items/AA_Overview_of_Order_Line_Items) feature is in the **Early Adopter** phase. We are actively soliciting feedback from a small set of early adopters before releasing it as generally available. If you want to join this early adopter program, submit a request at [Zuora Global Support](https://support.zuora.com/).
@@ -208,11 +219,12 @@ export declare class Orders {
      *
      * **Note:** When using this operation to create an account, create a subscription, run billing, and collect payment in a single call, if any error occurs during the call, such as a payment processing failure and a tax engine failure, then all the other steps will be rolled back. This means that the invoice will not be generated, the subscription will not be created, and the account will not be created.
      *
-    **/
-    postOrder(req: operations.PostOrderRequest, config?: AxiosRequestConfig): Promise<operations.PostOrderResponse>;
+     */
+    postOrder(req: operations.POSTOrderRequest, config?: AxiosRequestConfig): Promise<operations.POSTOrderResponse>;
     /**
-     * postPreviewOrder - Preview an order
+     * Preview an order
      *
+     * @remarks
      * **Note:** This operation is only available if you have the [Orders](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders/AA_Overview_of_Orders#Orders) feature enabled. Orders is now generally available as of Zuora Billing Release 284 (August 2020). If you are an existing Zuora Subscribe and Amend customer and want to adopt Orders, see [What is Orders Harmonization](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Orders_Harmonization/Orders_Harmonization#What_is_Orders_Harmonization.3F) and join the [Orders Harmonization community group](https://community.zuora.com/t5/Orders-Harmonization/gp-p/Orders-Harmonization) for more information. If you want to enable Orders, submit a request at [Zuora Global Support](https://support.zuora.com/).
      *
      * **Note:** The [Order Line Items](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Order_Line_Items/AA_Overview_of_Order_Line_Items) feature is in the **Early Adopter** phase. We are actively soliciting feedback from a small set of early adopters before releasing it as generally available. If you want to join this early adopter program, submit a request at [Zuora Global Support](https://support.zuora.com/).
@@ -241,11 +253,12 @@ export declare class Orders {
      *
      * If you have a need for a large order that exceeds any limits of the above, you can request a limit increase for the Orders asynchronous API by submitting a request at [Zuora Global Support](https://support.zuora.com).
      *
-    **/
-    postPreviewOrder(req: operations.PostPreviewOrderRequest, config?: AxiosRequestConfig): Promise<operations.PostPreviewOrderResponse>;
+     */
+    postPreviewOrder(req: operations.POSTPreviewOrderRequest, config?: AxiosRequestConfig): Promise<operations.POSTPreviewOrderResponse>;
     /**
-     * postPreviewOrderAsynchronously - Preview an order asynchronously
+     * Preview an order asynchronously
      *
+     * @remarks
      * **Note:** This operation is only available if you have the [Orders](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders/AA_Overview_of_Orders#Orders) feature enabled. Orders is now generally available as of Zuora Billing Release 284 (August 2020). If you are an existing Zuora Subscribe and Amend customer and want to adopt Orders, see [What is Orders Harmonization](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Orders_Harmonization/Orders_Harmonization#What_is_Orders_Harmonization.3F) and join the [Orders Harmonization community group](https://community.zuora.com/t5/Orders-Harmonization/gp-p/Orders-Harmonization) for more information. If you want to enable Orders, submit a request at [Zuora Global Support](https://support.zuora.com/).
      *
      * **Note:** The [Order Line Items](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Order_Line_Items/AA_Overview_of_Order_Line_Items) feature is in the **Early Adopter** phase. We are actively soliciting feedback from a small set of early adopters before releasing it as generally available. If you want to join this early adopter program, submit a request at [Zuora Global Support](https://support.zuora.com/).
@@ -272,11 +285,12 @@ export declare class Orders {
      *
      * If you have a need for a large order that exceeds any limits of the above, you can request a limit increase for the Orders asynchronous API by submitting a request at [Zuora Global Support](https://support.zuora.com).
      *
-    **/
-    postPreviewOrderAsynchronously(req: operations.PostPreviewOrderAsynchronouslyRequest, config?: AxiosRequestConfig): Promise<operations.PostPreviewOrderAsynchronouslyResponse>;
+     */
+    postPreviewOrderAsynchronously(req: operations.POSTPreviewOrderAsynchronouslyRequest, config?: AxiosRequestConfig): Promise<operations.POSTPreviewOrderAsynchronouslyResponse>;
     /**
-     * putOrderTriggerDates - Update order action trigger dates
+     * Update order action trigger dates
      *
+     * @remarks
      * **Note:** This operation is only available if you have the [Orders](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders/AA_Overview_of_Orders#Orders) feature enabled. Orders is now generally available as of Zuora Billing Release 284 (August 2020). If you are an existing Zuora Subscribe and Amend customer and want to adopt Orders, see [What is Orders Harmonization](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Orders_Harmonization/Orders_Harmonization#What_is_Orders_Harmonization.3F) and join the [Orders Harmonization community group](https://community.zuora.com/t5/Orders-Harmonization/gp-p/Orders-Harmonization) for more information. If you want to enable Orders, submit a request at [Zuora Global Support](https://support.zuora.com/).
      *
      * Updates the triggering dates for either of the following order actions:
@@ -287,26 +301,28 @@ export declare class Orders {
      *  * RenewSubscription
      *  * TermsAndConditions
      *
-    **/
-    putOrderTriggerDates(req: operations.PutOrderTriggerDatesRequest, config?: AxiosRequestConfig): Promise<operations.PutOrderTriggerDatesResponse>;
+     */
+    putOrderTriggerDates(req: operations.PUTOrderTriggerDatesRequest, config?: AxiosRequestConfig): Promise<operations.PUTOrderTriggerDatesResponse>;
     /**
-     * putUpdateOrderCustomFields - Update order custom fields
+     * Update order custom fields
      *
+     * @remarks
      * **Note:** This feature is only available if you have the [Order Metrics](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders/AA_Overview_of_Orders#Order_Metrics) feature enabled. As of Zuora Billing Release 284, Orders is generally available and the Order Metrics feature is no longer available as a standalone feature. If you are an existing Subscribe and Amend customer and want Order Metrics only, you must turn on [Orders Harmonization](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Orders_Harmonization/Orders_Harmonization). You can still keep the existing Subscribe and Amend API integrations to create and manage subscriptions.
      *
      * **Note:** To update the custom fields of an order line item, you must use the "Update an order line item" or "Update order line items" operation.
      *
      * Updates the custom fields of a specified order.
      *
-    **/
-    putUpdateOrderCustomFields(req: operations.PutUpdateOrderCustomFieldsRequest, config?: AxiosRequestConfig): Promise<operations.PutUpdateOrderCustomFieldsResponse>;
+     */
+    putUpdateOrderCustomFields(req: operations.PUTUpdateOrderCustomFieldsRequest, config?: AxiosRequestConfig): Promise<operations.PUTUpdateOrderCustomFieldsResponse>;
     /**
-     * putUpdateSubscriptionCustomFields - Update subscription custom fields
+     * Update subscription custom fields
      *
+     * @remarks
      * **Note:** This operation is only available if you have the [Orders](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders/AA_Overview_of_Orders#Orders) feature enabled. Orders is now generally available as of Zuora Billing Release 284 (August 2020). If you are an existing Zuora Subscribe and Amend customer and want to adopt Orders, see [What is Orders Harmonization](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Orders_Harmonization/Orders_Harmonization#What_is_Orders_Harmonization.3F) and join the [Orders Harmonization community group](https://community.zuora.com/t5/Orders-Harmonization/gp-p/Orders-Harmonization) for more information. If you want to enable Orders, submit a request at [Zuora Global Support](https://support.zuora.com/).
      *
      * Updates the custom fields of a specified subscription.
      *
-    **/
-    putUpdateSubscriptionCustomFields(req: operations.PutUpdateSubscriptionCustomFieldsRequest, config?: AxiosRequestConfig): Promise<operations.PutUpdateSubscriptionCustomFieldsResponse>;
+     */
+    putUpdateSubscriptionCustomFields(req: operations.PUTUpdateSubscriptionCustomFieldsRequest, config?: AxiosRequestConfig): Promise<operations.PUTUpdateSubscriptionCustomFieldsResponse>;
 }

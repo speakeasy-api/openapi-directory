@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteForecastXAmzTargetEnum {
     AmazonForecastDeleteForecast = "AmazonForecast.DeleteForecast"
 }
-export declare class DeleteForecastHeaders extends SpeakeasyBase {
+export declare class DeleteForecastRequest extends SpeakeasyBase {
+    deleteForecastRequest: shared.DeleteForecastRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class DeleteForecastHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteForecastXAmzTargetEnum;
 }
-export declare class DeleteForecastRequest extends SpeakeasyBase {
-    headers: DeleteForecastHeaders;
-    request: shared.DeleteForecastRequest;
-}
 export declare class DeleteForecastResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * ResourceInUseException
+     */
     resourceInUseException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

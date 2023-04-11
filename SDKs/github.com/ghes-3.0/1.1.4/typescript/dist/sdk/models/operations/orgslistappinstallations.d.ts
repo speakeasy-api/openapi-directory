@@ -1,23 +1,31 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class OrgsListAppInstallationsPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class OrgsListAppInstallationsRequest extends SpeakeasyBase {
     org: string;
-}
-export declare class OrgsListAppInstallationsQueryParams extends SpeakeasyBase {
+    /**
+     * Page number of the results to fetch.
+     */
     page?: number;
+    /**
+     * Results per page (max 100)
+     */
     perPage?: number;
 }
-export declare class OrgsListAppInstallations200ApplicationJson extends SpeakeasyBase {
+/**
+ * Response
+ */
+export declare class OrgsListAppInstallations200ApplicationJSON extends SpeakeasyBase {
     installations: shared.Installation[];
     totalCount: number;
 }
-export declare class OrgsListAppInstallationsRequest extends SpeakeasyBase {
-    pathParams: OrgsListAppInstallationsPathParams;
-    queryParams: OrgsListAppInstallationsQueryParams;
-}
 export declare class OrgsListAppInstallationsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
-    orgsListAppInstallations200ApplicationJSONObject?: OrgsListAppInstallations200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
+    orgsListAppInstallations200ApplicationJSONObject?: OrgsListAppInstallations200ApplicationJSON;
 }

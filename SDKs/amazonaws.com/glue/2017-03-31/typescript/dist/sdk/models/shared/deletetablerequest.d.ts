@@ -3,4 +3,5 @@ export declare class DeleteTableRequest extends SpeakeasyBase {
     catalogId?: string;
     databaseName: string;
     name: string;
+    transactionId?: string;
 }

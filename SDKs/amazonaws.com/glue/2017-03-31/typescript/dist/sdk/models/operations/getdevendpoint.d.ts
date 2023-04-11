@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetDevEndpointXAmzTargetEnum {
-    AwsGlueGetDevEndpoint = "AWSGlue.GetDevEndpoint"
+    AWSGlueGetDevEndpoint = "AWSGlue.GetDevEndpoint"
 }
-export declare class GetDevEndpointHeaders extends SpeakeasyBase {
+export declare class GetDevEndpointRequest extends SpeakeasyBase {
+    getDevEndpointRequest: shared.GetDevEndpointRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class GetDevEndpointHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetDevEndpointXAmzTargetEnum;
 }
-export declare class GetDevEndpointRequest extends SpeakeasyBase {
-    headers: GetDevEndpointHeaders;
-    request: shared.GetDevEndpointRequest;
-}
 export declare class GetDevEndpointResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * Success
+     */
     getDevEndpointResponse?: shared.GetDevEndpointResponse;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

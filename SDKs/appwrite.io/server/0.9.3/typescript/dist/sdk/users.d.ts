@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * The Users service allows you to manage your project users.
+ */
 export declare class Users {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,75 +12,87 @@ export declare class Users {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * usersCreate - Create User
+     * Create User
      *
+     * @remarks
      * Create a new user.
-    **/
-    usersCreate(req: operations.UsersCreateRequest, config?: AxiosRequestConfig): Promise<operations.UsersCreateResponse>;
+     */
+    usersCreate(req: operations.UsersCreateRequestBody, security: operations.UsersCreateSecurity, config?: AxiosRequestConfig): Promise<operations.UsersCreateResponse>;
     /**
-     * usersDelete - Delete User
+     * Delete User
      *
+     * @remarks
      * Delete a user by its unique ID.
-    **/
-    usersDelete(req: operations.UsersDeleteRequest, config?: AxiosRequestConfig): Promise<operations.UsersDeleteResponse>;
+     */
+    usersDelete(req: operations.UsersDeleteRequest, security: operations.UsersDeleteSecurity, config?: AxiosRequestConfig): Promise<operations.UsersDeleteResponse>;
     /**
-     * usersDeleteSession - Delete User Session
+     * Delete User Session
      *
+     * @remarks
      * Delete a user sessions by its unique ID.
-    **/
-    usersDeleteSession(req: operations.UsersDeleteSessionRequest, config?: AxiosRequestConfig): Promise<operations.UsersDeleteSessionResponse>;
+     */
+    usersDeleteSession(req: operations.UsersDeleteSessionRequest, security: operations.UsersDeleteSessionSecurity, config?: AxiosRequestConfig): Promise<operations.UsersDeleteSessionResponse>;
     /**
-     * usersDeleteSessions - Delete User Sessions
+     * Delete User Sessions
      *
+     * @remarks
      * Delete all user's sessions by using the user's unique ID.
-    **/
-    usersDeleteSessions(req: operations.UsersDeleteSessionsRequest, config?: AxiosRequestConfig): Promise<operations.UsersDeleteSessionsResponse>;
+     */
+    usersDeleteSessions(req: operations.UsersDeleteSessionsRequest, security: operations.UsersDeleteSessionsSecurity, config?: AxiosRequestConfig): Promise<operations.UsersDeleteSessionsResponse>;
     /**
-     * usersGet - Get User
+     * Get User
      *
+     * @remarks
      * Get a user by its unique ID.
-    **/
-    usersGet(req: operations.UsersGetRequest, config?: AxiosRequestConfig): Promise<operations.UsersGetResponse>;
+     */
+    usersGet(req: operations.UsersGetRequest, security: operations.UsersGetSecurity, config?: AxiosRequestConfig): Promise<operations.UsersGetResponse>;
     /**
-     * usersGetLogs - Get User Logs
+     * Get User Logs
      *
+     * @remarks
      * Get a user activity logs list by its unique ID.
-    **/
-    usersGetLogs(req: operations.UsersGetLogsRequest, config?: AxiosRequestConfig): Promise<operations.UsersGetLogsResponse>;
+     */
+    usersGetLogs(req: operations.UsersGetLogsRequest, security: operations.UsersGetLogsSecurity, config?: AxiosRequestConfig): Promise<operations.UsersGetLogsResponse>;
     /**
-     * usersGetPrefs - Get User Preferences
+     * Get User Preferences
      *
+     * @remarks
      * Get the user preferences by its unique ID.
-    **/
-    usersGetPrefs(req: operations.UsersGetPrefsRequest, config?: AxiosRequestConfig): Promise<operations.UsersGetPrefsResponse>;
+     */
+    usersGetPrefs(req: operations.UsersGetPrefsRequest, security: operations.UsersGetPrefsSecurity, config?: AxiosRequestConfig): Promise<operations.UsersGetPrefsResponse>;
     /**
-     * usersGetSessions - Get User Sessions
+     * Get User Sessions
      *
+     * @remarks
      * Get the user sessions list by its unique ID.
-    **/
-    usersGetSessions(req: operations.UsersGetSessionsRequest, config?: AxiosRequestConfig): Promise<operations.UsersGetSessionsResponse>;
+     */
+    usersGetSessions(req: operations.UsersGetSessionsRequest, security: operations.UsersGetSessionsSecurity, config?: AxiosRequestConfig): Promise<operations.UsersGetSessionsResponse>;
     /**
-     * usersList - List Users
+     * List Users
      *
+     * @remarks
      * Get a list of all the project's users. You can use the query params to filter your results.
-    **/
-    usersList(req: operations.UsersListRequest, config?: AxiosRequestConfig): Promise<operations.UsersListResponse>;
+     */
+    usersList(req: operations.UsersListRequest, security: operations.UsersListSecurity, config?: AxiosRequestConfig): Promise<operations.UsersListResponse>;
     /**
-     * usersUpdatePrefs - Update User Preferences
+     * Update User Preferences
      *
+     * @remarks
      * Update the user preferences by its unique ID. You can pass only the specific settings you wish to update.
-    **/
-    usersUpdatePrefs(req: operations.UsersUpdatePrefsRequest, config?: AxiosRequestConfig): Promise<operations.UsersUpdatePrefsResponse>;
+     */
+    usersUpdatePrefs(req: operations.UsersUpdatePrefsRequest, security: operations.UsersUpdatePrefsSecurity, config?: AxiosRequestConfig): Promise<operations.UsersUpdatePrefsResponse>;
     /**
-     * usersUpdateStatus - Update User Status
+     * Update User Status
      *
+     * @remarks
      * Update the user status by its unique ID.
-    **/
-    usersUpdateStatus(req: operations.UsersUpdateStatusRequest, config?: AxiosRequestConfig): Promise<operations.UsersUpdateStatusResponse>;
+     */
+    usersUpdateStatus(req: operations.UsersUpdateStatusRequest, security: operations.UsersUpdateStatusSecurity, config?: AxiosRequestConfig): Promise<operations.UsersUpdateStatusResponse>;
     /**
-     * usersUpdateVerification - Update Email Verification
+     * Update Email Verification
      *
+     * @remarks
      * Update the user email verification status by its unique ID.
-    **/
-    usersUpdateVerification(req: operations.UsersUpdateVerificationRequest, config?: AxiosRequestConfig): Promise<operations.UsersUpdateVerificationResponse>;
+     */
+    usersUpdateVerification(req: operations.UsersUpdateVerificationRequest, security: operations.UsersUpdateVerificationSecurity, config?: AxiosRequestConfig): Promise<operations.UsersUpdateVerificationResponse>;
 }

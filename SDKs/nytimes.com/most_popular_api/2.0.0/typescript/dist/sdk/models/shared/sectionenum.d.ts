@@ -1,3 +1,10 @@
+/**
+ * Limits the results by one or more sections. You can use
+ *
+ * @remarks
+ * `all-sections` or one or more section names seperated by semicolons. See `viewed/sections.json` call to get a list of sections.
+ *
+ */
 export declare enum SectionEnum {
     Arts = "Arts",
     Automobiles = "Automobiles",
@@ -14,7 +21,7 @@ export declare enum SectionEnum {
     Movies = "Movies",
     Multimedia = "Multimedia",
     NYPercent20Percent2FPercent20Region = "N.Y.%20%2F%20Region",
-    NytNow = "NYT Now",
+    NYTNow = "NYT Now",
     Obituaries = "Obituaries",
     Open = "Open",
     Opinion = "Opinion",

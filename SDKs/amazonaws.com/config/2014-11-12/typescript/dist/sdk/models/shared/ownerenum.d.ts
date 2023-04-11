@@ -1,4 +1,5 @@
 export declare enum OwnerEnum {
     CustomLambda = "CUSTOM_LAMBDA",
-    Aws = "AWS"
+    Aws = "AWS",
+    CustomPolicy = "CUSTOM_POLICY"
 }

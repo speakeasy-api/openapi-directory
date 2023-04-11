@@ -1,5 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbInstance } from "./dbinstance";
-export declare class RebootDbInstanceResult extends SpeakeasyBase {
-    dbInstance?: DbInstance;
+import { DBInstance } from "./dbinstance";
+/**
+ * Success
+ */
+export declare class RebootDBInstanceResult extends SpeakeasyBase {
+    /**
+     * <p>Contains the details of an Amazon Neptune DB instance.</p> <p>This data type is used as a response element in the <a>DescribeDBInstances</a> action.</p>
+     */
+    dbInstance?: DBInstance;
 }

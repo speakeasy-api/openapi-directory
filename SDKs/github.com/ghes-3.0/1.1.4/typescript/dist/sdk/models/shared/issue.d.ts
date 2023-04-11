@@ -1,32 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { SimpleUser } from "./simpleuser";
 import { AuthorAssociationEnum } from "./authorassociationenum";
+import { NullableIntegration } from "./nullableintegration";
+import { NullableMilestone } from "./nullablemilestone";
+import { NullableSimpleUser } from "./nullablesimpleuser";
 import { ReactionRollup } from "./reactionrollup";
 import { Repository } from "./repository";
-/**
- * Simple User
-**/
-export declare class IssueSimpleUser extends SpeakeasyBase {
-    avatarUrl: string;
-    eventsUrl: string;
-    followersUrl: string;
-    followingUrl: string;
-    gistsUrl: string;
-    gravatarId: string;
-    htmlUrl: string;
-    id: number;
-    login: string;
-    nodeId: string;
-    organizationsUrl: string;
-    receivedEventsUrl: string;
-    reposUrl: string;
-    siteAdmin: boolean;
-    starredAt?: string;
-    starredUrl: string;
-    subscriptionsUrl: string;
-    type: string;
-    url: string;
-}
+import { SimpleUser } from "./simpleuser";
 export declare class IssueLabels2 extends SpeakeasyBase {
     color?: string;
     default?: boolean;
@@ -35,55 +14,6 @@ export declare class IssueLabels2 extends SpeakeasyBase {
     name?: string;
     nodeId?: string;
     url?: string;
-}
-/**
- * Simple User
-**/
-export declare class IssueMilestoneSimpleUser extends SpeakeasyBase {
-    avatarUrl: string;
-    eventsUrl: string;
-    followersUrl: string;
-    followingUrl: string;
-    gistsUrl: string;
-    gravatarId: string;
-    htmlUrl: string;
-    id: number;
-    login: string;
-    nodeId: string;
-    organizationsUrl: string;
-    receivedEventsUrl: string;
-    reposUrl: string;
-    siteAdmin: boolean;
-    starredAt?: string;
-    starredUrl: string;
-    subscriptionsUrl: string;
-    type: string;
-    url: string;
-}
-export declare enum IssueMilestoneStateEnum {
-    Open = "open",
-    Closed = "closed"
-}
-/**
- * A collection of related issues and pull requests.
-**/
-export declare class IssueMilestone extends SpeakeasyBase {
-    closedAt: Date;
-    closedIssues: number;
-    createdAt: Date;
-    creator: IssueMilestoneSimpleUser;
-    description: string;
-    dueOn: Date;
-    htmlUrl: string;
-    id: number;
-    labelsUrl: string;
-    nodeId: string;
-    number: number;
-    openIssues: number;
-    state: IssueMilestoneStateEnum;
-    title: string;
-    updatedAt: Date;
-    url: string;
 }
 export declare class IssuePullRequest extends SpeakeasyBase {
     diffUrl: string;
@@ -94,38 +24,78 @@ export declare class IssuePullRequest extends SpeakeasyBase {
 }
 /**
  * Issues are a great way to keep track of tasks, enhancements, and bugs for your projects.
-**/
+ */
 export declare class Issue extends SpeakeasyBase {
     activeLockReason?: string;
-    assignee: IssueSimpleUser;
+    /**
+     * Simple User
+     */
+    assignee: NullableSimpleUser;
     assignees?: SimpleUser[];
+    /**
+     * How the author is associated with the repository.
+     */
     authorAssociation: AuthorAssociationEnum;
+    /**
+     * Contents of the issue
+     */
     body?: string;
     bodyHtml?: string;
     bodyText?: string;
     closedAt: Date;
-    closedBy?: IssueSimpleUser;
+    /**
+     * Simple User
+     */
+    closedBy?: NullableSimpleUser;
     comments: number;
     commentsUrl: string;
     createdAt: Date;
+    draft?: boolean;
     eventsUrl: string;
     htmlUrl: string;
     id: number;
+    /**
+     * Labels to associate with this issue; pass one or more label names to replace the set of labels on this issue; send an empty array to clear all labels from the issue; note that the labels are silently dropped for users without push access to the repository
+     */
     labels: any[];
     labelsUrl: string;
     locked: boolean;
-    milestone: IssueMilestone;
+    /**
+     * A collection of related issues and pull requests.
+     */
+    milestone: NullableMilestone;
     nodeId: string;
+    /**
+     * Number uniquely identifying the issue within its repository
+     */
     number: number;
-    performedViaGithubApp?: Record<string, any>;
+    /**
+     * GitHub apps are a new way to extend GitHub. They can be installed directly on organizations and user accounts and granted access to specific repositories. They come with granular permissions and built-in webhooks. GitHub apps are first class actors within GitHub.
+     */
+    performedViaGithubApp?: NullableIntegration;
     pullRequest?: IssuePullRequest;
     reactions?: ReactionRollup;
+    /**
+     * A git repository
+     */
     repository?: Repository;
     repositoryUrl: string;
+    /**
+     * State of the issue; either 'open' or 'closed'
+     */
     state: string;
     timelineUrl?: string;
+    /**
+     * Title of the issue
+     */
     title: string;
     updatedAt: Date;
+    /**
+     * URL for the issue
+     */
     url: string;
-    user: IssueSimpleUser;
+    /**
+     * Simple User
+     */
+    user: NullableSimpleUser;
 }

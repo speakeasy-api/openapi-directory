@@ -47,7 +47,6 @@ export * from "./multiplechoicequestion";
 export * from "./multiplechoicesubmission";
 export * from "./name";
 export * from "./registration";
-export * from "./security";
 export * from "./shareddrivefile";
 export * from "./shortanswersubmission";
 export * from "./statehistory";

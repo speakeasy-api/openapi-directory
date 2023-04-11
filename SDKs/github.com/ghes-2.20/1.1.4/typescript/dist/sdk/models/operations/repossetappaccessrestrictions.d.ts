@@ -1,20 +1,31 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReposSetAppAccessRestrictionsPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ReposSetAppAccessRestrictionsRequestBody1 extends SpeakeasyBase {
+    /**
+     * apps parameter
+     */
+    apps: string[];
+}
+export declare class ReposSetAppAccessRestrictionsRequest extends SpeakeasyBase {
+    requestBody?: any;
+    /**
+     * The name of the branch.
+     */
     branch: string;
     owner: string;
     repo: string;
 }
-export declare class ReposSetAppAccessRestrictionsRequestBody1 extends SpeakeasyBase {
-    apps: string[];
-}
-export declare class ReposSetAppAccessRestrictionsRequest extends SpeakeasyBase {
-    pathParams: ReposSetAppAccessRestrictionsPathParams;
-    request?: any;
-}
 export declare class ReposSetAppAccessRestrictionsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    integrations?: Record<string, any>[];
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
+    integrations?: shared.Integration[];
+    /**
+     * Validation failed
+     */
     validationError?: shared.ValidationError;
 }

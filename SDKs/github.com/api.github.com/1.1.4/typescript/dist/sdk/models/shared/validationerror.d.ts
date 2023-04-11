@@ -9,7 +9,7 @@ export declare class ValidationErrorErrors extends SpeakeasyBase {
 }
 /**
  * Validation Error
-**/
+ */
 export declare class ValidationError extends SpeakeasyBase {
     documentationUrl: string;
     errors?: ValidationErrorErrors[];

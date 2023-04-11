@@ -1,21 +1,34 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DatabaseCreateCollectionRequestBody extends SpeakeasyBase {
-    name: string;
-    read: string[];
-    rules: string[];
-    write: string[];
-}
+import { AxiosResponse } from "axios";
 export declare class DatabaseCreateCollectionSecurity extends SpeakeasyBase {
-    key: shared.SchemeKey;
-    project: shared.SchemeProject;
+    key: string;
+    project: string;
 }
-export declare class DatabaseCreateCollectionRequest extends SpeakeasyBase {
-    request?: DatabaseCreateCollectionRequestBody;
-    security: DatabaseCreateCollectionSecurity;
+export declare class DatabaseCreateCollectionRequestBody extends SpeakeasyBase {
+    /**
+     * Collection name. Max length: 128 chars.
+     */
+    name: string;
+    /**
+     * An array of strings with read permissions. By default no user is granted with any read permissions. [learn more about permissions](/docs/permissions) and get a full list of available permissions.
+     */
+    read: string[];
+    /**
+     * Array of [rule objects](/docs/rules). Each rule define a collection field name, data type and validation.
+     */
+    rules: string[];
+    /**
+     * An array of strings with write permissions. By default no user is granted with any write permissions. [learn more about permissions](/docs/permissions) and get a full list of available permissions.
+     */
+    write: string[];
 }
 export declare class DatabaseCreateCollectionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Collection
+     */
     collection?: shared.Collection;
 }

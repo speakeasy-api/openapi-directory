@@ -1,5 +1,11 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * To manage product rate plan charge tiers, use the [Product Rate Plan Charges](https://www.zuora.com/developer/api-reference/#tag/Product-Rate-Plan-Charges) operations instead to update the corresponding product rate plan charge with all the tiers.
+ *
+ * @remarks
+ *
+ */
 export declare class ProductRatePlanChargeTiers {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,16 +15,17 @@ export declare class ProductRatePlanChargeTiers {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * objectGetProductRatePlanChargeTier - CRUD: Retrieve a product rate plan charge tier
-    **/
-    objectGetProductRatePlanChargeTier(req: operations.ObjectGetProductRatePlanChargeTierRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGetProductRatePlanChargeTierResponse>;
+     * CRUD: Retrieve a product rate plan charge tier
+     */
+    objectGETProductRatePlanChargeTier(req: operations.ObjectGETProductRatePlanChargeTierRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGETProductRatePlanChargeTierResponse>;
     /**
-     * objectPutProductRatePlanChargeTier - CRUD: Update a product rate plan charge tier
+     * CRUD: Update a product rate plan charge tier
      *
+     * @remarks
      * Updates the price of a product rate plan charge tier.
      *
      * To make other updates to product rate plan charge tiers, use [CRUD: Update a product rate plan charge](https://www.zuora.com/developer/api-reference/#operation/Object_PUTProductRatePlanCharge) and specify `ProductRatePlanChargeTierData` in the request body.
      *
-    **/
-    objectPutProductRatePlanChargeTier(req: operations.ObjectPutProductRatePlanChargeTierRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPutProductRatePlanChargeTierResponse>;
+     */
+    objectPUTProductRatePlanChargeTier(req: operations.ObjectPUTProductRatePlanChargeTierRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPUTProductRatePlanChargeTierResponse>;
 }

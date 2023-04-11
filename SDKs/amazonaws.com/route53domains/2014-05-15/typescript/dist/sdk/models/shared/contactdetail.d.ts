@@ -4,7 +4,7 @@ import { CountryCodeEnum } from "./countrycodeenum";
 import { ExtraParam } from "./extraparam";
 /**
  * ContactDetail includes the following elements.
-**/
+ */
 export declare class ContactDetail extends SpeakeasyBase {
     addressLine1?: string;
     addressLine2?: string;

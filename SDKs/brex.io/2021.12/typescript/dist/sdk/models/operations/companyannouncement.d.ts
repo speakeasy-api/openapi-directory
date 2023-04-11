@@ -1,18 +1,42 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class CompanyAnnouncementPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class CompanyAnnouncementSecurity extends SpeakeasyBase {
-    userKey: shared.SchemeUserKey;
+    userKey: string;
 }
 export declare class CompanyAnnouncementRequest extends SpeakeasyBase {
-    pathParams: CompanyAnnouncementPathParams;
-    security: CompanyAnnouncementSecurity;
+    /**
+     * announcement hex ID
+     */
+    id: string;
+}
+/**
+ * Detailed information about the error
+ */
+export declare class CompanyAnnouncementDefaultApplicationJSON extends SpeakeasyBase {
+    code: number;
+    fault?: string;
+    message: string;
+    tag: string;
+}
+export declare class CompanyAnnouncement200ApplicationJSON extends SpeakeasyBase {
+    countryCode?: string;
+    id?: string;
+    registrationNumber?: string;
+    structured?: string;
+    text?: string;
+    time?: Date;
+    type?: string;
 }
 export declare class CompanyAnnouncementResponse extends SpeakeasyBase {
-    companyAnnouncement200ApplicationJSONAnies?: any[];
-    companyAnnouncementDefaultApplicationJSONAny?: any;
+    /**
+     * List of announcements
+     */
+    companyAnnouncement200ApplicationJSONObjects?: CompanyAnnouncement200ApplicationJSON[];
+    /**
+     * Detailed information about the error
+     */
+    companyAnnouncementDefaultApplicationJSONObject?: CompanyAnnouncementDefaultApplicationJSON;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

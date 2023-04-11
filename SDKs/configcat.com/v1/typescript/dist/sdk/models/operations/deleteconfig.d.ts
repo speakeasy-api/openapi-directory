@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteConfigPathParams extends SpeakeasyBase {
-    configId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteConfigRequest extends SpeakeasyBase {
-    pathParams: DeleteConfigPathParams;
+    /**
+     * The identifier of the Config.
+     */
+    configId: string;
 }
 export declare class DeleteConfigResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

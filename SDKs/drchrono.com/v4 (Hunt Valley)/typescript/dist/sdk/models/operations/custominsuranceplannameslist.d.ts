@@ -1,6 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CustomInsurancePlanNamesListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class CustomInsurancePlanNamesListSecurity extends SpeakeasyBase {
+    drchronoOauth2: string;
+}
+export declare class CustomInsurancePlanNamesListRequest extends SpeakeasyBase {
     cursor?: string;
     doctor?: number;
     name?: string;
@@ -8,23 +12,29 @@ export declare class CustomInsurancePlanNamesListQueryParams extends SpeakeasyBa
     since?: string;
     user?: number;
 }
-export declare class CustomInsurancePlanNamesListSecurity extends SpeakeasyBase {
-    drchronoOauth2: shared.SchemeDrchronoOauth2;
-}
 /**
  * Paginated Result
-**/
-export declare class CustomInsurancePlanNamesList200ApplicationJson extends SpeakeasyBase {
+ */
+export declare class CustomInsurancePlanNamesList200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * result data
+     */
     data?: shared.CustomInsurancePlanName[];
+    /**
+     * Next Paginated page
+     */
     next?: string;
+    /**
+     * Previous paginated page
+     */
     previous?: string;
-}
-export declare class CustomInsurancePlanNamesListRequest extends SpeakeasyBase {
-    queryParams: CustomInsurancePlanNamesListQueryParams;
-    security: CustomInsurancePlanNamesListSecurity;
 }
 export declare class CustomInsurancePlanNamesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    customInsurancePlanNamesList200ApplicationJSONObject?: CustomInsurancePlanNamesList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
+    customInsurancePlanNamesList200ApplicationJSONObject?: CustomInsurancePlanNamesList200ApplicationJSON;
 }

@@ -15,6 +15,9 @@ export declare enum PagesHttpsCertificateStateEnum {
 }
 export declare class PagesHttpsCertificate extends SpeakeasyBase {
     description: string;
+    /**
+     * Array of the domain set and its alternate name (if it is configured)
+     */
     domains: any[];
     expiresAt?: Date;
     state: PagesHttpsCertificateStateEnum;

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeEventCategoriesXAmzTargetEnum {
-    AmazonDmSv20160101DescribeEventCategories = "AmazonDMSv20160101.DescribeEventCategories"
+    AmazonDMSv20160101DescribeEventCategories = "AmazonDMSv20160101.DescribeEventCategories"
 }
-export declare class DescribeEventCategoriesHeaders extends SpeakeasyBase {
+export declare class DescribeEventCategoriesRequest extends SpeakeasyBase {
+    describeEventCategoriesMessage: shared.DescribeEventCategoriesMessage;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,12 +15,12 @@ export declare class DescribeEventCategoriesHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeEventCategoriesXAmzTargetEnum;
 }
-export declare class DescribeEventCategoriesRequest extends SpeakeasyBase {
-    headers: DescribeEventCategoriesHeaders;
-    request: shared.DescribeEventCategoriesMessage;
-}
 export declare class DescribeEventCategoriesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeEventCategoriesResponse?: shared.DescribeEventCategoriesResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

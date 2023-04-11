@@ -1,4 +1,4 @@
-export declare enum ObEntryStatus1CodeEnum {
+export declare enum OBEntryStatus1CodeEnum {
     Booked = "Booked",
     Pending = "Pending"
 }

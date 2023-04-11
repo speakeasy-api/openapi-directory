@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum CreateIpSetXAmzTargetEnum {
-    Awswaf20150824CreateIpSet = "AWSWAF_20150824.CreateIPSet"
+import { AxiosResponse } from "axios";
+export declare enum CreateIPSetXAmzTargetEnum {
+    AWSWAF20150824CreateIPSet = "AWSWAF_20150824.CreateIPSet"
 }
-export declare class CreateIpSetHeaders extends SpeakeasyBase {
+export declare class CreateIPSetRequest extends SpeakeasyBase {
+    createIPSetRequest: shared.CreateIPSetRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,20 +13,38 @@ export declare class CreateIpSetHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: CreateIpSetXAmzTargetEnum;
+    xAmzTarget: CreateIPSetXAmzTargetEnum;
 }
-export declare class CreateIpSetRequest extends SpeakeasyBase {
-    headers: CreateIpSetHeaders;
-    request: shared.CreateIpSetRequest;
-}
-export declare class CreateIpSetResponse extends SpeakeasyBase {
+export declare class CreateIPSetResponse extends SpeakeasyBase {
     contentType: string;
-    createIPSetResponse?: shared.CreateIpSetResponse;
+    /**
+     * Success
+     */
+    createIPSetResponse?: shared.CreateIPSetResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * WAFDisallowedNameException
+     */
     wafDisallowedNameException?: any;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFInvalidAccountException
+     */
     wafInvalidAccountException?: any;
+    /**
+     * WAFInvalidParameterException
+     */
     wafInvalidParameterException?: any;
+    /**
+     * WAFLimitsExceededException
+     */
     wafLimitsExceededException?: any;
+    /**
+     * WAFStaleDataException
+     */
     wafStaleDataException?: any;
 }

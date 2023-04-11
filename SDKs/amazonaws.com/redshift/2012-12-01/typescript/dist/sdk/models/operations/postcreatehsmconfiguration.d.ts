@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateHsmConfigurationActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateHsmConfigurationActionEnum {
     CreateHsmConfiguration = "CreateHsmConfiguration"
 }
-export declare enum PostCreateHsmConfigurationVersionEnum {
+export declare enum POSTCreateHsmConfigurationVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostCreateHsmConfigurationQueryParams extends SpeakeasyBase {
-    action: PostCreateHsmConfigurationActionEnum;
-    version: PostCreateHsmConfigurationVersionEnum;
-}
-export declare class PostCreateHsmConfigurationHeaders extends SpeakeasyBase {
+export declare class POSTCreateHsmConfigurationRequest extends SpeakeasyBase {
+    action: POSTCreateHsmConfigurationActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateHsmConfigurationVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateHsmConfigurationHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateHsmConfigurationRequest extends SpeakeasyBase {
-    queryParams: PostCreateHsmConfigurationQueryParams;
-    headers: PostCreateHsmConfigurationHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateHsmConfigurationResponse extends SpeakeasyBase {
+export declare class POSTCreateHsmConfigurationResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

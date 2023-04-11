@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ArticleFileDetailsPathParams extends SpeakeasyBase {
-    articleId: number;
-    fileId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ArticleFileDetailsRequest extends SpeakeasyBase {
-    pathParams: ArticleFileDetailsPathParams;
+    /**
+     * Article Unique identifier
+     */
+    articleId: number;
+    /**
+     * File Unique identifier
+     */
+    fileId: number;
 }
 export declare class ArticleFileDetailsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * OK. File representation
+     */
     publicFile?: shared.PublicFile;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

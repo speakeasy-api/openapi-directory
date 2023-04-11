@@ -1,0 +1,29 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+export declare class ProxyCreateOrModifyProductRatePlanChargeChargeModelConfigurationItem extends SpeakeasyBase {
+    /**
+     * The name of the field that is specified for a specific charge model.
+     *
+     * @remarks
+     *
+     * Configuration keys supported are as follows:
+     *
+     * * `formula` (only available if you have the Multi-Attribute Pricing charge model enabled. The charge model is available for customers with Enterprise and Nine editions by default. If you are a Growth customer, see [Zuora Editions](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/C_Zuora_Editions) for pricing information.)
+     * * `customFieldPerUnitRate` (only available if you have the Pre-Rated Per Unit Pricing charge model enabled. The charge model is available for customers with Enterprise and Nine editions by default. If you are a Growth customer, see [Zuora Editions](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/C_Zuora_Editions) for pricing information.)
+     * * `customFieldTotalAmount` (only available if you have the Pre-Rated Pricing model enabled. The charge model is available for customers with Enterprise and Nine editions by default. If you are a Growth customer, see [Zuora Editions](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/C_Zuora_Editions) for pricing information.)
+     *
+     */
+    key?: string;
+    /**
+     * The value of the field that is specified in the `Key` field.
+     *
+     * @remarks
+     *
+     * Possible values are follows:
+     *
+     * * A valid pricing formula to calculate actual rating amount for each usage record. For example, `usageQuantity()*10`. Use it with Key `formula` when the Multi-Attribute Pricing charge model is used. The charge model is available for customers with Enterprise and Nine editions by default. If you are a Growth customer, see [Zuora Editions](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/C_Zuora_Editions) for pricing information.
+     * * A name of a usage custom field that carries the per-unit rate for a usage record. For example, `perUnitRate__c`. Use it with Key `customFieldPerUnitRate` when the Pre-Rated Per Unit Pricing charge model is used. The charge model is available for customers with Enterprise and Nine editions by default. If you are a Growth customer, see [Zuora Editions](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/C_Zuora_Editions) for pricing information.
+     * * A name of a usage custom field that carries the total amount for a usage record. For example, `totalAmount__c`. Use it with Key `customFieldTotalAmount` when the Pre-Rated Pricing model is used. The charge model is available for customers with Enterprise and Nine editions by default. If you are a Growth customer, see [Zuora Editions](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/C_Zuora_Editions) for pricing information.
+     *
+     */
+    value?: string;
+}

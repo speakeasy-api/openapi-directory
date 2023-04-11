@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteDbClusterSnapshotActionEnum {
-    DeleteDbClusterSnapshot = "DeleteDBClusterSnapshot"
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteDBClusterSnapshotActionEnum {
+    DeleteDBClusterSnapshot = "DeleteDBClusterSnapshot"
 }
-export declare enum GetDeleteDbClusterSnapshotVersionEnum {
+export declare enum GETDeleteDBClusterSnapshotVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class GetDeleteDbClusterSnapshotQueryParams extends SpeakeasyBase {
-    action: GetDeleteDbClusterSnapshotActionEnum;
+export declare class GETDeleteDBClusterSnapshotRequest extends SpeakeasyBase {
+    action: GETDeleteDBClusterSnapshotActionEnum;
+    /**
+     * <p>The identifier of the DB cluster snapshot to delete.</p> <p>Constraints: Must be the name of an existing DB cluster snapshot in the <code>available</code> state.</p>
+     */
     dbClusterSnapshotIdentifier: string;
-    version: GetDeleteDbClusterSnapshotVersionEnum;
-}
-export declare class GetDeleteDbClusterSnapshotHeaders extends SpeakeasyBase {
+    version: GETDeleteDBClusterSnapshotVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDeleteDbClusterSnapshotHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteDbClusterSnapshotRequest extends SpeakeasyBase {
-    queryParams: GetDeleteDbClusterSnapshotQueryParams;
-    headers: GetDeleteDbClusterSnapshotHeaders;
-}
-export declare class GetDeleteDbClusterSnapshotResponse extends SpeakeasyBase {
+export declare class GETDeleteDBClusterSnapshotResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

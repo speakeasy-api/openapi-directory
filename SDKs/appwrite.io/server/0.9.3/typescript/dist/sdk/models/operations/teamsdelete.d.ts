@@ -1,18 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class TeamsDeletePathParams extends SpeakeasyBase {
-    teamId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class TeamsDeleteSecurity extends SpeakeasyBase {
-    jwt: shared.SchemeJwt;
-    key: shared.SchemeKey;
-    project: shared.SchemeProject;
+    jwt: string;
+    key: string;
+    project: string;
 }
 export declare class TeamsDeleteRequest extends SpeakeasyBase {
-    pathParams: TeamsDeletePathParams;
-    security: TeamsDeleteSecurity;
+    /**
+     * Team unique ID.
+     */
+    teamId: string;
 }
 export declare class TeamsDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

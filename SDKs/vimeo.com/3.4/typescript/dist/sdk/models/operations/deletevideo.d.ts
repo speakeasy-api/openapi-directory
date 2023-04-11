@@ -1,17 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteVideoPathParams extends SpeakeasyBase {
-    videoId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteVideoSecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
+    oauth2: string;
 }
 export declare class DeleteVideoRequest extends SpeakeasyBase {
-    pathParams: DeleteVideoPathParams;
-    security: DeleteVideoSecurity;
+    /**
+     * The ID of the video.
+     */
+    videoId: number;
 }
 export declare class DeleteVideoResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The authenticated user doesn't own the video and can't delete it.
+     */
     legacyError?: shared.LegacyError;
 }

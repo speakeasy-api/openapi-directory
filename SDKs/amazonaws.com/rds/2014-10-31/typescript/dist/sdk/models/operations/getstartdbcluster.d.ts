@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetStartDbClusterActionEnum {
-    StartDbCluster = "StartDBCluster"
+import { AxiosResponse } from "axios";
+export declare enum GETStartDBClusterActionEnum {
+    StartDBCluster = "StartDBCluster"
 }
-export declare enum GetStartDbClusterVersionEnum {
+export declare enum GETStartDBClusterVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class GetStartDbClusterQueryParams extends SpeakeasyBase {
-    action: GetStartDbClusterActionEnum;
+export declare class GETStartDBClusterRequest extends SpeakeasyBase {
+    action: GETStartDBClusterActionEnum;
+    /**
+     * The DB cluster identifier of the Amazon Aurora DB cluster to be started. This parameter is stored as a lowercase string.
+     */
     dbClusterIdentifier: string;
-    version: GetStartDbClusterVersionEnum;
-}
-export declare class GetStartDbClusterHeaders extends SpeakeasyBase {
+    version: GETStartDBClusterVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetStartDbClusterHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetStartDbClusterRequest extends SpeakeasyBase {
-    queryParams: GetStartDbClusterQueryParams;
-    headers: GetStartDbClusterHeaders;
-}
-export declare class GetStartDbClusterResponse extends SpeakeasyBase {
+export declare class GETStartDBClusterResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

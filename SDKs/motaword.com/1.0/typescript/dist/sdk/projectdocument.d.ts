@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class ProjectDocument {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,43 +9,59 @@ export declare class ProjectDocument {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createProjectDocument - Upload a new document
-     *
      * Upload a new document
-    **/
+     *
+     * @remarks
+     * Upload a new document
+     */
     createProjectDocument(req: operations.CreateProjectDocumentRequest, config?: AxiosRequestConfig): Promise<operations.CreateProjectDocumentResponse>;
     /**
-     * deleteProjectDocument - Delete the document
-     *
      * Delete the document
-    **/
+     *
+     * @remarks
+     * Delete the document
+     */
     deleteProjectDocument(req: operations.DeleteProjectDocumentRequest, config?: AxiosRequestConfig): Promise<operations.DeleteProjectDocumentResponse>;
     /**
-     * downloadProjectDocument - Download a document
+     * Download a project source document
      *
-     * Download a document
-    **/
+     * @remarks
+     * Download an actual source file you uploaded to be translated in your project.
+     */
     downloadProjectDocument(req: operations.DownloadProjectDocumentRequest, config?: AxiosRequestConfig): Promise<operations.DownloadProjectDocumentResponse>;
     /**
-     * downloadTranslatedDocumentForLanguage - Download single translated file
-    **/
+     * Download translated document
+     *
+     * @remarks
+     * Download translated document in the given target language.
+     */
     downloadTranslatedDocumentForLanguage(req: operations.DownloadTranslatedDocumentForLanguageRequest, config?: AxiosRequestConfig): Promise<operations.DownloadTranslatedDocumentForLanguageResponse>;
     /**
-     * getProjectDocument - Get single document
+     * View a project source document
      *
-     * Get single document
-    **/
+     * @remarks
+     * View the details of a source file you uploaded to be translated in your project.
+     */
     getProjectDocument(req: operations.GetProjectDocumentRequest, config?: AxiosRequestConfig): Promise<operations.GetProjectDocumentResponse>;
     /**
-     * getProjectDocuments - Get a list of documents
+     * View project source documents
      *
-     * Get a list of documents
-    **/
+     * @remarks
+     * Get a list of source files you uploaded to be translated in your project.
+     */
     getProjectDocuments(req: operations.GetProjectDocumentsRequest, config?: AxiosRequestConfig): Promise<operations.GetProjectDocumentsResponse>;
     /**
-     * updateProjectDocument - Update the document.
+     * Update the document.
      *
+     * @remarks
      * Update the document. File name and contents will replaced with the new one.
-    **/
-    updateProjectDocument(req: operations.UpdateProjectDocumentRequest, config?: AxiosRequestConfig): Promise<operations.UpdateProjectDocumentResponse>;
+     */
+    updateProjectDocumentJson(req: operations.UpdateProjectDocumentJsonRequest, config?: AxiosRequestConfig): Promise<operations.UpdateProjectDocumentJsonResponse>;
+    /**
+     * Update the document.
+     *
+     * @remarks
+     * Update the document. File name and contents will replaced with the new one.
+     */
+    updateProjectDocumentMultipart(req: operations.UpdateProjectDocumentMultipartRequest, config?: AxiosRequestConfig): Promise<operations.UpdateProjectDocumentMultipartResponse>;
 }

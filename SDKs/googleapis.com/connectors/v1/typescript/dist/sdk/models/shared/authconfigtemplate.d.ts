@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ConfigVariableTemplate } from "./configvariabletemplate";
+/**
+ * The type of authentication configured.
+ */
 export declare enum AuthConfigTemplateAuthTypeEnum {
     AuthTypeUnspecified = "AUTH_TYPE_UNSPECIFIED",
     UserPassword = "USER_PASSWORD",
@@ -10,8 +13,22 @@ export declare enum AuthConfigTemplateAuthTypeEnum {
 }
 /**
  * AuthConfigTemplate defines required field over an authentication type.
-**/
+ */
 export declare class AuthConfigTemplate extends SpeakeasyBase {
+    /**
+     * The type of authentication configured.
+     */
     authType?: AuthConfigTemplateAuthTypeEnum;
+    /**
+     * Config variables to describe an `AuthConfig` for a `Connection`.
+     */
     configVariableTemplates?: ConfigVariableTemplate[];
+    /**
+     * Connector specific description for an authentication template.
+     */
+    description?: string;
+    /**
+     * Display name for authentication template.
+     */
+    displayName?: string;
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostUpdateConfigurationSetTrackingOptionsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTUpdateConfigurationSetTrackingOptionsActionEnum {
     UpdateConfigurationSetTrackingOptions = "UpdateConfigurationSetTrackingOptions"
 }
-export declare enum PostUpdateConfigurationSetTrackingOptionsVersionEnum {
+export declare enum POSTUpdateConfigurationSetTrackingOptionsVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostUpdateConfigurationSetTrackingOptionsQueryParams extends SpeakeasyBase {
-    action: PostUpdateConfigurationSetTrackingOptionsActionEnum;
-    version: PostUpdateConfigurationSetTrackingOptionsVersionEnum;
-}
-export declare class PostUpdateConfigurationSetTrackingOptionsHeaders extends SpeakeasyBase {
+export declare class POSTUpdateConfigurationSetTrackingOptionsRequest extends SpeakeasyBase {
+    action: POSTUpdateConfigurationSetTrackingOptionsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTUpdateConfigurationSetTrackingOptionsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostUpdateConfigurationSetTrackingOptionsHeaders extends Sp
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostUpdateConfigurationSetTrackingOptionsRequest extends SpeakeasyBase {
-    queryParams: PostUpdateConfigurationSetTrackingOptionsQueryParams;
-    headers: PostUpdateConfigurationSetTrackingOptionsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostUpdateConfigurationSetTrackingOptionsResponse extends SpeakeasyBase {
+export declare class POSTUpdateConfigurationSetTrackingOptionsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

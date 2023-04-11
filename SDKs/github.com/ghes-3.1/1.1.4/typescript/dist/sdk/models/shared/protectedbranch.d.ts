@@ -1,12 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Team } from "./team";
+import { BranchRestrictionPolicy } from "./branchrestrictionpolicy";
+import { Integration } from "./integration";
 import { SimpleUser } from "./simpleuser";
 import { StatusCheckPolicy } from "./statuscheckpolicy";
-import { BranchRestrictionPolicy } from "./branchrestrictionpolicy";
+import { Team } from "./team";
 export declare class ProtectedBranchAllowDeletions extends SpeakeasyBase {
     enabled: boolean;
 }
 export declare class ProtectedBranchAllowForcePushes extends SpeakeasyBase {
+    enabled: boolean;
+}
+export declare class ProtectedBranchBlockCreations extends SpeakeasyBase {
     enabled: boolean;
 }
 export declare class ProtectedBranchEnforceAdmins extends SpeakeasyBase {
@@ -20,6 +24,7 @@ export declare class ProtectedBranchRequiredLinearHistory extends SpeakeasyBase 
     enabled: boolean;
 }
 export declare class ProtectedBranchRequiredPullRequestReviewsDismissalRestrictions extends SpeakeasyBase {
+    apps?: Integration[];
     teams: Team[];
     teamsUrl: string;
     url: string;
@@ -39,16 +44,23 @@ export declare class ProtectedBranchRequiredSignatures extends SpeakeasyBase {
 }
 /**
  * Branch protections protect branches
-**/
+ */
 export declare class ProtectedBranch extends SpeakeasyBase {
     allowDeletions?: ProtectedBranchAllowDeletions;
     allowForcePushes?: ProtectedBranchAllowForcePushes;
+    blockCreations?: ProtectedBranchBlockCreations;
     enforceAdmins?: ProtectedBranchEnforceAdmins;
     requiredConversationResolution?: ProtectedBranchRequiredConversationResolution;
     requiredLinearHistory?: ProtectedBranchRequiredLinearHistory;
     requiredPullRequestReviews?: ProtectedBranchRequiredPullRequestReviews;
     requiredSignatures?: ProtectedBranchRequiredSignatures;
+    /**
+     * Status Check Policy
+     */
     requiredStatusChecks?: StatusCheckPolicy;
+    /**
+     * Branch Restriction Policy
+     */
     restrictions?: BranchRestrictionPolicy;
     url: string;
 }

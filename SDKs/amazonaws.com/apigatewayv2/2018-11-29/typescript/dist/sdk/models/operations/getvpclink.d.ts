@@ -1,9 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetVpcLinkPathParams extends SpeakeasyBase {
-    vpcLinkId: string;
-}
-export declare class GetVpcLinkHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetVpcLinkRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,15 +9,25 @@ export declare class GetVpcLinkHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class GetVpcLinkRequest extends SpeakeasyBase {
-    pathParams: GetVpcLinkPathParams;
-    headers: GetVpcLinkHeaders;
+    /**
+     * The ID of the VPC link.
+     */
+    vpcLinkId: string;
 }
 export declare class GetVpcLinkResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getVpcLinkResponse?: shared.GetVpcLinkResponse;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

@@ -1,44 +1,78 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class StorageBucketsPatchPathParams extends SpeakeasyBase {
-    bucket: string;
-}
-export declare enum StorageBucketsPatchProjectionEnum {
-    Full = "full",
-    NoAcl = "noAcl"
-}
-export declare class StorageBucketsPatchQueryParams extends SpeakeasyBase {
-    alt?: shared.AltEnum;
-    fields?: string;
-    ifMetagenerationMatch?: string;
-    ifMetagenerationNotMatch?: string;
-    key?: string;
-    oauthToken?: string;
-    prettyPrint?: boolean;
-    projection?: StorageBucketsPatchProjectionEnum;
-    quotaUser?: string;
-    userIp?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class StorageBucketsPatchSecurityOption1 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class StorageBucketsPatchSecurityOption2 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class StorageBucketsPatchSecurity extends SpeakeasyBase {
     option1?: StorageBucketsPatchSecurityOption1;
     option2?: StorageBucketsPatchSecurityOption2;
 }
+/**
+ * Set of properties to return. Defaults to full.
+ */
+export declare enum StorageBucketsPatchProjectionEnum {
+    Full = "full",
+    NoAcl = "noAcl"
+}
 export declare class StorageBucketsPatchRequest extends SpeakeasyBase {
-    pathParams: StorageBucketsPatchPathParams;
-    queryParams: StorageBucketsPatchQueryParams;
-    request?: shared.Bucket;
-    security: StorageBucketsPatchSecurity;
+    bucket1?: shared.Bucket;
+    /**
+     * Data format for the response.
+     */
+    alt?: shared.AltEnum;
+    /**
+     * Name of a bucket.
+     */
+    bucketPathParameter: string;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * Makes the return of the bucket metadata conditional on whether the bucket's current metageneration matches the given value.
+     */
+    ifMetagenerationMatch?: string;
+    /**
+     * Makes the return of the bucket metadata conditional on whether the bucket's current metageneration does not match the given value.
+     */
+    ifMetagenerationNotMatch?: string;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauthToken?: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * Set of properties to return. Defaults to full.
+     */
+    projection?: StorageBucketsPatchProjectionEnum;
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    userIp?: string;
 }
 export declare class StorageBucketsPatchResponse extends SpeakeasyBase {
+    /**
+     * Successful response
+     */
     bucket?: shared.Bucket;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

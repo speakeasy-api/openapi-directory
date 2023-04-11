@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostUploadSshPublicKeyActionEnum {
-    UploadSshPublicKey = "UploadSSHPublicKey"
+import { AxiosResponse } from "axios";
+export declare enum POSTUploadSSHPublicKeyActionEnum {
+    UploadSSHPublicKey = "UploadSSHPublicKey"
 }
-export declare enum PostUploadSshPublicKeyVersionEnum {
+export declare enum POSTUploadSSHPublicKeyVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostUploadSshPublicKeyQueryParams extends SpeakeasyBase {
-    action: PostUploadSshPublicKeyActionEnum;
-    version: PostUploadSshPublicKeyVersionEnum;
-}
-export declare class PostUploadSshPublicKeyHeaders extends SpeakeasyBase {
+export declare class POSTUploadSSHPublicKeyRequest extends SpeakeasyBase {
+    action: POSTUploadSSHPublicKeyActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTUploadSSHPublicKeyVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostUploadSshPublicKeyHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostUploadSshPublicKeyRequest extends SpeakeasyBase {
-    queryParams: PostUploadSshPublicKeyQueryParams;
-    headers: PostUploadSshPublicKeyHeaders;
-    request?: Uint8Array;
-}
-export declare class PostUploadSshPublicKeyResponse extends SpeakeasyBase {
+export declare class POSTUploadSSHPublicKeyResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

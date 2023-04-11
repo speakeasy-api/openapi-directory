@@ -1,24 +1,46 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class OrgsSetMembershipForUserPathParams extends SpeakeasyBase {
-    org: string;
-    username: string;
-}
+import { AxiosResponse } from "axios";
+/**
+ * The role to give the user in the organization. Can be one of:
+ *
+ * @remarks
+ * \* `admin` - The user will become an owner of the organization.
+ * \* `member` - The user will become a non-owner member of the organization.
+ */
 export declare enum OrgsSetMembershipForUserRequestBodyRoleEnum {
     Admin = "admin",
     Member = "member"
 }
 export declare class OrgsSetMembershipForUserRequestBody extends SpeakeasyBase {
+    /**
+     * The role to give the user in the organization. Can be one of:
+     *
+     * @remarks
+     * \* `admin` - The user will become an owner of the organization.
+     * \* `member` - The user will become a non-owner member of the organization.
+     */
     role?: OrgsSetMembershipForUserRequestBodyRoleEnum;
 }
 export declare class OrgsSetMembershipForUserRequest extends SpeakeasyBase {
-    pathParams: OrgsSetMembershipForUserPathParams;
-    request?: OrgsSetMembershipForUserRequestBody;
+    requestBody?: OrgsSetMembershipForUserRequestBody;
+    org: string;
+    username: string;
 }
 export declare class OrgsSetMembershipForUserResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Forbidden
+     */
     basicError?: shared.BasicError;
+    /**
+     * Response
+     */
     orgMembership?: shared.OrgMembership;
+    /**
+     * Validation failed
+     */
     validationError?: shared.ValidationError;
 }

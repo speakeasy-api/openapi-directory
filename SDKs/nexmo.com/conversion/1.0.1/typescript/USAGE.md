@@ -1,28 +1,28 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { SmsConversionRequest, SmsConversionResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  SmsConversionRequest,
+  SmsConversionResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  DeliveredEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
     option1: {
-      apiKey: {
-        apiKey: "YOUR_API_KEY_HERE",
-      },
-      apiSecret: {
-        apiKey: "YOUR_API_KEY_HERE",
-      },
+      apiKey: "YOUR_API_KEY_HERE",
+      apiSecret: "YOUR_API_KEY_HERE",
     },
-  }
-));
-    
-const req: SmsConversionRequest = {
-  queryParams: {
-    delivered: "sit",
-    messageId: "voluptas",
-    timestamp: "culpa",
   },
+});
+
+const req: SmsConversionRequest = {
+  delivered: DeliveredEnum.Zero,
+  messageId: "provident",
+  timestamp: "distinctio",
 };
 
 sdk.smsConversion.smsConversion(req).then((res: SmsConversionResponse | AxiosError) => {

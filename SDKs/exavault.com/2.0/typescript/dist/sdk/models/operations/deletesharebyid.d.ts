@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteShareByIdPathParams extends SpeakeasyBase {
-    id: number;
-}
-export declare class DeleteShareByIdHeaders extends SpeakeasyBase {
-    evAccessToken: string;
-    evApiKey: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteShareByIdRequest extends SpeakeasyBase {
-    pathParams: DeleteShareByIdPathParams;
-    headers: DeleteShareByIdHeaders;
+    /**
+     * Access token required to make the API call.
+     */
+    evAccessToken: string;
+    /**
+     * API Key required to make the API call.
+     */
+    evApiKey: string;
+    /**
+     * ID of the share entry
+     */
+    id: number;
 }
 export declare class DeleteShareByIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful operation
+     */
     emptyResponse?: shared.EmptyResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

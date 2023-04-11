@@ -1,6 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class ApIs {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+export declare class APIs {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,15 +9,17 @@ export declare class ApIs {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * licer - Insurance Policy - Life
+     * Insurance Policy - Life
      *
+     * @remarks
      * API to verify Insurance Policy - Life.
-    **/
-    licer(req: operations.LicerRequest, config?: AxiosRequestConfig): Promise<operations.LicerResponse>;
+     */
+    licer(req: operations.LicerRequestBody, security: operations.LicerSecurity, config?: AxiosRequestConfig): Promise<operations.LicerResponse>;
     /**
-     * prcpt - Premium Receipt
+     * Premium Receipt
      *
+     * @remarks
      * API to verify Premium Receipt.
-    **/
-    prcpt(req: operations.PrcptRequest, config?: AxiosRequestConfig): Promise<operations.PrcptResponse>;
+     */
+    prcpt(req: operations.PrcptRequestBody, security: operations.PrcptSecurity, config?: AxiosRequestConfig): Promise<operations.PrcptResponse>;
 }

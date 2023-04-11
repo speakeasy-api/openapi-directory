@@ -1,15 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetReisezentrenLocLatLonDistPathParams extends SpeakeasyBase {
-    dist: number;
-    lat: number;
-    lon: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetReisezentrenLocLatLonDistRequest extends SpeakeasyBase {
-    pathParams: GetReisezentrenLocLatLonDistPathParams;
+    /**
+     * Radius
+     */
+    dist: number;
+    /**
+     * Latitude
+     */
+    lat: number;
+    /**
+     * Longitude
+     */
+    lon: number;
 }
 export declare class GetReisezentrenLocLatLonDistResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * A station was found
+     */
     travelCenter?: shared.TravelCenter;
 }

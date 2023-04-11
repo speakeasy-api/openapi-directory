@@ -1,11 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class LoginRequest extends SpeakeasyBase {
-    request: shared.LoginRequest;
-}
+import { AxiosResponse } from "axios";
 export declare class LoginResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     * Bad Request
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Your tokens
+     */
     apiCredentials?: shared.ApiCredentials;
 }

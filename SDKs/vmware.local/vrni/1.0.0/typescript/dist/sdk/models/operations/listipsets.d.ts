@@ -1,21 +1,37 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListIpSetsQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListIPSetsSecurity extends SpeakeasyBase {
+    apiKeyAuth: string;
+}
+export declare class ListIPSetsRequest extends SpeakeasyBase {
+    /**
+     * cursor from previous response
+     */
     cursor?: string;
+    /**
+     * end time for query in epoch seconds
+     */
     endTime?: number;
+    /**
+     * page size of results
+     */
     size?: number;
+    /**
+     * start time for query in epoch seconds
+     */
     startTime?: number;
 }
-export declare class ListIpSetsSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
-}
-export declare class ListIpSetsRequest extends SpeakeasyBase {
-    queryParams: ListIpSetsQueryParams;
-    security: ListIpSetsSecurity;
-}
-export declare class ListIpSetsResponse extends SpeakeasyBase {
+export declare class ListIPSetsResponse extends SpeakeasyBase {
+    /**
+     * Bad Request
+     */
     apiError?: shared.ApiError;
     contentType: string;
+    /**
+     * OK
+     */
     pagedListResponseWithTime?: shared.PagedListResponseWithTime;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

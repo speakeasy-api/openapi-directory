@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetAttributeValuesQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum GetAttributeValuesXAmzTargetEnum {
-    AwsPriceListServiceGetAttributeValues = "AWSPriceListService.GetAttributeValues"
+    AWSPriceListServiceGetAttributeValues = "AWSPriceListService.GetAttributeValues"
 }
-export declare class GetAttributeValuesHeaders extends SpeakeasyBase {
+export declare class GetAttributeValuesRequest extends SpeakeasyBase {
+    getAttributeValuesRequest: shared.GetAttributeValuesRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,18 +23,32 @@ export declare class GetAttributeValuesHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetAttributeValuesXAmzTargetEnum;
 }
-export declare class GetAttributeValuesRequest extends SpeakeasyBase {
-    queryParams: GetAttributeValuesQueryParams;
-    headers: GetAttributeValuesHeaders;
-    request: shared.GetAttributeValuesRequest;
-}
 export declare class GetAttributeValuesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * ExpiredNextTokenException
+     */
     expiredNextTokenException?: any;
+    /**
+     * Success
+     */
     getAttributeValuesResponse?: shared.GetAttributeValuesResponse;
+    /**
+     * InternalErrorException
+     */
     internalErrorException?: any;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

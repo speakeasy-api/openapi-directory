@@ -1,17 +1,42 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetZrLocationStructureSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
-}
-export declare class GetZrLocationStructure200ApplicationJson extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+/**
+ * **HTTP Status Code:** `200` **OK**<br>
+ *
+ * @remarks
+ * Zoom Rooms location structure returned successfully.<br>
+ *
+ */
+export declare class GetZRLocationStructure200ApplicationXML extends SpeakeasyBase {
+    /**
+     * Hierarchial structure array of the Zoom Rooms location.
+     */
     structures?: string[];
 }
-export declare class GetZrLocationStructureRequest extends SpeakeasyBase {
-    security: GetZrLocationStructureSecurity;
+/**
+ * **HTTP Status Code:** `200` **OK**<br>
+ *
+ * @remarks
+ * Zoom Rooms location structure returned successfully.<br>
+ *
+ */
+export declare class GetZRLocationStructure200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Hierarchial structure array of the Zoom Rooms location.
+     */
+    structures?: string[];
 }
-export declare class GetZrLocationStructureResponse extends SpeakeasyBase {
+export declare class GetZRLocationStructureResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    getZRLocationStructure200ApplicationJSONObject?: GetZrLocationStructure200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * **HTTP Status Code:** `200` **OK**<br>
+     *
+     * @remarks
+     * Zoom Rooms location structure returned successfully.<br>
+     *
+     */
+    getZRLocationStructure200ApplicationJSONObject?: GetZRLocationStructure200ApplicationJSON;
 }

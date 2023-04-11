@@ -1,8 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetResetInstanceAttributeActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETResetInstanceAttributeActionEnum {
     ResetInstanceAttribute = "ResetInstanceAttribute"
 }
-export declare enum GetResetInstanceAttributeAttributeEnum {
+/**
+ * <p>The attribute to reset.</p> <important> <p>You can only reset the following attributes: <code>kernel</code> | <code>ramdisk</code> | <code>sourceDestCheck</code>.</p> </important>
+ */
+export declare enum GETResetInstanceAttributeAttributeEnum {
     InstanceType = "instanceType",
     Kernel = "kernel",
     Ramdisk = "ramdisk",
@@ -17,19 +21,27 @@ export declare enum GetResetInstanceAttributeAttributeEnum {
     EbsOptimized = "ebsOptimized",
     SriovNetSupport = "sriovNetSupport",
     EnaSupport = "enaSupport",
-    EnclaveOptions = "enclaveOptions"
+    EnclaveOptions = "enclaveOptions",
+    DisableApiStop = "disableApiStop"
 }
-export declare enum GetResetInstanceAttributeVersionEnum {
+export declare enum GETResetInstanceAttributeVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetResetInstanceAttributeQueryParams extends SpeakeasyBase {
-    action: GetResetInstanceAttributeActionEnum;
-    attribute: GetResetInstanceAttributeAttributeEnum;
+export declare class GETResetInstanceAttributeRequest extends SpeakeasyBase {
+    action: GETResetInstanceAttributeActionEnum;
+    /**
+     * <p>The attribute to reset.</p> <important> <p>You can only reset the following attributes: <code>kernel</code> | <code>ramdisk</code> | <code>sourceDestCheck</code>.</p> </important>
+     */
+    attribute: GETResetInstanceAttributeAttributeEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
+    /**
+     * The ID of the instance.
+     */
     instanceId: string;
-    version: GetResetInstanceAttributeVersionEnum;
-}
-export declare class GetResetInstanceAttributeHeaders extends SpeakeasyBase {
+    version: GETResetInstanceAttributeVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -38,11 +50,8 @@ export declare class GetResetInstanceAttributeHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetResetInstanceAttributeRequest extends SpeakeasyBase {
-    queryParams: GetResetInstanceAttributeQueryParams;
-    headers: GetResetInstanceAttributeHeaders;
-}
-export declare class GetResetInstanceAttributeResponse extends SpeakeasyBase {
+export declare class GETResetInstanceAttributeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

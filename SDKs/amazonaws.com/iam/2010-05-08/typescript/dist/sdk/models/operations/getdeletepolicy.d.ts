@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeletePolicyActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeletePolicyActionEnum {
     DeletePolicy = "DeletePolicy"
 }
-export declare enum GetDeletePolicyVersionEnum {
+export declare enum GETDeletePolicyVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class GetDeletePolicyQueryParams extends SpeakeasyBase {
-    action: GetDeletePolicyActionEnum;
+export declare class GETDeletePolicyRequest extends SpeakeasyBase {
+    action: GETDeletePolicyActionEnum;
+    /**
+     * <p>The Amazon Resource Name (ARN) of the IAM policy you want to delete.</p> <p>For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>.</p>
+     */
     policyArn: string;
-    version: GetDeletePolicyVersionEnum;
-}
-export declare class GetDeletePolicyHeaders extends SpeakeasyBase {
+    version: GETDeletePolicyVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDeletePolicyHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeletePolicyRequest extends SpeakeasyBase {
-    queryParams: GetDeletePolicyQueryParams;
-    headers: GetDeletePolicyHeaders;
-}
-export declare class GetDeletePolicyResponse extends SpeakeasyBase {
+export declare class GETDeletePolicyResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

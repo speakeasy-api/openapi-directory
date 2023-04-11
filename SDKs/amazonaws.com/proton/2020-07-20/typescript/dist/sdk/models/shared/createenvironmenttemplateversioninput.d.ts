@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { TemplateVersionSourceInput } from "./templateversionsourceinput";
 import { Tag } from "./tag";
+import { TemplateVersionSourceInput } from "./templateversionsourceinput";
 export declare class CreateEnvironmentTemplateVersionInput extends SpeakeasyBase {
     clientToken?: string;
     description?: string;

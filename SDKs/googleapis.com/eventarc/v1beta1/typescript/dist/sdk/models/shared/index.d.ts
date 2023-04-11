@@ -13,7 +13,6 @@ export * from "./matchingcriteria";
 export * from "./operation";
 export * from "./policy";
 export * from "./pubsub";
-export * from "./security";
 export * from "./setiampolicyrequest";
 export * from "./status";
 export * from "./testiampermissionsrequest";

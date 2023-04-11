@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteEgressOnlyInternetGatewayActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteEgressOnlyInternetGatewayActionEnum {
     DeleteEgressOnlyInternetGateway = "DeleteEgressOnlyInternetGateway"
 }
-export declare enum GetDeleteEgressOnlyInternetGatewayVersionEnum {
+export declare enum GETDeleteEgressOnlyInternetGatewayVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetDeleteEgressOnlyInternetGatewayQueryParams extends SpeakeasyBase {
-    action: GetDeleteEgressOnlyInternetGatewayActionEnum;
+export declare class GETDeleteEgressOnlyInternetGatewayRequest extends SpeakeasyBase {
+    action: GETDeleteEgressOnlyInternetGatewayActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
+    /**
+     * The ID of the egress-only internet gateway.
+     */
     egressOnlyInternetGatewayId: string;
-    version: GetDeleteEgressOnlyInternetGatewayVersionEnum;
-}
-export declare class GetDeleteEgressOnlyInternetGatewayHeaders extends SpeakeasyBase {
+    version: GETDeleteEgressOnlyInternetGatewayVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetDeleteEgressOnlyInternetGatewayHeaders extends Speakeasy
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteEgressOnlyInternetGatewayRequest extends SpeakeasyBase {
-    queryParams: GetDeleteEgressOnlyInternetGatewayQueryParams;
-    headers: GetDeleteEgressOnlyInternetGatewayHeaders;
-}
-export declare class GetDeleteEgressOnlyInternetGatewayResponse extends SpeakeasyBase {
+export declare class GETDeleteEgressOnlyInternetGatewayResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

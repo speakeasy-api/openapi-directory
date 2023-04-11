@@ -1,20 +1,40 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { PostGetOnboardingUrlRequest, PostGetOnboardingUrlResponse } from "openapi/src/sdk/models/operations";
+import {
+  shared.GetOnboardingUrlRequest,
+  PostGetOnboardingUrlResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: PostGetOnboardingUrlRequest = {
-  security: {
-    basicAuth: {
-      password: "YOUR_PASSWORD_HERE",
-      username: "YOUR_USERNAME_HERE",
-    },
+
+const req: shared.GetOnboardingUrlRequest = {
+  accountHolderCode: "corrupti",
+  collectInformation: {
+    bankDetails: false,
+    businessDetails: false,
+    individualDetails: false,
+    legalArrangementDetails: false,
+    pciQuestionnaire: false,
+    shareholderDetails: false,
   },
-  request: "sit",
+  editMode: false,
+  mobileOAuthCallbackUrl: "provident",
+  platformName: "distinctio",
+  returnUrl: "quibusdam",
+  shopperLocale: "unde",
+  showPages: {
+    bankDetailsSummaryPage: false,
+    bankVerificationPage: false,
+    businessDetailsSummaryPage: false,
+    checksOverviewPage: false,
+    individualDetailsSummaryPage: false,
+    legalArrangementsDetailsSummaryPage: false,
+    manualBankAccountPage: false,
+    shareholderDetailsSummaryPage: false,
+    welcomePage: false,
+  },
 };
 
 sdk.hostedOnboardingPage.postGetOnboardingUrl(req).then((res: PostGetOnboardingUrlResponse | AxiosError) => {

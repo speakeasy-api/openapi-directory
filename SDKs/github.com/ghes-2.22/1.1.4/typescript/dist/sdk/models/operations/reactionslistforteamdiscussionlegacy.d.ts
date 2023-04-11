@@ -1,21 +1,42 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReactionsListForTeamDiscussionLegacyPathParams extends SpeakeasyBase {
-    discussionNumber: number;
-    teamId: number;
-}
-export declare class ReactionsListForTeamDiscussionLegacyQueryParams extends SpeakeasyBase {
-    content?: shared.DiscussionNumberEnum;
-    page?: number;
-    perPage?: number;
+import { AxiosResponse } from "axios";
+/**
+ * Returns a single [reaction type](https://docs.github.com/enterprise-server@2.22/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a team discussion.
+ */
+export declare enum ReactionsListForTeamDiscussionLegacyContentEnum {
+    Plus1 = "+1",
+    Minus1 = "-1",
+    Laugh = "laugh",
+    Confused = "confused",
+    Heart = "heart",
+    Hooray = "hooray",
+    Rocket = "rocket",
+    Eyes = "eyes"
 }
 export declare class ReactionsListForTeamDiscussionLegacyRequest extends SpeakeasyBase {
-    pathParams: ReactionsListForTeamDiscussionLegacyPathParams;
-    queryParams: ReactionsListForTeamDiscussionLegacyQueryParams;
+    /**
+     * Returns a single [reaction type](https://docs.github.com/enterprise-server@2.22/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a team discussion.
+     */
+    content?: ReactionsListForTeamDiscussionLegacyContentEnum;
+    discussionNumber: number;
+    /**
+     * Page number of the results to fetch.
+     */
+    page?: number;
+    /**
+     * Results per page (max 100)
+     */
+    perPage?: number;
+    teamId: number;
 }
 export declare class ReactionsListForTeamDiscussionLegacyResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     reactions?: shared.Reaction[];
 }

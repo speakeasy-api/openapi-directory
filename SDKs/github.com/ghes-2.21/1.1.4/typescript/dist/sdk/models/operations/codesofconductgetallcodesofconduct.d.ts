@@ -1,12 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CodesOfConductGetAllCodesOfConduct415ApplicationJson extends SpeakeasyBase {
-    documentationUrl: string;
-    message: string;
-}
+import { AxiosResponse } from "axios";
 export declare class CodesOfConductGetAllCodesOfConductResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     codeOfConducts?: shared.CodeOfConduct[];
-    codesOfConductGetAllCodesOfConduct415ApplicationJSONObject?: CodesOfConductGetAllCodesOfConduct415ApplicationJson;
 }

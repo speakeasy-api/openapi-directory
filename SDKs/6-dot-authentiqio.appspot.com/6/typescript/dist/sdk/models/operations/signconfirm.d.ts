@@ -1,17 +1,32 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SignConfirmPathParams extends SpeakeasyBase {
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class SignConfirmRequest extends SpeakeasyBase {
+    /**
+     * Job ID (20 chars)
+     */
     job: string;
 }
-export declare class SignConfirm202ApplicationJson extends SpeakeasyBase {
+/**
+ * Successfully confirmed
+ */
+export declare class SignConfirm202ApplicationJSON extends SpeakeasyBase {
+    /**
+     * confirmed
+     */
     status?: string;
-}
-export declare class SignConfirmRequest extends SpeakeasyBase {
-    pathParams: SignConfirmPathParams;
 }
 export declare class SignConfirmResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    error?: any;
+    /**
+     * Confirmation error `auth-error`
+     */
+    error?: shared.ErrorT;
     statusCode: number;
-    signConfirm202ApplicationJSONObject?: SignConfirm202ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successfully confirmed
+     */
+    signConfirm202ApplicationJSONObject?: SignConfirm202ApplicationJSON;
 }

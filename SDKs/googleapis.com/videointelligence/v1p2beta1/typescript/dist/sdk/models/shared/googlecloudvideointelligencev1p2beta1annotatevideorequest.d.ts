@@ -14,12 +14,30 @@ export declare enum GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequestFea
 }
 /**
  * Video annotation request.
-**/
+ */
 export declare class GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequest extends SpeakeasyBase {
+    /**
+     * Required. Requested video annotation features.
+     */
     features?: GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequestFeaturesEnum[];
+    /**
+     * The video data bytes. If unset, the input video(s) should be specified via the `input_uri`. If set, `input_uri` must be unset.
+     */
     inputContent?: string;
+    /**
+     * Input video location. Currently, only [Cloud Storage](https://cloud.google.com/storage/) URIs are supported. URIs must be specified in the following format: `gs://bucket-id/object-id` (other URI formats return google.rpc.Code.INVALID_ARGUMENT). For more information, see [Request URIs](https://cloud.google.com/storage/docs/request-endpoints). To identify multiple videos, a video URI may include wildcards in the `object-id`. Supported wildcards: '*' to match 0 or more characters; '?' to match 1 character. If unset, the input video should be embedded in the request as `input_content`. If set, `input_content` must be unset.
+     */
     inputUri?: string;
+    /**
+     * Optional. Cloud region where annotation should take place. Supported cloud regions are: `us-east1`, `us-west1`, `europe-west1`, `asia-east1`. If no region is specified, the region will be determined based on video file location.
+     */
     locationId?: string;
+    /**
+     * Optional. Location where the output (in JSON format) should be stored. Currently, only [Cloud Storage](https://cloud.google.com/storage/) URIs are supported. These must be specified in the following format: `gs://bucket-id/object-id` (other URI formats return google.rpc.Code.INVALID_ARGUMENT). For more information, see [Request URIs](https://cloud.google.com/storage/docs/request-endpoints).
+     */
     outputUri?: string;
+    /**
+     * Video context and/or feature-specific parameters.
+     */
     videoContext?: GoogleCloudVideointelligenceV1p2beta1VideoContext;
 }

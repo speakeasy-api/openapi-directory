@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Events {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +9,10 @@ export declare class Events {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getQueryJson - Geographic API
-     *
      * Geographic API
-    **/
+     *
+     * @remarks
+     * Geographic API
+     */
     getQueryJson(req: operations.GetQueryJsonRequest, config?: AxiosRequestConfig): Promise<operations.GetQueryJsonResponse>;
 }

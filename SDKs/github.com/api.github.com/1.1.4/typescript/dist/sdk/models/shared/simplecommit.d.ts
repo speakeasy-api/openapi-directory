@@ -8,8 +8,8 @@ export declare class SimpleCommitCommitter extends SpeakeasyBase {
     name: string;
 }
 /**
- * Simple Commit
-**/
+ * A commit.
+ */
 export declare class SimpleCommit extends SpeakeasyBase {
     author: SimpleCommitAuthor;
     committer: SimpleCommitCommitter;

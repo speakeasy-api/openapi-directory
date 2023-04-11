@@ -4,5 +4,6 @@ export declare enum FilterNameStringTypeEnum {
     TagKey = "tag-key",
     TagValue = "tag-value",
     PrimaryRegion = "primary-region",
+    OwningService = "owning-service",
     All = "all"
 }

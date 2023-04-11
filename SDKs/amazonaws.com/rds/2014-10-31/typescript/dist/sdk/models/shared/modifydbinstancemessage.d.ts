@@ -1,0 +1,62 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { AutomationModeEnum } from "./automationmodeenum";
+import { CloudwatchLogsExportConfiguration } from "./cloudwatchlogsexportconfiguration";
+import { ProcessorFeatureList } from "./processorfeaturelist";
+import { ReplicaModeEnum } from "./replicamodeenum";
+/**
+ * <p/>
+ */
+export declare class ModifyDBInstanceMessage extends SpeakeasyBase {
+    allocatedStorage?: number;
+    allowMajorVersionUpgrade?: boolean;
+    applyImmediately?: boolean;
+    autoMinorVersionUpgrade?: boolean;
+    automationMode?: AutomationModeEnum;
+    awsBackupRecoveryPointArn?: string;
+    backupRetentionPeriod?: number;
+    caCertificateIdentifier?: string;
+    certificateRotationRestart?: boolean;
+    cloudwatchLogsExportConfiguration?: CloudwatchLogsExportConfiguration;
+    copyTagsToSnapshot?: boolean;
+    dbInstanceClass?: string;
+    dbInstanceIdentifier: string;
+    dbParameterGroupName?: string;
+    dbPortNumber?: number;
+    dbSecurityGroups?: string[];
+    dbSubnetGroupName?: string;
+    deletionProtection?: boolean;
+    domain?: string;
+    domainIAMRoleName?: string;
+    enableCustomerOwnedIp?: boolean;
+    enableIAMDatabaseAuthentication?: boolean;
+    enablePerformanceInsights?: boolean;
+    engineVersion?: string;
+    iops?: number;
+    licenseModel?: string;
+    manageMasterUserPassword?: boolean;
+    masterUserPassword?: string;
+    masterUserSecretKmsKeyId?: string;
+    maxAllocatedStorage?: number;
+    monitoringInterval?: number;
+    monitoringRoleArn?: string;
+    multiAZ?: boolean;
+    networkType?: string;
+    newDBInstanceIdentifier?: string;
+    optionGroupName?: string;
+    performanceInsightsKMSKeyId?: string;
+    performanceInsightsRetentionPeriod?: number;
+    preferredBackupWindow?: string;
+    preferredMaintenanceWindow?: string;
+    processorFeatures?: ProcessorFeatureList[];
+    promotionTier?: number;
+    publiclyAccessible?: boolean;
+    replicaMode?: ReplicaModeEnum;
+    resumeFullAutomationModeMinutes?: number;
+    rotateMasterUserPassword?: boolean;
+    storageThroughput?: number;
+    storageType?: string;
+    tdeCredentialArn?: string;
+    tdeCredentialPassword?: string;
+    useDefaultProcessorFeatures?: boolean;
+    vpcSecurityGroupIds?: string[];
+}

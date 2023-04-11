@@ -1,5 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class TagResourceHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class TagResourceRequestBody extends SpeakeasyBase {
+    /**
+     * The Amazon Resource Name (ARN) of the resource.
+     */
+    resourceArn: string;
+    /**
+     * One or more tags. For example, { "tags": {"key1":"value1", "key2":"value2"} }.
+     */
+    tags: Record<string, string>;
+}
+export declare class TagResourceRequest extends SpeakeasyBase {
+    requestBody: TagResourceRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -8,20 +20,28 @@ export declare class TagResourceHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class TagResourceRequestBody extends SpeakeasyBase {
-    resourceArn: string;
-    tags: Record<string, string>;
-}
-export declare class TagResourceRequest extends SpeakeasyBase {
-    headers: TagResourceHeaders;
-    request: TagResourceRequestBody;
-}
 export declare class TagResourceResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
-    resourceNotFoundException?: any;
-    serviceQuotaExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ServiceQuotaExceededException
+     */
+    serviceQuotaExceededException?: any;
+    /**
+     * Success
+     */
     tagResourceResponse?: Record<string, any>;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

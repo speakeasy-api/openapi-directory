@@ -1,5 +1,12 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Commit statuses provide a way to tag commits with meta data,
+ *
+ * @remarks
+ * like automated build results.
+ *
+ */
 export declare class CommitStatuses {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,20 +16,32 @@ export declare class CommitStatuses {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getRepositoriesWorkspaceRepoSlugCommitCommitStatuses - Returns all statuses (e.g. build results) for a specific commit.
-    **/
-    getRepositoriesWorkspaceRepoSlugCommitCommitStatuses(req: operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesResponse>;
+     * List commit statuses for a commit
+     *
+     * @remarks
+     * Returns all statuses (e.g. build results) for a specific commit.
+     */
+    getRepositoriesWorkspaceRepoSlugCommitCommitStatuses(req: operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesRequest, security: operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKey - Returns the specified build status for a commit.
-    **/
-    getRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKey(req: operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyResponse>;
+     * Get a build status for a commit
+     *
+     * @remarks
+     * Returns the specified build status for a commit.
+     */
+    getRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKey(req: operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyRequest, security: operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeySecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatuses - Returns all statuses (e.g. build results) for the given pull
+     * List commit statuses for a pull request
+     *
+     * @remarks
+     * Returns all statuses (e.g. build results) for the given pull
      * request.
-    **/
-    getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatuses(req: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatuses(req: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesRequest, security: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesResponse>;
     /**
-     * postRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuild - Creates a new build status against the specified commit.
+     * Create a build status for a commit
+     *
+     * @remarks
+     * Creates a new build status against the specified commit.
      *
      * If the specified key already exists, the existing status object will
      * be overwritten.
@@ -46,10 +65,13 @@ export declare class CommitStatuses {
      * For example, one could use `https://foo.com/builds/{repository.full_name}`
      * which Bitbucket will turn into `https://foo.com/builds/foo/bar` at render time.
      * The context variables available are `repository` and `commit`.
-    **/
-    postRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuild(req: operations.PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildRequest, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildResponse>;
+     */
+    postRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuild(req: operations.PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildRequest, security: operations.PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildSecurity, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildResponse>;
     /**
-     * putRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKey - Used to update the current status of a build status object on the
+     * Update a build status for a commit
+     *
+     * @remarks
+     * Used to update the current status of a build status object on the
      * specific commit.
      *
      * This operation can also be used to change other properties of the
@@ -62,6 +84,6 @@ export declare class CommitStatuses {
      * * `refname`
      *
      * The `key` cannot be changed.
-    **/
-    putRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKey(req: operations.PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyRequest, config?: AxiosRequestConfig): Promise<operations.PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyResponse>;
+     */
+    putRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKey(req: operations.PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyRequest, security: operations.PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeySecurity, config?: AxiosRequestConfig): Promise<operations.PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyResponse>;
 }

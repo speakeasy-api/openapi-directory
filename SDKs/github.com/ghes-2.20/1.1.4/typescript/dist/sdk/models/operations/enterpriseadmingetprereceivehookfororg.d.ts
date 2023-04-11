@@ -1,14 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class EnterpriseAdminGetPreReceiveHookForOrgPathParams extends SpeakeasyBase {
-    org: string;
-    preReceiveHookId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class EnterpriseAdminGetPreReceiveHookForOrgRequest extends SpeakeasyBase {
-    pathParams: EnterpriseAdminGetPreReceiveHookForOrgPathParams;
+    org: string;
+    /**
+     * pre_receive_hook_id parameter
+     */
+    preReceiveHookId: number;
 }
 export declare class EnterpriseAdminGetPreReceiveHookForOrgResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     orgPreReceiveHook?: shared.OrgPreReceiveHook;
 }

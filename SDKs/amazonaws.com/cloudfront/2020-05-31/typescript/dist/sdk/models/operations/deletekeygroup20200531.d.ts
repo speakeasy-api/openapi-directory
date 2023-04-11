@@ -1,8 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteKeyGroup20200531PathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteKeyGroup20200531Request extends SpeakeasyBase {
+    /**
+     * The identifier of the key group that you are deleting. To get the identifier, use <code>ListKeyGroups</code>.
+     */
     id: string;
-}
-export declare class DeleteKeyGroup20200531Headers extends SpeakeasyBase {
+    /**
+     * The version of the key group that you are deleting. The version is the key group's <code>ETag</code> value. To get the <code>ETag</code>, use <code>GetKeyGroup</code> or <code>GetKeyGroupConfig</code>.
+     */
     ifMatch?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
@@ -12,12 +17,9 @@ export declare class DeleteKeyGroup20200531Headers extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeleteKeyGroup20200531Request extends SpeakeasyBase {
-    pathParams: DeleteKeyGroup20200531PathParams;
-    headers: DeleteKeyGroup20200531Headers;
-}
 export declare class DeleteKeyGroup20200531Response extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

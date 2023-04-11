@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteConfigurationSetTrackingOptionsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteConfigurationSetTrackingOptionsActionEnum {
     DeleteConfigurationSetTrackingOptions = "DeleteConfigurationSetTrackingOptions"
 }
-export declare enum PostDeleteConfigurationSetTrackingOptionsVersionEnum {
+export declare enum POSTDeleteConfigurationSetTrackingOptionsVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostDeleteConfigurationSetTrackingOptionsQueryParams extends SpeakeasyBase {
-    action: PostDeleteConfigurationSetTrackingOptionsActionEnum;
-    version: PostDeleteConfigurationSetTrackingOptionsVersionEnum;
-}
-export declare class PostDeleteConfigurationSetTrackingOptionsHeaders extends SpeakeasyBase {
+export declare class POSTDeleteConfigurationSetTrackingOptionsRequest extends SpeakeasyBase {
+    action: POSTDeleteConfigurationSetTrackingOptionsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteConfigurationSetTrackingOptionsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteConfigurationSetTrackingOptionsHeaders extends Sp
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteConfigurationSetTrackingOptionsRequest extends SpeakeasyBase {
-    queryParams: PostDeleteConfigurationSetTrackingOptionsQueryParams;
-    headers: PostDeleteConfigurationSetTrackingOptionsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteConfigurationSetTrackingOptionsResponse extends SpeakeasyBase {
+export declare class POSTDeleteConfigurationSetTrackingOptionsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

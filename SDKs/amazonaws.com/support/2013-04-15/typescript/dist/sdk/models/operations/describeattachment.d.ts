@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeAttachmentXAmzTargetEnum {
-    AwsSupport20130415DescribeAttachment = "AWSSupport_20130415.DescribeAttachment"
+    AWSSupport20130415DescribeAttachment = "AWSSupport_20130415.DescribeAttachment"
 }
-export declare class DescribeAttachmentHeaders extends SpeakeasyBase {
+export declare class DescribeAttachmentRequest extends SpeakeasyBase {
+    describeAttachmentRequest: shared.DescribeAttachmentRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class DescribeAttachmentHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeAttachmentXAmzTargetEnum;
 }
-export declare class DescribeAttachmentRequest extends SpeakeasyBase {
-    headers: DescribeAttachmentHeaders;
-    request: shared.DescribeAttachmentRequest;
-}
 export declare class DescribeAttachmentResponse extends SpeakeasyBase {
+    /**
+     * AttachmentIdNotFound
+     */
     attachmentIdNotFound?: any;
     contentType: string;
+    /**
+     * DescribeAttachmentLimitExceeded
+     */
     describeAttachmentLimitExceeded?: any;
+    /**
+     * Success
+     */
     describeAttachmentResponse?: shared.DescribeAttachmentResponse;
+    /**
+     * InternalServerError
+     */
     internalServerError?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

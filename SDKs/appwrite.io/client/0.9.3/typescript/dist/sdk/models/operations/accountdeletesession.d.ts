@@ -1,17 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class AccountDeleteSessionPathParams extends SpeakeasyBase {
-    sessionId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class AccountDeleteSessionSecurity extends SpeakeasyBase {
-    jwt: shared.SchemeJwt;
-    project: shared.SchemeProject;
+    jwt: string;
+    project: string;
 }
 export declare class AccountDeleteSessionRequest extends SpeakeasyBase {
-    pathParams: AccountDeleteSessionPathParams;
-    security: AccountDeleteSessionSecurity;
+    /**
+     * Session unique ID. Use the string 'current' to delete the current device session.
+     */
+    sessionId: string;
 }
 export declare class AccountDeleteSessionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

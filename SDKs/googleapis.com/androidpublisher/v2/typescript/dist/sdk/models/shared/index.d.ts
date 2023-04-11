@@ -36,7 +36,6 @@ export * from "./reviewreplyresult";
 export * from "./reviewslistresponse";
 export * from "./reviewsreplyrequest";
 export * from "./reviewsreplyresponse";
-export * from "./security";
 export * from "./subscriptioncancelsurveyresult";
 export * from "./subscriptiondeferralinfo";
 export * from "./subscriptionpricechange";

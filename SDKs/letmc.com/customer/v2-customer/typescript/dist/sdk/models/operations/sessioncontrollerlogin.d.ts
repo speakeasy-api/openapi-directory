@@ -1,20 +1,37 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SessionControllerLoginPathParams extends SpeakeasyBase {
-    shortName: string;
-}
-export declare class SessionControllerLoginQueryParams extends SpeakeasyBase {
-    password: string;
-    username: string;
-}
+import { AxiosResponse } from "axios";
 export declare class SessionControllerLoginRequest extends SpeakeasyBase {
-    pathParams: SessionControllerLoginPathParams;
-    queryParams: SessionControllerLoginQueryParams;
+    /**
+     * The user's password.
+     */
+    password: string;
+    /**
+     * The unique client short-name
+     */
+    shortName: string;
+    /**
+     * The user's username.
+     */
+    username: string;
 }
 export declare class SessionControllerLoginResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * OK
+     */
     sessionControllerLogin200ApplicationJSONString?: string;
+    /**
+     * OK
+     */
     sessionControllerLogin200ApplicationXMLString?: string;
-    sessionControllerLogin200TextJSONString?: string;
+    /**
+     * OK
+     */
     sessionControllerLogin200TextXMLString?: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
+    sessionControllerLogin200TextJSONString?: string;
 }

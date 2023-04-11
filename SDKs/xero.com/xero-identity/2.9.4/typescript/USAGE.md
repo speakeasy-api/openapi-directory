@@ -1,21 +1,16 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DeleteConnectionRequest, DeleteConnectionResponse } from "openapi/src/sdk/models/operations";
+import {
+  DeleteConnectionRequest,
+  DeleteConnectionResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: DeleteConnectionRequest = {
-  security: {
-    oAuth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    id: "sit",
-  },
+  id: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
 };
 
 sdk.identity.deleteConnection(req).then((res: DeleteConnectionResponse | AxiosError) => {

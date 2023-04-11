@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostApplySecurityGroupsToLoadBalancerActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTApplySecurityGroupsToLoadBalancerActionEnum {
     ApplySecurityGroupsToLoadBalancer = "ApplySecurityGroupsToLoadBalancer"
 }
-export declare enum PostApplySecurityGroupsToLoadBalancerVersionEnum {
+export declare enum POSTApplySecurityGroupsToLoadBalancerVersionEnum {
     TwoThousandAndTwelve0601 = "2012-06-01"
 }
-export declare class PostApplySecurityGroupsToLoadBalancerQueryParams extends SpeakeasyBase {
-    action: PostApplySecurityGroupsToLoadBalancerActionEnum;
-    version: PostApplySecurityGroupsToLoadBalancerVersionEnum;
-}
-export declare class PostApplySecurityGroupsToLoadBalancerHeaders extends SpeakeasyBase {
+export declare class POSTApplySecurityGroupsToLoadBalancerRequest extends SpeakeasyBase {
+    action: POSTApplySecurityGroupsToLoadBalancerActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTApplySecurityGroupsToLoadBalancerVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostApplySecurityGroupsToLoadBalancerHeaders extends Speake
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostApplySecurityGroupsToLoadBalancerRequest extends SpeakeasyBase {
-    queryParams: PostApplySecurityGroupsToLoadBalancerQueryParams;
-    headers: PostApplySecurityGroupsToLoadBalancerHeaders;
-    request?: Uint8Array;
-}
-export declare class PostApplySecurityGroupsToLoadBalancerResponse extends SpeakeasyBase {
+export declare class POSTApplySecurityGroupsToLoadBalancerResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

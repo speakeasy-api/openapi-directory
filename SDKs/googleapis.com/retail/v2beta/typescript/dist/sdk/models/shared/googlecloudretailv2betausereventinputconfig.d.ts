@@ -1,0 +1,21 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { GoogleCloudRetailV2betaBigQuerySource } from "./googlecloudretailv2betabigquerysource";
+import { GoogleCloudRetailV2betaGcsSource } from "./googlecloudretailv2betagcssource";
+import { GoogleCloudRetailV2betaUserEventInlineSourceInput } from "./googlecloudretailv2betausereventinlinesource";
+/**
+ * The input config source for user events.
+ */
+export declare class GoogleCloudRetailV2betaUserEventInputConfigInput extends SpeakeasyBase {
+    /**
+     * BigQuery source import data from.
+     */
+    bigQuerySource?: GoogleCloudRetailV2betaBigQuerySource;
+    /**
+     * Google Cloud Storage location for input content.
+     */
+    gcsSource?: GoogleCloudRetailV2betaGcsSource;
+    /**
+     * The inline source for the input config for ImportUserEvents method.
+     */
+    userEventInlineSource?: GoogleCloudRetailV2betaUserEventInlineSourceInput;
+}

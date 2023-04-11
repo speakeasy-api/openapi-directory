@@ -1,37 +1,42 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetUpdateJobActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETUpdateJobActionEnum {
     UpdateJob = "UpdateJob"
 }
-export declare enum GetUpdateJobJobTypeEnum {
+/**
+ * Specifies whether the job to initiate is an import or export job.
+ */
+export declare enum GETUpdateJobJobTypeEnum {
     Import = "Import",
     Export = "Export"
 }
-export declare enum GetUpdateJobOperationEnum {
+export declare enum GETUpdateJobOperationEnum {
     UpdateJob = "UpdateJob"
 }
-export declare enum GetUpdateJobVersionEnum {
+export declare enum GETUpdateJobVersionEnum {
     TwoThousandAndTen0601 = "2010-06-01"
 }
-export declare class GetUpdateJobQueryParams extends SpeakeasyBase {
+export declare class GETUpdateJobRequest extends SpeakeasyBase {
     apiVersion?: string;
     awsAccessKeyId: string;
-    action: GetUpdateJobActionEnum;
+    action: GETUpdateJobActionEnum;
     jobId: string;
-    jobType: GetUpdateJobJobTypeEnum;
+    /**
+     * Specifies whether the job to initiate is an import or export job.
+     */
+    jobType: GETUpdateJobJobTypeEnum;
     manifest: string;
-    operation: GetUpdateJobOperationEnum;
+    operation: GETUpdateJobOperationEnum;
     signature: string;
     signatureMethod: string;
     signatureVersion: string;
     timestamp: string;
     validateOnly: boolean;
-    version: GetUpdateJobVersionEnum;
+    version: GETUpdateJobVersionEnum;
 }
-export declare class GetUpdateJobRequest extends SpeakeasyBase {
-    queryParams: GetUpdateJobQueryParams;
-}
-export declare class GetUpdateJobResponse extends SpeakeasyBase {
+export declare class GETUpdateJobResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

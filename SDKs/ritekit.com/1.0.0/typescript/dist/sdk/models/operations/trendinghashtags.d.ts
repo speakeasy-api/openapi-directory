@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class TrendingHashtagsQueryParams extends SpeakeasyBase {
-    green?: boolean;
-    latin?: boolean;
-}
+import { AxiosResponse } from "axios";
 export declare class TrendingHashtagsRequest extends SpeakeasyBase {
-    queryParams: TrendingHashtagsQueryParams;
+    /**
+     * Restrict results only to green hashtags. Hides overused (red) hashtags.
+     */
+    green?: boolean;
+    /**
+     * Restrict results only to hashtags with latin characters
+     */
+    latin?: boolean;
 }
 export declare class TrendingHashtagsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

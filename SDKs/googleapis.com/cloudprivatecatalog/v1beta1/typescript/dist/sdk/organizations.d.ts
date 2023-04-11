@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Organizations {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,18 +9,18 @@ export declare class Organizations {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * cloudprivatecatalogOrganizationsCatalogsSearch - Search Catalog resources that consumers have access to, within the
+     * Search Catalog resources that consumers have access to, within the
      * scope of the consumer cloud resource hierarchy context.
-    **/
-    cloudprivatecatalogOrganizationsCatalogsSearch(req: operations.CloudprivatecatalogOrganizationsCatalogsSearchRequest, config?: AxiosRequestConfig): Promise<operations.CloudprivatecatalogOrganizationsCatalogsSearchResponse>;
+     */
+    cloudprivatecatalogOrganizationsCatalogsSearch(req: operations.CloudprivatecatalogOrganizationsCatalogsSearchRequest, security: operations.CloudprivatecatalogOrganizationsCatalogsSearchSecurity, config?: AxiosRequestConfig): Promise<operations.CloudprivatecatalogOrganizationsCatalogsSearchResponse>;
     /**
-     * cloudprivatecatalogOrganizationsProductsSearch - Search Product resources that consumers have access to, within the
+     * Search Product resources that consumers have access to, within the
      * scope of the consumer cloud resource hierarchy context.
-    **/
-    cloudprivatecatalogOrganizationsProductsSearch(req: operations.CloudprivatecatalogOrganizationsProductsSearchRequest, config?: AxiosRequestConfig): Promise<operations.CloudprivatecatalogOrganizationsProductsSearchResponse>;
+     */
+    cloudprivatecatalogOrganizationsProductsSearch(req: operations.CloudprivatecatalogOrganizationsProductsSearchRequest, security: operations.CloudprivatecatalogOrganizationsProductsSearchSecurity, config?: AxiosRequestConfig): Promise<operations.CloudprivatecatalogOrganizationsProductsSearchResponse>;
     /**
-     * cloudprivatecatalogOrganizationsVersionsSearch - Search Version resources that consumers have access to, within the
+     * Search Version resources that consumers have access to, within the
      * scope of the consumer cloud resource hierarchy context.
-    **/
-    cloudprivatecatalogOrganizationsVersionsSearch(req: operations.CloudprivatecatalogOrganizationsVersionsSearchRequest, config?: AxiosRequestConfig): Promise<operations.CloudprivatecatalogOrganizationsVersionsSearchResponse>;
+     */
+    cloudprivatecatalogOrganizationsVersionsSearch(req: operations.CloudprivatecatalogOrganizationsVersionsSearchRequest, security: operations.CloudprivatecatalogOrganizationsVersionsSearchSecurity, config?: AxiosRequestConfig): Promise<operations.CloudprivatecatalogOrganizationsVersionsSearchResponse>;
 }

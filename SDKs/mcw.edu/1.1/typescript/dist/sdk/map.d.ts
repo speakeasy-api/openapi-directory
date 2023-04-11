@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Map Web Service
+ */
 export declare class Map {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,15 +12,15 @@ export declare class Map {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getChromosomeByAssemblyUsingGet - Return a list of chromosomes
-    **/
-    getChromosomeByAssemblyUsingGet(req: operations.GetChromosomeByAssemblyUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetChromosomeByAssemblyUsingGetResponse>;
+     * Return a list of chromosomes
+     */
+    getChromosomeByAssemblyUsingGET(req: operations.GETChromosomeByAssemblyUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETChromosomeByAssemblyUsingGETResponse>;
     /**
-     * getChromosomesByAssemblyUsingGet - Return a list of chromosomes
-    **/
-    getChromosomesByAssemblyUsingGet(req: operations.GetChromosomesByAssemblyUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetChromosomesByAssemblyUsingGetResponse>;
+     * Return a list of chromosomes
+     */
+    getChromosomesByAssemblyUsingGET(req: operations.GETChromosomesByAssemblyUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETChromosomesByAssemblyUsingGETResponse>;
     /**
-     * getMapsBySpeciesUsingGet - Return a list of assemblies
-    **/
-    getMapsBySpeciesUsingGet(req: operations.GetMapsBySpeciesUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetMapsBySpeciesUsingGetResponse>;
+     * Return a list of assemblies
+     */
+    getMapsBySpeciesUsingGET(req: operations.GETMapsBySpeciesUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETMapsBySpeciesUsingGETResponse>;
 }

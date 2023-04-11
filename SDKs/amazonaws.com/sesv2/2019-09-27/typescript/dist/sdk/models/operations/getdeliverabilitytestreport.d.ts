@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetDeliverabilityTestReportPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetDeliverabilityTestReportRequest extends SpeakeasyBase {
+    /**
+     * A unique string that identifies the predictive inbox placement test.
+     */
     reportId: string;
-}
-export declare class GetDeliverabilityTestReportHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,15 +14,24 @@ export declare class GetDeliverabilityTestReportHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeliverabilityTestReportRequest extends SpeakeasyBase {
-    pathParams: GetDeliverabilityTestReportPathParams;
-    headers: GetDeliverabilityTestReportHeaders;
-}
 export declare class GetDeliverabilityTestReportResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getDeliverabilityTestReportResponse?: shared.GetDeliverabilityTestReportResponse;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

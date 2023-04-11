@@ -1,18 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreatePayItemHeaders extends SpeakeasyBase {
-    xeroTenantId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class CreatePayItemSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class CreatePayItemRequest extends SpeakeasyBase {
-    headers: CreatePayItemHeaders;
-    request: shared.PayItemInput;
-    security: CreatePayItemSecurity;
+    payItemInput: shared.PayItemInput;
+    /**
+     * Xero identifier for Tenant
+     */
+    xeroTenantId: string;
 }
 export declare class CreatePayItemResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * A successful request - currently returns empty array for JSON
+     */
     payItems?: shared.PayItems;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

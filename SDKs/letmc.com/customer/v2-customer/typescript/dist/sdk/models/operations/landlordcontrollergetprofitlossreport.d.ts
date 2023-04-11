@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class LandlordControllerGetProfitLossReportPathParams extends SpeakeasyBase {
-    shortName: string;
-}
-export declare class LandlordControllerGetProfitLossReportQueryParams extends SpeakeasyBase {
-    token: string;
-}
+import { AxiosResponse } from "axios";
 export declare class LandlordControllerGetProfitLossReportRequest extends SpeakeasyBase {
-    pathParams: LandlordControllerGetProfitLossReportPathParams;
-    queryParams: LandlordControllerGetProfitLossReportQueryParams;
+    /**
+     * The unique client short-name
+     */
+    shortName: string;
+    /**
+     * The login token returned from the /session POST call
+     */
+    token: string;
 }
 export declare class LandlordControllerGetProfitLossReportResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * OK
+     */
     landlordProfitLossModel?: shared.LandlordProfitLossModel;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

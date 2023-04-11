@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The sub-type of this event.
+ */
 export declare enum PostSubtypeEnum {
     SubtypeUnspecified = "SUBTYPE_UNSPECIFIED",
     Added = "ADDED",
@@ -10,7 +13,10 @@ export declare enum PostSubtypeEnum {
 }
 /**
  * A regular posted comment.
-**/
+ */
 export declare class Post extends SpeakeasyBase {
+    /**
+     * The sub-type of this event.
+     */
     subtype?: PostSubtypeEnum;
 }

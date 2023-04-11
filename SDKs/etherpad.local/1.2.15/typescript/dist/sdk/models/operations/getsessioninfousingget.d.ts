@@ -1,44 +1,67 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetSessionInfoUsingGetQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETSessionInfoUsingGETRequest extends SpeakeasyBase {
     sessionID?: string;
 }
-export declare class GetSessionInfoUsingGet200ApplicationJsonDataInfo extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class GETSessionInfoUsingGet500ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class GETSessionInfoUsingGet401ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+/**
+ * generic api error (code 1)
+ */
+export declare class GETSessionInfoUsingGet400ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+export declare class GETSessionInfoUsingGet200ApplicationJSONDataInfo extends SpeakeasyBase {
     authorID?: string;
     groupID?: string;
     id?: string;
     validUntil?: number;
 }
-export declare class GetSessionInfoUsingGet200ApplicationJsonData extends SpeakeasyBase {
-    info?: GetSessionInfoUsingGet200ApplicationJsonDataInfo;
+export declare class GETSessionInfoUsingGet200ApplicationJSONData extends SpeakeasyBase {
+    info?: GETSessionInfoUsingGet200ApplicationJSONDataInfo;
 }
-export declare class GetSessionInfoUsingGet200ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class GETSessionInfoUsingGet200ApplicationJSON extends SpeakeasyBase {
     code?: number;
-    data?: GetSessionInfoUsingGet200ApplicationJsonData;
+    data?: GETSessionInfoUsingGet200ApplicationJSONData;
     message?: string;
 }
-export declare class GetSessionInfoUsingGet400ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class GetSessionInfoUsingGet401ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class GetSessionInfoUsingGet500ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class GetSessionInfoUsingGetRequest extends SpeakeasyBase {
-    queryParams: GetSessionInfoUsingGetQueryParams;
-}
-export declare class GetSessionInfoUsingGetResponse extends SpeakeasyBase {
+export declare class GETSessionInfoUsingGETResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getSessionInfoUsingGET200ApplicationJSONObject?: GetSessionInfoUsingGet200ApplicationJson;
-    getSessionInfoUsingGET400ApplicationJSONObject?: GetSessionInfoUsingGet400ApplicationJson;
-    getSessionInfoUsingGET401ApplicationJSONObject?: GetSessionInfoUsingGet401ApplicationJson;
-    getSessionInfoUsingGET500ApplicationJSONObject?: GetSessionInfoUsingGet500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    getSessionInfoUsingGET200ApplicationJSONObject?: GETSessionInfoUsingGet200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    getSessionInfoUsingGET400ApplicationJSONObject?: GETSessionInfoUsingGet400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    getSessionInfoUsingGET401ApplicationJSONObject?: GETSessionInfoUsingGet401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    getSessionInfoUsingGET500ApplicationJSONObject?: GETSessionInfoUsingGet500ApplicationJSON;
 }

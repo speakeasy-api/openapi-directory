@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The video's Australian Classification Board (ACB) or Australian Communications and Media Authority (ACMA) rating. ACMA ratings are used to classify children's television programming.
+ */
 export declare enum ContentRatingAcbRatingEnum {
     AcbUnspecified = "acbUnspecified",
     AcbE = "acbE",
@@ -11,6 +14,9 @@ export declare enum ContentRatingAcbRatingEnum {
     AcbR18plus = "acbR18plus",
     AcbUnrated = "acbUnrated"
 }
+/**
+ * The video's rating from Italy's Autorità per le Garanzie nelle Comunicazioni (AGCOM).
+ */
 export declare enum ContentRatingAgcomRatingEnum {
     AgcomUnspecified = "agcomUnspecified",
     AgcomT = "agcomT",
@@ -18,6 +24,9 @@ export declare enum ContentRatingAgcomRatingEnum {
     AgcomVm18 = "agcomVm18",
     AgcomUnrated = "agcomUnrated"
 }
+/**
+ * The video's Anatel (Asociación Nacional de Televisión) rating for Chilean television.
+ */
 export declare enum ContentRatingAnatelRatingEnum {
     AnatelUnspecified = "anatelUnspecified",
     AnatelF = "anatelF",
@@ -29,6 +38,9 @@ export declare enum ContentRatingAnatelRatingEnum {
     AnatelA = "anatelA",
     AnatelUnrated = "anatelUnrated"
 }
+/**
+ * The video's British Board of Film Classification (BBFC) rating.
+ */
 export declare enum ContentRatingBbfcRatingEnum {
     BbfcUnspecified = "bbfcUnspecified",
     BbfcU = "bbfcU",
@@ -40,6 +52,9 @@ export declare enum ContentRatingBbfcRatingEnum {
     BbfcR18 = "bbfcR18",
     BbfcUnrated = "bbfcUnrated"
 }
+/**
+ * The video's rating from Thailand's Board of Film and Video Censors.
+ */
 export declare enum ContentRatingBfvcRatingEnum {
     BfvcUnspecified = "bfvcUnspecified",
     BfvcG = "bfvcG",
@@ -51,6 +66,9 @@ export declare enum ContentRatingBfvcRatingEnum {
     BfvcB = "bfvcB",
     BfvcUnrated = "bfvcUnrated"
 }
+/**
+ * The video's rating from the Austrian Board of Media Classification (Bundesministerium für Unterricht, Kunst und Kultur).
+ */
 export declare enum ContentRatingBmukkRatingEnum {
     BmukkUnspecified = "bmukkUnspecified",
     BmukkAa = "bmukkAa",
@@ -62,6 +80,9 @@ export declare enum ContentRatingBmukkRatingEnum {
     Bmukk16 = "bmukk16",
     BmukkUnrated = "bmukkUnrated"
 }
+/**
+ * Rating system for Canadian TV - Canadian TV Classification System The video's rating from the Canadian Radio-Television and Telecommunications Commission (CRTC) for Canadian English-language broadcasts. For more information, see the Canadian Broadcast Standards Council website.
+ */
 export declare enum ContentRatingCatvRatingEnum {
     CatvUnspecified = "catvUnspecified",
     CatvC = "catvC",
@@ -73,6 +94,9 @@ export declare enum ContentRatingCatvRatingEnum {
     CatvUnrated = "catvUnrated",
     CatvE = "catvE"
 }
+/**
+ * The video's rating from the Canadian Radio-Television and Telecommunications Commission (CRTC) for Canadian French-language broadcasts. For more information, see the Canadian Broadcast Standards Council website.
+ */
 export declare enum ContentRatingCatvfrRatingEnum {
     CatvfrUnspecified = "catvfrUnspecified",
     CatvfrG = "catvfrG",
@@ -83,10 +107,13 @@ export declare enum ContentRatingCatvfrRatingEnum {
     CatvfrUnrated = "catvfrUnrated",
     CatvfrE = "catvfrE"
 }
+/**
+ * The video's Central Board of Film Certification (CBFC - India) rating.
+ */
 export declare enum ContentRatingCbfcRatingEnum {
     CbfcUnspecified = "cbfcUnspecified",
     CbfcU = "cbfcU",
-    CbfcUa = "cbfcUA",
+    CbfcUA = "cbfcUA",
     CbfcUa7plus = "cbfcUA7plus",
     CbfcUa13plus = "cbfcUA13plus",
     CbfcUa16plus = "cbfcUA16plus",
@@ -94,6 +121,9 @@ export declare enum ContentRatingCbfcRatingEnum {
     CbfcS = "cbfcS",
     CbfcUnrated = "cbfcUnrated"
 }
+/**
+ * The video's Consejo de Calificación Cinematográfica (Chile) rating.
+ */
 export declare enum ContentRatingCccRatingEnum {
     CccUnspecified = "cccUnspecified",
     CccTe = "cccTe",
@@ -104,6 +134,9 @@ export declare enum ContentRatingCccRatingEnum {
     Ccc18s = "ccc18s",
     CccUnrated = "cccUnrated"
 }
+/**
+ * The video's rating from Portugal's Comissão de Classificação de Espect´culos.
+ */
 export declare enum ContentRatingCceRatingEnum {
     CceUnspecified = "cceUnspecified",
     CceM4 = "cceM4",
@@ -114,6 +147,9 @@ export declare enum ContentRatingCceRatingEnum {
     CceUnrated = "cceUnrated",
     CceM14 = "cceM14"
 }
+/**
+ * The video's rating in Switzerland.
+ */
 export declare enum ContentRatingChfilmRatingEnum {
     ChfilmUnspecified = "chfilmUnspecified",
     Chfilm0 = "chfilm0",
@@ -123,6 +159,9 @@ export declare enum ContentRatingChfilmRatingEnum {
     Chfilm18 = "chfilm18",
     ChfilmUnrated = "chfilmUnrated"
 }
+/**
+ * The video's Canadian Home Video Rating System (CHVRS) rating.
+ */
 export declare enum ContentRatingChvrsRatingEnum {
     ChvrsUnspecified = "chvrsUnspecified",
     ChvrsG = "chvrsG",
@@ -133,6 +172,9 @@ export declare enum ContentRatingChvrsRatingEnum {
     ChvrsE = "chvrsE",
     ChvrsUnrated = "chvrsUnrated"
 }
+/**
+ * The video's rating from the Commission de Contrôle des Films (Belgium).
+ */
 export declare enum ContentRatingCicfRatingEnum {
     CicfUnspecified = "cicfUnspecified",
     CicfE = "cicfE",
@@ -140,6 +182,9 @@ export declare enum ContentRatingCicfRatingEnum {
     CicfKntEna = "cicfKntEna",
     CicfUnrated = "cicfUnrated"
 }
+/**
+ * The video's rating from Romania's CONSILIUL NATIONAL AL AUDIOVIZUALULUI (CNA).
+ */
 export declare enum ContentRatingCnaRatingEnum {
     CnaUnspecified = "cnaUnspecified",
     CnaAp = "cnaAp",
@@ -149,6 +194,9 @@ export declare enum ContentRatingCnaRatingEnum {
     Cna18plus = "cna18plus",
     CnaUnrated = "cnaUnrated"
 }
+/**
+ * Rating system in France - Commission de classification cinematographique
+ */
 export declare enum ContentRatingCncRatingEnum {
     CncUnspecified = "cncUnspecified",
     CncT = "cncT",
@@ -160,6 +208,9 @@ export declare enum ContentRatingCncRatingEnum {
     CncInterdiction = "cncInterdiction",
     CncUnrated = "cncUnrated"
 }
+/**
+ * The video's rating from France's Conseil supérieur de l’audiovisuel, which rates broadcast content.
+ */
 export declare enum ContentRatingCsaRatingEnum {
     CsaUnspecified = "csaUnspecified",
     CsaT = "csaT",
@@ -170,6 +221,9 @@ export declare enum ContentRatingCsaRatingEnum {
     CsaInterdiction = "csaInterdiction",
     CsaUnrated = "csaUnrated"
 }
+/**
+ * The video's rating from Luxembourg's Commission de surveillance de la classification des films (CSCF).
+ */
 export declare enum ContentRatingCscfRatingEnum {
     CscfUnspecified = "cscfUnspecified",
     CscfAl = "cscfAl",
@@ -181,6 +235,9 @@ export declare enum ContentRatingCscfRatingEnum {
     Cscf18 = "cscf18",
     CscfUnrated = "cscfUnrated"
 }
+/**
+ * The video's rating in the Czech Republic.
+ */
 export declare enum ContentRatingCzfilmRatingEnum {
     CzfilmUnspecified = "czfilmUnspecified",
     CzfilmU = "czfilmU",
@@ -189,6 +246,9 @@ export declare enum ContentRatingCzfilmRatingEnum {
     Czfilm18 = "czfilm18",
     CzfilmUnrated = "czfilmUnrated"
 }
+/**
+ * The video's Departamento de Justiça, Classificação, Qualificação e Títulos (DJCQT - Brazil) rating.
+ */
 export declare enum ContentRatingDjctqRatingEnum {
     DjctqUnspecified = "djctqUnspecified",
     DjctqL = "djctqL",
@@ -230,6 +290,9 @@ export declare enum ContentRatingDjctqRatingReasonsEnum {
     DjctqCriminalActs = "djctqCriminalActs",
     DjctqImpactingContent = "djctqImpactingContent"
 }
+/**
+ * Rating system in Turkey - Evaluation and Classification Board of the Ministry of Culture and Tourism
+ */
 export declare enum ContentRatingEcbmctRatingEnum {
     EcbmctUnspecified = "ecbmctUnspecified",
     EcbmctG = "ecbmctG",
@@ -242,6 +305,9 @@ export declare enum ContentRatingEcbmctRatingEnum {
     Ecbmct18plus = "ecbmct18plus",
     EcbmctUnrated = "ecbmctUnrated"
 }
+/**
+ * The video's rating in Estonia.
+ */
 export declare enum ContentRatingEefilmRatingEnum {
     EefilmUnspecified = "eefilmUnspecified",
     EefilmPere = "eefilmPere",
@@ -254,6 +320,9 @@ export declare enum ContentRatingEefilmRatingEnum {
     EefilmK16 = "eefilmK16",
     EefilmUnrated = "eefilmUnrated"
 }
+/**
+ * The video's rating in Egypt.
+ */
 export declare enum ContentRatingEgfilmRatingEnum {
     EgfilmUnspecified = "egfilmUnspecified",
     EgfilmGn = "egfilmGn",
@@ -261,6 +330,9 @@ export declare enum ContentRatingEgfilmRatingEnum {
     EgfilmBn = "egfilmBn",
     EgfilmUnrated = "egfilmUnrated"
 }
+/**
+ * The video's Eirin (映倫) rating. Eirin is the Japanese rating system.
+ */
 export declare enum ContentRatingEirinRatingEnum {
     EirinUnspecified = "eirinUnspecified",
     EirinG = "eirinG",
@@ -269,6 +341,9 @@ export declare enum ContentRatingEirinRatingEnum {
     EirinR18plus = "eirinR18plus",
     EirinUnrated = "eirinUnrated"
 }
+/**
+ * The video's rating from Malaysia's Film Censorship Board.
+ */
 export declare enum ContentRatingFcbmRatingEnum {
     FcbmUnspecified = "fcbmUnspecified",
     FcbmU = "fcbmU",
@@ -281,6 +356,9 @@ export declare enum ContentRatingFcbmRatingEnum {
     Fcbm18pl = "fcbm18pl",
     FcbmUnrated = "fcbmUnrated"
 }
+/**
+ * The video's rating from Hong Kong's Office for Film, Newspaper and Article Administration.
+ */
 export declare enum ContentRatingFcoRatingEnum {
     FcoUnspecified = "fcoUnspecified",
     FcoI = "fcoI",
@@ -290,6 +368,9 @@ export declare enum ContentRatingFcoRatingEnum {
     FcoIii = "fcoIii",
     FcoUnrated = "fcoUnrated"
 }
+/**
+ * This property has been deprecated. Use the contentDetails.contentRating.cncRating instead.
+ */
 export declare enum ContentRatingFmocRatingEnum {
     FmocUnspecified = "fmocUnspecified",
     FmocU = "fmocU",
@@ -300,6 +381,9 @@ export declare enum ContentRatingFmocRatingEnum {
     FmocE = "fmocE",
     FmocUnrated = "fmocUnrated"
 }
+/**
+ * The video's rating from South Africa's Film and Publication Board.
+ */
 export declare enum ContentRatingFpbRatingEnum {
     FpbUnspecified = "fpbUnspecified",
     FpbA = "fpbA",
@@ -328,6 +412,9 @@ export declare enum ContentRatingFpbRatingReasonsEnum {
     FpbCriminalTechniques = "fpbCriminalTechniques",
     FpbImitativeActsTechniques = "fpbImitativeActsTechniques"
 }
+/**
+ * The video's Freiwillige Selbstkontrolle der Filmwirtschaft (FSK - Germany) rating.
+ */
 export declare enum ContentRatingFskRatingEnum {
     FskUnspecified = "fskUnspecified",
     Fsk0 = "fsk0",
@@ -337,6 +424,9 @@ export declare enum ContentRatingFskRatingEnum {
     Fsk18 = "fsk18",
     FskUnrated = "fskUnrated"
 }
+/**
+ * The video's rating in Greece.
+ */
 export declare enum ContentRatingGrfilmRatingEnum {
     GrfilmUnspecified = "grfilmUnspecified",
     GrfilmK = "grfilmK",
@@ -348,6 +438,9 @@ export declare enum ContentRatingGrfilmRatingEnum {
     GrfilmK18 = "grfilmK18",
     GrfilmUnrated = "grfilmUnrated"
 }
+/**
+ * The video's Instituto de la Cinematografía y de las Artes Audiovisuales (ICAA - Spain) rating.
+ */
 export declare enum ContentRatingIcaaRatingEnum {
     IcaaUnspecified = "icaaUnspecified",
     IcaaApta = "icaaApta",
@@ -359,6 +452,9 @@ export declare enum ContentRatingIcaaRatingEnum {
     IcaaX = "icaaX",
     IcaaUnrated = "icaaUnrated"
 }
+/**
+ * The video's Irish Film Classification Office (IFCO - Ireland) rating. See the IFCO website for more information.
+ */
 export declare enum ContentRatingIfcoRatingEnum {
     IfcoUnspecified = "ifcoUnspecified",
     IfcoG = "ifcoG",
@@ -371,6 +467,9 @@ export declare enum ContentRatingIfcoRatingEnum {
     Ifco18 = "ifco18",
     IfcoUnrated = "ifcoUnrated"
 }
+/**
+ * The video's rating in Israel.
+ */
 export declare enum ContentRatingIlfilmRatingEnum {
     IlfilmUnspecified = "ilfilmUnspecified",
     IlfilmAa = "ilfilmAa",
@@ -380,6 +479,9 @@ export declare enum ContentRatingIlfilmRatingEnum {
     Ilfilm18 = "ilfilm18",
     IlfilmUnrated = "ilfilmUnrated"
 }
+/**
+ * The video's INCAA (Instituto Nacional de Cine y Artes Audiovisuales - Argentina) rating.
+ */
 export declare enum ContentRatingIncaaRatingEnum {
     IncaaUnspecified = "incaaUnspecified",
     IncaaAtp = "incaaAtp",
@@ -389,6 +491,9 @@ export declare enum ContentRatingIncaaRatingEnum {
     IncaaC = "incaaC",
     IncaaUnrated = "incaaUnrated"
 }
+/**
+ * The video's rating from the Kenya Film Classification Board.
+ */
 export declare enum ContentRatingKfcbRatingEnum {
     KfcbUnspecified = "kfcbUnspecified",
     KfcbG = "kfcbG",
@@ -397,6 +502,9 @@ export declare enum ContentRatingKfcbRatingEnum {
     KfcbR = "kfcbR",
     KfcbUnrated = "kfcbUnrated"
 }
+/**
+ * The video's NICAM/Kijkwijzer rating from the Nederlands Instituut voor de Classificatie van Audiovisuele Media (Netherlands).
+ */
 export declare enum ContentRatingKijkwijzerRatingEnum {
     KijkwijzerUnspecified = "kijkwijzerUnspecified",
     KijkwijzerAl = "kijkwijzerAl",
@@ -407,6 +515,9 @@ export declare enum ContentRatingKijkwijzerRatingEnum {
     Kijkwijzer18 = "kijkwijzer18",
     KijkwijzerUnrated = "kijkwijzerUnrated"
 }
+/**
+ * The video's Korea Media Rating Board (영상물등급위원회) rating. The KMRB rates videos in South Korea.
+ */
 export declare enum ContentRatingKmrbRatingEnum {
     KmrbUnspecified = "kmrbUnspecified",
     KmrbAll = "kmrbAll",
@@ -416,6 +527,9 @@ export declare enum ContentRatingKmrbRatingEnum {
     KmrbR = "kmrbR",
     KmrbUnrated = "kmrbUnrated"
 }
+/**
+ * The video's rating from Indonesia's Lembaga Sensor Film.
+ */
 export declare enum ContentRatingLsfRatingEnum {
     LsfUnspecified = "lsfUnspecified",
     LsfSu = "lsfSu",
@@ -428,6 +542,9 @@ export declare enum ContentRatingLsfRatingEnum {
     Lsf21 = "lsf21",
     LsfUnrated = "lsfUnrated"
 }
+/**
+ * The video's rating from Malta's Film Age-Classification Board.
+ */
 export declare enum ContentRatingMccaaRatingEnum {
     MccaaUnspecified = "mccaaUnspecified",
     MccaaU = "mccaaU",
@@ -440,6 +557,9 @@ export declare enum ContentRatingMccaaRatingEnum {
     Mccaa18 = "mccaa18",
     MccaaUnrated = "mccaaUnrated"
 }
+/**
+ * The video's rating from the Danish Film Institute's (Det Danske Filminstitut) Media Council for Children and Young People.
+ */
 export declare enum ContentRatingMccypRatingEnum {
     MccypUnspecified = "mccypUnspecified",
     MccypA = "mccypA",
@@ -448,6 +568,9 @@ export declare enum ContentRatingMccypRatingEnum {
     Mccyp15 = "mccyp15",
     MccypUnrated = "mccypUnrated"
 }
+/**
+ * The video's rating system for Vietnam - MCST
+ */
 export declare enum ContentRatingMcstRatingEnum {
     McstUnspecified = "mcstUnspecified",
     McstP = "mcstP",
@@ -459,6 +582,9 @@ export declare enum ContentRatingMcstRatingEnum {
     McstGPg = "mcstGPg",
     McstUnrated = "mcstUnrated"
 }
+/**
+ * The video's rating from Singapore's Media Development Authority (MDA) and, specifically, it's Board of Film Censors (BFC).
+ */
 export declare enum ContentRatingMdaRatingEnum {
     MdaUnspecified = "mdaUnspecified",
     MdaG = "mdaG",
@@ -469,6 +595,9 @@ export declare enum ContentRatingMdaRatingEnum {
     MdaR21 = "mdaR21",
     MdaUnrated = "mdaUnrated"
 }
+/**
+ * The video's rating from Medietilsynet, the Norwegian Media Authority.
+ */
 export declare enum ContentRatingMedietilsynetRatingEnum {
     MedietilsynetUnspecified = "medietilsynetUnspecified",
     MedietilsynetA = "medietilsynetA",
@@ -481,6 +610,9 @@ export declare enum ContentRatingMedietilsynetRatingEnum {
     Medietilsynet18 = "medietilsynet18",
     MedietilsynetUnrated = "medietilsynetUnrated"
 }
+/**
+ * The video's rating from Finland's Kansallinen Audiovisuaalinen Instituutti (National Audiovisual Institute).
+ */
 export declare enum ContentRatingMekuRatingEnum {
     MekuUnspecified = "mekuUnspecified",
     MekuS = "mekuS",
@@ -490,6 +622,9 @@ export declare enum ContentRatingMekuRatingEnum {
     Meku18 = "meku18",
     MekuUnrated = "mekuUnrated"
 }
+/**
+ * The rating system for MENA countries, a clone of MPAA. It is needed to prevent titles go live w/o additional QC check, since some of them can be inappropriate for the countries at all. See b/33408548 for more details.
+ */
 export declare enum ContentRatingMenaMpaaRatingEnum {
     MenaMpaaUnspecified = "menaMpaaUnspecified",
     MenaMpaaG = "menaMpaaG",
@@ -498,6 +633,9 @@ export declare enum ContentRatingMenaMpaaRatingEnum {
     MenaMpaaR = "menaMpaaR",
     MenaMpaaUnrated = "menaMpaaUnrated"
 }
+/**
+ * The video's rating from the Ministero dei Beni e delle Attività Culturali e del Turismo (Italy).
+ */
 export declare enum ContentRatingMibacRatingEnum {
     MibacUnspecified = "mibacUnspecified",
     MibacT = "mibacT",
@@ -509,6 +647,9 @@ export declare enum ContentRatingMibacRatingEnum {
     MibacVm18 = "mibacVm18",
     MibacUnrated = "mibacUnrated"
 }
+/**
+ * The video's Ministerio de Cultura (Colombia) rating.
+ */
 export declare enum ContentRatingMocRatingEnum {
     MocUnspecified = "mocUnspecified",
     MocE = "mocE",
@@ -521,6 +662,9 @@ export declare enum ContentRatingMocRatingEnum {
     MocBanned = "mocBanned",
     MocUnrated = "mocUnrated"
 }
+/**
+ * The video's rating from Taiwan's Ministry of Culture (文化部).
+ */
 export declare enum ContentRatingMoctwRatingEnum {
     MoctwUnspecified = "moctwUnspecified",
     MoctwG = "moctwG",
@@ -531,6 +675,9 @@ export declare enum ContentRatingMoctwRatingEnum {
     MoctwR12 = "moctwR12",
     MoctwR15 = "moctwR15"
 }
+/**
+ * The video's Motion Picture Association of America (MPAA) rating.
+ */
 export declare enum ContentRatingMpaaRatingEnum {
     MpaaUnspecified = "mpaaUnspecified",
     MpaaG = "mpaaG",
@@ -541,11 +688,17 @@ export declare enum ContentRatingMpaaRatingEnum {
     MpaaX = "mpaaX",
     MpaaUnrated = "mpaaUnrated"
 }
+/**
+ * The rating system for trailer, DVD, and Ad in the US. See http://movielabs.com/md/ratings/v2.3/html/US_MPAAT_Ratings.html.
+ */
 export declare enum ContentRatingMpaatRatingEnum {
     MpaatUnspecified = "mpaatUnspecified",
     MpaatGb = "mpaatGb",
     MpaatRb = "mpaatRb"
 }
+/**
+ * The video's rating from the Movie and Television Review and Classification Board (Philippines).
+ */
 export declare enum ContentRatingMtrcbRatingEnum {
     MtrcbUnspecified = "mtrcbUnspecified",
     MtrcbG = "mtrcbG",
@@ -556,6 +709,9 @@ export declare enum ContentRatingMtrcbRatingEnum {
     MtrcbX = "mtrcbX",
     MtrcbUnrated = "mtrcbUnrated"
 }
+/**
+ * The video's rating from the Maldives National Bureau of Classification.
+ */
 export declare enum ContentRatingNbcRatingEnum {
     NbcUnspecified = "nbcUnspecified",
     NbcG = "nbcG",
@@ -567,6 +723,9 @@ export declare enum ContentRatingNbcRatingEnum {
     NbcPu = "nbcPu",
     NbcUnrated = "nbcUnrated"
 }
+/**
+ * The video's rating in Poland.
+ */
 export declare enum ContentRatingNbcplRatingEnum {
     NbcplUnspecified = "nbcplUnspecified",
     NbcplI = "nbcplI",
@@ -576,6 +735,9 @@ export declare enum ContentRatingNbcplRatingEnum {
     Nbcpl18plus = "nbcpl18plus",
     NbcplUnrated = "nbcplUnrated"
 }
+/**
+ * The video's rating from the Bulgarian National Film Center.
+ */
 export declare enum ContentRatingNfrcRatingEnum {
     NfrcUnspecified = "nfrcUnspecified",
     NfrcA = "nfrcA",
@@ -585,6 +747,9 @@ export declare enum ContentRatingNfrcRatingEnum {
     NfrcX = "nfrcX",
     NfrcUnrated = "nfrcUnrated"
 }
+/**
+ * The video's rating from Nigeria's National Film and Video Censors Board.
+ */
 export declare enum ContentRatingNfvcbRatingEnum {
     NfvcbUnspecified = "nfvcbUnspecified",
     NfvcbG = "nfvcbG",
@@ -596,6 +761,9 @@ export declare enum ContentRatingNfvcbRatingEnum {
     NfvcbRe = "nfvcbRe",
     NfvcbUnrated = "nfvcbUnrated"
 }
+/**
+ * The video's rating from the Nacionãlais Kino centrs (National Film Centre of Latvia).
+ */
 export declare enum ContentRatingNkclvRatingEnum {
     NkclvUnspecified = "nkclvUnspecified",
     NkclvU = "nkclvU",
@@ -605,6 +773,9 @@ export declare enum ContentRatingNkclvRatingEnum {
     Nkclv18plus = "nkclv18plus",
     NkclvUnrated = "nkclvUnrated"
 }
+/**
+ * The National Media Council ratings system for United Arab Emirates.
+ */
 export declare enum ContentRatingNmcRatingEnum {
     NmcUnspecified = "nmcUnspecified",
     NmcG = "nmcG",
@@ -616,6 +787,9 @@ export declare enum ContentRatingNmcRatingEnum {
     Nmc18tc = "nmc18tc",
     NmcUnrated = "nmcUnrated"
 }
+/**
+ * The video's Office of Film and Literature Classification (OFLC - New Zealand) rating.
+ */
 export declare enum ContentRatingOflcRatingEnum {
     OflcUnspecified = "oflcUnspecified",
     OflcG = "oflcG",
@@ -630,6 +804,9 @@ export declare enum ContentRatingOflcRatingEnum {
     OflcRp16 = "oflcRp16",
     OflcRp18 = "oflcRp18"
 }
+/**
+ * The video's rating in Peru.
+ */
 export declare enum ContentRatingPefilmRatingEnum {
     PefilmUnspecified = "pefilmUnspecified",
     PefilmPt = "pefilmPt",
@@ -638,6 +815,9 @@ export declare enum ContentRatingPefilmRatingEnum {
     Pefilm18 = "pefilm18",
     PefilmUnrated = "pefilmUnrated"
 }
+/**
+ * The video's rating from the Hungarian Nemzeti Filmiroda, the Rating Committee of the National Office of Film.
+ */
 export declare enum ContentRatingRcnofRatingEnum {
     RcnofUnspecified = "rcnofUnspecified",
     RcnofI = "rcnofI",
@@ -648,6 +828,9 @@ export declare enum ContentRatingRcnofRatingEnum {
     RcnofVi = "rcnofVi",
     RcnofUnrated = "rcnofUnrated"
 }
+/**
+ * The video's rating in Venezuela.
+ */
 export declare enum ContentRatingResorteviolenciaRatingEnum {
     ResorteviolenciaUnspecified = "resorteviolenciaUnspecified",
     ResorteviolenciaA = "resorteviolenciaA",
@@ -657,6 +840,9 @@ export declare enum ContentRatingResorteviolenciaRatingEnum {
     ResorteviolenciaE = "resorteviolenciaE",
     ResorteviolenciaUnrated = "resorteviolenciaUnrated"
 }
+/**
+ * The video's General Directorate of Radio, Television and Cinematography (Mexico) rating.
+ */
 export declare enum ContentRatingRtcRatingEnum {
     RtcUnspecified = "rtcUnspecified",
     RtcAa = "rtcAa",
@@ -667,6 +853,9 @@ export declare enum ContentRatingRtcRatingEnum {
     RtcD = "rtcD",
     RtcUnrated = "rtcUnrated"
 }
+/**
+ * The video's rating from Ireland's Raidió Teilifís Éireann.
+ */
 export declare enum ContentRatingRteRatingEnum {
     RteUnspecified = "rteUnspecified",
     RteGa = "rteGa",
@@ -675,6 +864,9 @@ export declare enum ContentRatingRteRatingEnum {
     RteMa = "rteMa",
     RteUnrated = "rteUnrated"
 }
+/**
+ * The video's National Film Registry of the Russian Federation (MKRF - Russia) rating.
+ */
 export declare enum ContentRatingRussiaRatingEnum {
     RussiaUnspecified = "russiaUnspecified",
     Russia0 = "russia0",
@@ -684,6 +876,9 @@ export declare enum ContentRatingRussiaRatingEnum {
     Russia18 = "russia18",
     RussiaUnrated = "russiaUnrated"
 }
+/**
+ * The video's rating in Slovakia.
+ */
 export declare enum ContentRatingSkfilmRatingEnum {
     SkfilmUnspecified = "skfilmUnspecified",
     SkfilmG = "skfilmG",
@@ -692,6 +887,9 @@ export declare enum ContentRatingSkfilmRatingEnum {
     SkfilmP8 = "skfilmP8",
     SkfilmUnrated = "skfilmUnrated"
 }
+/**
+ * The video's rating in Iceland.
+ */
 export declare enum ContentRatingSmaisRatingEnum {
     SmaisUnspecified = "smaisUnspecified",
     SmaisL = "smaisL",
@@ -702,6 +900,9 @@ export declare enum ContentRatingSmaisRatingEnum {
     Smais18 = "smais18",
     SmaisUnrated = "smaisUnrated"
 }
+/**
+ * The video's rating from Statens medieråd (Sweden's National Media Council).
+ */
 export declare enum ContentRatingSmsaRatingEnum {
     SmsaUnspecified = "smsaUnspecified",
     SmsaA = "smsaA",
@@ -710,6 +911,9 @@ export declare enum ContentRatingSmsaRatingEnum {
     Smsa15 = "smsa15",
     SmsaUnrated = "smsaUnrated"
 }
+/**
+ * The video's TV Parental Guidelines (TVPG) rating.
+ */
 export declare enum ContentRatingTvpgRatingEnum {
     TvpgUnspecified = "tvpgUnspecified",
     TvpgY = "tvpgY",
@@ -721,83 +925,299 @@ export declare enum ContentRatingTvpgRatingEnum {
     TvpgMa = "tvpgMa",
     TvpgUnrated = "tvpgUnrated"
 }
+/**
+ * A rating that YouTube uses to identify age-restricted content.
+ */
 export declare enum ContentRatingYtRatingEnum {
     YtUnspecified = "ytUnspecified",
     YtAgeRestricted = "ytAgeRestricted"
 }
 /**
  * Ratings schemes. The country-specific ratings are mostly for movies and shows. LINT.IfChange
-**/
+ */
 export declare class ContentRating extends SpeakeasyBase {
+    /**
+     * The video's Australian Classification Board (ACB) or Australian Communications and Media Authority (ACMA) rating. ACMA ratings are used to classify children's television programming.
+     */
     acbRating?: ContentRatingAcbRatingEnum;
+    /**
+     * The video's rating from Italy's Autorità per le Garanzie nelle Comunicazioni (AGCOM).
+     */
     agcomRating?: ContentRatingAgcomRatingEnum;
+    /**
+     * The video's Anatel (Asociación Nacional de Televisión) rating for Chilean television.
+     */
     anatelRating?: ContentRatingAnatelRatingEnum;
+    /**
+     * The video's British Board of Film Classification (BBFC) rating.
+     */
     bbfcRating?: ContentRatingBbfcRatingEnum;
+    /**
+     * The video's rating from Thailand's Board of Film and Video Censors.
+     */
     bfvcRating?: ContentRatingBfvcRatingEnum;
+    /**
+     * The video's rating from the Austrian Board of Media Classification (Bundesministerium für Unterricht, Kunst und Kultur).
+     */
     bmukkRating?: ContentRatingBmukkRatingEnum;
+    /**
+     * Rating system for Canadian TV - Canadian TV Classification System The video's rating from the Canadian Radio-Television and Telecommunications Commission (CRTC) for Canadian English-language broadcasts. For more information, see the Canadian Broadcast Standards Council website.
+     */
     catvRating?: ContentRatingCatvRatingEnum;
+    /**
+     * The video's rating from the Canadian Radio-Television and Telecommunications Commission (CRTC) for Canadian French-language broadcasts. For more information, see the Canadian Broadcast Standards Council website.
+     */
     catvfrRating?: ContentRatingCatvfrRatingEnum;
+    /**
+     * The video's Central Board of Film Certification (CBFC - India) rating.
+     */
     cbfcRating?: ContentRatingCbfcRatingEnum;
+    /**
+     * The video's Consejo de Calificación Cinematográfica (Chile) rating.
+     */
     cccRating?: ContentRatingCccRatingEnum;
+    /**
+     * The video's rating from Portugal's Comissão de Classificação de Espect´culos.
+     */
     cceRating?: ContentRatingCceRatingEnum;
+    /**
+     * The video's rating in Switzerland.
+     */
     chfilmRating?: ContentRatingChfilmRatingEnum;
+    /**
+     * The video's Canadian Home Video Rating System (CHVRS) rating.
+     */
     chvrsRating?: ContentRatingChvrsRatingEnum;
+    /**
+     * The video's rating from the Commission de Contrôle des Films (Belgium).
+     */
     cicfRating?: ContentRatingCicfRatingEnum;
+    /**
+     * The video's rating from Romania's CONSILIUL NATIONAL AL AUDIOVIZUALULUI (CNA).
+     */
     cnaRating?: ContentRatingCnaRatingEnum;
+    /**
+     * Rating system in France - Commission de classification cinematographique
+     */
     cncRating?: ContentRatingCncRatingEnum;
+    /**
+     * The video's rating from France's Conseil supérieur de l’audiovisuel, which rates broadcast content.
+     */
     csaRating?: ContentRatingCsaRatingEnum;
+    /**
+     * The video's rating from Luxembourg's Commission de surveillance de la classification des films (CSCF).
+     */
     cscfRating?: ContentRatingCscfRatingEnum;
+    /**
+     * The video's rating in the Czech Republic.
+     */
     czfilmRating?: ContentRatingCzfilmRatingEnum;
+    /**
+     * The video's Departamento de Justiça, Classificação, Qualificação e Títulos (DJCQT - Brazil) rating.
+     */
     djctqRating?: ContentRatingDjctqRatingEnum;
+    /**
+     * Reasons that explain why the video received its DJCQT (Brazil) rating.
+     */
     djctqRatingReasons?: ContentRatingDjctqRatingReasonsEnum[];
+    /**
+     * Rating system in Turkey - Evaluation and Classification Board of the Ministry of Culture and Tourism
+     */
     ecbmctRating?: ContentRatingEcbmctRatingEnum;
+    /**
+     * The video's rating in Estonia.
+     */
     eefilmRating?: ContentRatingEefilmRatingEnum;
+    /**
+     * The video's rating in Egypt.
+     */
     egfilmRating?: ContentRatingEgfilmRatingEnum;
+    /**
+     * The video's Eirin (映倫) rating. Eirin is the Japanese rating system.
+     */
     eirinRating?: ContentRatingEirinRatingEnum;
+    /**
+     * The video's rating from Malaysia's Film Censorship Board.
+     */
     fcbmRating?: ContentRatingFcbmRatingEnum;
+    /**
+     * The video's rating from Hong Kong's Office for Film, Newspaper and Article Administration.
+     */
     fcoRating?: ContentRatingFcoRatingEnum;
+    /**
+     * This property has been deprecated. Use the contentDetails.contentRating.cncRating instead.
+     */
     fmocRating?: ContentRatingFmocRatingEnum;
+    /**
+     * The video's rating from South Africa's Film and Publication Board.
+     */
     fpbRating?: ContentRatingFpbRatingEnum;
+    /**
+     * Reasons that explain why the video received its FPB (South Africa) rating.
+     */
     fpbRatingReasons?: ContentRatingFpbRatingReasonsEnum[];
+    /**
+     * The video's Freiwillige Selbstkontrolle der Filmwirtschaft (FSK - Germany) rating.
+     */
     fskRating?: ContentRatingFskRatingEnum;
+    /**
+     * The video's rating in Greece.
+     */
     grfilmRating?: ContentRatingGrfilmRatingEnum;
+    /**
+     * The video's Instituto de la Cinematografía y de las Artes Audiovisuales (ICAA - Spain) rating.
+     */
     icaaRating?: ContentRatingIcaaRatingEnum;
+    /**
+     * The video's Irish Film Classification Office (IFCO - Ireland) rating. See the IFCO website for more information.
+     */
     ifcoRating?: ContentRatingIfcoRatingEnum;
+    /**
+     * The video's rating in Israel.
+     */
     ilfilmRating?: ContentRatingIlfilmRatingEnum;
+    /**
+     * The video's INCAA (Instituto Nacional de Cine y Artes Audiovisuales - Argentina) rating.
+     */
     incaaRating?: ContentRatingIncaaRatingEnum;
+    /**
+     * The video's rating from the Kenya Film Classification Board.
+     */
     kfcbRating?: ContentRatingKfcbRatingEnum;
+    /**
+     * The video's NICAM/Kijkwijzer rating from the Nederlands Instituut voor de Classificatie van Audiovisuele Media (Netherlands).
+     */
     kijkwijzerRating?: ContentRatingKijkwijzerRatingEnum;
+    /**
+     * The video's Korea Media Rating Board (영상물등급위원회) rating. The KMRB rates videos in South Korea.
+     */
     kmrbRating?: ContentRatingKmrbRatingEnum;
+    /**
+     * The video's rating from Indonesia's Lembaga Sensor Film.
+     */
     lsfRating?: ContentRatingLsfRatingEnum;
+    /**
+     * The video's rating from Malta's Film Age-Classification Board.
+     */
     mccaaRating?: ContentRatingMccaaRatingEnum;
+    /**
+     * The video's rating from the Danish Film Institute's (Det Danske Filminstitut) Media Council for Children and Young People.
+     */
     mccypRating?: ContentRatingMccypRatingEnum;
+    /**
+     * The video's rating system for Vietnam - MCST
+     */
     mcstRating?: ContentRatingMcstRatingEnum;
+    /**
+     * The video's rating from Singapore's Media Development Authority (MDA) and, specifically, it's Board of Film Censors (BFC).
+     */
     mdaRating?: ContentRatingMdaRatingEnum;
+    /**
+     * The video's rating from Medietilsynet, the Norwegian Media Authority.
+     */
     medietilsynetRating?: ContentRatingMedietilsynetRatingEnum;
+    /**
+     * The video's rating from Finland's Kansallinen Audiovisuaalinen Instituutti (National Audiovisual Institute).
+     */
     mekuRating?: ContentRatingMekuRatingEnum;
+    /**
+     * The rating system for MENA countries, a clone of MPAA. It is needed to prevent titles go live w/o additional QC check, since some of them can be inappropriate for the countries at all. See b/33408548 for more details.
+     */
     menaMpaaRating?: ContentRatingMenaMpaaRatingEnum;
+    /**
+     * The video's rating from the Ministero dei Beni e delle Attività Culturali e del Turismo (Italy).
+     */
     mibacRating?: ContentRatingMibacRatingEnum;
+    /**
+     * The video's Ministerio de Cultura (Colombia) rating.
+     */
     mocRating?: ContentRatingMocRatingEnum;
+    /**
+     * The video's rating from Taiwan's Ministry of Culture (文化部).
+     */
     moctwRating?: ContentRatingMoctwRatingEnum;
+    /**
+     * The video's Motion Picture Association of America (MPAA) rating.
+     */
     mpaaRating?: ContentRatingMpaaRatingEnum;
+    /**
+     * The rating system for trailer, DVD, and Ad in the US. See http://movielabs.com/md/ratings/v2.3/html/US_MPAAT_Ratings.html.
+     */
     mpaatRating?: ContentRatingMpaatRatingEnum;
+    /**
+     * The video's rating from the Movie and Television Review and Classification Board (Philippines).
+     */
     mtrcbRating?: ContentRatingMtrcbRatingEnum;
+    /**
+     * The video's rating from the Maldives National Bureau of Classification.
+     */
     nbcRating?: ContentRatingNbcRatingEnum;
+    /**
+     * The video's rating in Poland.
+     */
     nbcplRating?: ContentRatingNbcplRatingEnum;
+    /**
+     * The video's rating from the Bulgarian National Film Center.
+     */
     nfrcRating?: ContentRatingNfrcRatingEnum;
+    /**
+     * The video's rating from Nigeria's National Film and Video Censors Board.
+     */
     nfvcbRating?: ContentRatingNfvcbRatingEnum;
+    /**
+     * The video's rating from the Nacionãlais Kino centrs (National Film Centre of Latvia).
+     */
     nkclvRating?: ContentRatingNkclvRatingEnum;
+    /**
+     * The National Media Council ratings system for United Arab Emirates.
+     */
     nmcRating?: ContentRatingNmcRatingEnum;
+    /**
+     * The video's Office of Film and Literature Classification (OFLC - New Zealand) rating.
+     */
     oflcRating?: ContentRatingOflcRatingEnum;
+    /**
+     * The video's rating in Peru.
+     */
     pefilmRating?: ContentRatingPefilmRatingEnum;
+    /**
+     * The video's rating from the Hungarian Nemzeti Filmiroda, the Rating Committee of the National Office of Film.
+     */
     rcnofRating?: ContentRatingRcnofRatingEnum;
+    /**
+     * The video's rating in Venezuela.
+     */
     resorteviolenciaRating?: ContentRatingResorteviolenciaRatingEnum;
+    /**
+     * The video's General Directorate of Radio, Television and Cinematography (Mexico) rating.
+     */
     rtcRating?: ContentRatingRtcRatingEnum;
+    /**
+     * The video's rating from Ireland's Raidió Teilifís Éireann.
+     */
     rteRating?: ContentRatingRteRatingEnum;
+    /**
+     * The video's National Film Registry of the Russian Federation (MKRF - Russia) rating.
+     */
     russiaRating?: ContentRatingRussiaRatingEnum;
+    /**
+     * The video's rating in Slovakia.
+     */
     skfilmRating?: ContentRatingSkfilmRatingEnum;
+    /**
+     * The video's rating in Iceland.
+     */
     smaisRating?: ContentRatingSmaisRatingEnum;
+    /**
+     * The video's rating from Statens medieråd (Sweden's National Media Council).
+     */
     smsaRating?: ContentRatingSmsaRatingEnum;
+    /**
+     * The video's TV Parental Guidelines (TVPG) rating.
+     */
     tvpgRating?: ContentRatingTvpgRatingEnum;
+    /**
+     * A rating that YouTube uses to identify age-restricted content.
+     */
     ytRating?: ContentRatingYtRatingEnum;
 }

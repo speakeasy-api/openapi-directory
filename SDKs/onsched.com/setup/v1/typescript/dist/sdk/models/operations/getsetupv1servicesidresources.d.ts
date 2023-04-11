@@ -1,19 +1,34 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetSetupV1ServicesIdResourcesPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class GetSetupV1ServicesIdResourcesQueryParams extends SpeakeasyBase {
-    googleAuthReturnUrl?: string;
-    limit?: number;
-    offset?: number;
-    outlookAuthReturnUrl?: string;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class GetSetupV1ServicesIdResourcesRequest extends SpeakeasyBase {
-    pathParams: GetSetupV1ServicesIdResourcesPathParams;
-    queryParams: GetSetupV1ServicesIdResourcesQueryParams;
+    /**
+     * Google calendar authorization return url
+     */
+    googleAuthReturnUrl?: string;
+    /**
+     * id of service object
+     */
+    id: string;
+    /**
+     * Page limit default 20, max 100
+     */
+    limit?: number;
+    /**
+     * Starting row of page, default 0
+     */
+    offset?: number;
+    /**
+     * Outlook calendar authorization return url
+     */
+    outlookAuthReturnUrl?: string;
 }
 export declare class GetSetupV1ServicesIdResourcesResponse extends SpeakeasyBase {
     contentType: string;
-    resourceListViewModel?: Record<string, any>;
+    /**
+     * Success
+     */
+    resourceListViewModel?: shared.ResourceListViewModel;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

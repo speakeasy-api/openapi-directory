@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Collections {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,18 +9,20 @@ export declare class Collections {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * allCollections - All Collections
+     * All Collections
      *
+     * @remarks
      * The `/collections` endpoint returns a list of all [collections](https://www.getpostman.com/docs/collections) that are accessible by you. The list includes your own collections and the collections that you have subscribed to.
      *
      * The response contains an array of collection information containing the `name`, `id`, `owner` and `uid` of each collection.
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
+     */
     allCollections(config?: AxiosRequestConfig): Promise<operations.AllCollectionsResponse>;
     /**
-     * createAFork - Create a Fork
+     * Create a Fork
      *
+     * @remarks
      * This endpoint allows you to create a fork from an existing collection.
      *
      * On successful creation of the collection, the response returns the collection `name`, `id`, `uid` along with `fork` information.
@@ -28,11 +30,12 @@ export declare class Collections {
      * You can also specify the context of a workspace to fork a collection in by passing the `workspace` as a query param.
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
+     */
     createAFork(req: operations.CreateAForkRequest, config?: AxiosRequestConfig): Promise<operations.CreateAForkResponse>;
     /**
-     * createCollection - Create Collection
+     * Create Collection
      *
+     * @remarks
      * This endpoint allows you to create collections using the Postman Collection v2 format. For more information about the v2 schema, check the format [here](https://schema.getpostman.com/json/collection/v2.0.0/docs/index.html).
      *
      * On successful creation of the collection, the response returns the collection `name`, `id` and the `uid`.
@@ -40,21 +43,23 @@ export declare class Collections {
      * You can also specify the context of a workspace to create a collection in directly by passing the `workspace` as a query param.
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
-    createCollection(req: operations.CreateCollectionRequest, config?: AxiosRequestConfig): Promise<operations.CreateCollectionResponse>;
+     */
+    createCollection(req: operations.CreateCollectionRequestBody, config?: AxiosRequestConfig): Promise<operations.CreateCollectionResponse>;
     /**
-     * deleteCollection - Delete Collection
+     * Delete Collection
      *
+     * @remarks
      * This endpoint allows you to delete an existing collection.
      *
      * On successful deletion of the collection, the response returns the `id` and `uid`.
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
+     */
     deleteCollection(req: operations.DeleteCollectionRequest, config?: AxiosRequestConfig): Promise<operations.DeleteCollectionResponse>;
     /**
-     * mergeAFork - Merge a Fork
+     * Merge a Fork
      *
+     * @remarks
      * This endpoint allows you to merge a forked collection back to its destination collection.
      *
      * On successful creation of the collection, the response returns the collection `name`, `id` and `uid`.
@@ -72,19 +77,21 @@ export declare class Collections {
      *
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
-    mergeAFork(req: operations.MergeAForkRequest, config?: AxiosRequestConfig): Promise<operations.MergeAForkResponse>;
+     */
+    mergeAFork(req: operations.MergeAForkRequestBody, config?: AxiosRequestConfig): Promise<operations.MergeAForkResponse>;
     /**
-     * singleCollection - Single Collection
+     * Single Collection
      *
+     * @remarks
      * Access the contents of a collection that is accessible to you using its unique id (`uid`).
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
+     */
     singleCollection(req: operations.SingleCollectionRequest, config?: AxiosRequestConfig): Promise<operations.SingleCollectionResponse>;
     /**
-     * updateCollection - Update Collection
+     * Update Collection
      *
+     * @remarks
      * This endpoint allows you to update an existing collection using the Postman Collection v2 format. For more information about the v2 schema, check the format [here](https://schema.getpostman.com/json/collection/v2.0.0/docs/index.html).
      *
      * On successful updation of the collection, the response returns the collection `name`, `id` and `uid`.
@@ -92,6 +99,6 @@ export declare class Collections {
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
      *
      * Note: Please be careful when trying to update the collection, as the existing collection will be replaced by the request body.
-    **/
+     */
     updateCollection(req: operations.UpdateCollectionRequest, config?: AxiosRequestConfig): Promise<operations.UpdateCollectionResponse>;
 }

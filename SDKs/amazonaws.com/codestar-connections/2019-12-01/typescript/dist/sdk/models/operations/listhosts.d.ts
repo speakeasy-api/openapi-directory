@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListHostsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListHostsXAmzTargetEnum {
     ComAmazonawsCodestarConnectionsCodeStarConnections20191201ListHosts = "com.amazonaws.codestar.connections.CodeStar_connections_20191201.ListHosts"
 }
-export declare class ListHostsHeaders extends SpeakeasyBase {
+export declare class ListHostsRequest extends SpeakeasyBase {
+    listHostsInput: shared.ListHostsInput;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,13 +23,12 @@ export declare class ListHostsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListHostsXAmzTargetEnum;
 }
-export declare class ListHostsRequest extends SpeakeasyBase {
-    queryParams: ListHostsQueryParams;
-    headers: ListHostsHeaders;
-    request: shared.ListHostsInput;
-}
 export declare class ListHostsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     listHostsOutput?: shared.ListHostsOutput;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

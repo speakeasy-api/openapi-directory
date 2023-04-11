@@ -1,19 +1,28 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class PutQuoteQueryParams extends SpeakeasyBase {
-    author?: string;
-    language?: string;
-    quote: string;
-    tags?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PutQuoteSecurity extends SpeakeasyBase {
-    xTheySaidSoApiSecret: shared.SchemeXTheySaidSoApiSecret;
+    xTheySaidSoApiSecret: string;
 }
 export declare class PutQuoteRequest extends SpeakeasyBase {
-    queryParams: PutQuoteQueryParams;
-    security: PutQuoteSecurity;
+    /**
+     * Quote Author
+     */
+    author?: string;
+    /**
+     * Language. If not supplied an auto detection mechanism will be used to detect a language.
+     */
+    language?: string;
+    /**
+     * Quote
+     */
+    quote: string;
+    /**
+     * Comma Separated tags
+     */
+    tags?: string;
 }
 export declare class PutQuoteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -5,6 +5,9 @@ export declare class PreReceiveEnvironmentDownload extends SpeakeasyBase {
     state?: string;
     url?: string;
 }
+/**
+ * Response
+ */
 export declare class PreReceiveEnvironment extends SpeakeasyBase {
     createdAt?: string;
     defaultEnvironment?: boolean;

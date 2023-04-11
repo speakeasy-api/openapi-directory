@@ -1,4 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
 export declare class ImportExternalApiSpecificationRequestBodyInputInfoLicense extends SpeakeasyBase {
     name?: string;
 }
@@ -71,31 +72,41 @@ export declare class ImportExternalApiSpecificationRequestBody extends Speakeasy
     input?: ImportExternalApiSpecificationRequestBodyInput;
     type?: string;
 }
-export declare class ImportExternalApiSpecification200ApplicationJsonCollections extends SpeakeasyBase {
+export declare class ImportExternalApiSpecification400ApplicationJSONErrorDetails extends SpeakeasyBase {
+    param?: string;
+}
+export declare class ImportExternalApiSpecification400ApplicationJSONError extends SpeakeasyBase {
+    details?: ImportExternalApiSpecification400ApplicationJSONErrorDetails;
+    message?: string;
+    name?: string;
+}
+/**
+ * Error: Param Missing
+ */
+export declare class ImportExternalApiSpecification400ApplicationJSON extends SpeakeasyBase {
+    error?: ImportExternalApiSpecification400ApplicationJSONError;
+}
+export declare class ImportExternalApiSpecification200ApplicationJSONCollections extends SpeakeasyBase {
     id?: string;
     name?: string;
     uid?: string;
 }
-export declare class ImportExternalApiSpecification200ApplicationJson extends SpeakeasyBase {
-    collections?: ImportExternalApiSpecification200ApplicationJsonCollections[];
-}
-export declare class ImportExternalApiSpecification400ApplicationJsonErrorDetails extends SpeakeasyBase {
-    param?: string;
-}
-export declare class ImportExternalApiSpecification400ApplicationJsonError extends SpeakeasyBase {
-    details?: ImportExternalApiSpecification400ApplicationJsonErrorDetails;
-    message?: string;
-    name?: string;
-}
-export declare class ImportExternalApiSpecification400ApplicationJson extends SpeakeasyBase {
-    error?: ImportExternalApiSpecification400ApplicationJsonError;
-}
-export declare class ImportExternalApiSpecificationRequest extends SpeakeasyBase {
-    request?: ImportExternalApiSpecificationRequestBody;
+/**
+ * Success: Import to a specific workspace with workspace ID passed as a query parameter
+ */
+export declare class ImportExternalApiSpecification200ApplicationJSON extends SpeakeasyBase {
+    collections?: ImportExternalApiSpecification200ApplicationJSONCollections[];
 }
 export declare class ImportExternalApiSpecificationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    importExternalApiSpecification200ApplicationJSONObject?: ImportExternalApiSpecification200ApplicationJson;
-    importExternalApiSpecification400ApplicationJSONObject?: ImportExternalApiSpecification400ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success: Import to a specific workspace with workspace ID passed as a query parameter
+     */
+    importExternalApiSpecification200ApplicationJSONObject?: ImportExternalApiSpecification200ApplicationJSON;
+    /**
+     * Error: Param Missing
+     */
+    importExternalApiSpecification400ApplicationJSONObject?: ImportExternalApiSpecification400ApplicationJSON;
 }

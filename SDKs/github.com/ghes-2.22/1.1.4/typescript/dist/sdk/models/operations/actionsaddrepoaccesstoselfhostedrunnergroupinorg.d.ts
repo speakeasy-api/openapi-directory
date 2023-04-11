@@ -1,13 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest extends SpeakeasyBase {
     org: string;
     repositoryId: number;
+    /**
+     * Unique identifier of the self-hosted runner group.
+     */
     runnerGroupId: number;
-}
-export declare class ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest extends SpeakeasyBase {
-    pathParams: ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgPathParams;
 }
 export declare class ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Features {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,19 +9,19 @@ export declare class Features {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * objectDeleteFeature - CRUD: Delete a feature
-    **/
-    objectDeleteFeature(req: operations.ObjectDeleteFeatureRequest, config?: AxiosRequestConfig): Promise<operations.ObjectDeleteFeatureResponse>;
+     * CRUD: Delete a feature
+     */
+    objectDELETEFeature(req: operations.ObjectDELETEFeatureRequest, config?: AxiosRequestConfig): Promise<operations.ObjectDELETEFeatureResponse>;
     /**
-     * objectGetFeature - CRUD: Retrieve a feature
-    **/
-    objectGetFeature(req: operations.ObjectGetFeatureRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGetFeatureResponse>;
+     * CRUD: Retrieve a feature
+     */
+    objectGETFeature(req: operations.ObjectGETFeatureRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGETFeatureResponse>;
     /**
-     * objectPostFeature - CRUD: Create a feature
-    **/
-    objectPostFeature(req: operations.ObjectPostFeatureRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPostFeatureResponse>;
+     * CRUD: Create a feature
+     */
+    objectPOSTFeature(req: operations.ObjectPOSTFeatureRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPOSTFeatureResponse>;
     /**
-     * objectPutFeature - CRUD: Update a feature
-    **/
-    objectPutFeature(req: operations.ObjectPutFeatureRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPutFeatureResponse>;
+     * CRUD: Update a feature
+     */
+    objectPUTFeature(req: operations.ObjectPUTFeatureRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPUTFeatureResponse>;
 }

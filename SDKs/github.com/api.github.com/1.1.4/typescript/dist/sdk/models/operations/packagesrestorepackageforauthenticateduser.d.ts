@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PackagesRestorePackageForAuthenticatedUserPathParams extends SpeakeasyBase {
-    packageName: string;
-    packageType: shared.PackageTypeEnum;
-}
-export declare class PackagesRestorePackageForAuthenticatedUserQueryParams extends SpeakeasyBase {
-    token?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PackagesRestorePackageForAuthenticatedUserRequest extends SpeakeasyBase {
-    pathParams: PackagesRestorePackageForAuthenticatedUserPathParams;
-    queryParams: PackagesRestorePackageForAuthenticatedUserQueryParams;
+    /**
+     * The name of the package.
+     */
+    packageName: string;
+    /**
+     * The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
+     */
+    packageType: shared.PackageTypeEnum;
+    /**
+     * package token
+     */
+    token?: string;
 }
 export declare class PackagesRestorePackageForAuthenticatedUserResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Requires authentication
+     */
     basicError?: shared.BasicError;
 }

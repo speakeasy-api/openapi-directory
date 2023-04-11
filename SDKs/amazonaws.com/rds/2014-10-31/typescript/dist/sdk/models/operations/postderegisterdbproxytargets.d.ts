@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeregisterDbProxyTargetsActionEnum {
-    DeregisterDbProxyTargets = "DeregisterDBProxyTargets"
+import { AxiosResponse } from "axios";
+export declare enum POSTDeregisterDBProxyTargetsActionEnum {
+    DeregisterDBProxyTargets = "DeregisterDBProxyTargets"
 }
-export declare enum PostDeregisterDbProxyTargetsVersionEnum {
+export declare enum POSTDeregisterDBProxyTargetsVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class PostDeregisterDbProxyTargetsQueryParams extends SpeakeasyBase {
-    action: PostDeregisterDbProxyTargetsActionEnum;
-    version: PostDeregisterDbProxyTargetsVersionEnum;
-}
-export declare class PostDeregisterDbProxyTargetsHeaders extends SpeakeasyBase {
+export declare class POSTDeregisterDBProxyTargetsRequest extends SpeakeasyBase {
+    action: POSTDeregisterDBProxyTargetsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeregisterDBProxyTargetsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeregisterDbProxyTargetsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeregisterDbProxyTargetsRequest extends SpeakeasyBase {
-    queryParams: PostDeregisterDbProxyTargetsQueryParams;
-    headers: PostDeregisterDbProxyTargetsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeregisterDbProxyTargetsResponse extends SpeakeasyBase {
+export declare class POSTDeregisterDBProxyTargetsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

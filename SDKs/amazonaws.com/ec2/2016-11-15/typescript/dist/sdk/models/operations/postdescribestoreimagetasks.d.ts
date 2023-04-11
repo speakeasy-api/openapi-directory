@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeStoreImageTasksActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeStoreImageTasksActionEnum {
     DescribeStoreImageTasks = "DescribeStoreImageTasks"
 }
-export declare enum PostDescribeStoreImageTasksVersionEnum {
+export declare enum POSTDescribeStoreImageTasksVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDescribeStoreImageTasksQueryParams extends SpeakeasyBase {
-    action: PostDescribeStoreImageTasksActionEnum;
+export declare class POSTDescribeStoreImageTasksRequest extends SpeakeasyBase {
+    action: POSTDescribeStoreImageTasksActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostDescribeStoreImageTasksVersionEnum;
-}
-export declare class PostDescribeStoreImageTasksHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeStoreImageTasksVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeStoreImageTasksHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeStoreImageTasksRequest extends SpeakeasyBase {
-    queryParams: PostDescribeStoreImageTasksQueryParams;
-    headers: PostDescribeStoreImageTasksHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeStoreImageTasksResponse extends SpeakeasyBase {
+export declare class POSTDescribeStoreImageTasksResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

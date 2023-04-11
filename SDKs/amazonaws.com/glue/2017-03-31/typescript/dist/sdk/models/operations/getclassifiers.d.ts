@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetClassifiersQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum GetClassifiersXAmzTargetEnum {
-    AwsGlueGetClassifiers = "AWSGlue.GetClassifiers"
+    AWSGlueGetClassifiers = "AWSGlue.GetClassifiers"
 }
-export declare class GetClassifiersHeaders extends SpeakeasyBase {
+export declare class GetClassifiersRequest extends SpeakeasyBase {
+    getClassifiersRequest: shared.GetClassifiersRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,14 +23,16 @@ export declare class GetClassifiersHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetClassifiersXAmzTargetEnum;
 }
-export declare class GetClassifiersRequest extends SpeakeasyBase {
-    queryParams: GetClassifiersQueryParams;
-    headers: GetClassifiersHeaders;
-    request: shared.GetClassifiersRequest;
-}
 export declare class GetClassifiersResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getClassifiersResponse?: shared.GetClassifiersResponse;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,10 +1,27 @@
-import { AxiosInstance } from "axios";
 import { Forms } from "./forms";
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://forms.googleapis.com/"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * Reads and writes Google Forms and responses.
+ *
+ * @see {@link https://developers.google.com/forms/api}
+ */
 export declare class SDK {
     forms: Forms;
     _defaultClient: AxiosInstance;
@@ -13,5 +30,6 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
 }

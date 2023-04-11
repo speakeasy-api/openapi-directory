@@ -1,12 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DeductionType } from "./deductiontype";
-import { EarningsRate } from "./earningsrate";
-import { LeaveType } from "./leavetype";
-import { ReimbursementType } from "./reimbursementtype";
-import { DeductionTypeInput } from "./deductiontype";
-import { EarningsRateInput } from "./earningsrate";
-import { LeaveTypeInput } from "./leavetype";
-import { ReimbursementTypeInput } from "./reimbursementtype";
+import { DeductionType, DeductionTypeInput } from "./deductiontype";
+import { EarningsRate, EarningsRateInput } from "./earningsrate";
+import { LeaveType, LeaveTypeInput } from "./leavetype";
+import { ReimbursementType, ReimbursementTypeInput } from "./reimbursementtype";
 export declare class PayItem extends SpeakeasyBase {
     deductionTypes?: DeductionType[];
     earningsRates?: EarningsRate[];

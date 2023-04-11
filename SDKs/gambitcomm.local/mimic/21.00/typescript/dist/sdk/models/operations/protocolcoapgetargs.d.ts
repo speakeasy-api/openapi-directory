@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolCoapGetArgsPathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolCoapGetArgsRequest extends SpeakeasyBase {
-    pathParams: ProtocolCoapGetArgsPathParams;
+    /**
+     * Agent to show the COAP argument structure
+     */
+    agentNum: number;
 }
 export declare class ProtocolCoapGetArgsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolCoapGetArgs200ApplicationJSONObject?: Record<string, any>;
 }

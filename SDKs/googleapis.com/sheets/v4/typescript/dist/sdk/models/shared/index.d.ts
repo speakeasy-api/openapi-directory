@@ -190,7 +190,6 @@ export * from "./rowdata";
 export * from "./scorecardchartspec";
 export * from "./searchdevelopermetadatarequest";
 export * from "./searchdevelopermetadataresponse";
-export * from "./security";
 export * from "./setbasicfilterrequest";
 export * from "./setdatavalidationrequest";
 export * from "./sheet";

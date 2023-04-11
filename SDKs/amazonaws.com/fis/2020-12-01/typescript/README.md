@@ -6,177 +6,218 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/amazonaws.com/fis/2020-12-01/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/amazonaws.com/fis/2020-12-01/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateExperimentTemplateRequest, CreateExperimentTemplateResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CreateExperimentTemplateRequest,
+  CreateExperimentTemplateResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: CreateExperimentTemplateRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
+});
+
+const req: CreateExperimentTemplateRequest = {
+  requestBody: {
     actions: {
-      "fugit": {
-        actionId: "et",
-        description: "nihil",
+      "provident": {
+        actionId: "distinctio",
+        description: "quibusdam",
         parameters: {
-          "dicta": "debitis",
-          "voluptatum": "et",
-          "ut": "dolorem",
+          "nulla": "corrupti",
+          "illum": "vel",
+          "error": "deserunt",
         },
         startAfter: [
-          "voluptate",
-          "iste",
+          "iure",
+          "magnam",
         ],
         targets: {
-          "totam": "dolores",
+          "ipsa": "delectus",
+          "tempora": "suscipit",
+          "molestiae": "minus",
+          "placeat": "voluptatum",
         },
       },
-      "illum": {
-        actionId: "debitis",
-        description: "vel",
+      "iusto": {
+        actionId: "excepturi",
+        description: "nisi",
         parameters: {
-          "dolore": "id",
+          "temporibus": "ab",
+          "quis": "veritatis",
+          "deserunt": "perferendis",
+          "ipsam": "repellendus",
         },
         startAfter: [
-          "accusantium",
+          "quo",
+          "odit",
+          "at",
+          "at",
         ],
         targets: {
-          "commodi": "quis",
-          "est": "aut",
-          "odit": "non",
+          "molestiae": "quod",
+          "quod": "esse",
+          "totam": "porro",
+          "dolorum": "dicta",
         },
       },
-      "voluptas": {
-        actionId: "omnis",
-        description: "aut",
+      "nam": {
+        actionId: "officia",
+        description: "occaecati",
         parameters: {
-          "sed": "officiis",
+          "deleniti": "hic",
         },
         startAfter: [
-          "consectetur",
-          "nobis",
+          "totam",
+          "beatae",
+          "commodi",
+          "molestiae",
         ],
         targets: {
-          "qui": "recusandae",
+          "qui": "impedit",
+          "cum": "esse",
         },
       },
     },
-    clientToken: "at",
-    description: "ipsum",
-    roleArn: "eveniet",
+    clientToken: "ipsum",
+    description: "excepturi",
+    logConfiguration: {
+      cloudWatchLogsConfiguration: {
+        logGroupArn: "aspernatur",
+      },
+      logSchemaVersion: 18789,
+      s3Configuration: {
+        bucketName: "ad",
+        prefix: "natus",
+      },
+    },
+    roleArn: "sed",
     stopConditions: [
       {
-        source: "sint",
-        value: "inventore",
+        source: "dolor",
+        value: "natus",
       },
       {
-        source: "ut",
-        value: "exercitationem",
+        source: "laboriosam",
+        value: "hic",
+      },
+      {
+        source: "saepe",
+        value: "fuga",
       },
     ],
     tags: {
-      "reprehenderit": "tempore",
-      "maiores": "incidunt",
-      "dolor": "beatae",
+      "corporis": "iste",
+      "iure": "saepe",
     },
     targets: {
-      "in": {
+      "architecto": {
         filters: [
           {
-            path: "omnis",
+            path: "reiciendis",
             values: [
-              "ex",
-            ],
-          },
-          {
-            path: "dolores",
-            values: [
-              "vel",
-            ],
-          },
-          {
-            path: "rerum",
-            values: [
-              "voluptas",
-              "quam",
+              "mollitia",
+              "laborum",
+              "dolores",
             ],
           },
         ],
+        parameters: {
+          "corporis": "explicabo",
+        },
         resourceArns: [
-          "qui",
+          "enim",
+          "omnis",
+          "nemo",
+          "minima",
         ],
         resourceTags: {
-          "unde": "in",
+          "accusantium": "iure",
+          "culpa": "doloribus",
+          "sapiente": "architecto",
         },
-        resourceType: "autem",
-        selectionMode: "qui",
+        resourceType: "mollitia",
+        selectionMode: "dolorem",
       },
-      "ut": {
+      "culpa": {
         filters: [
           {
-            path: "ab",
+            path: "repellat",
             values: [
-              "ullam",
-            ],
-          },
-          {
-            path: "et",
-            values: [
-              "esse",
-              "architecto",
-              "quam",
-            ],
-          },
-          {
-            path: "velit",
-            values: [
-              "soluta",
-              "sunt",
+              "occaecati",
+              "numquam",
+              "commodi",
             ],
           },
         ],
+        parameters: {
+          "molestiae": "velit",
+          "error": "quia",
+        },
         resourceArns: [
-          "magni",
-          "et",
+          "vitae",
+          "laborum",
         ],
         resourceTags: {
-          "qui": "earum",
-          "illo": "omnis",
-          "ut": "consequatur",
+          "enim": "odit",
+          "quo": "sequi",
+          "tenetur": "ipsam",
         },
-        resourceType: "dolor",
-        selectionMode: "commodi",
+        resourceType: "id",
+        selectionMode: "possimus",
+      },
+      "aut": {
+        filters: [
+          {
+            path: "error",
+            values: [
+              "laborum",
+              "quasi",
+              "reiciendis",
+              "voluptatibus",
+            ],
+          },
+        ],
+        parameters: {
+          "nihil": "praesentium",
+          "voluptatibus": "ipsa",
+          "omnis": "voluptate",
+          "cum": "perferendis",
+        },
+        resourceArns: [
+          "reprehenderit",
+        ],
+        resourceTags: {
+          "maiores": "dicta",
+          "corporis": "dolore",
+        },
+        resourceType: "iusto",
+        selectionMode: "dicta",
       },
     },
   },
+  xAmzAlgorithm: "harum",
+  xAmzContentSha256: "enim",
+  xAmzCredential: "accusamus",
+  xAmzDate: "commodi",
+  xAmzSecurityToken: "repudiandae",
+  xAmzSignature: "quae",
+  xAmzSignedHeaders: "ipsum",
 };
 
 sdk.createExperimentTemplate(req).then((res: CreateExperimentTemplateResponse | AxiosError) => {
@@ -186,25 +227,38 @@ sdk.createExperimentTemplate(req).then((res: CreateExperimentTemplateResponse | 
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
-* `createExperimentTemplate` - <p>Creates an experiment template. </p> <p>To create a template, specify the following information: </p> <ul> <li> <p> <b>Targets</b>: A target can be a specific resource in your AWS environment, or one or more resources that match criteria that you specify, for example, resources that have specific tags.</p> </li> <li> <p> <b>Actions</b>: The actions to carry out on the target. You can specify multiple actions, the duration of each action, and when to start each action during an experiment.</p> </li> <li> <p> <b>Stop conditions</b>: If a stop condition is triggered while an experiment is running, the experiment is automatically stopped. You can define a stop condition as a CloudWatch alarm.</p> </li> </ul> <p>For more information, see the <a href="https://docs.aws.amazon.com/fis/latest/userguide/">AWS Fault Injection Simulator User Guide</a>.</p>
+* `createExperimentTemplate` - <p>Creates an experiment template. </p> <p>An experiment template includes the following components:</p> <ul> <li> <p> <b>Targets</b>: A target can be a specific resource in your Amazon Web Services environment, or one or more resources that match criteria that you specify, for example, resources that have specific tags.</p> </li> <li> <p> <b>Actions</b>: The actions to carry out on the target. You can specify multiple actions, the duration of each action, and when to start each action during an experiment.</p> </li> <li> <p> <b>Stop conditions</b>: If a stop condition is triggered while an experiment is running, the experiment is automatically stopped. You can define a stop condition as a CloudWatch alarm.</p> </li> </ul> <p>For more information, see <a href="https://docs.aws.amazon.com/fis/latest/userguide/experiment-templates.html">Experiment templates</a> in the <i>Fault Injection Simulator User Guide</i>.</p>
 * `deleteExperimentTemplate` - Deletes the specified experiment template.
-* `getAction` - Gets information about the specified AWS FIS action.
+* `getAction` - Gets information about the specified FIS action.
 * `getExperiment` - Gets information about the specified experiment.
 * `getExperimentTemplate` - Gets information about the specified experiment template.
-* `listActions` - Lists the available AWS FIS actions.
+* `getTargetResourceType` - Gets information about the specified resource type.
+* `listActions` - Lists the available FIS actions.
 * `listExperimentTemplates` - Lists your experiment templates.
 * `listExperiments` - Lists your experiments.
 * `listTagsForResource` - Lists the tags for the specified resource.
+* `listTargetResourceTypes` - Lists the target resource types.
 * `startExperiment` - Starts running an experiment from the specified experiment template.
 * `stopExperiment` - Stops the specified experiment.
 * `tagResource` - Applies the specified tags to the specified resource.
 * `untagResource` - Removes the specified tags from the specified resource.
 * `updateExperimentTemplate` - Updates the specified experiment template.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

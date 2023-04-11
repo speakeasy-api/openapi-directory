@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeExportImageTasksActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeExportImageTasksActionEnum {
     DescribeExportImageTasks = "DescribeExportImageTasks"
 }
-export declare enum PostDescribeExportImageTasksVersionEnum {
+export declare enum POSTDescribeExportImageTasksVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDescribeExportImageTasksQueryParams extends SpeakeasyBase {
-    action: PostDescribeExportImageTasksActionEnum;
+export declare class POSTDescribeExportImageTasksRequest extends SpeakeasyBase {
+    action: POSTDescribeExportImageTasksActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostDescribeExportImageTasksVersionEnum;
-}
-export declare class PostDescribeExportImageTasksHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeExportImageTasksVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeExportImageTasksHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeExportImageTasksRequest extends SpeakeasyBase {
-    queryParams: PostDescribeExportImageTasksQueryParams;
-    headers: PostDescribeExportImageTasksHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeExportImageTasksResponse extends SpeakeasyBase {
+export declare class POSTDescribeExportImageTasksResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteEgressOnlyInternetGatewayActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteEgressOnlyInternetGatewayActionEnum {
     DeleteEgressOnlyInternetGateway = "DeleteEgressOnlyInternetGateway"
 }
-export declare enum PostDeleteEgressOnlyInternetGatewayVersionEnum {
+export declare enum POSTDeleteEgressOnlyInternetGatewayVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDeleteEgressOnlyInternetGatewayQueryParams extends SpeakeasyBase {
-    action: PostDeleteEgressOnlyInternetGatewayActionEnum;
-    version: PostDeleteEgressOnlyInternetGatewayVersionEnum;
-}
-export declare class PostDeleteEgressOnlyInternetGatewayHeaders extends SpeakeasyBase {
+export declare class POSTDeleteEgressOnlyInternetGatewayRequest extends SpeakeasyBase {
+    action: POSTDeleteEgressOnlyInternetGatewayActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteEgressOnlyInternetGatewayVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteEgressOnlyInternetGatewayHeaders extends Speakeas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteEgressOnlyInternetGatewayRequest extends SpeakeasyBase {
-    queryParams: PostDeleteEgressOnlyInternetGatewayQueryParams;
-    headers: PostDeleteEgressOnlyInternetGatewayHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteEgressOnlyInternetGatewayResponse extends SpeakeasyBase {
+export declare class POSTDeleteEgressOnlyInternetGatewayResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

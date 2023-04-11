@@ -1,31 +1,35 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateClusterRequest, CreateClusterResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CreateClusterRequest,
+  CreateClusterResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    hmac: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: CreateClusterRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
+  requestBody: {
+    clientToken: "corrupti",
+    clusterName: "provident",
+    tags: {
+      "quibusdam": "unde",
+      "nulla": "corrupti",
+      "illum": "vel",
+    },
   },
-  request: {
-    clientToken: "voluptas",
-    clusterName: "fugit",
-  },
+  xAmzAlgorithm: "error",
+  xAmzContentSha256: "deserunt",
+  xAmzCredential: "suscipit",
+  xAmzDate: "iure",
+  xAmzSecurityToken: "magnam",
+  xAmzSignature: "debitis",
+  xAmzSignedHeaders: "ipsa",
 };
 
 sdk.createCluster(req).then((res: CreateClusterResponse | AxiosError) => {

@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DbClusterParameterGroupNameMessage extends SpeakeasyBase {
+/**
+ * Success
+ */
+export declare class DBClusterParameterGroupNameMessage extends SpeakeasyBase {
     dbClusterParameterGroupName?: string;
 }

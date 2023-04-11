@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class IpamVlanGroupsDeletePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class IpamVlanGroupsDeleteRequest extends SpeakeasyBase {
-    pathParams: IpamVlanGroupsDeletePathParams;
+    /**
+     * A unique integer value identifying this VLAN group.
+     */
+    id: number;
 }
 export declare class IpamVlanGroupsDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

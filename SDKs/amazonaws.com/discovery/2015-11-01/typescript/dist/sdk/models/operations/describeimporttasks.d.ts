@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeImportTasksQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum DescribeImportTasksXAmzTargetEnum {
-    AwsPoseidonServiceV20151101DescribeImportTasks = "AWSPoseidonService_V2015_11_01.DescribeImportTasks"
+    AWSPoseidonServiceV20151101DescribeImportTasks = "AWSPoseidonService_V2015_11_01.DescribeImportTasks"
 }
-export declare class DescribeImportTasksHeaders extends SpeakeasyBase {
+export declare class DescribeImportTasksRequest extends SpeakeasyBase {
+    describeImportTasksRequest: shared.DescribeImportTasksRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,19 +14,41 @@ export declare class DescribeImportTasksHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeImportTasksXAmzTargetEnum;
-}
-export declare class DescribeImportTasksRequest extends SpeakeasyBase {
-    queryParams: DescribeImportTasksQueryParams;
-    headers: DescribeImportTasksHeaders;
-    request: shared.DescribeImportTasksRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class DescribeImportTasksResponse extends SpeakeasyBase {
+    /**
+     * AuthorizationErrorException
+     */
     authorizationErrorException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     describeImportTasksResponse?: shared.DescribeImportTasksResponse;
+    /**
+     * HomeRegionNotSetException
+     */
     homeRegionNotSetException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
+    /**
+     * ServerInternalErrorException
+     */
     serverInternalErrorException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

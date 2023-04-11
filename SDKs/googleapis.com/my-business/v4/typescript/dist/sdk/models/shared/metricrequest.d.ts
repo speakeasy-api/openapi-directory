@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The requested metric.
+ */
 export declare enum MetricRequestMetricEnum {
     MetricUnspecified = "METRIC_UNSPECIFIED",
     All = "ALL",
@@ -26,8 +29,14 @@ export declare enum MetricRequestOptionsEnum {
 }
 /**
  * A request to return values for one metric and the options for how those values should be returned.
-**/
+ */
 export declare class MetricRequest extends SpeakeasyBase {
+    /**
+     * The requested metric.
+     */
     metric?: MetricRequestMetricEnum;
+    /**
+     * How the values should appear when returned.
+     */
     options?: MetricRequestOptionsEnum[];
 }

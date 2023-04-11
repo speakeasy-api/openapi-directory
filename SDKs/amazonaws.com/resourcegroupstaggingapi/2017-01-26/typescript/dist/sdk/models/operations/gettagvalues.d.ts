@@ -1,12 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetTagValuesQueryParams extends SpeakeasyBase {
-    paginationToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum GetTagValuesXAmzTargetEnum {
-    ResourceGroupsTaggingApi20170126GetTagValues = "ResourceGroupsTaggingAPI_20170126.GetTagValues"
+    ResourceGroupsTaggingAPI20170126GetTagValues = "ResourceGroupsTaggingAPI_20170126.GetTagValues"
 }
-export declare class GetTagValuesHeaders extends SpeakeasyBase {
+export declare class GetTagValuesRequest extends SpeakeasyBase {
+    getTagValuesInput: shared.GetTagValuesInput;
+    /**
+     * Pagination token
+     */
+    paginationToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,17 +19,28 @@ export declare class GetTagValuesHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetTagValuesXAmzTargetEnum;
 }
-export declare class GetTagValuesRequest extends SpeakeasyBase {
-    queryParams: GetTagValuesQueryParams;
-    headers: GetTagValuesHeaders;
-    request: shared.GetTagValuesInput;
-}
 export declare class GetTagValuesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getTagValuesOutput?: shared.GetTagValuesOutput;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * PaginationTokenExpiredException
+     */
     paginationTokenExpiredException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottledException
+     */
     throttledException?: any;
 }

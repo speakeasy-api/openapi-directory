@@ -1,21 +1,39 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PutRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchPathParams extends SpeakeasyBase {
-    issueId: string;
-    repoSlug: string;
-    workspace: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PutRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchSecurity extends SpeakeasyBase {
-    oauth2?: shared.SchemeOauth2;
+    apiKey?: string;
     basic?: shared.SchemeBasic;
-    apiKey?: shared.SchemeApiKey;
+    oauth2?: string;
 }
 export declare class PutRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchRequest extends SpeakeasyBase {
-    pathParams: PutRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchPathParams;
-    security: PutRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchSecurity;
+    /**
+     * The issue id
+     */
+    issueId: string;
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     *
+     * @remarks
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     *
+     */
+    repoSlug: string;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     *
+     * @remarks
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     *
+     */
+    workspace: string;
 }
 export declare class PutRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Indicates that the authenticated user successfully started watching this issue.
+     */
     error?: Record<string, any>;
 }

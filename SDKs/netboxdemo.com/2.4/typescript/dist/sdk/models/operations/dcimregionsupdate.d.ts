@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DcimRegionsUpdatePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DcimRegionsUpdateRequest extends SpeakeasyBase {
-    pathParams: DcimRegionsUpdatePathParams;
-    request: shared.WritableRegionInput;
+    writableRegionInput: shared.WritableRegionInput;
+    /**
+     * A unique integer value identifying this region.
+     */
+    id: number;
 }
 export declare class DcimRegionsUpdateResponse extends SpeakeasyBase {
     contentType: string;
     region?: shared.Region;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

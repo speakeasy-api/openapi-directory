@@ -1,19 +1,37 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReposTransferPathParams extends SpeakeasyBase {
-    owner: string;
-    repo: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ReposTransferRequestBody extends SpeakeasyBase {
+    /**
+     * The new name to be given to the repository.
+     */
+    newName?: string;
+    /**
+     * The username or organization name the repository will be transferred to.
+     */
     newOwner: string;
+    /**
+     * ID of the team or teams to add to the repository. Teams can only be added to organization-owned repositories.
+     */
     teamIds?: number[];
 }
 export declare class ReposTransferRequest extends SpeakeasyBase {
-    pathParams: ReposTransferPathParams;
-    request?: ReposTransferRequestBody;
+    requestBody: ReposTransferRequestBody;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    owner: string;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    repo: string;
 }
 export declare class ReposTransferResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    repository?: shared.Repository;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
+    minimalRepository?: shared.MinimalRepository;
 }

@@ -1,22 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UnregisterPushDevicePathParams extends SpeakeasyBase {
-    deviceId: string;
-}
-export declare class UnregisterPushDeviceQueryParams extends SpeakeasyBase {
-    format?: shared.ResponseFormatEnum;
-}
-export declare class UnregisterPushDeviceHeaders extends SpeakeasyBase {
-    xAblyVersion?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UnregisterPushDeviceRequest extends SpeakeasyBase {
-    pathParams: UnregisterPushDevicePathParams;
-    queryParams: UnregisterPushDeviceQueryParams;
-    headers: UnregisterPushDeviceHeaders;
+    /**
+     * The version of the API you wish to use.
+     */
+    xAblyVersion?: string;
+    /**
+     * Device's ID.
+     */
+    deviceId: string;
+    /**
+     * The response format you would like
+     */
+    format?: shared.ResponseFormatEnum;
 }
 export declare class UnregisterPushDeviceResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
+    /**
+     * Error
+     */
     error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

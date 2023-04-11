@@ -1,16 +1,16 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { BalanceLookupRequest, BalanceLookupResponse } from "openapi/src/sdk/models/operations";
+import {
+  BalanceLookupRequest,
+  BalanceLookupResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: BalanceLookupRequest = {
-  queryParams: {
-    apiKey: "sit",
-  },
+  apiKey: "corrupti",
 };
 
 sdk.balance.balanceLookup(req).then((res: BalanceLookupResponse | AxiosError) => {

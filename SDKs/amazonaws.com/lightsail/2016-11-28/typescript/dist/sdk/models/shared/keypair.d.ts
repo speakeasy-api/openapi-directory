@@ -4,7 +4,7 @@ import { ResourceTypeEnum } from "./resourcetypeenum";
 import { Tag } from "./tag";
 /**
  * Describes an SSH key pair.
-**/
+ */
 export declare class KeyPair extends SpeakeasyBase {
     arn?: string;
     createdAt?: Date;

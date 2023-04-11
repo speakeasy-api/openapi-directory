@@ -1,8 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
- * An array of descriptions and aggregated values for each dimension within a dimension group.
-**/
+ * An object that includes the requested dimension key values and aggregated metric values within a dimension group.
+ */
 export declare class DimensionKeyDescription extends SpeakeasyBase {
+    additionalMetrics?: Record<string, number>;
     dimensions?: Record<string, string>;
     partitions?: number[];
     total?: number;

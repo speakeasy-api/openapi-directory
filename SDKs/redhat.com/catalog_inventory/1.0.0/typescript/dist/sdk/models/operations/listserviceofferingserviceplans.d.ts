@@ -1,21 +1,38 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListServiceOfferingServicePlansPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class ListServiceOfferingServicePlansQueryParams extends SpeakeasyBase {
-    filter?: Record<string, any>;
-    limit?: number;
-    offset?: number;
-    sortBy?: Record<string, any>;
-}
+import { AxiosResponse } from "axios";
 export declare class ListServiceOfferingServicePlansRequest extends SpeakeasyBase {
-    pathParams: ListServiceOfferingServicePlansPathParams;
-    queryParams: ListServiceOfferingServicePlansQueryParams;
+    /**
+     * Filter for querying collections.
+     */
+    filter?: Record<string, any>;
+    /**
+     * ID of the resource
+     */
+    id: string;
+    /**
+     * The numbers of items to return per page.
+     */
+    limit?: number;
+    /**
+     * The number of items to skip before starting to collect the result set.
+     */
+    offset?: number;
+    /**
+     * The list of attribute and order to sort the result set by.
+     */
+    sortBy?: Record<string, any>;
 }
 export declare class ListServiceOfferingServicePlansResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Not found
+     */
     errorNotFound?: shared.ErrorNotFound;
+    /**
+     * ServicePlans collection
+     */
     servicePlansCollection?: shared.ServicePlansCollection;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

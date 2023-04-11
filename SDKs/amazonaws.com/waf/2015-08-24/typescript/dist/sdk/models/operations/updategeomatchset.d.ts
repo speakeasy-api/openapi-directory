@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateGeoMatchSetXAmzTargetEnum {
-    Awswaf20150824UpdateGeoMatchSet = "AWSWAF_20150824.UpdateGeoMatchSet"
+    AWSWAF20150824UpdateGeoMatchSet = "AWSWAF_20150824.UpdateGeoMatchSet"
 }
-export declare class UpdateGeoMatchSetHeaders extends SpeakeasyBase {
+export declare class UpdateGeoMatchSetRequest extends SpeakeasyBase {
+    updateGeoMatchSetRequest: shared.UpdateGeoMatchSetRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,21 +15,48 @@ export declare class UpdateGeoMatchSetHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateGeoMatchSetXAmzTargetEnum;
 }
-export declare class UpdateGeoMatchSetRequest extends SpeakeasyBase {
-    headers: UpdateGeoMatchSetHeaders;
-    request: shared.UpdateGeoMatchSetRequest;
-}
 export declare class UpdateGeoMatchSetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     updateGeoMatchSetResponse?: shared.UpdateGeoMatchSetResponse;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFInvalidAccountException
+     */
     wafInvalidAccountException?: any;
+    /**
+     * WAFInvalidOperationException
+     */
     wafInvalidOperationException?: any;
+    /**
+     * WAFInvalidParameterException
+     */
     wafInvalidParameterException?: any;
+    /**
+     * WAFLimitsExceededException
+     */
     wafLimitsExceededException?: any;
+    /**
+     * WAFNonexistentContainerException
+     */
     wafNonexistentContainerException?: any;
+    /**
+     * WAFNonexistentItemException
+     */
     wafNonexistentItemException?: any;
+    /**
+     * WAFReferencedItemException
+     */
     wafReferencedItemException?: any;
+    /**
+     * WAFStaleDataException
+     */
     wafStaleDataException?: any;
 }

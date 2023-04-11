@@ -1,16 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReposGetCommitSignatureProtectionPathParams extends SpeakeasyBase {
-    branch: string;
-    owner: string;
-    repo: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ReposGetCommitSignatureProtectionRequest extends SpeakeasyBase {
-    pathParams: ReposGetCommitSignatureProtectionPathParams;
+    /**
+     * The name of the branch.
+     */
+    branch: string;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    owner: string;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    repo: string;
 }
 export declare class ReposGetCommitSignatureProtectionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Resource not found
+     */
     basicError?: shared.BasicError;
+    /**
+     * Response
+     */
     protectedBranchAdminEnforced?: shared.ProtectedBranchAdminEnforced;
 }

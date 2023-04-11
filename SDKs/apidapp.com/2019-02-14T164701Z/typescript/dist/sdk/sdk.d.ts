@@ -1,9 +1,21 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://ethereum.apidapp.com/1"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
 export declare class SDK {
     _defaultClient: AxiosInstance;
@@ -12,69 +24,70 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
     deleteKeyKey(req: operations.DeleteKeyKeyRequest, config?: AxiosRequestConfig): Promise<operations.DeleteKeyKeyResponse>;
     /**
-     * getAccountId - Get account balance
-    **/
-    getAccountId(req: operations.GetAccountIdRequest, config?: AxiosRequestConfig): Promise<operations.GetAccountIdResponse>;
+     * Get account balance
+     */
+    getAccountId(req: operations.GetAccountIdRequest, security: operations.GetAccountIdSecurity, config?: AxiosRequestConfig): Promise<operations.GetAccountIdResponse>;
     /**
-     * getBlock - Access detailed block information
-    **/
-    getBlock(req: operations.GetBlockRequest, config?: AxiosRequestConfig): Promise<operations.GetBlockResponse>;
+     * Access detailed block information
+     */
+    getBlock(config?: AxiosRequestConfig): Promise<operations.GetBlockResponse>;
     /**
-     * getBlockId - Get information about particular block
-    **/
-    getBlockId(req: operations.GetBlockIdRequest, config?: AxiosRequestConfig): Promise<operations.GetBlockIdResponse>;
+     * Get information about particular block
+     */
+    getBlockId(req: operations.GetBlockIdRequest, security: operations.GetBlockIdSecurity, config?: AxiosRequestConfig): Promise<operations.GetBlockIdResponse>;
     /**
-     * getBlockIdTransaction - Get transaction count within block
-    **/
-    getBlockIdTransaction(req: operations.GetBlockIdTransactionRequest, config?: AxiosRequestConfig): Promise<operations.GetBlockIdTransactionResponse>;
+     * Get transaction count within block
+     */
+    getBlockIdTransaction(req: operations.GetBlockIdTransactionRequest, security: operations.GetBlockIdTransactionSecurity, config?: AxiosRequestConfig): Promise<operations.GetBlockIdTransactionResponse>;
     /**
-     * getBlockIdTransactionIndex - Get information about particular transaction within block
-    **/
-    getBlockIdTransactionIndex(req: operations.GetBlockIdTransactionIndexRequest, config?: AxiosRequestConfig): Promise<operations.GetBlockIdTransactionIndexResponse>;
+     * Get information about particular transaction within block
+     */
+    getBlockIdTransactionIndex(req: operations.GetBlockIdTransactionIndexRequest, security: operations.GetBlockIdTransactionIndexSecurity, config?: AxiosRequestConfig): Promise<operations.GetBlockIdTransactionIndexResponse>;
     /**
-     * getBlockchain - Get a list of supported blockchains
-    **/
-    getBlockchain(req: operations.GetBlockchainRequest, config?: AxiosRequestConfig): Promise<operations.GetBlockchainResponse>;
+     * Get a list of supported blockchains
+     */
+    getBlockchain(config?: AxiosRequestConfig): Promise<operations.GetBlockchainResponse>;
     /**
-     * getBlockchainId - Get information about blockchain woth given id
-    **/
-    getBlockchainId(req: operations.GetBlockchainIdRequest, config?: AxiosRequestConfig): Promise<operations.GetBlockchainIdResponse>;
+     * Get information about blockchain woth given id
+     */
+    getBlockchainId(req: operations.GetBlockchainIdRequest, security: operations.GetBlockchainIdSecurity, config?: AxiosRequestConfig): Promise<operations.GetBlockchainIdResponse>;
     /**
-     * getContractId - Get contract balance
-    **/
-    getContractId(req: operations.GetContractIdRequest, config?: AxiosRequestConfig): Promise<operations.GetContractIdResponse>;
+     * Get contract balance
+     */
+    getContractId(req: operations.GetContractIdRequest, security: operations.GetContractIdSecurity, config?: AxiosRequestConfig): Promise<operations.GetContractIdResponse>;
     /**
-     * getErc20 - Get token information such as name, total amount in circulation, etc
-    **/
+     * Get token information such as name, total amount in circulation, etc
+     */
     getErc20(config?: AxiosRequestConfig): Promise<operations.GetErc20Response>;
     /**
-     * getErc20Address - Get information amout token balance in the account
-    **/
+     * Get information amout token balance in the account
+     */
     getErc20Address(req: operations.GetErc20AddressRequest, config?: AxiosRequestConfig): Promise<operations.GetErc20AddressResponse>;
     getKey(req: operations.GetKeyRequest, config?: AxiosRequestConfig): Promise<operations.GetKeyResponse>;
     /**
-     * getTransactionHash - Get information about transaction by the transaction hash value
-    **/
-    getTransactionHash(req: operations.GetTransactionHashRequest, config?: AxiosRequestConfig): Promise<operations.GetTransactionHashResponse>;
+     * Get information about transaction by the transaction hash value
+     */
+    getTransactionHash(req: operations.GetTransactionHashRequest, security: operations.GetTransactionHashSecurity, config?: AxiosRequestConfig): Promise<operations.GetTransactionHashResponse>;
     /**
-     * getTransactionHashReceipt - Get receipt detail information
-    **/
-    getTransactionHashReceipt(req: operations.GetTransactionHashReceiptRequest, config?: AxiosRequestConfig): Promise<operations.GetTransactionHashReceiptResponse>;
+     * Get receipt detail information
+     */
+    getTransactionHashReceipt(req: operations.GetTransactionHashReceiptRequest, security: operations.GetTransactionHashReceiptSecurity, config?: AxiosRequestConfig): Promise<operations.GetTransactionHashReceiptResponse>;
     /**
-     * getVersion - Get API version info
-    **/
+     * Get API version info
+     */
     getVersion(config?: AxiosRequestConfig): Promise<operations.GetVersionResponse>;
     /**
-     * getWallet - Get current account balance
-    **/
+     * Get current account balance
+     */
     getWallet(config?: AxiosRequestConfig): Promise<operations.GetWalletResponse>;
     getWalletAccount(config?: AxiosRequestConfig): Promise<operations.GetWalletAccountResponse>;
     /**
-     * getWalletAccountId - Get account balance
-    **/
+     * Get account balance
+     */
     getWalletAccountId(req: operations.GetWalletAccountIdRequest, config?: AxiosRequestConfig): Promise<operations.GetWalletAccountIdResponse>;
     options(config?: AxiosRequestConfig): Promise<operations.OptionsResponse>;
     optionsAccount(config?: AxiosRequestConfig): Promise<operations.OptionsAccountResponse>;
@@ -101,36 +114,36 @@ export declare class SDK {
     optionsWalletAccountId(req: operations.OptionsWalletAccountIdRequest, config?: AxiosRequestConfig): Promise<operations.OptionsWalletAccountIdResponse>;
     optionsWalletAccountIdPay(req: operations.OptionsWalletAccountIdPayRequest, config?: AxiosRequestConfig): Promise<operations.OptionsWalletAccountIdPayResponse>;
     /**
-     * postAccount - Create new account
-    **/
-    postAccount(req: operations.PostAccountRequest, config?: AxiosRequestConfig): Promise<operations.PostAccountResponse>;
+     * Create new account
+     */
+    postAccount(config?: AxiosRequestConfig): Promise<operations.PostAccountResponse>;
     /**
-     * postContract - Create a new smart contract
-    **/
+     * Create a new smart contract
+     */
     postContract(config?: AxiosRequestConfig): Promise<operations.PostContractResponse>;
     /**
-     * postContractId - Call the contract
-    **/
-    postContractId(req: operations.PostContractIdRequest, config?: AxiosRequestConfig): Promise<operations.PostContractIdResponse>;
+     * Call the contract
+     */
+    postContractId(req: operations.PostContractIdRequest, security: operations.PostContractIdSecurity, config?: AxiosRequestConfig): Promise<operations.PostContractIdResponse>;
     postErc20(config?: AxiosRequestConfig): Promise<operations.PostErc20Response>;
     /**
-     * postErc20Address - Transfer tokens to another account
-    **/
+     * Transfer tokens to another account
+     */
     postErc20Address(req: operations.PostErc20AddressRequest, config?: AxiosRequestConfig): Promise<operations.PostErc20AddressResponse>;
     postKey(config?: AxiosRequestConfig): Promise<operations.PostKeyResponse>;
     /**
-     * postTransaction - Create a new transaction. Transfer Ether between accounts
-    **/
-    postTransaction(req: operations.PostTransactionRequest, config?: AxiosRequestConfig): Promise<operations.PostTransactionResponse>;
+     * Create a new transaction. Transfer Ether between accounts
+     */
+    postTransaction(config?: AxiosRequestConfig): Promise<operations.PostTransactionResponse>;
     /**
-     * postWallet - Create personal wallet
-    **/
+     * Create personal wallet
+     */
     postWallet(config?: AxiosRequestConfig): Promise<operations.PostWalletResponse>;
     postWalletAccount(config?: AxiosRequestConfig): Promise<operations.PostWalletAccountResponse>;
     postWalletAccountIdContract(req: operations.PostWalletAccountIdContractRequest, config?: AxiosRequestConfig): Promise<operations.PostWalletAccountIdContractResponse>;
     postWalletAccountIdErc20(req: operations.PostWalletAccountIdErc20Request, config?: AxiosRequestConfig): Promise<operations.PostWalletAccountIdErc20Response>;
     /**
-     * postWalletAccountIdPay - Send payment from the account held within the wallet
-    **/
+     * Send payment from the account held within the wallet
+     */
     postWalletAccountIdPay(req: operations.PostWalletAccountIdPayRequest, config?: AxiosRequestConfig): Promise<operations.PostWalletAccountIdPayResponse>;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdatePullRequestDescriptionXAmzTargetEnum {
     CodeCommit20150413UpdatePullRequestDescription = "CodeCommit_20150413.UpdatePullRequestDescription"
 }
-export declare class UpdatePullRequestDescriptionHeaders extends SpeakeasyBase {
+export declare class UpdatePullRequestDescriptionRequest extends SpeakeasyBase {
+    updatePullRequestDescriptionInput: shared.UpdatePullRequestDescriptionInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class UpdatePullRequestDescriptionHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdatePullRequestDescriptionXAmzTargetEnum;
 }
-export declare class UpdatePullRequestDescriptionRequest extends SpeakeasyBase {
-    headers: UpdatePullRequestDescriptionHeaders;
-    request: shared.UpdatePullRequestDescriptionInput;
-}
 export declare class UpdatePullRequestDescriptionResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidDescriptionException
+     */
     invalidDescriptionException?: any;
+    /**
+     * InvalidPullRequestIdException
+     */
     invalidPullRequestIdException?: any;
+    /**
+     * PullRequestAlreadyClosedException
+     */
     pullRequestAlreadyClosedException?: any;
+    /**
+     * PullRequestDoesNotExistException
+     */
     pullRequestDoesNotExistException?: any;
+    /**
+     * PullRequestIdRequiredException
+     */
     pullRequestIdRequiredException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     updatePullRequestDescriptionOutput?: shared.UpdatePullRequestDescriptionOutput;
 }

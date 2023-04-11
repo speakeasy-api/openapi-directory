@@ -3,12 +3,13 @@ import { ObjectStorageServerProtocolEnum } from "./objectstorageserverprotocolen
 import { TagListEntry } from "./taglistentry";
 /**
  * CreateLocationObjectStorageRequest
-**/
+ */
 export declare class CreateLocationObjectStorageRequest extends SpeakeasyBase {
     accessKey?: string;
     agentArns: string[];
     bucketName: string;
     secretKey?: string;
+    serverCertificate?: string;
     serverHostname: string;
     serverPort?: number;
     serverProtocol?: ObjectStorageServerProtocolEnum;

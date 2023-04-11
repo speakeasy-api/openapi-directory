@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { EvaluationMetrics } from "./evaluationmetrics";
 import { GlueTable } from "./gluetable";
-import { TransformParameters } from "./transformparameters";
 import { SchemaColumn } from "./schemacolumn";
-import { TransformStatusTypeEnum } from "./transformstatustypeenum";
 import { TransformEncryption } from "./transformencryption";
+import { TransformParameters } from "./transformparameters";
+import { TransformStatusTypeEnum } from "./transformstatustypeenum";
 import { WorkerTypeEnum } from "./workertypeenum";
 /**
  * A structure for a machine learning transform.
-**/
-export declare class MlTransform extends SpeakeasyBase {
+ */
+export declare class MLTransform extends SpeakeasyBase {
     createdOn?: Date;
     description?: string;
     evaluationMetrics?: EvaluationMetrics;

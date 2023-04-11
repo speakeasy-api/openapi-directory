@@ -1,111 +1,146 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
 /**
  * User identification requires a userId, email or both
-**/
+ */
 export declare class LinkRequestBodyIdentification extends SpeakeasyBase {
+    /**
+     * Email address of the user
+     */
     email?: string;
+    /**
+     * Unique identifier for the user in your database
+     */
     userId?: string;
 }
 /**
  * Link web activity to user
-**/
+ */
 export declare class LinkRequestBody extends SpeakeasyBase {
     deviceId: string;
+    /**
+     * User identification requires a userId, email or both
+     */
     identification: LinkRequestBodyIdentification;
 }
-export declare class Link201ApplicationJsonMeta extends SpeakeasyBase {
+export declare class Link500ApplicationJSONMeta extends SpeakeasyBase {
     requestId: string;
     status: number;
 }
 /**
- * The object was created
-**/
-export declare class Link201ApplicationJson extends SpeakeasyBase {
+ * The message specifies what is done
+ */
+export declare class Link500ApplicationJSON extends SpeakeasyBase {
     message: string;
-    meta: Link201ApplicationJsonMeta;
+    meta: Link500ApplicationJSONMeta;
+}
+export declare class Link429ApplicationJSONMeta extends SpeakeasyBase {
+    requestId: string;
+    status: number;
+}
+/**
+ * The message specifies what is done
+ */
+export declare class Link429ApplicationJSON extends SpeakeasyBase {
+    message: string;
+    meta: Link429ApplicationJSONMeta;
+}
+export declare class Link403ApplicationJSONMeta extends SpeakeasyBase {
+    requestId: string;
+    status: number;
+}
+/**
+ * The message specifies what is done
+ */
+export declare class Link403ApplicationJSON extends SpeakeasyBase {
+    message: string;
+    meta: Link403ApplicationJSONMeta;
+}
+export declare class Link401ApplicationJSONMeta extends SpeakeasyBase {
+    requestId: string;
+    status: number;
+}
+/**
+ * The message specifies what is done
+ */
+export declare class Link401ApplicationJSON extends SpeakeasyBase {
+    message: string;
+    meta: Link401ApplicationJSONMeta;
 }
 /**
  * All query-, header- and path- parameters that seemed incorrect
-**/
-export declare class Link400ApplicationJsonErrorsParameters extends SpeakeasyBase {
+ */
+export declare class Link400ApplicationJSONErrorsParameters extends SpeakeasyBase {
     header?: Record<string, string>;
     path?: Record<string, string>;
     query?: Record<string, string>;
 }
 /**
  * Map that sums up all received values that seemed incorrect
-**/
-export declare class Link400ApplicationJsonErrors extends SpeakeasyBase {
+ */
+export declare class Link400ApplicationJSONErrors extends SpeakeasyBase {
+    /**
+     * All input fields that seemed incorrect
+     */
     fields?: Record<string, string>;
-    parameters?: Link400ApplicationJsonErrorsParameters;
+    /**
+     * All query-, header- and path- parameters that seemed incorrect
+     */
+    parameters?: Link400ApplicationJSONErrorsParameters;
 }
-export declare class Link400ApplicationJsonMeta extends SpeakeasyBase {
+export declare class Link400ApplicationJSONMeta extends SpeakeasyBase {
     requestId: string;
     status: number;
 }
 /**
- * Specify the fields and/ or parameters that had errors
-**/
-export declare class Link400ApplicationJson extends SpeakeasyBase {
-    errors: Link400ApplicationJsonErrors;
+ * The message specifies what is done
+ */
+export declare class Link400ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Map that sums up all received values that seemed incorrect
+     */
+    errors: Link400ApplicationJSONErrors;
     message: string;
-    meta: Link400ApplicationJsonMeta;
+    meta: Link400ApplicationJSONMeta;
 }
-export declare class Link401ApplicationJsonMeta extends SpeakeasyBase {
+export declare class Link201ApplicationJSONMeta extends SpeakeasyBase {
     requestId: string;
     status: number;
 }
 /**
- * The error message should specify what cause the error
-**/
-export declare class Link401ApplicationJson extends SpeakeasyBase {
+ * The message specifies what is done
+ */
+export declare class Link201ApplicationJSON extends SpeakeasyBase {
     message: string;
-    meta: Link401ApplicationJsonMeta;
-}
-export declare class Link403ApplicationJsonMeta extends SpeakeasyBase {
-    requestId: string;
-    status: number;
-}
-/**
- * The error message should specify what cause the error
-**/
-export declare class Link403ApplicationJson extends SpeakeasyBase {
-    message: string;
-    meta: Link403ApplicationJsonMeta;
-}
-export declare class Link429ApplicationJsonMeta extends SpeakeasyBase {
-    requestId: string;
-    status: number;
-}
-/**
- * The error message should specify what cause the error
-**/
-export declare class Link429ApplicationJson extends SpeakeasyBase {
-    message: string;
-    meta: Link429ApplicationJsonMeta;
-}
-export declare class Link500ApplicationJsonMeta extends SpeakeasyBase {
-    requestId: string;
-    status: number;
-}
-/**
- * The error message should specify what cause the error
-**/
-export declare class Link500ApplicationJson extends SpeakeasyBase {
-    message: string;
-    meta: Link500ApplicationJsonMeta;
-}
-export declare class LinkRequest extends SpeakeasyBase {
-    request: LinkRequestBody;
+    meta: Link201ApplicationJSONMeta;
 }
 export declare class LinkResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
-    link201ApplicationJSONObject?: Link201ApplicationJson;
-    link400ApplicationJSONObject?: Link400ApplicationJson;
-    link401ApplicationJSONObject?: Link401ApplicationJson;
-    link403ApplicationJSONObject?: Link403ApplicationJson;
-    link429ApplicationJSONObject?: Link429ApplicationJson;
-    link500ApplicationJSONObject?: Link500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Object was created
+     */
+    link201ApplicationJSONObject?: Link201ApplicationJSON;
+    /**
+     * Bad request, some fields or parameters are incorrect
+     */
+    link400ApplicationJSONObject?: Link400ApplicationJSON;
+    /**
+     * No API Key was provided or the key is not authorised to perform the action
+     */
+    link401ApplicationJSONObject?: Link401ApplicationJSON;
+    /**
+     * The API Key provided is currently not enabled
+     */
+    link403ApplicationJSONObject?: Link403ApplicationJSON;
+    /**
+     * Too many API requests were send
+     */
+    link429ApplicationJSONObject?: Link429ApplicationJSON;
+    /**
+     * An unexpected error occurred
+     */
+    link500ApplicationJSONObject?: Link500ApplicationJSON;
 }

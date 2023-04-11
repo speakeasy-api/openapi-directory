@@ -1,16 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+/**
+ * Desired response format. Valid entries are <code>xml</code> or <code>json</code>.
+ */
 export declare enum CurrentSeasonDetailsFormatEnum {
     Xml = "XML",
     Json = "JSON"
 }
-export declare class CurrentSeasonDetailsPathParams extends SpeakeasyBase {
-    format: CurrentSeasonDetailsFormatEnum;
-}
 export declare class CurrentSeasonDetailsRequest extends SpeakeasyBase {
-    pathParams: CurrentSeasonDetailsPathParams;
+    /**
+     * Desired response format. Valid entries are <code>xml</code> or <code>json</code>.
+     */
+    format: CurrentSeasonDetailsFormatEnum;
 }
 export declare class CurrentSeasonDetailsResponse extends SpeakeasyBase {
     contentType: string;
-    season?: any;
+    season?: shared.Season;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostConfirmProductInstanceActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTConfirmProductInstanceActionEnum {
     ConfirmProductInstance = "ConfirmProductInstance"
 }
-export declare enum PostConfirmProductInstanceVersionEnum {
+export declare enum POSTConfirmProductInstanceVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostConfirmProductInstanceQueryParams extends SpeakeasyBase {
-    action: PostConfirmProductInstanceActionEnum;
-    version: PostConfirmProductInstanceVersionEnum;
-}
-export declare class PostConfirmProductInstanceHeaders extends SpeakeasyBase {
+export declare class POSTConfirmProductInstanceRequest extends SpeakeasyBase {
+    action: POSTConfirmProductInstanceActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTConfirmProductInstanceVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostConfirmProductInstanceHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostConfirmProductInstanceRequest extends SpeakeasyBase {
-    queryParams: PostConfirmProductInstanceQueryParams;
-    headers: PostConfirmProductInstanceHeaders;
-    request?: Uint8Array;
-}
-export declare class PostConfirmProductInstanceResponse extends SpeakeasyBase {
+export declare class POSTConfirmProductInstanceResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

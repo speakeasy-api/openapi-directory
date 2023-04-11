@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Workspaces {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,15 +9,17 @@ export declare class Workspaces {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteWorkspace - Delete workspace
+     * Delete workspace
      *
+     * @remarks
      * Deletes the workspace
-    **/
+     */
     deleteWorkspace(req: operations.DeleteWorkspaceRequest, config?: AxiosRequestConfig): Promise<operations.DeleteWorkspaceResponse>;
     /**
-     * getWorkspace - Get workspace
+     * Get workspace
      *
+     * @remarks
      * Returns workspace information
-    **/
+     */
     getWorkspace(req: operations.GetWorkspaceRequest, config?: AxiosRequestConfig): Promise<operations.GetWorkspaceResponse>;
 }

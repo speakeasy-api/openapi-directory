@@ -1,8 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
 export declare enum AssociateServiceQuotaTemplateXAmzTargetEnum {
     ServiceQuotasV20190624AssociateServiceQuotaTemplate = "ServiceQuotasV20190624.AssociateServiceQuotaTemplate"
 }
-export declare class AssociateServiceQuotaTemplateHeaders extends SpeakeasyBase {
+export declare class AssociateServiceQuotaTemplateRequest extends SpeakeasyBase {
+    requestBody: Record<string, any>;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,20 +14,44 @@ export declare class AssociateServiceQuotaTemplateHeaders extends SpeakeasyBase 
     xAmzSignedHeaders?: string;
     xAmzTarget: AssociateServiceQuotaTemplateXAmzTargetEnum;
 }
-export declare class AssociateServiceQuotaTemplateRequest extends SpeakeasyBase {
-    headers: AssociateServiceQuotaTemplateHeaders;
-    request: Record<string, any>;
-}
 export declare class AssociateServiceQuotaTemplateResponse extends SpeakeasyBase {
+    /**
+     * AWSServiceAccessNotEnabledException
+     */
     awsServiceAccessNotEnabledException?: any;
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * Success
+     */
     associateServiceQuotaTemplateResponse?: Record<string, any>;
     contentType: string;
+    /**
+     * DependencyAccessDeniedException
+     */
     dependencyAccessDeniedException?: any;
+    /**
+     * NoAvailableOrganizationException
+     */
     noAvailableOrganizationException?: any;
+    /**
+     * OrganizationNotInAllFeaturesModeException
+     */
     organizationNotInAllFeaturesModeException?: any;
-    serviceException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceException
+     */
+    serviceException?: any;
+    /**
+     * TemplatesNotAvailableInRegionException
+     */
     templatesNotAvailableInRegionException?: any;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

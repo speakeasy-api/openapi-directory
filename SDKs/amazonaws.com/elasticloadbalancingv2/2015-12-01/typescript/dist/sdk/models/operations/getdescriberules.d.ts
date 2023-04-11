@@ -1,19 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeRulesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeRulesActionEnum {
     DescribeRules = "DescribeRules"
 }
-export declare enum GetDescribeRulesVersionEnum {
+export declare enum GETDescribeRulesVersionEnum {
     TwoThousandAndFifteen1201 = "2015-12-01"
 }
-export declare class GetDescribeRulesQueryParams extends SpeakeasyBase {
-    action: GetDescribeRulesActionEnum;
+export declare class GETDescribeRulesRequest extends SpeakeasyBase {
+    action: GETDescribeRulesActionEnum;
+    /**
+     * The Amazon Resource Name (ARN) of the listener.
+     */
     listenerArn?: string;
+    /**
+     * The marker for the next set of results. (You received this marker from a previous call.)
+     */
     marker?: string;
+    /**
+     * The maximum number of results to return with this call.
+     */
     pageSize?: number;
+    /**
+     * The Amazon Resource Names (ARN) of the rules.
+     */
     ruleArns?: string[];
-    version: GetDescribeRulesVersionEnum;
-}
-export declare class GetDescribeRulesHeaders extends SpeakeasyBase {
+    version: GETDescribeRulesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -22,12 +33,9 @@ export declare class GetDescribeRulesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeRulesRequest extends SpeakeasyBase {
-    queryParams: GetDescribeRulesQueryParams;
-    headers: GetDescribeRulesHeaders;
-}
-export declare class GetDescribeRulesResponse extends SpeakeasyBase {
+export declare class GETDescribeRulesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

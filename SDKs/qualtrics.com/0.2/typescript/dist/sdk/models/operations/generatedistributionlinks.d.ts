@@ -1,9 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GenerateDistributionLinksRequest extends SpeakeasyBase {
-    request: shared.CreateDistributionLinks;
-}
+import { AxiosResponse } from "axios";
 export declare class GenerateDistributionLinksResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbEngineVersionList } from "./dbengineversionlist";
-export declare class DbEngineVersionMessage extends SpeakeasyBase {
-    dbEngineVersions?: DbEngineVersionList[];
+import { DBEngineVersionList } from "./dbengineversionlist";
+/**
+ * Success
+ */
+export declare class DBEngineVersionMessage extends SpeakeasyBase {
+    dbEngineVersions?: DBEngineVersionList[];
     marker?: string;
 }

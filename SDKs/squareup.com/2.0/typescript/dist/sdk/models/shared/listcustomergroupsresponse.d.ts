@@ -1,0 +1,31 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { CustomerGroup } from "./customergroup";
+import { ErrorT } from "./error";
+/**
+ * Defines the fields that are included in the response body of
+ *
+ * @remarks
+ * a request to the [ListCustomerGroups](https://developer.squareup.com/reference/square_2021-08-18/customer-groups-api/list-customer-groups) endpoint.
+ *
+ * Either `errors` or `groups` is present in a given response (never both).
+ */
+export declare class ListCustomerGroupsResponse extends SpeakeasyBase {
+    /**
+     * A pagination cursor to retrieve the next set of results for your
+     *
+     * @remarks
+     * original query to the endpoint. This value is present only if the request
+     * succeeded and additional results are available.
+     *
+     * For more information, see [Pagination](https://developer.squareup.com/docs/working-with-apis/pagination).
+     */
+    cursor?: string;
+    /**
+     * Any errors that occurred during the request.
+     */
+    errors?: ErrorT[];
+    /**
+     * A list of customer groups belonging to the current seller.
+     */
+    groups?: CustomerGroup[];
+}

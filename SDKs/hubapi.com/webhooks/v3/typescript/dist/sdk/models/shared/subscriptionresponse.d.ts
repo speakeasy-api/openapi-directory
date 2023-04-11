@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Type of event to listen for. Can be one of `create`, `delete`, `deletedForPrivacy`, or `propertyChange`.
+ */
 export declare enum SubscriptionResponseEventTypeEnum {
     ContactPropertyChange = "contact.propertyChange",
     CompanyPropertyChange = "company.propertyChange",
@@ -27,12 +30,30 @@ export declare enum SubscriptionResponseEventTypeEnum {
 }
 /**
  * Complete details for an event subscription.
-**/
+ */
 export declare class SubscriptionResponse extends SpeakeasyBase {
+    /**
+     * Determines if the subscription is active or paused.
+     */
     active: boolean;
+    /**
+     * When this subscription was created. Formatted as milliseconds from the [Unix epoch](#).
+     */
     createdAt: Date;
+    /**
+     * Type of event to listen for. Can be one of `create`, `delete`, `deletedForPrivacy`, or `propertyChange`.
+     */
     eventType: SubscriptionResponseEventTypeEnum;
+    /**
+     * The unique ID of the subscription.
+     */
     id: string;
+    /**
+     * The internal name of the property being monitored for changes. Only applies when `eventType` is `propertyChange`.
+     */
     propertyName?: string;
+    /**
+     * When this subscription was last updated. Formatted as milliseconds from the [Unix epoch](#).
+     */
     updatedAt?: Date;
 }

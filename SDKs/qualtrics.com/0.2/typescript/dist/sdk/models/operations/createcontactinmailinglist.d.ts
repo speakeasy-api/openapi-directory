@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreateContactInMailinglistPathParams extends SpeakeasyBase {
-    directoryId: string;
-    mailingListId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class CreateContactInMailinglistRequest extends SpeakeasyBase {
-    pathParams: CreateContactInMailinglistPathParams;
-    request: shared.CreateContactInMailingList;
+    /**
+     * Contact data
+     */
+    createContactInMailingList: shared.CreateContactInMailingList;
+    /**
+     * ID of the qualtrics directory to create the contact to
+     */
+    directoryId: string;
+    /**
+     * ID of the mailing list
+     */
+    mailingListId: string;
 }
 export declare class CreateContactInMailinglistResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

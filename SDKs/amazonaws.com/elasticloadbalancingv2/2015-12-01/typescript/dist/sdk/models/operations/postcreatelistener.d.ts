@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateListenerActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateListenerActionEnum {
     CreateListener = "CreateListener"
 }
-export declare enum PostCreateListenerVersionEnum {
+export declare enum POSTCreateListenerVersionEnum {
     TwoThousandAndFifteen1201 = "2015-12-01"
 }
-export declare class PostCreateListenerQueryParams extends SpeakeasyBase {
-    action: PostCreateListenerActionEnum;
-    version: PostCreateListenerVersionEnum;
-}
-export declare class PostCreateListenerHeaders extends SpeakeasyBase {
+export declare class POSTCreateListenerRequest extends SpeakeasyBase {
+    action: POSTCreateListenerActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateListenerVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateListenerHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateListenerRequest extends SpeakeasyBase {
-    queryParams: PostCreateListenerQueryParams;
-    headers: PostCreateListenerHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateListenerResponse extends SpeakeasyBase {
+export declare class POSTCreateListenerResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

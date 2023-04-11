@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListWorkflowsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListWorkflowsXAmzTargetEnum {
-    AwsGlueListWorkflows = "AWSGlue.ListWorkflows"
+    AWSGlueListWorkflows = "AWSGlue.ListWorkflows"
 }
-export declare class ListWorkflowsHeaders extends SpeakeasyBase {
+export declare class ListWorkflowsRequest extends SpeakeasyBase {
+    listWorkflowsRequest: shared.ListWorkflowsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,16 +23,24 @@ export declare class ListWorkflowsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListWorkflowsXAmzTargetEnum;
 }
-export declare class ListWorkflowsRequest extends SpeakeasyBase {
-    queryParams: ListWorkflowsQueryParams;
-    headers: ListWorkflowsHeaders;
-    request: shared.ListWorkflowsRequest;
-}
 export declare class ListWorkflowsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * Success
+     */
     listWorkflowsResponse?: shared.ListWorkflowsResponse;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

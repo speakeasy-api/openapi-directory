@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeSnapshotAttributeActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeSnapshotAttributeActionEnum {
     DescribeSnapshotAttribute = "DescribeSnapshotAttribute"
 }
-export declare enum PostDescribeSnapshotAttributeVersionEnum {
+export declare enum POSTDescribeSnapshotAttributeVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDescribeSnapshotAttributeQueryParams extends SpeakeasyBase {
-    action: PostDescribeSnapshotAttributeActionEnum;
-    version: PostDescribeSnapshotAttributeVersionEnum;
-}
-export declare class PostDescribeSnapshotAttributeHeaders extends SpeakeasyBase {
+export declare class POSTDescribeSnapshotAttributeRequest extends SpeakeasyBase {
+    action: POSTDescribeSnapshotAttributeActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDescribeSnapshotAttributeVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDescribeSnapshotAttributeHeaders extends SpeakeasyBase 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeSnapshotAttributeRequest extends SpeakeasyBase {
-    queryParams: PostDescribeSnapshotAttributeQueryParams;
-    headers: PostDescribeSnapshotAttributeHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeSnapshotAttributeResponse extends SpeakeasyBase {
+export declare class POSTDescribeSnapshotAttributeResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

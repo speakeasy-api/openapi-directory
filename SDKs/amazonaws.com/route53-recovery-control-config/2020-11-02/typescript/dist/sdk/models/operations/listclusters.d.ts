@@ -1,10 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListClustersQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListClustersRequest extends SpeakeasyBase {
+    /**
+     * The number of objects that you want to return with this call.
+     */
     maxResults?: number;
+    /**
+     * The token that identifies which batch of results you want to see.
+     */
     nextToken?: string;
-}
-export declare class ListClustersHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +18,32 @@ export declare class ListClustersHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class ListClustersRequest extends SpeakeasyBase {
-    queryParams: ListClustersQueryParams;
-    headers: ListClustersHeaders;
-}
 export declare class ListClustersResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * Success
+     */
     listClustersResponse?: shared.ListClustersResponse;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

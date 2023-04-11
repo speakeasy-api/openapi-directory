@@ -1,0 +1,15 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { YoutubeAdGroupAssignedTargetingOption } from "./youtubeadgroupassignedtargetingoption";
+/**
+ * Successful response
+ */
+export declare class BulkListAdGroupAssignedTargetingOptionsResponse extends SpeakeasyBase {
+    /**
+     * A token identifying the next page of results. This value should be specified as the pageToken in a subsequent call to `BulkListAdGroupAssignedTargetingOptions` to fetch the next page of results. This token will be absent if there are no more youtube_ad_group_assigned_targeting_options to return.
+     */
+    nextPageToken?: string;
+    /**
+     * The list of wrapper objects, each providing an assigned targeting option and the youtube ad group it is assigned to. This list will be absent if empty.
+     */
+    youtubeAdGroupAssignedTargetingOptions?: YoutubeAdGroupAssignedTargetingOption[];
+}

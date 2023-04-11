@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Segment {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class Segment {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * segmentAnalytics - Segment Analytics
+     * Segment Analytics
      *
+     * @remarks
      * This endpoint allows you to retrieve a daily series of the size of a segment over time for a segment.
      *
      * ### Request Components
@@ -32,11 +33,12 @@ export declare class Segment {
      *     ]
      * }
      * ```
-    **/
+     */
     segmentAnalytics(req: operations.SegmentAnalyticsRequest, config?: AxiosRequestConfig): Promise<operations.SegmentAnalyticsResponse>;
     /**
-     * segmentDetails - Segment Details
+     * Segment Details
      *
+     * @remarks
      * This endpoint allows you to retrieve relevant information on the segment, which can be identified by the `segment_id`.
      *
      * ### Request Components
@@ -57,11 +59,12 @@ export declare class Segment {
      *       "tags" : (array) tag names associated with the segment
      * }
      * ```
-    **/
+     */
     segmentDetails(req: operations.SegmentDetailsRequest, config?: AxiosRequestConfig): Promise<operations.SegmentDetailsResponse>;
     /**
-     * segmentList - Segment List
+     * Segment List
      *
+     * @remarks
      * This endpoint allows you to export a list of segments, each of which will include its name, Segment API Identifier, and whether it has analytics tracking enabled. The segments are returned in groups of 100 sorted by time of creation (oldest to newest by default). Archived segments are not included.
      *
      * ### Request Components
@@ -86,6 +89,6 @@ export declare class Segment {
      *     ]
      * }
      * ```
-    **/
+     */
     segmentList(req: operations.SegmentListRequest, config?: AxiosRequestConfig): Promise<operations.SegmentListResponse>;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetDataCatalogXAmzTargetEnum {
     AmazonAthenaGetDataCatalog = "AmazonAthena.GetDataCatalog"
 }
-export declare class GetDataCatalogHeaders extends SpeakeasyBase {
+export declare class GetDataCatalogRequest extends SpeakeasyBase {
+    getDataCatalogInput: shared.GetDataCatalogInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class GetDataCatalogHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetDataCatalogXAmzTargetEnum;
 }
-export declare class GetDataCatalogRequest extends SpeakeasyBase {
-    headers: GetDataCatalogHeaders;
-    request: shared.GetDataCatalogInput;
-}
 export declare class GetDataCatalogResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getDataCatalogOutput?: shared.GetDataCatalogOutput;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

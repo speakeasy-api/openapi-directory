@@ -1,7 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { SqlParameter } from "./sqlparameter";
 export declare class ExecuteStatementInput extends SpeakeasyBase {
-    clusterIdentifier: string;
+    clientToken?: string;
+    clusterIdentifier?: string;
     database: string;
     dbUser?: string;
     parameters?: SqlParameter[];
@@ -9,4 +10,5 @@ export declare class ExecuteStatementInput extends SpeakeasyBase {
     sql: string;
     statementName?: string;
     withEvent?: boolean;
+    workgroupName?: string;
 }

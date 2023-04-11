@@ -1,8 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetCloudFrontOriginAccessIdentityConfig20170325PathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetCloudFrontOriginAccessIdentityConfig20170325Request extends SpeakeasyBase {
+    /**
+     * The identity's ID.
+     */
     id: string;
-}
-export declare class GetCloudFrontOriginAccessIdentityConfig20170325Headers extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,12 +13,9 @@ export declare class GetCloudFrontOriginAccessIdentityConfig20170325Headers exte
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetCloudFrontOriginAccessIdentityConfig20170325Request extends SpeakeasyBase {
-    pathParams: GetCloudFrontOriginAccessIdentityConfig20170325PathParams;
-    headers: GetCloudFrontOriginAccessIdentityConfig20170325Headers;
-}
 export declare class GetCloudFrontOriginAccessIdentityConfig20170325Response extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

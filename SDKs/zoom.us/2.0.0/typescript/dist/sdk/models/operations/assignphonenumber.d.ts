@@ -1,44 +1,88 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class AssignPhoneNumberPathParams extends SpeakeasyBase {
-    userId: string;
-}
-export declare class AssignPhoneNumberApplicationJsonPhoneNumbers extends SpeakeasyBase {
-    id?: string;
-    number?: string;
-}
-export declare class AssignPhoneNumberApplicationJson extends SpeakeasyBase {
-    phoneNumbers?: AssignPhoneNumberApplicationJsonPhoneNumbers[];
-}
-export declare class AssignPhoneNumberMultipartFormDataPhoneNumbers extends SpeakeasyBase {
-    id?: string;
-    number?: string;
-}
-export declare class AssignPhoneNumberMultipartFormData1 extends SpeakeasyBase {
-    phoneNumbers?: AssignPhoneNumberMultipartFormDataPhoneNumbers[];
-}
-export declare class AssignPhoneNumberRequests extends SpeakeasyBase {
-    object?: AssignPhoneNumberApplicationJson;
-    object1?: AssignPhoneNumberMultipartFormData1;
-}
+import { AxiosResponse } from "axios";
 export declare class AssignPhoneNumberSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
+    oAuth: string;
 }
-export declare class AssignPhoneNumber200ApplicationJsonPhoneNumbers extends SpeakeasyBase {
+export declare class AssignPhoneNumberApplicationJSONPhoneNumbers extends SpeakeasyBase {
+    /**
+     * ID for phone number
+     */
     id?: string;
+    /**
+     * Phone number in E164 format.
+     */
     number?: string;
 }
-export declare class AssignPhoneNumber200ApplicationJson extends SpeakeasyBase {
-    phoneNumbers?: AssignPhoneNumber200ApplicationJsonPhoneNumbers[];
+/**
+ * Provide either an id or a number in the request body.
+ */
+export declare class AssignPhoneNumberApplicationJSON extends SpeakeasyBase {
+    phoneNumbers?: AssignPhoneNumberApplicationJSONPhoneNumbers[];
 }
 export declare class AssignPhoneNumberRequest extends SpeakeasyBase {
-    pathParams: AssignPhoneNumberPathParams;
-    request?: AssignPhoneNumberRequests;
-    security: AssignPhoneNumberSecurity;
+    /**
+     * Provide either an id or a number in the request body.
+     */
+    requestBody?: AssignPhoneNumberApplicationJSON;
+    userId: string;
+}
+export declare class AssignPhoneNumber200ApplicationXMLPhoneNumbers extends SpeakeasyBase {
+    /**
+     * ID of the phone number
+     */
+    id?: string;
+    /**
+     * The phone number that is assigned to the user.
+     */
+    number?: string;
+}
+/**
+ * **HTTP Status Code:** `200` <br>
+ *
+ * @remarks
+ * Phone number assigned successfully.
+ *
+ */
+export declare class AssignPhoneNumber200ApplicationXML extends SpeakeasyBase {
+    /**
+     * Assigned phone number
+     */
+    phoneNumbers?: AssignPhoneNumber200ApplicationXMLPhoneNumbers[];
+}
+export declare class AssignPhoneNumber200ApplicationJSONPhoneNumbers extends SpeakeasyBase {
+    /**
+     * ID of the phone number
+     */
+    id?: string;
+    /**
+     * The phone number that is assigned to the user.
+     */
+    number?: string;
+}
+/**
+ * **HTTP Status Code:** `200` <br>
+ *
+ * @remarks
+ * Phone number assigned successfully.
+ *
+ */
+export declare class AssignPhoneNumber200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Assigned phone number
+     */
+    phoneNumbers?: AssignPhoneNumber200ApplicationJSONPhoneNumbers[];
 }
 export declare class AssignPhoneNumberResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    assignPhoneNumber200ApplicationJSONObject?: AssignPhoneNumber200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * **HTTP Status Code:** `200` <br>
+     *
+     * @remarks
+     * Phone number assigned successfully.
+     *
+     */
+    assignPhoneNumber200ApplicationJSONObject?: AssignPhoneNumber200ApplicationJSON;
 }

@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { LogPattern } from "./logpattern";
+/**
+ * Success
+ */
 export declare class ListLogPatternsResponse extends SpeakeasyBase {
     logPatterns?: LogPattern[];
     nextToken?: string;

@@ -1,13 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AllServiceGroupsSecurity extends SpeakeasyBase {
-    otoroshiAuth: shared.SchemeOtoroshiAuth;
-}
-export declare class AllServiceGroupsRequest extends SpeakeasyBase {
-    security: AllServiceGroupsSecurity;
-}
+import { AxiosResponse } from "axios";
 export declare class AllServiceGroupsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful operation
+     */
     groups?: shared.Group[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

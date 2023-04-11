@@ -1,16 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class OptimiseByProductPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class OptimiseByProductRequest extends SpeakeasyBase {
+    /**
+     * The channel identifier list concerned by this optimisation
+     */
+    requestBody?: string[];
     actionName: shared.OptimisationActionNameGeneralParametersEnum;
+    /**
+     * The product identifier concerned by this optimisation
+     */
     productId: string;
+    /**
+     * Your store identifier
+     */
     storeId: string;
 }
-export declare class OptimiseByProductRequest extends SpeakeasyBase {
-    pathParams: OptimiseByProductPathParams;
-    request?: string[];
-}
 export declare class OptimiseByProductResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     * Invalid request
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

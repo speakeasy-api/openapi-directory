@@ -1,3 +1,4 @@
+export * from "./bulkresponse";
 export * from "./episodevote";
 export * from "./markedepisode";
 export * from "./networkfollow";

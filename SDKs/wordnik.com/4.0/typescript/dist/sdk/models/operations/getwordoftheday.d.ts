@@ -1,12 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetWordOfTheDayQueryParams extends SpeakeasyBase {
-    date?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetWordOfTheDayRequest extends SpeakeasyBase {
-    queryParams: GetWordOfTheDayQueryParams;
+    /**
+     * Fetches by date in yyyy-MM-dd
+     */
+    date?: string;
 }
 export declare class GetWordOfTheDayResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

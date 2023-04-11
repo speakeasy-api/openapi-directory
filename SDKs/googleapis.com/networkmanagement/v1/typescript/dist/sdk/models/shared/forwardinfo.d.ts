@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Target type where this packet is forwarded to.
+ */
 export declare enum ForwardInfoTargetEnum {
     TargetUnspecified = "TARGET_UNSPECIFIED",
     PeeringVpc = "PEERING_VPC",
@@ -11,8 +14,14 @@ export declare enum ForwardInfoTargetEnum {
 }
 /**
  * Details of the final state "forward" and associated resource.
-**/
+ */
 export declare class ForwardInfo extends SpeakeasyBase {
+    /**
+     * URI of the resource that the packet is forwarded to.
+     */
     resourceUri?: string;
+    /**
+     * Target type where this packet is forwarded to.
+     */
     target?: ForwardInfoTargetEnum;
 }

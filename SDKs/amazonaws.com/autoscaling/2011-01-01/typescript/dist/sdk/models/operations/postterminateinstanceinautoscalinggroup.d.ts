@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostTerminateInstanceInAutoScalingGroupActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTTerminateInstanceInAutoScalingGroupActionEnum {
     TerminateInstanceInAutoScalingGroup = "TerminateInstanceInAutoScalingGroup"
 }
-export declare enum PostTerminateInstanceInAutoScalingGroupVersionEnum {
+export declare enum POSTTerminateInstanceInAutoScalingGroupVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class PostTerminateInstanceInAutoScalingGroupQueryParams extends SpeakeasyBase {
-    action: PostTerminateInstanceInAutoScalingGroupActionEnum;
-    version: PostTerminateInstanceInAutoScalingGroupVersionEnum;
-}
-export declare class PostTerminateInstanceInAutoScalingGroupHeaders extends SpeakeasyBase {
+export declare class POSTTerminateInstanceInAutoScalingGroupRequest extends SpeakeasyBase {
+    action: POSTTerminateInstanceInAutoScalingGroupActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTTerminateInstanceInAutoScalingGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostTerminateInstanceInAutoScalingGroupHeaders extends Spea
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostTerminateInstanceInAutoScalingGroupRequest extends SpeakeasyBase {
-    queryParams: PostTerminateInstanceInAutoScalingGroupQueryParams;
-    headers: PostTerminateInstanceInAutoScalingGroupHeaders;
-    request?: Uint8Array;
-}
-export declare class PostTerminateInstanceInAutoScalingGroupResponse extends SpeakeasyBase {
+export declare class POSTTerminateInstanceInAutoScalingGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

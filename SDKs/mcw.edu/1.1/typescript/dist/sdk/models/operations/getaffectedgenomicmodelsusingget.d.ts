@@ -1,12 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetAffectedGenomicModelsUsingGetPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETAffectedGenomicModelsUsingGETRequest extends SpeakeasyBase {
+    /**
+     * The taxon ID for species
+     */
     taxonId: string;
 }
-export declare class GetAffectedGenomicModelsUsingGetRequest extends SpeakeasyBase {
-    pathParams: GetAffectedGenomicModelsUsingGetPathParams;
-}
-export declare class GetAffectedGenomicModelsUsingGetResponse extends SpeakeasyBase {
+export declare class GETAffectedGenomicModelsUsingGETResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

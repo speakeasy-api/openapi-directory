@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetEventStationsPathParams extends SpeakeasyBase {
-    eventId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetEventStationsRequest extends SpeakeasyBase {
-    pathParams: GetEventStationsPathParams;
+    /**
+     * currently: 'trofeoprincesasofia|palmavela'
+     */
+    eventId: string;
 }
 export declare class GetEventStationsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

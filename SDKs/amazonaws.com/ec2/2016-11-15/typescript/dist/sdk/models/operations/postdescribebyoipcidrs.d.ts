@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeByoipCidrsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeByoipCidrsActionEnum {
     DescribeByoipCidrs = "DescribeByoipCidrs"
 }
-export declare enum PostDescribeByoipCidrsVersionEnum {
+export declare enum POSTDescribeByoipCidrsVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDescribeByoipCidrsQueryParams extends SpeakeasyBase {
-    action: PostDescribeByoipCidrsActionEnum;
+export declare class POSTDescribeByoipCidrsRequest extends SpeakeasyBase {
+    action: POSTDescribeByoipCidrsActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostDescribeByoipCidrsVersionEnum;
-}
-export declare class PostDescribeByoipCidrsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeByoipCidrsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeByoipCidrsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeByoipCidrsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeByoipCidrsQueryParams;
-    headers: PostDescribeByoipCidrsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeByoipCidrsResponse extends SpeakeasyBase {
+export declare class POSTDescribeByoipCidrsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

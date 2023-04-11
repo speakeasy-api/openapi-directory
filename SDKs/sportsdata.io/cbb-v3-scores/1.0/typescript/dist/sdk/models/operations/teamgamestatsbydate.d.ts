@@ -1,17 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+/**
+ * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+ */
 export declare enum TeamGameStatsByDateFormatEnum {
     Xml = "XML",
     Json = "JSON"
 }
-export declare class TeamGameStatsByDatePathParams extends SpeakeasyBase {
-    date: string;
-    format: TeamGameStatsByDateFormatEnum;
-}
 export declare class TeamGameStatsByDateRequest extends SpeakeasyBase {
-    pathParams: TeamGameStatsByDatePathParams;
+    /**
+     * The date of the game(s).
+     *
+     * @remarks
+     * <br>Examples: <code>2018-FEB-27</code>, <code>2017-DEC-01</code>.
+     */
+    date: string;
+    /**
+     * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+     */
+    format: TeamGameStatsByDateFormatEnum;
 }
 export declare class TeamGameStatsByDateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    teamGames?: any[];
+    rawResponse?: AxiosResponse;
+    teamGames?: shared.TeamGame[];
 }

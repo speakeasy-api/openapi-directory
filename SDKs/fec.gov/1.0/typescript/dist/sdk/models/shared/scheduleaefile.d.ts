@@ -7,6 +7,12 @@ export declare class ScheduleAEfile extends SpeakeasyBase {
     backReferenceTransactionId?: string;
     beginningImageNumber?: string;
     committee?: CommitteeHistory;
+    /**
+     *
+     * @remarks
+     * A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
+     *
+     */
     committeeId?: string;
     conduitCommitteeCity?: string;
     conduitCommitteeId?: string;
@@ -18,16 +24,31 @@ export declare class ScheduleAEfile extends SpeakeasyBase {
     contributionReceiptAmount?: number;
     contributionReceiptDate?: Date;
     contributorAggregateYtd?: number;
+    /**
+     * City of contributor
+     */
     contributorCity?: string;
+    /**
+     * Employer of contributor, filers need to make an effort to gather this information
+     */
     contributorEmployer?: string;
     contributorFirstName?: string;
     contributorLastName?: string;
     contributorMiddleName?: string;
     contributorName?: string;
+    /**
+     * Occupation of contributor, filers need to make an effort to gather this information
+     */
     contributorOccupation?: string;
     contributorPrefix?: string;
+    /**
+     * State of contributor
+     */
     contributorState?: string;
     contributorSuffix?: string;
+    /**
+     * Zip code of contributor
+     */
     contributorZip?: string;
     csvUrl?: string;
     cycle?: number;
@@ -36,6 +57,12 @@ export declare class ScheduleAEfile extends SpeakeasyBase {
     fecUrl?: string;
     fileNumber: number;
     filing?: EFilings;
+    /**
+     *
+     * @remarks
+     * An unique identifier for each page where the electronic or paper filing is reported.
+     *
+     */
     imageNumber?: string;
     lineNumber?: string;
     loadTimestamp?: Date;

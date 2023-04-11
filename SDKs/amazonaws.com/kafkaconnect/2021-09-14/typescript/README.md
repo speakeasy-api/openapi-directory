@@ -6,131 +6,130 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/amazonaws.com/kafkaconnect/2021-09-14/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/amazonaws.com/kafkaconnect/2021-09-14/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateConnectorRequest, CreateConnectorResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CreateConnectorRequest,
+  CreateConnectorResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  KafkaClusterEncryptionInTransitTypeEnum,
+  KafkaClusterClientAuthenticationTypeEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: CreateConnectorRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
+});
+
+const req: CreateConnectorRequest = {
+  requestBody: {
     capacity: {
       autoScaling: {
-        maxWorkerCount: 6044372234677422456,
-        mcuCount: 8274930044578894929,
-        minWorkerCount: 1543572285742637646,
+        maxWorkerCount: 548814,
+        mcuCount: 592845,
+        minWorkerCount: 715190,
         scaleInPolicy: {
-          cpuUtilizationPercentage: 2661732831099943416,
+          cpuUtilizationPercentage: 844266,
         },
         scaleOutPolicy: {
-          cpuUtilizationPercentage: 8325060299420976708,
+          cpuUtilizationPercentage: 602763,
         },
       },
       provisionedCapacity: {
-        mcuCount: 7837839688282259259,
-        workerCount: 2518412263346885298,
+        mcuCount: 857946,
+        workerCount: 544883,
       },
     },
     connectorConfiguration: {
-      "et": "ut",
+      "vel": "error",
+      "deserunt": "suscipit",
+      "iure": "magnam",
+      "debitis": "ipsa",
     },
-    connectorDescription: "dolorem",
-    connectorName: "et",
+    connectorDescription: "delectus",
+    connectorName: "tempora",
     kafkaCluster: {
       apacheKafkaCluster: {
-        bootstrapServers: "voluptate",
+        bootstrapServers: "suscipit",
         vpc: {
           securityGroups: [
-            "vitae",
-            "totam",
-            "dolores",
+            "minus",
+            "placeat",
           ],
           subnets: [
-            "debitis",
-            "vel",
-            "odio",
+            "iusto",
+            "excepturi",
+            "nisi",
           ],
         },
       },
     },
     kafkaClusterClientAuthentication: {
-      authenticationType: "IAM",
+      authenticationType: KafkaClusterClientAuthenticationTypeEnum.Iam,
     },
     kafkaClusterEncryptionInTransit: {
-      encryptionType: "PLAINTEXT",
+      encryptionType: KafkaClusterEncryptionInTransitTypeEnum.Tls,
     },
-    kafkaConnectVersion: "aspernatur",
+    kafkaConnectVersion: "ab",
     logDelivery: {
       workerLogDelivery: {
         cloudWatchLogs: {
-          enabled: true,
-          logGroup: "totam",
+          enabled: false,
+          logGroup: "quis",
         },
         firehose: {
-          deliveryStream: "commodi",
-          enabled: true,
+          deliveryStream: "veritatis",
+          enabled: false,
         },
         s3: {
-          bucket: "est",
-          enabled: true,
-          prefix: "odit",
+          bucket: "deserunt",
+          enabled: false,
+          prefix: "perferendis",
         },
       },
     },
     plugins: [
       {
         customPlugin: {
-          customPluginArn: "voluptas",
-          revision: 4778690082005258714,
+          customPluginArn: "repellendus",
+          revision: 957156,
         },
       },
       {
         customPlugin: {
-          customPluginArn: "aut",
-          revision: 6972732843819909978,
-        },
-      },
-      {
-        customPlugin: {
-          customPluginArn: "sed",
-          revision: 7845762441295307478,
+          customPluginArn: "quo",
+          revision: 140350,
         },
       },
     ],
-    serviceExecutionRoleArn: "autem",
+    serviceExecutionRoleArn: "at",
     workerConfiguration: {
-      revision: 8514850266767180993,
-      workerConfigurationArn: "nobis",
+      revision: 870088,
+      workerConfigurationArn: "maiores",
     },
   },
+  xAmzAlgorithm: "molestiae",
+  xAmzContentSha256: "quod",
+  xAmzCredential: "quod",
+  xAmzDate: "esse",
+  xAmzSecurityToken: "totam",
+  xAmzSignature: "porro",
+  xAmzSignedHeaders: "dolorum",
 };
 
 sdk.createConnector(req).then((res: CreateConnectorResponse | AxiosError) => {
@@ -140,7 +139,7 @@ sdk.createConnector(req).then((res: CreateConnectorResponse | AxiosError) => {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
@@ -148,6 +147,7 @@ sdk.createConnector(req).then((res: CreateConnectorResponse | AxiosError) => {
 * `createCustomPlugin` - Creates a custom plugin using the specified properties.
 * `createWorkerConfiguration` - Creates a worker configuration using the specified properties.
 * `deleteConnector` - Deletes the specified connector.
+* `deleteCustomPlugin` - Deletes a custom plugin.
 * `describeConnector` - Returns summary information about the connector.
 * `describeCustomPlugin` - A summary description of the custom plugin.
 * `describeWorkerConfiguration` - Returns information about a worker configuration.
@@ -155,7 +155,18 @@ sdk.createConnector(req).then((res: CreateConnectorResponse | AxiosError) => {
 * `listCustomPlugins` - Returns a list of all of the custom plugins in this account and Region.
 * `listWorkerConfigurations` - Returns a list of all of the worker configurations in this account and Region.
 * `updateConnector` - Updates the specified connector.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

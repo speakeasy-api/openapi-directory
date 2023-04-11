@@ -1,14 +1,32 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class CompanyNotificationListSecurity extends SpeakeasyBase {
-    userKey: shared.SchemeUserKey;
+import { AxiosResponse } from "axios";
+/**
+ * Detailed information about the error
+ */
+export declare class CompanyNotificationListDefaultApplicationJSON extends SpeakeasyBase {
+    code: number;
+    fault?: string;
+    message: string;
+    tag: string;
 }
-export declare class CompanyNotificationListRequest extends SpeakeasyBase {
-    security: CompanyNotificationListSecurity;
+export declare class CompanyNotificationList200ApplicationJSON extends SpeakeasyBase {
+    callbackCount?: number;
+    callbackUrl?: string;
+    created?: Date;
+    monitorStatus?: string;
+    notificationId?: string;
+    subjectId?: string;
 }
 export declare class CompanyNotificationListResponse extends SpeakeasyBase {
-    companyNotificationList200ApplicationJSONAnies?: any[];
-    companyNotificationListDefaultApplicationJSONAny?: any;
+    /**
+     * List of monitor webhooks
+     */
+    companyNotificationList200ApplicationJSONObjects?: CompanyNotificationList200ApplicationJSON[];
+    /**
+     * Detailed information about the error
+     */
+    companyNotificationListDefaultApplicationJSONObject?: CompanyNotificationListDefaultApplicationJSON;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

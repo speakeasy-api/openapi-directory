@@ -1,27 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GroupUpdatePathParams extends SpeakeasyBase {
-    groupId: string;
-}
-export declare class GroupUpdateApplicationJson extends SpeakeasyBase {
-    name?: string;
-}
-export declare class GroupUpdateMultipartFormData extends SpeakeasyBase {
-    name?: string;
-}
-export declare class GroupUpdateRequests extends SpeakeasyBase {
-    object?: GroupUpdateApplicationJson;
-    object1?: GroupUpdateMultipartFormData;
-}
+import { AxiosResponse } from "axios";
 export declare class GroupUpdateSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
+    oAuth: string;
+}
+export declare class GroupUpdateApplicationJSON extends SpeakeasyBase {
+    /**
+     * Group name. It must be unique to one account and less than 128 characters.
+     */
+    name?: string;
 }
 export declare class GroupUpdateRequest extends SpeakeasyBase {
-    pathParams: GroupUpdatePathParams;
-    request: GroupUpdateRequests;
-    security: GroupUpdateSecurity;
+    requestBody: GroupUpdateApplicationJSON;
+    /**
+     * The group ID.<br>
+     *
+     * @remarks
+     * Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups).
+     */
+    groupId: string;
 }
 export declare class GroupUpdateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -4,9 +4,12 @@ export declare class ContentFileLinks extends SpeakeasyBase {
     html: string;
     self: string;
 }
+export declare enum ContentFileTypeEnum {
+    File = "file"
+}
 /**
  * Content File
-**/
+ */
 export declare class ContentFile extends SpeakeasyBase {
     links: ContentFileLinks;
     content: string;
@@ -20,6 +23,6 @@ export declare class ContentFile extends SpeakeasyBase {
     size: number;
     submoduleGitUrl?: string;
     target?: string;
-    type: string;
+    type: ContentFileTypeEnum;
     url: string;
 }

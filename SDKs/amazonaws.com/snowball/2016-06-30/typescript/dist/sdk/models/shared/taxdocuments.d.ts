@@ -1,8 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { IndTaxDocuments } from "./indtaxdocuments";
+import { INDTaxDocuments } from "./indtaxdocuments";
 /**
- * The tax documents required in your AWS Region.
-**/
+ * The tax documents required in your Amazon Web Services Region.
+ */
 export declare class TaxDocuments extends SpeakeasyBase {
-    ind?: IndTaxDocuments;
+    /**
+     * The tax documents required in Amazon Web Services Region in India.
+     */
+    ind?: INDTaxDocuments;
 }

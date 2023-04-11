@@ -1,23 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class TeamsUpdatePathParams extends SpeakeasyBase {
-    teamId: string;
+import { AxiosResponse } from "axios";
+export declare class TeamsUpdateSecurity extends SpeakeasyBase {
+    jwt: string;
+    key: string;
+    project: string;
 }
 export declare class TeamsUpdateRequestBody extends SpeakeasyBase {
+    /**
+     * Team name. Max length: 128 chars.
+     */
     name: string;
 }
-export declare class TeamsUpdateSecurity extends SpeakeasyBase {
-    jwt: shared.SchemeJwt;
-    key: shared.SchemeKey;
-    project: shared.SchemeProject;
-}
 export declare class TeamsUpdateRequest extends SpeakeasyBase {
-    pathParams: TeamsUpdatePathParams;
-    request?: TeamsUpdateRequestBody;
-    security: TeamsUpdateSecurity;
+    requestBody?: TeamsUpdateRequestBody;
+    /**
+     * Team unique ID.
+     */
+    teamId: string;
 }
 export declare class TeamsUpdateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Team
+     */
     team?: shared.Team;
 }

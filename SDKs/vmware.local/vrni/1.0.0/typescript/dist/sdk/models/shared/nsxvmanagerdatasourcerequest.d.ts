@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { PasswordCredentials } from "./passwordcredentials";
-export declare class NsxvManagerDataSourceRequest extends SpeakeasyBase {
+export declare class NSXVManagerDataSourceRequest extends SpeakeasyBase {
     centralCliEnabled?: boolean;
     credentials: PasswordCredentials;
     enabled?: boolean;
@@ -9,6 +9,12 @@ export declare class NsxvManagerDataSourceRequest extends SpeakeasyBase {
     ipfixEnabled?: boolean;
     nickname: string;
     notes?: string;
+    /**
+     * proxy vm which should register this vcenter
+     */
     proxyId: string;
+    /**
+     * Associated vcenter data source entity Id
+     */
     vcenterId: string;
 }

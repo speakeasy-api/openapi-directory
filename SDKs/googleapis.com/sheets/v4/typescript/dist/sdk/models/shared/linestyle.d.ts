@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The dash type of the line.
+ */
 export declare enum LineStyleTypeEnum {
     LineDashTypeUnspecified = "LINE_DASH_TYPE_UNSPECIFIED",
     Invisible = "INVISIBLE",
@@ -12,8 +15,14 @@ export declare enum LineStyleTypeEnum {
 }
 /**
  * Properties that describe the style of a line.
-**/
+ */
 export declare class LineStyle extends SpeakeasyBase {
+    /**
+     * The dash type of the line.
+     */
     type?: LineStyleTypeEnum;
+    /**
+     * The thickness of the line, in px.
+     */
     width?: number;
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostAssumeRoleWithSamlActionEnum {
-    AssumeRoleWithSaml = "AssumeRoleWithSAML"
+import { AxiosResponse } from "axios";
+export declare enum POSTAssumeRoleWithSAMLActionEnum {
+    AssumeRoleWithSAML = "AssumeRoleWithSAML"
 }
-export declare enum PostAssumeRoleWithSamlVersionEnum {
+export declare enum POSTAssumeRoleWithSAMLVersionEnum {
     TwoThousandAndEleven0615 = "2011-06-15"
 }
-export declare class PostAssumeRoleWithSamlQueryParams extends SpeakeasyBase {
-    action: PostAssumeRoleWithSamlActionEnum;
-    version: PostAssumeRoleWithSamlVersionEnum;
-}
-export declare class PostAssumeRoleWithSamlHeaders extends SpeakeasyBase {
+export declare class POSTAssumeRoleWithSAMLRequest extends SpeakeasyBase {
+    action: POSTAssumeRoleWithSAMLActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTAssumeRoleWithSAMLVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostAssumeRoleWithSamlHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostAssumeRoleWithSamlRequest extends SpeakeasyBase {
-    queryParams: PostAssumeRoleWithSamlQueryParams;
-    headers: PostAssumeRoleWithSamlHeaders;
-    request?: Uint8Array;
-}
-export declare class PostAssumeRoleWithSamlResponse extends SpeakeasyBase {
+export declare class POSTAssumeRoleWithSAMLResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

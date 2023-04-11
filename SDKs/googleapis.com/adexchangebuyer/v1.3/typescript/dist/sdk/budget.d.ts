@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Budget {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,15 +9,15 @@ export declare class Budget {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * adexchangebuyerBudgetGet - Returns the budget information for the adgroup specified by the accountId and billingId.
-    **/
-    adexchangebuyerBudgetGet(req: operations.AdexchangebuyerBudgetGetRequest, config?: AxiosRequestConfig): Promise<operations.AdexchangebuyerBudgetGetResponse>;
+     * Returns the budget information for the adgroup specified by the accountId and billingId.
+     */
+    adexchangebuyerBudgetGet(req: operations.AdexchangebuyerBudgetGetRequest, security: operations.AdexchangebuyerBudgetGetSecurity, config?: AxiosRequestConfig): Promise<operations.AdexchangebuyerBudgetGetResponse>;
     /**
-     * adexchangebuyerBudgetPatch - Updates the budget amount for the budget of the adgroup specified by the accountId and billingId, with the budget amount in the request. This method supports patch semantics.
-    **/
-    adexchangebuyerBudgetPatch(req: operations.AdexchangebuyerBudgetPatchRequest, config?: AxiosRequestConfig): Promise<operations.AdexchangebuyerBudgetPatchResponse>;
+     * Updates the budget amount for the budget of the adgroup specified by the accountId and billingId, with the budget amount in the request. This method supports patch semantics.
+     */
+    adexchangebuyerBudgetPatch(req: operations.AdexchangebuyerBudgetPatchRequest, security: operations.AdexchangebuyerBudgetPatchSecurity, config?: AxiosRequestConfig): Promise<operations.AdexchangebuyerBudgetPatchResponse>;
     /**
-     * adexchangebuyerBudgetUpdate - Updates the budget amount for the budget of the adgroup specified by the accountId and billingId, with the budget amount in the request.
-    **/
-    adexchangebuyerBudgetUpdate(req: operations.AdexchangebuyerBudgetUpdateRequest, config?: AxiosRequestConfig): Promise<operations.AdexchangebuyerBudgetUpdateResponse>;
+     * Updates the budget amount for the budget of the adgroup specified by the accountId and billingId, with the budget amount in the request.
+     */
+    adexchangebuyerBudgetUpdate(req: operations.AdexchangebuyerBudgetUpdateRequest, security: operations.AdexchangebuyerBudgetUpdateSecurity, config?: AxiosRequestConfig): Promise<operations.AdexchangebuyerBudgetUpdateResponse>;
 }

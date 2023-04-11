@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateLoadBalancerListenersActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateLoadBalancerListenersActionEnum {
     CreateLoadBalancerListeners = "CreateLoadBalancerListeners"
 }
-export declare enum PostCreateLoadBalancerListenersVersionEnum {
+export declare enum POSTCreateLoadBalancerListenersVersionEnum {
     TwoThousandAndTwelve0601 = "2012-06-01"
 }
-export declare class PostCreateLoadBalancerListenersQueryParams extends SpeakeasyBase {
-    action: PostCreateLoadBalancerListenersActionEnum;
-    version: PostCreateLoadBalancerListenersVersionEnum;
-}
-export declare class PostCreateLoadBalancerListenersHeaders extends SpeakeasyBase {
+export declare class POSTCreateLoadBalancerListenersRequest extends SpeakeasyBase {
+    action: POSTCreateLoadBalancerListenersActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateLoadBalancerListenersVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateLoadBalancerListenersHeaders extends SpeakeasyBas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateLoadBalancerListenersRequest extends SpeakeasyBase {
-    queryParams: PostCreateLoadBalancerListenersQueryParams;
-    headers: PostCreateLoadBalancerListenersHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateLoadBalancerListenersResponse extends SpeakeasyBase {
+export declare class POSTCreateLoadBalancerListenersResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

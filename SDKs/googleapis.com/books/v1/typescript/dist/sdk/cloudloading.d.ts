@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Cloudloading {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,15 +9,15 @@ export declare class Cloudloading {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * booksCloudloadingAddBook - Add a user-upload volume and triggers processing.
-    **/
-    booksCloudloadingAddBook(req: operations.BooksCloudloadingAddBookRequest, config?: AxiosRequestConfig): Promise<operations.BooksCloudloadingAddBookResponse>;
+     * Add a user-upload volume and triggers processing.
+     */
+    booksCloudloadingAddBook(req: operations.BooksCloudloadingAddBookRequest, security: operations.BooksCloudloadingAddBookSecurity, config?: AxiosRequestConfig): Promise<operations.BooksCloudloadingAddBookResponse>;
     /**
-     * booksCloudloadingDeleteBook - Remove the book and its contents
-    **/
-    booksCloudloadingDeleteBook(req: operations.BooksCloudloadingDeleteBookRequest, config?: AxiosRequestConfig): Promise<operations.BooksCloudloadingDeleteBookResponse>;
+     * Remove the book and its contents
+     */
+    booksCloudloadingDeleteBook(req: operations.BooksCloudloadingDeleteBookRequest, security: operations.BooksCloudloadingDeleteBookSecurity, config?: AxiosRequestConfig): Promise<operations.BooksCloudloadingDeleteBookResponse>;
     /**
-     * booksCloudloadingUpdateBook - Updates a user-upload volume.
-    **/
-    booksCloudloadingUpdateBook(req: operations.BooksCloudloadingUpdateBookRequest, config?: AxiosRequestConfig): Promise<operations.BooksCloudloadingUpdateBookResponse>;
+     * Updates a user-upload volume.
+     */
+    booksCloudloadingUpdateBook(req: operations.BooksCloudloadingUpdateBookRequest, security: operations.BooksCloudloadingUpdateBookSecurity, config?: AxiosRequestConfig): Promise<operations.BooksCloudloadingUpdateBookResponse>;
 }

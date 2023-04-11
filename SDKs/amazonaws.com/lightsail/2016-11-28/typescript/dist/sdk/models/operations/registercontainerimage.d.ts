@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum RegisterContainerImageXAmzTargetEnum {
     Lightsail20161128RegisterContainerImage = "Lightsail_20161128.RegisterContainerImage"
 }
-export declare class RegisterContainerImageHeaders extends SpeakeasyBase {
+export declare class RegisterContainerImageRequest extends SpeakeasyBase {
+    registerContainerImageRequest: shared.RegisterContainerImageRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class RegisterContainerImageHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: RegisterContainerImageXAmzTargetEnum;
 }
-export declare class RegisterContainerImageRequest extends SpeakeasyBase {
-    headers: RegisterContainerImageHeaders;
-    request: shared.RegisterContainerImageRequest;
-}
 export declare class RegisterContainerImageResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
+    /**
+     * Success
+     */
     registerContainerImageResult?: shared.RegisterContainerImageResult;
+    /**
+     * ServiceException
+     */
     serviceException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnauthenticatedException
+     */
     unauthenticatedException?: any;
 }

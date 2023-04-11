@@ -1,8 +1,16 @@
+/**
+ * The streaming session state.
+ */
 export declare enum StreamingSessionStateEnum {
     CreateInProgress = "CREATE_IN_PROGRESS",
     DeleteInProgress = "DELETE_IN_PROGRESS",
     Ready = "READY",
     Deleted = "DELETED",
     CreateFailed = "CREATE_FAILED",
-    DeleteFailed = "DELETE_FAILED"
+    DeleteFailed = "DELETE_FAILED",
+    StopInProgress = "STOP_IN_PROGRESS",
+    StartInProgress = "START_IN_PROGRESS",
+    Stopped = "STOPPED",
+    StopFailed = "STOP_FAILED",
+    StartFailed = "START_FAILED"
 }

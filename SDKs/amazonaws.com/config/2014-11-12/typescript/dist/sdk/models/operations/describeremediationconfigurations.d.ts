@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeRemediationConfigurationsXAmzTargetEnum {
     StarlingDoveServiceDescribeRemediationConfigurations = "StarlingDoveService.DescribeRemediationConfigurations"
 }
-export declare class DescribeRemediationConfigurationsHeaders extends SpeakeasyBase {
+export declare class DescribeRemediationConfigurationsRequest extends SpeakeasyBase {
+    describeRemediationConfigurationsRequest: shared.DescribeRemediationConfigurationsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,12 +15,12 @@ export declare class DescribeRemediationConfigurationsHeaders extends SpeakeasyB
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeRemediationConfigurationsXAmzTargetEnum;
 }
-export declare class DescribeRemediationConfigurationsRequest extends SpeakeasyBase {
-    headers: DescribeRemediationConfigurationsHeaders;
-    request: shared.DescribeRemediationConfigurationsRequest;
-}
 export declare class DescribeRemediationConfigurationsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeRemediationConfigurationsResponse?: shared.DescribeRemediationConfigurationsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

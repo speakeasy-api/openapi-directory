@@ -1,17 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class CompanyMonitorUnregisterPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class CompanyMonitorUnregisterSecurity extends SpeakeasyBase {
-    userKey: shared.SchemeUserKey;
+    userKey: string;
 }
 export declare class CompanyMonitorUnregisterRequest extends SpeakeasyBase {
-    pathParams: CompanyMonitorUnregisterPathParams;
-    security: CompanyMonitorUnregisterSecurity;
+    /**
+     * Registration id of monitoring request record
+     */
+    id: string;
+}
+/**
+ * Detailed information about the error
+ */
+export declare class CompanyMonitorUnregisterDefaultApplicationJSON extends SpeakeasyBase {
+    code: number;
+    fault?: string;
+    message: string;
+    tag: string;
 }
 export declare class CompanyMonitorUnregisterResponse extends SpeakeasyBase {
-    companyMonitorUnregisterDefaultApplicationJSONAny?: any;
+    /**
+     * Detailed information about the error
+     */
+    companyMonitorUnregisterDefaultApplicationJSONObject?: CompanyMonitorUnregisterDefaultApplicationJSON;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

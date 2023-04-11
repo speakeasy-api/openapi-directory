@@ -1,5 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class EditSubaccount {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +10,10 @@ export declare class EditSubaccount {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * subaccountEdit - Edit a subaccount
-     *
      * Edit a subaccount
-    **/
-    subaccountEdit(req: operations.SubaccountEditRequest, config?: AxiosRequestConfig): Promise<operations.SubaccountEditResponse>;
+     *
+     * @remarks
+     * Edit a subaccount
+     */
+    subaccountEdit(req: shared.SubaccountRequest, config?: AxiosRequestConfig): Promise<operations.SubaccountEditResponse>;
 }

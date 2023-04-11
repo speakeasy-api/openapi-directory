@@ -1,8 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CreateDistributionWithTags20161125QueryParams extends SpeakeasyBase {
-    withTags: boolean;
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+/**
+ * A distribution Configuration and a list of tags to be associated with the distribution.
+ */
+export declare class CreateDistributionWithTags20161125RequestBodyDistributionConfigWithTags extends SpeakeasyBase {
+    distributionConfig?: shared.DistributionConfig;
+    tags?: shared.Tags;
 }
-export declare class CreateDistributionWithTags20161125Headers extends SpeakeasyBase {
+export declare class CreateDistributionWithTags20161125RequestBody extends SpeakeasyBase {
+    /**
+     * A distribution Configuration and a list of tags to be associated with the distribution.
+     */
+    distributionConfigWithTags: CreateDistributionWithTags20161125RequestBodyDistributionConfigWithTags;
+}
+export declare enum CreateDistributionWithTags20161125WithTagsEnum {
+    True = "true"
+}
+export declare class CreateDistributionWithTags20161125Request extends SpeakeasyBase {
+    requestBody: Uint8Array;
+    withTags: CreateDistributionWithTags20161125WithTagsEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,13 +28,9 @@ export declare class CreateDistributionWithTags20161125Headers extends Speakeasy
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class CreateDistributionWithTags20161125Request extends SpeakeasyBase {
-    queryParams: CreateDistributionWithTags20161125QueryParams;
-    headers: CreateDistributionWithTags20161125Headers;
-    request: Uint8Array;
-}
 export declare class CreateDistributionWithTags20161125Response extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

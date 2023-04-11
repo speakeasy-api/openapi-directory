@@ -1,10 +1,35 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class RegisterDevicePathParams extends SpeakeasyBase {
-    identityId: string;
-    identityPoolId: string;
+import { AxiosResponse } from "axios";
+/**
+ * The SNS platform type (e.g. GCM, SDM, APNS, APNS_SANDBOX).
+ */
+export declare enum RegisterDeviceRequestBodyPlatformEnum {
+    Apns = "APNS",
+    ApnsSandbox = "APNS_SANDBOX",
+    Gcm = "GCM",
+    Adm = "ADM"
 }
-export declare class RegisterDeviceHeaders extends SpeakeasyBase {
+export declare class RegisterDeviceRequestBody extends SpeakeasyBase {
+    /**
+     * The SNS platform type (e.g. GCM, SDM, APNS, APNS_SANDBOX).
+     */
+    platform: RegisterDeviceRequestBodyPlatformEnum;
+    /**
+     * The push token.
+     */
+    token: string;
+}
+export declare class RegisterDeviceRequest extends SpeakeasyBase {
+    /**
+     * The unique ID for this identity.
+     */
+    identityId: string;
+    /**
+     * A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. Here, the ID of the pool that the identity belongs to.
+     */
+    identityPoolId: string;
+    requestBody: RegisterDeviceRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,29 +38,36 @@ export declare class RegisterDeviceHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare enum RegisterDeviceRequestBodyPlatformEnum {
-    Apns = "APNS",
-    ApnsSandbox = "APNS_SANDBOX",
-    Gcm = "GCM",
-    Adm = "ADM"
-}
-export declare class RegisterDeviceRequestBody extends SpeakeasyBase {
-    platform: RegisterDeviceRequestBodyPlatformEnum;
-    token: string;
-}
-export declare class RegisterDeviceRequest extends SpeakeasyBase {
-    pathParams: RegisterDevicePathParams;
-    headers: RegisterDeviceHeaders;
-    request: RegisterDeviceRequestBody;
-}
 export declare class RegisterDeviceResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalErrorException
+     */
     internalErrorException?: any;
+    /**
+     * InvalidConfigurationException
+     */
     invalidConfigurationException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * NotAuthorizedException
+     */
     notAuthorizedException?: any;
+    /**
+     * Success
+     */
     registerDeviceResponse?: shared.RegisterDeviceResponse;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

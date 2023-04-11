@@ -1,31 +1,65 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GroupCreateApplicationJson extends SpeakeasyBase {
-    name?: string;
-}
-export declare class GroupCreateMultipartFormData extends SpeakeasyBase {
-    name?: string;
-}
-export declare class GroupCreateRequests extends SpeakeasyBase {
-    object?: GroupCreateApplicationJson;
-    object1?: GroupCreateMultipartFormData;
-}
+import { AxiosResponse } from "axios";
 export declare class GroupCreateSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
+    oAuth: string;
 }
-export declare class GroupCreate201ApplicationJson extends SpeakeasyBase {
-    id?: string;
+export declare class GroupCreateApplicationJSON extends SpeakeasyBase {
+    /**
+     * Group name.
+     */
     name?: string;
+}
+/**
+ * **HTTP Status Code:** `201`<br>
+ *
+ * @remarks
+ * Group created.
+ */
+export declare class GroupCreate201ApplicationXML extends SpeakeasyBase {
+    /**
+     * Group ID.
+     */
+    id?: string;
+    /**
+     * Group name.
+     */
+    name?: string;
+    /**
+     * Group member count.
+     */
     totalMembers?: number;
 }
-export declare class GroupCreateRequest extends SpeakeasyBase {
-    request: GroupCreateRequests;
-    security: GroupCreateSecurity;
+/**
+ * **HTTP Status Code:** `201`<br>
+ *
+ * @remarks
+ * Group created.
+ */
+export declare class GroupCreate201ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Group ID.
+     */
+    id?: string;
+    /**
+     * Group name.
+     */
+    name?: string;
+    /**
+     * Group member count.
+     */
+    totalMembers?: number;
 }
 export declare class GroupCreateResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
-    groupCreate201ApplicationJSONObject?: GroupCreate201ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * **HTTP Status Code:** `201`<br>
+     *
+     * @remarks
+     * Group created.
+     */
+    groupCreate201ApplicationJSONObject?: GroupCreate201ApplicationJSON;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListTagsForResourceQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListTagsForResourceRequest extends SpeakeasyBase {
+    /**
+     * The Amazon Resource Name (ARN) of the resource that you want to retrieve tag information for.
+     */
     resourceArn: string;
-}
-export declare class ListTagsForResourceHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,15 +14,24 @@ export declare class ListTagsForResourceHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class ListTagsForResourceRequest extends SpeakeasyBase {
-    queryParams: ListTagsForResourceQueryParams;
-    headers: ListTagsForResourceHeaders;
-}
 export declare class ListTagsForResourceResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     listTagsForResourceResponse?: shared.ListTagsForResourceResponse;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

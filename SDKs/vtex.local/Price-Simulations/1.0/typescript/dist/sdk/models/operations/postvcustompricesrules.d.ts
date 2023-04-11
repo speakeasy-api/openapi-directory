@@ -1,0 +1,65 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
+export declare class PostVCustomPricesRulesRequestBody extends SpeakeasyBase {
+    /**
+     * User's email
+     */
+    email?: any;
+    /**
+     * Order type
+     */
+    orderType?: string;
+    /**
+     * Name of the Price Table associated with the scenario
+     */
+    pricetable: string;
+    /**
+     * Delivery location
+     */
+    state?: string;
+}
+export declare class PostVCustomPricesRulesRequest extends SpeakeasyBase {
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand
+     */
+    accept: string;
+    /**
+     * Describes the type of the content being sent
+     */
+    contentType: string;
+    requestBody?: PostVCustomPricesRulesRequestBody;
+}
+/**
+ * OK
+ */
+export declare class PostVCustomPricesRules200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * User's email
+     */
+    email?: any;
+    /**
+     * Price association ID
+     */
+    id: number;
+    /**
+     * Order type
+     */
+    orderType?: string;
+    /**
+     * Name of the Price Table associated with the scenario
+     */
+    pricetable: string;
+    /**
+     * Delivery location
+     */
+    state?: string;
+}
+export declare class PostVCustomPricesRulesResponse extends SpeakeasyBase {
+    contentType: string;
+    statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
+    postVCustomPricesRules200ApplicationJSONObject?: PostVCustomPricesRules200ApplicationJSON;
+}

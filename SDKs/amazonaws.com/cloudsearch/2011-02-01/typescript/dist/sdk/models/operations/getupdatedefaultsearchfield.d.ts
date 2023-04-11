@@ -1,17 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetUpdateDefaultSearchFieldActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETUpdateDefaultSearchFieldActionEnum {
     UpdateDefaultSearchField = "UpdateDefaultSearchField"
 }
-export declare enum GetUpdateDefaultSearchFieldVersionEnum {
+export declare enum GETUpdateDefaultSearchFieldVersionEnum {
     TwoThousandAndEleven0201 = "2011-02-01"
 }
-export declare class GetUpdateDefaultSearchFieldQueryParams extends SpeakeasyBase {
-    action: GetUpdateDefaultSearchFieldActionEnum;
+export declare class GETUpdateDefaultSearchFieldRequest extends SpeakeasyBase {
+    action: GETUpdateDefaultSearchFieldActionEnum;
+    /**
+     * The text field to search if the search request does not specify which field to search. The default search field is used when search terms are specified with the <code>q</code> parameter, or if a match expression specified with the <code>bq</code> parameter does not constrain the search to a particular field. The default is an empty string, which automatically searches all text fields.
+     */
     defaultSearchField: string;
     domainName: string;
-    version: GetUpdateDefaultSearchFieldVersionEnum;
-}
-export declare class GetUpdateDefaultSearchFieldHeaders extends SpeakeasyBase {
+    version: GETUpdateDefaultSearchFieldVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +22,9 @@ export declare class GetUpdateDefaultSearchFieldHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetUpdateDefaultSearchFieldRequest extends SpeakeasyBase {
-    queryParams: GetUpdateDefaultSearchFieldQueryParams;
-    headers: GetUpdateDefaultSearchFieldHeaders;
-}
-export declare class GetUpdateDefaultSearchFieldResponse extends SpeakeasyBase {
+export declare class GETUpdateDefaultSearchFieldResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

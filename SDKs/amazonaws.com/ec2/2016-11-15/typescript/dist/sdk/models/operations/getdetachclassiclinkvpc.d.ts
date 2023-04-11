@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDetachClassicLinkVpcActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDetachClassicLinkVpcActionEnum {
     DetachClassicLinkVpc = "DetachClassicLinkVpc"
 }
-export declare enum GetDetachClassicLinkVpcVersionEnum {
+export declare enum GETDetachClassicLinkVpcVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetDetachClassicLinkVpcQueryParams extends SpeakeasyBase {
-    action: GetDetachClassicLinkVpcActionEnum;
+export declare class GETDetachClassicLinkVpcRequest extends SpeakeasyBase {
+    action: GETDetachClassicLinkVpcActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
+    /**
+     * The ID of the instance to unlink from the VPC.
+     */
     instanceId: string;
-    version: GetDetachClassicLinkVpcVersionEnum;
+    version: GETDetachClassicLinkVpcVersionEnum;
+    /**
+     * The ID of the VPC to which the instance is linked.
+     */
     vpcId: string;
-}
-export declare class GetDetachClassicLinkVpcHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +29,9 @@ export declare class GetDetachClassicLinkVpcHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDetachClassicLinkVpcRequest extends SpeakeasyBase {
-    queryParams: GetDetachClassicLinkVpcQueryParams;
-    headers: GetDetachClassicLinkVpcHeaders;
-}
-export declare class GetDetachClassicLinkVpcResponse extends SpeakeasyBase {
+export declare class GETDetachClassicLinkVpcResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

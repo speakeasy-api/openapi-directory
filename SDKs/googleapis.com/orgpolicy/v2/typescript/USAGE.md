@@ -1,52 +1,50 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { OrgpolicyOrganizationsCustomConstraintsCreateRequest, OrgpolicyOrganizationsCustomConstraintsCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  OrgpolicyOrganizationsCustomConstraintsCreateRequest,
+  OrgpolicyOrganizationsCustomConstraintsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  GoogleCloudOrgpolicyV2CustomConstraintActionTypeEnum,
+  GoogleCloudOrgpolicyV2CustomConstraintMethodTypesEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: OrgpolicyOrganizationsCustomConstraintsCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
-    actionType: "DENY",
-    condition: "debitis",
-    description: "voluptatum",
-    displayName: "et",
+  dollarXgafv: XgafvEnum.Two,
+  googleCloudOrgpolicyV2CustomConstraintInput: {
+    actionType: GoogleCloudOrgpolicyV2CustomConstraintActionTypeEnum.Allow,
+    condition: "distinctio",
+    description: "quibusdam",
+    displayName: "unde",
     methodTypes: [
-      "UPDATE",
-      "UPDATE",
-      "UPDATE",
+      GoogleCloudOrgpolicyV2CustomConstraintMethodTypesEnum.Update,
+      GoogleCloudOrgpolicyV2CustomConstraintMethodTypesEnum.Delete,
+      GoogleCloudOrgpolicyV2CustomConstraintMethodTypesEnum.Create,
+      GoogleCloudOrgpolicyV2CustomConstraintMethodTypesEnum.Update,
     ],
-    name: "iste",
+    name: "deserunt",
     resourceTypes: [
-      "totam",
+      "iure",
+      "magnam",
     ],
   },
+  accessToken: "debitis",
+  alt: AltEnum.Json,
+  callback: "delectus",
+  fields: "tempora",
+  key: "suscipit",
+  oauthToken: "molestiae",
+  parent: "minus",
+  prettyPrint: false,
+  quotaUser: "placeat",
+  uploadType: "voluptatum",
+  uploadProtocol: "iusto",
 };
 
 sdk.organizations.orgpolicyOrganizationsCustomConstraintsCreate(req).then((res: OrgpolicyOrganizationsCustomConstraintsCreateResponse | AxiosError) => {

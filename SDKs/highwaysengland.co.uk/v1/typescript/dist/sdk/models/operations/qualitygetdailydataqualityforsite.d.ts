@@ -1,19 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class QualityGetDailyDataQualityForSitePathParams extends SpeakeasyBase {
-    version: string;
-}
-export declare class QualityGetDailyDataQualityForSiteQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class QualityGetDailyDataQualityForSiteRequest extends SpeakeasyBase {
+    /**
+     * The end date of the report in the format ddmmyyyy (i.e 31012016)
+     */
     endDate: string;
     siteId: string;
+    /**
+     * The start date of the report in the format ddmmyyyy (i.e 31012016)
+     */
     startDate: string;
-}
-export declare class QualityGetDailyDataQualityForSiteRequest extends SpeakeasyBase {
-    pathParams: QualityGetDailyDataQualityForSitePathParams;
-    queryParams: QualityGetDailyDataQualityForSiteQueryParams;
+    version: string;
 }
 export declare class QualityGetDailyDataQualityForSiteResponse extends SpeakeasyBase {
     contentType: string;
     dailyQualityResponse?: shared.DailyQualityResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

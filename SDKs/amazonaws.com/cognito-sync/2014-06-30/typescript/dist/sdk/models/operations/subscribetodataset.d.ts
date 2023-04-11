@@ -1,11 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SubscribeToDatasetPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class SubscribeToDatasetRequest extends SpeakeasyBase {
+    /**
+     * The name of the dataset to subcribe to.
+     */
     datasetName: string;
+    /**
+     * The unique ID generated for this device by Cognito.
+     */
     deviceId: string;
+    /**
+     * Unique ID for this identity.
+     */
     identityId: string;
+    /**
+     * A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. The ID of the pool to which the identity belongs.
+     */
     identityPoolId: string;
-}
-export declare class SubscribeToDatasetHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -14,18 +25,36 @@ export declare class SubscribeToDatasetHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class SubscribeToDatasetRequest extends SpeakeasyBase {
-    pathParams: SubscribeToDatasetPathParams;
-    headers: SubscribeToDatasetHeaders;
-}
 export declare class SubscribeToDatasetResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalErrorException
+     */
     internalErrorException?: any;
+    /**
+     * InvalidConfigurationException
+     */
     invalidConfigurationException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * NotAuthorizedException
+     */
     notAuthorizedException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     subscribeToDatasetResponse?: Record<string, any>;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

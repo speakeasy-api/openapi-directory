@@ -1,10 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetApiMappingPathParams extends SpeakeasyBase {
-    apiMappingId: string;
-    domainName: string;
-}
-export declare class GetApiMappingHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetApiMappingRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,16 +9,33 @@ export declare class GetApiMappingHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class GetApiMappingRequest extends SpeakeasyBase {
-    pathParams: GetApiMappingPathParams;
-    headers: GetApiMappingHeaders;
+    /**
+     * The API mapping identifier.
+     */
+    apiMappingId: string;
+    /**
+     * The domain name.
+     */
+    domainName: string;
 }
 export declare class GetApiMappingResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getApiMappingResponse?: shared.GetApiMappingResponse;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

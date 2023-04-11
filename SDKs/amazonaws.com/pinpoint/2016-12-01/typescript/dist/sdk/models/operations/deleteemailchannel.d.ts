@@ -1,9 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteEmailChannelPathParams extends SpeakeasyBase {
-    applicationId: string;
-}
-export declare class DeleteEmailChannelHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteEmailChannelRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,20 +9,45 @@ export declare class DeleteEmailChannelHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DeleteEmailChannelRequest extends SpeakeasyBase {
-    pathParams: DeleteEmailChannelPathParams;
-    headers: DeleteEmailChannelHeaders;
+    /**
+     * The unique identifier for the application. This identifier is displayed as the <b>Project ID</b> on the Amazon Pinpoint console.
+     */
+    applicationId: string;
 }
 export declare class DeleteEmailChannelResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteEmailChannelResponse?: shared.DeleteEmailChannelResponse;
+    /**
+     * ForbiddenException
+     */
     forbiddenException?: any;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
+    /**
+     * MethodNotAllowedException
+     */
     methodNotAllowedException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
+    /**
+     * PayloadTooLargeException
+     */
     payloadTooLargeException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

@@ -1,16 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class SublabsUpdatePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class SublabsUpdateSecurity extends SpeakeasyBase {
-    drchronoOauth2: shared.SchemeDrchronoOauth2;
+    drchronoOauth2: string;
 }
 export declare class SublabsUpdateRequest extends SpeakeasyBase {
-    pathParams: SublabsUpdatePathParams;
-    security: SublabsUpdateSecurity;
+    id: number;
 }
 export declare class SublabsUpdateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

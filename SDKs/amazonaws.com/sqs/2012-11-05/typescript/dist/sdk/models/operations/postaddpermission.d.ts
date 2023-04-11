@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostAddPermissionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTAddPermissionActionEnum {
     AddPermission = "AddPermission"
 }
-export declare enum PostAddPermissionVersionEnum {
+export declare enum POSTAddPermissionVersionEnum {
     TwoThousandAndTwelve1105 = "2012-11-05"
 }
-export declare class PostAddPermissionQueryParams extends SpeakeasyBase {
-    action: PostAddPermissionActionEnum;
-    version: PostAddPermissionVersionEnum;
-}
-export declare class PostAddPermissionHeaders extends SpeakeasyBase {
+export declare class POSTAddPermissionRequest extends SpeakeasyBase {
+    action: POSTAddPermissionActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTAddPermissionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostAddPermissionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostAddPermissionRequest extends SpeakeasyBase {
-    queryParams: PostAddPermissionQueryParams;
-    headers: PostAddPermissionHeaders;
-    request?: Uint8Array;
-}
-export declare class PostAddPermissionResponse extends SpeakeasyBase {
+export declare class POSTAddPermissionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

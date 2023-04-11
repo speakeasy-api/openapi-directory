@@ -1,21 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class NodesCommentCreatePathParams extends SpeakeasyBase {
-    nodeId: string;
-}
+import { AxiosResponse } from "axios";
 /**
  * The properties of the comment entity.
-**/
+ */
 export declare class NodesCommentCreateCommentAttributesInput extends SpeakeasyBase {
+    /**
+     * The content of the comment.
+     */
     content?: string;
 }
 export declare class NodesCommentCreateCommentInput extends SpeakeasyBase {
+    /**
+     * The properties of the comment entity.
+     */
     attributes?: NodesCommentCreateCommentAttributesInput;
 }
 export declare class NodesCommentCreateRequest extends SpeakeasyBase {
-    pathParams: NodesCommentCreatePathParams;
-    request: NodesCommentCreateCommentInput;
+    requestBody: NodesCommentCreateCommentInput;
+    /**
+     * The unique identifier of the node you want to comment on.
+     */
+    nodeId: string;
 }
 export declare class NodesCommentCreateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

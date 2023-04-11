@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDisableSerialConsoleAccessActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDisableSerialConsoleAccessActionEnum {
     DisableSerialConsoleAccess = "DisableSerialConsoleAccess"
 }
-export declare enum GetDisableSerialConsoleAccessVersionEnum {
+export declare enum GETDisableSerialConsoleAccessVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetDisableSerialConsoleAccessQueryParams extends SpeakeasyBase {
-    action: GetDisableSerialConsoleAccessActionEnum;
+export declare class GETDisableSerialConsoleAccessRequest extends SpeakeasyBase {
+    action: GETDisableSerialConsoleAccessActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
-    version: GetDisableSerialConsoleAccessVersionEnum;
-}
-export declare class GetDisableSerialConsoleAccessHeaders extends SpeakeasyBase {
+    version: GETDisableSerialConsoleAccessVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDisableSerialConsoleAccessHeaders extends SpeakeasyBase 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDisableSerialConsoleAccessRequest extends SpeakeasyBase {
-    queryParams: GetDisableSerialConsoleAccessQueryParams;
-    headers: GetDisableSerialConsoleAccessHeaders;
-}
-export declare class GetDisableSerialConsoleAccessResponse extends SpeakeasyBase {
+export declare class GETDisableSerialConsoleAccessResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

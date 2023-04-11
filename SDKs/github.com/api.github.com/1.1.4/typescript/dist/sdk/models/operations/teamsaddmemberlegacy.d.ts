@@ -1,25 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class TeamsAddMemberLegacyPathParams extends SpeakeasyBase {
-    teamId: number;
-    username: string;
-}
-export declare class TeamsAddMemberLegacy422ApplicationJsonErrors extends SpeakeasyBase {
-    code?: string;
-    field?: string;
-    resource?: string;
-}
-export declare class TeamsAddMemberLegacy422ApplicationJson extends SpeakeasyBase {
-    documentationUrl?: string;
-    errors?: TeamsAddMemberLegacy422ApplicationJsonErrors[];
-    message?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class TeamsAddMemberLegacyRequest extends SpeakeasyBase {
-    pathParams: TeamsAddMemberLegacyPathParams;
+    /**
+     * The unique identifier of the team.
+     */
+    teamId: number;
+    /**
+     * The handle for the GitHub user account.
+     */
+    username: string;
 }
 export declare class TeamsAddMemberLegacyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Forbidden
+     */
     basicError?: shared.BasicError;
-    teamsAddMemberLegacy422ApplicationJSONObject?: TeamsAddMemberLegacy422ApplicationJson;
 }

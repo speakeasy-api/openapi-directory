@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetPdusizePathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetPdusizeRequest extends SpeakeasyBase {
-    pathParams: GetPdusizePathParams;
+    /**
+     * Agent to return the PDU size
+     */
+    agentNum: number;
 }
 export declare class GetPdusizeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     getPdusize200ApplicationJSONInt32Integer?: number;
 }

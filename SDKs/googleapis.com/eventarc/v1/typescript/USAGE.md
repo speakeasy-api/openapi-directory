@@ -1,43 +1,37 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { EventarcProjectsLocationsChannelConnectionsCreateRequest, EventarcProjectsLocationsChannelConnectionsCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  EventarcProjectsLocationsChannelConnectionsCreateRequest,
+  EventarcProjectsLocationsChannelConnectionsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: EventarcProjectsLocationsChannelConnectionsCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
+  dollarXgafv: XgafvEnum.Two,
+  channelConnectionInput: {
+    activationToken: "provident",
+    channel: "distinctio",
+    name: "quibusdam",
   },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    channelConnectionId: "dolor",
-    fields: "expedita",
-    key: "voluptas",
-    oauthToken: "fugit",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    uploadType: "rerum",
-    uploadProtocol: "dicta",
-  },
-  request: {
-    activationToken: "debitis",
-    channel: "voluptatum",
-    name: "et",
-  },
+  accessToken: "unde",
+  alt: AltEnum.Proto,
+  callback: "corrupti",
+  channelConnectionId: "illum",
+  fields: "vel",
+  key: "error",
+  oauthToken: "deserunt",
+  parent: "suscipit",
+  prettyPrint: false,
+  quotaUser: "iure",
+  uploadType: "magnam",
+  uploadProtocol: "debitis",
 };
 
 sdk.projects.eventarcProjectsLocationsChannelConnectionsCreate(req).then((res: EventarcProjectsLocationsChannelConnectionsCreateResponse | AxiosError) => {

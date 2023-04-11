@@ -1,29 +1,28 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCancelJobActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCancelJobActionEnum {
     CancelJob = "CancelJob"
 }
-export declare enum PostCancelJobOperationEnum {
+export declare enum POSTCancelJobOperationEnum {
     CancelJob = "CancelJob"
 }
-export declare enum PostCancelJobVersionEnum {
+export declare enum POSTCancelJobVersionEnum {
     TwoThousandAndTen0601 = "2010-06-01"
 }
-export declare class PostCancelJobQueryParams extends SpeakeasyBase {
+export declare class POSTCancelJobRequest extends SpeakeasyBase {
     awsAccessKeyId: string;
-    action: PostCancelJobActionEnum;
-    operation: PostCancelJobOperationEnum;
+    action: POSTCancelJobActionEnum;
+    operation: POSTCancelJobOperationEnum;
+    requestBody?: Uint8Array;
     signature: string;
     signatureMethod: string;
     signatureVersion: string;
     timestamp: string;
-    version: PostCancelJobVersionEnum;
+    version: POSTCancelJobVersionEnum;
 }
-export declare class PostCancelJobRequest extends SpeakeasyBase {
-    queryParams: PostCancelJobQueryParams;
-    request?: Uint8Array;
-}
-export declare class PostCancelJobResponse extends SpeakeasyBase {
+export declare class POSTCancelJobResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,0 +1,33 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { Stadium } from "./stadium";
+export declare class Schedule extends SpeakeasyBase {
+    awayTeam?: string;
+    awayTeamMoneyLine?: number;
+    canceled?: boolean;
+    channel?: string;
+    date?: string;
+    dateTime?: string;
+    day?: string;
+    forecastDescription?: string;
+    forecastTempHigh?: number;
+    forecastTempLow?: number;
+    forecastWindChill?: number;
+    forecastWindSpeed?: number;
+    gameKey?: string;
+    geoLat?: number;
+    geoLong?: number;
+    globalAwayTeamID?: number;
+    globalGameID?: number;
+    globalHomeTeamID?: number;
+    homeTeam?: string;
+    homeTeamMoneyLine?: number;
+    overUnder?: number;
+    pointSpread?: number;
+    scoreID?: number;
+    season?: number;
+    seasonType?: number;
+    stadiumDetails?: Stadium;
+    stadiumID?: number;
+    status?: string;
+    week?: number;
+}

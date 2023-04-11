@@ -1,5 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeregisterJobDefinitionHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeregisterJobDefinitionRequestBody extends SpeakeasyBase {
+    /**
+     * The name and revision (<code>name:revision</code>) or full Amazon Resource Name (ARN) of the job definition to deregister.
+     */
+    jobDefinition: string;
+}
+export declare class DeregisterJobDefinitionRequest extends SpeakeasyBase {
+    requestBody: DeregisterJobDefinitionRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -8,17 +16,20 @@ export declare class DeregisterJobDefinitionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeregisterJobDefinitionRequestBody extends SpeakeasyBase {
-    jobDefinition: string;
-}
-export declare class DeregisterJobDefinitionRequest extends SpeakeasyBase {
-    headers: DeregisterJobDefinitionHeaders;
-    request: DeregisterJobDefinitionRequestBody;
-}
 export declare class DeregisterJobDefinitionResponse extends SpeakeasyBase {
+    /**
+     * ClientException
+     */
     clientException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deregisterJobDefinitionResponse?: Record<string, any>;
-    serverException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServerException
+     */
+    serverException?: any;
 }

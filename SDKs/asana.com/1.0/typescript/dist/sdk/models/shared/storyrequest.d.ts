@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The name of the sticker in this story. `null` if there is no sticker.
+ */
 export declare enum StoryRequestStickerNameEnum {
     GreenCheckmark = "green_checkmark",
     PeopleDancing = "people_dancing",
@@ -15,10 +18,22 @@ export declare enum StoryRequestStickerNameEnum {
 }
 /**
  * A story represents an activity associated with an object in the Asana system.
-**/
+ */
 export declare class StoryRequestInput extends SpeakeasyBase {
+    /**
+     * [Opt In](/docs/input-output-options). HTML formatted text for a comment. This will not include the name of the creator.
+     */
     htmlText?: string;
+    /**
+     * *Conditional*. Whether the story should be pinned on the resource.
+     */
     isPinned?: boolean;
+    /**
+     * The name of the sticker in this story. `null` if there is no sticker.
+     */
     stickerName?: StoryRequestStickerNameEnum;
+    /**
+     * The plain text of the comment to add. Cannot be used with html_text.
+     */
     text?: string;
 }

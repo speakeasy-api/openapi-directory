@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostPutUserPermissionsBoundaryActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTPutUserPermissionsBoundaryActionEnum {
     PutUserPermissionsBoundary = "PutUserPermissionsBoundary"
 }
-export declare enum PostPutUserPermissionsBoundaryVersionEnum {
+export declare enum POSTPutUserPermissionsBoundaryVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostPutUserPermissionsBoundaryQueryParams extends SpeakeasyBase {
-    action: PostPutUserPermissionsBoundaryActionEnum;
-    version: PostPutUserPermissionsBoundaryVersionEnum;
-}
-export declare class PostPutUserPermissionsBoundaryHeaders extends SpeakeasyBase {
+export declare class POSTPutUserPermissionsBoundaryRequest extends SpeakeasyBase {
+    action: POSTPutUserPermissionsBoundaryActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTPutUserPermissionsBoundaryVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostPutUserPermissionsBoundaryHeaders extends SpeakeasyBase
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostPutUserPermissionsBoundaryRequest extends SpeakeasyBase {
-    queryParams: PostPutUserPermissionsBoundaryQueryParams;
-    headers: PostPutUserPermissionsBoundaryHeaders;
-    request?: Uint8Array;
-}
-export declare class PostPutUserPermissionsBoundaryResponse extends SpeakeasyBase {
+export declare class POSTPutUserPermissionsBoundaryResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

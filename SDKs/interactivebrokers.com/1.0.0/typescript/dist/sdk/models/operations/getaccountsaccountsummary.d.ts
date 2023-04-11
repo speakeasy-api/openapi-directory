@@ -1,8 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetAccountsAccountSummaryPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetAccountsAccountSummaryRequest extends SpeakeasyBase {
+    /**
+     * Account Number
+     */
     account: string;
 }
-export declare class GetAccountsAccountSummary200ApplicationJsonInfo extends SpeakeasyBase {
+export declare class GetAccountsAccountSummary200ApplicationJSONInfo extends SpeakeasyBase {
     accountCode?: string;
     accountReady?: string;
     accountType?: string;
@@ -20,7 +24,7 @@ export declare class GetAccountsAccountSummary200ApplicationJsonInfo extends Spe
     tradingTypeS?: string;
     whatIfPMEnabled?: string;
 }
-export declare class GetAccountsAccountSummary200ApplicationJsonLedger extends SpeakeasyBase {
+export declare class GetAccountsAccountSummary200ApplicationJSONLedger extends SpeakeasyBase {
     cashBalance?: number;
     cashBalanceFXSegment?: number;
     cashCumQty?: number;
@@ -36,7 +40,7 @@ export declare class GetAccountsAccountSummary200ApplicationJsonLedger extends S
     totalCashBalance?: number;
     unrealizedPNL?: number;
 }
-export declare class GetAccountsAccountSummary200ApplicationJsonSummary extends SpeakeasyBase {
+export declare class GetAccountsAccountSummary200ApplicationJSONSummary extends SpeakeasyBase {
     accruedCash?: number;
     accruedCashC?: number;
     accruedCashS?: number;
@@ -118,16 +122,30 @@ export declare class GetAccountsAccountSummary200ApplicationJsonSummary extends 
     totalCashValueC?: number;
     totalCashValueS?: number;
 }
-export declare class GetAccountsAccountSummary200ApplicationJson extends SpeakeasyBase {
-    info?: GetAccountsAccountSummary200ApplicationJsonInfo;
-    ledger?: GetAccountsAccountSummary200ApplicationJsonLedger[];
-    summary?: GetAccountsAccountSummary200ApplicationJsonSummary;
-}
-export declare class GetAccountsAccountSummaryRequest extends SpeakeasyBase {
-    pathParams: GetAccountsAccountSummaryPathParams;
+/**
+ * Returns object for account summary with multiple properties.
+ *
+ * @remarks
+ * A property is sufficed with -c if it provides commodity value, -s if it provides security value, and -c if its UKL segment value.
+ * "These values correspond to the TWS Account Window: https://www.interactivebrokers.com/en/software/tws/usersguidebook/realtimeactivitymonitoring/account_window.htm"
+ *
+ */
+export declare class GetAccountsAccountSummary200ApplicationJSON extends SpeakeasyBase {
+    info?: GetAccountsAccountSummary200ApplicationJSONInfo;
+    ledger?: GetAccountsAccountSummary200ApplicationJSONLedger[];
+    summary?: GetAccountsAccountSummary200ApplicationJSONSummary;
 }
 export declare class GetAccountsAccountSummaryResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getAccountsAccountSummary200ApplicationJSONObject?: GetAccountsAccountSummary200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Returns object for account summary with multiple properties.
+     *
+     * @remarks
+     * A property is sufficed with -c if it provides commodity value, -s if it provides security value, and -c if its UKL segment value.
+     * "These values correspond to the TWS Account Window: https://www.interactivebrokers.com/en/software/tws/usersguidebook/realtimeactivitymonitoring/account_window.htm"
+     *
+     */
+    getAccountsAccountSummary200ApplicationJSONObject?: GetAccountsAccountSummary200ApplicationJSON;
 }

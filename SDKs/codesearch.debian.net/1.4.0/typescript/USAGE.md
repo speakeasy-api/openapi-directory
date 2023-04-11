@@ -1,22 +1,18 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { SearchRequest, SearchResponse } from "openapi/src/sdk/models/operations";
+import {
+  SearchRequest,
+  SearchResponse,
+  SearchMatchModeEnum,
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: SearchRequest = {
-  security: {
-    apiKey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  },
-  queryParams: {
-    matchMode: "literal",
-    query: "voluptas",
-  },
+  matchMode: SearchMatchModeEnum.Regexp,
+  query: "provident",
 };
 
 sdk.search.search(req).then((res: SearchResponse | AxiosError) => {

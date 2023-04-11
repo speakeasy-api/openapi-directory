@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ConfigTod extends SpeakeasyBase {
+/**
+ * successful operation
+ */
+export declare class ConfigTOD extends SpeakeasyBase {
     port?: number;
     retries?: number;
     script?: string;

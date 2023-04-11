@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Encloses a <code>MessageId</code> for a successfully-enqueued message in a <code> <a>SendMessageBatch</a>.</code>
-**/
+ */
 export declare class SendMessageBatchResultEntryList extends SpeakeasyBase {
     id: string;
     md5OfMessageAttributes?: string;

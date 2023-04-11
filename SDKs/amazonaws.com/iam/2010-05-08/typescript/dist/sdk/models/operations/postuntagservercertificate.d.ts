@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostUntagServerCertificateActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTUntagServerCertificateActionEnum {
     UntagServerCertificate = "UntagServerCertificate"
 }
-export declare enum PostUntagServerCertificateVersionEnum {
+export declare enum POSTUntagServerCertificateVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostUntagServerCertificateQueryParams extends SpeakeasyBase {
-    action: PostUntagServerCertificateActionEnum;
-    version: PostUntagServerCertificateVersionEnum;
-}
-export declare class PostUntagServerCertificateHeaders extends SpeakeasyBase {
+export declare class POSTUntagServerCertificateRequest extends SpeakeasyBase {
+    action: POSTUntagServerCertificateActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTUntagServerCertificateVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostUntagServerCertificateHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostUntagServerCertificateRequest extends SpeakeasyBase {
-    queryParams: PostUntagServerCertificateQueryParams;
-    headers: PostUntagServerCertificateHeaders;
-    request?: Uint8Array;
-}
-export declare class PostUntagServerCertificateResponse extends SpeakeasyBase {
+export declare class POSTUntagServerCertificateResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

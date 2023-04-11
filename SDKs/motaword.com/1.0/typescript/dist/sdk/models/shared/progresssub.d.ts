@@ -3,4 +3,5 @@ export declare class ProgressSub extends SpeakeasyBase {
     proofreading?: number;
     total?: number;
     translation?: number;
+    wordCount?: number;
 }

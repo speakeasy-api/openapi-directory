@@ -7,6 +7,9 @@ export declare class PortfolioActivations extends SpeakeasyBase {
     end?: Date;
     id?: string;
     info?: string;
+    /**
+     * number of learners in the offering, excluding facilitators and coaches
+     */
     learnersCount?: number;
     metadata?: PortfolioActivationsMetadata;
     name?: string;

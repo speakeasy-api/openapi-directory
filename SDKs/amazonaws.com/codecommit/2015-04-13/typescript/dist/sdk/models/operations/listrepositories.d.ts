@@ -1,12 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListRepositoriesQueryParams extends SpeakeasyBase {
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListRepositoriesXAmzTargetEnum {
     CodeCommit20150413ListRepositories = "CodeCommit_20150413.ListRepositories"
 }
-export declare class ListRepositoriesHeaders extends SpeakeasyBase {
+export declare class ListRepositoriesRequest extends SpeakeasyBase {
+    listRepositoriesInput: shared.ListRepositoriesInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -15,17 +14,29 @@ export declare class ListRepositoriesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: ListRepositoriesXAmzTargetEnum;
-}
-export declare class ListRepositoriesRequest extends SpeakeasyBase {
-    queryParams: ListRepositoriesQueryParams;
-    headers: ListRepositoriesHeaders;
-    request: shared.ListRepositoriesInput;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class ListRepositoriesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidContinuationTokenException
+     */
     invalidContinuationTokenException?: any;
+    /**
+     * InvalidOrderException
+     */
     invalidOrderException?: any;
+    /**
+     * InvalidSortByException
+     */
     invalidSortByException?: any;
+    /**
+     * Success
+     */
     listRepositoriesOutput?: shared.ListRepositoriesOutput;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

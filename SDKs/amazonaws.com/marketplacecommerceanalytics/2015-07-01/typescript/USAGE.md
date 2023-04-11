@@ -1,39 +1,44 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GenerateDataSetRequest, GenerateDataSetResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GenerateDataSetRequest,
+  GenerateDataSetResponse,
+  GenerateDataSetXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
+import {
+  DataSetTypeEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    hmac: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: GenerateDataSetRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "MarketplaceCommerceAnalytics20150701.GenerateDataSet",
-  },
-  request: {
+  generateDataSetRequest: {
     customerDefinedValues: {
-      "et": "nihil",
+      "provident": "distinctio",
+      "quibusdam": "unde",
+      "nulla": "corrupti",
     },
-    dataSetPublicationDate: "2004-06-02T10:14:12Z",
-    dataSetType: "daily_business_usage_by_instance_type",
-    destinationS3BucketName: "et",
-    destinationS3Prefix: "ut",
-    roleNameArn: "dolorem",
-    snsTopicArn: "et",
+    dataSetPublicationDate: "2021-09-24T02:21:06.409Z",
+    dataSetType: DataSetTypeEnum.DisbursedAmountByCustomerGeo,
+    destinationS3BucketName: "deserunt",
+    destinationS3Prefix: "suscipit",
+    roleNameArn: "iure",
+    snsTopicArn: "magnam",
   },
+  xAmzAlgorithm: "debitis",
+  xAmzContentSha256: "ipsa",
+  xAmzCredential: "delectus",
+  xAmzDate: "tempora",
+  xAmzSecurityToken: "suscipit",
+  xAmzSignature: "molestiae",
+  xAmzSignedHeaders: "minus",
+  xAmzTarget: GenerateDataSetXAmzTargetEnum.MarketplaceCommerceAnalytics20150701GenerateDataSet,
 };
 
 sdk.generateDataSet(req).then((res: GenerateDataSetResponse | AxiosError) => {

@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PrivateCategoriesListSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
-}
-export declare class PrivateCategoriesListRequest extends SpeakeasyBase {
-    security: PrivateCategoriesListSecurity;
-}
+import { AxiosResponse } from "axios";
 export declare class PrivateCategoriesListResponse extends SpeakeasyBase {
+    /**
+     * OK. An array of categories
+     */
     categories?: shared.Category[];
     contentType: string;
+    /**
+     * Forbidden
+     */
     errorMessage?: shared.ErrorMessage;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

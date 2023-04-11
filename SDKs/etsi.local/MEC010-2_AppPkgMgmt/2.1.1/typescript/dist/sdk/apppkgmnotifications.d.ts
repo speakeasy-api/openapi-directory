@@ -1,5 +1,9 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * App Package management notifications
+ */
 export declare class AppPkgmNotifications {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +13,10 @@ export declare class AppPkgmNotifications {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * appPkgNotificationPost - Registers a notification endpoint to notify application package operations
-     *
      * Registers a notification endpoint to notify application package operations
-    **/
-    appPkgNotificationPost(req: operations.AppPkgNotificationPostRequest, config?: AxiosRequestConfig): Promise<operations.AppPkgNotificationPostResponse>;
+     *
+     * @remarks
+     * Registers a notification endpoint to notify application package operations
+     */
+    appPkgNotificationPOST(req: shared.AppPkgNotification, config?: AxiosRequestConfig): Promise<operations.AppPkgNotificationPOSTResponse>;
 }

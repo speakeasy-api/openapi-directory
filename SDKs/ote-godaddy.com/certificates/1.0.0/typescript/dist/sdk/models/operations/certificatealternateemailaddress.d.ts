@@ -1,14 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CertificateAlternateEmailAddressPathParams extends SpeakeasyBase {
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class CertificateAlternateEmailAddressRequest extends SpeakeasyBase {
+    /**
+     * Certificate id to resend emails
+     */
     certificateId: string;
+    /**
+     * Specific email address to resend email
+     */
     emailAddress: string;
 }
-export declare class CertificateAlternateEmailAddressRequest extends SpeakeasyBase {
-    pathParams: CertificateAlternateEmailAddressPathParams;
-}
 export declare class CertificateAlternateEmailAddressResponse extends SpeakeasyBase {
-    certificateEmailHistory?: any;
+    /**
+     * Alternate email address added and emails re-sent
+     */
+    certificateEmailHistory?: shared.CertificateEmailHistory;
     contentType: string;
-    error?: any;
+    /**
+     * Certificate not found
+     */
+    error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

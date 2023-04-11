@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteNetworkInsightsAnalysisActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteNetworkInsightsAnalysisActionEnum {
     DeleteNetworkInsightsAnalysis = "DeleteNetworkInsightsAnalysis"
 }
-export declare enum GetDeleteNetworkInsightsAnalysisVersionEnum {
+export declare enum GETDeleteNetworkInsightsAnalysisVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetDeleteNetworkInsightsAnalysisQueryParams extends SpeakeasyBase {
-    action: GetDeleteNetworkInsightsAnalysisActionEnum;
+export declare class GETDeleteNetworkInsightsAnalysisRequest extends SpeakeasyBase {
+    action: GETDeleteNetworkInsightsAnalysisActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
+    /**
+     * The ID of the network insights analysis.
+     */
     networkInsightsAnalysisId: string;
-    version: GetDeleteNetworkInsightsAnalysisVersionEnum;
-}
-export declare class GetDeleteNetworkInsightsAnalysisHeaders extends SpeakeasyBase {
+    version: GETDeleteNetworkInsightsAnalysisVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetDeleteNetworkInsightsAnalysisHeaders extends SpeakeasyBa
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteNetworkInsightsAnalysisRequest extends SpeakeasyBase {
-    queryParams: GetDeleteNetworkInsightsAnalysisQueryParams;
-    headers: GetDeleteNetworkInsightsAnalysisHeaders;
-}
-export declare class GetDeleteNetworkInsightsAnalysisResponse extends SpeakeasyBase {
+export declare class GETDeleteNetworkInsightsAnalysisResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

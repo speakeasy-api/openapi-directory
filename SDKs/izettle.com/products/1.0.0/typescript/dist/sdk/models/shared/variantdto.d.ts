@@ -1,14 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { PresentationDTO } from "./presentationdto";
 import { Price } from "./price";
 import { VariantOption } from "./variantoption";
-import { PresentationDto } from "./presentationdto";
-export declare class VariantDto extends SpeakeasyBase {
+export declare class VariantDTO extends SpeakeasyBase {
     barcode?: string;
     costPrice?: Price;
     description?: string;
     name?: string;
     options?: VariantOption[];
-    presentation?: PresentationDto;
+    presentation?: PresentationDTO;
     price?: Price;
     sku?: string;
     uuid: string;

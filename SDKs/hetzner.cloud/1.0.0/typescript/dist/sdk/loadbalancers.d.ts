@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class LoadBalancers {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,26 +9,30 @@ export declare class LoadBalancers {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteLoadBalancersId - Delete a Load Balancer
+     * Delete a Load Balancer
      *
+     * @remarks
      * Deletes a Load Balancer.
-    **/
+     */
     deleteLoadBalancersId(req: operations.DeleteLoadBalancersIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteLoadBalancersIdResponse>;
     /**
-     * getLoadBalancers - Get all Load Balancers
+     * Get all Load Balancers
      *
+     * @remarks
      * Gets all existing Load Balancers that you have available.
-    **/
+     */
     getLoadBalancers(req: operations.GetLoadBalancersRequest, config?: AxiosRequestConfig): Promise<operations.GetLoadBalancersResponse>;
     /**
-     * getLoadBalancersId - Get a Load Balancer
+     * Get a Load Balancer
      *
+     * @remarks
      * Gets a specific Load Balancer object.
-    **/
+     */
     getLoadBalancersId(req: operations.GetLoadBalancersIdRequest, config?: AxiosRequestConfig): Promise<operations.GetLoadBalancersIdResponse>;
     /**
-     * getLoadBalancersIdMetrics - Get Metrics for a LoadBalancer
+     * Get Metrics for a LoadBalancer
      *
+     * @remarks
      * You must specify the type of metric to get: `open_connections`, `connections_per_second`, `requests_per_second` or `bandwidth`. You can also specify more than one type by comma separation, e.g. `requests_per_second,bandwidth`.
      *
      * Depending on the type you will get different time series data:
@@ -47,11 +51,12 @@ export declare class LoadBalancers {
      *
      * We limit the number of samples to a maximum of 500 and will adjust the step parameter accordingly.
      *
-    **/
+     */
     getLoadBalancersIdMetrics(req: operations.GetLoadBalancersIdMetricsRequest, config?: AxiosRequestConfig): Promise<operations.GetLoadBalancersIdMetricsResponse>;
     /**
-     * postLoadBalancers - Create a Load Balancer
+     * Create a Load Balancer
      *
+     * @remarks
      * Creates a Load Balancer.
      *
      * #### Call specific error codes
@@ -66,17 +71,18 @@ export declare class LoadBalancers {
      * | `source_port_already_used`              | The source port you are trying to add is already in use                                               |
      * | `target_already_defined`                | The Load Balancer target you are trying to define is already defined                                  |
      *
-    **/
-    postLoadBalancers(req: operations.PostLoadBalancersRequest, config?: AxiosRequestConfig): Promise<operations.PostLoadBalancersResponse>;
+     */
+    postLoadBalancers(req: operations.PostLoadBalancersCreateLoadBalancerRequest, config?: AxiosRequestConfig): Promise<operations.PostLoadBalancersResponse>;
     /**
-     * putLoadBalancersId - Update a Load Balancer
+     * Update a Load Balancer
      *
+     * @remarks
      * Updates a Load Balancer. You can update a Load Balancer’s name and a Load Balancer’s labels.
      *
      * Note that when updating labels, the Load Balancer’s current set of labels will be replaced with the labels provided in the request body. So, for example, if you want to add a new label, you have to provide all existing labels plus the new label in the request body.
      *
      * Note: if the Load Balancer object changes during the request, the response will be a “conflict” error.
      *
-    **/
+     */
     putLoadBalancersId(req: operations.PutLoadBalancersIdRequest, config?: AxiosRequestConfig): Promise<operations.PutLoadBalancersIdResponse>;
 }

@@ -1,12 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class MigrationsCancelImportPathParams extends SpeakeasyBase {
-    owner: string;
-    repo: string;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class MigrationsCancelImportRequest extends SpeakeasyBase {
-    pathParams: MigrationsCancelImportPathParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    owner: string;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    repo: string;
 }
 export declare class MigrationsCancelImportResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Unavailable due to service under maintenance.
+     */
+    basicError?: shared.BasicError;
 }

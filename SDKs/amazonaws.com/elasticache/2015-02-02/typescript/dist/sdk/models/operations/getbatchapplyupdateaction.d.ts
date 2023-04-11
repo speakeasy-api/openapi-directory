@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetBatchApplyUpdateActionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETBatchApplyUpdateActionActionEnum {
     BatchApplyUpdateAction = "BatchApplyUpdateAction"
 }
-export declare enum GetBatchApplyUpdateActionVersionEnum {
+export declare enum GETBatchApplyUpdateActionVersionEnum {
     TwoThousandAndFifteen0202 = "2015-02-02"
 }
-export declare class GetBatchApplyUpdateActionQueryParams extends SpeakeasyBase {
-    action: GetBatchApplyUpdateActionActionEnum;
+export declare class GETBatchApplyUpdateActionRequest extends SpeakeasyBase {
+    action: GETBatchApplyUpdateActionActionEnum;
+    /**
+     * The cache cluster IDs
+     */
     cacheClusterIds?: string[];
+    /**
+     * The replication group IDs
+     */
     replicationGroupIds?: string[];
+    /**
+     * The unique ID of the service update
+     */
     serviceUpdateName: string;
-    version: GetBatchApplyUpdateActionVersionEnum;
-}
-export declare class GetBatchApplyUpdateActionHeaders extends SpeakeasyBase {
+    version: GETBatchApplyUpdateActionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +29,9 @@ export declare class GetBatchApplyUpdateActionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetBatchApplyUpdateActionRequest extends SpeakeasyBase {
-    queryParams: GetBatchApplyUpdateActionQueryParams;
-    headers: GetBatchApplyUpdateActionHeaders;
-}
-export declare class GetBatchApplyUpdateActionResponse extends SpeakeasyBase {
+export declare class GETBatchApplyUpdateActionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

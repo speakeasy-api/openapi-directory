@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Route } from "./route";
 import { ExpectedRoute } from "./expectedroute";
+import { Route } from "./route";
 /**
  * Violation detail for the improperly configured subnet route. It's possible there is a missing route table route, or a configuration that causes traffic to cross an Availability Zone boundary.
-**/
+ */
 export declare class NetworkFirewallInvalidRouteConfigurationViolation extends SpeakeasyBase {
     actualFirewallEndpoint?: string;
     actualFirewallSubnetId?: string;

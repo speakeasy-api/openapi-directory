@@ -1,15 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReposGetParticipationStatsPathParams extends SpeakeasyBase {
-    owner: string;
-    repo: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ReposGetParticipationStatsRequest extends SpeakeasyBase {
-    pathParams: ReposGetParticipationStatsPathParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    owner: string;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    repo: string;
 }
 export declare class ReposGetParticipationStatsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Resource not found
+     */
     basicError?: shared.BasicError;
+    /**
+     * The array order is oldest week (index 0) to most recent week.
+     */
     participationStats?: shared.ParticipationStats;
 }

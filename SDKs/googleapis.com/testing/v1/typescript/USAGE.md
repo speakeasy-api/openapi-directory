@@ -1,37 +1,33 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { TestingApplicationDetailServiceGetApkDetailsRequest, TestingApplicationDetailServiceGetApkDetailsResponse } from "openapi/src/sdk/models/operations";
+import {
+  TestingApplicationDetailServiceGetApkDetailsRequest,
+  TestingApplicationDetailServiceGetApkDetailsResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: TestingApplicationDetailServiceGetApkDetailsRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
+  dollarXgafv: XgafvEnum.Two,
+  fileReference: {
+    gcsPath: "provident",
   },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "voluptas",
-    alt: "media",
-    callback: "expedita",
-    fields: "consequuntur",
-    key: "dolor",
-    oauthToken: "expedita",
-    prettyPrint: true,
-    quotaUser: "fugit",
-    uploadType: "et",
-    uploadProtocol: "nihil",
-  },
-  request: {
-    gcsPath: "rerum",
-  },
+  accessToken: "distinctio",
+  alt: AltEnum.Proto,
+  callback: "unde",
+  fields: "nulla",
+  key: "corrupti",
+  oauthToken: "illum",
+  prettyPrint: false,
+  quotaUser: "vel",
+  uploadType: "error",
+  uploadProtocol: "deserunt",
 };
 
 sdk.applicationDetailService.testingApplicationDetailServiceGetApkDetails(req).then((res: TestingApplicationDetailServiceGetApkDetailsResponse | AxiosError) => {

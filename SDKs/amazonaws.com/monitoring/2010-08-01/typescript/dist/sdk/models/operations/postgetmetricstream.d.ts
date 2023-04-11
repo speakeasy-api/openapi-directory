@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostGetMetricStreamActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTGetMetricStreamActionEnum {
     GetMetricStream = "GetMetricStream"
 }
-export declare enum PostGetMetricStreamVersionEnum {
+export declare enum POSTGetMetricStreamVersionEnum {
     TwoThousandAndTen0801 = "2010-08-01"
 }
-export declare class PostGetMetricStreamQueryParams extends SpeakeasyBase {
-    action: PostGetMetricStreamActionEnum;
-    version: PostGetMetricStreamVersionEnum;
-}
-export declare class PostGetMetricStreamHeaders extends SpeakeasyBase {
+export declare class POSTGetMetricStreamRequest extends SpeakeasyBase {
+    action: POSTGetMetricStreamActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTGetMetricStreamVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostGetMetricStreamHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostGetMetricStreamRequest extends SpeakeasyBase {
-    queryParams: PostGetMetricStreamQueryParams;
-    headers: PostGetMetricStreamHeaders;
-    request?: Uint8Array;
-}
-export declare class PostGetMetricStreamResponse extends SpeakeasyBase {
+export declare class POSTGetMetricStreamResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

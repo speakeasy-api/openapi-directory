@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListSecretsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListSecretsXAmzTargetEnum {
     SecretsmanagerListSecrets = "secretsmanager.ListSecrets"
 }
-export declare class ListSecretsHeaders extends SpeakeasyBase {
+export declare class ListSecretsRequest extends SpeakeasyBase {
+    listSecretsRequest: shared.ListSecretsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,16 +23,24 @@ export declare class ListSecretsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListSecretsXAmzTargetEnum;
 }
-export declare class ListSecretsRequest extends SpeakeasyBase {
-    queryParams: ListSecretsQueryParams;
-    headers: ListSecretsHeaders;
-    request: shared.ListSecretsRequest;
-}
 export declare class ListSecretsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServiceError
+     */
     internalServiceError?: any;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * Success
+     */
     listSecretsResponse?: shared.ListSecretsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

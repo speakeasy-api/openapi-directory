@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostAuthorizeCacheSecurityGroupIngressActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTAuthorizeCacheSecurityGroupIngressActionEnum {
     AuthorizeCacheSecurityGroupIngress = "AuthorizeCacheSecurityGroupIngress"
 }
-export declare enum PostAuthorizeCacheSecurityGroupIngressVersionEnum {
+export declare enum POSTAuthorizeCacheSecurityGroupIngressVersionEnum {
     TwoThousandAndFifteen0202 = "2015-02-02"
 }
-export declare class PostAuthorizeCacheSecurityGroupIngressQueryParams extends SpeakeasyBase {
-    action: PostAuthorizeCacheSecurityGroupIngressActionEnum;
-    version: PostAuthorizeCacheSecurityGroupIngressVersionEnum;
-}
-export declare class PostAuthorizeCacheSecurityGroupIngressHeaders extends SpeakeasyBase {
+export declare class POSTAuthorizeCacheSecurityGroupIngressRequest extends SpeakeasyBase {
+    action: POSTAuthorizeCacheSecurityGroupIngressActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTAuthorizeCacheSecurityGroupIngressVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostAuthorizeCacheSecurityGroupIngressHeaders extends Speak
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostAuthorizeCacheSecurityGroupIngressRequest extends SpeakeasyBase {
-    queryParams: PostAuthorizeCacheSecurityGroupIngressQueryParams;
-    headers: PostAuthorizeCacheSecurityGroupIngressHeaders;
-    request?: Uint8Array;
-}
-export declare class PostAuthorizeCacheSecurityGroupIngressResponse extends SpeakeasyBase {
+export declare class POSTAuthorizeCacheSecurityGroupIngressResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

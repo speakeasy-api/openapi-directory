@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Comments {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,11 +9,11 @@ export declare class Comments {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * bloggerCommentsGet - Gets a comment by blog id, post id and comment id.
-    **/
-    bloggerCommentsGet(req: operations.BloggerCommentsGetRequest, config?: AxiosRequestConfig): Promise<operations.BloggerCommentsGetResponse>;
+     * Gets a comment by blog id, post id and comment id.
+     */
+    bloggerCommentsGet(req: operations.BloggerCommentsGetRequest, security: operations.BloggerCommentsGetSecurity, config?: AxiosRequestConfig): Promise<operations.BloggerCommentsGetResponse>;
     /**
-     * bloggerCommentsList - Lists comments.
-    **/
-    bloggerCommentsList(req: operations.BloggerCommentsListRequest, config?: AxiosRequestConfig): Promise<operations.BloggerCommentsListResponse>;
+     * Lists comments.
+     */
+    bloggerCommentsList(req: operations.BloggerCommentsListRequest, security: operations.BloggerCommentsListSecurity, config?: AxiosRequestConfig): Promise<operations.BloggerCommentsListResponse>;
 }

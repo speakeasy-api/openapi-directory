@@ -1,6 +1,28 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreateSubscriptionDefinitionHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+/**
+ * Information about a subscription definition version.
+ */
+export declare class CreateSubscriptionDefinitionRequestBodyInitialVersion extends SpeakeasyBase {
+    subscriptions?: shared.Subscription[];
+}
+export declare class CreateSubscriptionDefinitionRequestBody extends SpeakeasyBase {
+    /**
+     * Information about a subscription definition version.
+     */
+    initialVersion?: CreateSubscriptionDefinitionRequestBodyInitialVersion;
+    /**
+     * The name of the subscription definition.
+     */
+    name?: string;
+    /**
+     * The key-value pair for the resource tag.
+     */
+    tags?: Record<string, string>;
+}
+export declare class CreateSubscriptionDefinitionRequest extends SpeakeasyBase {
+    requestBody: CreateSubscriptionDefinitionRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -8,26 +30,21 @@ export declare class CreateSubscriptionDefinitionHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
+    /**
+     * A client token used to correlate requests and responses.
+     */
     xAmznClientToken?: string;
 }
-/**
- * Information about a subscription definition version.
-**/
-export declare class CreateSubscriptionDefinitionRequestBodyInitialVersion extends SpeakeasyBase {
-    subscriptions?: shared.Subscription[];
-}
-export declare class CreateSubscriptionDefinitionRequestBody extends SpeakeasyBase {
-    initialVersion?: CreateSubscriptionDefinitionRequestBodyInitialVersion;
-    name?: string;
-    tags?: Record<string, string>;
-}
-export declare class CreateSubscriptionDefinitionRequest extends SpeakeasyBase {
-    headers: CreateSubscriptionDefinitionHeaders;
-    request: CreateSubscriptionDefinitionRequestBody;
-}
 export declare class CreateSubscriptionDefinitionResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     createSubscriptionDefinitionResponse?: shared.CreateSubscriptionDefinitionResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

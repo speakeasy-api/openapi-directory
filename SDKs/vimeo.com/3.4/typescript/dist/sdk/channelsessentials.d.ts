@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class ChannelsEssentials {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,35 +9,37 @@ export declare class ChannelsEssentials {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createChannel - Create a channel
+     * Create a channel
      *
+     * @remarks
      * This method creates a new channel.
-    **/
-    createChannel(req: operations.CreateChannelRequest, config?: AxiosRequestConfig): Promise<operations.CreateChannelResponse>;
+     */
+    createChannel(req: operations.CreateChannelRequestBody, security: operations.CreateChannelSecurity, config?: AxiosRequestConfig): Promise<operations.CreateChannelResponse>;
     /**
-     * deleteChannel - Delete a channel
-    **/
-    deleteChannel(req: operations.DeleteChannelRequest, config?: AxiosRequestConfig): Promise<operations.DeleteChannelResponse>;
+     * Delete a channel
+     */
+    deleteChannel(req: operations.DeleteChannelRequest, security: operations.DeleteChannelSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteChannelResponse>;
     /**
-     * editChannel - Edit a channel
+     * Edit a channel
      *
+     * @remarks
      * This method edits the specified channel.
-    **/
-    editChannel(req: operations.EditChannelRequest, config?: AxiosRequestConfig): Promise<operations.EditChannelResponse>;
+     */
+    editChannel(req: operations.EditChannelRequest, security: operations.EditChannelSecurity, config?: AxiosRequestConfig): Promise<operations.EditChannelResponse>;
     /**
-     * getChannel - Get a specific channel
-    **/
+     * Get a specific channel
+     */
     getChannel(req: operations.GetChannelRequest, config?: AxiosRequestConfig): Promise<operations.GetChannelResponse>;
     /**
-     * getChannelSubscriptions - Get all the channels to which a user subscribes
-    **/
+     * Get all the channels to which a user subscribes
+     */
     getChannelSubscriptions(req: operations.GetChannelSubscriptionsRequest, config?: AxiosRequestConfig): Promise<operations.GetChannelSubscriptionsResponse>;
     /**
-     * getChannelSubscriptionsAlt1 - Get all the channels to which a user subscribes
-    **/
+     * Get all the channels to which a user subscribes
+     */
     getChannelSubscriptionsAlt1(req: operations.GetChannelSubscriptionsAlt1Request, config?: AxiosRequestConfig): Promise<operations.GetChannelSubscriptionsAlt1Response>;
     /**
-     * getChannels - Get all channels
-    **/
+     * Get all channels
+     */
     getChannels(req: operations.GetChannelsRequest, config?: AxiosRequestConfig): Promise<operations.GetChannelsResponse>;
 }

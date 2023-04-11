@@ -1,19 +1,47 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class TinVerificationBasicCheckQueryParams extends SpeakeasyBase {
-    name: string;
-    tin: string;
-}
+import { AxiosResponse } from "axios";
 export declare class TinVerificationBasicCheckSecurity extends SpeakeasyBase {
-    userKey: shared.SchemeUserKey;
+    userKey: string;
 }
 export declare class TinVerificationBasicCheckRequest extends SpeakeasyBase {
-    queryParams: TinVerificationBasicCheckQueryParams;
-    security: TinVerificationBasicCheckSecurity;
+    /**
+     * Company Name
+     */
+    name: string;
+    /**
+     * Nine letter TIN number with or without hyphens
+     */
+    tin: string;
+}
+/**
+ * Detailed information about the error
+ */
+export declare class TinVerificationBasicCheckDefaultApplicationJSON extends SpeakeasyBase {
+    code: number;
+    fault?: string;
+    message: string;
+    tag: string;
+}
+/**
+ * Result of a basic TIN number check with company name
+ */
+export declare class TinVerificationBasicCheck200ApplicationJSON extends SpeakeasyBase {
+    matchStatus: string;
+    name: string;
+    possibleMatch: string;
+    tin: string;
+    validationStatus: string;
 }
 export declare class TinVerificationBasicCheckResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    tinVerificationBasicCheck200ApplicationJSONAny?: any;
-    tinVerificationBasicCheckDefaultApplicationJSONAny?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * Result of a basic TIN number check with company name
+     */
+    tinVerificationBasicCheck200ApplicationJSONObject?: TinVerificationBasicCheck200ApplicationJSON;
+    /**
+     * Detailed information about the error
+     */
+    tinVerificationBasicCheckDefaultApplicationJSONObject?: TinVerificationBasicCheckDefaultApplicationJSON;
 }

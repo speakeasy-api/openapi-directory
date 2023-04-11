@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetGenesByAliasSymbolUsingGetPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETGenesByAliasSymbolUsingGETRequest extends SpeakeasyBase {
+    /**
+     * Gene alias symbol
+     */
     aliasSymbol: string;
+    /**
+     * A list of RGD species type keys can be found in the lookup service
+     */
     speciesTypeKey: number;
 }
-export declare class GetGenesByAliasSymbolUsingGetRequest extends SpeakeasyBase {
-    pathParams: GetGenesByAliasSymbolUsingGetPathParams;
-}
-export declare class GetGenesByAliasSymbolUsingGetResponse extends SpeakeasyBase {
+export declare class GETGenesByAliasSymbolUsingGETResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,4 +1,7 @@
-export declare enum BeezUpCommonHttpMethodEnum {
+/**
+ * Indicate the http method to use on this link
+ */
+export declare enum BeezUPCommonHttpMethodEnum {
     Get = "GET",
     Post = "POST",
     Patch = "PATCH",

@@ -1,26 +1,28 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum GetUpdateScalingParametersActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETUpdateScalingParametersActionEnum {
     UpdateScalingParameters = "UpdateScalingParameters"
 }
 /**
  * The desired instance type and desired number of replicas of each index partition.
-**/
-export declare class GetUpdateScalingParametersScalingParameters extends SpeakeasyBase {
+ */
+export declare class GETUpdateScalingParametersScalingParameters extends SpeakeasyBase {
     desiredInstanceType?: shared.PartitionInstanceTypeEnum;
     desiredPartitionCount?: number;
     desiredReplicationCount?: number;
 }
-export declare enum GetUpdateScalingParametersVersionEnum {
+export declare enum GETUpdateScalingParametersVersionEnum {
     TwoThousandAndThirteen0101 = "2013-01-01"
 }
-export declare class GetUpdateScalingParametersQueryParams extends SpeakeasyBase {
-    action: GetUpdateScalingParametersActionEnum;
+export declare class GETUpdateScalingParametersRequest extends SpeakeasyBase {
+    action: GETUpdateScalingParametersActionEnum;
     domainName: string;
-    scalingParameters: GetUpdateScalingParametersScalingParameters;
-    version: GetUpdateScalingParametersVersionEnum;
-}
-export declare class GetUpdateScalingParametersHeaders extends SpeakeasyBase {
+    /**
+     * The desired instance type and desired number of replicas of each index partition.
+     */
+    scalingParameters: GETUpdateScalingParametersScalingParameters;
+    version: GETUpdateScalingParametersVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -29,12 +31,9 @@ export declare class GetUpdateScalingParametersHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetUpdateScalingParametersRequest extends SpeakeasyBase {
-    queryParams: GetUpdateScalingParametersQueryParams;
-    headers: GetUpdateScalingParametersHeaders;
-}
-export declare class GetUpdateScalingParametersResponse extends SpeakeasyBase {
+export declare class GETUpdateScalingParametersResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

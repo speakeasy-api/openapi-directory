@@ -1,137 +1,202 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { NetworksecurityProjectsLocationsAuthorizationPoliciesCreateRequest, NetworksecurityProjectsLocationsAuthorizationPoliciesCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  NetworksecurityProjectsLocationsAuthorizationPoliciesCreateRequest,
+  NetworksecurityProjectsLocationsAuthorizationPoliciesCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  AuthorizationPolicyActionEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: NetworksecurityProjectsLocationsAuthorizationPoliciesCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    authorizationPolicyId: "consequuntur",
-    callback: "dolor",
-    fields: "expedita",
-    key: "voluptas",
-    oauthToken: "fugit",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    uploadType: "rerum",
-    uploadProtocol: "dicta",
-  },
-  request: {
-    action: "ACTION_UNSPECIFIED",
-    description: "voluptatum",
+  dollarXgafv: XgafvEnum.Two,
+  authorizationPolicyInput: {
+    action: AuthorizationPolicyActionEnum.Allow,
+    description: "distinctio",
     labels: {
-      "ut": "dolorem",
+      "unde": "nulla",
+      "corrupti": "illum",
+      "vel": "error",
+      "deserunt": "suscipit",
     },
-    name: "et",
+    name: "iure",
     rules: [
       {
         destinations: [
           {
             hosts: [
+              "delectus",
+            ],
+            httpHeaderMatch: {
+              headerName: "tempora",
+              regexMatch: "suscipit",
+            },
+            methods: [
+              "minus",
+              "placeat",
+            ],
+            ports: [
+              479977,
+              568045,
+              392785,
+            ],
+          },
+          {
+            hosts: [
+              "temporibus",
+              "ab",
+              "quis",
+              "veritatis",
+            ],
+            httpHeaderMatch: {
+              headerName: "deserunt",
+              regexMatch: "perferendis",
+            },
+            methods: [
+              "repellendus",
+              "sapiente",
+            ],
+            ports: [
+              140350,
+              870013,
+              870088,
+              978619,
+            ],
+          },
+          {
+            hosts: [
+              "quod",
+              "quod",
+            ],
+            httpHeaderMatch: {
+              headerName: "esse",
+              regexMatch: "totam",
+            },
+            methods: [
+              "dolorum",
+              "dicta",
+              "nam",
+              "officia",
+            ],
+            ports: [
+              143353,
+              537373,
+              944669,
+            ],
+          },
+          {
+            hosts: [
               "totam",
+              "beatae",
+              "commodi",
+              "molestiae",
             ],
             httpHeaderMatch: {
-              headerName: "dolores",
-              regexMatch: "illum",
+              headerName: "modi",
+              regexMatch: "qui",
             },
             methods: [
-              "vel",
+              "cum",
+              "esse",
+              "ipsum",
+              "excepturi",
             ],
             ports: [
-              6303220950515014660,
-            ],
-          },
-          {
-            hosts: [
-              "aspernatur",
-              "accusantium",
-            ],
-            httpHeaderMatch: {
-              headerName: "totam",
-              regexMatch: "commodi",
-            },
-            methods: [
-              "est",
-              "aut",
-              "odit",
-            ],
-            ports: [
-              167566062957544642,
-              4778690082005258714,
-              1059542851699319360,
-            ],
-          },
-          {
-            hosts: [
-              "sed",
-            ],
-            httpHeaderMatch: {
-              headerName: "officiis",
-              regexMatch: "autem",
-            },
-            methods: [
-              "nobis",
-            ],
-            ports: [
-              7699391924090763411,
+              18789,
             ],
           },
         ],
         sources: [
           {
             ipBlocks: [
-              "ipsum",
-              "eveniet",
-            ],
-            principals: [
-              "sint",
-              "inventore",
-            ],
-          },
-          {
-            ipBlocks: [
-              "exercitationem",
-              "aut",
-              "reprehenderit",
-            ],
-            principals: [
-              "maiores",
-              "incidunt",
+              "sed",
+              "iste",
               "dolor",
             ],
+            principals: [
+              "laboriosam",
+              "hic",
+              "saepe",
+            ],
           },
           {
             ipBlocks: [
-              "veritatis",
               "in",
-              "et",
+              "corporis",
+              "iste",
             ],
             principals: [
-              "ipsum",
-              "ex",
+              "saepe",
+              "quidem",
+            ],
+          },
+        ],
+      },
+      {
+        destinations: [
+          {
+            hosts: [
+              "reiciendis",
+            ],
+            httpHeaderMatch: {
+              headerName: "est",
+              regexMatch: "mollitia",
+            },
+            methods: [
+              "dolores",
+              "dolorem",
+              "corporis",
+            ],
+            ports: [
+              750686,
+            ],
+          },
+        ],
+        sources: [
+          {
+            ipBlocks: [
+              "nemo",
+              "minima",
+              "excepturi",
+            ],
+            principals: [
+              "iure",
+            ],
+          },
+          {
+            ipBlocks: [
+              "doloribus",
+              "sapiente",
+              "architecto",
+            ],
+            principals: [
+              "dolorem",
+              "culpa",
+              "consequuntur",
             ],
           },
         ],
       },
     ],
   },
+  accessToken: "repellat",
+  alt: AltEnum.Media,
+  authorizationPolicyId: "occaecati",
+  callback: "numquam",
+  fields: "commodi",
+  key: "quam",
+  oauthToken: "molestiae",
+  parent: "velit",
+  prettyPrint: false,
+  quotaUser: "error",
+  uploadType: "quia",
+  uploadProtocol: "quis",
 };
 
 sdk.projects.networksecurityProjectsLocationsAuthorizationPoliciesCreate(req).then((res: NetworksecurityProjectsLocationsAuthorizationPoliciesCreateResponse | AxiosError) => {

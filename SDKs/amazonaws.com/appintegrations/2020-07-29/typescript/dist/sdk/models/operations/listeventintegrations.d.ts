@@ -1,10 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListEventIntegrationsQueryParams extends SpeakeasyBase {
-    maxResults?: number;
-    nextToken?: string;
-}
-export declare class ListEventIntegrationsHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListEventIntegrationsRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,17 +9,37 @@ export declare class ListEventIntegrationsHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class ListEventIntegrationsRequest extends SpeakeasyBase {
-    queryParams: ListEventIntegrationsQueryParams;
-    headers: ListEventIntegrationsHeaders;
+    /**
+     * The maximum number of results to return per page.
+     */
+    maxResults?: number;
+    /**
+     * The token for the next set of results. Use the value returned in the previous response in the next request to retrieve the next set of results.
+     */
+    nextToken?: string;
 }
 export declare class ListEventIntegrationsResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InternalServiceError
+     */
     internalServiceError?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * Success
+     */
     listEventIntegrationsResponse?: shared.ListEventIntegrationsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

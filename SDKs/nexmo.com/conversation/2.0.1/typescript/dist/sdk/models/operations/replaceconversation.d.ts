@@ -1,24 +1,56 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReplaceConversationPathParams extends SpeakeasyBase {
-    conversationId: string;
-}
+import { AxiosResponse } from "axios";
+/**
+ * Conversation Request Payload Object
+ */
 export declare class ReplaceConversationRequestBody extends SpeakeasyBase {
+    /**
+     * The display name for the conversation. It does not have to be unique
+     */
     displayName?: string;
+    /**
+     * A link to an image for conversations' and users' avatars
+     */
     imageUrl?: string;
+    /**
+     * Unique name for a conversation
+     */
     name?: string;
+    /**
+     * Conversation properties
+     */
     properties?: shared.ConversationProperties;
 }
-export declare class ReplaceConversation200ApplicationJson extends SpeakeasyBase {
-    href: string;
-    id: string;
-}
 export declare class ReplaceConversationRequest extends SpeakeasyBase {
-    pathParams: ReplaceConversationPathParams;
-    request?: ReplaceConversationRequestBody;
+    /**
+     * Conversation Request Payload Object
+     */
+    requestBody?: ReplaceConversationRequestBody;
+    /**
+     * Conversation ID
+     */
+    conversationId: string;
+}
+/**
+ * Create / Update Conversation Response Payload Object
+ */
+export declare class ReplaceConversation200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * A link towards a conversation included in Conversation API
+     */
+    href: string;
+    /**
+     * The unique identifier for this conversation
+     */
+    id: string;
 }
 export declare class ReplaceConversationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    replaceConversation200ApplicationJSONObject?: ReplaceConversation200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Create / Update Conversation Response Payload Object
+     */
+    replaceConversation200ApplicationJSONObject?: ReplaceConversation200ApplicationJSON;
 }

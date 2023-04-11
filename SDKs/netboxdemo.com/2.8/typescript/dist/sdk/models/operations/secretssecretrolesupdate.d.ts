@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class SecretsSecretRolesUpdatePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class SecretsSecretRolesUpdateRequest extends SpeakeasyBase {
-    pathParams: SecretsSecretRolesUpdatePathParams;
-    request: shared.SecretRoleInput;
+    secretRoleInput: shared.SecretRoleInput;
+    /**
+     * A unique integer value identifying this secret role.
+     */
+    id: number;
 }
 export declare class SecretsSecretRolesUpdateResponse extends SpeakeasyBase {
     contentType: string;
     secretRole?: shared.SecretRole;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

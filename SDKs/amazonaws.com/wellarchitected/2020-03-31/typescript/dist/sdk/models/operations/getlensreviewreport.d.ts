@@ -1,13 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetLensReviewReportPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetLensReviewReportRequest extends SpeakeasyBase {
     lensAlias: string;
-    workloadId: string;
-}
-export declare class GetLensReviewReportQueryParams extends SpeakeasyBase {
     milestoneNumber?: number;
-}
-export declare class GetLensReviewReportHeaders extends SpeakeasyBase {
+    workloadId: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,18 +13,32 @@ export declare class GetLensReviewReportHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetLensReviewReportRequest extends SpeakeasyBase {
-    pathParams: GetLensReviewReportPathParams;
-    queryParams: GetLensReviewReportQueryParams;
-    headers: GetLensReviewReportHeaders;
-}
 export declare class GetLensReviewReportResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getLensReviewReportOutput?: shared.GetLensReviewReportOutput;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

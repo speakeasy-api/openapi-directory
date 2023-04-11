@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Reference } from "./reference";
 import { EntityTypeEnum } from "./entitytypeenum";
+import { Reference } from "./reference";
+/**
+ * OK
+ */
 export declare class Host extends SpeakeasyBase {
     cluster?: Reference;
     connectionState?: string;

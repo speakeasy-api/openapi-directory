@@ -10,7 +10,13 @@ export declare class PatientLinkResultPatient extends SpeakeasyBase {
 export declare class PatientLinkResult extends SpeakeasyBase {
     error?: ErrorT;
     patient?: PatientLinkResultPatient;
+    /**
+     * a nonce, unique for each HTTP request
+     */
     requestId: string;
     resp: RequestReference;
+    /**
+     * Date time format in UTC, includes miliseconds YYYY-MM-DDThh:mm:ss.vZ
+     */
     timestamp: Date;
 }

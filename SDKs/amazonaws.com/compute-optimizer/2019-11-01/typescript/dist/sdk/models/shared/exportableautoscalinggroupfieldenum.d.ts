@@ -43,5 +43,14 @@ export declare enum ExportableAutoScalingGroupFieldEnum {
     RecommendationOptionsMemory = "RecommendationOptionsMemory",
     RecommendationOptionsStorage = "RecommendationOptionsStorage",
     RecommendationOptionsNetwork = "RecommendationOptionsNetwork",
-    LastRefreshTimestamp = "LastRefreshTimestamp"
+    LastRefreshTimestamp = "LastRefreshTimestamp",
+    CurrentPerformanceRisk = "CurrentPerformanceRisk",
+    RecommendationOptionsSavingsOpportunityPercentage = "RecommendationOptionsSavingsOpportunityPercentage",
+    RecommendationOptionsEstimatedMonthlySavingsCurrency = "RecommendationOptionsEstimatedMonthlySavingsCurrency",
+    RecommendationOptionsEstimatedMonthlySavingsValue = "RecommendationOptionsEstimatedMonthlySavingsValue",
+    EffectiveRecommendationPreferencesCpuVendorArchitectures = "EffectiveRecommendationPreferencesCpuVendorArchitectures",
+    EffectiveRecommendationPreferencesEnhancedInfrastructureMetrics = "EffectiveRecommendationPreferencesEnhancedInfrastructureMetrics",
+    EffectiveRecommendationPreferencesInferredWorkloadTypes = "EffectiveRecommendationPreferencesInferredWorkloadTypes",
+    InferredWorkloadTypes = "InferredWorkloadTypes",
+    RecommendationOptionsMigrationEffort = "RecommendationOptionsMigrationEffort"
 }

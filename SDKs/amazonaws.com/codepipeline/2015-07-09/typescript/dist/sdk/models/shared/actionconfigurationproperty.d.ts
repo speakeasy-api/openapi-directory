@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { ActionConfigurationPropertyTypeEnum } from "./actionconfigurationpropertytypeenum";
 /**
  * Represents information about an action configuration property.
-**/
+ */
 export declare class ActionConfigurationProperty extends SpeakeasyBase {
     description?: string;
     key: boolean;

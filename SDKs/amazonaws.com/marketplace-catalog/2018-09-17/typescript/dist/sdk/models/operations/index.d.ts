@@ -3,4 +3,7 @@ export * from "./describechangeset";
 export * from "./describeentity";
 export * from "./listchangesets";
 export * from "./listentities";
+export * from "./listtagsforresource";
 export * from "./startchangeset";
+export * from "./tagresource";
+export * from "./untagresource";

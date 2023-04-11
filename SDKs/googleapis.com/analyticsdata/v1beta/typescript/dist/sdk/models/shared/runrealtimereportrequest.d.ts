@@ -1,0 +1,54 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { Dimension } from "./dimension";
+import { FilterExpression } from "./filterexpression";
+import { Metric } from "./metric";
+import { MinuteRange } from "./minuterange";
+import { OrderBy } from "./orderby";
+export declare enum RunRealtimeReportRequestMetricAggregationsEnum {
+    MetricAggregationUnspecified = "METRIC_AGGREGATION_UNSPECIFIED",
+    Total = "TOTAL",
+    Minimum = "MINIMUM",
+    Maximum = "MAXIMUM",
+    Count = "COUNT"
+}
+/**
+ * The request to generate a realtime report.
+ */
+export declare class RunRealtimeReportRequest extends SpeakeasyBase {
+    /**
+     * To express dimension or metric filters. The fields in the same FilterExpression need to be either all dimensions or all metrics.
+     */
+    dimensionFilter?: FilterExpression;
+    /**
+     * The dimensions requested and displayed.
+     */
+    dimensions?: Dimension[];
+    /**
+     * The number of rows to return. If unspecified, 10,000 rows are returned. The API returns a maximum of 100,000 rows per request, no matter how many you ask for. `limit` must be positive. The API can also return fewer rows than the requested `limit`, if there aren't as many dimension values as the `limit`. For instance, there are fewer than 300 possible values for the dimension `country`, so when reporting on only `country`, you can't get more than 300 rows, even if you set `limit` to a higher value.
+     */
+    limit?: string;
+    /**
+     * Aggregation of metrics. Aggregated metric values will be shown in rows where the dimension_values are set to "RESERVED_(MetricAggregation)".
+     */
+    metricAggregations?: RunRealtimeReportRequestMetricAggregationsEnum[];
+    /**
+     * To express dimension or metric filters. The fields in the same FilterExpression need to be either all dimensions or all metrics.
+     */
+    metricFilter?: FilterExpression;
+    /**
+     * The metrics requested and displayed.
+     */
+    metrics?: Metric[];
+    /**
+     * The minute ranges of event data to read. If unspecified, one minute range for the last 30 minutes will be used. If multiple minute ranges are requested, each response row will contain a zero based minute range index. If two minute ranges overlap, the event data for the overlapping minutes is included in the response rows for both minute ranges.
+     */
+    minuteRanges?: MinuteRange[];
+    /**
+     * Specifies how rows are ordered in the response.
+     */
+    orderBys?: OrderBy[];
+    /**
+     * Toggles whether to return the current state of this Analytics Property's Realtime quota. Quota is returned in [PropertyQuota](#PropertyQuota).
+     */
+    returnPropertyQuota?: boolean;
+}

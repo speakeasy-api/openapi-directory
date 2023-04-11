@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ProtocolTftpGetConfigPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ProtocolTftpGetConfigRequest extends SpeakeasyBase {
+    /**
+     * Agent to show the TFTP configuration
+     */
     agentNum: number;
 }
-export declare class ProtocolTftpGetConfigRequest extends SpeakeasyBase {
-    pathParams: ProtocolTftpGetConfigPathParams;
-}
 export declare class ProtocolTftpGetConfigResponse extends SpeakeasyBase {
-    configTFTP?: shared.ConfigTftp;
+    /**
+     * successful operation
+     */
+    configTFTP?: shared.ConfigTFTP;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

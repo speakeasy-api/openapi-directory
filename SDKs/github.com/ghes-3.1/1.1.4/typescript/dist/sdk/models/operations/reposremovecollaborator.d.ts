@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ReposRemoveCollaboratorPathParams extends SpeakeasyBase {
-    owner: string;
-    repo: string;
-    username: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ReposRemoveCollaboratorRequest extends SpeakeasyBase {
-    pathParams: ReposRemoveCollaboratorPathParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    owner: string;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    repo: string;
+    /**
+     * The handle for the GitHub user account.
+     */
+    username: string;
 }
 export declare class ReposRemoveCollaboratorResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

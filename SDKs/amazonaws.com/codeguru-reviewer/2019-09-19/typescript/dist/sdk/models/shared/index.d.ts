@@ -6,6 +6,7 @@ export * from "./codecommitrepository";
 export * from "./codereview";
 export * from "./codereviewsummary";
 export * from "./commitdiffsourcecodetype";
+export * from "./configfilestateenum";
 export * from "./createcodereviewresponse";
 export * from "./describecodereviewresponse";
 export * from "./describerecommendationfeedbackresponse";

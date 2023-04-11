@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetChannelModeratorPathParams extends SpeakeasyBase {
-    channelId: number;
-    userId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetChannelModeratorRequest extends SpeakeasyBase {
-    pathParams: GetChannelModeratorPathParams;
+    /**
+     * The ID of the channel.
+     */
+    channelId: number;
+    /**
+     * The ID of the user.
+     */
+    userId: number;
 }
 export declare class GetChannelModeratorResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The moderator was returned.
+     */
     user?: shared.User;
 }

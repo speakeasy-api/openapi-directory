@@ -3,13 +3,16 @@ import { MarketplaceAccount } from "./marketplaceaccount";
 import { MarketplaceListingPlan } from "./marketplacelistingplan";
 /**
  * User Marketplace Purchase
-**/
+ */
 export declare class UserMarketplacePurchase extends SpeakeasyBase {
     account: MarketplaceAccount;
     billingCycle: string;
     freeTrialEndsOn: Date;
     nextBillingDate: Date;
     onFreeTrial: boolean;
+    /**
+     * Marketplace Listing Plan
+     */
     plan: MarketplaceListingPlan;
     unitCount: number;
     updatedAt: Date;

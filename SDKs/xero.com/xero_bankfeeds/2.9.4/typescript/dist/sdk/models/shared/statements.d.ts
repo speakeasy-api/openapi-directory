@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Statement } from "./statement";
 import { Pagination } from "./pagination";
+import { Statement } from "./statement";
 /**
- * https://developer.xero.com/documentation/bank-feeds-api/statements
-**/
+ * success returns Statements array of objects response
+ *
+ * @see {@link https://developer.xero.com/documentation/bank-feeds-api/statements}
+ */
 export declare class Statements extends SpeakeasyBase {
     items?: Statement[];
     pagination?: Pagination;

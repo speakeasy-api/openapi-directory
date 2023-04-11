@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListRepositoriesForApprovalRuleTemplateQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListRepositoriesForApprovalRuleTemplateXAmzTargetEnum {
     CodeCommit20150413ListRepositoriesForApprovalRuleTemplate = "CodeCommit_20150413.ListRepositoriesForApprovalRuleTemplate"
 }
-export declare class ListRepositoriesForApprovalRuleTemplateHeaders extends SpeakeasyBase {
+export declare class ListRepositoriesForApprovalRuleTemplateRequest extends SpeakeasyBase {
+    listRepositoriesForApprovalRuleTemplateInput: shared.ListRepositoriesForApprovalRuleTemplateInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,24 +14,61 @@ export declare class ListRepositoriesForApprovalRuleTemplateHeaders extends Spea
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: ListRepositoriesForApprovalRuleTemplateXAmzTargetEnum;
-}
-export declare class ListRepositoriesForApprovalRuleTemplateRequest extends SpeakeasyBase {
-    queryParams: ListRepositoriesForApprovalRuleTemplateQueryParams;
-    headers: ListRepositoriesForApprovalRuleTemplateHeaders;
-    request: shared.ListRepositoriesForApprovalRuleTemplateInput;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class ListRepositoriesForApprovalRuleTemplateResponse extends SpeakeasyBase {
+    /**
+     * ApprovalRuleTemplateDoesNotExistException
+     */
     approvalRuleTemplateDoesNotExistException?: any;
+    /**
+     * ApprovalRuleTemplateNameRequiredException
+     */
     approvalRuleTemplateNameRequiredException?: any;
     contentType: string;
+    /**
+     * EncryptionIntegrityChecksFailedException
+     */
     encryptionIntegrityChecksFailedException?: any;
+    /**
+     * EncryptionKeyAccessDeniedException
+     */
     encryptionKeyAccessDeniedException?: any;
+    /**
+     * EncryptionKeyDisabledException
+     */
     encryptionKeyDisabledException?: any;
+    /**
+     * EncryptionKeyNotFoundException
+     */
     encryptionKeyNotFoundException?: any;
+    /**
+     * EncryptionKeyUnavailableException
+     */
     encryptionKeyUnavailableException?: any;
+    /**
+     * InvalidApprovalRuleTemplateNameException
+     */
     invalidApprovalRuleTemplateNameException?: any;
+    /**
+     * InvalidContinuationTokenException
+     */
     invalidContinuationTokenException?: any;
+    /**
+     * InvalidMaxResultsException
+     */
     invalidMaxResultsException?: any;
+    /**
+     * Success
+     */
     listRepositoriesForApprovalRuleTemplateOutput?: shared.ListRepositoriesForApprovalRuleTemplateOutput;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

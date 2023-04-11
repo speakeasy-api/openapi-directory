@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class RefundInvoicePayments {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +9,7 @@ export declare class RefundInvoicePayments {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * objectGetRefundInvoicePayment - CRUD: Retrieve a refund invoice payment
-    **/
-    objectGetRefundInvoicePayment(req: operations.ObjectGetRefundInvoicePaymentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGetRefundInvoicePaymentResponse>;
+     * CRUD: Retrieve a refund invoice payment
+     */
+    objectGETRefundInvoicePayment(req: operations.ObjectGETRefundInvoicePaymentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGETRefundInvoicePaymentResponse>;
 }

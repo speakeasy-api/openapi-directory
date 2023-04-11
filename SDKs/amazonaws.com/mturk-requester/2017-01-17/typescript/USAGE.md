@@ -1,32 +1,32 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AcceptQualificationRequestRequest, AcceptQualificationRequestResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  AcceptQualificationRequestRequest,
+  AcceptQualificationRequestResponse,
+  AcceptQualificationRequestXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    hmac: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: AcceptQualificationRequestRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "MTurkRequesterServiceV20170117.AcceptQualificationRequest",
+  acceptQualificationRequestRequest: {
+    integerValue: 548814,
+    qualificationRequestId: "provident",
   },
-  request: {
-    integerValue: 8274930044578894929,
-    qualificationRequestId: "et",
-  },
+  xAmzAlgorithm: "distinctio",
+  xAmzContentSha256: "quibusdam",
+  xAmzCredential: "unde",
+  xAmzDate: "nulla",
+  xAmzSecurityToken: "corrupti",
+  xAmzSignature: "illum",
+  xAmzSignedHeaders: "vel",
+  xAmzTarget: AcceptQualificationRequestXAmzTargetEnum.MTurkRequesterServiceV20170117AcceptQualificationRequest,
 };
 
 sdk.acceptQualificationRequest(req).then((res: AcceptQualificationRequestResponse | AxiosError) => {

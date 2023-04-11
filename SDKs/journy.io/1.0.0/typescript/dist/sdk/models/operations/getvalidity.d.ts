@@ -1,72 +1,92 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
+export declare class GetValidity500ApplicationJSONMeta extends SpeakeasyBase {
+    requestId: string;
+    status: number;
+}
+/**
+ * The message specifies what is done
+ */
+export declare class GetValidity500ApplicationJSON extends SpeakeasyBase {
+    message: string;
+    meta: GetValidity500ApplicationJSONMeta;
+}
+export declare class GetValidity429ApplicationJSONMeta extends SpeakeasyBase {
+    requestId: string;
+    status: number;
+}
+/**
+ * The message specifies what is done
+ */
+export declare class GetValidity429ApplicationJSON extends SpeakeasyBase {
+    message: string;
+    meta: GetValidity429ApplicationJSONMeta;
+}
+export declare class GetValidity403ApplicationJSONMeta extends SpeakeasyBase {
+    requestId: string;
+    status: number;
+}
+/**
+ * The message specifies what is done
+ */
+export declare class GetValidity403ApplicationJSON extends SpeakeasyBase {
+    message: string;
+    meta: GetValidity403ApplicationJSONMeta;
+}
+export declare class GetValidity401ApplicationJSONMeta extends SpeakeasyBase {
+    requestId: string;
+    status: number;
+}
+/**
+ * The message specifies what is done
+ */
+export declare class GetValidity401ApplicationJSON extends SpeakeasyBase {
+    message: string;
+    meta: GetValidity401ApplicationJSONMeta;
+}
 /**
  * Validation of API Key
-**/
-export declare class GetValidity200ApplicationJsonData extends SpeakeasyBase {
+ */
+export declare class GetValidity200ApplicationJSONData extends SpeakeasyBase {
     permissions: string[];
 }
-export declare class GetValidity200ApplicationJsonMeta extends SpeakeasyBase {
+export declare class GetValidity200ApplicationJSONMeta extends SpeakeasyBase {
     requestId: string;
     status: number;
 }
 /**
  * The basic response containing the unique ID of the request and the response status
-**/
-export declare class GetValidity200ApplicationJson extends SpeakeasyBase {
-    data: GetValidity200ApplicationJsonData;
-    meta: GetValidity200ApplicationJsonMeta;
-}
-export declare class GetValidity401ApplicationJsonMeta extends SpeakeasyBase {
-    requestId: string;
-    status: number;
-}
-/**
- * The error message should specify what cause the error
-**/
-export declare class GetValidity401ApplicationJson extends SpeakeasyBase {
-    message: string;
-    meta: GetValidity401ApplicationJsonMeta;
-}
-export declare class GetValidity403ApplicationJsonMeta extends SpeakeasyBase {
-    requestId: string;
-    status: number;
-}
-/**
- * The error message should specify what cause the error
-**/
-export declare class GetValidity403ApplicationJson extends SpeakeasyBase {
-    message: string;
-    meta: GetValidity403ApplicationJsonMeta;
-}
-export declare class GetValidity429ApplicationJsonMeta extends SpeakeasyBase {
-    requestId: string;
-    status: number;
-}
-/**
- * The error message should specify what cause the error
-**/
-export declare class GetValidity429ApplicationJson extends SpeakeasyBase {
-    message: string;
-    meta: GetValidity429ApplicationJsonMeta;
-}
-export declare class GetValidity500ApplicationJsonMeta extends SpeakeasyBase {
-    requestId: string;
-    status: number;
-}
-/**
- * The error message should specify what cause the error
-**/
-export declare class GetValidity500ApplicationJson extends SpeakeasyBase {
-    message: string;
-    meta: GetValidity500ApplicationJsonMeta;
+ */
+export declare class GetValidity200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Validation of API Key
+     */
+    data: GetValidity200ApplicationJSONData;
+    meta: GetValidity200ApplicationJSONMeta;
 }
 export declare class GetValidityResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
-    getValidity200ApplicationJSONObject?: GetValidity200ApplicationJson;
-    getValidity401ApplicationJSONObject?: GetValidity401ApplicationJson;
-    getValidity403ApplicationJSONObject?: GetValidity403ApplicationJson;
-    getValidity429ApplicationJSONObject?: GetValidity429ApplicationJson;
-    getValidity500ApplicationJSONObject?: GetValidity500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Key validation
+     */
+    getValidity200ApplicationJSONObject?: GetValidity200ApplicationJSON;
+    /**
+     * No API Key was provided or the key is not authorised to perform the action
+     */
+    getValidity401ApplicationJSONObject?: GetValidity401ApplicationJSON;
+    /**
+     * The API Key provided is currently not enabled
+     */
+    getValidity403ApplicationJSONObject?: GetValidity403ApplicationJSON;
+    /**
+     * Too many API requests were send
+     */
+    getValidity429ApplicationJSONObject?: GetValidity429ApplicationJSON;
+    /**
+     * An unexpected error occurred
+     */
+    getValidity500ApplicationJSONObject?: GetValidity500ApplicationJSON;
 }

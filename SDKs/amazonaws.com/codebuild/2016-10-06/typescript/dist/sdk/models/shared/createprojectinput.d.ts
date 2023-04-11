@@ -1,12 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { LogsConfig } from "./logsconfig";
 import { ProjectArtifacts } from "./projectartifacts";
 import { ProjectBuildBatchConfig } from "./projectbuildbatchconfig";
 import { ProjectCache } from "./projectcache";
 import { ProjectEnvironment } from "./projectenvironment";
 import { ProjectFileSystemLocation } from "./projectfilesystemlocation";
-import { LogsConfig } from "./logsconfig";
-import { ProjectSourceVersion } from "./projectsourceversion";
 import { ProjectSource } from "./projectsource";
+import { ProjectSourceVersion } from "./projectsourceversion";
 import { Tag } from "./tag";
 import { VpcConfig } from "./vpcconfig";
 export declare class CreateProjectInput extends SpeakeasyBase {

@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetStopDbClusterActionEnum {
-    StopDbCluster = "StopDBCluster"
+import { AxiosResponse } from "axios";
+export declare enum GETStopDBClusterActionEnum {
+    StopDBCluster = "StopDBCluster"
 }
-export declare enum GetStopDbClusterVersionEnum {
+export declare enum GETStopDBClusterVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class GetStopDbClusterQueryParams extends SpeakeasyBase {
-    action: GetStopDbClusterActionEnum;
+export declare class GETStopDBClusterRequest extends SpeakeasyBase {
+    action: GETStopDBClusterActionEnum;
+    /**
+     * The identifier of the cluster to stop. Example: <code>docdb-2019-05-28-15-24-52</code>
+     */
     dbClusterIdentifier: string;
-    version: GetStopDbClusterVersionEnum;
-}
-export declare class GetStopDbClusterHeaders extends SpeakeasyBase {
+    version: GETStopDBClusterVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetStopDbClusterHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetStopDbClusterRequest extends SpeakeasyBase {
-    queryParams: GetStopDbClusterQueryParams;
-    headers: GetStopDbClusterHeaders;
-}
-export declare class GetStopDbClusterResponse extends SpeakeasyBase {
+export declare class GETStopDBClusterResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,28 +1,39 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetPresenceOfChannelPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetPresenceOfChannelRequest extends SpeakeasyBase {
+    /**
+     * The version of the API you wish to use.
+     */
+    xAblyVersion?: string;
+    /**
+     * The [Channel's ID](https://www.ably.io/documentation/rest/channels).
+     */
     channelId: string;
-}
-export declare class GetPresenceOfChannelQueryParams extends SpeakeasyBase {
     clientId?: string;
     connectionId?: string;
+    /**
+     * The response format you would like
+     */
     format?: shared.ResponseFormatEnum;
     limit?: number;
-}
-export declare class GetPresenceOfChannelHeaders extends SpeakeasyBase {
-    xAblyVersion?: string;
-}
-export declare class GetPresenceOfChannelRequest extends SpeakeasyBase {
-    pathParams: GetPresenceOfChannelPathParams;
-    queryParams: GetPresenceOfChannelQueryParams;
-    headers: GetPresenceOfChannelHeaders;
 }
 export declare class GetPresenceOfChannelResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
+    /**
+     * Error
+     */
     error?: shared.ErrorT;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
+    /**
+     * OK
+     */
     presenceMessages?: shared.PresenceMessage[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
     getPresenceOfChannel200TextHTMLString?: string;
 }

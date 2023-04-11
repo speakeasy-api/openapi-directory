@@ -1,5 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteObjectHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+/**
+ * The reference that identifies an object.
+ */
+export declare class DeleteObjectRequestBodyObjectReference extends SpeakeasyBase {
+    selector?: string;
+}
+export declare class DeleteObjectRequestBody extends SpeakeasyBase {
+    /**
+     * The reference that identifies an object.
+     */
+    objectReference: DeleteObjectRequestBodyObjectReference;
+}
+export declare class DeleteObjectRequest extends SpeakeasyBase {
+    requestBody: DeleteObjectRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -7,32 +21,53 @@ export declare class DeleteObjectHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
+    /**
+     * The Amazon Resource Name (ARN) that is associated with the <a>Directory</a> where the object resides. For more information, see <a>arns</a>.
+     */
     xAmzDataPartition: string;
 }
-/**
- * The reference that identifies an object.
-**/
-export declare class DeleteObjectRequestBodyObjectReference extends SpeakeasyBase {
-    selector?: string;
-}
-export declare class DeleteObjectRequestBody extends SpeakeasyBase {
-    objectReference: DeleteObjectRequestBodyObjectReference;
-}
-export declare class DeleteObjectRequest extends SpeakeasyBase {
-    headers: DeleteObjectHeaders;
-    request: DeleteObjectRequestBody;
-}
 export declare class DeleteObjectResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteObjectResponse?: Record<string, any>;
+    /**
+     * DirectoryNotEnabledException
+     */
     directoryNotEnabledException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidArnException
+     */
     invalidArnException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * ObjectNotDetachedException
+     */
     objectNotDetachedException?: any;
-    resourceNotFoundException?: any;
-    retryableConflictException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * RetryableConflictException
+     */
+    retryableConflictException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

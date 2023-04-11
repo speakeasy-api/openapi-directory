@@ -1,29 +1,31 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class ChangeCallQueueManagerPathParams extends SpeakeasyBase {
-    callQueueId: string;
-}
-export declare class ChangeCallQueueManagerApplicationJson extends SpeakeasyBase {
-    memberId?: string;
-}
-export declare class ChangeCallQueueManagerMultipartFormData extends SpeakeasyBase {
-    memberId?: string;
-}
-export declare class ChangeCallQueueManagerRequests extends SpeakeasyBase {
-    object?: ChangeCallQueueManagerApplicationJson;
-    object1?: ChangeCallQueueManagerMultipartFormData;
-}
+import { AxiosResponse } from "axios";
 export declare class ChangeCallQueueManagerSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
+    oAuth: string;
+}
+export declare class ChangeCallQueueManagerApplicationJSON extends SpeakeasyBase {
+    /**
+     * Unique Identifier (userId) or email address of the user who will be the new call queue manager.
+     */
+    memberId?: string;
 }
 export declare class ChangeCallQueueManagerRequest extends SpeakeasyBase {
-    pathParams: ChangeCallQueueManagerPathParams;
-    request?: ChangeCallQueueManagerRequests;
-    security: ChangeCallQueueManagerSecurity;
+    requestBody?: ChangeCallQueueManagerApplicationJSON;
+    /**
+     * Unique Identifier of the Call Queue.
+     */
+    callQueueId: string;
 }
 export declare class ChangeCallQueueManagerResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * **HTTP Status Code:** `204` **No Content**<br>
+     *
+     * @remarks
+     * Call queue manager changed successfully.
+     */
     changeCallQueueManager204ApplicationJSONAny?: any;
 }

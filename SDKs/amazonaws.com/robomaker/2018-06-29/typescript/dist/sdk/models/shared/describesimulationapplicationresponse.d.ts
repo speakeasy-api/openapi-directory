@@ -4,6 +4,9 @@ import { RenderingEngine } from "./renderingengine";
 import { RobotSoftwareSuite } from "./robotsoftwaresuite";
 import { SimulationSoftwareSuite } from "./simulationsoftwaresuite";
 import { Source } from "./source";
+/**
+ * Success
+ */
 export declare class DescribeSimulationApplicationResponse extends SpeakeasyBase {
     arn?: string;
     environment?: Environment;

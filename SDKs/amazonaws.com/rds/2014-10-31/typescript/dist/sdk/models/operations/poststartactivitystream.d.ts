@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostStartActivityStreamActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTStartActivityStreamActionEnum {
     StartActivityStream = "StartActivityStream"
 }
-export declare enum PostStartActivityStreamVersionEnum {
+export declare enum POSTStartActivityStreamVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class PostStartActivityStreamQueryParams extends SpeakeasyBase {
-    action: PostStartActivityStreamActionEnum;
-    version: PostStartActivityStreamVersionEnum;
-}
-export declare class PostStartActivityStreamHeaders extends SpeakeasyBase {
+export declare class POSTStartActivityStreamRequest extends SpeakeasyBase {
+    action: POSTStartActivityStreamActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTStartActivityStreamVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostStartActivityStreamHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostStartActivityStreamRequest extends SpeakeasyBase {
-    queryParams: PostStartActivityStreamQueryParams;
-    headers: PostStartActivityStreamHeaders;
-    request?: Uint8Array;
-}
-export declare class PostStartActivityStreamResponse extends SpeakeasyBase {
+export declare class POSTStartActivityStreamResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

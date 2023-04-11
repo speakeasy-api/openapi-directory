@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { SuiteDefinitionConfiguration } from "./suitedefinitionconfiguration";
+/**
+ * Success
+ */
 export declare class GetSuiteDefinitionResponse extends SpeakeasyBase {
     createdAt?: Date;
     lastModifiedAt?: Date;

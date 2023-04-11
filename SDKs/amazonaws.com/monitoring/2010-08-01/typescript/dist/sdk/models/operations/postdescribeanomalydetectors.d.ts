@@ -1,15 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeAnomalyDetectorsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeAnomalyDetectorsActionEnum {
     DescribeAnomalyDetectors = "DescribeAnomalyDetectors"
 }
-export declare enum PostDescribeAnomalyDetectorsVersionEnum {
+export declare enum POSTDescribeAnomalyDetectorsVersionEnum {
     TwoThousandAndTen0801 = "2010-08-01"
 }
-export declare class PostDescribeAnomalyDetectorsQueryParams extends SpeakeasyBase {
-    action: PostDescribeAnomalyDetectorsActionEnum;
-    version: PostDescribeAnomalyDetectorsVersionEnum;
-}
-export declare class PostDescribeAnomalyDetectorsHeaders extends SpeakeasyBase {
+export declare class POSTDescribeAnomalyDetectorsRequest extends SpeakeasyBase {
+    action: POSTDescribeAnomalyDetectorsActionEnum;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
+    requestBody?: Uint8Array;
+    version: POSTDescribeAnomalyDetectorsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +26,9 @@ export declare class PostDescribeAnomalyDetectorsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeAnomalyDetectorsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeAnomalyDetectorsQueryParams;
-    headers: PostDescribeAnomalyDetectorsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeAnomalyDetectorsResponse extends SpeakeasyBase {
+export declare class POSTDescribeAnomalyDetectorsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

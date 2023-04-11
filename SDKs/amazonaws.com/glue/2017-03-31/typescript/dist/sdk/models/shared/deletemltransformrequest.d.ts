@@ -1,4 +1,4 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteMlTransformRequest extends SpeakeasyBase {
+export declare class DeleteMLTransformRequest extends SpeakeasyBase {
     transformId: string;
 }

@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Links relevant to the payload
-**/
+ */
 export declare class Links extends SpeakeasyBase {
     first?: string;
     last?: string;

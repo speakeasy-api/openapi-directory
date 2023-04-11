@@ -1,17 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class PostVehiclesVehicleidChargingPathParams extends SpeakeasyBase {
-    vehicleId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PostVehiclesVehicleidChargingSecurity extends SpeakeasyBase {
-    userAccessToken?: shared.SchemeUserAccessToken;
-    userAccessToken1?: shared.SchemeUserAccessToken;
+    userAccessToken?: string;
+    userAccessToken1?: string;
 }
 export declare class PostVehiclesVehicleidChargingRequest extends SpeakeasyBase {
-    pathParams: PostVehiclesVehicleidChargingPathParams;
-    security: PostVehiclesVehicleidChargingSecurity;
+    /**
+     * ID of the Vehicle
+     */
+    vehicleId: string;
 }
 export declare class PostVehiclesVehicleidChargingResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

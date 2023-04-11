@@ -23,3 +23,4 @@ export * from "./analyticsadminpropertiesgoogleadslinksdelete";
 export * from "./analyticsadminpropertiesgoogleadslinkslist";
 export * from "./analyticsadminpropertiesgoogleadslinkspatch";
 export * from "./analyticsadminpropertieslist";
+export * from "./analyticsadminpropertiesrunaccessreport";

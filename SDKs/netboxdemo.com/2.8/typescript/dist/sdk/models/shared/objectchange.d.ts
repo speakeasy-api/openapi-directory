@@ -16,6 +16,12 @@ export declare class ObjectChangeAction extends SpeakeasyBase {
 }
 export declare class ObjectChange extends SpeakeasyBase {
     action?: ObjectChangeAction;
+    /**
+     *
+     * @remarks
+     * Serialize a nested representation of the changed object.
+     *
+     */
     changedObject?: Record<string, string>;
     changedObjectId: number;
     changedObjectType?: string;

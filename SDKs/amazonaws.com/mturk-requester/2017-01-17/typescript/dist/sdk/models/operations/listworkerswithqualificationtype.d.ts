@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListWorkersWithQualificationTypeQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListWorkersWithQualificationTypeXAmzTargetEnum {
     MTurkRequesterServiceV20170117ListWorkersWithQualificationType = "MTurkRequesterServiceV20170117.ListWorkersWithQualificationType"
 }
-export declare class ListWorkersWithQualificationTypeHeaders extends SpeakeasyBase {
+export declare class ListWorkersWithQualificationTypeRequest extends SpeakeasyBase {
+    listWorkersWithQualificationTypeRequest: shared.ListWorkersWithQualificationTypeRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,15 +23,20 @@ export declare class ListWorkersWithQualificationTypeHeaders extends SpeakeasyBa
     xAmzSignedHeaders?: string;
     xAmzTarget: ListWorkersWithQualificationTypeXAmzTargetEnum;
 }
-export declare class ListWorkersWithQualificationTypeRequest extends SpeakeasyBase {
-    queryParams: ListWorkersWithQualificationTypeQueryParams;
-    headers: ListWorkersWithQualificationTypeHeaders;
-    request: shared.ListWorkersWithQualificationTypeRequest;
-}
 export declare class ListWorkersWithQualificationTypeResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     listWorkersWithQualificationTypeResponse?: shared.ListWorkersWithQualificationTypeResponse;
+    /**
+     * RequestError
+     */
     requestError?: any;
+    /**
+     * ServiceFault
+     */
     serviceFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

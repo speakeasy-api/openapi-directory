@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetLexiconPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetLexiconRequest extends SpeakeasyBase {
+    /**
+     * Name of the lexicon.
+     */
     lexiconName: string;
-}
-export declare class GetLexiconHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,14 +14,20 @@ export declare class GetLexiconHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetLexiconRequest extends SpeakeasyBase {
-    pathParams: GetLexiconPathParams;
-    headers: GetLexiconHeaders;
-}
 export declare class GetLexiconResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getLexiconOutput?: shared.GetLexiconOutput;
+    /**
+     * LexiconNotFoundException
+     */
     lexiconNotFoundException?: any;
-    serviceFailureException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceFailureException
+     */
+    serviceFailureException?: any;
 }

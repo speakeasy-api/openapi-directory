@@ -1,25 +1,19 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DeleteApiSpecificationRequest, DeleteApiSpecificationResponse } from "openapi/src/sdk/models/operations";
+import {
+  DeleteAPISpecificationRequest,
+  DeleteAPISpecificationResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: DeleteApiSpecificationRequest = {
-  security: {
-    apiKey: {
-      password: "YOUR_PASSWORD_HERE",
-      username: "YOUR_USERNAME_HERE",
-    },
-  },
-  pathParams: {
-    id: "sit",
-  },
+
+const req: DeleteAPISpecificationRequest = {
+  id: "corrupti",
 };
 
-sdk.apiSpecification.deleteApiSpecification(req).then((res: DeleteApiSpecificationResponse | AxiosError) => {
+sdk.apiSpecification.deleteAPISpecification(req).then((res: DeleteAPISpecificationResponse | AxiosError) => {
    // handle response
 });
 ```

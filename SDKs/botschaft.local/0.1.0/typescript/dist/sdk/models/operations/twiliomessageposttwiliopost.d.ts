@@ -1,15 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class TwilioMessagePostTwilioPostHeaders extends SpeakeasyBase {
-    authorization?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class TwilioMessagePostTwilioPostRequest extends SpeakeasyBase {
-    headers: TwilioMessagePostTwilioPostHeaders;
-    request: shared.TwilioMessageRequest;
+    twilioMessageRequest: shared.TwilioMessageRequest;
+    authorization?: string;
 }
 export declare class TwilioMessagePostTwilioPostResponse extends SpeakeasyBase {
     contentType: string;
-    httpValidationError?: shared.HttpValidationError;
+    /**
+     * Validation Error
+     */
+    httpValidationError?: shared.HTTPValidationError;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful Response
+     */
     twilioMessagePostTwilioPost200ApplicationJSONAny?: any;
 }

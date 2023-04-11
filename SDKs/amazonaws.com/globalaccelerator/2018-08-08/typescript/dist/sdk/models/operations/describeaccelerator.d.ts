@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeAcceleratorXAmzTargetEnum {
     GlobalAcceleratorV20180706DescribeAccelerator = "GlobalAccelerator_V20180706.DescribeAccelerator"
 }
-export declare class DescribeAcceleratorHeaders extends SpeakeasyBase {
+export declare class DescribeAcceleratorRequest extends SpeakeasyBase {
+    describeAcceleratorRequest: shared.DescribeAcceleratorRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class DescribeAcceleratorHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeAcceleratorXAmzTargetEnum;
 }
-export declare class DescribeAcceleratorRequest extends SpeakeasyBase {
-    headers: DescribeAcceleratorHeaders;
-    request: shared.DescribeAcceleratorRequest;
-}
 export declare class DescribeAcceleratorResponse extends SpeakeasyBase {
+    /**
+     * AcceleratorNotFoundException
+     */
     acceleratorNotFoundException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     describeAcceleratorResponse?: shared.DescribeAcceleratorResponse;
+    /**
+     * InternalServiceErrorException
+     */
     internalServiceErrorException?: any;
+    /**
+     * InvalidArgumentException
+     */
     invalidArgumentException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

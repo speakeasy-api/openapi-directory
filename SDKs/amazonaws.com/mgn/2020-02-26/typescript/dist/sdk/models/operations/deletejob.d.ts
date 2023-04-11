@@ -1,5 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteJobHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteJobRequestBody extends SpeakeasyBase {
+    /**
+     * Request to delete Job from service by Job ID.
+     */
+    jobID: string;
+}
+export declare class DeleteJobRequest extends SpeakeasyBase {
+    requestBody: DeleteJobRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -8,18 +16,24 @@ export declare class DeleteJobHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeleteJobRequestBody extends SpeakeasyBase {
-    jobID: string;
-}
-export declare class DeleteJobRequest extends SpeakeasyBase {
-    headers: DeleteJobHeaders;
-    request: DeleteJobRequestBody;
-}
 export declare class DeleteJobResponse extends SpeakeasyBase {
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteJobResponse?: Record<string, any>;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UninitializedAccountException
+     */
     uninitializedAccountException?: any;
 }

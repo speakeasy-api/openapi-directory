@@ -1,116 +1,174 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class PalcsSecurity extends SpeakeasyBase {
+    apiKey: string;
+    clientId: string;
+}
 export declare class PalcsRequestBodyCertificateParameters extends SpeakeasyBase {
+    /**
+     * Application No.
+     */
     applicationNo: string;
+    /**
+     * License No.
+     */
     licenseNo: string;
 }
+/**
+ * The format of the certificate in response.
+ */
 export declare enum PalcsRequestBodyFormatEnum {
     Pdf = "pdf"
 }
+/**
+ * Request format
+ */
 export declare class PalcsRequestBody extends SpeakeasyBase {
     certificateParameters?: PalcsRequestBodyCertificateParameters;
-    consentArtifact?: any;
+    consentArtifact?: shared.ConsentArtifactSchema;
+    /**
+     * The format of the certificate in response.
+     */
     format: PalcsRequestBodyFormatEnum;
+    /**
+     * A unique transaction id for this request in UUID format. It is used for tracking the request.
+     */
     txnId: string;
 }
-export declare class PalcsSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
-    clientId: shared.SchemeClientId;
+export declare enum Palcs504ApplicationJSONErrorEnum {
+    GatewayTimeout = "gateway_timeout"
 }
-export declare enum Palcs400ApplicationJsonErrorEnum {
+export declare enum Palcs504ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
+}
+/**
+ * Gateway timeout
+ */
+export declare class Palcs504ApplicationJSON extends SpeakeasyBase {
+    error?: Palcs504ApplicationJSONErrorEnum;
+    errorDescription?: Palcs504ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Palcs503ApplicationJSONErrorEnum {
+    ServiceUnavailable = "service_unavailable"
+}
+export declare enum Palcs503ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
+}
+/**
+ * Service unavailable
+ */
+export declare class Palcs503ApplicationJSON extends SpeakeasyBase {
+    error?: Palcs503ApplicationJSONErrorEnum;
+    errorDescription?: Palcs503ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Palcs502ApplicationJSONErrorEnum {
+    BadGatewy = "bad_gatewy"
+}
+export declare enum Palcs502ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
+}
+/**
+ * Bad gateway
+ */
+export declare class Palcs502ApplicationJSON extends SpeakeasyBase {
+    error?: Palcs502ApplicationJSONErrorEnum;
+    errorDescription?: Palcs502ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Palcs500ApplicationJSONErrorEnum {
+    InternalServerError = "internal_server_error"
+}
+export declare enum Palcs500ApplicationJSONErrorDescriptionEnum {
+    InternalServerError = "Internal server error"
+}
+/**
+ * Internal server error
+ */
+export declare class Palcs500ApplicationJSON extends SpeakeasyBase {
+    error?: Palcs500ApplicationJSONErrorEnum;
+    errorDescription?: Palcs500ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Palcs404ApplicationJSONErrorEnum {
+    RecordNotFound = "record_not_found",
+    UrlNotFound = "url_not_found"
+}
+export declare enum Palcs404ApplicationJSONErrorDescriptionEnum {
+    NoRecordFound = "No record found",
+    YourAPIUrlOrPathIsIncorrect = "Your API url or path is incorrect"
+}
+/**
+ * No record found
+ */
+export declare class Palcs404ApplicationJSON extends SpeakeasyBase {
+    error?: Palcs404ApplicationJSONErrorEnum;
+    errorDescription?: Palcs404ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Palcs401ApplicationJSONErrorEnum {
+    InvalidAuthentication = "invalid_authentication",
+    InvalidAuthorization = "invalid_authorization"
+}
+export declare enum Palcs401ApplicationJSONErrorDescriptionEnum {
+    AuthenticationFailed = "Authentication failed",
+    YouAreNotAuthorizedToUseThisAPI = "You are not authorized to use this API"
+}
+/**
+ * Unauthorized access
+ */
+export declare class Palcs401ApplicationJSON extends SpeakeasyBase {
+    error?: Palcs401ApplicationJSONErrorEnum;
+    errorDescription?: Palcs401ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Palcs400ApplicationJSONErrorEnum {
     MissingParameter = "missing_parameter",
     InvalidParameter = "invalid_parameter",
     InvalidFormat = "invalid_format",
     InvalidTxnid = "invalid_txnid",
     InvalidConsentid = "invalid_consentid"
 }
-export declare enum Palcs400ApplicationJsonErrorDescriptionEnum {
+export declare enum Palcs400ApplicationJSONErrorDescriptionEnum {
     PleaseProvideAllMandatoryParameters = "Please provide all mandatory parameters",
     BadRequest = "Bad request",
     TheFormatParameterIsInvalid = "The format parameter is invalid",
-    TheTxnIdParameterMustBeInUuidFormat = "The txnId parameter must be in UUID format",
-    TheConsentIdParameterMustBeInUuidFormat = "The consentId parameter must be in UUID format"
+    TheTxnIdParameterMustBeInUUIDFormat = "The txnId parameter must be in UUID format",
+    TheConsentIdParameterMustBeInUUIDFormat = "The consentId parameter must be in UUID format"
 }
-export declare class Palcs400ApplicationJson extends SpeakeasyBase {
-    error?: Palcs400ApplicationJsonErrorEnum;
-    errorDescription?: Palcs400ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Palcs401ApplicationJsonErrorEnum {
-    InvalidAuthentication = "invalid_authentication",
-    InvalidAuthorization = "invalid_authorization"
-}
-export declare enum Palcs401ApplicationJsonErrorDescriptionEnum {
-    AuthenticationFailed = "Authentication failed",
-    YouAreNotAuthorizedToUseThisApi = "You are not authorized to use this API"
-}
-export declare class Palcs401ApplicationJson extends SpeakeasyBase {
-    error?: Palcs401ApplicationJsonErrorEnum;
-    errorDescription?: Palcs401ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Palcs404ApplicationJsonErrorEnum {
-    RecordNotFound = "record_not_found",
-    UrlNotFound = "url_not_found"
-}
-export declare enum Palcs404ApplicationJsonErrorDescriptionEnum {
-    NoRecordFound = "No record found",
-    YourApiUrlOrPathIsIncorrect = "Your API url or path is incorrect"
-}
-export declare class Palcs404ApplicationJson extends SpeakeasyBase {
-    error?: Palcs404ApplicationJsonErrorEnum;
-    errorDescription?: Palcs404ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Palcs500ApplicationJsonErrorEnum {
-    InternalServerError = "internal_server_error"
-}
-export declare enum Palcs500ApplicationJsonErrorDescriptionEnum {
-    InternalServerError = "Internal server error"
-}
-export declare class Palcs500ApplicationJson extends SpeakeasyBase {
-    error?: Palcs500ApplicationJsonErrorEnum;
-    errorDescription?: Palcs500ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Palcs502ApplicationJsonErrorEnum {
-    BadGatewy = "bad_gatewy"
-}
-export declare enum Palcs502ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
-}
-export declare class Palcs502ApplicationJson extends SpeakeasyBase {
-    error?: Palcs502ApplicationJsonErrorEnum;
-    errorDescription?: Palcs502ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Palcs503ApplicationJsonErrorEnum {
-    ServiceUnavailable = "service_unavailable"
-}
-export declare enum Palcs503ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
-}
-export declare class Palcs503ApplicationJson extends SpeakeasyBase {
-    error?: Palcs503ApplicationJsonErrorEnum;
-    errorDescription?: Palcs503ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Palcs504ApplicationJsonErrorEnum {
-    GatewayTimeout = "gateway_timeout"
-}
-export declare enum Palcs504ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
-}
-export declare class Palcs504ApplicationJson extends SpeakeasyBase {
-    error?: Palcs504ApplicationJsonErrorEnum;
-    errorDescription?: Palcs504ApplicationJsonErrorDescriptionEnum;
-}
-export declare class PalcsRequest extends SpeakeasyBase {
-    request?: PalcsRequestBody;
-    security: PalcsSecurity;
+/**
+ * Bad request
+ */
+export declare class Palcs400ApplicationJSON extends SpeakeasyBase {
+    error?: Palcs400ApplicationJSONErrorEnum;
+    errorDescription?: Palcs400ApplicationJSONErrorDescriptionEnum;
 }
 export declare class PalcsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    palcs400ApplicationJSONObject?: Palcs400ApplicationJson;
-    palcs401ApplicationJSONObject?: Palcs401ApplicationJson;
-    palcs404ApplicationJSONObject?: Palcs404ApplicationJson;
-    palcs500ApplicationJSONObject?: Palcs500ApplicationJson;
-    palcs502ApplicationJSONObject?: Palcs502ApplicationJson;
-    palcs503ApplicationJSONObject?: Palcs503ApplicationJson;
-    palcs504ApplicationJSONObject?: Palcs504ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad request
+     */
+    palcs400ApplicationJSONObject?: Palcs400ApplicationJSON;
+    /**
+     * Unauthorized access
+     */
+    palcs401ApplicationJSONObject?: Palcs401ApplicationJSON;
+    /**
+     * No record found
+     */
+    palcs404ApplicationJSONObject?: Palcs404ApplicationJSON;
+    /**
+     * Internal server error
+     */
+    palcs500ApplicationJSONObject?: Palcs500ApplicationJSON;
+    /**
+     * Bad gateway
+     */
+    palcs502ApplicationJSONObject?: Palcs502ApplicationJSON;
+    /**
+     * Service unavailable
+     */
+    palcs503ApplicationJSONObject?: Palcs503ApplicationJSON;
+    /**
+     * Gateway timeout
+     */
+    palcs504ApplicationJSONObject?: Palcs504ApplicationJSON;
 }

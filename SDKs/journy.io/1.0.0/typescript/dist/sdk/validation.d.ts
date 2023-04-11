@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Endpoints for validating API keys.
+ */
 export declare class Validation {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,10 @@ export declare class Validation {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getValidity - Validate API key
+     * Validate API key
      *
+     * @remarks
      * Endpoint used to test the validity and some basic information about a specific API Key.
-    **/
+     */
     getValidity(config?: AxiosRequestConfig): Promise<operations.GetValidityResponse>;
 }

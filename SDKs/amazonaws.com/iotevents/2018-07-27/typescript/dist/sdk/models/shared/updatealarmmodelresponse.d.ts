@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { AlarmModelVersionStatusEnum } from "./alarmmodelversionstatusenum";
+/**
+ * Success
+ */
 export declare class UpdateAlarmModelResponse extends SpeakeasyBase {
     alarmModelArn?: string;
     alarmModelVersion?: string;

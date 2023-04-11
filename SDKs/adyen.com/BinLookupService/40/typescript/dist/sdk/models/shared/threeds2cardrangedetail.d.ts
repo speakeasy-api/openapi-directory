@@ -1,0 +1,23 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+export declare class ThreeDs2CardRangeDetail extends SpeakeasyBase {
+    /**
+     * Card brand.
+     */
+    brandCode?: string;
+    /**
+     * BIN end range.
+     */
+    endRange?: string;
+    /**
+     * BIN start range.
+     */
+    startRange?: string;
+    /**
+     * 3D Secure protocol version.
+     */
+    threeDs2Version?: string;
+    /**
+     * In a 3D Secure 2 browser-based flow, this is the URL where you should send the device fingerprint to.
+     */
+    threeDSMethodURL?: string;
+}

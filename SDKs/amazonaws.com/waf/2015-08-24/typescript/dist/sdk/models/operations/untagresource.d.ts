@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UntagResourceXAmzTargetEnum {
-    Awswaf20150824UntagResource = "AWSWAF_20150824.UntagResource"
+    AWSWAF20150824UntagResource = "AWSWAF_20150824.UntagResource"
 }
-export declare class UntagResourceHeaders extends SpeakeasyBase {
+export declare class UntagResourceRequest extends SpeakeasyBase {
+    untagResourceRequest: shared.UntagResourceRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class UntagResourceHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UntagResourceXAmzTargetEnum;
 }
-export declare class UntagResourceRequest extends SpeakeasyBase {
-    headers: UntagResourceHeaders;
-    request: shared.UntagResourceRequest;
-}
 export declare class UntagResourceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     untagResourceResponse?: Record<string, any>;
+    /**
+     * WAFBadRequestException
+     */
     wafBadRequestException?: any;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFInvalidParameterException
+     */
     wafInvalidParameterException?: any;
+    /**
+     * WAFNonexistentItemException
+     */
     wafNonexistentItemException?: any;
+    /**
+     * WAFTagOperationException
+     */
     wafTagOperationException?: any;
+    /**
+     * WAFTagOperationInternalErrorException
+     */
     wafTagOperationInternalErrorException?: any;
 }

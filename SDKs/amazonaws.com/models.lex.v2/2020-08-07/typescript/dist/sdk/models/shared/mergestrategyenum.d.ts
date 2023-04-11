@@ -1,4 +1,5 @@
 export declare enum MergeStrategyEnum {
     Overwrite = "Overwrite",
-    FailOnConflict = "FailOnConflict"
+    FailOnConflict = "FailOnConflict",
+    Append = "Append"
 }

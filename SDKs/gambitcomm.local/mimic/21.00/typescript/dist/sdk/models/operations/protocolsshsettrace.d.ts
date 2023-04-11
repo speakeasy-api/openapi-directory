@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolSshSetTracePathParams extends SpeakeasyBase {
-    agentNum: number;
-    enableOrNot: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolSshSetTraceRequest extends SpeakeasyBase {
-    pathParams: ProtocolSshSetTracePathParams;
+    /**
+     * Agent to set the SSH tracing
+     */
+    agentNum: number;
+    /**
+     * Value to set the SSH tracing
+     */
+    enableOrNot: string;
 }
 export declare class ProtocolSshSetTraceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolSshSetTrace200ApplicationJSONString?: string;
 }

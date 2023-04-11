@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ProfilesSecurity extends SpeakeasyBase {
-    basicAuth: shared.SchemeBasicAuth;
-}
-export declare class ProfilesRequest extends SpeakeasyBase {
-    security: ProfilesSecurity;
-}
+import { AxiosResponse } from "axios";
 export declare class ProfilesResponse extends SpeakeasyBase {
-    accessDenied?: any;
+    /**
+     * Access denied. Auth error.
+     */
+    accessDenied?: shared.AccessDenied;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     profiles?: shared.Profiles;
 }

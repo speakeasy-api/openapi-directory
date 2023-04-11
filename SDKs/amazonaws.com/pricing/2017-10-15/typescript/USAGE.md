@@ -1,38 +1,36 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DescribeServicesRequest, DescribeServicesResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  DescribeServicesRequest,
+  DescribeServicesResponse,
+  DescribeServicesXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    hmac: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: DescribeServicesRequest = {
-  queryParams: {
-    maxResults: "sit",
-    nextToken: "voluptas",
+  describeServicesRequest: {
+    formatVersion: "corrupti",
+    maxResults: 592845,
+    nextToken: "distinctio",
+    serviceCode: "quibusdam",
   },
-  headers: {
-    xAmzAlgorithm: "culpa",
-    xAmzContentSha256: "expedita",
-    xAmzCredential: "consequuntur",
-    xAmzDate: "dolor",
-    xAmzSecurityToken: "expedita",
-    xAmzSignature: "voluptas",
-    xAmzSignedHeaders: "fugit",
-    xAmzTarget: "AWSPriceListService.DescribeServices",
-  },
-  request: {
-    formatVersion: "nihil",
-    maxResults: 8325060299420976708,
-    nextToken: "dicta",
-    serviceCode: "debitis",
-  },
+  maxResults: "unde",
+  nextToken: "nulla",
+  xAmzAlgorithm: "corrupti",
+  xAmzContentSha256: "illum",
+  xAmzCredential: "vel",
+  xAmzDate: "error",
+  xAmzSecurityToken: "deserunt",
+  xAmzSignature: "suscipit",
+  xAmzSignedHeaders: "iure",
+  xAmzTarget: DescribeServicesXAmzTargetEnum.AWSPriceListServiceDescribeServices,
 };
 
 sdk.describeServices(req).then((res: DescribeServicesResponse | AxiosError) => {

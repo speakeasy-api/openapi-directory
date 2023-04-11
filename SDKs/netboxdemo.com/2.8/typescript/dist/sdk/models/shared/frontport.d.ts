@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { FrontPortRearPort } from "./frontportrearport";
 import { NestedCable } from "./nestedcable";
 import { NestedDevice } from "./nesteddevice";
-import { FrontPortRearPort } from "./frontportrearport";
 export declare enum FrontPortTypeLabelEnum {
     EightP8C = "8P8C",
     OneHundredAndTenPunch = "110 Punch",

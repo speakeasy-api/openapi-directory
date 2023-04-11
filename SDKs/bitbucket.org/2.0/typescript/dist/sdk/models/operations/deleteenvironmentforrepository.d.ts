@@ -1,14 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteEnvironmentForRepositoryPathParams extends SpeakeasyBase {
-    environmentUuid: string;
-    repoSlug: string;
-    workspace: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteEnvironmentForRepositoryRequest extends SpeakeasyBase {
-    pathParams: DeleteEnvironmentForRepositoryPathParams;
+    /**
+     * The environment UUID.
+     */
+    environmentUuid: string;
+    /**
+     * The repository.
+     */
+    repoSlug: string;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
+     */
+    workspace: string;
 }
 export declare class DeleteEnvironmentForRepositoryResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * No account or repository with the UUID provided exists.
+     */
     error?: Record<string, any>;
 }

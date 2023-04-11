@@ -1,18 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PublishMockPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class PublishMockRequest extends SpeakeasyBase {
     mockUid: string;
 }
-export declare class PublishMock200ApplicationJsonMock extends SpeakeasyBase {
+export declare class PublishMock200ApplicationJSONMock extends SpeakeasyBase {
     id?: string;
 }
-export declare class PublishMock200ApplicationJson extends SpeakeasyBase {
-    mock?: PublishMock200ApplicationJsonMock;
-}
-export declare class PublishMockRequest extends SpeakeasyBase {
-    pathParams: PublishMockPathParams;
+/**
+ * Success Response
+ */
+export declare class PublishMock200ApplicationJSON extends SpeakeasyBase {
+    mock?: PublishMock200ApplicationJSONMock;
 }
 export declare class PublishMockResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    publishMock200ApplicationJSONObject?: PublishMock200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success Response
+     */
+    publishMock200ApplicationJSONObject?: PublishMock200ApplicationJSON;
 }

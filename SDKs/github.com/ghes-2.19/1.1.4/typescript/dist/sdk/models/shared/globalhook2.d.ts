@@ -4,6 +4,9 @@ export declare class GlobalHook2Config extends SpeakeasyBase {
     insecureSsl?: string;
     url?: string;
 }
+/**
+ * Response
+ */
 export declare class GlobalHook2 extends SpeakeasyBase {
     active?: boolean;
     config?: GlobalHook2Config;

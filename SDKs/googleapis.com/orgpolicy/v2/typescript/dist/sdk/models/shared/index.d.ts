@@ -11,5 +11,4 @@ export * from "./googlecloudorgpolicyv2policyspec";
 export * from "./googlecloudorgpolicyv2policyspecpolicyrule";
 export * from "./googlecloudorgpolicyv2policyspecpolicyrulestringvalues";
 export * from "./googletypeexpr";
-export * from "./security";
 export * from "./xgafvenum";

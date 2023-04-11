@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostUpdateEnvironmentActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTUpdateEnvironmentActionEnum {
     UpdateEnvironment = "UpdateEnvironment"
 }
-export declare enum PostUpdateEnvironmentVersionEnum {
+export declare enum POSTUpdateEnvironmentVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostUpdateEnvironmentQueryParams extends SpeakeasyBase {
-    action: PostUpdateEnvironmentActionEnum;
-    version: PostUpdateEnvironmentVersionEnum;
-}
-export declare class PostUpdateEnvironmentHeaders extends SpeakeasyBase {
+export declare class POSTUpdateEnvironmentRequest extends SpeakeasyBase {
+    action: POSTUpdateEnvironmentActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTUpdateEnvironmentVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostUpdateEnvironmentHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostUpdateEnvironmentRequest extends SpeakeasyBase {
-    queryParams: PostUpdateEnvironmentQueryParams;
-    headers: PostUpdateEnvironmentHeaders;
-    request?: Uint8Array;
-}
-export declare class PostUpdateEnvironmentResponse extends SpeakeasyBase {
+export declare class POSTUpdateEnvironmentResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

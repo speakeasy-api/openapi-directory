@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { MetricDatapoint } from "./metricdatapoint";
 import { LoadBalancerMetricNameEnum } from "./loadbalancermetricnameenum";
+import { MetricDatapoint } from "./metricdatapoint";
+/**
+ * Success
+ */
 export declare class GetLoadBalancerMetricDataResult extends SpeakeasyBase {
     metricData?: MetricDatapoint[];
     metricName?: LoadBalancerMetricNameEnum;

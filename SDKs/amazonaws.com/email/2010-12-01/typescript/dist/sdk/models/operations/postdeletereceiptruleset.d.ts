@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteReceiptRuleSetActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteReceiptRuleSetActionEnum {
     DeleteReceiptRuleSet = "DeleteReceiptRuleSet"
 }
-export declare enum PostDeleteReceiptRuleSetVersionEnum {
+export declare enum POSTDeleteReceiptRuleSetVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostDeleteReceiptRuleSetQueryParams extends SpeakeasyBase {
-    action: PostDeleteReceiptRuleSetActionEnum;
-    version: PostDeleteReceiptRuleSetVersionEnum;
-}
-export declare class PostDeleteReceiptRuleSetHeaders extends SpeakeasyBase {
+export declare class POSTDeleteReceiptRuleSetRequest extends SpeakeasyBase {
+    action: POSTDeleteReceiptRuleSetActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteReceiptRuleSetVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteReceiptRuleSetHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteReceiptRuleSetRequest extends SpeakeasyBase {
-    queryParams: PostDeleteReceiptRuleSetQueryParams;
-    headers: PostDeleteReceiptRuleSetHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteReceiptRuleSetResponse extends SpeakeasyBase {
+export declare class POSTDeleteReceiptRuleSetResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

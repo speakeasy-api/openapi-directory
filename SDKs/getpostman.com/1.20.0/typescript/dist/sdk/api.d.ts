@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Api {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class Api {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createApi - Create API
+     * Create API
      *
+     * @remarks
      * This call creates a new API with a default API Version.
      *
      * Request body should contain an `api` object which should atleast have a property `name`.
@@ -18,11 +19,12 @@ export declare class Api {
      * Response contains an `api` object with all the details related to the created API, namely, `id`, `name`, `summary`, `description`, etc.
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
+     */
     createApi(req: operations.CreateApiRequest, config?: AxiosRequestConfig): Promise<operations.CreateApiResponse>;
     /**
-     * createApiVersion - Create API Version
+     * Create API Version
      *
+     * @remarks
      * This call creates a new API version in the specified API.
      *
      * Request body should contain a `version` object which should have fields:
@@ -59,11 +61,12 @@ export declare class Api {
      * Response contains a `version` object with all the details related to the created API Version, namely, `id`, `name`, `api`.
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
+     */
     createApiVersion(req: operations.CreateApiVersionRequest, config?: AxiosRequestConfig): Promise<operations.CreateApiVersionResponse>;
     /**
-     * createCollectionFromSchema - Create collection from schema
+     * Create collection from schema
      *
+     * @remarks
      * This call creates a collection and links it to an API as one or multiple relations.
      *
      * Request body requires two keys:
@@ -73,11 +76,12 @@ export declare class Api {
      * The allowed relation types are `contracttest`, `integrationtest`, `testsuite`, and `documentation`.
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
+     */
     createCollectionFromSchema(req: operations.CreateCollectionFromSchemaRequest, config?: AxiosRequestConfig): Promise<operations.CreateCollectionFromSchemaResponse>;
     /**
-     * createRelations - Create relations
+     * Create relations
      *
+     * @remarks
      * This call allows you to add existing Postman entities as new relations to an API. The request body should contain the relations to be created along with an array of entity IDs.
      *
      * <table>
@@ -116,11 +120,12 @@ export declare class Api {
      * </table>
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
+     */
     createRelations(req: operations.CreateRelationsRequest, config?: AxiosRequestConfig): Promise<operations.CreateRelationsResponse>;
     /**
-     * createSchema - Create Schema
+     * Create Schema
      *
+     * @remarks
      * This call creates a new schema.
      *
      * Request body should contain a `schema` object which should atleast have these properties with `string` values:
@@ -132,160 +137,176 @@ export declare class Api {
      * Response contains a `schema` object with all the details related to the created schema, namely, `id`, `language`, `type` etc.
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
+     */
     createSchema(req: operations.CreateSchemaRequest, config?: AxiosRequestConfig): Promise<operations.CreateSchemaResponse>;
     /**
-     * deleteAnApi - Delete an API
+     * Delete an API
      *
+     * @remarks
      * This call deletes an existing API having the specified id.
      *
      * Response contains an `api` object with `id` of the API which was deleted.
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
+     */
     deleteAnApi(req: operations.DeleteAnApiRequest, config?: AxiosRequestConfig): Promise<operations.DeleteAnApiResponse>;
     /**
-     * deleteAnApiVersion - Delete an API Version
+     * Delete an API Version
      *
+     * @remarks
      * This call deletes an existing API Version having the specified id.
      *
      * Response contains an `version` object with `id` of the API Version which was deleted.
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
+     */
     deleteAnApiVersion(req: operations.DeleteAnApiVersionRequest, config?: AxiosRequestConfig): Promise<operations.DeleteAnApiVersionResponse>;
     /**
-     * getAllApIs - Get all APIs
+     * Get all APIs
      *
+     * @remarks
      * This call fetches all the APIs present in the specified workspace
      *
      * Response contains an array named `apis` which would contain all the details of APIs present in the workspace.
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
+     */
     getAllApIs(req: operations.GetAllApIsRequest, config?: AxiosRequestConfig): Promise<operations.GetAllApIsResponse>;
     /**
-     * getAllApiVersions - Get All API Versions
+     * Get All API Versions
      *
+     * @remarks
      * This call fetches details about the all the API Versions in the specified API.
      *
      * The response will contain an array `versions` object which would be a list of all the API Version along with their details.
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
+     */
     getAllApiVersions(req: operations.GetAllApiVersionsRequest, config?: AxiosRequestConfig): Promise<operations.GetAllApiVersionsResponse>;
     /**
-     * getAnApiVersion - Get an API Version
+     * Get an API Version
      *
+     * @remarks
      * This call fetches details about the specified API Version.
      *
      * The response will contain a `version` object which would contain all the details of the API Version.
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
+     */
     getAnApiVersion(req: operations.GetAnApiVersionRequest, config?: AxiosRequestConfig): Promise<operations.GetAnApiVersionResponse>;
     /**
-     * getContractTestRelations - Get contract test relations
+     * Get contract test relations
      *
+     * @remarks
      * This call fetches all the relations by type which are linked to the specified API version along with their details.
      *
      * The response will contain an array with key `{{relationType}}`. Each of the item will consist of all the details related each of the relation.
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
+     */
     getContractTestRelations(req: operations.GetContractTestRelationsRequest, config?: AxiosRequestConfig): Promise<operations.GetContractTestRelationsResponse>;
     /**
-     * getDocumentationRelations - Get  documentation relations
+     * Get  documentation relations
      *
+     * @remarks
      * This call fetches all the relations by type which are linked to the specified API version along with their details.
      *
      * The response will contain an array with key `{{relationType}}`. Each of the item will consist of all the details related each of the relation.
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
+     */
     getDocumentationRelations(req: operations.GetDocumentationRelationsRequest, config?: AxiosRequestConfig): Promise<operations.GetDocumentationRelationsResponse>;
     /**
-     * getEnvironmentRelations - Get environment relations
+     * Get environment relations
      *
+     * @remarks
      * This call fetches all the relations by type which are linked to the specified API version along with their details.
      *
      * The response will contain an array with key `{{relationType}}`. Each of the item will consist of all the details related each of the relation.
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
+     */
     getEnvironmentRelations(req: operations.GetEnvironmentRelationsRequest, config?: AxiosRequestConfig): Promise<operations.GetEnvironmentRelationsResponse>;
     /**
-     * getIntegrationTestRelations - Get integration test relations
+     * Get integration test relations
      *
+     * @remarks
      * This call fetches all the relations by type which are linked to the specified API version along with their details.
      *
      * The response will contain an array with key `{{relationType}}`. Each of the item will consist of all the details related each of the relation.
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
+     */
     getIntegrationTestRelations(req: operations.GetIntegrationTestRelationsRequest, config?: AxiosRequestConfig): Promise<operations.GetIntegrationTestRelationsResponse>;
     /**
-     * getLinkedRelations - Get linked relations
+     * Get linked relations
      *
+     * @remarks
      * This call fetches all the relations which are linked to the specified API version along with their details.
      *
      * The response will contain a `relations` object which lists all the relation types which are linked to the API version. Each of the relation type will be an object which details the relations of this type.
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
+     */
     getLinkedRelations(req: operations.GetLinkedRelationsRequest, config?: AxiosRequestConfig): Promise<operations.GetLinkedRelationsResponse>;
     /**
-     * getMonitorRelations - Get monitor relations
+     * Get monitor relations
      *
+     * @remarks
      * This call fetches all the relations by type which are linked to the specified API version along with their details.
      *
      * The response will contain an array with key `{{relationType}}`. Each of the item will consist of all the details related each of the relation.
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
+     */
     getMonitorRelations(req: operations.GetMonitorRelationsRequest, config?: AxiosRequestConfig): Promise<operations.GetMonitorRelationsResponse>;
     /**
-     * getSchema - Get Schema
+     * Get Schema
      *
+     * @remarks
      * This call fetches a single schema having the specified id.
      *
      * Response contains a `schema` object with all the details related to the schema, namely, `id`, `language`, `type`, `schema` etc.
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
+     */
     getSchema(req: operations.GetSchemaRequest, config?: AxiosRequestConfig): Promise<operations.GetSchemaResponse>;
     /**
-     * getTestSuiteRelations - Get test suite relations
+     * Get test suite relations
      *
+     * @remarks
      * This call fetches all the relations by type which are linked to the specified API version along with their details.
      *
      * The response will contain an array with key `{{relationType}}`. Each of the item will consist of all the details related each of the relation.
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
+     */
     getTestSuiteRelations(req: operations.GetTestSuiteRelationsRequest, config?: AxiosRequestConfig): Promise<operations.GetTestSuiteRelationsResponse>;
     /**
-     * singleApi - Single API
+     * Single API
      *
+     * @remarks
      * This call fetches a single API having the specified id.
      *
      * Response contains an `api` object with all the details related to the queried API, namely, `id`, `name`, `summary`, `description` etc.
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
+     */
     singleApi(req: operations.SingleApiRequest, config?: AxiosRequestConfig): Promise<operations.SingleApiResponse>;
     /**
-     * syncRelationsWithSchema - Sync relations with schema
+     * Sync relations with schema
      *
+     * @remarks
      * This call allows you to keep the relation in sync with the API schema.
      *
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
+     */
     syncRelationsWithSchema(req: operations.SyncRelationsWithSchemaRequest, config?: AxiosRequestConfig): Promise<operations.SyncRelationsWithSchemaResponse>;
     /**
-     * updateAnApi - Update an API
+     * Update an API
      *
+     * @remarks
      * This call updates an existing API .
      *
      * Request body should contain an `api` object which should have the fields to be updated. Only `name`, `summary` and `description` fields can be edited for an API.
@@ -293,11 +314,12 @@ export declare class Api {
      * Response contains an `api` object with all the details related to the created API, namely, `id`, `name`, `summary`, `description` etc.
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
+     */
     updateAnApi(req: operations.UpdateAnApiRequest, config?: AxiosRequestConfig): Promise<operations.UpdateAnApiResponse>;
     /**
-     * updateAnApiVersion - Update an API Version
+     * Update an API Version
      *
+     * @remarks
      * This call updates an existing API Version.
      *
      * Request body should contain a `version` object with the fields which need to be updated. Only field which can be updated is `name`.
@@ -305,11 +327,12 @@ export declare class Api {
      * Response contains a `version` object with all the details related to the created API Version, namely, `id`, `name`, `api` etc.
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
+     */
     updateAnApiVersion(req: operations.UpdateAnApiVersionRequest, config?: AxiosRequestConfig): Promise<operations.UpdateAnApiVersionResponse>;
     /**
-     * updateSchema - Update Schema
+     * Update Schema
      *
+     * @remarks
      * This call updates an existing schema.
      *
      * Request body should contain a `schema` object which should atleast have these properties with `string` values:
@@ -321,6 +344,6 @@ export declare class Api {
      * Response contains a `schema` object with all the details related to the created schema, namely, `id`, `language`, `type` etc.
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
+     */
     updateSchema(req: operations.UpdateSchemaRequest, config?: AxiosRequestConfig): Promise<operations.UpdateSchemaResponse>;
 }

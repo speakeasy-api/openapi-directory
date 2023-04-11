@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum CreateEventTrackerXAmzTargetEnum {
     AmazonPersonalizeCreateEventTracker = "AmazonPersonalize.CreateEventTracker"
 }
-export declare class CreateEventTrackerHeaders extends SpeakeasyBase {
+export declare class CreateEventTrackerRequest extends SpeakeasyBase {
+    createEventTrackerRequest: shared.CreateEventTrackerRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,36 @@ export declare class CreateEventTrackerHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: CreateEventTrackerXAmzTargetEnum;
 }
-export declare class CreateEventTrackerRequest extends SpeakeasyBase {
-    headers: CreateEventTrackerHeaders;
-    request: shared.CreateEventTrackerRequest;
-}
 export declare class CreateEventTrackerResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     createEventTrackerResponse?: shared.CreateEventTrackerResponse;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
-    resourceAlreadyExistsException?: any;
+    /**
+     * ResourceInUseException
+     */
     resourceInUseException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceAlreadyExistsException
+     */
+    resourceAlreadyExistsException?: any;
+    /**
+     * TooManyTagsException
+     */
+    tooManyTagsException?: any;
 }

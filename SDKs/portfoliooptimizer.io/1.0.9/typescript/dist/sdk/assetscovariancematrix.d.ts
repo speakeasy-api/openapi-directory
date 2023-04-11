@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class AssetsCovarianceMatrix {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,38 +9,50 @@ export declare class AssetsCovarianceMatrix {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * postAssetsCovarianceMatrix - Covariance Matrix
+     * Covariance Matrix
      *
+     * @remarks
      * Compute the covariance matrix of assets from either:
-     * * The assets correlation matrix and their volatilities (i.e., standard deviations)
-     * * The assets correlation matrix and their variances
-     * * The assets returns
+     * * The asset correlation matrix and their volatilities (i.e., standard deviations)
+     * * The asset correlation matrix and their variances
+     * * The asset returns
      *
      * References
      * * [Wikipedia, Covariance Matrix](https://en.wikipedia.org/wiki/Covariance_matrix)
      *
-    **/
-    postAssetsCovarianceMatrix(req: operations.PostAssetsCovarianceMatrixRequest, config?: AxiosRequestConfig): Promise<operations.PostAssetsCovarianceMatrixResponse>;
+     */
+    postAssetsCovarianceMatrix(req: any, config?: AxiosRequestConfig): Promise<operations.PostAssetsCovarianceMatrixResponse>;
     /**
-     * postAssetsCovarianceMatrixSample - Sample Covariance Matrix
+     * Covariance Matrix Effective Rank
      *
-     * Compute the sample covariance matrix of assets returns.
-     *
-     * > This endpoint is similar to the endpoint [`/assets/covariance/matrix`](#post-/assets/covariance/matrix), but uses [Bessel's correction](https://en.wikipedia.org/wiki/Bessel%27s_correction) to compute the covariance matrix.
+     * @remarks
+     * Compute the effective rank of an asset covariance matrix.
      *
      * References
-     * * [Wikipedia, Sample Mean and Covariance](https://en.wikipedia.org/wiki/Sample_mean_and_covariance)
+     * * [Olivier Roy and Martin Vetterli, The effective rank: A measure of effective dimensionality, 15th European Signal Processing Conference, 2007](https://ieeexplore.ieee.org/document/7098875)
      *
-    **/
-    postAssetsCovarianceMatrixSample(req: operations.PostAssetsCovarianceMatrixSampleRequest, config?: AxiosRequestConfig): Promise<operations.PostAssetsCovarianceMatrixSampleResponse>;
+     */
+    postAssetsCovarianceMatrixEffectiveRank(req: operations.PostAssetsCovarianceMatrixEffectiveRankRequestBody, config?: AxiosRequestConfig): Promise<operations.PostAssetsCovarianceMatrixEffectiveRankResponse>;
     /**
-     * postAssetsCovarianceMatrixValidation - Covariance Matrix Validation
+     * Exponentially Weighted Covariance Matrix
      *
+     * @remarks
+     * Compute an exponentially weighted covariance matrix of assets returns.
+     *
+     * References
+     * * [RiskMetrics Group. Longerstaey, J. (1996). RiskMetrics technical document, Technical Report fourth edition](https://www.msci.com/documents/10199/5915b101-4206-4ba0-aee2-3449d5c7e95a)
+     *
+     */
+    postAssetsCovarianceMatrixExponentiallyWeighted(req: operations.PostAssetsCovarianceMatrixExponentiallyWeightedRequestBody, config?: AxiosRequestConfig): Promise<operations.PostAssetsCovarianceMatrixExponentiallyWeightedResponse>;
+    /**
+     * Covariance Matrix Validation
+     *
+     * @remarks
      * Validate whether a matrix is a covariance matrix.
      *
      * References
      * * [Wikipedia, Covariance Matrix](https://en.wikipedia.org/wiki/Covariance_matrix)
      *
-    **/
-    postAssetsCovarianceMatrixValidation(req: operations.PostAssetsCovarianceMatrixValidationRequest, config?: AxiosRequestConfig): Promise<operations.PostAssetsCovarianceMatrixValidationResponse>;
+     */
+    postAssetsCovarianceMatrixValidation(req: operations.PostAssetsCovarianceMatrixValidationRequestBody, config?: AxiosRequestConfig): Promise<operations.PostAssetsCovarianceMatrixValidationResponse>;
 }

@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteUserHostedPropertyValuePathParams extends SpeakeasyBase {
-    appKey: string;
-    propertyName: string;
-    selectedUser: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteUserHostedPropertyValueRequest extends SpeakeasyBase {
-    pathParams: DeleteUserHostedPropertyValuePathParams;
+    /**
+     * The key of the Connect app.
+     */
+    appKey: string;
+    /**
+     * The name of the property.
+     */
+    propertyName: string;
+    /**
+     * Either the UUID of the account surrounded by curly-braces, for example `{account UUID}`, OR an Atlassian Account ID.
+     */
+    selectedUser: string;
 }
 export declare class DeleteUserHostedPropertyValueResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

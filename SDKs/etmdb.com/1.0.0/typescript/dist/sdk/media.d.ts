@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Media {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class Media {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * mediaSearchRead - Return movie media search result
+     * Return movie media search result
      *
+     * @remarks
      * Return movie media search result
      *
      * ### Response Class (Status 200)
@@ -20,11 +21,12 @@ export declare class Media {
      *
      * For more details on how media is listed [see here][ref].
      * [ref]: https://etmdb.com/en/movie-list/-updated_date
-    **/
+     */
     mediaSearchRead(req: operations.MediaSearchReadRequest, config?: AxiosRequestConfig): Promise<operations.MediaSearchReadResponse>;
     /**
-     * mediaSearchallRead - Return cast media search result
+     * Return cast media search result
      *
+     * @remarks
      * Return cast media search result
      *
      * ### Response Class (Status 200)
@@ -35,6 +37,6 @@ export declare class Media {
      *
      * For more details on how cast media is listed [see here][ref].
      * [ref]: https://etmdb.com/en/cast-list/-updated_date
-    **/
+     */
     mediaSearchallRead(req: operations.MediaSearchallReadRequest, config?: AxiosRequestConfig): Promise<operations.MediaSearchallReadResponse>;
 }

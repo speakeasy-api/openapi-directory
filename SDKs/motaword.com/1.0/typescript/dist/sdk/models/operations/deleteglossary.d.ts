@@ -1,15 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteGlossaryPathParams extends SpeakeasyBase {
-    glossaryId: number;
-    projectId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteGlossaryRequest extends SpeakeasyBase {
-    pathParams: DeleteGlossaryPathParams;
+    /**
+     * Glossary ID
+     */
+    glossaryId: number;
+    /**
+     * Project ID
+     */
+    projectId: number;
 }
 export declare class DeleteGlossaryResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * GlossaryNotFound
+     */
     error?: shared.ErrorT;
+    /**
+     * Glossary deleted successfully
+     */
     operationStatus?: shared.OperationStatus;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,15 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class IssuesRemoveAllLabelsPathParams extends SpeakeasyBase {
-    issueNumber: number;
-    owner: string;
-    repo: string;
-}
+import { AxiosResponse } from "axios";
 export declare class IssuesRemoveAllLabelsRequest extends SpeakeasyBase {
-    pathParams: IssuesRemoveAllLabelsPathParams;
+    /**
+     * The number that identifies the issue.
+     */
+    issueNumber: number;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    owner: string;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    repo: string;
 }
 export declare class IssuesRemoveAllLabelsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Moved permanently
+     */
     basicError?: shared.BasicError;
 }

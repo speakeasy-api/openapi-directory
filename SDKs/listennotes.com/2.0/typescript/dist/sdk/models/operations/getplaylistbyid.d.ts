@@ -1,34 +1,74 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetPlaylistByIdPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
+/**
+ * How do you want to sort playlist items?
+ *
+ * @remarks
+ *
+ */
 export declare enum GetPlaylistByIdSortEnum {
     RecentAddedFirst = "recent_added_first",
     OldestAddedFirst = "oldest_added_first",
     RecentPublishedFirst = "recent_published_first",
     OldestPublishedFirst = "oldest_published_first"
 }
+/**
+ * The type of this playlist, which should be either **episode_list** or **podcast_list**.
+ *
+ * @remarks
+ *
+ */
 export declare enum GetPlaylistByIdTypeEnum {
     EpisodeList = "episode_list",
     PodcastList = "podcast_list"
 }
-export declare class GetPlaylistByIdQueryParams extends SpeakeasyBase {
-    lastTimestampMs?: number;
-    sort?: GetPlaylistByIdSortEnum;
-    type?: GetPlaylistByIdTypeEnum;
-}
-export declare class GetPlaylistByIdHeaders extends SpeakeasyBase {
-    xListenAPIKey: string;
-}
 export declare class GetPlaylistByIdRequest extends SpeakeasyBase {
-    pathParams: GetPlaylistByIdPathParams;
-    queryParams: GetPlaylistByIdQueryParams;
-    headers: GetPlaylistByIdHeaders;
+    /**
+     * Get API Key on listennotes.com/api
+     */
+    xListenAPIKey: string;
+    /**
+     * Playlist id (always 11 characters, e.g., m1pe7z60bsw).
+     *
+     * @remarks
+     * You can get the podcast id from the url of a playlist, e.g.,
+     * m1pe7z60bsw is the playlist id of listennotes.com/listen/podcasts-about-podcasting-m1pe7z60bsw
+     *
+     */
+    id: string;
+    /**
+     * For playlist items pagination.
+     *
+     * @remarks
+     * It's the value of **last_timestamp_ms** from the response of last request.
+     * If it's 0 or not specified, just return the latest or the oldest 20 items,
+     * depending on the value of the **sort** parameter.
+     *
+     */
+    lastTimestampMs?: number;
+    /**
+     * How do you want to sort playlist items?
+     *
+     * @remarks
+     *
+     */
+    sort?: GetPlaylistByIdSortEnum;
+    /**
+     * The type of this playlist, which should be either **episode_list** or **podcast_list**.
+     *
+     * @remarks
+     *
+     */
+    type?: GetPlaylistByIdTypeEnum;
 }
 export declare class GetPlaylistByIdResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
+    /**
+     * OK
+     */
     playlistResponse?: shared.PlaylistResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

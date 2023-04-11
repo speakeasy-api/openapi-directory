@@ -1,20 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AquiferCodesProductivityListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class AquiferCodesProductivityListRequest extends SpeakeasyBase {
+    /**
+     * Number of results to return per page.
+     */
     limit?: number;
+    /**
+     * The initial index from which to return the results.
+     */
     offset?: number;
 }
-export declare class AquiferCodesProductivityList200ApplicationJson extends SpeakeasyBase {
+export declare class AquiferCodesProductivityList200ApplicationJSON extends SpeakeasyBase {
     count: number;
     next?: string;
     previous?: string;
     results: shared.AquiferProductivity[];
 }
-export declare class AquiferCodesProductivityListRequest extends SpeakeasyBase {
-    queryParams: AquiferCodesProductivityListQueryParams;
-}
 export declare class AquiferCodesProductivityListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    aquiferCodesProductivityList200ApplicationJSONObject?: AquiferCodesProductivityList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    aquiferCodesProductivityList200ApplicationJSONObject?: AquiferCodesProductivityList200ApplicationJSON;
 }

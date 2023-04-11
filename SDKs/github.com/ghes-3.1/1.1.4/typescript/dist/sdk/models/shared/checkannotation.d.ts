@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Check Annotation
-**/
+ */
 export declare class CheckAnnotation extends SpeakeasyBase {
     annotationLevel: string;
     blobHref: string;

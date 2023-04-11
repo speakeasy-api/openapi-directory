@@ -6,7 +6,7 @@ export declare class ContentFileLinks extends SpeakeasyBase {
 }
 /**
  * Content File
-**/
+ */
 export declare class ContentFile extends SpeakeasyBase {
     links: ContentFileLinks;
     content: string;

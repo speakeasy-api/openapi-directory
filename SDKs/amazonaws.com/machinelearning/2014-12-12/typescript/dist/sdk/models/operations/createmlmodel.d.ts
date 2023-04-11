@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum CreateMlModelXAmzTargetEnum {
-    AmazonMl20141212CreateMlModel = "AmazonML_20141212.CreateMLModel"
+import { AxiosResponse } from "axios";
+export declare enum CreateMLModelXAmzTargetEnum {
+    AmazonML20141212CreateMLModel = "AmazonML_20141212.CreateMLModel"
 }
-export declare class CreateMlModelHeaders extends SpeakeasyBase {
+export declare class CreateMLModelRequest extends SpeakeasyBase {
+    createMLModelInput: shared.CreateMLModelInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,17 +13,26 @@ export declare class CreateMlModelHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: CreateMlModelXAmzTargetEnum;
+    xAmzTarget: CreateMLModelXAmzTargetEnum;
 }
-export declare class CreateMlModelRequest extends SpeakeasyBase {
-    headers: CreateMlModelHeaders;
-    request: shared.CreateMlModelInput;
-}
-export declare class CreateMlModelResponse extends SpeakeasyBase {
+export declare class CreateMLModelResponse extends SpeakeasyBase {
     contentType: string;
-    createMLModelOutput?: shared.CreateMlModelOutput;
+    /**
+     * Success
+     */
+    createMLModelOutput?: shared.CreateMLModelOutput;
+    /**
+     * IdempotentParameterMismatchException
+     */
     idempotentParameterMismatchException?: any;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

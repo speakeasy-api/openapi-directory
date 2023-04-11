@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Returns {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,15 +9,17 @@ export declare class Returns {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getReturns - List Returns
+     * List Returns
      *
+     * @remarks
      * Retrieves summary return activity during the queried timespan. Although return knowledge can be learned from `GET /orders/{id}` it can take an unknown amount of time for an order that is refused or undeliverable to return to an FDC facility. Instead we recommend regularly querying this API.
-    **/
-    getReturns(req: operations.GetReturnsRequest, config?: AxiosRequestConfig): Promise<operations.GetReturnsResponse>;
+     */
+    getReturns(req: operations.GetReturnsRequest, security: operations.GetReturnsSecurity, config?: AxiosRequestConfig): Promise<operations.GetReturnsResponse>;
     /**
-     * putReturns - Inform us of an RMA
+     * Inform us of an RMA
      *
+     * @remarks
      * Inform FDC of an expected return.
-    **/
-    putReturns(req: operations.PutReturnsRequest, config?: AxiosRequestConfig): Promise<operations.PutReturnsResponse>;
+     */
+    putReturns(req: operations.PutReturnsRmaRequestV2, security: operations.PutReturnsSecurity, config?: AxiosRequestConfig): Promise<operations.PutReturnsResponse>;
 }

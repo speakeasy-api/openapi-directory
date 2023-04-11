@@ -1,22 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UsersUpdateVerificationPathParams extends SpeakeasyBase {
-    userId: string;
+import { AxiosResponse } from "axios";
+export declare class UsersUpdateVerificationSecurity extends SpeakeasyBase {
+    key: string;
+    project: string;
 }
 export declare class UsersUpdateVerificationRequestBody extends SpeakeasyBase {
+    /**
+     * User Email Verification Status.
+     */
     emailVerification: boolean;
 }
-export declare class UsersUpdateVerificationSecurity extends SpeakeasyBase {
-    key: shared.SchemeKey;
-    project: shared.SchemeProject;
-}
 export declare class UsersUpdateVerificationRequest extends SpeakeasyBase {
-    pathParams: UsersUpdateVerificationPathParams;
-    request?: UsersUpdateVerificationRequestBody;
-    security: UsersUpdateVerificationSecurity;
+    requestBody?: UsersUpdateVerificationRequestBody;
+    /**
+     * User unique ID.
+     */
+    userId: string;
 }
 export declare class UsersUpdateVerificationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * User
+     */
     user?: shared.User;
 }

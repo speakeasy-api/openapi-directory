@@ -1,21 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class PatientRiskAssessmentsUpdatePathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class PatientRiskAssessmentsUpdateQueryParams extends SpeakeasyBase {
-    doctor?: number;
-    patient?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class PatientRiskAssessmentsUpdateSecurity extends SpeakeasyBase {
-    drchronoOauth2: shared.SchemeDrchronoOauth2;
+    drchronoOauth2: string;
 }
 export declare class PatientRiskAssessmentsUpdateRequest extends SpeakeasyBase {
-    pathParams: PatientRiskAssessmentsUpdatePathParams;
-    queryParams: PatientRiskAssessmentsUpdateQueryParams;
-    security: PatientRiskAssessmentsUpdateSecurity;
+    doctor?: number;
+    id: string;
+    patient?: number;
 }
 export declare class PatientRiskAssessmentsUpdateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

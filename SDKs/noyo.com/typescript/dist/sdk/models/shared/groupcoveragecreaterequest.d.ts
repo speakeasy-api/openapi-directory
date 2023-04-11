@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The line of coverage requested with the carrier application
+ */
 export declare enum GroupCoverageCreateRequestLineOfCoverageEnum {
     Accident = "accident",
     Add = "add",
@@ -13,8 +16,20 @@ export declare enum GroupCoverageCreateRequestLineOfCoverageEnum {
     Vision = "vision"
 }
 export declare class GroupCoverageCreateRequest extends SpeakeasyBase {
+    /**
+     * True if this line of coverage is currently active with the carrier
+     */
     existingCoverage?: boolean;
+    /**
+     * The line of coverage requested with the carrier application
+     */
     lineOfCoverage: GroupCoverageCreateRequestLineOfCoverageEnum;
+    /**
+     * General platform notes about the group coverage
+     */
     notes?: string;
+    /**
+     * Requested effective date for start of coverage
+     */
     requestedEffectiveDate: Date;
 }

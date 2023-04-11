@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteVerifiedEmailAddressActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteVerifiedEmailAddressActionEnum {
     DeleteVerifiedEmailAddress = "DeleteVerifiedEmailAddress"
 }
-export declare enum PostDeleteVerifiedEmailAddressVersionEnum {
+export declare enum POSTDeleteVerifiedEmailAddressVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostDeleteVerifiedEmailAddressQueryParams extends SpeakeasyBase {
-    action: PostDeleteVerifiedEmailAddressActionEnum;
-    version: PostDeleteVerifiedEmailAddressVersionEnum;
-}
-export declare class PostDeleteVerifiedEmailAddressHeaders extends SpeakeasyBase {
+export declare class POSTDeleteVerifiedEmailAddressRequest extends SpeakeasyBase {
+    action: POSTDeleteVerifiedEmailAddressActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteVerifiedEmailAddressVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +18,8 @@ export declare class PostDeleteVerifiedEmailAddressHeaders extends SpeakeasyBase
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteVerifiedEmailAddressRequest extends SpeakeasyBase {
-    queryParams: PostDeleteVerifiedEmailAddressQueryParams;
-    headers: PostDeleteVerifiedEmailAddressHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteVerifiedEmailAddressResponse extends SpeakeasyBase {
+export declare class POSTDeleteVerifiedEmailAddressResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

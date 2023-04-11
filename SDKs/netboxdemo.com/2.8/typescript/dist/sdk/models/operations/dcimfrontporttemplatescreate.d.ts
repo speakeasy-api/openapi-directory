@@ -1,10 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DcimFrontPortTemplatesCreateRequest extends SpeakeasyBase {
-    request: shared.WritableFrontPortTemplateInput;
-}
+import { AxiosResponse } from "axios";
 export declare class DcimFrontPortTemplatesCreateResponse extends SpeakeasyBase {
     contentType: string;
     frontPortTemplate?: shared.FrontPortTemplate;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

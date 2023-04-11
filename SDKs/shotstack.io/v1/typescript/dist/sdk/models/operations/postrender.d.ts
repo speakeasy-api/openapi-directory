@@ -1,14 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class PostRenderSecurity extends SpeakeasyBase {
-    developerKey: shared.SchemeDeveloperKey;
-}
-export declare class PostRenderRequest extends SpeakeasyBase {
-    request: shared.Edit;
-    security: PostRenderSecurity;
+    developerKey: string;
 }
 export declare class PostRenderResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * The queued render details
+     */
     queuedResponse?: shared.QueuedResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

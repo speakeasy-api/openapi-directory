@@ -1,16 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class AddVideoToWatchLaterAlt1PathParams extends SpeakeasyBase {
-    videoId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class AddVideoToWatchLaterAlt1Security extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
+    oauth2: string;
 }
 export declare class AddVideoToWatchLaterAlt1Request extends SpeakeasyBase {
-    pathParams: AddVideoToWatchLaterAlt1PathParams;
-    security: AddVideoToWatchLaterAlt1Security;
+    /**
+     * The ID of the video.
+     */
+    videoId: number;
 }
 export declare class AddVideoToWatchLaterAlt1Response extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

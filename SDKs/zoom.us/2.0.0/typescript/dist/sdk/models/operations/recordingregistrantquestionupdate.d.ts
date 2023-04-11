@@ -1,19 +1,37 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class RecordingRegistrantQuestionUpdatePathParams extends SpeakeasyBase {
-    meetingId: string;
+import { AxiosResponse } from "axios";
+export declare class RecordingRegistrantQuestionUpdateSecurity extends SpeakeasyBase {
+    oAuth: string;
 }
+/**
+ * The type of registration question and answers.
+ */
 export declare enum RecordingRegistrantQuestionUpdateRecordingRegistrantQuestionsCustomQuestionsTypeEnum {
     Short = "short",
     Single = "single",
     Multiple = "multiple"
 }
 export declare class RecordingRegistrantQuestionUpdateRecordingRegistrantQuestionsCustomQuestions extends SpeakeasyBase {
+    /**
+     * Answer choices for the question. Can not be used with Short answer type.
+     */
     answers?: string[];
+    /**
+     * State whether registrants are required to answer custom questions or not.
+     */
     required?: boolean;
+    /**
+     * Title of the question.
+     */
     title?: string;
+    /**
+     * The type of registration question and answers.
+     */
     type?: RecordingRegistrantQuestionUpdateRecordingRegistrantQuestionsCustomQuestionsTypeEnum;
 }
+/**
+ * Field name.
+ */
 export declare enum RecordingRegistrantQuestionUpdateRecordingRegistrantQuestionsQuestionsFieldNameEnum {
     LastName = "last_name",
     Address = "address",
@@ -31,29 +49,46 @@ export declare enum RecordingRegistrantQuestionUpdateRecordingRegistrantQuestion
     Comments = "comments"
 }
 export declare class RecordingRegistrantQuestionUpdateRecordingRegistrantQuestionsQuestions extends SpeakeasyBase {
+    /**
+     * Field name.
+     */
     fieldName?: RecordingRegistrantQuestionUpdateRecordingRegistrantQuestionsQuestionsFieldNameEnum;
+    /**
+     * State whether the field is required to be answered by the registrant or not.
+     */
     required?: boolean;
 }
 /**
  * Recording Registrant Questions
-**/
+ */
 export declare class RecordingRegistrantQuestionUpdateRecordingRegistrantQuestions extends SpeakeasyBase {
+    /**
+     * Array of Registrant Custom Questions
+     */
     customQuestions?: RecordingRegistrantQuestionUpdateRecordingRegistrantQuestionsCustomQuestions[];
+    /**
+     * Array of Registrant Questions
+     */
     questions?: RecordingRegistrantQuestionUpdateRecordingRegistrantQuestionsQuestions[];
 }
-export declare class RecordingRegistrantQuestionUpdateRequests extends SpeakeasyBase {
-    recordingRegistrantQuestions?: RecordingRegistrantQuestionUpdateRecordingRegistrantQuestions;
-    recordingRegistrantQuestions1?: RecordingRegistrantQuestionUpdateRecordingRegistrantQuestions;
-}
-export declare class RecordingRegistrantQuestionUpdateSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
-}
 export declare class RecordingRegistrantQuestionUpdateRequest extends SpeakeasyBase {
-    pathParams: RecordingRegistrantQuestionUpdatePathParams;
-    request: RecordingRegistrantQuestionUpdateRequests;
-    security: RecordingRegistrantQuestionUpdateSecurity;
+    /**
+     * Recording Registrant Questions
+     */
+    requestBody: RecordingRegistrantQuestionUpdateRecordingRegistrantQuestions;
+    /**
+     * To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance.
+     *
+     * @remarks
+     *
+     * To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance.
+     *
+     * If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875=="), you must **double encode** the UUID before making an API request.
+     */
+    meetingId: string;
 }
 export declare class RecordingRegistrantQuestionUpdateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

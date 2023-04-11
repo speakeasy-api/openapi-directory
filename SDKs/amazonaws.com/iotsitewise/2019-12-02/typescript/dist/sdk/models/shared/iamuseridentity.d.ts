@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Contains information about an Identity and Access Management user.
-**/
-export declare class IamUserIdentity extends SpeakeasyBase {
+ */
+export declare class IAMUserIdentity extends SpeakeasyBase {
     arn: string;
 }

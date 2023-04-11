@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum PutReportDefinitionXAmzTargetEnum {
-    AwsOrigamiServiceGatewayServicePutReportDefinition = "AWSOrigamiServiceGatewayService.PutReportDefinition"
+    AWSOrigamiServiceGatewayServicePutReportDefinition = "AWSOrigamiServiceGatewayService.PutReportDefinition"
 }
-export declare class PutReportDefinitionHeaders extends SpeakeasyBase {
+export declare class PutReportDefinitionRequest extends SpeakeasyBase {
+    putReportDefinitionRequest: shared.PutReportDefinitionRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class PutReportDefinitionHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: PutReportDefinitionXAmzTargetEnum;
 }
-export declare class PutReportDefinitionRequest extends SpeakeasyBase {
-    headers: PutReportDefinitionHeaders;
-    request: shared.PutReportDefinitionRequest;
-}
 export declare class PutReportDefinitionResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * DuplicateReportNameException
+     */
     duplicateReportNameException?: any;
+    /**
+     * InternalErrorException
+     */
     internalErrorException?: any;
+    /**
+     * Success
+     */
     putReportDefinitionResponse?: Record<string, any>;
-    reportLimitReachedException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ReportLimitReachedException
+     */
+    reportLimitReachedException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

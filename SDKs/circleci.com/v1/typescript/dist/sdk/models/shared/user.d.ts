@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * signed in user
+ */
 export declare class User extends SpeakeasyBase {
     admin?: boolean;
     allEmails?: string[];

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostSuspendProcessesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTSuspendProcessesActionEnum {
     SuspendProcesses = "SuspendProcesses"
 }
-export declare enum PostSuspendProcessesVersionEnum {
+export declare enum POSTSuspendProcessesVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class PostSuspendProcessesQueryParams extends SpeakeasyBase {
-    action: PostSuspendProcessesActionEnum;
-    version: PostSuspendProcessesVersionEnum;
-}
-export declare class PostSuspendProcessesHeaders extends SpeakeasyBase {
+export declare class POSTSuspendProcessesRequest extends SpeakeasyBase {
+    action: POSTSuspendProcessesActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTSuspendProcessesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostSuspendProcessesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostSuspendProcessesRequest extends SpeakeasyBase {
-    queryParams: PostSuspendProcessesQueryParams;
-    headers: PostSuspendProcessesHeaders;
-    request?: Uint8Array;
-}
-export declare class PostSuspendProcessesResponse extends SpeakeasyBase {
+export declare class POSTSuspendProcessesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

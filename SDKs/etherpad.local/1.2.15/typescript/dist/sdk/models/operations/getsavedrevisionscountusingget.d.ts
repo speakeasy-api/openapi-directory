@@ -1,35 +1,58 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetSavedRevisionsCountUsingGetQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETSavedRevisionsCountUsingGETRequest extends SpeakeasyBase {
     padID?: string;
 }
-export declare class GetSavedRevisionsCountUsingGet200ApplicationJson extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class GETSavedRevisionsCountUsingGet500ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class GetSavedRevisionsCountUsingGet400ApplicationJson extends SpeakeasyBase {
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class GETSavedRevisionsCountUsingGet401ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class GetSavedRevisionsCountUsingGet401ApplicationJson extends SpeakeasyBase {
+/**
+ * generic api error (code 1)
+ */
+export declare class GETSavedRevisionsCountUsingGet400ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class GetSavedRevisionsCountUsingGet500ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class GETSavedRevisionsCountUsingGet200ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class GetSavedRevisionsCountUsingGetRequest extends SpeakeasyBase {
-    queryParams: GetSavedRevisionsCountUsingGetQueryParams;
-}
-export declare class GetSavedRevisionsCountUsingGetResponse extends SpeakeasyBase {
+export declare class GETSavedRevisionsCountUsingGETResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getSavedRevisionsCountUsingGET200ApplicationJSONObject?: GetSavedRevisionsCountUsingGet200ApplicationJson;
-    getSavedRevisionsCountUsingGET400ApplicationJSONObject?: GetSavedRevisionsCountUsingGet400ApplicationJson;
-    getSavedRevisionsCountUsingGET401ApplicationJSONObject?: GetSavedRevisionsCountUsingGet401ApplicationJson;
-    getSavedRevisionsCountUsingGET500ApplicationJSONObject?: GetSavedRevisionsCountUsingGet500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    getSavedRevisionsCountUsingGET200ApplicationJSONObject?: GETSavedRevisionsCountUsingGet200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    getSavedRevisionsCountUsingGET400ApplicationJSONObject?: GETSavedRevisionsCountUsingGet400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    getSavedRevisionsCountUsingGET401ApplicationJSONObject?: GETSavedRevisionsCountUsingGet401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    getSavedRevisionsCountUsingGET500ApplicationJSONObject?: GETSavedRevisionsCountUsingGet500ApplicationJSON;
 }

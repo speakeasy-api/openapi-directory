@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The categorized reason for disapproval.
+ */
 export declare enum DisapprovalReasonEnum {
     LengthOfImageAnimation = "LENGTH_OF_IMAGE_ANIMATION",
     BrokenUrl = "BROKEN_URL",
@@ -105,8 +108,14 @@ export declare enum DisapprovalReasonEnum {
 }
 /**
  * Output only. The reason and details for a disapproval.
-**/
+ */
 export declare class Disapproval extends SpeakeasyBase {
+    /**
+     * Additional details about the reason for disapproval.
+     */
     details?: string[];
+    /**
+     * The categorized reason for disapproval.
+     */
     reason?: DisapprovalReasonEnum;
 }

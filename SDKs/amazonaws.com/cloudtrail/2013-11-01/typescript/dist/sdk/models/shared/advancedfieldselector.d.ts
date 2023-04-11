@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * A single selector statement in an advanced event selector.
-**/
+ */
 export declare class AdvancedFieldSelector extends SpeakeasyBase {
     endsWith?: string[];
     equals?: string[];

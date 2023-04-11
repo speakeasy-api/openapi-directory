@@ -3,6 +3,9 @@ import { TransactionDetail } from "./transactiondetail";
 export declare class TransactionResponseData extends SpeakeasyBase {
     transaction: TransactionDetail;
 }
+/**
+ * The transaction was successfully deleted
+ */
 export declare class TransactionResponse extends SpeakeasyBase {
     data: TransactionResponseData;
 }

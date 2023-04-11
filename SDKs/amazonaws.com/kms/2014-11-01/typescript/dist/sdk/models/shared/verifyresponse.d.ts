@@ -1,0 +1,10 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { SigningAlgorithmSpecEnum } from "./signingalgorithmspecenum";
+/**
+ * Success
+ */
+export declare class VerifyResponse extends SpeakeasyBase {
+    keyId?: string;
+    signatureValid?: boolean;
+    signingAlgorithm?: SigningAlgorithmSpecEnum;
+}

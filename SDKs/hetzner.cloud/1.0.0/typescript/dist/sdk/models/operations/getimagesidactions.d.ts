@@ -1,7 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetImagesIdActionsPathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
+/**
+ * Can be used multiple times.
+ */
 export declare enum GetImagesIdActionsSortParameterSortEnum {
     Id = "id",
     IdAsc = "id:asc",
@@ -22,62 +23,135 @@ export declare enum GetImagesIdActionsSortParameterSortEnum {
     FinishedAsc = "finished:asc",
     FinishedDesc = "finished:desc"
 }
+/**
+ * Can be used multiple times, the response will contain only Actions with specified statuses
+ */
 export declare enum GetImagesIdActionsStatusParameterStatusEnum {
     Running = "running",
     Success = "success",
     Error = "error"
 }
-export declare class GetImagesIdActionsQueryParams extends SpeakeasyBase {
+export declare class GetImagesIdActionsRequest extends SpeakeasyBase {
+    /**
+     * ID of the Image
+     */
+    id: number;
+    /**
+     * Can be used multiple times.
+     */
     sort?: GetImagesIdActionsSortParameterSortEnum;
+    /**
+     * Can be used multiple times, the response will contain only Actions with specified statuses
+     */
     status?: GetImagesIdActionsStatusParameterStatusEnum;
 }
 /**
  * Error message for the Action if error occurred, otherwise null
-**/
+ */
 export declare class GetImagesIdActionsActionsResponseActionError extends SpeakeasyBase {
+    /**
+     * Fixed machine readable code
+     */
     code: string;
+    /**
+     * Humanized error message
+     */
     message: string;
 }
 export declare class GetImagesIdActionsActionsResponseActionResources extends SpeakeasyBase {
+    /**
+     * ID of the Resource
+     */
     id: number;
+    /**
+     * Type of resource referenced
+     */
     type: string;
 }
+/**
+ * Status of the Action
+ */
 export declare enum GetImagesIdActionsActionsResponseActionStatusEnum {
     Success = "success",
     Running = "running",
     Error = "error"
 }
 export declare class GetImagesIdActionsActionsResponseAction extends SpeakeasyBase {
+    /**
+     * Command executed in the Action
+     */
     command: string;
+    /**
+     * Error message for the Action if error occurred, otherwise null
+     */
     error: GetImagesIdActionsActionsResponseActionError;
+    /**
+     * Point in time when the Action was finished (in ISO-8601 format). Only set if the Action is finished otherwise null.
+     */
     finished: string;
+    /**
+     * ID of the Resource
+     */
     id: number;
+    /**
+     * Progress of Action in percent
+     */
     progress: number;
+    /**
+     * Resources the Action relates to
+     */
     resources: GetImagesIdActionsActionsResponseActionResources[];
+    /**
+     * Point in time when the Action was started (in ISO-8601 format)
+     */
     started: string;
+    /**
+     * Status of the Action
+     */
     status: GetImagesIdActionsActionsResponseActionStatusEnum;
 }
 export declare class GetImagesIdActionsActionsResponseMetaPagination extends SpeakeasyBase {
+    /**
+     * ID of the last page available. Can be null if the current page is the last one.
+     */
     lastPage: number;
+    /**
+     * ID of the next page. Can be null if the current page is the last one.
+     */
     nextPage: number;
+    /**
+     * Current page number
+     */
     page: number;
+    /**
+     * Maximum number of items shown per page in the response
+     */
     perPage: number;
+    /**
+     * ID of the previous page. Can be null if the current page is the first one.
+     */
     previousPage: number;
+    /**
+     * The total number of entries that exist in the database for this query. Nullable if unknown.
+     */
     totalEntries: number;
 }
 export declare class GetImagesIdActionsActionsResponseMeta extends SpeakeasyBase {
     pagination: GetImagesIdActionsActionsResponseMetaPagination;
 }
+/**
+ * The `actions` key contains a list of Actions
+ */
 export declare class GetImagesIdActionsActionsResponse extends SpeakeasyBase {
     actions: GetImagesIdActionsActionsResponseAction[];
     meta?: GetImagesIdActionsActionsResponseMeta;
 }
-export declare class GetImagesIdActionsRequest extends SpeakeasyBase {
-    pathParams: GetImagesIdActionsPathParams;
-    queryParams: GetImagesIdActionsQueryParams;
-}
 export declare class GetImagesIdActionsResponse extends SpeakeasyBase {
+    /**
+     * The `actions` key contains a list of Actions
+     */
     actionsResponse?: GetImagesIdActionsActionsResponse;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

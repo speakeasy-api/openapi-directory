@@ -6,9 +6,13 @@ export declare enum PowerOutletConnectionStatusLabelEnum {
     NotConnected = "Not Connected",
     Connected = "Connected"
 }
+export declare enum PowerOutletConnectionStatusValueEnum {
+    False = "false",
+    True = "true"
+}
 export declare class PowerOutletConnectionStatus extends SpeakeasyBase {
     label: PowerOutletConnectionStatusLabelEnum;
-    value: boolean;
+    value: PowerOutletConnectionStatusValueEnum;
 }
 export declare enum PowerOutletFeedLegLabelEnum {
     A = "A",
@@ -79,18 +83,18 @@ export declare enum PowerOutletTypeLabelEnum {
     Cs8264C = "CS8264C",
     Cs8364C = "CS8364C",
     Cs8464C = "CS8464C",
-    ItaTypeECee75 = "ITA Type E (CEE7/5)",
-    ItaTypeFCee73 = "ITA Type F (CEE7/3)",
-    ItaTypeGBs1363 = "ITA Type G (BS 1363)",
-    ItaTypeH = "ITA Type H",
-    ItaTypeI = "ITA Type I",
-    ItaTypeJ = "ITA Type J",
-    ItaTypeK = "ITA Type K",
-    ItaTypeLCei2350 = "ITA Type L (CEI 23-50)",
-    ItaTypeMBs546 = "ITA Type M (BS 546)",
-    ItaTypeN = "ITA Type N",
-    ItaTypeO = "ITA Type O",
-    HdotCx = "HDOT Cx"
+    ITATypeECee75 = "ITA Type E (CEE7/5)",
+    ITATypeFCee73 = "ITA Type F (CEE7/3)",
+    ITATypeGBS1363 = "ITA Type G (BS 1363)",
+    ITATypeH = "ITA Type H",
+    ITATypeI = "ITA Type I",
+    ITATypeJ = "ITA Type J",
+    ITATypeK = "ITA Type K",
+    ITATypeLCEI2350 = "ITA Type L (CEI 23-50)",
+    ITATypeMBS546 = "ITA Type M (BS 546)",
+    ITATypeN = "ITA Type N",
+    ITATypeO = "ITA Type O",
+    HDOTCx = "HDOT Cx"
 }
 export declare enum PowerOutletTypeValueEnum {
     Iec60320C5 = "iec-60320-c5",
@@ -166,6 +170,12 @@ export declare class PowerOutletType extends SpeakeasyBase {
 }
 export declare class PowerOutlet extends SpeakeasyBase {
     cable?: NestedCable;
+    /**
+     *
+     * @remarks
+     * Return the appropriate serializer for the type of connected object.
+     *
+     */
     connectedEndpoint?: Record<string, string>;
     connectedEndpointType?: string;
     connectionStatus?: PowerOutletConnectionStatus;

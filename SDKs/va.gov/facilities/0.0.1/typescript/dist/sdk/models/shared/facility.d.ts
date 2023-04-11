@@ -5,7 +5,7 @@ export declare enum FacilityTypeEnum {
 }
 /**
  * JSON API-compliant object describing a VA facility
-**/
+ */
 export declare class Facility extends SpeakeasyBase {
     attributes: FacilityAttributes;
     id: string;

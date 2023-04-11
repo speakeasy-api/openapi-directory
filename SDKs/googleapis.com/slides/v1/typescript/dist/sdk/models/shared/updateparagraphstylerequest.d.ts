@@ -1,0 +1,29 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { ParagraphStyle } from "./paragraphstyle";
+import { Range } from "./range";
+import { TableCellLocation } from "./tablecelllocation";
+/**
+ * Updates the styling for all of the paragraphs within a Shape or Table that overlap with the given text index range.
+ */
+export declare class UpdateParagraphStyleRequest extends SpeakeasyBase {
+    /**
+     * A location of a single table cell within a table.
+     */
+    cellLocation?: TableCellLocation;
+    /**
+     * The fields that should be updated. At least one field must be specified. The root `style` is implied and should not be specified. A single `"*"` can be used as short-hand for listing every field. For example, to update the paragraph alignment, set `fields` to `"alignment"`. To reset a property to its default value, include its field name in the field mask but leave the field itself unset.
+     */
+    fields?: string;
+    /**
+     * The object ID of the shape or table with the text to be styled.
+     */
+    objectId?: string;
+    /**
+     * Styles that apply to a whole paragraph. If this text is contained in a shape with a parent placeholder, then these paragraph styles may be inherited from the parent. Which paragraph styles are inherited depend on the nesting level of lists: * A paragraph not in a list will inherit its paragraph style from the paragraph at the 0 nesting level of the list inside the parent placeholder. * A paragraph in a list will inherit its paragraph style from the paragraph at its corresponding nesting level of the list inside the parent placeholder. Inherited paragraph styles are represented as unset fields in this message.
+     */
+    style?: ParagraphStyle;
+    /**
+     * Specifies a contiguous range of an indexed collection, such as characters in text.
+     */
+    textRange?: Range;
+}

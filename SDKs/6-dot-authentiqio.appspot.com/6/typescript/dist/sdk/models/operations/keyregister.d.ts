@@ -1,15 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class KeyRegister201ApplicationJson extends SpeakeasyBase {
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+/**
+ * Successfully registered
+ */
+export declare class KeyRegister201ApplicationJSON extends SpeakeasyBase {
+    /**
+     * revoke key
+     */
     secret?: string;
+    /**
+     * registered
+     */
     status?: string;
-}
-export declare class KeyRegisterRequest extends SpeakeasyBase {
-    request: Uint8Array;
 }
 export declare class KeyRegisterResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    error?: any;
+    /**
+     * Key already registered `duplicate-key`
+     */
+    error?: shared.ErrorT;
     statusCode: number;
-    keyRegister201ApplicationJSONObject?: KeyRegister201ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successfully registered
+     */
+    keyRegister201ApplicationJSONObject?: KeyRegister201ApplicationJSON;
 }

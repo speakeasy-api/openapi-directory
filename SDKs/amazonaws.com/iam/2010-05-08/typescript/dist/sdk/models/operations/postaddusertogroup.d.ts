@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostAddUserToGroupActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTAddUserToGroupActionEnum {
     AddUserToGroup = "AddUserToGroup"
 }
-export declare enum PostAddUserToGroupVersionEnum {
+export declare enum POSTAddUserToGroupVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostAddUserToGroupQueryParams extends SpeakeasyBase {
-    action: PostAddUserToGroupActionEnum;
-    version: PostAddUserToGroupVersionEnum;
-}
-export declare class PostAddUserToGroupHeaders extends SpeakeasyBase {
+export declare class POSTAddUserToGroupRequest extends SpeakeasyBase {
+    action: POSTAddUserToGroupActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTAddUserToGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostAddUserToGroupHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostAddUserToGroupRequest extends SpeakeasyBase {
-    queryParams: PostAddUserToGroupQueryParams;
-    headers: PostAddUserToGroupHeaders;
-    request?: Uint8Array;
-}
-export declare class PostAddUserToGroupResponse extends SpeakeasyBase {
+export declare class POSTAddUserToGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

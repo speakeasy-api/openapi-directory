@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetExportQrBelegeBelegUuidPathParams extends SpeakeasyBase {
-    belegUuid: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetExportQrBelegeBelegUuidRequest extends SpeakeasyBase {
-    pathParams: GetExportQrBelegeBelegUuidPathParams;
+    /**
+     * The `_uuid` of a particular `Beleg` to export.
+     */
+    belegUuid: string;
 }
 export declare class GetExportQrBelegeBelegUuidResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

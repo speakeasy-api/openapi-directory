@@ -1,14 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
 export declare const ConfirmPaymentOfTransaction3ServerList: readonly ["http://api.climatekuul.com:8000/footprint"];
 export declare class ConfirmPaymentOfTransaction3RequestBody extends SpeakeasyBase {
+    /**
+     * Confirm Payment Of Transaction (Value = y/n)
+     */
     confirmTransaction: string;
+    /**
+     * transaction_id
+     */
     transactionId: string;
-}
-export declare class ConfirmPaymentOfTransaction3Request extends SpeakeasyBase {
-    serverURL?: string;
-    request?: ConfirmPaymentOfTransaction3RequestBody;
 }
 export declare class ConfirmPaymentOfTransaction3Response extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

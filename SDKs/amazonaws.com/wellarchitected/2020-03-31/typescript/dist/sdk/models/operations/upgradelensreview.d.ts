@@ -1,9 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UpgradeLensReviewPathParams extends SpeakeasyBase {
-    lensAlias: string;
-    workloadId: string;
+import { AxiosResponse } from "axios";
+export declare class UpgradeLensReviewRequestBody extends SpeakeasyBase {
+    /**
+     * <p>A unique case-sensitive string used to ensure that this request is idempotent (executes only once).</p> <p>You should not reuse the same token for other requests. If you retry a request with the same client request token and the same parameters after it has completed successfully, the result of the original request is returned. </p> <important> <p>This token is listed as required, however, if you do not specify it, the Amazon Web Services SDKs automatically generate one for you. If you are not using the Amazon Web Services SDK or the CLI, you must provide this token or the request will fail.</p> </important>
+     */
+    clientRequestToken?: string;
+    /**
+     * <p>The name of the milestone in a workload.</p> <p>Milestone names must be unique within a workload.</p>
+     */
+    milestoneName: string;
 }
-export declare class UpgradeLensReviewHeaders extends SpeakeasyBase {
+export declare class UpgradeLensReviewRequest extends SpeakeasyBase {
+    lensAlias: string;
+    requestBody: UpgradeLensReviewRequestBody;
+    workloadId: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,22 +22,32 @@ export declare class UpgradeLensReviewHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class UpgradeLensReviewRequestBody extends SpeakeasyBase {
-    clientRequestToken?: string;
-    milestoneName: string;
-}
-export declare class UpgradeLensReviewRequest extends SpeakeasyBase {
-    pathParams: UpgradeLensReviewPathParams;
-    headers: UpgradeLensReviewHeaders;
-    request: UpgradeLensReviewRequestBody;
-}
 export declare class UpgradeLensReviewResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

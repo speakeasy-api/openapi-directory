@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteMessageBatchActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteMessageBatchActionEnum {
     DeleteMessageBatch = "DeleteMessageBatch"
 }
-export declare enum PostDeleteMessageBatchVersionEnum {
+export declare enum POSTDeleteMessageBatchVersionEnum {
     TwoThousandAndTwelve1105 = "2012-11-05"
 }
-export declare class PostDeleteMessageBatchQueryParams extends SpeakeasyBase {
-    action: PostDeleteMessageBatchActionEnum;
-    version: PostDeleteMessageBatchVersionEnum;
-}
-export declare class PostDeleteMessageBatchHeaders extends SpeakeasyBase {
+export declare class POSTDeleteMessageBatchRequest extends SpeakeasyBase {
+    action: POSTDeleteMessageBatchActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteMessageBatchVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteMessageBatchHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteMessageBatchRequest extends SpeakeasyBase {
-    queryParams: PostDeleteMessageBatchQueryParams;
-    headers: PostDeleteMessageBatchHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteMessageBatchResponse extends SpeakeasyBase {
+export declare class POSTDeleteMessageBatchResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

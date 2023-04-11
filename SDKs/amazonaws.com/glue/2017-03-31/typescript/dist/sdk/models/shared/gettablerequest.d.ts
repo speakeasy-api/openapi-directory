@@ -3,4 +3,6 @@ export declare class GetTableRequest extends SpeakeasyBase {
     catalogId?: string;
     databaseName: string;
     name: string;
+    queryAsOfTime?: Date;
+    transactionId?: string;
 }

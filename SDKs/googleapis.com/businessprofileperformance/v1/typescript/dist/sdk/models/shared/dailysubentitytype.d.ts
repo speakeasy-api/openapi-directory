@@ -1,0 +1,28 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { TimeOfDay } from "./timeofday";
+/**
+ * Represents the day of the week. Eg: MONDAY.
+ */
+export declare enum DailySubEntityTypeDayOfWeekEnum {
+    DayOfWeekUnspecified = "DAY_OF_WEEK_UNSPECIFIED",
+    Monday = "MONDAY",
+    Tuesday = "TUESDAY",
+    Wednesday = "WEDNESDAY",
+    Thursday = "THURSDAY",
+    Friday = "FRIDAY",
+    Saturday = "SATURDAY",
+    Sunday = "SUNDAY"
+}
+/**
+ * Represents all possible subentity types that are associated with DailyMetrics.
+ */
+export declare class DailySubEntityType extends SpeakeasyBase {
+    /**
+     * Represents the day of the week. Eg: MONDAY.
+     */
+    dayOfWeek?: DailySubEntityTypeDayOfWeekEnum;
+    /**
+     * Represents a time of day. The date and time zone are either not significant or are specified elsewhere. An API may choose to allow leap seconds. Related types are google.type.Date and `google.protobuf.Timestamp`.
+     */
+    timeOfDay?: TimeOfDay;
+}

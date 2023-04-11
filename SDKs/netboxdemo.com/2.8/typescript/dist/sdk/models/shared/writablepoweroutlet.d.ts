@@ -1,10 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { NestedCableInput } from "./nestedcable";
+export declare enum WritablePowerOutletConnectionStatusEnum {
+    False = "false",
+    True = "true"
+}
+/**
+ * Phase (for three-phase feeds)
+ */
 export declare enum WritablePowerOutletFeedLegEnum {
     A = "A",
     B = "B",
     C = "C"
 }
+/**
+ * Physical port type
+ */
 export declare enum WritablePowerOutletTypeEnum {
     Iec60320C5 = "iec-60320-c5",
     Iec60320C7 = "iec-60320-c7",
@@ -75,12 +85,18 @@ export declare enum WritablePowerOutletTypeEnum {
 }
 export declare class WritablePowerOutletInput extends SpeakeasyBase {
     cable?: NestedCableInput;
-    connectionStatus?: boolean;
+    connectionStatus?: WritablePowerOutletConnectionStatusEnum;
     description?: string;
     device: number;
+    /**
+     * Phase (for three-phase feeds)
+     */
     feedLeg?: WritablePowerOutletFeedLegEnum;
     name: string;
     powerPort?: number;
     tags?: string[];
+    /**
+     * Physical port type
+     */
     type?: WritablePowerOutletTypeEnum;
 }

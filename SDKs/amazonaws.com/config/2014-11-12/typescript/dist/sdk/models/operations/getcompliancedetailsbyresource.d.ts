@@ -1,12 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetComplianceDetailsByResourceQueryParams extends SpeakeasyBase {
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum GetComplianceDetailsByResourceXAmzTargetEnum {
     StarlingDoveServiceGetComplianceDetailsByResource = "StarlingDoveService.GetComplianceDetailsByResource"
 }
-export declare class GetComplianceDetailsByResourceHeaders extends SpeakeasyBase {
+export declare class GetComplianceDetailsByResourceRequest extends SpeakeasyBase {
+    getComplianceDetailsByResourceRequest: shared.GetComplianceDetailsByResourceRequest;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,14 +19,16 @@ export declare class GetComplianceDetailsByResourceHeaders extends SpeakeasyBase
     xAmzSignedHeaders?: string;
     xAmzTarget: GetComplianceDetailsByResourceXAmzTargetEnum;
 }
-export declare class GetComplianceDetailsByResourceRequest extends SpeakeasyBase {
-    queryParams: GetComplianceDetailsByResourceQueryParams;
-    headers: GetComplianceDetailsByResourceHeaders;
-    request: shared.GetComplianceDetailsByResourceRequest;
-}
 export declare class GetComplianceDetailsByResourceResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getComplianceDetailsByResourceResponse?: shared.GetComplianceDetailsByResourceResponse;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,19 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AddLocalTaxPathParams extends SpeakeasyBase {
-    companyId: string;
-    employeeId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class AddLocalTaxSecurity extends SpeakeasyBase {
-    paylocityAuth: shared.SchemePaylocityAuth;
+    paylocityAuth: string;
 }
 export declare class AddLocalTaxRequest extends SpeakeasyBase {
-    pathParams: AddLocalTaxPathParams;
-    request: shared.LocalTax;
-    security: AddLocalTaxSecurity;
+    /**
+     * Company Id
+     */
+    companyId: string;
+    /**
+     * Employee Id
+     */
+    employeeId: string;
+    /**
+     * LocalTax Model
+     */
+    localTax: shared.LocalTax;
 }
 export declare class AddLocalTaxResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad Request
+     */
     errors?: shared.ErrorT[];
 }

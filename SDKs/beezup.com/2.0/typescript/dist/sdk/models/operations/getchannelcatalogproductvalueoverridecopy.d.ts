@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetChannelCatalogProductValueOverrideCopyPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetChannelCatalogProductValueOverrideCopyRequest extends SpeakeasyBase {
+    /**
+     * The channel catalog identifier
+     */
     channelCatalogId: string;
+    /**
+     * The product identifier
+     */
     productId: string;
 }
-export declare class GetChannelCatalogProductValueOverrideCopyRequest extends SpeakeasyBase {
-    pathParams: GetChannelCatalogProductValueOverrideCopyPathParams;
-}
 export declare class GetChannelCatalogProductValueOverrideCopyResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     * ChannelCatalog or ProductId not found or not authorized
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

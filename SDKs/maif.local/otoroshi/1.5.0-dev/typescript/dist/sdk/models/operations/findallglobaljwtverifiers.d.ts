@@ -1,13 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class FindAllGlobalJwtVerifiersSecurity extends SpeakeasyBase {
-    otoroshiAuth: shared.SchemeOtoroshiAuth;
-}
-export declare class FindAllGlobalJwtVerifiersRequest extends SpeakeasyBase {
-    security: FindAllGlobalJwtVerifiersSecurity;
-}
+import { AxiosResponse } from "axios";
 export declare class FindAllGlobalJwtVerifiersResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful operation
+     */
     globalJwtVerifiers?: shared.GlobalJwtVerifier[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

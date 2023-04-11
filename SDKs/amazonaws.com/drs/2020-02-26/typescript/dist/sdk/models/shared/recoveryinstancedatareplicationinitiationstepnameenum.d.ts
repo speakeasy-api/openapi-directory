@@ -1,0 +1,20 @@
+export declare enum RecoveryInstanceDataReplicationInitiationStepNameEnum {
+    LinkFailbackClientWithRecoveryInstance = "LINK_FAILBACK_CLIENT_WITH_RECOVERY_INSTANCE",
+    CompleteVolumeMapping = "COMPLETE_VOLUME_MAPPING",
+    EstablishRecoveryInstanceCommunication = "ESTABLISH_RECOVERY_INSTANCE_COMMUNICATION",
+    DownloadReplicationSoftwareToFailbackClient = "DOWNLOAD_REPLICATION_SOFTWARE_TO_FAILBACK_CLIENT",
+    ConfigureReplicationSoftware = "CONFIGURE_REPLICATION_SOFTWARE",
+    PairAgentWithReplicationSoftware = "PAIR_AGENT_WITH_REPLICATION_SOFTWARE",
+    EstablishAgentReplicatorSoftwareCommunication = "ESTABLISH_AGENT_REPLICATOR_SOFTWARE_COMMUNICATION",
+    Wait = "WAIT",
+    CreateSecurityGroup = "CREATE_SECURITY_GROUP",
+    LaunchReplicationServer = "LAUNCH_REPLICATION_SERVER",
+    BootReplicationServer = "BOOT_REPLICATION_SERVER",
+    AuthenticateWithService = "AUTHENTICATE_WITH_SERVICE",
+    DownloadReplicationSoftware = "DOWNLOAD_REPLICATION_SOFTWARE",
+    CreateStagingDisks = "CREATE_STAGING_DISKS",
+    AttachStagingDisks = "ATTACH_STAGING_DISKS",
+    PairReplicationServerWithAgent = "PAIR_REPLICATION_SERVER_WITH_AGENT",
+    ConnectAgentToReplicationServer = "CONNECT_AGENT_TO_REPLICATION_SERVER",
+    StartDataTransfer = "START_DATA_TRANSFER"
+}

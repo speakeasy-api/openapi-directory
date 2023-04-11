@@ -1,21 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetAudioPathParams extends SpeakeasyBase {
-    word: string;
-}
+import { AxiosResponse } from "axios";
+/**
+ * If true will try to return the correct word root ('cats' -> 'cat'). If false returns exactly what was requested.
+ */
 export declare enum GetAudioUseCanonicalEnum {
     False = "false",
     True = "true"
 }
-export declare class GetAudioQueryParams extends SpeakeasyBase {
-    limit?: number;
-    useCanonical?: GetAudioUseCanonicalEnum;
-}
 export declare class GetAudioRequest extends SpeakeasyBase {
-    pathParams: GetAudioPathParams;
-    queryParams: GetAudioQueryParams;
+    /**
+     * Maximum number of results to return
+     */
+    limit?: number;
+    /**
+     * If true will try to return the correct word root ('cats' -> 'cat'). If false returns exactly what was requested.
+     */
+    useCanonical?: GetAudioUseCanonicalEnum;
+    /**
+     * Word to get audio for.
+     */
+    word: string;
 }
 export declare class GetAudioResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,8 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Contains a list of HTTP header names.
-**/
+ */
 export declare class Headers extends SpeakeasyBase {
-    items?: Record<string, any>[];
+    items?: string[];
     quantity: number;
 }

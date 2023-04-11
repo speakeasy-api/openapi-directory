@@ -1,3 +1,6 @@
+/**
+ * Specifies the encoding of the log file so that the file can be read correctly. The default is <code>utf_8</code>. Encodings supported by Python <code>codecs.decode()</code> can be used here.
+ */
 export declare enum CloudWatchLogsEncodingEnum {
     Ascii = "ascii",
     Big5 = "big5",

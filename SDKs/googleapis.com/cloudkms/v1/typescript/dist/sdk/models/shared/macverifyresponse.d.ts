@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The ProtectionLevel of the CryptoKeyVersion used for verification.
+ */
 export declare enum MacVerifyResponseProtectionLevelEnum {
     ProtectionLevelUnspecified = "PROTECTION_LEVEL_UNSPECIFIED",
     Software = "SOFTWARE",
@@ -8,12 +11,30 @@ export declare enum MacVerifyResponseProtectionLevelEnum {
 }
 /**
  * Response message for KeyManagementService.MacVerify.
-**/
+ */
 export declare class MacVerifyResponse extends SpeakeasyBase {
+    /**
+     * The resource name of the CryptoKeyVersion used for verification. Check this field to verify that the intended resource was used for verification.
+     */
     name?: string;
+    /**
+     * The ProtectionLevel of the CryptoKeyVersion used for verification.
+     */
     protectionLevel?: MacVerifyResponseProtectionLevelEnum;
+    /**
+     * This field indicates whether or not the verification operation for MacVerifyRequest.mac over MacVerifyRequest.data was successful.
+     */
     success?: boolean;
+    /**
+     * Integrity verification field. A flag indicating whether MacVerifyRequest.data_crc32c was received by KeyManagementService and used for the integrity verification of the data. A false value of this field indicates either that MacVerifyRequest.data_crc32c was left unset or that it was not delivered to KeyManagementService. If you've set MacVerifyRequest.data_crc32c but this field is still false, discard the response and perform a limited number of retries.
+     */
     verifiedDataCrc32c?: boolean;
+    /**
+     * Integrity verification field. A flag indicating whether MacVerifyRequest.mac_crc32c was received by KeyManagementService and used for the integrity verification of the data. A false value of this field indicates either that MacVerifyRequest.mac_crc32c was left unset or that it was not delivered to KeyManagementService. If you've set MacVerifyRequest.mac_crc32c but this field is still false, discard the response and perform a limited number of retries.
+     */
     verifiedMacCrc32c?: boolean;
+    /**
+     * Integrity verification field. This value is used for the integrity verification of [MacVerifyResponse.success]. If the value of this field contradicts the value of [MacVerifyResponse.success], discard the response and perform a limited number of retries.
+     */
     verifiedSuccessIntegrity?: boolean;
 }

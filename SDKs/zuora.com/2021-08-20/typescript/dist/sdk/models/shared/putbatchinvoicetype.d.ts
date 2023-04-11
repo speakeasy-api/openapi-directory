@@ -1,4 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { BatchInvoiceType } from "./batchinvoicetype";
 export declare class PutBatchInvoiceType extends SpeakeasyBase {
-    invoices?: Record<string, any>[];
+    /**
+     * Container for invoice update details.
+     *
+     * @remarks
+     *
+     */
+    invoices?: BatchInvoiceType[];
 }

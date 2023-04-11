@@ -1,14 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetAnswerPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetAnswerRequest extends SpeakeasyBase {
     lensAlias: string;
+    milestoneNumber?: number;
     questionId: string;
     workloadId: string;
-}
-export declare class GetAnswerQueryParams extends SpeakeasyBase {
-    milestoneNumber?: number;
-}
-export declare class GetAnswerHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,18 +14,32 @@ export declare class GetAnswerHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetAnswerRequest extends SpeakeasyBase {
-    pathParams: GetAnswerPathParams;
-    queryParams: GetAnswerQueryParams;
-    headers: GetAnswerHeaders;
-}
 export declare class GetAnswerResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getAnswerOutput?: shared.GetAnswerOutput;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

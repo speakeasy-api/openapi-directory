@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Operations about webhook_tests
+ */
 export declare class WebhookTests {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,10 @@ export declare class WebhookTests {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * postWebhookTests - Create Webhook Test
-     *
      * Create Webhook Test
-    **/
-    postWebhookTests(req: operations.PostWebhookTestsRequest, config?: AxiosRequestConfig): Promise<operations.PostWebhookTestsResponse>;
+     *
+     * @remarks
+     * Create Webhook Test
+     */
+    postWebhookTests(req: operations.PostWebhookTestsRequestBody, config?: AxiosRequestConfig): Promise<operations.PostWebhookTestsResponse>;
 }

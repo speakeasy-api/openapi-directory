@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Inventory {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +9,10 @@ export declare class Inventory {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getInventory - List of Item Inventories
+     * List of Item Inventories
      *
+     * @remarks
      * Retrieve inventory for one or more items. This API requires elevated permissions, please speak to your success manager.
-    **/
-    getInventory(req: operations.GetInventoryRequest, config?: AxiosRequestConfig): Promise<operations.GetInventoryResponse>;
+     */
+    getInventory(req: operations.GetInventoryRequest, security: operations.GetInventorySecurity, config?: AxiosRequestConfig): Promise<operations.GetInventoryResponse>;
 }

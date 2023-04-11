@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeregisterInstancesFromLoadBalancerActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeregisterInstancesFromLoadBalancerActionEnum {
     DeregisterInstancesFromLoadBalancer = "DeregisterInstancesFromLoadBalancer"
 }
-export declare enum PostDeregisterInstancesFromLoadBalancerVersionEnum {
+export declare enum POSTDeregisterInstancesFromLoadBalancerVersionEnum {
     TwoThousandAndTwelve0601 = "2012-06-01"
 }
-export declare class PostDeregisterInstancesFromLoadBalancerQueryParams extends SpeakeasyBase {
-    action: PostDeregisterInstancesFromLoadBalancerActionEnum;
-    version: PostDeregisterInstancesFromLoadBalancerVersionEnum;
-}
-export declare class PostDeregisterInstancesFromLoadBalancerHeaders extends SpeakeasyBase {
+export declare class POSTDeregisterInstancesFromLoadBalancerRequest extends SpeakeasyBase {
+    action: POSTDeregisterInstancesFromLoadBalancerActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeregisterInstancesFromLoadBalancerVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeregisterInstancesFromLoadBalancerHeaders extends Spea
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeregisterInstancesFromLoadBalancerRequest extends SpeakeasyBase {
-    queryParams: PostDeregisterInstancesFromLoadBalancerQueryParams;
-    headers: PostDeregisterInstancesFromLoadBalancerHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeregisterInstancesFromLoadBalancerResponse extends SpeakeasyBase {
+export declare class POSTDeregisterInstancesFromLoadBalancerResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

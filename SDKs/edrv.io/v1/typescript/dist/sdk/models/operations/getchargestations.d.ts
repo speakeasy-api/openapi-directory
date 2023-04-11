@@ -1,28 +1,78 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetChargeStationsQueryParams extends SpeakeasyBase {
-    active?: boolean;
-    createdAtDollarGte?: Date;
-    createdAtDollarLte?: Date;
-    includeEvses?: boolean;
-    includeLocation?: boolean;
-    includeOrganization?: boolean;
-    location?: string;
-    online?: boolean;
-    organization?: string;
-    paginateEnabled?: boolean;
-    paginateLimit?: number;
-    paginatePage?: string;
-    public?: boolean;
-    sortBy?: string;
-    sortOrder?: shared.SortOrder1Enum;
-    updatedAtDollarGte?: Date;
-    updatedAtDollarLte?: Date;
-}
+import { AxiosResponse } from "axios";
 export declare class GetChargeStationsRequest extends SpeakeasyBase {
-    queryParams: GetChargeStationsQueryParams;
+    /**
+     * Chargestations that have been activated/deactivated by the admin
+     */
+    active?: boolean;
+    /**
+     * Date as ISO String
+     */
+    createdAtDollarGte?: Date;
+    /**
+     * Date as ISO String
+     */
+    createdAtDollarLte?: Date;
+    /**
+     * Populate evses
+     */
+    includeEvses?: boolean;
+    /**
+     * Populate location
+     */
+    includeLocation?: boolean;
+    /**
+     * Populate organization
+     */
+    includeOrganization?: boolean;
+    /**
+     * Filter by Location Id
+     */
+    location?: string;
+    /**
+     * Filter by Online Status
+     */
+    online?: boolean;
+    /**
+     * Filter by Org. Id
+     */
+    organization?: string;
+    /**
+     * Enable pagination
+     */
+    paginateEnabled?: boolean;
+    /**
+     * Number of results per page
+     */
+    paginateLimit?: number;
+    /**
+     * The queried page index
+     */
+    paginatePage?: string;
+    /**
+     * Chargestations that are public
+     */
+    public?: boolean;
+    /**
+     * Sort data by this key
+     */
+    sortBy?: string;
+    /**
+     * asc to sort ascending (default is desc - descending)
+     */
+    sortOrder?: shared.SortOrder1Enum;
+    /**
+     * Date as ISO String
+     */
+    updatedAtDollarGte?: Date;
+    /**
+     * Date as ISO String
+     */
+    updatedAtDollarLte?: Date;
 }
 export declare class GetChargeStationsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

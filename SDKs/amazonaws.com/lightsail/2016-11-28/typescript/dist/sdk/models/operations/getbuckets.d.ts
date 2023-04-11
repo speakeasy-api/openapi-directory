@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetBucketsXAmzTargetEnum {
     Lightsail20161128GetBuckets = "Lightsail_20161128.GetBuckets"
 }
-export declare class GetBucketsHeaders extends SpeakeasyBase {
+export declare class GetBucketsRequest extends SpeakeasyBase {
+    getBucketsRequest: shared.GetBucketsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class GetBucketsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetBucketsXAmzTargetEnum;
 }
-export declare class GetBucketsRequest extends SpeakeasyBase {
-    headers: GetBucketsHeaders;
-    request: shared.GetBucketsRequest;
-}
 export declare class GetBucketsResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getBucketsResult?: shared.GetBucketsResult;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
+    /**
+     * ServiceException
+     */
     serviceException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnauthenticatedException
+     */
     unauthenticatedException?: any;
 }

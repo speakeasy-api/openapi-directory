@@ -1,8 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class TagResourcePathParams extends SpeakeasyBase {
-    resourceArn: string;
+import { AxiosResponse } from "axios";
+export declare class TagResourceRequestBody extends SpeakeasyBase {
+    /**
+     * A collection of labels, in the form of key-value pairs, that apply to this resource.
+     */
+    tags?: Record<string, string>;
 }
-export declare class TagResourceHeaders extends SpeakeasyBase {
+export declare class TagResourceRequest extends SpeakeasyBase {
+    requestBody: TagResourceRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -10,24 +15,45 @@ export declare class TagResourceHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class TagResourceRequestBody extends SpeakeasyBase {
-    tags?: Record<string, string>;
-}
-export declare class TagResourceRequest extends SpeakeasyBase {
-    pathParams: TagResourcePathParams;
-    headers: TagResourceHeaders;
-    request: TagResourceRequestBody;
+    /**
+     * The Amazon Resource Name (ARN) of the resource you want to add tags to.
+     */
+    resourceArn: string;
 }
 export declare class TagResourceResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
-    resourceNotFoundException?: any;
-    serviceQuotaExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ServiceQuotaExceededException
+     */
+    serviceQuotaExceededException?: any;
+    /**
+     * Success
+     */
     tagResourceResponse?: Record<string, any>;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

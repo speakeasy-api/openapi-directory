@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteDashboardsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteDashboardsActionEnum {
     DeleteDashboards = "DeleteDashboards"
 }
-export declare enum GetDeleteDashboardsVersionEnum {
+export declare enum GETDeleteDashboardsVersionEnum {
     TwoThousandAndTen0801 = "2010-08-01"
 }
-export declare class GetDeleteDashboardsQueryParams extends SpeakeasyBase {
-    action: GetDeleteDashboardsActionEnum;
+export declare class GETDeleteDashboardsRequest extends SpeakeasyBase {
+    action: GETDeleteDashboardsActionEnum;
+    /**
+     * The dashboards to be deleted. This parameter is required.
+     */
     dashboardNames: string[];
-    version: GetDeleteDashboardsVersionEnum;
-}
-export declare class GetDeleteDashboardsHeaders extends SpeakeasyBase {
+    version: GETDeleteDashboardsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDeleteDashboardsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteDashboardsRequest extends SpeakeasyBase {
-    queryParams: GetDeleteDashboardsQueryParams;
-    headers: GetDeleteDashboardsHeaders;
-}
-export declare class GetDeleteDashboardsResponse extends SpeakeasyBase {
+export declare class GETDeleteDashboardsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

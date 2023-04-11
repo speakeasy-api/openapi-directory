@@ -1,22 +1,17 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetApodRequest, GetApodResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetApodRequest,
+  GetApodResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetApodRequest = {
-  security: {
-    apiKey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  },
-  queryParams: {
-    date: "sit",
-    hd: false,
-  },
+  date: "corrupti",
+  hd: false,
 };
 
 sdk.requestTag.getApod(req).then((res: GetApodResponse | AxiosError) => {

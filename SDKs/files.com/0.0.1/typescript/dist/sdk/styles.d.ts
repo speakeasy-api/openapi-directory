@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Operations about styles
+ */
 export declare class Styles {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,21 +12,24 @@ export declare class Styles {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteStylesPath - Delete Style
-     *
      * Delete Style
-    **/
+     *
+     * @remarks
+     * Delete Style
+     */
     deleteStylesPath(req: operations.DeleteStylesPathRequest, config?: AxiosRequestConfig): Promise<operations.DeleteStylesPathResponse>;
     /**
-     * getStylesPath - Show Style
-     *
      * Show Style
-    **/
+     *
+     * @remarks
+     * Show Style
+     */
     getStylesPath(req: operations.GetStylesPathRequest, config?: AxiosRequestConfig): Promise<operations.GetStylesPathResponse>;
     /**
-     * patchStylesPath - Update Style
-     *
      * Update Style
-    **/
+     *
+     * @remarks
+     * Update Style
+     */
     patchStylesPath(req: operations.PatchStylesPathRequest, config?: AxiosRequestConfig): Promise<operations.PatchStylesPathResponse>;
 }

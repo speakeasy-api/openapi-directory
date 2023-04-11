@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The data type of the field.
+ */
 export declare enum ResultMetadataDataTypeEnum {
     DataTypeUnspecified = "DATA_TYPE_UNSPECIFIED",
     DataTypeInt = "DATA_TYPE_INT",
@@ -48,9 +51,18 @@ export declare enum ResultMetadataDataTypeEnum {
 }
 /**
  * Metadata of result field.
-**/
+ */
 export declare class ResultMetadata extends SpeakeasyBase {
+    /**
+     * The data type of the field.
+     */
     dataType?: ResultMetadataDataTypeEnum;
+    /**
+     * A brief description of the field.
+     */
     description?: string;
+    /**
+     * Name of the result field.
+     */
     field?: string;
 }

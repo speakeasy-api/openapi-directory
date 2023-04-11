@@ -24,9 +24,18 @@ export declare class ProfileOriginAddresses extends SpeakeasyBase {
     isFullControlAllowed?: boolean;
 }
 export declare class ProfileQuota extends SpeakeasyBase {
+    /**
+     * The number of messages you can still send today.
+     */
     remaining: number;
+    /**
+     * The setting that limits the number of messages you can send in a day.
+     */
     size: number;
 }
+/**
+ * A Profile object
+ */
 export declare class Profile extends SpeakeasyBase {
     commerce?: ProfileCommerce;
     company?: ProfileCompany;

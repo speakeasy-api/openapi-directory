@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class NestedVlan extends SpeakeasyBase {
+export declare class NestedVLAN extends SpeakeasyBase {
     displayName?: string;
     id?: number;
     name: string;

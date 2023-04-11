@@ -1,38 +1,32 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { HomegraphAgentUsersDeleteRequest, HomegraphAgentUsersDeleteResponse } from "openapi/src/sdk/models/operations";
+import {
+  HomegraphAgentUsersDeleteRequest,
+  HomegraphAgentUsersDeleteResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: HomegraphAgentUsersDeleteRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    agentUserId: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    requestId: "nihil",
-    uploadType: "rerum",
-    uploadProtocol: "dicta",
-  },
+  dollarXgafv: XgafvEnum.Two,
+  accessToken: "provident",
+  agentUserId: "distinctio",
+  alt: AltEnum.Proto,
+  callback: "unde",
+  fields: "nulla",
+  key: "corrupti",
+  oauthToken: "illum",
+  prettyPrint: false,
+  quotaUser: "vel",
+  requestId: "error",
+  uploadType: "deserunt",
+  uploadProtocol: "suscipit",
 };
 
 sdk.agentUsers.homegraphAgentUsersDelete(req).then((res: HomegraphAgentUsersDeleteResponse | AxiosError) => {

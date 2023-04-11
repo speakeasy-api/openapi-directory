@@ -1,21 +1,43 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ProjectsListForOrgPathParams extends SpeakeasyBase {
-    org: string;
-}
-export declare class ProjectsListForOrgQueryParams extends SpeakeasyBase {
-    page?: number;
-    perPage?: number;
-    state?: shared.OrgEnum1;
+import { AxiosResponse } from "axios";
+/**
+ * Indicates the state of the projects to return.
+ */
+export declare enum ProjectsListForOrgStateEnum {
+    Open = "open",
+    Closed = "closed",
+    All = "all"
 }
 export declare class ProjectsListForOrgRequest extends SpeakeasyBase {
-    pathParams: ProjectsListForOrgPathParams;
-    queryParams: ProjectsListForOrgQueryParams;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    org: string;
+    /**
+     * Page number of the results to fetch.
+     */
+    page?: number;
+    /**
+     * The number of results per page (max 100).
+     */
+    perPage?: number;
+    /**
+     * Indicates the state of the projects to return.
+     */
+    state?: ProjectsListForOrgStateEnum;
 }
 export declare class ProjectsListForOrgResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     projects?: shared.Project[];
+    /**
+     * Validation failed, or the endpoint has been spammed.
+     */
     validationErrorSimple?: shared.ValidationErrorSimple;
 }

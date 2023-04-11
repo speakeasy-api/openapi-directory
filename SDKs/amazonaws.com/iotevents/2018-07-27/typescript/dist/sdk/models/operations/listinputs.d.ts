@@ -1,10 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListInputsQueryParams extends SpeakeasyBase {
-    maxResults?: number;
-    nextToken?: string;
-}
-export declare class ListInputsHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListInputsRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,17 +9,37 @@ export declare class ListInputsHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class ListInputsRequest extends SpeakeasyBase {
-    queryParams: ListInputsQueryParams;
-    headers: ListInputsHeaders;
+    /**
+     * The maximum number of results to be returned per request.
+     */
+    maxResults?: number;
+    /**
+     * The token that you can use to return the next set of results.
+     */
+    nextToken?: string;
 }
 export declare class ListInputsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalFailureException
+     */
     internalFailureException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * Success
+     */
     listInputsResponse?: shared.ListInputsResponse;
-    serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceUnavailableException
+     */
+    serviceUnavailableException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

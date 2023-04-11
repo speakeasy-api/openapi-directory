@@ -1,5 +1,9 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Everything about Otoroshi global configuration
+ */
 export declare class Configuration {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,21 +13,24 @@ export declare class Configuration {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * globalConfig - Get the full configuration of Otoroshi
-     *
      * Get the full configuration of Otoroshi
-    **/
-    globalConfig(req: operations.GlobalConfigRequest, config?: AxiosRequestConfig): Promise<operations.GlobalConfigResponse>;
-    /**
-     * patchGlobalConfig - Update the global configuration with a diff
      *
+     * @remarks
+     * Get the full configuration of Otoroshi
+     */
+    globalConfig(config?: AxiosRequestConfig): Promise<operations.GlobalConfigResponse>;
+    /**
      * Update the global configuration with a diff
-    **/
-    patchGlobalConfig(req: operations.PatchGlobalConfigRequest, config?: AxiosRequestConfig): Promise<operations.PatchGlobalConfigResponse>;
-    /**
-     * putGlobalConfig - Update the global configuration
      *
+     * @remarks
+     * Update the global configuration with a diff
+     */
+    patchGlobalConfig(req: shared.Patch[], security: operations.PatchGlobalConfigSecurity, config?: AxiosRequestConfig): Promise<operations.PatchGlobalConfigResponse>;
+    /**
      * Update the global configuration
-    **/
-    putGlobalConfig(req: operations.PutGlobalConfigRequest, config?: AxiosRequestConfig): Promise<operations.PutGlobalConfigResponse>;
+     *
+     * @remarks
+     * Update the global configuration
+     */
+    putGlobalConfig(req: shared.GlobalConfig, security: operations.PutGlobalConfigSecurity, config?: AxiosRequestConfig): Promise<operations.PutGlobalConfigResponse>;
 }

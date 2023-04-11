@@ -1,16 +1,16 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetClientClientIdRequest, GetClientClientIdResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetClientClientIdRequest,
+  GetClientClientIdResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetClientClientIdRequest = {
-  pathParams: {
-    clientId: "sit",
-  },
+  clientId: "corrupti",
 };
 
 sdk.client.getClientClientId(req).then((res: GetClientClientIdResponse | AxiosError) => {

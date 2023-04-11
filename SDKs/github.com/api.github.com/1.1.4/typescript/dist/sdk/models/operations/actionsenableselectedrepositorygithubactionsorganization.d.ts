@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ActionsEnableSelectedRepositoryGithubActionsOrganizationPathParams extends SpeakeasyBase {
-    org: string;
-    repositoryId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ActionsEnableSelectedRepositoryGithubActionsOrganizationRequest extends SpeakeasyBase {
-    pathParams: ActionsEnableSelectedRepositoryGithubActionsOrganizationPathParams;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    org: string;
+    /**
+     * The unique identifier of the repository.
+     */
+    repositoryId: number;
 }
 export declare class ActionsEnableSelectedRepositoryGithubActionsOrganizationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

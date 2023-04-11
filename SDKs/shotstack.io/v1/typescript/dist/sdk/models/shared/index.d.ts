@@ -18,7 +18,6 @@ export * from "./queuedresponsedata";
 export * from "./range";
 export * from "./renderresponse";
 export * from "./renderresponsedata";
-export * from "./security";
 export * from "./shotstackdestination";
 export * from "./size";
 export * from "./soundtrack";

@@ -1,21 +1,44 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetTargetsTargetIdScansIdReportOwaspPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetTargetsTargetIdScansIdReportOwaspRequest extends SpeakeasyBase {
+    /**
+     * Object Id
+     */
     id: string;
+    /**
+     * Target id
+     */
     targetId: string;
 }
-export declare class GetTargetsTargetIdScansIdReportOwasp401ApplicationJson extends SpeakeasyBase {
+/**
+ * Not found
+ */
+export declare class GetTargetsTargetIdScansIdReportOwasp404ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Not found.
+     */
     detail?: string;
 }
-export declare class GetTargetsTargetIdScansIdReportOwasp404ApplicationJson extends SpeakeasyBase {
+/**
+ * Access token is missing or invalid
+ */
+export declare class GetTargetsTargetIdScansIdReportOwasp401ApplicationJSON extends SpeakeasyBase {
     detail?: string;
-}
-export declare class GetTargetsTargetIdScansIdReportOwaspRequest extends SpeakeasyBase {
-    pathParams: GetTargetsTargetIdScansIdReportOwaspPathParams;
 }
 export declare class GetTargetsTargetIdScansIdReportOwaspResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Scan report PDF
+     */
     getTargetsTargetIdScansIdReportOwasp200ApplicationPdfBinaryString?: Uint8Array;
-    getTargetsTargetIdScansIdReportOwasp401ApplicationJSONObject?: GetTargetsTargetIdScansIdReportOwasp401ApplicationJson;
-    getTargetsTargetIdScansIdReportOwasp404ApplicationJSONObject?: GetTargetsTargetIdScansIdReportOwasp404ApplicationJson;
+    /**
+     * Access token is missing or invalid
+     */
+    getTargetsTargetIdScansIdReportOwasp401ApplicationJSONObject?: GetTargetsTargetIdScansIdReportOwasp401ApplicationJSON;
+    /**
+     * Not found
+     */
+    getTargetsTargetIdScansIdReportOwasp404ApplicationJSONObject?: GetTargetsTargetIdScansIdReportOwasp404ApplicationJSON;
 }

@@ -1,15 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class PostChargeStations201ApplicationJson extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+/**
+ * Returns the newly created chargestion object
+ */
+export declare class PostChargeStations201ApplicationJSON extends SpeakeasyBase {
     chargestation?: Record<string, any>;
     message?: string;
     ok?: boolean;
 }
-export declare class PostChargeStationsRequest extends SpeakeasyBase {
-    request: shared.Schema1;
-}
 export declare class PostChargeStationsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    postChargeStations201ApplicationJSONObject?: PostChargeStations201ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Returns the newly created chargestion object
+     */
+    postChargeStations201ApplicationJSONObject?: PostChargeStations201ApplicationJSON;
 }

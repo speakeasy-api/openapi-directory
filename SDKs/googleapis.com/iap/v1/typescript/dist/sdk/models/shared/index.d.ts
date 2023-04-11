@@ -23,7 +23,6 @@ export * from "./policydelegationsettings";
 export * from "./policyname";
 export * from "./reauthsettings";
 export * from "./resource";
-export * from "./security";
 export * from "./setiampolicyrequest";
 export * from "./testiampermissionsrequest";
 export * from "./testiampermissionsresponse";

@@ -1,23 +1,38 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ListInflectedFormsQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListInflectedFormsRequest extends SpeakeasyBase {
+    /**
+     * {{apiKeyDescription}}
+     */
+    ocpApimSubscriptionKey?: string;
+    /**
+     * (Required) The family to inspect
+     */
     family?: string;
+    /**
+     * (Required) The language code
+     */
     language?: string;
+    /**
+     * (Required) The lexeme to inspect
+     */
     lexeme?: string;
 }
-export declare class ListInflectedForms200ApplicationJsonFeatures extends SpeakeasyBase {
+export declare class ListInflectedForms200ApplicationJSONFeatures extends SpeakeasyBase {
     index?: number;
     value?: string;
 }
-export declare class ListInflectedForms200ApplicationJson extends SpeakeasyBase {
-    features?: ListInflectedForms200ApplicationJsonFeatures[];
+export declare class ListInflectedForms200ApplicationJSON extends SpeakeasyBase {
+    features?: ListInflectedForms200ApplicationJSONFeatures[];
     isLemma?: boolean;
     text?: string;
-}
-export declare class ListInflectedFormsRequest extends SpeakeasyBase {
-    queryParams: ListInflectedFormsQueryParams;
 }
 export declare class ListInflectedFormsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    listInflectedForms200ApplicationJSONObjects?: ListInflectedForms200ApplicationJson[];
+    rawResponse?: AxiosResponse;
+    /**
+     * Inflected forms of "United States" in Russian
+     */
+    listInflectedForms200ApplicationJSONObjects?: ListInflectedForms200ApplicationJSON[];
 }

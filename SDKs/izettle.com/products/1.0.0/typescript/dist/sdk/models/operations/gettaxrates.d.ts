@@ -1,14 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetTaxRatesSecurity extends SpeakeasyBase {
-    zettleApiKey?: shared.SchemeZettleApiKey;
-    zettleOauth?: shared.SchemeZettleOauth;
-}
-export declare class GetTaxRatesRequest extends SpeakeasyBase {
-    security: GetTaxRatesSecurity;
-}
+import { AxiosResponse } from "axios";
 export declare class GetTaxRatesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * List of tax rates
+     */
     taxRatesResponses?: shared.TaxRatesResponse[];
 }

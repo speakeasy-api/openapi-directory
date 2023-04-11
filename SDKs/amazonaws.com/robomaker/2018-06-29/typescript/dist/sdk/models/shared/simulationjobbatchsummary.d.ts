@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { SimulationJobBatchStatusEnum } from "./simulationjobbatchstatusenum";
 /**
  * Information about a simulation job batch.
-**/
+ */
 export declare class SimulationJobBatchSummary extends SpeakeasyBase {
     arn?: string;
     createdAt?: Date;

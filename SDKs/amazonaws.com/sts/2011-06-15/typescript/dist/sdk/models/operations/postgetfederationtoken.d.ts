@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostGetFederationTokenActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTGetFederationTokenActionEnum {
     GetFederationToken = "GetFederationToken"
 }
-export declare enum PostGetFederationTokenVersionEnum {
+export declare enum POSTGetFederationTokenVersionEnum {
     TwoThousandAndEleven0615 = "2011-06-15"
 }
-export declare class PostGetFederationTokenQueryParams extends SpeakeasyBase {
-    action: PostGetFederationTokenActionEnum;
-    version: PostGetFederationTokenVersionEnum;
-}
-export declare class PostGetFederationTokenHeaders extends SpeakeasyBase {
+export declare class POSTGetFederationTokenRequest extends SpeakeasyBase {
+    action: POSTGetFederationTokenActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTGetFederationTokenVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostGetFederationTokenHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostGetFederationTokenRequest extends SpeakeasyBase {
-    queryParams: PostGetFederationTokenQueryParams;
-    headers: PostGetFederationTokenHeaders;
-    request?: Uint8Array;
-}
-export declare class PostGetFederationTokenResponse extends SpeakeasyBase {
+export declare class POSTGetFederationTokenResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

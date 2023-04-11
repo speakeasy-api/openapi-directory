@@ -1,33 +1,26 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AdexchangebuyerAccountsGetRequest, AdexchangebuyerAccountsGetResponse } from "openapi/src/sdk/models/operations";
+import {
+  AdexchangebuyerAccountsGetRequest,
+  AdexchangebuyerAccountsGetResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: AdexchangebuyerAccountsGetRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    id: 8717895732742165505,
-  },
-  queryParams: {
-    alt: "json",
-    fields: "culpa",
-    key: "expedita",
-    oauthToken: "consequuntur",
-    prettyPrint: false,
-    quotaUser: "expedita",
-    userIp: "voluptas",
-  },
+  alt: AltEnum.Json,
+  fields: "corrupti",
+  id: 592845,
+  key: "distinctio",
+  oauthToken: "quibusdam",
+  prettyPrint: false,
+  quotaUser: "unde",
+  userIp: "nulla",
 };
 
 sdk.accounts.adexchangebuyerAccountsGet(req).then((res: AdexchangebuyerAccountsGetResponse | AxiosError) => {

@@ -4,7 +4,7 @@ import { RouteSpec } from "./routespec";
 import { RouteStatus } from "./routestatus";
 /**
  * An object representing a route returned by a describe operation.
-**/
+ */
 export declare class RouteData extends SpeakeasyBase {
     meshName: string;
     metadata?: ResourceMetadata;

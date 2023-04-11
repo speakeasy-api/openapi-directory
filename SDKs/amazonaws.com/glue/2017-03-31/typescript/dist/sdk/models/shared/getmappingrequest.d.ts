@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Location } from "./location";
 import { CatalogEntry } from "./catalogentry";
+import { Location } from "./location";
 export declare class GetMappingRequest extends SpeakeasyBase {
     location?: Location;
     sinks?: CatalogEntry[];

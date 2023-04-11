@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostImportKeyPairActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTImportKeyPairActionEnum {
     ImportKeyPair = "ImportKeyPair"
 }
-export declare enum PostImportKeyPairVersionEnum {
+export declare enum POSTImportKeyPairVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostImportKeyPairQueryParams extends SpeakeasyBase {
-    action: PostImportKeyPairActionEnum;
-    version: PostImportKeyPairVersionEnum;
-}
-export declare class PostImportKeyPairHeaders extends SpeakeasyBase {
+export declare class POSTImportKeyPairRequest extends SpeakeasyBase {
+    action: POSTImportKeyPairActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTImportKeyPairVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostImportKeyPairHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostImportKeyPairRequest extends SpeakeasyBase {
-    queryParams: PostImportKeyPairQueryParams;
-    headers: PostImportKeyPairHeaders;
-    request?: Uint8Array;
-}
-export declare class PostImportKeyPairResponse extends SpeakeasyBase {
+export declare class POSTImportKeyPairResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

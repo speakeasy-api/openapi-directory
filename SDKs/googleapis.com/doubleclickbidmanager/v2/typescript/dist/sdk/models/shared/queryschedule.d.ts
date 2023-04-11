@@ -1,0 +1,36 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { Date } from "./date";
+/**
+ * How often the query is run.
+ */
+export declare enum QueryScheduleFrequencyEnum {
+    FrequencyUnspecified = "FREQUENCY_UNSPECIFIED",
+    OneTime = "ONE_TIME",
+    Daily = "DAILY",
+    Weekly = "WEEKLY",
+    SemiMonthly = "SEMI_MONTHLY",
+    Monthly = "MONTHLY",
+    Quarterly = "QUARTERLY",
+    Yearly = "YEARLY"
+}
+/**
+ * Information on when and how frequently to run a query.
+ */
+export declare class QuerySchedule extends SpeakeasyBase {
+    /**
+     * Represents a whole or partial calendar date, such as a birthday. The time of day and time zone are either specified elsewhere or are insignificant. The date is relative to the Gregorian Calendar. This can represent one of the following: * A full date, with non-zero year, month, and day values. * A month and day, with a zero year (for example, an anniversary). * A year on its own, with a zero month and a zero day. * A year and month, with a zero day (for example, a credit card expiration date). Related types: * google.type.TimeOfDay * google.type.DateTime * google.protobuf.Timestamp
+     */
+    endDate?: Date;
+    /**
+     * How often the query is run.
+     */
+    frequency?: QueryScheduleFrequencyEnum;
+    /**
+     * Canonical timezone code for report generation time. Defaults to `America/New_York`.
+     */
+    nextRunTimezoneCode?: string;
+    /**
+     * Represents a whole or partial calendar date, such as a birthday. The time of day and time zone are either specified elsewhere or are insignificant. The date is relative to the Gregorian Calendar. This can represent one of the following: * A full date, with non-zero year, month, and day values. * A month and day, with a zero year (for example, an anniversary). * A year on its own, with a zero month and a zero day. * A year and month, with a zero day (for example, a credit card expiration date). Related types: * google.type.TimeOfDay * google.type.DateTime * google.protobuf.Timestamp
+     */
+    startDate?: Date;
+}

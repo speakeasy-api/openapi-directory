@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum CheckSchemaVersionValidityXAmzTargetEnum {
-    AwsGlueCheckSchemaVersionValidity = "AWSGlue.CheckSchemaVersionValidity"
+    AWSGlueCheckSchemaVersionValidity = "AWSGlue.CheckSchemaVersionValidity"
 }
-export declare class CheckSchemaVersionValidityHeaders extends SpeakeasyBase {
+export declare class CheckSchemaVersionValidityRequest extends SpeakeasyBase {
+    checkSchemaVersionValidityInput: shared.CheckSchemaVersionValidityInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class CheckSchemaVersionValidityHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: CheckSchemaVersionValidityXAmzTargetEnum;
 }
-export declare class CheckSchemaVersionValidityRequest extends SpeakeasyBase {
-    headers: CheckSchemaVersionValidityHeaders;
-    request: shared.CheckSchemaVersionValidityInput;
-}
 export declare class CheckSchemaVersionValidityResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * Success
+     */
     checkSchemaVersionValidityResponse?: shared.CheckSchemaVersionValidityResponse;
     contentType: string;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

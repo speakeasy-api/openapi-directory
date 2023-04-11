@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum ListTagsForDomainXAmzTargetEnum {
     Route53DomainsV20140515ListTagsForDomain = "Route53Domains_v20140515.ListTagsForDomain"
 }
-export declare class ListTagsForDomainHeaders extends SpeakeasyBase {
+export declare class ListTagsForDomainRequest extends SpeakeasyBase {
+    listTagsForDomainRequest: shared.ListTagsForDomainRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class ListTagsForDomainHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListTagsForDomainXAmzTargetEnum;
 }
-export declare class ListTagsForDomainRequest extends SpeakeasyBase {
-    headers: ListTagsForDomainHeaders;
-    request: shared.ListTagsForDomainRequest;
-}
 export declare class ListTagsForDomainResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidInput
+     */
     invalidInput?: any;
+    /**
+     * Success
+     */
     listTagsForDomainResponse?: shared.ListTagsForDomainResponse;
+    /**
+     * OperationLimitExceeded
+     */
     operationLimitExceeded?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnsupportedTLD
+     */
     unsupportedTLD?: any;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum CancelStatementXAmzTargetEnum {
     RedshiftDataCancelStatement = "RedshiftData.CancelStatement"
 }
-export declare class CancelStatementHeaders extends SpeakeasyBase {
+export declare class CancelStatementRequest extends SpeakeasyBase {
+    cancelStatementRequest: shared.CancelStatementRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,28 @@ export declare class CancelStatementHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: CancelStatementXAmzTargetEnum;
 }
-export declare class CancelStatementRequest extends SpeakeasyBase {
-    headers: CancelStatementHeaders;
-    request: shared.CancelStatementRequest;
-}
 export declare class CancelStatementResponse extends SpeakeasyBase {
+    /**
+     * Success
+     */
     cancelStatementResponse?: shared.CancelStatementResponse;
     contentType: string;
+    /**
+     * DatabaseConnectionException
+     */
+    databaseConnectionException?: any;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

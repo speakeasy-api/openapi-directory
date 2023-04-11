@@ -1,4 +1,4 @@
-export declare enum CannedAclEnum {
+export declare enum CannedACLEnum {
     Private = "private",
     PublicRead = "public-read",
     PublicReadWrite = "public-read-write",

@@ -1,5 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CancelSimulationJobBatchHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class CancelSimulationJobBatchRequestBody extends SpeakeasyBase {
+    /**
+     * The id of the batch to cancel.
+     */
+    batch: string;
+}
+export declare class CancelSimulationJobBatchRequest extends SpeakeasyBase {
+    requestBody: CancelSimulationJobBatchRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -8,19 +16,28 @@ export declare class CancelSimulationJobBatchHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class CancelSimulationJobBatchRequestBody extends SpeakeasyBase {
-    batch: string;
-}
-export declare class CancelSimulationJobBatchRequest extends SpeakeasyBase {
-    headers: CancelSimulationJobBatchHeaders;
-    request: CancelSimulationJobBatchRequestBody;
-}
 export declare class CancelSimulationJobBatchResponse extends SpeakeasyBase {
+    /**
+     * Success
+     */
     cancelSimulationJobBatchResponse?: Record<string, any>;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class ConfirmProductInstanceResult extends SpeakeasyBase {
-    ownerId?: Record<string, any>;
-    return?: Record<string, any>;
+    ownerId?: string;
+    return?: boolean;
 }

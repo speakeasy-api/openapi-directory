@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteSnapshotActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteSnapshotActionEnum {
     DeleteSnapshot = "DeleteSnapshot"
 }
-export declare enum GetDeleteSnapshotVersionEnum {
+export declare enum GETDeleteSnapshotVersionEnum {
     TwoThousandAndFifteen0202 = "2015-02-02"
 }
-export declare class GetDeleteSnapshotQueryParams extends SpeakeasyBase {
-    action: GetDeleteSnapshotActionEnum;
+export declare class GETDeleteSnapshotRequest extends SpeakeasyBase {
+    action: GETDeleteSnapshotActionEnum;
+    /**
+     * The name of the snapshot to be deleted.
+     */
     snapshotName: string;
-    version: GetDeleteSnapshotVersionEnum;
-}
-export declare class GetDeleteSnapshotHeaders extends SpeakeasyBase {
+    version: GETDeleteSnapshotVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDeleteSnapshotHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteSnapshotRequest extends SpeakeasyBase {
-    queryParams: GetDeleteSnapshotQueryParams;
-    headers: GetDeleteSnapshotHeaders;
-}
-export declare class GetDeleteSnapshotResponse extends SpeakeasyBase {
+export declare class GETDeleteSnapshotResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

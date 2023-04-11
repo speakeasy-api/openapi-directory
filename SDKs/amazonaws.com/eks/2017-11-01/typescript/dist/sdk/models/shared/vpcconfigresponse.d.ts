@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * An object representing an Amazon EKS cluster VPC configuration response.
-**/
+ */
 export declare class VpcConfigResponse extends SpeakeasyBase {
     clusterSecurityGroupId?: string;
     endpointPrivateAccess?: boolean;

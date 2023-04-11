@@ -1,5 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Services {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,258 +10,220 @@ export declare class Services {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteSetupV1ServicesAllocationsId - Delete a service allocation object
+     * Delete Allocation
      *
-     * Deletes a service allocation.
-    **/
+     * @remarks
+     * <p>Use this endpoint to permanently <b>Delete</b> a service allocation. A valid <b>serviceAllocation id</b> is required.</p>
+     */
     deleteSetupV1ServicesAllocationsId(req: operations.DeleteSetupV1ServicesAllocationsIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteSetupV1ServicesAllocationsIdResponse>;
     /**
-     * deleteSetupV1ServicesBlockId - Delete a service block object
+     * Delete Block
      *
-     * Deletes a service block.
-    **/
+     * @remarks
+     * <p>Use this endpoint to permanently <b>Delete</b> a Service Block. A valid <b>serviceBlock id</b> is required.</p>
+     */
     deleteSetupV1ServicesBlockId(req: operations.DeleteSetupV1ServicesBlockIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteSetupV1ServicesBlockIdResponse>;
     /**
-     * deleteSetupV1ServicesBookingwindowsId - Permanently deletes bookingWindow object.
+     * Delete Service Links
      *
-     * Use this endpoint to permanently delete a bookingWindow.
-    **/
-    deleteSetupV1ServicesBookingwindowsId(req: operations.DeleteSetupV1ServicesBookingwindowsIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteSetupV1ServicesBookingwindowsIdResponse>;
+     * @remarks
+     * <p>Use this endpoint to <b>Delete</b> service links from the calendar specified. A valid <b>calendar id</b> is required.</p>
+     */
     deleteSetupV1ServicesCalendarId(req: operations.DeleteSetupV1ServicesCalendarIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteSetupV1ServicesCalendarIdResponse>;
     /**
-     * deleteSetupV1ServicesId - Deletes a service object.
+     * Delete Service
      *
-     * Use this endpoint to delete a service. The service is not permanently deleted and can be recovered.
-    **/
+     * @remarks
+     * <p>Use this endpoint to <b>Delete</b> a service object. A valid <b>service id</b> is required. The service is not permanently deleted and can be recovered by using the <i>PUT /setup /v1 /services /{id} /recover</i> endpoint.</p>
+     */
     deleteSetupV1ServicesId(req: operations.DeleteSetupV1ServicesIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteSetupV1ServicesIdResponse>;
     /**
-     * deleteSetupV1ServicesIdDeleteimage - Removes a service image
+     * Delete Service Image
      *
-     * Use this endpoint to delete a previously uploaded service image.
-    **/
+     * @remarks
+     * <p>Use this endpoint to permanently <b>Delete</b> a previously uploaded service image. A valid <b>service id</b> is required.</p>
+     */
     deleteSetupV1ServicesIdDeleteimage(req: operations.DeleteSetupV1ServicesIdDeleteimageRequest, config?: AxiosRequestConfig): Promise<operations.DeleteSetupV1ServicesIdDeleteimageResponse>;
     /**
-     * getSetupV1Services - Returns a list of services.
+     * List Services
      *
-     * The results are returned in pages. Use the offset and limit parameters to control the page start and size. Default offset is 0, and limit is 20.
-     * Use the other query parameters to optionally filter the results list.
-    **/
+     * @remarks
+     * <p>Use this endpoint to return a <b>List of Service</b>. The results are returned in pages. Use the offset and limit parameters to control the page start and number of results. Default offset is 0, limit is 20, max is 100. Use the query parameters to filter the results further.</p>
+     */
     getSetupV1Services(req: operations.GetSetupV1ServicesRequest, config?: AxiosRequestConfig): Promise<operations.GetSetupV1ServicesResponse>;
     /**
-     * getSetupV1ServicesAllocationsId - Get a service allocation
-    **/
+     * Get Allocation
+     *
+     * @remarks
+     * <p>Use this endpoint to <b>Get a Service Allocation</b>. A valid <b>serviceAllocation id</b> is required.</p>
+     */
     getSetupV1ServicesAllocationsId(req: operations.GetSetupV1ServicesAllocationsIdRequest, config?: AxiosRequestConfig): Promise<operations.GetSetupV1ServicesAllocationsIdResponse>;
     /**
-     * getSetupV1ServicesBlocksId - Get a service block
-    **/
+     * Get Block
+     *
+     * @remarks
+     * <p>Use this endpoint to <b>Get a Service Block</b>. A valid <b>serviceBlock id</b> is required.</p>
+     */
     getSetupV1ServicesBlocksId(req: operations.GetSetupV1ServicesBlocksIdRequest, config?: AxiosRequestConfig): Promise<operations.GetSetupV1ServicesBlocksIdResponse>;
     /**
-     * getSetupV1ServicesBookingwindowsId - Get a booking window
-    **/
-    getSetupV1ServicesBookingwindowsId(req: operations.GetSetupV1ServicesBookingwindowsIdRequest, config?: AxiosRequestConfig): Promise<operations.GetSetupV1ServicesBookingwindowsIdResponse>;
-    /**
-     * getSetupV1ServicesId - Returns a service object.
+     * Get Service
      *
-     * The result returned is a single service object. An id is required to find the service. Find service id's using either the GET consumer/v1/service end point,
-     * or the GET consumer/v1/appointments end point.
-    **/
+     * @remarks
+     * <p>Use this endpoint to return a <b>Service</b> object. A valid <b>service id</b> is required. Find service id's by using the <i>GET /setup/v1/services</i> endpoint.</p>
+     */
     getSetupV1ServicesId(req: operations.GetSetupV1ServicesIdRequest, config?: AxiosRequestConfig): Promise<operations.GetSetupV1ServicesIdResponse>;
     /**
-     * getSetupV1ServicesIdAllocations - Returns a list of service allocations.
+     * List Service Allocations
      *
-     * This endpoint is used primarily for event booking. When you create service type events, you allocation specific occurrences of the event
-     * against the service.
-     *
-     * You can retrieve all allocations for a location by passing in zero as the service id. Otherwise, to get allocations for a specific service
-     * pass in the service id.
-     *
-     * The results are returned in pages. Use the offset and limit parameters to control the page start and size. Default offset is 0, and limit is 20.
-     * Use the other query parameters to optionally filter the results list.
-    **/
+     * @remarks
+     * <p>Use this endpoint to return a <b>List of Service Allocations</b> for a specified service. A valid <b>service id</b> is required. Service allocations are used for <b>Event type services only</b> where the events are offered on specific dates and times. Retrieve all allocations for a location by passing in 0 as the service id.</p>
+     * <p>The results are returned in pages. Use the offset and limit parameters to control the page start and number of results. Default offset is 0, limit is 20, max is 100. Use the query parameters to filter the results further.</p>
+     */
     getSetupV1ServicesIdAllocations(req: operations.GetSetupV1ServicesIdAllocationsRequest, config?: AxiosRequestConfig): Promise<operations.GetSetupV1ServicesIdAllocationsResponse>;
     /**
-     * getSetupV1ServicesIdAvailability - Returns a list of weekly availability
+     * Get Weekly Availability
      *
-     * Use this endpoint to get weekly availability for a service.
-    **/
+     * @remarks
+     * <p>Use this endpoint to return the <b>Weekly Service Availability</b> for an appointment service. A valid <b>service id</b> is required. Weekly availability is returned for services where the Type = 1. For event type services, where service Type = 2, refer to the <i>GET  /setup /v1 /services /{id} /allocations</i> endpoint.</p>
+     */
     getSetupV1ServicesIdAvailability(req: operations.GetSetupV1ServicesIdAvailabilityRequest, config?: AxiosRequestConfig): Promise<operations.GetSetupV1ServicesIdAvailabilityResponse>;
     /**
-     * getSetupV1ServicesIdBlocks - Returns a list of service blocks.
+     * List Service Blocks
      *
-     * The results are returned in pages. Use the offset and limit parameters to control the page start and size. Default offset is 0, and limit is 20.
-     * Use the other query parameters to optionally filter the results list.
-    **/
+     * @remarks
+     * <p>Use this endpoint to return a list of <b>Service Blocks</b>. The results are returned in pages. Use the offset and limit parameters to control the page start and number of results. Default offset is 0, limit is 20, max is 100. Use the query parameters to filter the results further.</p>
+     */
     getSetupV1ServicesIdBlocks(req: operations.GetSetupV1ServicesIdBlocksRequest, config?: AxiosRequestConfig): Promise<operations.GetSetupV1ServicesIdBlocksResponse>;
     /**
-     * getSetupV1ServicesIdBookingwindows - Returns a list of service booking windows.
+     * Get Linked Calendar
      *
-     * This endpoint is used to retrieve any booking windows related to the service
-     *
-     * The results are returned in pages. Use the offset and limit parameters to control the page start and size. Default offset is 0, and limit is 20.
-     * Use the other query parameters to optionally filter the results list.
-    **/
-    getSetupV1ServicesIdBookingwindows(req: operations.GetSetupV1ServicesIdBookingwindowsRequest, config?: AxiosRequestConfig): Promise<operations.GetSetupV1ServicesIdBookingwindowsResponse>;
-    /**
-     * getSetupV1ServicesIdCalendar - Returns the linked calendar for the service
-     *
-     * Use this endpoint to get the linked calendar for the service.
-     * A service can only be linked to one calendar in a location.
-    **/
+     * @remarks
+     * <p>Use this endpoint to <b>Get the Linked Calendar</b> for the service requested. A valid <b>service id</b> is required. A service can only be linked to one calendar in a location.</p>
+     */
     getSetupV1ServicesIdCalendar(req: operations.GetSetupV1ServicesIdCalendarRequest, config?: AxiosRequestConfig): Promise<operations.GetSetupV1ServicesIdCalendarResponse>;
     /**
-     * getSetupV1ServicesIdResources - Returns a list of resources for the specified service.
+     * List Resources for Service
      *
-     * The results are returned in pages. Use the offset and limit parameters to control the page start and size. Default offset is 0, and limit is 20.
-     * Use the other query parameters to optionally filter the results list.
-    **/
+     * @remarks
+     * <p>Use this endpoint to return a list of <b>Resources</b> that provide the requested service. A valid <b>service id</b> is required. Use the offset and limit parameters to control the page start and number of results. Default offset is 0, limit is 20, max is 100. Use the query parameters to filter the results further.</p>
+     */
     getSetupV1ServicesIdResources(req: operations.GetSetupV1ServicesIdResourcesRequest, config?: AxiosRequestConfig): Promise<operations.GetSetupV1ServicesIdResourcesResponse>;
     /**
-     * postSetupV1Services - Creates a new service object.
+     * Create Service
      *
-     * Use this endpoint to create a new service. If not specified the business location id defaults to the first location in the company.
-     * The service Type defaults to 1 if not entered.
-     * The service Type can be one of the following values:
-     * 1 = Appointment
-     * 2 = Event
-     * 3 = Meeting
-    **/
-    postSetupV1Services(req: operations.PostSetupV1ServicesRequest, config?: AxiosRequestConfig): Promise<operations.PostSetupV1ServicesResponse>;
+     * @remarks
+     * <p>Use this endpoint to <b>Create</b> a new service. If not specified, the business location defaults to the primary business location. Note: Posting a service to the Primary Business Location will scope as company scoped and make the service available to all locations. If you want a service to only be available from a specific location, include the business location id.</p>
+     * <p>Required fields: <b>Name</b> and <b>Duration</b></p>
+     * <p>The service <b>Type</b> is either, <b>1 = Appointment</b> or <b>2 = Event</b>. Default is 1 if not specified.</p>
+     * <p>For type = 1, Appointments - Create an availability entry for each weekday to provide the service for. <b>All days of the week must be provided when adding service availability.</b> Days are defined as <b>sun, mon, tue, wed, thu, fri</b> and <b>sat</b>. Start and End Times are entered in military format. e.g., 800 is 8:00am, 2230 is 10:30pm. If not provided, it defaults to the primary location business hours.</p>
+     * <p>We support 24-hour availability, set startTime=0 and endTime=2400. To set a whole day as unavailable, set both the startTime and endTime to 0. If you require times in between specified hours to be unavailable, use the service block endpoint at: <i>POST  /setup /v1 /services /{id} /block</i>.</p>
+     * <p>For type = 2, Events - Create service allocations for their availability. Refer to the: <i>POST /setup /v1 /services /{id} /allocations</i> to set up service allocations for the event.</p>
+     * <p>Options are available for customer selected durations, for details: <a href="https://docs.onsched.com/docs/services-overview#variable-duration">Variable Duration Overview</a></p>
+     * <p>Additional parameters include but are not limited to bookingLimit, maxCapacity and maxGroupSize. For details: <a href="https://docs.onsched.com/docs/service-max-capacity">Service Limits Overview</a></p>
+     */
+    postSetupV1Services(req: shared.ServiceInputModel, config?: AxiosRequestConfig): Promise<operations.PostSetupV1ServicesResponse>;
     /**
-     * postSetupV1ServicesBookingwindows - Creates a new bookingWindow object.
+     * Link Service to Calendar
      *
-     * Use this endpoint to create a new bookingWindow.
-    **/
-    postSetupV1ServicesBookingwindows(req: operations.PostSetupV1ServicesBookingwindowsRequest, config?: AxiosRequestConfig): Promise<operations.PostSetupV1ServicesBookingwindowsResponse>;
+     * @remarks
+     * <p>Use this endpoint to <b>Link a Service</b> to a calendar. </p>
+     */
+    postSetupV1ServicesCalendar(req: shared.ServiceCalendarInputModel, config?: AxiosRequestConfig): Promise<operations.PostSetupV1ServicesCalendarResponse>;
     /**
-     * postSetupV1ServicesCalendar - Links the service to a calendar
+     * Create Allocation
      *
-     * Use this endpoint to link a service to a calendar.
-    **/
-    postSetupV1ServicesCalendar(req: operations.PostSetupV1ServicesCalendarRequest, config?: AxiosRequestConfig): Promise<operations.PostSetupV1ServicesCalendarResponse>;
-    /**
-     * postSetupV1ServicesIdAllocations - Create a new service allocation
-     *
-     * Creates a new service allocation. You must specify a StartDate and EndDate.
-     * A reason for the allocation is also required. This reason will display in the OnSched Portal Calendar.
-     *
-     * Service allocations are used primarily for event type services. The allocation represents an occurrence of an allocation.
-     *
-     * Service allocations can be set to specific time ranges or for the whole day. Use the AllDay setting to create an all day block.
-     *
-     * Service allocations can be for a specific date range instance or set to repeat at a specified frequency.
-     * The frequency can be set to a value of D,W,M,Y for Day, Week, Month, or Year respecitively.
-     *
-     * Daily allocations will repeat for each day of the week for the date range specified.
-     *
-     * Weekly allocations will repeat only on the specified days of the week for the date range specified. For a weekly block
-     * you must also specify the weekdays. Weekdays are expressed as a string of digits with each single digit in the string representing a day
-     * of the week. The possible values are 0,1,2,3,4,5,6 where 0=Sunday, 1=Monday, 2=Tuesday, 3=Wed, 4=Thursday, 5=Friday, 6=Saturday.
-     * For example a repeat weekly entry with weekdays 24 repeats each week on Tuesday and Thursday.
-     *
-     * Use the interval property to specify the interval that the allocation repeats. For example an interval of 2 for a weekly block means that
-     * the block will repeat every second week beginning at the day specified. A daily block with an interval of 10 means the block will
-     * repeat every 10 days. The interval property applies to all repeat frequencies.
-     *
-     * Monthly allocations repeat either on the day of the month specified in the month day property or on the day of the week and week of the month specified by
-     * the start date. For example, repeat every 3rd friday of each month, repeat on the 21st day of the month.
-     *
-     * Repeat allocations will end on the date specified by the end date. You can specify 9999-12-31 in the EndDate field to indicate the repeating block
-     * should continue indefinitely.
-    **/
+     * @remarks
+     * <p>Use this endpoint to <b>Create</b> a service allocation for a service. A valid <b>service id</b> is required. Service allocations are used for <b>Event type services only</b>. Service allocations allow you to specify the time(s) a service is available as opposed to using weekly availability which represents a weekly schedule, ie: Mon-Fri 9am-5pm.</p>
+     * <p>Required fields: <b>startDate, endDate, startTime, endTime</b> and <b>reason</b>. Service allocations can be set to specific time ranges or for the whole day by setting startTime=0 and endTime=2400. Service allocations can repeat for a specific date range instance or set to repeat at a specified frequency.</p>
+     * <p>
+     *   <b>Repeat object: (repeats = true)</b>
+     * </p>
+     * <p>The <b>frequency</b> can be set to a value of <b>D, W or M</b> for <b>Day, Week</b> or <b>Month</b> respectively.</p>
+     * <p>Use the <b>interval</b> property to specify the interval that the allocation repeats. For example, an interval of 2 for a weekly allocation means that the allocation will repeat every 2nd week beginning at the day specified. A daily allocation with an interval of 10 means the allocation will repeat every 10 days. The interval property applies to all repeat frequencies.  <b>If using the repeat functionality an interval value is required</b>.</p>
+     * <p>
+     *   <b>DAILY ALLOCATIONS</b>: Will repeat for each day of the week for the date range specified for the interval specified.  An interval value of “1” repeats every day, and an interval value of “3” is every 3rd day.</p>
+     * <p>
+     *   <b>WEEKLY ALLOCATIONS</b>: Will repeat only on the specified days of the week for the date range specified. For weekly the <b>frequency</b> is required and should be set to <b>“W”</b>. You must specify the <b>“weekdays”</b> parameter. Weekdays are expressed as a string of digits with each single digit in the string representing a day of the week. The possible values are <b>0,1,2,3,4,5,6</b> where <b>0=Sunday, 1=Monday, 2=Tuesday, 3=Wednesday, 4=Thursday, 5=Friday, 6=Saturday</b>.  For example, a weekly frequency with an interval of “1”, and an entry of weekdays = “24”, will repeat each week on Tuesday and Thursday for the duration of the allocation date range.</p>
+     * <p>
+     *   <b>MONTHLY ALLOCATIONS</b>: Will repeat either on the day of the month specified in the <b>monthDay</b> property or on the day of the week and week of the month specified by the <b>monthType</b> property.  In both cases <b>frequency</b> is required and should be set to <b>“M”</b>, monthly. <b>monthDay</b> is the day of the month you want allocated.  If monthDay=’15’ this means to allocate the 15th of every month in the date range requested. Using monthDay in conjunction with monthType addresses “day of the week and week of the month” scenario.  There are two possible values for monthType: <b>D for Day of Month</b> or <b>W for Week of Month.</b> For <b>monthType D</b>, monthDay value must be between 1 and 31. It is the day of the month to repeat on.  For <b>monthType M</b>, monthDay value contains 2 digits:  day of week (0-6), (0,1,2,3,4,5,6 where 0=Sunday, 1=Monday, 2=Tuesday, 3=Wednesday, 4=Thursday, 5=Friday, 6=Saturday) and week of month (1-5). 1 being the first week, 2 being the second. The third Thursday of the month is depicted as a monthType=”M” and monthDay=”43”.</p>
+     * <p>
+     *   <b>Repeats will end on the date specified by the end date.</b>
+     * </p>
+     */
     postSetupV1ServicesIdAllocations(req: operations.PostSetupV1ServicesIdAllocationsRequest, config?: AxiosRequestConfig): Promise<operations.PostSetupV1ServicesIdAllocationsResponse>;
     /**
-     * postSetupV1ServicesIdAllocationsBulk - Create new service allocations in bulk
+     * Create Allocations Bulk
      *
-     * Creates new service allocations in bulk. Refer to documentation
-     * for creating a single Service Allocation POST /setup/v1/services/{id}/allocations
-     * for understanding how to populate the properties
-     *
-     * Use this endpoint only if you need to POST multiple allocations in one call
-    **/
+     * @remarks
+     * <p>Use this endpoint to <b>Create</b> bulk service allocations. A valid <b>service id</b> is required. Use this endpoint only if you need to POST multiple service allocations in one transaction. For details refer to: <a href="POST  /setup /v1 /services /{id} /allocations">Post Service Allocation</a></p>
+     */
     postSetupV1ServicesIdAllocationsBulk(req: operations.PostSetupV1ServicesIdAllocationsBulkRequest, config?: AxiosRequestConfig): Promise<operations.PostSetupV1ServicesIdAllocationsBulkResponse>;
     /**
-     * postSetupV1ServicesIdBlock - Create a new service block
+     * Create Block
      *
-     * Creates a new service block. You must specify a StartDateTime and EndDateTime.
-     * A reason for the block is also required. This reason will display in the OnSched Portal Calendar.
-     *
-     * Service blocks can be set to specific time ranges or for the whole day. Use the AllDay setting to create an all day block.
-     *
-     * Service blocks can be for a specific date range instance or set to repeat at a specified frequency.
-     * The frequency can be set to a value of D,W,M,Y for Day, Week, Month, or Year respecitively.
-     *
-     * Daily blocks will repeat for each day of the week for the date range specified.
-     *
-     * Weekly blocks will repeat only on the specified days of the week for the date range specified. For a weekly block
-     * you must also specify the weekdays. Weekdays are expressed as a string of digits with each single digit in the string representing a day
-     * of the week. The possible values are 0,1,2,3,4,5,6 where 0=Sunday, 1=Monday, 2=Tuesday, 3=Wed, 4=Thursday, 5=Friday, 6=Saturday.
-     * For example a repeat weekly entry with weekdays 24 repeats each week on Tuesday and Thursday.
-     *
-     * Use the interval property to specify the interval that the block repeats. For example an interval of 2 for a weekly block means that
-     * the block will repeat every second week beginning at the day specified. A daily block with an interval of 10 means the block will
-     * repeat every 10 days. The interval property applies to all repeat frequencies.
-     *
-     * Monthly blocks repeat either on the day of the month specified in the month day property or on the day of the week and week of the month specified by
-     * the start date. For example, repeat every 3rd friday of each month, repeat on the 21st day of the month.
-     *
-     * Repeat blocks will end on the date specified by the end date. You can specify 9999-12-31 in
-     * the EndDate field to indicate the repeating block should continue indefinitely.
-    **/
+     * @remarks
+     * <p>Use this endpoint to <b>Create</b> a Service Block. A valid <b>service id</b> is required.</p>
+     * <p>Required fields: <b>startDate, endDate, startTime, endTime</b> and <b>reason</b>.</p>
+     * <p>Service blocks can be set to specific time ranges or for the whole day. To block a whole day set startTime to 0 and endTime to 2400.</p>
+     * <p>Service blocks can be for a specific date range instance or set to repeat at a specified frequency. </p>
+     * <p>
+     *   <b>Repeat object: (repeats = true)</b>
+     * </p>
+     * <p>The <b>frequency</b> can be set to a value of <b>D, W or M</b> for <b>Day, Week</b> or <b>Month</b> respectively.</p>
+     * <p>Use the <b>interval</b> property to specify the interval that the block repeats. For example, an interval of 2 for a weekly block means that the block will repeat every 2nd week beginning at the day specified. A daily block with an interval of 10 means the block will repeat every 10 days. The interval property applies to all repeat frequencies. <b>If using the repeat functionality an interval value is required</b>.</p>
+     * <p>
+     *   <b>DAILY BLOCKS</b>: Will repeat for each day of the week for the date range specified for the interval specified.  An interval value of “1” repeats every day, and an interval value of “3” is every 3rd day.</p>
+     * <p>
+     *   <b>WEEKLY BLOCKS</b>: Will repeat only on the specified days of the week for the date range specified. For weekly the <b>frequency</b> is required and should be set to <b>“W”</b>.  You must specify the <b>weekdays</b> parameter. Weekdays are expressed as a string of digits with each single digit in the string representing a day of the week. The possible values are <b>0,1,2,3,4,5,6</b> where <b>0=Sunday, 1=Monday, 2=Tuesday, 3=Wednesday, 4=Thursday, 5=Friday, 6=Saturday</b>. For example, a weekly frequency with an interval of “1”, and an entry of weekdays = “24”, will repeat each week on Tuesday and Thursday for the duration of the block date range.</p>
+     * <p>
+     *   <b>MONTHLY BLOCKS</b>: Will repeat either on the day of the month specified in the <b>monthDay</b> property or on the day of the week and week of the month specified by the <b>monthType</b> property.  In both cases <b>frequency</b> is required and should be set to <b>“M”</b>, monthly, <b>monthDay</b> is the day of the month you want blocked.  If monthDay=’15’ this means to block the 15th of every month in the date range requested. Using monthDay in conjunction with monthType addresses “day of the week and week of the month” scenario.  There are two possible values for monthType: <b>D for Day of Month</b> or <b>W for Week of Month.</b> For <b>monthType D</b>, monthDay value must be between 1 and 31. It is the day of the month to repeat on. For <b>monthType M</b>, monthDay value contains 2 digits: day of week (0-6), (0,1,2,3,4,5,6 where 0=Sunday, 1=Monday, 2=Tuesday, 3=Wednesday, 4=Thursday, 5=Friday, 6=Saturday) and week of month (1-5). 1 being the first week, 2 being the second. The third Thursday of the month is depicted as a monthType=”M” and monthDay=”43”.</p>
+     * <p>
+     *   <b>Repeats will end on the date specified by the end date.</b>
+     * </p>
+     */
     postSetupV1ServicesIdBlock(req: operations.PostSetupV1ServicesIdBlockRequest, config?: AxiosRequestConfig): Promise<operations.PostSetupV1ServicesIdBlockResponse>;
     /**
-     * postSetupV1ServicesIdUploadimage - Uploads a service image
+     * Upload Service Image
      *
-     * Use this endpoint to upload a service image. You must convert the image to a base64 encoded string
-     * and pass that string as input along with your filename.
-    **/
+     * @remarks
+     * <p>Use this endpoint to <b>Upload</b> an image to the service. A valid <b>service id</b> is required. You must convert the image to a <b>base64 encoded string</b> and pass that string as input along with your <b>filename</b>.</p>
+     */
     postSetupV1ServicesIdUploadimage(req: operations.PostSetupV1ServicesIdUploadimageRequest, config?: AxiosRequestConfig): Promise<operations.PostSetupV1ServicesIdUploadimageResponse>;
     /**
-     * putSetupV1ServicesAllocationsId - Update a service allocation
+     * Update Allocation
      *
-     * Updates a service allocation. Refer to the details in the POST service allocation for setting each of the required parameters.
-    **/
+     * @remarks
+     * <p>Use this endpoint to <b>Update</b> a service allocation. A valid <b>serviceAllocation id</b> is required. Refer to the <i>POST /setup/v1/services/{id}/allocations</i> endpoint for fields names and details.</p>
+     */
     putSetupV1ServicesAllocationsId(req: operations.PutSetupV1ServicesAllocationsIdRequest, config?: AxiosRequestConfig): Promise<operations.PutSetupV1ServicesAllocationsIdResponse>;
     /**
-     * putSetupV1ServicesBlockId - Update a service block
+     * Update Block
      *
-     * Updates a resource block. Refer to the details in the POST resource block for setting each of the required parameters.
-    **/
+     * @remarks
+     * <p>Use this endpoint to <b>Update</b> a Service Block. A valid <b>serviceBlock id</b> is required.</p>
+     */
     putSetupV1ServicesBlockId(req: operations.PutSetupV1ServicesBlockIdRequest, config?: AxiosRequestConfig): Promise<operations.PutSetupV1ServicesBlockIdResponse>;
     /**
-     * putSetupV1ServicesBookingwindowsId - Updates a bookingWindow object.
+     * Update Service
      *
-     * Use this endpoint to update a booking window
-    **/
-    putSetupV1ServicesBookingwindowsId(req: operations.PutSetupV1ServicesBookingwindowsIdRequest, config?: AxiosRequestConfig): Promise<operations.PutSetupV1ServicesBookingwindowsIdResponse>;
-    /**
-     * putSetupV1ServicesId - Updates a service object.
-     *
-     * Use this endpoint to update a service.
-    **/
+     * @remarks
+     * <p>Use this endpoint to <b>Update</b> a service object. A valid <b>service id</b> is required.</p>
+     */
     putSetupV1ServicesId(req: operations.PutSetupV1ServicesIdRequest, config?: AxiosRequestConfig): Promise<operations.PutSetupV1ServicesIdResponse>;
     /**
-     * putSetupV1ServicesIdAvailability - Updates Weekly Availability
+     * Update Weekly Availability
      *
-     * Use this endpoint to update service availability. The Id parameter specifies the service
-     * for which you are updating availability. Availability day entries do not need to be created.
-     * The availbility day entries are created when a service object is created. They default to
-     * the business hours.
-     *
-     * Create an entry for each weekday you wish to update. Days are defined as sun,mon,tue,wed,thu,fri,sat.
-     * Start and End Times are entered in miltary format. e.g 2230 is 10:30pm.
-     *
-     * OnSched API provides support for 24 hour availability. For midnight start of day use 0. For midnight end of day use 2400.
-     *
-     * To set a day as unavailable, set both the StartTime and EndTime to 0. If you require times in between specified hours
-     * to be unavailable, use the resource blocks endpoints.
-     *
-     * Times entered represent the timezone of the business location.
-    **/
+     * @remarks
+     * <p>Use this endpoint to <b>Update</b> service weekly availability. A valid <b>service id</b> is required. The availability day entries are created when a service object is created.</p>
+     * <p>To update weekly availability hours, all days of the week must be provided. Days are defined as <b>sun, mon, tue, wed, thu, fri</b> and <b>sat</b>. The <b>startTime</b> and <b>endTime</b> fields are entered in <b>military format. e.g., 800 is 8:00am, 2230 is 10:30pm</b>. We support 24-hour availability, set startTime=0 and endTime=2400. To set a whole day as unavailable, set both the startTime and endTime to 0.</p>
+     * <p>If you require times in between specified hours to be unavailable, use the resource blocks endpoints. Times entered represent the timezone of the business location.</p>
+     */
     putSetupV1ServicesIdAvailability(req: operations.PutSetupV1ServicesIdAvailabilityRequest, config?: AxiosRequestConfig): Promise<operations.PutSetupV1ServicesIdAvailabilityResponse>;
     /**
-     * putSetupV1ServicesIdRecover - Recovers a service object.
+     * Recover Service
      *
-     * Use this endpoint to recover a deleted service.
-    **/
+     * @remarks
+     * <p>Use this endpoint to <b>Recover</b> a deleted service object. A valid <b>service id</b> is required.</p>
+     */
     putSetupV1ServicesIdRecover(req: operations.PutSetupV1ServicesIdRecoverRequest, config?: AxiosRequestConfig): Promise<operations.PutSetupV1ServicesIdRecoverResponse>;
 }

@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeBackupsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum DescribeBackupsXAmzTargetEnum {
     BaldrApiServiceDescribeBackups = "BaldrApiService.DescribeBackups"
 }
-export declare class DescribeBackupsHeaders extends SpeakeasyBase {
+export declare class DescribeBackupsRequest extends SpeakeasyBase {
+    describeBackupsRequest: shared.DescribeBackupsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,19 +23,36 @@ export declare class DescribeBackupsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeBackupsXAmzTargetEnum;
 }
-export declare class DescribeBackupsRequest extends SpeakeasyBase {
-    queryParams: DescribeBackupsQueryParams;
-    headers: DescribeBackupsHeaders;
-    request: shared.DescribeBackupsRequest;
-}
 export declare class DescribeBackupsResponse extends SpeakeasyBase {
+    /**
+     * CloudHsmAccessDeniedException
+     */
     cloudHsmAccessDeniedException?: any;
+    /**
+     * CloudHsmInternalFailureException
+     */
     cloudHsmInternalFailureException?: any;
+    /**
+     * CloudHsmInvalidRequestException
+     */
     cloudHsmInvalidRequestException?: any;
+    /**
+     * CloudHsmResourceNotFoundException
+     */
     cloudHsmResourceNotFoundException?: any;
+    /**
+     * CloudHsmServiceException
+     */
     cloudHsmServiceException?: any;
+    /**
+     * CloudHsmTagException
+     */
     cloudHsmTagException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     describeBackupsResponse?: shared.DescribeBackupsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

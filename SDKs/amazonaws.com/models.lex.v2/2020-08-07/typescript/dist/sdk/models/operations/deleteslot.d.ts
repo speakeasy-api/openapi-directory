@@ -1,12 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteSlotPathParams extends SpeakeasyBase {
-    botId: string;
-    botVersion: string;
-    intentId: string;
-    localeId: string;
-    slotId: string;
-}
-export declare class DeleteSlotHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteSlotRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -14,18 +8,53 @@ export declare class DeleteSlotHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DeleteSlotRequest extends SpeakeasyBase {
-    pathParams: DeleteSlotPathParams;
-    headers: DeleteSlotHeaders;
+    /**
+     * The identifier of the bot associated with the slot to delete.
+     */
+    botId: string;
+    /**
+     * The version of the bot associated with the slot to delete.
+     */
+    botVersion: string;
+    /**
+     * The identifier of the intent associated with the slot.
+     */
+    intentId: string;
+    /**
+     * The identifier of the language and locale that the slot will be deleted from. The string must match one of the supported locales. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html">Supported languages</a>.
+     */
+    localeId: string;
+    /**
+     * The identifier of the slot to delete.
+     */
+    slotId: string;
 }
 export declare class DeleteSlotResponse extends SpeakeasyBase {
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * PreconditionFailedException
+     */
     preconditionFailedException?: any;
-    serviceQuotaExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceQuotaExceededException
+     */
+    serviceQuotaExceededException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

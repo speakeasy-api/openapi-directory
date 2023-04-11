@@ -1,39 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-/**
- * License Simple
-**/
-export declare class RepositoryLicenseSimple extends SpeakeasyBase {
-    htmlUrl?: string;
-    key: string;
-    name: string;
-    nodeId: string;
-    spdxId: string;
-    url: string;
-}
-/**
- * Simple User
-**/
-export declare class RepositorySimpleUser extends SpeakeasyBase {
-    avatarUrl: string;
-    eventsUrl: string;
-    followersUrl: string;
-    followingUrl: string;
-    gistsUrl: string;
-    gravatarId: string;
-    htmlUrl: string;
-    id: number;
-    login: string;
-    nodeId: string;
-    organizationsUrl: string;
-    receivedEventsUrl: string;
-    reposUrl: string;
-    siteAdmin: boolean;
-    starredAt?: string;
-    starredUrl: string;
-    subscriptionsUrl: string;
-    type: string;
-    url: string;
-}
+import { NullableLicenseSimple } from "./nullablelicensesimple";
+import { NullableSimpleUser } from "./nullablesimpleuser";
+import { SimpleUser } from "./simpleuser";
 export declare class RepositoryPermissions extends SpeakeasyBase {
     admin: boolean;
     maintain?: boolean;
@@ -63,13 +31,16 @@ export declare class RepositoryTemplateRepositoryOwner extends SpeakeasyBase {
 }
 export declare class RepositoryTemplateRepositoryPermissions extends SpeakeasyBase {
     admin?: boolean;
+    maintain?: boolean;
     pull?: boolean;
     push?: boolean;
+    triage?: boolean;
 }
 export declare class RepositoryTemplateRepository extends SpeakeasyBase {
     allowMergeCommit?: boolean;
     allowRebaseMerge?: boolean;
     allowSquashMerge?: boolean;
+    allowUpdateBranch?: boolean;
     archiveUrl?: string;
     archived?: boolean;
     assigneesUrl?: string;
@@ -150,12 +121,32 @@ export declare class RepositoryTemplateRepository extends SpeakeasyBase {
 }
 /**
  * A git repository
-**/
+ */
 export declare class Repository extends SpeakeasyBase {
+    /**
+     * Whether to allow forking this repo
+     */
+    allowForking?: boolean;
+    /**
+     * Whether to allow merge commits for pull requests.
+     */
     allowMergeCommit?: boolean;
+    /**
+     * Whether to allow rebase merges for pull requests.
+     */
     allowRebaseMerge?: boolean;
+    /**
+     * Whether to allow squash merges for pull requests.
+     */
     allowSquashMerge?: boolean;
+    /**
+     * Whether or not a pull request head branch that is behind its base branch can always be updated even if it is not required to be up to date before merging.
+     */
+    allowUpdateBranch?: boolean;
     archiveUrl: string;
+    /**
+     * Whether the repository is archived.
+     */
     archived: boolean;
     assigneesUrl: string;
     blobsUrl: string;
@@ -168,10 +159,19 @@ export declare class Repository extends SpeakeasyBase {
     contentsUrl: string;
     contributorsUrl: string;
     createdAt: Date;
+    /**
+     * The default branch of the repository.
+     */
     defaultBranch: string;
+    /**
+     * Whether to delete head branches when pull requests are merged
+     */
     deleteBranchOnMerge?: boolean;
     deploymentsUrl: string;
     description: string;
+    /**
+     * Returns whether or not this repository disabled.
+     */
     disabled: boolean;
     downloadsUrl: string;
     eventsUrl: string;
@@ -184,15 +184,33 @@ export declare class Repository extends SpeakeasyBase {
     gitRefsUrl: string;
     gitTagsUrl: string;
     gitUrl: string;
+    /**
+     * Whether downloads are enabled.
+     */
     hasDownloads: boolean;
+    /**
+     * Whether issues are enabled.
+     */
     hasIssues: boolean;
     hasPages: boolean;
+    /**
+     * Whether projects are enabled.
+     */
     hasProjects: boolean;
+    /**
+     * Whether the wiki is enabled.
+     */
     hasWiki: boolean;
     homepage: string;
     hooksUrl: string;
     htmlUrl: string;
+    /**
+     * Unique identifier of the repository
+     */
     id: number;
+    /**
+     * Whether this repository acts as a template that can be used to generate new repositories.
+     */
     isTemplate?: boolean;
     issueCommentUrl: string;
     issueEventsUrl: string;
@@ -201,20 +219,35 @@ export declare class Repository extends SpeakeasyBase {
     labelsUrl: string;
     language: string;
     languagesUrl: string;
-    license: RepositoryLicenseSimple;
+    /**
+     * License Simple
+     */
+    license: NullableLicenseSimple;
     masterBranch?: string;
     mergesUrl: string;
     milestonesUrl: string;
     mirrorUrl: string;
+    /**
+     * The name of the repository.
+     */
     name: string;
     networkCount?: number;
     nodeId: string;
     notificationsUrl: string;
     openIssues: number;
     openIssuesCount: number;
-    organization?: RepositorySimpleUser;
-    owner: RepositorySimpleUser;
+    /**
+     * Simple User
+     */
+    organization?: NullableSimpleUser;
+    /**
+     * Simple User
+     */
+    owner: SimpleUser;
     permissions?: RepositoryPermissions;
+    /**
+     * Whether the repository is private or public.
+     */
     private: boolean;
     pullsUrl: string;
     pushedAt: Date;
@@ -237,6 +270,9 @@ export declare class Repository extends SpeakeasyBase {
     treesUrl: string;
     updatedAt: Date;
     url: string;
+    /**
+     * The repository visibility: public, private, or internal.
+     */
     visibility?: string;
     watchers: number;
     watchersCount: number;

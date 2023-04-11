@@ -1,19 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { AmiTypesEnum } from "./amitypesenum";
+import { AMITypesEnum } from "./amitypesenum";
 import { CapacityTypesEnum } from "./capacitytypesenum";
-import { NodegroupHealth } from "./nodegrouphealth";
 import { LaunchTemplateSpecification } from "./launchtemplatespecification";
-import { RemoteAccessConfig } from "./remoteaccessconfig";
+import { NodegroupHealth } from "./nodegrouphealth";
 import { NodegroupResources } from "./nodegroupresources";
 import { NodegroupScalingConfig } from "./nodegroupscalingconfig";
 import { NodegroupStatusEnum } from "./nodegroupstatusenum";
-import { Taint } from "./taint";
 import { NodegroupUpdateConfig } from "./nodegroupupdateconfig";
+import { RemoteAccessConfig } from "./remoteaccessconfig";
+import { Taint } from "./taint";
 /**
  * An object representing an Amazon EKS managed node group.
-**/
+ */
 export declare class Nodegroup extends SpeakeasyBase {
-    amiType?: AmiTypesEnum;
+    amiType?: AMITypesEnum;
     capacityType?: CapacityTypesEnum;
     clusterName?: string;
     createdAt?: Date;

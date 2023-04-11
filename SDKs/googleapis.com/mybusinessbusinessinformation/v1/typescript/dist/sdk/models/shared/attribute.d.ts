@@ -1,6 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { RepeatedEnumAttributeValue } from "./repeatedenumattributevalue";
 import { UriAttributeValue } from "./uriattributevalue";
+/**
+ * A location attribute. Attributes provide additional information about a location. The attributes that can be set on a location may vary based on the properties of that location (for example, category). Available attributes are determined by Google and may be added and removed without API changes.
+ */
+export declare class AttributeInput extends SpeakeasyBase {
+    /**
+     * Required. The resource name for this attribute.
+     */
+    name?: string;
+    /**
+     * Values for an attribute with a `value_type` of REPEATED_ENUM. This consists of two lists of value IDs: those that are set (true) and those that are unset (false). Values absent are considered unknown. At least one value must be specified.
+     */
+    repeatedEnumValue?: RepeatedEnumAttributeValue;
+    /**
+     * When the attribute value type is URL, this field contains the value(s) for this attribute, and the other values fields must be empty.
+     */
+    uriValues?: UriAttributeValue[];
+    /**
+     * The values for this attribute. The type of the values supplied must match that expected for that attribute. This is a repeated field where multiple attribute values may be provided. Attribute types only support one value.
+     */
+    values?: any[];
+}
+/**
+ * Output only. The type of value that this attribute contains. This should be used to determine how to interpret the value.
+ */
 export declare enum AttributeValueTypeEnum {
     AttributeValueTypeUnspecified = "ATTRIBUTE_VALUE_TYPE_UNSPECIFIED",
     Bool = "BOOL",
@@ -10,20 +34,26 @@ export declare enum AttributeValueTypeEnum {
 }
 /**
  * A location attribute. Attributes provide additional information about a location. The attributes that can be set on a location may vary based on the properties of that location (for example, category). Available attributes are determined by Google and may be added and removed without API changes.
-**/
+ */
 export declare class Attribute extends SpeakeasyBase {
+    /**
+     * Required. The resource name for this attribute.
+     */
     name?: string;
+    /**
+     * Values for an attribute with a `value_type` of REPEATED_ENUM. This consists of two lists of value IDs: those that are set (true) and those that are unset (false). Values absent are considered unknown. At least one value must be specified.
+     */
     repeatedEnumValue?: RepeatedEnumAttributeValue;
+    /**
+     * When the attribute value type is URL, this field contains the value(s) for this attribute, and the other values fields must be empty.
+     */
     uriValues?: UriAttributeValue[];
+    /**
+     * Output only. The type of value that this attribute contains. This should be used to determine how to interpret the value.
+     */
     valueType?: AttributeValueTypeEnum;
-    values?: any[];
-}
-/**
- * A location attribute. Attributes provide additional information about a location. The attributes that can be set on a location may vary based on the properties of that location (for example, category). Available attributes are determined by Google and may be added and removed without API changes.
-**/
-export declare class AttributeInput extends SpeakeasyBase {
-    name?: string;
-    repeatedEnumValue?: RepeatedEnumAttributeValue;
-    uriValues?: UriAttributeValue[];
+    /**
+     * The values for this attribute. The type of the values supplied must match that expected for that attribute. This is a repeated field where multiple attribute values may be provided. Attribute types only support one value.
+     */
     values?: any[];
 }

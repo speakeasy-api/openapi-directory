@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { Quaternion } from "./quaternion";
+/**
+ * The materials' diffuse/albedo color. This does not apply to vertex colors or texture maps.
+ */
 export declare enum PresentationParamsColorSpaceEnum {
     Unknown = "UNKNOWN",
     Linear = "LINEAR",
@@ -7,9 +10,18 @@ export declare enum PresentationParamsColorSpaceEnum {
 }
 /**
  * Hints for displaying the asset, based on information available when the asset was uploaded.
-**/
+ */
 export declare class PresentationParams extends SpeakeasyBase {
+    /**
+     * A background color which could be used for displaying the 3D asset in a 'thumbnail' or 'palette' style view. Authors have the option to set this background color when publishing or editing their asset. This is represented as a six-digit hexademical triplet specifying the RGB components of the background color, e.g. #FF0000 for Red.
+     */
     backgroundColor?: string;
+    /**
+     * The materials' diffuse/albedo color. This does not apply to vertex colors or texture maps.
+     */
     colorSpace?: PresentationParamsColorSpaceEnum;
+    /**
+     * A [Quaternion](//en.wikipedia.org/wiki/Quaternion). Please note: if in the response you see "w: 1" and nothing else this is the default value of [0, 0, 0, 1] where x,y, and z are 0.
+     */
     orientingRotation?: Quaternion;
 }

@@ -1,279 +1,293 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateRequest, ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateRequest,
+  ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  GoogleCloudContactcenterinsightsV1EntityTypeEnum,
+  GoogleCloudContactcenterinsightsV1EntityMentionDataTypeEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  googleCloudContactcenterinsightsV1AnalysisInput: {
     analysisResult: {
       callAnalysisMetadata: {
         annotations: [
           {
             annotationEndBoundary: {
-              transcriptIndex: 2518412263346885298,
-              wordIndex: 5617773211005988520,
+              transcriptIndex: 715190,
+              wordIndex: 844266,
             },
             annotationStartBoundary: {
-              transcriptIndex: 2339563716805116249,
-              wordIndex: 7144924247938981575,
+              transcriptIndex: 602763,
+              wordIndex: 857946,
             },
-            channelTag: 161231572858529631,
+            channelTag: 544883,
             entityMentionData: {
-              entityUniqueId: "et",
+              entityUniqueId: "illum",
               sentiment: {
-                magnitude: 94.199997,
-                score: 68.099998,
+                magnitude: 4236.55,
+                score: 6235.64,
               },
-              type: "MENTION_TYPE_UNSPECIFIED",
+              type: GoogleCloudContactcenterinsightsV1EntityMentionDataTypeEnum.Proper,
             },
             holdData: {
-              "debitis": "vel",
-              "odio": "dolore",
-              "id": "aspernatur",
+              "iure": "magnam",
+              "debitis": "ipsa",
             },
             intentMatchData: {
-              intentUniqueId: "accusantium",
+              intentUniqueId: "delectus",
             },
             interruptionData: {
-              "commodi": "quis",
-              "est": "aut",
-              "odit": "non",
+              "suscipit": "molestiae",
+              "minus": "placeat",
             },
             issueMatchData: {
               issueAssignment: {
-                displayName: "voluptas",
-                issue: "omnis",
-                score: 44.099998,
+                displayName: "voluptatum",
+                issue: "iusto",
+                score: 5680.45,
               },
             },
             phraseMatchData: {
-              displayName: "sed",
-              phraseMatcher: "officiis",
+              displayName: "nisi",
+              phraseMatcher: "recusandae",
             },
             sentimentData: {
-              magnitude: 87.099998,
-              score: 0.100000,
+              magnitude: 8360.79,
+              score: 710.36,
             },
             silenceData: {
-              "recusandae": "at",
+              "veritatis": "deserunt",
+              "perferendis": "ipsam",
             },
           },
           {
             annotationEndBoundary: {
-              transcriptIndex: 3959279844101328186,
-              wordIndex: 8902041070398994519,
+              transcriptIndex: 832620,
+              wordIndex: 957156,
             },
             annotationStartBoundary: {
-              transcriptIndex: 303089054982227392,
-              wordIndex: 7338728586234333996,
+              transcriptIndex: 778157,
+              wordIndex: 140350,
             },
-            channelTag: 5392504858645185670,
+            channelTag: 870013,
             entityMentionData: {
-              entityUniqueId: "ut",
+              entityUniqueId: "at",
               sentiment: {
-                magnitude: 56.099998,
-                score: 30.200001,
+                magnitude: 9786.19,
+                score: 4736.08,
               },
-              type: "MENTION_TYPE_UNSPECIFIED",
+              type: GoogleCloudContactcenterinsightsV1EntityMentionDataTypeEnum.Common,
             },
             holdData: {
-              "dolor": "beatae",
-              "veritatis": "in",
-              "et": "omnis",
+              "esse": "totam",
+              "porro": "dolorum",
+              "dicta": "nam",
+              "officia": "occaecati",
             },
             intentMatchData: {
-              intentUniqueId: "ipsum",
+              intentUniqueId: "fugit",
             },
             interruptionData: {
-              "dolores": "placeat",
+              "hic": "optio",
+              "totam": "beatae",
+              "commodi": "molestiae",
             },
             issueMatchData: {
               issueAssignment: {
-                displayName: "vel",
-                issue: "rerum",
-                score: 89.099998,
+                displayName: "modi",
+                issue: "qui",
+                score: 7742.34,
               },
             },
             phraseMatchData: {
-              displayName: "quam",
-              phraseMatcher: "reprehenderit",
+              displayName: "cum",
+              phraseMatcher: "esse",
             },
             sentimentData: {
-              magnitude: 94.099998,
-              score: 72.199997,
+              magnitude: 2165.5,
+              score: 5684.34,
             },
             silenceData: {
-              "qui": "ut",
-              "itaque": "ab",
+              "perferendis": "ad",
             },
           },
           {
             annotationEndBoundary: {
-              transcriptIndex: 8218430188258725598,
-              wordIndex: 4255970180603226314,
+              transcriptIndex: 617636,
+              wordIndex: 149675,
             },
             annotationStartBoundary: {
-              transcriptIndex: 2682844416202521633,
-              wordIndex: 4304520335772049496,
+              transcriptIndex: 612096,
+              wordIndex: 222321,
             },
-            channelTag: 3462733497206508461,
+            channelTag: 616934,
             entityMentionData: {
-              entityUniqueId: "architecto",
+              entityUniqueId: "laboriosam",
               sentiment: {
-                magnitude: 38.200001,
-                score: 20.100000,
+                magnitude: 9437.49,
+                score: 9025.99,
               },
-              type: "PROPER",
+              type: GoogleCloudContactcenterinsightsV1EntityMentionDataTypeEnum.Common,
             },
             holdData: {
-              "magni": "et",
-              "optio": "qui",
+              "corporis": "iste",
+              "iure": "saepe",
             },
             intentMatchData: {
-              intentUniqueId: "earum",
+              intentUniqueId: "quidem",
             },
             interruptionData: {
-              "omnis": "ut",
+              "ipsa": "reiciendis",
             },
             issueMatchData: {
               issueAssignment: {
-                displayName: "consequatur",
-                issue: "dolor",
-                score: 26.100000,
+                displayName: "est",
+                issue: "mollitia",
+                score: 6706.38,
               },
             },
             phraseMatchData: {
-              displayName: "reprehenderit",
-              phraseMatcher: "consectetur",
+              displayName: "dolores",
+              phraseMatcher: "dolorem",
             },
             sentimentData: {
-              magnitude: 59.200001,
-              score: 64.099998,
+              magnitude: 3581.52,
+              score: 1289.26,
             },
             silenceData: {
-              "soluta": "aut",
+              "enim": "omnis",
+              "nemo": "minima",
+              "excepturi": "accusantium",
+              "iure": "culpa",
             },
           },
         ],
         entities: {
-          "consequuntur": {
-            displayName: "laudantium",
+          "sapiente": {
+            displayName: "architecto",
             metadata: {
-              "ipsa": "expedita",
+              "dolorem": "culpa",
+              "consequuntur": "repellat",
+              "mollitia": "occaecati",
             },
-            salience: 20.200001,
+            salience: 2532.91,
             sentiment: {
-              magnitude: 26.200001,
-              score: 87.099998,
+              magnitude: 4143.69,
+              score: 4663.11,
             },
-            type: "DATE",
+            type: GoogleCloudContactcenterinsightsV1EntityTypeEnum.ConsumerGood,
           },
-          "maxime": {
-            displayName: "eum",
+          "velit": {
+            displayName: "error",
             metadata: {
-              "et": "rerum",
-              "reiciendis": "quis",
+              "quis": "vitae",
             },
-            salience: 97.199997,
+            salience: 6747.52,
             sentiment: {
-              magnitude: 1.200000,
-              score: 40.200001,
+              magnitude: 6563.3,
+              score: 3172.02,
             },
-            type: "PHONE_NUMBER",
+            type: GoogleCloudContactcenterinsightsV1EntityTypeEnum.Person,
           },
-          "et": {
-            displayName: "impedit",
+          "quo": {
+            displayName: "sequi",
             metadata: {
-              "expedita": "vel",
-              "qui": "modi",
-              "nihil": "tempora",
+              "ipsam": "id",
+              "possimus": "aut",
+              "quasi": "error",
+              "temporibus": "laborum",
             },
-            salience: 42.200001,
+            salience: 960.98,
             sentiment: {
-              magnitude: 60.099998,
-              score: 34.099998,
+              magnitude: 9719.45,
+              score: 9764.6,
             },
-            type: "LOCATION",
+            type: GoogleCloudContactcenterinsightsV1EntityTypeEnum.Number,
+          },
+          "nihil": {
+            displayName: "praesentium",
+            metadata: {
+              "ipsa": "omnis",
+              "voluptate": "cum",
+              "perferendis": "doloremque",
+              "reprehenderit": "ut",
+            },
+            salience: 9795.87,
+            sentiment: {
+              magnitude: 1201.96,
+              score: 3594.44,
+            },
+            type: GoogleCloudContactcenterinsightsV1EntityTypeEnum.Organization,
           },
         },
         intents: {
-          "placeat": {
-            displayName: "qui",
-            id: "nisi",
+          "dicta": {
+            displayName: "harum",
+            id: "enim",
           },
-          "quis": {
-            displayName: "adipisci",
-            id: "porro",
+          "accusamus": {
+            displayName: "commodi",
+            id: "repudiandae",
           },
         },
         issueModelResult: {
-          issueModel: "rerum",
+          issueModel: "quae",
           issues: [
             {
-              displayName: "accusamus",
-              issue: "numquam",
-              score: 58.200001,
+              displayName: "quidem",
+              issue: "molestias",
+              score: 5666.02,
             },
           ],
         },
         phraseMatchers: {
-          "laborum": {
-            displayName: "fugit",
-            phraseMatcher: "quis",
+          "modi": {
+            displayName: "praesentium",
+            phraseMatcher: "rem",
           },
-          "minus": {
-            displayName: "soluta",
-            phraseMatcher: "aperiam",
+          "voluptates": {
+            displayName: "quasi",
+            phraseMatcher: "repudiandae",
+          },
+          "sint": {
+            displayName: "veritatis",
+            phraseMatcher: "itaque",
+          },
+          "incidunt": {
+            displayName: "enim",
+            phraseMatcher: "consequatur",
           },
         },
         sentiments: [
           {
-            channelTag: 4970157864765978097,
+            channelTag: 842342,
             sentimentData: {
-              magnitude: 52.099998,
-              score: 29.200001,
+              magnitude: 1317.97,
+              score: 6471.74,
             },
           },
           {
-            channelTag: 8997481548049309375,
+            channelTag: 716327,
             sentimentData: {
-              magnitude: 86.099998,
-              score: 68.199997,
+              magnitude: 8413.86,
+              score: 2894.06,
             },
           },
           {
-            channelTag: 7899896093082851758,
+            channelTag: 264730,
             sentimentData: {
-              magnitude: 83.099998,
-              score: 30.100000,
+              magnitude: 1831.91,
+              score: 3978.21,
             },
           },
         ],
@@ -282,25 +296,35 @@ const req: ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateRequ
     },
     annotatorSelector: {
       issueModels: [
-        "molestiae",
-        "pariatur",
-        "quasi",
+        "perferendis",
+        "magni",
+        "assumenda",
       ],
       phraseMatchers: [
-        "enim",
-        "qui",
-        "sit",
+        "alias",
+        "fugit",
       ],
       runEntityAnnotator: false,
-      runIntentAnnotator: true,
-      runInterruptionAnnotator: true,
+      runIntentAnnotator: false,
+      runInterruptionAnnotator: false,
       runIssueModelAnnotator: false,
-      runPhraseMatcherAnnotator: true,
-      runSentimentAnnotator: true,
-      runSilenceAnnotator: true,
+      runPhraseMatcherAnnotator: false,
+      runSentimentAnnotator: false,
+      runSilenceAnnotator: false,
     },
-    name: "occaecati",
+    name: "dolorum",
   },
+  accessToken: "excepturi",
+  alt: AltEnum.Json,
+  callback: "facilis",
+  fields: "tempore",
+  key: "labore",
+  oauthToken: "delectus",
+  parent: "eum",
+  prettyPrint: false,
+  quotaUser: "non",
+  uploadType: "eligendi",
+  uploadProtocol: "sint",
 };
 
 sdk.projects.contactcenterinsightsProjectsLocationsConversationsAnalysesCreate(req).then((res: ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateResponse | AxiosError) => {

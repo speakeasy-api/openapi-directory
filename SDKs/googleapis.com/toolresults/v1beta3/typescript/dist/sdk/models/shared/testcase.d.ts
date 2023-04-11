@@ -1,9 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { Duration } from "./duration";
-import { Timestamp } from "./timestamp";
 import { StackTrace } from "./stacktrace";
 import { TestCaseReference } from "./testcasereference";
+import { Timestamp } from "./timestamp";
 import { ToolOutputReference } from "./tooloutputreference";
+/**
+ * The status of the test case. Required.
+ */
 export declare enum TestCaseStatusEnum {
     Passed = "passed",
     Failed = "failed",
@@ -11,14 +14,44 @@ export declare enum TestCaseStatusEnum {
     Skipped = "skipped",
     Flaky = "flaky"
 }
+/**
+ * Successful response
+ */
 export declare class TestCase extends SpeakeasyBase {
+    /**
+     *  A Duration represents a signed, fixed-length span of time represented as a count of seconds and fractions of seconds at nanosecond resolution. It is independent of any calendar and concepts like "day" or "month". It is related to Timestamp in that the difference between two Timestamp values is a Duration and it can be added or subtracted from a Timestamp. Range is approximately +-10,000 years.
+     */
     elapsedTime?: Duration;
+    /**
+     * A Timestamp represents a point in time independent of any time zone or local calendar, encoded as a count of seconds and fractions of seconds at nanosecond resolution. The count is relative to an epoch at UTC midnight on January 1, 1970, in the proleptic Gregorian calendar which extends the Gregorian calendar backwards to year one. All minutes are 60 seconds long. Leap seconds are "smeared" so that no leap second table is needed for interpretation, using a [24-hour linear smear](https://developers.google.com/time/smear). The range is from 0001-01-01T00:00:00Z to 9999-12-31T23:59:59.999999999Z. By restricting to that range, we ensure that we can convert to and from [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) date strings.
+     */
     endTime?: Timestamp;
+    /**
+     * Why the test case was skipped. Present only for skipped test case
+     */
     skippedMessage?: string;
+    /**
+     * The stack trace details if the test case failed or encountered an error. The maximum size of the stack traces is 100KiB, beyond which the stack track will be truncated. Zero if the test case passed.
+     */
     stackTraces?: StackTrace[];
+    /**
+     * A Timestamp represents a point in time independent of any time zone or local calendar, encoded as a count of seconds and fractions of seconds at nanosecond resolution. The count is relative to an epoch at UTC midnight on January 1, 1970, in the proleptic Gregorian calendar which extends the Gregorian calendar backwards to year one. All minutes are 60 seconds long. Leap seconds are "smeared" so that no leap second table is needed for interpretation, using a [24-hour linear smear](https://developers.google.com/time/smear). The range is from 0001-01-01T00:00:00Z to 9999-12-31T23:59:59.999999999Z. By restricting to that range, we ensure that we can convert to and from [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) date strings.
+     */
     startTime?: Timestamp;
+    /**
+     * The status of the test case. Required.
+     */
     status?: TestCaseStatusEnum;
+    /**
+     * A unique identifier within a Step for this Test Case.
+     */
     testCaseId?: string;
+    /**
+     * A reference to a test case. Test case references are canonically ordered lexicographically by these three factors: * First, by test_suite_name. * Second, by class_name. * Third, by name.
+     */
     testCaseReference?: TestCaseReference;
+    /**
+     * References to opaque files of any format output by the tool execution. @OutputOnly
+     */
     toolOutputs?: ToolOutputReference[];
 }

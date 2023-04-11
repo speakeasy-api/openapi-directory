@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeTransitGatewaysActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeTransitGatewaysActionEnum {
     DescribeTransitGateways = "DescribeTransitGateways"
 }
-export declare enum PostDescribeTransitGatewaysVersionEnum {
+export declare enum POSTDescribeTransitGatewaysVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDescribeTransitGatewaysQueryParams extends SpeakeasyBase {
-    action: PostDescribeTransitGatewaysActionEnum;
+export declare class POSTDescribeTransitGatewaysRequest extends SpeakeasyBase {
+    action: POSTDescribeTransitGatewaysActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostDescribeTransitGatewaysVersionEnum;
-}
-export declare class PostDescribeTransitGatewaysHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeTransitGatewaysVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeTransitGatewaysHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeTransitGatewaysRequest extends SpeakeasyBase {
-    queryParams: PostDescribeTransitGatewaysQueryParams;
-    headers: PostDescribeTransitGatewaysHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeTransitGatewaysResponse extends SpeakeasyBase {
+export declare class POSTDescribeTransitGatewaysResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

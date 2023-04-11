@@ -3,6 +3,9 @@ import { AssetModelCompositeModel } from "./assetmodelcompositemodel";
 import { AssetModelHierarchy } from "./assetmodelhierarchy";
 import { AssetModelProperty } from "./assetmodelproperty";
 import { AssetModelStatus } from "./assetmodelstatus";
+/**
+ * Success
+ */
 export declare class DescribeAssetModelResponse extends SpeakeasyBase {
     assetModelArn: string;
     assetModelCompositeModels?: AssetModelCompositeModel[];

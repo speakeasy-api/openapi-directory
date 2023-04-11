@@ -1,0 +1,130 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
+export declare class SubmitPostRequestBody extends SpeakeasyBase {
+    /**
+     * A longer description of the item(s).
+     */
+    content?: string;
+    /**
+     * When the post should expire.  Defaults to 90 days. Any amount of time from 1 hour to 90 days can be provided.  To pass a number of hours, provide the number of hours prefixed by 'h' (eg. 1hr 24hr). To pass a number of days, provide the number of days prefixed by 'd' (eg. 1d 90d). <br /><br /> Note that posts may not appear instantly after submission because the volunteer moderators of many groups may have additional automatic or manual review processes in place that can cause delays.  So with short expirations (eg. < 8 hours), there is a chance that the post may expire before it's approved and so it will never be published.
+     *
+     * @remarks
+     *
+     */
+    expiresIn?: string;
+    /**
+     * If set to 1, the post will be posted with the Fair Offer Policy (only valid for offer posts - see https://trashnothing.com/fair_offer_policy ).
+     */
+    fairOffer?: number;
+    /**
+     * A comma separated list of group IDs to submit the post to (if any).
+     */
+    groupIds?: string;
+    /**
+     * The latitude corresponding to the location description provided. <br /><br /> If latitude and longitude are not provided, an attempt will be made to automatically geocode the location.  If the location is unable to be geocoded, the post will be rejected* and will have to be resubmitted with a latitude and longitude corresponding to the location or resubmitted with a different location that can be automatically geocoded. <br /><br /> NOTE: The latitude and longitude should NOT be the users' exact location because we don't want to publicize their exact location unless their location description is their full address (which is not recommended). <br /><br /> *When a post is rejected because it can't be geocoded, the returned error will have its identifier property set to 'unknown-location'.
+     *
+     * @remarks
+     *
+     */
+    latitude?: number;
+    /**
+     * A short location description.
+     */
+    location: string;
+    /**
+     * The longitude corresponding to the location description provided. (see the NOTE in latitude description)
+     */
+    longitude?: number;
+    /**
+     * A comma separated list of the IDs of the photos that should be attached to this post.
+     */
+    photoIds?: string;
+    /**
+     * A JSON string representing a permanent object that the client persists and modifies based on warnings returned by the post submission process and user input.  Some warnings returned after submitting  a post have a preference_key string property so that users can opt out of those warnings in the future.  To save this opt-out preference, set the property indicated by the preference_key in the preferences object (eg. preferences[preference_key] = 1).  The preferences object is never modified by the server - it is up to the client to initialize, modify and persist the preferences object.
+     *
+     * @remarks
+     *
+     */
+    preferences?: string;
+    /**
+     * If the post is a repost of an existing post, this should be set to the post_id of the post that is being reposted.
+     *
+     * @remarks
+     *
+     */
+    repost?: string;
+    /**
+     * For wanted posts only. If set to 1, the wanted post will show that the poster intends to resell any items that they receive in response to this post.  Posters must declare if they intend to resell items.
+     *
+     * @remarks
+     *
+     */
+    reselling?: string;
+    /**
+     * A JSON string representing a temporary object that is used to store data about the submission process for a single post.  The first time a post is submitted, session should be a new empty object (eg. '{}').  The session object should be persisted by the client until that post is successfully submitted and then it  can be discarded so that the next post will start over with a new empty session object.  Every time a post is submitted and the response indicates that the submission was not successful, the session object returned in the response should override the clients copy of the session.
+     *
+     * @remarks
+     *
+     */
+    session: string;
+    /**
+     * A short description of the item(s).
+     */
+    title: string;
+    /**
+     * The type of post.  One of: offer, wanted
+     *
+     * @remarks
+     *
+     */
+    type: string;
+}
+/**
+ * Post submission result.
+ */
+export declare class SubmitPost200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * When an error or warning is returned, this will contain a short string representing the type of error or warning that occurred.  Is null on success.
+     *
+     * @remarks
+     *
+     */
+    identifier?: string;
+    /**
+     * Contains text describing the reason a post  was not successful.  Is null on success.
+     *
+     * @remarks
+     *
+     */
+    message?: string;
+    /**
+     * Certain types of warnings can be opted out of.  These warnings will set preference_key to a string that can be  set in the preferences object by the client to opt out of that type of warning in the future (see the description of the preferences parameter for more details).  Is null for errors, success and warnings that can't be opted out of.
+     *
+     * @remarks
+     *
+     */
+    preferenceKey?: string;
+    /**
+     * One of: success, error, warning. <br /><br /> A success result indicates that the post  was submitted successfully. Note that posts may not appear instantly after submission because the volunteer moderators of many groups may have additional automatic or manual review processes in place that can cause delays. <br /><br /> An error result indicates that there is an error with the post that should be shown to the user and the message property will contain text describing the error. <br /><br /> A warning result indicates that there is a warning about the post  to show the user and the message property will contain a string describing the warning.   A warning result doesn't prevent a post  from being submitted, to continue the submission process after a warning result, just re-submit (with the updated session object) to temporarily override that specific warning.
+     *
+     * @remarks
+     *
+     */
+    result?: string;
+    /**
+     * The updated session object that should override the client's copy of the session that was passed in the session parameter. Is null on success.
+     *
+     * @remarks
+     *
+     */
+    session?: Record<string, string>;
+}
+export declare class SubmitPostResponse extends SpeakeasyBase {
+    contentType: string;
+    statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Post submission result.
+     */
+    submitPost200ApplicationJSONObject?: SubmitPost200ApplicationJSON;
+}

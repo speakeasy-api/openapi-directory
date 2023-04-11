@@ -1,20 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetDeleteMessagePathParams extends SpeakeasyBase {
-    accountNumber: number;
-    queueName: string;
-}
-export declare enum GetDeleteMessageActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteMessageActionEnum {
     DeleteMessage = "DeleteMessage"
 }
-export declare enum GetDeleteMessageVersionEnum {
+export declare enum GETDeleteMessageVersionEnum {
     TwoThousandAndTwelve1105 = "2012-11-05"
 }
-export declare class GetDeleteMessageQueryParams extends SpeakeasyBase {
-    action: GetDeleteMessageActionEnum;
+export declare class GETDeleteMessageRequest extends SpeakeasyBase {
+    /**
+     * The AWS account number
+     */
+    accountNumber: number;
+    action: GETDeleteMessageActionEnum;
+    /**
+     * The name of the queue
+     */
+    queueName: string;
+    /**
+     * The receipt handle associated with the message to delete.
+     */
     receiptHandle: string;
-    version: GetDeleteMessageVersionEnum;
-}
-export declare class GetDeleteMessageHeaders extends SpeakeasyBase {
+    version: GETDeleteMessageVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -23,13 +29,9 @@ export declare class GetDeleteMessageHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteMessageRequest extends SpeakeasyBase {
-    pathParams: GetDeleteMessagePathParams;
-    queryParams: GetDeleteMessageQueryParams;
-    headers: GetDeleteMessageHeaders;
-}
-export declare class GetDeleteMessageResponse extends SpeakeasyBase {
+export declare class GETDeleteMessageResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

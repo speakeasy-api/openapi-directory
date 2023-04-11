@@ -1,7 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { CompanyDomainViewModel } from "./companydomainviewmodel";
+/**
+ * Success
+ */
 export declare class CompanyDomainListViewModel extends SpeakeasyBase {
     data?: CompanyDomainViewModel[];
-    objectName?: string;
+    object?: string;
     url?: string;
 }

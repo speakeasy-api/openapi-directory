@@ -1,36 +1,35 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetAddClientIdToOpenIdConnectProviderRequest, GetAddClientIdToOpenIdConnectProviderResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GETAddClientIDToOpenIDConnectProviderRequest,
+  GETAddClientIDToOpenIDConnectProviderResponse,
+  GETAddClientIDToOpenIDConnectProviderActionEnum,
+  GETAddClientIDToOpenIDConnectProviderVersionEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: GetAddClientIdToOpenIdConnectProviderRequest = {
-  queryParams: {
-    action: "AddClientIDToOpenIDConnectProvider",
-    clientID: "voluptas",
-    openIDConnectProviderArn: "culpa",
-    version: "2010-05-08",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  headers: {
-    xAmzAlgorithm: "consequuntur",
-    xAmzContentSha256: "dolor",
-    xAmzCredential: "expedita",
-    xAmzDate: "voluptas",
-    xAmzSecurityToken: "fugit",
-    xAmzSignature: "et",
-    xAmzSignedHeaders: "nihil",
-  },
+});
+
+const req: GETAddClientIDToOpenIDConnectProviderRequest = {
+  action: GETAddClientIDToOpenIDConnectProviderActionEnum.AddClientIDToOpenIDConnectProvider,
+  clientID: "corrupti",
+  openIDConnectProviderArn: "provident",
+  version: GETAddClientIDToOpenIDConnectProviderVersionEnum.TwoThousandAndTen0508,
+  xAmzAlgorithm: "distinctio",
+  xAmzContentSha256: "quibusdam",
+  xAmzCredential: "unde",
+  xAmzDate: "nulla",
+  xAmzSecurityToken: "corrupti",
+  xAmzSignature: "illum",
+  xAmzSignedHeaders: "vel",
 };
 
-sdk.getAddClientIdToOpenIdConnectProvider(req).then((res: GetAddClientIdToOpenIdConnectProviderResponse | AxiosError) => {
+sdk.getAddClientIDToOpenIDConnectProvider(req).then((res: GETAddClientIDToOpenIDConnectProviderResponse | AxiosError) => {
    // handle response
 });
 ```

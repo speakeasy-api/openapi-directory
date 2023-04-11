@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Mobile-usability issue type.
+ */
 export declare enum MobileUsabilityIssueIssueTypeEnum {
     MobileUsabilityIssueTypeUnspecified = "MOBILE_USABILITY_ISSUE_TYPE_UNSPECIFIED",
     UsesIncompatiblePlugins = "USES_INCOMPATIBLE_PLUGINS",
@@ -8,6 +11,9 @@ export declare enum MobileUsabilityIssueIssueTypeEnum {
     UseLegibleFontSizes = "USE_LEGIBLE_FONT_SIZES",
     TapTargetsTooClose = "TAP_TARGETS_TOO_CLOSE"
 }
+/**
+ * Not returned; reserved for future use.
+ */
 export declare enum MobileUsabilityIssueSeverityEnum {
     SeverityUnspecified = "SEVERITY_UNSPECIFIED",
     Warning = "WARNING",
@@ -15,9 +21,18 @@ export declare enum MobileUsabilityIssueSeverityEnum {
 }
 /**
  * Mobile-usability issue.
-**/
+ */
 export declare class MobileUsabilityIssue extends SpeakeasyBase {
+    /**
+     * Mobile-usability issue type.
+     */
     issueType?: MobileUsabilityIssueIssueTypeEnum;
+    /**
+     * Additional information regarding the issue.
+     */
     message?: string;
+    /**
+     * Not returned; reserved for future use.
+     */
     severity?: MobileUsabilityIssueSeverityEnum;
 }

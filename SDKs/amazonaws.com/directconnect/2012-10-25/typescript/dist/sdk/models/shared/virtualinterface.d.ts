@@ -1,12 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { AddressFamilyEnum } from "./addressfamilyenum";
-import { BgpPeer } from "./bgppeer";
+import { BGPPeer } from "./bgppeer";
 import { RouteFilterPrefix } from "./routefilterprefix";
 import { Tag } from "./tag";
 import { VirtualInterfaceStateEnum } from "./virtualinterfacestateenum";
 /**
  * Information about a virtual interface.
-**/
+ */
 export declare class VirtualInterface extends SpeakeasyBase {
     addressFamily?: AddressFamilyEnum;
     amazonAddress?: string;
@@ -15,7 +15,7 @@ export declare class VirtualInterface extends SpeakeasyBase {
     authKey?: string;
     awsDeviceV2?: string;
     awsLogicalDeviceId?: string;
-    bgpPeers?: BgpPeer[];
+    bgpPeers?: BGPPeer[];
     connectionId?: string;
     customerAddress?: string;
     customerRouterConfig?: string;
@@ -26,6 +26,7 @@ export declare class VirtualInterface extends SpeakeasyBase {
     ownerAccount?: string;
     region?: string;
     routeFilterPrefixes?: RouteFilterPrefix[];
+    siteLinkEnabled?: boolean;
     tags?: Tag[];
     virtualGatewayId?: string;
     virtualInterfaceId?: string;

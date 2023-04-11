@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CfgNewPathParams extends SpeakeasyBase {
-    firstAgentNum: number;
-    lastAgentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class CfgNewRequest extends SpeakeasyBase {
-    pathParams: CfgNewPathParams;
+    /**
+     * Agent number to start clearing
+     */
+    firstAgentNum: number;
+    /**
+     * Agent number to end the clearing
+     */
+    lastAgentNum: number;
 }
 export declare class CfgNewResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     cfgNew200ApplicationJSONObject?: Record<string, number>;
 }

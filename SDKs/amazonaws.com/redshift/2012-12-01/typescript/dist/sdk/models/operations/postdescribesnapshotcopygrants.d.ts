@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeSnapshotCopyGrantsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeSnapshotCopyGrantsActionEnum {
     DescribeSnapshotCopyGrants = "DescribeSnapshotCopyGrants"
 }
-export declare enum PostDescribeSnapshotCopyGrantsVersionEnum {
+export declare enum POSTDescribeSnapshotCopyGrantsVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostDescribeSnapshotCopyGrantsQueryParams extends SpeakeasyBase {
-    action: PostDescribeSnapshotCopyGrantsActionEnum;
+export declare class POSTDescribeSnapshotCopyGrantsRequest extends SpeakeasyBase {
+    action: POSTDescribeSnapshotCopyGrantsActionEnum;
+    /**
+     * Pagination token
+     */
     marker?: string;
+    /**
+     * Pagination limit
+     */
     maxRecords?: string;
-    version: PostDescribeSnapshotCopyGrantsVersionEnum;
-}
-export declare class PostDescribeSnapshotCopyGrantsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeSnapshotCopyGrantsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeSnapshotCopyGrantsHeaders extends SpeakeasyBase
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeSnapshotCopyGrantsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeSnapshotCopyGrantsQueryParams;
-    headers: PostDescribeSnapshotCopyGrantsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeSnapshotCopyGrantsResponse extends SpeakeasyBase {
+export declare class POSTDescribeSnapshotCopyGrantsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

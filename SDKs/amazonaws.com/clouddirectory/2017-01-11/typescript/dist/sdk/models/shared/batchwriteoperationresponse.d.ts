@@ -9,7 +9,7 @@ import { BatchDetachObjectResponse } from "./batchdetachobjectresponse";
 import { BatchUpdateObjectAttributesResponse } from "./batchupdateobjectattributesresponse";
 /**
  * Represents the output of a <code>BatchWrite</code> response operation.
-**/
+ */
 export declare class BatchWriteOperationResponse extends SpeakeasyBase {
     addFacetToObject?: Record<string, any>;
     attachObject?: BatchAttachObjectResponse;

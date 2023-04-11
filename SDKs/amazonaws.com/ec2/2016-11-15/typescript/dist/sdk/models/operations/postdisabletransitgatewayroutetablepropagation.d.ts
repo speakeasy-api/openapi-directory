@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDisableTransitGatewayRouteTablePropagationActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDisableTransitGatewayRouteTablePropagationActionEnum {
     DisableTransitGatewayRouteTablePropagation = "DisableTransitGatewayRouteTablePropagation"
 }
-export declare enum PostDisableTransitGatewayRouteTablePropagationVersionEnum {
+export declare enum POSTDisableTransitGatewayRouteTablePropagationVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDisableTransitGatewayRouteTablePropagationQueryParams extends SpeakeasyBase {
-    action: PostDisableTransitGatewayRouteTablePropagationActionEnum;
-    version: PostDisableTransitGatewayRouteTablePropagationVersionEnum;
-}
-export declare class PostDisableTransitGatewayRouteTablePropagationHeaders extends SpeakeasyBase {
+export declare class POSTDisableTransitGatewayRouteTablePropagationRequest extends SpeakeasyBase {
+    action: POSTDisableTransitGatewayRouteTablePropagationActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDisableTransitGatewayRouteTablePropagationVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDisableTransitGatewayRouteTablePropagationHeaders exten
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDisableTransitGatewayRouteTablePropagationRequest extends SpeakeasyBase {
-    queryParams: PostDisableTransitGatewayRouteTablePropagationQueryParams;
-    headers: PostDisableTransitGatewayRouteTablePropagationHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDisableTransitGatewayRouteTablePropagationResponse extends SpeakeasyBase {
+export declare class POSTDisableTransitGatewayRouteTablePropagationResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

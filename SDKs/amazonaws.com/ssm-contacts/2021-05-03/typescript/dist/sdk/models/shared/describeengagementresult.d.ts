@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class DescribeEngagementResult extends SpeakeasyBase {
     contactArn: string;
     content: string;

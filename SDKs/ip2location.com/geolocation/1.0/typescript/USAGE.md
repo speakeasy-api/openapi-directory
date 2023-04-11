@@ -1,23 +1,29 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetRequest, GetResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetRequest,
+  GetResponse,
+  GetAddonEnum,
+  GetFormatEnum,
+  GetLangEnum,
+  GetPackageEnum,
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetRequest = {
-  queryParams: {
-    addon: [
-      "region",
-    ],
-    format: "xml",
-    ip: "expedita",
-    key: "consequuntur",
-    lang: "ko",
-    package: "WS18",
-  },
+  addon: [
+    GetAddonEnum.Geotargeting,
+    GetAddonEnum.CountryGroupings,
+    GetAddonEnum.CountryGroupings,
+  ],
+  format: GetFormatEnum.Xml,
+  ip: "8.8.8.8",
+  key: "nulla",
+  lang: GetLangEnum.Ja,
+  package: GetPackageEnum.Ws22,
 };
 
 sdk.get(req).then((res: GetResponse | AxiosError) => {

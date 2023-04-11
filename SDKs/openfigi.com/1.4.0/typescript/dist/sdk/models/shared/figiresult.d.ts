@@ -4,6 +4,9 @@ export declare class FigiResult extends SpeakeasyBase {
     exchCode?: string;
     figi?: string;
     marketSector?: string;
+    /**
+     * Exists when API is unable to show non-FIGI fields.
+     */
     metadata?: string;
     name?: string;
     securityDescription?: string;

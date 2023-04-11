@@ -3,7 +3,7 @@ import { LaunchTemplateSpecification } from "./launchtemplatespecification";
 import { LifecycleStateEnum } from "./lifecyclestateenum";
 /**
  * Describes an EC2 instance.
-**/
+ */
 export declare class Instance extends SpeakeasyBase {
     availabilityZone: string;
     healthStatus: string;

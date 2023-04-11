@@ -1,6 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class License extends SpeakeasyBase {
-    name?: string;
-    url?: string;
-    value?: number;
+    /**
+     * License name
+     */
+    name: string;
+    /**
+     * License url
+     */
+    url: string;
+    /**
+     * License value
+     */
+    value: number;
 }

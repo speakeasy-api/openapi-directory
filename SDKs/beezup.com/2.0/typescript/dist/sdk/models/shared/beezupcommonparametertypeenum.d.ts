@@ -1,4 +1,7 @@
-export declare enum BeezUpCommonParameterTypeEnum {
+/**
+ * The value type of the parameter
+ */
+export declare enum BeezUPCommonParameterTypeEnum {
     String = "string",
     Integer = "integer",
     Number = "number",

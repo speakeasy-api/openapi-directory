@@ -1,10 +1,11 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AnalyticsIndexResponse } from "openapi/src/sdk/models/operations";
+import {
+  AnalyticsIndexResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
 
 sdk.analyticsGlobal.analyticsIndex().then((res: AnalyticsIndexResponse | AxiosError) => {

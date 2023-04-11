@@ -3,7 +3,7 @@ import { ConfigurationEventResourceTypeEnum } from "./configurationeventresource
 import { ConfigurationEventStatusEnum } from "./configurationeventstatusenum";
 /**
  *  The event information.
-**/
+ */
 export declare class ConfigurationEvent extends SpeakeasyBase {
     eventDetail?: string;
     eventResourceName?: string;

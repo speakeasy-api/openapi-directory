@@ -1,5 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { DeviceDescription } from "./devicedescription";
+/**
+ * Success
+ */
 export declare class ListDevicesResponse extends SpeakeasyBase {
-    devices?: Record<string, any>;
-    nextToken?: Record<string, any>;
+    devices?: DeviceDescription[];
+    nextToken?: string;
 }

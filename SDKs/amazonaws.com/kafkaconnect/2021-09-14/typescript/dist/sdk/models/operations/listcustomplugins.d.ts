@@ -1,10 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListCustomPluginsQueryParams extends SpeakeasyBase {
-    maxResults?: number;
-    nextToken?: string;
-}
-export declare class ListCustomPluginsHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListCustomPluginsRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,20 +9,49 @@ export declare class ListCustomPluginsHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class ListCustomPluginsRequest extends SpeakeasyBase {
-    queryParams: ListCustomPluginsQueryParams;
-    headers: ListCustomPluginsHeaders;
+    /**
+     * The maximum number of custom plugins to list in one response.
+     */
+    maxResults?: number;
+    /**
+     * If the response of a ListCustomPlugins operation is truncated, it will include a NextToken. Send this NextToken in a subsequent request to continue listing from where the previous operation left off.
+     */
+    nextToken?: string;
 }
 export declare class ListCustomPluginsResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * ForbiddenException
+     */
     forbiddenException?: any;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
+    /**
+     * Success
+     */
     listCustomPluginsResponse?: shared.ListCustomPluginsResponse;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
+    /**
+     * ServiceUnavailableException
+     */
     serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
+    /**
+     * UnauthorizedException
+     */
     unauthorizedException?: any;
 }

@@ -1,22 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetServiceGroupPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class GetServiceGroupQueryParams extends SpeakeasyBase {
-    time?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetServiceGroupSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
+    apiKeyAuth: string;
 }
 export declare class GetServiceGroupRequest extends SpeakeasyBase {
-    pathParams: GetServiceGroupPathParams;
-    queryParams: GetServiceGroupQueryParams;
-    security: GetServiceGroupSecurity;
+    /**
+     * entity id
+     */
+    id: string;
+    /**
+     * time in epoch seconds
+     */
+    time?: number;
 }
 export declare class GetServiceGroupResponse extends SpeakeasyBase {
+    /**
+     * Bad Request
+     */
     apiError?: shared.ApiError;
     contentType: string;
+    /**
+     * OK
+     */
     group?: shared.Group;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

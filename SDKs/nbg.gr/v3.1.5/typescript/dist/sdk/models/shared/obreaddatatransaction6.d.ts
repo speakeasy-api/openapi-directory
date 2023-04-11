@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ObTransaction6 } from "./obtransaction6";
-export declare class ObReadDataTransaction6 extends SpeakeasyBase {
-    transaction?: ObTransaction6[];
+import { OBTransaction6 } from "./obtransaction6";
+export declare class OBReadDataTransaction6 extends SpeakeasyBase {
+    /**
+     * Provides further details on an entry in the report.
+     */
+    transaction?: OBTransaction6[];
 }

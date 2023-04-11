@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostModifyAquaConfigurationActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTModifyAquaConfigurationActionEnum {
     ModifyAquaConfiguration = "ModifyAquaConfiguration"
 }
-export declare enum PostModifyAquaConfigurationVersionEnum {
+export declare enum POSTModifyAquaConfigurationVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostModifyAquaConfigurationQueryParams extends SpeakeasyBase {
-    action: PostModifyAquaConfigurationActionEnum;
-    version: PostModifyAquaConfigurationVersionEnum;
-}
-export declare class PostModifyAquaConfigurationHeaders extends SpeakeasyBase {
+export declare class POSTModifyAquaConfigurationRequest extends SpeakeasyBase {
+    action: POSTModifyAquaConfigurationActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTModifyAquaConfigurationVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostModifyAquaConfigurationHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostModifyAquaConfigurationRequest extends SpeakeasyBase {
-    queryParams: PostModifyAquaConfigurationQueryParams;
-    headers: PostModifyAquaConfigurationHeaders;
-    request?: Uint8Array;
-}
-export declare class PostModifyAquaConfigurationResponse extends SpeakeasyBase {
+export declare class POSTModifyAquaConfigurationResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

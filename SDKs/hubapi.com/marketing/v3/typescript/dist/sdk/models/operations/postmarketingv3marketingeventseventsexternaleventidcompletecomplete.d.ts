@@ -1,24 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompletePathParams extends SpeakeasyBase {
-    externalEventId: string;
-}
-export declare class PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompleteQueryParams extends SpeakeasyBase {
-    externalAccountId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompleteSecurity extends SpeakeasyBase {
-    privateAppsLegacy?: shared.SchemePrivateAppsLegacy;
-    oauth2Legacy?: shared.SchemeOauth2Legacy;
+    oauth2Legacy?: string;
+    privateAppsLegacy?: string;
 }
 export declare class PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompleteRequest extends SpeakeasyBase {
-    pathParams: PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompletePathParams;
-    queryParams: PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompleteQueryParams;
-    request: shared.MarketingEventCompleteRequestParams;
-    security: PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompleteSecurity;
+    marketingEventCompleteRequestParams: shared.MarketingEventCompleteRequestParams;
+    externalAccountId: string;
+    externalEventId: string;
 }
 export declare class PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompleteResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
+    /**
+     * successful operation
+     */
     marketingEventDefaultResponse?: shared.MarketingEventDefaultResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeConfigurationAggregatorSourcesStatusQueryParams extends SpeakeasyBase {
-    limit?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum DescribeConfigurationAggregatorSourcesStatusXAmzTargetEnum {
     StarlingDoveServiceDescribeConfigurationAggregatorSourcesStatus = "StarlingDoveService.DescribeConfigurationAggregatorSourcesStatus"
 }
-export declare class DescribeConfigurationAggregatorSourcesStatusHeaders extends SpeakeasyBase {
+export declare class DescribeConfigurationAggregatorSourcesStatusRequest extends SpeakeasyBase {
+    describeConfigurationAggregatorSourcesStatusRequest: shared.DescribeConfigurationAggregatorSourcesStatusRequest;
+    /**
+     * Pagination limit
+     */
+    limit?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,17 +23,28 @@ export declare class DescribeConfigurationAggregatorSourcesStatusHeaders extends
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeConfigurationAggregatorSourcesStatusXAmzTargetEnum;
 }
-export declare class DescribeConfigurationAggregatorSourcesStatusRequest extends SpeakeasyBase {
-    queryParams: DescribeConfigurationAggregatorSourcesStatusQueryParams;
-    headers: DescribeConfigurationAggregatorSourcesStatusHeaders;
-    request: shared.DescribeConfigurationAggregatorSourcesStatusRequest;
-}
 export declare class DescribeConfigurationAggregatorSourcesStatusResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeConfigurationAggregatorSourcesStatusResponse?: shared.DescribeConfigurationAggregatorSourcesStatusResponse;
+    /**
+     * InvalidLimitException
+     */
     invalidLimitException?: any;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
+    /**
+     * NoSuchConfigurationAggregatorException
+     */
     noSuchConfigurationAggregatorException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

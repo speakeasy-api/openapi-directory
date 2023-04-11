@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { CrawlerTargets } from "./crawlertargets";
+import { LakeFormationConfiguration } from "./lakeformationconfiguration";
 import { LineageConfiguration } from "./lineageconfiguration";
 import { RecrawlPolicy } from "./recrawlpolicy";
 import { SchemaChangePolicy } from "./schemachangepolicy";
-import { CrawlerTargets } from "./crawlertargets";
 export declare class CreateCrawlerRequest extends SpeakeasyBase {
     classifiers?: string[];
     configuration?: string;
     crawlerSecurityConfiguration?: string;
     databaseName?: string;
     description?: string;
+    lakeFormationConfiguration?: LakeFormationConfiguration;
     lineageConfiguration?: LineageConfiguration;
     name: string;
     recrawlPolicy?: RecrawlPolicy;

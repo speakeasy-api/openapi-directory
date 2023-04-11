@@ -1,44 +1,38 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CloudprivatecatalogproducerCatalogsAssociationsCreateRequest, CloudprivatecatalogproducerCatalogsAssociationsCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  CloudprivatecatalogproducerCatalogsAssociationsCreateRequest,
+  CloudprivatecatalogproducerCatalogsAssociationsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: CloudprivatecatalogproducerCatalogsAssociationsCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  googleCloudPrivatecatalogproducerV1beta1CreateAssociationRequest: {
     association: {
-      createTime: "dicta",
-      name: "debitis",
-      resource: "voluptatum",
+      createTime: "provident",
+      name: "distinctio",
+      resource: "quibusdam",
     },
   },
+  accessToken: "unde",
+  alt: AltEnum.Proto,
+  callback: "corrupti",
+  fields: "illum",
+  key: "vel",
+  oauthToken: "error",
+  parent: "deserunt",
+  prettyPrint: false,
+  quotaUser: "suscipit",
+  uploadType: "iure",
+  uploadProtocol: "magnam",
 };
 
 sdk.catalogs.cloudprivatecatalogproducerCatalogsAssociationsCreate(req).then((res: CloudprivatecatalogproducerCatalogsAssociationsCreateResponse | AxiosError) => {

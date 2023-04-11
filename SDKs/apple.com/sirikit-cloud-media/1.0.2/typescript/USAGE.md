@@ -1,22 +1,22 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { ExtensionConfigurationRequest, ExtensionConfigurationResponse } from "openapi/src/sdk/models/operations";
+import {
+  ExtensionConfigurationRequest,
+  ExtensionConfigurationResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: ExtensionConfigurationRequest = {
-  headers: {
-    acceptLanguage: "sit",
-    cacheControl: "voluptas",
-    ifNoneMatch: "culpa",
-    requestTimeout: 6.200000,
-    userAgent: "dolor",
-    xApplecloudextensionRetryCount: 67.199997,
-    xApplecloudextensionSessionId: "fugit",
-  },
+  acceptLanguage: "corrupti",
+  cacheControl: "provident",
+  ifNoneMatch: "distinctio",
+  requestTimeout: 8442.66,
+  userAgent: "unde",
+  xApplecloudextensionRetryCount: 8579.46,
+  xApplecloudextensionSessionId: "corrupti",
 };
 
 sdk.config.extensionConfiguration(req).then((res: ExtensionConfigurationResponse | AxiosError) => {

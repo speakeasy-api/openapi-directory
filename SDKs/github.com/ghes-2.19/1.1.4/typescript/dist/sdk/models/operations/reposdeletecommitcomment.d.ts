@@ -1,15 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReposDeleteCommitCommentPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ReposDeleteCommitCommentRequest extends SpeakeasyBase {
+    /**
+     * comment_id parameter
+     */
     commentId: number;
     owner: string;
     repo: string;
 }
-export declare class ReposDeleteCommitCommentRequest extends SpeakeasyBase {
-    pathParams: ReposDeleteCommitCommentPathParams;
-}
 export declare class ReposDeleteCommitCommentResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Resource not found
+     */
     basicError?: shared.BasicError;
 }

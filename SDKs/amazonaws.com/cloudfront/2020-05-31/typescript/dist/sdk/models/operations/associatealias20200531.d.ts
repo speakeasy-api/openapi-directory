@@ -1,11 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class AssociateAlias20200531PathParams extends SpeakeasyBase {
-    targetDistributionId: string;
-}
-export declare class AssociateAlias20200531QueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class AssociateAlias20200531Request extends SpeakeasyBase {
+    /**
+     * The alias (also known as a CNAME) to add to the target distribution.
+     */
     alias: string;
-}
-export declare class AssociateAlias20200531Headers extends SpeakeasyBase {
+    /**
+     * The ID of the distribution that you're associating the alias with.
+     */
+    targetDistributionId: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -14,13 +17,9 @@ export declare class AssociateAlias20200531Headers extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class AssociateAlias20200531Request extends SpeakeasyBase {
-    pathParams: AssociateAlias20200531PathParams;
-    queryParams: AssociateAlias20200531QueryParams;
-    headers: AssociateAlias20200531Headers;
-}
 export declare class AssociateAlias20200531Response extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,8 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteFieldLevelEncryptionConfig20200531PathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteFieldLevelEncryptionConfig20200531Request extends SpeakeasyBase {
+    /**
+     * The ID of the configuration you want to delete from CloudFront.
+     */
     id: string;
-}
-export declare class DeleteFieldLevelEncryptionConfig20200531Headers extends SpeakeasyBase {
+    /**
+     * The value of the <code>ETag</code> header that you received when retrieving the configuration identity to delete. For example: <code>E2QWRUHAPOMQZL</code>.
+     */
     ifMatch?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
@@ -12,12 +17,9 @@ export declare class DeleteFieldLevelEncryptionConfig20200531Headers extends Spe
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeleteFieldLevelEncryptionConfig20200531Request extends SpeakeasyBase {
-    pathParams: DeleteFieldLevelEncryptionConfig20200531PathParams;
-    headers: DeleteFieldLevelEncryptionConfig20200531Headers;
-}
 export declare class DeleteFieldLevelEncryptionConfig20200531Response extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

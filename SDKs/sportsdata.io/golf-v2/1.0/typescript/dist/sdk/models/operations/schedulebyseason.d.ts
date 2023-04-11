@@ -1,17 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+/**
+ * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+ */
 export declare enum ScheduleBySeasonFormatEnum {
     Xml = "XML",
     Json = "JSON"
 }
-export declare class ScheduleBySeasonPathParams extends SpeakeasyBase {
-    format: ScheduleBySeasonFormatEnum;
-    season: string;
-}
 export declare class ScheduleBySeasonRequest extends SpeakeasyBase {
-    pathParams: ScheduleBySeasonPathParams;
+    /**
+     * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+     */
+    format: ScheduleBySeasonFormatEnum;
+    /**
+     * Year of the season.
+     *
+     * @remarks
+     * <br>Examples: <code>2016</code>, <code>2017</code>.
+     */
+    season: string;
 }
 export declare class ScheduleBySeasonResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    tournaments?: any[];
+    rawResponse?: AxiosResponse;
+    tournaments?: shared.Tournament[];
 }

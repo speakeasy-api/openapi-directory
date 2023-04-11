@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteDbInstanceAutomatedBackupActionEnum {
-    DeleteDbInstanceAutomatedBackup = "DeleteDBInstanceAutomatedBackup"
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteDBInstanceAutomatedBackupActionEnum {
+    DeleteDBInstanceAutomatedBackup = "DeleteDBInstanceAutomatedBackup"
 }
-export declare enum GetDeleteDbInstanceAutomatedBackupVersionEnum {
+export declare enum GETDeleteDBInstanceAutomatedBackupVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class GetDeleteDbInstanceAutomatedBackupQueryParams extends SpeakeasyBase {
-    action: GetDeleteDbInstanceAutomatedBackupActionEnum;
+export declare class GETDeleteDBInstanceAutomatedBackupRequest extends SpeakeasyBase {
+    action: GETDeleteDBInstanceAutomatedBackupActionEnum;
+    /**
+     * <p>The Amazon Resource Name (ARN) of the automated backups to delete, for example, <code>arn:aws:rds:us-east-1:123456789012:auto-backup:ab-L2IJCEXJP7XQ7HOJ4SIEXAMPLE</code>.</p> <p>This setting doesn't apply to RDS Custom.</p>
+     */
     dbInstanceAutomatedBackupsArn?: string;
+    /**
+     * The identifier for the source DB instance, which can't be changed and which is unique to an Amazon Web Services Region.
+     */
     dbiResourceId?: string;
-    version: GetDeleteDbInstanceAutomatedBackupVersionEnum;
-}
-export declare class GetDeleteDbInstanceAutomatedBackupHeaders extends SpeakeasyBase {
+    version: GETDeleteDBInstanceAutomatedBackupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetDeleteDbInstanceAutomatedBackupHeaders extends Speakeasy
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteDbInstanceAutomatedBackupRequest extends SpeakeasyBase {
-    queryParams: GetDeleteDbInstanceAutomatedBackupQueryParams;
-    headers: GetDeleteDbInstanceAutomatedBackupHeaders;
-}
-export declare class GetDeleteDbInstanceAutomatedBackupResponse extends SpeakeasyBase {
+export declare class GETDeleteDBInstanceAutomatedBackupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

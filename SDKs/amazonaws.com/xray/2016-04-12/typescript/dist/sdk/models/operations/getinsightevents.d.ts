@@ -1,10 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetInsightEventsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
+import { AxiosResponse } from "axios";
+export declare class GetInsightEventsRequestBody extends SpeakeasyBase {
+    /**
+     * The insight's unique identifier. Use the GetInsightSummaries action to retrieve an InsightId.
+     */
+    insightId: string;
+    /**
+     * Used to retrieve at most the specified value of events.
+     */
+    maxResults?: number;
+    /**
+     * Specify the pagination token returned by a previous request to retrieve the next page of events.
+     */
     nextToken?: string;
 }
-export declare class GetInsightEventsHeaders extends SpeakeasyBase {
+export declare class GetInsightEventsRequest extends SpeakeasyBase {
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
+    requestBody: GetInsightEventsRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,20 +33,20 @@ export declare class GetInsightEventsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetInsightEventsRequestBody extends SpeakeasyBase {
-    insightId: string;
-    maxResults?: number;
-    nextToken?: string;
-}
-export declare class GetInsightEventsRequest extends SpeakeasyBase {
-    queryParams: GetInsightEventsQueryParams;
-    headers: GetInsightEventsHeaders;
-    request: GetInsightEventsRequestBody;
-}
 export declare class GetInsightEventsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getInsightEventsResult?: shared.GetInsightEventsResult;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottledException
+     */
     throttledException?: any;
 }

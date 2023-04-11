@@ -1,8 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteCoreDefinitionPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteCoreDefinitionRequest extends SpeakeasyBase {
+    /**
+     * The ID of the core definition.
+     */
     coreDefinitionId: string;
-}
-export declare class DeleteCoreDefinitionHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,13 +13,16 @@ export declare class DeleteCoreDefinitionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeleteCoreDefinitionRequest extends SpeakeasyBase {
-    pathParams: DeleteCoreDefinitionPathParams;
-    headers: DeleteCoreDefinitionHeaders;
-}
 export declare class DeleteCoreDefinitionResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteCoreDefinitionResponse?: Record<string, any>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

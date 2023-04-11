@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeMetricFiltersQueryParams extends SpeakeasyBase {
-    limit?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum DescribeMetricFiltersXAmzTargetEnum {
     Logs20140328DescribeMetricFilters = "Logs_20140328.DescribeMetricFilters"
 }
-export declare class DescribeMetricFiltersHeaders extends SpeakeasyBase {
+export declare class DescribeMetricFiltersRequest extends SpeakeasyBase {
+    describeMetricFiltersRequest: shared.DescribeMetricFiltersRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,17 +14,33 @@ export declare class DescribeMetricFiltersHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeMetricFiltersXAmzTargetEnum;
-}
-export declare class DescribeMetricFiltersRequest extends SpeakeasyBase {
-    queryParams: DescribeMetricFiltersQueryParams;
-    headers: DescribeMetricFiltersHeaders;
-    request: shared.DescribeMetricFiltersRequest;
+    /**
+     * Pagination limit
+     */
+    limit?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class DescribeMetricFiltersResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeMetricFiltersResponse?: shared.DescribeMetricFiltersResponse;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
-    resourceNotFoundException?: any;
+    /**
+     * ServiceUnavailableException
+     */
     serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
 }

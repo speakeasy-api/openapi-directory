@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostModifyDbProxyTargetGroupActionEnum {
-    ModifyDbProxyTargetGroup = "ModifyDBProxyTargetGroup"
+import { AxiosResponse } from "axios";
+export declare enum POSTModifyDBProxyTargetGroupActionEnum {
+    ModifyDBProxyTargetGroup = "ModifyDBProxyTargetGroup"
 }
-export declare enum PostModifyDbProxyTargetGroupVersionEnum {
+export declare enum POSTModifyDBProxyTargetGroupVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class PostModifyDbProxyTargetGroupQueryParams extends SpeakeasyBase {
-    action: PostModifyDbProxyTargetGroupActionEnum;
-    version: PostModifyDbProxyTargetGroupVersionEnum;
-}
-export declare class PostModifyDbProxyTargetGroupHeaders extends SpeakeasyBase {
+export declare class POSTModifyDBProxyTargetGroupRequest extends SpeakeasyBase {
+    action: POSTModifyDBProxyTargetGroupActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTModifyDBProxyTargetGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostModifyDbProxyTargetGroupHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostModifyDbProxyTargetGroupRequest extends SpeakeasyBase {
-    queryParams: PostModifyDbProxyTargetGroupQueryParams;
-    headers: PostModifyDbProxyTargetGroupHeaders;
-    request?: Uint8Array;
-}
-export declare class PostModifyDbProxyTargetGroupResponse extends SpeakeasyBase {
+export declare class POSTModifyDBProxyTargetGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

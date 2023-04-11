@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeFpgaImageAttributeActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeFpgaImageAttributeActionEnum {
     DescribeFpgaImageAttribute = "DescribeFpgaImageAttribute"
 }
-export declare enum PostDescribeFpgaImageAttributeVersionEnum {
+export declare enum POSTDescribeFpgaImageAttributeVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDescribeFpgaImageAttributeQueryParams extends SpeakeasyBase {
-    action: PostDescribeFpgaImageAttributeActionEnum;
-    version: PostDescribeFpgaImageAttributeVersionEnum;
-}
-export declare class PostDescribeFpgaImageAttributeHeaders extends SpeakeasyBase {
+export declare class POSTDescribeFpgaImageAttributeRequest extends SpeakeasyBase {
+    action: POSTDescribeFpgaImageAttributeActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDescribeFpgaImageAttributeVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDescribeFpgaImageAttributeHeaders extends SpeakeasyBase
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeFpgaImageAttributeRequest extends SpeakeasyBase {
-    queryParams: PostDescribeFpgaImageAttributeQueryParams;
-    headers: PostDescribeFpgaImageAttributeHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeFpgaImageAttributeResponse extends SpeakeasyBase {
+export declare class POSTDescribeFpgaImageAttributeResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

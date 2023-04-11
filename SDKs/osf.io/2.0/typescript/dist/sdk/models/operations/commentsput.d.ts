@@ -1,12 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CommentsPutPathParams extends SpeakeasyBase {
-    commentId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class CommentsPutRequest extends SpeakeasyBase {
-    pathParams: CommentsPutPathParams;
-    request: Record<string, any>;
+    requestBody: Record<string, any>;
+    /**
+     * The unique identifier of the comment you wish to update.
+     */
+    commentId: string;
 }
 export declare class CommentsPutResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

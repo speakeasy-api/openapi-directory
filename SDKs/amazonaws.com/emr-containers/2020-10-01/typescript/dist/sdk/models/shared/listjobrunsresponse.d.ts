@@ -1,0 +1,9 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { JobRun } from "./jobrun";
+/**
+ * Success
+ */
+export declare class ListJobRunsResponse extends SpeakeasyBase {
+    jobRuns?: JobRun[];
+    nextToken?: string;
+}

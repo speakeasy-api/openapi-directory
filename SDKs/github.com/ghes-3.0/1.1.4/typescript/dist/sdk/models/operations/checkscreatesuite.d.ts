@@ -1,18 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ChecksCreateSuitePathParams extends SpeakeasyBase {
-    owner: string;
-    repo: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ChecksCreateSuiteRequestBody extends SpeakeasyBase {
+    /**
+     * The sha of the head commit.
+     */
     headSha: string;
 }
 export declare class ChecksCreateSuiteRequest extends SpeakeasyBase {
-    pathParams: ChecksCreateSuitePathParams;
-    request?: ChecksCreateSuiteRequestBody;
+    requestBody: ChecksCreateSuiteRequestBody;
+    owner: string;
+    repo: string;
 }
 export declare class ChecksCreateSuiteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * when the suite already existed
+     */
     checkSuite?: shared.CheckSuite;
 }

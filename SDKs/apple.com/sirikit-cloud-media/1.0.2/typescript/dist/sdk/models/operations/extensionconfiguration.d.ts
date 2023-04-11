@@ -1,5 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ExtensionConfigurationHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ExtensionConfigurationRequest extends SpeakeasyBase {
     acceptLanguage: string;
     cacheControl: string;
     ifNoneMatch?: string;
@@ -8,12 +9,10 @@ export declare class ExtensionConfigurationHeaders extends SpeakeasyBase {
     xApplecloudextensionRetryCount?: number;
     xApplecloudextensionSessionId: string;
 }
-export declare class ExtensionConfigurationRequest extends SpeakeasyBase {
-    headers: ExtensionConfigurationHeaders;
-}
 export declare class ExtensionConfigurationResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -6,7 +6,7 @@ export declare class ContentSubmoduleLinks extends SpeakeasyBase {
 }
 /**
  * An object describing a symlink
-**/
+ */
 export declare class ContentSubmodule extends SpeakeasyBase {
     links: ContentSubmoduleLinks;
     downloadUrl: string;

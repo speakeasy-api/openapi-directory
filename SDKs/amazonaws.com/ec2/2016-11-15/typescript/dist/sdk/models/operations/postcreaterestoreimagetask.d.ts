@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateRestoreImageTaskActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateRestoreImageTaskActionEnum {
     CreateRestoreImageTask = "CreateRestoreImageTask"
 }
-export declare enum PostCreateRestoreImageTaskVersionEnum {
+export declare enum POSTCreateRestoreImageTaskVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostCreateRestoreImageTaskQueryParams extends SpeakeasyBase {
-    action: PostCreateRestoreImageTaskActionEnum;
-    version: PostCreateRestoreImageTaskVersionEnum;
-}
-export declare class PostCreateRestoreImageTaskHeaders extends SpeakeasyBase {
+export declare class POSTCreateRestoreImageTaskRequest extends SpeakeasyBase {
+    action: POSTCreateRestoreImageTaskActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateRestoreImageTaskVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateRestoreImageTaskHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateRestoreImageTaskRequest extends SpeakeasyBase {
-    queryParams: PostCreateRestoreImageTaskQueryParams;
-    headers: PostCreateRestoreImageTaskHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateRestoreImageTaskResponse extends SpeakeasyBase {
+export declare class POSTCreateRestoreImageTaskResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

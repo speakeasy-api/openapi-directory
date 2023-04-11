@@ -4,5 +4,6 @@ import { Pagination } from "./pagination";
 export declare class JobListRequestBody extends SpeakeasyBase {
     configId: string;
     configTypes: JobConfigTypeEnum[];
+    includingJobId?: number;
     pagination?: Pagination;
 }

@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListContactChannelsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListContactChannelsXAmzTargetEnum {
-    SsmContactsListContactChannels = "SSMContacts.ListContactChannels"
+    SSMContactsListContactChannels = "SSMContacts.ListContactChannels"
 }
-export declare class ListContactChannelsHeaders extends SpeakeasyBase {
+export declare class ListContactChannelsRequest extends SpeakeasyBase {
+    listContactChannelsRequest: shared.ListContactChannelsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,19 +23,36 @@ export declare class ListContactChannelsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListContactChannelsXAmzTargetEnum;
 }
-export declare class ListContactChannelsRequest extends SpeakeasyBase {
-    queryParams: ListContactChannelsQueryParams;
-    headers: ListContactChannelsHeaders;
-    request: shared.ListContactChannelsRequest;
-}
 export declare class ListContactChannelsResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * DataEncryptionException
+     */
     dataEncryptionException?: any;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * Success
+     */
     listContactChannelsResult?: shared.ListContactChannelsResult;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

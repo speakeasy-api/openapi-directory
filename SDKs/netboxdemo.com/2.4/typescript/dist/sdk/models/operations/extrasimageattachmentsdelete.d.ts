@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ExtrasImageAttachmentsDeletePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ExtrasImageAttachmentsDeleteRequest extends SpeakeasyBase {
-    pathParams: ExtrasImageAttachmentsDeletePathParams;
+    /**
+     * A unique integer value identifying this image attachment.
+     */
+    id: number;
 }
 export declare class ExtrasImageAttachmentsDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

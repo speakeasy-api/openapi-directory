@@ -5,7 +5,7 @@ import { MailFromAttributes } from "./mailfromattributes";
 import { Tag } from "./tag";
 /**
  * Details about an email identity.
-**/
+ */
 export declare class GetEmailIdentityResponse extends SpeakeasyBase {
     dkimAttributes?: DkimAttributes;
     feedbackForwardingStatus?: boolean;

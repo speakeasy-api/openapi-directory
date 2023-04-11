@@ -3,7 +3,7 @@ import { OriginProtocolPolicyEnum } from "./originprotocolpolicyenum";
 import { OriginSslProtocols } from "./originsslprotocols";
 /**
  * A customer origin.
-**/
+ */
 export declare class CustomOriginConfig extends SpeakeasyBase {
     httpPort: number;
     httpsPort: number;

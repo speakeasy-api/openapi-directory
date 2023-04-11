@@ -1,14 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReadmeGetV2SourcesReadmeSlugGetPathParams extends SpeakeasyBase {
-    slug: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ReadmeGetV2SourcesReadmeSlugGetRequest extends SpeakeasyBase {
-    pathParams: ReadmeGetV2SourcesReadmeSlugGetPathParams;
+    slug: string;
 }
 export declare class ReadmeGetV2SourcesReadmeSlugGetResponse extends SpeakeasyBase {
     contentType: string;
-    httpValidationError?: shared.HttpValidationError;
+    /**
+     * Validation Error
+     */
+    httpValidationError?: shared.HTTPValidationError;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful Response
+     */
     readmeGetV2SourcesReadmeSlugGet200ApplicationJSONAny?: any;
 }

@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListAssignmentsForHitQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare enum ListAssignmentsForHITXAmzTargetEnum {
+    MTurkRequesterServiceV20170117ListAssignmentsForHIT = "MTurkRequesterServiceV20170117.ListAssignmentsForHIT"
+}
+export declare class ListAssignmentsForHITRequest extends SpeakeasyBase {
+    listAssignmentsForHITRequest: shared.ListAssignmentsForHITRequest;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-}
-export declare enum ListAssignmentsForHitxAmzTargetEnum {
-    MTurkRequesterServiceV20170117ListAssignmentsForHit = "MTurkRequesterServiceV20170117.ListAssignmentsForHIT"
-}
-export declare class ListAssignmentsForHitHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -15,17 +21,22 @@ export declare class ListAssignmentsForHitHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: ListAssignmentsForHitxAmzTargetEnum;
+    xAmzTarget: ListAssignmentsForHITXAmzTargetEnum;
 }
-export declare class ListAssignmentsForHitRequest extends SpeakeasyBase {
-    queryParams: ListAssignmentsForHitQueryParams;
-    headers: ListAssignmentsForHitHeaders;
-    request: shared.ListAssignmentsForHitRequest;
-}
-export declare class ListAssignmentsForHitResponse extends SpeakeasyBase {
+export declare class ListAssignmentsForHITResponse extends SpeakeasyBase {
     contentType: string;
-    listAssignmentsForHITResponse?: shared.ListAssignmentsForHitResponse;
+    /**
+     * Success
+     */
+    listAssignmentsForHITResponse?: shared.ListAssignmentsForHITResponse;
+    /**
+     * RequestError
+     */
     requestError?: any;
+    /**
+     * ServiceFault
+     */
     serviceFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

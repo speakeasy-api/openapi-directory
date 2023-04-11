@@ -60,6 +60,9 @@ export declare class PowerFeed extends SpeakeasyBase {
     customFields?: Record<string, any>;
     id?: number;
     lastUpdated?: Date;
+    /**
+     * Maximum permissible draw (percentage)
+     */
     maxUtilization?: number;
     name: string;
     phase?: PowerFeedPhase;

@@ -5,5 +5,5 @@ import { PlayMediaControlSchemeEnum } from "./playmediacontrolschemeenum";
 export declare class PlayMediaControl extends SpeakeasyBase {
     activity?: PlayMediaControlActivity;
     commands?: PlayMediaControlCommandSet;
-    scheme?: PlayMediaControlSchemeEnum;
+    scheme: PlayMediaControlSchemeEnum;
 }

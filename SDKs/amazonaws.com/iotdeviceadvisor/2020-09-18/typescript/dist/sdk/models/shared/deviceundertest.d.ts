@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
- * Lists all the devices under test
-**/
+ * Information of a test device. A thing ARN or a certificate ARN is required.
+ */
 export declare class DeviceUnderTest extends SpeakeasyBase {
     certificateArn?: string;
     thingArn?: string;

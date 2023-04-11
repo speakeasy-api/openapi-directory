@@ -10,6 +10,9 @@ export declare class AccountStatusDataQualityIssue extends SpeakeasyBase {
     lastChecked?: string;
     location?: string;
     numItems?: number;
+    /**
+     *  Acceptable values are: - "`critical`" - "`error`" - "`suggestion`"
+     */
     severity?: string;
     submittedValue?: string;
 }

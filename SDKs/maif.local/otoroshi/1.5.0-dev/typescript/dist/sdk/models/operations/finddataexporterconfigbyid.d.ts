@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class FindDataExporterConfigByIdPathParams extends SpeakeasyBase {
-    dataExporterConfigId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class FindDataExporterConfigByIdSecurity extends SpeakeasyBase {
-    otoroshiAuth: shared.SchemeOtoroshiAuth;
+    password: string;
+    username: string;
 }
 export declare class FindDataExporterConfigByIdRequest extends SpeakeasyBase {
-    pathParams: FindDataExporterConfigByIdPathParams;
-    security: FindDataExporterConfigByIdSecurity;
+    /**
+     * The data exporter config id
+     */
+    dataExporterConfigId: string;
 }
 export declare class FindDataExporterConfigByIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful operation
+     */
     dataExporterConfig?: shared.DataExporterConfig;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

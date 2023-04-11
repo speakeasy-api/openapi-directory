@@ -1,21 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PullsListReviewsPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class PullsListReviewsRequest extends SpeakeasyBase {
     owner: string;
+    /**
+     * Page number of the results to fetch.
+     */
+    page?: number;
+    /**
+     * Results per page (max 100)
+     */
+    perPage?: number;
     pullNumber: number;
     repo: string;
 }
-export declare class PullsListReviewsQueryParams extends SpeakeasyBase {
-    page?: number;
-    perPage?: number;
-}
-export declare class PullsListReviewsRequest extends SpeakeasyBase {
-    pathParams: PullsListReviewsPathParams;
-    queryParams: PullsListReviewsQueryParams;
-}
 export declare class PullsListReviewsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The list of reviews returns in chronological order.
+     */
     pullRequestReviews?: shared.PullRequestReview[];
 }

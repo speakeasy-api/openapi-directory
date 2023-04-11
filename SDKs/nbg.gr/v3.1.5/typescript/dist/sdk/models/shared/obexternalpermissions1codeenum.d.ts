@@ -1,4 +1,7 @@
-export declare enum ObExternalPermissions1CodeEnum {
+/**
+ * Specifies the Open Banking account access data types. This is a list of the data clusters being consented by the PSU, and requested for authorisation with the ASPSP.
+ */
+export declare enum OBExternalPermissions1CodeEnum {
     ReadAccountsBasic = "ReadAccountsBasic",
     ReadAccountsDetail = "ReadAccountsDetail",
     ReadBalances = "ReadBalances",
@@ -6,9 +9,9 @@ export declare enum ObExternalPermissions1CodeEnum {
     ReadBeneficiariesDetail = "ReadBeneficiariesDetail",
     ReadDirectDebits = "ReadDirectDebits",
     ReadOffers = "ReadOffers",
-    ReadPan = "ReadPAN",
+    ReadPAN = "ReadPAN",
     ReadParty = "ReadParty",
-    ReadPartyPsu = "ReadPartyPSU",
+    ReadPartyPSU = "ReadPartyPSU",
     ReadProducts = "ReadProducts",
     ReadScheduledPaymentsBasic = "ReadScheduledPaymentsBasic",
     ReadScheduledPaymentsDetail = "ReadScheduledPaymentsDetail",

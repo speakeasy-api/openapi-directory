@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ExtrasConfigContextsUpdatePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ExtrasConfigContextsUpdateRequest extends SpeakeasyBase {
-    pathParams: ExtrasConfigContextsUpdatePathParams;
-    request: shared.WritableConfigContextInput;
+    writableConfigContextInput: shared.WritableConfigContextInput;
+    /**
+     * A unique integer value identifying this config context.
+     */
+    id: number;
 }
 export declare class ExtrasConfigContextsUpdateResponse extends SpeakeasyBase {
     configContext?: shared.ConfigContext;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

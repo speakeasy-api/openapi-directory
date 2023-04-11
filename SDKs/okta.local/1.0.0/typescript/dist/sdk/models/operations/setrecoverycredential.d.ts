@@ -1,7 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SetRecoveryCredentialPathParams extends SpeakeasyBase {
-    userId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class SetRecoveryCredentialRequestBodyCredentialsRecoveryQuestion extends SpeakeasyBase {
     answer?: string;
     question?: string;
@@ -13,10 +11,11 @@ export declare class SetRecoveryCredentialRequestBody extends SpeakeasyBase {
     credentials?: SetRecoveryCredentialRequestBodyCredentials;
 }
 export declare class SetRecoveryCredentialRequest extends SpeakeasyBase {
-    pathParams: SetRecoveryCredentialPathParams;
-    request?: SetRecoveryCredentialRequestBody;
+    requestBody?: SetRecoveryCredentialRequestBody;
+    userId: string;
 }
 export declare class SetRecoveryCredentialResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

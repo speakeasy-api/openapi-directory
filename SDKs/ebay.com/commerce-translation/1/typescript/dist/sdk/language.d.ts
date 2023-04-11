@@ -1,5 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Language {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +10,7 @@ export declare class Language {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * translate - Translates input text inot a given language.
-    **/
-    translate(req: operations.TranslateRequest, config?: AxiosRequestConfig): Promise<operations.TranslateResponse>;
+     * Translates input text inot a given language.
+     */
+    translate(req: shared.TranslateRequest, security: operations.TranslateSecurity, config?: AxiosRequestConfig): Promise<operations.TranslateResponse>;
 }

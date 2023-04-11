@@ -1,5 +1,14 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * A workspace is where you create repositories, collaborate on
+ *
+ * @remarks
+ * your code, and organize different streams of work in your Bitbucket
+ * Cloud account. Workspaces replace the use of teams and users in API
+ * calls.
+ *
+ */
 export declare class Workspaces {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,11 +18,17 @@ export declare class Workspaces {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteWorkspacesWorkspaceHooksUid - Deletes the specified webhook subscription from the given workspace.
-    **/
-    deleteWorkspacesWorkspaceHooksUid(req: operations.DeleteWorkspacesWorkspaceHooksUidRequest, config?: AxiosRequestConfig): Promise<operations.DeleteWorkspacesWorkspaceHooksUidResponse>;
+     * Delete a webhook for a workspace
+     *
+     * @remarks
+     * Deletes the specified webhook subscription from the given workspace.
+     */
+    deleteWorkspacesWorkspaceHooksUid(req: operations.DeleteWorkspacesWorkspaceHooksUidRequest, security: operations.DeleteWorkspacesWorkspaceHooksUidSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteWorkspacesWorkspaceHooksUidResponse>;
     /**
-     * getUserPermissionsWorkspaces - Returns an object for each workspace the caller is a member of, and
+     * List workspaces for the current user
+     *
+     * @remarks
+     * Returns an object for each workspace the caller is a member of, and
      * their effective role - the highest level of privilege the caller has.
      * If a user is a member of multiple groups with distinct roles, only the
      * highest level is returned.
@@ -23,6 +38,9 @@ export declare class Workspaces {
      * * `owner`
      * * `collaborator`
      * * `member`
+     *
+     * **The `collaborator` role is being removed from the Bitbucket Cloud API. For more information,
+     * see the [deprecation announcement](/cloud/bitbucket/deprecation-notice-collaborator-role/).**
      *
      * Example:
      *
@@ -56,7 +74,7 @@ export declare class Workspaces {
      * }
      * ```
      *
-     * Results may be further [filtered or sorted](../../../meta/filtering) by
+     * Results may be further [filtered or sorted](/cloud/bitbucket/rest/intro/#filtering) by
      * workspace or permission by adding the following query string parameters:
      *
      * * `q=workspace.slug="bbworkspace1"` or `q=permission="owner"`
@@ -64,10 +82,13 @@ export declare class Workspaces {
      *
      * Note that the query parameter values need to be URL escaped so that `=`
      * would become `%3D`.
-    **/
-    getUserPermissionsWorkspaces(req: operations.GetUserPermissionsWorkspacesRequest, config?: AxiosRequestConfig): Promise<operations.GetUserPermissionsWorkspacesResponse>;
+     */
+    getUserPermissionsWorkspaces(req: operations.GetUserPermissionsWorkspacesRequest, security: operations.GetUserPermissionsWorkspacesSecurity, config?: AxiosRequestConfig): Promise<operations.GetUserPermissionsWorkspacesResponse>;
     /**
-     * getWorkspaces - Returns a list of workspaces accessible by the authenticated user.
+     * List workspaces for user
+     *
+     * @remarks
+     * Returns a list of workspaces accessible by the authenticated user.
      *
      * Example:
      *
@@ -117,7 +138,7 @@ export declare class Workspaces {
      * }
      * ```
      *
-     * Results may be further [filtered or sorted](../meta/filtering) by
+     * Results may be further [filtered or sorted](/cloud/bitbucket/rest/intro/#filtering) by
      * workspace or permission by adding the following query string parameters:
      *
      * * `q=slug="bbworkspace1"` or `q=is_private=true`
@@ -125,38 +146,62 @@ export declare class Workspaces {
      *
      * Note that the query parameter values need to be URL escaped so that `=`
      * would become `%3D`.
-    **/
-    getWorkspaces(req: operations.GetWorkspacesRequest, config?: AxiosRequestConfig): Promise<operations.GetWorkspacesResponse>;
+     *
+     * **The `collaborator` role is being removed from the Bitbucket Cloud API. For more information,
+     * see the [deprecation announcement](/cloud/bitbucket/deprecation-notice-collaborator-role/).**
+     */
+    getWorkspaces(req: operations.GetWorkspacesRequest, security: operations.GetWorkspacesSecurity, config?: AxiosRequestConfig): Promise<operations.GetWorkspacesResponse>;
     /**
-     * getWorkspacesWorkspace - Returns the requested workspace.
-    **/
-    getWorkspacesWorkspace(req: operations.GetWorkspacesWorkspaceRequest, config?: AxiosRequestConfig): Promise<operations.GetWorkspacesWorkspaceResponse>;
+     * Get a workspace
+     *
+     * @remarks
+     * Returns the requested workspace.
+     */
+    getWorkspacesWorkspace(req: operations.GetWorkspacesWorkspaceRequest, security: operations.GetWorkspacesWorkspaceSecurity, config?: AxiosRequestConfig): Promise<operations.GetWorkspacesWorkspaceResponse>;
     /**
-     * getWorkspacesWorkspaceHooks - Returns a paginated list of webhooks installed on this workspace.
-    **/
-    getWorkspacesWorkspaceHooks(req: operations.GetWorkspacesWorkspaceHooksRequest, config?: AxiosRequestConfig): Promise<operations.GetWorkspacesWorkspaceHooksResponse>;
+     * List webhooks for a workspace
+     *
+     * @remarks
+     * Returns a paginated list of webhooks installed on this workspace.
+     */
+    getWorkspacesWorkspaceHooks(req: operations.GetWorkspacesWorkspaceHooksRequest, security: operations.GetWorkspacesWorkspaceHooksSecurity, config?: AxiosRequestConfig): Promise<operations.GetWorkspacesWorkspaceHooksResponse>;
     /**
-     * getWorkspacesWorkspaceHooksUid - Returns the webhook with the specified id installed on the given
+     * Get a webhook for a workspace
+     *
+     * @remarks
+     * Returns the webhook with the specified id installed on the given
      * workspace.
-    **/
-    getWorkspacesWorkspaceHooksUid(req: operations.GetWorkspacesWorkspaceHooksUidRequest, config?: AxiosRequestConfig): Promise<operations.GetWorkspacesWorkspaceHooksUidResponse>;
+     */
+    getWorkspacesWorkspaceHooksUid(req: operations.GetWorkspacesWorkspaceHooksUidRequest, security: operations.GetWorkspacesWorkspaceHooksUidSecurity, config?: AxiosRequestConfig): Promise<operations.GetWorkspacesWorkspaceHooksUidResponse>;
     /**
-     * getWorkspacesWorkspaceMembers - Returns all members of the requested workspace.
-    **/
-    getWorkspacesWorkspaceMembers(req: operations.GetWorkspacesWorkspaceMembersRequest, config?: AxiosRequestConfig): Promise<operations.GetWorkspacesWorkspaceMembersResponse>;
+     * List users in a workspace
+     *
+     * @remarks
+     * Returns all members of the requested workspace.
+     */
+    getWorkspacesWorkspaceMembers(req: operations.GetWorkspacesWorkspaceMembersRequest, security: operations.GetWorkspacesWorkspaceMembersSecurity, config?: AxiosRequestConfig): Promise<operations.GetWorkspacesWorkspaceMembersResponse>;
     /**
-     * getWorkspacesWorkspaceMembersMember - Returns the workspace membership, which includes
+     * Get user membership for a workspace
+     *
+     * @remarks
+     * Returns the workspace membership, which includes
      * a `User` object for the member and a `Workspace` object
      * for the requested workspace.
-    **/
-    getWorkspacesWorkspaceMembersMember(req: operations.GetWorkspacesWorkspaceMembersMemberRequest, config?: AxiosRequestConfig): Promise<operations.GetWorkspacesWorkspaceMembersMemberResponse>;
+     */
+    getWorkspacesWorkspaceMembersMember(req: operations.GetWorkspacesWorkspaceMembersMemberRequest, security: operations.GetWorkspacesWorkspaceMembersMemberSecurity, config?: AxiosRequestConfig): Promise<operations.GetWorkspacesWorkspaceMembersMemberResponse>;
     /**
-     * getWorkspacesWorkspacePermissions - Returns the list of members in a workspace
+     * List user permissions in a workspace
+     *
+     * @remarks
+     * Returns the list of members in a workspace
      * and their permission levels.
      * Permission can be:
      * * `owner`
      * * `collaborator`
      * * `member`
+     *
+     * **The `collaborator` role is being removed from the Bitbucket Cloud API. For more information,
+     * see the [deprecation announcement](/cloud/bitbucket/deprecation-notice-collaborator-role/).**
      *
      * Example:
      *
@@ -203,14 +248,17 @@ export declare class Workspaces {
      * }
      * ```
      *
-     * Results may be further [filtered](../../../meta/filtering) by
+     * Results may be further [filtered](/cloud/bitbucket/rest/intro/#filtering) by
      * permission by adding the following query string parameters:
      *
      * * `q=permission="owner"`
-    **/
-    getWorkspacesWorkspacePermissions(req: operations.GetWorkspacesWorkspacePermissionsRequest, config?: AxiosRequestConfig): Promise<operations.GetWorkspacesWorkspacePermissionsResponse>;
+     */
+    getWorkspacesWorkspacePermissions(req: operations.GetWorkspacesWorkspacePermissionsRequest, security: operations.GetWorkspacesWorkspacePermissionsSecurity, config?: AxiosRequestConfig): Promise<operations.GetWorkspacesWorkspacePermissionsResponse>;
     /**
-     * getWorkspacesWorkspacePermissionsRepositories - Returns an object for each repository permission for all of a
+     * List all repository permissions for a workspace
+     *
+     * @remarks
+     * Returns an object for each repository permission for all of a
      * workspace's repositories.
      *
      * Permissions returned are effective permissions: the highest level of
@@ -284,7 +332,7 @@ export declare class Workspaces {
      * }
      * ```
      *
-     * Results may be further [filtered or sorted](../../../../meta/filtering)
+     * Results may be further [filtered or sorted](/cloud/bitbucket/rest/intro/#filtering)
      * by repository, user, or permission by adding the following query string
      * parameters:
      *
@@ -293,10 +341,13 @@ export declare class Workspaces {
      *
      * Note that the query parameter values need to be URL escaped so that `=`
      * would become `%3D`.
-    **/
-    getWorkspacesWorkspacePermissionsRepositories(req: operations.GetWorkspacesWorkspacePermissionsRepositoriesRequest, config?: AxiosRequestConfig): Promise<operations.GetWorkspacesWorkspacePermissionsRepositoriesResponse>;
+     */
+    getWorkspacesWorkspacePermissionsRepositories(req: operations.GetWorkspacesWorkspacePermissionsRepositoriesRequest, security: operations.GetWorkspacesWorkspacePermissionsRepositoriesSecurity, config?: AxiosRequestConfig): Promise<operations.GetWorkspacesWorkspacePermissionsRepositoriesResponse>;
     /**
-     * getWorkspacesWorkspacePermissionsRepositoriesRepoSlug - Returns an object for the repository permission of each user in the
+     * List a repository permissions for a workspace
+     *
+     * @remarks
+     * Returns an object for the repository permission of each user in the
      * requested repository.
      *
      * Permissions returned are effective permissions: the highest level of
@@ -355,7 +406,7 @@ export declare class Workspaces {
      * }
      * ```
      *
-     * Results may be further [filtered or sorted](../../../../meta/filtering)
+     * Results may be further [filtered or sorted](/cloud/bitbucket/rest/intro/#filtering)
      * by user, or permission by adding the following query string parameters:
      *
      * * `q=permission>"read"`
@@ -363,27 +414,63 @@ export declare class Workspaces {
      *
      * Note that the query parameter values need to be URL escaped so that `=`
      * would become `%3D`.
-    **/
-    getWorkspacesWorkspacePermissionsRepositoriesRepoSlug(req: operations.GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugRequest, config?: AxiosRequestConfig): Promise<operations.GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugResponse>;
+     */
+    getWorkspacesWorkspacePermissionsRepositoriesRepoSlug(req: operations.GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugRequest, security: operations.GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugSecurity, config?: AxiosRequestConfig): Promise<operations.GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugResponse>;
     /**
-     * getWorkspacesWorkspaceProjects - Returns the list of projects in this workspace.
-    **/
-    getWorkspacesWorkspaceProjects(req: operations.GetWorkspacesWorkspaceProjectsRequest, config?: AxiosRequestConfig): Promise<operations.GetWorkspacesWorkspaceProjectsResponse>;
+     * List projects in a workspace
+     *
+     * @remarks
+     * Returns the list of projects in this workspace.
+     */
+    getWorkspacesWorkspaceProjects(req: operations.GetWorkspacesWorkspaceProjectsRequest, security: operations.GetWorkspacesWorkspaceProjectsSecurity, config?: AxiosRequestConfig): Promise<operations.GetWorkspacesWorkspaceProjectsResponse>;
     /**
-     * getWorkspacesWorkspaceProjectsProjectKey - Returns the requested project.
-    **/
-    getWorkspacesWorkspaceProjectsProjectKey(req: operations.GetWorkspacesWorkspaceProjectsProjectKeyRequest, config?: AxiosRequestConfig): Promise<operations.GetWorkspacesWorkspaceProjectsProjectKeyResponse>;
+     * Get a project for a workspace
+     *
+     * @remarks
+     * Returns the requested project.
+     */
+    getWorkspacesWorkspaceProjectsProjectKey(req: operations.GetWorkspacesWorkspaceProjectsProjectKeyRequest, security: operations.GetWorkspacesWorkspaceProjectsProjectKeySecurity, config?: AxiosRequestConfig): Promise<operations.GetWorkspacesWorkspaceProjectsProjectKeyResponse>;
     /**
-     * postWorkspacesWorkspaceHooks - Creates a new webhook on the specified workspace.
+     * Create a webhook for a workspace
+     *
+     * @remarks
+     * Creates a new webhook on the specified workspace.
      *
      * Workspace webhooks are fired for events from all repositories contained
      * by that workspace.
      *
-     * Note that only owners can install webhooks on workspaces.
-    **/
-    postWorkspacesWorkspaceHooks(req: operations.PostWorkspacesWorkspaceHooksRequest, config?: AxiosRequestConfig): Promise<operations.PostWorkspacesWorkspaceHooksResponse>;
+     * Example:
+     *
+     * ```
+     * $ curl -X POST -u credentials -H 'Content-Type: application/json'
+     *   https://api.bitbucket.org/2.0/workspaces/my-workspace/hooks
+     *   -d '
+     *     {
+     *       "description": "Webhook Description",
+     *       "url": "https://example.com/",
+     *       "active": true,
+     *       "events": [
+     *         "repo:push",
+     *         "issue:created",
+     *         "issue:updated"
+     *       ]
+     *     }'
+     * ```
+     *
+     * This call requires the webhook scope, as well as any scope
+     * that applies to the events that the webhook subscribes to. In the
+     * example above that means: `webhook`, `repository` and `issue`.
+     *
+     * The `url` must properly resolve and cannot be an internal, non-routed address.
+     *
+     * Only workspace owners can install webhooks on workspaces.
+     */
+    postWorkspacesWorkspaceHooks(req: operations.PostWorkspacesWorkspaceHooksRequest, security: operations.PostWorkspacesWorkspaceHooksSecurity, config?: AxiosRequestConfig): Promise<operations.PostWorkspacesWorkspaceHooksResponse>;
     /**
-     * putWorkspacesWorkspaceHooksUid - Updates the specified webhook subscription.
+     * Update a webhook for a workspace
+     *
+     * @remarks
+     * Updates the specified webhook subscription.
      *
      * The following properties can be mutated:
      *
@@ -391,6 +478,6 @@ export declare class Workspaces {
      * * `url`
      * * `active`
      * * `events`
-    **/
-    putWorkspacesWorkspaceHooksUid(req: operations.PutWorkspacesWorkspaceHooksUidRequest, config?: AxiosRequestConfig): Promise<operations.PutWorkspacesWorkspaceHooksUidResponse>;
+     */
+    putWorkspacesWorkspaceHooksUid(req: operations.PutWorkspacesWorkspaceHooksUidRequest, security: operations.PutWorkspacesWorkspaceHooksUidSecurity, config?: AxiosRequestConfig): Promise<operations.PutWorkspacesWorkspaceHooksUidResponse>;
 }

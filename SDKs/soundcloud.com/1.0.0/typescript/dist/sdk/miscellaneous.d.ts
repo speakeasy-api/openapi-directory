@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Miscellaneous Endpoints.
+ */
 export declare class Miscellaneous {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +12,7 @@ export declare class Miscellaneous {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getResolve - Resolves soundcloud.com URLs to Resource URLs to use with the API.
-    **/
-    getResolve(req: operations.GetResolveRequest, config?: AxiosRequestConfig): Promise<operations.GetResolveResponse>;
+     * Resolves soundcloud.com URLs to Resource URLs to use with the API.
+     */
+    getResolve(req: operations.GetResolveRequest, security: operations.GetResolveSecurity, config?: AxiosRequestConfig): Promise<operations.GetResolveResponse>;
 }

@@ -1,36 +1,59 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SetHtmlUsingPostQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class SetHTMLUsingPOSTRequest extends SpeakeasyBase {
     html?: string;
     padID?: string;
 }
-export declare class SetHtmlUsingPost200ApplicationJson extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class SetHTMLUsingPost500ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class SetHtmlUsingPost400ApplicationJson extends SpeakeasyBase {
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class SetHTMLUsingPost401ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class SetHtmlUsingPost401ApplicationJson extends SpeakeasyBase {
+/**
+ * generic api error (code 1)
+ */
+export declare class SetHTMLUsingPost400ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class SetHtmlUsingPost500ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class SetHTMLUsingPost200ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class SetHtmlUsingPostRequest extends SpeakeasyBase {
-    queryParams: SetHtmlUsingPostQueryParams;
-}
-export declare class SetHtmlUsingPostResponse extends SpeakeasyBase {
+export declare class SetHTMLUsingPOSTResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    setHTMLUsingPOST200ApplicationJSONObject?: SetHtmlUsingPost200ApplicationJson;
-    setHTMLUsingPOST400ApplicationJSONObject?: SetHtmlUsingPost400ApplicationJson;
-    setHTMLUsingPOST401ApplicationJSONObject?: SetHtmlUsingPost401ApplicationJson;
-    setHTMLUsingPOST500ApplicationJSONObject?: SetHtmlUsingPost500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    setHTMLUsingPOST200ApplicationJSONObject?: SetHTMLUsingPost200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    setHTMLUsingPOST400ApplicationJSONObject?: SetHTMLUsingPost400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    setHTMLUsingPOST401ApplicationJSONObject?: SetHTMLUsingPost401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    setHTMLUsingPOST500ApplicationJSONObject?: SetHTMLUsingPost500ApplicationJSON;
 }

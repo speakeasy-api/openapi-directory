@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostGetMetricWidgetImageActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTGetMetricWidgetImageActionEnum {
     GetMetricWidgetImage = "GetMetricWidgetImage"
 }
-export declare enum PostGetMetricWidgetImageVersionEnum {
+export declare enum POSTGetMetricWidgetImageVersionEnum {
     TwoThousandAndTen0801 = "2010-08-01"
 }
-export declare class PostGetMetricWidgetImageQueryParams extends SpeakeasyBase {
-    action: PostGetMetricWidgetImageActionEnum;
-    version: PostGetMetricWidgetImageVersionEnum;
-}
-export declare class PostGetMetricWidgetImageHeaders extends SpeakeasyBase {
+export declare class POSTGetMetricWidgetImageRequest extends SpeakeasyBase {
+    action: POSTGetMetricWidgetImageActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTGetMetricWidgetImageVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostGetMetricWidgetImageHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostGetMetricWidgetImageRequest extends SpeakeasyBase {
-    queryParams: PostGetMetricWidgetImageQueryParams;
-    headers: PostGetMetricWidgetImageHeaders;
-    request?: Uint8Array;
-}
-export declare class PostGetMetricWidgetImageResponse extends SpeakeasyBase {
+export declare class POSTGetMetricWidgetImageResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,15 +1,32 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetSitemapsSamplesSitemapsOnlyPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetSitemapsSamplesSitemapsOnlyRequest extends SpeakeasyBase {
+    /**
+     * Analysis' identifier
+     */
     analysisSlug: string;
+    /**
+     * Page Number
+     */
+    page?: number;
+    /**
+     * Project's identifier
+     */
     projectSlug: string;
+    /**
+     * Page Size
+     */
+    size?: number;
+    /**
+     * User's identifier
+     */
     username: string;
 }
-export declare class GetSitemapsSamplesSitemapsOnlyQueryParams extends SpeakeasyBase {
-    page?: number;
-    size?: number;
-}
-export declare class GetSitemapsSamplesSitemapsOnly200ApplicationJson extends SpeakeasyBase {
+/**
+ * Successful operation
+ */
+export declare class GetSitemapsSamplesSitemapsOnly200ApplicationJSON extends SpeakeasyBase {
     count?: number;
     next?: string;
     page?: number;
@@ -17,13 +34,16 @@ export declare class GetSitemapsSamplesSitemapsOnly200ApplicationJson extends Sp
     results?: string[];
     size?: number;
 }
-export declare class GetSitemapsSamplesSitemapsOnlyRequest extends SpeakeasyBase {
-    pathParams: GetSitemapsSamplesSitemapsOnlyPathParams;
-    queryParams: GetSitemapsSamplesSitemapsOnlyQueryParams;
-}
 export declare class GetSitemapsSamplesSitemapsOnlyResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * error payload
+     */
     defaultPayload?: shared.DefaultPayload;
     statusCode: number;
-    getSitemapsSamplesSitemapsOnly200ApplicationJSONObject?: GetSitemapsSamplesSitemapsOnly200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful operation
+     */
+    getSitemapsSamplesSitemapsOnly200ApplicationJSONObject?: GetSitemapsSamplesSitemapsOnly200ApplicationJSON;
 }

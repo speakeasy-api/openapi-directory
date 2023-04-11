@@ -1,14 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { AndroidPushNotificationTemplate } from "./androidpushnotificationtemplate";
-import { ApnsPushNotificationTemplate } from "./apnspushnotificationtemplate";
+import { APNSPushNotificationTemplate } from "./apnspushnotificationtemplate";
 import { DefaultPushNotificationTemplate } from "./defaultpushnotificationtemplate";
 import { TemplateTypeEnum } from "./templatetypeenum";
 /**
  * Provides information about the content and settings for a message template that can be used in messages that are sent through a push notification channel.
-**/
+ */
 export declare class PushNotificationTemplateResponse extends SpeakeasyBase {
     adm?: AndroidPushNotificationTemplate;
-    apns?: ApnsPushNotificationTemplate;
+    apns?: APNSPushNotificationTemplate;
     arn?: string;
     baidu?: AndroidPushNotificationTemplate;
     creationDate: string;

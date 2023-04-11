@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum IncreaseStreamRetentionPeriodXAmzTargetEnum {
     Kinesis20131202IncreaseStreamRetentionPeriod = "Kinesis_20131202.IncreaseStreamRetentionPeriod"
 }
-export declare class IncreaseStreamRetentionPeriodHeaders extends SpeakeasyBase {
+export declare class IncreaseStreamRetentionPeriodRequest extends SpeakeasyBase {
+    increaseStreamRetentionPeriodInput: shared.IncreaseStreamRetentionPeriodInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,28 @@ export declare class IncreaseStreamRetentionPeriodHeaders extends SpeakeasyBase 
     xAmzSignedHeaders?: string;
     xAmzTarget: IncreaseStreamRetentionPeriodXAmzTargetEnum;
 }
-export declare class IncreaseStreamRetentionPeriodRequest extends SpeakeasyBase {
-    headers: IncreaseStreamRetentionPeriodHeaders;
-    request: shared.IncreaseStreamRetentionPeriodInput;
-}
 export declare class IncreaseStreamRetentionPeriodResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
+    accessDeniedException?: any;
     contentType: string;
+    /**
+     * InvalidArgumentException
+     */
     invalidArgumentException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * ResourceInUseException
+     */
     resourceInUseException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

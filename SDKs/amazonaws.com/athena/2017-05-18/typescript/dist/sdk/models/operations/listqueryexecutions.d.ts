@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListQueryExecutionsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListQueryExecutionsXAmzTargetEnum {
     AmazonAthenaListQueryExecutions = "AmazonAthena.ListQueryExecutions"
 }
-export declare class ListQueryExecutionsHeaders extends SpeakeasyBase {
+export declare class ListQueryExecutionsRequest extends SpeakeasyBase {
+    listQueryExecutionsInput: shared.ListQueryExecutionsInput;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,15 +23,20 @@ export declare class ListQueryExecutionsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListQueryExecutionsXAmzTargetEnum;
 }
-export declare class ListQueryExecutionsRequest extends SpeakeasyBase {
-    queryParams: ListQueryExecutionsQueryParams;
-    headers: ListQueryExecutionsHeaders;
-    request: shared.ListQueryExecutionsInput;
-}
 export declare class ListQueryExecutionsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * Success
+     */
     listQueryExecutionsOutput?: shared.ListQueryExecutionsOutput;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

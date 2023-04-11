@@ -5,6 +5,9 @@ export declare class Vrf extends SpeakeasyBase {
     customFields?: Record<string, any>;
     description?: string;
     displayName?: string;
+    /**
+     * Prevent duplicate prefixes/IP addresses within this VRF
+     */
     enforceUnique?: boolean;
     id?: number;
     lastUpdated?: Date;

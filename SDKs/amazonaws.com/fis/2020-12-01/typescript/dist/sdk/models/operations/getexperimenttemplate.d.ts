@@ -1,9 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetExperimentTemplatePathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class GetExperimentTemplateHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetExperimentTemplateRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,15 +9,25 @@ export declare class GetExperimentTemplateHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class GetExperimentTemplateRequest extends SpeakeasyBase {
-    pathParams: GetExperimentTemplatePathParams;
-    headers: GetExperimentTemplateHeaders;
+    /**
+     * The ID of the experiment template.
+     */
+    id: string;
 }
 export declare class GetExperimentTemplateResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getExperimentTemplateResponse?: shared.GetExperimentTemplateResponse;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

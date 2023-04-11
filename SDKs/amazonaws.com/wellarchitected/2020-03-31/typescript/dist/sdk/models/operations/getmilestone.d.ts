@@ -1,10 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetMilestonePathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetMilestoneRequest extends SpeakeasyBase {
     milestoneNumber: number;
     workloadId: string;
-}
-export declare class GetMilestoneHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +12,32 @@ export declare class GetMilestoneHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetMilestoneRequest extends SpeakeasyBase {
-    pathParams: GetMilestonePathParams;
-    headers: GetMilestoneHeaders;
-}
 export declare class GetMilestoneResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getMilestoneOutput?: shared.GetMilestoneOutput;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

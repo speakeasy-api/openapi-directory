@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostPutInsightRuleActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTPutInsightRuleActionEnum {
     PutInsightRule = "PutInsightRule"
 }
-export declare enum PostPutInsightRuleVersionEnum {
+export declare enum POSTPutInsightRuleVersionEnum {
     TwoThousandAndTen0801 = "2010-08-01"
 }
-export declare class PostPutInsightRuleQueryParams extends SpeakeasyBase {
-    action: PostPutInsightRuleActionEnum;
-    version: PostPutInsightRuleVersionEnum;
-}
-export declare class PostPutInsightRuleHeaders extends SpeakeasyBase {
+export declare class POSTPutInsightRuleRequest extends SpeakeasyBase {
+    action: POSTPutInsightRuleActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTPutInsightRuleVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostPutInsightRuleHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostPutInsightRuleRequest extends SpeakeasyBase {
-    queryParams: PostPutInsightRuleQueryParams;
-    headers: PostPutInsightRuleHeaders;
-    request?: Uint8Array;
-}
-export declare class PostPutInsightRuleResponse extends SpeakeasyBase {
+export declare class POSTPutInsightRuleResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

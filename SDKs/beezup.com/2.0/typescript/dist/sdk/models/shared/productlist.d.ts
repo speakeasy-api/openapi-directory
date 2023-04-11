@@ -1,6 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { BeezUpCommonPaginationResult } from "./beezupcommonpaginationresult";
+import { BeezUPCommonPaginationResult } from "./beezupcommonpaginationresult";
+import { Product } from "./product";
+/**
+ * Product list
+ */
 export declare class ProductList extends SpeakeasyBase {
-    paginationResult: BeezUpCommonPaginationResult;
-    products: any[];
+    paginationResult: BeezUPCommonPaginationResult;
+    products: Product[];
 }

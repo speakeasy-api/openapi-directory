@@ -1,8 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { OpenIdConnectProviderListEntry } from "./openidconnectproviderlistentry";
+import { OpenIDConnectProviderListEntry } from "./openidconnectproviderlistentry";
 /**
  * Contains the response to a successful <a>ListOpenIDConnectProviders</a> request.
-**/
-export declare class ListOpenIdConnectProvidersResponse extends SpeakeasyBase {
-    openIDConnectProviderList?: OpenIdConnectProviderListEntry[];
+ */
+export declare class ListOpenIDConnectProvidersResponse extends SpeakeasyBase {
+    openIDConnectProviderList?: OpenIDConnectProviderListEntry[];
 }

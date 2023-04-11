@@ -1,8 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class Group extends SpeakeasyBase {
-    associationCriteria?: string;
-    id?: number;
-    name?: string;
-    parentId?: number;
-    resourceId?: string;
+    /**
+     * HR code associated with group, if code exists
+     */
+    associationCriteria: string;
+    /**
+     * Group id
+     */
+    id: number;
+    /**
+     * Group name
+     */
+    name: string;
+    /**
+     * Parent group if any
+     */
+    parentId: number;
+    /**
+     * Group resource id
+     */
+    resourceId: string;
 }

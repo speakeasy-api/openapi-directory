@@ -1,10 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class BatchReadRequestBody extends SpeakeasyBase {
+    /**
+     * A list of operations that are part of the batch.
+     */
+    operations: shared.BatchReadOperation[];
+}
+/**
+ * Represents the manner and timing in which the successful write or update of an object is reflected in a subsequent read operation of that same object.
+ */
 export declare enum BatchReadXAmzConsistencyLevelEnum {
     Serializable = "SERIALIZABLE",
     Eventual = "EVENTUAL"
 }
-export declare class BatchReadHeaders extends SpeakeasyBase {
+export declare class BatchReadRequest extends SpeakeasyBase {
+    requestBody: BatchReadRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,25 +23,49 @@ export declare class BatchReadHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
+    /**
+     * Represents the manner and timing in which the successful write or update of an object is reflected in a subsequent read operation of that same object.
+     */
     xAmzConsistencyLevel?: BatchReadXAmzConsistencyLevelEnum;
+    /**
+     * The Amazon Resource Name (ARN) that is associated with the <a>Directory</a>. For more information, see <a>arns</a>.
+     */
     xAmzDataPartition: string;
 }
-export declare class BatchReadRequestBody extends SpeakeasyBase {
-    operations: shared.BatchReadOperation[];
-}
-export declare class BatchReadRequest extends SpeakeasyBase {
-    headers: BatchReadHeaders;
-    request: BatchReadRequestBody;
-}
 export declare class BatchReadResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: shared.AccessDeniedException;
+    /**
+     * Success
+     */
     batchReadResponse?: shared.BatchReadResponse;
     contentType: string;
+    /**
+     * DirectoryNotEnabledException
+     */
     directoryNotEnabledException?: shared.DirectoryNotEnabledException;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: shared.InternalServiceException;
+    /**
+     * InvalidArnException
+     */
     invalidArnException?: shared.InvalidArnException;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: shared.LimitExceededException;
-    retryableConflictException?: shared.RetryableConflictException;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * RetryableConflictException
+     */
+    retryableConflictException?: shared.RetryableConflictException;
+    /**
+     * ValidationException
+     */
     validationException?: shared.ValidationException;
 }

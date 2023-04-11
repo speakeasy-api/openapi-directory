@@ -1,10 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum GetGanalyticsOrphanUrLsMediumEnum {
+import { AxiosResponse } from "axios";
+/**
+ * Type of traffic, value: 'organic' (from search engine)or 'social' (from a social network)
+ */
+export declare enum GetGanalyticsOrphanURLsMediumEnum {
     Organic = "organic",
     Social = "social"
 }
-export declare enum GetGanalyticsOrphanUrLsSourceEnum {
+/**
+ * Traffic source, value: name of the search engine or social network
+ */
+export declare enum GetGanalyticsOrphanURLsSourceEnum {
     All = "all",
     Aol = "aol",
     Ask = "ask",
@@ -22,32 +29,57 @@ export declare enum GetGanalyticsOrphanUrLsSourceEnum {
     Yahoo = "yahoo",
     Yandex = "yandex"
 }
-export declare class GetGanalyticsOrphanUrLsPathParams extends SpeakeasyBase {
+export declare class GetGanalyticsOrphanURLsRequest extends SpeakeasyBase {
+    /**
+     * Analysis' identifier
+     */
     analysisSlug: string;
-    medium: GetGanalyticsOrphanUrLsMediumEnum;
+    /**
+     * Type of traffic, value: 'organic' (from search engine)or 'social' (from a social network)
+     */
+    medium: GetGanalyticsOrphanURLsMediumEnum;
+    /**
+     * Page Number
+     */
+    page?: number;
+    /**
+     * Project's identifier
+     */
     projectSlug: string;
-    source: GetGanalyticsOrphanUrLsSourceEnum;
+    /**
+     * Page Size
+     */
+    size?: number;
+    /**
+     * Traffic source, value: name of the search engine or social network
+     */
+    source: GetGanalyticsOrphanURLsSourceEnum;
+    /**
+     * User's identifier
+     */
     username: string;
 }
-export declare class GetGanalyticsOrphanUrLsQueryParams extends SpeakeasyBase {
-    page?: number;
-    size?: number;
-}
-export declare class GetGanalyticsOrphanUrLs200ApplicationJson extends SpeakeasyBase {
+/**
+ * Successful operation
+ */
+export declare class GetGanalyticsOrphanURLs200ApplicationJSON extends SpeakeasyBase {
     count?: number;
     next?: string;
     page?: number;
     previous?: string;
-    results?: shared.CrawlOrphanUrLs[];
+    results?: shared.CrawlOrphanURLs[];
     size?: number;
 }
-export declare class GetGanalyticsOrphanUrLsRequest extends SpeakeasyBase {
-    pathParams: GetGanalyticsOrphanUrLsPathParams;
-    queryParams: GetGanalyticsOrphanUrLsQueryParams;
-}
-export declare class GetGanalyticsOrphanUrLsResponse extends SpeakeasyBase {
+export declare class GetGanalyticsOrphanURLsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * error payload
+     */
     defaultPayload?: shared.DefaultPayload;
     statusCode: number;
-    getGanalyticsOrphanURLs200ApplicationJSONObject?: GetGanalyticsOrphanUrLs200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful operation
+     */
+    getGanalyticsOrphanURLs200ApplicationJSONObject?: GetGanalyticsOrphanURLs200ApplicationJSON;
 }

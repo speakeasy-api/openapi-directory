@@ -1,5 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbCluster } from "./dbcluster";
-export declare class CreateDbClusterResult extends SpeakeasyBase {
-    dbCluster?: DbCluster;
+import { DBCluster } from "./dbcluster";
+/**
+ * Success
+ */
+export declare class CreateDBClusterResult extends SpeakeasyBase {
+    /**
+     * Detailed information about a cluster.
+     */
+    dbCluster?: DBCluster;
 }

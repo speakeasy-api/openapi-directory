@@ -1,16 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetNumbersNumeralEgyptianQueryParams extends SpeakeasyBase {
-    number?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetNumbersNumeralEgyptianSecurity extends SpeakeasyBase {
-    xMathtoolsApiSecret: shared.SchemeXMathtoolsApiSecret;
+    xMathtoolsApiSecret: string;
 }
 export declare class GetNumbersNumeralEgyptianRequest extends SpeakeasyBase {
-    queryParams: GetNumbersNumeralEgyptianQueryParams;
-    security: GetNumbersNumeralEgyptianSecurity;
+    /**
+     * Number to convert
+     */
+    number?: number;
 }
 export declare class GetNumbersNumeralEgyptianResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

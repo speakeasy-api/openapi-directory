@@ -3,9 +3,12 @@ import { MinimalRepository } from "./minimalrepository";
 import { SimpleCommitStatus } from "./simplecommitstatus";
 /**
  * Combined Commit Status
-**/
+ */
 export declare class CombinedCommitStatus extends SpeakeasyBase {
     commitUrl: string;
+    /**
+     * Minimal Repository
+     */
     repository: MinimalRepository;
     sha: string;
     state: string;

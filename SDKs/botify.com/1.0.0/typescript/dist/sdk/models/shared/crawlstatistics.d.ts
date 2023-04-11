@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Successful operation
+ */
 export declare class CrawlStatistics extends SpeakeasyBase {
     depthCurrent: number;
     lastUpdDt: Date;

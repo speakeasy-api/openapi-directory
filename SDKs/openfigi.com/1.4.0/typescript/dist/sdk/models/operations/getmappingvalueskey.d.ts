@@ -1,4 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
+/**
+ * Key of MappingJob for which to get possible values.
+ */
 export declare enum GetMappingValuesKeyKeyEnum {
     IdType = "idType",
     ExchCode = "exchCode",
@@ -8,19 +12,32 @@ export declare enum GetMappingValuesKeyKeyEnum {
     SecurityType = "securityType",
     SecurityType2 = "securityType2"
 }
-export declare class GetMappingValuesKeyPathParams extends SpeakeasyBase {
+export declare class GetMappingValuesKeyRequest extends SpeakeasyBase {
+    /**
+     * Key of MappingJob for which to get possible values.
+     */
     key: GetMappingValuesKeyKeyEnum;
 }
-export declare class GetMappingValuesKey200ApplicationJson extends SpeakeasyBase {
+/**
+ * The list of values.
+ */
+export declare class GetMappingValuesKey200ApplicationJSON extends SpeakeasyBase {
     values?: string[];
-}
-export declare class GetMappingValuesKeyRequest extends SpeakeasyBase {
-    pathParams: GetMappingValuesKeyPathParams;
 }
 export declare class GetMappingValuesKeyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getMappingValuesKey200ApplicationJSONObject?: GetMappingValuesKey200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * The list of values.
+     */
+    getMappingValuesKey200ApplicationJSONObject?: GetMappingValuesKey200ApplicationJSON;
+    /**
+     * Invalid request (key).
+     */
     getMappingValuesKey400WildcardString?: string;
+    /**
+     * Internal server error.
+     */
     getMappingValuesKey500WildcardString?: string;
 }

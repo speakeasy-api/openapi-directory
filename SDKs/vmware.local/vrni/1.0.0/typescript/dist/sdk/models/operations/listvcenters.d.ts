@@ -1,13 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListVcentersSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
-}
-export declare class ListVcentersRequest extends SpeakeasyBase {
-    security: ListVcentersSecurity;
-}
+import { AxiosResponse } from "axios";
 export declare class ListVcentersResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * OK
+     */
     dataSourceListResponse?: shared.DataSourceListResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

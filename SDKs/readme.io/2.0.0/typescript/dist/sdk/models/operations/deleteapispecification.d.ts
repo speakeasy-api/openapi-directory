@@ -1,16 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class DeleteApiSpecificationPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteAPISpecificationSecurity extends SpeakeasyBase {
+    password: string;
+    username: string;
+}
+export declare class DeleteAPISpecificationRequest extends SpeakeasyBase {
+    /**
+     * ID of the API specification. The unique ID for each API can be found by navigating to your **API Definitions** page.
+     */
     id: string;
 }
-export declare class DeleteApiSpecificationSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
-}
-export declare class DeleteApiSpecificationRequest extends SpeakeasyBase {
-    pathParams: DeleteApiSpecificationPathParams;
-    security: DeleteApiSpecificationSecurity;
-}
-export declare class DeleteApiSpecificationResponse extends SpeakeasyBase {
+export declare class DeleteAPISpecificationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

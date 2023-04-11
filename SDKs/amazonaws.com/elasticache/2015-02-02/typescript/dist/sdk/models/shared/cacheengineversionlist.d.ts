@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Provides all of the details about a particular cache engine version.
-**/
+ */
 export declare class CacheEngineVersionList extends SpeakeasyBase {
     cacheEngineDescription?: string;
     cacheEngineVersionDescription?: string;

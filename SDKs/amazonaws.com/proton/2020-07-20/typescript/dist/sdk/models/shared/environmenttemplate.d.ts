@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { ProvisioningEnum } from "./provisioningenum";
 /**
  * The environment template data.
-**/
+ */
 export declare class EnvironmentTemplate extends SpeakeasyBase {
     arn: string;
     createdAt: Date;

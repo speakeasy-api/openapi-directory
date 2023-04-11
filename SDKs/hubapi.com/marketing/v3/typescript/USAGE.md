@@ -1,46 +1,47 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreateRequest, PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreateRequest,
+  PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreateResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreateRequest = {
-  security: {
-    privateAppsLegacy: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  },
-  pathParams: {
-    externalEventId: "sit",
-    subscriberState: "voluptas",
-  },
-  queryParams: {
-    externalAccountId: "culpa",
-  },
-  request: {
+  batchInputMarketingEventSubscriber: {
     inputs: [
       {
-        interactionDateTime: 3390393562759376202,
+        interactionDateTime: 592845,
         properties: {
-          "expedita": "voluptas",
-          "fugit": "et",
+          "quibusdam": "unde",
+          "nulla": "corrupti",
+          "illum": "vel",
         },
-        vid: 2661732831099943416,
+        vid: 623564,
       },
       {
-        interactionDateTime: 8325060299420976708,
+        interactionDateTime: 645894,
         properties: {
-          "debitis": "voluptatum",
-          "et": "ut",
-          "dolorem": "et",
+          "iure": "magnam",
+          "debitis": "ipsa",
         },
-        vid: 7373105480197164748,
+        vid: 963663,
+      },
+      {
+        interactionDateTime: 272656,
+        properties: {
+          "molestiae": "minus",
+          "placeat": "voluptatum",
+        },
+        vid: 479977,
       },
     ],
   },
+  externalAccountId: "excepturi",
+  externalEventId: "nisi",
+  subscriberState: "recusandae",
 };
 
 sdk.attendanceSubscriberStateChanges.postMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreate(req).then((res: PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreateResponse | AxiosError) => {

@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeHostReservationsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeHostReservationsActionEnum {
     DescribeHostReservations = "DescribeHostReservations"
 }
-export declare enum PostDescribeHostReservationsVersionEnum {
+export declare enum POSTDescribeHostReservationsVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDescribeHostReservationsQueryParams extends SpeakeasyBase {
-    action: PostDescribeHostReservationsActionEnum;
+export declare class POSTDescribeHostReservationsRequest extends SpeakeasyBase {
+    action: POSTDescribeHostReservationsActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostDescribeHostReservationsVersionEnum;
-}
-export declare class PostDescribeHostReservationsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeHostReservationsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeHostReservationsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeHostReservationsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeHostReservationsQueryParams;
-    headers: PostDescribeHostReservationsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeHostReservationsResponse extends SpeakeasyBase {
+export declare class POSTDescribeHostReservationsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { Hit } from "./hit";
-export declare class GetHitResponse extends SpeakeasyBase {
+/**
+ * Success
+ */
+export declare class GetHITResponse extends SpeakeasyBase {
     hit?: Hit;
 }

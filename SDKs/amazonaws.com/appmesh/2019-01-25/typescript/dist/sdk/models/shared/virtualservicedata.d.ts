@@ -4,9 +4,12 @@ import { VirtualServiceSpec } from "./virtualservicespec";
 import { VirtualServiceStatus } from "./virtualservicestatus";
 /**
  * An object that represents a virtual service returned by a describe operation.
-**/
+ */
 export declare class VirtualServiceData extends SpeakeasyBase {
     meshName: string;
+    /**
+     * An object that represents metadata for a resource.
+     */
     metadata: ResourceMetadata;
     spec: VirtualServiceSpec;
     status: VirtualServiceStatus;

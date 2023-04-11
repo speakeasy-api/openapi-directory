@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDisableAvailabilityZonesForLoadBalancerActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDisableAvailabilityZonesForLoadBalancerActionEnum {
     DisableAvailabilityZonesForLoadBalancer = "DisableAvailabilityZonesForLoadBalancer"
 }
-export declare enum PostDisableAvailabilityZonesForLoadBalancerVersionEnum {
+export declare enum POSTDisableAvailabilityZonesForLoadBalancerVersionEnum {
     TwoThousandAndTwelve0601 = "2012-06-01"
 }
-export declare class PostDisableAvailabilityZonesForLoadBalancerQueryParams extends SpeakeasyBase {
-    action: PostDisableAvailabilityZonesForLoadBalancerActionEnum;
-    version: PostDisableAvailabilityZonesForLoadBalancerVersionEnum;
-}
-export declare class PostDisableAvailabilityZonesForLoadBalancerHeaders extends SpeakeasyBase {
+export declare class POSTDisableAvailabilityZonesForLoadBalancerRequest extends SpeakeasyBase {
+    action: POSTDisableAvailabilityZonesForLoadBalancerActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDisableAvailabilityZonesForLoadBalancerVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDisableAvailabilityZonesForLoadBalancerHeaders extends 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDisableAvailabilityZonesForLoadBalancerRequest extends SpeakeasyBase {
-    queryParams: PostDisableAvailabilityZonesForLoadBalancerQueryParams;
-    headers: PostDisableAvailabilityZonesForLoadBalancerHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDisableAvailabilityZonesForLoadBalancerResponse extends SpeakeasyBase {
+export declare class POSTDisableAvailabilityZonesForLoadBalancerResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

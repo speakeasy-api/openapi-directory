@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteSecretXAmzTargetEnum {
     SecretsmanagerDeleteSecret = "secretsmanager.DeleteSecret"
 }
-export declare class DeleteSecretHeaders extends SpeakeasyBase {
+export declare class DeleteSecretRequest extends SpeakeasyBase {
+    deleteSecretRequest: shared.DeleteSecretRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class DeleteSecretHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteSecretXAmzTargetEnum;
 }
-export declare class DeleteSecretRequest extends SpeakeasyBase {
-    headers: DeleteSecretHeaders;
-    request: shared.DeleteSecretRequest;
-}
 export declare class DeleteSecretResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deleteSecretResponse?: shared.DeleteSecretResponse;
+    /**
+     * InternalServiceError
+     */
     internalServiceError?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

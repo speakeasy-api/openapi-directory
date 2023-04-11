@@ -1,3 +1,6 @@
+/**
+ * Filter documents by PaymentMethod value.
+ */
 export declare enum PaymentMethodEnum {
     Aruhitel = "aruhitel",
     Bankcard = "bankcard",

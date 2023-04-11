@@ -1,117 +1,178 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class OscerSecurity extends SpeakeasyBase {
+    apiKey: string;
+    clientId: string;
+}
 export declare class OscerRequestBodyCertificateParameters extends SpeakeasyBase {
+    /**
+     * Application Number
+     */
     aplno: string;
+    /**
+     * Certificate Number
+     */
     certno: string;
+    /**
+     * Security Code
+     */
     sccd: string;
 }
+/**
+ * The format of the certificate in response.
+ */
 export declare enum OscerRequestBodyFormatEnum {
     Pdf = "pdf"
 }
+/**
+ * Request format
+ */
 export declare class OscerRequestBody extends SpeakeasyBase {
     certificateParameters?: OscerRequestBodyCertificateParameters;
-    consentArtifact?: any;
+    consentArtifact?: shared.ConsentArtifactSchema;
+    /**
+     * The format of the certificate in response.
+     */
     format: OscerRequestBodyFormatEnum;
+    /**
+     * A unique transaction id for this request in UUID format. It is used for tracking the request.
+     */
     txnId: string;
 }
-export declare class OscerSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
-    clientId: shared.SchemeClientId;
+export declare enum Oscer504ApplicationJSONErrorEnum {
+    GatewayTimeout = "gateway_timeout"
 }
-export declare enum Oscer400ApplicationJsonErrorEnum {
+export declare enum Oscer504ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
+}
+/**
+ * Gateway timeout
+ */
+export declare class Oscer504ApplicationJSON extends SpeakeasyBase {
+    error?: Oscer504ApplicationJSONErrorEnum;
+    errorDescription?: Oscer504ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Oscer503ApplicationJSONErrorEnum {
+    ServiceUnavailable = "service_unavailable"
+}
+export declare enum Oscer503ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
+}
+/**
+ * Service unavailable
+ */
+export declare class Oscer503ApplicationJSON extends SpeakeasyBase {
+    error?: Oscer503ApplicationJSONErrorEnum;
+    errorDescription?: Oscer503ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Oscer502ApplicationJSONErrorEnum {
+    BadGatewy = "bad_gatewy"
+}
+export declare enum Oscer502ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
+}
+/**
+ * Bad gateway
+ */
+export declare class Oscer502ApplicationJSON extends SpeakeasyBase {
+    error?: Oscer502ApplicationJSONErrorEnum;
+    errorDescription?: Oscer502ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Oscer500ApplicationJSONErrorEnum {
+    InternalServerError = "internal_server_error"
+}
+export declare enum Oscer500ApplicationJSONErrorDescriptionEnum {
+    InternalServerError = "Internal server error"
+}
+/**
+ * Internal server error
+ */
+export declare class Oscer500ApplicationJSON extends SpeakeasyBase {
+    error?: Oscer500ApplicationJSONErrorEnum;
+    errorDescription?: Oscer500ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Oscer404ApplicationJSONErrorEnum {
+    RecordNotFound = "record_not_found",
+    UrlNotFound = "url_not_found"
+}
+export declare enum Oscer404ApplicationJSONErrorDescriptionEnum {
+    NoRecordFound = "No record found",
+    YourAPIUrlOrPathIsIncorrect = "Your API url or path is incorrect"
+}
+/**
+ * No record found
+ */
+export declare class Oscer404ApplicationJSON extends SpeakeasyBase {
+    error?: Oscer404ApplicationJSONErrorEnum;
+    errorDescription?: Oscer404ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Oscer401ApplicationJSONErrorEnum {
+    InvalidAuthentication = "invalid_authentication",
+    InvalidAuthorization = "invalid_authorization"
+}
+export declare enum Oscer401ApplicationJSONErrorDescriptionEnum {
+    AuthenticationFailed = "Authentication failed",
+    YouAreNotAuthorizedToUseThisAPI = "You are not authorized to use this API"
+}
+/**
+ * Unauthorized access
+ */
+export declare class Oscer401ApplicationJSON extends SpeakeasyBase {
+    error?: Oscer401ApplicationJSONErrorEnum;
+    errorDescription?: Oscer401ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Oscer400ApplicationJSONErrorEnum {
     MissingParameter = "missing_parameter",
     InvalidParameter = "invalid_parameter",
     InvalidFormat = "invalid_format",
     InvalidTxnid = "invalid_txnid",
     InvalidConsentid = "invalid_consentid"
 }
-export declare enum Oscer400ApplicationJsonErrorDescriptionEnum {
+export declare enum Oscer400ApplicationJSONErrorDescriptionEnum {
     PleaseProvideAllMandatoryParameters = "Please provide all mandatory parameters",
     BadRequest = "Bad request",
     TheFormatParameterIsInvalid = "The format parameter is invalid",
-    TheTxnIdParameterMustBeInUuidFormat = "The txnId parameter must be in UUID format",
-    TheConsentIdParameterMustBeInUuidFormat = "The consentId parameter must be in UUID format"
+    TheTxnIdParameterMustBeInUUIDFormat = "The txnId parameter must be in UUID format",
+    TheConsentIdParameterMustBeInUUIDFormat = "The consentId parameter must be in UUID format"
 }
-export declare class Oscer400ApplicationJson extends SpeakeasyBase {
-    error?: Oscer400ApplicationJsonErrorEnum;
-    errorDescription?: Oscer400ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Oscer401ApplicationJsonErrorEnum {
-    InvalidAuthentication = "invalid_authentication",
-    InvalidAuthorization = "invalid_authorization"
-}
-export declare enum Oscer401ApplicationJsonErrorDescriptionEnum {
-    AuthenticationFailed = "Authentication failed",
-    YouAreNotAuthorizedToUseThisApi = "You are not authorized to use this API"
-}
-export declare class Oscer401ApplicationJson extends SpeakeasyBase {
-    error?: Oscer401ApplicationJsonErrorEnum;
-    errorDescription?: Oscer401ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Oscer404ApplicationJsonErrorEnum {
-    RecordNotFound = "record_not_found",
-    UrlNotFound = "url_not_found"
-}
-export declare enum Oscer404ApplicationJsonErrorDescriptionEnum {
-    NoRecordFound = "No record found",
-    YourApiUrlOrPathIsIncorrect = "Your API url or path is incorrect"
-}
-export declare class Oscer404ApplicationJson extends SpeakeasyBase {
-    error?: Oscer404ApplicationJsonErrorEnum;
-    errorDescription?: Oscer404ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Oscer500ApplicationJsonErrorEnum {
-    InternalServerError = "internal_server_error"
-}
-export declare enum Oscer500ApplicationJsonErrorDescriptionEnum {
-    InternalServerError = "Internal server error"
-}
-export declare class Oscer500ApplicationJson extends SpeakeasyBase {
-    error?: Oscer500ApplicationJsonErrorEnum;
-    errorDescription?: Oscer500ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Oscer502ApplicationJsonErrorEnum {
-    BadGatewy = "bad_gatewy"
-}
-export declare enum Oscer502ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
-}
-export declare class Oscer502ApplicationJson extends SpeakeasyBase {
-    error?: Oscer502ApplicationJsonErrorEnum;
-    errorDescription?: Oscer502ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Oscer503ApplicationJsonErrorEnum {
-    ServiceUnavailable = "service_unavailable"
-}
-export declare enum Oscer503ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
-}
-export declare class Oscer503ApplicationJson extends SpeakeasyBase {
-    error?: Oscer503ApplicationJsonErrorEnum;
-    errorDescription?: Oscer503ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Oscer504ApplicationJsonErrorEnum {
-    GatewayTimeout = "gateway_timeout"
-}
-export declare enum Oscer504ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
-}
-export declare class Oscer504ApplicationJson extends SpeakeasyBase {
-    error?: Oscer504ApplicationJsonErrorEnum;
-    errorDescription?: Oscer504ApplicationJsonErrorDescriptionEnum;
-}
-export declare class OscerRequest extends SpeakeasyBase {
-    request?: OscerRequestBody;
-    security: OscerSecurity;
+/**
+ * Bad request
+ */
+export declare class Oscer400ApplicationJSON extends SpeakeasyBase {
+    error?: Oscer400ApplicationJSONErrorEnum;
+    errorDescription?: Oscer400ApplicationJSONErrorDescriptionEnum;
 }
 export declare class OscerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    oscer400ApplicationJSONObject?: Oscer400ApplicationJson;
-    oscer401ApplicationJSONObject?: Oscer401ApplicationJson;
-    oscer404ApplicationJSONObject?: Oscer404ApplicationJson;
-    oscer500ApplicationJSONObject?: Oscer500ApplicationJson;
-    oscer502ApplicationJSONObject?: Oscer502ApplicationJson;
-    oscer503ApplicationJSONObject?: Oscer503ApplicationJson;
-    oscer504ApplicationJSONObject?: Oscer504ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad request
+     */
+    oscer400ApplicationJSONObject?: Oscer400ApplicationJSON;
+    /**
+     * Unauthorized access
+     */
+    oscer401ApplicationJSONObject?: Oscer401ApplicationJSON;
+    /**
+     * No record found
+     */
+    oscer404ApplicationJSONObject?: Oscer404ApplicationJSON;
+    /**
+     * Internal server error
+     */
+    oscer500ApplicationJSONObject?: Oscer500ApplicationJSON;
+    /**
+     * Bad gateway
+     */
+    oscer502ApplicationJSONObject?: Oscer502ApplicationJSON;
+    /**
+     * Service unavailable
+     */
+    oscer503ApplicationJSONObject?: Oscer503ApplicationJSON;
+    /**
+     * Gateway timeout
+     */
+    oscer504ApplicationJSONObject?: Oscer504ApplicationJSON;
 }

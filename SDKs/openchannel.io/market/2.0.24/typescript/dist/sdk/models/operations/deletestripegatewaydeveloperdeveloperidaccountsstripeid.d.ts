@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdPathParams extends SpeakeasyBase {
-    developerId: string;
-    stripeId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdRequest extends SpeakeasyBase {
-    pathParams: DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdPathParams;
+    /**
+     * The id of the developer disconnecting their Stripe account
+     */
+    developerId: string;
+    /**
+     * The id of the stripe account to disconnect
+     */
+    stripeId: string;
 }
 export declare class DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

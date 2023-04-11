@@ -1,11 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteOperationRequest extends SpeakeasyBase {
-    request: shared.OperationIdRequestBody;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteOperationResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Input failed validation
+     */
     invalidInputExceptionInfo?: shared.InvalidInputExceptionInfo;
+    /**
+     * Object with given id was not found.
+     */
     notFoundKnownExceptionInfo?: shared.NotFoundKnownExceptionInfo;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

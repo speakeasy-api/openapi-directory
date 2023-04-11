@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CreateAdditionalAssignmentsForHitRequest extends SpeakeasyBase {
+export declare class CreateAdditionalAssignmentsForHITRequest extends SpeakeasyBase {
     hitId: string;
     numberOfAdditionalAssignments: number;
     uniqueRequestToken?: string;

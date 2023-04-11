@@ -7,7 +7,7 @@ import { Policies } from "./policies";
 import { SourceSecurityGroup } from "./sourcesecuritygroup";
 /**
  * Information about a load balancer.
-**/
+ */
 export declare class LoadBalancerDescription extends SpeakeasyBase {
     availabilityZones?: string[];
     backendServerDescriptions?: BackendServerDescription[];

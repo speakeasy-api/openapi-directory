@@ -1,19 +1,19 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { RetrieveNeoFeedTodayRequest, RetrieveNeoFeedTodayResponse } from "openapi/src/sdk/models/operations";
+import {
+  RetrieveNEOFeedTodayRequest,
+  RetrieveNEOFeedTodayResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: RetrieveNeoFeedTodayRequest = {
-  queryParams: {
-    detailed: false,
-  },
+
+const req: RetrieveNEOFeedTodayRequest = {
+  detailed: false,
 };
 
-sdk.feed.retrieveNeoFeedToday(req).then((res: RetrieveNeoFeedTodayResponse | AxiosError) => {
+sdk.feed.retrieveNEOFeedToday(req).then((res: RetrieveNEOFeedTodayResponse | AxiosError) => {
    // handle response
 });
 ```

@@ -1,20 +1,34 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetListingCarAuctionIdPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class GetListingCarAuctionIdQueryParams extends SpeakeasyBase {
-    apiKey?: string;
-    appendApiKey?: boolean;
-    includeRelevantLinks?: boolean;
-}
+import { AxiosResponse } from "axios";
 export declare class GetListingCarAuctionIdRequest extends SpeakeasyBase {
-    pathParams: GetListingCarAuctionIdPathParams;
-    queryParams: GetListingCarAuctionIdQueryParams;
+    /**
+     * The API Authentication Key. Mandatory with all API calls.
+     */
+    apiKey?: string;
+    /**
+     * Flag on whether to include api_key in response API urls (if any)
+     */
+    appendApiKey?: boolean;
+    /**
+     * Listing id to get all the listing attributes
+     */
+    id: string;
+    /**
+     * To include_relevant_links. Default is true
+     */
+    includeRelevantLinks?: boolean;
 }
 export declare class GetListingCarAuctionIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Error
+     */
     error?: shared.ErrorT;
+    /**
+     * Listing for the given id
+     */
     listing?: shared.Listing;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetFunctionPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetFunctionRequest extends SpeakeasyBase {
+    /**
+     * The Lambda function name.
+     */
     functionName: string;
-}
-export declare class GetFunctionHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,14 +14,20 @@ export declare class GetFunctionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetFunctionRequest extends SpeakeasyBase {
-    pathParams: GetFunctionPathParams;
-    headers: GetFunctionHeaders;
-}
 export declare class GetFunctionResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getFunctionResponse?: shared.GetFunctionResponse;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: shared.ResourceNotFoundException;
-    serviceException?: shared.ServiceException;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceException
+     */
+    serviceException?: shared.ServiceException;
 }

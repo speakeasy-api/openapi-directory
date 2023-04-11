@@ -1,21 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class TaskCategoriesReadPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class TaskCategoriesReadQueryParams extends SpeakeasyBase {
-    since?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class TaskCategoriesReadSecurity extends SpeakeasyBase {
-    drchronoOauth2: shared.SchemeDrchronoOauth2;
+    drchronoOauth2: string;
 }
 export declare class TaskCategoriesReadRequest extends SpeakeasyBase {
-    pathParams: TaskCategoriesReadPathParams;
-    queryParams: TaskCategoriesReadQueryParams;
-    security: TaskCategoriesReadSecurity;
+    id: string;
+    since?: string;
 }
 export declare class TaskCategoriesReadResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
     taskCategory?: shared.TaskCategory;
 }

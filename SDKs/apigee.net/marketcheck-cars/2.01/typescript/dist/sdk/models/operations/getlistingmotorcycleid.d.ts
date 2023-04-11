@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetListingMotorcycleIdPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class GetListingMotorcycleIdQueryParams extends SpeakeasyBase {
-    apiKey?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetListingMotorcycleIdRequest extends SpeakeasyBase {
-    pathParams: GetListingMotorcycleIdPathParams;
-    queryParams: GetListingMotorcycleIdQueryParams;
+    /**
+     * The API Authentication Key. Mandatory with all API calls.
+     */
+    apiKey?: string;
+    /**
+     * Listing id to get all the listing attributes
+     */
+    id: string;
 }
 export declare class GetListingMotorcycleIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Error
+     */
     error?: shared.ErrorT;
+    /**
+     * Motorcycle listing for the given id
+     */
     motorcycleListing?: shared.MotorcycleListing;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

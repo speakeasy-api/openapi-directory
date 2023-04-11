@@ -1,15 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ClearMerchantOrderInfoPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ClearMerchantOrderInfoRequest extends SpeakeasyBase {
     accountId: number;
+    /**
+     * The BeezUP Order identifier
+     */
     beezUPOrderId: string;
+    /**
+     * The marketplace technical code
+     */
     marketplaceTechnicalCode: string;
 }
-export declare class ClearMerchantOrderInfoRequest extends SpeakeasyBase {
-    pathParams: ClearMerchantOrderInfoPathParams;
-}
 export declare class ClearMerchantOrderInfoResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     * Could not update Order merchant information. Please see body for more information.
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

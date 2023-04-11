@@ -1,0 +1,19 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { MetricValueSet } from "./metricvalueset";
+/**
+ * Contains the quota information for a quota check response.
+ */
+export declare class QuotaInfo extends SpeakeasyBase {
+    /**
+     * Quota Metrics that have exceeded quota limits. For QuotaGroup-based quota, this is QuotaGroup.name For QuotaLimit-based quota, this is QuotaLimit.name See: google.api.Quota Deprecated: Use quota_metrics to get per quota group limit exceeded status.
+     */
+    limitExceeded?: string[];
+    /**
+     * Map of quota group name to the actual number of tokens consumed. If the quota check was not successful, then this will not be populated due to no quota consumption. We are not merging this field with 'quota_metrics' field because of the complexity of scaling in Chemist client code base. For simplicity, we will keep this field for Castor (that scales quota usage) and 'quota_metrics' for SuperQuota (that doesn't scale quota usage).
+     */
+    quotaConsumed?: Record<string, number>;
+    /**
+     * Quota metrics to indicate the usage. Depending on the check request, one or more of the following metrics will be included: 1. For rate quota, per quota group or per quota metric incremental usage will be specified using the following delta metric: "serviceruntime.googleapis.com/api/consumer/quota_used_count" 2. For allocation quota, per quota metric total usage will be specified using the following gauge metric: "serviceruntime.googleapis.com/allocation/consumer/quota_used_count" 3. For both rate quota and allocation quota, the quota limit reached condition will be specified using the following boolean metric: "serviceruntime.googleapis.com/quota/exceeded"
+     */
+    quotaMetrics?: MetricValueSet[];
+}

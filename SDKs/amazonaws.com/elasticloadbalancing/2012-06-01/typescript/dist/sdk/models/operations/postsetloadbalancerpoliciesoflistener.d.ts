@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostSetLoadBalancerPoliciesOfListenerActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTSetLoadBalancerPoliciesOfListenerActionEnum {
     SetLoadBalancerPoliciesOfListener = "SetLoadBalancerPoliciesOfListener"
 }
-export declare enum PostSetLoadBalancerPoliciesOfListenerVersionEnum {
+export declare enum POSTSetLoadBalancerPoliciesOfListenerVersionEnum {
     TwoThousandAndTwelve0601 = "2012-06-01"
 }
-export declare class PostSetLoadBalancerPoliciesOfListenerQueryParams extends SpeakeasyBase {
-    action: PostSetLoadBalancerPoliciesOfListenerActionEnum;
-    version: PostSetLoadBalancerPoliciesOfListenerVersionEnum;
-}
-export declare class PostSetLoadBalancerPoliciesOfListenerHeaders extends SpeakeasyBase {
+export declare class POSTSetLoadBalancerPoliciesOfListenerRequest extends SpeakeasyBase {
+    action: POSTSetLoadBalancerPoliciesOfListenerActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTSetLoadBalancerPoliciesOfListenerVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostSetLoadBalancerPoliciesOfListenerHeaders extends Speake
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostSetLoadBalancerPoliciesOfListenerRequest extends SpeakeasyBase {
-    queryParams: PostSetLoadBalancerPoliciesOfListenerQueryParams;
-    headers: PostSetLoadBalancerPoliciesOfListenerHeaders;
-    request?: Uint8Array;
-}
-export declare class PostSetLoadBalancerPoliciesOfListenerResponse extends SpeakeasyBase {
+export declare class POSTSetLoadBalancerPoliciesOfListenerResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

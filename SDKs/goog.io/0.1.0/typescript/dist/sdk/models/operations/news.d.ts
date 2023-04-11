@@ -1,9 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class NewsPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class NewsRequest extends SpeakeasyBase {
     query: string;
 }
-export declare class News200ApplicationJsonEntries extends SpeakeasyBase {
+export declare class News200ApplicationJSONEntries extends SpeakeasyBase {
     guidislink?: string;
     id?: string;
     link?: string;
@@ -17,7 +18,7 @@ export declare class News200ApplicationJsonEntries extends SpeakeasyBase {
     title?: string;
     titleDetail?: string;
 }
-export declare class News200ApplicationJsonFeed extends SpeakeasyBase {
+export declare class News200ApplicationJSONFeed extends SpeakeasyBase {
     generator?: string;
     generatorDetail?: string;
     language?: string;
@@ -33,16 +34,23 @@ export declare class News200ApplicationJsonFeed extends SpeakeasyBase {
     updated?: string;
     updatedParsed?: string;
 }
-export declare class News200ApplicationJson extends SpeakeasyBase {
-    entries?: News200ApplicationJsonEntries[];
-    feed?: News200ApplicationJsonFeed;
-}
-export declare class NewsRequest extends SpeakeasyBase {
-    pathParams: NewsPathParams;
+/**
+ * OK
+ */
+export declare class News200ApplicationJSON extends SpeakeasyBase {
+    entries?: News200ApplicationJSONEntries[];
+    feed?: News200ApplicationJSONFeed;
 }
 export declare class NewsResponse extends SpeakeasyBase {
     contentType: string;
-    httpValidationError?: shared.HttpValidationError;
-    news200ApplicationJSONObject?: News200ApplicationJson;
+    /**
+     * Unprocessable Entity (WebDAV)
+     */
+    httpValidationError?: shared.HTTPValidationError;
+    /**
+     * OK
+     */
+    news200ApplicationJSONObject?: News200ApplicationJSON;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

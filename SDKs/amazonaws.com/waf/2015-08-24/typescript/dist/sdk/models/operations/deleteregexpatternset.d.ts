@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteRegexPatternSetXAmzTargetEnum {
-    Awswaf20150824DeleteRegexPatternSet = "AWSWAF_20150824.DeleteRegexPatternSet"
+    AWSWAF20150824DeleteRegexPatternSet = "AWSWAF_20150824.DeleteRegexPatternSet"
 }
-export declare class DeleteRegexPatternSetHeaders extends SpeakeasyBase {
+export declare class DeleteRegexPatternSetRequest extends SpeakeasyBase {
+    deleteRegexPatternSetRequest: shared.DeleteRegexPatternSetRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class DeleteRegexPatternSetHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteRegexPatternSetXAmzTargetEnum;
 }
-export declare class DeleteRegexPatternSetRequest extends SpeakeasyBase {
-    headers: DeleteRegexPatternSetHeaders;
-    request: shared.DeleteRegexPatternSetRequest;
-}
 export declare class DeleteRegexPatternSetResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deleteRegexPatternSetResponse?: shared.DeleteRegexPatternSetResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFInvalidAccountException
+     */
     wafInvalidAccountException?: any;
+    /**
+     * WAFNonEmptyEntityException
+     */
     wafNonEmptyEntityException?: any;
+    /**
+     * WAFNonexistentItemException
+     */
     wafNonexistentItemException?: any;
+    /**
+     * WAFReferencedItemException
+     */
     wafReferencedItemException?: any;
+    /**
+     * WAFStaleDataException
+     */
     wafStaleDataException?: any;
 }

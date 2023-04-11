@@ -1,16 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class DisableBrocadeSwitchPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DisableBrocadeSwitchSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
+    apiKeyAuth: string;
 }
 export declare class DisableBrocadeSwitchRequest extends SpeakeasyBase {
-    pathParams: DisableBrocadeSwitchPathParams;
-    security: DisableBrocadeSwitchSecurity;
+    /**
+     * entity id
+     */
+    id: string;
 }
 export declare class DisableBrocadeSwitchResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

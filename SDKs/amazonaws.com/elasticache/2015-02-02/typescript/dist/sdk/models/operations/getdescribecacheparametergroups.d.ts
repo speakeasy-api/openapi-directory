@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeCacheParameterGroupsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeCacheParameterGroupsActionEnum {
     DescribeCacheParameterGroups = "DescribeCacheParameterGroups"
 }
-export declare enum GetDescribeCacheParameterGroupsVersionEnum {
+export declare enum GETDescribeCacheParameterGroupsVersionEnum {
     TwoThousandAndFifteen0202 = "2015-02-02"
 }
-export declare class GetDescribeCacheParameterGroupsQueryParams extends SpeakeasyBase {
-    action: GetDescribeCacheParameterGroupsActionEnum;
+export declare class GETDescribeCacheParameterGroupsRequest extends SpeakeasyBase {
+    action: GETDescribeCacheParameterGroupsActionEnum;
+    /**
+     * The name of a specific cache parameter group to return details for.
+     */
     cacheParameterGroupName?: string;
+    /**
+     * An optional marker returned from a prior request. Use this marker for pagination of results from this operation. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>.
+     */
     marker?: string;
+    /**
+     * <p>The maximum number of records to include in the response. If more records exist than the specified <code>MaxRecords</code> value, a marker is included in the response so that the remaining results can be retrieved.</p> <p>Default: 100</p> <p>Constraints: minimum 20; maximum 100.</p>
+     */
     maxRecords?: number;
-    version: GetDescribeCacheParameterGroupsVersionEnum;
-}
-export declare class GetDescribeCacheParameterGroupsHeaders extends SpeakeasyBase {
+    version: GETDescribeCacheParameterGroupsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +29,9 @@ export declare class GetDescribeCacheParameterGroupsHeaders extends SpeakeasyBas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeCacheParameterGroupsRequest extends SpeakeasyBase {
-    queryParams: GetDescribeCacheParameterGroupsQueryParams;
-    headers: GetDescribeCacheParameterGroupsHeaders;
-}
-export declare class GetDescribeCacheParameterGroupsResponse extends SpeakeasyBase {
+export declare class GETDescribeCacheParameterGroupsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

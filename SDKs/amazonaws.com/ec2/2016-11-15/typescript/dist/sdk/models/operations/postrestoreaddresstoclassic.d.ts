@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostRestoreAddressToClassicActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTRestoreAddressToClassicActionEnum {
     RestoreAddressToClassic = "RestoreAddressToClassic"
 }
-export declare enum PostRestoreAddressToClassicVersionEnum {
+export declare enum POSTRestoreAddressToClassicVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostRestoreAddressToClassicQueryParams extends SpeakeasyBase {
-    action: PostRestoreAddressToClassicActionEnum;
-    version: PostRestoreAddressToClassicVersionEnum;
-}
-export declare class PostRestoreAddressToClassicHeaders extends SpeakeasyBase {
+export declare class POSTRestoreAddressToClassicRequest extends SpeakeasyBase {
+    action: POSTRestoreAddressToClassicActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTRestoreAddressToClassicVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostRestoreAddressToClassicHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostRestoreAddressToClassicRequest extends SpeakeasyBase {
-    queryParams: PostRestoreAddressToClassicQueryParams;
-    headers: PostRestoreAddressToClassicHeaders;
-    request?: Uint8Array;
-}
-export declare class PostRestoreAddressToClassicResponse extends SpeakeasyBase {
+export declare class POSTRestoreAddressToClassicResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ValidationError } from "./validationerror";
-export declare class HttpValidationError extends SpeakeasyBase {
+/**
+ * Validation Error
+ */
+export declare class HTTPValidationError extends SpeakeasyBase {
     detail?: ValidationError[];
 }

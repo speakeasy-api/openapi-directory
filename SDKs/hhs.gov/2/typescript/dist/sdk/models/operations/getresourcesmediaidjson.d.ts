@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetResourcesMediaIdJsonPathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetResourcesMediaIdJsonRequest extends SpeakeasyBase {
-    pathParams: GetResourcesMediaIdJsonPathParams;
+    /**
+     * The id of the record to look up
+     */
+    id: number;
 }
 export declare class GetResourcesMediaIdJsonResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Returns the MediaItem identified by the 'id'.
+     */
     mediaItemWrappeds?: shared.MediaItemWrapped[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

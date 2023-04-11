@@ -1,33 +1,35 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetCancelJobRequest, GetCancelJobResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GETCancelJobRequest,
+  GETCancelJobResponse,
+  GETCancelJobActionEnum,
+  GETCancelJobOperationEnum,
+  GETCancelJobVersionEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: GetCancelJobRequest = {
-  queryParams: {
-    apiVersion: "sit",
-    awsAccessKeyId: "voluptas",
-    action: "CancelJob",
-    jobId: "expedita",
-    operation: "CancelJob",
-    signature: "dolor",
-    signatureMethod: "expedita",
-    signatureVersion: "voluptas",
-    timestamp: "fugit",
-    version: "2010-06-01",
+    hmac: "YOUR_API_KEY_HERE",
   },
+});
+
+const req: GETCancelJobRequest = {
+  apiVersion: "corrupti",
+  awsAccessKeyId: "provident",
+  action: GETCancelJobActionEnum.CancelJob,
+  jobId: "distinctio",
+  operation: GETCancelJobOperationEnum.CancelJob,
+  signature: "quibusdam",
+  signatureMethod: "unde",
+  signatureVersion: "nulla",
+  timestamp: "corrupti",
+  version: GETCancelJobVersionEnum.TwoThousandAndTen0601,
 };
 
-sdk.getCancelJob(req).then((res: GetCancelJobResponse | AxiosError) => {
+sdk.getCancelJob(req).then((res: GETCancelJobResponse | AxiosError) => {
    // handle response
 });
 ```

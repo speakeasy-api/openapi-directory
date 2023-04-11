@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum UpdateExpirationForHitxAmzTargetEnum {
-    MTurkRequesterServiceV20170117UpdateExpirationForHit = "MTurkRequesterServiceV20170117.UpdateExpirationForHIT"
+import { AxiosResponse } from "axios";
+export declare enum UpdateExpirationForHITXAmzTargetEnum {
+    MTurkRequesterServiceV20170117UpdateExpirationForHIT = "MTurkRequesterServiceV20170117.UpdateExpirationForHIT"
 }
-export declare class UpdateExpirationForHitHeaders extends SpeakeasyBase {
+export declare class UpdateExpirationForHITRequest extends SpeakeasyBase {
+    updateExpirationForHITRequest: shared.UpdateExpirationForHITRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,16 +13,22 @@ export declare class UpdateExpirationForHitHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: UpdateExpirationForHitxAmzTargetEnum;
+    xAmzTarget: UpdateExpirationForHITXAmzTargetEnum;
 }
-export declare class UpdateExpirationForHitRequest extends SpeakeasyBase {
-    headers: UpdateExpirationForHitHeaders;
-    request: shared.UpdateExpirationForHitRequest;
-}
-export declare class UpdateExpirationForHitResponse extends SpeakeasyBase {
+export declare class UpdateExpirationForHITResponse extends SpeakeasyBase {
     contentType: string;
-    requestError?: any;
-    serviceFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * RequestError
+     */
+    requestError?: any;
+    /**
+     * ServiceFault
+     */
+    serviceFault?: any;
+    /**
+     * Success
+     */
     updateExpirationForHITResponse?: Record<string, any>;
 }

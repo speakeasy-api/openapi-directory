@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Output only. Current state of the os update.
+ */
 export declare enum GoogleChromeManagementV1OsUpdateStatusUpdateStateEnum {
     UpdateStateUnspecified = "UPDATE_STATE_UNSPECIFIED",
     OsImageDownloadNotStarted = "OS_IMAGE_DOWNLOAD_NOT_STARTED",
@@ -7,12 +10,30 @@ export declare enum GoogleChromeManagementV1OsUpdateStatusUpdateStateEnum {
 }
 /**
  * Contains information regarding the current OS update status. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDeviceOsUpdateStatus](https://chromeenterprise.google/policies/#ReportDeviceOsUpdateStatus) * Data Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A
-**/
+ */
 export declare class GoogleChromeManagementV1OsUpdateStatus extends SpeakeasyBase {
+    /**
+     * Output only. Timestamp of the last reboot.
+     */
     lastRebootTime?: string;
+    /**
+     * Output only. Timestamp of the last update check.
+     */
     lastUpdateCheckTime?: string;
+    /**
+     * Output only. Timestamp of the last successful update.
+     */
     lastUpdateTime?: string;
+    /**
+     * Output only. New platform version of the os image being downloaded and applied. It is only set when update status is OS_IMAGE_DOWNLOAD_IN_PROGRESS or OS_UPDATE_NEED_REBOOT. Note this could be a dummy "0.0.0.0" for OS_UPDATE_NEED_REBOOT status for some edge cases, e.g. update engine is restarted without a reboot.
+     */
     newPlatformVersion?: string;
+    /**
+     * Output only. New requested platform version from the pending updated kiosk app.
+     */
     newRequestedPlatformVersion?: string;
+    /**
+     * Output only. Current state of the os update.
+     */
     updateState?: GoogleChromeManagementV1OsUpdateStatusUpdateStateEnum;
 }

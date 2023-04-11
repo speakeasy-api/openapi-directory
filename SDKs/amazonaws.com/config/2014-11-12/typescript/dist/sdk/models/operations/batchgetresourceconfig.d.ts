@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum BatchGetResourceConfigXAmzTargetEnum {
     StarlingDoveServiceBatchGetResourceConfig = "StarlingDoveService.BatchGetResourceConfig"
 }
-export declare class BatchGetResourceConfigHeaders extends SpeakeasyBase {
+export declare class BatchGetResourceConfigRequest extends SpeakeasyBase {
+    batchGetResourceConfigRequest: shared.BatchGetResourceConfigRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class BatchGetResourceConfigHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: BatchGetResourceConfigXAmzTargetEnum;
 }
-export declare class BatchGetResourceConfigRequest extends SpeakeasyBase {
-    headers: BatchGetResourceConfigHeaders;
-    request: shared.BatchGetResourceConfigRequest;
-}
 export declare class BatchGetResourceConfigResponse extends SpeakeasyBase {
+    /**
+     * Success
+     */
     batchGetResourceConfigResponse?: shared.BatchGetResourceConfigResponse;
     contentType: string;
+    /**
+     * NoAvailableConfigurationRecorderException
+     */
     noAvailableConfigurationRecorderException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

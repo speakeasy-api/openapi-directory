@@ -1,16 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class PostRefundFundsTransferSecurity extends SpeakeasyBase {
+    apiKeyAuth?: string;
     basicAuth?: shared.SchemeBasicAuth;
-    apiKeyAuth?: shared.SchemeApiKeyAuth;
-}
-export declare class PostRefundFundsTransferRequest extends SpeakeasyBase {
-    request?: any;
-    security: PostRefundFundsTransferSecurity;
 }
 export declare class PostRefundFundsTransferResponse extends SpeakeasyBase {
     contentType: string;
-    refundFundsTransferResponse?: any;
-    serviceError?: any;
+    /**
+     * OK - the request has succeeded.
+     */
+    refundFundsTransferResponse?: shared.RefundFundsTransferResponse;
+    /**
+     * Bad Request - a problem reading or understanding the request.
+     */
+    serviceError?: shared.ServiceError;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

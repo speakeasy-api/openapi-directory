@@ -1,5 +1,16 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * With these endpoints you can control how your existing Feature Flags and Settings should serve their values.
+ *
+ * @remarks
+ * You can turn Feature Flags on or off, update Setting values and also add, remove or change the order of Percentage and Targeting Rules.
+ *
+ * These endpoints are determining the Environment and Config by the <a target="_blank" rel="noopener noreferrer" href="https://app.configcat.com/sdkkey">SDK key</a> passed in
+ * the `X-CONFIGCAT-SDKKEY` request header. To identify the desired Feature Flag or Setting to change,
+ * you can use either its `settingId` or `key` attribute. You can get those attributes
+ * from the [Feature Flag & Setting](#tag/Feature-Flags-and-Settings) endpoints.
+ */
 export declare class FeatureFlagAndSettingValuesUsingSDKKey {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +20,9 @@ export declare class FeatureFlagAndSettingValuesUsingSDKKey {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getSettingValueBySdkkey - Get value
+     * Get value
      *
+     * @remarks
      * This endpoint returns the value of a Feature Flag or Setting
      * in a specified Environment identified by the <a target="_blank" rel="noopener noreferrer" href="https://app.configcat.com/sdkkey">SDK key</a> passed in the `X-CONFIGCAT-SDKKEY` header.
      *
@@ -22,11 +34,12 @@ export declare class FeatureFlagAndSettingValuesUsingSDKKey {
      * Targeting and Percentage Rules configuration of the actual Feature Flag or Setting
      * in an **ordered** collection, which means the order of the returned rules is matching to the
      * evaluation order. You can read more about these rules [here](https://configcat.com/docs/advanced/targeting/).
-    **/
+     */
     getSettingValueBySdkkey(req: operations.GetSettingValueBySdkkeyRequest, config?: AxiosRequestConfig): Promise<operations.GetSettingValueBySdkkeyResponse>;
     /**
-     * replaceSettingValueBySdkkey - Replace value
+     * Replace value
      *
+     * @remarks
      * This endpoint replaces the value of a Feature Flag or Setting
      * in a specified Environment identified by the <a target="_blank" rel="noopener noreferrer" href="https://app.configcat.com/sdkkey">SDK key</a> passed in the `X-CONFIGCAT-SDKKEY` header.
      *
@@ -67,11 +80,12 @@ export declare class FeatureFlagAndSettingValuesUsingSDKKey {
      * 	"value": true
      * }
      * ```
-    **/
+     */
     replaceSettingValueBySdkkey(req: operations.ReplaceSettingValueBySdkkeyRequest, config?: AxiosRequestConfig): Promise<operations.ReplaceSettingValueBySdkkeyResponse>;
     /**
-     * updateSettingValueBySdkkey - Update value
+     * Update value
      *
+     * @remarks
      * This endpoint updates the value of a Feature Flag or Setting
      * with a collection of [JSON Patch](http://jsonpatch.com) operations in a specified Environment
      * identified by the <a target="_blank" rel="noopener noreferrer" href="https://app.configcat.com/sdkkey">SDK key</a> passed in the `X-CONFIGCAT-SDKKEY` header.
@@ -127,6 +141,6 @@ export declare class FeatureFlagAndSettingValuesUsingSDKKey {
      * 	"value": true
      * }
      * ```
-    **/
+     */
     updateSettingValueBySdkkey(req: operations.UpdateSettingValueBySdkkeyRequest, config?: AxiosRequestConfig): Promise<operations.UpdateSettingValueBySdkkeyResponse>;
 }

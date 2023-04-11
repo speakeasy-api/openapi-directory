@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListAssessmentRunAgentsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListAssessmentRunAgentsXAmzTargetEnum {
     InspectorServiceListAssessmentRunAgents = "InspectorService.ListAssessmentRunAgents"
 }
-export declare class ListAssessmentRunAgentsHeaders extends SpeakeasyBase {
+export declare class ListAssessmentRunAgentsRequest extends SpeakeasyBase {
+    listAssessmentRunAgentsRequest: shared.ListAssessmentRunAgentsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,18 +14,37 @@ export declare class ListAssessmentRunAgentsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: ListAssessmentRunAgentsXAmzTargetEnum;
-}
-export declare class ListAssessmentRunAgentsRequest extends SpeakeasyBase {
-    queryParams: ListAssessmentRunAgentsQueryParams;
-    headers: ListAssessmentRunAgentsHeaders;
-    request: shared.ListAssessmentRunAgentsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class ListAssessmentRunAgentsResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InternalException
+     */
     internalException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * Success
+     */
     listAssessmentRunAgentsResponse?: shared.ListAssessmentRunAgentsResponse;
+    /**
+     * NoSuchEntityException
+     */
     noSuchEntityException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

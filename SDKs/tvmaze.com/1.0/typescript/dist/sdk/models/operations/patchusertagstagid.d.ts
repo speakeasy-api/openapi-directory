@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PatchUserTagsTagIdPathParams extends SpeakeasyBase {
-    tagId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class PatchUserTagsTagIdRequest extends SpeakeasyBase {
-    pathParams: PatchUserTagsTagIdPathParams;
-    request?: shared.TagInput;
+    tagInput?: shared.TagInput;
+    tagId: number;
 }
 export declare class PatchUserTagsTagIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The tag was updated
+     */
     tag?: shared.Tag;
 }

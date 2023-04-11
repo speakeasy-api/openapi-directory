@@ -1,20 +1,55 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetCreditMemoItemPathParams extends SpeakeasyBase {
-    cmitemid: string;
-    creditMemoId: string;
-}
-export declare class GetCreditMemoItemHeaders extends SpeakeasyBase {
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class GETCreditMemoItemRequest extends SpeakeasyBase {
+    /**
+     * An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+     *
+     * @remarks
+     *
+     */
     zuoraEntityIds?: string;
+    /**
+     * A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+     *
+     * @remarks
+     *
+     * The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+     *
+     */
     zuoraTrackId?: string;
+    /**
+     * The unique ID of a credit memo item. You can get the credit memo item ID from the response of [List credit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoItems).
+     *
+     * @remarks
+     *
+     */
+    cmitemid: string;
+    /**
+     * The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172.
+     *
+     * @remarks
+     *
+     */
+    creditMemoId: string;
+    /**
+     *
+     * @remarks
+     * The minor version of the Zuora REST API. See [Minor Version](https://www.zuora.com/developer/api-reference/#section/API-Versions/Minor-Version) for information about REST API version control.
+     *
+     * This header affects the availability of the following response fields:
+     * * `creditTaxItems`
+     * * `taxationItems`
+     * * `comment`
+     * * `description`
+     *
+     */
     zuoraVersion?: string;
 }
-export declare class GetCreditMemoItemRequest extends SpeakeasyBase {
-    pathParams: GetCreditMemoItemPathParams;
-    headers: GetCreditMemoItemHeaders;
-}
-export declare class GetCreditMemoItemResponse extends SpeakeasyBase {
+export declare class GETCreditMemoItemResponse extends SpeakeasyBase {
     contentType: string;
-    getCreditMemoItemType?: Record<string, any>;
-    headers: Record<string, string[]>;
+    getCreditMemoItemType?: shared.GETCreditMemoItemType;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

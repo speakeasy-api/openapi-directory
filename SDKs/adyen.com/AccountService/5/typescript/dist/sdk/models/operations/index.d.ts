@@ -5,6 +5,7 @@ export * from "./postclosestores";
 export * from "./postcreateaccount";
 export * from "./postcreateaccountholder";
 export * from "./postdeletebankaccounts";
+export * from "./postdeletelegalarrangements";
 export * from "./postdeletepayoutmethods";
 export * from "./postdeleteshareholders";
 export * from "./postdeletesignatories";

@@ -1,4 +1,4 @@
-export declare enum TfnExemptionTypeEnum {
+export declare enum TFNExemptionTypeEnum {
     Notquoted = "NOTQUOTED",
     Pending = "PENDING",
     Pensioner = "PENSIONER",

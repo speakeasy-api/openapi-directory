@@ -3,4 +3,5 @@ export * from "./deletealias";
 export * from "./getalias";
 export * from "./getaliases";
 export * from "./getclicks";
+export * from "./getstatistics";
 export * from "./updatealias";

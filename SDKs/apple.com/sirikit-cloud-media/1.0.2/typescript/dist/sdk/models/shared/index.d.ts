@@ -26,6 +26,7 @@ export * from "./protocolexceptioninvocationresponse";
 export * from "./protocolexceptionreasonenum";
 export * from "./queue";
 export * from "./queueactivityreporteventenum";
+export * from "./queueinsertpointer";
 export * from "./queueplaypointer";
 export * from "./session";
 export * from "./updateactivityrequest";

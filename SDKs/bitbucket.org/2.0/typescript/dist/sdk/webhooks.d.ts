@@ -1,5 +1,36 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Webhooks provide a way to configure Bitbucket Cloud to make requests to
+ *
+ * @remarks
+ * your server (or another external service) whenever certain events occur in
+ * Bitbucket Cloud.
+ *
+ * A webhook consists of:
+ *
+ * * A subject -- The resource that generates the events. Currently, this resource
+ * is the repository, user account, or team where you create the webhook.
+ * * One or more event -- The default event is a repository push, but you can
+ * select multiple events that can trigger the webhook.
+ * * A URL -- The endpoint where you want Bitbucket to send the event payloads
+ * when a matching event happens.
+ *
+ * There are two parts to getting a webhook to work: creating the webhook and
+ * triggering the webhook. After you create a webhook for an event, every time
+ * that event occurs, Bitbucket sends a payload request that describes the event
+ * to the specified URL. Thus, you can think of webhooks as a kind of
+ * notification system.
+ *
+ * Use webhooks to integrate applications with Bitbucket Cloud. The following
+ * use cases provides examples of when you would want to use webhooks:
+ *
+ * * Every time a user pushes commits in a repository, you may want to notify
+ * your CI server to start a build.
+ * * Every time a user pushes commits or creates a pull request, you may want to
+ * display a notification in your application.
+ *
+ */
 export declare class Webhooks {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,38 +40,25 @@ export declare class Webhooks {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteRepositoriesWorkspaceRepoSlugHooksUid - Deletes the specified webhook subscription from the given
+     * Delete a webhook for a repository
+     *
+     * @remarks
+     * Deletes the specified webhook subscription from the given
      * repository.
-    **/
-    deleteRepositoriesWorkspaceRepoSlugHooksUid(req: operations.DeleteRepositoriesWorkspaceRepoSlugHooksUidRequest, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoriesWorkspaceRepoSlugHooksUidResponse>;
+     */
+    deleteRepositoriesWorkspaceRepoSlugHooksUid(req: operations.DeleteRepositoriesWorkspaceRepoSlugHooksUidRequest, security: operations.DeleteRepositoriesWorkspaceRepoSlugHooksUidSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoriesWorkspaceRepoSlugHooksUidResponse>;
     /**
-     * deleteTeamsUsernameHooksUid - Deletes the specified webhook subscription from the given team
-     * account.
+     * Delete a webhook for a workspace
      *
-     * **This endpoint has been deprecated, and you should
-     * use the new [workspace hooks](../../../workspaces/%7Bworkspace%7D/hooks/%7Buid%7D#delete) endpoint.
-     * For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).**
-    **/
-    deleteTeamsUsernameHooksUid(req: operations.DeleteTeamsUsernameHooksUidRequest, config?: AxiosRequestConfig): Promise<operations.DeleteTeamsUsernameHooksUidResponse>;
+     * @remarks
+     * Deletes the specified webhook subscription from the given workspace.
+     */
+    deleteWorkspacesWorkspaceHooksUid(req: operations.DeleteWorkspacesWorkspaceHooksUidRequest, security: operations.DeleteWorkspacesWorkspaceHooksUidSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteWorkspacesWorkspaceHooksUidResponse>;
     /**
-     * deleteUsersSelectedUserHooksUid - Deletes the specified webhook subscription from the given user
-     * account.
+     * Get a webhook resource
      *
-     * Note that the username path parameter has been deprecated due to
-     * [privacy changes](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-changes-gdpr/#removal-of-usernames-from-user-referencing-apis).
-     * Use the account's UUID or account_id instead.
-     *
-     * **This endpoint has been deprecated, and you should
-     * use the new [workspace hooks](../../../workspaces/%7Bworkspace%7D/hooks/%7Buid%7D#delete) endpoint.
-     * For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).**
-    **/
-    deleteUsersSelectedUserHooksUid(req: operations.DeleteUsersSelectedUserHooksUidRequest, config?: AxiosRequestConfig): Promise<operations.DeleteUsersSelectedUserHooksUidResponse>;
-    /**
-     * deleteWorkspacesWorkspaceHooksUid - Deletes the specified webhook subscription from the given workspace.
-    **/
-    deleteWorkspacesWorkspaceHooksUid(req: operations.DeleteWorkspacesWorkspaceHooksUidRequest, config?: AxiosRequestConfig): Promise<operations.DeleteWorkspacesWorkspaceHooksUidResponse>;
-    /**
-     * getHookEvents - Returns the webhook resource or subject types on which webhooks can
+     * @remarks
+     * Returns the webhook resource or subject types on which webhooks can
      * be registered.
      *
      * Each resource/subject type contains an `events` link that returns the
@@ -63,26 +81,22 @@ export declare class Webhooks {
      *             }
      *         }
      *     },
-     *     "team": {
+     *     "workspace": {
      *         "links": {
      *             "events": {
-     *                 "href": "https://api.bitbucket.org/2.0/hook_events/team"
-     *             }
-     *         }
-     *     },
-     *     "user": {
-     *         "links": {
-     *             "events": {
-     *                 "href": "https://api.bitbucket.org/2.0/hook_events/user"
+     *                 "href": "https://api.bitbucket.org/2.0/hook_events/workspace"
      *             }
      *         }
      *     }
      * }
      * ```
-    **/
-    getHookEvents(req: operations.GetHookEventsRequest, config?: AxiosRequestConfig): Promise<operations.GetHookEventsResponse>;
+     */
+    getHookEvents(config?: AxiosRequestConfig): Promise<operations.GetHookEventsResponse>;
     /**
-     * getHookEventsSubjectType - Returns a paginated list of all valid webhook events for the
+     * List subscribable webhook types
+     *
+     * @remarks
+     * Returns a paginated list of all valid webhook events for the
      * specified entity.
      * **The team and user webhooks are deprecated, and you should use workspace instead.
      * For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).**
@@ -129,70 +143,43 @@ export declare class Webhooks {
      *     ]
      * }
      * ```
-    **/
-    getHookEventsSubjectType(req: operations.GetHookEventsSubjectTypeRequest, config?: AxiosRequestConfig): Promise<operations.GetHookEventsSubjectTypeResponse>;
+     */
+    getHookEventsSubjectType(req: operations.GetHookEventsSubjectTypeRequest, security: operations.GetHookEventsSubjectTypeSecurity, config?: AxiosRequestConfig): Promise<operations.GetHookEventsSubjectTypeResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugHooks - Returns a paginated list of webhooks installed on this repository.
-    **/
-    getRepositoriesWorkspaceRepoSlugHooks(req: operations.GetRepositoriesWorkspaceRepoSlugHooksRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugHooksResponse>;
+     * List webhooks for a repository
+     *
+     * @remarks
+     * Returns a paginated list of webhooks installed on this repository.
+     */
+    getRepositoriesWorkspaceRepoSlugHooks(req: operations.GetRepositoriesWorkspaceRepoSlugHooksRequest, security: operations.GetRepositoriesWorkspaceRepoSlugHooksSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugHooksResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugHooksUid - Returns the webhook with the specified id installed on the specified
+     * Get a webhook for a repository
+     *
+     * @remarks
+     * Returns the webhook with the specified id installed on the specified
      * repository.
-    **/
-    getRepositoriesWorkspaceRepoSlugHooksUid(req: operations.GetRepositoriesWorkspaceRepoSlugHooksUidRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugHooksUidResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugHooksUid(req: operations.GetRepositoriesWorkspaceRepoSlugHooksUidRequest, security: operations.GetRepositoriesWorkspaceRepoSlugHooksUidSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugHooksUidResponse>;
     /**
-     * getTeamsUsernameHooks - Returns a paginated list of webhooks installed on this team.
+     * List webhooks for a workspace
      *
-     * **This endpoint has been deprecated, and you should
-     * use the new [workspace hooks](../../workspaces/%7Bworkspace%7D/hooks#get) endpoint.
-     * For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).**
-    **/
-    getTeamsUsernameHooks(req: operations.GetTeamsUsernameHooksRequest, config?: AxiosRequestConfig): Promise<operations.GetTeamsUsernameHooksResponse>;
+     * @remarks
+     * Returns a paginated list of webhooks installed on this workspace.
+     */
+    getWorkspacesWorkspaceHooks(req: operations.GetWorkspacesWorkspaceHooksRequest, security: operations.GetWorkspacesWorkspaceHooksSecurity, config?: AxiosRequestConfig): Promise<operations.GetWorkspacesWorkspaceHooksResponse>;
     /**
-     * getTeamsUsernameHooksUid - Returns the webhook with the specified id installed on the given
-     * team account.
+     * Get a webhook for a workspace
      *
-     * **This endpoint has been deprecated, and you should
-     * use the new [workspace hooks](../../../workspaces/%7Bworkspace%7D/hooks/%7Buid%7D#get) endpoint.
-     * For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).**
-    **/
-    getTeamsUsernameHooksUid(req: operations.GetTeamsUsernameHooksUidRequest, config?: AxiosRequestConfig): Promise<operations.GetTeamsUsernameHooksUidResponse>;
-    /**
-     * getUsersSelectedUserHooks - Returns a paginated list of webhooks installed on this user account.
-     *
-     * Note that the username path parameter has been deprecated due to
-     * [privacy changes](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-changes-gdpr/#removal-of-usernames-from-user-referencing-apis).
-     * Use the account's UUID or account_id instead.
-     *
-     * **This endpoint has been deprecated, and you should
-     * use the new [workspace hooks](../../workspaces/%7Bworkspace%7D/hooks#get) endpoint.
-     * For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).**
-    **/
-    getUsersSelectedUserHooks(req: operations.GetUsersSelectedUserHooksRequest, config?: AxiosRequestConfig): Promise<operations.GetUsersSelectedUserHooksResponse>;
-    /**
-     * getUsersSelectedUserHooksUid - Returns the webhook with the specified id installed on the given
-     * user account.
-     *
-     * Note that the username path parameter has been deprecated due to
-     * [privacy changes](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-changes-gdpr/#removal-of-usernames-from-user-referencing-apis).
-     * Use the account's UUID or account_id instead.
-     *
-     * **This endpoint has been deprecated, and you should
-     * use the new [workspace hook details](../../../workspaces/%7Bworkspace%7D/hooks/%7Buid%7D#get) endpoint.
-     * For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).**
-    **/
-    getUsersSelectedUserHooksUid(req: operations.GetUsersSelectedUserHooksUidRequest, config?: AxiosRequestConfig): Promise<operations.GetUsersSelectedUserHooksUidResponse>;
-    /**
-     * getWorkspacesWorkspaceHooks - Returns a paginated list of webhooks installed on this workspace.
-    **/
-    getWorkspacesWorkspaceHooks(req: operations.GetWorkspacesWorkspaceHooksRequest, config?: AxiosRequestConfig): Promise<operations.GetWorkspacesWorkspaceHooksResponse>;
-    /**
-     * getWorkspacesWorkspaceHooksUid - Returns the webhook with the specified id installed on the given
+     * @remarks
+     * Returns the webhook with the specified id installed on the given
      * workspace.
-    **/
-    getWorkspacesWorkspaceHooksUid(req: operations.GetWorkspacesWorkspaceHooksUidRequest, config?: AxiosRequestConfig): Promise<operations.GetWorkspacesWorkspaceHooksUidResponse>;
+     */
+    getWorkspacesWorkspaceHooksUid(req: operations.GetWorkspacesWorkspaceHooksUidRequest, security: operations.GetWorkspacesWorkspaceHooksUidSecurity, config?: AxiosRequestConfig): Promise<operations.GetWorkspacesWorkspaceHooksUidResponse>;
     /**
-     * postRepositoriesWorkspaceRepoSlugHooks - Creates a new webhook on the specified repository.
+     * Create a webhook for a repository
+     *
+     * @remarks
+     * Creates a new webhook on the specified repository.
      *
      * Example:
      *
@@ -218,50 +205,49 @@ export declare class Webhooks {
      *
      * Also note that the `url` must properly resolve and cannot be an
      * internal, non-routed address.
-    **/
-    postRepositoriesWorkspaceRepoSlugHooks(req: operations.PostRepositoriesWorkspaceRepoSlugHooksRequest, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugHooksResponse>;
+     */
+    postRepositoriesWorkspaceRepoSlugHooks(req: operations.PostRepositoriesWorkspaceRepoSlugHooksRequest, security: operations.PostRepositoriesWorkspaceRepoSlugHooksSecurity, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugHooksResponse>;
     /**
-     * postTeamsUsernameHooks - Creates a new webhook on the specified team.
+     * Create a webhook for a workspace
      *
-     * Team webhooks are fired for events from all repositories belonging to
-     * that team account.
-     *
-     * Note that only admins can install webhooks on teams.
-     *
-     * **This endpoint has been deprecated, and you should
-     * use the new [workspace hooks](../../workspaces/%7Bworkspace%7D/hooks#post) endpoint.
-     * For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).**
-    **/
-    postTeamsUsernameHooks(req: operations.PostTeamsUsernameHooksRequest, config?: AxiosRequestConfig): Promise<operations.PostTeamsUsernameHooksResponse>;
-    /**
-     * postUsersSelectedUserHooks - Creates a new webhook on the specified user account.
-     *
-     * Account-level webhooks are fired for events from all repositories
-     * belonging to that account.
-     *
-     * Note that one can only register webhooks on one's own account, not that
-     * of others.
-     *
-     * Also, note that the username path parameter has been deprecated due to
-     * [privacy changes](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-changes-gdpr/#removal-of-usernames-from-user-referencing-apis).
-     * Use the account's UUID or account_id instead.
-     *
-     * **This endpoint has been deprecated, and you should
-     * use the new [workspace hooks](../../workspaces/%7Bworkspace%7D/hooks#post) endpoint.
-     * For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).**
-    **/
-    postUsersSelectedUserHooks(req: operations.PostUsersSelectedUserHooksRequest, config?: AxiosRequestConfig): Promise<operations.PostUsersSelectedUserHooksResponse>;
-    /**
-     * postWorkspacesWorkspaceHooks - Creates a new webhook on the specified workspace.
+     * @remarks
+     * Creates a new webhook on the specified workspace.
      *
      * Workspace webhooks are fired for events from all repositories contained
      * by that workspace.
      *
-     * Note that only owners can install webhooks on workspaces.
-    **/
-    postWorkspacesWorkspaceHooks(req: operations.PostWorkspacesWorkspaceHooksRequest, config?: AxiosRequestConfig): Promise<operations.PostWorkspacesWorkspaceHooksResponse>;
+     * Example:
+     *
+     * ```
+     * $ curl -X POST -u credentials -H 'Content-Type: application/json'
+     *   https://api.bitbucket.org/2.0/workspaces/my-workspace/hooks
+     *   -d '
+     *     {
+     *       "description": "Webhook Description",
+     *       "url": "https://example.com/",
+     *       "active": true,
+     *       "events": [
+     *         "repo:push",
+     *         "issue:created",
+     *         "issue:updated"
+     *       ]
+     *     }'
+     * ```
+     *
+     * This call requires the webhook scope, as well as any scope
+     * that applies to the events that the webhook subscribes to. In the
+     * example above that means: `webhook`, `repository` and `issue`.
+     *
+     * The `url` must properly resolve and cannot be an internal, non-routed address.
+     *
+     * Only workspace owners can install webhooks on workspaces.
+     */
+    postWorkspacesWorkspaceHooks(req: operations.PostWorkspacesWorkspaceHooksRequest, security: operations.PostWorkspacesWorkspaceHooksSecurity, config?: AxiosRequestConfig): Promise<operations.PostWorkspacesWorkspaceHooksResponse>;
     /**
-     * putRepositoriesWorkspaceRepoSlugHooksUid - Updates the specified webhook subscription.
+     * Update a webhook for a repository
+     *
+     * @remarks
+     * Updates the specified webhook subscription.
      *
      * The following properties can be mutated:
      *
@@ -269,10 +255,13 @@ export declare class Webhooks {
      * * `url`
      * * `active`
      * * `events`
-    **/
-    putRepositoriesWorkspaceRepoSlugHooksUid(req: operations.PutRepositoriesWorkspaceRepoSlugHooksUidRequest, config?: AxiosRequestConfig): Promise<operations.PutRepositoriesWorkspaceRepoSlugHooksUidResponse>;
+     */
+    putRepositoriesWorkspaceRepoSlugHooksUid(req: operations.PutRepositoriesWorkspaceRepoSlugHooksUidRequest, security: operations.PutRepositoriesWorkspaceRepoSlugHooksUidSecurity, config?: AxiosRequestConfig): Promise<operations.PutRepositoriesWorkspaceRepoSlugHooksUidResponse>;
     /**
-     * putTeamsUsernameHooksUid - Updates the specified webhook subscription.
+     * Update a webhook for a workspace
+     *
+     * @remarks
+     * Updates the specified webhook subscription.
      *
      * The following properties can be mutated:
      *
@@ -280,40 +269,6 @@ export declare class Webhooks {
      * * `url`
      * * `active`
      * * `events`
-     *
-     * **This endpoint has been deprecated, and you should
-     * use the new [workspace hooks](../../../workspaces/%7Bworkspace%7D/hooks/%7Buid%7D#put) endpoint.
-     * For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).**
-    **/
-    putTeamsUsernameHooksUid(req: operations.PutTeamsUsernameHooksUidRequest, config?: AxiosRequestConfig): Promise<operations.PutTeamsUsernameHooksUidResponse>;
-    /**
-     * putUsersSelectedUserHooksUid - Updates the specified webhook subscription.
-     *
-     * The following properties can be mutated:
-     *
-     * * `description`
-     * * `url`
-     * * `active`
-     * * `events`
-     *
-     * Note that the username path parameter has been deprecated due to
-     * [privacy changes](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-changes-gdpr/#removal-of-usernames-from-user-referencing-apis).
-     * Use the account's UUID or account_id instead.
-     *
-     * **This endpoint has been deprecated, and you should
-     * use the new [workspace hook details](../../../workspaces/%7Bworkspace%7D/hooks/%7Buid%7D#put) endpoint.
-     * For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).**
-    **/
-    putUsersSelectedUserHooksUid(req: operations.PutUsersSelectedUserHooksUidRequest, config?: AxiosRequestConfig): Promise<operations.PutUsersSelectedUserHooksUidResponse>;
-    /**
-     * putWorkspacesWorkspaceHooksUid - Updates the specified webhook subscription.
-     *
-     * The following properties can be mutated:
-     *
-     * * `description`
-     * * `url`
-     * * `active`
-     * * `events`
-    **/
-    putWorkspacesWorkspaceHooksUid(req: operations.PutWorkspacesWorkspaceHooksUidRequest, config?: AxiosRequestConfig): Promise<operations.PutWorkspacesWorkspaceHooksUidResponse>;
+     */
+    putWorkspacesWorkspaceHooksUid(req: operations.PutWorkspacesWorkspaceHooksUidRequest, security: operations.PutWorkspacesWorkspaceHooksUidSecurity, config?: AxiosRequestConfig): Promise<operations.PutWorkspacesWorkspaceHooksUidResponse>;
 }

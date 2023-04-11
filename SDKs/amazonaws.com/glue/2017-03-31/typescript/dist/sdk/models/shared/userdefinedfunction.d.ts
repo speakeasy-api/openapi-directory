@@ -3,7 +3,7 @@ import { PrincipalTypeEnum } from "./principaltypeenum";
 import { ResourceUri } from "./resourceuri";
 /**
  * Represents the equivalent of a Hive user-defined function (<code>UDF</code>) definition.
-**/
+ */
 export declare class UserDefinedFunction extends SpeakeasyBase {
     catalogId?: string;
     className?: string;

@@ -1,64 +1,69 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { BatchGetRecordRequest, BatchGetRecordResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  BatchGetRecordRequest,
+  BatchGetRecordResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: BatchGetRecordRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
+});
+
+const req: BatchGetRecordRequest = {
+  requestBody: {
     identifiers: [
       {
-        featureGroupName: "fugit",
+        featureGroupName: "provident",
         featureNames: [
-          "nihil",
+          "quibusdam",
+          "unde",
+          "nulla",
         ],
         recordIdentifiersValueAsString: [
-          "dicta",
-          "debitis",
-          "voluptatum",
-        ],
-      },
-      {
-        featureGroupName: "et",
-        featureNames: [
-          "dolorem",
-          "et",
-          "voluptate",
-        ],
-        recordIdentifiersValueAsString: [
-          "vitae",
-          "totam",
-          "dolores",
-        ],
-      },
-      {
-        featureGroupName: "illum",
-        featureNames: [
+          "illum",
           "vel",
+          "error",
+        ],
+      },
+      {
+        featureGroupName: "deserunt",
+        featureNames: [
+          "iure",
+          "magnam",
         ],
         recordIdentifiersValueAsString: [
-          "dolore",
+          "ipsa",
+          "delectus",
+          "tempora",
+          "suscipit",
+        ],
+      },
+      {
+        featureGroupName: "molestiae",
+        featureNames: [
+          "placeat",
+          "voluptatum",
+          "iusto",
+          "excepturi",
+        ],
+        recordIdentifiersValueAsString: [
+          "recusandae",
+          "temporibus",
         ],
       },
     ],
   },
+  xAmzAlgorithm: "ab",
+  xAmzContentSha256: "quis",
+  xAmzCredential: "veritatis",
+  xAmzDate: "deserunt",
+  xAmzSecurityToken: "perferendis",
+  xAmzSignature: "ipsam",
+  xAmzSignedHeaders: "repellendus",
 };
 
 sdk.batchGetRecord(req).then((res: BatchGetRecordResponse | AxiosError) => {

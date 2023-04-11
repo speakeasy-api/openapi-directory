@@ -1,9 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreateDeploymentPathParams extends SpeakeasyBase {
-    apiId: string;
+import { AxiosResponse } from "axios";
+export declare class CreateDeploymentRequestBody extends SpeakeasyBase {
+    /**
+     * A string with a length between [0-1024].
+     */
+    description?: string;
+    /**
+     * A string with a length between [1-128].
+     */
+    stageName?: string;
 }
-export declare class CreateDeploymentHeaders extends SpeakeasyBase {
+export declare class CreateDeploymentRequest extends SpeakeasyBase {
+    requestBody: CreateDeploymentRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,22 +20,33 @@ export declare class CreateDeploymentHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class CreateDeploymentRequestBody extends SpeakeasyBase {
-    description?: string;
-    stageName?: string;
-}
-export declare class CreateDeploymentRequest extends SpeakeasyBase {
-    pathParams: CreateDeploymentPathParams;
-    headers: CreateDeploymentHeaders;
-    request: CreateDeploymentRequestBody;
+    /**
+     * The API identifier.
+     */
+    apiId: string;
 }
 export declare class CreateDeploymentResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     createDeploymentResponse?: shared.CreateDeploymentResponse;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Nodes {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class Nodes {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * nodesAddonRead - Retrieve an addon
+     * Retrieve an addon
      *
+     * @remarks
      * Retrieve details of an individual addon connected to this node.
      * #### Permissions
      * NodeSettings that are attached to public nodes will give read-only access to everyone. Private nodes require explicit read permission. Write and admin access are the same for public and private nodes. Administrators on a parent node have implicit read permissions for all child nodes.
@@ -19,11 +20,12 @@ export declare class Nodes {
      * Returns a JSON object with a `data` key containing the details of the requested addon, if the request is successful.
      *
      * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
-    **/
+     */
     nodesAddonRead(req: operations.NodesAddonReadRequest, config?: AxiosRequestConfig): Promise<operations.NodesAddonReadResponse>;
     /**
-     * nodesAddonsFoldersList - List all addon folders
+     * List all addon folders
      *
+     * @remarks
      *
      * A paginated list of folders retrieved from the associated third-party (provider) service.
      * #### Permissions
@@ -34,11 +36,12 @@ export declare class Nodes {
      * The `data` key contains an array of addon folder objects. Each resource in the array is a separate addon folder object and contains the full representation of the addon folder, meaning additional requests to a addon folder's detail view are not necessary.
      *
      * The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
-    **/
+     */
     nodesAddonsFoldersList(req: operations.NodesAddonsFoldersListRequest, config?: AxiosRequestConfig): Promise<operations.NodesAddonsFoldersListResponse>;
     /**
-     * nodesAddonsList - List all addons
+     * List all addons
      *
+     * @remarks
      *
      * A paginated list of addons connected to the given node or project.
      * #### Returns
@@ -47,11 +50,12 @@ export declare class Nodes {
      * The `data` key contains an array of at most 10 addon objects. Each resource in the array is a separate addon object and contains the full representation of the addon, meaning additional requests to a addon's detail view are not necessary.
      *
      * The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
-    **/
+     */
     nodesAddonsList(req: operations.NodesAddonsListRequest, config?: AxiosRequestConfig): Promise<operations.NodesAddonsListResponse>;
     /**
-     * nodesChildrenCreate - Create a child node
+     * Create a child node
      *
+     * @remarks
      * Creates a new child node.
      *
      * Note: Creating a child node via this endpoint will function the same as creating a node via the node list endpoint, but the child node will have the given node set as its parent.
@@ -69,11 +73,12 @@ export declare class Nodes {
      * Returns a JSON object with a `data` key containing the representation of the created node, if the request is successful.
      *
      * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
-    **/
+     */
     nodesChildrenCreate(req: operations.NodesChildrenCreateRequest, config?: AxiosRequestConfig): Promise<operations.NodesChildrenCreateResponse>;
     /**
-     * nodesChildrenList - List all child nodes
+     * List all child nodes
      *
+     * @remarks
      *
      * A paginated list of the next level child nodes for the given node. The returned nodes are sorted by their `date_modified`, with the most recently updated child nodes appearing first.
      *
@@ -92,44 +97,48 @@ export declare class Nodes {
      * Nodes may be filtered by their `id`, `title`, `category`, `description`, `public`, `tags`, `date_created`, `date_modified`, `root`, `parent`, `preprint`, and `contributors`.
      *
      * Most fields are string fields and will be filtered using simple substring matching. Public and preprint are boolean fields, and can be filtered using truthy values, such as **true**, **false**, **0** or **1**. Note that quoting true or false in the query will cause the match to fail.
-    **/
+     */
     nodesChildrenList(req: operations.NodesChildrenListRequest, config?: AxiosRequestConfig): Promise<operations.NodesChildrenListResponse>;
     /**
-     * nodesCitationList - Retrieve citation details
+     * Retrieve citation details
      *
+     * @remarks
      * The citation details for a node, in CSL format.
      * #### Returns
      * Returns a JSON object with a `data` key that contains the representation of the details necessary for the node citation.
-    **/
+     */
     nodesCitationList(req: operations.NodesCitationListRequest, config?: AxiosRequestConfig): Promise<operations.NodesCitationListResponse>;
     /**
-     * nodesCitationRead - Retrieve a styled citation
+     * Retrieve a styled citation
      *
+     * @remarks
      * The citation for a node in a specific style.
      * #### Returns
      * Returns a JSON object with a `data` key that contains the representation of the node citation, in the requested style.
-    **/
+     */
     nodesCitationRead(req: operations.NodesCitationReadRequest, config?: AxiosRequestConfig): Promise<operations.NodesCitationReadResponse>;
     /**
-     * nodesCommentCreate - Create a comment
+     * Create a comment
      *
+     * @remarks
      * Create a comment on a given node overview page or a reply to a comment on that node.
      *
      * To create a comment on the node overview page, the target `type` would be "nodes" and the target `id` would be the node `id`.
      *
      * To reply to a comment on this node, the target `type` would be "comments" and the target `id` would be the `id` of the comment to reply to.
-     * ####Required
+     * #### Required
      * A relationship object with a `data` key, containing the target (`comments` or `nodes`) type and a target `id` is required.
      * In addition, the `content` attribute describing the relationship between the node and the comment is required.
      * #### Returns
      * Returns a JSON object with a data key containing the representation of the new comment, if the request is successful.
      *
      * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
-    **/
+     */
     nodesCommentCreate(req: operations.NodesCommentCreateRequest, config?: AxiosRequestConfig): Promise<operations.NodesCommentCreateResponse>;
     /**
-     * nodesCommentsList - List all comments
+     * List all comments
      *
+     * @remarks
      *
      * A paginated list of comments related to a given node.
      *
@@ -154,11 +163,12 @@ export declare class Nodes {
      * Nodes may be filtered by their `deleted`, `target_id`, `date_created`, `date_modified`.
      *
      * Most fields are string fields and will be filtered using simple substring matching. Public and preprint are boolean fields, and can be filtered using truthy values, such as **true**, **false**, **0** or **1**. Note that quoting `true` or `false` in the query will cause the match to fail.
-    **/
+     */
     nodesCommentsList(req: operations.NodesCommentsListRequest, config?: AxiosRequestConfig): Promise<operations.NodesCommentsListResponse>;
     /**
-     * nodesContributorsCreate - Create a contributor
+     * Create a contributor
      *
+     * @remarks
      * Adds a contributor to a node, effectively creating a relationship between the node and a user.
      *
      * Contributors are users who can make changes to the node or, in the case of private nodes, have read access to the node.
@@ -174,11 +184,12 @@ export declare class Nodes {
      * Returns a JSON object with a `data` key containing the representation of the new contributor, if the request is successful.
      *
      * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
-    **/
+     */
     nodesContributorsCreate(req: operations.NodesContributorsCreateRequest, config?: AxiosRequestConfig): Promise<operations.NodesContributorsCreateResponse>;
     /**
-     * nodesContributorsDelete - Delete a contributor
+     * Delete a contributor
      *
+     * @remarks
      * Removes a contributor from a node. This request only removes the relationship between the node and the user, it does not delete the user itself.
      *
      * A node must always have at least one admin, and attempting to remove the only admin from a node will result in a **400 Bad Request** response.
@@ -188,11 +199,12 @@ export declare class Nodes {
      * If the request is successful, no content is returned.
      *
      * If the request is unsuccessful, a JSON object with an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
-    **/
+     */
     nodesContributorsDelete(req: operations.NodesContributorsDeleteRequest, config?: AxiosRequestConfig): Promise<operations.NodesContributorsDeleteResponse>;
     /**
-     * nodesContributorsList - List all contributors
+     * List all contributors
      *
+     * @remarks
      * A paginated list of the node's contributors, sorted by their index.
      *
      * Contributors are users who can make changes to the node or, in the case of private nodes, have read access to the node.
@@ -211,11 +223,12 @@ export declare class Nodes {
      * You can optionally request that the response only include contributors that match your filters by utilizing the `filter` query parameter, e.g. https://api.osf.io/v2/nodes/y9jdt/contributors/?filter[bibliographic]=true.
      *
      * Contributors may be filtered by their `bibliographic` and `permission` attributes.
-    **/
+     */
     nodesContributorsList(req: operations.NodesContributorsListRequest, config?: AxiosRequestConfig): Promise<operations.NodesContributorsListResponse>;
     /**
-     * nodesContributorsPartialUpdate - Update a contributor
+     * Update a contributor
      *
+     * @remarks
      * Updates a contributor by setting the values of the attributes specified in the request body. Any unspecified attributes will be left unchanged.
      *
      * Contributors can be updated with either a **PUT** or **PATCH** request. Since this endpoint has no mandatory attributes, PUT and PATCH are functionally the same.
@@ -227,11 +240,12 @@ export declare class Nodes {
      * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
      *
      * If the given user is not already in the contributor list, a 404 Not Found error will be returned. A node must always have at least one admin, and any attempt to downgrade the permissions of a sole admin will result in a 400 Bad Request error.
-    **/
+     */
     nodesContributorsPartialUpdate(req: operations.NodesContributorsPartialUpdateRequest, config?: AxiosRequestConfig): Promise<operations.NodesContributorsPartialUpdateResponse>;
     /**
-     * nodesContributorsRead - Retrieve a contributor
+     * Retrieve a contributor
      *
+     * @remarks
      * Retrieves the details of a given contributor.
      *
      * Contributors are users who can make changes to the node or, in the case of private nodes, have read access to the node.
@@ -241,11 +255,12 @@ export declare class Nodes {
      * Returns a JSON object with a `data` key containing the representation of the requested contributor, if the request is successful.
      *
      * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
-    **/
+     */
     nodesContributorsRead(req: operations.NodesContributorsReadRequest, config?: AxiosRequestConfig): Promise<operations.NodesContributorsReadResponse>;
     /**
-     * nodesCreate - Create a node
+     * Create a node
      *
+     * @remarks
      * Creates a new node.
      *
      * On the OSF, nodes are considered **projects** or **components**. The difference between a project and a component is that a project is a top-level node, and a component is a child of a project.
@@ -263,11 +278,12 @@ export declare class Nodes {
      * Returns a JSON object with a `data` key containing the representation of the created node, if the request is successful.
      *
      * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
-    **/
-    nodesCreate(req: operations.NodesCreateRequest, config?: AxiosRequestConfig): Promise<operations.NodesCreateResponse>;
+     */
+    nodesCreate(req: operations.NodesCreateNodeInput, config?: AxiosRequestConfig): Promise<operations.NodesCreateResponse>;
     /**
-     * nodesDelete - Delete a node
+     * Delete a node
      *
+     * @remarks
      *
      * Permanently deletes a node. This action cannot be undone.
      * #### Permissions
@@ -276,13 +292,14 @@ export declare class Nodes {
      * If the request is successful, no content is returned.
      *
      * If the request is unsuccessful, a JSON object with an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
-    **/
+     */
     nodesDelete(req: operations.NodesDeleteRequest, config?: AxiosRequestConfig): Promise<operations.NodesDeleteResponse>;
     /**
-     * nodesDraftRegistrationsCreate - Create a draft registration
+     * Create a draft registration based on your current project Node.
      *
+     * @remarks
      * Initiate a draft registration of the current node.
-     * Draft registrations contain the supplemental registration questions that accompany a registration. A registration is a frozen version of the project that can never be edited or deleted, but can be withdrawn.
+     * Draft Registrations contain Registration questions that will become part of the Registration. A Registration is a frozen version of the project that can never be deleted, but can be withdrawn and have it's metadata edited.
      *
      * Your original project remains editable but will now have the draft registration linked to it.
      * #### Permissions
@@ -290,16 +307,17 @@ export declare class Nodes {
      * #### Required
      * Required fields for creating a draft registration include:
      *
-     * &nbsp;&nbsp;&nbsp;&nbsp`registration_supplement`
+     * &nbsp;&nbsp;&nbsp;&nbsp;`schema_id`
      * #### Returns
      * Returns a JSON object with a `data` key containing the representation of the created draft registration, if the request is successful.
      *
      * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
-    **/
+     */
     nodesDraftRegistrationsCreate(req: operations.NodesDraftRegistrationsCreateRequest, config?: AxiosRequestConfig): Promise<operations.NodesDraftRegistrationsCreateResponse>;
     /**
-     * nodesDraftRegistrationsDelete - Delete a draft registration
+     * Delete a draft registration
      *
+     * @remarks
      * Permanently deletes a draft registration. A draft that has already been registered cannot be deleted.
      * #### Permissions
      * Only project administrators may delete draft registrations.
@@ -307,14 +325,15 @@ export declare class Nodes {
      * If the request is successful, no content is returned.
      *
      * If the request is unsuccessful, a JSON object with an `errors` key containing information about the failure will be returned. Refer to the [list of error codes]() to understand why this request may have failed.
-    **/
+     */
     nodesDraftRegistrationsDelete(req: operations.NodesDraftRegistrationsDeleteRequest, config?: AxiosRequestConfig): Promise<operations.NodesDraftRegistrationsDeleteResponse>;
     /**
-     * nodesDraftRegistrationsList - List all draft registrations
+     * List all draft registrations
      *
+     * @remarks
      * A paginated list of all of the draft registrations of a given node.
      *
-     * Draft registrations contain the supplemental registration questions that accompany a registration. A registration is a frozen version of the project that can never be edited or deleted, but can be withdrawn.
+     * Draft Registrations contain Registration questions that will become part of the Registration. A Registration is a frozen version of the project that can never be deleted, but can be withdrawn and have it's metadata edited.
      *
      * Your original project remains editable but will now have the draft registration linked to it.
      * #### Permissions
@@ -325,14 +344,15 @@ export declare class Nodes {
      * The `data` key contains an array of 10 draft registrations. Each resource in the array is a separate draft registration object and contains the full representation of the draft registration, meaning additional requests to a draft registration's detail view are not necessary.
      *
      * The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
-    **/
+     */
     nodesDraftRegistrationsList(req: operations.NodesDraftRegistrationsListRequest, config?: AxiosRequestConfig): Promise<operations.NodesDraftRegistrationsListResponse>;
     /**
-     * nodesDraftRegistrationsPartialUpdate - Update a draft registration
+     * Update a draft registration
      *
+     * @remarks
      * Updates a draft registration by setting the values of the attributes specified in the request body. Any unspecified attributes will be left unchanged.
      *
-     * Draft registrations contain the supplemental registration questions that accompany a registration. Answer the questions in the draft registration supplement by sending update requests until you are ready to submit the draft.
+     * Draft Registrations contain Registration questions that will become part of the Registration. Answer the questions in the draft registration supplement by sending update requests until you are ready to submit the draft.
      *
      * The registration supplement of a draft registration cannot be updated after the draft has been created.
      *
@@ -345,26 +365,12 @@ export declare class Nodes {
      * Returns a JSON object with a `data` key containing the new representation of the updated draft registration, if the request is successful.
      *
      * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
-    **/
+     */
     nodesDraftRegistrationsPartialUpdate(req: operations.NodesDraftRegistrationsPartialUpdateRequest, config?: AxiosRequestConfig): Promise<operations.NodesDraftRegistrationsPartialUpdateResponse>;
     /**
-     * nodesDraftRegistrationsRead - Retrieve a draft registration
+     * List all node files
      *
-     * Retrieve the details of a given draft registration.
-     * Draft registrations contain the supplemental registration questions that accompany a registration. A registration is a frozen version of the project that can never be edited or deleted, but can be withdrawn.
-     *
-     * Your original project remains editable but will now have the draft registration linked to it.
-     * #### Permissions
-     * Only project administrators may view draft registrations.
-     * #### Returns
-     * Returns a JSON object with a `data` key containing the representation of the requested draft registration, if the request is successful.
-     *
-     * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
-    **/
-    nodesDraftRegistrationsRead(req: operations.NodesDraftRegistrationsReadRequest, config?: AxiosRequestConfig): Promise<operations.NodesDraftRegistrationsReadResponse>;
-    /**
-     * nodesFilesList - List all node files
-     *
+     * @remarks
      * List of all the files/folders that are attached to your project for a given storage provider.
      * #### Returns
      * Returns a JSON object containing `data` and `links` keys.
@@ -379,7 +385,7 @@ export declare class Nodes {
      *
      * Node files may be filtered by `id`, `name`, `node`, `kind`, `path`, `provider`, `size`, and `last_touched`.
      *
-     * ###Waterbutler API actions
+     * ### Waterbutler API actions
      *
      * Files can be modified through the Waterbutler API routes found in `links` (`new_folder`, `move`, `upload`, `download`, and `delete`).
      *
@@ -412,21 +418,23 @@ export declare class Nodes {
      * #### Delete (file, folders)
      *
      * To delete a file or folder send a DELETE request to the delete link. Nothing will be returned in the response body.
-    **/
+     */
     nodesFilesList(req: operations.NodesFilesListRequest, config?: AxiosRequestConfig): Promise<operations.NodesFilesListResponse>;
     /**
-     * nodesFilesRead - Retrieve a file
+     * Retrieve a file
      *
+     * @remarks
      * Retrieves the details of a file attached to given node (project or component) for the given storage provider.
      * #### Returns
      * Returns a JSON object with a `data` key containing the representation of the requested file object, if the request is successful.
      *
      * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
-    **/
+     */
     nodesFilesRead(req: operations.NodesFilesReadRequest, config?: AxiosRequestConfig): Promise<operations.NodesFilesReadResponse>;
     /**
-     * nodesForksCreate - Create a fork of this node
+     * Create a fork of this node
      *
+     * @remarks
      * Creates a fork of the given node.
      *
      * Forking a project creates a copy of an existing node and all of its contents. The fork always points back to the original node, forming a network of nodes.
@@ -441,11 +449,12 @@ export declare class Nodes {
      * #### Returns
      * Returns a JSON object with a `data` key containing the complete srepresentation of the forked node, if the request is successful.
      * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
-    **/
+     */
     nodesForksCreate(req: operations.NodesForksCreateRequest, config?: AxiosRequestConfig): Promise<operations.NodesForksCreateResponse>;
     /**
-     * nodesForksList - List all forks of this node
+     * List all forks of this node
      *
+     * @remarks
      *
      * A paginated list of the current node's forks. The returned fork nodes are sorted by their `forked_date`, with the most recently forked nodes appearing first.
      *
@@ -458,11 +467,12 @@ export declare class Nodes {
      * The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
      *
      * This request should never return an error.
-    **/
+     */
     nodesForksList(req: operations.NodesForksListRequest, config?: AxiosRequestConfig): Promise<operations.NodesForksListResponse>;
     /**
-     * nodesIdentifiersList - List all identifiers
+     * List all identifiers
      *
+     * @remarks
      * List all identifiers associated with a given node.
      * #### Returns
      * Returns a JSON object containing `data` and `links` keys.
@@ -475,11 +485,12 @@ export declare class Nodes {
      * You can optionally request that the response only include nodes that match your filters by utilizing the `filter` query parameter, e.g. https://api.osf.io/v2/nodes/ezcuj/identifiers/?filter[category]=ark
      *
      * Identifiers may be filtered by their `category` e.g `ark` or `doi`.
-    **/
+     */
     nodesIdentifiersList(req: operations.NodesIdentifiersListRequest, config?: AxiosRequestConfig): Promise<operations.NodesIdentifiersListResponse>;
     /**
-     * nodesInstitutionsList - List all institutions
+     * List all institutions
      *
+     * @remarks
      * List of all institutions affiliated with this node.
      * #### Returns
      * Returns a JSON object containing `data` and `links` keys.
@@ -487,11 +498,12 @@ export declare class Nodes {
      * The `data` key contains an array of up to 10 affilited institutions. Each resource in the array is a separate institution object.
      *
      * The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
-    **/
+     */
     nodesInstitutionsList(req: operations.NodesInstitutionsListRequest, config?: AxiosRequestConfig): Promise<operations.NodesInstitutionsListResponse>;
     /**
-     * nodesLinkedNodesList - List all linked nodes
+     * List all linked nodes
      *
+     * @remarks
      * List of all nodes linked to the given node.
      * #### Returns
      * Returns a JSON object containing `data` and `links` keys.
@@ -503,11 +515,12 @@ export declare class Nodes {
      * You can optionally request that the response only include nodes that match your filters by utilizing the `filter` query parameter, e.g. https://api.osf.io/v2/nodes/?filter[title]=reproducibility.
      *
      * Nodes may be filtered by their `title`, `category`, `description`, `public`, `registration`, or `tags`. `title`, `description`, and `category` are string fields and will be filteres using simple substring matching. `public`, `registration` are boolean and can be filtered using truthy values, such as `true`, `false`, `0`, `1`. `tags` is an array of simple strings.
-    **/
+     */
     nodesLinkedNodesList(req: operations.NodesLinkedNodesListRequest, config?: AxiosRequestConfig): Promise<operations.NodesLinkedNodesListResponse>;
     /**
-     * nodesList - List all nodes
+     * List all nodes
      *
+     * @remarks
      *
      * A paginated list of nodes, representing projects and components, on the OSF.
      *
@@ -530,11 +543,12 @@ export declare class Nodes {
      * Nodes may be filtered by their `id`, `title`, `category`, `description`, `public`, `tags`, `date_created`, `date_modified`, `root`, `parent`, `preprint`, and `contributors`.
      *
      * Most fields are string fields and will be filtered using simple substring matching. Public and preprint are boolean fields, and can be filtered using truthy values, such as **true**, **false**, **0** or **1**. Note that quoting true or false in the query will cause the match to fail.
-    **/
+     */
     nodesList(config?: AxiosRequestConfig): Promise<operations.NodesListResponse>;
     /**
-     * nodesLogsList - List all logs
+     * List all logs
      *
+     * @remarks
      * A paginated list of all logs associated with a given node.
      *
      * The returned logs are sorted by their `date`, with the most recents logs appearing first.
@@ -551,11 +565,12 @@ export declare class Nodes {
      * You can optionally request that the response only include logs that match your filters by utilizing the `filter` query parameter, e.g. https://api.osf.io/v2/nodes/ezcuj/logs/?filter[action]=made_private.
      *
      * Nodes may be filtered by their `action`, and `date`.
-    **/
+     */
     nodesLogsList(req: operations.NodesLogsListRequest, config?: AxiosRequestConfig): Promise<operations.NodesLogsListResponse>;
     /**
-     * nodesNodeAddonUpdate - Update an addon
+     * Update an addon
      *
+     * @remarks
      * Updates a node addon by setting the values of the attributes specified in the request body. Any unspecified attributes will be left unchanged.
      *
      * Node addon can be updated with either a **PUT** or **PATCH** request. The `external_account_id`, `enabled`, and `folder_id` fields are mandatory in a **PUT**, and optional in **PATCH**. Non-string values will be accepted and stringified, however we make no promises about the stringification output.
@@ -569,11 +584,12 @@ export declare class Nodes {
      * Returns a JSON object with a `data` key containing the new representation of the updated node addon, if the request is successful.
      *
      * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
-    **/
+     */
     nodesNodeAddonUpdate(req: operations.NodesNodeAddonUpdateRequest, config?: AxiosRequestConfig): Promise<operations.NodesNodeAddonUpdateResponse>;
     /**
-     * nodesPartialUpdate - Update a node
+     * Update a node
      *
+     * @remarks
      * Updates a node by setting the values of the attributes specified in the request body. Any unspecified attributes will be left unchanged.
      *
      * Nodes can be updated with either a **PUT** or **PATCH** request. The `title` and `category` fields are mandatory in a **PUT** request, and optional in a **PATCH**.
@@ -583,11 +599,12 @@ export declare class Nodes {
      * Returns a JSON object with a `data` key containing the new representation of the updated node, if the request is successful.
      *
      * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
-    **/
+     */
     nodesPartialUpdate(req: operations.NodesPartialUpdateRequest, config?: AxiosRequestConfig): Promise<operations.NodesPartialUpdateResponse>;
     /**
-     * nodesPreprintsList - List all preprints
+     * List all preprints
      *
+     * @remarks
      * A paginated list of preprints related to a given node. The returned preprints are sorted by their creation date, with the most recent preprints appearing first.
      *
      * **Note: This API endpoint is under active development, and is subject to change in the future.**
@@ -597,11 +614,12 @@ export declare class Nodes {
      * The `data` key contains an array of up to 10 preprints. Each resource in the array is a separate preprint object.
      *
      * The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
-    **/
+     */
     nodesPreprintsList(req: operations.NodesPreprintsListRequest, config?: AxiosRequestConfig): Promise<operations.NodesPreprintsListResponse>;
     /**
-     * nodesProvidersList - List all storage providers
+     * List all storage providers
      *
+     * @remarks
      * List of all storage providers that are configured for this node
      *
      * Users of the OSF may access their data on a [number of cloud-storage services](https://api.osf.io/v2/#storage-providers) that have integrations with the OSF. We call these **providers**. By default, every node has access to the OSF-provided storage but may use as many of the supported providers as desired.
@@ -615,21 +633,23 @@ export declare class Nodes {
      * The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
      *
      * Note: In the OSF filesystem model, providers are treated as folders, but with special properties that distinguish them from regular folders. Every provider folder is considered a root folder, and may not be deleted through the regular file API.
-    **/
+     */
     nodesProvidersList(req: operations.NodesProvidersListRequest, config?: AxiosRequestConfig): Promise<operations.NodesProvidersListResponse>;
     /**
-     * nodesProvidersRead - Retrieve a storage provider
+     * Retrieve a storage provider
      *
+     * @remarks
      * Retrieves the details of a storage provider enabled on this node.
      * #### Returns
      * Returns a JSON object with a `data` key containing the representation of the requested file object, if the request is successful.
      *
      * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
-    **/
+     */
     nodesProvidersRead(req: operations.NodesProvidersReadRequest, config?: AxiosRequestConfig): Promise<operations.NodesProvidersReadResponse>;
     /**
-     * nodesRead - Retrieve a node
+     * Retrieve a node
      *
+     * @remarks
      * Retrieves the details of a given node (project or component).
      * #### Permissions
      * Only project contributors may retrieve the details of a private node. Attempting to retreive a private node for which you are not a contributor will result in a **403 Forbidden** response.
@@ -639,11 +659,12 @@ export declare class Nodes {
      * Returns a JSON object with a `data` key containing the representation of the requested node, if the request is successful.
      *
      * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
-    **/
+     */
     nodesRead(req: operations.NodesReadRequest, config?: AxiosRequestConfig): Promise<operations.NodesReadResponse>;
     /**
-     * nodesRegistrationsList - List all registrations
+     * List all registrations
      *
+     * @remarks
      * List of all registrations of the given node.
      * #### Returns
      *
@@ -657,11 +678,12 @@ export declare class Nodes {
      * You can optionally request that the response only include registrations that match your filters by utilizing the filter query parameter, e.g. https://api.osf.io/v2/registrations/?filter[title]=open.
      *
      * Registrations may be filtered by their `id`, `title`, `category`, `description`, `public`, `tags`, `date_created`, `date_modified`, `root`, `parent`, and `contributors`.
-    **/
+     */
     nodesRegistrationsList(req: operations.NodesRegistrationsListRequest, config?: AxiosRequestConfig): Promise<operations.NodesRegistrationsListResponse>;
     /**
-     * nodesViewOnlyLinksList - List all view only links
+     * List all view only links
      *
+     * @remarks
      * List of view only links on a node.
      * #### Returns
      * Returns a JSON object containing `data` and `links` keys.
@@ -679,11 +701,12 @@ export declare class Nodes {
      * You can optionally request that the response only include view only links that match your filters by utilizing the `filter` query parameter, e.g. https://api.osf.io/v2/nodes/ezcuj/view_only_links/?filter[anonymous]=true.
      *
      * View Only Links may be filtered based on their `name`, `anonymous` and `date_created` fields. Possible comparison operators include 'gt' (greater than), 'gte'(greater than or equal to), 'lt' (less than) and 'lte' (less than or equal to). The date must be in the format YYYY-MM-DD and the time is optional.
-    **/
+     */
     nodesViewOnlyLinksList(req: operations.NodesViewOnlyLinksListRequest, config?: AxiosRequestConfig): Promise<operations.NodesViewOnlyLinksListResponse>;
     /**
-     * nodesViewOnlyLinksRead - Retrieve a view only link
+     * Retrieve a view only link
      *
+     * @remarks
      * Retrieves the details of a view only link on a node.
      * #### Returns
      * Returns a JSON object with a `data` key containing the representation of the requested view only link, if the request is successful.
@@ -692,11 +715,12 @@ export declare class Nodes {
      * #### Permissions
      *
      * View only links on a node, public or private, are readable and writeable only by users that are administrators on the node.
-    **/
+     */
     nodesViewOnlyLinksRead(req: operations.NodesViewOnlyLinksReadRequest, config?: AxiosRequestConfig): Promise<operations.NodesViewOnlyLinksReadResponse>;
     /**
-     * nodesWikisList - List all wikis
+     * List all wikis
      *
+     * @remarks
      * List of wiki pages on a node.
      * #### Returns
      * Paginated list of the node's current wiki page versions ordered by their date_modified. Each resource contains the full representation of the wiki, meaning additional requests to an individual wiki's detail view are not necessary.
@@ -710,6 +734,6 @@ export declare class Nodes {
      * + `filter[date_modified][comparison_operator]=YYYY-MM-DDTH:M:S` -- filter wiki pages based on date modified.
      *
      * Possible comparison operators include 'gt' (greater than), 'gte'(greater than or equal to), 'lt' (less than) and 'lte' (less than or equal to). The date must be in the format YYYY-MM-DD and the time is optional.
-    **/
+     */
     nodesWikisList(req: operations.NodesWikisListRequest, config?: AxiosRequestConfig): Promise<operations.NodesWikisListResponse>;
 }

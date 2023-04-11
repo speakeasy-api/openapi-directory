@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SetOwnerPathParams extends SpeakeasyBase {
-    agentNum: number;
-    owner: string;
-}
+import { AxiosResponse } from "axios";
 export declare class SetOwnerRequest extends SpeakeasyBase {
-    pathParams: SetOwnerPathParams;
+    /**
+     * Agent to set the owner
+     */
+    agentNum: number;
+    /**
+     * Owner of the agent
+     */
+    owner: string;
 }
 export declare class SetOwnerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     setOwner200ApplicationJSONString?: string;
 }

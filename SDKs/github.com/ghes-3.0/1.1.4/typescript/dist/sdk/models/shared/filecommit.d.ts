@@ -55,7 +55,7 @@ export declare class FileCommitContent extends SpeakeasyBase {
 }
 /**
  * File Commit
-**/
+ */
 export declare class FileCommit extends SpeakeasyBase {
     commit: FileCommitCommit;
     content: FileCommitContent;

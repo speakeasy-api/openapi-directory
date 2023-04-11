@@ -1,13 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class VirtualizationClusterTypesReadPathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class VirtualizationClusterTypesReadRequest extends SpeakeasyBase {
-    pathParams: VirtualizationClusterTypesReadPathParams;
+    /**
+     * A unique integer value identifying this cluster type.
+     */
+    id: number;
 }
 export declare class VirtualizationClusterTypesReadResponse extends SpeakeasyBase {
     clusterType?: shared.ClusterType;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

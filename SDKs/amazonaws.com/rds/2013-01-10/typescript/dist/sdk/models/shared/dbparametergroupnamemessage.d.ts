@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DbParameterGroupNameMessage extends SpeakeasyBase {
+/**
+ * Success
+ */
+export declare class DBParameterGroupNameMessage extends SpeakeasyBase {
     dbParameterGroupName?: string;
 }

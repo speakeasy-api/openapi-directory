@@ -6,7 +6,7 @@ import { TriggerStateEnum } from "./triggerstateenum";
 import { TriggerTypeEnum } from "./triggertypeenum";
 /**
  * Information about a specific trigger.
-**/
+ */
 export declare class Trigger extends SpeakeasyBase {
     actions?: Action[];
     description?: string;

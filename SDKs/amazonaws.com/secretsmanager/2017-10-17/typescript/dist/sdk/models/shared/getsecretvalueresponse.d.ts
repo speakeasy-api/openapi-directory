@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class GetSecretValueResponse extends SpeakeasyBase {
     arn?: string;
     createdDate?: Date;

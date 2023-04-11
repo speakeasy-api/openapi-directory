@@ -1,0 +1,11 @@
+/**
+ * The validation level of the certificate:
+ *
+ * @remarks
+ * <ul><li>Domain validated: Basic check of the identity of the owner of the domain name.</li><li>Organization validated: Company details are verified and integrated in the certificate.</li><li>Extended validated: A thorough verification of your domain name and company details.</li></ul>
+ */
+export declare enum SslCertificateValidationLevelEnum {
+    DomainValidated = "domain_validated",
+    OrganizationValidated = "organization_validated",
+    ExtendedValidated = "extended_validated"
+}

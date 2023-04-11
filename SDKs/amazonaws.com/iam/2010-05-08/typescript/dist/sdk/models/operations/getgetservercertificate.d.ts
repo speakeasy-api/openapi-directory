@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetGetServerCertificateActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETGETServerCertificateActionEnum {
     GetServerCertificate = "GetServerCertificate"
 }
-export declare enum GetGetServerCertificateVersionEnum {
+export declare enum GETGETServerCertificateVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class GetGetServerCertificateQueryParams extends SpeakeasyBase {
-    action: GetGetServerCertificateActionEnum;
+export declare class GETGETServerCertificateRequest extends SpeakeasyBase {
+    action: GETGETServerCertificateActionEnum;
+    /**
+     * <p>The name of the server certificate you want to retrieve information about.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
+     */
     serverCertificateName: string;
-    version: GetGetServerCertificateVersionEnum;
-}
-export declare class GetGetServerCertificateHeaders extends SpeakeasyBase {
+    version: GETGETServerCertificateVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetGetServerCertificateHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetGetServerCertificateRequest extends SpeakeasyBase {
-    queryParams: GetGetServerCertificateQueryParams;
-    headers: GetGetServerCertificateHeaders;
-}
-export declare class GetGetServerCertificateResponse extends SpeakeasyBase {
+export declare class GETGETServerCertificateResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

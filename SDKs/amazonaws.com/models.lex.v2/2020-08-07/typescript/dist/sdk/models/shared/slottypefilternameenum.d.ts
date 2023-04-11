@@ -1,3 +1,4 @@
 export declare enum SlotTypeFilterNameEnum {
-    SlotTypeName = "SlotTypeName"
+    SlotTypeName = "SlotTypeName",
+    ExternalSourceType = "ExternalSourceType"
 }

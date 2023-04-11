@@ -1,17 +1,17 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { ClearUserSessionsRequest, ClearUserSessionsResponse } from "openapi/src/sdk/models/operations";
+import {
+  ClearUserSessionsRequest,
+  ClearUserSessionsResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: ClearUserSessionsRequest = {
-  pathParams: {
-    userId: "sit",
-  },
-  request: "voluptas".encode(),
+  requestBody: "corrupti".encode(),
+  userId: "provident",
 };
 
 sdk.clearUserSessions(req).then((res: ClearUserSessionsResponse | AxiosError) => {

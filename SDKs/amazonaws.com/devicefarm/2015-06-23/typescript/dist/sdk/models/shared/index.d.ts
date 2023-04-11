@@ -217,4 +217,5 @@ export * from "./upload";
 export * from "./uploadcategoryenum";
 export * from "./uploadstatusenum";
 export * from "./uploadtypeenum";
+export * from "./vpcconfig";
 export * from "./vpceconfiguration";

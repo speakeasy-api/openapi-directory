@@ -1,20 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PatchAutomationV4ActionsAppIdDefinitionIdUpdatePathParams extends SpeakeasyBase {
-    appId: number;
-    definitionId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PatchAutomationV4ActionsAppIdDefinitionIdUpdateSecurity extends SpeakeasyBase {
-    developerHapikey: shared.SchemeDeveloperHapikey;
+    developerHapikey: string;
 }
 export declare class PatchAutomationV4ActionsAppIdDefinitionIdUpdateRequest extends SpeakeasyBase {
-    pathParams: PatchAutomationV4ActionsAppIdDefinitionIdUpdatePathParams;
-    request: shared.ExtensionActionDefinitionPatch;
-    security: PatchAutomationV4ActionsAppIdDefinitionIdUpdateSecurity;
+    /**
+     * The custom workflow action fields to be updated.
+     */
+    extensionActionDefinitionPatch: shared.ExtensionActionDefinitionPatch;
+    appId: number;
+    /**
+     * The ID of the custom workflow action.
+     */
+    definitionId: string;
 }
 export declare class PatchAutomationV4ActionsAppIdDefinitionIdUpdateResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
+    /**
+     * successful operation
+     */
     extensionActionDefinition?: shared.ExtensionActionDefinition;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

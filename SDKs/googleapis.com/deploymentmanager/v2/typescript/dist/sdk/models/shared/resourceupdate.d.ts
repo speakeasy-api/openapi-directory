@@ -1,16 +1,31 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ResourceAccessControl } from "./resourceaccesscontrol";
 export declare class ResourceUpdateErrorErrors extends SpeakeasyBase {
+    /**
+     * [Output Only] The error type identifier for this error.
+     */
     code?: string;
+    /**
+     * [Output Only] Indicates the field in the request that caused the error. This property is optional.
+     */
     location?: string;
+    /**
+     * [Output Only] An optional, human-readable error message.
+     */
     message?: string;
 }
 /**
  * Output only. If errors are generated during update of the resource, this field will be populated.
-**/
+ */
 export declare class ResourceUpdateError extends SpeakeasyBase {
+    /**
+     * [Output Only] The array of errors encountered while processing this operation.
+     */
     errors?: ResourceUpdateErrorErrors[];
 }
+/**
+ * Output only. The intent of the resource: `PREVIEW`, `UPDATE`, or `CANCEL`.
+ */
 export declare enum ResourceUpdateIntentEnum {
     CreateOrAcquire = "CREATE_OR_ACQUIRE",
     Delete = "DELETE",
@@ -19,6 +34,9 @@ export declare enum ResourceUpdateIntentEnum {
     Abandon = "ABANDON",
     Create = "CREATE"
 }
+/**
+ * Output only. The state of the resource.
+ */
 export declare enum ResourceUpdateStateEnum {
     Pending = "PENDING",
     InProgress = "IN_PROGRESS",
@@ -26,6 +44,9 @@ export declare enum ResourceUpdateStateEnum {
     Failed = "FAILED",
     Aborted = "ABORTED"
 }
+/**
+ * [Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.
+ */
 export declare enum ResourceUpdateWarningsCodeEnum {
     DeprecatedResourceUsed = "DEPRECATED_RESOURCE_USED",
     NoResultsOnPage = "NO_RESULTS_ON_PAGE",
@@ -56,21 +77,60 @@ export declare enum ResourceUpdateWarningsCodeEnum {
     InvalidHealthCheckForDynamicWieghtedLb = "INVALID_HEALTH_CHECK_FOR_DYNAMIC_WIEGHTED_LB"
 }
 export declare class ResourceUpdateWarningsData extends SpeakeasyBase {
+    /**
+     * [Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).
+     */
     key?: string;
+    /**
+     * [Output Only] A warning data value corresponding to the key.
+     */
     value?: string;
 }
 export declare class ResourceUpdateWarnings extends SpeakeasyBase {
+    /**
+     * [Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.
+     */
     code?: ResourceUpdateWarningsCodeEnum;
+    /**
+     * [Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key": "scope", "value": "zones/us-east1-d" }
+     */
     data?: ResourceUpdateWarningsData[];
+    /**
+     * [Output Only] A human-readable description of the warning code.
+     */
     message?: string;
 }
 export declare class ResourceUpdate extends SpeakeasyBase {
+    /**
+     * The access controls set on the resource.
+     */
     accessControl?: ResourceAccessControl;
+    /**
+     * Output only. If errors are generated during update of the resource, this field will be populated.
+     */
     error?: ResourceUpdateError;
+    /**
+     * Output only. The expanded properties of the resource with reference values expanded. Returned as serialized YAML.
+     */
     finalProperties?: string;
+    /**
+     * Output only. The intent of the resource: `PREVIEW`, `UPDATE`, or `CANCEL`.
+     */
     intent?: ResourceUpdateIntentEnum;
+    /**
+     * Output only. URL of the manifest representing the update configuration of this resource.
+     */
     manifest?: string;
+    /**
+     * Output only. The set of updated properties for this resource, before references are expanded. Returned as serialized YAML.
+     */
     properties?: string;
+    /**
+     * Output only. The state of the resource.
+     */
     state?: ResourceUpdateStateEnum;
+    /**
+     * Output only. If warning messages are generated during processing of this resource, this field will be populated.
+     */
     warnings?: ResourceUpdateWarnings[];
 }

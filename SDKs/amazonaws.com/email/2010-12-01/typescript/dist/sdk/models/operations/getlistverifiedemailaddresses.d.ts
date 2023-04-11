@@ -1,15 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetListVerifiedEmailAddressesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETListVerifiedEmailAddressesActionEnum {
     ListVerifiedEmailAddresses = "ListVerifiedEmailAddresses"
 }
-export declare enum GetListVerifiedEmailAddressesVersionEnum {
+export declare enum GETListVerifiedEmailAddressesVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetListVerifiedEmailAddressesQueryParams extends SpeakeasyBase {
-    action: GetListVerifiedEmailAddressesActionEnum;
-    version: GetListVerifiedEmailAddressesVersionEnum;
-}
-export declare class GetListVerifiedEmailAddressesHeaders extends SpeakeasyBase {
+export declare class GETListVerifiedEmailAddressesRequest extends SpeakeasyBase {
+    action: GETListVerifiedEmailAddressesActionEnum;
+    version: GETListVerifiedEmailAddressesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +17,9 @@ export declare class GetListVerifiedEmailAddressesHeaders extends SpeakeasyBase 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetListVerifiedEmailAddressesRequest extends SpeakeasyBase {
-    queryParams: GetListVerifiedEmailAddressesQueryParams;
-    headers: GetListVerifiedEmailAddressesHeaders;
-}
-export declare class GetListVerifiedEmailAddressesResponse extends SpeakeasyBase {
+export declare class GETListVerifiedEmailAddressesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

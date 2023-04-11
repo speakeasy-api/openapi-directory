@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostModifyCurrentDbClusterCapacityActionEnum {
-    ModifyCurrentDbClusterCapacity = "ModifyCurrentDBClusterCapacity"
+import { AxiosResponse } from "axios";
+export declare enum POSTModifyCurrentDBClusterCapacityActionEnum {
+    ModifyCurrentDBClusterCapacity = "ModifyCurrentDBClusterCapacity"
 }
-export declare enum PostModifyCurrentDbClusterCapacityVersionEnum {
+export declare enum POSTModifyCurrentDBClusterCapacityVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class PostModifyCurrentDbClusterCapacityQueryParams extends SpeakeasyBase {
-    action: PostModifyCurrentDbClusterCapacityActionEnum;
-    version: PostModifyCurrentDbClusterCapacityVersionEnum;
-}
-export declare class PostModifyCurrentDbClusterCapacityHeaders extends SpeakeasyBase {
+export declare class POSTModifyCurrentDBClusterCapacityRequest extends SpeakeasyBase {
+    action: POSTModifyCurrentDBClusterCapacityActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTModifyCurrentDBClusterCapacityVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostModifyCurrentDbClusterCapacityHeaders extends Speakeasy
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostModifyCurrentDbClusterCapacityRequest extends SpeakeasyBase {
-    queryParams: PostModifyCurrentDbClusterCapacityQueryParams;
-    headers: PostModifyCurrentDbClusterCapacityHeaders;
-    request?: Uint8Array;
-}
-export declare class PostModifyCurrentDbClusterCapacityResponse extends SpeakeasyBase {
+export declare class POSTModifyCurrentDBClusterCapacityResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -7,7 +7,7 @@ import { RootDeviceTypeEnum } from "./rootdevicetypeenum";
 import { VirtualizationTypeEnum } from "./virtualizationtypeenum";
 /**
  * Describes an instance.
-**/
+ */
 export declare class Instance extends SpeakeasyBase {
     agentVersion?: string;
     amiId?: string;

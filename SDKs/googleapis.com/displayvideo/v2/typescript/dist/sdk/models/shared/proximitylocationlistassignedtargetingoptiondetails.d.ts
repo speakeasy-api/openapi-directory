@@ -1,0 +1,26 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Required. Radius distance units.
+ */
+export declare enum ProximityLocationListAssignedTargetingOptionDetailsProximityRadiusUnitEnum {
+    ProximityRadiusUnitUnspecified = "PROXIMITY_RADIUS_UNIT_UNSPECIFIED",
+    ProximityRadiusUnitMiles = "PROXIMITY_RADIUS_UNIT_MILES",
+    ProximityRadiusUnitKilometers = "PROXIMITY_RADIUS_UNIT_KILOMETERS"
+}
+/**
+ * Targeting details for proximity location list. This will be populated in the details field of an AssignedTargetingOption when targeting_type is `TARGETING_TYPE_PROXIMITY_LOCATION_LIST`.
+ */
+export declare class ProximityLocationListAssignedTargetingOptionDetails extends SpeakeasyBase {
+    /**
+     * Required. ID of the proximity location list. Should refer to the location_list_id field of a LocationList resource whose type is `TARGETING_LOCATION_TYPE_PROXIMITY`.
+     */
+    proximityLocationListId?: string;
+    /**
+     * Required. Radius expressed in the distance units set in proximity_radius_unit. This represents the size of the area around a chosen location that will be targeted. Radius should be between 1 and 500 miles or 800 kilometers.
+     */
+    proximityRadius?: number;
+    /**
+     * Required. Radius distance units.
+     */
+    proximityRadiusUnit?: ProximityLocationListAssignedTargetingOptionDetailsProximityRadiusUnitEnum;
+}

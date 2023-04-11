@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Inbound messages to an external account which is linked to an application will be delivered to the application's inbound URL.
+ */
 export declare class Application {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,11 +12,11 @@ export declare class Application {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * linkApplication - Link application to an account
-    **/
-    linkApplication(req: operations.LinkApplicationRequest, config?: AxiosRequestConfig): Promise<operations.LinkApplicationResponse>;
+     * Link application to an account
+     */
+    linkApplication(req: operations.LinkApplicationRequest, security: operations.LinkApplicationSecurity, config?: AxiosRequestConfig): Promise<operations.LinkApplicationResponse>;
     /**
-     * unliWithoutApplicationnkApplication - Unlink application from an account
-    **/
-    unliWithoutApplicationnkApplication(req: operations.UnliWithoutApplicationnkApplicationRequest, config?: AxiosRequestConfig): Promise<operations.UnliWithoutApplicationnkApplicationResponse>;
+     * Unlink application from an account
+     */
+    unliWithoutApplicationnkApplication(req: operations.UnliWithoutApplicationnkApplicationRequest, security: operations.UnliWithoutApplicationnkApplicationSecurity, config?: AxiosRequestConfig): Promise<operations.UnliWithoutApplicationnkApplicationResponse>;
 }

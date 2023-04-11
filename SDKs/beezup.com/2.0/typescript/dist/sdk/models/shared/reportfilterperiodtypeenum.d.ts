@@ -1,3 +1,6 @@
+/**
+ * Indicates the period type we want use for the report filter
+ */
 export declare enum ReportFilterPeriodTypeEnum {
     Custom = "Custom",
     Yesterday = "Yesterday",

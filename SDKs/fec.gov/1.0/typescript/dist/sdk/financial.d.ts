@@ -1,5 +1,16 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Fetch key information about a committee's Form 3, Form 3X, or Form 3P financial reports.
+ *
+ * @remarks
+ *
+ *  Most committees are required to summarize their financial activity in each filing; those summaries are included in these files. Generally, committees file reports on a quarterly or monthly basis, but some must also submit a report 12 days before primary elections. Therefore, during the primary season, the period covered by this file may be different for different committees. These totals also incorporate any changes made by committees, if any report covering the period is amended.
+ *
+ *  Information is made available on the API as soon as it's processed. Keep in mind, complex paper filings take longer to process.
+ *
+ *  The financial endpoints use data from FEC [form 5](https://www.fec.gov/pdf/forms/fecfrm5.pdf), for independent expenditors; or the summary and detailed summary pages of the FEC [Form 3](https://www.fec.gov/pdf/forms/fecfrm3.pdf), for House and Senate committees; [Form 3X](https://www.fec.gov/pdf/forms/fecfrm3x.pdf), for PACs and parties; and [Form 3P](https://www.fec.gov/pdf/forms/fecfrm3p.pdf), for presidential committees.
+ */
 export declare class Financial {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +20,7 @@ export declare class Financial {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getCommitteeCommitteeIdReports -
+     *
      * Each report represents the summary information from Form 3, Form 3X and Form 3P.
      * These reports have key statistics that illuminate the financial status of a given committee.
      * Things like cash on hand, debts owed by committee, total receipts, and total disbursements
@@ -26,10 +37,10 @@ export declare class Financial {
      * DISCLAIMER: The field labels contained within this resource are subject to change.  We are attempting to succinctly
      * label these fields while conveying clear meaning to ensure accessibility for all users.
      *
-    **/
+     */
     getCommitteeCommitteeIdReports(req: operations.GetCommitteeCommitteeIdReportsRequest, config?: AxiosRequestConfig): Promise<operations.GetCommitteeCommitteeIdReportsResponse>;
     /**
-     * getCommitteeCommitteeIdTotals -
+     *
      * This endpoint provides information about a committee's Form 3, Form 3X, or Form 3P financial reports,
      * which are aggregated by two-year period. We refer to two-year periods as a `cycle`.
      *
@@ -40,10 +51,10 @@ export declare class Financial {
      * For presidential and Senate candidates, multiple two-year cycles exist between elections.
      *
      *
-    **/
+     */
     getCommitteeCommitteeIdTotals(req: operations.GetCommitteeCommitteeIdTotalsRequest, config?: AxiosRequestConfig): Promise<operations.GetCommitteeCommitteeIdTotalsResponse>;
     /**
-     * getElections -
+     *
      * Look at the top-level financial information for all candidates running for the same
      * office.
      *
@@ -58,22 +69,22 @@ export declare class Financial {
      * financial reporting forms. Query the `/candidates` endpoint to retrieve an-up-to-date list of all the
      * candidates that filed to run for a particular seat.
      *
-    **/
+     */
     getElections(req: operations.GetElectionsRequest, config?: AxiosRequestConfig): Promise<operations.GetElectionsResponse>;
     /**
-     * getElectionsSearch -
+     *
      * List elections by cycle, office, state, and district.
      *
-    **/
+     */
     getElectionsSearch(req: operations.GetElectionsSearchRequest, config?: AxiosRequestConfig): Promise<operations.GetElectionsSearchResponse>;
     /**
-     * getElectionsSummary -
+     *
      * List elections by cycle, office, state, and district.
      *
-    **/
+     */
     getElectionsSummary(req: operations.GetElectionsSummaryRequest, config?: AxiosRequestConfig): Promise<operations.GetElectionsSummaryResponse>;
     /**
-     * getReportsEntityType -
+     *
      * Each report represents the summary information from Form 3, Form 3X and Form 3P.
      * These reports have key statistics that illuminate the financial status of a given committee.
      * Things like cash on hand, debts owed by committee, total receipts, and total disbursements
@@ -90,18 +101,18 @@ export declare class Financial {
      * DISCLAIMER: The field labels contained within this resource are subject to change.  We are attempting to succinctly
      * label these fields while conveying clear meaning to ensure accessibility for all users.
      *
-    **/
+     */
     getReportsEntityType(req: operations.GetReportsEntityTypeRequest, config?: AxiosRequestConfig): Promise<operations.GetReportsEntityTypeResponse>;
     /**
-     * getTotalsByEntity -
+     *
      * Provides cumulative receipt totals by entity type, over a two year cycle. Totals are adjusted to avoid double counting.
      *
      * This is [the sql](https://github.com/fecgov/openFEC/blob/develop/data/migrations/V41__large_aggregates.sql) that creates these calculations.
      *
-    **/
+     */
     getTotalsByEntity(req: operations.GetTotalsByEntityRequest, config?: AxiosRequestConfig): Promise<operations.GetTotalsByEntityResponse>;
     /**
-     * getTotalsEntityType -
+     *
      * This endpoint provides information about a committee's Form 3, Form 3X, or Form 3P financial reports,
      * which are aggregated by two-year period. We refer to two-year periods as a `cycle`.
      *
@@ -112,6 +123,6 @@ export declare class Financial {
      * For presidential and Senate candidates, multiple two-year cycles exist between elections.
      *
      *
-    **/
+     */
     getTotalsEntityType(req: operations.GetTotalsEntityTypeRequest, config?: AxiosRequestConfig): Promise<operations.GetTotalsEntityTypeResponse>;
 }

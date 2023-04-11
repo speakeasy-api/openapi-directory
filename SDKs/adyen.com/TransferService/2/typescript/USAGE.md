@@ -1,22 +1,26 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { PostTransfersRequest, PostTransfersResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetTransactionsRequest,
+  GetTransactionsResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: PostTransfersRequest = {
-  security: {
-    apiKeyAuth: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  },
-  request: "sit",
+
+const req: GetTransactionsRequest = {
+  accountHolderId: "corrupti",
+  balanceAccountId: "provident",
+  balancePlatform: "distinctio",
+  createdSince: "2021-03-11T23:22:42.658Z",
+  createdUntil: "2021-05-14T08:28:11.899Z",
+  cursor: "illum",
+  limit: 423655,
+  paymentInstrumentId: "error",
 };
 
-sdk.general.postTransfers(req).then((res: PostTransfersResponse | AxiosError) => {
+sdk.transactions.getTransactions(req).then((res: GetTransactionsResponse | AxiosError) => {
    // handle response
 });
 ```

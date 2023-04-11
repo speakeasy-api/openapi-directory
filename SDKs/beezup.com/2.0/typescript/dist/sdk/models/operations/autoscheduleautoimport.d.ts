@@ -1,14 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AutoScheduleAutoImportPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class AutoScheduleAutoImportRequest extends SpeakeasyBase {
+    scheduleAutoImportRequest: shared.ScheduleAutoImportRequest;
+    /**
+     * Your store identifier
+     */
     storeId: string;
 }
-export declare class AutoScheduleAutoImportRequest extends SpeakeasyBase {
-    pathParams: AutoScheduleAutoImportPathParams;
-    request: shared.ScheduleAutoImportRequest;
-}
 export declare class AutoScheduleAutoImportResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     *
+     * @remarks
+     * When the max catalog Auto Import count has been reached.
+     * When the min catalog Auto Import scheduling interval delay has been reached.
+     * When the max catalog Auto Import count has been reached.
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

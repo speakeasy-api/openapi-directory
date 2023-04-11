@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteClientValidatorPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteClientValidatorSecurity extends SpeakeasyBase {
-    otoroshiAuth: shared.SchemeOtoroshiAuth;
+    password: string;
+    username: string;
 }
 export declare class DeleteClientValidatorRequest extends SpeakeasyBase {
-    pathParams: DeleteClientValidatorPathParams;
-    security: DeleteClientValidatorSecurity;
+    /**
+     * The validation authorities id
+     */
+    id: string;
 }
 export declare class DeleteClientValidatorResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful operation
+     */
     deleted?: shared.Deleted;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

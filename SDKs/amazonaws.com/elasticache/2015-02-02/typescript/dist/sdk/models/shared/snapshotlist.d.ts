@@ -1,9 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { AutomaticFailoverStatusEnum } from "./automaticfailoverstatusenum";
+import { DataTieringStatusEnum } from "./datatieringstatusenum";
 import { NodeSnapshotList } from "./nodesnapshotlist";
 /**
  * Represents a copy of an entire Redis cluster as of the time when the snapshot was taken.
-**/
+ */
 export declare class SnapshotList extends SpeakeasyBase {
     arn?: string;
     autoMinorVersionUpgrade?: boolean;
@@ -13,6 +14,7 @@ export declare class SnapshotList extends SpeakeasyBase {
     cacheNodeType?: string;
     cacheParameterGroupName?: string;
     cacheSubnetGroupName?: string;
+    dataTiering?: DataTieringStatusEnum;
     engine?: string;
     engineVersion?: string;
     kmsKeyId?: string;

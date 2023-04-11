@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeClusterXAmzTargetEnum {
-    AwsieSnowballJobManagementServiceDescribeCluster = "AWSIESnowballJobManagementService.DescribeCluster"
+    AWSIESnowballJobManagementServiceDescribeCluster = "AWSIESnowballJobManagementService.DescribeCluster"
 }
-export declare class DescribeClusterHeaders extends SpeakeasyBase {
+export declare class DescribeClusterRequest extends SpeakeasyBase {
+    describeClusterRequest: shared.DescribeClusterRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,13 +15,16 @@ export declare class DescribeClusterHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeClusterXAmzTargetEnum;
 }
-export declare class DescribeClusterRequest extends SpeakeasyBase {
-    headers: DescribeClusterHeaders;
-    request: shared.DescribeClusterRequest;
-}
 export declare class DescribeClusterResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeClusterResult?: shared.DescribeClusterResult;
+    /**
+     * InvalidResourceException
+     */
     invalidResourceException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class EnterpriseAdminDeletePersonalAccessTokenPathParams extends SpeakeasyBase {
-    tokenId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class EnterpriseAdminDeletePersonalAccessTokenRequest extends SpeakeasyBase {
-    pathParams: EnterpriseAdminDeletePersonalAccessTokenPathParams;
+    /**
+     * The unique identifier of the token.
+     */
+    tokenId: number;
 }
 export declare class EnterpriseAdminDeletePersonalAccessTokenResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

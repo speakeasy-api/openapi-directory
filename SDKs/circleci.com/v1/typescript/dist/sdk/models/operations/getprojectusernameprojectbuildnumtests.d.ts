@@ -1,15 +1,38 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetProjectUsernameProjectBuildNumTestsPathParams extends SpeakeasyBase {
-    buildNum: number;
-    project: string;
-    username: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetProjectUsernameProjectBuildNumTestsRequest extends SpeakeasyBase {
-    pathParams: GetProjectUsernameProjectBuildNumTestsPathParams;
+    /**
+     * XXXXXXXXXX
+     *
+     * @remarks
+     *
+     */
+    buildNum: number;
+    /**
+     * XXXXXXXXX
+     *
+     * @remarks
+     *
+     */
+    project: string;
+    /**
+     * XXXXXXXXX
+     *
+     * @remarks
+     *
+     */
+    username: string;
 }
 export declare class GetProjectUsernameProjectBuildNumTestsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * test metadata for a build
+     *
+     * @remarks
+     *
+     */
     tests?: shared.Tests;
 }

@@ -1,22 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeOrderableDbInstanceOptionsActionEnum {
-    DescribeOrderableDbInstanceOptions = "DescribeOrderableDBInstanceOptions"
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeOrderableDBInstanceOptionsActionEnum {
+    DescribeOrderableDBInstanceOptions = "DescribeOrderableDBInstanceOptions"
 }
-export declare enum GetDescribeOrderableDbInstanceOptionsVersionEnum {
+export declare enum GETDescribeOrderableDBInstanceOptionsVersionEnum {
     TwoThousandAndThirteen0212 = "2013-02-12"
 }
-export declare class GetDescribeOrderableDbInstanceOptionsQueryParams extends SpeakeasyBase {
-    action: GetDescribeOrderableDbInstanceOptionsActionEnum;
+export declare class GETDescribeOrderableDBInstanceOptionsRequest extends SpeakeasyBase {
+    action: GETDescribeOrderableDBInstanceOptionsActionEnum;
     dbInstanceClass?: string;
     engine: string;
     engineVersion?: string;
     licenseModel?: string;
     marker?: string;
     maxRecords?: number;
-    version: GetDescribeOrderableDbInstanceOptionsVersionEnum;
+    version: GETDescribeOrderableDBInstanceOptionsVersionEnum;
     vpc?: boolean;
-}
-export declare class GetDescribeOrderableDbInstanceOptionsHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -25,12 +24,9 @@ export declare class GetDescribeOrderableDbInstanceOptionsHeaders extends Speake
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeOrderableDbInstanceOptionsRequest extends SpeakeasyBase {
-    queryParams: GetDescribeOrderableDbInstanceOptionsQueryParams;
-    headers: GetDescribeOrderableDbInstanceOptionsHeaders;
-}
-export declare class GetDescribeOrderableDbInstanceOptionsResponse extends SpeakeasyBase {
+export declare class GETDescribeOrderableDBInstanceOptionsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

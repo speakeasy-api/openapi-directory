@@ -1,26 +1,34 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum GetHookEventsSubjectTypeSubjectTypeEnum {
-    Workspace = "workspace",
-    User = "user",
-    Repository = "repository",
-    Team = "team"
-}
-export declare class GetHookEventsSubjectTypePathParams extends SpeakeasyBase {
-    subjectType: GetHookEventsSubjectTypeSubjectTypeEnum;
-}
+import { AxiosResponse } from "axios";
 export declare class GetHookEventsSubjectTypeSecurity extends SpeakeasyBase {
-    oauth2?: shared.SchemeOauth2;
+    apiKey?: string;
     basic?: shared.SchemeBasic;
-    apiKey?: shared.SchemeApiKey;
+    oauth2?: string;
+}
+/**
+ * A resource or subject type.
+ */
+export declare enum GetHookEventsSubjectTypeSubjectTypeEnum {
+    Repository = "repository",
+    Workspace = "workspace"
 }
 export declare class GetHookEventsSubjectTypeRequest extends SpeakeasyBase {
-    pathParams: GetHookEventsSubjectTypePathParams;
-    security: GetHookEventsSubjectTypeSecurity;
+    /**
+     * A resource or subject type.
+     */
+    subjectType: GetHookEventsSubjectTypeSubjectTypeEnum;
 }
 export declare class GetHookEventsSubjectTypeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * If an invalid `{subject_type}` value was specified.
+     */
     error?: Record<string, any>;
+    /**
+     * A paginated list of webhook types available to subscribe on.
+     */
     paginatedHookEvents?: shared.PaginatedHookEvents;
 }

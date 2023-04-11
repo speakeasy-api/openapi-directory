@@ -1,15 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ProtocolSyslogSendPathParams extends SpeakeasyBase {
-    agentNum: number;
-    pri: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolSyslogSendRequest extends SpeakeasyBase {
-    pathParams: ProtocolSyslogSendPathParams;
-    request: shared.SyslogMsg;
+    syslogMsg: shared.SyslogMsg;
+    /**
+     * Agent to set the SYSLOG tracing
+     */
+    agentNum: number;
+    /**
+     * Message Priority
+     */
+    pri: number;
 }
 export declare class ProtocolSyslogSendResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolSyslogSend200ApplicationJSONString?: string;
 }

@@ -1,19 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetAuthorizeClusterSecurityGroupIngressActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETAuthorizeClusterSecurityGroupIngressActionEnum {
     AuthorizeClusterSecurityGroupIngress = "AuthorizeClusterSecurityGroupIngress"
 }
-export declare enum GetAuthorizeClusterSecurityGroupIngressVersionEnum {
+export declare enum GETAuthorizeClusterSecurityGroupIngressVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class GetAuthorizeClusterSecurityGroupIngressQueryParams extends SpeakeasyBase {
-    action: GetAuthorizeClusterSecurityGroupIngressActionEnum;
+export declare class GETAuthorizeClusterSecurityGroupIngressRequest extends SpeakeasyBase {
+    action: GETAuthorizeClusterSecurityGroupIngressActionEnum;
+    /**
+     * The IP range to be added the Amazon Redshift security group.
+     */
     cidrip?: string;
+    /**
+     * The name of the security group to which the ingress rule is added.
+     */
     clusterSecurityGroupName: string;
+    /**
+     * The EC2 security group to be added the Amazon Redshift security group.
+     */
     ec2SecurityGroupName?: string;
+    /**
+     * <p>The Amazon Web Services account number of the owner of the security group specified by the <i>EC2SecurityGroupName</i> parameter. The Amazon Web Services Access Key ID is not an acceptable value. </p> <p>Example: <code>111122223333</code> </p>
+     */
     ec2SecurityGroupOwnerId?: string;
-    version: GetAuthorizeClusterSecurityGroupIngressVersionEnum;
-}
-export declare class GetAuthorizeClusterSecurityGroupIngressHeaders extends SpeakeasyBase {
+    version: GETAuthorizeClusterSecurityGroupIngressVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -22,12 +33,9 @@ export declare class GetAuthorizeClusterSecurityGroupIngressHeaders extends Spea
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetAuthorizeClusterSecurityGroupIngressRequest extends SpeakeasyBase {
-    queryParams: GetAuthorizeClusterSecurityGroupIngressQueryParams;
-    headers: GetAuthorizeClusterSecurityGroupIngressHeaders;
-}
-export declare class GetAuthorizeClusterSecurityGroupIngressResponse extends SpeakeasyBase {
+export declare class GETAuthorizeClusterSecurityGroupIngressResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

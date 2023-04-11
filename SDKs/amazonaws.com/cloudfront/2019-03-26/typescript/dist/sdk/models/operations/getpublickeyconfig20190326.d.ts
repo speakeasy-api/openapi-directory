@@ -1,8 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetPublicKeyConfig20190326PathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetPublicKeyConfig20190326Request extends SpeakeasyBase {
+    /**
+     * Request the ID for the public key configuration.
+     */
     id: string;
-}
-export declare class GetPublicKeyConfig20190326Headers extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,12 +13,9 @@ export declare class GetPublicKeyConfig20190326Headers extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetPublicKeyConfig20190326Request extends SpeakeasyBase {
-    pathParams: GetPublicKeyConfig20190326PathParams;
-    headers: GetPublicKeyConfig20190326Headers;
-}
 export declare class GetPublicKeyConfig20190326Response extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

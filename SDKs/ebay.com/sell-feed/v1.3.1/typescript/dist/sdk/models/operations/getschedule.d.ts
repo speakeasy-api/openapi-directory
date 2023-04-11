@@ -1,17 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetSchedulePathParams extends SpeakeasyBase {
-    scheduleId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetScheduleSecurity extends SpeakeasyBase {
-    apiAuth: shared.SchemeApiAuth;
+    apiAuth: string;
 }
 export declare class GetScheduleRequest extends SpeakeasyBase {
-    pathParams: GetSchedulePathParams;
-    security: GetScheduleSecurity;
+    /**
+     * The ID of the schedule for which to retrieve the details. This ID is generated when the schedule was created by the <strong>createSchedule</strong> method.
+     */
+    scheduleId: string;
 }
 export declare class GetScheduleResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     userScheduleResponse?: shared.UserScheduleResponse;
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostRemoveFromGlobalClusterActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTRemoveFromGlobalClusterActionEnum {
     RemoveFromGlobalCluster = "RemoveFromGlobalCluster"
 }
-export declare enum PostRemoveFromGlobalClusterVersionEnum {
+export declare enum POSTRemoveFromGlobalClusterVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class PostRemoveFromGlobalClusterQueryParams extends SpeakeasyBase {
-    action: PostRemoveFromGlobalClusterActionEnum;
-    version: PostRemoveFromGlobalClusterVersionEnum;
-}
-export declare class PostRemoveFromGlobalClusterHeaders extends SpeakeasyBase {
+export declare class POSTRemoveFromGlobalClusterRequest extends SpeakeasyBase {
+    action: POSTRemoveFromGlobalClusterActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTRemoveFromGlobalClusterVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostRemoveFromGlobalClusterHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostRemoveFromGlobalClusterRequest extends SpeakeasyBase {
-    queryParams: PostRemoveFromGlobalClusterQueryParams;
-    headers: PostRemoveFromGlobalClusterHeaders;
-    request?: Uint8Array;
-}
-export declare class PostRemoveFromGlobalClusterResponse extends SpeakeasyBase {
+export declare class POSTRemoveFromGlobalClusterResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

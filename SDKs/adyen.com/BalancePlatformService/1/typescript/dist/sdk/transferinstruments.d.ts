@@ -1,5 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class TransferInstruments {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,29 +10,35 @@ export declare class TransferInstruments {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteTransferInstrumentsId - Delete a transfer instrument
+     * Delete a transfer instrument
      *
+     * @remarks
      * Deletes a transfer instrument.
-    **/
-    deleteTransferInstrumentsId(req: operations.DeleteTransferInstrumentsIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteTransferInstrumentsIdResponse>;
+     */
+    deleteTransferInstrumentsId(req: operations.DeleteTransferInstrumentsIdRequest, security: operations.DeleteTransferInstrumentsIdSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteTransferInstrumentsIdResponse>;
     /**
-     * getTransferInstrumentsId - Retrieve a transfer instrument.
+     * Get a transfer instrument
      *
-     * Returns a specific transfer instrument.
-    **/
-    getTransferInstrumentsId(req: operations.GetTransferInstrumentsIdRequest, config?: AxiosRequestConfig): Promise<operations.GetTransferInstrumentsIdResponse>;
+     * @remarks
+     * Returns the details of a transfer instrument.
+     */
+    getTransferInstrumentsId(req: operations.GetTransferInstrumentsIdRequest, security: operations.GetTransferInstrumentsIdSecurity, config?: AxiosRequestConfig): Promise<operations.GetTransferInstrumentsIdResponse>;
     /**
-     * patchTransferInstrumentsId - Update a transfer instrument.
+     * Update a transfer instrument
      *
+     * @remarks
      * Updates a transfer instrument.
-    **/
-    patchTransferInstrumentsId(req: operations.PatchTransferInstrumentsIdRequest, config?: AxiosRequestConfig): Promise<operations.PatchTransferInstrumentsIdResponse>;
+     */
+    patchTransferInstrumentsId(req: operations.PatchTransferInstrumentsIdRequest, security: operations.PatchTransferInstrumentsIdSecurity, config?: AxiosRequestConfig): Promise<operations.PatchTransferInstrumentsIdResponse>;
     /**
-     * postTransferInstruments - Create a transfer instrument.
+     * Create a transfer instrument
      *
-     * Creates a transfer instrument. A transfer instrument is a bank account or other payment details that a legal entity owns. Adyen performs Know Your Customer (KYC) checks on the transfer instrument as required by payment industry regulations. Your Adyen contact will inform you of the status and results of the KYC checks.
+     * @remarks
+     * Creates a transfer instrument.
+     *
+     * A transfer instrument is a bank account that a legal entity owns. Adyen performs verification checks on the transfer instrument as required by payment industry regulations. We inform you of the verification results through webhooks or API responses.
      *
      * When the transfer instrument passes the verification checks, you can start sending funds from the balance platform to the transfer instrument (such as payouts).
-    **/
-    postTransferInstruments(req: operations.PostTransferInstrumentsRequest, config?: AxiosRequestConfig): Promise<operations.PostTransferInstrumentsResponse>;
+     */
+    postTransferInstruments(req: shared.TransferInstrumentInfo, security: operations.PostTransferInstrumentsSecurity, config?: AxiosRequestConfig): Promise<operations.PostTransferInstrumentsResponse>;
 }

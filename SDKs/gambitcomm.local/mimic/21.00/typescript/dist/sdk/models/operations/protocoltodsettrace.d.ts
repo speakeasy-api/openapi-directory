@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolTodSetTracePathParams extends SpeakeasyBase {
-    agentNum: number;
-    enableOrNot: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolTodSetTraceRequest extends SpeakeasyBase {
-    pathParams: ProtocolTodSetTracePathParams;
+    /**
+     * Agent to set the TOD tracing
+     */
+    agentNum: number;
+    /**
+     * Value to set the TOD tracing
+     */
+    enableOrNot: string;
 }
 export declare class ProtocolTodSetTraceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolTodSetTrace200ApplicationJSONString?: string;
 }

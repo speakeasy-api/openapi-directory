@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class TrackPackagePathParams extends SpeakeasyBase {
-    id: number;
-}
-export declare class TrackPackageQueryParams extends SpeakeasyBase {
-    key?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class TrackPackageRequest extends SpeakeasyBase {
-    pathParams: TrackPackagePathParams;
-    queryParams: TrackPackageQueryParams;
+    /**
+     * Project ID
+     */
+    id: number;
+    /**
+     * This is the package tracking key provided in the response of a /package call.
+     */
+    key?: string;
 }
 export declare class TrackPackageResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * ProjectNotLaunchedYet
+     */
     error?: shared.ErrorT;
+    /**
+     * Current status of packaging process.
+     */
     packageStatus?: shared.PackageStatus;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

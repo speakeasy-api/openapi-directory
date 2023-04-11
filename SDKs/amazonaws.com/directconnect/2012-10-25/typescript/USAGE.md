@@ -1,38 +1,44 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AcceptDirectConnectGatewayAssociationProposalRequest, AcceptDirectConnectGatewayAssociationProposalResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  AcceptDirectConnectGatewayAssociationProposalRequest,
+  AcceptDirectConnectGatewayAssociationProposalResponse,
+  AcceptDirectConnectGatewayAssociationProposalXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: AcceptDirectConnectGatewayAssociationProposalRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "OvertureService.AcceptDirectConnectGatewayAssociationProposal",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
-    associatedGatewayOwnerAccount: "fugit",
-    directConnectGatewayId: "et",
+});
+
+const req: AcceptDirectConnectGatewayAssociationProposalRequest = {
+  acceptDirectConnectGatewayAssociationProposalRequest: {
+    associatedGatewayOwnerAccount: "corrupti",
+    directConnectGatewayId: "provident",
     overrideAllowedPrefixesToDirectConnectGateway: [
       {
-        cidr: "rerum",
+        cidr: "quibusdam",
+      },
+      {
+        cidr: "unde",
+      },
+      {
+        cidr: "nulla",
       },
     ],
-    proposalId: "dicta",
+    proposalId: "corrupti",
   },
+  xAmzAlgorithm: "illum",
+  xAmzContentSha256: "vel",
+  xAmzCredential: "error",
+  xAmzDate: "deserunt",
+  xAmzSecurityToken: "suscipit",
+  xAmzSignature: "iure",
+  xAmzSignedHeaders: "magnam",
+  xAmzTarget: AcceptDirectConnectGatewayAssociationProposalXAmzTargetEnum.OvertureServiceAcceptDirectConnectGatewayAssociationProposal,
 };
 
 sdk.acceptDirectConnectGatewayAssociationProposal(req).then((res: AcceptDirectConnectGatewayAssociationProposalResponse | AxiosError) => {

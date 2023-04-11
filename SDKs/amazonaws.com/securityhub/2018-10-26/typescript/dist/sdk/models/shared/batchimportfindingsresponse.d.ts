@@ -1,0 +1,10 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { ImportFindingsError } from "./importfindingserror";
+/**
+ * Success
+ */
+export declare class BatchImportFindingsResponse extends SpeakeasyBase {
+    failedCount: number;
+    failedFindings?: ImportFindingsError[];
+    successCount: number;
+}

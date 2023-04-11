@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetIpIpv4PathParams extends SpeakeasyBase {
-    ipv4: string;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class GetIpIpv4Request extends SpeakeasyBase {
-    pathParams: GetIpIpv4PathParams;
+    ipv4: string;
 }
 export declare class GetIpIpv4Response extends SpeakeasyBase {
     contentType: string;
-    dateTimeJsonResponse?: any;
-    errorJsonResponse?: any;
+    /**
+     * the current time for the timezone requested in JSON format
+     */
+    dateTimeJsonResponse?: shared.DateTimeJsonResponse;
+    /**
+     * an error response in JSON format
+     */
+    errorJsonResponse?: shared.ErrorJsonResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

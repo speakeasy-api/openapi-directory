@@ -1,8 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteDedicatedIpPoolPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteDedicatedIpPoolRequest extends SpeakeasyBase {
+    /**
+     * The name of the dedicated IP pool that you want to delete.
+     */
     poolName: string;
-}
-export declare class DeleteDedicatedIpPoolHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,16 +13,28 @@ export declare class DeleteDedicatedIpPoolHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeleteDedicatedIpPoolRequest extends SpeakeasyBase {
-    pathParams: DeleteDedicatedIpPoolPathParams;
-    headers: DeleteDedicatedIpPoolHeaders;
-}
 export declare class DeleteDedicatedIpPoolResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
+    /**
+     * ConcurrentModificationException
+     */
     concurrentModificationException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteDedicatedIpPoolResponse?: Record<string, any>;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostEnableLoggingActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTEnableLoggingActionEnum {
     EnableLogging = "EnableLogging"
 }
-export declare enum PostEnableLoggingVersionEnum {
+export declare enum POSTEnableLoggingVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostEnableLoggingQueryParams extends SpeakeasyBase {
-    action: PostEnableLoggingActionEnum;
-    version: PostEnableLoggingVersionEnum;
-}
-export declare class PostEnableLoggingHeaders extends SpeakeasyBase {
+export declare class POSTEnableLoggingRequest extends SpeakeasyBase {
+    action: POSTEnableLoggingActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTEnableLoggingVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostEnableLoggingHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostEnableLoggingRequest extends SpeakeasyBase {
-    queryParams: PostEnableLoggingQueryParams;
-    headers: PostEnableLoggingHeaders;
-    request?: Uint8Array;
-}
-export declare class PostEnableLoggingResponse extends SpeakeasyBase {
+export declare class POSTEnableLoggingResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

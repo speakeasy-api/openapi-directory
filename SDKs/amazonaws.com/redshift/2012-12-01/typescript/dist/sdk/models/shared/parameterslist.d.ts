@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { ParameterApplyTypeEnum } from "./parameterapplytypeenum";
 /**
  * Describes a parameter in a cluster parameter group.
-**/
+ */
 export declare class ParametersList extends SpeakeasyBase {
     allowedValues?: string;
     applyType?: ParameterApplyTypeEnum;

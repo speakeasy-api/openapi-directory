@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostListAllowedNodeTypeModificationsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTListAllowedNodeTypeModificationsActionEnum {
     ListAllowedNodeTypeModifications = "ListAllowedNodeTypeModifications"
 }
-export declare enum PostListAllowedNodeTypeModificationsVersionEnum {
+export declare enum POSTListAllowedNodeTypeModificationsVersionEnum {
     TwoThousandAndFifteen0202 = "2015-02-02"
 }
-export declare class PostListAllowedNodeTypeModificationsQueryParams extends SpeakeasyBase {
-    action: PostListAllowedNodeTypeModificationsActionEnum;
-    version: PostListAllowedNodeTypeModificationsVersionEnum;
-}
-export declare class PostListAllowedNodeTypeModificationsHeaders extends SpeakeasyBase {
+export declare class POSTListAllowedNodeTypeModificationsRequest extends SpeakeasyBase {
+    action: POSTListAllowedNodeTypeModificationsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTListAllowedNodeTypeModificationsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostListAllowedNodeTypeModificationsHeaders extends Speakea
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostListAllowedNodeTypeModificationsRequest extends SpeakeasyBase {
-    queryParams: PostListAllowedNodeTypeModificationsQueryParams;
-    headers: PostListAllowedNodeTypeModificationsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostListAllowedNodeTypeModificationsResponse extends SpeakeasyBase {
+export declare class POSTListAllowedNodeTypeModificationsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

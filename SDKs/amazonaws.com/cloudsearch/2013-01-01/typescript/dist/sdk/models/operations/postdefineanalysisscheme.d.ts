@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDefineAnalysisSchemeActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDefineAnalysisSchemeActionEnum {
     DefineAnalysisScheme = "DefineAnalysisScheme"
 }
-export declare enum PostDefineAnalysisSchemeVersionEnum {
+export declare enum POSTDefineAnalysisSchemeVersionEnum {
     TwoThousandAndThirteen0101 = "2013-01-01"
 }
-export declare class PostDefineAnalysisSchemeQueryParams extends SpeakeasyBase {
-    action: PostDefineAnalysisSchemeActionEnum;
-    version: PostDefineAnalysisSchemeVersionEnum;
-}
-export declare class PostDefineAnalysisSchemeHeaders extends SpeakeasyBase {
+export declare class POSTDefineAnalysisSchemeRequest extends SpeakeasyBase {
+    action: POSTDefineAnalysisSchemeActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDefineAnalysisSchemeVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDefineAnalysisSchemeHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDefineAnalysisSchemeRequest extends SpeakeasyBase {
-    queryParams: PostDefineAnalysisSchemeQueryParams;
-    headers: PostDefineAnalysisSchemeHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDefineAnalysisSchemeResponse extends SpeakeasyBase {
+export declare class POSTDefineAnalysisSchemeResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

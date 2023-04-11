@@ -1,0 +1,8 @@
+/**
+ * Determines when the user's account will be charged for the label.
+ */
+export declare enum LabelChargeEventEnum {
+    CarrierDefault = "carrier_default",
+    OnCreation = "on_creation",
+    OnCarrierAcceptance = "on_carrier_acceptance"
+}

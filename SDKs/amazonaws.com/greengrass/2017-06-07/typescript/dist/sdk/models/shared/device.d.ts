@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Information about a device.
-**/
+ */
 export declare class Device extends SpeakeasyBase {
     certificateArn: string;
     id: string;

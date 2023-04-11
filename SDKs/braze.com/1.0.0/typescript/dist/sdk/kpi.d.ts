@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Kpi {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class Kpi {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * dailyActiveUsersByDate - Daily Active Users by Date
+     * Daily Active Users by Date
      *
+     * @remarks
      * This endpoint allows you to retrieve a daily series of the total number of unique active users on each date.
      *
      *
@@ -30,11 +31,12 @@ export declare class Kpi {
      *     ]
      * }
      * ```
-    **/
+     */
     dailyActiveUsersByDate(req: operations.DailyActiveUsersByDateRequest, config?: AxiosRequestConfig): Promise<operations.DailyActiveUsersByDateResponse>;
     /**
-     * dailyNewUsersByDate - Daily New Users by Date
+     * Daily New Users by Date
      *
+     * @remarks
      * This endpoint allows you to retrieve a daily series of the total number of new users on each date.
      *
      *
@@ -54,11 +56,12 @@ export declare class Kpi {
      *     ]
      * }
      * ```
-    **/
+     */
     dailyNewUsersByDate(req: operations.DailyNewUsersByDateRequest, config?: AxiosRequestConfig): Promise<operations.DailyNewUsersByDateResponse>;
     /**
-     * kpIsForDailyAppUninstallsByDate - KPIs for Daily App Uninstalls by Date
+     * KPIs for Daily App Uninstalls by Date
      *
+     * @remarks
      * This endpoint allows you to retrieve a daily series of the total number of uninstalls on each date.
      *
      * ## Response
@@ -77,11 +80,12 @@ export declare class Kpi {
      *     ]
      * }
      * ```
-    **/
+     */
     kpIsForDailyAppUninstallsByDate(req: operations.KpIsForDailyAppUninstallsByDateRequest, config?: AxiosRequestConfig): Promise<operations.KpIsForDailyAppUninstallsByDateResponse>;
     /**
-     * monthlyActiveUsersForLast30Days - Monthly Active Users for Last 30 Days
+     * Monthly Active Users for Last 30 Days
      *
+     * @remarks
      * This endpoint allows you to retrieve a daily series of the total number of unique active users over a 30-day rolling window.
      *
      * ## Response
@@ -100,6 +104,6 @@ export declare class Kpi {
      *     ]
      * }
      * ```
-    **/
+     */
     monthlyActiveUsersForLast30Days(req: operations.MonthlyActiveUsersForLast30DaysRequest, config?: AxiosRequestConfig): Promise<operations.MonthlyActiveUsersForLast30DaysResponse>;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum InitiateLayerUploadXAmzTargetEnum {
     SpencerFrontendServiceInitiateLayerUpload = "SpencerFrontendService.InitiateLayerUpload"
 }
-export declare class InitiateLayerUploadHeaders extends SpeakeasyBase {
+export declare class InitiateLayerUploadRequest extends SpeakeasyBase {
+    initiateLayerUploadRequest: shared.InitiateLayerUploadRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class InitiateLayerUploadHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: InitiateLayerUploadXAmzTargetEnum;
 }
-export declare class InitiateLayerUploadRequest extends SpeakeasyBase {
-    headers: InitiateLayerUploadHeaders;
-    request: shared.InitiateLayerUploadRequest;
-}
 export declare class InitiateLayerUploadResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     initiateLayerUploadResponse?: shared.InitiateLayerUploadResponse;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * RegistryNotFoundException
+     */
     registryNotFoundException?: any;
+    /**
+     * RepositoryNotFoundException
+     */
     repositoryNotFoundException?: any;
+    /**
+     * ServerException
+     */
     serverException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnsupportedCommandException
+     */
     unsupportedCommandException?: any;
 }

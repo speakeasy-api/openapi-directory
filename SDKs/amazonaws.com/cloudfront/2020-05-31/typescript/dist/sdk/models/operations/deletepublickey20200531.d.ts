@@ -1,8 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeletePublicKey20200531PathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeletePublicKey20200531Request extends SpeakeasyBase {
+    /**
+     * The ID of the public key you want to remove from CloudFront.
+     */
     id: string;
-}
-export declare class DeletePublicKey20200531Headers extends SpeakeasyBase {
+    /**
+     * The value of the <code>ETag</code> header that you received when retrieving the public key identity to delete. For example: <code>E2QWRUHAPOMQZL</code>.
+     */
     ifMatch?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
@@ -12,12 +17,9 @@ export declare class DeletePublicKey20200531Headers extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeletePublicKey20200531Request extends SpeakeasyBase {
-    pathParams: DeletePublicKey20200531PathParams;
-    headers: DeletePublicKey20200531Headers;
-}
 export declare class DeletePublicKey20200531Response extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

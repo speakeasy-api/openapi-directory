@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ReplicationJob } from "./replicationjob";
 import { ReplicationRun } from "./replicationrun";
+/**
+ * Success
+ */
 export declare class GetReplicationRunsResponse extends SpeakeasyBase {
     nextToken?: string;
     replicationJob?: ReplicationJob;

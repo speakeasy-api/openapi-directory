@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeNetworkInsightsPathsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeNetworkInsightsPathsActionEnum {
     DescribeNetworkInsightsPaths = "DescribeNetworkInsightsPaths"
 }
-export declare enum PostDescribeNetworkInsightsPathsVersionEnum {
+export declare enum POSTDescribeNetworkInsightsPathsVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDescribeNetworkInsightsPathsQueryParams extends SpeakeasyBase {
-    action: PostDescribeNetworkInsightsPathsActionEnum;
+export declare class POSTDescribeNetworkInsightsPathsRequest extends SpeakeasyBase {
+    action: POSTDescribeNetworkInsightsPathsActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostDescribeNetworkInsightsPathsVersionEnum;
-}
-export declare class PostDescribeNetworkInsightsPathsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeNetworkInsightsPathsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeNetworkInsightsPathsHeaders extends SpeakeasyBa
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeNetworkInsightsPathsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeNetworkInsightsPathsQueryParams;
-    headers: PostDescribeNetworkInsightsPathsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeNetworkInsightsPathsResponse extends SpeakeasyBase {
+export declare class POSTDescribeNetworkInsightsPathsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

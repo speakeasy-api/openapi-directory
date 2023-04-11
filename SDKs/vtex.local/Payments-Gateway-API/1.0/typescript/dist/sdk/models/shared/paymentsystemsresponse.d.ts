@@ -1,0 +1,31 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { Rule } from "./rule";
+import { Validator } from "./validator";
+export declare class PaymentSystemsResponse extends SpeakeasyBase {
+    affiliationId: string;
+    allowCommercialCondition: boolean;
+    allowCommercialPolicy: boolean;
+    allowCountry: boolean;
+    allowInstallments: boolean;
+    allowIssuer: boolean;
+    allowMultiple: boolean;
+    allowNotification: boolean;
+    allowPeriod: boolean;
+    antifraudConnectorImplementation: string;
+    connectorId: number;
+    connectorImplementation: string;
+    description: string;
+    dueDate: string;
+    fields: string;
+    groupName: string;
+    id: number;
+    implementation: string;
+    isAvailable: boolean;
+    isCustom: boolean;
+    isSelfAuthorized: boolean;
+    name: string;
+    requiresDocument: boolean;
+    requiresPhone: boolean;
+    rules: Rule[];
+    validator: Validator;
+}

@@ -1,10 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class SearchQuantumTasksQueryParams extends SpeakeasyBase {
-    maxResults?: string;
+import { AxiosResponse } from "axios";
+export declare class SearchQuantumTasksRequestBody extends SpeakeasyBase {
+    /**
+     * Array of <code>SearchQuantumTasksFilter</code> objects.
+     */
+    filters: shared.SearchQuantumTasksFilter[];
+    /**
+     * Maximum number of results to return in the response.
+     */
+    maxResults?: number;
+    /**
+     * A token used for pagination of results returned in the response. Use the token returned from the previous request continue results where the previous request ended.
+     */
     nextToken?: string;
 }
-export declare class SearchQuantumTasksHeaders extends SpeakeasyBase {
+export declare class SearchQuantumTasksRequest extends SpeakeasyBase {
+    requestBody: SearchQuantumTasksRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,23 +24,37 @@ export declare class SearchQuantumTasksHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class SearchQuantumTasksRequestBody extends SpeakeasyBase {
-    filters: shared.SearchQuantumTasksFilter[];
-    maxResults?: number;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
 }
-export declare class SearchQuantumTasksRequest extends SpeakeasyBase {
-    queryParams: SearchQuantumTasksQueryParams;
-    headers: SearchQuantumTasksHeaders;
-    request: SearchQuantumTasksRequestBody;
-}
 export declare class SearchQuantumTasksResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * Success
+     */
     searchQuantumTasksResponse?: shared.SearchQuantumTasksResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

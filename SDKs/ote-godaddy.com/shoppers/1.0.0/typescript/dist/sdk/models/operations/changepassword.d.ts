@@ -1,15 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ChangePasswordPathParams extends SpeakeasyBase {
-    shopperId: string;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class ChangePasswordRequest extends SpeakeasyBase {
-    pathParams: ChangePasswordPathParams;
-    request: any;
+    /**
+     * The value to set the subaccount's password to
+     */
+    secret: shared.Secret;
+    /**
+     * Shopper whose password will be set
+     */
+    shopperId: string;
 }
 export declare class ChangePasswordResponse extends SpeakeasyBase {
     contentType: string;
-    error?: any;
-    passwordError?: any;
-    shopperId?: any;
+    /**
+     * Authentication info not sent or invalid
+     */
+    error?: shared.ErrorT;
+    /**
+     * Request was not successful
+     */
+    passwordError?: shared.PasswordError;
+    /**
+     * Request was successful
+     */
+    shopperId?: shared.ShopperId;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

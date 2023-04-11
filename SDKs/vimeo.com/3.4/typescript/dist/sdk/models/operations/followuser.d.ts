@@ -1,18 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class FollowUserPathParams extends SpeakeasyBase {
-    followUserId: number;
-    userId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class FollowUserSecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
+    oauth2: string;
 }
 export declare class FollowUserRequest extends SpeakeasyBase {
-    pathParams: FollowUserPathParams;
-    security: FollowUserSecurity;
+    /**
+     * The ID of the following user.
+     */
+    followUserId: number;
+    /**
+     * The ID of the user.
+     */
+    userId: number;
 }
 export declare class FollowUserResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The authenticated user can't add followers.
+     */
     legacyError?: shared.LegacyError;
 }

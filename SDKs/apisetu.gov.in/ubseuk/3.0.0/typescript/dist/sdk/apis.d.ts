@@ -1,6 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class ApIs {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+export declare class APIs {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,21 +9,24 @@ export declare class ApIs {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * hscer - Class XII Marksheet
+     * Class XII Marksheet
      *
+     * @remarks
      * API to verify Class XII Marksheet.
-    **/
-    hscer(req: operations.HscerRequest, config?: AxiosRequestConfig): Promise<operations.HscerResponse>;
+     */
+    hscer(req: operations.HscerRequestBody, security: operations.HscerSecurity, config?: AxiosRequestConfig): Promise<operations.HscerResponse>;
     /**
-     * hsmgr - Class XII Migration Certificate
+     * Class XII Migration Certificate
      *
+     * @remarks
      * API to verify Class XII Migration Certificate.
-    **/
-    hsmgr(req: operations.HsmgrRequest, config?: AxiosRequestConfig): Promise<operations.HsmgrResponse>;
+     */
+    hsmgr(req: operations.HsmgrRequestBody, security: operations.HsmgrSecurity, config?: AxiosRequestConfig): Promise<operations.HsmgrResponse>;
     /**
-     * sscer - Class X Marksheet
+     * Class X Marksheet
      *
+     * @remarks
      * API to verify Class X Marksheet.
-    **/
-    sscer(req: operations.SscerRequest, config?: AxiosRequestConfig): Promise<operations.SscerResponse>;
+     */
+    sscer(req: operations.SscerRequestBody, security: operations.SscerSecurity, config?: AxiosRequestConfig): Promise<operations.SscerResponse>;
 }

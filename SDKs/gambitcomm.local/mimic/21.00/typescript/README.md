@@ -6,38 +6,37 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/gambitcomm.local/mimic/21.00/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/gambitcomm.local/mimic/21.00/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AccessAddRequest, AccessAddResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  AccessAddRequest,
+  AccessAddResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    basicAuth: {
-      password: "YOUR_PASSWORD_HERE",
-      username: "YOUR_USERNAME_HERE",
-    },
-  }
-));
-    
-const req: AccessAddRequest = {
-  pathParams: {
-    agents: "sit",
-    mask: "voluptas",
-    user: "culpa",
+    password: "YOUR_PASSWORD_HERE",
+    username: "YOUR_USERNAME_HERE",
   },
+});
+
+const req: AccessAddRequest = {
+  agents: "corrupti",
+  mask: "provident",
+  user: "distinctio",
 };
 
 sdk.access.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
@@ -47,9 +46,10 @@ sdk.access.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### Access
+
+### access
 
 * `accessAdd` - Adds/Overwrites the user entry in the access control database.
 * `accessDel` - Clears a users entry from access control database.
@@ -63,7 +63,7 @@ sdk.access.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
 * `accessSetAcldb` - Allows setting the name of the current access control database.
 * `accessSetEnabled` - Allows the user to enable/disable the access control check.
 
-### Agent
+### agent
 
 * `addIpalias` - Adds a new ipalias for the agent.
 * `addTimerScript` - Add a new timer script to be executed at specified interval (in msec) with the specified argument.
@@ -144,7 +144,7 @@ sdk.access.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
 * `trapConfigList` - List the set of trap destinations for this agent instance.
 * `trapList` - List the outstanding asynchronous traps for this agent instance.
 
-### COAP
+### coap
 
 * `protocolCoapGetArgs` - Show the agent's COAP argument structure
 * `protocolCoapGetConfig` - Show the agent's COAP configuration
@@ -154,7 +154,7 @@ sdk.access.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
 * `protocolCoapSetConfig` - Set the agent's COAP configuration
 * `protocolCoapSetTrace` - Set the agent's COAP traffic tracing
 
-### DHCP
+### dhcp
 
 * `protocolDhcpGetArgs` - Show the agent's DHCP argument structure
 * `protocolDhcpGetConfig` - Show the agent's DHCP configuration
@@ -165,7 +165,7 @@ sdk.access.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
 * `protocolDhcpSetConfig` - Set the agent's DHCP configuration
 * `protocolDhcpSetTrace` - Set the agent's DHCP traffic tracing
 
-### Daemon
+### daemon
 
 * `addDaemonTimerScript` - Add a new timer script to be executed at specified interval (in msec) with the specified argument.
 * `cfgLoad` - Load the lab configuration file file.
@@ -207,7 +207,7 @@ sdk.access.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
 * `storeUnset` - Deletes a variable which is currently defined.
 * `terminate` - Terminate the MIMIC daemon.
 
-### IPMI
+### ipmi
 
 * `protocolIpmiGetArgs` - Show the agent's IPMI argument structure
 * `protocolIpmiGetAttr` - Show the outgoing message's attributes
@@ -219,7 +219,7 @@ sdk.access.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
 * `protocolIpmiSetConfig` - Set the agent's IPMI configuration
 * `protocolIpmiSetTrace` - Set the agent's IPMI traffic tracing
 
-### MQTT
+### mqtt
 
 * `protocolMqttClientGetProtstate` - Show the agent's MQTT TCP connection state
 * `protocolMqttClientGetState` - Show the agent's MQTT state
@@ -254,7 +254,7 @@ sdk.access.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
 * `protocolMqttSetConfig` - Set the agent's MQTT configuration
 * `protocolMqttSetTrace` - Set the agent's MQTT traffic tracing
 
-### NETFLOW
+### netflow
 
 * `protocolNetflowChangeAttr` - Change NETFLOW export attributes
 * `protocolNetflowChangeDfs` - Change NETFLOW data export interval
@@ -273,7 +273,7 @@ sdk.access.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
 * `protocolNetflowSetFileName` - Swap NETFLOW configuration file
 * `protocolNetflowSetTrace` - Set the agent's NETFLOW traffic tracing
 
-### PROXY
+### proxy
 
 * `protocolProxyGetArgs` - Show the agent's PROXY argument structure
 * `protocolProxyGetConfig` - Show the agent's PROXY configuration
@@ -289,7 +289,7 @@ sdk.access.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
 * `protocolProxySetConfig` - Set the agent's PROXY configuration
 * `protocolProxySetTrace` - Set the agent's PROXY traffic tracing
 
-### SFLOW
+### sflow
 
 * `protocolSflowGetArgs` - Show the agent's SFLOW argument structure
 * `protocolSflowGetConfig` - Show the agent's SFLOW configuration
@@ -302,7 +302,7 @@ sdk.access.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
 * `protocolSflowSetConfig` - Set the agent's SFLOW configuration
 * `protocolSflowSetTrace` - Set the agent's SFLOW traffic tracing
 
-### SNMPTCP
+### snmptcp
 
 * `protocolSnmptcpGetArgs` - Show the agent's SNMPTCP argument structure
 * `protocolSnmptcpGetConfig` - Show the agent's SNMPTCP configuration
@@ -316,7 +316,7 @@ sdk.access.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
 * `protocolSnmptcpSetConfig` - Set the agent's SNMPTCP configuration
 * `protocolSnmptcpSetTrace` - Set the agent's SNMPTCP traffic tracing
 
-### SNMPv3
+### snmPv3
 
 * `protocolSnmpv3AccessAdd` - Adds a new access entry with the specified parameters.
 * `protocolSnmpv3AccessClear` - Clears all access entries.
@@ -345,7 +345,7 @@ sdk.access.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
 * `protocolSnmpv3ViewDel` - Deletes the specified view entry.
 * `protocolSnmpv3ViewList` - Returns the current view entries as an array of strings.
 
-### SSH
+### ssh
 
 * `protocolSshGetArgs` - Show the agent's SSH argument structure
 * `protocolSshGetConfig` - Show the agent's SSH configuration
@@ -359,7 +359,7 @@ sdk.access.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
 * `protocolSshSetConfig` - Set the agent's SSH configuration
 * `protocolSshSetTrace` - Set the agent's SSH traffic tracing
 
-### SYSLOG
+### syslog
 
 * `protocolSyslogGetArgs` - Show the agent's SYSLOG argument structure
 * `protocolSyslogGetAttr` - Show the outgoing message's attributes
@@ -372,7 +372,7 @@ sdk.access.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
 * `protocolSyslogSetConfig` - Set the agent's SYSLOG configuration
 * `protocolSyslogSetTrace` - Set the agent's SYSLOG traffic tracing
 
-### TELNET
+### telnet
 
 * `protocolTelnetConnectionLogon` - Changes the connection's current logon.
 * `protocolTelnetConnectionRequest` - Executes the command asynchronously .
@@ -395,7 +395,7 @@ sdk.access.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
 * `protocolTelnetSetConfig` - Set the agent's TELNET configuration
 * `protocolTelnetSetTrace` - Set the agent's TELNET traffic tracing
 
-### TFTP
+### tftp
 
 * `protocolTftpGetArgs` - Show the agent's TFTP argument structure
 * `protocolTftpGetConfig` - Show the agent's TFTP configuration
@@ -412,7 +412,7 @@ sdk.access.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
 * `protocolTftpSetConfig` - Set the agent's TFTP configuration
 * `protocolTftpSetTrace` - Set the agent's TFTP traffic tracing
 
-### TOD
+### tod
 
 * `protocolTodGetArgs` - Show the agent's TOD argument structure
 * `protocolTodGetConfig` - Show the agent's TOD configuration
@@ -423,7 +423,7 @@ sdk.access.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
 * `protocolTodSetConfig` - Set the agent's TOD configuration
 * `protocolTodSetTrace` - Set the agent's TOD traffic tracing
 
-### Valuespace
+### valuespace
 
 * `add` - Add an entry to a table.
 * `evalValue` - Evaluate the values of the specified instance instance for each specified MIB object object and return it as it would through SNMP requests.
@@ -444,7 +444,7 @@ sdk.access.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
 * `splitOid` - Split the numerical OID into the object OID and instance OID.
 * `unsetValue` - Unset a variable in the Value Space in order to free its memory.
 
-### WEB
+### web
 
 * `protocolWebGetArgs` - Show the agent's WEB argument structure
 * `protocolWebGetConfig` - Show the agent's WEB configuration
@@ -459,7 +459,18 @@ sdk.access.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
 * `protocolWebPortStop` - Stop the agent's WEB port
 * `protocolWebSetConfig` - Set the agent's WEB configuration
 * `protocolWebSetTrace` - Set the agent's WEB traffic tracing
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

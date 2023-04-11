@@ -4,7 +4,7 @@ import { LifeCycleLastTestInitiated } from "./lifecyclelasttestinitiated";
 import { LifeCycleLastTestReverted } from "./lifecyclelasttestreverted";
 /**
  * Lifecycle last Test.
-**/
+ */
 export declare class LifeCycleLastTest extends SpeakeasyBase {
     finalized?: LifeCycleLastTestFinalized;
     initiated?: LifeCycleLastTestInitiated;

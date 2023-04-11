@@ -1,12 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetComicIdInfo0JsonPathParams extends SpeakeasyBase {
-    comicId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetComicIdInfo0JsonRequest extends SpeakeasyBase {
-    pathParams: GetComicIdInfo0JsonPathParams;
+    comicId: number;
 }
 export declare class GetComicIdInfo0JsonResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

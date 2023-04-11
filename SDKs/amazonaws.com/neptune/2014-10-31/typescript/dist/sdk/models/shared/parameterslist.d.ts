@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { ApplyMethodEnum } from "./applymethodenum";
 /**
  * Specifies a parameter.
-**/
+ */
 export declare class ParametersList extends SpeakeasyBase {
     allowedValues?: string;
     applyMethod?: ApplyMethodEnum;

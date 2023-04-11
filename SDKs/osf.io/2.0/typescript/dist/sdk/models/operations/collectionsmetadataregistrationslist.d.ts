@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CollectionsMetadataRegistrationsListPathParams extends SpeakeasyBase {
-    collectionId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class CollectionsMetadataRegistrationsListRequest extends SpeakeasyBase {
-    pathParams: CollectionsMetadataRegistrationsListPathParams;
+    /**
+     * A short id for that collection
+     */
+    collectionId: string;
 }
 export declare class CollectionsMetadataRegistrationsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

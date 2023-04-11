@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeNotificationConfigurationsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeNotificationConfigurationsActionEnum {
     DescribeNotificationConfigurations = "DescribeNotificationConfigurations"
 }
-export declare enum GetDescribeNotificationConfigurationsVersionEnum {
+export declare enum GETDescribeNotificationConfigurationsVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class GetDescribeNotificationConfigurationsQueryParams extends SpeakeasyBase {
-    action: GetDescribeNotificationConfigurationsActionEnum;
+export declare class GETDescribeNotificationConfigurationsRequest extends SpeakeasyBase {
+    action: GETDescribeNotificationConfigurationsActionEnum;
+    /**
+     * The name of the Auto Scaling group.
+     */
     autoScalingGroupNames?: string[];
+    /**
+     * The maximum number of items to return with this call. The default value is <code>50</code> and the maximum value is <code>100</code>.
+     */
     maxRecords?: number;
+    /**
+     * The token for the next set of items to return. (You received this token from a previous call.)
+     */
     nextToken?: string;
-    version: GetDescribeNotificationConfigurationsVersionEnum;
-}
-export declare class GetDescribeNotificationConfigurationsHeaders extends SpeakeasyBase {
+    version: GETDescribeNotificationConfigurationsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +29,9 @@ export declare class GetDescribeNotificationConfigurationsHeaders extends Speake
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeNotificationConfigurationsRequest extends SpeakeasyBase {
-    queryParams: GetDescribeNotificationConfigurationsQueryParams;
-    headers: GetDescribeNotificationConfigurationsHeaders;
-}
-export declare class GetDescribeNotificationConfigurationsResponse extends SpeakeasyBase {
+export declare class GETDescribeNotificationConfigurationsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

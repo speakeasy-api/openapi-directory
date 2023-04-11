@@ -1,14 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class StoryIdOutlineGetPathParams extends SpeakeasyBase {
-    id: string;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class StoryIdOutlineGetRequest extends SpeakeasyBase {
-    pathParams: StoryIdOutlineGetPathParams;
+    /**
+     * the id from the story object
+     */
+    id: string;
 }
 export declare class StoryIdOutlineGetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    problemDetail?: any;
-    status?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad Request
+     */
+    problemDetail?: shared.ProblemDetail;
+    /**
+     * Accepted
+     */
+    status?: shared.Status;
+    /**
+     * Stringified Story outline
+     */
     storyIdOutlineGet200ApplicationJSONString?: string;
 }

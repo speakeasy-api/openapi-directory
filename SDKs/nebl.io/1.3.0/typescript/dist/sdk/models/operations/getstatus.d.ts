@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetStatusQueryParams extends SpeakeasyBase {
-    q?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetStatusRequest extends SpeakeasyBase {
-    queryParams: GetStatusQueryParams;
+    /**
+     * Function to call, getInfo, getDifficulty, getBestBlockHash, or getLastBlockHash
+     */
+    q?: string;
 }
 export declare class GetStatusResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Function Response
+     */
     getStatusResponse?: Record<string, any>;
 }

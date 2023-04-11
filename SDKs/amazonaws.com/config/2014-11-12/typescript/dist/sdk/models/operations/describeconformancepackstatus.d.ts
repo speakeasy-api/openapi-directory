@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeConformancePackStatusQueryParams extends SpeakeasyBase {
-    limit?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum DescribeConformancePackStatusXAmzTargetEnum {
     StarlingDoveServiceDescribeConformancePackStatus = "StarlingDoveService.DescribeConformancePackStatus"
 }
-export declare class DescribeConformancePackStatusHeaders extends SpeakeasyBase {
+export declare class DescribeConformancePackStatusRequest extends SpeakeasyBase {
+    describeConformancePackStatusRequest: shared.DescribeConformancePackStatusRequest;
+    /**
+     * Pagination limit
+     */
+    limit?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,16 +23,24 @@ export declare class DescribeConformancePackStatusHeaders extends SpeakeasyBase 
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeConformancePackStatusXAmzTargetEnum;
 }
-export declare class DescribeConformancePackStatusRequest extends SpeakeasyBase {
-    queryParams: DescribeConformancePackStatusQueryParams;
-    headers: DescribeConformancePackStatusHeaders;
-    request: shared.DescribeConformancePackStatusRequest;
-}
 export declare class DescribeConformancePackStatusResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeConformancePackStatusResponse?: shared.DescribeConformancePackStatusResponse;
+    /**
+     * InvalidLimitException
+     */
     invalidLimitException?: any;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

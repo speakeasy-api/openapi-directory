@@ -1,115 +1,170 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class RucerSecurity extends SpeakeasyBase {
+    apiKey: string;
+    clientId: string;
+}
 export declare class RucerRequestBodyCertificateParameters extends SpeakeasyBase {
+    /**
+     * Certificate Number
+     */
     certificateNumber: string;
 }
+/**
+ * The format of the certificate in response.
+ */
 export declare enum RucerRequestBodyFormatEnum {
     Pdf = "pdf"
 }
+/**
+ * Request format
+ */
 export declare class RucerRequestBody extends SpeakeasyBase {
     certificateParameters?: RucerRequestBodyCertificateParameters;
-    consentArtifact?: any;
+    consentArtifact?: shared.ConsentArtifactSchema;
+    /**
+     * The format of the certificate in response.
+     */
     format: RucerRequestBodyFormatEnum;
+    /**
+     * A unique transaction id for this request in UUID format. It is used for tracking the request.
+     */
     txnId: string;
 }
-export declare class RucerSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
-    clientId: shared.SchemeClientId;
+export declare enum Rucer504ApplicationJSONErrorEnum {
+    GatewayTimeout = "gateway_timeout"
 }
-export declare enum Rucer400ApplicationJsonErrorEnum {
+export declare enum Rucer504ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
+}
+/**
+ * Gateway timeout
+ */
+export declare class Rucer504ApplicationJSON extends SpeakeasyBase {
+    error?: Rucer504ApplicationJSONErrorEnum;
+    errorDescription?: Rucer504ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Rucer503ApplicationJSONErrorEnum {
+    ServiceUnavailable = "service_unavailable"
+}
+export declare enum Rucer503ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
+}
+/**
+ * Service unavailable
+ */
+export declare class Rucer503ApplicationJSON extends SpeakeasyBase {
+    error?: Rucer503ApplicationJSONErrorEnum;
+    errorDescription?: Rucer503ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Rucer502ApplicationJSONErrorEnum {
+    BadGatewy = "bad_gatewy"
+}
+export declare enum Rucer502ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
+}
+/**
+ * Bad gateway
+ */
+export declare class Rucer502ApplicationJSON extends SpeakeasyBase {
+    error?: Rucer502ApplicationJSONErrorEnum;
+    errorDescription?: Rucer502ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Rucer500ApplicationJSONErrorEnum {
+    InternalServerError = "internal_server_error"
+}
+export declare enum Rucer500ApplicationJSONErrorDescriptionEnum {
+    InternalServerError = "Internal server error"
+}
+/**
+ * Internal server error
+ */
+export declare class Rucer500ApplicationJSON extends SpeakeasyBase {
+    error?: Rucer500ApplicationJSONErrorEnum;
+    errorDescription?: Rucer500ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Rucer404ApplicationJSONErrorEnum {
+    RecordNotFound = "record_not_found",
+    UrlNotFound = "url_not_found"
+}
+export declare enum Rucer404ApplicationJSONErrorDescriptionEnum {
+    NoRecordFound = "No record found",
+    YourAPIUrlOrPathIsIncorrect = "Your API url or path is incorrect"
+}
+/**
+ * No record found
+ */
+export declare class Rucer404ApplicationJSON extends SpeakeasyBase {
+    error?: Rucer404ApplicationJSONErrorEnum;
+    errorDescription?: Rucer404ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Rucer401ApplicationJSONErrorEnum {
+    InvalidAuthentication = "invalid_authentication",
+    InvalidAuthorization = "invalid_authorization"
+}
+export declare enum Rucer401ApplicationJSONErrorDescriptionEnum {
+    AuthenticationFailed = "Authentication failed",
+    YouAreNotAuthorizedToUseThisAPI = "You are not authorized to use this API"
+}
+/**
+ * Unauthorized access
+ */
+export declare class Rucer401ApplicationJSON extends SpeakeasyBase {
+    error?: Rucer401ApplicationJSONErrorEnum;
+    errorDescription?: Rucer401ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Rucer400ApplicationJSONErrorEnum {
     MissingParameter = "missing_parameter",
     InvalidParameter = "invalid_parameter",
     InvalidFormat = "invalid_format",
     InvalidTxnid = "invalid_txnid",
     InvalidConsentid = "invalid_consentid"
 }
-export declare enum Rucer400ApplicationJsonErrorDescriptionEnum {
+export declare enum Rucer400ApplicationJSONErrorDescriptionEnum {
     PleaseProvideAllMandatoryParameters = "Please provide all mandatory parameters",
     BadRequest = "Bad request",
     TheFormatParameterIsInvalid = "The format parameter is invalid",
-    TheTxnIdParameterMustBeInUuidFormat = "The txnId parameter must be in UUID format",
-    TheConsentIdParameterMustBeInUuidFormat = "The consentId parameter must be in UUID format"
+    TheTxnIdParameterMustBeInUUIDFormat = "The txnId parameter must be in UUID format",
+    TheConsentIdParameterMustBeInUUIDFormat = "The consentId parameter must be in UUID format"
 }
-export declare class Rucer400ApplicationJson extends SpeakeasyBase {
-    error?: Rucer400ApplicationJsonErrorEnum;
-    errorDescription?: Rucer400ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Rucer401ApplicationJsonErrorEnum {
-    InvalidAuthentication = "invalid_authentication",
-    InvalidAuthorization = "invalid_authorization"
-}
-export declare enum Rucer401ApplicationJsonErrorDescriptionEnum {
-    AuthenticationFailed = "Authentication failed",
-    YouAreNotAuthorizedToUseThisApi = "You are not authorized to use this API"
-}
-export declare class Rucer401ApplicationJson extends SpeakeasyBase {
-    error?: Rucer401ApplicationJsonErrorEnum;
-    errorDescription?: Rucer401ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Rucer404ApplicationJsonErrorEnum {
-    RecordNotFound = "record_not_found",
-    UrlNotFound = "url_not_found"
-}
-export declare enum Rucer404ApplicationJsonErrorDescriptionEnum {
-    NoRecordFound = "No record found",
-    YourApiUrlOrPathIsIncorrect = "Your API url or path is incorrect"
-}
-export declare class Rucer404ApplicationJson extends SpeakeasyBase {
-    error?: Rucer404ApplicationJsonErrorEnum;
-    errorDescription?: Rucer404ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Rucer500ApplicationJsonErrorEnum {
-    InternalServerError = "internal_server_error"
-}
-export declare enum Rucer500ApplicationJsonErrorDescriptionEnum {
-    InternalServerError = "Internal server error"
-}
-export declare class Rucer500ApplicationJson extends SpeakeasyBase {
-    error?: Rucer500ApplicationJsonErrorEnum;
-    errorDescription?: Rucer500ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Rucer502ApplicationJsonErrorEnum {
-    BadGatewy = "bad_gatewy"
-}
-export declare enum Rucer502ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
-}
-export declare class Rucer502ApplicationJson extends SpeakeasyBase {
-    error?: Rucer502ApplicationJsonErrorEnum;
-    errorDescription?: Rucer502ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Rucer503ApplicationJsonErrorEnum {
-    ServiceUnavailable = "service_unavailable"
-}
-export declare enum Rucer503ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
-}
-export declare class Rucer503ApplicationJson extends SpeakeasyBase {
-    error?: Rucer503ApplicationJsonErrorEnum;
-    errorDescription?: Rucer503ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Rucer504ApplicationJsonErrorEnum {
-    GatewayTimeout = "gateway_timeout"
-}
-export declare enum Rucer504ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
-}
-export declare class Rucer504ApplicationJson extends SpeakeasyBase {
-    error?: Rucer504ApplicationJsonErrorEnum;
-    errorDescription?: Rucer504ApplicationJsonErrorDescriptionEnum;
-}
-export declare class RucerRequest extends SpeakeasyBase {
-    request?: RucerRequestBody;
-    security: RucerSecurity;
+/**
+ * Bad request
+ */
+export declare class Rucer400ApplicationJSON extends SpeakeasyBase {
+    error?: Rucer400ApplicationJSONErrorEnum;
+    errorDescription?: Rucer400ApplicationJSONErrorDescriptionEnum;
 }
 export declare class RucerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    rucer400ApplicationJSONObject?: Rucer400ApplicationJson;
-    rucer401ApplicationJSONObject?: Rucer401ApplicationJson;
-    rucer404ApplicationJSONObject?: Rucer404ApplicationJson;
-    rucer500ApplicationJSONObject?: Rucer500ApplicationJson;
-    rucer502ApplicationJSONObject?: Rucer502ApplicationJson;
-    rucer503ApplicationJSONObject?: Rucer503ApplicationJson;
-    rucer504ApplicationJSONObject?: Rucer504ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad request
+     */
+    rucer400ApplicationJSONObject?: Rucer400ApplicationJSON;
+    /**
+     * Unauthorized access
+     */
+    rucer401ApplicationJSONObject?: Rucer401ApplicationJSON;
+    /**
+     * No record found
+     */
+    rucer404ApplicationJSONObject?: Rucer404ApplicationJSON;
+    /**
+     * Internal server error
+     */
+    rucer500ApplicationJSONObject?: Rucer500ApplicationJSON;
+    /**
+     * Bad gateway
+     */
+    rucer502ApplicationJSONObject?: Rucer502ApplicationJSON;
+    /**
+     * Service unavailable
+     */
+    rucer503ApplicationJSONObject?: Rucer503ApplicationJSON;
+    /**
+     * Gateway timeout
+     */
+    rucer504ApplicationJSONObject?: Rucer504ApplicationJSON;
 }

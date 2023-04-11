@@ -1,8 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
- * The type of deployment branch policy for this environment. To allow all branches to deploy, set to `null`.
-**/
+ * Details of a deployment branch policy.
+ */
 export declare class DeploymentBranchPolicy extends SpeakeasyBase {
-    customBranchPolicies: boolean;
-    protectedBranches: boolean;
+    /**
+     * The unique identifier of the branch policy.
+     */
+    id?: number;
+    /**
+     * The name pattern that branches must match in order to deploy to the environment.
+     */
+    name?: string;
+    nodeId?: string;
 }

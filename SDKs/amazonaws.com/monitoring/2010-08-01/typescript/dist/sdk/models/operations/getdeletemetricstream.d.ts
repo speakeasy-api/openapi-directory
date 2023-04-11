@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteMetricStreamActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteMetricStreamActionEnum {
     DeleteMetricStream = "DeleteMetricStream"
 }
-export declare enum GetDeleteMetricStreamVersionEnum {
+export declare enum GETDeleteMetricStreamVersionEnum {
     TwoThousandAndTen0801 = "2010-08-01"
 }
-export declare class GetDeleteMetricStreamQueryParams extends SpeakeasyBase {
-    action: GetDeleteMetricStreamActionEnum;
+export declare class GETDeleteMetricStreamRequest extends SpeakeasyBase {
+    action: GETDeleteMetricStreamActionEnum;
+    /**
+     * The name of the metric stream to delete.
+     */
     name: string;
-    version: GetDeleteMetricStreamVersionEnum;
-}
-export declare class GetDeleteMetricStreamHeaders extends SpeakeasyBase {
+    version: GETDeleteMetricStreamVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDeleteMetricStreamHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteMetricStreamRequest extends SpeakeasyBase {
-    queryParams: GetDeleteMetricStreamQueryParams;
-    headers: GetDeleteMetricStreamHeaders;
-}
-export declare class GetDeleteMetricStreamResponse extends SpeakeasyBase {
+export declare class GETDeleteMetricStreamResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,10 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { BlockDeviceMapping } from "./blockdevicemapping";
-import { InstanceMonitoring } from "./instancemonitoring";
 import { InstanceMetadataOptions } from "./instancemetadataoptions";
+import { InstanceMonitoring } from "./instancemonitoring";
 /**
  * Describes a launch configuration.
-**/
+ */
 export declare class LaunchConfiguration extends SpeakeasyBase {
     associatePublicIpAddress?: boolean;
     blockDeviceMappings?: BlockDeviceMapping[];

@@ -1,27 +1,59 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PatchTargetsTargetIdFindingsIdIntegrationsJiraCloudPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class PatchTargetsTargetIdFindingsIdIntegrationsJiraCloudRequest extends SpeakeasyBase {
+    jiraFinding: shared.JiraFinding;
+    /**
+     * Object Id
+     */
     id: string;
+    /**
+     * Target id
+     */
     targetId: string;
 }
-export declare class PatchTargetsTargetIdFindingsIdIntegrationsJiraCloud401ApplicationJson extends SpeakeasyBase {
+/**
+ * Not found
+ */
+export declare class PatchTargetsTargetIdFindingsIdIntegrationsJiraCloud404ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Not found.
+     */
     detail?: string;
 }
-export declare class PatchTargetsTargetIdFindingsIdIntegrationsJiraCloud403ApplicationJson extends SpeakeasyBase {
+/**
+ * Not allowed to perform operation
+ */
+export declare class PatchTargetsTargetIdFindingsIdIntegrationsJiraCloud403ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error message.
+     */
     detail?: string;
 }
-export declare class PatchTargetsTargetIdFindingsIdIntegrationsJiraCloud404ApplicationJson extends SpeakeasyBase {
+/**
+ * Access token is missing or invalid
+ */
+export declare class PatchTargetsTargetIdFindingsIdIntegrationsJiraCloud401ApplicationJSON extends SpeakeasyBase {
     detail?: string;
-}
-export declare class PatchTargetsTargetIdFindingsIdIntegrationsJiraCloudRequest extends SpeakeasyBase {
-    pathParams: PatchTargetsTargetIdFindingsIdIntegrationsJiraCloudPathParams;
-    request: shared.JiraFinding;
 }
 export declare class PatchTargetsTargetIdFindingsIdIntegrationsJiraCloudResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Jira Cloud Finding configuration
+     */
     jiraFinding?: shared.JiraFinding;
     statusCode: number;
-    patchTargetsTargetIdFindingsIdIntegrationsJiraCloud401ApplicationJSONObject?: PatchTargetsTargetIdFindingsIdIntegrationsJiraCloud401ApplicationJson;
-    patchTargetsTargetIdFindingsIdIntegrationsJiraCloud403ApplicationJSONObject?: PatchTargetsTargetIdFindingsIdIntegrationsJiraCloud403ApplicationJson;
-    patchTargetsTargetIdFindingsIdIntegrationsJiraCloud404ApplicationJSONObject?: PatchTargetsTargetIdFindingsIdIntegrationsJiraCloud404ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Access token is missing or invalid
+     */
+    patchTargetsTargetIdFindingsIdIntegrationsJiraCloud401ApplicationJSONObject?: PatchTargetsTargetIdFindingsIdIntegrationsJiraCloud401ApplicationJSON;
+    /**
+     * Not allowed to perform operation
+     */
+    patchTargetsTargetIdFindingsIdIntegrationsJiraCloud403ApplicationJSONObject?: PatchTargetsTargetIdFindingsIdIntegrationsJiraCloud403ApplicationJSON;
+    /**
+     * Not found
+     */
+    patchTargetsTargetIdFindingsIdIntegrationsJiraCloud404ApplicationJSONObject?: PatchTargetsTargetIdFindingsIdIntegrationsJiraCloud404ApplicationJSON;
 }

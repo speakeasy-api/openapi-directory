@@ -1,3 +1,4 @@
 export declare enum NotificationTypeEnum {
-    Slack = "slack"
+    Slack = "slack",
+    Customerio = "customerio"
 }

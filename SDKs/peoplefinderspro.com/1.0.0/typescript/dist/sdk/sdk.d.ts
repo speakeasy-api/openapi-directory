@@ -1,10 +1,33 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://api.peoplefinderspro.com"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * Self Service Developer API documentation and demo.
+ *
+ * @remarks
+ *
+ * ##Getting Started
+ *
+ * You will need an API access profile user and password in order to access search endpoints.
+ * Your access profile user and password is used for authenticating all requests to our search API.
+ * You MUST pass the user and password each time you perform a search request.
+ */
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -12,10 +35,12 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
     /**
-     * search - Search
+     * Search
      *
+     * @remarks
      * ###### *Click on the grey search box above, to view sample request/response objects for the Identity Verification Search*
      *
      * Perform a search:
@@ -64,11 +89,12 @@ export declare class SDK {
      * + <code>Phone</code> = null (optional, string) ... Phone number (formats: ###-###-####, (###) ###-####).
      *
      * + <code>Email</code> = null (optional, string) ... E-mail address.
-    **/
+     */
     search(req: operations.SearchRequest, config?: AxiosRequestConfig): Promise<operations.SearchResponse>;
     /**
-     * postAddressAutocomplete - Search
+     * Search
      *
+     * @remarks
      * ###### *Click on the grey search box above, to view sample request/response objects for Address Autocomplete Search*
      *
      * Perform a search:
@@ -90,11 +116,12 @@ export declare class SDK {
      * The JSON request should have parts of the address.
      *
      * + <code>Input</code> = null (optional, string) ... address.
-    **/
+     */
     postAddressAutocomplete(req: operations.PostAddressAutocompleteRequest, config?: AxiosRequestConfig): Promise<operations.PostAddressAutocompleteResponse>;
     /**
-     * postContactEnrich - Search
+     * Search
      *
+     * @remarks
      * ###### *Click on the grey search box above, to view sample request/response objects for Contact Enrichment Search*
      *
      * Perform a search:
@@ -143,11 +170,12 @@ export declare class SDK {
      * + <code>Phone</code> = null (optional, string) ... Phone number (formats: ###-###-####, (###) ###-####).
      *
      * + <code>Email</code> = null (optional, string) ... E-mail address.
-    **/
+     */
     postContactEnrich(req: operations.PostContactEnrichRequest, config?: AxiosRequestConfig): Promise<operations.PostContactEnrichResponse>;
     /**
-     * postEmailEnrich - Search
+     * Search
      *
+     * @remarks
      * ###### *Click on the grey search box above, to view sample request/response objects for Email Enrichment Search*
      *
      * Perform a search:
@@ -169,11 +197,12 @@ export declare class SDK {
      * The JSON request should have an email.
      *
      * + <code>Email</code> = null (optional, string) ... E-mail address.
-    **/
+     */
     postEmailEnrich(req: operations.PostEmailEnrichRequest, config?: AxiosRequestConfig): Promise<operations.PostEmailEnrichResponse>;
     /**
-     * postPhoneEnrich - Search
+     * Search
      *
+     * @remarks
      * ###### *Click on the grey search box above, to view sample request/response objects for Phone Enrichment Search*
      *
      * Perform a search:
@@ -195,6 +224,6 @@ export declare class SDK {
      * The JSON request should have a phone number.
      *
      * + <code>Phone</code> = null (optional, string) ... Phone number (formats: ###-###-####, (###) ###-####).
-    **/
+     */
     postPhoneEnrich(req: operations.PostPhoneEnrichRequest, config?: AxiosRequestConfig): Promise<operations.PostPhoneEnrichResponse>;
 }

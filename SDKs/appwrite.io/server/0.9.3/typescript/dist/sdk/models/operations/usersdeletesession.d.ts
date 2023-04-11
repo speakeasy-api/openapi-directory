@@ -1,18 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class UsersDeleteSessionPathParams extends SpeakeasyBase {
-    sessionId: string;
-    userId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UsersDeleteSessionSecurity extends SpeakeasyBase {
-    key: shared.SchemeKey;
-    project: shared.SchemeProject;
+    key: string;
+    project: string;
 }
 export declare class UsersDeleteSessionRequest extends SpeakeasyBase {
-    pathParams: UsersDeleteSessionPathParams;
-    security: UsersDeleteSessionSecurity;
+    /**
+     * User unique session ID.
+     */
+    sessionId: string;
+    /**
+     * User unique ID.
+     */
+    userId: string;
 }
 export declare class UsersDeleteSessionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

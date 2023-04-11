@@ -1,20 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReposListPagesBuildsPathParams extends SpeakeasyBase {
-    owner: string;
-    repo: string;
-}
-export declare class ReposListPagesBuildsQueryParams extends SpeakeasyBase {
-    page?: number;
-    perPage?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ReposListPagesBuildsRequest extends SpeakeasyBase {
-    pathParams: ReposListPagesBuildsPathParams;
-    queryParams: ReposListPagesBuildsQueryParams;
+    owner: string;
+    /**
+     * Page number of the results to fetch.
+     */
+    page?: number;
+    /**
+     * Results per page (max 100)
+     */
+    perPage?: number;
+    repo: string;
 }
 export declare class ReposListPagesBuildsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     pageBuilds?: shared.PageBuild[];
 }

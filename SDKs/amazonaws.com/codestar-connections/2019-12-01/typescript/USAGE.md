@@ -1,47 +1,54 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateConnectionRequest, CreateConnectionResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CreateConnectionRequest,
+  CreateConnectionResponse,
+  CreateConnectionXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
+import {
+  ProviderTypeEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: CreateConnectionRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "com.amazonaws.codestar.connections.CodeStar_connections_20191201.CreateConnection",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
-    connectionName: "fugit",
-    hostArn: "et",
-    providerType: "Bitbucket",
+});
+
+const req: CreateConnectionRequest = {
+  createConnectionInput: {
+    connectionName: "corrupti",
+    hostArn: "provident",
+    providerType: ProviderTypeEnum.GitHubEnterpriseServer,
     tags: [
       {
-        key: "dicta",
-        value: "debitis",
+        key: "unde",
+        value: "nulla",
       },
       {
-        key: "voluptatum",
-        value: "et",
+        key: "corrupti",
+        value: "illum",
       },
       {
-        key: "ut",
-        value: "dolorem",
+        key: "vel",
+        value: "error",
+      },
+      {
+        key: "deserunt",
+        value: "suscipit",
       },
     ],
   },
+  xAmzAlgorithm: "iure",
+  xAmzContentSha256: "magnam",
+  xAmzCredential: "debitis",
+  xAmzDate: "ipsa",
+  xAmzSecurityToken: "delectus",
+  xAmzSignature: "tempora",
+  xAmzSignedHeaders: "suscipit",
+  xAmzTarget: CreateConnectionXAmzTargetEnum.ComAmazonawsCodestarConnectionsCodeStarConnections20191201CreateConnection,
 };
 
 sdk.createConnection(req).then((res: CreateConnectionResponse | AxiosError) => {

@@ -1,28 +1,38 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PatientPhysicalExamsListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class PatientPhysicalExamsListSecurity extends SpeakeasyBase {
+    drchronoOauth2: string;
+}
+export declare class PatientPhysicalExamsListRequest extends SpeakeasyBase {
     cursor?: string;
     doctor?: number;
     pageSize?: number;
     patient?: number;
 }
-export declare class PatientPhysicalExamsListSecurity extends SpeakeasyBase {
-    drchronoOauth2: shared.SchemeDrchronoOauth2;
-}
 /**
  * Paginated Result
-**/
-export declare class PatientPhysicalExamsList200ApplicationJson extends SpeakeasyBase {
+ */
+export declare class PatientPhysicalExamsList200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * result data
+     */
     data?: shared.PatientPhysicalExam[];
+    /**
+     * Next Paginated page
+     */
     next?: string;
+    /**
+     * Previous paginated page
+     */
     previous?: string;
-}
-export declare class PatientPhysicalExamsListRequest extends SpeakeasyBase {
-    queryParams: PatientPhysicalExamsListQueryParams;
-    security: PatientPhysicalExamsListSecurity;
 }
 export declare class PatientPhysicalExamsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    patientPhysicalExamsList200ApplicationJSONObject?: PatientPhysicalExamsList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
+    patientPhysicalExamsList200ApplicationJSONObject?: PatientPhysicalExamsList200ApplicationJSON;
 }

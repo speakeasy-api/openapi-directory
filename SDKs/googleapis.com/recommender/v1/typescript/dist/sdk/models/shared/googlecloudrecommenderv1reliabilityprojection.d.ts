@@ -7,8 +7,14 @@ export declare enum GoogleCloudRecommenderV1ReliabilityProjectionRisksEnum {
 }
 /**
  * Contains information on the impact of a reliability recommendation.
-**/
+ */
 export declare class GoogleCloudRecommenderV1ReliabilityProjection extends SpeakeasyBase {
+    /**
+     * Per-recommender projection.
+     */
     details?: Record<string, any>;
+    /**
+     * Reliability risks mitigated by this recommendation.
+     */
     risks?: GoogleCloudRecommenderV1ReliabilityProjectionRisksEnum[];
 }

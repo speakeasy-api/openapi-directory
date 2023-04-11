@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateFirewallDescriptionXAmzTargetEnum {
     NetworkFirewall20201112UpdateFirewallDescription = "NetworkFirewall_20201112.UpdateFirewallDescription"
 }
-export declare class UpdateFirewallDescriptionHeaders extends SpeakeasyBase {
+export declare class UpdateFirewallDescriptionRequest extends SpeakeasyBase {
+    updateFirewallDescriptionRequest: shared.UpdateFirewallDescriptionRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class UpdateFirewallDescriptionHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateFirewallDescriptionXAmzTargetEnum;
 }
-export declare class UpdateFirewallDescriptionRequest extends SpeakeasyBase {
-    headers: UpdateFirewallDescriptionHeaders;
-    request: shared.UpdateFirewallDescriptionRequest;
-}
 export declare class UpdateFirewallDescriptionResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServerError
+     */
     internalServerError?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * InvalidTokenException
+     */
     invalidTokenException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * Success
+     */
     updateFirewallDescriptionResponse?: shared.UpdateFirewallDescriptionResponse;
 }

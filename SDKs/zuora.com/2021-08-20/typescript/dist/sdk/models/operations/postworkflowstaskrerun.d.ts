@@ -1,20 +1,45 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PostWorkflowsTaskRerunPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class POSTWorkflowsTaskRerunRequest extends SpeakeasyBase {
+    /**
+     * `Bearer {token}` for a valid OAuth token.
+     *
+     * @remarks
+     *
+     */
+    authorization: string;
+    /**
+     * An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+     *
+     * @remarks
+     *
+     */
+    zuoraEntityIds?: string;
+    /**
+     * A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+     *
+     * @remarks
+     *
+     * The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+     *
+     */
+    zuoraTrackId?: string;
+    /**
+     * The unique ID of the task.
+     *
+     * @remarks
+     *
+     */
     taskId: string;
 }
-export declare class PostWorkflowsTaskRerunHeaders extends SpeakeasyBase {
-    authorization: string;
-    zuoraEntityIds?: string;
-    zuoraTrackId?: string;
-}
-export declare class PostWorkflowsTaskRerunRequest extends SpeakeasyBase {
-    pathParams: PostWorkflowsTaskRerunPathParams;
-    headers: PostWorkflowsTaskRerunHeaders;
-}
-export declare class PostWorkflowsTaskRerunResponse extends SpeakeasyBase {
+export declare class POSTWorkflowsTaskRerunResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
     task?: shared.Task;
 }

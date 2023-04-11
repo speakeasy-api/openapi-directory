@@ -13,7 +13,16 @@ export declare class OffersItems extends SpeakeasyBase {
     id?: string;
     items?: OffersItemsItems[];
 }
+/**
+ * Successful response
+ */
 export declare class Offers extends SpeakeasyBase {
+    /**
+     * A list of offers.
+     */
     items?: OffersItems[];
+    /**
+     * Resource type.
+     */
     kind?: string;
 }

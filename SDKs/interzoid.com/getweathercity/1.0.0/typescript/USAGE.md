@@ -1,18 +1,18 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetweatherRequest, GetweatherResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetweatherRequest,
+  GetweatherResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetweatherRequest = {
-  queryParams: {
-    city: "sit",
-    license: "voluptas",
-    state: "culpa",
-  },
+  city: "Laruecester",
+  license: "quibusdam",
+  state: "unde",
 };
 
 sdk.weatherByCityAndState.getweather(req).then((res: GetweatherResponse | AxiosError) => {

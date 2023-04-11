@@ -1,6 +1,9 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class PlaylistApi {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Endpoints to fetch Listen Later playlists data
+ */
+export declare class PlaylistAPI {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,8 +12,9 @@ export declare class PlaylistApi {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getPlaylistById - Fetch a playlist's info and items (i.e., episodes or podcasts).
+     * Fetch a playlist's info and items (i.e., episodes or podcasts).
      *
+     * @remarks
      * A playlist can be an episode list (i.e., all items are episodes) or a podcast list (i.e., all items are podcasts),
      * which is essentially the same as those created via listennotes.com/listen/.
      * This endpoint fetches a list of items (i.e., episodes or podcasts) in the playlist.
@@ -20,14 +24,15 @@ export declare class PlaylistApi {
      * or **private** (accessible to its owner).
      * You can fetch all playlists created by you, and **public** / **unlisted** playlists created by others.
      *
-    **/
+     */
     getPlaylistById(req: operations.GetPlaylistByIdRequest, config?: AxiosRequestConfig): Promise<operations.GetPlaylistByIdResponse>;
     /**
-     * getPlaylists - Fetch a list of your playlists.
+     * Fetch a list of your playlists.
      *
+     * @remarks
      * This endpoint returns same data as listennotes.com/listen under your account.
      * You can use the **page** parameter to do pagination and fetch more playlists.
      *
-    **/
+     */
     getPlaylists(req: operations.GetPlaylistsRequest, config?: AxiosRequestConfig): Promise<operations.GetPlaylistsResponse>;
 }

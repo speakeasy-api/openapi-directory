@@ -1,93 +1,160 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { ApigatewayProjectsLocationsApisConfigsCreateRequest, ApigatewayProjectsLocationsApisConfigsCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  ApigatewayProjectsLocationsApisConfigsCreateRequest,
+  ApigatewayProjectsLocationsApisConfigsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: ApigatewayProjectsLocationsApisConfigsCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    apiConfigId: "consequuntur",
-    callback: "dolor",
-    fields: "expedita",
-    key: "voluptas",
-    oauthToken: "fugit",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    uploadType: "rerum",
-    uploadProtocol: "dicta",
-  },
-  request: {
-    displayName: "debitis",
-    gatewayServiceAccount: "voluptatum",
+  dollarXgafv: XgafvEnum.Two,
+  apigatewayApiConfigInput: {
+    displayName: "provident",
+    gatewayServiceAccount: "distinctio",
     grpcServices: [
       {
         fileDescriptorSet: {
-          contents: "ut",
-          path: "dolorem",
+          contents: "unde",
+          path: "nulla",
         },
         source: [
           {
-            contents: "voluptate",
-            path: "iste",
+            contents: "illum",
+            path: "vel",
           },
           {
-            contents: "vitae",
-            path: "totam",
+            contents: "error",
+            path: "deserunt",
+          },
+          {
+            contents: "suscipit",
+            path: "iure",
+          },
+        ],
+      },
+      {
+        fileDescriptorSet: {
+          contents: "magnam",
+          path: "debitis",
+        },
+        source: [
+          {
+            contents: "delectus",
+            path: "tempora",
+          },
+        ],
+      },
+      {
+        fileDescriptorSet: {
+          contents: "suscipit",
+          path: "molestiae",
+        },
+        source: [
+          {
+            contents: "placeat",
+            path: "voluptatum",
+          },
+          {
+            contents: "iusto",
+            path: "excepturi",
+          },
+          {
+            contents: "nisi",
+            path: "recusandae",
+          },
+          {
+            contents: "temporibus",
+            path: "ab",
+          },
+        ],
+      },
+      {
+        fileDescriptorSet: {
+          contents: "quis",
+          path: "veritatis",
+        },
+        source: [
+          {
+            contents: "perferendis",
+            path: "ipsam",
+          },
+          {
+            contents: "repellendus",
+            path: "sapiente",
+          },
+          {
+            contents: "quo",
+            path: "odit",
           },
         ],
       },
     ],
     labels: {
-      "illum": "debitis",
+      "at": "maiores",
+      "molestiae": "quod",
+      "quod": "esse",
+      "totam": "porro",
     },
     managedServiceConfigs: [
       {
-        contents: "odio",
-        path: "dolore",
+        contents: "dicta",
+        path: "nam",
       },
       {
-        contents: "id",
-        path: "aspernatur",
+        contents: "officia",
+        path: "occaecati",
+      },
+      {
+        contents: "fugit",
+        path: "deleniti",
       },
     ],
     openapiDocuments: [
       {
         document: {
-          contents: "totam",
+          contents: "optio",
+          path: "totam",
+        },
+      },
+      {
+        document: {
+          contents: "beatae",
           path: "commodi",
         },
       },
       {
         document: {
-          contents: "quis",
-          path: "est",
+          contents: "molestiae",
+          path: "modi",
         },
       },
       {
         document: {
-          contents: "aut",
-          path: "odit",
+          contents: "qui",
+          path: "impedit",
         },
       },
     ],
   },
+  accessToken: "cum",
+  alt: AltEnum.Media,
+  apiConfigId: "ipsum",
+  callback: "excepturi",
+  fields: "aspernatur",
+  key: "perferendis",
+  oauthToken: "ad",
+  parent: "natus",
+  prettyPrint: false,
+  quotaUser: "sed",
+  uploadType: "iste",
+  uploadProtocol: "dolor",
 };
 
 sdk.projects.apigatewayProjectsLocationsApisConfigsCreate(req).then((res: ApigatewayProjectsLocationsApisConfigsCreateResponse | AxiosError) => {

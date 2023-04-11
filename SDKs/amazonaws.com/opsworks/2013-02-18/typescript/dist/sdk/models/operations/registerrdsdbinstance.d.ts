@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum RegisterRdsDbInstanceXAmzTargetEnum {
     OpsWorks20130218RegisterRdsDbInstance = "OpsWorks_20130218.RegisterRdsDbInstance"
 }
-export declare class RegisterRdsDbInstanceHeaders extends SpeakeasyBase {
+export declare class RegisterRdsDbInstanceRequest extends SpeakeasyBase {
+    registerRdsDbInstanceRequest: shared.RegisterRdsDbInstanceRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,13 +15,16 @@ export declare class RegisterRdsDbInstanceHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: RegisterRdsDbInstanceXAmzTargetEnum;
 }
-export declare class RegisterRdsDbInstanceRequest extends SpeakeasyBase {
-    headers: RegisterRdsDbInstanceHeaders;
-    request: shared.RegisterRdsDbInstanceRequest;
-}
 export declare class RegisterRdsDbInstanceResponse extends SpeakeasyBase {
     contentType: string;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

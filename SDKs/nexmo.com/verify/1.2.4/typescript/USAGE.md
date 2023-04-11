@@ -1,23 +1,26 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { VerifyCheckRequest, VerifyCheckResponse } from "openapi/src/sdk/models/operations";
+import {
+  VerifyCheckRequest,
+  VerifyCheckResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  FormatEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: VerifyCheckRequest = {
-  pathParams: {
-    format: "json",
+  checkRequest: {
+    apiKey: "abcd1234",
+    apiSecret: "Sup3rS3cr3t!!",
+    code: "1234",
+    ipAddress: "123.0.0.255",
+    requestId: "abcdef0123456789abcdef0123456789",
   },
-  request: {
-    apiKey: "voluptas",
-    apiSecret: "culpa",
-    code: "expedita",
-    ipAddress: "consequuntur",
-    requestId: "dolor",
-  },
+  format: FormatEnum.Xml,
 };
 
 sdk.verifyCheck(req).then((res: VerifyCheckResponse | AxiosError) => {

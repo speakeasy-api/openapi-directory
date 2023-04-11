@@ -1,15 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DescribeFunction20200531PathParams extends SpeakeasyBase {
-    name: string;
-}
+import { AxiosResponse } from "axios";
+/**
+ * The function's stage, either <code>DEVELOPMENT</code> or <code>LIVE</code>.
+ */
 export declare enum DescribeFunction20200531StageEnum {
     Development = "DEVELOPMENT",
     Live = "LIVE"
 }
-export declare class DescribeFunction20200531QueryParams extends SpeakeasyBase {
+export declare class DescribeFunction20200531Request extends SpeakeasyBase {
+    /**
+     * The name of the function that you are getting information about.
+     */
+    name: string;
+    /**
+     * The function's stage, either <code>DEVELOPMENT</code> or <code>LIVE</code>.
+     */
     stage?: DescribeFunction20200531StageEnum;
-}
-export declare class DescribeFunction20200531Headers extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +24,9 @@ export declare class DescribeFunction20200531Headers extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DescribeFunction20200531Request extends SpeakeasyBase {
-    pathParams: DescribeFunction20200531PathParams;
-    queryParams: DescribeFunction20200531QueryParams;
-    headers: DescribeFunction20200531Headers;
-}
 export declare class DescribeFunction20200531Response extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class LocalTaxes {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,27 +9,31 @@ export declare class LocalTaxes {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * addLocalTax - Add new local tax
+     * Add new local tax
      *
+     * @remarks
      * Sends new employee local tax information directly to Web Pay.
-    **/
-    addLocalTax(req: operations.AddLocalTaxRequest, config?: AxiosRequestConfig): Promise<operations.AddLocalTaxResponse>;
+     */
+    addLocalTax(req: operations.AddLocalTaxRequest, security: operations.AddLocalTaxSecurity, config?: AxiosRequestConfig): Promise<operations.AddLocalTaxResponse>;
     /**
-     * deleteLocalTaxByTaxCode - Delete local tax by tax code
-     *
      * Delete local tax by tax code
-    **/
-    deleteLocalTaxByTaxCode(req: operations.DeleteLocalTaxByTaxCodeRequest, config?: AxiosRequestConfig): Promise<operations.DeleteLocalTaxByTaxCodeResponse>;
-    /**
-     * getAllLocalTaxes - Get all local taxes
      *
+     * @remarks
+     * Delete local tax by tax code
+     */
+    deleteLocalTaxByTaxCode(req: operations.DeleteLocalTaxByTaxCodeRequest, security: operations.DeleteLocalTaxByTaxCodeSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteLocalTaxByTaxCodeResponse>;
+    /**
+     * Get all local taxes
+     *
+     * @remarks
      * Returns all local taxes for the selected employee.
-    **/
-    getAllLocalTaxes(req: operations.GetAllLocalTaxesRequest, config?: AxiosRequestConfig): Promise<operations.GetAllLocalTaxesResponse>;
+     */
+    getAllLocalTaxes(req: operations.GetAllLocalTaxesRequest, security: operations.GetAllLocalTaxesSecurity, config?: AxiosRequestConfig): Promise<operations.GetAllLocalTaxesResponse>;
     /**
-     * getLocalTaxByTaxCode - Get local taxes by tax code
+     * Get local taxes by tax code
      *
+     * @remarks
      * Returns all local taxes with the provided tax code for the selected employee.
-    **/
-    getLocalTaxByTaxCode(req: operations.GetLocalTaxByTaxCodeRequest, config?: AxiosRequestConfig): Promise<operations.GetLocalTaxByTaxCodeResponse>;
+     */
+    getLocalTaxByTaxCode(req: operations.GetLocalTaxByTaxCodeRequest, security: operations.GetLocalTaxByTaxCodeSecurity, config?: AxiosRequestConfig): Promise<operations.GetLocalTaxByTaxCodeResponse>;
 }

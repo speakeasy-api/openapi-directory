@@ -1,22 +1,33 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PostWorkspacesWorkspaceProjectsPathParams extends SpeakeasyBase {
-    workspace: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PostWorkspacesWorkspaceProjectsSecurity extends SpeakeasyBase {
-    oauth2?: shared.SchemeOauth2;
+    apiKey?: string;
     basic?: shared.SchemeBasic;
-    apiKey?: shared.SchemeApiKey;
+    oauth2?: string;
 }
 export declare class PostWorkspacesWorkspaceProjectsRequest extends SpeakeasyBase {
-    pathParams: PostWorkspacesWorkspaceProjectsPathParams;
-    request: Record<string, any>;
-    security: PostWorkspacesWorkspaceProjectsSecurity;
+    requestBody: Record<string, any>;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     *
+     * @remarks
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     *
+     */
+    workspace: string;
 }
 export declare class PostWorkspacesWorkspaceProjectsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The requesting user isn't authorized to create the project.
+     */
     error?: Record<string, any>;
+    /**
+     * A new project has been created.
+     */
     project?: Record<string, any>;
 }

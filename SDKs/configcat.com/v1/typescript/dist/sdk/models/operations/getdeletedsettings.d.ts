@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetDeletedSettingsPathParams extends SpeakeasyBase {
-    configId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetDeletedSettingsRequest extends SpeakeasyBase {
-    pathParams: GetDeletedSettingsPathParams;
+    /**
+     * The identifier of the Config.
+     */
+    configId: string;
 }
 export declare class GetDeletedSettingsResponse extends SpeakeasyBase {
     contentType: string;
     settingModelHaljsons?: shared.SettingModelHaljson[];
     settingModels?: shared.SettingModel[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

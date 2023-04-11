@@ -1,5 +1,7 @@
 export declare enum LoadBalancerAttributeNameEnum {
     HealthCheckPath = "HealthCheckPath",
     SessionStickinessEnabled = "SessionStickinessEnabled",
-    SessionStickinessLbCookieDurationSeconds = "SessionStickiness_LB_CookieDurationSeconds"
+    SessionStickinessLBCookieDurationSeconds = "SessionStickiness_LB_CookieDurationSeconds",
+    HttpsRedirectionEnabled = "HttpsRedirectionEnabled",
+    TlsPolicyName = "TlsPolicyName"
 }

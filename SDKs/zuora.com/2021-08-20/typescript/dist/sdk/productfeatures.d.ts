@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class ProductFeatures {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,11 +9,11 @@ export declare class ProductFeatures {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * objectDeleteProductFeature - CRUD: Delete a product feature
-    **/
-    objectDeleteProductFeature(req: operations.ObjectDeleteProductFeatureRequest, config?: AxiosRequestConfig): Promise<operations.ObjectDeleteProductFeatureResponse>;
+     * CRUD: Delete a product feature
+     */
+    objectDELETEProductFeature(req: operations.ObjectDELETEProductFeatureRequest, config?: AxiosRequestConfig): Promise<operations.ObjectDELETEProductFeatureResponse>;
     /**
-     * objectGetProductFeature - CRUD: Retrieve a product feature
-    **/
-    objectGetProductFeature(req: operations.ObjectGetProductFeatureRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGetProductFeatureResponse>;
+     * CRUD: Retrieve a product feature
+     */
+    objectGETProductFeature(req: operations.ObjectGETProductFeatureRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGETProductFeatureResponse>;
 }

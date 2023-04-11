@@ -1,30 +1,37 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { PagespeedonlinePagespeedapiRunpagespeedRequest, PagespeedonlinePagespeedapiRunpagespeedResponse } from "openapi/src/sdk/models/operations";
+import {
+  PagespeedonlinePagespeedapiRunpagespeedRequest,
+  PagespeedonlinePagespeedapiRunpagespeedResponse,
+  PagespeedonlinePagespeedapiRunpagespeedStrategyEnum,
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: PagespeedonlinePagespeedapiRunpagespeedRequest = {
-  queryParams: {
-    alt: "json",
-    fields: "voluptas",
-    filterThirdPartyResources: true,
-    key: "expedita",
-    locale: "consequuntur",
-    oauthToken: "dolor",
-    prettyPrint: true,
-    quotaUser: "voluptas",
-    rule: [
-      "et",
-    ],
-    screenshot: true,
-    strategy: "mobile",
-    url: "dicta",
-    userIp: "debitis",
-  },
+  alt: AltEnum.Json,
+  fields: "corrupti",
+  filterThirdPartyResources: false,
+  key: "provident",
+  locale: "distinctio",
+  oauthToken: "quibusdam",
+  prettyPrint: false,
+  quotaUser: "unde",
+  rule: [
+    "corrupti",
+    "illum",
+    "vel",
+    "error",
+  ],
+  screenshot: false,
+  strategy: PagespeedonlinePagespeedapiRunpagespeedStrategyEnum.Mobile,
+  url: "suscipit",
+  userIp: "iure",
 };
 
 sdk.pagespeedapi.pagespeedonlinePagespeedapiRunpagespeed(req).then((res: PagespeedonlinePagespeedapiRunpagespeedResponse | AxiosError) => {

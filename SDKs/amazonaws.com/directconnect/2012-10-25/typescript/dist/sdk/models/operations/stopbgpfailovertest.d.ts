@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum StopBgpFailoverTestXAmzTargetEnum {
     OvertureServiceStopBgpFailoverTest = "OvertureService.StopBgpFailoverTest"
 }
-export declare class StopBgpFailoverTestHeaders extends SpeakeasyBase {
+export declare class StopBgpFailoverTestRequest extends SpeakeasyBase {
+    stopBgpFailoverTestRequest: shared.StopBgpFailoverTestRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class StopBgpFailoverTestHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: StopBgpFailoverTestXAmzTargetEnum;
 }
-export declare class StopBgpFailoverTestRequest extends SpeakeasyBase {
-    headers: StopBgpFailoverTestHeaders;
-    request: shared.StopBgpFailoverTestRequest;
-}
 export declare class StopBgpFailoverTestResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * DirectConnectClientException
+     */
     directConnectClientException?: any;
+    /**
+     * DirectConnectServerException
+     */
     directConnectServerException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     stopBgpFailoverTestResponse?: shared.StopBgpFailoverTestResponse;
 }

@@ -1,9 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeAccessPolicyPathParams extends SpeakeasyBase {
-    accessPolicyId: string;
-}
-export declare class DescribeAccessPolicyHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DescribeAccessPolicyRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,17 +9,33 @@ export declare class DescribeAccessPolicyHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DescribeAccessPolicyRequest extends SpeakeasyBase {
-    pathParams: DescribeAccessPolicyPathParams;
-    headers: DescribeAccessPolicyHeaders;
+    /**
+     * The ID of the access policy.
+     */
+    accessPolicyId: string;
 }
 export declare class DescribeAccessPolicyResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeAccessPolicyResponse?: shared.DescribeAccessPolicyResponse;
+    /**
+     * InternalFailureException
+     */
     internalFailureException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

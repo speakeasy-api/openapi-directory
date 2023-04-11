@@ -1,10 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReposAddCollaboratorPathParams extends SpeakeasyBase {
-    owner: string;
-    repo: string;
-    username: string;
-}
+import { AxiosResponse } from "axios";
+/**
+ * The permission to grant the collaborator. **Only valid on organization-owned repositories.** Can be one of:
+ *
+ * @remarks
+ * \* `pull` - can pull, but not push to or administer this repository.
+ * \* `push` - can pull and push, but not administer this repository.
+ * \* `admin` - can pull, push and administer this repository.
+ * \* `maintain` - Recommended for project managers who need to manage the repository without access to sensitive or destructive actions.
+ * \* `triage` - Recommended for contributors who need to proactively manage issues and pull requests without write access.
+ */
 export declare enum ReposAddCollaboratorRequestBodyPermissionEnum {
     Pull = "pull",
     Push = "push",
@@ -13,17 +19,39 @@ export declare enum ReposAddCollaboratorRequestBodyPermissionEnum {
     Triage = "triage"
 }
 export declare class ReposAddCollaboratorRequestBody extends SpeakeasyBase {
+    /**
+     * The permission to grant the collaborator. **Only valid on organization-owned repositories.** Can be one of:
+     *
+     * @remarks
+     * \* `pull` - can pull, but not push to or administer this repository.
+     * \* `push` - can pull and push, but not administer this repository.
+     * \* `admin` - can pull, push and administer this repository.
+     * \* `maintain` - Recommended for project managers who need to manage the repository without access to sensitive or destructive actions.
+     * \* `triage` - Recommended for contributors who need to proactively manage issues and pull requests without write access.
+     */
     permission?: ReposAddCollaboratorRequestBodyPermissionEnum;
     permissions?: string;
 }
 export declare class ReposAddCollaboratorRequest extends SpeakeasyBase {
-    pathParams: ReposAddCollaboratorPathParams;
-    request?: ReposAddCollaboratorRequestBody;
+    requestBody?: ReposAddCollaboratorRequestBody;
+    owner: string;
+    repo: string;
+    username: string;
 }
 export declare class ReposAddCollaboratorResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Forbidden
+     */
     basicError?: shared.BasicError;
+    /**
+     * Response when a new invitation is created
+     */
     repositoryInvitation?: shared.RepositoryInvitation;
+    /**
+     * Validation failed
+     */
     validationError?: shared.ValidationError;
 }

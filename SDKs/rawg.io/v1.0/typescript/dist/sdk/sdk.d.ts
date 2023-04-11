@@ -1,4 +1,3 @@
-import { AxiosInstance } from "axios";
 import { CreatorRoles } from "./creatorroles";
 import { Creators } from "./creators";
 import { Developers } from "./developers";
@@ -8,11 +7,53 @@ import { Platforms } from "./platforms";
 import { Publishers } from "./publishers";
 import { Stores } from "./stores";
 import { Tags } from "./tags";
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://api.rawg.io/api"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ *
+ * @remarks
+ * The largest open video games database.
+ *
+ * ### Why build on RAWG
+ * - More than 350,000 games for 50 platforms including mobiles.
+ * - Rich metadata: tags, genres, developers, publishers, individual creators, official websites, release dates,
+ * Metacritic ratings.
+ * - Where to buy: links to digital distribution services
+ * - Similar games based on visual similarity.
+ * - Player activity data: Steam average playtime and RAWG player counts and ratings.
+ * - Actively developing and constantly getting better by user contribution and our algorithms.
+ *
+ * ### Terms of Use
+ * - Free for personal use as long as you attribute RAWG as the source of the data and/or images and add an active
+ * hyperlink from every page where the data of RAWG is used.
+ * - Free for commercial use for startups and hobby projects with not more than 100,000 monthly active users or 500,000
+ * page views per month. If your project is larger than that, email us at [api@rawg.io](mailto:api@rawg.io) for
+ * commercial terms.
+ * - No cloning. It would not be cool if you used our API to launch a clone of RAWG. We know it is not always easy
+ * to say what is a duplicate and what isn't. Drop us a line at [api@rawg.io](mailto:api@rawg.io) if you are in doubt,
+ * and we will talk it through.
+ * - You must include an API key with every request. The key can be obtained at https://rawg.io/apidocs.
+ * If you don’t provide it, we may ban your requests.
+ *
+ * __[Read more](https://rawg.io/apidocs)__.
+ *
+ */
 export declare class SDK {
     creatorRoles: CreatorRoles;
     creators: Creators;
@@ -29,5 +70,6 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
 }

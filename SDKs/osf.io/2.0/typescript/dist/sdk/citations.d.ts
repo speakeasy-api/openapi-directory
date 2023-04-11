@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Citations {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class Citations {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * citationsStylesList - List all citation styles
+     * List all citation styles
      *
+     * @remarks
      *
      * A paginated list of all standard citation styles available for rendering citations.
      * #### Returns
@@ -25,16 +26,19 @@ export declare class Citations {
      * You can optionally request that the response only include citation styles that match your filters by utilizing the `filter` query parameter, e.g. https://api.osf.io/v2/citations/styles/?filter[title]=open.
      *
      * Citation styles may be filtered by their `id`, `title`, `short-title`, and `summary`.
-    **/
+     * #### Errors
+     * This request should never return an error.
+     */
     citationsStylesList(config?: AxiosRequestConfig): Promise<operations.CitationsStylesListResponse>;
     /**
-     * citationsStylesRead - Retrieve a citation style
+     * Retrieve a citation style
      *
+     * @remarks
      * Retrieves the details of a citation style.
      * #### Returns
      * Returns a JSON object with a `data` key containing the representation of the requested citation style, if the request is successful.
-     *
+     * #### Errors
      * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
-    **/
+     */
     citationsStylesRead(req: operations.CitationsStylesReadRequest, config?: AxiosRequestConfig): Promise<operations.CitationsStylesReadResponse>;
 }

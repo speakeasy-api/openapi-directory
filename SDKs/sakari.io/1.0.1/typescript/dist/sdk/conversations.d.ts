@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Conversations group your message history with each contact into one thread
+ */
 export declare class Conversations {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,15 +12,15 @@ export declare class Conversations {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * conversationsClose - Closes a conversation
-    **/
-    conversationsClose(req: operations.ConversationsCloseRequest, config?: AxiosRequestConfig): Promise<operations.ConversationsCloseResponse>;
+     * Closes a conversation
+     */
+    conversationsClose(req: operations.ConversationsCloseRequest, security: operations.ConversationsCloseSecurity, config?: AxiosRequestConfig): Promise<operations.ConversationsCloseResponse>;
     /**
-     * conversationsFetch - Fetch conversation by ID
-    **/
-    conversationsFetch(req: operations.ConversationsFetchRequest, config?: AxiosRequestConfig): Promise<operations.ConversationsFetchResponse>;
+     * Fetch conversation by ID
+     */
+    conversationsFetch(req: operations.ConversationsFetchRequest, security: operations.ConversationsFetchSecurity, config?: AxiosRequestConfig): Promise<operations.ConversationsFetchResponse>;
     /**
-     * conversationsFetchAll - Fetch conversations
-    **/
-    conversationsFetchAll(req: operations.ConversationsFetchAllRequest, config?: AxiosRequestConfig): Promise<operations.ConversationsFetchAllResponse>;
+     * Fetch conversations
+     */
+    conversationsFetchAll(req: operations.ConversationsFetchAllRequest, security: operations.ConversationsFetchAllSecurity, config?: AxiosRequestConfig): Promise<operations.ConversationsFetchAllResponse>;
 }

@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DcimPowerFeedsPartialUpdatePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DcimPowerFeedsPartialUpdateRequest extends SpeakeasyBase {
-    pathParams: DcimPowerFeedsPartialUpdatePathParams;
-    request: shared.WritablePowerFeedInput;
+    writablePowerFeedInput: shared.WritablePowerFeedInput;
+    /**
+     * A unique integer value identifying this power feed.
+     */
+    id: number;
 }
 export declare class DcimPowerFeedsPartialUpdateResponse extends SpeakeasyBase {
     contentType: string;
     powerFeed?: shared.PowerFeed;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

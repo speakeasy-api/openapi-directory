@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListAggregateDiscoveredResourcesQueryParams extends SpeakeasyBase {
-    limit?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListAggregateDiscoveredResourcesXAmzTargetEnum {
     StarlingDoveServiceListAggregateDiscoveredResources = "StarlingDoveService.ListAggregateDiscoveredResources"
 }
-export declare class ListAggregateDiscoveredResourcesHeaders extends SpeakeasyBase {
+export declare class ListAggregateDiscoveredResourcesRequest extends SpeakeasyBase {
+    /**
+     * Pagination limit
+     */
+    limit?: string;
+    listAggregateDiscoveredResourcesRequest: shared.ListAggregateDiscoveredResourcesRequest;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,17 +23,28 @@ export declare class ListAggregateDiscoveredResourcesHeaders extends SpeakeasyBa
     xAmzSignedHeaders?: string;
     xAmzTarget: ListAggregateDiscoveredResourcesXAmzTargetEnum;
 }
-export declare class ListAggregateDiscoveredResourcesRequest extends SpeakeasyBase {
-    queryParams: ListAggregateDiscoveredResourcesQueryParams;
-    headers: ListAggregateDiscoveredResourcesHeaders;
-    request: shared.ListAggregateDiscoveredResourcesRequest;
-}
 export declare class ListAggregateDiscoveredResourcesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidLimitException
+     */
     invalidLimitException?: any;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * Success
+     */
     listAggregateDiscoveredResourcesResponse?: shared.ListAggregateDiscoveredResourcesResponse;
+    /**
+     * NoSuchConfigurationAggregatorException
+     */
     noSuchConfigurationAggregatorException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

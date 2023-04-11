@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetInfoPathParams extends SpeakeasyBase {
-    agentNum: number;
-    object: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetInfoRequest extends SpeakeasyBase {
-    pathParams: GetInfoPathParams;
+    /**
+     * Agent to show the information of the object
+     */
+    agentNum: number;
+    /**
+     * Object
+     */
+    object: string;
 }
 export declare class GetInfoResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     getInfo200ApplicationJSONString?: string;
 }

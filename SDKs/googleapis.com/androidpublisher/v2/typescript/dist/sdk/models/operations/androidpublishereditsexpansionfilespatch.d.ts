@@ -1,36 +1,61 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class AndroidpublisherEditsExpansionfilesPatchSecurity extends SpeakeasyBase {
+    oauth2: string;
+    oauth2c: string;
+}
 export declare enum AndroidpublisherEditsExpansionfilesPatchExpansionFileTypeEnum {
     Main = "main",
     Patch = "patch"
 }
-export declare class AndroidpublisherEditsExpansionfilesPatchPathParams extends SpeakeasyBase {
+export declare class AndroidpublisherEditsExpansionfilesPatchRequest extends SpeakeasyBase {
+    expansionFile?: shared.ExpansionFile;
+    /**
+     * Data format for the response.
+     */
+    alt?: shared.AltEnum;
+    /**
+     * The version code of the APK whose Expansion File configuration is being read or modified.
+     */
     apkVersionCode: number;
+    /**
+     * Unique identifier for this edit.
+     */
     editId: string;
     expansionFileType: AndroidpublisherEditsExpansionfilesPatchExpansionFileTypeEnum;
-    packageName: string;
-}
-export declare class AndroidpublisherEditsExpansionfilesPatchQueryParams extends SpeakeasyBase {
-    alt?: shared.AltEnum;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
     fields?: string;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
     key?: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
     oauthToken?: string;
+    /**
+     * Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+     */
+    packageName: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
     prettyPrint?: boolean;
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
     quotaUser?: string;
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
     userIp?: string;
-}
-export declare class AndroidpublisherEditsExpansionfilesPatchSecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
-}
-export declare class AndroidpublisherEditsExpansionfilesPatchRequest extends SpeakeasyBase {
-    pathParams: AndroidpublisherEditsExpansionfilesPatchPathParams;
-    queryParams: AndroidpublisherEditsExpansionfilesPatchQueryParams;
-    request?: shared.ExpansionFile;
-    security: AndroidpublisherEditsExpansionfilesPatchSecurity;
 }
 export declare class AndroidpublisherEditsExpansionfilesPatchResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

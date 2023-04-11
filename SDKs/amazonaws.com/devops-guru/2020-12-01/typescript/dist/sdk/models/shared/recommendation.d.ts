@@ -3,8 +3,9 @@ import { RecommendationRelatedAnomaly } from "./recommendationrelatedanomaly";
 import { RecommendationRelatedEvent } from "./recommendationrelatedevent";
 /**
  *  Recommendation information to help you remediate detected anomalous behavior that generated an insight.
-**/
+ */
 export declare class Recommendation extends SpeakeasyBase {
+    category?: string;
     description?: string;
     link?: string;
     name?: string;

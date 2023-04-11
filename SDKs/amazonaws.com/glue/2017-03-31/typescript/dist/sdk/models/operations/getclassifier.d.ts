@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetClassifierXAmzTargetEnum {
-    AwsGlueGetClassifier = "AWSGlue.GetClassifier"
+    AWSGlueGetClassifier = "AWSGlue.GetClassifier"
 }
-export declare class GetClassifierHeaders extends SpeakeasyBase {
+export declare class GetClassifierRequest extends SpeakeasyBase {
+    getClassifierRequest: shared.GetClassifierRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class GetClassifierHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetClassifierXAmzTargetEnum;
 }
-export declare class GetClassifierRequest extends SpeakeasyBase {
-    headers: GetClassifierHeaders;
-    request: shared.GetClassifierRequest;
-}
 export declare class GetClassifierResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * Success
+     */
     getClassifierResponse?: shared.GetClassifierResponse;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

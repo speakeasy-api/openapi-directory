@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetObjectsWithXdBsCountUsingGetPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETObjectsWithXDBsCountUsingGETRequest extends SpeakeasyBase {
+    /**
+     * dateYYYYMMDD
+     */
     dateYYYYMMDD: string;
+    /**
+     * objectKey
+     */
     objectKey: number;
+    /**
+     * speciesTypeKey
+     */
     speciesTypeKey: number;
 }
-export declare class GetObjectsWithXdBsCountUsingGetRequest extends SpeakeasyBase {
-    pathParams: GetObjectsWithXdBsCountUsingGetPathParams;
-}
-export declare class GetObjectsWithXdBsCountUsingGetResponse extends SpeakeasyBase {
+export declare class GETObjectsWithXDBsCountUsingGETResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

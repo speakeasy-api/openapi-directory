@@ -1,5 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { NestedCableInput } from "./nestedcable";
+export declare enum WritableDeviceInterfaceConnectionStatusEnum {
+    False = "false",
+    True = "true"
+}
 export declare enum WritableDeviceInterfaceModeEnum {
     Access = "access",
     Tagged = "tagged",
@@ -81,12 +85,15 @@ export declare enum WritableDeviceInterfaceTypeEnum {
 }
 export declare class WritableDeviceInterfaceInput extends SpeakeasyBase {
     cable?: NestedCableInput;
-    connectionStatus?: boolean;
+    connectionStatus?: WritableDeviceInterfaceConnectionStatusEnum;
     description?: string;
     device: number;
     enabled?: boolean;
     lag?: number;
     macAddress?: string;
+    /**
+     * This interface is used only for out-of-band management
+     */
     mgmtOnly?: boolean;
     mode?: WritableDeviceInterfaceModeEnum;
     mtu?: number;

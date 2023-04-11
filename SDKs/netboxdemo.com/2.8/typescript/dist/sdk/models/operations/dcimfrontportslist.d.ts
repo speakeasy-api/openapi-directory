@@ -1,6 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DcimFrontPortsListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DcimFrontPortsListRequest extends SpeakeasyBase {
     cabled?: string;
     description?: string;
     descriptionIc?: string;
@@ -22,6 +23,9 @@ export declare class DcimFrontPortsListQueryParams extends SpeakeasyBase {
     idLt?: string;
     idLte?: string;
     idN?: string;
+    /**
+     * Number of results to return per page.
+     */
     limit?: number;
     name?: string;
     nameIc?: string;
@@ -33,6 +37,9 @@ export declare class DcimFrontPortsListQueryParams extends SpeakeasyBase {
     nameNie?: string;
     nameNiew?: string;
     nameNisw?: string;
+    /**
+     * The initial index from which to return the results.
+     */
     offset?: number;
     q?: string;
     region?: string;
@@ -48,17 +55,15 @@ export declare class DcimFrontPortsListQueryParams extends SpeakeasyBase {
     type?: string;
     typeN?: string;
 }
-export declare class DcimFrontPortsList200ApplicationJson extends SpeakeasyBase {
+export declare class DcimFrontPortsList200ApplicationJSON extends SpeakeasyBase {
     count: number;
     next?: string;
     previous?: string;
     results: shared.FrontPort[];
 }
-export declare class DcimFrontPortsListRequest extends SpeakeasyBase {
-    queryParams: DcimFrontPortsListQueryParams;
-}
 export declare class DcimFrontPortsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dcimFrontPortsList200ApplicationJSONObject?: DcimFrontPortsList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    dcimFrontPortsList200ApplicationJSONObject?: DcimFrontPortsList200ApplicationJSON;
 }

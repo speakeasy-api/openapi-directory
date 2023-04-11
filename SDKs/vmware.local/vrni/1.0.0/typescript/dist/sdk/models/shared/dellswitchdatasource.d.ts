@@ -1,7 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { PasswordCredentials } from "./passwordcredentials";
 import { DataSourceTypeEnum } from "./datasourcetypeenum";
 import { DellSwitchTypeEnum } from "./dellswitchtypeenum";
+import { PasswordCredentials } from "./passwordcredentials";
+/**
+ * OK
+ */
 export declare class DellSwitchDataSource extends SpeakeasyBase {
     credentials?: PasswordCredentials;
     enabled?: boolean;
@@ -11,6 +14,9 @@ export declare class DellSwitchDataSource extends SpeakeasyBase {
     ip?: string;
     nickname?: string;
     notes?: string;
+    /**
+     * proxy vm which should register this vcenter
+     */
     proxyId?: string;
     switchType?: DellSwitchTypeEnum;
 }

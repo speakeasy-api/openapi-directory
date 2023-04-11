@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetResetServiceSpecificCredentialActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETResetServiceSpecificCredentialActionEnum {
     ResetServiceSpecificCredential = "ResetServiceSpecificCredential"
 }
-export declare enum GetResetServiceSpecificCredentialVersionEnum {
+export declare enum GETResetServiceSpecificCredentialVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class GetResetServiceSpecificCredentialQueryParams extends SpeakeasyBase {
-    action: GetResetServiceSpecificCredentialActionEnum;
+export declare class GETResetServiceSpecificCredentialRequest extends SpeakeasyBase {
+    action: GETResetServiceSpecificCredentialActionEnum;
+    /**
+     * <p>The unique identifier of the service-specific credential.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters that can consist of any upper or lowercased letter or digit.</p>
+     */
     serviceSpecificCredentialId: string;
+    /**
+     * <p>The name of the IAM user associated with the service-specific credential. If this value is not specified, then the operation assumes the user whose credentials are used to call the operation.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
+     */
     userName?: string;
-    version: GetResetServiceSpecificCredentialVersionEnum;
-}
-export declare class GetResetServiceSpecificCredentialHeaders extends SpeakeasyBase {
+    version: GETResetServiceSpecificCredentialVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetResetServiceSpecificCredentialHeaders extends SpeakeasyB
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetResetServiceSpecificCredentialRequest extends SpeakeasyBase {
-    queryParams: GetResetServiceSpecificCredentialQueryParams;
-    headers: GetResetServiceSpecificCredentialHeaders;
-}
-export declare class GetResetServiceSpecificCredentialResponse extends SpeakeasyBase {
+export declare class GETResetServiceSpecificCredentialResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

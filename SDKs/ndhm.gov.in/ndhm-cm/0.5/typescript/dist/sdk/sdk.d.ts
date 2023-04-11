@@ -1,4 +1,3 @@
-import { AxiosInstance } from "axios";
 import { Consent } from "./consent";
 import { DataFlow } from "./dataflow";
 import { Discovery } from "./discovery";
@@ -10,11 +9,37 @@ import { Monitoring } from "./monitoring";
 import { Profile } from "./profile";
 import { Subscriptions } from "./subscriptions";
 import { UserAuth } from "./userauth";
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://dev.ndhm.gov.in/cm"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * Entity which provides health information aggregation services to customers of health care services.
+ *
+ * @remarks
+ * It enables customers to fetch their health information from one or more Health Information Providers
+ * (e.g., Hospitals, Diagnostic Labs, Medical Device Companies), based on their explicit Consent and to share such
+ * aggregated information with Health Information Users i.e. entities in need of such data (e.g., Insurers,
+ * Doctors, Medical Researchers).
+ *
+ * # Specifications
+ * 1. This document maintains only the Health Information Gateway relevant APIs.
+ *
+ */
 export declare class SDK {
     consent: Consent;
     dataFlow: DataFlow;
@@ -33,5 +58,6 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
 }

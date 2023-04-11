@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostRestoreDbInstanceToPointInTimeActionEnum {
-    RestoreDbInstanceToPointInTime = "RestoreDBInstanceToPointInTime"
+import { AxiosResponse } from "axios";
+export declare enum POSTRestoreDBInstanceToPointInTimeActionEnum {
+    RestoreDBInstanceToPointInTime = "RestoreDBInstanceToPointInTime"
 }
-export declare enum PostRestoreDbInstanceToPointInTimeVersionEnum {
+export declare enum POSTRestoreDBInstanceToPointInTimeVersionEnum {
     TwoThousandAndFourteen0901 = "2014-09-01"
 }
-export declare class PostRestoreDbInstanceToPointInTimeQueryParams extends SpeakeasyBase {
-    action: PostRestoreDbInstanceToPointInTimeActionEnum;
-    version: PostRestoreDbInstanceToPointInTimeVersionEnum;
-}
-export declare class PostRestoreDbInstanceToPointInTimeHeaders extends SpeakeasyBase {
+export declare class POSTRestoreDBInstanceToPointInTimeRequest extends SpeakeasyBase {
+    action: POSTRestoreDBInstanceToPointInTimeActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTRestoreDBInstanceToPointInTimeVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostRestoreDbInstanceToPointInTimeHeaders extends Speakeasy
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostRestoreDbInstanceToPointInTimeRequest extends SpeakeasyBase {
-    queryParams: PostRestoreDbInstanceToPointInTimeQueryParams;
-    headers: PostRestoreDbInstanceToPointInTimeHeaders;
-    request?: Uint8Array;
-}
-export declare class PostRestoreDbInstanceToPointInTimeResponse extends SpeakeasyBase {
+export declare class POSTRestoreDBInstanceToPointInTimeResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

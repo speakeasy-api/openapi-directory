@@ -8,7 +8,7 @@ import { Queue } from "./queue";
 import { Trigger } from "./trigger";
 /**
  * Describes the AWS resources in use by this environment. This data is live.
-**/
+ */
 export declare class EnvironmentResourceDescription extends SpeakeasyBase {
     autoScalingGroups?: AutoScalingGroup[];
     environmentName?: string;

@@ -1,16 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class PostTestNotificationConfigurationSecurity extends SpeakeasyBase {
+    apiKeyAuth?: string;
     basicAuth?: shared.SchemeBasicAuth;
-    apiKeyAuth?: shared.SchemeApiKeyAuth;
-}
-export declare class PostTestNotificationConfigurationRequest extends SpeakeasyBase {
-    request?: any;
-    security: PostTestNotificationConfigurationSecurity;
 }
 export declare class PostTestNotificationConfigurationResponse extends SpeakeasyBase {
     contentType: string;
-    serviceError?: any;
     statusCode: number;
-    testNotificationConfigurationResponse?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad Request - a problem reading or understanding the request.
+     */
+    serviceError?: shared.ServiceError;
+    /**
+     * OK - the request has succeeded.
+     */
+    testNotificationConfigurationResponse?: shared.TestNotificationConfigurationResponse;
 }

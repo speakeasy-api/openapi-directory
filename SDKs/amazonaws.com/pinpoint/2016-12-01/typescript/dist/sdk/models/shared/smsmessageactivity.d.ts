@@ -1,10 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { JourneySmsMessage } from "./journeysmsmessage";
+import { JourneySMSMessage } from "./journeysmsmessage";
 /**
  * Specifies the settings for an SMS activity in a journey. This type of activity sends a text message to participants.
-**/
-export declare class SmsMessageActivity extends SpeakeasyBase {
-    messageConfig?: JourneySmsMessage;
+ */
+export declare class SMSMessageActivity extends SpeakeasyBase {
+    messageConfig?: JourneySMSMessage;
     nextActivity?: string;
     templateName?: string;
     templateVersion?: string;

@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetVerifyDomainIdentityActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETVerifyDomainIdentityActionEnum {
     VerifyDomainIdentity = "VerifyDomainIdentity"
 }
-export declare enum GetVerifyDomainIdentityVersionEnum {
+export declare enum GETVerifyDomainIdentityVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetVerifyDomainIdentityQueryParams extends SpeakeasyBase {
-    action: GetVerifyDomainIdentityActionEnum;
+export declare class GETVerifyDomainIdentityRequest extends SpeakeasyBase {
+    action: GETVerifyDomainIdentityActionEnum;
+    /**
+     * The domain to be verified.
+     */
     domain: string;
-    version: GetVerifyDomainIdentityVersionEnum;
-}
-export declare class GetVerifyDomainIdentityHeaders extends SpeakeasyBase {
+    version: GETVerifyDomainIdentityVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetVerifyDomainIdentityHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetVerifyDomainIdentityRequest extends SpeakeasyBase {
-    queryParams: GetVerifyDomainIdentityQueryParams;
-    headers: GetVerifyDomainIdentityHeaders;
-}
-export declare class GetVerifyDomainIdentityResponse extends SpeakeasyBase {
+export declare class GETVerifyDomainIdentityResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

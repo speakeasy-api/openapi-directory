@@ -5,7 +5,7 @@ import { KinesisStreamsOutputUpdate } from "./kinesisstreamsoutputupdate";
 import { LambdaOutputUpdate } from "./lambdaoutputupdate";
 /**
  *  Describes updates to the output configuration identified by the <code>OutputId</code>.
-**/
+ */
 export declare class OutputUpdate extends SpeakeasyBase {
     destinationSchemaUpdate?: DestinationSchema;
     kinesisFirehoseOutputUpdate?: KinesisFirehoseOutputUpdate;

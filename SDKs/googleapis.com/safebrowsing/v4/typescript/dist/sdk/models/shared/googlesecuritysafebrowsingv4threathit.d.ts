@@ -3,6 +3,9 @@ import { GoogleSecuritySafebrowsingV4ClientInfo } from "./googlesecuritysafebrow
 import { GoogleSecuritySafebrowsingV4ThreatEntry } from "./googlesecuritysafebrowsingv4threatentry";
 import { GoogleSecuritySafebrowsingV4ThreatHitThreatSource } from "./googlesecuritysafebrowsingv4threathitthreatsource";
 import { GoogleSecuritySafebrowsingV4ThreatHitUserInfo } from "./googlesecuritysafebrowsingv4threathituserinfo";
+/**
+ * The platform type reported.
+ */
 export declare enum GoogleSecuritySafebrowsingV4ThreatHitPlatformTypeEnum {
     PlatformTypeUnspecified = "PLATFORM_TYPE_UNSPECIFIED",
     Windows = "WINDOWS",
@@ -14,6 +17,9 @@ export declare enum GoogleSecuritySafebrowsingV4ThreatHitPlatformTypeEnum {
     AllPlatforms = "ALL_PLATFORMS",
     Chrome = "CHROME"
 }
+/**
+ * The threat type reported.
+ */
 export declare enum GoogleSecuritySafebrowsingV4ThreatHitThreatTypeEnum {
     ThreatTypeUnspecified = "THREAT_TYPE_UNSPECIFIED",
     Malware = "MALWARE",
@@ -32,14 +38,31 @@ export declare enum GoogleSecuritySafebrowsingV4ThreatHitThreatTypeEnum {
     Suspicious = "SUSPICIOUS",
     TrickToBill = "TRICK_TO_BILL",
     HighConfidenceAllowlist = "HIGH_CONFIDENCE_ALLOWLIST",
-    AccuracyTips = "ACCURACY_TIPS",
-    SocialEngineeringLowerPrecision = "SOCIAL_ENGINEERING_LOWER_PRECISION"
+    AccuracyTips = "ACCURACY_TIPS"
 }
 export declare class GoogleSecuritySafebrowsingV4ThreatHit extends SpeakeasyBase {
+    /**
+     * The client metadata associated with Safe Browsing API requests.
+     */
     clientInfo?: GoogleSecuritySafebrowsingV4ClientInfo;
+    /**
+     * An individual threat; for example, a malicious URL or its hash representation. Only one of these fields should be set.
+     */
     entry?: GoogleSecuritySafebrowsingV4ThreatEntry;
+    /**
+     * The platform type reported.
+     */
     platformType?: GoogleSecuritySafebrowsingV4ThreatHitPlatformTypeEnum;
+    /**
+     * The resources related to the threat hit.
+     */
     resources?: GoogleSecuritySafebrowsingV4ThreatHitThreatSource[];
+    /**
+     * The threat type reported.
+     */
     threatType?: GoogleSecuritySafebrowsingV4ThreatHitThreatTypeEnum;
+    /**
+     * Details about the user that encountered the threat.
+     */
     userInfo?: GoogleSecuritySafebrowsingV4ThreatHitUserInfo;
 }

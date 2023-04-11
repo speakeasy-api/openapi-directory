@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Provides information about a phone number.
-**/
+ */
 export declare class NumberValidateResponse extends SpeakeasyBase {
     carrier?: string;
     city?: string;

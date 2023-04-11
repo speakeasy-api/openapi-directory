@@ -10,8 +10,5 @@ export declare enum PermissionEnum {
     CreateTable = "CREATE_TABLE",
     DataLocationAccess = "DATA_LOCATION_ACCESS",
     CreateTag = "CREATE_TAG",
-    AlterTag = "ALTER_TAG",
-    DeleteTag = "DELETE_TAG",
-    DescribeTag = "DESCRIBE_TAG",
-    AssociateTag = "ASSOCIATE_TAG"
+    Associate = "ASSOCIATE"
 }

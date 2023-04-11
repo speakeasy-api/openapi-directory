@@ -1,18 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDisableTransitGatewayRouteTablePropagationActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDisableTransitGatewayRouteTablePropagationActionEnum {
     DisableTransitGatewayRouteTablePropagation = "DisableTransitGatewayRouteTablePropagation"
 }
-export declare enum GetDisableTransitGatewayRouteTablePropagationVersionEnum {
+export declare enum GETDisableTransitGatewayRouteTablePropagationVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetDisableTransitGatewayRouteTablePropagationQueryParams extends SpeakeasyBase {
-    action: GetDisableTransitGatewayRouteTablePropagationActionEnum;
+export declare class GETDisableTransitGatewayRouteTablePropagationRequest extends SpeakeasyBase {
+    action: GETDisableTransitGatewayRouteTablePropagationActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
-    transitGatewayAttachmentId: string;
+    /**
+     * The ID of the attachment.
+     */
+    transitGatewayAttachmentId?: string;
+    /**
+     * The ID of the route table announcement.
+     */
+    transitGatewayRouteTableAnnouncementId?: string;
+    /**
+     * The ID of the propagation route table.
+     */
     transitGatewayRouteTableId: string;
-    version: GetDisableTransitGatewayRouteTablePropagationVersionEnum;
-}
-export declare class GetDisableTransitGatewayRouteTablePropagationHeaders extends SpeakeasyBase {
+    version: GETDisableTransitGatewayRouteTablePropagationVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +33,9 @@ export declare class GetDisableTransitGatewayRouteTablePropagationHeaders extend
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDisableTransitGatewayRouteTablePropagationRequest extends SpeakeasyBase {
-    queryParams: GetDisableTransitGatewayRouteTablePropagationQueryParams;
-    headers: GetDisableTransitGatewayRouteTablePropagationHeaders;
-}
-export declare class GetDisableTransitGatewayRouteTablePropagationResponse extends SpeakeasyBase {
+export declare class GETDisableTransitGatewayRouteTablePropagationResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

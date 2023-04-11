@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetTextOperationResultPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetTextOperationResultRequest extends SpeakeasyBase {
+    /**
+     * Id of the text operation returned in the response of the 'Recognize Text'
+     */
     operationId: string;
 }
-export declare class GetTextOperationResultRequest extends SpeakeasyBase {
-    pathParams: GetTextOperationResultPathParams;
-}
 export declare class GetTextOperationResultResponse extends SpeakeasyBase {
+    /**
+     * Error response.
+     */
     computerVisionError?: shared.ComputerVisionError;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Returns the operation status.
+     */
     textOperationResult?: shared.TextOperationResult;
 }

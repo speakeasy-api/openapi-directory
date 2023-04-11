@@ -1,20 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PutSetupV1CalendarsIdPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class PutSetupV1CalendarsIdRequests extends SpeakeasyBase {
-    scheduleUpdateModel?: shared.ScheduleUpdateModel;
-    scheduleUpdateModel1?: shared.ScheduleUpdateModel;
-    scheduleUpdateModel2?: shared.ScheduleUpdateModel;
-    scheduleUpdateModel3?: shared.ScheduleUpdateModel;
-}
+import { AxiosResponse } from "axios";
 export declare class PutSetupV1CalendarsIdRequest extends SpeakeasyBase {
-    pathParams: PutSetupV1CalendarsIdPathParams;
-    request?: PutSetupV1CalendarsIdRequests;
+    /**
+     * Input model for the calendar object
+     */
+    scheduleUpdateModel?: shared.ScheduleUpdateModel;
+    /**
+     * id of calendar object
+     */
+    id: string;
 }
 export declare class PutSetupV1CalendarsIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     scheduleViewModel?: shared.ScheduleViewModel;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

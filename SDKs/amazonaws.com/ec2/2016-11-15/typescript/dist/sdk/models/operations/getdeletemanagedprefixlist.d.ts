@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteManagedPrefixListActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteManagedPrefixListActionEnum {
     DeleteManagedPrefixList = "DeleteManagedPrefixList"
 }
-export declare enum GetDeleteManagedPrefixListVersionEnum {
+export declare enum GETDeleteManagedPrefixListVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetDeleteManagedPrefixListQueryParams extends SpeakeasyBase {
-    action: GetDeleteManagedPrefixListActionEnum;
+export declare class GETDeleteManagedPrefixListRequest extends SpeakeasyBase {
+    action: GETDeleteManagedPrefixListActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
+    /**
+     * The ID of the prefix list.
+     */
     prefixListId: string;
-    version: GetDeleteManagedPrefixListVersionEnum;
-}
-export declare class GetDeleteManagedPrefixListHeaders extends SpeakeasyBase {
+    version: GETDeleteManagedPrefixListVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetDeleteManagedPrefixListHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteManagedPrefixListRequest extends SpeakeasyBase {
-    queryParams: GetDeleteManagedPrefixListQueryParams;
-    headers: GetDeleteManagedPrefixListHeaders;
-}
-export declare class GetDeleteManagedPrefixListResponse extends SpeakeasyBase {
+export declare class GETDeleteManagedPrefixListResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

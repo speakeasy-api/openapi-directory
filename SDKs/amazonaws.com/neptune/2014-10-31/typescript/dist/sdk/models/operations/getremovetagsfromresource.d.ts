@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetRemoveTagsFromResourceActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETRemoveTagsFromResourceActionEnum {
     RemoveTagsFromResource = "RemoveTagsFromResource"
 }
-export declare enum GetRemoveTagsFromResourceVersionEnum {
+export declare enum GETRemoveTagsFromResourceVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class GetRemoveTagsFromResourceQueryParams extends SpeakeasyBase {
-    action: GetRemoveTagsFromResourceActionEnum;
+export declare class GETRemoveTagsFromResourceRequest extends SpeakeasyBase {
+    action: GETRemoveTagsFromResourceActionEnum;
+    /**
+     * The Amazon Neptune resource that the tags are removed from. This value is an Amazon Resource Name (ARN). For information about creating an ARN, see <a href="https://docs.aws.amazon.com/neptune/latest/UserGuide/tagging.ARN.html#tagging.ARN.Constructing"> Constructing an Amazon Resource Name (ARN)</a>.
+     */
     resourceName: string;
+    /**
+     * The tag key (name) of the tag to be removed.
+     */
     tagKeys: string[];
-    version: GetRemoveTagsFromResourceVersionEnum;
-}
-export declare class GetRemoveTagsFromResourceHeaders extends SpeakeasyBase {
+    version: GETRemoveTagsFromResourceVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetRemoveTagsFromResourceHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetRemoveTagsFromResourceRequest extends SpeakeasyBase {
-    queryParams: GetRemoveTagsFromResourceQueryParams;
-    headers: GetRemoveTagsFromResourceHeaders;
-}
-export declare class GetRemoveTagsFromResourceResponse extends SpeakeasyBase {
+export declare class GETRemoveTagsFromResourceResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

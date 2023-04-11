@@ -1,6 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DetachObjectHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+/**
+ * The reference that identifies an object.
+ */
+export declare class DetachObjectRequestBodyParentReference extends SpeakeasyBase {
+    selector?: string;
+}
+export declare class DetachObjectRequestBody extends SpeakeasyBase {
+    /**
+     * The link name associated with the object that needs to be detached.
+     */
+    linkName: string;
+    /**
+     * The reference that identifies an object.
+     */
+    parentReference: DetachObjectRequestBodyParentReference;
+}
+export declare class DetachObjectRequest extends SpeakeasyBase {
+    requestBody: DetachObjectRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -8,33 +26,53 @@ export declare class DetachObjectHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
+    /**
+     * The Amazon Resource Name (ARN) that is associated with the <a>Directory</a> where objects reside. For more information, see <a>arns</a>.
+     */
     xAmzDataPartition: string;
 }
-/**
- * The reference that identifies an object.
-**/
-export declare class DetachObjectRequestBodyParentReference extends SpeakeasyBase {
-    selector?: string;
-}
-export declare class DetachObjectRequestBody extends SpeakeasyBase {
-    linkName: string;
-    parentReference: DetachObjectRequestBodyParentReference;
-}
-export declare class DetachObjectRequest extends SpeakeasyBase {
-    headers: DetachObjectHeaders;
-    request: DetachObjectRequestBody;
-}
 export declare class DetachObjectResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     detachObjectResponse?: shared.DetachObjectResponse;
+    /**
+     * DirectoryNotEnabledException
+     */
     directoryNotEnabledException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidArnException
+     */
     invalidArnException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * NotNodeException
+     */
     notNodeException?: any;
-    resourceNotFoundException?: any;
-    retryableConflictException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * RetryableConflictException
+     */
+    retryableConflictException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

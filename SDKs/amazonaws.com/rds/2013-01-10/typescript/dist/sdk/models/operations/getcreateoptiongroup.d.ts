@@ -1,19 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetCreateOptionGroupActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETCreateOptionGroupActionEnum {
     CreateOptionGroup = "CreateOptionGroup"
 }
-export declare enum GetCreateOptionGroupVersionEnum {
+export declare enum GETCreateOptionGroupVersionEnum {
     TwoThousandAndThirteen0110 = "2013-01-10"
 }
-export declare class GetCreateOptionGroupQueryParams extends SpeakeasyBase {
-    action: GetCreateOptionGroupActionEnum;
+export declare class GETCreateOptionGroupRequest extends SpeakeasyBase {
+    action: GETCreateOptionGroupActionEnum;
     engineName: string;
     majorEngineVersion: string;
     optionGroupDescription: string;
     optionGroupName: string;
-    version: GetCreateOptionGroupVersionEnum;
-}
-export declare class GetCreateOptionGroupHeaders extends SpeakeasyBase {
+    version: GETCreateOptionGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -22,12 +21,9 @@ export declare class GetCreateOptionGroupHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetCreateOptionGroupRequest extends SpeakeasyBase {
-    queryParams: GetCreateOptionGroupQueryParams;
-    headers: GetCreateOptionGroupHeaders;
-}
-export declare class GetCreateOptionGroupResponse extends SpeakeasyBase {
+export declare class GETCreateOptionGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

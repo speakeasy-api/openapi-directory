@@ -1,8 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteObjectPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteObjectRequest extends SpeakeasyBase {
+    /**
+     * The path (including the file name) where the object is stored in the container. Format: &lt;folder name&gt;/&lt;folder name&gt;/&lt;file name&gt;
+     */
     path: string;
-}
-export declare class DeleteObjectHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,15 +13,24 @@ export declare class DeleteObjectHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeleteObjectRequest extends SpeakeasyBase {
-    pathParams: DeleteObjectPathParams;
-    headers: DeleteObjectHeaders;
-}
 export declare class DeleteObjectResponse extends SpeakeasyBase {
+    /**
+     * ContainerNotFoundException
+     */
     containerNotFoundException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteObjectResponse?: Record<string, any>;
+    /**
+     * InternalServerError
+     */
     internalServerError?: any;
+    /**
+     * ObjectNotFoundException
+     */
     objectNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

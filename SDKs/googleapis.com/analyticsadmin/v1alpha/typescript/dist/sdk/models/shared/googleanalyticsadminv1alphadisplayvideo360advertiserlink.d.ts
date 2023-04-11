@@ -1,0 +1,51 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * A link between a GA4 property and a Display & Video 360 advertiser.
+ */
+export declare class GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink extends SpeakeasyBase {
+    /**
+     * Enables personalized advertising features with this integration. If this field is not set on create/update, it will be defaulted to true.
+     */
+    adsPersonalizationEnabled?: boolean;
+    /**
+     * Output only. The display name of the Display & Video 360 Advertiser.
+     */
+    advertiserDisplayName?: string;
+    /**
+     * Immutable. The Display & Video 360 Advertiser's advertiser ID.
+     */
+    advertiserId?: string;
+    /**
+     * Immutable. Enables the import of campaign data from Display & Video 360 into the GA4 property. After link creation, this can only be updated from the Display & Video 360 product. If this field is not set on create, it will be defaulted to true.
+     */
+    campaignDataSharingEnabled?: boolean;
+    /**
+     * Immutable. Enables the import of cost data from Display & Video 360 into the GA4 property. This can only be enabled if campaign_data_sharing_enabled is enabled. After link creation, this can only be updated from the Display & Video 360 product. If this field is not set on create, it will be defaulted to true.
+     */
+    costDataSharingEnabled?: boolean;
+    /**
+     * Output only. The resource name for this DisplayVideo360AdvertiserLink resource. Format: properties/{propertyId}/displayVideo360AdvertiserLinks/{linkId} Note: linkId is not the Display & Video 360 Advertiser ID
+     */
+    name?: string;
+}
+/**
+ * A link between a GA4 property and a Display & Video 360 advertiser.
+ */
+export declare class GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkInput extends SpeakeasyBase {
+    /**
+     * Enables personalized advertising features with this integration. If this field is not set on create/update, it will be defaulted to true.
+     */
+    adsPersonalizationEnabled?: boolean;
+    /**
+     * Immutable. The Display & Video 360 Advertiser's advertiser ID.
+     */
+    advertiserId?: string;
+    /**
+     * Immutable. Enables the import of campaign data from Display & Video 360 into the GA4 property. After link creation, this can only be updated from the Display & Video 360 product. If this field is not set on create, it will be defaulted to true.
+     */
+    campaignDataSharingEnabled?: boolean;
+    /**
+     * Immutable. Enables the import of cost data from Display & Video 360 into the GA4 property. This can only be enabled if campaign_data_sharing_enabled is enabled. After link creation, this can only be updated from the Display & Video 360 product. If this field is not set on create, it will be defaulted to true.
+     */
+    costDataSharingEnabled?: boolean;
+}

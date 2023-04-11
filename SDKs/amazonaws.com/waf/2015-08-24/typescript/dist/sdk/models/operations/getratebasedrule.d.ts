@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetRateBasedRuleXAmzTargetEnum {
-    Awswaf20150824GetRateBasedRule = "AWSWAF_20150824.GetRateBasedRule"
+    AWSWAF20150824GetRateBasedRule = "AWSWAF_20150824.GetRateBasedRule"
 }
-export declare class GetRateBasedRuleHeaders extends SpeakeasyBase {
+export declare class GetRateBasedRuleRequest extends SpeakeasyBase {
+    getRateBasedRuleRequest: shared.GetRateBasedRuleRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class GetRateBasedRuleHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetRateBasedRuleXAmzTargetEnum;
 }
-export declare class GetRateBasedRuleRequest extends SpeakeasyBase {
-    headers: GetRateBasedRuleHeaders;
-    request: shared.GetRateBasedRuleRequest;
-}
 export declare class GetRateBasedRuleResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getRateBasedRuleResponse?: shared.GetRateBasedRuleResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFInvalidAccountException
+     */
     wafInvalidAccountException?: any;
+    /**
+     * WAFNonexistentItemException
+     */
     wafNonexistentItemException?: any;
 }

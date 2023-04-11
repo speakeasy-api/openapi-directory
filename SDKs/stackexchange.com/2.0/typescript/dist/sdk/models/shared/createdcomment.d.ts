@@ -29,6 +29,9 @@ export declare class CreatedCommentReplyToUser extends SpeakeasyBase {
     userId?: number;
     userType?: string;
 }
+/**
+ * OK
+ */
 export declare class CreatedComment extends SpeakeasyBase {
     body?: string;
     bodyMarkdown?: string;

@@ -7,7 +7,10 @@ export declare enum HeldVoiceQueryCoveredDataEnum {
 }
 /**
  * Options for Voice holds.
-**/
+ */
 export declare class HeldVoiceQuery extends SpeakeasyBase {
+    /**
+     * A list of data types covered by the hold. Should be non-empty. Order does not matter and duplicates are ignored.
+     */
     coveredData?: HeldVoiceQueryCoveredDataEnum[];
 }

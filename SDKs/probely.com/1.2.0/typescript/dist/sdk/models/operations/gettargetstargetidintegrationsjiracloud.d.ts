@@ -1,21 +1,41 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetTargetsTargetIdIntegrationsJiraCloudPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetTargetsTargetIdIntegrationsJiraCloudRequest extends SpeakeasyBase {
+    /**
+     * Target id
+     */
     targetId: string;
 }
-export declare class GetTargetsTargetIdIntegrationsJiraCloud401ApplicationJson extends SpeakeasyBase {
+/**
+ * Not allowed to perform operation
+ */
+export declare class GetTargetsTargetIdIntegrationsJiraCloud403ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error message.
+     */
     detail?: string;
 }
-export declare class GetTargetsTargetIdIntegrationsJiraCloud403ApplicationJson extends SpeakeasyBase {
+/**
+ * Access token is missing or invalid
+ */
+export declare class GetTargetsTargetIdIntegrationsJiraCloud401ApplicationJSON extends SpeakeasyBase {
     detail?: string;
-}
-export declare class GetTargetsTargetIdIntegrationsJiraCloudRequest extends SpeakeasyBase {
-    pathParams: GetTargetsTargetIdIntegrationsJiraCloudPathParams;
 }
 export declare class GetTargetsTargetIdIntegrationsJiraCloudResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Jira Cloud Target configuration
+     */
     jiraScope?: shared.JiraScope;
     statusCode: number;
-    getTargetsTargetIdIntegrationsJiraCloud401ApplicationJSONObject?: GetTargetsTargetIdIntegrationsJiraCloud401ApplicationJson;
-    getTargetsTargetIdIntegrationsJiraCloud403ApplicationJSONObject?: GetTargetsTargetIdIntegrationsJiraCloud403ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Access token is missing or invalid
+     */
+    getTargetsTargetIdIntegrationsJiraCloud401ApplicationJSONObject?: GetTargetsTargetIdIntegrationsJiraCloud401ApplicationJSON;
+    /**
+     * Not allowed to perform operation
+     */
+    getTargetsTargetIdIntegrationsJiraCloud403ApplicationJSONObject?: GetTargetsTargetIdIntegrationsJiraCloud403ApplicationJSON;
 }

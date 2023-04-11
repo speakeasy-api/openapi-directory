@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum CreateLocationFsxWindowsXAmzTargetEnum {
     FmrsServiceCreateLocationFsxWindows = "FmrsService.CreateLocationFsxWindows"
 }
-export declare class CreateLocationFsxWindowsHeaders extends SpeakeasyBase {
+export declare class CreateLocationFsxWindowsRequest extends SpeakeasyBase {
+    createLocationFsxWindowsRequest: shared.CreateLocationFsxWindowsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class CreateLocationFsxWindowsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: CreateLocationFsxWindowsXAmzTargetEnum;
 }
-export declare class CreateLocationFsxWindowsRequest extends SpeakeasyBase {
-    headers: CreateLocationFsxWindowsHeaders;
-    request: shared.CreateLocationFsxWindowsRequest;
-}
 export declare class CreateLocationFsxWindowsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     createLocationFsxWindowsResponse?: shared.CreateLocationFsxWindowsResponse;
+    /**
+     * InternalException
+     */
     internalException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,9 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UpdateSchemaPathParams extends SpeakeasyBase {
-    apiId: string;
-    apiVersionId: string;
-    schemaId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UpdateSchemaRequestBodySchema extends SpeakeasyBase {
     language?: string;
     schema?: string;
@@ -12,7 +8,13 @@ export declare class UpdateSchemaRequestBodySchema extends SpeakeasyBase {
 export declare class UpdateSchemaRequestBody extends SpeakeasyBase {
     schema?: UpdateSchemaRequestBodySchema;
 }
-export declare class UpdateSchema200ApplicationJsonSchema extends SpeakeasyBase {
+export declare class UpdateSchemaRequest extends SpeakeasyBase {
+    requestBody?: UpdateSchemaRequestBody;
+    apiId: string;
+    apiVersionId: string;
+    schemaId: string;
+}
+export declare class UpdateSchema200ApplicationJSONSchema extends SpeakeasyBase {
     apiVersion?: string;
     createdAt?: string;
     createdBy?: string;
@@ -22,15 +24,18 @@ export declare class UpdateSchema200ApplicationJsonSchema extends SpeakeasyBase 
     updateBy?: string;
     updatedAt?: string;
 }
-export declare class UpdateSchema200ApplicationJson extends SpeakeasyBase {
-    schema?: UpdateSchema200ApplicationJsonSchema;
-}
-export declare class UpdateSchemaRequest extends SpeakeasyBase {
-    pathParams: UpdateSchemaPathParams;
-    request?: UpdateSchemaRequestBody;
+/**
+ * Update schema
+ */
+export declare class UpdateSchema200ApplicationJSON extends SpeakeasyBase {
+    schema?: UpdateSchema200ApplicationJSONSchema;
 }
 export declare class UpdateSchemaResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateSchema200ApplicationJSONObject?: UpdateSchema200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Update schema
+     */
+    updateSchema200ApplicationJSONObject?: UpdateSchema200ApplicationJSON;
 }

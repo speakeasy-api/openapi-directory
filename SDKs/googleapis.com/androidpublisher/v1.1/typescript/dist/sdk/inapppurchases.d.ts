@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Inapppurchases {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +9,7 @@ export declare class Inapppurchases {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * androidpublisherInapppurchasesGet - Checks the purchase and consumption status of an inapp item.
-    **/
-    androidpublisherInapppurchasesGet(req: operations.AndroidpublisherInapppurchasesGetRequest, config?: AxiosRequestConfig): Promise<operations.AndroidpublisherInapppurchasesGetResponse>;
+     * Checks the purchase and consumption status of an inapp item.
+     */
+    androidpublisherInapppurchasesGet(req: operations.AndroidpublisherInapppurchasesGetRequest, security: operations.AndroidpublisherInapppurchasesGetSecurity, config?: AxiosRequestConfig): Promise<operations.AndroidpublisherInapppurchasesGetResponse>;
 }

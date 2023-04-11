@@ -1,25 +1,51 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PostTargetsTargetIdFindingsBulkReportPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class PostTargetsTargetIdFindingsBulkReportRequest extends SpeakeasyBase {
+    findingBulkIds: shared.FindingBulkIds;
+    /**
+     * Target id
+     */
     targetId: string;
 }
-export declare class PostTargetsTargetIdFindingsBulkReport400ApplicationJson extends SpeakeasyBase {
+/**
+ * Not found
+ */
+export declare class PostTargetsTargetIdFindingsBulkReport404ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Not found.
+     */
+    detail?: string;
+}
+/**
+ * Access token is missing or invalid
+ */
+export declare class PostTargetsTargetIdFindingsBulkReport401ApplicationJSON extends SpeakeasyBase {
+    detail?: string;
+}
+/**
+ * Bad Request
+ */
+export declare class PostTargetsTargetIdFindingsBulkReport400ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error message
+     */
     error?: string;
-}
-export declare class PostTargetsTargetIdFindingsBulkReport401ApplicationJson extends SpeakeasyBase {
-    detail?: string;
-}
-export declare class PostTargetsTargetIdFindingsBulkReport404ApplicationJson extends SpeakeasyBase {
-    detail?: string;
-}
-export declare class PostTargetsTargetIdFindingsBulkReportRequest extends SpeakeasyBase {
-    pathParams: PostTargetsTargetIdFindingsBulkReportPathParams;
-    request: shared.FindingBulkIds;
 }
 export declare class PostTargetsTargetIdFindingsBulkReportResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    postTargetsTargetIdFindingsBulkReport400ApplicationJSONObject?: PostTargetsTargetIdFindingsBulkReport400ApplicationJson;
-    postTargetsTargetIdFindingsBulkReport401ApplicationJSONObject?: PostTargetsTargetIdFindingsBulkReport401ApplicationJson;
-    postTargetsTargetIdFindingsBulkReport404ApplicationJSONObject?: PostTargetsTargetIdFindingsBulkReport404ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad Request
+     */
+    postTargetsTargetIdFindingsBulkReport400ApplicationJSONObject?: PostTargetsTargetIdFindingsBulkReport400ApplicationJSON;
+    /**
+     * Access token is missing or invalid
+     */
+    postTargetsTargetIdFindingsBulkReport401ApplicationJSONObject?: PostTargetsTargetIdFindingsBulkReport401ApplicationJSON;
+    /**
+     * Not found
+     */
+    postTargetsTargetIdFindingsBulkReport404ApplicationJSONObject?: PostTargetsTargetIdFindingsBulkReport404ApplicationJSON;
 }

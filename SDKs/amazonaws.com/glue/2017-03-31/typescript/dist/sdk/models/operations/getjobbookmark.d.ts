@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetJobBookmarkXAmzTargetEnum {
-    AwsGlueGetJobBookmark = "AWSGlue.GetJobBookmark"
+    AWSGlueGetJobBookmark = "AWSGlue.GetJobBookmark"
 }
-export declare class GetJobBookmarkHeaders extends SpeakeasyBase {
+export declare class GetJobBookmarkRequest extends SpeakeasyBase {
+    getJobBookmarkRequest: shared.GetJobBookmarkRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class GetJobBookmarkHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetJobBookmarkXAmzTargetEnum;
 }
-export declare class GetJobBookmarkRequest extends SpeakeasyBase {
-    headers: GetJobBookmarkHeaders;
-    request: shared.GetJobBookmarkRequest;
-}
 export declare class GetJobBookmarkResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * Success
+     */
     getJobBookmarkResponse?: shared.GetJobBookmarkResponse;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

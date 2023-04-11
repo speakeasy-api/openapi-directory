@@ -1,36 +1,59 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class AppendTextUsingPostQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class AppendTextUsingPOSTRequest extends SpeakeasyBase {
     padID?: string;
     text?: string;
 }
-export declare class AppendTextUsingPost200ApplicationJson extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class AppendTextUsingPost500ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class AppendTextUsingPost400ApplicationJson extends SpeakeasyBase {
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class AppendTextUsingPost401ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class AppendTextUsingPost401ApplicationJson extends SpeakeasyBase {
+/**
+ * generic api error (code 1)
+ */
+export declare class AppendTextUsingPost400ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class AppendTextUsingPost500ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class AppendTextUsingPost200ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class AppendTextUsingPostRequest extends SpeakeasyBase {
-    queryParams: AppendTextUsingPostQueryParams;
-}
-export declare class AppendTextUsingPostResponse extends SpeakeasyBase {
+export declare class AppendTextUsingPOSTResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    appendTextUsingPOST200ApplicationJSONObject?: AppendTextUsingPost200ApplicationJson;
-    appendTextUsingPOST400ApplicationJSONObject?: AppendTextUsingPost400ApplicationJson;
-    appendTextUsingPOST401ApplicationJSONObject?: AppendTextUsingPost401ApplicationJson;
-    appendTextUsingPOST500ApplicationJSONObject?: AppendTextUsingPost500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    appendTextUsingPOST200ApplicationJSONObject?: AppendTextUsingPost200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    appendTextUsingPOST400ApplicationJSONObject?: AppendTextUsingPost400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    appendTextUsingPOST401ApplicationJSONObject?: AppendTextUsingPost401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    appendTextUsingPOST500ApplicationJSONObject?: AppendTextUsingPost500ApplicationJSON;
 }

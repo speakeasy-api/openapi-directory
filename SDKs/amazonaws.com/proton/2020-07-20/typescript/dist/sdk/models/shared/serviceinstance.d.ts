@@ -1,8 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { DeploymentStatusEnum } from "./deploymentstatusenum";
 /**
- * The service instance detail data.
-**/
+ * Detailed data of an Proton service instance resource.
+ */
 export declare class ServiceInstance extends SpeakeasyBase {
     arn: string;
     createdAt: Date;

@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class CustomerGlobal {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +9,7 @@ export declare class CustomerGlobal {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getCustomerIndex - The index of all operations and LOV
-    **/
+     * The index of all operations and LOV
+     */
     getCustomerIndex(req: operations.GetCustomerIndexRequest, config?: AxiosRequestConfig): Promise<operations.GetCustomerIndexResponse>;
 }

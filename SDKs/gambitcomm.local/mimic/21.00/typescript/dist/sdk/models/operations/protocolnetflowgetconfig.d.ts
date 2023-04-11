@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ProtocolNetflowGetConfigPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ProtocolNetflowGetConfigRequest extends SpeakeasyBase {
+    /**
+     * Agent to show the NETFLOW configuration
+     */
     agentNum: number;
 }
-export declare class ProtocolNetflowGetConfigRequest extends SpeakeasyBase {
-    pathParams: ProtocolNetflowGetConfigPathParams;
-}
 export declare class ProtocolNetflowGetConfigResponse extends SpeakeasyBase {
-    configNETFLOW?: shared.ConfigNetflow;
+    /**
+     * successful operation
+     */
+    configNETFLOW?: shared.ConfigNETFLOW;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

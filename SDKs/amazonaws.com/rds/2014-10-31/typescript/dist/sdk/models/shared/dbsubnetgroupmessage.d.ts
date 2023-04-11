@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbSubnetGroups } from "./dbsubnetgroups";
+import { DBSubnetGroups } from "./dbsubnetgroups";
 /**
- *  Contains the result of a successful invocation of the <code>DescribeDBSubnetGroups</code> action.
-**/
-export declare class DbSubnetGroupMessage extends SpeakeasyBase {
-    dbSubnetGroups?: DbSubnetGroups[];
+ * Contains the result of a successful invocation of the <code>DescribeDBSubnetGroups</code> action.
+ */
+export declare class DBSubnetGroupMessage extends SpeakeasyBase {
+    dbSubnetGroups?: DBSubnetGroups[];
     marker?: string;
 }

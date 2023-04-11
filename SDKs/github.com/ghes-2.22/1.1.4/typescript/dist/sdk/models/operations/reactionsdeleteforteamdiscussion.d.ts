@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ReactionsDeleteForTeamDiscussionPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ReactionsDeleteForTeamDiscussionRequest extends SpeakeasyBase {
     discussionNumber: number;
     org: string;
     reactionId: number;
+    /**
+     * team_slug parameter
+     */
     teamSlug: string;
-}
-export declare class ReactionsDeleteForTeamDiscussionRequest extends SpeakeasyBase {
-    pathParams: ReactionsDeleteForTeamDiscussionPathParams;
 }
 export declare class ReactionsDeleteForTeamDiscussionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

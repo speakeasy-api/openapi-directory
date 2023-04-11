@@ -1,4 +1,4 @@
-export declare enum HitStatusEnum {
+export declare enum HITStatusEnum {
     Assignable = "Assignable",
     Unassignable = "Unassignable",
     Reviewable = "Reviewable",

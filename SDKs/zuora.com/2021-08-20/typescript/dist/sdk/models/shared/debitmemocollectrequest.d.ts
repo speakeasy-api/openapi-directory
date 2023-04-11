@@ -1,16 +1,63 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Some detail info that would be used to processed an electronic payment.
+ *
+ * @remarks
  * The info would only effect when `collect` set to `true`.
  *
-**/
+ */
 export declare class DebitMemoCollectRequestPayment extends SpeakeasyBase {
+    /**
+     * The ID of the gateway instance that processes the payment. The ID must be a valid gateway instance ID and this gateway must support the specific payment method.
+     *
+     * @remarks
+     * If no gateway ID is specified in the request body, the default gateway for the customer account is used automatically, if this default one is not configured, the default gateway of the tenant would be used.
+     *
+     */
     gatewayId?: string;
+    /**
+     * The unique ID of the payment method that the customer used to make the payment.
+     *
+     * @remarks
+     * If no payment method ID is specified in the request body, the default payment method for the customer account is used automatically. If the default payment method is different from the type of payments that you want to create, an error occurs.
+     *
+     */
     paymentMethodId?: string;
 }
 export declare class DebitMemoCollectRequest extends SpeakeasyBase {
+    /**
+     * The priority order to apply credit memos and/or unapplied payments to the debit memo. Possible item values are: `CreditMemo`, `UnappliedPayment`.
+     *
+     * @remarks
+     *
+     * **Note:**
+     *   - This field is valid only if the `applyCredit` field is set to `true`.
+     *   - If no value is specified for this field, the default priority order is used, ["CreditMemo", "UnappliedPayment"], to apply credit memos first and then apply unapplied payments.
+     *   - If only one item is specified, only the items of the spedified type are applied to invoices. For example, if the value is `["CreditMemo"]`, only credit memos are used to apply the debit memo.
+     *
+     */
     applicationOrder?: string[];
+    /**
+     * Whether to automatically apply credit memos or unapplied payments, or both to the debit memo.
+     *
+     * @remarks
+     * If the value is `true`, the credit memo or unapplied payment, or both will be automatically applied to the debit memo. If no value is specified or the value is `false`, no action is taken.
+     *
+     */
     applyCredit?: boolean;
+    /**
+     * Indicates if the current request needs to collect payment or not.
+     *
+     * @remarks
+     *
+     */
     collect?: boolean;
+    /**
+     * Some detail info that would be used to processed an electronic payment.
+     *
+     * @remarks
+     * The info would only effect when `collect` set to `true`.
+     *
+     */
     payment?: DebitMemoCollectRequestPayment;
 }

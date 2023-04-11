@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class MediaTabularExtractsheetQueryParams extends SpeakeasyBase {
-    arg1?: string;
-    entryid: string;
-    output: string;
-}
+import { AxiosResponse } from "axios";
 export declare class MediaTabularExtractsheetRequest extends SpeakeasyBase {
-    queryParams: MediaTabularExtractsheetQueryParams;
+    /**
+     * Sheets
+     */
+    arg1?: string;
+    /**
+     * Entry ID
+     */
+    entryid: string;
+    /**
+     * Output type  -don't change
+     */
+    output: string;
 }
 export declare class MediaTabularExtractsheetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

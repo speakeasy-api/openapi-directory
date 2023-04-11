@@ -1,14 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolSnmpv3SetConfigPathParams extends SpeakeasyBase {
-    agentNum: number;
-    parameter: string;
-    value: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolSnmpv3SetConfigRequest extends SpeakeasyBase {
-    pathParams: ProtocolSnmpv3SetConfigPathParams;
+    /**
+     * Agent to show the SNMPv3 configuration
+     */
+    agentNum: number;
+    /**
+     * SNMPv3 configuration parameter
+     */
+    parameter: string;
+    /**
+     * SNMPv3 parameter value
+     */
+    value: string;
 }
 export declare class ProtocolSnmpv3SetConfigResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolSnmpv3SetConfig200ApplicationJSONString?: string;
 }

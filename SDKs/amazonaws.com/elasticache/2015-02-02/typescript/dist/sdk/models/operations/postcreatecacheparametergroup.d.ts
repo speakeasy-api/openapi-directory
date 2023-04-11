@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateCacheParameterGroupActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateCacheParameterGroupActionEnum {
     CreateCacheParameterGroup = "CreateCacheParameterGroup"
 }
-export declare enum PostCreateCacheParameterGroupVersionEnum {
+export declare enum POSTCreateCacheParameterGroupVersionEnum {
     TwoThousandAndFifteen0202 = "2015-02-02"
 }
-export declare class PostCreateCacheParameterGroupQueryParams extends SpeakeasyBase {
-    action: PostCreateCacheParameterGroupActionEnum;
-    version: PostCreateCacheParameterGroupVersionEnum;
-}
-export declare class PostCreateCacheParameterGroupHeaders extends SpeakeasyBase {
+export declare class POSTCreateCacheParameterGroupRequest extends SpeakeasyBase {
+    action: POSTCreateCacheParameterGroupActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateCacheParameterGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateCacheParameterGroupHeaders extends SpeakeasyBase 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateCacheParameterGroupRequest extends SpeakeasyBase {
-    queryParams: PostCreateCacheParameterGroupQueryParams;
-    headers: PostCreateCacheParameterGroupHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateCacheParameterGroupResponse extends SpeakeasyBase {
+export declare class POSTCreateCacheParameterGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

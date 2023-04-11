@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteOrganizationConformancePackXAmzTargetEnum {
     StarlingDoveServiceDeleteOrganizationConformancePack = "StarlingDoveService.DeleteOrganizationConformancePack"
 }
-export declare class DeleteOrganizationConformancePackHeaders extends SpeakeasyBase {
+export declare class DeleteOrganizationConformancePackRequest extends SpeakeasyBase {
+    deleteOrganizationConformancePackRequest: shared.DeleteOrganizationConformancePackRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class DeleteOrganizationConformancePackHeaders extends SpeakeasyB
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteOrganizationConformancePackXAmzTargetEnum;
 }
-export declare class DeleteOrganizationConformancePackRequest extends SpeakeasyBase {
-    headers: DeleteOrganizationConformancePackHeaders;
-    request: shared.DeleteOrganizationConformancePackRequest;
-}
 export declare class DeleteOrganizationConformancePackResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * NoSuchOrganizationConformancePackException
+     */
     noSuchOrganizationConformancePackException?: any;
+    /**
+     * OrganizationAccessDeniedException
+     */
     organizationAccessDeniedException?: any;
+    /**
+     * ResourceInUseException
+     */
     resourceInUseException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum PutRemediationConfigurationsXAmzTargetEnum {
     StarlingDoveServicePutRemediationConfigurations = "StarlingDoveService.PutRemediationConfigurations"
 }
-export declare class PutRemediationConfigurationsHeaders extends SpeakeasyBase {
+export declare class PutRemediationConfigurationsRequest extends SpeakeasyBase {
+    putRemediationConfigurationsRequest: shared.PutRemediationConfigurationsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class PutRemediationConfigurationsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: PutRemediationConfigurationsXAmzTargetEnum;
 }
-export declare class PutRemediationConfigurationsRequest extends SpeakeasyBase {
-    headers: PutRemediationConfigurationsHeaders;
-    request: shared.PutRemediationConfigurationsRequest;
-}
 export declare class PutRemediationConfigurationsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InsufficientPermissionsException
+     */
     insufficientPermissionsException?: any;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
+    /**
+     * Success
+     */
     putRemediationConfigurationsResponse?: shared.PutRemediationConfigurationsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

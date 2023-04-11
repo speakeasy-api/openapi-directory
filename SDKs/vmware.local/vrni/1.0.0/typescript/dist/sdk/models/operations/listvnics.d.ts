@@ -1,21 +1,37 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListVnicsQueryParams extends SpeakeasyBase {
-    cursor?: string;
-    endTime?: number;
-    size?: number;
-    startTime?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ListVnicsSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
+    apiKeyAuth: string;
 }
 export declare class ListVnicsRequest extends SpeakeasyBase {
-    queryParams: ListVnicsQueryParams;
-    security: ListVnicsSecurity;
+    /**
+     * cursor from previous response
+     */
+    cursor?: string;
+    /**
+     * end time for query in epoch seconds
+     */
+    endTime?: number;
+    /**
+     * page size of results
+     */
+    size?: number;
+    /**
+     * start time for query in epoch seconds
+     */
+    startTime?: number;
 }
 export declare class ListVnicsResponse extends SpeakeasyBase {
+    /**
+     * Bad Request
+     */
     apiError?: shared.ApiError;
     contentType: string;
+    /**
+     * OK
+     */
     pagedListResponseWithTime?: shared.PagedListResponseWithTime;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

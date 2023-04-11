@@ -1,0 +1,15 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { VersionedResource } from "./versionedresource";
+/**
+ * Attached resource representation, which is defined by the corresponding service provider. It represents an attached resource's payload.
+ */
+export declare class AttachedResource extends SpeakeasyBase {
+    /**
+     * The type of this attached resource. Example: `osconfig.googleapis.com/Inventory` You can find the supported attached asset types of each resource in this table: `https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types`
+     */
+    assetType?: string;
+    /**
+     * Versioned resource representations of this attached resource. This is repeated because there could be multiple versions of the attached resource representations during version migration.
+     */
+    versionedResources?: VersionedResource[];
+}

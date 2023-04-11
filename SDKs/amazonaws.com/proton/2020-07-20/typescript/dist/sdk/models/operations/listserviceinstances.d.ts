@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListServiceInstancesQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListServiceInstancesXAmzTargetEnum {
     AwsProton20200720ListServiceInstances = "AwsProton20200720.ListServiceInstances"
 }
-export declare class ListServiceInstancesHeaders extends SpeakeasyBase {
+export declare class ListServiceInstancesRequest extends SpeakeasyBase {
+    listServiceInstancesInput: shared.ListServiceInstancesInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,19 +14,41 @@ export declare class ListServiceInstancesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: ListServiceInstancesXAmzTargetEnum;
-}
-export declare class ListServiceInstancesRequest extends SpeakeasyBase {
-    queryParams: ListServiceInstancesQueryParams;
-    headers: ListServiceInstancesHeaders;
-    request: shared.ListServiceInstancesInput;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class ListServiceInstancesResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * Success
+     */
     listServiceInstancesOutput?: shared.ListServiceInstancesOutput;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

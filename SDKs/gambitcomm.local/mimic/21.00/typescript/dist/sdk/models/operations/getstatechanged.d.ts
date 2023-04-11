@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetStateChangedPathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetStateChangedRequest extends SpeakeasyBase {
-    pathParams: GetStateChangedPathParams;
+    /**
+     * Agent to return the indicator
+     */
+    agentNum: number;
 }
 export declare class GetStateChangedResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     getStateChanged200ApplicationJSONInt32Integer?: number;
 }

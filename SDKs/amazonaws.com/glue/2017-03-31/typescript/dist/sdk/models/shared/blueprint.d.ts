@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { LastActiveDefinition } from "./lastactivedefinition";
 import { BlueprintStatusEnum } from "./blueprintstatusenum";
+import { LastActiveDefinition } from "./lastactivedefinition";
 /**
  * The details of a blueprint.
-**/
+ */
 export declare class Blueprint extends SpeakeasyBase {
     blueprintLocation?: string;
     blueprintServiceLocation?: string;

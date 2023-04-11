@@ -1,0 +1,213 @@
+import { AcceleratorTypes } from "./acceleratortypes";
+import { Addresses } from "./addresses";
+import { Autoscalers } from "./autoscalers";
+import { BackendBuckets } from "./backendbuckets";
+import { BackendServices } from "./backendservices";
+import { Disks } from "./disks";
+import { DiskTypes } from "./disktypes";
+import { ExternalVpnGateways } from "./externalvpngateways";
+import { FirewallPolicies } from "./firewallpolicies";
+import { Firewalls } from "./firewalls";
+import { ForwardingRules } from "./forwardingrules";
+import { GlobalAddresses } from "./globaladdresses";
+import { GlobalForwardingRules } from "./globalforwardingrules";
+import { GlobalNetworkEndpointGroups } from "./globalnetworkendpointgroups";
+import { GlobalOperations } from "./globaloperations";
+import { GlobalOrganizationOperations } from "./globalorganizationoperations";
+import { GlobalPublicDelegatedPrefixes } from "./globalpublicdelegatedprefixes";
+import { HealthChecks } from "./healthchecks";
+import { HttpHealthChecks } from "./httphealthchecks";
+import { HttpsHealthChecks } from "./httpshealthchecks";
+import { ImageFamilyViews } from "./imagefamilyviews";
+import { Images } from "./images";
+import { InstanceGroupManagers } from "./instancegroupmanagers";
+import { InstanceGroups } from "./instancegroups";
+import { Instances } from "./instances";
+import { InstanceTemplates } from "./instancetemplates";
+import { InterconnectAttachments } from "./interconnectattachments";
+import { InterconnectLocations } from "./interconnectlocations";
+import { Interconnects } from "./interconnects";
+import { LicenseCodes } from "./licensecodes";
+import { Licenses } from "./licenses";
+import { MachineImages } from "./machineimages";
+import { MachineTypes } from "./machinetypes";
+import { NetworkAttachments } from "./networkattachments";
+import { NetworkEdgeSecurityServices } from "./networkedgesecurityservices";
+import { NetworkEndpointGroups } from "./networkendpointgroups";
+import { NetworkFirewallPolicies } from "./networkfirewallpolicies";
+import { Networks } from "./networks";
+import { NodeGroups } from "./nodegroups";
+import { NodeTemplates } from "./nodetemplates";
+import { NodeTypes } from "./nodetypes";
+import { PacketMirrorings } from "./packetmirrorings";
+import { Projects } from "./projects";
+import { PublicAdvertisedPrefixes } from "./publicadvertisedprefixes";
+import { PublicDelegatedPrefixes } from "./publicdelegatedprefixes";
+import { RegionAutoscalers } from "./regionautoscalers";
+import { RegionBackendServices } from "./regionbackendservices";
+import { RegionCommitments } from "./regioncommitments";
+import { RegionDisks } from "./regiondisks";
+import { RegionDiskTypes } from "./regiondisktypes";
+import { RegionHealthChecks } from "./regionhealthchecks";
+import { RegionHealthCheckServices } from "./regionhealthcheckservices";
+import { RegionInstanceGroupManagers } from "./regioninstancegroupmanagers";
+import { RegionInstanceGroups } from "./regioninstancegroups";
+import { RegionInstances } from "./regioninstances";
+import { RegionNetworkEndpointGroups } from "./regionnetworkendpointgroups";
+import { RegionNetworkFirewallPolicies } from "./regionnetworkfirewallpolicies";
+import { RegionNotificationEndpoints } from "./regionnotificationendpoints";
+import { RegionOperations } from "./regionoperations";
+import { Regions } from "./regions";
+import { RegionSecurityPolicies } from "./regionsecuritypolicies";
+import { RegionSslCertificates } from "./regionsslcertificates";
+import { RegionSslPolicies } from "./regionsslpolicies";
+import { RegionTargetHttpProxies } from "./regiontargethttpproxies";
+import { RegionTargetHttpsProxies } from "./regiontargethttpsproxies";
+import { RegionTargetTcpProxies } from "./regiontargettcpproxies";
+import { RegionUrlMaps } from "./regionurlmaps";
+import { Reservations } from "./reservations";
+import { ResourcePolicies } from "./resourcepolicies";
+import { Routers } from "./routers";
+import { Routes } from "./routes";
+import { SecurityPolicies } from "./securitypolicies";
+import { ServiceAttachments } from "./serviceattachments";
+import { Snapshots } from "./snapshots";
+import { SslCertificates } from "./sslcertificates";
+import { SslPolicies } from "./sslpolicies";
+import { Subnetworks } from "./subnetworks";
+import { TargetGrpcProxies } from "./targetgrpcproxies";
+import { TargetHttpProxies } from "./targethttpproxies";
+import { TargetHttpsProxies } from "./targethttpsproxies";
+import { TargetInstances } from "./targetinstances";
+import { TargetPools } from "./targetpools";
+import { TargetSslProxies } from "./targetsslproxies";
+import { TargetTcpProxies } from "./targettcpproxies";
+import { TargetVpnGateways } from "./targetvpngateways";
+import { UrlMaps } from "./urlmaps";
+import { VpnGateways } from "./vpngateways";
+import { VpnTunnels } from "./vpntunnels";
+import { ZoneOperations } from "./zoneoperations";
+import { Zones } from "./zones";
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
+export declare const ServerList: readonly ["https://compute.googleapis.com/compute/v1"];
+/**
+ * The available configuration options for the SDK
+ */
+export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
+    defaultClient?: AxiosInstance;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
+};
+/**
+ * Creates and runs virtual machines on Google Cloud Platform.
+ *
+ * @see {@link https://cloud.google.com/compute/}
+ */
+export declare class SDK {
+    acceleratorTypes: AcceleratorTypes;
+    addresses: Addresses;
+    autoscalers: Autoscalers;
+    backendBuckets: BackendBuckets;
+    backendServices: BackendServices;
+    diskTypes: DiskTypes;
+    disks: Disks;
+    externalVpnGateways: ExternalVpnGateways;
+    firewallPolicies: FirewallPolicies;
+    firewalls: Firewalls;
+    forwardingRules: ForwardingRules;
+    globalAddresses: GlobalAddresses;
+    globalForwardingRules: GlobalForwardingRules;
+    globalNetworkEndpointGroups: GlobalNetworkEndpointGroups;
+    globalOperations: GlobalOperations;
+    globalOrganizationOperations: GlobalOrganizationOperations;
+    globalPublicDelegatedPrefixes: GlobalPublicDelegatedPrefixes;
+    healthChecks: HealthChecks;
+    httpHealthChecks: HttpHealthChecks;
+    httpsHealthChecks: HttpsHealthChecks;
+    imageFamilyViews: ImageFamilyViews;
+    images: Images;
+    instanceGroupManagers: InstanceGroupManagers;
+    instanceGroups: InstanceGroups;
+    instanceTemplates: InstanceTemplates;
+    instances: Instances;
+    interconnectAttachments: InterconnectAttachments;
+    interconnectLocations: InterconnectLocations;
+    interconnects: Interconnects;
+    licenseCodes: LicenseCodes;
+    licenses: Licenses;
+    machineImages: MachineImages;
+    machineTypes: MachineTypes;
+    networkAttachments: NetworkAttachments;
+    networkEdgeSecurityServices: NetworkEdgeSecurityServices;
+    networkEndpointGroups: NetworkEndpointGroups;
+    networkFirewallPolicies: NetworkFirewallPolicies;
+    networks: Networks;
+    nodeGroups: NodeGroups;
+    nodeTemplates: NodeTemplates;
+    nodeTypes: NodeTypes;
+    packetMirrorings: PacketMirrorings;
+    projects: Projects;
+    publicAdvertisedPrefixes: PublicAdvertisedPrefixes;
+    publicDelegatedPrefixes: PublicDelegatedPrefixes;
+    regionAutoscalers: RegionAutoscalers;
+    regionBackendServices: RegionBackendServices;
+    regionCommitments: RegionCommitments;
+    regionDiskTypes: RegionDiskTypes;
+    regionDisks: RegionDisks;
+    regionHealthCheckServices: RegionHealthCheckServices;
+    regionHealthChecks: RegionHealthChecks;
+    regionInstanceGroupManagers: RegionInstanceGroupManagers;
+    regionInstanceGroups: RegionInstanceGroups;
+    regionInstances: RegionInstances;
+    regionNetworkEndpointGroups: RegionNetworkEndpointGroups;
+    regionNetworkFirewallPolicies: RegionNetworkFirewallPolicies;
+    regionNotificationEndpoints: RegionNotificationEndpoints;
+    regionOperations: RegionOperations;
+    regionSecurityPolicies: RegionSecurityPolicies;
+    regionSslCertificates: RegionSslCertificates;
+    regionSslPolicies: RegionSslPolicies;
+    regionTargetHttpProxies: RegionTargetHttpProxies;
+    regionTargetHttpsProxies: RegionTargetHttpsProxies;
+    regionTargetTcpProxies: RegionTargetTcpProxies;
+    regionUrlMaps: RegionUrlMaps;
+    regions: Regions;
+    reservations: Reservations;
+    resourcePolicies: ResourcePolicies;
+    routers: Routers;
+    routes: Routes;
+    securityPolicies: SecurityPolicies;
+    serviceAttachments: ServiceAttachments;
+    snapshots: Snapshots;
+    sslCertificates: SslCertificates;
+    sslPolicies: SslPolicies;
+    subnetworks: Subnetworks;
+    targetGrpcProxies: TargetGrpcProxies;
+    targetHttpProxies: TargetHttpProxies;
+    targetHttpsProxies: TargetHttpsProxies;
+    targetInstances: TargetInstances;
+    targetPools: TargetPools;
+    targetSslProxies: TargetSslProxies;
+    targetTcpProxies: TargetTcpProxies;
+    targetVpnGateways: TargetVpnGateways;
+    urlMaps: UrlMaps;
+    vpnGateways: VpnGateways;
+    vpnTunnels: VpnTunnels;
+    zoneOperations: ZoneOperations;
+    zones: Zones;
+    _defaultClient: AxiosInstance;
+    _securityClient: AxiosInstance;
+    _serverURL: string;
+    private _language;
+    private _sdkVersion;
+    private _genVersion;
+    private _globals;
+    constructor(props?: SDKProps);
+}

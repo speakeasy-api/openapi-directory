@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostResumeProcessesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTResumeProcessesActionEnum {
     ResumeProcesses = "ResumeProcesses"
 }
-export declare enum PostResumeProcessesVersionEnum {
+export declare enum POSTResumeProcessesVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class PostResumeProcessesQueryParams extends SpeakeasyBase {
-    action: PostResumeProcessesActionEnum;
-    version: PostResumeProcessesVersionEnum;
-}
-export declare class PostResumeProcessesHeaders extends SpeakeasyBase {
+export declare class POSTResumeProcessesRequest extends SpeakeasyBase {
+    action: POSTResumeProcessesActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTResumeProcessesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostResumeProcessesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostResumeProcessesRequest extends SpeakeasyBase {
-    queryParams: PostResumeProcessesQueryParams;
-    headers: PostResumeProcessesHeaders;
-    request?: Uint8Array;
-}
-export declare class PostResumeProcessesResponse extends SpeakeasyBase {
+export declare class POSTResumeProcessesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

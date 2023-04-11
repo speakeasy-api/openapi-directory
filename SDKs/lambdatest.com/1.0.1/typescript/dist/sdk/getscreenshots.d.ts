@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class GetScreenshots {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +9,10 @@ export declare class GetScreenshots {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * screenshots - Fetch specified screenshot details
+     * Fetch specified screenshot details
      *
+     * @remarks
      * To fetch specified screenshot details
-    **/
-    screenshots(req: operations.ScreenshotsRequest, config?: AxiosRequestConfig): Promise<operations.ScreenshotsResponse>;
+     */
+    screenshots(req: operations.ScreenshotsRequest, security: operations.ScreenshotsSecurity, config?: AxiosRequestConfig): Promise<operations.ScreenshotsResponse>;
 }

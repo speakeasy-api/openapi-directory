@@ -1,20 +1,40 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteTargetsTargetIdScheduledscansIdPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteTargetsTargetIdScheduledscansIdRequest extends SpeakeasyBase {
+    /**
+     * Object Id
+     */
     id: string;
+    /**
+     * Target id
+     */
     targetId: string;
 }
-export declare class DeleteTargetsTargetIdScheduledscansId401ApplicationJson extends SpeakeasyBase {
+/**
+ * Not allowed to perform operation
+ */
+export declare class DeleteTargetsTargetIdScheduledscansId403ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error message.
+     */
     detail?: string;
 }
-export declare class DeleteTargetsTargetIdScheduledscansId403ApplicationJson extends SpeakeasyBase {
+/**
+ * Access token is missing or invalid
+ */
+export declare class DeleteTargetsTargetIdScheduledscansId401ApplicationJSON extends SpeakeasyBase {
     detail?: string;
-}
-export declare class DeleteTargetsTargetIdScheduledscansIdRequest extends SpeakeasyBase {
-    pathParams: DeleteTargetsTargetIdScheduledscansIdPathParams;
 }
 export declare class DeleteTargetsTargetIdScheduledscansIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deleteTargetsTargetIdScheduledscansId401ApplicationJSONObject?: DeleteTargetsTargetIdScheduledscansId401ApplicationJson;
-    deleteTargetsTargetIdScheduledscansId403ApplicationJSONObject?: DeleteTargetsTargetIdScheduledscansId403ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Access token is missing or invalid
+     */
+    deleteTargetsTargetIdScheduledscansId401ApplicationJSONObject?: DeleteTargetsTargetIdScheduledscansId401ApplicationJSON;
+    /**
+     * Not allowed to perform operation
+     */
+    deleteTargetsTargetIdScheduledscansId403ApplicationJSONObject?: DeleteTargetsTargetIdScheduledscansId403ApplicationJSON;
 }

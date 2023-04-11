@@ -1,23 +1,21 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DeleteAccountingCodeRequest, DeleteAccountingCodeResponse } from "openapi/src/sdk/models/operations";
+import {
+  DELETEAccountingCodeRequest,
+  DELETEAccountingCodeResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: DeleteAccountingCodeRequest = {
-  pathParams: {
-    acId: "sit",
-  },
-  headers: {
-    zuoraEntityIds: "voluptas",
-    zuoraTrackId: "culpa",
-  },
+
+const req: DELETEAccountingCodeRequest = {
+  zuoraEntityIds: "corrupti",
+  zuoraTrackId: "provident",
+  acId: "distinctio",
 };
 
-sdk.accountingCodes.deleteAccountingCode(req).then((res: DeleteAccountingCodeResponse | AxiosError) => {
+sdk.accountingCodes.deleteAccountingCode(req).then((res: DELETEAccountingCodeResponse | AxiosError) => {
    // handle response
 });
 ```

@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { NestedVlan } from "./nestedvlan";
 import { NestedVirtualMachine } from "./nestedvirtualmachine";
+import { NestedVLAN } from "./nestedvlan";
 export declare enum VirtualMachineInterfaceModeLabelEnum {
     Access = "Access",
     Tagged = "Tagged",
@@ -33,9 +33,9 @@ export declare class VirtualMachineInterface extends SpeakeasyBase {
     mode?: VirtualMachineInterfaceMode;
     mtu?: number;
     name: string;
-    taggedVlans?: NestedVlan[];
+    taggedVlans?: NestedVLAN[];
     tags?: string[];
     type?: VirtualMachineInterfaceType;
-    untaggedVlan?: NestedVlan;
+    untaggedVlan?: NestedVLAN;
     virtualMachine: NestedVirtualMachine;
 }

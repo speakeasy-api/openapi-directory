@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { CurrentPerformanceRiskEnum } from "./currentperformanceriskenum";
+import { LambdaFunctionMemoryRecommendationOption } from "./lambdafunctionmemoryrecommendationoption";
 import { LambdaFunctionRecommendationFindingEnum } from "./lambdafunctionrecommendationfindingenum";
 import { LambdaFunctionRecommendationFindingReasonCodeEnum } from "./lambdafunctionrecommendationfindingreasoncodeenum";
-import { LambdaFunctionMemoryRecommendationOption } from "./lambdafunctionmemoryrecommendationoption";
 import { LambdaFunctionUtilizationMetric } from "./lambdafunctionutilizationmetric";
 /**
  * Describes an Lambda function recommendation.
-**/
+ */
 export declare class LambdaFunctionRecommendation extends SpeakeasyBase {
     accountId?: string;
     currentMemorySize?: number;
+    currentPerformanceRisk?: CurrentPerformanceRiskEnum;
     finding?: LambdaFunctionRecommendationFindingEnum;
     findingReasonCodes?: LambdaFunctionRecommendationFindingReasonCodeEnum[];
     functionArn?: string;

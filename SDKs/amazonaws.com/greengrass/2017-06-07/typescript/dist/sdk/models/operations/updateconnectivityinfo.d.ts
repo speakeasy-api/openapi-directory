@@ -1,9 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdateConnectivityInfoPathParams extends SpeakeasyBase {
-    thingName: string;
+import { AxiosResponse } from "axios";
+export declare class UpdateConnectivityInfoRequestBody extends SpeakeasyBase {
+    /**
+     * A list of connectivity info.
+     */
+    connectivityInfo?: shared.ConnectivityInfo[];
 }
-export declare class UpdateConnectivityInfoHeaders extends SpeakeasyBase {
+export declare class UpdateConnectivityInfoRequest extends SpeakeasyBase {
+    requestBody: UpdateConnectivityInfoRequestBody;
+    /**
+     * The thing name.
+     */
+    thingName: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,18 +21,20 @@ export declare class UpdateConnectivityInfoHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class UpdateConnectivityInfoRequestBody extends SpeakeasyBase {
-    connectivityInfo?: shared.ConnectivityInfo[];
-}
-export declare class UpdateConnectivityInfoRequest extends SpeakeasyBase {
-    pathParams: UpdateConnectivityInfoPathParams;
-    headers: UpdateConnectivityInfoHeaders;
-    request: UpdateConnectivityInfoRequestBody;
-}
 export declare class UpdateConnectivityInfoResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     updateConnectivityInfoResponse?: shared.UpdateConnectivityInfoResponse;
 }

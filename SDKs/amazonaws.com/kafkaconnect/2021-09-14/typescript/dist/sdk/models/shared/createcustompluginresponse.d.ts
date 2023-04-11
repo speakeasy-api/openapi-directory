@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { CustomPluginStateEnum } from "./custompluginstateenum";
+/**
+ * Success
+ */
 export declare class CreateCustomPluginResponse extends SpeakeasyBase {
     customPluginArn?: string;
     customPluginState?: CustomPluginStateEnum;

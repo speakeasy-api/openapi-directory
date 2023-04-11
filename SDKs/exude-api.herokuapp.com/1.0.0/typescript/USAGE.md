@@ -1,22 +1,22 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { FilterFileDataStoppingsRequest, FilterFileDataStoppingsResponse } from "openapi/src/sdk/models/operations";
+import {
+  FilterFileDataStoppingsRequest,
+  FilterFileDataStoppingsResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: FilterFileDataStoppingsRequest = {
-  pathParams: {
-    type: "sit",
-  },
-  request: {
+  requestBody: {
     file: {
-      content: "voluptas".encode(),
-      file: "culpa",
+      content: "corrupti".encode(),
+      file: "provident",
     },
   },
+  type: "distinctio",
 };
 
 sdk.exude.filterFileDataStoppings(req).then((res: FilterFileDataStoppingsResponse | AxiosError) => {

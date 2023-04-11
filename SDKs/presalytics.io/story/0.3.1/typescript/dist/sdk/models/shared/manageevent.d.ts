@@ -5,6 +5,9 @@ export declare enum ManageEventActionEnum {
     Change = "change",
     Delete = "delete"
 }
+/**
+ * Collaborator user id and permission type
+ */
 export declare class ManageEvent extends SpeakeasyBase {
     action?: ManageEventActionEnum;
     actionParams?: Record<string, any>;

@@ -13,5 +13,4 @@ export * from "./googlecloudvideointelligencev1p2beta1videocontext";
 export * from "./googlecloudvideointelligencev1p2beta1videosegment";
 export * from "./googlelongrunningoperation";
 export * from "./googlerpcstatus";
-export * from "./security";
 export * from "./xgafvenum";

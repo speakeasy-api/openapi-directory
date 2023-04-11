@@ -1,12 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListTrailsQueryParams extends SpeakeasyBase {
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListTrailsXAmzTargetEnum {
     ComAmazonawsCloudtrailV20131101CloudTrail20131101ListTrails = "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.ListTrails"
 }
-export declare class ListTrailsHeaders extends SpeakeasyBase {
+export declare class ListTrailsRequest extends SpeakeasyBase {
+    listTrailsRequest: shared.ListTrailsRequest;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,15 +19,20 @@ export declare class ListTrailsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListTrailsXAmzTargetEnum;
 }
-export declare class ListTrailsRequest extends SpeakeasyBase {
-    queryParams: ListTrailsQueryParams;
-    headers: ListTrailsHeaders;
-    request: shared.ListTrailsRequest;
-}
 export declare class ListTrailsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     listTrailsResponse?: shared.ListTrailsResponse;
+    /**
+     * OperationNotPermittedException
+     */
     operationNotPermittedException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnsupportedOperationException
+     */
     unsupportedOperationException?: any;
 }

@@ -1,19 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ExtensionCtrlGetAccountExtensionByIdPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ExtensionCtrlGetAccountExtensionByIDSecurity extends SpeakeasyBase {
+    bearerAuth: string;
+}
+export declare class ExtensionCtrlGetAccountExtensionByIDRequest extends SpeakeasyBase {
+    /**
+     * The Vonage Business Cloud account ID
+     */
     accountId: string;
+    /**
+     * The extension number
+     */
     extensionNumber: number;
 }
-export declare class ExtensionCtrlGetAccountExtensionByIdSecurity extends SpeakeasyBase {
-    bearerAuth: shared.SchemeBearerAuth;
-}
-export declare class ExtensionCtrlGetAccountExtensionByIdRequest extends SpeakeasyBase {
-    pathParams: ExtensionCtrlGetAccountExtensionByIdPathParams;
-    security: ExtensionCtrlGetAccountExtensionByIdSecurity;
-}
-export declare class ExtensionCtrlGetAccountExtensionByIdResponse extends SpeakeasyBase {
+export declare class ExtensionCtrlGetAccountExtensionByIDResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     endUserRouteHalResponse?: shared.EndUserRouteHalResponse;
+    /**
+     * Extension not found
+     */
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

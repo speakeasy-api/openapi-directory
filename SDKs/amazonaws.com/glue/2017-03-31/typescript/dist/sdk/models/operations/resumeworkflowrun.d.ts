@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum ResumeWorkflowRunXAmzTargetEnum {
-    AwsGlueResumeWorkflowRun = "AWSGlue.ResumeWorkflowRun"
+    AWSGlueResumeWorkflowRun = "AWSGlue.ResumeWorkflowRun"
 }
-export declare class ResumeWorkflowRunHeaders extends SpeakeasyBase {
+export declare class ResumeWorkflowRunRequest extends SpeakeasyBase {
+    resumeWorkflowRunRequest: shared.ResumeWorkflowRunRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class ResumeWorkflowRunHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ResumeWorkflowRunXAmzTargetEnum;
 }
-export declare class ResumeWorkflowRunRequest extends SpeakeasyBase {
-    headers: ResumeWorkflowRunHeaders;
-    request: shared.ResumeWorkflowRunRequest;
-}
 export declare class ResumeWorkflowRunResponse extends SpeakeasyBase {
+    /**
+     * ConcurrentRunsExceededException
+     */
     concurrentRunsExceededException?: any;
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * IllegalWorkflowStateException
+     */
     illegalWorkflowStateException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
+    /**
+     * Success
+     */
     resumeWorkflowRunResponse?: shared.ResumeWorkflowRunResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

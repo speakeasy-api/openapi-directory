@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteAlarmsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteAlarmsActionEnum {
     DeleteAlarms = "DeleteAlarms"
 }
-export declare enum GetDeleteAlarmsVersionEnum {
+export declare enum GETDeleteAlarmsVersionEnum {
     TwoThousandAndTen0801 = "2010-08-01"
 }
-export declare class GetDeleteAlarmsQueryParams extends SpeakeasyBase {
-    action: GetDeleteAlarmsActionEnum;
+export declare class GETDeleteAlarmsRequest extends SpeakeasyBase {
+    action: GETDeleteAlarmsActionEnum;
+    /**
+     * The alarms to be deleted. Do not enclose the alarm names in quote marks.
+     */
     alarmNames: string[];
-    version: GetDeleteAlarmsVersionEnum;
-}
-export declare class GetDeleteAlarmsHeaders extends SpeakeasyBase {
+    version: GETDeleteAlarmsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDeleteAlarmsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteAlarmsRequest extends SpeakeasyBase {
-    queryParams: GetDeleteAlarmsQueryParams;
-    headers: GetDeleteAlarmsHeaders;
-}
-export declare class GetDeleteAlarmsResponse extends SpeakeasyBase {
+export declare class GETDeleteAlarmsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

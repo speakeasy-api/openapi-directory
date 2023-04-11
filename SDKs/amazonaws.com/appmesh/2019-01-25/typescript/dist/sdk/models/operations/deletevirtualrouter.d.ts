@@ -1,13 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteVirtualRouterPathParams extends SpeakeasyBase {
-    meshName: string;
-    virtualRouterName: string;
-}
-export declare class DeleteVirtualRouterQueryParams extends SpeakeasyBase {
-    meshOwner?: string;
-}
-export declare class DeleteVirtualRouterHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteVirtualRouterRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -15,21 +9,53 @@ export declare class DeleteVirtualRouterHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DeleteVirtualRouterRequest extends SpeakeasyBase {
-    pathParams: DeleteVirtualRouterPathParams;
-    queryParams: DeleteVirtualRouterQueryParams;
-    headers: DeleteVirtualRouterHeaders;
+    /**
+     * The name of the service mesh to delete the virtual router in.
+     */
+    meshName: string;
+    /**
+     * The Amazon Web Services IAM account ID of the service mesh owner. If the account ID is not your own, then it's the ID of the account that shared the mesh with your account. For more information about mesh sharing, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html">Working with shared meshes</a>.
+     */
+    meshOwner?: string;
+    /**
+     * The name of the virtual router to delete.
+     */
+    virtualRouterName: string;
 }
 export declare class DeleteVirtualRouterResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteVirtualRouterOutput?: shared.DeleteVirtualRouterOutput;
+    /**
+     * ForbiddenException
+     */
     forbiddenException?: any;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
-    resourceInUseException?: any;
-    serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceInUseException
+     */
+    resourceInUseException?: any;
+    /**
+     * ServiceUnavailableException
+     */
+    serviceUnavailableException?: any;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

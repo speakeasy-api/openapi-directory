@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum SetRepositoryPolicyXAmzTargetEnum {
     SpencerFrontendServiceSetRepositoryPolicy = "SpencerFrontendService.SetRepositoryPolicy"
 }
-export declare class SetRepositoryPolicyHeaders extends SpeakeasyBase {
+export declare class SetRepositoryPolicyRequest extends SpeakeasyBase {
+    setRepositoryPolicyRequest: shared.SetRepositoryPolicyRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,28 @@ export declare class SetRepositoryPolicyHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: SetRepositoryPolicyXAmzTargetEnum;
 }
-export declare class SetRepositoryPolicyRequest extends SpeakeasyBase {
-    headers: SetRepositoryPolicyHeaders;
-    request: shared.SetRepositoryPolicyRequest;
-}
 export declare class SetRepositoryPolicyResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * RepositoryNotFoundException
+     */
     repositoryNotFoundException?: any;
+    /**
+     * ServerException
+     */
     serverException?: any;
+    /**
+     * Success
+     */
     setRepositoryPolicyResponse?: shared.SetRepositoryPolicyResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnsupportedCommandException
+     */
+    unsupportedCommandException?: any;
 }

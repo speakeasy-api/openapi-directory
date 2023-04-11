@@ -12,5 +12,4 @@ export * from "./playerscoreresetallresponse";
 export * from "./playerscoreresetresponse";
 export * from "./profilesettings";
 export * from "./scoresresetmultipleforallrequest";
-export * from "./security";
 export * from "./xgafvenum";

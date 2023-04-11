@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostEnterStandbyActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTEnterStandbyActionEnum {
     EnterStandby = "EnterStandby"
 }
-export declare enum PostEnterStandbyVersionEnum {
+export declare enum POSTEnterStandbyVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class PostEnterStandbyQueryParams extends SpeakeasyBase {
-    action: PostEnterStandbyActionEnum;
-    version: PostEnterStandbyVersionEnum;
-}
-export declare class PostEnterStandbyHeaders extends SpeakeasyBase {
+export declare class POSTEnterStandbyRequest extends SpeakeasyBase {
+    action: POSTEnterStandbyActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTEnterStandbyVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostEnterStandbyHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostEnterStandbyRequest extends SpeakeasyBase {
-    queryParams: PostEnterStandbyQueryParams;
-    headers: PostEnterStandbyHeaders;
-    request?: Uint8Array;
-}
-export declare class PostEnterStandbyResponse extends SpeakeasyBase {
+export declare class POSTEnterStandbyResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

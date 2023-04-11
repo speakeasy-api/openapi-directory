@@ -1,0 +1,166 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { GoogleAdsSearchads360V0CommonAgeRangeInfo } from "./googleadssearchads360v0commonagerangeinfo";
+import { GoogleAdsSearchads360V0CommonGenderInfo } from "./googleadssearchads360v0commongenderinfo";
+import { GoogleAdsSearchads360V0CommonKeywordInfo } from "./googleadssearchads360v0commonkeywordinfo";
+import { GoogleAdsSearchads360V0CommonListingGroupInfo } from "./googleadssearchads360v0commonlistinggroupinfo";
+import { GoogleAdsSearchads360V0CommonWebpageInfo } from "./googleadssearchads360v0commonwebpageinfo";
+import { GoogleAdsSearchads360V0ResourcesAdGroupCriterionQualityInfo } from "./googleadssearchads360v0resourcesadgroupcriterionqualityinfo";
+/**
+ * Output only. The Engine Status for ad group criterion.
+ */
+export declare enum GoogleAdsSearchads360V0ResourcesAdGroupCriterionEngineStatusEnum {
+    Unspecified = "UNSPECIFIED",
+    Unknown = "UNKNOWN",
+    AdGroupCriterionEligible = "AD_GROUP_CRITERION_ELIGIBLE",
+    AdGroupCriterionInappropriateForCampaign = "AD_GROUP_CRITERION_INAPPROPRIATE_FOR_CAMPAIGN",
+    AdGroupCriterionInvalidMobileSearch = "AD_GROUP_CRITERION_INVALID_MOBILE_SEARCH",
+    AdGroupCriterionInvalidPcSearch = "AD_GROUP_CRITERION_INVALID_PC_SEARCH",
+    AdGroupCriterionInvalidSearch = "AD_GROUP_CRITERION_INVALID_SEARCH",
+    AdGroupCriterionLowSearchVolume = "AD_GROUP_CRITERION_LOW_SEARCH_VOLUME",
+    AdGroupCriterionMobileUrlUnderReview = "AD_GROUP_CRITERION_MOBILE_URL_UNDER_REVIEW",
+    AdGroupCriterionPartiallyInvalid = "AD_GROUP_CRITERION_PARTIALLY_INVALID",
+    AdGroupCriterionToBeActivated = "AD_GROUP_CRITERION_TO_BE_ACTIVATED",
+    AdGroupCriterionUnderReview = "AD_GROUP_CRITERION_UNDER_REVIEW",
+    AdGroupCriterionNotReviewed = "AD_GROUP_CRITERION_NOT_REVIEWED",
+    AdGroupCriterionOnHold = "AD_GROUP_CRITERION_ON_HOLD",
+    AdGroupCriterionPendingReview = "AD_GROUP_CRITERION_PENDING_REVIEW",
+    AdGroupCriterionPaused = "AD_GROUP_CRITERION_PAUSED",
+    AdGroupCriterionRemoved = "AD_GROUP_CRITERION_REMOVED",
+    AdGroupCriterionApproved = "AD_GROUP_CRITERION_APPROVED",
+    AdGroupCriterionDisapproved = "AD_GROUP_CRITERION_DISAPPROVED",
+    AdGroupCriterionServing = "AD_GROUP_CRITERION_SERVING",
+    AdGroupCriterionAccountPaused = "AD_GROUP_CRITERION_ACCOUNT_PAUSED"
+}
+/**
+ * The status of the criterion. This is the status of the ad group criterion entity, set by the client. Note: UI reports may incorporate additional information that affects whether a criterion is eligible to run. In some cases a criterion that's REMOVED in the API can still show as enabled in the UI. For example, campaigns by default show to users of all age ranges unless excluded. The UI will show each age range as "enabled", since they're eligible to see the ads; but AdGroupCriterion.status will show "removed", since no positive criterion was added.
+ */
+export declare enum GoogleAdsSearchads360V0ResourcesAdGroupCriterionStatusEnum {
+    Unspecified = "UNSPECIFIED",
+    Unknown = "UNKNOWN",
+    Enabled = "ENABLED",
+    Paused = "PAUSED",
+    Removed = "REMOVED"
+}
+/**
+ * Output only. The type of the criterion.
+ */
+export declare enum GoogleAdsSearchads360V0ResourcesAdGroupCriterionTypeEnum {
+    Unspecified = "UNSPECIFIED",
+    Unknown = "UNKNOWN",
+    Keyword = "KEYWORD",
+    Placement = "PLACEMENT",
+    MobileAppCategory = "MOBILE_APP_CATEGORY",
+    MobileApplication = "MOBILE_APPLICATION",
+    Device = "DEVICE",
+    Location = "LOCATION",
+    ListingGroup = "LISTING_GROUP",
+    AdSchedule = "AD_SCHEDULE",
+    AgeRange = "AGE_RANGE",
+    Gender = "GENDER",
+    IncomeRange = "INCOME_RANGE",
+    ParentalStatus = "PARENTAL_STATUS",
+    YoutubeVideo = "YOUTUBE_VIDEO",
+    YoutubeChannel = "YOUTUBE_CHANNEL",
+    UserList = "USER_LIST",
+    Proximity = "PROXIMITY",
+    Topic = "TOPIC",
+    ListingScope = "LISTING_SCOPE",
+    Language = "LANGUAGE",
+    IpBlock = "IP_BLOCK",
+    ContentLabel = "CONTENT_LABEL",
+    Carrier = "CARRIER",
+    UserInterest = "USER_INTEREST",
+    Webpage = "WEBPAGE",
+    OperatingSystemVersion = "OPERATING_SYSTEM_VERSION",
+    AppPaymentModel = "APP_PAYMENT_MODEL",
+    MobileDevice = "MOBILE_DEVICE",
+    CustomAffinity = "CUSTOM_AFFINITY",
+    CustomIntent = "CUSTOM_INTENT",
+    LocationGroup = "LOCATION_GROUP",
+    CustomAudience = "CUSTOM_AUDIENCE",
+    CombinedAudience = "COMBINED_AUDIENCE",
+    KeywordTheme = "KEYWORD_THEME",
+    Audience = "AUDIENCE",
+    LocalServiceId = "LOCAL_SERVICE_ID"
+}
+/**
+ * An ad group criterion.
+ */
+export declare class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends SpeakeasyBase {
+    /**
+     * Immutable. The ad group to which the criterion belongs.
+     */
+    adGroup?: string;
+    /**
+     * An age range criterion.
+     */
+    ageRange?: GoogleAdsSearchads360V0CommonAgeRangeInfo;
+    /**
+     * The modifier for the bid when the criterion matches. The modifier must be in the range: 0.1 - 10.0. Most targetable criteria types support modifiers.
+     */
+    bidModifier?: number;
+    /**
+     * The CPC (cost-per-click) bid.
+     */
+    cpcBidMicros?: string;
+    /**
+     * Output only. The ID of the criterion.
+     */
+    criterionId?: string;
+    /**
+     * Output only. The effective CPC (cost-per-click) bid.
+     */
+    effectiveCpcBidMicros?: string;
+    /**
+     * Output only. The Engine Status for ad group criterion.
+     */
+    engineStatus?: GoogleAdsSearchads360V0ResourcesAdGroupCriterionEngineStatusEnum;
+    /**
+     * URL template for appending params to final URL.
+     */
+    finalUrlSuffix?: string;
+    /**
+     * The list of possible final URLs after all cross-domain redirects for the ad.
+     */
+    finalUrls?: string[];
+    /**
+     * A gender criterion.
+     */
+    gender?: GoogleAdsSearchads360V0CommonGenderInfo;
+    /**
+     * A keyword criterion.
+     */
+    keyword?: GoogleAdsSearchads360V0CommonKeywordInfo;
+    /**
+     * Output only. The datetime when this ad group criterion was last modified. The datetime is in the customer's time zone and in "yyyy-MM-dd HH:mm:ss.ssssss" format.
+     */
+    lastModifiedTime?: string;
+    /**
+     * A listing group criterion.
+     */
+    listingGroup?: GoogleAdsSearchads360V0CommonListingGroupInfo;
+    /**
+     * A container for ad group criterion quality information.
+     */
+    qualityInfo?: GoogleAdsSearchads360V0ResourcesAdGroupCriterionQualityInfo;
+    /**
+     * Immutable. The resource name of the ad group criterion. Ad group criterion resource names have the form: `customers/{customer_id}/adGroupCriteria/{ad_group_id}~{criterion_id}`
+     */
+    resourceName?: string;
+    /**
+     * The status of the criterion. This is the status of the ad group criterion entity, set by the client. Note: UI reports may incorporate additional information that affects whether a criterion is eligible to run. In some cases a criterion that's REMOVED in the API can still show as enabled in the UI. For example, campaigns by default show to users of all age ranges unless excluded. The UI will show each age range as "enabled", since they're eligible to see the ads; but AdGroupCriterion.status will show "removed", since no positive criterion was added.
+     */
+    status?: GoogleAdsSearchads360V0ResourcesAdGroupCriterionStatusEnum;
+    /**
+     * The URL template for constructing a tracking URL.
+     */
+    trackingUrlTemplate?: string;
+    /**
+     * Output only. The type of the criterion.
+     */
+    type?: GoogleAdsSearchads360V0ResourcesAdGroupCriterionTypeEnum;
+    /**
+     * Represents a criterion for targeting webpages of an advertiser's website.
+     */
+    webpage?: GoogleAdsSearchads360V0CommonWebpageInfo;
+}

@@ -1,20 +1,23 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CrmCheckRequest, CrmCheckResponse } from "openapi/src/sdk/models/operations";
+import {
+  CrmCheckRequest,
+  CrmCheckResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
+  security: {
+    password: "YOUR_PASSWORD_HERE",
+    username: "YOUR_USERNAME_HERE",
+  },
+});
 
-
-const sdk = new SDK();
-    
 const req: CrmCheckRequest = {
-  pathParams: {
-    vin: "sit",
-  },
-  queryParams: {
-    apiKey: "voluptas",
-    saleDate: "culpa",
-  },
+  apiKey: "corrupti",
+  saleDate: "provident",
+  vin: "distinctio",
 };
 
 sdk.crmCleanseAPI.crmCheck(req).then((res: CrmCheckResponse | AxiosError) => {

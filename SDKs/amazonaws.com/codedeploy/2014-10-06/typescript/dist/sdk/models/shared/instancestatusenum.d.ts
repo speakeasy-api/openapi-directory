@@ -1,3 +1,6 @@
+/**
+ * InstanceStatus is deprecated, use TargetStatus instead.
+ */
 export declare enum InstanceStatusEnum {
     Pending = "Pending",
     InProgress = "InProgress",

@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { JobLogEventEnum } from "./joblogeventenum";
 import { JobLogEventData } from "./joblogeventdata";
+import { JobLogEventEnum } from "./joblogeventenum";
 /**
  * Job log.
-**/
+ */
 export declare class JobLog extends SpeakeasyBase {
     event?: JobLogEventEnum;
     eventData?: JobLogEventData;

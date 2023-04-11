@@ -1,5 +1,10 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * License operations
+ *
+ * @see {@link https://netlicensing.io/wiki/license-services} - License Services
+ */
 export declare class License {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,33 +14,38 @@ export declare class License {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createLicense - Create License
+     * Create License
      *
+     * @remarks
      * Creates a new License
-    **/
-    createLicense(req: operations.CreateLicenseRequest, config?: AxiosRequestConfig): Promise<operations.CreateLicenseResponse>;
+     */
+    createLicense(req: operations.CreateLicenseRequestBody, security: operations.CreateLicenseSecurity, config?: AxiosRequestConfig): Promise<operations.CreateLicenseResponse>;
     /**
-     * deleteLicense - Delete License
+     * Delete License
      *
+     * @remarks
      * Delete License by a 'licenseNumber'
-    **/
-    deleteLicense(req: operations.DeleteLicenseRequest, config?: AxiosRequestConfig): Promise<operations.DeleteLicenseResponse>;
+     */
+    deleteLicense(req: operations.DeleteLicenseRequest, security: operations.DeleteLicenseSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteLicenseResponse>;
     /**
-     * getLicense - Get License
+     * Get License
      *
+     * @remarks
      * Get License by a 'licenseNumber'
-    **/
-    getLicense(req: operations.GetLicenseRequest, config?: AxiosRequestConfig): Promise<operations.GetLicenseResponse>;
+     */
+    getLicense(req: operations.GetLicenseRequest, security: operations.GetLicenseSecurity, config?: AxiosRequestConfig): Promise<operations.GetLicenseResponse>;
     /**
-     * listLicenses - List Licenses
+     * List Licenses
      *
+     * @remarks
      * Return a list of all Licenses for the current Vendor
-    **/
-    listLicenses(req: operations.ListLicensesRequest, config?: AxiosRequestConfig): Promise<operations.ListLicensesResponse>;
+     */
+    listLicenses(config?: AxiosRequestConfig): Promise<operations.ListLicensesResponse>;
     /**
-     * updateLicense - Update License
+     * Update License
      *
+     * @remarks
      * Update License by a 'licenseNumber'
-    **/
-    updateLicense(req: operations.UpdateLicenseRequest, config?: AxiosRequestConfig): Promise<operations.UpdateLicenseResponse>;
+     */
+    updateLicense(req: operations.UpdateLicenseRequest, security: operations.UpdateLicenseSecurity, config?: AxiosRequestConfig): Promise<operations.UpdateLicenseResponse>;
 }

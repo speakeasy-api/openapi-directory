@@ -5,7 +5,7 @@ import { Location } from "./location";
 import { Radios } from "./radios";
 /**
  * Represents the settings for a run. Includes things like location, radio states, auxiliary apps, and network profiles.
-**/
+ */
 export declare class ScheduleRunConfiguration extends SpeakeasyBase {
     auxiliaryApps?: string[];
     billingMethod?: BillingMethodEnum;

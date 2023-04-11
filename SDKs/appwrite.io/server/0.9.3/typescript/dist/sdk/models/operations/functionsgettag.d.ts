@@ -1,19 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class FunctionsGetTagPathParams extends SpeakeasyBase {
-    functionId: string;
-    tagId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class FunctionsGetTagSecurity extends SpeakeasyBase {
-    key: shared.SchemeKey;
-    project: shared.SchemeProject;
+    key: string;
+    project: string;
 }
 export declare class FunctionsGetTagRequest extends SpeakeasyBase {
-    pathParams: FunctionsGetTagPathParams;
-    security: FunctionsGetTagSecurity;
+    /**
+     * Function unique ID.
+     */
+    functionId: string;
+    /**
+     * Tag unique ID.
+     */
+    tagId: string;
 }
 export declare class FunctionsGetTagResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Tag
+     */
     tag?: shared.Tag;
 }

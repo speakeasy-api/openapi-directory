@@ -1,18 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetMeConnectionsConnectionIdPathParams extends SpeakeasyBase {
-    connectionId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetMeConnectionsConnectionIdSecurity extends SpeakeasyBase {
-    authHeader: shared.SchemeAuthHeader;
+    authHeader: string;
 }
 export declare class GetMeConnectionsConnectionIdRequest extends SpeakeasyBase {
-    pathParams: GetMeConnectionsConnectionIdPathParams;
-    security: GetMeConnectionsConnectionIdSecurity;
+    /**
+     * SoundCloud connection id
+     */
+    connectionId: number;
 }
 export declare class GetMeConnectionsConnectionIdResponse extends SpeakeasyBase {
+    /**
+     * Success
+     */
     connection?: shared.Connection;
     contentType: string;
+    /**
+     * Unauthorized
+     */
     error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,37 +1,36 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetAuthorizeCacheSecurityGroupIngressRequest, GetAuthorizeCacheSecurityGroupIngressResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GETAuthorizeCacheSecurityGroupIngressRequest,
+  GETAuthorizeCacheSecurityGroupIngressResponse,
+  GETAuthorizeCacheSecurityGroupIngressActionEnum,
+  GETAuthorizeCacheSecurityGroupIngressVersionEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: GetAuthorizeCacheSecurityGroupIngressRequest = {
-  queryParams: {
-    action: "AuthorizeCacheSecurityGroupIngress",
-    cacheSecurityGroupName: "voluptas",
-    ec2SecurityGroupName: "culpa",
-    ec2SecurityGroupOwnerId: "expedita",
-    version: "2015-02-02",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  headers: {
-    xAmzAlgorithm: "dolor",
-    xAmzContentSha256: "expedita",
-    xAmzCredential: "voluptas",
-    xAmzDate: "fugit",
-    xAmzSecurityToken: "et",
-    xAmzSignature: "nihil",
-    xAmzSignedHeaders: "rerum",
-  },
+});
+
+const req: GETAuthorizeCacheSecurityGroupIngressRequest = {
+  action: GETAuthorizeCacheSecurityGroupIngressActionEnum.AuthorizeCacheSecurityGroupIngress,
+  cacheSecurityGroupName: "corrupti",
+  ec2SecurityGroupName: "provident",
+  ec2SecurityGroupOwnerId: "distinctio",
+  version: GETAuthorizeCacheSecurityGroupIngressVersionEnum.TwoThousandAndFifteen0202,
+  xAmzAlgorithm: "quibusdam",
+  xAmzContentSha256: "unde",
+  xAmzCredential: "nulla",
+  xAmzDate: "corrupti",
+  xAmzSecurityToken: "illum",
+  xAmzSignature: "vel",
+  xAmzSignedHeaders: "error",
 };
 
-sdk.getAuthorizeCacheSecurityGroupIngress(req).then((res: GetAuthorizeCacheSecurityGroupIngressResponse | AxiosError) => {
+sdk.getAuthorizeCacheSecurityGroupIngress(req).then((res: GETAuthorizeCacheSecurityGroupIngressResponse | AxiosError) => {
    // handle response
 });
 ```

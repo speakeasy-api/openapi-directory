@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteSubnetActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteSubnetActionEnum {
     DeleteSubnet = "DeleteSubnet"
 }
-export declare enum GetDeleteSubnetVersionEnum {
+export declare enum GETDeleteSubnetVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetDeleteSubnetQueryParams extends SpeakeasyBase {
-    action: GetDeleteSubnetActionEnum;
+export declare class GETDeleteSubnetRequest extends SpeakeasyBase {
+    action: GETDeleteSubnetActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
+    /**
+     * The ID of the subnet.
+     */
     subnetId: string;
-    version: GetDeleteSubnetVersionEnum;
-}
-export declare class GetDeleteSubnetHeaders extends SpeakeasyBase {
+    version: GETDeleteSubnetVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,11 +25,8 @@ export declare class GetDeleteSubnetHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteSubnetRequest extends SpeakeasyBase {
-    queryParams: GetDeleteSubnetQueryParams;
-    headers: GetDeleteSubnetHeaders;
-}
-export declare class GetDeleteSubnetResponse extends SpeakeasyBase {
+export declare class GETDeleteSubnetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

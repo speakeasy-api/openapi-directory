@@ -1,4 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
 export declare class ReserveRequestBody extends SpeakeasyBase {
     chargestation?: string;
     connector?: string;
@@ -6,16 +7,20 @@ export declare class ReserveRequestBody extends SpeakeasyBase {
     endDate?: string;
     token?: string;
 }
-export declare class Reserve201ApplicationJson extends SpeakeasyBase {
+/**
+ * A successful response
+ */
+export declare class Reserve201ApplicationJSON extends SpeakeasyBase {
     command?: Record<string, any>;
     message?: string;
     ok?: boolean;
 }
-export declare class ReserveRequest extends SpeakeasyBase {
-    request: ReserveRequestBody;
-}
 export declare class ReserveResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    reserve201ApplicationJSONObject?: Reserve201ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * A successful response
+     */
+    reserve201ApplicationJSONObject?: Reserve201ApplicationJSON;
 }

@@ -1,10 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeAssetPropertyPathParams extends SpeakeasyBase {
-    assetId: string;
-    propertyId: string;
-}
-export declare class DescribeAssetPropertyHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DescribeAssetPropertyRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,17 +9,37 @@ export declare class DescribeAssetPropertyHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DescribeAssetPropertyRequest extends SpeakeasyBase {
-    pathParams: DescribeAssetPropertyPathParams;
-    headers: DescribeAssetPropertyHeaders;
+    /**
+     * The ID of the asset.
+     */
+    assetId: string;
+    /**
+     * The ID of the asset property.
+     */
+    propertyId: string;
 }
 export declare class DescribeAssetPropertyResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeAssetPropertyResponse?: shared.DescribeAssetPropertyResponse;
+    /**
+     * InternalFailureException
+     */
     internalFailureException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

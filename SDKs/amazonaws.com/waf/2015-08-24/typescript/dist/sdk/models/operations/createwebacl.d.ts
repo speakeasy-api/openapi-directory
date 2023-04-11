@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum CreateWebAclxAmzTargetEnum {
-    Awswaf20150824CreateWebAcl = "AWSWAF_20150824.CreateWebACL"
+import { AxiosResponse } from "axios";
+export declare enum CreateWebACLXAmzTargetEnum {
+    AWSWAF20150824CreateWebACL = "AWSWAF_20150824.CreateWebACL"
 }
-export declare class CreateWebAclHeaders extends SpeakeasyBase {
+export declare class CreateWebACLRequest extends SpeakeasyBase {
+    createWebACLRequest: shared.CreateWebACLRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,23 +13,50 @@ export declare class CreateWebAclHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: CreateWebAclxAmzTargetEnum;
+    xAmzTarget: CreateWebACLXAmzTargetEnum;
 }
-export declare class CreateWebAclRequest extends SpeakeasyBase {
-    headers: CreateWebAclHeaders;
-    request: shared.CreateWebAclRequest;
-}
-export declare class CreateWebAclResponse extends SpeakeasyBase {
+export declare class CreateWebACLResponse extends SpeakeasyBase {
     contentType: string;
-    createWebACLResponse?: shared.CreateWebAclResponse;
+    /**
+     * Success
+     */
+    createWebACLResponse?: shared.CreateWebACLResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * WAFBadRequestException
+     */
     wafBadRequestException?: any;
+    /**
+     * WAFDisallowedNameException
+     */
     wafDisallowedNameException?: any;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFInvalidAccountException
+     */
     wafInvalidAccountException?: any;
+    /**
+     * WAFInvalidParameterException
+     */
     wafInvalidParameterException?: any;
+    /**
+     * WAFLimitsExceededException
+     */
     wafLimitsExceededException?: any;
+    /**
+     * WAFStaleDataException
+     */
     wafStaleDataException?: any;
+    /**
+     * WAFTagOperationException
+     */
     wafTagOperationException?: any;
+    /**
+     * WAFTagOperationInternalErrorException
+     */
     wafTagOperationInternalErrorException?: any;
 }

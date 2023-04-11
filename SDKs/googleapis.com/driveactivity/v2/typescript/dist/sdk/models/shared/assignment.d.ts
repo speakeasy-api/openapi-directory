@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { User } from "./user";
+/**
+ * The sub-type of this event.
+ */
 export declare enum AssignmentSubtypeEnum {
     SubtypeUnspecified = "SUBTYPE_UNSPECIFIED",
     Added = "ADDED",
@@ -12,8 +15,14 @@ export declare enum AssignmentSubtypeEnum {
 }
 /**
  * A comment with an assignment.
-**/
+ */
 export declare class Assignment extends SpeakeasyBase {
+    /**
+     * Information about an end user.
+     */
     assignedUser?: User;
+    /**
+     * The sub-type of this event.
+     */
     subtype?: AssignmentSubtypeEnum;
 }

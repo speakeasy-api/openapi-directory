@@ -1,15 +1,32 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetLinksTopDomainsPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetLinksTopDomainsRequest extends SpeakeasyBase {
+    /**
+     * Analysis' identifier
+     */
     analysisSlug: string;
+    /**
+     * Page Number
+     */
+    page?: number;
+    /**
+     * Project's identifier
+     */
     projectSlug: string;
+    /**
+     * Page Size
+     */
+    size?: number;
+    /**
+     * User's identifier
+     */
     username: string;
 }
-export declare class GetLinksTopDomainsQueryParams extends SpeakeasyBase {
-    page?: number;
-    size?: number;
-}
-export declare class GetLinksTopDomains200ApplicationJson extends SpeakeasyBase {
+/**
+ * Successful operation
+ */
+export declare class GetLinksTopDomains200ApplicationJSON extends SpeakeasyBase {
     count?: number;
     next?: string;
     page?: number;
@@ -17,13 +34,16 @@ export declare class GetLinksTopDomains200ApplicationJson extends SpeakeasyBase 
     results?: shared.LinksTopDomains[];
     size?: number;
 }
-export declare class GetLinksTopDomainsRequest extends SpeakeasyBase {
-    pathParams: GetLinksTopDomainsPathParams;
-    queryParams: GetLinksTopDomainsQueryParams;
-}
 export declare class GetLinksTopDomainsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * error payload
+     */
     defaultPayload?: shared.DefaultPayload;
     statusCode: number;
-    getLinksTopDomains200ApplicationJSONObject?: GetLinksTopDomains200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful operation
+     */
+    getLinksTopDomains200ApplicationJSONObject?: GetLinksTopDomains200ApplicationJSON;
 }

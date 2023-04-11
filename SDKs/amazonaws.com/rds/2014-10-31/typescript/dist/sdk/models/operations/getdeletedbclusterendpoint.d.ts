@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteDbClusterEndpointActionEnum {
-    DeleteDbClusterEndpoint = "DeleteDBClusterEndpoint"
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteDBClusterEndpointActionEnum {
+    DeleteDBClusterEndpoint = "DeleteDBClusterEndpoint"
 }
-export declare enum GetDeleteDbClusterEndpointVersionEnum {
+export declare enum GETDeleteDBClusterEndpointVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class GetDeleteDbClusterEndpointQueryParams extends SpeakeasyBase {
-    action: GetDeleteDbClusterEndpointActionEnum;
+export declare class GETDeleteDBClusterEndpointRequest extends SpeakeasyBase {
+    action: GETDeleteDBClusterEndpointActionEnum;
+    /**
+     * The identifier associated with the custom endpoint. This parameter is stored as a lowercase string.
+     */
     dbClusterEndpointIdentifier: string;
-    version: GetDeleteDbClusterEndpointVersionEnum;
-}
-export declare class GetDeleteDbClusterEndpointHeaders extends SpeakeasyBase {
+    version: GETDeleteDBClusterEndpointVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDeleteDbClusterEndpointHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteDbClusterEndpointRequest extends SpeakeasyBase {
-    queryParams: GetDeleteDbClusterEndpointQueryParams;
-    headers: GetDeleteDbClusterEndpointHeaders;
-}
-export declare class GetDeleteDbClusterEndpointResponse extends SpeakeasyBase {
+export declare class GETDeleteDBClusterEndpointResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

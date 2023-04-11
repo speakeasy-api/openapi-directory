@@ -1,36 +1,31 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AddOrUpdateAdditionalRatesRequest, AddOrUpdateAdditionalRatesResponse } from "openapi/src/sdk/models/operations";
+import {
+  AddOrUpdateAdditionalRatesRequest,
+  AddOrUpdateAdditionalRatesResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: AddOrUpdateAdditionalRatesRequest = {
-  security: {
-    paylocityAuth: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
+  additionalRate: {
+    changeReason: "corrupti",
+    costCenter1: "provident",
+    costCenter2: "distinctio",
+    costCenter3: "quibusdam",
+    effectiveDate: "unde",
+    endCheckDate: "nulla",
+    job: "corrupti",
+    rate: 8472.52,
+    rateCode: "vel",
+    rateNotes: "error",
+    ratePer: "deserunt",
+    shift: "suscipit",
   },
-  pathParams: {
-    companyId: "sit",
-    employeeId: "voluptas",
-  },
-  request: {
-    changeReason: "culpa",
-    costCenter1: "expedita",
-    costCenter2: "consequuntur",
-    costCenter3: "dolor",
-    effectiveDate: "expedita",
-    endCheckDate: "voluptas",
-    job: "fugit",
-    rate: 28.100000,
-    rateCode: "rerum",
-    rateNotes: "dicta",
-    ratePer: "debitis",
-    shift: "voluptatum",
-  },
+  companyId: "iure",
+  employeeId: "magnam",
 };
 
 sdk.additionalRates.addOrUpdateAdditionalRates(req).then((res: AddOrUpdateAdditionalRatesResponse | AxiosError) => {

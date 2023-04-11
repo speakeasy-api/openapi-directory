@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ReposEnableAutomatedSecurityFixesPathParams extends SpeakeasyBase {
-    owner: string;
-    repo: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ReposEnableAutomatedSecurityFixesRequest extends SpeakeasyBase {
-    pathParams: ReposEnableAutomatedSecurityFixesPathParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    owner: string;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    repo: string;
 }
 export declare class ReposEnableAutomatedSecurityFixesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

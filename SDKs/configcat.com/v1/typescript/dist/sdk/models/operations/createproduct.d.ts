@@ -1,20 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreateProductPathParams extends SpeakeasyBase {
-    organizationId: string;
-}
-export declare class CreateProductRequests extends SpeakeasyBase {
-    createProductRequest?: shared.CreateProductRequest;
-    createProductRequest1?: shared.CreateProductRequest;
-    createProductRequest2?: shared.CreateProductRequest;
-}
+import { AxiosResponse } from "axios";
 export declare class CreateProductRequest extends SpeakeasyBase {
-    pathParams: CreateProductPathParams;
-    request: CreateProductRequests;
+    createProductRequest: shared.CreateProductRequest;
+    /**
+     * The identifier of the Organization.
+     */
+    organizationId: string;
 }
 export declare class CreateProductResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * When the creation was successful.
+     */
     productModel?: shared.ProductModel;
+    /**
+     * When the creation was successful.
+     */
     productModelHaljson?: shared.ProductModelHaljson;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

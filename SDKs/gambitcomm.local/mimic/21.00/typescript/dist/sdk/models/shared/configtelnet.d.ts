@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ConfigTelnet extends SpeakeasyBase {
+/**
+ * successful operation
+ */
+export declare class ConfigTELNET extends SpeakeasyBase {
     keymap?: string;
     pagingPrompt?: string;
     port?: number;

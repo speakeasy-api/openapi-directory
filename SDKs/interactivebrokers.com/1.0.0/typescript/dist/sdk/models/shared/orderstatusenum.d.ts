@@ -1,3 +1,25 @@
+/**
+ * Status of the order
+ *
+ * @remarks
+ * InvalidOrderStatus = '-1'
+ * New = '0'
+ * PartiallyFilled = '1'
+ * Filled = '2'
+ * DoneForTheDay = '3'
+ * Canceled = '4'
+ * Replaced = '5'
+ * PendingCancelReplace = '6'
+ * Stopped = '7'
+ * Rejected = '8'
+ * Suspended = '9'
+ * PendingNew = 'A'
+ * Calculated = 'B'
+ * Expired = 'C'
+ * AcceptedForBidding = 'D'
+ * PendingReplace = 'E'
+ *
+ */
 export declare enum OrderStatusEnum {
     Minus1 = "-1",
     Zero = "0",

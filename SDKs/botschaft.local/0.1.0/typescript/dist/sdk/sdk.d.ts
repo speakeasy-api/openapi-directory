@@ -1,13 +1,25 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
-import * as operations from "./models/operations";
 import { Discord } from "./discord";
+import * as operations from "./models/operations";
 import { Slack } from "./slack";
 import { Sns } from "./sns";
 import { Twilio } from "./twilio";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["http://botschaft.local"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
 export declare class SDK {
     discord: Discord;
@@ -20,13 +32,14 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
     /**
-     * configConfigGet - Config
-    **/
+     * Config
+     */
     configConfigGet(req: operations.ConfigConfigGetRequest, config?: AxiosRequestConfig): Promise<operations.ConfigConfigGetResponse>;
     /**
-     * topicTopicTopicNameGet - Topic
-    **/
+     * Topic
+     */
     topicTopicTopicNameGet(req: operations.TopicTopicTopicNameGetRequest, config?: AxiosRequestConfig): Promise<operations.TopicTopicTopicNameGetResponse>;
 }

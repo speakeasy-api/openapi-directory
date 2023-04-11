@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostPurchaseHostReservationActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTPurchaseHostReservationActionEnum {
     PurchaseHostReservation = "PurchaseHostReservation"
 }
-export declare enum PostPurchaseHostReservationVersionEnum {
+export declare enum POSTPurchaseHostReservationVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostPurchaseHostReservationQueryParams extends SpeakeasyBase {
-    action: PostPurchaseHostReservationActionEnum;
-    version: PostPurchaseHostReservationVersionEnum;
-}
-export declare class PostPurchaseHostReservationHeaders extends SpeakeasyBase {
+export declare class POSTPurchaseHostReservationRequest extends SpeakeasyBase {
+    action: POSTPurchaseHostReservationActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTPurchaseHostReservationVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostPurchaseHostReservationHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostPurchaseHostReservationRequest extends SpeakeasyBase {
-    queryParams: PostPurchaseHostReservationQueryParams;
-    headers: PostPurchaseHostReservationHeaders;
-    request?: Uint8Array;
-}
-export declare class PostPurchaseHostReservationResponse extends SpeakeasyBase {
+export declare class POSTPurchaseHostReservationResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

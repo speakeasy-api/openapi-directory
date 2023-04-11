@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class AlbumsCustomAlbumThumbnails {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,25 +9,26 @@ export declare class AlbumsCustomAlbumThumbnails {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createAlbumCustomThumb - Add a custom uploaded thumbnail
-    **/
-    createAlbumCustomThumb(req: operations.CreateAlbumCustomThumbRequest, config?: AxiosRequestConfig): Promise<operations.CreateAlbumCustomThumbResponse>;
+     * Add a custom uploaded thumbnail
+     */
+    createAlbumCustomThumb(req: operations.CreateAlbumCustomThumbRequest, security: operations.CreateAlbumCustomThumbSecurity, config?: AxiosRequestConfig): Promise<operations.CreateAlbumCustomThumbResponse>;
     /**
-     * deleteAlbumCustomThumbnail - Remove a custom uploaded album thumbnail
+     * Remove a custom uploaded album thumbnail
      *
+     * @remarks
      * This method removes a custom uploaded thumbnail from the specified album.
-    **/
-    deleteAlbumCustomThumbnail(req: operations.DeleteAlbumCustomThumbnailRequest, config?: AxiosRequestConfig): Promise<operations.DeleteAlbumCustomThumbnailResponse>;
+     */
+    deleteAlbumCustomThumbnail(req: operations.DeleteAlbumCustomThumbnailRequest, security: operations.DeleteAlbumCustomThumbnailSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteAlbumCustomThumbnailResponse>;
     /**
-     * getAlbumCustomThumbnail - Get a specific custom uploaded album thumbnail
-    **/
+     * Get a specific custom uploaded album thumbnail
+     */
     getAlbumCustomThumbnail(req: operations.GetAlbumCustomThumbnailRequest, config?: AxiosRequestConfig): Promise<operations.GetAlbumCustomThumbnailResponse>;
     /**
-     * getAlbumCustomThumbs - Get all the custom upload thumbnails of an album
-    **/
+     * Get all the custom upload thumbnails of an album
+     */
     getAlbumCustomThumbs(req: operations.GetAlbumCustomThumbsRequest, config?: AxiosRequestConfig): Promise<operations.GetAlbumCustomThumbsResponse>;
     /**
-     * replaceAlbumCustomThumb - Replace a custom uploaded album thumbnail
-    **/
-    replaceAlbumCustomThumb(req: operations.ReplaceAlbumCustomThumbRequest, config?: AxiosRequestConfig): Promise<operations.ReplaceAlbumCustomThumbResponse>;
+     * Replace a custom uploaded album thumbnail
+     */
+    replaceAlbumCustomThumb(req: operations.ReplaceAlbumCustomThumbRequest, security: operations.ReplaceAlbumCustomThumbSecurity, config?: AxiosRequestConfig): Promise<operations.ReplaceAlbumCustomThumbResponse>;
 }

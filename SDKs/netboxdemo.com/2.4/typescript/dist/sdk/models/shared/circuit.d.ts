@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { NestedCircuitType } from "./nestedcircuittype";
 import { NestedProvider } from "./nestedprovider";
 import { NestedTenant } from "./nestedtenant";
-import { NestedCircuitType } from "./nestedcircuittype";
 export declare class CircuitStatus extends SpeakeasyBase {
     label: string;
     value: number;

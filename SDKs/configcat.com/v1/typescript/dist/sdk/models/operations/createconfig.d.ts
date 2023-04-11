@@ -1,20 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreateConfigPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class CreateConfigRequest extends SpeakeasyBase {
+    createConfigRequest: shared.CreateConfigRequest;
+    /**
+     * The identifier of the Product.
+     */
     productId: string;
 }
-export declare class CreateConfigRequests extends SpeakeasyBase {
-    createConfigRequest?: shared.CreateConfigRequest;
-    createConfigRequest1?: shared.CreateConfigRequest;
-    createConfigRequest2?: shared.CreateConfigRequest;
-}
-export declare class CreateConfigRequest extends SpeakeasyBase {
-    pathParams: CreateConfigPathParams;
-    request: CreateConfigRequests;
-}
 export declare class CreateConfigResponse extends SpeakeasyBase {
+    /**
+     * When the creation was successful.
+     */
     configModel?: shared.ConfigModel;
+    /**
+     * When the creation was successful.
+     */
     configModelHaljson?: shared.ConfigModelHaljson;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

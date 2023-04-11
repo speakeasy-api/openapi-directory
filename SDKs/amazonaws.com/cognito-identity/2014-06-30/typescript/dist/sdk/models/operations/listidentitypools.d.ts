@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListIdentityPoolsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListIdentityPoolsXAmzTargetEnum {
-    AwsCognitoIdentityServiceListIdentityPools = "AWSCognitoIdentityService.ListIdentityPools"
+    AWSCognitoIdentityServiceListIdentityPools = "AWSCognitoIdentityService.ListIdentityPools"
 }
-export declare class ListIdentityPoolsHeaders extends SpeakeasyBase {
+export declare class ListIdentityPoolsRequest extends SpeakeasyBase {
+    listIdentityPoolsInput: shared.ListIdentityPoolsInput;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,18 +23,32 @@ export declare class ListIdentityPoolsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListIdentityPoolsXAmzTargetEnum;
 }
-export declare class ListIdentityPoolsRequest extends SpeakeasyBase {
-    queryParams: ListIdentityPoolsQueryParams;
-    headers: ListIdentityPoolsHeaders;
-    request: shared.ListIdentityPoolsInput;
-}
 export declare class ListIdentityPoolsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalErrorException
+     */
     internalErrorException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * Success
+     */
     listIdentityPoolsResponse?: shared.ListIdentityPoolsResponse;
+    /**
+     * NotAuthorizedException
+     */
     notAuthorizedException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

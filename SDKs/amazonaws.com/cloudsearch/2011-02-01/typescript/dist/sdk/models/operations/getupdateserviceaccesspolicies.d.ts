@@ -1,17 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetUpdateServiceAccessPoliciesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETUpdateServiceAccessPoliciesActionEnum {
     UpdateServiceAccessPolicies = "UpdateServiceAccessPolicies"
 }
-export declare enum GetUpdateServiceAccessPoliciesVersionEnum {
+export declare enum GETUpdateServiceAccessPoliciesVersionEnum {
     TwoThousandAndEleven0201 = "2011-02-01"
 }
-export declare class GetUpdateServiceAccessPoliciesQueryParams extends SpeakeasyBase {
+export declare class GETUpdateServiceAccessPoliciesRequest extends SpeakeasyBase {
     accessPolicies: string;
-    action: GetUpdateServiceAccessPoliciesActionEnum;
+    action: GETUpdateServiceAccessPoliciesActionEnum;
     domainName: string;
-    version: GetUpdateServiceAccessPoliciesVersionEnum;
-}
-export declare class GetUpdateServiceAccessPoliciesHeaders extends SpeakeasyBase {
+    version: GETUpdateServiceAccessPoliciesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +19,9 @@ export declare class GetUpdateServiceAccessPoliciesHeaders extends SpeakeasyBase
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetUpdateServiceAccessPoliciesRequest extends SpeakeasyBase {
-    queryParams: GetUpdateServiceAccessPoliciesQueryParams;
-    headers: GetUpdateServiceAccessPoliciesHeaders;
-}
-export declare class GetUpdateServiceAccessPoliciesResponse extends SpeakeasyBase {
+export declare class GETUpdateServiceAccessPoliciesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

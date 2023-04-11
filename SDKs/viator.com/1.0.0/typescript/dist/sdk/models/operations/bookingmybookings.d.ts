@@ -1,121 +1,466 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class BookingMybookingsQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class BookingMybookingsRequest extends SpeakeasyBase {
+    /**
+     * Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
+     *
+     * @remarks
+     *
+     */
+    acceptLanguage: string;
+    /**
+     * **email address** of the booker for the booking
+     */
     email?: string;
+    /**
+     * The booking reference number of the item
+     *
+     * @remarks
+     * - **Note**: For more information, see [Booking references](#section/Key-concepts/Booking-references)
+     *
+     */
     itineraryOrItemId?: string;
+    /**
+     * **voucher key** for the booking
+     */
     voucherKey?: string;
 }
-export declare class BookingMybookingsHeaders extends SpeakeasyBase {
-    acceptLanguage: string;
-}
-export declare class BookingMybookings200ApplicationJsonDataItemSummariesMerchantTermsAndConditionsCancellationFromTourDate extends SpeakeasyBase {
+export declare class BookingMybookings200ApplicationJSONDataItemSummariesMerchantTermsAndConditionsCancellationFromTourDate extends SpeakeasyBase {
+    /**
+     * **number** of days prior to the tour start date that *this* policy window begins. `null` signifies open-endedness
+     */
     dayRangeMax?: number;
+    /**
+     * **number** of days prior to the tour start date that *this* policy window ends
+     */
     dayRangeMin?: number;
+    /**
+     * **percentage** of total price refundable if cancelled within *this* time window
+     */
     percentageRefundable?: number;
+    /**
+     * **Unix timestamp** giving the exact time the policy ends
+     */
     policyEndTimestamp?: number;
+    /**
+     * **Unix timestamp** giving the exact time the policy commences
+     */
     policyStartTimestamp?: number;
 }
-export declare class BookingMybookings200ApplicationJsonDataItemSummariesMerchantTermsAndConditions extends SpeakeasyBase {
+export declare class BookingMybookings200ApplicationJSONDataItemSummariesMerchantTermsAndConditions extends SpeakeasyBase {
+    /**
+     * **currency-formatted** amount that will be refunded if the cancellation is processed now.
+     */
     amountRefundable?: string;
-    cancellationFromTourDate?: BookingMybookings200ApplicationJsonDataItemSummariesMerchantTermsAndConditionsCancellationFromTourDate[];
+    /**
+     * **array** of cancellation policy objects
+     */
+    cancellationFromTourDate?: BookingMybookings200ApplicationJSONDataItemSummariesMerchantTermsAndConditionsCancellationFromTourDate[];
+    /**
+     * **natural-language description** of the terms and conditions for *this* product
+     */
     termsAndConditions?: string;
 }
-export declare class BookingMybookings200ApplicationJsonDataItemSummariesTravellerAgeBands extends SpeakeasyBase {
+export declare class BookingMybookings200ApplicationJSONDataItemSummariesTravellerAgeBands extends SpeakeasyBase {
+    /**
+     * **unique numeric identifier** for the age band
+     *
+     * @remarks
+     * - See: [Working with age bands](#section/Appendices/Working-with-age-bands)
+     *
+     */
     ageBandId?: number;
+    /**
+     * **number** of travelers in *this* age band
+     */
     count?: number;
+    /**
+     * **natural-language description** (singular) of *this* age band
+     */
     description?: string;
+    /**
+     * **natural-language description** (plural) of *this* age band
+     */
     pluralDescription?: string;
+    /**
+     * **sort order** for *this* age band
+     */
     sortOrder?: number;
 }
-export declare class BookingMybookings200ApplicationJsonDataItemSummaries extends SpeakeasyBase {
+export declare class BookingMybookings200ApplicationJSONDataItemSummaries extends SpeakeasyBase {
+    /**
+     * Indicates whether a voucher is required for each passenger; or, whether the requirement is one voucher per group booking.
+     */
     barcodeOption?: string;
+    /**
+     * **alphanumeric code** specifying the type of barcode
+     */
     barcodeType?: string;
+    /**
+     * [booking type indicator](#section/Key-concepts/Booking-concepts) that indicates whether the booking will be `CONFIRMED` immediately or if it will remain `PENDING` even after the booking has been made
+     *
+     * @remarks
+     *
+     * *one of* the following:
+     * - `"UF"` (FreesaleBE and UnconditionalBE) – this booking will be confirmed immediately
+     * - `"OR"` (DeferredCRMBE) – the booked product is an on-request product, will not be confirmed immediately and will have a `PENDING` status after it is booked, to be confirmed by the supplier within the time specified in the `hoursConfirmed` field available in the booking response and post-booking services
+     * - `"FO"` (FreesaleOnRequestBE) – the booked product is freesale up until a certain number of days before the travel date, referred to as the *on-request period*.
+     *
+     */
     bookingEngineId?: shared.BookingEngineIdResponseEnum;
+    /**
+     * **object** containing item booking status information
+     */
     bookingStatus?: shared.BookingStatusItem;
+    /**
+     * **currency code** for the currency in which pricing is displayed
+     */
     currencyCode?: string;
+    /**
+     * **natural-language description** of *this* item's departure location
+     */
     departsFrom?: string;
+    /**
+     * **natural-language description** of the product's departure point
+     */
     departurePoint?: string;
+    /**
+     * **natural-language address** of the departure point for the product
+     */
     departurePointAddress?: string;
+    /**
+     * **natural-language description** of how to access the departure point for the product
+     */
     departurePointDirections?: string;
+    /**
+     * **unique numeric identifier** of the destination in which the product operates
+     */
     destId?: number;
+    /**
+     * **alphanumeric reference code** of the distributor item
+     */
     distributorItemRef?: string;
+    /**
+     * The `hoursConfirmed` field also indicates if the product is freesale or on request. The `hoursConfirmed` value is the approximate window for confirmation in hours, which can be presented to the customer. A value of `0` means that the product is **freesale**, and a value greater than `0` means that the product is **on-request**.
+     *
+     * @remarks
+     *
+     */
     hoursConfirmed?: number;
+    /**
+     * Booking-reference number generated by Viator
+     *
+     * @remarks
+     * - **Note**: For more information, see: [Booking references](#section/Key-concepts/Booking-references)
+     *
+     */
     itemId?: string;
+    /**
+     * ignore (Viator only)
+     */
     itineraryId?: number;
+    /**
+     * **language code** for the language that the product operates in
+     */
     languageServicesLanguageCode?: string;
+    /**
+     * **currency-formatted merchant net rate** of *this* item
+     */
     lastRetailPrice?: number;
+    /**
+     * **currency-formatted retail price** of *this* item
+     */
     lastRetailPriceFormatted?: string;
+    /**
+     * **first name** of the lead traveler
+     */
     leadTravellerFirstname?: string;
+    /**
+     * **surname** of the lead traveler
+     */
     leadTravellerSurname?: string;
+    /**
+     * **title** of the lead traveler's name
+     */
     leadTravellerTitle?: string;
+    /**
+     * ignore (Viator only)
+     *
+     * @remarks
+     *
+     * For cancellation information regarding the booking, please refer to the `merchantTermsAndConditions` object
+     *
+     */
     merchantCancellable?: boolean;
+    /**
+     * **currency-formatted merchant net rate** of *this* item
+     *
+     * @remarks
+     * - For more information, see: [Merchant pricing](#section/Merchant-APIs/Merchant-pricing)
+     *
+     */
     merchantNetPrice?: number;
+    /**
+     * **currency-formatted merchant net rate** of *this* item
+     *
+     * @remarks
+     * - For more information, see: [Merchant pricing](#section/Merchant-APIs/Merchant-pricing)
+     *
+     */
     merchantNetPriceFormatted?: string;
-    merchantTermsAndConditions?: BookingMybookings200ApplicationJsonDataItemSummariesMerchantTermsAndConditions;
+    merchantTermsAndConditions?: BookingMybookings200ApplicationJSONDataItemSummariesMerchantTermsAndConditions;
+    /**
+     * ignore (Viator only)
+     */
     obfsId?: string;
+    /**
+     * ignore (Viator only)
+     */
     passbooks?: string;
+    /**
+     * **numeric merchant total price** of the product that was booked
+     *
+     * @remarks
+     * - For more information, see: [Merchant pricing](#section/Merchant-APIs/Merchant-pricing)
+     *
+     */
     price?: number;
+    /**
+     * **currency-formatted merchant total price** for *this* booking
+     *
+     * @remarks
+     * - For more information, see: [Merchant pricing](#section/Merchant-APIs/Merchant-pricing)
+     *
+     */
     priceFormatted?: string;
     priceUSD?: number;
+    /**
+     * **unique alphanumeric identifier** of the product that was booked
+     */
     productCode?: string;
     productPulledDown?: boolean;
+    /**
+     * **natural-language description** of the product that was booked
+     */
     productTitle?: string;
+    /**
+     * ignore (Viator only)
+     */
     productWidgetList?: string;
+    /**
+     * ignore (Viator only)
+     */
     rulesApplied?: string;
+    /**
+     * Ignore (Viator only)
+     *
+     * @remarks
+     *
+     */
     savingAmount?: string;
+    /**
+     * Ignore (Viator only)
+     *
+     * @remarks
+     *
+     */
     savingAmountFormated?: string;
+    /**
+     * **sort order** of *this* item summary
+     */
     sortOrder?: number;
+    /**
+     * ignore (Viator only)
+     */
     termsAndConditions?: string;
+    /**
+     * **alphanumeric identifier** of the tour grade of the product that was booked
+     */
     tourGradeCode?: string;
+    /**
+     * **natural-language description** of *this* tour grade
+     */
     tourGradeDescription?: string;
+    /**
+     * **date** of travel for the product that was booked
+     */
     travelDate?: string;
-    travellerAgeBands?: BookingMybookings200ApplicationJsonDataItemSummariesTravellerAgeBands[];
+    /**
+     * **array** of age band objects
+     */
+    travellerAgeBands?: BookingMybookings200ApplicationJSONDataItemSummariesTravellerAgeBands[];
+    /**
+     * Unique reference for the voucher for this booking that can be used as a request parameter to search for existing bookings using the [/booking/mybookings](#operation/bookingMybookings) and [/booking/pastbooking](#operation/bookingPastbooking) endpoints
+     */
     voucherKey?: string;
+    /**
+     * **specifier** of the rules pertaining to the use of the voucher
+     */
     voucherOption?: string;
+    /**
+     * **natural-language description** of the requirements for using the voucher
+     */
     voucherRequirements?: string;
+    /**
+     * **URL of the voucher** for *this* product (if available). The customer can access this URL to retrieve their voucher.
+     */
     voucherURL?: string;
+    /**
+     * ignore (Viator only)
+     */
     vouchers?: string;
 }
-export declare class BookingMybookings200ApplicationJsonData extends SpeakeasyBase {
+export declare class BookingMybookings200ApplicationJSONData extends SpeakeasyBase {
+    /**
+     * **email address** of the entity that booked the tour
+     */
     bookerEmail?: string;
+    /**
+     * **date** on which the booking was made
+     */
     bookingDate?: string;
+    /**
+     * **object** containing itinerary booking status information
+     */
     bookingStatus?: shared.BookingStatusItinerary;
+    /**
+     * **currency code** for the currency in which pricing is displayed
+     */
     currencyCode?: string;
+    /**
+     * **reference code** for the distributor
+     */
     distributorRef?: string;
+    /**
+     * **exchange rate** applied to the pricing
+     */
     exchangeRate?: number;
+    /**
+     * **indicator**: `true` if a voucher exists
+     */
     hasVoucher?: boolean;
-    itemSummaries?: BookingMybookings200ApplicationJsonDataItemSummaries[];
+    /**
+     * **array** of item summary objects
+     */
+    itemSummaries?: BookingMybookings200ApplicationJSONDataItemSummaries[];
+    /**
+     * ignore (Viator only)
+     */
     itineraryId?: number;
+    /**
+     * ignore (Viator only)
+     */
     rulesApplied?: string;
+    /**
+     * **sort order** for the booking object
+     */
     sortOrder?: number;
+    /**
+     * **numeric merchant total price** for *this* booking
+     *
+     * @remarks
+     * For more information, see: [Merchant pricing](#section/Merchant-APIs/Merchant-pricing)
+     *
+     */
     totalPrice?: number;
+    /**
+     * **currency-formatted merchant total price** of *this* booking
+     *
+     * @remarks
+     * - For more information, see: [Merchant pricing](#section/Merchant-APIs/Merchant-pricing)
+     *
+     */
     totalPriceFormatted?: string;
+    /**
+     * **numeric merchant total price** of this booking in USD
+     */
     totalPriceUSD?: number;
+    /**
+     * ignore (Viator only)
+     */
     userId?: string;
+    /**
+     * Unique reference for the voucher for this booking that can be used as a request parameter to search for existing bookings using the [/booking/mybookings](#operation/bookingMybookings) and [/booking/pastbooking](#operation/bookingPastbooking) endpoints
+     */
     voucherKey?: string;
+    /**
+     * **URL of the voucher** for *this* product (if available). The customer can access this URL to retrieve their voucher.
+     */
     voucherURL?: string;
 }
-export declare class BookingMybookings200ApplicationJson extends SpeakeasyBase {
-    data?: BookingMybookings200ApplicationJsonData;
+/**
+ * Success
+ */
+export declare class BookingMybookings200ApplicationJSON extends SpeakeasyBase {
+    data?: BookingMybookings200ApplicationJSONData;
+    /**
+     * **timestamp** of *this* response
+     */
     dateStamp?: string;
+    /**
+     * **array** of error codes pertaining to *this* error
+     *
+     * @remarks
+     * - See: [Viator API error codes](#section/Appendices/Viator-API-error-codes) for a list of possible error codes
+     *
+     */
     errorCodes?: string[];
+    /**
+     * **array** of error message strings
+     */
     errorMessage?: any[];
+    /**
+     * **array** of error message strings in plain text
+     */
     errorMessageText?: string;
+    /**
+     * **name** of *this* type of error
+     */
     errorName?: string;
+    /**
+     * **reference number** of *this* error
+     */
     errorReference?: string;
+    /**
+     * **code** specifying the type of error
+     */
     errorType?: string;
+    /**
+     * ignore (Viator only)
+     */
     extraInfo?: Record<string, any>;
+    /**
+     * ignore (Viator only)
+     */
     extraObject?: Record<string, any>;
+    /**
+     * **boolean indicator** of *this* request's outcome
+     *
+     * @remarks
+     * - `true`: the request was successful with no errors
+     * - `false`: an error was encountered
+     *
+     */
     success?: boolean;
+    /**
+     * **number** of results available for *this* service
+     *
+     * @remarks
+     *
+     */
     totalCount?: number;
+    /**
+     * **unique numeric id** of the server that processed *this* request
+     */
     vmid?: string;
-}
-export declare class BookingMybookingsRequest extends SpeakeasyBase {
-    queryParams: BookingMybookingsQueryParams;
-    headers: BookingMybookingsHeaders;
 }
 export declare class BookingMybookingsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    bookingMybookings200ApplicationJSONObject?: BookingMybookings200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
+    bookingMybookings200ApplicationJSONObject?: BookingMybookings200ApplicationJSON;
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteSamlProviderActionEnum {
-    DeleteSamlProvider = "DeleteSAMLProvider"
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteSAMLProviderActionEnum {
+    DeleteSAMLProvider = "DeleteSAMLProvider"
 }
-export declare enum PostDeleteSamlProviderVersionEnum {
+export declare enum POSTDeleteSAMLProviderVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostDeleteSamlProviderQueryParams extends SpeakeasyBase {
-    action: PostDeleteSamlProviderActionEnum;
-    version: PostDeleteSamlProviderVersionEnum;
-}
-export declare class PostDeleteSamlProviderHeaders extends SpeakeasyBase {
+export declare class POSTDeleteSAMLProviderRequest extends SpeakeasyBase {
+    action: POSTDeleteSAMLProviderActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteSAMLProviderVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteSamlProviderHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteSamlProviderRequest extends SpeakeasyBase {
-    queryParams: PostDeleteSamlProviderQueryParams;
-    headers: PostDeleteSamlProviderHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteSamlProviderResponse extends SpeakeasyBase {
+export declare class POSTDeleteSAMLProviderResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,0 +1,21 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class PhoneCodeGeoSecurity extends SpeakeasyBase {
+    apiKey: string;
+}
+export declare class PhoneCodeGeoRequest extends SpeakeasyBase {
+    countryIso2: string;
+    firstName: string;
+    lastName: string;
+    phoneNumber: string;
+}
+export declare class PhoneCodeGeoResponse extends SpeakeasyBase {
+    contentType: string;
+    /**
+     * A name with country and phone code.
+     */
+    firstLastNamePhoneCodedOut?: shared.FirstLastNamePhoneCodedOut;
+    statusCode: number;
+    rawResponse?: AxiosResponse;
+}

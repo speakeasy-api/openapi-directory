@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum PutResourceConfigXAmzTargetEnum {
     StarlingDoveServicePutResourceConfig = "StarlingDoveService.PutResourceConfig"
 }
-export declare class PutResourceConfigHeaders extends SpeakeasyBase {
+export declare class PutResourceConfigRequest extends SpeakeasyBase {
+    putResourceConfigRequest: shared.PutResourceConfigRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class PutResourceConfigHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: PutResourceConfigXAmzTargetEnum;
 }
-export declare class PutResourceConfigRequest extends SpeakeasyBase {
-    headers: PutResourceConfigHeaders;
-    request: shared.PutResourceConfigRequest;
-}
 export declare class PutResourceConfigResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InsufficientPermissionsException
+     */
     insufficientPermissionsException?: any;
+    /**
+     * MaxActiveResourcesExceededException
+     */
     maxActiveResourcesExceededException?: any;
+    /**
+     * NoRunningConfigurationRecorderException
+     */
     noRunningConfigurationRecorderException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

@@ -1,12 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class KeysApiExpiryPathParams extends SpeakeasyBase {
-    serial: string;
-}
+import { AxiosResponse } from "axios";
 export declare class KeysApiExpiryRequest extends SpeakeasyBase {
-    pathParams: KeysApiExpiryPathParams;
+    serial: string;
 }
 export declare class KeysApiExpiryResponse extends SpeakeasyBase {
     contentType: string;
     keysApiExpiry200ApplicationJSONOneOf?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

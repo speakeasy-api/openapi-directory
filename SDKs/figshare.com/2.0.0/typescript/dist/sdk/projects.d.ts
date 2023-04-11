@@ -1,5 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Projects {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,158 +10,181 @@ export declare class Projects {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * privateProjectArticleDelete - Delete project article
-     *
      * Delete project article
-    **/
-    privateProjectArticleDelete(req: operations.PrivateProjectArticleDeleteRequest, config?: AxiosRequestConfig): Promise<operations.PrivateProjectArticleDeleteResponse>;
-    /**
-     * privateProjectArticleDetails - Project article details
      *
+     * @remarks
+     * Delete project article
+     */
+    privateProjectArticleDelete(req: operations.PrivateProjectArticleDeleteRequest, security: operations.PrivateProjectArticleDeleteSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateProjectArticleDeleteResponse>;
+    /**
      * Project article details
-    **/
-    privateProjectArticleDetails(req: operations.PrivateProjectArticleDetailsRequest, config?: AxiosRequestConfig): Promise<operations.PrivateProjectArticleDetailsResponse>;
-    /**
-     * privateProjectArticleFile - Project article file details
      *
+     * @remarks
+     * Project article details
+     */
+    privateProjectArticleDetails(req: operations.PrivateProjectArticleDetailsRequest, security: operations.PrivateProjectArticleDetailsSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateProjectArticleDetailsResponse>;
+    /**
      * Project article file details
-    **/
-    privateProjectArticleFile(req: operations.PrivateProjectArticleFileRequest, config?: AxiosRequestConfig): Promise<operations.PrivateProjectArticleFileResponse>;
-    /**
-     * privateProjectArticleFiles - Project article list files
      *
+     * @remarks
+     * Project article file details
+     */
+    privateProjectArticleFile(req: operations.PrivateProjectArticleFileRequest, security: operations.PrivateProjectArticleFileSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateProjectArticleFileResponse>;
+    /**
+     * Project article list files
+     *
+     * @remarks
      * List article files
-    **/
-    privateProjectArticleFiles(req: operations.PrivateProjectArticleFilesRequest, config?: AxiosRequestConfig): Promise<operations.PrivateProjectArticleFilesResponse>;
+     */
+    privateProjectArticleFiles(req: operations.PrivateProjectArticleFilesRequest, security: operations.PrivateProjectArticleFilesSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateProjectArticleFilesResponse>;
     /**
-     * privateProjectArticlesCreate - Create project article
+     * Create project article
      *
+     * @remarks
      * Create a new Article and associate it with this project
-    **/
-    privateProjectArticlesCreate(req: operations.PrivateProjectArticlesCreateRequest, config?: AxiosRequestConfig): Promise<operations.PrivateProjectArticlesCreateResponse>;
+     */
+    privateProjectArticlesCreate(req: operations.PrivateProjectArticlesCreateRequest, security: operations.PrivateProjectArticlesCreateSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateProjectArticlesCreateResponse>;
     /**
-     * privateProjectArticlesList - List project articles
-     *
      * List project articles
-    **/
-    privateProjectArticlesList(req: operations.PrivateProjectArticlesListRequest, config?: AxiosRequestConfig): Promise<operations.PrivateProjectArticlesListResponse>;
-    /**
-     * privateProjectCollaboratorDelete - Remove project collaborator
      *
+     * @remarks
+     * List project articles
+     */
+    privateProjectArticlesList(req: operations.PrivateProjectArticlesListRequest, security: operations.PrivateProjectArticlesListSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateProjectArticlesListResponse>;
+    /**
      * Remove project collaborator
-    **/
-    privateProjectCollaboratorDelete(req: operations.PrivateProjectCollaboratorDeleteRequest, config?: AxiosRequestConfig): Promise<operations.PrivateProjectCollaboratorDeleteResponse>;
-    /**
-     * privateProjectCollaboratorsInvite - Invite project collaborators
      *
+     * @remarks
+     * Remove project collaborator
+     */
+    privateProjectCollaboratorDelete(req: operations.PrivateProjectCollaboratorDeleteRequest, security: operations.PrivateProjectCollaboratorDeleteSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateProjectCollaboratorDeleteResponse>;
+    /**
+     * Invite project collaborators
+     *
+     * @remarks
      * Invite users to collaborate on project or view the project
-    **/
-    privateProjectCollaboratorsInvite(req: operations.PrivateProjectCollaboratorsInviteRequest, config?: AxiosRequestConfig): Promise<operations.PrivateProjectCollaboratorsInviteResponse>;
+     */
+    privateProjectCollaboratorsInvite(req: operations.PrivateProjectCollaboratorsInviteRequest, security: operations.PrivateProjectCollaboratorsInviteSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateProjectCollaboratorsInviteResponse>;
     /**
-     * privateProjectCollaboratorsList - List project collaborators
+     * List project collaborators
      *
+     * @remarks
      * List Project collaborators and invited users
-    **/
-    privateProjectCollaboratorsList(req: operations.PrivateProjectCollaboratorsListRequest, config?: AxiosRequestConfig): Promise<operations.PrivateProjectCollaboratorsListResponse>;
+     */
+    privateProjectCollaboratorsList(req: operations.PrivateProjectCollaboratorsListRequest, security: operations.PrivateProjectCollaboratorsListSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateProjectCollaboratorsListResponse>;
     /**
-     * privateProjectCreate - Create project
+     * Create project
      *
+     * @remarks
      * Create a new project
-    **/
-    privateProjectCreate(req: operations.PrivateProjectCreateRequest, config?: AxiosRequestConfig): Promise<operations.PrivateProjectCreateResponse>;
+     */
+    privateProjectCreate(req: shared.ProjectCreate, security: operations.PrivateProjectCreateSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateProjectCreateResponse>;
     /**
-     * privateProjectDelete - Delete project
+     * Delete project
      *
+     * @remarks
      * A project can be deleted only if: - it is not public - it does not have public articles.
      *
      * When an individual project is deleted, all the articles are moved to my data of each owner.
      *
      * When a group project is deleted, all the articles and files are deleted as well. Only project owner, group admin and above can delete a project.
      *
-    **/
-    privateProjectDelete(req: operations.PrivateProjectDeleteRequest, config?: AxiosRequestConfig): Promise<operations.PrivateProjectDeleteResponse>;
+     */
+    privateProjectDelete(req: operations.PrivateProjectDeleteRequest, security: operations.PrivateProjectDeleteSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateProjectDeleteResponse>;
     /**
-     * privateProjectDetails - View project details
+     * View project details
      *
+     * @remarks
      * View a private project
-    **/
-    privateProjectDetails(req: operations.PrivateProjectDetailsRequest, config?: AxiosRequestConfig): Promise<operations.PrivateProjectDetailsResponse>;
+     */
+    privateProjectDetails(req: operations.PrivateProjectDetailsRequest, security: operations.PrivateProjectDetailsSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateProjectDetailsResponse>;
     /**
-     * privateProjectLeave - Private Project Leave
+     * Private Project Leave
      *
+     * @remarks
      * Please note: project's owner cannot leave the project.
-    **/
-    privateProjectLeave(req: operations.PrivateProjectLeaveRequest, config?: AxiosRequestConfig): Promise<operations.PrivateProjectLeaveResponse>;
+     */
+    privateProjectLeave(req: operations.PrivateProjectLeaveRequest, security: operations.PrivateProjectLeaveSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateProjectLeaveResponse>;
     /**
-     * privateProjectNote - Project note details
-    **/
-    privateProjectNote(req: operations.PrivateProjectNoteRequest, config?: AxiosRequestConfig): Promise<operations.PrivateProjectNoteResponse>;
+     * Project note details
+     */
+    privateProjectNote(req: operations.PrivateProjectNoteRequest, security: operations.PrivateProjectNoteSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateProjectNoteResponse>;
     /**
-     * privateProjectNoteDelete - Delete project note
-    **/
-    privateProjectNoteDelete(req: operations.PrivateProjectNoteDeleteRequest, config?: AxiosRequestConfig): Promise<operations.PrivateProjectNoteDeleteResponse>;
+     * Delete project note
+     */
+    privateProjectNoteDelete(req: operations.PrivateProjectNoteDeleteRequest, security: operations.PrivateProjectNoteDeleteSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateProjectNoteDeleteResponse>;
     /**
-     * privateProjectNoteUpdate - Update project note
-    **/
-    privateProjectNoteUpdate(req: operations.PrivateProjectNoteUpdateRequest, config?: AxiosRequestConfig): Promise<operations.PrivateProjectNoteUpdateResponse>;
+     * Update project note
+     */
+    privateProjectNoteUpdate(req: operations.PrivateProjectNoteUpdateRequest, security: operations.PrivateProjectNoteUpdateSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateProjectNoteUpdateResponse>;
     /**
-     * privateProjectNotesCreate - Create project note
+     * Create project note
      *
+     * @remarks
      * Create a new project note
-    **/
-    privateProjectNotesCreate(req: operations.PrivateProjectNotesCreateRequest, config?: AxiosRequestConfig): Promise<operations.PrivateProjectNotesCreateResponse>;
+     */
+    privateProjectNotesCreate(req: operations.PrivateProjectNotesCreateRequest, security: operations.PrivateProjectNotesCreateSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateProjectNotesCreateResponse>;
     /**
-     * privateProjectNotesList - List project notes
-     *
      * List project notes
-    **/
-    privateProjectNotesList(req: operations.PrivateProjectNotesListRequest, config?: AxiosRequestConfig): Promise<operations.PrivateProjectNotesListResponse>;
-    /**
-     * privateProjectPublish - Private Project Publish
      *
+     * @remarks
+     * List project notes
+     */
+    privateProjectNotesList(req: operations.PrivateProjectNotesListRequest, security: operations.PrivateProjectNotesListSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateProjectNotesListResponse>;
+    /**
+     * Private Project Publish
+     *
+     * @remarks
      * Publish a project. Possible after all items inside it are public
-    **/
-    privateProjectPublish(req: operations.PrivateProjectPublishRequest, config?: AxiosRequestConfig): Promise<operations.PrivateProjectPublishResponse>;
+     */
+    privateProjectPublish(req: operations.PrivateProjectPublishRequest, security: operations.PrivateProjectPublishSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateProjectPublishResponse>;
     /**
-     * privateProjectUpdate - Update project
+     * Update project
      *
-     * Updating an project by passing body parameters
-    **/
-    privateProjectUpdate(req: operations.PrivateProjectUpdateRequest, config?: AxiosRequestConfig): Promise<operations.PrivateProjectUpdateResponse>;
+     * @remarks
+     * Updating an project by passing body parameters; request can also be made with the PATCH method.
+     */
+    privateProjectUpdate(req: operations.PrivateProjectUpdateRequest, security: operations.PrivateProjectUpdateSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateProjectUpdateResponse>;
     /**
-     * privateProjectsList - Private Projects
+     * Private Projects
      *
+     * @remarks
      * List private projects
-    **/
-    privateProjectsList(req: operations.PrivateProjectsListRequest, config?: AxiosRequestConfig): Promise<operations.PrivateProjectsListResponse>;
+     */
+    privateProjectsList(req: operations.PrivateProjectsListRequest, security: operations.PrivateProjectsListSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateProjectsListResponse>;
     /**
-     * privateProjectsSearch - Private Projects search
+     * Private Projects search
      *
+     * @remarks
      * Search inside the private projects
-    **/
-    privateProjectsSearch(req: operations.PrivateProjectsSearchRequest, config?: AxiosRequestConfig): Promise<operations.PrivateProjectsSearchResponse>;
+     */
+    privateProjectsSearch(req: shared.ProjectsSearch, config?: AxiosRequestConfig): Promise<operations.PrivateProjectsSearchResponse>;
     /**
-     * projectArticles - Public Project Articles
+     * Public Project Articles
      *
+     * @remarks
      * List articles in project
-    **/
+     */
     projectArticles(req: operations.ProjectArticlesRequest, config?: AxiosRequestConfig): Promise<operations.ProjectArticlesResponse>;
     /**
-     * projectDetails - Public Project
+     * Public Project
      *
+     * @remarks
      * View a project
-    **/
+     */
     projectDetails(req: operations.ProjectDetailsRequest, config?: AxiosRequestConfig): Promise<operations.ProjectDetailsResponse>;
     /**
-     * projectsList - Public Projects
+     * Public Projects
      *
+     * @remarks
      * Returns a list of public projects
-    **/
+     */
     projectsList(req: operations.ProjectsListRequest, config?: AxiosRequestConfig): Promise<operations.ProjectsListResponse>;
     /**
-     * projectsSearch - Public Projects Search
+     * Public Projects Search
      *
+     * @remarks
      * Returns a list of public articles
-    **/
+     */
     projectsSearch(req: operations.ProjectsSearchRequest, config?: AxiosRequestConfig): Promise<operations.ProjectsSearchResponse>;
 }

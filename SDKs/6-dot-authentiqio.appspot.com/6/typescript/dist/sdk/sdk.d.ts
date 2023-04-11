@@ -1,4 +1,3 @@
-import { AxiosInstance } from "axios";
 import { Delete } from "./delete";
 import { Get } from "./get";
 import { Head } from "./head";
@@ -7,11 +6,27 @@ import { Login } from "./login";
 import { Post } from "./post";
 import { Put } from "./put";
 import { Scope } from "./scope";
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://6-dot-authentiqio.appspot.com"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * Strong authentication, without the passwords.
+ */
 export declare class SDK {
     delete: Delete;
     get: Get;
@@ -27,5 +42,6 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
 }

@@ -1,7 +1,7 @@
 export declare enum SavingsPlanRateServiceCodeEnum {
     AmazonEc2 = "AmazonEC2",
-    AmazonEcs = "AmazonECS",
-    AmazonEks = "AmazonEKS",
-    AwsLambda = "AWSLambda",
+    AmazonECS = "AmazonECS",
+    AmazonEKS = "AmazonEKS",
+    AWSLambda = "AWSLambda",
     AmazonSageMaker = "AmazonSageMaker"
 }

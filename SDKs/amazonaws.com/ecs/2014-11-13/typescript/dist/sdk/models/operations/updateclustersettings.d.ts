@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateClusterSettingsXAmzTargetEnum {
     AmazonEc2ContainerServiceV20141113UpdateClusterSettings = "AmazonEC2ContainerServiceV20141113.UpdateClusterSettings"
 }
-export declare class UpdateClusterSettingsHeaders extends SpeakeasyBase {
+export declare class UpdateClusterSettingsRequest extends SpeakeasyBase {
+    updateClusterSettingsRequest: shared.UpdateClusterSettingsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class UpdateClusterSettingsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateClusterSettingsXAmzTargetEnum;
 }
-export declare class UpdateClusterSettingsRequest extends SpeakeasyBase {
-    headers: UpdateClusterSettingsHeaders;
-    request: shared.UpdateClusterSettingsRequest;
-}
 export declare class UpdateClusterSettingsResponse extends SpeakeasyBase {
+    /**
+     * ClientException
+     */
     clientException?: any;
+    /**
+     * ClusterNotFoundException
+     */
     clusterNotFoundException?: any;
     contentType: string;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
-    serverException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServerException
+     */
+    serverException?: any;
+    /**
+     * Success
+     */
     updateClusterSettingsResponse?: shared.UpdateClusterSettingsResponse;
 }

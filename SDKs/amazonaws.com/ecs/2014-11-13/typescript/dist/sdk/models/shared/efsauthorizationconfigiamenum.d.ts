@@ -1,4 +1,4 @@
-export declare enum EfsAuthorizationConfigIamEnum {
+export declare enum EFSAuthorizationConfigIAMEnum {
     Enabled = "ENABLED",
     Disabled = "DISABLED"
 }

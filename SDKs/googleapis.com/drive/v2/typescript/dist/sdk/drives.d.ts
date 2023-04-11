@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Drives {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,31 +9,31 @@ export declare class Drives {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * driveDrivesDelete - Permanently deletes a shared drive for which the user is an organizer. The shared drive cannot contain any untrashed items.
-    **/
-    driveDrivesDelete(req: operations.DriveDrivesDeleteRequest, config?: AxiosRequestConfig): Promise<operations.DriveDrivesDeleteResponse>;
+     * Permanently deletes a shared drive for which the user is an organizer. The shared drive cannot contain any untrashed items.
+     */
+    driveDrivesDelete(req: operations.DriveDrivesDeleteRequest, security: operations.DriveDrivesDeleteSecurity, config?: AxiosRequestConfig): Promise<operations.DriveDrivesDeleteResponse>;
     /**
-     * driveDrivesGet - Gets a shared drive's metadata by ID.
-    **/
-    driveDrivesGet(req: operations.DriveDrivesGetRequest, config?: AxiosRequestConfig): Promise<operations.DriveDrivesGetResponse>;
+     * Gets a shared drive's metadata by ID.
+     */
+    driveDrivesGet(req: operations.DriveDrivesGetRequest, security: operations.DriveDrivesGetSecurity, config?: AxiosRequestConfig): Promise<operations.DriveDrivesGetResponse>;
     /**
-     * driveDrivesHide - Hides a shared drive from the default view.
-    **/
-    driveDrivesHide(req: operations.DriveDrivesHideRequest, config?: AxiosRequestConfig): Promise<operations.DriveDrivesHideResponse>;
+     * Hides a shared drive from the default view.
+     */
+    driveDrivesHide(req: operations.DriveDrivesHideRequest, security: operations.DriveDrivesHideSecurity, config?: AxiosRequestConfig): Promise<operations.DriveDrivesHideResponse>;
     /**
-     * driveDrivesInsert - Creates a new shared drive.
-    **/
-    driveDrivesInsert(req: operations.DriveDrivesInsertRequest, config?: AxiosRequestConfig): Promise<operations.DriveDrivesInsertResponse>;
+     * Creates a new shared drive.
+     */
+    driveDrivesInsert(req: operations.DriveDrivesInsertRequest, security: operations.DriveDrivesInsertSecurity, config?: AxiosRequestConfig): Promise<operations.DriveDrivesInsertResponse>;
     /**
-     * driveDrivesList - Lists the user's shared drives.
-    **/
-    driveDrivesList(req: operations.DriveDrivesListRequest, config?: AxiosRequestConfig): Promise<operations.DriveDrivesListResponse>;
+     * Lists the user's shared drives.
+     */
+    driveDrivesList(req: operations.DriveDrivesListRequest, security: operations.DriveDrivesListSecurity, config?: AxiosRequestConfig): Promise<operations.DriveDrivesListResponse>;
     /**
-     * driveDrivesUnhide - Restores a shared drive to the default view.
-    **/
-    driveDrivesUnhide(req: operations.DriveDrivesUnhideRequest, config?: AxiosRequestConfig): Promise<operations.DriveDrivesUnhideResponse>;
+     * Restores a shared drive to the default view.
+     */
+    driveDrivesUnhide(req: operations.DriveDrivesUnhideRequest, security: operations.DriveDrivesUnhideSecurity, config?: AxiosRequestConfig): Promise<operations.DriveDrivesUnhideResponse>;
     /**
-     * driveDrivesUpdate - Updates the metadata for a shared drive.
-    **/
-    driveDrivesUpdate(req: operations.DriveDrivesUpdateRequest, config?: AxiosRequestConfig): Promise<operations.DriveDrivesUpdateResponse>;
+     * Updates the metadata for a shared drive.
+     */
+    driveDrivesUpdate(req: operations.DriveDrivesUpdateRequest, security: operations.DriveDrivesUpdateSecurity, config?: AxiosRequestConfig): Promise<operations.DriveDrivesUpdateResponse>;
 }

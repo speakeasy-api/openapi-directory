@@ -1,0 +1,6 @@
+export declare enum OriginTypeEnum {
+    AwsKms = "AWS_KMS",
+    External = "EXTERNAL",
+    AwsCloudhsm = "AWS_CLOUDHSM",
+    ExternalKeyStore = "EXTERNAL_KEY_STORE"
+}

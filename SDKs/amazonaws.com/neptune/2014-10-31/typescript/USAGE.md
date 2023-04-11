@@ -1,37 +1,36 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetAddRoleToDbClusterRequest, GetAddRoleToDbClusterResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GETAddRoleToDBClusterRequest,
+  GETAddRoleToDBClusterResponse,
+  GETAddRoleToDBClusterActionEnum,
+  GETAddRoleToDBClusterVersionEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: GetAddRoleToDbClusterRequest = {
-  queryParams: {
-    action: "AddRoleToDBCluster",
-    dbClusterIdentifier: "voluptas",
-    featureName: "culpa",
-    roleArn: "expedita",
-    version: "2014-10-31",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  headers: {
-    xAmzAlgorithm: "dolor",
-    xAmzContentSha256: "expedita",
-    xAmzCredential: "voluptas",
-    xAmzDate: "fugit",
-    xAmzSecurityToken: "et",
-    xAmzSignature: "nihil",
-    xAmzSignedHeaders: "rerum",
-  },
+});
+
+const req: GETAddRoleToDBClusterRequest = {
+  action: GETAddRoleToDBClusterActionEnum.AddRoleToDBCluster,
+  dbClusterIdentifier: "corrupti",
+  featureName: "provident",
+  roleArn: "distinctio",
+  version: GETAddRoleToDBClusterVersionEnum.TwoThousandAndFourteen1031,
+  xAmzAlgorithm: "quibusdam",
+  xAmzContentSha256: "unde",
+  xAmzCredential: "nulla",
+  xAmzDate: "corrupti",
+  xAmzSecurityToken: "illum",
+  xAmzSignature: "vel",
+  xAmzSignedHeaders: "error",
 };
 
-sdk.getAddRoleToDbCluster(req).then((res: GetAddRoleToDbClusterResponse | AxiosError) => {
+sdk.getAddRoleToDBCluster(req).then((res: GETAddRoleToDBClusterResponse | AxiosError) => {
    // handle response
 });
 ```

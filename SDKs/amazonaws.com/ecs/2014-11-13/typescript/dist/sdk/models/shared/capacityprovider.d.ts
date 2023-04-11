@@ -1,11 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { AutoScalingGroupProvider } from "./autoscalinggroupprovider";
 import { CapacityProviderStatusEnum } from "./capacityproviderstatusenum";
-import { Tag } from "./tag";
 import { CapacityProviderUpdateStatusEnum } from "./capacityproviderupdatestatusenum";
+import { Tag } from "./tag";
 /**
- * The details of a capacity provider.
-**/
+ * The details for a capacity provider.
+ */
 export declare class CapacityProvider extends SpeakeasyBase {
     autoScalingGroupProvider?: AutoScalingGroupProvider;
     capacityProviderArn?: string;

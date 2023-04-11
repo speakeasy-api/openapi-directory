@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class AccessSavePathParams extends SpeakeasyBase {
-    filename: string;
-}
+import { AxiosResponse } from "axios";
 export declare class AccessSaveRequest extends SpeakeasyBase {
-    pathParams: AccessSavePathParams;
+    /**
+     * Filename to save
+     */
+    filename: string;
 }
 export declare class AccessSaveResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     accessSave200ApplicationJSONStrings?: string[];
 }

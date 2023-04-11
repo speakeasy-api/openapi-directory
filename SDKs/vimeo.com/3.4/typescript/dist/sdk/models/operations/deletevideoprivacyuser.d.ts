@@ -1,18 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteVideoPrivacyUserPathParams extends SpeakeasyBase {
-    userId: number;
-    videoId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteVideoPrivacyUserSecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
+    oauth2: string;
 }
 export declare class DeleteVideoPrivacyUserRequest extends SpeakeasyBase {
-    pathParams: DeleteVideoPrivacyUserPathParams;
-    security: DeleteVideoPrivacyUserSecurity;
+    /**
+     * The ID of the user.
+     */
+    userId: number;
+    /**
+     * The ID of the video.
+     */
+    videoId: number;
 }
 export declare class DeleteVideoPrivacyUserResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The video isn't set to a user-defined access list.
+     */
     legacyError?: shared.LegacyError;
 }

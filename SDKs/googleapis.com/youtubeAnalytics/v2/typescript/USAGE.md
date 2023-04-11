@@ -1,38 +1,32 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { YoutubeAnalyticsGroupItemsDeleteRequest, YoutubeAnalyticsGroupItemsDeleteResponse } from "openapi/src/sdk/models/operations";
+import {
+  YoutubeAnalyticsGroupItemsDeleteRequest,
+  YoutubeAnalyticsGroupItemsDeleteResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: YoutubeAnalyticsGroupItemsDeleteRequest = {
-  security: {
-    option1: {
-      oauth2: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-      oauth2c: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-    },
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "voluptas",
-    alt: "media",
-    callback: "expedita",
-    fields: "consequuntur",
-    id: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    onBehalfOfContentOwner: "fugit",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    uploadType: "rerum",
-    uploadProtocol: "dicta",
-  },
+  dollarXgafv: XgafvEnum.Two,
+  accessToken: "provident",
+  alt: AltEnum.Proto,
+  callback: "quibusdam",
+  fields: "unde",
+  id: "nulla",
+  key: "corrupti",
+  oauthToken: "illum",
+  onBehalfOfContentOwner: "vel",
+  prettyPrint: false,
+  quotaUser: "error",
+  uploadType: "deserunt",
+  uploadProtocol: "suscipit",
 };
 
 sdk.groupItems.youtubeAnalyticsGroupItemsDelete(req).then((res: YoutubeAnalyticsGroupItemsDeleteResponse | AxiosError) => {

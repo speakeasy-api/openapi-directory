@@ -1,0 +1,6 @@
+export declare enum LaunchProfileValidationTypeEnum {
+    ValidateActiveDirectoryStudioComponent = "VALIDATE_ACTIVE_DIRECTORY_STUDIO_COMPONENT",
+    ValidateSubnetAssociation = "VALIDATE_SUBNET_ASSOCIATION",
+    ValidateNetworkAclAssociation = "VALIDATE_NETWORK_ACL_ASSOCIATION",
+    ValidateSecurityGroupAssociation = "VALIDATE_SECURITY_GROUP_ASSOCIATION"
+}

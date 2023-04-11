@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum RebootReplicationInstanceXAmzTargetEnum {
-    AmazonDmSv20160101RebootReplicationInstance = "AmazonDMSv20160101.RebootReplicationInstance"
+    AmazonDMSv20160101RebootReplicationInstance = "AmazonDMSv20160101.RebootReplicationInstance"
 }
-export declare class RebootReplicationInstanceHeaders extends SpeakeasyBase {
+export declare class RebootReplicationInstanceRequest extends SpeakeasyBase {
+    rebootReplicationInstanceMessage: shared.RebootReplicationInstanceMessage;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class RebootReplicationInstanceHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: RebootReplicationInstanceXAmzTargetEnum;
 }
-export declare class RebootReplicationInstanceRequest extends SpeakeasyBase {
-    headers: RebootReplicationInstanceHeaders;
-    request: shared.RebootReplicationInstanceMessage;
-}
 export declare class RebootReplicationInstanceResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidResourceStateFault
+     */
     invalidResourceStateFault?: any;
+    /**
+     * Success
+     */
     rebootReplicationInstanceResponse?: shared.RebootReplicationInstanceResponse;
+    /**
+     * ResourceNotFoundFault
+     */
     resourceNotFoundFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

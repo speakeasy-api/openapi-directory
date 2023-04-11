@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { BotStatusEnum } from "./botstatusenum";
 import { BotVersionLocaleDetails } from "./botversionlocaledetails";
+/**
+ * Success
+ */
 export declare class CreateBotVersionResponse extends SpeakeasyBase {
     botId?: string;
     botStatus?: BotStatusEnum;

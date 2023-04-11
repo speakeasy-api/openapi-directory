@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ProtocolTelnetGetConfigPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ProtocolTelnetGetConfigRequest extends SpeakeasyBase {
+    /**
+     * Agent to show the TELNET configuration
+     */
     agentNum: number;
 }
-export declare class ProtocolTelnetGetConfigRequest extends SpeakeasyBase {
-    pathParams: ProtocolTelnetGetConfigPathParams;
-}
 export declare class ProtocolTelnetGetConfigResponse extends SpeakeasyBase {
-    configTELNET?: shared.ConfigTelnet;
+    /**
+     * successful operation
+     */
+    configTELNET?: shared.ConfigTELNET;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

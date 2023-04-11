@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeEngineDefaultClusterParametersActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeEngineDefaultClusterParametersActionEnum {
     DescribeEngineDefaultClusterParameters = "DescribeEngineDefaultClusterParameters"
 }
-export declare enum PostDescribeEngineDefaultClusterParametersVersionEnum {
+export declare enum POSTDescribeEngineDefaultClusterParametersVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class PostDescribeEngineDefaultClusterParametersQueryParams extends SpeakeasyBase {
-    action: PostDescribeEngineDefaultClusterParametersActionEnum;
-    version: PostDescribeEngineDefaultClusterParametersVersionEnum;
-}
-export declare class PostDescribeEngineDefaultClusterParametersHeaders extends SpeakeasyBase {
+export declare class POSTDescribeEngineDefaultClusterParametersRequest extends SpeakeasyBase {
+    action: POSTDescribeEngineDefaultClusterParametersActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDescribeEngineDefaultClusterParametersVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDescribeEngineDefaultClusterParametersHeaders extends S
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeEngineDefaultClusterParametersRequest extends SpeakeasyBase {
-    queryParams: PostDescribeEngineDefaultClusterParametersQueryParams;
-    headers: PostDescribeEngineDefaultClusterParametersHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeEngineDefaultClusterParametersResponse extends SpeakeasyBase {
+export declare class POSTDescribeEngineDefaultClusterParametersResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

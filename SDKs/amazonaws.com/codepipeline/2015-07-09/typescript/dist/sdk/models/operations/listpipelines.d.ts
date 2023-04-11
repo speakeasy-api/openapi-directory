@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListPipelinesQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListPipelinesXAmzTargetEnum {
     CodePipeline20150709ListPipelines = "CodePipeline_20150709.ListPipelines"
 }
-export declare class ListPipelinesHeaders extends SpeakeasyBase {
+export declare class ListPipelinesRequest extends SpeakeasyBase {
+    listPipelinesInput: shared.ListPipelinesInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,16 +14,29 @@ export declare class ListPipelinesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: ListPipelinesXAmzTargetEnum;
-}
-export declare class ListPipelinesRequest extends SpeakeasyBase {
-    queryParams: ListPipelinesQueryParams;
-    headers: ListPipelinesHeaders;
-    request: shared.ListPipelinesInput;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class ListPipelinesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * Success
+     */
     listPipelinesOutput?: shared.ListPipelinesOutput;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

@@ -5,5 +5,6 @@ export declare class CreateForecastExportJobRequest extends SpeakeasyBase {
     destination: DataDestination;
     forecastArn: string;
     forecastExportJobName: string;
+    format?: string;
     tags?: Tag[];
 }

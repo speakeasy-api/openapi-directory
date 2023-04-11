@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostModifyManagedPrefixListActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTModifyManagedPrefixListActionEnum {
     ModifyManagedPrefixList = "ModifyManagedPrefixList"
 }
-export declare enum PostModifyManagedPrefixListVersionEnum {
+export declare enum POSTModifyManagedPrefixListVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostModifyManagedPrefixListQueryParams extends SpeakeasyBase {
-    action: PostModifyManagedPrefixListActionEnum;
-    version: PostModifyManagedPrefixListVersionEnum;
-}
-export declare class PostModifyManagedPrefixListHeaders extends SpeakeasyBase {
+export declare class POSTModifyManagedPrefixListRequest extends SpeakeasyBase {
+    action: POSTModifyManagedPrefixListActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTModifyManagedPrefixListVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostModifyManagedPrefixListHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostModifyManagedPrefixListRequest extends SpeakeasyBase {
-    queryParams: PostModifyManagedPrefixListQueryParams;
-    headers: PostModifyManagedPrefixListHeaders;
-    request?: Uint8Array;
-}
-export declare class PostModifyManagedPrefixListResponse extends SpeakeasyBase {
+export declare class POSTModifyManagedPrefixListResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

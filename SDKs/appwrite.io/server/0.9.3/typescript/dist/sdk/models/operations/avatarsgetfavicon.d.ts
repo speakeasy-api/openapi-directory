@@ -1,18 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class AvatarsGetFaviconQueryParams extends SpeakeasyBase {
-    url: string;
-}
+import { AxiosResponse } from "axios";
 export declare class AvatarsGetFaviconSecurity extends SpeakeasyBase {
-    jwt: shared.SchemeJwt;
-    key: shared.SchemeKey;
-    project: shared.SchemeProject;
+    jwt: string;
+    key: string;
+    project: string;
 }
 export declare class AvatarsGetFaviconRequest extends SpeakeasyBase {
-    queryParams: AvatarsGetFaviconQueryParams;
-    security: AvatarsGetFaviconSecurity;
+    /**
+     * Website URL which you want to fetch the favicon from.
+     */
+    url: string;
 }
 export declare class AvatarsGetFaviconResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

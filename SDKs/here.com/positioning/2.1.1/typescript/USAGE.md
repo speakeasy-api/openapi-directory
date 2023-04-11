@@ -1,16 +1,16 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetApiVersionResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GetApiVersionResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    apiKey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
+    apiKey: "YOUR_API_KEY_HERE",
+  },
+});
 
 sdk.apiInformation.getApiVersion().then((res: GetApiVersionResponse | AxiosError) => {
    // handle response

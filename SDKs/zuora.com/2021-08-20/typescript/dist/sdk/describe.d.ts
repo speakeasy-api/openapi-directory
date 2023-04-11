@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Describe {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class Describe {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getDescribe - Describe an object
+     * Describe an object
      *
+     * @remarks
      * Provides a reference listing of each object that is available in your Zuora tenant.
      *
      * The information returned by this call is useful if you are using [CRUD: Create Export](https://www.zuora.com/developer/api-reference/#operation/Object_POSTExport) or the [AQuA API](https://knowledgecenter.zuora.com/DC_Developers/T_Aggregate_Query_API) to create a data source export. See [Export ZOQL](https://knowledgecenter.zuora.com/DC_Developers/M_Export_ZOQL) for more information.
@@ -57,6 +58,6 @@ export declare class Describe {
      *
      * It is strongly recommended that your integration checks `<contexts>` elements in the response. If your integration does not check `<contexts>` elements, your integration may process fields that are not available for use in data source exports. See [Changes to the Describe API](https://knowledgecenter.zuora.com/DC_Developers/M_Export_ZOQL/Changes_to_the_Describe_API) for more information.
      *
-    **/
-    getDescribe(req: operations.GetDescribeRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeResponse>;
+     */
+    getDescribe(req: operations.GETDescribeRequest, config?: AxiosRequestConfig): Promise<operations.GETDescribeResponse>;
 }

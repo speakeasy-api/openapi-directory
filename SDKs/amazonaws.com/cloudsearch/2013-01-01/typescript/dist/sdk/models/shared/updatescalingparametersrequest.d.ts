@@ -1,0 +1,15 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { ScalingParameters } from "./scalingparameters";
+/**
+ * Container for the parameters to the <code><a>UpdateScalingParameters</a></code> operation. Specifies the name of the domain you want to update and the scaling parameters you want to configure.
+ */
+export declare class UpdateScalingParametersRequest extends SpeakeasyBase {
+    /**
+     * A string that represents the name of a domain. Domain names are unique across the domains owned by an account within an AWS region. Domain names start with a letter or number and can contain the following characters: a-z (lowercase), 0-9, and - (hyphen).
+     */
+    domainName: string;
+    /**
+     * The desired instance type and desired number of replicas of each index partition.
+     */
+    scalingParameters: ScalingParameters;
+}

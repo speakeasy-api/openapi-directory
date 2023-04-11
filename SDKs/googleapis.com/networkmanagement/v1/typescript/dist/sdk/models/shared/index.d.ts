@@ -32,7 +32,6 @@ export * from "./operation";
 export * from "./policy";
 export * from "./reachabilitydetails";
 export * from "./routeinfo";
-export * from "./security";
 export * from "./setiampolicyrequest";
 export * from "./status";
 export * from "./step";

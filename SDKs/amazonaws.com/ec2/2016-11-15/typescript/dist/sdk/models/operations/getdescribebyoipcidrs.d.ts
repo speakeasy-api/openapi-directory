@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeByoipCidrsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeByoipCidrsActionEnum {
     DescribeByoipCidrs = "DescribeByoipCidrs"
 }
-export declare enum GetDescribeByoipCidrsVersionEnum {
+export declare enum GETDescribeByoipCidrsVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetDescribeByoipCidrsQueryParams extends SpeakeasyBase {
-    action: GetDescribeByoipCidrsActionEnum;
+export declare class GETDescribeByoipCidrsRequest extends SpeakeasyBase {
+    action: GETDescribeByoipCidrsActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
+    /**
+     * The maximum number of results to return with a single call. To retrieve the remaining results, make another call with the returned <code>nextToken</code> value.
+     */
     maxResults: number;
+    /**
+     * The token for the next page of results.
+     */
     nextToken?: string;
-    version: GetDescribeByoipCidrsVersionEnum;
-}
-export declare class GetDescribeByoipCidrsHeaders extends SpeakeasyBase {
+    version: GETDescribeByoipCidrsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +29,9 @@ export declare class GetDescribeByoipCidrsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeByoipCidrsRequest extends SpeakeasyBase {
-    queryParams: GetDescribeByoipCidrsQueryParams;
-    headers: GetDescribeByoipCidrsHeaders;
-}
-export declare class GetDescribeByoipCidrsResponse extends SpeakeasyBase {
+export declare class GETDescribeByoipCidrsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

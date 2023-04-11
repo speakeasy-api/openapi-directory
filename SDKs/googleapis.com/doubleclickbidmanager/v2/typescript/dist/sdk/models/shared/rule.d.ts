@@ -1,0 +1,15 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { DisjunctiveMatchStatement } from "./disjunctivematchstatement";
+/**
+ * A Rule defines a name, and a boolean expression in [conjunctive normal form] (http://mathworld.wolfram.com/ConjunctiveNormalForm.html){.external} that can be applied to a path event to determine if that name should be applied.
+ */
+export declare class Rule extends SpeakeasyBase {
+    /**
+     * DisjunctiveMatchStatements within a Rule. DisjunctiveMatchStatement OR's all contained filters.
+     */
+    disjunctiveMatchStatements?: DisjunctiveMatchStatement[];
+    /**
+     * Rule name.
+     */
+    name?: string;
+}

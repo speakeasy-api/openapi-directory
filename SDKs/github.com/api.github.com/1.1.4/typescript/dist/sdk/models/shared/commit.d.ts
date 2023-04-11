@@ -1,62 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { DiffEntry } from "./diffentry";
+import { NullableGitUser } from "./nullablegituser";
+import { NullableSimpleUser } from "./nullablesimpleuser";
 import { Verification } from "./verification";
-/**
- * Simple User
-**/
-export declare class CommitSimpleUser extends SpeakeasyBase {
-    avatarUrl: string;
-    eventsUrl: string;
-    followersUrl: string;
-    followingUrl: string;
-    gistsUrl: string;
-    gravatarId: string;
-    htmlUrl: string;
-    id: number;
-    login: string;
-    nodeId: string;
-    organizationsUrl: string;
-    receivedEventsUrl: string;
-    reposUrl: string;
-    siteAdmin: boolean;
-    starredAt?: string;
-    starredUrl: string;
-    subscriptionsUrl: string;
-    type: string;
-    url: string;
-}
-/**
- * Metaproperties for Git author/committer information.
-**/
-export declare class CommitCommitGitUser extends SpeakeasyBase {
-    date?: string;
-    email?: string;
-    name?: string;
-}
 export declare class CommitCommitTree extends SpeakeasyBase {
     sha: string;
     url: string;
 }
 export declare class CommitCommit extends SpeakeasyBase {
-    author: CommitCommitGitUser;
+    /**
+     * Metaproperties for Git author/committer information.
+     */
+    author: NullableGitUser;
     commentCount: number;
-    committer: CommitCommitGitUser;
+    /**
+     * Metaproperties for Git author/committer information.
+     */
+    committer: NullableGitUser;
     message: string;
     tree: CommitCommitTree;
     url: string;
     verification?: Verification;
-}
-export declare class CommitFiles extends SpeakeasyBase {
-    additions?: number;
-    blobUrl?: string;
-    changes?: number;
-    contentsUrl?: string;
-    deletions?: number;
-    filename?: string;
-    patch?: string;
-    previousFilename?: string;
-    rawUrl?: string;
-    sha?: string;
-    status?: string;
 }
 export declare class CommitParents extends SpeakeasyBase {
     htmlUrl?: string;
@@ -70,13 +34,19 @@ export declare class CommitStats extends SpeakeasyBase {
 }
 /**
  * Commit
-**/
+ */
 export declare class Commit extends SpeakeasyBase {
-    author: CommitSimpleUser;
+    /**
+     * A GitHub user.
+     */
+    author: NullableSimpleUser;
     commentsUrl: string;
     commit: CommitCommit;
-    committer: CommitSimpleUser;
-    files?: CommitFiles[];
+    /**
+     * A GitHub user.
+     */
+    committer: NullableSimpleUser;
+    files?: DiffEntry[];
     htmlUrl: string;
     nodeId: string;
     parents: CommitParents[];

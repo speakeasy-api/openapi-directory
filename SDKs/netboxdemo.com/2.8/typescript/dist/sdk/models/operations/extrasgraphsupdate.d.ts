@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ExtrasGraphsUpdatePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ExtrasGraphsUpdateRequest extends SpeakeasyBase {
-    pathParams: ExtrasGraphsUpdatePathParams;
-    request: shared.GraphInput;
+    graphInput: shared.GraphInput;
+    /**
+     * A unique integer value identifying this graph.
+     */
+    id: number;
 }
 export declare class ExtrasGraphsUpdateResponse extends SpeakeasyBase {
     contentType: string;
     graph?: shared.Graph;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

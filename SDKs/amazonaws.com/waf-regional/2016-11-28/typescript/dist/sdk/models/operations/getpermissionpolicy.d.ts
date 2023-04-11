@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetPermissionPolicyXAmzTargetEnum {
-    AwswafRegional20161128GetPermissionPolicy = "AWSWAF_Regional_20161128.GetPermissionPolicy"
+    AWSWAFRegional20161128GetPermissionPolicy = "AWSWAF_Regional_20161128.GetPermissionPolicy"
 }
-export declare class GetPermissionPolicyHeaders extends SpeakeasyBase {
+export declare class GetPermissionPolicyRequest extends SpeakeasyBase {
+    getPermissionPolicyRequest: shared.GetPermissionPolicyRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class GetPermissionPolicyHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetPermissionPolicyXAmzTargetEnum;
 }
-export declare class GetPermissionPolicyRequest extends SpeakeasyBase {
-    headers: GetPermissionPolicyHeaders;
-    request: shared.GetPermissionPolicyRequest;
-}
 export declare class GetPermissionPolicyResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getPermissionPolicyResponse?: shared.GetPermissionPolicyResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFNonexistentItemException
+     */
     wafNonexistentItemException?: any;
 }

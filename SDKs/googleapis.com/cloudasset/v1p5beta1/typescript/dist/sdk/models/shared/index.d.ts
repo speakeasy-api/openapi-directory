@@ -29,5 +29,4 @@ export * from "./googleidentityaccesscontextmanagerv1vpcaccessibleservices";
 export * from "./listassetsresponse";
 export * from "./policy";
 export * from "./resource";
-export * from "./security";
 export * from "./xgafvenum";

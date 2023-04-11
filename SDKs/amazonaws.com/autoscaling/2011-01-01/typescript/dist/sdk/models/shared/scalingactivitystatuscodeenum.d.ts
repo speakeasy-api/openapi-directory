@@ -5,7 +5,7 @@ export declare enum ScalingActivityStatusCodeEnum {
     WaitingForInstanceId = "WaitingForInstanceId",
     PreInService = "PreInService",
     InProgress = "InProgress",
-    WaitingForElbConnectionDraining = "WaitingForELBConnectionDraining",
+    WaitingForELBConnectionDraining = "WaitingForELBConnectionDraining",
     MidLifecycleAction = "MidLifecycleAction",
     WaitingForInstanceWarmup = "WaitingForInstanceWarmup",
     Successful = "Successful",

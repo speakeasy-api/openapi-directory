@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class UrlTestingTools {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +9,7 @@ export declare class UrlTestingTools {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * searchconsoleUrlTestingToolsMobileFriendlyTestRun - Runs Mobile-Friendly Test for a given URL.
-    **/
+     * Runs Mobile-Friendly Test for a given URL.
+     */
     searchconsoleUrlTestingToolsMobileFriendlyTestRun(req: operations.SearchconsoleUrlTestingToolsMobileFriendlyTestRunRequest, config?: AxiosRequestConfig): Promise<operations.SearchconsoleUrlTestingToolsMobileFriendlyTestRunResponse>;
 }

@@ -1,14 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class CollaboratorPermissions extends SpeakeasyBase {
     admin: boolean;
+    maintain?: boolean;
     pull: boolean;
     push: boolean;
+    triage?: boolean;
 }
 /**
  * Collaborator
-**/
+ */
 export declare class Collaborator extends SpeakeasyBase {
     avatarUrl: string;
+    email?: string;
     eventsUrl: string;
     followersUrl: string;
     followingUrl: string;
@@ -17,6 +20,7 @@ export declare class Collaborator extends SpeakeasyBase {
     htmlUrl: string;
     id: number;
     login: string;
+    name?: string;
     nodeId: string;
     organizationsUrl: string;
     permissions?: CollaboratorPermissions;

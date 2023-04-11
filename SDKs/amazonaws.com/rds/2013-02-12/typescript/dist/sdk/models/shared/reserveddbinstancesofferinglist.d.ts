@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { RecurringChargeList } from "./recurringchargelist";
-export declare class ReservedDbInstancesOfferingList extends SpeakeasyBase {
+export declare class ReservedDBInstancesOfferingList extends SpeakeasyBase {
     currencyCode?: string;
     dbInstanceClass?: string;
     duration?: number;

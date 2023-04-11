@@ -1,5 +1,12 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Sometimes the metadata for an artifact is important. For example, metadata includes
+ *
+ * @remarks
+ * when the artifact was created, last updated, and so on. This section contains
+ * operations to access (and in some cases change) an artifact's metadata.
+ */
 export declare class Metadata {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +16,9 @@ export declare class Metadata {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteArtifactVersionMetaData - Delete artifact version metadata
+     * Delete artifact version metadata
      *
+     * @remarks
      * Deletes the user-editable metadata properties of the artifact version.  Any properties
      * that are not user-editable are preserved.
      *
@@ -20,11 +28,12 @@ export declare class Metadata {
      * * No version with this `version` exists (HTTP error `404`)
      * * A server error occurred (HTTP error `500`)
      *
-    **/
+     */
     deleteArtifactVersionMetaData(req: operations.DeleteArtifactVersionMetaDataRequest, config?: AxiosRequestConfig): Promise<operations.DeleteArtifactVersionMetaDataResponse>;
     /**
-     * getArtifactMetaData - Get artifact metadata
+     * Get artifact metadata
      *
+     * @remarks
      * Gets the metadata for an artifact in the registry.  The returned metadata includes
      * both generated (read-only) and editable metadata (such as name and description).
      *
@@ -32,11 +41,12 @@ export declare class Metadata {
      *
      * * No artifact with this `artifactId` exists (HTTP error `404`)
      * * A server error occurred (HTTP error `500`)
-    **/
+     */
     getArtifactMetaData(req: operations.GetArtifactMetaDataRequest, config?: AxiosRequestConfig): Promise<operations.GetArtifactMetaDataResponse>;
     /**
-     * getArtifactMetaDataByContent - Get artifact metadata by content
+     * Get artifact metadata by content
      *
+     * @remarks
      * Gets the metadata for an artifact that matches the raw content.  Searches the registry
      * for a version of the given artifact matching the content provided in the body of the
      * POST.
@@ -48,11 +58,12 @@ export declare class Metadata {
      * * No artifact version matching the provided content exists (HTTP error `404`)
      * * A server error occurred (HTTP error `500`)
      *
-    **/
+     */
     getArtifactMetaDataByContent(req: operations.GetArtifactMetaDataByContentRequest, config?: AxiosRequestConfig): Promise<operations.GetArtifactMetaDataByContentResponse>;
     /**
-     * getArtifactMetaDataByGlobalId - Get global artifact metadata
+     * Get global artifact metadata
      *
+     * @remarks
      * Gets the metadata for an artifact version in the registry using its globally unique
      * identifier.  The returned metadata includes both generated (read-only) and editable
      * metadata (such as name and description).
@@ -62,11 +73,12 @@ export declare class Metadata {
      * * No artifact version with this `globalId` exists (HTTP error `404`)
      * * A server error occurred (HTTP error `500`)
      *
-    **/
+     */
     getArtifactMetaDataByGlobalId(req: operations.GetArtifactMetaDataByGlobalIdRequest, config?: AxiosRequestConfig): Promise<operations.GetArtifactMetaDataByGlobalIdResponse>;
     /**
-     * getArtifactVersionMetaData - Get artifact version metadata
+     * Get artifact version metadata
      *
+     * @remarks
      * Retrieves the metadata for a single version of the artifact.  The version metadata is
      * a subset of the artifact metadata and only includes the metadata that is specific to
      * the version (for example, this doesn't include `modifiedOn`).
@@ -77,11 +89,12 @@ export declare class Metadata {
      * * No version with this `version` exists (HTTP error `404`)
      * * A server error occurred (HTTP error `500`)
      *
-    **/
+     */
     getArtifactVersionMetaData(req: operations.GetArtifactVersionMetaDataRequest, config?: AxiosRequestConfig): Promise<operations.GetArtifactVersionMetaDataResponse>;
     /**
-     * updateArtifactMetaData - Update artifact metadata
+     * Update artifact metadata
      *
+     * @remarks
      * Updates the editable parts of the artifact's metadata.  Not all metadata fields can
      * be updated.  For example, `createdOn` and `createdBy` are both read-only properties.
      *
@@ -89,11 +102,12 @@ export declare class Metadata {
      *
      * * No artifact with the `artifactId` exists (HTTP error `404`)
      * * A server error occurred (HTTP error `500`)
-    **/
+     */
     updateArtifactMetaData(req: operations.UpdateArtifactMetaDataRequest, config?: AxiosRequestConfig): Promise<operations.UpdateArtifactMetaDataResponse>;
     /**
-     * updateArtifactVersionMetaData - Update artifact version metadata
+     * Update artifact version metadata
      *
+     * @remarks
      * Updates the user-editable portion of the artifact version's metadata.  Only some of
      * the metadata fields are editable by the user.  For example, `description` is editable,
      * but `createdOn` is not.
@@ -104,6 +118,6 @@ export declare class Metadata {
      * * No version with this `version` exists (HTTP error `404`)
      * * A server error occurred (HTTP error `500`)
      *
-    **/
+     */
     updateArtifactVersionMetaData(req: operations.UpdateArtifactVersionMetaDataRequest, config?: AxiosRequestConfig): Promise<operations.UpdateArtifactVersionMetaDataResponse>;
 }

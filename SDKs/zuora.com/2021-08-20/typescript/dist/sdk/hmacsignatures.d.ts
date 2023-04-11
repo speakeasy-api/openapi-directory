@@ -1,6 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class HmacSignatures {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+export declare class HMACSignatures {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,10 +9,11 @@ export declare class HmacSignatures {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * postHmacSignatures - Generate an HMAC signature
+     * Generate an HMAC signature
      *
+     * @remarks
      * This REST API reference describes how to return unique signature and token values that used to process a CORS enabled API call.
      *
-    **/
-    postHmacSignatures(req: operations.PostHmacSignaturesRequest, config?: AxiosRequestConfig): Promise<operations.PostHmacSignaturesResponse>;
+     */
+    postHMACSignatures(req: operations.POSTHMACSignaturesRequest, config?: AxiosRequestConfig): Promise<operations.POSTHMACSignaturesResponse>;
 }

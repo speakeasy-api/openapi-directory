@@ -1,14 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ConfigureChannelCatalogCostSettingsPathParams extends SpeakeasyBase {
-    channelCatalogId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ConfigureChannelCatalogCostSettingsRequest extends SpeakeasyBase {
-    pathParams: ConfigureChannelCatalogCostSettingsPathParams;
-    request: shared.CostSettings;
+    /**
+     * The channel catalog identifier
+     */
+    channelCatalogId: string;
+    costSettings: shared.CostSettings;
 }
 export declare class ConfigureChannelCatalogCostSettingsResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     * Occurs when a user tries to work on the wrong ChanelCatalogId.
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

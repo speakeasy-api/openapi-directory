@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetConnectorDefinitionPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetConnectorDefinitionRequest extends SpeakeasyBase {
+    /**
+     * The ID of the connector definition.
+     */
     connectorDefinitionId: string;
-}
-export declare class GetConnectorDefinitionHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,13 +14,16 @@ export declare class GetConnectorDefinitionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetConnectorDefinitionRequest extends SpeakeasyBase {
-    pathParams: GetConnectorDefinitionPathParams;
-    headers: GetConnectorDefinitionHeaders;
-}
 export declare class GetConnectorDefinitionResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getConnectorDefinitionResponse?: shared.GetConnectorDefinitionResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

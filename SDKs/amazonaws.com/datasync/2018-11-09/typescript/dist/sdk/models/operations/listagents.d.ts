@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListAgentsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListAgentsXAmzTargetEnum {
     FmrsServiceListAgents = "FmrsService.ListAgents"
 }
-export declare class ListAgentsHeaders extends SpeakeasyBase {
+export declare class ListAgentsRequest extends SpeakeasyBase {
+    listAgentsRequest: shared.ListAgentsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,15 +23,20 @@ export declare class ListAgentsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListAgentsXAmzTargetEnum;
 }
-export declare class ListAgentsRequest extends SpeakeasyBase {
-    queryParams: ListAgentsQueryParams;
-    headers: ListAgentsHeaders;
-    request: shared.ListAgentsRequest;
-}
 export declare class ListAgentsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalException
+     */
     internalException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * Success
+     */
     listAgentsResponse?: shared.ListAgentsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

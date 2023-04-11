@@ -1,41 +1,35 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { IapProjectsBrandsCreateRequest, IapProjectsBrandsCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  IapProjectsBrandsCreateRequest,
+  IapProjectsBrandsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: IapProjectsBrandsCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
+  dollarXgafv: XgafvEnum.Two,
+  brandInput: {
+    applicationTitle: "provident",
+    supportEmail: "distinctio",
   },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
-    applicationTitle: "dicta",
-    supportEmail: "debitis",
-  },
+  accessToken: "quibusdam",
+  alt: AltEnum.Media,
+  callback: "nulla",
+  fields: "corrupti",
+  key: "illum",
+  oauthToken: "vel",
+  parent: "error",
+  prettyPrint: false,
+  quotaUser: "deserunt",
+  uploadType: "suscipit",
+  uploadProtocol: "iure",
 };
 
 sdk.projects.iapProjectsBrandsCreate(req).then((res: IapProjectsBrandsCreateResponse | AxiosError) => {

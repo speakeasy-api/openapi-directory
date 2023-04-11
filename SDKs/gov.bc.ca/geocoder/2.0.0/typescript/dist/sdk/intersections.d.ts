@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Intersections {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,33 +9,38 @@ export declare class Intersections {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getAddressesOutputFormat - Geocode an address
+     * Geocode an address
      *
+     * @remarks
      * Represents the set of geocoded and standardized sites and intersections whose address best matches a given query address.
-    **/
+     */
     getAddressesOutputFormat(req: operations.GetAddressesOutputFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetAddressesOutputFormatResponse>;
     /**
-     * getIntersectionsNearOutputFormat - Find intersections near to a geographic point
+     * Find intersections near to a geographic point
      *
+     * @remarks
      * Represents intersections near a given point
-    **/
+     */
     getIntersectionsNearOutputFormat(req: operations.GetIntersectionsNearOutputFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetIntersectionsNearOutputFormatResponse>;
     /**
-     * getIntersectionsNearestOutputFormat - Find nearest intersection to a geographic point
+     * Find nearest intersection to a geographic point
      *
+     * @remarks
      * Represents the closest intersection to a given point
-    **/
+     */
     getIntersectionsNearestOutputFormat(req: operations.GetIntersectionsNearestOutputFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetIntersectionsNearestOutputFormatResponse>;
     /**
-     * getIntersectionsWithinOutputFormat - Find intersections in a geographic area
+     * Find intersections in a geographic area
      *
+     * @remarks
      * Represents all intersections within a given area
-    **/
+     */
     getIntersectionsWithinOutputFormat(req: operations.GetIntersectionsWithinOutputFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetIntersectionsWithinOutputFormatResponse>;
     /**
-     * getIntersectionsIntersectionIdOutputFormat - Get an intersection by its unique ID
+     * Get an intersection by its unique ID
      *
+     * @remarks
      * Represents a individual intersection
-    **/
-    getIntersectionsIntersectionIdOutputFormat(req: operations.GetIntersectionsIntersectionIdOutputFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetIntersectionsIntersectionIdOutputFormatResponse>;
+     */
+    getIntersectionsIntersectionIDOutputFormat(req: operations.GetIntersectionsIntersectionIDOutputFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetIntersectionsIntersectionIDOutputFormatResponse>;
 }

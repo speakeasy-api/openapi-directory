@@ -1,13 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListCheckpointFirewallsSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
-}
-export declare class ListCheckpointFirewallsRequest extends SpeakeasyBase {
-    security: ListCheckpointFirewallsSecurity;
-}
+import { AxiosResponse } from "axios";
 export declare class ListCheckpointFirewallsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * OK
+     */
     dataSourceListResponse?: shared.DataSourceListResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

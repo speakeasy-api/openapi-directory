@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteGroupPolicyActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteGroupPolicyActionEnum {
     DeleteGroupPolicy = "DeleteGroupPolicy"
 }
-export declare enum GetDeleteGroupPolicyVersionEnum {
+export declare enum GETDeleteGroupPolicyVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class GetDeleteGroupPolicyQueryParams extends SpeakeasyBase {
-    action: GetDeleteGroupPolicyActionEnum;
+export declare class GETDeleteGroupPolicyRequest extends SpeakeasyBase {
+    action: GETDeleteGroupPolicyActionEnum;
+    /**
+     * <p>The name (friendly name, not ARN) identifying the group that the policy is embedded in.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
+     */
     groupName: string;
+    /**
+     * <p>The name identifying the policy document to delete.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
+     */
     policyName: string;
-    version: GetDeleteGroupPolicyVersionEnum;
-}
-export declare class GetDeleteGroupPolicyHeaders extends SpeakeasyBase {
+    version: GETDeleteGroupPolicyVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetDeleteGroupPolicyHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteGroupPolicyRequest extends SpeakeasyBase {
-    queryParams: GetDeleteGroupPolicyQueryParams;
-    headers: GetDeleteGroupPolicyHeaders;
-}
-export declare class GetDeleteGroupPolicyResponse extends SpeakeasyBase {
+export declare class GETDeleteGroupPolicyResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

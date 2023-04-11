@@ -1,12 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetOwnershipOwnershipIdPathParams extends SpeakeasyBase {
-    ownershipId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetOwnershipOwnershipIdRequest extends SpeakeasyBase {
-    pathParams: GetOwnershipOwnershipIdPathParams;
+    /**
+     * The id belonging to the ownership record
+     */
+    ownershipId: string;
 }
 export declare class GetOwnershipOwnershipIdResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -8,6 +8,5 @@ export * from "./permission";
 export * from "./permissionchange";
 export * from "./photo";
 export * from "./rename";
-export * from "./security";
 export * from "./target";
 export * from "./user";

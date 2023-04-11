@@ -1,13 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class IpamIpAddressesReadPathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class IpamIpAddressesReadRequest extends SpeakeasyBase {
-    pathParams: IpamIpAddressesReadPathParams;
+    /**
+     * A unique integer value identifying this IP address.
+     */
+    id: number;
 }
 export declare class IpamIpAddressesReadResponse extends SpeakeasyBase {
     contentType: string;
-    ipAddress?: shared.IpAddress;
+    ipAddress?: shared.IPAddress;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

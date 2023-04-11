@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetRuleXAmzTargetEnum {
-    AwswafRegional20161128GetRule = "AWSWAF_Regional_20161128.GetRule"
+    AWSWAFRegional20161128GetRule = "AWSWAF_Regional_20161128.GetRule"
 }
-export declare class GetRuleHeaders extends SpeakeasyBase {
+export declare class GetRuleRequest extends SpeakeasyBase {
+    getRuleRequest: shared.GetRuleRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class GetRuleHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetRuleXAmzTargetEnum;
 }
-export declare class GetRuleRequest extends SpeakeasyBase {
-    headers: GetRuleHeaders;
-    request: shared.GetRuleRequest;
-}
 export declare class GetRuleResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getRuleResponse?: shared.GetRuleResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFInvalidAccountException
+     */
     wafInvalidAccountException?: any;
+    /**
+     * WAFNonexistentItemException
+     */
     wafNonexistentItemException?: any;
 }

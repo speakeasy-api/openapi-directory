@@ -1,5 +1,15 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Actions are operations that are batch in nature. For example, the "create", "update", "delete", and other operations allow changes to up-to 50 objects at a time. The "query" operation will return up-to 2000 result records back at a time, before requiring additional pages of data to be returned via a subsequent "queryMore" operation.
+ *
+ * @remarks
+ *
+ * The default WSDL version for Actions is 79. If you want to change the WSDL version, set the `X-Zuora-WSDL-Version` header. To find out in which WSDL version a particular object or field was introduced, see [Zuora SOAP API Version History](https://knowledgecenter.zuora.com/DC_Developers/G_SOAP_API/Zuora_SOAP_API_Version_History).
+ *
+ * **Note**: Actions do not support the Invoice Settlement feature. This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. Actions also do not support the Orders feature.
+ *
+ */
 export declare class Actions {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +19,9 @@ export declare class Actions {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * actionPosTamend - Amend
+     * Amend
      *
+     * @remarks
      * Modifies a subscription by creating Amendment objects. However, to modify a subscription, Zuora recommends that you use [Update subscription](https://www.zuora.com/developer/api-reference/#operation/PUT_Subscription) instead of this action.
      *
      * The Amend action cannot modify the custom fields on the Subscription object. You must use [Update subscription](https://www.zuora.com/developer/api-reference/#operation/PUT_Subscription) or [Update subscription custom fields of a specified subscription version](https://www.zuora.com/developer/api-reference/#operation/PUT_UpdateSubscriptionCustomFieldsOfASpecifiedVersion) to modify the custom fields on the Subscription object.
@@ -30,11 +41,12 @@ export declare class Actions {
      *
      * If Zuora is unable to create an Amendment object when you call this operation, the entire call fails.
      *
-    **/
-    actionPosTamend(req: operations.ActionPosTamendRequest, config?: AxiosRequestConfig): Promise<operations.ActionPosTamendResponse>;
+     */
+    actionPOSTamend(req: operations.ActionPOSTamendRequest, config?: AxiosRequestConfig): Promise<operations.ActionPOSTamendResponse>;
     /**
-     * actionPosTcreate - Create
+     * Create
      *
+     * @remarks
      * Use the create call to create one or more objects of a specific type. You can specify different types in different create calls, but each create call must apply to only one type of object.
      *
      * ## Limitations
@@ -63,11 +75,12 @@ export declare class Actions {
      *
      * Use the subscribe call to create the account with the subscription and the initial payment information.
      *
-    **/
-    actionPosTcreate(req: operations.ActionPosTcreateRequest, config?: AxiosRequestConfig): Promise<operations.ActionPosTcreateResponse>;
+     */
+    actionPOSTcreate(req: operations.ActionPOSTcreateRequest, config?: AxiosRequestConfig): Promise<operations.ActionPOSTcreateResponse>;
     /**
-     * actionPosTdelete - Delete
+     * Delete
      *
+     * @remarks
      * Deletes one or more objects of the same type. You can specify different types in different delete calls, but each delete call must apply only to one type of object.
      *
      * The following information applies to this call:
@@ -80,11 +93,12 @@ export declare class Actions {
      * ### Objects per Call
      * 50 objects are supported in a single call.
      *
-    **/
-    actionPosTdelete(req: operations.ActionPosTdeleteRequest, config?: AxiosRequestConfig): Promise<operations.ActionPosTdeleteResponse>;
+     */
+    actionPOSTdelete(req: operations.ActionPOSTdeleteRequest, config?: AxiosRequestConfig): Promise<operations.ActionPOSTdeleteResponse>;
     /**
-     * actionPosTexecute - Execute
+     * Execute
      *
+     * @remarks
      * Use the execute call to execute a process to split an invoice into multiple invoices. The original invoice must be in draft status. The resulting invoices are called split invoices.
      *
      * **Note:** This feature is in **Limited Availability**. If you wish to have access to the feature, submit a request at [Zuora Global Support](http://support.zuora.com).
@@ -100,11 +114,12 @@ export declare class Actions {
      * * Supported objects: InvoiceSplit
      * * Asynchronous process: yes
      *
-    **/
-    actionPosTexecute(req: operations.ActionPosTexecuteRequest, config?: AxiosRequestConfig): Promise<operations.ActionPosTexecuteResponse>;
+     */
+    actionPOSTexecute(req: operations.ActionPOSTexecuteRequest, config?: AxiosRequestConfig): Promise<operations.ActionPOSTexecuteResponse>;
     /**
-     * actionPosTgenerate - Generate
+     * Generate
      *
+     * @remarks
      * Generates an on-demand invoice for a specific customer. This is similar to creating an ad-hoc bill run for a specific customer account in the Zuora UI.
      *
      * * Supported objects: Invoice
@@ -112,11 +127,12 @@ export declare class Actions {
      *
      * The ID of the generated invoice is returned in the response. If multiple invoices are generated, only the id of the first invoice generated is returned. This occurs when an account has multiple subscriptions with the [invoice subscription separately](https://knowledgecenter.zuora.com/BC_Subscription_Management/Subscriptions/B_Creating_Subscriptions/Invoicing_Subscriptions_Separately) option enabled.
      *
-    **/
-    actionPosTgenerate(req: operations.ActionPosTgenerateRequest, config?: AxiosRequestConfig): Promise<operations.ActionPosTgenerateResponse>;
+     */
+    actionPOSTgenerate(req: operations.ActionPOSTgenerateRequest, config?: AxiosRequestConfig): Promise<operations.ActionPOSTgenerateResponse>;
     /**
-     * actionPosTquery - Query
+     * Query
      *
+     * @remarks
      * The query call sends a query expression by specifying the object to query, the fields to retrieve from that object, and any filters to determine whether a given object should be queried.
      *
      *
@@ -134,11 +150,12 @@ export declare class Actions {
      * * The Invoice Settlement feature is not supported. This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement.
      * * The default WSDL version for Actions is 79. To query objects or fields according to a different WSDL version, set the `X-Zuora-WSDL-Version` header. To find out in which WSDL version a particular object or field was introduced, see [Zuora SOAP API Version History](https://knowledgecenter.zuora.com/DC_Developers/G_SOAP_API/Zuora_SOAP_API_Version_History).
      *
-    **/
-    actionPosTquery(req: operations.ActionPosTqueryRequest, config?: AxiosRequestConfig): Promise<operations.ActionPosTqueryResponse>;
+     */
+    actionPOSTquery(req: operations.ActionPOSTqueryRequest, config?: AxiosRequestConfig): Promise<operations.ActionPOSTqueryResponse>;
     /**
-     * actionPosTqueryMore - QueryMore
+     * QueryMore
      *
+     * @remarks
      * Use queryMore to request additional results from a previous query call. If your initial query call returns more than 2000 results, you can use queryMore to query for the additional results.
      *
      *
@@ -153,11 +170,12 @@ export declare class Actions {
      *
      * To use queryMore, you first construct a query call. By default, the query call will return up to 2000 results. If there are more than 2000 results, query will return a boolean `done`, which will be marked as `false`, and a `queryLocator`, which is a marker you will pass to queryMore to get the next set of results.
      *
-    **/
-    actionPosTqueryMore(req: operations.ActionPosTqueryMoreRequest, config?: AxiosRequestConfig): Promise<operations.ActionPosTqueryMoreResponse>;
+     */
+    actionPOSTqueryMore(req: operations.ActionPOSTqueryMoreRequest, config?: AxiosRequestConfig): Promise<operations.ActionPOSTqueryMoreResponse>;
     /**
-     * actionPosTsubscribe - Subscribe
+     * Subscribe
      *
+     * @remarks
      * This call performs many actions.  Use the subscribe call to bundle information required to create at least one new subscription.
      *
      * The call takes in an array of SubscribeRequests. Because it takes an array, you can submit a batch of subscription requests at once. You can create up to 50 different subscriptions in a single subscribe call.
@@ -219,11 +237,12 @@ export declare class Actions {
      * ### Use the Create Call
      * The create call is more useful when you want to develop in stages. For example, if you want to first create an account, then a contact, and so on. If you do not have all information available, use the create call. To create a subscription, you must activate the account from Draft status to Active by calling the subscribe call.
      *
-    **/
-    actionPosTsubscribe(req: operations.ActionPosTsubscribeRequest, config?: AxiosRequestConfig): Promise<operations.ActionPosTsubscribeResponse>;
+     */
+    actionPOSTsubscribe(req: operations.ActionPOSTsubscribeRequest, config?: AxiosRequestConfig): Promise<operations.ActionPOSTsubscribeResponse>;
     /**
-     * actionPosTupdate - Update
+     * Update
      *
+     * @remarks
      *
      * Updates the information in one or more objects of the same type. You can specify different types of objects in different update calls, but each specific update call must apply to only one type of object.
      *
@@ -243,6 +262,6 @@ export declare class Actions {
      * * The Invoice Settlement feature is not supported. This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement.
      * * The default WSDL version for Actions is 79. To update objects or fields according to a different WSDL version, set the `X-Zuora-WSDL-Version` header. To find out in which WSDL version a particular object or field was introduced, see [Zuora SOAP API Version History](https://knowledgecenter.zuora.com/DC_Developers/G_SOAP_API/Zuora_SOAP_API_Version_History).
      *
-    **/
-    actionPosTupdate(req: operations.ActionPosTupdateRequest, config?: AxiosRequestConfig): Promise<operations.ActionPosTupdateResponse>;
+     */
+    actionPOSTupdate(req: operations.ActionPOSTupdateRequest, config?: AxiosRequestConfig): Promise<operations.ActionPOSTupdateResponse>;
 }

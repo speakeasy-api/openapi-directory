@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Image {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class Image {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getImages - Get a list of images
+     * Get a list of images
      *
+     * @remarks
      * An image represents a piece of artwork attached to some entity like a series, season, or episode,
      * and is _owned_ by an entity called the `bucket`.
      * An image is also a container for several `MediaAssets` representing the physical files for various
@@ -50,11 +51,12 @@ export declare class Image {
      * If that is not available, the `itunes` version should be used instead.
      *
      *
-    **/
-    getImages(req: operations.GetImagesRequest, config?: AxiosRequestConfig): Promise<operations.GetImagesResponse>;
+     */
+    getImages(req: operations.GetImagesRequest, security: operations.GetImagesSecurity, config?: AxiosRequestConfig): Promise<operations.GetImagesResponse>;
     /**
-     * getImagesId - Get a specific image
+     * Get a specific image
      *
+     * @remarks
      * An image represents a piece of artwork attached to some entity like a series, season, or episode,
      * and is _owned_ by an entity called the `bucket`.
      * An image is also a container for several `MediaAssets` representing the physical files for various
@@ -94,6 +96,6 @@ export declare class Image {
      * If that is not available, the `itunes` version should be used instead.
      *
      *
-    **/
-    getImagesId(req: operations.GetImagesIdRequest, config?: AxiosRequestConfig): Promise<operations.GetImagesIdResponse>;
+     */
+    getImagesId(req: operations.GetImagesIdRequest, security: operations.GetImagesIdSecurity, config?: AxiosRequestConfig): Promise<operations.GetImagesIdResponse>;
 }

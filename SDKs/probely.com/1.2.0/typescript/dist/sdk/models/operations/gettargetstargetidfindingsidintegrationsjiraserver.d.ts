@@ -1,22 +1,45 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetTargetsTargetIdFindingsIdIntegrationsJiraServerPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetTargetsTargetIdFindingsIdIntegrationsJiraServerRequest extends SpeakeasyBase {
+    /**
+     * Object Id
+     */
     id: string;
+    /**
+     * Target id
+     */
     targetId: string;
 }
-export declare class GetTargetsTargetIdFindingsIdIntegrationsJiraServer401ApplicationJson extends SpeakeasyBase {
+/**
+ * Not allowed to perform operation
+ */
+export declare class GetTargetsTargetIdFindingsIdIntegrationsJiraServer403ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error message.
+     */
     detail?: string;
 }
-export declare class GetTargetsTargetIdFindingsIdIntegrationsJiraServer403ApplicationJson extends SpeakeasyBase {
+/**
+ * Access token is missing or invalid
+ */
+export declare class GetTargetsTargetIdFindingsIdIntegrationsJiraServer401ApplicationJSON extends SpeakeasyBase {
     detail?: string;
-}
-export declare class GetTargetsTargetIdFindingsIdIntegrationsJiraServerRequest extends SpeakeasyBase {
-    pathParams: GetTargetsTargetIdFindingsIdIntegrationsJiraServerPathParams;
 }
 export declare class GetTargetsTargetIdFindingsIdIntegrationsJiraServerResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Jira Server finding configuration
+     */
     jiraFinding?: shared.JiraFinding;
     statusCode: number;
-    getTargetsTargetIdFindingsIdIntegrationsJiraServer401ApplicationJSONObject?: GetTargetsTargetIdFindingsIdIntegrationsJiraServer401ApplicationJson;
-    getTargetsTargetIdFindingsIdIntegrationsJiraServer403ApplicationJSONObject?: GetTargetsTargetIdFindingsIdIntegrationsJiraServer403ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Access token is missing or invalid
+     */
+    getTargetsTargetIdFindingsIdIntegrationsJiraServer401ApplicationJSONObject?: GetTargetsTargetIdFindingsIdIntegrationsJiraServer401ApplicationJSON;
+    /**
+     * Not allowed to perform operation
+     */
+    getTargetsTargetIdFindingsIdIntegrationsJiraServer403ApplicationJSONObject?: GetTargetsTargetIdFindingsIdIntegrationsJiraServer403ApplicationJSON;
 }

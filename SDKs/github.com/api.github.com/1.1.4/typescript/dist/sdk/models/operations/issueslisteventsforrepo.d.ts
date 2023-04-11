@@ -1,21 +1,35 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class IssuesListEventsForRepoPathParams extends SpeakeasyBase {
-    owner: string;
-    repo: string;
-}
-export declare class IssuesListEventsForRepoQueryParams extends SpeakeasyBase {
-    page?: number;
-    perPage?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class IssuesListEventsForRepoRequest extends SpeakeasyBase {
-    pathParams: IssuesListEventsForRepoPathParams;
-    queryParams: IssuesListEventsForRepoQueryParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    owner: string;
+    /**
+     * Page number of the results to fetch.
+     */
+    page?: number;
+    /**
+     * The number of results per page (max 100).
+     */
+    perPage?: number;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    repo: string;
 }
 export declare class IssuesListEventsForRepoResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     issueEvents?: shared.IssueEvent[];
+    /**
+     * Validation failed, or the endpoint has been spammed.
+     */
     validationError?: shared.ValidationError;
 }

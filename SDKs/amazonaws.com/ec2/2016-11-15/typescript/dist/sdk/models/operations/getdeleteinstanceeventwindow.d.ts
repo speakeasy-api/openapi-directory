@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteInstanceEventWindowActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteInstanceEventWindowActionEnum {
     DeleteInstanceEventWindow = "DeleteInstanceEventWindow"
 }
-export declare enum GetDeleteInstanceEventWindowVersionEnum {
+export declare enum GETDeleteInstanceEventWindowVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetDeleteInstanceEventWindowQueryParams extends SpeakeasyBase {
-    action: GetDeleteInstanceEventWindowActionEnum;
+export declare class GETDeleteInstanceEventWindowRequest extends SpeakeasyBase {
+    action: GETDeleteInstanceEventWindowActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
+    /**
+     * Specify <code>true</code> to force delete the event window. Use the force delete parameter if the event window is currently associated with targets.
+     */
     forceDelete?: boolean;
+    /**
+     * The ID of the event window.
+     */
     instanceEventWindowId: string;
-    version: GetDeleteInstanceEventWindowVersionEnum;
-}
-export declare class GetDeleteInstanceEventWindowHeaders extends SpeakeasyBase {
+    version: GETDeleteInstanceEventWindowVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +29,9 @@ export declare class GetDeleteInstanceEventWindowHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteInstanceEventWindowRequest extends SpeakeasyBase {
-    queryParams: GetDeleteInstanceEventWindowQueryParams;
-    headers: GetDeleteInstanceEventWindowHeaders;
-}
-export declare class GetDeleteInstanceEventWindowResponse extends SpeakeasyBase {
+export declare class GETDeleteInstanceEventWindowResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

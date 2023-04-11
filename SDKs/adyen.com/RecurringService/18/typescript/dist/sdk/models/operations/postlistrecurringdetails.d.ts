@@ -1,9 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PostListRecurringDetailsRequest extends SpeakeasyBase {
-    request?: any;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class PostListRecurringDetailsResponse extends SpeakeasyBase {
     contentType: string;
-    recurringDetailsResult?: any;
+    /**
+     * OK - the request has succeeded.
+     */
+    recurringDetailsResult?: shared.RecurringDetailsResult;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

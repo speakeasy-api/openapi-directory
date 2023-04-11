@@ -48,7 +48,6 @@ export * from "./postgresqltable";
 export * from "./privateconnection";
 export * from "./privateconnectivity";
 export * from "./route";
-export * from "./security";
 export * from "./singletargetdataset";
 export * from "./sourceconfig";
 export * from "./sourcehierarchydatasets";

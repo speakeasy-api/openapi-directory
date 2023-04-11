@@ -1,9 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetCustomDataIdentifierPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class GetCustomDataIdentifierHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetCustomDataIdentifierRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,20 +9,45 @@ export declare class GetCustomDataIdentifierHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class GetCustomDataIdentifierRequest extends SpeakeasyBase {
-    pathParams: GetCustomDataIdentifierPathParams;
-    headers: GetCustomDataIdentifierHeaders;
+    /**
+     * The unique identifier for the Amazon Macie resource that the request applies to.
+     */
+    id: string;
 }
 export declare class GetCustomDataIdentifierResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getCustomDataIdentifierResponse?: shared.GetCustomDataIdentifierResponse;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
+    /**
+     * ServiceQuotaExceededException
+     */
     serviceQuotaExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

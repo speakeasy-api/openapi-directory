@@ -1,0 +1,107 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The enumeration equivalent of the most specific Activity Mode under which this activity is played.
+ */
+export declare enum DestinyMilestonesDestinyPublicMilestoneActivityVariantActivityModeTypeEnum {
+    Zero = "0",
+    Two = "2",
+    Three = "3",
+    Four = "4",
+    Five = "5",
+    Six = "6",
+    Seven = "7",
+    Nine = "9",
+    Ten = "10",
+    Eleven = "11",
+    Twelve = "12",
+    Thirteen = "13",
+    Fifteen = "15",
+    Sixteen = "16",
+    Seventeen = "17",
+    Eighteen = "18",
+    Nineteen = "19",
+    Twenty = "20",
+    TwentyOne = "21",
+    TwentyTwo = "22",
+    TwentyFour = "24",
+    TwentyFive = "25",
+    TwentySix = "26",
+    TwentySeven = "27",
+    TwentyEight = "28",
+    TwentyNine = "29",
+    Thirty = "30",
+    ThirtyOne = "31",
+    ThirtyTwo = "32",
+    ThirtySeven = "37",
+    ThirtyEight = "38",
+    ThirtyNine = "39",
+    Forty = "40",
+    FortyOne = "41",
+    FortyTwo = "42",
+    FortyThree = "43",
+    FortyFour = "44",
+    FortyFive = "45",
+    FortySix = "46",
+    FortySeven = "47",
+    FortyEight = "48",
+    FortyNine = "49",
+    Fifty = "50",
+    FiftyOne = "51",
+    FiftyTwo = "52",
+    FiftyThree = "53",
+    FiftyFour = "54",
+    FiftyFive = "55",
+    FiftySix = "56",
+    FiftySeven = "57",
+    FiftyEight = "58",
+    FiftyNine = "59",
+    Sixty = "60",
+    SixtyOne = "61",
+    SixtyTwo = "62",
+    SixtyThree = "63",
+    SixtyFour = "64",
+    SixtyFive = "65",
+    SixtySix = "66",
+    SixtySeven = "67",
+    SixtyEight = "68",
+    SixtyNine = "69",
+    Seventy = "70",
+    SeventyOne = "71",
+    SeventyTwo = "72",
+    SeventyThree = "73",
+    SeventyFour = "74",
+    SeventyFive = "75",
+    SeventySix = "76",
+    SeventySeven = "77",
+    SeventyEight = "78",
+    SeventyNine = "79",
+    Eighty = "80",
+    EightyOne = "81",
+    EightyTwo = "82",
+    EightyThree = "83",
+    EightyFour = "84",
+    EightyFive = "85",
+    EightySix = "86",
+    EightySeven = "87",
+    EightyEight = "88",
+    EightyNine = "89",
+    Ninety = "90",
+    NinetyOne = "91"
+}
+/**
+ * Represents a variant of an activity that's relevant to a milestone.
+ */
+export declare class DestinyMilestonesDestinyPublicMilestoneActivityVariant extends SpeakeasyBase {
+    /**
+     * The hash identifier of this activity variant. Examine the activity's definition in the Manifest database to determine what makes it a distinct variant. Usually it will be difficulty level or whether or not it is a guided game variant of the activity, but theoretically it could be distinguished in any arbitrary way.
+     */
+    activityHash?: number;
+    /**
+     * The hash identifier of the most specific Activity Mode under which this activity is played. This is useful for situations where the activity in question is - for instance - a PVP map, but it's not clear what mode the PVP map is being played under. If it's a playlist, this will be less specific: but hopefully useful in some way.
+     */
+    activityModeHash?: number;
+    /**
+     * The enumeration equivalent of the most specific Activity Mode under which this activity is played.
+     */
+    activityModeType?: DestinyMilestonesDestinyPublicMilestoneActivityVariantActivityModeTypeEnum;
+}

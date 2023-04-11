@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeregisterTransitGatewayMulticastGroupSourcesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeregisterTransitGatewayMulticastGroupSourcesActionEnum {
     DeregisterTransitGatewayMulticastGroupSources = "DeregisterTransitGatewayMulticastGroupSources"
 }
-export declare enum PostDeregisterTransitGatewayMulticastGroupSourcesVersionEnum {
+export declare enum POSTDeregisterTransitGatewayMulticastGroupSourcesVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDeregisterTransitGatewayMulticastGroupSourcesQueryParams extends SpeakeasyBase {
-    action: PostDeregisterTransitGatewayMulticastGroupSourcesActionEnum;
-    version: PostDeregisterTransitGatewayMulticastGroupSourcesVersionEnum;
-}
-export declare class PostDeregisterTransitGatewayMulticastGroupSourcesHeaders extends SpeakeasyBase {
+export declare class POSTDeregisterTransitGatewayMulticastGroupSourcesRequest extends SpeakeasyBase {
+    action: POSTDeregisterTransitGatewayMulticastGroupSourcesActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeregisterTransitGatewayMulticastGroupSourcesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeregisterTransitGatewayMulticastGroupSourcesHeaders ex
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeregisterTransitGatewayMulticastGroupSourcesRequest extends SpeakeasyBase {
-    queryParams: PostDeregisterTransitGatewayMulticastGroupSourcesQueryParams;
-    headers: PostDeregisterTransitGatewayMulticastGroupSourcesHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeregisterTransitGatewayMulticastGroupSourcesResponse extends SpeakeasyBase {
+export declare class POSTDeregisterTransitGatewayMulticastGroupSourcesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

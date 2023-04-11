@@ -1,11 +1,36 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Broker represents a consumable collection of Service Registry catalogs
+ *
+ * @remarks
  * exposed as an OSB Broker.
-**/
+ */
 export declare class GoogleCloudServicebrokerV1beta1Broker extends SpeakeasyBase {
+    /**
+     * Output only. Timestamp for when the broker was created.
+     */
     createTime?: string;
+    /**
+     * Name of the broker in the format:
+     *
+     * @remarks
+     * <projects>/<project-id>/brokers/<broker>.
+     * This allows for multiple brokers per project which can be used to
+     * enable having custom brokers per GKE cluster, for example.
+     */
     name?: string;
+    /**
+     * User friendly title of the broker.
+     *
+     * @remarks
+     * Limited to 1024 characters. Requests with longer titles will be rejected.
+     */
     title?: string;
+    /**
+     * Output only. URL of the broker OSB-compliant endpoint, for example:
+     *
+     * @remarks
+     * https://servicebroker.googleapis.com/projects/<project>/brokers/<broker>
+     */
     url?: string;
 }

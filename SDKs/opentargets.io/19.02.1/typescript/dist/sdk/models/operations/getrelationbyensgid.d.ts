@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetRelationByEnsgidPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetRelationByENSGIDRequest extends SpeakeasyBase {
+    /**
+     * An Ensembl gene identifier.
+     */
     target: string;
 }
-export declare class GetRelationByEnsgidRequest extends SpeakeasyBase {
-    pathParams: GetRelationByEnsgidPathParams;
-}
-export declare class GetRelationByEnsgidResponse extends SpeakeasyBase {
+export declare class GetRelationByENSGIDResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

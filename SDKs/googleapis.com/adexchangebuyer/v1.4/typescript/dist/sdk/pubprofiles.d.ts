@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Pubprofiles {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +9,7 @@ export declare class Pubprofiles {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * adexchangebuyerPubprofilesList - Gets the requested publisher profile(s) by publisher accountId.
-    **/
-    adexchangebuyerPubprofilesList(req: operations.AdexchangebuyerPubprofilesListRequest, config?: AxiosRequestConfig): Promise<operations.AdexchangebuyerPubprofilesListResponse>;
+     * Gets the requested publisher profile(s) by publisher accountId.
+     */
+    adexchangebuyerPubprofilesList(req: operations.AdexchangebuyerPubprofilesListRequest, security: operations.AdexchangebuyerPubprofilesListSecurity, config?: AxiosRequestConfig): Promise<operations.AdexchangebuyerPubprofilesListResponse>;
 }

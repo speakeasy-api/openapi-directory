@@ -1,8 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetKeyGroupConfig20200531PathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetKeyGroupConfig20200531Request extends SpeakeasyBase {
+    /**
+     * The identifier of the key group whose configuration you are getting. To get the identifier, use <code>ListKeyGroups</code>.
+     */
     id: string;
-}
-export declare class GetKeyGroupConfig20200531Headers extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,12 +13,9 @@ export declare class GetKeyGroupConfig20200531Headers extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetKeyGroupConfig20200531Request extends SpeakeasyBase {
-    pathParams: GetKeyGroupConfig20200531PathParams;
-    headers: GetKeyGroupConfig20200531Headers;
-}
 export declare class GetKeyGroupConfig20200531Response extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

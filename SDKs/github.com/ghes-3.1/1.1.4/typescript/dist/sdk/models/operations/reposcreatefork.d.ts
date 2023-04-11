@@ -1,21 +1,41 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReposCreateForkPathParams extends SpeakeasyBase {
-    owner: string;
-    repo: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ReposCreateForkRequestBody extends SpeakeasyBase {
+    /**
+     * Optional parameter to specify the organization name if forking into an organization.
+     */
     organization?: string;
 }
 export declare class ReposCreateForkRequest extends SpeakeasyBase {
-    pathParams: ReposCreateForkPathParams;
-    request?: ReposCreateForkRequestBody;
+    requestBody?: ReposCreateForkRequestBody;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    owner: string;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    repo: string;
 }
 export declare class ReposCreateForkResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad Request
+     */
     basicError?: shared.BasicError;
+    /**
+     * Response
+     */
     fullRepository?: shared.FullRepository;
+    /**
+     * Bad Request
+     */
     scimError?: shared.ScimError;
+    /**
+     * Validation failed
+     */
     validationError?: shared.ValidationError;
 }

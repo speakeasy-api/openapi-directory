@@ -1,9 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreateCoreDefinitionVersionPathParams extends SpeakeasyBase {
-    coreDefinitionId: string;
+import { AxiosResponse } from "axios";
+export declare class CreateCoreDefinitionVersionRequestBody extends SpeakeasyBase {
+    /**
+     * A list of cores in the core definition version.
+     */
+    cores?: shared.Core[];
 }
-export declare class CreateCoreDefinitionVersionHeaders extends SpeakeasyBase {
+export declare class CreateCoreDefinitionVersionRequest extends SpeakeasyBase {
+    /**
+     * The ID of the core definition.
+     */
+    coreDefinitionId: string;
+    requestBody: CreateCoreDefinitionVersionRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,19 +20,21 @@ export declare class CreateCoreDefinitionVersionHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
+    /**
+     * A client token used to correlate requests and responses.
+     */
     xAmznClientToken?: string;
 }
-export declare class CreateCoreDefinitionVersionRequestBody extends SpeakeasyBase {
-    cores?: shared.Core[];
-}
-export declare class CreateCoreDefinitionVersionRequest extends SpeakeasyBase {
-    pathParams: CreateCoreDefinitionVersionPathParams;
-    headers: CreateCoreDefinitionVersionHeaders;
-    request: CreateCoreDefinitionVersionRequestBody;
-}
 export declare class CreateCoreDefinitionVersionResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     createCoreDefinitionVersionResponse?: shared.CreateCoreDefinitionVersionResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

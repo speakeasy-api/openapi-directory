@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetNamePathParams extends SpeakeasyBase {
-    oid: string;
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetNameRequest extends SpeakeasyBase {
-    pathParams: GetNamePathParams;
+    /**
+     * OID
+     */
+    oid: string;
+    /**
+     * Agent to show the object
+     */
+    agentNum: number;
 }
 export declare class GetNameResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     getName200ApplicationJSONString?: string;
 }

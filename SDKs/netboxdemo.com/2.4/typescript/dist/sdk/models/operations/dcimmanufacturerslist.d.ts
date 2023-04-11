@@ -1,22 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DcimManufacturersListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DcimManufacturersListRequest extends SpeakeasyBase {
+    /**
+     * Number of results to return per page.
+     */
     limit?: number;
     name?: string;
+    /**
+     * The initial index from which to return the results.
+     */
     offset?: number;
     slug?: string;
 }
-export declare class DcimManufacturersList200ApplicationJson extends SpeakeasyBase {
+export declare class DcimManufacturersList200ApplicationJSON extends SpeakeasyBase {
     count: number;
     next?: string;
     previous?: string;
     results: shared.Manufacturer[];
 }
-export declare class DcimManufacturersListRequest extends SpeakeasyBase {
-    queryParams: DcimManufacturersListQueryParams;
-}
 export declare class DcimManufacturersListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dcimManufacturersList200ApplicationJSONObject?: DcimManufacturersList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    dcimManufacturersList200ApplicationJSONObject?: DcimManufacturersList200ApplicationJSON;
 }

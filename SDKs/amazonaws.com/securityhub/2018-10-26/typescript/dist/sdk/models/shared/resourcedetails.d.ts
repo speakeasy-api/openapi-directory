@@ -1,0 +1,185 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { AwsApiGatewayRestApiDetails } from "./awsapigatewayrestapidetails";
+import { AwsApiGatewayStageDetails } from "./awsapigatewaystagedetails";
+import { AwsApiGatewayV2ApiDetails } from "./awsapigatewayv2apidetails";
+import { AwsApiGatewayV2StageDetails } from "./awsapigatewayv2stagedetails";
+import { AwsAutoScalingAutoScalingGroupDetails } from "./awsautoscalingautoscalinggroupdetails";
+import { AwsAutoScalingLaunchConfigurationDetails } from "./awsautoscalinglaunchconfigurationdetails";
+import { AwsBackupBackupPlanDetails } from "./awsbackupbackupplandetails";
+import { AwsBackupBackupVaultDetails } from "./awsbackupbackupvaultdetails";
+import { AwsBackupRecoveryPointDetails } from "./awsbackuprecoverypointdetails";
+import { AwsCertificateManagerCertificateDetails } from "./awscertificatemanagercertificatedetails";
+import { AwsCloudFormationStackDetails } from "./awscloudformationstackdetails";
+import { AwsCloudFrontDistributionDetails } from "./awscloudfrontdistributiondetails";
+import { AwsCloudTrailTrailDetails } from "./awscloudtrailtraildetails";
+import { AwsCloudWatchAlarmDetails } from "./awscloudwatchalarmdetails";
+import { AwsCodeBuildProjectDetails } from "./awscodebuildprojectdetails";
+import { AwsDynamoDbTableDetails } from "./awsdynamodbtabledetails";
+import { AwsEc2EipDetails } from "./awsec2eipdetails";
+import { AwsEc2InstanceDetails } from "./awsec2instancedetails";
+import { AwsEc2LaunchTemplateDetails } from "./awsec2launchtemplatedetails";
+import { AwsEc2NetworkAclDetails } from "./awsec2networkacldetails";
+import { AwsEc2NetworkInterfaceDetails } from "./awsec2networkinterfacedetails";
+import { AwsEc2RouteTableDetails } from "./awsec2routetabledetails";
+import { AwsEc2SecurityGroupDetails } from "./awsec2securitygroupdetails";
+import { AwsEc2SubnetDetails } from "./awsec2subnetdetails";
+import { AwsEc2TransitGatewayDetails } from "./awsec2transitgatewaydetails";
+import { AwsEc2VolumeDetails } from "./awsec2volumedetails";
+import { AwsEc2VpcDetails } from "./awsec2vpcdetails";
+import { AwsEc2VpcEndpointServiceDetails } from "./awsec2vpcendpointservicedetails";
+import { AwsEc2VpcPeeringConnectionDetails } from "./awsec2vpcpeeringconnectiondetails";
+import { AwsEc2VpnConnectionDetails } from "./awsec2vpnconnectiondetails";
+import { AwsEcrContainerImageDetails } from "./awsecrcontainerimagedetails";
+import { AwsEcrRepositoryDetails } from "./awsecrrepositorydetails";
+import { AwsEcsClusterDetails } from "./awsecsclusterdetails";
+import { AwsEcsContainerDetails } from "./awsecscontainerdetails";
+import { AwsEcsServiceDetails } from "./awsecsservicedetails";
+import { AwsEcsTaskDefinitionDetails } from "./awsecstaskdefinitiondetails";
+import { AwsEcsTaskDetails } from "./awsecstaskdetails";
+import { AwsEfsAccessPointDetails } from "./awsefsaccesspointdetails";
+import { AwsEksClusterDetails } from "./awseksclusterdetails";
+import { AwsElasticBeanstalkEnvironmentDetails } from "./awselasticbeanstalkenvironmentdetails";
+import { AwsElasticsearchDomainDetails } from "./awselasticsearchdomaindetails";
+import { AwsElbLoadBalancerDetails } from "./awselbloadbalancerdetails";
+import { AwsElbv2LoadBalancerDetails } from "./awselbv2loadbalancerdetails";
+import { AwsIamAccessKeyDetails } from "./awsiamaccesskeydetails";
+import { AwsIamGroupDetails } from "./awsiamgroupdetails";
+import { AwsIamPolicyDetails } from "./awsiampolicydetails";
+import { AwsIamRoleDetails } from "./awsiamroledetails";
+import { AwsIamUserDetails } from "./awsiamuserdetails";
+import { AwsKinesisStreamDetails } from "./awskinesisstreamdetails";
+import { AwsKmsKeyDetails } from "./awskmskeydetails";
+import { AwsLambdaFunctionDetails } from "./awslambdafunctiondetails";
+import { AwsLambdaLayerVersionDetails } from "./awslambdalayerversiondetails";
+import { AwsNetworkFirewallFirewallDetails } from "./awsnetworkfirewallfirewalldetails";
+import { AwsNetworkFirewallFirewallPolicyDetails } from "./awsnetworkfirewallfirewallpolicydetails";
+import { AwsNetworkFirewallRuleGroupDetails } from "./awsnetworkfirewallrulegroupdetails";
+import { AwsOpenSearchServiceDomainDetails } from "./awsopensearchservicedomaindetails";
+import { AwsRdsDbClusterDetails } from "./awsrdsdbclusterdetails";
+import { AwsRdsDbClusterSnapshotDetails } from "./awsrdsdbclustersnapshotdetails";
+import { AwsRdsDbInstanceDetails } from "./awsrdsdbinstancedetails";
+import { AwsRdsDbSecurityGroupDetails } from "./awsrdsdbsecuritygroupdetails";
+import { AwsRdsDbSnapshotDetails } from "./awsrdsdbsnapshotdetails";
+import { AwsRdsEventSubscriptionDetails } from "./awsrdseventsubscriptiondetails";
+import { AwsRedshiftClusterDetails } from "./awsredshiftclusterdetails";
+import { AwsS3AccountPublicAccessBlockDetails } from "./awss3accountpublicaccessblockdetails";
+import { AwsS3BucketDetails } from "./awss3bucketdetails";
+import { AwsS3ObjectDetails } from "./awss3objectdetails";
+import { AwsSageMakerNotebookInstanceDetails } from "./awssagemakernotebookinstancedetails";
+import { AwsSecretsManagerSecretDetails } from "./awssecretsmanagersecretdetails";
+import { AwsSnsTopicDetails } from "./awssnstopicdetails";
+import { AwsSqsQueueDetails } from "./awssqsqueuedetails";
+import { AwsSsmPatchComplianceDetails } from "./awsssmpatchcompliancedetails";
+import { AwsWafRateBasedRuleDetails } from "./awswafratebasedruledetails";
+import { AwsWafRegionalRateBasedRuleDetails } from "./awswafregionalratebasedruledetails";
+import { AwsWafRegionalRuleDetails } from "./awswafregionalruledetails";
+import { AwsWafRegionalRuleGroupDetails } from "./awswafregionalrulegroupdetails";
+import { AwsWafRegionalWebAclDetails } from "./awswafregionalwebacldetails";
+import { AwsWafRuleDetails } from "./awswafruledetails";
+import { AwsWafRuleGroupDetails } from "./awswafrulegroupdetails";
+import { AwsWafv2RuleGroupDetails } from "./awswafv2rulegroupdetails";
+import { AwsWafv2WebAclDetails } from "./awswafv2webacldetails";
+import { AwsWafWebAclDetails } from "./awswafwebacldetails";
+import { AwsXrayEncryptionConfigDetails } from "./awsxrayencryptionconfigdetails";
+import { ContainerDetails } from "./containerdetails";
+/**
+ * <p>Additional details about a resource related to a finding.</p> <p>To provide the details, use the object that corresponds to the resource type. For example, if the resource type is <code>AwsEc2Instance</code>, then you use the <code>AwsEc2Instance</code> object to provide the details.</p> <p>If the type-specific object does not contain all of the fields you want to populate, then you use the <code>Other</code> object to populate those additional fields.</p> <p>You also use the <code>Other</code> object to populate the details when the selected type does not have a corresponding object.</p>
+ */
+export declare class ResourceDetails extends SpeakeasyBase {
+    awsApiGatewayRestApi?: AwsApiGatewayRestApiDetails;
+    awsApiGatewayStage?: AwsApiGatewayStageDetails;
+    awsApiGatewayV2Api?: AwsApiGatewayV2ApiDetails;
+    awsApiGatewayV2Stage?: AwsApiGatewayV2StageDetails;
+    awsAutoScalingAutoScalingGroup?: AwsAutoScalingAutoScalingGroupDetails;
+    awsAutoScalingLaunchConfiguration?: AwsAutoScalingLaunchConfigurationDetails;
+    awsBackupBackupPlan?: AwsBackupBackupPlanDetails;
+    awsBackupBackupVault?: AwsBackupBackupVaultDetails;
+    awsBackupRecoveryPoint?: AwsBackupRecoveryPointDetails;
+    awsCertificateManagerCertificate?: AwsCertificateManagerCertificateDetails;
+    awsCloudFormationStack?: AwsCloudFormationStackDetails;
+    awsCloudFrontDistribution?: AwsCloudFrontDistributionDetails;
+    awsCloudTrailTrail?: AwsCloudTrailTrailDetails;
+    awsCloudWatchAlarm?: AwsCloudWatchAlarmDetails;
+    awsCodeBuildProject?: AwsCodeBuildProjectDetails;
+    awsDynamoDbTable?: AwsDynamoDbTableDetails;
+    awsEc2Eip?: AwsEc2EipDetails;
+    awsEc2Instance?: AwsEc2InstanceDetails;
+    /**
+     *  Specifies the properties for creating an Amazon Elastic Compute Cloud (Amazon EC2) launch template.
+     */
+    awsEc2LaunchTemplate?: AwsEc2LaunchTemplateDetails;
+    awsEc2NetworkAcl?: AwsEc2NetworkAclDetails;
+    awsEc2NetworkInterface?: AwsEc2NetworkInterfaceDetails;
+    awsEc2RouteTable?: AwsEc2RouteTableDetails;
+    awsEc2SecurityGroup?: AwsEc2SecurityGroupDetails;
+    awsEc2Subnet?: AwsEc2SubnetDetails;
+    awsEc2TransitGateway?: AwsEc2TransitGatewayDetails;
+    awsEc2Volume?: AwsEc2VolumeDetails;
+    awsEc2Vpc?: AwsEc2VpcDetails;
+    awsEc2VpcEndpointService?: AwsEc2VpcEndpointServiceDetails;
+    awsEc2VpcPeeringConnection?: AwsEc2VpcPeeringConnectionDetails;
+    awsEc2VpnConnection?: AwsEc2VpnConnectionDetails;
+    awsEcrContainerImage?: AwsEcrContainerImageDetails;
+    awsEcrRepository?: AwsEcrRepositoryDetails;
+    awsEcsCluster?: AwsEcsClusterDetails;
+    awsEcsContainer?: AwsEcsContainerDetails;
+    awsEcsService?: AwsEcsServiceDetails;
+    awsEcsTask?: AwsEcsTaskDetails;
+    awsEcsTaskDefinition?: AwsEcsTaskDefinitionDetails;
+    awsEfsAccessPoint?: AwsEfsAccessPointDetails;
+    awsEksCluster?: AwsEksClusterDetails;
+    awsElasticBeanstalkEnvironment?: AwsElasticBeanstalkEnvironmentDetails;
+    awsElasticsearchDomain?: AwsElasticsearchDomainDetails;
+    awsElbLoadBalancer?: AwsElbLoadBalancerDetails;
+    awsElbv2LoadBalancer?: AwsElbv2LoadBalancerDetails;
+    awsIamAccessKey?: AwsIamAccessKeyDetails;
+    awsIamGroup?: AwsIamGroupDetails;
+    awsIamPolicy?: AwsIamPolicyDetails;
+    awsIamRole?: AwsIamRoleDetails;
+    awsIamUser?: AwsIamUserDetails;
+    awsKinesisStream?: AwsKinesisStreamDetails;
+    awsKmsKey?: AwsKmsKeyDetails;
+    awsLambdaFunction?: AwsLambdaFunctionDetails;
+    awsLambdaLayerVersion?: AwsLambdaLayerVersionDetails;
+    awsNetworkFirewallFirewall?: AwsNetworkFirewallFirewallDetails;
+    awsNetworkFirewallFirewallPolicy?: AwsNetworkFirewallFirewallPolicyDetails;
+    awsNetworkFirewallRuleGroup?: AwsNetworkFirewallRuleGroupDetails;
+    awsOpenSearchServiceDomain?: AwsOpenSearchServiceDomainDetails;
+    awsRdsDbCluster?: AwsRdsDbClusterDetails;
+    awsRdsDbClusterSnapshot?: AwsRdsDbClusterSnapshotDetails;
+    awsRdsDbInstance?: AwsRdsDbInstanceDetails;
+    awsRdsDbSecurityGroup?: AwsRdsDbSecurityGroupDetails;
+    awsRdsDbSnapshot?: AwsRdsDbSnapshotDetails;
+    awsRdsEventSubscription?: AwsRdsEventSubscriptionDetails;
+    awsRedshiftCluster?: AwsRedshiftClusterDetails;
+    awsS3AccountPublicAccessBlock?: AwsS3AccountPublicAccessBlockDetails;
+    awsS3Bucket?: AwsS3BucketDetails;
+    awsS3Object?: AwsS3ObjectDetails;
+    /**
+     *  Provides details about an Amazon SageMaker notebook instance.
+     */
+    awsSageMakerNotebookInstance?: AwsSageMakerNotebookInstanceDetails;
+    awsSecretsManagerSecret?: AwsSecretsManagerSecretDetails;
+    awsSnsTopic?: AwsSnsTopicDetails;
+    awsSqsQueue?: AwsSqsQueueDetails;
+    awsSsmPatchCompliance?: AwsSsmPatchComplianceDetails;
+    awsWafRateBasedRule?: AwsWafRateBasedRuleDetails;
+    awsWafRegionalRateBasedRule?: AwsWafRegionalRateBasedRuleDetails;
+    awsWafRegionalRule?: AwsWafRegionalRuleDetails;
+    awsWafRegionalRuleGroup?: AwsWafRegionalRuleGroupDetails;
+    awsWafRegionalWebAcl?: AwsWafRegionalWebAclDetails;
+    awsWafRule?: AwsWafRuleDetails;
+    awsWafRuleGroup?: AwsWafRuleGroupDetails;
+    awsWafWebAcl?: AwsWafWebAclDetails;
+    /**
+     *  Details about an WAFv2 rule group.
+     */
+    awsWafv2RuleGroup?: AwsWafv2RuleGroupDetails;
+    /**
+     *  Details about an WAFv2 web Access Control List (ACL).
+     */
+    awsWafv2WebAcl?: AwsWafv2WebAclDetails;
+    awsXrayEncryptionConfig?: AwsXrayEncryptionConfigDetails;
+    container?: ContainerDetails;
+    other?: Record<string, string>;
+}

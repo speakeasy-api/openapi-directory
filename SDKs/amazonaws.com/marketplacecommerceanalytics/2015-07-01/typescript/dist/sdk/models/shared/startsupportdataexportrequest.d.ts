@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { SupportDataSetTypeEnum } from "./supportdatasettypeenum";
 /**
  * Container for the parameters to the StartSupportDataExport operation.
-**/
+ */
 export declare class StartSupportDataExportRequest extends SpeakeasyBase {
     customerDefinedValues?: Record<string, string>;
     dataSetType: SupportDataSetTypeEnum;

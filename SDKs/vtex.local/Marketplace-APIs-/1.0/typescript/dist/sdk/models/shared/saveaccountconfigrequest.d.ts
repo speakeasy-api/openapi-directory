@@ -1,0 +1,29 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { Matcher } from "./matcher";
+import { Score } from "./score";
+export declare class SaveaccountconfigRequest extends SpeakeasyBase {
+    /**
+     * This field determines the type of approval configuration applied to SKUs received  from a seller. The possible values include:
+     *
+     * @remarks
+     *
+     * - `default` where the Matcher reviews the SKU, and approves it based on its score
+     *
+     * - `manual` for manual approvals through the Received SKU UI or Match API
+     *
+     * - `autoApprove` for every SKU received from a given seller to be approved automatically, regardless of the Matcher Score.
+     */
+    matchFlux: string;
+    /**
+     * Matchers for approving and rejecting SKUs received from sellers.
+     */
+    matchers: Matcher[];
+    /**
+     * Matcher rates received SKUs by comparing the data sent by sellers to existing fields in the marketplace. The calculation of these scores determines whether the product has been: `Approved` or `Denied`.
+     */
+    score: Score;
+    /**
+     * This attribute maps product and SKU specifications.
+     */
+    specificationsMapping: string[];
+}

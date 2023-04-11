@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { Logger } from "./logger";
 /**
  * Information about a logger definition version.
-**/
+ */
 export declare class LoggerDefinitionVersion extends SpeakeasyBase {
     loggers?: Logger[];
 }

@@ -1,13 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetCategoriesQueryParams extends SpeakeasyBase {
-    filterParent?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetCategoriesRequest extends SpeakeasyBase {
-    queryParams: GetCategoriesQueryParams;
+    /**
+     * The unique identifier of a parent category for which to
+     *
+     * @remarks
+     * return only its children. Providing an invalid category
+     * identifier results in a `404` response.
+     *
+     */
+    filterParent?: string;
 }
 export declare class GetCategoriesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful Response
+     */
     listCategoriesResponse?: shared.ListCategoriesResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

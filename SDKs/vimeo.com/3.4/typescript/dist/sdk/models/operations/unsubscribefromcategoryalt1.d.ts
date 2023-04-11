@@ -1,16 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class UnsubscribeFromCategoryAlt1PathParams extends SpeakeasyBase {
-    category: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UnsubscribeFromCategoryAlt1Security extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
+    oauth2: string;
 }
 export declare class UnsubscribeFromCategoryAlt1Request extends SpeakeasyBase {
-    pathParams: UnsubscribeFromCategoryAlt1PathParams;
-    security: UnsubscribeFromCategoryAlt1Security;
+    /**
+     * The name of the category.
+     */
+    category: string;
 }
 export declare class UnsubscribeFromCategoryAlt1Response extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

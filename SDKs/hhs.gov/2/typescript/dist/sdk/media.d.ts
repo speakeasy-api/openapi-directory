@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Information about media
+ */
 export declare class Media {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,75 +12,87 @@ export declare class Media {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getResourcesMediaJson - Get MediaItems
+     * Get MediaItems
      *
+     * @remarks
      * Media Items Listings
-    **/
+     */
     getResourcesMediaJson(req: operations.GetResourcesMediaJsonRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesMediaJsonResponse>;
     /**
-     * getResourcesMediaFeaturedJson - Get the list of featured content in the syndication system
-     *
      * Get the list of featured content in the syndication system
-    **/
+     *
+     * @remarks
+     * Get the list of featured content in the syndication system
+     */
     getResourcesMediaFeaturedJson(req: operations.GetResourcesMediaFeaturedJsonRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesMediaFeaturedJsonResponse>;
     /**
-     * getResourcesMediaMostPopularMediaFormat - Get MediaItems by popularity
+     * Get MediaItems by popularity
      *
+     * @remarks
      * Get the media with the highest ratings.
-    **/
+     */
     getResourcesMediaMostPopularMediaFormat(req: operations.GetResourcesMediaMostPopularMediaFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesMediaMostPopularMediaFormatResponse>;
     /**
-     * getResourcesMediaSearchResultsJson - Get MediaItems by search query
+     * Get MediaItems by search query
      *
+     * @remarks
      * Full search
-    **/
+     */
     getResourcesMediaSearchResultsJson(req: operations.GetResourcesMediaSearchResultsJsonRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesMediaSearchResultsJsonResponse>;
     /**
-     * getResourcesMediaIdJson - Get MediaItem by ID
+     * Get MediaItem by ID
      *
+     * @remarks
      * Information about a specific media item
-    **/
+     */
     getResourcesMediaIdJson(req: operations.GetResourcesMediaIdJsonRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesMediaIdJsonResponse>;
     /**
-     * getResourcesMediaIdContent - Get content for MediaItem
+     * Get content for MediaItem
      *
+     * @remarks
      * The actual media content (html, image, etc...)
-    **/
+     */
     getResourcesMediaIdContent(req: operations.GetResourcesMediaIdContentRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesMediaIdContentResponse>;
     /**
-     * getResourcesMediaIdEmbedJson - Get embed code for MediaItem
+     * Get embed code for MediaItem
      *
+     * @remarks
      * Get the javascript or iframe embed code for this item (to embed it on a web page).
-    **/
+     */
     getResourcesMediaIdEmbedJson(req: operations.GetResourcesMediaIdEmbedJsonRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesMediaIdEmbedJsonResponse>;
     /**
-     * getResourcesMediaIdPreviewJpg - Get Tag by ID
+     * Get Tag by ID
      *
+     * @remarks
      * Get the jpg preview of the content item where applicable.
-    **/
+     */
     getResourcesMediaIdPreviewJpg(req: operations.GetResourcesMediaIdPreviewJpgRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesMediaIdPreviewJpgResponse>;
     /**
-     * getResourcesMediaIdRelatedMediaFormat - Get related MediaItems by ID
+     * Get related MediaItems by ID
      *
+     * @remarks
      * Get the media related to the current media item.
-    **/
+     */
     getResourcesMediaIdRelatedMediaFormat(req: operations.GetResourcesMediaIdRelatedMediaFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesMediaIdRelatedMediaFormatResponse>;
     /**
-     * getResourcesMediaIdSyndicateFormat - Get syndicated content for MediaItem
+     * Get syndicated content for MediaItem
      *
+     * @remarks
      * Get syndicated content.
-    **/
+     */
     getResourcesMediaIdSyndicateFormat(req: operations.GetResourcesMediaIdSyndicateFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesMediaIdSyndicateFormatResponse>;
     /**
-     * getResourcesMediaIdThumbnailJpg - Get JPG thumbnail for MediaItem
+     * Get JPG thumbnail for MediaItem
      *
+     * @remarks
      * Get the jpg thumbnail of the content item where applicable.
-    **/
+     */
     getResourcesMediaIdThumbnailJpg(req: operations.GetResourcesMediaIdThumbnailJpgRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesMediaIdThumbnailJpgResponse>;
     /**
-     * getResourcesMediaIdYoutubeMetaDataJson - Get Youtube metadata for MediaItem
+     * Get Youtube metadata for MediaItem
      *
+     * @remarks
      * Youtube meta-data for a video item.
-    **/
+     */
     getResourcesMediaIdYoutubeMetaDataJson(req: operations.GetResourcesMediaIdYoutubeMetaDataJsonRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesMediaIdYoutubeMetaDataJsonResponse>;
 }

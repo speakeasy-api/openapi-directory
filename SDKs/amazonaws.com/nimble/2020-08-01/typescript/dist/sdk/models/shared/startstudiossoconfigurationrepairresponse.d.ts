@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { Studio } from "./studio";
-export declare class StartStudioSsoConfigurationRepairResponse extends SpeakeasyBase {
-    studio?: Studio;
+/**
+ * Success
+ */
+export declare class StartStudioSSOConfigurationRepairResponse extends SpeakeasyBase {
+    studio: Studio;
 }

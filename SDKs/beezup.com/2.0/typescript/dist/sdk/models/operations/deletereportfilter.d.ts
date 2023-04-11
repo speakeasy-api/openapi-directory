@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteReportFilterPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteReportFilterRequest extends SpeakeasyBase {
+    /**
+     * Your report filter identifier
+     */
     reportFilterId: string;
+    /**
+     * Your store identifier
+     */
     storeId: string;
 }
-export declare class DeleteReportFilterRequest extends SpeakeasyBase {
-    pathParams: DeleteReportFilterPathParams;
-}
 export declare class DeleteReportFilterResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     * This report filter is used by rule. In the error message you will find the rule identifier.
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -3,7 +3,7 @@ import { ConfigurationItemStatusEnum } from "./configurationitemstatusenum";
 import { ResourceTypeEnum } from "./resourcetypeenum";
 /**
  * The detailed configuration of a specified resource.
-**/
+ */
 export declare class BaseConfigurationItem extends SpeakeasyBase {
     accountId?: string;
     arn?: string;

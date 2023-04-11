@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum DeleteHitxAmzTargetEnum {
-    MTurkRequesterServiceV20170117DeleteHit = "MTurkRequesterServiceV20170117.DeleteHIT"
+import { AxiosResponse } from "axios";
+export declare enum DeleteHITXAmzTargetEnum {
+    MTurkRequesterServiceV20170117DeleteHIT = "MTurkRequesterServiceV20170117.DeleteHIT"
 }
-export declare class DeleteHitHeaders extends SpeakeasyBase {
+export declare class DeleteHITRequest extends SpeakeasyBase {
+    deleteHITRequest: shared.DeleteHITRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,16 +13,22 @@ export declare class DeleteHitHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: DeleteHitxAmzTargetEnum;
+    xAmzTarget: DeleteHITXAmzTargetEnum;
 }
-export declare class DeleteHitRequest extends SpeakeasyBase {
-    headers: DeleteHitHeaders;
-    request: shared.DeleteHitRequest;
-}
-export declare class DeleteHitResponse extends SpeakeasyBase {
+export declare class DeleteHITResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deleteHITResponse?: Record<string, any>;
+    /**
+     * RequestError
+     */
     requestError?: any;
+    /**
+     * ServiceFault
+     */
     serviceFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

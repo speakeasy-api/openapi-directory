@@ -1,7 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class ProjectCollaborator extends SpeakeasyBase {
-    name?: string;
-    roleName?: string;
-    status?: string;
-    userId?: number;
+    /**
+     * Collaborator name
+     */
+    name: string;
+    /**
+     * Collaborator role
+     */
+    roleName: string;
+    /**
+     * Status of collaborator invitation
+     */
+    status: string;
+    /**
+     * Collaborator id
+     */
+    userId: number;
 }

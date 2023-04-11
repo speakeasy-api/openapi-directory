@@ -1,21 +1,31 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetSnippetsWorkspaceEncodedIdWatchPathParams extends SpeakeasyBase {
-    encodedId: string;
-    workspace: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetSnippetsWorkspaceEncodedIdWatchSecurity extends SpeakeasyBase {
-    oauth2?: shared.SchemeOauth2;
+    apiKey?: string;
     basic?: shared.SchemeBasic;
-    apiKey?: shared.SchemeApiKey;
+    oauth2?: string;
 }
 export declare class GetSnippetsWorkspaceEncodedIdWatchRequest extends SpeakeasyBase {
-    pathParams: GetSnippetsWorkspaceEncodedIdWatchPathParams;
-    security: GetSnippetsWorkspaceEncodedIdWatchSecurity;
+    /**
+     * The snippet id.
+     */
+    encodedId: string;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     *
+     * @remarks
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     *
+     */
+    workspace: string;
 }
 export declare class GetSnippetsWorkspaceEncodedIdWatchResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * If the snippet does not exist, or if the authenticated user is not watching the snippet.
+     */
     error?: Record<string, any>;
-    paginatedUsers?: shared.PaginatedUsers;
 }

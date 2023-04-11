@@ -1,18 +1,32 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetNetworksIdPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class GetNetworksId200ApplicationVndApiPlusJson extends SpeakeasyBase {
-    data?: shared.Network;
-    links?: shared.ResourceLink;
+import { AxiosResponse } from "axios";
+export declare class GetNetworksIdSecurity extends SpeakeasyBase {
+    apiKey: string;
 }
 export declare class GetNetworksIdRequest extends SpeakeasyBase {
-    pathParams: GetNetworksIdPathParams;
+    /**
+     * The ID of the network resource to load.
+     */
+    id: string;
+}
+/**
+ * Success
+ */
+export declare class GetNetworksId200ApplicationVndApiPlusJson extends SpeakeasyBase {
+    data?: shared.Network;
+    /**
+     * Links related to the retrieved resource
+     */
+    links?: shared.ResourceLink;
 }
 export declare class GetNetworksIdResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     getNetworksId200ApplicationVndApiPlusJsonObject?: GetNetworksId200ApplicationVndApiPlusJson;
 }

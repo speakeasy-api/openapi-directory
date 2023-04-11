@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetThingRuntimeConfigurationPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetThingRuntimeConfigurationRequest extends SpeakeasyBase {
+    /**
+     * The thing name.
+     */
     thingName: string;
-}
-export declare class GetThingRuntimeConfigurationHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,14 +14,20 @@ export declare class GetThingRuntimeConfigurationHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetThingRuntimeConfigurationRequest extends SpeakeasyBase {
-    pathParams: GetThingRuntimeConfigurationPathParams;
-    headers: GetThingRuntimeConfigurationHeaders;
-}
 export declare class GetThingRuntimeConfigurationResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getThingRuntimeConfigurationResponse?: shared.GetThingRuntimeConfigurationResponse;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

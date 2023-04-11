@@ -1,115 +1,170 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class ArcmwSecurity extends SpeakeasyBase {
+    apiKey: string;
+    clientId: string;
+}
 export declare class ArcmwRequestBodyCertificateParameters extends SpeakeasyBase {
+    /**
+     * ApplicationNumber
+     */
     udf1: string;
 }
+/**
+ * The format of the certificate in response.
+ */
 export declare enum ArcmwRequestBodyFormatEnum {
     Pdf = "pdf"
 }
+/**
+ * Request format
+ */
 export declare class ArcmwRequestBody extends SpeakeasyBase {
     certificateParameters?: ArcmwRequestBodyCertificateParameters;
-    consentArtifact?: any;
+    consentArtifact?: shared.ConsentArtifactSchema;
+    /**
+     * The format of the certificate in response.
+     */
     format: ArcmwRequestBodyFormatEnum;
+    /**
+     * A unique transaction id for this request in UUID format. It is used for tracking the request.
+     */
     txnId: string;
 }
-export declare class ArcmwSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
-    clientId: shared.SchemeClientId;
+export declare enum Arcmw504ApplicationJSONErrorEnum {
+    GatewayTimeout = "gateway_timeout"
 }
-export declare enum Arcmw400ApplicationJsonErrorEnum {
+export declare enum Arcmw504ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
+}
+/**
+ * Gateway timeout
+ */
+export declare class Arcmw504ApplicationJSON extends SpeakeasyBase {
+    error?: Arcmw504ApplicationJSONErrorEnum;
+    errorDescription?: Arcmw504ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Arcmw503ApplicationJSONErrorEnum {
+    ServiceUnavailable = "service_unavailable"
+}
+export declare enum Arcmw503ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
+}
+/**
+ * Service unavailable
+ */
+export declare class Arcmw503ApplicationJSON extends SpeakeasyBase {
+    error?: Arcmw503ApplicationJSONErrorEnum;
+    errorDescription?: Arcmw503ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Arcmw502ApplicationJSONErrorEnum {
+    BadGatewy = "bad_gatewy"
+}
+export declare enum Arcmw502ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
+}
+/**
+ * Bad gateway
+ */
+export declare class Arcmw502ApplicationJSON extends SpeakeasyBase {
+    error?: Arcmw502ApplicationJSONErrorEnum;
+    errorDescription?: Arcmw502ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Arcmw500ApplicationJSONErrorEnum {
+    InternalServerError = "internal_server_error"
+}
+export declare enum Arcmw500ApplicationJSONErrorDescriptionEnum {
+    InternalServerError = "Internal server error"
+}
+/**
+ * Internal server error
+ */
+export declare class Arcmw500ApplicationJSON extends SpeakeasyBase {
+    error?: Arcmw500ApplicationJSONErrorEnum;
+    errorDescription?: Arcmw500ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Arcmw404ApplicationJSONErrorEnum {
+    RecordNotFound = "record_not_found",
+    UrlNotFound = "url_not_found"
+}
+export declare enum Arcmw404ApplicationJSONErrorDescriptionEnum {
+    NoRecordFound = "No record found",
+    YourAPIUrlOrPathIsIncorrect = "Your API url or path is incorrect"
+}
+/**
+ * No record found
+ */
+export declare class Arcmw404ApplicationJSON extends SpeakeasyBase {
+    error?: Arcmw404ApplicationJSONErrorEnum;
+    errorDescription?: Arcmw404ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Arcmw401ApplicationJSONErrorEnum {
+    InvalidAuthentication = "invalid_authentication",
+    InvalidAuthorization = "invalid_authorization"
+}
+export declare enum Arcmw401ApplicationJSONErrorDescriptionEnum {
+    AuthenticationFailed = "Authentication failed",
+    YouAreNotAuthorizedToUseThisAPI = "You are not authorized to use this API"
+}
+/**
+ * Unauthorized access
+ */
+export declare class Arcmw401ApplicationJSON extends SpeakeasyBase {
+    error?: Arcmw401ApplicationJSONErrorEnum;
+    errorDescription?: Arcmw401ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Arcmw400ApplicationJSONErrorEnum {
     MissingParameter = "missing_parameter",
     InvalidParameter = "invalid_parameter",
     InvalidFormat = "invalid_format",
     InvalidTxnid = "invalid_txnid",
     InvalidConsentid = "invalid_consentid"
 }
-export declare enum Arcmw400ApplicationJsonErrorDescriptionEnum {
+export declare enum Arcmw400ApplicationJSONErrorDescriptionEnum {
     PleaseProvideAllMandatoryParameters = "Please provide all mandatory parameters",
     BadRequest = "Bad request",
     TheFormatParameterIsInvalid = "The format parameter is invalid",
-    TheTxnIdParameterMustBeInUuidFormat = "The txnId parameter must be in UUID format",
-    TheConsentIdParameterMustBeInUuidFormat = "The consentId parameter must be in UUID format"
+    TheTxnIdParameterMustBeInUUIDFormat = "The txnId parameter must be in UUID format",
+    TheConsentIdParameterMustBeInUUIDFormat = "The consentId parameter must be in UUID format"
 }
-export declare class Arcmw400ApplicationJson extends SpeakeasyBase {
-    error?: Arcmw400ApplicationJsonErrorEnum;
-    errorDescription?: Arcmw400ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Arcmw401ApplicationJsonErrorEnum {
-    InvalidAuthentication = "invalid_authentication",
-    InvalidAuthorization = "invalid_authorization"
-}
-export declare enum Arcmw401ApplicationJsonErrorDescriptionEnum {
-    AuthenticationFailed = "Authentication failed",
-    YouAreNotAuthorizedToUseThisApi = "You are not authorized to use this API"
-}
-export declare class Arcmw401ApplicationJson extends SpeakeasyBase {
-    error?: Arcmw401ApplicationJsonErrorEnum;
-    errorDescription?: Arcmw401ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Arcmw404ApplicationJsonErrorEnum {
-    RecordNotFound = "record_not_found",
-    UrlNotFound = "url_not_found"
-}
-export declare enum Arcmw404ApplicationJsonErrorDescriptionEnum {
-    NoRecordFound = "No record found",
-    YourApiUrlOrPathIsIncorrect = "Your API url or path is incorrect"
-}
-export declare class Arcmw404ApplicationJson extends SpeakeasyBase {
-    error?: Arcmw404ApplicationJsonErrorEnum;
-    errorDescription?: Arcmw404ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Arcmw500ApplicationJsonErrorEnum {
-    InternalServerError = "internal_server_error"
-}
-export declare enum Arcmw500ApplicationJsonErrorDescriptionEnum {
-    InternalServerError = "Internal server error"
-}
-export declare class Arcmw500ApplicationJson extends SpeakeasyBase {
-    error?: Arcmw500ApplicationJsonErrorEnum;
-    errorDescription?: Arcmw500ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Arcmw502ApplicationJsonErrorEnum {
-    BadGatewy = "bad_gatewy"
-}
-export declare enum Arcmw502ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
-}
-export declare class Arcmw502ApplicationJson extends SpeakeasyBase {
-    error?: Arcmw502ApplicationJsonErrorEnum;
-    errorDescription?: Arcmw502ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Arcmw503ApplicationJsonErrorEnum {
-    ServiceUnavailable = "service_unavailable"
-}
-export declare enum Arcmw503ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
-}
-export declare class Arcmw503ApplicationJson extends SpeakeasyBase {
-    error?: Arcmw503ApplicationJsonErrorEnum;
-    errorDescription?: Arcmw503ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Arcmw504ApplicationJsonErrorEnum {
-    GatewayTimeout = "gateway_timeout"
-}
-export declare enum Arcmw504ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
-}
-export declare class Arcmw504ApplicationJson extends SpeakeasyBase {
-    error?: Arcmw504ApplicationJsonErrorEnum;
-    errorDescription?: Arcmw504ApplicationJsonErrorDescriptionEnum;
-}
-export declare class ArcmwRequest extends SpeakeasyBase {
-    request?: ArcmwRequestBody;
-    security: ArcmwSecurity;
+/**
+ * Bad request
+ */
+export declare class Arcmw400ApplicationJSON extends SpeakeasyBase {
+    error?: Arcmw400ApplicationJSONErrorEnum;
+    errorDescription?: Arcmw400ApplicationJSONErrorDescriptionEnum;
 }
 export declare class ArcmwResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    arcmw400ApplicationJSONObject?: Arcmw400ApplicationJson;
-    arcmw401ApplicationJSONObject?: Arcmw401ApplicationJson;
-    arcmw404ApplicationJSONObject?: Arcmw404ApplicationJson;
-    arcmw500ApplicationJSONObject?: Arcmw500ApplicationJson;
-    arcmw502ApplicationJSONObject?: Arcmw502ApplicationJson;
-    arcmw503ApplicationJSONObject?: Arcmw503ApplicationJson;
-    arcmw504ApplicationJSONObject?: Arcmw504ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad request
+     */
+    arcmw400ApplicationJSONObject?: Arcmw400ApplicationJSON;
+    /**
+     * Unauthorized access
+     */
+    arcmw401ApplicationJSONObject?: Arcmw401ApplicationJSON;
+    /**
+     * No record found
+     */
+    arcmw404ApplicationJSONObject?: Arcmw404ApplicationJSON;
+    /**
+     * Internal server error
+     */
+    arcmw500ApplicationJSONObject?: Arcmw500ApplicationJSON;
+    /**
+     * Bad gateway
+     */
+    arcmw502ApplicationJSONObject?: Arcmw502ApplicationJSON;
+    /**
+     * Service unavailable
+     */
+    arcmw503ApplicationJSONObject?: Arcmw503ApplicationJSON;
+    /**
+     * Gateway timeout
+     */
+    arcmw504ApplicationJSONObject?: Arcmw504ApplicationJSON;
 }

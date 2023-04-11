@@ -1,13 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetIntegrationsPathParams extends SpeakeasyBase {
-    apiId: string;
-}
-export declare class GetIntegrationsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
-export declare class GetIntegrationsHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetIntegrationsRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -15,17 +9,37 @@ export declare class GetIntegrationsHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class GetIntegrationsRequest extends SpeakeasyBase {
-    pathParams: GetIntegrationsPathParams;
-    queryParams: GetIntegrationsQueryParams;
-    headers: GetIntegrationsHeaders;
+    /**
+     * The API identifier.
+     */
+    apiId: string;
+    /**
+     * The maximum number of elements to be returned for this resource.
+     */
+    maxResults?: string;
+    /**
+     * The next page of elements from this collection. Not valid for the last element of the collection.
+     */
+    nextToken?: string;
 }
 export declare class GetIntegrationsResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getIntegrationsResponse?: shared.GetIntegrationsResponse;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

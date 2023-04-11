@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { Entity } from "./entity";
+import { Tag } from "./tag";
 /**
  * An object that contains the <code>ChangeType</code>, <code>Details</code>, and <code>Entity</code>.
-**/
+ */
 export declare class Change extends SpeakeasyBase {
     changeName?: string;
     changeType: string;
     details: string;
     entity: Entity;
+    entityTags?: Tag[];
 }

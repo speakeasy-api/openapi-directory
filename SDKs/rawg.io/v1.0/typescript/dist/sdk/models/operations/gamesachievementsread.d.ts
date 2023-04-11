@@ -1,13 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GamesAchievementsReadPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GamesAchievementsReadRequest extends SpeakeasyBase {
-    pathParams: GamesAchievementsReadPathParams;
+    /**
+     * An ID or a slug identifying this Game.
+     */
+    id: string;
 }
 export declare class GamesAchievementsReadResponse extends SpeakeasyBase {
     contentType: string;
     parentAchievement?: shared.ParentAchievement;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

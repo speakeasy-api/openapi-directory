@@ -1,9 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class TasksReadPathParams extends SpeakeasyBase {
-    id: string;
+import { AxiosResponse } from "axios";
+export declare class TasksReadSecurity extends SpeakeasyBase {
+    drchronoOauth2: string;
 }
-export declare class TasksReadQueryParams extends SpeakeasyBase {
+export declare class TasksReadRequest extends SpeakeasyBase {
     assigneeGroup?: number;
     assigneeUser?: number;
     category?: number;
@@ -11,19 +12,16 @@ export declare class TasksReadQueryParams extends SpeakeasyBase {
     dueAtRange?: string;
     dueAtSince?: string;
     dueAtUnknown?: string;
+    id: string;
     since?: string;
     status?: number;
-}
-export declare class TasksReadSecurity extends SpeakeasyBase {
-    drchronoOauth2: shared.SchemeDrchronoOauth2;
-}
-export declare class TasksReadRequest extends SpeakeasyBase {
-    pathParams: TasksReadPathParams;
-    queryParams: TasksReadQueryParams;
-    security: TasksReadSecurity;
 }
 export declare class TasksReadResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
     task?: shared.Task;
 }

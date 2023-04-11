@@ -1,21 +1,50 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetSettingsChangesQueryParams extends SpeakeasyBase {
-    cursor?: string;
-    filter?: Record<string, any>;
-    filterGt?: Record<string, any>;
-    filterGteq?: Record<string, any>;
-    filterLike?: Record<string, any>;
-    filterLt?: Record<string, any>;
-    filterLteq?: Record<string, any>;
-    perPage?: number;
-    sortBy?: Record<string, any>;
-}
+import { AxiosResponse } from "axios";
 export declare class GetSettingsChangesRequest extends SpeakeasyBase {
-    queryParams: GetSettingsChangesQueryParams;
+    /**
+     * Used for pagination.  When a list request has more records available, cursors are provided in the response headers `X-Files-Cursor-Next` and `X-Files-Cursor-Prev`.  Send one of those cursor value here to resume an existing list from the next available record.  Note: many of our SDKs have iterator methods that will automatically handle cursor-based pagination.
+     */
+    cursor?: string;
+    /**
+     * If set, return records where the specified field is equal to the supplied value. Valid fields are `api_key_id` and `user_id`.
+     */
+    filter?: Record<string, any>;
+    /**
+     * If set, return records where the specified field is greater than the supplied value. Valid fields are `api_key_id` and `user_id`.
+     */
+    filterGt?: Record<string, any>;
+    /**
+     * If set, return records where the specified field is greater than or equal to the supplied value. Valid fields are `api_key_id` and `user_id`.
+     */
+    filterGteq?: Record<string, any>;
+    /**
+     * If set, return records where the specified field is equal to the supplied value. Valid fields are `api_key_id` and `user_id`.
+     */
+    filterLike?: Record<string, any>;
+    /**
+     * If set, return records where the specified field is less than the supplied value. Valid fields are `api_key_id` and `user_id`.
+     */
+    filterLt?: Record<string, any>;
+    /**
+     * If set, return records where the specified field is less than or equal to the supplied value. Valid fields are `api_key_id` and `user_id`.
+     */
+    filterLteq?: Record<string, any>;
+    /**
+     * Number of records to show per page.  (Max: 10,000, 1,000 or less is recommended).
+     */
+    perPage?: number;
+    /**
+     * If set, sort records by the specified field in either `asc` or `desc` direction (e.g. `sort_by[api_key_id]=desc`). Valid fields are `api_key_id`, `created_at` or `user_id`.
+     */
+    sortBy?: Record<string, any>;
 }
 export declare class GetSettingsChangesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * A list of SettingsChanges objects.
+     */
     settingsChangeEntities?: shared.SettingsChangeEntity[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

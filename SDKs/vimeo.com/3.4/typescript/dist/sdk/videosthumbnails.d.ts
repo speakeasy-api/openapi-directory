@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class VideosThumbnails {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,31 +9,31 @@ export declare class VideosThumbnails {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createVideoThumbnail - Add a video thumbnail
-    **/
-    createVideoThumbnail(req: operations.CreateVideoThumbnailRequest, config?: AxiosRequestConfig): Promise<operations.CreateVideoThumbnailResponse>;
+     * Add a video thumbnail
+     */
+    createVideoThumbnail(req: operations.CreateVideoThumbnailRequest, security: operations.CreateVideoThumbnailSecurity, config?: AxiosRequestConfig): Promise<operations.CreateVideoThumbnailResponse>;
     /**
-     * createVideoThumbnailAlt1 - Add a video thumbnail
-    **/
-    createVideoThumbnailAlt1(req: operations.CreateVideoThumbnailAlt1Request, config?: AxiosRequestConfig): Promise<operations.CreateVideoThumbnailAlt1Response>;
+     * Add a video thumbnail
+     */
+    createVideoThumbnailAlt1(req: operations.CreateVideoThumbnailAlt1Request, security: operations.CreateVideoThumbnailAlt1Security, config?: AxiosRequestConfig): Promise<operations.CreateVideoThumbnailAlt1Response>;
     /**
-     * deleteVideoThumbnail - Delete a video thumbnail
-    **/
-    deleteVideoThumbnail(req: operations.DeleteVideoThumbnailRequest, config?: AxiosRequestConfig): Promise<operations.DeleteVideoThumbnailResponse>;
+     * Delete a video thumbnail
+     */
+    deleteVideoThumbnail(req: operations.DeleteVideoThumbnailRequest, security: operations.DeleteVideoThumbnailSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteVideoThumbnailResponse>;
     /**
-     * editVideoThumbnail - Edit a video thumbnail
-    **/
-    editVideoThumbnail(req: operations.EditVideoThumbnailRequest, config?: AxiosRequestConfig): Promise<operations.EditVideoThumbnailResponse>;
+     * Edit a video thumbnail
+     */
+    editVideoThumbnail(req: operations.EditVideoThumbnailRequest, security: operations.EditVideoThumbnailSecurity, config?: AxiosRequestConfig): Promise<operations.EditVideoThumbnailResponse>;
     /**
-     * getVideoThumbnail - Get a video thumbnail
-    **/
+     * Get a video thumbnail
+     */
     getVideoThumbnail(req: operations.GetVideoThumbnailRequest, config?: AxiosRequestConfig): Promise<operations.GetVideoThumbnailResponse>;
     /**
-     * getVideoThumbnails - Get all the thumbnails of a video
-    **/
+     * Get all the thumbnails of a video
+     */
     getVideoThumbnails(req: operations.GetVideoThumbnailsRequest, config?: AxiosRequestConfig): Promise<operations.GetVideoThumbnailsResponse>;
     /**
-     * getVideoThumbnailsAlt1 - Get all the thumbnails of a video
-    **/
+     * Get all the thumbnails of a video
+     */
     getVideoThumbnailsAlt1(req: operations.GetVideoThumbnailsAlt1Request, config?: AxiosRequestConfig): Promise<operations.GetVideoThumbnailsAlt1Response>;
 }

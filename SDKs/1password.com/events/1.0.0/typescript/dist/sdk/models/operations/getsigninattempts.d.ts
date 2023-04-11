@@ -1,15 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class GetSignInAttemptsSecurity extends SpeakeasyBase {
-    jwtsa: shared.SchemeJwtsa;
+    jwtsa: string;
 }
-export declare class GetSignInAttemptsRequest extends SpeakeasyBase {
-    request?: any;
-    security: GetSignInAttemptsSecurity;
+/**
+ * Sign-in attempts response object
+ */
+export declare class GetSignInAttempts200ApplicationJSON extends SpeakeasyBase {
+    items?: shared.SignInAttempt[];
 }
 export declare class GetSignInAttemptsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Unauthorized
+     */
     error?: shared.ErrorT;
     statusCode: number;
-    getSignInAttempts200ApplicationJSONAny?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * Sign-in attempts response object
+     */
+    getSignInAttempts200ApplicationJSONObject?: GetSignInAttempts200ApplicationJSON;
 }

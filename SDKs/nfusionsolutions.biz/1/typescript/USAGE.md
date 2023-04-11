@@ -1,27 +1,28 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetApiVVersionCurrenciesHistoryRequest, GetApiVVersionCurrenciesHistoryResponse } from "openapi/src/sdk/models/operations";
+import {
+  CurrenciesHistoryGETRequest,
+  CurrenciesHistoryGETResponse,
+  CurrenciesHistoryGETFormatEnum,
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
-const sdk = new SDK();
-    
-const req: GetApiVVersionCurrenciesHistoryRequest = {
-  pathParams: {
-    version: "sit",
+import { SDK } from "openapi";
+const sdk = new SDK({
+  security: {
+    token: "YOUR_API_KEY_HERE",
   },
-  queryParams: {
-    end: "2006-05-01T09:38:06Z",
-    format: "xml",
-    interval: "expedita",
-    pairs: "consequuntur",
-    start: "2003-04-20T23:11:44Z",
-    token: "expedita",
-  },
+});
+
+const req: CurrenciesHistoryGETRequest = {
+  end: "2021-10-25T05:21:43.948Z",
+  format: CurrenciesHistoryGETFormatEnum.Xml,
+  interval: "quibusdam",
+  pairs: "unde",
+  start: "2021-05-14T08:28:11.899Z",
 };
 
-sdk.currencies.getApiVVersionCurrenciesHistory(req).then((res: GetApiVVersionCurrenciesHistoryResponse | AxiosError) => {
+sdk.currencies.currenciesHistoryGET(req).then((res: CurrenciesHistoryGETResponse | AxiosError) => {
    // handle response
 });
 ```

@@ -1,43 +1,39 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { MemcacheProjectsLocationsInstancesApplyParametersRequest, MemcacheProjectsLocationsInstancesApplyParametersResponse } from "openapi/src/sdk/models/operations";
+import {
+  MemcacheProjectsLocationsInstancesApplyParametersRequest,
+  MemcacheProjectsLocationsInstancesApplyParametersResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: MemcacheProjectsLocationsInstancesApplyParametersRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    name: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  applyParametersRequest: {
     applyAll: false,
     nodeIds: [
-      "voluptatum",
+      "distinctio",
+      "quibusdam",
+      "unde",
     ],
   },
+  accessToken: "nulla",
+  alt: AltEnum.Media,
+  callback: "illum",
+  fields: "vel",
+  key: "error",
+  name: "deserunt",
+  oauthToken: "suscipit",
+  prettyPrint: false,
+  quotaUser: "iure",
+  uploadType: "magnam",
+  uploadProtocol: "debitis",
 };
 
 sdk.projects.memcacheProjectsLocationsInstancesApplyParameters(req).then((res: MemcacheProjectsLocationsInstancesApplyParametersResponse | AxiosError) => {

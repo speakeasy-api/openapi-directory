@@ -1,6 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CircuitsProvidersListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class CircuitsProvidersListRequest extends SpeakeasyBase {
     account?: string;
     accountIc?: string;
     accountIe?: string;
@@ -29,6 +30,9 @@ export declare class CircuitsProvidersListQueryParams extends SpeakeasyBase {
     lastUpdated?: string;
     lastUpdatedGte?: string;
     lastUpdatedLte?: string;
+    /**
+     * Number of results to return per page.
+     */
     limit?: number;
     name?: string;
     nameIc?: string;
@@ -40,6 +44,9 @@ export declare class CircuitsProvidersListQueryParams extends SpeakeasyBase {
     nameNie?: string;
     nameNiew?: string;
     nameNisw?: string;
+    /**
+     * The initial index from which to return the results.
+     */
     offset?: number;
     q?: string;
     region?: string;
@@ -63,17 +70,15 @@ export declare class CircuitsProvidersListQueryParams extends SpeakeasyBase {
     tag?: string;
     tagN?: string;
 }
-export declare class CircuitsProvidersList200ApplicationJson extends SpeakeasyBase {
+export declare class CircuitsProvidersList200ApplicationJSON extends SpeakeasyBase {
     count: number;
     next?: string;
     previous?: string;
     results: shared.Provider[];
 }
-export declare class CircuitsProvidersListRequest extends SpeakeasyBase {
-    queryParams: CircuitsProvidersListQueryParams;
-}
 export declare class CircuitsProvidersListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    circuitsProvidersList200ApplicationJSONObject?: CircuitsProvidersList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    circuitsProvidersList200ApplicationJSONObject?: CircuitsProvidersList200ApplicationJSON;
 }

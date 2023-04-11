@@ -7,7 +7,7 @@ import { ResetActionConfiguration } from "./resetactionconfiguration";
 import { SnoozeActionConfiguration } from "./snoozeactionconfiguration";
 /**
  * Contains information about the action that you can take to respond to the alarm.
-**/
+ */
 export declare class CustomerAction extends SpeakeasyBase {
     acknowledgeActionConfiguration?: AcknowledgeActionConfiguration;
     actionName?: CustomerActionNameEnum;

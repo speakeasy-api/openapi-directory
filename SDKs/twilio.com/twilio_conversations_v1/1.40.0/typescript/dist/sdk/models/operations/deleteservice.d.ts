@@ -1,0 +1,18 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
+export declare const DeleteServiceServerList: readonly ["https://conversations.twilio.com"];
+export declare class DeleteServiceSecurity extends SpeakeasyBase {
+    password: string;
+    username: string;
+}
+export declare class DeleteServiceRequest extends SpeakeasyBase {
+    /**
+     * A 34 character string that uniquely identifies this resource.
+     */
+    sid: string;
+}
+export declare class DeleteServiceResponse extends SpeakeasyBase {
+    contentType: string;
+    statusCode: number;
+    rawResponse?: AxiosResponse;
+}

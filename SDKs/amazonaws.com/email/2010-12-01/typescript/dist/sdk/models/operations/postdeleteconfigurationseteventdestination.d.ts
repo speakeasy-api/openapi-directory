@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteConfigurationSetEventDestinationActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteConfigurationSetEventDestinationActionEnum {
     DeleteConfigurationSetEventDestination = "DeleteConfigurationSetEventDestination"
 }
-export declare enum PostDeleteConfigurationSetEventDestinationVersionEnum {
+export declare enum POSTDeleteConfigurationSetEventDestinationVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostDeleteConfigurationSetEventDestinationQueryParams extends SpeakeasyBase {
-    action: PostDeleteConfigurationSetEventDestinationActionEnum;
-    version: PostDeleteConfigurationSetEventDestinationVersionEnum;
-}
-export declare class PostDeleteConfigurationSetEventDestinationHeaders extends SpeakeasyBase {
+export declare class POSTDeleteConfigurationSetEventDestinationRequest extends SpeakeasyBase {
+    action: POSTDeleteConfigurationSetEventDestinationActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteConfigurationSetEventDestinationVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteConfigurationSetEventDestinationHeaders extends S
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteConfigurationSetEventDestinationRequest extends SpeakeasyBase {
-    queryParams: PostDeleteConfigurationSetEventDestinationQueryParams;
-    headers: PostDeleteConfigurationSetEventDestinationHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteConfigurationSetEventDestinationResponse extends SpeakeasyBase {
+export declare class POSTDeleteConfigurationSetEventDestinationResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

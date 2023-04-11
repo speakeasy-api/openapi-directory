@@ -6,5 +6,7 @@ export declare enum LifeCycleStateEnum {
     ReadyForCutover = "READY_FOR_CUTOVER",
     CuttingOver = "CUTTING_OVER",
     Cutover = "CUTOVER",
-    Disconnected = "DISCONNECTED"
+    Disconnected = "DISCONNECTED",
+    Discovered = "DISCOVERED",
+    PendingInstallation = "PENDING_INSTALLATION"
 }

@@ -1,32 +1,68 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class TaskGetPathParams extends SpeakeasyBase {
-    jobId: string;
-    taskId: string;
-}
-export declare class TaskGetQueryParams extends SpeakeasyBase {
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class TaskGetRequest extends SpeakeasyBase {
+    /**
+     * Sets an OData $expand clause.
+     */
     dollarExpand?: string;
+    /**
+     * Sets an OData $select clause.
+     */
     dollarSelect?: string;
+    /**
+     * An ETag is specified. Specify this header to perform the operation only if the resource's ETag is an exact match as specified.
+     */
+    ifMatch?: string;
+    /**
+     * Specify this header to perform the operation only if the resource has been modified since the specified date/time.
+     */
+    ifModifiedSince?: string;
+    /**
+     * An ETag is specified. Specify this header to perform the operation only if the resource's ETag does not match the specified ETag.
+     */
+    ifNoneMatch?: string;
+    /**
+     * Specify this header to perform the operation only if the resource has not been modified since the specified date/time.
+     */
+    ifUnmodifiedSince?: string;
+    /**
+     * Client API Version.
+     */
     apiVersion: string;
+    /**
+     * Caller generated request identity, in the form of a GUID with no decoration such as curly braces e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
+     */
+    clientRequestId?: string;
+    /**
+     * The id of the job that contains the task.
+     */
+    jobId: string;
+    /**
+     * The time the request was issued. If not specified, this header will be automatically populated with the current system clock time.
+     */
+    ocpDate?: string;
+    /**
+     * Specifies if the server should return the client-request-id identifier in the response.
+     */
+    returnClientRequestId?: boolean;
+    /**
+     * The id of the task to get information about.
+     */
+    taskId: string;
+    /**
+     * Sets the maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
+     */
     timeout?: number;
 }
-export declare class TaskGetHeaders extends SpeakeasyBase {
-    ifMatch?: string;
-    ifModifiedSince?: string;
-    ifNoneMatch?: string;
-    ifUnmodifiedSince?: string;
-    clientRequestId?: string;
-    ocpDate?: string;
-    returnClientRequestId?: boolean;
-}
-export declare class TaskGetRequest extends SpeakeasyBase {
-    pathParams: TaskGetPathParams;
-    queryParams: TaskGetQueryParams;
-    headers: TaskGetHeaders;
-}
 export declare class TaskGetResponse extends SpeakeasyBase {
-    batchError?: any;
-    cloudTask?: any;
+    /**
+     * Error from the Batch service
+     */
+    batchError?: shared.BatchError;
+    cloudTask?: shared.CloudTask;
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

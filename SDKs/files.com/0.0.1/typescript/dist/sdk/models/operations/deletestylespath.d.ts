@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteStylesPathPathParams extends SpeakeasyBase {
-    path: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteStylesPathRequest extends SpeakeasyBase {
-    pathParams: DeleteStylesPathPathParams;
+    /**
+     * Style path.
+     */
+    path: string;
 }
 export declare class DeleteStylesPathResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

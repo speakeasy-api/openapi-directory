@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetSimPathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetSimRequest extends SpeakeasyBase {
-    pathParams: GetSimPathParams;
+    /**
+     * Agent to return the first simulation name
+     */
+    agentNum: number;
 }
 export declare class GetSimResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     getSim200ApplicationJSONString?: string;
 }

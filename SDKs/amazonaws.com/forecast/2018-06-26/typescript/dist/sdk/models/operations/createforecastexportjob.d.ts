@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum CreateForecastExportJobXAmzTargetEnum {
     AmazonForecastCreateForecastExportJob = "AmazonForecast.CreateForecastExportJob"
 }
-export declare class CreateForecastExportJobHeaders extends SpeakeasyBase {
+export declare class CreateForecastExportJobRequest extends SpeakeasyBase {
+    createForecastExportJobRequest: shared.CreateForecastExportJobRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class CreateForecastExportJobHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: CreateForecastExportJobXAmzTargetEnum;
 }
-export declare class CreateForecastExportJobRequest extends SpeakeasyBase {
-    headers: CreateForecastExportJobHeaders;
-    request: shared.CreateForecastExportJobRequest;
-}
 export declare class CreateForecastExportJobResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     createForecastExportJobResponse?: shared.CreateForecastExportJobResponse;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
-    resourceAlreadyExistsException?: any;
+    /**
+     * ResourceInUseException
+     */
     resourceInUseException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceAlreadyExistsException
+     */
+    resourceAlreadyExistsException?: any;
 }

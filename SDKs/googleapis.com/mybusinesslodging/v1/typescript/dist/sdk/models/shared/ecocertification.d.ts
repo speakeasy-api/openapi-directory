@@ -1,10 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Awarded exception.
+ */
 export declare enum EcoCertificationAwardedExceptionEnum {
     ExceptionUnspecified = "EXCEPTION_UNSPECIFIED",
     UnderConstruction = "UNDER_CONSTRUCTION",
     DependentOnSeason = "DEPENDENT_ON_SEASON",
     DependentOnDayOfWeek = "DEPENDENT_ON_DAY_OF_WEEK"
 }
+/**
+ * Required. The eco certificate.
+ */
 export declare enum EcoCertificationEcoCertificateEnum {
     EcoCertificateUnspecified = "ECO_CERTIFICATE_UNSPECIFIED",
     Iso14001 = "ISO14001",
@@ -37,9 +43,18 @@ export declare enum EcoCertificationEcoCertificateEnum {
 }
 /**
  * An eco certificate awarded to the hotel.
-**/
+ */
 export declare class EcoCertification extends SpeakeasyBase {
+    /**
+     * Whether the eco certificate was awarded or not.
+     */
     awarded?: boolean;
+    /**
+     * Awarded exception.
+     */
     awardedException?: EcoCertificationAwardedExceptionEnum;
+    /**
+     * Required. The eco certificate.
+     */
     ecoCertificate?: EcoCertificationEcoCertificateEnum;
 }

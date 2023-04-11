@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetWithdrawnObjectCountUsingGetPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETWithdrawnObjectCountUsingGETRequest extends SpeakeasyBase {
+    /**
+     * dateYYYYMMDD
+     */
     dateYYYYMMDD: string;
+    /**
+     * speciesTypeKey
+     */
     speciesTypeKey: number;
 }
-export declare class GetWithdrawnObjectCountUsingGetRequest extends SpeakeasyBase {
-    pathParams: GetWithdrawnObjectCountUsingGetPathParams;
-}
-export declare class GetWithdrawnObjectCountUsingGetResponse extends SpeakeasyBase {
+export declare class GETWithdrawnObjectCountUsingGETResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

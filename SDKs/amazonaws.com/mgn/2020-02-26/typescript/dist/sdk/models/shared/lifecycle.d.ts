@@ -4,7 +4,7 @@ import { LifeCycleLastTest } from "./lifecyclelasttest";
 import { LifeCycleStateEnum } from "./lifecyclestateenum";
 /**
  * Lifecycle.
-**/
+ */
 export declare class LifeCycle extends SpeakeasyBase {
     addedToServiceDateTime?: string;
     elapsedReplicationDuration?: string;

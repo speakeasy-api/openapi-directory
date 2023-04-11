@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteWorkspaceImageXAmzTargetEnum {
     WorkspacesServiceDeleteWorkspaceImage = "WorkspacesService.DeleteWorkspaceImage"
 }
-export declare class DeleteWorkspaceImageHeaders extends SpeakeasyBase {
+export declare class DeleteWorkspaceImageRequest extends SpeakeasyBase {
+    deleteWorkspaceImageRequest: shared.DeleteWorkspaceImageRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class DeleteWorkspaceImageHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteWorkspaceImageXAmzTargetEnum;
 }
-export declare class DeleteWorkspaceImageRequest extends SpeakeasyBase {
-    headers: DeleteWorkspaceImageHeaders;
-    request: shared.DeleteWorkspaceImageRequest;
-}
 export declare class DeleteWorkspaceImageResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteWorkspaceImageResult?: Record<string, any>;
+    /**
+     * InvalidResourceStateException
+     */
     invalidResourceStateException?: any;
+    /**
+     * ResourceAssociatedException
+     */
     resourceAssociatedException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

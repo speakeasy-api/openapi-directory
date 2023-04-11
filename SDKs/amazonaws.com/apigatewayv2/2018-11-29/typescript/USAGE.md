@@ -1,69 +1,72 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateApiRequest, CreateApiResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CreateApiRequest,
+  CreateApiResponse,
+  CreateApiRequestBodyProtocolTypeEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    hmac: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: CreateApiRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-  },
-  request: {
-    apiKeySelectionExpression: "voluptas",
+  requestBody: {
+    apiKeySelectionExpression: "corrupti",
     corsConfiguration: {
-      allowCredentials: {
-        "et": "nihil",
-      },
-      allowHeaders: {
-        "dicta": "debitis",
-        "voluptatum": "et",
-        "ut": "dolorem",
-      },
-      allowMethods: {
-        "voluptate": "iste",
-        "vitae": "totam",
-      },
-      allowOrigins: {
-        "illum": "debitis",
-      },
-      exposeHeaders: {
-        "odio": "dolore",
-        "id": "aspernatur",
-      },
-      maxAge: {
-        "totam": "commodi",
-        "quis": "est",
-        "aut": "odit",
-      },
+      allowCredentials: false,
+      allowHeaders: [
+        "distinctio",
+        "quibusdam",
+        "unde",
+      ],
+      allowMethods: [
+        "corrupti",
+        "illum",
+        "vel",
+        "error",
+      ],
+      allowOrigins: [
+        "suscipit",
+        "iure",
+        "magnam",
+      ],
+      exposeHeaders: [
+        "ipsa",
+        "delectus",
+        "tempora",
+        "suscipit",
+      ],
+      maxAge: 477665,
     },
-    credentialsArn: "non",
-    description: "voluptas",
-    disableExecuteApiEndpoint: true,
+    credentialsArn: "minus",
+    description: "placeat",
+    disableExecuteApiEndpoint: false,
     disableSchemaValidation: false,
-    name: "illo",
-    protocolType: "WEBSOCKET",
-    routeKey: "officiis",
-    routeSelectionExpression: "autem",
+    name: "voluptatum",
+    protocolType: CreateApiRequestBodyProtocolTypeEnum.Websocket,
+    routeKey: "excepturi",
+    routeSelectionExpression: "nisi",
     tags: {
-      "nobis": "odio",
+      "temporibus": "ab",
+      "quis": "veritatis",
+      "deserunt": "perferendis",
+      "ipsam": "repellendus",
     },
-    target: "qui",
-    version: "recusandae",
+    target: "sapiente",
+    version: "quo",
   },
+  xAmzAlgorithm: "odit",
+  xAmzContentSha256: "at",
+  xAmzCredential: "at",
+  xAmzDate: "maiores",
+  xAmzSecurityToken: "molestiae",
+  xAmzSignature: "quod",
+  xAmzSignedHeaders: "quod",
 };
 
 sdk.createApi(req).then((res: CreateApiResponse | AxiosError) => {

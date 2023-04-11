@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum EvaluatePullRequestApprovalRulesXAmzTargetEnum {
     CodeCommit20150413EvaluatePullRequestApprovalRules = "CodeCommit_20150413.EvaluatePullRequestApprovalRules"
 }
-export declare class EvaluatePullRequestApprovalRulesHeaders extends SpeakeasyBase {
+export declare class EvaluatePullRequestApprovalRulesRequest extends SpeakeasyBase {
+    evaluatePullRequestApprovalRulesInput: shared.EvaluatePullRequestApprovalRulesInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,23 +15,56 @@ export declare class EvaluatePullRequestApprovalRulesHeaders extends SpeakeasyBa
     xAmzSignedHeaders?: string;
     xAmzTarget: EvaluatePullRequestApprovalRulesXAmzTargetEnum;
 }
-export declare class EvaluatePullRequestApprovalRulesRequest extends SpeakeasyBase {
-    headers: EvaluatePullRequestApprovalRulesHeaders;
-    request: shared.EvaluatePullRequestApprovalRulesInput;
-}
 export declare class EvaluatePullRequestApprovalRulesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * EncryptionIntegrityChecksFailedException
+     */
     encryptionIntegrityChecksFailedException?: any;
+    /**
+     * EncryptionKeyAccessDeniedException
+     */
     encryptionKeyAccessDeniedException?: any;
+    /**
+     * EncryptionKeyDisabledException
+     */
     encryptionKeyDisabledException?: any;
+    /**
+     * EncryptionKeyNotFoundException
+     */
     encryptionKeyNotFoundException?: any;
+    /**
+     * EncryptionKeyUnavailableException
+     */
     encryptionKeyUnavailableException?: any;
+    /**
+     * Success
+     */
     evaluatePullRequestApprovalRulesOutput?: shared.EvaluatePullRequestApprovalRulesOutput;
+    /**
+     * InvalidPullRequestIdException
+     */
     invalidPullRequestIdException?: any;
+    /**
+     * InvalidRevisionIdException
+     */
     invalidRevisionIdException?: any;
+    /**
+     * PullRequestDoesNotExistException
+     */
     pullRequestDoesNotExistException?: any;
+    /**
+     * PullRequestIdRequiredException
+     */
     pullRequestIdRequiredException?: any;
+    /**
+     * RevisionIdRequiredException
+     */
     revisionIdRequiredException?: any;
+    /**
+     * RevisionNotCurrentException
+     */
     revisionNotCurrentException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

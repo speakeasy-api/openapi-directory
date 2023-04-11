@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteTemplateActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteTemplateActionEnum {
     DeleteTemplate = "DeleteTemplate"
 }
-export declare enum GetDeleteTemplateVersionEnum {
+export declare enum GETDeleteTemplateVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetDeleteTemplateQueryParams extends SpeakeasyBase {
-    action: GetDeleteTemplateActionEnum;
+export declare class GETDeleteTemplateRequest extends SpeakeasyBase {
+    action: GETDeleteTemplateActionEnum;
+    /**
+     * The name of the template to be deleted.
+     */
     templateName: string;
-    version: GetDeleteTemplateVersionEnum;
-}
-export declare class GetDeleteTemplateHeaders extends SpeakeasyBase {
+    version: GETDeleteTemplateVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDeleteTemplateHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteTemplateRequest extends SpeakeasyBase {
-    queryParams: GetDeleteTemplateQueryParams;
-    headers: GetDeleteTemplateHeaders;
-}
-export declare class GetDeleteTemplateResponse extends SpeakeasyBase {
+export declare class GETDeleteTemplateResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -6,119 +6,225 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/accesscontextmanager/v1/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/accesscontextmanager/v1/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AccesscontextmanagerAccessPoliciesAccessLevelsCreateRequest, AccesscontextmanagerAccessPoliciesAccessLevelsCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  AccesscontextmanagerAccessPoliciesAccessLevelsCreateRequest,
+  AccesscontextmanagerAccessPoliciesAccessLevelsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  BasicLevelCombiningFunctionEnum,
+  DevicePolicyAllowedDeviceManagementLevelsEnum,
+  DevicePolicyAllowedEncryptionStatusesEnum,
+  OsConstraintOsTypeEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: AccesscontextmanagerAccessPoliciesAccessLevelsCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  accessLevel: {
     basic: {
-      combiningFunction: "OR",
+      combiningFunction: BasicLevelCombiningFunctionEnum.Or,
       conditions: [
         {
           devicePolicy: {
             allowedDeviceManagementLevels: [
-              "BASIC",
+              DevicePolicyAllowedDeviceManagementLevelsEnum.Basic,
+              DevicePolicyAllowedDeviceManagementLevelsEnum.Complete,
+              DevicePolicyAllowedDeviceManagementLevelsEnum.Basic,
+              DevicePolicyAllowedDeviceManagementLevelsEnum.Complete,
             ],
             allowedEncryptionStatuses: [
-              "UNENCRYPTED",
-              "UNENCRYPTED",
-              "UNENCRYPTED",
+              DevicePolicyAllowedEncryptionStatusesEnum.Unencrypted,
+              DevicePolicyAllowedEncryptionStatusesEnum.Unencrypted,
             ],
             osConstraints: [
               {
-                minimumVersion: "vitae",
-                osType: "DESKTOP_CHROME_OS",
-                requireVerifiedChromeOs: true,
-              },
-              {
-                minimumVersion: "illum",
-                osType: "DESKTOP_LINUX",
+                minimumVersion: "iure",
+                osType: OsConstraintOsTypeEnum.DesktopWindows,
                 requireVerifiedChromeOs: false,
               },
               {
-                minimumVersion: "odio",
-                osType: "OS_UNSPECIFIED",
+                minimumVersion: "debitis",
+                osType: OsConstraintOsTypeEnum.OsUnspecified,
                 requireVerifiedChromeOs: false,
               },
             ],
-            requireAdminApproval: true,
-            requireCorpOwned: true,
+            requireAdminApproval: false,
+            requireCorpOwned: false,
             requireScreenlock: false,
           },
           ipSubnetworks: [
-            "quis",
-            "est",
+            "tempora",
+            "suscipit",
+            "molestiae",
+            "minus",
           ],
           members: [
-            "odit",
-            "non",
-            "voluptas",
+            "voluptatum",
+            "iusto",
+            "excepturi",
+            "nisi",
           ],
-          negate: true,
+          negate: false,
           regions: [
-            "illo",
+            "temporibus",
+            "ab",
+            "quis",
+            "veritatis",
           ],
           requiredAccessLevels: [
-            "officiis",
-            "autem",
-            "consectetur",
+            "perferendis",
+            "ipsam",
+            "repellendus",
+          ],
+        },
+        {
+          devicePolicy: {
+            allowedDeviceManagementLevels: [
+              DevicePolicyAllowedDeviceManagementLevelsEnum.Complete,
+              DevicePolicyAllowedDeviceManagementLevelsEnum.ManagementUnspecified,
+              DevicePolicyAllowedDeviceManagementLevelsEnum.Complete,
+              DevicePolicyAllowedDeviceManagementLevelsEnum.Complete,
+            ],
+            allowedEncryptionStatuses: [
+              DevicePolicyAllowedEncryptionStatusesEnum.EncryptionUnsupported,
+              DevicePolicyAllowedEncryptionStatusesEnum.Encrypted,
+              DevicePolicyAllowedEncryptionStatusesEnum.Encrypted,
+              DevicePolicyAllowedEncryptionStatusesEnum.EncryptionUnsupported,
+            ],
+            osConstraints: [
+              {
+                minimumVersion: "porro",
+                osType: OsConstraintOsTypeEnum.DesktopChromeOs,
+                requireVerifiedChromeOs: false,
+              },
+              {
+                minimumVersion: "dicta",
+                osType: OsConstraintOsTypeEnum.Android,
+                requireVerifiedChromeOs: false,
+              },
+              {
+                minimumVersion: "officia",
+                osType: OsConstraintOsTypeEnum.DesktopChromeOs,
+                requireVerifiedChromeOs: false,
+              },
+            ],
+            requireAdminApproval: false,
+            requireCorpOwned: false,
+            requireScreenlock: false,
+          },
+          ipSubnetworks: [
+            "deleniti",
+          ],
+          members: [
+            "optio",
+            "totam",
+            "beatae",
+            "commodi",
+          ],
+          negate: false,
+          regions: [
+            "modi",
+            "qui",
+          ],
+          requiredAccessLevels: [
+            "cum",
+            "esse",
+            "ipsum",
+            "excepturi",
+          ],
+        },
+        {
+          devicePolicy: {
+            allowedDeviceManagementLevels: [
+              DevicePolicyAllowedDeviceManagementLevelsEnum.ManagementUnspecified,
+            ],
+            allowedEncryptionStatuses: [
+              DevicePolicyAllowedEncryptionStatusesEnum.Unencrypted,
+              DevicePolicyAllowedEncryptionStatusesEnum.EncryptionUnspecified,
+            ],
+            osConstraints: [
+              {
+                minimumVersion: "dolor",
+                osType: OsConstraintOsTypeEnum.DesktopChromeOs,
+                requireVerifiedChromeOs: false,
+              },
+              {
+                minimumVersion: "laboriosam",
+                osType: OsConstraintOsTypeEnum.Ios,
+                requireVerifiedChromeOs: false,
+              },
+              {
+                minimumVersion: "saepe",
+                osType: OsConstraintOsTypeEnum.DesktopChromeOs,
+                requireVerifiedChromeOs: false,
+              },
+            ],
+            requireAdminApproval: false,
+            requireCorpOwned: false,
+            requireScreenlock: false,
+          },
+          ipSubnetworks: [
+            "corporis",
+            "iste",
+          ],
+          members: [
+            "saepe",
+            "quidem",
+          ],
+          negate: false,
+          regions: [
+            "ipsa",
+          ],
+          requiredAccessLevels: [
+            "est",
+            "mollitia",
+            "laborum",
+            "dolores",
           ],
         },
       ],
     },
     custom: {
       expr: {
-        description: "nobis",
-        expression: "odio",
-        location: "qui",
-        title: "recusandae",
+        description: "dolorem",
+        expression: "corporis",
+        location: "explicabo",
+        title: "Miss",
       },
     },
-    description: "at",
-    name: "ipsum",
-    title: "eveniet",
+    description: "enim",
+    name: "omnis",
+    title: "Mrs.",
   },
+  accessToken: "minima",
+  alt: AltEnum.Media,
+  callback: "accusantium",
+  fields: "iure",
+  key: "culpa",
+  oauthToken: "doloribus",
+  parent: "sapiente",
+  prettyPrint: false,
+  quotaUser: "architecto",
+  uploadType: "mollitia",
+  uploadProtocol: "dolorem",
 };
 
 sdk.accessPolicies.accesscontextmanagerAccessPoliciesAccessLevelsCreate(req).then((res: AccesscontextmanagerAccessPoliciesAccessLevelsCreateResponse | AxiosError) => {
@@ -128,13 +234,16 @@ sdk.accessPolicies.accesscontextmanagerAccessPoliciesAccessLevelsCreate(req).the
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### accessPolicies
 
 * `accesscontextmanagerAccessPoliciesAccessLevelsCreate` - Creates an access level. The long-running operation from this RPC has a successful status after the access level propagates to long-lasting storage. If access levels contain errors, an error response is returned for the first error encountered.
 * `accesscontextmanagerAccessPoliciesAccessLevelsList` - Lists all access levels for an access policy.
 * `accesscontextmanagerAccessPoliciesAccessLevelsReplaceAll` - Replaces all existing access levels in an access policy with the access levels provided. This is done atomically. The long-running operation from this RPC has a successful status after all replacements propagate to long-lasting storage. If the replacement contains errors, an error response is returned for the first error encountered. Upon error, the replacement is cancelled, and existing access levels are not affected. The Operation.response field contains ReplaceAccessLevelsResponse. Removing access levels contained in existing service perimeters result in an error.
+* `accesscontextmanagerAccessPoliciesAuthorizedOrgsDescsCreate` - Creates an authorized orgs desc. The long-running operation from this RPC has a successful status after the authorized orgs desc propagates to long-lasting storage. If a authorized orgs desc contains errors, an error response is returned for the first error encountered. The name of this `AuthorizedOrgsDesc` will be assigned during creation.
+* `accesscontextmanagerAccessPoliciesAuthorizedOrgsDescsList` - Lists all authorized orgs descs for an access policy.
 * `accesscontextmanagerAccessPoliciesCreate` - Creates an access policy. This method fails if the organization already has an access policy. The long-running operation has a successful status after the access policy propagates to long-lasting storage. Syntactic and basic semantic errors are returned in `metadata` as a BadRequest proto.
 * `accesscontextmanagerAccessPoliciesGetIamPolicy` - Gets the IAM policy for the specified Access Context Manager access policy.
 * `accesscontextmanagerAccessPoliciesList` - Lists all access policies in an organization.
@@ -156,7 +265,18 @@ sdk.accessPolicies.accesscontextmanagerAccessPoliciesAccessLevelsCreate(req).the
 * `accesscontextmanagerOrganizationsGcpUserAccessBindingsGet` - Gets the GcpUserAccessBinding with the given name.
 * `accesscontextmanagerOrganizationsGcpUserAccessBindingsList` - Lists all GcpUserAccessBindings for a Google Cloud organization.
 * `accesscontextmanagerOrganizationsGcpUserAccessBindingsPatch` - Updates a GcpUserAccessBinding. Completion of this long-running operation does not necessarily signify that the changed binding is deployed onto all affected users, which may take more time.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

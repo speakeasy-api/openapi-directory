@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * user-specific methods
+ */
 export declare class User {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,10 @@ export declare class User {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getUserExtensions - Get User Extensions
+     * Get User Extensions
      *
+     * @remarks
      * This endpoint allows you to get list of your extensions including extensions from the watchlist.
-    **/
-    getUserExtensions(req: operations.GetUserExtensionsRequest, config?: AxiosRequestConfig): Promise<operations.GetUserExtensionsResponse>;
+     */
+    getUserExtensions(config?: AxiosRequestConfig): Promise<operations.GetUserExtensionsResponse>;
 }

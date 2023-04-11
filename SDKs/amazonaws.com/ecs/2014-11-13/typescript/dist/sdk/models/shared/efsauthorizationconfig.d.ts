@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { EfsAuthorizationConfigIamEnum } from "./efsauthorizationconfigiamenum";
+import { EFSAuthorizationConfigIAMEnum } from "./efsauthorizationconfigiamenum";
 /**
  * The authorization configuration details for the Amazon EFS file system.
-**/
-export declare class EfsAuthorizationConfig extends SpeakeasyBase {
+ */
+export declare class EFSAuthorizationConfig extends SpeakeasyBase {
     accessPointId?: string;
-    iam?: EfsAuthorizationConfigIamEnum;
+    iam?: EFSAuthorizationConfigIAMEnum;
 }

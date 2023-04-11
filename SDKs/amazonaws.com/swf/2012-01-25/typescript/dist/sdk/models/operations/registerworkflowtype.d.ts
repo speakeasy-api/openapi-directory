@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum RegisterWorkflowTypeXAmzTargetEnum {
     SimpleWorkflowServiceRegisterWorkflowType = "SimpleWorkflowService.RegisterWorkflowType"
 }
-export declare class RegisterWorkflowTypeHeaders extends SpeakeasyBase {
+export declare class RegisterWorkflowTypeRequest extends SpeakeasyBase {
+    registerWorkflowTypeInput: shared.RegisterWorkflowTypeInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class RegisterWorkflowTypeHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: RegisterWorkflowTypeXAmzTargetEnum;
 }
-export declare class RegisterWorkflowTypeRequest extends SpeakeasyBase {
-    headers: RegisterWorkflowTypeHeaders;
-    request: shared.RegisterWorkflowTypeInput;
-}
 export declare class RegisterWorkflowTypeResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * LimitExceededFault
+     */
     limitExceededFault?: any;
+    /**
+     * OperationNotPermittedFault
+     */
     operationNotPermittedFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TypeAlreadyExistsFault
+     */
     typeAlreadyExistsFault?: any;
+    /**
+     * UnknownResourceFault
+     */
     unknownResourceFault?: any;
 }

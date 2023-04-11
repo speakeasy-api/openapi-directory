@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostGetIdentityDkimAttributesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTGetIdentityDkimAttributesActionEnum {
     GetIdentityDkimAttributes = "GetIdentityDkimAttributes"
 }
-export declare enum PostGetIdentityDkimAttributesVersionEnum {
+export declare enum POSTGetIdentityDkimAttributesVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostGetIdentityDkimAttributesQueryParams extends SpeakeasyBase {
-    action: PostGetIdentityDkimAttributesActionEnum;
-    version: PostGetIdentityDkimAttributesVersionEnum;
-}
-export declare class PostGetIdentityDkimAttributesHeaders extends SpeakeasyBase {
+export declare class POSTGetIdentityDkimAttributesRequest extends SpeakeasyBase {
+    action: POSTGetIdentityDkimAttributesActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTGetIdentityDkimAttributesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostGetIdentityDkimAttributesHeaders extends SpeakeasyBase 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostGetIdentityDkimAttributesRequest extends SpeakeasyBase {
-    queryParams: PostGetIdentityDkimAttributesQueryParams;
-    headers: PostGetIdentityDkimAttributesHeaders;
-    request?: Uint8Array;
-}
-export declare class PostGetIdentityDkimAttributesResponse extends SpeakeasyBase {
+export declare class POSTGetIdentityDkimAttributesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

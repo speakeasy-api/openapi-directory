@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetTokenBalanceHeaders extends SpeakeasyBase {
-    authorization: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetTokenBalanceRequest extends SpeakeasyBase {
-    headers: GetTokenBalanceHeaders;
-    request: shared.GetTokenBalanceRequest;
+    /**
+     * API Key
+     */
+    authorization: string;
+    getTokenBalanceRequest: shared.GetTokenBalanceRequest;
 }
 export declare class GetTokenBalanceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
     getTokenBalance?: shared.GetTokenBalance;
 }

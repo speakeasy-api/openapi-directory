@@ -3,6 +3,9 @@ import { Alarms } from "./alarms";
 import { AuthModeEnum } from "./authmodeenum";
 import { ImageLocation } from "./imagelocation";
 import { PortalStatus } from "./portalstatus";
+/**
+ * Success
+ */
 export declare class DescribePortalResponse extends SpeakeasyBase {
     alarms?: Alarms;
     notificationSenderEmail?: string;

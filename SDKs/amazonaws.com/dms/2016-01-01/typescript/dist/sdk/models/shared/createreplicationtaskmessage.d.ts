@@ -3,7 +3,7 @@ import { MigrationTypeValueEnum } from "./migrationtypevalueenum";
 import { Tag } from "./tag";
 /**
  * <p/>
-**/
+ */
 export declare class CreateReplicationTaskMessage extends SpeakeasyBase {
     cdcStartPosition?: string;
     cdcStartTime?: Date;

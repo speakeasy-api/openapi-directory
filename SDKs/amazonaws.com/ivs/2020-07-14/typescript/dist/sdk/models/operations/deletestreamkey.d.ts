@@ -1,5 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteStreamKeyHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteStreamKeyRequestBody extends SpeakeasyBase {
+    /**
+     * ARN of the stream key to be deleted.
+     */
+    arn: string;
+}
+export declare class DeleteStreamKeyRequest extends SpeakeasyBase {
+    requestBody: DeleteStreamKeyRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -8,18 +16,24 @@ export declare class DeleteStreamKeyHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeleteStreamKeyRequestBody extends SpeakeasyBase {
-    arn: string;
-}
-export declare class DeleteStreamKeyRequest extends SpeakeasyBase {
-    headers: DeleteStreamKeyHeaders;
-    request: DeleteStreamKeyRequestBody;
-}
 export declare class DeleteStreamKeyResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * PendingVerification
+     */
     pendingVerification?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

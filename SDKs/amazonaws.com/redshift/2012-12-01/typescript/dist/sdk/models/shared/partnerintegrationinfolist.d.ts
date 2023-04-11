@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { PartnerIntegrationStatusEnum } from "./partnerintegrationstatusenum";
 /**
  * Describes a partner integration.
-**/
+ */
 export declare class PartnerIntegrationInfoList extends SpeakeasyBase {
     createdAt?: Date;
     databaseName?: string;

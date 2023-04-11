@@ -19,7 +19,6 @@ export * from "./questiontimelineevents";
 export * from "./reputationchanges";
 export * from "./reputationhistory";
 export * from "./revisions";
-export * from "./security";
 export * from "./singlefilter";
 export * from "./sites";
 export * from "./suggestededits";

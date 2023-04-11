@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Resources that manage text models and model metrics.
+ */
 export declare class LanguageModels {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,27 +12,31 @@ export declare class LanguageModels {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteModel - Delete a Model
+     * Delete a Model
      *
+     * @remarks
      * Deletes the specified model.
-    **/
-    deleteModel(req: operations.DeleteModelRequest, config?: AxiosRequestConfig): Promise<operations.DeleteModelResponse>;
+     */
+    deleteModel(req: operations.DeleteModelRequest, security: operations.DeleteModelSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteModelResponse>;
     /**
-     * getTrainedModelLearningCurve - Get Model Learning Curve
+     * Get Model Learning Curve
      *
+     * @remarks
      * Returns the metrics for each epoch in a model.
-    **/
-    getTrainedModelLearningCurve(req: operations.GetTrainedModelLearningCurveRequest, config?: AxiosRequestConfig): Promise<operations.GetTrainedModelLearningCurveResponse>;
+     */
+    getTrainedModelLearningCurve(req: operations.GetTrainedModelLearningCurveRequest, security: operations.GetTrainedModelLearningCurveSecurity, config?: AxiosRequestConfig): Promise<operations.GetTrainedModelLearningCurveResponse>;
     /**
-     * getTrainedModelMetrics - Get Model Metrics
+     * Get Model Metrics
      *
+     * @remarks
      * Returns the metrics for a model
-    **/
-    getTrainedModelMetrics(req: operations.GetTrainedModelMetricsRequest, config?: AxiosRequestConfig): Promise<operations.GetTrainedModelMetricsResponse>;
+     */
+    getTrainedModelMetrics(req: operations.GetTrainedModelMetricsRequest, security: operations.GetTrainedModelMetricsSecurity, config?: AxiosRequestConfig): Promise<operations.GetTrainedModelMetricsResponse>;
     /**
-     * getTrainedModels - Get All Models
+     * Get All Models
      *
+     * @remarks
      * Returns all models for the specified dataset.
-    **/
-    getTrainedModels(req: operations.GetTrainedModelsRequest, config?: AxiosRequestConfig): Promise<operations.GetTrainedModelsResponse>;
+     */
+    getTrainedModels(req: operations.GetTrainedModelsRequest, security: operations.GetTrainedModelsSecurity, config?: AxiosRequestConfig): Promise<operations.GetTrainedModelsResponse>;
 }

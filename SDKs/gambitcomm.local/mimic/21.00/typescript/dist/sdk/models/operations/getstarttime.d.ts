@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetStarttimePathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetStarttimeRequest extends SpeakeasyBase {
-    pathParams: GetStarttimePathParams;
+    /**
+     * Agent to return the relative start time
+     */
+    agentNum: number;
 }
 export declare class GetStarttimeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     getStarttime200ApplicationJSONString?: string;
 }

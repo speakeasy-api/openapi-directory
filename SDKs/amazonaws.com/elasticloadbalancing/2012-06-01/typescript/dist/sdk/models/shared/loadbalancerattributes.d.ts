@@ -6,7 +6,7 @@ import { ConnectionSettings } from "./connectionsettings";
 import { CrossZoneLoadBalancing } from "./crosszoneloadbalancing";
 /**
  * The attributes for a load balancer.
-**/
+ */
 export declare class LoadBalancerAttributes extends SpeakeasyBase {
     accessLog?: AccessLog;
     additionalAttributes?: AdditionalAttribute[];

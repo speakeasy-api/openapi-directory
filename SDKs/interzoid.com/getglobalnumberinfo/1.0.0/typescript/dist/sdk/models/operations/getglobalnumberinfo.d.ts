@@ -1,9 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetglobalnumberinfoQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetglobalnumberinfoRequest extends SpeakeasyBase {
+    /**
+     * International number (with country code) to retrieve information for
+     */
     intlnumber: string;
+    /**
+     * Your Interzoid license API key. Register at www.interzoid.com/register
+     */
     license: string;
 }
-export declare class Getglobalnumberinfo200ApplicationJson extends SpeakeasyBase {
+/**
+ * Global telephone demographic information
+ */
+export declare class Getglobalnumberinfo200ApplicationJSON extends SpeakeasyBase {
     code?: string;
     country?: string;
     credits?: string;
@@ -15,11 +25,12 @@ export declare class Getglobalnumberinfo200ApplicationJson extends SpeakeasyBase
     region?: string;
     wealth?: string;
 }
-export declare class GetglobalnumberinfoRequest extends SpeakeasyBase {
-    queryParams: GetglobalnumberinfoQueryParams;
-}
 export declare class GetglobalnumberinfoResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getglobalnumberinfo200ApplicationJSONObject?: Getglobalnumberinfo200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Global telephone demographic information
+     */
+    getglobalnumberinfo200ApplicationJSONObject?: Getglobalnumberinfo200ApplicationJSON;
 }

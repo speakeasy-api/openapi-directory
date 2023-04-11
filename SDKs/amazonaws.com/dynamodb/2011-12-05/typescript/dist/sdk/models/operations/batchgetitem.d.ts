@@ -1,12 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class BatchGetItemQueryParams extends SpeakeasyBase {
-    requestItems?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum BatchGetItemXAmzTargetEnum {
-    DynamoDb20111205BatchGetItem = "DynamoDB_20111205.BatchGetItem"
+    DynamoDB20111205BatchGetItem = "DynamoDB_20111205.BatchGetItem"
 }
-export declare class BatchGetItemHeaders extends SpeakeasyBase {
+export declare class BatchGetItemRequest extends SpeakeasyBase {
+    batchGetItemInput: shared.BatchGetItemInput;
+    /**
+     * Pagination token
+     */
+    requestItems?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,17 +19,28 @@ export declare class BatchGetItemHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: BatchGetItemXAmzTargetEnum;
 }
-export declare class BatchGetItemRequest extends SpeakeasyBase {
-    queryParams: BatchGetItemQueryParams;
-    headers: BatchGetItemHeaders;
-    request: shared.BatchGetItemInput;
-}
 export declare class BatchGetItemResponse extends SpeakeasyBase {
+    /**
+     * Success
+     */
     batchGetItemOutput?: shared.BatchGetItemOutput;
     contentType: string;
+    /**
+     * InternalServerError
+     */
     internalServerError?: any;
+    /**
+     * ProvisionedThroughputExceededException
+     */
     provisionedThroughputExceededException?: any;
+    /**
+     * RequestLimitExceeded
+     */
     requestLimitExceeded?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
 }

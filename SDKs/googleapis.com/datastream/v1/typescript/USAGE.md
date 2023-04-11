@@ -1,102 +1,97 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DatastreamProjectsLocationsConnectionProfilesCreateRequest, DatastreamProjectsLocationsConnectionProfilesCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  DatastreamProjectsLocationsConnectionProfilesCreateRequest,
+  DatastreamProjectsLocationsConnectionProfilesCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: DatastreamProjectsLocationsConnectionProfilesCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    connectionProfileId: "dolor",
-    fields: "expedita",
-    force: true,
-    key: "fugit",
-    oauthToken: "et",
-    prettyPrint: true,
-    quotaUser: "rerum",
-    requestId: "dicta",
-    uploadType: "debitis",
-    uploadProtocol: "voluptatum",
-    validateOnly: false,
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  connectionProfileInput: {
     bigqueryProfile: {
-      "dolorem": "et",
-      "voluptate": "iste",
-      "vitae": "totam",
+      "distinctio": "quibusdam",
+      "unde": "nulla",
+      "corrupti": "illum",
     },
-    displayName: "dolores",
+    displayName: "vel",
     forwardSshConnectivity: {
-      hostname: "illum",
-      password: "debitis",
-      port: 3706853784096366226,
-      privateKey: "odio",
-      username: "dolore",
+      hostname: "physical-pegboard.info",
+      password: "iure",
+      port: 297534,
+      privateKey: "debitis",
+      username: "Anahi38",
     },
     gcsProfile: {
-      bucket: "id",
-      rootPath: "aspernatur",
+      bucket: "molestiae",
+      rootPath: "minus",
     },
     labels: {
-      "totam": "commodi",
-      "quis": "est",
-      "aut": "odit",
+      "voluptatum": "iusto",
+      "excepturi": "nisi",
+      "recusandae": "temporibus",
+      "ab": "quis",
     },
     mysqlProfile: {
-      hostname: "non",
-      password: "voluptas",
-      port: 4778690082005258714,
+      hostname: "bountiful-pension.com",
+      password: "ipsam",
+      port: 832620,
       sslConfig: {
-        caCertificate: "aut",
-        clientCertificate: "illo",
-        clientKey: "sed",
+        caCertificate: "sapiente",
+        clientCertificate: "quo",
+        clientKey: "odit",
       },
-      username: "officiis",
+      username: "Sarah.Strosin79",
     },
     oracleProfile: {
       connectionAttributes: {
-        "consectetur": "nobis",
-        "odio": "qui",
+        "esse": "totam",
+        "porro": "dolorum",
+        "dicta": "nam",
+        "officia": "occaecati",
       },
-      databaseService: "recusandae",
-      hostname: "at",
-      password: "ipsum",
-      port: 8902041070398994519,
-      username: "modi",
+      databaseService: "fugit",
+      hostname: "miserly-usage.net",
+      password: "totam",
+      port: 105907,
+      username: "Haskell18",
     },
     postgresqlProfile: {
-      database: "sint",
-      hostname: "inventore",
-      password: "ut",
-      port: 406703151708498928,
-      username: "aut",
+      database: "impedit",
+      hostname: "several-increase.biz",
+      password: "excepturi",
+      port: 135218,
+      username: "Aiden.Hane",
     },
     privateConnectivity: {
-      privateConnection: "reprehenderit",
+      privateConnection: "iste",
     },
     staticServiceIpConnectivity: {
-      "maiores": "incidunt",
-      "dolor": "beatae",
-      "veritatis": "in",
+      "natus": "laboriosam",
     },
   },
+  accessToken: "hic",
+  alt: AltEnum.Proto,
+  callback: "fuga",
+  connectionProfileId: "in",
+  fields: "corporis",
+  force: false,
+  key: "iste",
+  oauthToken: "iure",
+  parent: "saepe",
+  prettyPrint: false,
+  quotaUser: "quidem",
+  requestId: "architecto",
+  uploadType: "ipsa",
+  uploadProtocol: "reiciendis",
+  validateOnly: false,
 };
 
 sdk.projects.datastreamProjectsLocationsConnectionProfilesCreate(req).then((res: DatastreamProjectsLocationsConnectionProfilesCreateResponse | AxiosError) => {

@@ -1,10 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreateContinuousProjectRequest extends SpeakeasyBase {
-    request?: shared.ContinuousProject;
-}
+import { AxiosResponse } from "axios";
 export declare class CreateContinuousProjectResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Newly created continuous project
+     */
     continuousProject?: shared.ContinuousProject;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,21 +1,41 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetWebhooksIdPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetWebhooksIdRequest extends SpeakeasyBase {
+    /**
+     * Object Id
+     */
     id: string;
 }
-export declare class GetWebhooksId401ApplicationJson extends SpeakeasyBase {
+/**
+ * Not allowed to perform operation
+ */
+export declare class GetWebhooksId403ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error message.
+     */
     detail?: string;
 }
-export declare class GetWebhooksId403ApplicationJson extends SpeakeasyBase {
+/**
+ * Access token is missing or invalid
+ */
+export declare class GetWebhooksId401ApplicationJSON extends SpeakeasyBase {
     detail?: string;
-}
-export declare class GetWebhooksIdRequest extends SpeakeasyBase {
-    pathParams: GetWebhooksIdPathParams;
 }
 export declare class GetWebhooksIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Webhooks
+     */
     webhook?: shared.Webhook;
-    getWebhooksId401ApplicationJSONObject?: GetWebhooksId401ApplicationJson;
-    getWebhooksId403ApplicationJSONObject?: GetWebhooksId403ApplicationJson;
+    /**
+     * Access token is missing or invalid
+     */
+    getWebhooksId401ApplicationJSONObject?: GetWebhooksId401ApplicationJSON;
+    /**
+     * Not allowed to perform operation
+     */
+    getWebhooksId403ApplicationJSONObject?: GetWebhooksId403ApplicationJSON;
 }

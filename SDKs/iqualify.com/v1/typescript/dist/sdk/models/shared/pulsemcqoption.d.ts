@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PulseMcqOption extends SpeakeasyBase {
+export declare class PulseMCQOption extends SpeakeasyBase {
     option?: string;
     value?: boolean;
 }

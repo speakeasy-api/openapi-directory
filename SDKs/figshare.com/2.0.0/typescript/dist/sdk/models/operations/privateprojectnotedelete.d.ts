@@ -1,18 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PrivateProjectNoteDeletePathParams extends SpeakeasyBase {
-    noteId: number;
-    projectId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class PrivateProjectNoteDeleteSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class PrivateProjectNoteDeleteRequest extends SpeakeasyBase {
-    pathParams: PrivateProjectNoteDeletePathParams;
-    security: PrivateProjectNoteDeleteSecurity;
+    /**
+     * Note unique identifier
+     */
+    noteId: number;
+    /**
+     * Project unique identifier
+     */
+    projectId: number;
 }
 export declare class PrivateProjectNoteDeleteResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Forbidden
+     */
     errorMessage?: shared.ErrorMessage;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,73 +1,58 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { UserCompactInput } from "./usercompact";
-export declare enum GoalRequestMetricUnitEnum {
-    None = "none",
-    Currency = "currency",
-    Percentage = "percentage"
-}
 /**
  * A generic Asana Resource, containing a globally unique identifier.
-**/
-export declare class GoalRequestMetricInput extends SpeakeasyBase {
-    currencyCode?: string;
-    currentDisplayValue?: string;
-    currentNumberValue?: number;
-    initialNumberValue?: number;
-    precision?: number;
-    targetNumberValue?: number;
-    unit?: GoalRequestMetricUnitEnum;
-}
-/**
- * A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.
-**/
-export declare class GoalRequestOwnerInput extends SpeakeasyBase {
-    name?: string;
-}
-/**
- * A *team* is used to group related projects and people together within an organization. Each project in an organization is associated with a team.
-**/
-export declare class GoalRequestTeamInput extends SpeakeasyBase {
-    name?: string;
-}
-export declare enum GoalRequestTimePeriodPeriodEnum {
-    Fy = "FY",
-    H1 = "H1",
-    H2 = "H2",
-    Q1 = "Q1",
-    Q2 = "Q2",
-    Q3 = "Q3",
-    Q4 = "Q4"
-}
-/**
- * A generic Asana Resource, containing a globally unique identifier.
-**/
-export declare class GoalRequestTimePeriodInput extends SpeakeasyBase {
-    endOn?: string;
-    period?: GoalRequestTimePeriodPeriodEnum;
-    startOn?: string;
-}
-/**
- * A *workspace* is the highest-level organizational unit in Asana. All projects and tasks have an associated workspace.
-**/
-export declare class GoalRequestWorkspaceInput extends SpeakeasyBase {
-    name?: string;
-}
-/**
- * A generic Asana Resource, containing a globally unique identifier.
-**/
+ */
 export declare class GoalRequestInput extends SpeakeasyBase {
+    /**
+     * The localized day on which this goal is due. This takes a date with format `YYYY-MM-DD`.
+     */
     dueOn?: string;
-    followers?: UserCompactInput[];
+    followers?: string[];
+    /**
+     * The notes of the goal with formatting as HTML.
+     */
     htmlNotes?: string;
+    /**
+     * *Conditional*. This property is only present when the `workspace` provided is an organization. Whether the goal belongs to the `workspace` (and is listed as part of the workspace’s goals) or not. If it isn’t a workspace-level goal, it is a team-level goal, and is associated with the goal’s team.
+     */
     isWorkspaceLevel?: boolean;
+    /**
+     * True if the goal is liked by the authorized user, false if not.
+     */
     liked?: boolean;
-    metric?: GoalRequestMetricInput;
+    /**
+     * The name of the goal.
+     */
     name?: string;
+    /**
+     * Free-form textual information associated with the goal (i.e. its description).
+     */
     notes?: string;
-    owner?: GoalRequestOwnerInput;
+    /**
+     * The `gid` of a user.
+     */
+    owner?: string;
+    /**
+     * The day on which work for this goal begins, or null if the goal has no start date. This takes a date with `YYYY-MM-DD` format, and cannot be set unless there is an accompanying due date.
+     */
     startOn?: string;
+    /**
+     * The current status of this goal. When the goal is open, its status can be `green`, `yellow`, and `red` to reflect "On Track", "At Risk", and "Off Track", respectively. When the goal is closed, the value can be `missed`, `achieved`, `partial`, or `dropped`.
+     *
+     * @remarks
+     * *Note* you can only write to this property if `metric` is set.
+     */
     status?: string;
-    team?: GoalRequestTeamInput;
-    timePeriod?: GoalRequestTimePeriodInput;
-    workspace?: GoalRequestWorkspaceInput;
+    /**
+     * *Conditional*. This property is only present when the `workspace` provided is an organization.
+     */
+    team?: string;
+    /**
+     * The `gid` of a time period.
+     */
+    timePeriod?: string;
+    /**
+     * The `gid` of a workspace.
+     */
+    workspace?: string;
 }

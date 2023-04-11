@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Search API for 'US Census ACS Data' entry type
+ */
 export declare class TypeTypeCensusAcs {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,10 @@ export declare class TypeTypeCensusAcs {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * searchTypeCensusAcs - Search API for 'US Census ACS Data' entry type
+     * Search API for 'US Census ACS Data' entry type
      *
+     * @remarks
      * API to search for entries of type US Census ACS Data
-    **/
+     */
     searchTypeCensusAcs(req: operations.SearchTypeCensusAcsRequest, config?: AxiosRequestConfig): Promise<operations.SearchTypeCensusAcsResponse>;
 }

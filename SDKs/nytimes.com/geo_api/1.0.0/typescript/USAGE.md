@@ -1,32 +1,32 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetQueryJsonRequest, GetQueryJsonResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GetQueryJsonRequest,
+  GetQueryJsonResponse,
+  GetQueryJsonFacetsEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    apikey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: GetQueryJsonRequest = {
-  queryParams: {
-    dateRange: "sit",
-    elevation: 2259404117704393152,
-    facets: 6050128673802995827,
-    filter: "expedita",
-    latitude: "consequuntur",
-    limit: 2669985732393126063,
-    longitude: "expedita",
-    name: "voluptas",
-    offset: 8274930044578894929,
-    query: "et",
-    sort: "nihil",
-    sw: "rerum",
+    apikey: "YOUR_API_KEY_HERE",
   },
+});
+
+const req: GetQueryJsonRequest = {
+  dateRange: "corrupti",
+  elevation: 592845,
+  facets: GetQueryJsonFacetsEnum.One,
+  filter: "quibusdam",
+  latitude: "unde",
+  limit: 857946,
+  longitude: "corrupti",
+  name: "illum",
+  offset: 423655,
+  query: "error",
+  sort: "deserunt",
+  sw: "suscipit",
 };
 
 sdk.events.getQueryJson(req).then((res: GetQueryJsonResponse | AxiosError) => {

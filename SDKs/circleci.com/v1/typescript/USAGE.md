@@ -1,22 +1,21 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DeleteProjectUsernameProjectBuildCacheRequest, DeleteProjectUsernameProjectBuildCacheResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  DeleteProjectUsernameProjectBuildCacheRequest,
+  DeleteProjectUsernameProjectBuildCacheResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    apikey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: DeleteProjectUsernameProjectBuildCacheRequest = {
-  pathParams: {
-    project: "sit",
-    username: "voluptas",
+    apikey: "YOUR_API_KEY_HERE",
   },
+});
+
+const req: DeleteProjectUsernameProjectBuildCacheRequest = {
+  project: "corrupti",
+  username: "Larue_Rau85",
 };
 
 sdk.deleteProjectUsernameProjectBuildCache(req).then((res: DeleteProjectUsernameProjectBuildCacheResponse | AxiosError) => {

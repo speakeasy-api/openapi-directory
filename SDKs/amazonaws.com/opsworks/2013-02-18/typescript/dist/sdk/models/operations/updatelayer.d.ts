@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateLayerXAmzTargetEnum {
     OpsWorks20130218UpdateLayer = "OpsWorks_20130218.UpdateLayer"
 }
-export declare class UpdateLayerHeaders extends SpeakeasyBase {
+export declare class UpdateLayerRequest extends SpeakeasyBase {
+    updateLayerRequest: shared.UpdateLayerRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,13 +15,16 @@ export declare class UpdateLayerHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateLayerXAmzTargetEnum;
 }
-export declare class UpdateLayerRequest extends SpeakeasyBase {
-    headers: UpdateLayerHeaders;
-    request: shared.UpdateLayerRequest;
-}
 export declare class UpdateLayerResponse extends SpeakeasyBase {
     contentType: string;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

@@ -1,81 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { SimpleUser } from "./simpleuser";
 import { AuthorAssociationEnum } from "./authorassociationenum";
 import { Label } from "./label";
+import { NullableIntegration } from "./nullableintegration";
+import { NullableMilestone } from "./nullablemilestone";
+import { NullableSimpleUser } from "./nullablesimpleuser";
 import { Repository } from "./repository";
-/**
- * Simple User
-**/
-export declare class IssueSimpleSimpleUser extends SpeakeasyBase {
-    avatarUrl: string;
-    eventsUrl: string;
-    followersUrl: string;
-    followingUrl: string;
-    gistsUrl: string;
-    gravatarId: string;
-    htmlUrl: string;
-    id: number;
-    login: string;
-    nodeId: string;
-    organizationsUrl: string;
-    receivedEventsUrl: string;
-    reposUrl: string;
-    siteAdmin: boolean;
-    starredAt?: string;
-    starredUrl: string;
-    subscriptionsUrl: string;
-    type: string;
-    url: string;
-}
-/**
- * Simple User
-**/
-export declare class IssueSimpleMilestoneSimpleUser extends SpeakeasyBase {
-    avatarUrl: string;
-    eventsUrl: string;
-    followersUrl: string;
-    followingUrl: string;
-    gistsUrl: string;
-    gravatarId: string;
-    htmlUrl: string;
-    id: number;
-    login: string;
-    nodeId: string;
-    organizationsUrl: string;
-    receivedEventsUrl: string;
-    reposUrl: string;
-    siteAdmin: boolean;
-    starredAt?: string;
-    starredUrl: string;
-    subscriptionsUrl: string;
-    type: string;
-    url: string;
-}
-export declare enum IssueSimpleMilestoneStateEnum {
-    Open = "open",
-    Closed = "closed"
-}
-/**
- * A collection of related issues and pull requests.
-**/
-export declare class IssueSimpleMilestone extends SpeakeasyBase {
-    closedAt: Date;
-    closedIssues: number;
-    createdAt: Date;
-    creator: IssueSimpleMilestoneSimpleUser;
-    description: string;
-    dueOn: Date;
-    htmlUrl: string;
-    id: number;
-    labelsUrl: string;
-    nodeId: string;
-    number: number;
-    openIssues: number;
-    state: IssueSimpleMilestoneStateEnum;
-    title: string;
-    updatedAt: Date;
-    url: string;
-}
+import { SimpleUser } from "./simpleuser";
 export declare class IssueSimplePullRequest extends SpeakeasyBase {
     diffUrl: string;
     htmlUrl: string;
@@ -85,11 +15,17 @@ export declare class IssueSimplePullRequest extends SpeakeasyBase {
 }
 /**
  * Issue Simple
-**/
+ */
 export declare class IssueSimple extends SpeakeasyBase {
     activeLockReason?: string;
-    assignee: IssueSimpleSimpleUser;
+    /**
+     * Simple User
+     */
+    assignee: NullableSimpleUser;
     assignees?: SimpleUser[];
+    /**
+     * How the author is associated with the repository.
+     */
     authorAssociation: AuthorAssociationEnum;
     body?: string;
     bodyHtml?: string;
@@ -104,11 +40,20 @@ export declare class IssueSimple extends SpeakeasyBase {
     labels: Label[];
     labelsUrl: string;
     locked: boolean;
-    milestone: IssueSimpleMilestone;
+    /**
+     * A collection of related issues and pull requests.
+     */
+    milestone: NullableMilestone;
     nodeId: string;
     number: number;
-    performedViaGithubApp?: Record<string, any>;
+    /**
+     * GitHub apps are a new way to extend GitHub. They can be installed directly on organizations and user accounts and granted access to specific repositories. They come with granular permissions and built-in webhooks. GitHub apps are first class actors within GitHub.
+     */
+    performedViaGithubApp?: NullableIntegration;
     pullRequest?: IssueSimplePullRequest;
+    /**
+     * A git repository
+     */
     repository?: Repository;
     repositoryUrl: string;
     state: string;
@@ -116,5 +61,8 @@ export declare class IssueSimple extends SpeakeasyBase {
     title: string;
     updatedAt: Date;
     url: string;
-    user: IssueSimpleSimpleUser;
+    /**
+     * Simple User
+     */
+    user: NullableSimpleUser;
 }

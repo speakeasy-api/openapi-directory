@@ -1,15 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteOfferingsOfferingIdAssessmentsAssessmentIdDocumentsDocumentIdPathParams extends SpeakeasyBase {
-    assessmentId: string;
-    documentId: string;
-    offeringId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteOfferingsOfferingIdAssessmentsAssessmentIdDocumentsDocumentIdRequest extends SpeakeasyBase {
-    pathParams: DeleteOfferingsOfferingIdAssessmentsAssessmentIdDocumentsDocumentIdPathParams;
+    /**
+     * assessment's id
+     */
+    assessmentId: string;
+    /**
+     * documents's id
+     */
+    documentId: string;
+    /**
+     * offering's id
+     */
+    offeringId: string;
 }
 export declare class DeleteOfferingsOfferingIdAssessmentsAssessmentIdDocumentsDocumentIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * No authorization token was found.
+     */
     error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

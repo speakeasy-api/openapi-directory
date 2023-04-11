@@ -6,7 +6,6 @@ export * from "./attributeparameters";
 export * from "./attributescores";
 export * from "./context";
 export * from "./score";
-export * from "./security";
 export * from "./spanscore";
 export * from "./suggestcommentscorerequest";
 export * from "./suggestcommentscoreresponse";

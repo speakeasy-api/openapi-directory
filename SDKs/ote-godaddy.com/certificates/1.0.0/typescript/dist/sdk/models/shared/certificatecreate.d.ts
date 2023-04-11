@@ -1,0 +1,83 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { CertificateContact } from "./certificatecontact";
+import { CertificateOrganizationCreate } from "./certificateorganizationcreate";
+/**
+ * Type of product requesting a certificate. Only required non-renewal
+ */
+export declare enum CertificateCreateProductTypeEnum {
+    DvSsl = "DV_SSL",
+    DvWildcardSsl = "DV_WILDCARD_SSL",
+    EvSsl = "EV_SSL",
+    OvCs = "OV_CS",
+    OvDs = "OV_DS",
+    OvSsl = "OV_SSL",
+    OvWildcardSsl = "OV_WILDCARD_SSL",
+    UccDvSsl = "UCC_DV_SSL",
+    UccEvSsl = "UCC_EV_SSL",
+    UccOvSsl = "UCC_OV_SSL"
+}
+/**
+ * Root Type. Depending on certificate expiration date, SHA_1 not be allowed. Will default to SHA_2 if expiration date exceeds sha1 allowed date
+ */
+export declare enum CertificateCreateRootTypeEnum {
+    GodaddySha1 = "GODADDY_SHA_1",
+    GodaddySha2 = "GODADDY_SHA_2",
+    StarfieldSha1 = "STARFIELD_SHA_1",
+    StarfieldSha2 = "STARFIELD_SHA_2"
+}
+/**
+ * Number of subject alternative names(SAN) to be included in certificate
+ */
+export declare enum CertificateCreateSlotSizeEnum {
+    Five = "FIVE",
+    Ten = "TEN",
+    Fifteen = "FIFTEEN",
+    Twenty = "TWENTY",
+    Thirty = "THIRTY",
+    Fourty = "FOURTY",
+    Fifty = "FIFTY",
+    OneHundred = "ONE_HUNDRED"
+}
+/**
+ * The certificate order information
+ */
+export declare class CertificateCreate extends SpeakeasyBase {
+    /**
+     * Required if client would like to receive stateful actions via callback during certificate lifecyle
+     */
+    callbackUrl?: string;
+    /**
+     * Name to be secured in certificate. If provided, CN field in CSR will be ignored.
+     */
+    commonName?: string;
+    contact: CertificateContact;
+    /**
+     * Certificate Signing Request
+     */
+    csr: string;
+    /**
+     * Only used for OV
+     */
+    intelVPro?: boolean;
+    organization?: CertificateOrganizationCreate;
+    /**
+     * Number of years for certificate validity period
+     */
+    period: number;
+    /**
+     * Type of product requesting a certificate. Only required non-renewal
+     */
+    productType: CertificateCreateProductTypeEnum;
+    /**
+     * Root Type. Depending on certificate expiration date, SHA_1 not be allowed. Will default to SHA_2 if expiration date exceeds sha1 allowed date
+     */
+    rootType?: CertificateCreateRootTypeEnum;
+    /**
+     * Number of subject alternative names(SAN) to be included in certificate
+     */
+    slotSize?: CertificateCreateSlotSizeEnum;
+    /**
+     * Subject Alternative names. Collection of subjectAlternativeNames to be included in certificate.
+     */
+    subjectAlternativeNames?: string[];
+}

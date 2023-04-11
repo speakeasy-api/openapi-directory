@@ -6,81 +6,232 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/amazonaws.com/timestream-write/2018-11-01/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/amazonaws.com/timestream-write/2018-11-01/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateDatabaseRequest, CreateDatabaseResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CreateBatchLoadTaskRequest,
+  CreateBatchLoadTaskResponse,
+  CreateBatchLoadTaskXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
+import {
+  S3EncryptionOptionEnum,
+  BatchLoadDataFormatEnum,
+  TimeUnitEnum,
+  ScalarMeasureValueTypeEnum,
+  MeasureValueTypeEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: CreateDatabaseRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "Timestream_20181101.CreateDatabase",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
-    databaseName: "fugit",
-    kmsKeyId: "et",
-    tags: [
-      {
-        key: "rerum",
-        value: "dicta",
+});
+
+const req: CreateBatchLoadTaskRequest = {
+  createBatchLoadTaskRequest: {
+    clientToken: "corrupti",
+    dataModelConfiguration: {
+      dataModel: {
+        dimensionMappings: [
+          {
+            destinationColumn: "distinctio",
+            sourceColumn: "quibusdam",
+          },
+          {
+            destinationColumn: "unde",
+            sourceColumn: "nulla",
+          },
+          {
+            destinationColumn: "corrupti",
+            sourceColumn: "illum",
+          },
+        ],
+        measureNameColumn: "vel",
+        mixedMeasureMappings: [
+          {
+            measureName: "deserunt",
+            measureValueType: MeasureValueTypeEnum.Varchar,
+            multiMeasureAttributeMappings: [
+              {
+                measureValueType: ScalarMeasureValueTypeEnum.Bigint,
+                sourceColumn: "debitis",
+                targetMultiMeasureAttributeName: "ipsa",
+              },
+              {
+                measureValueType: ScalarMeasureValueTypeEnum.Timestamp,
+                sourceColumn: "tempora",
+                targetMultiMeasureAttributeName: "suscipit",
+              },
+            ],
+            sourceColumn: "molestiae",
+            targetMeasureName: "minus",
+          },
+          {
+            measureName: "placeat",
+            measureValueType: MeasureValueTypeEnum.Boolean,
+            multiMeasureAttributeMappings: [
+              {
+                measureValueType: ScalarMeasureValueTypeEnum.Boolean,
+                sourceColumn: "nisi",
+                targetMultiMeasureAttributeName: "recusandae",
+              },
+              {
+                measureValueType: ScalarMeasureValueTypeEnum.Timestamp,
+                sourceColumn: "ab",
+                targetMultiMeasureAttributeName: "quis",
+              },
+            ],
+            sourceColumn: "veritatis",
+            targetMeasureName: "deserunt",
+          },
+          {
+            measureName: "perferendis",
+            measureValueType: MeasureValueTypeEnum.Varchar,
+            multiMeasureAttributeMappings: [
+              {
+                measureValueType: ScalarMeasureValueTypeEnum.Timestamp,
+                sourceColumn: "quo",
+                targetMultiMeasureAttributeName: "odit",
+              },
+              {
+                measureValueType: ScalarMeasureValueTypeEnum.Timestamp,
+                sourceColumn: "at",
+                targetMultiMeasureAttributeName: "maiores",
+              },
+              {
+                measureValueType: ScalarMeasureValueTypeEnum.Boolean,
+                sourceColumn: "quod",
+                targetMultiMeasureAttributeName: "quod",
+              },
+              {
+                measureValueType: ScalarMeasureValueTypeEnum.Boolean,
+                sourceColumn: "totam",
+                targetMultiMeasureAttributeName: "porro",
+              },
+            ],
+            sourceColumn: "dolorum",
+            targetMeasureName: "dicta",
+          },
+        ],
+        multiMeasureMappings: {
+          multiMeasureAttributeMappings: [
+            {
+              measureValueType: ScalarMeasureValueTypeEnum.Varchar,
+              sourceColumn: "occaecati",
+              targetMultiMeasureAttributeName: "fugit",
+            },
+            {
+              measureValueType: ScalarMeasureValueTypeEnum.Boolean,
+              sourceColumn: "hic",
+              targetMultiMeasureAttributeName: "optio",
+            },
+            {
+              measureValueType: ScalarMeasureValueTypeEnum.Boolean,
+              sourceColumn: "beatae",
+              targetMultiMeasureAttributeName: "commodi",
+            },
+          ],
+          targetMultiMeasureName: "molestiae",
+        },
+        timeColumn: "modi",
+        timeUnit: TimeUnitEnum.Milliseconds,
       },
-    ],
+      dataModelS3Configuration: {
+        bucketName: "impedit",
+        objectKey: "cum",
+      },
+    },
+    dataSourceConfiguration: {
+      csvConfiguration: {
+        columnSeparator: "esse",
+        escapeChar: "ipsum",
+        nullValue: "excepturi",
+        quoteChar: "aspernatur",
+        trimWhiteSpace: false,
+      },
+      dataFormat: BatchLoadDataFormatEnum.Csv,
+      dataSourceS3Configuration: {
+        bucketName: "perferendis",
+        objectKeyPrefix: "ad",
+      },
+    },
+    recordVersion: 617636,
+    reportConfiguration: {
+      reportS3Configuration: {
+        bucketName: "sed",
+        encryptionOption: S3EncryptionOptionEnum.SseKms,
+        kmsKeyId: "dolor",
+        objectKeyPrefix: "natus",
+      },
+    },
+    targetDatabaseName: "laboriosam",
+    targetTableName: "hic",
   },
+  xAmzAlgorithm: "saepe",
+  xAmzContentSha256: "fuga",
+  xAmzCredential: "in",
+  xAmzDate: "corporis",
+  xAmzSecurityToken: "iste",
+  xAmzSignature: "iure",
+  xAmzSignedHeaders: "saepe",
+  xAmzTarget: CreateBatchLoadTaskXAmzTargetEnum.Timestream20181101CreateBatchLoadTask,
 };
 
-sdk.createDatabase(req).then((res: CreateDatabaseResponse | AxiosError) => {
+sdk.createBatchLoadTask(req).then((res: CreateBatchLoadTaskResponse | AxiosError) => {
    // handle response
 });
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
-* `createDatabase` - Creates a new Timestream database. If the KMS key is not specified, the database will be encrypted with a Timestream managed KMS key located in your account. Refer to <a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk">AWS managed KMS keys</a> for more info. Service quotas apply. For more information, see <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html">Access Management</a> in the Timestream Developer Guide. 
-* `createTable` - The CreateTable operation adds a new table to an existing database in your account. In an AWS account, table names must be at least unique within each Region if they are in the same database. You may have identical table names in the same Region if the tables are in seperate databases. While creating the table, you must specify the table name, database name, and the retention properties. Service quotas apply. For more information, see <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html">Access Management</a> in the Timestream Developer Guide. 
-* `deleteDatabase` - <p>Deletes a given Timestream database. <i>This is an irreversible operation. After a database is deleted, the time series data from its tables cannot be recovered.</i> </p> <p>All tables in the database must be deleted first, or a ValidationException error will be thrown. </p> <p>Due to the nature of distributed retries, the operation can return either success or a ResourceNotFoundException. Clients should consider them equivalent.</p>
-* `deleteTable` - <p>Deletes a given Timestream table. This is an irreversible operation. After a Timestream database table is deleted, the time series data stored in the table cannot be recovered. </p> <p>Due to the nature of distributed retries, the operation can return either success or a ResourceNotFoundException. Clients should consider them equivalent.</p>
-* `describeDatabase` - Returns information about the database, including the database name, time that the database was created, and the total number of tables found within the database. Service quotas apply. For more information, see <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html">Access Management</a> in the Timestream Developer Guide.
-* `describeEndpoints` - <p>DescribeEndpoints returns a list of available endpoints to make Timestream API calls against. This API is available through both Write and Query.</p> <p>Because Timestream’s SDKs are designed to transparently work with the service’s architecture, including the management and mapping of the service endpoints, <i>it is not recommended that you use this API unless</i>:</p> <ul> <li> <p>Your application uses a programming language that does not yet have SDK support</p> </li> <li> <p>You require better control over the client-side implementation</p> </li> </ul> <p>For detailed information on how to use DescribeEndpoints, see <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/Using-API.endpoint-discovery.html">The Endpoint Discovery Pattern and REST APIs</a>.</p>
-* `describeTable` - Returns information about the table, including the table name, database name, retention duration of the memory store and the magnetic store. Service quotas apply. For more information, see <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html">Access Management</a> in the Timestream Developer Guide. 
-* `listDatabases` - Returns a list of your Timestream databases. Service quotas apply. For more information, see <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html">Access Management</a> in the Timestream Developer Guide. 
-* `listTables` - A list of tables, along with the name, status and retention properties of each table. 
-* `listTagsForResource` -  List all tags on a Timestream resource. 
-* `tagResource` -  Associate a set of tags with a Timestream resource. You can then activate these user-defined tags so that they appear on the Billing and Cost Management console for cost allocation tracking. 
+* `createBatchLoadTask` - Creates a new Timestream batch load task. A batch load task processes data from a CSV source in an S3 location and writes to a Timestream table. A mapping from source to target is defined in a batch load task. Errors and events are written to a report at an S3 location. For the report, if the KMS key is not specified, the batch load task will be encrypted with a Timestream managed KMS key located in your account. For more information, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk">Amazon Web Services managed keys</a>. <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html">Service quotas apply</a>. For details, see <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/code-samples.create-batch-load.html">code sample</a>.
+* `createDatabase` - Creates a new Timestream database. If the KMS key is not specified, the database will be encrypted with a Timestream managed KMS key located in your account. For more information, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk">Amazon Web Services managed keys</a>. <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html">Service quotas apply</a>. For details, see <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/code-samples.create-db.html">code sample</a>. 
+* `createTable` - Adds a new table to an existing database in your account. In an Amazon Web Services account, table names must be at least unique within each Region if they are in the same database. You might have identical table names in the same Region if the tables are in separate databases. While creating the table, you must specify the table name, database name, and the retention properties. <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html">Service quotas apply</a>. See <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/code-samples.create-table.html">code sample</a> for details. 
+* `deleteDatabase` - <p>Deletes a given Timestream database. <i>This is an irreversible operation. After a database is deleted, the time-series data from its tables cannot be recovered.</i> </p> <note> <p>All tables in the database must be deleted first, or a ValidationException error will be thrown. </p> <p>Due to the nature of distributed retries, the operation can return either success or a ResourceNotFoundException. Clients should consider them equivalent.</p> </note> <p>See <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/code-samples.delete-db.html">code sample</a> for details.</p>
+* `deleteTable` - <p>Deletes a given Timestream table. This is an irreversible operation. After a Timestream database table is deleted, the time-series data stored in the table cannot be recovered. </p> <note> <p>Due to the nature of distributed retries, the operation can return either success or a ResourceNotFoundException. Clients should consider them equivalent.</p> </note> <p>See <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/code-samples.delete-table.html">code sample</a> for details.</p>
+* `describeBatchLoadTask` - Returns information about the batch load task, including configurations, mappings, progress, and other details. <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html">Service quotas apply</a>. See <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/code-samples.describe-batch-load.html">code sample</a> for details.
+* `describeDatabase` - Returns information about the database, including the database name, time that the database was created, and the total number of tables found within the database. <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html">Service quotas apply</a>. See <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/code-samples.describe-db.html">code sample</a> for details.
+* `describeEndpoints` - <p>Returns a list of available endpoints to make Timestream API calls against. This API operation is available through both the Write and Query APIs.</p> <p>Because the Timestream SDKs are designed to transparently work with the service’s architecture, including the management and mapping of the service endpoints, <i>we don't recommend that you use this API operation unless</i>:</p> <ul> <li> <p>You are using <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/VPCEndpoints">VPC endpoints (Amazon Web Services PrivateLink) with Timestream</a> </p> </li> <li> <p>Your application uses a programming language that does not yet have SDK support</p> </li> <li> <p>You require better control over the client-side implementation</p> </li> </ul> <p>For detailed information on how and when to use and implement DescribeEndpoints, see <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/Using.API.html#Using-API.endpoint-discovery">The Endpoint Discovery Pattern</a>.</p>
+* `describeTable` - Returns information about the table, including the table name, database name, retention duration of the memory store and the magnetic store. <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html">Service quotas apply</a>. See <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/code-samples.describe-table.html">code sample</a> for details. 
+* `listBatchLoadTasks` - Provides a list of batch load tasks, along with the name, status, when the task is resumable until, and other details. See <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/code-samples.list-batch-load-tasks.html">code sample</a> for details.
+* `listDatabases` - Returns a list of your Timestream databases. <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html">Service quotas apply</a>. See <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/code-samples.list-db.html">code sample</a> for details. 
+* `listTables` - Provides a list of tables, along with the name, status, and retention properties of each table. See <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/code-samples.list-table.html">code sample</a> for details. 
+* `listTagsForResource` -  Lists all tags on a Timestream resource. 
+* `resumeBatchLoadTask` -  
+* `tagResource` -  Associates a set of tags with a Timestream resource. You can then activate these user-defined tags so that they appear on the Billing and Cost Management console for cost allocation tracking. 
 * `untagResource` -  Removes the association of tags from a Timestream resource. 
-* `updateDatabase` -  Modifies the KMS key for an existing database. While updating the database, you must specify the database name and the identifier of the new KMS key to be used (<code>KmsKeyId</code>). If there are any concurrent <code>UpdateDatabase</code> requests, first writer wins. 
-* `updateTable` - <p>Modifies the retention duration of the memory store and magnetic store for your Timestream table. Note that the change in retention duration takes effect immediately. For example, if the retention period of the memory store was initially set to 2 hours and then changed to 24 hours, the memory store will be capable of holding 24 hours of data, but will be populated with 24 hours of data 22 hours after this change was made. Timestream does not retrieve data from the magnetic store to populate the memory store. </p> <p>Service quotas apply. For more information, see <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html">Access Management</a> in the Timestream Developer Guide.</p>
-* `writeRecords` - The WriteRecords operation enables you to write your time series data into Timestream. You can specify a single data point or a batch of data points to be inserted into the system. Timestream offers you with a flexible schema that auto detects the column names and data types for your Timestream tables based on the dimension names and data types of the data points you specify when invoking writes into the database. Timestream support eventual consistency read semantics. This means that when you query data immediately after writing a batch of data into Timestream, the query results might not reflect the results of a recently completed write operation. The results may also include some stale data. If you repeat the query request after a short time, the results should return the latest data. Service quotas apply. For more information, see <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html">Access Management</a> in the Timestream Developer Guide. 
-
+* `updateDatabase` - <p> Modifies the KMS key for an existing database. While updating the database, you must specify the database name and the identifier of the new KMS key to be used (<code>KmsKeyId</code>). If there are any concurrent <code>UpdateDatabase</code> requests, first writer wins. </p> <p>See <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/code-samples.update-db.html">code sample</a> for details.</p>
+* `updateTable` - <p>Modifies the retention duration of the memory store and magnetic store for your Timestream table. Note that the change in retention duration takes effect immediately. For example, if the retention period of the memory store was initially set to 2 hours and then changed to 24 hours, the memory store will be capable of holding 24 hours of data, but will be populated with 24 hours of data 22 hours after this change was made. Timestream does not retrieve data from the magnetic store to populate the memory store. </p> <p>See <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/code-samples.update-table.html">code sample</a> for details.</p>
+* `writeRecords` - <p>Enables you to write your time-series data into Timestream. You can specify a single data point or a batch of data points to be inserted into the system. Timestream offers you a flexible schema that auto detects the column names and data types for your Timestream tables based on the dimension names and data types of the data points you specify when invoking writes into the database. </p> <p>Timestream supports eventual consistency read semantics. This means that when you query data immediately after writing a batch of data into Timestream, the query results might not reflect the results of a recently completed write operation. The results may also include some stale data. If you repeat the query request after a short time, the results should return the latest data. <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html">Service quotas apply</a>. </p> <p>See <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/code-samples.write.html">code sample</a> for details.</p> <p> <b>Upserts</b> </p> <p>You can use the <code>Version</code> parameter in a <code>WriteRecords</code> request to update data points. Timestream tracks a version number with each record. <code>Version</code> defaults to <code>1</code> when it's not specified for the record in the request. Timestream updates an existing record’s measure value along with its <code>Version</code> when it receives a write request with a higher <code>Version</code> number for that record. When it receives an update request where the measure value is the same as that of the existing record, Timestream still updates <code>Version</code>, if it is greater than the existing value of <code>Version</code>. You can update a data point as many times as desired, as long as the value of <code>Version</code> continuously increases. </p> <p> For example, suppose you write a new record without indicating <code>Version</code> in the request. Timestream stores this record, and set <code>Version</code> to <code>1</code>. Now, suppose you try to update this record with a <code>WriteRecords</code> request of the same record with a different measure value but, like before, do not provide <code>Version</code>. In this case, Timestream will reject this update with a <code>RejectedRecordsException</code> since the updated record’s version is not greater than the existing value of Version. </p> <p>However, if you were to resend the update request with <code>Version</code> set to <code>2</code>, Timestream would then succeed in updating the record’s value, and the <code>Version</code> would be set to <code>2</code>. Next, suppose you sent a <code>WriteRecords</code> request with this same record and an identical measure value, but with <code>Version</code> set to <code>3</code>. In this case, Timestream would only update <code>Version</code> to <code>3</code>. Any further updates would need to send a version number greater than <code>3</code>, or the update requests would receive a <code>RejectedRecordsException</code>. </p>
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

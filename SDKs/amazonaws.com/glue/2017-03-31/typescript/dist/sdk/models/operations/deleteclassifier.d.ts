@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteClassifierXAmzTargetEnum {
-    AwsGlueDeleteClassifier = "AWSGlue.DeleteClassifier"
+    AWSGlueDeleteClassifier = "AWSGlue.DeleteClassifier"
 }
-export declare class DeleteClassifierHeaders extends SpeakeasyBase {
+export declare class DeleteClassifierRequest extends SpeakeasyBase {
+    deleteClassifierRequest: shared.DeleteClassifierRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class DeleteClassifierHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteClassifierXAmzTargetEnum;
 }
-export declare class DeleteClassifierRequest extends SpeakeasyBase {
-    headers: DeleteClassifierHeaders;
-    request: shared.DeleteClassifierRequest;
-}
 export declare class DeleteClassifierResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deleteClassifierResponse?: Record<string, any>;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,4 +1,5 @@
 export declare enum DataFormatEnum {
     Avro = "AVRO",
-    Json = "JSON"
+    Json = "JSON",
+    Protobuf = "PROTOBUF"
 }

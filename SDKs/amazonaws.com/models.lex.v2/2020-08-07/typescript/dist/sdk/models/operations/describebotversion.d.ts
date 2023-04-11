@@ -1,10 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeBotVersionPathParams extends SpeakeasyBase {
-    botId: string;
-    botVersion: string;
-}
-export declare class DescribeBotVersionHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DescribeBotVersionRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,18 +9,41 @@ export declare class DescribeBotVersionHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DescribeBotVersionRequest extends SpeakeasyBase {
-    pathParams: DescribeBotVersionPathParams;
-    headers: DescribeBotVersionHeaders;
+    /**
+     * The identifier of the bot containing the version to return metadata for.
+     */
+    botId: string;
+    /**
+     * The version of the bot to return metadata for.
+     */
+    botVersion: string;
 }
 export declare class DescribeBotVersionResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeBotVersionResponse?: shared.DescribeBotVersionResponse;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
+    /**
+     * ServiceQuotaExceededException
+     */
     serviceQuotaExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

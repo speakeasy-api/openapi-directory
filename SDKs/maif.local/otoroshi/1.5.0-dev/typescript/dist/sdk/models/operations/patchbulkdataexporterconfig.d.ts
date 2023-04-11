@@ -1,25 +1,38 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class PatchBulkDataExporterConfigSecurity extends SpeakeasyBase {
-    otoroshiAuth: shared.SchemeOtoroshiAuth;
+    password: string;
+    username: string;
 }
-export declare enum PatchBulkDataExporterConfig200ApplicationJsonStatusEnum {
+/**
+ * Status
+ */
+export declare enum PatchBulkDataExporterConfig200ApplicationJSONStatusEnum {
     TwoHundred = "200"
 }
 /**
  * The bulk response
-**/
-export declare class PatchBulkDataExporterConfig200ApplicationJson extends SpeakeasyBase {
+ */
+export declare class PatchBulkDataExporterConfig200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Data exporter id
+     */
     id?: boolean;
-    status?: PatchBulkDataExporterConfig200ApplicationJsonStatusEnum;
+    /**
+     * Status
+     */
+    status?: PatchBulkDataExporterConfig200ApplicationJSONStatusEnum;
+    /**
+     * Whether the action was carried out correctly or not
+     */
     updated?: boolean;
-}
-export declare class PatchBulkDataExporterConfigRequest extends SpeakeasyBase {
-    request?: shared.Patch[];
-    security: PatchBulkDataExporterConfigSecurity;
 }
 export declare class PatchBulkDataExporterConfigResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    patchBulkDataExporterConfig200ApplicationJSONObjects?: PatchBulkDataExporterConfig200ApplicationJson[];
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful operation
+     */
+    patchBulkDataExporterConfig200ApplicationJSONObjects?: PatchBulkDataExporterConfig200ApplicationJSON[];
 }

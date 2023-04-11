@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { Forecast } from "./forecast";
+/**
+ * Success
+ */
 export declare class QueryForecastResponse extends SpeakeasyBase {
     forecast?: Forecast;
 }

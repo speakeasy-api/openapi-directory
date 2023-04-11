@@ -1,0 +1,91 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { CatalogQuery } from "./catalogquery";
+/**
+ * An object containing the fields to POST for the request.
+ *
+ * @remarks
+ *
+ * See the corresponding object definition for field details.
+ */
+export declare class SearchCatalogObjectsRequest extends SpeakeasyBase {
+    /**
+     * Return objects modified after this [timestamp](https://developer.squareup.com/docs/build-basics/working-with-dates), in RFC 3339
+     *
+     * @remarks
+     * format, e.g., `2016-09-04T23:59:33.123Z`. The timestamp is exclusive - objects with a
+     * timestamp equal to `begin_time` will not be included in the response.
+     */
+    beginTime?: string;
+    /**
+     * The pagination cursor returned in the previous response. Leave unset for an initial request.
+     *
+     * @remarks
+     * See [Pagination](https://developer.squareup.com/docs/basics/api101/pagination) for more information.
+     */
+    cursor?: string;
+    /**
+     * If `true`, deleted objects will be included in the results. Deleted objects will have their
+     *
+     * @remarks
+     * `is_deleted` field set to `true`.
+     */
+    includeDeletedObjects?: boolean;
+    /**
+     * If `true`, the response will include additional objects that are related to the
+     *
+     * @remarks
+     * requested object, as follows:
+     *
+     * If a CatalogItem is returned in the object field of the response,
+     * its associated CatalogCategory, CatalogTax objects,
+     * CatalogImage objects and CatalogModifierList objects
+     * will be included in the `related_objects` field of the response.
+     *
+     * If a CatalogItemVariation is returned in the object field of the
+     * response, its parent CatalogItem will be included in the `related_objects` field of
+     * the response.
+     */
+    includeRelatedObjects?: boolean;
+    /**
+     * A limit on the number of results to be returned in a single page. The limit is advisory -
+     *
+     * @remarks
+     * the implementation may return more or fewer results. If the supplied limit is negative, zero, or
+     * is higher than the maximum limit of 1,000, it will be ignored.
+     */
+    limit?: number;
+    /**
+     * The desired set of object types to appear in the search results.
+     */
+    objectTypes?: string[];
+    /**
+     * A query composed of one or more different types of filters to narrow the scope of targeted objects when calling the `SearchCatalogObjects` endpoint.
+     *
+     * @remarks
+     *
+     * Although a query can have multiple filters, only certain query types can be combined per call to [SearchCatalogObjects](https://developer.squareup.com/reference/square_2021-08-18/catalog-api/search-catalog-objects).
+     * Any combination of the following types may be used together:
+     * - [exact_query](https://developer.squareup.com/reference/square_2021-08-18/objects/CatalogQueryExact)
+     * - [prefix_query](https://developer.squareup.com/reference/square_2021-08-18/objects/CatalogQueryPrefix)
+     * - [range_query](https://developer.squareup.com/reference/square_2021-08-18/objects/CatalogQueryRange)
+     * - [sorted_attribute_query](https://developer.squareup.com/reference/square_2021-08-18/objects/CatalogQuerySortedAttribute)
+     * - [text_query](https://developer.squareup.com/reference/square_2021-08-18/objects/CatalogQueryText)
+     * All other query types cannot be combined with any others.
+     *
+     * When a query filter is based on an attribute, the attribute must be searchable.
+     * Searchable attributes are listed as follows, along their parent types that can be searched for with applicable query filters.
+     *
+     * * Searchable attribute and objects queryable by searchable attributes **
+     * - `name`:  `CatalogItem`, `CatalogItemVariation`, `CatalogCategory`, `CatalogTax`, `CatalogDiscount`, `CatalogModifier`, 'CatalogModifierList`, `CatalogItemOption`, `CatalogItemOptionValue`
+     * - `description`: `CatalogItem`, `CatalogItemOptionValue`
+     * - `abbreviation`: `CatalogItem`
+     * - `upc`: `CatalogItemVariation`
+     * - `sku`: `CatalogItemVariation`
+     * - `caption`: `CatalogImage`
+     * - `display_name`: `CatalogItemOption`
+     *
+     * For example, to search for [CatalogItem](https://developer.squareup.com/reference/square_2021-08-18/objects/CatalogItem) objects by searchable attributes, you can use
+     * the `"name"`, `"description"`, or `"abbreviation"` attribute in an applicable query filter.
+     */
+    query?: CatalogQuery;
+}

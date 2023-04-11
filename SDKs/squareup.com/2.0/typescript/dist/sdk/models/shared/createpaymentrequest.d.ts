@@ -1,0 +1,261 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { Address } from "./address";
+import { CashPaymentDetails } from "./cashpaymentdetails";
+import { ExternalPaymentDetails } from "./externalpaymentdetails";
+import { Money } from "./money";
+/**
+ * Describes a request to create a payment using
+ *
+ * @remarks
+ * [CreatePayment](https://developer.squareup.com/reference/square_2021-08-18/payments-api/create-payment).
+ */
+export declare class CreatePaymentRequest extends SpeakeasyBase {
+    /**
+     * If set to `true` and charging a Square Gift Card, a payment might be returned with
+     *
+     * @remarks
+     * `amount_money` equal to less than what was requested. For example, a request for $20 when charging
+     * a Square Gift Card with a balance of $5 results in an APPROVED payment of $5. You might choose
+     * to prompt the buyer for an additional payment to cover the remainder or cancel the Gift Card
+     * payment. This field cannot be `true` when `autocomplete = true`.
+     *
+     * For more information, see
+     * [Partial amount with Square Gift Cards](https://developer.squareup.com/docs/payments-api/take-payments#partial-payment-gift-card).
+     *
+     * Default: false
+     */
+    acceptPartialAuthorization?: boolean;
+    /**
+     * Represents an amount of money. `Money` fields can be signed or unsigned.
+     *
+     * @remarks
+     * Fields that do not explicitly define whether they are signed or unsigned are
+     * considered unsigned and can only hold positive amounts. For signed fields, the
+     * sign of the value indicates the purpose of the money transfer. See
+     * [Working with Monetary Amounts](https://developer.squareup.com/docs/build-basics/working-with-monetary-amounts)
+     * for more information.
+     */
+    amountMoney: Money;
+    /**
+     * Represents an amount of money. `Money` fields can be signed or unsigned.
+     *
+     * @remarks
+     * Fields that do not explicitly define whether they are signed or unsigned are
+     * considered unsigned and can only hold positive amounts. For signed fields, the
+     * sign of the value indicates the purpose of the money transfer. See
+     * [Working with Monetary Amounts](https://developer.squareup.com/docs/build-basics/working-with-monetary-amounts)
+     * for more information.
+     */
+    appFeeMoney?: Money;
+    /**
+     * If set to `true`, this payment will be completed when possible. If
+     *
+     * @remarks
+     * set to `false`, this payment is held in an approved state until either
+     * explicitly completed (captured) or canceled (voided). For more information, see
+     * [Delayed capture](https://developer.squareup.com/docs/payments-api/take-payments/card-payments#delayed-capture-of-a-card-payment).
+     *
+     * Default: true
+     */
+    autocomplete?: boolean;
+    /**
+     * Represents a postal address in a country. The address format is based
+     *
+     * @remarks
+     * on an [open-source library from Google](https://github.com/google/libaddressinput). For more information,
+     * see [AddressValidationMetadata](https://github.com/google/libaddressinput/wiki/AddressValidationMetadata).
+     * This format has dedicated fields for four address components: postal code,
+     * locality (city), administrative district (state, prefecture, or province), and
+     * sublocality (town or village). These components have dedicated fields in the
+     * `Address` object because software sometimes behaves differently based on them.
+     * For example, sales tax software may charge different amounts of sales tax
+     * based on the postal code, and some software is only available in
+     * certain states due to compliance reasons.
+     *
+     * For the remaining address components, the `Address` type provides the
+     * `address_line_1` and `address_line_2` fields for free-form data entry.
+     * These fields are free-form because the remaining address components have
+     * too many variations around the world and typical software does not parse
+     * these components. These fields enable users to enter anything they want.
+     *
+     * Note that, in the current implementation, all other `Address` type fields are blank.
+     * These include `address_line_3`, `sublocality_2`, `sublocality_3`,
+     * `administrative_district_level_2`, `administrative_district_level_3`,
+     * `first_name`, `last_name`, and `organization`.
+     *
+     * When it comes to localization, the seller's language preferences
+     * (see [Language preferences](https://developer.squareup.com/docs/locations-api#location-specific-and-seller-level-language-preferences))
+     * are ignored for addresses. Even though Square products (such as Square Point of Sale
+     * and the Seller Dashboard) mostly use a seller's language preference in
+     * communication, when it comes to addresses, they will use English for a US address,
+     * Japanese for an address in Japan, and so on.
+     */
+    billingAddress?: Address;
+    /**
+     * The buyer's email address.
+     */
+    buyerEmailAddress?: string;
+    /**
+     * Stores details about a cash payment. Contains only non-confidential information. For more information, see
+     *
+     * @remarks
+     * [Take Cash Payments](https://developer.squareup.com/docs/payments-api/take-payments/cash-payments).
+     */
+    cashDetails?: CashPaymentDetails;
+    /**
+     * The [Customer](https://developer.squareup.com/reference/square_2021-08-18/objects/Customer) ID of the customer associated with the payment.
+     *
+     * @remarks
+     *
+     * This is required if the `source_id` refers to a card on file created using the Customers API.
+     */
+    customerId?: string;
+    /**
+     * The duration of time after the payment's creation when Square automatically cancels the
+     *
+     * @remarks
+     * payment. This automatic cancellation applies only to payments that do not reach a terminal state
+     * (COMPLETED, CANCELED, or FAILED) before the `delay_duration` time period.
+     *
+     * This parameter should be specified as a time duration, in RFC 3339 format, with a minimum value
+     * of 1 minute.
+     *
+     * Note: This feature is only supported for card payments. This parameter can only be set for a delayed
+     * capture payment (`autocomplete=false`).
+     *
+     * Default:
+     *
+     * - Card-present payments: "PT36H" (36 hours) from the creation time.
+     * - Card-not-present payments: "P7D" (7 days) from the creation time.
+     */
+    delayDuration?: string;
+    /**
+     * Stores details about an external payment. Contains only non-confidential information.
+     *
+     * @remarks
+     * For more information, see
+     * [Take External Payments](https://developer.squareup.com/docs/payments-api/take-payments/external-payments).
+     */
+    externalDetails?: ExternalPaymentDetails;
+    /**
+     * A unique string that identifies this `CreatePayment` request. Keys can be any valid string
+     *
+     * @remarks
+     * but must be unique for every `CreatePayment` request.
+     *
+     * Max: 45 characters
+     *
+     * Note: The number of allowed characters might be less than the stated maximum, if multi-byte
+     * characters are used.
+     *
+     * For more information, see [Idempotency](https://developer.squareup.com/docs/working-with-apis/idempotency).
+     */
+    idempotencyKey: string;
+    /**
+     * The location ID to associate with the payment. If not specified, the default location is
+     *
+     * @remarks
+     * used.
+     */
+    locationId?: string;
+    /**
+     * An optional note to be entered by the developer when creating a payment.
+     *
+     * @remarks
+     *
+     * Limit 500 characters.
+     */
+    note?: string;
+    /**
+     * Associates a previously created order with this payment.
+     */
+    orderId?: string;
+    /**
+     * A user-defined ID to associate with the payment.
+     *
+     * @remarks
+     *
+     * You can use this field to associate the payment to an entity in an external system
+     * (for example, you might specify an order ID that is generated by a third-party shopping cart).
+     *
+     * Limit 40 characters.
+     */
+    referenceId?: string;
+    /**
+     * Represents a postal address in a country. The address format is based
+     *
+     * @remarks
+     * on an [open-source library from Google](https://github.com/google/libaddressinput). For more information,
+     * see [AddressValidationMetadata](https://github.com/google/libaddressinput/wiki/AddressValidationMetadata).
+     * This format has dedicated fields for four address components: postal code,
+     * locality (city), administrative district (state, prefecture, or province), and
+     * sublocality (town or village). These components have dedicated fields in the
+     * `Address` object because software sometimes behaves differently based on them.
+     * For example, sales tax software may charge different amounts of sales tax
+     * based on the postal code, and some software is only available in
+     * certain states due to compliance reasons.
+     *
+     * For the remaining address components, the `Address` type provides the
+     * `address_line_1` and `address_line_2` fields for free-form data entry.
+     * These fields are free-form because the remaining address components have
+     * too many variations around the world and typical software does not parse
+     * these components. These fields enable users to enter anything they want.
+     *
+     * Note that, in the current implementation, all other `Address` type fields are blank.
+     * These include `address_line_3`, `sublocality_2`, `sublocality_3`,
+     * `administrative_district_level_2`, `administrative_district_level_3`,
+     * `first_name`, `last_name`, and `organization`.
+     *
+     * When it comes to localization, the seller's language preferences
+     * (see [Language preferences](https://developer.squareup.com/docs/locations-api#location-specific-and-seller-level-language-preferences))
+     * are ignored for addresses. Even though Square products (such as Square Point of Sale
+     * and the Seller Dashboard) mostly use a seller's language preference in
+     * communication, when it comes to addresses, they will use English for a US address,
+     * Japanese for an address in Japan, and so on.
+     */
+    shippingAddress?: Address;
+    /**
+     * The ID for the source of funds for this payment. This can be a payment token
+     *
+     * @remarks
+     * (card nonce) generated by the Square payment form or a card on file made with the
+     * Customers API. If recording a payment that the seller
+     * received outside of Square, specify either "CASH" or "EXTERNAL".
+     * For more information, see
+     * [Take Payments](https://developer.squareup.com/docs/payments-api/take-payments).
+     */
+    sourceId: string;
+    /**
+     * Optional additional payment information to include on the customer's card statement
+     *
+     * @remarks
+     * as part of the statement description. This can be, for example, an invoice number, ticket number,
+     * or short description that uniquely identifies the purchase.
+     *
+     * Note that the `statement_description_identifier` might get truncated on the statement description
+     * to fit the required information including the Square identifier (SQ *) and name of the
+     * seller taking the payment.
+     */
+    statementDescriptionIdentifier?: string;
+    /**
+     * Represents an amount of money. `Money` fields can be signed or unsigned.
+     *
+     * @remarks
+     * Fields that do not explicitly define whether they are signed or unsigned are
+     * considered unsigned and can only hold positive amounts. For signed fields, the
+     * sign of the value indicates the purpose of the money transfer. See
+     * [Working with Monetary Amounts](https://developer.squareup.com/docs/build-basics/working-with-monetary-amounts)
+     * for more information.
+     */
+    tipMoney?: Money;
+    /**
+     * An identifying token generated by [payments.verifyBuyer()](https://developer.squareup.com/reference/sdks/web/payments/objects/Payments#Payments.verifyBuyer).
+     *
+     * @remarks
+     * Verification tokens encapsulate customer device information and 3-D Secure
+     * challenge results to indicate that Square has verified the buyer identity.
+     *
+     * For more information, see [SCA Overview](https://developer.squareup.com/docs/sca-overview).
+     */
+    verificationToken?: string;
+}

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteVpcActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteVpcActionEnum {
     DeleteVpc = "DeleteVpc"
 }
-export declare enum PostDeleteVpcVersionEnum {
+export declare enum POSTDeleteVpcVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDeleteVpcQueryParams extends SpeakeasyBase {
-    action: PostDeleteVpcActionEnum;
-    version: PostDeleteVpcVersionEnum;
-}
-export declare class PostDeleteVpcHeaders extends SpeakeasyBase {
+export declare class POSTDeleteVpcRequest extends SpeakeasyBase {
+    action: POSTDeleteVpcActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteVpcVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +18,8 @@ export declare class PostDeleteVpcHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteVpcRequest extends SpeakeasyBase {
-    queryParams: PostDeleteVpcQueryParams;
-    headers: PostDeleteVpcHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteVpcResponse extends SpeakeasyBase {
+export declare class POSTDeleteVpcResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

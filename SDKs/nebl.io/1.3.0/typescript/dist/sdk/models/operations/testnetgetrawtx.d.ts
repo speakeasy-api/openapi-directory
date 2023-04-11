@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class TestnetGetRawTxPathParams extends SpeakeasyBase {
-    txid: string;
-}
+import { AxiosResponse } from "axios";
 export declare class TestnetGetRawTxRequest extends SpeakeasyBase {
-    pathParams: TestnetGetRawTxPathParams;
+    /**
+     * Transaction ID
+     */
+    txid: string;
 }
 export declare class TestnetGetRawTxResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Object containing raw hex of transaction
+     */
     getRawTxResponse?: shared.GetRawTxResponse;
 }

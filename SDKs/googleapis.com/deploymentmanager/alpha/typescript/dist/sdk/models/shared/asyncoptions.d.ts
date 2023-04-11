@@ -1,0 +1,12 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { PollingOptions } from "./pollingoptions";
+/**
+ * Async options that determine when a resource should finish.
+ */
+export declare class AsyncOptions extends SpeakeasyBase {
+    /**
+     * Method regex where this policy will apply.
+     */
+    methodMatch?: string;
+    pollingOptions?: PollingOptions;
+}

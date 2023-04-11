@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeTableXAmzTargetEnum {
-    DynamoDb20111205DescribeTable = "DynamoDB_20111205.DescribeTable"
+    DynamoDB20111205DescribeTable = "DynamoDB_20111205.DescribeTable"
 }
-export declare class DescribeTableHeaders extends SpeakeasyBase {
+export declare class DescribeTableRequest extends SpeakeasyBase {
+    describeTableInput: shared.DescribeTableInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class DescribeTableHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeTableXAmzTargetEnum;
 }
-export declare class DescribeTableRequest extends SpeakeasyBase {
-    headers: DescribeTableHeaders;
-    request: shared.DescribeTableInput;
-}
 export declare class DescribeTableResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeTableOutput?: shared.DescribeTableOutput;
+    /**
+     * InternalServerError
+     */
     internalServerError?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

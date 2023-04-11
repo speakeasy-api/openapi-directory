@@ -25,3 +25,4 @@ export * from "./splitshard";
 export * from "./startstreamencryption";
 export * from "./stopstreamencryption";
 export * from "./updateshardcount";
+export * from "./updatestreammode";

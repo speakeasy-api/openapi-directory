@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteInstanceXAmzTargetEnum {
     OpsWorks20130218DeleteInstance = "OpsWorks_20130218.DeleteInstance"
 }
-export declare class DeleteInstanceHeaders extends SpeakeasyBase {
+export declare class DeleteInstanceRequest extends SpeakeasyBase {
+    deleteInstanceRequest: shared.DeleteInstanceRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,13 +15,16 @@ export declare class DeleteInstanceHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteInstanceXAmzTargetEnum;
 }
-export declare class DeleteInstanceRequest extends SpeakeasyBase {
-    headers: DeleteInstanceHeaders;
-    request: shared.DeleteInstanceRequest;
-}
 export declare class DeleteInstanceResponse extends SpeakeasyBase {
     contentType: string;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

@@ -1,24 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Create user session (log in)
-**/
+ */
 export declare class SessionEntity extends SpeakeasyBase {
-    allowed2faMethodSms?: boolean;
-    allowed2faMethodTotp?: boolean;
-    allowed2faMethodU2f?: boolean;
-    allowed2faMethodYubi?: boolean;
+    /**
+     * Session ID
+     */
     id?: string;
+    /**
+     * Session language
+     */
     language?: string;
-    loginToken?: string;
-    loginTokenDomain?: string;
-    maxDirListingSize?: number;
-    multipleRegions?: boolean;
+    /**
+     * Is this session read only?
+     */
     readOnly?: boolean;
-    rootPath?: string;
-    siteId?: number;
-    sslRequired?: boolean;
-    tlsDisabled?: boolean;
-    twoFactorSetupNeeded?: boolean;
-    useProvidedModifiedAt?: boolean;
-    windowsModeFtp?: boolean;
+    /**
+     * Are insecure SFTP ciphers allowed for this user? (If this is set to true, the site administrator has signaled that it is ok to use less secure SSH ciphers for this user.)
+     */
+    sftpInsecureCiphers?: boolean;
 }

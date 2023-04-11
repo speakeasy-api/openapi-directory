@@ -7,7 +7,7 @@ import { ExecutionStatusEnum } from "./executionstatusenum";
 import { TestTypeEnum } from "./testtypeenum";
 /**
  * Represents a device.
-**/
+ */
 export declare class Job extends SpeakeasyBase {
     arn?: string;
     counters?: Counters;

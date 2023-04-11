@@ -4,6 +4,38 @@ import { OfferTag } from "./offertag";
 import { OtherRegionsBasePlanConfig } from "./otherregionsbaseplanconfig";
 import { PrepaidBasePlanType } from "./prepaidbaseplantype";
 import { RegionalBasePlanConfig } from "./regionalbaseplanconfig";
+/**
+ * A single base plan for a subscription.
+ */
+export declare class BasePlanInput extends SpeakeasyBase {
+    /**
+     * Represents a base plan that automatically renews at the end of its subscription period.
+     */
+    autoRenewingBasePlanType?: AutoRenewingBasePlanType;
+    /**
+     * Required. Immutable. The unique identifier of this base plan. Must be unique within the subscription, and conform with RFC-1034. That is, this ID can only contain lower-case letters (a-z), numbers (0-9), and hyphens (-), and be at most 63 characters.
+     */
+    basePlanId?: string;
+    /**
+     * List of up to 20 custom tags specified for this base plan, and returned to the app through the billing library. Subscription offers for this base plan will also receive these offer tags in the billing library.
+     */
+    offerTags?: OfferTag[];
+    /**
+     * Pricing information for any new locations Play may launch in.
+     */
+    otherRegionsConfig?: OtherRegionsBasePlanConfig;
+    /**
+     * Represents a base plan that does not automatically renew at the end of the base plan, and must be manually renewed by the user.
+     */
+    prepaidBasePlanType?: PrepaidBasePlanType;
+    /**
+     * Region-specific information for this base plan.
+     */
+    regionalConfigs?: RegionalBasePlanConfig[];
+}
+/**
+ * Output only. The state of the base plan, i.e. whether it's active. Draft and inactive base plans can be activated or deleted. Active base plans can be made inactive. Inactive base plans can be canceled. This field cannot be changed by updating the resource. Use the dedicated endpoints instead.
+ */
 export declare enum BasePlanStateEnum {
     StateUnspecified = "STATE_UNSPECIFIED",
     Draft = "DRAFT",
@@ -12,24 +44,34 @@ export declare enum BasePlanStateEnum {
 }
 /**
  * A single base plan for a subscription.
-**/
+ */
 export declare class BasePlan extends SpeakeasyBase {
+    /**
+     * Represents a base plan that automatically renews at the end of its subscription period.
+     */
     autoRenewingBasePlanType?: AutoRenewingBasePlanType;
+    /**
+     * Required. Immutable. The unique identifier of this base plan. Must be unique within the subscription, and conform with RFC-1034. That is, this ID can only contain lower-case letters (a-z), numbers (0-9), and hyphens (-), and be at most 63 characters.
+     */
     basePlanId?: string;
+    /**
+     * List of up to 20 custom tags specified for this base plan, and returned to the app through the billing library. Subscription offers for this base plan will also receive these offer tags in the billing library.
+     */
     offerTags?: OfferTag[];
+    /**
+     * Pricing information for any new locations Play may launch in.
+     */
     otherRegionsConfig?: OtherRegionsBasePlanConfig;
+    /**
+     * Represents a base plan that does not automatically renew at the end of the base plan, and must be manually renewed by the user.
+     */
     prepaidBasePlanType?: PrepaidBasePlanType;
+    /**
+     * Region-specific information for this base plan.
+     */
     regionalConfigs?: RegionalBasePlanConfig[];
+    /**
+     * Output only. The state of the base plan, i.e. whether it's active. Draft and inactive base plans can be activated or deleted. Active base plans can be made inactive. Inactive base plans can be canceled. This field cannot be changed by updating the resource. Use the dedicated endpoints instead.
+     */
     state?: BasePlanStateEnum;
-}
-/**
- * A single base plan for a subscription.
-**/
-export declare class BasePlanInput extends SpeakeasyBase {
-    autoRenewingBasePlanType?: AutoRenewingBasePlanType;
-    basePlanId?: string;
-    offerTags?: OfferTag[];
-    otherRegionsConfig?: OtherRegionsBasePlanConfig;
-    prepaidBasePlanType?: PrepaidBasePlanType;
-    regionalConfigs?: RegionalBasePlanConfig[];
 }

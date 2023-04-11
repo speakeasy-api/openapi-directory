@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostGetInstanceProfileActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTGetInstanceProfileActionEnum {
     GetInstanceProfile = "GetInstanceProfile"
 }
-export declare enum PostGetInstanceProfileVersionEnum {
+export declare enum POSTGetInstanceProfileVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostGetInstanceProfileQueryParams extends SpeakeasyBase {
-    action: PostGetInstanceProfileActionEnum;
-    version: PostGetInstanceProfileVersionEnum;
-}
-export declare class PostGetInstanceProfileHeaders extends SpeakeasyBase {
+export declare class POSTGetInstanceProfileRequest extends SpeakeasyBase {
+    action: POSTGetInstanceProfileActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTGetInstanceProfileVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostGetInstanceProfileHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostGetInstanceProfileRequest extends SpeakeasyBase {
-    queryParams: PostGetInstanceProfileQueryParams;
-    headers: PostGetInstanceProfileHeaders;
-    request?: Uint8Array;
-}
-export declare class PostGetInstanceProfileResponse extends SpeakeasyBase {
+export declare class POSTGetInstanceProfileResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

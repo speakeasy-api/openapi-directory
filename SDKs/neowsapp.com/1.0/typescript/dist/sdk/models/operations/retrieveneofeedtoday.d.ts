@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class RetrieveNeoFeedTodayQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class RetrieveNEOFeedTodayRequest extends SpeakeasyBase {
+    /**
+     * detailed
+     */
     detailed?: boolean;
 }
-export declare class RetrieveNeoFeedTodayRequest extends SpeakeasyBase {
-    queryParams: RetrieveNeoFeedTodayQueryParams;
-}
-export declare class RetrieveNeoFeedTodayResponse extends SpeakeasyBase {
+export declare class RetrieveNEOFeedTodayResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * OK
+     */
     nearEarthObjectList?: shared.NearEarthObjectList;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

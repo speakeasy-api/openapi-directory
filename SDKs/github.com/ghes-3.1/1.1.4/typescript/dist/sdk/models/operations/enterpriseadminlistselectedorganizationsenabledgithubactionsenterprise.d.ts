@@ -1,22 +1,33 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterprisePathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterpriseRequest extends SpeakeasyBase {
+    /**
+     * The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+     */
     enterprise: string;
-}
-export declare class EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterpriseQueryParams extends SpeakeasyBase {
+    /**
+     * Page number of the results to fetch.
+     */
     page?: number;
+    /**
+     * The number of results per page (max 100).
+     */
     perPage?: number;
 }
-export declare class EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterprise200ApplicationJson extends SpeakeasyBase {
+/**
+ * Response
+ */
+export declare class EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterprise200ApplicationJSON extends SpeakeasyBase {
     organizations: shared.OrganizationSimple[];
     totalCount: number;
-}
-export declare class EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterpriseRequest extends SpeakeasyBase {
-    pathParams: EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterprisePathParams;
-    queryParams: EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterpriseQueryParams;
 }
 export declare class EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterpriseResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    enterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterprise200ApplicationJSONObject?: EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterprise200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
+    enterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterprise200ApplicationJSONObject?: EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterprise200ApplicationJSON;
 }

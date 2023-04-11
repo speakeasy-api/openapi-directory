@@ -1,6 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PatientVaccineRecordsListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class PatientVaccineRecordsListSecurity extends SpeakeasyBase {
+    drchronoOauth2: string;
+}
+export declare class PatientVaccineRecordsListRequest extends SpeakeasyBase {
     cursor?: string;
     cvxCode?: string;
     doctor?: number;
@@ -8,23 +12,29 @@ export declare class PatientVaccineRecordsListQueryParams extends SpeakeasyBase 
     patient?: number;
     since?: string;
 }
-export declare class PatientVaccineRecordsListSecurity extends SpeakeasyBase {
-    drchronoOauth2: shared.SchemeDrchronoOauth2;
-}
 /**
  * Paginated Result
-**/
-export declare class PatientVaccineRecordsList200ApplicationJson extends SpeakeasyBase {
+ */
+export declare class PatientVaccineRecordsList200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * result data
+     */
     data?: shared.PatientVaccineRecord[];
+    /**
+     * Next Paginated page
+     */
     next?: string;
+    /**
+     * Previous paginated page
+     */
     previous?: string;
-}
-export declare class PatientVaccineRecordsListRequest extends SpeakeasyBase {
-    queryParams: PatientVaccineRecordsListQueryParams;
-    security: PatientVaccineRecordsListSecurity;
 }
 export declare class PatientVaccineRecordsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    patientVaccineRecordsList200ApplicationJSONObject?: PatientVaccineRecordsList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
+    patientVaccineRecordsList200ApplicationJSONObject?: PatientVaccineRecordsList200ApplicationJSON;
 }

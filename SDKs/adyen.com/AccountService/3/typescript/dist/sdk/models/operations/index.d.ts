@@ -3,6 +3,7 @@ export * from "./postcloseaccountholder";
 export * from "./postcreateaccount";
 export * from "./postcreateaccountholder";
 export * from "./postdeletebankaccounts";
+export * from "./postdeletelegalarrangements";
 export * from "./postdeleteshareholders";
 export * from "./postdeletesignatories";
 export * from "./postgetaccountholder";

@@ -1,37 +1,60 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CreateDiffHtmlUsingGetQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class CreateDiffHTMLUsingGETRequest extends SpeakeasyBase {
     endRev?: string;
     padID?: string;
     startRev?: string;
 }
-export declare class CreateDiffHtmlUsingGet200ApplicationJson extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class CreateDiffHTMLUsingGet500ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class CreateDiffHtmlUsingGet400ApplicationJson extends SpeakeasyBase {
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class CreateDiffHTMLUsingGet401ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class CreateDiffHtmlUsingGet401ApplicationJson extends SpeakeasyBase {
+/**
+ * generic api error (code 1)
+ */
+export declare class CreateDiffHTMLUsingGet400ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class CreateDiffHtmlUsingGet500ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class CreateDiffHTMLUsingGet200ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class CreateDiffHtmlUsingGetRequest extends SpeakeasyBase {
-    queryParams: CreateDiffHtmlUsingGetQueryParams;
-}
-export declare class CreateDiffHtmlUsingGetResponse extends SpeakeasyBase {
+export declare class CreateDiffHTMLUsingGETResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createDiffHTMLUsingGET200ApplicationJSONObject?: CreateDiffHtmlUsingGet200ApplicationJson;
-    createDiffHTMLUsingGET400ApplicationJSONObject?: CreateDiffHtmlUsingGet400ApplicationJson;
-    createDiffHTMLUsingGET401ApplicationJSONObject?: CreateDiffHtmlUsingGet401ApplicationJson;
-    createDiffHTMLUsingGET500ApplicationJSONObject?: CreateDiffHtmlUsingGet500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    createDiffHTMLUsingGET200ApplicationJSONObject?: CreateDiffHTMLUsingGet200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    createDiffHTMLUsingGET400ApplicationJSONObject?: CreateDiffHTMLUsingGet400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    createDiffHTMLUsingGET401ApplicationJSONObject?: CreateDiffHTMLUsingGet401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    createDiffHTMLUsingGET500ApplicationJSONObject?: CreateDiffHTMLUsingGet500ApplicationJSON;
 }

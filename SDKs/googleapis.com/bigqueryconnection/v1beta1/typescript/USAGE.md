@@ -1,54 +1,47 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { BigqueryconnectionProjectsLocationsConnectionsCreateRequest, BigqueryconnectionProjectsLocationsConnectionsCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  BigqueryconnectionProjectsLocationsConnectionsCreateRequest,
+  BigqueryconnectionProjectsLocationsConnectionsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  CloudSqlPropertiesTypeEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: BigqueryconnectionProjectsLocationsConnectionsCreateRequest = {
-  security: {
-    option1: {
-      oauth2: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-      oauth2c: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    connectionId: "dolor",
-    fields: "expedita",
-    key: "voluptas",
-    oauthToken: "fugit",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    uploadType: "rerum",
-    uploadProtocol: "dicta",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  connectionInput: {
     cloudSql: {
       credential: {
-        password: "debitis",
-        username: "voluptatum",
+        password: "provident",
+        username: "Micheal_Sporer",
       },
-      database: "et",
-      instanceId: "ut",
-      type: "MYSQL",
+      database: "corrupti",
+      instanceId: "illum",
+      type: CloudSqlPropertiesTypeEnum.Postgres,
     },
-    description: "et",
-    friendlyName: "voluptate",
-    name: "iste",
+    description: "error",
+    friendlyName: "deserunt",
+    name: "suscipit",
   },
+  accessToken: "iure",
+  alt: AltEnum.Json,
+  callback: "debitis",
+  connectionId: "ipsa",
+  fields: "delectus",
+  key: "tempora",
+  oauthToken: "suscipit",
+  parent: "molestiae",
+  prettyPrint: false,
+  quotaUser: "minus",
+  uploadType: "placeat",
+  uploadProtocol: "voluptatum",
 };
 
 sdk.projects.bigqueryconnectionProjectsLocationsConnectionsCreate(req).then((res: BigqueryconnectionProjectsLocationsConnectionsCreateResponse | AxiosError) => {

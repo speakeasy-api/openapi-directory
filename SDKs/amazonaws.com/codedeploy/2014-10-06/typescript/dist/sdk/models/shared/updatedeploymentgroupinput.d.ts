@@ -5,15 +5,15 @@ import { BlueGreenDeploymentConfiguration } from "./bluegreendeploymentconfigura
 import { DeploymentStyle } from "./deploymentstyle";
 import { Ec2TagFilter } from "./ec2tagfilter";
 import { Ec2TagSet } from "./ec2tagset";
-import { EcsService } from "./ecsservice";
+import { ECSService } from "./ecsservice";
 import { LoadBalancerInfo } from "./loadbalancerinfo";
-import { TagFilter } from "./tagfilter";
 import { OnPremisesTagSet } from "./onpremisestagset";
 import { OutdatedInstancesStrategyEnum } from "./outdatedinstancesstrategyenum";
+import { TagFilter } from "./tagfilter";
 import { TriggerConfig } from "./triggerconfig";
 /**
  * Represents the input of an <code>UpdateDeploymentGroup</code> operation.
-**/
+ */
 export declare class UpdateDeploymentGroupInput extends SpeakeasyBase {
     alarmConfiguration?: AlarmConfiguration;
     applicationName: string;
@@ -25,7 +25,7 @@ export declare class UpdateDeploymentGroupInput extends SpeakeasyBase {
     deploymentStyle?: DeploymentStyle;
     ec2TagFilters?: Ec2TagFilter[];
     ec2TagSet?: Ec2TagSet;
-    ecsServices?: EcsService[];
+    ecsServices?: ECSService[];
     loadBalancerInfo?: LoadBalancerInfo;
     newDeploymentGroupName?: string;
     onPremisesInstanceTagFilters?: TagFilter[];

@@ -1,7 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class GetPairedDevicesResponse extends SpeakeasyBase {
     contentType: string;
     example111s?: shared.Example111[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

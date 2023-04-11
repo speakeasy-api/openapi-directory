@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum ListRulesXAmzTargetEnum {
-    Awswaf20150824ListRules = "AWSWAF_20150824.ListRules"
+    AWSWAF20150824ListRules = "AWSWAF_20150824.ListRules"
 }
-export declare class ListRulesHeaders extends SpeakeasyBase {
+export declare class ListRulesRequest extends SpeakeasyBase {
+    listRulesRequest: shared.ListRulesRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class ListRulesHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListRulesXAmzTargetEnum;
 }
-export declare class ListRulesRequest extends SpeakeasyBase {
-    headers: ListRulesHeaders;
-    request: shared.ListRulesRequest;
-}
 export declare class ListRulesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     listRulesResponse?: shared.ListRulesResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFInvalidAccountException
+     */
     wafInvalidAccountException?: any;
 }

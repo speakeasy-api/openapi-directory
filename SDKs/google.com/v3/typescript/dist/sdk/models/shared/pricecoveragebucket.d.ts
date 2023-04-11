@@ -1,0 +1,50 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Advance booking window range.
+ */
+export declare enum PriceCoverageBucketAdvanceBookingWindowRangeEnum {
+    AdvanceBookingWindowRangeUnspecified = "ADVANCE_BOOKING_WINDOW_RANGE_UNSPECIFIED",
+    AdvanceBookingWindowRangeUnknown = "ADVANCE_BOOKING_WINDOW_RANGE_UNKNOWN",
+    Days0To30 = "DAYS_0_TO_30",
+    Days31To60 = "DAYS_31_TO_60",
+    Days61To90 = "DAYS_61_TO_90",
+    Days91To120 = "DAYS_91_TO_120",
+    Days121To150 = "DAYS_121_TO_150",
+    Days151To180 = "DAYS_151_TO_180",
+    Days181To210 = "DAYS_181_TO_210",
+    Days211To240 = "DAYS_211_TO_240",
+    Days241To270 = "DAYS_241_TO_270",
+    Days271To300 = "DAYS_271_TO_300",
+    Days301To330 = "DAYS_301_TO_330"
+}
+/**
+ * Length of stay range.
+ */
+export declare enum PriceCoverageBucketLengthOfStayRangeEnum {
+    LengthOfStayRangeUnspecified = "LENGTH_OF_STAY_RANGE_UNSPECIFIED",
+    LengthOfStayRangeUnknown = "LENGTH_OF_STAY_RANGE_UNKNOWN",
+    LengthOfStay1To7 = "LENGTH_OF_STAY_1_TO_7",
+    LengthOfStay8To14 = "LENGTH_OF_STAY_8_TO_14",
+    LengthOfStay15To30 = "LENGTH_OF_STAY_15_TO_30"
+}
+/**
+ * Coverage stats for one combination of advance booking window and length of stay.
+ */
+export declare class PriceCoverageBucket extends SpeakeasyBase {
+    /**
+     * Advance booking window range.
+     */
+    advanceBookingWindowRange?: PriceCoverageBucketAdvanceBookingWindowRangeEnum;
+    /**
+     * Number of prices for this advance booking window bucket and length of stay bucket.
+     */
+    availablePriceCount?: string;
+    /**
+     * Length of stay range.
+     */
+    lengthOfStayRange?: PriceCoverageBucketLengthOfStayRangeEnum;
+    /**
+     * The percent of itineraries for which you have coverage for this advance booking window bucket and length of stay bucket.
+     */
+    priceCoveragePercent?: number;
+}

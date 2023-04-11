@@ -1,18 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class SentimentMultipartRequests extends SpeakeasyBase {
-    sentimentPredictRequest?: shared.SentimentPredictRequest;
-    sentimentPredictRequest1?: shared.SentimentPredictRequest;
-}
+import { AxiosResponse } from "axios";
 export declare class SentimentMultipartSecurity extends SpeakeasyBase {
-    bearerToken: shared.SchemeBearerToken;
-}
-export declare class SentimentMultipartRequest extends SpeakeasyBase {
-    request?: SentimentMultipartRequests;
-    security: SentimentMultipartSecurity;
+    bearerToken: string;
 }
 export declare class SentimentMultipartResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Prediction Result
+     */
     sentimentPredictResponse?: shared.SentimentPredictResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

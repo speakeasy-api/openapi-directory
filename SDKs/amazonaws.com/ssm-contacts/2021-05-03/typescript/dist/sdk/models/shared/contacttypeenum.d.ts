@@ -1,4 +1,5 @@
 export declare enum ContactTypeEnum {
     Personal = "PERSONAL",
-    Escalation = "ESCALATION"
+    Escalation = "ESCALATION",
+    OncallSchedule = "ONCALL_SCHEDULE"
 }

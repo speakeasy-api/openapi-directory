@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolMqttGetStatisticsPathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolMqttGetStatisticsRequest extends SpeakeasyBase {
-    pathParams: ProtocolMqttGetStatisticsPathParams;
+    /**
+     * Agent to show MQTT statistics
+     */
+    agentNum: number;
 }
 export declare class ProtocolMqttGetStatisticsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolMqttGetStatistics200ApplicationJSONInt32Integers?: number[];
 }

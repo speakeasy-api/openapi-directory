@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteIdentityPolicyActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteIdentityPolicyActionEnum {
     DeleteIdentityPolicy = "DeleteIdentityPolicy"
 }
-export declare enum GetDeleteIdentityPolicyVersionEnum {
+export declare enum GETDeleteIdentityPolicyVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetDeleteIdentityPolicyQueryParams extends SpeakeasyBase {
-    action: GetDeleteIdentityPolicyActionEnum;
+export declare class GETDeleteIdentityPolicyRequest extends SpeakeasyBase {
+    action: GETDeleteIdentityPolicyActionEnum;
+    /**
+     * <p>The identity that is associated with the policy that you want to delete. You can specify the identity by using its name or by using its Amazon Resource Name (ARN). Examples: <code>user@example.com</code>, <code>example.com</code>, <code>arn:aws:ses:us-east-1:123456789012:identity/example.com</code>.</p> <p>To successfully call this API, you must own the identity.</p>
+     */
     identity: string;
+    /**
+     * The name of the policy to be deleted.
+     */
     policyName: string;
-    version: GetDeleteIdentityPolicyVersionEnum;
-}
-export declare class GetDeleteIdentityPolicyHeaders extends SpeakeasyBase {
+    version: GETDeleteIdentityPolicyVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetDeleteIdentityPolicyHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteIdentityPolicyRequest extends SpeakeasyBase {
-    queryParams: GetDeleteIdentityPolicyQueryParams;
-    headers: GetDeleteIdentityPolicyHeaders;
-}
-export declare class GetDeleteIdentityPolicyResponse extends SpeakeasyBase {
+export declare class GETDeleteIdentityPolicyResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

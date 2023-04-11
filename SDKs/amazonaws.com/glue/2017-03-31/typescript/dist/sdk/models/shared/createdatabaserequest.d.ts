@@ -3,4 +3,5 @@ import { DatabaseInput } from "./databaseinput";
 export declare class CreateDatabaseRequest extends SpeakeasyBase {
     catalogId?: string;
     databaseInput: DatabaseInput;
+    tags?: Record<string, string>;
 }

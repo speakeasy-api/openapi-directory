@@ -1,23 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GroupsIsMemberOfPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GroupsIsMemberOfRequest extends SpeakeasyBase {
+    /**
+     * The check group membership parameters.
+     */
+    requestBody: Record<string, Record<string, any>>;
+    /**
+     * Client API version.
+     */
+    apiVersion: string;
+    /**
+     * The tenant ID.
+     */
     tenantID: string;
 }
-export declare class GroupsIsMemberOfQueryParams extends SpeakeasyBase {
-    apiVersion: string;
-}
-export declare class GroupsIsMemberOfRequests extends SpeakeasyBase {
-    checkGroupMembershipParameters?: Record<string, Record<string, any>>;
-    checkGroupMembershipParameters1?: Record<string, Record<string, any>>;
-}
-export declare class GroupsIsMemberOfRequest extends SpeakeasyBase {
-    pathParams: GroupsIsMemberOfPathParams;
-    queryParams: GroupsIsMemberOfQueryParams;
-    request: GroupsIsMemberOfRequests;
-}
 export declare class GroupsIsMemberOfResponse extends SpeakeasyBase {
+    /**
+     * OK. Indicates success. Returns true if the user, contact, group, or service principal is a direct or a transitive member of the specified group; otherwise, false.
+     */
     checkGroupMembershipResult?: Record<string, Record<string, any>>;
     contentType: string;
+    /**
+     * Error response describing why the operation failed.
+     */
     graphError?: shared.GraphError;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

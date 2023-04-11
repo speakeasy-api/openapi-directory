@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetExternalEventsIdPathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetExternalEventsIdRequest extends SpeakeasyBase {
-    pathParams: GetExternalEventsIdPathParams;
+    /**
+     * External Event ID.
+     */
+    id: number;
 }
 export declare class GetExternalEventsIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * The ExternalEvents object.
+     */
     externalEventEntity?: shared.ExternalEventEntity;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

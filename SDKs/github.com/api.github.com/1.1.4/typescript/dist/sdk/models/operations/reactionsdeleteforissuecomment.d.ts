@@ -1,14 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ReactionsDeleteForIssueCommentPathParams extends SpeakeasyBase {
-    commentId: number;
-    owner: string;
-    reactionId: number;
-    repo: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ReactionsDeleteForIssueCommentRequest extends SpeakeasyBase {
-    pathParams: ReactionsDeleteForIssueCommentPathParams;
+    /**
+     * The unique identifier of the comment.
+     */
+    commentId: number;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    owner: string;
+    /**
+     * The unique identifier of the reaction.
+     */
+    reactionId: number;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    repo: string;
 }
 export declare class ReactionsDeleteForIssueCommentResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

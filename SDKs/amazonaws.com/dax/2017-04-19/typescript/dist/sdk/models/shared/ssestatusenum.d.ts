@@ -1,4 +1,4 @@
-export declare enum SseStatusEnum {
+export declare enum SSEStatusEnum {
     Enabling = "ENABLING",
     Enabled = "ENABLED",
     Disabling = "DISABLING",

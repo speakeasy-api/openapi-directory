@@ -1,18 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PrivateCollectionPrivateLinksListPathParams extends SpeakeasyBase {
-    collectionId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class PrivateCollectionPrivateLinksListSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class PrivateCollectionPrivateLinksListRequest extends SpeakeasyBase {
-    pathParams: PrivateCollectionPrivateLinksListPathParams;
-    security: PrivateCollectionPrivateLinksListSecurity;
+    /**
+     * Collection unique identifier
+     */
+    collectionId: number;
 }
 export declare class PrivateCollectionPrivateLinksListResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Forbidden
+     */
     errorMessage?: shared.ErrorMessage;
+    /**
+     * OK. Collection private links
+     */
     privateLinks?: shared.PrivateLink[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,22 +1,20 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateAMapRequest, CreateAMapResponse } from "openapi/src/sdk/models/operations";
+import {
+  CreateAMapRequest,
+  CreateAMapResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: CreateAMapRequest = {
-  queryParams: {
-    appToken: "sit",
-    constraint: "voluptas",
-    entityId: "culpa",
-    variable: "expedita",
-  },
-  headers: {
-    xAppToken: "consequuntur",
-  },
+  xAppToken: "corrupti",
+  appToken: "provident",
+  constraint: "distinctio",
+  entityId: "quibusdam",
+  variable: "unde",
 };
 
 sdk.createAMap(req).then((res: CreateAMapResponse | AxiosError) => {

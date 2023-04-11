@@ -1,0 +1,26 @@
+/**
+ * The name of the color name list to use
+ */
+export declare enum PossibleListsEnum {
+    Default = "default",
+    BestOf = "bestOf",
+    Wikipedia = "wikipedia",
+    French = "french",
+    Ridgway = "ridgway",
+    Risograph = "risograph",
+    Basic = "basic",
+    ChineseTraditional = "chineseTraditional",
+    Html = "html",
+    JapaneseTraditional = "japaneseTraditional",
+    LeCorbusier = "leCorbusier",
+    NbsIscc = "nbsIscc",
+    Ntc = "ntc",
+    Osxcrayons = "osxcrayons",
+    Ral = "ral",
+    SanzoWadaI = "sanzoWadaI",
+    Thesaurus = "thesaurus",
+    Werner = "werner",
+    Windows = "windows",
+    X11 = "x11",
+    Xkcd = "xkcd"
+}

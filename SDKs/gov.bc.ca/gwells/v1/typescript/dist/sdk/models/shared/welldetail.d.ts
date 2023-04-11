@@ -1,14 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { Casing } from "./casing";
-import { OrganizationNameList } from "./organizationnamelist";
 import { DecommissionDescription } from "./decommissiondescription";
 import { LinerPerforation } from "./linerperforation";
 import { LithologyDescription } from "./lithologydescription";
+import { OrganizationNameList } from "./organizationnamelist";
 import { PersonBasic } from "./personbasic";
 import { Screen } from "./screen";
+export declare enum WellDetailAlternativeSpecsSubmittedIfRequiredEnum {
+    False = "false",
+    True = "true"
+}
+export declare enum WellDetailHydroFracturingPerformedEnum {
+    False = "false",
+    True = "true"
+}
+export declare enum WellDetailWellDisinfectedEnum {
+    False = "false",
+    True = "true"
+}
+export declare enum WellDetailOrientationOfWellEnum {
+    True = "true",
+    False = "false"
+}
 export declare class WellDetail extends SpeakeasyBase {
     alterationEndDate?: Date;
-    alternativeSpecsSubmitted?: boolean;
+    alternativeSpecsSubmitted?: WellDetailAlternativeSpecsSubmittedIfRequiredEnum;
     analyticSolutionType?: string;
     aquifer?: number;
     aquiferVulnerabilityIndex?: string;
@@ -51,7 +67,7 @@ export declare class WellDetail extends SpeakeasyBase {
     groundElevation?: string;
     groundElevationMethod?: string;
     hydraulicConductivity?: string;
-    hydroFracturingPerformed?: boolean;
+    hydroFracturingPerformed?: WellDetailHydroFracturingPerformedEnum;
     hydroFracturingYieldIncrease?: string;
     idPlateAttachedBy?: string;
     identificationPlateNumber?: number;
@@ -118,11 +134,11 @@ export declare class WellDetail extends SpeakeasyBase {
     well: number;
     wellCapType?: string;
     wellClass?: string;
-    wellDisinfected?: boolean;
+    wellDisinfected?: WellDetailWellDisinfectedEnum;
     wellGuid?: string;
     wellIdentificationPlateAttached?: string;
     wellLocationDescription?: string;
-    wellOrientation?: boolean;
+    wellOrientation?: WellDetailOrientationOfWellEnum;
     wellStatus?: string;
     wellSubclass?: string;
     wellTagNumber?: number;

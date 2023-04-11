@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListRoutingControlsPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListRoutingControlsRequest extends SpeakeasyBase {
+    /**
+     * The Amazon Resource Name (ARN) of the control panel.
+     */
     controlPanelArn: string;
-}
-export declare class ListRoutingControlsQueryParams extends SpeakeasyBase {
+    /**
+     * The number of objects that you want to return with this call.
+     */
     maxResults?: number;
+    /**
+     * The token that identifies which batch of results you want to see.
+     */
     nextToken?: string;
-}
-export declare class ListRoutingControlsHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,18 +22,32 @@ export declare class ListRoutingControlsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class ListRoutingControlsRequest extends SpeakeasyBase {
-    pathParams: ListRoutingControlsPathParams;
-    queryParams: ListRoutingControlsQueryParams;
-    headers: ListRoutingControlsHeaders;
-}
 export declare class ListRoutingControlsResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * Success
+     */
     listRoutingControlsResponse?: shared.ListRoutingControlsResponse;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

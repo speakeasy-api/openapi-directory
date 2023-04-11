@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetUserContentUrlJsonQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETUserContentUrlJsonSecurity extends SpeakeasyBase {
+    apiKey: string;
+}
+export declare class GETUserContentUrlJsonRequest extends SpeakeasyBase {
     url?: string;
 }
-export declare class GetUserContentUrlJsonSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
-}
-export declare class GetUserContentUrlJson200ApplicationJsonDebug extends SpeakeasyBase {
+export declare class GETUserContentUrlJson200ApplicationJSONDebug extends SpeakeasyBase {
     version?: number;
 }
-export declare class GetUserContentUrlJson200ApplicationJsonResultsComments extends SpeakeasyBase {
+export declare class GETUserContentUrlJson200ApplicationJSONResultsComments extends SpeakeasyBase {
     approveDate?: string;
     commentBody?: string;
     commentID?: number;
@@ -39,10 +39,10 @@ export declare class GetUserContentUrlJson200ApplicationJsonResultsComments exte
     userTitle?: any;
     userURL?: any;
 }
-export declare class GetUserContentUrlJson200ApplicationJsonResults extends SpeakeasyBase {
+export declare class GETUserContentUrlJson200ApplicationJSONResults extends SpeakeasyBase {
     apiTimestamp?: string;
     callerID?: any;
-    comments?: GetUserContentUrlJson200ApplicationJsonResultsComments[];
+    comments?: GETUserContentUrlJson200ApplicationJSONResultsComments[];
     depthLimit?: number;
     filter?: string;
     page?: number;
@@ -61,18 +61,15 @@ export declare class GetUserContentUrlJson200ApplicationJsonResults extends Spea
     totalReporterReplyCommentsFound?: number;
     totalReporterReplyCommentsReturned?: number;
 }
-export declare class GetUserContentUrlJson200ApplicationJson extends SpeakeasyBase {
+export declare class GETUserContentUrlJson200ApplicationJSON extends SpeakeasyBase {
     copyright?: string;
-    debug?: GetUserContentUrlJson200ApplicationJsonDebug;
-    results?: GetUserContentUrlJson200ApplicationJsonResults;
+    debug?: GETUserContentUrlJson200ApplicationJSONDebug;
+    results?: GETUserContentUrlJson200ApplicationJSONResults;
     status?: string;
 }
-export declare class GetUserContentUrlJsonRequest extends SpeakeasyBase {
-    queryParams: GetUserContentUrlJsonQueryParams;
-    security: GetUserContentUrlJsonSecurity;
-}
-export declare class GetUserContentUrlJsonResponse extends SpeakeasyBase {
+export declare class GETUserContentUrlJsonResponse extends SpeakeasyBase {
     contentType: string;
-    getUserContentUrlJSON200ApplicationJSONObject?: GetUserContentUrlJson200ApplicationJson;
+    getUserContentUrlJSON200ApplicationJSONObject?: GETUserContentUrlJson200ApplicationJSON;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateNetworkInsightsPathActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateNetworkInsightsPathActionEnum {
     CreateNetworkInsightsPath = "CreateNetworkInsightsPath"
 }
-export declare enum PostCreateNetworkInsightsPathVersionEnum {
+export declare enum POSTCreateNetworkInsightsPathVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostCreateNetworkInsightsPathQueryParams extends SpeakeasyBase {
-    action: PostCreateNetworkInsightsPathActionEnum;
-    version: PostCreateNetworkInsightsPathVersionEnum;
-}
-export declare class PostCreateNetworkInsightsPathHeaders extends SpeakeasyBase {
+export declare class POSTCreateNetworkInsightsPathRequest extends SpeakeasyBase {
+    action: POSTCreateNetworkInsightsPathActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateNetworkInsightsPathVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateNetworkInsightsPathHeaders extends SpeakeasyBase 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateNetworkInsightsPathRequest extends SpeakeasyBase {
-    queryParams: PostCreateNetworkInsightsPathQueryParams;
-    headers: PostCreateNetworkInsightsPathHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateNetworkInsightsPathResponse extends SpeakeasyBase {
+export declare class POSTCreateNetworkInsightsPathResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

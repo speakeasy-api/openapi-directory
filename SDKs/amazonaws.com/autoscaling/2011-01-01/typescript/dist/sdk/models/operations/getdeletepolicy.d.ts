@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeletePolicyActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeletePolicyActionEnum {
     DeletePolicy = "DeletePolicy"
 }
-export declare enum GetDeletePolicyVersionEnum {
+export declare enum GETDeletePolicyVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class GetDeletePolicyQueryParams extends SpeakeasyBase {
-    action: GetDeletePolicyActionEnum;
+export declare class GETDeletePolicyRequest extends SpeakeasyBase {
+    action: GETDeletePolicyActionEnum;
+    /**
+     * The name of the Auto Scaling group.
+     */
     autoScalingGroupName?: string;
+    /**
+     * The name or Amazon Resource Name (ARN) of the policy.
+     */
     policyName: string;
-    version: GetDeletePolicyVersionEnum;
-}
-export declare class GetDeletePolicyHeaders extends SpeakeasyBase {
+    version: GETDeletePolicyVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetDeletePolicyHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeletePolicyRequest extends SpeakeasyBase {
-    queryParams: GetDeletePolicyQueryParams;
-    headers: GetDeletePolicyHeaders;
-}
-export declare class GetDeletePolicyResponse extends SpeakeasyBase {
+export declare class GETDeletePolicyResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

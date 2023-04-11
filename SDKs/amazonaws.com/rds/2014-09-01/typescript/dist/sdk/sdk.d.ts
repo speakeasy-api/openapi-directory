@@ -1,12 +1,31 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-import { Security } from "./models/shared";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["http://rds.{region}.amazonaws.com", "https://rds.{region}.amazonaws.com", "http://rds.amazonaws.com", "https://rds.amazonaws.com", "http://rds.{region}.amazonaws.com.cn", "https://rds.{region}.amazonaws.com.cn"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * The security details required to authenticate the SDK
+     */
+    security?: shared.Security;
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    security?: Security;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ *
+ * @see {@link https://docs.aws.amazon.com/rds/} - Amazon Web Services documentation
+ */
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -14,74 +33,78 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
-    getAddSourceIdentifierToSubscription(req: operations.GetAddSourceIdentifierToSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.GetAddSourceIdentifierToSubscriptionResponse>;
-    getAuthorizeDbSecurityGroupIngress(req: operations.GetAuthorizeDbSecurityGroupIngressRequest, config?: AxiosRequestConfig): Promise<operations.GetAuthorizeDbSecurityGroupIngressResponse>;
-    getDeleteDbInstance(req: operations.GetDeleteDbInstanceRequest, config?: AxiosRequestConfig): Promise<operations.GetDeleteDbInstanceResponse>;
-    getDeleteDbParameterGroup(req: operations.GetDeleteDbParameterGroupRequest, config?: AxiosRequestConfig): Promise<operations.GetDeleteDbParameterGroupResponse>;
-    getDeleteDbSecurityGroup(req: operations.GetDeleteDbSecurityGroupRequest, config?: AxiosRequestConfig): Promise<operations.GetDeleteDbSecurityGroupResponse>;
-    getDeleteDbSnapshot(req: operations.GetDeleteDbSnapshotRequest, config?: AxiosRequestConfig): Promise<operations.GetDeleteDbSnapshotResponse>;
-    getDeleteDbSubnetGroup(req: operations.GetDeleteDbSubnetGroupRequest, config?: AxiosRequestConfig): Promise<operations.GetDeleteDbSubnetGroupResponse>;
-    getDeleteEventSubscription(req: operations.GetDeleteEventSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.GetDeleteEventSubscriptionResponse>;
-    getDeleteOptionGroup(req: operations.GetDeleteOptionGroupRequest, config?: AxiosRequestConfig): Promise<operations.GetDeleteOptionGroupResponse>;
-    getDownloadDbLogFilePortion(req: operations.GetDownloadDbLogFilePortionRequest, config?: AxiosRequestConfig): Promise<operations.GetDownloadDbLogFilePortionResponse>;
-    getPromoteReadReplica(req: operations.GetPromoteReadReplicaRequest, config?: AxiosRequestConfig): Promise<operations.GetPromoteReadReplicaResponse>;
-    getRebootDbInstance(req: operations.GetRebootDbInstanceRequest, config?: AxiosRequestConfig): Promise<operations.GetRebootDbInstanceResponse>;
-    getRemoveSourceIdentifierFromSubscription(req: operations.GetRemoveSourceIdentifierFromSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.GetRemoveSourceIdentifierFromSubscriptionResponse>;
-    getRemoveTagsFromResource(req: operations.GetRemoveTagsFromResourceRequest, config?: AxiosRequestConfig): Promise<operations.GetRemoveTagsFromResourceResponse>;
-    getRevokeDbSecurityGroupIngress(req: operations.GetRevokeDbSecurityGroupIngressRequest, config?: AxiosRequestConfig): Promise<operations.GetRevokeDbSecurityGroupIngressResponse>;
-    postAddSourceIdentifierToSubscription(req: operations.PostAddSourceIdentifierToSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.PostAddSourceIdentifierToSubscriptionResponse>;
-    postAddTagsToResource(req: operations.PostAddTagsToResourceRequest, config?: AxiosRequestConfig): Promise<operations.PostAddTagsToResourceResponse>;
-    postAuthorizeDbSecurityGroupIngress(req: operations.PostAuthorizeDbSecurityGroupIngressRequest, config?: AxiosRequestConfig): Promise<operations.PostAuthorizeDbSecurityGroupIngressResponse>;
-    postCopyDbParameterGroup(req: operations.PostCopyDbParameterGroupRequest, config?: AxiosRequestConfig): Promise<operations.PostCopyDbParameterGroupResponse>;
-    postCopyDbSnapshot(req: operations.PostCopyDbSnapshotRequest, config?: AxiosRequestConfig): Promise<operations.PostCopyDbSnapshotResponse>;
-    postCopyOptionGroup(req: operations.PostCopyOptionGroupRequest, config?: AxiosRequestConfig): Promise<operations.PostCopyOptionGroupResponse>;
-    postCreateDbInstance(req: operations.PostCreateDbInstanceRequest, config?: AxiosRequestConfig): Promise<operations.PostCreateDbInstanceResponse>;
-    postCreateDbInstanceReadReplica(req: operations.PostCreateDbInstanceReadReplicaRequest, config?: AxiosRequestConfig): Promise<operations.PostCreateDbInstanceReadReplicaResponse>;
-    postCreateDbParameterGroup(req: operations.PostCreateDbParameterGroupRequest, config?: AxiosRequestConfig): Promise<operations.PostCreateDbParameterGroupResponse>;
-    postCreateDbSecurityGroup(req: operations.PostCreateDbSecurityGroupRequest, config?: AxiosRequestConfig): Promise<operations.PostCreateDbSecurityGroupResponse>;
-    postCreateDbSnapshot(req: operations.PostCreateDbSnapshotRequest, config?: AxiosRequestConfig): Promise<operations.PostCreateDbSnapshotResponse>;
-    postCreateDbSubnetGroup(req: operations.PostCreateDbSubnetGroupRequest, config?: AxiosRequestConfig): Promise<operations.PostCreateDbSubnetGroupResponse>;
-    postCreateEventSubscription(req: operations.PostCreateEventSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.PostCreateEventSubscriptionResponse>;
-    postCreateOptionGroup(req: operations.PostCreateOptionGroupRequest, config?: AxiosRequestConfig): Promise<operations.PostCreateOptionGroupResponse>;
-    postDeleteDbInstance(req: operations.PostDeleteDbInstanceRequest, config?: AxiosRequestConfig): Promise<operations.PostDeleteDbInstanceResponse>;
-    postDeleteDbParameterGroup(req: operations.PostDeleteDbParameterGroupRequest, config?: AxiosRequestConfig): Promise<operations.PostDeleteDbParameterGroupResponse>;
-    postDeleteDbSecurityGroup(req: operations.PostDeleteDbSecurityGroupRequest, config?: AxiosRequestConfig): Promise<operations.PostDeleteDbSecurityGroupResponse>;
-    postDeleteDbSnapshot(req: operations.PostDeleteDbSnapshotRequest, config?: AxiosRequestConfig): Promise<operations.PostDeleteDbSnapshotResponse>;
-    postDeleteDbSubnetGroup(req: operations.PostDeleteDbSubnetGroupRequest, config?: AxiosRequestConfig): Promise<operations.PostDeleteDbSubnetGroupResponse>;
-    postDeleteEventSubscription(req: operations.PostDeleteEventSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.PostDeleteEventSubscriptionResponse>;
-    postDeleteOptionGroup(req: operations.PostDeleteOptionGroupRequest, config?: AxiosRequestConfig): Promise<operations.PostDeleteOptionGroupResponse>;
-    postDescribeDbEngineVersions(req: operations.PostDescribeDbEngineVersionsRequest, config?: AxiosRequestConfig): Promise<operations.PostDescribeDbEngineVersionsResponse>;
-    postDescribeDbInstances(req: operations.PostDescribeDbInstancesRequest, config?: AxiosRequestConfig): Promise<operations.PostDescribeDbInstancesResponse>;
-    postDescribeDbLogFiles(req: operations.PostDescribeDbLogFilesRequest, config?: AxiosRequestConfig): Promise<operations.PostDescribeDbLogFilesResponse>;
-    postDescribeDbParameterGroups(req: operations.PostDescribeDbParameterGroupsRequest, config?: AxiosRequestConfig): Promise<operations.PostDescribeDbParameterGroupsResponse>;
-    postDescribeDbParameters(req: operations.PostDescribeDbParametersRequest, config?: AxiosRequestConfig): Promise<operations.PostDescribeDbParametersResponse>;
-    postDescribeDbSecurityGroups(req: operations.PostDescribeDbSecurityGroupsRequest, config?: AxiosRequestConfig): Promise<operations.PostDescribeDbSecurityGroupsResponse>;
-    postDescribeDbSnapshots(req: operations.PostDescribeDbSnapshotsRequest, config?: AxiosRequestConfig): Promise<operations.PostDescribeDbSnapshotsResponse>;
-    postDescribeDbSubnetGroups(req: operations.PostDescribeDbSubnetGroupsRequest, config?: AxiosRequestConfig): Promise<operations.PostDescribeDbSubnetGroupsResponse>;
-    postDescribeEngineDefaultParameters(req: operations.PostDescribeEngineDefaultParametersRequest, config?: AxiosRequestConfig): Promise<operations.PostDescribeEngineDefaultParametersResponse>;
-    postDescribeEventCategories(req: operations.PostDescribeEventCategoriesRequest, config?: AxiosRequestConfig): Promise<operations.PostDescribeEventCategoriesResponse>;
-    postDescribeEventSubscriptions(req: operations.PostDescribeEventSubscriptionsRequest, config?: AxiosRequestConfig): Promise<operations.PostDescribeEventSubscriptionsResponse>;
-    postDescribeEvents(req: operations.PostDescribeEventsRequest, config?: AxiosRequestConfig): Promise<operations.PostDescribeEventsResponse>;
-    postDescribeOptionGroupOptions(req: operations.PostDescribeOptionGroupOptionsRequest, config?: AxiosRequestConfig): Promise<operations.PostDescribeOptionGroupOptionsResponse>;
-    postDescribeOptionGroups(req: operations.PostDescribeOptionGroupsRequest, config?: AxiosRequestConfig): Promise<operations.PostDescribeOptionGroupsResponse>;
-    postDescribeOrderableDbInstanceOptions(req: operations.PostDescribeOrderableDbInstanceOptionsRequest, config?: AxiosRequestConfig): Promise<operations.PostDescribeOrderableDbInstanceOptionsResponse>;
-    postDescribeReservedDbInstances(req: operations.PostDescribeReservedDbInstancesRequest, config?: AxiosRequestConfig): Promise<operations.PostDescribeReservedDbInstancesResponse>;
-    postDescribeReservedDbInstancesOfferings(req: operations.PostDescribeReservedDbInstancesOfferingsRequest, config?: AxiosRequestConfig): Promise<operations.PostDescribeReservedDbInstancesOfferingsResponse>;
-    postDownloadDbLogFilePortion(req: operations.PostDownloadDbLogFilePortionRequest, config?: AxiosRequestConfig): Promise<operations.PostDownloadDbLogFilePortionResponse>;
-    postListTagsForResource(req: operations.PostListTagsForResourceRequest, config?: AxiosRequestConfig): Promise<operations.PostListTagsForResourceResponse>;
-    postModifyDbInstance(req: operations.PostModifyDbInstanceRequest, config?: AxiosRequestConfig): Promise<operations.PostModifyDbInstanceResponse>;
-    postModifyDbParameterGroup(req: operations.PostModifyDbParameterGroupRequest, config?: AxiosRequestConfig): Promise<operations.PostModifyDbParameterGroupResponse>;
-    postModifyDbSubnetGroup(req: operations.PostModifyDbSubnetGroupRequest, config?: AxiosRequestConfig): Promise<operations.PostModifyDbSubnetGroupResponse>;
-    postModifyEventSubscription(req: operations.PostModifyEventSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.PostModifyEventSubscriptionResponse>;
-    postModifyOptionGroup(req: operations.PostModifyOptionGroupRequest, config?: AxiosRequestConfig): Promise<operations.PostModifyOptionGroupResponse>;
-    postPromoteReadReplica(req: operations.PostPromoteReadReplicaRequest, config?: AxiosRequestConfig): Promise<operations.PostPromoteReadReplicaResponse>;
-    postPurchaseReservedDbInstancesOffering(req: operations.PostPurchaseReservedDbInstancesOfferingRequest, config?: AxiosRequestConfig): Promise<operations.PostPurchaseReservedDbInstancesOfferingResponse>;
-    postRebootDbInstance(req: operations.PostRebootDbInstanceRequest, config?: AxiosRequestConfig): Promise<operations.PostRebootDbInstanceResponse>;
-    postRemoveSourceIdentifierFromSubscription(req: operations.PostRemoveSourceIdentifierFromSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.PostRemoveSourceIdentifierFromSubscriptionResponse>;
-    postRemoveTagsFromResource(req: operations.PostRemoveTagsFromResourceRequest, config?: AxiosRequestConfig): Promise<operations.PostRemoveTagsFromResourceResponse>;
-    postResetDbParameterGroup(req: operations.PostResetDbParameterGroupRequest, config?: AxiosRequestConfig): Promise<operations.PostResetDbParameterGroupResponse>;
-    postRestoreDbInstanceFromDbSnapshot(req: operations.PostRestoreDbInstanceFromDbSnapshotRequest, config?: AxiosRequestConfig): Promise<operations.PostRestoreDbInstanceFromDbSnapshotResponse>;
-    postRestoreDbInstanceToPointInTime(req: operations.PostRestoreDbInstanceToPointInTimeRequest, config?: AxiosRequestConfig): Promise<operations.PostRestoreDbInstanceToPointInTimeResponse>;
-    postRevokeDbSecurityGroupIngress(req: operations.PostRevokeDbSecurityGroupIngressRequest, config?: AxiosRequestConfig): Promise<operations.PostRevokeDbSecurityGroupIngressResponse>;
+    private _globals;
+    constructor(props?: SDKProps);
+    getAddSourceIdentifierToSubscription(req: operations.GETAddSourceIdentifierToSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.GETAddSourceIdentifierToSubscriptionResponse>;
+    getAuthorizeDBSecurityGroupIngress(req: operations.GETAuthorizeDBSecurityGroupIngressRequest, config?: AxiosRequestConfig): Promise<operations.GETAuthorizeDBSecurityGroupIngressResponse>;
+    getDeleteDBInstance(req: operations.GETDeleteDBInstanceRequest, config?: AxiosRequestConfig): Promise<operations.GETDeleteDBInstanceResponse>;
+    getDeleteDBParameterGroup(req: operations.GETDeleteDBParameterGroupRequest, config?: AxiosRequestConfig): Promise<operations.GETDeleteDBParameterGroupResponse>;
+    getDeleteDBSecurityGroup(req: operations.GETDeleteDBSecurityGroupRequest, config?: AxiosRequestConfig): Promise<operations.GETDeleteDBSecurityGroupResponse>;
+    getDeleteDBSnapshot(req: operations.GETDeleteDBSnapshotRequest, config?: AxiosRequestConfig): Promise<operations.GETDeleteDBSnapshotResponse>;
+    getDeleteDBSubnetGroup(req: operations.GETDeleteDBSubnetGroupRequest, config?: AxiosRequestConfig): Promise<operations.GETDeleteDBSubnetGroupResponse>;
+    getDeleteEventSubscription(req: operations.GETDeleteEventSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.GETDeleteEventSubscriptionResponse>;
+    getDeleteOptionGroup(req: operations.GETDeleteOptionGroupRequest, config?: AxiosRequestConfig): Promise<operations.GETDeleteOptionGroupResponse>;
+    getDownloadDBLogFilePortion(req: operations.GETDownloadDBLogFilePortionRequest, config?: AxiosRequestConfig): Promise<operations.GETDownloadDBLogFilePortionResponse>;
+    getModifyDBInstance(req: operations.GETModifyDBInstanceRequest, config?: AxiosRequestConfig): Promise<operations.GETModifyDBInstanceResponse>;
+    getModifyDBSubnetGroup(req: operations.GETModifyDBSubnetGroupRequest, config?: AxiosRequestConfig): Promise<operations.GETModifyDBSubnetGroupResponse>;
+    getModifyEventSubscription(req: operations.GETModifyEventSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.GETModifyEventSubscriptionResponse>;
+    getPromoteReadReplica(req: operations.GETPromoteReadReplicaRequest, config?: AxiosRequestConfig): Promise<operations.GETPromoteReadReplicaResponse>;
+    getRebootDBInstance(req: operations.GETRebootDBInstanceRequest, config?: AxiosRequestConfig): Promise<operations.GETRebootDBInstanceResponse>;
+    getRemoveSourceIdentifierFromSubscription(req: operations.GETRemoveSourceIdentifierFromSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.GETRemoveSourceIdentifierFromSubscriptionResponse>;
+    getRemoveTagsFromResource(req: operations.GETRemoveTagsFromResourceRequest, config?: AxiosRequestConfig): Promise<operations.GETRemoveTagsFromResourceResponse>;
+    getRevokeDBSecurityGroupIngress(req: operations.GETRevokeDBSecurityGroupIngressRequest, config?: AxiosRequestConfig): Promise<operations.GETRevokeDBSecurityGroupIngressResponse>;
+    postAddSourceIdentifierToSubscription(req: operations.POSTAddSourceIdentifierToSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.POSTAddSourceIdentifierToSubscriptionResponse>;
+    postAddTagsToResource(req: operations.POSTAddTagsToResourceRequest, config?: AxiosRequestConfig): Promise<operations.POSTAddTagsToResourceResponse>;
+    postAuthorizeDBSecurityGroupIngress(req: operations.POSTAuthorizeDBSecurityGroupIngressRequest, config?: AxiosRequestConfig): Promise<operations.POSTAuthorizeDBSecurityGroupIngressResponse>;
+    postCopyDBParameterGroup(req: operations.POSTCopyDBParameterGroupRequest, config?: AxiosRequestConfig): Promise<operations.POSTCopyDBParameterGroupResponse>;
+    postCopyDBSnapshot(req: operations.POSTCopyDBSnapshotRequest, config?: AxiosRequestConfig): Promise<operations.POSTCopyDBSnapshotResponse>;
+    postCopyOptionGroup(req: operations.POSTCopyOptionGroupRequest, config?: AxiosRequestConfig): Promise<operations.POSTCopyOptionGroupResponse>;
+    postCreateDBInstance(req: operations.POSTCreateDBInstanceRequest, config?: AxiosRequestConfig): Promise<operations.POSTCreateDBInstanceResponse>;
+    postCreateDBInstanceReadReplica(req: operations.POSTCreateDBInstanceReadReplicaRequest, config?: AxiosRequestConfig): Promise<operations.POSTCreateDBInstanceReadReplicaResponse>;
+    postCreateDBParameterGroup(req: operations.POSTCreateDBParameterGroupRequest, config?: AxiosRequestConfig): Promise<operations.POSTCreateDBParameterGroupResponse>;
+    postCreateDBSecurityGroup(req: operations.POSTCreateDBSecurityGroupRequest, config?: AxiosRequestConfig): Promise<operations.POSTCreateDBSecurityGroupResponse>;
+    postCreateDBSnapshot(req: operations.POSTCreateDBSnapshotRequest, config?: AxiosRequestConfig): Promise<operations.POSTCreateDBSnapshotResponse>;
+    postCreateDBSubnetGroup(req: operations.POSTCreateDBSubnetGroupRequest, config?: AxiosRequestConfig): Promise<operations.POSTCreateDBSubnetGroupResponse>;
+    postCreateEventSubscription(req: operations.POSTCreateEventSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.POSTCreateEventSubscriptionResponse>;
+    postCreateOptionGroup(req: operations.POSTCreateOptionGroupRequest, config?: AxiosRequestConfig): Promise<operations.POSTCreateOptionGroupResponse>;
+    postDeleteDBInstance(req: operations.POSTDeleteDBInstanceRequest, config?: AxiosRequestConfig): Promise<operations.POSTDeleteDBInstanceResponse>;
+    postDeleteDBParameterGroup(req: operations.POSTDeleteDBParameterGroupRequest, config?: AxiosRequestConfig): Promise<operations.POSTDeleteDBParameterGroupResponse>;
+    postDeleteDBSecurityGroup(req: operations.POSTDeleteDBSecurityGroupRequest, config?: AxiosRequestConfig): Promise<operations.POSTDeleteDBSecurityGroupResponse>;
+    postDeleteDBSnapshot(req: operations.POSTDeleteDBSnapshotRequest, config?: AxiosRequestConfig): Promise<operations.POSTDeleteDBSnapshotResponse>;
+    postDeleteDBSubnetGroup(req: operations.POSTDeleteDBSubnetGroupRequest, config?: AxiosRequestConfig): Promise<operations.POSTDeleteDBSubnetGroupResponse>;
+    postDeleteEventSubscription(req: operations.POSTDeleteEventSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.POSTDeleteEventSubscriptionResponse>;
+    postDeleteOptionGroup(req: operations.POSTDeleteOptionGroupRequest, config?: AxiosRequestConfig): Promise<operations.POSTDeleteOptionGroupResponse>;
+    postDescribeDBEngineVersions(req: operations.POSTDescribeDBEngineVersionsRequest, config?: AxiosRequestConfig): Promise<operations.POSTDescribeDBEngineVersionsResponse>;
+    postDescribeDBInstances(req: operations.POSTDescribeDBInstancesRequest, config?: AxiosRequestConfig): Promise<operations.POSTDescribeDBInstancesResponse>;
+    postDescribeDBLogFiles(req: operations.POSTDescribeDBLogFilesRequest, config?: AxiosRequestConfig): Promise<operations.POSTDescribeDBLogFilesResponse>;
+    postDescribeDBParameterGroups(req: operations.POSTDescribeDBParameterGroupsRequest, config?: AxiosRequestConfig): Promise<operations.POSTDescribeDBParameterGroupsResponse>;
+    postDescribeDBParameters(req: operations.POSTDescribeDBParametersRequest, config?: AxiosRequestConfig): Promise<operations.POSTDescribeDBParametersResponse>;
+    postDescribeDBSecurityGroups(req: operations.POSTDescribeDBSecurityGroupsRequest, config?: AxiosRequestConfig): Promise<operations.POSTDescribeDBSecurityGroupsResponse>;
+    postDescribeDBSnapshots(req: operations.POSTDescribeDBSnapshotsRequest, config?: AxiosRequestConfig): Promise<operations.POSTDescribeDBSnapshotsResponse>;
+    postDescribeDBSubnetGroups(req: operations.POSTDescribeDBSubnetGroupsRequest, config?: AxiosRequestConfig): Promise<operations.POSTDescribeDBSubnetGroupsResponse>;
+    postDescribeEngineDefaultParameters(req: operations.POSTDescribeEngineDefaultParametersRequest, config?: AxiosRequestConfig): Promise<operations.POSTDescribeEngineDefaultParametersResponse>;
+    postDescribeEventCategories(req: operations.POSTDescribeEventCategoriesRequest, config?: AxiosRequestConfig): Promise<operations.POSTDescribeEventCategoriesResponse>;
+    postDescribeEventSubscriptions(req: operations.POSTDescribeEventSubscriptionsRequest, config?: AxiosRequestConfig): Promise<operations.POSTDescribeEventSubscriptionsResponse>;
+    postDescribeEvents(req: operations.POSTDescribeEventsRequest, config?: AxiosRequestConfig): Promise<operations.POSTDescribeEventsResponse>;
+    postDescribeOptionGroupOptions(req: operations.POSTDescribeOptionGroupOptionsRequest, config?: AxiosRequestConfig): Promise<operations.POSTDescribeOptionGroupOptionsResponse>;
+    postDescribeOptionGroups(req: operations.POSTDescribeOptionGroupsRequest, config?: AxiosRequestConfig): Promise<operations.POSTDescribeOptionGroupsResponse>;
+    postDescribeOrderableDBInstanceOptions(req: operations.POSTDescribeOrderableDBInstanceOptionsRequest, config?: AxiosRequestConfig): Promise<operations.POSTDescribeOrderableDBInstanceOptionsResponse>;
+    postDescribeReservedDBInstances(req: operations.POSTDescribeReservedDBInstancesRequest, config?: AxiosRequestConfig): Promise<operations.POSTDescribeReservedDBInstancesResponse>;
+    postDescribeReservedDBInstancesOfferings(req: operations.POSTDescribeReservedDBInstancesOfferingsRequest, config?: AxiosRequestConfig): Promise<operations.POSTDescribeReservedDBInstancesOfferingsResponse>;
+    postDownloadDBLogFilePortion(req: operations.POSTDownloadDBLogFilePortionRequest, config?: AxiosRequestConfig): Promise<operations.POSTDownloadDBLogFilePortionResponse>;
+    postListTagsForResource(req: operations.POSTListTagsForResourceRequest, config?: AxiosRequestConfig): Promise<operations.POSTListTagsForResourceResponse>;
+    postModifyDBInstance(req: operations.POSTModifyDBInstanceRequest, config?: AxiosRequestConfig): Promise<operations.POSTModifyDBInstanceResponse>;
+    postModifyDBParameterGroup(req: operations.POSTModifyDBParameterGroupRequest, config?: AxiosRequestConfig): Promise<operations.POSTModifyDBParameterGroupResponse>;
+    postModifyDBSubnetGroup(req: operations.POSTModifyDBSubnetGroupRequest, config?: AxiosRequestConfig): Promise<operations.POSTModifyDBSubnetGroupResponse>;
+    postModifyEventSubscription(req: operations.POSTModifyEventSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.POSTModifyEventSubscriptionResponse>;
+    postModifyOptionGroup(req: operations.POSTModifyOptionGroupRequest, config?: AxiosRequestConfig): Promise<operations.POSTModifyOptionGroupResponse>;
+    postPromoteReadReplica(req: operations.POSTPromoteReadReplicaRequest, config?: AxiosRequestConfig): Promise<operations.POSTPromoteReadReplicaResponse>;
+    postPurchaseReservedDBInstancesOffering(req: operations.POSTPurchaseReservedDBInstancesOfferingRequest, config?: AxiosRequestConfig): Promise<operations.POSTPurchaseReservedDBInstancesOfferingResponse>;
+    postRebootDBInstance(req: operations.POSTRebootDBInstanceRequest, config?: AxiosRequestConfig): Promise<operations.POSTRebootDBInstanceResponse>;
+    postRemoveSourceIdentifierFromSubscription(req: operations.POSTRemoveSourceIdentifierFromSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.POSTRemoveSourceIdentifierFromSubscriptionResponse>;
+    postRemoveTagsFromResource(req: operations.POSTRemoveTagsFromResourceRequest, config?: AxiosRequestConfig): Promise<operations.POSTRemoveTagsFromResourceResponse>;
+    postResetDBParameterGroup(req: operations.POSTResetDBParameterGroupRequest, config?: AxiosRequestConfig): Promise<operations.POSTResetDBParameterGroupResponse>;
+    postRestoreDBInstanceFromDBSnapshot(req: operations.POSTRestoreDBInstanceFromDBSnapshotRequest, config?: AxiosRequestConfig): Promise<operations.POSTRestoreDBInstanceFromDBSnapshotResponse>;
+    postRestoreDBInstanceToPointInTime(req: operations.POSTRestoreDBInstanceToPointInTimeRequest, config?: AxiosRequestConfig): Promise<operations.POSTRestoreDBInstanceToPointInTimeResponse>;
+    postRevokeDBSecurityGroupIngress(req: operations.POSTRevokeDBSecurityGroupIngressRequest, config?: AxiosRequestConfig): Promise<operations.POSTRevokeDBSecurityGroupIngressResponse>;
 }

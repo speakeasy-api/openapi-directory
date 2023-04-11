@@ -1,38 +1,78 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetPathParams extends SpeakeasyBase {
-    name: string;
+import { AxiosResponse } from "axios";
+export declare class WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetSecurity extends SpeakeasyBase {
+    oauth2: string;
+    oauth2c: string;
 }
+/**
+ * Optional. A view defining which fields should be filled in the returned execution. The API will default to the FULL view.
+ */
 export declare enum WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetViewEnum {
     ExecutionViewUnspecified = "EXECUTION_VIEW_UNSPECIFIED",
     Basic = "BASIC",
     Full = "FULL"
 }
-export declare class WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetQueryParams extends SpeakeasyBase {
-    dollarXgafv?: shared.XgafvEnum;
-    accessToken?: string;
-    alt?: shared.AltEnum;
-    callback?: string;
-    fields?: string;
-    key?: string;
-    oauthToken?: string;
-    prettyPrint?: boolean;
-    quotaUser?: string;
-    uploadType?: string;
-    uploadProtocol?: string;
-    view?: WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetViewEnum;
-}
-export declare class WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetSecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
-}
 export declare class WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetRequest extends SpeakeasyBase {
-    pathParams: WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetPathParams;
-    queryParams: WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetQueryParams;
-    security: WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetSecurity;
+    /**
+     * V1 error format.
+     */
+    dollarXgafv?: shared.XgafvEnum;
+    /**
+     * OAuth access token.
+     */
+    accessToken?: string;
+    /**
+     * Data format for response.
+     */
+    alt?: shared.AltEnum;
+    /**
+     * JSONP
+     */
+    callback?: string;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * Required. Name of the execution to be retrieved. Format: projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
+     */
+    name: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauthToken?: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    uploadType?: string;
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    uploadProtocol?: string;
+    /**
+     * Optional. A view defining which fields should be filled in the returned execution. The API will default to the FULL view.
+     */
+    view?: WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetViewEnum;
 }
 export declare class WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful response
+     */
     execution?: shared.Execution;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

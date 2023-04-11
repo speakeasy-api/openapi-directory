@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateOrUpdateTagsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateOrUpdateTagsActionEnum {
     CreateOrUpdateTags = "CreateOrUpdateTags"
 }
-export declare enum PostCreateOrUpdateTagsVersionEnum {
+export declare enum POSTCreateOrUpdateTagsVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class PostCreateOrUpdateTagsQueryParams extends SpeakeasyBase {
-    action: PostCreateOrUpdateTagsActionEnum;
-    version: PostCreateOrUpdateTagsVersionEnum;
-}
-export declare class PostCreateOrUpdateTagsHeaders extends SpeakeasyBase {
+export declare class POSTCreateOrUpdateTagsRequest extends SpeakeasyBase {
+    action: POSTCreateOrUpdateTagsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateOrUpdateTagsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateOrUpdateTagsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateOrUpdateTagsRequest extends SpeakeasyBase {
-    queryParams: PostCreateOrUpdateTagsQueryParams;
-    headers: PostCreateOrUpdateTagsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateOrUpdateTagsResponse extends SpeakeasyBase {
+export declare class POSTCreateOrUpdateTagsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

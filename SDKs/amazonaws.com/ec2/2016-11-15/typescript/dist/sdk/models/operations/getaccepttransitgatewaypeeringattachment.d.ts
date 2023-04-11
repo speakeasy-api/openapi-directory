@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetAcceptTransitGatewayPeeringAttachmentActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETAcceptTransitGatewayPeeringAttachmentActionEnum {
     AcceptTransitGatewayPeeringAttachment = "AcceptTransitGatewayPeeringAttachment"
 }
-export declare enum GetAcceptTransitGatewayPeeringAttachmentVersionEnum {
+export declare enum GETAcceptTransitGatewayPeeringAttachmentVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetAcceptTransitGatewayPeeringAttachmentQueryParams extends SpeakeasyBase {
-    action: GetAcceptTransitGatewayPeeringAttachmentActionEnum;
+export declare class GETAcceptTransitGatewayPeeringAttachmentRequest extends SpeakeasyBase {
+    action: GETAcceptTransitGatewayPeeringAttachmentActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
+    /**
+     * The ID of the transit gateway attachment.
+     */
     transitGatewayAttachmentId: string;
-    version: GetAcceptTransitGatewayPeeringAttachmentVersionEnum;
-}
-export declare class GetAcceptTransitGatewayPeeringAttachmentHeaders extends SpeakeasyBase {
+    version: GETAcceptTransitGatewayPeeringAttachmentVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetAcceptTransitGatewayPeeringAttachmentHeaders extends Spe
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetAcceptTransitGatewayPeeringAttachmentRequest extends SpeakeasyBase {
-    queryParams: GetAcceptTransitGatewayPeeringAttachmentQueryParams;
-    headers: GetAcceptTransitGatewayPeeringAttachmentHeaders;
-}
-export declare class GetAcceptTransitGatewayPeeringAttachmentResponse extends SpeakeasyBase {
+export declare class GETAcceptTransitGatewayPeeringAttachmentResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

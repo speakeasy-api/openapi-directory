@@ -1,15 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class EmotionQueryParams extends SpeakeasyBase {
-    all?: boolean;
-}
+import { AxiosResponse } from "axios";
 export declare class EmotionRequest extends SpeakeasyBase {
-    queryParams: EmotionQueryParams;
-    request?: shared.Post[];
+    requestBody?: shared.Post[];
+    all?: boolean;
 }
 export declare class EmotionResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful Response
+     */
     predictionResults?: shared.PostPredicted[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Validation Error
+     */
     validationErrors?: shared.ValidationErrors;
 }

@@ -1,24 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DcimPowerPortsListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DcimPowerPortsListRequest extends SpeakeasyBase {
     device?: string;
     deviceId?: string;
+    /**
+     * Number of results to return per page.
+     */
     limit?: number;
     name?: string;
+    /**
+     * The initial index from which to return the results.
+     */
     offset?: number;
     tag?: string;
 }
-export declare class DcimPowerPortsList200ApplicationJson extends SpeakeasyBase {
+export declare class DcimPowerPortsList200ApplicationJSON extends SpeakeasyBase {
     count: number;
     next?: string;
     previous?: string;
     results: shared.PowerPort[];
 }
-export declare class DcimPowerPortsListRequest extends SpeakeasyBase {
-    queryParams: DcimPowerPortsListQueryParams;
-}
 export declare class DcimPowerPortsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dcimPowerPortsList200ApplicationJSONObject?: DcimPowerPortsList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    dcimPowerPortsList200ApplicationJSONObject?: DcimPowerPortsList200ApplicationJSON;
 }

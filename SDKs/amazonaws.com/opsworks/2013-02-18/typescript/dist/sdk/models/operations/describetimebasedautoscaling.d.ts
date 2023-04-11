@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeTimeBasedAutoScalingXAmzTargetEnum {
     OpsWorks20130218DescribeTimeBasedAutoScaling = "OpsWorks_20130218.DescribeTimeBasedAutoScaling"
 }
-export declare class DescribeTimeBasedAutoScalingHeaders extends SpeakeasyBase {
+export declare class DescribeTimeBasedAutoScalingRequest extends SpeakeasyBase {
+    describeTimeBasedAutoScalingRequest: shared.DescribeTimeBasedAutoScalingRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class DescribeTimeBasedAutoScalingHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeTimeBasedAutoScalingXAmzTargetEnum;
 }
-export declare class DescribeTimeBasedAutoScalingRequest extends SpeakeasyBase {
-    headers: DescribeTimeBasedAutoScalingHeaders;
-    request: shared.DescribeTimeBasedAutoScalingRequest;
-}
 export declare class DescribeTimeBasedAutoScalingResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeTimeBasedAutoScalingResult?: shared.DescribeTimeBasedAutoScalingResult;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

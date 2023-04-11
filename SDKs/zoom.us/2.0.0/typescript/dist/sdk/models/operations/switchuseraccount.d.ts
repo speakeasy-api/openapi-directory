@@ -1,30 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class SwitchUserAccountPathParams extends SpeakeasyBase {
-    accountId: string;
-    userId: string;
-}
-export declare class SwitchUserAccountApplicationJson extends SpeakeasyBase {
-    accountId: string;
-}
-export declare class SwitchUserAccountMultipartFormData extends SpeakeasyBase {
-    accountId: string;
-}
-export declare class SwitchUserAccountRequests extends SpeakeasyBase {
-    object?: SwitchUserAccountApplicationJson;
-    object1?: SwitchUserAccountMultipartFormData;
-}
+import { AxiosResponse } from "axios";
 export declare class SwitchUserAccountSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
+    oAuth: string;
+}
+export declare class SwitchUserAccountApplicationJSON extends SpeakeasyBase {
+    /**
+     * The Account ID of the account to which you would like move the user to.
+     */
+    accountId: string;
 }
 export declare class SwitchUserAccountRequest extends SpeakeasyBase {
-    pathParams: SwitchUserAccountPathParams;
-    request?: SwitchUserAccountRequests;
-    security: SwitchUserAccountSecurity;
+    requestBody?: SwitchUserAccountApplicationJSON;
+    accountId: string;
+    userId: string;
 }
 export declare class SwitchUserAccountResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * **HTTP Status Code**: `204`<br>
+     *
+     * @remarks
+     * User's account switched successfully.
+     */
     switchUserAccount204ApplicationJSONAny?: any;
 }

@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ShowServicePlanPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ShowServicePlanRequest extends SpeakeasyBase {
-    pathParams: ShowServicePlanPathParams;
+    /**
+     * ID of the resource
+     */
+    id: string;
 }
 export declare class ShowServicePlanResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Not found
+     */
     errorNotFound?: shared.ErrorNotFound;
+    /**
+     * ServicePlan info
+     */
     servicePlan?: shared.ServicePlan;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

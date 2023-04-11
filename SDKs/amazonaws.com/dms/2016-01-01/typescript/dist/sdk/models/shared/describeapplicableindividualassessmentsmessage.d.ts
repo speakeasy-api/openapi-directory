@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { MigrationTypeValueEnum } from "./migrationtypevalueenum";
 /**
  * <p/>
-**/
+ */
 export declare class DescribeApplicableIndividualAssessmentsMessage extends SpeakeasyBase {
     marker?: string;
     maxRecords?: number;

@@ -1,21 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * The updated PTR record for the IP address.
-**/
+ */
 export declare class ModifyAddressAttributeResultAddressPtrRecordUpdate extends SpeakeasyBase {
-    reason?: Record<string, any>;
-    status?: Record<string, any>;
-    value?: Record<string, any>;
+    reason?: string;
+    status?: string;
+    value?: string;
 }
 /**
  * Information about the Elastic IP address.
-**/
+ */
 export declare class ModifyAddressAttributeResultAddress extends SpeakeasyBase {
-    allocationId?: Record<string, any>;
-    ptrRecord?: Record<string, any>;
+    allocationId?: string;
+    ptrRecord?: string;
     ptrRecordUpdate?: ModifyAddressAttributeResultAddressPtrRecordUpdate;
-    publicIp?: Record<string, any>;
+    publicIp?: string;
 }
+/**
+ * Success
+ */
 export declare class ModifyAddressAttributeResult extends SpeakeasyBase {
     address?: ModifyAddressAttributeResultAddress;
 }

@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbClusterParameterGroupList } from "./dbclusterparametergrouplist";
+import { DBClusterParameterGroupList } from "./dbclusterparametergrouplist";
 /**
  * Represents the output of <a>DBClusterParameterGroups</a>.
-**/
-export declare class DbClusterParameterGroupsMessage extends SpeakeasyBase {
-    dbClusterParameterGroups?: DbClusterParameterGroupList[];
+ */
+export declare class DBClusterParameterGroupsMessage extends SpeakeasyBase {
+    dbClusterParameterGroups?: DBClusterParameterGroupList[];
     marker?: string;
 }

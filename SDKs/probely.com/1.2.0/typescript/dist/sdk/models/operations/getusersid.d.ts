@@ -1,21 +1,41 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetUsersIdPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetUsersIdRequest extends SpeakeasyBase {
+    /**
+     * Object Id
+     */
     id: string;
 }
-export declare class GetUsersId401ApplicationJson extends SpeakeasyBase {
+/**
+ * Not found
+ */
+export declare class GetUsersId404ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Not found.
+     */
     detail?: string;
 }
-export declare class GetUsersId404ApplicationJson extends SpeakeasyBase {
+/**
+ * Access token is missing or invalid
+ */
+export declare class GetUsersId401ApplicationJSON extends SpeakeasyBase {
     detail?: string;
-}
-export declare class GetUsersIdRequest extends SpeakeasyBase {
-    pathParams: GetUsersIdPathParams;
 }
 export declare class GetUsersIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * User object
+     */
     user?: shared.User;
-    getUsersId401ApplicationJSONObject?: GetUsersId401ApplicationJson;
-    getUsersId404ApplicationJSONObject?: GetUsersId404ApplicationJson;
+    /**
+     * Access token is missing or invalid
+     */
+    getUsersId401ApplicationJSONObject?: GetUsersId401ApplicationJSON;
+    /**
+     * Not found
+     */
+    getUsersId404ApplicationJSONObject?: GetUsersId404ApplicationJSON;
 }

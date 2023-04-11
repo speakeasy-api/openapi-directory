@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Orders {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +9,7 @@ export declare class Orders {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * androidpublisherOrdersRefund - Refund a user's subscription or in-app purchase order.
-    **/
-    androidpublisherOrdersRefund(req: operations.AndroidpublisherOrdersRefundRequest, config?: AxiosRequestConfig): Promise<operations.AndroidpublisherOrdersRefundResponse>;
+     * Refund a user's subscription or in-app purchase order.
+     */
+    androidpublisherOrdersRefund(req: operations.AndroidpublisherOrdersRefundRequest, security: operations.AndroidpublisherOrdersRefundSecurity, config?: AxiosRequestConfig): Promise<operations.AndroidpublisherOrdersRefundResponse>;
 }

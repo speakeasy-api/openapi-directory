@@ -1,26 +1,56 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AddUserForWorkspacePathParams extends SpeakeasyBase {
-    workspaceGid: string;
-}
-export declare class AddUserForWorkspaceQueryParams extends SpeakeasyBase {
-    optFields?: string[];
-    optPretty?: boolean;
-}
+import { AxiosResponse } from "axios";
+/**
+ * The user to add to the workspace.
+ */
 export declare class AddUserForWorkspaceRequestBody extends SpeakeasyBase {
+    /**
+     * A user identification object for specification with the addUser/removeUser endpoints.
+     */
     data?: shared.WorkspaceAddUserRequest;
 }
-export declare class AddUserForWorkspace200ApplicationJson extends SpeakeasyBase {
-    data?: shared.UserResponse;
-}
 export declare class AddUserForWorkspaceRequest extends SpeakeasyBase {
-    pathParams: AddUserForWorkspacePathParams;
-    queryParams: AddUserForWorkspaceQueryParams;
-    request: AddUserForWorkspaceRequestBody;
+    /**
+     * The user to add to the workspace.
+     */
+    requestBody: AddUserForWorkspaceRequestBody;
+    /**
+     * Defines fields to return.
+     *
+     * @remarks
+     * Some requests return *compact* representations of objects in order to conserve resources and complete the request more efficiently. Other times requests return more information than you may need. This option allows you to list the exact set of fields that the API should be sure to return for the objects. The field names should be provided as paths, described below.
+     * The id of included objects will always be returned, regardless of the field options.
+     */
+    optFields?: string[];
+    /**
+     * Provides “pretty” output.
+     *
+     * @remarks
+     * Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
+     */
+    optPretty?: boolean;
+    /**
+     * Globally unique identifier for the workspace or organization.
+     */
+    workspaceGid: string;
+}
+/**
+ * The user was added successfully to the workspace or organization.
+ */
+export declare class AddUserForWorkspace200ApplicationJSON extends SpeakeasyBase {
+    data?: shared.UserBaseResponse;
 }
 export declare class AddUserForWorkspaceResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * This usually occurs because of a missing or malformed parameter. Check the documentation and the syntax of your request and try again.
+     */
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    addUserForWorkspace200ApplicationJSONObject?: AddUserForWorkspace200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * The user was added successfully to the workspace or organization.
+     */
+    addUserForWorkspace200ApplicationJSONObject?: AddUserForWorkspace200ApplicationJSON;
 }

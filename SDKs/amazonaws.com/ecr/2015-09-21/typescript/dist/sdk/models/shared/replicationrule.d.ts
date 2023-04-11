@@ -1,8 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ReplicationDestination } from "./replicationdestination";
+import { RepositoryFilter } from "./repositoryfilter";
 /**
- * An array of objects representing the replication destinations for a replication configuration. A replication configuration may contain only one replication rule but the rule may contain one or more replication destinations.
-**/
+ * An array of objects representing the replication destinations and repository filters for a replication configuration.
+ */
 export declare class ReplicationRule extends SpeakeasyBase {
     destinations: ReplicationDestination[];
+    repositoryFilters?: RepositoryFilter[];
 }

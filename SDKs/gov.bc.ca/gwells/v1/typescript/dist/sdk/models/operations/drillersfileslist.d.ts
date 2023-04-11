@@ -1,24 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DrillersFilesListPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DrillersFilesListRequest extends SpeakeasyBase {
     personGuid: string;
 }
-export declare class DrillersFilesList200ApplicationJsonPrivate extends SpeakeasyBase {
+export declare class DrillersFilesList200ApplicationJSONPrivate extends SpeakeasyBase {
     name?: string;
     url?: string;
 }
-export declare class DrillersFilesList200ApplicationJsonPublic extends SpeakeasyBase {
+export declare class DrillersFilesList200ApplicationJSONPublic extends SpeakeasyBase {
     name?: string;
     url?: string;
 }
-export declare class DrillersFilesList200ApplicationJson extends SpeakeasyBase {
-    private?: DrillersFilesList200ApplicationJsonPrivate[];
-    public?: DrillersFilesList200ApplicationJsonPublic[];
-}
-export declare class DrillersFilesListRequest extends SpeakeasyBase {
-    pathParams: DrillersFilesListPathParams;
+/**
+ * OK
+ */
+export declare class DrillersFilesList200ApplicationJSON extends SpeakeasyBase {
+    private?: DrillersFilesList200ApplicationJSONPrivate[];
+    public?: DrillersFilesList200ApplicationJSONPublic[];
 }
 export declare class DrillersFilesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    drillersFilesList200ApplicationJSONObject?: DrillersFilesList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
+    drillersFilesList200ApplicationJSONObject?: DrillersFilesList200ApplicationJSON;
 }

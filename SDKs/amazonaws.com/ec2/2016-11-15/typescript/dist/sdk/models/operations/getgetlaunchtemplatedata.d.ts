@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetGetLaunchTemplateDataActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETGETLaunchTemplateDataActionEnum {
     GetLaunchTemplateData = "GetLaunchTemplateData"
 }
-export declare enum GetGetLaunchTemplateDataVersionEnum {
+export declare enum GETGETLaunchTemplateDataVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetGetLaunchTemplateDataQueryParams extends SpeakeasyBase {
-    action: GetGetLaunchTemplateDataActionEnum;
+export declare class GETGETLaunchTemplateDataRequest extends SpeakeasyBase {
+    action: GETGETLaunchTemplateDataActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
+    /**
+     * The ID of the instance.
+     */
     instanceId: string;
-    version: GetGetLaunchTemplateDataVersionEnum;
-}
-export declare class GetGetLaunchTemplateDataHeaders extends SpeakeasyBase {
+    version: GETGETLaunchTemplateDataVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetGetLaunchTemplateDataHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetGetLaunchTemplateDataRequest extends SpeakeasyBase {
-    queryParams: GetGetLaunchTemplateDataQueryParams;
-    headers: GetGetLaunchTemplateDataHeaders;
-}
-export declare class GetGetLaunchTemplateDataResponse extends SpeakeasyBase {
+export declare class GETGETLaunchTemplateDataResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

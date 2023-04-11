@@ -1,14 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolProxySetConfigPathParams extends SpeakeasyBase {
-    agentNum: number;
-    argument: string;
-    value: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolProxySetConfigRequest extends SpeakeasyBase {
-    pathParams: ProtocolProxySetConfigPathParams;
+    /**
+     * Agent to set the PROXY configuration
+     */
+    agentNum: number;
+    /**
+     * Parameter to set the PROXY configuration
+     */
+    argument: string;
+    /**
+     * Value to set the PROXY configuration
+     */
+    value: string;
 }
 export declare class ProtocolProxySetConfigResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolProxySetConfig200ApplicationJSONString?: string;
 }

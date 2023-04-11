@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostAssociateSubnetCidrBlockActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTAssociateSubnetCidrBlockActionEnum {
     AssociateSubnetCidrBlock = "AssociateSubnetCidrBlock"
 }
-export declare enum PostAssociateSubnetCidrBlockVersionEnum {
+export declare enum POSTAssociateSubnetCidrBlockVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostAssociateSubnetCidrBlockQueryParams extends SpeakeasyBase {
-    action: PostAssociateSubnetCidrBlockActionEnum;
-    version: PostAssociateSubnetCidrBlockVersionEnum;
-}
-export declare class PostAssociateSubnetCidrBlockHeaders extends SpeakeasyBase {
+export declare class POSTAssociateSubnetCidrBlockRequest extends SpeakeasyBase {
+    action: POSTAssociateSubnetCidrBlockActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTAssociateSubnetCidrBlockVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostAssociateSubnetCidrBlockHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostAssociateSubnetCidrBlockRequest extends SpeakeasyBase {
-    queryParams: PostAssociateSubnetCidrBlockQueryParams;
-    headers: PostAssociateSubnetCidrBlockHeaders;
-    request?: Uint8Array;
-}
-export declare class PostAssociateSubnetCidrBlockResponse extends SpeakeasyBase {
+export declare class POSTAssociateSubnetCidrBlockResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

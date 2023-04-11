@@ -1,35 +1,58 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetPadIdUsingPostQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetPadIDUsingPOSTRequest extends SpeakeasyBase {
     roID?: string;
 }
-export declare class GetPadIdUsingPost200ApplicationJson extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class GetPadIDUsingPost500ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class GetPadIdUsingPost400ApplicationJson extends SpeakeasyBase {
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class GetPadIDUsingPost401ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class GetPadIdUsingPost401ApplicationJson extends SpeakeasyBase {
+/**
+ * generic api error (code 1)
+ */
+export declare class GetPadIDUsingPost400ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class GetPadIdUsingPost500ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class GetPadIDUsingPost200ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class GetPadIdUsingPostRequest extends SpeakeasyBase {
-    queryParams: GetPadIdUsingPostQueryParams;
-}
-export declare class GetPadIdUsingPostResponse extends SpeakeasyBase {
+export declare class GetPadIDUsingPOSTResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getPadIDUsingPOST200ApplicationJSONObject?: GetPadIdUsingPost200ApplicationJson;
-    getPadIDUsingPOST400ApplicationJSONObject?: GetPadIdUsingPost400ApplicationJson;
-    getPadIDUsingPOST401ApplicationJSONObject?: GetPadIdUsingPost401ApplicationJson;
-    getPadIDUsingPOST500ApplicationJSONObject?: GetPadIdUsingPost500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    getPadIDUsingPOST200ApplicationJSONObject?: GetPadIDUsingPost200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    getPadIDUsingPOST400ApplicationJSONObject?: GetPadIDUsingPost400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    getPadIDUsingPOST401ApplicationJSONObject?: GetPadIDUsingPost401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    getPadIDUsingPOST500ApplicationJSONObject?: GetPadIDUsingPost500ApplicationJSON;
 }

@@ -1,9 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetTheStatusOfTheApiService200ApplicationJson extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+/**
+ * Successful Response
+ */
+export declare class GetTheStatusOfTheAPIService200ApplicationJSON extends SpeakeasyBase {
     status?: boolean;
 }
-export declare class GetTheStatusOfTheApiServiceResponse extends SpeakeasyBase {
+export declare class GetTheStatusOfTheAPIServiceResponse extends SpeakeasyBase {
     contentType: string;
-    getTheStatusOfTheAPIService200ApplicationJSONObject?: GetTheStatusOfTheApiService200ApplicationJson;
+    /**
+     * Successful Response
+     */
+    getTheStatusOfTheAPIService200ApplicationJSONObject?: GetTheStatusOfTheAPIService200ApplicationJSON;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

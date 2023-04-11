@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeCacheSecurityGroupsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeCacheSecurityGroupsActionEnum {
     DescribeCacheSecurityGroups = "DescribeCacheSecurityGroups"
 }
-export declare enum PostDescribeCacheSecurityGroupsVersionEnum {
+export declare enum POSTDescribeCacheSecurityGroupsVersionEnum {
     TwoThousandAndFifteen0202 = "2015-02-02"
 }
-export declare class PostDescribeCacheSecurityGroupsQueryParams extends SpeakeasyBase {
-    action: PostDescribeCacheSecurityGroupsActionEnum;
+export declare class POSTDescribeCacheSecurityGroupsRequest extends SpeakeasyBase {
+    action: POSTDescribeCacheSecurityGroupsActionEnum;
+    /**
+     * Pagination token
+     */
     marker?: string;
+    /**
+     * Pagination limit
+     */
     maxRecords?: string;
-    version: PostDescribeCacheSecurityGroupsVersionEnum;
-}
-export declare class PostDescribeCacheSecurityGroupsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeCacheSecurityGroupsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeCacheSecurityGroupsHeaders extends SpeakeasyBas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeCacheSecurityGroupsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeCacheSecurityGroupsQueryParams;
-    headers: PostDescribeCacheSecurityGroupsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeCacheSecurityGroupsResponse extends SpeakeasyBase {
+export declare class POSTDescribeCacheSecurityGroupsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

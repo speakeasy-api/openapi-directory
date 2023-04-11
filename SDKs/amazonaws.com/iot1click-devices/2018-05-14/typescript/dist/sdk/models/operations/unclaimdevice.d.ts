@@ -1,9 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UnclaimDevicePathParams extends SpeakeasyBase {
-    deviceId: string;
-}
-export declare class UnclaimDeviceHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class UnclaimDeviceRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,16 +9,29 @@ export declare class UnclaimDeviceHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class UnclaimDeviceRequest extends SpeakeasyBase {
-    pathParams: UnclaimDevicePathParams;
-    headers: UnclaimDeviceHeaders;
+    /**
+     * The unique identifier of the device.
+     */
+    deviceId: string;
 }
 export declare class UnclaimDeviceResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalFailureException
+     */
     internalFailureException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * Success
+     */
     unclaimDeviceResponse?: shared.UnclaimDeviceResponse;
 }

@@ -3,5 +3,7 @@ export * from "./assets";
 export * from "./assetstatusenum";
 export * from "./assetstatusqueryparamenum";
 export * from "./assettype";
-export * from "./security";
+export * from "./bookdepreciationdetail";
+export * from "./bookdepreciationsetting";
+export * from "./pagination";
 export * from "./setting";

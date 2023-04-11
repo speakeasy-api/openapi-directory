@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDisableSerialConsoleAccessActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDisableSerialConsoleAccessActionEnum {
     DisableSerialConsoleAccess = "DisableSerialConsoleAccess"
 }
-export declare enum PostDisableSerialConsoleAccessVersionEnum {
+export declare enum POSTDisableSerialConsoleAccessVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDisableSerialConsoleAccessQueryParams extends SpeakeasyBase {
-    action: PostDisableSerialConsoleAccessActionEnum;
-    version: PostDisableSerialConsoleAccessVersionEnum;
-}
-export declare class PostDisableSerialConsoleAccessHeaders extends SpeakeasyBase {
+export declare class POSTDisableSerialConsoleAccessRequest extends SpeakeasyBase {
+    action: POSTDisableSerialConsoleAccessActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDisableSerialConsoleAccessVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDisableSerialConsoleAccessHeaders extends SpeakeasyBase
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDisableSerialConsoleAccessRequest extends SpeakeasyBase {
-    queryParams: PostDisableSerialConsoleAccessQueryParams;
-    headers: PostDisableSerialConsoleAccessHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDisableSerialConsoleAccessResponse extends SpeakeasyBase {
+export declare class POSTDisableSerialConsoleAccessResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

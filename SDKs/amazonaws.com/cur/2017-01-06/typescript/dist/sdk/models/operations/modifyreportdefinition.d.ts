@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum ModifyReportDefinitionXAmzTargetEnum {
-    AwsOrigamiServiceGatewayServiceModifyReportDefinition = "AWSOrigamiServiceGatewayService.ModifyReportDefinition"
+    AWSOrigamiServiceGatewayServiceModifyReportDefinition = "AWSOrigamiServiceGatewayService.ModifyReportDefinition"
 }
-export declare class ModifyReportDefinitionHeaders extends SpeakeasyBase {
+export declare class ModifyReportDefinitionRequest extends SpeakeasyBase {
+    modifyReportDefinitionRequest: shared.ModifyReportDefinitionRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class ModifyReportDefinitionHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ModifyReportDefinitionXAmzTargetEnum;
 }
-export declare class ModifyReportDefinitionRequest extends SpeakeasyBase {
-    headers: ModifyReportDefinitionHeaders;
-    request: shared.ModifyReportDefinitionRequest;
-}
 export declare class ModifyReportDefinitionResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalErrorException
+     */
     internalErrorException?: any;
+    /**
+     * Success
+     */
     modifyReportDefinitionResponse?: Record<string, any>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

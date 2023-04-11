@@ -1,22 +1,33 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetRequestEnvironmentInfoActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETRequestEnvironmentInfoActionEnum {
     RequestEnvironmentInfo = "RequestEnvironmentInfo"
 }
-export declare enum GetRequestEnvironmentInfoInfoTypeEnum {
+/**
+ * The type of information to request.
+ */
+export declare enum GETRequestEnvironmentInfoInfoTypeEnum {
     Tail = "tail",
     Bundle = "bundle"
 }
-export declare enum GetRequestEnvironmentInfoVersionEnum {
+export declare enum GETRequestEnvironmentInfoVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetRequestEnvironmentInfoQueryParams extends SpeakeasyBase {
-    action: GetRequestEnvironmentInfoActionEnum;
+export declare class GETRequestEnvironmentInfoRequest extends SpeakeasyBase {
+    action: GETRequestEnvironmentInfoActionEnum;
+    /**
+     * <p>The ID of the environment of the requested data.</p> <p>If no such environment is found, <code>RequestEnvironmentInfo</code> returns an <code>InvalidParameterValue</code> error. </p> <p>Condition: You must specify either this or an EnvironmentName, or both. If you do not specify either, AWS Elastic Beanstalk returns <code>MissingRequiredParameter</code> error. </p>
+     */
     environmentId?: string;
+    /**
+     * <p>The name of the environment of the requested data.</p> <p>If no such environment is found, <code>RequestEnvironmentInfo</code> returns an <code>InvalidParameterValue</code> error. </p> <p>Condition: You must specify either this or an EnvironmentId, or both. If you do not specify either, AWS Elastic Beanstalk returns <code>MissingRequiredParameter</code> error. </p>
+     */
     environmentName?: string;
-    infoType: GetRequestEnvironmentInfoInfoTypeEnum;
-    version: GetRequestEnvironmentInfoVersionEnum;
-}
-export declare class GetRequestEnvironmentInfoHeaders extends SpeakeasyBase {
+    /**
+     * The type of information to request.
+     */
+    infoType: GETRequestEnvironmentInfoInfoTypeEnum;
+    version: GETRequestEnvironmentInfoVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -25,11 +36,8 @@ export declare class GetRequestEnvironmentInfoHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetRequestEnvironmentInfoRequest extends SpeakeasyBase {
-    queryParams: GetRequestEnvironmentInfoQueryParams;
-    headers: GetRequestEnvironmentInfoHeaders;
-}
-export declare class GetRequestEnvironmentInfoResponse extends SpeakeasyBase {
+export declare class GETRequestEnvironmentInfoResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

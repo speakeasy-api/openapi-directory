@@ -1,39 +1,45 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { HiTypeEnumEnum } from "./hitypeenumenum";
-import { ConsentManagerPatientId } from "./consentmanagerpatientid";
+import { ConsentManagerPatientID } from "./consentmanagerpatientid";
+import { ConsentStatusEnum } from "./consentstatusenum";
+import { HITypeEnumEnum } from "./hitypeenumenum";
 import { Permission } from "./permission";
 import { UsePurpose } from "./usepurpose";
-import { ConsentStatusEnum } from "./consentstatusenum";
-export declare class HipConsentNotificationNotificationConsentDetailCareContexts extends SpeakeasyBase {
+export declare class HIPConsentNotificationNotificationConsentDetailCareContexts extends SpeakeasyBase {
     careContextReference: string;
     patientReference: string;
 }
-export declare class HipConsentNotificationNotificationConsentDetailConsentManager extends SpeakeasyBase {
+export declare class HIPConsentNotificationNotificationConsentDetailConsentManager extends SpeakeasyBase {
     id: string;
 }
-export declare class HipConsentNotificationNotificationConsentDetailHip extends SpeakeasyBase {
+export declare class HIPConsentNotificationNotificationConsentDetailHIP extends SpeakeasyBase {
     id: string;
 }
-export declare class HipConsentNotificationNotificationConsentDetail extends SpeakeasyBase {
-    careContexts: HipConsentNotificationNotificationConsentDetailCareContexts[];
+export declare class HIPConsentNotificationNotificationConsentDetail extends SpeakeasyBase {
+    careContexts: HIPConsentNotificationNotificationConsentDetailCareContexts[];
     consentId: string;
-    consentManager: HipConsentNotificationNotificationConsentDetailConsentManager;
+    consentManager: HIPConsentNotificationNotificationConsentDetailConsentManager;
     createdAt: Date;
-    hiTypes: HiTypeEnumEnum[];
-    hip: HipConsentNotificationNotificationConsentDetailHip;
-    patient: ConsentManagerPatientId;
+    hiTypes: HITypeEnumEnum[];
+    hip: HIPConsentNotificationNotificationConsentDetailHIP;
+    patient: ConsentManagerPatientID;
     permission: Permission;
     purpose: UsePurpose;
     schemaVersion?: string;
 }
-export declare class HipConsentNotificationNotification extends SpeakeasyBase {
-    consentDetail: HipConsentNotificationNotificationConsentDetail;
+export declare class HIPConsentNotificationNotification extends SpeakeasyBase {
+    consentDetail: HIPConsentNotificationNotificationConsentDetail;
     consentId: string;
     signature: string;
     status: ConsentStatusEnum;
 }
-export declare class HipConsentNotification extends SpeakeasyBase {
-    notification: HipConsentNotificationNotification;
+export declare class HIPConsentNotification extends SpeakeasyBase {
+    notification: HIPConsentNotificationNotification;
+    /**
+     * a nonce, unique for each HTTP request
+     */
     requestId: string;
+    /**
+     * Date time format in UTC, includes miliseconds YYYY-MM-DDThh:mm:ss.vZ
+     */
     timestamp: Date;
 }

@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostListGroupsForUserActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTListGroupsForUserActionEnum {
     ListGroupsForUser = "ListGroupsForUser"
 }
-export declare enum PostListGroupsForUserVersionEnum {
+export declare enum POSTListGroupsForUserVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostListGroupsForUserQueryParams extends SpeakeasyBase {
-    action: PostListGroupsForUserActionEnum;
+export declare class POSTListGroupsForUserRequest extends SpeakeasyBase {
+    action: POSTListGroupsForUserActionEnum;
+    /**
+     * Pagination token
+     */
     marker?: string;
+    /**
+     * Pagination limit
+     */
     maxItems?: string;
-    version: PostListGroupsForUserVersionEnum;
-}
-export declare class PostListGroupsForUserHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTListGroupsForUserVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostListGroupsForUserHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostListGroupsForUserRequest extends SpeakeasyBase {
-    queryParams: PostListGroupsForUserQueryParams;
-    headers: PostListGroupsForUserHeaders;
-    request?: Uint8Array;
-}
-export declare class PostListGroupsForUserResponse extends SpeakeasyBase {
+export declare class POSTListGroupsForUserResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

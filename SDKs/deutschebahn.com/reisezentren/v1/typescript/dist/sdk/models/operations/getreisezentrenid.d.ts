@@ -1,12 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetReisezentrenIdPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetReisezentrenIdRequest extends SpeakeasyBase {
-    pathParams: GetReisezentrenIdPathParams;
+    /**
+     * Station id
+     */
+    id: string;
 }
 export declare class GetReisezentrenIdResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

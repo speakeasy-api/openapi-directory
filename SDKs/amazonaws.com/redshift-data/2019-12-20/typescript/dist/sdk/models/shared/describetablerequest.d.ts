@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class DescribeTableRequest extends SpeakeasyBase {
-    clusterIdentifier: string;
+    clusterIdentifier?: string;
     connectedDatabase?: string;
     database: string;
     dbUser?: string;
@@ -9,4 +9,5 @@ export declare class DescribeTableRequest extends SpeakeasyBase {
     schema?: string;
     secretArn?: string;
     table?: string;
+    workgroupName?: string;
 }

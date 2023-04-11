@@ -1,16 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Device details.
-**/
+ */
 export declare class DescribeDeviceResponseDeviceDescription extends SpeakeasyBase {
-    arn?: Record<string, any>;
+    arn?: string;
     attributes?: Record<string, string>;
-    deviceId?: Record<string, any>;
-    enabled?: Record<string, any>;
-    remainingLife?: Record<string, any>;
+    deviceId?: string;
+    enabled?: boolean;
+    remainingLife?: number;
     tags?: Record<string, string>;
-    type?: Record<string, any>;
+    type?: string;
 }
+/**
+ * Success
+ */
 export declare class DescribeDeviceResponse extends SpeakeasyBase {
     deviceDescription?: DescribeDeviceResponseDeviceDescription;
 }

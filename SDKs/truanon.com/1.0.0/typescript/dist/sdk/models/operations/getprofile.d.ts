@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetProfileQueryParams extends SpeakeasyBase {
-    id?: string;
-    service?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetProfileRequest extends SpeakeasyBase {
-    queryParams: GetProfileQueryParams;
+    /**
+     * This is your unique username or member ID
+     */
+    id?: string;
+    /**
+     * The service name given to you by TruAnon
+     */
+    service?: string;
 }
 export declare class GetProfileResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

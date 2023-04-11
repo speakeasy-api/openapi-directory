@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * TLD Statistics
+ */
 export declare class Info {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,20 +12,20 @@ export declare class Info {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getInfoTld - Returns overall Tld info
-    **/
+     * Returns overall Tld info
+     */
     getInfoTld(config?: AxiosRequestConfig): Promise<operations.GetInfoTldResponse>;
     /**
-     * getInfoTldZone - Returns statistics for specific zone
-    **/
+     * Returns statistics for specific zone
+     */
     getInfoTldZone(req: operations.GetInfoTldZoneRequest, config?: AxiosRequestConfig): Promise<operations.GetInfoTldZoneResponse>;
     getApiInfoItem(req: operations.GetApiInfoItemRequest, config?: AxiosRequestConfig): Promise<operations.GetApiInfoItemResponse>;
     /**
-     * getStatisticsCollection - Returns overall stagtistics
-    **/
+     * Returns overall stagtistics
+     */
     getStatisticsCollection(req: operations.GetStatisticsCollectionRequest, config?: AxiosRequestConfig): Promise<operations.GetStatisticsCollectionResponse>;
     /**
-     * getStatisticsItem - Returns statistics for specific zone
-    **/
+     * Returns statistics for specific zone
+     */
     getStatisticsItem(req: operations.GetStatisticsItemRequest, config?: AxiosRequestConfig): Promise<operations.GetStatisticsItemResponse>;
 }

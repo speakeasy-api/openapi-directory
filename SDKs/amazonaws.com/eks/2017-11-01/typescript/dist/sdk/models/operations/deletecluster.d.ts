@@ -1,9 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteClusterPathParams extends SpeakeasyBase {
-    name: string;
-}
-export declare class DeleteClusterHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteClusterRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,18 +9,37 @@ export declare class DeleteClusterHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DeleteClusterRequest extends SpeakeasyBase {
-    pathParams: DeleteClusterPathParams;
-    headers: DeleteClusterHeaders;
+    /**
+     * The name of the cluster to delete.
+     */
+    name: string;
 }
 export declare class DeleteClusterResponse extends SpeakeasyBase {
+    /**
+     * ClientException
+     */
     clientException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteClusterResponse?: shared.DeleteClusterResponse;
+    /**
+     * ResourceInUseException
+     */
     resourceInUseException?: any;
-    resourceNotFoundException?: any;
-    serverException?: any;
+    /**
+     * ServiceUnavailableException
+     */
     serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ServerException
+     */
+    serverException?: any;
 }

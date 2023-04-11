@@ -1,10 +1,36 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListObjectParentPathsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
+import { AxiosResponse } from "axios";
+/**
+ * The reference that identifies an object.
+ */
+export declare class ListObjectParentPathsRequestBodyObjectReference extends SpeakeasyBase {
+    selector?: string;
 }
-export declare class ListObjectParentPathsHeaders extends SpeakeasyBase {
+export declare class ListObjectParentPathsRequestBody extends SpeakeasyBase {
+    /**
+     * The maximum number of items to be retrieved in a single call. This is an approximate number.
+     */
+    maxResults?: number;
+    /**
+     * The pagination token.
+     */
+    nextToken?: string;
+    /**
+     * The reference that identifies an object.
+     */
+    objectReference: ListObjectParentPathsRequestBodyObjectReference;
+}
+export declare class ListObjectParentPathsRequest extends SpeakeasyBase {
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
+    requestBody: ListObjectParentPathsRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,35 +38,53 @@ export declare class ListObjectParentPathsHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
+    /**
+     * The ARN of the directory to which the parent path applies.
+     */
     xAmzDataPartition: string;
 }
-/**
- * The reference that identifies an object.
-**/
-export declare class ListObjectParentPathsRequestBodyObjectReference extends SpeakeasyBase {
-    selector?: string;
-}
-export declare class ListObjectParentPathsRequestBody extends SpeakeasyBase {
-    maxResults?: number;
-    nextToken?: string;
-    objectReference: ListObjectParentPathsRequestBodyObjectReference;
-}
-export declare class ListObjectParentPathsRequest extends SpeakeasyBase {
-    queryParams: ListObjectParentPathsQueryParams;
-    headers: ListObjectParentPathsHeaders;
-    request: ListObjectParentPathsRequestBody;
-}
 export declare class ListObjectParentPathsResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: shared.AccessDeniedException;
     contentType: string;
+    /**
+     * DirectoryNotEnabledException
+     */
     directoryNotEnabledException?: shared.DirectoryNotEnabledException;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: shared.InternalServiceException;
+    /**
+     * InvalidArnException
+     */
     invalidArnException?: shared.InvalidArnException;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: shared.InvalidNextTokenException;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: shared.LimitExceededException;
+    /**
+     * Success
+     */
     listObjectParentPathsResponse?: shared.ListObjectParentPathsResponse;
-    resourceNotFoundException?: shared.ResourceNotFoundException;
-    retryableConflictException?: shared.RetryableConflictException;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: shared.ResourceNotFoundException;
+    /**
+     * RetryableConflictException
+     */
+    retryableConflictException?: shared.RetryableConflictException;
+    /**
+     * ValidationException
+     */
     validationException?: shared.ValidationException;
 }

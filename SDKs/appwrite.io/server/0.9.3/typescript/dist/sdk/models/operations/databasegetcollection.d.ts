@@ -1,18 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DatabaseGetCollectionPathParams extends SpeakeasyBase {
-    collectionId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DatabaseGetCollectionSecurity extends SpeakeasyBase {
-    key: shared.SchemeKey;
-    project: shared.SchemeProject;
+    key: string;
+    project: string;
 }
 export declare class DatabaseGetCollectionRequest extends SpeakeasyBase {
-    pathParams: DatabaseGetCollectionPathParams;
-    security: DatabaseGetCollectionSecurity;
+    /**
+     * Collection unique ID.
+     */
+    collectionId: string;
 }
 export declare class DatabaseGetCollectionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Collection
+     */
     collection?: shared.Collection;
 }

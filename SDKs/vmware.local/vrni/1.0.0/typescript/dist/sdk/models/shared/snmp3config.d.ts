@@ -10,7 +10,7 @@ export declare enum Snmp3ConfigPrivacyTypeEnum {
     Aes128 = "AES128",
     Aes192 = "AES192",
     Aes256 = "AES256",
-    ThreeDes = "3DES",
+    ThreeDES = "3DES",
     NoPriv = "NO_PRIV"
 }
 export declare class Snmp3Config extends SpeakeasyBase {

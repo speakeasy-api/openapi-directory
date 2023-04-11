@@ -1,12 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetFiltersFiltersPathParams extends SpeakeasyBase {
-    filters: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetFiltersFiltersRequest extends SpeakeasyBase {
-    pathParams: GetFiltersFiltersPathParams;
+    /**
+     * String list (semicolon delimited).
+     */
+    filters: string;
 }
 export declare class GetFiltersFiltersResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,18 +1,37 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class EnterpriseAdminListPublicKeysQueryParams extends SpeakeasyBase {
-    direction?: shared.DirectionEnum;
-    page?: number;
-    perPage?: number;
-    since?: string;
-    sort?: shared.DirectionEnum1;
+import { AxiosResponse } from "axios";
+export declare enum EnterpriseAdminListPublicKeysSortEnum {
+    Created = "created",
+    Updated = "updated",
+    Accessed = "accessed"
 }
 export declare class EnterpriseAdminListPublicKeysRequest extends SpeakeasyBase {
-    queryParams: EnterpriseAdminListPublicKeysQueryParams;
+    /**
+     * One of `asc` (ascending) or `desc` (descending).
+     */
+    direction?: shared.DirectionEnum;
+    /**
+     * Page number of the results to fetch.
+     */
+    page?: number;
+    /**
+     * Results per page (max 100)
+     */
+    perPage?: number;
+    /**
+     * Only show public keys accessed after the given time.
+     */
+    since?: string;
+    sort?: EnterpriseAdminListPublicKeysSortEnum;
 }
 export declare class EnterpriseAdminListPublicKeysResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
-    enterprisePublicKeys?: shared.EnterprisePublicKey[];
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
+    publicKeyFulls?: shared.PublicKeyFull[];
 }

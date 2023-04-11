@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Offers {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,15 +9,17 @@ export declare class Offers {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * offersLoungesByLocationGet - Lounges
+     * Lounges
      *
+     * @remarks
      * Lounge information
-    **/
-    offersLoungesByLocationGet(req: operations.OffersLoungesByLocationGetRequest, config?: AxiosRequestConfig): Promise<operations.OffersLoungesByLocationGetResponse>;
+     */
+    offersLoungesByLocationGet(req: operations.OffersLoungesByLocationGetRequest, security: operations.OffersLoungesByLocationGetSecurity, config?: AxiosRequestConfig): Promise<operations.OffersLoungesByLocationGetResponse>;
     /**
-     * offersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGet - Seat Maps
+     * Seat Maps
      *
+     * @remarks
      * Cabin layout and seat characteristics.
-    **/
-    offersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGet(req: operations.OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetRequest, config?: AxiosRequestConfig): Promise<operations.OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetResponse>;
+     */
+    offersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGet(req: operations.OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetRequest, security: operations.OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetSecurity, config?: AxiosRequestConfig): Promise<operations.OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetResponse>;
 }

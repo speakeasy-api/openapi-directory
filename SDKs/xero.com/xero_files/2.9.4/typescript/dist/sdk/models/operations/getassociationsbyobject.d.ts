@@ -1,21 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetAssociationsByObjectPathParams extends SpeakeasyBase {
-    objectId: string;
-}
-export declare class GetAssociationsByObjectHeaders extends SpeakeasyBase {
-    xeroTenantId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetAssociationsByObjectSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class GetAssociationsByObjectRequest extends SpeakeasyBase {
-    pathParams: GetAssociationsByObjectPathParams;
-    headers: GetAssociationsByObjectHeaders;
-    security: GetAssociationsByObjectSecurity;
+    /**
+     * Object id for single object
+     */
+    objectId: string;
+    /**
+     * Xero identifier for Tenant
+     */
+    xeroTenantId: string;
 }
 export declare class GetAssociationsByObjectResponse extends SpeakeasyBase {
+    /**
+     * search results matching criteria
+     */
     associations?: shared.Association[];
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

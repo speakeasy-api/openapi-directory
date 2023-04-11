@@ -1,12 +1,12 @@
-export declare enum MlModelFilterVariableEnum {
+export declare enum MLModelFilterVariableEnum {
     CreatedAt = "CreatedAt",
     LastUpdatedAt = "LastUpdatedAt",
     Status = "Status",
     Name = "Name",
-    IamUser = "IAMUser",
+    IAMUser = "IAMUser",
     TrainingDataSourceId = "TrainingDataSourceId",
     RealtimeEndpointStatus = "RealtimeEndpointStatus",
-    MlModelType = "MLModelType",
+    MLModelType = "MLModelType",
     Algorithm = "Algorithm",
-    TrainingDataUri = "TrainingDataURI"
+    TrainingDataURI = "TrainingDataURI"
 }

@@ -1,9 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { BeezUpCommonChannelBasicInfo } from "./beezupcommonchannelbasicinfo";
-import { BeezUpCommonProductBasicInfo } from "./beezupcommonproductbasicinfo";
+import { BeezUPCommonChannelBasicInfo } from "./beezupcommonchannelbasicinfo";
+import { BeezUPCommonProductBasicInfo } from "./beezupcommonproductbasicinfo";
 export declare class TrackedClick extends SpeakeasyBase {
-    channel: BeezUpCommonChannelBasicInfo;
+    /**
+     * The basic info related to a channel
+     */
+    channel: BeezUPCommonChannelBasicInfo;
+    /**
+     * The user IP address for the click
+     */
     ipAddress: string;
-    product: BeezUpCommonProductBasicInfo;
+    /**
+     * The basic information related to a product
+     */
+    product: BeezUPCommonProductBasicInfo;
+    /**
+     * The utc date of the click
+     */
     utcDate: Date;
 }

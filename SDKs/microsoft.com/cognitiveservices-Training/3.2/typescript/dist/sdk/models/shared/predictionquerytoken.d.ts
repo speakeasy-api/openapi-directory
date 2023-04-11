@@ -5,6 +5,9 @@ export declare enum PredictionQueryTokenOrderByEnum {
     Oldest = "Oldest",
     Suggested = "Suggested"
 }
+/**
+ * Parameters used to query the predictions. Limited to combining 2 tags.
+ */
 export declare class PredictionQueryToken extends SpeakeasyBase {
     application?: string;
     continuation?: string;

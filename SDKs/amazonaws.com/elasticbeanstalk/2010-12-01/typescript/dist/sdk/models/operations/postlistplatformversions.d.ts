@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostListPlatformVersionsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTListPlatformVersionsActionEnum {
     ListPlatformVersions = "ListPlatformVersions"
 }
-export declare enum PostListPlatformVersionsVersionEnum {
+export declare enum POSTListPlatformVersionsVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostListPlatformVersionsQueryParams extends SpeakeasyBase {
-    action: PostListPlatformVersionsActionEnum;
+export declare class POSTListPlatformVersionsRequest extends SpeakeasyBase {
+    action: POSTListPlatformVersionsActionEnum;
+    /**
+     * Pagination limit
+     */
     maxRecords?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostListPlatformVersionsVersionEnum;
-}
-export declare class PostListPlatformVersionsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTListPlatformVersionsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostListPlatformVersionsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostListPlatformVersionsRequest extends SpeakeasyBase {
-    queryParams: PostListPlatformVersionsQueryParams;
-    headers: PostListPlatformVersionsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostListPlatformVersionsResponse extends SpeakeasyBase {
+export declare class POSTListPlatformVersionsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

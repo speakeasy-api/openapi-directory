@@ -1,0 +1,8 @@
+export declare enum MetricTypeEnum {
+    QueriesByCount = "QUERIES_BY_COUNT",
+    QueriesByZeroClickRate = "QUERIES_BY_ZERO_CLICK_RATE",
+    QueriesByZeroResultRate = "QUERIES_BY_ZERO_RESULT_RATE",
+    DocsByClickCount = "DOCS_BY_CLICK_COUNT",
+    AggQueryDocMetrics = "AGG_QUERY_DOC_METRICS",
+    TrendQueryDocMetrics = "TREND_QUERY_DOC_METRICS"
+}

@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class DistrictsInRegion {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +9,10 @@ export declare class DistrictsInRegion {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * districtsInARegion - Returns all districts in region
+     * Returns all districts in region
      *
+     * @remarks
      * Returns a post code and all districts in a specified region
-    **/
+     */
     districtsInARegion(req: operations.DistrictsInARegionRequest, config?: AxiosRequestConfig): Promise<operations.DistrictsInARegionResponse>;
 }

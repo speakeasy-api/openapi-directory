@@ -1,25 +1,39 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class TeamsListProjectsLegacyPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class TeamsListProjectsLegacyRequest extends SpeakeasyBase {
+    /**
+     * Page number of the results to fetch.
+     */
+    page?: number;
+    /**
+     * Results per page (max 100)
+     */
+    perPage?: number;
     teamId: number;
 }
-export declare class TeamsListProjectsLegacyQueryParams extends SpeakeasyBase {
-    page?: number;
-    perPage?: number;
-}
-export declare class TeamsListProjectsLegacy415ApplicationJson extends SpeakeasyBase {
+/**
+ * Preview header missing
+ */
+export declare class TeamsListProjectsLegacy415ApplicationJSON extends SpeakeasyBase {
     documentationUrl: string;
     message: string;
 }
-export declare class TeamsListProjectsLegacyRequest extends SpeakeasyBase {
-    pathParams: TeamsListProjectsLegacyPathParams;
-    queryParams: TeamsListProjectsLegacyQueryParams;
-}
 export declare class TeamsListProjectsLegacyResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Resource not found
+     */
     basicError?: shared.BasicError;
+    /**
+     * Response
+     */
     teamProjects?: shared.TeamProject[];
-    teamsListProjectsLegacy415ApplicationJSONObject?: TeamsListProjectsLegacy415ApplicationJson;
+    /**
+     * Preview header missing
+     */
+    teamsListProjectsLegacy415ApplicationJSONObject?: TeamsListProjectsLegacy415ApplicationJSON;
 }

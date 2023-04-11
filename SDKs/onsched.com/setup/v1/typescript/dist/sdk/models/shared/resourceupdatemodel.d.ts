@@ -4,6 +4,9 @@ import { AvailabilityInputModel } from "./availabilityinputmodel";
 import { ContactUpdateModel } from "./contactupdatemodel";
 import { CustomFieldUpdateModel } from "./customfieldupdatemodel";
 import { ResourceOptionsUpdateModel } from "./resourceoptionsupdatemodel";
+/**
+ * Resource Update Model
+ */
 export declare class ResourceUpdateModel extends SpeakeasyBase {
     address?: AddressUpdateModel;
     availability?: AvailabilityInputModel;
@@ -15,6 +18,7 @@ export declare class ResourceUpdateModel extends SpeakeasyBase {
     locationId?: string;
     name?: string;
     options?: ResourceOptionsUpdateModel;
+    recurringAvailability?: boolean;
     serviceIds?: string[];
     timezoneId?: string;
 }

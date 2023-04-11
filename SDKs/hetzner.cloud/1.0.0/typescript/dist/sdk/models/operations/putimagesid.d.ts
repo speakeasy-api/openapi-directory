@@ -1,23 +1,49 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PutImagesIdPathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
+/**
+ * Destination Image type to convert to
+ */
 export declare enum PutImagesIdUpdateImageRequestTypeEnum {
     Snapshot = "snapshot"
 }
 export declare class PutImagesIdUpdateImageRequest extends SpeakeasyBase {
+    /**
+     * New description of Image
+     */
     description?: string;
+    /**
+     * User-defined labels (key-value pairs)
+     */
     labels?: Record<string, any>;
+    /**
+     * Destination Image type to convert to
+     */
     type?: PutImagesIdUpdateImageRequestTypeEnum;
+}
+export declare class PutImagesIdRequest extends SpeakeasyBase {
+    requestBody?: PutImagesIdUpdateImageRequest;
+    /**
+     * ID of the Image
+     */
+    id: number;
 }
 /**
  * Information about the Server the Image was created from
-**/
-export declare class PutImagesId200ApplicationJsonImageCreatedFrom extends SpeakeasyBase {
+ */
+export declare class PutImagesId200ApplicationJSONImageCreatedFrom extends SpeakeasyBase {
+    /**
+     * ID of the Server the Image was created from
+     */
     id: number;
+    /**
+     * Server name at the time the Image was created
+     */
     name: string;
 }
-export declare enum PutImagesId200ApplicationJsonImageOsFlavorEnum {
+/**
+ * Flavor of operating system contained in the Image
+ */
+export declare enum PutImagesId200ApplicationJSONImageOsFlavorEnum {
     Ubuntu = "ubuntu",
     Centos = "centos",
     Debian = "debian",
@@ -26,51 +52,113 @@ export declare enum PutImagesId200ApplicationJsonImageOsFlavorEnum {
 }
 /**
  * Protection configuration for the Resource
-**/
-export declare class PutImagesId200ApplicationJsonImageProtection extends SpeakeasyBase {
+ */
+export declare class PutImagesId200ApplicationJSONImageProtection extends SpeakeasyBase {
+    /**
+     * If true, prevents the Resource from being deleted
+     */
     delete: boolean;
 }
-export declare enum PutImagesId200ApplicationJsonImageStatusEnum {
+/**
+ * Whether the Image can be used or if it's still being created or unavailable
+ */
+export declare enum PutImagesId200ApplicationJSONImageStatusEnum {
     Available = "available",
     Creating = "creating",
     Unavailable = "unavailable"
 }
-export declare enum PutImagesId200ApplicationJsonImageTypeEnum {
+/**
+ * Type of the Image
+ */
+export declare enum PutImagesId200ApplicationJSONImageTypeEnum {
     System = "system",
     App = "app",
     Snapshot = "snapshot",
     Backup = "backup",
     Temporary = "temporary"
 }
-export declare class PutImagesId200ApplicationJsonImage extends SpeakeasyBase {
+export declare class PutImagesId200ApplicationJSONImage extends SpeakeasyBase {
+    /**
+     * ID of Server the Image is bound to. Only set for Images of type `backup`.
+     */
     boundTo: number;
-    buildId?: string;
+    /**
+     * Point in time when the Resource was created (in ISO-8601 format)
+     */
     created: string;
-    createdFrom: PutImagesId200ApplicationJsonImageCreatedFrom;
+    /**
+     * Information about the Server the Image was created from
+     */
+    createdFrom: PutImagesId200ApplicationJSONImageCreatedFrom;
+    /**
+     * Point in time where the Image was deleted (in ISO-8601 format)
+     */
     deleted: string;
+    /**
+     * Point in time when the Image is considered to be deprecated (in ISO-8601 format)
+     */
     deprecated: string;
+    /**
+     * Description of the Image
+     */
     description: string;
+    /**
+     * Size of the disk contained in the Image in GB
+     */
     diskSize: number;
+    /**
+     * ID of the Resource
+     */
     id: number;
+    /**
+     * Size of the Image file in our storage in GB. For snapshot Images this is the value relevant for calculating costs for the Image.
+     */
     imageSize: number;
+    /**
+     * User-defined labels (key-value pairs)
+     */
     labels: Record<string, string>;
+    /**
+     * Unique identifier of the Image. This value is only set for system Images.
+     */
     name: string;
-    osFlavor: PutImagesId200ApplicationJsonImageOsFlavorEnum;
+    /**
+     * Flavor of operating system contained in the Image
+     */
+    osFlavor: PutImagesId200ApplicationJSONImageOsFlavorEnum;
+    /**
+     * Operating system version
+     */
     osVersion: string;
-    protection: PutImagesId200ApplicationJsonImageProtection;
+    /**
+     * Protection configuration for the Resource
+     */
+    protection: PutImagesId200ApplicationJSONImageProtection;
+    /**
+     * Indicates that rapid deploy of the Image is available
+     */
     rapidDeploy?: boolean;
-    status: PutImagesId200ApplicationJsonImageStatusEnum;
-    type: PutImagesId200ApplicationJsonImageTypeEnum;
+    /**
+     * Whether the Image can be used or if it's still being created or unavailable
+     */
+    status: PutImagesId200ApplicationJSONImageStatusEnum;
+    /**
+     * Type of the Image
+     */
+    type: PutImagesId200ApplicationJSONImageTypeEnum;
 }
-export declare class PutImagesId200ApplicationJson extends SpeakeasyBase {
-    image?: PutImagesId200ApplicationJsonImage;
-}
-export declare class PutImagesIdRequest extends SpeakeasyBase {
-    pathParams: PutImagesIdPathParams;
-    request?: PutImagesIdUpdateImageRequest;
+/**
+ * The image key in the reply contains the modified Image object
+ */
+export declare class PutImagesId200ApplicationJSON extends SpeakeasyBase {
+    image?: PutImagesId200ApplicationJSONImage;
 }
 export declare class PutImagesIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    putImagesId200ApplicationJSONObject?: PutImagesId200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * The image key in the reply contains the modified Image object
+     */
+    putImagesId200ApplicationJSONObject?: PutImagesId200ApplicationJSON;
 }

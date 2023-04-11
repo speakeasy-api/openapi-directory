@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetCatalogImportStatusXAmzTargetEnum {
-    AwsGlueGetCatalogImportStatus = "AWSGlue.GetCatalogImportStatus"
+    AWSGlueGetCatalogImportStatus = "AWSGlue.GetCatalogImportStatus"
 }
-export declare class GetCatalogImportStatusHeaders extends SpeakeasyBase {
+export declare class GetCatalogImportStatusRequest extends SpeakeasyBase {
+    getCatalogImportStatusRequest: shared.GetCatalogImportStatusRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class GetCatalogImportStatusHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetCatalogImportStatusXAmzTargetEnum;
 }
-export declare class GetCatalogImportStatusRequest extends SpeakeasyBase {
-    headers: GetCatalogImportStatusHeaders;
-    request: shared.GetCatalogImportStatusRequest;
-}
 export declare class GetCatalogImportStatusResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getCatalogImportStatusResponse?: shared.GetCatalogImportStatusResponse;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

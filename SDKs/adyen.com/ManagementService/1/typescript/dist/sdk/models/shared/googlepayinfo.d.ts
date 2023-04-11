@@ -1,0 +1,7 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+export declare class GooglePayInfo extends SpeakeasyBase {
+    /**
+     * Google Pay [Merchant ID](https://support.google.com/paymentscenter/answer/7163092?hl=en). Character length and limitations: 16 alphanumeric characters or 20 numeric characters.
+     */
+    merchantId?: string;
+}

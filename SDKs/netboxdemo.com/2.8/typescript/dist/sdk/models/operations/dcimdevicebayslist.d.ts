@@ -1,6 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DcimDeviceBaysListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DcimDeviceBaysListRequest extends SpeakeasyBase {
     description?: string;
     descriptionIc?: string;
     descriptionIe?: string;
@@ -21,6 +22,9 @@ export declare class DcimDeviceBaysListQueryParams extends SpeakeasyBase {
     idLt?: string;
     idLte?: string;
     idN?: string;
+    /**
+     * Number of results to return per page.
+     */
     limit?: number;
     name?: string;
     nameIc?: string;
@@ -32,6 +36,9 @@ export declare class DcimDeviceBaysListQueryParams extends SpeakeasyBase {
     nameNie?: string;
     nameNiew?: string;
     nameNisw?: string;
+    /**
+     * The initial index from which to return the results.
+     */
     offset?: number;
     q?: string;
     region?: string;
@@ -45,17 +52,15 @@ export declare class DcimDeviceBaysListQueryParams extends SpeakeasyBase {
     tag?: string;
     tagN?: string;
 }
-export declare class DcimDeviceBaysList200ApplicationJson extends SpeakeasyBase {
+export declare class DcimDeviceBaysList200ApplicationJSON extends SpeakeasyBase {
     count: number;
     next?: string;
     previous?: string;
     results: shared.DeviceBay[];
 }
-export declare class DcimDeviceBaysListRequest extends SpeakeasyBase {
-    queryParams: DcimDeviceBaysListQueryParams;
-}
 export declare class DcimDeviceBaysListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dcimDeviceBaysList200ApplicationJSONObject?: DcimDeviceBaysList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    dcimDeviceBaysList200ApplicationJSONObject?: DcimDeviceBaysList200ApplicationJSON;
 }

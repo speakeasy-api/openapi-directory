@@ -1,17 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { LinksGetUserAccountInfoLink } from "./linksgetuseraccountinfolink";
 import { LinksGetBillingPeriodsLink } from "./linksgetbillingperiodslink";
 import { LinksGetContractsLink } from "./linksgetcontractslink";
-import { LinksGetFriendInfoLink } from "./linksgetfriendinfolink";
-import { LinksGetOfferLink } from "./linksgetofferlink";
-import { LinksGetInvoicesLink } from "./linksgetinvoiceslink";
-import { LinksLogoutLink } from "./linkslogoutlink";
 import { LinksGetCustomerIndexLink } from "./linksgetcustomerindexlink";
+import { LinksGetFriendInfoLink } from "./linksgetfriendinfolink";
+import { LinksGetInvoicesLink } from "./linksgetinvoiceslink";
+import { LinksGetOfferLink } from "./linksgetofferlink";
 import { LinksGetStandardOffersLink } from "./linksgetstandardofferslink";
 import { LinksGetStoresLink } from "./linksgetstoreslink";
+import { LinksGetUserAccountInfoLink } from "./linksgetuseraccountinfolink";
+import { LinksLogoutLink } from "./linkslogoutlink";
 /**
  * Gives you want you can do on this API
-**/
+ */
 export declare class CustomerIndexLinks extends SpeakeasyBase {
     accountInfo: LinksGetUserAccountInfoLink;
     billingPeriods: LinksGetBillingPeriodsLink;

@@ -1,6 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+export declare enum WritableInterfaceConnectionStatusEnum {
+    False = "false",
+    True = "true"
+}
 export declare class WritableInterfaceConnectionInput extends SpeakeasyBase {
-    connectionStatus?: boolean;
+    connectionStatus?: WritableInterfaceConnectionStatusEnum;
     interfaceA: number;
     interfaceB: number;
 }

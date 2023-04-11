@@ -1,20 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetAuthorizeDbSecurityGroupIngressActionEnum {
-    AuthorizeDbSecurityGroupIngress = "AuthorizeDBSecurityGroupIngress"
+import { AxiosResponse } from "axios";
+export declare enum GETAuthorizeDBSecurityGroupIngressActionEnum {
+    AuthorizeDBSecurityGroupIngress = "AuthorizeDBSecurityGroupIngress"
 }
-export declare enum GetAuthorizeDbSecurityGroupIngressVersionEnum {
+export declare enum GETAuthorizeDBSecurityGroupIngressVersionEnum {
     TwoThousandAndFourteen0901 = "2014-09-01"
 }
-export declare class GetAuthorizeDbSecurityGroupIngressQueryParams extends SpeakeasyBase {
-    action: GetAuthorizeDbSecurityGroupIngressActionEnum;
+export declare class GETAuthorizeDBSecurityGroupIngressRequest extends SpeakeasyBase {
+    action: GETAuthorizeDBSecurityGroupIngressActionEnum;
     cidrip?: string;
     dbSecurityGroupName: string;
     ec2SecurityGroupId?: string;
     ec2SecurityGroupName?: string;
     ec2SecurityGroupOwnerId?: string;
-    version: GetAuthorizeDbSecurityGroupIngressVersionEnum;
-}
-export declare class GetAuthorizeDbSecurityGroupIngressHeaders extends SpeakeasyBase {
+    version: GETAuthorizeDBSecurityGroupIngressVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -23,12 +22,9 @@ export declare class GetAuthorizeDbSecurityGroupIngressHeaders extends Speakeasy
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetAuthorizeDbSecurityGroupIngressRequest extends SpeakeasyBase {
-    queryParams: GetAuthorizeDbSecurityGroupIngressQueryParams;
-    headers: GetAuthorizeDbSecurityGroupIngressHeaders;
-}
-export declare class GetAuthorizeDbSecurityGroupIngressResponse extends SpeakeasyBase {
+export declare class GETAuthorizeDBSecurityGroupIngressResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

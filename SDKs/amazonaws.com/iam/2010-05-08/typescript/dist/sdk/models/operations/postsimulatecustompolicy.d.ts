@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostSimulateCustomPolicyActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTSimulateCustomPolicyActionEnum {
     SimulateCustomPolicy = "SimulateCustomPolicy"
 }
-export declare enum PostSimulateCustomPolicyVersionEnum {
+export declare enum POSTSimulateCustomPolicyVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostSimulateCustomPolicyQueryParams extends SpeakeasyBase {
-    action: PostSimulateCustomPolicyActionEnum;
+export declare class POSTSimulateCustomPolicyRequest extends SpeakeasyBase {
+    action: POSTSimulateCustomPolicyActionEnum;
+    /**
+     * Pagination token
+     */
     marker?: string;
+    /**
+     * Pagination limit
+     */
     maxItems?: string;
-    version: PostSimulateCustomPolicyVersionEnum;
-}
-export declare class PostSimulateCustomPolicyHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTSimulateCustomPolicyVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostSimulateCustomPolicyHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostSimulateCustomPolicyRequest extends SpeakeasyBase {
-    queryParams: PostSimulateCustomPolicyQueryParams;
-    headers: PostSimulateCustomPolicyHeaders;
-    request?: Uint8Array;
-}
-export declare class PostSimulateCustomPolicyResponse extends SpeakeasyBase {
+export declare class POSTSimulateCustomPolicyResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

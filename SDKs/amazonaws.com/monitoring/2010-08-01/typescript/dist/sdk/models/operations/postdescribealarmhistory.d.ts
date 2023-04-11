@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeAlarmHistoryActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeAlarmHistoryActionEnum {
     DescribeAlarmHistory = "DescribeAlarmHistory"
 }
-export declare enum PostDescribeAlarmHistoryVersionEnum {
+export declare enum POSTDescribeAlarmHistoryVersionEnum {
     TwoThousandAndTen0801 = "2010-08-01"
 }
-export declare class PostDescribeAlarmHistoryQueryParams extends SpeakeasyBase {
-    action: PostDescribeAlarmHistoryActionEnum;
+export declare class POSTDescribeAlarmHistoryRequest extends SpeakeasyBase {
+    action: POSTDescribeAlarmHistoryActionEnum;
+    /**
+     * Pagination limit
+     */
     maxRecords?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostDescribeAlarmHistoryVersionEnum;
-}
-export declare class PostDescribeAlarmHistoryHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeAlarmHistoryVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeAlarmHistoryHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeAlarmHistoryRequest extends SpeakeasyBase {
-    queryParams: PostDescribeAlarmHistoryQueryParams;
-    headers: PostDescribeAlarmHistoryHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeAlarmHistoryResponse extends SpeakeasyBase {
+export declare class POSTDescribeAlarmHistoryResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

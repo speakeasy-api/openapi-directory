@@ -1,22 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteProductPathParams extends SpeakeasyBase {
-    productNumber: string;
-}
-export declare class DeleteProductQueryParams extends SpeakeasyBase {
-    forceCascade?: boolean;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteProductSecurity extends SpeakeasyBase {
-    basicAuth: shared.SchemeBasicAuth;
+    password: string;
+    username: string;
 }
 export declare class DeleteProductRequest extends SpeakeasyBase {
-    pathParams: DeleteProductPathParams;
-    queryParams: DeleteProductQueryParams;
-    security: DeleteProductSecurity;
+    /**
+     * Force object deletion and all descendants.
+     */
+    forceCascade?: boolean;
+    /**
+     * Unique number that identifies the Product.
+     */
+    productNumber: string;
 }
 export declare class DeleteProductResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    netlicensing?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful request
+     */
+    netlicensing?: shared.Netlicensing;
 }

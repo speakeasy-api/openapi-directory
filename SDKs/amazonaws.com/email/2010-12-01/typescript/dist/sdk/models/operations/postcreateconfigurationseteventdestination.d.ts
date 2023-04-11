@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateConfigurationSetEventDestinationActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateConfigurationSetEventDestinationActionEnum {
     CreateConfigurationSetEventDestination = "CreateConfigurationSetEventDestination"
 }
-export declare enum PostCreateConfigurationSetEventDestinationVersionEnum {
+export declare enum POSTCreateConfigurationSetEventDestinationVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostCreateConfigurationSetEventDestinationQueryParams extends SpeakeasyBase {
-    action: PostCreateConfigurationSetEventDestinationActionEnum;
-    version: PostCreateConfigurationSetEventDestinationVersionEnum;
-}
-export declare class PostCreateConfigurationSetEventDestinationHeaders extends SpeakeasyBase {
+export declare class POSTCreateConfigurationSetEventDestinationRequest extends SpeakeasyBase {
+    action: POSTCreateConfigurationSetEventDestinationActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateConfigurationSetEventDestinationVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateConfigurationSetEventDestinationHeaders extends S
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateConfigurationSetEventDestinationRequest extends SpeakeasyBase {
-    queryParams: PostCreateConfigurationSetEventDestinationQueryParams;
-    headers: PostCreateConfigurationSetEventDestinationHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateConfigurationSetEventDestinationResponse extends SpeakeasyBase {
+export declare class POSTCreateConfigurationSetEventDestinationResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

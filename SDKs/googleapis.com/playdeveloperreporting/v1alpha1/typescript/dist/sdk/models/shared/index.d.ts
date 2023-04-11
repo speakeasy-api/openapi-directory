@@ -1,5 +1,6 @@
 export * from "./altenum";
 export * from "./googleplaydeveloperreportingv1alpha1anomaly";
+export * from "./googleplaydeveloperreportingv1alpha1decimalconfidenceinterval";
 export * from "./googleplaydeveloperreportingv1alpha1dimensionvalue";
 export * from "./googleplaydeveloperreportingv1alpha1errorissue";
 export * from "./googleplaydeveloperreportingv1alpha1errorreport";

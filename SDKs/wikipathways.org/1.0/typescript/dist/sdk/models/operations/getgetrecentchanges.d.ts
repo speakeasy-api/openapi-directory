@@ -1,4 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
 export declare enum GetGetRecentChangesFormatEnum {
     Json = "json",
     Xml = "xml",
@@ -7,14 +8,15 @@ export declare enum GetGetRecentChangesFormatEnum {
     Jpg = "jpg",
     Pdf = "pdf"
 }
-export declare class GetGetRecentChangesQueryParams extends SpeakeasyBase {
-    format?: GetGetRecentChangesFormatEnum;
-    timestamp: string;
-}
 export declare class GetGetRecentChangesRequest extends SpeakeasyBase {
-    queryParams: GetGetRecentChangesQueryParams;
+    format?: GetGetRecentChangesFormatEnum;
+    /**
+     * Get the changes after this time
+     */
+    timestamp: string;
 }
 export declare class GetGetRecentChangesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,15 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { SettingTypeEnum } from "./settingtypeenum";
 import { TagModel } from "./tagmodel";
+/**
+ * When the creation was successful.
+ */
 export declare class SettingModel extends SpeakeasyBase {
     configId?: string;
     configName?: string;
-    expirationWarningAt?: Date;
     hint?: string;
     key?: string;
     name?: string;
-    ownerUserEmail?: string;
-    ownerUserFullName?: string;
+    order?: number;
     settingId?: number;
     settingType?: SettingTypeEnum;
     tags?: TagModel[];

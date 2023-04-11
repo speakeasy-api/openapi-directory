@@ -3,7 +3,7 @@ import { AccountsWithRestoreAccessList } from "./accountswithrestoreaccesslist";
 import { TagList } from "./taglist";
 /**
  * Describes a snapshot.
-**/
+ */
 export declare class SnapshotList extends SpeakeasyBase {
     accountsWithRestoreAccess?: AccountsWithRestoreAccessList[];
     actualIncrementalBackupSizeInMegaBytes?: number;
@@ -29,7 +29,7 @@ export declare class SnapshotList extends SpeakeasyBase {
     numberOfNodes?: number;
     ownerAccount?: string;
     port?: number;
-    restorableNodeTypes?: Record<string, any>[];
+    restorableNodeTypes?: string[];
     snapshotCreateTime?: Date;
     snapshotIdentifier?: string;
     snapshotRetentionStartTime?: Date;

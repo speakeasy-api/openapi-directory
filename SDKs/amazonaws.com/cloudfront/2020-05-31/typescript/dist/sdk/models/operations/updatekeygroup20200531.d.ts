@@ -1,9 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UpdateKeyGroup20200531PathParams extends SpeakeasyBase {
-    id: string;
+import { AxiosResponse } from "axios";
+/**
+ * <p>A key group configuration.</p> <p>A key group contains a list of public keys that you can use with <a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html">CloudFront signed URLs and signed cookies</a>.</p>
+ */
+export declare class UpdateKeyGroup20200531RequestBodyKeyGroupConfig extends SpeakeasyBase {
+    comment?: string;
+    items?: string[];
+    name?: string;
 }
-export declare class UpdateKeyGroup20200531Headers extends SpeakeasyBase {
+export declare class UpdateKeyGroup20200531RequestBody extends SpeakeasyBase {
+    /**
+     * <p>A key group configuration.</p> <p>A key group contains a list of public keys that you can use with <a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html">CloudFront signed URLs and signed cookies</a>.</p>
+     */
+    keyGroupConfig: UpdateKeyGroup20200531RequestBodyKeyGroupConfig;
+}
+export declare class UpdateKeyGroup20200531Request extends SpeakeasyBase {
+    /**
+     * The identifier of the key group that you are updating.
+     */
+    id: string;
+    /**
+     * The version of the key group that you are updating. The version is the key group's <code>ETag</code> value.
+     */
     ifMatch?: string;
+    requestBody: Uint8Array;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,13 +32,9 @@ export declare class UpdateKeyGroup20200531Headers extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class UpdateKeyGroup20200531Request extends SpeakeasyBase {
-    pathParams: UpdateKeyGroup20200531PathParams;
-    headers: UpdateKeyGroup20200531Headers;
-    request: Uint8Array;
-}
 export declare class UpdateKeyGroup20200531Response extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

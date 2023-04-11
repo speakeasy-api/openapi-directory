@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Mqtt {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,195 +9,227 @@ export declare class Mqtt {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * protocolMqttClientGetProtstate - Show the agent's MQTT TCP connection state
+     * Show the agent's MQTT TCP connection state
      *
+     * @remarks
      * 0 - stopped, 2 - disconnected, 3 - connecting, 4 - connected, 5 - waiting for CONNACK, 6 - waiting for SUBACK, 7 - CONNACK received, in steady state
-    **/
+     */
     protocolMqttClientGetProtstate(req: operations.ProtocolMqttClientGetProtstateRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolMqttClientGetProtstateResponse>;
     /**
-     * protocolMqttClientGetState - Show the agent's MQTT state
+     * Show the agent's MQTT state
      *
+     * @remarks
      * 0 means stopped, 1 means running
-    **/
+     */
     protocolMqttClientGetState(req: operations.ProtocolMqttClientGetStateRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolMqttClientGetStateResponse>;
     /**
-     * protocolMqttClientMessageCard - Show the agent's current messages' cardinality
+     * Show the agent's current messages' cardinality
      *
+     * @remarks
      * 0 or more
-    **/
+     */
     protocolMqttClientMessageCard(req: operations.ProtocolMqttClientMessageCardRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolMqttClientMessageCardResponse>;
     /**
-     * protocolMqttClientMessageGet - Show the agent's message attributes
+     * Show the agent's message attributes
      *
+     * @remarks
      * Attribute can be topic, interval, count, sent , pre, post, properties(list of PUBLISH properties), properties.i (i-th PUBLISH property), properties.PROP-NAME (PUBLISH property with name PROP-NAME)
-    **/
+     */
     protocolMqttClientMessageGet(req: operations.ProtocolMqttClientMessageGetRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolMqttClientMessageGetResponse>;
     /**
-     * protocolMqttClientMessageSet - Set the agent's message attributes
+     * Set the agent's message attributes
      *
+     * @remarks
      * Attribute can not be sent or properties . Use set/{msgNum}/count/{value} together with get/{msgNum}/count to throttle the outgoing MQTT message to the broker.
-    **/
+     */
     protocolMqttClientMessageSet(req: operations.ProtocolMqttClientMessageSetRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolMqttClientMessageSetResponse>;
     /**
-     * protocolMqttClientResubscribe - Restart receiving messages from a subcription of the agent
+     * Restart receiving messages from a subcription of the agent
      *
+     * @remarks
      * Restarts a subscription
-    **/
+     */
     protocolMqttClientResubscribe(req: operations.ProtocolMqttClientResubscribeRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolMqttClientResubscribeResponse>;
     /**
-     * protocolMqttClientRuntimeAbort - Abort agent's MQTT TCP session without sending DISCONNECT command
+     * Abort agent's MQTT TCP session without sending DISCONNECT command
      *
+     * @remarks
      * Abort a connection
-    **/
+     */
     protocolMqttClientRuntimeAbort(req: operations.ProtocolMqttClientRuntimeAbortRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolMqttClientRuntimeAbortResponse>;
     /**
-     * protocolMqttClientRuntimeConnect - Start agent's MQTT TCP session
+     * Start agent's MQTT TCP session
      *
+     * @remarks
      * Start a connection
-    **/
+     */
     protocolMqttClientRuntimeConnect(req: operations.ProtocolMqttClientRuntimeConnectRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolMqttClientRuntimeConnectResponse>;
     /**
-     * protocolMqttClientRuntimeDisconnect - Disconnect agent's MQTT TCP session by sending DISCONNECT command
+     * Disconnect agent's MQTT TCP session by sending DISCONNECT command
      *
+     * @remarks
      * Graceful disconnect
-    **/
+     */
     protocolMqttClientRuntimeDisconnect(req: operations.ProtocolMqttClientRuntimeDisconnectRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolMqttClientRuntimeDisconnectResponse>;
     /**
-     * protocolMqttClientSetBroker - Set the agent's MQTT TCP connection target broker
+     * Set the agent's MQTT TCP connection target broker
      *
+     * @remarks
      * Broker IP address
-    **/
+     */
     protocolMqttClientSetBroker(req: operations.ProtocolMqttClientSetBrokerRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolMqttClientSetBrokerResponse>;
     /**
-     * protocolMqttClientSetCleansession - Set the agent's MQTT session
+     * Set the agent's MQTT session
      *
+     * @remarks
      * 1 for clean session , 0 not
-    **/
+     */
     protocolMqttClientSetCleansession(req: operations.ProtocolMqttClientSetCleansessionRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolMqttClientSetCleansessionResponse>;
     /**
-     * protocolMqttClientSetClientid - Set the agent's MQTT client ID
+     * Set the agent's MQTT client ID
      *
+     * @remarks
      * MQTT client ID
-    **/
+     */
     protocolMqttClientSetClientid(req: operations.ProtocolMqttClientSetClientidRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolMqttClientSetClientidResponse>;
     /**
-     * protocolMqttClientSetKeepalive - Set the agent's MQTT TCP keepalive
+     * Set the agent's MQTT TCP keepalive
      *
+     * @remarks
      * Keep alive the TCP connection
-    **/
+     */
     protocolMqttClientSetKeepalive(req: operations.ProtocolMqttClientSetKeepaliveRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolMqttClientSetKeepaliveResponse>;
     /**
-     * protocolMqttClientSetOnDisconnect - Set the agent's MQTT disconnection action
+     * Set the agent's MQTT disconnection action
      *
+     * @remarks
      * Action to take when MQTT session is disconnected
-    **/
+     */
     protocolMqttClientSetOnDisconnect(req: operations.ProtocolMqttClientSetOnDisconnectRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolMqttClientSetOnDisconnectResponse>;
     /**
-     * protocolMqttClientSetPassword - Set the agent's MQTT client password
+     * Set the agent's MQTT client password
      *
+     * @remarks
      * Client password
-    **/
+     */
     protocolMqttClientSetPassword(req: operations.ProtocolMqttClientSetPasswordRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolMqttClientSetPasswordResponse>;
     /**
-     * protocolMqttClientSetPort - Set the agent's MQTT TCP connection target port
+     * Set the agent's MQTT TCP connection target port
      *
+     * @remarks
      * target TCP port
-    **/
+     */
     protocolMqttClientSetPort(req: operations.ProtocolMqttClientSetPortRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolMqttClientSetPortResponse>;
     /**
-     * protocolMqttClientSetUsername - Set the agent's MQTT client username
+     * Set the agent's MQTT client username
      *
+     * @remarks
      * Client username
-    **/
+     */
     protocolMqttClientSetUsername(req: operations.ProtocolMqttClientSetUsernameRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolMqttClientSetUsernameResponse>;
     /**
-     * protocolMqttClientSetWillmsg - Set the agent's MQTT client's will
+     * Set the agent's MQTT client's will
      *
+     * @remarks
      * Will message
-    **/
+     */
     protocolMqttClientSetWillmsg(req: operations.ProtocolMqttClientSetWillmsgRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolMqttClientSetWillmsgResponse>;
     /**
-     * protocolMqttClientSetWillqos - Set the agent's MQTT will message's QOS field
+     * Set the agent's MQTT will message's QOS field
      *
+     * @remarks
      * QOS field
-    **/
+     */
     protocolMqttClientSetWillqos(req: operations.ProtocolMqttClientSetWillqosRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolMqttClientSetWillqosResponse>;
     /**
-     * protocolMqttClientSetWillretain - Set the agent's MQTT retained will
+     * Set the agent's MQTT retained will
      *
+     * @remarks
      * Retaining will
-    **/
+     */
     protocolMqttClientSetWillretain(req: operations.ProtocolMqttClientSetWillretainRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolMqttClientSetWillretainResponse>;
     /**
-     * protocolMqttClientSetWilltopic - Set the agent's MQTT client will's topic
+     * Set the agent's MQTT client will's topic
      *
+     * @remarks
      * Will topic for the will message
-    **/
+     */
     protocolMqttClientSetWilltopic(req: operations.ProtocolMqttClientSetWilltopicRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolMqttClientSetWilltopicResponse>;
     /**
-     * protocolMqttClientSubscribeCard - Show the agent's current subscriptions' cardinality
+     * Show the agent's current subscriptions' cardinality
      *
+     * @remarks
      * 0 or more
-    **/
+     */
     protocolMqttClientSubscribeCard(req: operations.ProtocolMqttClientSubscribeCardRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolMqttClientSubscribeCardResponse>;
     /**
-     * protocolMqttClientSubscribeGet - Show the agent's subscription attributes
+     * Show the agent's subscription attributes
      *
+     * @remarks
      * Attribute can be topic, properties(list of SUBSCRIBE properties), properties.i (i-th SUBSCRIBE property), properties.PROP-NAME (SUBSCRIBE property with name PROP-NAME)
-    **/
+     */
     protocolMqttClientSubscribeGet(req: operations.ProtocolMqttClientSubscribeGetRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolMqttClientSubscribeGetResponse>;
     /**
-     * protocolMqttClientSubscribeSet - Set the agent's subscribe attributes
+     * Set the agent's subscribe attributes
      *
+     * @remarks
      * Attribute can not be properties .
-    **/
+     */
     protocolMqttClientSubscribeSet(req: operations.ProtocolMqttClientSubscribeSetRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolMqttClientSubscribeSetResponse>;
     /**
-     * protocolMqttClientUnsubscribe - Stops receiving messages from a subcription of the agent
+     * Stops receiving messages from a subcription of the agent
      *
+     * @remarks
      * Stops a subscription
-    **/
+     */
     protocolMqttClientUnsubscribe(req: operations.ProtocolMqttClientUnsubscribeRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolMqttClientUnsubscribeResponse>;
     /**
-     * protocolMqttGetArgs - Show the agent's MQTT argument structure
+     * Show the agent's MQTT argument structure
      *
+     * @remarks
      * Agent's MQTT configuration with port,rule,prompt,paging_prompt,userdb,keymap
-    **/
+     */
     protocolMqttGetArgs(req: operations.ProtocolMqttGetArgsRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolMqttGetArgsResponse>;
     /**
-     * protocolMqttGetConfig - Show the agent's MQTT configuration
+     * Show the agent's MQTT configuration
      *
+     * @remarks
      * Agent's MQTT configuration with port,rule,prompt,paging_prompt,userdb,keymap
-    **/
+     */
     protocolMqttGetConfig(req: operations.ProtocolMqttGetConfigRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolMqttGetConfigResponse>;
     /**
-     * protocolMqttGetStatistics - Show the agent's MQTT statistics
+     * Show the agent's MQTT statistics
      *
+     * @remarks
      * Statistics of fields indicated in the headers
-    **/
+     */
     protocolMqttGetStatistics(req: operations.ProtocolMqttGetStatisticsRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolMqttGetStatisticsResponse>;
     /**
-     * protocolMqttGetStatsHdr - Show the MQTT statistics headers
+     * Show the MQTT statistics headers
      *
+     * @remarks
      * The headers of statistics fields
-    **/
+     */
     protocolMqttGetStatsHdr(config?: AxiosRequestConfig): Promise<operations.ProtocolMqttGetStatsHdrResponse>;
     /**
-     * protocolMqttGetTrace - Show the agent's MQTT traffic tracing
+     * Show the agent's MQTT traffic tracing
      *
+     * @remarks
      * Trace 1 means enabled, 0 means not
-    **/
+     */
     protocolMqttGetTrace(req: operations.ProtocolMqttGetTraceRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolMqttGetTraceResponse>;
     /**
-     * protocolMqttSetConfig - Set the agent's MQTT configuration
+     * Set the agent's MQTT configuration
      *
+     * @remarks
      * Agent's MQTT configuration with port,rule,prompt,paging_prompt,userdb,keymap
-    **/
+     */
     protocolMqttSetConfig(req: operations.ProtocolMqttSetConfigRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolMqttSetConfigResponse>;
     /**
-     * protocolMqttSetTrace - Set the agent's MQTT traffic tracing
+     * Set the agent's MQTT traffic tracing
      *
+     * @remarks
      * 1 to enable, 0 to disable
-    **/
+     */
     protocolMqttSetTrace(req: operations.ProtocolMqttSetTraceRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolMqttSetTraceResponse>;
 }

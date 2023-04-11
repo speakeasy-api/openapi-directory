@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Stats Web Service
+ */
 export declare class Statistics {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,103 +12,103 @@ export declare class Statistics {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getActiveObjectCountUsingGet - Count of active objects by type, for specified species and date
-    **/
-    getActiveObjectCountUsingGet(req: operations.GetActiveObjectCountUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetActiveObjectCountUsingGetResponse>;
+     * Count of active objects by type, for specified species and date
+     */
+    getActiveObjectCountUsingGET(req: operations.GETActiveObjectCountUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETActiveObjectCountUsingGETResponse>;
     /**
-     * getActiveObjectDiffUsingGet - Count difference of active objects, by type, for specified species and date range
-    **/
-    getActiveObjectDiffUsingGet(req: operations.GetActiveObjectDiffUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetActiveObjectDiffUsingGetResponse>;
+     * Count difference of active objects, by type, for specified species and date range
+     */
+    getActiveObjectDiffUsingGET(req: operations.GETActiveObjectDiffUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETActiveObjectDiffUsingGETResponse>;
     /**
-     * getGeneTypeCountUsingGet - Count of gene types, for specified species and date
-    **/
-    getGeneTypeCountUsingGet(req: operations.GetGeneTypeCountUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetGeneTypeCountUsingGetResponse>;
+     * Count of gene types, for specified species and date
+     */
+    getGeneTypeCountUsingGET(req: operations.GETGeneTypeCountUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETGeneTypeCountUsingGETResponse>;
     /**
-     * getGeneTypeDiffUsingGet - Count difference of gene types, for specified species and date range
-    **/
-    getGeneTypeDiffUsingGet(req: operations.GetGeneTypeDiffUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetGeneTypeDiffUsingGetResponse>;
+     * Count difference of gene types, for specified species and date range
+     */
+    getGeneTypeDiffUsingGET(req: operations.GETGeneTypeDiffUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETGeneTypeDiffUsingGETResponse>;
     /**
-     * getObjectStatusCountUsingGet - Count of objects with given status, for specified species and date
-    **/
-    getObjectStatusCountUsingGet(req: operations.GetObjectStatusCountUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetObjectStatusCountUsingGetResponse>;
+     * Count of objects with given status, for specified species and date
+     */
+    getObjectStatusCountUsingGET(req: operations.GETObjectStatusCountUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETObjectStatusCountUsingGETResponse>;
     /**
-     * getObjectStatusDiffUsingGet - Count difference of objects with given status, for specified species and date range
-    **/
-    getObjectStatusDiffUsingGet(req: operations.GetObjectStatusDiffUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetObjectStatusDiffUsingGetResponse>;
+     * Count difference of objects with given status, for specified species and date range
+     */
+    getObjectStatusDiffUsingGET(req: operations.GETObjectStatusDiffUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETObjectStatusDiffUsingGETResponse>;
     /**
-     * getObjectsWithRefSeqCountUsingGet - Count of objects with reference sequence(s), by object type, for specified species and date
-    **/
-    getObjectsWithRefSeqCountUsingGet(req: operations.GetObjectsWithRefSeqCountUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetObjectsWithRefSeqCountUsingGetResponse>;
+     * Count of objects with reference sequence(s), by object type, for specified species and date
+     */
+    getObjectsWithRefSeqCountUsingGET(req: operations.GETObjectsWithRefSeqCountUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETObjectsWithRefSeqCountUsingGETResponse>;
     /**
-     * getObjectsWithRefSeqDiffUsingGet - Count difference of objects with reference sequence(s), by object type, for specified species and date range
-    **/
-    getObjectsWithRefSeqDiffUsingGet(req: operations.GetObjectsWithRefSeqDiffUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetObjectsWithRefSeqDiffUsingGetResponse>;
+     * Count difference of objects with reference sequence(s), by object type, for specified species and date range
+     */
+    getObjectsWithRefSeqDiffUsingGET(req: operations.GETObjectsWithRefSeqDiffUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETObjectsWithRefSeqDiffUsingGETResponse>;
     /**
-     * getObjectsWithReferenceCountUsingGet - Count of objects with reference, by object type, for specified species and date
-    **/
-    getObjectsWithReferenceCountUsingGet(req: operations.GetObjectsWithReferenceCountUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetObjectsWithReferenceCountUsingGetResponse>;
+     * Count of objects with reference, by object type, for specified species and date
+     */
+    getObjectsWithReferenceCountUsingGET(req: operations.GETObjectsWithReferenceCountUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETObjectsWithReferenceCountUsingGETResponse>;
     /**
-     * getObjectsWithReferenceDiffUsingGet - Count difference of objects with reference, by object type, for specified species and date range
-    **/
-    getObjectsWithReferenceDiffUsingGet(req: operations.GetObjectsWithReferenceDiffUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetObjectsWithReferenceDiffUsingGetResponse>;
+     * Count difference of objects with reference, by object type, for specified species and date range
+     */
+    getObjectsWithReferenceDiffUsingGET(req: operations.GETObjectsWithReferenceDiffUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETObjectsWithReferenceDiffUsingGETResponse>;
     /**
-     * getObjectsWithXdBsCountUsingGet - Count of objects with external database ids, by database id, for specified species, object type and date
-    **/
-    getObjectsWithXdBsCountUsingGet(req: operations.GetObjectsWithXdBsCountUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetObjectsWithXdBsCountUsingGetResponse>;
+     * Count of objects with external database ids, by database id, for specified species, object type and date
+     */
+    getObjectsWithXDBsCountUsingGET(req: operations.GETObjectsWithXDBsCountUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETObjectsWithXDBsCountUsingGETResponse>;
     /**
-     * getObjectsWithXdBsDiffUsingGet - Count difference of objects with external database ids, by database id, for specified species, object type and date range
-    **/
-    getObjectsWithXdBsDiffUsingGet(req: operations.GetObjectsWithXdBsDiffUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetObjectsWithXdBsDiffUsingGetResponse>;
+     * Count difference of objects with external database ids, by database id, for specified species, object type and date range
+     */
+    getObjectsWithXDBsDiffUsingGET(req: operations.GETObjectsWithXDBsDiffUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETObjectsWithXDBsDiffUsingGETResponse>;
     /**
-     * getProteinInteractionCountUsingGet - Count of protein interactions, for specified species and date
-    **/
-    getProteinInteractionCountUsingGet(req: operations.GetProteinInteractionCountUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetProteinInteractionCountUsingGetResponse>;
+     * Count of protein interactions, for specified species and date
+     */
+    getProteinInteractionCountUsingGET(req: operations.GETProteinInteractionCountUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETProteinInteractionCountUsingGETResponse>;
     /**
-     * getProteinInteractionDiffUsingGet - Count difference of protein interactions, for specified species and date range
-    **/
-    getProteinInteractionDiffUsingGet(req: operations.GetProteinInteractionDiffUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetProteinInteractionDiffUsingGetResponse>;
+     * Count difference of protein interactions, for specified species and date range
+     */
+    getProteinInteractionDiffUsingGET(req: operations.GETProteinInteractionDiffUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETProteinInteractionDiffUsingGETResponse>;
     /**
-     * getQtlInheritanceTypeCountUsingGet - Count of strains, by qtl inheritance type, for specified species and date
-    **/
-    getQtlInheritanceTypeCountUsingGet(req: operations.GetQtlInheritanceTypeCountUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetQtlInheritanceTypeCountUsingGetResponse>;
+     * Count of strains, by qtl inheritance type, for specified species and date
+     */
+    getQtlInheritanceTypeCountUsingGET(req: operations.GETQtlInheritanceTypeCountUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETQtlInheritanceTypeCountUsingGETResponse>;
     /**
-     * getQtlInheritanceTypeDiffUsingGet - Count difference of strains, by qtl inheritance type, for specified species and date range
-    **/
-    getQtlInheritanceTypeDiffUsingGet(req: operations.GetQtlInheritanceTypeDiffUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetQtlInheritanceTypeDiffUsingGetResponse>;
+     * Count difference of strains, by qtl inheritance type, for specified species and date range
+     */
+    getQtlInheritanceTypeDiffUsingGET(req: operations.GETQtlInheritanceTypeDiffUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETQtlInheritanceTypeDiffUsingGETResponse>;
     /**
-     * getRetiredObjectCountUsingGet - Count of retired objects by type, for specified species and date
-    **/
-    getRetiredObjectCountUsingGet(req: operations.GetRetiredObjectCountUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetRetiredObjectCountUsingGetResponse>;
+     * Count of retired objects by type, for specified species and date
+     */
+    getRetiredObjectCountUsingGET(req: operations.GETRetiredObjectCountUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETRetiredObjectCountUsingGETResponse>;
     /**
-     * getRetiredObjectDiffUsingGet - Count difference of retired objects, by type, for specified species and date range
-    **/
-    getRetiredObjectDiffUsingGet(req: operations.GetRetiredObjectDiffUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetRetiredObjectDiffUsingGetResponse>;
+     * Count difference of retired objects, by type, for specified species and date range
+     */
+    getRetiredObjectDiffUsingGET(req: operations.GETRetiredObjectDiffUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETRetiredObjectDiffUsingGETResponse>;
     /**
-     * getStrainTypeCountUsingGet - Count of strain types, for specified species and date
-    **/
-    getStrainTypeCountUsingGet(req: operations.GetStrainTypeCountUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetStrainTypeCountUsingGetResponse>;
+     * Count of strain types, for specified species and date
+     */
+    getStrainTypeCountUsingGET(req: operations.GETStrainTypeCountUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETStrainTypeCountUsingGETResponse>;
     /**
-     * getStrainTypeDiffUsingGet - Count difference of strain types, for specified species and date range
-    **/
-    getStrainTypeDiffUsingGet(req: operations.GetStrainTypeDiffUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetStrainTypeDiffUsingGetResponse>;
+     * Count difference of strain types, for specified species and date range
+     */
+    getStrainTypeDiffUsingGET(req: operations.GETStrainTypeDiffUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETStrainTypeDiffUsingGETResponse>;
     /**
-     * getTermStatsUsingGet - getTermStats
-    **/
-    getTermStatsUsingGet(req: operations.GetTermStatsUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetTermStatsUsingGetResponse>;
+     * getTermStats
+     */
+    getTermStatsUsingGET(req: operations.GETTermStatsUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETTermStatsUsingGETResponse>;
     /**
-     * getWithdrawnObjectCountUsingGet - Count of withdrawn objects by type, for specified species and date
-    **/
-    getWithdrawnObjectCountUsingGet(req: operations.GetWithdrawnObjectCountUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetWithdrawnObjectCountUsingGetResponse>;
+     * Count of withdrawn objects by type, for specified species and date
+     */
+    getWithdrawnObjectCountUsingGET(req: operations.GETWithdrawnObjectCountUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETWithdrawnObjectCountUsingGETResponse>;
     /**
-     * getWithdrawnObjectDiffUsingGet - Count difference of withdrawn objects, by type, for specified species and date range
-    **/
-    getWithdrawnObjectDiffUsingGet(req: operations.GetWithdrawnObjectDiffUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetWithdrawnObjectDiffUsingGetResponse>;
+     * Count difference of withdrawn objects, by type, for specified species and date range
+     */
+    getWithdrawnObjectDiffUsingGET(req: operations.GETWithdrawnObjectDiffUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETWithdrawnObjectDiffUsingGETResponse>;
     /**
-     * getXdbsCountUsingGet - Count of external database ids, for specied species and date
-    **/
-    getXdbsCountUsingGet(req: operations.GetXdbsCountUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetXdbsCountUsingGetResponse>;
+     * Count of external database ids, for specied species and date
+     */
+    getXdbsCountUsingGET(req: operations.GETXdbsCountUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETXdbsCountUsingGETResponse>;
     /**
-     * getXdbsDiffUsingGet - Count difference of external database ids, for specified species and date range
-    **/
-    getXdbsDiffUsingGet(req: operations.GetXdbsDiffUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetXdbsDiffUsingGetResponse>;
+     * Count difference of external database ids, for specified species and date range
+     */
+    getXdbsDiffUsingGET(req: operations.GETXdbsDiffUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETXdbsDiffUsingGETResponse>;
 }

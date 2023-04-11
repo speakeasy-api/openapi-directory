@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolSyslogGetAttrPathParams extends SpeakeasyBase {
-    agentNum: number;
-    attr: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolSyslogGetAttrRequest extends SpeakeasyBase {
-    pathParams: ProtocolSyslogGetAttrPathParams;
+    /**
+     * Agent to set the SYSLOG tracing
+     */
+    agentNum: number;
+    /**
+     * Attribute
+     */
+    attr: string;
 }
 export declare class ProtocolSyslogGetAttrResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolSyslogGetAttr200ApplicationJSONString?: string;
 }

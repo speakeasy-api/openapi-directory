@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeEndpointTypesQueryParams extends SpeakeasyBase {
-    marker?: string;
-    maxRecords?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum DescribeEndpointTypesXAmzTargetEnum {
-    AmazonDmSv20160101DescribeEndpointTypes = "AmazonDMSv20160101.DescribeEndpointTypes"
+    AmazonDMSv20160101DescribeEndpointTypes = "AmazonDMSv20160101.DescribeEndpointTypes"
 }
-export declare class DescribeEndpointTypesHeaders extends SpeakeasyBase {
+export declare class DescribeEndpointTypesRequest extends SpeakeasyBase {
+    describeEndpointTypesMessage: shared.DescribeEndpointTypesMessage;
+    /**
+     * Pagination token
+     */
+    marker?: string;
+    /**
+     * Pagination limit
+     */
+    maxRecords?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,13 +23,12 @@ export declare class DescribeEndpointTypesHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeEndpointTypesXAmzTargetEnum;
 }
-export declare class DescribeEndpointTypesRequest extends SpeakeasyBase {
-    queryParams: DescribeEndpointTypesQueryParams;
-    headers: DescribeEndpointTypesHeaders;
-    request: shared.DescribeEndpointTypesMessage;
-}
 export declare class DescribeEndpointTypesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeEndpointTypesResponse?: shared.DescribeEndpointTypesResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

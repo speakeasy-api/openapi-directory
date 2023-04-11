@@ -1,13 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class GetCertificatePdfSecurity extends SpeakeasyBase {
-    certAuth: shared.SchemeCertAuth;
-}
-export declare class GetCertificatePdfRequest extends SpeakeasyBase {
-    request: shared.CertificateRequest;
-    security: GetCertificatePdfSecurity;
+    certAuth: string;
 }
 export declare class GetCertificatePdfResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

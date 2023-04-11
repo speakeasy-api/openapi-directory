@@ -1,23 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetUsersUserIdFollowingsPathParams extends SpeakeasyBase {
-    userId: number;
-}
-export declare class GetUsersUserIdFollowingsQueryParams extends SpeakeasyBase {
-    limit?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetUsersUserIdFollowingsSecurity extends SpeakeasyBase {
-    authHeader: shared.SchemeAuthHeader;
-    clientId: shared.SchemeClientId;
+    authHeader: string;
+    clientId: string;
 }
 export declare class GetUsersUserIdFollowingsRequest extends SpeakeasyBase {
-    pathParams: GetUsersUserIdFollowingsPathParams;
-    queryParams: GetUsersUserIdFollowingsQueryParams;
-    security: GetUsersUserIdFollowingsSecurity;
+    /**
+     * Number of results to return in the collection.
+     */
+    limit?: number;
+    /**
+     * SoundCloud User id
+     */
+    userId: number;
 }
 export declare class GetUsersUserIdFollowingsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Unauthorized
+     */
     error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     getUsersUserIdFollowings200ApplicationJSONOneOf?: any;
 }

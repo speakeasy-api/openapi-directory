@@ -1,17 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteIndexFieldActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteIndexFieldActionEnum {
     DeleteIndexField = "DeleteIndexField"
 }
-export declare enum GetDeleteIndexFieldVersionEnum {
+export declare enum GETDeleteIndexFieldVersionEnum {
     TwoThousandAndThirteen0101 = "2013-01-01"
 }
-export declare class GetDeleteIndexFieldQueryParams extends SpeakeasyBase {
-    action: GetDeleteIndexFieldActionEnum;
+export declare class GETDeleteIndexFieldRequest extends SpeakeasyBase {
+    action: GETDeleteIndexFieldActionEnum;
     domainName: string;
+    /**
+     * The name of the index field your want to remove from the domain's indexing options.
+     */
     indexFieldName: string;
-    version: GetDeleteIndexFieldVersionEnum;
-}
-export declare class GetDeleteIndexFieldHeaders extends SpeakeasyBase {
+    version: GETDeleteIndexFieldVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +22,9 @@ export declare class GetDeleteIndexFieldHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteIndexFieldRequest extends SpeakeasyBase {
-    queryParams: GetDeleteIndexFieldQueryParams;
-    headers: GetDeleteIndexFieldHeaders;
-}
-export declare class GetDeleteIndexFieldResponse extends SpeakeasyBase {
+export declare class GETDeleteIndexFieldResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

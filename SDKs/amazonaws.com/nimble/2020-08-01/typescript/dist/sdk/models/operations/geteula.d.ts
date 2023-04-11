@@ -1,9 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetEulaPathParams extends SpeakeasyBase {
-    eulaId: string;
-}
-export declare class GetEulaHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetEulaRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,20 +9,45 @@ export declare class GetEulaHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class GetEulaRequest extends SpeakeasyBase {
-    pathParams: GetEulaPathParams;
-    headers: GetEulaHeaders;
+    /**
+     * The EULA ID.
+     */
+    eulaId: string;
 }
 export declare class GetEulaResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getEulaResponse?: shared.GetEulaResponse;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
-    serviceQuotaExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceQuotaExceededException
+     */
+    serviceQuotaExceededException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

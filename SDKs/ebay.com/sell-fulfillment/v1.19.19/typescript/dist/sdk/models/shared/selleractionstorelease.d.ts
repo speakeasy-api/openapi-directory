@@ -1,0 +1,10 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * This type is used to state possible action(s) that a seller can take to release a payment hold placed against an order.
+ */
+export declare class SellerActionsToRelease extends SpeakeasyBase {
+    /**
+     * A possible action that the seller can take to expedite the release of a payment hold. A <strong>sellerActionToRelease</strong> field is returned for each possible action that a seller may take. Possible actions may include providing shipping/tracking information, issuing a refund, providing refund information, contacting customer support, etc.
+     */
+    sellerActionToRelease?: string;
+}

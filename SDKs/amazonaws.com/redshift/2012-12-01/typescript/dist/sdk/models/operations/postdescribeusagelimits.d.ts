@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeUsageLimitsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeUsageLimitsActionEnum {
     DescribeUsageLimits = "DescribeUsageLimits"
 }
-export declare enum PostDescribeUsageLimitsVersionEnum {
+export declare enum POSTDescribeUsageLimitsVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostDescribeUsageLimitsQueryParams extends SpeakeasyBase {
-    action: PostDescribeUsageLimitsActionEnum;
+export declare class POSTDescribeUsageLimitsRequest extends SpeakeasyBase {
+    action: POSTDescribeUsageLimitsActionEnum;
+    /**
+     * Pagination token
+     */
     marker?: string;
+    /**
+     * Pagination limit
+     */
     maxRecords?: string;
-    version: PostDescribeUsageLimitsVersionEnum;
-}
-export declare class PostDescribeUsageLimitsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeUsageLimitsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeUsageLimitsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeUsageLimitsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeUsageLimitsQueryParams;
-    headers: PostDescribeUsageLimitsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeUsageLimitsResponse extends SpeakeasyBase {
+export declare class POSTDescribeUsageLimitsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

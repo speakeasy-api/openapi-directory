@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListBlueprintsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListBlueprintsXAmzTargetEnum {
-    AwsGlueListBlueprints = "AWSGlue.ListBlueprints"
+    AWSGlueListBlueprints = "AWSGlue.ListBlueprints"
 }
-export declare class ListBlueprintsHeaders extends SpeakeasyBase {
+export declare class ListBlueprintsRequest extends SpeakeasyBase {
+    listBlueprintsRequest: shared.ListBlueprintsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,16 +23,24 @@ export declare class ListBlueprintsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListBlueprintsXAmzTargetEnum;
 }
-export declare class ListBlueprintsRequest extends SpeakeasyBase {
-    queryParams: ListBlueprintsQueryParams;
-    headers: ListBlueprintsHeaders;
-    request: shared.ListBlueprintsRequest;
-}
 export declare class ListBlueprintsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * Success
+     */
     listBlueprintsResponse?: shared.ListBlueprintsResponse;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

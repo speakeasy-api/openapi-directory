@@ -1,39 +1,33 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { BooksBookshelvesGetRequest, BooksBookshelvesGetResponse } from "openapi/src/sdk/models/operations";
+import {
+  BooksBookshelvesGetRequest,
+  BooksBookshelvesGetResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: BooksBookshelvesGetRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    shelf: "sit",
-    userId: "voluptas",
-  },
-  queryParams: {
-    dollarXgafv: "2",
-    accessToken: "expedita",
-    alt: "proto",
-    callback: "dolor",
-    fields: "expedita",
-    key: "voluptas",
-    oauthToken: "fugit",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    source: "rerum",
-    uploadType: "dicta",
-    uploadProtocol: "debitis",
-  },
+  dollarXgafv: XgafvEnum.Two,
+  accessToken: "provident",
+  alt: AltEnum.Proto,
+  callback: "quibusdam",
+  fields: "unde",
+  key: "nulla",
+  oauthToken: "corrupti",
+  prettyPrint: false,
+  quotaUser: "illum",
+  shelf: "vel",
+  source: "error",
+  uploadType: "deserunt",
+  uploadProtocol: "suscipit",
+  userId: "iure",
 };
 
 sdk.bookshelves.booksBookshelvesGet(req).then((res: BooksBookshelvesGetResponse | AxiosError) => {

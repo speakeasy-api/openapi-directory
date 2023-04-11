@@ -1,20 +1,34 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetDeviceParameterHistoryPathParams extends SpeakeasyBase {
-    deviceId: number;
-}
-export declare class GetDeviceParameterHistoryQueryParams extends SpeakeasyBase {
-    from?: number;
-    monitorSid?: string;
-    monitorType: string;
-    parameterName: string;
-    to?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetDeviceParameterHistoryRequest extends SpeakeasyBase {
-    pathParams: GetDeviceParameterHistoryPathParams;
-    queryParams: GetDeviceParameterHistoryQueryParams;
+    /**
+     * The ID of the device.
+     */
+    deviceId: number;
+    /**
+     * Beginning of the period (Epoch time, in seconds).
+     */
+    from?: number;
+    /**
+     * The Monitor SID (to filter the list of Monitors).
+     */
+    monitorSid?: string;
+    /**
+     * The unique name of the Monitor type.
+     */
+    monitorType: string;
+    /**
+     * The name of the parameter.
+     */
+    parameterName: string;
+    /**
+     * End of the period (Epoch time, in seconds).
+     */
+    to?: number;
 }
 export declare class GetDeviceParameterHistoryResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

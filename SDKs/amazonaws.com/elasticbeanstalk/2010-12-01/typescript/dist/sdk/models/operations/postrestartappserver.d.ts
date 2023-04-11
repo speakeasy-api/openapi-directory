@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostRestartAppServerActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTRestartAppServerActionEnum {
     RestartAppServer = "RestartAppServer"
 }
-export declare enum PostRestartAppServerVersionEnum {
+export declare enum POSTRestartAppServerVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostRestartAppServerQueryParams extends SpeakeasyBase {
-    action: PostRestartAppServerActionEnum;
-    version: PostRestartAppServerVersionEnum;
-}
-export declare class PostRestartAppServerHeaders extends SpeakeasyBase {
+export declare class POSTRestartAppServerRequest extends SpeakeasyBase {
+    action: POSTRestartAppServerActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTRestartAppServerVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +18,8 @@ export declare class PostRestartAppServerHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostRestartAppServerRequest extends SpeakeasyBase {
-    queryParams: PostRestartAppServerQueryParams;
-    headers: PostRestartAppServerHeaders;
-    request?: Uint8Array;
-}
-export declare class PostRestartAppServerResponse extends SpeakeasyBase {
+export declare class POSTRestartAppServerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

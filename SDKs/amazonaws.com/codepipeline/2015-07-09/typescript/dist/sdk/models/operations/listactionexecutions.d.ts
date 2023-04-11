@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListActionExecutionsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListActionExecutionsXAmzTargetEnum {
     CodePipeline20150709ListActionExecutions = "CodePipeline_20150709.ListActionExecutions"
 }
-export declare class ListActionExecutionsHeaders extends SpeakeasyBase {
+export declare class ListActionExecutionsRequest extends SpeakeasyBase {
+    listActionExecutionsInput: shared.ListActionExecutionsInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,18 +14,37 @@ export declare class ListActionExecutionsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: ListActionExecutionsXAmzTargetEnum;
-}
-export declare class ListActionExecutionsRequest extends SpeakeasyBase {
-    queryParams: ListActionExecutionsQueryParams;
-    headers: ListActionExecutionsHeaders;
-    request: shared.ListActionExecutionsInput;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class ListActionExecutionsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * Success
+     */
     listActionExecutionsOutput?: shared.ListActionExecutionsOutput;
+    /**
+     * PipelineExecutionNotFoundException
+     */
     pipelineExecutionNotFoundException?: any;
+    /**
+     * PipelineNotFoundException
+     */
     pipelineNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

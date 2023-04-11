@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteLifecycleHookActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteLifecycleHookActionEnum {
     DeleteLifecycleHook = "DeleteLifecycleHook"
 }
-export declare enum GetDeleteLifecycleHookVersionEnum {
+export declare enum GETDeleteLifecycleHookVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class GetDeleteLifecycleHookQueryParams extends SpeakeasyBase {
-    action: GetDeleteLifecycleHookActionEnum;
+export declare class GETDeleteLifecycleHookRequest extends SpeakeasyBase {
+    action: GETDeleteLifecycleHookActionEnum;
+    /**
+     * The name of the Auto Scaling group.
+     */
     autoScalingGroupName: string;
+    /**
+     * The name of the lifecycle hook.
+     */
     lifecycleHookName: string;
-    version: GetDeleteLifecycleHookVersionEnum;
-}
-export declare class GetDeleteLifecycleHookHeaders extends SpeakeasyBase {
+    version: GETDeleteLifecycleHookVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetDeleteLifecycleHookHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteLifecycleHookRequest extends SpeakeasyBase {
-    queryParams: GetDeleteLifecycleHookQueryParams;
-    headers: GetDeleteLifecycleHookHeaders;
-}
-export declare class GetDeleteLifecycleHookResponse extends SpeakeasyBase {
+export declare class GETDeleteLifecycleHookResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

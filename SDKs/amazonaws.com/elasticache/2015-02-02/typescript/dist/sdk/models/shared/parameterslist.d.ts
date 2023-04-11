@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { ChangeTypeEnum } from "./changetypeenum";
 /**
  * Describes an individual setting that controls some aspect of ElastiCache behavior.
-**/
+ */
 export declare class ParametersList extends SpeakeasyBase {
     allowedValues?: string;
     changeType?: ChangeTypeEnum;

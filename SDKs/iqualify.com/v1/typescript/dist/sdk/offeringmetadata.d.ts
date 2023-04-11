@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class OfferingMetadata {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,27 +9,31 @@ export declare class OfferingMetadata {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * putOfferingsOfferingIdMetadataCategory - Update offering category metadata
+     * Update offering category metadata
      *
+     * @remarks
      * Updates the offering category metadata.
-    **/
+     */
     putOfferingsOfferingIdMetadataCategory(req: operations.PutOfferingsOfferingIdMetadataCategoryRequest, config?: AxiosRequestConfig): Promise<operations.PutOfferingsOfferingIdMetadataCategoryResponse>;
     /**
-     * putOfferingsOfferingIdMetadataLevel - Update offering level metadata
+     * Update offering level metadata
      *
+     * @remarks
      * Updates the offering level metadata.
-    **/
+     */
     putOfferingsOfferingIdMetadataLevel(req: operations.PutOfferingsOfferingIdMetadataLevelRequest, config?: AxiosRequestConfig): Promise<operations.PutOfferingsOfferingIdMetadataLevelResponse>;
     /**
-     * putOfferingsOfferingIdMetadataTags - Update offering tags metadata
+     * Update offering tags metadata
      *
+     * @remarks
      * Updates the offering tags metadata.
-    **/
+     */
     putOfferingsOfferingIdMetadataTags(req: operations.PutOfferingsOfferingIdMetadataTagsRequest, config?: AxiosRequestConfig): Promise<operations.PutOfferingsOfferingIdMetadataTagsResponse>;
     /**
-     * putOfferingsOfferingIdMetadataTopic - Update offering topic metadata
+     * Update offering topic metadata
      *
+     * @remarks
      * Updates the offering topic metadata.
-    **/
+     */
     putOfferingsOfferingIdMetadataTopic(req: operations.PutOfferingsOfferingIdMetadataTopicRequest, config?: AxiosRequestConfig): Promise<operations.PutOfferingsOfferingIdMetadataTopicResponse>;
 }

@@ -1,22 +1,22 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { TaxRatesByCountryCodeRequest, TaxRatesByCountryCodeResponse } from "openapi/src/sdk/models/operations";
+import {
+  TaxRatesByCountryCodeRequest,
+  TaxRatesByCountryCodeResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: TaxRatesByCountryCodeRequest = {
-  queryParams: {
-    countryCode: "sit",
-    date: "voluptas",
-    domain: "culpa",
-    filter: "expedita",
-    productCodes: "consequuntur",
-    province: "dolor",
-    zip: "expedita",
-  },
+  countryCode: "US",
+  date: "2020-09-02",
+  domain: "api.taxrates.io",
+  filter: "corrupti",
+  productCodes: "C010",
+  province: "provident",
+  zip: "71642",
 };
 
 sdk.v1Tax.taxRatesByCountryCode(req).then((res: TaxRatesByCountryCodeResponse | AxiosError) => {

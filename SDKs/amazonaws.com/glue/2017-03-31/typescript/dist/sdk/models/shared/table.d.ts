@@ -4,7 +4,7 @@ import { StorageDescriptor } from "./storagedescriptor";
 import { TableIdentifier } from "./tableidentifier";
 /**
  * Represents a collection of related data organized in columns and rows.
-**/
+ */
 export declare class Table extends SpeakeasyBase {
     catalogId?: string;
     createTime?: Date;
@@ -23,6 +23,7 @@ export declare class Table extends SpeakeasyBase {
     tableType?: string;
     targetTable?: TableIdentifier;
     updateTime?: Date;
+    versionId?: string;
     viewExpandedText?: string;
     viewOriginalText?: string;
 }

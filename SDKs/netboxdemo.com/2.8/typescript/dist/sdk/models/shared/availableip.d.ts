@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { NestedVrf } from "./nestedvrf";
-export declare class AvailableIp extends SpeakeasyBase {
+import { NestedVRF } from "./nestedvrf";
+export declare class AvailableIP extends SpeakeasyBase {
     address?: string;
     family?: number;
-    vrf?: NestedVrf;
+    vrf?: NestedVRF;
 }

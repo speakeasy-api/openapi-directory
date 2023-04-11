@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { Price } from "./price";
+/**
+ * Discount
+ */
 export declare class DiscountResponse extends SpeakeasyBase {
     amount?: Price;
     created: Date;

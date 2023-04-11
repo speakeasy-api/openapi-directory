@@ -1,12 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The type of the App
+ */
 export declare enum AppEntityAppTypeEnum {
-    Sdk = "sdk",
+    SDK = "sdk",
     Sso = "sso",
     RemoteServer = "remote_server",
     FolderBehavior = "folder_behavior",
     ClientApp = "client_app",
     AppIntegration = "app_integration"
 }
+/**
+ * Associated Folder Behavior type, if any
+ */
 export declare enum AppEntityFolderBehaviorTypeEnum {
     Webhook = "webhook",
     FileExpiration = "file_expiration",
@@ -23,8 +29,13 @@ export declare enum AppEntityFolderBehaviorTypeEnum {
     AmazonSns = "amazon_sns",
     Watermark = "watermark",
     RemoteServerMount = "remote_server_mount",
-    SlackWebhook = "slack_webhook"
+    SlackWebhook = "slack_webhook",
+    AutoDecrypt = "auto_decrypt",
+    OverrideUploadFilename = "override_upload_filename"
 }
+/**
+ * Associated Remote Server type, if any
+ */
 export declare enum AppEntityRemoteServerTypeEnum {
     Ftp = "ftp",
     Sftp = "sftp",
@@ -40,8 +51,14 @@ export declare enum AppEntityRemoteServerTypeEnum {
     GoogleDrive = "google_drive",
     Azure = "azure",
     Sharepoint = "sharepoint",
-    S3Compatible = "s3_compatible"
+    S3Compatible = "s3_compatible",
+    AzureFiles = "azure_files",
+    FilesAgent = "files_agent",
+    Filebase = "filebase"
 }
+/**
+ * Associated SSO Strategy type, if any
+ */
 export declare enum AppEntitySsoStrategyTypeEnum {
     Google = "google",
     Auth0 = "auth0",
@@ -60,22 +77,70 @@ export declare enum AppEntitySsoStrategyTypeEnum {
 }
 /**
  * List Apps
-**/
+ */
 export declare class AppEntity extends SpeakeasyBase {
+    /**
+     * The type of the App
+     */
     appType?: AppEntityAppTypeEnum;
-    documentationLinks?: string;
+    /**
+     * Collection of named links to documentation
+     */
+    documentationLinks?: Record<string, any>;
+    /**
+     * Long form description of the App
+     */
     extendedDescription?: string;
+    /**
+     * Link to external homepage
+     */
     externalHomepageUrl?: string;
+    /**
+     * Is featured on the App listing?
+     */
     featured?: boolean;
+    /**
+     * Associated Folder Behavior type, if any
+     */
     folderBehaviorType?: AppEntityFolderBehaviorTypeEnum;
+    /**
+     * App icon
+     */
     iconUrl?: string;
+    /**
+     * Logo thumbnail for the App
+     */
     logoThumbnailUrl?: string;
+    /**
+     * Full size logo for the App
+     */
     logoUrl?: string;
+    /**
+     * Marketing video page
+     */
     marketingYoutubeUrl?: string;
+    /**
+     * Name of the App
+     */
     name?: string;
+    /**
+     * Associated Remote Server type, if any
+     */
     remoteServerType?: AppEntityRemoteServerTypeEnum;
-    screenshotListUrls?: string;
+    /**
+     * Screenshots of the App
+     */
+    screenshotListUrls?: string[];
+    /**
+     * Short description of the App
+     */
     shortDescription?: string;
+    /**
+     * Associated SSO Strategy type, if any
+     */
     ssoStrategyType?: AppEntitySsoStrategyTypeEnum;
+    /**
+     * Tutorial video page
+     */
     tutorialYoutubeUrl?: string;
 }

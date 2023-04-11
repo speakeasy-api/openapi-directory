@@ -1,10 +1,11 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AddonsListResponse } from "openapi/src/sdk/models/operations";
+import {
+  AddonsListResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
 
 sdk.addons.addonsList().then((res: AddonsListResponse | AxiosError) => {

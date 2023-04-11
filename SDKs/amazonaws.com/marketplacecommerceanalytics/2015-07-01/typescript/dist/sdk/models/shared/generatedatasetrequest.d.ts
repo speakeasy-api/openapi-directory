@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { DataSetTypeEnum } from "./datasettypeenum";
 /**
  * Container for the parameters to the GenerateDataSet operation.
-**/
+ */
 export declare class GenerateDataSetRequest extends SpeakeasyBase {
     customerDefinedValues?: Record<string, string>;
     dataSetPublicationDate: Date;

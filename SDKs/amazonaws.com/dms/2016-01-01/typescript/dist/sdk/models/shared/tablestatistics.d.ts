@@ -1,8 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Provides a collection of table statistics in response to a request by the <code>DescribeTableStatistics</code> operation.
-**/
+ */
 export declare class TableStatistics extends SpeakeasyBase {
+    appliedDdls?: number;
+    appliedDeletes?: number;
+    appliedInserts?: number;
+    appliedUpdates?: number;
     ddls?: number;
     deletes?: number;
     fullLoadCondtnlChkFailedRows?: number;

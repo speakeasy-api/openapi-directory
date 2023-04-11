@@ -1,0 +1,20 @@
+export declare enum ConnectionErrorCodeTypeEnum {
+    InvalidCredentials = "INVALID_CREDENTIALS",
+    ClusterNotFound = "CLUSTER_NOT_FOUND",
+    NetworkErrors = "NETWORK_ERRORS",
+    InternalError = "INTERNAL_ERROR",
+    InsufficientCloudhsmHsms = "INSUFFICIENT_CLOUDHSM_HSMS",
+    UserLockedOut = "USER_LOCKED_OUT",
+    UserNotFound = "USER_NOT_FOUND",
+    UserLoggedIn = "USER_LOGGED_IN",
+    SubnetNotFound = "SUBNET_NOT_FOUND",
+    InsufficientFreeAddressesInSubnet = "INSUFFICIENT_FREE_ADDRESSES_IN_SUBNET",
+    XksProxyAccessDenied = "XKS_PROXY_ACCESS_DENIED",
+    XksProxyNotReachable = "XKS_PROXY_NOT_REACHABLE",
+    XksVpcEndpointServiceNotFound = "XKS_VPC_ENDPOINT_SERVICE_NOT_FOUND",
+    XksProxyInvalidResponse = "XKS_PROXY_INVALID_RESPONSE",
+    XksProxyInvalidConfiguration = "XKS_PROXY_INVALID_CONFIGURATION",
+    XksVpcEndpointServiceInvalidConfiguration = "XKS_VPC_ENDPOINT_SERVICE_INVALID_CONFIGURATION",
+    XksProxyTimedOut = "XKS_PROXY_TIMED_OUT",
+    XksProxyInvalidTlsConfiguration = "XKS_PROXY_INVALID_TLS_CONFIGURATION"
+}

@@ -1,31 +1,31 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CancelTaskExecutionRequest, CancelTaskExecutionResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CancelTaskExecutionRequest,
+  CancelTaskExecutionResponse,
+  CancelTaskExecutionXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    hmac: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: CancelTaskExecutionRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "FmrsService.CancelTaskExecution",
+  cancelTaskExecutionRequest: {
+    taskExecutionArn: "corrupti",
   },
-  request: {
-    taskExecutionArn: "fugit",
-  },
+  xAmzAlgorithm: "provident",
+  xAmzContentSha256: "distinctio",
+  xAmzCredential: "quibusdam",
+  xAmzDate: "unde",
+  xAmzSecurityToken: "nulla",
+  xAmzSignature: "corrupti",
+  xAmzSignedHeaders: "illum",
+  xAmzTarget: CancelTaskExecutionXAmzTargetEnum.FmrsServiceCancelTaskExecution,
 };
 
 sdk.cancelTaskExecution(req).then((res: CancelTaskExecutionResponse | AxiosError) => {

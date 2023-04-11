@@ -1,28 +1,31 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { MergeTemplateRequest, MergeTemplateResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  MergeTemplateRequest,
+  MergeTemplateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  OutputEnum,
+  FormatEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    jsonWebTokenAuth: {
-      authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-    },
-  }
-));
-    
+    jsonWebTokenAuth: "Bearer YOUR_BEARER_TOKEN_HERE",
+  },
+});
+
 const req: MergeTemplateRequest = {
-  queryParams: {
-    format: "zip",
-    name: "voluptas",
-    output: "url",
-    templateId: 501233450539197794,
+  data: {
+    id: 12312,
+    name: "Sample Data",
   },
-  request: {
-    id: 3390393562759376202,
-    name: "dolor",
-  },
+  format: FormatEnum.Pdf,
+  name: "My document",
+  output: OutputEnum.Base64,
+  templateId: 19375,
 };
 
 sdk.documents.mergeTemplate(req).then((res: MergeTemplateResponse | AxiosError) => {

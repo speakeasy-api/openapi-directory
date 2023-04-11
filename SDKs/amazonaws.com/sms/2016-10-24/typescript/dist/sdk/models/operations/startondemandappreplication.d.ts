@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum StartOnDemandAppReplicationXAmzTargetEnum {
-    AwsServerMigrationServiceV20161024StartOnDemandAppReplication = "AWSServerMigrationService_V2016_10_24.StartOnDemandAppReplication"
+    AWSServerMigrationServiceV20161024StartOnDemandAppReplication = "AWSServerMigrationService_V2016_10_24.StartOnDemandAppReplication"
 }
-export declare class StartOnDemandAppReplicationHeaders extends SpeakeasyBase {
+export declare class StartOnDemandAppReplicationRequest extends SpeakeasyBase {
+    startOnDemandAppReplicationRequest: shared.StartOnDemandAppReplicationRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class StartOnDemandAppReplicationHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: StartOnDemandAppReplicationXAmzTargetEnum;
 }
-export declare class StartOnDemandAppReplicationRequest extends SpeakeasyBase {
-    headers: StartOnDemandAppReplicationHeaders;
-    request: shared.StartOnDemandAppReplicationRequest;
-}
 export declare class StartOnDemandAppReplicationResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalError
+     */
     internalError?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * MissingRequiredParameterException
+     */
     missingRequiredParameterException?: any;
+    /**
+     * OperationNotPermittedException
+     */
     operationNotPermittedException?: any;
+    /**
+     * Success
+     */
     startOnDemandAppReplicationResponse?: Record<string, any>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnauthorizedOperationException
+     */
     unauthorizedOperationException?: any;
 }

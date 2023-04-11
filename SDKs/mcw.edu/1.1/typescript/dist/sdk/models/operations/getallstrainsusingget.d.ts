@@ -1,6 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetAllStrainsUsingGetResponse extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETAllStrainsUsingGETResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

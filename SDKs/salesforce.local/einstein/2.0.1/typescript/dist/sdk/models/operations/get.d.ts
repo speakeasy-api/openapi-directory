@@ -1,17 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetSecurity extends SpeakeasyBase {
-    bearerToken: shared.SchemeBearerToken;
+    bearerToken: string;
 }
 export declare class GetRequest extends SpeakeasyBase {
-    pathParams: GetPathParams;
-    security: GetSecurity;
+    /**
+     * Deletion Id
+     */
+    id: string;
 }
 export declare class GetResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * deletion status
+     */
     deletionResponse?: shared.DeletionResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,15 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetGenerateCredentialReportActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETGenerateCredentialReportActionEnum {
     GenerateCredentialReport = "GenerateCredentialReport"
 }
-export declare enum GetGenerateCredentialReportVersionEnum {
+export declare enum GETGenerateCredentialReportVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class GetGenerateCredentialReportQueryParams extends SpeakeasyBase {
-    action: GetGenerateCredentialReportActionEnum;
-    version: GetGenerateCredentialReportVersionEnum;
-}
-export declare class GetGenerateCredentialReportHeaders extends SpeakeasyBase {
+export declare class GETGenerateCredentialReportRequest extends SpeakeasyBase {
+    action: GETGenerateCredentialReportActionEnum;
+    version: GETGenerateCredentialReportVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +17,9 @@ export declare class GetGenerateCredentialReportHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetGenerateCredentialReportRequest extends SpeakeasyBase {
-    queryParams: GetGenerateCredentialReportQueryParams;
-    headers: GetGenerateCredentialReportHeaders;
-}
-export declare class GetGenerateCredentialReportResponse extends SpeakeasyBase {
+export declare class GETGenerateCredentialReportResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

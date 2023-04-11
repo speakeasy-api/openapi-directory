@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class OauthAuthorizationsGetGrantPathParams extends SpeakeasyBase {
-    grantId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class OauthAuthorizationsGetGrantRequest extends SpeakeasyBase {
-    pathParams: OauthAuthorizationsGetGrantPathParams;
+    /**
+     * grant_id parameter
+     */
+    grantId: number;
 }
 export declare class OauthAuthorizationsGetGrantResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     applicationGrant?: shared.ApplicationGrant;
+    /**
+     * Requires authentication
+     */
     basicError?: shared.BasicError;
 }

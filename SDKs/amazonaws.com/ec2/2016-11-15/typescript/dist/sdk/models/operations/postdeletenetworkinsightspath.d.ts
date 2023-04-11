@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteNetworkInsightsPathActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteNetworkInsightsPathActionEnum {
     DeleteNetworkInsightsPath = "DeleteNetworkInsightsPath"
 }
-export declare enum PostDeleteNetworkInsightsPathVersionEnum {
+export declare enum POSTDeleteNetworkInsightsPathVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDeleteNetworkInsightsPathQueryParams extends SpeakeasyBase {
-    action: PostDeleteNetworkInsightsPathActionEnum;
-    version: PostDeleteNetworkInsightsPathVersionEnum;
-}
-export declare class PostDeleteNetworkInsightsPathHeaders extends SpeakeasyBase {
+export declare class POSTDeleteNetworkInsightsPathRequest extends SpeakeasyBase {
+    action: POSTDeleteNetworkInsightsPathActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteNetworkInsightsPathVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteNetworkInsightsPathHeaders extends SpeakeasyBase 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteNetworkInsightsPathRequest extends SpeakeasyBase {
-    queryParams: PostDeleteNetworkInsightsPathQueryParams;
-    headers: PostDeleteNetworkInsightsPathHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteNetworkInsightsPathResponse extends SpeakeasyBase {
+export declare class POSTDeleteNetworkInsightsPathResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

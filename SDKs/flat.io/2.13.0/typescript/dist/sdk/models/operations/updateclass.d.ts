@@ -1,19 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdateClassPathParams extends SpeakeasyBase {
-    class: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UpdateClassSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class UpdateClassRequest extends SpeakeasyBase {
-    pathParams: UpdateClassPathParams;
-    request?: shared.ClassUpdate;
-    security: UpdateClassSecurity;
+    /**
+     * Details of the Class
+     */
+    classUpdate?: shared.ClassUpdate;
+    /**
+     * Unique identifier of the class
+     */
+    class: string;
 }
 export declare class UpdateClassResponse extends SpeakeasyBase {
+    /**
+     * The new class details
+     */
     classDetails?: shared.ClassDetails;
     contentType: string;
+    /**
+     * Error
+     */
     flatErrorResponse?: shared.FlatErrorResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

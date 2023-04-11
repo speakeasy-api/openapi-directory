@@ -18,7 +18,6 @@ export * from "./playlist";
 export * from "./playlists";
 export * from "./refreshtoken";
 export * from "./responsetypeenum";
-export * from "./security";
 export * from "./streams";
 export * from "./toomanyrequests";
 export * from "./track";

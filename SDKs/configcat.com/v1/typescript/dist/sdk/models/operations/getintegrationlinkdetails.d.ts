@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetIntegrationLinkDetailsPathParams extends SpeakeasyBase {
-    integrationLinkType: shared.IntegrationLinkTypeEnum;
-    key: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetIntegrationLinkDetailsRequest extends SpeakeasyBase {
-    pathParams: GetIntegrationLinkDetailsPathParams;
+    /**
+     * The integration link's type.
+     */
+    integrationLinkType: shared.IntegrationLinkTypeEnum;
+    /**
+     * The key of the integration link.
+     */
+    key: string;
 }
 export declare class GetIntegrationLinkDetailsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * When everything is ok, the details for the integration link returned.
+     */
     integrationLinkDetailsModel?: shared.IntegrationLinkDetailsModel;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

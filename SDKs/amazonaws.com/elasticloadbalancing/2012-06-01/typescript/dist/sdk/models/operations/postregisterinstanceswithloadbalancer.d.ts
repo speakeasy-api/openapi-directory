@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostRegisterInstancesWithLoadBalancerActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTRegisterInstancesWithLoadBalancerActionEnum {
     RegisterInstancesWithLoadBalancer = "RegisterInstancesWithLoadBalancer"
 }
-export declare enum PostRegisterInstancesWithLoadBalancerVersionEnum {
+export declare enum POSTRegisterInstancesWithLoadBalancerVersionEnum {
     TwoThousandAndTwelve0601 = "2012-06-01"
 }
-export declare class PostRegisterInstancesWithLoadBalancerQueryParams extends SpeakeasyBase {
-    action: PostRegisterInstancesWithLoadBalancerActionEnum;
-    version: PostRegisterInstancesWithLoadBalancerVersionEnum;
-}
-export declare class PostRegisterInstancesWithLoadBalancerHeaders extends SpeakeasyBase {
+export declare class POSTRegisterInstancesWithLoadBalancerRequest extends SpeakeasyBase {
+    action: POSTRegisterInstancesWithLoadBalancerActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTRegisterInstancesWithLoadBalancerVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostRegisterInstancesWithLoadBalancerHeaders extends Speake
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostRegisterInstancesWithLoadBalancerRequest extends SpeakeasyBase {
-    queryParams: PostRegisterInstancesWithLoadBalancerQueryParams;
-    headers: PostRegisterInstancesWithLoadBalancerHeaders;
-    request?: Uint8Array;
-}
-export declare class PostRegisterInstancesWithLoadBalancerResponse extends SpeakeasyBase {
+export declare class POSTRegisterInstancesWithLoadBalancerResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

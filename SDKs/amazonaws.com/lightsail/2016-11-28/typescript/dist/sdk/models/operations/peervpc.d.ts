@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum PeerVpcXAmzTargetEnum {
     Lightsail20161128PeerVpc = "Lightsail_20161128.PeerVpc"
 }
-export declare class PeerVpcHeaders extends SpeakeasyBase {
+export declare class PeerVpcRequest extends SpeakeasyBase {
+    requestBody: Record<string, any>;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,19 +15,40 @@ export declare class PeerVpcHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: PeerVpcXAmzTargetEnum;
 }
-export declare class PeerVpcRequest extends SpeakeasyBase {
-    headers: PeerVpcHeaders;
-    request: Record<string, any>;
-}
 export declare class PeerVpcResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * AccountSetupInProgressException
+     */
     accountSetupInProgressException?: any;
     contentType: string;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
+    /**
+     * OperationFailureException
+     */
     operationFailureException?: any;
+    /**
+     * Success
+     */
     peerVpcResult?: shared.PeerVpcResult;
+    /**
+     * ServiceException
+     */
     serviceException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnauthenticatedException
+     */
     unauthenticatedException?: any;
 }

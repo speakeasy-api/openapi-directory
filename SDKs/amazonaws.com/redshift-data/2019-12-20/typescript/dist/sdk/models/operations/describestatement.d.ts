@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeStatementXAmzTargetEnum {
     RedshiftDataDescribeStatement = "RedshiftData.DescribeStatement"
 }
-export declare class DescribeStatementHeaders extends SpeakeasyBase {
+export declare class DescribeStatementRequest extends SpeakeasyBase {
+    describeStatementRequest: shared.DescribeStatementRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class DescribeStatementHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeStatementXAmzTargetEnum;
 }
-export declare class DescribeStatementRequest extends SpeakeasyBase {
-    headers: DescribeStatementHeaders;
-    request: shared.DescribeStatementRequest;
-}
 export declare class DescribeStatementResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeStatementResponse?: shared.DescribeStatementResponse;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

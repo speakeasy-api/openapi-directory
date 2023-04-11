@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateAccessKeyActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateAccessKeyActionEnum {
     CreateAccessKey = "CreateAccessKey"
 }
-export declare enum PostCreateAccessKeyVersionEnum {
+export declare enum POSTCreateAccessKeyVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostCreateAccessKeyQueryParams extends SpeakeasyBase {
-    action: PostCreateAccessKeyActionEnum;
-    version: PostCreateAccessKeyVersionEnum;
-}
-export declare class PostCreateAccessKeyHeaders extends SpeakeasyBase {
+export declare class POSTCreateAccessKeyRequest extends SpeakeasyBase {
+    action: POSTCreateAccessKeyActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateAccessKeyVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateAccessKeyHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateAccessKeyRequest extends SpeakeasyBase {
-    queryParams: PostCreateAccessKeyQueryParams;
-    headers: PostCreateAccessKeyHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateAccessKeyResponse extends SpeakeasyBase {
+export declare class POSTCreateAccessKeyResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

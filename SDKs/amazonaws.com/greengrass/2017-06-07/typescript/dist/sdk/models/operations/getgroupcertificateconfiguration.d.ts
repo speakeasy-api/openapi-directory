@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetGroupCertificateConfigurationPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetGroupCertificateConfigurationRequest extends SpeakeasyBase {
+    /**
+     * The ID of the Greengrass group.
+     */
     groupId: string;
-}
-export declare class GetGroupCertificateConfigurationHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,14 +14,20 @@ export declare class GetGroupCertificateConfigurationHeaders extends SpeakeasyBa
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetGroupCertificateConfigurationRequest extends SpeakeasyBase {
-    pathParams: GetGroupCertificateConfigurationPathParams;
-    headers: GetGroupCertificateConfigurationHeaders;
-}
 export declare class GetGroupCertificateConfigurationResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getGroupCertificateConfigurationResponse?: shared.GetGroupCertificateConfigurationResponse;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

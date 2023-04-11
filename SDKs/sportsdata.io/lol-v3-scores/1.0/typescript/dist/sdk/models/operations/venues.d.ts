@@ -1,16 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+/**
+ * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+ */
 export declare enum VenuesFormatEnum {
     Xml = "xml",
     Json = "json"
 }
-export declare class VenuesPathParams extends SpeakeasyBase {
-    format: VenuesFormatEnum;
-}
 export declare class VenuesRequest extends SpeakeasyBase {
-    pathParams: VenuesPathParams;
+    /**
+     * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+     */
+    format: VenuesFormatEnum;
 }
 export declare class VenuesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    venues?: any[];
+    rawResponse?: AxiosResponse;
+    venues?: shared.Venue[];
 }

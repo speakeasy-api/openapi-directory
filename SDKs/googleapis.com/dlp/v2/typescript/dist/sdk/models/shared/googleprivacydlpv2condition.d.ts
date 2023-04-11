@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { GooglePrivacyDlpV2FieldId } from "./googleprivacydlpv2fieldid";
 import { GooglePrivacyDlpV2Value } from "./googleprivacydlpv2value";
+/**
+ * Required. Operator used to compare the field or infoType to the value.
+ */
 export declare enum GooglePrivacyDlpV2ConditionOperatorEnum {
     RelationalOperatorUnspecified = "RELATIONAL_OPERATOR_UNSPECIFIED",
     EqualTo = "EQUAL_TO",
@@ -13,9 +16,18 @@ export declare enum GooglePrivacyDlpV2ConditionOperatorEnum {
 }
 /**
  * The field type of `value` and `field` do not need to match to be considered equal, but not all comparisons are possible. EQUAL_TO and NOT_EQUAL_TO attempt to compare even with incompatible types, but all other comparisons are invalid with incompatible types. A `value` of type: - `string` can be compared against all other types - `boolean` can only be compared against other booleans - `integer` can be compared against doubles or a string if the string value can be parsed as an integer. - `double` can be compared against integers or a string if the string can be parsed as a double. - `Timestamp` can be compared against strings in RFC 3339 date string format. - `TimeOfDay` can be compared against timestamps and strings in the format of 'HH:mm:ss'. If we fail to compare do to type mismatch, a warning will be given and the condition will evaluate to false.
-**/
+ */
 export declare class GooglePrivacyDlpV2Condition extends SpeakeasyBase {
+    /**
+     * General identifier of a data field in a storage service.
+     */
     field?: GooglePrivacyDlpV2FieldId;
+    /**
+     * Required. Operator used to compare the field or infoType to the value.
+     */
     operator?: GooglePrivacyDlpV2ConditionOperatorEnum;
+    /**
+     * Set of primitive values supported by the system. Note that for the purposes of inspection or transformation, the number of bytes considered to comprise a 'Value' is based on its representation as a UTF-8 encoded string. For example, if 'integer_value' is set to 123456789, the number of bytes would be counted as 9, even though an int64 only holds up to 8 bytes of data.
+     */
     value?: GooglePrivacyDlpV2Value;
 }

@@ -1,18 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PrivateProjectCollaboratorsListPathParams extends SpeakeasyBase {
-    projectId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class PrivateProjectCollaboratorsListSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class PrivateProjectCollaboratorsListRequest extends SpeakeasyBase {
-    pathParams: PrivateProjectCollaboratorsListPathParams;
-    security: PrivateProjectCollaboratorsListSecurity;
+    /**
+     * Project unique identifier
+     */
+    projectId: number;
 }
 export declare class PrivateProjectCollaboratorsListResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Forbidden
+     */
     errorMessage?: shared.ErrorMessage;
+    /**
+     * OK. List of Collaborators
+     */
     projectCollaborators?: shared.ProjectCollaborator[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

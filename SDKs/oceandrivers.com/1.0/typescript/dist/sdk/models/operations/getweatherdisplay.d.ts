@@ -1,15 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetWeatherDisplayPathParams extends SpeakeasyBase {
-    stationName: string;
-}
-export declare class GetWeatherDisplayQueryParams extends SpeakeasyBase {
-    period: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetWeatherDisplayRequest extends SpeakeasyBase {
-    pathParams: GetWeatherDisplayPathParams;
-    queryParams: GetWeatherDisplayQueryParams;
+    /**
+     * Period of time to get the data latestdata|latesthour|latestday|dailylog
+     */
+    period: string;
+    /**
+     * currently: 'cnarenal'|'campastilla' | 'cncg'
+     */
+    stationName: string;
 }
 export declare class GetWeatherDisplayResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

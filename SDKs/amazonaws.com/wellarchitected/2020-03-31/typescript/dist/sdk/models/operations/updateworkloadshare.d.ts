@@ -1,10 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdateWorkloadSharePathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+/**
+ * Permission granted on a workload share.
+ */
+export declare enum UpdateWorkloadShareRequestBodyPermissionTypeEnum {
+    Readonly = "READONLY",
+    Contributor = "CONTRIBUTOR"
+}
+export declare class UpdateWorkloadShareRequestBody extends SpeakeasyBase {
+    /**
+     * Permission granted on a workload share.
+     */
+    permissionType: UpdateWorkloadShareRequestBodyPermissionTypeEnum;
+}
+export declare class UpdateWorkloadShareRequest extends SpeakeasyBase {
+    requestBody: UpdateWorkloadShareRequestBody;
     shareId: string;
     workloadId: string;
-}
-export declare class UpdateWorkloadShareHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,26 +26,36 @@ export declare class UpdateWorkloadShareHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare enum UpdateWorkloadShareRequestBodyPermissionTypeEnum {
-    Readonly = "READONLY",
-    Contributor = "CONTRIBUTOR"
-}
-export declare class UpdateWorkloadShareRequestBody extends SpeakeasyBase {
-    permissionType: UpdateWorkloadShareRequestBodyPermissionTypeEnum;
-}
-export declare class UpdateWorkloadShareRequest extends SpeakeasyBase {
-    pathParams: UpdateWorkloadSharePathParams;
-    headers: UpdateWorkloadShareHeaders;
-    request: UpdateWorkloadShareRequestBody;
-}
 export declare class UpdateWorkloadShareResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * Success
+     */
     updateWorkloadShareOutput?: shared.UpdateWorkloadShareOutput;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

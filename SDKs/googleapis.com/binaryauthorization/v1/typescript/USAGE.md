@@ -1,75 +1,79 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { BinaryauthorizationProjectsAttestorsCreateRequest, BinaryauthorizationProjectsAttestorsCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  BinaryauthorizationProjectsAttestorsCreateRequest,
+  BinaryauthorizationProjectsAttestorsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  PkixPublicKeySignatureAlgorithmEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: BinaryauthorizationProjectsAttestorsCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    attestorId: "consequuntur",
-    callback: "dolor",
-    fields: "expedita",
-    key: "voluptas",
-    oauthToken: "fugit",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    uploadType: "rerum",
-    uploadProtocol: "dicta",
-  },
-  request: {
-    description: "debitis",
-    etag: "voluptatum",
-    name: "et",
+  dollarXgafv: XgafvEnum.Two,
+  attestorInput: {
+    description: "provident",
+    etag: "distinctio",
+    name: "quibusdam",
     userOwnedGrafeasNote: {
-      noteReference: "ut",
+      noteReference: "unde",
       publicKeys: [
         {
-          asciiArmoredPgpPublicKey: "et",
-          comment: "voluptate",
-          id: "iste",
-          pkixPublicKey: {
-            publicKeyPem: "vitae",
-            signatureAlgorithm: "ECDSA_P521_SHA512",
-          },
-        },
-        {
-          asciiArmoredPgpPublicKey: "dolores",
+          asciiArmoredPgpPublicKey: "corrupti",
           comment: "illum",
-          id: "debitis",
+          id: "vel",
           pkixPublicKey: {
-            publicKeyPem: "vel",
-            signatureAlgorithm: "EC_SIGN_P256_SHA256",
+            publicKeyPem: "error",
+            signatureAlgorithm: PkixPublicKeySignatureAlgorithmEnum.RsaSignPkcs14096Sha512,
           },
         },
         {
-          asciiArmoredPgpPublicKey: "dolore",
-          comment: "id",
-          id: "aspernatur",
+          asciiArmoredPgpPublicKey: "suscipit",
+          comment: "iure",
+          id: "magnam",
           pkixPublicKey: {
-            publicKeyPem: "accusantium",
-            signatureAlgorithm: "ECDSA_P256_SHA256",
+            publicKeyPem: "debitis",
+            signatureAlgorithm: PkixPublicKeySignatureAlgorithmEnum.RsaPss2048Sha256,
+          },
+        },
+        {
+          asciiArmoredPgpPublicKey: "delectus",
+          comment: "tempora",
+          id: "suscipit",
+          pkixPublicKey: {
+            publicKeyPem: "molestiae",
+            signatureAlgorithm: PkixPublicKeySignatureAlgorithmEnum.EcdsaP384Sha384,
+          },
+        },
+        {
+          asciiArmoredPgpPublicKey: "placeat",
+          comment: "voluptatum",
+          id: "iusto",
+          pkixPublicKey: {
+            publicKeyPem: "excepturi",
+            signatureAlgorithm: PkixPublicKeySignatureAlgorithmEnum.RsaPss4096Sha512,
           },
         },
       ],
     },
   },
+  accessToken: "recusandae",
+  alt: AltEnum.Proto,
+  attestorId: "ab",
+  callback: "quis",
+  fields: "veritatis",
+  key: "deserunt",
+  oauthToken: "perferendis",
+  parent: "ipsam",
+  prettyPrint: false,
+  quotaUser: "repellendus",
+  uploadType: "sapiente",
+  uploadProtocol: "quo",
 };
 
 sdk.projects.binaryauthorizationProjectsAttestorsCreate(req).then((res: BinaryauthorizationProjectsAttestorsCreateResponse | AxiosError) => {

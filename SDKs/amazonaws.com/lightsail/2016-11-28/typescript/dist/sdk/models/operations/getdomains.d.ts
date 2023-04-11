@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetDomainsXAmzTargetEnum {
     Lightsail20161128GetDomains = "Lightsail_20161128.GetDomains"
 }
-export declare class GetDomainsHeaders extends SpeakeasyBase {
+export declare class GetDomainsRequest extends SpeakeasyBase {
+    getDomainsRequest: shared.GetDomainsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,19 +15,40 @@ export declare class GetDomainsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetDomainsXAmzTargetEnum;
 }
-export declare class GetDomainsRequest extends SpeakeasyBase {
-    headers: GetDomainsHeaders;
-    request: shared.GetDomainsRequest;
-}
 export declare class GetDomainsResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * AccountSetupInProgressException
+     */
     accountSetupInProgressException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getDomainsResult?: shared.GetDomainsResult;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
+    /**
+     * OperationFailureException
+     */
     operationFailureException?: any;
+    /**
+     * ServiceException
+     */
     serviceException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnauthenticatedException
+     */
     unauthenticatedException?: any;
 }

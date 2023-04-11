@@ -1,28 +1,21 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetDealItemsRequest, GetDealItemsResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetDealItemsRequest,
+  GetDealItemsResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetDealItemsRequest = {
-  security: {
-    apiAuth: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  queryParams: {
-    categoryIds: "sit",
-    commissionable: "voluptas",
-    deliveryCountry: "culpa",
-    limit: "expedita",
-    offset: "consequuntur",
-  },
-  headers: {
-    xEBAYCMARKETPLACEID: "dolor",
-  },
+  xEbayCMarketplaceId: "corrupti",
+  categoryIds: "provident",
+  commissionable: "distinctio",
+  deliveryCountry: "quibusdam",
+  limit: "unde",
+  offset: "nulla",
 };
 
 sdk.dealItem.getDealItems(req).then((res: GetDealItemsResponse | AxiosError) => {

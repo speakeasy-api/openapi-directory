@@ -1,8 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteFunctionDefinitionPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteFunctionDefinitionRequest extends SpeakeasyBase {
+    /**
+     * The ID of the Lambda function definition.
+     */
     functionDefinitionId: string;
-}
-export declare class DeleteFunctionDefinitionHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,13 +13,16 @@ export declare class DeleteFunctionDefinitionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeleteFunctionDefinitionRequest extends SpeakeasyBase {
-    pathParams: DeleteFunctionDefinitionPathParams;
-    headers: DeleteFunctionDefinitionHeaders;
-}
 export declare class DeleteFunctionDefinitionResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteFunctionDefinitionResponse?: Record<string, any>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

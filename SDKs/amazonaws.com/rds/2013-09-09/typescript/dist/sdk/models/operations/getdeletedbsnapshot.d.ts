@@ -1,16 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteDbSnapshotActionEnum {
-    DeleteDbSnapshot = "DeleteDBSnapshot"
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteDBSnapshotActionEnum {
+    DeleteDBSnapshot = "DeleteDBSnapshot"
 }
-export declare enum GetDeleteDbSnapshotVersionEnum {
+export declare enum GETDeleteDBSnapshotVersionEnum {
     TwoThousandAndThirteen0909 = "2013-09-09"
 }
-export declare class GetDeleteDbSnapshotQueryParams extends SpeakeasyBase {
-    action: GetDeleteDbSnapshotActionEnum;
+export declare class GETDeleteDBSnapshotRequest extends SpeakeasyBase {
+    action: GETDeleteDBSnapshotActionEnum;
     dbSnapshotIdentifier: string;
-    version: GetDeleteDbSnapshotVersionEnum;
-}
-export declare class GetDeleteDbSnapshotHeaders extends SpeakeasyBase {
+    version: GETDeleteDBSnapshotVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +18,9 @@ export declare class GetDeleteDbSnapshotHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteDbSnapshotRequest extends SpeakeasyBase {
-    queryParams: GetDeleteDbSnapshotQueryParams;
-    headers: GetDeleteDbSnapshotHeaders;
-}
-export declare class GetDeleteDbSnapshotResponse extends SpeakeasyBase {
+export declare class GETDeleteDBSnapshotResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,11 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetIntegrationResponsePathParams extends SpeakeasyBase {
-    apiId: string;
-    integrationId: string;
-    integrationResponseId: string;
-}
-export declare class GetIntegrationResponseHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetIntegrationResponseRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +9,33 @@ export declare class GetIntegrationResponseHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class GetIntegrationResponseRequest extends SpeakeasyBase {
-    pathParams: GetIntegrationResponsePathParams;
-    headers: GetIntegrationResponseHeaders;
+    /**
+     * The API identifier.
+     */
+    apiId: string;
+    /**
+     * The integration ID.
+     */
+    integrationId: string;
+    /**
+     * The integration response ID.
+     */
+    integrationResponseId: string;
 }
 export declare class GetIntegrationResponseResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getIntegrationResponseResponse?: shared.GetIntegrationResponseResponse;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

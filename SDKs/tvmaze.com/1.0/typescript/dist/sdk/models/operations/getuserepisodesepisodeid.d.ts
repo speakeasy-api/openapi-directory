@@ -1,13 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetUserEpisodesEpisodeIdPathParams extends SpeakeasyBase {
-    episodeId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetUserEpisodesEpisodeIdRequest extends SpeakeasyBase {
-    pathParams: GetUserEpisodesEpisodeIdPathParams;
+    episodeId: number;
 }
 export declare class GetUserEpisodesEpisodeIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * The marked episode
+     */
     markedEpisode?: shared.MarkedEpisode;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

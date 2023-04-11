@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbSecurityGroupMembershipList } from "./dbsecuritygroupmembershiplist";
+import { DBSecurityGroupMembershipList } from "./dbsecuritygroupmembershiplist";
 import { OptionSettingConfigurationList } from "./optionsettingconfigurationlist";
 import { VpcSecurityGroupMembershipList } from "./vpcsecuritygroupmembershiplist";
 export declare class OptionsList extends SpeakeasyBase {
-    dbSecurityGroupMemberships?: DbSecurityGroupMembershipList[];
+    dbSecurityGroupMemberships?: DBSecurityGroupMembershipList[];
     optionDescription?: string;
     optionName?: string;
     optionSettings?: OptionSettingConfigurationList[];

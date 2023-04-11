@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetAemetStationPathParams extends SpeakeasyBase {
-    period: string;
-    stationName: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetAemetStationRequest extends SpeakeasyBase {
-    pathParams: GetAemetStationPathParams;
+    /**
+     * Period of time to get the data. Options: lastdata lastday
+     */
+    period: string;
+    /**
+     * station name currently: aeropuertopalma | caboblanco
+     */
+    stationName: string;
 }
 export declare class GetAemetStationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

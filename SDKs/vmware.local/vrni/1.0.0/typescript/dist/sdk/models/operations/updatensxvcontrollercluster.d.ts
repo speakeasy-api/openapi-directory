@@ -1,19 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdateNsxvControllerClusterPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UpdateNsxvControllerClusterSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
+    apiKeyAuth: string;
 }
 export declare class UpdateNsxvControllerClusterRequest extends SpeakeasyBase {
-    pathParams: UpdateNsxvControllerClusterPathParams;
-    request?: shared.NsxControllerDataCollection;
-    security: UpdateNsxvControllerClusterSecurity;
+    nsxControllerDataCollection?: shared.NSXControllerDataCollection;
+    /**
+     * entity id
+     */
+    id: string;
 }
 export declare class UpdateNsxvControllerClusterResponse extends SpeakeasyBase {
+    /**
+     * Bad Request
+     */
     apiError?: shared.ApiError;
     contentType: string;
-    nsxControllerDataCollection?: shared.NsxControllerDataCollection;
+    /**
+     * OK
+     */
+    nsxControllerDataCollection?: shared.NSXControllerDataCollection;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

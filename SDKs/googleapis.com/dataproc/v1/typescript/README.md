@@ -6,164 +6,172 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/dataproc/v1/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/dataproc/v1/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DataprocProjectsLocationsBatchesCreateRequest, DataprocProjectsLocationsBatchesCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  DataprocProjectsLocationsBatchesCreateRequest,
+  DataprocProjectsLocationsBatchesCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: DataprocProjectsLocationsBatchesCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    batchId: "consequuntur",
-    callback: "dolor",
-    fields: "expedita",
-    key: "voluptas",
-    oauthToken: "fugit",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    requestId: "rerum",
-    uploadType: "dicta",
-    uploadProtocol: "debitis",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  batchInput: {
     environmentConfig: {
       executionConfig: {
-        idleTtl: "voluptatum",
-        kmsKey: "et",
+        idleTtl: "provident",
+        kmsKey: "distinctio",
         networkTags: [
-          "dolorem",
-          "et",
-          "voluptate",
+          "unde",
+          "nulla",
+          "corrupti",
+          "illum",
         ],
-        networkUri: "iste",
-        serviceAccount: "vitae",
-        subnetworkUri: "totam",
+        networkUri: "vel",
+        serviceAccount: "error",
+        stagingBucket: "deserunt",
+        subnetworkUri: "suscipit",
+        ttl: "iure",
       },
       peripheralsConfig: {
-        metastoreService: "dolores",
+        metastoreService: "magnam",
         sparkHistoryServerConfig: {
-          dataprocCluster: "illum",
+          dataprocCluster: "debitis",
         },
       },
     },
     labels: {
-      "vel": "odio",
+      "delectus": "tempora",
     },
     pysparkBatch: {
       archiveUris: [
-        "id",
-        "aspernatur",
+        "molestiae",
+        "minus",
       ],
       args: [
-        "totam",
-        "commodi",
-        "quis",
+        "voluptatum",
+        "iusto",
+        "excepturi",
+        "nisi",
       ],
       fileUris: [
-        "aut",
-        "odit",
+        "temporibus",
+        "ab",
+        "quis",
+        "veritatis",
       ],
       jarFileUris: [
-        "voluptas",
-        "omnis",
-        "aut",
+        "perferendis",
+        "ipsam",
+        "repellendus",
       ],
-      mainPythonFileUri: "illo",
+      mainPythonFileUri: "sapiente",
       pythonFileUris: [
-        "officiis",
-        "autem",
-        "consectetur",
+        "odit",
+        "at",
+        "at",
+        "maiores",
       ],
     },
     runtimeConfig: {
-      containerImage: "nobis",
+      containerImage: "molestiae",
       properties: {
-        "qui": "recusandae",
+        "quod": "esse",
+        "totam": "porro",
+        "dolorum": "dicta",
+        "nam": "officia",
       },
-      version: "at",
+      version: "occaecati",
     },
     runtimeInfo: {
       approximateUsage: {
-        milliDcuSeconds: "ipsum",
-        shuffleStorageGbSeconds: "eveniet",
+        milliDcuSeconds: "fugit",
+        shuffleStorageGbSeconds: "deleniti",
+      },
+      currentUsage: {
+        milliDcu: "hic",
+        shuffleStorageGb: "optio",
+        snapshotTime: "totam",
       },
     },
     sparkBatch: {
       archiveUris: [
-        "sint",
-        "inventore",
+        "commodi",
       ],
       args: [
-        "exercitationem",
-        "aut",
-        "reprehenderit",
+        "modi",
+        "qui",
       ],
       fileUris: [
-        "maiores",
-        "incidunt",
-        "dolor",
+        "cum",
+        "esse",
+        "ipsum",
+        "excepturi",
       ],
       jarFileUris: [
-        "veritatis",
-        "in",
-        "et",
+        "perferendis",
       ],
-      mainClass: "omnis",
-      mainJarFileUri: "ipsum",
+      mainClass: "ad",
+      mainJarFileUri: "natus",
     },
     sparkRBatch: {
       archiveUris: [
-        "dolores",
+        "iste",
       ],
       args: [
-        "vel",
+        "natus",
       ],
       fileUris: [
-        "mollitia",
-        "voluptas",
-        "quam",
+        "hic",
+        "saepe",
       ],
-      mainRFileUri: "reprehenderit",
+      mainRFileUri: "fuga",
     },
     sparkSqlBatch: {
       jarFileUris: [
-        "qui",
+        "corporis",
+        "iste",
       ],
-      queryFileUri: "unde",
+      queryFileUri: "iure",
       queryVariables: {
-        "autem": "qui",
-        "ut": "itaque",
+        "quidem": "architecto",
+        "ipsa": "reiciendis",
+        "est": "mollitia",
+        "laborum": "dolores",
       },
     },
   },
+  accessToken: "dolorem",
+  alt: AltEnum.Media,
+  batchId: "explicabo",
+  callback: "nobis",
+  fields: "enim",
+  key: "omnis",
+  oauthToken: "nemo",
+  parent: "minima",
+  prettyPrint: false,
+  quotaUser: "excepturi",
+  requestId: "accusantium",
+  uploadType: "iure",
+  uploadProtocol: "culpa",
 };
 
 sdk.projects.dataprocProjectsLocationsBatchesCreate(req).then((res: DataprocProjectsLocationsBatchesCreateResponse | AxiosError) => {
@@ -173,7 +181,8 @@ sdk.projects.dataprocProjectsLocationsBatchesCreate(req).then((res: DataprocProj
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### projects
 
@@ -187,6 +196,8 @@ sdk.projects.dataprocProjectsLocationsBatchesCreate(req).then((res: DataprocProj
 * `dataprocProjectsRegionsClustersGet` - Gets the resource representation for a cluster in a project.
 * `dataprocProjectsRegionsClustersInjectCredentials` - Inject encrypted credentials into all of the VMs in a cluster.The target cluster must be a personal auth cluster assigned to the user who is issuing the RPC.
 * `dataprocProjectsRegionsClustersList` - Lists all regions/{region}/clusters in a project alphabetically.
+* `dataprocProjectsRegionsClustersNodeGroupsCreate` - Creates a node group in a cluster. The returned Operation.metadata is NodeGroupOperationMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#nodegroupoperationmetadata).
+* `dataprocProjectsRegionsClustersNodeGroupsResize` - Resizes a node group in a cluster. The returned Operation.metadata is NodeGroupOperationMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#nodegroupoperationmetadata).
 * `dataprocProjectsRegionsClustersPatch` - Updates a cluster in a project. The returned Operation.metadata will be ClusterOperationMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata). The cluster must be in a RUNNING state or an error is returned.
 * `dataprocProjectsRegionsClustersRepair` - Repairs a cluster.
 * `dataprocProjectsRegionsClustersStart` - Starts a cluster in a project.
@@ -209,7 +220,18 @@ sdk.projects.dataprocProjectsLocationsBatchesCreate(req).then((res: DataprocProj
 * `dataprocProjectsRegionsWorkflowTemplatesSetIamPolicy` - Sets the access control policy on the specified resource. Replaces any existing policy.Can return NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
 * `dataprocProjectsRegionsWorkflowTemplatesTestIamPermissions` - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a NOT_FOUND error.Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 * `dataprocProjectsRegionsWorkflowTemplatesUpdate` - Updates (replaces) workflow template. The updated template must contain version that matches the current server version.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

@@ -1,19 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdateCheckpointFirewallPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UpdateCheckpointFirewallSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
+    apiKeyAuth: string;
 }
 export declare class UpdateCheckpointFirewallRequest extends SpeakeasyBase {
-    pathParams: UpdateCheckpointFirewallPathParams;
-    request?: shared.SwitchDataSource;
-    security: UpdateCheckpointFirewallSecurity;
+    switchDataSource?: shared.SwitchDataSource;
+    /**
+     * entity id
+     */
+    id: string;
 }
 export declare class UpdateCheckpointFirewallResponse extends SpeakeasyBase {
+    /**
+     * Bad Request
+     */
     apiError?: shared.ApiError;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
     switchDataSource?: shared.SwitchDataSource;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteUserXAmzTargetEnum {
-    AmazonMemoryDbDeleteUser = "AmazonMemoryDB.DeleteUser"
+    AmazonMemoryDBDeleteUser = "AmazonMemoryDB.DeleteUser"
 }
-export declare class DeleteUserHeaders extends SpeakeasyBase {
+export declare class DeleteUserRequest extends SpeakeasyBase {
+    deleteUserRequest: shared.DeleteUserRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class DeleteUserHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteUserXAmzTargetEnum;
 }
-export declare class DeleteUserRequest extends SpeakeasyBase {
-    headers: DeleteUserHeaders;
-    request: shared.DeleteUserRequest;
-}
 export declare class DeleteUserResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deleteUserResponse?: shared.DeleteUserResponse;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
+    /**
+     * InvalidUserStateFault
+     */
     invalidUserStateFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UserNotFoundFault
+     */
     userNotFoundFault?: any;
 }

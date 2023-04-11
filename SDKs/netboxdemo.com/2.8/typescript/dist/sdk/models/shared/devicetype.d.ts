@@ -20,10 +20,16 @@ export declare class DeviceType extends SpeakeasyBase {
     displayName?: string;
     frontImage?: string;
     id?: number;
+    /**
+     * Device consumes both front and rear rack faces
+     */
     isFullDepth?: boolean;
     lastUpdated?: Date;
     manufacturer: NestedManufacturer;
     model: string;
+    /**
+     * Discrete part number (optional)
+     */
     partNumber?: string;
     rearImage?: string;
     slug: string;

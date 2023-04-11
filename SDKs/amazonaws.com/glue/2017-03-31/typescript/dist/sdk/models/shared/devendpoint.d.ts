@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { WorkerTypeEnum } from "./workertypeenum";
 /**
  * A development endpoint where a developer can remotely debug extract, transform, and load (ETL) scripts.
-**/
+ */
 export declare class DevEndpoint extends SpeakeasyBase {
     arguments?: Record<string, string>;
     availabilityZone?: string;

@@ -1,34 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class StorageChannelsStopQueryParams extends SpeakeasyBase {
-    alt?: shared.AltEnum;
-    fields?: string;
-    key?: string;
-    oauthToken?: string;
-    prettyPrint?: boolean;
-    quotaUser?: string;
-    uploadType?: string;
-    userIp?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class StorageChannelsStopSecurityOption1 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class StorageChannelsStopSecurityOption2 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class StorageChannelsStopSecurityOption3 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class StorageChannelsStopSecurityOption4 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class StorageChannelsStopSecurityOption5 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class StorageChannelsStopSecurity extends SpeakeasyBase {
     option1?: StorageChannelsStopSecurityOption1;
@@ -38,11 +29,42 @@ export declare class StorageChannelsStopSecurity extends SpeakeasyBase {
     option5?: StorageChannelsStopSecurityOption5;
 }
 export declare class StorageChannelsStopRequest extends SpeakeasyBase {
-    queryParams: StorageChannelsStopQueryParams;
-    request?: shared.Channel;
-    security: StorageChannelsStopSecurity;
+    channel?: shared.Channel;
+    /**
+     * Data format for the response.
+     */
+    alt?: shared.AltEnum;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauthToken?: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * Upload protocol for media (e.g. "media", "multipart", "resumable").
+     */
+    uploadType?: string;
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    userIp?: string;
 }
 export declare class StorageChannelsStopResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

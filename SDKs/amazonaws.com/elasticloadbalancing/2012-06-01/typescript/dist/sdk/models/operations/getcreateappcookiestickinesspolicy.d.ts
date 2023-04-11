@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetCreateAppCookieStickinessPolicyActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETCreateAppCookieStickinessPolicyActionEnum {
     CreateAppCookieStickinessPolicy = "CreateAppCookieStickinessPolicy"
 }
-export declare enum GetCreateAppCookieStickinessPolicyVersionEnum {
+export declare enum GETCreateAppCookieStickinessPolicyVersionEnum {
     TwoThousandAndTwelve0601 = "2012-06-01"
 }
-export declare class GetCreateAppCookieStickinessPolicyQueryParams extends SpeakeasyBase {
-    action: GetCreateAppCookieStickinessPolicyActionEnum;
+export declare class GETCreateAppCookieStickinessPolicyRequest extends SpeakeasyBase {
+    action: GETCreateAppCookieStickinessPolicyActionEnum;
+    /**
+     * The name of the application cookie used for stickiness.
+     */
     cookieName: string;
+    /**
+     * The name of the load balancer.
+     */
     loadBalancerName: string;
+    /**
+     * The name of the policy being created. Policy names must consist of alphanumeric characters and dashes (-). This name must be unique within the set of policies for this load balancer.
+     */
     policyName: string;
-    version: GetCreateAppCookieStickinessPolicyVersionEnum;
-}
-export declare class GetCreateAppCookieStickinessPolicyHeaders extends SpeakeasyBase {
+    version: GETCreateAppCookieStickinessPolicyVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +29,9 @@ export declare class GetCreateAppCookieStickinessPolicyHeaders extends Speakeasy
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetCreateAppCookieStickinessPolicyRequest extends SpeakeasyBase {
-    queryParams: GetCreateAppCookieStickinessPolicyQueryParams;
-    headers: GetCreateAppCookieStickinessPolicyHeaders;
-}
-export declare class GetCreateAppCookieStickinessPolicyResponse extends SpeakeasyBase {
+export declare class GETCreateAppCookieStickinessPolicyResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

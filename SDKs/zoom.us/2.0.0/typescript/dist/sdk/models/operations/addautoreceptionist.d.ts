@@ -1,27 +1,68 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class AddAutoReceptionistApplicationJson extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class AddAutoReceptionistApplicationJSON extends SpeakeasyBase {
+    /**
+     * Provide a name to help identify the auto receptionist.
+     */
     name: string;
+    /**
+     * Unique identifier of the site where the auto receptionist is to be assigned. This field is required only if you have [multiple sites](https://support.zoom.us/hc/en-us/articles/360020809672-Managing-Multiple-Sites) enabled.
+     */
     siteId?: string;
 }
-export declare class AddAutoReceptionistMultipartFormData extends SpeakeasyBase {
-    name: string;
-    siteId?: string;
-}
-export declare class AddAutoReceptionistRequests extends SpeakeasyBase {
-    object?: AddAutoReceptionistApplicationJson;
-    object1?: AddAutoReceptionistMultipartFormData;
-}
-export declare class AddAutoReceptionist201ApplicationJson extends SpeakeasyBase {
+/**
+ * **HTTP Status Code:** `201` **Created**
+ *
+ * @remarks
+ *
+ * Auto receptionist added successfully.
+ */
+export declare class AddAutoReceptionist201ApplicationXML extends SpeakeasyBase {
+    /**
+     *  Extension number assigned to the auto receptionist.
+     */
     extensionNumber?: number;
+    /**
+     * Auto receptionist ID. Unique Identifier of the auto receptionist.
+     */
     id?: string;
+    /**
+     *  Name of the auto receptionist.
+     */
     name?: string;
 }
-export declare class AddAutoReceptionistRequest extends SpeakeasyBase {
-    request?: AddAutoReceptionistRequests;
+/**
+ * **HTTP Status Code:** `201` **Created**
+ *
+ * @remarks
+ *
+ * Auto receptionist added successfully.
+ */
+export declare class AddAutoReceptionist201ApplicationJSON extends SpeakeasyBase {
+    /**
+     *  Extension number assigned to the auto receptionist.
+     */
+    extensionNumber?: number;
+    /**
+     * Auto receptionist ID. Unique Identifier of the auto receptionist.
+     */
+    id?: string;
+    /**
+     *  Name of the auto receptionist.
+     */
+    name?: string;
 }
 export declare class AddAutoReceptionistResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    addAutoReceptionist201ApplicationJSONObject?: AddAutoReceptionist201ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * **HTTP Status Code:** `201` **Created**
+     *
+     * @remarks
+     *
+     * Auto receptionist added successfully.
+     */
+    addAutoReceptionist201ApplicationJSONObject?: AddAutoReceptionist201ApplicationJSON;
 }

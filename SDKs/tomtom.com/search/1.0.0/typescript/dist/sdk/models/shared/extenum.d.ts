@@ -1,3 +1,6 @@
+/**
+ * Expected response format.
+ */
 export declare enum ExtEnum {
     Json = "json",
     Jsonp = "jsonp",

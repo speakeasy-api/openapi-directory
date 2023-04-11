@@ -1,6 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeServiceIntegrationHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DescribeServiceIntegrationRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -9,15 +10,32 @@ export declare class DescribeServiceIntegrationHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DescribeServiceIntegrationRequest extends SpeakeasyBase {
-    headers: DescribeServiceIntegrationHeaders;
-}
 export declare class DescribeServiceIntegrationResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     describeServiceIntegrationResponse?: shared.DescribeServiceIntegrationResponse;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

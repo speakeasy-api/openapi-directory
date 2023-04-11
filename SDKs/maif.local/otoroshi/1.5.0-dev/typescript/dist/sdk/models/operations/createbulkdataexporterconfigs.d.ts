@@ -1,25 +1,38 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class CreateBulkDataExporterConfigsSecurity extends SpeakeasyBase {
-    otoroshiAuth: shared.SchemeOtoroshiAuth;
+    password: string;
+    username: string;
 }
-export declare enum CreateBulkDataExporterConfigs200ApplicationJsonStatusEnum {
+/**
+ * Status
+ */
+export declare enum CreateBulkDataExporterConfigs200ApplicationJSONStatusEnum {
     TwoHundredAndOne = "201"
 }
 /**
  * The bulk response
-**/
-export declare class CreateBulkDataExporterConfigs200ApplicationJson extends SpeakeasyBase {
+ */
+export declare class CreateBulkDataExporterConfigs200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Whether the action was carried out correctly or not
+     */
     created?: boolean;
+    /**
+     * Data exporter id
+     */
     id?: boolean;
-    status?: CreateBulkDataExporterConfigs200ApplicationJsonStatusEnum;
-}
-export declare class CreateBulkDataExporterConfigsRequest extends SpeakeasyBase {
-    request?: shared.DataExporterConfig;
-    security: CreateBulkDataExporterConfigsSecurity;
+    /**
+     * Status
+     */
+    status?: CreateBulkDataExporterConfigs200ApplicationJSONStatusEnum;
 }
 export declare class CreateBulkDataExporterConfigsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createBulkDataExporterConfigs200ApplicationJSONObjects?: CreateBulkDataExporterConfigs200ApplicationJson[];
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful operation
+     */
+    createBulkDataExporterConfigs200ApplicationJSONObjects?: CreateBulkDataExporterConfigs200ApplicationJSON[];
 }

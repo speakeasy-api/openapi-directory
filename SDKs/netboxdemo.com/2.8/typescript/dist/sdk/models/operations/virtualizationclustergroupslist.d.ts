@@ -1,6 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class VirtualizationClusterGroupsListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class VirtualizationClusterGroupsListRequest extends SpeakeasyBase {
     description?: string;
     descriptionIc?: string;
     descriptionIe?: string;
@@ -17,6 +18,9 @@ export declare class VirtualizationClusterGroupsListQueryParams extends Speakeas
     idLt?: string;
     idLte?: string;
     idN?: string;
+    /**
+     * Number of results to return per page.
+     */
     limit?: number;
     name?: string;
     nameIc?: string;
@@ -28,6 +32,9 @@ export declare class VirtualizationClusterGroupsListQueryParams extends Speakeas
     nameNie?: string;
     nameNiew?: string;
     nameNisw?: string;
+    /**
+     * The initial index from which to return the results.
+     */
     offset?: number;
     q?: string;
     slug?: string;
@@ -41,17 +48,15 @@ export declare class VirtualizationClusterGroupsListQueryParams extends Speakeas
     slugNiew?: string;
     slugNisw?: string;
 }
-export declare class VirtualizationClusterGroupsList200ApplicationJson extends SpeakeasyBase {
+export declare class VirtualizationClusterGroupsList200ApplicationJSON extends SpeakeasyBase {
     count: number;
     next?: string;
     previous?: string;
     results: shared.ClusterGroup[];
 }
-export declare class VirtualizationClusterGroupsListRequest extends SpeakeasyBase {
-    queryParams: VirtualizationClusterGroupsListQueryParams;
-}
 export declare class VirtualizationClusterGroupsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    virtualizationClusterGroupsList200ApplicationJSONObject?: VirtualizationClusterGroupsList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    virtualizationClusterGroupsList200ApplicationJSONObject?: VirtualizationClusterGroupsList200ApplicationJSON;
 }

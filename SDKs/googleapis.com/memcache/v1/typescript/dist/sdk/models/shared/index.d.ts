@@ -13,7 +13,6 @@ export * from "./node";
 export * from "./nodeconfig";
 export * from "./operation";
 export * from "./reschedulemaintenancerequest";
-export * from "./security";
 export * from "./status";
 export * from "./timeofday";
 export * from "./updateparametersrequest";

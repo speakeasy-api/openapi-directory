@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostRebootInstancesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTRebootInstancesActionEnum {
     RebootInstances = "RebootInstances"
 }
-export declare enum PostRebootInstancesVersionEnum {
+export declare enum POSTRebootInstancesVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostRebootInstancesQueryParams extends SpeakeasyBase {
-    action: PostRebootInstancesActionEnum;
-    version: PostRebootInstancesVersionEnum;
-}
-export declare class PostRebootInstancesHeaders extends SpeakeasyBase {
+export declare class POSTRebootInstancesRequest extends SpeakeasyBase {
+    action: POSTRebootInstancesActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTRebootInstancesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +18,8 @@ export declare class PostRebootInstancesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostRebootInstancesRequest extends SpeakeasyBase {
-    queryParams: PostRebootInstancesQueryParams;
-    headers: PostRebootInstancesHeaders;
-    request?: Uint8Array;
-}
-export declare class PostRebootInstancesResponse extends SpeakeasyBase {
+export declare class POSTRebootInstancesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

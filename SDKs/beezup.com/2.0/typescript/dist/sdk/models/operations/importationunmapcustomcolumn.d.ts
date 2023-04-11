@@ -1,15 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ImportationUnmapCustomColumnPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ImportationUnmapCustomColumnRequest extends SpeakeasyBase {
+    /**
+     * The custom column identifier
+     */
     columnId: string;
+    /**
+     * The execution identifier of you catalog importation
+     */
     executionId: string;
+    /**
+     * Your store identifier
+     */
     storeId: string;
 }
-export declare class ImportationUnmapCustomColumnRequest extends SpeakeasyBase {
-    pathParams: ImportationUnmapCustomColumnPathParams;
-}
 export declare class ImportationUnmapCustomColumnResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     * Occurs when a user tries to work on the wrong store.
+     *
+     * @remarks
+     * Occurs when the message concerns the wrong execution.
+     * Occurs when a catalog column is not found.
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,10 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class SaveCreditCardInfoRequest extends SpeakeasyBase {
-    request: shared.CreditCardInfo;
-}
+import { AxiosResponse } from "axios";
 export declare class SaveCreditCardInfoResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     * BadRequest
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

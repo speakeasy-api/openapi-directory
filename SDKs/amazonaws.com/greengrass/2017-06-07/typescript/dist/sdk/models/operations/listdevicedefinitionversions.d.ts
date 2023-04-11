@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListDeviceDefinitionVersionsPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListDeviceDefinitionVersionsRequest extends SpeakeasyBase {
+    /**
+     * The ID of the device definition.
+     */
     deviceDefinitionId: string;
-}
-export declare class ListDeviceDefinitionVersionsQueryParams extends SpeakeasyBase {
+    /**
+     * The maximum number of results to be returned per request.
+     */
     maxResults?: string;
+    /**
+     * The token for the next set of results, or ''null'' if there are no additional results.
+     */
     nextToken?: string;
-}
-export declare class ListDeviceDefinitionVersionsHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,14 +22,16 @@ export declare class ListDeviceDefinitionVersionsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class ListDeviceDefinitionVersionsRequest extends SpeakeasyBase {
-    pathParams: ListDeviceDefinitionVersionsPathParams;
-    queryParams: ListDeviceDefinitionVersionsQueryParams;
-    headers: ListDeviceDefinitionVersionsHeaders;
-}
 export declare class ListDeviceDefinitionVersionsResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     listDeviceDefinitionVersionsResponse?: shared.ListDeviceDefinitionVersionsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

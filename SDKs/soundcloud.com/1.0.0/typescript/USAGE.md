@@ -1,21 +1,16 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DeleteLikesPlaylistsPlaylistIdRequest, DeleteLikesPlaylistsPlaylistIdResponse } from "openapi/src/sdk/models/operations";
+import {
+  DeleteLikesPlaylistsPlaylistIdRequest,
+  DeleteLikesPlaylistsPlaylistIdResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: DeleteLikesPlaylistsPlaylistIdRequest = {
-  security: {
-    authHeader: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  },
-  pathParams: {
-    playlistId: 8717895732742165505,
-  },
+  playlistId: 548814,
 };
 
 sdk.likes.deleteLikesPlaylistsPlaylistId(req).then((res: DeleteLikesPlaylistsPlaylistIdResponse | AxiosError) => {

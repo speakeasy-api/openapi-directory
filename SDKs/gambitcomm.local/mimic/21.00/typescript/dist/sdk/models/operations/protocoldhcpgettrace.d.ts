@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ProtocolDhcpGetTracePathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ProtocolDhcpGetTraceRequest extends SpeakeasyBase {
+    /**
+     * Agent to show whether DHCP tracing is enabled
+     */
     agentNum: number;
 }
-export declare class ProtocolDhcpGetTraceRequest extends SpeakeasyBase {
-    pathParams: ProtocolDhcpGetTracePathParams;
-}
 export declare class ProtocolDhcpGetTraceResponse extends SpeakeasyBase {
-    configDHCP?: shared.ConfigDhcp;
+    /**
+     * successful operation
+     */
+    configDHCP?: shared.ConfigDHCP;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

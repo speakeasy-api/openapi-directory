@@ -1,5 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UntagResourceHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class UntagResourceRequestBody extends SpeakeasyBase {
+    /**
+     * The Amazon Resource Name (ARN) of the resource. Tagging is only supported for directories.
+     */
+    resourceArn: string;
+    /**
+     * Keys of the tag that need to be removed from the resource.
+     */
+    tagKeys: string[];
+}
+export declare class UntagResourceRequest extends SpeakeasyBase {
+    requestBody: UntagResourceRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -8,24 +20,44 @@ export declare class UntagResourceHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class UntagResourceRequestBody extends SpeakeasyBase {
-    resourceArn: string;
-    tagKeys: string[];
-}
-export declare class UntagResourceRequest extends SpeakeasyBase {
-    headers: UntagResourceHeaders;
-    request: UntagResourceRequestBody;
-}
 export declare class UntagResourceResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidArnException
+     */
     invalidArnException?: any;
+    /**
+     * InvalidTaggingRequestException
+     */
     invalidTaggingRequestException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
+    /**
+     * RetryableConflictException
+     */
     retryableConflictException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     untagResourceResponse?: Record<string, any>;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

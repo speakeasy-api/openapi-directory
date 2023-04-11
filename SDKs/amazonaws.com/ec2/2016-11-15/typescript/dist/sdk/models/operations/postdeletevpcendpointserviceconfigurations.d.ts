@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteVpcEndpointServiceConfigurationsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteVpcEndpointServiceConfigurationsActionEnum {
     DeleteVpcEndpointServiceConfigurations = "DeleteVpcEndpointServiceConfigurations"
 }
-export declare enum PostDeleteVpcEndpointServiceConfigurationsVersionEnum {
+export declare enum POSTDeleteVpcEndpointServiceConfigurationsVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDeleteVpcEndpointServiceConfigurationsQueryParams extends SpeakeasyBase {
-    action: PostDeleteVpcEndpointServiceConfigurationsActionEnum;
-    version: PostDeleteVpcEndpointServiceConfigurationsVersionEnum;
-}
-export declare class PostDeleteVpcEndpointServiceConfigurationsHeaders extends SpeakeasyBase {
+export declare class POSTDeleteVpcEndpointServiceConfigurationsRequest extends SpeakeasyBase {
+    action: POSTDeleteVpcEndpointServiceConfigurationsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteVpcEndpointServiceConfigurationsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteVpcEndpointServiceConfigurationsHeaders extends S
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteVpcEndpointServiceConfigurationsRequest extends SpeakeasyBase {
-    queryParams: PostDeleteVpcEndpointServiceConfigurationsQueryParams;
-    headers: PostDeleteVpcEndpointServiceConfigurationsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteVpcEndpointServiceConfigurationsResponse extends SpeakeasyBase {
+export declare class POSTDeleteVpcEndpointServiceConfigurationsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

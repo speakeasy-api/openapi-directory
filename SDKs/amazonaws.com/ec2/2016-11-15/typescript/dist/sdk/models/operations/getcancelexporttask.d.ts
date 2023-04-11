@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetCancelExportTaskActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETCancelExportTaskActionEnum {
     CancelExportTask = "CancelExportTask"
 }
-export declare enum GetCancelExportTaskVersionEnum {
+export declare enum GETCancelExportTaskVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetCancelExportTaskQueryParams extends SpeakeasyBase {
-    action: GetCancelExportTaskActionEnum;
+export declare class GETCancelExportTaskRequest extends SpeakeasyBase {
+    action: GETCancelExportTaskActionEnum;
+    /**
+     * The ID of the export task. This is the ID returned by <code>CreateInstanceExportTask</code>.
+     */
     exportTaskId: string;
-    version: GetCancelExportTaskVersionEnum;
-}
-export declare class GetCancelExportTaskHeaders extends SpeakeasyBase {
+    version: GETCancelExportTaskVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,11 +21,8 @@ export declare class GetCancelExportTaskHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetCancelExportTaskRequest extends SpeakeasyBase {
-    queryParams: GetCancelExportTaskQueryParams;
-    headers: GetCancelExportTaskHeaders;
-}
-export declare class GetCancelExportTaskResponse extends SpeakeasyBase {
+export declare class GETCancelExportTaskResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

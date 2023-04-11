@@ -4,7 +4,7 @@ import { ServiceUpdateStatusEnum } from "./serviceupdatestatusenum";
 import { ServiceUpdateTypeEnum } from "./serviceupdatetypeenum";
 /**
  * An update that you can apply to your Redis clusters.
-**/
+ */
 export declare class ServiceUpdateList extends SpeakeasyBase {
     autoUpdateAfterRecommendedApplyByDate?: boolean;
     engine?: string;

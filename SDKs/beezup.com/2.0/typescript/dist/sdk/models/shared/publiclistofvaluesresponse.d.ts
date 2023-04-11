@@ -1,7 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { BeezUpCommonListOfValueItem } from "./beezupcommonlistofvalueitem";
+import { BeezUPCommonListOfValueItem } from "./beezupcommonlistofvalueitem";
 import { PublicListOfValuesResponseLinks } from "./publiclistofvaluesresponselinks";
+/**
+ * The list of values
+ */
 export declare class PublicListOfValuesResponse extends SpeakeasyBase {
-    items?: BeezUpCommonListOfValueItem[];
+    items?: BeezUPCommonListOfValueItem[];
     links?: PublicListOfValuesResponseLinks;
 }

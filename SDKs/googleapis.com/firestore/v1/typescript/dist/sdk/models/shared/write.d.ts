@@ -1,0 +1,35 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { Document } from "./document";
+import { DocumentMask } from "./documentmask";
+import { DocumentTransform } from "./documenttransform";
+import { FieldTransform } from "./fieldtransform";
+import { Precondition } from "./precondition";
+/**
+ * A write on a document.
+ */
+export declare class Write extends SpeakeasyBase {
+    /**
+     * A precondition on a document, used for conditional operations.
+     */
+    currentDocument?: Precondition;
+    /**
+     * A document name to delete. In the format: `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
+     */
+    delete?: string;
+    /**
+     * A transformation of a document.
+     */
+    transform?: DocumentTransform;
+    /**
+     * A Firestore document. Must not exceed 1 MiB - 4 bytes.
+     */
+    update?: Document;
+    /**
+     * A set of field paths on a document. Used to restrict a get or update operation on a document to a subset of its fields. This is different from standard field masks, as this is always scoped to a Document, and takes in account the dynamic nature of Value.
+     */
+    updateMask?: DocumentMask;
+    /**
+     * The transforms to perform after update. This field can be set only when the operation is `update`. If present, this write is equivalent to performing `update` and `transform` to the same document atomically and in order.
+     */
+    updateTransforms?: FieldTransform[];
+}

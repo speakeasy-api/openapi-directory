@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ObParty2 } from "./obparty2";
-export declare class ObReadDataParty3 extends SpeakeasyBase {
-    party?: ObParty2[];
+import { OBParty2 } from "./obparty2";
+export declare class OBReadDataParty3 extends SpeakeasyBase {
+    party?: OBParty2[];
 }

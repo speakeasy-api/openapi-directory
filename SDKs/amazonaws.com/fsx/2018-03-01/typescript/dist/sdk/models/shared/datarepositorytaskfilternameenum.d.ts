@@ -1,0 +1,6 @@
+export declare enum DataRepositoryTaskFilterNameEnum {
+    FileSystemId = "file-system-id",
+    TaskLifecycle = "task-lifecycle",
+    DataRepositoryAssociationId = "data-repository-association-id",
+    FileCacheId = "file-cache-id"
+}

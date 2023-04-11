@@ -1,21 +1,20 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { PreviewsReadRequest, PreviewsReadResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  PreviewsReadRequest,
+  PreviewsReadResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    token: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: PreviewsReadRequest = {
-  pathParams: {
-    fileId: "sit",
+    token: "YOUR_API_KEY_HERE",
   },
+});
+
+const req: PreviewsReadRequest = {
+  fileId: "corrupti",
 };
 
 sdk.previews.previewsRead(req).then((res: PreviewsReadResponse | AxiosError) => {

@@ -1,19 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetAddPartnerActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETAddPartnerActionEnum {
     AddPartner = "AddPartner"
 }
-export declare enum GetAddPartnerVersionEnum {
+export declare enum GETAddPartnerVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class GetAddPartnerQueryParams extends SpeakeasyBase {
+export declare class GETAddPartnerRequest extends SpeakeasyBase {
+    /**
+     * The Amazon Web Services account ID that owns the cluster.
+     */
     accountId: string;
-    action: GetAddPartnerActionEnum;
+    action: GETAddPartnerActionEnum;
+    /**
+     * The cluster identifier of the cluster that receives data from the partner.
+     */
     clusterIdentifier: string;
+    /**
+     * The name of the database that receives data from the partner.
+     */
     databaseName: string;
+    /**
+     * The name of the partner that is authorized to send data.
+     */
     partnerName: string;
-    version: GetAddPartnerVersionEnum;
-}
-export declare class GetAddPartnerHeaders extends SpeakeasyBase {
+    version: GETAddPartnerVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -22,12 +33,9 @@ export declare class GetAddPartnerHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetAddPartnerRequest extends SpeakeasyBase {
-    queryParams: GetAddPartnerQueryParams;
-    headers: GetAddPartnerHeaders;
-}
-export declare class GetAddPartnerResponse extends SpeakeasyBase {
+export declare class GETAddPartnerResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteWarmPoolActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteWarmPoolActionEnum {
     DeleteWarmPool = "DeleteWarmPool"
 }
-export declare enum PostDeleteWarmPoolVersionEnum {
+export declare enum POSTDeleteWarmPoolVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class PostDeleteWarmPoolQueryParams extends SpeakeasyBase {
-    action: PostDeleteWarmPoolActionEnum;
-    version: PostDeleteWarmPoolVersionEnum;
-}
-export declare class PostDeleteWarmPoolHeaders extends SpeakeasyBase {
+export declare class POSTDeleteWarmPoolRequest extends SpeakeasyBase {
+    action: POSTDeleteWarmPoolActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteWarmPoolVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteWarmPoolHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteWarmPoolRequest extends SpeakeasyBase {
-    queryParams: PostDeleteWarmPoolQueryParams;
-    headers: PostDeleteWarmPoolHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteWarmPoolResponse extends SpeakeasyBase {
+export declare class POSTDeleteWarmPoolResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

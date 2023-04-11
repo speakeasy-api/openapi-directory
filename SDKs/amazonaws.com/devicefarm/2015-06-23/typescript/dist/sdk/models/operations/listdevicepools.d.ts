@@ -1,12 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListDevicePoolsQueryParams extends SpeakeasyBase {
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListDevicePoolsXAmzTargetEnum {
     DeviceFarm20150623ListDevicePools = "DeviceFarm_20150623.ListDevicePools"
 }
-export declare class ListDevicePoolsHeaders extends SpeakeasyBase {
+export declare class ListDevicePoolsRequest extends SpeakeasyBase {
+    listDevicePoolsRequest: shared.ListDevicePoolsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -15,18 +14,33 @@ export declare class ListDevicePoolsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: ListDevicePoolsXAmzTargetEnum;
-}
-export declare class ListDevicePoolsRequest extends SpeakeasyBase {
-    queryParams: ListDevicePoolsQueryParams;
-    headers: ListDevicePoolsHeaders;
-    request: shared.ListDevicePoolsRequest;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class ListDevicePoolsResponse extends SpeakeasyBase {
+    /**
+     * ArgumentException
+     */
     argumentException?: any;
     contentType: string;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * Success
+     */
     listDevicePoolsResult?: shared.ListDevicePoolsResult;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
+    /**
+     * ServiceAccountException
+     */
     serviceAccountException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

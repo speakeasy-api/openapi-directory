@@ -1,8 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class TagResourcePathParams extends SpeakeasyBase {
-    resourceArn: string;
+import { AxiosResponse } from "axios";
+export declare class TagResourceRequestBody extends SpeakeasyBase {
+    /**
+     * Tag resource by Tags.
+     */
+    tags: Record<string, string>;
 }
-export declare class TagResourceHeaders extends SpeakeasyBase {
+export declare class TagResourceRequest extends SpeakeasyBase {
+    requestBody: TagResourceRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -10,21 +15,33 @@ export declare class TagResourceHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class TagResourceRequestBody extends SpeakeasyBase {
-    tags: Record<string, string>;
-}
-export declare class TagResourceRequest extends SpeakeasyBase {
-    pathParams: TagResourcePathParams;
-    headers: TagResourceHeaders;
-    request: TagResourceRequestBody;
+    /**
+     * Tag resource by ARN.
+     */
+    resourceArn: string;
 }
 export declare class TagResourceResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

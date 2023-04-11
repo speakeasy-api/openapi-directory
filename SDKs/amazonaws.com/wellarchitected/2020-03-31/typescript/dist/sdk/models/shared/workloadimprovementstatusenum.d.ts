@@ -1,3 +1,6 @@
+/**
+ * The improvement status for a workload.
+ */
 export declare enum WorkloadImprovementStatusEnum {
     NotApplicable = "NOT_APPLICABLE",
     NotStarted = "NOT_STARTED",

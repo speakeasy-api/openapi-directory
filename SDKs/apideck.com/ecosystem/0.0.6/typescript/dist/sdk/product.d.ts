@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Product {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,21 +9,24 @@ export declare class Product {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * productListingsAll - List product listings
-     *
      * List product listings
-    **/
+     *
+     * @remarks
+     * List product listings
+     */
     productListingsAll(req: operations.ProductListingsAllRequest, config?: AxiosRequestConfig): Promise<operations.ProductListingsAllResponse>;
     /**
-     * productsAll - List products
-     *
      * List products
-    **/
+     *
+     * @remarks
+     * List products
+     */
     productsAll(req: operations.ProductsAllRequest, config?: AxiosRequestConfig): Promise<operations.ProductsAllResponse>;
     /**
-     * productsOne - Get product
-     *
      * Get product
-    **/
+     *
+     * @remarks
+     * Get product
+     */
     productsOne(req: operations.ProductsOneRequest, config?: AxiosRequestConfig): Promise<operations.ProductsOneResponse>;
 }

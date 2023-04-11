@@ -1,15 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeLifecycleHookTypesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeLifecycleHookTypesActionEnum {
     DescribeLifecycleHookTypes = "DescribeLifecycleHookTypes"
 }
-export declare enum GetDescribeLifecycleHookTypesVersionEnum {
+export declare enum GETDescribeLifecycleHookTypesVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class GetDescribeLifecycleHookTypesQueryParams extends SpeakeasyBase {
-    action: GetDescribeLifecycleHookTypesActionEnum;
-    version: GetDescribeLifecycleHookTypesVersionEnum;
-}
-export declare class GetDescribeLifecycleHookTypesHeaders extends SpeakeasyBase {
+export declare class GETDescribeLifecycleHookTypesRequest extends SpeakeasyBase {
+    action: GETDescribeLifecycleHookTypesActionEnum;
+    version: GETDescribeLifecycleHookTypesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +17,9 @@ export declare class GetDescribeLifecycleHookTypesHeaders extends SpeakeasyBase 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeLifecycleHookTypesRequest extends SpeakeasyBase {
-    queryParams: GetDescribeLifecycleHookTypesQueryParams;
-    headers: GetDescribeLifecycleHookTypesHeaders;
-}
-export declare class GetDescribeLifecycleHookTypesResponse extends SpeakeasyBase {
+export declare class GETDescribeLifecycleHookTypesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Promotions {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +9,10 @@ export declare class Promotions {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * priceOffers - Price Offers
+     * Price Offers
      *
+     * @remarks
      * Retrieve a best price offer given an origin and destination.
-    **/
-    priceOffers(req: operations.PriceOffersRequest, config?: AxiosRequestConfig): Promise<operations.PriceOffersResponse>;
+     */
+    priceOffers(req: operations.PriceOffersRequest, security: operations.PriceOffersSecurity, config?: AxiosRequestConfig): Promise<operations.PriceOffersResponse>;
 }

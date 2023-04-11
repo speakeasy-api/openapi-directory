@@ -1,10 +1,27 @@
-import { AxiosInstance } from "axios";
 import { Projects } from "./projects";
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://firebasedatabase.googleapis.com/"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * The Firebase Realtime Database API enables programmatic provisioning and management of Realtime Database instances.
+ *
+ * @see {@link https://firebase.google.com/docs/reference/rest/database/database-management/rest/}
+ */
 export declare class SDK {
     projects: Projects;
     _defaultClient: AxiosInstance;
@@ -13,5 +30,6 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
 }

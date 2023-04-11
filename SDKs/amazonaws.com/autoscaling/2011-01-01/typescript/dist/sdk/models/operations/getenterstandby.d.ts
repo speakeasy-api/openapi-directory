@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetEnterStandbyActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETEnterStandbyActionEnum {
     EnterStandby = "EnterStandby"
 }
-export declare enum GetEnterStandbyVersionEnum {
+export declare enum GETEnterStandbyVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class GetEnterStandbyQueryParams extends SpeakeasyBase {
-    action: GetEnterStandbyActionEnum;
+export declare class GETEnterStandbyRequest extends SpeakeasyBase {
+    action: GETEnterStandbyActionEnum;
+    /**
+     * The name of the Auto Scaling group.
+     */
     autoScalingGroupName: string;
+    /**
+     * The IDs of the instances. You can specify up to 20 instances.
+     */
     instanceIds?: string[];
+    /**
+     * Indicates whether to decrement the desired capacity of the Auto Scaling group by the number of instances moved to <code>Standby</code> mode.
+     */
     shouldDecrementDesiredCapacity: boolean;
-    version: GetEnterStandbyVersionEnum;
-}
-export declare class GetEnterStandbyHeaders extends SpeakeasyBase {
+    version: GETEnterStandbyVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +29,9 @@ export declare class GetEnterStandbyHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetEnterStandbyRequest extends SpeakeasyBase {
-    queryParams: GetEnterStandbyQueryParams;
-    headers: GetEnterStandbyHeaders;
-}
-export declare class GetEnterStandbyResponse extends SpeakeasyBase {
+export declare class GETEnterStandbyResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

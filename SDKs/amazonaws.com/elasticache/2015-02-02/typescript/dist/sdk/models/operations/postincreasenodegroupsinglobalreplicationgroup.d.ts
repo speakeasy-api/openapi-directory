@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostIncreaseNodeGroupsInGlobalReplicationGroupActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTIncreaseNodeGroupsInGlobalReplicationGroupActionEnum {
     IncreaseNodeGroupsInGlobalReplicationGroup = "IncreaseNodeGroupsInGlobalReplicationGroup"
 }
-export declare enum PostIncreaseNodeGroupsInGlobalReplicationGroupVersionEnum {
+export declare enum POSTIncreaseNodeGroupsInGlobalReplicationGroupVersionEnum {
     TwoThousandAndFifteen0202 = "2015-02-02"
 }
-export declare class PostIncreaseNodeGroupsInGlobalReplicationGroupQueryParams extends SpeakeasyBase {
-    action: PostIncreaseNodeGroupsInGlobalReplicationGroupActionEnum;
-    version: PostIncreaseNodeGroupsInGlobalReplicationGroupVersionEnum;
-}
-export declare class PostIncreaseNodeGroupsInGlobalReplicationGroupHeaders extends SpeakeasyBase {
+export declare class POSTIncreaseNodeGroupsInGlobalReplicationGroupRequest extends SpeakeasyBase {
+    action: POSTIncreaseNodeGroupsInGlobalReplicationGroupActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTIncreaseNodeGroupsInGlobalReplicationGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostIncreaseNodeGroupsInGlobalReplicationGroupHeaders exten
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostIncreaseNodeGroupsInGlobalReplicationGroupRequest extends SpeakeasyBase {
-    queryParams: PostIncreaseNodeGroupsInGlobalReplicationGroupQueryParams;
-    headers: PostIncreaseNodeGroupsInGlobalReplicationGroupHeaders;
-    request?: Uint8Array;
-}
-export declare class PostIncreaseNodeGroupsInGlobalReplicationGroupResponse extends SpeakeasyBase {
+export declare class POSTIncreaseNodeGroupsInGlobalReplicationGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Echo back your payload
+ */
 export declare class Echo {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +12,7 @@ export declare class Echo {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * postSupportEcho - Return your POSTed data for testing
-    **/
+     * Return your POSTed data for testing
+     */
     postSupportEcho(config?: AxiosRequestConfig): Promise<operations.PostSupportEchoResponse>;
 }

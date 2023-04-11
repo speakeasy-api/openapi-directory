@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeReportCreationXAmzTargetEnum {
-    ResourceGroupsTaggingApi20170126DescribeReportCreation = "ResourceGroupsTaggingAPI_20170126.DescribeReportCreation"
+    ResourceGroupsTaggingAPI20170126DescribeReportCreation = "ResourceGroupsTaggingAPI_20170126.DescribeReportCreation"
 }
-export declare class DescribeReportCreationHeaders extends SpeakeasyBase {
+export declare class DescribeReportCreationRequest extends SpeakeasyBase {
+    requestBody: Record<string, any>;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class DescribeReportCreationHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeReportCreationXAmzTargetEnum;
 }
-export declare class DescribeReportCreationRequest extends SpeakeasyBase {
-    headers: DescribeReportCreationHeaders;
-    request: Record<string, any>;
-}
 export declare class DescribeReportCreationResponse extends SpeakeasyBase {
+    /**
+     * ConstraintViolationException
+     */
     constraintViolationException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     describeReportCreationOutput?: shared.DescribeReportCreationOutput;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottledException
+     */
     throttledException?: any;
 }

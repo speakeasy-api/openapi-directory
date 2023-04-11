@@ -1,11 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetProjectsReportRequest extends SpeakeasyBase {
-    request?: shared.ReportFilter;
-}
+import { AxiosResponse } from "axios";
 export declare class GetProjectsReportResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * UserNotFound
+     */
     error?: shared.ErrorT;
+    /**
+     * User stats for client and vendors
+     */
     projectList?: shared.ProjectList;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

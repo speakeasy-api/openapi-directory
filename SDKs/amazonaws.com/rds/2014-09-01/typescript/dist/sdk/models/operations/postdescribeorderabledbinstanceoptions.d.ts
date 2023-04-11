@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeOrderableDbInstanceOptionsActionEnum {
-    DescribeOrderableDbInstanceOptions = "DescribeOrderableDBInstanceOptions"
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeOrderableDBInstanceOptionsActionEnum {
+    DescribeOrderableDBInstanceOptions = "DescribeOrderableDBInstanceOptions"
 }
-export declare enum PostDescribeOrderableDbInstanceOptionsVersionEnum {
+export declare enum POSTDescribeOrderableDBInstanceOptionsVersionEnum {
     TwoThousandAndFourteen0901 = "2014-09-01"
 }
-export declare class PostDescribeOrderableDbInstanceOptionsQueryParams extends SpeakeasyBase {
-    action: PostDescribeOrderableDbInstanceOptionsActionEnum;
-    version: PostDescribeOrderableDbInstanceOptionsVersionEnum;
-}
-export declare class PostDescribeOrderableDbInstanceOptionsHeaders extends SpeakeasyBase {
+export declare class POSTDescribeOrderableDBInstanceOptionsRequest extends SpeakeasyBase {
+    action: POSTDescribeOrderableDBInstanceOptionsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDescribeOrderableDBInstanceOptionsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDescribeOrderableDbInstanceOptionsHeaders extends Speak
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeOrderableDbInstanceOptionsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeOrderableDbInstanceOptionsQueryParams;
-    headers: PostDescribeOrderableDbInstanceOptionsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeOrderableDbInstanceOptionsResponse extends SpeakeasyBase {
+export declare class POSTDescribeOrderableDBInstanceOptionsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

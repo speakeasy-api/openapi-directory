@@ -1,9 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { CurrencyEnum } from "./currencyenum";
-import { DocumentLanguageEnum } from "./documentlanguageenum";
-import { PaymentMethodEnum } from "./paymentmethodenum";
-import { DocumentSettings } from "./documentsettings";
 import { DocumentInsertTypeEnum } from "./documentinserttypeenum";
+import { DocumentLanguageEnum } from "./documentlanguageenum";
+import { DocumentSettings } from "./documentsettings";
+import { PaymentMethodEnum } from "./paymentmethodenum";
+/**
+ * DocumentInsert object that you would like to store.
+ */
 export declare class DocumentInsert extends SpeakeasyBase {
     bankAccountId?: number;
     blockId: number;

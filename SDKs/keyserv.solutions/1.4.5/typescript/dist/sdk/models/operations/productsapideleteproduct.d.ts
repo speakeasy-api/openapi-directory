@@ -1,15 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProductsApiDeleteProductPathParams extends SpeakeasyBase {
-    serial: string;
-}
-export declare class ProductsApiDeleteProductHeaders extends SpeakeasyBase {
-    xApiKey: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ProductsApiDeleteProductRequest extends SpeakeasyBase {
-    pathParams: ProductsApiDeleteProductPathParams;
-    headers: ProductsApiDeleteProductHeaders;
+    xApiKey: string;
+    serial: string;
 }
 export declare class ProductsApiDeleteProductResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

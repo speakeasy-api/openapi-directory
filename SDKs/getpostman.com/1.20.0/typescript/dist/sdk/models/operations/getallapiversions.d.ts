@@ -1,8 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetAllApiVersionsPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetAllApiVersionsRequest extends SpeakeasyBase {
     apiId: string;
 }
-export declare class GetAllApiVersions200ApplicationJsonVersions extends SpeakeasyBase {
+export declare class GetAllApiVersions200ApplicationJSONVersions extends SpeakeasyBase {
     createdAt?: string;
     createdBy?: string;
     description?: string;
@@ -11,14 +12,18 @@ export declare class GetAllApiVersions200ApplicationJsonVersions extends Speakea
     summary?: string;
     updatedAt?: string;
 }
-export declare class GetAllApiVersions200ApplicationJson extends SpeakeasyBase {
-    versions?: GetAllApiVersions200ApplicationJsonVersions[];
-}
-export declare class GetAllApiVersionsRequest extends SpeakeasyBase {
-    pathParams: GetAllApiVersionsPathParams;
+/**
+ * Get All API versions
+ */
+export declare class GetAllApiVersions200ApplicationJSON extends SpeakeasyBase {
+    versions?: GetAllApiVersions200ApplicationJSONVersions[];
 }
 export declare class GetAllApiVersionsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getAllApiVersions200ApplicationJSONObject?: GetAllApiVersions200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Get All API versions
+     */
+    getAllApiVersions200ApplicationJSONObject?: GetAllApiVersions200ApplicationJSON;
 }

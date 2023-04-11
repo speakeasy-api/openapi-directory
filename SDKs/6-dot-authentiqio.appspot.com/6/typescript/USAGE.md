@@ -1,19 +1,17 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { KeyRevokeRequest, KeyRevokeResponse } from "openapi/src/sdk/models/operations";
+import {
+  KeyRevokeRequest,
+  KeyRevokeResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: KeyRevokeRequest = {
-  pathParams: {
-    pk: "sit",
-  },
-  queryParams: {
-    secret: "voluptas",
-  },
+  pk: "corrupti",
+  secret: "provident",
 };
 
 sdk.delete.keyRevoke(req).then((res: KeyRevokeResponse | AxiosError) => {

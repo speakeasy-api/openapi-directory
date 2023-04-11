@@ -1,20 +1,34 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ScreenshotsPathParams extends SpeakeasyBase {
-    testId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ScreenshotsSecurity extends SpeakeasyBase {
-    basicAuth: shared.SchemeBasicAuth;
+    password: string;
+    username: string;
 }
 export declare class ScreenshotsRequest extends SpeakeasyBase {
-    pathParams: ScreenshotsPathParams;
-    security: ScreenshotsSecurity;
+    /**
+     * Test ID that details you want to fetch
+     */
+    testId: string;
 }
 export declare class ScreenshotsResponse extends SpeakeasyBase {
-    accessDenied?: any;
+    /**
+     * Access denied. Auth error.
+     */
+    accessDenied?: shared.AccessDenied;
     contentType: string;
-    forbidden?: any;
+    /**
+     * Access denied. Auth error.
+     */
+    forbidden?: shared.Forbidden;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     screenshotDetails?: shared.ScreenshotDetails;
-    screenshotNotFound?: any;
+    /**
+     * Resource not found
+     */
+    screenshotNotFound?: shared.ScreenshotNotFound;
 }

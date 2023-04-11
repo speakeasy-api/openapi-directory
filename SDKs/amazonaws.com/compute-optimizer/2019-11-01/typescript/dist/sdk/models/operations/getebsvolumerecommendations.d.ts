@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum GetEbsVolumeRecommendationsXAmzTargetEnum {
-    ComputeOptimizerServiceGetEbsVolumeRecommendations = "ComputeOptimizerService.GetEBSVolumeRecommendations"
+import { AxiosResponse } from "axios";
+export declare enum GetEBSVolumeRecommendationsXAmzTargetEnum {
+    ComputeOptimizerServiceGetEBSVolumeRecommendations = "ComputeOptimizerService.GetEBSVolumeRecommendations"
 }
-export declare class GetEbsVolumeRecommendationsHeaders extends SpeakeasyBase {
+export declare class GetEBSVolumeRecommendationsRequest extends SpeakeasyBase {
+    getEBSVolumeRecommendationsRequest: shared.GetEBSVolumeRecommendationsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,22 +13,46 @@ export declare class GetEbsVolumeRecommendationsHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: GetEbsVolumeRecommendationsXAmzTargetEnum;
+    xAmzTarget: GetEBSVolumeRecommendationsXAmzTargetEnum;
 }
-export declare class GetEbsVolumeRecommendationsRequest extends SpeakeasyBase {
-    headers: GetEbsVolumeRecommendationsHeaders;
-    request: shared.GetEbsVolumeRecommendationsRequest;
-}
-export declare class GetEbsVolumeRecommendationsResponse extends SpeakeasyBase {
+export declare class GetEBSVolumeRecommendationsResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
-    getEBSVolumeRecommendationsResponse?: shared.GetEbsVolumeRecommendationsResponse;
+    /**
+     * Success
+     */
+    getEBSVolumeRecommendationsResponse?: shared.GetEBSVolumeRecommendationsResponse;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
+    /**
+     * MissingAuthenticationToken
+     */
     missingAuthenticationToken?: any;
+    /**
+     * OptInRequiredException
+     */
     optInRequiredException?: any;
-    resourceNotFoundException?: any;
-    serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ServiceUnavailableException
+     */
+    serviceUnavailableException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

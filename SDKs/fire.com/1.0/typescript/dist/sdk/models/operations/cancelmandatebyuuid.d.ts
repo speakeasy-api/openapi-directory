@@ -1,11 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CancelMandateByUuidPathParams extends SpeakeasyBase {
-    mandateUuid: string;
-}
+import { AxiosResponse } from "axios";
 export declare class CancelMandateByUuidRequest extends SpeakeasyBase {
-    pathParams: CancelMandateByUuidPathParams;
+    mandateUuid: string;
 }
 export declare class CancelMandateByUuidResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

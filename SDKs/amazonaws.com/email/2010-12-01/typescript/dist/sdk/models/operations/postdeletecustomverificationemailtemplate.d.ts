@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteCustomVerificationEmailTemplateActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteCustomVerificationEmailTemplateActionEnum {
     DeleteCustomVerificationEmailTemplate = "DeleteCustomVerificationEmailTemplate"
 }
-export declare enum PostDeleteCustomVerificationEmailTemplateVersionEnum {
+export declare enum POSTDeleteCustomVerificationEmailTemplateVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostDeleteCustomVerificationEmailTemplateQueryParams extends SpeakeasyBase {
-    action: PostDeleteCustomVerificationEmailTemplateActionEnum;
-    version: PostDeleteCustomVerificationEmailTemplateVersionEnum;
-}
-export declare class PostDeleteCustomVerificationEmailTemplateHeaders extends SpeakeasyBase {
+export declare class POSTDeleteCustomVerificationEmailTemplateRequest extends SpeakeasyBase {
+    action: POSTDeleteCustomVerificationEmailTemplateActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteCustomVerificationEmailTemplateVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +18,8 @@ export declare class PostDeleteCustomVerificationEmailTemplateHeaders extends Sp
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteCustomVerificationEmailTemplateRequest extends SpeakeasyBase {
-    queryParams: PostDeleteCustomVerificationEmailTemplateQueryParams;
-    headers: PostDeleteCustomVerificationEmailTemplateHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteCustomVerificationEmailTemplateResponse extends SpeakeasyBase {
+export declare class POSTDeleteCustomVerificationEmailTemplateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

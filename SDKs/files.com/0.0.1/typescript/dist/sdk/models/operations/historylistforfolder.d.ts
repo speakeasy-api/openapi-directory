@@ -1,22 +1,42 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class HistoryListForFolderPathParams extends SpeakeasyBase {
-    path: string;
-}
-export declare class HistoryListForFolderQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class HistoryListForFolderRequest extends SpeakeasyBase {
+    /**
+     * Used for pagination.  When a list request has more records available, cursors are provided in the response headers `X-Files-Cursor-Next` and `X-Files-Cursor-Prev`.  Send one of those cursor value here to resume an existing list from the next available record.  Note: many of our SDKs have iterator methods that will automatically handle cursor-based pagination.
+     */
     cursor?: string;
+    /**
+     * Display format. Leave blank or set to `full` or `parent`.
+     */
     display?: string;
+    /**
+     * Leave blank or set to a date/time to filter later entries.
+     */
     endAt?: Date;
+    /**
+     * Path to operate on.
+     */
+    path: string;
+    /**
+     * Number of records to show per page.  (Max: 10,000, 1,000 or less is recommended).
+     */
     perPage?: number;
+    /**
+     * If set, sort records by the specified field in either `asc` or `desc` direction (e.g. `sort_by[user_id]=desc`). Valid fields are `user_id` and `created_at`.
+     */
     sortBy?: Record<string, any>;
+    /**
+     * Leave blank or set to a date/time to filter earlier entries.
+     */
     startAt?: Date;
 }
-export declare class HistoryListForFolderRequest extends SpeakeasyBase {
-    pathParams: HistoryListForFolderPathParams;
-    queryParams: HistoryListForFolderQueryParams;
-}
 export declare class HistoryListForFolderResponse extends SpeakeasyBase {
+    /**
+     * A list of History objects.
+     */
     actionEntities?: shared.ActionEntity[];
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

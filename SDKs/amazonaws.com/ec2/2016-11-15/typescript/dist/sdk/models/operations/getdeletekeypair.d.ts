@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteKeyPairActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteKeyPairActionEnum {
     DeleteKeyPair = "DeleteKeyPair"
 }
-export declare enum GetDeleteKeyPairVersionEnum {
+export declare enum GETDeleteKeyPairVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetDeleteKeyPairQueryParams extends SpeakeasyBase {
-    action: GetDeleteKeyPairActionEnum;
+export declare class GETDeleteKeyPairRequest extends SpeakeasyBase {
+    action: GETDeleteKeyPairActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
+    /**
+     * The name of the key pair.
+     */
     keyName?: string;
+    /**
+     * The ID of the key pair.
+     */
     keyPairId?: string;
-    version: GetDeleteKeyPairVersionEnum;
-}
-export declare class GetDeleteKeyPairHeaders extends SpeakeasyBase {
+    version: GETDeleteKeyPairVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,11 +29,8 @@ export declare class GetDeleteKeyPairHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteKeyPairRequest extends SpeakeasyBase {
-    queryParams: GetDeleteKeyPairQueryParams;
-    headers: GetDeleteKeyPairHeaders;
-}
-export declare class GetDeleteKeyPairResponse extends SpeakeasyBase {
+export declare class GETDeleteKeyPairResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

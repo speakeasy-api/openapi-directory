@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostRebootDbInstanceActionEnum {
-    RebootDbInstance = "RebootDBInstance"
+import { AxiosResponse } from "axios";
+export declare enum POSTRebootDBInstanceActionEnum {
+    RebootDBInstance = "RebootDBInstance"
 }
-export declare enum PostRebootDbInstanceVersionEnum {
+export declare enum POSTRebootDBInstanceVersionEnum {
     TwoThousandAndThirteen0212 = "2013-02-12"
 }
-export declare class PostRebootDbInstanceQueryParams extends SpeakeasyBase {
-    action: PostRebootDbInstanceActionEnum;
-    version: PostRebootDbInstanceVersionEnum;
-}
-export declare class PostRebootDbInstanceHeaders extends SpeakeasyBase {
+export declare class POSTRebootDBInstanceRequest extends SpeakeasyBase {
+    action: POSTRebootDBInstanceActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTRebootDBInstanceVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostRebootDbInstanceHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostRebootDbInstanceRequest extends SpeakeasyBase {
-    queryParams: PostRebootDbInstanceQueryParams;
-    headers: PostRebootDbInstanceHeaders;
-    request?: Uint8Array;
-}
-export declare class PostRebootDbInstanceResponse extends SpeakeasyBase {
+export declare class POSTRebootDBInstanceResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

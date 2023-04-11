@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Provides information that defines a SAP ASE endpoint.
-**/
+ */
 export declare class SybaseSettings extends SpeakeasyBase {
     databaseName?: string;
     password?: string;

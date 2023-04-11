@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ApiErrorErrors extends SpeakeasyBase {
+export declare class APIErrorErrors extends SpeakeasyBase {
     code?: string;
     detail?: string;
     status?: string;
@@ -7,7 +7,7 @@ export declare class ApiErrorErrors extends SpeakeasyBase {
 }
 /**
  * API invocation or processing error
-**/
-export declare class ApiError extends SpeakeasyBase {
-    errors?: ApiErrorErrors[];
+ */
+export declare class APIError extends SpeakeasyBase {
+    errors?: APIErrorErrors[];
 }

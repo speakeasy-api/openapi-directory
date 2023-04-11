@@ -1,9 +1,34 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreateFargateProfilePathParams extends SpeakeasyBase {
-    name: string;
+import { AxiosResponse } from "axios";
+export declare class CreateFargateProfileRequestBody extends SpeakeasyBase {
+    /**
+     * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request.
+     */
+    clientRequestToken?: string;
+    /**
+     * The name of the Fargate profile.
+     */
+    fargateProfileName: string;
+    /**
+     * The Amazon Resource Name (ARN) of the pod execution role to use for pods that match the selectors in the Fargate profile. The pod execution role allows Fargate infrastructure to register with your cluster as a node, and it provides read access to Amazon ECR image repositories. For more information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/pod-execution-role.html">Pod Execution Role</a> in the <i>Amazon EKS User Guide</i>.
+     */
+    podExecutionRoleArn: string;
+    /**
+     * The selectors to match for pods to use this Fargate profile. Each selector must have an associated namespace. Optionally, you can also specify labels for a namespace. You may specify up to five selectors in a Fargate profile.
+     */
+    selectors?: shared.FargateProfileSelector[];
+    /**
+     * The IDs of subnets to launch your pods into. At this time, pods running on Fargate are not assigned public IP addresses, so only private subnets (with no direct route to an Internet Gateway) are accepted for this parameter.
+     */
+    subnets?: string[];
+    /**
+     * The metadata to apply to the Fargate profile to assist with categorization and organization. Each tag consists of a key and an optional value. You define both. Fargate profile tags do not propagate to any other resources associated with the Fargate profile, such as the pods that are scheduled with it.
+     */
+    tags?: Record<string, string>;
 }
-export declare class CreateFargateProfileHeaders extends SpeakeasyBase {
+export declare class CreateFargateProfileRequest extends SpeakeasyBase {
+    requestBody: CreateFargateProfileRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,28 +36,41 @@ export declare class CreateFargateProfileHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class CreateFargateProfileRequestBody extends SpeakeasyBase {
-    clientRequestToken?: string;
-    fargateProfileName: string;
-    podExecutionRoleArn: string;
-    selectors?: shared.FargateProfileSelector[];
-    subnets?: string[];
-    tags?: Record<string, string>;
-}
-export declare class CreateFargateProfileRequest extends SpeakeasyBase {
-    pathParams: CreateFargateProfilePathParams;
-    headers: CreateFargateProfileHeaders;
-    request: CreateFargateProfileRequestBody;
+    /**
+     * The name of the Amazon EKS cluster to apply the Fargate profile to.
+     */
+    name: string;
 }
 export declare class CreateFargateProfileResponse extends SpeakeasyBase {
+    /**
+     * ClientException
+     */
     clientException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     createFargateProfileResponse?: shared.CreateFargateProfileResponse;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * ResourceLimitExceededException
+     */
     resourceLimitExceededException?: any;
+    /**
+     * ServerException
+     */
     serverException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnsupportedAvailabilityZoneException
+     */
     unsupportedAvailabilityZoneException?: any;
 }

@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Osdb {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,26 +9,30 @@ export declare class Osdb {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * actionHelp - Action help
+     * Action help
      *
+     * @remarks
      * Returns the help text for a given service action
-    **/
+     */
     actionHelp(req: operations.ActionHelpRequest, config?: AxiosRequestConfig): Promise<operations.ActionHelpResponse>;
     /**
-     * describeAction - Describe action
+     * Describe action
      *
+     * @remarks
      * Returns a description of a given service action.
-    **/
+     */
     describeAction(req: operations.DescribeActionRequest, config?: AxiosRequestConfig): Promise<operations.DescribeActionResponse>;
     /**
-     * describeService - Describe service
+     * Describe service
      *
+     * @remarks
      * Returns a description of a given service
-    **/
+     */
     describeService(req: operations.DescribeServiceRequest, config?: AxiosRequestConfig): Promise<operations.DescribeServiceResponse>;
     /**
-     * executeAction - Execute action
+     * Execute action
      *
+     * @remarks
      * Executes a registered service action and returns any output from the action.
      * The data returned in the POST response body may be:
      * * the raw action output,
@@ -45,42 +49,48 @@ export declare class Osdb {
      * * ```curl -ik -X POST -d '{ "q":"skiing", "osdb:response_format": "application/rdf+xml" }' -H 'Content-Type: application/json' https://osdb.openlinksw.com/osdb/api/v1/actions/facet/search/exec```
      * * ```curl -ik -X POST -d '{ "q":"skiing", "osdb:output_type": "url_only" }' -H 'Content-Type: application/json' https://osdb.openlinksw.com/osdb/api/v1/actions/facet/search/exec```
      * * ```curl -ik -X POST -d '{ "Content-Location": "http://demo.openlinksw.co.uk/pubs", "osdb:body_data_src_url": "http://ods-qa.openlinksw.com/DAV/home/osdb/pubs.csv", "extractor": "csv", "osdb:response_format": "application/rdf+xml", "osdb:body_data_encoding": "text/csv" }' -H 'Content-Type: application/json' https://osdb.openlinksw.com/osdb/api/v1/actions/csv_transformer/transform/exec```
-    **/
+     */
     executeAction(req: operations.ExecuteActionRequest, config?: AxiosRequestConfig): Promise<operations.ExecuteActionResponse>;
     /**
-     * listActions - List actions
+     * List actions
      *
+     * @remarks
      * Returns an array of action descriptions for the actions supported by the given service
-    **/
+     */
     listActions(req: operations.ListActionsRequest, config?: AxiosRequestConfig): Promise<operations.ListActionsResponse>;
     /**
-     * listServices - List services
+     * List services
      *
+     * @remarks
      * Returns descriptions of all services registered with the OSDB server.
-    **/
+     */
     listServices(config?: AxiosRequestConfig): Promise<operations.ListServicesResponse>;
     /**
-     * loadService - Load service
+     * Load service
      *
+     * @remarks
      * Loads a service description into the OSDB Service Registry
-    **/
-    loadService(req: operations.LoadServiceRequest, config?: AxiosRequestConfig): Promise<operations.LoadServiceResponse>;
+     */
+    loadService(req: operations.LoadServiceRequestBody, config?: AxiosRequestConfig): Promise<operations.LoadServiceResponse>;
     /**
-     * login - Login
+     * Login
      *
+     * @remarks
      * Logs a user into the OSDB server, authenticating them by their WebID and returning an OSDB session ID in cookie osdb.sid
-    **/
+     */
     login(config?: AxiosRequestConfig): Promise<operations.LoginResponse>;
     /**
-     * logout - Logout
+     * Logout
      *
+     * @remarks
      * Logs a user out of the OSDB server, ending their OSDB session
-    **/
+     */
     logout(config?: AxiosRequestConfig): Promise<operations.LogoutResponse>;
     /**
-     * unloadService - Unload service
+     * Unload service
      *
+     * @remarks
      * Removes a service description from the OSDB Service Registry
-    **/
+     */
     unloadService(req: operations.UnloadServiceRequest, config?: AxiosRequestConfig): Promise<operations.UnloadServiceResponse>;
 }

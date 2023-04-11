@@ -1,18 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetChannelCategoriesPathParams extends SpeakeasyBase {
-    channelId: string;
-}
-export declare class GetChannelCategoriesHeaders extends SpeakeasyBase {
-    acceptEncoding: string[];
-}
+import { AxiosResponse } from "axios";
 export declare class GetChannelCategoriesRequest extends SpeakeasyBase {
-    pathParams: GetChannelCategoriesPathParams;
-    headers: GetChannelCategoriesHeaders;
+    /**
+     * Indicates that the client accepts that the response will be compressed to reduce traffic size.
+     */
+    acceptEncoding: string[];
+    /**
+     * The channel identifier
+     */
+    channelId: string;
 }
 export declare class GetChannelCategoriesResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Channel categories
+     */
     channelRootCategory?: shared.ChannelRootCategory;
 }

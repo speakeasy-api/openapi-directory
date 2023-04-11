@@ -1,17 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+/**
+ * The unique name/type of a rule.
+ */
 export declare enum DeleteGlobalRuleRuleEnum {
     Validity = "VALIDITY",
     Compatibility = "COMPATIBILITY"
 }
-export declare class DeleteGlobalRulePathParams extends SpeakeasyBase {
-    rule: DeleteGlobalRuleRuleEnum;
-}
 export declare class DeleteGlobalRuleRequest extends SpeakeasyBase {
-    pathParams: DeleteGlobalRulePathParams;
+    /**
+     * The unique name/type of a rule.
+     */
+    rule: DeleteGlobalRuleRuleEnum;
 }
 export declare class DeleteGlobalRuleResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Common response for all operations that can return a `404` error.
+     */
     error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

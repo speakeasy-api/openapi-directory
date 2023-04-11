@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetListIdentityPoliciesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETListIdentityPoliciesActionEnum {
     ListIdentityPolicies = "ListIdentityPolicies"
 }
-export declare enum GetListIdentityPoliciesVersionEnum {
+export declare enum GETListIdentityPoliciesVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetListIdentityPoliciesQueryParams extends SpeakeasyBase {
-    action: GetListIdentityPoliciesActionEnum;
+export declare class GETListIdentityPoliciesRequest extends SpeakeasyBase {
+    action: GETListIdentityPoliciesActionEnum;
+    /**
+     * <p>The identity that is associated with the policy for which the policies will be listed. You can specify an identity by using its name or by using its Amazon Resource Name (ARN). Examples: <code>user@example.com</code>, <code>example.com</code>, <code>arn:aws:ses:us-east-1:123456789012:identity/example.com</code>.</p> <p>To successfully call this API, you must own the identity.</p>
+     */
     identity: string;
-    version: GetListIdentityPoliciesVersionEnum;
-}
-export declare class GetListIdentityPoliciesHeaders extends SpeakeasyBase {
+    version: GETListIdentityPoliciesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetListIdentityPoliciesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetListIdentityPoliciesRequest extends SpeakeasyBase {
-    queryParams: GetListIdentityPoliciesQueryParams;
-    headers: GetListIdentityPoliciesHeaders;
-}
-export declare class GetListIdentityPoliciesResponse extends SpeakeasyBase {
+export declare class GETListIdentityPoliciesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,20 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PostSetupV1ServicesIdAllocationsBulkPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class PostSetupV1ServicesIdAllocationsBulkRequests extends SpeakeasyBase {
-    serviceAllocationsInputModel?: Record<string, any>;
-    serviceAllocationsInputModel1?: Record<string, any>;
-    serviceAllocationsInputModel2?: Record<string, any>;
-    serviceAllocationsInputModel3?: Record<string, any>;
-}
+import { AxiosResponse } from "axios";
 export declare class PostSetupV1ServicesIdAllocationsBulkRequest extends SpeakeasyBase {
-    pathParams: PostSetupV1ServicesIdAllocationsBulkPathParams;
-    request?: PostSetupV1ServicesIdAllocationsBulkRequests;
+    serviceAllocationsInputModel?: shared.ServiceAllocationsInputModel;
+    /**
+     * id of service object
+     */
+    id: string;
 }
 export declare class PostSetupV1ServicesIdAllocationsBulkResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     serviceAllocationViewModels?: shared.ServiceAllocationViewModel[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

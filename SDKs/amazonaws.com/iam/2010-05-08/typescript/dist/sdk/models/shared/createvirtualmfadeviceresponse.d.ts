@@ -1,8 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { VirtualMfaDevice } from "./virtualmfadevice";
+import { VirtualMFADevice } from "./virtualmfadevice";
 /**
  * Contains the response to a successful <a>CreateVirtualMFADevice</a> request.
-**/
-export declare class CreateVirtualMfaDeviceResponse extends SpeakeasyBase {
-    virtualMFADevice: VirtualMfaDevice;
+ */
+export declare class CreateVirtualMFADeviceResponse extends SpeakeasyBase {
+    virtualMFADevice: VirtualMFADevice;
 }

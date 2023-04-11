@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbProxy } from "./dbproxy";
-export declare class DescribeDbProxiesResponse extends SpeakeasyBase {
-    dbProxies?: DbProxy[];
+import { DBProxy } from "./dbproxy";
+/**
+ * Success
+ */
+export declare class DescribeDBProxiesResponse extends SpeakeasyBase {
+    dbProxies?: DBProxy[];
     marker?: string;
 }

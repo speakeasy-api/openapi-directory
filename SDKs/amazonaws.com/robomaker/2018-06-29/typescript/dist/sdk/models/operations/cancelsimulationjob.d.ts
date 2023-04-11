@@ -1,5 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CancelSimulationJobHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class CancelSimulationJobRequestBody extends SpeakeasyBase {
+    /**
+     * The simulation job ARN to cancel.
+     */
+    job: string;
+}
+export declare class CancelSimulationJobRequest extends SpeakeasyBase {
+    requestBody: CancelSimulationJobRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -8,19 +16,28 @@ export declare class CancelSimulationJobHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class CancelSimulationJobRequestBody extends SpeakeasyBase {
-    job: string;
-}
-export declare class CancelSimulationJobRequest extends SpeakeasyBase {
-    headers: CancelSimulationJobHeaders;
-    request: CancelSimulationJobRequestBody;
-}
 export declare class CancelSimulationJobResponse extends SpeakeasyBase {
+    /**
+     * Success
+     */
     cancelSimulationJobResponse?: Record<string, any>;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

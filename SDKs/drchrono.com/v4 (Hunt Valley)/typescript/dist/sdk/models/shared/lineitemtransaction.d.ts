@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Group code for adjustment
+ */
 export declare enum LineItemTransactionAdjustmentGroupCodeEnum {
     Unknown = "",
     Co = "CO",
@@ -6,6 +9,9 @@ export declare enum LineItemTransactionAdjustmentGroupCodeEnum {
     Pi = "PI",
     Pr = "PR"
 }
+/**
+ * Reason for adjustment
+ */
 export declare enum LineItemTransactionAdjustmentReasonEnum {
     Minus3 = "-3",
     Minus2 = "-2",
@@ -296,6 +302,9 @@ export declare enum LineItemTransactionAdjustmentReasonEnum {
     Y2 = "Y2",
     Y3 = "Y3"
 }
+/**
+ * Status of claim
+ */
 export declare enum LineItemTransactionClaimStatusEnum {
     Unknown = "",
     Zero = "0",
@@ -317,21 +326,57 @@ export declare enum LineItemTransactionClaimStatusEnum {
     TwentyFive = "25",
     TwentySeven = "27"
 }
+/**
+ * OK
+ */
 export declare class LineItemTransaction extends SpeakeasyBase {
+    /**
+     * Adjustment from total billed
+     */
     adjustment?: number;
+    /**
+     * Group code for adjustment
+     */
     adjustmentGroupCode?: LineItemTransactionAdjustmentGroupCodeEnum;
+    /**
+     * Reason for adjustment
+     */
     adjustmentReason?: LineItemTransactionAdjustmentReasonEnum;
+    /**
+     * Appointment ID
+     */
     appointment?: number;
+    /**
+     * Date of check
+     */
     checkDate?: string;
+    /**
+     * Status of claim
+     */
     claimStatus?: LineItemTransactionClaimStatusEnum;
     createdAt?: string;
+    /**
+     * Doctor ID
+     */
     doctor?: number;
     id?: number;
+    /**
+     * Can be one of the following, `1`(Primary Insurance), `2`(Secondary Insurance)
+     */
     insName?: number;
     insPaid?: number;
+    /**
+     * ID of `/api/line_item` object
+     */
     lineItem?: number;
     patient?: number;
+    /**
+     * Date when transaction is created
+     */
     postedDate?: string;
+    /**
+     * Check number
+     */
     traceNumber?: string;
     updatedAt?: string;
 }

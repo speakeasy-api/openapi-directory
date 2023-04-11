@@ -1,24 +1,22 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { RedactMessageRequest, RedactMessageResponse } from "openapi/src/sdk/models/operations";
+import {
+  shared.RedactTransaction,
+  RedactMessageResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  RedactTransactionProductEnum,
+  RedactTransactionTypeEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: RedactMessageRequest = {
-  security: {
-    basicAuth: {
-      password: "YOUR_PASSWORD_HERE",
-      username: "YOUR_USERNAME_HERE",
-    },
-  },
-  request: {
-    id: "sit",
-    product: "sms",
-    type: "outbound",
-  },
+
+const req: shared.RedactTransaction = {
+  id: "209ab3c7536542b91e8b5aef032f6861",
+  product: RedactTransactionProductEnum.Sms,
+  type: RedactTransactionTypeEnum.Outbound,
 };
 
 sdk.redactMessage(req).then((res: RedactMessageResponse | AxiosError) => {

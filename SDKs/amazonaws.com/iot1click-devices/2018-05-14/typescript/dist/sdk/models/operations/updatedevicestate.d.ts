@@ -1,8 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UpdateDeviceStatePathParams extends SpeakeasyBase {
-    deviceId: string;
+import { AxiosResponse } from "axios";
+export declare class UpdateDeviceStateRequestBody extends SpeakeasyBase {
+    /**
+     * If true, the device is enabled. If false, the device is
+     *
+     * @remarks
+     *  disabled.
+     */
+    enabled?: boolean;
 }
-export declare class UpdateDeviceStateHeaders extends SpeakeasyBase {
+export declare class UpdateDeviceStateRequest extends SpeakeasyBase {
+    requestBody: UpdateDeviceStateRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -10,20 +18,29 @@ export declare class UpdateDeviceStateHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class UpdateDeviceStateRequestBody extends SpeakeasyBase {
-    enabled?: boolean;
-}
-export declare class UpdateDeviceStateRequest extends SpeakeasyBase {
-    pathParams: UpdateDeviceStatePathParams;
-    headers: UpdateDeviceStateHeaders;
-    request: UpdateDeviceStateRequestBody;
+    /**
+     * The unique identifier of the device.
+     */
+    deviceId: string;
 }
 export declare class UpdateDeviceStateResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalFailureException
+     */
     internalFailureException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * Success
+     */
     updateDeviceStateResponse?: Record<string, any>;
 }

@@ -1,12 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeRetentionConfigurationsQueryParams extends SpeakeasyBase {
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum DescribeRetentionConfigurationsXAmzTargetEnum {
     StarlingDoveServiceDescribeRetentionConfigurations = "StarlingDoveService.DescribeRetentionConfigurations"
 }
-export declare class DescribeRetentionConfigurationsHeaders extends SpeakeasyBase {
+export declare class DescribeRetentionConfigurationsRequest extends SpeakeasyBase {
+    describeRetentionConfigurationsRequest: shared.DescribeRetentionConfigurationsRequest;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,16 +19,24 @@ export declare class DescribeRetentionConfigurationsHeaders extends SpeakeasyBas
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeRetentionConfigurationsXAmzTargetEnum;
 }
-export declare class DescribeRetentionConfigurationsRequest extends SpeakeasyBase {
-    queryParams: DescribeRetentionConfigurationsQueryParams;
-    headers: DescribeRetentionConfigurationsHeaders;
-    request: shared.DescribeRetentionConfigurationsRequest;
-}
 export declare class DescribeRetentionConfigurationsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeRetentionConfigurationsResponse?: shared.DescribeRetentionConfigurationsResponse;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
+    /**
+     * NoSuchRetentionConfigurationException
+     */
     noSuchRetentionConfigurationException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

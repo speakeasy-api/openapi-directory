@@ -1,32 +1,39 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { FindRequest, FindResponse } from "openapi/src/sdk/models/operations";
+import {
+  FindRequest,
+  FindResponse,
+  FindIncludeLicensedContentEnum,
+  FindIncludeSpellcheckEnum,
+  FindIncludeTestEnum,
+  FindSourceEnum,
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: FindRequest = {
-  queryParams: {
-    classificationId: [
-      "voluptas",
-    ],
-    classificationName: [
-      "expedita",
-      "consequuntur",
-    ],
-    id: "dolor",
-    includeLicensedContent: " no",
-    includeSpellcheck: " no",
-    includeTest: "yes",
-    keyword: "et",
-    locale: "nihil",
-    page: "rerum",
-    size: "dicta",
-    sort: "debitis",
-    source: "ticketmaster",
-  },
+  classificationId: [
+    "provident",
+    "distinctio",
+    "quibusdam",
+  ],
+  classificationName: [
+    "nulla",
+    "corrupti",
+    "illum",
+  ],
+  id: "vel",
+  includeLicensedContent: FindIncludeLicensedContentEnum.No,
+  includeSpellcheck: FindIncludeSpellcheckEnum.No,
+  includeTest: FindIncludeTestEnum.No,
+  keyword: "iure",
+  locale: "magnam",
+  page: "debitis",
+  size: "ipsa",
+  sort: "delectus",
+  source: FindSourceEnum.Universe,
 };
 
 sdk.find(req).then((res: FindResponse | AxiosError) => {

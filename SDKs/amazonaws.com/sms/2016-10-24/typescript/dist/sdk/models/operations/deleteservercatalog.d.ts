@@ -1,8 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
 export declare enum DeleteServerCatalogXAmzTargetEnum {
-    AwsServerMigrationServiceV20161024DeleteServerCatalog = "AWSServerMigrationService_V2016_10_24.DeleteServerCatalog"
+    AWSServerMigrationServiceV20161024DeleteServerCatalog = "AWSServerMigrationService_V2016_10_24.DeleteServerCatalog"
 }
-export declare class DeleteServerCatalogHeaders extends SpeakeasyBase {
+export declare class DeleteServerCatalogRequest extends SpeakeasyBase {
+    requestBody: Record<string, any>;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,16 +14,28 @@ export declare class DeleteServerCatalogHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteServerCatalogXAmzTargetEnum;
 }
-export declare class DeleteServerCatalogRequest extends SpeakeasyBase {
-    headers: DeleteServerCatalogHeaders;
-    request: Record<string, any>;
-}
 export declare class DeleteServerCatalogResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deleteServerCatalogResponse?: Record<string, any>;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * MissingRequiredParameterException
+     */
     missingRequiredParameterException?: any;
+    /**
+     * OperationNotPermittedException
+     */
     operationNotPermittedException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnauthorizedOperationException
+     */
     unauthorizedOperationException?: any;
 }

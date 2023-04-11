@@ -1,4 +1,7 @@
-export declare enum MessageCode401SbsEnum {
+/**
+ * Message codes defined for signing baskets for HTTP Error code 401 (UNAUTHORIZED).
+ */
+export declare enum MessageCode401SBSEnum {
     CertificateInvalid = "CERTIFICATE_INVALID",
     RoleInvalid = "ROLE_INVALID",
     CertificateExpired = "CERTIFICATE_EXPIRED",

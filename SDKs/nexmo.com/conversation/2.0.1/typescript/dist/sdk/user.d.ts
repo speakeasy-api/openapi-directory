@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * The concept of a user exists in Vonage APIs, you can associate one with a user in your own application if you choose. A user can have multiple memberships to conversations and can communicate with other users through various different mediums.
+ */
 export declare class User {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,31 +12,33 @@ export declare class User {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createUser - Create a user
+     * Create a user
      *
+     * @remarks
      * Note: Users must be created with an admin JWT.
-    **/
-    createUser(req: operations.CreateUserRequest, config?: AxiosRequestConfig): Promise<operations.CreateUserResponse>;
+     */
+    createUser(req: operations.CreateUserRequestBody, config?: AxiosRequestConfig): Promise<operations.CreateUserResponse>;
     /**
-     * deleteUser - Delete a user
-    **/
+     * Delete a user
+     */
     deleteUser(req: operations.DeleteUserRequest, config?: AxiosRequestConfig): Promise<operations.DeleteUserResponse>;
     /**
-     * getUser - Retrieve a user
-    **/
+     * Retrieve a user
+     */
     getUser(req: operations.GetUserRequest, config?: AxiosRequestConfig): Promise<operations.GetUserResponse>;
     /**
-     * getUsers - List users
+     * List users
      *
+     * @remarks
      * This endpoint is **DEPRECATED**. Please use [/v0.2/users](/api/conversation.v2#get-users).
-    **/
+     */
     getUsers(config?: AxiosRequestConfig): Promise<operations.GetUsersResponse>;
     /**
-     * getuserConversations - List user conversations
-    **/
+     * List user conversations
+     */
     getuserConversations(req: operations.GetuserConversationsRequest, config?: AxiosRequestConfig): Promise<operations.GetuserConversationsResponse>;
     /**
-     * updateUser - Update a user
-    **/
+     * Update a user
+     */
     updateUser(req: operations.UpdateUserRequest, config?: AxiosRequestConfig): Promise<operations.UpdateUserResponse>;
 }

@@ -1,5 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetSitesSiteIdSubsitesOutputFormatOutputFormatEnum {
+import { AxiosResponse } from "axios";
+/**
+ * Describes the nature of the address location. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#locationDescriptor target="_blank">locationDescriptor</a>
+ */
+export declare enum GetSitesSiteIDSubsitesOutputFormatLocationDescriptorEnum {
+    Any = "any",
+    AccessPoint = "accessPoint",
+    FrontDoorPoint = "frontDoorPoint",
+    ParcelPoint = "parcelPoint",
+    RooftopPoint = "rooftopPoint",
+    RoutingPoint = "routingPoint"
+}
+/**
+ * Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
+ *
+ * @remarks
+ *
+ * Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
+ */
+export declare enum GetSitesSiteIDSubsitesOutputFormatOutputFormatEnum {
     Json = "json",
     Geojson = "geojson",
     Xhtml = "xhtml",
@@ -8,29 +27,51 @@ export declare enum GetSitesSiteIdSubsitesOutputFormatOutputFormatEnum {
     Csv = "csv",
     Shpz = "shpz"
 }
-export declare class GetSitesSiteIdSubsitesOutputFormatPathParams extends SpeakeasyBase {
-    outputFormat: GetSitesSiteIdSubsitesOutputFormatOutputFormatEnum;
+/**
+ * The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
+ */
+export declare enum GetSitesSiteIDSubsitesOutputFormatOutputSrsEnum {
+    FourThousandThreeHundredAndTwentySix = "4326",
+    FourThousandTwoHundredAndSixtyNine = "4269",
+    ThreeThousandAndFive = "3005",
+    TwentySixThousandNineHundredAndSeven = "26907",
+    TwentySixThousandNineHundredAndEight = "26908",
+    TwentySixThousandNineHundredAndNine = "26909",
+    TwentySixThousandNineHundredAndTen = "26910",
+    TwentySixThousandNineHundredAndEleven = "26911"
+}
+export declare class GetSitesSiteIDSubsitesOutputFormatRequest extends SpeakeasyBase {
+    /**
+     * If true, include only basic match and address details in results. Not supported for shp, csv, and gml formats.
+     */
+    brief?: boolean;
+    /**
+     * Describes the nature of the address location. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#locationDescriptor target="_blank">locationDescriptor</a>
+     */
+    locationDescriptor?: GetSitesSiteIDSubsitesOutputFormatLocationDescriptorEnum;
+    /**
+     * Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
+     *
+     * @remarks
+     *
+     * Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
+     */
+    outputFormat: GetSitesSiteIDSubsitesOutputFormatOutputFormatEnum;
+    /**
+     * The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
+     */
+    outputSRS?: GetSitesSiteIDSubsitesOutputFormatOutputSrsEnum;
+    /**
+     * The distance to move the accessPoint away from the curb and towards the inside of the parcel (in metres). Ignored if locationDescriptor not set to accessPoint.
+     */
+    setBack?: number;
+    /**
+     * A unique, but not immutable, site identifier.
+     */
     siteID: string;
 }
-export declare enum GetSitesSiteIdSubsitesOutputFormatLocationDescriptorEnum {
-    Any = "any",
-    AccessPoint = "accessPoint",
-    FrontDoorPoint = "frontDoorPoint",
-    ParcelPoint = "parcelPoint",
-    RooftopPoint = "rooftopPoint",
-    RoutingPoint = "routingPoint"
-}
-export declare class GetSitesSiteIdSubsitesOutputFormatQueryParams extends SpeakeasyBase {
-    brief?: boolean;
-    locationDescriptor?: GetSitesSiteIdSubsitesOutputFormatLocationDescriptorEnum;
-    outputSRS?: number;
-    setBack?: number;
-}
-export declare class GetSitesSiteIdSubsitesOutputFormatRequest extends SpeakeasyBase {
-    pathParams: GetSitesSiteIdSubsitesOutputFormatPathParams;
-    queryParams: GetSitesSiteIdSubsitesOutputFormatQueryParams;
-}
-export declare class GetSitesSiteIdSubsitesOutputFormatResponse extends SpeakeasyBase {
+export declare class GetSitesSiteIDSubsitesOutputFormatResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

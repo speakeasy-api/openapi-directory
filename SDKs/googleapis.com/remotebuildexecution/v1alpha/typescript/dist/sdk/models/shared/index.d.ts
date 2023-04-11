@@ -8,10 +8,10 @@ export * from "./googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeat
 export * from "./googledevtoolsremotebuildexecutionadminv1alphainstance";
 export * from "./googledevtoolsremotebuildexecutionadminv1alphalistinstancesresponse";
 export * from "./googledevtoolsremotebuildexecutionadminv1alphalistworkerpoolsresponse";
+export * from "./googledevtoolsremotebuildexecutionadminv1alphaschedulernotificationconfig";
 export * from "./googledevtoolsremotebuildexecutionadminv1alphaupdateworkerpoolrequest";
 export * from "./googledevtoolsremotebuildexecutionadminv1alphaworkerconfig";
 export * from "./googledevtoolsremotebuildexecutionadminv1alphaworkerpool";
 export * from "./googlelongrunningoperation";
 export * from "./googlerpcstatus";
-export * from "./security";
 export * from "./xgafvenum";

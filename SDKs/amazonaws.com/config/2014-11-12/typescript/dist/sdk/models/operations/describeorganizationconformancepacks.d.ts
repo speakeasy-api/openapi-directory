@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeOrganizationConformancePacksQueryParams extends SpeakeasyBase {
-    limit?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum DescribeOrganizationConformancePacksXAmzTargetEnum {
     StarlingDoveServiceDescribeOrganizationConformancePacks = "StarlingDoveService.DescribeOrganizationConformancePacks"
 }
-export declare class DescribeOrganizationConformancePacksHeaders extends SpeakeasyBase {
+export declare class DescribeOrganizationConformancePacksRequest extends SpeakeasyBase {
+    describeOrganizationConformancePacksRequest: shared.DescribeOrganizationConformancePacksRequest;
+    /**
+     * Pagination limit
+     */
+    limit?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,17 +23,28 @@ export declare class DescribeOrganizationConformancePacksHeaders extends Speakea
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeOrganizationConformancePacksXAmzTargetEnum;
 }
-export declare class DescribeOrganizationConformancePacksRequest extends SpeakeasyBase {
-    queryParams: DescribeOrganizationConformancePacksQueryParams;
-    headers: DescribeOrganizationConformancePacksHeaders;
-    request: shared.DescribeOrganizationConformancePacksRequest;
-}
 export declare class DescribeOrganizationConformancePacksResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeOrganizationConformancePacksResponse?: shared.DescribeOrganizationConformancePacksResponse;
+    /**
+     * InvalidLimitException
+     */
     invalidLimitException?: any;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * NoSuchOrganizationConformancePackException
+     */
     noSuchOrganizationConformancePackException?: any;
+    /**
+     * OrganizationAccessDeniedException
+     */
     organizationAccessDeniedException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

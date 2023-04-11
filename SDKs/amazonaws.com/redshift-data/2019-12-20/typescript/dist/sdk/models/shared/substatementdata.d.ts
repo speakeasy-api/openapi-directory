@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { StatementStatusStringEnum } from "./statementstatusstringenum";
 /**
  * Information about an SQL statement.
-**/
+ */
 export declare class SubStatementData extends SpeakeasyBase {
     createdAt?: Date;
     duration?: number;

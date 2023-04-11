@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetProjectsHeaders extends SpeakeasyBase {
-    trainingKey: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetProjectsRequest extends SpeakeasyBase {
-    headers: GetProjectsHeaders;
+    trainingKey: string;
 }
 export declare class GetProjectsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
+    /**
+     * OK
+     */
     projects?: shared.Project[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,22 +1,56 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class JoinChannelPathParams extends SpeakeasyBase {
-    channelId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class JoinChannelSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
-}
-export declare class JoinChannel201ApplicationJson extends SpeakeasyBase {
-    addedAt?: Date;
-    id?: string;
+    oAuth: string;
 }
 export declare class JoinChannelRequest extends SpeakeasyBase {
-    pathParams: JoinChannelPathParams;
-    security: JoinChannelSecurity;
+    /**
+     * Channel Id.
+     */
+    channelId: string;
+}
+/**
+ * **HTTP Status Code:** `201`
+ *
+ * @remarks
+ * Successfully joined the channel.
+ */
+export declare class JoinChannel201ApplicationXML extends SpeakeasyBase {
+    /**
+     * The date and time at which a user joined the channel.
+     */
+    addedAt?: Date;
+    /**
+     * Member Id of the user who joined the public channel.
+     */
+    id?: string;
+}
+/**
+ * **HTTP Status Code:** `201`
+ *
+ * @remarks
+ * Successfully joined the channel.
+ */
+export declare class JoinChannel201ApplicationJSON extends SpeakeasyBase {
+    /**
+     * The date and time at which a user joined the channel.
+     */
+    addedAt?: Date;
+    /**
+     * Member Id of the user who joined the public channel.
+     */
+    id?: string;
 }
 export declare class JoinChannelResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    joinChannel201ApplicationJSONObject?: JoinChannel201ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * **HTTP Status Code:** `201`
+     *
+     * @remarks
+     * Successfully joined the channel.
+     */
+    joinChannel201ApplicationJSONObject?: JoinChannel201ApplicationJSON;
 }

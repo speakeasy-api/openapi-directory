@@ -1,3 +1,6 @@
+/**
+ * See Account Types
+ */
 export declare enum AccountTypeEnum {
     Bank = "BANK",
     Current = "CURRENT",

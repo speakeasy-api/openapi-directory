@@ -4,6 +4,9 @@ export declare class Analysis extends SpeakeasyBase {
     config?: string;
     dateCreated?: Date;
     dateFinished?: Date;
+    /**
+     * Date of last modified analysis
+     */
     dateLastModified?: Date;
     dateLaunched?: Date;
     features?: string;

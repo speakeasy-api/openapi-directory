@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetApplySecurityGroupsToLoadBalancerActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETApplySecurityGroupsToLoadBalancerActionEnum {
     ApplySecurityGroupsToLoadBalancer = "ApplySecurityGroupsToLoadBalancer"
 }
-export declare enum GetApplySecurityGroupsToLoadBalancerVersionEnum {
+export declare enum GETApplySecurityGroupsToLoadBalancerVersionEnum {
     TwoThousandAndTwelve0601 = "2012-06-01"
 }
-export declare class GetApplySecurityGroupsToLoadBalancerQueryParams extends SpeakeasyBase {
-    action: GetApplySecurityGroupsToLoadBalancerActionEnum;
+export declare class GETApplySecurityGroupsToLoadBalancerRequest extends SpeakeasyBase {
+    action: GETApplySecurityGroupsToLoadBalancerActionEnum;
+    /**
+     * The name of the load balancer.
+     */
     loadBalancerName: string;
+    /**
+     * The IDs of the security groups to associate with the load balancer. Note that you cannot specify the name of the security group.
+     */
     securityGroups: string[];
-    version: GetApplySecurityGroupsToLoadBalancerVersionEnum;
-}
-export declare class GetApplySecurityGroupsToLoadBalancerHeaders extends SpeakeasyBase {
+    version: GETApplySecurityGroupsToLoadBalancerVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetApplySecurityGroupsToLoadBalancerHeaders extends Speakea
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetApplySecurityGroupsToLoadBalancerRequest extends SpeakeasyBase {
-    queryParams: GetApplySecurityGroupsToLoadBalancerQueryParams;
-    headers: GetApplySecurityGroupsToLoadBalancerHeaders;
-}
-export declare class GetApplySecurityGroupsToLoadBalancerResponse extends SpeakeasyBase {
+export declare class GETApplySecurityGroupsToLoadBalancerResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

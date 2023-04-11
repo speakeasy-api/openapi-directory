@@ -1,12 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetVersionsSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
-}
-export declare class GetVersionsRequest extends SpeakeasyBase {
-    security: GetVersionsSecurity;
-}
+import { AxiosResponse } from "axios";
 export declare class GetVersionsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

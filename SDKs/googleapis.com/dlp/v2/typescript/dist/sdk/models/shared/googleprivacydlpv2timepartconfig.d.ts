@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The part of the time to keep.
+ */
 export declare enum GooglePrivacyDlpV2TimePartConfigPartToExtractEnum {
     TimePartUnspecified = "TIME_PART_UNSPECIFIED",
     Year = "YEAR",
@@ -10,7 +13,10 @@ export declare enum GooglePrivacyDlpV2TimePartConfigPartToExtractEnum {
 }
 /**
  * For use with `Date`, `Timestamp`, and `TimeOfDay`, extract or preserve a portion of the value.
-**/
+ */
 export declare class GooglePrivacyDlpV2TimePartConfig extends SpeakeasyBase {
+    /**
+     * The part of the time to keep.
+     */
     partToExtract?: GooglePrivacyDlpV2TimePartConfigPartToExtractEnum;
 }

@@ -1,16 +1,33 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteProjectUsernameProjectBuildCachePathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteProjectUsernameProjectBuildCacheRequest extends SpeakeasyBase {
+    /**
+     * XXXXXXXXX
+     *
+     * @remarks
+     *
+     */
     project: string;
+    /**
+     * XXXXXXXXX
+     *
+     * @remarks
+     *
+     */
     username: string;
 }
-export declare class DeleteProjectUsernameProjectBuildCache200ApplicationJson extends SpeakeasyBase {
+/**
+ * status message
+ */
+export declare class DeleteProjectUsernameProjectBuildCache200ApplicationJSON extends SpeakeasyBase {
     status?: string;
-}
-export declare class DeleteProjectUsernameProjectBuildCacheRequest extends SpeakeasyBase {
-    pathParams: DeleteProjectUsernameProjectBuildCachePathParams;
 }
 export declare class DeleteProjectUsernameProjectBuildCacheResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deleteProjectUsernameProjectBuildCache200ApplicationJSONObject?: DeleteProjectUsernameProjectBuildCache200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * status message
+     */
+    deleteProjectUsernameProjectBuildCache200ApplicationJSONObject?: DeleteProjectUsernameProjectBuildCache200ApplicationJSON;
 }

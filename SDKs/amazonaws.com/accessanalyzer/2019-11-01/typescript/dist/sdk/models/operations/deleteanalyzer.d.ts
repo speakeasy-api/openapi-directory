@@ -1,11 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteAnalyzerPathParams extends SpeakeasyBase {
-    analyzerName: string;
-}
-export declare class DeleteAnalyzerQueryParams extends SpeakeasyBase {
-    clientToken?: string;
-}
-export declare class DeleteAnalyzerHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteAnalyzerRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +8,37 @@ export declare class DeleteAnalyzerHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DeleteAnalyzerRequest extends SpeakeasyBase {
-    pathParams: DeleteAnalyzerPathParams;
-    queryParams: DeleteAnalyzerQueryParams;
-    headers: DeleteAnalyzerHeaders;
+    /**
+     * The name of the analyzer to delete.
+     */
+    analyzerName: string;
+    /**
+     * A client token.
+     */
+    clientToken?: string;
 }
 export declare class DeleteAnalyzerResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

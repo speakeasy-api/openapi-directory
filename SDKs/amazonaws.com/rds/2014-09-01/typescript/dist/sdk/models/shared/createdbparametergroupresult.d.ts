@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbParameterGroup } from "./dbparametergroup";
-export declare class CreateDbParameterGroupResult extends SpeakeasyBase {
-    dbParameterGroup?: DbParameterGroup;
+import { DBParameterGroup } from "./dbparametergroup";
+/**
+ * Success
+ */
+export declare class CreateDBParameterGroupResult extends SpeakeasyBase {
+    dbParameterGroup?: DBParameterGroup;
 }

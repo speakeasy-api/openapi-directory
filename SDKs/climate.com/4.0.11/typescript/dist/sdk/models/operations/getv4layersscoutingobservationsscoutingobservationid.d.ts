@@ -1,20 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetV4LayersScoutingObservationsScoutingObservationIdPathParams extends SpeakeasyBase {
-    scoutingObservationId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetV4LayersScoutingObservationsScoutingObservationIdSecurity extends SpeakeasyBase {
-    apiKey?: shared.SchemeApiKey;
-    oauth2AuthorizationCode?: shared.SchemeOauth2AuthorizationCode;
+    apiKey?: string;
+    oauth2AuthorizationCode?: string;
 }
 export declare class GetV4LayersScoutingObservationsScoutingObservationIdRequest extends SpeakeasyBase {
-    pathParams: GetV4LayersScoutingObservationsScoutingObservationIdPathParams;
-    security: GetV4LayersScoutingObservationsScoutingObservationIdSecurity;
+    /**
+     * Unique identifier of the Scouting Observation.
+     */
+    scoutingObservationId: string;
 }
 export declare class GetV4LayersScoutingObservationsScoutingObservationIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Bad Input
+     */
     error?: shared.ErrorT;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
+    /**
+     * Returns the requested scouting observation.
+     */
     scoutingObservation?: shared.ScoutingObservation;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

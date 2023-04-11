@@ -12,12 +12,13 @@ import { Restrictions } from "./restrictions";
 import { ViewerCertificate } from "./viewercertificate";
 /**
  * A distribution configuration.
-**/
+ */
 export declare class DistributionConfig extends SpeakeasyBase {
     aliases?: Aliases;
     cacheBehaviors?: CacheBehaviors;
     callerReference: string;
     comment: string;
+    continuousDeploymentPolicyId?: string;
     customErrorResponses?: CustomErrorResponses;
     defaultCacheBehavior: DefaultCacheBehavior;
     defaultRootObject?: string;
@@ -29,6 +30,7 @@ export declare class DistributionConfig extends SpeakeasyBase {
     origins: Origins;
     priceClass?: PriceClassEnum;
     restrictions?: Restrictions;
+    staging?: boolean;
     viewerCertificate?: ViewerCertificate;
     webACLId?: string;
 }

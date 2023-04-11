@@ -1,20 +1,35 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetPathParams extends SpeakeasyBase {
-    subscriptionId: string;
-}
-export declare class GetHeaders extends SpeakeasyBase {
-    xMarketId?: string;
-    xShopperId?: string;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class GetRequest extends SpeakeasyBase {
-    pathParams: GetPathParams;
-    headers: GetHeaders;
+    /**
+     * Unique identifier of the Market in which the request is happening
+     */
+    xMarketId?: string;
+    /**
+     * Shopper ID to be operated on, if different from JWT
+     */
+    xShopperId?: string;
+    /**
+     * Unique identifier of the Subscription to retrieve
+     */
+    subscriptionId: string;
 }
 export declare class GetResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    error?: any;
-    errorLimit?: any;
+    /**
+     * Request was malformed
+     */
+    error?: shared.ErrorT;
+    /**
+     * Too many requests received within interval
+     */
+    errorLimit?: shared.ErrorLimit;
     statusCode: number;
-    subscription?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * Request was successful
+     */
+    subscription?: shared.Subscription;
 }

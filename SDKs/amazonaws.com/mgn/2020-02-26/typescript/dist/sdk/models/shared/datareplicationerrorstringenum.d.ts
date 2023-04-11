@@ -12,5 +12,7 @@ export declare enum DataReplicationErrorStringEnum {
     FailedToAttachStagingDisks = "FAILED_TO_ATTACH_STAGING_DISKS",
     FailedToPairReplicationServerWithAgent = "FAILED_TO_PAIR_REPLICATION_SERVER_WITH_AGENT",
     FailedToConnectAgentToReplicationServer = "FAILED_TO_CONNECT_AGENT_TO_REPLICATION_SERVER",
-    FailedToStartDataTransfer = "FAILED_TO_START_DATA_TRANSFER"
+    FailedToStartDataTransfer = "FAILED_TO_START_DATA_TRANSFER",
+    UnsupportedVmConfiguration = "UNSUPPORTED_VM_CONFIGURATION",
+    LastSnapshotJobFailed = "LAST_SNAPSHOT_JOB_FAILED"
 }

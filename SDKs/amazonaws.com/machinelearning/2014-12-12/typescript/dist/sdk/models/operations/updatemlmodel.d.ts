@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum UpdateMlModelXAmzTargetEnum {
-    AmazonMl20141212UpdateMlModel = "AmazonML_20141212.UpdateMLModel"
+import { AxiosResponse } from "axios";
+export declare enum UpdateMLModelXAmzTargetEnum {
+    AmazonML20141212UpdateMLModel = "AmazonML_20141212.UpdateMLModel"
 }
-export declare class UpdateMlModelHeaders extends SpeakeasyBase {
+export declare class UpdateMLModelRequest extends SpeakeasyBase {
+    updateMLModelInput: shared.UpdateMLModelInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,17 +13,26 @@ export declare class UpdateMlModelHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: UpdateMlModelXAmzTargetEnum;
+    xAmzTarget: UpdateMLModelXAmzTargetEnum;
 }
-export declare class UpdateMlModelRequest extends SpeakeasyBase {
-    headers: UpdateMlModelHeaders;
-    request: shared.UpdateMlModelInput;
-}
-export declare class UpdateMlModelResponse extends SpeakeasyBase {
+export declare class UpdateMLModelResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
-    updateMLModelOutput?: shared.UpdateMlModelOutput;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
+    updateMLModelOutput?: shared.UpdateMLModelOutput;
 }

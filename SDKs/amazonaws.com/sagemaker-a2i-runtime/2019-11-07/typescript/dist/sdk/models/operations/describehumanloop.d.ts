@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeHumanLoopPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DescribeHumanLoopRequest extends SpeakeasyBase {
+    /**
+     * The name of the human loop that you want information about.
+     */
     humanLoopName: string;
-}
-export declare class DescribeHumanLoopHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,16 +14,28 @@ export declare class DescribeHumanLoopHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DescribeHumanLoopRequest extends SpeakeasyBase {
-    pathParams: DescribeHumanLoopPathParams;
-    headers: DescribeHumanLoopHeaders;
-}
 export declare class DescribeHumanLoopResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeHumanLoopResponse?: shared.DescribeHumanLoopResponse;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

@@ -1,17 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdateSamplingRuleHeaders extends SpeakeasyBase {
-    xAmzAlgorithm?: string;
-    xAmzContentSha256?: string;
-    xAmzCredential?: string;
-    xAmzDate?: string;
-    xAmzSecurityToken?: string;
-    xAmzSignature?: string;
-    xAmzSignedHeaders?: string;
-}
+import { AxiosResponse } from "axios";
 /**
  * A document specifying changes to a sampling rule's configuration.
-**/
+ */
 export declare class UpdateSamplingRuleRequestBodySamplingRuleUpdate extends SpeakeasyBase {
     attributes?: Record<string, string>;
     fixedRate?: number;
@@ -27,16 +19,35 @@ export declare class UpdateSamplingRuleRequestBodySamplingRuleUpdate extends Spe
     urlPath?: string;
 }
 export declare class UpdateSamplingRuleRequestBody extends SpeakeasyBase {
+    /**
+     * A document specifying changes to a sampling rule's configuration.
+     */
     samplingRuleUpdate: UpdateSamplingRuleRequestBodySamplingRuleUpdate;
 }
 export declare class UpdateSamplingRuleRequest extends SpeakeasyBase {
-    headers: UpdateSamplingRuleHeaders;
-    request: UpdateSamplingRuleRequestBody;
+    requestBody: UpdateSamplingRuleRequestBody;
+    xAmzAlgorithm?: string;
+    xAmzContentSha256?: string;
+    xAmzCredential?: string;
+    xAmzDate?: string;
+    xAmzSecurityToken?: string;
+    xAmzSignature?: string;
+    xAmzSignedHeaders?: string;
 }
 export declare class UpdateSamplingRuleResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottledException
+     */
     throttledException?: any;
+    /**
+     * Success
+     */
     updateSamplingRuleResult?: shared.UpdateSamplingRuleResult;
 }

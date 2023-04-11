@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class NewsFeed {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class NewsFeed {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * newsFeedCardAnalytics - News Feed Card Analytics
+     * News Feed Card Analytics
      *
+     * @remarks
      * This endpoint allows you to retrieve a daily series of engagement stats for a card over time.
      *
      * ### Components Used
@@ -36,11 +37,12 @@ export declare class NewsFeed {
      *     ]
      * }
      * ```
-    **/
+     */
     newsFeedCardAnalytics(req: operations.NewsFeedCardAnalyticsRequest, config?: AxiosRequestConfig): Promise<operations.NewsFeedCardAnalyticsResponse>;
     /**
-     * newsFeedCardsDetails - News Feed Cards Details
+     * News Feed Cards Details
      *
+     * @remarks
      * This endpoint allows you to retrieve relevant information on the card, which can be identified by the `card_id`.
      *
      * ### Components Used
@@ -69,11 +71,12 @@ export declare class NewsFeed {
      *     "draft": (boolean) whether this Card is a draft,
      * }
      * ```
-    **/
+     */
     newsFeedCardsDetails(req: operations.NewsFeedCardsDetailsRequest, config?: AxiosRequestConfig): Promise<operations.NewsFeedCardsDetailsResponse>;
     /**
-     * newsFeedCardsList - News Feed Cards List
+     * News Feed Cards List
      *
+     * @remarks
      * This endpoint allows you to export a list of News Feed cards, each of which will include its name and Card API Identifier. The cards are returned in groups of 100 sorted by time of creation (oldest to newest by default).
      *
      *
@@ -95,6 +98,6 @@ export declare class NewsFeed {
      *     ]
      * }
      * ```
-    **/
+     */
     newsFeedCardsList(req: operations.NewsFeedCardsListRequest, config?: AxiosRequestConfig): Promise<operations.NewsFeedCardsListResponse>;
 }

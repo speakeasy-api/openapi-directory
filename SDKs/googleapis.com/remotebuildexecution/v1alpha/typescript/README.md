@@ -6,131 +6,146 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/remotebuildexecution/v1alpha/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/remotebuildexecution/v1alpha/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { RemotebuildexecutionProjectsInstancesCreateRequest, RemotebuildexecutionProjectsInstancesCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  RemotebuildexecutionProjectsInstancesCreateRequest,
+  RemotebuildexecutionProjectsInstancesCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyActionHermeticityEnum,
+  GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyActionIsolationEnum,
+  GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxExecutionEnum,
+  GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxIsolationEnum,
+  GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyMacExecutionEnum,
+  GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyVmVerificationEnum,
+  GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyWindowsExecutionEnum,
+  GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: RemotebuildexecutionProjectsInstancesCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  googleDevtoolsRemotebuildexecutionAdminV1alphaCreateInstanceRequestInput: {
     instance: {
       featurePolicy: {
-        actionHermeticity: "ACTION_HERMETICITY_BEST_EFFORT",
-        actionIsolation: "ACTION_ISOLATION_UNSPECIFIED",
+        actionHermeticity: GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyActionHermeticityEnum.ActionHermeticityEnforced,
+        actionIsolation: GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyActionIsolationEnum.ActionIsolationEnforced,
         containerImageSources: {
           allowedValues: [
-            "et",
+            "unde",
+            "nulla",
+            "corrupti",
+            "illum",
           ],
-          policy: "RESTRICTED",
+          policy: GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum.Allowed,
         },
         dockerAddCapabilities: {
           allowedValues: [
-            "et",
-            "voluptate",
-            "iste",
+            "deserunt",
+            "suscipit",
+            "iure",
           ],
-          policy: "POLICY_UNSPECIFIED",
+          policy: GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum.Allowed,
         },
         dockerChrootPath: {
           allowedValues: [
-            "dolores",
-            "illum",
-            "debitis",
+            "ipsa",
+            "delectus",
+            "tempora",
+            "suscipit",
           ],
-          policy: "POLICY_UNSPECIFIED",
+          policy: GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum.Allowed,
         },
         dockerNetwork: {
           allowedValues: [
-            "dolore",
+            "placeat",
+            "voluptatum",
+            "iusto",
+            "excepturi",
           ],
-          policy: "POLICY_UNSPECIFIED",
+          policy: GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum.Allowed,
         },
         dockerPrivileged: {
           allowedValues: [
-            "accusantium",
+            "temporibus",
+            "ab",
+            "quis",
+            "veritatis",
           ],
-          policy: "ALLOWED",
+          policy: GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum.Forbidden,
         },
         dockerRunAsContainerProvidedUser: {
           allowedValues: [
-            "quis",
-            "est",
+            "ipsam",
           ],
-          policy: "POLICY_UNSPECIFIED",
+          policy: GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum.Restricted,
         },
         dockerRunAsRoot: {
           allowedValues: [
-            "non",
-            "voluptas",
+            "quo",
+            "odit",
+            "at",
+            "at",
           ],
-          policy: "RESTRICTED",
+          policy: GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum.Restricted,
         },
         dockerRuntime: {
           allowedValues: [
-            "illo",
+            "quod",
+            "quod",
           ],
-          policy: "FORBIDDEN",
+          policy: GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum.Allowed,
         },
         dockerSiblingContainers: {
           allowedValues: [
-            "autem",
-            "consectetur",
+            "porro",
+            "dolorum",
+            "dicta",
           ],
-          policy: "POLICY_UNSPECIFIED",
+          policy: GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum.Forbidden,
         },
-        linuxExecution: "LINUX_EXECUTION_UNRESTRICTED",
-        linuxIsolation: "LINUX_ISOLATION_UNSPECIFIED",
-        macExecution: "MAC_EXECUTION_UNSPECIFIED",
-        vmVerification: "VM_VERIFICATION_GCP_TOKEN",
-        windowsExecution: "WINDOWS_EXECUTION_UNRESTRICTED",
+        linuxExecution: GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxExecutionEnum.LinuxExecutionHardenedGvisor,
+        linuxIsolation: GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxIsolationEnum.Gvisor,
+        macExecution: GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyMacExecutionEnum.MacExecutionUnspecified,
+        vmVerification: GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyVmVerificationEnum.VmVerificationGcpToken,
+        windowsExecution: GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyWindowsExecutionEnum.WindowsExecutionTerminal,
       },
-      location: "eveniet",
-      loggingEnabled: false,
-      name: "sint",
-      state: "CREATING",
+      location: "optio",
+      schedulerNotificationConfig: {
+        topic: "totam",
+      },
     },
-    instanceId: "ut",
-    parent: "exercitationem",
+    instanceId: "beatae",
+    parent: "commodi",
   },
+  accessToken: "molestiae",
+  alt: AltEnum.Json,
+  callback: "qui",
+  fields: "impedit",
+  key: "cum",
+  oauthToken: "esse",
+  parent: "ipsum",
+  prettyPrint: false,
+  quotaUser: "excepturi",
+  uploadType: "aspernatur",
+  uploadProtocol: "perferendis",
 };
 
 sdk.projects.remotebuildexecutionProjectsInstancesCreate(req).then((res: RemotebuildexecutionProjectsInstancesCreateResponse | AxiosError) => {
@@ -140,7 +155,8 @@ sdk.projects.remotebuildexecutionProjectsInstancesCreate(req).then((res: Remoteb
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### projects
 
@@ -152,7 +168,18 @@ sdk.projects.remotebuildexecutionProjectsInstancesCreate(req).then((res: Remoteb
 * `remotebuildexecutionProjectsInstancesWorkerpoolsList` - Lists worker pools in an instance.
 * `remotebuildexecutionProjectsInstancesWorkerpoolsPatch` - Updates an existing worker pool with a specified size and/or configuration. Returns a long running operation, which contains a worker pool on completion. While the long running operation is in progress, any call to `GetWorkerPool` returns a worker pool in state `UPDATING`.
 * `remotebuildexecutionProjectsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

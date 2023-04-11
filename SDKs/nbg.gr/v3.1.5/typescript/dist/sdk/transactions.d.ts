@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Transactions {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,15 +9,17 @@ export declare class Transactions {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getAccountsAccountIdStatementsStatementIdTransactions - Get Transactions
+     * Get Transactions
      *
+     * @remarks
      * Get Transactions by Account ID and Statement ID
-    **/
-    getAccountsAccountIdStatementsStatementIdTransactions(req: operations.GetAccountsAccountIdStatementsStatementIdTransactionsRequest, config?: AxiosRequestConfig): Promise<operations.GetAccountsAccountIdStatementsStatementIdTransactionsResponse>;
+     */
+    getAccountsAccountIdStatementsStatementIdTransactions(req: operations.GetAccountsAccountIdStatementsStatementIdTransactionsRequest, security: operations.GetAccountsAccountIdStatementsStatementIdTransactionsSecurity, config?: AxiosRequestConfig): Promise<operations.GetAccountsAccountIdStatementsStatementIdTransactionsResponse>;
     /**
-     * getAccountsAccountIdTransactions - Get Transactions
+     * Get Transactions
      *
+     * @remarks
      * Get Transactions by Account ID
-    **/
-    getAccountsAccountIdTransactions(req: operations.GetAccountsAccountIdTransactionsRequest, config?: AxiosRequestConfig): Promise<operations.GetAccountsAccountIdTransactionsResponse>;
+     */
+    getAccountsAccountIdTransactions(req: operations.GetAccountsAccountIdTransactionsRequest, security: operations.GetAccountsAccountIdTransactionsSecurity, config?: AxiosRequestConfig): Promise<operations.GetAccountsAccountIdTransactionsResponse>;
 }

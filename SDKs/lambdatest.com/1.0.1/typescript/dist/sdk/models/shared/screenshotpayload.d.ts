@@ -4,6 +4,9 @@ export declare class ScreenshotPayloadConfigs extends SpeakeasyBase {
     macosMojave?: Browsers;
     windows10?: Browsers;
 }
+/**
+ * start screenshot test payload.
+ */
 export declare class ScreenshotPayload extends SpeakeasyBase {
     callbackUrl?: string;
     configs?: ScreenshotPayloadConfigs;

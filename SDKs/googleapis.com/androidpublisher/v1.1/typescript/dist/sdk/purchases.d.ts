@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Purchases {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,11 +9,11 @@ export declare class Purchases {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * androidpublisherPurchasesCancel - Cancels a user's subscription purchase. The subscription remains valid until its expiration time.
-    **/
-    androidpublisherPurchasesCancel(req: operations.AndroidpublisherPurchasesCancelRequest, config?: AxiosRequestConfig): Promise<operations.AndroidpublisherPurchasesCancelResponse>;
+     * Cancels a user's subscription purchase. The subscription remains valid until its expiration time.
+     */
+    androidpublisherPurchasesCancel(req: operations.AndroidpublisherPurchasesCancelRequest, security: operations.AndroidpublisherPurchasesCancelSecurity, config?: AxiosRequestConfig): Promise<operations.AndroidpublisherPurchasesCancelResponse>;
     /**
-     * androidpublisherPurchasesGet - Checks whether a user's subscription purchase is valid and returns its expiry time.
-    **/
-    androidpublisherPurchasesGet(req: operations.AndroidpublisherPurchasesGetRequest, config?: AxiosRequestConfig): Promise<operations.AndroidpublisherPurchasesGetResponse>;
+     * Checks whether a user's subscription purchase is valid and returns its expiry time.
+     */
+    androidpublisherPurchasesGet(req: operations.AndroidpublisherPurchasesGetRequest, security: operations.AndroidpublisherPurchasesGetSecurity, config?: AxiosRequestConfig): Promise<operations.AndroidpublisherPurchasesGetResponse>;
 }

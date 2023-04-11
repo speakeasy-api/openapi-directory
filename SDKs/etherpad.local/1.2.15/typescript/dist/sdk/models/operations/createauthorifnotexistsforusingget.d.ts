@@ -1,39 +1,62 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CreateAuthorIfNotExistsForUsingGetQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class CreateAuthorIfNotExistsForUsingGETRequest extends SpeakeasyBase {
     authorMapper?: string;
     name?: string;
 }
-export declare class CreateAuthorIfNotExistsForUsingGet200ApplicationJsonData extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class CreateAuthorIfNotExistsForUsingGet500ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class CreateAuthorIfNotExistsForUsingGet401ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+/**
+ * generic api error (code 1)
+ */
+export declare class CreateAuthorIfNotExistsForUsingGet400ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+export declare class CreateAuthorIfNotExistsForUsingGet200ApplicationJSONData extends SpeakeasyBase {
     authorID?: string;
 }
-export declare class CreateAuthorIfNotExistsForUsingGet200ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class CreateAuthorIfNotExistsForUsingGet200ApplicationJSON extends SpeakeasyBase {
     code?: number;
-    data?: CreateAuthorIfNotExistsForUsingGet200ApplicationJsonData;
+    data?: CreateAuthorIfNotExistsForUsingGet200ApplicationJSONData;
     message?: string;
 }
-export declare class CreateAuthorIfNotExistsForUsingGet400ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class CreateAuthorIfNotExistsForUsingGet401ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class CreateAuthorIfNotExistsForUsingGet500ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class CreateAuthorIfNotExistsForUsingGetRequest extends SpeakeasyBase {
-    queryParams: CreateAuthorIfNotExistsForUsingGetQueryParams;
-}
-export declare class CreateAuthorIfNotExistsForUsingGetResponse extends SpeakeasyBase {
+export declare class CreateAuthorIfNotExistsForUsingGETResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createAuthorIfNotExistsForUsingGET200ApplicationJSONObject?: CreateAuthorIfNotExistsForUsingGet200ApplicationJson;
-    createAuthorIfNotExistsForUsingGET400ApplicationJSONObject?: CreateAuthorIfNotExistsForUsingGet400ApplicationJson;
-    createAuthorIfNotExistsForUsingGET401ApplicationJSONObject?: CreateAuthorIfNotExistsForUsingGet401ApplicationJson;
-    createAuthorIfNotExistsForUsingGET500ApplicationJSONObject?: CreateAuthorIfNotExistsForUsingGet500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    createAuthorIfNotExistsForUsingGET200ApplicationJSONObject?: CreateAuthorIfNotExistsForUsingGet200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    createAuthorIfNotExistsForUsingGET400ApplicationJSONObject?: CreateAuthorIfNotExistsForUsingGet400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    createAuthorIfNotExistsForUsingGET401ApplicationJSONObject?: CreateAuthorIfNotExistsForUsingGet401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    createAuthorIfNotExistsForUsingGET500ApplicationJSONObject?: CreateAuthorIfNotExistsForUsingGet500ApplicationJSON;
 }

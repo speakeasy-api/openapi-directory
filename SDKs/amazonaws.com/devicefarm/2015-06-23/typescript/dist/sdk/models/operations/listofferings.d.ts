@@ -1,12 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListOfferingsQueryParams extends SpeakeasyBase {
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListOfferingsXAmzTargetEnum {
     DeviceFarm20150623ListOfferings = "DeviceFarm_20150623.ListOfferings"
 }
-export declare class ListOfferingsHeaders extends SpeakeasyBase {
+export declare class ListOfferingsRequest extends SpeakeasyBase {
+    listOfferingsRequest: shared.ListOfferingsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -15,19 +14,37 @@ export declare class ListOfferingsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: ListOfferingsXAmzTargetEnum;
-}
-export declare class ListOfferingsRequest extends SpeakeasyBase {
-    queryParams: ListOfferingsQueryParams;
-    headers: ListOfferingsHeaders;
-    request: shared.ListOfferingsRequest;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class ListOfferingsResponse extends SpeakeasyBase {
+    /**
+     * ArgumentException
+     */
     argumentException?: any;
     contentType: string;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * Success
+     */
     listOfferingsResult?: shared.ListOfferingsResult;
+    /**
+     * NotEligibleException
+     */
     notEligibleException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
+    /**
+     * ServiceAccountException
+     */
     serviceAccountException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -5,7 +5,7 @@ import { UpdateStatusEnum } from "./updatestatusenum";
 import { UpdateTypeEnum } from "./updatetypeenum";
 /**
  * An object representing an asynchronous update.
-**/
+ */
 export declare class Update extends SpeakeasyBase {
     createdAt?: Date;
     errors?: ErrorDetail[];

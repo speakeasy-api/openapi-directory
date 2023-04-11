@@ -1,15 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class TestnetGetTxsQueryParams extends SpeakeasyBase {
-    address?: string;
-    block?: string;
-    pageNum?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class TestnetGetTxsRequest extends SpeakeasyBase {
-    queryParams: TestnetGetTxsQueryParams;
+    /**
+     * Address
+     */
+    address?: string;
+    /**
+     * Block Hash
+     */
+    block?: string;
+    /**
+     * Page number to display
+     */
+    pageNum?: number;
 }
 export declare class TestnetGetTxsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * List of transactions
+     */
     getTxsResponse?: shared.GetTxsResponse;
 }

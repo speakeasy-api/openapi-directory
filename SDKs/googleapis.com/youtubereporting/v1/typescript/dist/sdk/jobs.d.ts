@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Jobs {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,27 +9,27 @@ export declare class Jobs {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * youtubereportingJobsCreate - Creates a job and returns it.
-    **/
-    youtubereportingJobsCreate(req: operations.YoutubereportingJobsCreateRequest, config?: AxiosRequestConfig): Promise<operations.YoutubereportingJobsCreateResponse>;
+     * Creates a job and returns it.
+     */
+    youtubereportingJobsCreate(req: operations.YoutubereportingJobsCreateRequest, security: operations.YoutubereportingJobsCreateSecurity, config?: AxiosRequestConfig): Promise<operations.YoutubereportingJobsCreateResponse>;
     /**
-     * youtubereportingJobsDelete - Deletes a job.
-    **/
-    youtubereportingJobsDelete(req: operations.YoutubereportingJobsDeleteRequest, config?: AxiosRequestConfig): Promise<operations.YoutubereportingJobsDeleteResponse>;
+     * Deletes a job.
+     */
+    youtubereportingJobsDelete(req: operations.YoutubereportingJobsDeleteRequest, security: operations.YoutubereportingJobsDeleteSecurity, config?: AxiosRequestConfig): Promise<operations.YoutubereportingJobsDeleteResponse>;
     /**
-     * youtubereportingJobsGet - Gets a job.
-    **/
-    youtubereportingJobsGet(req: operations.YoutubereportingJobsGetRequest, config?: AxiosRequestConfig): Promise<operations.YoutubereportingJobsGetResponse>;
+     * Gets a job.
+     */
+    youtubereportingJobsGet(req: operations.YoutubereportingJobsGetRequest, security: operations.YoutubereportingJobsGetSecurity, config?: AxiosRequestConfig): Promise<operations.YoutubereportingJobsGetResponse>;
     /**
-     * youtubereportingJobsList - Lists jobs.
-    **/
-    youtubereportingJobsList(req: operations.YoutubereportingJobsListRequest, config?: AxiosRequestConfig): Promise<operations.YoutubereportingJobsListResponse>;
+     * Lists jobs.
+     */
+    youtubereportingJobsList(req: operations.YoutubereportingJobsListRequest, security: operations.YoutubereportingJobsListSecurity, config?: AxiosRequestConfig): Promise<operations.YoutubereportingJobsListResponse>;
     /**
-     * youtubereportingJobsReportsGet - Gets the metadata of a specific report.
-    **/
-    youtubereportingJobsReportsGet(req: operations.YoutubereportingJobsReportsGetRequest, config?: AxiosRequestConfig): Promise<operations.YoutubereportingJobsReportsGetResponse>;
+     * Gets the metadata of a specific report.
+     */
+    youtubereportingJobsReportsGet(req: operations.YoutubereportingJobsReportsGetRequest, security: operations.YoutubereportingJobsReportsGetSecurity, config?: AxiosRequestConfig): Promise<operations.YoutubereportingJobsReportsGetResponse>;
     /**
-     * youtubereportingJobsReportsList - Lists reports created by a specific job. Returns NOT_FOUND if the job does not exist.
-    **/
-    youtubereportingJobsReportsList(req: operations.YoutubereportingJobsReportsListRequest, config?: AxiosRequestConfig): Promise<operations.YoutubereportingJobsReportsListResponse>;
+     * Lists reports created by a specific job. Returns NOT_FOUND if the job does not exist.
+     */
+    youtubereportingJobsReportsList(req: operations.YoutubereportingJobsReportsListRequest, security: operations.YoutubereportingJobsReportsListSecurity, config?: AxiosRequestConfig): Promise<operations.YoutubereportingJobsReportsListResponse>;
 }

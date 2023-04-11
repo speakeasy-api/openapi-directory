@@ -1,16 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class DeleteSwaggerPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteSwaggerSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
+    password: string;
+    username: string;
 }
 export declare class DeleteSwaggerRequest extends SpeakeasyBase {
-    pathParams: DeleteSwaggerPathParams;
-    security: DeleteSwaggerSecurity;
+    /**
+     * ID of swagger the file
+     */
+    id: string;
 }
 export declare class DeleteSwaggerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

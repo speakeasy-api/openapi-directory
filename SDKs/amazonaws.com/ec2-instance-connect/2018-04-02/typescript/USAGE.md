@@ -1,37 +1,37 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { SendSshPublicKeyRequest, SendSshPublicKeyResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  SendSSHPublicKeyRequest,
+  SendSSHPublicKeyResponse,
+  SendSSHPublicKeyXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: SendSshPublicKeyRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "AWSEC2InstanceConnectService.SendSSHPublicKey",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
-    availabilityZone: "fugit",
-    instanceId: "et",
-    instanceOSUser: "nihil",
-    sshPublicKey: "rerum",
+});
+
+const req: SendSSHPublicKeyRequest = {
+  sendSSHPublicKeyRequest: {
+    availabilityZone: "corrupti",
+    instanceId: "provident",
+    instanceOSUser: "distinctio",
+    sshPublicKey: "quibusdam",
   },
+  xAmzAlgorithm: "unde",
+  xAmzContentSha256: "nulla",
+  xAmzCredential: "corrupti",
+  xAmzDate: "illum",
+  xAmzSecurityToken: "vel",
+  xAmzSignature: "error",
+  xAmzSignedHeaders: "deserunt",
+  xAmzTarget: SendSSHPublicKeyXAmzTargetEnum.Awsec2InstanceConnectServiceSendSSHPublicKey,
 };
 
-sdk.sendSshPublicKey(req).then((res: SendSshPublicKeyResponse | AxiosError) => {
+sdk.sendSSHPublicKey(req).then((res: SendSSHPublicKeyResponse | AxiosError) => {
    // handle response
 });
 ```

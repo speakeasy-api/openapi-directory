@@ -6,35 +6,34 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/probely.com/1.2.0/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/probely.com/1.2.0/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DeleteKeysIdRequest, DeleteKeysIdResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  DeleteKeysIdRequest,
+  DeleteKeysIdResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    jwtAuth: {
-      authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-    },
-  }
-));
-    
-const req: DeleteKeysIdRequest = {
-  pathParams: {
-    id: "sit",
+    jwtAuth: "Bearer YOUR_BEARER_TOKEN_HERE",
   },
+});
+
+const req: DeleteKeysIdRequest = {
+  id: "jMXUw-BE_2vd",
 };
 
 sdk.apiKeys.deleteKeysId(req).then((res: DeleteKeysIdResponse | AxiosError) => {
@@ -44,9 +43,10 @@ sdk.apiKeys.deleteKeysId(req).then((res: DeleteKeysIdResponse | AxiosError) => {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### API Keys
+
+### apiKeys
 
 * `deleteKeysId` - Delete account API key
 * `deleteTargetsTargetIdKeysId` - Delete target API key
@@ -57,7 +57,7 @@ sdk.apiKeys.deleteKeysId(req).then((res: DeleteKeysIdResponse | AxiosError) => {
 * `postKeys` - Create account API key
 * `postTargetsTargetIdKeys` - Create target API key
 
-### Account
+### account
 
 * `getAccount` - Retrieve account information
 * `getBilling` - Retrieve billing information
@@ -68,13 +68,13 @@ sdk.apiKeys.deleteKeysId(req).then((res: DeleteKeysIdResponse | AxiosError) => {
 * `postTargetActions` - Available actions for the selected targets
 * `putBilling` - Update billing information
 
-### Archive
+### archive
 
 * `postTargetsActivate` - Activate targets
 * `postTargetsArchive` - Archive targets
 * `postTargetsArchived` - List archived targets
 
-### Assets
+### assets
 
 * `deleteTargetsTargetIdAssetsId` - Delete asset
 * `getTargetsTargetIdAssets` - List target's assets
@@ -84,7 +84,7 @@ sdk.apiKeys.deleteKeysId(req).then((res: DeleteKeysIdResponse | AxiosError) => {
 * `postTargetsTargetIdAssetsIdVerify` - Verify asset ownership
 * `putTargetsTargetIdAssetsId` - Update asset
 
-### Events
+### events
 
 * `deleteTargetsTargetIdWebhooksId` - Delete target webhook
 * `deleteWebhooksId` - Delete account webhook
@@ -103,7 +103,7 @@ sdk.apiKeys.deleteKeysId(req).then((res: DeleteKeysIdResponse | AxiosError) => {
 * `putTargetsTargetIdWebhooksId` - Update target webhook
 * `putWebhooksId` - Update account webhook
 
-### Findings
+### findings
 
 * `getTargetsTargetIdFindings` - List target findings
 * `getTargetsTargetIdFindingsReport` - Retrieve finding report PDF format
@@ -116,17 +116,17 @@ sdk.apiKeys.deleteKeysId(req).then((res: DeleteKeysIdResponse | AxiosError) => {
 * `postTargetsTargetIdFindingsIdRetest` - Retest finding
 * `putTargetsTargetIdFindingsId` - Update finding
 
-### Frameworks
+### frameworks
 
 * `getFrameworks` - List frameworks
 * `getFrameworksId` - Retrieve framework
 
-### Integrations
+### integrations
 
 * `getIntegrations` - Integrations available and installed in the account
 * `getTargetsTargetIdIntegrations` - Integrations available and installed for the target
 
-### Jira Cloud Integration
+### jiraCloudIntegration
 
 * `getIntegrationsJiraCloudProjects` - List Jira Projects
 * `getIntegrationsJiraCloudProjectsProjectIdIssueTypes` - Retrieve project issue types
@@ -139,7 +139,7 @@ sdk.apiKeys.deleteKeysId(req).then((res: DeleteKeysIdResponse | AxiosError) => {
 * `putTargetsTargetIdFindingsIdIntegrationsJiraCloud` - Update Jira Cloud finding configuration
 * `putTargetsTargetIdIntegrationsJiraCloud` - Update Jira Cloud target configuration
 
-### Jira Server Integration
+### jiraServerIntegration
 
 * `getIntegrationsJiraServerProjects` - List Jira Projects
 * `getIntegrationsJiraServerProjectsProjectIdIssueTypes` - Retrieve project issue types
@@ -152,7 +152,7 @@ sdk.apiKeys.deleteKeysId(req).then((res: DeleteKeysIdResponse | AxiosError) => {
 * `putTargetsTargetIdFindingsIdIntegrationsJiraServer` - Update Jira Server finding configuration
 * `putTargetsTargetIdIntegrationsJiraServer` - Update Jira Server target configuration
 
-### Labels
+### labels
 
 * `deleteLabelsId` - Delete label
 * `getLabels` - List labels
@@ -161,7 +161,7 @@ sdk.apiKeys.deleteKeysId(req).then((res: DeleteKeysIdResponse | AxiosError) => {
 * `postLabels` - Create label
 * `putLabelsId` - Update label
 
-### Login
+### login
 
 * `postAuthObtain` - Authenticate user
 * `postAuthRefresh` - Replace token with a new one
@@ -172,18 +172,18 @@ sdk.apiKeys.deleteKeysId(req).then((res: DeleteKeysIdResponse | AxiosError) => {
 * `postEnterpriseAuthRevoke` - Enterprise token revokation
 * `postEnterpriseAuthVerify` - Enterprise token verification
 
-### Password Reset
+### passwordReset
 
 * `postCheck` - Check validity of password reset token
 * `postReset` - Send reset password email
 * `postSetpassword` - Reset password after asking for a reset (with the token sent by email).
 
 
-### Plan
+### plan
 
 * `getPlans` - Subscription plans
 
-### Scans
+### scans
 
 * `getTargetsAllScans` - List scans for all targets
 * `getTargetsTargetIdScans` - List scans
@@ -198,7 +198,7 @@ sdk.apiKeys.deleteKeysId(req).then((res: DeleteKeysIdResponse | AxiosError) => {
 * `postTargetsTargetIdScanNow` - Start a scan on the target
 * `postTargetsTargetIdScansIdCancel` - Cancel running scan
 
-### Scheduled
+### scheduled
 
 * `deleteTargetsTargetIdScheduledscansId` - Delete
 * `getTargetsAllScheduledscansExpanded` - List scheduled scans for all targets expanding recurrence
@@ -209,20 +209,20 @@ sdk.apiKeys.deleteKeysId(req).then((res: DeleteKeysIdResponse | AxiosError) => {
 * `postTargetsTargetIdScheduledscans` - Create new scheduled scan
 * `putTargetsTargetIdScheduledscansId` - Update a scheduled scan
 
-### Site
+### site
 
 * `getTargetsTargetIdSite` - Retrieve target's site
 * `patchTargetsTargetIdSite` - Partial update target's site
 * `postTargetsTargetIdSiteVerify` - Verify site ownership
 * `putTargetsTargetIdSite` - Update target's site
 
-### Slack Integration
+### slackIntegration
 
 * `getTargetsTargetIdIntegrationsSlack` - Retrieve slack integration data
 * `patchTargetsTargetIdIntegrationsSlack` - Update slack integration data
 * `putTargetsTargetIdIntegrationsSlack` - Update slack integration data
 
-### Statistics
+### statistics
 
 * `getTargetsAllAverageFixTime` - Average fix time graph data (all targets)
 * `getTargetsAllNeedsAttentionPie` - Targets with open vulnerabilities pie chart data
@@ -235,7 +235,7 @@ sdk.apiKeys.deleteKeysId(req).then((res: DeleteKeysIdResponse | AxiosError) => {
 * `getTargetsTargetIdSeverityTrend` - Severity trend graph data.
 * `getTargetsTargetIdTopVulns` - Top 5 vulnerabilities
 
-### Targets
+### targets
 
 * `deleteTargetsId` - Delete target
 * `getTargets` - List targets
@@ -244,7 +244,7 @@ sdk.apiKeys.deleteKeysId(req).then((res: DeleteKeysIdResponse | AxiosError) => {
 * `postTargets` - Create target
 * `putTargetsId` - Update target
 
-### Users
+### users
 
 * `deleteUsersId` - Deactivate a user
 * `getProfile` - User data
@@ -255,11 +255,22 @@ sdk.apiKeys.deleteKeysId(req).then((res: DeleteKeysIdResponse | AxiosError) => {
 * `postUsers` - Create/Reactivate a user.
 * `putUsersId` - Update user
 
-### Vulnerabilities
+### vulnerabilities
 
 * `getVulnerabilityDefinitions` - List vulnerability definitions
 * `getVulnerabilityDefinitionsId` - Retrieve vulnerability definition
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

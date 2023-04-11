@@ -1,27 +1,32 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { WebfontsWebfontsListRequest, WebfontsWebfontsListResponse } from "openapi/src/sdk/models/operations";
+import {
+  WebfontsWebfontsListRequest,
+  WebfontsWebfontsListResponse,
+  WebfontsWebfontsListSortEnum,
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: WebfontsWebfontsListRequest = {
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "voluptas",
-    alt: "media",
-    callback: "expedita",
-    fields: "consequuntur",
-    key: "dolor",
-    oauthToken: "expedita",
-    prettyPrint: true,
-    quotaUser: "fugit",
-    sort: "SORT_UNDEFINED",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
+  dollarXgafv: XgafvEnum.Two,
+  accessToken: "provident",
+  alt: AltEnum.Proto,
+  callback: "quibusdam",
+  fields: "unde",
+  key: "nulla",
+  oauthToken: "corrupti",
+  prettyPrint: false,
+  quotaUser: "illum",
+  sort: WebfontsWebfontsListSortEnum.Date,
+  uploadType: "error",
+  uploadProtocol: "deserunt",
 };
 
 sdk.webfonts.webfontsWebfontsList(req).then((res: WebfontsWebfontsListResponse | AxiosError) => {

@@ -1,6 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PatientLabResultsListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class PatientLabResultsListSecurity extends SpeakeasyBase {
+    drchronoOauth2: string;
+}
+export declare class PatientLabResultsListRequest extends SpeakeasyBase {
     cursor?: string;
     doctor?: number;
     orderingDoctor?: number;
@@ -8,23 +12,29 @@ export declare class PatientLabResultsListQueryParams extends SpeakeasyBase {
     patient?: number;
     since?: string;
 }
-export declare class PatientLabResultsListSecurity extends SpeakeasyBase {
-    drchronoOauth2: shared.SchemeDrchronoOauth2;
-}
 /**
  * Paginated Result
-**/
-export declare class PatientLabResultsList200ApplicationJson extends SpeakeasyBase {
+ */
+export declare class PatientLabResultsList200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * result data
+     */
     data?: shared.PatientLabResultSet[];
+    /**
+     * Next Paginated page
+     */
     next?: string;
+    /**
+     * Previous paginated page
+     */
     previous?: string;
-}
-export declare class PatientLabResultsListRequest extends SpeakeasyBase {
-    queryParams: PatientLabResultsListQueryParams;
-    security: PatientLabResultsListSecurity;
 }
 export declare class PatientLabResultsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    patientLabResultsList200ApplicationJSONObject?: PatientLabResultsList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
+    patientLabResultsList200ApplicationJSONObject?: PatientLabResultsList200ApplicationJSON;
 }

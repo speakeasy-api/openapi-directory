@@ -1,0 +1,50 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
+export declare class GetNetworkWebhooksPayloadTemplateRequest extends SpeakeasyBase {
+    networkId: string;
+    payloadTemplateId: string;
+}
+export declare class GetNetworkWebhooksPayloadTemplate200ApplicationJSONHeaders extends SpeakeasyBase {
+    /**
+     * The name of the header attribute
+     */
+    name?: string;
+    /**
+     * The value returned in the header attribute, in liquid template
+     */
+    template?: string;
+}
+/**
+ * Successful operation
+ */
+export declare class GetNetworkWebhooksPayloadTemplate200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * The body of the payload template, in liquid template
+     */
+    body?: string;
+    /**
+     * The payload template headers, will be rendered as a key-value pair in the webhook.
+     */
+    headers?: GetNetworkWebhooksPayloadTemplate200ApplicationJSONHeaders[];
+    /**
+     * The name of the payload template
+     */
+    name?: string;
+    /**
+     * Webhook payload template Id
+     */
+    payloadTemplateId?: string;
+    /**
+     * The type of the payload template
+     */
+    type?: string;
+}
+export declare class GetNetworkWebhooksPayloadTemplateResponse extends SpeakeasyBase {
+    contentType: string;
+    statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful operation
+     */
+    getNetworkWebhooksPayloadTemplate200ApplicationJSONObject?: GetNetworkWebhooksPayloadTemplate200ApplicationJSON;
+}

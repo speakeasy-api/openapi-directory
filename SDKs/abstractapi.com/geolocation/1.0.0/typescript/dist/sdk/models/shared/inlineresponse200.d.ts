@@ -26,6 +26,9 @@ export declare class InlineResponse200Timezone extends SpeakeasyBase {
     isDst?: boolean;
     name?: string;
 }
+/**
+ * Location of geolocated IP
+ */
 export declare class InlineResponse200 extends SpeakeasyBase {
     city?: string;
     cityGeonameId?: number;

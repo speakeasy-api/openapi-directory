@@ -1,20 +1,33 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetEarningsByEarningCodePathParams extends SpeakeasyBase {
-    companyId: string;
-    earningCode: string;
-    employeeId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetEarningsByEarningCodeSecurity extends SpeakeasyBase {
-    paylocityAuth: shared.SchemePaylocityAuth;
+    paylocityAuth: string;
 }
 export declare class GetEarningsByEarningCodeRequest extends SpeakeasyBase {
-    pathParams: GetEarningsByEarningCodePathParams;
-    security: GetEarningsByEarningCodeSecurity;
+    /**
+     * Company Id
+     */
+    companyId: string;
+    /**
+     * Earning Code
+     */
+    earningCode: string;
+    /**
+     * Employee Id
+     */
+    employeeId: string;
 }
 export declare class GetEarningsByEarningCodeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successfully retrieved
+     */
     earnings?: shared.Earning[];
+    /**
+     * Internal Server Error
+     */
     errors?: shared.ErrorT[];
 }

@@ -1,15 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class AllMonitors200ApplicationJsonMonitors extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class AllMonitors200ApplicationJSONMonitors extends SpeakeasyBase {
     id?: string;
     name?: string;
     owner?: string;
     uid?: string;
 }
-export declare class AllMonitors200ApplicationJson extends SpeakeasyBase {
-    monitors?: AllMonitors200ApplicationJsonMonitors[];
+/**
+ * Successful Response
+ */
+export declare class AllMonitors200ApplicationJSON extends SpeakeasyBase {
+    monitors?: AllMonitors200ApplicationJSONMonitors[];
 }
 export declare class AllMonitorsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    allMonitors200ApplicationJSONObject?: AllMonitors200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful Response
+     */
+    allMonitors200ApplicationJSONObject?: AllMonitors200ApplicationJSON;
 }

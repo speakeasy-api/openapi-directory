@@ -1,16 +1,16 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { TripsTripDetailsRequest, TripsTripDetailsResponse } from "openapi/src/sdk/models/operations";
+import {
+  TripsTripDetailsRequest,
+  TripsTripDetailsResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: TripsTripDetailsRequest = {
-  queryParams: {
-    trackToken: "sit",
-  },
+  trackToken: "corrupti",
 };
 
 sdk.twoForMobileAppOptional.tripsTripDetails(req).then((res: TripsTripDetailsResponse | AxiosError) => {

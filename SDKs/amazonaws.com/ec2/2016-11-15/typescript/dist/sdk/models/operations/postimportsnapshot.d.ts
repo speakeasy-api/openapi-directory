@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostImportSnapshotActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTImportSnapshotActionEnum {
     ImportSnapshot = "ImportSnapshot"
 }
-export declare enum PostImportSnapshotVersionEnum {
+export declare enum POSTImportSnapshotVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostImportSnapshotQueryParams extends SpeakeasyBase {
-    action: PostImportSnapshotActionEnum;
-    version: PostImportSnapshotVersionEnum;
-}
-export declare class PostImportSnapshotHeaders extends SpeakeasyBase {
+export declare class POSTImportSnapshotRequest extends SpeakeasyBase {
+    action: POSTImportSnapshotActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTImportSnapshotVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostImportSnapshotHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostImportSnapshotRequest extends SpeakeasyBase {
-    queryParams: PostImportSnapshotQueryParams;
-    headers: PostImportSnapshotHeaders;
-    request?: Uint8Array;
-}
-export declare class PostImportSnapshotResponse extends SpeakeasyBase {
+export declare class POSTImportSnapshotResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { SearchResultTextMatches } from "./searchresulttextmatches";
 /**
  * User Search Result Item
-**/
+ */
 export declare class UserSearchResultItem extends SpeakeasyBase {
     avatarUrl: string;
     bio?: string;

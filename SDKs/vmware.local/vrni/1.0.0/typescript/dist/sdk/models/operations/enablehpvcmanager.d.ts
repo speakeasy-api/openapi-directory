@@ -1,16 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class EnableHpvcManagerPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class EnableHpvcManagerSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
+    apiKeyAuth: string;
 }
 export declare class EnableHpvcManagerRequest extends SpeakeasyBase {
-    pathParams: EnableHpvcManagerPathParams;
-    security: EnableHpvcManagerSecurity;
+    /**
+     * entity id
+     */
+    id: string;
 }
 export declare class EnableHpvcManagerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

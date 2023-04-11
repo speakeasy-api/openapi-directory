@@ -1,16 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ActivateUserPathParams extends SpeakeasyBase {
-    userId: string;
-}
-export declare class ActivateUserQueryParams extends SpeakeasyBase {
-    sendEmail?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ActivateUserRequest extends SpeakeasyBase {
-    pathParams: ActivateUserPathParams;
-    queryParams: ActivateUserQueryParams;
-    request?: Uint8Array;
+    requestBody?: Uint8Array;
+    sendEmail?: string;
+    userId: string;
 }
 export declare class ActivateUserResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

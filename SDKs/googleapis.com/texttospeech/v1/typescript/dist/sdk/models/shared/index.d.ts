@@ -4,7 +4,6 @@ export * from "./customvoiceparams";
 export * from "./listoperationsresponse";
 export * from "./listvoicesresponse";
 export * from "./operation";
-export * from "./security";
 export * from "./status";
 export * from "./synthesisinput";
 export * from "./synthesizelongaudiorequest";

@@ -8,6 +8,7 @@ export * from "./getprofile";
 export * from "./getwebhooks";
 export * from "./getwebhooksid";
 export * from "./postblockednumbers";
+export * from "./postcredittransfer";
 export * from "./postmessages";
 export * from "./postrmmpresignattachment";
 export * from "./postwebhooks";

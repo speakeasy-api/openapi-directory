@@ -1,15 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateStorageLocationActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateStorageLocationActionEnum {
     CreateStorageLocation = "CreateStorageLocation"
 }
-export declare enum PostCreateStorageLocationVersionEnum {
+export declare enum POSTCreateStorageLocationVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostCreateStorageLocationQueryParams extends SpeakeasyBase {
-    action: PostCreateStorageLocationActionEnum;
-    version: PostCreateStorageLocationVersionEnum;
-}
-export declare class PostCreateStorageLocationHeaders extends SpeakeasyBase {
+export declare class POSTCreateStorageLocationRequest extends SpeakeasyBase {
+    action: POSTCreateStorageLocationActionEnum;
+    version: POSTCreateStorageLocationVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +17,9 @@ export declare class PostCreateStorageLocationHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateStorageLocationRequest extends SpeakeasyBase {
-    queryParams: PostCreateStorageLocationQueryParams;
-    headers: PostCreateStorageLocationHeaders;
-}
-export declare class PostCreateStorageLocationResponse extends SpeakeasyBase {
+export declare class POSTCreateStorageLocationResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

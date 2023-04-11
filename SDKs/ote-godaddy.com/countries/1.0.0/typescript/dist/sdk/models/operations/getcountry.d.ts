@@ -1,28 +1,52 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetCountryPathParams extends SpeakeasyBase {
-    countryKey: string;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+/**
+ * The direction to sort the result country states by.
+ */
 export declare enum GetCountryOrderEnum {
     Ascending = "ascending",
     Descending = "descending"
 }
+/**
+ * The term to sort the result country states by.
+ */
 export declare enum GetCountrySortEnum {
     Key = "key",
     Label = "label"
 }
-export declare class GetCountryQueryParams extends SpeakeasyBase {
+export declare class GetCountryRequest extends SpeakeasyBase {
+    /**
+     * The country key
+     */
+    countryKey: string;
+    /**
+     * MarketId in which the request is being made, and for which responses should be localized
+     */
     marketId: string;
+    /**
+     * The direction to sort the result country states by.
+     */
     order?: GetCountryOrderEnum;
+    /**
+     * The term to sort the result country states by.
+     */
     sort?: GetCountrySortEnum;
 }
-export declare class GetCountryRequest extends SpeakeasyBase {
-    pathParams: GetCountryPathParams;
-    queryParams: GetCountryQueryParams;
-}
 export declare class GetCountryResponse extends SpeakeasyBase {
-    arrayOfCountry?: any[];
+    /**
+     * Request was successful
+     */
+    arrayOfCountry?: shared.Country[];
     contentType: string;
-    error?: any;
-    errorLimit?: any;
+    /**
+     * Country not found
+     */
+    error?: shared.ErrorT;
+    /**
+     * Too many requests received within interval
+     */
+    errorLimit?: shared.ErrorLimit;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

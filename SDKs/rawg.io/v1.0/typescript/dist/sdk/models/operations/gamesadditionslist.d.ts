@@ -1,24 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GamesAdditionsListPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GamesAdditionsListRequest extends SpeakeasyBase {
     gamePk: string;
-}
-export declare class GamesAdditionsListQueryParams extends SpeakeasyBase {
+    /**
+     * A page number within the paginated result set.
+     */
     page?: number;
+    /**
+     * Number of results to return per page.
+     */
     pageSize?: number;
 }
-export declare class GamesAdditionsList200ApplicationJson extends SpeakeasyBase {
+export declare class GamesAdditionsList200ApplicationJSON extends SpeakeasyBase {
     count: number;
     next?: string;
     previous?: string;
     results: shared.Game[];
 }
-export declare class GamesAdditionsListRequest extends SpeakeasyBase {
-    pathParams: GamesAdditionsListPathParams;
-    queryParams: GamesAdditionsListQueryParams;
-}
 export declare class GamesAdditionsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    gamesAdditionsList200ApplicationJSONObject?: GamesAdditionsList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    gamesAdditionsList200ApplicationJSONObject?: GamesAdditionsList200ApplicationJSON;
 }

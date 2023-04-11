@@ -1,14 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListProductModulesSecurity extends SpeakeasyBase {
-    basicAuth: shared.SchemeBasicAuth;
-}
-export declare class ListProductModulesRequest extends SpeakeasyBase {
-    security: ListProductModulesSecurity;
-}
+import { AxiosResponse } from "axios";
 export declare class ListProductModulesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    netlicensings?: any[];
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful request
+     */
+    netlicensings?: shared.Netlicensing[];
 }

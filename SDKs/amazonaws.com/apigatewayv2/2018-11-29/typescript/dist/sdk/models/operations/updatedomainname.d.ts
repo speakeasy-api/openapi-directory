@@ -1,9 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdateDomainNamePathParams extends SpeakeasyBase {
-    domainName: string;
+import { AxiosResponse } from "axios";
+/**
+ * The mutual TLS authentication configuration for a custom domain name.
+ */
+export declare class UpdateDomainNameRequestBodyMutualTlsAuthentication extends SpeakeasyBase {
+    truststoreUri?: string;
+    truststoreVersion?: string;
 }
-export declare class UpdateDomainNameHeaders extends SpeakeasyBase {
+export declare class UpdateDomainNameRequestBody extends SpeakeasyBase {
+    /**
+     * The domain name configurations.
+     */
+    domainNameConfigurations?: shared.DomainNameConfiguration[];
+    /**
+     * The mutual TLS authentication configuration for a custom domain name.
+     */
+    mutualTlsAuthentication?: UpdateDomainNameRequestBodyMutualTlsAuthentication;
+}
+export declare class UpdateDomainNameRequest extends SpeakeasyBase {
+    requestBody: UpdateDomainNameRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,29 +27,33 @@ export declare class UpdateDomainNameHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-/**
- * The mutual TLS authentication configuration for a custom domain name.
-**/
-export declare class UpdateDomainNameRequestBodyMutualTlsAuthentication extends SpeakeasyBase {
-    truststoreUri?: Record<string, any>;
-    truststoreVersion?: Record<string, any>;
-}
-export declare class UpdateDomainNameRequestBody extends SpeakeasyBase {
-    domainNameConfigurations?: shared.DomainNameConfiguration[];
-    mutualTlsAuthentication?: UpdateDomainNameRequestBodyMutualTlsAuthentication;
-}
-export declare class UpdateDomainNameRequest extends SpeakeasyBase {
-    pathParams: UpdateDomainNamePathParams;
-    headers: UpdateDomainNameHeaders;
-    request: UpdateDomainNameRequestBody;
+    /**
+     * The domain name.
+     */
+    domainName: string;
 }
 export declare class UpdateDomainNameResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
+    /**
+     * Success
+     */
     updateDomainNameResponse?: shared.UpdateDomainNameResponse;
 }

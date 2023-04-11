@@ -1,18 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetTransactionsIdPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetTransactionsIdSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
+    apiKeyAuth: string;
 }
 export declare class GetTransactionsIdRequest extends SpeakeasyBase {
-    pathParams: GetTransactionsIdPathParams;
-    security: GetTransactionsIdSecurity;
+    /**
+     * Unique identifier of the transaction.
+     */
+    id: string;
 }
 export declare class GetTransactionsIdResponse extends SpeakeasyBase {
     contentType: string;
-    restServiceError?: any;
     statusCode: number;
-    transaction?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * Unauthorized - authentication required.
+     */
+    restServiceError?: shared.RestServiceError;
+    /**
+     * OK - the request has succeeded.
+     */
+    transaction?: shared.Transaction;
 }

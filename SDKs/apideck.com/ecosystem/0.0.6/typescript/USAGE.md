@@ -1,20 +1,18 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CategoriesAllRequest, CategoriesAllResponse } from "openapi/src/sdk/models/operations";
+import {
+  CategoriesAllRequest,
+  CategoriesAllResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: CategoriesAllRequest = {
-  pathParams: {
-    ecosystemId: "sit",
-  },
-  queryParams: {
-    cursor: "voluptas",
-    limit: 6050128673802995827,
-  },
+  cursor: "corrupti",
+  ecosystemId: "provident",
+  limit: 715190,
 };
 
 sdk.category.categoriesAll(req).then((res: CategoriesAllResponse | AxiosError) => {

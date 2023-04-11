@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { EncryptionModeValueEnum } from "./encryptionmodevalueenum";
 /**
  * Provides information that defines an Amazon Redshift endpoint.
-**/
+ */
 export declare class RedshiftSettings extends SpeakeasyBase {
     acceptAnyDate?: boolean;
     afterConnectScript?: string;
@@ -18,6 +18,7 @@ export declare class RedshiftSettings extends SpeakeasyBase {
     explicitIds?: boolean;
     fileTransferUploadStreams?: number;
     loadTimeout?: number;
+    mapBooleanAsBoolean?: boolean;
     maxFileSize?: number;
     password?: string;
     port?: number;

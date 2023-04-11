@@ -1,7 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UpdateAnApiPathParams extends SpeakeasyBase {
-    apiId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UpdateAnApiRequestBodyApi extends SpeakeasyBase {
     description?: string;
     name?: string;
@@ -9,7 +7,11 @@ export declare class UpdateAnApiRequestBodyApi extends SpeakeasyBase {
 export declare class UpdateAnApiRequestBody extends SpeakeasyBase {
     api?: UpdateAnApiRequestBodyApi;
 }
-export declare class UpdateAnApi200ApplicationJsonApi extends SpeakeasyBase {
+export declare class UpdateAnApiRequest extends SpeakeasyBase {
+    requestBody?: UpdateAnApiRequestBody;
+    apiId: string;
+}
+export declare class UpdateAnApi200ApplicationJSONApi extends SpeakeasyBase {
     createdAt?: string;
     createdBy?: string;
     description?: string;
@@ -18,15 +20,18 @@ export declare class UpdateAnApi200ApplicationJsonApi extends SpeakeasyBase {
     summary?: string;
     updatedAt?: string;
 }
-export declare class UpdateAnApi200ApplicationJson extends SpeakeasyBase {
-    api?: UpdateAnApi200ApplicationJsonApi;
-}
-export declare class UpdateAnApiRequest extends SpeakeasyBase {
-    pathParams: UpdateAnApiPathParams;
-    request?: UpdateAnApiRequestBody;
+/**
+ * Update an API
+ */
+export declare class UpdateAnApi200ApplicationJSON extends SpeakeasyBase {
+    api?: UpdateAnApi200ApplicationJSONApi;
 }
 export declare class UpdateAnApiResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateAnApi200ApplicationJSONObject?: UpdateAnApi200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Update an API
+     */
+    updateAnApi200ApplicationJSONObject?: UpdateAnApi200ApplicationJSON;
 }

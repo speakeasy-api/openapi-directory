@@ -1,9 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum ListClustersXAmzTargetEnum {
-    AwsieSnowballJobManagementServiceListClusters = "AWSIESnowballJobManagementService.ListClusters"
+    AWSIESnowballJobManagementServiceListClusters = "AWSIESnowballJobManagementService.ListClusters"
 }
-export declare class ListClustersHeaders extends SpeakeasyBase {
+export declare class ListClustersRequest extends SpeakeasyBase {
+    listClustersRequest: shared.ListClustersRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,13 +23,16 @@ export declare class ListClustersHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListClustersXAmzTargetEnum;
 }
-export declare class ListClustersRequest extends SpeakeasyBase {
-    headers: ListClustersHeaders;
-    request: shared.ListClustersRequest;
-}
 export declare class ListClustersResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * Success
+     */
     listClustersResult?: shared.ListClustersResult;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

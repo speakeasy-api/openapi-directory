@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The signature algorithm used to verify a message against a signature using this key. These signature algorithm must match the structure and any object identifiers encoded in `public_key_pem` (i.e. this algorithm must match that of the public key).
+ */
 export declare enum PkixPublicKeySignatureAlgorithmEnum {
     SignatureAlgorithmUnspecified = "SIGNATURE_ALGORITHM_UNSPECIFIED",
     RsaPss2048Sha256 = "RSA_PSS_2048_SHA256",
@@ -22,8 +25,14 @@ export declare enum PkixPublicKeySignatureAlgorithmEnum {
 }
 /**
  * A public key in the PkixPublicKey format (see https://tools.ietf.org/html/rfc5280#section-4.1.2.7 for details). Public keys of this type are typically textually encoded using the PEM format.
-**/
+ */
 export declare class PkixPublicKey extends SpeakeasyBase {
+    /**
+     * A PEM-encoded public key, as described in https://tools.ietf.org/html/rfc7468#section-13
+     */
     publicKeyPem?: string;
+    /**
+     * The signature algorithm used to verify a message against a signature using this key. These signature algorithm must match the structure and any object identifiers encoded in `public_key_pem` (i.e. this algorithm must match that of the public key).
+     */
     signatureAlgorithm?: PkixPublicKeySignatureAlgorithmEnum;
 }

@@ -1,20 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteImageRegionsPathParams extends SpeakeasyBase {
-    projectId: string;
-}
-export declare class DeleteImageRegionsQueryParams extends SpeakeasyBase {
-    regionIds: string[];
-}
-export declare class DeleteImageRegionsHeaders extends SpeakeasyBase {
-    trainingKey: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteImageRegionsRequest extends SpeakeasyBase {
-    pathParams: DeleteImageRegionsPathParams;
-    queryParams: DeleteImageRegionsQueryParams;
-    headers: DeleteImageRegionsHeaders;
+    /**
+     * API key.
+     */
+    trainingKey: string;
+    /**
+     * The project id.
+     */
+    projectId: string;
+    /**
+     * Regions to delete. Limited to 64.
+     */
+    regionIds: string[];
 }
 export declare class DeleteImageRegionsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

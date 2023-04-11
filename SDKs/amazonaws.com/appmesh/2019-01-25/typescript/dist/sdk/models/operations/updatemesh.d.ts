@@ -1,9 +1,28 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdateMeshPathParams extends SpeakeasyBase {
-    meshName: string;
+import { AxiosResponse } from "axios";
+/**
+ * An object that represents the specification of a service mesh.
+ */
+export declare class UpdateMeshRequestBodySpec extends SpeakeasyBase {
+    egressFilter?: shared.EgressFilter;
+    /**
+     * An object that represents the service discovery information for a service mesh.
+     */
+    serviceDiscovery?: shared.MeshServiceDiscovery;
 }
-export declare class UpdateMeshHeaders extends SpeakeasyBase {
+export declare class UpdateMeshRequestBody extends SpeakeasyBase {
+    /**
+     * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. Up to 36 letters, numbers, hyphens, and underscores are allowed.
+     */
+    clientToken?: string;
+    /**
+     * An object that represents the specification of a service mesh.
+     */
+    spec?: UpdateMeshRequestBodySpec;
+}
+export declare class UpdateMeshRequest extends SpeakeasyBase {
+    requestBody: UpdateMeshRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,31 +30,45 @@ export declare class UpdateMeshHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-/**
- * An object that represents the specification of a service mesh.
-**/
-export declare class UpdateMeshRequestBodySpec extends SpeakeasyBase {
-    egressFilter?: shared.EgressFilter;
-}
-export declare class UpdateMeshRequestBody extends SpeakeasyBase {
-    clientToken?: string;
-    spec?: UpdateMeshRequestBodySpec;
-}
-export declare class UpdateMeshRequest extends SpeakeasyBase {
-    pathParams: UpdateMeshPathParams;
-    headers: UpdateMeshHeaders;
-    request: UpdateMeshRequestBody;
+    /**
+     * The name of the service mesh to update.
+     */
+    meshName: string;
 }
 export declare class UpdateMeshResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * ForbiddenException
+     */
     forbiddenException?: any;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
-    serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceUnavailableException
+     */
+    serviceUnavailableException?: any;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
+    /**
+     * Success
+     */
     updateMeshOutput?: shared.UpdateMeshOutput;
 }

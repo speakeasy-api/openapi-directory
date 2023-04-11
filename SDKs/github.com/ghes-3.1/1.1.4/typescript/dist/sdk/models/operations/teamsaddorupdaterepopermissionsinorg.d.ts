@@ -1,10 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class TeamsAddOrUpdateRepoPermissionsInOrgPathParams extends SpeakeasyBase {
-    org: string;
-    owner: string;
-    repo: string;
-    teamSlug: string;
-}
+import { AxiosResponse } from "axios";
+/**
+ * The permission to grant the team on this repository. If no permission is specified, the team's `permission` attribute will be used to determine what permission to grant the team on this repository.
+ */
 export declare enum TeamsAddOrUpdateRepoPermissionsInOrgRequestBodyPermissionEnum {
     Pull = "pull",
     Push = "push",
@@ -13,13 +11,32 @@ export declare enum TeamsAddOrUpdateRepoPermissionsInOrgRequestBodyPermissionEnu
     Triage = "triage"
 }
 export declare class TeamsAddOrUpdateRepoPermissionsInOrgRequestBody extends SpeakeasyBase {
+    /**
+     * The permission to grant the team on this repository. If no permission is specified, the team's `permission` attribute will be used to determine what permission to grant the team on this repository.
+     */
     permission?: TeamsAddOrUpdateRepoPermissionsInOrgRequestBodyPermissionEnum;
 }
 export declare class TeamsAddOrUpdateRepoPermissionsInOrgRequest extends SpeakeasyBase {
-    pathParams: TeamsAddOrUpdateRepoPermissionsInOrgPathParams;
-    request?: TeamsAddOrUpdateRepoPermissionsInOrgRequestBody;
+    requestBody?: TeamsAddOrUpdateRepoPermissionsInOrgRequestBody;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    org: string;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    owner: string;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    repo: string;
+    /**
+     * The slug of the team name.
+     */
+    teamSlug: string;
 }
 export declare class TeamsAddOrUpdateRepoPermissionsInOrgResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeEngagementXAmzTargetEnum {
-    SsmContactsDescribeEngagement = "SSMContacts.DescribeEngagement"
+    SSMContactsDescribeEngagement = "SSMContacts.DescribeEngagement"
 }
-export declare class DescribeEngagementHeaders extends SpeakeasyBase {
+export declare class DescribeEngagementRequest extends SpeakeasyBase {
+    describeEngagementRequest: shared.DescribeEngagementRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class DescribeEngagementHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeEngagementXAmzTargetEnum;
 }
-export declare class DescribeEngagementRequest extends SpeakeasyBase {
-    headers: DescribeEngagementHeaders;
-    request: shared.DescribeEngagementRequest;
-}
 export declare class DescribeEngagementResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * DataEncryptionException
+     */
     dataEncryptionException?: any;
+    /**
+     * Success
+     */
     describeEngagementResult?: shared.DescribeEngagementResult;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

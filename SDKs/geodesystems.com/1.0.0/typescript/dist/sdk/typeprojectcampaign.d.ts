@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Search API for 'Campaign' entry type
+ */
 export declare class TypeProjectCampaign {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,10 @@ export declare class TypeProjectCampaign {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * searchProjectCampaign - Search API for 'Campaign' entry type
+     * Search API for 'Campaign' entry type
      *
+     * @remarks
      * API to search for entries of type Campaign
-    **/
+     */
     searchProjectCampaign(req: operations.SearchProjectCampaignRequest, config?: AxiosRequestConfig): Promise<operations.SearchProjectCampaignResponse>;
 }

@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetUntagOpenIdConnectProviderActionEnum {
-    UntagOpenIdConnectProvider = "UntagOpenIDConnectProvider"
+import { AxiosResponse } from "axios";
+export declare enum GETUntagOpenIDConnectProviderActionEnum {
+    UntagOpenIDConnectProvider = "UntagOpenIDConnectProvider"
 }
-export declare enum GetUntagOpenIdConnectProviderVersionEnum {
+export declare enum GETUntagOpenIDConnectProviderVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class GetUntagOpenIdConnectProviderQueryParams extends SpeakeasyBase {
-    action: GetUntagOpenIdConnectProviderActionEnum;
+export declare class GETUntagOpenIDConnectProviderRequest extends SpeakeasyBase {
+    action: GETUntagOpenIDConnectProviderActionEnum;
+    /**
+     * <p>The ARN of the OIDC provider in IAM from which you want to remove tags.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
+     */
     openIDConnectProviderArn: string;
+    /**
+     * A list of key names as a simple array of strings. The tags with matching keys are removed from the specified OIDC provider.
+     */
     tagKeys: string[];
-    version: GetUntagOpenIdConnectProviderVersionEnum;
-}
-export declare class GetUntagOpenIdConnectProviderHeaders extends SpeakeasyBase {
+    version: GETUntagOpenIDConnectProviderVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetUntagOpenIdConnectProviderHeaders extends SpeakeasyBase 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetUntagOpenIdConnectProviderRequest extends SpeakeasyBase {
-    queryParams: GetUntagOpenIdConnectProviderQueryParams;
-    headers: GetUntagOpenIdConnectProviderHeaders;
-}
-export declare class GetUntagOpenIdConnectProviderResponse extends SpeakeasyBase {
+export declare class GETUntagOpenIDConnectProviderResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

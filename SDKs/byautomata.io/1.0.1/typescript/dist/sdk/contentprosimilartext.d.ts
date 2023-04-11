@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class ContentproSimilarText {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +9,7 @@ export declare class ContentproSimilarText {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * postContentproSimilarText - The /contentpro-similar-text endpoint accepts and arbitrary piece of text and returns similar articles and blogs written by companies.
-    **/
-    postContentproSimilarText(req: operations.PostContentproSimilarTextRequest, config?: AxiosRequestConfig): Promise<operations.PostContentproSimilarTextResponse>;
+     * The /contentpro-similar-text endpoint accepts and arbitrary piece of text and returns similar articles and blogs written by companies.
+     */
+    postContentproSimilarText(req: operations.PostContentproSimilarTextRequestBody, config?: AxiosRequestConfig): Promise<operations.PostContentproSimilarTextResponse>;
 }

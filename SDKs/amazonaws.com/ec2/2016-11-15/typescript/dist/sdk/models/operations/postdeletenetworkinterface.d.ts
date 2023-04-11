@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteNetworkInterfaceActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteNetworkInterfaceActionEnum {
     DeleteNetworkInterface = "DeleteNetworkInterface"
 }
-export declare enum PostDeleteNetworkInterfaceVersionEnum {
+export declare enum POSTDeleteNetworkInterfaceVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDeleteNetworkInterfaceQueryParams extends SpeakeasyBase {
-    action: PostDeleteNetworkInterfaceActionEnum;
-    version: PostDeleteNetworkInterfaceVersionEnum;
-}
-export declare class PostDeleteNetworkInterfaceHeaders extends SpeakeasyBase {
+export declare class POSTDeleteNetworkInterfaceRequest extends SpeakeasyBase {
+    action: POSTDeleteNetworkInterfaceActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteNetworkInterfaceVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +18,8 @@ export declare class PostDeleteNetworkInterfaceHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteNetworkInterfaceRequest extends SpeakeasyBase {
-    queryParams: PostDeleteNetworkInterfaceQueryParams;
-    headers: PostDeleteNetworkInterfaceHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteNetworkInterfaceResponse extends SpeakeasyBase {
+export declare class POSTDeleteNetworkInterfaceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

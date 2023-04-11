@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Company Update Model
+ */
 export declare class CompanyUpdateModel extends SpeakeasyBase {
     addressLine1?: string;
     addressLine2?: string;

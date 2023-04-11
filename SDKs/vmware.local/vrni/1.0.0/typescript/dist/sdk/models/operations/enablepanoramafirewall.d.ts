@@ -1,16 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class EnablePanoramaFirewallPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class EnablePanoramaFirewallSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
+    apiKeyAuth: string;
 }
 export declare class EnablePanoramaFirewallRequest extends SpeakeasyBase {
-    pathParams: EnablePanoramaFirewallPathParams;
-    security: EnablePanoramaFirewallSecurity;
+    /**
+     * entity id
+     */
+    id: string;
 }
 export declare class EnablePanoramaFirewallResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetMessagesIdPathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetMessagesIdRequest extends SpeakeasyBase {
-    pathParams: GetMessagesIdPathParams;
+    /**
+     * Message ID.
+     */
+    id: number;
 }
 export declare class GetMessagesIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * The Messages object.
+     */
     messageEntity?: shared.MessageEntity;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

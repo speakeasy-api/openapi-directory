@@ -1,35 +1,31 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class AssignCallingPlanPathParams extends SpeakeasyBase {
-    userId: string;
-}
-export declare class AssignCallingPlanApplicationJsonCallingPlans extends SpeakeasyBase {
-    type?: string;
-}
-export declare class AssignCallingPlanApplicationJson extends SpeakeasyBase {
-    callingPlans?: AssignCallingPlanApplicationJsonCallingPlans[];
-}
-export declare class AssignCallingPlanMultipartFormDataCallingPlans extends SpeakeasyBase {
-    type?: string;
-}
-export declare class AssignCallingPlanMultipartFormData1 extends SpeakeasyBase {
-    callingPlans?: AssignCallingPlanMultipartFormDataCallingPlans[];
-}
-export declare class AssignCallingPlanRequests extends SpeakeasyBase {
-    object?: AssignCallingPlanApplicationJson;
-    object1?: AssignCallingPlanMultipartFormData1;
-}
+import { AxiosResponse } from "axios";
 export declare class AssignCallingPlanSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
+    oAuth: string;
+}
+export declare class AssignCallingPlanApplicationJSONCallingPlans extends SpeakeasyBase {
+    /**
+     * [Type](https://marketplace.zoom.us/docs/api-reference/other-references/plans#zoom-phone-calling-plans) of the calling plan.
+     */
+    type?: string;
+}
+export declare class AssignCallingPlanApplicationJSON extends SpeakeasyBase {
+    callingPlans?: AssignCallingPlanApplicationJSONCallingPlans[];
 }
 export declare class AssignCallingPlanRequest extends SpeakeasyBase {
-    pathParams: AssignCallingPlanPathParams;
-    request?: AssignCallingPlanRequests;
-    security: AssignCallingPlanSecurity;
+    requestBody?: AssignCallingPlanApplicationJSON;
+    userId: string;
 }
 export declare class AssignCallingPlanResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * **HTTP Status code:** `200`<br>
+     *
+     * @remarks
+     * Calling plan assigned successfully.
+     */
     assignCallingPlan200ApplicationJSONAny?: any;
 }

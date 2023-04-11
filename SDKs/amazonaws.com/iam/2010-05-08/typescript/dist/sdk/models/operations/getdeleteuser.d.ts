@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteUserActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteUserActionEnum {
     DeleteUser = "DeleteUser"
 }
-export declare enum GetDeleteUserVersionEnum {
+export declare enum GETDeleteUserVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class GetDeleteUserQueryParams extends SpeakeasyBase {
-    action: GetDeleteUserActionEnum;
+export declare class GETDeleteUserRequest extends SpeakeasyBase {
+    action: GETDeleteUserActionEnum;
+    /**
+     * <p>The name of the user to delete.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
+     */
     userName: string;
-    version: GetDeleteUserVersionEnum;
-}
-export declare class GetDeleteUserHeaders extends SpeakeasyBase {
+    version: GETDeleteUserVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDeleteUserHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteUserRequest extends SpeakeasyBase {
-    queryParams: GetDeleteUserQueryParams;
-    headers: GetDeleteUserHeaders;
-}
-export declare class GetDeleteUserResponse extends SpeakeasyBase {
+export declare class GETDeleteUserResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum ModifyWorkspaceCreationPropertiesXAmzTargetEnum {
     WorkspacesServiceModifyWorkspaceCreationProperties = "WorkspacesService.ModifyWorkspaceCreationProperties"
 }
-export declare class ModifyWorkspaceCreationPropertiesHeaders extends SpeakeasyBase {
+export declare class ModifyWorkspaceCreationPropertiesRequest extends SpeakeasyBase {
+    modifyWorkspaceCreationPropertiesRequest: shared.ModifyWorkspaceCreationPropertiesRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class ModifyWorkspaceCreationPropertiesHeaders extends SpeakeasyB
     xAmzSignedHeaders?: string;
     xAmzTarget: ModifyWorkspaceCreationPropertiesXAmzTargetEnum;
 }
-export declare class ModifyWorkspaceCreationPropertiesRequest extends SpeakeasyBase {
-    headers: ModifyWorkspaceCreationPropertiesHeaders;
-    request: shared.ModifyWorkspaceCreationPropertiesRequest;
-}
 export declare class ModifyWorkspaceCreationPropertiesResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InvalidParameterValuesException
+     */
     invalidParameterValuesException?: any;
+    /**
+     * Success
+     */
     modifyWorkspaceCreationPropertiesResult?: Record<string, any>;
+    /**
+     * OperationNotSupportedException
+     */
     operationNotSupportedException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
 }

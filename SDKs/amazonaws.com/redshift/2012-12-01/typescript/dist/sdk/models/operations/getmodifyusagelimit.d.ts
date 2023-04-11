@@ -1,23 +1,34 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetModifyUsageLimitActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETModifyUsageLimitActionEnum {
     ModifyUsageLimit = "ModifyUsageLimit"
 }
-export declare enum GetModifyUsageLimitBreachActionEnum {
+/**
+ * The new action that Amazon Redshift takes when the limit is reached. For more information about this parameter, see <a>UsageLimit</a>.
+ */
+export declare enum GETModifyUsageLimitBreachActionEnum {
     Log = "log",
     EmitMetric = "emit-metric",
     Disable = "disable"
 }
-export declare enum GetModifyUsageLimitVersionEnum {
+export declare enum GETModifyUsageLimitVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class GetModifyUsageLimitQueryParams extends SpeakeasyBase {
-    action: GetModifyUsageLimitActionEnum;
+export declare class GETModifyUsageLimitRequest extends SpeakeasyBase {
+    action: GETModifyUsageLimitActionEnum;
+    /**
+     * The new limit amount. For more information about this parameter, see <a>UsageLimit</a>.
+     */
     amount?: number;
-    breachAction?: GetModifyUsageLimitBreachActionEnum;
+    /**
+     * The new action that Amazon Redshift takes when the limit is reached. For more information about this parameter, see <a>UsageLimit</a>.
+     */
+    breachAction?: GETModifyUsageLimitBreachActionEnum;
+    /**
+     * The identifier of the usage limit to modify.
+     */
     usageLimitId: string;
-    version: GetModifyUsageLimitVersionEnum;
-}
-export declare class GetModifyUsageLimitHeaders extends SpeakeasyBase {
+    version: GETModifyUsageLimitVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -26,12 +37,9 @@ export declare class GetModifyUsageLimitHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetModifyUsageLimitRequest extends SpeakeasyBase {
-    queryParams: GetModifyUsageLimitQueryParams;
-    headers: GetModifyUsageLimitHeaders;
-}
-export declare class GetModifyUsageLimitResponse extends SpeakeasyBase {
+export declare class GETModifyUsageLimitResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

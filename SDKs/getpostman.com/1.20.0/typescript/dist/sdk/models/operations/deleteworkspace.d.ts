@@ -1,18 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteWorkspacePathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteWorkspaceRequest extends SpeakeasyBase {
     workspaceId: string;
 }
-export declare class DeleteWorkspace200ApplicationJsonWorkspace extends SpeakeasyBase {
+export declare class DeleteWorkspace200ApplicationJSONWorkspace extends SpeakeasyBase {
     id?: string;
 }
-export declare class DeleteWorkspace200ApplicationJson extends SpeakeasyBase {
-    workspace?: DeleteWorkspace200ApplicationJsonWorkspace;
-}
-export declare class DeleteWorkspaceRequest extends SpeakeasyBase {
-    pathParams: DeleteWorkspacePathParams;
+/**
+ * Successful Response
+ */
+export declare class DeleteWorkspace200ApplicationJSON extends SpeakeasyBase {
+    workspace?: DeleteWorkspace200ApplicationJSONWorkspace;
 }
 export declare class DeleteWorkspaceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deleteWorkspace200ApplicationJSONObject?: DeleteWorkspace200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful Response
+     */
+    deleteWorkspace200ApplicationJSONObject?: DeleteWorkspace200ApplicationJSON;
 }

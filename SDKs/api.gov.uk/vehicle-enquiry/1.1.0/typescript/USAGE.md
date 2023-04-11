@@ -1,20 +1,20 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetVehicleDetailsByRegistrationNumberRequest, GetVehicleDetailsByRegistrationNumberResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetVehicleDetailsByRegistrationNumberRequest,
+  GetVehicleDetailsByRegistrationNumberResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetVehicleDetailsByRegistrationNumberRequest = {
-  headers: {
-    xCorrelationId: "sit",
-    xApiKey: "voluptas",
+  vehicleRequest: {
+    registrationNumber: "corrupti",
   },
-  request: {
-    registrationNumber: "culpa",
-  },
+  xCorrelationId: "provident",
+  xApiKey: "distinctio",
 };
 
 sdk.vehicle.getVehicleDetailsByRegistrationNumber(req).then((res: GetVehicleDetailsByRegistrationNumberResponse | AxiosError) => {

@@ -9,10 +9,22 @@ export declare enum AppliedLabelChangeDetailTypesEnum {
 }
 /**
  * A change made to a Label on the Target.
-**/
+ */
 export declare class AppliedLabelChangeDetail extends SpeakeasyBase {
+    /**
+     * Field Changes. Only present if `types` contains `LABEL_FIELD_VALUE_CHANGED`.
+     */
     fieldChanges?: FieldValueChange[];
+    /**
+     * The Label name representing the Label that changed. This name always contains the revision of the Label that was used when this Action occurred. The format is `labels/id@revision`.
+     */
     label?: string;
+    /**
+     * The human-readable title of the label that changed.
+     */
     title?: string;
+    /**
+     * The types of changes made to the Label on the Target.
+     */
     types?: AppliedLabelChangeDetailTypesEnum[];
 }

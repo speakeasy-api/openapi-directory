@@ -5,7 +5,7 @@ import { EndpointLocation } from "./endpointlocation";
 import { EndpointUser } from "./endpointuser";
 /**
  * Specifies an endpoint to create or update and the settings and attributes to set or change for the endpoint.
-**/
+ */
 export declare class EndpointBatchItem extends SpeakeasyBase {
     address?: string;
     attributes?: Record<string, string[]>;

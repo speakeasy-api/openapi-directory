@@ -1,8 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteDomainNamePathParams extends SpeakeasyBase {
-    domainName: string;
-}
-export declare class DeleteDomainNameHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteDomainNameRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -10,14 +8,21 @@ export declare class DeleteDomainNameHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DeleteDomainNameRequest extends SpeakeasyBase {
-    pathParams: DeleteDomainNamePathParams;
-    headers: DeleteDomainNameHeaders;
+    /**
+     * The domain name.
+     */
+    domainName: string;
 }
 export declare class DeleteDomainNameResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

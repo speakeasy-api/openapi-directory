@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum StartWorkflowRunXAmzTargetEnum {
-    AwsGlueStartWorkflowRun = "AWSGlue.StartWorkflowRun"
+    AWSGlueStartWorkflowRun = "AWSGlue.StartWorkflowRun"
 }
-export declare class StartWorkflowRunHeaders extends SpeakeasyBase {
+export declare class StartWorkflowRunRequest extends SpeakeasyBase {
+    startWorkflowRunRequest: shared.StartWorkflowRunRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class StartWorkflowRunHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: StartWorkflowRunXAmzTargetEnum;
 }
-export declare class StartWorkflowRunRequest extends SpeakeasyBase {
-    headers: StartWorkflowRunHeaders;
-    request: shared.StartWorkflowRunRequest;
-}
 export declare class StartWorkflowRunResponse extends SpeakeasyBase {
+    /**
+     * ConcurrentRunsExceededException
+     */
     concurrentRunsExceededException?: any;
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
+    /**
+     * ResourceNumberLimitExceededException
+     */
     resourceNumberLimitExceededException?: any;
+    /**
+     * Success
+     */
     startWorkflowRunResponse?: shared.StartWorkflowRunResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

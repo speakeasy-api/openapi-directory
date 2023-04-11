@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostFailoverGlobalReplicationGroupActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTFailoverGlobalReplicationGroupActionEnum {
     FailoverGlobalReplicationGroup = "FailoverGlobalReplicationGroup"
 }
-export declare enum PostFailoverGlobalReplicationGroupVersionEnum {
+export declare enum POSTFailoverGlobalReplicationGroupVersionEnum {
     TwoThousandAndFifteen0202 = "2015-02-02"
 }
-export declare class PostFailoverGlobalReplicationGroupQueryParams extends SpeakeasyBase {
-    action: PostFailoverGlobalReplicationGroupActionEnum;
-    version: PostFailoverGlobalReplicationGroupVersionEnum;
-}
-export declare class PostFailoverGlobalReplicationGroupHeaders extends SpeakeasyBase {
+export declare class POSTFailoverGlobalReplicationGroupRequest extends SpeakeasyBase {
+    action: POSTFailoverGlobalReplicationGroupActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTFailoverGlobalReplicationGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostFailoverGlobalReplicationGroupHeaders extends Speakeasy
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostFailoverGlobalReplicationGroupRequest extends SpeakeasyBase {
-    queryParams: PostFailoverGlobalReplicationGroupQueryParams;
-    headers: PostFailoverGlobalReplicationGroupHeaders;
-    request?: Uint8Array;
-}
-export declare class PostFailoverGlobalReplicationGroupResponse extends SpeakeasyBase {
+export declare class POSTFailoverGlobalReplicationGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

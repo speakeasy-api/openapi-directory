@@ -1,33 +1,56 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetMostemailedSectionTimePeriodJsonPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETMostemailedSectionTimePeriodJsonSecurity extends SpeakeasyBase {
+    apiKey: string;
+}
+export declare class GETMostemailedSectionTimePeriodJsonRequest extends SpeakeasyBase {
+    /**
+     * Limits the results by one or more sections. You can use
+     *
+     * @remarks
+     * `all-sections` or one or more section names seperated by semicolons. See `viewed/sections.json` call to get a list of sections.
+     *
+     */
     section: shared.SectionEnum;
+    /**
+     * Number of days `1 | 7 | 30 ` corresponds to a day, a week, or a month of content.
+     */
     timePeriod: shared.TimePeriodEnum;
 }
-export declare class GetMostemailedSectionTimePeriodJsonSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
-}
-export declare class GetMostemailedSectionTimePeriodJson200ApplicationJson extends SpeakeasyBase {
+/**
+ * An array of Articles
+ */
+export declare class GETMostemailedSectionTimePeriodJson200ApplicationXML extends SpeakeasyBase {
     copyright?: string;
     numResults?: number;
     results?: shared.ArticleWithCountType[];
     status?: string;
 }
-export declare class GetMostemailedSectionTimePeriodJson400ApplicationJson extends SpeakeasyBase {
+export declare class GETMostemailedSectionTimePeriodJson400ApplicationJSON extends SpeakeasyBase {
     copyright?: string;
     errors?: string[];
     results?: any[];
     status?: string;
 }
-export declare class GetMostemailedSectionTimePeriodJsonRequest extends SpeakeasyBase {
-    pathParams: GetMostemailedSectionTimePeriodJsonPathParams;
-    security: GetMostemailedSectionTimePeriodJsonSecurity;
+/**
+ * An array of Articles
+ */
+export declare class GETMostemailedSectionTimePeriodJson200ApplicationJSON extends SpeakeasyBase {
+    copyright?: string;
+    numResults?: number;
+    results?: shared.ArticleWithCountType[];
+    status?: string;
 }
-export declare class GetMostemailedSectionTimePeriodJsonResponse extends SpeakeasyBase {
+export declare class GETMostemailedSectionTimePeriodJsonResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    getMostemailedSectionTimePeriodJSON200ApplicationJSONObject?: GetMostemailedSectionTimePeriodJson200ApplicationJson;
-    getMostemailedSectionTimePeriodJSON400ApplicationJSONObject?: GetMostemailedSectionTimePeriodJson400ApplicationJson;
+    /**
+     * An array of Articles
+     */
+    getMostemailedSectionTimePeriodJSON200ApplicationJSONObject?: GETMostemailedSectionTimePeriodJson200ApplicationJSON;
+    getMostemailedSectionTimePeriodJSON400ApplicationJSONObject?: GETMostemailedSectionTimePeriodJson400ApplicationJSON;
     getMostemailedSectionTimePeriodJSON403ApplicationJSONObject?: Record<string, any>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

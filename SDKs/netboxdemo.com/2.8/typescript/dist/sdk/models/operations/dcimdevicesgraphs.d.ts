@@ -1,13 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DcimDevicesGraphsPathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DcimDevicesGraphsRequest extends SpeakeasyBase {
-    pathParams: DcimDevicesGraphsPathParams;
+    /**
+     * A unique integer value identifying this device.
+     */
+    id: number;
 }
 export declare class DcimDevicesGraphsResponse extends SpeakeasyBase {
     contentType: string;
     deviceWithConfigContext?: shared.DeviceWithConfigContext;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

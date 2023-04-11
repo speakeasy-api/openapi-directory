@@ -1,25 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostGetAttributesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTGetAttributesActionEnum {
     GetAttributes = "GetAttributes"
 }
-export declare enum PostGetAttributesVersionEnum {
+export declare enum POSTGetAttributesVersionEnum {
     TwoThousandAndNine0415 = "2009-04-15"
 }
-export declare class PostGetAttributesQueryParams extends SpeakeasyBase {
+export declare class POSTGetAttributesRequest extends SpeakeasyBase {
     awsAccessKeyId: string;
-    action: PostGetAttributesActionEnum;
+    action: POSTGetAttributesActionEnum;
+    requestBody?: Uint8Array;
     signature: string;
     signatureMethod: string;
     signatureVersion: string;
     timestamp: string;
-    version: PostGetAttributesVersionEnum;
+    version: POSTGetAttributesVersionEnum;
 }
-export declare class PostGetAttributesRequest extends SpeakeasyBase {
-    queryParams: PostGetAttributesQueryParams;
-    request?: Uint8Array;
-}
-export declare class PostGetAttributesResponse extends SpeakeasyBase {
+export declare class POSTGetAttributesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

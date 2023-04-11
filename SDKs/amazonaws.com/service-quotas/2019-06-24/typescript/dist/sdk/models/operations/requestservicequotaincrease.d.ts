@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum RequestServiceQuotaIncreaseXAmzTargetEnum {
     ServiceQuotasV20190624RequestServiceQuotaIncrease = "ServiceQuotasV20190624.RequestServiceQuotaIncrease"
 }
-export declare class RequestServiceQuotaIncreaseHeaders extends SpeakeasyBase {
+export declare class RequestServiceQuotaIncreaseRequest extends SpeakeasyBase {
+    requestServiceQuotaIncreaseRequest: shared.RequestServiceQuotaIncreaseRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,21 +15,48 @@ export declare class RequestServiceQuotaIncreaseHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: RequestServiceQuotaIncreaseXAmzTargetEnum;
 }
-export declare class RequestServiceQuotaIncreaseRequest extends SpeakeasyBase {
-    headers: RequestServiceQuotaIncreaseHeaders;
-    request: shared.RequestServiceQuotaIncreaseRequest;
-}
 export declare class RequestServiceQuotaIncreaseResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * DependencyAccessDeniedException
+     */
     dependencyAccessDeniedException?: any;
+    /**
+     * IllegalArgumentException
+     */
     illegalArgumentException?: any;
+    /**
+     * InvalidResourceStateException
+     */
     invalidResourceStateException?: any;
+    /**
+     * NoSuchResourceException
+     */
     noSuchResourceException?: any;
+    /**
+     * QuotaExceededException
+     */
     quotaExceededException?: any;
+    /**
+     * Success
+     */
     requestServiceQuotaIncreaseResponse?: shared.RequestServiceQuotaIncreaseResponse;
-    resourceAlreadyExistsException?: any;
+    /**
+     * ServiceException
+     */
     serviceException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceAlreadyExistsException
+     */
+    resourceAlreadyExistsException?: any;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

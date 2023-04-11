@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Channel {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,14 +9,16 @@ export declare class Channel {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getChannel - Channel Detail
+     * Channel Detail
      *
+     * @remarks
      * Return the content of the selected channel.
-    **/
-    getChannel(req: operations.GetChannelRequest, config?: AxiosRequestConfig): Promise<operations.GetChannelResponse>;
+     */
+    getChannel(req: operations.GetChannelRequest, security: operations.GetChannelSecurity, config?: AxiosRequestConfig): Promise<operations.GetChannelResponse>;
     /**
-     * listChannels - Channel Collection
+     * Channel Collection
      *
+     * @remarks
      * If you are interested in a list of channels that have had there schedule updated you can filter by the following query params.
      *  - scheduleStart
      *  - scheduleEnd
@@ -29,6 +31,6 @@ export declare class Channel {
      * /channel?platform={uuid}&scheduleStart={today}&scheduleEnd={today + 2 weeks}&updatedSince={10 minutes ago}
      *
      * Also please note epg numbers are only exposed when a platform and region are passed to the query.
-    **/
-    listChannels(req: operations.ListChannelsRequest, config?: AxiosRequestConfig): Promise<operations.ListChannelsResponse>;
+     */
+    listChannels(req: operations.ListChannelsRequest, security: operations.ListChannelsSecurity, config?: AxiosRequestConfig): Promise<operations.ListChannelsResponse>;
 }

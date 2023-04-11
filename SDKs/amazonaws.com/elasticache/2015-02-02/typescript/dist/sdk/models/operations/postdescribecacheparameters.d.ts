@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeCacheParametersActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeCacheParametersActionEnum {
     DescribeCacheParameters = "DescribeCacheParameters"
 }
-export declare enum PostDescribeCacheParametersVersionEnum {
+export declare enum POSTDescribeCacheParametersVersionEnum {
     TwoThousandAndFifteen0202 = "2015-02-02"
 }
-export declare class PostDescribeCacheParametersQueryParams extends SpeakeasyBase {
-    action: PostDescribeCacheParametersActionEnum;
+export declare class POSTDescribeCacheParametersRequest extends SpeakeasyBase {
+    action: POSTDescribeCacheParametersActionEnum;
+    /**
+     * Pagination token
+     */
     marker?: string;
+    /**
+     * Pagination limit
+     */
     maxRecords?: string;
-    version: PostDescribeCacheParametersVersionEnum;
-}
-export declare class PostDescribeCacheParametersHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeCacheParametersVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeCacheParametersHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeCacheParametersRequest extends SpeakeasyBase {
-    queryParams: PostDescribeCacheParametersQueryParams;
-    headers: PostDescribeCacheParametersHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeCacheParametersResponse extends SpeakeasyBase {
+export declare class POSTDescribeCacheParametersResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

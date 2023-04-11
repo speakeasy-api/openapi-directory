@@ -1,39 +1,70 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AnalyticsManagementWebPropertyAdWordsLinksListPathParams extends SpeakeasyBase {
-    accountId: string;
-    webPropertyId: string;
-}
-export declare class AnalyticsManagementWebPropertyAdWordsLinksListQueryParams extends SpeakeasyBase {
-    alt?: shared.AltEnum;
-    fields?: string;
-    key?: string;
-    maxResults?: number;
-    oauthToken?: string;
-    prettyPrint?: boolean;
-    quotaUser?: string;
-    startIndex?: number;
-    userIp?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class AnalyticsManagementWebPropertyAdWordsLinksListSecurityOption1 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class AnalyticsManagementWebPropertyAdWordsLinksListSecurityOption2 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class AnalyticsManagementWebPropertyAdWordsLinksListSecurity extends SpeakeasyBase {
     option1?: AnalyticsManagementWebPropertyAdWordsLinksListSecurityOption1;
     option2?: AnalyticsManagementWebPropertyAdWordsLinksListSecurityOption2;
 }
 export declare class AnalyticsManagementWebPropertyAdWordsLinksListRequest extends SpeakeasyBase {
-    pathParams: AnalyticsManagementWebPropertyAdWordsLinksListPathParams;
-    queryParams: AnalyticsManagementWebPropertyAdWordsLinksListQueryParams;
-    security: AnalyticsManagementWebPropertyAdWordsLinksListSecurity;
+    /**
+     * ID of the account which the given web property belongs to.
+     */
+    accountId: string;
+    /**
+     * Data format for the response.
+     */
+    alt?: shared.AltEnum;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * The maximum number of webProperty-Google Ads links to include in this response.
+     */
+    maxResults?: number;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauthToken?: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * An index of the first webProperty-Google Ads link to retrieve. Use this parameter as a pagination mechanism along with the max-results parameter.
+     */
+    startIndex?: number;
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    userIp?: string;
+    /**
+     * Web property ID to retrieve the Google Ads links for.
+     */
+    webPropertyId: string;
 }
 export declare class AnalyticsManagementWebPropertyAdWordsLinksListResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful response
+     */
     entityAdWordsLinks?: shared.EntityAdWordsLinks;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

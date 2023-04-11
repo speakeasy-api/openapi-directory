@@ -1,0 +1,21 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+export declare class PersonalData extends SpeakeasyBase {
+    /**
+     * The date of birth of the person.
+     *
+     * @remarks
+     * The date should be in ISO-8601 format yyyy-mm-dd (e.g. 2000-01-31).
+     */
+    dateOfBirth?: string;
+    /**
+     * An ID number of the person.
+     */
+    idNumber?: string;
+    /**
+     * The nationality of the person represented by a two-character country code.
+     *
+     * @remarks
+     * >The permitted country codes are defined in ISO-3166-1 alpha-2 (e.g. 'NL').
+     */
+    nationality?: string;
+}

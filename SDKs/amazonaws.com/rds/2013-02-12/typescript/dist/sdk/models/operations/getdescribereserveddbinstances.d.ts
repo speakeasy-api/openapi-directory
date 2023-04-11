@@ -1,12 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeReservedDbInstancesActionEnum {
-    DescribeReservedDbInstances = "DescribeReservedDBInstances"
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeReservedDBInstancesActionEnum {
+    DescribeReservedDBInstances = "DescribeReservedDBInstances"
 }
-export declare enum GetDescribeReservedDbInstancesVersionEnum {
+export declare enum GETDescribeReservedDBInstancesVersionEnum {
     TwoThousandAndThirteen0212 = "2013-02-12"
 }
-export declare class GetDescribeReservedDbInstancesQueryParams extends SpeakeasyBase {
-    action: GetDescribeReservedDbInstancesActionEnum;
+export declare class GETDescribeReservedDBInstancesRequest extends SpeakeasyBase {
+    action: GETDescribeReservedDBInstancesActionEnum;
     dbInstanceClass?: string;
     duration?: string;
     marker?: string;
@@ -16,9 +17,7 @@ export declare class GetDescribeReservedDbInstancesQueryParams extends Speakeasy
     productDescription?: string;
     reservedDBInstanceId?: string;
     reservedDBInstancesOfferingId?: string;
-    version: GetDescribeReservedDbInstancesVersionEnum;
-}
-export declare class GetDescribeReservedDbInstancesHeaders extends SpeakeasyBase {
+    version: GETDescribeReservedDBInstancesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -27,12 +26,9 @@ export declare class GetDescribeReservedDbInstancesHeaders extends SpeakeasyBase
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeReservedDbInstancesRequest extends SpeakeasyBase {
-    queryParams: GetDescribeReservedDbInstancesQueryParams;
-    headers: GetDescribeReservedDbInstancesHeaders;
-}
-export declare class GetDescribeReservedDbInstancesResponse extends SpeakeasyBase {
+export declare class GETDescribeReservedDBInstancesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

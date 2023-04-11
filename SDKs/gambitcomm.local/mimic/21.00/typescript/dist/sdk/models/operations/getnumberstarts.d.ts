@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetNumberStartsPathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetNumberStartsRequest extends SpeakeasyBase {
-    pathParams: GetNumberStartsPathParams;
+    /**
+     * Agent to return the count
+     */
+    agentNum: number;
 }
 export declare class GetNumberStartsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     getNumberStarts200ApplicationJSONInt32Integer?: number;
 }

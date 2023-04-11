@@ -1,30 +1,89 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SearchTypePointAmerifluxLevel2QueryParams extends SpeakeasyBase {
-    changedateFrom?: Date;
-    changedateTo?: Date;
-    createdateFrom?: Date;
-    createdateTo?: Date;
-    description?: string;
-    filesuffix?: string;
-    fromdate?: Date;
-    group?: string;
-    max?: number;
-    maxlatitude?: number;
-    maxlongitude?: number;
-    minlatitude?: number;
-    minlongitude?: number;
-    name?: string;
-    searchTypePointAmerifluxLevel2Contact?: string;
-    searchTypePointAmerifluxLevel2EcosystemType?: string;
-    searchTypePointAmerifluxLevel2SiteId?: string;
-    skip?: number;
-    text?: string;
-    todate?: Date;
-}
+import { AxiosResponse } from "axios";
 export declare class SearchTypePointAmerifluxLevel2Request extends SpeakeasyBase {
-    queryParams: SearchTypePointAmerifluxLevel2QueryParams;
+    /**
+     * Archive change date from
+     */
+    changedateFrom?: Date;
+    /**
+     * Archive change date to
+     */
+    changedateTo?: Date;
+    /**
+     * Archive create date from
+     */
+    createdateFrom?: Date;
+    /**
+     * Archive create date to
+     */
+    createdateTo?: Date;
+    /**
+     * Search description
+     */
+    description?: string;
+    /**
+     * File suffix
+     */
+    filesuffix?: string;
+    /**
+     * From date
+     */
+    fromdate?: Date;
+    /**
+     * Parent entry
+     */
+    group?: string;
+    /**
+     * Max number of results
+     */
+    max?: number;
+    /**
+     * Northern bounds of search
+     */
+    maxlatitude?: number;
+    /**
+     * Eastern bounds of search
+     */
+    maxlongitude?: number;
+    /**
+     * Southern bounds of search
+     */
+    minlatitude?: number;
+    /**
+     * Western bounds of search
+     */
+    minlongitude?: number;
+    /**
+     * Search name
+     */
+    name?: string;
+    /**
+     * Contact
+     */
+    searchTypePointAmerifluxLevel2Contact?: string;
+    /**
+     * Ecosystem Type
+     */
+    searchTypePointAmerifluxLevel2EcosystemType?: string;
+    /**
+     * Site ID
+     */
+    searchTypePointAmerifluxLevel2SiteId?: string;
+    /**
+     * Number to skip
+     */
+    skip?: number;
+    /**
+     * Search text
+     */
+    text?: string;
+    /**
+     * To date
+     */
+    todate?: Date;
 }
 export declare class SearchTypePointAmerifluxLevel2Response extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

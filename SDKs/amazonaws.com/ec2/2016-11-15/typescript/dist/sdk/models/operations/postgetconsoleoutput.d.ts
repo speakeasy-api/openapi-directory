@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostGetConsoleOutputActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTGetConsoleOutputActionEnum {
     GetConsoleOutput = "GetConsoleOutput"
 }
-export declare enum PostGetConsoleOutputVersionEnum {
+export declare enum POSTGetConsoleOutputVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostGetConsoleOutputQueryParams extends SpeakeasyBase {
-    action: PostGetConsoleOutputActionEnum;
-    version: PostGetConsoleOutputVersionEnum;
-}
-export declare class PostGetConsoleOutputHeaders extends SpeakeasyBase {
+export declare class POSTGetConsoleOutputRequest extends SpeakeasyBase {
+    action: POSTGetConsoleOutputActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTGetConsoleOutputVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostGetConsoleOutputHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostGetConsoleOutputRequest extends SpeakeasyBase {
-    queryParams: PostGetConsoleOutputQueryParams;
-    headers: PostGetConsoleOutputHeaders;
-    request?: Uint8Array;
-}
-export declare class PostGetConsoleOutputResponse extends SpeakeasyBase {
+export declare class POSTGetConsoleOutputResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

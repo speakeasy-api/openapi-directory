@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteDbProxyEndpointActionEnum {
-    DeleteDbProxyEndpoint = "DeleteDBProxyEndpoint"
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteDBProxyEndpointActionEnum {
+    DeleteDBProxyEndpoint = "DeleteDBProxyEndpoint"
 }
-export declare enum GetDeleteDbProxyEndpointVersionEnum {
+export declare enum GETDeleteDBProxyEndpointVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class GetDeleteDbProxyEndpointQueryParams extends SpeakeasyBase {
-    action: GetDeleteDbProxyEndpointActionEnum;
+export declare class GETDeleteDBProxyEndpointRequest extends SpeakeasyBase {
+    action: GETDeleteDBProxyEndpointActionEnum;
+    /**
+     * The name of the DB proxy endpoint to delete.
+     */
     dbProxyEndpointName: string;
-    version: GetDeleteDbProxyEndpointVersionEnum;
-}
-export declare class GetDeleteDbProxyEndpointHeaders extends SpeakeasyBase {
+    version: GETDeleteDBProxyEndpointVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDeleteDbProxyEndpointHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteDbProxyEndpointRequest extends SpeakeasyBase {
-    queryParams: GetDeleteDbProxyEndpointQueryParams;
-    headers: GetDeleteDbProxyEndpointHeaders;
-}
-export declare class GetDeleteDbProxyEndpointResponse extends SpeakeasyBase {
+export declare class GETDeleteDBProxyEndpointResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

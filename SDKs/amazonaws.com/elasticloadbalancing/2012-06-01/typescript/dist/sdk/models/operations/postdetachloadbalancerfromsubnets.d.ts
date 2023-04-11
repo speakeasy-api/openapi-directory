@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDetachLoadBalancerFromSubnetsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDetachLoadBalancerFromSubnetsActionEnum {
     DetachLoadBalancerFromSubnets = "DetachLoadBalancerFromSubnets"
 }
-export declare enum PostDetachLoadBalancerFromSubnetsVersionEnum {
+export declare enum POSTDetachLoadBalancerFromSubnetsVersionEnum {
     TwoThousandAndTwelve0601 = "2012-06-01"
 }
-export declare class PostDetachLoadBalancerFromSubnetsQueryParams extends SpeakeasyBase {
-    action: PostDetachLoadBalancerFromSubnetsActionEnum;
-    version: PostDetachLoadBalancerFromSubnetsVersionEnum;
-}
-export declare class PostDetachLoadBalancerFromSubnetsHeaders extends SpeakeasyBase {
+export declare class POSTDetachLoadBalancerFromSubnetsRequest extends SpeakeasyBase {
+    action: POSTDetachLoadBalancerFromSubnetsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDetachLoadBalancerFromSubnetsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDetachLoadBalancerFromSubnetsHeaders extends SpeakeasyB
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDetachLoadBalancerFromSubnetsRequest extends SpeakeasyBase {
-    queryParams: PostDetachLoadBalancerFromSubnetsQueryParams;
-    headers: PostDetachLoadBalancerFromSubnetsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDetachLoadBalancerFromSubnetsResponse extends SpeakeasyBase {
+export declare class POSTDetachLoadBalancerFromSubnetsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

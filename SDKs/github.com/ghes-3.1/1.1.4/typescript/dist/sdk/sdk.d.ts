@@ -1,4 +1,3 @@
-import { AxiosInstance } from "axios";
 import { Actions } from "./actions";
 import { Activity } from "./activity";
 import { Apps } from "./apps";
@@ -25,37 +24,133 @@ import { Search } from "./search";
 import { SecretScanning } from "./secretscanning";
 import { Teams } from "./teams";
 import { Users } from "./users";
-export declare const ServerList: readonly ["https://github.com/", "https://{protocol}://{hostname}"];
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
+export declare const ServerList: readonly ["https://{protocol}://{hostname}/api/v3"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * GitHub's v3 REST API.
+ *
+ * @see {@link https://docs.github.com/enterprise-server@3.1/rest/} - GitHub Enterprise Developer Docs
+ */
 export declare class SDK {
+    /**
+     * Endpoints to manage GitHub Actions using the REST API.
+     */
     actions: Actions;
+    /**
+     * Activity APIs provide access to notifications, subscriptions, and timelines.
+     */
     activity: Activity;
+    /**
+     * Information for integrations and installations.
+     */
     apps: Apps;
+    /**
+     * Rich interactions with checks run by your integrations.
+     */
     checks: Checks;
+    /**
+     * Retrieve code scanning alerts from a repository.
+     */
     codeScanning: CodeScanning;
+    /**
+     * Insight into codes of conduct for your communities.
+     */
     codesOfConduct: CodesOfConduct;
+    /**
+     * List emojis available to use on GitHub.
+     */
     emojis: Emojis;
+    /**
+     * Administer a GitHub enterprise.
+     */
     enterpriseAdmin: EnterpriseAdmin;
+    /**
+     * View, modify your gists.
+     */
     gists: Gists;
+    /**
+     * Raw Git functionality.
+     */
     git: Git;
+    /**
+     * View gitignore templates
+     */
     gitignore: Gitignore;
+    /**
+     * Interact with GitHub Issues.
+     */
     issues: Issues;
+    /**
+     * View various OSS licenses.
+     */
     licenses: Licenses;
+    /**
+     * Render GitHub flavored markdown
+     */
     markdown: Markdown;
+    /**
+     * Endpoints that give information about the API.
+     */
     meta: Meta;
+    /**
+     * Manage access of OAuth applications
+     */
     oauthAuthorizations: OauthAuthorizations;
+    /**
+     * Interact with GitHub Orgs.
+     */
     orgs: Orgs;
+    /**
+     * Interact with GitHub Projects.
+     */
     projects: Projects;
+    /**
+     * Interact with GitHub Pull Requests.
+     */
     pulls: Pulls;
+    /**
+     * Check your current rate limit status
+     */
     rateLimit: RateLimit;
+    /**
+     * Interact with reactions to various GitHub entities.
+     */
     reactions: Reactions;
+    /**
+     * Interact with GitHub Repos.
+     */
     repos: Repos;
+    /**
+     * Look for stuff on GitHub.
+     */
     search: Search;
+    /**
+     * Retrieve secret scanning alerts from a repository.
+     */
     secretScanning: SecretScanning;
+    /**
+     * Interact with GitHub Teams.
+     */
     teams: Teams;
+    /**
+     * Interact with and view information about users and also current user.
+     */
     users: Users;
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -63,5 +158,6 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
 }

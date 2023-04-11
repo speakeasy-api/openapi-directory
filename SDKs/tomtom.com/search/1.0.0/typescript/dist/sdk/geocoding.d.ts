@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Geocoding {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,11 +9,11 @@ export declare class Geocoding {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getSearchVersionNumberGeocodeQueryExt - Geocode
-    **/
+     * Geocode
+     */
     getSearchVersionNumberGeocodeQueryExt(req: operations.GetSearchVersionNumberGeocodeQueryExtRequest, config?: AxiosRequestConfig): Promise<operations.GetSearchVersionNumberGeocodeQueryExtResponse>;
     /**
-     * getSearchVersionNumberStructuredGeocodeExt - Structured Geocode
-    **/
+     * Structured Geocode
+     */
     getSearchVersionNumberStructuredGeocodeExt(req: operations.GetSearchVersionNumberStructuredGeocodeExtRequest, config?: AxiosRequestConfig): Promise<operations.GetSearchVersionNumberStructuredGeocodeExtResponse>;
 }

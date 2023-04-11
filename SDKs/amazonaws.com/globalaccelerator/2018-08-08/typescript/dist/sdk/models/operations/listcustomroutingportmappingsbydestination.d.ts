@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListCustomRoutingPortMappingsByDestinationQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListCustomRoutingPortMappingsByDestinationXAmzTargetEnum {
     GlobalAcceleratorV20180706ListCustomRoutingPortMappingsByDestination = "GlobalAccelerator_V20180706.ListCustomRoutingPortMappingsByDestination"
 }
-export declare class ListCustomRoutingPortMappingsByDestinationHeaders extends SpeakeasyBase {
+export declare class ListCustomRoutingPortMappingsByDestinationRequest extends SpeakeasyBase {
+    listCustomRoutingPortMappingsByDestinationRequest: shared.ListCustomRoutingPortMappingsByDestinationRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,17 +23,28 @@ export declare class ListCustomRoutingPortMappingsByDestinationHeaders extends S
     xAmzSignedHeaders?: string;
     xAmzTarget: ListCustomRoutingPortMappingsByDestinationXAmzTargetEnum;
 }
-export declare class ListCustomRoutingPortMappingsByDestinationRequest extends SpeakeasyBase {
-    queryParams: ListCustomRoutingPortMappingsByDestinationQueryParams;
-    headers: ListCustomRoutingPortMappingsByDestinationHeaders;
-    request: shared.ListCustomRoutingPortMappingsByDestinationRequest;
-}
 export declare class ListCustomRoutingPortMappingsByDestinationResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * EndpointNotFoundException
+     */
     endpointNotFoundException?: any;
+    /**
+     * InternalServiceErrorException
+     */
     internalServiceErrorException?: any;
+    /**
+     * InvalidArgumentException
+     */
     invalidArgumentException?: any;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * Success
+     */
     listCustomRoutingPortMappingsByDestinationResponse?: shared.ListCustomRoutingPortMappingsByDestinationResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

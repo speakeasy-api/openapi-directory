@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PostUsersIdResendWelcomeEmailPathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class PostUsersIdResendWelcomeEmailRequest extends SpeakeasyBase {
-    pathParams: PostUsersIdResendWelcomeEmailPathParams;
+    /**
+     * User ID.
+     */
+    id: number;
 }
 export declare class PostUsersIdResendWelcomeEmailResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

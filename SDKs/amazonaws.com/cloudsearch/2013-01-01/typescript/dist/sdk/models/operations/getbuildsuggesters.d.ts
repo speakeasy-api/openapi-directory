@@ -1,16 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetBuildSuggestersActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETBuildSuggestersActionEnum {
     BuildSuggesters = "BuildSuggesters"
 }
-export declare enum GetBuildSuggestersVersionEnum {
+export declare enum GETBuildSuggestersVersionEnum {
     TwoThousandAndThirteen0101 = "2013-01-01"
 }
-export declare class GetBuildSuggestersQueryParams extends SpeakeasyBase {
-    action: GetBuildSuggestersActionEnum;
+export declare class GETBuildSuggestersRequest extends SpeakeasyBase {
+    action: GETBuildSuggestersActionEnum;
     domainName: string;
-    version: GetBuildSuggestersVersionEnum;
-}
-export declare class GetBuildSuggestersHeaders extends SpeakeasyBase {
+    version: GETBuildSuggestersVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +18,9 @@ export declare class GetBuildSuggestersHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetBuildSuggestersRequest extends SpeakeasyBase {
-    queryParams: GetBuildSuggestersQueryParams;
-    headers: GetBuildSuggestersHeaders;
-}
-export declare class GetBuildSuggestersResponse extends SpeakeasyBase {
+export declare class GETBuildSuggestersResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

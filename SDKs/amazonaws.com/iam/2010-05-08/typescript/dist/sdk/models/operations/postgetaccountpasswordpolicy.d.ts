@@ -1,15 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostGetAccountPasswordPolicyActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTGetAccountPasswordPolicyActionEnum {
     GetAccountPasswordPolicy = "GetAccountPasswordPolicy"
 }
-export declare enum PostGetAccountPasswordPolicyVersionEnum {
+export declare enum POSTGetAccountPasswordPolicyVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostGetAccountPasswordPolicyQueryParams extends SpeakeasyBase {
-    action: PostGetAccountPasswordPolicyActionEnum;
-    version: PostGetAccountPasswordPolicyVersionEnum;
-}
-export declare class PostGetAccountPasswordPolicyHeaders extends SpeakeasyBase {
+export declare class POSTGetAccountPasswordPolicyRequest extends SpeakeasyBase {
+    action: POSTGetAccountPasswordPolicyActionEnum;
+    version: POSTGetAccountPasswordPolicyVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +17,9 @@ export declare class PostGetAccountPasswordPolicyHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostGetAccountPasswordPolicyRequest extends SpeakeasyBase {
-    queryParams: PostGetAccountPasswordPolicyQueryParams;
-    headers: PostGetAccountPasswordPolicyHeaders;
-}
-export declare class PostGetAccountPasswordPolicyResponse extends SpeakeasyBase {
+export declare class POSTGetAccountPasswordPolicyResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

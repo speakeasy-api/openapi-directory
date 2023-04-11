@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeDbClusterParameterGroupsActionEnum {
-    DescribeDbClusterParameterGroups = "DescribeDBClusterParameterGroups"
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeDBClusterParameterGroupsActionEnum {
+    DescribeDBClusterParameterGroups = "DescribeDBClusterParameterGroups"
 }
-export declare enum PostDescribeDbClusterParameterGroupsVersionEnum {
+export declare enum POSTDescribeDBClusterParameterGroupsVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class PostDescribeDbClusterParameterGroupsQueryParams extends SpeakeasyBase {
-    action: PostDescribeDbClusterParameterGroupsActionEnum;
+export declare class POSTDescribeDBClusterParameterGroupsRequest extends SpeakeasyBase {
+    action: POSTDescribeDBClusterParameterGroupsActionEnum;
+    /**
+     * Pagination token
+     */
     marker?: string;
+    /**
+     * Pagination limit
+     */
     maxRecords?: string;
-    version: PostDescribeDbClusterParameterGroupsVersionEnum;
-}
-export declare class PostDescribeDbClusterParameterGroupsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeDBClusterParameterGroupsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeDbClusterParameterGroupsHeaders extends Speakea
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeDbClusterParameterGroupsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeDbClusterParameterGroupsQueryParams;
-    headers: PostDescribeDbClusterParameterGroupsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeDbClusterParameterGroupsResponse extends SpeakeasyBase {
+export declare class POSTDescribeDBClusterParameterGroupsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

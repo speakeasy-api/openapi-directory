@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Reference } from "./reference";
 import { EntityTypeEnum } from "./entitytypeenum";
+import { Reference } from "./reference";
 export declare enum ProblemEventAdminStateEnum {
     Enabled = "ENABLED",
     Disabled = "DISABLED"
@@ -11,6 +11,9 @@ export declare enum ProblemEventSeverityEnum {
     Warning = "WARNING",
     Info = "INFO"
 }
+/**
+ * OK
+ */
 export declare class ProblemEvent extends SpeakeasyBase {
     adminState?: ProblemEventAdminStateEnum;
     anchorEntities?: Reference[];

@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteLoadBalancersIdPathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteLoadBalancersIdRequest extends SpeakeasyBase {
-    pathParams: DeleteLoadBalancersIdPathParams;
+    /**
+     * ID of the Load Balancer
+     */
+    id: number;
 }
 export declare class DeleteLoadBalancersIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

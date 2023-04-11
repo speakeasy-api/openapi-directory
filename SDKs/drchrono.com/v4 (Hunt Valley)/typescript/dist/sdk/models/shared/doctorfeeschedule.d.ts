@@ -7,7 +7,7 @@ export declare enum DoctorFeeScheduleCodeTypeEnum {
     Icd10 = "ICD10",
     Revenue = "Revenue"
 }
-export declare enum DoctorFeeScheduleCptHcpcsModifierNumber2Enum {
+export declare enum DoctorFeeScheduleCPTHCPCSModifierNumber2Enum {
     Unknown = "",
     Seventeen = "17",
     OneD = "1D",
@@ -440,7 +440,7 @@ export declare enum DoctorFeeScheduleCptHcpcsModifierNumber2Enum {
     ThreeP = "3P",
     EightP = "8P"
 }
-export declare enum DoctorFeeScheduleCptHcpcsModifierNumber3Enum {
+export declare enum DoctorFeeScheduleCPTHCPCSModifierNumber3Enum {
     Unknown = "",
     Seventeen = "17",
     OneD = "1D",
@@ -873,7 +873,7 @@ export declare enum DoctorFeeScheduleCptHcpcsModifierNumber3Enum {
     ThreeP = "3P",
     EightP = "8P"
 }
-export declare enum DoctorFeeScheduleCptHcpcsModifierNumber4Enum {
+export declare enum DoctorFeeScheduleCPTHCPCSModifierNumber4Enum {
     Unknown = "",
     Seventeen = "17",
     OneD = "1D",
@@ -1306,14 +1306,20 @@ export declare enum DoctorFeeScheduleCptHcpcsModifierNumber4Enum {
     ThreeP = "3P",
     EightP = "8P"
 }
-export declare enum DoctorFeeScheduleNdcUnitsEnum {
+export declare enum DoctorFeeScheduleNDCUnitsEnum {
     F2 = "F2",
     Gr = "GR",
     Me = "ME",
     Ml = "ML",
     Un = "UN"
 }
+/**
+ * OK
+ */
 export declare class DoctorFeeSchedule extends SpeakeasyBase {
+    /**
+     * Typical allowed amount for payer. Not used if blank.
+     */
     allowedAmount?: number;
     basePrice?: number;
     billingDescription?: string;
@@ -1321,9 +1327,9 @@ export declare class DoctorFeeSchedule extends SpeakeasyBase {
     code?: string;
     codeType?: DoctorFeeScheduleCodeTypeEnum;
     cptHcpcsModifier1?: string;
-    cptHcpcsModifier2?: DoctorFeeScheduleCptHcpcsModifierNumber2Enum;
-    cptHcpcsModifier3?: DoctorFeeScheduleCptHcpcsModifierNumber3Enum;
-    cptHcpcsModifier4?: DoctorFeeScheduleCptHcpcsModifierNumber4Enum;
+    cptHcpcsModifier2?: DoctorFeeScheduleCPTHCPCSModifierNumber2Enum;
+    cptHcpcsModifier3?: DoctorFeeScheduleCPTHCPCSModifierNumber3Enum;
+    cptHcpcsModifier4?: DoctorFeeScheduleCPTHCPCSModifierNumber4Enum;
     createdAt?: string;
     description?: string;
     doctor?: number;
@@ -1332,10 +1338,19 @@ export declare class DoctorFeeSchedule extends SpeakeasyBase {
     insuredPrice?: number;
     ndcCode?: string;
     ndcQuantity?: number;
-    ndcUnits?: DoctorFeeScheduleNdcUnitsEnum;
+    ndcUnits?: DoctorFeeScheduleNDCUnitsEnum;
     office?: number;
+    /**
+     * Fee Schedule pricing specific to this payer, if null, then applies as default to all payers without a more specific fee schedule.
+     */
     payerId?: string;
+    /**
+     * Optional: Category to organize the code into.
+     */
     picklistCategory?: string;
+    /**
+     * Name of insurance plan.
+     */
     planName?: string;
     updatedAt?: string;
 }

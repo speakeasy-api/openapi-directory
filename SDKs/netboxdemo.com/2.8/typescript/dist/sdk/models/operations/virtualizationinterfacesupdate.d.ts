@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class VirtualizationInterfacesUpdatePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class VirtualizationInterfacesUpdateRequest extends SpeakeasyBase {
-    pathParams: VirtualizationInterfacesUpdatePathParams;
-    request: shared.WritableVirtualMachineInterfaceInput;
+    writableVirtualMachineInterfaceInput: shared.WritableVirtualMachineInterfaceInput;
+    /**
+     * A unique integer value identifying this interface.
+     */
+    id: number;
 }
 export declare class VirtualizationInterfacesUpdateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
     virtualMachineInterface?: shared.VirtualMachineInterface;
 }

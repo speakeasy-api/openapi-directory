@@ -1,22 +1,43 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsPathParams extends SpeakeasyBase {
-    pullRequestId: number;
-    repoSlug: string;
-    workspace: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsSecurity extends SpeakeasyBase {
-    oauth2?: shared.SchemeOauth2;
+    apiKey?: string;
     basic?: shared.SchemeBasic;
-    apiKey?: shared.SchemeApiKey;
+    oauth2?: string;
 }
 export declare class GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsRequest extends SpeakeasyBase {
-    pathParams: GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsPathParams;
-    security: GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsSecurity;
+    /**
+     * The id of the pull request.
+     */
+    pullRequestId: number;
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     *
+     * @remarks
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     *
+     */
+    repoSlug: string;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     *
+     * @remarks
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     *
+     */
+    workspace: string;
 }
 export declare class GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * If the authenticated user does not have access to the pull request.
+     */
     error?: Record<string, any>;
+    /**
+     * A paginated list of comments made on the given pull request, in chronological order.
+     */
     paginatedPullrequestComments?: shared.PaginatedPullrequestComments;
 }

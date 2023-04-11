@@ -1,22 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetIntegrationTestRelationsPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetIntegrationTestRelationsRequest extends SpeakeasyBase {
     apiId: string;
     apiVersionId: string;
 }
-export declare class GetIntegrationTestRelations200ApplicationJsonIntegrationtest extends SpeakeasyBase {
+export declare class GetIntegrationTestRelations200ApplicationJSONIntegrationtest extends SpeakeasyBase {
     collectionId?: string;
     id?: string;
     name?: string;
     updatedAt?: string;
 }
-export declare class GetIntegrationTestRelations200ApplicationJson extends SpeakeasyBase {
-    integrationtest?: GetIntegrationTestRelations200ApplicationJsonIntegrationtest[];
-}
-export declare class GetIntegrationTestRelationsRequest extends SpeakeasyBase {
-    pathParams: GetIntegrationTestRelationsPathParams;
+/**
+ * Get integration test relations
+ */
+export declare class GetIntegrationTestRelations200ApplicationJSON extends SpeakeasyBase {
+    integrationtest?: GetIntegrationTestRelations200ApplicationJSONIntegrationtest[];
 }
 export declare class GetIntegrationTestRelationsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getIntegrationTestRelations200ApplicationJSONObject?: GetIntegrationTestRelations200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Get integration test relations
+     */
+    getIntegrationTestRelations200ApplicationJSONObject?: GetIntegrationTestRelations200ApplicationJSON;
 }

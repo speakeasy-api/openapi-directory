@@ -1,22 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetDatacenterPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class GetDatacenterQueryParams extends SpeakeasyBase {
-    time?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetDatacenterSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
+    apiKeyAuth: string;
 }
 export declare class GetDatacenterRequest extends SpeakeasyBase {
-    pathParams: GetDatacenterPathParams;
-    queryParams: GetDatacenterQueryParams;
-    security: GetDatacenterSecurity;
+    /**
+     * entity id
+     */
+    id: string;
+    /**
+     * time in epoch seconds
+     */
+    time?: number;
 }
 export declare class GetDatacenterResponse extends SpeakeasyBase {
+    /**
+     * Bad Request
+     */
     apiError?: shared.ApiError;
     contentType: string;
     statusCode: number;
-    vcDatacenter?: shared.VcDatacenter;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
+    vcDatacenter?: shared.VCDatacenter;
 }

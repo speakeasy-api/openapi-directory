@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SavePathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class SaveRequest extends SpeakeasyBase {
-    pathParams: SavePathParams;
+    /**
+     * Agent to save
+     */
+    agentNum: number;
 }
 export declare class SaveResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     save200ApplicationJSONString?: string;
 }

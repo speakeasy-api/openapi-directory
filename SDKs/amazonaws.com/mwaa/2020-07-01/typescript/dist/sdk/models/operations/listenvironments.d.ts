@@ -1,10 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListEnvironmentsQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListEnvironmentsRequest extends SpeakeasyBase {
+    /**
+     * The maximum number of results to retrieve per page. For example, <code>5</code> environments per page.
+     */
     maxResults?: number;
+    /**
+     * Retrieves the next page of the results.
+     */
     nextToken?: string;
-}
-export declare class ListEnvironmentsHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +18,20 @@ export declare class ListEnvironmentsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class ListEnvironmentsRequest extends SpeakeasyBase {
-    queryParams: ListEnvironmentsQueryParams;
-    headers: ListEnvironmentsHeaders;
-}
 export declare class ListEnvironmentsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * Success
+     */
     listEnvironmentsOutput?: shared.ListEnvironmentsOutput;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

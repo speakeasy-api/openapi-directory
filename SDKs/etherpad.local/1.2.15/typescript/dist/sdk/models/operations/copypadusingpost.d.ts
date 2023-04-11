@@ -1,37 +1,60 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CopyPadUsingPostQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class CopyPadUsingPOSTRequest extends SpeakeasyBase {
     destinationID?: string;
     force?: string;
     sourceID?: string;
 }
-export declare class CopyPadUsingPost200ApplicationJson extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class CopyPadUsingPost500ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class CopyPadUsingPost400ApplicationJson extends SpeakeasyBase {
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class CopyPadUsingPost401ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class CopyPadUsingPost401ApplicationJson extends SpeakeasyBase {
+/**
+ * generic api error (code 1)
+ */
+export declare class CopyPadUsingPost400ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class CopyPadUsingPost500ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class CopyPadUsingPost200ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class CopyPadUsingPostRequest extends SpeakeasyBase {
-    queryParams: CopyPadUsingPostQueryParams;
-}
-export declare class CopyPadUsingPostResponse extends SpeakeasyBase {
+export declare class CopyPadUsingPOSTResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    copyPadUsingPOST200ApplicationJSONObject?: CopyPadUsingPost200ApplicationJson;
-    copyPadUsingPOST400ApplicationJSONObject?: CopyPadUsingPost400ApplicationJson;
-    copyPadUsingPOST401ApplicationJSONObject?: CopyPadUsingPost401ApplicationJson;
-    copyPadUsingPOST500ApplicationJSONObject?: CopyPadUsingPost500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    copyPadUsingPOST200ApplicationJSONObject?: CopyPadUsingPost200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    copyPadUsingPOST400ApplicationJSONObject?: CopyPadUsingPost400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    copyPadUsingPOST401ApplicationJSONObject?: CopyPadUsingPost401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    copyPadUsingPOST500ApplicationJSONObject?: CopyPadUsingPost500ApplicationJSON;
 }

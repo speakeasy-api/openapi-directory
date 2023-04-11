@@ -1,0 +1,14 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Successful response
+ */
+export declare class PopulateVersionFilesResponse extends SpeakeasyBase {
+    /**
+     * The content hashes of the specified files that need to be uploaded to the specified URL.
+     */
+    uploadRequiredHashes?: string[];
+    /**
+     * The URL to which the files should be uploaded, in the format: "https://upload-firebasehosting.googleapis.com/upload/sites/SITE_ID /versions/VERSION_ID/files" Perform a multipart `POST` of the Gzipped file contents to the URL using a forward slash and the hash of the file appended to the end.
+     */
+    uploadUrl?: string;
+}

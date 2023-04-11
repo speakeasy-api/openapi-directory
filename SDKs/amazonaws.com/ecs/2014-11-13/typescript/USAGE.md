@@ -1,56 +1,56 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateCapacityProviderRequest, CreateCapacityProviderResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CreateCapacityProviderRequest,
+  CreateCapacityProviderResponse,
+  CreateCapacityProviderXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
+import {
+  ManagedTerminationProtectionEnum,
+  ManagedScalingStatusEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: CreateCapacityProviderRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "AmazonEC2ContainerServiceV20141113.CreateCapacityProvider",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
+});
+
+const req: CreateCapacityProviderRequest = {
+  createCapacityProviderRequest: {
     autoScalingGroupProvider: {
-      autoScalingGroupArn: "fugit",
+      autoScalingGroupArn: "corrupti",
       managedScaling: {
-        instanceWarmupPeriod: 1543572285742637646,
-        maximumScalingStepSize: 2661732831099943416,
-        minimumScalingStepSize: 8325060299420976708,
-        status: "DISABLED",
-        targetCapacity: 2518412263346885298,
+        instanceWarmupPeriod: 592845,
+        maximumScalingStepSize: 715190,
+        minimumScalingStepSize: 844266,
+        status: ManagedScalingStatusEnum.Disabled,
+        targetCapacity: 857946,
       },
-      managedTerminationProtection: "ENABLED",
+      managedTerminationProtection: ManagedTerminationProtectionEnum.Disabled,
     },
-    name: "et",
+    name: "illum",
     tags: [
       {
-        key: "dolorem",
-        value: "et",
+        key: "error",
+        value: "deserunt",
       },
       {
-        key: "voluptate",
-        value: "iste",
-      },
-      {
-        key: "vitae",
-        value: "totam",
+        key: "suscipit",
+        value: "iure",
       },
     ],
   },
+  xAmzAlgorithm: "magnam",
+  xAmzContentSha256: "debitis",
+  xAmzCredential: "ipsa",
+  xAmzDate: "delectus",
+  xAmzSecurityToken: "tempora",
+  xAmzSignature: "suscipit",
+  xAmzSignedHeaders: "molestiae",
+  xAmzTarget: CreateCapacityProviderXAmzTargetEnum.AmazonEc2ContainerServiceV20141113CreateCapacityProvider,
 };
 
 sdk.createCapacityProvider(req).then((res: CreateCapacityProviderResponse | AxiosError) => {

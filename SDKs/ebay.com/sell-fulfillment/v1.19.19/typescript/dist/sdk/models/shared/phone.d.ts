@@ -1,0 +1,14 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * This type is used by the <strong>returnAddress</strong field that is used by the payment dispute methods. If a buyer is returning the item (under payment dispute) to the seller, a primary phone number for the seller must be provided.
+ */
+export declare class Phone extends SpeakeasyBase {
+    /**
+     * The seller's country calling code. This field is needed if the buyer is located in a different country than the seller. It is also OK to provide if the buyer and seller are both located in the same country. For a full list of calling codes for all countries, see the <a href="https://countrycode.org/ " target="_blank">countrycode.org</a> site.
+     */
+    countryCode?: string;
+    /**
+     * The seller's primary phone number associated with the return address. When this number is provided in a <strong>contestPaymentDispute</strong> or <strong>contestPaymentDispute</strong> method, it is provided as one continuous numeric string, including the area code. So, if the phone number's area code was '408', a number in this field may look something like this: <br><br><code>"number" : "4088084356"</code><br><br>If the buyer is located in a different country than the seller, the seller's country calling code will need to be specified in the <strong>countryCode</strong> field.
+     */
+    number?: string;
+}

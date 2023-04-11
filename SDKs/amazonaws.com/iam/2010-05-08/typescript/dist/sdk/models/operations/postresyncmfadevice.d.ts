@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostResyncMfaDeviceActionEnum {
-    ResyncMfaDevice = "ResyncMFADevice"
+import { AxiosResponse } from "axios";
+export declare enum POSTResyncMFADeviceActionEnum {
+    ResyncMFADevice = "ResyncMFADevice"
 }
-export declare enum PostResyncMfaDeviceVersionEnum {
+export declare enum POSTResyncMFADeviceVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostResyncMfaDeviceQueryParams extends SpeakeasyBase {
-    action: PostResyncMfaDeviceActionEnum;
-    version: PostResyncMfaDeviceVersionEnum;
-}
-export declare class PostResyncMfaDeviceHeaders extends SpeakeasyBase {
+export declare class POSTResyncMFADeviceRequest extends SpeakeasyBase {
+    action: POSTResyncMFADeviceActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTResyncMFADeviceVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostResyncMfaDeviceHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostResyncMfaDeviceRequest extends SpeakeasyBase {
-    queryParams: PostResyncMfaDeviceQueryParams;
-    headers: PostResyncMfaDeviceHeaders;
-    request?: Uint8Array;
-}
-export declare class PostResyncMfaDeviceResponse extends SpeakeasyBase {
+export declare class POSTResyncMFADeviceResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

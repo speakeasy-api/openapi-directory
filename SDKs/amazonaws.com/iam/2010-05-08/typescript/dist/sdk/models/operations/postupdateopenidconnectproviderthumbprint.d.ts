@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostUpdateOpenIdConnectProviderThumbprintActionEnum {
-    UpdateOpenIdConnectProviderThumbprint = "UpdateOpenIDConnectProviderThumbprint"
+import { AxiosResponse } from "axios";
+export declare enum POSTUpdateOpenIDConnectProviderThumbprintActionEnum {
+    UpdateOpenIDConnectProviderThumbprint = "UpdateOpenIDConnectProviderThumbprint"
 }
-export declare enum PostUpdateOpenIdConnectProviderThumbprintVersionEnum {
+export declare enum POSTUpdateOpenIDConnectProviderThumbprintVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostUpdateOpenIdConnectProviderThumbprintQueryParams extends SpeakeasyBase {
-    action: PostUpdateOpenIdConnectProviderThumbprintActionEnum;
-    version: PostUpdateOpenIdConnectProviderThumbprintVersionEnum;
-}
-export declare class PostUpdateOpenIdConnectProviderThumbprintHeaders extends SpeakeasyBase {
+export declare class POSTUpdateOpenIDConnectProviderThumbprintRequest extends SpeakeasyBase {
+    action: POSTUpdateOpenIDConnectProviderThumbprintActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTUpdateOpenIDConnectProviderThumbprintVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostUpdateOpenIdConnectProviderThumbprintHeaders extends Sp
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostUpdateOpenIdConnectProviderThumbprintRequest extends SpeakeasyBase {
-    queryParams: PostUpdateOpenIdConnectProviderThumbprintQueryParams;
-    headers: PostUpdateOpenIdConnectProviderThumbprintHeaders;
-    request?: Uint8Array;
-}
-export declare class PostUpdateOpenIdConnectProviderThumbprintResponse extends SpeakeasyBase {
+export declare class POSTUpdateOpenIDConnectProviderThumbprintResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

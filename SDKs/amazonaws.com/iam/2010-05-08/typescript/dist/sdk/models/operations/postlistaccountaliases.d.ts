@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostListAccountAliasesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTListAccountAliasesActionEnum {
     ListAccountAliases = "ListAccountAliases"
 }
-export declare enum PostListAccountAliasesVersionEnum {
+export declare enum POSTListAccountAliasesVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostListAccountAliasesQueryParams extends SpeakeasyBase {
-    action: PostListAccountAliasesActionEnum;
+export declare class POSTListAccountAliasesRequest extends SpeakeasyBase {
+    action: POSTListAccountAliasesActionEnum;
+    /**
+     * Pagination token
+     */
     marker?: string;
+    /**
+     * Pagination limit
+     */
     maxItems?: string;
-    version: PostListAccountAliasesVersionEnum;
-}
-export declare class PostListAccountAliasesHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTListAccountAliasesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostListAccountAliasesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostListAccountAliasesRequest extends SpeakeasyBase {
-    queryParams: PostListAccountAliasesQueryParams;
-    headers: PostListAccountAliasesHeaders;
-    request?: Uint8Array;
-}
-export declare class PostListAccountAliasesResponse extends SpeakeasyBase {
+export declare class POSTListAccountAliasesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

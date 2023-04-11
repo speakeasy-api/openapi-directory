@@ -20,7 +20,7 @@ export declare class TopicSearchResultItemRelated extends SpeakeasyBase {
 }
 /**
  * Topic Search Result Item
-**/
+ */
 export declare class TopicSearchResultItem extends SpeakeasyBase {
     aliases?: TopicSearchResultItemAliases[];
     createdAt: Date;

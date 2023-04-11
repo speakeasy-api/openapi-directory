@@ -14,6 +14,9 @@ export declare class OfferingRequiredMetadata extends SpeakeasyBase {
 }
 export declare class OfferingRequired extends SpeakeasyBase {
     badge?: OfferingRequiredBadge;
+    /**
+     * The identifier for a specific version of a course
+     */
     contentId?: string;
     createDefaultChannels?: boolean;
     description?: string;
@@ -24,6 +27,9 @@ export declare class OfferingRequired extends SpeakeasyBase {
     isReadonly?: boolean;
     metadata?: OfferingRequiredMetadata;
     name?: string;
+    /**
+     * Every time a course is republished it's assigned a new contentId. rootContentId is the first original contentId associated with a course.
+     */
     rootContentId?: string;
     start: Date;
     trailerVideoUrl?: string;

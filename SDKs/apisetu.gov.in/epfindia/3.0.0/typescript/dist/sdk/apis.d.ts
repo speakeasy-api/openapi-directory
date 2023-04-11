@@ -1,6 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class ApIs {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+export declare class APIs {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,21 +9,24 @@ export declare class ApIs {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * epfsc - Scheme Certificate
+     * Scheme Certificate
      *
+     * @remarks
      * API to verify Scheme Certificate.
-    **/
-    epfsc(req: operations.EpfscRequest, config?: AxiosRequestConfig): Promise<operations.EpfscResponse>;
+     */
+    epfsc(req: operations.EpfscRequestBody, security: operations.EpfscSecurity, config?: AxiosRequestConfig): Promise<operations.EpfscResponse>;
     /**
-     * pecer - Pension Certificate
+     * Pension Certificate
      *
+     * @remarks
      * API to verify Pension Certificate.
-    **/
-    pecer(req: operations.PecerRequest, config?: AxiosRequestConfig): Promise<operations.PecerResponse>;
+     */
+    pecer(req: operations.PecerRequestBody, security: operations.PecerSecurity, config?: AxiosRequestConfig): Promise<operations.PecerResponse>;
     /**
-     * uncrd - UAN Card
+     * UAN Card
      *
+     * @remarks
      * API to verify UAN Card.
-    **/
-    uncrd(req: operations.UncrdRequest, config?: AxiosRequestConfig): Promise<operations.UncrdResponse>;
+     */
+    uncrd(req: operations.UncrdRequestBody, security: operations.UncrdSecurity, config?: AxiosRequestConfig): Promise<operations.UncrdResponse>;
 }

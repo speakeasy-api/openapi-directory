@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeEndpointsXAmzTargetEnum {
     Timestream20181101DescribeEndpoints = "Timestream_20181101.DescribeEndpoints"
 }
-export declare class DescribeEndpointsHeaders extends SpeakeasyBase {
+export declare class DescribeEndpointsRequest extends SpeakeasyBase {
+    requestBody: Record<string, any>;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class DescribeEndpointsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeEndpointsXAmzTargetEnum;
 }
-export declare class DescribeEndpointsRequest extends SpeakeasyBase {
-    headers: DescribeEndpointsHeaders;
-    request: Record<string, any>;
-}
 export declare class DescribeEndpointsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeEndpointsResponse?: shared.DescribeEndpointsResponse;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

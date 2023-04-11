@@ -1,24 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ExtrasTopologyMapsListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ExtrasTopologyMapsListRequest extends SpeakeasyBase {
+    /**
+     * Number of results to return per page.
+     */
     limit?: number;
     name?: string;
+    /**
+     * The initial index from which to return the results.
+     */
     offset?: number;
     site?: string;
     siteId?: string;
     slug?: string;
 }
-export declare class ExtrasTopologyMapsList200ApplicationJson extends SpeakeasyBase {
+export declare class ExtrasTopologyMapsList200ApplicationJSON extends SpeakeasyBase {
     count: number;
     next?: string;
     previous?: string;
     results: shared.TopologyMap[];
 }
-export declare class ExtrasTopologyMapsListRequest extends SpeakeasyBase {
-    queryParams: ExtrasTopologyMapsListQueryParams;
-}
 export declare class ExtrasTopologyMapsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    extrasTopologyMapsList200ApplicationJSONObject?: ExtrasTopologyMapsList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    extrasTopologyMapsList200ApplicationJSONObject?: ExtrasTopologyMapsList200ApplicationJSON;
 }

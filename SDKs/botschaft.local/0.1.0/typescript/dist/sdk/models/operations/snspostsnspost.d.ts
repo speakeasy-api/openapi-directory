@@ -1,15 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class SnsPostSnsPostHeaders extends SpeakeasyBase {
-    authorization?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class SnsPostSnsPostRequest extends SpeakeasyBase {
-    headers: SnsPostSnsPostHeaders;
-    request: shared.SnsMessageRequest;
+    snsMessageRequest: shared.SnsMessageRequest;
+    authorization?: string;
 }
 export declare class SnsPostSnsPostResponse extends SpeakeasyBase {
     contentType: string;
-    httpValidationError?: shared.HttpValidationError;
+    /**
+     * Validation Error
+     */
+    httpValidationError?: shared.HTTPValidationError;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful Response
+     */
     snsPostSnsPost200ApplicationJSONAny?: any;
 }

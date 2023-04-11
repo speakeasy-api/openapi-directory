@@ -1,32 +1,35 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CircuitsCircuitTerminationsCreateRequest, CircuitsCircuitTerminationsCreateResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  shared.WritableCircuitTerminationInput,
+  CircuitsCircuitTerminationsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  WritableCircuitTerminationConnectionStatusEnum,
+  WritableCircuitTerminationTerminationEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    bearer: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: CircuitsCircuitTerminationsCreateRequest = {
-  request: {
-    cable: {
-      label: "sit",
-    },
-    circuit: 2259404117704393152,
-    connectionStatus: true,
-    description: "expedita",
-    portSpeed: 3390393562759376202,
-    ppInfo: "dolor",
-    site: 1774932891286980153,
-    termSide: "Z",
-    upstreamSpeed: 8274930044578894929,
-    xconnectId: "et",
+    bearer: "YOUR_API_KEY_HERE",
   },
+});
+
+const req: shared.WritableCircuitTerminationInput = {
+  cable: {
+    label: "corrupti",
+  },
+  circuit: 592845,
+  connectionStatus: WritableCircuitTerminationConnectionStatusEnum.True,
+  description: "quibusdam",
+  portSpeed: 602763,
+  ppInfo: "nulla",
+  site: 544883,
+  termSide: WritableCircuitTerminationTerminationEnum.Z,
+  upstreamSpeed: 423655,
+  xconnectId: "error",
 };
 
 sdk.circuits.circuitsCircuitTerminationsCreate(req).then((res: CircuitsCircuitTerminationsCreateResponse | AxiosError) => {

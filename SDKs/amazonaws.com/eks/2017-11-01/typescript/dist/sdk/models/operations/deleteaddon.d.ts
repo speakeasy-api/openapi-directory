@@ -1,13 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteAddonPathParams extends SpeakeasyBase {
-    addonName: string;
-    name: string;
-}
-export declare class DeleteAddonQueryParams extends SpeakeasyBase {
-    preserve?: boolean;
-}
-export declare class DeleteAddonHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteAddonRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -15,19 +9,45 @@ export declare class DeleteAddonHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DeleteAddonRequest extends SpeakeasyBase {
-    pathParams: DeleteAddonPathParams;
-    queryParams: DeleteAddonQueryParams;
-    headers: DeleteAddonHeaders;
+    /**
+     * The name of the add-on. The name must match one of the names returned by <a href="https://docs.aws.amazon.com/eks/latest/APIReference/API_ListAddons.html"> <code>ListAddons</code> </a>.
+     */
+    addonName: string;
+    /**
+     * The name of the cluster to delete the add-on from.
+     */
+    name: string;
+    /**
+     * Specifying this option preserves the add-on software on your cluster but Amazon EKS stops managing any settings for the add-on. If an IAM account is associated with the add-on, it isn't removed.
+     */
+    preserve?: boolean;
 }
 export declare class DeleteAddonResponse extends SpeakeasyBase {
+    /**
+     * ClientException
+     */
     clientException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteAddonResponse?: shared.DeleteAddonResponse;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
-    resourceNotFoundException?: any;
-    serverException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ServerException
+     */
+    serverException?: any;
 }

@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetEventPathParams extends SpeakeasyBase {
-    conversationId: string;
-    eventId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetEventRequest extends SpeakeasyBase {
-    pathParams: GetEventPathParams;
+    /**
+     * Conversation ID
+     */
+    conversationId: string;
+    /**
+     * Event ID
+     */
+    eventId: string;
 }
 export declare class GetEventResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Retrieve an event Content Payload
+     */
     eventRetrieved?: shared.EventRetrieved;
 }

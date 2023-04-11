@@ -6,77 +6,89 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/metastore/v1/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/metastore/v1/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { MetastoreOperationsCancelRequest, MetastoreOperationsCancelResponse } from "openapi/src/sdk/models/operations";
+import {
+  MetastoreProjectsLocationsFederationsCreateRequest,
+  MetastoreProjectsLocationsFederationsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  BackendMetastoreMetastoreTypeEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: MetastoreOperationsCancelRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
+
+const req: MetastoreProjectsLocationsFederationsCreateRequest = {
+  dollarXgafv: XgafvEnum.Two,
+  federationInput: {
+    backendMetastores: {
+      "distinctio": {
+        metastoreType: BackendMetastoreMetastoreTypeEnum.DataprocMetastore,
+        name: "unde",
+      },
+      "nulla": {
+        metastoreType: BackendMetastoreMetastoreTypeEnum.DataprocMetastore,
+        name: "illum",
+      },
+      "vel": {
+        metastoreType: BackendMetastoreMetastoreTypeEnum.DataprocMetastore,
+        name: "deserunt",
+      },
     },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    labels: {
+      "iure": "magnam",
+      "debitis": "ipsa",
     },
+    name: "delectus",
+    version: "tempora",
   },
-  pathParams: {
-    name: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
-    "debitis": "voluptatum",
-    "et": "ut",
-    "dolorem": "et",
-  },
+  accessToken: "suscipit",
+  alt: AltEnum.Media,
+  callback: "minus",
+  federationId: "placeat",
+  fields: "voluptatum",
+  key: "iusto",
+  oauthToken: "excepturi",
+  parent: "nisi",
+  prettyPrint: false,
+  quotaUser: "recusandae",
+  requestId: "temporibus",
+  uploadType: "ab",
+  uploadProtocol: "quis",
 };
 
-sdk.operations.metastoreOperationsCancel(req).then((res: MetastoreOperationsCancelResponse | AxiosError) => {
+sdk.projects.metastoreProjectsLocationsFederationsCreate(req).then((res: MetastoreProjectsLocationsFederationsCreateResponse | AxiosError) => {
    // handle response
 });
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### operations
-
-* `metastoreOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns google.rpc.Code.UNIMPLEMENTED. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to Code.CANCELLED.
 
 ### projects
 
 * `metastoreProjectsLocationsFederationsCreate` - Creates a metastore federation in a project and location.
 * `metastoreProjectsLocationsFederationsList` - Lists federations in a project and location.
 * `metastoreProjectsLocationsList` - Lists information about the supported locations for this service.
-* `metastoreProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.NOTE: the name binding allows API services to override the binding to use different resource name schemes, such as users/*/operations. To override the binding, API services can add a binding such as "/v1/{name=users/*}/operations" to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+* `metastoreProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns google.rpc.Code.UNIMPLEMENTED. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to Code.CANCELLED.
+* `metastoreProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.
 * `metastoreProjectsLocationsServicesBackupsCreate` - Creates a new backup in a given project and location.
 * `metastoreProjectsLocationsServicesBackupsDelete` - Deletes a single backup.
 * `metastoreProjectsLocationsServicesBackupsGetIamPolicy` - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
@@ -91,7 +103,18 @@ sdk.operations.metastoreOperationsCancel(req).then((res: MetastoreOperationsCanc
 * `metastoreProjectsLocationsServicesMetadataImportsPatch` - Updates a single import. Only the description field of MetadataImport is supported to be updated.
 * `metastoreProjectsLocationsServicesRestore` - Restores a service from a backup.
 * `metastoreProjectsLocationsServicesTestIamPermissions` - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a NOT_FOUND error.Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

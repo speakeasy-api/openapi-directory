@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Infra APIs
+ */
 export declare class Infrastructure {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,16 +12,18 @@ export declare class Infrastructure {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getNode - Show node details
+     * Show node details
      *
+     * @remarks
      * Get details of infrastructure nodes. Only admin users can get this information. The proxy id is
      * required for adding a data source for selecting appropriate proxy node to add the data source.
-    **/
-    getNode(req: operations.GetNodeRequest, config?: AxiosRequestConfig): Promise<operations.GetNodeResponse>;
+     */
+    getNode(req: operations.GetNodeRequest, security: operations.GetNodeSecurity, config?: AxiosRequestConfig): Promise<operations.GetNodeResponse>;
     /**
-     * listNodes - List nodes
+     * List nodes
      *
+     * @remarks
      * Get list of infrastructure nodes. Only admin users can retrieve this information.
-    **/
-    listNodes(req: operations.ListNodesRequest, config?: AxiosRequestConfig): Promise<operations.ListNodesResponse>;
+     */
+    listNodes(config?: AxiosRequestConfig): Promise<operations.ListNodesResponse>;
 }

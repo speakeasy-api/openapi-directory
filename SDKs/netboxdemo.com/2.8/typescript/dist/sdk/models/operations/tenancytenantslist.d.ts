@@ -1,6 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class TenancyTenantsListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class TenancyTenantsListRequest extends SpeakeasyBase {
     created?: string;
     createdGte?: string;
     createdLte?: string;
@@ -17,6 +18,9 @@ export declare class TenancyTenantsListQueryParams extends SpeakeasyBase {
     lastUpdated?: string;
     lastUpdatedGte?: string;
     lastUpdatedLte?: string;
+    /**
+     * Number of results to return per page.
+     */
     limit?: number;
     name?: string;
     nameIc?: string;
@@ -28,6 +32,9 @@ export declare class TenancyTenantsListQueryParams extends SpeakeasyBase {
     nameNie?: string;
     nameNiew?: string;
     nameNisw?: string;
+    /**
+     * The initial index from which to return the results.
+     */
     offset?: number;
     q?: string;
     slug?: string;
@@ -43,17 +50,15 @@ export declare class TenancyTenantsListQueryParams extends SpeakeasyBase {
     tag?: string;
     tagN?: string;
 }
-export declare class TenancyTenantsList200ApplicationJson extends SpeakeasyBase {
+export declare class TenancyTenantsList200ApplicationJSON extends SpeakeasyBase {
     count: number;
     next?: string;
     previous?: string;
     results: shared.Tenant[];
 }
-export declare class TenancyTenantsListRequest extends SpeakeasyBase {
-    queryParams: TenancyTenantsListQueryParams;
-}
 export declare class TenancyTenantsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    tenancyTenantsList200ApplicationJSONObject?: TenancyTenantsList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    tenancyTenantsList200ApplicationJSONObject?: TenancyTenantsList200ApplicationJSON;
 }

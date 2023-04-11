@@ -2,10 +2,11 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { DeploymentStatusEnum } from "./deploymentstatusenum";
 import { ProvisioningEnum } from "./provisioningenum";
 /**
- * A summary of the environment detail data.
-**/
+ * Summary data of an Proton environment resource. An Proton environment is a set of resources shared across Proton services.
+ */
 export declare class EnvironmentSummary extends SpeakeasyBase {
     arn: string;
+    componentRoleArn?: string;
     createdAt: Date;
     deploymentStatus: DeploymentStatusEnum;
     deploymentStatusMessage?: string;

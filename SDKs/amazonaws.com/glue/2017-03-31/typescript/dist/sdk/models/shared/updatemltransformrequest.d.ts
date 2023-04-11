@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { TransformParameters } from "./transformparameters";
 import { WorkerTypeEnum } from "./workertypeenum";
-export declare class UpdateMlTransformRequest extends SpeakeasyBase {
+export declare class UpdateMLTransformRequest extends SpeakeasyBase {
     description?: string;
     glueVersion?: string;
     maxCapacity?: number;

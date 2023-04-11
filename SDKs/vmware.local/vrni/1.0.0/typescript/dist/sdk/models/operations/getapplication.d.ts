@@ -1,17 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetApplicationPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetApplicationSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
+    apiKeyAuth: string;
 }
 export declare class GetApplicationRequest extends SpeakeasyBase {
-    pathParams: GetApplicationPathParams;
-    security: GetApplicationSecurity;
+    /**
+     * entity id
+     */
+    id: string;
 }
 export declare class GetApplicationResponse extends SpeakeasyBase {
+    /**
+     * OK
+     */
     application?: shared.Application;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

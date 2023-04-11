@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostSwapEnvironmentCnamEsActionEnum {
-    SwapEnvironmentCnamEs = "SwapEnvironmentCNAMEs"
+import { AxiosResponse } from "axios";
+export declare enum POSTSwapEnvironmentCNAMEsActionEnum {
+    SwapEnvironmentCNAMEs = "SwapEnvironmentCNAMEs"
 }
-export declare enum PostSwapEnvironmentCnamEsVersionEnum {
+export declare enum POSTSwapEnvironmentCNAMEsVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostSwapEnvironmentCnamEsQueryParams extends SpeakeasyBase {
-    action: PostSwapEnvironmentCnamEsActionEnum;
-    version: PostSwapEnvironmentCnamEsVersionEnum;
-}
-export declare class PostSwapEnvironmentCnamEsHeaders extends SpeakeasyBase {
+export declare class POSTSwapEnvironmentCNAMEsRequest extends SpeakeasyBase {
+    action: POSTSwapEnvironmentCNAMEsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTSwapEnvironmentCNAMEsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +18,8 @@ export declare class PostSwapEnvironmentCnamEsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostSwapEnvironmentCnamEsRequest extends SpeakeasyBase {
-    queryParams: PostSwapEnvironmentCnamEsQueryParams;
-    headers: PostSwapEnvironmentCnamEsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostSwapEnvironmentCnamEsResponse extends SpeakeasyBase {
+export declare class POSTSwapEnvironmentCNAMEsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

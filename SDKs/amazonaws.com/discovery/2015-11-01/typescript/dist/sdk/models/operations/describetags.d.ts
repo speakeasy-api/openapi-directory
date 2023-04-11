@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeTagsXAmzTargetEnum {
-    AwsPoseidonServiceV20151101DescribeTags = "AWSPoseidonService_V2015_11_01.DescribeTags"
+    AWSPoseidonServiceV20151101DescribeTags = "AWSPoseidonService_V2015_11_01.DescribeTags"
 }
-export declare class DescribeTagsHeaders extends SpeakeasyBase {
+export declare class DescribeTagsRequest extends SpeakeasyBase {
+    describeTagsRequest: shared.DescribeTagsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class DescribeTagsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeTagsXAmzTargetEnum;
 }
-export declare class DescribeTagsRequest extends SpeakeasyBase {
-    headers: DescribeTagsHeaders;
-    request: shared.DescribeTagsRequest;
-}
 export declare class DescribeTagsResponse extends SpeakeasyBase {
+    /**
+     * AuthorizationErrorException
+     */
     authorizationErrorException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     describeTagsResponse?: shared.DescribeTagsResponse;
+    /**
+     * HomeRegionNotSetException
+     */
     homeRegionNotSetException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
-    resourceNotFoundException?: any;
-    serverInternalErrorException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ServerInternalErrorException
+     */
+    serverInternalErrorException?: any;
 }

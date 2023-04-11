@@ -1,39 +1,41 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateTokenRequest, CreateTokenResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CreateTokenRequest,
+  CreateTokenResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: CreateTokenRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
-    clientId: "voluptas",
-    clientSecret: "fugit",
-    code: "et",
-    deviceCode: "nihil",
-    grantType: "rerum",
-    redirectUri: "dicta",
-    refreshToken: "debitis",
+});
+
+const req: CreateTokenRequest = {
+  requestBody: {
+    clientId: "corrupti",
+    clientSecret: "provident",
+    code: "distinctio",
+    deviceCode: "quibusdam",
+    grantType: "unde",
+    redirectUri: "nulla",
+    refreshToken: "corrupti",
     scope: [
-      "et",
+      "vel",
+      "error",
+      "deserunt",
+      "suscipit",
     ],
   },
+  xAmzAlgorithm: "iure",
+  xAmzContentSha256: "magnam",
+  xAmzCredential: "debitis",
+  xAmzDate: "ipsa",
+  xAmzSecurityToken: "delectus",
+  xAmzSignature: "tempora",
+  xAmzSignedHeaders: "suscipit",
 };
 
 sdk.createToken(req).then((res: CreateTokenResponse | AxiosError) => {

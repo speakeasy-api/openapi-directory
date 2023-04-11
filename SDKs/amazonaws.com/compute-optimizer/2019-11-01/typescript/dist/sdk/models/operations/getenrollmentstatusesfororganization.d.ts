@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetEnrollmentStatusesForOrganizationXAmzTargetEnum {
     ComputeOptimizerServiceGetEnrollmentStatusesForOrganization = "ComputeOptimizerService.GetEnrollmentStatusesForOrganization"
 }
-export declare class GetEnrollmentStatusesForOrganizationHeaders extends SpeakeasyBase {
+export declare class GetEnrollmentStatusesForOrganizationRequest extends SpeakeasyBase {
+    getEnrollmentStatusesForOrganizationRequest: shared.GetEnrollmentStatusesForOrganizationRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,19 +14,45 @@ export declare class GetEnrollmentStatusesForOrganizationHeaders extends Speakea
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: GetEnrollmentStatusesForOrganizationXAmzTargetEnum;
-}
-export declare class GetEnrollmentStatusesForOrganizationRequest extends SpeakeasyBase {
-    headers: GetEnrollmentStatusesForOrganizationHeaders;
-    request: shared.GetEnrollmentStatusesForOrganizationRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class GetEnrollmentStatusesForOrganizationResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getEnrollmentStatusesForOrganizationResponse?: shared.GetEnrollmentStatusesForOrganizationResponse;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
+    /**
+     * MissingAuthenticationToken
+     */
     missingAuthenticationToken?: any;
-    serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceUnavailableException
+     */
+    serviceUnavailableException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

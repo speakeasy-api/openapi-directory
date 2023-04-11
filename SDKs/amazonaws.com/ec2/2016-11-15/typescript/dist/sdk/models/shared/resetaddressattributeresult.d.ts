@@ -1,21 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * The updated PTR record for the IP address.
-**/
+ */
 export declare class ResetAddressAttributeResultAddressPtrRecordUpdate extends SpeakeasyBase {
-    reason?: Record<string, any>;
-    status?: Record<string, any>;
-    value?: Record<string, any>;
+    reason?: string;
+    status?: string;
+    value?: string;
 }
 /**
  * Information about the IP address.
-**/
+ */
 export declare class ResetAddressAttributeResultAddress extends SpeakeasyBase {
-    allocationId?: Record<string, any>;
-    ptrRecord?: Record<string, any>;
+    allocationId?: string;
+    ptrRecord?: string;
     ptrRecordUpdate?: ResetAddressAttributeResultAddressPtrRecordUpdate;
-    publicIp?: Record<string, any>;
+    publicIp?: string;
 }
+/**
+ * Success
+ */
 export declare class ResetAddressAttributeResult extends SpeakeasyBase {
     address?: ResetAddressAttributeResultAddress;
 }

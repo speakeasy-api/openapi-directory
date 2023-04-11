@@ -1,9 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class FinalizeDeviceClaimPathParams extends SpeakeasyBase {
-    deviceId: string;
+import { AxiosResponse } from "axios";
+export declare class FinalizeDeviceClaimRequestBody extends SpeakeasyBase {
+    /**
+     * <p>A collection of key/value pairs defining the resource tags. For example, {
+     *
+     * @remarks
+     *  "tags": {"key1": "value1", "key2": "value2"} }. For more information, see <a href="https://aws.amazon.com/answers/account-management/aws-tagging-strategies/">AWS
+     *  Tagging Strategies</a>.</p><p>
+     *
+     *  </p>
+     */
+    tags?: Record<string, string>;
 }
-export declare class FinalizeDeviceClaimHeaders extends SpeakeasyBase {
+export declare class FinalizeDeviceClaimRequest extends SpeakeasyBase {
+    requestBody: FinalizeDeviceClaimRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,22 +22,37 @@ export declare class FinalizeDeviceClaimHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class FinalizeDeviceClaimRequestBody extends SpeakeasyBase {
-    tags?: Record<string, string>;
-}
-export declare class FinalizeDeviceClaimRequest extends SpeakeasyBase {
-    pathParams: FinalizeDeviceClaimPathParams;
-    headers: FinalizeDeviceClaimHeaders;
-    request: FinalizeDeviceClaimRequestBody;
+    /**
+     * The unique identifier of the device.
+     */
+    deviceId: string;
 }
 export declare class FinalizeDeviceClaimResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     finalizeDeviceClaimResponse?: shared.FinalizeDeviceClaimResponse;
+    /**
+     * InternalFailureException
+     */
     internalFailureException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * PreconditionFailedException
+     */
     preconditionFailedException?: any;
+    /**
+     * ResourceConflictException
+     */
     resourceConflictException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

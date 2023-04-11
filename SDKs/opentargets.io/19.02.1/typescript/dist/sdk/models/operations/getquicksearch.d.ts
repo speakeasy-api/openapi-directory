@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetQuickSearchQueryParams extends SpeakeasyBase {
-    q: string;
-    size?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetQuickSearchRequest extends SpeakeasyBase {
-    queryParams: GetQuickSearchQueryParams;
+    /**
+     * A full text query.
+     */
+    q: string;
+    /**
+     * Maximum amount of results to return. Defaults to 5.
+     */
+    size?: string;
 }
 export declare class GetQuickSearchResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

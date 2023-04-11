@@ -1,8 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetCommitteeCommitteeIdPathParams extends SpeakeasyBase {
-    committeeId: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum GetCommitteeCommitteeIdCommitteeTypeEnum {
     Unknown = "",
     C = "C",
@@ -51,27 +49,128 @@ export declare enum GetCommitteeCommitteeIdOrganizationTypeEnum {
     V = "V",
     W = "W"
 }
-export declare class GetCommitteeCommitteeIdQueryParams extends SpeakeasyBase {
-    apiKey: string;
-    committeeType?: GetCommitteeCommitteeIdCommitteeTypeEnum[];
-    cycle?: number[];
-    designation?: GetCommitteeCommitteeIdDesignationEnum[];
-    filingFrequency?: GetCommitteeCommitteeIdFilingFrequencyEnum[];
-    organizationType?: GetCommitteeCommitteeIdOrganizationTypeEnum[];
-    page?: number;
-    perPage?: number;
-    sort?: string;
-    sortHideNull?: boolean;
-    sortNullOnly?: boolean;
-    sortNullsLast?: boolean;
-    year?: number[];
-}
 export declare class GetCommitteeCommitteeIdRequest extends SpeakeasyBase {
-    pathParams: GetCommitteeCommitteeIdPathParams;
-    queryParams: GetCommitteeCommitteeIdQueryParams;
+    /**
+     *
+     * @remarks
+     * API key for https://api.data.gov. Get one at https://api.data.gov/signup.
+     *
+     */
+    apiKey: string;
+    /**
+     *
+     * @remarks
+     * A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
+     *
+     */
+    committeeId: string;
+    /**
+     * The one-letter type code of the organization:
+     *
+     * @remarks
+     *         - C communication cost
+     *         - D delegate
+     *         - E electioneering communication
+     *         - H House
+     *         - I independent expenditure filer (not a committee)
+     *         - N PAC - nonqualified
+     *         - O independent expenditure-only (super PACs)
+     *         - P presidential
+     *         - Q PAC - qualified
+     *         - S Senate
+     *         - U single candidate independent expenditure
+     *         - V PAC with non-contribution account, nonqualified
+     *         - W PAC with non-contribution account, qualified
+     *         - X party, nonqualified
+     *         - Y party, qualified
+     *         - Z national party non-federal account
+     *
+     */
+    committeeType?: GetCommitteeCommitteeIdCommitteeTypeEnum[];
+    /**
+     *
+     * @remarks
+     * A two year election cycle that the committee was active- (after original registration
+     * date but before expiration date in Form 1s) The cycle begins with
+     * an odd year and is named for its ending, even year.
+     *
+     */
+    cycle?: number[];
+    /**
+     * The one-letter designation code of the organization:
+     *
+     * @remarks
+     *          - A authorized by a candidate
+     *          - J joint fundraising committee
+     *          - P principal campaign committee of a candidate
+     *          - U unauthorized
+     *          - B lobbyist/registrant PAC
+     *          - D leadership PAC
+     *
+     */
+    designation?: GetCommitteeCommitteeIdDesignationEnum[];
+    /**
+     * The one-letter
+     *
+     * @remarks
+     *     code of the filing frequency:
+     *          - A Administratively terminated
+     *          - D Debt
+     *          - M Monthly filer
+     *          - Q Quarterly filer
+     *          - T Terminated
+     *          - W Waived
+     *
+     */
+    filingFrequency?: GetCommitteeCommitteeIdFilingFrequencyEnum[];
+    /**
+     * The one-letter code for the kind for organization:
+     *
+     * @remarks
+     *         - C corporation
+     *         - L labor organization
+     *         - M membership organization
+     *         - T trade association
+     *         - V cooperative
+     *         - W corporation without capital stock
+     *
+     */
+    organizationType?: GetCommitteeCommitteeIdOrganizationTypeEnum[];
+    /**
+     * For paginating through results, starting at page 1
+     */
+    page?: number;
+    /**
+     * The number of results returned per page. Defaults to 20.
+     */
+    perPage?: number;
+    /**
+     * Provide a field to sort by. Use `-` for descending order.
+     *
+     * @remarks
+     *
+     */
+    sort?: string;
+    /**
+     * Hide null values on sorted column(s).
+     */
+    sortHideNull?: boolean;
+    /**
+     * Toggle that filters out all rows having sort column that is non-null
+     */
+    sortNullOnly?: boolean;
+    /**
+     * Toggle that sorts null values last
+     */
+    sortNullsLast?: boolean;
+    /**
+     * A year that the committee was active— (after original registration date     or filing but before expiration date)
+     */
+    year?: number[];
 }
 export declare class GetCommitteeCommitteeIdResponse extends SpeakeasyBase {
     committeeDetailPage?: shared.CommitteeDetailPage;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,0 +1,10 @@
+export declare enum RuntimeEnvironmentEnum {
+    Sql10 = "SQL-1_0",
+    Flink16 = "FLINK-1_6",
+    Flink18 = "FLINK-1_8",
+    ZeppelinFlink10 = "ZEPPELIN-FLINK-1_0",
+    Flink111 = "FLINK-1_11",
+    Flink113 = "FLINK-1_13",
+    ZeppelinFlink20 = "ZEPPELIN-FLINK-2_0",
+    Flink115 = "FLINK-1_15"
+}

@@ -1,38 +1,34 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DlpInfoTypesListRequest, DlpInfoTypesListResponse } from "openapi/src/sdk/models/operations";
+import {
+  DlpInfoTypesListRequest,
+  DlpInfoTypesListResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: DlpInfoTypesListRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "voluptas",
-    alt: "media",
-    callback: "expedita",
-    fields: "consequuntur",
-    filter: "dolor",
-    key: "expedita",
-    languageCode: "voluptas",
-    locationId: "fugit",
-    oauthToken: "et",
-    parent: "nihil",
-    prettyPrint: true,
-    quotaUser: "dicta",
-    uploadType: "debitis",
-    uploadProtocol: "voluptatum",
-  },
+  dollarXgafv: XgafvEnum.Two,
+  accessToken: "provident",
+  alt: AltEnum.Proto,
+  callback: "quibusdam",
+  fields: "unde",
+  filter: "nulla",
+  key: "corrupti",
+  languageCode: "illum",
+  locationId: "vel",
+  oauthToken: "error",
+  parent: "deserunt",
+  prettyPrint: false,
+  quotaUser: "suscipit",
+  uploadType: "iure",
+  uploadProtocol: "magnam",
 };
 
 sdk.infoTypes.dlpInfoTypesList(req).then((res: DlpInfoTypesListResponse | AxiosError) => {

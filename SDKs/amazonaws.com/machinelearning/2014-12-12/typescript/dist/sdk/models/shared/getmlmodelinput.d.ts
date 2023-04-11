@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetMlModelInput extends SpeakeasyBase {
+export declare class GetMLModelInput extends SpeakeasyBase {
     mlModelId: string;
     verbose?: boolean;
 }

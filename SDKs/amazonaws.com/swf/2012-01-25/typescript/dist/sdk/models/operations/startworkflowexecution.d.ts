@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum StartWorkflowExecutionXAmzTargetEnum {
     SimpleWorkflowServiceStartWorkflowExecution = "SimpleWorkflowService.StartWorkflowExecution"
 }
-export declare class StartWorkflowExecutionHeaders extends SpeakeasyBase {
+export declare class StartWorkflowExecutionRequest extends SpeakeasyBase {
+    startWorkflowExecutionInput: shared.StartWorkflowExecutionInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class StartWorkflowExecutionHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: StartWorkflowExecutionXAmzTargetEnum;
 }
-export declare class StartWorkflowExecutionRequest extends SpeakeasyBase {
-    headers: StartWorkflowExecutionHeaders;
-    request: shared.StartWorkflowExecutionInput;
-}
 export declare class StartWorkflowExecutionResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * DefaultUndefinedFault
+     */
     defaultUndefinedFault?: any;
+    /**
+     * LimitExceededFault
+     */
     limitExceededFault?: any;
+    /**
+     * OperationNotPermittedFault
+     */
     operationNotPermittedFault?: any;
+    /**
+     * Success
+     */
     run?: shared.Run;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TypeDeprecatedFault
+     */
     typeDeprecatedFault?: any;
+    /**
+     * UnknownResourceFault
+     */
     unknownResourceFault?: any;
+    /**
+     * WorkflowExecutionAlreadyStartedFault
+     */
     workflowExecutionAlreadyStartedFault?: any;
 }

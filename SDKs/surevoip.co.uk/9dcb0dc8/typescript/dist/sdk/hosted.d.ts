@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Create, List, Updated and Delete Hosted VoIP Customers
+ */
 export declare class Hosted {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +12,7 @@ export declare class Hosted {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getHosted - List Hosted VoIP domains
-    **/
+     * List Hosted VoIP domains
+     */
     getHosted(config?: AxiosRequestConfig): Promise<operations.GetHostedResponse>;
 }

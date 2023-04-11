@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class EnableRulePathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class EnableRuleRequest extends SpeakeasyBase {
+    /**
+     * Your rule identifier
+     */
     ruleId: string;
+    /**
+     * Your store identifier
+     */
     storeId: string;
 }
-export declare class EnableRuleRequest extends SpeakeasyBase {
-    pathParams: EnableRulePathParams;
-}
 export declare class EnableRuleResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     * Rule not found
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

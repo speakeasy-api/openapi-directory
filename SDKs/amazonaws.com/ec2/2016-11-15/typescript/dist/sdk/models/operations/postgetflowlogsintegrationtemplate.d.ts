@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostGetFlowLogsIntegrationTemplateActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTGetFlowLogsIntegrationTemplateActionEnum {
     GetFlowLogsIntegrationTemplate = "GetFlowLogsIntegrationTemplate"
 }
-export declare enum PostGetFlowLogsIntegrationTemplateVersionEnum {
+export declare enum POSTGetFlowLogsIntegrationTemplateVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostGetFlowLogsIntegrationTemplateQueryParams extends SpeakeasyBase {
-    action: PostGetFlowLogsIntegrationTemplateActionEnum;
-    version: PostGetFlowLogsIntegrationTemplateVersionEnum;
-}
-export declare class PostGetFlowLogsIntegrationTemplateHeaders extends SpeakeasyBase {
+export declare class POSTGetFlowLogsIntegrationTemplateRequest extends SpeakeasyBase {
+    action: POSTGetFlowLogsIntegrationTemplateActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTGetFlowLogsIntegrationTemplateVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostGetFlowLogsIntegrationTemplateHeaders extends Speakeasy
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostGetFlowLogsIntegrationTemplateRequest extends SpeakeasyBase {
-    queryParams: PostGetFlowLogsIntegrationTemplateQueryParams;
-    headers: PostGetFlowLogsIntegrationTemplateHeaders;
-    request?: Uint8Array;
-}
-export declare class PostGetFlowLogsIntegrationTemplateResponse extends SpeakeasyBase {
+export declare class POSTGetFlowLogsIntegrationTemplateResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

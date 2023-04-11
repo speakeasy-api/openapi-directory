@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateWebhookXAmzTargetEnum {
     CodeBuild20161006UpdateWebhook = "CodeBuild_20161006.UpdateWebhook"
 }
-export declare class UpdateWebhookHeaders extends SpeakeasyBase {
+export declare class UpdateWebhookRequest extends SpeakeasyBase {
+    updateWebhookInput: shared.UpdateWebhookInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class UpdateWebhookHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateWebhookXAmzTargetEnum;
 }
-export declare class UpdateWebhookRequest extends SpeakeasyBase {
-    headers: UpdateWebhookHeaders;
-    request: shared.UpdateWebhookInput;
-}
 export declare class UpdateWebhookResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OAuthProviderException
+     */
     oAuthProviderException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     updateWebhookOutput?: shared.UpdateWebhookOutput;
 }

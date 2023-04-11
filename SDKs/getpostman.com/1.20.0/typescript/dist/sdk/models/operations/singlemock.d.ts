@@ -1,8 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SingleMockPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class SingleMockRequest extends SpeakeasyBase {
     mockUid: string;
 }
-export declare class SingleMock200ApplicationJsonMock extends SpeakeasyBase {
+export declare class SingleMock200ApplicationJSONMock extends SpeakeasyBase {
     collection?: string;
     environment?: string;
     id?: string;
@@ -10,14 +11,18 @@ export declare class SingleMock200ApplicationJsonMock extends SpeakeasyBase {
     owner?: string;
     uid?: string;
 }
-export declare class SingleMock200ApplicationJson extends SpeakeasyBase {
-    mock?: SingleMock200ApplicationJsonMock;
-}
-export declare class SingleMockRequest extends SpeakeasyBase {
-    pathParams: SingleMockPathParams;
+/**
+ * Successful Response
+ */
+export declare class SingleMock200ApplicationJSON extends SpeakeasyBase {
+    mock?: SingleMock200ApplicationJSONMock;
 }
 export declare class SingleMockResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    singleMock200ApplicationJSONObject?: SingleMock200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful Response
+     */
+    singleMock200ApplicationJSONObject?: SingleMock200ApplicationJSON;
 }

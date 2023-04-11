@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Charging Locations are created by a user to denote locations where they pay for the power used to charge their vehicle. Smart Charging is active at these locations only.
+ */
 export declare class ChargingLocations {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,29 +12,32 @@ export declare class ChargingLocations {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteCharginglocationsCharginglocationid - Delete Charging Location
+     * Delete Charging Location
      *
+     * @remarks
      * Delete a Charging Location
-    **/
-    deleteCharginglocationsCharginglocationid(req: operations.DeleteCharginglocationsCharginglocationidRequest, config?: AxiosRequestConfig): Promise<operations.DeleteCharginglocationsCharginglocationidResponse>;
+     */
+    deleteCharginglocationsCharginglocationid(req: operations.DeleteCharginglocationsCharginglocationidRequest, security: operations.DeleteCharginglocationsCharginglocationidSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteCharginglocationsCharginglocationidResponse>;
     /**
-     * getCharginglocations - List Charging Locations
+     * List Charging Locations
      *
+     * @remarks
      * Returns a list of Charging Locations registered to the User
-    **/
-    getCharginglocations(req: operations.GetCharginglocationsRequest, config?: AxiosRequestConfig): Promise<operations.GetCharginglocationsResponse>;
+     */
+    getCharginglocations(config?: AxiosRequestConfig): Promise<operations.GetCharginglocationsResponse>;
     /**
-     * getCharginglocationsCharginglocationid - Get Charging Location
-    **/
-    getCharginglocationsCharginglocationid(req: operations.GetCharginglocationsCharginglocationidRequest, config?: AxiosRequestConfig): Promise<operations.GetCharginglocationsCharginglocationidResponse>;
+     * Get Charging Location
+     */
+    getCharginglocationsCharginglocationid(req: operations.GetCharginglocationsCharginglocationidRequest, security: operations.GetCharginglocationsCharginglocationidSecurity, config?: AxiosRequestConfig): Promise<operations.GetCharginglocationsCharginglocationidResponse>;
     /**
-     * postCharginglocations - Create Charging Location
-    **/
-    postCharginglocations(req: operations.PostCharginglocationsRequest, config?: AxiosRequestConfig): Promise<operations.PostCharginglocationsResponse>;
+     * Create Charging Location
+     */
+    postCharginglocations(req: operations.PostCharginglocationsRequestBodyInput, security: operations.PostCharginglocationsSecurity, config?: AxiosRequestConfig): Promise<operations.PostCharginglocationsResponse>;
     /**
-     * putCharginglocationsCharginglocationid - Update Charging Location
+     * Update Charging Location
      *
+     * @remarks
      * Updates a charging location with new configuration
-    **/
-    putCharginglocationsCharginglocationid(req: operations.PutCharginglocationsCharginglocationidRequest, config?: AxiosRequestConfig): Promise<operations.PutCharginglocationsCharginglocationidResponse>;
+     */
+    putCharginglocationsCharginglocationid(req: operations.PutCharginglocationsCharginglocationidRequest, security: operations.PutCharginglocationsCharginglocationidSecurity, config?: AxiosRequestConfig): Promise<operations.PutCharginglocationsCharginglocationidResponse>;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetJobUnlockCodeXAmzTargetEnum {
-    AwsieSnowballJobManagementServiceGetJobUnlockCode = "AWSIESnowballJobManagementService.GetJobUnlockCode"
+    AWSIESnowballJobManagementServiceGetJobUnlockCode = "AWSIESnowballJobManagementService.GetJobUnlockCode"
 }
-export declare class GetJobUnlockCodeHeaders extends SpeakeasyBase {
+export declare class GetJobUnlockCodeRequest extends SpeakeasyBase {
+    getJobUnlockCodeRequest: shared.GetJobUnlockCodeRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class GetJobUnlockCodeHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetJobUnlockCodeXAmzTargetEnum;
 }
-export declare class GetJobUnlockCodeRequest extends SpeakeasyBase {
-    headers: GetJobUnlockCodeHeaders;
-    request: shared.GetJobUnlockCodeRequest;
-}
 export declare class GetJobUnlockCodeResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getJobUnlockCodeResult?: shared.GetJobUnlockCodeResult;
+    /**
+     * InvalidJobStateException
+     */
     invalidJobStateException?: any;
+    /**
+     * InvalidResourceException
+     */
     invalidResourceException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

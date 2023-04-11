@@ -1,13 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class TeamsRemoveMembershipForUserInOrgPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class TeamsRemoveMembershipForUserInOrgRequest extends SpeakeasyBase {
     org: string;
+    /**
+     * team_slug parameter
+     */
     teamSlug: string;
     username: string;
-}
-export declare class TeamsRemoveMembershipForUserInOrgRequest extends SpeakeasyBase {
-    pathParams: TeamsRemoveMembershipForUserInOrgPathParams;
 }
 export declare class TeamsRemoveMembershipForUserInOrgResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

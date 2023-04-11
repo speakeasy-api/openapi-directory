@@ -1,18 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class DeleteCrmV3ExtensionsCardsAppIdCardIdArchivePathParams extends SpeakeasyBase {
-    appId: number;
-    cardId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveSecurity extends SpeakeasyBase {
-    developerHapikey: shared.SchemeDeveloperHapikey;
+    developerHapikey: string;
 }
 export declare class DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveRequest extends SpeakeasyBase {
-    pathParams: DeleteCrmV3ExtensionsCardsAppIdCardIdArchivePathParams;
-    security: DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveSecurity;
+    /**
+     * The ID of the target app.
+     */
+    appId: number;
+    /**
+     * The ID of the card to delete.
+     */
+    cardId: string;
 }
 export declare class DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

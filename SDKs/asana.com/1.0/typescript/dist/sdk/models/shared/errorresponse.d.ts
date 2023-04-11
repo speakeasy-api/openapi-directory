@@ -2,6 +2,8 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { ErrorT } from "./error";
 /**
  * Sadly, sometimes requests to the API are not successful. Failures can
+ *
+ * @remarks
  * occur for a wide range of reasons. In all cases, the API should return
  * an HTTP Status Code that indicates the nature of the failure,
  * with a response body in JSON format containing additional information.
@@ -13,7 +15,7 @@ import { ErrorT } from "./error";
  * library](https://github.com/Asana/node-asana-phrase) and can be used by
  * Asana support to quickly look up the incident that caused the server
  * error.
-**/
+ */
 export declare class ErrorResponse extends SpeakeasyBase {
     errors?: ErrorT[];
 }

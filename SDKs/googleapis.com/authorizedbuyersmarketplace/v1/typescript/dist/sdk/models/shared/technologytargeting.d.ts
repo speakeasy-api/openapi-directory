@@ -3,9 +3,18 @@ import { CriteriaTargeting } from "./criteriatargeting";
 import { OperatingSystemTargeting } from "./operatingsystemtargeting";
 /**
  * Represents targeting about various types of technology.
-**/
+ */
 export declare class TechnologyTargeting extends SpeakeasyBase {
+    /**
+     * Generic targeting used for targeting dimensions that contains a list of included and excluded numeric IDs. This cannot be filtered using list filter syntax.
+     */
     deviceCapabilityTargeting?: CriteriaTargeting;
+    /**
+     * Generic targeting used for targeting dimensions that contains a list of included and excluded numeric IDs. This cannot be filtered using list filter syntax.
+     */
     deviceCategoryTargeting?: CriteriaTargeting;
+    /**
+     * Represents targeting information for operating systems.
+     */
     operatingSystemTargeting?: OperatingSystemTargeting;
 }

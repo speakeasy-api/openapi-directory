@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbSubnetGroup } from "./dbsubnetgroup";
-export declare class ModifyDbSubnetGroupResult extends SpeakeasyBase {
-    dbSubnetGroup?: DbSubnetGroup;
+import { DBSubnetGroup } from "./dbsubnetgroup";
+/**
+ * Success
+ */
+export declare class ModifyDBSubnetGroupResult extends SpeakeasyBase {
+    dbSubnetGroup?: DBSubnetGroup;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetGeoMatchSetXAmzTargetEnum {
-    AwswafRegional20161128GetGeoMatchSet = "AWSWAF_Regional_20161128.GetGeoMatchSet"
+    AWSWAFRegional20161128GetGeoMatchSet = "AWSWAF_Regional_20161128.GetGeoMatchSet"
 }
-export declare class GetGeoMatchSetHeaders extends SpeakeasyBase {
+export declare class GetGeoMatchSetRequest extends SpeakeasyBase {
+    getGeoMatchSetRequest: shared.GetGeoMatchSetRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class GetGeoMatchSetHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetGeoMatchSetXAmzTargetEnum;
 }
-export declare class GetGeoMatchSetRequest extends SpeakeasyBase {
-    headers: GetGeoMatchSetHeaders;
-    request: shared.GetGeoMatchSetRequest;
-}
 export declare class GetGeoMatchSetResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getGeoMatchSetResponse?: shared.GetGeoMatchSetResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFInvalidAccountException
+     */
     wafInvalidAccountException?: any;
+    /**
+     * WAFNonexistentItemException
+     */
     wafNonexistentItemException?: any;
 }

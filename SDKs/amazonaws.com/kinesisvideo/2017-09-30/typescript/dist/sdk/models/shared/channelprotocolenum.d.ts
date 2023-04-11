@@ -1,4 +1,5 @@
 export declare enum ChannelProtocolEnum {
     Wss = "WSS",
-    Https = "HTTPS"
+    Https = "HTTPS",
+    Webrtc = "WEBRTC"
 }

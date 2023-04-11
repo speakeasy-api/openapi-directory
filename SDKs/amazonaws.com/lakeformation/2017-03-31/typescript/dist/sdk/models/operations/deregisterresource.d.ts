@@ -1,9 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare enum DeregisterResourceXAmzTargetEnum {
-    AwsLakeFormationDeregisterResource = "AWSLakeFormation.DeregisterResource"
+import { AxiosResponse } from "axios";
+export declare class DeregisterResourceRequestBody extends SpeakeasyBase {
+    /**
+     * The Amazon Resource Name (ARN) of the resource that you want to deregister.
+     */
+    resourceArn: string;
 }
-export declare class DeregisterResourceHeaders extends SpeakeasyBase {
+export declare class DeregisterResourceRequest extends SpeakeasyBase {
+    requestBody: DeregisterResourceRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,18 +15,29 @@ export declare class DeregisterResourceHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: DeregisterResourceXAmzTargetEnum;
-}
-export declare class DeregisterResourceRequest extends SpeakeasyBase {
-    headers: DeregisterResourceHeaders;
-    request: shared.DeregisterResourceRequest;
 }
 export declare class DeregisterResourceResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deregisterResourceResponse?: Record<string, any>;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

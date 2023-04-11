@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetGetAssociatedEnclaveCertificateIamRolesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETGETAssociatedEnclaveCertificateIamRolesActionEnum {
     GetAssociatedEnclaveCertificateIamRoles = "GetAssociatedEnclaveCertificateIamRoles"
 }
-export declare enum GetGetAssociatedEnclaveCertificateIamRolesVersionEnum {
+export declare enum GETGETAssociatedEnclaveCertificateIamRolesVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetGetAssociatedEnclaveCertificateIamRolesQueryParams extends SpeakeasyBase {
-    action: GetGetAssociatedEnclaveCertificateIamRolesActionEnum;
-    certificateArn?: string;
+export declare class GETGETAssociatedEnclaveCertificateIamRolesRequest extends SpeakeasyBase {
+    action: GETGETAssociatedEnclaveCertificateIamRolesActionEnum;
+    /**
+     * The ARN of the ACM certificate for which to view the associated IAM roles, encryption keys, and Amazon S3 object information.
+     */
+    certificateArn: string;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
-    version: GetGetAssociatedEnclaveCertificateIamRolesVersionEnum;
-}
-export declare class GetGetAssociatedEnclaveCertificateIamRolesHeaders extends SpeakeasyBase {
+    version: GETGETAssociatedEnclaveCertificateIamRolesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetGetAssociatedEnclaveCertificateIamRolesHeaders extends S
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetGetAssociatedEnclaveCertificateIamRolesRequest extends SpeakeasyBase {
-    queryParams: GetGetAssociatedEnclaveCertificateIamRolesQueryParams;
-    headers: GetGetAssociatedEnclaveCertificateIamRolesHeaders;
-}
-export declare class GetGetAssociatedEnclaveCertificateIamRolesResponse extends SpeakeasyBase {
+export declare class GETGETAssociatedEnclaveCertificateIamRolesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

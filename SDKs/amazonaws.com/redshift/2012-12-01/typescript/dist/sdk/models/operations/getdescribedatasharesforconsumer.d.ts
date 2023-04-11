@@ -1,23 +1,37 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeDataSharesForConsumerActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeDataSharesForConsumerActionEnum {
     DescribeDataSharesForConsumer = "DescribeDataSharesForConsumer"
 }
-export declare enum GetDescribeDataSharesForConsumerStatusEnum {
+/**
+ * An identifier giving the status of a datashare in the consumer cluster. If this field is specified, Amazon Redshift returns the list of datashares that have the specified status.
+ */
+export declare enum GETDescribeDataSharesForConsumerStatusEnum {
     Active = "ACTIVE",
     Available = "AVAILABLE"
 }
-export declare enum GetDescribeDataSharesForConsumerVersionEnum {
+export declare enum GETDescribeDataSharesForConsumerVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class GetDescribeDataSharesForConsumerQueryParams extends SpeakeasyBase {
-    action: GetDescribeDataSharesForConsumerActionEnum;
+export declare class GETDescribeDataSharesForConsumerRequest extends SpeakeasyBase {
+    action: GETDescribeDataSharesForConsumerActionEnum;
+    /**
+     * The Amazon Resource Name (ARN) of the consumer that returns in the list of datashares.
+     */
     consumerArn?: string;
+    /**
+     * An optional parameter that specifies the starting point to return a set of response records. When the results of a <a>DescribeDataSharesForConsumer</a> request exceed the value specified in <code>MaxRecords</code>, Amazon Web Services returns a value in the <code>Marker</code> field of the response. You can retrieve the next set of response records by providing the returned marker value in the <code>Marker</code> parameter and retrying the request.
+     */
     marker?: string;
+    /**
+     * The maximum number of response records to return in each call. If the number of remaining response records exceeds the specified <code>MaxRecords</code> value, a value is returned in a <code>marker</code> field of the response. You can retrieve the next set of records by retrying the command with the returned marker value.
+     */
     maxRecords?: number;
-    status?: GetDescribeDataSharesForConsumerStatusEnum;
-    version: GetDescribeDataSharesForConsumerVersionEnum;
-}
-export declare class GetDescribeDataSharesForConsumerHeaders extends SpeakeasyBase {
+    /**
+     * An identifier giving the status of a datashare in the consumer cluster. If this field is specified, Amazon Redshift returns the list of datashares that have the specified status.
+     */
+    status?: GETDescribeDataSharesForConsumerStatusEnum;
+    version: GETDescribeDataSharesForConsumerVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -26,12 +40,9 @@ export declare class GetDescribeDataSharesForConsumerHeaders extends SpeakeasyBa
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeDataSharesForConsumerRequest extends SpeakeasyBase {
-    queryParams: GetDescribeDataSharesForConsumerQueryParams;
-    headers: GetDescribeDataSharesForConsumerHeaders;
-}
-export declare class GetDescribeDataSharesForConsumerResponse extends SpeakeasyBase {
+export declare class GETDescribeDataSharesForConsumerResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

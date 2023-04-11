@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class MediaAsset {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class MediaAsset {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getMediaAssets - Get a list of media assets
+     * Get a list of media assets
      *
+     * @remarks
      * A media asset is part of a collection of assets or files representing an image or a piece of audio content
      * like an episode or an ad. Images, for example, have differently sized versions for better rendering performance,
      * and a piece of audio content usually comes in different encoding formats.
@@ -60,11 +61,12 @@ export declare class MediaAsset {
      * - `waveform_data`: The generated BBC Audiowaveform data in JSON or binary format.
      *
      *
-    **/
-    getMediaAssets(req: operations.GetMediaAssetsRequest, config?: AxiosRequestConfig): Promise<operations.GetMediaAssetsResponse>;
+     */
+    getMediaAssets(req: operations.GetMediaAssetsRequest, security: operations.GetMediaAssetsSecurity, config?: AxiosRequestConfig): Promise<operations.GetMediaAssetsResponse>;
     /**
-     * getMediaAssetsId - Get a specific media asset
+     * Get a specific media asset
      *
+     * @remarks
      * A media asset is part of a collection of assets or files representing an image or a piece of audio content
      * like an episode or an ad. Images, for example, have differently sized versions for better rendering performance,
      * and a piece of audio content usually comes in different encoding formats.
@@ -114,6 +116,6 @@ export declare class MediaAsset {
      * - `waveform_data`: The generated BBC Audiowaveform data in JSON or binary format.
      *
      *
-    **/
-    getMediaAssetsId(req: operations.GetMediaAssetsIdRequest, config?: AxiosRequestConfig): Promise<operations.GetMediaAssetsIdResponse>;
+     */
+    getMediaAssetsId(req: operations.GetMediaAssetsIdRequest, security: operations.GetMediaAssetsIdSecurity, config?: AxiosRequestConfig): Promise<operations.GetMediaAssetsIdResponse>;
 }

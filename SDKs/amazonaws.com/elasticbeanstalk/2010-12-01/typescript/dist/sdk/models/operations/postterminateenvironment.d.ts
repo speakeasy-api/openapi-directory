@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostTerminateEnvironmentActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTTerminateEnvironmentActionEnum {
     TerminateEnvironment = "TerminateEnvironment"
 }
-export declare enum PostTerminateEnvironmentVersionEnum {
+export declare enum POSTTerminateEnvironmentVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostTerminateEnvironmentQueryParams extends SpeakeasyBase {
-    action: PostTerminateEnvironmentActionEnum;
-    version: PostTerminateEnvironmentVersionEnum;
-}
-export declare class PostTerminateEnvironmentHeaders extends SpeakeasyBase {
+export declare class POSTTerminateEnvironmentRequest extends SpeakeasyBase {
+    action: POSTTerminateEnvironmentActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTTerminateEnvironmentVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostTerminateEnvironmentHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostTerminateEnvironmentRequest extends SpeakeasyBase {
-    queryParams: PostTerminateEnvironmentQueryParams;
-    headers: PostTerminateEnvironmentHeaders;
-    request?: Uint8Array;
-}
-export declare class PostTerminateEnvironmentResponse extends SpeakeasyBase {
+export declare class POSTTerminateEnvironmentResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

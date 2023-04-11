@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class TenancyTenantGroupsDeletePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class TenancyTenantGroupsDeleteRequest extends SpeakeasyBase {
-    pathParams: TenancyTenantGroupsDeletePathParams;
+    /**
+     * A unique integer value identifying this tenant group.
+     */
+    id: number;
 }
 export declare class TenancyTenantGroupsDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

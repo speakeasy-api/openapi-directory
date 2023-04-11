@@ -1,4 +1,4 @@
-export declare enum ObExternalLimitType1CodeEnum {
+export declare enum OBExternalLimitType1CodeEnum {
     Available = "Available",
     Credit = "Credit",
     Emergency = "Emergency",

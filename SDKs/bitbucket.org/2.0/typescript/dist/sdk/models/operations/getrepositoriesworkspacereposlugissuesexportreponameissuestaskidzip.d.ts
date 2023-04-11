@@ -1,23 +1,47 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipPathParams extends SpeakeasyBase {
-    repoName: string;
-    repoSlug: string;
-    taskId: string;
-    workspace: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipSecurity extends SpeakeasyBase {
-    oauth2?: shared.SchemeOauth2;
+    apiKey?: string;
     basic?: shared.SchemeBasic;
-    apiKey?: shared.SchemeApiKey;
+    oauth2?: string;
 }
 export declare class GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipRequest extends SpeakeasyBase {
-    pathParams: GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipPathParams;
-    security: GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipSecurity;
+    /**
+     * The name of the repo
+     */
+    repoName: string;
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     *
+     * @remarks
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     *
+     */
+    repoSlug: string;
+    /**
+     * The ID of the export task
+     */
+    taskId: string;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     *
+     * @remarks
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     *
+     */
+    workspace: string;
 }
 export declare class GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The request wasn't authenticated properly
+     */
     error?: Record<string, any>;
+    /**
+     * Export job accepted
+     */
     issueJobStatus?: shared.IssueJobStatus;
 }

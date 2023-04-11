@@ -6,66 +6,60 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/notebooks/v1/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/notebooks/v1/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { NotebooksProjectsLocationsEnvironmentsCreateRequest, NotebooksProjectsLocationsEnvironmentsCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  NotebooksProjectsLocationsEnvironmentsCreateRequest,
+  NotebooksProjectsLocationsEnvironmentsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: NotebooksProjectsLocationsEnvironmentsCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    environmentId: "dolor",
-    fields: "expedita",
-    key: "voluptas",
-    oauthToken: "fugit",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    uploadType: "rerum",
-    uploadProtocol: "dicta",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  environmentInput: {
     containerImage: {
-      repository: "debitis",
-      tag: "voluptatum",
+      repository: "provident",
+      tag: "distinctio",
     },
-    description: "et",
-    displayName: "ut",
-    postStartupScript: "dolorem",
+    description: "quibusdam",
+    displayName: "unde",
+    postStartupScript: "nulla",
     vmImage: {
-      imageFamily: "et",
-      imageName: "voluptate",
-      project: "iste",
+      imageFamily: "corrupti",
+      imageName: "illum",
+      project: "vel",
     },
   },
+  accessToken: "error",
+  alt: AltEnum.Media,
+  callback: "suscipit",
+  environmentId: "iure",
+  fields: "magnam",
+  key: "debitis",
+  oauthToken: "ipsa",
+  parent: "delectus",
+  prettyPrint: false,
+  quotaUser: "tempora",
+  uploadType: "suscipit",
+  uploadProtocol: "molestiae",
 };
 
 sdk.projects.notebooksProjectsLocationsEnvironmentsCreate(req).then((res: NotebooksProjectsLocationsEnvironmentsCreateResponse | AxiosError) => {
@@ -75,7 +69,8 @@ sdk.projects.notebooksProjectsLocationsEnvironmentsCreate(req).then((res: Notebo
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### projects
 
@@ -99,7 +94,7 @@ sdk.projects.notebooksProjectsLocationsEnvironmentsCreate(req).then((res: Notebo
 * `notebooksProjectsLocationsInstancesUpgradeInternal` - Allows notebook instances to call this endpoint to upgrade themselves. Do not use this method directly.
 * `notebooksProjectsLocationsList` - Lists information about the supported locations for this service.
 * `notebooksProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-* `notebooksProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+* `notebooksProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 * `notebooksProjectsLocationsRuntimesCreate` - Creates a new Runtime in a given project and location.
 * `notebooksProjectsLocationsRuntimesDiagnose` - Creates a Diagnostic File and runs Diagnostic Tool given a Runtime.
 * `notebooksProjectsLocationsRuntimesGetIamPolicy` - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
@@ -119,7 +114,18 @@ sdk.projects.notebooksProjectsLocationsEnvironmentsCreate(req).then((res: Notebo
 * `notebooksProjectsLocationsSchedulesGet` - Gets details of schedule
 * `notebooksProjectsLocationsSchedulesList` - Lists schedules in a given project and location.
 * `notebooksProjectsLocationsSchedulesTrigger` - Triggers execution of an existing schedule.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

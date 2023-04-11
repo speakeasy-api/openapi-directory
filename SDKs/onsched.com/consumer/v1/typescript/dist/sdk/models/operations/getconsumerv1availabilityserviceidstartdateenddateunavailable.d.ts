@@ -1,22 +1,46 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailablePathParams extends SpeakeasyBase {
-    endDate: Date;
-    serviceId: string;
-    startDate: Date;
-}
-export declare class GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableQueryParams extends SpeakeasyBase {
-    duration?: number;
-    fullServerBasedAvailability?: boolean;
-    locationId?: string;
-    resourceId?: string;
-    tzOffset?: number;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableRequest extends SpeakeasyBase {
-    pathParams: GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailablePathParams;
-    queryParams: GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableQueryParams;
+    /**
+     * Duration of the service if different from default
+     */
+    duration?: number;
+    /**
+     * Format YYYY-MM-DD: End Date for unavailable time search
+     */
+    endDate: Date;
+    /**
+     * Id of business location, defaults to primary business location
+     */
+    locationId?: string;
+    /**
+     * Resource Id to filter on
+     */
+    resourceId?: string;
+    /**
+     * Service Id for availability search
+     */
+    serviceId: string;
+    /**
+     * Set as true to remove Time Past (TP) blocks in the response
+     */
+    skipTimePastUnavailability?: boolean;
+    /**
+     * Format YYYY-MM-DD: Start Date for unavailable time search
+     */
+    startDate: Date;
+    /**
+     * Request timezone offset to view unavailable times
+     */
+    tzOffset?: number;
 }
 export declare class GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    unavailableTimeListViewModel?: Record<string, any>;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
+    unavailableTimeListViewModel?: shared.UnavailableTimeListViewModel;
 }

@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class MovieCast {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class MovieCast {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * movieCastSearchRead - Return movie cast search result
+     * Return movie cast search result
      *
+     * @remarks
      * Return movie cast search result
      *
      * ### Response Class (Status 200)
@@ -20,11 +21,12 @@ export declare class MovieCast {
      *
      * For more details on how movie casts are listed [see here][ref].
      * [ref]: https://etmdb.com/en/movie-list/-updated_date
-    **/
+     */
     movieCastSearchRead(req: operations.MovieCastSearchReadRequest, config?: AxiosRequestConfig): Promise<operations.MovieCastSearchReadResponse>;
     /**
-     * movieCastSearchallRead - Return movie cast search result
+     * Return movie cast search result
      *
+     * @remarks
      * Return movie cast search result
      *
      * ### Response Class (Status 200)
@@ -37,6 +39,6 @@ export declare class MovieCast {
      *
      * For more details on how movie casts are listed [see here][ref].
      * [ref]: https://etmdb.com/en/movie-list/-updated_date
-    **/
+     */
     movieCastSearchallRead(req: operations.MovieCastSearchallReadRequest, config?: AxiosRequestConfig): Promise<operations.MovieCastSearchallReadResponse>;
 }

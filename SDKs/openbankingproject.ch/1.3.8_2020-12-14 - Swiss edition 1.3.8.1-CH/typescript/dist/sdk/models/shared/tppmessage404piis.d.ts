@@ -1,9 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { MessageCode404PIISEnum } from "./messagecode404piisenum";
 import { TppMessageCategoryEnum } from "./tppmessagecategoryenum";
-import { MessageCode404PiisEnum } from "./messagecode404piisenum";
-export declare class TppMessage404Piis extends SpeakeasyBase {
+export declare class TppMessage404PIIS extends SpeakeasyBase {
+    /**
+     * Category of the TPP message category.
+     */
     category: TppMessageCategoryEnum;
-    code: MessageCode404PiisEnum;
+    /**
+     * Message codes defined for PIIS for HTTP Error code 404 (NOT FOUND).
+     */
+    code: MessageCode404PIISEnum;
     path?: string;
+    /**
+     * Additional explaining text to the TPP.
+     */
     text?: string;
 }

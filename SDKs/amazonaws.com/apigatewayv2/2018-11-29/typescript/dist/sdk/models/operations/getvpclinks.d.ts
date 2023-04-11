@@ -1,10 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetVpcLinksQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
-export declare class GetVpcLinksHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetVpcLinksRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,15 +9,29 @@ export declare class GetVpcLinksHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class GetVpcLinksRequest extends SpeakeasyBase {
-    queryParams: GetVpcLinksQueryParams;
-    headers: GetVpcLinksHeaders;
+    /**
+     * The maximum number of elements to be returned for this resource.
+     */
+    maxResults?: string;
+    /**
+     * The next page of elements from this collection. Not valid for the last element of the collection.
+     */
+    nextToken?: string;
 }
 export declare class GetVpcLinksResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getVpcLinksResponse?: shared.GetVpcLinksResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

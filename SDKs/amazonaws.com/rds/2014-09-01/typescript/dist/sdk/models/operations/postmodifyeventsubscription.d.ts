@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostModifyEventSubscriptionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTModifyEventSubscriptionActionEnum {
     ModifyEventSubscription = "ModifyEventSubscription"
 }
-export declare enum PostModifyEventSubscriptionVersionEnum {
+export declare enum POSTModifyEventSubscriptionVersionEnum {
     TwoThousandAndFourteen0901 = "2014-09-01"
 }
-export declare class PostModifyEventSubscriptionQueryParams extends SpeakeasyBase {
-    action: PostModifyEventSubscriptionActionEnum;
-    version: PostModifyEventSubscriptionVersionEnum;
-}
-export declare class PostModifyEventSubscriptionHeaders extends SpeakeasyBase {
+export declare class POSTModifyEventSubscriptionRequest extends SpeakeasyBase {
+    action: POSTModifyEventSubscriptionActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTModifyEventSubscriptionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostModifyEventSubscriptionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostModifyEventSubscriptionRequest extends SpeakeasyBase {
-    queryParams: PostModifyEventSubscriptionQueryParams;
-    headers: PostModifyEventSubscriptionHeaders;
-    request?: Uint8Array;
-}
-export declare class PostModifyEventSubscriptionResponse extends SpeakeasyBase {
+export declare class POSTModifyEventSubscriptionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

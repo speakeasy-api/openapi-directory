@@ -1,18 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetTokenPathParams extends SpeakeasyBase {
-    tokenNumber: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetTokenSecurity extends SpeakeasyBase {
-    basicAuth: shared.SchemeBasicAuth;
+    password: string;
+    username: string;
 }
 export declare class GetTokenRequest extends SpeakeasyBase {
-    pathParams: GetTokenPathParams;
-    security: GetTokenSecurity;
+    /**
+     * Token number
+     */
+    tokenNumber: string;
 }
 export declare class GetTokenResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    netlicensing?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful request
+     */
+    netlicensing?: shared.Netlicensing;
 }

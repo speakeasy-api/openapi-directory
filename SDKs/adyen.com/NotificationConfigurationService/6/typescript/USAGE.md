@@ -1,20 +1,45 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { PostCreateNotificationConfigurationRequest, PostCreateNotificationConfigurationResponse } from "openapi/src/sdk/models/operations";
+import {
+  shared.CreateNotificationConfigurationRequest,
+  PostCreateNotificationConfigurationResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  NotificationConfigurationDetailsSslProtocolEnum,
+  NotificationEventConfigurationEventTypeEnum,
+  NotificationEventConfigurationIncludeModeEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: PostCreateNotificationConfigurationRequest = {
-  security: {
-    basicAuth: {
-      password: "YOUR_PASSWORD_HERE",
-      username: "YOUR_USERNAME_HERE",
-    },
+
+const req: shared.CreateNotificationConfigurationRequest = {
+  configurationDetails: {
+    active: false,
+    apiVersion: 548814,
+    description: "provident",
+    eventConfigs: [
+      {
+        eventType: NotificationEventConfigurationEventTypeEnum.ScheduledRefunds,
+        includeMode: NotificationEventConfigurationIncludeModeEnum.Include,
+      },
+      {
+        eventType: NotificationEventConfigurationEventTypeEnum.ScheduledRefunds,
+        includeMode: NotificationEventConfigurationIncludeModeEnum.Include,
+      },
+      {
+        eventType: NotificationEventConfigurationEventTypeEnum.ScheduledRefunds,
+        includeMode: NotificationEventConfigurationIncludeModeEnum.Exclude,
+      },
+    ],
+    hmacSignatureKey: "error",
+    notificationId: 645894,
+    notifyPassword: "suscipit",
+    notifyURL: "iure",
+    notifyUsername: "magnam",
+    sslProtocol: NotificationConfigurationDetailsSslProtocolEnum.TLSv13,
   },
-  request: "sit",
 };
 
 sdk.general.postCreateNotificationConfiguration(req).then((res: PostCreateNotificationConfigurationResponse | AxiosError) => {

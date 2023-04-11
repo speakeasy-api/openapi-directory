@@ -1,9 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum ListLongTermPricingXAmzTargetEnum {
-    AwsieSnowballJobManagementServiceListLongTermPricing = "AWSIESnowballJobManagementService.ListLongTermPricing"
+    AWSIESnowballJobManagementServiceListLongTermPricing = "AWSIESnowballJobManagementService.ListLongTermPricing"
 }
-export declare class ListLongTermPricingHeaders extends SpeakeasyBase {
+export declare class ListLongTermPricingRequest extends SpeakeasyBase {
+    listLongTermPricingRequest: shared.ListLongTermPricingRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +23,20 @@ export declare class ListLongTermPricingHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListLongTermPricingXAmzTargetEnum;
 }
-export declare class ListLongTermPricingRequest extends SpeakeasyBase {
-    headers: ListLongTermPricingHeaders;
-    request: shared.ListLongTermPricingRequest;
-}
 export declare class ListLongTermPricingResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * InvalidResourceException
+     */
     invalidResourceException?: any;
+    /**
+     * Success
+     */
     listLongTermPricingResult?: shared.ListLongTermPricingResult;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

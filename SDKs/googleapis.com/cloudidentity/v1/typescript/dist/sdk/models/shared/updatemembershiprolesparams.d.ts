@@ -1,9 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { MembershipRole1 } from "./membershiprole1";
+import { MembershipRoleInput } from "./membershiprole";
 /**
  * The details of an update to a `MembershipRole`.
-**/
-export declare class UpdateMembershipRolesParams extends SpeakeasyBase {
+ */
+export declare class UpdateMembershipRolesParamsInput extends SpeakeasyBase {
+    /**
+     * The fully-qualified names of fields to update. May only contain the field `expiry_detail.expire_time`.
+     */
     fieldMask?: string;
-    membershipRole?: MembershipRole1;
+    /**
+     * A membership role within the Cloud Identity Groups API. A `MembershipRole` defines the privileges granted to a `Membership`.
+     */
+    membershipRole?: MembershipRoleInput;
 }

@@ -1,12 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PostWalletAccountIdErc20PathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PostWalletAccountIdErc20Request extends SpeakeasyBase {
-    pathParams: PostWalletAccountIdErc20PathParams;
+    id: string;
 }
 export declare class PostWalletAccountIdErc20Response extends SpeakeasyBase {
     contentType: string;
+    /**
+     * 200 response
+     */
     empty?: Record<string, any>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

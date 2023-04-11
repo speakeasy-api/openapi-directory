@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum DeleteMlModelXAmzTargetEnum {
-    AmazonMl20141212DeleteMlModel = "AmazonML_20141212.DeleteMLModel"
+import { AxiosResponse } from "axios";
+export declare enum DeleteMLModelXAmzTargetEnum {
+    AmazonML20141212DeleteMLModel = "AmazonML_20141212.DeleteMLModel"
 }
-export declare class DeleteMlModelHeaders extends SpeakeasyBase {
+export declare class DeleteMLModelRequest extends SpeakeasyBase {
+    deleteMLModelInput: shared.DeleteMLModelInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,17 +13,26 @@ export declare class DeleteMlModelHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: DeleteMlModelXAmzTargetEnum;
+    xAmzTarget: DeleteMLModelXAmzTargetEnum;
 }
-export declare class DeleteMlModelRequest extends SpeakeasyBase {
-    headers: DeleteMlModelHeaders;
-    request: shared.DeleteMlModelInput;
-}
-export declare class DeleteMlModelResponse extends SpeakeasyBase {
+export declare class DeleteMLModelResponse extends SpeakeasyBase {
     contentType: string;
-    deleteMLModelOutput?: shared.DeleteMlModelOutput;
+    /**
+     * Success
+     */
+    deleteMLModelOutput?: shared.DeleteMLModelOutput;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
 }

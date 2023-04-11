@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum SendBonusXAmzTargetEnum {
     MTurkRequesterServiceV20170117SendBonus = "MTurkRequesterServiceV20170117.SendBonus"
 }
-export declare class SendBonusHeaders extends SpeakeasyBase {
+export declare class SendBonusRequest extends SpeakeasyBase {
+    sendBonusRequest: shared.SendBonusRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class SendBonusHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: SendBonusXAmzTargetEnum;
 }
-export declare class SendBonusRequest extends SpeakeasyBase {
-    headers: SendBonusHeaders;
-    request: shared.SendBonusRequest;
-}
 export declare class SendBonusResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * RequestError
+     */
     requestError?: any;
+    /**
+     * Success
+     */
     sendBonusResponse?: Record<string, any>;
+    /**
+     * ServiceFault
+     */
     serviceFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

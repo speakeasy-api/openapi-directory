@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum StopApplicationXAmzTargetEnum {
     KinesisAnalytics20150814StopApplication = "KinesisAnalytics_20150814.StopApplication"
 }
-export declare class StopApplicationHeaders extends SpeakeasyBase {
+export declare class StopApplicationRequest extends SpeakeasyBase {
+    stopApplicationRequest: shared.StopApplicationRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class StopApplicationHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: StopApplicationXAmzTargetEnum;
 }
-export declare class StopApplicationRequest extends SpeakeasyBase {
-    headers: StopApplicationHeaders;
-    request: shared.StopApplicationRequest;
-}
 export declare class StopApplicationResponse extends SpeakeasyBase {
     contentType: string;
-    resourceInUseException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceInUseException
+     */
+    resourceInUseException?: any;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * Success
+     */
     stopApplicationResponse?: Record<string, any>;
+    /**
+     * UnsupportedOperationException
+     */
     unsupportedOperationException?: any;
 }

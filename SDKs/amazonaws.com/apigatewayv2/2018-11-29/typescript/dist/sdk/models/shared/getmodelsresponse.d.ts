@@ -1,5 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { Model } from "./model";
+/**
+ * Success
+ */
 export declare class GetModelsResponse extends SpeakeasyBase {
-    items?: Record<string, any>;
-    nextToken?: Record<string, any>;
+    items?: Model[];
+    nextToken?: string;
 }

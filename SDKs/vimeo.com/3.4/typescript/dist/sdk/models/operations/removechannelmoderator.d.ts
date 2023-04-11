@@ -1,18 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class RemoveChannelModeratorPathParams extends SpeakeasyBase {
-    channelId: number;
-    userId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class RemoveChannelModeratorSecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
+    oauth2: string;
 }
 export declare class RemoveChannelModeratorRequest extends SpeakeasyBase {
-    pathParams: RemoveChannelModeratorPathParams;
-    security: RemoveChannelModeratorSecurity;
+    /**
+     * The ID of the channel.
+     */
+    channelId: number;
+    /**
+     * The ID of the user.
+     */
+    userId: number;
 }
 export declare class RemoveChannelModeratorResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The authenticated user doesn't own the channel, the user isn't a moderator of the channel, or you tried to remove the owner of the channel.
+     */
     legacyError?: shared.LegacyError;
 }

@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum WritableIpAddressRoleEnum {
+/**
+ * The functional role of this IP
+ */
+export declare enum WritableIPAddressRoleEnum {
     Loopback = "loopback",
     Secondary = "secondary",
     Anycast = "anycast",
@@ -9,22 +12,40 @@ export declare enum WritableIpAddressRoleEnum {
     Glbp = "glbp",
     Carp = "carp"
 }
-export declare enum WritableIpAddressStatusEnum {
+/**
+ * The operational status of this IP
+ */
+export declare enum WritableIPAddressStatusEnum {
     Active = "active",
     Reserved = "reserved",
     Deprecated = "deprecated",
     Dhcp = "dhcp"
 }
-export declare class WritableIpAddressInput extends SpeakeasyBase {
+export declare class WritableIPAddressInput extends SpeakeasyBase {
+    /**
+     * IPv4 or IPv6 address (with mask)
+     */
     address: string;
     customFields?: Record<string, any>;
     description?: string;
+    /**
+     * Hostname or FQDN (not case-sensitive)
+     */
     dnsName?: string;
     interface?: number;
+    /**
+     * The IP for which this address is the "outside" IP
+     */
     natInside?: number;
     natOutside: number;
-    role?: WritableIpAddressRoleEnum;
-    status?: WritableIpAddressStatusEnum;
+    /**
+     * The functional role of this IP
+     */
+    role?: WritableIPAddressRoleEnum;
+    /**
+     * The operational status of this IP
+     */
+    status?: WritableIPAddressStatusEnum;
     tags?: string[];
     tenant?: number;
     vrf?: number;

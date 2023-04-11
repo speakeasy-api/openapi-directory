@@ -1,25 +1,68 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class VatComprehensivePathParams extends SpeakeasyBase {
-    country: string;
+import { AxiosResponse } from "axios";
+export declare class VatComprehensiveSecurity extends SpeakeasyBase {
+    userKey: string;
 }
+/**
+ * VAT number and the company details
+ */
 export declare class VatComprehensiveRequestBody extends SpeakeasyBase {
+    /**
+     * company address lines
+     */
     companyAddress?: string;
+    /**
+     * Company name
+     */
     companyName?: string;
+    /**
+     * official company number
+     */
     companyNumber?: string;
+    /**
+     * VAT number to validate
+     */
     vatNumber: string;
 }
-export declare class VatComprehensiveSecurity extends SpeakeasyBase {
-    userKey: shared.SchemeUserKey;
-}
 export declare class VatComprehensiveRequest extends SpeakeasyBase {
-    pathParams: VatComprehensivePathParams;
-    request: VatComprehensiveRequestBody;
-    security: VatComprehensiveSecurity;
+    /**
+     * VAT number and the company details
+     */
+    requestBody: VatComprehensiveRequestBody;
+    /**
+     * ISO_3166-1_alpha-2 representation of a country name - 2 chars
+     */
+    country: string;
+}
+/**
+ * Detailed information about the error
+ */
+export declare class VatComprehensiveDefaultApplicationJSON extends SpeakeasyBase {
+    code: number;
+    fault?: string;
+    message: string;
+    tag: string;
+}
+/**
+ * Denotes validity of checked VAT
+ */
+export declare class VatComprehensive200ApplicationJSON extends SpeakeasyBase {
+    candidate?: shared.Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetResponses200ContentApplication1jsonSchemaPropertiesCompany[];
+    company?: shared.Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetResponses200ContentApplication1jsonSchemaPropertiesCompany;
+    confidenceScore: number;
+    validationStatus: boolean;
 }
 export declare class VatComprehensiveResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    vatComprehensive200ApplicationJSONAny?: any;
-    vatComprehensiveDefaultApplicationJSONAny?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * Denotes validity of checked VAT
+     */
+    vatComprehensive200ApplicationJSONObject?: VatComprehensive200ApplicationJSON;
+    /**
+     * Detailed information about the error
+     */
+    vatComprehensiveDefaultApplicationJSONObject?: VatComprehensiveDefaultApplicationJSON;
 }

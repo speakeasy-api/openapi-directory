@@ -1,6 +1,6 @@
 export declare enum PredefinedScalingMetricTypeEnum {
-    AsgAverageCpuUtilization = "ASGAverageCPUUtilization",
-    AsgAverageNetworkIn = "ASGAverageNetworkIn",
-    AsgAverageNetworkOut = "ASGAverageNetworkOut",
-    AlbRequestCountPerTarget = "ALBRequestCountPerTarget"
+    ASGAverageCPUUtilization = "ASGAverageCPUUtilization",
+    ASGAverageNetworkIn = "ASGAverageNetworkIn",
+    ASGAverageNetworkOut = "ASGAverageNetworkOut",
+    ALBRequestCountPerTarget = "ALBRequestCountPerTarget"
 }

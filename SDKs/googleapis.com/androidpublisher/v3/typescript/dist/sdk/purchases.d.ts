@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Purchases {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,43 +9,47 @@ export declare class Purchases {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * androidpublisherPurchasesProductsAcknowledge - Acknowledges a purchase of an inapp item.
-    **/
-    androidpublisherPurchasesProductsAcknowledge(req: operations.AndroidpublisherPurchasesProductsAcknowledgeRequest, config?: AxiosRequestConfig): Promise<operations.AndroidpublisherPurchasesProductsAcknowledgeResponse>;
+     * Acknowledges a purchase of an inapp item.
+     */
+    androidpublisherPurchasesProductsAcknowledge(req: operations.AndroidpublisherPurchasesProductsAcknowledgeRequest, security: operations.AndroidpublisherPurchasesProductsAcknowledgeSecurity, config?: AxiosRequestConfig): Promise<operations.AndroidpublisherPurchasesProductsAcknowledgeResponse>;
     /**
-     * androidpublisherPurchasesProductsGet - Checks the purchase and consumption status of an inapp item.
-    **/
-    androidpublisherPurchasesProductsGet(req: operations.AndroidpublisherPurchasesProductsGetRequest, config?: AxiosRequestConfig): Promise<operations.AndroidpublisherPurchasesProductsGetResponse>;
+     * Consumes a purchase for an inapp item.
+     */
+    androidpublisherPurchasesProductsConsume(req: operations.AndroidpublisherPurchasesProductsConsumeRequest, security: operations.AndroidpublisherPurchasesProductsConsumeSecurity, config?: AxiosRequestConfig): Promise<operations.AndroidpublisherPurchasesProductsConsumeResponse>;
     /**
-     * androidpublisherPurchasesSubscriptionsAcknowledge - Acknowledges a subscription purchase.
-    **/
-    androidpublisherPurchasesSubscriptionsAcknowledge(req: operations.AndroidpublisherPurchasesSubscriptionsAcknowledgeRequest, config?: AxiosRequestConfig): Promise<operations.AndroidpublisherPurchasesSubscriptionsAcknowledgeResponse>;
+     * Checks the purchase and consumption status of an inapp item.
+     */
+    androidpublisherPurchasesProductsGet(req: operations.AndroidpublisherPurchasesProductsGetRequest, security: operations.AndroidpublisherPurchasesProductsGetSecurity, config?: AxiosRequestConfig): Promise<operations.AndroidpublisherPurchasesProductsGetResponse>;
     /**
-     * androidpublisherPurchasesSubscriptionsCancel - Cancels a user's subscription purchase. The subscription remains valid until its expiration time.
-    **/
-    androidpublisherPurchasesSubscriptionsCancel(req: operations.AndroidpublisherPurchasesSubscriptionsCancelRequest, config?: AxiosRequestConfig): Promise<operations.AndroidpublisherPurchasesSubscriptionsCancelResponse>;
+     * Acknowledges a subscription purchase.
+     */
+    androidpublisherPurchasesSubscriptionsAcknowledge(req: operations.AndroidpublisherPurchasesSubscriptionsAcknowledgeRequest, security: operations.AndroidpublisherPurchasesSubscriptionsAcknowledgeSecurity, config?: AxiosRequestConfig): Promise<operations.AndroidpublisherPurchasesSubscriptionsAcknowledgeResponse>;
     /**
-     * androidpublisherPurchasesSubscriptionsDefer - Defers a user's subscription purchase until a specified future expiration time.
-    **/
-    androidpublisherPurchasesSubscriptionsDefer(req: operations.AndroidpublisherPurchasesSubscriptionsDeferRequest, config?: AxiosRequestConfig): Promise<operations.AndroidpublisherPurchasesSubscriptionsDeferResponse>;
+     * Cancels a user's subscription purchase. The subscription remains valid until its expiration time.
+     */
+    androidpublisherPurchasesSubscriptionsCancel(req: operations.AndroidpublisherPurchasesSubscriptionsCancelRequest, security: operations.AndroidpublisherPurchasesSubscriptionsCancelSecurity, config?: AxiosRequestConfig): Promise<operations.AndroidpublisherPurchasesSubscriptionsCancelResponse>;
     /**
-     * androidpublisherPurchasesSubscriptionsGet - Checks whether a user's subscription purchase is valid and returns its expiry time.
-    **/
-    androidpublisherPurchasesSubscriptionsGet(req: operations.AndroidpublisherPurchasesSubscriptionsGetRequest, config?: AxiosRequestConfig): Promise<operations.AndroidpublisherPurchasesSubscriptionsGetResponse>;
+     * Defers a user's subscription purchase until a specified future expiration time.
+     */
+    androidpublisherPurchasesSubscriptionsDefer(req: operations.AndroidpublisherPurchasesSubscriptionsDeferRequest, security: operations.AndroidpublisherPurchasesSubscriptionsDeferSecurity, config?: AxiosRequestConfig): Promise<operations.AndroidpublisherPurchasesSubscriptionsDeferResponse>;
     /**
-     * androidpublisherPurchasesSubscriptionsRefund - Refunds a user's subscription purchase, but the subscription remains valid until its expiration time and it will continue to recur.
-    **/
-    androidpublisherPurchasesSubscriptionsRefund(req: operations.AndroidpublisherPurchasesSubscriptionsRefundRequest, config?: AxiosRequestConfig): Promise<operations.AndroidpublisherPurchasesSubscriptionsRefundResponse>;
+     * Checks whether a user's subscription purchase is valid and returns its expiry time.
+     */
+    androidpublisherPurchasesSubscriptionsGet(req: operations.AndroidpublisherPurchasesSubscriptionsGetRequest, security: operations.AndroidpublisherPurchasesSubscriptionsGetSecurity, config?: AxiosRequestConfig): Promise<operations.AndroidpublisherPurchasesSubscriptionsGetResponse>;
     /**
-     * androidpublisherPurchasesSubscriptionsRevoke - Refunds and immediately revokes a user's subscription purchase. Access to the subscription will be terminated immediately and it will stop recurring.
-    **/
-    androidpublisherPurchasesSubscriptionsRevoke(req: operations.AndroidpublisherPurchasesSubscriptionsRevokeRequest, config?: AxiosRequestConfig): Promise<operations.AndroidpublisherPurchasesSubscriptionsRevokeResponse>;
+     * Refunds a user's subscription purchase, but the subscription remains valid until its expiration time and it will continue to recur.
+     */
+    androidpublisherPurchasesSubscriptionsRefund(req: operations.AndroidpublisherPurchasesSubscriptionsRefundRequest, security: operations.AndroidpublisherPurchasesSubscriptionsRefundSecurity, config?: AxiosRequestConfig): Promise<operations.AndroidpublisherPurchasesSubscriptionsRefundResponse>;
     /**
-     * androidpublisherPurchasesSubscriptionsv2Get - Get metadata about a subscription
-    **/
-    androidpublisherPurchasesSubscriptionsv2Get(req: operations.AndroidpublisherPurchasesSubscriptionsv2GetRequest, config?: AxiosRequestConfig): Promise<operations.AndroidpublisherPurchasesSubscriptionsv2GetResponse>;
+     * Refunds and immediately revokes a user's subscription purchase. Access to the subscription will be terminated immediately and it will stop recurring.
+     */
+    androidpublisherPurchasesSubscriptionsRevoke(req: operations.AndroidpublisherPurchasesSubscriptionsRevokeRequest, security: operations.AndroidpublisherPurchasesSubscriptionsRevokeSecurity, config?: AxiosRequestConfig): Promise<operations.AndroidpublisherPurchasesSubscriptionsRevokeResponse>;
     /**
-     * androidpublisherPurchasesVoidedpurchasesList - Lists the purchases that were canceled, refunded or charged-back.
-    **/
-    androidpublisherPurchasesVoidedpurchasesList(req: operations.AndroidpublisherPurchasesVoidedpurchasesListRequest, config?: AxiosRequestConfig): Promise<operations.AndroidpublisherPurchasesVoidedpurchasesListResponse>;
+     * Get metadata about a subscription
+     */
+    androidpublisherPurchasesSubscriptionsv2Get(req: operations.AndroidpublisherPurchasesSubscriptionsv2GetRequest, security: operations.AndroidpublisherPurchasesSubscriptionsv2GetSecurity, config?: AxiosRequestConfig): Promise<operations.AndroidpublisherPurchasesSubscriptionsv2GetResponse>;
+    /**
+     * Lists the purchases that were canceled, refunded or charged-back.
+     */
+    androidpublisherPurchasesVoidedpurchasesList(req: operations.AndroidpublisherPurchasesVoidedpurchasesListRequest, security: operations.AndroidpublisherPurchasesVoidedpurchasesListSecurity, config?: AxiosRequestConfig): Promise<operations.AndroidpublisherPurchasesVoidedpurchasesListResponse>;
 }

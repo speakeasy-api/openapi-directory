@@ -1,25 +1,25 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DfsSlatesByDateRequest, DfsSlatesByDateResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  DfsSlateOwnershipProjectionsBySlateidRequest,
+  DfsSlateOwnershipProjectionsBySlateidResponse,
+  DfsSlateOwnershipProjectionsBySlateidFormatEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    apiKeyHeader: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: DfsSlatesByDateRequest = {
-  pathParams: {
-    date: "sit",
-    format: "XML",
+    apiKeyHeader: "YOUR_API_KEY_HERE",
   },
+});
+
+const req: DfsSlateOwnershipProjectionsBySlateidRequest = {
+  format: DfsSlateOwnershipProjectionsBySlateidFormatEnum.Json,
+  slateId: "provident",
 };
 
-sdk.dfsSlatesByDate(req).then((res: DfsSlatesByDateResponse | AxiosError) => {
+sdk.dfsSlateOwnershipProjectionsBySlateid(req).then((res: DfsSlateOwnershipProjectionsBySlateidResponse | AxiosError) => {
    // handle response
 });
 ```

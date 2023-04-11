@@ -1,0 +1,27 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { Outline } from "./outline";
+/**
+ * The properties of the Video.
+ */
+export declare class VideoProperties extends SpeakeasyBase {
+    /**
+     * Whether to enable video autoplay when the page is displayed in present mode. Defaults to false.
+     */
+    autoPlay?: boolean;
+    /**
+     * The time at which to end playback, measured in seconds from the beginning of the video. If set, the end time should be after the start time. If not set or if you set this to a value that exceeds the video's length, the video will be played until its end.
+     */
+    end?: number;
+    /**
+     * Whether to mute the audio during video playback. Defaults to false.
+     */
+    mute?: boolean;
+    /**
+     * The outline of a PageElement. If these fields are unset, they may be inherited from a parent placeholder if it exists. If there is no parent, the fields will default to the value used for new page elements created in the Slides editor, which may depend on the page element kind.
+     */
+    outline?: Outline;
+    /**
+     * The time at which to start playback, measured in seconds from the beginning of the video. If set, the start time should be before the end time. If you set this to a value that exceeds the video's length in seconds, the video will be played from the last second. If not set, the video will be played from the beginning.
+     */
+    start?: number;
+}

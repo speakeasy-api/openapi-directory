@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class IpamRolesDeletePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class IpamRolesDeleteRequest extends SpeakeasyBase {
-    pathParams: IpamRolesDeletePathParams;
+    /**
+     * A unique integer value identifying this role.
+     */
+    id: number;
 }
 export declare class IpamRolesDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

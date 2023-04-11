@@ -2,7 +2,10 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { Workload } from "./workload";
 /**
  * Output of a get workload call.
-**/
+ */
 export declare class GetWorkloadOutput extends SpeakeasyBase {
+    /**
+     * A workload return object.
+     */
     workload?: Workload;
 }

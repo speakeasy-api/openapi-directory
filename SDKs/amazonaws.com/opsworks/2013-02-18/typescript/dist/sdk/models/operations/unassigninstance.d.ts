@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UnassignInstanceXAmzTargetEnum {
     OpsWorks20130218UnassignInstance = "OpsWorks_20130218.UnassignInstance"
 }
-export declare class UnassignInstanceHeaders extends SpeakeasyBase {
+export declare class UnassignInstanceRequest extends SpeakeasyBase {
+    unassignInstanceRequest: shared.UnassignInstanceRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,13 +15,16 @@ export declare class UnassignInstanceHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UnassignInstanceXAmzTargetEnum;
 }
-export declare class UnassignInstanceRequest extends SpeakeasyBase {
-    headers: UnassignInstanceHeaders;
-    request: shared.UnassignInstanceRequest;
-}
 export declare class UnassignInstanceResponse extends SpeakeasyBase {
     contentType: string;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

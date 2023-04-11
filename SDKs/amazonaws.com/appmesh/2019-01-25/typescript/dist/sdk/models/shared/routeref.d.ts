@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * An object that represents a route returned by a list operation.
-**/
+ */
 export declare class RouteRef extends SpeakeasyBase {
     arn: string;
     createdAt: Date;

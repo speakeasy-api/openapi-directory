@@ -1,22 +1,52 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreateBatchRequestQueryParams extends SpeakeasyBase {
-    optFields?: string[];
-    optPretty?: boolean;
-}
+import { AxiosResponse } from "axios";
+/**
+ * The requests to batch together via the Batch API.
+ */
 export declare class CreateBatchRequestRequestBody extends SpeakeasyBase {
+    /**
+     * A request object for use in a batch request.
+     */
     data?: shared.BatchRequest;
 }
-export declare class CreateBatchRequest200ApplicationJson extends SpeakeasyBase {
-    data?: shared.BatchResponse[];
-}
 export declare class CreateBatchRequestRequest extends SpeakeasyBase {
-    queryParams: CreateBatchRequestQueryParams;
-    request: CreateBatchRequestRequestBody;
+    /**
+     * The requests to batch together via the Batch API.
+     */
+    requestBody: CreateBatchRequestRequestBody;
+    /**
+     * Defines fields to return.
+     *
+     * @remarks
+     * Some requests return *compact* representations of objects in order to conserve resources and complete the request more efficiently. Other times requests return more information than you may need. This option allows you to list the exact set of fields that the API should be sure to return for the objects. The field names should be provided as paths, described below.
+     * The id of included objects will always be returned, regardless of the field options.
+     */
+    optFields?: string[];
+    /**
+     * Provides “pretty” output.
+     *
+     * @remarks
+     * Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
+     */
+    optPretty?: boolean;
+}
+/**
+ * Successfully completed the requested batch API operations.
+ */
+export declare class CreateBatchRequest200ApplicationJSON extends SpeakeasyBase {
+    data?: shared.BatchResponse[];
 }
 export declare class CreateBatchRequestResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * This usually occurs because of a missing or malformed parameter. Check the documentation and the syntax of your request and try again.
+     */
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    createBatchRequest200ApplicationJSONObject?: CreateBatchRequest200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successfully completed the requested batch API operations.
+     */
+    createBatchRequest200ApplicationJSONObject?: CreateBatchRequest200ApplicationJSON;
 }

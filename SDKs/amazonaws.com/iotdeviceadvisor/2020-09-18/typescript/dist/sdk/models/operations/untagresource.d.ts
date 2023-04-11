@@ -1,11 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UntagResourcePathParams extends SpeakeasyBase {
-    resourceArn: string;
-}
-export declare class UntagResourceQueryParams extends SpeakeasyBase {
-    tagKeys: string[];
-}
-export declare class UntagResourceHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class UntagResourceRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +8,33 @@ export declare class UntagResourceHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class UntagResourceRequest extends SpeakeasyBase {
-    pathParams: UntagResourcePathParams;
-    queryParams: UntagResourceQueryParams;
-    headers: UntagResourceHeaders;
+    /**
+     * The resource ARN of an IoT Device Advisor resource. This can be SuiteDefinition ARN or SuiteRun ARN.
+     */
+    resourceArn: string;
+    /**
+     * List of tag keys to remove from the IoT Device Advisor resource.
+     */
+    tagKeys: string[];
 }
 export declare class UntagResourceResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * Success
+     */
     untagResourceResponse?: Record<string, any>;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

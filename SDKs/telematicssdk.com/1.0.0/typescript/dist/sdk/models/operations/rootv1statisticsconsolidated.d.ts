@@ -1,5 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class RootV1StatisticsConsolidatedQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class RootV1StatisticsConsolidatedRequest extends SpeakeasyBase {
     appId?: string;
     companyId?: string;
     deviceToken?: string;
@@ -8,11 +9,9 @@ export declare class RootV1StatisticsConsolidatedQueryParams extends SpeakeasyBa
     startDate?: string;
     tag?: string;
 }
-export declare class RootV1StatisticsConsolidatedRequest extends SpeakeasyBase {
-    queryParams: RootV1StatisticsConsolidatedQueryParams;
-}
 export declare class RootV1StatisticsConsolidatedResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

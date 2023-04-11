@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * An optional field for specifying the type of the client entity: `ADVERTISER`, `BRAND`, or `AGENCY`.
+ */
 export declare enum ClientEntityTypeEnum {
     EntityTypeUnspecified = "ENTITY_TYPE_UNSPECIFIED",
     Advertiser = "ADVERTISER",
@@ -6,12 +9,18 @@ export declare enum ClientEntityTypeEnum {
     Agency = "AGENCY",
     EntityTypeUnclassified = "ENTITY_TYPE_UNCLASSIFIED"
 }
+/**
+ * The role which is assigned to the client buyer. Each role implies a set of permissions granted to the client. Must be one of `CLIENT_DEAL_VIEWER`, `CLIENT_DEAL_NEGOTIATOR` or `CLIENT_DEAL_APPROVER`.
+ */
 export declare enum ClientRoleEnum {
     ClientRoleUnspecified = "CLIENT_ROLE_UNSPECIFIED",
     ClientDealViewer = "CLIENT_DEAL_VIEWER",
     ClientDealNegotiator = "CLIENT_DEAL_NEGOTIATOR",
     ClientDealApprover = "CLIENT_DEAL_APPROVER"
 }
+/**
+ * The status of the client buyer.
+ */
 export declare enum ClientStatusEnum {
     ClientStatusUnspecified = "CLIENT_STATUS_UNSPECIFIED",
     Disabled = "DISABLED",
@@ -19,15 +28,42 @@ export declare enum ClientStatusEnum {
 }
 /**
  * A client resource represents a client buyer—an agency, a brand, or an advertiser customer of the sponsor buyer. Users associated with the client buyer have restricted access to the Marketplace and certain other sections of the Authorized Buyers UI based on the role granted to the client buyer. All fields are required unless otherwise specified.
-**/
+ */
 export declare class Client extends SpeakeasyBase {
+    /**
+     * The globally-unique numerical ID of the client. The value of this field is ignored in create and update operations.
+     */
     clientAccountId?: string;
+    /**
+     * Name used to represent this client to publishers. You may have multiple clients that map to the same entity, but for each client the combination of `clientName` and entity must be unique. You can specify this field as empty. Maximum length of 255 characters is allowed.
+     */
     clientName?: string;
+    /**
+     * Numerical identifier of the client entity. The entity can be an advertiser, a brand, or an agency. This identifier is unique among all the entities with the same type. The value of this field is ignored if the entity type is not provided. A list of all known advertisers with their identifiers is available in the [advertisers.txt](https://storage.googleapis.com/adx-rtb-dictionaries/advertisers.txt) file. A list of all known brands with their identifiers is available in the [brands.txt](https://storage.googleapis.com/adx-rtb-dictionaries/brands.txt) file. A list of all known agencies with their identifiers is available in the [agencies.txt](https://storage.googleapis.com/adx-rtb-dictionaries/agencies.txt) file.
+     */
     entityId?: string;
+    /**
+     * The name of the entity. This field is automatically fetched based on the type and ID. The value of this field is ignored in create and update operations.
+     */
     entityName?: string;
+    /**
+     * An optional field for specifying the type of the client entity: `ADVERTISER`, `BRAND`, or `AGENCY`.
+     */
     entityType?: ClientEntityTypeEnum;
+    /**
+     * Optional arbitrary unique identifier of this client buyer from the standpoint of its Ad Exchange sponsor buyer. This field can be used to associate a client buyer with the identifier in the namespace of its sponsor buyer, lookup client buyers by that identifier and verify whether an Ad Exchange counterpart of a given client buyer already exists. If present, must be unique among all the client buyers for its Ad Exchange sponsor buyer.
+     */
     partnerClientId?: string;
+    /**
+     * The role which is assigned to the client buyer. Each role implies a set of permissions granted to the client. Must be one of `CLIENT_DEAL_VIEWER`, `CLIENT_DEAL_NEGOTIATOR` or `CLIENT_DEAL_APPROVER`.
+     */
     role?: ClientRoleEnum;
+    /**
+     * The status of the client buyer.
+     */
     status?: ClientStatusEnum;
+    /**
+     * Whether the client buyer will be visible to sellers.
+     */
     visibleToSeller?: boolean;
 }

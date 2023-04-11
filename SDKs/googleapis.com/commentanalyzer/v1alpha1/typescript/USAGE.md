@@ -1,72 +1,94 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CommentanalyzerCommentsAnalyzeRequest, CommentanalyzerCommentsAnalyzeResponse } from "openapi/src/sdk/models/operations";
+import {
+  CommentanalyzerCommentsAnalyzeRequest,
+  CommentanalyzerCommentsAnalyzeResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  AttributeParametersScoreTypeEnum,
+  TextEntryTypeEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: CommentanalyzerCommentsAnalyzeRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "voluptas",
-    alt: "media",
-    callback: "expedita",
-    fields: "consequuntur",
-    key: "dolor",
-    oauthToken: "expedita",
-    prettyPrint: true,
-    quotaUser: "fugit",
-    uploadType: "et",
-    uploadProtocol: "nihil",
-  },
-  request: {
-    clientToken: "rerum",
+  dollarXgafv: XgafvEnum.Two,
+  analyzeCommentRequest: {
+    clientToken: "provident",
     comment: {
-      text: "dicta",
-      type: "TEXT_TYPE_UNSPECIFIED",
+      text: "distinctio",
+      type: TextEntryTypeEnum.Html,
     },
-    communityId: "voluptatum",
+    communityId: "unde",
     context: {
       articleAndParentComment: {
         article: {
-          text: "et",
-          type: "HTML",
+          text: "nulla",
+          type: TextEntryTypeEnum.PlainText,
         },
         parentComment: {
-          text: "dolorem",
-          type: "PLAIN_TEXT",
+          text: "illum",
+          type: TextEntryTypeEnum.PlainText,
         },
       },
       entries: [
         {
-          text: "iste",
-          type: "TEXT_TYPE_UNSPECIFIED",
+          text: "deserunt",
+          type: TextEntryTypeEnum.PlainText,
+        },
+        {
+          text: "iure",
+          type: TextEntryTypeEnum.TextTypeUnspecified,
+        },
+        {
+          text: "debitis",
+          type: TextEntryTypeEnum.TextTypeUnspecified,
         },
       ],
     },
-    doNotStore: true,
+    doNotStore: false,
+    dropUnsupportedAttributes: false,
     languages: [
-      "illum",
+      "tempora",
+      "suscipit",
+      "molestiae",
+      "minus",
     ],
     requestedAttributes: {
-      "vel": {
-        scoreThreshold: 20.200001,
-        scoreType: "STD_DEV_SCORE",
+      "voluptatum": {
+        scoreThreshold: 4799.77,
+        scoreType: AttributeParametersScoreTypeEnum.StdDevScore,
+      },
+      "nisi": {
+        scoreThreshold: 9255.97,
+        scoreType: AttributeParametersScoreTypeEnum.Raw,
+      },
+      "ab": {
+        scoreThreshold: 3373.96,
+        scoreType: AttributeParametersScoreTypeEnum.ScoreTypeUnspecified,
+      },
+      "deserunt": {
+        scoreThreshold: 202.18,
+        scoreType: AttributeParametersScoreTypeEnum.Probability,
       },
     },
-    sessionId: "aspernatur",
-    spanAnnotations: true,
+    sessionId: "repellendus",
+    spanAnnotations: false,
   },
+  accessToken: "sapiente",
+  alt: AltEnum.Proto,
+  callback: "odit",
+  fields: "at",
+  key: "at",
+  oauthToken: "maiores",
+  prettyPrint: false,
+  quotaUser: "molestiae",
+  uploadType: "quod",
+  uploadProtocol: "quod",
 };
 
 sdk.comments.commentanalyzerCommentsAnalyze(req).then((res: CommentanalyzerCommentsAnalyzeResponse | AxiosError) => {

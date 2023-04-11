@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum CreateContactXAmzTargetEnum {
-    SsmContactsCreateContact = "SSMContacts.CreateContact"
+    SSMContactsCreateContact = "SSMContacts.CreateContact"
 }
-export declare class CreateContactHeaders extends SpeakeasyBase {
+export declare class CreateContactRequest extends SpeakeasyBase {
+    createContactRequest: shared.CreateContactRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,19 +15,40 @@ export declare class CreateContactHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: CreateContactXAmzTargetEnum;
 }
-export declare class CreateContactRequest extends SpeakeasyBase {
-    headers: CreateContactHeaders;
-    request: shared.CreateContactRequest;
-}
 export declare class CreateContactResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     createContactResult?: shared.CreateContactResult;
+    /**
+     * DataEncryptionException
+     */
     dataEncryptionException?: any;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ServiceQuotaExceededException
+     */
     serviceQuotaExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

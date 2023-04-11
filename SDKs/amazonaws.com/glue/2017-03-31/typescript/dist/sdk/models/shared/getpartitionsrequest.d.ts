@@ -7,6 +7,8 @@ export declare class GetPartitionsRequest extends SpeakeasyBase {
     expression?: string;
     maxResults?: number;
     nextToken?: string;
+    queryAsOfTime?: Date;
     segment?: Segment;
     tableName: string;
+    transactionId?: string;
 }

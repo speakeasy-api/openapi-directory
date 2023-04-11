@@ -1,14 +1,28 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetSavedFiltersPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetSavedFiltersRequest extends SpeakeasyBase {
+    /**
+     * Page Number
+     */
+    page?: number;
+    /**
+     * Project's identifier
+     */
     projectSlug: string;
+    /**
+     * Page Size
+     */
+    size?: number;
+    /**
+     * User's identifier
+     */
     username: string;
 }
-export declare class GetSavedFiltersQueryParams extends SpeakeasyBase {
-    page?: number;
-    size?: number;
-}
-export declare class GetSavedFilters200ApplicationJson extends SpeakeasyBase {
+/**
+ * Successful operation
+ */
+export declare class GetSavedFilters200ApplicationJSON extends SpeakeasyBase {
     count?: number;
     next?: string;
     page?: number;
@@ -16,13 +30,16 @@ export declare class GetSavedFilters200ApplicationJson extends SpeakeasyBase {
     results?: shared.ProjectSavedFilter[];
     size?: number;
 }
-export declare class GetSavedFiltersRequest extends SpeakeasyBase {
-    pathParams: GetSavedFiltersPathParams;
-    queryParams: GetSavedFiltersQueryParams;
-}
 export declare class GetSavedFiltersResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * error payload
+     */
     defaultPayload?: shared.DefaultPayload;
     statusCode: number;
-    getSavedFilters200ApplicationJSONObject?: GetSavedFilters200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful operation
+     */
+    getSavedFilters200ApplicationJSONObject?: GetSavedFilters200ApplicationJSON;
 }

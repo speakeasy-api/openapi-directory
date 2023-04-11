@@ -1,12 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetPathwaysWithDiagramsForCategoryUsingGetPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETPathwaysWithDiagramsForCategoryUsingGETRequest extends SpeakeasyBase {
+    /**
+     * Pathway Category
+     */
     category: string;
 }
-export declare class GetPathwaysWithDiagramsForCategoryUsingGetRequest extends SpeakeasyBase {
-    pathParams: GetPathwaysWithDiagramsForCategoryUsingGetPathParams;
-}
-export declare class GetPathwaysWithDiagramsForCategoryUsingGetResponse extends SpeakeasyBase {
+export declare class GETPathwaysWithDiagramsForCategoryUsingGETResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

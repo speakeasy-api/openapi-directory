@@ -1,116 +1,174 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class TripcSecurity extends SpeakeasyBase {
+    apiKey: string;
+    clientId: string;
+}
 export declare class TripcRequestBodyCertificateParameters extends SpeakeasyBase {
+    /**
+     * Full name
+     */
     fullName: string;
+    /**
+     * Policy Number
+     */
     policyno: string;
 }
+/**
+ * The format of the certificate in response.
+ */
 export declare enum TripcRequestBodyFormatEnum {
     Pdf = "pdf"
 }
+/**
+ * Request format
+ */
 export declare class TripcRequestBody extends SpeakeasyBase {
     certificateParameters?: TripcRequestBodyCertificateParameters;
-    consentArtifact?: any;
+    consentArtifact?: shared.ConsentArtifactSchema;
+    /**
+     * The format of the certificate in response.
+     */
     format: TripcRequestBodyFormatEnum;
+    /**
+     * A unique transaction id for this request in UUID format. It is used for tracking the request.
+     */
     txnId: string;
 }
-export declare class TripcSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
-    clientId: shared.SchemeClientId;
+export declare enum Tripc504ApplicationJSONErrorEnum {
+    GatewayTimeout = "gateway_timeout"
 }
-export declare enum Tripc400ApplicationJsonErrorEnum {
+export declare enum Tripc504ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
+}
+/**
+ * Gateway timeout
+ */
+export declare class Tripc504ApplicationJSON extends SpeakeasyBase {
+    error?: Tripc504ApplicationJSONErrorEnum;
+    errorDescription?: Tripc504ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Tripc503ApplicationJSONErrorEnum {
+    ServiceUnavailable = "service_unavailable"
+}
+export declare enum Tripc503ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
+}
+/**
+ * Service unavailable
+ */
+export declare class Tripc503ApplicationJSON extends SpeakeasyBase {
+    error?: Tripc503ApplicationJSONErrorEnum;
+    errorDescription?: Tripc503ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Tripc502ApplicationJSONErrorEnum {
+    BadGatewy = "bad_gatewy"
+}
+export declare enum Tripc502ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
+}
+/**
+ * Bad gateway
+ */
+export declare class Tripc502ApplicationJSON extends SpeakeasyBase {
+    error?: Tripc502ApplicationJSONErrorEnum;
+    errorDescription?: Tripc502ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Tripc500ApplicationJSONErrorEnum {
+    InternalServerError = "internal_server_error"
+}
+export declare enum Tripc500ApplicationJSONErrorDescriptionEnum {
+    InternalServerError = "Internal server error"
+}
+/**
+ * Internal server error
+ */
+export declare class Tripc500ApplicationJSON extends SpeakeasyBase {
+    error?: Tripc500ApplicationJSONErrorEnum;
+    errorDescription?: Tripc500ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Tripc404ApplicationJSONErrorEnum {
+    RecordNotFound = "record_not_found",
+    UrlNotFound = "url_not_found"
+}
+export declare enum Tripc404ApplicationJSONErrorDescriptionEnum {
+    NoRecordFound = "No record found",
+    YourAPIUrlOrPathIsIncorrect = "Your API url or path is incorrect"
+}
+/**
+ * No record found
+ */
+export declare class Tripc404ApplicationJSON extends SpeakeasyBase {
+    error?: Tripc404ApplicationJSONErrorEnum;
+    errorDescription?: Tripc404ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Tripc401ApplicationJSONErrorEnum {
+    InvalidAuthentication = "invalid_authentication",
+    InvalidAuthorization = "invalid_authorization"
+}
+export declare enum Tripc401ApplicationJSONErrorDescriptionEnum {
+    AuthenticationFailed = "Authentication failed",
+    YouAreNotAuthorizedToUseThisAPI = "You are not authorized to use this API"
+}
+/**
+ * Unauthorized access
+ */
+export declare class Tripc401ApplicationJSON extends SpeakeasyBase {
+    error?: Tripc401ApplicationJSONErrorEnum;
+    errorDescription?: Tripc401ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Tripc400ApplicationJSONErrorEnum {
     MissingParameter = "missing_parameter",
     InvalidParameter = "invalid_parameter",
     InvalidFormat = "invalid_format",
     InvalidTxnid = "invalid_txnid",
     InvalidConsentid = "invalid_consentid"
 }
-export declare enum Tripc400ApplicationJsonErrorDescriptionEnum {
+export declare enum Tripc400ApplicationJSONErrorDescriptionEnum {
     PleaseProvideAllMandatoryParameters = "Please provide all mandatory parameters",
     BadRequest = "Bad request",
     TheFormatParameterIsInvalid = "The format parameter is invalid",
-    TheTxnIdParameterMustBeInUuidFormat = "The txnId parameter must be in UUID format",
-    TheConsentIdParameterMustBeInUuidFormat = "The consentId parameter must be in UUID format"
+    TheTxnIdParameterMustBeInUUIDFormat = "The txnId parameter must be in UUID format",
+    TheConsentIdParameterMustBeInUUIDFormat = "The consentId parameter must be in UUID format"
 }
-export declare class Tripc400ApplicationJson extends SpeakeasyBase {
-    error?: Tripc400ApplicationJsonErrorEnum;
-    errorDescription?: Tripc400ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Tripc401ApplicationJsonErrorEnum {
-    InvalidAuthentication = "invalid_authentication",
-    InvalidAuthorization = "invalid_authorization"
-}
-export declare enum Tripc401ApplicationJsonErrorDescriptionEnum {
-    AuthenticationFailed = "Authentication failed",
-    YouAreNotAuthorizedToUseThisApi = "You are not authorized to use this API"
-}
-export declare class Tripc401ApplicationJson extends SpeakeasyBase {
-    error?: Tripc401ApplicationJsonErrorEnum;
-    errorDescription?: Tripc401ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Tripc404ApplicationJsonErrorEnum {
-    RecordNotFound = "record_not_found",
-    UrlNotFound = "url_not_found"
-}
-export declare enum Tripc404ApplicationJsonErrorDescriptionEnum {
-    NoRecordFound = "No record found",
-    YourApiUrlOrPathIsIncorrect = "Your API url or path is incorrect"
-}
-export declare class Tripc404ApplicationJson extends SpeakeasyBase {
-    error?: Tripc404ApplicationJsonErrorEnum;
-    errorDescription?: Tripc404ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Tripc500ApplicationJsonErrorEnum {
-    InternalServerError = "internal_server_error"
-}
-export declare enum Tripc500ApplicationJsonErrorDescriptionEnum {
-    InternalServerError = "Internal server error"
-}
-export declare class Tripc500ApplicationJson extends SpeakeasyBase {
-    error?: Tripc500ApplicationJsonErrorEnum;
-    errorDescription?: Tripc500ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Tripc502ApplicationJsonErrorEnum {
-    BadGatewy = "bad_gatewy"
-}
-export declare enum Tripc502ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
-}
-export declare class Tripc502ApplicationJson extends SpeakeasyBase {
-    error?: Tripc502ApplicationJsonErrorEnum;
-    errorDescription?: Tripc502ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Tripc503ApplicationJsonErrorEnum {
-    ServiceUnavailable = "service_unavailable"
-}
-export declare enum Tripc503ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
-}
-export declare class Tripc503ApplicationJson extends SpeakeasyBase {
-    error?: Tripc503ApplicationJsonErrorEnum;
-    errorDescription?: Tripc503ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Tripc504ApplicationJsonErrorEnum {
-    GatewayTimeout = "gateway_timeout"
-}
-export declare enum Tripc504ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
-}
-export declare class Tripc504ApplicationJson extends SpeakeasyBase {
-    error?: Tripc504ApplicationJsonErrorEnum;
-    errorDescription?: Tripc504ApplicationJsonErrorDescriptionEnum;
-}
-export declare class TripcRequest extends SpeakeasyBase {
-    request?: TripcRequestBody;
-    security: TripcSecurity;
+/**
+ * Bad request
+ */
+export declare class Tripc400ApplicationJSON extends SpeakeasyBase {
+    error?: Tripc400ApplicationJSONErrorEnum;
+    errorDescription?: Tripc400ApplicationJSONErrorDescriptionEnum;
 }
 export declare class TripcResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    tripc400ApplicationJSONObject?: Tripc400ApplicationJson;
-    tripc401ApplicationJSONObject?: Tripc401ApplicationJson;
-    tripc404ApplicationJSONObject?: Tripc404ApplicationJson;
-    tripc500ApplicationJSONObject?: Tripc500ApplicationJson;
-    tripc502ApplicationJSONObject?: Tripc502ApplicationJson;
-    tripc503ApplicationJSONObject?: Tripc503ApplicationJson;
-    tripc504ApplicationJSONObject?: Tripc504ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad request
+     */
+    tripc400ApplicationJSONObject?: Tripc400ApplicationJSON;
+    /**
+     * Unauthorized access
+     */
+    tripc401ApplicationJSONObject?: Tripc401ApplicationJSON;
+    /**
+     * No record found
+     */
+    tripc404ApplicationJSONObject?: Tripc404ApplicationJSON;
+    /**
+     * Internal server error
+     */
+    tripc500ApplicationJSONObject?: Tripc500ApplicationJSON;
+    /**
+     * Bad gateway
+     */
+    tripc502ApplicationJSONObject?: Tripc502ApplicationJSON;
+    /**
+     * Service unavailable
+     */
+    tripc503ApplicationJSONObject?: Tripc503ApplicationJSON;
+    /**
+     * Gateway timeout
+     */
+    tripc504ApplicationJSONObject?: Tripc504ApplicationJSON;
 }

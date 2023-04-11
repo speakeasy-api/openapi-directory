@@ -1,12 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class WeekCurrentPathParams extends SpeakeasyBase {
-    format: string;
-}
+import { AxiosResponse } from "axios";
 export declare class WeekCurrentRequest extends SpeakeasyBase {
-    pathParams: WeekCurrentPathParams;
+    /**
+     * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+     */
+    format: string;
 }
 export declare class WeekCurrentResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
     weekCurrent200ApplicationJSONInteger?: number;
 }

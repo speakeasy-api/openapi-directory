@@ -1,16 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class DeletesystemPathParams extends SpeakeasyBase {
-    inventoryId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeletesystemSecurity extends SpeakeasyBase {
-    rhIdentity: shared.SchemeRhIdentity;
+    rhIdentity: string;
 }
 export declare class DeletesystemRequest extends SpeakeasyBase {
-    pathParams: DeletesystemPathParams;
-    security: DeletesystemSecurity;
+    /**
+     * Inventory ID
+     */
+    inventoryId: string;
 }
 export declare class DeletesystemResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { LfTagError } from "./lftagerror";
-export declare class RemoveLfTagsFromResourceResponse extends SpeakeasyBase {
-    failures?: LfTagError[];
+import { LFTagError } from "./lftagerror";
+/**
+ * Success
+ */
+export declare class RemoveLFTagsFromResourceResponse extends SpeakeasyBase {
+    failures?: LFTagError[];
 }

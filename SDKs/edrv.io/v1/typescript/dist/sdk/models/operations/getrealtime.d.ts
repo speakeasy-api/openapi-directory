@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetRealtimeHeaders extends SpeakeasyBase {
-    secWebsocketProtocol: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetRealtimeRequest extends SpeakeasyBase {
-    headers: GetRealtimeHeaders;
+    /**
+     * The JWT token to use for auth
+     */
+    secWebsocketProtocol: string;
 }
 export declare class GetRealtimeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

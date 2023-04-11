@@ -1,13 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GamesYoutubeReadPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GamesYoutubeReadRequest extends SpeakeasyBase {
-    pathParams: GamesYoutubeReadPathParams;
+    /**
+     * An ID or a slug identifying this Game.
+     */
+    id: string;
 }
 export declare class GamesYoutubeReadResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
     youtube?: shared.Youtube;
 }

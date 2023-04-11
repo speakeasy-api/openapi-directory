@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Account operations
+ */
 export declare class Accounts {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +12,9 @@ export declare class Accounts {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * account - Get sub account details
+     * Get sub account details
      *
+     * @remarks
      * Get details of a sub account that is listed under a master account. Your account must be a master account in order to retrieve sub accounts' details. Zoom allows only [approved partners](https://marketplace.zoom.us/docs/api-reference/master-account-apis) to use master APIs and create sub accounts. Email the partner programs team at **partner-success@zoom.us** for more details.
      *
      * **Prerequisites:**
@@ -22,11 +26,12 @@ export declare class Accounts {
      *
      *
      *
-    **/
+     */
     account(req: operations.AccountRequest, config?: AxiosRequestConfig): Promise<operations.AccountResponse>;
     /**
-     * accountCreate - Create a sub account
+     * Create a sub account
      *
+     * @remarks
      * Create a sub account under a master account. Your account must be a master account in order to create sub accounts.
      * <br><br>Zoom allows only [approved partners](https://marketplace.zoom.us/docs/api-reference/master-account-apis) to use master APIs and manage sub accounts. Email the partner programs team at partner-success@zoom.us. for more details. Please note that the created account user will receive a confirmation email.<br><br>
      * <br>
@@ -38,11 +43,12 @@ export declare class Accounts {
      *
      *
      *
-    **/
-    accountCreate(req: operations.AccountCreateRequest, config?: AxiosRequestConfig): Promise<operations.AccountCreateResponse>;
+     */
+    accountCreate(req: operations.AccountCreateApplicationJSON, config?: AxiosRequestConfig): Promise<operations.AccountCreateResponse>;
     /**
-     * accountDisassociate - Disassociate a sub account
+     * Disassociate a sub account
      *
+     * @remarks
      * Disassociate a sub account from its master account. This will leave the sub account intact but it will no longer be associated with the master account.<br>
      *
      * **Prerequisites:**
@@ -55,11 +61,12 @@ export declare class Accounts {
      *
      *
      *
-    **/
+     */
     accountDisassociate(req: operations.AccountDisassociateRequest, config?: AxiosRequestConfig): Promise<operations.AccountDisassociateResponse>;
     /**
-     * accountManagedDomain - Get managed domains
+     * Get managed domains
      *
+     * @remarks
      * Get a sub account's [managed domains](https://support.zoom.us/hc/en-us/articles/203395207-What-is-Managed-Domain-).<br><br>
      *
      * **Note:** This API can be used by Zoom Accounts that are on a Pro or a higher plan as well accounts that have master and sub accounts options enabled. <br><br>
@@ -73,11 +80,12 @@ export declare class Accounts {
      *
      *
      *
-    **/
-    accountManagedDomain(req: operations.AccountManagedDomainRequest, config?: AxiosRequestConfig): Promise<operations.AccountManagedDomainResponse>;
+     */
+    accountManagedDomain(req: operations.AccountManagedDomainRequest, security: operations.AccountManagedDomainSecurity, config?: AxiosRequestConfig): Promise<operations.AccountManagedDomainResponse>;
     /**
-     * accountOptionsUpdate - Update options
+     * Update options
      *
+     * @remarks
      * Update a sub account's options under the master account.<br> <aside>Your account must be a master account in order to update the options for sub accounts. Zoom only assigns this privilege to trusted partners. </aside>
      *
      * **Prerequisites:**
@@ -89,11 +97,12 @@ export declare class Accounts {
      *
      *
      *
-    **/
-    accountOptionsUpdate(req: operations.AccountOptionsUpdateRequest, config?: AxiosRequestConfig): Promise<operations.AccountOptionsUpdateResponse>;
+     */
+    accountOptionsUpdate(req: operations.AccountOptionsUpdateRequest, security: operations.AccountOptionsUpdateSecurity, config?: AxiosRequestConfig): Promise<operations.AccountOptionsUpdateResponse>;
     /**
-     * accountSettings - Get settings
+     * Get settings
      *
+     * @remarks
      * Get the settings of an account.<br>
      * To get the settings of a master account, use `me` as the value for the `accountId` path parameter.<br><br>
      *  **Prerequisites**:
@@ -101,33 +110,36 @@ export declare class Accounts {
      * **Scopes**: `account:read:admin`
      * <br>
      * **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-    **/
+     */
     accountSettings(req: operations.AccountSettingsRequest, config?: AxiosRequestConfig): Promise<operations.AccountSettingsResponse>;
     /**
-     * accountSettingsUpdate - Update settings
+     * Update settings
      *
+     * @remarks
      * Update the settings of a sub account that is under a master account.<br> To update the settings of the master account, use `me` as the value of the `accountId` path parameter.<br><br>
      * **Prerequisites**:
      *  * The sub account must be a paid account.<br>
      * **Scopes**: `account:write:admin`
      * <br>
      * **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-    **/
+     */
     accountSettingsUpdate(req: operations.AccountSettingsUpdateRequest, config?: AxiosRequestConfig): Promise<operations.AccountSettingsUpdateResponse>;
     /**
-     * accountTrustedDomain - Get trusted domains
+     * Get trusted domains
      *
+     * @remarks
      * Get trusted domains of a sub account. To get the trusted domains of a master account, use `me` as the value for the `accountId` path parameter.
      *
      * **Prerequisites:**<br>
      * * The sub account must be a paid account.<br>
      * **Scope:** `account:read:admin`<br>
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-    **/
+     */
     accountTrustedDomain(req: operations.AccountTrustedDomainRequest, config?: AxiosRequestConfig): Promise<operations.AccountTrustedDomainResponse>;
     /**
-     * accounts - List sub accounts
+     * List sub accounts
      *
+     * @remarks
      * List all the sub accounts that have been created by a master account.<br><br>Zoom allows only [approved partners](https://marketplace.zoom.us/docs/api-reference/master-account-apis) to use master APIs and manage sub accounts. Email the partner programs team at **partner-success@zoom.us** for more details.
      *
      * <br>**Prerequisites:**<br>
@@ -137,11 +149,12 @@ export declare class Accounts {
      * <br>**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br>
      *
      *
-    **/
+     */
     accounts(req: operations.AccountsRequest, config?: AxiosRequestConfig): Promise<operations.AccountsResponse>;
     /**
-     * delVb - Delete virtual background files
+     * Delete virtual background files
      *
+     * @remarks
      * Delete existing virtual background file(s) from an account.
      *
      * **Prerequisites:**<br>
@@ -150,11 +163,12 @@ export declare class Accounts {
      * **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
      *
      *
-    **/
-    delVb(req: operations.DelVbRequest, config?: AxiosRequestConfig): Promise<operations.DelVbResponse>;
+     */
+    delVB(req: operations.DelVBRequest, config?: AxiosRequestConfig): Promise<operations.DelVBResponse>;
     /**
-     * getAccountLockSettings - Get locked settings
+     * Get locked settings
      *
+     * @remarks
      * [Account Locked Settings](https://support.zoom.us/hc/en-us/articles/115005269866) allow you turn settings on or off for all users in your account. No user except the account admin or account owner can change these settings. With lock settings, you force the settings on for all users.
      * Use this API to retrieve an account's locked settings.
      *
@@ -170,11 +184,12 @@ export declare class Accounts {
      *
      *
      * **Scope:** account:read:admin
-    **/
+     */
     getAccountLockSettings(req: operations.GetAccountLockSettingsRequest, config?: AxiosRequestConfig): Promise<operations.GetAccountLockSettingsResponse>;
     /**
-     * updateAccountLockSettings - Update locked settings
+     * Update locked settings
      *
+     * @remarks
      * [Account Locked Settings](https://support.zoom.us/hc/en-us/articles/115005269866) allow you turn settings on or off for all users in your account. No user except the account admin or account owner can change these settings. With lock settings, you force the settings on for all users. Use this API to update an account's locked settings.
      *
      * **Note:** This API can be used by Zoom Accounts that are on a Pro or a higher plan as well accounts that have master and sub accounts options enabled.<br><br>
@@ -186,11 +201,12 @@ export declare class Accounts {
      *
      *
      *
-    **/
-    updateAccountLockSettings(req: operations.UpdateAccountLockSettingsRequest, config?: AxiosRequestConfig): Promise<operations.UpdateAccountLockSettingsResponse>;
+     */
+    updateAccountLockSettings(req: operations.UpdateAccountLockSettingsRequest, security: operations.UpdateAccountLockSettingsSecurity, config?: AxiosRequestConfig): Promise<operations.UpdateAccountLockSettingsResponse>;
     /**
-     * updateAccountOwner - Update the account owner
+     * Update the account owner
      *
+     * @remarks
      * The current account owner can [change the owner of an account](https://support.zoom.us/hc/en-us/articles/115005686983-Change-Account-Owner) to another user on the same account.<br> Use this API to change the owner of a sub account.
      *
      * **Prerequisites**: <br>
@@ -201,11 +217,12 @@ export declare class Accounts {
      *
      *
      * <br>
-    **/
-    updateAccountOwner(req: operations.UpdateAccountOwnerRequest, config?: AxiosRequestConfig): Promise<operations.UpdateAccountOwnerResponse>;
+     */
+    updateAccountOwner(req: operations.UpdateAccountOwnerRequest, security: operations.UpdateAccountOwnerSecurity, config?: AxiosRequestConfig): Promise<operations.UpdateAccountOwnerResponse>;
     /**
-     * uploadVb - Upload virtual background files
+     * Upload virtual background files
      *
+     * @remarks
      * Use this API to [upload virtual background files](https://support.zoom.us/hc/en-us/articles/210707503-Virtual-Background#h_01EJF3YFEWGT8YA0ZJ079JEDQE) for all users on the account to use.
      *
      *
@@ -215,6 +232,6 @@ export declare class Accounts {
      * **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br>
      *
      *
-    **/
-    uploadVb(req: operations.UploadVbRequest, config?: AxiosRequestConfig): Promise<operations.UploadVbResponse>;
+     */
+    uploadVB(req: operations.UploadVBRequest, config?: AxiosRequestConfig): Promise<operations.UploadVBResponse>;
 }

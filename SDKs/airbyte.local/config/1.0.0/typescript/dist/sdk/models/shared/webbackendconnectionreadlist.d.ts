@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { WebBackendConnectionRead } from "./webbackendconnectionread";
+import { WebBackendConnectionListItem } from "./webbackendconnectionlistitem";
+/**
+ * Successful operation
+ */
 export declare class WebBackendConnectionReadList extends SpeakeasyBase {
-    connections: WebBackendConnectionRead[];
+    connections: WebBackendConnectionListItem[];
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostReplaceNetworkAclAssociationActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTReplaceNetworkAclAssociationActionEnum {
     ReplaceNetworkAclAssociation = "ReplaceNetworkAclAssociation"
 }
-export declare enum PostReplaceNetworkAclAssociationVersionEnum {
+export declare enum POSTReplaceNetworkAclAssociationVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostReplaceNetworkAclAssociationQueryParams extends SpeakeasyBase {
-    action: PostReplaceNetworkAclAssociationActionEnum;
-    version: PostReplaceNetworkAclAssociationVersionEnum;
-}
-export declare class PostReplaceNetworkAclAssociationHeaders extends SpeakeasyBase {
+export declare class POSTReplaceNetworkAclAssociationRequest extends SpeakeasyBase {
+    action: POSTReplaceNetworkAclAssociationActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTReplaceNetworkAclAssociationVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostReplaceNetworkAclAssociationHeaders extends SpeakeasyBa
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostReplaceNetworkAclAssociationRequest extends SpeakeasyBase {
-    queryParams: PostReplaceNetworkAclAssociationQueryParams;
-    headers: PostReplaceNetworkAclAssociationHeaders;
-    request?: Uint8Array;
-}
-export declare class PostReplaceNetworkAclAssociationResponse extends SpeakeasyBase {
+export declare class POSTReplaceNetworkAclAssociationResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

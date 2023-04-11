@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class CancelImportTaskResult extends SpeakeasyBase {
-    importTaskId?: Record<string, any>;
-    previousState?: Record<string, any>;
-    state?: Record<string, any>;
+    importTaskId?: string;
+    previousState?: string;
+    state?: string;
 }

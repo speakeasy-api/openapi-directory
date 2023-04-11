@@ -1,6 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class ApIs {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+export declare class APIs {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,15 +9,17 @@ export declare class ApIs {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * phcer - Pharmacist Registration Certificate
+     * Pharmacist Registration Certificate
      *
+     * @remarks
      * API to verify Pharmacist Registration Certificate.
-    **/
-    phcer(req: operations.PhcerRequest, config?: AxiosRequestConfig): Promise<operations.PhcerResponse>;
+     */
+    phcer(req: operations.PhcerRequestBody, security: operations.PhcerSecurity, config?: AxiosRequestConfig): Promise<operations.PhcerResponse>;
     /**
-     * rpcer - Pharmacist Renewal certificate
+     * Pharmacist Renewal certificate
      *
+     * @remarks
      * API to verify Pharmacist Renewal certificate.
-    **/
-    rpcer(req: operations.RpcerRequest, config?: AxiosRequestConfig): Promise<operations.RpcerResponse>;
+     */
+    rpcer(req: operations.RpcerRequestBody, security: operations.RpcerSecurity, config?: AxiosRequestConfig): Promise<operations.RpcerResponse>;
 }

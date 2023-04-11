@@ -1,8 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteLexiconPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteLexiconRequest extends SpeakeasyBase {
+    /**
+     * The name of the lexicon to delete. Must be an existing lexicon in the region.
+     */
     lexiconName: string;
-}
-export declare class DeleteLexiconHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,14 +13,20 @@ export declare class DeleteLexiconHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeleteLexiconRequest extends SpeakeasyBase {
-    pathParams: DeleteLexiconPathParams;
-    headers: DeleteLexiconHeaders;
-}
 export declare class DeleteLexiconResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deleteLexiconOutput?: Record<string, any>;
+    /**
+     * LexiconNotFoundException
+     */
     lexiconNotFoundException?: any;
-    serviceFailureException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceFailureException
+     */
+    serviceFailureException?: any;
 }

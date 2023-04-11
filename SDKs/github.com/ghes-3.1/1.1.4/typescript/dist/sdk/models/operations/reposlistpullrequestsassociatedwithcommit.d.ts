@@ -1,26 +1,35 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReposListPullRequestsAssociatedWithCommitPathParams extends SpeakeasyBase {
-    commitSha: string;
-    owner: string;
-    repo: string;
-}
-export declare class ReposListPullRequestsAssociatedWithCommitQueryParams extends SpeakeasyBase {
-    page?: number;
-    perPage?: number;
-}
-export declare class ReposListPullRequestsAssociatedWithCommit415ApplicationJson extends SpeakeasyBase {
-    documentationUrl: string;
-    message: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ReposListPullRequestsAssociatedWithCommitRequest extends SpeakeasyBase {
-    pathParams: ReposListPullRequestsAssociatedWithCommitPathParams;
-    queryParams: ReposListPullRequestsAssociatedWithCommitQueryParams;
+    /**
+     * The SHA of the commit.
+     */
+    commitSha: string;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    owner: string;
+    /**
+     * Page number of the results to fetch.
+     */
+    page?: number;
+    /**
+     * The number of results per page (max 100).
+     */
+    perPage?: number;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    repo: string;
 }
 export declare class ReposListPullRequestsAssociatedWithCommitResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     pullRequestSimples?: shared.PullRequestSimple[];
-    reposListPullRequestsAssociatedWithCommit415ApplicationJSONObject?: ReposListPullRequestsAssociatedWithCommit415ApplicationJson;
 }

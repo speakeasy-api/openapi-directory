@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteCompanyTimeOffsIdPathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteCompanyTimeOffsIdRequest extends SpeakeasyBase {
-    pathParams: DeleteCompanyTimeOffsIdPathParams;
+    /**
+     * ID of the absence period to delete
+     */
+    id: number;
 }
 export declare class DeleteCompanyTimeOffsIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Not found response
+     */
     errorResponse?: shared.ErrorResponse;
+    /**
+     * Success response
+     */
     response?: shared.Response;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

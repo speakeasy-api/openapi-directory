@@ -1,18 +1,40 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReposGetAllEnvironmentsPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ReposGetAllEnvironmentsRequest extends SpeakeasyBase {
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
     owner: string;
+    /**
+     * Page number of the results to fetch.
+     */
+    page?: number;
+    /**
+     * The number of results per page (max 100).
+     */
+    perPage?: number;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
     repo: string;
 }
-export declare class ReposGetAllEnvironments200ApplicationJson extends SpeakeasyBase {
+/**
+ * Response
+ */
+export declare class ReposGetAllEnvironments200ApplicationJSON extends SpeakeasyBase {
     environments?: shared.Environment[];
+    /**
+     * The number of environments in this repository
+     */
     totalCount?: number;
-}
-export declare class ReposGetAllEnvironmentsRequest extends SpeakeasyBase {
-    pathParams: ReposGetAllEnvironmentsPathParams;
 }
 export declare class ReposGetAllEnvironmentsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    reposGetAllEnvironments200ApplicationJSONObject?: ReposGetAllEnvironments200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
+    reposGetAllEnvironments200ApplicationJSONObject?: ReposGetAllEnvironments200ApplicationJSON;
 }

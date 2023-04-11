@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostUpdateConfigurationTemplateActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTUpdateConfigurationTemplateActionEnum {
     UpdateConfigurationTemplate = "UpdateConfigurationTemplate"
 }
-export declare enum PostUpdateConfigurationTemplateVersionEnum {
+export declare enum POSTUpdateConfigurationTemplateVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostUpdateConfigurationTemplateQueryParams extends SpeakeasyBase {
-    action: PostUpdateConfigurationTemplateActionEnum;
-    version: PostUpdateConfigurationTemplateVersionEnum;
-}
-export declare class PostUpdateConfigurationTemplateHeaders extends SpeakeasyBase {
+export declare class POSTUpdateConfigurationTemplateRequest extends SpeakeasyBase {
+    action: POSTUpdateConfigurationTemplateActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTUpdateConfigurationTemplateVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostUpdateConfigurationTemplateHeaders extends SpeakeasyBas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostUpdateConfigurationTemplateRequest extends SpeakeasyBase {
-    queryParams: PostUpdateConfigurationTemplateQueryParams;
-    headers: PostUpdateConfigurationTemplateHeaders;
-    request?: Uint8Array;
-}
-export declare class PostUpdateConfigurationTemplateResponse extends SpeakeasyBase {
+export declare class POSTUpdateConfigurationTemplateResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

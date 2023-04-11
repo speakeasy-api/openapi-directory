@@ -1,18 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PatchDataExporterConfigPathParams extends SpeakeasyBase {
-    dataExporterConfigId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PatchDataExporterConfigSecurity extends SpeakeasyBase {
-    otoroshiAuth: shared.SchemeOtoroshiAuth;
+    password: string;
+    username: string;
 }
 export declare class PatchDataExporterConfigRequest extends SpeakeasyBase {
-    pathParams: PatchDataExporterConfigPathParams;
-    request?: shared.Patch[];
-    security: PatchDataExporterConfigSecurity;
+    requestBody?: shared.Patch[];
+    /**
+     * The data exporter config id
+     */
+    dataExporterConfigId: string;
 }
 export declare class PatchDataExporterConfigResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful operation
+     */
     dataExporterConfig?: shared.DataExporterConfig;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

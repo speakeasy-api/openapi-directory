@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Identifies the specific error that occurred.
+ */
 export declare enum SqlExternalSyncSettingErrorTypeEnum {
     SqlExternalSyncSettingErrorTypeUnspecified = "SQL_EXTERNAL_SYNC_SETTING_ERROR_TYPE_UNSPECIFIED",
     ConnectionFailure = "CONNECTION_FAILURE",
@@ -27,13 +30,23 @@ export declare enum SqlExternalSyncSettingErrorTypeEnum {
     UnsupportedBinlogFormat = "UNSUPPORTED_BINLOG_FORMAT",
     BinlogRetentionSetting = "BINLOG_RETENTION_SETTING",
     UnsupportedStorageEngine = "UNSUPPORTED_STORAGE_ENGINE",
-    LimitedSupportTables = "LIMITED_SUPPORT_TABLES"
+    LimitedSupportTables = "LIMITED_SUPPORT_TABLES",
+    ExistingDataInReplica = "EXISTING_DATA_IN_REPLICA"
 }
 /**
  * External primary instance migration setting error/warning.
-**/
+ */
 export declare class SqlExternalSyncSettingError extends SpeakeasyBase {
+    /**
+     * Additional information about the error encountered.
+     */
     detail?: string;
+    /**
+     * Can be `sql#externalSyncSettingError` or `sql#externalSyncSettingWarning`.
+     */
     kind?: string;
+    /**
+     * Identifies the specific error that occurred.
+     */
     type?: SqlExternalSyncSettingErrorTypeEnum;
 }

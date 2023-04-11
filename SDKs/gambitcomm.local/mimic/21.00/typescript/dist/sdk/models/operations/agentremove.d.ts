@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class AgentRemovePathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class AgentRemoveRequest extends SpeakeasyBase {
-    pathParams: AgentRemovePathParams;
+    /**
+     * Agent to return the primary IP
+     */
+    agentNum: number;
 }
 export declare class AgentRemoveResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     agentRemove200ApplicationJSONString?: string;
 }

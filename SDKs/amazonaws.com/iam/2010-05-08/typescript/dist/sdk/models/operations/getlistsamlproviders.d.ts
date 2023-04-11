@@ -1,15 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetListSamlProvidersActionEnum {
-    ListSamlProviders = "ListSAMLProviders"
+import { AxiosResponse } from "axios";
+export declare enum GETListSAMLProvidersActionEnum {
+    ListSAMLProviders = "ListSAMLProviders"
 }
-export declare enum GetListSamlProvidersVersionEnum {
+export declare enum GETListSAMLProvidersVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class GetListSamlProvidersQueryParams extends SpeakeasyBase {
-    action: GetListSamlProvidersActionEnum;
-    version: GetListSamlProvidersVersionEnum;
-}
-export declare class GetListSamlProvidersHeaders extends SpeakeasyBase {
+export declare class GETListSAMLProvidersRequest extends SpeakeasyBase {
+    action: GETListSAMLProvidersActionEnum;
+    version: GETListSAMLProvidersVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +17,9 @@ export declare class GetListSamlProvidersHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetListSamlProvidersRequest extends SpeakeasyBase {
-    queryParams: GetListSamlProvidersQueryParams;
-    headers: GetListSamlProvidersHeaders;
-}
-export declare class GetListSamlProvidersResponse extends SpeakeasyBase {
+export declare class GETListSAMLProvidersResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

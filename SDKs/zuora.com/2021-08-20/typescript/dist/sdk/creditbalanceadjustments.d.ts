@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class CreditBalanceAdjustments {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,15 +9,15 @@ export declare class CreditBalanceAdjustments {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * objectGetCreditBalanceAdjustment - CRUD: Retrieve a credit balance adjustment
-    **/
-    objectGetCreditBalanceAdjustment(req: operations.ObjectGetCreditBalanceAdjustmentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGetCreditBalanceAdjustmentResponse>;
+     * CRUD: Retrieve a credit balance adjustment
+     */
+    objectGETCreditBalanceAdjustment(req: operations.ObjectGETCreditBalanceAdjustmentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGETCreditBalanceAdjustmentResponse>;
     /**
-     * objectPostCreditBalanceAdjustment - CRUD: Create a credit balance adjustment
-    **/
-    objectPostCreditBalanceAdjustment(req: operations.ObjectPostCreditBalanceAdjustmentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPostCreditBalanceAdjustmentResponse>;
+     * CRUD: Create a credit balance adjustment
+     */
+    objectPOSTCreditBalanceAdjustment(req: operations.ObjectPOSTCreditBalanceAdjustmentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPOSTCreditBalanceAdjustmentResponse>;
     /**
-     * objectPutCreditBalanceAdjustment - CRUD: Update a credit balance adjustment
-    **/
-    objectPutCreditBalanceAdjustment(req: operations.ObjectPutCreditBalanceAdjustmentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPutCreditBalanceAdjustmentResponse>;
+     * CRUD: Update a credit balance adjustment
+     */
+    objectPUTCreditBalanceAdjustment(req: operations.ObjectPUTCreditBalanceAdjustmentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPUTCreditBalanceAdjustmentResponse>;
 }

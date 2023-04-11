@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DcimRackGroupsPartialUpdatePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DcimRackGroupsPartialUpdateRequest extends SpeakeasyBase {
-    pathParams: DcimRackGroupsPartialUpdatePathParams;
-    request: shared.WritableRackGroupInput;
+    writableRackGroupInput: shared.WritableRackGroupInput;
+    /**
+     * A unique integer value identifying this rack group.
+     */
+    id: number;
 }
 export declare class DcimRackGroupsPartialUpdateResponse extends SpeakeasyBase {
     contentType: string;
     rackGroup?: shared.RackGroup;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

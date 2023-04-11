@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostModifyInstanceCreditSpecificationActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTModifyInstanceCreditSpecificationActionEnum {
     ModifyInstanceCreditSpecification = "ModifyInstanceCreditSpecification"
 }
-export declare enum PostModifyInstanceCreditSpecificationVersionEnum {
+export declare enum POSTModifyInstanceCreditSpecificationVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostModifyInstanceCreditSpecificationQueryParams extends SpeakeasyBase {
-    action: PostModifyInstanceCreditSpecificationActionEnum;
-    version: PostModifyInstanceCreditSpecificationVersionEnum;
-}
-export declare class PostModifyInstanceCreditSpecificationHeaders extends SpeakeasyBase {
+export declare class POSTModifyInstanceCreditSpecificationRequest extends SpeakeasyBase {
+    action: POSTModifyInstanceCreditSpecificationActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTModifyInstanceCreditSpecificationVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostModifyInstanceCreditSpecificationHeaders extends Speake
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostModifyInstanceCreditSpecificationRequest extends SpeakeasyBase {
-    queryParams: PostModifyInstanceCreditSpecificationQueryParams;
-    headers: PostModifyInstanceCreditSpecificationHeaders;
-    request?: Uint8Array;
-}
-export declare class PostModifyInstanceCreditSpecificationResponse extends SpeakeasyBase {
+export declare class POSTModifyInstanceCreditSpecificationResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

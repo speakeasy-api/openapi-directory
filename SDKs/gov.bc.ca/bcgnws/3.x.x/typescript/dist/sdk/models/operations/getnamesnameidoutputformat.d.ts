@@ -1,4 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
+/**
+ * The format of the output.
+ */
 export declare enum GetNamesNameIdOutputFormatOutputFormatEnum {
     Json = "json",
     Xml = "xml",
@@ -6,14 +10,18 @@ export declare enum GetNamesNameIdOutputFormatOutputFormatEnum {
     Csv = "csv",
     Html = "html"
 }
-export declare class GetNamesNameIdOutputFormatPathParams extends SpeakeasyBase {
-    nameId: number;
-    outputFormat: GetNamesNameIdOutputFormatOutputFormatEnum;
-}
 export declare class GetNamesNameIdOutputFormatRequest extends SpeakeasyBase {
-    pathParams: GetNamesNameIdOutputFormatPathParams;
+    /**
+     * The unique identifier for a name
+     */
+    nameId: number;
+    /**
+     * The format of the output.
+     */
+    outputFormat: GetNamesNameIdOutputFormatOutputFormatEnum;
 }
 export declare class GetNamesNameIdOutputFormatResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

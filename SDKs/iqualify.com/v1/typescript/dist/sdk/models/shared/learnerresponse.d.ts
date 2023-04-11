@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { OfferingProgressRow } from "./offeringprogressrow";
+/**
+ * Learner Progress
+ */
 export declare class LearnerResponse extends SpeakeasyBase {
     email?: string;
     firstName?: string;

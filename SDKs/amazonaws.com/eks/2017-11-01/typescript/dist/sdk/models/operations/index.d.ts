@@ -10,6 +10,7 @@ export * from "./deletefargateprofile";
 export * from "./deletenodegroup";
 export * from "./deregistercluster";
 export * from "./describeaddon";
+export * from "./describeaddonconfiguration";
 export * from "./describeaddonversions";
 export * from "./describecluster";
 export * from "./describefargateprofile";

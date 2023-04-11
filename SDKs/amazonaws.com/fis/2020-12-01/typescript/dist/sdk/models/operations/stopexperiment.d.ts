@@ -1,9 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class StopExperimentPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class StopExperimentHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class StopExperimentRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,15 +9,25 @@ export declare class StopExperimentHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class StopExperimentRequest extends SpeakeasyBase {
-    pathParams: StopExperimentPathParams;
-    headers: StopExperimentHeaders;
+    /**
+     * The ID of the experiment.
+     */
+    id: string;
 }
 export declare class StopExperimentResponse extends SpeakeasyBase {
     contentType: string;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * Success
+     */
     stopExperimentResponse?: shared.StopExperimentResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

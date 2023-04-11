@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ProtocolTelnetIpaliasListPathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolTelnetIpaliasListRequest extends SpeakeasyBase {
-    pathParams: ProtocolTelnetIpaliasListPathParams;
+    /**
+     * Agent to manipulate TELNET IP alias
+     */
+    agentNum: number;
 }
 export declare class ProtocolTelnetIpaliasListResponse extends SpeakeasyBase {
     contentType: string;
-    ipAliases?: shared.IpAlias[];
+    /**
+     * successful operation
+     */
+    ipAliases?: shared.IPAlias[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

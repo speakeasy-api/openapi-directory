@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * successful operation
+ */
 export declare class KeywordSearchResponse extends SpeakeasyBase {
     domainCode?: string;
     foundProducts?: string[];

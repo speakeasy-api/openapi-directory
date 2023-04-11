@@ -1,14 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ChecksRerequestSuitePathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ChecksRerequestSuiteRequest extends SpeakeasyBase {
+    /**
+     * check_suite_id parameter
+     */
     checkSuiteId: number;
     owner: string;
     repo: string;
 }
-export declare class ChecksRerequestSuiteRequest extends SpeakeasyBase {
-    pathParams: ChecksRerequestSuitePathParams;
-}
 export declare class ChecksRerequestSuiteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     checksRerequestSuite201ApplicationJSONObject?: Record<string, any>;
 }

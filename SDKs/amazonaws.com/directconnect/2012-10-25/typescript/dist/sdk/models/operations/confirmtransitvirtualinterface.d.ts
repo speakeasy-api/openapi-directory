@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum ConfirmTransitVirtualInterfaceXAmzTargetEnum {
     OvertureServiceConfirmTransitVirtualInterface = "OvertureService.ConfirmTransitVirtualInterface"
 }
-export declare class ConfirmTransitVirtualInterfaceHeaders extends SpeakeasyBase {
+export declare class ConfirmTransitVirtualInterfaceRequest extends SpeakeasyBase {
+    confirmTransitVirtualInterfaceRequest: shared.ConfirmTransitVirtualInterfaceRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class ConfirmTransitVirtualInterfaceHeaders extends SpeakeasyBase
     xAmzSignedHeaders?: string;
     xAmzTarget: ConfirmTransitVirtualInterfaceXAmzTargetEnum;
 }
-export declare class ConfirmTransitVirtualInterfaceRequest extends SpeakeasyBase {
-    headers: ConfirmTransitVirtualInterfaceHeaders;
-    request: shared.ConfirmTransitVirtualInterfaceRequest;
-}
 export declare class ConfirmTransitVirtualInterfaceResponse extends SpeakeasyBase {
+    /**
+     * Success
+     */
     confirmTransitVirtualInterfaceResponse?: shared.ConfirmTransitVirtualInterfaceResponse;
     contentType: string;
+    /**
+     * DirectConnectClientException
+     */
     directConnectClientException?: any;
+    /**
+     * DirectConnectServerException
+     */
     directConnectServerException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum SetStatusXAmzTargetEnum {
     DataPipelineSetStatus = "DataPipeline.SetStatus"
 }
-export declare class SetStatusHeaders extends SpeakeasyBase {
+export declare class SetStatusRequest extends SpeakeasyBase {
+    setStatusInput: shared.SetStatusInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class SetStatusHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: SetStatusXAmzTargetEnum;
 }
-export declare class SetStatusRequest extends SpeakeasyBase {
-    headers: SetStatusHeaders;
-    request: shared.SetStatusInput;
-}
 export declare class SetStatusResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServiceError
+     */
     internalServiceError?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * PipelineDeletedException
+     */
     pipelineDeletedException?: any;
+    /**
+     * PipelineNotFoundException
+     */
     pipelineNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

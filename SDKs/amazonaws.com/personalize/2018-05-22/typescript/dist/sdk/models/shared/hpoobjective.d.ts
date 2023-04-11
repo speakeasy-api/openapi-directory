@@ -1,8 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * <p>The metric to optimize during hyperparameter optimization (HPO).</p> <note> <p>Amazon Personalize doesn't support configuring the <code>hpoObjective</code> at this time.</p> </note>
-**/
-export declare class HpoObjective extends SpeakeasyBase {
+ */
+export declare class HPOObjective extends SpeakeasyBase {
     metricName?: string;
     metricRegex?: string;
     type?: string;

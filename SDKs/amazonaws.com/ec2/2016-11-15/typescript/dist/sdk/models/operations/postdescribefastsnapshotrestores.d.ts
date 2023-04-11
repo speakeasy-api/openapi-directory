@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeFastSnapshotRestoresActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeFastSnapshotRestoresActionEnum {
     DescribeFastSnapshotRestores = "DescribeFastSnapshotRestores"
 }
-export declare enum PostDescribeFastSnapshotRestoresVersionEnum {
+export declare enum POSTDescribeFastSnapshotRestoresVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDescribeFastSnapshotRestoresQueryParams extends SpeakeasyBase {
-    action: PostDescribeFastSnapshotRestoresActionEnum;
+export declare class POSTDescribeFastSnapshotRestoresRequest extends SpeakeasyBase {
+    action: POSTDescribeFastSnapshotRestoresActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostDescribeFastSnapshotRestoresVersionEnum;
-}
-export declare class PostDescribeFastSnapshotRestoresHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeFastSnapshotRestoresVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeFastSnapshotRestoresHeaders extends SpeakeasyBa
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeFastSnapshotRestoresRequest extends SpeakeasyBase {
-    queryParams: PostDescribeFastSnapshotRestoresQueryParams;
-    headers: PostDescribeFastSnapshotRestoresHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeFastSnapshotRestoresResponse extends SpeakeasyBase {
+export declare class POSTDescribeFastSnapshotRestoresResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,5 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { Offset } from "./offset";
+/**
+ * Place the title in one of nine predefined positions of the viewport. <ul>
+ *
+ * @remarks
+ *   <li>`top` - top (center)</li>
+ *   <li>`topRight` - top right</li>
+ *   <li>`right` - right (center)</li>
+ *   <li>`bottomRight` - bottom right</li>
+ *   <li>`bottom` - bottom (center)</li>
+ *   <li>`bottomLeft` - bottom left</li>
+ *   <li>`left` - left (center)</li>
+ *   <li>`topLeft` - top left</li>
+ *   <li>`center` - center</li>
+ * </ul>
+ */
 export declare enum TitleAssetPositionEnum {
     Top = "top",
     TopRight = "topRight",
@@ -11,6 +26,19 @@ export declare enum TitleAssetPositionEnum {
     TopLeft = "topLeft",
     Center = "center"
 }
+/**
+ * Set the relative size of the text using predefined sizes from xx-small to xx-large. <ul>
+ *
+ * @remarks
+ *   <li>`xx-small`</li>
+ *   <li>`x-small`</li>
+ *   <li>`small`</li>
+ *   <li>`medium`</li>
+ *   <li>`large`</li>
+ *   <li>`x-large`</li>
+ *   <li>`xx-large`</li>
+ * </ul>
+ */
 export declare enum TitleAssetSizeEnum {
     XxSmall = "xx-small",
     XSmall = "x-small",
@@ -20,6 +48,22 @@ export declare enum TitleAssetSizeEnum {
     XLarge = "x-large",
     XxLarge = "xx-large"
 }
+/**
+ * Uses a preset to apply font properties and styling to the title. <ul>
+ *
+ * @remarks
+ *   <li>`minimal`</li>
+ *   <li>`blockbuster`</li>
+ *   <li>`vogue`</li>
+ *   <li>`sketchy`</li>
+ *   <li>`skinny`</li>
+ *   <li>`chunk`</li>
+ *   <li>`chunkLight`</li>
+ *   <li>`marker`</li>
+ *   <li>`future`</li>
+ *   <li>`subtitle`</li>
+ * </ul>
+ */
 export declare enum TitleAssetStyleEnum {
     Minimal = "minimal",
     Blockbuster = "blockbuster",
@@ -34,14 +78,73 @@ export declare enum TitleAssetStyleEnum {
 }
 /**
  * The TitleAsset clip type lets you create video titles from a text string and apply styling and positioning.
-**/
+ */
 export declare class TitleAsset extends SpeakeasyBase {
+    /**
+     * Apply a background color behind the text. Set the text color using hexadecimal color notation. Transparency is supported by setting the first two characters of the hex string (opposite to HTML),  i.e. #80ffffff will be white with 50% transparency. Omit to use transparent background.
+     */
     background?: string;
+    /**
+     * Set the text color using hexadecimal color notation. Transparency is supported by setting the first two characters of the hex string (opposite to HTML),  i.e. #80ffffff will be white with  50% transparency.
+     */
     color?: string;
+    /**
+     * Offsets the position of an asset horizontally or vertically by a relative distance.
+     */
     offset?: Offset;
+    /**
+     * Place the title in one of nine predefined positions of the viewport. <ul>
+     *
+     * @remarks
+     *   <li>`top` - top (center)</li>
+     *   <li>`topRight` - top right</li>
+     *   <li>`right` - right (center)</li>
+     *   <li>`bottomRight` - bottom right</li>
+     *   <li>`bottom` - bottom (center)</li>
+     *   <li>`bottomLeft` - bottom left</li>
+     *   <li>`left` - left (center)</li>
+     *   <li>`topLeft` - top left</li>
+     *   <li>`center` - center</li>
+     * </ul>
+     */
     position?: TitleAssetPositionEnum;
+    /**
+     * Set the relative size of the text using predefined sizes from xx-small to xx-large. <ul>
+     *
+     * @remarks
+     *   <li>`xx-small`</li>
+     *   <li>`x-small`</li>
+     *   <li>`small`</li>
+     *   <li>`medium`</li>
+     *   <li>`large`</li>
+     *   <li>`x-large`</li>
+     *   <li>`xx-large`</li>
+     * </ul>
+     */
     size?: TitleAssetSizeEnum;
+    /**
+     * Uses a preset to apply font properties and styling to the title. <ul>
+     *
+     * @remarks
+     *   <li>`minimal`</li>
+     *   <li>`blockbuster`</li>
+     *   <li>`vogue`</li>
+     *   <li>`sketchy`</li>
+     *   <li>`skinny`</li>
+     *   <li>`chunk`</li>
+     *   <li>`chunkLight`</li>
+     *   <li>`marker`</li>
+     *   <li>`future`</li>
+     *   <li>`subtitle`</li>
+     * </ul>
+     */
     style?: TitleAssetStyleEnum;
+    /**
+     * The title text string - i.e. "My Title".
+     */
     text: string;
+    /**
+     * The type of asset - set to `title` for titles.
+     */
     type: string;
 }

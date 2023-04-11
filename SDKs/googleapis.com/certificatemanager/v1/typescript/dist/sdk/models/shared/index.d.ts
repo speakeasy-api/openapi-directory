@@ -21,7 +21,6 @@ export * from "./location";
 export * from "./managedcertificate";
 export * from "./operation";
 export * from "./provisioningissue";
-export * from "./security";
 export * from "./selfmanagedcertificate";
 export * from "./status";
 export * from "./xgafvenum";

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum RotateSecretXAmzTargetEnum {
     SecretsmanagerRotateSecret = "secretsmanager.RotateSecret"
 }
-export declare class RotateSecretHeaders extends SpeakeasyBase {
+export declare class RotateSecretRequest extends SpeakeasyBase {
+    rotateSecretRequest: shared.RotateSecretRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class RotateSecretHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: RotateSecretXAmzTargetEnum;
 }
-export declare class RotateSecretRequest extends SpeakeasyBase {
-    headers: RotateSecretHeaders;
-    request: shared.RotateSecretRequest;
-}
 export declare class RotateSecretResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServiceError
+     */
     internalServiceError?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
+    /**
+     * Success
+     */
     rotateSecretResponse?: shared.RotateSecretResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,21 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PullsListRequestedReviewersPathParams extends SpeakeasyBase {
-    owner: string;
-    pullNumber: number;
-    repo: string;
-}
-export declare class PullsListRequestedReviewersQueryParams extends SpeakeasyBase {
-    page?: number;
-    perPage?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class PullsListRequestedReviewersRequest extends SpeakeasyBase {
-    pathParams: PullsListRequestedReviewersPathParams;
-    queryParams: PullsListRequestedReviewersQueryParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    owner: string;
+    /**
+     * The number that identifies the pull request.
+     */
+    pullNumber: number;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    repo: string;
 }
 export declare class PullsListRequestedReviewersResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     pullRequestReviewRequest?: shared.PullRequestReviewRequest;
 }

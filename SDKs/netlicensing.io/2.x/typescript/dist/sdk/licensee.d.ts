@@ -1,5 +1,10 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Licensee operations
+ *
+ * @see {@link https://netlicensing.io/wiki/licensee-services} - Licensee Services
+ */
 export declare class Licensee {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,45 +14,52 @@ export declare class Licensee {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createLicensee - Create Licensee
+     * Create Licensee
      *
+     * @remarks
      * Creates a new Licensee
-    **/
-    createLicensee(req: operations.CreateLicenseeRequest, config?: AxiosRequestConfig): Promise<operations.CreateLicenseeResponse>;
+     */
+    createLicensee(req: operations.CreateLicenseeRequestBody, security: operations.CreateLicenseeSecurity, config?: AxiosRequestConfig): Promise<operations.CreateLicenseeResponse>;
     /**
-     * deleteLicensee - Delete Licensee
+     * Delete Licensee
      *
+     * @remarks
      * Delete a Licensee by 'number'
-    **/
-    deleteLicensee(req: operations.DeleteLicenseeRequest, config?: AxiosRequestConfig): Promise<operations.DeleteLicenseeResponse>;
+     */
+    deleteLicensee(req: operations.DeleteLicenseeRequest, security: operations.DeleteLicenseeSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteLicenseeResponse>;
     /**
-     * getLicensee - Get Licensee
+     * Get Licensee
      *
+     * @remarks
      * Return a Licensee by 'licenseeNumber'
-    **/
-    getLicensee(req: operations.GetLicenseeRequest, config?: AxiosRequestConfig): Promise<operations.GetLicenseeResponse>;
+     */
+    getLicensee(req: operations.GetLicenseeRequest, security: operations.GetLicenseeSecurity, config?: AxiosRequestConfig): Promise<operations.GetLicenseeResponse>;
     /**
-     * listLicensees - List Licensees
+     * List Licensees
      *
+     * @remarks
      * Return a list of all Licensees for the current Vendor
-    **/
-    listLicensees(req: operations.ListLicenseesRequest, config?: AxiosRequestConfig): Promise<operations.ListLicenseesResponse>;
+     */
+    listLicensees(config?: AxiosRequestConfig): Promise<operations.ListLicenseesResponse>;
     /**
-     * transferLicenses - Transfer Licenses
+     * Transfer Licenses
      *
+     * @remarks
      * Licenses transfer between Licensees
-    **/
-    transferLicenses(req: operations.TransferLicensesRequest, config?: AxiosRequestConfig): Promise<operations.TransferLicensesResponse>;
+     */
+    transferLicenses(req: operations.TransferLicensesRequest, security: operations.TransferLicensesSecurity, config?: AxiosRequestConfig): Promise<operations.TransferLicensesResponse>;
     /**
-     * updateLicensee - Update Licensee
+     * Update Licensee
      *
+     * @remarks
      * Sets the provided properties to a Licensee. Return an updated Licensee
-    **/
-    updateLicensee(req: operations.UpdateLicenseeRequest, config?: AxiosRequestConfig): Promise<operations.UpdateLicenseeResponse>;
+     */
+    updateLicensee(req: operations.UpdateLicenseeRequest, security: operations.UpdateLicenseeSecurity, config?: AxiosRequestConfig): Promise<operations.UpdateLicenseeResponse>;
     /**
-     * validateLicensee - Validate Licensee
+     * Validate Licensee
      *
+     * @remarks
      * Validates active Licenses of the Licensee
-    **/
-    validateLicensee(req: operations.ValidateLicenseeRequest, config?: AxiosRequestConfig): Promise<operations.ValidateLicenseeResponse>;
+     */
+    validateLicensee(req: operations.ValidateLicenseeRequest, security: operations.ValidateLicenseeSecurity, config?: AxiosRequestConfig): Promise<operations.ValidateLicenseeResponse>;
 }

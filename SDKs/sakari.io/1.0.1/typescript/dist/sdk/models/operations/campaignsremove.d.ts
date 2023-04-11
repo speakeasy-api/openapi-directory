@@ -1,21 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class CampaignsRemovePathParams extends SpeakeasyBase {
-    accountId: string;
-    campaignId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class CampaignsRemoveSecurity extends SpeakeasyBase {
-    sakariAuth: shared.SchemeSakariAuth;
-}
-export declare class CampaignsRemove200ApplicationJson extends SpeakeasyBase {
-    success?: boolean;
+    sakariAuth: string;
 }
 export declare class CampaignsRemoveRequest extends SpeakeasyBase {
-    pathParams: CampaignsRemovePathParams;
-    security: CampaignsRemoveSecurity;
+    /**
+     * Account to apply operations to
+     */
+    accountId: string;
+    /**
+     * Campaign id to delete
+     */
+    campaignId: string;
+}
+/**
+ * successful operation
+ */
+export declare class CampaignsRemove200ApplicationJSON extends SpeakeasyBase {
+    success?: boolean;
 }
 export declare class CampaignsRemoveResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    campaignsRemove200ApplicationJSONObject?: CampaignsRemove200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
+    campaignsRemove200ApplicationJSONObject?: CampaignsRemove200ApplicationJSON;
 }

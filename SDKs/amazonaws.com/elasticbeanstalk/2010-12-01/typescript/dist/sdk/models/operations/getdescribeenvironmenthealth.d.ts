@@ -1,19 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum GetDescribeEnvironmentHealthActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeEnvironmentHealthActionEnum {
     DescribeEnvironmentHealth = "DescribeEnvironmentHealth"
 }
-export declare enum GetDescribeEnvironmentHealthVersionEnum {
+export declare enum GETDescribeEnvironmentHealthVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetDescribeEnvironmentHealthQueryParams extends SpeakeasyBase {
-    action: GetDescribeEnvironmentHealthActionEnum;
+export declare class GETDescribeEnvironmentHealthRequest extends SpeakeasyBase {
+    action: GETDescribeEnvironmentHealthActionEnum;
+    /**
+     * Specify the response elements to return. To retrieve all attributes, set to <code>All</code>. If no attribute names are specified, returns the name of the environment.
+     */
     attributeNames?: shared.EnvironmentHealthAttributeEnum[];
+    /**
+     * <p>Specify the environment by ID.</p> <p>You must specify either this or an EnvironmentName, or both.</p>
+     */
     environmentId?: string;
+    /**
+     * <p>Specify the environment by name.</p> <p>You must specify either this or an EnvironmentName, or both.</p>
+     */
     environmentName?: string;
-    version: GetDescribeEnvironmentHealthVersionEnum;
-}
-export declare class GetDescribeEnvironmentHealthHeaders extends SpeakeasyBase {
+    version: GETDescribeEnvironmentHealthVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -22,12 +30,9 @@ export declare class GetDescribeEnvironmentHealthHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeEnvironmentHealthRequest extends SpeakeasyBase {
-    queryParams: GetDescribeEnvironmentHealthQueryParams;
-    headers: GetDescribeEnvironmentHealthHeaders;
-}
-export declare class GetDescribeEnvironmentHealthResponse extends SpeakeasyBase {
+export declare class GETDescribeEnvironmentHealthResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

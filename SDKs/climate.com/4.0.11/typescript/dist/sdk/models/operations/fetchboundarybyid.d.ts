@@ -1,20 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class FetchBoundaryByIdPathParams extends SpeakeasyBase {
-    boundaryId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class FetchBoundaryByIdSecurity extends SpeakeasyBase {
-    apiKey?: shared.SchemeApiKey;
-    oauth2AuthorizationCode?: shared.SchemeOauth2AuthorizationCode;
+    apiKey?: string;
+    oauth2AuthorizationCode?: string;
 }
 export declare class FetchBoundaryByIdRequest extends SpeakeasyBase {
-    pathParams: FetchBoundaryByIdPathParams;
-    security: FetchBoundaryByIdSecurity;
+    /**
+     * Unique identifier of the Boundary
+     */
+    boundaryId: string;
 }
 export declare class FetchBoundaryByIdResponse extends SpeakeasyBase {
-    boundary?: any;
+    /**
+     * OK
+     */
+    boundary?: shared.Boundary;
     contentType: string;
+    /**
+     * Bad Input
+     */
     error?: shared.ErrorT;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

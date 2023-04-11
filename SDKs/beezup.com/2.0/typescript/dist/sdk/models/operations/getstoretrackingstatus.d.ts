@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetStoreTrackingStatusPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetStoreTrackingStatusRequest extends SpeakeasyBase {
+    /**
+     * Your store identifier
+     */
     storeId: string;
 }
-export declare class GetStoreTrackingStatusRequest extends SpeakeasyBase {
-    pathParams: GetStoreTrackingStatusPathParams;
-}
 export declare class GetStoreTrackingStatusResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     * Store or resource not found
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Store Tracking Status
+     */
     storeTrackingStatus?: shared.StoreTrackingStatus;
 }

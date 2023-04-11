@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateTransitGatewayMulticastDomainActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateTransitGatewayMulticastDomainActionEnum {
     CreateTransitGatewayMulticastDomain = "CreateTransitGatewayMulticastDomain"
 }
-export declare enum PostCreateTransitGatewayMulticastDomainVersionEnum {
+export declare enum POSTCreateTransitGatewayMulticastDomainVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostCreateTransitGatewayMulticastDomainQueryParams extends SpeakeasyBase {
-    action: PostCreateTransitGatewayMulticastDomainActionEnum;
-    version: PostCreateTransitGatewayMulticastDomainVersionEnum;
-}
-export declare class PostCreateTransitGatewayMulticastDomainHeaders extends SpeakeasyBase {
+export declare class POSTCreateTransitGatewayMulticastDomainRequest extends SpeakeasyBase {
+    action: POSTCreateTransitGatewayMulticastDomainActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateTransitGatewayMulticastDomainVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateTransitGatewayMulticastDomainHeaders extends Spea
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateTransitGatewayMulticastDomainRequest extends SpeakeasyBase {
-    queryParams: PostCreateTransitGatewayMulticastDomainQueryParams;
-    headers: PostCreateTransitGatewayMulticastDomainHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateTransitGatewayMulticastDomainResponse extends SpeakeasyBase {
+export declare class POSTCreateTransitGatewayMulticastDomainResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

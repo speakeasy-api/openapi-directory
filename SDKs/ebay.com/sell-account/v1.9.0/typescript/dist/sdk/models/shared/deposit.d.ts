@@ -1,0 +1,21 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { Amount } from "./amount";
+import { PaymentMethod } from "./paymentmethod";
+import { TimeDuration } from "./timeduration";
+/**
+ * This type is used to specify/indicate that an initial deposit is required for a motor vehicle listing.
+ */
+export declare class Deposit extends SpeakeasyBase {
+    /**
+     * A complex type that describes the value of a monetary amount as represented by a global currency. When passing in an amount in a request payload, both <b>currency</b> and <b>value</b> fields are required, and both fields are also always returned for an amount in a response field.
+     */
+    amount?: Amount;
+    /**
+     * A type used to specify a period of time using a specified time-measurement unit. Payment, return, and fulfillment business policies all use this type to specify time windows.<br/><br/>Whenever a container that uses this type is used in a request, both of these fields are required. Similarly, whenever a container that uses this type is returned in a response, both of these fields are always returned.
+     */
+    dueIn?: TimeDuration;
+    /**
+     * This array is no longer applicable and should not be used since eBay now manages the electronic payment options available to buyers to pay the deposit.
+     */
+    paymentMethods?: PaymentMethod[];
+}

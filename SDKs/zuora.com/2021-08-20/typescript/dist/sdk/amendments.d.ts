@@ -1,5 +1,11 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * You can use amendments to modify subscriptions. However, Zuora recommends you to use [Update subscription](https://www.zuora.com/developer/api-reference/#operation/PUT_Subscription) (recommended) or [Amend](https://www.zuora.com/developer/api-reference/#operation/Action_POSTamend) to do so.
+ *
+ * @remarks
+ *
+ */
 export declare class Amendments {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,31 +15,34 @@ export declare class Amendments {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getAmendmentsByKey - Retrieve an amendment
+     * Retrieve an amendment
      *
+     * @remarks
      * Retrieves detailed information about the specified subscription amendment.
-    **/
-    getAmendmentsByKey(req: operations.GetAmendmentsByKeyRequest, config?: AxiosRequestConfig): Promise<operations.GetAmendmentsByKeyResponse>;
+     */
+    getAmendmentsByKey(req: operations.GETAmendmentsByKeyRequest, config?: AxiosRequestConfig): Promise<operations.GETAmendmentsByKeyResponse>;
     /**
-     * getAmendmentsBySubscriptionId - List all amendments of a subscription
+     * List all amendments of a subscription
      *
+     * @remarks
      * Retrieves detailed information about the amendment with the specified subscription.
-    **/
-    getAmendmentsBySubscriptionId(req: operations.GetAmendmentsBySubscriptionIdRequest, config?: AxiosRequestConfig): Promise<operations.GetAmendmentsBySubscriptionIdResponse>;
+     */
+    getAmendmentsBySubscriptionID(req: operations.GETAmendmentsBySubscriptionIDRequest, config?: AxiosRequestConfig): Promise<operations.GETAmendmentsBySubscriptionIDResponse>;
     /**
-     * objectDeleteAmendment - CRUD: Delete an amendment
+     * CRUD: Delete an amendment
      *
+     * @remarks
      *
      * Invoiced amendments cannot usually be deleted. One exception to this rule is auto-renew amendments. You can delete the last auto-renew amendment even if an invoice has been generated.
      *
-    **/
-    objectDeleteAmendment(req: operations.ObjectDeleteAmendmentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectDeleteAmendmentResponse>;
+     */
+    objectDELETEAmendment(req: operations.ObjectDELETEAmendmentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectDELETEAmendmentResponse>;
     /**
-     * objectGetAmendment - CRUD: Retrieve an amendment
-    **/
-    objectGetAmendment(req: operations.ObjectGetAmendmentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGetAmendmentResponse>;
+     * CRUD: Retrieve an amendment
+     */
+    objectGETAmendment(req: operations.ObjectGETAmendmentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGETAmendmentResponse>;
     /**
-     * objectPutAmendment - CRUD: Update an amendment
-    **/
-    objectPutAmendment(req: operations.ObjectPutAmendmentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPutAmendmentResponse>;
+     * CRUD: Update an amendment
+     */
+    objectPUTAmendment(req: operations.ObjectPUTAmendmentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPUTAmendmentResponse>;
 }

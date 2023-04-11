@@ -1,6 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class ApIs {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+export declare class APIs {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,45 +9,52 @@ export declare class ApIs {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * egcer - Economically Backward In General Caste Certificate
+     * Economically Backward In General Caste Certificate
      *
+     * @remarks
      * API to verify Economically Backward In General Caste Certificate.
-    **/
-    egcer(req: operations.EgcerRequest, config?: AxiosRequestConfig): Promise<operations.EgcerResponse>;
+     */
+    egcer(req: operations.EgcerRequestBody, security: operations.EgcerSecurity, config?: AxiosRequestConfig): Promise<operations.EgcerResponse>;
     /**
-     * ewcer - Economically Weaker Section Certificate
+     * Economically Weaker Section Certificate
      *
+     * @remarks
      * API to verify Economically Weaker Section Certificate.
-    **/
-    ewcer(req: operations.EwcerRequest, config?: AxiosRequestConfig): Promise<operations.EwcerResponse>;
+     */
+    ewcer(req: operations.EwcerRequestBody, security: operations.EwcerSecurity, config?: AxiosRequestConfig): Promise<operations.EwcerResponse>;
     /**
-     * incer - Income Certificate
+     * Income Certificate
      *
+     * @remarks
      * API to verify Income Certificate.
-    **/
-    incer(req: operations.IncerRequest, config?: AxiosRequestConfig): Promise<operations.IncerResponse>;
+     */
+    incer(req: operations.IncerRequestBody, security: operations.IncerSecurity, config?: AxiosRequestConfig): Promise<operations.IncerResponse>;
     /**
-     * lhcer - Legal Heir Certificate
+     * Legal Heir Certificate
      *
+     * @remarks
      * API to verify Legal Heir Certificate.
-    **/
-    lhcer(req: operations.LhcerRequest, config?: AxiosRequestConfig): Promise<operations.LhcerResponse>;
+     */
+    lhcer(req: operations.LhcerRequestBody, security: operations.LhcerSecurity, config?: AxiosRequestConfig): Promise<operations.LhcerResponse>;
     /**
-     * obcer - OBC Certificate
+     * OBC Certificate
      *
+     * @remarks
      * API to verify OBC Certificate.
-    **/
-    obcer(req: operations.ObcerRequest, config?: AxiosRequestConfig): Promise<operations.ObcerResponse>;
+     */
+    obcer(req: operations.ObcerRequestBody, security: operations.ObcerSecurity, config?: AxiosRequestConfig): Promise<operations.ObcerResponse>;
     /**
-     * rscer - Residence Certificate
+     * Residence Certificate
      *
+     * @remarks
      * API to verify Residence Certificate.
-    **/
-    rscer(req: operations.RscerRequest, config?: AxiosRequestConfig): Promise<operations.RscerResponse>;
+     */
+    rscer(req: operations.RscerRequestBody, security: operations.RscerSecurity, config?: AxiosRequestConfig): Promise<operations.RscerResponse>;
     /**
-     * shcer - SC/ST  Certificate
+     * SC/ST  Certificate
      *
+     * @remarks
      * API to verify SC/ST  Certificate.
-    **/
-    shcer(req: operations.ShcerRequest, config?: AxiosRequestConfig): Promise<operations.ShcerResponse>;
+     */
+    shcer(req: operations.ShcerRequestBody, security: operations.ShcerSecurity, config?: AxiosRequestConfig): Promise<operations.ShcerResponse>;
 }

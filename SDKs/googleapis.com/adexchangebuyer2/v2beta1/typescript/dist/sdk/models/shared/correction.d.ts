@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ServingContext } from "./servingcontext";
+/**
+ * The type of correction that was applied to the creative.
+ */
 export declare enum CorrectionTypeEnum {
     CorrectionTypeUnspecified = "CORRECTION_TYPE_UNSPECIFIED",
     VendorIdsAdded = "VENDOR_IDS_ADDED",
@@ -16,9 +19,18 @@ export declare enum CorrectionTypeEnum {
 }
 /**
  * Output only. Shows any corrections that were applied to this creative.
-**/
+ */
 export declare class Correction extends SpeakeasyBase {
+    /**
+     * The contexts for the correction.
+     */
     contexts?: ServingContext[];
+    /**
+     * Additional details about what was corrected.
+     */
     details?: string[];
+    /**
+     * The type of correction that was applied to the creative.
+     */
     type?: CorrectionTypeEnum;
 }

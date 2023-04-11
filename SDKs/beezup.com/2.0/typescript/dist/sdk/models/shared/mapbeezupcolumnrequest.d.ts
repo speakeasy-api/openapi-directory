@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class MapBeezUpColumnRequest extends SpeakeasyBase {
+export declare class MapBeezUPColumnRequest extends SpeakeasyBase {
+    /**
+     * The BeezUP column name
+     */
     beezUPColumnName: string;
 }

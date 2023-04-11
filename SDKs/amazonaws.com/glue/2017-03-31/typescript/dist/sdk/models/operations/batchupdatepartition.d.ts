@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum BatchUpdatePartitionXAmzTargetEnum {
-    AwsGlueBatchUpdatePartition = "AWSGlue.BatchUpdatePartition"
+    AWSGlueBatchUpdatePartition = "AWSGlue.BatchUpdatePartition"
 }
-export declare class BatchUpdatePartitionHeaders extends SpeakeasyBase {
+export declare class BatchUpdatePartitionRequest extends SpeakeasyBase {
+    batchUpdatePartitionRequest: shared.BatchUpdatePartitionRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class BatchUpdatePartitionHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: BatchUpdatePartitionXAmzTargetEnum;
 }
-export declare class BatchUpdatePartitionRequest extends SpeakeasyBase {
-    headers: BatchUpdatePartitionHeaders;
-    request: shared.BatchUpdatePartitionRequest;
-}
 export declare class BatchUpdatePartitionResponse extends SpeakeasyBase {
+    /**
+     * Success
+     */
     batchUpdatePartitionResponse?: shared.BatchUpdatePartitionResponse;
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * GlueEncryptionException
+     */
     glueEncryptionException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

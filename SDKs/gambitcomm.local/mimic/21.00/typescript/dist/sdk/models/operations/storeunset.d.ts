@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class StoreUnsetPathParams extends SpeakeasyBase {
-    var: string;
-}
+import { AxiosResponse } from "axios";
 export declare class StoreUnsetRequest extends SpeakeasyBase {
-    pathParams: StoreUnsetPathParams;
+    /**
+     * Variable name
+     */
+    var: string;
 }
 export declare class StoreUnsetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     storeUnset200ApplicationJSONString?: string;
 }

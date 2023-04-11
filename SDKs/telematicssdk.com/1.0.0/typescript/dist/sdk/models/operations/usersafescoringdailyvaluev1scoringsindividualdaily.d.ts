@@ -1,10 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UserSafeScoringDailyValueV1ScoringsIndividualDailyQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class UserSafeScoringDailyValueV1ScoringsIndividualDailyRequest extends SpeakeasyBase {
+    /**
+     * (Required)
+     */
     endDate?: string;
+    /**
+     * (Required)
+     */
     startDate?: string;
+    /**
+     * Optional
+     */
     tag?: string;
 }
-export declare class UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJsonResult extends SpeakeasyBase {
+export declare class UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSONResult extends SpeakeasyBase {
     accelerationScore?: number;
     appId?: string;
     brakingScore?: number;
@@ -17,18 +27,22 @@ export declare class UserSafeScoringDailyValueV1ScoringsIndividualDaily200Applic
     overallScore?: number;
     speedingScore?: number;
 }
-export declare class UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJson extends SpeakeasyBase {
+/**
+ * Success
+ */
+export declare class UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSON extends SpeakeasyBase {
     errors?: any[];
-    result?: UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJsonResult[];
+    result?: UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSONResult[];
     status?: number;
     title?: string;
 }
-export declare class UserSafeScoringDailyValueV1ScoringsIndividualDailyRequest extends SpeakeasyBase {
-    queryParams: UserSafeScoringDailyValueV1ScoringsIndividualDailyQueryParams;
-}
 export declare class UserSafeScoringDailyValueV1ScoringsIndividualDailyResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
-    userSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSONObject?: UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
+    userSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSONObject?: UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSON;
 }

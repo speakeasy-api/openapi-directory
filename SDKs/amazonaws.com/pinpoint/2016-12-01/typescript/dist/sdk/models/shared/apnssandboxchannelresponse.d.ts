@@ -1,8 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Provides information about the status and settings of the APNs (Apple Push Notification service) sandbox channel for an application.
-**/
-export declare class ApnsSandboxChannelResponse extends SpeakeasyBase {
+ */
+export declare class APNSSandboxChannelResponse extends SpeakeasyBase {
     applicationId?: string;
     creationDate?: string;
     defaultAuthenticationMethod?: string;

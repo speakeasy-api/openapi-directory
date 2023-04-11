@@ -1,23 +1,37 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AppsGetInstallationPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class AppsGetInstallationRequest extends SpeakeasyBase {
+    /**
+     * This API is under preview and subject to change.
+     */
+    accept: string;
+    /**
+     * installation_id parameter
+     */
     installationId: number;
 }
-export declare class AppsGetInstallationHeaders extends SpeakeasyBase {
-    accept: string;
-}
-export declare class AppsGetInstallation415ApplicationJson extends SpeakeasyBase {
+/**
+ * Preview header missing
+ */
+export declare class AppsGetInstallation415ApplicationJSON extends SpeakeasyBase {
     documentationUrl: string;
     message: string;
-}
-export declare class AppsGetInstallationRequest extends SpeakeasyBase {
-    pathParams: AppsGetInstallationPathParams;
-    headers: AppsGetInstallationHeaders;
 }
 export declare class AppsGetInstallationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    appsGetInstallation415ApplicationJSONObject?: AppsGetInstallation415ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Preview header missing
+     */
+    appsGetInstallation415ApplicationJSONObject?: AppsGetInstallation415ApplicationJSON;
+    /**
+     * Resource not found
+     */
     basicError?: shared.BasicError;
+    /**
+     * Response
+     */
     installationGhes2?: shared.InstallationGhes2;
 }

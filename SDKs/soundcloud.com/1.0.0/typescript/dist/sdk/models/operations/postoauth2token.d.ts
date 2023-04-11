@@ -1,15 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class PostOauth2TokenSecurity extends SpeakeasyBase {
-    clientId: shared.SchemeClientId;
-}
-export declare class PostOauth2TokenRequest extends SpeakeasyBase {
-    request?: any;
-    security: PostOauth2TokenSecurity;
+    clientId: string;
 }
 export declare class PostOauth2TokenResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Unauthorized
+     */
     error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad Request
+     */
     postOauth2Token400ApplicationJSONOneOf?: any;
 }

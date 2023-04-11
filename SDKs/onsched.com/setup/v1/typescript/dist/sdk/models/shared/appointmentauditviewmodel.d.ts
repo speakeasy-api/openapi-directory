@@ -4,7 +4,7 @@ export declare class AppointmentAuditViewModel extends SpeakeasyBase {
     id?: string;
     modificationType?: string;
     modifiedBy?: string;
-    modifiedOn?: Date;
+    modifiedOn?: string;
     notesAfter?: string;
     notesBefore?: string;
     statusAfter?: string;

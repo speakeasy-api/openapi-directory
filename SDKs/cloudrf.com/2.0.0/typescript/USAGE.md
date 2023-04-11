@@ -1,27 +1,17 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { InterferenceRequest, InterferenceResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  InterferenceRequest,
+  InterferenceResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
-  security: {
-    apiKeyAuth: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK();
+
 const req: InterferenceRequest = {
-  security: {
-    apiKeyAuth: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  },
-  queryParams: {
-    name: "sit",
-    network: "voluptas",
-  },
+  name: "corrupti",
+  network: "provident",
 };
 
 sdk.analyse.interference(req).then((res: InterferenceResponse | AxiosError) => {

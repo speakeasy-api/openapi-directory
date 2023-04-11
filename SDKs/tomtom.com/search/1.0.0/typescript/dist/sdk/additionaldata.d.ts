@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class AdditionalData {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +9,7 @@ export declare class AdditionalData {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getSearchVersionNumberAdditionalDataExt - Additional Data
-    **/
+     * Additional Data
+     */
     getSearchVersionNumberAdditionalDataExt(req: operations.GetSearchVersionNumberAdditionalDataExtRequest, config?: AxiosRequestConfig): Promise<operations.GetSearchVersionNumberAdditionalDataExtResponse>;
 }

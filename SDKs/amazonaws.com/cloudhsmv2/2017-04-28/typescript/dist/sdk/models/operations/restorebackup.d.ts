@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum RestoreBackupXAmzTargetEnum {
     BaldrApiServiceRestoreBackup = "BaldrApiService.RestoreBackup"
 }
-export declare class RestoreBackupHeaders extends SpeakeasyBase {
+export declare class RestoreBackupRequest extends SpeakeasyBase {
+    restoreBackupRequest: shared.RestoreBackupRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class RestoreBackupHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: RestoreBackupXAmzTargetEnum;
 }
-export declare class RestoreBackupRequest extends SpeakeasyBase {
-    headers: RestoreBackupHeaders;
-    request: shared.RestoreBackupRequest;
-}
 export declare class RestoreBackupResponse extends SpeakeasyBase {
+    /**
+     * CloudHsmAccessDeniedException
+     */
     cloudHsmAccessDeniedException?: any;
+    /**
+     * CloudHsmInternalFailureException
+     */
     cloudHsmInternalFailureException?: any;
+    /**
+     * CloudHsmInvalidRequestException
+     */
     cloudHsmInvalidRequestException?: any;
+    /**
+     * CloudHsmResourceNotFoundException
+     */
     cloudHsmResourceNotFoundException?: any;
+    /**
+     * CloudHsmServiceException
+     */
     cloudHsmServiceException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     restoreBackupResponse?: shared.RestoreBackupResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

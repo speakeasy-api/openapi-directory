@@ -1,6 +1,7 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class PciComplianceQuestionnairePage {
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+export declare class PCIComplianceQuestionnairePage {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,10 +10,11 @@ export declare class PciComplianceQuestionnairePage {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * postGetPciQuestionnaireUrl - Get a link to a PCI compliance questionnaire.
+     * Get a link to a PCI compliance questionnaire
      *
+     * @remarks
      * Returns a link to a PCI compliance questionnaire that you can send to your account holder.
-     *  > You should only use this endpoint if you have a [partner platform setup](https://docs.adyen.com/platforms/platforms-for-partners).
-    **/
-    postGetPciQuestionnaireUrl(req: operations.PostGetPciQuestionnaireUrlRequest, config?: AxiosRequestConfig): Promise<operations.PostGetPciQuestionnaireUrlResponse>;
+     *  > You should only use this endpoint if you have a [partner platform setup](https://docs.adyen.com/marketplaces-and-platforms/classic/platforms-for-partners).
+     */
+    postGetPciQuestionnaireUrl(req: shared.GetPciUrlRequest, security: operations.PostGetPciQuestionnaireUrlSecurity, config?: AxiosRequestConfig): Promise<operations.PostGetPciQuestionnaireUrlResponse>;
 }

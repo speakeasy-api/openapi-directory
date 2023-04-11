@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { ExperimentState } from "./experimentstate";
 /**
  * Provides a summary of an experiment.
-**/
+ */
 export declare class ExperimentSummary extends SpeakeasyBase {
     creationTime?: Date;
     experimentTemplateId?: string;

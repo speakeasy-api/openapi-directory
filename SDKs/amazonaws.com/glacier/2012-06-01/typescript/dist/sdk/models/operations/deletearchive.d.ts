@@ -1,10 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteArchivePathParams extends SpeakeasyBase {
-    accountId: string;
-    archiveId: string;
-    vaultName: string;
-}
-export declare class DeleteArchiveHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteArchiveRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,16 +8,37 @@ export declare class DeleteArchiveHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DeleteArchiveRequest extends SpeakeasyBase {
-    pathParams: DeleteArchivePathParams;
-    headers: DeleteArchiveHeaders;
+    /**
+     * The <code>AccountId</code> value is the AWS account ID of the account that owns the vault. You can either specify an AWS account ID or optionally a single '<code>-</code>' (hyphen), in which case Amazon S3 Glacier uses the AWS account ID associated with the credentials used to sign the request. If you use an account ID, do not include any hyphens ('-') in the ID.
+     */
+    accountId: string;
+    /**
+     * The ID of the archive to delete.
+     */
+    archiveId: string;
+    /**
+     * The name of the vault.
+     */
+    vaultName: string;
 }
 export declare class DeleteArchiveResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
+    /**
+     * MissingParameterValueException
+     */
     missingParameterValueException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
-    serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceUnavailableException
+     */
+    serviceUnavailableException?: any;
 }

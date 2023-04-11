@@ -1,12 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class AppsRevokeAuthorizationForApplicationPathParams extends SpeakeasyBase {
-    accessToken: string;
-    clientId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class AppsRevokeAuthorizationForApplicationRequest extends SpeakeasyBase {
-    pathParams: AppsRevokeAuthorizationForApplicationPathParams;
+    accessToken: string;
+    /**
+     * The client ID of the GitHub app.
+     */
+    clientId: string;
 }
 export declare class AppsRevokeAuthorizationForApplicationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

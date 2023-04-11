@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateCrawlerScheduleXAmzTargetEnum {
-    AwsGlueUpdateCrawlerSchedule = "AWSGlue.UpdateCrawlerSchedule"
+    AWSGlueUpdateCrawlerSchedule = "AWSGlue.UpdateCrawlerSchedule"
 }
-export declare class UpdateCrawlerScheduleHeaders extends SpeakeasyBase {
+export declare class UpdateCrawlerScheduleRequest extends SpeakeasyBase {
+    updateCrawlerScheduleRequest: shared.UpdateCrawlerScheduleRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class UpdateCrawlerScheduleHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateCrawlerScheduleXAmzTargetEnum;
 }
-export declare class UpdateCrawlerScheduleRequest extends SpeakeasyBase {
-    headers: UpdateCrawlerScheduleHeaders;
-    request: shared.UpdateCrawlerScheduleRequest;
-}
 export declare class UpdateCrawlerScheduleResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
+    /**
+     * SchedulerTransitioningException
+     */
     schedulerTransitioningException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     updateCrawlerScheduleResponse?: Record<string, any>;
+    /**
+     * VersionMismatchException
+     */
     versionMismatchException?: any;
 }

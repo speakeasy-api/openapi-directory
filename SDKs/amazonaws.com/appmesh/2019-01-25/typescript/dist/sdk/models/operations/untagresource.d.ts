@@ -1,8 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UntagResourceQueryParams extends SpeakeasyBase {
-    resourceArn: string;
+import { AxiosResponse } from "axios";
+export declare class UntagResourceRequestBody extends SpeakeasyBase {
+    /**
+     * The keys of the tags to be removed.
+     */
+    tagKeys: string[];
 }
-export declare class UntagResourceHeaders extends SpeakeasyBase {
+export declare class UntagResourceRequest extends SpeakeasyBase {
+    requestBody: UntagResourceRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -10,23 +15,41 @@ export declare class UntagResourceHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class UntagResourceRequestBody extends SpeakeasyBase {
-    tagKeys: string[];
-}
-export declare class UntagResourceRequest extends SpeakeasyBase {
-    queryParams: UntagResourceQueryParams;
-    headers: UntagResourceHeaders;
-    request: UntagResourceRequestBody;
+    /**
+     * The Amazon Resource Name (ARN) of the resource to delete tags from.
+     */
+    resourceArn: string;
 }
 export declare class UntagResourceResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * ForbiddenException
+     */
     forbiddenException?: any;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
+    /**
+     * ServiceUnavailableException
+     */
     serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
+    /**
+     * Success
+     */
     untagResourceOutput?: Record<string, any>;
 }

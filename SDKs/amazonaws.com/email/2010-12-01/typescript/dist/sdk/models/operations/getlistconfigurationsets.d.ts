@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetListConfigurationSetsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETListConfigurationSetsActionEnum {
     ListConfigurationSets = "ListConfigurationSets"
 }
-export declare enum GetListConfigurationSetsVersionEnum {
+export declare enum GETListConfigurationSetsVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetListConfigurationSetsQueryParams extends SpeakeasyBase {
-    action: GetListConfigurationSetsActionEnum;
+export declare class GETListConfigurationSetsRequest extends SpeakeasyBase {
+    action: GETListConfigurationSetsActionEnum;
+    /**
+     * The number of configuration sets to return.
+     */
     maxItems?: number;
+    /**
+     * A token returned from a previous call to <code>ListConfigurationSets</code> to indicate the position of the configuration set in the configuration set list.
+     */
     nextToken?: string;
-    version: GetListConfigurationSetsVersionEnum;
-}
-export declare class GetListConfigurationSetsHeaders extends SpeakeasyBase {
+    version: GETListConfigurationSetsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetListConfigurationSetsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetListConfigurationSetsRequest extends SpeakeasyBase {
-    queryParams: GetListConfigurationSetsQueryParams;
-    headers: GetListConfigurationSetsHeaders;
-}
-export declare class GetListConfigurationSetsResponse extends SpeakeasyBase {
+export declare class GETListConfigurationSetsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

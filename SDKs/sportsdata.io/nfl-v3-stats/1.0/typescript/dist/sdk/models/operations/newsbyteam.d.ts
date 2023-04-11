@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class NewsByTeamPathParams extends SpeakeasyBase {
-    format: string;
-    team: string;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class NewsByTeamRequest extends SpeakeasyBase {
-    pathParams: NewsByTeamPathParams;
+    /**
+     * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+     */
+    format: string;
+    /**
+     * Abbreviation of the team. Example: <code>WAS</code>.
+     */
+    team: string;
 }
 export declare class NewsByTeamResponse extends SpeakeasyBase {
     contentType: string;
-    news?: any[];
+    news?: shared.News[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

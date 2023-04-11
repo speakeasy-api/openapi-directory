@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostModifyInstanceEventStartTimeActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTModifyInstanceEventStartTimeActionEnum {
     ModifyInstanceEventStartTime = "ModifyInstanceEventStartTime"
 }
-export declare enum PostModifyInstanceEventStartTimeVersionEnum {
+export declare enum POSTModifyInstanceEventStartTimeVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostModifyInstanceEventStartTimeQueryParams extends SpeakeasyBase {
-    action: PostModifyInstanceEventStartTimeActionEnum;
-    version: PostModifyInstanceEventStartTimeVersionEnum;
-}
-export declare class PostModifyInstanceEventStartTimeHeaders extends SpeakeasyBase {
+export declare class POSTModifyInstanceEventStartTimeRequest extends SpeakeasyBase {
+    action: POSTModifyInstanceEventStartTimeActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTModifyInstanceEventStartTimeVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostModifyInstanceEventStartTimeHeaders extends SpeakeasyBa
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostModifyInstanceEventStartTimeRequest extends SpeakeasyBase {
-    queryParams: PostModifyInstanceEventStartTimeQueryParams;
-    headers: PostModifyInstanceEventStartTimeHeaders;
-    request?: Uint8Array;
-}
-export declare class PostModifyInstanceEventStartTimeResponse extends SpeakeasyBase {
+export declare class POSTModifyInstanceEventStartTimeResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

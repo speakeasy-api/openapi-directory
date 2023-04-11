@@ -1,7 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { BeezUpCommonUserErrorMessage } from "./beezupcommonusererrormessage";
+import { BeezUPCommonUserErrorMessage } from "./beezupcommonusererrormessage";
 import { ImportAlreadyInProgressResponseLinks } from "./importalreadyinprogressresponselinks";
+/**
+ * A catalog importation is already in progress!
+ */
 export declare class ImportAlreadyInProgressResponse extends SpeakeasyBase {
-    errors: BeezUpCommonUserErrorMessage[];
+    /**
+     * The error message list
+     */
+    errors: BeezUPCommonUserErrorMessage[];
+    /**
+     * The action links
+     */
     links: ImportAlreadyInProgressResponseLinks;
 }

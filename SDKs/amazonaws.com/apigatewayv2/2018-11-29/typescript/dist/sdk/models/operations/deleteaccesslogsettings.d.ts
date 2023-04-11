@@ -1,9 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteAccessLogSettingsPathParams extends SpeakeasyBase {
-    apiId: string;
-    stageName: string;
-}
-export declare class DeleteAccessLogSettingsHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteAccessLogSettingsRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,14 +8,25 @@ export declare class DeleteAccessLogSettingsHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DeleteAccessLogSettingsRequest extends SpeakeasyBase {
-    pathParams: DeleteAccessLogSettingsPathParams;
-    headers: DeleteAccessLogSettingsHeaders;
+    /**
+     * The API identifier.
+     */
+    apiId: string;
+    /**
+     * The stage name. Stage names can only contain alphanumeric characters, hyphens, and underscores. Maximum length is 128 characters.
+     */
+    stageName: string;
 }
 export declare class DeleteAccessLogSettingsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

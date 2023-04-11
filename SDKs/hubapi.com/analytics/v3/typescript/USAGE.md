@@ -1,30 +1,25 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { PostEventsV3SendRequest, PostEventsV3SendResponse } from "openapi/src/sdk/models/operations";
+import {
+  shared.BehavioralEventHttpCompletionRequest,
+  PostEventsV3SendResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: PostEventsV3SendRequest = {
-  security: {
-    hapikey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
+
+const req: shared.BehavioralEventHttpCompletionRequest = {
+  email: "Larue_Rau85@yahoo.com",
+  eventName: "corrupti",
+  objectId: "illum",
+  occurredAt: "2022-05-18T09:34:54.894Z",
+  properties: {
+    "suscipit": "iure",
+    "magnam": "debitis",
+    "ipsa": "delectus",
   },
-  request: {
-    email: "sit",
-    eventName: "voluptas",
-    objectId: "culpa",
-    occurredAt: "2019-04-21T07:38:14Z",
-    properties: {
-      "dolor": "expedita",
-      "voluptas": "fugit",
-      "et": "nihil",
-    },
-    utk: "rerum",
-  },
+  utk: "tempora",
 };
 
 sdk.behavioralEventsTracking.postEventsV3Send(req).then((res: PostEventsV3SendResponse | AxiosError) => {

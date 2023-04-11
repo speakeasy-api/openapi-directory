@@ -1,8 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class Label extends SpeakeasyBase {
-    id?: string;
+export declare class LabelInput extends SpeakeasyBase {
+    /**
+     * Custom name for the resource
+     */
     name?: string;
 }
-export declare class LabelInput extends SpeakeasyBase {
+/**
+ * Label object
+ */
+export declare class Label extends SpeakeasyBase {
+    /**
+     * Object id.
+     */
+    id?: string;
+    /**
+     * Custom name for the resource
+     */
     name?: string;
 }

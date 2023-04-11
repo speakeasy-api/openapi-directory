@@ -3,7 +3,7 @@ import { AlgorithmImage } from "./algorithmimage";
 import { DefaultHyperParameterRanges } from "./defaulthyperparameterranges";
 /**
  * Describes a custom algorithm.
-**/
+ */
 export declare class Algorithm extends SpeakeasyBase {
     algorithmArn?: string;
     algorithmImage?: AlgorithmImage;

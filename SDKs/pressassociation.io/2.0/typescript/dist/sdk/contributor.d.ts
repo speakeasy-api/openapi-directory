@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Contributor {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,15 +9,17 @@ export declare class Contributor {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getContributor - Contributor Detail
+     * Contributor Detail
      *
+     * @remarks
      * Return the content of the selected contributor.
-    **/
-    getContributor(req: operations.GetContributorRequest, config?: AxiosRequestConfig): Promise<operations.GetContributorResponse>;
+     */
+    getContributor(req: operations.GetContributorRequest, security: operations.GetContributorSecurity, config?: AxiosRequestConfig): Promise<operations.GetContributorResponse>;
     /**
-     * listContributor - Contributor Collection
+     * Contributor Collection
      *
+     * @remarks
      * Return a collection of Contributors.
-    **/
-    listContributor(req: operations.ListContributorRequest, config?: AxiosRequestConfig): Promise<operations.ListContributorResponse>;
+     */
+    listContributor(req: operations.ListContributorRequest, security: operations.ListContributorSecurity, config?: AxiosRequestConfig): Promise<operations.ListContributorResponse>;
 }

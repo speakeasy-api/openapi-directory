@@ -1,10 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class IpamIpAddressesCreateRequest extends SpeakeasyBase {
-    request: shared.WritableIpAddressInput;
-}
+import { AxiosResponse } from "axios";
 export declare class IpamIpAddressesCreateResponse extends SpeakeasyBase {
     contentType: string;
-    ipAddress?: shared.IpAddress;
+    ipAddress?: shared.IPAddress;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

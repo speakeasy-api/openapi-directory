@@ -1,41 +1,33 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { SqlBackupRunsDeleteRequest, SqlBackupRunsDeleteResponse } from "openapi/src/sdk/models/operations";
+import {
+  SqlBackupRunsDeleteRequest,
+  SqlBackupRunsDeleteResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: SqlBackupRunsDeleteRequest = {
-  security: {
-    option1: {
-      oauth2: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-      oauth2c: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-    },
-  },
-  pathParams: {
-    id: "sit",
-    instance: "voluptas",
-    project: "culpa",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "consequuntur",
-    alt: "media",
-    callback: "expedita",
-    fields: "voluptas",
-    key: "fugit",
-    oauthToken: "et",
-    prettyPrint: true,
-    quotaUser: "rerum",
-    uploadType: "dicta",
-    uploadProtocol: "debitis",
-  },
+  dollarXgafv: XgafvEnum.Two,
+  accessToken: "provident",
+  alt: AltEnum.Proto,
+  callback: "quibusdam",
+  fields: "unde",
+  id: "nulla",
+  instance: "corrupti",
+  key: "illum",
+  oauthToken: "vel",
+  prettyPrint: false,
+  project: "error",
+  quotaUser: "deserunt",
+  uploadType: "suscipit",
+  uploadProtocol: "iure",
 };
 
 sdk.backupRuns.sqlBackupRunsDelete(req).then((res: SqlBackupRunsDeleteResponse | AxiosError) => {

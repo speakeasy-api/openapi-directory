@@ -1,111 +1,152 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AddLfTagsToResourceRequest, AddLfTagsToResourceResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  AddLFTagsToResourceRequest,
+  AddLFTagsToResourceResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  ResourceTypeEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: AddLfTagsToResourceRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "AWSLakeFormation.AddLFTagsToResource",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
-    catalogId: "fugit",
+});
+
+const req: AddLFTagsToResourceRequest = {
+  requestBody: {
+    catalogId: "corrupti",
     lfTags: [
       {
-        catalogId: "nihil",
-        tagKey: "rerum",
+        catalogId: "distinctio",
+        tagKey: "quibusdam",
         tagValues: [
-          "debitis",
-          "voluptatum",
-          "et",
+          "nulla",
+          "corrupti",
+          "illum",
+        ],
+      },
+      {
+        catalogId: "vel",
+        tagKey: "error",
+        tagValues: [
+          "suscipit",
+          "iure",
+          "magnam",
+        ],
+      },
+      {
+        catalogId: "debitis",
+        tagKey: "ipsa",
+        tagValues: [
+          "tempora",
+          "suscipit",
+          "molestiae",
+          "minus",
         ],
       },
     ],
     resource: {
       catalog: {
-        "dolorem": "et",
-        "voluptate": "iste",
-        "vitae": "totam",
+        "voluptatum": "iusto",
+        "excepturi": "nisi",
+        "recusandae": "temporibus",
+        "ab": "quis",
+      },
+      dataCellsFilter: {
+        databaseName: "veritatis",
+        name: "deserunt",
+        tableCatalogId: "perferendis",
+        tableName: "ipsam",
       },
       dataLocation: {
-        catalogId: "dolores",
-        resourceArn: "illum",
+        catalogId: "repellendus",
+        resourceArn: "sapiente",
       },
       database: {
-        catalogId: "debitis",
-        name: "vel",
+        catalogId: "quo",
+        name: "odit",
       },
       lfTag: {
-        catalogId: "odio",
-        tagKey: "dolore",
+        catalogId: "at",
+        tagKey: "at",
         tagValues: [
-          "aspernatur",
-          "accusantium",
+          "molestiae",
+          "quod",
+          "quod",
+          "esse",
         ],
       },
       lfTagPolicy: {
         catalogId: "totam",
         expression: [
           {
-            tagKey: "quis",
+            tagKey: "dolorum",
             tagValues: [
-              "aut",
-              "odit",
+              "nam",
             ],
           },
           {
-            tagKey: "non",
+            tagKey: "officia",
             tagValues: [
-              "omnis",
+              "fugit",
+              "deleniti",
+              "hic",
+            ],
+          },
+          {
+            tagKey: "optio",
+            tagValues: [
+              "beatae",
+              "commodi",
+              "molestiae",
+            ],
+          },
+          {
+            tagKey: "modi",
+            tagValues: [
+              "impedit",
             ],
           },
         ],
-        resourceType: "DATABASE",
+        resourceType: ResourceTypeEnum.Table,
       },
       table: {
-        catalogId: "illo",
-        databaseName: "sed",
-        name: "officiis",
+        catalogId: "esse",
+        databaseName: "ipsum",
+        name: "excepturi",
         tableWildcard: {
-          "consectetur": "nobis",
-          "odio": "qui",
+          "perferendis": "ad",
         },
       },
       tableWithColumns: {
-        catalogId: "recusandae",
+        catalogId: "natus",
         columnNames: [
-          "ipsum",
-          "eveniet",
+          "iste",
         ],
         columnWildcard: {
           excludedColumnNames: [
-            "sint",
-            "inventore",
+            "natus",
           ],
         },
-        databaseName: "ut",
-        name: "exercitationem",
+        databaseName: "laboriosam",
+        name: "hic",
       },
     },
   },
+  xAmzAlgorithm: "saepe",
+  xAmzContentSha256: "fuga",
+  xAmzCredential: "in",
+  xAmzDate: "corporis",
+  xAmzSecurityToken: "iste",
+  xAmzSignature: "iure",
+  xAmzSignedHeaders: "saepe",
 };
 
-sdk.addLfTagsToResource(req).then((res: AddLfTagsToResourceResponse | AxiosError) => {
+sdk.addLFTagsToResource(req).then((res: AddLFTagsToResourceResponse | AxiosError) => {
    // handle response
 });
 ```

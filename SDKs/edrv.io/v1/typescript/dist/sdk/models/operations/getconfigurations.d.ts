@@ -1,20 +1,46 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetConfigurationsQueryParams extends SpeakeasyBase {
-    createdAtDollarGte?: Date;
-    createdAtDollarLte?: Date;
-    paginateEnabled?: boolean;
-    paginateLimit?: number;
-    paginatePage?: string;
-    sortBy?: string;
-    sortOrder?: shared.SortOrder1Enum;
-    updatedAtDollarGte?: Date;
-    updatedAtDollarLte?: Date;
-}
+import { AxiosResponse } from "axios";
 export declare class GetConfigurationsRequest extends SpeakeasyBase {
-    queryParams: GetConfigurationsQueryParams;
+    /**
+     * Date as ISO String
+     */
+    createdAtDollarGte?: Date;
+    /**
+     * Date as ISO String
+     */
+    createdAtDollarLte?: Date;
+    /**
+     * Enable pagination
+     */
+    paginateEnabled?: boolean;
+    /**
+     * Number of results per page
+     */
+    paginateLimit?: number;
+    /**
+     * The queried page index
+     */
+    paginatePage?: string;
+    /**
+     * Sort data by this key
+     */
+    sortBy?: string;
+    /**
+     * asc to sort ascending (default is desc - descending)
+     */
+    sortOrder?: shared.SortOrder1Enum;
+    /**
+     * Date as ISO String
+     */
+    updatedAtDollarGte?: Date;
+    /**
+     * Date as ISO String
+     */
+    updatedAtDollarLte?: Date;
 }
 export declare class GetConfigurationsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

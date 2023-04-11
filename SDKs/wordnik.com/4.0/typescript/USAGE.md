@@ -1,27 +1,22 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AuthenticateRequest, AuthenticateResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GetAudioRequest,
+  GetAudioResponse,
+  GetAudioUseCanonicalEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
-  security: {
-    apiKey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: AuthenticateRequest = {
-  pathParams: {
-    username: "sit",
-  },
-  queryParams: {
-    password: "voluptas",
-  },
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK();
+
+const req: GetAudioRequest = {
+  limit: 548814,
+  useCanonical: GetAudioUseCanonicalEnum.True,
+  word: "distinctio",
 };
 
-sdk.account.authenticate(req).then((res: AuthenticateResponse | AxiosError) => {
+sdk.word.getAudio(req).then((res: GetAudioResponse | AxiosError) => {
    // handle response
 });
 ```

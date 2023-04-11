@@ -1,10 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeNodegroupPathParams extends SpeakeasyBase {
-    name: string;
-    nodegroupName: string;
-}
-export declare class DescribeNodegroupHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DescribeNodegroupRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,18 +9,41 @@ export declare class DescribeNodegroupHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DescribeNodegroupRequest extends SpeakeasyBase {
-    pathParams: DescribeNodegroupPathParams;
-    headers: DescribeNodegroupHeaders;
+    /**
+     * The name of the Amazon EKS cluster associated with the node group.
+     */
+    name: string;
+    /**
+     * The name of the node group to describe.
+     */
+    nodegroupName: string;
 }
 export declare class DescribeNodegroupResponse extends SpeakeasyBase {
+    /**
+     * ClientException
+     */
     clientException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     describeNodegroupResponse?: shared.DescribeNodegroupResponse;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
-    resourceNotFoundException?: any;
-    serverException?: any;
+    /**
+     * ServiceUnavailableException
+     */
     serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ServerException
+     */
+    serverException?: any;
 }

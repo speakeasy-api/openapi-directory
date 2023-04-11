@@ -1,8 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ArrayJobDependencyEnum } from "./arrayjobdependencyenum";
 /**
- * An object representing an Batch job dependency.
-**/
+ * An object that represents an Batch job dependency.
+ */
 export declare class JobDependency extends SpeakeasyBase {
     jobId?: string;
     type?: ArrayJobDependencyEnum;

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateLaunchTemplateVersionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateLaunchTemplateVersionActionEnum {
     CreateLaunchTemplateVersion = "CreateLaunchTemplateVersion"
 }
-export declare enum PostCreateLaunchTemplateVersionVersionEnum {
+export declare enum POSTCreateLaunchTemplateVersionVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostCreateLaunchTemplateVersionQueryParams extends SpeakeasyBase {
-    action: PostCreateLaunchTemplateVersionActionEnum;
-    version: PostCreateLaunchTemplateVersionVersionEnum;
-}
-export declare class PostCreateLaunchTemplateVersionHeaders extends SpeakeasyBase {
+export declare class POSTCreateLaunchTemplateVersionRequest extends SpeakeasyBase {
+    action: POSTCreateLaunchTemplateVersionActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateLaunchTemplateVersionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateLaunchTemplateVersionHeaders extends SpeakeasyBas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateLaunchTemplateVersionRequest extends SpeakeasyBase {
-    queryParams: PostCreateLaunchTemplateVersionQueryParams;
-    headers: PostCreateLaunchTemplateVersionHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateLaunchTemplateVersionResponse extends SpeakeasyBase {
+export declare class POSTCreateLaunchTemplateVersionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

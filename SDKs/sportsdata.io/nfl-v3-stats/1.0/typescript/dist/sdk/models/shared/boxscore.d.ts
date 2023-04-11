@@ -1,0 +1,35 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { FantasyDefenseGame } from "./fantasydefensegame";
+import { Game } from "./game";
+import { PlayerDefense } from "./playerdefense";
+import { PlayerKicking } from "./playerkicking";
+import { PlayerKickPuntReturns } from "./playerkickpuntreturns";
+import { PlayerPassing } from "./playerpassing";
+import { PlayerPunting } from "./playerpunting";
+import { PlayerReceiving } from "./playerreceiving";
+import { PlayerRushing } from "./playerrushing";
+import { Score } from "./score";
+import { ScoringDetail } from "./scoringdetail";
+import { ScoringPlay } from "./scoringplay";
+export declare class BoxScore extends SpeakeasyBase {
+    awayDefense?: PlayerDefense[];
+    awayFantasyDefense?: FantasyDefenseGame;
+    awayKickPuntReturns?: PlayerKickPuntReturns[];
+    awayKicking?: PlayerKicking[];
+    awayPassing?: PlayerPassing[];
+    awayPunting?: PlayerPunting[];
+    awayReceiving?: PlayerReceiving[];
+    awayRushing?: PlayerRushing[];
+    game?: Game;
+    homeDefense?: PlayerDefense[];
+    homeFantasyDefense?: FantasyDefenseGame;
+    homeKickPuntReturns?: PlayerKickPuntReturns[];
+    homeKicking?: PlayerKicking[];
+    homePassing?: PlayerPassing[];
+    homePunting?: PlayerPunting[];
+    homeReceiving?: PlayerReceiving[];
+    homeRushing?: PlayerRushing[];
+    score?: Score;
+    scoringDetails?: ScoringDetail[];
+    scoringPlays?: ScoringPlay[];
+}

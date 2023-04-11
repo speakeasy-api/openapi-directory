@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class ModifyAvailabilityZoneGroupResult extends SpeakeasyBase {
-    return?: Record<string, any>;
+    return?: boolean;
 }

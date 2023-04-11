@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetPermissionAppsAppIdPathParams extends SpeakeasyBase {
-    appId: string;
-}
-export declare class GetPermissionAppsAppIdQueryParams extends SpeakeasyBase {
-    userId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetPermissionAppsAppIdRequest extends SpeakeasyBase {
-    pathParams: GetPermissionAppsAppIdPathParams;
-    queryParams: GetPermissionAppsAppIdQueryParams;
+    /**
+     * The id of the app
+     */
+    appId: string;
+    /**
+     * The id of the user
+     */
+    userId: string;
 }
 export declare class GetPermissionAppsAppIdResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

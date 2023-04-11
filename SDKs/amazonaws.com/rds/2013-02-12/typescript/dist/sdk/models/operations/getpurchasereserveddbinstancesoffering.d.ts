@@ -1,18 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetPurchaseReservedDbInstancesOfferingActionEnum {
-    PurchaseReservedDbInstancesOffering = "PurchaseReservedDBInstancesOffering"
+import { AxiosResponse } from "axios";
+export declare enum GETPurchaseReservedDBInstancesOfferingActionEnum {
+    PurchaseReservedDBInstancesOffering = "PurchaseReservedDBInstancesOffering"
 }
-export declare enum GetPurchaseReservedDbInstancesOfferingVersionEnum {
+export declare enum GETPurchaseReservedDBInstancesOfferingVersionEnum {
     TwoThousandAndThirteen0212 = "2013-02-12"
 }
-export declare class GetPurchaseReservedDbInstancesOfferingQueryParams extends SpeakeasyBase {
-    action: GetPurchaseReservedDbInstancesOfferingActionEnum;
+export declare class GETPurchaseReservedDBInstancesOfferingRequest extends SpeakeasyBase {
+    action: GETPurchaseReservedDBInstancesOfferingActionEnum;
     dbInstanceCount?: number;
     reservedDBInstanceId?: string;
     reservedDBInstancesOfferingId: string;
-    version: GetPurchaseReservedDbInstancesOfferingVersionEnum;
-}
-export declare class GetPurchaseReservedDbInstancesOfferingHeaders extends SpeakeasyBase {
+    version: GETPurchaseReservedDBInstancesOfferingVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +20,9 @@ export declare class GetPurchaseReservedDbInstancesOfferingHeaders extends Speak
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetPurchaseReservedDbInstancesOfferingRequest extends SpeakeasyBase {
-    queryParams: GetPurchaseReservedDbInstancesOfferingQueryParams;
-    headers: GetPurchaseReservedDbInstancesOfferingHeaders;
-}
-export declare class GetPurchaseReservedDbInstancesOfferingResponse extends SpeakeasyBase {
+export declare class GETPurchaseReservedDBInstancesOfferingResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

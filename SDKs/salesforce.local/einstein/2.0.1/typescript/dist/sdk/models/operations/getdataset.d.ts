@@ -1,17 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetDatasetPathParams extends SpeakeasyBase {
-    datasetId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetDatasetSecurity extends SpeakeasyBase {
-    bearerToken: shared.SchemeBearerToken;
+    bearerToken: string;
 }
 export declare class GetDatasetRequest extends SpeakeasyBase {
-    pathParams: GetDatasetPathParams;
-    security: GetDatasetSecurity;
+    /**
+     * Dataset Id
+     */
+    datasetId: string;
 }
 export declare class GetDatasetResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     dataset?: shared.Dataset;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Operations about messages
+ */
 export declare class Messages {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,33 +12,38 @@ export declare class Messages {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteMessagesId - Delete Message
-     *
      * Delete Message
-    **/
+     *
+     * @remarks
+     * Delete Message
+     */
     deleteMessagesId(req: operations.DeleteMessagesIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteMessagesIdResponse>;
     /**
-     * getMessages - List Messages
-     *
      * List Messages
-    **/
+     *
+     * @remarks
+     * List Messages
+     */
     getMessages(req: operations.GetMessagesRequest, config?: AxiosRequestConfig): Promise<operations.GetMessagesResponse>;
     /**
-     * getMessagesId - Show Message
-     *
      * Show Message
-    **/
+     *
+     * @remarks
+     * Show Message
+     */
     getMessagesId(req: operations.GetMessagesIdRequest, config?: AxiosRequestConfig): Promise<operations.GetMessagesIdResponse>;
     /**
-     * patchMessagesId - Update Message
-     *
      * Update Message
-    **/
+     *
+     * @remarks
+     * Update Message
+     */
     patchMessagesId(req: operations.PatchMessagesIdRequest, config?: AxiosRequestConfig): Promise<operations.PatchMessagesIdResponse>;
     /**
-     * postMessages - Create Message
-     *
      * Create Message
-    **/
-    postMessages(req: operations.PostMessagesRequest, config?: AxiosRequestConfig): Promise<operations.PostMessagesResponse>;
+     *
+     * @remarks
+     * Create Message
+     */
+    postMessages(req: operations.PostMessagesRequestBody, config?: AxiosRequestConfig): Promise<operations.PostMessagesResponse>;
 }

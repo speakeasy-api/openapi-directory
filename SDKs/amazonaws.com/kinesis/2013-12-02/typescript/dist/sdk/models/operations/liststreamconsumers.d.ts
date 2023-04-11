@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListStreamConsumersQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListStreamConsumersXAmzTargetEnum {
     Kinesis20131202ListStreamConsumers = "Kinesis_20131202.ListStreamConsumers"
 }
-export declare class ListStreamConsumersHeaders extends SpeakeasyBase {
+export declare class ListStreamConsumersRequest extends SpeakeasyBase {
+    listStreamConsumersInput: shared.ListStreamConsumersInput;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,18 +23,32 @@ export declare class ListStreamConsumersHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListStreamConsumersXAmzTargetEnum;
 }
-export declare class ListStreamConsumersRequest extends SpeakeasyBase {
-    queryParams: ListStreamConsumersQueryParams;
-    headers: ListStreamConsumersHeaders;
-    request: shared.ListStreamConsumersInput;
-}
 export declare class ListStreamConsumersResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * ExpiredNextTokenException
+     */
     expiredNextTokenException?: any;
+    /**
+     * InvalidArgumentException
+     */
     invalidArgumentException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * Success
+     */
     listStreamConsumersOutput?: shared.ListStreamConsumersOutput;
+    /**
+     * ResourceInUseException
+     */
     resourceInUseException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

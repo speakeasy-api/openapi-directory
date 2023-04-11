@@ -1,3 +1,6 @@
+/**
+ * ISO-3166 alpha-2 country code, e.g. US, AU This element is required only when the Application supports multi-region. Talk to your Partner Manager to confirm if this is the case.
+ */
 export declare enum CountryCodeEnum {
     Ad = "AD",
     Ae = "AE",

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostSetDefaultPolicyVersionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTSetDefaultPolicyVersionActionEnum {
     SetDefaultPolicyVersion = "SetDefaultPolicyVersion"
 }
-export declare enum PostSetDefaultPolicyVersionVersionEnum {
+export declare enum POSTSetDefaultPolicyVersionVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostSetDefaultPolicyVersionQueryParams extends SpeakeasyBase {
-    action: PostSetDefaultPolicyVersionActionEnum;
-    version: PostSetDefaultPolicyVersionVersionEnum;
-}
-export declare class PostSetDefaultPolicyVersionHeaders extends SpeakeasyBase {
+export declare class POSTSetDefaultPolicyVersionRequest extends SpeakeasyBase {
+    action: POSTSetDefaultPolicyVersionActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTSetDefaultPolicyVersionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostSetDefaultPolicyVersionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostSetDefaultPolicyVersionRequest extends SpeakeasyBase {
-    queryParams: PostSetDefaultPolicyVersionQueryParams;
-    headers: PostSetDefaultPolicyVersionHeaders;
-    request?: Uint8Array;
-}
-export declare class PostSetDefaultPolicyVersionResponse extends SpeakeasyBase {
+export declare class POSTSetDefaultPolicyVersionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

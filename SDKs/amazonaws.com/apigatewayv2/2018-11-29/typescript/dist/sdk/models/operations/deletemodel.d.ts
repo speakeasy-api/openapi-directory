@@ -1,9 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteModelPathParams extends SpeakeasyBase {
-    apiId: string;
-    modelId: string;
-}
-export declare class DeleteModelHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteModelRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,14 +8,25 @@ export declare class DeleteModelHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DeleteModelRequest extends SpeakeasyBase {
-    pathParams: DeleteModelPathParams;
-    headers: DeleteModelHeaders;
+    /**
+     * The API identifier.
+     */
+    apiId: string;
+    /**
+     * The model ID.
+     */
+    modelId: string;
 }
 export declare class DeleteModelResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

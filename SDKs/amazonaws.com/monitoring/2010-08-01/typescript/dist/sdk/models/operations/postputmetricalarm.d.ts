@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostPutMetricAlarmActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTPutMetricAlarmActionEnum {
     PutMetricAlarm = "PutMetricAlarm"
 }
-export declare enum PostPutMetricAlarmVersionEnum {
+export declare enum POSTPutMetricAlarmVersionEnum {
     TwoThousandAndTen0801 = "2010-08-01"
 }
-export declare class PostPutMetricAlarmQueryParams extends SpeakeasyBase {
-    action: PostPutMetricAlarmActionEnum;
-    version: PostPutMetricAlarmVersionEnum;
-}
-export declare class PostPutMetricAlarmHeaders extends SpeakeasyBase {
+export declare class POSTPutMetricAlarmRequest extends SpeakeasyBase {
+    action: POSTPutMetricAlarmActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTPutMetricAlarmVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostPutMetricAlarmHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostPutMetricAlarmRequest extends SpeakeasyBase {
-    queryParams: PostPutMetricAlarmQueryParams;
-    headers: PostPutMetricAlarmHeaders;
-    request?: Uint8Array;
-}
-export declare class PostPutMetricAlarmResponse extends SpeakeasyBase {
+export declare class POSTPutMetricAlarmResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

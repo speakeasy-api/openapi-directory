@@ -1,4 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
 export declare enum GetGetCurationTagsByNameFormatEnum {
     Json = "json",
     Xml = "xml",
@@ -7,14 +8,15 @@ export declare enum GetGetCurationTagsByNameFormatEnum {
     Jpg = "jpg",
     Pdf = "pdf"
 }
-export declare class GetGetCurationTagsByNameQueryParams extends SpeakeasyBase {
-    format?: GetGetCurationTagsByNameFormatEnum;
-    tagName: string;
-}
 export declare class GetGetCurationTagsByNameRequest extends SpeakeasyBase {
-    queryParams: GetGetCurationTagsByNameQueryParams;
+    format?: GetGetCurationTagsByNameFormatEnum;
+    /**
+     * The tag name
+     */
+    tagName: string;
 }
 export declare class GetGetCurationTagsByNameResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

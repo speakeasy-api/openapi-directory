@@ -1,5 +1,11 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Browse the source code in the repository and
+ *
+ * @remarks
+ *                               create new commits by uploading.
+ */
 export declare class Source {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,14 +15,15 @@ export declare class Source {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getRepositoriesWorkspaceRepoSlugFilehistoryCommitPath - Returns a paginated list of commits that modified the specified file.
+     * List commits that modified a file
+     *
+     * @remarks
+     * Returns a paginated list of commits that modified the specified file.
      *
      * Commits are returned in reverse chronological order. This is roughly
      * equivalent to the following commands:
      *
      *     $ git log --follow --date-order <sha> <path>
-     *
-     *     $ hg log --follow <path>
      *
      * By default, Bitbucket will follow renames and the path name in the
      * returned entries reflects that. This can be turned off using the
@@ -24,7 +31,7 @@ export declare class Source {
      *
      * Results are returned in descending chronological order by default, and
      * like most endpoints you can
-     * [filter and sort](../../../../../../meta/filtering) the response to
+     * [filter and sort](/cloud/bitbucket/rest/intro/#filtering) the response to
      * only provide exactly the data you want.
      *
      * For example, if you wanted to find commits made before 2011-05-18
@@ -60,10 +67,13 @@ export declare class Source {
      *
      * In the response you can see that the file was renamed to `README.rst`
      * by the commit made on 2011-05-16, and was previously named `README.txt`.
-    **/
-    getRepositoriesWorkspaceRepoSlugFilehistoryCommitPath(req: operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugFilehistoryCommitPath(req: operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest, security: operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugSrc - This endpoint redirects the client to the directory listing of the
+     * Get the root directory of the main branch
+     *
+     * @remarks
+     * This endpoint redirects the client to the directory listing of the
      * root directory on the main branch.
      *
      * This is equivalent to directly hitting
@@ -71,13 +81,16 @@ export declare class Source {
      * without having to know the name or SHA1 of the repo's main branch.
      *
      * To create new commits, [POST to this endpoint](#post)
-    **/
-    getRepositoriesWorkspaceRepoSlugSrc(req: operations.GetRepositoriesWorkspaceRepoSlugSrcRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugSrcResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugSrc(req: operations.GetRepositoriesWorkspaceRepoSlugSrcRequest, security: operations.GetRepositoriesWorkspaceRepoSlugSrcSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugSrcResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugSrcCommitPath - This endpoints is used to retrieve the contents of a single file,
+     * Get file or directory contents
+     *
+     * @remarks
+     * This endpoints is used to retrieve the contents of a single file,
      * or the contents of a directory at a specified revision.
      *
-     * ## Raw file contents
+     * #### Raw file contents
      *
      * When `path` points to a file, this endpoint returns the raw contents.
      * The response's Content-Type is derived from the filename
@@ -96,7 +109,7 @@ export declare class Source {
      * returns the same ETag, regardless on the directory it lives in, or the
      * commit it is on.
      *
-     * ## File meta data
+     * #### File meta data
      *
      * When the request for a file path includes the query parameter
      * `?format=meta`, instead of returning the file's raw contents, Bitbucket
@@ -148,7 +161,7 @@ export declare class Source {
      * incurring the overhead of receiving its full contents.
      *
      *
-     * ## Directory listings
+     * #### Directory listings
      *
      * When `path` points to a directory instead of a file, the response is a
      * paginated list of directory and file objects in the same order as the
@@ -258,7 +271,7 @@ export declare class Source {
      * }
      * ```
      *
-     * ## Querying, filtering and sorting
+     * #### Querying, filtering and sorting
      *
      * Like most API endpoints, this API supports the Bitbucket
      * querying/filtering syntax and so you could filter a directory listing
@@ -275,12 +288,15 @@ export declare class Source {
      *
      * `.../src/eefd5ef/?sort=-size`
      *
-     * See [filtering and sorting](../../../../../../meta/filtering) for more
+     * See [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering) for more
      * details.
-    **/
-    getRepositoriesWorkspaceRepoSlugSrcCommitPath(req: operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugSrcCommitPath(req: operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest, security: operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathResponse>;
     /**
-     * postRepositoriesWorkspaceRepoSlugSrc - This endpoint is used to create new commits in the repository by
+     * Create a commit by uploading a file
+     *
+     * @remarks
+     * This endpoint is used to create new commits in the repository by
      * uploading files.
      *
      * To add a new file to a repository:
@@ -308,7 +324,7 @@ export declare class Source {
      * This endpoint accepts `multipart/form-data` (as in the examples above),
      * as well as `application/x-www-form-urlencoded`.
      *
-     * ## multipart/form-data
+     * #### multipart/form-data
      *
      * A `multipart/form-data` post contains a series of "form fields" that
      * identify both the individual files that are being uploaded, as well as
@@ -330,7 +346,7 @@ export declare class Source {
      * `Content-Disposition` header will contain the `filename` parameter to
      * distinguish between a file named "message" and the commit message field.
      *
-     * ## application/x-www-form-urlencoded
+     * #### application/x-www-form-urlencoded
      *
      * It is also possible to upload new files using a simple
      * `application/x-www-form-urlencoded` POST. This can be convenient when
@@ -353,7 +369,7 @@ export declare class Source {
      * a meta data parameter, then it is interpreted as meta data, not as a
      * file.
      *
-     * ## Executables and links
+     * #### Executables and links
      *
      * While this API aims to facilitate the most common use cases, it is
      * possible to perform some more advanced operations like creating a new
@@ -401,6 +417,6 @@ export declare class Source {
      *
      * Note that this API does not support the creation or manipulation of
      * subrepos / submodules.
-    **/
-    postRepositoriesWorkspaceRepoSlugSrc(req: operations.PostRepositoriesWorkspaceRepoSlugSrcRequest, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugSrcResponse>;
+     */
+    postRepositoriesWorkspaceRepoSlugSrc(req: operations.PostRepositoriesWorkspaceRepoSlugSrcRequest, security: operations.PostRepositoriesWorkspaceRepoSlugSrcSecurity, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugSrcResponse>;
 }

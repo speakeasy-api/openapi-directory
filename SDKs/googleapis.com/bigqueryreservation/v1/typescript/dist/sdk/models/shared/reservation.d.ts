@@ -1,0 +1,85 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { Autoscale, AutoscaleInput } from "./autoscale";
+/**
+ * Edition of the reservation.
+ */
+export declare enum ReservationEditionEnum {
+    EditionUnspecified = "EDITION_UNSPECIFIED",
+    Standard = "STANDARD",
+    Enterprise = "ENTERPRISE",
+    EnterprisePlus = "ENTERPRISE_PLUS"
+}
+/**
+ * A reservation is a mechanism used to guarantee slots to users.
+ */
+export declare class Reservation extends SpeakeasyBase {
+    /**
+     * Auto scaling settings.
+     */
+    autoscale?: Autoscale;
+    /**
+     * Job concurrency target which sets a soft upper bound on the number of jobs that can run concurrently in this reservation. This is a soft target due to asynchronous nature of the system and various optimizations for small queries. Default value is 0 which means that concurrency target will be automatically computed by the system. NOTE: this field is exposed as `target_job_concurrency` in the Information Schema, DDL and BQ CLI.
+     */
+    concurrency?: string;
+    /**
+     * Output only. Creation time of the reservation.
+     */
+    creationTime?: string;
+    /**
+     * Edition of the reservation.
+     */
+    edition?: ReservationEditionEnum;
+    /**
+     * If false, any query or pipeline job using this reservation will use idle slots from other reservations within the same admin project. If true, a query or pipeline job using this reservation will execute with the slot capacity specified in the slot_capacity field at most.
+     */
+    ignoreIdleSlots?: boolean;
+    /**
+     * Applicable only for reservations located within one of the BigQuery multi-regions (US or EU). If set to true, this reservation is placed in the organization's secondary region which is designated for disaster recovery purposes. If false, this reservation is placed in the organization's default region. NOTE: this is a preview feature. Project must be allow-listed in order to set this field.
+     */
+    multiRegionAuxiliary?: boolean;
+    /**
+     * The resource name of the reservation, e.g., `projects/* /locations/* /reservations/team1-prod`. The reservation_id must only contain lower case alphanumeric characters or dashes. It must start with a letter and must not end with a dash. Its maximum length is 64 characters.
+     */
+    name?: string;
+    /**
+     * Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the unit of parallelism. Queries using this reservation might use more slots during runtime if ignore_idle_slots is set to false. If total slot_capacity of the reservation and its siblings exceeds the total slot_count of all capacity commitments, the request will fail with `google.rpc.Code.RESOURCE_EXHAUSTED`. NOTE: for reservations in US or EU multi-regions, slot capacity constraints are checked separately for default and auxiliary regions. See multi_region_auxiliary flag for more details.
+     */
+    slotCapacity?: string;
+    /**
+     * Output only. Last update time of the reservation.
+     */
+    updateTime?: string;
+}
+/**
+ * A reservation is a mechanism used to guarantee slots to users.
+ */
+export declare class ReservationInput extends SpeakeasyBase {
+    /**
+     * Auto scaling settings.
+     */
+    autoscale?: AutoscaleInput;
+    /**
+     * Job concurrency target which sets a soft upper bound on the number of jobs that can run concurrently in this reservation. This is a soft target due to asynchronous nature of the system and various optimizations for small queries. Default value is 0 which means that concurrency target will be automatically computed by the system. NOTE: this field is exposed as `target_job_concurrency` in the Information Schema, DDL and BQ CLI.
+     */
+    concurrency?: string;
+    /**
+     * Edition of the reservation.
+     */
+    edition?: ReservationEditionEnum;
+    /**
+     * If false, any query or pipeline job using this reservation will use idle slots from other reservations within the same admin project. If true, a query or pipeline job using this reservation will execute with the slot capacity specified in the slot_capacity field at most.
+     */
+    ignoreIdleSlots?: boolean;
+    /**
+     * Applicable only for reservations located within one of the BigQuery multi-regions (US or EU). If set to true, this reservation is placed in the organization's secondary region which is designated for disaster recovery purposes. If false, this reservation is placed in the organization's default region. NOTE: this is a preview feature. Project must be allow-listed in order to set this field.
+     */
+    multiRegionAuxiliary?: boolean;
+    /**
+     * The resource name of the reservation, e.g., `projects/* /locations/* /reservations/team1-prod`. The reservation_id must only contain lower case alphanumeric characters or dashes. It must start with a letter and must not end with a dash. Its maximum length is 64 characters.
+     */
+    name?: string;
+    /**
+     * Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the unit of parallelism. Queries using this reservation might use more slots during runtime if ignore_idle_slots is set to false. If total slot_capacity of the reservation and its siblings exceeds the total slot_count of all capacity commitments, the request will fail with `google.rpc.Code.RESOURCE_EXHAUSTED`. NOTE: for reservations in US or EU multi-regions, slot capacity constraints are checked separately for default and auxiliary regions. See multi_region_auxiliary flag for more details.
+     */
+    slotCapacity?: string;
+}

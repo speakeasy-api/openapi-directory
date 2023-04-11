@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { Instance } from "./instance";
 import { WarmPoolConfiguration } from "./warmpoolconfiguration";
+/**
+ * Success
+ */
 export declare class DescribeWarmPoolAnswer extends SpeakeasyBase {
     instances?: Instance[];
     nextToken?: string;

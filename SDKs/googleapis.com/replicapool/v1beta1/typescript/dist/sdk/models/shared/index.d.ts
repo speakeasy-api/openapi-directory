@@ -18,7 +18,6 @@ export * from "./replica";
 export * from "./replicasdeleterequest";
 export * from "./replicaslistresponse";
 export * from "./replicastatus";
-export * from "./security";
 export * from "./serviceaccount";
 export * from "./tag";
 export * from "./template";

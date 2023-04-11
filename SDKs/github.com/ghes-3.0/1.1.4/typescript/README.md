@@ -6,32 +6,32 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/github.com/ghes-3.0/1.1.4/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/github.com/ghes-3.0/1.1.4/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest, ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgResponse } from "openapi/src/sdk/models/operations";
+import {
+  ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest,
+  ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest = {
-  pathParams: {
-    org: "sit",
-    repositoryId: 2259404117704393152,
-    runnerGroupId: 6050128673802995827,
-  },
+  org: "corrupti",
+  repositoryId: 592845,
+  runnerGroupId: 715190,
 };
 
 sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgResponse | AxiosError) => {
@@ -41,7 +41,8 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### actions
 
@@ -154,7 +155,7 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 
 ### apps
 
-* `appsAddRepoToInstallation` - Add a repository to an app installation
+* `appsAddRepoToInstallationForAuthenticatedUser` - Add a repository to an app installation
 * `appsCheckAuthorization` - Check an authorization
 * `appsCheckToken` - Check a token
 * `appsCreateContentAttachment` - Create a content attachment
@@ -174,7 +175,7 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 * `appsListInstallations` - List installations for the authenticated app
 * `appsListInstallationsForAuthenticatedUser` - List app installations accessible to the user access token
 * `appsListReposAccessibleToInstallation` - List repositories accessible to the app installation
-* `appsRemoveRepoFromInstallation` - Remove a repository from an app installation
+* `appsRemoveRepoFromInstallationForAuthenticatedUser` - Remove a repository from an app installation
 * `appsResetAuthorization` - Reset an authorization
 * `appsResetToken` - Reset a token
 * `appsRevokeAuthorizationForApplication` - Revoke an authorization for an application
@@ -199,7 +200,7 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 * `checksSetSuitesPreferences` - Update repository preferences for check suites
 * `checksUpdate` - Update a check run
 
-### code-scanning
+### codeScanning
 
 * `codeScanningGetAlert` - Get a code scanning alert
 * `codeScanningListAlertsForRepo` - List code scanning alerts for a repository
@@ -207,7 +208,7 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 * `codeScanningUpdateAlert` - Update a code scanning alert
 * `codeScanningUploadSarif` - Upload an analysis as SARIF data
 
-### codes-of-conduct
+### codesOfConduct
 
 * `codesOfConductGetAllCodesOfConduct` - Get all codes of conduct
 * `codesOfConductGetConductCode` - Get a code of conduct
@@ -216,7 +217,7 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 
 * `emojisGet` - Get emojis
 
-### enterprise-admin
+### enterpriseAdmin
 
 * `enterpriseAdminAddAuthorizedSshKey` - Add an authorized SSH key
 * `enterpriseAdminAddOrgAccessToSelfHostedRunnerGroupInEnterprise` - Add organization access to a self-hosted runner group in an enterprise
@@ -245,22 +246,32 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 * `enterpriseAdminEnableOrDisableMaintenanceMode` - Enable or disable maintenance mode
 * `enterpriseAdminEnableSelectedOrganizationGithubActionsEnterprise` - Enable a selected organization for GitHub Actions in an enterprise
 * `enterpriseAdminGetAllAuthorizedSshKeys` - Get all authorized SSH keys
+* `enterpriseAdminGetAllStats` - Get all statistics
 * `enterpriseAdminGetAllowedActionsEnterprise` - Get allowed actions for an enterprise
 * `enterpriseAdminGetAnnouncement` - Get the global announcement banner
+* `enterpriseAdminGetCommentStats` - Get comment statistics
 * `enterpriseAdminGetConfigurationStatus` - Get the configuration status
 * `enterpriseAdminGetDownloadStatusForPreReceiveEnvironment` - Get the download status for a pre-receive environment
+* `enterpriseAdminGetGistStats` - Get gist statistics
 * `enterpriseAdminGetGithubActionsPermissionsEnterprise` - Get GitHub Actions permissions for an enterprise
 * `enterpriseAdminGetGlobalWebhook` - Get a global webhook
+* `enterpriseAdminGetHooksStats` - Get hooks statistics
+* `enterpriseAdminGetIssueStats` - Get issue statistics
 * `enterpriseAdminGetLicenseInformation` - Get license information
 * `enterpriseAdminGetMaintenanceStatus` - Get the maintenance status
+* `enterpriseAdminGetMilestoneStats` - Get milestone statistics
+* `enterpriseAdminGetOrgStats` - Get organization statistics
+* `enterpriseAdminGetPagesStats` - Get pages statistics
 * `enterpriseAdminGetPreReceiveEnvironment` - Get a pre-receive environment
 * `enterpriseAdminGetPreReceiveHook` - Get a pre-receive hook
 * `enterpriseAdminGetPreReceiveHookForOrg` - Get a pre-receive hook for an organization
 * `enterpriseAdminGetPreReceiveHookForRepo` - Get a pre-receive hook for a repository
+* `enterpriseAdminGetPullRequestStats` - Get pull request statistics
+* `enterpriseAdminGetRepoStats` - Get repository statistics
 * `enterpriseAdminGetSelfHostedRunnerForEnterprise` - Get a self-hosted runner for an enterprise
 * `enterpriseAdminGetSelfHostedRunnerGroupForEnterprise` - Get a self-hosted runner group for an enterprise
 * `enterpriseAdminGetSettings` - Get settings
-* `enterpriseAdminGetTypeStats` - Get statistics
+* `enterpriseAdminGetUserStats` - Get users statistics
 * `enterpriseAdminListGlobalWebhooks` - List global webhooks
 * `enterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterprise` - List organization access to a self-hosted runner group in an enterprise
 * `enterpriseAdminListPersonalAccessTokens` - List personal access tokens
@@ -411,7 +422,7 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 * `metaGetZen` - Get the Zen of GitHub
 * `metaRoot` - GitHub API Root
 
-### oauth-authorizations
+### oauthAuthorizations
 
 * `oauthAuthorizationsCreateAuthorization` - Create a new authorization
 * `oauthAuthorizationsDeleteAuthorization` - Delete an authorization
@@ -515,7 +526,7 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 * `pullsUpdateReview` - Update a review for a pull request
 * `pullsUpdateReviewComment` - Update a review comment for a pull request
 
-### rate-limit
+### rateLimit
 
 * `rateLimitGet` - Get rate limit status for the authenticated user
 
@@ -547,7 +558,7 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 
 ### repos
 
-* `reposAcceptInvitation` - Accept a repository invitation
+* `reposAcceptInvitationForAuthenticatedUser` - Accept a repository invitation
 * `reposAddAppAccessRestrictions` - Add app access restrictions
 * `reposAddCollaborator` - Add a repository collaborator
 * `reposAddStatusCheckContexts` - Add status check contexts
@@ -570,7 +581,7 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 * `reposCreateRelease` - Create a release
 * `reposCreateUsingTemplate` - Create a repository using a template
 * `reposCreateWebhook` - Create a repository webhook
-* `reposDeclineInvitation` - Decline a repository invitation
+* `reposDeclineInvitationForAuthenticatedUser` - Decline a repository invitation
 * `reposDelete` - Delete a repository
 * `reposDeleteAccessRestrictions` - Delete access restrictions
 * `reposDeleteAdminBranchProtection` - Delete admin branch protection
@@ -754,34 +765,45 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 
 ### users
 
-* `usersAddEmailForAuthenticated` - Add an email address for the authenticated user
+* `usersAddEmailForAuthenticatedUser` - Add an email address for the authenticated user
 * `usersCheckFollowingForUser` - Check if a user follows another user
 * `usersCheckPersonIsFollowedByAuthenticated` - Check if a person is followed by the authenticated user
-* `usersCreateGpgKeyForAuthenticated` - Create a GPG key for the authenticated user
-* `usersCreatePublicSshKeyForAuthenticated` - Create a public SSH key for the authenticated user
-* `usersDeleteEmailForAuthenticated` - Delete an email address for the authenticated user
-* `usersDeleteGpgKeyForAuthenticated` - Delete a GPG key for the authenticated user
-* `usersDeletePublicSshKeyForAuthenticated` - Delete a public SSH key for the authenticated user
+* `usersCreateGpgKeyForAuthenticatedUser` - Create a GPG key for the authenticated user
+* `usersCreatePublicSshKeyForAuthenticatedUser` - Create a public SSH key for the authenticated user
+* `usersDeleteEmailForAuthenticatedUser` - Delete an email address for the authenticated user
+* `usersDeleteGpgKeyForAuthenticatedUser` - Delete a GPG key for the authenticated user
+* `usersDeletePublicSshKeyForAuthenticatedUser` - Delete a public SSH key for the authenticated user
 * `usersFollow` - Follow a user
 * `usersGetAuthenticated` - Get the authenticated user
 * `usersGetByUsername` - Get a user
 * `usersGetContextForUser` - Get contextual information for a user
-* `usersGetGpgKeyForAuthenticated` - Get a GPG key for the authenticated user
-* `usersGetPublicSshKeyForAuthenticated` - Get a public SSH key for the authenticated user
+* `usersGetGpgKeyForAuthenticatedUser` - Get a GPG key for the authenticated user
+* `usersGetPublicSshKeyForAuthenticatedUser` - Get a public SSH key for the authenticated user
 * `usersList` - List users
-* `usersListEmailsForAuthenticated` - List email addresses for the authenticated user
-* `usersListFollowedByAuthenticated` - List the people the authenticated user follows
+* `usersListEmailsForAuthenticatedUser` - List email addresses for the authenticated user
+* `usersListFollowedByAuthenticatedUser` - List the people the authenticated user follows
 * `usersListFollowersForAuthenticatedUser` - List followers of the authenticated user
 * `usersListFollowersForUser` - List followers of a user
 * `usersListFollowingForUser` - List the people a user follows
-* `usersListGpgKeysForAuthenticated` - List GPG keys for the authenticated user
+* `usersListGpgKeysForAuthenticatedUser` - List GPG keys for the authenticated user
 * `usersListGpgKeysForUser` - List GPG keys for a user
-* `usersListPublicEmailsForAuthenticated` - List public email addresses for the authenticated user
+* `usersListPublicEmailsForAuthenticatedUser` - List public email addresses for the authenticated user
 * `usersListPublicKeysForUser` - List public keys for a user
-* `usersListPublicSshKeysForAuthenticated` - List public SSH keys for the authenticated user
+* `usersListPublicSshKeysForAuthenticatedUser` - List public SSH keys for the authenticated user
 * `usersUnfollow` - Unfollow a user
 * `usersUpdateAuthenticated` - Update the authenticated user
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

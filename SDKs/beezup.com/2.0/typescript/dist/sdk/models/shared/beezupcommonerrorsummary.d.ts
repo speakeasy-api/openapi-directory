@@ -1,11 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { BeezUpCommonExceptionDetail } from "./beezupcommonexceptiondetail";
-export declare class BeezUpCommonErrorSummary extends SpeakeasyBase {
+import { BeezUPCommonExceptionDetail } from "./beezupcommonexceptiondetail";
+export declare class BeezUPCommonErrorSummary extends SpeakeasyBase {
     errorArguments?: Record<string, string>;
     errorCode?: string;
     errorGuid?: string;
     errorMessage?: string;
-    exceptionDetail?: BeezUpCommonExceptionDetail;
+    exceptionDetail?: BeezUPCommonExceptionDetail;
     objectName?: string;
     propertyName?: string;
     propertyValue?: string;

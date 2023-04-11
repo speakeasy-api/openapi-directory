@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostModifyClusterIamRolesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTModifyClusterIamRolesActionEnum {
     ModifyClusterIamRoles = "ModifyClusterIamRoles"
 }
-export declare enum PostModifyClusterIamRolesVersionEnum {
+export declare enum POSTModifyClusterIamRolesVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostModifyClusterIamRolesQueryParams extends SpeakeasyBase {
-    action: PostModifyClusterIamRolesActionEnum;
-    version: PostModifyClusterIamRolesVersionEnum;
-}
-export declare class PostModifyClusterIamRolesHeaders extends SpeakeasyBase {
+export declare class POSTModifyClusterIamRolesRequest extends SpeakeasyBase {
+    action: POSTModifyClusterIamRolesActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTModifyClusterIamRolesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostModifyClusterIamRolesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostModifyClusterIamRolesRequest extends SpeakeasyBase {
-    queryParams: PostModifyClusterIamRolesQueryParams;
-    headers: PostModifyClusterIamRolesHeaders;
-    request?: Uint8Array;
-}
-export declare class PostModifyClusterIamRolesResponse extends SpeakeasyBase {
+export declare class POSTModifyClusterIamRolesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

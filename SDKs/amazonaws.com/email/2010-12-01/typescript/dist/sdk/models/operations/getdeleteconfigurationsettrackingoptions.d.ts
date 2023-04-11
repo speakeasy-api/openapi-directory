@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteConfigurationSetTrackingOptionsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteConfigurationSetTrackingOptionsActionEnum {
     DeleteConfigurationSetTrackingOptions = "DeleteConfigurationSetTrackingOptions"
 }
-export declare enum GetDeleteConfigurationSetTrackingOptionsVersionEnum {
+export declare enum GETDeleteConfigurationSetTrackingOptionsVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetDeleteConfigurationSetTrackingOptionsQueryParams extends SpeakeasyBase {
-    action: GetDeleteConfigurationSetTrackingOptionsActionEnum;
+export declare class GETDeleteConfigurationSetTrackingOptionsRequest extends SpeakeasyBase {
+    action: GETDeleteConfigurationSetTrackingOptionsActionEnum;
+    /**
+     * The name of the configuration set from which you want to delete the tracking options.
+     */
     configurationSetName: string;
-    version: GetDeleteConfigurationSetTrackingOptionsVersionEnum;
-}
-export declare class GetDeleteConfigurationSetTrackingOptionsHeaders extends SpeakeasyBase {
+    version: GETDeleteConfigurationSetTrackingOptionsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDeleteConfigurationSetTrackingOptionsHeaders extends Spe
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteConfigurationSetTrackingOptionsRequest extends SpeakeasyBase {
-    queryParams: GetDeleteConfigurationSetTrackingOptionsQueryParams;
-    headers: GetDeleteConfigurationSetTrackingOptionsHeaders;
-}
-export declare class GetDeleteConfigurationSetTrackingOptionsResponse extends SpeakeasyBase {
+export declare class GETDeleteConfigurationSetTrackingOptionsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

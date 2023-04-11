@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { NestedClusterGroup } from "./nestedclustergroup";
-import { NestedSite } from "./nestedsite";
 import { NestedClusterType } from "./nestedclustertype";
+import { NestedSite } from "./nestedsite";
 export declare class Cluster extends SpeakeasyBase {
     comments?: string;
     created?: Date;

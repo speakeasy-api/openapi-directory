@@ -1,5 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Secrets {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,16 +10,17 @@ export declare class Secrets {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * secretsGenerateRsaKeyPairList - This endpoint can be used to generate a new RSA key pair. The keys are returned in PEM format.
+     * This endpoint can be used to generate a new RSA key pair. The keys are returned in PEM format.
      *
+     * @remarks
      * {
      *         "public_key": "<public key>",
      *         "private_key": "<private key>"
      *     }
-    **/
+     */
     secretsGenerateRsaKeyPairList(config?: AxiosRequestConfig): Promise<operations.SecretsGenerateRsaKeyPairListResponse>;
     /**
-     * secretsGetSessionKeyCreate - Retrieve a temporary session key to use for encrypting and decrypting secrets via the API. The user's private RSA
+     * Retrieve a temporary session key to use for encrypting and decrypting secrets via the API. The user's private RSA
      * key is POSTed with the name `private_key`. An example:
      *
      *     curl -v -X POST -H "Authorization: Token <token>" -H "Accept: application/json; indent=4" \
@@ -32,21 +34,21 @@ export declare class Secrets {
      *
      * This endpoint accepts one optional parameter: `preserve_key`. If True and a session key exists, the existing session
      * key will be returned instead of a new one.
-    **/
+     */
     secretsGetSessionKeyCreate(config?: AxiosRequestConfig): Promise<operations.SecretsGetSessionKeyCreateResponse>;
-    secretsSecretRolesCreate(req: operations.SecretsSecretRolesCreateRequest, config?: AxiosRequestConfig): Promise<operations.SecretsSecretRolesCreateResponse>;
+    secretsSecretRolesCreate(req: shared.SecretRoleInput, config?: AxiosRequestConfig): Promise<operations.SecretsSecretRolesCreateResponse>;
     secretsSecretRolesDelete(req: operations.SecretsSecretRolesDeleteRequest, config?: AxiosRequestConfig): Promise<operations.SecretsSecretRolesDeleteResponse>;
     /**
-     * secretsSecretRolesList - Call to super to allow for caching
-    **/
+     * Call to super to allow for caching
+     */
     secretsSecretRolesList(req: operations.SecretsSecretRolesListRequest, config?: AxiosRequestConfig): Promise<operations.SecretsSecretRolesListResponse>;
     secretsSecretRolesPartialUpdate(req: operations.SecretsSecretRolesPartialUpdateRequest, config?: AxiosRequestConfig): Promise<operations.SecretsSecretRolesPartialUpdateResponse>;
     /**
-     * secretsSecretRolesRead - Call to super to allow for caching
-    **/
+     * Call to super to allow for caching
+     */
     secretsSecretRolesRead(req: operations.SecretsSecretRolesReadRequest, config?: AxiosRequestConfig): Promise<operations.SecretsSecretRolesReadResponse>;
     secretsSecretRolesUpdate(req: operations.SecretsSecretRolesUpdateRequest, config?: AxiosRequestConfig): Promise<operations.SecretsSecretRolesUpdateResponse>;
-    secretsSecretsCreate(req: operations.SecretsSecretsCreateRequest, config?: AxiosRequestConfig): Promise<operations.SecretsSecretsCreateResponse>;
+    secretsSecretsCreate(req: shared.WritableSecretInput, config?: AxiosRequestConfig): Promise<operations.SecretsSecretsCreateResponse>;
     secretsSecretsDelete(req: operations.SecretsSecretsDeleteRequest, config?: AxiosRequestConfig): Promise<operations.SecretsSecretsDeleteResponse>;
     secretsSecretsList(req: operations.SecretsSecretsListRequest, config?: AxiosRequestConfig): Promise<operations.SecretsSecretsListResponse>;
     secretsSecretsPartialUpdate(req: operations.SecretsSecretsPartialUpdateRequest, config?: AxiosRequestConfig): Promise<operations.SecretsSecretsPartialUpdateResponse>;

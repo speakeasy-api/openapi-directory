@@ -4,7 +4,6 @@ export * from "./apidimensionfilter";
 export * from "./apidimensionfiltergroup";
 export * from "./searchanalyticsqueryrequest";
 export * from "./searchanalyticsqueryresponse";
-export * from "./security";
 export * from "./sitemapslistresponse";
 export * from "./siteslistresponse";
 export * from "./wmxsite";

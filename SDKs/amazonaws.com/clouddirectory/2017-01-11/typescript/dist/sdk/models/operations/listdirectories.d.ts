@@ -1,10 +1,38 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListDirectoriesQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
+import { AxiosResponse } from "axios";
+/**
+ * The state of the directories in the list. Can be either Enabled, Disabled, or Deleted.
+ */
+export declare enum ListDirectoriesRequestBodyStateEnum {
+    Enabled = "ENABLED",
+    Disabled = "DISABLED",
+    Deleted = "DELETED"
 }
-export declare class ListDirectoriesHeaders extends SpeakeasyBase {
+export declare class ListDirectoriesRequestBody extends SpeakeasyBase {
+    /**
+     * The maximum number of results to retrieve.
+     */
+    maxResults?: number;
+    /**
+     * The pagination token.
+     */
+    nextToken?: string;
+    /**
+     * The state of the directories in the list. Can be either Enabled, Disabled, or Deleted.
+     */
+    state?: ListDirectoriesRequestBodyStateEnum;
+}
+export declare class ListDirectoriesRequest extends SpeakeasyBase {
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
+    requestBody: ListDirectoriesRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,30 +41,40 @@ export declare class ListDirectoriesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare enum ListDirectoriesRequestBodyStateEnum {
-    Enabled = "ENABLED",
-    Disabled = "DISABLED",
-    Deleted = "DELETED"
-}
-export declare class ListDirectoriesRequestBody extends SpeakeasyBase {
-    maxResults?: number;
-    nextToken?: string;
-    state?: ListDirectoriesRequestBodyStateEnum;
-}
-export declare class ListDirectoriesRequest extends SpeakeasyBase {
-    queryParams: ListDirectoriesQueryParams;
-    headers: ListDirectoriesHeaders;
-    request: ListDirectoriesRequestBody;
-}
 export declare class ListDirectoriesResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidArnException
+     */
     invalidArnException?: any;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * Success
+     */
     listDirectoriesResponse?: shared.ListDirectoriesResponse;
-    retryableConflictException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * RetryableConflictException
+     */
+    retryableConflictException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

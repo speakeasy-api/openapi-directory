@@ -10,5 +10,11 @@ export declare enum TierEnum {
     Mysql = "MYSQL",
     Postgresql = "POSTGRESQL",
     JavaJmx = "JAVA_JMX",
-    Oracle = "ORACLE"
+    Oracle = "ORACLE",
+    SapHanaMultiNode = "SAP_HANA_MULTI_NODE",
+    SapHanaSingleNode = "SAP_HANA_SINGLE_NODE",
+    SapHanaHighAvailability = "SAP_HANA_HIGH_AVAILABILITY",
+    SqlServerFailoverClusterInstance = "SQL_SERVER_FAILOVER_CLUSTER_INSTANCE",
+    Sharepoint = "SHAREPOINT",
+    ActiveDirectory = "ACTIVE_DIRECTORY"
 }

@@ -1,117 +1,178 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class RatcrSecurity extends SpeakeasyBase {
+    apiKey: string;
+    clientId: string;
+}
 export declare class RatcrRequestBodyCertificateParameters extends SpeakeasyBase {
+    /**
+     * Full name
+     */
     fullName: string;
+    /**
+     * Aadhaar number
+     */
     uid: string;
+    /**
+     * Ration Card No
+     */
     rationCardNo: string;
 }
+/**
+ * The format of the certificate in response.
+ */
 export declare enum RatcrRequestBodyFormatEnum {
     Pdf = "pdf"
 }
+/**
+ * Request format
+ */
 export declare class RatcrRequestBody extends SpeakeasyBase {
     certificateParameters?: RatcrRequestBodyCertificateParameters;
-    consentArtifact?: any;
+    consentArtifact?: shared.ConsentArtifactSchema;
+    /**
+     * The format of the certificate in response.
+     */
     format: RatcrRequestBodyFormatEnum;
+    /**
+     * A unique transaction id for this request in UUID format. It is used for tracking the request.
+     */
     txnId: string;
 }
-export declare class RatcrSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
-    clientId: shared.SchemeClientId;
+export declare enum Ratcr504ApplicationJSONErrorEnum {
+    GatewayTimeout = "gateway_timeout"
 }
-export declare enum Ratcr400ApplicationJsonErrorEnum {
+export declare enum Ratcr504ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
+}
+/**
+ * Gateway timeout
+ */
+export declare class Ratcr504ApplicationJSON extends SpeakeasyBase {
+    error?: Ratcr504ApplicationJSONErrorEnum;
+    errorDescription?: Ratcr504ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Ratcr503ApplicationJSONErrorEnum {
+    ServiceUnavailable = "service_unavailable"
+}
+export declare enum Ratcr503ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
+}
+/**
+ * Service unavailable
+ */
+export declare class Ratcr503ApplicationJSON extends SpeakeasyBase {
+    error?: Ratcr503ApplicationJSONErrorEnum;
+    errorDescription?: Ratcr503ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Ratcr502ApplicationJSONErrorEnum {
+    BadGatewy = "bad_gatewy"
+}
+export declare enum Ratcr502ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
+}
+/**
+ * Bad gateway
+ */
+export declare class Ratcr502ApplicationJSON extends SpeakeasyBase {
+    error?: Ratcr502ApplicationJSONErrorEnum;
+    errorDescription?: Ratcr502ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Ratcr500ApplicationJSONErrorEnum {
+    InternalServerError = "internal_server_error"
+}
+export declare enum Ratcr500ApplicationJSONErrorDescriptionEnum {
+    InternalServerError = "Internal server error"
+}
+/**
+ * Internal server error
+ */
+export declare class Ratcr500ApplicationJSON extends SpeakeasyBase {
+    error?: Ratcr500ApplicationJSONErrorEnum;
+    errorDescription?: Ratcr500ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Ratcr404ApplicationJSONErrorEnum {
+    RecordNotFound = "record_not_found",
+    UrlNotFound = "url_not_found"
+}
+export declare enum Ratcr404ApplicationJSONErrorDescriptionEnum {
+    NoRecordFound = "No record found",
+    YourAPIUrlOrPathIsIncorrect = "Your API url or path is incorrect"
+}
+/**
+ * No record found
+ */
+export declare class Ratcr404ApplicationJSON extends SpeakeasyBase {
+    error?: Ratcr404ApplicationJSONErrorEnum;
+    errorDescription?: Ratcr404ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Ratcr401ApplicationJSONErrorEnum {
+    InvalidAuthentication = "invalid_authentication",
+    InvalidAuthorization = "invalid_authorization"
+}
+export declare enum Ratcr401ApplicationJSONErrorDescriptionEnum {
+    AuthenticationFailed = "Authentication failed",
+    YouAreNotAuthorizedToUseThisAPI = "You are not authorized to use this API"
+}
+/**
+ * Unauthorized access
+ */
+export declare class Ratcr401ApplicationJSON extends SpeakeasyBase {
+    error?: Ratcr401ApplicationJSONErrorEnum;
+    errorDescription?: Ratcr401ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Ratcr400ApplicationJSONErrorEnum {
     MissingParameter = "missing_parameter",
     InvalidParameter = "invalid_parameter",
     InvalidFormat = "invalid_format",
     InvalidTxnid = "invalid_txnid",
     InvalidConsentid = "invalid_consentid"
 }
-export declare enum Ratcr400ApplicationJsonErrorDescriptionEnum {
+export declare enum Ratcr400ApplicationJSONErrorDescriptionEnum {
     PleaseProvideAllMandatoryParameters = "Please provide all mandatory parameters",
     BadRequest = "Bad request",
     TheFormatParameterIsInvalid = "The format parameter is invalid",
-    TheTxnIdParameterMustBeInUuidFormat = "The txnId parameter must be in UUID format",
-    TheConsentIdParameterMustBeInUuidFormat = "The consentId parameter must be in UUID format"
+    TheTxnIdParameterMustBeInUUIDFormat = "The txnId parameter must be in UUID format",
+    TheConsentIdParameterMustBeInUUIDFormat = "The consentId parameter must be in UUID format"
 }
-export declare class Ratcr400ApplicationJson extends SpeakeasyBase {
-    error?: Ratcr400ApplicationJsonErrorEnum;
-    errorDescription?: Ratcr400ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Ratcr401ApplicationJsonErrorEnum {
-    InvalidAuthentication = "invalid_authentication",
-    InvalidAuthorization = "invalid_authorization"
-}
-export declare enum Ratcr401ApplicationJsonErrorDescriptionEnum {
-    AuthenticationFailed = "Authentication failed",
-    YouAreNotAuthorizedToUseThisApi = "You are not authorized to use this API"
-}
-export declare class Ratcr401ApplicationJson extends SpeakeasyBase {
-    error?: Ratcr401ApplicationJsonErrorEnum;
-    errorDescription?: Ratcr401ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Ratcr404ApplicationJsonErrorEnum {
-    RecordNotFound = "record_not_found",
-    UrlNotFound = "url_not_found"
-}
-export declare enum Ratcr404ApplicationJsonErrorDescriptionEnum {
-    NoRecordFound = "No record found",
-    YourApiUrlOrPathIsIncorrect = "Your API url or path is incorrect"
-}
-export declare class Ratcr404ApplicationJson extends SpeakeasyBase {
-    error?: Ratcr404ApplicationJsonErrorEnum;
-    errorDescription?: Ratcr404ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Ratcr500ApplicationJsonErrorEnum {
-    InternalServerError = "internal_server_error"
-}
-export declare enum Ratcr500ApplicationJsonErrorDescriptionEnum {
-    InternalServerError = "Internal server error"
-}
-export declare class Ratcr500ApplicationJson extends SpeakeasyBase {
-    error?: Ratcr500ApplicationJsonErrorEnum;
-    errorDescription?: Ratcr500ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Ratcr502ApplicationJsonErrorEnum {
-    BadGatewy = "bad_gatewy"
-}
-export declare enum Ratcr502ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
-}
-export declare class Ratcr502ApplicationJson extends SpeakeasyBase {
-    error?: Ratcr502ApplicationJsonErrorEnum;
-    errorDescription?: Ratcr502ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Ratcr503ApplicationJsonErrorEnum {
-    ServiceUnavailable = "service_unavailable"
-}
-export declare enum Ratcr503ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
-}
-export declare class Ratcr503ApplicationJson extends SpeakeasyBase {
-    error?: Ratcr503ApplicationJsonErrorEnum;
-    errorDescription?: Ratcr503ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Ratcr504ApplicationJsonErrorEnum {
-    GatewayTimeout = "gateway_timeout"
-}
-export declare enum Ratcr504ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
-}
-export declare class Ratcr504ApplicationJson extends SpeakeasyBase {
-    error?: Ratcr504ApplicationJsonErrorEnum;
-    errorDescription?: Ratcr504ApplicationJsonErrorDescriptionEnum;
-}
-export declare class RatcrRequest extends SpeakeasyBase {
-    request?: RatcrRequestBody;
-    security: RatcrSecurity;
+/**
+ * Bad request
+ */
+export declare class Ratcr400ApplicationJSON extends SpeakeasyBase {
+    error?: Ratcr400ApplicationJSONErrorEnum;
+    errorDescription?: Ratcr400ApplicationJSONErrorDescriptionEnum;
 }
 export declare class RatcrResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    ratcr400ApplicationJSONObject?: Ratcr400ApplicationJson;
-    ratcr401ApplicationJSONObject?: Ratcr401ApplicationJson;
-    ratcr404ApplicationJSONObject?: Ratcr404ApplicationJson;
-    ratcr500ApplicationJSONObject?: Ratcr500ApplicationJson;
-    ratcr502ApplicationJSONObject?: Ratcr502ApplicationJson;
-    ratcr503ApplicationJSONObject?: Ratcr503ApplicationJson;
-    ratcr504ApplicationJSONObject?: Ratcr504ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad request
+     */
+    ratcr400ApplicationJSONObject?: Ratcr400ApplicationJSON;
+    /**
+     * Unauthorized access
+     */
+    ratcr401ApplicationJSONObject?: Ratcr401ApplicationJSON;
+    /**
+     * No record found
+     */
+    ratcr404ApplicationJSONObject?: Ratcr404ApplicationJSON;
+    /**
+     * Internal server error
+     */
+    ratcr500ApplicationJSONObject?: Ratcr500ApplicationJSON;
+    /**
+     * Bad gateway
+     */
+    ratcr502ApplicationJSONObject?: Ratcr502ApplicationJSON;
+    /**
+     * Service unavailable
+     */
+    ratcr503ApplicationJSONObject?: Ratcr503ApplicationJSON;
+    /**
+     * Gateway timeout
+     */
+    ratcr504ApplicationJSONObject?: Ratcr504ApplicationJSON;
 }

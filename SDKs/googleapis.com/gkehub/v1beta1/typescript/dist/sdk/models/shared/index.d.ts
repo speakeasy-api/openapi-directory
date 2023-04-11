@@ -26,7 +26,6 @@ export * from "./operation";
 export * from "./policy";
 export * from "./resourcemanifest";
 export * from "./resourceoptions";
-export * from "./security";
 export * from "./setiampolicyrequest";
 export * from "./testiampermissionsrequest";
 export * from "./testiampermissionsresponse";

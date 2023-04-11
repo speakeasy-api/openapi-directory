@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class RegisterClientResponse extends SpeakeasyBase {
     authorizationEndpoint?: string;
     clientId?: string;

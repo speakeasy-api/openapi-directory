@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostChangeMessageVisibilityBatchActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTChangeMessageVisibilityBatchActionEnum {
     ChangeMessageVisibilityBatch = "ChangeMessageVisibilityBatch"
 }
-export declare enum PostChangeMessageVisibilityBatchVersionEnum {
+export declare enum POSTChangeMessageVisibilityBatchVersionEnum {
     TwoThousandAndTwelve1105 = "2012-11-05"
 }
-export declare class PostChangeMessageVisibilityBatchQueryParams extends SpeakeasyBase {
-    action: PostChangeMessageVisibilityBatchActionEnum;
-    version: PostChangeMessageVisibilityBatchVersionEnum;
-}
-export declare class PostChangeMessageVisibilityBatchHeaders extends SpeakeasyBase {
+export declare class POSTChangeMessageVisibilityBatchRequest extends SpeakeasyBase {
+    action: POSTChangeMessageVisibilityBatchActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTChangeMessageVisibilityBatchVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostChangeMessageVisibilityBatchHeaders extends SpeakeasyBa
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostChangeMessageVisibilityBatchRequest extends SpeakeasyBase {
-    queryParams: PostChangeMessageVisibilityBatchQueryParams;
-    headers: PostChangeMessageVisibilityBatchHeaders;
-    request?: Uint8Array;
-}
-export declare class PostChangeMessageVisibilityBatchResponse extends SpeakeasyBase {
+export declare class POSTChangeMessageVisibilityBatchResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

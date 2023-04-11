@@ -1,0 +1,7 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Represents a request for the status of Amazon SES Easy DKIM signing for an identity. For domain identities, this request also returns the DKIM tokens that are required for Easy DKIM signing, and whether Amazon SES successfully verified that these tokens were published. For more information about Easy DKIM, see the <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim.html">Amazon SES Developer Guide</a>.
+ */
+export declare class GetIdentityDkimAttributesRequest extends SpeakeasyBase {
+    identities: string[];
+}

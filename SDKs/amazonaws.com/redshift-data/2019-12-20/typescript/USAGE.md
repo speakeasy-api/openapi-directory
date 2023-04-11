@@ -1,41 +1,44 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { BatchExecuteStatementRequest, BatchExecuteStatementResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  BatchExecuteStatementRequest,
+  BatchExecuteStatementResponse,
+  BatchExecuteStatementXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    hmac: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: BatchExecuteStatementRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "RedshiftData.BatchExecuteStatement",
-  },
-  request: {
-    clusterIdentifier: "fugit",
-    database: "et",
-    dbUser: "nihil",
-    secretArn: "rerum",
+  batchExecuteStatementInput: {
+    clientToken: "corrupti",
+    clusterIdentifier: "provident",
+    database: "distinctio",
+    dbUser: "quibusdam",
+    secretArn: "unde",
     sqls: [
-      "debitis",
-      "voluptatum",
-      "et",
+      "corrupti",
+      "illum",
+      "vel",
+      "error",
     ],
-    statementName: "ut",
-    withEvent: true,
+    statementName: "deserunt",
+    withEvent: false,
+    workgroupName: "suscipit",
   },
+  xAmzAlgorithm: "iure",
+  xAmzContentSha256: "magnam",
+  xAmzCredential: "debitis",
+  xAmzDate: "ipsa",
+  xAmzSecurityToken: "delectus",
+  xAmzSignature: "tempora",
+  xAmzSignedHeaders: "suscipit",
+  xAmzTarget: BatchExecuteStatementXAmzTargetEnum.RedshiftDataBatchExecuteStatement,
 };
 
 sdk.batchExecuteStatement(req).then((res: BatchExecuteStatementResponse | AxiosError) => {

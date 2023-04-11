@@ -1,9 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AssociateRoleToGroupPathParams extends SpeakeasyBase {
-    groupId: string;
+import { AxiosResponse } from "axios";
+export declare class AssociateRoleToGroupRequestBody extends SpeakeasyBase {
+    /**
+     * The ARN of the role you wish to associate with this group. The existence of the role is not validated.
+     */
+    roleArn: string;
 }
-export declare class AssociateRoleToGroupHeaders extends SpeakeasyBase {
+export declare class AssociateRoleToGroupRequest extends SpeakeasyBase {
+    /**
+     * The ID of the Greengrass group.
+     */
+    groupId: string;
+    requestBody: AssociateRoleToGroupRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,18 +21,20 @@ export declare class AssociateRoleToGroupHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class AssociateRoleToGroupRequestBody extends SpeakeasyBase {
-    roleArn: string;
-}
-export declare class AssociateRoleToGroupRequest extends SpeakeasyBase {
-    pathParams: AssociateRoleToGroupPathParams;
-    headers: AssociateRoleToGroupHeaders;
-    request: AssociateRoleToGroupRequestBody;
-}
 export declare class AssociateRoleToGroupResponse extends SpeakeasyBase {
+    /**
+     * Success
+     */
     associateRoleToGroupResponse?: shared.AssociateRoleToGroupResponse;
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

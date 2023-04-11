@@ -4,7 +4,7 @@ import { RoleLastUsed } from "./rolelastused";
 import { Tag } from "./tag";
 /**
  * Contains information about an IAM role. This structure is returned as a response element in several API operations that interact with roles.
-**/
+ */
 export declare class Role extends SpeakeasyBase {
     arn: string;
     assumeRolePolicyDocument?: string;

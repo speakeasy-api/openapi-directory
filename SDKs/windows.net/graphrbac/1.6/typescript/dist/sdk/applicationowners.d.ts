@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class ApplicationOwners {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,17 +9,18 @@ export declare class ApplicationOwners {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * applicationsAddOwner - Add an owner to an application.
-    **/
+     * Add an owner to an application.
+     */
     applicationsAddOwner(req: operations.ApplicationsAddOwnerRequest, config?: AxiosRequestConfig): Promise<operations.ApplicationsAddOwnerResponse>;
     /**
-     * applicationsListOwners - Directory objects that are owners of the application.
+     * Directory objects that are owners of the application.
      *
+     * @remarks
      * The owners are a set of non-admin users who are allowed to modify this object.
-    **/
+     */
     applicationsListOwners(req: operations.ApplicationsListOwnersRequest, config?: AxiosRequestConfig): Promise<operations.ApplicationsListOwnersResponse>;
     /**
-     * applicationsRemoveOwner - Remove a member from owners.
-    **/
+     * Remove a member from owners.
+     */
     applicationsRemoveOwner(req: operations.ApplicationsRemoveOwnerRequest, config?: AxiosRequestConfig): Promise<operations.ApplicationsRemoveOwnerResponse>;
 }

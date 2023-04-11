@@ -1,0 +1,13 @@
+export declare enum AggregationTypeEnum {
+    FindingType = "FINDING_TYPE",
+    Package = "PACKAGE",
+    Title = "TITLE",
+    Repository = "REPOSITORY",
+    Ami = "AMI",
+    AwsEc2Instance = "AWS_EC2_INSTANCE",
+    AwsEcrContainer = "AWS_ECR_CONTAINER",
+    ImageLayer = "IMAGE_LAYER",
+    Account = "ACCOUNT",
+    AwsLambdaFunction = "AWS_LAMBDA_FUNCTION",
+    LambdaLayer = "LAMBDA_LAYER"
+}

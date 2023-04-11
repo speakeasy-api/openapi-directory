@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class VideosTags {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,27 +9,27 @@ export declare class VideosTags {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * addVideoTag - Add a specific tag to a video
-    **/
-    addVideoTag(req: operations.AddVideoTagRequest, config?: AxiosRequestConfig): Promise<operations.AddVideoTagResponse>;
+     * Add a specific tag to a video
+     */
+    addVideoTag(req: operations.AddVideoTagRequest, security: operations.AddVideoTagSecurity, config?: AxiosRequestConfig): Promise<operations.AddVideoTagResponse>;
     /**
-     * addVideoTags - Add a list of tags to a video
-    **/
-    addVideoTags(req: operations.AddVideoTagsRequest, config?: AxiosRequestConfig): Promise<operations.AddVideoTagsResponse>;
+     * Add a list of tags to a video
+     */
+    addVideoTags(req: operations.AddVideoTagsRequest, security: operations.AddVideoTagsSecurity, config?: AxiosRequestConfig): Promise<operations.AddVideoTagsResponse>;
     /**
-     * checkVideoForTag - Check if a tag has been added to a video
-    **/
+     * Check if a tag has been added to a video
+     */
     checkVideoForTag(req: operations.CheckVideoForTagRequest, config?: AxiosRequestConfig): Promise<operations.CheckVideoForTagResponse>;
     /**
-     * deleteVideoTag - Remove a tag from a video
-    **/
-    deleteVideoTag(req: operations.DeleteVideoTagRequest, config?: AxiosRequestConfig): Promise<operations.DeleteVideoTagResponse>;
+     * Remove a tag from a video
+     */
+    deleteVideoTag(req: operations.DeleteVideoTagRequest, security: operations.DeleteVideoTagSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteVideoTagResponse>;
     /**
-     * getVideoTags - Get all the tags of a video
-    **/
+     * Get all the tags of a video
+     */
     getVideoTags(req: operations.GetVideoTagsRequest, config?: AxiosRequestConfig): Promise<operations.GetVideoTagsResponse>;
     /**
-     * getVideosWithTag - Get all the videos with a specific tag
-    **/
+     * Get all the videos with a specific tag
+     */
     getVideosWithTag(req: operations.GetVideosWithTagRequest, config?: AxiosRequestConfig): Promise<operations.GetVideosWithTagResponse>;
 }

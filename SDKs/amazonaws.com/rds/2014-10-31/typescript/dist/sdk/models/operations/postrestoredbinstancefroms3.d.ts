@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostRestoreDbInstanceFromS3ActionEnum {
-    RestoreDbInstanceFromS3 = "RestoreDBInstanceFromS3"
+import { AxiosResponse } from "axios";
+export declare enum POSTRestoreDBInstanceFromS3ActionEnum {
+    RestoreDBInstanceFromS3 = "RestoreDBInstanceFromS3"
 }
-export declare enum PostRestoreDbInstanceFromS3VersionEnum {
+export declare enum POSTRestoreDBInstanceFromS3VersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class PostRestoreDbInstanceFromS3QueryParams extends SpeakeasyBase {
-    action: PostRestoreDbInstanceFromS3ActionEnum;
-    version: PostRestoreDbInstanceFromS3VersionEnum;
-}
-export declare class PostRestoreDbInstanceFromS3Headers extends SpeakeasyBase {
+export declare class POSTRestoreDBInstanceFromS3Request extends SpeakeasyBase {
+    action: POSTRestoreDBInstanceFromS3ActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTRestoreDBInstanceFromS3VersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostRestoreDbInstanceFromS3Headers extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostRestoreDbInstanceFromS3Request extends SpeakeasyBase {
-    queryParams: PostRestoreDbInstanceFromS3QueryParams;
-    headers: PostRestoreDbInstanceFromS3Headers;
-    request?: Uint8Array;
-}
-export declare class PostRestoreDbInstanceFromS3Response extends SpeakeasyBase {
+export declare class POSTRestoreDBInstanceFromS3Response extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

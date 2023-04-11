@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetGetTemplateActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETGETTemplateActionEnum {
     GetTemplate = "GetTemplate"
 }
-export declare enum GetGetTemplateVersionEnum {
+export declare enum GETGETTemplateVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetGetTemplateQueryParams extends SpeakeasyBase {
-    action: GetGetTemplateActionEnum;
+export declare class GETGETTemplateRequest extends SpeakeasyBase {
+    action: GETGETTemplateActionEnum;
+    /**
+     * The name of the template you want to retrieve.
+     */
     templateName: string;
-    version: GetGetTemplateVersionEnum;
-}
-export declare class GetGetTemplateHeaders extends SpeakeasyBase {
+    version: GETGETTemplateVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetGetTemplateHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetGetTemplateRequest extends SpeakeasyBase {
-    queryParams: GetGetTemplateQueryParams;
-    headers: GetGetTemplateHeaders;
-}
-export declare class GetGetTemplateResponse extends SpeakeasyBase {
+export declare class GETGETTemplateResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

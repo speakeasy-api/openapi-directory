@@ -1,4 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
+/**
+ * The file format name extension used to represent the geomark download.
+ */
 export declare enum GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionFileFormatExtensionEnum {
     Json = "json",
     Xml = "xml",
@@ -8,20 +12,38 @@ export declare enum GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionFileFormat
     Shpz = "shpz",
     Geojson = "geojson",
     Gml = "gml",
+    Gpkg = "gpkg",
     Wkt = "wkt"
 }
-export declare class GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionPathParams extends SpeakeasyBase {
-    fileFormatExtension: GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionFileFormatExtensionEnum;
-    geomarkId: string;
-}
-export declare class GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionQueryParams extends SpeakeasyBase {
-    srid?: number;
+/**
+ * The srid of the coordinate system the geometry should be converted to.
+ */
+export declare enum GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionSridEnum {
+    FourThousandThreeHundredAndTwentySix = "4326",
+    ThreeThousandAndFive = "3005",
+    ThreeThousandEightHundredAndFiftySeven = "3857",
+    TwentySixThousandNineHundredAndSeven = "26907",
+    TwentySixThousandNineHundredAndEight = "26908",
+    TwentySixThousandNineHundredAndNine = "26909",
+    TwentySixThousandNineHundredAndTen = "26910",
+    TwentySixThousandNineHundredAndEleven = "26911"
 }
 export declare class GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionRequest extends SpeakeasyBase {
-    pathParams: GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionPathParams;
-    queryParams: GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionQueryParams;
+    /**
+     * The file format name extension used to represent the geomark download.
+     */
+    fileFormatExtension: GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionFileFormatExtensionEnum;
+    /**
+     * The unique identifier for the geomark
+     */
+    geomarkId: string;
+    /**
+     * The srid of the coordinate system the geometry should be converted to.
+     */
+    srid?: GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionSridEnum;
 }
 export declare class GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

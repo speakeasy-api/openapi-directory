@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteSnapshotActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteSnapshotActionEnum {
     DeleteSnapshot = "DeleteSnapshot"
 }
-export declare enum GetDeleteSnapshotVersionEnum {
+export declare enum GETDeleteSnapshotVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetDeleteSnapshotQueryParams extends SpeakeasyBase {
-    action: GetDeleteSnapshotActionEnum;
+export declare class GETDeleteSnapshotRequest extends SpeakeasyBase {
+    action: GETDeleteSnapshotActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
+    /**
+     * The ID of the EBS snapshot.
+     */
     snapshotId: string;
-    version: GetDeleteSnapshotVersionEnum;
-}
-export declare class GetDeleteSnapshotHeaders extends SpeakeasyBase {
+    version: GETDeleteSnapshotVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,11 +25,8 @@ export declare class GetDeleteSnapshotHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteSnapshotRequest extends SpeakeasyBase {
-    queryParams: GetDeleteSnapshotQueryParams;
-    headers: GetDeleteSnapshotHeaders;
-}
-export declare class GetDeleteSnapshotResponse extends SpeakeasyBase {
+export declare class GETDeleteSnapshotResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

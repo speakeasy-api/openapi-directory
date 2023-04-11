@@ -2,6 +2,9 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { Deal } from "./deal";
 import { DealPausingInfo } from "./dealpausinginfo";
 import { RtbMetrics } from "./rtbmetrics";
+/**
+ * Serving status of the deal.
+ */
 export declare enum FinalizedDealDealServingStatusEnum {
     DealServingStatusUnspecified = "DEAL_SERVING_STATUS_UNSPECIFIED",
     Active = "ACTIVE",
@@ -11,12 +14,30 @@ export declare enum FinalizedDealDealServingStatusEnum {
 }
 /**
  * A finalized deal is a snapshot of the deal when both buyer and seller accept the deal. The buyer or seller can update the deal after it's been finalized and renegotiate on the deal targeting, terms and other fields, while at the same time the finalized snapshot of the deal can still be retrieved using this API. The finalized deal contains a copy of the deal as it existed when most recently finalized, as well as fields related to deal serving such as pause/resume status, RTB metrics, and more.
-**/
+ */
 export declare class FinalizedDeal extends SpeakeasyBase {
+    /**
+     * A deal represents a segment of inventory for displaying ads that contains the terms and targeting information that is used for serving as well as the deal stats and status. Note: A proposal may contain multiple deals.
+     */
     deal?: Deal;
+    /**
+     * Information related to deal pausing.
+     */
     dealPausingInfo?: DealPausingInfo;
+    /**
+     * Serving status of the deal.
+     */
     dealServingStatus?: FinalizedDealDealServingStatusEnum;
+    /**
+     * The resource name of the finalized deal. Format: `buyers/{accountId}/finalizeddeals/{finalizedDealId}`
+     */
     name?: string;
+    /**
+     * Whether the Programmatic Guaranteed deal is ready for serving.
+     */
     readyToServe?: boolean;
+    /**
+     * Real-time bidding metrics. For what each metric means refer to [Report metrics](https://support.google.com/adxbuyer/answer/6115195#report-metrics)
+     */
     rtbMetrics?: RtbMetrics;
 }

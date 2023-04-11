@@ -1,25 +1,41 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PrivateProjectNotesListPathParams extends SpeakeasyBase {
-    projectId: number;
-}
-export declare class PrivateProjectNotesListQueryParams extends SpeakeasyBase {
-    limit?: number;
-    offset?: number;
-    page?: number;
-    pageSize?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class PrivateProjectNotesListSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class PrivateProjectNotesListRequest extends SpeakeasyBase {
-    pathParams: PrivateProjectNotesListPathParams;
-    queryParams: PrivateProjectNotesListQueryParams;
-    security: PrivateProjectNotesListSecurity;
+    /**
+     * Number of results included on a page. Used for pagination with query
+     */
+    limit?: number;
+    /**
+     * Where to start the listing(the offset of the first result). Used for pagination with limit
+     */
+    offset?: number;
+    /**
+     * Page number. Used for pagination with page_size
+     */
+    page?: number;
+    /**
+     * The number of results included on a page. Used for pagination with page
+     */
+    pageSize?: number;
+    /**
+     * Project unique identifier
+     */
+    projectId: number;
 }
 export declare class PrivateProjectNotesListResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Forbidden
+     */
     errorMessage?: shared.ErrorMessage;
+    /**
+     * OK. List of project notes
+     */
     projectNotes?: shared.ProjectNote[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

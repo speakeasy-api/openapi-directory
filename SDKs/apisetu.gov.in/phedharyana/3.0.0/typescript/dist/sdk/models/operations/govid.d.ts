@@ -1,115 +1,170 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class GovidSecurity extends SpeakeasyBase {
+    apiKey: string;
+    clientId: string;
+}
 export declare class GovidRequestBodyCertificateParameters extends SpeakeasyBase {
+    /**
+     * Unique Code
+     */
     uniqueid: string;
 }
+/**
+ * The format of the certificate in response.
+ */
 export declare enum GovidRequestBodyFormatEnum {
     Pdf = "pdf"
 }
+/**
+ * Request format
+ */
 export declare class GovidRequestBody extends SpeakeasyBase {
     certificateParameters?: GovidRequestBodyCertificateParameters;
-    consentArtifact?: any;
+    consentArtifact?: shared.ConsentArtifactSchema;
+    /**
+     * The format of the certificate in response.
+     */
     format: GovidRequestBodyFormatEnum;
+    /**
+     * A unique transaction id for this request in UUID format. It is used for tracking the request.
+     */
     txnId: string;
 }
-export declare class GovidSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
-    clientId: shared.SchemeClientId;
+export declare enum Govid504ApplicationJSONErrorEnum {
+    GatewayTimeout = "gateway_timeout"
 }
-export declare enum Govid400ApplicationJsonErrorEnum {
+export declare enum Govid504ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
+}
+/**
+ * Gateway timeout
+ */
+export declare class Govid504ApplicationJSON extends SpeakeasyBase {
+    error?: Govid504ApplicationJSONErrorEnum;
+    errorDescription?: Govid504ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Govid503ApplicationJSONErrorEnum {
+    ServiceUnavailable = "service_unavailable"
+}
+export declare enum Govid503ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
+}
+/**
+ * Service unavailable
+ */
+export declare class Govid503ApplicationJSON extends SpeakeasyBase {
+    error?: Govid503ApplicationJSONErrorEnum;
+    errorDescription?: Govid503ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Govid502ApplicationJSONErrorEnum {
+    BadGatewy = "bad_gatewy"
+}
+export declare enum Govid502ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
+}
+/**
+ * Bad gateway
+ */
+export declare class Govid502ApplicationJSON extends SpeakeasyBase {
+    error?: Govid502ApplicationJSONErrorEnum;
+    errorDescription?: Govid502ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Govid500ApplicationJSONErrorEnum {
+    InternalServerError = "internal_server_error"
+}
+export declare enum Govid500ApplicationJSONErrorDescriptionEnum {
+    InternalServerError = "Internal server error"
+}
+/**
+ * Internal server error
+ */
+export declare class Govid500ApplicationJSON extends SpeakeasyBase {
+    error?: Govid500ApplicationJSONErrorEnum;
+    errorDescription?: Govid500ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Govid404ApplicationJSONErrorEnum {
+    RecordNotFound = "record_not_found",
+    UrlNotFound = "url_not_found"
+}
+export declare enum Govid404ApplicationJSONErrorDescriptionEnum {
+    NoRecordFound = "No record found",
+    YourAPIUrlOrPathIsIncorrect = "Your API url or path is incorrect"
+}
+/**
+ * No record found
+ */
+export declare class Govid404ApplicationJSON extends SpeakeasyBase {
+    error?: Govid404ApplicationJSONErrorEnum;
+    errorDescription?: Govid404ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Govid401ApplicationJSONErrorEnum {
+    InvalidAuthentication = "invalid_authentication",
+    InvalidAuthorization = "invalid_authorization"
+}
+export declare enum Govid401ApplicationJSONErrorDescriptionEnum {
+    AuthenticationFailed = "Authentication failed",
+    YouAreNotAuthorizedToUseThisAPI = "You are not authorized to use this API"
+}
+/**
+ * Unauthorized access
+ */
+export declare class Govid401ApplicationJSON extends SpeakeasyBase {
+    error?: Govid401ApplicationJSONErrorEnum;
+    errorDescription?: Govid401ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Govid400ApplicationJSONErrorEnum {
     MissingParameter = "missing_parameter",
     InvalidParameter = "invalid_parameter",
     InvalidFormat = "invalid_format",
     InvalidTxnid = "invalid_txnid",
     InvalidConsentid = "invalid_consentid"
 }
-export declare enum Govid400ApplicationJsonErrorDescriptionEnum {
+export declare enum Govid400ApplicationJSONErrorDescriptionEnum {
     PleaseProvideAllMandatoryParameters = "Please provide all mandatory parameters",
     BadRequest = "Bad request",
     TheFormatParameterIsInvalid = "The format parameter is invalid",
-    TheTxnIdParameterMustBeInUuidFormat = "The txnId parameter must be in UUID format",
-    TheConsentIdParameterMustBeInUuidFormat = "The consentId parameter must be in UUID format"
+    TheTxnIdParameterMustBeInUUIDFormat = "The txnId parameter must be in UUID format",
+    TheConsentIdParameterMustBeInUUIDFormat = "The consentId parameter must be in UUID format"
 }
-export declare class Govid400ApplicationJson extends SpeakeasyBase {
-    error?: Govid400ApplicationJsonErrorEnum;
-    errorDescription?: Govid400ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Govid401ApplicationJsonErrorEnum {
-    InvalidAuthentication = "invalid_authentication",
-    InvalidAuthorization = "invalid_authorization"
-}
-export declare enum Govid401ApplicationJsonErrorDescriptionEnum {
-    AuthenticationFailed = "Authentication failed",
-    YouAreNotAuthorizedToUseThisApi = "You are not authorized to use this API"
-}
-export declare class Govid401ApplicationJson extends SpeakeasyBase {
-    error?: Govid401ApplicationJsonErrorEnum;
-    errorDescription?: Govid401ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Govid404ApplicationJsonErrorEnum {
-    RecordNotFound = "record_not_found",
-    UrlNotFound = "url_not_found"
-}
-export declare enum Govid404ApplicationJsonErrorDescriptionEnum {
-    NoRecordFound = "No record found",
-    YourApiUrlOrPathIsIncorrect = "Your API url or path is incorrect"
-}
-export declare class Govid404ApplicationJson extends SpeakeasyBase {
-    error?: Govid404ApplicationJsonErrorEnum;
-    errorDescription?: Govid404ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Govid500ApplicationJsonErrorEnum {
-    InternalServerError = "internal_server_error"
-}
-export declare enum Govid500ApplicationJsonErrorDescriptionEnum {
-    InternalServerError = "Internal server error"
-}
-export declare class Govid500ApplicationJson extends SpeakeasyBase {
-    error?: Govid500ApplicationJsonErrorEnum;
-    errorDescription?: Govid500ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Govid502ApplicationJsonErrorEnum {
-    BadGatewy = "bad_gatewy"
-}
-export declare enum Govid502ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
-}
-export declare class Govid502ApplicationJson extends SpeakeasyBase {
-    error?: Govid502ApplicationJsonErrorEnum;
-    errorDescription?: Govid502ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Govid503ApplicationJsonErrorEnum {
-    ServiceUnavailable = "service_unavailable"
-}
-export declare enum Govid503ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
-}
-export declare class Govid503ApplicationJson extends SpeakeasyBase {
-    error?: Govid503ApplicationJsonErrorEnum;
-    errorDescription?: Govid503ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Govid504ApplicationJsonErrorEnum {
-    GatewayTimeout = "gateway_timeout"
-}
-export declare enum Govid504ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
-}
-export declare class Govid504ApplicationJson extends SpeakeasyBase {
-    error?: Govid504ApplicationJsonErrorEnum;
-    errorDescription?: Govid504ApplicationJsonErrorDescriptionEnum;
-}
-export declare class GovidRequest extends SpeakeasyBase {
-    request?: GovidRequestBody;
-    security: GovidSecurity;
+/**
+ * Bad request
+ */
+export declare class Govid400ApplicationJSON extends SpeakeasyBase {
+    error?: Govid400ApplicationJSONErrorEnum;
+    errorDescription?: Govid400ApplicationJSONErrorDescriptionEnum;
 }
 export declare class GovidResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    govid400ApplicationJSONObject?: Govid400ApplicationJson;
-    govid401ApplicationJSONObject?: Govid401ApplicationJson;
-    govid404ApplicationJSONObject?: Govid404ApplicationJson;
-    govid500ApplicationJSONObject?: Govid500ApplicationJson;
-    govid502ApplicationJSONObject?: Govid502ApplicationJson;
-    govid503ApplicationJSONObject?: Govid503ApplicationJson;
-    govid504ApplicationJSONObject?: Govid504ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad request
+     */
+    govid400ApplicationJSONObject?: Govid400ApplicationJSON;
+    /**
+     * Unauthorized access
+     */
+    govid401ApplicationJSONObject?: Govid401ApplicationJSON;
+    /**
+     * No record found
+     */
+    govid404ApplicationJSONObject?: Govid404ApplicationJSON;
+    /**
+     * Internal server error
+     */
+    govid500ApplicationJSONObject?: Govid500ApplicationJSON;
+    /**
+     * Bad gateway
+     */
+    govid502ApplicationJSONObject?: Govid502ApplicationJSON;
+    /**
+     * Service unavailable
+     */
+    govid503ApplicationJSONObject?: Govid503ApplicationJSON;
+    /**
+     * Gateway timeout
+     */
+    govid504ApplicationJSONObject?: Govid504ApplicationJSON;
 }

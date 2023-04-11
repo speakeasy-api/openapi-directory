@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class BeezUpCommonSuccessSummary extends SpeakeasyBase {
+export declare class BeezUPCommonSuccessSummary extends SpeakeasyBase {
     objectName?: string;
     propertyName?: string;
     propertyValue?: string;

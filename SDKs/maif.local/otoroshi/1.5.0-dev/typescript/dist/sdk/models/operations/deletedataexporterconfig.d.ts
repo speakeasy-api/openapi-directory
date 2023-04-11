@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteDataExporterConfigPathParams extends SpeakeasyBase {
-    dataExporterConfigId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteDataExporterConfigSecurity extends SpeakeasyBase {
-    otoroshiAuth: shared.SchemeOtoroshiAuth;
+    password: string;
+    username: string;
 }
 export declare class DeleteDataExporterConfigRequest extends SpeakeasyBase {
-    pathParams: DeleteDataExporterConfigPathParams;
-    security: DeleteDataExporterConfigSecurity;
+    /**
+     * The data exporter config id
+     */
+    dataExporterConfigId: string;
 }
 export declare class DeleteDataExporterConfigResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful operation
+     */
     deleted?: shared.Deleted;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

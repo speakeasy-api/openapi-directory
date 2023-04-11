@@ -1,27 +1,47 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetProjectUrlsAggsPathParams extends SpeakeasyBase {
-    projectSlug: string;
-    username: string;
-}
+import { AxiosResponse } from "axios";
+/**
+ * Analysis context to execute the queries
+ */
 export declare enum GetProjectUrlsAggsAreaEnum {
     Current = "current",
     Disappeared = "disappeared",
     New = "new"
 }
-export declare class GetProjectUrlsAggsQueryParams extends SpeakeasyBase {
-    area?: GetProjectUrlsAggsAreaEnum;
-    lastAnalysisSlug?: string;
-    nbAnalyses?: number;
-}
 export declare class GetProjectUrlsAggsRequest extends SpeakeasyBase {
-    pathParams: GetProjectUrlsAggsPathParams;
-    queryParams: GetProjectUrlsAggsQueryParams;
-    request?: shared.UrlsAggsQuery[];
+    requestBody?: shared.UrlsAggsQuery[];
+    /**
+     * Analysis context to execute the queries
+     */
+    area?: GetProjectUrlsAggsAreaEnum;
+    /**
+     * Last analysis on the trend
+     */
+    lastAnalysisSlug?: string;
+    /**
+     * Max number of analysis to return
+     */
+    nbAnalyses?: number;
+    /**
+     * Project's identifier
+     */
+    projectSlug: string;
+    /**
+     * User's identifier
+     */
+    username: string;
 }
 export declare class GetProjectUrlsAggsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful operation
+     */
     default?: Record<string, any>;
+    /**
+     * error payload
+     */
     defaultPayload?: shared.DefaultPayload;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

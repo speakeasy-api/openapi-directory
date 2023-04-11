@@ -1,17 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class AddVideoEmbedPresetPathParams extends SpeakeasyBase {
-    presetId: number;
-    videoId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class AddVideoEmbedPresetSecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
+    oauth2: string;
 }
 export declare class AddVideoEmbedPresetRequest extends SpeakeasyBase {
-    pathParams: AddVideoEmbedPresetPathParams;
-    security: AddVideoEmbedPresetSecurity;
+    /**
+     * The ID of the preset.
+     */
+    presetId: number;
+    /**
+     * The ID of the video.
+     */
+    videoId: number;
 }
 export declare class AddVideoEmbedPresetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

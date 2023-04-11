@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDisassociateGlobalReplicationGroupActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDisassociateGlobalReplicationGroupActionEnum {
     DisassociateGlobalReplicationGroup = "DisassociateGlobalReplicationGroup"
 }
-export declare enum PostDisassociateGlobalReplicationGroupVersionEnum {
+export declare enum POSTDisassociateGlobalReplicationGroupVersionEnum {
     TwoThousandAndFifteen0202 = "2015-02-02"
 }
-export declare class PostDisassociateGlobalReplicationGroupQueryParams extends SpeakeasyBase {
-    action: PostDisassociateGlobalReplicationGroupActionEnum;
-    version: PostDisassociateGlobalReplicationGroupVersionEnum;
-}
-export declare class PostDisassociateGlobalReplicationGroupHeaders extends SpeakeasyBase {
+export declare class POSTDisassociateGlobalReplicationGroupRequest extends SpeakeasyBase {
+    action: POSTDisassociateGlobalReplicationGroupActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDisassociateGlobalReplicationGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDisassociateGlobalReplicationGroupHeaders extends Speak
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDisassociateGlobalReplicationGroupRequest extends SpeakeasyBase {
-    queryParams: PostDisassociateGlobalReplicationGroupQueryParams;
-    headers: PostDisassociateGlobalReplicationGroupHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDisassociateGlobalReplicationGroupResponse extends SpeakeasyBase {
+export declare class POSTDisassociateGlobalReplicationGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

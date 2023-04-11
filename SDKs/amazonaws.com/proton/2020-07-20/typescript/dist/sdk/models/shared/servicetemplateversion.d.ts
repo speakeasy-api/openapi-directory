@@ -1,9 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { CompatibleEnvironmentTemplate } from "./compatibleenvironmenttemplate";
+import { ServiceTemplateSupportedComponentSourceTypeEnum } from "./servicetemplatesupportedcomponentsourcetypeenum";
 import { TemplateVersionStatusEnum } from "./templateversionstatusenum";
 /**
- * The version of a service template detail data.
-**/
+ * Detailed data of an Proton service template version resource.
+ */
 export declare class ServiceTemplateVersion extends SpeakeasyBase {
     arn: string;
     compatibleEnvironmentTemplates: CompatibleEnvironmentTemplate[];
@@ -16,5 +17,6 @@ export declare class ServiceTemplateVersion extends SpeakeasyBase {
     schema?: string;
     status: TemplateVersionStatusEnum;
     statusMessage?: string;
+    supportedComponentSources?: ServiceTemplateSupportedComponentSourceTypeEnum[];
     templateName: string;
 }

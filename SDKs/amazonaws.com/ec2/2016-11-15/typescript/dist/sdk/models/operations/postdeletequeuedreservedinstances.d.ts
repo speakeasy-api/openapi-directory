@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteQueuedReservedInstancesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteQueuedReservedInstancesActionEnum {
     DeleteQueuedReservedInstances = "DeleteQueuedReservedInstances"
 }
-export declare enum PostDeleteQueuedReservedInstancesVersionEnum {
+export declare enum POSTDeleteQueuedReservedInstancesVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDeleteQueuedReservedInstancesQueryParams extends SpeakeasyBase {
-    action: PostDeleteQueuedReservedInstancesActionEnum;
-    version: PostDeleteQueuedReservedInstancesVersionEnum;
-}
-export declare class PostDeleteQueuedReservedInstancesHeaders extends SpeakeasyBase {
+export declare class POSTDeleteQueuedReservedInstancesRequest extends SpeakeasyBase {
+    action: POSTDeleteQueuedReservedInstancesActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteQueuedReservedInstancesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteQueuedReservedInstancesHeaders extends SpeakeasyB
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteQueuedReservedInstancesRequest extends SpeakeasyBase {
-    queryParams: PostDeleteQueuedReservedInstancesQueryParams;
-    headers: PostDeleteQueuedReservedInstancesHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteQueuedReservedInstancesResponse extends SpeakeasyBase {
+export declare class POSTDeleteQueuedReservedInstancesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

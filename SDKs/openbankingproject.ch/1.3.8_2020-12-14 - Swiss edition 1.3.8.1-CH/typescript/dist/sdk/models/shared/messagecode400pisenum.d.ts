@@ -1,4 +1,7 @@
-export declare enum MessageCode400PisEnum {
+/**
+ * Message codes defined for PIS for HTTP Error code 400 (BAD_REQUEST).
+ */
+export declare enum MessageCode400PISEnum {
     FormatError = "FORMAT_ERROR",
     ParameterNotConsistent = "PARAMETER_NOT_CONSISTENT",
     ParameterNotSupported = "PARAMETER_NOT_SUPPORTED",

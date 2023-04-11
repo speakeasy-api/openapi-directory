@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Information about a group version.
-**/
+ */
 export declare class GroupVersion extends SpeakeasyBase {
     connectorDefinitionVersionArn?: string;
     coreDefinitionVersionArn?: string;

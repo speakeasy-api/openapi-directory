@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostSetLoadBalancerListenerSslCertificateActionEnum {
-    SetLoadBalancerListenerSslCertificate = "SetLoadBalancerListenerSSLCertificate"
+import { AxiosResponse } from "axios";
+export declare enum POSTSetLoadBalancerListenerSSLCertificateActionEnum {
+    SetLoadBalancerListenerSSLCertificate = "SetLoadBalancerListenerSSLCertificate"
 }
-export declare enum PostSetLoadBalancerListenerSslCertificateVersionEnum {
+export declare enum POSTSetLoadBalancerListenerSSLCertificateVersionEnum {
     TwoThousandAndTwelve0601 = "2012-06-01"
 }
-export declare class PostSetLoadBalancerListenerSslCertificateQueryParams extends SpeakeasyBase {
-    action: PostSetLoadBalancerListenerSslCertificateActionEnum;
-    version: PostSetLoadBalancerListenerSslCertificateVersionEnum;
-}
-export declare class PostSetLoadBalancerListenerSslCertificateHeaders extends SpeakeasyBase {
+export declare class POSTSetLoadBalancerListenerSSLCertificateRequest extends SpeakeasyBase {
+    action: POSTSetLoadBalancerListenerSSLCertificateActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTSetLoadBalancerListenerSSLCertificateVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostSetLoadBalancerListenerSslCertificateHeaders extends Sp
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostSetLoadBalancerListenerSslCertificateRequest extends SpeakeasyBase {
-    queryParams: PostSetLoadBalancerListenerSslCertificateQueryParams;
-    headers: PostSetLoadBalancerListenerSslCertificateHeaders;
-    request?: Uint8Array;
-}
-export declare class PostSetLoadBalancerListenerSslCertificateResponse extends SpeakeasyBase {
+export declare class POSTSetLoadBalancerListenerSSLCertificateResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

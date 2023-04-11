@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Sites {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +9,7 @@ export declare class Sites {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * adexperiencereportSitesGet - Gets a site's Ad Experience Report summary.
-    **/
+     * Gets a site's Ad Experience Report summary.
+     */
     adexperiencereportSitesGet(req: operations.AdexperiencereportSitesGetRequest, config?: AxiosRequestConfig): Promise<operations.AdexperiencereportSitesGetResponse>;
 }

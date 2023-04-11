@@ -1,0 +1,83 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
+export declare class UpdateNetworkWebhooksPayloadTemplateRequestBodyHeaders extends SpeakeasyBase {
+    /**
+     * The name of the header template
+     */
+    name?: string;
+    /**
+     * The liquid template for the headers
+     */
+    template?: string;
+}
+export declare class UpdateNetworkWebhooksPayloadTemplateRequestBody extends SpeakeasyBase {
+    /**
+     * The liquid template used for the body of the webhook message.
+     */
+    body?: string;
+    /**
+     * A file containing liquid template used for the body of the webhook message.
+     */
+    bodyFile?: string;
+    /**
+     * The liquid template used with the webhook headers.
+     */
+    headers?: UpdateNetworkWebhooksPayloadTemplateRequestBodyHeaders[];
+    /**
+     * A file containing the liquid template used with the webhook headers.
+     */
+    headersFile?: string;
+    /**
+     * The name of the template
+     */
+    name?: string;
+}
+export declare class UpdateNetworkWebhooksPayloadTemplateRequest extends SpeakeasyBase {
+    requestBody?: UpdateNetworkWebhooksPayloadTemplateRequestBody;
+    networkId: string;
+    payloadTemplateId: string;
+}
+export declare class UpdateNetworkWebhooksPayloadTemplate200ApplicationJSONHeaders extends SpeakeasyBase {
+    /**
+     * The name of the header attribute
+     */
+    name?: string;
+    /**
+     * The value returned in the header attribute, in liquid template
+     */
+    template?: string;
+}
+/**
+ * Successful operation
+ */
+export declare class UpdateNetworkWebhooksPayloadTemplate200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * The body of the payload template, in liquid template
+     */
+    body?: string;
+    /**
+     * The payload template headers, will be rendered as a key-value pair in the webhook.
+     */
+    headers?: UpdateNetworkWebhooksPayloadTemplate200ApplicationJSONHeaders[];
+    /**
+     * The name of the payload template
+     */
+    name?: string;
+    /**
+     * Webhook payload template Id
+     */
+    payloadTemplateId?: string;
+    /**
+     * The type of the payload template
+     */
+    type?: string;
+}
+export declare class UpdateNetworkWebhooksPayloadTemplateResponse extends SpeakeasyBase {
+    contentType: string;
+    statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful operation
+     */
+    updateNetworkWebhooksPayloadTemplate200ApplicationJSONObject?: UpdateNetworkWebhooksPayloadTemplate200ApplicationJSON;
+}

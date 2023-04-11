@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class WritableInventoryItemInput extends SpeakeasyBase {
+    /**
+     * A unique tag used to identify this item
+     */
     assetTag?: string;
     description?: string;
     device: number;

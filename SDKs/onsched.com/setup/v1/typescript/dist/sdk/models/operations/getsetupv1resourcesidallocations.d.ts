@@ -1,19 +1,34 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetSetupV1ResourcesIdAllocationsPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class GetSetupV1ResourcesIdAllocationsQueryParams extends SpeakeasyBase {
-    endDate?: Date;
-    limit?: number;
-    offset?: number;
-    startDate?: Date;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class GetSetupV1ResourcesIdAllocationsRequest extends SpeakeasyBase {
-    pathParams: GetSetupV1ResourcesIdAllocationsPathParams;
-    queryParams: GetSetupV1ResourcesIdAllocationsQueryParams;
+    /**
+     * yyyy-mm-dd, filter on/before endDate
+     */
+    endDate?: Date;
+    /**
+     * id of resource to list allocations for
+     */
+    id: string;
+    /**
+     * Page limit default 20, max 100
+     */
+    limit?: number;
+    /**
+     * Starting row of page, default 0
+     */
+    offset?: number;
+    /**
+     * yyyy-mm-dd, filter allocations on/after startDate
+     */
+    startDate?: Date;
 }
 export declare class GetSetupV1ResourcesIdAllocationsResponse extends SpeakeasyBase {
     contentType: string;
-    resourceAllocationListViewModel?: Record<string, any>;
+    /**
+     * resource allocation objects
+     */
+    resourceAllocationListViewModel?: shared.ResourceAllocationListViewModel;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

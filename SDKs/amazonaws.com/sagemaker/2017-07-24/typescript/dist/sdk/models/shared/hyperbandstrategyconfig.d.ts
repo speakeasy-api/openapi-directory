@@ -1,0 +1,8 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The configuration for <code>Hyperband</code>, a multi-fidelity based hyperparameter tuning strategy. <code>Hyperband</code> uses the final and intermediate results of a training job to dynamically allocate resources to utilized hyperparameter configurations while automatically stopping under-performing configurations. This parameter should be provided only if <code>Hyperband</code> is selected as the <code>StrategyConfig</code> under the <code>HyperParameterTuningJobConfig</code> API.
+ */
+export declare class HyperbandStrategyConfig extends SpeakeasyBase {
+    maxResource?: number;
+    minResource?: number;
+}

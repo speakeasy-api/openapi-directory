@@ -1,5 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Verification {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,46 +10,60 @@ export declare class Verification {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * postCheckAccountHolder - Trigger verification.
+     * Trigger verification
      *
-     * Triggers the KYC verification for an account holder even if the checks are not yet required for the volume that they currently process.
-    **/
-    postCheckAccountHolder(req: operations.PostCheckAccountHolderRequest, config?: AxiosRequestConfig): Promise<operations.PostCheckAccountHolderResponse>;
+     * @remarks
+     * Triggers the verification of an account holder even if the checks are not yet required for the volume that they are currently processing.
+     */
+    postCheckAccountHolder(req: shared.PerformVerificationRequest, security: operations.PostCheckAccountHolderSecurity, config?: AxiosRequestConfig): Promise<operations.PostCheckAccountHolderResponse>;
     /**
-     * postDeleteBankAccounts - Delete bank accounts.
+     * Delete bank accounts
      *
-     * Deletes one or more bank accounts of an account holder.
-    **/
-    postDeleteBankAccounts(req: operations.PostDeleteBankAccountsRequest, config?: AxiosRequestConfig): Promise<operations.PostDeleteBankAccountsResponse>;
+     * @remarks
+     * Deletes bank accounts associated with an account holder.
+     */
+    postDeleteBankAccounts(req: shared.DeleteBankAccountRequest, security: operations.PostDeleteBankAccountsSecurity, config?: AxiosRequestConfig): Promise<operations.PostDeleteBankAccountsResponse>;
     /**
-     * postDeletePayoutMethods - Delete payout methods.
+     * Delete legal arrangements
      *
-     * Deletes one or more payout methods of an account holder.
-    **/
-    postDeletePayoutMethods(req: operations.PostDeletePayoutMethodsRequest, config?: AxiosRequestConfig): Promise<operations.PostDeletePayoutMethodsResponse>;
+     * @remarks
+     * Deletes legal arrangements and/or legal arrangement entities associated with an account holder.
+     */
+    postDeleteLegalArrangements(req: shared.DeleteLegalArrangementRequest, security: operations.PostDeleteLegalArrangementsSecurity, config?: AxiosRequestConfig): Promise<operations.PostDeleteLegalArrangementsResponse>;
     /**
-     * postDeleteShareholders - Delete shareholders.
+     * Delete payout methods
      *
-     * Deletes one or more shareholders from an account holder.
-    **/
-    postDeleteShareholders(req: operations.PostDeleteShareholdersRequest, config?: AxiosRequestConfig): Promise<operations.PostDeleteShareholdersResponse>;
+     * @remarks
+     * Deletes payout methods associated with an account holder.
+     */
+    postDeletePayoutMethods(req: shared.DeletePayoutMethodRequest, security: operations.PostDeletePayoutMethodsSecurity, config?: AxiosRequestConfig): Promise<operations.PostDeletePayoutMethodsResponse>;
     /**
-     * postDeleteSignatories - Delete signatories.
+     * Delete shareholders
      *
-     * Deletes one or more signatories from an account holder.
-    **/
-    postDeleteSignatories(req: operations.PostDeleteSignatoriesRequest, config?: AxiosRequestConfig): Promise<operations.PostDeleteSignatoriesResponse>;
+     * @remarks
+     * Deletes shareholders associated with an account holder.
+     */
+    postDeleteShareholders(req: shared.DeleteShareholderRequest, security: operations.PostDeleteShareholdersSecurity, config?: AxiosRequestConfig): Promise<operations.PostDeleteShareholdersResponse>;
     /**
-     * postGetUploadedDocuments - Get documents.
+     * Delete signatories
      *
-     * Retrieves documents that were previously uploaded for an account holder. Adyen uses the documents in the [KYC verification checks](https://docs.adyen.com/platforms/verification-checks).
-     *
-    **/
-    postGetUploadedDocuments(req: operations.PostGetUploadedDocumentsRequest, config?: AxiosRequestConfig): Promise<operations.PostGetUploadedDocumentsResponse>;
+     * @remarks
+     * Deletes signatories associated with an account holder.
+     */
+    postDeleteSignatories(req: shared.DeleteSignatoriesRequest, security: operations.PostDeleteSignatoriesSecurity, config?: AxiosRequestConfig): Promise<operations.PostDeleteSignatoriesResponse>;
     /**
-     * postUploadDocument - Upload a document.
+     * Get documents
      *
-     * Uploads a document for an account holder. Adyen uses the documents in the [KYC verification checks](https://docs.adyen.com/platforms/verification-checks).
-    **/
-    postUploadDocument(req: operations.PostUploadDocumentRequest, config?: AxiosRequestConfig): Promise<operations.PostUploadDocumentResponse>;
+     * @remarks
+     * Returns documents that were previously uploaded for an account holder. Adyen uses the documents during the [verification process](https://docs.adyen.com/marketplaces-and-platforms/classic/verification-process).
+     *
+     */
+    postGetUploadedDocuments(req: shared.GetUploadedDocumentsRequest, security: operations.PostGetUploadedDocumentsSecurity, config?: AxiosRequestConfig): Promise<operations.PostGetUploadedDocumentsResponse>;
+    /**
+     * Upload a document
+     *
+     * @remarks
+     * Uploads a document for an account holder. Adyen uses the documents during the [verification process](https://docs.adyen.com/marketplaces-and-platforms/classic/verification-process).
+     */
+    postUploadDocument(req: shared.UploadDocumentRequest, security: operations.PostUploadDocumentSecurity, config?: AxiosRequestConfig): Promise<operations.PostUploadDocumentResponse>;
 }

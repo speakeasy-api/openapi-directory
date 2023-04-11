@@ -1,25 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetStatementPathParams extends SpeakeasyBase {
-    statementID: string;
-}
-export declare class GetStatementQueryParams extends SpeakeasyBase {
-    statementId: string;
-}
-export declare class GetStatementHeaders extends SpeakeasyBase {
-    xeroTenantId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetStatementSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class GetStatementRequest extends SpeakeasyBase {
-    pathParams: GetStatementPathParams;
-    queryParams: GetStatementQueryParams;
-    headers: GetStatementHeaders;
-    security: GetStatementSecurity;
+    /**
+     * Xero identifier for Tenant
+     */
+    xeroTenantId: string;
+    statementIDPathParameter: string;
+    /**
+     * statement id for single object
+     */
+    statementIdQueryParameter: string;
 }
 export declare class GetStatementResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * search results matching id for single statement
+     */
     statement?: shared.Statement;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

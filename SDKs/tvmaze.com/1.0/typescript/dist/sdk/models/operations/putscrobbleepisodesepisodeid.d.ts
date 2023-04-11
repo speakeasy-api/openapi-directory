@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PutScrobbleEpisodesEpisodeIdPathParams extends SpeakeasyBase {
-    episodeId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class PutScrobbleEpisodesEpisodeIdRequest extends SpeakeasyBase {
-    pathParams: PutScrobbleEpisodesEpisodeIdPathParams;
-    request?: shared.MarkedEpisodeInput;
+    markedEpisodeInput?: shared.MarkedEpisodeInput;
+    episodeId: number;
 }
 export declare class PutScrobbleEpisodesEpisodeIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * this episode is now marked
+     */
     markedEpisode?: shared.MarkedEpisode;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

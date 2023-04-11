@@ -1,5 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Changelog {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,33 +10,38 @@ export declare class Changelog {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createChangelog - Create changelog
+     * Create changelog
      *
+     * @remarks
      * Create a new changelog inside of this project
-    **/
-    createChangelog(req: operations.CreateChangelogRequest, config?: AxiosRequestConfig): Promise<operations.CreateChangelogResponse>;
+     */
+    createChangelog(req: shared.Changelog, security: operations.CreateChangelogSecurity, config?: AxiosRequestConfig): Promise<operations.CreateChangelogResponse>;
     /**
-     * deleteChangelog - Delete changelog
+     * Delete changelog
      *
+     * @remarks
      * Delete the changelog with this slug
-    **/
-    deleteChangelog(req: operations.DeleteChangelogRequest, config?: AxiosRequestConfig): Promise<operations.DeleteChangelogResponse>;
+     */
+    deleteChangelog(req: operations.DeleteChangelogRequest, security: operations.DeleteChangelogSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteChangelogResponse>;
     /**
-     * getChangelog - Get changelog
+     * Get changelog
      *
+     * @remarks
      * Returns the changelog with this slug
-    **/
-    getChangelog(req: operations.GetChangelogRequest, config?: AxiosRequestConfig): Promise<operations.GetChangelogResponse>;
+     */
+    getChangelog(req: operations.GetChangelogRequest, security: operations.GetChangelogSecurity, config?: AxiosRequestConfig): Promise<operations.GetChangelogResponse>;
     /**
-     * getChangelogs - Get changelogs
+     * Get changelogs
      *
+     * @remarks
      * Returns a list of changelogs associated with the project API key
-    **/
-    getChangelogs(req: operations.GetChangelogsRequest, config?: AxiosRequestConfig): Promise<operations.GetChangelogsResponse>;
+     */
+    getChangelogs(req: operations.GetChangelogsRequest, security: operations.GetChangelogsSecurity, config?: AxiosRequestConfig): Promise<operations.GetChangelogsResponse>;
     /**
-     * updateChangelog - Update changelog
+     * Update changelog
      *
+     * @remarks
      * Update a changelog with this slug
-    **/
-    updateChangelog(req: operations.UpdateChangelogRequest, config?: AxiosRequestConfig): Promise<operations.UpdateChangelogResponse>;
+     */
+    updateChangelog(req: operations.UpdateChangelogRequest, security: operations.UpdateChangelogSecurity, config?: AxiosRequestConfig): Promise<operations.UpdateChangelogResponse>;
 }

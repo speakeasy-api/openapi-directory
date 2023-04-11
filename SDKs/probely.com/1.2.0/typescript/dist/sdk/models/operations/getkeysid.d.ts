@@ -1,21 +1,41 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetKeysIdPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetKeysIdRequest extends SpeakeasyBase {
+    /**
+     * Object Id
+     */
     id: string;
 }
-export declare class GetKeysId401ApplicationJson extends SpeakeasyBase {
+/**
+ * Not allowed to perform operation
+ */
+export declare class GetKeysId403ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error message.
+     */
     detail?: string;
 }
-export declare class GetKeysId403ApplicationJson extends SpeakeasyBase {
+/**
+ * Access token is missing or invalid
+ */
+export declare class GetKeysId401ApplicationJSON extends SpeakeasyBase {
     detail?: string;
-}
-export declare class GetKeysIdRequest extends SpeakeasyBase {
-    pathParams: GetKeysIdPathParams;
 }
 export declare class GetKeysIdResponse extends SpeakeasyBase {
-    apiKey?: shared.ApiKey;
+    /**
+     * API Key object
+     */
+    apiKey?: shared.APIKey;
     contentType: string;
     statusCode: number;
-    getKeysId401ApplicationJSONObject?: GetKeysId401ApplicationJson;
-    getKeysId403ApplicationJSONObject?: GetKeysId403ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Access token is missing or invalid
+     */
+    getKeysId401ApplicationJSONObject?: GetKeysId401ApplicationJSON;
+    /**
+     * Not allowed to perform operation
+     */
+    getKeysId403ApplicationJSONObject?: GetKeysId403ApplicationJSON;
 }

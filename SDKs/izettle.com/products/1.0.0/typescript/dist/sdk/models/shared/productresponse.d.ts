@@ -1,22 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { CategoryDto } from "./categorydto";
-import { MetadataDto } from "./metadatadto";
+import { CategoryDTO } from "./categorydto";
+import { MetadataDTO } from "./metadatadto";
 import { OnlineProperties } from "./onlineproperties";
-import { PresentationDto } from "./presentationdto";
+import { PresentationDTO } from "./presentationdto";
+import { VariantDTO } from "./variantdto";
 import { VariantOptionDefinitions } from "./variantoptiondefinitions";
-import { VariantDto } from "./variantdto";
+/**
+ * Product created. It will include the Product in the response only if 'returnEntity' is true
+ */
 export declare class ProductResponse extends SpeakeasyBase {
     categories?: string[];
-    category?: CategoryDto;
+    category?: CategoryDTO;
     created: Date;
     description?: string;
     etag: string;
     externalReference?: string;
     imageLookupKeys?: string[];
-    metadata?: MetadataDto;
+    metadata?: MetadataDTO;
     name: string;
     online?: OnlineProperties;
-    presentation?: PresentationDto;
+    presentation?: PresentationDTO;
     taxCode?: string;
     taxExempt?: boolean;
     taxRates?: string[];
@@ -25,6 +28,6 @@ export declare class ProductResponse extends SpeakeasyBase {
     updatedBy?: string;
     uuid: string;
     variantOptionDefinitions?: VariantOptionDefinitions;
-    variants: VariantDto[];
+    variants: VariantDTO[];
     vatPercentage?: number;
 }

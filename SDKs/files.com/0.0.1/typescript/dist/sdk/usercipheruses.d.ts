@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Operations about user_cipher_uses
+ */
 export declare class UserCipherUses {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,10 @@ export declare class UserCipherUses {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getUserCipherUses - List User Cipher Uses
-     *
      * List User Cipher Uses
-    **/
+     *
+     * @remarks
+     * List User Cipher Uses
+     */
     getUserCipherUses(req: operations.GetUserCipherUsesRequest, config?: AxiosRequestConfig): Promise<operations.GetUserCipherUsesResponse>;
 }

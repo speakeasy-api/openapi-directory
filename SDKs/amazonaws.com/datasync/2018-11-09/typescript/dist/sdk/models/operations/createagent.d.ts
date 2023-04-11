@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum CreateAgentXAmzTargetEnum {
     FmrsServiceCreateAgent = "FmrsService.CreateAgent"
 }
-export declare class CreateAgentHeaders extends SpeakeasyBase {
+export declare class CreateAgentRequest extends SpeakeasyBase {
+    createAgentRequest: shared.CreateAgentRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class CreateAgentHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: CreateAgentXAmzTargetEnum;
 }
-export declare class CreateAgentRequest extends SpeakeasyBase {
-    headers: CreateAgentHeaders;
-    request: shared.CreateAgentRequest;
-}
 export declare class CreateAgentResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     createAgentResponse?: shared.CreateAgentResponse;
+    /**
+     * InternalException
+     */
     internalException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

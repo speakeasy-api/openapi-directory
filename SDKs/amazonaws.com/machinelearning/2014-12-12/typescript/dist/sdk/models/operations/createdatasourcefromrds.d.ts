@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum CreateDataSourceFromRdsxAmzTargetEnum {
-    AmazonMl20141212CreateDataSourceFromRds = "AmazonML_20141212.CreateDataSourceFromRDS"
+import { AxiosResponse } from "axios";
+export declare enum CreateDataSourceFromRDSXAmzTargetEnum {
+    AmazonML20141212CreateDataSourceFromRDS = "AmazonML_20141212.CreateDataSourceFromRDS"
 }
-export declare class CreateDataSourceFromRdsHeaders extends SpeakeasyBase {
+export declare class CreateDataSourceFromRDSRequest extends SpeakeasyBase {
+    createDataSourceFromRDSInput: shared.CreateDataSourceFromRDSInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,17 +13,26 @@ export declare class CreateDataSourceFromRdsHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: CreateDataSourceFromRdsxAmzTargetEnum;
+    xAmzTarget: CreateDataSourceFromRDSXAmzTargetEnum;
 }
-export declare class CreateDataSourceFromRdsRequest extends SpeakeasyBase {
-    headers: CreateDataSourceFromRdsHeaders;
-    request: shared.CreateDataSourceFromRdsInput;
-}
-export declare class CreateDataSourceFromRdsResponse extends SpeakeasyBase {
+export declare class CreateDataSourceFromRDSResponse extends SpeakeasyBase {
     contentType: string;
-    createDataSourceFromRDSOutput?: shared.CreateDataSourceFromRdsOutput;
+    /**
+     * Success
+     */
+    createDataSourceFromRDSOutput?: shared.CreateDataSourceFromRDSOutput;
+    /**
+     * IdempotentParameterMismatchException
+     */
     idempotentParameterMismatchException?: any;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

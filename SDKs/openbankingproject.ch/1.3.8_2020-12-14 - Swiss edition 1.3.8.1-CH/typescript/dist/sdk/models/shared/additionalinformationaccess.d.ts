@@ -1,7 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { AccountReference16Ch } from "./accountreference16ch";
+import { AccountReference16CH } from "./accountreference16ch";
 /**
  * Optional if supported by API provider.
+ *
+ * @remarks
  *
  * Is asking for additional information as added within this structured object.
  * The usage of this data element requires at least one of the entries "accounts",
@@ -10,8 +12,35 @@ import { AccountReference16Ch } from "./accountreference16ch";
  * the additionalInformation attribute is also addressed by at least one of the attributes "accounts",
  * "transactions" or "balances".
  *
-**/
+ */
 export declare class AdditionalInformationAccess extends SpeakeasyBase {
-    ownerName?: AccountReference16Ch[];
-    trustedBeneficiaries?: AccountReference16Ch[];
+    /**
+     * Is asking for account owner name of the accounts referenced within.
+     *
+     * @remarks
+     * If the array is empty in the request, the TPP is asking for the account
+     * owner name of all accessible accounts.
+     * This may be restricted in a PSU/ASPSP authorization dialogue.
+     * If the array is empty, also the arrays for accounts, balances or transactions shall be empty, if used.
+     * The ASPSP will indicate in the consent resource after a successful authorisation,
+     * whether the ownerName consent can be accepted by providing the accounts on which the ownerName will
+     * be delivered.
+     * This array can be empty.
+     *
+     */
+    ownerName?: AccountReference16CH[];
+    /**
+     * Optional if supported by API provider.
+     *
+     * @remarks
+     * Is asking for the trusted beneficiaries related to the accounts referenced within and related to the PSU.
+     * If the array is empty in the request, the TPP is asking for the lists of trusted beneficiaries of all accessible accounts.
+     * This may be restricted in a PSU/ASPSP authorization dialogue by the PSU if also the account lists addressed
+     * by the tags “accounts”, “balances” or “transactions” are empty.
+     * The ASPSP will indicate in the consent resource after a successful authorisation,
+     * whether the trustedBeneficiaries consent can be accepted by providing the accounts on which the list of trusted beneficiaries will be delivered.
+     * This array can be empty.
+     *
+     */
+    trustedBeneficiaries?: AccountReference16CH[];
 }

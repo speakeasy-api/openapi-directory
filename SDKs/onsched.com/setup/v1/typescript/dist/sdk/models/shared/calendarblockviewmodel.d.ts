@@ -1,15 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { RepeatViewModel } from "./repeatviewmodel";
+/**
+ * Success
+ */
 export declare class CalendarBlockViewModel extends SpeakeasyBase {
     calendarId?: string;
-    endDate?: Date;
+    deletedStatus?: boolean;
+    deletedTime?: string;
+    endDate?: string;
     endTime?: number;
     id?: string;
     locationId?: string;
-    objectName?: string;
+    object?: string;
     reason?: string;
     repeat?: RepeatViewModel;
     repeats?: boolean;
-    startDate?: Date;
+    startDate?: string;
     startTime?: number;
 }

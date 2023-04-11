@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCopyFpgaImageActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCopyFpgaImageActionEnum {
     CopyFpgaImage = "CopyFpgaImage"
 }
-export declare enum PostCopyFpgaImageVersionEnum {
+export declare enum POSTCopyFpgaImageVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostCopyFpgaImageQueryParams extends SpeakeasyBase {
-    action: PostCopyFpgaImageActionEnum;
-    version: PostCopyFpgaImageVersionEnum;
-}
-export declare class PostCopyFpgaImageHeaders extends SpeakeasyBase {
+export declare class POSTCopyFpgaImageRequest extends SpeakeasyBase {
+    action: POSTCopyFpgaImageActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCopyFpgaImageVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCopyFpgaImageHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCopyFpgaImageRequest extends SpeakeasyBase {
-    queryParams: PostCopyFpgaImageQueryParams;
-    headers: PostCopyFpgaImageHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCopyFpgaImageResponse extends SpeakeasyBase {
+export declare class POSTCopyFpgaImageResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

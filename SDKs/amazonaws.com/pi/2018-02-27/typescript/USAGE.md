@@ -1,55 +1,70 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DescribeDimensionKeysRequest, DescribeDimensionKeysResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  DescribeDimensionKeysRequest,
+  DescribeDimensionKeysResponse,
+  DescribeDimensionKeysXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
+import {
+  ServiceTypeEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: DescribeDimensionKeysRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "PerformanceInsightsv20180227.DescribeDimensionKeys",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
-    endTime: "2011-08-12T10:11:12Z",
+});
+
+const req: DescribeDimensionKeysRequest = {
+  describeDimensionKeysRequest: {
+    additionalMetrics: [
+      "provident",
+      "distinctio",
+      "quibusdam",
+    ],
+    endTime: "2021-04-14T16:47:33.722Z",
     filter: {
-      "rerum": "dicta",
+      "illum": "vel",
+      "error": "deserunt",
+      "suscipit": "iure",
     },
     groupBy: {
       dimensions: [
-        "voluptatum",
+        "debitis",
+        "ipsa",
       ],
-      group: "et",
-      limit: 7144924247938981575,
+      group: "delectus",
+      limit: 272656,
     },
-    identifier: "dolorem",
-    maxResults: 7259475919510918339,
-    metric: "voluptate",
-    nextToken: "iste",
+    identifier: "suscipit",
+    maxResults: 477665,
+    metric: "minus",
+    nextToken: "placeat",
     partitionBy: {
       dimensions: [
-        "totam",
+        "iusto",
+        "excepturi",
+        "nisi",
       ],
-      group: "dolores",
-      limit: 1929546706668609706,
+      group: "recusandae",
+      limit: 836079,
     },
-    periodInSeconds: 6392442863481646880,
-    serviceType: "RDS",
-    startTime: "2003-08-14T16:48:00Z",
+    periodInSeconds: 71036,
+    serviceType: ServiceTypeEnum.Rds,
+    startTime: "2022-05-09T10:00:51.349Z",
   },
+  maxResults: "perferendis",
+  nextToken: "ipsam",
+  xAmzAlgorithm: "repellendus",
+  xAmzContentSha256: "sapiente",
+  xAmzCredential: "quo",
+  xAmzDate: "odit",
+  xAmzSecurityToken: "at",
+  xAmzSignature: "at",
+  xAmzSignedHeaders: "maiores",
+  xAmzTarget: DescribeDimensionKeysXAmzTargetEnum.PerformanceInsightsv20180227DescribeDimensionKeys,
 };
 
 sdk.describeDimensionKeys(req).then((res: DescribeDimensionKeysResponse | AxiosError) => {

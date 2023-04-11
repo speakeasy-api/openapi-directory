@@ -1,11 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { HrefType } from "./hreftype";
-import { TppMessage405Pis } from "./tppmessage405pis";
+import { TppMessage405PIS } from "./tppmessage405pis";
 /**
  * NextGen specific definition of reporting error information in case of a HTTP error code 401.
  *
-**/
-export declare class Error405NgPis extends SpeakeasyBase {
+ * @remarks
+ *
+ */
+export declare class Error405NGPIS extends SpeakeasyBase {
+    /**
+     * A _link object with all availabel link types.
+     *
+     * @remarks
+     *
+     */
     links?: Record<string, HrefType>;
-    tppMessages?: TppMessage405Pis[];
+    tppMessages?: TppMessage405PIS[];
 }

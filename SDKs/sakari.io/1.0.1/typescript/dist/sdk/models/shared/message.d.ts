@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ContactIdentifiers } from "./contactidentifiers";
-import { Updated } from "./updated";
 import { ErrorT } from "./error";
+import { Updated } from "./updated";
 export declare class MessageConversation extends SpeakeasyBase {
     id?: string;
 }
@@ -16,6 +16,9 @@ export declare class Message extends SpeakeasyBase {
     created?: Updated;
     error?: ErrorT;
     id?: string;
+    /**
+     * List of media objects attached to message
+     */
     media?: MessageMedia[];
     message?: string;
     outgoing?: boolean;

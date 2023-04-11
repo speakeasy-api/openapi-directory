@@ -1,50 +1,64 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateConfigurationSetRequest, CreateConfigurationSetResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CreateConfigurationSetRequest,
+  CreateConfigurationSetResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  TlsPolicyEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: CreateConfigurationSetRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
-    configurationSetName: "voluptas",
+});
+
+const req: CreateConfigurationSetRequest = {
+  requestBody: {
+    configurationSetName: "corrupti",
     deliveryOptions: {
-      sendingPoolName: "fugit",
-      tlsPolicy: "REQUIRE",
+      sendingPoolName: "provident",
+      tlsPolicy: TlsPolicyEnum.Optional,
     },
     reputationOptions: {
-      lastFreshStart: "2003-05-13T04:57:12Z",
-      reputationMetricsEnabled: true,
+      lastFreshStart: "2021-03-11T23:22:42.658Z",
+      reputationMetricsEnabled: false,
     },
     sendingOptions: {
       sendingEnabled: false,
     },
     tags: [
       {
-        key: "voluptatum",
-        value: "et",
+        key: "corrupti",
+        value: "illum",
+      },
+      {
+        key: "vel",
+        value: "error",
+      },
+      {
+        key: "deserunt",
+        value: "suscipit",
+      },
+      {
+        key: "iure",
+        value: "magnam",
       },
     ],
     trackingOptions: {
-      customRedirectDomain: "ut",
+      customRedirectDomain: "debitis",
     },
   },
+  xAmzAlgorithm: "ipsa",
+  xAmzContentSha256: "delectus",
+  xAmzCredential: "tempora",
+  xAmzDate: "suscipit",
+  xAmzSecurityToken: "molestiae",
+  xAmzSignature: "minus",
+  xAmzSignedHeaders: "placeat",
 };
 
 sdk.createConfigurationSet(req).then((res: CreateConfigurationSetResponse | AxiosError) => {

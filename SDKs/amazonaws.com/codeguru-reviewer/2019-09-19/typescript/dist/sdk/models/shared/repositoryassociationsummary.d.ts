@@ -2,8 +2,8 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { ProviderTypeEnum } from "./providertypeenum";
 import { RepositoryAssociationStateEnum } from "./repositoryassociationstateenum";
 /**
- * Summary information about a repository association. The <a href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_ListRepositoryAssociations.html"> <code>ListRepositoryAssociations</code> </a> operation returns a list of <code>RepositoryAssociationSummary</code> objects.
-**/
+ * Summary information about a repository association. The <a href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_ListRepositoryAssociations.html">ListRepositoryAssociations</a> operation returns a list of <code>RepositoryAssociationSummary</code> objects.
+ */
 export declare class RepositoryAssociationSummary extends SpeakeasyBase {
     associationArn?: string;
     associationId?: string;

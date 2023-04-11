@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetLfTagResponse extends SpeakeasyBase {
+/**
+ * Success
+ */
+export declare class GetLFTagResponse extends SpeakeasyBase {
     catalogId?: string;
     tagKey?: string;
     tagValues?: string[];

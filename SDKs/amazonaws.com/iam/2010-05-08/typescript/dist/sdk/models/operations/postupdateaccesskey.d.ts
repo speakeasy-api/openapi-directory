@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostUpdateAccessKeyActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTUpdateAccessKeyActionEnum {
     UpdateAccessKey = "UpdateAccessKey"
 }
-export declare enum PostUpdateAccessKeyVersionEnum {
+export declare enum POSTUpdateAccessKeyVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostUpdateAccessKeyQueryParams extends SpeakeasyBase {
-    action: PostUpdateAccessKeyActionEnum;
-    version: PostUpdateAccessKeyVersionEnum;
-}
-export declare class PostUpdateAccessKeyHeaders extends SpeakeasyBase {
+export declare class POSTUpdateAccessKeyRequest extends SpeakeasyBase {
+    action: POSTUpdateAccessKeyActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTUpdateAccessKeyVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostUpdateAccessKeyHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostUpdateAccessKeyRequest extends SpeakeasyBase {
-    queryParams: PostUpdateAccessKeyQueryParams;
-    headers: PostUpdateAccessKeyHeaders;
-    request?: Uint8Array;
-}
-export declare class PostUpdateAccessKeyResponse extends SpeakeasyBase {
+export declare class POSTUpdateAccessKeyResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

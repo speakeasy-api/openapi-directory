@@ -1,20 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class SearchDocsQueryParams extends SpeakeasyBase {
-    search: string;
-}
-export declare class SearchDocsHeaders extends SpeakeasyBase {
-    xReadmeVersion: string;
-}
+import { AxiosResponse } from "axios";
 export declare class SearchDocsSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
+    password: string;
+    username: string;
 }
 export declare class SearchDocsRequest extends SpeakeasyBase {
-    queryParams: SearchDocsQueryParams;
-    headers: SearchDocsHeaders;
-    security: SearchDocsSecurity;
+    /**
+     * Search string to look for
+     */
+    search: string;
+    /**
+     * Version number of your docs project, for example, v3.0. To see all valid versions for your docs project call https://docs.readme.com/developers/reference/version#getversions.
+     */
+    xReadmeVersion: string;
 }
 export declare class SearchDocsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

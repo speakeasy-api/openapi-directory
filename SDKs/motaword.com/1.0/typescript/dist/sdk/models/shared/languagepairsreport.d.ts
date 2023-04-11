@@ -9,6 +9,9 @@ export declare class LanguagePairsReportReport extends SpeakeasyBase {
     spending?: number;
     wordCount?: number;
 }
+/**
+ * Language pairs stats for client and vendors
+ */
 export declare class LanguagePairsReport extends SpeakeasyBase {
     meta?: PagingMeta;
     report?: LanguagePairsReportReport[];

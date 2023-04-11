@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class LookupEventsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum LookupEventsXAmzTargetEnum {
     ComAmazonawsCloudtrailV20131101CloudTrail20131101LookupEvents = "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.LookupEvents"
 }
-export declare class LookupEventsHeaders extends SpeakeasyBase {
+export declare class LookupEventsRequest extends SpeakeasyBase {
+    lookupEventsRequest: shared.LookupEventsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,20 +23,40 @@ export declare class LookupEventsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: LookupEventsXAmzTargetEnum;
 }
-export declare class LookupEventsRequest extends SpeakeasyBase {
-    queryParams: LookupEventsQueryParams;
-    headers: LookupEventsHeaders;
-    request: shared.LookupEventsRequest;
-}
 export declare class LookupEventsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidEventCategoryException
+     */
     invalidEventCategoryException?: any;
+    /**
+     * InvalidLookupAttributesException
+     */
     invalidLookupAttributesException?: any;
+    /**
+     * InvalidMaxResultsException
+     */
     invalidMaxResultsException?: any;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * InvalidTimeRangeException
+     */
     invalidTimeRangeException?: any;
+    /**
+     * Success
+     */
     lookupEventsResponse?: shared.LookupEventsResponse;
+    /**
+     * OperationNotPermittedException
+     */
     operationNotPermittedException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnsupportedOperationException
+     */
     unsupportedOperationException?: any;
 }

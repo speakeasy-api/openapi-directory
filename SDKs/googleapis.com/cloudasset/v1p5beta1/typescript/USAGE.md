@@ -1,46 +1,42 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CloudassetAssetsListRequest, CloudassetAssetsListResponse } from "openapi/src/sdk/models/operations";
+import {
+  CloudassetAssetsListRequest,
+  CloudassetAssetsListResponse,
+  CloudassetAssetsListContentTypeEnum,
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: CloudassetAssetsListRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    assetTypes: [
-      "dolor",
-      "expedita",
-      "voluptas",
-    ],
-    callback: "fugit",
-    contentType: "ORG_POLICY",
-    fields: "nihil",
-    key: "rerum",
-    oauthToken: "dicta",
-    pageSize: 2518412263346885298,
-    pageToken: "voluptatum",
-    prettyPrint: false,
-    quotaUser: "ut",
-    readTime: "dolorem",
-    uploadType: "et",
-    uploadProtocol: "voluptate",
-  },
+  dollarXgafv: XgafvEnum.Two,
+  accessToken: "provident",
+  alt: AltEnum.Proto,
+  assetTypes: [
+    "unde",
+    "nulla",
+    "corrupti",
+    "illum",
+  ],
+  callback: "vel",
+  contentType: CloudassetAssetsListContentTypeEnum.OrgPolicy,
+  fields: "deserunt",
+  key: "suscipit",
+  oauthToken: "iure",
+  pageSize: 297534,
+  pageToken: "debitis",
+  parent: "ipsa",
+  prettyPrint: false,
+  quotaUser: "delectus",
+  readTime: "tempora",
+  uploadType: "suscipit",
+  uploadProtocol: "molestiae",
 };
 
 sdk.assets.cloudassetAssetsList(req).then((res: CloudassetAssetsListResponse | AxiosError) => {

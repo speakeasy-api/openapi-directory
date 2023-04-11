@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostUntagRoleActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTUntagRoleActionEnum {
     UntagRole = "UntagRole"
 }
-export declare enum PostUntagRoleVersionEnum {
+export declare enum POSTUntagRoleVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostUntagRoleQueryParams extends SpeakeasyBase {
-    action: PostUntagRoleActionEnum;
-    version: PostUntagRoleVersionEnum;
-}
-export declare class PostUntagRoleHeaders extends SpeakeasyBase {
+export declare class POSTUntagRoleRequest extends SpeakeasyBase {
+    action: POSTUntagRoleActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTUntagRoleVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostUntagRoleHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostUntagRoleRequest extends SpeakeasyBase {
-    queryParams: PostUntagRoleQueryParams;
-    headers: PostUntagRoleHeaders;
-    request?: Uint8Array;
-}
-export declare class PostUntagRoleResponse extends SpeakeasyBase {
+export declare class POSTUntagRoleResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

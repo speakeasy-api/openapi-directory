@@ -1,21 +1,38 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysRequest extends SpeakeasyBase {
+    /**
+     * Format YYYY-MM-DD: End Date for availability search
+     */
     endDate: Date;
-    serviceId: string;
-    startDate: Date;
-}
-export declare class GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysQueryParams extends SpeakeasyBase {
+    /**
+     * Id of business location, defaults to primary business location
+     */
     locationId?: string;
+    /**
+     * Resource Id to filter on
+     */
     resourceId?: string;
+    /**
+     * Service Id for day availability search
+     */
+    serviceId: string;
+    /**
+     * Format YYYY-MM-DD: Start Date for availability search
+     */
+    startDate: Date;
+    /**
+     * Timezone offset to view availability for
+     */
     tzOffset?: number;
 }
-export declare class GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysRequest extends SpeakeasyBase {
-    pathParams: GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysPathParams;
-    queryParams: GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysQueryParams;
-}
 export declare class GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysResponse extends SpeakeasyBase {
+    /**
+     * Success
+     */
     availabilityDayViewModel?: shared.AvailabilityDayViewModel;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

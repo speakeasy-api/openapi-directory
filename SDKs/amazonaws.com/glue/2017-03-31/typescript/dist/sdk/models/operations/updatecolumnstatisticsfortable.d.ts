@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateColumnStatisticsForTableXAmzTargetEnum {
-    AwsGlueUpdateColumnStatisticsForTable = "AWSGlue.UpdateColumnStatisticsForTable"
+    AWSGlueUpdateColumnStatisticsForTable = "AWSGlue.UpdateColumnStatisticsForTable"
 }
-export declare class UpdateColumnStatisticsForTableHeaders extends SpeakeasyBase {
+export declare class UpdateColumnStatisticsForTableRequest extends SpeakeasyBase {
+    updateColumnStatisticsForTableRequest: shared.UpdateColumnStatisticsForTableRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class UpdateColumnStatisticsForTableHeaders extends SpeakeasyBase
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateColumnStatisticsForTableXAmzTargetEnum;
 }
-export declare class UpdateColumnStatisticsForTableRequest extends SpeakeasyBase {
-    headers: UpdateColumnStatisticsForTableHeaders;
-    request: shared.UpdateColumnStatisticsForTableRequest;
-}
 export declare class UpdateColumnStatisticsForTableResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * GlueEncryptionException
+     */
     glueEncryptionException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     updateColumnStatisticsForTableResponse?: shared.UpdateColumnStatisticsForTableResponse;
 }

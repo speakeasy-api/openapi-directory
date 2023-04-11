@@ -1,5 +1,3 @@
-import { AxiosInstance } from "axios";
-import { Security } from "./models/shared";
 import { Audit } from "./audit";
 import { Candidate } from "./candidate";
 import { Committee } from "./committee";
@@ -15,35 +13,200 @@ import { Financial } from "./financial";
 import { IndependentExpenditures } from "./independentexpenditures";
 import { Legal } from "./legal";
 import { Loans } from "./loans";
+import * as shared from "./models/shared";
 import { PartyCoordinatedExpenditures } from "./partycoordinatedexpenditures";
 import { Presidential } from "./presidential";
 import { Receipts } from "./receipts";
 import { Search } from "./search";
-export declare const ServerList: readonly ["https://fec.gov/v1"];
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
+export declare const ServerList: readonly ["/v1"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * The security details required to authenticate the SDK
+     */
+    security?: shared.Security;
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    security?: Security;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * This application programming interface (API) allows you to explore the way candidates and committees fund their campaigns.
+ *
+ * @remarks
+ *
+ *  The Federal Election Commission (FEC) API is a RESTful web service supporting full-text and field-specific searches on FEC data. [Bulk downloads](https://www.fec.gov/data/advanced/?tab=bulk-data) are available on the current site. Information is tied to the underlying forms by file ID and image ID. Data is updated nightly.
+ *
+ *  There are a lot of data, and a good place to start is to use search to find interesting candidates and committees. Then, you can use their IDs to find report or line item details with the other endpoints. If you are interested in individual donors, check out contributor information in the `/schedule_a/` endpoints.
+ *
+ *  <b class="body" id="getting_started_head">Getting started with the openFEC API</b><br>
+ *
+ *  If you would like to use the FEC's API programmatically, you can sign up for your own API key using our form. Alternatively, you can still try out our API without an API key by using the web interface and using DEMO_KEY. Note that when you use the openFEC API you are subject to the [Terms of Service](https://github.com/fecgov/FEC/blob/master/TERMS-OF-SERVICE.md) and [Acceptable Use policy](https://github.com/fecgov/FEC/blob/master/ACCEPTABLE-USE-POLICY.md).
+ *
+ *  Signing up for an API key will enable you to place up to 1,000 calls an hour. Each call is limited to 100 results per page. You can email questions, comments or a request to get a key for 7,200 calls an hour (120 calls per minute) to <a href="mailto:APIinfo@fec.gov">APIinfo@fec.gov</a>. You can also ask questions and discuss the data in a community led [group](https://groups.google.com/forum/#!forum/fec-data).
+ *
+ *  The model definitions and schema are available at [/swagger](/swagger/). This is useful for making wrappers and exploring the data.
+ *
+ *  A few restrictions limit the way you can use FEC data. For example, you can’t use contributor lists for commercial purposes or to solicit donations. [Learn more here](https://www.fec.gov/updates/sale-or-use-contributor-information/).
+ *
+ *  [Inspect our source code](https://github.com/fecgov/openFEC). We welcome issues and pull requests!
+ *
+ *  <p><br></p> <h2 class="title" id="signup_head">Sign up for an API key</h2> <div id="apidatagov_signup">Loading signup form...</div>
+ */
 export declare class SDK {
+    /**
+     * The agency’s monitoring process may detect potential violations through a review of a committee’s reports or through a Commission audit. By law, all enforcement cases must remain confidential until they’re closed.
+     *
+     * @remarks
+     *
+     *  The Commission is required by law to audit Presidential campaigns that accept public funds. In addition, the Commission audits a committee when it appears not to have met the threshold requirements for substantial compliance with the Federal Election Campaign Act. The audit determines whether the committee complied with limitations, prohibitions and disclosure requirements.
+     *
+     *  These endpoints contain Final Audit Reports approved by the Commission since inception.
+     */
     audit: Audit;
+    /**
+     * Candidate endpoints give you access to information about the people running for office. This information is organized by `candidate_id`. If you're unfamiliar with candidate IDs, using `/candidates/search/` will help you locate a particular candidate.
+     *
+     * @remarks
+     *
+     *  Officially, a candidate is an individual seeking nomination for election to a federal office. People become candidates when they (or agents working on their behalf) raise contributions or make expenditures that exceed $5,000.
+     *
+     *  The candidate endpoints primarily use data from FEC registration [Form 1](https://www.fec.gov/resources/cms-content/documents/fecfrm1.pdf) for committee information and [Form 2](https://www.fec.gov/resources/cms-content/documents/fecfrm2.pdf) for candidate information.
+     */
     candidate: Candidate;
+    /**
+     * Committees are entities that spend and raise money in an election. Their characteristics and relationships with candidates can change over time.
+     *
+     * @remarks
+     *
+     *  You might want to use filters or search endpoints to find the committee you're looking for. Then you can use other committee endpoints to explore information about the committee that interests you.
+     *
+     *  Financial information is organized by `committee_id`, so finding the committee you're interested in will lead you to more granular financial information.
+     *
+     *  The committee endpoints include all FEC filers, even if they aren't registered as a committee.
+     *
+     *  Officially, committees include the committees and organizations that file with the FEC. Several different types of organizations file financial reports with the FEC:
+     *
+     *  *Campaign committees authorized by particular candidates to raise and spend funds in their campaigns. Non-party committees (e.g., PACs), some of which may be sponsored by corporations, unions, trade or membership groups, etc. Political party committees at the national, state, and local levels. Groups and individuals making only independent expenditures Corporations, unions, and other organizations making internal communications*
+     *
+     *  The committee endpoints primarily use data from FEC registration Form 1 and Form 2.
+     */
     committee: Committee;
+    /**
+     * Reports of communication costs by corporations and membership organizations from the FEC [F7 forms](https://www.fec.gov/pdf/forms/fecform7.pdf).
+     */
     communicationCost: CommunicationCost;
+    /**
+     * Reporting deadlines, election dates FEC meetings, events etc.
+     */
     dates: Dates;
+    /**
+     * Schedule D, it shows debts and obligations owed to or by the committee that are required to be disclosed.
+     */
     debts: Debts;
+    /**
+     * Schedule B filings describe itemized disbursements. This data explains how committees and other filers spend their money. These figures are reported as part of forms F3, F3X and F3P.
+     */
     disbursements: Disbursements;
+    /**
+     * Efiling endpoints provide real-time campaign finance data received from electronic filers. Efiling endpoints only contain the most recent four months of data and don't contain the processed and coded data that you can find on other endpoints.
+     */
     efiling: Efiling;
+    /**
+     * An electioneering communication is any broadcast, cable or satellite communication that fulfills each of the following conditions:
+     *
+     * @remarks
+     *
+     *  _The communication refers to a clearly identified federal candidate._
+     *
+     *  _The communication is publicly distributed by a television station, radio station, cable television system or satellite system for a fee._
+     *
+     *  _The communication is distributed within 60 days prior to a general election or 30 days prior to a primary election to federal office._
+     */
     electioneering: Electioneering;
+    /**
+     * Useful tools for those who file with the FEC.
+     *
+     * @remarks
+     *
+     *  Look up RAD analyst with telephone extension by committee_id.
+     */
     filerResources: FilerResources;
+    /**
+     * All official records and reports filed by or delivered to the FEC.
+     *
+     * @remarks
+     *
+     *  Note: because the filings data includes many records, counts for large result sets are approximate; you will want to page through the records until no records are returned.
+     */
     filings: Filings;
+    /**
+     * Fetch key information about a committee's Form 3, Form 3X, or Form 3P financial reports.
+     *
+     * @remarks
+     *
+     *  Most committees are required to summarize their financial activity in each filing; those summaries are included in these files. Generally, committees file reports on a quarterly or monthly basis, but some must also submit a report 12 days before primary elections. Therefore, during the primary season, the period covered by this file may be different for different committees. These totals also incorporate any changes made by committees, if any report covering the period is amended.
+     *
+     *  Information is made available on the API as soon as it's processed. Keep in mind, complex paper filings take longer to process.
+     *
+     *  The financial endpoints use data from FEC [form 5](https://www.fec.gov/pdf/forms/fecfrm5.pdf), for independent expenditors; or the summary and detailed summary pages of the FEC [Form 3](https://www.fec.gov/pdf/forms/fecfrm3.pdf), for House and Senate committees; [Form 3X](https://www.fec.gov/pdf/forms/fecfrm3x.pdf), for PACs and parties; and [Form 3P](https://www.fec.gov/pdf/forms/fecfrm3p.pdf), for presidential committees.
+     */
     financial: Financial;
+    /**
+     * Schedule E covers the line item expenditures for independent expenditures. For example, if a super PAC bought ads on TV to oppose a federal candidate, each ad purchase would be recorded here with the expenditure amount, name and id of the candidate, and whether the ad supported or opposed the candidate.
+     *
+     * @remarks
+     *
+     *  An independent expenditure is an expenditure for a communication "expressly advocating the election or defeat of a clearly identified candidate that is not made in cooperation, consultation, or concert with, or at the request or suggestion of, a candidate, a candidate’s authorized committee, or their agents, or a political party or its agents."
+     *
+     *  Aggregates by candidate do not include 24 and 48 hour reports. This ensures we don't double count expenditures and the totals are more accurate. You can still find the information from 24 and 48 hour reports in `/schedule/schedule_e/`.
+     */
     independentExpenditures: IndependentExpenditures;
+    /**
+     * Explore relevant statutes, regulations and Commission actions.
+     */
     legal: Legal;
+    /**
+     * Schedule C shows all loans, endorsements and loan guarantees a committee receives or makes.
+     */
     loans: Loans;
+    /**
+     * Schedule F, it shows all special expenditures a national or state party committee makes in connection with the general election campaigns of federal candidates.
+     */
     partyCoordinatedExpenditures: PartyCoordinatedExpenditures;
+    /**
+     * Data supporting fec.gov's presidential map.
+     *
+     * @remarks
+     *
+     *  For more information about the presidential map data available to download from fec.gov, please visit: https://www.fec.gov/campaign-finance-data/presidential-map-data/
+     */
     presidential: Presidential;
+    /**
+     * This collection of endpoints includes Schedule A records reported by a committee. Schedule A records describe itemized receipts, including contributions from individuals. If you are interested in contributions from individuals, use the /schedules/schedule_a/ endpoint. For a more complete description of all Schedule A records visit [About receipts data](https://www.fec.gov/campaign-finance-data/about-campaign-finance-data/about-receipts-data/). If you are interested in our "is_individual" methodology visit our [methodology page](https://www.fec.gov/campaign-finance-data/about-campaign-finance-data/methodology/).
+     *
+     * @remarks
+     *
+     *
+     *
+     *
+     *
+     *  Schedule A is also available as a database dump file that is updated weekly on Sunday. The database dump files are here: https://www.fec.gov/files/bulk-downloads/index.html?prefix=bulk-downloads/data-dump/schedules/. The instructions are here: https://www.fec.gov/files//bulk-downloads/data-dump/schedules/README.txt. We cannot provide help with restoring the database dump files, but you can refer to this community led [group](https://groups.google.com/forum/#!forum/fec-data) for discussion.
+     */
     receipts: Receipts;
+    /**
+     * Search for candidates, committees by name.
+     */
     search: Search;
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -51,5 +214,6 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
 }

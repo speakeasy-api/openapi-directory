@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListSolutionVersionsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListSolutionVersionsXAmzTargetEnum {
     AmazonPersonalizeListSolutionVersions = "AmazonPersonalize.ListSolutionVersions"
 }
-export declare class ListSolutionVersionsHeaders extends SpeakeasyBase {
+export declare class ListSolutionVersionsRequest extends SpeakeasyBase {
+    listSolutionVersionsRequest: shared.ListSolutionVersionsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,17 +14,33 @@ export declare class ListSolutionVersionsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: ListSolutionVersionsXAmzTargetEnum;
-}
-export declare class ListSolutionVersionsRequest extends SpeakeasyBase {
-    queryParams: ListSolutionVersionsQueryParams;
-    headers: ListSolutionVersionsHeaders;
-    request: shared.ListSolutionVersionsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class ListSolutionVersionsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * Success
+     */
     listSolutionVersionsResponse?: shared.ListSolutionVersionsResponse;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
 }

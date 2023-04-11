@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetHackathonsComingFormatQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETHackathonsComingFormatRequest extends SpeakeasyBase {
+    /**
+     * Specify the page of coming hackathons.
+     */
     page?: number;
 }
-export declare class GetHackathonsComingFormatRequest extends SpeakeasyBase {
-    queryParams: GetHackathonsComingFormatQueryParams;
-}
-export declare class GetHackathonsComingFormatResponse extends SpeakeasyBase {
+export declare class GETHackathonsComingFormatResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

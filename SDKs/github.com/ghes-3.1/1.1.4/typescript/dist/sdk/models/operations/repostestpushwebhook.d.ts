@@ -1,15 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReposTestPushWebhookPathParams extends SpeakeasyBase {
-    hookId: number;
-    owner: string;
-    repo: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ReposTestPushWebhookRequest extends SpeakeasyBase {
-    pathParams: ReposTestPushWebhookPathParams;
+    /**
+     * The unique identifier of the hook.
+     */
+    hookId: number;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    owner: string;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    repo: string;
 }
 export declare class ReposTestPushWebhookResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Resource not found
+     */
     basicError?: shared.BasicError;
 }

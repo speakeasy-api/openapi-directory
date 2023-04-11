@@ -1,10 +1,97 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PostInvoiceCollectType extends SpeakeasyBase {
+export declare class POSTInvoiceCollectType extends SpeakeasyBase {
+    /**
+     * Customer account ID or account number.
+     *
+     * @remarks
+     *
+     */
     accountKey: string;
+    /**
+     * The date that should appear on the invoice and credit memo being generated,
+     *
+     * @remarks
+     * in `yyyy-mm-dd` format. If this field is omitted
+     * and `invoiceId` is not specified, the current date is used by default.
+     *
+     *
+     * **Note:** The credit memo is only available if you have the Invoice Settlement feature enabled.
+     *
+     *
+     * This field is in Zuora REST API version control. Supported minor
+     * versions are `215.0` and later. To use this field in the method, you
+     * must set the  `zuora-version` parameter to the minor version number in
+     * the request header.
+     *
+     */
     documentDate?: Date;
+    /**
+     * **Note:** This field has been replaced by the `documentDate` field in Zuora REST API version `215.0` and later. The
+     *
+     * @remarks
+     * `invoiceDate` field is only available for backward
+     * compatibility.
+     *
+     * The date that should appear on the invoice being generated,
+     * in `yyyy-mm-dd` format. If this field is omitted
+     * and `invoiceId` is not specified, the current date is used by default.
+     *
+     * This field is in Zuora REST API version control. Supported minor
+     * versions are `214.0` and earlier.
+     *
+     */
     invoiceDate?: Date;
+    /**
+     * The ID of an existing invoice for which to collect payment using
+     *
+     * @remarks
+     * the account's default payment method. If this value is specified, no new
+     * invoice is generated, and the following fields are ignored:
+     *   - `invoiceDate` and `invoiceTargetDate` (if the Zuora REST API version is 214.0 or earlier)
+     *   - `documentDate` and `targetDate` (if the Zuora REST API version is 215.0 or later)
+     *
+     */
     invoiceId?: string;
+    /**
+     * **Note:** This field has been replaced by the `targetDate` field in Zuora REST API version `215.0` and later. The
+     *
+     * @remarks
+     * `invoiceTargetDate` field is only available for backward
+     * compatibility.
+     *
+     *
+     * The date through which to calculate charges on this account if an invoice is generated, in `yyyy-mm-dd` format. If this field is omitted
+     * and `invoiceId` is not specified, the current date is used by default.
+     *
+     *
+     * This field is in Zuora REST API version control. Supported minor
+     * versions are `214.0` and earlier.
+     *
+     */
     invoiceTargetDate?: Date;
+    /**
+     * The name of the gateway that will be used for the payment. Must be a valid gateway name and the gateway must support the specific payment method. If a value is not specified, the default gateway on the Account will be used.
+     *
+     * @remarks
+     *
+     */
     paymentGateway?: string;
+    /**
+     * The date through which to calculate charges on this account if an invoice or a credit memo is generated,
+     *
+     * @remarks
+     * in `yyyy-mm-dd` format. If this field is omitted
+     * and `invoiceId` is not specified, the current date is used by default.
+     *
+     *
+     * **Note:** The credit memo is only available if you have the Invoice Settlement feature enabled.
+     *
+     *
+     * This field is in Zuora REST API version control. Supported minor
+     * versions are `215.0` and later. To use this field in the method, you
+     * must set the  `zuora-version` parameter to the minor version number in
+     * the request header.
+     *
+     */
     targetDate?: Date;
 }

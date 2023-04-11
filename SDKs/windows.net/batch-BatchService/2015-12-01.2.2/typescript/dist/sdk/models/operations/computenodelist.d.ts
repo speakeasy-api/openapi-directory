@@ -1,28 +1,52 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ComputeNodeListPathParams extends SpeakeasyBase {
-    poolId: string;
-}
-export declare class ComputeNodeListQueryParams extends SpeakeasyBase {
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class ComputeNodeListRequest extends SpeakeasyBase {
+    /**
+     * Sets an OData $filter clause.
+     */
     dollarFilter?: string;
+    /**
+     * Sets an OData $select clause.
+     */
     dollarSelect?: string;
+    /**
+     * Client API Version.
+     */
     apiVersion: string;
+    /**
+     * Caller generated request identity, in the form of a GUID with no decoration such as curly braces e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
+     */
+    clientRequestId?: string;
+    /**
+     * Sets the maximum number of items to return in the response.
+     */
     maxresults?: number;
+    /**
+     * The time the request was issued. If not specified, this header will be automatically populated with the current system clock time.
+     */
+    ocpDate?: string;
+    /**
+     * The id of the pool from which you want to list nodes.
+     */
+    poolId: string;
+    /**
+     * Specifies if the server should return the client-request-id identifier in the response.
+     */
+    returnClientRequestId?: boolean;
+    /**
+     * Sets the maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
+     */
     timeout?: number;
 }
-export declare class ComputeNodeListHeaders extends SpeakeasyBase {
-    clientRequestId?: string;
-    ocpDate?: string;
-    returnClientRequestId?: boolean;
-}
-export declare class ComputeNodeListRequest extends SpeakeasyBase {
-    pathParams: ComputeNodeListPathParams;
-    queryParams: ComputeNodeListQueryParams;
-    headers: ComputeNodeListHeaders;
-}
 export declare class ComputeNodeListResponse extends SpeakeasyBase {
-    batchError?: any;
-    computeNodeListResult?: any;
+    /**
+     * Error from the Batch service
+     */
+    batchError?: shared.BatchError;
+    computeNodeListResult?: shared.ComputeNodeListResult;
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

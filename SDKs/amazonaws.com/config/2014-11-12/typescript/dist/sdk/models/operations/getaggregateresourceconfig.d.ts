@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetAggregateResourceConfigXAmzTargetEnum {
     StarlingDoveServiceGetAggregateResourceConfig = "StarlingDoveService.GetAggregateResourceConfig"
 }
-export declare class GetAggregateResourceConfigHeaders extends SpeakeasyBase {
+export declare class GetAggregateResourceConfigRequest extends SpeakeasyBase {
+    getAggregateResourceConfigRequest: shared.GetAggregateResourceConfigRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class GetAggregateResourceConfigHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetAggregateResourceConfigXAmzTargetEnum;
 }
-export declare class GetAggregateResourceConfigRequest extends SpeakeasyBase {
-    headers: GetAggregateResourceConfigHeaders;
-    request: shared.GetAggregateResourceConfigRequest;
-}
 export declare class GetAggregateResourceConfigResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getAggregateResourceConfigResponse?: shared.GetAggregateResourceConfigResponse;
+    /**
+     * NoSuchConfigurationAggregatorException
+     */
     noSuchConfigurationAggregatorException?: any;
+    /**
+     * OversizedConfigurationItemException
+     */
     oversizedConfigurationItemException?: any;
-    resourceNotDiscoveredException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotDiscoveredException
+     */
+    resourceNotDiscoveredException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

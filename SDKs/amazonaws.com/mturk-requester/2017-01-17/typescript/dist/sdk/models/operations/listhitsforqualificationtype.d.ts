@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListHiTsForQualificationTypeQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare enum ListHITsForQualificationTypeXAmzTargetEnum {
+    MTurkRequesterServiceV20170117ListHITsForQualificationType = "MTurkRequesterServiceV20170117.ListHITsForQualificationType"
+}
+export declare class ListHITsForQualificationTypeRequest extends SpeakeasyBase {
+    listHITsForQualificationTypeRequest: shared.ListHITsForQualificationTypeRequest;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-}
-export declare enum ListHiTsForQualificationTypeXAmzTargetEnum {
-    MTurkRequesterServiceV20170117ListHiTsForQualificationType = "MTurkRequesterServiceV20170117.ListHITsForQualificationType"
-}
-export declare class ListHiTsForQualificationTypeHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -15,17 +21,22 @@ export declare class ListHiTsForQualificationTypeHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: ListHiTsForQualificationTypeXAmzTargetEnum;
+    xAmzTarget: ListHITsForQualificationTypeXAmzTargetEnum;
 }
-export declare class ListHiTsForQualificationTypeRequest extends SpeakeasyBase {
-    queryParams: ListHiTsForQualificationTypeQueryParams;
-    headers: ListHiTsForQualificationTypeHeaders;
-    request: shared.ListHiTsForQualificationTypeRequest;
-}
-export declare class ListHiTsForQualificationTypeResponse extends SpeakeasyBase {
+export declare class ListHITsForQualificationTypeResponse extends SpeakeasyBase {
     contentType: string;
-    listHITsForQualificationTypeResponse?: shared.ListHiTsForQualificationTypeResponse;
+    /**
+     * Success
+     */
+    listHITsForQualificationTypeResponse?: shared.ListHITsForQualificationTypeResponse;
+    /**
+     * RequestError
+     */
     requestError?: any;
+    /**
+     * ServiceFault
+     */
     serviceFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

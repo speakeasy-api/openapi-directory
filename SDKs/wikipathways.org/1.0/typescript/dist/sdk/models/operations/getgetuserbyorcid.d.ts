@@ -1,4 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
 export declare enum GetGetUserByOrcidFormatEnum {
     Json = "json",
     Xml = "xml",
@@ -7,14 +8,15 @@ export declare enum GetGetUserByOrcidFormatEnum {
     Jpg = "jpg",
     Pdf = "pdf"
 }
-export declare class GetGetUserByOrcidQueryParams extends SpeakeasyBase {
-    format?: GetGetUserByOrcidFormatEnum;
-    orcid: string;
-}
 export declare class GetGetUserByOrcidRequest extends SpeakeasyBase {
-    queryParams: GetGetUserByOrcidQueryParams;
+    format?: GetGetUserByOrcidFormatEnum;
+    /**
+     * string
+     */
+    orcid: string;
 }
 export declare class GetGetUserByOrcidResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

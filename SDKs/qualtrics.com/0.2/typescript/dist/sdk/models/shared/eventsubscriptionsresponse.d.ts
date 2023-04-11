@@ -13,6 +13,9 @@ export declare class EventSubscriptionsResponseResult extends SpeakeasyBase {
     meta?: EventSubscriptionsResponseResultMeta;
     result?: EventSubscriptionsResponseResultResult;
 }
+/**
+ * OK - web hook registered
+ */
 export declare class EventSubscriptionsResponse extends SpeakeasyBase {
     meta?: EventSubscriptionsResponseMeta;
     result?: EventSubscriptionsResponseResult;

@@ -1,22 +1,39 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PutUsersSelectedUserSshKeysKeyIdPathParams extends SpeakeasyBase {
-    keyId: string;
-    selectedUser: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PutUsersSelectedUserSshKeysKeyIdSecurity extends SpeakeasyBase {
-    oauth2?: shared.SchemeOauth2;
+    apiKey?: string;
     basic?: shared.SchemeBasic;
-    apiKey?: shared.SchemeApiKey;
+    oauth2?: string;
 }
 export declare class PutUsersSelectedUserSshKeysKeyIdRequest extends SpeakeasyBase {
-    pathParams: PutUsersSelectedUserSshKeysKeyIdPathParams;
-    request?: Record<string, any>;
-    security: PutUsersSelectedUserSshKeysKeyIdSecurity;
+    /**
+     * The updated SSH key object
+     */
+    requestBody?: Record<string, any>;
+    /**
+     * The SSH key's UUID value.
+     */
+    keyId: string;
+    /**
+     * This can either be the UUID of the account, surrounded by curly-braces, for
+     *
+     * @remarks
+     * example: `{account UUID}`, OR an Atlassian Account ID.
+     *
+     */
+    selectedUser: string;
 }
 export declare class PutUsersSelectedUserSshKeysKeyIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * If the submitted key or related value is invalid
+     */
     error?: Record<string, any>;
+    /**
+     * The newly updated SSH key.
+     */
     sshAccountKey?: Record<string, any>;
 }

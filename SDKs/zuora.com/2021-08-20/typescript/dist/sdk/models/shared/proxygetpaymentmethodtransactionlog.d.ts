@@ -4,6 +4,9 @@ export declare class ProxyGetPaymentMethodTransactionLog extends SpeakeasyBase {
     gatewayReasonCode?: string;
     gatewayReasonCodeDescription?: string;
     gatewayTransactionType?: string;
+    /**
+     * Object identifier.
+     */
     id?: string;
     paymentMethodId?: string;
     paymentMethodType?: string;

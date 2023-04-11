@@ -27,5 +27,7 @@ export declare enum ExtraParamNameEnum {
     SgIdNumber = "SG_ID_NUMBER",
     VatNumber = "VAT_NUMBER",
     UkContactType = "UK_CONTACT_TYPE",
-    UkCompanyNumber = "UK_COMPANY_NUMBER"
+    UkCompanyNumber = "UK_COMPANY_NUMBER",
+    EuCountryOfCitizenship = "EU_COUNTRY_OF_CITIZENSHIP",
+    AuPriorityToken = "AU_PRIORITY_TOKEN"
 }

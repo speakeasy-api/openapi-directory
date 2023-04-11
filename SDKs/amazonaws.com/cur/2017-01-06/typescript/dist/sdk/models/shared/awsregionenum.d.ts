@@ -1,9 +1,13 @@
-export declare enum AwsRegionEnum {
+/**
+ * The region of the S3 bucket that AWS delivers the report into.
+ */
+export declare enum AWSRegionEnum {
     AfSouth1 = "af-south-1",
     ApEast1 = "ap-east-1",
     ApSouth1 = "ap-south-1",
     ApSoutheast1 = "ap-southeast-1",
     ApSoutheast2 = "ap-southeast-2",
+    ApSoutheast3 = "ap-southeast-3",
     ApNortheast1 = "ap-northeast-1",
     ApNortheast2 = "ap-northeast-2",
     ApNortheast3 = "ap-northeast-3",
@@ -14,6 +18,8 @@ export declare enum AwsRegionEnum {
     EuWest3 = "eu-west-3",
     EuNorth1 = "eu-north-1",
     EuSouth1 = "eu-south-1",
+    EuSouth2 = "eu-south-2",
+    MeCentral1 = "me-central-1",
     MeSouth1 = "me-south-1",
     SaEast1 = "sa-east-1",
     UsEast1 = "us-east-1",

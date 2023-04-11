@@ -1,51 +1,53 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { NetworkconnectivityProjectsLocationsGlobalHubsCreateRequest, NetworkconnectivityProjectsLocationsGlobalHubsCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  NetworkconnectivityProjectsLocationsGlobalHubsCreateRequest,
+  NetworkconnectivityProjectsLocationsGlobalHubsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: NetworkconnectivityProjectsLocationsGlobalHubsCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    hubId: "expedita",
-    key: "voluptas",
-    oauthToken: "fugit",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    requestId: "rerum",
-    uploadType: "dicta",
-    uploadProtocol: "debitis",
-  },
-  request: {
-    description: "voluptatum",
+  dollarXgafv: XgafvEnum.Two,
+  hubInput: {
+    description: "provident",
     labels: {
-      "ut": "dolorem",
+      "quibusdam": "unde",
+      "nulla": "corrupti",
+      "illum": "vel",
     },
-    name: "et",
+    name: "error",
     routingVpcs: [
       {
-        uri: "iste",
+        uri: "http://innocent-effect.org",
+      },
+      {
+        uri: "http://whirlwind-diver.info",
+      },
+      {
+        uri: "http://spotted-skyline.name",
       },
     ],
   },
+  accessToken: "iusto",
+  alt: AltEnum.Media,
+  callback: "nisi",
+  fields: "recusandae",
+  hubId: "temporibus",
+  key: "ab",
+  oauthToken: "quis",
+  parent: "veritatis",
+  prettyPrint: false,
+  quotaUser: "deserunt",
+  requestId: "perferendis",
+  uploadType: "ipsam",
+  uploadProtocol: "repellendus",
 };
 
 sdk.projects.networkconnectivityProjectsLocationsGlobalHubsCreate(req).then((res: NetworkconnectivityProjectsLocationsGlobalHubsCreateResponse | AxiosError) => {

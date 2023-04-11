@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum SendSerialConsoleSshPublicKeyXAmzTargetEnum {
-    Awsec2InstanceConnectServiceSendSerialConsoleSshPublicKey = "AWSEC2InstanceConnectService.SendSerialConsoleSSHPublicKey"
+import { AxiosResponse } from "axios";
+export declare enum SendSerialConsoleSSHPublicKeyXAmzTargetEnum {
+    Awsec2InstanceConnectServiceSendSerialConsoleSSHPublicKey = "AWSEC2InstanceConnectService.SendSerialConsoleSSHPublicKey"
 }
-export declare class SendSerialConsoleSshPublicKeyHeaders extends SpeakeasyBase {
+export declare class SendSerialConsoleSSHPublicKeyRequest extends SpeakeasyBase {
+    sendSerialConsoleSSHPublicKeyRequest: shared.SendSerialConsoleSSHPublicKeyRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,23 +13,58 @@ export declare class SendSerialConsoleSshPublicKeyHeaders extends SpeakeasyBase 
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: SendSerialConsoleSshPublicKeyXAmzTargetEnum;
+    xAmzTarget: SendSerialConsoleSSHPublicKeyXAmzTargetEnum;
 }
-export declare class SendSerialConsoleSshPublicKeyRequest extends SpeakeasyBase {
-    headers: SendSerialConsoleSshPublicKeyHeaders;
-    request: shared.SendSerialConsoleSshPublicKeyRequest;
-}
-export declare class SendSerialConsoleSshPublicKeyResponse extends SpeakeasyBase {
+export declare class SendSerialConsoleSSHPublicKeyResponse extends SpeakeasyBase {
+    /**
+     * AuthException
+     */
     authException?: any;
     contentType: string;
+    /**
+     * EC2InstanceNotFoundException
+     */
     ec2InstanceNotFoundException?: any;
+    /**
+     * EC2InstanceStateInvalidException
+     */
+    ec2InstanceStateInvalidException?: any;
+    /**
+     * EC2InstanceTypeInvalidException
+     */
     ec2InstanceTypeInvalidException?: any;
+    /**
+     * EC2InstanceUnavailableException
+     */
+    ec2InstanceUnavailableException?: any;
+    /**
+     * InvalidArgsException
+     */
     invalidArgsException?: any;
-    sendSerialConsoleSSHPublicKeyResponse?: shared.SendSerialConsoleSshPublicKeyResponse;
-    serialConsoleAccessDisabledException?: any;
-    serialConsoleSessionLimitExceededException?: any;
+    /**
+     * Success
+     */
+    sendSerialConsoleSSHPublicKeyResponse?: shared.SendSerialConsoleSSHPublicKeyResponse;
+    /**
+     * SerialConsoleSessionUnavailableException
+     */
     serialConsoleSessionUnavailableException?: any;
-    serviceException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * SerialConsoleAccessDisabledException
+     */
+    serialConsoleAccessDisabledException?: any;
+    /**
+     * SerialConsoleSessionLimitExceededException
+     */
+    serialConsoleSessionLimitExceededException?: any;
+    /**
+     * ServiceException
+     */
+    serviceException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

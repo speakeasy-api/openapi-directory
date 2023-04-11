@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Movie {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class Movie {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * movieSearchRead - Return movie search result
+     * Return movie search result
      *
+     * @remarks
      * Return movie search result
      *
      * ### Response Class (Status 200)
@@ -20,6 +21,6 @@ export declare class Movie {
      *
      * For more details on how movies are listed [see here][ref].
      * [ref]: https://etmdb.com/en/movie-list/-updated_date
-    **/
+     */
     movieSearchRead(req: operations.MovieSearchReadRequest, config?: AxiosRequestConfig): Promise<operations.MovieSearchReadResponse>;
 }

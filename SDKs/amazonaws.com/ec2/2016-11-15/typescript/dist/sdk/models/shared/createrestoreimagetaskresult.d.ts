@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class CreateRestoreImageTaskResult extends SpeakeasyBase {
-    imageId?: Record<string, any>;
+    imageId?: string;
 }

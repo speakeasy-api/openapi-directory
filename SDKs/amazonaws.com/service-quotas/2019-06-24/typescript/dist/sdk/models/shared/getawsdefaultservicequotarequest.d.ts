@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetAwsDefaultServiceQuotaRequest extends SpeakeasyBase {
+export declare class GetAWSDefaultServiceQuotaRequest extends SpeakeasyBase {
     quotaCode: string;
     serviceCode: string;
 }

@@ -9,6 +9,9 @@ export declare class CampaignsResponsePagination extends SpeakeasyBase {
     offset?: number;
     totalCount?: number;
 }
+/**
+ * successful operation
+ */
 export declare class CampaignsResponse extends SpeakeasyBase {
     data?: Campaign[];
     error?: CampaignsResponseError;

@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { GatewayCapabilitySummary } from "./gatewaycapabilitysummary";
 import { GatewayPlatform } from "./gatewayplatform";
+/**
+ * Success
+ */
 export declare class DescribeGatewayResponse extends SpeakeasyBase {
     creationDate: Date;
     gatewayArn: string;

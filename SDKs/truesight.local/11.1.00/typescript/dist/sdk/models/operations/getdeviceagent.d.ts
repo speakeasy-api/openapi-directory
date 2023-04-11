@@ -1,12 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetDeviceAgentPathParams extends SpeakeasyBase {
-    deviceId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetDeviceAgentRequest extends SpeakeasyBase {
-    pathParams: GetDeviceAgentPathParams;
+    /**
+     * The ID of the device.
+     */
+    deviceId: number;
 }
 export declare class GetDeviceAgentResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

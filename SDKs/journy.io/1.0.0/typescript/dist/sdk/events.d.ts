@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Endpoints for listing events.
+ */
 export declare class Events {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,19 @@ export declare class Events {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * trackJourneyEvent - Push event
+     * Get events
      *
-     * Endpoint used to push an event for a user or an account.
-    **/
-    trackJourneyEvent(req: operations.TrackJourneyEventRequest, config?: AxiosRequestConfig): Promise<operations.TrackJourneyEventResponse>;
+     * @remarks
+     * Endpoint to list events.
+     */
+    getEvents(config?: AxiosRequestConfig): Promise<operations.GetEventsResponse>;
+    /**
+     * Track event
+     *
+     * @remarks
+     * Endpoint used to track an event for a user or an account.
+     *
+     * This endpoint is moved to [Track](#operation/trackEvent).
+     */
+    trackJourneyEvent(req: operations.TrackJourneyEventRequestBody, config?: AxiosRequestConfig): Promise<operations.TrackJourneyEventResponse>;
 }

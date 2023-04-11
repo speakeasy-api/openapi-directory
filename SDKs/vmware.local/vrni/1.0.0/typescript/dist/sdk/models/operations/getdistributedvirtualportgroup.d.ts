@@ -1,22 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetDistributedVirtualPortgroupPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class GetDistributedVirtualPortgroupQueryParams extends SpeakeasyBase {
-    time?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetDistributedVirtualPortgroupSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
+    apiKeyAuth: string;
 }
 export declare class GetDistributedVirtualPortgroupRequest extends SpeakeasyBase {
-    pathParams: GetDistributedVirtualPortgroupPathParams;
-    queryParams: GetDistributedVirtualPortgroupQueryParams;
-    security: GetDistributedVirtualPortgroupSecurity;
+    /**
+     * entity id
+     */
+    id: string;
+    /**
+     * time in epoch seconds
+     */
+    time?: number;
 }
 export declare class GetDistributedVirtualPortgroupResponse extends SpeakeasyBase {
+    /**
+     * Bad Request
+     */
     apiError?: shared.ApiError;
     contentType: string;
+    /**
+     * OK
+     */
     distributedVirtualPortgroup?: shared.DistributedVirtualPortgroup;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

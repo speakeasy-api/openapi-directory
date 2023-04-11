@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum PutStoredQueryXAmzTargetEnum {
     StarlingDoveServicePutStoredQuery = "StarlingDoveService.PutStoredQuery"
 }
-export declare class PutStoredQueryHeaders extends SpeakeasyBase {
+export declare class PutStoredQueryRequest extends SpeakeasyBase {
+    putStoredQueryRequest: shared.PutStoredQueryRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class PutStoredQueryHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: PutStoredQueryXAmzTargetEnum;
 }
-export declare class PutStoredQueryRequest extends SpeakeasyBase {
-    headers: PutStoredQueryHeaders;
-    request: shared.PutStoredQueryRequest;
-}
 export declare class PutStoredQueryResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     putStoredQueryResponse?: shared.PutStoredQueryResponse;
-    resourceConcurrentModificationException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceConcurrentModificationException
+     */
+    resourceConcurrentModificationException?: any;
+    /**
+     * TooManyTagsException
+     */
     tooManyTagsException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

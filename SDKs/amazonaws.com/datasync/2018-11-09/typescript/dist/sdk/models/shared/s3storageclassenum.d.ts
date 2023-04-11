@@ -5,5 +5,6 @@ export declare enum S3StorageClassEnum {
     IntelligentTiering = "INTELLIGENT_TIERING",
     Glacier = "GLACIER",
     DeepArchive = "DEEP_ARCHIVE",
-    Outposts = "OUTPOSTS"
+    Outposts = "OUTPOSTS",
+    GlacierInstantRetrieval = "GLACIER_INSTANT_RETRIEVAL"
 }

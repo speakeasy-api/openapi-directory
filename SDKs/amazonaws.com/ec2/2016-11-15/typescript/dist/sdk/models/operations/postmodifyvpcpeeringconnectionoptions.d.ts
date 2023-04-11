@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostModifyVpcPeeringConnectionOptionsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTModifyVpcPeeringConnectionOptionsActionEnum {
     ModifyVpcPeeringConnectionOptions = "ModifyVpcPeeringConnectionOptions"
 }
-export declare enum PostModifyVpcPeeringConnectionOptionsVersionEnum {
+export declare enum POSTModifyVpcPeeringConnectionOptionsVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostModifyVpcPeeringConnectionOptionsQueryParams extends SpeakeasyBase {
-    action: PostModifyVpcPeeringConnectionOptionsActionEnum;
-    version: PostModifyVpcPeeringConnectionOptionsVersionEnum;
-}
-export declare class PostModifyVpcPeeringConnectionOptionsHeaders extends SpeakeasyBase {
+export declare class POSTModifyVpcPeeringConnectionOptionsRequest extends SpeakeasyBase {
+    action: POSTModifyVpcPeeringConnectionOptionsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTModifyVpcPeeringConnectionOptionsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostModifyVpcPeeringConnectionOptionsHeaders extends Speake
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostModifyVpcPeeringConnectionOptionsRequest extends SpeakeasyBase {
-    queryParams: PostModifyVpcPeeringConnectionOptionsQueryParams;
-    headers: PostModifyVpcPeeringConnectionOptionsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostModifyVpcPeeringConnectionOptionsResponse extends SpeakeasyBase {
+export declare class POSTModifyVpcPeeringConnectionOptionsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

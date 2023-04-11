@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribePendingMaintenanceActionsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribePendingMaintenanceActionsActionEnum {
     DescribePendingMaintenanceActions = "DescribePendingMaintenanceActions"
 }
-export declare enum PostDescribePendingMaintenanceActionsVersionEnum {
+export declare enum POSTDescribePendingMaintenanceActionsVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class PostDescribePendingMaintenanceActionsQueryParams extends SpeakeasyBase {
-    action: PostDescribePendingMaintenanceActionsActionEnum;
+export declare class POSTDescribePendingMaintenanceActionsRequest extends SpeakeasyBase {
+    action: POSTDescribePendingMaintenanceActionsActionEnum;
+    /**
+     * Pagination token
+     */
     marker?: string;
+    /**
+     * Pagination limit
+     */
     maxRecords?: string;
-    version: PostDescribePendingMaintenanceActionsVersionEnum;
-}
-export declare class PostDescribePendingMaintenanceActionsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribePendingMaintenanceActionsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribePendingMaintenanceActionsHeaders extends Speake
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribePendingMaintenanceActionsRequest extends SpeakeasyBase {
-    queryParams: PostDescribePendingMaintenanceActionsQueryParams;
-    headers: PostDescribePendingMaintenanceActionsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribePendingMaintenanceActionsResponse extends SpeakeasyBase {
+export declare class POSTDescribePendingMaintenanceActionsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,11 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeDatasetPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DescribeDatasetRequest extends SpeakeasyBase {
+    /**
+     * A string of up to 128 characters. Allowed characters are a-z, A-Z, 0-9, '_' (underscore), '-' (dash), and '.' (dot).
+     */
     datasetName: string;
+    /**
+     * A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. GUID generation is unique within a region.
+     */
     identityId: string;
+    /**
+     * A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. GUID generation is unique within a region.
+     */
     identityPoolId: string;
-}
-export declare class DescribeDatasetHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -14,17 +22,32 @@ export declare class DescribeDatasetHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DescribeDatasetRequest extends SpeakeasyBase {
-    pathParams: DescribeDatasetPathParams;
-    headers: DescribeDatasetHeaders;
-}
 export declare class DescribeDatasetResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeDatasetResponse?: shared.DescribeDatasetResponse;
+    /**
+     * InternalErrorException
+     */
     internalErrorException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * NotAuthorizedException
+     */
     notAuthorizedException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

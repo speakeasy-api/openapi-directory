@@ -10,7 +10,7 @@ export declare class RateLimitOverviewResources extends SpeakeasyBase {
 }
 /**
  * Rate Limit Overview
-**/
+ */
 export declare class RateLimitOverview extends SpeakeasyBase {
     rate: RateLimit;
     resources: RateLimitOverviewResources;

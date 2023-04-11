@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeAutoScalingInstancesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeAutoScalingInstancesActionEnum {
     DescribeAutoScalingInstances = "DescribeAutoScalingInstances"
 }
-export declare enum PostDescribeAutoScalingInstancesVersionEnum {
+export declare enum POSTDescribeAutoScalingInstancesVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class PostDescribeAutoScalingInstancesQueryParams extends SpeakeasyBase {
-    action: PostDescribeAutoScalingInstancesActionEnum;
+export declare class POSTDescribeAutoScalingInstancesRequest extends SpeakeasyBase {
+    action: POSTDescribeAutoScalingInstancesActionEnum;
+    /**
+     * Pagination limit
+     */
     maxRecords?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostDescribeAutoScalingInstancesVersionEnum;
-}
-export declare class PostDescribeAutoScalingInstancesHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeAutoScalingInstancesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeAutoScalingInstancesHeaders extends SpeakeasyBa
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeAutoScalingInstancesRequest extends SpeakeasyBase {
-    queryParams: PostDescribeAutoScalingInstancesQueryParams;
-    headers: PostDescribeAutoScalingInstancesHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeAutoScalingInstancesResponse extends SpeakeasyBase {
+export declare class POSTDescribeAutoScalingInstancesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,18 +1,18 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CampaignAnalyticsRequest, CampaignAnalyticsResponse } from "openapi/src/sdk/models/operations";
+import {
+  CampaignAnalyticsRequest,
+  CampaignAnalyticsResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: CampaignAnalyticsRequest = {
-  queryParams: {
-    campaignId: "sit",
-    endingAt: "voluptas",
-    length: "culpa",
-  },
+  campaignId: "{{campaign_identifier}}",
+  endingAt: "2020-06-28T23:59:59-5:00",
+  length: "7",
 };
 
 sdk.campaign.campaignAnalytics(req).then((res: CampaignAnalyticsResponse | AxiosError) => {

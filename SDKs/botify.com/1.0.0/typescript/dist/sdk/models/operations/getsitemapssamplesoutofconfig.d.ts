@@ -1,15 +1,32 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetSitemapsSamplesOutOfConfigPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetSitemapsSamplesOutOfConfigRequest extends SpeakeasyBase {
+    /**
+     * Analysis' identifier
+     */
     analysisSlug: string;
+    /**
+     * Page Number
+     */
+    page?: number;
+    /**
+     * Project's identifier
+     */
     projectSlug: string;
+    /**
+     * Page Size
+     */
+    size?: number;
+    /**
+     * User's identifier
+     */
     username: string;
 }
-export declare class GetSitemapsSamplesOutOfConfigQueryParams extends SpeakeasyBase {
-    page?: number;
-    size?: number;
-}
-export declare class GetSitemapsSamplesOutOfConfig200ApplicationJson extends SpeakeasyBase {
+/**
+ * Successful operation
+ */
+export declare class GetSitemapsSamplesOutOfConfig200ApplicationJSON extends SpeakeasyBase {
     count?: number;
     next?: string;
     page?: number;
@@ -17,13 +34,16 @@ export declare class GetSitemapsSamplesOutOfConfig200ApplicationJson extends Spe
     results?: string[];
     size?: number;
 }
-export declare class GetSitemapsSamplesOutOfConfigRequest extends SpeakeasyBase {
-    pathParams: GetSitemapsSamplesOutOfConfigPathParams;
-    queryParams: GetSitemapsSamplesOutOfConfigQueryParams;
-}
 export declare class GetSitemapsSamplesOutOfConfigResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * error payload
+     */
     defaultPayload?: shared.DefaultPayload;
     statusCode: number;
-    getSitemapsSamplesOutOfConfig200ApplicationJSONObject?: GetSitemapsSamplesOutOfConfig200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful operation
+     */
+    getSitemapsSamplesOutOfConfig200ApplicationJSONObject?: GetSitemapsSamplesOutOfConfig200ApplicationJSON;
 }

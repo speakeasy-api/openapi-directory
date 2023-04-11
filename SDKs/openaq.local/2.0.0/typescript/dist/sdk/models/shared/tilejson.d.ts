@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * TileJSON model.
+ *
+ * @remarks
  * Based on https://github.com/mapbox/tilejson-spec/tree/master/2.2.0
-**/
-export declare class TileJson extends SpeakeasyBase {
+ */
+export declare class TileJSON extends SpeakeasyBase {
     attribution?: string;
     bounds?: number[];
     data?: string[];

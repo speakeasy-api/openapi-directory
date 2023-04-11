@@ -6,4 +6,5 @@ export declare class CreateTableRequest extends SpeakeasyBase {
     databaseName: string;
     partitionIndexes?: PartitionIndex[];
     tableInput: TableInput;
+    transactionId?: string;
 }

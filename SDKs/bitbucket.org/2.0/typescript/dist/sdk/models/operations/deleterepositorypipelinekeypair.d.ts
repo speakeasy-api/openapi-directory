@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteRepositoryPipelineKeyPairPathParams extends SpeakeasyBase {
-    repoSlug: string;
-    workspace: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteRepositoryPipelineKeyPairRequest extends SpeakeasyBase {
-    pathParams: DeleteRepositoryPipelineKeyPairPathParams;
+    /**
+     * The repository.
+     */
+    repoSlug: string;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
+     */
+    workspace: string;
 }
 export declare class DeleteRepositoryPipelineKeyPairResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The account, repository or SSH key pair was not found.
+     */
     error?: Record<string, any>;
 }

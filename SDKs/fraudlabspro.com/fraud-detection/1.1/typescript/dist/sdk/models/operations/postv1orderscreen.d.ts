@@ -1,9 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
 export declare enum PostV1OrderScreenFormatEnum {
     Json = "json",
     Xml = "xml"
 }
-export declare class PostV1OrderScreenQueryParams extends SpeakeasyBase {
+export declare class PostV1OrderScreenRequest extends SpeakeasyBase {
     amount?: number;
     avsResult?: string;
     billAddr?: string;
@@ -38,11 +39,12 @@ export declare class PostV1OrderScreenQueryParams extends SpeakeasyBase {
     userPhone?: string;
     usernameHash?: string;
 }
-export declare class PostV1OrderScreenRequest extends SpeakeasyBase {
-    queryParams: PostV1OrderScreenQueryParams;
-}
 export declare class PostV1OrderScreenResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Screen order response
+     */
     postV1OrderScreen200ApplicationJSONString?: string;
 }

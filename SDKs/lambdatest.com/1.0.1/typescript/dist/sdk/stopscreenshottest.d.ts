@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class StopScreenshotTest {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +9,10 @@ export declare class StopScreenshotTest {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * stopScreenshotsTest - Stop specified screenshot test
-     *
      * Stop specified screenshot test
-    **/
-    stopScreenshotsTest(req: operations.StopScreenshotsTestRequest, config?: AxiosRequestConfig): Promise<operations.StopScreenshotsTestResponse>;
+     *
+     * @remarks
+     * Stop specified screenshot test
+     */
+    stopScreenshotsTest(req: operations.StopScreenshotsTestRequest, security: operations.StopScreenshotsTestSecurity, config?: AxiosRequestConfig): Promise<operations.StopScreenshotsTestResponse>;
 }

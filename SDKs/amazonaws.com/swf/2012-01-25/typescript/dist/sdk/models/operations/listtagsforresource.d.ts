@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum ListTagsForResourceXAmzTargetEnum {
     SimpleWorkflowServiceListTagsForResource = "SimpleWorkflowService.ListTagsForResource"
 }
-export declare class ListTagsForResourceHeaders extends SpeakeasyBase {
+export declare class ListTagsForResourceRequest extends SpeakeasyBase {
+    listTagsForResourceInput: shared.ListTagsForResourceInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class ListTagsForResourceHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListTagsForResourceXAmzTargetEnum;
 }
-export declare class ListTagsForResourceRequest extends SpeakeasyBase {
-    headers: ListTagsForResourceHeaders;
-    request: shared.ListTagsForResourceInput;
-}
 export declare class ListTagsForResourceResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * LimitExceededFault
+     */
     limitExceededFault?: any;
+    /**
+     * Success
+     */
     listTagsForResourceOutput?: shared.ListTagsForResourceOutput;
+    /**
+     * OperationNotPermittedFault
+     */
     operationNotPermittedFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnknownResourceFault
+     */
     unknownResourceFault?: any;
 }

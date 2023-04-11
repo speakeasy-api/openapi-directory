@@ -1,8 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteCustomVerificationEmailTemplatePathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteCustomVerificationEmailTemplateRequest extends SpeakeasyBase {
+    /**
+     * The name of the custom verification email template that you want to delete.
+     */
     templateName: string;
-}
-export declare class DeleteCustomVerificationEmailTemplateHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,15 +13,24 @@ export declare class DeleteCustomVerificationEmailTemplateHeaders extends Speake
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeleteCustomVerificationEmailTemplateRequest extends SpeakeasyBase {
-    pathParams: DeleteCustomVerificationEmailTemplatePathParams;
-    headers: DeleteCustomVerificationEmailTemplateHeaders;
-}
 export declare class DeleteCustomVerificationEmailTemplateResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteCustomVerificationEmailTemplateResponse?: Record<string, any>;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

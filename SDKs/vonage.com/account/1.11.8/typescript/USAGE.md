@@ -1,24 +1,19 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AccountCtrlGetAccountServicesByAccountIdRequest, AccountCtrlGetAccountServicesByAccountIdResponse } from "openapi/src/sdk/models/operations";
+import {
+  AccountCtrlGetAccountServicesByAccountIDRequest,
+  AccountCtrlGetAccountServicesByAccountIDResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: AccountCtrlGetAccountServicesByAccountIdRequest = {
-  security: {
-    bearerAuth: {
-      authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    accountId: 74.099998,
-  },
+
+const req: AccountCtrlGetAccountServicesByAccountIDRequest = {
+  accountId: 5488.14,
 };
 
-sdk.accountCtrlGetAccountServicesByAccountId(req).then((res: AccountCtrlGetAccountServicesByAccountIdResponse | AxiosError) => {
+sdk.accountCtrlGetAccountServicesByAccountID(req).then((res: AccountCtrlGetAccountServicesByAccountIDResponse | AxiosError) => {
    // handle response
 });
 ```

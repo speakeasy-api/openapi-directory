@@ -1,42 +1,92 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetCertificatesIdActionsActionIdPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetCertificatesIdActionsActionIdRequest extends SpeakeasyBase {
+    /**
+     * ID of the Action
+     */
     actionId: number;
+    /**
+     * ID of the Certificate
+     */
     id: number;
 }
 /**
  * Error message for the Action if error occurred, otherwise null
-**/
+ */
 export declare class GetCertificatesIdActionsActionIdActionResponseActionError extends SpeakeasyBase {
+    /**
+     * Fixed machine readable code
+     */
     code: string;
+    /**
+     * Humanized error message
+     */
     message: string;
 }
 export declare class GetCertificatesIdActionsActionIdActionResponseActionResources extends SpeakeasyBase {
+    /**
+     * ID of the Resource
+     */
     id: number;
+    /**
+     * Type of resource referenced
+     */
     type: string;
 }
+/**
+ * Status of the Action
+ */
 export declare enum GetCertificatesIdActionsActionIdActionResponseActionStatusEnum {
     Success = "success",
     Running = "running",
     Error = "error"
 }
 export declare class GetCertificatesIdActionsActionIdActionResponseAction extends SpeakeasyBase {
+    /**
+     * Command executed in the Action
+     */
     command: string;
+    /**
+     * Error message for the Action if error occurred, otherwise null
+     */
     error: GetCertificatesIdActionsActionIdActionResponseActionError;
+    /**
+     * Point in time when the Action was finished (in ISO-8601 format). Only set if the Action is finished otherwise null.
+     */
     finished: string;
+    /**
+     * ID of the Resource
+     */
     id: number;
+    /**
+     * Progress of Action in percent
+     */
     progress: number;
+    /**
+     * Resources the Action relates to
+     */
     resources: GetCertificatesIdActionsActionIdActionResponseActionResources[];
+    /**
+     * Point in time when the Action was started (in ISO-8601 format)
+     */
     started: string;
+    /**
+     * Status of the Action
+     */
     status: GetCertificatesIdActionsActionIdActionResponseActionStatusEnum;
 }
+/**
+ * The `action` key contains the Certificate Action
+ */
 export declare class GetCertificatesIdActionsActionIdActionResponse extends SpeakeasyBase {
     action: GetCertificatesIdActionsActionIdActionResponseAction;
 }
-export declare class GetCertificatesIdActionsActionIdRequest extends SpeakeasyBase {
-    pathParams: GetCertificatesIdActionsActionIdPathParams;
-}
 export declare class GetCertificatesIdActionsActionIdResponse extends SpeakeasyBase {
+    /**
+     * The `action` key contains the Certificate Action
+     */
     actionResponse?: GetCertificatesIdActionsActionIdActionResponse;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

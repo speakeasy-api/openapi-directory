@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum DisassociateWebAclxAmzTargetEnum {
-    AwswafRegional20161128DisassociateWebAcl = "AWSWAF_Regional_20161128.DisassociateWebACL"
+import { AxiosResponse } from "axios";
+export declare enum DisassociateWebACLXAmzTargetEnum {
+    AWSWAFRegional20161128DisassociateWebACL = "AWSWAF_Regional_20161128.DisassociateWebACL"
 }
-export declare class DisassociateWebAclHeaders extends SpeakeasyBase {
+export declare class DisassociateWebACLRequest extends SpeakeasyBase {
+    disassociateWebACLRequest: shared.DisassociateWebACLRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,18 +13,30 @@ export declare class DisassociateWebAclHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: DisassociateWebAclxAmzTargetEnum;
+    xAmzTarget: DisassociateWebACLXAmzTargetEnum;
 }
-export declare class DisassociateWebAclRequest extends SpeakeasyBase {
-    headers: DisassociateWebAclHeaders;
-    request: shared.DisassociateWebAclRequest;
-}
-export declare class DisassociateWebAclResponse extends SpeakeasyBase {
+export declare class DisassociateWebACLResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     disassociateWebACLResponse?: Record<string, any>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFInvalidAccountException
+     */
     wafInvalidAccountException?: any;
+    /**
+     * WAFInvalidParameterException
+     */
     wafInvalidParameterException?: any;
+    /**
+     * WAFNonexistentItemException
+     */
     wafNonexistentItemException?: any;
 }

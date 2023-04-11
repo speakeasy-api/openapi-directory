@@ -1,15 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ChargeBearerEnum } from "./chargebearerenum";
-import { AccountReference16Ch } from "./accountreference16ch";
+import { AccountReference16CH } from "./accountreference16ch";
 import { Address } from "./address";
-import { CreditorAgent7Ch } from "./creditoragent7ch";
 import { Amount } from "./amount";
+import { ChargeBearerEnum } from "./chargebearerenum";
+import { CreditorAgent7CH } from "./creditoragent7ch";
 import { ExchangeRateInformation1 } from "./exchangerateinformation1";
+import { ExternalServiceLevel1CodeEnum } from "./externalservicelevel1codeenum";
 import { PurposeCodeEnum } from "./purposecodeenum";
 import { RemittanceInformationStructured } from "./remittanceinformationstructured";
-import { ExternalServiceLevel1CodeEnum } from "./externalservicelevel1codeenum";
 /**
  * Generic body for a bulk payment initation entry.
+ *
+ * @remarks
  *
  * The bulk entry type is a type which follows the JSON formats for the supported products for single payments
  * excluding the data elements (if supported):
@@ -91,28 +93,113 @@ import { ExternalServiceLevel1CodeEnum } from "./externalservicelevel1codeenum";
  *   * If one uses this data types for some payment products he has to ensure that the used data type is
  *     valid according to the underlying payment product, e.g. by some appropriate validations.
  *
-**/
+ */
 export declare class PaymentInitiationBulkElementJson extends SpeakeasyBase {
+    /**
+     * Charge Bearer. ChargeBearerType1Code from ISO20022.
+     */
     chargeBearer?: ChargeBearerEnum;
-    creditorAccount: AccountReference16Ch;
+    /**
+     * Reference to an account by either
+     *
+     * @remarks
+     *   * IBAN, of a payment accounts, or
+     *   * otherAccountIdentification, for payment accounts if there is no IBAN
+     * adapted from ISO pain.001.001.03.ch.02 CashAccount16-CH_IdTpCcy
+     *
+     */
+    creditorAccount: AccountReference16CH;
     creditorAddress?: Address;
-    creditorAgent?: CreditorAgent7Ch;
+    /**
+     * Reference to an creditorAgent by either
+     *
+     * @remarks
+     *   * BIC, of the creditor bank, or
+     *   * IID, of the creditor bank, or
+     *   * IID and optional name and address of the creditor bank or
+     *   * Name and address of the creditor bank
+     * adapted from ISO pain.001.001.03.ch.02 FinancialInstitutionIdentification7-CH
+     *
+     */
+    creditorAgent?: CreditorAgent7CH;
+    /**
+     * Creditor agent name.
+     */
     creditorAgentName?: string;
+    /**
+     * Identification of Creditors, e.g. a SEPA Creditor ID.
+     */
     creditorId?: string;
+    /**
+     * Creditor name.
+     */
     creditorName: string;
+    /**
+     * Creditor Name and Address in a free text field.
+     */
     creditorNameAndAddress?: string;
+    /**
+     * Debtor Id.
+     */
     debtorId?: string;
+    /**
+     * Debtor name.
+     */
     debtorName: string;
     endToEndIdentification: string;
     equivalentAmount?: Amount;
+    /**
+     * as in ISO pain.001.001.03.ch.02 ExchangeRateInformation1
+     */
     exchangeRateInformation?: ExchangeRateInformation1;
     instructedAmount?: Amount;
+    /**
+     * BICFI
+     *
+     * @remarks
+     *
+     */
     intermediaryAgent?: string;
+    /**
+     * ExternalPurpose1Code from ISO 20022.
+     *
+     * @remarks
+     *
+     * Values from ISO 20022 External Code List ExternalCodeSets_1Q2018 June 2018.
+     *
+     */
     purposeCode?: PurposeCodeEnum;
+    /**
+     * Structured remittance information.
+     *
+     * @remarks
+     *
+     */
     remittanceInformationStructured?: RemittanceInformationStructured;
+    /**
+     * Unstructured remittance information.
+     *
+     * @remarks
+     *
+     */
     remittanceInformationUnstructured?: string;
+    /**
+     * Specifies the external service level code in the format of character string with a maximum length of 4 characters.
+     */
     serviceLevel?: ExternalServiceLevel1CodeEnum;
+    /**
+     * ISO 4217 Alpha 3 currency code.
+     *
+     * @remarks
+     *
+     */
     transactionCurrency?: string;
+    /**
+     * Ultimate creditor.
+     */
     ultimateCreditor?: string;
+    /**
+     * Ultimate debtor.
+     */
     ultimateDebtor?: string;
 }

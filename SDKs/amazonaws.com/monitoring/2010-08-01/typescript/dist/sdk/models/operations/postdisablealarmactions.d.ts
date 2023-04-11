@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDisableAlarmActionsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDisableAlarmActionsActionEnum {
     DisableAlarmActions = "DisableAlarmActions"
 }
-export declare enum PostDisableAlarmActionsVersionEnum {
+export declare enum POSTDisableAlarmActionsVersionEnum {
     TwoThousandAndTen0801 = "2010-08-01"
 }
-export declare class PostDisableAlarmActionsQueryParams extends SpeakeasyBase {
-    action: PostDisableAlarmActionsActionEnum;
-    version: PostDisableAlarmActionsVersionEnum;
-}
-export declare class PostDisableAlarmActionsHeaders extends SpeakeasyBase {
+export declare class POSTDisableAlarmActionsRequest extends SpeakeasyBase {
+    action: POSTDisableAlarmActionsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDisableAlarmActionsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +18,8 @@ export declare class PostDisableAlarmActionsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDisableAlarmActionsRequest extends SpeakeasyBase {
-    queryParams: PostDisableAlarmActionsQueryParams;
-    headers: PostDisableAlarmActionsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDisableAlarmActionsResponse extends SpeakeasyBase {
+export declare class POSTDisableAlarmActionsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

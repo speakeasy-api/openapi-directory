@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDetachInstancesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDetachInstancesActionEnum {
     DetachInstances = "DetachInstances"
 }
-export declare enum GetDetachInstancesVersionEnum {
+export declare enum GETDetachInstancesVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class GetDetachInstancesQueryParams extends SpeakeasyBase {
-    action: GetDetachInstancesActionEnum;
+export declare class GETDetachInstancesRequest extends SpeakeasyBase {
+    action: GETDetachInstancesActionEnum;
+    /**
+     * The name of the Auto Scaling group.
+     */
     autoScalingGroupName: string;
+    /**
+     * The IDs of the instances. You can specify up to 20 instances.
+     */
     instanceIds?: string[];
+    /**
+     * Indicates whether the Auto Scaling group decrements the desired capacity value by the number of instances detached.
+     */
     shouldDecrementDesiredCapacity: boolean;
-    version: GetDetachInstancesVersionEnum;
-}
-export declare class GetDetachInstancesHeaders extends SpeakeasyBase {
+    version: GETDetachInstancesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +29,9 @@ export declare class GetDetachInstancesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDetachInstancesRequest extends SpeakeasyBase {
-    queryParams: GetDetachInstancesQueryParams;
-    headers: GetDetachInstancesHeaders;
-}
-export declare class GetDetachInstancesResponse extends SpeakeasyBase {
+export declare class GETDetachInstancesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

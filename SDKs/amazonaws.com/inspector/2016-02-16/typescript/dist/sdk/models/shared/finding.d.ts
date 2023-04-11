@@ -6,7 +6,7 @@ import { InspectorServiceAttributes } from "./inspectorserviceattributes";
 import { SeverityEnum } from "./severityenum";
 /**
  * Contains information about an Amazon Inspector finding. This data type is used as the response element in the <a>DescribeFindings</a> action.
-**/
+ */
 export declare class Finding extends SpeakeasyBase {
     arn: string;
     assetAttributes?: AssetAttributes;

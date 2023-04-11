@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetCancelImportTaskActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETCancelImportTaskActionEnum {
     CancelImportTask = "CancelImportTask"
 }
-export declare enum GetCancelImportTaskVersionEnum {
+export declare enum GETCancelImportTaskVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetCancelImportTaskQueryParams extends SpeakeasyBase {
-    action: GetCancelImportTaskActionEnum;
+export declare class GETCancelImportTaskRequest extends SpeakeasyBase {
+    action: GETCancelImportTaskActionEnum;
+    /**
+     * The reason for canceling the task.
+     */
     cancelReason?: string;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
+    /**
+     * The ID of the import image or import snapshot task to be canceled.
+     */
     importTaskId?: string;
-    version: GetCancelImportTaskVersionEnum;
-}
-export declare class GetCancelImportTaskHeaders extends SpeakeasyBase {
+    version: GETCancelImportTaskVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +29,9 @@ export declare class GetCancelImportTaskHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetCancelImportTaskRequest extends SpeakeasyBase {
-    queryParams: GetCancelImportTaskQueryParams;
-    headers: GetCancelImportTaskHeaders;
-}
-export declare class GetCancelImportTaskResponse extends SpeakeasyBase {
+export declare class GETCancelImportTaskResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

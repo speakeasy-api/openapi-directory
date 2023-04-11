@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Methods to get specific evidence.
+ */
 export declare class Retrieve {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +12,9 @@ export declare class Retrieve {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getAssociationById - Get association by id
+     * Get association by id
      *
+     * @remarks
      * Once we integrate all evidence connecting a target to a specific disease, we
      *  compute an association score by the means of an harmonic sum. This *association score* provides
      *  an indication of how strong the evidence behind each connection is and can be
@@ -20,11 +24,12 @@ export declare class Retrieve {
      *  The method returns an association object, which contains the data and summary
      *  on each evidence type included in the calculation of the score, as well as the score itself.
      *
-    **/
+     */
     getAssociationById(req: operations.GetAssociationByIdRequest, config?: AxiosRequestConfig): Promise<operations.GetAssociationByIdResponse>;
     /**
-     * getEvidenceById - Get evidence by ID
+     * Get evidence by ID
      *
+     * @remarks
      * We call **evidence** a unit of data that support a connection between a target and a disease.
      * The Open Targets Platform integrates multiple types of evidence including genetic associations,
      * somatic mutations, RNA expression and target-disease associations mined from the literature.
@@ -36,14 +41,15 @@ export declare class Retrieve {
      *
      * **Please note** that a specific evidence ID may change between data releases. We can not guarantee that a specific evidence ID will refer to the same piece of evidence connecting a target and its diseases.
      *
-    **/
+     */
     getEvidenceById(req: operations.GetEvidenceByIdRequest, config?: AxiosRequestConfig): Promise<operations.GetEvidenceByIdResponse>;
     /**
-     * postEvidenceById - Get evidence for a list of IDs
+     * Get evidence for a list of IDs
      *
+     * @remarks
      * This is the POST version of [/public/evidence](#!/public/get_public_evidence).
      * It allows to query for a list of evidence strings encoded in a `json` object to be passed in the body.
      *
-    **/
-    postEvidenceById(req: operations.PostEvidenceByIdRequest, config?: AxiosRequestConfig): Promise<operations.PostEvidenceByIdResponse>;
+     */
+    postEvidenceById(req: string, config?: AxiosRequestConfig): Promise<operations.PostEvidenceByIdResponse>;
 }

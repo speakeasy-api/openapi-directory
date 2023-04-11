@@ -1,22 +1,36 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetUsersUserEmailOfferingsOfferingIdProgressPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetUsersUserEmailOfferingsOfferingIdProgressRequest extends SpeakeasyBase {
+    /**
+     * offering's id
+     */
     offeringId: string;
+    /**
+     * user's email
+     */
     userEmail: string;
 }
-export declare class GetUsersUserEmailOfferingsOfferingIdProgress200ApplicationJson extends SpeakeasyBase {
+/**
+ * user's offerings
+ */
+export declare class GetUsersUserEmailOfferingsOfferingIdProgress200ApplicationJSON extends SpeakeasyBase {
     completion?: string;
     email?: string;
     firstName?: string;
     id?: string;
     lastName?: string;
 }
-export declare class GetUsersUserEmailOfferingsOfferingIdProgressRequest extends SpeakeasyBase {
-    pathParams: GetUsersUserEmailOfferingsOfferingIdProgressPathParams;
-}
 export declare class GetUsersUserEmailOfferingsOfferingIdProgressResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Bad Request
+     */
     error?: shared.ErrorT;
     statusCode: number;
-    getUsersUserEmailOfferingsOfferingIdProgress200ApplicationJSONObject?: GetUsersUserEmailOfferingsOfferingIdProgress200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * user's offerings
+     */
+    getUsersUserEmailOfferingsOfferingIdProgress200ApplicationJSONObject?: GetUsersUserEmailOfferingsOfferingIdProgress200ApplicationJSON;
 }

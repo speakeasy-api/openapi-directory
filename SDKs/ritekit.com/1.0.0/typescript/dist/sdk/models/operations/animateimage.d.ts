@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class AnimateImageQueryParams extends SpeakeasyBase {
-    type: string;
-    url: string;
-}
+import { AxiosResponse } from "axios";
 export declare class AnimateImageRequest extends SpeakeasyBase {
-    queryParams: AnimateImageQueryParams;
+    /**
+     * URL of the company
+     */
+    type: string;
+    /**
+     * URL of the company
+     */
+    url: string;
 }
 export declare class AnimateImageResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

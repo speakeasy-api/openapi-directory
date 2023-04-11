@@ -1,17 +1,138 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class ProxyGetImport extends SpeakeasyBase {
+    /**
+     *  The user ID of the person who created the import.
+     *
+     * @remarks
+     *
+     * **Character limit**: 32
+     *
+     * **Values**: automatically generated
+     */
     createdById?: string;
+    /**
+     *  The date when the import was created.
+     *
+     * @remarks
+     *
+     * **Character limit**: 29
+     *
+     * **Values**: automatically generated
+     */
     createdDate?: Date;
+    /**
+     * Object identifier.
+     */
     id?: string;
+    /**
+     *  The type of item imported.
+     *
+     * @remarks
+     *
+     * **Character limit**: 7
+     *
+     * **Values**: Usage
+     */
     importType?: string;
+    /**
+     * The number of records successfully imported.
+     *
+     * @remarks
+     *
+     * **Values**: automatically generated
+     */
     importedCount?: number;
+    /**
+     *  A check to validate the import file's integrity.
+     *
+     * @remarks
+     *
+     * **Character limit:** 32
+     *
+     * **System-generated:** no
+     *
+     * **Values**: a string of 32 characters or fewer
+     */
     md5?: string;
+    /**
+     *  A descriptive name for the import.
+     *
+     * @remarks
+     *
+     * **Character limit:** 100
+     *
+     * **Values:** one of the following:
+     *
+     * - a string of 100 characters or fewer
+     * - if NULL default is: `import <ImportType_value>`
+     *
+     */
     name?: string;
+    /**
+     *  The URL for your import file, which contains your records for upload. When you upload the file, Zuora assigns it to this address.
+     *
+     * @remarks
+     *
+     * **Values:** automatic dynamically-generated URL
+     */
     originalResourceUrl?: string;
+    /**
+     *  The URL for the import result file, which is a zipped CSV file.
+     *
+     * @remarks
+     *
+     * **Values**: automatic dynamically-generated URL
+     */
     resultResourceUrl?: string;
+    /**
+     * The status of the import process.
+     *
+     * @remarks
+     *
+     * **Values**: automatically generated using one of the following values:
+     *
+     * - Pending
+     * - Processing
+     * - Completed
+     * - Failed
+     *
+     */
     status?: string;
+    /**
+     *  The reason for the system-generated status. Use this information if the import fails.
+     *
+     * @remarks
+     *
+     * **Character limit**: 2000
+     *
+     * **Values**: automatically generated error message
+     */
     statusReason?: string;
+    /**
+     *  The number of records in the import file.
+     *
+     * @remarks
+     *
+     * **Character limit**:
+     *
+     * **Values**: automatically generated
+     */
     totalCount?: number;
+    /**
+     *  The ID of the user who last updated the import.
+     *
+     * @remarks
+     *
+     * **Character limit**: 32
+     *
+     * **Values**: automatically generated
+     */
     updatedById?: string;
+    /**
+     *  The date when the import was last updated.
+     *
+     * @remarks
+     * **Character limit**: 29 **Values**: automatically generated
+     */
     updatedDate?: Date;
 }

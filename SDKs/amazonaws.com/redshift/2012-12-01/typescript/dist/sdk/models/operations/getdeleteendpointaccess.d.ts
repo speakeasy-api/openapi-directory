@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteEndpointAccessActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteEndpointAccessActionEnum {
     DeleteEndpointAccess = "DeleteEndpointAccess"
 }
-export declare enum GetDeleteEndpointAccessVersionEnum {
+export declare enum GETDeleteEndpointAccessVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class GetDeleteEndpointAccessQueryParams extends SpeakeasyBase {
-    action: GetDeleteEndpointAccessActionEnum;
+export declare class GETDeleteEndpointAccessRequest extends SpeakeasyBase {
+    action: GETDeleteEndpointAccessActionEnum;
+    /**
+     * The Redshift-managed VPC endpoint to delete.
+     */
     endpointName: string;
-    version: GetDeleteEndpointAccessVersionEnum;
-}
-export declare class GetDeleteEndpointAccessHeaders extends SpeakeasyBase {
+    version: GETDeleteEndpointAccessVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDeleteEndpointAccessHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteEndpointAccessRequest extends SpeakeasyBase {
-    queryParams: GetDeleteEndpointAccessQueryParams;
-    headers: GetDeleteEndpointAccessHeaders;
-}
-export declare class GetDeleteEndpointAccessResponse extends SpeakeasyBase {
+export declare class GETDeleteEndpointAccessResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

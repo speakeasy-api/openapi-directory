@@ -1,10 +1,27 @@
-import { AxiosInstance } from "axios";
 import { Projects } from "./projects";
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://gkebackup.googleapis.com/"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * Backup for GKE is a managed Kubernetes workload backup and restore service for GKE clusters.
+ *
+ * @see {@link https://cloud.google.com/kubernetes-engine/docs/add-on/backup-for-gke}
+ */
 export declare class SDK {
     projects: Projects;
     _defaultClient: AxiosInstance;
@@ -13,5 +30,6 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
 }

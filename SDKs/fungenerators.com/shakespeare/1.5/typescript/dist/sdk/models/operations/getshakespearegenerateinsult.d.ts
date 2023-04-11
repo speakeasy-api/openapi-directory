@@ -1,16 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetShakespeareGenerateInsultQueryParams extends SpeakeasyBase {
-    limit?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetShakespeareGenerateInsultSecurity extends SpeakeasyBase {
-    xFungeneratorsApiSecret: shared.SchemeXFungeneratorsApiSecret;
+    xFungeneratorsApiSecret: string;
 }
 export declare class GetShakespeareGenerateInsultRequest extends SpeakeasyBase {
-    queryParams: GetShakespeareGenerateInsultQueryParams;
-    security: GetShakespeareGenerateInsultSecurity;
+    /**
+     * No of insults to generate
+     */
+    limit?: number;
 }
 export declare class GetShakespeareGenerateInsultResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

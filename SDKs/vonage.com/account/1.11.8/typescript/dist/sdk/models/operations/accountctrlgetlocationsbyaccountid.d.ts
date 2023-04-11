@@ -1,17 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AccountCtrlGetLocationsByAccountIdPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class AccountCtrlGetLocationsByAccountIDSecurity extends SpeakeasyBase {
+    bearerAuth: string;
+}
+export declare class AccountCtrlGetLocationsByAccountIDRequest extends SpeakeasyBase {
+    /**
+     * The Vonage Business Cloud account ID
+     */
     accountId: number;
 }
-export declare class AccountCtrlGetLocationsByAccountIdSecurity extends SpeakeasyBase {
-    bearerAuth: shared.SchemeBearerAuth;
-}
-export declare class AccountCtrlGetLocationsByAccountIdRequest extends SpeakeasyBase {
-    pathParams: AccountCtrlGetLocationsByAccountIdPathParams;
-    security: AccountCtrlGetLocationsByAccountIdSecurity;
-}
-export declare class AccountCtrlGetLocationsByAccountIdResponse extends SpeakeasyBase {
+export declare class AccountCtrlGetLocationsByAccountIDResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     locationsHalResponse?: shared.LocationsHalResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

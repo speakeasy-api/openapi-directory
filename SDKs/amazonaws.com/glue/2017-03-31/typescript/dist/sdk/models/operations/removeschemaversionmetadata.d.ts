@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum RemoveSchemaVersionMetadataXAmzTargetEnum {
-    AwsGlueRemoveSchemaVersionMetadata = "AWSGlue.RemoveSchemaVersionMetadata"
+    AWSGlueRemoveSchemaVersionMetadata = "AWSGlue.RemoveSchemaVersionMetadata"
 }
-export declare class RemoveSchemaVersionMetadataHeaders extends SpeakeasyBase {
+export declare class RemoveSchemaVersionMetadataRequest extends SpeakeasyBase {
+    removeSchemaVersionMetadataInput: shared.RemoveSchemaVersionMetadataInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class RemoveSchemaVersionMetadataHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: RemoveSchemaVersionMetadataXAmzTargetEnum;
 }
-export declare class RemoveSchemaVersionMetadataRequest extends SpeakeasyBase {
-    headers: RemoveSchemaVersionMetadataHeaders;
-    request: shared.RemoveSchemaVersionMetadataInput;
-}
 export declare class RemoveSchemaVersionMetadataResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * Success
+     */
     removeSchemaVersionMetadataResponse?: shared.RemoveSchemaVersionMetadataResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

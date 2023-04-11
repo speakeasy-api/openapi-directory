@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum CreateMlTransformXAmzTargetEnum {
-    AwsGlueCreateMlTransform = "AWSGlue.CreateMLTransform"
+import { AxiosResponse } from "axios";
+export declare enum CreateMLTransformXAmzTargetEnum {
+    AWSGlueCreateMLTransform = "AWSGlue.CreateMLTransform"
 }
-export declare class CreateMlTransformHeaders extends SpeakeasyBase {
+export declare class CreateMLTransformRequest extends SpeakeasyBase {
+    createMLTransformRequest: shared.CreateMLTransformRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,21 +13,42 @@ export declare class CreateMlTransformHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: CreateMlTransformXAmzTargetEnum;
+    xAmzTarget: CreateMLTransformXAmzTargetEnum;
 }
-export declare class CreateMlTransformRequest extends SpeakeasyBase {
-    headers: CreateMlTransformHeaders;
-    request: shared.CreateMlTransformRequest;
-}
-export declare class CreateMlTransformResponse extends SpeakeasyBase {
+export declare class CreateMLTransformResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * AlreadyExistsException
+     */
     alreadyExistsException?: any;
     contentType: string;
-    createMLTransformResponse?: shared.CreateMlTransformResponse;
+    /**
+     * Success
+     */
+    createMLTransformResponse?: shared.CreateMLTransformResponse;
+    /**
+     * IdempotentParameterMismatchException
+     */
     idempotentParameterMismatchException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
+    /**
+     * ResourceNumberLimitExceededException
+     */
     resourceNumberLimitExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,8 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ConfigStatusEnum } from "./configstatusenum";
 /**
- * An object that represents the configuration for an OpenID Connect (OIDC) identity provider.
-**/
+ * An object representing the configuration for an OpenID Connect (OIDC) identity provider.
+ */
 export declare class OidcIdentityProviderConfig extends SpeakeasyBase {
     clientId?: string;
     clusterName?: string;

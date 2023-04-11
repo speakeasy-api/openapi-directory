@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetConnectionXAmzTargetEnum {
     ComAmazonawsCodestarConnectionsCodeStarConnections20191201GetConnection = "com.amazonaws.codestar.connections.CodeStar_connections_20191201.GetConnection"
 }
-export declare class GetConnectionHeaders extends SpeakeasyBase {
+export declare class GetConnectionRequest extends SpeakeasyBase {
+    getConnectionInput: shared.GetConnectionInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class GetConnectionHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetConnectionXAmzTargetEnum;
 }
-export declare class GetConnectionRequest extends SpeakeasyBase {
-    headers: GetConnectionHeaders;
-    request: shared.GetConnectionInput;
-}
 export declare class GetConnectionResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getConnectionOutput?: shared.GetConnectionOutput;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
-    resourceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceUnavailableException
+     */
+    resourceUnavailableException?: any;
 }

@@ -1,70 +1,76 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { YoutubeAbuseReportsInsertRequest, YoutubeAbuseReportsInsertResponse } from "openapi/src/sdk/models/operations";
+import {
+  YoutubeAbuseReportsInsertRequest,
+  YoutubeAbuseReportsInsertResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: YoutubeAbuseReportsInsertRequest = {
-  security: {
-    option1: {
-      oauth2: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-      oauth2c: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-    },
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "voluptas",
-    alt: "media",
-    callback: "expedita",
-    fields: "consequuntur",
-    key: "dolor",
-    oauthToken: "expedita",
-    part: [
-      "fugit",
-      "et",
-      "nihil",
-    ],
-    prettyPrint: true,
-    quotaUser: "dicta",
-    uploadType: "debitis",
-    uploadProtocol: "voluptatum",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  abuseReport: {
     abuseTypes: [
       {
-        id: "ut",
+        id: "distinctio",
+      },
+      {
+        id: "quibusdam",
+      },
+      {
+        id: "unde",
       },
     ],
-    description: "dolorem",
+    description: "nulla",
     relatedEntities: [
       {
         entity: {
-          id: "voluptate",
-          typeId: "iste",
-          url: "vitae",
+          id: "illum",
+          typeId: "vel",
+          url: "error",
         },
       },
       {
         entity: {
-          id: "totam",
-          typeId: "dolores",
-          url: "illum",
+          id: "deserunt",
+          typeId: "suscipit",
+          url: "iure",
+        },
+      },
+      {
+        entity: {
+          id: "magnam",
+          typeId: "debitis",
+          url: "ipsa",
         },
       },
     ],
     subject: {
-      id: "debitis",
-      typeId: "vel",
-      url: "odio",
+      id: "delectus",
+      typeId: "tempora",
+      url: "suscipit",
     },
   },
+  accessToken: "molestiae",
+  alt: AltEnum.Proto,
+  callback: "placeat",
+  fields: "voluptatum",
+  key: "iusto",
+  oauthToken: "excepturi",
+  part: [
+    "recusandae",
+    "temporibus",
+  ],
+  prettyPrint: false,
+  quotaUser: "ab",
+  uploadType: "quis",
+  uploadProtocol: "veritatis",
 };
 
 sdk.abuseReports.youtubeAbuseReportsInsert(req).then((res: YoutubeAbuseReportsInsertResponse | AxiosError) => {

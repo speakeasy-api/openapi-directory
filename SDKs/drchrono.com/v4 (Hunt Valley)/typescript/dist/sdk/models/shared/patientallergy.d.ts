@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * SNOMED code for the reaction. For possible SnoMED codes, please see [this link from PHIN VADS](https://phinvads.cdc.gov/vads/ViewValueSet.action?id=896AABB4-5ACD-DE11-913D-0015173D1785)
+ */
 export declare enum PatientAllergySnomedReactionEnum {
     Unknown = "",
     FourteenMillionSixHundredAndSixtyNineThousandAndOne = "14669001",
@@ -21,18 +24,45 @@ export declare enum PatientAllergySnomedReactionEnum {
     OneHundredAndSixtyTwoMillionThreeHundredAndNinetySevenThousandAndThree = "162397003",
     SixtyFiveMillionOneHundredAndTwentyFourThousandAndFour = "65124004"
 }
+/**
+ * One of `"active"`, `"inactive"`. If absent in `POST`, default to `"active"`
+ */
 export declare enum PatientAllergyStatusEnum {
     Active = "active",
     Inactive = "inactive"
 }
+/**
+ * Created
+ */
 export declare class PatientAllergy extends SpeakeasyBase {
+    /**
+     * Description of the allergy, such as `"Cat hair"`
+     */
     description?: string;
+    /**
+     * Id of the doctor who diagnosed the allergy
+     */
     doctor: number;
     id?: number;
+    /**
+     * Any additional notes from the provider
+     */
     notes?: string;
     patient: number;
+    /**
+     * Short description of the patient's allergic reaction, such as `"Hives"`
+     */
     reaction?: string;
+    /**
+     * If the allergy is a drug allergy, this is the RxNorm code of the drug
+     */
     rxnorm?: string;
+    /**
+     * SNOMED code for the reaction. For possible SnoMED codes, please see [this link from PHIN VADS](https://phinvads.cdc.gov/vads/ViewValueSet.action?id=896AABB4-5ACD-DE11-913D-0015173D1785)
+     */
     snomedReaction?: PatientAllergySnomedReactionEnum;
+    /**
+     * One of `"active"`, `"inactive"`. If absent in `POST`, default to `"active"`
+     */
     status?: PatientAllergyStatusEnum;
 }

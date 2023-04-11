@@ -1,5 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class PublicSecuritySecurity {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,21 +10,24 @@ export declare class PublicSecuritySecurity {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * login - Login
+     * Login
      *
+     * @remarks
      * User Login - The login will give your tokens
-    **/
-    login(req: operations.LoginRequest, config?: AxiosRequestConfig): Promise<operations.LoginResponse>;
+     */
+    login(req: shared.LoginRequest, config?: AxiosRequestConfig): Promise<operations.LoginResponse>;
     /**
-     * lostPassword - Lost password
+     * Lost password
      *
+     * @remarks
      * Lost password - Your password will be regenerated and sent to your email
-    **/
-    lostPassword(req: operations.LostPasswordRequest, config?: AxiosRequestConfig): Promise<operations.LostPasswordResponse>;
+     */
+    lostPassword(req: string, config?: AxiosRequestConfig): Promise<operations.LostPasswordResponse>;
     /**
-     * register - User Registration
+     * User Registration
      *
+     * @remarks
      * User Registration - Create a new user on BeezUP
-    **/
-    register(req: operations.RegisterRequest, config?: AxiosRequestConfig): Promise<operations.RegisterResponse>;
+     */
+    register(req: shared.RegisterRequest, config?: AxiosRequestConfig): Promise<operations.RegisterResponse>;
 }

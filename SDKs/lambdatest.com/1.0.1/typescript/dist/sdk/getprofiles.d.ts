@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class GetProfiles {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +9,10 @@ export declare class GetProfiles {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * profiles - Fetch login profiles
-     *
      * Fetch login profiles
-    **/
-    profiles(req: operations.ProfilesRequest, config?: AxiosRequestConfig): Promise<operations.ProfilesResponse>;
+     *
+     * @remarks
+     * Fetch login profiles
+     */
+    profiles(config?: AxiosRequestConfig): Promise<operations.ProfilesResponse>;
 }

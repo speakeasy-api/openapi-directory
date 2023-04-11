@@ -52,7 +52,6 @@ export * from "./product";
 export * from "./proposal";
 export * from "./publisherprofileapiproto";
 export * from "./publisherprovidedforecast";
-export * from "./security";
 export * from "./seller";
 export * from "./sharedtargeting";
 export * from "./targetingvalue";

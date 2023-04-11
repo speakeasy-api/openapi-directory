@@ -1,16 +1,16 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetFeaturesFeatureIdRequest, GetFeaturesFeatureIdResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetFeaturesFeatureIdRequest,
+  GetFeaturesFeatureIdResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetFeaturesFeatureIdRequest = {
-  pathParams: {
-    featureId: 8717895732742165505,
-  },
+  featureId: 548814,
 };
 
 sdk.feature.getFeaturesFeatureId(req).then((res: GetFeaturesFeatureIdResponse | AxiosError) => {

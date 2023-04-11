@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeTrustedAdvisorCheckResultXAmzTargetEnum {
-    AwsSupport20130415DescribeTrustedAdvisorCheckResult = "AWSSupport_20130415.DescribeTrustedAdvisorCheckResult"
+    AWSSupport20130415DescribeTrustedAdvisorCheckResult = "AWSSupport_20130415.DescribeTrustedAdvisorCheckResult"
 }
-export declare class DescribeTrustedAdvisorCheckResultHeaders extends SpeakeasyBase {
+export declare class DescribeTrustedAdvisorCheckResultRequest extends SpeakeasyBase {
+    describeTrustedAdvisorCheckResultRequest: shared.DescribeTrustedAdvisorCheckResultRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,13 +15,16 @@ export declare class DescribeTrustedAdvisorCheckResultHeaders extends SpeakeasyB
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeTrustedAdvisorCheckResultXAmzTargetEnum;
 }
-export declare class DescribeTrustedAdvisorCheckResultRequest extends SpeakeasyBase {
-    headers: DescribeTrustedAdvisorCheckResultHeaders;
-    request: shared.DescribeTrustedAdvisorCheckResultRequest;
-}
 export declare class DescribeTrustedAdvisorCheckResultResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeTrustedAdvisorCheckResultResponse?: shared.DescribeTrustedAdvisorCheckResultResponse;
+    /**
+     * InternalServerError
+     */
     internalServerError?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

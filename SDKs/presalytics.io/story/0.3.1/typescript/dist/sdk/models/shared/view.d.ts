@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Base model for all types
-**/
+ */
 export declare class View extends SpeakeasyBase {
     activeMsecs?: number;
     additional?: string;

@@ -1,8 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteConfigurationSetPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteConfigurationSetRequest extends SpeakeasyBase {
+    /**
+     * The name of the configuration set that you want to delete.
+     */
     configurationSetName: string;
-}
-export declare class DeleteConfigurationSetHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,16 +13,28 @@ export declare class DeleteConfigurationSetHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeleteConfigurationSetRequest extends SpeakeasyBase {
-    pathParams: DeleteConfigurationSetPathParams;
-    headers: DeleteConfigurationSetHeaders;
-}
 export declare class DeleteConfigurationSetResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
+    /**
+     * ConcurrentModificationException
+     */
     concurrentModificationException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteConfigurationSetResponse?: Record<string, any>;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

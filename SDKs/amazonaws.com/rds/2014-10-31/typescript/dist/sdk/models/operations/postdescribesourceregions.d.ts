@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeSourceRegionsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeSourceRegionsActionEnum {
     DescribeSourceRegions = "DescribeSourceRegions"
 }
-export declare enum PostDescribeSourceRegionsVersionEnum {
+export declare enum POSTDescribeSourceRegionsVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class PostDescribeSourceRegionsQueryParams extends SpeakeasyBase {
-    action: PostDescribeSourceRegionsActionEnum;
+export declare class POSTDescribeSourceRegionsRequest extends SpeakeasyBase {
+    action: POSTDescribeSourceRegionsActionEnum;
+    /**
+     * Pagination token
+     */
     marker?: string;
+    /**
+     * Pagination limit
+     */
     maxRecords?: string;
-    version: PostDescribeSourceRegionsVersionEnum;
-}
-export declare class PostDescribeSourceRegionsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeSourceRegionsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeSourceRegionsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeSourceRegionsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeSourceRegionsQueryParams;
-    headers: PostDescribeSourceRegionsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeSourceRegionsResponse extends SpeakeasyBase {
+export declare class POSTDescribeSourceRegionsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

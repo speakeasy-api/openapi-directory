@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostSetSecurityTokenServicePreferencesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTSetSecurityTokenServicePreferencesActionEnum {
     SetSecurityTokenServicePreferences = "SetSecurityTokenServicePreferences"
 }
-export declare enum PostSetSecurityTokenServicePreferencesVersionEnum {
+export declare enum POSTSetSecurityTokenServicePreferencesVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostSetSecurityTokenServicePreferencesQueryParams extends SpeakeasyBase {
-    action: PostSetSecurityTokenServicePreferencesActionEnum;
-    version: PostSetSecurityTokenServicePreferencesVersionEnum;
-}
-export declare class PostSetSecurityTokenServicePreferencesHeaders extends SpeakeasyBase {
+export declare class POSTSetSecurityTokenServicePreferencesRequest extends SpeakeasyBase {
+    action: POSTSetSecurityTokenServicePreferencesActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTSetSecurityTokenServicePreferencesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostSetSecurityTokenServicePreferencesHeaders extends Speak
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostSetSecurityTokenServicePreferencesRequest extends SpeakeasyBase {
-    queryParams: PostSetSecurityTokenServicePreferencesQueryParams;
-    headers: PostSetSecurityTokenServicePreferencesHeaders;
-    request?: Uint8Array;
-}
-export declare class PostSetSecurityTokenServicePreferencesResponse extends SpeakeasyBase {
+export declare class POSTSetSecurityTokenServicePreferencesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

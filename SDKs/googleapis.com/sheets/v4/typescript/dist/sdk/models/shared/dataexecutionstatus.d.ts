@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The error code.
+ */
 export declare enum DataExecutionStatusErrorCodeEnum {
     DataExecutionErrorCodeUnspecified = "DATA_EXECUTION_ERROR_CODE_UNSPECIFIED",
     TimedOut = "TIMED_OUT",
@@ -20,6 +23,9 @@ export declare enum DataExecutionStatusErrorCodeEnum {
     ObjectInErrorState = "OBJECT_IN_ERROR_STATE",
     ObjectSpecInvalid = "OBJECT_SPEC_INVALID"
 }
+/**
+ * The state of the data execution.
+ */
 export declare enum DataExecutionStatusStateEnum {
     DataExecutionStateUnspecified = "DATA_EXECUTION_STATE_UNSPECIFIED",
     NotStarted = "NOT_STARTED",
@@ -29,10 +35,22 @@ export declare enum DataExecutionStatusStateEnum {
 }
 /**
  * The data execution status. A data execution is created to sync a data source object with the latest data from a DataSource. It is usually scheduled to run at background, you can check its state to tell if an execution completes There are several scenarios where a data execution is triggered to run: * Adding a data source creates an associated data source sheet as well as a data execution to sync the data from the data source to the sheet. * Updating a data source creates a data execution to refresh the associated data source sheet similarly. * You can send refresh request to explicitly refresh one or multiple data source objects.
-**/
+ */
 export declare class DataExecutionStatus extends SpeakeasyBase {
+    /**
+     * The error code.
+     */
     errorCode?: DataExecutionStatusErrorCodeEnum;
+    /**
+     * The error message, which may be empty.
+     */
     errorMessage?: string;
+    /**
+     * Gets the time the data last successfully refreshed.
+     */
     lastRefreshTime?: string;
+    /**
+     * The state of the data execution.
+     */
     state?: DataExecutionStatusStateEnum;
 }

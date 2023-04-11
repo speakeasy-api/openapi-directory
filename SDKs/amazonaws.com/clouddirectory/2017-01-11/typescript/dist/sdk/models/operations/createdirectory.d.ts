@@ -1,6 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreateDirectoryHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class CreateDirectoryRequestBody extends SpeakeasyBase {
+    /**
+     * The name of the <a>Directory</a>. Should be unique per account, per region.
+     */
+    name: string;
+}
+export declare class CreateDirectoryRequest extends SpeakeasyBase {
+    requestBody: CreateDirectoryRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -8,25 +16,49 @@ export declare class CreateDirectoryHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
+    /**
+     * The Amazon Resource Name (ARN) of the published schema that will be copied into the data <a>Directory</a>. For more information, see <a>arns</a>.
+     */
     xAmzDataPartition: string;
 }
-export declare class CreateDirectoryRequestBody extends SpeakeasyBase {
-    name: string;
-}
-export declare class CreateDirectoryRequest extends SpeakeasyBase {
-    headers: CreateDirectoryHeaders;
-    request: CreateDirectoryRequestBody;
-}
 export declare class CreateDirectoryResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     createDirectoryResponse?: shared.CreateDirectoryResponse;
+    /**
+     * DirectoryAlreadyExistsException
+     */
     directoryAlreadyExistsException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidArnException
+     */
     invalidArnException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
-    resourceNotFoundException?: any;
-    retryableConflictException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * RetryableConflictException
+     */
+    retryableConflictException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

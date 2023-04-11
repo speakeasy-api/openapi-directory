@@ -39,5 +39,4 @@ export * from "./googlecloudrecommendationenginev1beta1userinfo";
 export * from "./googlelongrunninglistoperationsresponse";
 export * from "./googlelongrunningoperation";
 export * from "./googlerpcstatus";
-export * from "./security";
 export * from "./xgafvenum";

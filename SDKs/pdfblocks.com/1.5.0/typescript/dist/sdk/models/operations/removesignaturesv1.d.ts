@@ -1,23 +1,34 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
 export declare class RemoveSignaturesV1RequestBodyFile extends SpeakeasyBase {
     content: Uint8Array;
     file: string;
 }
 export declare class RemoveSignaturesV1RequestBody extends SpeakeasyBase {
+    /**
+     * The input PDF document
+     */
     file: RemoveSignaturesV1RequestBodyFile;
 }
-export declare class RemoveSignaturesV14XxApplicationProblemPlusJson extends SpeakeasyBase {
+/**
+ * Error
+ */
+export declare class RemoveSignaturesV14XXApplicationProblemPlusJson extends SpeakeasyBase {
     errors?: Record<string, any>;
     status?: number;
     title?: string;
     type?: string;
 }
-export declare class RemoveSignaturesV1Request extends SpeakeasyBase {
-    request: RemoveSignaturesV1RequestBody;
-}
 export declare class RemoveSignaturesV1Response extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The document was processed succesfully.
+     */
     removeSignaturesV1200ApplicationPdfBinaryString?: Uint8Array;
-    removeSignaturesV14XXApplicationProblemPlusJsonObject?: RemoveSignaturesV14XxApplicationProblemPlusJson;
+    /**
+     * Error
+     */
+    removeSignaturesV14XXApplicationProblemPlusJsonObject?: RemoveSignaturesV14XXApplicationProblemPlusJson;
 }

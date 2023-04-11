@@ -33,6 +33,5 @@ export * from "./patientwaittime";
 export * from "./phone";
 export * from "./properties";
 export * from "./satisfaction";
-export * from "./security";
 export * from "./services";
 export * from "./waittimes";

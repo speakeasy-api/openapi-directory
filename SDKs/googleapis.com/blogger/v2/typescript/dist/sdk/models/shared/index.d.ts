@@ -9,6 +9,5 @@ export * from "./page";
 export * from "./pagelist";
 export * from "./post";
 export * from "./postlist";
-export * from "./security";
 export * from "./user";
 export * from "./xgafvenum";

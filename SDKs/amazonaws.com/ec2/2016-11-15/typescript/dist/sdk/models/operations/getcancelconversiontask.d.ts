@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetCancelConversionTaskActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETCancelConversionTaskActionEnum {
     CancelConversionTask = "CancelConversionTask"
 }
-export declare enum GetCancelConversionTaskVersionEnum {
+export declare enum GETCancelConversionTaskVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetCancelConversionTaskQueryParams extends SpeakeasyBase {
-    action: GetCancelConversionTaskActionEnum;
+export declare class GETCancelConversionTaskRequest extends SpeakeasyBase {
+    action: GETCancelConversionTaskActionEnum;
+    /**
+     * The ID of the conversion task.
+     */
     conversionTaskId: string;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
+    /**
+     * The reason for canceling the conversion task.
+     */
     reasonMessage?: string;
-    version: GetCancelConversionTaskVersionEnum;
-}
-export declare class GetCancelConversionTaskHeaders extends SpeakeasyBase {
+    version: GETCancelConversionTaskVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,11 +29,8 @@ export declare class GetCancelConversionTaskHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetCancelConversionTaskRequest extends SpeakeasyBase {
-    queryParams: GetCancelConversionTaskQueryParams;
-    headers: GetCancelConversionTaskHeaders;
-}
-export declare class GetCancelConversionTaskResponse extends SpeakeasyBase {
+export declare class GETCancelConversionTaskResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class PatientsUpdatePathParams extends SpeakeasyBase {
-    id: string;
+import { AxiosResponse } from "axios";
+export declare class PatientsUpdateSecurity extends SpeakeasyBase {
+    drchronoOauth2: string;
 }
-export declare class PatientsUpdateQueryParams extends SpeakeasyBase {
+export declare class PatientsUpdateRequest extends SpeakeasyBase {
     chartId?: string;
     dateOfBirth?: string;
     doctor?: number;
@@ -11,20 +11,14 @@ export declare class PatientsUpdateQueryParams extends SpeakeasyBase {
     ethnicity?: string;
     firstName?: string;
     gender?: string;
+    id: string;
     lastName?: string;
     preferredLanguage?: string;
     race?: string;
     since?: string;
 }
-export declare class PatientsUpdateSecurity extends SpeakeasyBase {
-    drchronoOauth2: shared.SchemeDrchronoOauth2;
-}
-export declare class PatientsUpdateRequest extends SpeakeasyBase {
-    pathParams: PatientsUpdatePathParams;
-    queryParams: PatientsUpdateQueryParams;
-    security: PatientsUpdateSecurity;
-}
 export declare class PatientsUpdateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

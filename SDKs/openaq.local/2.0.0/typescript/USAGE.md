@@ -1,10 +1,11 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { FavicoFaviconIcoGetResponse } from "openapi/src/sdk/models/operations";
+import {
+  FavicoFaviconIcoGetResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
 
 sdk.favicoFaviconIcoGet().then((res: FavicoFaviconIcoGetResponse | AxiosError) => {

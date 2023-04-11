@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UsersBlockPathParams extends SpeakeasyBase {
-    username: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UsersBlockRequest extends SpeakeasyBase {
-    pathParams: UsersBlockPathParams;
+    /**
+     * The handle for the GitHub user account.
+     */
+    username: string;
 }
 export declare class UsersBlockResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Requires authentication
+     */
     basicError?: shared.BasicError;
+    /**
+     * Validation failed, or the endpoint has been spammed.
+     */
     validationError?: shared.ValidationError;
 }

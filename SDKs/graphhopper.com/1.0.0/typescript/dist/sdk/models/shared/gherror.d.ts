@@ -1,8 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GhErrorHints extends SpeakeasyBase {
+export declare class GHErrorHints extends SpeakeasyBase {
     message?: string;
 }
-export declare class GhError extends SpeakeasyBase {
-    hints?: GhErrorHints[];
+/**
+ * Unexpected error
+ */
+export declare class GHError extends SpeakeasyBase {
+    /**
+     * Optional error information.
+     */
+    hints?: GHErrorHints[];
     message?: string;
 }

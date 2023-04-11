@@ -1,16 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class DeleteChangelogPathParams extends SpeakeasyBase {
-    slug: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteChangelogSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
+    password: string;
+    username: string;
 }
 export declare class DeleteChangelogRequest extends SpeakeasyBase {
-    pathParams: DeleteChangelogPathParams;
-    security: DeleteChangelogSecurity;
+    /**
+     * Slug of changelog
+     */
+    slug: string;
 }
 export declare class DeleteChangelogResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

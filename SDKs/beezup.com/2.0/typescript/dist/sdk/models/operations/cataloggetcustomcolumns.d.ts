@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CatalogGetCustomColumnsPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class CatalogGetCustomColumnsRequest extends SpeakeasyBase {
+    /**
+     * Your store identifier
+     */
     storeId: string;
 }
-export declare class CatalogGetCustomColumnsRequest extends SpeakeasyBase {
-    pathParams: CatalogGetCustomColumnsPathParams;
-}
 export declare class CatalogGetCustomColumnsResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     * StoreId not found
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Custom column list
+     */
     customColumnList?: shared.CustomColumnList;
 }

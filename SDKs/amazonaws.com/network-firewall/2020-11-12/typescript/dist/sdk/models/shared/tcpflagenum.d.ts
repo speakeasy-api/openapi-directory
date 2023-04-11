@@ -1,4 +1,4 @@
-export declare enum TcpFlagEnum {
+export declare enum TCPFlagEnum {
     Fin = "FIN",
     Syn = "SYN",
     Rst = "RST",

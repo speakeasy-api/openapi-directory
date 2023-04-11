@@ -1,0 +1,22 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * A type that provides details for the targeted keywords.
+ */
+export declare class TargetedKeywordRequest extends SpeakeasyBase {
+    /**
+     * A field used to indicate whether additional information and insight data shall be provided for suggested keywords.<br /><br /><strong>Valid Value:</strong> <code>KEYWORD_INSIGHTS</code>
+     */
+    additionalInfo?: string[];
+    /**
+     * A field used to indicate that the keywords already selected by sellers for the specified listing IDs should be filtered out of the response, and only new and unique keyword recommendations shall be returned.<br /><br /><strong>Valid Value:</strong> <code>ADOPTED_KEYWORDS</code>
+     */
+    exclusions?: string[];
+    /**
+     * A set of comma-separated listing IDs in the paginated collection. <br /><br /><b>Maximum number of listings requested: </b>300
+     */
+    listingIds?: string[];
+    /**
+     * A field that defines the match type for the keyword.<br /><br /><b>Valid Values:</b><ul><li><code>BROAD</code></li><li><code>EXACT</code></li><li><code>PHRASE</code></li></ul> For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/marketing/types/pls:MatchTypeEnum'>eBay API documentation</a>
+     */
+    matchType?: string;
+}

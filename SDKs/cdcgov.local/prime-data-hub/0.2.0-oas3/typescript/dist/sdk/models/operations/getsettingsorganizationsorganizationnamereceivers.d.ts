@@ -1,17 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetSettingsOrganizationsOrganizationNameReceiversPathParams extends SpeakeasyBase {
-    organizationName: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetSettingsOrganizationsOrganizationNameReceiversSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class GetSettingsOrganizationsOrganizationNameReceiversRequest extends SpeakeasyBase {
-    pathParams: GetSettingsOrganizationsOrganizationNameReceiversPathParams;
-    security: GetSettingsOrganizationsOrganizationNameReceiversSecurity;
+    /**
+     * Fetch receivers with this organization name
+     */
+    organizationName: string;
 }
 export declare class GetSettingsOrganizationsOrganizationNameReceiversResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * OK
+     */
     receivers?: shared.Receiver[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

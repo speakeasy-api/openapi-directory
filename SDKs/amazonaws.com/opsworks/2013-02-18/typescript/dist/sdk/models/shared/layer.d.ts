@@ -1,12 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { CloudWatchLogsConfiguration } from "./cloudwatchlogsconfiguration";
-import { Recipes } from "./recipes";
-import { LifecycleEventConfiguration } from "./lifecycleeventconfiguration";
 import { LayerTypeEnum } from "./layertypeenum";
+import { LifecycleEventConfiguration } from "./lifecycleeventconfiguration";
+import { Recipes } from "./recipes";
 import { VolumeConfiguration } from "./volumeconfiguration";
 /**
  * Describes a layer.
-**/
+ */
 export declare class Layer extends SpeakeasyBase {
     arn?: string;
     attributes?: Record<string, string>;

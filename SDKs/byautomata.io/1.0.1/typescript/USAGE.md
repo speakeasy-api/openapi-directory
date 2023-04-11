@@ -1,16 +1,16 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetContentproSearchRequest, GetContentproSearchResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetContentproSearchRequest,
+  GetContentproSearchResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetContentproSearchRequest = {
-  queryParams: {
-    terms: "sit",
-  },
+  terms: "corrupti",
 };
 
 sdk.contentproSearch.getContentproSearch(req).then((res: GetContentproSearchResponse | AxiosError) => {

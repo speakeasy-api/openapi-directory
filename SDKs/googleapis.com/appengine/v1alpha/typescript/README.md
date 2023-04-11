@@ -6,74 +6,70 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/appengine/v1alpha/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/appengine/v1alpha/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AppengineAppsAuthorizedCertificatesCreateRequest, AppengineAppsAuthorizedCertificatesCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  AppengineAppsAuthorizedCertificatesCreateRequest,
+  AppengineAppsAuthorizedCertificatesCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  ManagedCertificateStatusEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: AppengineAppsAuthorizedCertificatesCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    appsId: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  authorizedCertificate: {
     certificateRawData: {
-      privateKey: "dicta",
-      publicCertificate: "debitis",
+      privateKey: "provident",
+      publicCertificate: "distinctio",
     },
-    displayName: "voluptatum",
-    domainMappingsCount: 2339563716805116249,
+    displayName: "quibusdam",
+    domainMappingsCount: 602763,
     domainNames: [
-      "dolorem",
-      "et",
-      "voluptate",
-    ],
-    expireTime: "iste",
-    id: "vitae",
-    managedCertificate: {
-      lastRenewalTime: "totam",
-      status: "FAILED_RETRYING_NOT_VISIBLE",
-    },
-    name: "illum",
-    visibleDomainMappings: [
+      "corrupti",
+      "illum",
       "vel",
+      "error",
+    ],
+    expireTime: "deserunt",
+    id: "suscipit",
+    managedCertificate: {
+      lastRenewalTime: "iure",
+      status: ManagedCertificateStatusEnum.Pending,
+    },
+    name: "debitis",
+    visibleDomainMappings: [
+      "delectus",
     ],
   },
+  accessToken: "tempora",
+  alt: AltEnum.Media,
+  appsId: "molestiae",
+  callback: "minus",
+  fields: "placeat",
+  key: "voluptatum",
+  oauthToken: "iusto",
+  prettyPrint: false,
+  quotaUser: "excepturi",
+  uploadType: "nisi",
+  uploadProtocol: "recusandae",
 };
 
 sdk.apps.appengineAppsAuthorizedCertificatesCreate(req).then((res: AppengineAppsAuthorizedCertificatesCreateResponse | AxiosError) => {
@@ -83,7 +79,8 @@ sdk.apps.appengineAppsAuthorizedCertificatesCreate(req).then((res: AppengineApps
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### apps
 
@@ -101,15 +98,26 @@ sdk.apps.appengineAppsAuthorizedCertificatesCreate(req).then((res: AppengineApps
 * `appengineAppsLocationsGet` - Gets information about a location.
 * `appengineAppsLocationsList` - Lists information about the supported locations for this service.
 * `appengineAppsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-* `appengineAppsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.NOTE: the name binding allows API services to override the binding to use different resource name schemes, such as users/*/operations. To override the binding, API services can add a binding such as "/v1/{name=users/*}/operations" to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+* `appengineAppsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.
 
 ### projects
 
 * `appengineProjectsLocationsGet` - Gets information about a location.
 * `appengineProjectsLocationsList` - Lists information about the supported locations for this service.
 * `appengineProjectsLocationsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-* `appengineProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.NOTE: the name binding allows API services to override the binding to use different resource name schemes, such as users/*/operations. To override the binding, API services can add a binding such as "/v1/{name=users/*}/operations" to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
-
+* `appengineProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

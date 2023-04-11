@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostTerminateInstancesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTTerminateInstancesActionEnum {
     TerminateInstances = "TerminateInstances"
 }
-export declare enum PostTerminateInstancesVersionEnum {
+export declare enum POSTTerminateInstancesVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostTerminateInstancesQueryParams extends SpeakeasyBase {
-    action: PostTerminateInstancesActionEnum;
-    version: PostTerminateInstancesVersionEnum;
-}
-export declare class PostTerminateInstancesHeaders extends SpeakeasyBase {
+export declare class POSTTerminateInstancesRequest extends SpeakeasyBase {
+    action: POSTTerminateInstancesActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTTerminateInstancesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostTerminateInstancesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostTerminateInstancesRequest extends SpeakeasyBase {
-    queryParams: PostTerminateInstancesQueryParams;
-    headers: PostTerminateInstancesHeaders;
-    request?: Uint8Array;
-}
-export declare class PostTerminateInstancesResponse extends SpeakeasyBase {
+export declare class POSTTerminateInstancesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

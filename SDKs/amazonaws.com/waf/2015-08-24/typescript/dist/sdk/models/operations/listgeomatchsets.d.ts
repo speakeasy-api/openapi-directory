@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum ListGeoMatchSetsXAmzTargetEnum {
-    Awswaf20150824ListGeoMatchSets = "AWSWAF_20150824.ListGeoMatchSets"
+    AWSWAF20150824ListGeoMatchSets = "AWSWAF_20150824.ListGeoMatchSets"
 }
-export declare class ListGeoMatchSetsHeaders extends SpeakeasyBase {
+export declare class ListGeoMatchSetsRequest extends SpeakeasyBase {
+    listGeoMatchSetsRequest: shared.ListGeoMatchSetsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class ListGeoMatchSetsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListGeoMatchSetsXAmzTargetEnum;
 }
-export declare class ListGeoMatchSetsRequest extends SpeakeasyBase {
-    headers: ListGeoMatchSetsHeaders;
-    request: shared.ListGeoMatchSetsRequest;
-}
 export declare class ListGeoMatchSetsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     listGeoMatchSetsResponse?: shared.ListGeoMatchSetsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFInvalidAccountException
+     */
     wafInvalidAccountException?: any;
 }

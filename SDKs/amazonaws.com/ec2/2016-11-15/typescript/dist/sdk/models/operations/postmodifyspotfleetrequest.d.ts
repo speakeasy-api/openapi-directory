@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostModifySpotFleetRequestActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTModifySpotFleetRequestActionEnum {
     ModifySpotFleetRequest = "ModifySpotFleetRequest"
 }
-export declare enum PostModifySpotFleetRequestVersionEnum {
+export declare enum POSTModifySpotFleetRequestVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostModifySpotFleetRequestQueryParams extends SpeakeasyBase {
-    action: PostModifySpotFleetRequestActionEnum;
-    version: PostModifySpotFleetRequestVersionEnum;
-}
-export declare class PostModifySpotFleetRequestHeaders extends SpeakeasyBase {
+export declare class POSTModifySpotFleetRequestRequest extends SpeakeasyBase {
+    action: POSTModifySpotFleetRequestActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTModifySpotFleetRequestVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostModifySpotFleetRequestHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostModifySpotFleetRequestRequest extends SpeakeasyBase {
-    queryParams: PostModifySpotFleetRequestQueryParams;
-    headers: PostModifySpotFleetRequestHeaders;
-    request?: Uint8Array;
-}
-export declare class PostModifySpotFleetRequestResponse extends SpeakeasyBase {
+export declare class POSTModifySpotFleetRequestResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

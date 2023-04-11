@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateRoutingControlStatesXAmzTargetEnum {
-    ToggleCustomerApiUpdateRoutingControlStates = "ToggleCustomerAPI.UpdateRoutingControlStates"
+    ToggleCustomerAPIUpdateRoutingControlStates = "ToggleCustomerAPI.UpdateRoutingControlStates"
 }
-export declare class UpdateRoutingControlStatesHeaders extends SpeakeasyBase {
+export declare class UpdateRoutingControlStatesRequest extends SpeakeasyBase {
+    updateRoutingControlStatesRequest: shared.UpdateRoutingControlStatesRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,19 +15,44 @@ export declare class UpdateRoutingControlStatesHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateRoutingControlStatesXAmzTargetEnum;
 }
-export declare class UpdateRoutingControlStatesRequest extends SpeakeasyBase {
-    headers: UpdateRoutingControlStatesHeaders;
-    request: shared.UpdateRoutingControlStatesRequest;
-}
 export declare class UpdateRoutingControlStatesResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * EndpointTemporarilyUnavailableException
+     */
     endpointTemporarilyUnavailableException?: any;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceLimitExceededException
+     */
+    serviceLimitExceededException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * Success
+     */
     updateRoutingControlStatesResponse?: Record<string, any>;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

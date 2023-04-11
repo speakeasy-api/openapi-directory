@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class ServiceCalendarViewModel extends SpeakeasyBase {
     calendarId?: string;
     calendarName?: string;

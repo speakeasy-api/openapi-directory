@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Information about tags
+ */
 export declare class Tags {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,45 +12,52 @@ export declare class Tags {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getResourcesTagsFormat - Get Tags
+     * Get Tags
      *
+     * @remarks
      * List of Tags
-    **/
+     */
     getResourcesTagsFormat(req: operations.GetResourcesTagsFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesTagsFormatResponse>;
     /**
-     * getResourcesTagsTagLanguagesFormat - Get TagLanguages
+     * Get TagLanguages
      *
+     * @remarks
      * List of Tag Languages
-    **/
+     */
     getResourcesTagsTagLanguagesFormat(req: operations.GetResourcesTagsTagLanguagesFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesTagsTagLanguagesFormatResponse>;
     /**
-     * getResourcesTagsTagTypesFormat - Get MediaItems for Tag
+     * Get MediaItems for Tag
      *
+     * @remarks
      * List of Types
-    **/
+     */
     getResourcesTagsTagTypesFormat(req: operations.GetResourcesTagsTagTypesFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesTagsTagTypesFormatResponse>;
     /**
-     * getResourcesTagsIdFormat - Get Tag by ID
+     * Get Tag by ID
      *
+     * @remarks
      * Information about a specific tag
-    **/
+     */
     getResourcesTagsIdFormat(req: operations.GetResourcesTagsIdFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesTagsIdFormatResponse>;
     /**
-     * getResourcesTagsIdMediaFormat - Get MediaItems for Tag
+     * Get MediaItems for Tag
      *
+     * @remarks
      * MediaItem
-    **/
+     */
     getResourcesTagsIdMediaFormat(req: operations.GetResourcesTagsIdMediaFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesTagsIdMediaFormatResponse>;
     /**
-     * getResourcesTagsIdRelatedFormat - Get related Tags by ID
+     * Get related Tags by ID
      *
+     * @remarks
      * Information about related tags to a specific tag
-    **/
+     */
     getResourcesTagsIdRelatedFormat(req: operations.GetResourcesTagsIdRelatedFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesTagsIdRelatedFormatResponse>;
     /**
-     * getResourcesTagsIdSyndicateFormat - Get MediaItems for Tag
+     * Get MediaItems for Tag
      *
+     * @remarks
      * MediaItem
-    **/
+     */
     getResourcesTagsIdSyndicateFormat(req: operations.GetResourcesTagsIdSyndicateFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesTagsIdSyndicateFormatResponse>;
 }

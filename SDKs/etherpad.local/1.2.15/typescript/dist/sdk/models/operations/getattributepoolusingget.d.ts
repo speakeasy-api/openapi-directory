@@ -1,35 +1,58 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetAttributePoolUsingGetQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETAttributePoolUsingGETRequest extends SpeakeasyBase {
     padID?: string;
 }
-export declare class GetAttributePoolUsingGet200ApplicationJson extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class GETAttributePoolUsingGet500ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class GetAttributePoolUsingGet400ApplicationJson extends SpeakeasyBase {
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class GETAttributePoolUsingGet401ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class GetAttributePoolUsingGet401ApplicationJson extends SpeakeasyBase {
+/**
+ * generic api error (code 1)
+ */
+export declare class GETAttributePoolUsingGet400ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class GetAttributePoolUsingGet500ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class GETAttributePoolUsingGet200ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class GetAttributePoolUsingGetRequest extends SpeakeasyBase {
-    queryParams: GetAttributePoolUsingGetQueryParams;
-}
-export declare class GetAttributePoolUsingGetResponse extends SpeakeasyBase {
+export declare class GETAttributePoolUsingGETResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getAttributePoolUsingGET200ApplicationJSONObject?: GetAttributePoolUsingGet200ApplicationJson;
-    getAttributePoolUsingGET400ApplicationJSONObject?: GetAttributePoolUsingGet400ApplicationJson;
-    getAttributePoolUsingGET401ApplicationJSONObject?: GetAttributePoolUsingGet401ApplicationJson;
-    getAttributePoolUsingGET500ApplicationJSONObject?: GetAttributePoolUsingGet500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    getAttributePoolUsingGET200ApplicationJSONObject?: GETAttributePoolUsingGet200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    getAttributePoolUsingGET400ApplicationJSONObject?: GETAttributePoolUsingGet400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    getAttributePoolUsingGET401ApplicationJSONObject?: GETAttributePoolUsingGet401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    getAttributePoolUsingGET500ApplicationJSONObject?: GETAttributePoolUsingGet500ApplicationJSON;
 }

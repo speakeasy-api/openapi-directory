@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * The version of the database engine that an instance can be upgraded to.
-**/
+ */
 export declare class ValidUpgradeTargetList extends SpeakeasyBase {
     autoUpgrade?: boolean;
     description?: string;

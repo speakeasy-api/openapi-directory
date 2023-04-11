@@ -1,10 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeReplicationConfigurationTemplatesQueryParams extends SpeakeasyBase {
-    maxResults?: string;
+import { AxiosResponse } from "axios";
+export declare class DescribeReplicationConfigurationTemplatesRequestBody extends SpeakeasyBase {
+    /**
+     * Request to describe Replication Configuration template by max results.
+     */
+    maxResults?: number;
+    /**
+     * Request to describe Replication Configuration template by next token.
+     */
     nextToken?: string;
+    /**
+     * Request to describe Replication Configuration template by template IDs.
+     */
+    replicationConfigurationTemplateIDs?: string[];
 }
-export declare class DescribeReplicationConfigurationTemplatesHeaders extends SpeakeasyBase {
+export declare class DescribeReplicationConfigurationTemplatesRequest extends SpeakeasyBase {
+    requestBody: DescribeReplicationConfigurationTemplatesRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,22 +24,33 @@ export declare class DescribeReplicationConfigurationTemplatesHeaders extends Sp
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DescribeReplicationConfigurationTemplatesRequestBody extends SpeakeasyBase {
-    maxResults?: number;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    replicationConfigurationTemplateIDs: string[];
-}
-export declare class DescribeReplicationConfigurationTemplatesRequest extends SpeakeasyBase {
-    queryParams: DescribeReplicationConfigurationTemplatesQueryParams;
-    headers: DescribeReplicationConfigurationTemplatesHeaders;
-    request: DescribeReplicationConfigurationTemplatesRequestBody;
 }
 export declare class DescribeReplicationConfigurationTemplatesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeReplicationConfigurationTemplatesResponse?: shared.DescribeReplicationConfigurationTemplatesResponse;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UninitializedAccountException
+     */
     uninitializedAccountException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

@@ -1,17 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetNumbersBaseBinaryQueryParams extends SpeakeasyBase {
-    from?: number;
-    number: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetNumbersBaseBinarySecurity extends SpeakeasyBase {
-    xMathtoolsApiSecret: shared.SchemeXMathtoolsApiSecret;
+    xMathtoolsApiSecret: string;
 }
 export declare class GetNumbersBaseBinaryRequest extends SpeakeasyBase {
-    queryParams: GetNumbersBaseBinaryQueryParams;
-    security: GetNumbersBaseBinarySecurity;
+    /**
+     * Base of the supplied number (Optional base 10 assumed by default)
+     */
+    from?: number;
+    /**
+     * Number to convert to binary
+     */
+    number: number;
 }
 export declare class GetNumbersBaseBinaryResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

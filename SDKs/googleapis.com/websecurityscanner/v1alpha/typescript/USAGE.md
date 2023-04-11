@@ -1,83 +1,78 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { WebsecurityscannerProjectsScanConfigsCreateRequest, WebsecurityscannerProjectsScanConfigsCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  WebsecurityscannerProjectsScanConfigsCreateRequest,
+  WebsecurityscannerProjectsScanConfigsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  ScanConfigTargetPlatformsEnum,
+  ScanConfigUserAgentEnum,
+  ScanRunExecutionStateEnum,
+  ScanRunResultStateEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: WebsecurityscannerProjectsScanConfigsCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  scanConfig: {
     authentication: {
       customAccount: {
-        loginUrl: "dicta",
-        password: "debitis",
-        username: "voluptatum",
+        loginUrl: "provident",
+        password: "distinctio",
+        username: "Rosalinda_Mitchell84",
       },
       googleAccount: {
-        password: "et",
-        username: "ut",
+        password: "vel",
+        username: "Linda.Oberbrunner",
       },
     },
     blacklistPatterns: [
-      "et",
-      "voluptate",
-      "iste",
+      "debitis",
+      "ipsa",
     ],
-    displayName: "vitae",
+    displayName: "delectus",
     latestRun: {
-      endTime: "totam",
-      executionState: "EXECUTION_STATE_UNSPECIFIED",
+      endTime: "tempora",
+      executionState: ScanRunExecutionStateEnum.Queued,
       hasVulnerabilities: false,
-      name: "debitis",
-      progressPercent: 3706853784096366226,
-      resultState: "RESULT_STATE_UNSPECIFIED",
-      startTime: "dolore",
-      urlsCrawledCount: "id",
-      urlsTestedCount: "aspernatur",
+      name: "molestiae",
+      progressPercent: 791725,
+      resultState: ScanRunResultStateEnum.Killed,
+      startTime: "voluptatum",
+      urlsCrawledCount: "iusto",
+      urlsTestedCount: "excepturi",
     },
-    maxQps: 2914295034816259174,
-    name: "totam",
+    maxQps: 392785,
+    name: "recusandae",
     schedule: {
-      intervalDurationDays: 6745438398739480977,
-      scheduleTime: "quis",
+      intervalDurationDays: 836079,
+      scheduleTime: "ab",
     },
     startingUrls: [
-      "aut",
-      "odit",
+      "veritatis",
+      "deserunt",
     ],
     targetPlatforms: [
-      "CLOUD_FUNCTIONS",
-      "COMPUTE",
-      "CLOUD_FUNCTIONS",
+      ScanConfigTargetPlatformsEnum.AppEngine,
     ],
-    userAgent: "USER_AGENT_UNSPECIFIED",
+    userAgent: ScanConfigUserAgentEnum.SafariIphone,
   },
+  accessToken: "sapiente",
+  alt: AltEnum.Proto,
+  callback: "odit",
+  fields: "at",
+  key: "at",
+  oauthToken: "maiores",
+  parent: "molestiae",
+  prettyPrint: false,
+  quotaUser: "quod",
+  uploadType: "quod",
+  uploadProtocol: "esse",
 };
 
 sdk.projects.websecurityscannerProjectsScanConfigsCreate(req).then((res: WebsecurityscannerProjectsScanConfigsCreateResponse | AxiosError) => {

@@ -1,19 +1,35 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare const CancelBookingQuoteServerList: readonly ["https://api.sandbox.viator.com/partner"];
-export declare class CancelBookingQuotePathParams extends SpeakeasyBase {
+export declare class CancelBookingQuoteRequest extends SpeakeasyBase {
+    /**
+     * Unique numeric identifier of the booking for which to retrieve a cancellation quote
+     */
     bookingReference: string;
 }
-export declare class CancelBookingQuoteRequest extends SpeakeasyBase {
-    serverURL?: string;
-    pathParams: CancelBookingQuotePathParams;
-}
 export declare class CancelBookingQuoteResponse extends SpeakeasyBase {
-    fourHundredAndOneUNAUTHORIZED?: shared.FourHundredAndOneUnauthorized;
-    fourHundredAndSixNOTACCEPTABLE?: shared.FourHundredAndSixNotAcceptable;
-    fiveHundredINTERNALSERVERERROR?: shared.FiveHundredInternalServerError;
-    fiveHundredAndThreeSERVICEUNAVAILABLE?: shared.FiveHundredAndThreeServiceUnavailable;
+    /**
+     * Unauthorized
+     */
+    fourHundredAndOneUNAUTHORIZED?: shared.FourHundredAndOneUNAUTHORIZED;
+    /**
+     * Not Acceptable
+     */
+    fourHundredAndSixNOTACCEPTABLE?: shared.FourHundredAndSixNOTACCEPTABLE;
+    /**
+     * Internal Server Error
+     */
+    fiveHundredINTERNALSERVERERROR?: shared.FiveHundredINTERNALSERVERERROR;
+    /**
+     * Service Unavailable
+     */
+    fiveHundredAndThreeSERVICEUNAVAILABLE?: shared.FiveHundredAndThreeSERVICEUNAVAILABLE;
+    /**
+     * Success
+     */
     cancelBookingQuoteResponse?: shared.CancelBookingQuoteResponse;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

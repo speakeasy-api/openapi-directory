@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class InvoiceItems {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +9,7 @@ export declare class InvoiceItems {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * objectGetInvoiceItem - CRUD: Retrieve an invoice item
-    **/
-    objectGetInvoiceItem(req: operations.ObjectGetInvoiceItemRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGetInvoiceItemResponse>;
+     * CRUD: Retrieve an invoice item
+     */
+    objectGETInvoiceItem(req: operations.ObjectGETInvoiceItemRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGETInvoiceItemResponse>;
 }

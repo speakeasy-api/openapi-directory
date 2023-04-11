@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetContactListPathParams extends SpeakeasyBase {
-    groupId: string;
-}
-export declare class GetContactListQueryParams extends SpeakeasyBase {
-    offset?: number;
-    pageSize?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetContactListRequest extends SpeakeasyBase {
-    pathParams: GetContactListPathParams;
-    queryParams: GetContactListQueryParams;
+    /**
+     * The unique identifier of the group for which you would like to view contacts
+     */
+    groupId: string;
+    /**
+     * The integer offset at which to start the page. Possible values are 0 to total_records - 1
+     */
+    offset?: number;
+    /**
+     * The max size of each page of results
+     */
+    pageSize?: number;
 }
 export declare class GetContactListResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful Response - Returns all matching Contacts
+     */
     paginatedContactResult?: shared.PaginatedContactResult;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

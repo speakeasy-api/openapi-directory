@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class OptionsErc20AddressPathParams extends SpeakeasyBase {
-    address: string;
-}
+import { AxiosResponse } from "axios";
 export declare class OptionsErc20AddressRequest extends SpeakeasyBase {
-    pathParams: OptionsErc20AddressPathParams;
+    /**
+     * Automatically added
+     */
+    address: string;
 }
 export declare class OptionsErc20AddressResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * 200 response
+     */
     empty?: Record<string, any>;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

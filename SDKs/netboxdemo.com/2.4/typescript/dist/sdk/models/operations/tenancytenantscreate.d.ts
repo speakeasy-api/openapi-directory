@@ -1,10 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class TenancyTenantsCreateRequest extends SpeakeasyBase {
-    request: shared.WritableTenantInput;
-}
+import { AxiosResponse } from "axios";
 export declare class TenancyTenantsCreateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
     tenant?: shared.Tenant;
 }

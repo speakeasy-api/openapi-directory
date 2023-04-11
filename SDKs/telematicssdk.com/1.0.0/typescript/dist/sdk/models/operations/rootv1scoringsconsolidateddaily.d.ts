@@ -1,5 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class RootV1ScoringsConsolidatedDailyQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class RootV1ScoringsConsolidatedDailyRequest extends SpeakeasyBase {
     appId?: string;
     companyId?: string;
     deviceToken?: string;
@@ -8,7 +9,7 @@ export declare class RootV1ScoringsConsolidatedDailyQueryParams extends Speakeas
     startDate?: string;
     tag?: string;
 }
-export declare class RootV1ScoringsConsolidatedDaily200ApplicationJsonResult extends SpeakeasyBase {
+export declare class RootV1ScoringsConsolidatedDaily200ApplicationJSONResult extends SpeakeasyBase {
     accelerationScore?: number;
     appId?: string;
     brakingScore?: number;
@@ -21,18 +22,22 @@ export declare class RootV1ScoringsConsolidatedDaily200ApplicationJsonResult ext
     reportDate?: string;
     speedingScore?: number;
 }
-export declare class RootV1ScoringsConsolidatedDaily200ApplicationJson extends SpeakeasyBase {
+/**
+ * Success
+ */
+export declare class RootV1ScoringsConsolidatedDaily200ApplicationJSON extends SpeakeasyBase {
     errors?: any[];
-    result?: RootV1ScoringsConsolidatedDaily200ApplicationJsonResult[];
+    result?: RootV1ScoringsConsolidatedDaily200ApplicationJSONResult[];
     status?: number;
     title?: string;
 }
-export declare class RootV1ScoringsConsolidatedDailyRequest extends SpeakeasyBase {
-    queryParams: RootV1ScoringsConsolidatedDailyQueryParams;
-}
 export declare class RootV1ScoringsConsolidatedDailyResponse extends SpeakeasyBase {
-    rootV1ScoringsConsolidatedDaily200ApplicationJSONObject?: RootV1ScoringsConsolidatedDaily200ApplicationJson;
+    /**
+     * Success
+     */
+    rootV1ScoringsConsolidatedDaily200ApplicationJSONObject?: RootV1ScoringsConsolidatedDaily200ApplicationJSON;
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

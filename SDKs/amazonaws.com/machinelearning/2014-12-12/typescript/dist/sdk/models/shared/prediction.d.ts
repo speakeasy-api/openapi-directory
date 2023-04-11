@@ -1,10 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * <p>The output from a <code>Predict</code> operation: </p> <ul> <li> <p> <code>Details</code> - Contains the following attributes: <code>DetailsAttributes.PREDICTIVE_MODEL_TYPE - REGRESSION | BINARY | MULTICLASS</code> <code>DetailsAttributes.ALGORITHM - SGD</code> </p> </li> <li> <p> <code>PredictedLabel</code> - Present for either a <code>BINARY</code> or <code>MULTICLASS</code> <code>MLModel</code> request. </p> </li> <li> <p> <code>PredictedScores</code> - Contains the raw classification score corresponding to each label. </p> </li> <li> <p> <code>PredictedValue</code> - Present for a <code>REGRESSION</code> <code>MLModel</code> request. </p> </li> </ul>
-**/
+ */
 export declare class Prediction extends SpeakeasyBase {
+    /**
+     * Provides any additional details regarding the prediction.
+     */
     details?: Record<string, string>;
     predictedLabel?: string;
+    /**
+     * Provides the raw classification score corresponding to each label.
+     */
     predictedScores?: Record<string, number>;
     predictedValue?: number;
 }

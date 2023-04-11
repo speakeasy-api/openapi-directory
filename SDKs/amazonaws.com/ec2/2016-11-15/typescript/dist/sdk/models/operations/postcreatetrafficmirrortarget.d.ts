@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateTrafficMirrorTargetActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateTrafficMirrorTargetActionEnum {
     CreateTrafficMirrorTarget = "CreateTrafficMirrorTarget"
 }
-export declare enum PostCreateTrafficMirrorTargetVersionEnum {
+export declare enum POSTCreateTrafficMirrorTargetVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostCreateTrafficMirrorTargetQueryParams extends SpeakeasyBase {
-    action: PostCreateTrafficMirrorTargetActionEnum;
-    version: PostCreateTrafficMirrorTargetVersionEnum;
-}
-export declare class PostCreateTrafficMirrorTargetHeaders extends SpeakeasyBase {
+export declare class POSTCreateTrafficMirrorTargetRequest extends SpeakeasyBase {
+    action: POSTCreateTrafficMirrorTargetActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateTrafficMirrorTargetVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateTrafficMirrorTargetHeaders extends SpeakeasyBase 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateTrafficMirrorTargetRequest extends SpeakeasyBase {
-    queryParams: PostCreateTrafficMirrorTargetQueryParams;
-    headers: PostCreateTrafficMirrorTargetHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateTrafficMirrorTargetResponse extends SpeakeasyBase {
+export declare class POSTCreateTrafficMirrorTargetResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

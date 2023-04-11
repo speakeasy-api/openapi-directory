@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListEventTrackersQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListEventTrackersXAmzTargetEnum {
     AmazonPersonalizeListEventTrackers = "AmazonPersonalize.ListEventTrackers"
 }
-export declare class ListEventTrackersHeaders extends SpeakeasyBase {
+export declare class ListEventTrackersRequest extends SpeakeasyBase {
+    listEventTrackersRequest: shared.ListEventTrackersRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,16 +14,29 @@ export declare class ListEventTrackersHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: ListEventTrackersXAmzTargetEnum;
-}
-export declare class ListEventTrackersRequest extends SpeakeasyBase {
-    queryParams: ListEventTrackersQueryParams;
-    headers: ListEventTrackersHeaders;
-    request: shared.ListEventTrackersRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class ListEventTrackersResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * Success
+     */
     listEventTrackersResponse?: shared.ListEventTrackersResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

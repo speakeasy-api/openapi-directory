@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeIpGroupsXAmzTargetEnum {
     WorkspacesServiceDescribeIpGroups = "WorkspacesService.DescribeIpGroups"
 }
-export declare class DescribeIpGroupsHeaders extends SpeakeasyBase {
+export declare class DescribeIpGroupsRequest extends SpeakeasyBase {
+    describeIpGroupsRequest: shared.DescribeIpGroupsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class DescribeIpGroupsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeIpGroupsXAmzTargetEnum;
 }
-export declare class DescribeIpGroupsRequest extends SpeakeasyBase {
-    headers: DescribeIpGroupsHeaders;
-    request: shared.DescribeIpGroupsRequest;
-}
 export declare class DescribeIpGroupsResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     describeIpGroupsResult?: shared.DescribeIpGroupsResult;
+    /**
+     * InvalidParameterValuesException
+     */
     invalidParameterValuesException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

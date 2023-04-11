@@ -1,8 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PostBestHitSearchRequest extends SpeakeasyBase {
-    request: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PostBestHitSearchResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

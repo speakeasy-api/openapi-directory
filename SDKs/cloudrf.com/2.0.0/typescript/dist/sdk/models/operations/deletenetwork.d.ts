@@ -1,16 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class DeleteNetworkQueryParams extends SpeakeasyBase {
-    nid: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteNetworkSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
+    apiKeyAuth: string;
 }
 export declare class DeleteNetworkRequest extends SpeakeasyBase {
-    queryParams: DeleteNetworkQueryParams;
-    security: DeleteNetworkSecurity;
+    /**
+     * Network name
+     */
+    nid: string;
 }
 export declare class DeleteNetworkResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,9 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetzipcodeinfoQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetzipcodeinfoRequest extends SpeakeasyBase {
+    /**
+     * Your Interzoid license API key. Register at www.interzoid.com/register
+     */
     license: string;
+    /**
+     * Zip code to retrieve detailed information
+     */
     zip: string;
 }
-export declare class Getzipcodeinfo200ApplicationJson extends SpeakeasyBase {
+/**
+ * Zip code detailed code information
+ */
+export declare class Getzipcodeinfo200ApplicationJSON extends SpeakeasyBase {
     areaSquareMiles?: string;
     city?: string;
     code?: string;
@@ -20,11 +30,12 @@ export declare class Getzipcodeinfo200ApplicationJson extends SpeakeasyBase {
     state?: string;
     zipCode?: string;
 }
-export declare class GetzipcodeinfoRequest extends SpeakeasyBase {
-    queryParams: GetzipcodeinfoQueryParams;
-}
 export declare class GetzipcodeinfoResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getzipcodeinfo200ApplicationJSONObject?: Getzipcodeinfo200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Zip code detailed code information
+     */
+    getzipcodeinfo200ApplicationJSONObject?: Getzipcodeinfo200ApplicationJSON;
 }

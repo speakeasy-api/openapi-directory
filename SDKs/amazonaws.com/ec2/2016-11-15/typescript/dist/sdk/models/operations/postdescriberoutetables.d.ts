@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeRouteTablesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeRouteTablesActionEnum {
     DescribeRouteTables = "DescribeRouteTables"
 }
-export declare enum PostDescribeRouteTablesVersionEnum {
+export declare enum POSTDescribeRouteTablesVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDescribeRouteTablesQueryParams extends SpeakeasyBase {
-    action: PostDescribeRouteTablesActionEnum;
+export declare class POSTDescribeRouteTablesRequest extends SpeakeasyBase {
+    action: POSTDescribeRouteTablesActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostDescribeRouteTablesVersionEnum;
-}
-export declare class PostDescribeRouteTablesHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeRouteTablesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeRouteTablesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeRouteTablesRequest extends SpeakeasyBase {
-    queryParams: PostDescribeRouteTablesQueryParams;
-    headers: PostDescribeRouteTablesHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeRouteTablesResponse extends SpeakeasyBase {
+export declare class POSTDescribeRouteTablesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

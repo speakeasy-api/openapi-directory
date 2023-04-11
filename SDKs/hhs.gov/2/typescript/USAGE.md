@@ -1,18 +1,18 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetResourcesCampaignsJsonRequest, GetResourcesCampaignsJsonResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetResourcesCampaignsJsonRequest,
+  GetResourcesCampaignsJsonResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetResourcesCampaignsJsonRequest = {
-  queryParams: {
-    max: 8717895732742165505,
-    offset: 2259404117704393152,
-    sort: "culpa",
-  },
+  max: 548814,
+  offset: 592845,
+  sort: "distinctio",
 };
 
 sdk.campaigns.getResourcesCampaignsJson(req).then((res: GetResourcesCampaignsJsonResponse | AxiosError) => {

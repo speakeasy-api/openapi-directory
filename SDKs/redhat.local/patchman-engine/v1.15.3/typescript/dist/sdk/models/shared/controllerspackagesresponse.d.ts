@@ -1,7 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ControllersPackageItem } from "./controllerspackageitem";
 import { ControllersLinks } from "./controllerslinks";
 import { ControllersListMeta } from "./controllerslistmeta";
+import { ControllersPackageItem } from "./controllerspackageitem";
+/**
+ * OK
+ */
 export declare class ControllersPackagesResponse extends SpeakeasyBase {
     data?: ControllersPackageItem[];
     links?: ControllersLinks;

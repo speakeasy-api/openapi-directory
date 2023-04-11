@@ -1,10 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeIdentityUsagePathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DescribeIdentityUsageRequest extends SpeakeasyBase {
+    /**
+     * A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. GUID generation is unique within a region.
+     */
     identityId: string;
+    /**
+     * A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. GUID generation is unique within a region.
+     */
     identityPoolId: string;
-}
-export declare class DescribeIdentityUsageHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +18,32 @@ export declare class DescribeIdentityUsageHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DescribeIdentityUsageRequest extends SpeakeasyBase {
-    pathParams: DescribeIdentityUsagePathParams;
-    headers: DescribeIdentityUsageHeaders;
-}
 export declare class DescribeIdentityUsageResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeIdentityUsageResponse?: shared.DescribeIdentityUsageResponse;
+    /**
+     * InternalErrorException
+     */
     internalErrorException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * NotAuthorizedException
+     */
     notAuthorizedException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

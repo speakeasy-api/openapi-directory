@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateVirtualMfaDeviceActionEnum {
-    CreateVirtualMfaDevice = "CreateVirtualMFADevice"
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateVirtualMFADeviceActionEnum {
+    CreateVirtualMFADevice = "CreateVirtualMFADevice"
 }
-export declare enum PostCreateVirtualMfaDeviceVersionEnum {
+export declare enum POSTCreateVirtualMFADeviceVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostCreateVirtualMfaDeviceQueryParams extends SpeakeasyBase {
-    action: PostCreateVirtualMfaDeviceActionEnum;
-    version: PostCreateVirtualMfaDeviceVersionEnum;
-}
-export declare class PostCreateVirtualMfaDeviceHeaders extends SpeakeasyBase {
+export declare class POSTCreateVirtualMFADeviceRequest extends SpeakeasyBase {
+    action: POSTCreateVirtualMFADeviceActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateVirtualMFADeviceVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateVirtualMfaDeviceHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateVirtualMfaDeviceRequest extends SpeakeasyBase {
-    queryParams: PostCreateVirtualMfaDeviceQueryParams;
-    headers: PostCreateVirtualMfaDeviceHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateVirtualMfaDeviceResponse extends SpeakeasyBase {
+export declare class POSTCreateVirtualMFADeviceResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

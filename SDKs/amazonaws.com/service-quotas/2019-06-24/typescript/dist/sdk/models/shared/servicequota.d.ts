@@ -1,10 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ErrorReason } from "./errorreason";
-import { QuotaPeriod } from "./quotaperiod";
 import { MetricInfo } from "./metricinfo";
+import { QuotaPeriod } from "./quotaperiod";
 /**
  * Information about a quota.
-**/
+ */
 export declare class ServiceQuota extends SpeakeasyBase {
     adjustable?: boolean;
     errorReason?: ErrorReason;

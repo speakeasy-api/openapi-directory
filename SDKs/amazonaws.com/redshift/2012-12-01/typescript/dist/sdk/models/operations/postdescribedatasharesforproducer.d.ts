@@ -1,15 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeDataSharesForProducerActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeDataSharesForProducerActionEnum {
     DescribeDataSharesForProducer = "DescribeDataSharesForProducer"
 }
-export declare enum PostDescribeDataSharesForProducerVersionEnum {
+export declare enum POSTDescribeDataSharesForProducerVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostDescribeDataSharesForProducerQueryParams extends SpeakeasyBase {
-    action: PostDescribeDataSharesForProducerActionEnum;
-    version: PostDescribeDataSharesForProducerVersionEnum;
-}
-export declare class PostDescribeDataSharesForProducerHeaders extends SpeakeasyBase {
+export declare class POSTDescribeDataSharesForProducerRequest extends SpeakeasyBase {
+    action: POSTDescribeDataSharesForProducerActionEnum;
+    /**
+     * Pagination token
+     */
+    marker?: string;
+    /**
+     * Pagination limit
+     */
+    maxRecords?: string;
+    requestBody?: Uint8Array;
+    version: POSTDescribeDataSharesForProducerVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +26,9 @@ export declare class PostDescribeDataSharesForProducerHeaders extends SpeakeasyB
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeDataSharesForProducerRequest extends SpeakeasyBase {
-    queryParams: PostDescribeDataSharesForProducerQueryParams;
-    headers: PostDescribeDataSharesForProducerHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeDataSharesForProducerResponse extends SpeakeasyBase {
+export declare class POSTDescribeDataSharesForProducerResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

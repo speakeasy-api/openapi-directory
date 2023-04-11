@@ -1,127 +1,235 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateAppRequest, CreateAppResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CreateAppRequest,
+  CreateAppResponse,
+  CreateAppXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
+import {
+  VmManagerTypeEnum,
+  ServerTypeEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: CreateAppRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "AWSServerMigrationService_V2016_10_24.CreateApp",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
-    clientToken: "fugit",
-    description: "et",
-    name: "nihil",
-    roleName: "rerum",
+});
+
+const req: CreateAppRequest = {
+  createAppRequest: {
+    clientToken: "corrupti",
+    description: "provident",
+    name: "distinctio",
+    roleName: "quibusdam",
     serverGroups: [
       {
-        name: "debitis",
-        serverGroupId: "voluptatum",
+        name: "nulla",
+        serverGroupId: "corrupti",
         serverList: [
           {
-            replicationJobId: "ut",
-            replicationJobTerminated: true,
-            serverId: "et",
-            serverType: "VIRTUAL_MACHINE",
-            vmServer: {
-              vmManagerName: "iste",
-              vmManagerType: "VSPHERE",
-              vmName: "totam",
-              vmPath: "dolores",
-              vmServerAddress: {
-                vmId: "illum",
-                vmManagerId: "debitis",
-              },
-            },
-          },
-        ],
-      },
-      {
-        name: "vel",
-        serverGroupId: "odio",
-        serverList: [
-          {
-            replicationJobId: "id",
-            replicationJobTerminated: true,
-            serverId: "accusantium",
-            serverType: "VIRTUAL_MACHINE",
-            vmServer: {
-              vmManagerName: "commodi",
-              vmManagerType: "HYPERV-MANAGER",
-              vmName: "est",
-              vmPath: "aut",
-              vmServerAddress: {
-                vmId: "odit",
-                vmManagerId: "non",
-              },
-            },
-          },
-          {
-            replicationJobId: "voluptas",
-            replicationJobTerminated: true,
-            serverId: "aut",
-            serverType: "VIRTUAL_MACHINE",
-            vmServer: {
-              vmManagerName: "sed",
-              vmManagerType: "SCVMM",
-              vmName: "autem",
-              vmPath: "consectetur",
-              vmServerAddress: {
-                vmId: "nobis",
-                vmManagerId: "odio",
-              },
-            },
-          },
-        ],
-      },
-      {
-        name: "qui",
-        serverGroupId: "recusandae",
-        serverList: [
-          {
-            replicationJobId: "ipsum",
-            replicationJobTerminated: true,
-            serverId: "modi",
-            serverType: "VIRTUAL_MACHINE",
-            vmServer: {
-              vmManagerName: "inventore",
-              vmManagerType: "HYPERV-MANAGER",
-              vmName: "exercitationem",
-              vmPath: "aut",
-              vmServerAddress: {
-                vmId: "reprehenderit",
-                vmManagerId: "tempore",
-              },
-            },
-          },
-          {
-            replicationJobId: "maiores",
+            replicationJobId: "vel",
             replicationJobTerminated: false,
-            serverId: "dolor",
-            serverType: "VIRTUAL_MACHINE",
+            serverId: "error",
+            serverType: ServerTypeEnum.VirtualMachine,
             vmServer: {
-              vmManagerName: "veritatis",
-              vmManagerType: "HYPERV-MANAGER",
-              vmName: "et",
-              vmPath: "omnis",
+              vmManagerName: "deserunt",
+              vmManagerType: VmManagerTypeEnum.Scvmm,
+              vmName: "iure",
+              vmPath: "magnam",
+              vmServerAddress: {
+                vmId: "debitis",
+                vmManagerId: "ipsa",
+              },
+            },
+          },
+          {
+            replicationJobId: "delectus",
+            replicationJobTerminated: false,
+            serverId: "tempora",
+            serverType: ServerTypeEnum.VirtualMachine,
+            vmServer: {
+              vmManagerName: "suscipit",
+              vmManagerType: VmManagerTypeEnum.Scvmm,
+              vmName: "minus",
+              vmPath: "placeat",
+              vmServerAddress: {
+                vmId: "voluptatum",
+                vmManagerId: "iusto",
+              },
+            },
+          },
+          {
+            replicationJobId: "excepturi",
+            replicationJobTerminated: false,
+            serverId: "nisi",
+            serverType: ServerTypeEnum.VirtualMachine,
+            vmServer: {
+              vmManagerName: "recusandae",
+              vmManagerType: VmManagerTypeEnum.HypervManager,
+              vmName: "ab",
+              vmPath: "quis",
+              vmServerAddress: {
+                vmId: "veritatis",
+                vmManagerId: "deserunt",
+              },
+            },
+          },
+          {
+            replicationJobId: "perferendis",
+            replicationJobTerminated: false,
+            serverId: "ipsam",
+            serverType: ServerTypeEnum.VirtualMachine,
+            vmServer: {
+              vmManagerName: "repellendus",
+              vmManagerType: VmManagerTypeEnum.HypervManager,
+              vmName: "quo",
+              vmPath: "odit",
+              vmServerAddress: {
+                vmId: "at",
+                vmManagerId: "at",
+              },
+            },
+          },
+        ],
+      },
+      {
+        name: "maiores",
+        serverGroupId: "molestiae",
+        serverList: [
+          {
+            replicationJobId: "quod",
+            replicationJobTerminated: false,
+            serverId: "esse",
+            serverType: ServerTypeEnum.VirtualMachine,
+            vmServer: {
+              vmManagerName: "totam",
+              vmManagerType: VmManagerTypeEnum.HypervManager,
+              vmName: "dolorum",
+              vmPath: "dicta",
+              vmServerAddress: {
+                vmId: "nam",
+                vmManagerId: "officia",
+              },
+            },
+          },
+          {
+            replicationJobId: "occaecati",
+            replicationJobTerminated: false,
+            serverId: "fugit",
+            serverType: ServerTypeEnum.VirtualMachine,
+            vmServer: {
+              vmManagerName: "deleniti",
+              vmManagerType: VmManagerTypeEnum.HypervManager,
+              vmName: "optio",
+              vmPath: "totam",
+              vmServerAddress: {
+                vmId: "beatae",
+                vmManagerId: "commodi",
+              },
+            },
+          },
+          {
+            replicationJobId: "molestiae",
+            replicationJobTerminated: false,
+            serverId: "modi",
+            serverType: ServerTypeEnum.VirtualMachine,
+            vmServer: {
+              vmManagerName: "qui",
+              vmManagerType: VmManagerTypeEnum.HypervManager,
+              vmName: "cum",
+              vmPath: "esse",
               vmServerAddress: {
                 vmId: "ipsum",
-                vmManagerId: "ex",
+                vmManagerId: "excepturi",
+              },
+            },
+          },
+          {
+            replicationJobId: "aspernatur",
+            replicationJobTerminated: false,
+            serverId: "perferendis",
+            serverType: ServerTypeEnum.VirtualMachine,
+            vmServer: {
+              vmManagerName: "ad",
+              vmManagerType: VmManagerTypeEnum.Scvmm,
+              vmName: "sed",
+              vmPath: "iste",
+              vmServerAddress: {
+                vmId: "dolor",
+                vmManagerId: "natus",
+              },
+            },
+          },
+        ],
+      },
+      {
+        name: "laboriosam",
+        serverGroupId: "hic",
+        serverList: [
+          {
+            replicationJobId: "fuga",
+            replicationJobTerminated: false,
+            serverId: "in",
+            serverType: ServerTypeEnum.VirtualMachine,
+            vmServer: {
+              vmManagerName: "corporis",
+              vmManagerType: VmManagerTypeEnum.Scvmm,
+              vmName: "iure",
+              vmPath: "saepe",
+              vmServerAddress: {
+                vmId: "quidem",
+                vmManagerId: "architecto",
+              },
+            },
+          },
+          {
+            replicationJobId: "ipsa",
+            replicationJobTerminated: false,
+            serverId: "reiciendis",
+            serverType: ServerTypeEnum.VirtualMachine,
+            vmServer: {
+              vmManagerName: "est",
+              vmManagerType: VmManagerTypeEnum.Scvmm,
+              vmName: "laborum",
+              vmPath: "dolores",
+              vmServerAddress: {
+                vmId: "dolorem",
+                vmManagerId: "corporis",
+              },
+            },
+          },
+          {
+            replicationJobId: "explicabo",
+            replicationJobTerminated: false,
+            serverId: "nobis",
+            serverType: ServerTypeEnum.VirtualMachine,
+            vmServer: {
+              vmManagerName: "enim",
+              vmManagerType: VmManagerTypeEnum.Scvmm,
+              vmName: "nemo",
+              vmPath: "minima",
+              vmServerAddress: {
+                vmId: "excepturi",
+                vmManagerId: "accusantium",
+              },
+            },
+          },
+          {
+            replicationJobId: "iure",
+            replicationJobTerminated: false,
+            serverId: "culpa",
+            serverType: ServerTypeEnum.VirtualMachine,
+            vmServer: {
+              vmManagerName: "doloribus",
+              vmManagerType: VmManagerTypeEnum.HypervManager,
+              vmName: "architecto",
+              vmPath: "mollitia",
+              vmServerAddress: {
+                vmId: "dolorem",
+                vmManagerId: "culpa",
               },
             },
           },
@@ -130,19 +238,19 @@ const req: CreateAppRequest = {
     ],
     tags: [
       {
-        key: "placeat",
-        value: "vel",
-      },
-      {
-        key: "rerum",
+        key: "repellat",
         value: "mollitia",
-      },
-      {
-        key: "voluptas",
-        value: "quam",
       },
     ],
   },
+  xAmzAlgorithm: "occaecati",
+  xAmzContentSha256: "numquam",
+  xAmzCredential: "commodi",
+  xAmzDate: "quam",
+  xAmzSecurityToken: "molestiae",
+  xAmzSignature: "velit",
+  xAmzSignedHeaders: "error",
+  xAmzTarget: CreateAppXAmzTargetEnum.AWSServerMigrationServiceV20161024CreateApp,
 };
 
 sdk.createApp(req).then((res: CreateAppResponse | AxiosError) => {

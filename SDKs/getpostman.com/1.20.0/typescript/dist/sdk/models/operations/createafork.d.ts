@@ -1,19 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CreateAForkPathParams extends SpeakeasyBase {
-    collectionUid: string;
-}
-export declare class CreateAForkQueryParams extends SpeakeasyBase {
-    workspace?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class CreateAForkRequestBody extends SpeakeasyBase {
     name?: string;
 }
 export declare class CreateAForkRequest extends SpeakeasyBase {
-    pathParams: CreateAForkPathParams;
-    queryParams: CreateAForkQueryParams;
-    request?: CreateAForkRequestBody;
+    requestBody?: CreateAForkRequestBody;
+    collectionUid: string;
+    /**
+     * Workspace ID is required to create a fork
+     */
+    workspace?: string;
 }
 export declare class CreateAForkResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

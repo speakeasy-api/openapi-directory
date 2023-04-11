@@ -1,7 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { SuiteRunStatusEnum } from "./suiterunstatusenum";
 import { SuiteRunConfiguration } from "./suiterunconfiguration";
+import { SuiteRunStatusEnum } from "./suiterunstatusenum";
 import { TestResult } from "./testresult";
+/**
+ * Success
+ */
 export declare class GetSuiteRunResponse extends SpeakeasyBase {
     endTime?: Date;
     errorReason?: string;

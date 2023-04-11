@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListTriggersQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListTriggersXAmzTargetEnum {
-    AwsGlueListTriggers = "AWSGlue.ListTriggers"
+    AWSGlueListTriggers = "AWSGlue.ListTriggers"
 }
-export declare class ListTriggersHeaders extends SpeakeasyBase {
+export declare class ListTriggersRequest extends SpeakeasyBase {
+    listTriggersRequest: shared.ListTriggersRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,17 +23,28 @@ export declare class ListTriggersHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListTriggersXAmzTargetEnum;
 }
-export declare class ListTriggersRequest extends SpeakeasyBase {
-    queryParams: ListTriggersQueryParams;
-    headers: ListTriggersHeaders;
-    request: shared.ListTriggersRequest;
-}
 export declare class ListTriggersResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * Success
+     */
     listTriggersResponse?: shared.ListTriggersResponse;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

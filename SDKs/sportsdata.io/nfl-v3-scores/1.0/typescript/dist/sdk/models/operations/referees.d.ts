@@ -1,16 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+/**
+ * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+ */
 export declare enum RefereesFormatEnum {
     Xml = "XML",
     Json = "JSON"
 }
-export declare class RefereesPathParams extends SpeakeasyBase {
-    format: RefereesFormatEnum;
-}
 export declare class RefereesRequest extends SpeakeasyBase {
-    pathParams: RefereesPathParams;
+    /**
+     * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+     */
+    format: RefereesFormatEnum;
 }
 export declare class RefereesResponse extends SpeakeasyBase {
     contentType: string;
-    referees?: any[];
+    referees?: shared.Referee[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

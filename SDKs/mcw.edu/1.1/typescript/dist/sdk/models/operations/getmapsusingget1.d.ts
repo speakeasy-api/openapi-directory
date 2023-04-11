@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetMapsUsingGet1PathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETMapsUsingGet1Request extends SpeakeasyBase {
+    /**
+     * RGD term acc
+     */
     accId: string;
 }
-export declare class GetMapsUsingGet1Request extends SpeakeasyBase {
-    pathParams: GetMapsUsingGet1PathParams;
-}
-export declare class GetMapsUsingGet1Response extends SpeakeasyBase {
+export declare class GETMapsUsingGet1Response extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
     getMapsUsingGET1200WildcardString?: string;
 }

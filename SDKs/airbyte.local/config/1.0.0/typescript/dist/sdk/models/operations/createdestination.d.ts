@@ -1,11 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreateDestinationRequest extends SpeakeasyBase {
-    request: shared.DestinationCreate;
-}
+import { AxiosResponse } from "axios";
 export declare class CreateDestinationResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful operation
+     */
     destinationRead?: shared.DestinationRead;
+    /**
+     * Input failed validation
+     */
     invalidInputExceptionInfo?: shared.InvalidInputExceptionInfo;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

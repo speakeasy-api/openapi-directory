@@ -2,6 +2,9 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { CompatibilityEnum } from "./compatibilityenum";
 import { DataFormatEnum } from "./dataformatenum";
 import { SchemaStatusEnum } from "./schemastatusenum";
+/**
+ * Success
+ */
 export declare class GetSchemaResponse extends SpeakeasyBase {
     compatibility?: CompatibilityEnum;
     createdTime?: string;

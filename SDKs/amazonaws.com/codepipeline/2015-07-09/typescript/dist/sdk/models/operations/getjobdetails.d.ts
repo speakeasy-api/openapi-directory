@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetJobDetailsXAmzTargetEnum {
     CodePipeline20150709GetJobDetails = "CodePipeline_20150709.GetJobDetails"
 }
-export declare class GetJobDetailsHeaders extends SpeakeasyBase {
+export declare class GetJobDetailsRequest extends SpeakeasyBase {
+    getJobDetailsInput: shared.GetJobDetailsInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class GetJobDetailsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetJobDetailsXAmzTargetEnum;
 }
-export declare class GetJobDetailsRequest extends SpeakeasyBase {
-    headers: GetJobDetailsHeaders;
-    request: shared.GetJobDetailsInput;
-}
 export declare class GetJobDetailsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getJobDetailsOutput?: shared.GetJobDetailsOutput;
+    /**
+     * JobNotFoundException
+     */
     jobNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

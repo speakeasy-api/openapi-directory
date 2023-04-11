@@ -1,16 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class DeleteNsxvManagerPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteNsxvManagerSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
+    apiKeyAuth: string;
 }
 export declare class DeleteNsxvManagerRequest extends SpeakeasyBase {
-    pathParams: DeleteNsxvManagerPathParams;
-    security: DeleteNsxvManagerSecurity;
+    /**
+     * entity id
+     */
+    id: string;
 }
 export declare class DeleteNsxvManagerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

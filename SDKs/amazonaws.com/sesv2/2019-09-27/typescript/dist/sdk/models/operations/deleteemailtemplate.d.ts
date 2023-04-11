@@ -1,8 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteEmailTemplatePathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteEmailTemplateRequest extends SpeakeasyBase {
+    /**
+     * The name of the template to be deleted.
+     */
     templateName: string;
-}
-export declare class DeleteEmailTemplateHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,15 +13,24 @@ export declare class DeleteEmailTemplateHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeleteEmailTemplateRequest extends SpeakeasyBase {
-    pathParams: DeleteEmailTemplatePathParams;
-    headers: DeleteEmailTemplateHeaders;
-}
 export declare class DeleteEmailTemplateResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteEmailTemplateResponse?: Record<string, any>;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

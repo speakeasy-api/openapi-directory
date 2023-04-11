@@ -1,46 +1,59 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class AccountBillingUpdatePathParams extends SpeakeasyBase {
-    accountId: string;
-}
+import { AxiosResponse } from "axios";
 /**
  * Billing Contact object.
-**/
-export declare class AccountBillingUpdateApplicationJson extends SpeakeasyBase {
+ */
+export declare class AccountBillingUpdateApplicationJSON extends SpeakeasyBase {
+    /**
+     * Billing Contact's address.
+     */
     address?: string;
+    /**
+     * Billing Contact's apartment/suite.
+     */
     apt?: string;
+    /**
+     * Billing Contact's city.
+     */
     city?: string;
+    /**
+     * Billing Contact's country.
+     */
     country?: string;
+    /**
+     * Billing Contact's email address.
+     */
     email?: string;
+    /**
+     * Billing Contact's first name.
+     */
     firstName?: string;
+    /**
+     * Billing Contact's last name.
+     */
     lastName?: string;
+    /**
+     * Billing Contact's phone number.
+     */
     phoneNumber?: string;
+    /**
+     * Billing Contact's state.
+     */
     state?: string;
+    /**
+     * Billing Contact's zip/postal code.
+     */
     zip?: string;
-}
-/**
- * Billing Contact object.
-**/
-export declare class AccountBillingUpdateMultipartFormData extends SpeakeasyBase {
-    address?: string;
-    apt?: string;
-    city?: string;
-    country?: string;
-    email?: string;
-    firstName?: string;
-    lastName?: string;
-    phoneNumber?: string;
-    state?: string;
-    zip?: string;
-}
-export declare class AccountBillingUpdateRequests extends SpeakeasyBase {
-    object?: AccountBillingUpdateApplicationJson;
-    object1?: AccountBillingUpdateMultipartFormData;
 }
 export declare class AccountBillingUpdateRequest extends SpeakeasyBase {
-    pathParams: AccountBillingUpdatePathParams;
-    request: AccountBillingUpdateRequests;
+    requestBody: AccountBillingUpdateApplicationJSON;
+    /**
+     * The account ID.
+     */
+    accountId: string;
 }
 export declare class AccountBillingUpdateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

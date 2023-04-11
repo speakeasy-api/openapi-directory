@@ -1,35 +1,35 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AssociateWebAclRequest, AssociateWebAclResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  AssociateWebACLRequest,
+  AssociateWebACLResponse,
+  AssociateWebACLXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: AssociateWebAclRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "AWSWAF_Regional_20161128.AssociateWebACL",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
-    resourceArn: "fugit",
-    webACLId: "et",
+});
+
+const req: AssociateWebACLRequest = {
+  associateWebACLRequest: {
+    resourceArn: "corrupti",
+    webACLId: "provident",
   },
+  xAmzAlgorithm: "distinctio",
+  xAmzContentSha256: "quibusdam",
+  xAmzCredential: "unde",
+  xAmzDate: "nulla",
+  xAmzSecurityToken: "corrupti",
+  xAmzSignature: "illum",
+  xAmzSignedHeaders: "vel",
+  xAmzTarget: AssociateWebACLXAmzTargetEnum.AWSWAFRegional20161128AssociateWebACL,
 };
 
-sdk.associateWebAcl(req).then((res: AssociateWebAclResponse | AxiosError) => {
+sdk.associateWebACL(req).then((res: AssociateWebACLResponse | AxiosError) => {
    // handle response
 });
 ```

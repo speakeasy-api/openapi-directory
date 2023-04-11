@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDisableMetricsCollectionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDisableMetricsCollectionActionEnum {
     DisableMetricsCollection = "DisableMetricsCollection"
 }
-export declare enum PostDisableMetricsCollectionVersionEnum {
+export declare enum POSTDisableMetricsCollectionVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class PostDisableMetricsCollectionQueryParams extends SpeakeasyBase {
-    action: PostDisableMetricsCollectionActionEnum;
-    version: PostDisableMetricsCollectionVersionEnum;
-}
-export declare class PostDisableMetricsCollectionHeaders extends SpeakeasyBase {
+export declare class POSTDisableMetricsCollectionRequest extends SpeakeasyBase {
+    action: POSTDisableMetricsCollectionActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDisableMetricsCollectionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDisableMetricsCollectionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDisableMetricsCollectionRequest extends SpeakeasyBase {
-    queryParams: PostDisableMetricsCollectionQueryParams;
-    headers: PostDisableMetricsCollectionHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDisableMetricsCollectionResponse extends SpeakeasyBase {
+export declare class POSTDisableMetricsCollectionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

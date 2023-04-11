@@ -3,9 +3,10 @@ import { DkimAttributes } from "./dkimattributes";
 import { IdentityTypeEnum } from "./identitytypeenum";
 import { MailFromAttributes } from "./mailfromattributes";
 import { Tag } from "./tag";
+import { VerificationStatusEnum } from "./verificationstatusenum";
 /**
  * Details about an email identity.
-**/
+ */
 export declare class GetEmailIdentityResponse extends SpeakeasyBase {
     configurationSetName?: string;
     dkimAttributes?: DkimAttributes;
@@ -14,5 +15,6 @@ export declare class GetEmailIdentityResponse extends SpeakeasyBase {
     mailFromAttributes?: MailFromAttributes;
     policies?: Record<string, string>;
     tags?: Tag[];
+    verificationStatus?: VerificationStatusEnum;
     verifiedForSendingStatus?: boolean;
 }

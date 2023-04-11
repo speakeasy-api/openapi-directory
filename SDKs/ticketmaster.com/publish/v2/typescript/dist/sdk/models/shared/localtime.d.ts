@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { Chronology } from "./chronology";
-import { DateTimeFieldType } from "./datetimefieldtype";
 import { DateTimeField } from "./datetimefield";
+import { DateTimeFieldType } from "./datetimefieldtype";
 export declare class LocalTime extends SpeakeasyBase {
     chronology?: Chronology;
     fieldTypes?: DateTimeFieldType[];

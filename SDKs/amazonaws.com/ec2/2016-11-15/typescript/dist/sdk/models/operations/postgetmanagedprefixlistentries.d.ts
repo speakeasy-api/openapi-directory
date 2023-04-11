@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostGetManagedPrefixListEntriesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTGetManagedPrefixListEntriesActionEnum {
     GetManagedPrefixListEntries = "GetManagedPrefixListEntries"
 }
-export declare enum PostGetManagedPrefixListEntriesVersionEnum {
+export declare enum POSTGetManagedPrefixListEntriesVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostGetManagedPrefixListEntriesQueryParams extends SpeakeasyBase {
-    action: PostGetManagedPrefixListEntriesActionEnum;
+export declare class POSTGetManagedPrefixListEntriesRequest extends SpeakeasyBase {
+    action: POSTGetManagedPrefixListEntriesActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostGetManagedPrefixListEntriesVersionEnum;
-}
-export declare class PostGetManagedPrefixListEntriesHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTGetManagedPrefixListEntriesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostGetManagedPrefixListEntriesHeaders extends SpeakeasyBas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostGetManagedPrefixListEntriesRequest extends SpeakeasyBase {
-    queryParams: PostGetManagedPrefixListEntriesQueryParams;
-    headers: PostGetManagedPrefixListEntriesHeaders;
-    request?: Uint8Array;
-}
-export declare class PostGetManagedPrefixListEntriesResponse extends SpeakeasyBase {
+export declare class POSTGetManagedPrefixListEntriesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

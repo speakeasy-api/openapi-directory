@@ -1,11 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListItemsQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListItemsRequest extends SpeakeasyBase {
+    /**
+     * <p>The maximum number of results to return per API request. For example, you submit a <code>ListItems</code> request with <code>MaxResults</code> set at 500. Although 2,000 items match your request, the service returns no more than the first 500 items. (The service also returns a <code>NextToken</code> value that you can use to fetch the next batch of results.) The service might return fewer results than the <code>MaxResults</code> value.</p> <p>If <code>MaxResults</code> is not included in the request, the service defaults to pagination with a maximum of 1,000 results per page.</p>
+     */
     maxResults?: number;
+    /**
+     * <p>The token that identifies which batch of results that you want to see. For example, you submit a <code>ListItems</code> request with <code>MaxResults</code> set at 500. The service returns the first batch of results (up to 500) and a <code>NextToken</code> value. To see the next batch of results, you can submit the <code>ListItems</code> request a second time and specify the <code>NextToken</code> value.</p> <p>Tokens expire after 15 minutes.</p>
+     */
     nextToken?: string;
+    /**
+     * The path in the container from which to retrieve items. Format: &lt;folder name&gt;/&lt;folder name&gt;/&lt;file name&gt;
+     */
     path?: string;
-}
-export declare class ListItemsHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -14,14 +22,20 @@ export declare class ListItemsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class ListItemsRequest extends SpeakeasyBase {
-    queryParams: ListItemsQueryParams;
-    headers: ListItemsHeaders;
-}
 export declare class ListItemsResponse extends SpeakeasyBase {
+    /**
+     * ContainerNotFoundException
+     */
     containerNotFoundException?: any;
     contentType: string;
+    /**
+     * InternalServerError
+     */
     internalServerError?: any;
+    /**
+     * Success
+     */
     listItemsResponse?: shared.ListItemsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

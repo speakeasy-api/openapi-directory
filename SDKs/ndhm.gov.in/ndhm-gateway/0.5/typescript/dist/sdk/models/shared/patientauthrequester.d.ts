@@ -5,7 +5,7 @@ export declare enum PatientAuthRequesterTypeEnum {
 }
 /**
  * identification of requester
-**/
+ */
 export declare class PatientAuthRequester extends SpeakeasyBase {
     id: string;
     type: PatientAuthRequesterTypeEnum;

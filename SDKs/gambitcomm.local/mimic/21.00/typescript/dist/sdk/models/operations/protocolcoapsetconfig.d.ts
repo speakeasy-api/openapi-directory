@@ -1,14 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolCoapSetConfigPathParams extends SpeakeasyBase {
-    agentNum: number;
-    argument: string;
-    value: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolCoapSetConfigRequest extends SpeakeasyBase {
-    pathParams: ProtocolCoapSetConfigPathParams;
+    /**
+     * Agent to set the COAP configuration
+     */
+    agentNum: number;
+    /**
+     * Parameter to set the COAP configuration
+     */
+    argument: string;
+    /**
+     * Value to set the COAP configuration
+     */
+    value: string;
 }
 export declare class ProtocolCoapSetConfigResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolCoapSetConfig200ApplicationJSONString?: string;
 }

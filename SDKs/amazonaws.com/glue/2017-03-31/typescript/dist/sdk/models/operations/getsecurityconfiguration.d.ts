@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetSecurityConfigurationXAmzTargetEnum {
-    AwsGlueGetSecurityConfiguration = "AWSGlue.GetSecurityConfiguration"
+    AWSGlueGetSecurityConfiguration = "AWSGlue.GetSecurityConfiguration"
 }
-export declare class GetSecurityConfigurationHeaders extends SpeakeasyBase {
+export declare class GetSecurityConfigurationRequest extends SpeakeasyBase {
+    getSecurityConfigurationRequest: shared.GetSecurityConfigurationRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class GetSecurityConfigurationHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetSecurityConfigurationXAmzTargetEnum;
 }
-export declare class GetSecurityConfigurationRequest extends SpeakeasyBase {
-    headers: GetSecurityConfigurationHeaders;
-    request: shared.GetSecurityConfigurationRequest;
-}
 export declare class GetSecurityConfigurationResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * Success
+     */
     getSecurityConfigurationResponse?: shared.GetSecurityConfigurationResponse;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

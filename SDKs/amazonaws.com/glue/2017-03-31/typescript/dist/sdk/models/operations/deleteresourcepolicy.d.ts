@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteResourcePolicyXAmzTargetEnum {
-    AwsGlueDeleteResourcePolicy = "AWSGlue.DeleteResourcePolicy"
+    AWSGlueDeleteResourcePolicy = "AWSGlue.DeleteResourcePolicy"
 }
-export declare class DeleteResourcePolicyHeaders extends SpeakeasyBase {
+export declare class DeleteResourcePolicyRequest extends SpeakeasyBase {
+    deleteResourcePolicyRequest: shared.DeleteResourcePolicyRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class DeleteResourcePolicyHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteResourcePolicyXAmzTargetEnum;
 }
-export declare class DeleteResourcePolicyRequest extends SpeakeasyBase {
-    headers: DeleteResourcePolicyHeaders;
-    request: shared.DeleteResourcePolicyRequest;
-}
 export declare class DeleteResourcePolicyResponse extends SpeakeasyBase {
+    /**
+     * ConditionCheckFailureException
+     */
     conditionCheckFailureException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteResourcePolicyResponse?: Record<string, any>;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,11 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UntagResourcePathParams extends SpeakeasyBase {
-    resourceArn: string;
-}
-export declare class UntagResourceQueryParams extends SpeakeasyBase {
-    tagKeys: string[];
-}
-export declare class UntagResourceHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class UntagResourceRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,21 +8,49 @@ export declare class UntagResourceHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class UntagResourceRequest extends SpeakeasyBase {
-    pathParams: UntagResourcePathParams;
-    queryParams: UntagResourceQueryParams;
-    headers: UntagResourceHeaders;
+    /**
+     * Identifies the Amazon Resource Name(ARN) key from which you are removing tags.
+     */
+    resourceArn: string;
+    /**
+     * One or more tag keys. Specify only the tag keys, not the tag values.
+     */
+    tagKeys: string[];
 }
 export declare class UntagResourceResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
-    resourceNotFoundException?: any;
-    serviceQuotaExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ServiceQuotaExceededException
+     */
+    serviceQuotaExceededException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * Success
+     */
     untagResourceResponse?: Record<string, any>;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

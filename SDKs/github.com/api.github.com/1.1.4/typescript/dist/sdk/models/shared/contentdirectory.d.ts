@@ -4,6 +4,12 @@ export declare class ContentDirectoryLinks extends SpeakeasyBase {
     html: string;
     self: string;
 }
+export declare enum ContentDirectoryTypeEnum {
+    Dir = "dir",
+    File = "file",
+    Submodule = "submodule",
+    Symlink = "symlink"
+}
 export declare class ContentDirectory extends SpeakeasyBase {
     links: ContentDirectoryLinks;
     content?: string;
@@ -14,6 +20,6 @@ export declare class ContentDirectory extends SpeakeasyBase {
     path: string;
     sha: string;
     size: number;
-    type: string;
+    type: ContentDirectoryTypeEnum;
     url: string;
 }

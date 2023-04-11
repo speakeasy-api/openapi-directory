@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { GroupVersion } from "./groupversion";
+/**
+ * Success
+ */
 export declare class GetGroupVersionResponse extends SpeakeasyBase {
     arn?: string;
     creationTimestamp?: string;

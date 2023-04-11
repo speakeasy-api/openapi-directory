@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolNetflowReloadPathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolNetflowReloadRequest extends SpeakeasyBase {
-    pathParams: ProtocolNetflowReloadPathParams;
+    /**
+     * Agent to set the NETFLOW
+     */
+    agentNum: number;
 }
 export declare class ProtocolNetflowReloadResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolNetflowReload200ApplicationJSONString?: string;
 }

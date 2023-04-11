@@ -3,7 +3,7 @@ import { AddressFamilyEnum } from "./addressfamilyenum";
 import { Tag } from "./tag";
 /**
  * Information about a transit virtual interface.
-**/
+ */
 export declare class NewTransitVirtualInterface extends SpeakeasyBase {
     addressFamily?: AddressFamilyEnum;
     amazonAddress?: string;
@@ -11,6 +11,7 @@ export declare class NewTransitVirtualInterface extends SpeakeasyBase {
     authKey?: string;
     customerAddress?: string;
     directConnectGatewayId?: string;
+    enableSiteLink?: boolean;
     mtu?: number;
     tags?: Tag[];
     virtualInterfaceName?: string;

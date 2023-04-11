@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetConnectivityInfoPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetConnectivityInfoRequest extends SpeakeasyBase {
+    /**
+     * The thing name.
+     */
     thingName: string;
-}
-export declare class GetConnectivityInfoHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,14 +14,20 @@ export declare class GetConnectivityInfoHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetConnectivityInfoRequest extends SpeakeasyBase {
-    pathParams: GetConnectivityInfoPathParams;
-    headers: GetConnectivityInfoHeaders;
-}
 export declare class GetConnectivityInfoResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getConnectivityInfoResponse?: shared.GetConnectivityInfoResponse;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

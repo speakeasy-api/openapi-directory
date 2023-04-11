@@ -1,18 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PrivateArticleConfidentialityDetailsPathParams extends SpeakeasyBase {
-    articleId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class PrivateArticleConfidentialityDetailsSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class PrivateArticleConfidentialityDetailsRequest extends SpeakeasyBase {
-    pathParams: PrivateArticleConfidentialityDetailsPathParams;
-    security: PrivateArticleConfidentialityDetailsSecurity;
+    /**
+     * Article unique identifier
+     */
+    articleId: number;
 }
 export declare class PrivateArticleConfidentialityDetailsResponse extends SpeakeasyBase {
+    /**
+     * OK. Article categories
+     */
     articleConfidentiality?: shared.ArticleConfidentiality;
     contentType: string;
+    /**
+     * Forbidden
+     */
     errorMessage?: shared.ErrorMessage;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

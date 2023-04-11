@@ -8,11 +8,14 @@ export declare class ThreadSubject extends SpeakeasyBase {
 }
 /**
  * Thread
-**/
+ */
 export declare class Thread extends SpeakeasyBase {
     id: string;
     lastReadAt: string;
     reason: string;
+    /**
+     * Minimal Repository
+     */
     repository: MinimalRepository;
     subject: ThreadSubject;
     subscriptionUrl: string;

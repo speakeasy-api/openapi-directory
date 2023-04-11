@@ -1,26 +1,28 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostSelectActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTSelectActionEnum {
     Select = "Select"
 }
-export declare enum PostSelectVersionEnum {
+export declare enum POSTSelectVersionEnum {
     TwoThousandAndNine0415 = "2009-04-15"
 }
-export declare class PostSelectQueryParams extends SpeakeasyBase {
+export declare class POSTSelectRequest extends SpeakeasyBase {
     awsAccessKeyId: string;
-    action: PostSelectActionEnum;
+    action: POSTSelectActionEnum;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
+    requestBody?: Uint8Array;
     signature: string;
     signatureMethod: string;
     signatureVersion: string;
     timestamp: string;
-    version: PostSelectVersionEnum;
+    version: POSTSelectVersionEnum;
 }
-export declare class PostSelectRequest extends SpeakeasyBase {
-    queryParams: PostSelectQueryParams;
-    request?: Uint8Array;
-}
-export declare class PostSelectResponse extends SpeakeasyBase {
+export declare class POSTSelectResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

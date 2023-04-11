@@ -1,8 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeInstanceAttributeActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeInstanceAttributeActionEnum {
     DescribeInstanceAttribute = "DescribeInstanceAttribute"
 }
-export declare enum GetDescribeInstanceAttributeAttributeEnum {
+/**
+ * <p>The instance attribute.</p> <p>Note: The <code>enaSupport</code> attribute is not supported at this time.</p>
+ */
+export declare enum GETDescribeInstanceAttributeAttributeEnum {
     InstanceType = "instanceType",
     Kernel = "kernel",
     Ramdisk = "ramdisk",
@@ -17,19 +21,27 @@ export declare enum GetDescribeInstanceAttributeAttributeEnum {
     EbsOptimized = "ebsOptimized",
     SriovNetSupport = "sriovNetSupport",
     EnaSupport = "enaSupport",
-    EnclaveOptions = "enclaveOptions"
+    EnclaveOptions = "enclaveOptions",
+    DisableApiStop = "disableApiStop"
 }
-export declare enum GetDescribeInstanceAttributeVersionEnum {
+export declare enum GETDescribeInstanceAttributeVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetDescribeInstanceAttributeQueryParams extends SpeakeasyBase {
-    action: GetDescribeInstanceAttributeActionEnum;
-    attribute: GetDescribeInstanceAttributeAttributeEnum;
+export declare class GETDescribeInstanceAttributeRequest extends SpeakeasyBase {
+    action: GETDescribeInstanceAttributeActionEnum;
+    /**
+     * <p>The instance attribute.</p> <p>Note: The <code>enaSupport</code> attribute is not supported at this time.</p>
+     */
+    attribute: GETDescribeInstanceAttributeAttributeEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
+    /**
+     * The ID of the instance.
+     */
     instanceId: string;
-    version: GetDescribeInstanceAttributeVersionEnum;
-}
-export declare class GetDescribeInstanceAttributeHeaders extends SpeakeasyBase {
+    version: GETDescribeInstanceAttributeVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -38,12 +50,9 @@ export declare class GetDescribeInstanceAttributeHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeInstanceAttributeRequest extends SpeakeasyBase {
-    queryParams: GetDescribeInstanceAttributeQueryParams;
-    headers: GetDescribeInstanceAttributeHeaders;
-}
-export declare class GetDescribeInstanceAttributeResponse extends SpeakeasyBase {
+export declare class GETDescribeInstanceAttributeResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

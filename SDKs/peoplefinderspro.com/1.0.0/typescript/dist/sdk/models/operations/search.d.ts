@@ -1,9 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SearchHeaders extends SpeakeasyBase {
-    galaxyApName?: string;
-    galaxyApPassword?: string;
-    galaxySearchType?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class SearchRequestBodyAddress extends SpeakeasyBase {
     addressLine1?: string;
     addressLine2?: string;
@@ -19,10 +15,22 @@ export declare class SearchRequestBody extends SpeakeasyBase {
     phoneNumber?: string;
 }
 export declare class SearchRequest extends SpeakeasyBase {
-    headers: SearchHeaders;
-    request?: SearchRequestBody;
+    requestBody?: SearchRequestBody;
+    /**
+     * e.g. Key
+     */
+    galaxyApName?: string;
+    /**
+     * e.g. Secret
+     */
+    galaxyApPassword?: string;
+    /**
+     * e.g. DevAPIIDVerification
+     */
+    galaxySearchType?: string;
 }
 export declare class SearchResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

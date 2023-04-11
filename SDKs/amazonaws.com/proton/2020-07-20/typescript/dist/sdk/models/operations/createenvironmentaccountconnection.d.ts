@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum CreateEnvironmentAccountConnectionXAmzTargetEnum {
     AwsProton20200720CreateEnvironmentAccountConnection = "AwsProton20200720.CreateEnvironmentAccountConnection"
 }
-export declare class CreateEnvironmentAccountConnectionHeaders extends SpeakeasyBase {
+export declare class CreateEnvironmentAccountConnectionRequest extends SpeakeasyBase {
+    createEnvironmentAccountConnectionInput: shared.CreateEnvironmentAccountConnectionInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class CreateEnvironmentAccountConnectionHeaders extends Speakeasy
     xAmzSignedHeaders?: string;
     xAmzTarget: CreateEnvironmentAccountConnectionXAmzTargetEnum;
 }
-export declare class CreateEnvironmentAccountConnectionRequest extends SpeakeasyBase {
-    headers: CreateEnvironmentAccountConnectionHeaders;
-    request: shared.CreateEnvironmentAccountConnectionInput;
-}
 export declare class CreateEnvironmentAccountConnectionResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     createEnvironmentAccountConnectionOutput?: shared.CreateEnvironmentAccountConnectionOutput;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ServiceQuotaExceededException
+     */
     serviceQuotaExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

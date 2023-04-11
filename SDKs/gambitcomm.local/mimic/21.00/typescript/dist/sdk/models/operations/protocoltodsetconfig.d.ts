@@ -1,14 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolTodSetConfigPathParams extends SpeakeasyBase {
-    agentNum: number;
-    argument: string;
-    value: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolTodSetConfigRequest extends SpeakeasyBase {
-    pathParams: ProtocolTodSetConfigPathParams;
+    /**
+     * Agent to set the TOD configuration
+     */
+    agentNum: number;
+    /**
+     * Parameter to set the TOD configuration
+     */
+    argument: string;
+    /**
+     * Value to set the TOD configuration
+     */
+    value: string;
 }
 export declare class ProtocolTodSetConfigResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolTodSetConfig200ApplicationJSONString?: string;
 }

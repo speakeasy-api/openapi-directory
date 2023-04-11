@@ -1,5 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GraphQlResponse extends SpeakeasyBase {
+/**
+ * GraphQL Query Response
+ */
+export declare class GraphQLResponse extends SpeakeasyBase {
+    /**
+     * Results from the GraphQL query
+     */
     data?: Record<string, any>;
+    /**
+     * Errors resulting from the GraphQL query
+     */
     errors?: Record<string, any>[];
 }

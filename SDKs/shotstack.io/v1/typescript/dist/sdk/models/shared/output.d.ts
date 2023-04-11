@@ -3,6 +3,17 @@ import { Poster } from "./poster";
 import { Range } from "./range";
 import { Size } from "./size";
 import { Thumbnail } from "./thumbnail";
+/**
+ * The aspect ratio (shape) of the video or image. Useful for social media output formats. Options are: <ul>
+ *
+ * @remarks
+ *   <li>`16:9` - regular landscape/horizontal aspect ratio (default)</li>
+ *   <li>`9:16` - vertical/portrait aspect ratio</li>
+ *   <li>`1:1` - square aspect ratio</li>
+ *   <li>`4:5` - short vertical/portrait aspect ratio</li>
+ *   <li>`4:3` - legacy TV aspect ratio</li>
+ * </ul>
+ */
 export declare enum OutputAspectRatioEnum {
     Sixteen9 = "16:9",
     Nine16 = "9:16",
@@ -10,6 +21,18 @@ export declare enum OutputAspectRatioEnum {
     Four5 = "4:5",
     Four3 = "4:3"
 }
+/**
+ * The output format and type of media file to generate. <ul>
+ *
+ * @remarks
+ *   <li>`mp4` - mp4 video file</li>
+ *   <li>`gif` - animated gif</li>
+ *   <li>`jpg` - jpg image file</li>
+ *   <li>`png` - png image file</li>
+ *   <li>`bmp` - bmp image file</li>
+ *   <li>`mp3` - mp3 audio file (audio only)</li>
+ * </ul>
+ */
 export declare enum OutputFormatEnum {
     Mp4 = "mp4",
     Gif = "gif",
@@ -18,11 +41,49 @@ export declare enum OutputFormatEnum {
     Png = "png",
     Bmp = "bmp"
 }
+/**
+ * Override the default frames per second. Useful for when the source footage is recorded at 30fps, i.e. on  mobile devices. Lower frame rates can be used to add cinematic quality (24fps) or to create smaller file size/faster render times or animated gifs (12 or 15fps). Default is 25fps. <ul>
+ *
+ * @remarks
+ *   <li>`12` - 12fps</li>
+ *   <li>`15` - 15fps</li>
+ *   <li>`24` - 24fps</li>
+ *   <li>`25` - 25fps</li>
+ *   <li>`30` - 30fps</li>
+ * </ul>
+ */
+export declare enum OutputFpsEnum {
+    Twelve = "12",
+    Fifteen = "15",
+    TwentyFour = "24",
+    TwentyFive = "25",
+    Thirty = "30"
+}
+/**
+ * Adjust the output quality of the video, image or audio. Adjusting quality affects  render speed, download speeds and storage requirements due to file size. The default `medium` provides the most optimized choice for all three  factors. <ul>
+ *
+ * @remarks
+ *   <li>`low` - slightly reduced quality, smaller file size</li>
+ *   <li>`medium` - optimized quality, render speeds and file size</li>
+ *   <li>`high` - slightly increased quality, larger file size</li>
+ * </ul>
+ */
 export declare enum OutputQualityEnum {
     Low = "low",
     Medium = "medium",
     High = "high"
 }
+/**
+ * The output resolution of the video or image. <ul>
+ *
+ * @remarks
+ *   <li>`preview` - 512px x 288px @ 15fps</li>
+ *   <li>`mobile` - 640px x 360px @ 25fps</li>
+ *   <li>`sd` - 1024px x 576px @ 25fps</li>
+ *   <li>`hd` - 1280px x 720px @ 25fps</li>
+ *   <li>`1080` - 1920px x 1080px @ 25fps</li>
+ * </ul>
+ */
 export declare enum OutputResolutionEnum {
     Preview = "preview",
     Mobile = "mobile",
@@ -30,6 +91,17 @@ export declare enum OutputResolutionEnum {
     Hd = "hd",
     OneThousandAndEighty = "1080"
 }
+/**
+ * Override the resolution and scale the video or image to render at a different size. When using scaleTo the asset should be edited at the resolution dimensions, i.e. use font sizes that look best at HD, then use scaleTo to output the file at SD and the text will be scaled to the correct size. This is useful if you want to create multiple asset sizes. <ul>
+ *
+ * @remarks
+ *   <li>`preview` - 512px x 288px @ 15fps</li>
+ *   <li>`mobile` - 640px x 360px @ 25fps</li>
+ *   <li>`sd` - 1024px x 576px @25fps</li>
+ *   <li>`hd` - 1280px x 720px @25fps</li>
+ *   <li>`1080` - 1920px x 1080px @25fps</li>
+ * </ul>
+ */
 export declare enum OutputScaleToEnum {
     Preview = "preview",
     Mobile = "mobile",
@@ -39,17 +111,97 @@ export declare enum OutputScaleToEnum {
 }
 /**
  * The output format, render range and type of media to generate.
-**/
+ */
 export declare class Output extends SpeakeasyBase {
+    /**
+     * The aspect ratio (shape) of the video or image. Useful for social media output formats. Options are: <ul>
+     *
+     * @remarks
+     *   <li>`16:9` - regular landscape/horizontal aspect ratio (default)</li>
+     *   <li>`9:16` - vertical/portrait aspect ratio</li>
+     *   <li>`1:1` - square aspect ratio</li>
+     *   <li>`4:5` - short vertical/portrait aspect ratio</li>
+     *   <li>`4:3` - legacy TV aspect ratio</li>
+     * </ul>
+     */
     aspectRatio?: OutputAspectRatioEnum;
+    /**
+     * A destination is a location where output files can be sent to for serving or hosting. By default all rendered assets are automatically sent to the Shotstack hosting destination. [DestinationShotstack](/#tocs_shotstackdestination) is currently the only option with plans to add more in the future such as S3, YouTube, Vimeo and Mux. If you do not require hosting you can opt-out using the  `exclude` property.
+     */
     destinations?: any[];
+    /**
+     * The output format and type of media file to generate. <ul>
+     *
+     * @remarks
+     *   <li>`mp4` - mp4 video file</li>
+     *   <li>`gif` - animated gif</li>
+     *   <li>`jpg` - jpg image file</li>
+     *   <li>`png` - png image file</li>
+     *   <li>`bmp` - bmp image file</li>
+     *   <li>`mp3` - mp3 audio file (audio only)</li>
+     * </ul>
+     */
     format: OutputFormatEnum;
-    fps?: number;
+    /**
+     * Override the default frames per second. Useful for when the source footage is recorded at 30fps, i.e. on  mobile devices. Lower frame rates can be used to add cinematic quality (24fps) or to create smaller file size/faster render times or animated gifs (12 or 15fps). Default is 25fps. <ul>
+     *
+     * @remarks
+     *   <li>`12` - 12fps</li>
+     *   <li>`15` - 15fps</li>
+     *   <li>`24` - 24fps</li>
+     *   <li>`25` - 25fps</li>
+     *   <li>`30` - 30fps</li>
+     * </ul>
+     */
+    fps?: OutputFpsEnum;
+    /**
+     * Generate a poster image for the video at a specific point from the timeline. The poster image size will match the size of the output video.
+     */
     poster?: Poster;
+    /**
+     * Adjust the output quality of the video, image or audio. Adjusting quality affects  render speed, download speeds and storage requirements due to file size. The default `medium` provides the most optimized choice for all three  factors. <ul>
+     *
+     * @remarks
+     *   <li>`low` - slightly reduced quality, smaller file size</li>
+     *   <li>`medium` - optimized quality, render speeds and file size</li>
+     *   <li>`high` - slightly increased quality, larger file size</li>
+     * </ul>
+     */
     quality?: OutputQualityEnum;
+    /**
+     * Specify a time range to render, i.e. to render only a portion of a video or audio file. Omit this setting to  export the entire video. Range can also be used to render a frame at a specific time point - setting a range and output format as `jpg` will output a single frame image at the range `start` point.
+     */
     range?: Range;
+    /**
+     * The output resolution of the video or image. <ul>
+     *
+     * @remarks
+     *   <li>`preview` - 512px x 288px @ 15fps</li>
+     *   <li>`mobile` - 640px x 360px @ 25fps</li>
+     *   <li>`sd` - 1024px x 576px @ 25fps</li>
+     *   <li>`hd` - 1280px x 720px @ 25fps</li>
+     *   <li>`1080` - 1920px x 1080px @ 25fps</li>
+     * </ul>
+     */
     resolution?: OutputResolutionEnum;
+    /**
+     * Override the resolution and scale the video or image to render at a different size. When using scaleTo the asset should be edited at the resolution dimensions, i.e. use font sizes that look best at HD, then use scaleTo to output the file at SD and the text will be scaled to the correct size. This is useful if you want to create multiple asset sizes. <ul>
+     *
+     * @remarks
+     *   <li>`preview` - 512px x 288px @ 15fps</li>
+     *   <li>`mobile` - 640px x 360px @ 25fps</li>
+     *   <li>`sd` - 1024px x 576px @25fps</li>
+     *   <li>`hd` - 1280px x 720px @25fps</li>
+     *   <li>`1080` - 1920px x 1080px @25fps</li>
+     * </ul>
+     */
     scaleTo?: OutputScaleToEnum;
+    /**
+     * Set a custom size for a video or image. When using a custom size omit the `resolution` and `aspectRatio`. Custom sizes must be divisible by 2 based on the encoder specifications.
+     */
     size?: Size;
+    /**
+     * Generate a thumbnail image for the video or image at a specific point from the timeline.
+     */
     thumbnail?: Thumbnail;
 }

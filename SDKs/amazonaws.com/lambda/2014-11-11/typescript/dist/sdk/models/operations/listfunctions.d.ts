@@ -1,10 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListFunctionsQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListFunctionsRequest extends SpeakeasyBase {
+    /**
+     * Optional string. An opaque pagination token returned from a previous <code>ListFunctions</code> operation. If present, indicates where to continue the listing.
+     */
     marker?: string;
+    /**
+     * Optional integer. Specifies the maximum number of AWS Lambda functions to return in response. This parameter value must be greater than 0.
+     */
     maxItems?: number;
-}
-export declare class ListFunctionsHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,13 +18,16 @@ export declare class ListFunctionsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class ListFunctionsRequest extends SpeakeasyBase {
-    queryParams: ListFunctionsQueryParams;
-    headers: ListFunctionsHeaders;
-}
 export declare class ListFunctionsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     listFunctionsResponse?: shared.ListFunctionsResponse;
+    /**
+     * ServiceException
+     */
     serviceException?: shared.ServiceException;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

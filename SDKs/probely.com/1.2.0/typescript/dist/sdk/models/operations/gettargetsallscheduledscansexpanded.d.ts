@@ -1,20 +1,40 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetTargetsAllScheduledscansExpandedQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetTargetsAllScheduledscansExpandedRequest extends SpeakeasyBase {
+    /**
+     * Number of results to return per page
+     */
     length?: number;
 }
-export declare class GetTargetsAllScheduledscansExpanded200ApplicationJson extends SpeakeasyBase {
-    results?: shared.Scheduled[];
-}
-export declare class GetTargetsAllScheduledscansExpanded404ApplicationJson extends SpeakeasyBase {
+/**
+ * Not found
+ */
+export declare class GetTargetsAllScheduledscansExpanded404ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Not found.
+     */
     detail?: string;
 }
-export declare class GetTargetsAllScheduledscansExpandedRequest extends SpeakeasyBase {
-    queryParams: GetTargetsAllScheduledscansExpandedQueryParams;
+/**
+ * Next scheduled scans
+ */
+export declare class GetTargetsAllScheduledscansExpanded200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Scheduled scan objects
+     */
+    results?: shared.Scheduled[];
 }
 export declare class GetTargetsAllScheduledscansExpandedResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getTargetsAllScheduledscansExpanded200ApplicationJSONObject?: GetTargetsAllScheduledscansExpanded200ApplicationJson;
-    getTargetsAllScheduledscansExpanded404ApplicationJSONObject?: GetTargetsAllScheduledscansExpanded404ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Next scheduled scans
+     */
+    getTargetsAllScheduledscansExpanded200ApplicationJSONObject?: GetTargetsAllScheduledscansExpanded200ApplicationJSON;
+    /**
+     * Not found
+     */
+    getTargetsAllScheduledscansExpanded404ApplicationJSONObject?: GetTargetsAllScheduledscansExpanded404ApplicationJSON;
 }

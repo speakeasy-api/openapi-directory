@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetComplianceSummaryQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    paginationToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum GetComplianceSummaryXAmzTargetEnum {
-    ResourceGroupsTaggingApi20170126GetComplianceSummary = "ResourceGroupsTaggingAPI_20170126.GetComplianceSummary"
+    ResourceGroupsTaggingAPI20170126GetComplianceSummary = "ResourceGroupsTaggingAPI_20170126.GetComplianceSummary"
 }
-export declare class GetComplianceSummaryHeaders extends SpeakeasyBase {
+export declare class GetComplianceSummaryRequest extends SpeakeasyBase {
+    getComplianceSummaryInput: shared.GetComplianceSummaryInput;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    paginationToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,17 +23,28 @@ export declare class GetComplianceSummaryHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetComplianceSummaryXAmzTargetEnum;
 }
-export declare class GetComplianceSummaryRequest extends SpeakeasyBase {
-    queryParams: GetComplianceSummaryQueryParams;
-    headers: GetComplianceSummaryHeaders;
-    request: shared.GetComplianceSummaryInput;
-}
 export declare class GetComplianceSummaryResponse extends SpeakeasyBase {
+    /**
+     * ConstraintViolationException
+     */
     constraintViolationException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getComplianceSummaryOutput?: shared.GetComplianceSummaryOutput;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottledException
+     */
     throttledException?: any;
 }

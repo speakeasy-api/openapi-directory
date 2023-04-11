@@ -1,16 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetPirateTranslateQueryParams extends SpeakeasyBase {
-    text: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetPirateTranslateSecurity extends SpeakeasyBase {
-    xFungeneratorsApiSecret: shared.SchemeXFungeneratorsApiSecret;
+    xFungeneratorsApiSecret: string;
 }
 export declare class GetPirateTranslateRequest extends SpeakeasyBase {
-    queryParams: GetPirateTranslateQueryParams;
-    security: GetPirateTranslateSecurity;
+    /**
+     * Text to translate to pirate lingo.
+     */
+    text: string;
 }
 export declare class GetPirateTranslateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

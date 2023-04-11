@@ -1,14 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteSubscriptionPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteSubscriptionRequest extends SpeakeasyBase {
     id: string;
 }
-export declare class DeleteSubscriptionRequest extends SpeakeasyBase {
-    pathParams: DeleteSubscriptionPathParams;
-}
 export declare class DeleteSubscriptionResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     * Occurs when something goes wrong
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The subscription is not found
+     */
     errorResponseMessage?: shared.ErrorResponseMessage;
 }

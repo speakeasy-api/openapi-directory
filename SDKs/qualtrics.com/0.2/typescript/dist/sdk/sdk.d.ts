@@ -1,10 +1,26 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://fra1.qualtrics.com/API/v3"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * Work with Qualtrics surveys, distributions and response events
+ */
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -12,53 +28,62 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
     /**
-     * createContactInMailinglist - Create contact in mailing list
+     * Create contact in mailing list
      *
+     * @remarks
      * Creates a contact in a given mailing list
-    **/
+     */
     createContactInMailinglist(req: operations.CreateContactInMailinglistRequest, config?: AxiosRequestConfig): Promise<operations.CreateContactInMailinglistResponse>;
     /**
-     * generateDistributionLinks - Generate distribution links
+     * Generate distribution links
      *
+     * @remarks
      * Geneates links for individual distribution
-    **/
-    generateDistributionLinks(req: operations.GenerateDistributionLinksRequest, config?: AxiosRequestConfig): Promise<operations.GenerateDistributionLinksResponse>;
+     */
+    generateDistributionLinks(req: shared.CreateDistributionLinks, config?: AxiosRequestConfig): Promise<operations.GenerateDistributionLinksResponse>;
     /**
-     * getDistributions - Get distributions for survey
+     * Get distributions for survey
      *
+     * @remarks
      * Gets all distributions for a given survey
-    **/
+     */
     getDistributions(req: operations.GetDistributionsRequest, config?: AxiosRequestConfig): Promise<operations.GetDistributionsResponse>;
     /**
-     * getEventSubscriptions - Get event subscriptions
-     *
      * Get event subscriptions
-    **/
+     *
+     * @remarks
+     * Get event subscriptions
+     */
     getEventSubscriptions(req: operations.GetEventSubscriptionsRequest, config?: AxiosRequestConfig): Promise<operations.GetEventSubscriptionsResponse>;
     /**
-     * getSurvey - Get survey
+     * Get survey
      *
+     * @remarks
      * Gets a single Qualtrics survey speficied by its ID
-    **/
+     */
     getSurvey(req: operations.GetSurveyRequest, config?: AxiosRequestConfig): Promise<operations.GetSurveyResponse>;
     /**
-     * retrievedistributionlinks - Retrieve distribution links
+     * Retrieve distribution links
      *
+     * @remarks
      * Retrieves all the individual links for a given distribution
-    **/
+     */
     retrievedistributionlinks(req: operations.RetrievedistributionlinksRequest, config?: AxiosRequestConfig): Promise<operations.RetrievedistributionlinksResponse>;
     /**
-     * webhookDelete - Remove subscription to response event
+     * Remove subscription to response event
      *
+     * @remarks
      * Remove event subscription
-    **/
-    webhookDelete(req: operations.WebhookDeleteRequest, config?: AxiosRequestConfig): Promise<operations.WebhookDeleteResponse>;
+     */
+    webhookDelete(req: shared.SubscribeToEventBody, config?: AxiosRequestConfig): Promise<operations.WebhookDeleteResponse>;
     /**
-     * whenAResponseIsReceived - Triggers when a response is submitted to a qualtrics survey
+     * Triggers when a response is submitted to a qualtrics survey
      *
+     * @remarks
      * Subscribe to response event
-    **/
-    whenAResponseIsReceived(req: operations.WhenAResponseIsReceivedRequest, config?: AxiosRequestConfig): Promise<operations.WhenAResponseIsReceivedResponse>;
+     */
+    whenAResponseIsReceived(req: shared.SubscribeToEventBody, config?: AxiosRequestConfig): Promise<operations.WhenAResponseIsReceivedResponse>;
 }

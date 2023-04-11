@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class ProductsOnline {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +9,10 @@ export declare class ProductsOnline {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createProductSlug - Creates a product identifier
+     * Create a product identifier
      *
+     * @remarks
      * Creates a unique slug (identifier) for a product. The slug is used to create a product URL
-    **/
-    createProductSlug(req: operations.CreateProductSlugRequest, config?: AxiosRequestConfig): Promise<operations.CreateProductSlugResponse>;
+     */
+    createProductSlug(req: operations.CreateProductSlugRequest, security: operations.CreateProductSlugSecurity, config?: AxiosRequestConfig): Promise<operations.CreateProductSlugResponse>;
 }

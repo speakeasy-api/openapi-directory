@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListBatchInferenceJobsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListBatchInferenceJobsXAmzTargetEnum {
     AmazonPersonalizeListBatchInferenceJobs = "AmazonPersonalize.ListBatchInferenceJobs"
 }
-export declare class ListBatchInferenceJobsHeaders extends SpeakeasyBase {
+export declare class ListBatchInferenceJobsRequest extends SpeakeasyBase {
+    listBatchInferenceJobsRequest: shared.ListBatchInferenceJobsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,16 +14,29 @@ export declare class ListBatchInferenceJobsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: ListBatchInferenceJobsXAmzTargetEnum;
-}
-export declare class ListBatchInferenceJobsRequest extends SpeakeasyBase {
-    queryParams: ListBatchInferenceJobsQueryParams;
-    headers: ListBatchInferenceJobsHeaders;
-    request: shared.ListBatchInferenceJobsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class ListBatchInferenceJobsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * Success
+     */
     listBatchInferenceJobsResponse?: shared.ListBatchInferenceJobsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

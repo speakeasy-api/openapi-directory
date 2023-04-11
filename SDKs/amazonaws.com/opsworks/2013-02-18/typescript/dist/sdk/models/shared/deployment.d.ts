@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { DeploymentCommand } from "./deploymentcommand";
 /**
  * Describes a deployment of a stack or app.
-**/
+ */
 export declare class Deployment extends SpeakeasyBase {
     appId?: string;
     command?: DeploymentCommand;

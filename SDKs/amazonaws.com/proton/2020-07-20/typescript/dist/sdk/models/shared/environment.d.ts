@@ -1,11 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { DeploymentStatusEnum } from "./deploymentstatusenum";
 import { ProvisioningEnum } from "./provisioningenum";
+import { RepositoryBranch } from "./repositorybranch";
 /**
- * The environment detail data. An AWS Proton environment is a set resources shared across an AWS Proton service.
-**/
+ * Detailed data of an Proton environment resource. An Proton environment is a set of resources shared across Proton services.
+ */
 export declare class Environment extends SpeakeasyBase {
     arn: string;
+    codebuildRoleArn?: string;
+    componentRoleArn?: string;
     createdAt: Date;
     deploymentStatus: DeploymentStatusEnum;
     deploymentStatusMessage?: string;
@@ -17,6 +20,7 @@ export declare class Environment extends SpeakeasyBase {
     name: string;
     protonServiceRoleArn?: string;
     provisioning?: ProvisioningEnum;
+    provisioningRepository?: RepositoryBranch;
     spec?: string;
     templateMajorVersion: string;
     templateMinorVersion: string;

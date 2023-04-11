@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetSetDefaultPolicyVersionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETSetDefaultPolicyVersionActionEnum {
     SetDefaultPolicyVersion = "SetDefaultPolicyVersion"
 }
-export declare enum GetSetDefaultPolicyVersionVersionEnum {
+export declare enum GETSetDefaultPolicyVersionVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class GetSetDefaultPolicyVersionQueryParams extends SpeakeasyBase {
-    action: GetSetDefaultPolicyVersionActionEnum;
+export declare class GETSetDefaultPolicyVersionRequest extends SpeakeasyBase {
+    action: GETSetDefaultPolicyVersionActionEnum;
+    /**
+     * <p>The Amazon Resource Name (ARN) of the IAM policy whose default version you want to set.</p> <p>For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>.</p>
+     */
     policyArn: string;
-    version: GetSetDefaultPolicyVersionVersionEnum;
+    version: GETSetDefaultPolicyVersionVersionEnum;
+    /**
+     * <p>The version of the policy to set as the default (operative) version.</p> <p>For more information about managed policy versions, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-versions.html">Versioning for managed policies</a> in the <i>IAM User Guide</i>.</p>
+     */
     versionId: string;
-}
-export declare class GetSetDefaultPolicyVersionHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetSetDefaultPolicyVersionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetSetDefaultPolicyVersionRequest extends SpeakeasyBase {
-    queryParams: GetSetDefaultPolicyVersionQueryParams;
-    headers: GetSetDefaultPolicyVersionHeaders;
-}
-export declare class GetSetDefaultPolicyVersionResponse extends SpeakeasyBase {
+export declare class GETSetDefaultPolicyVersionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

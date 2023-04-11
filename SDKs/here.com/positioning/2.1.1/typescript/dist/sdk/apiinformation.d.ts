@@ -1,6 +1,9 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class ApiInformation {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Additional API Information
+ */
+export declare class APIInformation {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,15 +12,17 @@ export declare class ApiInformation {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getApiVersion - API version
+     * API version
      *
+     * @remarks
      * Retrieves API Specification version information
-    **/
+     */
     getApiVersion(config?: AxiosRequestConfig): Promise<operations.GetApiVersionResponse>;
     /**
-     * getHealth - Service health
+     * Service health
      *
+     * @remarks
      * Tests basic health of the service
-    **/
+     */
     getHealth(config?: AxiosRequestConfig): Promise<operations.GetHealthResponse>;
 }

@@ -1,9 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetweatherzipcodeQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetweatherzipcodeRequest extends SpeakeasyBase {
+    /**
+     * Your Interzoid license API key. Register at www.interzoid.com/register
+     */
     license: string;
+    /**
+     * Zip code for weather information
+     */
     zip: string;
 }
-export declare class Getweatherzipcode200ApplicationJson extends SpeakeasyBase {
+/**
+ * Current weather information for zip code
+ */
+export declare class Getweatherzipcode200ApplicationJSON extends SpeakeasyBase {
     city?: string;
     code?: string;
     credits?: string;
@@ -16,11 +26,12 @@ export declare class Getweatherzipcode200ApplicationJson extends SpeakeasyBase {
     windDir?: string;
     windMPH?: string;
 }
-export declare class GetweatherzipcodeRequest extends SpeakeasyBase {
-    queryParams: GetweatherzipcodeQueryParams;
-}
 export declare class GetweatherzipcodeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getweatherzipcode200ApplicationJSONObject?: Getweatherzipcode200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Current weather information for zip code
+     */
+    getweatherzipcode200ApplicationJSONObject?: Getweatherzipcode200ApplicationJSON;
 }

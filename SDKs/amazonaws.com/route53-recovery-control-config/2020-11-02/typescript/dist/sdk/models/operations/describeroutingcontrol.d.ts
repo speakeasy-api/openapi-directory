@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeRoutingControlPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DescribeRoutingControlRequest extends SpeakeasyBase {
+    /**
+     * The Amazon Resource Name (ARN) of the routing control.
+     */
     routingControlArn: string;
-}
-export declare class DescribeRoutingControlHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,18 +14,36 @@ export declare class DescribeRoutingControlHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DescribeRoutingControlRequest extends SpeakeasyBase {
-    pathParams: DescribeRoutingControlPathParams;
-    headers: DescribeRoutingControlHeaders;
-}
 export declare class DescribeRoutingControlResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     describeRoutingControlResponse?: shared.DescribeRoutingControlResponse;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

@@ -1,37 +1,60 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CreateDiffHtmlUsingPostQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class CreateDiffHTMLUsingPOSTRequest extends SpeakeasyBase {
     endRev?: string;
     padID?: string;
     startRev?: string;
 }
-export declare class CreateDiffHtmlUsingPost200ApplicationJson extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class CreateDiffHTMLUsingPost500ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class CreateDiffHtmlUsingPost400ApplicationJson extends SpeakeasyBase {
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class CreateDiffHTMLUsingPost401ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class CreateDiffHtmlUsingPost401ApplicationJson extends SpeakeasyBase {
+/**
+ * generic api error (code 1)
+ */
+export declare class CreateDiffHTMLUsingPost400ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class CreateDiffHtmlUsingPost500ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class CreateDiffHTMLUsingPost200ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class CreateDiffHtmlUsingPostRequest extends SpeakeasyBase {
-    queryParams: CreateDiffHtmlUsingPostQueryParams;
-}
-export declare class CreateDiffHtmlUsingPostResponse extends SpeakeasyBase {
+export declare class CreateDiffHTMLUsingPOSTResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createDiffHTMLUsingPOST200ApplicationJSONObject?: CreateDiffHtmlUsingPost200ApplicationJson;
-    createDiffHTMLUsingPOST400ApplicationJSONObject?: CreateDiffHtmlUsingPost400ApplicationJson;
-    createDiffHTMLUsingPOST401ApplicationJSONObject?: CreateDiffHtmlUsingPost401ApplicationJson;
-    createDiffHTMLUsingPOST500ApplicationJSONObject?: CreateDiffHtmlUsingPost500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    createDiffHTMLUsingPOST200ApplicationJSONObject?: CreateDiffHTMLUsingPost200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    createDiffHTMLUsingPOST400ApplicationJSONObject?: CreateDiffHTMLUsingPost400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    createDiffHTMLUsingPOST401ApplicationJSONObject?: CreateDiffHTMLUsingPost401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    createDiffHTMLUsingPOST500ApplicationJSONObject?: CreateDiffHTMLUsingPost500ApplicationJSON;
 }

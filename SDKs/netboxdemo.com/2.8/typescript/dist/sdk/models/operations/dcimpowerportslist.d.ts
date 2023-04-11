@@ -1,6 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DcimPowerPortsListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DcimPowerPortsListRequest extends SpeakeasyBase {
     allocatedDraw?: string;
     allocatedDrawGt?: string;
     allocatedDrawGte?: string;
@@ -30,6 +31,9 @@ export declare class DcimPowerPortsListQueryParams extends SpeakeasyBase {
     idLt?: string;
     idLte?: string;
     idN?: string;
+    /**
+     * Number of results to return per page.
+     */
     limit?: number;
     maximumDraw?: string;
     maximumDrawGt?: string;
@@ -47,6 +51,9 @@ export declare class DcimPowerPortsListQueryParams extends SpeakeasyBase {
     nameNie?: string;
     nameNiew?: string;
     nameNisw?: string;
+    /**
+     * The initial index from which to return the results.
+     */
     offset?: number;
     q?: string;
     region?: string;
@@ -62,17 +69,15 @@ export declare class DcimPowerPortsListQueryParams extends SpeakeasyBase {
     type?: string;
     typeN?: string;
 }
-export declare class DcimPowerPortsList200ApplicationJson extends SpeakeasyBase {
+export declare class DcimPowerPortsList200ApplicationJSON extends SpeakeasyBase {
     count: number;
     next?: string;
     previous?: string;
     results: shared.PowerPort[];
 }
-export declare class DcimPowerPortsListRequest extends SpeakeasyBase {
-    queryParams: DcimPowerPortsListQueryParams;
-}
 export declare class DcimPowerPortsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dcimPowerPortsList200ApplicationJSONObject?: DcimPowerPortsList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    dcimPowerPortsList200ApplicationJSONObject?: DcimPowerPortsList200ApplicationJSON;
 }

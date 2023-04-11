@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetAdminAccountXAmzTargetEnum {
-    Awsfms20180101GetAdminAccount = "AWSFMS_20180101.GetAdminAccount"
+    AWSFMS20180101GetAdminAccount = "AWSFMS_20180101.GetAdminAccount"
 }
-export declare class GetAdminAccountHeaders extends SpeakeasyBase {
+export declare class GetAdminAccountRequest extends SpeakeasyBase {
+    requestBody: Record<string, any>;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class GetAdminAccountHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetAdminAccountXAmzTargetEnum;
 }
-export declare class GetAdminAccountRequest extends SpeakeasyBase {
-    headers: GetAdminAccountHeaders;
-    request: Record<string, any>;
-}
 export declare class GetAdminAccountResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getAdminAccountResponse?: shared.GetAdminAccountResponse;
+    /**
+     * InternalErrorException
+     */
     internalErrorException?: any;
+    /**
+     * InvalidOperationException
+     */
     invalidOperationException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
 }

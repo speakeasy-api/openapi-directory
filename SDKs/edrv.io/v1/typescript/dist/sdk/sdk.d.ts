@@ -1,11 +1,10 @@
-import { AxiosInstance } from "axios";
-import { Security } from "./models/shared";
 import { ChargeStations } from "./chargestations";
 import { Commands } from "./commands";
 import { Configurations } from "./configurations";
 import { Connectors } from "./connectors";
 import { Drivers } from "./drivers";
 import { Locations } from "./locations";
+import * as shared from "./models/shared";
 import { Organizations } from "./organizations";
 import { Realtime } from "./realtime";
 import { Reservations } from "./reservations";
@@ -13,12 +12,31 @@ import { SmartCharging } from "./smartcharging";
 import { Tokens } from "./tokens";
 import { Transactions } from "./transactions";
 import { Vehicles } from "./vehicles";
-export declare const ServerList: readonly ["https://edrv.io//api.edrv.io"];
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
+export declare const ServerList: readonly ["//api.edrv.io"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * The security details required to authenticate the SDK
+     */
+    security?: shared.Security;
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    security?: Security;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * edrv.io API Documentation
+ */
 export declare class SDK {
     chargeStations: ChargeStations;
     commands: Commands;
@@ -39,5 +57,6 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
 }

@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetServersQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum GetServersXAmzTargetEnum {
-    AwsServerMigrationServiceV20161024GetServers = "AWSServerMigrationService_V2016_10_24.GetServers"
+    AWSServerMigrationServiceV20161024GetServers = "AWSServerMigrationService_V2016_10_24.GetServers"
 }
-export declare class GetServersHeaders extends SpeakeasyBase {
+export declare class GetServersRequest extends SpeakeasyBase {
+    getServersRequest: shared.GetServersRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,18 +14,37 @@ export declare class GetServersHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: GetServersXAmzTargetEnum;
-}
-export declare class GetServersRequest extends SpeakeasyBase {
-    queryParams: GetServersQueryParams;
-    headers: GetServersHeaders;
-    request: shared.GetServersRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class GetServersResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getServersResponse?: shared.GetServersResponse;
+    /**
+     * InternalError
+     */
     internalError?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * MissingRequiredParameterException
+     */
     missingRequiredParameterException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnauthorizedOperationException
+     */
     unauthorizedOperationException?: any;
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostListPolicyTagsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTListPolicyTagsActionEnum {
     ListPolicyTags = "ListPolicyTags"
 }
-export declare enum PostListPolicyTagsVersionEnum {
+export declare enum POSTListPolicyTagsVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostListPolicyTagsQueryParams extends SpeakeasyBase {
-    action: PostListPolicyTagsActionEnum;
-    version: PostListPolicyTagsVersionEnum;
-}
-export declare class PostListPolicyTagsHeaders extends SpeakeasyBase {
+export declare class POSTListPolicyTagsRequest extends SpeakeasyBase {
+    action: POSTListPolicyTagsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTListPolicyTagsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostListPolicyTagsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostListPolicyTagsRequest extends SpeakeasyBase {
-    queryParams: PostListPolicyTagsQueryParams;
-    headers: PostListPolicyTagsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostListPolicyTagsResponse extends SpeakeasyBase {
+export declare class POSTListPolicyTagsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

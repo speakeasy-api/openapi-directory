@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDetachClassicLinkVpcActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDetachClassicLinkVpcActionEnum {
     DetachClassicLinkVpc = "DetachClassicLinkVpc"
 }
-export declare enum PostDetachClassicLinkVpcVersionEnum {
+export declare enum POSTDetachClassicLinkVpcVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDetachClassicLinkVpcQueryParams extends SpeakeasyBase {
-    action: PostDetachClassicLinkVpcActionEnum;
-    version: PostDetachClassicLinkVpcVersionEnum;
-}
-export declare class PostDetachClassicLinkVpcHeaders extends SpeakeasyBase {
+export declare class POSTDetachClassicLinkVpcRequest extends SpeakeasyBase {
+    action: POSTDetachClassicLinkVpcActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDetachClassicLinkVpcVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDetachClassicLinkVpcHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDetachClassicLinkVpcRequest extends SpeakeasyBase {
-    queryParams: PostDetachClassicLinkVpcQueryParams;
-    headers: PostDetachClassicLinkVpcHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDetachClassicLinkVpcResponse extends SpeakeasyBase {
+export declare class POSTDetachClassicLinkVpcResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

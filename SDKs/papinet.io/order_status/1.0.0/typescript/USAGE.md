@@ -1,18 +1,19 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetOrdersRequest, GetOrdersResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetOrdersRequest,
+  GetOrdersResponse,
+  GetOrdersOrderStatusEnum,
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetOrdersRequest = {
-  queryParams: {
-    limit: "sit",
-    offset: "voluptas",
-    orderStatus: "Cancelled",
-  },
+  limit: "corrupti",
+  offset: "provident",
+  orderStatus: GetOrdersOrderStatusEnum.Completed,
 };
 
 sdk.getOrders(req).then((res: GetOrdersResponse | AxiosError) => {

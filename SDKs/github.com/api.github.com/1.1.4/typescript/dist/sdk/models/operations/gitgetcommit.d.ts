@@ -1,16 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GitGetCommitPathParams extends SpeakeasyBase {
-    commitSha: string;
-    owner: string;
-    repo: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GitGetCommitRequest extends SpeakeasyBase {
-    pathParams: GitGetCommitPathParams;
+    /**
+     * The SHA of the commit.
+     */
+    commitSha: string;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    owner: string;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    repo: string;
 }
 export declare class GitGetCommitResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Resource not found
+     */
     basicError?: shared.BasicError;
+    /**
+     * Response
+     */
     gitCommit?: shared.GitCommit;
 }

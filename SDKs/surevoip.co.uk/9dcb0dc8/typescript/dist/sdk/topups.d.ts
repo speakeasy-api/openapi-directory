@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Create call credit topups for customers
+ */
 export declare class Topups {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +12,7 @@ export declare class Topups {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getTopups - List all account credit topups
-    **/
+     * List all account credit topups
+     */
     getTopups(config?: AxiosRequestConfig): Promise<operations.GetTopupsResponse>;
 }

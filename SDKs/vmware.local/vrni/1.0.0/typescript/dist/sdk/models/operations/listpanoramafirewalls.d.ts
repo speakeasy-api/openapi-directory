@@ -1,13 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListPanoramaFirewallsSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
-}
-export declare class ListPanoramaFirewallsRequest extends SpeakeasyBase {
-    security: ListPanoramaFirewallsSecurity;
-}
+import { AxiosResponse } from "axios";
 export declare class ListPanoramaFirewallsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * OK
+     */
     dataSourceListResponse?: shared.DataSourceListResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

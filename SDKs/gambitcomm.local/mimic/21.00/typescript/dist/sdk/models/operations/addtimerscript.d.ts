@@ -1,15 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class AddTimerScriptPathParams extends SpeakeasyBase {
-    agentNum: number;
-    arg: string;
-    interval: number;
-    script: string;
-}
+import { AxiosResponse } from "axios";
 export declare class AddTimerScriptRequest extends SpeakeasyBase {
-    pathParams: AddTimerScriptPathParams;
+    /**
+     * Agent to return the timer script list
+     */
+    agentNum: number;
+    /**
+     * Arguments to the script
+     */
+    arg: string;
+    /**
+     * Interval in msec
+     */
+    interval: number;
+    /**
+     * Script name
+     */
+    script: string;
 }
 export declare class AddTimerScriptResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     addTimerScript200ApplicationJSONString?: string;
 }

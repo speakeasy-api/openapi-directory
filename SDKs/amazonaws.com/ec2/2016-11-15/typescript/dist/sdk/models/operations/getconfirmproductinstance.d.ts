@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetConfirmProductInstanceActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETConfirmProductInstanceActionEnum {
     ConfirmProductInstance = "ConfirmProductInstance"
 }
-export declare enum GetConfirmProductInstanceVersionEnum {
+export declare enum GETConfirmProductInstanceVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetConfirmProductInstanceQueryParams extends SpeakeasyBase {
-    action: GetConfirmProductInstanceActionEnum;
+export declare class GETConfirmProductInstanceRequest extends SpeakeasyBase {
+    action: GETConfirmProductInstanceActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
+    /**
+     * The ID of the instance.
+     */
     instanceId: string;
+    /**
+     * The product code. This must be a product code that you own.
+     */
     productCode: string;
-    version: GetConfirmProductInstanceVersionEnum;
-}
-export declare class GetConfirmProductInstanceHeaders extends SpeakeasyBase {
+    version: GETConfirmProductInstanceVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +29,9 @@ export declare class GetConfirmProductInstanceHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetConfirmProductInstanceRequest extends SpeakeasyBase {
-    queryParams: GetConfirmProductInstanceQueryParams;
-    headers: GetConfirmProductInstanceHeaders;
-}
-export declare class GetConfirmProductInstanceResponse extends SpeakeasyBase {
+export declare class GETConfirmProductInstanceResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,13 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ExtrasRecentActivityReadPathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ExtrasRecentActivityReadRequest extends SpeakeasyBase {
-    pathParams: ExtrasRecentActivityReadPathParams;
+    /**
+     * A unique integer value identifying this user action.
+     */
+    id: number;
 }
 export declare class ExtrasRecentActivityReadResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
     userAction?: shared.UserAction;
 }

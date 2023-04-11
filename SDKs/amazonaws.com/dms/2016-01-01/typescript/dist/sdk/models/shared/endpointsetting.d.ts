@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { EndpointSettingTypeValueEnum } from "./endpointsettingtypevalueenum";
 /**
  * Endpoint settings.
-**/
+ */
 export declare class EndpointSetting extends SpeakeasyBase {
     applicability?: string;
     defaultValue?: string;

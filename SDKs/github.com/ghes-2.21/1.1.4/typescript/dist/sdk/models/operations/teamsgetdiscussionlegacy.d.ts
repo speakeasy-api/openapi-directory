@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class TeamsGetDiscussionLegacyPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class TeamsGetDiscussionLegacyRequest extends SpeakeasyBase {
     discussionNumber: number;
     teamId: number;
-}
-export declare class TeamsGetDiscussionLegacyRequest extends SpeakeasyBase {
-    pathParams: TeamsGetDiscussionLegacyPathParams;
 }
 export declare class TeamsGetDiscussionLegacyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     teamDiscussion?: shared.TeamDiscussion;
 }

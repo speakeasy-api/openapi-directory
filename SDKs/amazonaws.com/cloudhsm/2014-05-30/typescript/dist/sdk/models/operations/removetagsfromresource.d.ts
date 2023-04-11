@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum RemoveTagsFromResourceXAmzTargetEnum {
     CloudHsmFrontendServiceRemoveTagsFromResource = "CloudHsmFrontendService.RemoveTagsFromResource"
 }
-export declare class RemoveTagsFromResourceHeaders extends SpeakeasyBase {
+export declare class RemoveTagsFromResourceRequest extends SpeakeasyBase {
+    removeTagsFromResourceRequest: shared.RemoveTagsFromResourceRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class RemoveTagsFromResourceHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: RemoveTagsFromResourceXAmzTargetEnum;
 }
-export declare class RemoveTagsFromResourceRequest extends SpeakeasyBase {
-    headers: RemoveTagsFromResourceHeaders;
-    request: shared.RemoveTagsFromResourceRequest;
-}
 export declare class RemoveTagsFromResourceResponse extends SpeakeasyBase {
+    /**
+     * CloudHsmInternalException
+     */
     cloudHsmInternalException?: any;
+    /**
+     * CloudHsmServiceException
+     */
     cloudHsmServiceException?: any;
     contentType: string;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * Success
+     */
     removeTagsFromResourceResponse?: shared.RemoveTagsFromResourceResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

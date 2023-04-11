@@ -1,21 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetEmployeePathParams extends SpeakeasyBase {
-    employeeID: string;
-}
-export declare class GetEmployeeHeaders extends SpeakeasyBase {
-    xeroTenantId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetEmployeeSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class GetEmployeeRequest extends SpeakeasyBase {
-    pathParams: GetEmployeePathParams;
-    headers: GetEmployeeHeaders;
-    security: GetEmployeeSecurity;
+    /**
+     * Employee id for single object
+     */
+    employeeID: string;
+    /**
+     * Xero identifier for Tenant
+     */
+    xeroTenantId: string;
 }
 export declare class GetEmployeeResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * search results matching criteria
+     */
     employees?: shared.Employees;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

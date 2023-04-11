@@ -1,5 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { SmsChannelResponse } from "./smschannelresponse";
+import { SMSChannelResponse } from "./smschannelresponse";
+/**
+ * Success
+ */
 export declare class UpdateSmsChannelResponse extends SpeakeasyBase {
-    smsChannelResponse: SmsChannelResponse;
+    /**
+     * Provides information about the status and settings of the SMS channel for an application.
+     */
+    smsChannelResponse: SMSChannelResponse;
 }

@@ -1,30 +1,27 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateFileAssociationRequest, CreateFileAssociationResponse } from "openapi/src/sdk/models/operations";
+import {
+  CreateFileAssociationRequest,
+  CreateFileAssociationResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  ObjectTypeEnum,
+  ObjectGroupEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: CreateFileAssociationRequest = {
-  security: {
-    oAuth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
+  association: {
+    fileId: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
+    objectGroup: ObjectGroupEnum.Overpayment,
+    objectId: "05dfc2dd-f7cc-478c-a1ba-928fc816742c",
+    objectType: ObjectTypeEnum.Current,
   },
-  pathParams: {
-    fileId: "sit",
-  },
-  headers: {
-    xeroTenantId: "voluptas",
-  },
-  request: {
-    fileId: "culpa",
-    objectGroup: "Payment",
-    objectId: "consequuntur",
-    objectType: "Accpay",
-  },
+  fileId: "4ff1e5cc-9835-40d5-bb18-09fdb118db9c",
+  xeroTenantId: "esse",
 };
 
 sdk.files.createFileAssociation(req).then((res: CreateFileAssociationResponse | AxiosError) => {

@@ -1,36 +1,221 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetOperationsLogStatusNumEnum {
     Zero = "0",
     One = "1"
 }
-export declare class GetOperationsLogQueryParams extends SpeakeasyBase {
-    amendmentIndicator?: string[];
-    apiKey: string;
-    beginningImageNumber?: string[];
-    candidateCommitteeId?: string[];
-    formType?: string[];
-    maxCoverageEndDate?: Date;
-    maxReceiptDate?: Date;
-    maxTransactionDataCompleteDate?: Date;
-    minCoverageEndDate?: Date;
-    minReceiptDate?: Date;
-    minTransactionDataCompleteDate?: Date;
-    page?: number;
-    perPage?: number;
-    reportType?: string[];
-    reportYear?: number[];
-    sort?: string[];
-    sortHideNull?: boolean;
-    sortNullOnly?: boolean;
-    sortNullsLast?: boolean;
-    statusNum?: GetOperationsLogStatusNumEnum[];
-}
 export declare class GetOperationsLogRequest extends SpeakeasyBase {
-    queryParams: GetOperationsLogQueryParams;
+    /**
+     * Amendent types:
+     *
+     * @remarks
+     *     -N   new
+     *     -A   amendment
+     *     -T   terminated
+     *     -C   consolidated
+     *     -M   multi-candidate
+     *     -S   secondary
+     *
+     * NULL might be new or amendment. If amendment indicator is null and the filings is the first or first in a chain treat it as if it was a new. If it is not the first or first in a chain then treat the filing as an amendment.
+     *
+     */
+    amendmentIndicator?: string[];
+    /**
+     *
+     * @remarks
+     * API key for https://api.data.gov. Get one at https://api.data.gov/signup.
+     *
+     */
+    apiKey: string;
+    /**
+     *
+     * @remarks
+     * Unique identifier for the electronic or paper report. This number is used to construct
+     * PDF URLs to the original document.
+     *
+     */
+    beginningImageNumber?: string[];
+    /**
+     *
+     * @remarks
+     * A unique identifier of the registered filer.
+     *
+     */
+    candidateCommitteeId?: string[];
+    /**
+     * The form where the underlying data comes from, for example, Form 1 would appear as F1:
+     *
+     * @remarks
+     *     - F1   Statement of Organization
+     *     - F1M  Notification of Multicandidate Status
+     *     - F2   Statement of Candidacy
+     *     - F3   Report of Receipts and Disbursements for an Authorized Committee
+     *     - F3P  Report of Receipts and Disbursements by an Authorized Committee of a Candidate for     The Office of President or Vice President
+     *     - F3L  Report of Contributions Bundled by Lobbyists/Registrants and Lobbyist/Registrant PACs
+     *     - F3X  Report of Receipts and Disbursements for other than an Authorized Committee
+     *     - F4   Report of Receipts and Disbursements for a Committee or Organization Supporting a Nomination Convention
+     *     - F5   Report of Independent Expenditures Made and Contributions Received
+     *     - F6   48 Hour Notice of Contributions/Loans Received
+     *     - F7   Report of Communication Costs by Corporations and Membership Organizations
+     *     - F8   Debt Settlement Plan
+     *     - F9   24 Hour Notice of Disbursements for Electioneering Communications
+     *     - F13  Report of Donations Accepted for Inaugural Committee
+     *     - F99  Miscellaneous Text
+     *     - FRQ  Request for Additional Information
+     *
+     */
+    formType?: string[];
+    /**
+     *
+     * @remarks
+     * Ending date of the reporting period before this date(MM/DD/YYYY or YYYY-MM-DD)
+     *
+     */
+    maxCoverageEndDate?: Date;
+    /**
+     *
+     * @remarks
+     * Selects all filings received before this date(MM/DD/YYYY or YYYY-MM-DD)
+     *
+     */
+    maxReceiptDate?: Date;
+    /**
+     *
+     * @remarks
+     * Select all filings processed completely before this date(MM/DD/YYYY or YYYY-MM-DD)
+     *
+     */
+    maxTransactionDataCompleteDate?: Date;
+    /**
+     *
+     * @remarks
+     * Ending date of the reporting period after this date(MM/DD/YYYY or YYYY-MM-DD)
+     *
+     */
+    minCoverageEndDate?: Date;
+    /**
+     *
+     * @remarks
+     * Selects all filings received after this date(MM/DD/YYYY or YYYY-MM-DD)
+     *
+     */
+    minReceiptDate?: Date;
+    /**
+     *
+     * @remarks
+     * Select all filings processed completely after this date(MM/DD/YYYY or YYYY-MM-DD)
+     *
+     */
+    minTransactionDataCompleteDate?: Date;
+    /**
+     * For paginating through results, starting at page 1
+     */
+    page?: number;
+    /**
+     * The number of results returned per page. Defaults to 20.
+     */
+    perPage?: number;
+    /**
+     * Name of report where the underlying data comes from:
+     *
+     * @remarks
+     *     - 10D Pre-Election
+     *     - 10G Pre-General
+     *     - 10P Pre-Primary
+     *     - 10R Pre-Run-Off
+     *     - 10S Pre-Special
+     *     - 12C Pre-Convention
+     *     - 12G Pre-General
+     *     - 12P Pre-Primary
+     *     - 12R Pre-Run-Off
+     *     - 12S Pre-Special
+     *     - 30D Post-Election
+     *     - 30G Post-General
+     *     - 30P Post-Primary
+     *     - 30R Post-Run-Off
+     *     - 30S Post-Special
+     *     - 60D Post-Convention
+     *     - M1  January Monthly
+     *     - M10 October Monthly
+     *     - M11 November Monthly
+     *     - M12 December Monthly
+     *     - M2  February Monthly
+     *     - M3  March Monthly
+     *     - M4  April Monthly
+     *     - M5  May Monthly
+     *     - M6  June Monthly
+     *     - M7  July Monthly
+     *     - M8  August Monthly
+     *     - M9  September Monthly
+     *     - MY  Mid-Year Report
+     *     - Q1  April Quarterly
+     *     - Q2  July Quarterly
+     *     - Q3  October Quarterly
+     *     - TER Termination Report
+     *     - YE  Year-End
+     *     - ADJ COMP ADJUST AMEND
+     *     - CA  COMPREHENSIVE AMEND
+     *     - 90S Post Inaugural Supplement
+     *     - 90D Post Inaugural
+     *     - 48  48 Hour Notification
+     *     - 24  24 Hour Notification
+     *     - M7S July Monthly/Semi-Annual
+     *     - MSA Monthly Semi-Annual (MY)
+     *     - MYS Monthly Year End/Semi-Annual
+     *     - Q2S July Quarterly/Semi-Annual
+     *     - QSA Quarterly Semi-Annual (MY)
+     *     - QYS Quarterly Year End/Semi-Annual
+     *     - QYE Quarterly Semi-Annual (YE)
+     *     - QMS Quarterly Mid-Year/ Semi-Annual
+     *     - MSY Monthly Semi-Annual (YE)
+     *
+     */
+    reportType?: string[];
+    /**
+     *
+     * @remarks
+     * Forms with coverage date -
+     *     year from the coverage ending date.
+     * Forms without coverage date -
+     *     year from the receipt date.
+     *
+     */
+    reportYear?: number[];
+    /**
+     *
+     * @remarks
+     * Provide a field to sort by. Use `-` for descending order. ex: `-case_no`
+     *
+     */
+    sort?: string[];
+    /**
+     * Hide null values on sorted column(s).
+     */
+    sortHideNull?: boolean;
+    /**
+     * Toggle that filters out all rows having sort column that is non-null
+     */
+    sortNullOnly?: boolean;
+    /**
+     * Toggle that sorts null values last
+     */
+    sortNullsLast?: boolean;
+    /**
+     *
+     * @remarks
+     * Status of the transactional report.
+     *     -0- Transaction is entered
+     *           into the system.
+     *           But not verified.
+     *     -1- Transaction is verified.
+     *
+     */
+    statusNum?: GetOperationsLogStatusNumEnum[];
 }
 export declare class GetOperationsLogResponse extends SpeakeasyBase {
     contentType: string;
     operationsLogPage?: shared.OperationsLogPage;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

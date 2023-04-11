@@ -1,4 +1,4 @@
-export declare enum ObExternalStatementType1CodeEnum {
+export declare enum OBExternalStatementType1CodeEnum {
     AccountClosure = "AccountClosure",
     AccountOpening = "AccountOpening",
     Annual = "Annual",

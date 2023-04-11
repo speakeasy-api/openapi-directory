@@ -1,54 +1,57 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetAddressesOutputFormatRequest, GetAddressesOutputFormatResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GetAddressesOutputFormatRequest,
+  GetAddressesOutputFormatResponse,
+  GetAddressesOutputFormatInterpolationEnum,
+  GetAddressesOutputFormatLocationDescriptorEnum,
+  GetAddressesOutputFormatOutputFormatEnum,
+  GetAddressesOutputFormatOutputSrsEnum,
+  GetAddressesOutputFormatStreetDirectionEnum,
+  GetAddressesOutputFormatUnitDesignatorEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    apikey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    apikey: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: GetAddressesOutputFormatRequest = {
-  pathParams: {
-    outputFormat: "csv",
-  },
-  queryParams: {
-    addressString: "voluptas",
-    autoComplete: true,
-    bbox: "expedita",
-    brief: true,
-    centre: "dolor",
-    civicNumber: "expedita",
-    civicNumberSuffix: "voluptas",
-    echo: true,
-    extrapolate: false,
-    interpolation: "adaptive",
-    localities: "rerum",
-    localityName: "dicta",
-    locationDescriptor: "any",
-    matchPrecision: "voluptatum",
-    matchPrecisionNot: "et",
-    maxDistance: 11.100000,
-    maxResults: 7259475919510918339,
-    minScore: 7373105480197164748,
-    notLocalities: "iste",
-    outputSRS: 3930927879439176946,
-    parcelPoint: "totam",
-    provinceCode: "dolores",
-    setBack: 1929546706668609706,
-    siteName: "debitis",
-    streetDirection: "N",
-    streetName: "odio",
-    streetQualifier: "dolore",
-    streetType: "id",
-    unitDesignator: "TH",
-    unitNumber: "accusantium",
-    unitNumberSuffix: "totam",
-  },
+  addressString: "corrupti",
+  autoComplete: false,
+  bbox: "provident",
+  brief: false,
+  centre: "distinctio",
+  civicNumber: "quibusdam",
+  civicNumberSuffix: "unde",
+  echo: false,
+  extrapolate: false,
+  interpolation: GetAddressesOutputFormatInterpolationEnum.None,
+  localities: "corrupti",
+  localityName: "illum",
+  locationDescriptor: GetAddressesOutputFormatLocationDescriptorEnum.FrontDoorPoint,
+  matchPrecision: "error",
+  matchPrecisionNot: "deserunt",
+  maxDistance: 3843.82,
+  maxResults: 437587,
+  minScore: 297534,
+  notLocalities: "debitis",
+  outputFormat: GetAddressesOutputFormatOutputFormatEnum.Json,
+  outputSRS: GetAddressesOutputFormatOutputSrsEnum.TwentySixThousandNineHundredAndEleven,
+  parcelPoint: "tempora",
+  provinceCode: "suscipit",
+  setBack: 477665,
+  siteName: "minus",
+  streetDirection: GetAddressesOutputFormatStreetDirectionEnum.Se,
+  streetName: "voluptatum",
+  streetQualifier: "iusto",
+  streetType: "excepturi",
+  unitDesignator: GetAddressesOutputFormatUnitDesignatorEnum.Pad,
+  unitNumber: "recusandae",
+  unitNumberSuffix: "temporibus",
 };
 
 sdk.intersections.getAddressesOutputFormat(req).then((res: GetAddressesOutputFormatResponse | AxiosError) => {

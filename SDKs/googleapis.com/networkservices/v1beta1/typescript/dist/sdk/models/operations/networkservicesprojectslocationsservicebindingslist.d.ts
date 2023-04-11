@@ -1,34 +1,74 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class NetworkservicesProjectsLocationsServiceBindingsListPathParams extends SpeakeasyBase {
-    parent: string;
-}
-export declare class NetworkservicesProjectsLocationsServiceBindingsListQueryParams extends SpeakeasyBase {
-    dollarXgafv?: shared.XgafvEnum;
-    accessToken?: string;
-    alt?: shared.AltEnum;
-    callback?: string;
-    fields?: string;
-    key?: string;
-    oauthToken?: string;
-    pageSize?: number;
-    pageToken?: string;
-    prettyPrint?: boolean;
-    quotaUser?: string;
-    uploadType?: string;
-    uploadProtocol?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class NetworkservicesProjectsLocationsServiceBindingsListSecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class NetworkservicesProjectsLocationsServiceBindingsListRequest extends SpeakeasyBase {
-    pathParams: NetworkservicesProjectsLocationsServiceBindingsListPathParams;
-    queryParams: NetworkservicesProjectsLocationsServiceBindingsListQueryParams;
-    security: NetworkservicesProjectsLocationsServiceBindingsListSecurity;
+    /**
+     * V1 error format.
+     */
+    dollarXgafv?: shared.XgafvEnum;
+    /**
+     * OAuth access token.
+     */
+    accessToken?: string;
+    /**
+     * Data format for response.
+     */
+    alt?: shared.AltEnum;
+    /**
+     * JSONP
+     */
+    callback?: string;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauthToken?: string;
+    /**
+     * Maximum number of ServiceBindings to return per call.
+     */
+    pageSize?: number;
+    /**
+     * The value returned by the last `ListServiceBindingsResponse` Indicates that this is a continuation of a prior `ListRouters` call, and that the system should return the next page of data.
+     */
+    pageToken?: string;
+    /**
+     * Required. The project and location from which the ServiceBindings should be listed, specified in the format `projects/* /locations/global`.
+     */
+    parent: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    uploadType?: string;
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    uploadProtocol?: string;
 }
 export declare class NetworkservicesProjectsLocationsServiceBindingsListResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful response
+     */
     listServiceBindingsResponse?: shared.ListServiceBindingsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { AlarmState } from "./alarmstate";
 /**
  * Contains information about an alarm.
-**/
+ */
 export declare class Alarm extends SpeakeasyBase {
     alarmModelName?: string;
     alarmModelVersion?: string;

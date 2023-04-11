@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostSendMessageActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTSendMessageActionEnum {
     SendMessage = "SendMessage"
 }
-export declare enum PostSendMessageVersionEnum {
+export declare enum POSTSendMessageVersionEnum {
     TwoThousandAndTwelve1105 = "2012-11-05"
 }
-export declare class PostSendMessageQueryParams extends SpeakeasyBase {
-    action: PostSendMessageActionEnum;
-    version: PostSendMessageVersionEnum;
-}
-export declare class PostSendMessageHeaders extends SpeakeasyBase {
+export declare class POSTSendMessageRequest extends SpeakeasyBase {
+    action: POSTSendMessageActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTSendMessageVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostSendMessageHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostSendMessageRequest extends SpeakeasyBase {
-    queryParams: PostSendMessageQueryParams;
-    headers: PostSendMessageHeaders;
-    request?: Uint8Array;
-}
-export declare class PostSendMessageResponse extends SpeakeasyBase {
+export declare class POSTSendMessageResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

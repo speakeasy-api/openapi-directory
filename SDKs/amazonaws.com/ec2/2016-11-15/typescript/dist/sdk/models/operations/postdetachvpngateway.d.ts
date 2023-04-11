@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDetachVpnGatewayActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDetachVpnGatewayActionEnum {
     DetachVpnGateway = "DetachVpnGateway"
 }
-export declare enum PostDetachVpnGatewayVersionEnum {
+export declare enum POSTDetachVpnGatewayVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDetachVpnGatewayQueryParams extends SpeakeasyBase {
-    action: PostDetachVpnGatewayActionEnum;
-    version: PostDetachVpnGatewayVersionEnum;
-}
-export declare class PostDetachVpnGatewayHeaders extends SpeakeasyBase {
+export declare class POSTDetachVpnGatewayRequest extends SpeakeasyBase {
+    action: POSTDetachVpnGatewayActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDetachVpnGatewayVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +18,8 @@ export declare class PostDetachVpnGatewayHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDetachVpnGatewayRequest extends SpeakeasyBase {
-    queryParams: PostDetachVpnGatewayQueryParams;
-    headers: PostDetachVpnGatewayHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDetachVpnGatewayResponse extends SpeakeasyBase {
+export declare class POSTDetachVpnGatewayResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

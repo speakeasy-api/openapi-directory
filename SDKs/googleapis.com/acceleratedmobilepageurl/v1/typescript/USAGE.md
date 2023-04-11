@@ -1,34 +1,39 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AcceleratedmobilepageurlAmpUrlsBatchGetRequest, AcceleratedmobilepageurlAmpUrlsBatchGetResponse } from "openapi/src/sdk/models/operations";
+import {
+  AcceleratedmobilepageurlAmpUrlsBatchGetRequest,
+  AcceleratedmobilepageurlAmpUrlsBatchGetResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  BatchGetAmpUrlsRequestLookupStrategyEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: AcceleratedmobilepageurlAmpUrlsBatchGetRequest = {
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "voluptas",
-    alt: "media",
-    callback: "expedita",
-    fields: "consequuntur",
-    key: "dolor",
-    oauthToken: "expedita",
-    prettyPrint: true,
-    quotaUser: "fugit",
-    uploadType: "et",
-    uploadProtocol: "nihil",
-  },
-  request: {
-    lookupStrategy: "IN_INDEX_DOC",
+  dollarXgafv: XgafvEnum.Two,
+  batchGetAmpUrlsRequest: {
+    lookupStrategy: BatchGetAmpUrlsRequestLookupStrategyEnum.InIndexDoc,
     urls: [
-      "debitis",
-      "voluptatum",
-      "et",
+      "quibusdam",
+      "unde",
+      "nulla",
     ],
   },
+  accessToken: "corrupti",
+  alt: AltEnum.Proto,
+  callback: "vel",
+  fields: "error",
+  key: "deserunt",
+  oauthToken: "suscipit",
+  prettyPrint: false,
+  quotaUser: "iure",
+  uploadType: "magnam",
+  uploadProtocol: "debitis",
 };
 
 sdk.ampUrls.acceleratedmobilepageurlAmpUrlsBatchGet(req).then((res: AcceleratedmobilepageurlAmpUrlsBatchGetResponse | AxiosError) => {

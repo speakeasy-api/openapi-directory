@@ -1,12 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PreprintsPartialUpdatePathParams extends SpeakeasyBase {
-    preprintId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PreprintsPartialUpdateRequest extends SpeakeasyBase {
-    pathParams: PreprintsPartialUpdatePathParams;
-    request: Record<string, any>;
+    requestBody: Record<string, any>;
+    /**
+     * The unique identifier of the preprint.
+     */
+    preprintId: string;
 }
 export declare class PreprintsPartialUpdateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,4 +1,7 @@
-export declare enum BeezUpCommonColumnDataTypeEnum {
+/**
+ * Data type of the column, will be used for parsing and for consolidation proces
+ */
+export declare enum BeezUPCommonColumnDataTypeEnum {
     String = "String",
     Url = "Url",
     Text = "Text",

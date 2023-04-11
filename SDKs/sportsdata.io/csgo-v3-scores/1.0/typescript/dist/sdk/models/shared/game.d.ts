@@ -1,0 +1,33 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+export declare class Game extends SpeakeasyBase {
+    bestOf?: string;
+    dateTime?: string;
+    day?: string;
+    drawMoneyLine?: number;
+    gameId?: number;
+    group?: string;
+    isClosed?: boolean;
+    pointSpread?: number;
+    roundId?: number;
+    season?: number;
+    seasonType?: number;
+    status?: string;
+    teamAId?: number;
+    teamAKey?: string;
+    teamAMoneyLine?: number;
+    teamAName?: string;
+    teamAPointSpreadPayout?: number;
+    teamAScore?: number;
+    teamBId?: number;
+    teamBKey?: string;
+    teamBMoneyLine?: number;
+    teamBName?: string;
+    teamBPointSpreadPayout?: number;
+    teamBScore?: number;
+    updated?: string;
+    updatedUtc?: string;
+    venueId?: number;
+    venueType?: string;
+    week?: number;
+    winner?: string;
+}

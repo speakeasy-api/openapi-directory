@@ -1,5 +1,14 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * The task is the basic object around which many operations in Asana are centered. In the Asana application, multiple tasks populate the middle pane according to some view parameters, and the set of selected tasks determines the more detailed information presented in the details pane.
+ *
+ * @remarks
+ *
+ * Sections are unique in that they will be included in the `memberships` field of task objects returned in the API when the task is within a section. They can also be used to manipulate the ordering of a task within a project.
+ *
+ * [Queries](/docs/get-multiple-tasks) return a [compact representation of each task object](/docs/task-compact). To retrieve *all* fields or *specific set* of the fields, use [field selectors](/docs/input-output-options) to manipulate what data is included in a response.
+ */
 export declare class Tasks {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,28 +18,32 @@ export declare class Tasks {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * addDependenciesForTask - Set dependencies for a task
+     * Set dependencies for a task
      *
-     * Marks a set of tasks as dependencies of this task, if they are not already dependencies. *A task can have at most 15 dependencies*.
-    **/
+     * @remarks
+     * Marks a set of tasks as dependencies of this task, if they are not already dependencies. *A task can have at most 30 dependents and dependencies combined*.
+     */
     addDependenciesForTask(req: operations.AddDependenciesForTaskRequest, config?: AxiosRequestConfig): Promise<operations.AddDependenciesForTaskResponse>;
     /**
-     * addDependentsForTask - Set dependents for a task
+     * Set dependents for a task
      *
-     * Marks a set of tasks as dependents of this task, if they are not already dependents. *A task can have at most 30 dependents*.
-    **/
+     * @remarks
+     * Marks a set of tasks as dependents of this task, if they are not already dependents. *A task can have at most 30 dependents and dependencies combined*.
+     */
     addDependentsForTask(req: operations.AddDependentsForTaskRequest, config?: AxiosRequestConfig): Promise<operations.AddDependentsForTaskResponse>;
     /**
-     * addFollowersForTask - Add followers to a task
+     * Add followers to a task
      *
+     * @remarks
      * Adds followers to a task. Returns an empty data block.
      * Each task can be associated with zero or more followers in the system.
      * Requests to add/remove followers, if successful, will return the complete updated task record, described above.
-    **/
+     */
     addFollowersForTask(req: operations.AddFollowersForTaskRequest, config?: AxiosRequestConfig): Promise<operations.AddFollowersForTaskResponse>;
     /**
-     * addProjectForTask - Add a project to a task
+     * Add a project to a task
      *
+     * @remarks
      * Adds the task to the specified project, in the optional location
      * specified. If no location arguments are given, the task will be added to
      * the end of the project.
@@ -45,23 +58,26 @@ export declare class Tasks {
      * within the section to anchor the position of this task.
      *
      * Returns an empty data block.
-    **/
+     */
     addProjectForTask(req: operations.AddProjectForTaskRequest, config?: AxiosRequestConfig): Promise<operations.AddProjectForTaskResponse>;
     /**
-     * addTagForTask - Add a tag to a task
+     * Add a tag to a task
      *
+     * @remarks
      * Adds a tag to a task. Returns an empty data block.
-    **/
+     */
     addTagForTask(req: operations.AddTagForTaskRequest, config?: AxiosRequestConfig): Promise<operations.AddTagForTaskResponse>;
     /**
-     * createSubtaskForTask - Create a subtask
+     * Create a subtask
      *
+     * @remarks
      * Creates a new subtask and adds it to the parent task. Returns the full record for the newly created subtask.
-    **/
+     */
     createSubtaskForTask(req: operations.CreateSubtaskForTaskRequest, config?: AxiosRequestConfig): Promise<operations.CreateSubtaskForTaskResponse>;
     /**
-     * createTask - Create a task
+     * Create a task
      *
+     * @remarks
      * Creating a new task is as easy as POSTing to the `/tasks` endpoint with a
      * data block containing the fields you’d like to set on the task. Any
      * unspecified fields will take on default values.
@@ -69,119 +85,136 @@ export declare class Tasks {
      * Every task is required to be created in a specific workspace, and this
      * workspace cannot be changed once set. The workspace need not be set
      * explicitly if you specify `projects` or a `parent` task instead.
-    **/
+     */
     createTask(req: operations.CreateTaskRequest, config?: AxiosRequestConfig): Promise<operations.CreateTaskResponse>;
     /**
-     * deleteTask - Delete a task
+     * Delete a task
      *
+     * @remarks
      * A specific, existing task can be deleted by making a DELETE request on
      * the URL for that task. Deleted tasks go into the “trash” of the user
      * making the delete request. Tasks can be recovered from the trash within a
      * period of 30 days; afterward they are completely removed from the system.
      *
      * Returns an empty data record.
-    **/
+     */
     deleteTask(req: operations.DeleteTaskRequest, config?: AxiosRequestConfig): Promise<operations.DeleteTaskResponse>;
     /**
-     * duplicateTask - Duplicate a task
+     * Duplicate a task
      *
+     * @remarks
      * Creates and returns a job that will asynchronously handle the duplication.
-    **/
+     */
     duplicateTask(req: operations.DuplicateTaskRequest, config?: AxiosRequestConfig): Promise<operations.DuplicateTaskResponse>;
     /**
-     * getDependenciesForTask - Get dependencies from a task
+     * Get dependencies from a task
      *
+     * @remarks
      * Returns the compact representations of all of the dependencies of a task.
-    **/
+     */
     getDependenciesForTask(req: operations.GetDependenciesForTaskRequest, config?: AxiosRequestConfig): Promise<operations.GetDependenciesForTaskResponse>;
     /**
-     * getDependentsForTask - Get dependents from a task
+     * Get dependents from a task
      *
+     * @remarks
      * Returns the compact representations of all of the dependents of a task.
-    **/
+     */
     getDependentsForTask(req: operations.GetDependentsForTaskRequest, config?: AxiosRequestConfig): Promise<operations.GetDependentsForTaskResponse>;
     /**
-     * getSubtasksForTask - Get subtasks from a task
+     * Get subtasks from a task
      *
+     * @remarks
      * Returns a compact representation of all of the subtasks of a task.
-    **/
+     */
     getSubtasksForTask(req: operations.GetSubtasksForTaskRequest, config?: AxiosRequestConfig): Promise<operations.GetSubtasksForTaskResponse>;
     /**
-     * getTask - Get a task
+     * Get a task
      *
+     * @remarks
      * Returns the complete task record for a single task.
-    **/
+     */
     getTask(req: operations.GetTaskRequest, config?: AxiosRequestConfig): Promise<operations.GetTaskResponse>;
     /**
-     * getTasks - Get multiple tasks
+     * Get multiple tasks
      *
+     * @remarks
      * Returns the compact task records for some filtered set of tasks. Use one or more of the parameters provided to filter the tasks returned. You must specify a `project` or `tag` if you do not specify `assignee` and `workspace`.
      *
      * For more complex task retrieval, use [workspaces/{workspace_gid}/tasks/search](/docs/search-tasks-in-a-workspace).
-    **/
+     */
     getTasks(req: operations.GetTasksRequest, config?: AxiosRequestConfig): Promise<operations.GetTasksResponse>;
     /**
-     * getTasksForProject - Get tasks from a project
+     * Get tasks from a project
      *
+     * @remarks
      * Returns the compact task records for all tasks within the given project, ordered by their priority within the project. Tasks can exist in more than one project at a time.
-    **/
+     */
     getTasksForProject(req: operations.GetTasksForProjectRequest, config?: AxiosRequestConfig): Promise<operations.GetTasksForProjectResponse>;
     /**
-     * getTasksForSection - Get tasks from a section
+     * Get tasks from a section
      *
+     * @remarks
      * *Board view only*: Returns the compact section records for all tasks within the given section.
-    **/
+     */
     getTasksForSection(req: operations.GetTasksForSectionRequest, config?: AxiosRequestConfig): Promise<operations.GetTasksForSectionResponse>;
     /**
-     * getTasksForTag - Get tasks from a tag
+     * Get tasks from a tag
      *
+     * @remarks
      * Returns the compact task records for all tasks with the given tag. Tasks can have more than one tag at a time.
-    **/
+     */
     getTasksForTag(req: operations.GetTasksForTagRequest, config?: AxiosRequestConfig): Promise<operations.GetTasksForTagResponse>;
     /**
-     * getTasksForUserTaskList - Get tasks from a user task list
+     * Get tasks from a user task list
      *
+     * @remarks
      * Returns the compact list of tasks in a user’s My Tasks list.
      * *Note: Access control is enforced for this endpoint as with all Asana API endpoints, meaning a user’s private tasks will be filtered out if the API-authenticated user does not have access to them.*
      * *Note: Both complete and incomplete tasks are returned by default unless they are filtered out (for example, setting `completed_since=now` will return only incomplete tasks, which is the default view for “My Tasks” in Asana.)*
-    **/
+     */
     getTasksForUserTaskList(req: operations.GetTasksForUserTaskListRequest, config?: AxiosRequestConfig): Promise<operations.GetTasksForUserTaskListResponse>;
     /**
-     * removeDependenciesForTask - Unlink dependencies from a task
+     * Unlink dependencies from a task
      *
+     * @remarks
      * Unlinks a set of dependencies from this task.
-    **/
+     */
     removeDependenciesForTask(req: operations.RemoveDependenciesForTaskRequest, config?: AxiosRequestConfig): Promise<operations.RemoveDependenciesForTaskResponse>;
     /**
-     * removeDependentsForTask - Unlink dependents from a task
+     * Unlink dependents from a task
      *
+     * @remarks
      * Unlinks a set of dependents from this task.
-    **/
+     */
     removeDependentsForTask(req: operations.RemoveDependentsForTaskRequest, config?: AxiosRequestConfig): Promise<operations.RemoveDependentsForTaskResponse>;
     /**
-     * removeFollowerForTask - Remove followers from a task
+     * Remove followers from a task
      *
+     * @remarks
      * Removes each of the specified followers from the task if they are following. Returns the complete, updated record for the affected task.
-    **/
+     */
     removeFollowerForTask(req: operations.RemoveFollowerForTaskRequest, config?: AxiosRequestConfig): Promise<operations.RemoveFollowerForTaskResponse>;
     /**
-     * removeProjectForTask - Remove a project from a task
+     * Remove a project from a task
      *
+     * @remarks
      * Removes the task from the specified project. The task will still exist in
      * the system, but it will not be in the project anymore.
      *
      * Returns an empty data block.
-    **/
+     */
     removeProjectForTask(req: operations.RemoveProjectForTaskRequest, config?: AxiosRequestConfig): Promise<operations.RemoveProjectForTaskResponse>;
     /**
-     * removeTagForTask - Remove a tag from a task
+     * Remove a tag from a task
      *
+     * @remarks
      * Removes a tag from a task. Returns an empty data block.
-    **/
+     */
     removeTagForTask(req: operations.RemoveTagForTaskRequest, config?: AxiosRequestConfig): Promise<operations.RemoveTagForTaskResponse>;
     /**
-     * searchTasksForWorkspace - Search tasks in a workspace
+     * Search tasks in a workspace
      *
+     * @remarks
      * To mirror the functionality of the Asana web app's advanced search feature, the Asana API has a task search endpoint that allows you to build complex filters to find and retrieve the exact data you need.
      * #### Premium access
      * Like the Asana web product's advance search feature, this search endpoint will only be available to premium Asana users. A user is premium if any of the following is true:
@@ -211,20 +244,22 @@ export declare class Tasks {
      *
      * For example, if the gid of the custom field is 12345, these query parameter to find tasks where it is set would be `custom_fields.12345.is_set=true`. To match an exact value for an enum custom field, use the gid of the desired enum option and not the name of the enum option: `custom_fields.12345.value=67890`.
      *
-     * Searching for multiple exact matches of a custom field is not supported.
+     * **Not Supported**: searching for multiple exact matches of a custom field, searching for multi-enum custom field
      *
      * *Note: If you specify `projects.any` and `sections.any`, you will receive tasks for the project **and** tasks for the section. If you're looking for only tasks in a section, omit the `projects.any` from the request.*
-    **/
+     */
     searchTasksForWorkspace(req: operations.SearchTasksForWorkspaceRequest, config?: AxiosRequestConfig): Promise<operations.SearchTasksForWorkspaceResponse>;
     /**
-     * setParentForTask - Set the parent of a task
+     * Set the parent of a task
      *
+     * @remarks
      * parent, or no parent task at all. Returns an empty data block. When using `insert_before` and `insert_after`, at most one of those two options can be specified, and they must already be subtasks of the parent.
-    **/
+     */
     setParentForTask(req: operations.SetParentForTaskRequest, config?: AxiosRequestConfig): Promise<operations.SetParentForTaskResponse>;
     /**
-     * updateTask - Update a task
+     * Update a task
      *
+     * @remarks
      * A specific, existing task can be updated by making a PUT request on the
      * URL for that task. Only the fields provided in the `data` block will be
      * updated; any unspecified fields will remain unchanged.
@@ -234,6 +269,6 @@ export declare class Tasks {
      * you last retrieved the task.
      *
      * Returns the complete updated task record.
-    **/
+     */
     updateTask(req: operations.UpdateTaskRequest, config?: AxiosRequestConfig): Promise<operations.UpdateTaskResponse>;
 }

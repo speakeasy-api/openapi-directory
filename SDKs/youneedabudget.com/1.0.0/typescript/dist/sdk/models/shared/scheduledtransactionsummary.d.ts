@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The scheduled transaction flag
+ */
 export declare enum ScheduledTransactionSummaryFlagColorEnum {
     Red = "red",
     Orange = "orange",
@@ -25,15 +28,33 @@ export declare enum ScheduledTransactionSummaryFrequencyEnum {
 }
 export declare class ScheduledTransactionSummary extends SpeakeasyBase {
     accountId: string;
+    /**
+     * The scheduled transaction amount in milliunits format
+     */
     amount: number;
     categoryId?: string;
+    /**
+     * The first date for which the Scheduled Transaction was scheduled.
+     */
     dateFirst: Date;
+    /**
+     * The next date for which the Scheduled Transaction is scheduled.
+     */
     dateNext: Date;
+    /**
+     * Whether or not the scheduled transaction has been deleted.  Deleted scheduled transactions will only be included in delta requests.
+     */
     deleted: boolean;
+    /**
+     * The scheduled transaction flag
+     */
     flagColor?: ScheduledTransactionSummaryFlagColorEnum;
     frequency: ScheduledTransactionSummaryFrequencyEnum;
     id: string;
     memo?: string;
     payeeId?: string;
+    /**
+     * If a transfer, the account_id which the scheduled transaction transfers to
+     */
     transferAccountId?: string;
 }

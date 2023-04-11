@@ -1,85 +1,45 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { PostRemovebgRequest, PostRemovebgResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  shared.RemoveBgJson,
+  PostRemovebgFormResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  RemoveBgJsonChannelsEnum,
+  RemoveBgJsonFormatEnum,
+  RemoveBgJsonSizeEnum,
+  RemoveBgJsonTypeEnum,
+  RemoveBgJsonTypeLevelEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    apiKeyHeader: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: PostRemovebgRequest = {
-  request: {
-    removeBgJson: {
-      addShadow: false,
-      bgColor: "voluptas",
-      bgImageUrl: "culpa",
-      channels: "rgba",
-      crop: true,
-      cropMargin: "dolor",
-      format: "zip",
-      imageFileB64: "voluptas",
-      imageUrl: "fugit",
-      position: "et",
-      roi: "nihil",
-      scale: "rerum",
-      semitransparency: false,
-      size: "preview",
-      type: "auto",
-      typeLevel: "2",
-    },
-    removeBgJson1: {
-      addShadow: false,
-      bgColor: "dolorem",
-      bgImageUrl: "et",
-      channels: "rgba",
-      crop: true,
-      cropMargin: "vitae",
-      format: "jpg",
-      imageFileB64: "dolores",
-      imageUrl: "illum",
-      position: "debitis",
-      roi: "vel",
-      scale: "odio",
-      semitransparency: true,
-      size: "full",
-      type: "person",
-      typeLevel: "none",
-    },
-    removeBgMultipart: {
-      addShadow: false,
-      bgColor: "commodi",
-      bgImageFile: {
-        bgImageFile: "quis",
-        content: "est".encode(),
-      },
-      bgImageUrl: "aut",
-      channels: "rgba",
-      crop: true,
-      cropMargin: "voluptas",
-      format: "zip",
-      imageFile: {
-        content: "aut".encode(),
-        imageFile: "illo",
-      },
-      imageFileB64: "sed",
-      imageUrl: "officiis",
-      position: "autem",
-      roi: "consectetur",
-      scale: "nobis",
-      semitransparency: false,
-      size: "preview",
-      type: "product",
-      typeLevel: "none",
-    },
+    apiKeyHeader: "YOUR_API_KEY_HERE",
   },
+});
+
+const req: shared.RemoveBgJson = {
+  addShadow: false,
+  bgColor: "corrupti",
+  bgImageUrl: "provident",
+  channels: RemoveBgJsonChannelsEnum.Alpha,
+  crop: false,
+  cropMargin: "quibusdam",
+  format: RemoveBgJsonFormatEnum.Jpg,
+  imageFileB64: "nulla",
+  imageUrl: "https://www.remove.bg/example-hd.jpg",
+  position: "corrupti",
+  roi: "illum",
+  scale: "vel",
+  semitransparency: false,
+  size: RemoveBgJsonSizeEnum.Full,
+  type: RemoveBgJsonTypeEnum.Product,
+  typeLevel: RemoveBgJsonTypeLevelEnum.One,
 };
 
-sdk.backgroundRemoval.postRemovebg(req).then((res: PostRemovebgResponse | AxiosError) => {
+sdk.backgroundRemoval.postRemovebgForm(req).then((res: PostRemovebgFormResponse | AxiosError) => {
    // handle response
 });
 ```

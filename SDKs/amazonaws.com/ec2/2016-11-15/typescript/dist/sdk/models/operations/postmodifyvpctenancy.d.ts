@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostModifyVpcTenancyActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTModifyVpcTenancyActionEnum {
     ModifyVpcTenancy = "ModifyVpcTenancy"
 }
-export declare enum PostModifyVpcTenancyVersionEnum {
+export declare enum POSTModifyVpcTenancyVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostModifyVpcTenancyQueryParams extends SpeakeasyBase {
-    action: PostModifyVpcTenancyActionEnum;
-    version: PostModifyVpcTenancyVersionEnum;
-}
-export declare class PostModifyVpcTenancyHeaders extends SpeakeasyBase {
+export declare class POSTModifyVpcTenancyRequest extends SpeakeasyBase {
+    action: POSTModifyVpcTenancyActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTModifyVpcTenancyVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostModifyVpcTenancyHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostModifyVpcTenancyRequest extends SpeakeasyBase {
-    queryParams: PostModifyVpcTenancyQueryParams;
-    headers: PostModifyVpcTenancyHeaders;
-    request?: Uint8Array;
-}
-export declare class PostModifyVpcTenancyResponse extends SpeakeasyBase {
+export declare class POSTModifyVpcTenancyResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

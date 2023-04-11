@@ -1,50 +1,91 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum GetModifyTrafficMirrorFilterRuleActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETModifyTrafficMirrorFilterRuleActionEnum {
     ModifyTrafficMirrorFilterRule = "ModifyTrafficMirrorFilterRule"
 }
 /**
  * Information about the Traffic Mirror filter rule port range.
-**/
-export declare class GetModifyTrafficMirrorFilterRuleDestinationPortRange extends SpeakeasyBase {
+ */
+export declare class GETModifyTrafficMirrorFilterRuleDestinationPortRange extends SpeakeasyBase {
     fromPort?: number;
     toPort?: number;
 }
-export declare enum GetModifyTrafficMirrorFilterRuleRuleActionEnum {
+/**
+ * The action to assign to the rule.
+ */
+export declare enum GETModifyTrafficMirrorFilterRuleRuleActionEnum {
     Accept = "accept",
     Reject = "reject"
 }
 /**
  * Information about the Traffic Mirror filter rule port range.
-**/
-export declare class GetModifyTrafficMirrorFilterRuleSourcePortRange extends SpeakeasyBase {
+ */
+export declare class GETModifyTrafficMirrorFilterRuleSourcePortRange extends SpeakeasyBase {
     fromPort?: number;
     toPort?: number;
 }
-export declare enum GetModifyTrafficMirrorFilterRuleTrafficDirectionEnum {
+/**
+ * The type of traffic to assign to the rule.
+ */
+export declare enum GETModifyTrafficMirrorFilterRuleTrafficDirectionEnum {
     Ingress = "ingress",
     Egress = "egress"
 }
-export declare enum GetModifyTrafficMirrorFilterRuleVersionEnum {
+export declare enum GETModifyTrafficMirrorFilterRuleVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetModifyTrafficMirrorFilterRuleQueryParams extends SpeakeasyBase {
-    action: GetModifyTrafficMirrorFilterRuleActionEnum;
+export declare class GETModifyTrafficMirrorFilterRuleRequest extends SpeakeasyBase {
+    action: GETModifyTrafficMirrorFilterRuleActionEnum;
+    /**
+     * The description to assign to the Traffic Mirror rule.
+     */
     description?: string;
+    /**
+     * The destination CIDR block to assign to the Traffic Mirror rule.
+     */
     destinationCidrBlock?: string;
-    destinationPortRange?: GetModifyTrafficMirrorFilterRuleDestinationPortRange;
+    /**
+     * The destination ports that are associated with the Traffic Mirror rule.
+     */
+    destinationPortRange?: GETModifyTrafficMirrorFilterRuleDestinationPortRange;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
+    /**
+     * The protocol, for example TCP, to assign to the Traffic Mirror rule.
+     */
     protocol?: number;
+    /**
+     * <p>The properties that you want to remove from the Traffic Mirror filter rule.</p> <p>When you remove a property from a Traffic Mirror filter rule, the property is set to the default.</p>
+     */
     removeField?: shared.TrafficMirrorFilterRuleFieldEnum[];
-    ruleAction?: GetModifyTrafficMirrorFilterRuleRuleActionEnum;
+    /**
+     * The action to assign to the rule.
+     */
+    ruleAction?: GETModifyTrafficMirrorFilterRuleRuleActionEnum;
+    /**
+     * The number of the Traffic Mirror rule. This number must be unique for each Traffic Mirror rule in a given direction. The rules are processed in ascending order by rule number.
+     */
     ruleNumber?: number;
+    /**
+     * The source CIDR block to assign to the Traffic Mirror rule.
+     */
     sourceCidrBlock?: string;
-    sourcePortRange?: GetModifyTrafficMirrorFilterRuleSourcePortRange;
-    trafficDirection?: GetModifyTrafficMirrorFilterRuleTrafficDirectionEnum;
+    /**
+     * The port range to assign to the Traffic Mirror rule.
+     */
+    sourcePortRange?: GETModifyTrafficMirrorFilterRuleSourcePortRange;
+    /**
+     * The type of traffic to assign to the rule.
+     */
+    trafficDirection?: GETModifyTrafficMirrorFilterRuleTrafficDirectionEnum;
+    /**
+     * The ID of the Traffic Mirror rule.
+     */
     trafficMirrorFilterRuleId: string;
-    version: GetModifyTrafficMirrorFilterRuleVersionEnum;
-}
-export declare class GetModifyTrafficMirrorFilterRuleHeaders extends SpeakeasyBase {
+    version: GETModifyTrafficMirrorFilterRuleVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -53,12 +94,9 @@ export declare class GetModifyTrafficMirrorFilterRuleHeaders extends SpeakeasyBa
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetModifyTrafficMirrorFilterRuleRequest extends SpeakeasyBase {
-    queryParams: GetModifyTrafficMirrorFilterRuleQueryParams;
-    headers: GetModifyTrafficMirrorFilterRuleHeaders;
-}
-export declare class GetModifyTrafficMirrorFilterRuleResponse extends SpeakeasyBase {
+export declare class GETModifyTrafficMirrorFilterRuleResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

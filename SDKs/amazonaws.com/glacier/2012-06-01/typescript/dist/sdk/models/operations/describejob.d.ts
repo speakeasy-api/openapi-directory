@@ -1,11 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeJobPathParams extends SpeakeasyBase {
-    accountId: string;
-    jobId: string;
-    vaultName: string;
-}
-export declare class DescribeJobHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DescribeJobRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +9,41 @@ export declare class DescribeJobHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DescribeJobRequest extends SpeakeasyBase {
-    pathParams: DescribeJobPathParams;
-    headers: DescribeJobHeaders;
+    /**
+     * The <code>AccountId</code> value is the AWS account ID of the account that owns the vault. You can either specify an AWS account ID or optionally a single '<code>-</code>' (hyphen), in which case Amazon S3 Glacier uses the AWS account ID associated with the credentials used to sign the request. If you use an account ID, do not include any hyphens ('-') in the ID.
+     */
+    accountId: string;
+    /**
+     * The ID of the job to describe.
+     */
+    jobId: string;
+    /**
+     * The name of the vault.
+     */
+    vaultName: string;
 }
 export declare class DescribeJobResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     glacierJobDescription?: shared.GlacierJobDescription;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
+    /**
+     * MissingParameterValueException
+     */
     missingParameterValueException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
+    /**
+     * ServiceUnavailableException
+     */
     serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

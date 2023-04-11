@@ -1,20 +1,31 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class TeamsRemoveProjectLegacyPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class TeamsRemoveProjectLegacyRequest extends SpeakeasyBase {
     projectId: number;
     teamId: number;
 }
-export declare class TeamsRemoveProjectLegacy415ApplicationJson extends SpeakeasyBase {
+/**
+ * Preview header missing
+ */
+export declare class TeamsRemoveProjectLegacy415ApplicationJSON extends SpeakeasyBase {
     documentationUrl: string;
     message: string;
-}
-export declare class TeamsRemoveProjectLegacyRequest extends SpeakeasyBase {
-    pathParams: TeamsRemoveProjectLegacyPathParams;
 }
 export declare class TeamsRemoveProjectLegacyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Resource not found
+     */
     basicError?: shared.BasicError;
-    teamsRemoveProjectLegacy415ApplicationJSONObject?: TeamsRemoveProjectLegacy415ApplicationJson;
+    /**
+     * Preview header missing
+     */
+    teamsRemoveProjectLegacy415ApplicationJSONObject?: TeamsRemoveProjectLegacy415ApplicationJSON;
+    /**
+     * Validation failed
+     */
     validationError?: shared.ValidationError;
 }

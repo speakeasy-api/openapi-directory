@@ -1,6 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class BatchResetAlarmHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class BatchResetAlarmRequestBody extends SpeakeasyBase {
+    /**
+     * The list of reset action requests. You can specify up to 10 requests per operation.
+     */
+    resetActionRequests: shared.ResetAlarmActionRequest[];
+}
+export declare class BatchResetAlarmRequest extends SpeakeasyBase {
+    requestBody: BatchResetAlarmRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -9,19 +17,28 @@ export declare class BatchResetAlarmHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class BatchResetAlarmRequestBody extends SpeakeasyBase {
-    resetActionRequests: shared.ResetAlarmActionRequest[];
-}
-export declare class BatchResetAlarmRequest extends SpeakeasyBase {
-    headers: BatchResetAlarmHeaders;
-    request: BatchResetAlarmRequestBody;
-}
 export declare class BatchResetAlarmResponse extends SpeakeasyBase {
+    /**
+     * Success
+     */
     batchResetAlarmResponse?: shared.BatchResetAlarmResponse;
     contentType: string;
+    /**
+     * InternalFailureException
+     */
     internalFailureException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
-    serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceUnavailableException
+     */
+    serviceUnavailableException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

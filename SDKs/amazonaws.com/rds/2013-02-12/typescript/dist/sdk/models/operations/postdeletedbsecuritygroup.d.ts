@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteDbSecurityGroupActionEnum {
-    DeleteDbSecurityGroup = "DeleteDBSecurityGroup"
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteDBSecurityGroupActionEnum {
+    DeleteDBSecurityGroup = "DeleteDBSecurityGroup"
 }
-export declare enum PostDeleteDbSecurityGroupVersionEnum {
+export declare enum POSTDeleteDBSecurityGroupVersionEnum {
     TwoThousandAndThirteen0212 = "2013-02-12"
 }
-export declare class PostDeleteDbSecurityGroupQueryParams extends SpeakeasyBase {
-    action: PostDeleteDbSecurityGroupActionEnum;
-    version: PostDeleteDbSecurityGroupVersionEnum;
-}
-export declare class PostDeleteDbSecurityGroupHeaders extends SpeakeasyBase {
+export declare class POSTDeleteDBSecurityGroupRequest extends SpeakeasyBase {
+    action: POSTDeleteDBSecurityGroupActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteDBSecurityGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteDbSecurityGroupHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteDbSecurityGroupRequest extends SpeakeasyBase {
-    queryParams: PostDeleteDbSecurityGroupQueryParams;
-    headers: PostDeleteDbSecurityGroupHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteDbSecurityGroupResponse extends SpeakeasyBase {
+export declare class POSTDeleteDBSecurityGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

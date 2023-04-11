@@ -1,22 +1,16 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CancelReportRequest, CancelReportResponse } from "openapi/src/sdk/models/operations";
+import {
+  CancelReportRequest,
+  CancelReportResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: CancelReportRequest = {
-  security: {
-    basicAuth: {
-      password: "YOUR_PASSWORD_HERE",
-      username: "YOUR_USERNAME_HERE",
-    },
-  },
-  pathParams: {
-    reportId: "sit",
-  },
+  reportId: "aaaaaaaa-bbbb-cccc-dddd-0123456789ab",
 };
 
 sdk.cancelReport(req).then((res: CancelReportResponse | AxiosError) => {

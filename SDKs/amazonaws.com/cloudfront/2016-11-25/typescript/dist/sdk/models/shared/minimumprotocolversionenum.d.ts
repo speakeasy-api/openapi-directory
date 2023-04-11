@@ -1,4 +1,4 @@
 export declare enum MinimumProtocolVersionEnum {
-    SsLv3 = "SSLv3",
-    TlSv1 = "TLSv1"
+    SSLv3 = "SSLv3",
+    TLSv1 = "TLSv1"
 }

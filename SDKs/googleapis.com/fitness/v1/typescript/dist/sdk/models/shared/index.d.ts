@@ -18,7 +18,6 @@ export * from "./listdatapointchangesresponse";
 export * from "./listdatasourcesresponse";
 export * from "./listsessionsresponse";
 export * from "./mapvalue";
-export * from "./security";
 export * from "./session";
 export * from "./value";
 export * from "./valuemapvalentry";

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum RemoveTagsXAmzTargetEnum {
     ComAmazonawsCloudtrailV20131101CloudTrail20131101RemoveTags = "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.RemoveTags"
 }
-export declare class RemoveTagsHeaders extends SpeakeasyBase {
+export declare class RemoveTagsRequest extends SpeakeasyBase {
+    removeTagsRequest: shared.RemoveTagsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,20 +15,60 @@ export declare class RemoveTagsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: RemoveTagsXAmzTargetEnum;
 }
-export declare class RemoveTagsRequest extends SpeakeasyBase {
-    headers: RemoveTagsHeaders;
-    request: shared.RemoveTagsRequest;
-}
 export declare class RemoveTagsResponse extends SpeakeasyBase {
+    /**
+     * ChannelNotFoundException
+     */
+    channelNotFoundException?: any;
+    /**
+     * CloudTrailARNInvalidException
+     */
     cloudTrailARNInvalidException?: any;
     contentType: string;
+    /**
+     * EventDataStoreNotFoundException
+     */
+    eventDataStoreNotFoundException?: any;
+    /**
+     * InactiveEventDataStoreException
+     */
+    inactiveEventDataStoreException?: any;
+    /**
+     * InvalidTagParameterException
+     */
     invalidTagParameterException?: any;
+    /**
+     * InvalidTrailNameException
+     */
     invalidTrailNameException?: any;
+    /**
+     * NoManagementAccountSLRExistsException
+     */
+    noManagementAccountSLRExistsException?: any;
+    /**
+     * NotOrganizationMasterAccountException
+     */
     notOrganizationMasterAccountException?: any;
+    /**
+     * OperationNotPermittedException
+     */
     operationNotPermittedException?: any;
+    /**
+     * Success
+     */
     removeTagsResponse?: Record<string, any>;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
-    resourceTypeNotSupportedException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceTypeNotSupportedException
+     */
+    resourceTypeNotSupportedException?: any;
+    /**
+     * UnsupportedOperationException
+     */
     unsupportedOperationException?: any;
 }

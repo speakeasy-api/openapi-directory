@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetMaskPathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetMaskRequest extends SpeakeasyBase {
-    pathParams: GetMaskPathParams;
+    /**
+     * Agent to return the primary interface
+     */
+    agentNum: number;
 }
 export declare class GetMaskResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     getMask200ApplicationJSONString?: string;
 }

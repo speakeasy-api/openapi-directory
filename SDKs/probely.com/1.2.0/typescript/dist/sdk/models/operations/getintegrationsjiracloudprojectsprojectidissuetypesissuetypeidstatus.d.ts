@@ -1,26 +1,58 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdStatusPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdStatusRequest extends SpeakeasyBase {
+    /**
+     * Jira issue type id
+     */
     issueTypeId: string;
+    /**
+     * Jira Project Id
+     */
     projectId: string;
 }
-export declare class GetIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdStatus401ApplicationJson extends SpeakeasyBase {
+/**
+ * Not found
+ */
+export declare class GetIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdStatus404ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Not found.
+     */
     detail?: string;
 }
-export declare class GetIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdStatus403ApplicationJson extends SpeakeasyBase {
+/**
+ * Not allowed to perform operation
+ */
+export declare class GetIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdStatus403ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error message.
+     */
     detail?: string;
 }
-export declare class GetIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdStatus404ApplicationJson extends SpeakeasyBase {
+/**
+ * Access token is missing or invalid
+ */
+export declare class GetIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdStatus401ApplicationJSON extends SpeakeasyBase {
     detail?: string;
-}
-export declare class GetIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdStatusRequest extends SpeakeasyBase {
-    pathParams: GetIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdStatusPathParams;
 }
 export declare class GetIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdStatusResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Jira issue statuses
+     */
     jiraIssueStatuses?: shared.JiraIssueStatus[];
     statusCode: number;
-    getIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdStatus401ApplicationJSONObject?: GetIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdStatus401ApplicationJson;
-    getIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdStatus403ApplicationJSONObject?: GetIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdStatus403ApplicationJson;
-    getIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdStatus404ApplicationJSONObject?: GetIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdStatus404ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Access token is missing or invalid
+     */
+    getIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdStatus401ApplicationJSONObject?: GetIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdStatus401ApplicationJSON;
+    /**
+     * Not allowed to perform operation
+     */
+    getIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdStatus403ApplicationJSONObject?: GetIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdStatus403ApplicationJSON;
+    /**
+     * Not found
+     */
+    getIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdStatus404ApplicationJSONObject?: GetIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdStatus404ApplicationJSON;
 }

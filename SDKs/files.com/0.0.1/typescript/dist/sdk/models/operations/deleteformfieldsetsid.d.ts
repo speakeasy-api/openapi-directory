@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteFormFieldSetsIdPathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteFormFieldSetsIdRequest extends SpeakeasyBase {
-    pathParams: DeleteFormFieldSetsIdPathParams;
+    /**
+     * Form Field Set ID.
+     */
+    id: number;
 }
 export declare class DeleteFormFieldSetsIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

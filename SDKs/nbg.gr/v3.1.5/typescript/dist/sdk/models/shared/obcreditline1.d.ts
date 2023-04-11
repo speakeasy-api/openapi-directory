@@ -1,8 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ObActiveOrHistoricCurrencyAndAmount } from "./obactiveorhistoriccurrencyandamount";
-import { ObExternalLimitType1CodeEnum } from "./obexternallimittype1codeenum";
-export declare class ObCreditLine1 extends SpeakeasyBase {
-    amount?: ObActiveOrHistoricCurrencyAndAmount;
+import { OBActiveOrHistoricCurrencyAndAmount } from "./obactiveorhistoriccurrencyandamount";
+import { OBExternalLimitType1CodeEnum } from "./obexternallimittype1codeenum";
+export declare class OBCreditLine1 extends SpeakeasyBase {
+    amount?: OBActiveOrHistoricCurrencyAndAmount;
+    /**
+     * Indicates whether or not the credit line is included in the balance of the account.
+     *
+     * @remarks
+     * Usage: If not present, credit line is not included in the balance amount of the account.
+     */
     included: boolean;
-    type?: ObExternalLimitType1CodeEnum;
+    type?: OBExternalLimitType1CodeEnum;
 }

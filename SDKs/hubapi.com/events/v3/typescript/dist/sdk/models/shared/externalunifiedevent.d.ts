@@ -1,6 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Used to represent any event. With this format, the `objectType` and `eventType` values are stringified CRM types. Example object:
+ *
+ * @remarks
  * <br/>
  * ```
  *  {
@@ -22,12 +24,27 @@ import { SpeakeasyBase } from "../../../internal/utils";
  *       }
  *   }
  * ```
-**/
+ */
 export declare class ExternalUnifiedEvent extends SpeakeasyBase {
+    /**
+     * The format of the `eventType` string is `ae{appId}_{eventTypeLabel}`, `pe{portalId}_{eventTypeLabel}`, or just `e_{eventTypeLabel}` for HubSpot events.
+     */
     eventType: string;
+    /**
+     * A unique identifier for the event.
+     */
     id: string;
+    /**
+     * The objectId of the object which did the event.
+     */
     objectId: string;
+    /**
+     * The objectType for the object which did the event.
+     */
     objectType: string;
+    /**
+     * An ISO 8601 timestamp when the event occurred.
+     */
     occurredAt: Date;
     properties: Record<string, string>;
 }

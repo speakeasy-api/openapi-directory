@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class RevenueSchedules {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,177 +9,198 @@ export declare class RevenueSchedules {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteRs - Delete a revenue schedule
+     * Delete a revenue schedule
      *
+     * @remarks
      * Deletes a revenue schedule by specifying its revenue schedule number
      * ## Prerequisites
      * You must have the Delete Custom Revenue Schedule permissions in Zuora Finance.
      *
      * The revenue schedule must not be associated with any invoice item, invoice item adjustment, or credit/debit memo item in Zuora Billing.
      *
-    **/
-    deleteRs(req: operations.DeleteRsRequest, config?: AxiosRequestConfig): Promise<operations.DeleteRsResponse>;
+     */
+    deleteRs(req: operations.DELETERSRequest, config?: AxiosRequestConfig): Promise<operations.DELETERSResponse>;
     /**
-     * getRs - List all details of a revenue schedule
+     * List all details of a revenue schedule
      *
+     * @remarks
      * Retrieves the details of a revenue schedule by specifying the revenue schedule number. Request and response field descriptions and sample code are provided.
      *
-    **/
-    getRs(req: operations.GetRsRequest, config?: AxiosRequestConfig): Promise<operations.GetRsResponse>;
+     */
+    getRs(req: operations.GETRSRequest, config?: AxiosRequestConfig): Promise<operations.GETRSResponse>;
     /**
-     * getRSbyCreditMemoItem - Retrieve a revenue schedule by credit memo item ID
+     * Retrieve a revenue schedule by credit memo item ID
      *
      *
+     * @remarks
      * **Note:** This operation is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * Retrieves the details about a revenue schedule by specifying a valid credit memo item ID.
      *
-    **/
-    getRSbyCreditMemoItem(req: operations.GetRSbyCreditMemoItemRequest, config?: AxiosRequestConfig): Promise<operations.GetRSbyCreditMemoItemResponse>;
+     */
+    getRSbyCreditMemoItem(req: operations.GETRSbyCreditMemoItemRequest, config?: AxiosRequestConfig): Promise<operations.GETRSbyCreditMemoItemResponse>;
     /**
-     * getRSbyDebitMemoItem - Retrieve a revenue schedule by debit memo item ID
+     * Retrieve a revenue schedule by debit memo item ID
      *
      *
+     * @remarks
      * **Note:** This operation is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * Retrieves the details about a revenue schedule by specifying a valid debit memo item ID.
      *
-    **/
-    getRSbyDebitMemoItem(req: operations.GetRSbyDebitMemoItemRequest, config?: AxiosRequestConfig): Promise<operations.GetRSbyDebitMemoItemResponse>;
+     */
+    getRSbyDebitMemoItem(req: operations.GETRSbyDebitMemoItemRequest, config?: AxiosRequestConfig): Promise<operations.GETRSbyDebitMemoItemResponse>;
     /**
-     * getRSbyInvoiceItem - Retrieve a revenue schedule by invoice item ID
+     * Retrieve a revenue schedule by invoice item ID
      *
+     * @remarks
      * Retrieves the details of a revenue schedule by specifying the invoice item ID.
      *
-    **/
-    getRSbyInvoiceItem(req: operations.GetRSbyInvoiceItemRequest, config?: AxiosRequestConfig): Promise<operations.GetRSbyInvoiceItemResponse>;
+     */
+    getRSbyInvoiceItem(req: operations.GETRSbyInvoiceItemRequest, config?: AxiosRequestConfig): Promise<operations.GETRSbyInvoiceItemResponse>;
     /**
-     * getRSbyInvoiceItemAdjustment - Retrieve a revenue schedule by invoice item adjustment key
+     * Retrieve a revenue schedule by invoice item adjustment key
      *
+     * @remarks
      * Retrieves the details of a revenue schedule by specifying a valid invoice item adjustment identifier. Request and response field descriptions and sample code are provided.
      *
-    **/
-    getRSbyInvoiceItemAdjustment(req: operations.GetRSbyInvoiceItemAdjustmentRequest, config?: AxiosRequestConfig): Promise<operations.GetRSbyInvoiceItemAdjustmentResponse>;
+     */
+    getRSbyInvoiceItemAdjustment(req: operations.GETRSbyInvoiceItemAdjustmentRequest, config?: AxiosRequestConfig): Promise<operations.GETRSbyInvoiceItemAdjustmentResponse>;
     /**
-     * getRSbyProductChargeAndBillingAccount - List revenue schedules of a product charge by charge ID and account key
+     * List revenue schedules of a product charge by charge ID and account key
      *
      *
+     * @remarks
      * **Note:** This operation is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * Retrieves the details about all revenue schedules of a product rate plan charge by specifying the charge ID and billing account ID.
      *
-    **/
-    getRSbyProductChargeAndBillingAccount(req: operations.GetRSbyProductChargeAndBillingAccountRequest, config?: AxiosRequestConfig): Promise<operations.GetRSbyProductChargeAndBillingAccountResponse>;
+     */
+    getRSbyProductChargeAndBillingAccount(req: operations.GETRSbyProductChargeAndBillingAccountRequest, config?: AxiosRequestConfig): Promise<operations.GETRSbyProductChargeAndBillingAccountResponse>;
     /**
-     * getRSforSubscCharge - List revenue schedules by subscription charge key
+     * List revenue schedules by subscription charge key
      *
+     * @remarks
      * Retrieves the revenue schedule details by specifying subscription charge ID. Request and response field descriptions and sample code are provided
      *
-    **/
-    getRSforSubscCharge(req: operations.GetRSforSubscChargeRequest, config?: AxiosRequestConfig): Promise<operations.GetRSforSubscChargeResponse>;
+     */
+    getRSforSubscCharge(req: operations.GETRSforSubscChargeRequest, config?: AxiosRequestConfig): Promise<operations.GETRSforSubscChargeResponse>;
     /**
-     * postRSforCreditMemoItemDistributeByDateRange - Create a revenue schedule for a credit memo item (distribute by date range)
+     * Create a revenue schedule for a credit memo item (distribute by date range)
      *
      *
+     * @remarks
      * **Note:** This operation is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * Creates a revenue schedule for a credit memo item, and automatically distribute the revenue by specifying the recognition start and end dates.
      *
-    **/
-    postRSforCreditMemoItemDistributeByDateRange(req: operations.PostRSforCreditMemoItemDistributeByDateRangeRequest, config?: AxiosRequestConfig): Promise<operations.PostRSforCreditMemoItemDistributeByDateRangeResponse>;
+     */
+    postRSforCreditMemoItemDistributeByDateRange(req: operations.POSTRSforCreditMemoItemDistributeByDateRangeRequest, config?: AxiosRequestConfig): Promise<operations.POSTRSforCreditMemoItemDistributeByDateRangeResponse>;
     /**
-     * postRSforCreditMemoItemManualDistribution - Create a revenue schedule for a credit memo item (manual distribution)
+     * Create a revenue schedule for a credit memo item (manual distribution)
      *
      *
+     * @remarks
      * **Note:** This operation is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * Creates a revenue schedule for a credit memo item, and manually distribute the revenue.
      *
-    **/
-    postRSforCreditMemoItemManualDistribution(req: operations.PostRSforCreditMemoItemManualDistributionRequest, config?: AxiosRequestConfig): Promise<operations.PostRSforCreditMemoItemManualDistributionResponse>;
+     */
+    postRSforCreditMemoItemManualDistribution(req: operations.POSTRSforCreditMemoItemManualDistributionRequest, config?: AxiosRequestConfig): Promise<operations.POSTRSforCreditMemoItemManualDistributionResponse>;
     /**
-     * postRSforDebitMemoItemDistributeByDateRange - Create a revenue schedule for a debit memo item (distribute by date range)
+     * Create a revenue schedule for a debit memo item (distribute by date range)
      *
      *
+     * @remarks
      * **Note:** This operation is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * Creates a revenue schedule for a debit memo item, and automatically distribute the revenue by specifying the recognition start and end dates.
      *
-    **/
-    postRSforDebitMemoItemDistributeByDateRange(req: operations.PostRSforDebitMemoItemDistributeByDateRangeRequest, config?: AxiosRequestConfig): Promise<operations.PostRSforDebitMemoItemDistributeByDateRangeResponse>;
+     */
+    postRSforDebitMemoItemDistributeByDateRange(req: operations.POSTRSforDebitMemoItemDistributeByDateRangeRequest, config?: AxiosRequestConfig): Promise<operations.POSTRSforDebitMemoItemDistributeByDateRangeResponse>;
     /**
-     * postRSforDebitMemoItemManualDistribution - Create a revenue schedule for a debit memo item (distribute by date range)
+     * Create a revenue schedule for a debit memo item (distribute by date range)
      *
      *
+     * @remarks
      * **Note:** This operation is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * Creates a revenue schedule for a debit memo item, and manually distribute the revenue.
      *
-    **/
-    postRSforDebitMemoItemManualDistribution(req: operations.PostRSforDebitMemoItemManualDistributionRequest, config?: AxiosRequestConfig): Promise<operations.PostRSforDebitMemoItemManualDistributionResponse>;
+     */
+    postRSforDebitMemoItemManualDistribution(req: operations.POSTRSforDebitMemoItemManualDistributionRequest, config?: AxiosRequestConfig): Promise<operations.POSTRSforDebitMemoItemManualDistributionResponse>;
     /**
-     * postRSforInvoiceItemAdjustmentDistributeByDateRange - Create a revenue schedule for an invoice item adjustment (distribute by date range)
+     * Create a revenue schedule for an invoice item adjustment (distribute by date range)
      *
+     * @remarks
      * Creates a revenue schedule for an Invoice Item Adjustment and distribute the revenue by specifying the recognition start and end dates.
      *
-    **/
-    postRSforInvoiceItemAdjustmentDistributeByDateRange(req: operations.PostRSforInvoiceItemAdjustmentDistributeByDateRangeRequest, config?: AxiosRequestConfig): Promise<operations.PostRSforInvoiceItemAdjustmentDistributeByDateRangeResponse>;
+     */
+    postRSforInvoiceItemAdjustmentDistributeByDateRange(req: operations.POSTRSforInvoiceItemAdjustmentDistributeByDateRangeRequest, config?: AxiosRequestConfig): Promise<operations.POSTRSforInvoiceItemAdjustmentDistributeByDateRangeResponse>;
     /**
-     * postRSforInvoiceItemAdjustmentManualDistribution - Create a revenue schedule for an invoice item adjustment (manual distribution)
+     * Create a revenue schedule for an invoice item adjustment (manual distribution)
      *
+     * @remarks
      * Creates a revenue schedule for an Invoice Item Adjustment and manually distribute the revenue.
      *
-    **/
-    postRSforInvoiceItemAdjustmentManualDistribution(req: operations.PostRSforInvoiceItemAdjustmentManualDistributionRequest, config?: AxiosRequestConfig): Promise<operations.PostRSforInvoiceItemAdjustmentManualDistributionResponse>;
+     */
+    postRSforInvoiceItemAdjustmentManualDistribution(req: operations.POSTRSforInvoiceItemAdjustmentManualDistributionRequest, config?: AxiosRequestConfig): Promise<operations.POSTRSforInvoiceItemAdjustmentManualDistributionResponse>;
     /**
-     * postRSforInvoiceItemDistributeByDateRange - Create a revenue schedule for an invoice item (distribute by date range)
+     * Create a revenue schedule for an invoice item (distribute by date range)
      *
+     * @remarks
      * Creates a revenue schedule for an Invoice Item and distribute the revenue by specifying the recognition start and end dates.
      *
-    **/
-    postRSforInvoiceItemDistributeByDateRange(req: operations.PostRSforInvoiceItemDistributeByDateRangeRequest, config?: AxiosRequestConfig): Promise<operations.PostRSforInvoiceItemDistributeByDateRangeResponse>;
+     */
+    postRSforInvoiceItemDistributeByDateRange(req: operations.POSTRSforInvoiceItemDistributeByDateRangeRequest, config?: AxiosRequestConfig): Promise<operations.POSTRSforInvoiceItemDistributeByDateRangeResponse>;
     /**
-     * postRSforInvoiceItemManualDistribution - Create a revenue schedule for an invoice item (manual distribution)
+     * Create a revenue schedule for an invoice item (manual distribution)
      *
+     * @remarks
      * Creates a revenue schedule for an Invoice Item and manually distribute the revenue.
      *
-    **/
-    postRSforInvoiceItemManualDistribution(req: operations.PostRSforInvoiceItemManualDistributionRequest, config?: AxiosRequestConfig): Promise<operations.PostRSforInvoiceItemManualDistributionResponse>;
+     */
+    postRSforInvoiceItemManualDistribution(req: operations.POSTRSforInvoiceItemManualDistributionRequest, config?: AxiosRequestConfig): Promise<operations.POSTRSforInvoiceItemManualDistributionResponse>;
     /**
-     * postRSforSubscCharge - Create a revenue schedule by subscription charge key
+     * Create a revenue schedule by subscription charge key
      *
+     * @remarks
      * Creates a revenue schedule by specifying the subscription charge. This method is for custom unlimited revenue recognition only.
      *
      * **Note**: You can create a maximum of 3,000 revenue schedules for a subscription charge.
      *
-    **/
-    postRSforSubscCharge(req: operations.PostRSforSubscChargeRequest, config?: AxiosRequestConfig): Promise<operations.PostRSforSubscChargeResponse>;
+     */
+    postRSforSubscCharge(req: operations.POSTRSforSubscChargeRequest, config?: AxiosRequestConfig): Promise<operations.POSTRSforSubscChargeResponse>;
     /**
-     * putRsBasicInfo - Update a revenue schedule
+     * Update a revenue schedule
      *
+     * @remarks
      * Retrieves basic information of a revenue schedule by specifying the revenue schedule number. Request and response field descriptions and sample code are provided.
      *
-    **/
-    putRsBasicInfo(req: operations.PutRsBasicInfoRequest, config?: AxiosRequestConfig): Promise<operations.PutRsBasicInfoResponse>;
+     */
+    putRSBasicInfo(req: operations.PUTRSBasicInfoRequest, config?: AxiosRequestConfig): Promise<operations.PUTRSBasicInfoResponse>;
     /**
-     * putRevenueAcrossAp - Distribute revenue across accounting periods
+     * Distribute revenue across accounting periods
      *
+     * @remarks
      * Distributes revenue by specifying the revenue schedule number. Request and response field descriptions and sample code are provided.
      *
-    **/
-    putRevenueAcrossAp(req: operations.PutRevenueAcrossApRequest, config?: AxiosRequestConfig): Promise<operations.PutRevenueAcrossApResponse>;
+     */
+    putRevenueAcrossAP(req: operations.PUTRevenueAcrossAPRequest, config?: AxiosRequestConfig): Promise<operations.PUTRevenueAcrossAPResponse>;
     /**
-     * putRevenueByRecognitionStartandEndDates - Distribute revenue in a recognition period
+     * Distribute revenue in a recognition period
      *
+     * @remarks
      * Distributes revenue by specifying the recognition start and end dates. Request and response field descriptions and sample code are provided.
      *
-    **/
-    putRevenueByRecognitionStartandEndDates(req: operations.PutRevenueByRecognitionStartandEndDatesRequest, config?: AxiosRequestConfig): Promise<operations.PutRevenueByRecognitionStartandEndDatesResponse>;
+     */
+    putRevenueByRecognitionStartandEndDates(req: operations.PUTRevenueByRecognitionStartandEndDatesRequest, config?: AxiosRequestConfig): Promise<operations.PUTRevenueByRecognitionStartandEndDatesResponse>;
     /**
-     * putRevenueSpecificDate - Distribute revenue on a specific date
+     * Distribute revenue on a specific date
      *
+     * @remarks
      * Distributes revenue on a specific recognition date. Request and response field descriptions and sample code are provided.
      *
-    **/
-    putRevenueSpecificDate(req: operations.PutRevenueSpecificDateRequest, config?: AxiosRequestConfig): Promise<operations.PutRevenueSpecificDateResponse>;
+     */
+    putRevenueSpecificDate(req: operations.PUTRevenueSpecificDateRequest, config?: AxiosRequestConfig): Promise<operations.PUTRevenueSpecificDateResponse>;
 }

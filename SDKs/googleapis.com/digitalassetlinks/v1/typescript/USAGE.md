@@ -1,130 +1,109 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DigitalassetlinksAssetlinksBulkCheckRequest, DigitalassetlinksAssetlinksBulkCheckResponse } from "openapi/src/sdk/models/operations";
+import {
+  DigitalassetlinksAssetlinksBulkCheckRequest,
+  DigitalassetlinksAssetlinksBulkCheckResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: DigitalassetlinksAssetlinksBulkCheckRequest = {
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "voluptas",
-    alt: "media",
-    callback: "expedita",
-    fields: "consequuntur",
-    key: "dolor",
-    oauthToken: "expedita",
-    prettyPrint: true,
-    quotaUser: "fugit",
-    uploadType: "et",
-    uploadProtocol: "nihil",
-  },
-  request: {
-    allowGoogleInternalDataSources: true,
-    defaultRelation: "dicta",
+  dollarXgafv: XgafvEnum.Two,
+  bulkCheckRequest: {
+    allowGoogleInternalDataSources: false,
+    defaultRelation: "provident",
     defaultSource: {
       androidApp: {
         certificate: {
-          sha256Fingerprint: "debitis",
+          sha256Fingerprint: "distinctio",
         },
-        packageName: "voluptatum",
+        packageName: "quibusdam",
       },
       web: {
-        site: "et",
+        site: "unde",
       },
     },
     defaultTarget: {
       androidApp: {
         certificate: {
-          sha256Fingerprint: "ut",
+          sha256Fingerprint: "nulla",
         },
-        packageName: "dolorem",
+        packageName: "corrupti",
       },
       web: {
-        site: "et",
+        site: "illum",
       },
     },
     skipCacheLookup: false,
     statements: [
       {
-        relation: "vitae",
+        relation: "error",
         source: {
           androidApp: {
             certificate: {
-              sha256Fingerprint: "totam",
+              sha256Fingerprint: "deserunt",
             },
-            packageName: "dolores",
+            packageName: "suscipit",
           },
           web: {
-            site: "illum",
+            site: "iure",
           },
         },
         target: {
           androidApp: {
             certificate: {
-              sha256Fingerprint: "debitis",
+              sha256Fingerprint: "magnam",
             },
-            packageName: "vel",
+            packageName: "debitis",
           },
           web: {
-            site: "odio",
+            site: "ipsa",
           },
         },
       },
       {
-        relation: "dolore",
+        relation: "delectus",
         source: {
           androidApp: {
             certificate: {
-              sha256Fingerprint: "id",
+              sha256Fingerprint: "tempora",
             },
-            packageName: "aspernatur",
+            packageName: "suscipit",
           },
           web: {
-            site: "accusantium",
+            site: "molestiae",
           },
         },
         target: {
           androidApp: {
             certificate: {
-              sha256Fingerprint: "totam",
+              sha256Fingerprint: "minus",
             },
-            packageName: "commodi",
+            packageName: "placeat",
           },
           web: {
-            site: "quis",
-          },
-        },
-      },
-      {
-        relation: "est",
-        source: {
-          androidApp: {
-            certificate: {
-              sha256Fingerprint: "aut",
-            },
-            packageName: "odit",
-          },
-          web: {
-            site: "non",
-          },
-        },
-        target: {
-          androidApp: {
-            certificate: {
-              sha256Fingerprint: "voluptas",
-            },
-            packageName: "omnis",
-          },
-          web: {
-            site: "aut",
+            site: "voluptatum",
           },
         },
       },
     ],
   },
+  accessToken: "iusto",
+  alt: AltEnum.Media,
+  callback: "nisi",
+  fields: "recusandae",
+  key: "temporibus",
+  oauthToken: "ab",
+  prettyPrint: false,
+  quotaUser: "quis",
+  uploadType: "veritatis",
+  uploadProtocol: "deserunt",
 };
 
 sdk.assetlinks.digitalassetlinksAssetlinksBulkCheck(req).then((res: DigitalassetlinksAssetlinksBulkCheckResponse | AxiosError) => {

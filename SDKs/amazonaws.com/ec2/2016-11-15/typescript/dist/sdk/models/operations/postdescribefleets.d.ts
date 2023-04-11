@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeFleetsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeFleetsActionEnum {
     DescribeFleets = "DescribeFleets"
 }
-export declare enum PostDescribeFleetsVersionEnum {
+export declare enum POSTDescribeFleetsVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDescribeFleetsQueryParams extends SpeakeasyBase {
-    action: PostDescribeFleetsActionEnum;
+export declare class POSTDescribeFleetsRequest extends SpeakeasyBase {
+    action: POSTDescribeFleetsActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostDescribeFleetsVersionEnum;
-}
-export declare class PostDescribeFleetsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeFleetsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeFleetsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeFleetsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeFleetsQueryParams;
-    headers: PostDescribeFleetsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeFleetsResponse extends SpeakeasyBase {
+export declare class POSTDescribeFleetsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum CreateWorkGroupXAmzTargetEnum {
     AmazonAthenaCreateWorkGroup = "AmazonAthena.CreateWorkGroup"
 }
-export declare class CreateWorkGroupHeaders extends SpeakeasyBase {
+export declare class CreateWorkGroupRequest extends SpeakeasyBase {
+    createWorkGroupInput: shared.CreateWorkGroupInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class CreateWorkGroupHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: CreateWorkGroupXAmzTargetEnum;
 }
-export declare class CreateWorkGroupRequest extends SpeakeasyBase {
-    headers: CreateWorkGroupHeaders;
-    request: shared.CreateWorkGroupInput;
-}
 export declare class CreateWorkGroupResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     createWorkGroupOutput?: Record<string, any>;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

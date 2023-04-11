@@ -1,21 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetFileContentPathParams extends SpeakeasyBase {
-    fileId: string;
-}
-export declare class GetFileContentHeaders extends SpeakeasyBase {
-    xeroTenantId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetFileContentSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class GetFileContentRequest extends SpeakeasyBase {
-    pathParams: GetFileContentPathParams;
-    headers: GetFileContentHeaders;
-    security: GetFileContentSecurity;
+    /**
+     * File id for single object
+     */
+    fileId: string;
+    /**
+     * Xero identifier for Tenant
+     */
+    xeroTenantId: string;
 }
 export declare class GetFileContentResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * returns the byte array of the specific file based on id
+     */
     getFileContent200ApplicationOctetStreamBinaryString?: Uint8Array;
 }

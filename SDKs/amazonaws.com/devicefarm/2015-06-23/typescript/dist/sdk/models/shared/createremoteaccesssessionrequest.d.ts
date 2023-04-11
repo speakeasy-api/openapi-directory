@@ -3,7 +3,7 @@ import { CreateRemoteAccessSessionConfiguration } from "./createremoteaccesssess
 import { InteractionModeEnum } from "./interactionmodeenum";
 /**
  * Creates and submits a request to start a remote access session.
-**/
+ */
 export declare class CreateRemoteAccessSessionRequest extends SpeakeasyBase {
     clientId?: string;
     configuration?: CreateRemoteAccessSessionConfiguration;

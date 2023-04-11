@@ -1,16 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetUuidQueryParams extends SpeakeasyBase {
-    count?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetUuidSecurity extends SpeakeasyBase {
-    xFungeneratorsApiSecret: shared.SchemeXFungeneratorsApiSecret;
+    xFungeneratorsApiSecret: string;
 }
 export declare class GetUuidRequest extends SpeakeasyBase {
-    queryParams: GetUuidQueryParams;
-    security: GetUuidSecurity;
+    /**
+     * Number of UUID's to generate (defaults to 1)
+     */
+    count?: number;
 }
 export declare class GetUuidResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

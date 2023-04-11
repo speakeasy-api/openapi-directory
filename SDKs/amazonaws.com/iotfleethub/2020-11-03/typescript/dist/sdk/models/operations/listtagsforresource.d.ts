@@ -1,9 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListTagsForResourcePathParams extends SpeakeasyBase {
-    resourceArn: string;
-}
-export declare class ListTagsForResourceHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListTagsForResourceRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,16 +9,29 @@ export declare class ListTagsForResourceHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class ListTagsForResourceRequest extends SpeakeasyBase {
-    pathParams: ListTagsForResourcePathParams;
-    headers: ListTagsForResourceHeaders;
+    /**
+     * The ARN of the resource.
+     */
+    resourceArn: string;
 }
 export declare class ListTagsForResourceResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalFailureException
+     */
     internalFailureException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * Success
+     */
     listTagsForResourceResponse?: shared.ListTagsForResourceResponse;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
 }

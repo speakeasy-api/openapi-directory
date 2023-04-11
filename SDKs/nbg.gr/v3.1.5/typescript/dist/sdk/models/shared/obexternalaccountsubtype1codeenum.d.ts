@@ -1,4 +1,4 @@
-export declare enum ObExternalAccountSubType1CodeEnum {
+export declare enum OBExternalAccountSubType1CodeEnum {
     ChargeCard = "ChargeCard",
     CreditCard = "CreditCard",
     CurrentAccount = "CurrentAccount",

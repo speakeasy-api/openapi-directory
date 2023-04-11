@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteTransitGatewayMulticastDomainActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteTransitGatewayMulticastDomainActionEnum {
     DeleteTransitGatewayMulticastDomain = "DeleteTransitGatewayMulticastDomain"
 }
-export declare enum GetDeleteTransitGatewayMulticastDomainVersionEnum {
+export declare enum GETDeleteTransitGatewayMulticastDomainVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetDeleteTransitGatewayMulticastDomainQueryParams extends SpeakeasyBase {
-    action: GetDeleteTransitGatewayMulticastDomainActionEnum;
+export declare class GETDeleteTransitGatewayMulticastDomainRequest extends SpeakeasyBase {
+    action: GETDeleteTransitGatewayMulticastDomainActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
+    /**
+     * The ID of the transit gateway multicast domain.
+     */
     transitGatewayMulticastDomainId: string;
-    version: GetDeleteTransitGatewayMulticastDomainVersionEnum;
-}
-export declare class GetDeleteTransitGatewayMulticastDomainHeaders extends SpeakeasyBase {
+    version: GETDeleteTransitGatewayMulticastDomainVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetDeleteTransitGatewayMulticastDomainHeaders extends Speak
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteTransitGatewayMulticastDomainRequest extends SpeakeasyBase {
-    queryParams: GetDeleteTransitGatewayMulticastDomainQueryParams;
-    headers: GetDeleteTransitGatewayMulticastDomainHeaders;
-}
-export declare class GetDeleteTransitGatewayMulticastDomainResponse extends SpeakeasyBase {
+export declare class GETDeleteTransitGatewayMulticastDomainResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

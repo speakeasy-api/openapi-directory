@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostSimulatePrincipalPolicyActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTSimulatePrincipalPolicyActionEnum {
     SimulatePrincipalPolicy = "SimulatePrincipalPolicy"
 }
-export declare enum PostSimulatePrincipalPolicyVersionEnum {
+export declare enum POSTSimulatePrincipalPolicyVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostSimulatePrincipalPolicyQueryParams extends SpeakeasyBase {
-    action: PostSimulatePrincipalPolicyActionEnum;
+export declare class POSTSimulatePrincipalPolicyRequest extends SpeakeasyBase {
+    action: POSTSimulatePrincipalPolicyActionEnum;
+    /**
+     * Pagination token
+     */
     marker?: string;
+    /**
+     * Pagination limit
+     */
     maxItems?: string;
-    version: PostSimulatePrincipalPolicyVersionEnum;
-}
-export declare class PostSimulatePrincipalPolicyHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTSimulatePrincipalPolicyVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostSimulatePrincipalPolicyHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostSimulatePrincipalPolicyRequest extends SpeakeasyBase {
-    queryParams: PostSimulatePrincipalPolicyQueryParams;
-    headers: PostSimulatePrincipalPolicyHeaders;
-    request?: Uint8Array;
-}
-export declare class PostSimulatePrincipalPolicyResponse extends SpeakeasyBase {
+export declare class POSTSimulatePrincipalPolicyResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

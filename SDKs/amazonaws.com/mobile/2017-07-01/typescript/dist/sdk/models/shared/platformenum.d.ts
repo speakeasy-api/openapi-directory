@@ -1,3 +1,6 @@
+/**
+ *  Developer desktop or target mobile app or website platform.
+ */
 export declare enum PlatformEnum {
     Osx = "OSX",
     Windows = "WINDOWS",

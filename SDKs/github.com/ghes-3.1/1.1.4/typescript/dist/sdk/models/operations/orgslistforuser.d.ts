@@ -1,19 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class OrgsListForUserPathParams extends SpeakeasyBase {
-    username: string;
-}
-export declare class OrgsListForUserQueryParams extends SpeakeasyBase {
-    page?: number;
-    perPage?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class OrgsListForUserRequest extends SpeakeasyBase {
-    pathParams: OrgsListForUserPathParams;
-    queryParams: OrgsListForUserQueryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    page?: number;
+    /**
+     * The number of results per page (max 100).
+     */
+    perPage?: number;
+    /**
+     * The handle for the GitHub user account.
+     */
+    username: string;
 }
 export declare class OrgsListForUserResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     organizationSimples?: shared.OrganizationSimple[];
 }

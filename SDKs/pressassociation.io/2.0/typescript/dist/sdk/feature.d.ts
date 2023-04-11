@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Feature {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,21 +9,24 @@ export declare class Feature {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getFeature - Feature Detail
+     * Feature Detail
      *
+     * @remarks
      * Return the content of the selected feature.
-    **/
-    getFeature(req: operations.GetFeatureRequest, config?: AxiosRequestConfig): Promise<operations.GetFeatureResponse>;
+     */
+    getFeature(req: operations.GetFeatureRequest, security: operations.GetFeatureSecurity, config?: AxiosRequestConfig): Promise<operations.GetFeatureResponse>;
     /**
-     * listFeatureTypes - Feature Type Collection
+     * Feature Type Collection
      *
+     * @remarks
      * Return a collection of Feature Types.
-    **/
-    listFeatureTypes(req: operations.ListFeatureTypesRequest, config?: AxiosRequestConfig): Promise<operations.ListFeatureTypesResponse>;
+     */
+    listFeatureTypes(config?: AxiosRequestConfig): Promise<operations.ListFeatureTypesResponse>;
     /**
-     * listFeatures - Feature Collection
+     * Feature Collection
      *
+     * @remarks
      * Return a collection of Feature.
-    **/
-    listFeatures(req: operations.ListFeaturesRequest, config?: AxiosRequestConfig): Promise<operations.ListFeaturesResponse>;
+     */
+    listFeatures(req: operations.ListFeaturesRequest, security: operations.ListFeaturesSecurity, config?: AxiosRequestConfig): Promise<operations.ListFeaturesResponse>;
 }

@@ -1,15 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetStoreReportByDayPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetStoreReportByDayRequest extends SpeakeasyBase {
+    reportByDayRequest: shared.ReportByDayRequest;
+    /**
+     * Your store identifier
+     */
     storeId: string;
 }
-export declare class GetStoreReportByDayRequest extends SpeakeasyBase {
-    pathParams: GetStoreReportByDayPathParams;
-    request: shared.ReportByDayRequest;
-}
 export declare class GetStoreReportByDayResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     * Invalid request
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Your reporting by day
+     */
     reportByDayResponse?: shared.ReportByDayResponse;
 }

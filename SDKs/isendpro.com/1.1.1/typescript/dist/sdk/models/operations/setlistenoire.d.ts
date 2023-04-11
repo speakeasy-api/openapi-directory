@@ -1,19 +1,36 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+/**
+ * Doit valoir "1"
+ */
 export declare enum SetListeNoireSetlisteNoireEnum {
     One = "1"
 }
-export declare class SetListeNoireQueryParams extends SpeakeasyBase {
-    keyid: string;
-    num: string;
-    setlisteNoire: SetListeNoireSetlisteNoireEnum;
-}
 export declare class SetListeNoireRequest extends SpeakeasyBase {
-    queryParams: SetListeNoireQueryParams;
+    /**
+     * Clé API
+     */
+    keyid: string;
+    /**
+     * numéro de mobile à insérer en liste noire
+     */
+    num: string;
+    /**
+     * Doit valoir "1"
+     */
+    setlisteNoire: SetListeNoireSetlisteNoireEnum;
 }
 export declare class SetListeNoireResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Erreur
+     */
     erreur?: shared.Erreur;
-    listenoireReponse?: shared.ListenoireReponse;
+    /**
+     * Successful response
+     */
+    listenoireReponse?: shared.LISTENOIREReponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

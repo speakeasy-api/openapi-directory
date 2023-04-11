@@ -1,18 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetSettingValueBySdkkeyPathParams extends SpeakeasyBase {
-    settingKeyOrId: string;
-}
-export declare class GetSettingValueBySdkkeyHeaders extends SpeakeasyBase {
-    xCONFIGCATSDKKEY: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetSettingValueBySdkkeyRequest extends SpeakeasyBase {
-    pathParams: GetSettingValueBySdkkeyPathParams;
-    headers: GetSettingValueBySdkkeyHeaders;
+    /**
+     * The ConfigCat SDK Key. (https://app.configcat.com/sdkkey)
+     */
+    xConfigcatSdkkey?: string;
+    /**
+     * The key or id of the Setting.
+     */
+    settingKeyOrId: string;
 }
 export declare class GetSettingValueBySdkkeyResponse extends SpeakeasyBase {
     contentType: string;
     settingValueModel?: shared.SettingValueModel;
     settingValueModelHaljson?: shared.SettingValueModelHaljson;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

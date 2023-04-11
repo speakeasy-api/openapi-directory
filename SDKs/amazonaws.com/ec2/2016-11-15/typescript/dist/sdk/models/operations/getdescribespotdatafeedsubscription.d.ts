@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeSpotDatafeedSubscriptionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeSpotDatafeedSubscriptionActionEnum {
     DescribeSpotDatafeedSubscription = "DescribeSpotDatafeedSubscription"
 }
-export declare enum GetDescribeSpotDatafeedSubscriptionVersionEnum {
+export declare enum GETDescribeSpotDatafeedSubscriptionVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetDescribeSpotDatafeedSubscriptionQueryParams extends SpeakeasyBase {
-    action: GetDescribeSpotDatafeedSubscriptionActionEnum;
+export declare class GETDescribeSpotDatafeedSubscriptionRequest extends SpeakeasyBase {
+    action: GETDescribeSpotDatafeedSubscriptionActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
-    version: GetDescribeSpotDatafeedSubscriptionVersionEnum;
-}
-export declare class GetDescribeSpotDatafeedSubscriptionHeaders extends SpeakeasyBase {
+    version: GETDescribeSpotDatafeedSubscriptionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDescribeSpotDatafeedSubscriptionHeaders extends Speakeas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeSpotDatafeedSubscriptionRequest extends SpeakeasyBase {
-    queryParams: GetDescribeSpotDatafeedSubscriptionQueryParams;
-    headers: GetDescribeSpotDatafeedSubscriptionHeaders;
-}
-export declare class GetDescribeSpotDatafeedSubscriptionResponse extends SpeakeasyBase {
+export declare class GETDescribeSpotDatafeedSubscriptionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolTelnetServerGetRulesdbPathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolTelnetServerGetRulesdbRequest extends SpeakeasyBase {
-    pathParams: ProtocolTelnetServerGetRulesdbPathParams;
+    /**
+     * Agent to show TELNET statistics
+     */
+    agentNum: number;
 }
 export declare class ProtocolTelnetServerGetRulesdbResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolTelnetServerGetRulesdb200ApplicationJSONStrings?: string[];
 }

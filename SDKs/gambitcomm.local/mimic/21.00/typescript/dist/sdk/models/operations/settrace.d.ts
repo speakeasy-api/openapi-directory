@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SetTracePathParams extends SpeakeasyBase {
-    agentNum: number;
-    trace: number;
-}
+import { AxiosResponse } from "axios";
 export declare class SetTraceRequest extends SpeakeasyBase {
-    pathParams: SetTracePathParams;
+    /**
+     * Agent to set trace setting
+     */
+    agentNum: number;
+    /**
+     * Trace setting for the agent
+     */
+    trace: number;
 }
 export declare class SetTraceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     setTrace200ApplicationJSONInt32Integer?: number;
 }

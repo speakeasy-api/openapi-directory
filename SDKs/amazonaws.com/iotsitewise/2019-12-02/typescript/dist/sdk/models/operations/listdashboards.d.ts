@@ -1,11 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListDashboardsQueryParams extends SpeakeasyBase {
-    maxResults?: number;
-    nextToken?: string;
-    projectId: string;
-}
-export declare class ListDashboardsHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListDashboardsRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +9,37 @@ export declare class ListDashboardsHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class ListDashboardsRequest extends SpeakeasyBase {
-    queryParams: ListDashboardsQueryParams;
-    headers: ListDashboardsHeaders;
+    /**
+     * <p>The maximum number of results to return for each paginated request.</p> <p>Default: 50</p>
+     */
+    maxResults?: number;
+    /**
+     * The token to be used for the next set of paginated results.
+     */
+    nextToken?: string;
+    /**
+     * The ID of the project.
+     */
+    projectId: string;
 }
 export declare class ListDashboardsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalFailureException
+     */
     internalFailureException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * Success
+     */
     listDashboardsResponse?: shared.ListDashboardsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

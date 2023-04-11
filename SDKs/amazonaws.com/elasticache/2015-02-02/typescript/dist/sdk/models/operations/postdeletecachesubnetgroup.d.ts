@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteCacheSubnetGroupActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteCacheSubnetGroupActionEnum {
     DeleteCacheSubnetGroup = "DeleteCacheSubnetGroup"
 }
-export declare enum PostDeleteCacheSubnetGroupVersionEnum {
+export declare enum POSTDeleteCacheSubnetGroupVersionEnum {
     TwoThousandAndFifteen0202 = "2015-02-02"
 }
-export declare class PostDeleteCacheSubnetGroupQueryParams extends SpeakeasyBase {
-    action: PostDeleteCacheSubnetGroupActionEnum;
-    version: PostDeleteCacheSubnetGroupVersionEnum;
-}
-export declare class PostDeleteCacheSubnetGroupHeaders extends SpeakeasyBase {
+export declare class POSTDeleteCacheSubnetGroupRequest extends SpeakeasyBase {
+    action: POSTDeleteCacheSubnetGroupActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteCacheSubnetGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteCacheSubnetGroupHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteCacheSubnetGroupRequest extends SpeakeasyBase {
-    queryParams: PostDeleteCacheSubnetGroupQueryParams;
-    headers: PostDeleteCacheSubnetGroupHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteCacheSubnetGroupResponse extends SpeakeasyBase {
+export declare class POSTDeleteCacheSubnetGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

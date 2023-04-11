@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum SendSshPublicKeyXAmzTargetEnum {
-    Awsec2InstanceConnectServiceSendSshPublicKey = "AWSEC2InstanceConnectService.SendSSHPublicKey"
+import { AxiosResponse } from "axios";
+export declare enum SendSSHPublicKeyXAmzTargetEnum {
+    Awsec2InstanceConnectServiceSendSSHPublicKey = "AWSEC2InstanceConnectService.SendSSHPublicKey"
 }
-export declare class SendSshPublicKeyHeaders extends SpeakeasyBase {
+export declare class SendSSHPublicKeyRequest extends SpeakeasyBase {
+    sendSSHPublicKeyRequest: shared.SendSSHPublicKeyRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,19 +13,42 @@ export declare class SendSshPublicKeyHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: SendSshPublicKeyXAmzTargetEnum;
+    xAmzTarget: SendSSHPublicKeyXAmzTargetEnum;
 }
-export declare class SendSshPublicKeyRequest extends SpeakeasyBase {
-    headers: SendSshPublicKeyHeaders;
-    request: shared.SendSshPublicKeyRequest;
-}
-export declare class SendSshPublicKeyResponse extends SpeakeasyBase {
+export declare class SendSSHPublicKeyResponse extends SpeakeasyBase {
+    /**
+     * AuthException
+     */
     authException?: any;
     contentType: string;
+    /**
+     * EC2InstanceNotFoundException
+     */
     ec2InstanceNotFoundException?: any;
+    /**
+     * EC2InstanceStateInvalidException
+     */
+    ec2InstanceStateInvalidException?: any;
+    /**
+     * EC2InstanceUnavailableException
+     */
+    ec2InstanceUnavailableException?: any;
+    /**
+     * InvalidArgsException
+     */
     invalidArgsException?: any;
-    sendSSHPublicKeyResponse?: shared.SendSshPublicKeyResponse;
-    serviceException?: any;
+    /**
+     * Success
+     */
+    sendSSHPublicKeyResponse?: shared.SendSSHPublicKeyResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceException
+     */
+    serviceException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

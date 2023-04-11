@@ -1,3 +1,6 @@
+/**
+ * An enumeration.
+ */
 export declare enum TemporalEnum {
     Day = "day",
     Month = "month",

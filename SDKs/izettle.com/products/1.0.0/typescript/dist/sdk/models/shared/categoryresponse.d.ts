@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { CategoryDto } from "./categorydto";
+import { CategoryDTO } from "./categorydto";
+/**
+ * List of all categories
+ */
 export declare class CategoryResponse extends SpeakeasyBase {
-    categories: CategoryDto[];
+    categories: CategoryDTO[];
 }

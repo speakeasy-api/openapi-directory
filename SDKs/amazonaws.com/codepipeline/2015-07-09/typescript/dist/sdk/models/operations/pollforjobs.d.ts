@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum PollForJobsXAmzTargetEnum {
     CodePipeline20150709PollForJobs = "CodePipeline_20150709.PollForJobs"
 }
-export declare class PollForJobsHeaders extends SpeakeasyBase {
+export declare class PollForJobsRequest extends SpeakeasyBase {
+    pollForJobsInput: shared.PollForJobsInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class PollForJobsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: PollForJobsXAmzTargetEnum;
 }
-export declare class PollForJobsRequest extends SpeakeasyBase {
-    headers: PollForJobsHeaders;
-    request: shared.PollForJobsInput;
-}
 export declare class PollForJobsResponse extends SpeakeasyBase {
+    /**
+     * ActionTypeNotFoundException
+     */
     actionTypeNotFoundException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     pollForJobsOutput?: shared.PollForJobsOutput;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

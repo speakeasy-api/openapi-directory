@@ -1,13 +1,28 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { FileReference } from "./filereference";
 import { AppBundle } from "./appbundle";
+import { FileReference } from "./filereference";
 /**
  * A test of an Android Application with a Test Loop. The intent \ will be implicitly added, since Games is the only user of this api, for the time being.
-**/
+ */
 export declare class AndroidTestLoop extends SpeakeasyBase {
+    /**
+     * A reference to a file, used for user inputs.
+     */
     appApk?: FileReference;
+    /**
+     * An Android App Bundle file format, containing a BundleConfig.pb file, a base module directory, zero or more dynamic feature module directories. See https://developer.android.com/guide/app-bundle/build for guidance on building App Bundles.
+     */
     appBundle?: AppBundle;
+    /**
+     * The java package for the application under test. The default is determined by examining the application's manifest.
+     */
     appPackageId?: string;
+    /**
+     * The list of scenario labels that should be run during the test. The scenario labels should map to labels defined in the application's manifest. For example, player_experience and com.google.test.loops.player_experience add all of the loops labeled in the manifest with the com.google.test.loops.player_experience name to the execution. Scenarios can also be specified in the scenarios field.
+     */
     scenarioLabels?: string[];
+    /**
+     * The list of scenarios that should be run during the test. The default is all test loops, derived from the application's manifest.
+     */
     scenarios?: number[];
 }

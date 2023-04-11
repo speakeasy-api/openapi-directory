@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostRevokeDbSecurityGroupIngressActionEnum {
-    RevokeDbSecurityGroupIngress = "RevokeDBSecurityGroupIngress"
+import { AxiosResponse } from "axios";
+export declare enum POSTRevokeDBSecurityGroupIngressActionEnum {
+    RevokeDBSecurityGroupIngress = "RevokeDBSecurityGroupIngress"
 }
-export declare enum PostRevokeDbSecurityGroupIngressVersionEnum {
+export declare enum POSTRevokeDBSecurityGroupIngressVersionEnum {
     TwoThousandAndThirteen0909 = "2013-09-09"
 }
-export declare class PostRevokeDbSecurityGroupIngressQueryParams extends SpeakeasyBase {
-    action: PostRevokeDbSecurityGroupIngressActionEnum;
-    version: PostRevokeDbSecurityGroupIngressVersionEnum;
-}
-export declare class PostRevokeDbSecurityGroupIngressHeaders extends SpeakeasyBase {
+export declare class POSTRevokeDBSecurityGroupIngressRequest extends SpeakeasyBase {
+    action: POSTRevokeDBSecurityGroupIngressActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTRevokeDBSecurityGroupIngressVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostRevokeDbSecurityGroupIngressHeaders extends SpeakeasyBa
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostRevokeDbSecurityGroupIngressRequest extends SpeakeasyBase {
-    queryParams: PostRevokeDbSecurityGroupIngressQueryParams;
-    headers: PostRevokeDbSecurityGroupIngressHeaders;
-    request?: Uint8Array;
-}
-export declare class PostRevokeDbSecurityGroupIngressResponse extends SpeakeasyBase {
+export declare class POSTRevokeDBSecurityGroupIngressResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

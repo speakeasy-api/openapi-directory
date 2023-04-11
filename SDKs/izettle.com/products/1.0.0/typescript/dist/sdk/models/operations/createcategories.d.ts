@@ -1,18 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreateCategoriesPathParams extends SpeakeasyBase {
-    organizationUuid: string;
-}
+import { AxiosResponse } from "axios";
 export declare class CreateCategoriesSecurity extends SpeakeasyBase {
-    zettleApiKey?: shared.SchemeZettleApiKey;
-    zettleOauth?: shared.SchemeZettleOauth;
+    zettleOauth: string;
 }
 export declare class CreateCategoriesRequest extends SpeakeasyBase {
-    pathParams: CreateCategoriesPathParams;
-    request: shared.CategoryRequest;
-    security: CreateCategoriesSecurity;
+    createCategoriesRequest: shared.CreateCategoriesRequest;
+    organizationUuid: string;
 }
 export declare class CreateCategoriesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

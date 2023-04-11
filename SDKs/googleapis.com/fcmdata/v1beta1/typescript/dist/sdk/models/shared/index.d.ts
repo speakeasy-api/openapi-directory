@@ -6,5 +6,4 @@ export * from "./googlefirebasefcmdatav1beta1listandroiddeliverydataresponse";
 export * from "./googlefirebasefcmdatav1beta1messageinsightpercents";
 export * from "./googlefirebasefcmdatav1beta1messageoutcomepercents";
 export * from "./googletypedate";
-export * from "./security";
 export * from "./xgafvenum";

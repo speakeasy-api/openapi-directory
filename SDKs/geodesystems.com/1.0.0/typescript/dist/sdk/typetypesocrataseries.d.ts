@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Search API for 'SOCRATA Series' entry type
+ */
 export declare class TypeTypeSocrataSeries {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,10 @@ export declare class TypeTypeSocrataSeries {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * searchTypeSocrataSeries - Search API for 'SOCRATA Series' entry type
+     * Search API for 'SOCRATA Series' entry type
      *
+     * @remarks
      * API to search for entries of type SOCRATA Series
-    **/
+     */
     searchTypeSocrataSeries(req: operations.SearchTypeSocrataSeriesRequest, config?: AxiosRequestConfig): Promise<operations.SearchTypeSocrataSeriesResponse>;
 }

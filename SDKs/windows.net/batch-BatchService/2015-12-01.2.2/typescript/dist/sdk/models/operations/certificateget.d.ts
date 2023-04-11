@@ -1,27 +1,48 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CertificateGetPathParams extends SpeakeasyBase {
-    thumbprint: string;
-    thumbprintAlgorithm: string;
-}
-export declare class CertificateGetQueryParams extends SpeakeasyBase {
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class CertificateGetRequest extends SpeakeasyBase {
+    /**
+     * Sets an OData $select clause.
+     */
     dollarSelect?: string;
+    /**
+     * Client API Version.
+     */
     apiVersion: string;
+    /**
+     * Caller generated request identity, in the form of a GUID with no decoration such as curly braces e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
+     */
+    clientRequestId?: string;
+    /**
+     * The time the request was issued. If not specified, this header will be automatically populated with the current system clock time.
+     */
+    ocpDate?: string;
+    /**
+     * Specifies if the server should return the client-request-id identifier in the response.
+     */
+    returnClientRequestId?: boolean;
+    /**
+     * The thumbprint of the certificate to get.
+     */
+    thumbprint: string;
+    /**
+     * The algorithm used to derive the thumbprint parameter. This must be sha1.
+     */
+    thumbprintAlgorithm: string;
+    /**
+     * Sets the maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
+     */
     timeout?: number;
 }
-export declare class CertificateGetHeaders extends SpeakeasyBase {
-    clientRequestId?: string;
-    ocpDate?: string;
-    returnClientRequestId?: boolean;
-}
-export declare class CertificateGetRequest extends SpeakeasyBase {
-    pathParams: CertificateGetPathParams;
-    queryParams: CertificateGetQueryParams;
-    headers: CertificateGetHeaders;
-}
 export declare class CertificateGetResponse extends SpeakeasyBase {
-    batchError?: any;
-    certificate?: any;
+    /**
+     * Error from the Batch service
+     */
+    batchError?: shared.BatchError;
+    certificate?: shared.Certificate;
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

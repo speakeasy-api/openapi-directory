@@ -1,19 +1,19 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetActionNotificationExportResultsRequest, GetActionNotificationExportResultsResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetActionNotificationExportResultsRequest,
+  GetActionNotificationExportResultsResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetActionNotificationExportResultsRequest = {
-  queryParams: {
-    actionNotificationExportId: 8717895732742165505,
-    cursor: "voluptas",
-    perPage: 6050128673802995827,
-    userId: 501233450539197794,
-  },
+  actionNotificationExportId: 548814,
+  cursor: "provident",
+  perPage: 715190,
+  userId: 844266,
 };
 
 sdk.actionNotificationExportResults.getActionNotificationExportResults(req).then((res: GetActionNotificationExportResultsResponse | AxiosError) => {

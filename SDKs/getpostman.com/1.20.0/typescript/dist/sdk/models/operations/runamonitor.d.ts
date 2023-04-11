@@ -1,61 +1,62 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class RunAMonitorPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class RunAMonitorRequest extends SpeakeasyBase {
     monitorUid: string;
 }
-export declare class RunAMonitor200ApplicationJsonRunExecutionsItem extends SpeakeasyBase {
+export declare class RunAMonitor200ApplicationJSONRunExecutionsItem extends SpeakeasyBase {
     id?: string;
     name?: string;
 }
-export declare class RunAMonitor200ApplicationJsonRunExecutionsRequestBody extends SpeakeasyBase {
+export declare class RunAMonitor200ApplicationJSONRunExecutionsRequestBody extends SpeakeasyBase {
     contentLength?: number;
     mode?: string;
 }
-export declare class RunAMonitor200ApplicationJsonRunExecutionsRequestHeaders extends SpeakeasyBase {
+export declare class RunAMonitor200ApplicationJSONRunExecutionsRequestHeaders extends SpeakeasyBase {
     accept?: string;
     acceptEncoding?: string;
     contentLength?: number;
     contentType?: string;
 }
-export declare class RunAMonitor200ApplicationJsonRunExecutionsRequest extends SpeakeasyBase {
-    body?: RunAMonitor200ApplicationJsonRunExecutionsRequestBody;
-    headers?: RunAMonitor200ApplicationJsonRunExecutionsRequestHeaders;
+export declare class RunAMonitor200ApplicationJSONRunExecutionsRequest extends SpeakeasyBase {
+    body?: RunAMonitor200ApplicationJSONRunExecutionsRequestBody;
+    headers?: RunAMonitor200ApplicationJSONRunExecutionsRequestHeaders;
     method?: string;
     timestamp?: string;
     url?: string;
 }
-export declare class RunAMonitor200ApplicationJsonRunExecutionsResponseBody extends SpeakeasyBase {
+export declare class RunAMonitor200ApplicationJSONRunExecutionsResponseBody extends SpeakeasyBase {
     contentLength?: number;
 }
-export declare class RunAMonitor200ApplicationJsonRunExecutionsResponseHeaders extends SpeakeasyBase {
+export declare class RunAMonitor200ApplicationJSONRunExecutionsResponseHeaders extends SpeakeasyBase {
     connection?: string;
     contentEncoding?: string;
     contentType?: string;
     date?: string;
     transferEncoding?: string;
 }
-export declare class RunAMonitor200ApplicationJsonRunExecutionsResponse extends SpeakeasyBase {
-    body?: RunAMonitor200ApplicationJsonRunExecutionsResponseBody;
+export declare class RunAMonitor200ApplicationJSONRunExecutionsResponse extends SpeakeasyBase {
+    body?: RunAMonitor200ApplicationJSONRunExecutionsResponseBody;
     code?: number;
-    headers?: RunAMonitor200ApplicationJsonRunExecutionsResponseHeaders;
+    headers?: RunAMonitor200ApplicationJSONRunExecutionsResponseHeaders;
     responseSize?: number;
     responseTime?: number;
 }
-export declare class RunAMonitor200ApplicationJsonRunExecutions extends SpeakeasyBase {
+export declare class RunAMonitor200ApplicationJSONRunExecutions extends SpeakeasyBase {
     id?: number;
-    item?: RunAMonitor200ApplicationJsonRunExecutionsItem;
-    request?: RunAMonitor200ApplicationJsonRunExecutionsRequest;
-    response?: RunAMonitor200ApplicationJsonRunExecutionsResponse;
+    item?: RunAMonitor200ApplicationJSONRunExecutionsItem;
+    request?: RunAMonitor200ApplicationJSONRunExecutionsRequest;
+    response?: RunAMonitor200ApplicationJSONRunExecutionsResponse;
 }
-export declare class RunAMonitor200ApplicationJsonRunFailuresAssertion extends SpeakeasyBase {
+export declare class RunAMonitor200ApplicationJSONRunFailuresAssertion extends SpeakeasyBase {
     statusCodeIs400?: boolean;
 }
-export declare class RunAMonitor200ApplicationJsonRunFailures extends SpeakeasyBase {
-    assertion?: RunAMonitor200ApplicationJsonRunFailuresAssertion;
+export declare class RunAMonitor200ApplicationJSONRunFailures extends SpeakeasyBase {
+    assertion?: RunAMonitor200ApplicationJSONRunFailuresAssertion;
     executionId?: number;
     message?: string;
     name?: string;
 }
-export declare class RunAMonitor200ApplicationJsonRunInfo extends SpeakeasyBase {
+export declare class RunAMonitor200ApplicationJSONRunInfo extends SpeakeasyBase {
     collectionUid?: string;
     finishedAt?: string;
     jobId?: string;
@@ -64,32 +65,36 @@ export declare class RunAMonitor200ApplicationJsonRunInfo extends SpeakeasyBase 
     startedAt?: string;
     status?: string;
 }
-export declare class RunAMonitor200ApplicationJsonRunStatsAssertions extends SpeakeasyBase {
+export declare class RunAMonitor200ApplicationJSONRunStatsAssertions extends SpeakeasyBase {
     failed?: number;
     total?: number;
 }
-export declare class RunAMonitor200ApplicationJsonRunStatsRequests extends SpeakeasyBase {
+export declare class RunAMonitor200ApplicationJSONRunStatsRequests extends SpeakeasyBase {
     failed?: number;
     total?: number;
 }
-export declare class RunAMonitor200ApplicationJsonRunStats extends SpeakeasyBase {
-    assertions?: RunAMonitor200ApplicationJsonRunStatsAssertions;
-    requests?: RunAMonitor200ApplicationJsonRunStatsRequests;
+export declare class RunAMonitor200ApplicationJSONRunStats extends SpeakeasyBase {
+    assertions?: RunAMonitor200ApplicationJSONRunStatsAssertions;
+    requests?: RunAMonitor200ApplicationJSONRunStatsRequests;
 }
-export declare class RunAMonitor200ApplicationJsonRun extends SpeakeasyBase {
-    executions?: RunAMonitor200ApplicationJsonRunExecutions[];
-    failures?: RunAMonitor200ApplicationJsonRunFailures[];
-    info?: RunAMonitor200ApplicationJsonRunInfo;
-    stats?: RunAMonitor200ApplicationJsonRunStats;
+export declare class RunAMonitor200ApplicationJSONRun extends SpeakeasyBase {
+    executions?: RunAMonitor200ApplicationJSONRunExecutions[];
+    failures?: RunAMonitor200ApplicationJSONRunFailures[];
+    info?: RunAMonitor200ApplicationJSONRunInfo;
+    stats?: RunAMonitor200ApplicationJSONRunStats;
 }
-export declare class RunAMonitor200ApplicationJson extends SpeakeasyBase {
-    run?: RunAMonitor200ApplicationJsonRun;
-}
-export declare class RunAMonitorRequest extends SpeakeasyBase {
-    pathParams: RunAMonitorPathParams;
+/**
+ * Monitor Run with Errors
+ */
+export declare class RunAMonitor200ApplicationJSON extends SpeakeasyBase {
+    run?: RunAMonitor200ApplicationJSONRun;
 }
 export declare class RunAMonitorResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    runAMonitor200ApplicationJSONObject?: RunAMonitor200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Monitor Run with Errors
+     */
+    runAMonitor200ApplicationJSONObject?: RunAMonitor200ApplicationJSON;
 }

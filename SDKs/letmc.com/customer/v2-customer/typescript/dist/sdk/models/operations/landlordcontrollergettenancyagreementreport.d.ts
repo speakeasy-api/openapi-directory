@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class LandlordControllerGetTenancyAgreementReportPathParams extends SpeakeasyBase {
-    shortName: string;
-}
-export declare class LandlordControllerGetTenancyAgreementReportQueryParams extends SpeakeasyBase {
-    tenancyID: string;
-    token: string;
-}
+import { AxiosResponse } from "axios";
 export declare class LandlordControllerGetTenancyAgreementReportRequest extends SpeakeasyBase {
-    pathParams: LandlordControllerGetTenancyAgreementReportPathParams;
-    queryParams: LandlordControllerGetTenancyAgreementReportQueryParams;
+    /**
+     * The unique client short-name
+     */
+    shortName: string;
+    /**
+     * The Tenancy ID
+     */
+    tenancyID: string;
+    /**
+     * The login token returned from the /session POST call
+     */
+    token: string;
 }
 export declare class LandlordControllerGetTenancyAgreementReportResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
+    /**
+     * OK
+     */
     object?: Record<string, any>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

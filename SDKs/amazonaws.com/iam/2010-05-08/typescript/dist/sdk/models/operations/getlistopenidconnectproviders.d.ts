@@ -1,15 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetListOpenIdConnectProvidersActionEnum {
-    ListOpenIdConnectProviders = "ListOpenIDConnectProviders"
+import { AxiosResponse } from "axios";
+export declare enum GETListOpenIDConnectProvidersActionEnum {
+    ListOpenIDConnectProviders = "ListOpenIDConnectProviders"
 }
-export declare enum GetListOpenIdConnectProvidersVersionEnum {
+export declare enum GETListOpenIDConnectProvidersVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class GetListOpenIdConnectProvidersQueryParams extends SpeakeasyBase {
-    action: GetListOpenIdConnectProvidersActionEnum;
-    version: GetListOpenIdConnectProvidersVersionEnum;
-}
-export declare class GetListOpenIdConnectProvidersHeaders extends SpeakeasyBase {
+export declare class GETListOpenIDConnectProvidersRequest extends SpeakeasyBase {
+    action: GETListOpenIDConnectProvidersActionEnum;
+    version: GETListOpenIDConnectProvidersVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +17,9 @@ export declare class GetListOpenIdConnectProvidersHeaders extends SpeakeasyBase 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetListOpenIdConnectProvidersRequest extends SpeakeasyBase {
-    queryParams: GetListOpenIdConnectProvidersQueryParams;
-    headers: GetListOpenIdConnectProvidersHeaders;
-}
-export declare class GetListOpenIdConnectProvidersResponse extends SpeakeasyBase {
+export declare class GETListOpenIDConnectProvidersResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

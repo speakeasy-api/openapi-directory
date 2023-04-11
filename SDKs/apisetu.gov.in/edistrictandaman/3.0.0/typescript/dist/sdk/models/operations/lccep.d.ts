@@ -1,115 +1,170 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class LccepSecurity extends SpeakeasyBase {
+    apiKey: string;
+    clientId: string;
+}
 export declare class LccepRequestBodyCertificateParameters extends SpeakeasyBase {
+    /**
+     * Certificate Number
+     */
     certificateNumber: string;
 }
+/**
+ * The format of the certificate in response.
+ */
 export declare enum LccepRequestBodyFormatEnum {
     Pdf = "pdf"
 }
+/**
+ * Request format
+ */
 export declare class LccepRequestBody extends SpeakeasyBase {
     certificateParameters?: LccepRequestBodyCertificateParameters;
-    consentArtifact?: any;
+    consentArtifact?: shared.ConsentArtifactSchema;
+    /**
+     * The format of the certificate in response.
+     */
     format: LccepRequestBodyFormatEnum;
+    /**
+     * A unique transaction id for this request in UUID format. It is used for tracking the request.
+     */
     txnId: string;
 }
-export declare class LccepSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
-    clientId: shared.SchemeClientId;
+export declare enum Lccep504ApplicationJSONErrorEnum {
+    GatewayTimeout = "gateway_timeout"
 }
-export declare enum Lccep400ApplicationJsonErrorEnum {
+export declare enum Lccep504ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
+}
+/**
+ * Gateway timeout
+ */
+export declare class Lccep504ApplicationJSON extends SpeakeasyBase {
+    error?: Lccep504ApplicationJSONErrorEnum;
+    errorDescription?: Lccep504ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Lccep503ApplicationJSONErrorEnum {
+    ServiceUnavailable = "service_unavailable"
+}
+export declare enum Lccep503ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
+}
+/**
+ * Service unavailable
+ */
+export declare class Lccep503ApplicationJSON extends SpeakeasyBase {
+    error?: Lccep503ApplicationJSONErrorEnum;
+    errorDescription?: Lccep503ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Lccep502ApplicationJSONErrorEnum {
+    BadGatewy = "bad_gatewy"
+}
+export declare enum Lccep502ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
+}
+/**
+ * Bad gateway
+ */
+export declare class Lccep502ApplicationJSON extends SpeakeasyBase {
+    error?: Lccep502ApplicationJSONErrorEnum;
+    errorDescription?: Lccep502ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Lccep500ApplicationJSONErrorEnum {
+    InternalServerError = "internal_server_error"
+}
+export declare enum Lccep500ApplicationJSONErrorDescriptionEnum {
+    InternalServerError = "Internal server error"
+}
+/**
+ * Internal server error
+ */
+export declare class Lccep500ApplicationJSON extends SpeakeasyBase {
+    error?: Lccep500ApplicationJSONErrorEnum;
+    errorDescription?: Lccep500ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Lccep404ApplicationJSONErrorEnum {
+    RecordNotFound = "record_not_found",
+    UrlNotFound = "url_not_found"
+}
+export declare enum Lccep404ApplicationJSONErrorDescriptionEnum {
+    NoRecordFound = "No record found",
+    YourAPIUrlOrPathIsIncorrect = "Your API url or path is incorrect"
+}
+/**
+ * No record found
+ */
+export declare class Lccep404ApplicationJSON extends SpeakeasyBase {
+    error?: Lccep404ApplicationJSONErrorEnum;
+    errorDescription?: Lccep404ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Lccep401ApplicationJSONErrorEnum {
+    InvalidAuthentication = "invalid_authentication",
+    InvalidAuthorization = "invalid_authorization"
+}
+export declare enum Lccep401ApplicationJSONErrorDescriptionEnum {
+    AuthenticationFailed = "Authentication failed",
+    YouAreNotAuthorizedToUseThisAPI = "You are not authorized to use this API"
+}
+/**
+ * Unauthorized access
+ */
+export declare class Lccep401ApplicationJSON extends SpeakeasyBase {
+    error?: Lccep401ApplicationJSONErrorEnum;
+    errorDescription?: Lccep401ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Lccep400ApplicationJSONErrorEnum {
     MissingParameter = "missing_parameter",
     InvalidParameter = "invalid_parameter",
     InvalidFormat = "invalid_format",
     InvalidTxnid = "invalid_txnid",
     InvalidConsentid = "invalid_consentid"
 }
-export declare enum Lccep400ApplicationJsonErrorDescriptionEnum {
+export declare enum Lccep400ApplicationJSONErrorDescriptionEnum {
     PleaseProvideAllMandatoryParameters = "Please provide all mandatory parameters",
     BadRequest = "Bad request",
     TheFormatParameterIsInvalid = "The format parameter is invalid",
-    TheTxnIdParameterMustBeInUuidFormat = "The txnId parameter must be in UUID format",
-    TheConsentIdParameterMustBeInUuidFormat = "The consentId parameter must be in UUID format"
+    TheTxnIdParameterMustBeInUUIDFormat = "The txnId parameter must be in UUID format",
+    TheConsentIdParameterMustBeInUUIDFormat = "The consentId parameter must be in UUID format"
 }
-export declare class Lccep400ApplicationJson extends SpeakeasyBase {
-    error?: Lccep400ApplicationJsonErrorEnum;
-    errorDescription?: Lccep400ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Lccep401ApplicationJsonErrorEnum {
-    InvalidAuthentication = "invalid_authentication",
-    InvalidAuthorization = "invalid_authorization"
-}
-export declare enum Lccep401ApplicationJsonErrorDescriptionEnum {
-    AuthenticationFailed = "Authentication failed",
-    YouAreNotAuthorizedToUseThisApi = "You are not authorized to use this API"
-}
-export declare class Lccep401ApplicationJson extends SpeakeasyBase {
-    error?: Lccep401ApplicationJsonErrorEnum;
-    errorDescription?: Lccep401ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Lccep404ApplicationJsonErrorEnum {
-    RecordNotFound = "record_not_found",
-    UrlNotFound = "url_not_found"
-}
-export declare enum Lccep404ApplicationJsonErrorDescriptionEnum {
-    NoRecordFound = "No record found",
-    YourApiUrlOrPathIsIncorrect = "Your API url or path is incorrect"
-}
-export declare class Lccep404ApplicationJson extends SpeakeasyBase {
-    error?: Lccep404ApplicationJsonErrorEnum;
-    errorDescription?: Lccep404ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Lccep500ApplicationJsonErrorEnum {
-    InternalServerError = "internal_server_error"
-}
-export declare enum Lccep500ApplicationJsonErrorDescriptionEnum {
-    InternalServerError = "Internal server error"
-}
-export declare class Lccep500ApplicationJson extends SpeakeasyBase {
-    error?: Lccep500ApplicationJsonErrorEnum;
-    errorDescription?: Lccep500ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Lccep502ApplicationJsonErrorEnum {
-    BadGatewy = "bad_gatewy"
-}
-export declare enum Lccep502ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
-}
-export declare class Lccep502ApplicationJson extends SpeakeasyBase {
-    error?: Lccep502ApplicationJsonErrorEnum;
-    errorDescription?: Lccep502ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Lccep503ApplicationJsonErrorEnum {
-    ServiceUnavailable = "service_unavailable"
-}
-export declare enum Lccep503ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
-}
-export declare class Lccep503ApplicationJson extends SpeakeasyBase {
-    error?: Lccep503ApplicationJsonErrorEnum;
-    errorDescription?: Lccep503ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Lccep504ApplicationJsonErrorEnum {
-    GatewayTimeout = "gateway_timeout"
-}
-export declare enum Lccep504ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
-}
-export declare class Lccep504ApplicationJson extends SpeakeasyBase {
-    error?: Lccep504ApplicationJsonErrorEnum;
-    errorDescription?: Lccep504ApplicationJsonErrorDescriptionEnum;
-}
-export declare class LccepRequest extends SpeakeasyBase {
-    request?: LccepRequestBody;
-    security: LccepSecurity;
+/**
+ * Bad request
+ */
+export declare class Lccep400ApplicationJSON extends SpeakeasyBase {
+    error?: Lccep400ApplicationJSONErrorEnum;
+    errorDescription?: Lccep400ApplicationJSONErrorDescriptionEnum;
 }
 export declare class LccepResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    lccep400ApplicationJSONObject?: Lccep400ApplicationJson;
-    lccep401ApplicationJSONObject?: Lccep401ApplicationJson;
-    lccep404ApplicationJSONObject?: Lccep404ApplicationJson;
-    lccep500ApplicationJSONObject?: Lccep500ApplicationJson;
-    lccep502ApplicationJSONObject?: Lccep502ApplicationJson;
-    lccep503ApplicationJSONObject?: Lccep503ApplicationJson;
-    lccep504ApplicationJSONObject?: Lccep504ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad request
+     */
+    lccep400ApplicationJSONObject?: Lccep400ApplicationJSON;
+    /**
+     * Unauthorized access
+     */
+    lccep401ApplicationJSONObject?: Lccep401ApplicationJSON;
+    /**
+     * No record found
+     */
+    lccep404ApplicationJSONObject?: Lccep404ApplicationJSON;
+    /**
+     * Internal server error
+     */
+    lccep500ApplicationJSONObject?: Lccep500ApplicationJSON;
+    /**
+     * Bad gateway
+     */
+    lccep502ApplicationJSONObject?: Lccep502ApplicationJSON;
+    /**
+     * Service unavailable
+     */
+    lccep503ApplicationJSONObject?: Lccep503ApplicationJSON;
+    /**
+     * Gateway timeout
+     */
+    lccep504ApplicationJSONObject?: Lccep504ApplicationJSON;
 }

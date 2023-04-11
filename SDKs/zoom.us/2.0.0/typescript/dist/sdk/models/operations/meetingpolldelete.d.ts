@@ -1,17 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class MeetingPollDeletePathParams extends SpeakeasyBase {
-    meetingId: number;
-    pollId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class MeetingPollDeleteSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
+    oAuth: string;
 }
 export declare class MeetingPollDeleteRequest extends SpeakeasyBase {
-    pathParams: MeetingPollDeletePathParams;
-    security: MeetingPollDeleteSecurity;
+    /**
+     * The meeting ID in **long** format. The data type of this field is "long"(represented as int64 in JSON).
+     *
+     * @remarks
+     *
+     * While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
+     */
+    meetingId: number;
+    /**
+     * The poll ID
+     */
+    pollId: string;
 }
 export declare class MeetingPollDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

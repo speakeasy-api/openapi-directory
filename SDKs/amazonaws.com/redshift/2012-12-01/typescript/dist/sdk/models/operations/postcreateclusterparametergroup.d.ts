@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateClusterParameterGroupActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateClusterParameterGroupActionEnum {
     CreateClusterParameterGroup = "CreateClusterParameterGroup"
 }
-export declare enum PostCreateClusterParameterGroupVersionEnum {
+export declare enum POSTCreateClusterParameterGroupVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostCreateClusterParameterGroupQueryParams extends SpeakeasyBase {
-    action: PostCreateClusterParameterGroupActionEnum;
-    version: PostCreateClusterParameterGroupVersionEnum;
-}
-export declare class PostCreateClusterParameterGroupHeaders extends SpeakeasyBase {
+export declare class POSTCreateClusterParameterGroupRequest extends SpeakeasyBase {
+    action: POSTCreateClusterParameterGroupActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateClusterParameterGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateClusterParameterGroupHeaders extends SpeakeasyBas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateClusterParameterGroupRequest extends SpeakeasyBase {
-    queryParams: PostCreateClusterParameterGroupQueryParams;
-    headers: PostCreateClusterParameterGroupHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateClusterParameterGroupResponse extends SpeakeasyBase {
+export declare class POSTCreateClusterParameterGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,21 +1,21 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { PremiumNewsRequest, PremiumNewsResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  PremiumNewsRequest,
+  PremiumNewsResponse,
+  PremiumNewsFormatEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    apiKeyHeader: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: PremiumNewsRequest = {
-  pathParams: {
-    format: "xml",
+    apiKeyHeader: "YOUR_API_KEY_HERE",
   },
+});
+
+const req: PremiumNewsRequest = {
+  format: PremiumNewsFormatEnum.Json,
 };
 
 sdk.premiumNews(req).then((res: PremiumNewsResponse | AxiosError) => {

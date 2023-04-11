@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateRoleActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateRoleActionEnum {
     CreateRole = "CreateRole"
 }
-export declare enum PostCreateRoleVersionEnum {
+export declare enum POSTCreateRoleVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostCreateRoleQueryParams extends SpeakeasyBase {
-    action: PostCreateRoleActionEnum;
-    version: PostCreateRoleVersionEnum;
-}
-export declare class PostCreateRoleHeaders extends SpeakeasyBase {
+export declare class POSTCreateRoleRequest extends SpeakeasyBase {
+    action: POSTCreateRoleActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateRoleVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateRoleHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateRoleRequest extends SpeakeasyBase {
-    queryParams: PostCreateRoleQueryParams;
-    headers: PostCreateRoleHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateRoleResponse extends SpeakeasyBase {
+export declare class POSTCreateRoleResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

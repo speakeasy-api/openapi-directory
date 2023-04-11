@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DcimPowerPortTemplatesUpdatePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DcimPowerPortTemplatesUpdateRequest extends SpeakeasyBase {
-    pathParams: DcimPowerPortTemplatesUpdatePathParams;
-    request: shared.WritablePowerPortTemplateInput;
+    writablePowerPortTemplateInput: shared.WritablePowerPortTemplateInput;
+    /**
+     * A unique integer value identifying this power port template.
+     */
+    id: number;
 }
 export declare class DcimPowerPortTemplatesUpdateResponse extends SpeakeasyBase {
     contentType: string;
     powerPortTemplate?: shared.PowerPortTemplate;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,12 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CertificateVerifydomaincontrolPathParams extends SpeakeasyBase {
-    certificateId: string;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class CertificateVerifydomaincontrolRequest extends SpeakeasyBase {
-    pathParams: CertificateVerifydomaincontrolPathParams;
+    /**
+     * Certificate id to lookup
+     */
+    certificateId: string;
 }
 export declare class CertificateVerifydomaincontrolResponse extends SpeakeasyBase {
     contentType: string;
-    error?: any;
+    /**
+     * Request was malformed
+     */
+    error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

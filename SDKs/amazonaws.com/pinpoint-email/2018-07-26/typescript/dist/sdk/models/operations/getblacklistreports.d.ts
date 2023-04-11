@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetBlacklistReportsQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetBlacklistReportsRequest extends SpeakeasyBase {
+    /**
+     * A list of IP addresses that you want to retrieve blacklist information about. You can only specify the dedicated IP addresses that you use to send email using Amazon Pinpoint or Amazon SES.
+     */
     blacklistItemNames: string[];
-}
-export declare class GetBlacklistReportsHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,15 +14,24 @@ export declare class GetBlacklistReportsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetBlacklistReportsRequest extends SpeakeasyBase {
-    queryParams: GetBlacklistReportsQueryParams;
-    headers: GetBlacklistReportsHeaders;
-}
 export declare class GetBlacklistReportsResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getBlacklistReportsResponse?: shared.GetBlacklistReportsResponse;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

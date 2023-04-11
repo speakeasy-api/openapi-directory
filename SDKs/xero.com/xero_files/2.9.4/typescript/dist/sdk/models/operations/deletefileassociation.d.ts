@@ -1,21 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class DeleteFileAssociationPathParams extends SpeakeasyBase {
-    fileId: string;
-    objectId: string;
-}
-export declare class DeleteFileAssociationHeaders extends SpeakeasyBase {
-    xeroTenantId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteFileAssociationSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class DeleteFileAssociationRequest extends SpeakeasyBase {
-    pathParams: DeleteFileAssociationPathParams;
-    headers: DeleteFileAssociationHeaders;
-    security: DeleteFileAssociationSecurity;
+    /**
+     * File id for single object
+     */
+    fileId: string;
+    /**
+     * Object id for single object
+     */
+    objectId: string;
+    /**
+     * Xero identifier for Tenant
+     */
+    xeroTenantId: string;
 }
 export declare class DeleteFileAssociationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

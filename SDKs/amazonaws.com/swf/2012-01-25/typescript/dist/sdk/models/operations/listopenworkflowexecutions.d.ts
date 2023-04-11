@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListOpenWorkflowExecutionsQueryParams extends SpeakeasyBase {
-    maximumPageSize?: string;
-    nextPageToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListOpenWorkflowExecutionsXAmzTargetEnum {
     SimpleWorkflowServiceListOpenWorkflowExecutions = "SimpleWorkflowService.ListOpenWorkflowExecutions"
 }
-export declare class ListOpenWorkflowExecutionsHeaders extends SpeakeasyBase {
+export declare class ListOpenWorkflowExecutionsRequest extends SpeakeasyBase {
+    listOpenWorkflowExecutionsInput: shared.ListOpenWorkflowExecutionsInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,16 +14,29 @@ export declare class ListOpenWorkflowExecutionsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: ListOpenWorkflowExecutionsXAmzTargetEnum;
-}
-export declare class ListOpenWorkflowExecutionsRequest extends SpeakeasyBase {
-    queryParams: ListOpenWorkflowExecutionsQueryParams;
-    headers: ListOpenWorkflowExecutionsHeaders;
-    request: shared.ListOpenWorkflowExecutionsInput;
+    /**
+     * Pagination limit
+     */
+    maximumPageSize?: string;
+    /**
+     * Pagination token
+     */
+    nextPageToken?: string;
 }
 export declare class ListOpenWorkflowExecutionsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * OperationNotPermittedFault
+     */
     operationNotPermittedFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnknownResourceFault
+     */
     unknownResourceFault?: any;
+    /**
+     * Success
+     */
     workflowExecutionInfos?: shared.WorkflowExecutionInfos;
 }

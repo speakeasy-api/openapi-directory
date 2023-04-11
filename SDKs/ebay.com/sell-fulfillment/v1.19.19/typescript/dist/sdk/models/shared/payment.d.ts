@@ -1,0 +1,32 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { Amount } from "./amount";
+import { PaymentHold } from "./paymenthold";
+/**
+ * This type is used to provide details about the seller payments for an order.
+ */
+export declare class Payment extends SpeakeasyBase {
+    /**
+     * This type defines the monetary value of an amount. It can provide the amount in both the currency used on the eBay site where an item is being offered and the conversion of that value into another currency, if applicable.
+     */
+    amount?: Amount;
+    /**
+     * The date and time that the payment was received by the seller. This field will not be returned if buyer has yet to pay for the order. This timestamp is in ISO 8601 format, which uses the 24-hour Universal Coordinated Time (UTC) clock. <br><br><b>Format:</b> <code>[YYYY]-[MM]-[DD]T[hh]:[mm]:[ss].[sss]Z</code> <br><b>Example:</b> <code>2015-08-04T19:09:02.768Z</code>
+     */
+    paymentDate?: string;
+    /**
+     * This container is only returned if eBay is temporarily holding the seller's funds for the order. If a payment hold has been placed on the order, this container includes the reason for the payment hold, the expected release date of the funds into the seller's account, the current state of the hold, and as soon as the payment hold has been released, the actual release date.
+     */
+    paymentHolds?: PaymentHold[];
+    /**
+     * The payment method used to pay for the order. See the <strong>PaymentMethodTypeEnum</strong> type for more information on the payment methods. For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/fulfillment/types/sel:PaymentMethodTypeEnum'>eBay API documentation</a>
+     */
+    paymentMethod?: string;
+    /**
+     * This field is only returned if payment has been made by the buyer, and the <strong>paymentMethod</strong> is <code>ESCROW</code>. This field contains a special ID for ESCROW.
+     */
+    paymentReferenceId?: string;
+    /**
+     * The enumeration value returned in this field indicates the status of the payment for the order. See the <strong>PaymentStatusEnum</strong> type definition for more information on the possible payment states. For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/fulfillment/types/sel:PaymentStatusEnum'>eBay API documentation</a>
+     */
+    paymentStatus?: string;
+}

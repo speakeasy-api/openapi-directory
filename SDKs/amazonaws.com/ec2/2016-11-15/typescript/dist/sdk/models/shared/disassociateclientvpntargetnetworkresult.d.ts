@@ -1,12 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
- * The current state of the target network association.
-**/
-export declare class DisassociateClientVpnTargetNetworkResultStatus extends SpeakeasyBase {
-    code?: Record<string, any>;
-    message?: Record<string, any>;
+ * The state of the target network association.
+ */
+export declare enum DisassociateClientVpnTargetNetworkResultStatusCodeEnum {
+    Associating = "associating",
+    Associated = "associated",
+    AssociationFailed = "association-failed",
+    Disassociating = "disassociating",
+    Disassociated = "disassociated"
 }
+/**
+ * The current state of the target network association.
+ */
+export declare class DisassociateClientVpnTargetNetworkResultStatus extends SpeakeasyBase {
+    code?: DisassociateClientVpnTargetNetworkResultStatusCodeEnum;
+    message?: string;
+}
+/**
+ * Success
+ */
 export declare class DisassociateClientVpnTargetNetworkResult extends SpeakeasyBase {
-    associationId?: Record<string, any>;
+    associationId?: string;
     status?: DisassociateClientVpnTargetNetworkResultStatus;
 }

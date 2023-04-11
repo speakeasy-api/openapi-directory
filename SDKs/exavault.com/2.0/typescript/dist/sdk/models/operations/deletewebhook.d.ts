@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteWebhookPathParams extends SpeakeasyBase {
-    id: number;
-}
-export declare class DeleteWebhookHeaders extends SpeakeasyBase {
-    evAccessToken: string;
-    evApiKey: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteWebhookRequest extends SpeakeasyBase {
-    pathParams: DeleteWebhookPathParams;
-    headers: DeleteWebhookHeaders;
+    /**
+     * Access token required to make the API call.
+     */
+    evAccessToken: string;
+    /**
+     * API key required to make the API call.
+     */
+    evApiKey: string;
+    /**
+     * Webhook endpoint ID
+     */
+    id: number;
 }
 export declare class DeleteWebhookResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Sucessful operation
+     */
     emptyResponse?: shared.EmptyResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

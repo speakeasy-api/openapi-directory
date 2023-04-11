@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCompleteMigrationActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCompleteMigrationActionEnum {
     CompleteMigration = "CompleteMigration"
 }
-export declare enum PostCompleteMigrationVersionEnum {
+export declare enum POSTCompleteMigrationVersionEnum {
     TwoThousandAndFifteen0202 = "2015-02-02"
 }
-export declare class PostCompleteMigrationQueryParams extends SpeakeasyBase {
-    action: PostCompleteMigrationActionEnum;
-    version: PostCompleteMigrationVersionEnum;
-}
-export declare class PostCompleteMigrationHeaders extends SpeakeasyBase {
+export declare class POSTCompleteMigrationRequest extends SpeakeasyBase {
+    action: POSTCompleteMigrationActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCompleteMigrationVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCompleteMigrationHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCompleteMigrationRequest extends SpeakeasyBase {
-    queryParams: PostCompleteMigrationQueryParams;
-    headers: PostCompleteMigrationHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCompleteMigrationResponse extends SpeakeasyBase {
+export declare class POSTCompleteMigrationResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum CreateClusterXAmzTargetEnum {
-    AwsieSnowballJobManagementServiceCreateCluster = "AWSIESnowballJobManagementService.CreateCluster"
+    AWSIESnowballJobManagementServiceCreateCluster = "AWSIESnowballJobManagementService.CreateCluster"
 }
-export declare class CreateClusterHeaders extends SpeakeasyBase {
+export declare class CreateClusterRequest extends SpeakeasyBase {
+    createClusterRequest: shared.CreateClusterRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class CreateClusterHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: CreateClusterXAmzTargetEnum;
 }
-export declare class CreateClusterRequest extends SpeakeasyBase {
-    headers: CreateClusterHeaders;
-    request: shared.CreateClusterRequest;
-}
 export declare class CreateClusterResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     createClusterResult?: shared.CreateClusterResult;
+    /**
+     * Ec2RequestFailedException
+     */
     ec2RequestFailedException?: any;
+    /**
+     * InvalidInputCombinationException
+     */
     invalidInputCombinationException?: any;
+    /**
+     * InvalidResourceException
+     */
     invalidResourceException?: any;
+    /**
+     * KMSRequestFailedException
+     */
     kmsRequestFailedException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

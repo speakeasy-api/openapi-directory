@@ -6,7 +6,7 @@ import { LoadBalancerState } from "./loadbalancerstate";
 import { LoadBalancerTypeEnumEnum } from "./loadbalancertypeenumenum";
 /**
  * Information about a load balancer.
-**/
+ */
 export declare class LoadBalancer extends SpeakeasyBase {
     availabilityZones?: AvailabilityZone[];
     canonicalHostedZoneId?: string;

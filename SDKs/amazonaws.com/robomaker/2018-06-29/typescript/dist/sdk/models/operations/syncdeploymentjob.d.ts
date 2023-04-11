@@ -1,6 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class SyncDeploymentJobHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class SyncDeploymentJobRequestBody extends SpeakeasyBase {
+    /**
+     * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request.
+     */
+    clientRequestToken: string;
+    /**
+     * The target fleet for the synchronization.
+     */
+    fleet: string;
+}
+export declare class SyncDeploymentJobRequest extends SpeakeasyBase {
+    requestBody: SyncDeploymentJobRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -9,23 +21,40 @@ export declare class SyncDeploymentJobHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class SyncDeploymentJobRequestBody extends SpeakeasyBase {
-    clientRequestToken: string;
-    fleet: string;
-}
-export declare class SyncDeploymentJobRequest extends SpeakeasyBase {
-    headers: SyncDeploymentJobHeaders;
-    request: SyncDeploymentJobRequestBody;
-}
 export declare class SyncDeploymentJobResponse extends SpeakeasyBase {
+    /**
+     * ConcurrentDeploymentException
+     */
     concurrentDeploymentException?: any;
     contentType: string;
+    /**
+     * IdempotentParameterMismatchException
+     */
     idempotentParameterMismatchException?: any;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * Success
+     */
     syncDeploymentJobResponse?: shared.SyncDeploymentJobResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

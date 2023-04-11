@@ -1,3 +1,6 @@
+/**
+ * Payment method
+ */
 export declare enum PaymentMethodEnum {
     Transfer = "Transfer",
     Debit = "Debit",

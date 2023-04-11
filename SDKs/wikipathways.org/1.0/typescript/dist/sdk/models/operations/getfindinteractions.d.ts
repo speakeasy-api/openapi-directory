@@ -1,4 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
 export declare enum GetFindInteractionsFormatEnum {
     Json = "json",
     Xml = "xml",
@@ -7,14 +8,15 @@ export declare enum GetFindInteractionsFormatEnum {
     Jpg = "jpg",
     Pdf = "pdf"
 }
-export declare class GetFindInteractionsQueryParams extends SpeakeasyBase {
-    format?: GetFindInteractionsFormatEnum;
-    query: string;
-}
 export declare class GetFindInteractionsRequest extends SpeakeasyBase {
-    queryParams: GetFindInteractionsQueryParams;
+    format?: GetFindInteractionsFormatEnum;
+    /**
+     * The name of an entity to find interactions for (e.g. 'P53')
+     */
+    query: string;
 }
 export declare class GetFindInteractionsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

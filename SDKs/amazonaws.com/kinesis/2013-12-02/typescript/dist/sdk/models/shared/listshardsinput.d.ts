@@ -5,6 +5,7 @@ export declare class ListShardsInput extends SpeakeasyBase {
     maxResults?: number;
     nextToken?: string;
     shardFilter?: ShardFilter;
+    streamARN?: string;
     streamCreationTimestamp?: Date;
     streamName?: string;
 }

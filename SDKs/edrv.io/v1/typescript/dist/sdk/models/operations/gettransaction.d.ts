@@ -1,22 +1,45 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetTransactionPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class GetTransactionQueryParams extends SpeakeasyBase {
-    includeChargestation?: boolean;
-    includeConnector?: boolean;
-    includeDriver?: boolean;
-    includeEvse?: boolean;
-    includeOrganization?: boolean;
-    includeRate?: boolean;
-    includeReservation?: boolean;
-    includeToken?: boolean;
-}
+import { AxiosResponse } from "axios";
 export declare class GetTransactionRequest extends SpeakeasyBase {
-    pathParams: GetTransactionPathParams;
-    queryParams: GetTransactionQueryParams;
+    /**
+     * The transaction id that needs to be fetched
+     */
+    id: string;
+    /**
+     * Populate chargestation
+     */
+    includeChargestation?: boolean;
+    /**
+     * Populate connector
+     */
+    includeConnector?: boolean;
+    /**
+     * Populate driver
+     */
+    includeDriver?: boolean;
+    /**
+     * Populate evse
+     */
+    includeEvse?: boolean;
+    /**
+     * Populate organization
+     */
+    includeOrganization?: boolean;
+    /**
+     * Populate rate
+     */
+    includeRate?: boolean;
+    /**
+     * Populate reservation
+     */
+    includeReservation?: boolean;
+    /**
+     * Populate token
+     */
+    includeToken?: boolean;
 }
 export declare class GetTransactionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

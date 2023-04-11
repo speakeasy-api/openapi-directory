@@ -1,0 +1,21 @@
+export declare enum DataSourceTypeEnum {
+    S3 = "S3",
+    Sharepoint = "SHAREPOINT",
+    Database = "DATABASE",
+    Salesforce = "SALESFORCE",
+    Onedrive = "ONEDRIVE",
+    Servicenow = "SERVICENOW",
+    Custom = "CUSTOM",
+    Confluence = "CONFLUENCE",
+    Googledrive = "GOOGLEDRIVE",
+    Webcrawler = "WEBCRAWLER",
+    Workdocs = "WORKDOCS",
+    Fsx = "FSX",
+    Slack = "SLACK",
+    Box = "BOX",
+    Quip = "QUIP",
+    Jira = "JIRA",
+    Github = "GITHUB",
+    Alfresco = "ALFRESCO",
+    Template = "TEMPLATE"
+}

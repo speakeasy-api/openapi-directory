@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeIdentityXAmzTargetEnum {
-    AwsCognitoIdentityServiceDescribeIdentity = "AWSCognitoIdentityService.DescribeIdentity"
+    AWSCognitoIdentityServiceDescribeIdentity = "AWSCognitoIdentityService.DescribeIdentity"
 }
-export declare class DescribeIdentityHeaders extends SpeakeasyBase {
+export declare class DescribeIdentityRequest extends SpeakeasyBase {
+    describeIdentityInput: shared.DescribeIdentityInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class DescribeIdentityHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeIdentityXAmzTargetEnum;
 }
-export declare class DescribeIdentityRequest extends SpeakeasyBase {
-    headers: DescribeIdentityHeaders;
-    request: shared.DescribeIdentityInput;
-}
 export declare class DescribeIdentityResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     identityDescription?: shared.IdentityDescription;
+    /**
+     * InternalErrorException
+     */
     internalErrorException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * NotAuthorizedException
+     */
     notAuthorizedException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

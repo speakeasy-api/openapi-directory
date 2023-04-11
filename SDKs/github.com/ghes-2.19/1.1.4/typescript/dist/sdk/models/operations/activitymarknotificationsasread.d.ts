@@ -1,18 +1,32 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class ActivityMarkNotificationsAsReadRequestBody extends SpeakeasyBase {
+    /**
+     * Describes the last point that notifications were checked.
+     */
     lastReadAt?: Date;
+    /**
+     * Whether the notification has been read.
+     */
     read?: boolean;
 }
-export declare class ActivityMarkNotificationsAsRead202ApplicationJson extends SpeakeasyBase {
+/**
+ * Response
+ */
+export declare class ActivityMarkNotificationsAsRead202ApplicationJSON extends SpeakeasyBase {
     message?: string;
-}
-export declare class ActivityMarkNotificationsAsReadRequest extends SpeakeasyBase {
-    request?: ActivityMarkNotificationsAsReadRequestBody;
 }
 export declare class ActivityMarkNotificationsAsReadResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    activityMarkNotificationsAsRead202ApplicationJSONObject?: ActivityMarkNotificationsAsRead202ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
+    activityMarkNotificationsAsRead202ApplicationJSONObject?: ActivityMarkNotificationsAsRead202ApplicationJSON;
+    /**
+     * Requires authentication
+     */
     basicError?: shared.BasicError;
 }

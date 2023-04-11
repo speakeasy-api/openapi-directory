@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Type of action
+ */
 export declare enum ActionEntityActionEnum {
     Create = "create",
     Read = "read",
@@ -20,6 +23,9 @@ export declare enum ActionEntityActionEnum {
     ApiKeyUpdate = "api_key_update",
     ApiKeyDestroy = "api_key_destroy"
 }
+/**
+ * Failure type.  If action was a user login or session failure, why did it fail?
+ */
 export declare enum ActionEntityFailureTypeEnum {
     ExpiredTrial = "expired_trial",
     AccountOverdue = "account_overdue",
@@ -44,6 +50,9 @@ export declare enum ActionEntityFailureTypeEnum {
     Disabled = "disabled",
     CountryMismatch = "country_mismatch"
 }
+/**
+ * Interface on which this action occurred.
+ */
 export declare enum ActionEntityInterfaceEnum {
     Web = "web",
     Ftp = "ftp",
@@ -56,23 +65,65 @@ export declare enum ActionEntityInterfaceEnum {
     Restapi = "restapi",
     Scim = "scim",
     Office = "office",
-    Mobile = "mobile"
+    Mobile = "mobile",
+    As2 = "as2",
+    InboundEmail = "inbound_email",
+    Remote = "remote"
 }
 /**
  * List site full action history.
-**/
+ */
 export declare class ActionEntity extends SpeakeasyBase {
+    /**
+     * Type of action
+     */
     action?: ActionEntityActionEnum;
+    /**
+     * The destination path for this action, if applicable
+     */
     destination?: string;
+    /**
+     * Friendly displayed output
+     */
     display?: string;
+    /**
+     * Failure type.  If action was a user login or session failure, why did it fail?
+     */
     failureType?: ActionEntityFailureTypeEnum;
+    /**
+     * Action ID
+     */
     id?: number;
+    /**
+     * Interface on which this action occurred.
+     */
     interface?: ActionEntityInterfaceEnum;
+    /**
+     * IP Address that performed this action
+     */
     ip?: string;
+    /**
+     * Path
+     */
     path?: string;
+    /**
+     * The source path for this action, if applicable
+     */
     source?: string;
-    targets?: string[];
+    /**
+     * Targets
+     */
+    targets?: Record<string, any>[];
+    /**
+     * User ID
+     */
     userId?: number;
+    /**
+     * Username
+     */
     username?: string;
+    /**
+     * Action occurrence date/time
+     */
     when?: Date;
 }

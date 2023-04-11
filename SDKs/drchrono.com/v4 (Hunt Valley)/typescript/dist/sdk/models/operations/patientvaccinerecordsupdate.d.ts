@@ -1,23 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class PatientVaccineRecordsUpdatePathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class PatientVaccineRecordsUpdateQueryParams extends SpeakeasyBase {
-    cvxCode?: string;
-    doctor?: number;
-    patient?: number;
-    since?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PatientVaccineRecordsUpdateSecurity extends SpeakeasyBase {
-    drchronoOauth2: shared.SchemeDrchronoOauth2;
+    drchronoOauth2: string;
 }
 export declare class PatientVaccineRecordsUpdateRequest extends SpeakeasyBase {
-    pathParams: PatientVaccineRecordsUpdatePathParams;
-    queryParams: PatientVaccineRecordsUpdateQueryParams;
-    security: PatientVaccineRecordsUpdateSecurity;
+    cvxCode?: string;
+    doctor?: number;
+    id: string;
+    patient?: number;
+    since?: string;
 }
 export declare class PatientVaccineRecordsUpdateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

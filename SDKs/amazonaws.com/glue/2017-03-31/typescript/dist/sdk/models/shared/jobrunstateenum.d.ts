@@ -5,5 +5,7 @@ export declare enum JobRunStateEnum {
     Stopped = "STOPPED",
     Succeeded = "SUCCEEDED",
     Failed = "FAILED",
-    Timeout = "TIMEOUT"
+    Timeout = "TIMEOUT",
+    Error = "ERROR",
+    Waiting = "WAITING"
 }

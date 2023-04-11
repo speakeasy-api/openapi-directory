@@ -5,10 +5,11 @@ import { LaunchTemplateSpecification } from "./launchtemplatespecification";
 import { MixedInstancesPolicy } from "./mixedinstancespolicy";
 import { SuspendedProcess } from "./suspendedprocess";
 import { TagDescription } from "./tagdescription";
+import { TrafficSourceIdentifier } from "./trafficsourceidentifier";
 import { WarmPoolConfiguration } from "./warmpoolconfiguration";
 /**
  * Describes an Auto Scaling group.
-**/
+ */
 export declare class AutoScalingGroup extends SpeakeasyBase {
     autoScalingGroupARN?: string;
     autoScalingGroupName: string;
@@ -17,7 +18,9 @@ export declare class AutoScalingGroup extends SpeakeasyBase {
     context?: string;
     createdTime: Date;
     defaultCooldown: number;
+    defaultInstanceWarmup?: number;
     desiredCapacity: number;
+    desiredCapacityType?: string;
     enabledMetrics?: EnabledMetric[];
     healthCheckGracePeriod?: number;
     healthCheckType: string;
@@ -38,6 +41,7 @@ export declare class AutoScalingGroup extends SpeakeasyBase {
     tags?: TagDescription[];
     targetGroupARNs?: string[];
     terminationPolicies?: string[];
+    trafficSources?: TrafficSourceIdentifier[];
     vpcZoneIdentifier?: string;
     warmPoolConfiguration?: WarmPoolConfiguration;
     warmPoolSize?: number;

@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * A structure that contains information about one version of a secret.
-**/
+ */
 export declare class SecretVersionsListEntry extends SpeakeasyBase {
     createdDate?: Date;
     kmsKeyIds?: string[];

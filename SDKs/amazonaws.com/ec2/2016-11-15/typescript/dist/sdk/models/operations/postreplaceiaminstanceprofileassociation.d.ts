@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostReplaceIamInstanceProfileAssociationActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTReplaceIamInstanceProfileAssociationActionEnum {
     ReplaceIamInstanceProfileAssociation = "ReplaceIamInstanceProfileAssociation"
 }
-export declare enum PostReplaceIamInstanceProfileAssociationVersionEnum {
+export declare enum POSTReplaceIamInstanceProfileAssociationVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostReplaceIamInstanceProfileAssociationQueryParams extends SpeakeasyBase {
-    action: PostReplaceIamInstanceProfileAssociationActionEnum;
-    version: PostReplaceIamInstanceProfileAssociationVersionEnum;
-}
-export declare class PostReplaceIamInstanceProfileAssociationHeaders extends SpeakeasyBase {
+export declare class POSTReplaceIamInstanceProfileAssociationRequest extends SpeakeasyBase {
+    action: POSTReplaceIamInstanceProfileAssociationActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTReplaceIamInstanceProfileAssociationVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostReplaceIamInstanceProfileAssociationHeaders extends Spe
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostReplaceIamInstanceProfileAssociationRequest extends SpeakeasyBase {
-    queryParams: PostReplaceIamInstanceProfileAssociationQueryParams;
-    headers: PostReplaceIamInstanceProfileAssociationHeaders;
-    request?: Uint8Array;
-}
-export declare class PostReplaceIamInstanceProfileAssociationResponse extends SpeakeasyBase {
+export declare class POSTReplaceIamInstanceProfileAssociationResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

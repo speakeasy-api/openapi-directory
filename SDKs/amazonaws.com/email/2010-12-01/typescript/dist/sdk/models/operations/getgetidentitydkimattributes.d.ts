@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetGetIdentityDkimAttributesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETGETIdentityDkimAttributesActionEnum {
     GetIdentityDkimAttributes = "GetIdentityDkimAttributes"
 }
-export declare enum GetGetIdentityDkimAttributesVersionEnum {
+export declare enum GETGETIdentityDkimAttributesVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetGetIdentityDkimAttributesQueryParams extends SpeakeasyBase {
-    action: GetGetIdentityDkimAttributesActionEnum;
+export declare class GETGETIdentityDkimAttributesRequest extends SpeakeasyBase {
+    action: GETGETIdentityDkimAttributesActionEnum;
+    /**
+     * A list of one or more verified identities - email addresses, domains, or both.
+     */
     identities: string[];
-    version: GetGetIdentityDkimAttributesVersionEnum;
-}
-export declare class GetGetIdentityDkimAttributesHeaders extends SpeakeasyBase {
+    version: GETGETIdentityDkimAttributesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetGetIdentityDkimAttributesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetGetIdentityDkimAttributesRequest extends SpeakeasyBase {
-    queryParams: GetGetIdentityDkimAttributesQueryParams;
-    headers: GetGetIdentityDkimAttributesHeaders;
-}
-export declare class GetGetIdentityDkimAttributesResponse extends SpeakeasyBase {
+export declare class GETGETIdentityDkimAttributesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

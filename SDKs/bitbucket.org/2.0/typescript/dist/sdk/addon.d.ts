@@ -1,5 +1,12 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * The addon resource is intended to use used by Bitbucket Cloud Connect
+ *
+ * @remarks
+ * Apps, and only supports JWT authentication.
+ *
+ */
 export declare class Addon {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +16,10 @@ export declare class Addon {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteAddon - Deletes the application for the user.
+     * Delete an app
+     *
+     * @remarks
+     * Deletes the application for the user.
      *
      * This endpoint is intended to be used by Bitbucket Connect apps
      * and only supports JWT authentication -- that is how Bitbucket
@@ -23,30 +33,45 @@ export declare class Addon {
      * $ curl -X DELETE https://api.bitbucket.org/2.0/addon \
      *   -H "Authorization: JWT <JWT Token>"
      * ```
-    **/
-    deleteAddon(req: operations.DeleteAddonRequest, config?: AxiosRequestConfig): Promise<operations.DeleteAddonResponse>;
+     */
+    deleteAddon(config?: AxiosRequestConfig): Promise<operations.DeleteAddonResponse>;
     /**
-     * deleteAddonLinkersLinkerKeyValues - Delete all [linker](/cloud/bitbucket/modules/linker/) values for the
+     * Delete all linker values
+     *
+     * @remarks
+     * Delete all [linker](/cloud/bitbucket/modules/linker/) values for the
      * specified linker of the authenticated application.
-    **/
-    deleteAddonLinkersLinkerKeyValues(req: operations.DeleteAddonLinkersLinkerKeyValuesRequest, config?: AxiosRequestConfig): Promise<operations.DeleteAddonLinkersLinkerKeyValuesResponse>;
+     */
+    deleteAddonLinkersLinkerKeyValues(req: operations.DeleteAddonLinkersLinkerKeyValuesRequest, security: operations.DeleteAddonLinkersLinkerKeyValuesSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteAddonLinkersLinkerKeyValuesResponse>;
     /**
-     * deleteAddonLinkersLinkerKeyValuesValueId - Delete a single [linker](/cloud/bitbucket/modules/linker/) value
+     * Delete a linker value
+     *
+     * @remarks
+     * Delete a single [linker](/cloud/bitbucket/modules/linker/) value
      * of the authenticated application.
-    **/
-    deleteAddonLinkersLinkerKeyValuesValueId(req: operations.DeleteAddonLinkersLinkerKeyValuesValueIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteAddonLinkersLinkerKeyValuesValueIdResponse>;
+     */
+    deleteAddonLinkersLinkerKeyValuesValueId(req: operations.DeleteAddonLinkersLinkerKeyValuesValueIdRequest, security: operations.DeleteAddonLinkersLinkerKeyValuesValueIdSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteAddonLinkersLinkerKeyValuesValueIdResponse>;
     /**
-     * getAddonLinkers - Gets a list of all [linkers](/cloud/bitbucket/modules/linker/)
+     * List linkers for an app
+     *
+     * @remarks
+     * Gets a list of all [linkers](/cloud/bitbucket/modules/linker/)
      * for the authenticated application.
-    **/
-    getAddonLinkers(req: operations.GetAddonLinkersRequest, config?: AxiosRequestConfig): Promise<operations.GetAddonLinkersResponse>;
+     */
+    getAddonLinkers(config?: AxiosRequestConfig): Promise<operations.GetAddonLinkersResponse>;
     /**
-     * getAddonLinkersLinkerKey - Gets a [linker](/cloud/bitbucket/modules/linker/) specified by `linker_key`
+     * Get a linker for an app
+     *
+     * @remarks
+     * Gets a [linker](/cloud/bitbucket/modules/linker/) specified by `linker_key`
      * for the authenticated application.
-    **/
-    getAddonLinkersLinkerKey(req: operations.GetAddonLinkersLinkerKeyRequest, config?: AxiosRequestConfig): Promise<operations.GetAddonLinkersLinkerKeyResponse>;
+     */
+    getAddonLinkersLinkerKey(req: operations.GetAddonLinkersLinkerKeyRequest, security: operations.GetAddonLinkersLinkerKeySecurity, config?: AxiosRequestConfig): Promise<operations.GetAddonLinkersLinkerKeyResponse>;
     /**
-     * getAddonLinkersLinkerKeyValues - Gets a list of all [linker](/cloud/bitbucket/modules/linker/) values for the
+     * List linker values for a linker
+     *
+     * @remarks
+     * Gets a list of all [linker](/cloud/bitbucket/modules/linker/) values for the
      * specified linker of the authenticated application.
      *
      * A linker value lets applications supply values to modify its regular expression.
@@ -55,15 +80,21 @@ export declare class Addon {
      * which will be translated to `([\w\-]+)`. A value must match this pattern.
      *
      * [Read more about linker values](/cloud/bitbucket/modules/linker/#usingthebitbucketapitosupplyvalues)
-    **/
-    getAddonLinkersLinkerKeyValues(req: operations.GetAddonLinkersLinkerKeyValuesRequest, config?: AxiosRequestConfig): Promise<operations.GetAddonLinkersLinkerKeyValuesResponse>;
+     */
+    getAddonLinkersLinkerKeyValues(req: operations.GetAddonLinkersLinkerKeyValuesRequest, security: operations.GetAddonLinkersLinkerKeyValuesSecurity, config?: AxiosRequestConfig): Promise<operations.GetAddonLinkersLinkerKeyValuesResponse>;
     /**
-     * getAddonLinkersLinkerKeyValuesValueId - Get a single [linker](/cloud/bitbucket/modules/linker/) value
+     * Get a linker value
+     *
+     * @remarks
+     * Get a single [linker](/cloud/bitbucket/modules/linker/) value
      * of the authenticated application.
-    **/
-    getAddonLinkersLinkerKeyValuesValueId(req: operations.GetAddonLinkersLinkerKeyValuesValueIdRequest, config?: AxiosRequestConfig): Promise<operations.GetAddonLinkersLinkerKeyValuesValueIdResponse>;
+     */
+    getAddonLinkersLinkerKeyValuesValueId(req: operations.GetAddonLinkersLinkerKeyValuesValueIdRequest, security: operations.GetAddonLinkersLinkerKeyValuesValueIdSecurity, config?: AxiosRequestConfig): Promise<operations.GetAddonLinkersLinkerKeyValuesValueIdResponse>;
     /**
-     * postAddonLinkersLinkerKeyValues - Creates a [linker](/cloud/bitbucket/modules/linker/) value for the specified
+     * Create a linker value
+     *
+     * @remarks
+     * Creates a [linker](/cloud/bitbucket/modules/linker/) value for the specified
      * linker of authenticated application.
      *
      * A linker value lets applications supply values to modify its regular expression.
@@ -72,21 +103,33 @@ export declare class Addon {
      * which will be translated to `([\w\-]+)`. A value must match this pattern.
      *
      * [Read more about linker values](/cloud/bitbucket/modules/linker/#usingthebitbucketapitosupplyvalues)
-    **/
-    postAddonLinkersLinkerKeyValues(req: operations.PostAddonLinkersLinkerKeyValuesRequest, config?: AxiosRequestConfig): Promise<operations.PostAddonLinkersLinkerKeyValuesResponse>;
+     */
+    postAddonLinkersLinkerKeyValues(req: operations.PostAddonLinkersLinkerKeyValuesRequest, security: operations.PostAddonLinkersLinkerKeyValuesSecurity, config?: AxiosRequestConfig): Promise<operations.PostAddonLinkersLinkerKeyValuesResponse>;
     /**
-     * putAddon - Updates the application installation for the user.
+     * Update an installed app
+     *
+     * @remarks
+     * Updates the application installation for the user.
      *
      * This endpoint is intended to be used by Bitbucket Connect apps
      * and only supports JWT authentication -- that is how Bitbucket
      * identifies the particular installation of the app. Developers
      * with applications registered in the "Develop Apps" section
-     * of Bitbucket Marketplace need not use this endpoint as
-     * updates for those applications can be sent out via the
-     * UI of that section.
+     * of Bitbucket need not use this endpoint as updates for those
+     * applications can be sent out via the UI of that section.
      *
-     * A new, valid descriptor must be provided in the body of the
-     * PUT request.
+     * Passing an empty body will update the installation using the
+     * existing descriptor URL.
+     *
+     * ```
+     * $ curl -X PUT https://api.bitbucket.org/2.0/addon \
+     *   -H "Authorization: JWT <JWT Token>" \
+     *   --header "Content-Type: application/json" \
+     *   --data '{}'
+     * ```
+     *
+     * The new `descriptor` for the installation can be also provided
+     * in the body directly.
      *
      * ```
      * $ curl -X PUT https://api.bitbucket.org/2.0/addon \
@@ -95,12 +138,31 @@ export declare class Addon {
      *   --data '{"descriptor": $NEW_DESCRIPTOR}'
      * ```
      *
+     * In both these modes the URL of the descriptor cannot be changed. To
+     * change the descriptor location and upgrade an installation
+     * the request must be made exclusively with a `descriptor_url`.
+     *
+     *  ```
+     * $ curl -X PUT https://api.bitbucket.org/2.0/addon \
+     *   -H "Authorization: JWT <JWT Token>" \
+     *   --header "Content-Type: application/json" \
+     *   --data '{"descriptor_url": $NEW_URL}'
+     * ```
+     *
+     * The `descriptor_url` must exactly match the marketplace registration
+     * that Atlassian has for the application. Contact your Atlassian
+     * developer advocate to update this registration. Once the registration
+     * has been updated you may call this resource for each installation.
+     *
      * Note that the scopes of the application cannot be increased
      * in the new descriptor nor reduced to none.
-    **/
-    putAddon(req: operations.PutAddonRequest, config?: AxiosRequestConfig): Promise<operations.PutAddonResponse>;
+     */
+    putAddon(config?: AxiosRequestConfig): Promise<operations.PutAddonResponse>;
     /**
-     * putAddonLinkersLinkerKeyValues - Bulk update [linker](/cloud/bitbucket/modules/linker/) values for the specified
+     * Update a linker value
+     *
+     * @remarks
+     * Bulk update [linker](/cloud/bitbucket/modules/linker/) values for the specified
      * linker of the authenticated application.
      *
      * A linker value lets applications supply values to modify its regular expression.
@@ -109,6 +171,6 @@ export declare class Addon {
      * which will be translated to `([\w\-]+)`. A value must match this pattern.
      *
      * [Read more about linker values](/cloud/bitbucket/modules/linker/#usingthebitbucketapitosupplyvalues)
-    **/
-    putAddonLinkersLinkerKeyValues(req: operations.PutAddonLinkersLinkerKeyValuesRequest, config?: AxiosRequestConfig): Promise<operations.PutAddonLinkersLinkerKeyValuesResponse>;
+     */
+    putAddonLinkersLinkerKeyValues(req: operations.PutAddonLinkersLinkerKeyValuesRequest, security: operations.PutAddonLinkersLinkerKeyValuesSecurity, config?: AxiosRequestConfig): Promise<operations.PutAddonLinkersLinkerKeyValuesResponse>;
 }

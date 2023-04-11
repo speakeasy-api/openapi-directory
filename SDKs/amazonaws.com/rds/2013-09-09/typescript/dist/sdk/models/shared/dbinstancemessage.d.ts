@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbInstanceList } from "./dbinstancelist";
-export declare class DbInstanceMessage extends SpeakeasyBase {
-    dbInstances?: DbInstanceList[];
+import { DBInstanceList } from "./dbinstancelist";
+/**
+ * Success
+ */
+export declare class DBInstanceMessage extends SpeakeasyBase {
+    dbInstances?: DBInstanceList[];
     marker?: string;
 }

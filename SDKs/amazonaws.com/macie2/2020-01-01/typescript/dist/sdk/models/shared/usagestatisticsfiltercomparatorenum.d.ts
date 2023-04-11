@@ -1,3 +1,6 @@
+/**
+ * The operator to use in a condition that filters the results of a query for Amazon Macie account quotas and usage data. Valid values are:
+ */
 export declare enum UsageStatisticsFilterComparatorEnum {
     Gt = "GT",
     Gte = "GTE",

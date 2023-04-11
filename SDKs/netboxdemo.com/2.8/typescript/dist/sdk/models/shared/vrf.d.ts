@@ -5,12 +5,18 @@ export declare class Vrf extends SpeakeasyBase {
     customFields?: Record<string, any>;
     description?: string;
     displayName?: string;
+    /**
+     * Prevent duplicate prefixes/IP addresses within this VRF
+     */
     enforceUnique?: boolean;
     id?: number;
     ipaddressCount?: number;
     lastUpdated?: Date;
     name: string;
     prefixCount?: number;
+    /**
+     * Unique route distinguisher (as defined in RFC 4364)
+     */
     rd?: string;
     tags?: string[];
     tenant?: NestedTenant;

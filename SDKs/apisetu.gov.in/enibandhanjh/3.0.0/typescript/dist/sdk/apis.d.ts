@@ -1,6 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class ApIs {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+export declare class APIs {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,21 +9,24 @@ export declare class ApIs {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * rdcer - Copy of Registered Deed
+     * Copy of Registered Deed
      *
+     * @remarks
      * API to verify Copy of Registered Deed.
-    **/
-    rdcer(req: operations.RdcerRequest, config?: AxiosRequestConfig): Promise<operations.RdcerResponse>;
+     */
+    rdcer(req: operations.RdcerRequestBody, security: operations.RdcerSecurity, config?: AxiosRequestConfig): Promise<operations.RdcerResponse>;
     /**
-     * regrii - ROR Register 2
+     * ROR Register 2
      *
+     * @remarks
      * API to verify ROR Register 2.
-    **/
-    regrii(req: operations.RegriiRequest, config?: AxiosRequestConfig): Promise<operations.RegriiResponse>;
+     */
+    regrii(req: operations.RegriiRequestBody, security: operations.RegriiSecurity, config?: AxiosRequestConfig): Promise<operations.RegriiResponse>;
     /**
-     * rmcer - Marriage Certificate
+     * Marriage Certificate
      *
+     * @remarks
      * API to verify Marriage Certificate.
-    **/
-    rmcer(req: operations.RmcerRequest, config?: AxiosRequestConfig): Promise<operations.RmcerResponse>;
+     */
+    rmcer(req: operations.RmcerRequestBody, security: operations.RmcerSecurity, config?: AxiosRequestConfig): Promise<operations.RmcerResponse>;
 }

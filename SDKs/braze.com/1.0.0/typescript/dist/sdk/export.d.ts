@@ -1,5 +1,14 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * With this collection of endpoints, you will be able to access and export various levels of details on your users, segments, campaigns, and Canvases.
+ *
+ * @remarks
+ *
+ * Please be sure to reference the correct Instance when making API requests.
+ *
+ *
+ */
 export declare class Export {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +18,9 @@ export declare class Export {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * appSessionsByTime - App Sessions by Time
+     * App Sessions by Time
      *
+     * @remarks
      * This endpoint allows you to retrieve a series of the number of sessions for your app over a designated time period.
      *
      * ### Components Used
@@ -32,11 +42,12 @@ export declare class Export {
      *     ]
      * }
      * ```
-    **/
+     */
     appSessionsByTime(req: operations.AppSessionsByTimeRequest, config?: AxiosRequestConfig): Promise<operations.AppSessionsByTimeResponse>;
     /**
-     * campaignAnalytics - Campaign Analytics
+     * Campaign Analytics
      *
+     * @remarks
      * This endpoint allows you to retrieve a daily series of various stats for a campaign over time. Data returned includes how many messages were sent, opened, clicked, converted, etc., broken down by message channel.
      *
      * ### Components Used
@@ -208,11 +219,12 @@ export declare class Export {
      * ```
      *
      * Possible message types are `email`, `in_app_message`, `webhook`, `android_push`, `apple_push`, `kindle_push`, `web_push`, `windows_phone8_push`, and `windows_universal_push`. All push message types will have the same statistics shown for `android_push` above.
-    **/
+     */
     campaignAnalytics(req: operations.CampaignAnalyticsRequest, config?: AxiosRequestConfig): Promise<operations.CampaignAnalyticsResponse>;
     /**
-     * campaignDetails - Campaign Details
+     * Campaign Details
      *
+     * @remarks
      * This endpoint allows you to retrieve relevant information on a specified campaign, which can be identified by the `campaign_id`.
      *
      * > The campaign_id for API campaigns can be found on the Developer Console page and the campaign details page within your dashboard or you can use the Campaign List Endpoint.
@@ -391,11 +403,12 @@ export declare class Export {
      *     "app_ids": (array|null) array of app ids, i.e. - ["12345", "67890"], or `null` if "Track sessions for any app" is selected in the UI
      * }
      * ```
-    **/
+     */
     campaignDetails(req: operations.CampaignDetailsRequest, config?: AxiosRequestConfig): Promise<operations.CampaignDetailsResponse>;
     /**
-     * campaignList - Campaign List
+     * Campaign List
      *
+     * @remarks
      * This endpoint allows you to export a list of campaigns, each of which will include its name, Campaign API Identifier, whether it is an API Campaign, and Tags associated with the campaign. The campaigns are returned in groups of 100 sorted by time of creation (oldest to newest by default).
      *
      * ## Campaign List Endpoint API Response
@@ -417,11 +430,12 @@ export declare class Export {
      *     ]
      * }
      * ```
-    **/
+     */
     campaignList(req: operations.CampaignListRequest, config?: AxiosRequestConfig): Promise<operations.CampaignListResponse>;
     /**
-     * canvasDataAnalyticsSummary - Canvas Data Analytics Summary
+     * Canvas Data Analytics Summary
      *
+     * @remarks
      * This endpoint allows you to export rollups of time series data for a Canvas, providing a concise summary of a Canvas' results.
      *
      * ### Components Used
@@ -475,11 +489,12 @@ export declare class Export {
      *   "message": (required, string) the status of the export, returns 'success' when completed without errors
      * }
      * ```
-    **/
+     */
     canvasDataAnalyticsSummary(req: operations.CanvasDataAnalyticsSummaryRequest, config?: AxiosRequestConfig): Promise<operations.CanvasDataAnalyticsSummaryResponse>;
     /**
-     * canvasDataSeriesAnalytics - Canvas Data Series Analytics
+     * Canvas Data Series Analytics
      *
+     * @remarks
      * This endpoint allows you to export time series data for a Canvas.
      *
      * ### Components Used
@@ -539,11 +554,12 @@ export declare class Export {
      *   "message": (required, string) the status of the export, returns 'success' when completed without errors
      * }
      * ```
-    **/
+     */
     canvasDataSeriesAnalytics(req: operations.CanvasDataSeriesAnalyticsRequest, config?: AxiosRequestConfig): Promise<operations.CanvasDataSeriesAnalyticsResponse>;
     /**
-     * canvasDetails - Canvas Details
+     * Canvas Details
      *
+     * @remarks
      * This endpoint allows you to export metadata about a Canvas, such as its name, when it was created, its current status, and more.
      *
      * ### Components Used
@@ -593,11 +609,12 @@ export declare class Export {
      *   "message": (required, string) the status of the export, returns 'success' when completed without errors
      * }
      * ```
-    **/
+     */
     canvasDetails(req: operations.CanvasDetailsRequest, config?: AxiosRequestConfig): Promise<operations.CanvasDetailsResponse>;
     /**
-     * canvasList - Canvas List
+     * Canvas List
      *
+     * @remarks
      * This endpoint allows you to export a list of Canvases, including the name, Canvas API Identifier and associated Tags. The Canvases are returned in groups of 100 sorted by time of creation (oldest to newest by default).
      *
      * > Archived Canvases will not be included in the API response unless the `include_archived` field is specified. Canvases that are stopped but not archived, however, will be returned by default.
@@ -621,11 +638,12 @@ export declare class Export {
      *   "message": (required, string) the status of the export, returns 'success' when completed without errors
      * }
      * ```
-    **/
+     */
     canvasList(req: operations.CanvasListRequest, config?: AxiosRequestConfig): Promise<operations.CanvasListResponse>;
     /**
-     * customEventsAnalytics - Custom Events Analytics
+     * Custom Events Analytics
      *
+     * @remarks
      * This endpoint allows you to retrieve a series of the number of occurrences of a custom event in your app over a designated time period.
      *
      * ### Components Used
@@ -658,11 +676,12 @@ export declare class Export {
      * | 401 Unauthorized | Unknown or missing REST API Key                                  |
      * | 429 Rate Limited | Over rate limit                                                  |
      * | 5XX              | Internal server error, you should retry with exponential backoff |
-    **/
+     */
     customEventsAnalytics(req: operations.CustomEventsAnalyticsRequest, config?: AxiosRequestConfig): Promise<operations.CustomEventsAnalyticsResponse>;
     /**
-     * customEventsList - Custom Events List
+     * Custom Events List
      *
+     * @remarks
      * This endpoint allows you to export a list of custom events that have been recorded for your app. The event names are returned in groups of 250, sorted alphabetically.
      *
      *
@@ -692,11 +711,12 @@ export declare class Export {
      * | 401 Unauthorized | Unknown or missing REST API Key                                  |
      * | 429 Rate Limited | Over rate limit                                                  |
      * | 5XX              | Internal server error, you should retry with exponential backoff |
-    **/
+     */
     customEventsList(req: operations.CustomEventsListRequest, config?: AxiosRequestConfig): Promise<operations.CustomEventsListResponse>;
     /**
-     * dailyActiveUsersByDate - Daily Active Users by Date
+     * Daily Active Users by Date
      *
+     * @remarks
      * This endpoint allows you to retrieve a daily series of the total number of unique active users on each date.
      *
      *
@@ -716,11 +736,12 @@ export declare class Export {
      *     ]
      * }
      * ```
-    **/
+     */
     dailyActiveUsersByDate(req: operations.DailyActiveUsersByDateRequest, config?: AxiosRequestConfig): Promise<operations.DailyActiveUsersByDateResponse>;
     /**
-     * dailyNewUsersByDate - Daily New Users by Date
+     * Daily New Users by Date
      *
+     * @remarks
      * This endpoint allows you to retrieve a daily series of the total number of new users on each date.
      *
      *
@@ -740,11 +761,12 @@ export declare class Export {
      *     ]
      * }
      * ```
-    **/
+     */
     dailyNewUsersByDate(req: operations.DailyNewUsersByDateRequest, config?: AxiosRequestConfig): Promise<operations.DailyNewUsersByDateResponse>;
     /**
-     * kpIsForDailyAppUninstallsByDate - KPIs for Daily App Uninstalls by Date
+     * KPIs for Daily App Uninstalls by Date
      *
+     * @remarks
      * This endpoint allows you to retrieve a daily series of the total number of uninstalls on each date.
      *
      * ## Response
@@ -763,11 +785,12 @@ export declare class Export {
      *     ]
      * }
      * ```
-    **/
+     */
     kpIsForDailyAppUninstallsByDate(req: operations.KpIsForDailyAppUninstallsByDateRequest, config?: AxiosRequestConfig): Promise<operations.KpIsForDailyAppUninstallsByDateResponse>;
     /**
-     * monthlyActiveUsersForLast30Days - Monthly Active Users for Last 30 Days
+     * Monthly Active Users for Last 30 Days
      *
+     * @remarks
      * This endpoint allows you to retrieve a daily series of the total number of unique active users over a 30-day rolling window.
      *
      * ## Response
@@ -786,11 +809,12 @@ export declare class Export {
      *     ]
      * }
      * ```
-    **/
+     */
     monthlyActiveUsersForLast30Days(req: operations.MonthlyActiveUsersForLast30DaysRequest, config?: AxiosRequestConfig): Promise<operations.MonthlyActiveUsersForLast30DaysResponse>;
     /**
-     * newsFeedCardAnalytics - News Feed Card Analytics
+     * News Feed Card Analytics
      *
+     * @remarks
      * This endpoint allows you to retrieve a daily series of engagement stats for a card over time.
      *
      * ### Components Used
@@ -816,11 +840,12 @@ export declare class Export {
      *     ]
      * }
      * ```
-    **/
+     */
     newsFeedCardAnalytics(req: operations.NewsFeedCardAnalyticsRequest, config?: AxiosRequestConfig): Promise<operations.NewsFeedCardAnalyticsResponse>;
     /**
-     * newsFeedCardsDetails - News Feed Cards Details
+     * News Feed Cards Details
      *
+     * @remarks
      * This endpoint allows you to retrieve relevant information on the card, which can be identified by the `card_id`.
      *
      * ### Components Used
@@ -849,11 +874,12 @@ export declare class Export {
      *     "draft": (boolean) whether this Card is a draft,
      * }
      * ```
-    **/
+     */
     newsFeedCardsDetails(req: operations.NewsFeedCardsDetailsRequest, config?: AxiosRequestConfig): Promise<operations.NewsFeedCardsDetailsResponse>;
     /**
-     * newsFeedCardsList - News Feed Cards List
+     * News Feed Cards List
      *
+     * @remarks
      * This endpoint allows you to export a list of News Feed cards, each of which will include its name and Card API Identifier. The cards are returned in groups of 100 sorted by time of creation (oldest to newest by default).
      *
      *
@@ -875,11 +901,12 @@ export declare class Export {
      *     ]
      * }
      * ```
-    **/
+     */
     newsFeedCardsList(req: operations.NewsFeedCardsListRequest, config?: AxiosRequestConfig): Promise<operations.NewsFeedCardsListResponse>;
     /**
-     * segmentAnalytics - Segment Analytics
+     * Segment Analytics
      *
+     * @remarks
      * This endpoint allows you to retrieve a daily series of the size of a segment over time for a segment.
      *
      * ### Request Components
@@ -901,11 +928,12 @@ export declare class Export {
      *     ]
      * }
      * ```
-    **/
+     */
     segmentAnalytics(req: operations.SegmentAnalyticsRequest, config?: AxiosRequestConfig): Promise<operations.SegmentAnalyticsResponse>;
     /**
-     * segmentDetails - Segment Details
+     * Segment Details
      *
+     * @remarks
      * This endpoint allows you to retrieve relevant information on the segment, which can be identified by the `segment_id`.
      *
      * ### Request Components
@@ -926,11 +954,12 @@ export declare class Export {
      *       "tags" : (array) tag names associated with the segment
      * }
      * ```
-    **/
+     */
     segmentDetails(req: operations.SegmentDetailsRequest, config?: AxiosRequestConfig): Promise<operations.SegmentDetailsResponse>;
     /**
-     * segmentList - Segment List
+     * Segment List
      *
+     * @remarks
      * This endpoint allows you to export a list of segments, each of which will include its name, Segment API Identifier, and whether it has analytics tracking enabled. The segments are returned in groups of 100 sorted by time of creation (oldest to newest by default). Archived segments are not included.
      *
      * ### Request Components
@@ -955,11 +984,12 @@ export declare class Export {
      *     ]
      * }
      * ```
-    **/
+     */
     segmentList(req: operations.SegmentListRequest, config?: AxiosRequestConfig): Promise<operations.SegmentListResponse>;
     /**
-     * sendAnalytics - Send Analytics
+     * Send Analytics
      *
+     * @remarks
      * This endpoint allows you to retrieve a daily series of various stats for a tracked `send_id`. Braze stores send analytics for 14 days after the send.
      *
      * Campaign conversions will be attributed towards the most recent send id that a given user has received from the campaign.
@@ -1012,6 +1042,6 @@ export declare class Export {
      *   "message": "success"
      * }
      * ```
-    **/
+     */
     sendAnalytics(req: operations.SendAnalyticsRequest, config?: AxiosRequestConfig): Promise<operations.SendAnalyticsResponse>;
 }

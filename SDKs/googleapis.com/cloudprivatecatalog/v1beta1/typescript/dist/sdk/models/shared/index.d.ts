@@ -5,5 +5,4 @@ export * from "./googlecloudprivatecatalogv1beta1searchcatalogsresponse";
 export * from "./googlecloudprivatecatalogv1beta1searchproductsresponse";
 export * from "./googlecloudprivatecatalogv1beta1searchversionsresponse";
 export * from "./googlecloudprivatecatalogv1beta1version";
-export * from "./security";
 export * from "./xgafvenum";

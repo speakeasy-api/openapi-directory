@@ -1,10 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class RemoveNotificationChannelPathParams extends SpeakeasyBase {
-    channelId: string;
-    profilingGroupName: string;
-}
-export declare class RemoveNotificationChannelHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class RemoveNotificationChannelRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,17 +9,37 @@ export declare class RemoveNotificationChannelHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class RemoveNotificationChannelRequest extends SpeakeasyBase {
-    pathParams: RemoveNotificationChannelPathParams;
-    headers: RemoveNotificationChannelHeaders;
+    /**
+     * The id of the channel that we want to stop receiving notifications.
+     */
+    channelId: string;
+    /**
+     * The name of the profiling group we want to change notification configuration for.
+     */
+    profilingGroupName: string;
 }
 export declare class RemoveNotificationChannelResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * Success
+     */
     removeNotificationChannelResponse?: shared.RemoveNotificationChannelResponse;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

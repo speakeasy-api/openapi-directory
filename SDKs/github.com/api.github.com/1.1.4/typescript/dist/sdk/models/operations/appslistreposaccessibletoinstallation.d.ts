@@ -1,21 +1,35 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AppsListReposAccessibleToInstallationQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class AppsListReposAccessibleToInstallationRequest extends SpeakeasyBase {
+    /**
+     * Page number of the results to fetch.
+     */
     page?: number;
+    /**
+     * The number of results per page (max 100).
+     */
     perPage?: number;
 }
-export declare class AppsListReposAccessibleToInstallation200ApplicationJson extends SpeakeasyBase {
+/**
+ * Response
+ */
+export declare class AppsListReposAccessibleToInstallation200ApplicationJSON extends SpeakeasyBase {
     repositories: shared.Repository[];
     repositorySelection?: string;
     totalCount: number;
 }
-export declare class AppsListReposAccessibleToInstallationRequest extends SpeakeasyBase {
-    queryParams: AppsListReposAccessibleToInstallationQueryParams;
-}
 export declare class AppsListReposAccessibleToInstallationResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
-    appsListReposAccessibleToInstallation200ApplicationJSONObject?: AppsListReposAccessibleToInstallation200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
+    appsListReposAccessibleToInstallation200ApplicationJSONObject?: AppsListReposAccessibleToInstallation200ApplicationJSON;
+    /**
+     * Requires authentication
+     */
     basicError?: shared.BasicError;
 }

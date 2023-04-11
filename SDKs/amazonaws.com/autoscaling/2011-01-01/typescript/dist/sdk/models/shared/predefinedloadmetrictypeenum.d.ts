@@ -1,6 +1,6 @@
 export declare enum PredefinedLoadMetricTypeEnum {
-    AsgTotalCpuUtilization = "ASGTotalCPUUtilization",
-    AsgTotalNetworkIn = "ASGTotalNetworkIn",
-    AsgTotalNetworkOut = "ASGTotalNetworkOut",
-    AlbTargetGroupRequestCount = "ALBTargetGroupRequestCount"
+    ASGTotalCPUUtilization = "ASGTotalCPUUtilization",
+    ASGTotalNetworkIn = "ASGTotalNetworkIn",
+    ASGTotalNetworkOut = "ASGTotalNetworkOut",
+    ALBTargetGroupRequestCount = "ALBTargetGroupRequestCount"
 }

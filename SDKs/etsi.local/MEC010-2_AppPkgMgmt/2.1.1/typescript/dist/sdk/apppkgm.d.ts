@@ -1,5 +1,9 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * App Package management
+ */
 export declare class AppPkgm {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,93 +13,108 @@ export declare class AppPkgm {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * appDget - Reads the content of the AppD of on-boarded individual application package resources.
-     *
      * Reads the content of the AppD of on-boarded individual application package resources.
-    **/
-    appDget(req: operations.AppDgetRequest, config?: AxiosRequestConfig): Promise<operations.AppDgetResponse>;
-    /**
-     * appDIdGet - Fetch the onboarded application package content identified by appPkgId or appDId.
      *
-     * Fetch the onboarded application package content identified by appPkgId or appDId.
-    **/
-    appDIdGet(req: operations.AppDIdGetRequest, config?: AxiosRequestConfig): Promise<operations.AppDIdGetResponse>;
-    /**
-     * appDIdPut - Uploads the content of application package.
-     *
-     * Uploads the content of application package.
-    **/
-    appDIdPut(req: operations.AppDIdPutRequest, config?: AxiosRequestConfig): Promise<operations.AppDIdPutResponse>;
-    /**
-     * appPkgGet - Fetch the onboarded application package content identified by appPkgId or appDId.
-     *
-     * Fetch the onboarded application package content identified by appPkgId or appDId.
-    **/
-    appPkgGet(req: operations.AppPkgGetRequest, config?: AxiosRequestConfig): Promise<operations.AppPkgGetResponse>;
-    /**
-     * appPkgIdGet - Reads the content of the AppD of on-boarded individual application package resources.
-     *
+     * @remarks
      * Reads the content of the AppD of on-boarded individual application package resources.
-    **/
-    appPkgIdGet(req: operations.AppPkgIdGetRequest, config?: AxiosRequestConfig): Promise<operations.AppPkgIdGetResponse>;
+     */
+    appDGET(req: operations.AppDGETRequest, config?: AxiosRequestConfig): Promise<operations.AppDGETResponse>;
     /**
-     * appPkgPut - Uploads the content of application package.
+     * Fetch the onboarded application package content identified by appPkgId or appDId.
      *
+     * @remarks
+     * Fetch the onboarded application package content identified by appPkgId or appDId.
+     */
+    appDIdGET(req: operations.AppDIdGETRequest, config?: AxiosRequestConfig): Promise<operations.AppDIdGETResponse>;
+    /**
      * Uploads the content of application package.
-    **/
-    appPkgPut(req: operations.AppPkgPutRequest, config?: AxiosRequestConfig): Promise<operations.AppPkgPutResponse>;
-    /**
-     * appPackageDelete - Deletes an individual application package resources
      *
+     * @remarks
+     * Uploads the content of application package.
+     */
+    appDIdPUT(req: operations.AppDIdPUTRequest, config?: AxiosRequestConfig): Promise<operations.AppDIdPUTResponse>;
+    /**
+     * Fetch the onboarded application package content identified by appPkgId or appDId.
+     *
+     * @remarks
+     * Fetch the onboarded application package content identified by appPkgId or appDId.
+     */
+    appPkgGET(req: operations.AppPkgGETRequest, config?: AxiosRequestConfig): Promise<operations.AppPkgGETResponse>;
+    /**
+     * Reads the content of the AppD of on-boarded individual application package resources.
+     *
+     * @remarks
+     * Reads the content of the AppD of on-boarded individual application package resources.
+     */
+    appPkgIdGET(req: operations.AppPkgIdGETRequest, config?: AxiosRequestConfig): Promise<operations.AppPkgIdGETResponse>;
+    /**
+     * Uploads the content of application package.
+     *
+     * @remarks
+     * Uploads the content of application package.
+     */
+    appPkgPUT(req: operations.AppPkgPUTRequest, config?: AxiosRequestConfig): Promise<operations.AppPkgPUTResponse>;
+    /**
      * Deletes an individual application package resources
-    **/
-    appPackageDelete(req: operations.AppPackageDeleteRequest, config?: AxiosRequestConfig): Promise<operations.AppPackageDeleteResponse>;
-    /**
-     * appPackageGet - Queries the information related to individual application package resources
      *
+     * @remarks
+     * Deletes an individual application package resources
+     */
+    appPackageDELETE(req: operations.AppPackageDELETERequest, config?: AxiosRequestConfig): Promise<operations.AppPackageDELETEResponse>;
+    /**
      * Queries the information related to individual application package resources
-    **/
-    appPackageGet(req: operations.AppPackageGetRequest, config?: AxiosRequestConfig): Promise<operations.AppPackageGetResponse>;
-    /**
-     * appPackagePatch - Updates the operational state of an individual application package resource
      *
+     * @remarks
+     * Queries the information related to individual application package resources
+     */
+    appPackageGET(req: operations.AppPackageGETRequest, config?: AxiosRequestConfig): Promise<operations.AppPackageGETResponse>;
+    /**
+     * Updates the operational state of an individual application package resource
+     *
+     * @remarks
      * Updates the operational state of an individual application package resources
-    **/
-    appPackagePatch(req: operations.AppPackagePatchRequest, config?: AxiosRequestConfig): Promise<operations.AppPackagePatchResponse>;
+     */
+    appPackagePATCH(req: operations.AppPackagePATCHRequest, config?: AxiosRequestConfig): Promise<operations.AppPackagePATCHResponse>;
     /**
-     * appPackagesGet - Queries information relating to on-boarded application packages in the MEO
+     * Queries information relating to on-boarded application packages in the MEO
      *
+     * @remarks
      * queries information relating to on-boarded application packages in the MEO
-    **/
-    appPackagesGet(req: operations.AppPackagesGetRequest, config?: AxiosRequestConfig): Promise<operations.AppPackagesGetResponse>;
+     */
+    appPackagesGET(req: operations.AppPackagesGETRequest, config?: AxiosRequestConfig): Promise<operations.AppPackagesGETResponse>;
     /**
-     * appPackagesPost - Create a resource for on-boarding an application package to a MEO
-     *
      * Create a resource for on-boarding an application package to a MEO
-    **/
-    appPackagesPost(req: operations.AppPackagesPostRequest, config?: AxiosRequestConfig): Promise<operations.AppPackagesPostResponse>;
-    /**
-     * individualSubscriptionDelete - Deletes the individual subscription to notifications about application package changes in MEO.
      *
+     * @remarks
+     * Create a resource for on-boarding an application package to a MEO
+     */
+    appPackagesPOST(req: shared.CreateAppPkg, config?: AxiosRequestConfig): Promise<operations.AppPackagesPOSTResponse>;
+    /**
      * Deletes the individual subscription to notifications about application package changes in MEO.
-    **/
-    individualSubscriptionDelete(req: operations.IndividualSubscriptionDeleteRequest, config?: AxiosRequestConfig): Promise<operations.IndividualSubscriptionDeleteResponse>;
-    /**
-     * individualSubscriptionGet - Used to represent an individual subscription to notifications about application package changes.
      *
+     * @remarks
+     * Deletes the individual subscription to notifications about application package changes in MEO.
+     */
+    individualSubscriptionDELETE(req: operations.IndividualSubscriptionDELETERequest, config?: AxiosRequestConfig): Promise<operations.IndividualSubscriptionDELETEResponse>;
+    /**
      * Used to represent an individual subscription to notifications about application package changes.
-    **/
-    individualSubscriptionGet(req: operations.IndividualSubscriptionGetRequest, config?: AxiosRequestConfig): Promise<operations.IndividualSubscriptionGetResponse>;
-    /**
-     * subscriptionsGet - used to retrieve the information of subscriptions to individual application package resource in MEO
      *
+     * @remarks
+     * Used to represent an individual subscription to notifications about application package changes.
+     */
+    individualSubscriptionGET(req: operations.IndividualSubscriptionGETRequest, config?: AxiosRequestConfig): Promise<operations.IndividualSubscriptionGETResponse>;
+    /**
+     * used to retrieve the information of subscriptions to individual application package resource in MEO
+     *
+     * @remarks
      * used to retrieve the information of subscriptions to individual application package resource in MEO package
-    **/
-    subscriptionsGet(config?: AxiosRequestConfig): Promise<operations.SubscriptionsGetResponse>;
+     */
+    subscriptionsGET(config?: AxiosRequestConfig): Promise<operations.SubscriptionsGETResponse>;
     /**
-     * subscriptionsPost - Subscribe to notifications about on-boarding an application package
-     *
      * Subscribe to notifications about on-boarding an application package
-    **/
-    subscriptionsPost(req: operations.SubscriptionsPostRequest, config?: AxiosRequestConfig): Promise<operations.SubscriptionsPostResponse>;
+     *
+     * @remarks
+     * Subscribe to notifications about on-boarding an application package
+     */
+    subscriptionsPOST(req: shared.AppPkgSubscription, config?: AxiosRequestConfig): Promise<operations.SubscriptionsPOSTResponse>;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeStreamConsumerXAmzTargetEnum {
     Kinesis20131202DescribeStreamConsumer = "Kinesis_20131202.DescribeStreamConsumer"
 }
-export declare class DescribeStreamConsumerHeaders extends SpeakeasyBase {
+export declare class DescribeStreamConsumerRequest extends SpeakeasyBase {
+    describeStreamConsumerInput: shared.DescribeStreamConsumerInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class DescribeStreamConsumerHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeStreamConsumerXAmzTargetEnum;
 }
-export declare class DescribeStreamConsumerRequest extends SpeakeasyBase {
-    headers: DescribeStreamConsumerHeaders;
-    request: shared.DescribeStreamConsumerInput;
-}
 export declare class DescribeStreamConsumerResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeStreamConsumerOutput?: shared.DescribeStreamConsumerOutput;
+    /**
+     * InvalidArgumentException
+     */
     invalidArgumentException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
 }

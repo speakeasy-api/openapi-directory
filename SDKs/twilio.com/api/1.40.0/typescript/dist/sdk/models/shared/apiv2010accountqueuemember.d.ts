@@ -1,0 +1,30 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * OK
+ */
+export declare class ApiV2010AccountQueueMember extends SpeakeasyBase {
+    /**
+     * The SID of the [Call](https://www.twilio.com/docs/voice/api/call-resource) the Member resource is associated with.
+     */
+    callSid?: string;
+    /**
+     * The date that the member was enqueued, given in RFC 2822 format.
+     */
+    dateEnqueued?: string;
+    /**
+     * This member's current position in the queue.
+     */
+    position?: number;
+    /**
+     * The SID of the Queue the member is in.
+     */
+    queueSid?: string;
+    /**
+     * The URI of the resource, relative to `https://api.twilio.com`.
+     */
+    uri?: string;
+    /**
+     * The number of seconds the member has been in the queue.
+     */
+    waitTime?: number;
+}

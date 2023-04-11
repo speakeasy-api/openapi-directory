@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum AssociateFirewallPolicyXAmzTargetEnum {
     NetworkFirewall20201112AssociateFirewallPolicy = "NetworkFirewall_20201112.AssociateFirewallPolicy"
 }
-export declare class AssociateFirewallPolicyHeaders extends SpeakeasyBase {
+export declare class AssociateFirewallPolicyRequest extends SpeakeasyBase {
+    associateFirewallPolicyRequest: shared.AssociateFirewallPolicyRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class AssociateFirewallPolicyHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: AssociateFirewallPolicyXAmzTargetEnum;
 }
-export declare class AssociateFirewallPolicyRequest extends SpeakeasyBase {
-    headers: AssociateFirewallPolicyHeaders;
-    request: shared.AssociateFirewallPolicyRequest;
-}
 export declare class AssociateFirewallPolicyResponse extends SpeakeasyBase {
+    /**
+     * Success
+     */
     associateFirewallPolicyResponse?: shared.AssociateFirewallPolicyResponse;
     contentType: string;
+    /**
+     * InternalServerError
+     */
     internalServerError?: any;
+    /**
+     * InvalidOperationException
+     */
     invalidOperationException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * InvalidTokenException
+     */
     invalidTokenException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

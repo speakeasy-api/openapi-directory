@@ -1,15 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class AddJuniperSwitchSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
-}
-export declare class AddJuniperSwitchRequest extends SpeakeasyBase {
-    request?: shared.SwitchDataSourceRequest;
-    security: AddJuniperSwitchSecurity;
+    apiKeyAuth: string;
 }
 export declare class AddJuniperSwitchResponse extends SpeakeasyBase {
+    /**
+     * Bad Request
+     */
     apiError?: shared.ApiError;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
     switchDataSource?: shared.SwitchDataSource;
 }

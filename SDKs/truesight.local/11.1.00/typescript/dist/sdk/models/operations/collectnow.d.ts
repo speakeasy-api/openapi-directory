@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CollectNowPathParams extends SpeakeasyBase {
-    deviceId: number;
-}
-export declare class CollectNowQueryParams extends SpeakeasyBase {
-    monitorClass: string;
-}
+import { AxiosResponse } from "axios";
 export declare class CollectNowRequest extends SpeakeasyBase {
-    pathParams: CollectNowPathParams;
-    queryParams: CollectNowQueryParams;
+    /**
+     * The ID of the device.
+     */
+    deviceId: number;
+    /**
+     * The Monitor Class of the device.
+     */
+    monitorClass: string;
 }
 export declare class CollectNowResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,37 +1,60 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CopyPadWithoutHistoryUsingGetQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class CopyPadWithoutHistoryUsingGETRequest extends SpeakeasyBase {
     destinationID?: string;
     force?: string;
     sourceID?: string;
 }
-export declare class CopyPadWithoutHistoryUsingGet200ApplicationJson extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class CopyPadWithoutHistoryUsingGet500ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class CopyPadWithoutHistoryUsingGet400ApplicationJson extends SpeakeasyBase {
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class CopyPadWithoutHistoryUsingGet401ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class CopyPadWithoutHistoryUsingGet401ApplicationJson extends SpeakeasyBase {
+/**
+ * generic api error (code 1)
+ */
+export declare class CopyPadWithoutHistoryUsingGet400ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class CopyPadWithoutHistoryUsingGet500ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class CopyPadWithoutHistoryUsingGet200ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class CopyPadWithoutHistoryUsingGetRequest extends SpeakeasyBase {
-    queryParams: CopyPadWithoutHistoryUsingGetQueryParams;
-}
-export declare class CopyPadWithoutHistoryUsingGetResponse extends SpeakeasyBase {
+export declare class CopyPadWithoutHistoryUsingGETResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    copyPadWithoutHistoryUsingGET200ApplicationJSONObject?: CopyPadWithoutHistoryUsingGet200ApplicationJson;
-    copyPadWithoutHistoryUsingGET400ApplicationJSONObject?: CopyPadWithoutHistoryUsingGet400ApplicationJson;
-    copyPadWithoutHistoryUsingGET401ApplicationJSONObject?: CopyPadWithoutHistoryUsingGet401ApplicationJson;
-    copyPadWithoutHistoryUsingGET500ApplicationJSONObject?: CopyPadWithoutHistoryUsingGet500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    copyPadWithoutHistoryUsingGET200ApplicationJSONObject?: CopyPadWithoutHistoryUsingGet200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    copyPadWithoutHistoryUsingGET400ApplicationJSONObject?: CopyPadWithoutHistoryUsingGet400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    copyPadWithoutHistoryUsingGET401ApplicationJSONObject?: CopyPadWithoutHistoryUsingGet401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    copyPadWithoutHistoryUsingGET500ApplicationJSONObject?: CopyPadWithoutHistoryUsingGet500ApplicationJSON;
 }

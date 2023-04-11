@@ -1,16 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ProjectArtifacts } from "./projectartifacts";
 import { BuildStatusConfig } from "./buildstatusconfig";
-import { ProjectCache } from "./projectcache";
 import { ComputeTypeEnum } from "./computetypeenum";
 import { EnvironmentTypeEnum } from "./environmenttypeenum";
 import { EnvironmentVariable } from "./environmentvariable";
 import { GitSubmodulesConfig } from "./gitsubmodulesconfig";
 import { ImagePullCredentialsTypeEnum } from "./imagepullcredentialstypeenum";
 import { LogsConfig } from "./logsconfig";
-import { RegistryCredential } from "./registrycredential";
+import { ProjectArtifacts } from "./projectartifacts";
+import { ProjectCache } from "./projectcache";
 import { ProjectSource } from "./projectsource";
 import { ProjectSourceVersion } from "./projectsourceversion";
+import { RegistryCredential } from "./registrycredential";
 import { SourceAuth } from "./sourceauth";
 import { SourceTypeEnum } from "./sourcetypeenum";
 export declare class StartBuildInput extends SpeakeasyBase {

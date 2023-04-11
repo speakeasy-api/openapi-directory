@@ -1,39 +1,41 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AndroiddeviceprovisioningCustomersConfigurationsCreateRequest, AndroiddeviceprovisioningCustomersConfigurationsCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  AndroiddeviceprovisioningCustomersConfigurationsCreateRequest,
+  AndroiddeviceprovisioningCustomersConfigurationsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: AndroiddeviceprovisioningCustomersConfigurationsCreateRequest = {
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
-    companyName: "dicta",
-    configurationName: "debitis",
-    contactEmail: "voluptatum",
-    contactPhone: "et",
-    customMessage: "ut",
-    dpcExtras: "dolorem",
-    dpcResourcePath: "et",
+  dollarXgafv: XgafvEnum.Two,
+  configurationInput: {
+    companyName: "provident",
+    configurationName: "distinctio",
+    contactEmail: "quibusdam",
+    contactPhone: "unde",
+    customMessage: "nulla",
+    dpcExtras: "corrupti",
+    dpcResourcePath: "illum",
     isDefault: false,
   },
+  accessToken: "vel",
+  alt: AltEnum.Media,
+  callback: "deserunt",
+  fields: "suscipit",
+  key: "iure",
+  oauthToken: "magnam",
+  parent: "debitis",
+  prettyPrint: false,
+  quotaUser: "ipsa",
+  uploadType: "delectus",
+  uploadProtocol: "tempora",
 };
 
 sdk.customers.androiddeviceprovisioningCustomersConfigurationsCreate(req).then((res: AndroiddeviceprovisioningCustomersConfigurationsCreateResponse | AxiosError) => {

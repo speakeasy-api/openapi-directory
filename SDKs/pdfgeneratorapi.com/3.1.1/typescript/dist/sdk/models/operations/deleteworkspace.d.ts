@@ -1,69 +1,149 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteWorkspaceQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteWorkspaceRequest extends SpeakeasyBase {
+    /**
+     * Workspace identifier
+     */
     workspaceId: string;
 }
-export declare class DeleteWorkspace200ApplicationJsonResponse extends SpeakeasyBase {
-    success?: boolean;
-}
-export declare class DeleteWorkspace200ApplicationJson extends SpeakeasyBase {
-    response?: DeleteWorkspace200ApplicationJsonResponse;
-}
-export declare enum DeleteWorkspace401ApplicationJsonErrorEnum {
-    AuthenticationFailedRequestExpired = "Authentication failed: request expired",
-    AuthenticationFailedSignatureOrSecretMissing = "Authentication failed: signature or secret missing",
-    AuthenticationFailedWorkspaceMissing = "Authentication failed: workspace missing",
-    AuthenticationFailedKeyMissing = "Authentication failed: key missing",
-    AuthenticationFailedPropertyIssIssuerMissingInJwt = "Authentication failed: property 'iss' (issuer) missing in JWT",
-    AuthenticationFailedPropertySubSubjectMissingInJwt = "Authentication failed: property 'sub' (subject) missing in JWT",
-    AuthenticationFailedPropertyExpExpirationTimeMissingInJwt = "Authentication failed: property 'exp' (expiration time) missing in JWT",
-    AuthenticationFailedInvalidIssIssuer = "Authentication failed: invalid 'iss' (issuer)",
-    AuthenticationFailedIncorrectSignature = "Authentication failed: incorrect signature",
-    AuthenticationFailed = "Authentication failed"
-}
-export declare class DeleteWorkspace401ApplicationJson extends SpeakeasyBase {
-    error?: DeleteWorkspace401ApplicationJsonErrorEnum;
+/**
+ * Internal Server Error
+ */
+export declare class DeleteWorkspace500ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error description
+     */
+    error?: string;
+    /**
+     * HTTP Error code
+     */
     status?: number;
 }
-export declare enum DeleteWorkspace403ApplicationJsonErrorEnum {
-    YourAccountHasExceededTheMonthlyDocumentGenerationLimit = "Your account has exceeded the monthly document generation limit."
-}
-export declare class DeleteWorkspace403ApplicationJson extends SpeakeasyBase {
-    error?: DeleteWorkspace403ApplicationJsonErrorEnum;
-    status?: number;
-}
-export declare enum DeleteWorkspace404ApplicationJsonErrorEnum {
-    EntityNotFound = "Entity not found",
-    ResourceNotFound = "Resource not found",
-    NoneOfTheTemplatesIsAvailableForTheWorkspace = "None of the templates is available for the workspace."
-}
-export declare class DeleteWorkspace404ApplicationJson extends SpeakeasyBase {
-    error?: DeleteWorkspace404ApplicationJsonErrorEnum;
-    status?: number;
-}
-export declare enum DeleteWorkspace422ApplicationJsonErrorEnum {
-    UnableToParseJsonPleaseCheckFormatting = "Unable to parse JSON, please check formatting",
+/**
+ * Error description
+ */
+export declare enum DeleteWorkspace422ApplicationJSONErrorEnum {
+    UnableToParseJSONPleaseCheckFormatting = "Unable to parse JSON, please check formatting",
     RequiredParameterMissing = "Required parameter missing",
     RequiredParameterMissingTemplateDefinitionNotDefined = "Required parameter missing: template definition not defined",
     RequiredParameterMissingTemplateNotDefined = "Required parameter missing: template not defined"
 }
-export declare class DeleteWorkspace422ApplicationJson extends SpeakeasyBase {
-    error?: DeleteWorkspace422ApplicationJsonErrorEnum;
+/**
+ * Unprocessable Entity
+ */
+export declare class DeleteWorkspace422ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error description
+     */
+    error?: DeleteWorkspace422ApplicationJSONErrorEnum;
+    /**
+     * HTTP Error code
+     */
     status?: number;
 }
-export declare class DeleteWorkspace500ApplicationJson extends SpeakeasyBase {
-    error?: string;
+/**
+ * Error description
+ */
+export declare enum DeleteWorkspace404ApplicationJSONErrorEnum {
+    EntityNotFound = "Entity not found",
+    ResourceNotFound = "Resource not found",
+    NoneOfTheTemplatesIsAvailableForTheWorkspace = "None of the templates is available for the workspace."
+}
+/**
+ * Not Found
+ */
+export declare class DeleteWorkspace404ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error description
+     */
+    error?: DeleteWorkspace404ApplicationJSONErrorEnum;
+    /**
+     * HTTP Error code
+     */
     status?: number;
 }
-export declare class DeleteWorkspaceRequest extends SpeakeasyBase {
-    queryParams: DeleteWorkspaceQueryParams;
+/**
+ * Error description
+ */
+export declare enum DeleteWorkspace403ApplicationJSONErrorEnum {
+    YourAccountHasExceededTheMonthlyDocumentGenerationLimit = "Your account has exceeded the monthly document generation limit."
+}
+/**
+ * Forbidden
+ */
+export declare class DeleteWorkspace403ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error description
+     */
+    error?: DeleteWorkspace403ApplicationJSONErrorEnum;
+    /**
+     * HTTP Error code
+     */
+    status?: number;
+}
+/**
+ * Error description
+ */
+export declare enum DeleteWorkspace401ApplicationJSONErrorEnum {
+    AuthenticationFailedRequestExpired = "Authentication failed: request expired",
+    AuthenticationFailedSignatureOrSecretMissing = "Authentication failed: signature or secret missing",
+    AuthenticationFailedWorkspaceMissing = "Authentication failed: workspace missing",
+    AuthenticationFailedKeyMissing = "Authentication failed: key missing",
+    AuthenticationFailedPropertyIssIssuerMissingInJWT = "Authentication failed: property 'iss' (issuer) missing in JWT",
+    AuthenticationFailedPropertySubSubjectMissingInJWT = "Authentication failed: property 'sub' (subject) missing in JWT",
+    AuthenticationFailedPropertyExpExpirationTimeMissingInJWT = "Authentication failed: property 'exp' (expiration time) missing in JWT",
+    AuthenticationFailedInvalidIssIssuer = "Authentication failed: invalid 'iss' (issuer)",
+    AuthenticationFailedIncorrectSignature = "Authentication failed: incorrect signature",
+    AuthenticationFailed = "Authentication failed"
+}
+/**
+ * Unauthorized
+ */
+export declare class DeleteWorkspace401ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error description
+     */
+    error?: DeleteWorkspace401ApplicationJSONErrorEnum;
+    /**
+     * HTTP Error code
+     */
+    status?: number;
+}
+export declare class DeleteWorkspace200ApplicationJSONResponse extends SpeakeasyBase {
+    success?: boolean;
+}
+/**
+ * The request was successfully executed.
+ */
+export declare class DeleteWorkspace200ApplicationJSON extends SpeakeasyBase {
+    response?: DeleteWorkspace200ApplicationJSONResponse;
 }
 export declare class DeleteWorkspaceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deleteWorkspace200ApplicationJSONObject?: DeleteWorkspace200ApplicationJson;
-    deleteWorkspace401ApplicationJSONObject?: DeleteWorkspace401ApplicationJson;
-    deleteWorkspace403ApplicationJSONObject?: DeleteWorkspace403ApplicationJson;
-    deleteWorkspace404ApplicationJSONObject?: DeleteWorkspace404ApplicationJson;
-    deleteWorkspace422ApplicationJSONObject?: DeleteWorkspace422ApplicationJson;
-    deleteWorkspace500ApplicationJSONObject?: DeleteWorkspace500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * The request was successfully executed.
+     */
+    deleteWorkspace200ApplicationJSONObject?: DeleteWorkspace200ApplicationJSON;
+    /**
+     * Unauthorized
+     */
+    deleteWorkspace401ApplicationJSONObject?: DeleteWorkspace401ApplicationJSON;
+    /**
+     * Forbidden
+     */
+    deleteWorkspace403ApplicationJSONObject?: DeleteWorkspace403ApplicationJSON;
+    /**
+     * Not Found
+     */
+    deleteWorkspace404ApplicationJSONObject?: DeleteWorkspace404ApplicationJSON;
+    /**
+     * Unprocessable Entity
+     */
+    deleteWorkspace422ApplicationJSONObject?: DeleteWorkspace422ApplicationJSON;
+    /**
+     * Internal Server Error
+     */
+    deleteWorkspace500ApplicationJSONObject?: DeleteWorkspace500ApplicationJSON;
 }

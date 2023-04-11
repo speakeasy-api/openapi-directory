@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostStartDbInstanceActionEnum {
-    StartDbInstance = "StartDBInstance"
+import { AxiosResponse } from "axios";
+export declare enum POSTStartDBInstanceActionEnum {
+    StartDBInstance = "StartDBInstance"
 }
-export declare enum PostStartDbInstanceVersionEnum {
+export declare enum POSTStartDBInstanceVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class PostStartDbInstanceQueryParams extends SpeakeasyBase {
-    action: PostStartDbInstanceActionEnum;
-    version: PostStartDbInstanceVersionEnum;
-}
-export declare class PostStartDbInstanceHeaders extends SpeakeasyBase {
+export declare class POSTStartDBInstanceRequest extends SpeakeasyBase {
+    action: POSTStartDBInstanceActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTStartDBInstanceVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostStartDbInstanceHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostStartDbInstanceRequest extends SpeakeasyBase {
-    queryParams: PostStartDbInstanceQueryParams;
-    headers: PostStartDbInstanceHeaders;
-    request?: Uint8Array;
-}
-export declare class PostStartDbInstanceResponse extends SpeakeasyBase {
+export declare class POSTStartDBInstanceResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

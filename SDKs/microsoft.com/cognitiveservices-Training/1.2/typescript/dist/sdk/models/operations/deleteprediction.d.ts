@@ -1,19 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeletePredictionPathParams extends SpeakeasyBase {
-    projectId: string;
-}
-export declare class DeletePredictionQueryParams extends SpeakeasyBase {
-    ids: string[];
-}
-export declare class DeletePredictionHeaders extends SpeakeasyBase {
-    trainingKey: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeletePredictionRequest extends SpeakeasyBase {
-    pathParams: DeletePredictionPathParams;
-    queryParams: DeletePredictionQueryParams;
-    headers: DeletePredictionHeaders;
+    trainingKey: string;
+    /**
+     * The prediction ids. Limited to 64
+     */
+    ids: string[];
+    /**
+     * The project id
+     */
+    projectId: string;
 }
 export declare class DeletePredictionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

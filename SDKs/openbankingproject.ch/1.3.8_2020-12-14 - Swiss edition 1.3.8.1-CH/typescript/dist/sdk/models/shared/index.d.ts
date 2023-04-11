@@ -140,7 +140,6 @@ export * from "./reportexchangerate";
 export * from "./scastatusauthorisationconfirmationenum";
 export * from "./scastatusenum";
 export * from "./scastatusresponse";
-export * from "./security";
 export * from "./selectpsuauthenticationmethod";
 export * from "./selectpsuauthenticationmethodresponse";
 export * from "./signingbasket";

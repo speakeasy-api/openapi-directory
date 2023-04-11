@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The platform type targeted by the list's entries.
+ */
 export declare enum GoogleSecuritySafebrowsingV4ThreatListDescriptorPlatformTypeEnum {
     PlatformTypeUnspecified = "PLATFORM_TYPE_UNSPECIFIED",
     Windows = "WINDOWS",
@@ -10,6 +13,9 @@ export declare enum GoogleSecuritySafebrowsingV4ThreatListDescriptorPlatformType
     AllPlatforms = "ALL_PLATFORMS",
     Chrome = "CHROME"
 }
+/**
+ * The entry types contained in the list.
+ */
 export declare enum GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatEntryTypeEnum {
     ThreatEntryTypeUnspecified = "THREAT_ENTRY_TYPE_UNSPECIFIED",
     Url = "URL",
@@ -19,6 +25,9 @@ export declare enum GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatEntryT
     Filename = "FILENAME",
     Cert = "CERT"
 }
+/**
+ * The threat type posed by the list's entries.
+ */
 export declare enum GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatTypeEnum {
     ThreatTypeUnspecified = "THREAT_TYPE_UNSPECIFIED",
     Malware = "MALWARE",
@@ -37,14 +46,22 @@ export declare enum GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatTypeEn
     Suspicious = "SUSPICIOUS",
     TrickToBill = "TRICK_TO_BILL",
     HighConfidenceAllowlist = "HIGH_CONFIDENCE_ALLOWLIST",
-    AccuracyTips = "ACCURACY_TIPS",
-    SocialEngineeringLowerPrecision = "SOCIAL_ENGINEERING_LOWER_PRECISION"
+    AccuracyTips = "ACCURACY_TIPS"
 }
 /**
  * Describes an individual threat list. A list is defined by three parameters: the type of threat posed, the type of platform targeted by the threat, and the type of entries in the list.
-**/
+ */
 export declare class GoogleSecuritySafebrowsingV4ThreatListDescriptor extends SpeakeasyBase {
+    /**
+     * The platform type targeted by the list's entries.
+     */
     platformType?: GoogleSecuritySafebrowsingV4ThreatListDescriptorPlatformTypeEnum;
+    /**
+     * The entry types contained in the list.
+     */
     threatEntryType?: GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatEntryTypeEnum;
+    /**
+     * The threat type posed by the list's entries.
+     */
     threatType?: GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatTypeEnum;
 }

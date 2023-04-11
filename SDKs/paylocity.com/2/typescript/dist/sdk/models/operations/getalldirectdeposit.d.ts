@@ -1,19 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetAllDirectDepositPathParams extends SpeakeasyBase {
-    companyId: string;
-    employeeId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetAllDirectDepositSecurity extends SpeakeasyBase {
-    paylocityAuth: shared.SchemePaylocityAuth;
+    paylocityAuth: string;
 }
 export declare class GetAllDirectDepositRequest extends SpeakeasyBase {
-    pathParams: GetAllDirectDepositPathParams;
-    security: GetAllDirectDepositSecurity;
+    /**
+     * Company Id
+     */
+    companyId: string;
+    /**
+     * Employee Id
+     */
+    employeeId: string;
 }
 export declare class GetAllDirectDepositResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successfully Retrieved
+     */
     directDeposits?: shared.DirectDeposit[];
+    /**
+     * The employee, or direct deposit does not exist
+     */
     errors?: shared.ErrorT[];
 }

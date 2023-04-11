@@ -1,18 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class SetChannelPrivacyUserPathParams extends SpeakeasyBase {
-    channelId: number;
-    userId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class SetChannelPrivacyUserSecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
+    oauth2: string;
 }
 export declare class SetChannelPrivacyUserRequest extends SpeakeasyBase {
-    pathParams: SetChannelPrivacyUserPathParams;
-    security: SetChannelPrivacyUserSecurity;
+    /**
+     * The ID of the channel.
+     */
+    channelId: number;
+    /**
+     * The ID of the user.
+     */
+    userId: number;
 }
 export declare class SetChannelPrivacyUserResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Error code 8003: The user credentials are invalid.
+     */
     error?: shared.ErrorT;
 }

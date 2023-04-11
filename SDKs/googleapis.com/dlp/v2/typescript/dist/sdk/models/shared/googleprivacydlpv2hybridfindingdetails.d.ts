@@ -3,11 +3,26 @@ import { GooglePrivacyDlpV2Container } from "./googleprivacydlpv2container";
 import { GooglePrivacyDlpV2TableOptions } from "./googleprivacydlpv2tableoptions";
 /**
  * Populate to associate additional data with each finding.
-**/
+ */
 export declare class GooglePrivacyDlpV2HybridFindingDetails extends SpeakeasyBase {
+    /**
+     * Represents a container that may contain DLP findings. Examples of a container include a file, table, or database record.
+     */
     containerDetails?: GooglePrivacyDlpV2Container;
+    /**
+     * Offset in bytes of the line, from the beginning of the file, where the finding is located. Populate if the item being scanned is only part of a bigger item, such as a shard of a file and you want to track the absolute position of the finding.
+     */
     fileOffset?: string;
+    /**
+     * Labels to represent user provided metadata about the data being inspected. If configured by the job, some key values may be required. The labels associated with `Finding`'s produced by hybrid inspection. Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?`. Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`. No more than 10 labels can be associated with a given finding. Examples: * `"environment" : "production"` * `"pipeline" : "etl"`
+     */
     labels?: Record<string, string>;
+    /**
+     * Offset of the row for tables. Populate if the row(s) being scanned are part of a bigger dataset and you want to keep track of their absolute position.
+     */
     rowOffset?: string;
+    /**
+     * Instructions regarding the table content being inspected.
+     */
     tableOptions?: GooglePrivacyDlpV2TableOptions;
 }

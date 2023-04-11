@@ -1,7 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * location service objects
+ */
 export declare class BusinessServiceViewModel extends SpeakeasyBase {
     id?: number;
-    objectName?: string;
+    object?: string;
     serviceId?: number;
     serviceName?: string;
 }

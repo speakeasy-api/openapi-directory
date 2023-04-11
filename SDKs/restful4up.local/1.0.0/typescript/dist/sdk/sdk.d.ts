@@ -1,10 +1,25 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare const ServerList: readonly ["http://restful4up.local", "https://restful4up.local/v1"];
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
+export declare const ServerList: readonly ["http://restful4up.local", "/v1"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * RESTful API 4 Unipacker
+ */
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -12,25 +27,26 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
     /**
-     * applyYaraRules - apply given YARA rules to the given executable. (upto 10 rules)
-    **/
-    applyYaraRules(req: operations.ApplyYaraRulesRequest, config?: AxiosRequestConfig): Promise<operations.ApplyYaraRulesResponse>;
+     * apply given YARA rules to the given executable. (upto 10 rules)
+     */
+    applyYaraRules(req: operations.ApplyYaraRulesRequestBody, config?: AxiosRequestConfig): Promise<operations.ApplyYaraRulesResponse>;
     /**
-     * clean - clean up the uploaded files
-    **/
+     * clean up the uploaded files
+     */
     clean(config?: AxiosRequestConfig): Promise<operations.CleanResponse>;
     /**
-     * emulationOutput - try to get the emulation output after unpacking the file
-    **/
-    emulationOutput(req: operations.EmulationOutputRequest, config?: AxiosRequestConfig): Promise<operations.EmulationOutputResponse>;
+     * try to get the emulation output after unpacking the file
+     */
+    emulationOutput(req: operations.EmulationOutputRequestBody, config?: AxiosRequestConfig): Promise<operations.EmulationOutputResponse>;
     /**
-     * generatePartialYaraRule - generate partial YARA rules for give executable. (Rule without the condition section)
-    **/
-    generatePartialYaraRule(req: operations.GeneratePartialYaraRuleRequest, config?: AxiosRequestConfig): Promise<operations.GeneratePartialYaraRuleResponse>;
+     * generate partial YARA rules for give executable. (Rule without the condition section)
+     */
+    generatePartialYaraRule(req: operations.GeneratePartialYaraRuleRequestBody, config?: AxiosRequestConfig): Promise<operations.GeneratePartialYaraRuleResponse>;
     /**
-     * unpack - try to unpack the given file
-    **/
-    unpack(req: operations.UnpackRequest, config?: AxiosRequestConfig): Promise<operations.UnpackResponse>;
+     * try to unpack the given file
+     */
+    unpack(req: operations.UnpackRequestBody, config?: AxiosRequestConfig): Promise<operations.UnpackResponse>;
 }

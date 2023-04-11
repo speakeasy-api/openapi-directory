@@ -1,19 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetSalesActivitiesPathParams extends SpeakeasyBase {
-    id: number;
-}
-export declare class GetSalesActivitiesQueryParams extends SpeakeasyBase {
-    excludeOwner?: string;
-    type?: shared.SalesActivityTypeEnum;
-}
+import { AxiosResponse } from "axios";
 export declare class GetSalesActivitiesRequest extends SpeakeasyBase {
-    pathParams: GetSalesActivitiesPathParams;
-    queryParams: GetSalesActivitiesQueryParams;
+    excludeOwner?: string;
+    /**
+     * Project ID
+     */
+    id: number;
+    type?: shared.SalesActivityTypeEnum;
 }
 export declare class GetSalesActivitiesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * ProjectNotFound
+     */
     error?: shared.ErrorT;
+    /**
+     * Activities fetched successfully
+     */
     salesActivities?: shared.SalesActivities;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,19 +1,20 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetV1VerificationResultRequest, GetV1VerificationResultResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetV1VerificationResultRequest,
+  GetV1VerificationResultResponse,
+  GetV1VerificationResultFormatEnum,
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetV1VerificationResultRequest = {
-  queryParams: {
-    format: "json",
-    key: "voluptas",
-    otp: "culpa",
-    tranId: "expedita",
-  },
+  format: GetV1VerificationResultFormatEnum.Xml,
+  key: "provident",
+  otp: "distinctio",
+  tranId: "quibusdam",
 };
 
 sdk.getV1VerificationResult(req).then((res: GetV1VerificationResultResponse | AxiosError) => {

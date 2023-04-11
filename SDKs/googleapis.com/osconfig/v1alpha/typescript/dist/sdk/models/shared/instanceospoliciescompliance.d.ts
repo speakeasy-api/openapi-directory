@@ -1,0 +1,49 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { InstanceOSPoliciesComplianceOSPolicyCompliance } from "./instanceospoliciescomplianceospolicycompliance";
+/**
+ * Output only. Compliance state of the VM.
+ */
+export declare enum InstanceOSPoliciesComplianceStateEnum {
+    OsPolicyComplianceStateUnspecified = "OS_POLICY_COMPLIANCE_STATE_UNSPECIFIED",
+    Compliant = "COMPLIANT",
+    NonCompliant = "NON_COMPLIANT",
+    Unknown = "UNKNOWN",
+    NoOsPoliciesApplicable = "NO_OS_POLICIES_APPLICABLE"
+}
+/**
+ * This API resource represents the OS policies compliance data for a Compute Engine virtual machine (VM) instance at a given point in time. A Compute Engine VM can have multiple OS policy assignments, and each assignment can have multiple OS policies. As a result, multiple OS policies could be applied to a single VM. You can use this API resource to determine both the compliance state of your VM as well as the compliance state of an individual OS policy. For more information, see [View compliance](https://cloud.google.com/compute/docs/os-configuration-management/view-compliance).
+ */
+export declare class InstanceOSPoliciesCompliance extends SpeakeasyBase {
+    /**
+     * Output only. Detailed compliance state of the VM. This field is populated only when compliance state is `UNKNOWN`. It may contain one of the following values: * `no-compliance-data`: Compliance data is not available for this VM. * `no-agent-detected`: OS Config agent is not detected for this VM. * `config-not-supported-by-agent`: The version of the OS Config agent running on this VM does not support configuration management. * `inactive`: VM is not running. * `internal-service-errors`: There were internal service errors encountered while enforcing compliance. * `agent-errors`: OS config agent encountered errors while enforcing compliance.
+     */
+    detailedState?: string;
+    /**
+     * Output only. The reason for the `detailed_state` of the VM (if any).
+     */
+    detailedStateReason?: string;
+    /**
+     * Output only. The Compute Engine VM instance name.
+     */
+    instance?: string;
+    /**
+     * Output only. Timestamp of the last compliance check for the VM.
+     */
+    lastComplianceCheckTime?: string;
+    /**
+     * Output only. Unique identifier for the last compliance run. This id will be logged by the OS config agent during a compliance run and can be used for debugging and tracing purpose.
+     */
+    lastComplianceRunId?: string;
+    /**
+     * Output only. The `InstanceOSPoliciesCompliance` API resource name. Format: `projects/{project_number}/locations/{location}/instanceOSPoliciesCompliances/{instance_id}`
+     */
+    name?: string;
+    /**
+     * Output only. Compliance data for each `OSPolicy` that is applied to the VM.
+     */
+    osPolicyCompliances?: InstanceOSPoliciesComplianceOSPolicyCompliance[];
+    /**
+     * Output only. Compliance state of the VM.
+     */
+    state?: InstanceOSPoliciesComplianceStateEnum;
+}

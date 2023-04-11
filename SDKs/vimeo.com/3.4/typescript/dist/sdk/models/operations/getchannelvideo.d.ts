@@ -1,15 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetChannelVideoPathParams extends SpeakeasyBase {
-    channelId: number;
-    videoId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetChannelVideoRequest extends SpeakeasyBase {
-    pathParams: GetChannelVideoPathParams;
+    /**
+     * The ID of the channel.
+     */
+    channelId: number;
+    /**
+     * The ID of the video.
+     */
+    videoId: number;
 }
 export declare class GetChannelVideoResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * No such channel exists.
+     */
     legacyError?: shared.LegacyError;
+    /**
+     * The video was returned.
+     */
     video?: shared.Video;
 }

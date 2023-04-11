@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetInformTimeoutPathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetInformTimeoutRequest extends SpeakeasyBase {
-    pathParams: GetInformTimeoutPathParams;
+    /**
+     * Agent to return the timeout setting
+     */
+    agentNum: number;
 }
 export declare class GetInformTimeoutResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     getInformTimeout200ApplicationJSONInt32Integer?: number;
 }

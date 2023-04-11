@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UnlinkIdentityXAmzTargetEnum {
-    AwsCognitoIdentityServiceUnlinkIdentity = "AWSCognitoIdentityService.UnlinkIdentity"
+    AWSCognitoIdentityServiceUnlinkIdentity = "AWSCognitoIdentityService.UnlinkIdentity"
 }
-export declare class UnlinkIdentityHeaders extends SpeakeasyBase {
+export declare class UnlinkIdentityRequest extends SpeakeasyBase {
+    unlinkIdentityInput: shared.UnlinkIdentityInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class UnlinkIdentityHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UnlinkIdentityXAmzTargetEnum;
 }
-export declare class UnlinkIdentityRequest extends SpeakeasyBase {
-    headers: UnlinkIdentityHeaders;
-    request: shared.UnlinkIdentityInput;
-}
 export declare class UnlinkIdentityResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * ExternalServiceException
+     */
     externalServiceException?: any;
+    /**
+     * InternalErrorException
+     */
     internalErrorException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * NotAuthorizedException
+     */
     notAuthorizedException?: any;
+    /**
+     * ResourceConflictException
+     */
     resourceConflictException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

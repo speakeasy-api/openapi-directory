@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteDbParameterGroupActionEnum {
-    DeleteDbParameterGroup = "DeleteDBParameterGroup"
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteDBParameterGroupActionEnum {
+    DeleteDBParameterGroup = "DeleteDBParameterGroup"
 }
-export declare enum GetDeleteDbParameterGroupVersionEnum {
+export declare enum GETDeleteDBParameterGroupVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class GetDeleteDbParameterGroupQueryParams extends SpeakeasyBase {
-    action: GetDeleteDbParameterGroupActionEnum;
+export declare class GETDeleteDBParameterGroupRequest extends SpeakeasyBase {
+    action: GETDeleteDBParameterGroupActionEnum;
+    /**
+     * <p>The name of the DB parameter group.</p> <p>Constraints:</p> <ul> <li> <p>Must be the name of an existing DB parameter group</p> </li> <li> <p>You can't delete a default DB parameter group</p> </li> <li> <p>Cannot be associated with any DB instances</p> </li> </ul>
+     */
     dbParameterGroupName: string;
-    version: GetDeleteDbParameterGroupVersionEnum;
-}
-export declare class GetDeleteDbParameterGroupHeaders extends SpeakeasyBase {
+    version: GETDeleteDBParameterGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDeleteDbParameterGroupHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteDbParameterGroupRequest extends SpeakeasyBase {
-    queryParams: GetDeleteDbParameterGroupQueryParams;
-    headers: GetDeleteDbParameterGroupHeaders;
-}
-export declare class GetDeleteDbParameterGroupResponse extends SpeakeasyBase {
+export declare class GETDeleteDBParameterGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum StartRemediationExecutionXAmzTargetEnum {
     StarlingDoveServiceStartRemediationExecution = "StarlingDoveService.StartRemediationExecution"
 }
-export declare class StartRemediationExecutionHeaders extends SpeakeasyBase {
+export declare class StartRemediationExecutionRequest extends SpeakeasyBase {
+    startRemediationExecutionRequest: shared.StartRemediationExecutionRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class StartRemediationExecutionHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: StartRemediationExecutionXAmzTargetEnum;
 }
-export declare class StartRemediationExecutionRequest extends SpeakeasyBase {
-    headers: StartRemediationExecutionHeaders;
-    request: shared.StartRemediationExecutionRequest;
-}
 export declare class StartRemediationExecutionResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InsufficientPermissionsException
+     */
     insufficientPermissionsException?: any;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
+    /**
+     * NoSuchRemediationConfigurationException
+     */
     noSuchRemediationConfigurationException?: any;
+    /**
+     * Success
+     */
     startRemediationExecutionResponse?: shared.StartRemediationExecutionResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

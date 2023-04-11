@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class PaymentGatewayReconciliation {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,31 +9,35 @@ export declare class PaymentGatewayReconciliation {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * postReconcileRefund - Reconcile a refund
+     * Reconcile a refund
      *
+     * @remarks
      * Reconciles a refund when receiving the gateway reconciliation request or event.
      *
-    **/
-    postReconcileRefund(req: operations.PostReconcileRefundRequest, config?: AxiosRequestConfig): Promise<operations.PostReconcileRefundResponse>;
+     */
+    postReconcileRefund(req: operations.POSTReconcileRefundRequest, config?: AxiosRequestConfig): Promise<operations.POSTReconcileRefundResponse>;
     /**
-     * postRejectPayment - Reject a payment
+     * Reject a payment
      *
+     * @remarks
      * Sets the Payment status to "Rejected", creates a refund for the payment amount, and returns the Refund object as response.
      *
-    **/
-    postRejectPayment(req: operations.PostRejectPaymentRequest, config?: AxiosRequestConfig): Promise<operations.PostRejectPaymentResponse>;
+     */
+    postRejectPayment(req: operations.POSTRejectPaymentRequest, config?: AxiosRequestConfig): Promise<operations.POSTRejectPaymentResponse>;
     /**
-     * postReversePayment - Reverse a payment
+     * Reverse a payment
      *
+     * @remarks
      * Sets the Payment status to "Reversed", creates a refund for the amount specified in the request, and returns the Refund object as response.
      *
-    **/
-    postReversePayment(req: operations.PostReversePaymentRequest, config?: AxiosRequestConfig): Promise<operations.PostReversePaymentResponse>;
+     */
+    postReversePayment(req: operations.POSTReversePaymentRequest, config?: AxiosRequestConfig): Promise<operations.POSTReversePaymentResponse>;
     /**
-     * postSettlePayment - Settle a payment
+     * Settle a payment
      *
+     * @remarks
      * Sets the Payment status to "Settled" and returns the Payment object as response.
      *
-    **/
-    postSettlePayment(req: operations.PostSettlePaymentRequest, config?: AxiosRequestConfig): Promise<operations.PostSettlePaymentResponse>;
+     */
+    postSettlePayment(req: operations.POSTSettlePaymentRequest, config?: AxiosRequestConfig): Promise<operations.POSTSettlePaymentResponse>;
 }

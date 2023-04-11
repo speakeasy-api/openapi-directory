@@ -1,35 +1,37 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { BatchCheckLayerAvailabilityRequest, BatchCheckLayerAvailabilityResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  BatchCheckLayerAvailabilityRequest,
+  BatchCheckLayerAvailabilityResponse,
+  BatchCheckLayerAvailabilityXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    hmac: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: BatchCheckLayerAvailabilityRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "AmazonEC2ContainerRegistry_V20150921.BatchCheckLayerAvailability",
-  },
-  request: {
+  batchCheckLayerAvailabilityRequest: {
     layerDigests: [
-      "et",
+      "provident",
+      "distinctio",
+      "quibusdam",
     ],
-    registryId: "nihil",
-    repositoryName: "rerum",
+    registryId: "unde",
+    repositoryName: "nulla",
   },
+  xAmzAlgorithm: "corrupti",
+  xAmzContentSha256: "illum",
+  xAmzCredential: "vel",
+  xAmzDate: "error",
+  xAmzSecurityToken: "deserunt",
+  xAmzSignature: "suscipit",
+  xAmzSignedHeaders: "iure",
+  xAmzTarget: BatchCheckLayerAvailabilityXAmzTargetEnum.AmazonEc2ContainerRegistryV20150921BatchCheckLayerAvailability,
 };
 
 sdk.batchCheckLayerAvailability(req).then((res: BatchCheckLayerAvailabilityResponse | AxiosError) => {

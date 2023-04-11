@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostAssociateEnvironmentOperationsRoleActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTAssociateEnvironmentOperationsRoleActionEnum {
     AssociateEnvironmentOperationsRole = "AssociateEnvironmentOperationsRole"
 }
-export declare enum PostAssociateEnvironmentOperationsRoleVersionEnum {
+export declare enum POSTAssociateEnvironmentOperationsRoleVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostAssociateEnvironmentOperationsRoleQueryParams extends SpeakeasyBase {
-    action: PostAssociateEnvironmentOperationsRoleActionEnum;
-    version: PostAssociateEnvironmentOperationsRoleVersionEnum;
-}
-export declare class PostAssociateEnvironmentOperationsRoleHeaders extends SpeakeasyBase {
+export declare class POSTAssociateEnvironmentOperationsRoleRequest extends SpeakeasyBase {
+    action: POSTAssociateEnvironmentOperationsRoleActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTAssociateEnvironmentOperationsRoleVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostAssociateEnvironmentOperationsRoleHeaders extends Speak
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostAssociateEnvironmentOperationsRoleRequest extends SpeakeasyBase {
-    queryParams: PostAssociateEnvironmentOperationsRoleQueryParams;
-    headers: PostAssociateEnvironmentOperationsRoleHeaders;
-    request?: Uint8Array;
-}
-export declare class PostAssociateEnvironmentOperationsRoleResponse extends SpeakeasyBase {
+export declare class POSTAssociateEnvironmentOperationsRoleResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

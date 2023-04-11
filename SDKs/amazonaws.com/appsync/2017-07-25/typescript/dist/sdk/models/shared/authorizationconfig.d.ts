@@ -1,0 +1,10 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { AuthorizationTypeEnum } from "./authorizationtypeenum";
+import { AwsIamConfig } from "./awsiamconfig";
+/**
+ * The authorization configuration in case the HTTP endpoint requires authorization.
+ */
+export declare class AuthorizationConfig extends SpeakeasyBase {
+    authorizationType: AuthorizationTypeEnum;
+    awsIamConfig?: AwsIamConfig;
+}

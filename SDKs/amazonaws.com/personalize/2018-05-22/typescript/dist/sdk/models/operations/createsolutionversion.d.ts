@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum CreateSolutionVersionXAmzTargetEnum {
     AmazonPersonalizeCreateSolutionVersion = "AmazonPersonalize.CreateSolutionVersion"
 }
-export declare class CreateSolutionVersionHeaders extends SpeakeasyBase {
+export declare class CreateSolutionVersionRequest extends SpeakeasyBase {
+    createSolutionVersionRequest: shared.CreateSolutionVersionRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,36 @@ export declare class CreateSolutionVersionHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: CreateSolutionVersionXAmzTargetEnum;
 }
-export declare class CreateSolutionVersionRequest extends SpeakeasyBase {
-    headers: CreateSolutionVersionHeaders;
-    request: shared.CreateSolutionVersionRequest;
-}
 export declare class CreateSolutionVersionResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     createSolutionVersionResponse?: shared.CreateSolutionVersionResponse;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
-    resourceInUseException?: any;
-    resourceNotFoundException?: any;
+    /**
+     * ResourceAlreadyExistsException
+     */
+    resourceAlreadyExistsException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceInUseException
+     */
+    resourceInUseException?: any;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * TooManyTagsException
+     */
+    tooManyTagsException?: any;
 }

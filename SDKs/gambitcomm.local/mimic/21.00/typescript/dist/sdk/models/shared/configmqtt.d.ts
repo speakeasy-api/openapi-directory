@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ConfigMqtt extends SpeakeasyBase {
+/**
+ * successful operation
+ */
+export declare class ConfigMQTT extends SpeakeasyBase {
     broker?: string;
     clientid?: string;
     filename?: string;

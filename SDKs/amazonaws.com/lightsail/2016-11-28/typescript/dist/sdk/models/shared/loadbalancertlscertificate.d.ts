@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { LoadBalancerTlsCertificateDomainValidationRecord } from "./loadbalancertlscertificatedomainvalidationrecord";
 import { LoadBalancerTlsCertificateFailureReasonEnum } from "./loadbalancertlscertificatefailurereasonenum";
-import { ResourceLocation } from "./resourcelocation";
 import { LoadBalancerTlsCertificateRenewalSummary } from "./loadbalancertlscertificaterenewalsummary";
-import { ResourceTypeEnum } from "./resourcetypeenum";
 import { LoadBalancerTlsCertificateRevocationReasonEnum } from "./loadbalancertlscertificaterevocationreasonenum";
 import { LoadBalancerTlsCertificateStatusEnum } from "./loadbalancertlscertificatestatusenum";
+import { ResourceLocation } from "./resourcelocation";
+import { ResourceTypeEnum } from "./resourcetypeenum";
 import { Tag } from "./tag";
 /**
  * <p>Describes a load balancer SSL/TLS certificate.</p> <p>TLS is just an updated, more secure version of Secure Socket Layer (SSL).</p>
-**/
+ */
 export declare class LoadBalancerTlsCertificate extends SpeakeasyBase {
     arn?: string;
     createdAt?: Date;

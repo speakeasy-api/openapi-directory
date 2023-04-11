@@ -1,22 +1,45 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetForecastTimeSeriesWrfPathParams extends SpeakeasyBase {
-    latitude: number;
-    longitude: number;
-}
-export declare class GetForecastTimeSeriesWrfQueryParams extends SpeakeasyBase {
-    days?: number;
-    endtime?: string;
-    entryid?: string;
-    hours?: number;
-    inittime?: string;
-    wave?: string;
-    weather: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetForecastTimeSeriesWrfRequest extends SpeakeasyBase {
-    pathParams: GetForecastTimeSeriesWrfPathParams;
-    queryParams: GetForecastTimeSeriesWrfQueryParams;
+    /**
+     * optional number of days in string. Will be added to init forecast date
+     */
+    days?: number;
+    /**
+     * end date for the forecast ISO string YYYY-MM-DDTHH:mm:SS.SZ
+     */
+    endtime?: string;
+    /**
+     * Direct file I want to extract
+     */
+    entryid?: string;
+    /**
+     * optional number of hours in string. Will be added to init forecast date
+     */
+    hours?: number;
+    /**
+     * initial date for the forecast ISO string YYYY-MM-DDTHH:mm:SS.SZ
+     */
+    inittime?: string;
+    /**
+     * latitude for the forecast
+     */
+    latitude: number;
+    /**
+     * longitude for the forecast
+     */
+    longitude: number;
+    /**
+     *  Comma separated values for the wave parameteres height,direction,period
+     */
+    wave?: string;
+    /**
+     *  Comma separated values for the weather parameteres temperature,rain,wind_u,wind_v,gust,pressure,cloud,humidity&wave=height,direction,period
+     */
+    weather: string;
 }
 export declare class GetForecastTimeSeriesWrfResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,8 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteHumanLoopPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteHumanLoopRequest extends SpeakeasyBase {
+    /**
+     * The name of the human loop that you want to delete.
+     */
     humanLoopName: string;
-}
-export declare class DeleteHumanLoopHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,16 +13,28 @@ export declare class DeleteHumanLoopHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeleteHumanLoopRequest extends SpeakeasyBase {
-    pathParams: DeleteHumanLoopPathParams;
-    headers: DeleteHumanLoopHeaders;
-}
 export declare class DeleteHumanLoopResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deleteHumanLoopResponse?: Record<string, any>;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

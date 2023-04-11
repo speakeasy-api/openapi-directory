@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeGroupXAmzTargetEnum {
-    AwsIdentityStoreDescribeGroup = "AWSIdentityStore.DescribeGroup"
+    AWSIdentityStoreDescribeGroup = "AWSIdentityStore.DescribeGroup"
 }
-export declare class DescribeGroupHeaders extends SpeakeasyBase {
+export declare class DescribeGroupRequest extends SpeakeasyBase {
+    describeGroupRequest: shared.DescribeGroupRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class DescribeGroupHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeGroupXAmzTargetEnum;
 }
-export declare class DescribeGroupRequest extends SpeakeasyBase {
-    headers: DescribeGroupHeaders;
-    request: shared.DescribeGroupRequest;
-}
 export declare class DescribeGroupResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     describeGroupResponse?: shared.DescribeGroupResponse;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

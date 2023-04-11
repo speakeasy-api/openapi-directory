@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Base model for all types
-**/
+ */
 export declare class PermissionType extends SpeakeasyBase {
     canAddCollaborators?: boolean;
     canDelete?: boolean;

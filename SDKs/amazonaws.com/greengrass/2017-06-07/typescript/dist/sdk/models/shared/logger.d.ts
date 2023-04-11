@@ -4,7 +4,7 @@ import { LoggerLevelEnum } from "./loggerlevelenum";
 import { LoggerTypeEnum } from "./loggertypeenum";
 /**
  * Information about a logger
-**/
+ */
 export declare class Logger extends SpeakeasyBase {
     component: LoggerComponentEnum;
     id: string;

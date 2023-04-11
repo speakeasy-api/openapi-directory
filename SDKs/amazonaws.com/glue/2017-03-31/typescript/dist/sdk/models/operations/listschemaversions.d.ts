@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListSchemaVersionsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListSchemaVersionsXAmzTargetEnum {
-    AwsGlueListSchemaVersions = "AWSGlue.ListSchemaVersions"
+    AWSGlueListSchemaVersions = "AWSGlue.ListSchemaVersions"
 }
-export declare class ListSchemaVersionsHeaders extends SpeakeasyBase {
+export declare class ListSchemaVersionsRequest extends SpeakeasyBase {
+    listSchemaVersionsInput: shared.ListSchemaVersionsInput;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,17 +23,28 @@ export declare class ListSchemaVersionsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListSchemaVersionsXAmzTargetEnum;
 }
-export declare class ListSchemaVersionsRequest extends SpeakeasyBase {
-    queryParams: ListSchemaVersionsQueryParams;
-    headers: ListSchemaVersionsHeaders;
-    request: shared.ListSchemaVersionsInput;
-}
 export declare class ListSchemaVersionsResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * Success
+     */
     listSchemaVersionsResponse?: shared.ListSchemaVersionsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

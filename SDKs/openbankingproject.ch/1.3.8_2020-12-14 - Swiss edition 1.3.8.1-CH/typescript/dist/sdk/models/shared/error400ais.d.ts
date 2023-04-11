@@ -1,24 +1,85 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { MessageCode400AisEnum } from "./messagecode400aisenum";
 import { HrefType } from "./hreftype";
+import { MessageCode400AISEnum } from "./messagecode400aisenum";
 /**
  * This is a data element to support the declaration of additional errors in the context of [RFC7807].
-**/
-export declare class Error400AisAdditionalErrors extends SpeakeasyBase {
-    code: MessageCode400AisEnum;
+ */
+export declare class Error400AISAdditionalErrors extends SpeakeasyBase {
+    /**
+     * Message codes defined for AIS for HTTP Error code 400 (BAD_REQUEST).
+     */
+    code: MessageCode400AISEnum;
+    /**
+     * Detailed human readable text specific to this instance of the error.
+     *
+     * @remarks
+     * XPath might be used to point to the issue generating the error in addition.
+     * Remark for Future: In future, a dedicated field might be introduced for the XPath.
+     *
+     */
     detail?: string;
+    /**
+     * Short human readable description of error type.
+     *
+     * @remarks
+     * Could be in local language.
+     * To be provided by ASPSPs.
+     *
+     */
     title?: string;
 }
 /**
  * Standardised definition of reporting error information according to [RFC7807]
+ *
+ * @remarks
  * in case of a HTTP error code 400 for AIS.
  *
-**/
-export declare class Error400Ais extends SpeakeasyBase {
+ */
+export declare class Error400AIS extends SpeakeasyBase {
+    /**
+     * A _link object with all availabel link types.
+     *
+     * @remarks
+     *
+     */
     links?: Record<string, HrefType>;
-    additionalErrors?: Error400AisAdditionalErrors[];
-    code: MessageCode400AisEnum;
+    /**
+     * Array of Error Information Blocks.
+     *
+     * @remarks
+     *
+     * Might be used if more than one error is to be communicated
+     *
+     */
+    additionalErrors?: Error400AISAdditionalErrors[];
+    /**
+     * Message codes defined for AIS for HTTP Error code 400 (BAD_REQUEST).
+     */
+    code: MessageCode400AISEnum;
+    /**
+     * Detailed human readable text specific to this instance of the error.
+     *
+     * @remarks
+     * XPath might be used to point to the issue generating the error in addition.
+     * Remark for Future: In future, a dedicated field might be introduced for the XPath.
+     *
+     */
     detail?: string;
+    /**
+     * Short human readable description of error type.
+     *
+     * @remarks
+     * Could be in local language.
+     * To be provided by ASPSPs.
+     *
+     */
     title?: string;
+    /**
+     * A URI reference [RFC3986] that identifies the problem type.
+     *
+     * @remarks
+     * Remark For Future: These URI will be provided by NextGen in future.
+     *
+     */
     type: string;
 }

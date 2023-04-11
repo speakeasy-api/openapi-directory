@@ -1,19 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PostAutomationV4ActionsAppIdCreatePathParams extends SpeakeasyBase {
-    appId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class PostAutomationV4ActionsAppIdCreateSecurity extends SpeakeasyBase {
-    developerHapikey: shared.SchemeDeveloperHapikey;
+    developerHapikey: string;
 }
 export declare class PostAutomationV4ActionsAppIdCreateRequest extends SpeakeasyBase {
-    pathParams: PostAutomationV4ActionsAppIdCreatePathParams;
-    request: shared.ExtensionActionDefinitionInput;
-    security: PostAutomationV4ActionsAppIdCreateSecurity;
+    /**
+     * The custom workflow action to create.
+     */
+    extensionActionDefinitionInput: shared.ExtensionActionDefinitionInput;
+    appId: number;
 }
 export declare class PostAutomationV4ActionsAppIdCreateResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
+    /**
+     * successful operation
+     */
     extensionActionDefinition?: shared.ExtensionActionDefinition;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

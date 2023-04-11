@@ -1,8 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
- *  Information about metrics summaries.
-**/
+ * Information about metrics summaries.
+ */
 export declare class MetricsSummary extends SpeakeasyBase {
     findingsCount?: number;
     meteredLinesOfCodeCount?: number;
+    suppressedLinesOfCodeCount?: number;
 }

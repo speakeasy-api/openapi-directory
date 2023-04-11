@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class TeamsRemoveMembershipForUserInOrgPathParams extends SpeakeasyBase {
-    org: string;
-    teamSlug: string;
-    username: string;
-}
+import { AxiosResponse } from "axios";
 export declare class TeamsRemoveMembershipForUserInOrgRequest extends SpeakeasyBase {
-    pathParams: TeamsRemoveMembershipForUserInOrgPathParams;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    org: string;
+    /**
+     * The slug of the team name.
+     */
+    teamSlug: string;
+    /**
+     * The handle for the GitHub user account.
+     */
+    username: string;
 }
 export declare class TeamsRemoveMembershipForUserInOrgResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

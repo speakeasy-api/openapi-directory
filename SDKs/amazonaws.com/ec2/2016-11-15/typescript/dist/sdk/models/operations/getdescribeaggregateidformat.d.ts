@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeAggregateIdFormatActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeAggregateIdFormatActionEnum {
     DescribeAggregateIdFormat = "DescribeAggregateIdFormat"
 }
-export declare enum GetDescribeAggregateIdFormatVersionEnum {
+export declare enum GETDescribeAggregateIdFormatVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetDescribeAggregateIdFormatQueryParams extends SpeakeasyBase {
-    action: GetDescribeAggregateIdFormatActionEnum;
+export declare class GETDescribeAggregateIdFormatRequest extends SpeakeasyBase {
+    action: GETDescribeAggregateIdFormatActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
-    version: GetDescribeAggregateIdFormatVersionEnum;
-}
-export declare class GetDescribeAggregateIdFormatHeaders extends SpeakeasyBase {
+    version: GETDescribeAggregateIdFormatVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDescribeAggregateIdFormatHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeAggregateIdFormatRequest extends SpeakeasyBase {
-    queryParams: GetDescribeAggregateIdFormatQueryParams;
-    headers: GetDescribeAggregateIdFormatHeaders;
-}
-export declare class GetDescribeAggregateIdFormatResponse extends SpeakeasyBase {
+export declare class GETDescribeAggregateIdFormatResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

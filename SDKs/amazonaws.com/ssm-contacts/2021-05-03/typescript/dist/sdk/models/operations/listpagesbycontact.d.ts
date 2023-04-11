@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListPagesByContactQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListPagesByContactXAmzTargetEnum {
-    SsmContactsListPagesByContact = "SSMContacts.ListPagesByContact"
+    SSMContactsListPagesByContact = "SSMContacts.ListPagesByContact"
 }
-export declare class ListPagesByContactHeaders extends SpeakeasyBase {
+export declare class ListPagesByContactRequest extends SpeakeasyBase {
+    listPagesByContactRequest: shared.ListPagesByContactRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,18 +23,32 @@ export declare class ListPagesByContactHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListPagesByContactXAmzTargetEnum;
 }
-export declare class ListPagesByContactRequest extends SpeakeasyBase {
-    queryParams: ListPagesByContactQueryParams;
-    headers: ListPagesByContactHeaders;
-    request: shared.ListPagesByContactRequest;
-}
 export declare class ListPagesByContactResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * Success
+     */
     listPagesByContactResult?: shared.ListPagesByContactResult;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

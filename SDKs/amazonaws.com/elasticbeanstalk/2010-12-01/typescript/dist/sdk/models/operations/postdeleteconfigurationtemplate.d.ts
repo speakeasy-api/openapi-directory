@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteConfigurationTemplateActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteConfigurationTemplateActionEnum {
     DeleteConfigurationTemplate = "DeleteConfigurationTemplate"
 }
-export declare enum PostDeleteConfigurationTemplateVersionEnum {
+export declare enum POSTDeleteConfigurationTemplateVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostDeleteConfigurationTemplateQueryParams extends SpeakeasyBase {
-    action: PostDeleteConfigurationTemplateActionEnum;
-    version: PostDeleteConfigurationTemplateVersionEnum;
-}
-export declare class PostDeleteConfigurationTemplateHeaders extends SpeakeasyBase {
+export declare class POSTDeleteConfigurationTemplateRequest extends SpeakeasyBase {
+    action: POSTDeleteConfigurationTemplateActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteConfigurationTemplateVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteConfigurationTemplateHeaders extends SpeakeasyBas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteConfigurationTemplateRequest extends SpeakeasyBase {
-    queryParams: PostDeleteConfigurationTemplateQueryParams;
-    headers: PostDeleteConfigurationTemplateHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteConfigurationTemplateResponse extends SpeakeasyBase {
+export declare class POSTDeleteConfigurationTemplateResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

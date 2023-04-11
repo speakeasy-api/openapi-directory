@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AppsDeleteInstallationPathParams extends SpeakeasyBase {
-    installationId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class AppsDeleteInstallationRequest extends SpeakeasyBase {
-    pathParams: AppsDeleteInstallationPathParams;
+    /**
+     * installation_id parameter
+     */
+    installationId: number;
 }
 export declare class AppsDeleteInstallationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Resource not found
+     */
     basicError?: shared.BasicError;
 }

@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * For an application output, describes the AWS Lambda function configured as its destination.
-**/
+ */
 export declare class LambdaOutputDescription extends SpeakeasyBase {
     resourceARN?: string;
     roleARN?: string;

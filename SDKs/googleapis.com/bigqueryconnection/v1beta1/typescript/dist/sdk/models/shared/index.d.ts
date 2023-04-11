@@ -11,7 +11,6 @@ export * from "./getiampolicyrequest";
 export * from "./getpolicyoptions";
 export * from "./listconnectionsresponse";
 export * from "./policy";
-export * from "./security";
 export * from "./setiampolicyrequest";
 export * from "./testiampermissionsrequest";
 export * from "./testiampermissionsresponse";

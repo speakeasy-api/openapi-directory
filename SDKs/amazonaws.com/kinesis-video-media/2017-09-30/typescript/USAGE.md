@@ -1,37 +1,39 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetMediaRequest, GetMediaResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GetMediaRequest,
+  GetMediaResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  StartSelectorTypeEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    hmac: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: GetMediaRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-  },
-  request: {
+  requestBody: {
     startSelector: {
-      afterFragmentNumber: "voluptas",
-      continuationToken: "fugit",
-      startSelectorType: "FRAGMENT_NUMBER",
-      startTimestamp: "2003-05-13T04:57:12Z",
+      afterFragmentNumber: "corrupti",
+      continuationToken: "provident",
+      startSelectorType: StartSelectorTypeEnum.Earliest,
+      startTimestamp: "2021-03-11T23:22:42.658Z",
     },
-    streamARN: "rerum",
-    streamName: "dicta",
+    streamARN: "nulla",
+    streamName: "corrupti",
   },
+  xAmzAlgorithm: "illum",
+  xAmzContentSha256: "vel",
+  xAmzCredential: "error",
+  xAmzDate: "deserunt",
+  xAmzSecurityToken: "suscipit",
+  xAmzSignature: "iure",
+  xAmzSignedHeaders: "magnam",
 };
 
 sdk.getMedia(req).then((res: GetMediaResponse | AxiosError) => {

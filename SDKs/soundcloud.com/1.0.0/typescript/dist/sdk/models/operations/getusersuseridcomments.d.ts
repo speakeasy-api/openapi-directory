@@ -1,24 +1,34 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetUsersUserIdCommentsPathParams extends SpeakeasyBase {
-    userId: number;
-}
-export declare class GetUsersUserIdCommentsQueryParams extends SpeakeasyBase {
-    limit?: number;
-    offset?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetUsersUserIdCommentsSecurity extends SpeakeasyBase {
-    authHeader: shared.SchemeAuthHeader;
-    clientId: shared.SchemeClientId;
+    authHeader: string;
+    clientId: string;
 }
 export declare class GetUsersUserIdCommentsRequest extends SpeakeasyBase {
-    pathParams: GetUsersUserIdCommentsPathParams;
-    queryParams: GetUsersUserIdCommentsQueryParams;
-    security: GetUsersUserIdCommentsSecurity;
+    /**
+     * Number of results to return in the collection.
+     */
+    limit?: number;
+    /**
+     * Offset of first result. Deprecated, use `linked_partitioning` instead.
+     */
+    offset?: number;
+    /**
+     * SoundCloud User id
+     */
+    userId: number;
 }
 export declare class GetUsersUserIdCommentsResponse extends SpeakeasyBase {
+    /**
+     * Success
+     */
     commentsList?: shared.Comment[];
     contentType: string;
+    /**
+     * Unauthorized
+     */
     error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

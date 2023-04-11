@@ -1,0 +1,27 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { AffineTransform } from "./affinetransform";
+/**
+ * The apply mode of the transform update.
+ */
+export declare enum UpdatePageElementTransformRequestApplyModeEnum {
+    ApplyModeUnspecified = "APPLY_MODE_UNSPECIFIED",
+    Relative = "RELATIVE",
+    Absolute = "ABSOLUTE"
+}
+/**
+ * Updates the transform of a page element. Updating the transform of a group will change the absolute transform of the page elements in that group, which can change their visual appearance. See the documentation for PageElement.transform for more details.
+ */
+export declare class UpdatePageElementTransformRequest extends SpeakeasyBase {
+    /**
+     * The apply mode of the transform update.
+     */
+    applyMode?: UpdatePageElementTransformRequestApplyModeEnum;
+    /**
+     * The object ID of the page element to update.
+     */
+    objectId?: string;
+    /**
+     * AffineTransform uses a 3x3 matrix with an implied last row of [ 0 0 1 ] to transform source coordinates (x,y) into destination coordinates (x', y') according to: x' x = shear_y scale_y translate_y 1 [ 1 ] After transformation, x' = scale_x * x + shear_x * y + translate_x; y' = scale_y * y + shear_y * x + translate_y; This message is therefore composed of these six matrix elements.
+     */
+    transform?: AffineTransform;
+}

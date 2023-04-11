@@ -6,35 +6,34 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/microsoft.com/cognitiveservices-Training/3.2/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/microsoft.com/cognitiveservices-Training/3.2/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetDomainRequest, GetDomainResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GetDomainRequest,
+  GetDomainResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    apimKey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: GetDomainRequest = {
-  pathParams: {
-    domainId: "sit",
+    apimKey: "YOUR_API_KEY_HERE",
   },
+});
+
+const req: GetDomainRequest = {
+  domainId: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
 };
 
 sdk.domainsApi.getDomain(req).then((res: GetDomainResponse | AxiosError) => {
@@ -44,16 +43,32 @@ sdk.domainsApi.getDomain(req).then((res: GetDomainResponse | AxiosError) => {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### DomainsApi
+
+### domainsApi
 
 * `getDomain` - Get information about a specific domain.
 * `getDomains` - Get a list of the available domains.
 
-### ImageApi
+### imageApi
 
+* `createImageRegionsForm` - Create a set of image regions.
+* `createImageRegionsJson` - Create a set of image regions.
+* `createImageRegionsRaw` - Create a set of image regions.
+* `createImageTagsForm` - Associate a set of images with a set of tags.
+* `createImageTagsJson` - Associate a set of images with a set of tags.
+* `createImageTagsRaw` - Associate a set of images with a set of tags.
 * `createImagesFromData` - Add the provided images to the set of training images.
+* `createImagesFromFilesForm` - Add the provided batch of images to the set of training images.
+* `createImagesFromFilesJson` - Add the provided batch of images to the set of training images.
+* `createImagesFromFilesRaw` - Add the provided batch of images to the set of training images.
+* `createImagesFromPredictionsForm` - Add the specified predicted images to the set of training images.
+* `createImagesFromPredictionsJson` - Add the specified predicted images to the set of training images.
+* `createImagesFromPredictionsRaw` - Add the specified predicted images to the set of training images.
+* `createImagesFromUrlsForm` - Add the provided images urls to the set of training images.
+* `createImagesFromUrlsJson` - Add the provided images urls to the set of training images.
+* `createImagesFromUrlsRaw` - Add the provided images urls to the set of training images.
 * `deleteImageRegions` - Delete a set of image regions.
 * `deleteImageTags` - Remove a set of tags from a set of images.
 * `deleteImages` - Delete images from the set of training images.
@@ -62,20 +77,29 @@ sdk.domainsApi.getDomain(req).then((res: GetDomainResponse | AxiosError) => {
 * `getTaggedImages` - Get tagged images for a given project iteration.
 * `getUntaggedImageCount` - Gets the number of untagged images.
 * `getUntaggedImages` - Get untagged images for a given project iteration.
-* `querySuggestedImageCount` - Get count of images whose suggested tags match given tags and their probabilities are greater than or equal to the given threshold. Returns count as 0 if none found.
-* `querySuggestedImages` - Get untagged images whose suggested tags match given tags. Returns empty array if no images are found.
+* `querySuggestedImageCountForm` - Get count of images whose suggested tags match given tags and their probabilities are greater than or equal to the given threshold. Returns count as 0 if none found.
+* `querySuggestedImageCountJson` - Get count of images whose suggested tags match given tags and their probabilities are greater than or equal to the given threshold. Returns count as 0 if none found.
+* `querySuggestedImageCountRaw` - Get count of images whose suggested tags match given tags and their probabilities are greater than or equal to the given threshold. Returns count as 0 if none found.
+* `querySuggestedImagesForm` - Get untagged images whose suggested tags match given tags. Returns empty array if no images are found.
+* `querySuggestedImagesJson` - Get untagged images whose suggested tags match given tags. Returns empty array if no images are found.
+* `querySuggestedImagesRaw` - Get untagged images whose suggested tags match given tags. Returns empty array if no images are found.
 
-### ImageRegionProposalApi
+### imageRegionProposalApi
 
 * `getImageRegionProposals` - Get region proposals for an image. Returns empty array if no proposals are found.
 
-### PredictionsApi
+### predictionsApi
 
 * `deletePrediction` - Delete a set of predicted images and their associated prediction results.
+* `queryPredictionsForm` - Get images that were sent to your prediction endpoint.
+* `queryPredictionsJson` - Get images that were sent to your prediction endpoint.
+* `queryPredictionsRaw` - Get images that were sent to your prediction endpoint.
 * `quickTestImage` - Quick test an image.
-* `quickTestImageUrl` - Quick test an image url.
+* `quickTestImageUrlForm` - Quick test an image url.
+* `quickTestImageUrlJson` - Quick test an image url.
+* `quickTestImageUrlRaw` - Quick test an image url.
 
-### ProjectApi
+### projectApi
 
 * `createProject` - Create a project.
 * `deleteIteration` - Delete a specific iteration of a project.
@@ -93,22 +117,42 @@ training for the provided iteration {iterationId}.
 * `getProjects` - Get your projects.
 * `importProject` - Imports a project.
 * `publishIteration` - Publish a specific iteration.
-* `trainProject` - Queues project for training.
+* `trainProjectForm` - Queues project for training.
+* `trainProjectJson` - Queues project for training.
+* `trainProjectRaw` - Queues project for training.
 * `unpublishIteration` - Unpublish a specific iteration.
-* `updateIteration` - Update a specific iteration.
+* `updateIterationForm` - Update a specific iteration.
+* `updateIterationJson` - Update a specific iteration.
+* `updateIterationRaw` - Update a specific iteration.
+* `updateProjectForm` - Update a specific project.
+* `updateProjectJson` - Update a specific project.
+* `updateProjectRaw` - Update a specific project.
 
-### SuggestTagsAndRegionsApi
+### suggestTagsAndRegionsApi
 
 * `suggestTagsAndRegions` - Suggest tags and regions for an array/batch of untagged images. Returns empty array if no tags are found.
 
-### TagsApi
+### tagsApi
 
 * `createTag` - Create a tag for the project.
 * `deleteTag` - Delete a tag from the project.
 * `getTag` - Get information about a specific tag.
 * `getTags` - Get the tags for a given project and iteration.
-* `updateTag` - Update a tag.
-
+* `updateTagForm` - Update a tag.
+* `updateTagJson` - Update a tag.
+* `updateTagRaw` - Update a tag.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

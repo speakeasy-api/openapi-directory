@@ -1,23 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GroupsCreatePathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GroupsCreateRequest extends SpeakeasyBase {
+    /**
+     * The parameters for the group to create.
+     */
+    requestBody: Record<string, Record<string, any>>;
+    /**
+     * Client API version.
+     */
+    apiVersion: string;
+    /**
+     * The tenant ID.
+     */
     tenantID: string;
 }
-export declare class GroupsCreateQueryParams extends SpeakeasyBase {
-    apiVersion: string;
-}
-export declare class GroupsCreateRequests extends SpeakeasyBase {
-    groupCreateParameters?: Record<string, Record<string, any>>;
-    groupCreateParameters1?: Record<string, Record<string, any>>;
-}
-export declare class GroupsCreateRequest extends SpeakeasyBase {
-    pathParams: GroupsCreatePathParams;
-    queryParams: GroupsCreateQueryParams;
-    request: GroupsCreateRequests;
-}
 export declare class GroupsCreateResponse extends SpeakeasyBase {
+    /**
+     * Created
+     */
     adGroup?: Record<string, Record<string, any>>;
     contentType: string;
+    /**
+     * Error response describing why the operation failed.
+     */
     graphError?: shared.GraphError;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

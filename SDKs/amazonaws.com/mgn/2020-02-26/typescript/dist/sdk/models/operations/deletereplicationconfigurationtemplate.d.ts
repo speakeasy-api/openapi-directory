@@ -1,5 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteReplicationConfigurationTemplateHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteReplicationConfigurationTemplateRequestBody extends SpeakeasyBase {
+    /**
+     * Request to delete Replication Configuration Template from service by Replication Configuration Template ID.
+     */
+    replicationConfigurationTemplateID: string;
+}
+export declare class DeleteReplicationConfigurationTemplateRequest extends SpeakeasyBase {
+    requestBody: DeleteReplicationConfigurationTemplateRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -8,18 +16,24 @@ export declare class DeleteReplicationConfigurationTemplateHeaders extends Speak
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeleteReplicationConfigurationTemplateRequestBody extends SpeakeasyBase {
-    replicationConfigurationTemplateID: string;
-}
-export declare class DeleteReplicationConfigurationTemplateRequest extends SpeakeasyBase {
-    headers: DeleteReplicationConfigurationTemplateHeaders;
-    request: DeleteReplicationConfigurationTemplateRequestBody;
-}
 export declare class DeleteReplicationConfigurationTemplateResponse extends SpeakeasyBase {
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteReplicationConfigurationTemplateResponse?: Record<string, any>;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UninitializedAccountException
+     */
     uninitializedAccountException?: any;
 }

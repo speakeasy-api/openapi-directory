@@ -7,7 +7,13 @@ export declare enum RabattSatzEnum {
     Null = "NULL"
 }
 export declare class Rabatt extends SpeakeasyBase {
+    /**
+     * The amount in cents
+     */
     betragBrutto: number;
+    /**
+     * The amount in cents
+     */
     betragNetto: number;
     bezeichnung: string;
     satz?: RabattSatzEnum;

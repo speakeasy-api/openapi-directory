@@ -1,37 +1,33 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GamesAchievementDefinitionsListRequest, GamesAchievementDefinitionsListResponse } from "openapi/src/sdk/models/operations";
+import {
+  GamesAchievementDefinitionsListRequest,
+  GamesAchievementDefinitionsListResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GamesAchievementDefinitionsListRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "voluptas",
-    alt: "media",
-    callback: "expedita",
-    fields: "consequuntur",
-    key: "dolor",
-    language: "expedita",
-    maxResults: 6044372234677422456,
-    oauthToken: "fugit",
-    pageToken: "et",
-    prettyPrint: true,
-    quotaUser: "rerum",
-    uploadType: "dicta",
-    uploadProtocol: "debitis",
-  },
+  dollarXgafv: XgafvEnum.Two,
+  accessToken: "provident",
+  alt: AltEnum.Proto,
+  callback: "quibusdam",
+  fields: "unde",
+  key: "nulla",
+  language: "corrupti",
+  maxResults: 847252,
+  oauthToken: "vel",
+  pageToken: "error",
+  prettyPrint: false,
+  quotaUser: "deserunt",
+  uploadType: "suscipit",
+  uploadProtocol: "iure",
 };
 
 sdk.achievementDefinitions.gamesAchievementDefinitionsList(req).then((res: GamesAchievementDefinitionsListResponse | AxiosError) => {

@@ -4,8 +4,8 @@ import { ManagedAgent } from "./managedagent";
 import { NetworkBinding } from "./networkbinding";
 import { NetworkInterface } from "./networkinterface";
 /**
- * A Docker container that is part of a task.
-**/
+ * A Docker container that's part of a task.
+ */
 export declare class Container extends SpeakeasyBase {
     containerArn?: string;
     cpu?: string;

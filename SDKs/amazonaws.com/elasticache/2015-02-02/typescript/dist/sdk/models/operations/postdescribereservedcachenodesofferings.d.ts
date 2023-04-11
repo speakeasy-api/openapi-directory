@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeReservedCacheNodesOfferingsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeReservedCacheNodesOfferingsActionEnum {
     DescribeReservedCacheNodesOfferings = "DescribeReservedCacheNodesOfferings"
 }
-export declare enum PostDescribeReservedCacheNodesOfferingsVersionEnum {
+export declare enum POSTDescribeReservedCacheNodesOfferingsVersionEnum {
     TwoThousandAndFifteen0202 = "2015-02-02"
 }
-export declare class PostDescribeReservedCacheNodesOfferingsQueryParams extends SpeakeasyBase {
-    action: PostDescribeReservedCacheNodesOfferingsActionEnum;
+export declare class POSTDescribeReservedCacheNodesOfferingsRequest extends SpeakeasyBase {
+    action: POSTDescribeReservedCacheNodesOfferingsActionEnum;
+    /**
+     * Pagination token
+     */
     marker?: string;
+    /**
+     * Pagination limit
+     */
     maxRecords?: string;
-    version: PostDescribeReservedCacheNodesOfferingsVersionEnum;
-}
-export declare class PostDescribeReservedCacheNodesOfferingsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeReservedCacheNodesOfferingsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeReservedCacheNodesOfferingsHeaders extends Spea
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeReservedCacheNodesOfferingsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeReservedCacheNodesOfferingsQueryParams;
-    headers: PostDescribeReservedCacheNodesOfferingsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeReservedCacheNodesOfferingsResponse extends SpeakeasyBase {
+export declare class POSTDescribeReservedCacheNodesOfferingsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

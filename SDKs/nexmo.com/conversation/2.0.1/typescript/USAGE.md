@@ -1,25 +1,24 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateConversationRequest, CreateConversationResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CreateConversationRequestBody,
+  CreateConversationResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    bearerAuth: {
-      authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-    },
-  }
-));
-    
-const req: CreateConversationRequest = {
-  request: {
-    displayName: "sit",
-    imageUrl: "voluptas",
-    name: "culpa",
-    properties: {
-      ttl: 6.200000,
-    },
+    bearerAuth: "Bearer YOUR_BEARER_TOKEN_HERE",
+  },
+});
+
+const req: CreateConversationRequestBody = {
+  displayName: "Customer Chat",
+  imageUrl: "https://example.com/image.png",
+  name: "customer_chat",
+  properties: {
+    ttl: 60,
   },
 };
 

@@ -1,15 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class TeamsCheckPermissionsForProjectInOrgPathParams extends SpeakeasyBase {
-    org: string;
-    projectId: number;
-    teamSlug: string;
-}
+import { AxiosResponse } from "axios";
 export declare class TeamsCheckPermissionsForProjectInOrgRequest extends SpeakeasyBase {
-    pathParams: TeamsCheckPermissionsForProjectInOrgPathParams;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    org: string;
+    /**
+     * The unique identifier of the project.
+     */
+    projectId: number;
+    /**
+     * The slug of the team name.
+     */
+    teamSlug: string;
 }
 export declare class TeamsCheckPermissionsForProjectInOrgResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     teamProject?: shared.TeamProject;
 }

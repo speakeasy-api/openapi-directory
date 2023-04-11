@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DcimManufacturersPartialUpdatePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DcimManufacturersPartialUpdateRequest extends SpeakeasyBase {
-    pathParams: DcimManufacturersPartialUpdatePathParams;
-    request: shared.ManufacturerInput;
+    manufacturerInput: shared.ManufacturerInput;
+    /**
+     * A unique integer value identifying this manufacturer.
+     */
+    id: number;
 }
 export declare class DcimManufacturersPartialUpdateResponse extends SpeakeasyBase {
     contentType: string;
     manufacturer?: shared.Manufacturer;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

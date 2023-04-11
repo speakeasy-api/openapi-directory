@@ -1,19 +1,19 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetHackathonsIdFormatRequest, GetHackathonsIdFormatResponse } from "openapi/src/sdk/models/operations";
+import {
+  GETHackathonsIdFormatRequest,
+  GETHackathonsIdFormatResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: GetHackathonsIdFormatRequest = {
-  pathParams: {
-    id: 8717895732742165505,
-  },
+
+const req: GETHackathonsIdFormatRequest = {
+  id: 548814,
 };
 
-sdk.hackathons.getHackathonsIdFormat(req).then((res: GetHackathonsIdFormatResponse | AxiosError) => {
+sdk.hackathons.getHackathonsIdFormat(req).then((res: GETHackathonsIdFormatResponse | AxiosError) => {
    // handle response
 });
 ```

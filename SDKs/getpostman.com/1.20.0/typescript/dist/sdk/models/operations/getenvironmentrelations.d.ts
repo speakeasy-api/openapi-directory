@@ -1,21 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetEnvironmentRelationsPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetEnvironmentRelationsRequest extends SpeakeasyBase {
     apiId: string;
     apiVersionId: string;
 }
-export declare class GetEnvironmentRelations200ApplicationJsonEnvironment extends SpeakeasyBase {
+export declare class GetEnvironmentRelations200ApplicationJSONEnvironment extends SpeakeasyBase {
     id?: string;
     name?: string;
     updatedAt?: string;
 }
-export declare class GetEnvironmentRelations200ApplicationJson extends SpeakeasyBase {
-    environment?: GetEnvironmentRelations200ApplicationJsonEnvironment[];
-}
-export declare class GetEnvironmentRelationsRequest extends SpeakeasyBase {
-    pathParams: GetEnvironmentRelationsPathParams;
+/**
+ * Get environment relations
+ */
+export declare class GetEnvironmentRelations200ApplicationJSON extends SpeakeasyBase {
+    environment?: GetEnvironmentRelations200ApplicationJSONEnvironment[];
 }
 export declare class GetEnvironmentRelationsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getEnvironmentRelations200ApplicationJSONObject?: GetEnvironmentRelations200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Get environment relations
+     */
+    getEnvironmentRelations200ApplicationJSONObject?: GetEnvironmentRelations200ApplicationJSON;
 }

@@ -1,17 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PrivateProjectLeavePathParams extends SpeakeasyBase {
-    projectId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class PrivateProjectLeaveSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class PrivateProjectLeaveRequest extends SpeakeasyBase {
-    pathParams: PrivateProjectLeavePathParams;
-    security: PrivateProjectLeaveSecurity;
+    /**
+     * Project unique identifier
+     */
+    projectId: number;
 }
 export declare class PrivateProjectLeaveResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Forbidden
+     */
     errorMessage?: shared.ErrorMessage;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

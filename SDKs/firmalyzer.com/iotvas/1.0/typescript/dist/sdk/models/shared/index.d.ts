@@ -6,7 +6,6 @@ export * from "./deviceinfo";
 export * from "./expiredcert";
 export * from "./firmwarerisk";
 export * from "./httpvalidationerror";
-export * from "./security";
 export * from "./validationerror";
 export * from "./vulnerability";
 export * from "./vulnerablecomponent";

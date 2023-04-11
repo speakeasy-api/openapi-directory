@@ -1,14 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ConfigConfigGetHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ConfigConfigGetRequest extends SpeakeasyBase {
     authorization?: string;
 }
-export declare class ConfigConfigGetRequest extends SpeakeasyBase {
-    headers: ConfigConfigGetHeaders;
-}
 export declare class ConfigConfigGetResponse extends SpeakeasyBase {
+    /**
+     * Successful Response
+     */
     config?: shared.Config;
     contentType: string;
-    httpValidationError?: shared.HttpValidationError;
+    /**
+     * Validation Error
+     */
+    httpValidationError?: shared.HTTPValidationError;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

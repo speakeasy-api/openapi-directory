@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DbClusterCapacityInfo extends SpeakeasyBase {
+/**
+ * Success
+ */
+export declare class DBClusterCapacityInfo extends SpeakeasyBase {
     currentCapacity?: number;
     dbClusterIdentifier?: string;
     pendingCapacity?: number;

@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Campaign {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class Campaign {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * campaignAnalytics - Campaign Analytics
+     * Campaign Analytics
      *
+     * @remarks
      * This endpoint allows you to retrieve a daily series of various stats for a campaign over time. Data returned includes how many messages were sent, opened, clicked, converted, etc., broken down by message channel.
      *
      * ### Components Used
@@ -182,11 +183,12 @@ export declare class Campaign {
      * ```
      *
      * Possible message types are `email`, `in_app_message`, `webhook`, `android_push`, `apple_push`, `kindle_push`, `web_push`, `windows_phone8_push`, and `windows_universal_push`. All push message types will have the same statistics shown for `android_push` above.
-    **/
+     */
     campaignAnalytics(req: operations.CampaignAnalyticsRequest, config?: AxiosRequestConfig): Promise<operations.CampaignAnalyticsResponse>;
     /**
-     * campaignDetails - Campaign Details
+     * Campaign Details
      *
+     * @remarks
      * This endpoint allows you to retrieve relevant information on a specified campaign, which can be identified by the `campaign_id`.
      *
      * > The campaign_id for API campaigns can be found on the Developer Console page and the campaign details page within your dashboard or you can use the Campaign List Endpoint.
@@ -365,11 +367,12 @@ export declare class Campaign {
      *     "app_ids": (array|null) array of app ids, i.e. - ["12345", "67890"], or `null` if "Track sessions for any app" is selected in the UI
      * }
      * ```
-    **/
+     */
     campaignDetails(req: operations.CampaignDetailsRequest, config?: AxiosRequestConfig): Promise<operations.CampaignDetailsResponse>;
     /**
-     * campaignList - Campaign List
+     * Campaign List
      *
+     * @remarks
      * This endpoint allows you to export a list of campaigns, each of which will include its name, Campaign API Identifier, whether it is an API Campaign, and Tags associated with the campaign. The campaigns are returned in groups of 100 sorted by time of creation (oldest to newest by default).
      *
      * ## Campaign List Endpoint API Response
@@ -391,11 +394,12 @@ export declare class Campaign {
      *     ]
      * }
      * ```
-    **/
+     */
     campaignList(req: operations.CampaignListRequest, config?: AxiosRequestConfig): Promise<operations.CampaignListResponse>;
     /**
-     * sendAnalytics - Send Analytics
+     * Send Analytics
      *
+     * @remarks
      * This endpoint allows you to retrieve a daily series of various stats for a tracked `send_id`. Braze stores send analytics for 14 days after the send.
      *
      * Campaign conversions will be attributed towards the most recent send id that a given user has received from the campaign.
@@ -448,6 +452,6 @@ export declare class Campaign {
      *   "message": "success"
      * }
      * ```
-    **/
+     */
     sendAnalytics(req: operations.SendAnalyticsRequest, config?: AxiosRequestConfig): Promise<operations.SendAnalyticsResponse>;
 }

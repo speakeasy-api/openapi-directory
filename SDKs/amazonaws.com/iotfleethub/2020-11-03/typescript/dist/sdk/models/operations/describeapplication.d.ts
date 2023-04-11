@@ -1,9 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeApplicationPathParams extends SpeakeasyBase {
-    applicationId: string;
-}
-export declare class DescribeApplicationHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DescribeApplicationRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,17 +9,33 @@ export declare class DescribeApplicationHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DescribeApplicationRequest extends SpeakeasyBase {
-    pathParams: DescribeApplicationPathParams;
-    headers: DescribeApplicationHeaders;
+    /**
+     * The unique Id of the web application.
+     */
+    applicationId: string;
 }
 export declare class DescribeApplicationResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeApplicationResponse?: shared.DescribeApplicationResponse;
+    /**
+     * InternalFailureException
+     */
     internalFailureException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

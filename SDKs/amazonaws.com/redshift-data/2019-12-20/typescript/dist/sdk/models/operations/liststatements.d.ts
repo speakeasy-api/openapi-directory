@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListStatementsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListStatementsXAmzTargetEnum {
     RedshiftDataListStatements = "RedshiftData.ListStatements"
 }
-export declare class ListStatementsHeaders extends SpeakeasyBase {
+export declare class ListStatementsRequest extends SpeakeasyBase {
+    listStatementsRequest: shared.ListStatementsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,15 +23,20 @@ export declare class ListStatementsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListStatementsXAmzTargetEnum;
 }
-export declare class ListStatementsRequest extends SpeakeasyBase {
-    queryParams: ListStatementsQueryParams;
-    headers: ListStatementsHeaders;
-    request: shared.ListStatementsRequest;
-}
 export declare class ListStatementsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * Success
+     */
     listStatementsResponse?: shared.ListStatementsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

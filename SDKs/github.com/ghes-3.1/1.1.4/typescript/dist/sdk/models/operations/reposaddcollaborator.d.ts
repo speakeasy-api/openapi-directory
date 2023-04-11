@@ -1,10 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReposAddCollaboratorPathParams extends SpeakeasyBase {
-    owner: string;
-    repo: string;
-    username: string;
-}
+import { AxiosResponse } from "axios";
+/**
+ * The permission to grant the collaborator. **Only valid on organization-owned repositories.**
+ */
 export declare enum ReposAddCollaboratorRequestBodyPermissionEnum {
     Pull = "pull",
     Push = "push",
@@ -13,17 +12,40 @@ export declare enum ReposAddCollaboratorRequestBodyPermissionEnum {
     Triage = "triage"
 }
 export declare class ReposAddCollaboratorRequestBody extends SpeakeasyBase {
+    /**
+     * The permission to grant the collaborator. **Only valid on organization-owned repositories.**
+     */
     permission?: ReposAddCollaboratorRequestBodyPermissionEnum;
-    permissions?: string;
 }
 export declare class ReposAddCollaboratorRequest extends SpeakeasyBase {
-    pathParams: ReposAddCollaboratorPathParams;
-    request?: ReposAddCollaboratorRequestBody;
+    requestBody?: ReposAddCollaboratorRequestBody;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    owner: string;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    repo: string;
+    /**
+     * The handle for the GitHub user account.
+     */
+    username: string;
 }
 export declare class ReposAddCollaboratorResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Forbidden
+     */
     basicError?: shared.BasicError;
+    /**
+     * Response when a new invitation is created
+     */
     repositoryInvitation?: shared.RepositoryInvitation;
+    /**
+     * Validation failed
+     */
     validationError?: shared.ValidationError;
 }

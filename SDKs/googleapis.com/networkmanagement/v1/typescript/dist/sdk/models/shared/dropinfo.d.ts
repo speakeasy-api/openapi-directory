@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Cause that the packet is dropped.
+ */
 export declare enum DropInfoCauseEnum {
     CauseUnspecified = "CAUSE_UNSPECIFIED",
     UnknownExternalAddress = "UNKNOWN_EXTERNAL_ADDRESS",
@@ -24,6 +27,7 @@ export declare enum DropInfoCauseEnum {
     DroppedInsideGkeService = "DROPPED_INSIDE_GKE_SERVICE",
     DroppedInsideCloudSqlService = "DROPPED_INSIDE_CLOUD_SQL_SERVICE",
     GoogleManagedServiceNoPeering = "GOOGLE_MANAGED_SERVICE_NO_PEERING",
+    GkePscEndpointMissing = "GKE_PSC_ENDPOINT_MISSING",
     CloudSqlInstanceNoIpAddress = "CLOUD_SQL_INSTANCE_NO_IP_ADDRESS",
     GkeControlPlaneRegionMismatch = "GKE_CONTROL_PLANE_REGION_MISMATCH",
     PublicGkeControlPlaneToPrivateDestination = "PUBLIC_GKE_CONTROL_PLANE_TO_PRIVATE_DESTINATION",
@@ -35,12 +39,19 @@ export declare enum DropInfoCauseEnum {
     VpcConnectorNotSet = "VPC_CONNECTOR_NOT_SET",
     VpcConnectorNotRunning = "VPC_CONNECTOR_NOT_RUNNING",
     PscConnectionNotAccepted = "PSC_CONNECTION_NOT_ACCEPTED",
-    CloudRunRevisionNotReady = "CLOUD_RUN_REVISION_NOT_READY"
+    CloudRunRevisionNotReady = "CLOUD_RUN_REVISION_NOT_READY",
+    DroppedInsidePscServiceProducer = "DROPPED_INSIDE_PSC_SERVICE_PRODUCER"
 }
 /**
  * Details of the final state "drop" and associated resource.
-**/
+ */
 export declare class DropInfo extends SpeakeasyBase {
+    /**
+     * Cause that the packet is dropped.
+     */
     cause?: DropInfoCauseEnum;
+    /**
+     * URI of the resource that caused the drop.
+     */
     resourceUri?: string;
 }

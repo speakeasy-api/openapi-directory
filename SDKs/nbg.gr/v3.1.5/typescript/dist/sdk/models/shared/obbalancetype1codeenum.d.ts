@@ -1,4 +1,4 @@
-export declare enum ObBalanceType1CodeEnum {
+export declare enum OBBalanceType1CodeEnum {
     ClosingAvailable = "ClosingAvailable",
     ClosingBooked = "ClosingBooked",
     ClosingCleared = "ClosingCleared",

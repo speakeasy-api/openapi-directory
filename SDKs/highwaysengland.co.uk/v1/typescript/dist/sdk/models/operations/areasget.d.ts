@@ -1,13 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AreasGetPathParams extends SpeakeasyBase {
-    version: string;
-}
+import { AxiosResponse } from "axios";
 export declare class AreasGetRequest extends SpeakeasyBase {
-    pathParams: AreasGetPathParams;
+    version: string;
 }
 export declare class AreasGetResponse extends SpeakeasyBase {
     areaResponse?: shared.AreaResponse;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

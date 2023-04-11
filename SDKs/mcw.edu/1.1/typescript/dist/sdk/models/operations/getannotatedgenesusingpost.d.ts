@@ -1,10 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetAnnotatedGenesUsingPostRequest extends SpeakeasyBase {
-    request?: shared.AnnotatedGeneRequest;
-}
-export declare class GetAnnotatedGenesUsingPostResponse extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetAnnotatedGenesUsingPOSTResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

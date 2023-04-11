@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PutCoursesContentIdMetadataCategoryPathParams extends SpeakeasyBase {
-    contentId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PutCoursesContentIdMetadataCategoryRequestBody extends SpeakeasyBase {
     category?: string;
 }
 export declare class PutCoursesContentIdMetadataCategoryRequest extends SpeakeasyBase {
-    pathParams: PutCoursesContentIdMetadataCategoryPathParams;
-    request: PutCoursesContentIdMetadataCategoryRequestBody;
+    requestBody: PutCoursesContentIdMetadataCategoryRequestBody;
+    /**
+     * The content Id
+     */
+    contentId: string;
 }
 export declare class PutCoursesContentIdMetadataCategoryResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Course detail
+     */
     courseMetaResponse?: shared.CourseMetaResponse;
+    /**
+     * Bad Request
+     */
     error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

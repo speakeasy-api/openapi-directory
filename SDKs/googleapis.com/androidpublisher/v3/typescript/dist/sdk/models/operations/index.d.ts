@@ -68,6 +68,7 @@ export * from "./androidpublishermonetizationsubscriptionslist";
 export * from "./androidpublishermonetizationsubscriptionspatch";
 export * from "./androidpublisherordersrefund";
 export * from "./androidpublisherpurchasesproductsacknowledge";
+export * from "./androidpublisherpurchasesproductsconsume";
 export * from "./androidpublisherpurchasesproductsget";
 export * from "./androidpublisherpurchasessubscriptionsacknowledge";
 export * from "./androidpublisherpurchasessubscriptionscancel";

@@ -29,7 +29,6 @@ export * from "./ocrpredictresponse";
 export * from "./ocrresult";
 export * from "./plandata";
 export * from "./predictionerrorresponse";
-export * from "./security";
 export * from "./sentimentpredictrequest";
 export * from "./sentimentpredictresponse";
 export * from "./trainresponse";

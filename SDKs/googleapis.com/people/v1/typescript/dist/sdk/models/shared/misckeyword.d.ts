@@ -1,6 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { FieldMetadata } from "./fieldmetadata";
-import { FieldMetadataInput } from "./fieldmetadata";
+import { FieldMetadata, FieldMetadataInput } from "./fieldmetadata";
+/**
+ * The miscellaneous keyword type.
+ */
 export declare enum MiscKeywordTypeEnum {
     TypeUnspecified = "TYPE_UNSPECIFIED",
     OutlookBillingInformation = "OUTLOOK_BILLING_INFORMATION",
@@ -17,18 +19,39 @@ export declare enum MiscKeywordTypeEnum {
 }
 /**
  * A person's miscellaneous keyword.
-**/
+ */
 export declare class MiscKeyword extends SpeakeasyBase {
+    /**
+     * Output only. The type of the miscellaneous keyword translated and formatted in the viewer's account locale or the `Accept-Language` HTTP header locale.
+     */
     formattedType?: string;
+    /**
+     * Metadata about a field.
+     */
     metadata?: FieldMetadata;
+    /**
+     * The miscellaneous keyword type.
+     */
     type?: MiscKeywordTypeEnum;
+    /**
+     * The value of the miscellaneous keyword.
+     */
     value?: string;
 }
 /**
  * A person's miscellaneous keyword.
-**/
+ */
 export declare class MiscKeywordInput extends SpeakeasyBase {
+    /**
+     * Metadata about a field.
+     */
     metadata?: FieldMetadataInput;
+    /**
+     * The miscellaneous keyword type.
+     */
     type?: MiscKeywordTypeEnum;
+    /**
+     * The value of the miscellaneous keyword.
+     */
     value?: string;
 }

@@ -1,26 +1,23 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { TranslateRequest, TranslateResponse } from "openapi/src/sdk/models/operations";
+import {
+  shared.TranslateRequest,
+  TranslateResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: TranslateRequest = {
-  security: {
-    apiAuth: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  request: {
-    from: "sit",
-    text: [
-      "culpa",
-    ],
-    to: "expedita",
-    translationContext: "consequuntur",
-  },
+
+const req: shared.TranslateRequest = {
+  from: "corrupti",
+  text: [
+    "distinctio",
+    "quibusdam",
+    "unde",
+  ],
+  to: "nulla",
+  translationContext: "corrupti",
 };
 
 sdk.language.translate(req).then((res: TranslateResponse | AxiosError) => {

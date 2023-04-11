@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { LinksCatalogGetBeezUpColumnsLink } from "./linkscataloggetbeezupcolumnslink";
+import { LinksCatalogGetBeezUPColumnsLink } from "./linkscataloggetbeezupcolumnslink";
 import { LinksCatalogIndexLink } from "./linkscatalogindexlink";
 export declare class CatalogIndexLinks extends SpeakeasyBase {
-    beezUPColumns: LinksCatalogGetBeezUpColumnsLink;
+    beezUPColumns: LinksCatalogGetBeezUPColumnsLink;
     self: LinksCatalogIndexLink;
 }

@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetCancelReservedInstancesListingActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETCancelReservedInstancesListingActionEnum {
     CancelReservedInstancesListing = "CancelReservedInstancesListing"
 }
-export declare enum GetCancelReservedInstancesListingVersionEnum {
+export declare enum GETCancelReservedInstancesListingVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetCancelReservedInstancesListingQueryParams extends SpeakeasyBase {
-    action: GetCancelReservedInstancesListingActionEnum;
+export declare class GETCancelReservedInstancesListingRequest extends SpeakeasyBase {
+    action: GETCancelReservedInstancesListingActionEnum;
+    /**
+     * The ID of the Reserved Instance listing.
+     */
     reservedInstancesListingId: string;
-    version: GetCancelReservedInstancesListingVersionEnum;
-}
-export declare class GetCancelReservedInstancesListingHeaders extends SpeakeasyBase {
+    version: GETCancelReservedInstancesListingVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetCancelReservedInstancesListingHeaders extends SpeakeasyB
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetCancelReservedInstancesListingRequest extends SpeakeasyBase {
-    queryParams: GetCancelReservedInstancesListingQueryParams;
-    headers: GetCancelReservedInstancesListingHeaders;
-}
-export declare class GetCancelReservedInstancesListingResponse extends SpeakeasyBase {
+export declare class GETCancelReservedInstancesListingResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

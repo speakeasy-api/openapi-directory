@@ -26,7 +26,6 @@ export * from "./pipe";
 export * from "./regexmatcher";
 export * from "./routesconfigdump";
 export * from "./scopedroutesconfigdump";
-export * from "./security";
 export * from "./semanticversion";
 export * from "./socketaddress";
 export * from "./staticcluster";

@@ -1,6 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetEncryptionConfigHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetEncryptionConfigRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -9,13 +10,20 @@ export declare class GetEncryptionConfigHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetEncryptionConfigRequest extends SpeakeasyBase {
-    headers: GetEncryptionConfigHeaders;
-}
 export declare class GetEncryptionConfigResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getEncryptionConfigResult?: shared.GetEncryptionConfigResult;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottledException
+     */
     throttledException?: any;
 }

@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetAgentContactPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetAgentContactRequest extends SpeakeasyBase {
+    /**
+     * The unique identifier of the agent in Noyo
+     */
     agentId: string;
+    /**
+     * The unique identifier of the agent contact in Noyo
+     */
     contactId: string;
 }
-export declare class GetAgentContactRequest extends SpeakeasyBase {
-    pathParams: GetAgentContactPathParams;
-}
 export declare class GetAgentContactResponse extends SpeakeasyBase {
+    /**
+     * Successful Response - Returns a single Agent contact
+     */
     agentContactResult?: shared.AgentContactResult;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

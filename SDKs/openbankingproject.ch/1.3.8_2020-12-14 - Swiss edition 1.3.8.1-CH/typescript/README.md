@@ -6,131 +6,183 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/openbankingproject.ch/1.3.8_2020-12-14 - Swiss edition 1.3.8.1-CH/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/openbankingproject.ch/1.3.8_2020-12-14 - Swiss edition 1.3.8.1-CH/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateConsentRequest, CreateConsentResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CreateConsentRequest,
+  CreateConsentResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AccountAccessAllPsd2Enum,
+  AccountAccessAvailableAccountsEnum,
+  AccountAccessAvailableAccountsWithBalanceEnum,
+  PSUHttpMethodEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
-  security: {
-    bearerAuthOAuth: {
-      authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-    },
-  }
-));
-    
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK();
+
 const req: CreateConsentRequest = {
-  security: {
-    bearerAuthOAuth: {
-      authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-    },
-  },
-  headers: {
-    digest: "sit",
-    psuAccept: "voluptas",
-    psuAcceptCharset: "culpa",
-    psuAcceptEncoding: "expedita",
-    psuAcceptLanguage: "consequuntur",
-    psuCorporateID: "dolor",
-    psuCorporateIDType: "expedita",
-    psuDeviceID: "voluptas",
-    psuGeoLocation: "fugit",
-    psuHttpMethod: "PATCH",
-    psuID: "nihil",
-    psuIDType: "rerum",
-    psuIPAddress: "dicta",
-    psuIPPort: "debitis",
-    psuUserAgent: "voluptatum",
-    signature: "et",
-    tppBrandLoggingInformation: "ut",
-    tppExplicitAuthorisationPreferred: true,
-    tppNokRedirectURI: "et",
-    tppNotificationContentPreferred: "voluptate",
-    tppNotificationURI: "iste",
-    tppRedirectPreferred: true,
-    tppRedirectURI: "totam",
-    tppSignatureCertificate: "dolores",
-    xRequestID: "illum",
-  },
-  request: {
+  digest: "corrupti",
+  psuAccept: "provident",
+  psuAcceptCharset: "distinctio",
+  psuAcceptEncoding: "quibusdam",
+  psuAcceptLanguage: "unde",
+  psuCorporateID: "nulla",
+  psuCorporateIDType: "corrupti",
+  psuDeviceID: "illum",
+  psuGeoLocation: "vel",
+  psuHttpMethod: PSUHttpMethodEnum.Patch,
+  psuId: "deserunt",
+  psuIDType: "suscipit",
+  psuIPAddress: "112.76.228.14",
+  psuIPPort: "delectus",
+  psuUserAgent: "tempora",
+  signature: "suscipit",
+  tppBrandLoggingInformation: "molestiae",
+  tppExplicitAuthorisationPreferred: false,
+  tppNokRedirectURI: "https://studious-lynx.info",
+  tppNotificationContentPreferred: "excepturi",
+  tppNotificationURI: "nisi",
+  tppRedirectPreferred: false,
+  tppRedirectURI: "https://tangible-bathroom.info",
+  tppSignatureCertificate: "veritatis",
+  xRequestID: "deserunt",
+  consents: {
     access: {
       accounts: [
         {
-          cashAccountType: "vel",
-          currency: "odio",
-          iban: "dolore",
-          otherAccountIdentification: "id",
+          cashAccountType: "ipsam",
+          currency: "EUR",
+          iban: "FR7612345987650123456789014",
+          otherAccountIdentification: "90-100100-0",
         },
       ],
       additionalInformation: {
         ownerName: [
           {
-            cashAccountType: "accusantium",
-            currency: "totam",
-            iban: "commodi",
-            otherAccountIdentification: "quis",
+            cashAccountType: "sapiente",
+            currency: "EUR",
+            iban: "FR7612345987650123456789014",
+            otherAccountIdentification: "90-100100-0",
+          },
+          {
+            cashAccountType: "quo",
+            currency: "EUR",
+            iban: "FR7612345987650123456789014",
+            otherAccountIdentification: "90-100100-0",
+          },
+          {
+            cashAccountType: "odit",
+            currency: "EUR",
+            iban: "FR7612345987650123456789014",
+            otherAccountIdentification: "90-100100-0",
+          },
+          {
+            cashAccountType: "at",
+            currency: "EUR",
+            iban: "FR7612345987650123456789014",
+            otherAccountIdentification: "90-100100-0",
           },
         ],
         trustedBeneficiaries: [
           {
-            cashAccountType: "aut",
-            currency: "odit",
-            iban: "non",
-            otherAccountIdentification: "voluptas",
+            cashAccountType: "maiores",
+            currency: "EUR",
+            iban: "FR7612345987650123456789014",
+            otherAccountIdentification: "90-100100-0",
           },
           {
-            cashAccountType: "omnis",
-            currency: "aut",
-            iban: "illo",
-            otherAccountIdentification: "sed",
+            cashAccountType: "molestiae",
+            currency: "EUR",
+            iban: "FR7612345987650123456789014",
+            otherAccountIdentification: "90-100100-0",
+          },
+          {
+            cashAccountType: "quod",
+            currency: "EUR",
+            iban: "FR7612345987650123456789014",
+            otherAccountIdentification: "90-100100-0",
+          },
+          {
+            cashAccountType: "quod",
+            currency: "EUR",
+            iban: "FR7612345987650123456789014",
+            otherAccountIdentification: "90-100100-0",
           },
         ],
       },
-      allPsd2: "allAccountsWithOwnerName",
-      availableAccounts: "allAccountsWithOwnerName",
-      availableAccountsWithBalance: "allAccounts",
+      allPsd2: AccountAccessAllPsd2Enum.AllAccounts,
+      availableAccounts: AccountAccessAvailableAccountsEnum.AllAccountsWithOwnerName,
+      availableAccountsWithBalance: AccountAccessAvailableAccountsWithBalanceEnum.AllAccountsWithOwnerName,
       balances: [
         {
-          cashAccountType: "odio",
-          currency: "qui",
-          iban: "recusandae",
-          otherAccountIdentification: "at",
+          cashAccountType: "dicta",
+          currency: "EUR",
+          iban: "FR7612345987650123456789014",
+          otherAccountIdentification: "90-100100-0",
+        },
+        {
+          cashAccountType: "nam",
+          currency: "EUR",
+          iban: "FR7612345987650123456789014",
+          otherAccountIdentification: "90-100100-0",
+        },
+        {
+          cashAccountType: "officia",
+          currency: "EUR",
+          iban: "FR7612345987650123456789014",
+          otherAccountIdentification: "90-100100-0",
         },
       ],
       restrictedTo: [
-        "eveniet",
+        "fugit",
+        "deleniti",
+        "hic",
       ],
       transactions: [
         {
-          cashAccountType: "sint",
-          currency: "inventore",
-          iban: "ut",
-          otherAccountIdentification: "exercitationem",
+          cashAccountType: "totam",
+          currency: "EUR",
+          iban: "FR7612345987650123456789014",
+          otherAccountIdentification: "90-100100-0",
         },
         {
-          cashAccountType: "aut",
-          currency: "reprehenderit",
-          iban: "tempore",
-          otherAccountIdentification: "maiores",
+          cashAccountType: "beatae",
+          currency: "EUR",
+          iban: "FR7612345987650123456789014",
+          otherAccountIdentification: "90-100100-0",
+        },
+        {
+          cashAccountType: "commodi",
+          currency: "EUR",
+          iban: "FR7612345987650123456789014",
+          otherAccountIdentification: "90-100100-0",
+        },
+        {
+          cashAccountType: "molestiae",
+          currency: "EUR",
+          iban: "FR7612345987650123456789014",
+          otherAccountIdentification: "90-100100-0",
         },
       ],
     },
     combinedServiceIndicator: false,
-    frequencyPerDay: 7242748068272024738,
+    frequencyPerDay: 4,
     recurringIndicator: false,
-    validUntil: "1992-08-27",
+    validUntil: "2020-12-31",
   },
 };
 
@@ -141,9 +193,10 @@ sdk.accountInformationServiceAIS.createConsent(req).then((res: CreateConsentResp
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### Account Information Service (AIS)
+
+### accountInformationServiceAIS
 
 * `createConsent` - Create consent
 * `deleteConsent` - Delete Consent
@@ -159,7 +212,7 @@ sdk.accountInformationServiceAIS.createConsent(req).then((res: CreateConsentResp
 * `startConsentAuthorisation` - Start the authorisation process for a consent
 * `updateConsentsPsuData` - Update PSU Data for consents
 
-### Common Services
+### commonServices
 
 * `deleteSigningBasket` - Delete the signing basket
 * `getConsentScaStatus` - Read the SCA status of the consent authorisation
@@ -178,11 +231,11 @@ sdk.accountInformationServiceAIS.createConsent(req).then((res: CreateConsentResp
 * `updatePaymentPsuData` - Update PSU data for payment initiation
 * `updateSigningBasketPsuData` - Update PSU data for signing basket
 
-### Confirmation of Funds Service (PIIS)
+### confirmationOfFundsServicePIIS
 
 * `checkAvailabilityOfFunds` - Confirmation of funds request
 
-### Payment Initiation Service (PIS)
+### paymentInitiationServicePIS
 
 * `cancelPayment` - Payment cancellation request
 * `getPaymentCancellationScaStatus` - Read the SCA status of the payment cancellation's authorisation
@@ -191,13 +244,15 @@ sdk.accountInformationServiceAIS.createConsent(req).then((res: CreateConsentResp
 * `getPaymentInitiationCancellationAuthorisationInformation` - Will deliver an array of resource identifications to all generated cancellation authorisation sub-resources
 * `getPaymentInitiationScaStatus` - Read the SCA status of the payment authorisation
 * `getPaymentInitiationStatus` - Payment initiation status request
-* `initiatePayment` - Payment initiation request
+* `initiatePaymentJson` - Payment initiation request
+* `initiatePaymentMultipart` - Payment initiation request
+* `initiatePaymentRaw` - Payment initiation request
 * `startPaymentAuthorisation` - Start the authorisation process for a payment initiation
 * `startPaymentInitiationCancellationAuthorisation` - Start the authorisation process for the cancellation of the addressed payment
 * `updatePaymentCancellationPsuData` - Update PSU data for payment initiation cancellation
 * `updatePaymentPsuData` - Update PSU data for payment initiation
 
-### Signing Baskets Service (SBS)
+### signingBasketsServiceSBS
 
 * `createSigningBasket` - Create a signing basket resource
 * `deleteSigningBasket` - Delete the signing basket
@@ -207,7 +262,18 @@ sdk.accountInformationServiceAIS.createConsent(req).then((res: CreateConsentResp
 * `getSigningBasketStatus` - Read the status of the signing basket
 * `startSigningBasketAuthorisation` - Start the authorisation process for a signing basket
 * `updateSigningBasketPsuData` - Update PSU data for signing basket
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

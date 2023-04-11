@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostGetSerialConsoleAccessStatusActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTGetSerialConsoleAccessStatusActionEnum {
     GetSerialConsoleAccessStatus = "GetSerialConsoleAccessStatus"
 }
-export declare enum PostGetSerialConsoleAccessStatusVersionEnum {
+export declare enum POSTGetSerialConsoleAccessStatusVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostGetSerialConsoleAccessStatusQueryParams extends SpeakeasyBase {
-    action: PostGetSerialConsoleAccessStatusActionEnum;
-    version: PostGetSerialConsoleAccessStatusVersionEnum;
-}
-export declare class PostGetSerialConsoleAccessStatusHeaders extends SpeakeasyBase {
+export declare class POSTGetSerialConsoleAccessStatusRequest extends SpeakeasyBase {
+    action: POSTGetSerialConsoleAccessStatusActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTGetSerialConsoleAccessStatusVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostGetSerialConsoleAccessStatusHeaders extends SpeakeasyBa
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostGetSerialConsoleAccessStatusRequest extends SpeakeasyBase {
-    queryParams: PostGetSerialConsoleAccessStatusQueryParams;
-    headers: PostGetSerialConsoleAccessStatusHeaders;
-    request?: Uint8Array;
-}
-export declare class PostGetSerialConsoleAccessStatusResponse extends SpeakeasyBase {
+export declare class POSTGetSerialConsoleAccessStatusResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,26 +1,33 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class GetFoldersSecurity extends SpeakeasyBase {
+    oAuth2: string;
+}
+/**
+ * values to sort by
+ */
 export declare enum GetFoldersSortEnum {
     Name = "Name",
     Size = "Size",
-    CreatedDateUtc = "CreatedDateUTC"
-}
-export declare class GetFoldersQueryParams extends SpeakeasyBase {
-    sort?: GetFoldersSortEnum;
-}
-export declare class GetFoldersHeaders extends SpeakeasyBase {
-    xeroTenantId: string;
-}
-export declare class GetFoldersSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    CreatedDateUTC = "CreatedDateUTC"
 }
 export declare class GetFoldersRequest extends SpeakeasyBase {
-    queryParams: GetFoldersQueryParams;
-    headers: GetFoldersHeaders;
-    security: GetFoldersSecurity;
+    /**
+     * values to sort by
+     */
+    sort?: GetFoldersSortEnum;
+    /**
+     * Xero identifier for Tenant
+     */
+    xeroTenantId: string;
 }
 export declare class GetFoldersResponse extends SpeakeasyBase {
     contentType: string;
-    folders?: any[];
+    /**
+     * search results matching criteria
+     */
+    folders?: shared.Folder[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

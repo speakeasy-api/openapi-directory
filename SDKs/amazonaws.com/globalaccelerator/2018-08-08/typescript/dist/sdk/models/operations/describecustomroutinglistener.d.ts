@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeCustomRoutingListenerXAmzTargetEnum {
     GlobalAcceleratorV20180706DescribeCustomRoutingListener = "GlobalAccelerator_V20180706.DescribeCustomRoutingListener"
 }
-export declare class DescribeCustomRoutingListenerHeaders extends SpeakeasyBase {
+export declare class DescribeCustomRoutingListenerRequest extends SpeakeasyBase {
+    describeCustomRoutingListenerRequest: shared.DescribeCustomRoutingListenerRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class DescribeCustomRoutingListenerHeaders extends SpeakeasyBase 
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeCustomRoutingListenerXAmzTargetEnum;
 }
-export declare class DescribeCustomRoutingListenerRequest extends SpeakeasyBase {
-    headers: DescribeCustomRoutingListenerHeaders;
-    request: shared.DescribeCustomRoutingListenerRequest;
-}
 export declare class DescribeCustomRoutingListenerResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeCustomRoutingListenerResponse?: shared.DescribeCustomRoutingListenerResponse;
+    /**
+     * InternalServiceErrorException
+     */
     internalServiceErrorException?: any;
+    /**
+     * InvalidArgumentException
+     */
     invalidArgumentException?: any;
+    /**
+     * ListenerNotFoundException
+     */
     listenerNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

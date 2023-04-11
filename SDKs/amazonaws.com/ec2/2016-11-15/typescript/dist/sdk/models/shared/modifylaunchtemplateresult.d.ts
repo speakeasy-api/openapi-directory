@@ -1,16 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
- * Information about the launch template.
-**/
-export declare class ModifyLaunchTemplateResultLaunchTemplate extends SpeakeasyBase {
-    createTime?: Record<string, any>;
-    createdBy?: Record<string, any>;
-    defaultVersionNumber?: Record<string, any>;
-    latestVersionNumber?: Record<string, any>;
-    launchTemplateId?: Record<string, any>;
-    launchTemplateName?: Record<string, any>;
-    tags?: Record<string, any>;
+ * Describes a tag.
+ */
+export declare class ModifyLaunchTemplateResultLaunchTemplateTags extends SpeakeasyBase {
+    key?: string;
+    value?: string;
 }
+/**
+ * Information about the launch template.
+ */
+export declare class ModifyLaunchTemplateResultLaunchTemplate extends SpeakeasyBase {
+    createTime?: Date;
+    createdBy?: string;
+    defaultVersionNumber?: number;
+    latestVersionNumber?: number;
+    launchTemplateId?: string;
+    launchTemplateName?: string;
+    tags?: ModifyLaunchTemplateResultLaunchTemplateTags[];
+}
+/**
+ * Success
+ */
 export declare class ModifyLaunchTemplateResult extends SpeakeasyBase {
     launchTemplate?: ModifyLaunchTemplateResultLaunchTemplate;
 }

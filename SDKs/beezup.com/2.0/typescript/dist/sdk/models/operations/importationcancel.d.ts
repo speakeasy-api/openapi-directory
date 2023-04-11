@@ -1,14 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ImportationCancelPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ImportationCancelRequest extends SpeakeasyBase {
+    /**
+     * The execution identifier of you catalog importation
+     */
     executionId: string;
+    /**
+     * Your store identifier
+     */
     storeId: string;
 }
-export declare class ImportationCancelRequest extends SpeakeasyBase {
-    pathParams: ImportationCancelPathParams;
-}
 export declare class ImportationCancelResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     * Occurs when a user tries to work on the wrong store.
+     *
+     * @remarks
+     * Occurs when the message concerns the wrong execution.
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

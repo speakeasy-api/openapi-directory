@@ -1,37 +1,67 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CloudsupportMediaUploadPathParams extends SpeakeasyBase {
-    parent: string;
-}
-export declare class CloudsupportMediaUploadQueryParams extends SpeakeasyBase {
-    dollarXgafv?: shared.XgafvEnum;
-    accessToken?: string;
-    alt?: shared.AltEnum;
-    callback?: string;
-    fields?: string;
-    key?: string;
-    oauthToken?: string;
-    prettyPrint?: boolean;
-    quotaUser?: string;
-    uploadType?: string;
-    uploadProtocol?: string;
-}
-export declare class CloudsupportMediaUploadRequestsInput extends SpeakeasyBase {
-    applicationOctetStream: Uint8Array;
-    createAttachmentRequest?: shared.CreateAttachmentRequestInput;
-}
+import { AxiosResponse } from "axios";
 export declare class CloudsupportMediaUploadSecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class CloudsupportMediaUploadRequest extends SpeakeasyBase {
-    pathParams: CloudsupportMediaUploadPathParams;
-    queryParams: CloudsupportMediaUploadQueryParams;
-    request?: CloudsupportMediaUploadRequestsInput;
-    security: CloudsupportMediaUploadSecurity;
+    /**
+     * V1 error format.
+     */
+    dollarXgafv?: shared.XgafvEnum;
+    requestBody?: Uint8Array;
+    /**
+     * OAuth access token.
+     */
+    accessToken?: string;
+    /**
+     * Data format for response.
+     */
+    alt?: shared.AltEnum;
+    /**
+     * JSONP
+     */
+    callback?: string;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauthToken?: string;
+    /**
+     * Required. The resource name of the case (or case parent) to which the attachment should be attached.
+     */
+    parent: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    uploadType?: string;
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    uploadProtocol?: string;
 }
 export declare class CloudsupportMediaUploadResponse extends SpeakeasyBase {
+    /**
+     * Successful response
+     */
     attachment?: shared.Attachment;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

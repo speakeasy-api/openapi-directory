@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListLoggerDefinitionVersionsPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListLoggerDefinitionVersionsRequest extends SpeakeasyBase {
+    /**
+     * The ID of the logger definition.
+     */
     loggerDefinitionId: string;
-}
-export declare class ListLoggerDefinitionVersionsQueryParams extends SpeakeasyBase {
+    /**
+     * The maximum number of results to be returned per request.
+     */
     maxResults?: string;
+    /**
+     * The token for the next set of results, or ''null'' if there are no additional results.
+     */
     nextToken?: string;
-}
-export declare class ListLoggerDefinitionVersionsHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,14 +22,16 @@ export declare class ListLoggerDefinitionVersionsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class ListLoggerDefinitionVersionsRequest extends SpeakeasyBase {
-    pathParams: ListLoggerDefinitionVersionsPathParams;
-    queryParams: ListLoggerDefinitionVersionsQueryParams;
-    headers: ListLoggerDefinitionVersionsHeaders;
-}
 export declare class ListLoggerDefinitionVersionsResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     listLoggerDefinitionVersionsResponse?: shared.ListLoggerDefinitionVersionsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

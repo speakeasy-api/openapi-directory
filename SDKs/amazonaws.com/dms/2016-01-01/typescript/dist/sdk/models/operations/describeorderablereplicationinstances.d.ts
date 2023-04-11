@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeOrderableReplicationInstancesQueryParams extends SpeakeasyBase {
-    marker?: string;
-    maxRecords?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum DescribeOrderableReplicationInstancesXAmzTargetEnum {
-    AmazonDmSv20160101DescribeOrderableReplicationInstances = "AmazonDMSv20160101.DescribeOrderableReplicationInstances"
+    AmazonDMSv20160101DescribeOrderableReplicationInstances = "AmazonDMSv20160101.DescribeOrderableReplicationInstances"
 }
-export declare class DescribeOrderableReplicationInstancesHeaders extends SpeakeasyBase {
+export declare class DescribeOrderableReplicationInstancesRequest extends SpeakeasyBase {
+    describeOrderableReplicationInstancesMessage: shared.DescribeOrderableReplicationInstancesMessage;
+    /**
+     * Pagination token
+     */
+    marker?: string;
+    /**
+     * Pagination limit
+     */
+    maxRecords?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,13 +23,12 @@ export declare class DescribeOrderableReplicationInstancesHeaders extends Speake
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeOrderableReplicationInstancesXAmzTargetEnum;
 }
-export declare class DescribeOrderableReplicationInstancesRequest extends SpeakeasyBase {
-    queryParams: DescribeOrderableReplicationInstancesQueryParams;
-    headers: DescribeOrderableReplicationInstancesHeaders;
-    request: shared.DescribeOrderableReplicationInstancesMessage;
-}
 export declare class DescribeOrderableReplicationInstancesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeOrderableReplicationInstancesResponse?: shared.DescribeOrderableReplicationInstancesResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

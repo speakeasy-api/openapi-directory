@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum CreateReplicationSubnetGroupXAmzTargetEnum {
-    AmazonDmSv20160101CreateReplicationSubnetGroup = "AmazonDMSv20160101.CreateReplicationSubnetGroup"
+    AmazonDMSv20160101CreateReplicationSubnetGroup = "AmazonDMSv20160101.CreateReplicationSubnetGroup"
 }
-export declare class CreateReplicationSubnetGroupHeaders extends SpeakeasyBase {
+export declare class CreateReplicationSubnetGroupRequest extends SpeakeasyBase {
+    createReplicationSubnetGroupMessage: shared.CreateReplicationSubnetGroupMessage;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class CreateReplicationSubnetGroupHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: CreateReplicationSubnetGroupXAmzTargetEnum;
 }
-export declare class CreateReplicationSubnetGroupRequest extends SpeakeasyBase {
-    headers: CreateReplicationSubnetGroupHeaders;
-    request: shared.CreateReplicationSubnetGroupMessage;
-}
 export declare class CreateReplicationSubnetGroupResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedFault
+     */
     accessDeniedFault?: any;
     contentType: string;
+    /**
+     * Success
+     */
     createReplicationSubnetGroupResponse?: shared.CreateReplicationSubnetGroupResponse;
+    /**
+     * InvalidSubnet
+     */
     invalidSubnet?: any;
+    /**
+     * ReplicationSubnetGroupDoesNotCoverEnoughAZs
+     */
     replicationSubnetGroupDoesNotCoverEnoughAZs?: any;
-    resourceAlreadyExistsFault?: any;
+    /**
+     * ResourceNotFoundFault
+     */
     resourceNotFoundFault?: any;
-    resourceQuotaExceededFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceAlreadyExistsFault
+     */
+    resourceAlreadyExistsFault?: any;
+    /**
+     * ResourceQuotaExceededFault
+     */
+    resourceQuotaExceededFault?: any;
 }

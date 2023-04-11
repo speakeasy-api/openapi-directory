@@ -1,3 +1,6 @@
+/**
+ * The status of the import job.
+ */
 export declare enum JobStatusEnum {
     Created = "CREATED",
     Processing = "PROCESSING",

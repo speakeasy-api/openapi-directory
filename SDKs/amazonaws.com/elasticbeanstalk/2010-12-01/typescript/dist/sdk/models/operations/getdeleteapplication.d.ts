@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteApplicationActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteApplicationActionEnum {
     DeleteApplication = "DeleteApplication"
 }
-export declare enum GetDeleteApplicationVersionEnum {
+export declare enum GETDeleteApplicationVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetDeleteApplicationQueryParams extends SpeakeasyBase {
-    action: GetDeleteApplicationActionEnum;
+export declare class GETDeleteApplicationRequest extends SpeakeasyBase {
+    action: GETDeleteApplicationActionEnum;
+    /**
+     * The name of the application to delete.
+     */
     applicationName: string;
+    /**
+     * When set to true, running environments will be terminated before deleting the application.
+     */
     terminateEnvByForce?: boolean;
-    version: GetDeleteApplicationVersionEnum;
-}
-export declare class GetDeleteApplicationHeaders extends SpeakeasyBase {
+    version: GETDeleteApplicationVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetDeleteApplicationHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteApplicationRequest extends SpeakeasyBase {
-    queryParams: GetDeleteApplicationQueryParams;
-    headers: GetDeleteApplicationHeaders;
-}
-export declare class GetDeleteApplicationResponse extends SpeakeasyBase {
+export declare class GETDeleteApplicationResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

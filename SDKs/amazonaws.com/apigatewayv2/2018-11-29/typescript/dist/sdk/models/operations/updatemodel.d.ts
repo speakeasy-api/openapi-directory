@@ -1,10 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdateModelPathParams extends SpeakeasyBase {
-    apiId: string;
-    modelId: string;
+import { AxiosResponse } from "axios";
+export declare class UpdateModelRequestBody extends SpeakeasyBase {
+    /**
+     * A string with a length between [1-256].
+     */
+    contentType?: string;
+    /**
+     * A string with a length between [0-1024].
+     */
+    description?: string;
+    /**
+     * A string with a length between [1-128].
+     */
+    name?: string;
+    /**
+     * A string with a length between [0-32768].
+     */
+    schema?: string;
 }
-export declare class UpdateModelHeaders extends SpeakeasyBase {
+export declare class UpdateModelRequest extends SpeakeasyBase {
+    requestBody: UpdateModelRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,24 +28,37 @@ export declare class UpdateModelHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class UpdateModelRequestBody extends SpeakeasyBase {
-    contentType?: string;
-    description?: string;
-    name?: string;
-    schema?: string;
-}
-export declare class UpdateModelRequest extends SpeakeasyBase {
-    pathParams: UpdateModelPathParams;
-    headers: UpdateModelHeaders;
-    request: UpdateModelRequestBody;
+    /**
+     * The API identifier.
+     */
+    apiId: string;
+    /**
+     * The model ID.
+     */
+    modelId: string;
 }
 export declare class UpdateModelResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
+    /**
+     * Success
+     */
     updateModelResponse?: shared.UpdateModelResponse;
 }

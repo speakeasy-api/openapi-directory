@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class EnableSerialConsoleAccessResult extends SpeakeasyBase {
-    serialConsoleAccessEnabled?: Record<string, any>;
+    serialConsoleAccessEnabled?: boolean;
 }

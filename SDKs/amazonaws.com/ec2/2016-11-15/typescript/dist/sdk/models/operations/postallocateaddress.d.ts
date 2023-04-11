@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostAllocateAddressActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTAllocateAddressActionEnum {
     AllocateAddress = "AllocateAddress"
 }
-export declare enum PostAllocateAddressVersionEnum {
+export declare enum POSTAllocateAddressVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostAllocateAddressQueryParams extends SpeakeasyBase {
-    action: PostAllocateAddressActionEnum;
-    version: PostAllocateAddressVersionEnum;
-}
-export declare class PostAllocateAddressHeaders extends SpeakeasyBase {
+export declare class POSTAllocateAddressRequest extends SpeakeasyBase {
+    action: POSTAllocateAddressActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTAllocateAddressVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostAllocateAddressHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostAllocateAddressRequest extends SpeakeasyBase {
-    queryParams: PostAllocateAddressQueryParams;
-    headers: PostAllocateAddressHeaders;
-    request?: Uint8Array;
-}
-export declare class PostAllocateAddressResponse extends SpeakeasyBase {
+export declare class POSTAllocateAddressResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

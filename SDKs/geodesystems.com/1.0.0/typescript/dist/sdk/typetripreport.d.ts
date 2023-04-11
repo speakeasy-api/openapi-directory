@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Search API for 'Trip Report' entry type
+ */
 export declare class TypeTripReport {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,10 @@ export declare class TypeTripReport {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * searchTripReport - Search API for 'Trip Report' entry type
+     * Search API for 'Trip Report' entry type
      *
+     * @remarks
      * API to search for entries of type Trip Report
-    **/
+     */
     searchTripReport(req: operations.SearchTripReportRequest, config?: AxiosRequestConfig): Promise<operations.SearchTripReportResponse>;
 }

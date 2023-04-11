@@ -1,23 +1,23 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetTimestagsRequest, GetTimestagsResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GetTimestagsRequest,
+  GetTimestagsResponse,
+  GetTimestagsFilterEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    apikey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: GetTimestagsRequest = {
-  queryParams: {
-    filter: "Org",
-    max: 2259404117704393152,
-    query: "culpa",
+    apikey: "YOUR_API_KEY_HERE",
   },
+});
+
+const req: GetTimestagsRequest = {
+  filter: GetTimestagsFilterEnum.Org,
+  max: 592845,
+  query: "distinctio",
 };
 
 sdk.getTimestags(req).then((res: GetTimestagsResponse | AxiosError) => {

@@ -1,115 +1,170 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class VlcerSecurity extends SpeakeasyBase {
+    apiKey: string;
+    clientId: string;
+}
 export declare class VlcerRequestBodyCertificateParameters extends SpeakeasyBase {
+    /**
+     * Certificate Number
+     */
     certificateNumber: string;
 }
+/**
+ * The format of the certificate in response.
+ */
 export declare enum VlcerRequestBodyFormatEnum {
     Pdf = "pdf"
 }
+/**
+ * Request format
+ */
 export declare class VlcerRequestBody extends SpeakeasyBase {
     certificateParameters?: VlcerRequestBodyCertificateParameters;
-    consentArtifact?: any;
+    consentArtifact?: shared.ConsentArtifactSchema;
+    /**
+     * The format of the certificate in response.
+     */
     format: VlcerRequestBodyFormatEnum;
+    /**
+     * A unique transaction id for this request in UUID format. It is used for tracking the request.
+     */
     txnId: string;
 }
-export declare class VlcerSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
-    clientId: shared.SchemeClientId;
+export declare enum Vlcer504ApplicationJSONErrorEnum {
+    GatewayTimeout = "gateway_timeout"
 }
-export declare enum Vlcer400ApplicationJsonErrorEnum {
+export declare enum Vlcer504ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
+}
+/**
+ * Gateway timeout
+ */
+export declare class Vlcer504ApplicationJSON extends SpeakeasyBase {
+    error?: Vlcer504ApplicationJSONErrorEnum;
+    errorDescription?: Vlcer504ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Vlcer503ApplicationJSONErrorEnum {
+    ServiceUnavailable = "service_unavailable"
+}
+export declare enum Vlcer503ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
+}
+/**
+ * Service unavailable
+ */
+export declare class Vlcer503ApplicationJSON extends SpeakeasyBase {
+    error?: Vlcer503ApplicationJSONErrorEnum;
+    errorDescription?: Vlcer503ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Vlcer502ApplicationJSONErrorEnum {
+    BadGatewy = "bad_gatewy"
+}
+export declare enum Vlcer502ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
+}
+/**
+ * Bad gateway
+ */
+export declare class Vlcer502ApplicationJSON extends SpeakeasyBase {
+    error?: Vlcer502ApplicationJSONErrorEnum;
+    errorDescription?: Vlcer502ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Vlcer500ApplicationJSONErrorEnum {
+    InternalServerError = "internal_server_error"
+}
+export declare enum Vlcer500ApplicationJSONErrorDescriptionEnum {
+    InternalServerError = "Internal server error"
+}
+/**
+ * Internal server error
+ */
+export declare class Vlcer500ApplicationJSON extends SpeakeasyBase {
+    error?: Vlcer500ApplicationJSONErrorEnum;
+    errorDescription?: Vlcer500ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Vlcer404ApplicationJSONErrorEnum {
+    RecordNotFound = "record_not_found",
+    UrlNotFound = "url_not_found"
+}
+export declare enum Vlcer404ApplicationJSONErrorDescriptionEnum {
+    NoRecordFound = "No record found",
+    YourAPIUrlOrPathIsIncorrect = "Your API url or path is incorrect"
+}
+/**
+ * No record found
+ */
+export declare class Vlcer404ApplicationJSON extends SpeakeasyBase {
+    error?: Vlcer404ApplicationJSONErrorEnum;
+    errorDescription?: Vlcer404ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Vlcer401ApplicationJSONErrorEnum {
+    InvalidAuthentication = "invalid_authentication",
+    InvalidAuthorization = "invalid_authorization"
+}
+export declare enum Vlcer401ApplicationJSONErrorDescriptionEnum {
+    AuthenticationFailed = "Authentication failed",
+    YouAreNotAuthorizedToUseThisAPI = "You are not authorized to use this API"
+}
+/**
+ * Unauthorized access
+ */
+export declare class Vlcer401ApplicationJSON extends SpeakeasyBase {
+    error?: Vlcer401ApplicationJSONErrorEnum;
+    errorDescription?: Vlcer401ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Vlcer400ApplicationJSONErrorEnum {
     MissingParameter = "missing_parameter",
     InvalidParameter = "invalid_parameter",
     InvalidFormat = "invalid_format",
     InvalidTxnid = "invalid_txnid",
     InvalidConsentid = "invalid_consentid"
 }
-export declare enum Vlcer400ApplicationJsonErrorDescriptionEnum {
+export declare enum Vlcer400ApplicationJSONErrorDescriptionEnum {
     PleaseProvideAllMandatoryParameters = "Please provide all mandatory parameters",
     BadRequest = "Bad request",
     TheFormatParameterIsInvalid = "The format parameter is invalid",
-    TheTxnIdParameterMustBeInUuidFormat = "The txnId parameter must be in UUID format",
-    TheConsentIdParameterMustBeInUuidFormat = "The consentId parameter must be in UUID format"
+    TheTxnIdParameterMustBeInUUIDFormat = "The txnId parameter must be in UUID format",
+    TheConsentIdParameterMustBeInUUIDFormat = "The consentId parameter must be in UUID format"
 }
-export declare class Vlcer400ApplicationJson extends SpeakeasyBase {
-    error?: Vlcer400ApplicationJsonErrorEnum;
-    errorDescription?: Vlcer400ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Vlcer401ApplicationJsonErrorEnum {
-    InvalidAuthentication = "invalid_authentication",
-    InvalidAuthorization = "invalid_authorization"
-}
-export declare enum Vlcer401ApplicationJsonErrorDescriptionEnum {
-    AuthenticationFailed = "Authentication failed",
-    YouAreNotAuthorizedToUseThisApi = "You are not authorized to use this API"
-}
-export declare class Vlcer401ApplicationJson extends SpeakeasyBase {
-    error?: Vlcer401ApplicationJsonErrorEnum;
-    errorDescription?: Vlcer401ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Vlcer404ApplicationJsonErrorEnum {
-    RecordNotFound = "record_not_found",
-    UrlNotFound = "url_not_found"
-}
-export declare enum Vlcer404ApplicationJsonErrorDescriptionEnum {
-    NoRecordFound = "No record found",
-    YourApiUrlOrPathIsIncorrect = "Your API url or path is incorrect"
-}
-export declare class Vlcer404ApplicationJson extends SpeakeasyBase {
-    error?: Vlcer404ApplicationJsonErrorEnum;
-    errorDescription?: Vlcer404ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Vlcer500ApplicationJsonErrorEnum {
-    InternalServerError = "internal_server_error"
-}
-export declare enum Vlcer500ApplicationJsonErrorDescriptionEnum {
-    InternalServerError = "Internal server error"
-}
-export declare class Vlcer500ApplicationJson extends SpeakeasyBase {
-    error?: Vlcer500ApplicationJsonErrorEnum;
-    errorDescription?: Vlcer500ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Vlcer502ApplicationJsonErrorEnum {
-    BadGatewy = "bad_gatewy"
-}
-export declare enum Vlcer502ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
-}
-export declare class Vlcer502ApplicationJson extends SpeakeasyBase {
-    error?: Vlcer502ApplicationJsonErrorEnum;
-    errorDescription?: Vlcer502ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Vlcer503ApplicationJsonErrorEnum {
-    ServiceUnavailable = "service_unavailable"
-}
-export declare enum Vlcer503ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
-}
-export declare class Vlcer503ApplicationJson extends SpeakeasyBase {
-    error?: Vlcer503ApplicationJsonErrorEnum;
-    errorDescription?: Vlcer503ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Vlcer504ApplicationJsonErrorEnum {
-    GatewayTimeout = "gateway_timeout"
-}
-export declare enum Vlcer504ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
-}
-export declare class Vlcer504ApplicationJson extends SpeakeasyBase {
-    error?: Vlcer504ApplicationJsonErrorEnum;
-    errorDescription?: Vlcer504ApplicationJsonErrorDescriptionEnum;
-}
-export declare class VlcerRequest extends SpeakeasyBase {
-    request?: VlcerRequestBody;
-    security: VlcerSecurity;
+/**
+ * Bad request
+ */
+export declare class Vlcer400ApplicationJSON extends SpeakeasyBase {
+    error?: Vlcer400ApplicationJSONErrorEnum;
+    errorDescription?: Vlcer400ApplicationJSONErrorDescriptionEnum;
 }
 export declare class VlcerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    vlcer400ApplicationJSONObject?: Vlcer400ApplicationJson;
-    vlcer401ApplicationJSONObject?: Vlcer401ApplicationJson;
-    vlcer404ApplicationJSONObject?: Vlcer404ApplicationJson;
-    vlcer500ApplicationJSONObject?: Vlcer500ApplicationJson;
-    vlcer502ApplicationJSONObject?: Vlcer502ApplicationJson;
-    vlcer503ApplicationJSONObject?: Vlcer503ApplicationJson;
-    vlcer504ApplicationJSONObject?: Vlcer504ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad request
+     */
+    vlcer400ApplicationJSONObject?: Vlcer400ApplicationJSON;
+    /**
+     * Unauthorized access
+     */
+    vlcer401ApplicationJSONObject?: Vlcer401ApplicationJSON;
+    /**
+     * No record found
+     */
+    vlcer404ApplicationJSONObject?: Vlcer404ApplicationJSON;
+    /**
+     * Internal server error
+     */
+    vlcer500ApplicationJSONObject?: Vlcer500ApplicationJSON;
+    /**
+     * Bad gateway
+     */
+    vlcer502ApplicationJSONObject?: Vlcer502ApplicationJSON;
+    /**
+     * Service unavailable
+     */
+    vlcer503ApplicationJSONObject?: Vlcer503ApplicationJSON;
+    /**
+     * Gateway timeout
+     */
+    vlcer504ApplicationJSONObject?: Vlcer504ApplicationJSON;
 }

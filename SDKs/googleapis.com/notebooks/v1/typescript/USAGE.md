@@ -1,52 +1,46 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { NotebooksProjectsLocationsEnvironmentsCreateRequest, NotebooksProjectsLocationsEnvironmentsCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  NotebooksProjectsLocationsEnvironmentsCreateRequest,
+  NotebooksProjectsLocationsEnvironmentsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: NotebooksProjectsLocationsEnvironmentsCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    environmentId: "dolor",
-    fields: "expedita",
-    key: "voluptas",
-    oauthToken: "fugit",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    uploadType: "rerum",
-    uploadProtocol: "dicta",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  environmentInput: {
     containerImage: {
-      repository: "debitis",
-      tag: "voluptatum",
+      repository: "provident",
+      tag: "distinctio",
     },
-    description: "et",
-    displayName: "ut",
-    postStartupScript: "dolorem",
+    description: "quibusdam",
+    displayName: "unde",
+    postStartupScript: "nulla",
     vmImage: {
-      imageFamily: "et",
-      imageName: "voluptate",
-      project: "iste",
+      imageFamily: "corrupti",
+      imageName: "illum",
+      project: "vel",
     },
   },
+  accessToken: "error",
+  alt: AltEnum.Media,
+  callback: "suscipit",
+  environmentId: "iure",
+  fields: "magnam",
+  key: "debitis",
+  oauthToken: "ipsa",
+  parent: "delectus",
+  prettyPrint: false,
+  quotaUser: "tempora",
+  uploadType: "suscipit",
+  uploadProtocol: "molestiae",
 };
 
 sdk.projects.notebooksProjectsLocationsEnvironmentsCreate(req).then((res: NotebooksProjectsLocationsEnvironmentsCreateResponse | AxiosError) => {

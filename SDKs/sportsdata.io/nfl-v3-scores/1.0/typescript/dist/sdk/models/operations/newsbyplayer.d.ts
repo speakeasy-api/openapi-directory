@@ -1,17 +1,32 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+/**
+ *
+ * @remarks
+ *           Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+ *
+ */
 export declare enum NewsByPlayerFormatEnum {
     Xml = "XML",
     Json = "JSON"
 }
-export declare class NewsByPlayerPathParams extends SpeakeasyBase {
-    format: NewsByPlayerFormatEnum;
-    playerid: string;
-}
 export declare class NewsByPlayerRequest extends SpeakeasyBase {
-    pathParams: NewsByPlayerPathParams;
+    /**
+     *
+     * @remarks
+     *           Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+     *
+     */
+    format: NewsByPlayerFormatEnum;
+    /**
+     * Each NFL player has a unique ID assigned by FantasyData. Player IDs can be determined by pulling player related data. Example:<code>14257</code>.
+     */
+    playerid: string;
 }
 export declare class NewsByPlayerResponse extends SpeakeasyBase {
     contentType: string;
-    news?: any[];
+    news?: shared.News[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

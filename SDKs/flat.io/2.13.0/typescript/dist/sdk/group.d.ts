@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Flat Groups
+ */
 export declare class Group {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,18 +12,19 @@ export declare class Group {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getGroupDetails - Get group information
-    **/
-    getGroupDetails(req: operations.GetGroupDetailsRequest, config?: AxiosRequestConfig): Promise<operations.GetGroupDetailsResponse>;
+     * Get group information
+     */
+    getGroupDetails(req: operations.GetGroupDetailsRequest, security: operations.GetGroupDetailsSecurity, config?: AxiosRequestConfig): Promise<operations.GetGroupDetailsResponse>;
     /**
-     * getGroupScores - List group's scores
+     * List group's scores
      *
+     * @remarks
      * Get the list of scores shared with a group.
      *
-    **/
-    getGroupScores(req: operations.GetGroupScoresRequest, config?: AxiosRequestConfig): Promise<operations.GetGroupScoresResponse>;
+     */
+    getGroupScores(req: operations.GetGroupScoresRequest, security: operations.GetGroupScoresSecurity, config?: AxiosRequestConfig): Promise<operations.GetGroupScoresResponse>;
     /**
-     * listGroupUsers - List group's users
-    **/
-    listGroupUsers(req: operations.ListGroupUsersRequest, config?: AxiosRequestConfig): Promise<operations.ListGroupUsersResponse>;
+     * List group's users
+     */
+    listGroupUsers(req: operations.ListGroupUsersRequest, security: operations.ListGroupUsersSecurity, config?: AxiosRequestConfig): Promise<operations.ListGroupUsersResponse>;
 }

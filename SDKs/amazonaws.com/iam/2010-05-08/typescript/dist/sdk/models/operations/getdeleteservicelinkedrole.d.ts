@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteServiceLinkedRoleActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteServiceLinkedRoleActionEnum {
     DeleteServiceLinkedRole = "DeleteServiceLinkedRole"
 }
-export declare enum GetDeleteServiceLinkedRoleVersionEnum {
+export declare enum GETDeleteServiceLinkedRoleVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class GetDeleteServiceLinkedRoleQueryParams extends SpeakeasyBase {
-    action: GetDeleteServiceLinkedRoleActionEnum;
+export declare class GETDeleteServiceLinkedRoleRequest extends SpeakeasyBase {
+    action: GETDeleteServiceLinkedRoleActionEnum;
+    /**
+     * The name of the service-linked role to be deleted.
+     */
     roleName: string;
-    version: GetDeleteServiceLinkedRoleVersionEnum;
-}
-export declare class GetDeleteServiceLinkedRoleHeaders extends SpeakeasyBase {
+    version: GETDeleteServiceLinkedRoleVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDeleteServiceLinkedRoleHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteServiceLinkedRoleRequest extends SpeakeasyBase {
-    queryParams: GetDeleteServiceLinkedRoleQueryParams;
-    headers: GetDeleteServiceLinkedRoleHeaders;
-}
-export declare class GetDeleteServiceLinkedRoleResponse extends SpeakeasyBase {
+export declare class GETDeleteServiceLinkedRoleResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

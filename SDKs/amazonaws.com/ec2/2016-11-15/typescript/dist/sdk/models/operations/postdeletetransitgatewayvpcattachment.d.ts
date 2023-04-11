@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteTransitGatewayVpcAttachmentActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteTransitGatewayVpcAttachmentActionEnum {
     DeleteTransitGatewayVpcAttachment = "DeleteTransitGatewayVpcAttachment"
 }
-export declare enum PostDeleteTransitGatewayVpcAttachmentVersionEnum {
+export declare enum POSTDeleteTransitGatewayVpcAttachmentVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDeleteTransitGatewayVpcAttachmentQueryParams extends SpeakeasyBase {
-    action: PostDeleteTransitGatewayVpcAttachmentActionEnum;
-    version: PostDeleteTransitGatewayVpcAttachmentVersionEnum;
-}
-export declare class PostDeleteTransitGatewayVpcAttachmentHeaders extends SpeakeasyBase {
+export declare class POSTDeleteTransitGatewayVpcAttachmentRequest extends SpeakeasyBase {
+    action: POSTDeleteTransitGatewayVpcAttachmentActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteTransitGatewayVpcAttachmentVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteTransitGatewayVpcAttachmentHeaders extends Speake
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteTransitGatewayVpcAttachmentRequest extends SpeakeasyBase {
-    queryParams: PostDeleteTransitGatewayVpcAttachmentQueryParams;
-    headers: PostDeleteTransitGatewayVpcAttachmentHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteTransitGatewayVpcAttachmentResponse extends SpeakeasyBase {
+export declare class POSTDeleteTransitGatewayVpcAttachmentResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

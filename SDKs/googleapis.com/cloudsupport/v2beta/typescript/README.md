@@ -6,51 +6,47 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/cloudsupport/v2beta/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/cloudsupport/v2beta/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CloudsupportCaseClassificationsSearchRequest, CloudsupportCaseClassificationsSearchResponse } from "openapi/src/sdk/models/operations";
+import {
+  CloudsupportCaseClassificationsSearchRequest,
+  CloudsupportCaseClassificationsSearchResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: CloudsupportCaseClassificationsSearchRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "voluptas",
-    alt: "media",
-    callback: "expedita",
-    fields: "consequuntur",
-    key: "dolor",
-    oauthToken: "expedita",
-    pageSize: 6044372234677422456,
-    pageToken: "fugit",
-    prettyPrint: false,
-    query: "nihil",
-    quotaUser: "rerum",
-    uploadType: "dicta",
-    uploadProtocol: "debitis",
-  },
+  dollarXgafv: XgafvEnum.Two,
+  accessToken: "provident",
+  alt: AltEnum.Proto,
+  callback: "quibusdam",
+  fields: "unde",
+  key: "nulla",
+  oauthToken: "corrupti",
+  pageSize: 847252,
+  pageToken: "vel",
+  prettyPrint: false,
+  query: "error",
+  quotaUser: "deserunt",
+  uploadType: "suscipit",
+  uploadProtocol: "iure",
 };
 
 sdk.caseClassifications.cloudsupportCaseClassificationsSearch(req).then((res: CloudsupportCaseClassificationsSearchResponse | AxiosError) => {
@@ -60,7 +56,8 @@ sdk.caseClassifications.cloudsupportCaseClassificationsSearch(req).then((res: Cl
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### caseClassifications
 
@@ -68,15 +65,6 @@ sdk.caseClassifications.cloudsupportCaseClassificationsSearch(req).then((res: Cl
 
 ### cases
 
-* `cloudsupportCasesAttachmentsList` - Retrieve all attachments associated with a support case.
-* `cloudsupportCasesClose` - Close the specified case.
-* `cloudsupportCasesCommentsCreate` - Add a new comment to the specified Case. The comment object must have the following fields set: body.
-* `cloudsupportCasesCommentsList` - Retrieve all Comments associated with the Case object.
-* `cloudsupportCasesCreate` - Create a new case and associate it with the given Cloud resource. The case object must have the following fields set: display_name, description, classification, and severity.
-* `cloudsupportCasesEscalate` - Escalate a case. Escalating a case will initiate the Cloud Support escalation management process. This operation is only available to certain Customer Care tiers. Go to https://cloud.google.com/support and look for 'Technical support escalations' in the feature list to find out which tiers are able to perform escalations.
-* `cloudsupportCasesGet` - Retrieve the specified case.
-* `cloudsupportCasesList` - Retrieve all cases under the specified parent. Note: Listing cases under an Organization returns only the cases directly parented by that organization. To retrieve all cases under an organization, including cases parented by projects under that organization, use `cases.search`.
-* `cloudsupportCasesPatch` - Update the specified case. Only a subset of fields (display_name, description, time_zone, subscriber_email_addresses, related_resources, severity, priority, primary_contact, and labels) can be updated.
 * `cloudsupportCasesSearch` - Search cases using the specified query.
 
 ### media
@@ -84,6 +72,29 @@ sdk.caseClassifications.cloudsupportCaseClassificationsSearch(req).then((res: Cl
 * `cloudsupportMediaDownload` - Download a file attachment on a case. Note: HTTP requests must append "?alt=media" to the URL.
 * `cloudsupportMediaUpload` - Create a file attachment on a case or Cloud resource. The attachment object must have the following fields set: filename.
 
+### projects
+
+* `cloudsupportProjectsCasesAttachmentsList` - Retrieve all attachments associated with a support case.
+* `cloudsupportProjectsCasesClose` - Close the specified case.
+* `cloudsupportProjectsCasesCommentsCreate` - Add a new comment to the specified Case. The comment object must have the following fields set: body.
+* `cloudsupportProjectsCasesCommentsList` - Retrieve all Comments associated with the Case object.
+* `cloudsupportProjectsCasesCreate` - Create a new case and associate it with the given Cloud resource. The case object must have the following fields set: display_name, description, classification, and severity.
+* `cloudsupportProjectsCasesEscalate` - Escalate a case. Escalating a case will initiate the Cloud Support escalation management process. This operation is only available to certain Customer Care tiers. Go to https://cloud.google.com/support and look for 'Technical support escalations' in the feature list to find out which tiers are able to perform escalations.
+* `cloudsupportProjectsCasesGet` - Retrieve the specified case.
+* `cloudsupportProjectsCasesList` - Retrieve all cases under the specified parent. Note: Listing cases under an Organization returns only the cases directly parented by that organization. To retrieve all cases under an organization, including cases parented by projects under that organization, use `cases.search`.
+* `cloudsupportProjectsUpdateCases` - Update the specified case. Only a subset of fields can be updated.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

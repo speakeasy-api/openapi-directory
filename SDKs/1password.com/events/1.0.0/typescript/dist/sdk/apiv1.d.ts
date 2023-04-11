@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class ApiV1 {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,15 +9,17 @@ export declare class ApiV1 {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getItemUsages - Retrieves item usages
+     * Retrieves item usages
      *
+     * @remarks
      * This endpoint requires your JSON Web Token to have the *itemusages* feature.
-    **/
-    getItemUsages(req: operations.GetItemUsagesRequest, config?: AxiosRequestConfig): Promise<operations.GetItemUsagesResponse>;
+     */
+    getItemUsages(req: any, security: operations.GetItemUsagesSecurity, config?: AxiosRequestConfig): Promise<operations.GetItemUsagesResponse>;
     /**
-     * getSignInAttempts - Retrieves sign-in attempts
+     * Retrieves sign-in attempts
      *
+     * @remarks
      * This endpoint requires your JSON Web Token to have the *signinattempts* feature.
-    **/
-    getSignInAttempts(req: operations.GetSignInAttemptsRequest, config?: AxiosRequestConfig): Promise<operations.GetSignInAttemptsResponse>;
+     */
+    getSignInAttempts(req: any, security: operations.GetSignInAttemptsSecurity, config?: AxiosRequestConfig): Promise<operations.GetSignInAttemptsResponse>;
 }

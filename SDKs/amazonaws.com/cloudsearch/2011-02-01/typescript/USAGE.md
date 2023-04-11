@@ -1,35 +1,34 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetCreateDomainRequest, GetCreateDomainResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GETCreateDomainRequest,
+  GETCreateDomainResponse,
+  GETCreateDomainActionEnum,
+  GETCreateDomainVersionEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: GetCreateDomainRequest = {
-  queryParams: {
-    action: "CreateDomain",
-    domainName: "voluptas",
-    version: "2011-02-01",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  headers: {
-    xAmzAlgorithm: "expedita",
-    xAmzContentSha256: "consequuntur",
-    xAmzCredential: "dolor",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "voluptas",
-    xAmzSignature: "fugit",
-    xAmzSignedHeaders: "et",
-  },
+});
+
+const req: GETCreateDomainRequest = {
+  action: GETCreateDomainActionEnum.CreateDomain,
+  domainName: "corrupti",
+  version: GETCreateDomainVersionEnum.TwoThousandAndEleven0201,
+  xAmzAlgorithm: "provident",
+  xAmzContentSha256: "distinctio",
+  xAmzCredential: "quibusdam",
+  xAmzDate: "unde",
+  xAmzSecurityToken: "nulla",
+  xAmzSignature: "corrupti",
+  xAmzSignedHeaders: "illum",
 };
 
-sdk.getCreateDomain(req).then((res: GetCreateDomainResponse | AxiosError) => {
+sdk.getCreateDomain(req).then((res: GETCreateDomainResponse | AxiosError) => {
    // handle response
 });
 ```

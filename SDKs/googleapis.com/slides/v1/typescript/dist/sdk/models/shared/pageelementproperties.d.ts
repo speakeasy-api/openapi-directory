@@ -1,0 +1,20 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { AffineTransform } from "./affinetransform";
+import { Size } from "./size";
+/**
+ * Common properties for a page element. Note: When you initially create a PageElement, the API may modify the values of both `size` and `transform`, but the visual size will be unchanged.
+ */
+export declare class PageElementProperties extends SpeakeasyBase {
+    /**
+     * The object ID of the page where the element is located.
+     */
+    pageObjectId?: string;
+    /**
+     * A width and height.
+     */
+    size?: Size;
+    /**
+     * AffineTransform uses a 3x3 matrix with an implied last row of [ 0 0 1 ] to transform source coordinates (x,y) into destination coordinates (x', y') according to: x' x = shear_y scale_y translate_y 1 [ 1 ] After transformation, x' = scale_x * x + shear_x * y + translate_x; y' = scale_y * y + shear_y * x + translate_y; This message is therefore composed of these six matrix elements.
+     */
+    transform?: AffineTransform;
+}

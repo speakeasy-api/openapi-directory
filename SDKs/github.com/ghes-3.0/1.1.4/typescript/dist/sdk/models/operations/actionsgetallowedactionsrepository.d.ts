@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ActionsGetAllowedActionsRepositoryPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ActionsGetAllowedActionsRepositoryRequest extends SpeakeasyBase {
     owner: string;
     repo: string;
-}
-export declare class ActionsGetAllowedActionsRepositoryRequest extends SpeakeasyBase {
-    pathParams: ActionsGetAllowedActionsRepositoryPathParams;
 }
 export declare class ActionsGetAllowedActionsRepositoryResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     selectedActions?: shared.SelectedActions;
 }

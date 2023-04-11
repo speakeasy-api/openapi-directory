@@ -1,15 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetOfferingsOfferingIdGroupsGroupIdLearnersPathParams extends SpeakeasyBase {
-    groupId: string;
-    offeringId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetOfferingsOfferingIdGroupsGroupIdLearnersRequest extends SpeakeasyBase {
-    pathParams: GetOfferingsOfferingIdGroupsGroupIdLearnersPathParams;
+    /**
+     * Assessment group id
+     */
+    groupId: string;
+    /**
+     * offering's id
+     */
+    offeringId: string;
 }
 export declare class GetOfferingsOfferingIdGroupsGroupIdLearnersResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Bad Request
+     */
     error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Succesful response
+     */
     userResponses?: shared.UserResponse[];
 }

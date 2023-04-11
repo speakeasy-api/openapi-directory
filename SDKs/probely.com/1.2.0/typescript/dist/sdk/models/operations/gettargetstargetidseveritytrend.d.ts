@@ -1,33 +1,59 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetTargetsTargetIdSeverityTrendPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetTargetsTargetIdSeverityTrendRequest extends SpeakeasyBase {
+    /**
+     * Target id
+     */
     targetId: string;
 }
-export declare class GetTargetsTargetIdSeverityTrend200ApplicationJsonResultsHigh extends SpeakeasyBase {
+export declare class GetTargetsTargetIdSeverityTrend200ApplicationJSONResultsHigh extends SpeakeasyBase {
+    /**
+     * Date time
+     */
     zero?: Date;
+    /**
+     * Risk score
+     */
     one?: number;
 }
-export declare class GetTargetsTargetIdSeverityTrend200ApplicationJsonResultsLow extends SpeakeasyBase {
+export declare class GetTargetsTargetIdSeverityTrend200ApplicationJSONResultsLow extends SpeakeasyBase {
+    /**
+     * Date time
+     */
     zero?: Date;
+    /**
+     * Risk score
+     */
     one?: number;
 }
-export declare class GetTargetsTargetIdSeverityTrend200ApplicationJsonResultsMedium extends SpeakeasyBase {
+export declare class GetTargetsTargetIdSeverityTrend200ApplicationJSONResultsMedium extends SpeakeasyBase {
+    /**
+     * Date time
+     */
     zero?: Date;
+    /**
+     * Risk score
+     */
     one?: number;
 }
-export declare class GetTargetsTargetIdSeverityTrend200ApplicationJsonResults extends SpeakeasyBase {
-    high?: GetTargetsTargetIdSeverityTrend200ApplicationJsonResultsHigh[];
-    low?: GetTargetsTargetIdSeverityTrend200ApplicationJsonResultsLow[];
-    medium?: GetTargetsTargetIdSeverityTrend200ApplicationJsonResultsMedium[];
+export declare class GetTargetsTargetIdSeverityTrend200ApplicationJSONResults extends SpeakeasyBase {
+    high?: GetTargetsTargetIdSeverityTrend200ApplicationJSONResultsHigh[];
+    low?: GetTargetsTargetIdSeverityTrend200ApplicationJSONResultsLow[];
+    medium?: GetTargetsTargetIdSeverityTrend200ApplicationJSONResultsMedium[];
 }
-export declare class GetTargetsTargetIdSeverityTrend200ApplicationJson extends SpeakeasyBase {
-    results?: GetTargetsTargetIdSeverityTrend200ApplicationJsonResults;
+/**
+ * Severity trend plot data
+ */
+export declare class GetTargetsTargetIdSeverityTrend200ApplicationJSON extends SpeakeasyBase {
+    results?: GetTargetsTargetIdSeverityTrend200ApplicationJSONResults;
     step?: number;
-}
-export declare class GetTargetsTargetIdSeverityTrendRequest extends SpeakeasyBase {
-    pathParams: GetTargetsTargetIdSeverityTrendPathParams;
 }
 export declare class GetTargetsTargetIdSeverityTrendResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getTargetsTargetIdSeverityTrend200ApplicationJSONObject?: GetTargetsTargetIdSeverityTrend200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Severity trend plot data
+     */
+    getTargetsTargetIdSeverityTrend200ApplicationJSONObject?: GetTargetsTargetIdSeverityTrend200ApplicationJSON;
 }

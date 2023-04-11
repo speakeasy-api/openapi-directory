@@ -1,12 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListRunsQueryParams extends SpeakeasyBase {
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListRunsXAmzTargetEnum {
     DeviceFarm20150623ListRuns = "DeviceFarm_20150623.ListRuns"
 }
-export declare class ListRunsHeaders extends SpeakeasyBase {
+export declare class ListRunsRequest extends SpeakeasyBase {
+    listRunsRequest: shared.ListRunsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -15,18 +14,33 @@ export declare class ListRunsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: ListRunsXAmzTargetEnum;
-}
-export declare class ListRunsRequest extends SpeakeasyBase {
-    queryParams: ListRunsQueryParams;
-    headers: ListRunsHeaders;
-    request: shared.ListRunsRequest;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class ListRunsResponse extends SpeakeasyBase {
+    /**
+     * ArgumentException
+     */
     argumentException?: any;
     contentType: string;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * Success
+     */
     listRunsResult?: shared.ListRunsResult;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
+    /**
+     * ServiceAccountException
+     */
     serviceAccountException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

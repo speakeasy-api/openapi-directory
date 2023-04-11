@@ -1,6 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ChangeServerLifeCycleStateHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+/**
+ * The request to change the source server migration lifecycle state.
+ */
+export declare class ChangeServerLifeCycleStateRequestBodyLifeCycle extends SpeakeasyBase {
+    state?: shared.ChangeServerLifeCycleStateSourceServerLifecycleStateEnum;
+}
+export declare class ChangeServerLifeCycleStateRequestBody extends SpeakeasyBase {
+    /**
+     * The request to change the source server migration lifecycle state.
+     */
+    lifeCycle: ChangeServerLifeCycleStateRequestBodyLifeCycle;
+    /**
+     * The request to change the source server migration lifecycle state by source server ID.
+     */
+    sourceServerID: string;
+}
+export declare class ChangeServerLifeCycleStateRequest extends SpeakeasyBase {
+    requestBody: ChangeServerLifeCycleStateRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -9,26 +27,28 @@ export declare class ChangeServerLifeCycleStateHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-/**
- * The request to change the source server migration lifecycle state.
-**/
-export declare class ChangeServerLifeCycleStateRequestBodyLifeCycle extends SpeakeasyBase {
-    state?: shared.ChangeServerLifeCycleStateSourceServerLifecycleStateEnum;
-}
-export declare class ChangeServerLifeCycleStateRequestBody extends SpeakeasyBase {
-    lifeCycle: ChangeServerLifeCycleStateRequestBodyLifeCycle;
-    sourceServerID: string;
-}
-export declare class ChangeServerLifeCycleStateRequest extends SpeakeasyBase {
-    headers: ChangeServerLifeCycleStateHeaders;
-    request: ChangeServerLifeCycleStateRequestBody;
-}
 export declare class ChangeServerLifeCycleStateResponse extends SpeakeasyBase {
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
+    /**
+     * Success
+     */
     sourceServer?: shared.SourceServer;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UninitializedAccountException
+     */
     uninitializedAccountException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

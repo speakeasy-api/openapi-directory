@@ -1,50 +1,47 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetUserContentRecentJsonSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
-}
-export declare class GetUserContentRecentJson200ApplicationJsonDebug extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETUserContentRecentJson200ApplicationJSONDebug extends SpeakeasyBase {
     version?: number;
 }
-export declare class GetUserContentRecentJson200ApplicationJsonResultsCommentsAssetAllProperties extends SpeakeasyBase {
+export declare class GETUserContentRecentJson200ApplicationJSONResultsCommentsAssetAllProperties extends SpeakeasyBase {
     description?: string;
     name?: string;
     properties?: Record<string, any>[];
 }
-export declare class GetUserContentRecentJson200ApplicationJsonResultsCommentsAssetPropertiesAutomoderationOn extends SpeakeasyBase {
+export declare class GETUserContentRecentJson200ApplicationJSONResultsCommentsAssetPropertiesAutomoderationOn extends SpeakeasyBase {
     groupID?: number;
     taxonomyID?: number;
 }
-export declare class GetUserContentRecentJson200ApplicationJsonResultsCommentsAssetPropertiesCommentListSortEditors extends SpeakeasyBase {
+export declare class GETUserContentRecentJson200ApplicationJSONResultsCommentsAssetPropertiesCommentListSortEditors extends SpeakeasyBase {
     groupID?: number;
     taxonomyID?: number;
 }
-export declare class GetUserContentRecentJson200ApplicationJsonResultsCommentsAssetPropertiesReachedMaxComOff extends SpeakeasyBase {
+export declare class GETUserContentRecentJson200ApplicationJSONResultsCommentsAssetPropertiesReachedMaxComOff extends SpeakeasyBase {
     groupID?: number;
     taxonomyID?: number;
 }
-export declare class GetUserContentRecentJson200ApplicationJsonResultsCommentsAssetProperties extends SpeakeasyBase {
-    automoderationOn?: GetUserContentRecentJson200ApplicationJsonResultsCommentsAssetPropertiesAutomoderationOn;
-    commentListSortEditors?: GetUserContentRecentJson200ApplicationJsonResultsCommentsAssetPropertiesCommentListSortEditors;
-    reachedMaxComOff?: GetUserContentRecentJson200ApplicationJsonResultsCommentsAssetPropertiesReachedMaxComOff;
+export declare class GETUserContentRecentJson200ApplicationJSONResultsCommentsAssetProperties extends SpeakeasyBase {
+    automoderationOn?: GETUserContentRecentJson200ApplicationJSONResultsCommentsAssetPropertiesAutomoderationOn;
+    commentListSortEditors?: GETUserContentRecentJson200ApplicationJSONResultsCommentsAssetPropertiesCommentListSortEditors;
+    reachedMaxComOff?: GETUserContentRecentJson200ApplicationJSONResultsCommentsAssetPropertiesReachedMaxComOff;
 }
-export declare class GetUserContentRecentJson200ApplicationJsonResultsCommentsAsset extends SpeakeasyBase {
-    allProperties?: GetUserContentRecentJson200ApplicationJsonResultsCommentsAssetAllProperties[];
+export declare class GETUserContentRecentJson200ApplicationJSONResultsCommentsAsset extends SpeakeasyBase {
+    allProperties?: GETUserContentRecentJson200ApplicationJSONResultsCommentsAssetAllProperties[];
     assetID?: number;
     assetTitle?: string;
     assetURL?: string;
     createDate?: string;
     labels?: Record<string, any>[];
-    properties?: GetUserContentRecentJson200ApplicationJsonResultsCommentsAssetProperties;
+    properties?: GETUserContentRecentJson200ApplicationJSONResultsCommentsAssetProperties;
     source?: string;
     taxonomy?: string;
     text?: Record<string, any>[];
     updateDate?: string;
     vendorID?: string;
 }
-export declare class GetUserContentRecentJson200ApplicationJsonResultsComments extends SpeakeasyBase {
+export declare class GETUserContentRecentJson200ApplicationJSONResultsComments extends SpeakeasyBase {
     approveDate?: string;
-    asset?: GetUserContentRecentJson200ApplicationJsonResultsCommentsAsset;
+    asset?: GETUserContentRecentJson200ApplicationJSONResultsCommentsAsset;
     assetID?: number;
     commentBody?: string;
     commentID?: number;
@@ -67,22 +64,20 @@ export declare class GetUserContentRecentJson200ApplicationJsonResultsComments e
     userTitle?: string;
     userURL?: string;
 }
-export declare class GetUserContentRecentJson200ApplicationJsonResults extends SpeakeasyBase {
+export declare class GETUserContentRecentJson200ApplicationJSONResults extends SpeakeasyBase {
     apiTimestamp?: string;
-    comments?: GetUserContentRecentJson200ApplicationJsonResultsComments[];
+    comments?: GETUserContentRecentJson200ApplicationJSONResultsComments[];
     totalCommentsReturned?: number;
 }
-export declare class GetUserContentRecentJson200ApplicationJson extends SpeakeasyBase {
+export declare class GETUserContentRecentJson200ApplicationJSON extends SpeakeasyBase {
     copyright?: string;
-    debug?: GetUserContentRecentJson200ApplicationJsonDebug;
-    results?: GetUserContentRecentJson200ApplicationJsonResults;
+    debug?: GETUserContentRecentJson200ApplicationJSONDebug;
+    results?: GETUserContentRecentJson200ApplicationJSONResults;
     status?: string;
 }
-export declare class GetUserContentRecentJsonRequest extends SpeakeasyBase {
-    security: GetUserContentRecentJsonSecurity;
-}
-export declare class GetUserContentRecentJsonResponse extends SpeakeasyBase {
+export declare class GETUserContentRecentJsonResponse extends SpeakeasyBase {
     contentType: string;
-    getUserContentRecentJSON200ApplicationJSONObject?: GetUserContentRecentJson200ApplicationJson;
+    getUserContentRecentJSON200ApplicationJSONObject?: GETUserContentRecentJson200ApplicationJSON;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

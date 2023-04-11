@@ -1,32 +1,43 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteCollectionPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteCollectionRequest extends SpeakeasyBase {
     collectionUid: string;
 }
-export declare class DeleteCollection200ApplicationJsonCollection extends SpeakeasyBase {
-    id?: string;
-    uid?: string;
-}
-export declare class DeleteCollection200ApplicationJson extends SpeakeasyBase {
-    collection?: DeleteCollection200ApplicationJsonCollection;
-}
-export declare class DeleteCollection404ApplicationJsonErrorDetails extends SpeakeasyBase {
+export declare class DeleteCollection404ApplicationJSONErrorDetails extends SpeakeasyBase {
     id?: string;
     item?: string;
 }
-export declare class DeleteCollection404ApplicationJsonError extends SpeakeasyBase {
-    details?: DeleteCollection404ApplicationJsonErrorDetails;
+export declare class DeleteCollection404ApplicationJSONError extends SpeakeasyBase {
+    details?: DeleteCollection404ApplicationJSONErrorDetails;
     message?: string;
     name?: string;
 }
-export declare class DeleteCollection404ApplicationJson extends SpeakeasyBase {
-    error?: DeleteCollection404ApplicationJsonError;
+/**
+ * Collection Not Found
+ */
+export declare class DeleteCollection404ApplicationJSON extends SpeakeasyBase {
+    error?: DeleteCollection404ApplicationJSONError;
 }
-export declare class DeleteCollectionRequest extends SpeakeasyBase {
-    pathParams: DeleteCollectionPathParams;
+export declare class DeleteCollection200ApplicationJSONCollection extends SpeakeasyBase {
+    id?: string;
+    uid?: string;
+}
+/**
+ * Collection Deleted
+ */
+export declare class DeleteCollection200ApplicationJSON extends SpeakeasyBase {
+    collection?: DeleteCollection200ApplicationJSONCollection;
 }
 export declare class DeleteCollectionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deleteCollection200ApplicationJSONObject?: DeleteCollection200ApplicationJson;
-    deleteCollection404ApplicationJSONObject?: DeleteCollection404ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Collection Deleted
+     */
+    deleteCollection200ApplicationJSONObject?: DeleteCollection200ApplicationJSON;
+    /**
+     * Collection Not Found
+     */
+    deleteCollection404ApplicationJSONObject?: DeleteCollection404ApplicationJSON;
 }

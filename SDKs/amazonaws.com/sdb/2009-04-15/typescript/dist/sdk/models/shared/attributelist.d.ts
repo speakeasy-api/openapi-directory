@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class AttributeList extends SpeakeasyBase {
-    alternateNameEncoding?: Record<string, any>;
-    alternateValueEncoding?: Record<string, any>;
+    alternateNameEncoding?: string;
+    alternateValueEncoding?: string;
     name: string;
     value: string;
 }

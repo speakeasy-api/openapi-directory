@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Search API for 'Census Tracts' entry type
+ */
 export declare class TypeGazeteerCensusTracts {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,10 @@ export declare class TypeGazeteerCensusTracts {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * searchGazeteerCensusTracts - Search API for 'Census Tracts' entry type
+     * Search API for 'Census Tracts' entry type
      *
+     * @remarks
      * API to search for entries of type Census Tracts
-    **/
+     */
     searchGazeteerCensusTracts(req: operations.SearchGazeteerCensusTractsRequest, config?: AxiosRequestConfig): Promise<operations.SearchGazeteerCensusTractsResponse>;
 }

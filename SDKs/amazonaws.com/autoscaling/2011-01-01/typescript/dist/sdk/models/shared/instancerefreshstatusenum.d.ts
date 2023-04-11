@@ -4,5 +4,8 @@ export declare enum InstanceRefreshStatusEnum {
     Successful = "Successful",
     Failed = "Failed",
     Cancelling = "Cancelling",
-    Cancelled = "Cancelled"
+    Cancelled = "Cancelled",
+    RollbackInProgress = "RollbackInProgress",
+    RollbackFailed = "RollbackFailed",
+    RollbackSuccessful = "RollbackSuccessful"
 }

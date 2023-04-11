@@ -1,17 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetInboxHeaders extends SpeakeasyBase {
-    xeroTenantId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetInboxSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class GetInboxRequest extends SpeakeasyBase {
-    headers: GetInboxHeaders;
-    security: GetInboxSecurity;
+    /**
+     * Xero identifier for Tenant
+     */
+    xeroTenantId: string;
 }
 export declare class GetInboxResponse extends SpeakeasyBase {
     contentType: string;
-    folder?: any;
+    /**
+     * search results matching criteria
+     */
+    folder?: shared.Folder;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

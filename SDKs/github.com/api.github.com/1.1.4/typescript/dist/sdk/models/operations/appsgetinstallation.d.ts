@@ -1,19 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AppsGetInstallationPathParams extends SpeakeasyBase {
-    installationId: number;
-}
-export declare class AppsGetInstallation415ApplicationJson extends SpeakeasyBase {
-    documentationUrl: string;
-    message: string;
-}
+import { AxiosResponse } from "axios";
 export declare class AppsGetInstallationRequest extends SpeakeasyBase {
-    pathParams: AppsGetInstallationPathParams;
+    /**
+     * The unique identifier of the installation.
+     */
+    installationId: number;
 }
 export declare class AppsGetInstallationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    appsGetInstallation415ApplicationJSONObject?: AppsGetInstallation415ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Resource not found
+     */
     basicError?: shared.BasicError;
+    /**
+     * Response
+     */
     installation?: shared.Installation;
 }

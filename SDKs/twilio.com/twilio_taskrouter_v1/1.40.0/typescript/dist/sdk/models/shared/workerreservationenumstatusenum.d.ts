@@ -1,0 +1,13 @@
+/**
+ * Returns the list of reservations for a worker with a specified ReservationStatus. Can be: `pending`, `accepted`, `rejected`, `timeout`, `canceled`, or `rescinded`.
+ */
+export declare enum WorkerReservationEnumStatusEnum {
+    Pending = "pending",
+    Accepted = "accepted",
+    Rejected = "rejected",
+    Timeout = "timeout",
+    Canceled = "canceled",
+    Rescinded = "rescinded",
+    Wrapping = "wrapping",
+    Completed = "completed"
+}

@@ -1,14 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { CompatibilityEnum } from "./compatibilityenum";
 import { ContainerDefinition } from "./containerdefinition";
 import { EphemeralStorage } from "./ephemeralstorage";
 import { InferenceAccelerator } from "./inferenceaccelerator";
 import { IpcModeEnum } from "./ipcmodeenum";
 import { NetworkModeEnum } from "./networkmodeenum";
 import { PidModeEnum } from "./pidmodeenum";
-import { TaskDefinitionPlacementConstraint } from "./taskdefinitionplacementconstraint";
 import { ProxyConfiguration } from "./proxyconfiguration";
-import { CompatibilityEnum } from "./compatibilityenum";
+import { RuntimePlatform } from "./runtimeplatform";
 import { Tag } from "./tag";
+import { TaskDefinitionPlacementConstraint } from "./taskdefinitionplacementconstraint";
 import { Volume } from "./volume";
 export declare class RegisterTaskDefinitionRequest extends SpeakeasyBase {
     containerDefinitions: ContainerDefinition[];
@@ -24,6 +25,7 @@ export declare class RegisterTaskDefinitionRequest extends SpeakeasyBase {
     placementConstraints?: TaskDefinitionPlacementConstraint[];
     proxyConfiguration?: ProxyConfiguration;
     requiresCompatibilities?: CompatibilityEnum[];
+    runtimePlatform?: RuntimePlatform;
     tags?: Tag[];
     taskRoleArn?: string;
     volumes?: Volume[];

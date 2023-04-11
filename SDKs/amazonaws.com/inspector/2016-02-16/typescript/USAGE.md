@@ -1,41 +1,50 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AddAttributesToFindingsRequest, AddAttributesToFindingsResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  AddAttributesToFindingsRequest,
+  AddAttributesToFindingsResponse,
+  AddAttributesToFindingsXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: AddAttributesToFindingsRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "InspectorService.AddAttributesToFindings",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
+});
+
+const req: AddAttributesToFindingsRequest = {
+  addAttributesToFindingsRequest: {
     attributes: [
       {
-        key: "et",
-        value: "nihil",
+        key: "provident",
+        value: "distinctio",
+      },
+      {
+        key: "quibusdam",
+        value: "unde",
+      },
+      {
+        key: "nulla",
+        value: "corrupti",
       },
     ],
     findingArns: [
-      "dicta",
-      "debitis",
-      "voluptatum",
+      "vel",
+      "error",
+      "deserunt",
+      "suscipit",
     ],
   },
+  xAmzAlgorithm: "iure",
+  xAmzContentSha256: "magnam",
+  xAmzCredential: "debitis",
+  xAmzDate: "ipsa",
+  xAmzSecurityToken: "delectus",
+  xAmzSignature: "tempora",
+  xAmzSignedHeaders: "suscipit",
+  xAmzTarget: AddAttributesToFindingsXAmzTargetEnum.InspectorServiceAddAttributesToFindings,
 };
 
 sdk.addAttributesToFindings(req).then((res: AddAttributesToFindingsResponse | AxiosError) => {

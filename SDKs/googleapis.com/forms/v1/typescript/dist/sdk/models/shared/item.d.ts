@@ -1,36 +1,87 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ImageItemInput } from "./imageitem";
-import { QuestionGroupItemInput } from "./questiongroupitem";
-import { QuestionItemInput } from "./questionitem";
+import { ImageItem, ImageItemInput } from "./imageitem";
+import { QuestionGroupItem, QuestionGroupItemInput } from "./questiongroupitem";
+import { QuestionItem, QuestionItemInput } from "./questionitem";
 import { VideoItem } from "./videoitem";
-import { ImageItem } from "./imageitem";
-import { QuestionGroupItem } from "./questiongroupitem";
-import { QuestionItem } from "./questionitem";
 /**
  * A single item of the form. `kind` defines which kind of item it is.
-**/
-export declare class ItemInput extends SpeakeasyBase {
+ */
+export declare class Item extends SpeakeasyBase {
+    /**
+     * The description of the item.
+     */
     description?: string;
-    imageItem?: ImageItemInput;
+    /**
+     * An item containing an image.
+     */
+    imageItem?: ImageItem;
+    /**
+     * The item ID. On creation, it can be provided but the ID must not be already used in the form. If not provided, a new ID is assigned.
+     */
     itemId?: string;
+    /**
+     * A page break. The title and description of this item are shown at the top of the new page.
+     */
     pageBreakItem?: Record<string, any>;
-    questionGroupItem?: QuestionGroupItemInput;
-    questionItem?: QuestionItemInput;
+    /**
+     * Defines a question that comprises multiple questions grouped together.
+     */
+    questionGroupItem?: QuestionGroupItem;
+    /**
+     * A form item containing a single question.
+     */
+    questionItem?: QuestionItem;
+    /**
+     * A text item.
+     */
     textItem?: Record<string, any>;
+    /**
+     * The title of the item.
+     */
     title?: string;
+    /**
+     * An item containing a video.
+     */
     videoItem?: VideoItem;
 }
 /**
  * A single item of the form. `kind` defines which kind of item it is.
-**/
-export declare class Item extends SpeakeasyBase {
+ */
+export declare class ItemInput extends SpeakeasyBase {
+    /**
+     * The description of the item.
+     */
     description?: string;
-    imageItem?: ImageItem;
+    /**
+     * An item containing an image.
+     */
+    imageItem?: ImageItemInput;
+    /**
+     * The item ID. On creation, it can be provided but the ID must not be already used in the form. If not provided, a new ID is assigned.
+     */
     itemId?: string;
+    /**
+     * A page break. The title and description of this item are shown at the top of the new page.
+     */
     pageBreakItem?: Record<string, any>;
-    questionGroupItem?: QuestionGroupItem;
-    questionItem?: QuestionItem;
+    /**
+     * Defines a question that comprises multiple questions grouped together.
+     */
+    questionGroupItem?: QuestionGroupItemInput;
+    /**
+     * A form item containing a single question.
+     */
+    questionItem?: QuestionItemInput;
+    /**
+     * A text item.
+     */
     textItem?: Record<string, any>;
+    /**
+     * The title of the item.
+     */
     title?: string;
+    /**
+     * An item containing a video.
+     */
     videoItem?: VideoItem;
 }

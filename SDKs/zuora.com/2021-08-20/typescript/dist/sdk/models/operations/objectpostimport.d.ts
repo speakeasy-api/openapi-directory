@@ -1,17 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ObjectPostImportQueryParams extends SpeakeasyBase {
-    rejectUnknownFields?: boolean;
-}
-export declare class ObjectPostImportHeaders extends SpeakeasyBase {
-    zuoraEntityIds?: string;
-    zuoraTrackId?: string;
-}
-export declare class ObjectPostImportRequestBodyFile extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ObjectPOSTImportRequestBodyFile extends SpeakeasyBase {
     file: string;
     content: Uint8Array;
 }
-export declare enum ObjectPostImportRequestBodyImportTypeEnum {
+/**
+ * The type of data to import.
+ *
+ * @remarks
+ *
+ */
+export declare enum ObjectPOSTImportRequestBodyImportTypeEnum {
     Usage = "Usage",
     Payment = "Payment",
     Quote = "Quote",
@@ -20,22 +20,72 @@ export declare enum ObjectPostImportRequestBodyImportTypeEnum {
     CreateRevenueSchedule = "CreateRevenueSchedule",
     UpdateRevenueSchedule = "UpdateRevenueSchedule",
     DeleteRevenueSchedule = "DeleteRevenueSchedule",
-    ImportFxRate = "ImportFXRate"
+    ImportFXRate = "ImportFXRate"
 }
-export declare class ObjectPostImportRequestBody extends SpeakeasyBase {
-    file: ObjectPostImportRequestBodyFile;
-    importType: ObjectPostImportRequestBodyImportTypeEnum;
+export declare class ObjectPOSTImportRequestBody extends SpeakeasyBase {
+    /**
+     * The data to import.
+     *
+     * @remarks
+     *
+     */
+    file: ObjectPOSTImportRequestBodyFile;
+    /**
+     * The type of data to import.
+     *
+     * @remarks
+     *
+     */
+    importType: ObjectPOSTImportRequestBodyImportTypeEnum;
+    /**
+     * A descriptive name for the import.
+     *
+     * @remarks
+     *
+     */
     name: string;
 }
-export declare class ObjectPostImportRequest extends SpeakeasyBase {
-    queryParams: ObjectPostImportQueryParams;
-    headers: ObjectPostImportHeaders;
-    request: ObjectPostImportRequestBody;
+export declare class ObjectPOSTImportRequest extends SpeakeasyBase {
+    requestBody: ObjectPOSTImportRequestBody;
+    /**
+     * An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+     *
+     * @remarks
+     *
+     */
+    zuoraEntityIds?: string;
+    /**
+     * A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+     *
+     * @remarks
+     *
+     * The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+     *
+     */
+    zuoraTrackId?: string;
+    /**
+     * Specifies whether the call fails if the request body contains unknown fields.
+     *
+     * @remarks
+     * With `rejectUnknownFields` set to `true`, Zuora returns a 400 response if
+     * the request body contains unknown fields. The body of the 400 response is:
+     *
+     * ```json
+     * {
+     *     "message": "Error - unrecognised fields"
+     * }
+     * ```
+     *
+     * By default, Zuora ignores unknown fields in the request body.
+     *
+     */
+    rejectUnknownFields?: boolean;
 }
-export declare class ObjectPostImportResponse extends SpeakeasyBase {
+export declare class ObjectPOSTImportResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     proxyPostImport?: shared.ProxyPostImport;
     proxyUnauthorizedResponse?: shared.ProxyUnauthorizedResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

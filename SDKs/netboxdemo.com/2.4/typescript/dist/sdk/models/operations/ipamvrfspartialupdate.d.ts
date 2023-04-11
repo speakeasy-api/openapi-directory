@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class IpamVrfsPartialUpdatePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class IpamVrfsPartialUpdateRequest extends SpeakeasyBase {
-    pathParams: IpamVrfsPartialUpdatePathParams;
-    request: shared.WritableVrfInput;
+    writableVRFInput: shared.WritableVRFInput;
+    /**
+     * A unique integer value identifying this VRF.
+     */
+    id: number;
 }
 export declare class IpamVrfsPartialUpdateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
     vrf?: shared.Vrf;
 }

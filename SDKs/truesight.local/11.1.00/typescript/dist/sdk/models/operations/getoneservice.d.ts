@@ -1,12 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetOneServicePathParams extends SpeakeasyBase {
-    serviceId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetOneServiceRequest extends SpeakeasyBase {
-    pathParams: GetOneServicePathParams;
+    /**
+     * The ID of the service.
+     */
+    serviceId: string;
 }
 export declare class GetOneServiceResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

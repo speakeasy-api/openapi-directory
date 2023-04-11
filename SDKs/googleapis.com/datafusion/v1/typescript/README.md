@@ -6,119 +6,79 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/datafusion/v1/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/datafusion/v1/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DatafusionProjectsLocationsInstancesCreateRequest, DatafusionProjectsLocationsInstancesCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  DatafusionProjectsLocationsInstancesCreateRequest,
+  DatafusionProjectsLocationsInstancesCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  InstanceTypeEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: DatafusionProjectsLocationsInstancesCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    instanceId: "expedita",
-    key: "voluptas",
-    oauthToken: "fugit",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    uploadType: "rerum",
-    uploadProtocol: "dicta",
-  },
-  request: {
-    accelerators: [
-      {
-        acceleratorType: "ACCELERATOR_TYPE_UNSPECIFIED",
-        state: "DISABLED",
-      },
-    ],
-    availableVersion: [
-      {
-        availableFeatures: [
-          "et",
-          "voluptate",
-          "iste",
-        ],
-        defaultVersion: true,
-        type: "TYPE_GENERAL_AVAILABILITY",
-        versionNumber: "dolores",
-      },
-      {
-        availableFeatures: [
-          "debitis",
-          "vel",
-          "odio",
-        ],
-        defaultVersion: true,
-        type: "TYPE_PREVIEW",
-        versionNumber: "aspernatur",
-      },
-      {
-        availableFeatures: [
-          "totam",
-          "commodi",
-          "quis",
-        ],
-        defaultVersion: false,
-        type: "TYPE_GENERAL_AVAILABILITY",
-        versionNumber: "odit",
-      },
-    ],
+  dollarXgafv: XgafvEnum.Two,
+  instanceInput: {
     cryptoKeyConfig: {
-      keyReference: "non",
+      keyReference: "provident",
     },
-    dataprocServiceAccount: "voluptas",
-    description: "omnis",
-    displayName: "aut",
-    enableRbac: true,
+    dataprocServiceAccount: "distinctio",
+    description: "quibusdam",
+    displayName: "unde",
+    enableRbac: false,
     enableStackdriverLogging: false,
     enableStackdriverMonitoring: false,
+    enableZoneSeparation: false,
     eventPublishConfig: {
-      enabled: true,
-      topic: "consectetur",
+      enabled: false,
+      topic: "nulla",
     },
     labels: {
-      "odio": "qui",
+      "illum": "vel",
+      "error": "deserunt",
+      "suscipit": "iure",
     },
     networkConfig: {
-      ipAllocation: "recusandae",
-      network: "at",
+      ipAllocation: "magnam",
+      network: "debitis",
     },
     options: {
-      "eveniet": "modi",
+      "delectus": "tempora",
     },
-    privateInstance: true,
-    type: "BASIC",
-    version: "ut",
-    zone: "exercitationem",
+    privateInstance: false,
+    type: InstanceTypeEnum.Basic,
+    version: "molestiae",
+    zone: "minus",
   },
+  accessToken: "placeat",
+  alt: AltEnum.Media,
+  callback: "iusto",
+  fields: "excepturi",
+  instanceId: "nisi",
+  key: "recusandae",
+  oauthToken: "temporibus",
+  parent: "ab",
+  prettyPrint: false,
+  quotaUser: "quis",
+  uploadType: "veritatis",
+  uploadProtocol: "deserunt",
 };
 
 sdk.projects.datafusionProjectsLocationsInstancesCreate(req).then((res: DatafusionProjectsLocationsInstancesCreateResponse | AxiosError) => {
@@ -128,7 +88,8 @@ sdk.projects.datafusionProjectsLocationsInstancesCreate(req).then((res: Datafusi
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### projects
 
@@ -145,9 +106,20 @@ sdk.projects.datafusionProjectsLocationsInstancesCreate(req).then((res: Datafusi
 * `datafusionProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 * `datafusionProjectsLocationsOperationsDelete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 * `datafusionProjectsLocationsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-* `datafusionProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+* `datafusionProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 * `datafusionProjectsLocationsVersionsList` - Lists possible versions for Data Fusion instances in the specified project and location.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

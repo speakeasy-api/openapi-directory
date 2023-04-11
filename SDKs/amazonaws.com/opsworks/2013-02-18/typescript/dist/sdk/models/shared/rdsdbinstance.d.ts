@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Describes an Amazon RDS instance.
-**/
+ */
 export declare class RdsDbInstance extends SpeakeasyBase {
     address?: string;
     dbInstanceIdentifier?: string;

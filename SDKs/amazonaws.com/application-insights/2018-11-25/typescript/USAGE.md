@@ -1,48 +1,54 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateApplicationRequest, CreateApplicationResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CreateApplicationRequest,
+  CreateApplicationResponse,
+  CreateApplicationXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
+import {
+  GroupingTypeEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: CreateApplicationRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "EC2WindowsBarleyService.CreateApplication",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
-    cweMonitorEnabled: true,
+});
+
+const req: CreateApplicationRequest = {
+  createApplicationRequest: {
+    autoConfigEnabled: false,
+    autoCreate: false,
+    cweMonitorEnabled: false,
+    groupingType: GroupingTypeEnum.AccountBased,
     opsCenterEnabled: false,
-    opsItemSNSTopicArn: "nihil",
-    resourceGroupName: "rerum",
+    opsItemSNSTopicArn: "corrupti",
+    resourceGroupName: "provident",
     tags: [
       {
-        key: "debitis",
-        value: "voluptatum",
+        key: "quibusdam",
+        value: "unde",
       },
       {
-        key: "et",
-        value: "ut",
+        key: "nulla",
+        value: "corrupti",
       },
       {
-        key: "dolorem",
-        value: "et",
+        key: "illum",
+        value: "vel",
       },
     ],
   },
+  xAmzAlgorithm: "error",
+  xAmzContentSha256: "deserunt",
+  xAmzCredential: "suscipit",
+  xAmzDate: "iure",
+  xAmzSecurityToken: "magnam",
+  xAmzSignature: "debitis",
+  xAmzSignedHeaders: "ipsa",
+  xAmzTarget: CreateApplicationXAmzTargetEnum.Ec2WindowsBarleyServiceCreateApplication,
 };
 
 sdk.createApplication(req).then((res: CreateApplicationResponse | AxiosError) => {

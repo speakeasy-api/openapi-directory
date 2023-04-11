@@ -1,6 +1,6 @@
 export declare enum PredefinedMetricPairTypeEnum {
-    AsgcpuUtilization = "ASGCPUUtilization",
-    AsgNetworkIn = "ASGNetworkIn",
-    AsgNetworkOut = "ASGNetworkOut",
-    AlbRequestCount = "ALBRequestCount"
+    ASGCPUUtilization = "ASGCPUUtilization",
+    ASGNetworkIn = "ASGNetworkIn",
+    ASGNetworkOut = "ASGNetworkOut",
+    ALBRequestCount = "ALBRequestCount"
 }

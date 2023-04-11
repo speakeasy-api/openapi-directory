@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class TeamsDeleteInOrgPathParams extends SpeakeasyBase {
-    org: string;
-    teamSlug: string;
-}
+import { AxiosResponse } from "axios";
 export declare class TeamsDeleteInOrgRequest extends SpeakeasyBase {
-    pathParams: TeamsDeleteInOrgPathParams;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    org: string;
+    /**
+     * The slug of the team name.
+     */
+    teamSlug: string;
 }
 export declare class TeamsDeleteInOrgResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

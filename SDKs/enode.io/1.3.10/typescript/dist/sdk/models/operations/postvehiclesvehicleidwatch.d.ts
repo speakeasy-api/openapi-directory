@@ -1,8 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PostVehiclesVehicleidWatchPathParams extends SpeakeasyBase {
-    vehicleId: string;
+import { AxiosResponse } from "axios";
+export declare class PostVehiclesVehicleidWatchSecurity extends SpeakeasyBase {
+    userAccessToken?: string;
+    userAccessToken1?: string;
+    userAccessToken2?: string;
 }
+/**
+ * Array of vehicle properties to watch
+ */
 export declare enum PostVehiclesVehicleidWatchRequestBodyPropertiesEnum {
     BatteryLevel = "BATTERY_LEVEL",
     Range = "RANGE",
@@ -12,20 +18,24 @@ export declare enum PostVehiclesVehicleidWatchRequestBodyPropertiesEnum {
     Location = "LOCATION"
 }
 export declare class PostVehiclesVehicleidWatchRequestBody extends SpeakeasyBase {
+    /**
+     * Array of vehicle properties to watch
+     */
     properties?: PostVehiclesVehicleidWatchRequestBodyPropertiesEnum;
 }
-export declare class PostVehiclesVehicleidWatchSecurity extends SpeakeasyBase {
-    userAccessToken?: shared.SchemeUserAccessToken;
-    userAccessToken1?: shared.SchemeUserAccessToken;
-    userAccessToken2?: shared.SchemeUserAccessToken;
-}
 export declare class PostVehiclesVehicleidWatchRequest extends SpeakeasyBase {
-    pathParams: PostVehiclesVehicleidWatchPathParams;
-    request?: PostVehiclesVehicleidWatchRequestBody;
-    security: PostVehiclesVehicleidWatchSecurity;
+    requestBody?: PostVehiclesVehicleidWatchRequestBody;
+    /**
+     * ID of the Vehicle
+     */
+    vehicleId: string;
 }
 export declare class PostVehiclesVehicleidWatchResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful
+     */
     onevehicles1Percent7BvehicleIdPercent7D1watchPostRequestBodyContentApplication1jsonSchema?: shared.Onevehicles1Percent7BvehicleIdPercent7D1watchPostRequestBodyContentApplication1jsonSchema;
 }

@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetAttachInstancesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETAttachInstancesActionEnum {
     AttachInstances = "AttachInstances"
 }
-export declare enum GetAttachInstancesVersionEnum {
+export declare enum GETAttachInstancesVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class GetAttachInstancesQueryParams extends SpeakeasyBase {
-    action: GetAttachInstancesActionEnum;
+export declare class GETAttachInstancesRequest extends SpeakeasyBase {
+    action: GETAttachInstancesActionEnum;
+    /**
+     * The name of the Auto Scaling group.
+     */
     autoScalingGroupName: string;
+    /**
+     * The IDs of the instances. You can specify up to 20 instances.
+     */
     instanceIds?: string[];
-    version: GetAttachInstancesVersionEnum;
-}
-export declare class GetAttachInstancesHeaders extends SpeakeasyBase {
+    version: GETAttachInstancesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetAttachInstancesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetAttachInstancesRequest extends SpeakeasyBase {
-    queryParams: GetAttachInstancesQueryParams;
-    headers: GetAttachInstancesHeaders;
-}
-export declare class GetAttachInstancesResponse extends SpeakeasyBase {
+export declare class GETAttachInstancesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

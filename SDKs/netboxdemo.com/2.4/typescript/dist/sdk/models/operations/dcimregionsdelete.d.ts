@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DcimRegionsDeletePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DcimRegionsDeleteRequest extends SpeakeasyBase {
-    pathParams: DcimRegionsDeletePathParams;
+    /**
+     * A unique integer value identifying this region.
+     */
+    id: number;
 }
 export declare class DcimRegionsDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

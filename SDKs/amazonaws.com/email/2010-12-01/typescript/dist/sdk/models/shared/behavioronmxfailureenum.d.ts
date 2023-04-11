@@ -1,4 +1,4 @@
-export declare enum BehaviorOnMxFailureEnum {
+export declare enum BehaviorOnMXFailureEnum {
     UseDefaultValue = "UseDefaultValue",
     RejectMessage = "RejectMessage"
 }

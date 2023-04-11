@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteLegPathParams extends SpeakeasyBase {
-    legId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteLegRequest extends SpeakeasyBase {
-    pathParams: DeleteLegPathParams;
+    /**
+     * Leg ID
+     */
+    legId: string;
 }
 export declare class DeleteLegResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success response with empty JSON
+     */
     deleteLeg200ApplicationJSONObject?: Record<string, any>;
 }

@@ -1,10 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListOrganizationAdminAccountsQueryParams extends SpeakeasyBase {
-    maxResults?: number;
-    nextToken?: string;
-}
-export declare class ListOrganizationAdminAccountsHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListOrganizationAdminAccountsRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,20 +9,49 @@ export declare class ListOrganizationAdminAccountsHeaders extends SpeakeasyBase 
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class ListOrganizationAdminAccountsRequest extends SpeakeasyBase {
-    queryParams: ListOrganizationAdminAccountsQueryParams;
-    headers: ListOrganizationAdminAccountsHeaders;
+    /**
+     * The maximum number of items to include in each page of a paginated response.
+     */
+    maxResults?: number;
+    /**
+     * The nextToken string that specifies which page of results to return in a paginated response.
+     */
+    nextToken?: string;
 }
 export declare class ListOrganizationAdminAccountsResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * Success
+     */
     listOrganizationAdminAccountsResponse?: shared.ListOrganizationAdminAccountsResponse;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
+    /**
+     * ServiceQuotaExceededException
+     */
     serviceQuotaExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

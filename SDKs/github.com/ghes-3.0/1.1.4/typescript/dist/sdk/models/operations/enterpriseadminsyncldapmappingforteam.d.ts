@@ -1,15 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class EnterpriseAdminSyncLdapMappingForTeamPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class EnterpriseAdminSyncLdapMappingForTeamRequest extends SpeakeasyBase {
     teamId: number;
 }
-export declare class EnterpriseAdminSyncLdapMappingForTeam201ApplicationJson extends SpeakeasyBase {
+/**
+ * Response
+ */
+export declare class EnterpriseAdminSyncLdapMappingForTeam201ApplicationJSON extends SpeakeasyBase {
     status?: string;
-}
-export declare class EnterpriseAdminSyncLdapMappingForTeamRequest extends SpeakeasyBase {
-    pathParams: EnterpriseAdminSyncLdapMappingForTeamPathParams;
 }
 export declare class EnterpriseAdminSyncLdapMappingForTeamResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    enterpriseAdminSyncLdapMappingForTeam201ApplicationJSONObject?: EnterpriseAdminSyncLdapMappingForTeam201ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
+    enterpriseAdminSyncLdapMappingForTeam201ApplicationJSONObject?: EnterpriseAdminSyncLdapMappingForTeam201ApplicationJSON;
 }

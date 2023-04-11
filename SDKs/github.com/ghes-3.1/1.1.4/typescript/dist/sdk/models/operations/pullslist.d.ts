@@ -1,26 +1,79 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PullsListPathParams extends SpeakeasyBase {
-    owner: string;
-    repo: string;
+import { AxiosResponse } from "axios";
+/**
+ * The direction of the sort. Can be either `asc` or `desc`. Default: `desc` when sort is `created` or sort is not specified, otherwise `asc`.
+ */
+export declare enum PullsListDirectionEnum {
+    Asc = "asc",
+    Desc = "desc"
 }
-export declare class PullsListQueryParams extends SpeakeasyBase {
-    base?: string;
-    direction?: shared.RepoEnum4;
-    head?: string;
-    page?: number;
-    perPage?: number;
-    sort?: shared.RepoEnum5;
-    state?: shared.RepoEnum2;
+/**
+ * What to sort results by. Can be either `created`, `updated`, `popularity` (comment count) or `long-running` (age, filtering by pulls updated in the last month).
+ */
+export declare enum PullsListSortEnum {
+    Created = "created",
+    Updated = "updated",
+    Popularity = "popularity",
+    LongRunning = "long-running"
+}
+/**
+ * Either `open`, `closed`, or `all` to filter by state.
+ */
+export declare enum PullsListStateEnum {
+    Open = "open",
+    Closed = "closed",
+    All = "all"
 }
 export declare class PullsListRequest extends SpeakeasyBase {
-    pathParams: PullsListPathParams;
-    queryParams: PullsListQueryParams;
+    /**
+     * Filter pulls by base branch name. Example: `gh-pages`.
+     */
+    base?: string;
+    /**
+     * The direction of the sort. Can be either `asc` or `desc`. Default: `desc` when sort is `created` or sort is not specified, otherwise `asc`.
+     */
+    direction?: PullsListDirectionEnum;
+    /**
+     * Filter pulls by head user or head organization and branch name in the format of `user:ref-name` or `organization:ref-name`. For example: `github:new-script-format` or `octocat:test-branch`.
+     */
+    head?: string;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    owner: string;
+    /**
+     * Page number of the results to fetch.
+     */
+    page?: number;
+    /**
+     * The number of results per page (max 100).
+     */
+    perPage?: number;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    repo: string;
+    /**
+     * What to sort results by. Can be either `created`, `updated`, `popularity` (comment count) or `long-running` (age, filtering by pulls updated in the last month).
+     */
+    sort?: PullsListSortEnum;
+    /**
+     * Either `open`, `closed`, or `all` to filter by state.
+     */
+    state?: PullsListStateEnum;
 }
 export declare class PullsListResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     pullRequestSimples?: shared.PullRequestSimple[];
+    /**
+     * Validation failed
+     */
     validationError?: shared.ValidationError;
 }

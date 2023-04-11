@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum RefreshTrustedAdvisorCheckXAmzTargetEnum {
-    AwsSupport20130415RefreshTrustedAdvisorCheck = "AWSSupport_20130415.RefreshTrustedAdvisorCheck"
+    AWSSupport20130415RefreshTrustedAdvisorCheck = "AWSSupport_20130415.RefreshTrustedAdvisorCheck"
 }
-export declare class RefreshTrustedAdvisorCheckHeaders extends SpeakeasyBase {
+export declare class RefreshTrustedAdvisorCheckRequest extends SpeakeasyBase {
+    refreshTrustedAdvisorCheckRequest: shared.RefreshTrustedAdvisorCheckRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,13 +15,16 @@ export declare class RefreshTrustedAdvisorCheckHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: RefreshTrustedAdvisorCheckXAmzTargetEnum;
 }
-export declare class RefreshTrustedAdvisorCheckRequest extends SpeakeasyBase {
-    headers: RefreshTrustedAdvisorCheckHeaders;
-    request: shared.RefreshTrustedAdvisorCheckRequest;
-}
 export declare class RefreshTrustedAdvisorCheckResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServerError
+     */
     internalServerError?: any;
+    /**
+     * Success
+     */
     refreshTrustedAdvisorCheckResponse?: shared.RefreshTrustedAdvisorCheckResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

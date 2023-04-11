@@ -1,9 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SubscriptionsApiCountRequest extends SpeakeasyBase {
-    request: any;
-}
+import { AxiosResponse } from "axios";
 export declare class SubscriptionsApiCountResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
     subscriptionsApiCount200ApplicationJSONOneOf?: any;
 }

@@ -1,0 +1,38 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+export declare class SupportingEntityCapability extends SpeakeasyBase {
+    /**
+     * Indicates whether the supporting entity capability is allowed.
+     *
+     * @remarks
+     *
+     * If a supporting entity is allowed but its parent legal entity is not, it means there are other supporting entities that failed validation.
+     *
+     * **The allowed supporting entity can still be used**
+     */
+    allowed?: boolean;
+    /**
+     * Supporting entity reference
+     */
+    id?: string;
+    /**
+     * Indicates whether the supporting entity capability is requested.
+     */
+    requested?: boolean;
+    /**
+     * The status of the verification checks for the supporting entity capability.
+     *
+     * @remarks
+     *
+     * Possible values:
+     *
+     * * **pending**: Adyen is running the verification.
+     *
+     * * **invalid**: The verification failed. Check if the `errors` array contains more information.
+     *
+     * * **valid**: The verification has been successfully completed.
+     *
+     * * **rejected**: Adyen has verified the information, but found reasons to not allow the capability.
+     *
+     */
+    verificationStatus?: string;
+}

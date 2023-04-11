@@ -1,5 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetVersionLocationsMarkersFormatIncidentTypeEnum {
+import { AxiosResponse } from "axios";
+/**
+ * <p>Only incidents of specific type</p>
+ *
+ * @remarks
+ *
+ */
+export declare enum GETVersionLocationsMarkersFormatIncidentTypeEnum {
     Crash = "crash",
     Hazard = "hazard",
     Theft = "theft",
@@ -7,20 +14,66 @@ export declare enum GetVersionLocationsMarkersFormatIncidentTypeEnum {
     InfrastructureIssue = "infrastructure_issue",
     ChopShop = "chop_shop"
 }
-export declare class GetVersionLocationsMarkersFormatQueryParams extends SpeakeasyBase {
+export declare class GETVersionLocationsMarkersFormatRequest extends SpeakeasyBase {
+    /**
+     * <p>Give ‘em all to me. Will ignore limit</p>
+     *
+     * @remarks
+     *
+     */
     all?: boolean;
-    incidentType?: GetVersionLocationsMarkersFormatIncidentTypeEnum;
+    /**
+     * <p>Only incidents of specific type</p>
+     *
+     * @remarks
+     *
+     */
+    incidentType?: GETVersionLocationsMarkersFormatIncidentTypeEnum;
+    /**
+     * <p>Max number of results to return. Defaults to 100</p>
+     *
+     * @remarks
+     *
+     */
     limit?: number;
+    /**
+     * <p>Start of period</p>
+     *
+     * @remarks
+     *
+     */
     occurredAfter?: number;
+    /**
+     * <p>End of period</p>
+     *
+     * @remarks
+     *
+     */
     occurredBefore?: number;
+    /**
+     * <p>Center of location for proximity search</p>
+     *
+     * @remarks
+     *
+     */
     proximity?: string;
+    /**
+     * <p>Size of the proximity search</p>
+     *
+     * @remarks
+     *
+     */
     proximitySquare?: number;
+    /**
+     * <p>Full text search of incidents</p>
+     *
+     * @remarks
+     *
+     */
     query?: string;
 }
-export declare class GetVersionLocationsMarkersFormatRequest extends SpeakeasyBase {
-    queryParams: GetVersionLocationsMarkersFormatQueryParams;
-}
-export declare class GetVersionLocationsMarkersFormatResponse extends SpeakeasyBase {
+export declare class GETVersionLocationsMarkersFormatResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

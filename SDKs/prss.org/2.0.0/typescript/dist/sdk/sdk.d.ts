@@ -1,0 +1,108 @@
+import { BroadcastServices } from "./broadcastservices";
+import { CDDrive } from "./cddrive";
+import { Episodes } from "./episodes";
+import { MetaPub } from "./metapub";
+import { Pieces } from "./pieces";
+import { Programs } from "./programs";
+import { RadioDNS } from "./radiodns";
+import { Segments } from "./segments";
+import { SpotInsertions } from "./spotinsertions";
+import { Spots } from "./spots";
+import { AxiosInstance } from "axios";
+/**
+ * The available configuration options for the SDK
+ */
+export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
+    defaultClient?: AxiosInstance;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
+};
+/**
+ * ContentDepot hosts a range of API’s that allow clients to manage, discover, and obtain content. The API spans many parts of the ContentDepot functionality including MetaPub (a.k.a. metadata distribution) and content management.
+ *
+ * @remarks
+ *
+ * ## MetaPub
+ *
+ * MetaPub collects, normalizes and distributes publicly available program, episode, and piece metadata through the public radio system. Backed by ContentDepot and its data model, MetaPub allows producers to supply metadata through various methods:
+ *
+ * 1. MetaPub Agents that collect producer metadata by "crawling" existing public feeds (e.g. C24, BBC) or the producer's production system (e.g. ATC, ME, TED Radio Hour).
+ * 2. Manually enter metadata in the ContentDepot Portal on each program and episode.
+ * 3. Publish/push the metadata to the MetaPub upload API and execute an ingest job.
+ *
+ * MetaPub then distributes this data to stations through an electronic program guide (EPG model) for display on various listener devices such as smart phones, tablets, web streams, HD radios, RDBS enabled FM radios, and more. The EPG format is based on the RadioDNS specifications.
+ *
+ * ### RadioDNS
+ *
+ * The RadioDNS Service and Programme Information Specification ([ETSI TS 102 818 v3.4.1](https://www.etsi.org/deliver/etsi_ts/102800_102899/102818/03.04.01_60/ts_102818v030401p.pdf)) defines three primary documents: Service Information, Program Information, and Group Information. These documents, along with the core RadioDNS Hybrid Lookup for Radio Services Specification ([ETSI TS 103 270 v1.4.1](https://www.etsi.org/deliver/etsi_ts/103200_103299/103270/01.04.01_60/ts_103270v010401p.pdf)), define a system where an end listener device can dynamically discover program metadata and fetch the metadata via Internet Protocol (IP) requests. MetaPub's use of RadioDNS differs slightly in that MetaPub (a.k.a PRSS) acts as the "service provider" while the stations and related middleware act as the end devices. While this is not the primary use case of RadioDNS, the flexibility in the specification, service definitions, and DNS resolution allows this model to be easily represented. MetaPub provides both _National Metadata_ and _Station Metadata_.
+ *
+ * It is strongly recommended that the related [RadioDNS specifications](https://radiodns.org/developers/documentation/) be read for implementation details, definitions, and required XML schemas.
+ *
+ * ## ContentDepot Drive
+ *
+ * ContentDepot Drive (CD Drive) provides a private, per customer file storage solution similar to other cloud storage solutions such as Google Drive, Box, and Dropbox. The CD Drive is used to stage content uploads such as metadata files, images, or segment audio before associating the content with specific programs or episodes.
+ *
+ * CD Drive content can be referenced using a URI by some operations such as synchronizing metadata. There are two possible CD Drive URI formats supported: ID and hierarchical path. The ID reference takes the form ```cddrive:id:{value}``` where value is the integer ID of the file or folder being referenced. The hierarchical path reference takes the form ```cddrive://{path}``` where path is the full, UNIX style path to the file or folder starting with '/'. For example, two CD Drive URIs pointing to the same file may be ```cddrive:id:12345``` and ```cddrive:///show1/episode2/metadata.xml```. More information about URIs can be found at [Wikipedia](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier).
+ *
+ * ## Authentication
+ *
+ * The API currently uses OAuth 2.0.  All operations require ```cd:full``` access where the client access is only limited by the permissions of the ContentDepot user after authentication. Limiting access scope per client is not currently supported.
+ *
+ */
+export declare class SDK {
+    /**
+     * Broadcast services can subscribe to content for multiple destinations.
+     */
+    broadcastServices: BroadcastServices;
+    /**
+     * ContentDepot Drive functionality for uploading and stating content files for use in other API operations.
+     */
+    cdDrive: CDDrive;
+    /**
+     * An episode is a specific instance of a program that will air on a specific date and time.
+     */
+    episodes: Episodes;
+    /**
+     * Endpoints to access MetaPub ingest functionality such as synchronizing producer metadata to programs and episodes. These API operations are deprecated. Use the pieces endpoints instead.
+     */
+    metaPub: MetaPub;
+    /**
+     * Pieces define specific story or song level metadata within an episode and segment. For example, an 18 minute audio segment may be composed of multiple 2 or 3 minute pieces.
+     */
+    pieces: Pieces;
+    /**
+     * Program information including searching for existing programs or fetching a specific program. A program is a collection of episodes that are delivered by ContentDepot as a live stream or pre-recorded files.
+     */
+    programs: Programs;
+    /**
+     * Endpoints to access the RadioDNS formatted national program information (SI and PI documents) for stations to use in middleware that is capable of scheduling and extracting the information. Station specific SI and PI documents are provided via a different mechanism.
+     *
+     * @see {@link https://radiodns.org/developers/documentation/}
+     */
+    radioDNS: RadioDNS;
+    /**
+     * Segments include the audio content and related information such as the in-cue and out-cue.
+     */
+    segments: Segments;
+    /**
+     * Spot insertions define spots to play when a cue is received.
+     */
+    spotInsertions: SpotInsertions;
+    /**
+     * A spot is an audio file that is to be inserted into streams using cues.
+     */
+    spots: Spots;
+    _defaultClient: AxiosInstance;
+    _securityClient: AxiosInstance;
+    _serverURL: string;
+    private _language;
+    private _sdkVersion;
+    private _genVersion;
+    private _globals;
+    constructor(props?: SDKProps);
+}

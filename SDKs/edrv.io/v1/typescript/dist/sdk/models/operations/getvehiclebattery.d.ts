@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetVehicleBatteryPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetVehicleBatteryRequest extends SpeakeasyBase {
-    pathParams: GetVehicleBatteryPathParams;
+    /**
+     * The vehicle id that needs to be fetched
+     */
+    id: string;
 }
 export declare class GetVehicleBatteryResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

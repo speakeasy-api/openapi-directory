@@ -1,35 +1,58 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ListSavedRevisionsUsingPostQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListSavedRevisionsUsingPOSTRequest extends SpeakeasyBase {
     padID?: string;
 }
-export declare class ListSavedRevisionsUsingPost200ApplicationJson extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class ListSavedRevisionsUsingPost500ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class ListSavedRevisionsUsingPost400ApplicationJson extends SpeakeasyBase {
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class ListSavedRevisionsUsingPost401ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class ListSavedRevisionsUsingPost401ApplicationJson extends SpeakeasyBase {
+/**
+ * generic api error (code 1)
+ */
+export declare class ListSavedRevisionsUsingPost400ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class ListSavedRevisionsUsingPost500ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class ListSavedRevisionsUsingPost200ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class ListSavedRevisionsUsingPostRequest extends SpeakeasyBase {
-    queryParams: ListSavedRevisionsUsingPostQueryParams;
-}
-export declare class ListSavedRevisionsUsingPostResponse extends SpeakeasyBase {
+export declare class ListSavedRevisionsUsingPOSTResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    listSavedRevisionsUsingPOST200ApplicationJSONObject?: ListSavedRevisionsUsingPost200ApplicationJson;
-    listSavedRevisionsUsingPOST400ApplicationJSONObject?: ListSavedRevisionsUsingPost400ApplicationJson;
-    listSavedRevisionsUsingPOST401ApplicationJSONObject?: ListSavedRevisionsUsingPost401ApplicationJson;
-    listSavedRevisionsUsingPOST500ApplicationJSONObject?: ListSavedRevisionsUsingPost500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    listSavedRevisionsUsingPOST200ApplicationJSONObject?: ListSavedRevisionsUsingPost200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    listSavedRevisionsUsingPOST400ApplicationJSONObject?: ListSavedRevisionsUsingPost400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    listSavedRevisionsUsingPOST401ApplicationJSONObject?: ListSavedRevisionsUsingPost401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    listSavedRevisionsUsingPOST500ApplicationJSONObject?: ListSavedRevisionsUsingPost500ApplicationJSON;
 }

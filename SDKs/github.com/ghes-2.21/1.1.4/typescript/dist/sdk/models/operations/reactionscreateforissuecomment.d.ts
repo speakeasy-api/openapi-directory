@@ -1,10 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReactionsCreateForIssueCommentPathParams extends SpeakeasyBase {
-    commentId: number;
-    owner: string;
-    repo: string;
-}
+import { AxiosResponse } from "axios";
+/**
+ * The [reaction type](https://docs.github.com/enterprise-server@2.21/rest/reference/reactions#reaction-types) to add to the issue comment.
+ */
 export declare enum ReactionsCreateForIssueCommentRequestBodyContentEnum {
     Plus1 = "+1",
     Minus1 = "-1",
@@ -16,20 +15,41 @@ export declare enum ReactionsCreateForIssueCommentRequestBodyContentEnum {
     Eyes = "eyes"
 }
 export declare class ReactionsCreateForIssueCommentRequestBody extends SpeakeasyBase {
+    /**
+     * The [reaction type](https://docs.github.com/enterprise-server@2.21/rest/reference/reactions#reaction-types) to add to the issue comment.
+     */
     content: ReactionsCreateForIssueCommentRequestBodyContentEnum;
 }
-export declare class ReactionsCreateForIssueComment415ApplicationJson extends SpeakeasyBase {
+export declare class ReactionsCreateForIssueCommentRequest extends SpeakeasyBase {
+    requestBody: ReactionsCreateForIssueCommentRequestBody;
+    /**
+     * comment_id parameter
+     */
+    commentId: number;
+    owner: string;
+    repo: string;
+}
+/**
+ * Preview header missing
+ */
+export declare class ReactionsCreateForIssueComment415ApplicationJSON extends SpeakeasyBase {
     documentationUrl: string;
     message: string;
-}
-export declare class ReactionsCreateForIssueCommentRequest extends SpeakeasyBase {
-    pathParams: ReactionsCreateForIssueCommentPathParams;
-    request?: ReactionsCreateForIssueCommentRequestBody;
 }
 export declare class ReactionsCreateForIssueCommentResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Reaction exists
+     */
     reaction?: shared.Reaction;
-    reactionsCreateForIssueComment415ApplicationJSONObject?: ReactionsCreateForIssueComment415ApplicationJson;
+    /**
+     * Preview header missing
+     */
+    reactionsCreateForIssueComment415ApplicationJSONObject?: ReactionsCreateForIssueComment415ApplicationJSON;
+    /**
+     * Validation failed
+     */
     validationError?: shared.ValidationError;
 }

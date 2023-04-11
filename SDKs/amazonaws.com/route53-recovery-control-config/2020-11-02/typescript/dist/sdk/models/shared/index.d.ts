@@ -16,6 +16,7 @@ export * from "./listclustersresponse";
 export * from "./listcontrolpanelsresponse";
 export * from "./listroutingcontrolsresponse";
 export * from "./listsafetyrulesresponse";
+export * from "./listtagsforresourceresponse";
 export * from "./routingcontrol";
 export * from "./rule";
 export * from "./ruleconfig";

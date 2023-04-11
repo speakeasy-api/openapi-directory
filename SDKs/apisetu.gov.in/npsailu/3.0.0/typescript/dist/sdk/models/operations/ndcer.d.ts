@@ -1,115 +1,170 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class NdcerSecurity extends SpeakeasyBase {
+    apiKey: string;
+    clientId: string;
+}
 export declare class NdcerRequestBodyCertificateParameters extends SpeakeasyBase {
+    /**
+     * ApplicationNumber
+     */
     appid: string;
 }
+/**
+ * The format of the certificate in response.
+ */
 export declare enum NdcerRequestBodyFormatEnum {
     Pdf = "pdf"
 }
+/**
+ * Request format
+ */
 export declare class NdcerRequestBody extends SpeakeasyBase {
     certificateParameters?: NdcerRequestBodyCertificateParameters;
-    consentArtifact?: any;
+    consentArtifact?: shared.ConsentArtifactSchema;
+    /**
+     * The format of the certificate in response.
+     */
     format: NdcerRequestBodyFormatEnum;
+    /**
+     * A unique transaction id for this request in UUID format. It is used for tracking the request.
+     */
     txnId: string;
 }
-export declare class NdcerSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
-    clientId: shared.SchemeClientId;
+export declare enum Ndcer504ApplicationJSONErrorEnum {
+    GatewayTimeout = "gateway_timeout"
 }
-export declare enum Ndcer400ApplicationJsonErrorEnum {
+export declare enum Ndcer504ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
+}
+/**
+ * Gateway timeout
+ */
+export declare class Ndcer504ApplicationJSON extends SpeakeasyBase {
+    error?: Ndcer504ApplicationJSONErrorEnum;
+    errorDescription?: Ndcer504ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Ndcer503ApplicationJSONErrorEnum {
+    ServiceUnavailable = "service_unavailable"
+}
+export declare enum Ndcer503ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
+}
+/**
+ * Service unavailable
+ */
+export declare class Ndcer503ApplicationJSON extends SpeakeasyBase {
+    error?: Ndcer503ApplicationJSONErrorEnum;
+    errorDescription?: Ndcer503ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Ndcer502ApplicationJSONErrorEnum {
+    BadGatewy = "bad_gatewy"
+}
+export declare enum Ndcer502ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
+}
+/**
+ * Bad gateway
+ */
+export declare class Ndcer502ApplicationJSON extends SpeakeasyBase {
+    error?: Ndcer502ApplicationJSONErrorEnum;
+    errorDescription?: Ndcer502ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Ndcer500ApplicationJSONErrorEnum {
+    InternalServerError = "internal_server_error"
+}
+export declare enum Ndcer500ApplicationJSONErrorDescriptionEnum {
+    InternalServerError = "Internal server error"
+}
+/**
+ * Internal server error
+ */
+export declare class Ndcer500ApplicationJSON extends SpeakeasyBase {
+    error?: Ndcer500ApplicationJSONErrorEnum;
+    errorDescription?: Ndcer500ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Ndcer404ApplicationJSONErrorEnum {
+    RecordNotFound = "record_not_found",
+    UrlNotFound = "url_not_found"
+}
+export declare enum Ndcer404ApplicationJSONErrorDescriptionEnum {
+    NoRecordFound = "No record found",
+    YourAPIUrlOrPathIsIncorrect = "Your API url or path is incorrect"
+}
+/**
+ * No record found
+ */
+export declare class Ndcer404ApplicationJSON extends SpeakeasyBase {
+    error?: Ndcer404ApplicationJSONErrorEnum;
+    errorDescription?: Ndcer404ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Ndcer401ApplicationJSONErrorEnum {
+    InvalidAuthentication = "invalid_authentication",
+    InvalidAuthorization = "invalid_authorization"
+}
+export declare enum Ndcer401ApplicationJSONErrorDescriptionEnum {
+    AuthenticationFailed = "Authentication failed",
+    YouAreNotAuthorizedToUseThisAPI = "You are not authorized to use this API"
+}
+/**
+ * Unauthorized access
+ */
+export declare class Ndcer401ApplicationJSON extends SpeakeasyBase {
+    error?: Ndcer401ApplicationJSONErrorEnum;
+    errorDescription?: Ndcer401ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Ndcer400ApplicationJSONErrorEnum {
     MissingParameter = "missing_parameter",
     InvalidParameter = "invalid_parameter",
     InvalidFormat = "invalid_format",
     InvalidTxnid = "invalid_txnid",
     InvalidConsentid = "invalid_consentid"
 }
-export declare enum Ndcer400ApplicationJsonErrorDescriptionEnum {
+export declare enum Ndcer400ApplicationJSONErrorDescriptionEnum {
     PleaseProvideAllMandatoryParameters = "Please provide all mandatory parameters",
     BadRequest = "Bad request",
     TheFormatParameterIsInvalid = "The format parameter is invalid",
-    TheTxnIdParameterMustBeInUuidFormat = "The txnId parameter must be in UUID format",
-    TheConsentIdParameterMustBeInUuidFormat = "The consentId parameter must be in UUID format"
+    TheTxnIdParameterMustBeInUUIDFormat = "The txnId parameter must be in UUID format",
+    TheConsentIdParameterMustBeInUUIDFormat = "The consentId parameter must be in UUID format"
 }
-export declare class Ndcer400ApplicationJson extends SpeakeasyBase {
-    error?: Ndcer400ApplicationJsonErrorEnum;
-    errorDescription?: Ndcer400ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Ndcer401ApplicationJsonErrorEnum {
-    InvalidAuthentication = "invalid_authentication",
-    InvalidAuthorization = "invalid_authorization"
-}
-export declare enum Ndcer401ApplicationJsonErrorDescriptionEnum {
-    AuthenticationFailed = "Authentication failed",
-    YouAreNotAuthorizedToUseThisApi = "You are not authorized to use this API"
-}
-export declare class Ndcer401ApplicationJson extends SpeakeasyBase {
-    error?: Ndcer401ApplicationJsonErrorEnum;
-    errorDescription?: Ndcer401ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Ndcer404ApplicationJsonErrorEnum {
-    RecordNotFound = "record_not_found",
-    UrlNotFound = "url_not_found"
-}
-export declare enum Ndcer404ApplicationJsonErrorDescriptionEnum {
-    NoRecordFound = "No record found",
-    YourApiUrlOrPathIsIncorrect = "Your API url or path is incorrect"
-}
-export declare class Ndcer404ApplicationJson extends SpeakeasyBase {
-    error?: Ndcer404ApplicationJsonErrorEnum;
-    errorDescription?: Ndcer404ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Ndcer500ApplicationJsonErrorEnum {
-    InternalServerError = "internal_server_error"
-}
-export declare enum Ndcer500ApplicationJsonErrorDescriptionEnum {
-    InternalServerError = "Internal server error"
-}
-export declare class Ndcer500ApplicationJson extends SpeakeasyBase {
-    error?: Ndcer500ApplicationJsonErrorEnum;
-    errorDescription?: Ndcer500ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Ndcer502ApplicationJsonErrorEnum {
-    BadGatewy = "bad_gatewy"
-}
-export declare enum Ndcer502ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
-}
-export declare class Ndcer502ApplicationJson extends SpeakeasyBase {
-    error?: Ndcer502ApplicationJsonErrorEnum;
-    errorDescription?: Ndcer502ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Ndcer503ApplicationJsonErrorEnum {
-    ServiceUnavailable = "service_unavailable"
-}
-export declare enum Ndcer503ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
-}
-export declare class Ndcer503ApplicationJson extends SpeakeasyBase {
-    error?: Ndcer503ApplicationJsonErrorEnum;
-    errorDescription?: Ndcer503ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Ndcer504ApplicationJsonErrorEnum {
-    GatewayTimeout = "gateway_timeout"
-}
-export declare enum Ndcer504ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
-}
-export declare class Ndcer504ApplicationJson extends SpeakeasyBase {
-    error?: Ndcer504ApplicationJsonErrorEnum;
-    errorDescription?: Ndcer504ApplicationJsonErrorDescriptionEnum;
-}
-export declare class NdcerRequest extends SpeakeasyBase {
-    request?: NdcerRequestBody;
-    security: NdcerSecurity;
+/**
+ * Bad request
+ */
+export declare class Ndcer400ApplicationJSON extends SpeakeasyBase {
+    error?: Ndcer400ApplicationJSONErrorEnum;
+    errorDescription?: Ndcer400ApplicationJSONErrorDescriptionEnum;
 }
 export declare class NdcerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    ndcer400ApplicationJSONObject?: Ndcer400ApplicationJson;
-    ndcer401ApplicationJSONObject?: Ndcer401ApplicationJson;
-    ndcer404ApplicationJSONObject?: Ndcer404ApplicationJson;
-    ndcer500ApplicationJSONObject?: Ndcer500ApplicationJson;
-    ndcer502ApplicationJSONObject?: Ndcer502ApplicationJson;
-    ndcer503ApplicationJSONObject?: Ndcer503ApplicationJson;
-    ndcer504ApplicationJSONObject?: Ndcer504ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad request
+     */
+    ndcer400ApplicationJSONObject?: Ndcer400ApplicationJSON;
+    /**
+     * Unauthorized access
+     */
+    ndcer401ApplicationJSONObject?: Ndcer401ApplicationJSON;
+    /**
+     * No record found
+     */
+    ndcer404ApplicationJSONObject?: Ndcer404ApplicationJSON;
+    /**
+     * Internal server error
+     */
+    ndcer500ApplicationJSONObject?: Ndcer500ApplicationJSON;
+    /**
+     * Bad gateway
+     */
+    ndcer502ApplicationJSONObject?: Ndcer502ApplicationJSON;
+    /**
+     * Service unavailable
+     */
+    ndcer503ApplicationJSONObject?: Ndcer503ApplicationJSON;
+    /**
+     * Gateway timeout
+     */
+    ndcer504ApplicationJSONObject?: Ndcer504ApplicationJSON;
 }

@@ -1,14 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class MarkdownRenderRawRequests extends SpeakeasyBase {
-    string?: string;
-    string1?: string;
-}
-export declare class MarkdownRenderRawRequest extends SpeakeasyBase {
-    request?: MarkdownRenderRawRequests;
-}
+import { AxiosResponse } from "axios";
 export declare class MarkdownRenderRawResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     markdownRenderRaw200TextHTMLString?: string;
 }

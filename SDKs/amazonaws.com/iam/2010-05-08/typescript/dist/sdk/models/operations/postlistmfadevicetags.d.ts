@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostListMfaDeviceTagsActionEnum {
-    ListMfaDeviceTags = "ListMFADeviceTags"
+import { AxiosResponse } from "axios";
+export declare enum POSTListMFADeviceTagsActionEnum {
+    ListMFADeviceTags = "ListMFADeviceTags"
 }
-export declare enum PostListMfaDeviceTagsVersionEnum {
+export declare enum POSTListMFADeviceTagsVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostListMfaDeviceTagsQueryParams extends SpeakeasyBase {
-    action: PostListMfaDeviceTagsActionEnum;
-    version: PostListMfaDeviceTagsVersionEnum;
-}
-export declare class PostListMfaDeviceTagsHeaders extends SpeakeasyBase {
+export declare class POSTListMFADeviceTagsRequest extends SpeakeasyBase {
+    action: POSTListMFADeviceTagsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTListMFADeviceTagsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostListMfaDeviceTagsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostListMfaDeviceTagsRequest extends SpeakeasyBase {
-    queryParams: PostListMfaDeviceTagsQueryParams;
-    headers: PostListMfaDeviceTagsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostListMfaDeviceTagsResponse extends SpeakeasyBase {
+export declare class POSTListMFADeviceTagsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

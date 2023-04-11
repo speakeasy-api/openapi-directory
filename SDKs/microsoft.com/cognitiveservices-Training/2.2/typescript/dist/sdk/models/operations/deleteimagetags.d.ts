@@ -1,20 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteImageTagsPathParams extends SpeakeasyBase {
-    projectId: string;
-}
-export declare class DeleteImageTagsQueryParams extends SpeakeasyBase {
-    imageIds: string[];
-    tagIds: string[];
-}
-export declare class DeleteImageTagsHeaders extends SpeakeasyBase {
-    trainingKey: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteImageTagsRequest extends SpeakeasyBase {
-    pathParams: DeleteImageTagsPathParams;
-    queryParams: DeleteImageTagsQueryParams;
-    headers: DeleteImageTagsHeaders;
+    trainingKey: string;
+    /**
+     * Image ids. Limited to 64 images.
+     */
+    imageIds: string[];
+    /**
+     * The project id.
+     */
+    projectId: string;
+    /**
+     * Tags to be deleted from the specified images. Limited to 20 tags.
+     */
+    tagIds: string[];
 }
 export declare class DeleteImageTagsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

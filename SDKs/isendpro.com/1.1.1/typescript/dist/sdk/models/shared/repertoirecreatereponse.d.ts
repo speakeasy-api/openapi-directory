@@ -1,4 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class RepertoirEcreatereponse extends SpeakeasyBase {
-    etat?: any;
+import { REPERTOIREcreatereponseEtat } from "./repertoirecreatereponseetat";
+/**
+ * Successful response
+ */
+export declare class REPERTOIREcreatereponse extends SpeakeasyBase {
+    etat?: REPERTOIREcreatereponseEtat;
 }

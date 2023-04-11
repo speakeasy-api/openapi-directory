@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetDataCatalogEncryptionSettingsXAmzTargetEnum {
-    AwsGlueGetDataCatalogEncryptionSettings = "AWSGlue.GetDataCatalogEncryptionSettings"
+    AWSGlueGetDataCatalogEncryptionSettings = "AWSGlue.GetDataCatalogEncryptionSettings"
 }
-export declare class GetDataCatalogEncryptionSettingsHeaders extends SpeakeasyBase {
+export declare class GetDataCatalogEncryptionSettingsRequest extends SpeakeasyBase {
+    getDataCatalogEncryptionSettingsRequest: shared.GetDataCatalogEncryptionSettingsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class GetDataCatalogEncryptionSettingsHeaders extends SpeakeasyBa
     xAmzSignedHeaders?: string;
     xAmzTarget: GetDataCatalogEncryptionSettingsXAmzTargetEnum;
 }
-export declare class GetDataCatalogEncryptionSettingsRequest extends SpeakeasyBase {
-    headers: GetDataCatalogEncryptionSettingsHeaders;
-    request: shared.GetDataCatalogEncryptionSettingsRequest;
-}
 export declare class GetDataCatalogEncryptionSettingsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getDataCatalogEncryptionSettingsResponse?: shared.GetDataCatalogEncryptionSettingsResponse;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

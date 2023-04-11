@@ -1,17 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PatchMessageCommentsIdPathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class PatchMessageCommentsIdRequestBody extends SpeakeasyBase {
+    /**
+     * Comment body.
+     */
     body: string;
 }
 export declare class PatchMessageCommentsIdRequest extends SpeakeasyBase {
-    pathParams: PatchMessageCommentsIdPathParams;
-    request: PatchMessageCommentsIdRequestBody;
+    requestBody: PatchMessageCommentsIdRequestBody;
+    /**
+     * Message Comment ID.
+     */
+    id: number;
 }
 export declare class PatchMessageCommentsIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * The MessageComments object.
+     */
     messageCommentEntity?: shared.MessageCommentEntity;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

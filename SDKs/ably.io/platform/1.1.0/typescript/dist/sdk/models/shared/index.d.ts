@@ -4,7 +4,6 @@ export * from "./devicedetails";
 export * from "./error";
 export * from "./extras";
 export * from "./filterdirectionenum";
-export * from "./filterdirectionenum1";
 export * from "./message";
 export * from "./notification";
 export * from "./occupancy";

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostRevokeEndpointAccessActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTRevokeEndpointAccessActionEnum {
     RevokeEndpointAccess = "RevokeEndpointAccess"
 }
-export declare enum PostRevokeEndpointAccessVersionEnum {
+export declare enum POSTRevokeEndpointAccessVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostRevokeEndpointAccessQueryParams extends SpeakeasyBase {
-    action: PostRevokeEndpointAccessActionEnum;
-    version: PostRevokeEndpointAccessVersionEnum;
-}
-export declare class PostRevokeEndpointAccessHeaders extends SpeakeasyBase {
+export declare class POSTRevokeEndpointAccessRequest extends SpeakeasyBase {
+    action: POSTRevokeEndpointAccessActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTRevokeEndpointAccessVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostRevokeEndpointAccessHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostRevokeEndpointAccessRequest extends SpeakeasyBase {
-    queryParams: PostRevokeEndpointAccessQueryParams;
-    headers: PostRevokeEndpointAccessHeaders;
-    request?: Uint8Array;
-}
-export declare class PostRevokeEndpointAccessResponse extends SpeakeasyBase {
+export declare class POSTRevokeEndpointAccessResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

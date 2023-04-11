@@ -1,19 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreateAssignmentPathParams extends SpeakeasyBase {
-    class: string;
-}
+import { AxiosResponse } from "axios";
 export declare class CreateAssignmentSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class CreateAssignmentRequest extends SpeakeasyBase {
-    pathParams: CreateAssignmentPathParams;
-    request?: shared.AssignmentCreation;
-    security: CreateAssignmentSecurity;
+    assignmentCreation?: shared.AssignmentCreation;
+    /**
+     * Unique identifier of the class
+     */
+    class: string;
 }
 export declare class CreateAssignmentResponse extends SpeakeasyBase {
+    /**
+     * The assignment has been created
+     */
     assignment?: shared.Assignment;
     contentType: string;
+    /**
+     * Error
+     */
     flatErrorResponse?: shared.FlatErrorResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

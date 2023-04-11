@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostBatchPutScheduledUpdateGroupActionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTBatchPutScheduledUpdateGroupActionActionEnum {
     BatchPutScheduledUpdateGroupAction = "BatchPutScheduledUpdateGroupAction"
 }
-export declare enum PostBatchPutScheduledUpdateGroupActionVersionEnum {
+export declare enum POSTBatchPutScheduledUpdateGroupActionVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class PostBatchPutScheduledUpdateGroupActionQueryParams extends SpeakeasyBase {
-    action: PostBatchPutScheduledUpdateGroupActionActionEnum;
-    version: PostBatchPutScheduledUpdateGroupActionVersionEnum;
-}
-export declare class PostBatchPutScheduledUpdateGroupActionHeaders extends SpeakeasyBase {
+export declare class POSTBatchPutScheduledUpdateGroupActionRequest extends SpeakeasyBase {
+    action: POSTBatchPutScheduledUpdateGroupActionActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTBatchPutScheduledUpdateGroupActionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostBatchPutScheduledUpdateGroupActionHeaders extends Speak
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostBatchPutScheduledUpdateGroupActionRequest extends SpeakeasyBase {
-    queryParams: PostBatchPutScheduledUpdateGroupActionQueryParams;
-    headers: PostBatchPutScheduledUpdateGroupActionHeaders;
-    request?: Uint8Array;
-}
-export declare class PostBatchPutScheduledUpdateGroupActionResponse extends SpeakeasyBase {
+export declare class POSTBatchPutScheduledUpdateGroupActionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

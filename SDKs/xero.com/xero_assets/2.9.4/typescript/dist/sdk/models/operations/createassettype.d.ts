@@ -1,18 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreateAssetTypeHeaders extends SpeakeasyBase {
-    xeroTenantId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class CreateAssetTypeSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class CreateAssetTypeRequest extends SpeakeasyBase {
-    headers: CreateAssetTypeHeaders;
-    request?: shared.AssetType;
-    security: CreateAssetTypeSecurity;
+    /**
+     * Asset type to add
+     */
+    assetType?: shared.AssetType;
+    /**
+     * Xero identifier for Tenant
+     */
+    xeroTenantId: string;
 }
 export declare class CreateAssetTypeResponse extends SpeakeasyBase {
+    /**
+     * results single object -  created fixed type
+     */
     assetType?: shared.AssetType;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

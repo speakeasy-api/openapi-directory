@@ -1,17 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class AddVideoToWatchLaterPathParams extends SpeakeasyBase {
-    userId: number;
-    videoId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class AddVideoToWatchLaterSecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
+    oauth2: string;
 }
 export declare class AddVideoToWatchLaterRequest extends SpeakeasyBase {
-    pathParams: AddVideoToWatchLaterPathParams;
-    security: AddVideoToWatchLaterSecurity;
+    /**
+     * The ID of the user.
+     */
+    userId: number;
+    /**
+     * The ID of the video.
+     */
+    videoId: number;
 }
 export declare class AddVideoToWatchLaterResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

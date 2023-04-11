@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostAbortEnvironmentUpdateActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTAbortEnvironmentUpdateActionEnum {
     AbortEnvironmentUpdate = "AbortEnvironmentUpdate"
 }
-export declare enum PostAbortEnvironmentUpdateVersionEnum {
+export declare enum POSTAbortEnvironmentUpdateVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostAbortEnvironmentUpdateQueryParams extends SpeakeasyBase {
-    action: PostAbortEnvironmentUpdateActionEnum;
-    version: PostAbortEnvironmentUpdateVersionEnum;
-}
-export declare class PostAbortEnvironmentUpdateHeaders extends SpeakeasyBase {
+export declare class POSTAbortEnvironmentUpdateRequest extends SpeakeasyBase {
+    action: POSTAbortEnvironmentUpdateActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTAbortEnvironmentUpdateVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostAbortEnvironmentUpdateHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostAbortEnvironmentUpdateRequest extends SpeakeasyBase {
-    queryParams: PostAbortEnvironmentUpdateQueryParams;
-    headers: PostAbortEnvironmentUpdateHeaders;
-    request?: Uint8Array;
-}
-export declare class PostAbortEnvironmentUpdateResponse extends SpeakeasyBase {
+export declare class POSTAbortEnvironmentUpdateResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,12 +1,28 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum TagResource20190326OperationEnum {
     Tag = "Tag"
 }
-export declare class TagResource20190326QueryParams extends SpeakeasyBase {
-    operation: TagResource20190326OperationEnum;
-    resource: string;
+/**
+ *  A complex type that contains zero or more <code>Tag</code> elements.
+ */
+export declare class TagResource20190326RequestBodyTags extends SpeakeasyBase {
+    items?: shared.TagList[];
 }
-export declare class TagResource20190326Headers extends SpeakeasyBase {
+export declare class TagResource20190326RequestBody extends SpeakeasyBase {
+    /**
+     *  A complex type that contains zero or more <code>Tag</code> elements.
+     */
+    tags: TagResource20190326RequestBodyTags;
+}
+export declare class TagResource20190326Request extends SpeakeasyBase {
+    operation: TagResource20190326OperationEnum;
+    requestBody: Uint8Array;
+    /**
+     *  An ARN of a CloudFront resource.
+     */
+    resource: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -15,13 +31,9 @@ export declare class TagResource20190326Headers extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class TagResource20190326Request extends SpeakeasyBase {
-    queryParams: TagResource20190326QueryParams;
-    headers: TagResource20190326Headers;
-    request: Uint8Array;
-}
 export declare class TagResource20190326Response extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

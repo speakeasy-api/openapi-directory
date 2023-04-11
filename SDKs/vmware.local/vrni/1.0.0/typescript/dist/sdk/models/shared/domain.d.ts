@@ -5,5 +5,8 @@ export declare enum DomainDomainTypeEnum {
 }
 export declare class Domain extends SpeakeasyBase {
     domainType?: DomainDomainTypeEnum;
+    /**
+     * domain value, not required for LOCAL domain
+     */
     value?: string;
 }

@@ -1,23 +1,42 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetScoreRevisionPathParams extends SpeakeasyBase {
-    revision: string;
-    score: string;
-}
-export declare class GetScoreRevisionQueryParams extends SpeakeasyBase {
-    sharingKey?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetScoreRevisionSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class GetScoreRevisionRequest extends SpeakeasyBase {
-    pathParams: GetScoreRevisionPathParams;
-    queryParams: GetScoreRevisionQueryParams;
-    security: GetScoreRevisionSecurity;
+    /**
+     * Unique identifier of a score revision. You can use `last` to fetch the information related to the last version created.
+     *
+     * @remarks
+     *
+     */
+    revision: string;
+    /**
+     * Unique identifier of the score document. This can be a Flat Score unique identifier (i.e. `ScoreDetails.id`) or, if the score is also a Google Drive file, the Drive file unique identifier prefixed with `drive-` (e.g. `drive-0B000000000`).
+     *
+     * @remarks
+     *
+     */
+    score: string;
+    /**
+     * This sharing key must be specified to access to a score or collection with a `privacy` mode set to `privateLink` and the current user is not a collaborator of the document.
+     *
+     * @remarks
+     *
+     */
+    sharingKey?: string;
 }
 export declare class GetScoreRevisionResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Account overquota
+     */
     flatErrorResponse?: shared.FlatErrorResponse;
+    /**
+     * Revision metadata
+     */
     scoreRevision?: shared.ScoreRevision;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

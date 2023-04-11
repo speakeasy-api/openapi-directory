@@ -1,4 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+export declare enum ArticleGeoFacet2Enum {
+    Unknown = ""
+}
+export declare enum ArticleGeoFacet1Enum {
+    Unknown = ""
+}
 export declare class Article extends SpeakeasyBase {
     abstract?: string;
     byline?: string;

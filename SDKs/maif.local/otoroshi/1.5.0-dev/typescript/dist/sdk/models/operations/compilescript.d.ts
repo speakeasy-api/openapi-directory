@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class CompileScriptSecurity extends SpeakeasyBase {
-    otoroshiAuth: shared.SchemeOtoroshiAuth;
-}
-export declare class CompileScriptRequest extends SpeakeasyBase {
-    request?: shared.Script;
-    security: CompileScriptSecurity;
+    password: string;
+    username: string;
 }
 export declare class CompileScriptResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful operation
+     */
     scriptCompilationResult?: shared.ScriptCompilationResult;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

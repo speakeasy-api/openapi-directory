@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class DelListeNoire {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +9,10 @@ export declare class DelListeNoire {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * delListeNoire - Ajoute un numero en liste noire
+     * Ajoute un numero en liste noire
      *
+     * @remarks
      * Supprime un numero en liste noire
-    **/
+     */
     delListeNoire(req: operations.DelListeNoireRequest, config?: AxiosRequestConfig): Promise<operations.DelListeNoireResponse>;
 }

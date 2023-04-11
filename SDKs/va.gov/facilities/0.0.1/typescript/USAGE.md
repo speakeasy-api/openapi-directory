@@ -1,21 +1,17 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetAllFacilitiesRequest, GetAllFacilitiesResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetAllFacilitiesRequest,
+  GetAllFacilitiesResponse,
+  GetAllFacilitiesAcceptEnum,
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetAllFacilitiesRequest = {
-  security: {
-    apikey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  },
-  headers: {
-    accept: "application/geo+json",
-  },
+  accept: GetAllFacilitiesAcceptEnum.ApplicationVndGeoPlusJson,
 };
 
 sdk.facilities.getAllFacilities(req).then((res: GetAllFacilitiesResponse | AxiosError) => {

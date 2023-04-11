@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * OK
+ */
 export declare class Comic extends SpeakeasyBase {
     alt?: string;
     day?: string;

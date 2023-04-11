@@ -1,5 +1,9 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Entities APIs
+ */
 export declare class Entities {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,279 +13,325 @@ export declare class Entities {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getCluster - Show cluster details
-     *
      * Show cluster details
-    **/
-    getCluster(req: operations.GetClusterRequest, config?: AxiosRequestConfig): Promise<operations.GetClusterResponse>;
-    /**
-     * getDatacenter - Show vCenter datacenter details
      *
+     * @remarks
+     * Show cluster details
+     */
+    getCluster(req: operations.GetClusterRequest, security: operations.GetClusterSecurity, config?: AxiosRequestConfig): Promise<operations.GetClusterResponse>;
+    /**
      * Show vCenter datacenter details
-    **/
-    getDatacenter(req: operations.GetDatacenterRequest, config?: AxiosRequestConfig): Promise<operations.GetDatacenterResponse>;
-    /**
-     * getDatastore - Show datastore details
      *
+     * @remarks
+     * Show vCenter datacenter details
+     */
+    getDatacenter(req: operations.GetDatacenterRequest, security: operations.GetDatacenterSecurity, config?: AxiosRequestConfig): Promise<operations.GetDatacenterResponse>;
+    /**
      * Show datastore details
-    **/
-    getDatastore(req: operations.GetDatastoreRequest, config?: AxiosRequestConfig): Promise<operations.GetDatastoreResponse>;
-    /**
-     * getDistributedVirtualPortgroup - Show distributed virtual portgroup details
      *
+     * @remarks
+     * Show datastore details
+     */
+    getDatastore(req: operations.GetDatastoreRequest, security: operations.GetDatastoreSecurity, config?: AxiosRequestConfig): Promise<operations.GetDatastoreResponse>;
+    /**
      * Show distributed virtual portgroup details
-    **/
-    getDistributedVirtualPortgroup(req: operations.GetDistributedVirtualPortgroupRequest, config?: AxiosRequestConfig): Promise<operations.GetDistributedVirtualPortgroupResponse>;
-    /**
-     * getDistributedVirtualSwitch - Show distributed virtual switch details
      *
+     * @remarks
+     * Show distributed virtual portgroup details
+     */
+    getDistributedVirtualPortgroup(req: operations.GetDistributedVirtualPortgroupRequest, security: operations.GetDistributedVirtualPortgroupSecurity, config?: AxiosRequestConfig): Promise<operations.GetDistributedVirtualPortgroupResponse>;
+    /**
      * Show distributed virtual switch details
-    **/
-    getDistributedVirtualSwitch(req: operations.GetDistributedVirtualSwitchRequest, config?: AxiosRequestConfig): Promise<operations.GetDistributedVirtualSwitchResponse>;
-    /**
-     * getFirewall - Show firewall details
      *
+     * @remarks
+     * Show distributed virtual switch details
+     */
+    getDistributedVirtualSwitch(req: operations.GetDistributedVirtualSwitchRequest, security: operations.GetDistributedVirtualSwitchSecurity, config?: AxiosRequestConfig): Promise<operations.GetDistributedVirtualSwitchResponse>;
+    /**
      * Show firewall details
-    **/
-    getFirewall(req: operations.GetFirewallRequest, config?: AxiosRequestConfig): Promise<operations.GetFirewallResponse>;
-    /**
-     * getFirewallRule - Show firewall rule details
      *
+     * @remarks
+     * Show firewall details
+     */
+    getFirewall(req: operations.GetFirewallRequest, security: operations.GetFirewallSecurity, config?: AxiosRequestConfig): Promise<operations.GetFirewallResponse>;
+    /**
      * Show firewall rule details
-    **/
-    getFirewallRule(req: operations.GetFirewallRuleRequest, config?: AxiosRequestConfig): Promise<operations.GetFirewallRuleResponse>;
-    /**
-     * getFlow - Show flow details
      *
+     * @remarks
+     * Show firewall rule details
+     */
+    getFirewallRule(req: operations.GetFirewallRuleRequest, security: operations.GetFirewallRuleSecurity, config?: AxiosRequestConfig): Promise<operations.GetFirewallRuleResponse>;
+    /**
      * Show flow details
-    **/
-    getFlow(req: operations.GetFlowRequest, config?: AxiosRequestConfig): Promise<operations.GetFlowResponse>;
-    /**
-     * getFlows - List flows
      *
+     * @remarks
+     * Show flow details
+     */
+    getFlow(req: operations.GetFlowRequest, security: operations.GetFlowSecurity, config?: AxiosRequestConfig): Promise<operations.GetFlowResponse>;
+    /**
      * List flows
-    **/
-    getFlows(req: operations.GetFlowsRequest, config?: AxiosRequestConfig): Promise<operations.GetFlowsResponse>;
-    /**
-     * getFolder - Show folder details
      *
+     * @remarks
+     * List flows
+     */
+    getFlows(req: operations.GetFlowsRequest, security: operations.GetFlowsSecurity, config?: AxiosRequestConfig): Promise<operations.GetFlowsResponse>;
+    /**
      * Show folder details
-    **/
-    getFolder(req: operations.GetFolderRequest, config?: AxiosRequestConfig): Promise<operations.GetFolderResponse>;
-    /**
-     * getHost - Show host details
      *
+     * @remarks
+     * Show folder details
+     */
+    getFolder(req: operations.GetFolderRequest, security: operations.GetFolderSecurity, config?: AxiosRequestConfig): Promise<operations.GetFolderResponse>;
+    /**
      * Show host details
-    **/
-    getHost(req: operations.GetHostRequest, config?: AxiosRequestConfig): Promise<operations.GetHostResponse>;
-    /**
-     * getIpSet - Show ip set details
      *
+     * @remarks
+     * Show host details
+     */
+    getHost(req: operations.GetHostRequest, security: operations.GetHostSecurity, config?: AxiosRequestConfig): Promise<operations.GetHostResponse>;
+    /**
      * Show ip set details
-    **/
-    getIpSet(req: operations.GetIpSetRequest, config?: AxiosRequestConfig): Promise<operations.GetIpSetResponse>;
-    /**
-     * getLayer2Network - Show layer2 network details
      *
+     * @remarks
+     * Show ip set details
+     */
+    getIPSet(req: operations.GetIPSetRequest, security: operations.GetIPSetSecurity, config?: AxiosRequestConfig): Promise<operations.GetIPSetResponse>;
+    /**
      * Show layer2 network details
-    **/
-    getLayer2Network(req: operations.GetLayer2NetworkRequest, config?: AxiosRequestConfig): Promise<operations.GetLayer2NetworkResponse>;
-    /**
-     * getNsxManager - Show nsx manager details
      *
+     * @remarks
+     * Show layer2 network details
+     */
+    getLayer2Network(req: operations.GetLayer2NetworkRequest, security: operations.GetLayer2NetworkSecurity, config?: AxiosRequestConfig): Promise<operations.GetLayer2NetworkResponse>;
+    /**
      * Show nsx manager details
-    **/
-    getNsxManager(req: operations.GetNsxManagerRequest, config?: AxiosRequestConfig): Promise<operations.GetNsxManagerResponse>;
-    /**
-     * getName - Get name of an entity
      *
+     * @remarks
+     * Show nsx manager details
+     */
+    getNSXManager(req: operations.GetNSXManagerRequest, security: operations.GetNSXManagerSecurity, config?: AxiosRequestConfig): Promise<operations.GetNSXManagerResponse>;
+    /**
      * Get name of an entity
-    **/
-    getName(req: operations.GetNameRequest, config?: AxiosRequestConfig): Promise<operations.GetNameResponse>;
-    /**
-     * getNames - Get names for entities
      *
+     * @remarks
+     * Get name of an entity
+     */
+    getName(req: operations.GetNameRequest, security: operations.GetNameSecurity, config?: AxiosRequestConfig): Promise<operations.GetNameResponse>;
+    /**
+     * Get names for entities
+     *
+     * @remarks
      * Get names for entities.Limit of 1000 entities in a single request.
-    **/
-    getNames(req: operations.GetNamesRequest, config?: AxiosRequestConfig): Promise<operations.GetNamesResponse>;
+     */
+    getNames(req: shared.NamesRequest, security: operations.GetNamesSecurity, config?: AxiosRequestConfig): Promise<operations.GetNamesResponse>;
     /**
-     * getProblemEvent - Show problem details
+     * Show problem details
      *
+     * @remarks
      * Show problem event details.
-    **/
-    getProblemEvent(req: operations.GetProblemEventRequest, config?: AxiosRequestConfig): Promise<operations.GetProblemEventResponse>;
+     */
+    getProblemEvent(req: operations.GetProblemEventRequest, security: operations.GetProblemEventSecurity, config?: AxiosRequestConfig): Promise<operations.GetProblemEventResponse>;
     /**
-     * getSecurityGroup - Show security group details
-     *
      * Show security group details
-    **/
-    getSecurityGroup(req: operations.GetSecurityGroupRequest, config?: AxiosRequestConfig): Promise<operations.GetSecurityGroupResponse>;
-    /**
-     * getSecurityTag - Show security tag details
      *
+     * @remarks
+     * Show security group details
+     */
+    getSecurityGroup(req: operations.GetSecurityGroupRequest, security: operations.GetSecurityGroupSecurity, config?: AxiosRequestConfig): Promise<operations.GetSecurityGroupResponse>;
+    /**
      * Show security tag details
-    **/
-    getSecurityTag(req: operations.GetSecurityTagRequest, config?: AxiosRequestConfig): Promise<operations.GetSecurityTagResponse>;
-    /**
-     * getService - Show service details
      *
+     * @remarks
+     * Show security tag details
+     */
+    getSecurityTag(req: operations.GetSecurityTagRequest, security: operations.GetSecurityTagSecurity, config?: AxiosRequestConfig): Promise<operations.GetSecurityTagResponse>;
+    /**
      * Show service details
-    **/
-    getService(req: operations.GetServiceRequest, config?: AxiosRequestConfig): Promise<operations.GetServiceResponse>;
-    /**
-     * getServiceGroup - Show service group details
      *
+     * @remarks
+     * Show service details
+     */
+    getService(req: operations.GetServiceRequest, security: operations.GetServiceSecurity, config?: AxiosRequestConfig): Promise<operations.GetServiceResponse>;
+    /**
      * Show service group details
-    **/
-    getServiceGroup(req: operations.GetServiceGroupRequest, config?: AxiosRequestConfig): Promise<operations.GetServiceGroupResponse>;
-    /**
-     * getVcenterManager - Show vCenter manager details
      *
+     * @remarks
+     * Show service group details
+     */
+    getServiceGroup(req: operations.GetServiceGroupRequest, security: operations.GetServiceGroupSecurity, config?: AxiosRequestConfig): Promise<operations.GetServiceGroupResponse>;
+    /**
      * Show vCenter manager details
-    **/
-    getVcenterManager(req: operations.GetVcenterManagerRequest, config?: AxiosRequestConfig): Promise<operations.GetVcenterManagerResponse>;
-    /**
-     * getVm - Show vm details
      *
+     * @remarks
+     * Show vCenter manager details
+     */
+    getVcenterManager(req: operations.GetVcenterManagerRequest, security: operations.GetVcenterManagerSecurity, config?: AxiosRequestConfig): Promise<operations.GetVcenterManagerResponse>;
+    /**
      * Show vm details
-    **/
-    getVm(req: operations.GetVmRequest, config?: AxiosRequestConfig): Promise<operations.GetVmResponse>;
-    /**
-     * getVmknic - Show vmknic details
      *
+     * @remarks
+     * Show vm details
+     */
+    getVm(req: operations.GetVmRequest, security: operations.GetVmSecurity, config?: AxiosRequestConfig): Promise<operations.GetVmResponse>;
+    /**
      * Show vmknic details
-    **/
-    getVmknic(req: operations.GetVmknicRequest, config?: AxiosRequestConfig): Promise<operations.GetVmknicResponse>;
-    /**
-     * getVnic - Show vnic details
      *
+     * @remarks
+     * Show vmknic details
+     */
+    getVmknic(req: operations.GetVmknicRequest, security: operations.GetVmknicSecurity, config?: AxiosRequestConfig): Promise<operations.GetVmknicResponse>;
+    /**
      * Show vnic details
-    **/
-    getVnic(req: operations.GetVnicRequest, config?: AxiosRequestConfig): Promise<operations.GetVnicResponse>;
-    /**
-     * listClusters - List clusters
      *
+     * @remarks
+     * Show vnic details
+     */
+    getVnic(req: operations.GetVnicRequest, security: operations.GetVnicSecurity, config?: AxiosRequestConfig): Promise<operations.GetVnicResponse>;
+    /**
      * List clusters
-    **/
-    listClusters(req: operations.ListClustersRequest, config?: AxiosRequestConfig): Promise<operations.ListClustersResponse>;
-    /**
-     * listDatacenters - List vCenter datacenters
      *
+     * @remarks
+     * List clusters
+     */
+    listClusters(req: operations.ListClustersRequest, security: operations.ListClustersSecurity, config?: AxiosRequestConfig): Promise<operations.ListClustersResponse>;
+    /**
      * List vCenter datacenters
-    **/
-    listDatacenters(req: operations.ListDatacentersRequest, config?: AxiosRequestConfig): Promise<operations.ListDatacentersResponse>;
-    /**
-     * listDatastores - List datastores
      *
+     * @remarks
+     * List vCenter datacenters
+     */
+    listDatacenters(req: operations.ListDatacentersRequest, security: operations.ListDatacentersSecurity, config?: AxiosRequestConfig): Promise<operations.ListDatacentersResponse>;
+    /**
      * List datastores
-    **/
-    listDatastores(req: operations.ListDatastoresRequest, config?: AxiosRequestConfig): Promise<operations.ListDatastoresResponse>;
-    /**
-     * listDistributedVirtualPortgroups - List distributed virtual portgroups
      *
+     * @remarks
+     * List datastores
+     */
+    listDatastores(req: operations.ListDatastoresRequest, security: operations.ListDatastoresSecurity, config?: AxiosRequestConfig): Promise<operations.ListDatastoresResponse>;
+    /**
      * List distributed virtual portgroups
-    **/
-    listDistributedVirtualPortgroups(req: operations.ListDistributedVirtualPortgroupsRequest, config?: AxiosRequestConfig): Promise<operations.ListDistributedVirtualPortgroupsResponse>;
-    /**
-     * listDistributedVirtualSwitches - List distributed virtual switches
      *
+     * @remarks
+     * List distributed virtual portgroups
+     */
+    listDistributedVirtualPortgroups(req: operations.ListDistributedVirtualPortgroupsRequest, security: operations.ListDistributedVirtualPortgroupsSecurity, config?: AxiosRequestConfig): Promise<operations.ListDistributedVirtualPortgroupsResponse>;
+    /**
      * List distributed virtual switches
-    **/
-    listDistributedVirtualSwitches(req: operations.ListDistributedVirtualSwitchesRequest, config?: AxiosRequestConfig): Promise<operations.ListDistributedVirtualSwitchesResponse>;
-    /**
-     * listFirewallRules - List firewall rules
      *
+     * @remarks
+     * List distributed virtual switches
+     */
+    listDistributedVirtualSwitches(req: operations.ListDistributedVirtualSwitchesRequest, security: operations.ListDistributedVirtualSwitchesSecurity, config?: AxiosRequestConfig): Promise<operations.ListDistributedVirtualSwitchesResponse>;
+    /**
      * List firewall rules
-    **/
-    listFirewallRules(req: operations.ListFirewallRulesRequest, config?: AxiosRequestConfig): Promise<operations.ListFirewallRulesResponse>;
-    /**
-     * listFirewalls - List firewalls
      *
+     * @remarks
+     * List firewall rules
+     */
+    listFirewallRules(req: operations.ListFirewallRulesRequest, security: operations.ListFirewallRulesSecurity, config?: AxiosRequestConfig): Promise<operations.ListFirewallRulesResponse>;
+    /**
      * List firewalls
-    **/
-    listFirewalls(req: operations.ListFirewallsRequest, config?: AxiosRequestConfig): Promise<operations.ListFirewallsResponse>;
-    /**
-     * listFolders - List folders
      *
+     * @remarks
+     * List firewalls
+     */
+    listFirewalls(req: operations.ListFirewallsRequest, security: operations.ListFirewallsSecurity, config?: AxiosRequestConfig): Promise<operations.ListFirewallsResponse>;
+    /**
      * List folders
-    **/
-    listFolders(req: operations.ListFoldersRequest, config?: AxiosRequestConfig): Promise<operations.ListFoldersResponse>;
-    /**
-     * listHosts - List hosts
      *
+     * @remarks
+     * List folders
+     */
+    listFolders(req: operations.ListFoldersRequest, security: operations.ListFoldersSecurity, config?: AxiosRequestConfig): Promise<operations.ListFoldersResponse>;
+    /**
      * List hosts
-    **/
-    listHosts(req: operations.ListHostsRequest, config?: AxiosRequestConfig): Promise<operations.ListHostsResponse>;
-    /**
-     * listIpSets - List ip sets
      *
+     * @remarks
+     * List hosts
+     */
+    listHosts(req: operations.ListHostsRequest, security: operations.ListHostsSecurity, config?: AxiosRequestConfig): Promise<operations.ListHostsResponse>;
+    /**
      * List ip sets
-    **/
-    listIpSets(req: operations.ListIpSetsRequest, config?: AxiosRequestConfig): Promise<operations.ListIpSetsResponse>;
-    /**
-     * listLayer2Networks - List layer2 networks
      *
+     * @remarks
+     * List ip sets
+     */
+    listIPSets(req: operations.ListIPSetsRequest, security: operations.ListIPSetsSecurity, config?: AxiosRequestConfig): Promise<operations.ListIPSetsResponse>;
+    /**
      * List layer2 networks
-    **/
-    listLayer2Networks(req: operations.ListLayer2NetworksRequest, config?: AxiosRequestConfig): Promise<operations.ListLayer2NetworksResponse>;
-    /**
-     * listNsxManagers - List nsx managers
      *
+     * @remarks
+     * List layer2 networks
+     */
+    listLayer2Networks(req: operations.ListLayer2NetworksRequest, security: operations.ListLayer2NetworksSecurity, config?: AxiosRequestConfig): Promise<operations.ListLayer2NetworksResponse>;
+    /**
      * List nsx managers
-    **/
-    listNsxManagers(req: operations.ListNsxManagersRequest, config?: AxiosRequestConfig): Promise<operations.ListNsxManagersResponse>;
-    /**
-     * listProblemEvents - List problems
      *
+     * @remarks
+     * List nsx managers
+     */
+    listNSXManagers(req: operations.ListNSXManagersRequest, security: operations.ListNSXManagersSecurity, config?: AxiosRequestConfig): Promise<operations.ListNSXManagersResponse>;
+    /**
+     * List problems
+     *
+     * @remarks
      * List problem events.
-    **/
-    listProblemEvents(req: operations.ListProblemEventsRequest, config?: AxiosRequestConfig): Promise<operations.ListProblemEventsResponse>;
+     */
+    listProblemEvents(req: operations.ListProblemEventsRequest, security: operations.ListProblemEventsSecurity, config?: AxiosRequestConfig): Promise<operations.ListProblemEventsResponse>;
     /**
-     * listSecurityGroups - List security groups
-     *
      * List security groups
-    **/
-    listSecurityGroups(req: operations.ListSecurityGroupsRequest, config?: AxiosRequestConfig): Promise<operations.ListSecurityGroupsResponse>;
-    /**
-     * listSecurityTags - List security tags
      *
+     * @remarks
+     * List security groups
+     */
+    listSecurityGroups(req: operations.ListSecurityGroupsRequest, security: operations.ListSecurityGroupsSecurity, config?: AxiosRequestConfig): Promise<operations.ListSecurityGroupsResponse>;
+    /**
      * List security tags
-    **/
-    listSecurityTags(req: operations.ListSecurityTagsRequest, config?: AxiosRequestConfig): Promise<operations.ListSecurityTagsResponse>;
-    /**
-     * listServiceGroups - List service groups
      *
+     * @remarks
+     * List security tags
+     */
+    listSecurityTags(req: operations.ListSecurityTagsRequest, security: operations.ListSecurityTagsSecurity, config?: AxiosRequestConfig): Promise<operations.ListSecurityTagsResponse>;
+    /**
      * List service groups
-    **/
-    listServiceGroups(req: operations.ListServiceGroupsRequest, config?: AxiosRequestConfig): Promise<operations.ListServiceGroupsResponse>;
-    /**
-     * listServices - List services
      *
+     * @remarks
+     * List service groups
+     */
+    listServiceGroups(req: operations.ListServiceGroupsRequest, security: operations.ListServiceGroupsSecurity, config?: AxiosRequestConfig): Promise<operations.ListServiceGroupsResponse>;
+    /**
      * List services
-    **/
-    listServices(req: operations.ListServicesRequest, config?: AxiosRequestConfig): Promise<operations.ListServicesResponse>;
-    /**
-     * listVcenterManagers - List vCenter managers
      *
+     * @remarks
+     * List services
+     */
+    listServices(req: operations.ListServicesRequest, security: operations.ListServicesSecurity, config?: AxiosRequestConfig): Promise<operations.ListServicesResponse>;
+    /**
      * List vCenter managers
-    **/
-    listVcenterManagers(req: operations.ListVcenterManagersRequest, config?: AxiosRequestConfig): Promise<operations.ListVcenterManagersResponse>;
-    /**
-     * listVmknics - List vmknics
      *
+     * @remarks
+     * List vCenter managers
+     */
+    listVcenterManagers(req: operations.ListVcenterManagersRequest, security: operations.ListVcenterManagersSecurity, config?: AxiosRequestConfig): Promise<operations.ListVcenterManagersResponse>;
+    /**
      * List vmknics
-    **/
-    listVmknics(req: operations.ListVmknicsRequest, config?: AxiosRequestConfig): Promise<operations.ListVmknicsResponse>;
-    /**
-     * listVms - List vms
      *
+     * @remarks
+     * List vmknics
+     */
+    listVmknics(req: operations.ListVmknicsRequest, security: operations.ListVmknicsSecurity, config?: AxiosRequestConfig): Promise<operations.ListVmknicsResponse>;
+    /**
      * List vms
-    **/
-    listVms(req: operations.ListVmsRequest, config?: AxiosRequestConfig): Promise<operations.ListVmsResponse>;
-    /**
-     * listVnics - List vnics
      *
+     * @remarks
+     * List vms
+     */
+    listVms(req: operations.ListVmsRequest, security: operations.ListVmsSecurity, config?: AxiosRequestConfig): Promise<operations.ListVmsResponse>;
+    /**
      * List vnics
-    **/
-    listVnics(req: operations.ListVnicsRequest, config?: AxiosRequestConfig): Promise<operations.ListVnicsResponse>;
+     *
+     * @remarks
+     * List vnics
+     */
+    listVnics(req: operations.ListVnicsRequest, security: operations.ListVnicsSecurity, config?: AxiosRequestConfig): Promise<operations.ListVnicsResponse>;
 }

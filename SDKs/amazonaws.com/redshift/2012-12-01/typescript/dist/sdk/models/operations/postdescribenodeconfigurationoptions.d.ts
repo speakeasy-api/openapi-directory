@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeNodeConfigurationOptionsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeNodeConfigurationOptionsActionEnum {
     DescribeNodeConfigurationOptions = "DescribeNodeConfigurationOptions"
 }
-export declare enum PostDescribeNodeConfigurationOptionsVersionEnum {
+export declare enum POSTDescribeNodeConfigurationOptionsVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostDescribeNodeConfigurationOptionsQueryParams extends SpeakeasyBase {
-    action: PostDescribeNodeConfigurationOptionsActionEnum;
+export declare class POSTDescribeNodeConfigurationOptionsRequest extends SpeakeasyBase {
+    action: POSTDescribeNodeConfigurationOptionsActionEnum;
+    /**
+     * Pagination token
+     */
     marker?: string;
+    /**
+     * Pagination limit
+     */
     maxRecords?: string;
-    version: PostDescribeNodeConfigurationOptionsVersionEnum;
-}
-export declare class PostDescribeNodeConfigurationOptionsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeNodeConfigurationOptionsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeNodeConfigurationOptionsHeaders extends Speakea
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeNodeConfigurationOptionsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeNodeConfigurationOptionsQueryParams;
-    headers: PostDescribeNodeConfigurationOptionsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeNodeConfigurationOptionsResponse extends SpeakeasyBase {
+export declare class POSTDescribeNodeConfigurationOptionsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

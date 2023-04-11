@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostVerifyDomainDkimActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTVerifyDomainDkimActionEnum {
     VerifyDomainDkim = "VerifyDomainDkim"
 }
-export declare enum PostVerifyDomainDkimVersionEnum {
+export declare enum POSTVerifyDomainDkimVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostVerifyDomainDkimQueryParams extends SpeakeasyBase {
-    action: PostVerifyDomainDkimActionEnum;
-    version: PostVerifyDomainDkimVersionEnum;
-}
-export declare class PostVerifyDomainDkimHeaders extends SpeakeasyBase {
+export declare class POSTVerifyDomainDkimRequest extends SpeakeasyBase {
+    action: POSTVerifyDomainDkimActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTVerifyDomainDkimVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostVerifyDomainDkimHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostVerifyDomainDkimRequest extends SpeakeasyBase {
-    queryParams: PostVerifyDomainDkimQueryParams;
-    headers: PostVerifyDomainDkimHeaders;
-    request?: Uint8Array;
-}
-export declare class PostVerifyDomainDkimResponse extends SpeakeasyBase {
+export declare class POSTVerifyDomainDkimResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

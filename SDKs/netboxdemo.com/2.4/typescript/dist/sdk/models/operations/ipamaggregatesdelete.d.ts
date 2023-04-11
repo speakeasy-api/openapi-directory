@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class IpamAggregatesDeletePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class IpamAggregatesDeleteRequest extends SpeakeasyBase {
-    pathParams: IpamAggregatesDeletePathParams;
+    /**
+     * A unique integer value identifying this aggregate.
+     */
+    id: number;
 }
 export declare class IpamAggregatesDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

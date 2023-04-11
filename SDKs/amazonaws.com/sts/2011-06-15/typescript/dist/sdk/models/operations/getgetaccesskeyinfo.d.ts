@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetGetAccessKeyInfoActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETGETAccessKeyInfoActionEnum {
     GetAccessKeyInfo = "GetAccessKeyInfo"
 }
-export declare enum GetGetAccessKeyInfoVersionEnum {
+export declare enum GETGETAccessKeyInfoVersionEnum {
     TwoThousandAndEleven0615 = "2011-06-15"
 }
-export declare class GetGetAccessKeyInfoQueryParams extends SpeakeasyBase {
+export declare class GETGETAccessKeyInfoRequest extends SpeakeasyBase {
+    /**
+     * <p>The identifier of an access key.</p> <p>This parameter allows (through its regex pattern) a string of characters that can consist of any upper- or lowercase letter or digit.</p>
+     */
     accessKeyId: string;
-    action: GetGetAccessKeyInfoActionEnum;
-    version: GetGetAccessKeyInfoVersionEnum;
-}
-export declare class GetGetAccessKeyInfoHeaders extends SpeakeasyBase {
+    action: GETGETAccessKeyInfoActionEnum;
+    version: GETGETAccessKeyInfoVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetGetAccessKeyInfoHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetGetAccessKeyInfoRequest extends SpeakeasyBase {
-    queryParams: GetGetAccessKeyInfoQueryParams;
-    headers: GetGetAccessKeyInfoHeaders;
-}
-export declare class GetGetAccessKeyInfoResponse extends SpeakeasyBase {
+export declare class GETGETAccessKeyInfoResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

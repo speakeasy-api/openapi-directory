@@ -1,17 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetCiscoSwitchPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetCiscoSwitchSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
+    apiKeyAuth: string;
 }
 export declare class GetCiscoSwitchRequest extends SpeakeasyBase {
-    pathParams: GetCiscoSwitchPathParams;
-    security: GetCiscoSwitchSecurity;
+    /**
+     * entity id
+     */
+    id: string;
 }
 export declare class GetCiscoSwitchResponse extends SpeakeasyBase {
+    /**
+     * OK
+     */
     ciscoSwitchDataSource?: shared.CiscoSwitchDataSource;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

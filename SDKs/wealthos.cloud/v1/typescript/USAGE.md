@@ -1,25 +1,25 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { UpdateBankAccountRequest, UpdateBankAccountResponse } from "openapi/src/sdk/models/operations";
+import {
+  UpdateBankAccountRequest,
+  UpdateBankAccountResponse,
+  UpdateBankAccountUpdateRequestBodyForBankAccountAccountStatusEnum,
+  UpdateBankAccountUpdateRequestBodyForBankAccountDefaultAccountEnum,
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: UpdateBankAccountRequest = {
-  security: {
-    apiSecretKey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
+  requestBody: {
+    accountName: "corrupti",
+    accountStatus: UpdateBankAccountUpdateRequestBodyForBankAccountAccountStatusEnum.Inactive,
+    defaultAccount: UpdateBankAccountUpdateRequestBodyForBankAccountDefaultAccountEnum.No,
+    referenceVersion: 1,
   },
-  pathParams: {
-    bankAccountId: "sit",
-  },
-  headers: {
-    xApiKey: "voluptas",
-  },
-  request: "culpa",
+  bankAccountId: "quibusdam",
+  xApiKey: "unde",
 };
 
 sdk.bankAccounts.updateBankAccount(req).then((res: UpdateBankAccountResponse | AxiosError) => {

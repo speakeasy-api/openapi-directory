@@ -16,7 +16,7 @@ import { BatchUpdateLinkAttributes } from "./batchupdatelinkattributes";
 import { BatchUpdateObjectAttributes } from "./batchupdateobjectattributes";
 /**
  * Represents the output of a <code>BatchWrite</code> operation.
-**/
+ */
 export declare class BatchWriteOperation extends SpeakeasyBase {
     addFacetToObject?: BatchAddFacetToObject;
     attachObject?: BatchAttachObject;

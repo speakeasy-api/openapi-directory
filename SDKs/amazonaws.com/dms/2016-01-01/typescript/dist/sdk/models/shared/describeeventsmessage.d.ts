@@ -3,7 +3,7 @@ import { Filter } from "./filter";
 import { SourceTypeEnum } from "./sourcetypeenum";
 /**
  * <p/>
-**/
+ */
 export declare class DescribeEventsMessage extends SpeakeasyBase {
     duration?: number;
     endTime?: Date;

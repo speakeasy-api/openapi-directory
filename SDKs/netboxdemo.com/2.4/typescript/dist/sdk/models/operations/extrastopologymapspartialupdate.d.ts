@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ExtrasTopologyMapsPartialUpdatePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ExtrasTopologyMapsPartialUpdateRequest extends SpeakeasyBase {
-    pathParams: ExtrasTopologyMapsPartialUpdatePathParams;
-    request: shared.WritableTopologyMapInput;
+    writableTopologyMapInput: shared.WritableTopologyMapInput;
+    /**
+     * A unique integer value identifying this topology map.
+     */
+    id: number;
 }
 export declare class ExtrasTopologyMapsPartialUpdateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
     topologyMap?: shared.TopologyMap;
 }

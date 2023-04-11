@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeExportTasksXAmzTargetEnum {
-    AwsPoseidonServiceV20151101DescribeExportTasks = "AWSPoseidonService_V2015_11_01.DescribeExportTasks"
+    AWSPoseidonServiceV20151101DescribeExportTasks = "AWSPoseidonService_V2015_11_01.DescribeExportTasks"
 }
-export declare class DescribeExportTasksHeaders extends SpeakeasyBase {
+export declare class DescribeExportTasksRequest extends SpeakeasyBase {
+    describeExportTasksRequest: shared.DescribeExportTasksRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class DescribeExportTasksHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeExportTasksXAmzTargetEnum;
 }
-export declare class DescribeExportTasksRequest extends SpeakeasyBase {
-    headers: DescribeExportTasksHeaders;
-    request: shared.DescribeExportTasksRequest;
-}
 export declare class DescribeExportTasksResponse extends SpeakeasyBase {
+    /**
+     * AuthorizationErrorException
+     */
     authorizationErrorException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     describeExportTasksResponse?: shared.DescribeExportTasksResponse;
+    /**
+     * HomeRegionNotSetException
+     */
     homeRegionNotSetException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
+    /**
+     * ServerInternalErrorException
+     */
     serverInternalErrorException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

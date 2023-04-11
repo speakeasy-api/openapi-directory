@@ -1,10 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListPlaybackKeyPairsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
+import { AxiosResponse } from "axios";
+export declare class ListPlaybackKeyPairsRequestBody extends SpeakeasyBase {
+    /**
+     * Maximum number of key pairs to return. Default: your service quota or 100, whichever is smaller.
+     */
+    maxResults?: number;
+    /**
+     * The first key pair to retrieve. This is used for pagination; see the <code>nextToken</code> response field.
+     */
     nextToken?: string;
 }
-export declare class ListPlaybackKeyPairsHeaders extends SpeakeasyBase {
+export declare class ListPlaybackKeyPairsRequest extends SpeakeasyBase {
+    requestBody: ListPlaybackKeyPairsRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,20 +20,29 @@ export declare class ListPlaybackKeyPairsHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class ListPlaybackKeyPairsRequestBody extends SpeakeasyBase {
-    maxResults?: number;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
 }
-export declare class ListPlaybackKeyPairsRequest extends SpeakeasyBase {
-    queryParams: ListPlaybackKeyPairsQueryParams;
-    headers: ListPlaybackKeyPairsHeaders;
-    request: ListPlaybackKeyPairsRequestBody;
-}
 export declare class ListPlaybackKeyPairsResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     listPlaybackKeyPairsResponse?: shared.ListPlaybackKeyPairsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

@@ -1,33 +1,26 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { FindListingRecommendationsRequest, FindListingRecommendationsResponse } from "openapi/src/sdk/models/operations";
+import {
+  FindListingRecommendationsRequest,
+  FindListingRecommendationsResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: FindListingRecommendationsRequest = {
-  security: {
-    apiAuth: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  queryParams: {
-    filter: "sit",
-    limit: "voluptas",
-    offset: "culpa",
-  },
-  headers: {
-    xEBAYCMARKETPLACEID: "expedita",
-  },
-  request: {
+  findListingRecommendationRequest: {
     listingIds: [
-      "dolor",
-      "expedita",
-      "voluptas",
+      "provident",
+      "distinctio",
+      "quibusdam",
     ],
   },
+  xEbayCMarketplaceId: "unde",
+  filter: "nulla",
+  limit: "corrupti",
+  offset: "illum",
 };
 
 sdk.listingRecommendation.findListingRecommendations(req).then((res: FindListingRecommendationsResponse | AxiosError) => {

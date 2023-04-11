@@ -3,7 +3,7 @@ import { DirectConnectGatewayAttachmentStateEnum } from "./directconnectgatewaya
 import { DirectConnectGatewayAttachmentTypeEnum } from "./directconnectgatewayattachmenttypeenum";
 /**
  * Information about an attachment between a Direct Connect gateway and a virtual interface.
-**/
+ */
 export declare class DirectConnectGatewayAttachment extends SpeakeasyBase {
     attachmentState?: DirectConnectGatewayAttachmentStateEnum;
     attachmentType?: DirectConnectGatewayAttachmentTypeEnum;

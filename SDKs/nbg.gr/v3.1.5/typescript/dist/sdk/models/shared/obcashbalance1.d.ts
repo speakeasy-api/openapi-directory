@@ -1,16 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ObActiveOrHistoricCurrencyAndAmount } from "./obactiveorhistoriccurrencyandamount";
-import { ObCreditDebitCodeEnum } from "./obcreditdebitcodeenum";
-import { ObCreditLine1 } from "./obcreditline1";
-import { ObBalanceType1CodeEnum } from "./obbalancetype1codeenum";
+import { OBActiveOrHistoricCurrencyAndAmount } from "./obactiveorhistoriccurrencyandamount";
+import { OBBalanceType1CodeEnum } from "./obbalancetype1codeenum";
+import { OBCreditDebitCodeEnum } from "./obcreditdebitcodeenum";
+import { OBCreditLine1 } from "./obcreditline1";
 /**
  * Set of elements used to define the balance details.
-**/
-export declare class ObCashBalance1 extends SpeakeasyBase {
+ */
+export declare class OBCashBalance1 extends SpeakeasyBase {
+    /**
+     * A unique and immutable identifier used to identify the account resource. This identifier has no meaning to the account owner.
+     */
     accountId: string;
-    amount: ObActiveOrHistoricCurrencyAndAmount;
-    creditDebitIndicator: ObCreditDebitCodeEnum;
-    creditLine?: ObCreditLine1[];
+    amount: OBActiveOrHistoricCurrencyAndAmount;
+    creditDebitIndicator: OBCreditDebitCodeEnum;
+    /**
+     * Set of elements used to provide details on the credit line.
+     */
+    creditLine?: OBCreditLine1[];
+    /**
+     * Indicates the date (and time) of the balance.All dates in the JSON payloads are represented in ISO 8601 date-time format.  All date-time fields in responses must include the timezone. An example is below: 2017-04-05T10:43:07+00:00
+     */
     dateTime: Date;
-    type: ObBalanceType1CodeEnum;
+    type: OBBalanceType1CodeEnum;
 }

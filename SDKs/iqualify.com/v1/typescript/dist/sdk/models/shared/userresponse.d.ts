@@ -2,6 +2,9 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { Invite } from "./invite";
 import { UserMetadata } from "./usermetadata";
 import { UserProfile } from "./userprofile";
+/**
+ * Succesful response
+ */
 export declare class UserResponse extends SpeakeasyBase {
     avatarUrl?: string;
     email?: string;

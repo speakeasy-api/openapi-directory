@@ -1,12 +1,33 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { VehicleProfileIdEnum } from "./vehicleprofileidenum";
 export declare class SymmetricalMatrixRequest extends SpeakeasyBase {
+    /**
+     * Optional parameter. It specifies on which side a point should be relative to the driver when she leaves/arrives at a start/target/via point. You need to specify this parameter for either none or all points. Only supported for motor vehicles and OpenStreetMap.
+     */
     curbsides?: string[];
+    /**
+     * Specifies whether or not the matrix calculation should return with an error as soon as possible in case some points cannot be found or some points are not connected. If set to `false` the time/weight/distance matrix will be calculated for all valid points and contain the `null` value for all entries that could not be calculated. The `hint` field of the response will also contain additional information about what went wrong (see its documentation).
+     */
     failFast?: boolean;
+    /**
+     * Specifies which matrices should be included in the response. Specify one or more of the following options `weights`, `times`, `distances`. The units of the entries of `distances` are meters, of `times` are seconds and of `weights` is arbitrary and it can differ for different vehicles or versions of this API.
+     */
     outArrays?: string[];
+    /**
+     * Optional parameter. Specifies a hint for each point in the `points` array to prefer a certain street for the closest location lookup. E.g. if there is an address or house with two or more neighboring streets you can control for which street the closest location is looked up.
+     */
     pointHints?: string[];
+    /**
+     * Specify multiple points for which the weight-, route-, time- or distance-matrix should be calculated as follows: `[longitude,latitude]`. In this case the origins are identical to the destinations. Thus, if there are N points, NxN entries are calculated. The order of the point parameter is important. Specify at least three points. Cannot be used together with `from_point` or `to_point.`.
+     */
     points?: number[][];
+    /**
+     * Optional parameter to avoid snapping to a certain road class or road environment. Current supported values `motorway`, `trunk`, `ferry`, `tunnel`, `bridge` and `ford`
+     */
     snapPreventions?: string[];
+    /**
+     * Specifies if turn restrictions should be considered. Enabling this option increases the matrix computation time. Only supported for motor vehicles and OpenStreetMap.
+     */
     turnCosts?: boolean;
     vehicle?: VehicleProfileIdEnum;
 }

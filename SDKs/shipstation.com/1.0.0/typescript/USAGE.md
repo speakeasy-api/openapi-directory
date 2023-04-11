@@ -1,19 +1,21 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateANewQuestionRequest, CreateANewQuestionResponse } from "openapi/src/sdk/models/operations";
+import {
+  CreateANewQuestionRequestBody,
+  CreateANewQuestionResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: CreateANewQuestionRequest = {
-  request: {
-    choices: [
-      "voluptas",
-    ],
-    question: "culpa",
-  },
+
+const req: CreateANewQuestionRequestBody = {
+  choices: [
+    "provident",
+    "distinctio",
+    "quibusdam",
+  ],
+  question: "unde",
 };
 
 sdk.createANewQuestion(req).then((res: CreateANewQuestionResponse | AxiosError) => {

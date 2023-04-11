@@ -1,22 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { LinksGetChannelCatalogCategoriesLink } from "./linksgetchannelcatalogcategorieslink";
+import { ExternalLinksGetChannelCatalogMarketplaceSettingsLink } from "./externallinksgetchannelcatalogmarketplacesettingslink";
 import { ExternalLinksGetChannelInfoLink } from "./externallinksgetchannelinfolink";
 import { LinksConfigureChannelCatalogColumnMappingsLink } from "./linksconfigurechannelcatalogcolumnmappingslink";
 import { LinksConfigureChannelCatalogCostSettingsLink } from "./linksconfigurechannelcatalogcostsettingslink";
 import { LinksConfigureChannelCatalogGeneralSettingsLink } from "./linksconfigurechannelcataloggeneralsettingslink";
 import { LinksDeleteChannelCatalogLink } from "./linksdeletechannelcataloglink";
-import { LinksDisableChannelCatalogLink } from "./linksdisablechannelcataloglink";
 import { LinksDisableChannelCatalogCategoryMappingLink } from "./linksdisablechannelcatalogcategorymappinglink";
+import { LinksDisableChannelCatalogLink } from "./linksdisablechannelcataloglink";
 import { LinksEnableChannelCatalogLink } from "./linksenablechannelcataloglink";
+import { LinksGetChannelCatalogCategoriesLink } from "./linksgetchannelcatalogcategorieslink";
 import { LinksGetChannelCatalogExclusionFiltersLink } from "./linksgetchannelcatalogexclusionfilterslink";
 import { LinksGetChannelCatalogExportationCacheInfoLink } from "./linksgetchannelcatalogexportationcacheinfolink";
-import { ExternalLinksGetChannelCatalogMarketplaceSettingsLink } from "./externallinksgetchannelcatalogmarketplacesettingslink";
+import { LinksGetChannelCatalogLink } from "./linksgetchannelcataloglink";
 import { LinksGetChannelCatalogProductInfoListLink } from "./linksgetchannelcatalogproductinfolistlink";
 import { LinksReenableChannelCatalogCategoryMappingLink } from "./linksreenablechannelcatalogcategorymappinglink";
-import { LinksGetChannelCatalogLink } from "./linksgetchannelcataloglink";
 /**
  * Indicates the actions you can do on a channel catalog
-**/
+ */
 export declare class ChannelCatalogLinks extends SpeakeasyBase {
     categoryMappings?: LinksGetChannelCatalogCategoriesLink;
     channelInfo?: ExternalLinksGetChannelInfoLink;

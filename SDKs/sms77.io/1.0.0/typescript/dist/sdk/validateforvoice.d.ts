@@ -1,5 +1,9 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ *
+ * @see {@link https://sms77.io/en/docs/gateway/http-api/caller-ids} - Validate caller ID for voice Voice API
+ */
 export declare class ValidateForVoice {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;

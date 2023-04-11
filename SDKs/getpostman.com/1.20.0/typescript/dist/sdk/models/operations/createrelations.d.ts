@@ -1,25 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CreateRelationsPathParams extends SpeakeasyBase {
-    apiId: string;
-    apiVersionId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class CreateRelationsRequestBody extends SpeakeasyBase {
     contracttest?: string[];
     documentation?: string[];
     mock?: string[];
     testsuite?: string[];
 }
-export declare class CreateRelations200ApplicationJson extends SpeakeasyBase {
+export declare class CreateRelationsRequest extends SpeakeasyBase {
+    requestBody?: CreateRelationsRequestBody;
+    apiId: string;
+    apiVersionId: string;
+}
+/**
+ * Create multiple relations from existing collections
+ */
+export declare class CreateRelations200ApplicationJSON extends SpeakeasyBase {
     contracttest?: string[];
     documentation?: string[];
     testsuite?: string[];
 }
-export declare class CreateRelationsRequest extends SpeakeasyBase {
-    pathParams: CreateRelationsPathParams;
-    request?: CreateRelationsRequestBody;
-}
 export declare class CreateRelationsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createRelations200ApplicationJSONObject?: CreateRelations200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Create multiple relations from existing collections
+     */
+    createRelations200ApplicationJSONObject?: CreateRelations200ApplicationJSON;
 }

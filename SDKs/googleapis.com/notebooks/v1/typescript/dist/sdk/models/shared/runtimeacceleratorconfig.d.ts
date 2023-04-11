@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Accelerator model.
+ */
 export declare enum RuntimeAcceleratorConfigTypeEnum {
     AcceleratorTypeUnspecified = "ACCELERATOR_TYPE_UNSPECIFIED",
     NvidiaTeslaK80 = "NVIDIA_TESLA_K80",
@@ -15,8 +18,14 @@ export declare enum RuntimeAcceleratorConfigTypeEnum {
 }
 /**
  * Definition of the types of hardware accelerators that can be used. Definition of the types of hardware accelerators that can be used. See [Compute Engine AcceleratorTypes](https://cloud.google.com/compute/docs/reference/beta/acceleratorTypes). Examples: * `nvidia-tesla-k80` * `nvidia-tesla-p100` * `nvidia-tesla-v100` * `nvidia-tesla-p4` * `nvidia-tesla-t4` * `nvidia-tesla-a100`
-**/
+ */
 export declare class RuntimeAcceleratorConfig extends SpeakeasyBase {
+    /**
+     * Count of cores of this accelerator.
+     */
     coreCount?: string;
+    /**
+     * Accelerator model.
+     */
     type?: RuntimeAcceleratorConfigTypeEnum;
 }

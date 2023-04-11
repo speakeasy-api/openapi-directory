@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDetachVolumeActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDetachVolumeActionEnum {
     DetachVolume = "DetachVolume"
 }
-export declare enum PostDetachVolumeVersionEnum {
+export declare enum POSTDetachVolumeVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDetachVolumeQueryParams extends SpeakeasyBase {
-    action: PostDetachVolumeActionEnum;
-    version: PostDetachVolumeVersionEnum;
-}
-export declare class PostDetachVolumeHeaders extends SpeakeasyBase {
+export declare class POSTDetachVolumeRequest extends SpeakeasyBase {
+    action: POSTDetachVolumeActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDetachVolumeVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDetachVolumeHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDetachVolumeRequest extends SpeakeasyBase {
-    queryParams: PostDetachVolumeQueryParams;
-    headers: PostDetachVolumeHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDetachVolumeResponse extends SpeakeasyBase {
+export declare class POSTDetachVolumeResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

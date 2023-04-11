@@ -1,21 +1,41 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetLabelsIdPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetLabelsIdRequest extends SpeakeasyBase {
+    /**
+     * Object Id
+     */
     id: string;
 }
-export declare class GetLabelsId401ApplicationJson extends SpeakeasyBase {
+/**
+ * Not found
+ */
+export declare class GetLabelsId404ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Not found.
+     */
     detail?: string;
 }
-export declare class GetLabelsId404ApplicationJson extends SpeakeasyBase {
+/**
+ * Access token is missing or invalid
+ */
+export declare class GetLabelsId401ApplicationJSON extends SpeakeasyBase {
     detail?: string;
-}
-export declare class GetLabelsIdRequest extends SpeakeasyBase {
-    pathParams: GetLabelsIdPathParams;
 }
 export declare class GetLabelsIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Label object
+     */
     label?: shared.Label;
     statusCode: number;
-    getLabelsId401ApplicationJSONObject?: GetLabelsId401ApplicationJson;
-    getLabelsId404ApplicationJSONObject?: GetLabelsId404ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Access token is missing or invalid
+     */
+    getLabelsId401ApplicationJSONObject?: GetLabelsId401ApplicationJSON;
+    /**
+     * Not found
+     */
+    getLabelsId404ApplicationJSONObject?: GetLabelsId404ApplicationJSON;
 }

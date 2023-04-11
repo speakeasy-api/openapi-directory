@@ -1,26 +1,34 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetABatchOfBusinessTransactionClassificationResultsPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetABatchOfBusinessTransactionClassificationResultsRequest extends SpeakeasyBase {
+    /**
+     * (Required) Batch id.
+     */
     id: string;
 }
-export declare class GetABatchOfBusinessTransactionClassificationResults200ApplicationJsonResults extends SpeakeasyBase {
+export declare class GetABatchOfBusinessTransactionClassificationResults200ApplicationJSONResults extends SpeakeasyBase {
     labels?: string[];
     logo?: string;
     merchant?: string;
     transactionId?: string;
     website?: string;
 }
-export declare class GetABatchOfBusinessTransactionClassificationResults200ApplicationJson extends SpeakeasyBase {
+/**
+ * Returned a batch of business transaction classification results.
+ */
+export declare class GetABatchOfBusinessTransactionClassificationResults200ApplicationJSON extends SpeakeasyBase {
     id?: string;
     progress?: number;
-    results?: GetABatchOfBusinessTransactionClassificationResults200ApplicationJsonResults[];
+    results?: GetABatchOfBusinessTransactionClassificationResults200ApplicationJSONResults[];
     status?: string;
     updatedAt?: string;
-}
-export declare class GetABatchOfBusinessTransactionClassificationResultsRequest extends SpeakeasyBase {
-    pathParams: GetABatchOfBusinessTransactionClassificationResultsPathParams;
 }
 export declare class GetABatchOfBusinessTransactionClassificationResultsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getABatchOfBusinessTransactionClassificationResults200ApplicationJSONObject?: GetABatchOfBusinessTransactionClassificationResults200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Returned a batch of business transaction classification results.
+     */
+    getABatchOfBusinessTransactionClassificationResults200ApplicationJSONObject?: GetABatchOfBusinessTransactionClassificationResults200ApplicationJSON;
 }

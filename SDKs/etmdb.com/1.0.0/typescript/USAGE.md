@@ -1,16 +1,16 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CinemaSearchReadRequest, CinemaSearchReadResponse } from "openapi/src/sdk/models/operations";
+import {
+  CinemaSearchReadRequest,
+  CinemaSearchReadResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: CinemaSearchReadRequest = {
-  pathParams: {
-    id: "sit",
-  },
+  id: "corrupti",
 };
 
 sdk.cinema.cinemaSearchRead(req).then((res: CinemaSearchReadResponse | AxiosError) => {

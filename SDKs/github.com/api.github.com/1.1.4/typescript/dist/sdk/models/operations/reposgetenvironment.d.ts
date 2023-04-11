@@ -1,15 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReposGetEnvironmentPathParams extends SpeakeasyBase {
-    environmentName: string;
-    owner: string;
-    repo: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ReposGetEnvironmentRequest extends SpeakeasyBase {
-    pathParams: ReposGetEnvironmentPathParams;
+    /**
+     * The name of the environment.
+     */
+    environmentName: string;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    owner: string;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    repo: string;
 }
 export declare class ReposGetEnvironmentResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     environment?: shared.Environment;
 }

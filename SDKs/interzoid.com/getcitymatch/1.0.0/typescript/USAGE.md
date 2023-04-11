@@ -1,17 +1,17 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetcitymatchRequest, GetcitymatchResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetcitymatchRequest,
+  GetcitymatchResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetcitymatchRequest = {
-  queryParams: {
-    city: "sit",
-    license: "voluptas",
-  },
+  city: "Laruecester",
+  license: "quibusdam",
 };
 
 sdk.cityNameSimilarityKey.getcitymatch(req).then((res: GetcitymatchResponse | AxiosError) => {

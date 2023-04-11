@@ -1,20 +1,37 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReposRemoveTeamAccessRestrictionsPathParams extends SpeakeasyBase {
-    branch: string;
-    owner: string;
-    repo: string;
-}
-export declare class ReposRemoveTeamAccessRestrictionsRequestBody extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ReposRemoveTeamAccessRestrictionsRequestBody1 extends SpeakeasyBase {
+    /**
+     * The slug values for teams
+     */
     teams: string[];
 }
 export declare class ReposRemoveTeamAccessRestrictionsRequest extends SpeakeasyBase {
-    pathParams: ReposRemoveTeamAccessRestrictionsPathParams;
-    request?: ReposRemoveTeamAccessRestrictionsRequestBody;
+    requestBody?: any;
+    /**
+     * The name of the branch. Cannot contain wildcard characters. To use wildcard characters in branch names, use [the GraphQL API](https://docs.github.com/graphql).
+     */
+    branch: string;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    owner: string;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    repo: string;
 }
 export declare class ReposRemoveTeamAccessRestrictionsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     teams?: shared.Team[];
+    /**
+     * Validation failed, or the endpoint has been spammed.
+     */
     validationError?: shared.ValidationError;
 }

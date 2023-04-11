@@ -1,6 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class BatchDeleteWorldsHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class BatchDeleteWorldsRequestBody extends SpeakeasyBase {
+    /**
+     * A list of Amazon Resource Names (arns) that correspond to worlds to delete.
+     */
+    worlds: string[];
+}
+export declare class BatchDeleteWorldsRequest extends SpeakeasyBase {
+    requestBody: BatchDeleteWorldsRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -9,18 +17,24 @@ export declare class BatchDeleteWorldsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class BatchDeleteWorldsRequestBody extends SpeakeasyBase {
-    worlds: string[];
-}
-export declare class BatchDeleteWorldsRequest extends SpeakeasyBase {
-    headers: BatchDeleteWorldsHeaders;
-    request: BatchDeleteWorldsRequestBody;
-}
 export declare class BatchDeleteWorldsResponse extends SpeakeasyBase {
+    /**
+     * Success
+     */
     batchDeleteWorldsResponse?: shared.BatchDeleteWorldsResponse;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

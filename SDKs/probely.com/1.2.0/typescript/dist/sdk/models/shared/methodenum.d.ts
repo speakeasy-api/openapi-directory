@@ -1,3 +1,6 @@
+/**
+ * HTTP method
+ */
 export declare enum MethodEnum {
     Get = "GET",
     Options = "OPTIONS",

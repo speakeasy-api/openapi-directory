@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum CreateDevicePoolXAmzTargetEnum {
     DeviceFarm20150623CreateDevicePool = "DeviceFarm_20150623.CreateDevicePool"
 }
-export declare class CreateDevicePoolHeaders extends SpeakeasyBase {
+export declare class CreateDevicePoolRequest extends SpeakeasyBase {
+    createDevicePoolRequest: shared.CreateDevicePoolRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class CreateDevicePoolHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: CreateDevicePoolXAmzTargetEnum;
 }
-export declare class CreateDevicePoolRequest extends SpeakeasyBase {
-    headers: CreateDevicePoolHeaders;
-    request: shared.CreateDevicePoolRequest;
-}
 export declare class CreateDevicePoolResponse extends SpeakeasyBase {
+    /**
+     * ArgumentException
+     */
     argumentException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     createDevicePoolResult?: shared.CreateDevicePoolResult;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
+    /**
+     * ServiceAccountException
+     */
     serviceAccountException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

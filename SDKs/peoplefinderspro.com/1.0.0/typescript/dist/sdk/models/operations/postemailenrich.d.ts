@@ -1,17 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PostEmailEnrichHeaders extends SpeakeasyBase {
-    galaxyApName?: string;
-    galaxyApPassword?: string;
-    galaxySearchType?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PostEmailEnrichRequestBody extends SpeakeasyBase {
     email?: string;
 }
 export declare class PostEmailEnrichRequest extends SpeakeasyBase {
-    headers: PostEmailEnrichHeaders;
-    request?: PostEmailEnrichRequestBody;
+    requestBody?: PostEmailEnrichRequestBody;
+    /**
+     * e.g. Key
+     */
+    galaxyApName?: string;
+    /**
+     * e.g. Secret
+     */
+    galaxyApPassword?: string;
+    /**
+     * e.g. DevAPIEmailID
+     */
+    galaxySearchType?: string;
 }
 export declare class PostEmailEnrichResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

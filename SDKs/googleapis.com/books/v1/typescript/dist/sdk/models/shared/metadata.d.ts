@@ -6,7 +6,16 @@ export declare class MetadataItems extends SpeakeasyBase {
     size?: string;
     version?: string;
 }
+/**
+ * Successful response
+ */
 export declare class Metadata extends SpeakeasyBase {
+    /**
+     * A list of offline dictionary metadata.
+     */
     items?: MetadataItems[];
+    /**
+     * Resource type.
+     */
     kind?: string;
 }

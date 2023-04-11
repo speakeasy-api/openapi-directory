@@ -1,8 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteCorsConfigurationPathParams extends SpeakeasyBase {
-    apiId: string;
-}
-export declare class DeleteCorsConfigurationHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteCorsConfigurationRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -10,14 +8,21 @@ export declare class DeleteCorsConfigurationHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DeleteCorsConfigurationRequest extends SpeakeasyBase {
-    pathParams: DeleteCorsConfigurationPathParams;
-    headers: DeleteCorsConfigurationHeaders;
+    /**
+     * The API identifier.
+     */
+    apiId: string;
 }
 export declare class DeleteCorsConfigurationResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

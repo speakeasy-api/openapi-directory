@@ -1,0 +1,35 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+export declare class Standing extends SpeakeasyBase {
+    awayLosses?: number;
+    awayWins?: number;
+    city?: string;
+    dayLosses?: number;
+    dayWins?: number;
+    division?: string;
+    divisionLosses?: number;
+    divisionRank?: number;
+    divisionWins?: number;
+    gamesBehind?: number;
+    globalTeamID?: number;
+    homeLosses?: number;
+    homeWins?: number;
+    key?: string;
+    lastTenGamesLosses?: number;
+    lastTenGamesWins?: number;
+    league?: string;
+    leagueRank?: number;
+    losses?: number;
+    name?: string;
+    nightLosses?: number;
+    nightWins?: number;
+    percentage?: number;
+    runsAgainst?: number;
+    runsScored?: number;
+    season?: number;
+    seasonType?: number;
+    streak?: string;
+    teamID?: number;
+    wildCardGamesBehind?: number;
+    wildCardRank?: number;
+    wins?: number;
+}

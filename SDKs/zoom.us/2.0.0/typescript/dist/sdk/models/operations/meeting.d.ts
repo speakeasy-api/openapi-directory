@@ -1,25 +1,89 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class MeetingPathParams extends SpeakeasyBase {
-    meetingId: number;
-}
-export declare class MeetingQueryParams extends SpeakeasyBase {
-    occurrenceId?: string;
-    showPreviousOccurrences?: boolean;
-}
+import { AxiosResponse } from "axios";
 export declare class MeetingSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
+    oAuth: string;
+}
+export declare class MeetingRequest extends SpeakeasyBase {
+    /**
+     * The meeting ID in **long** format. The data type of this field is "long"(represented as int64 in JSON).
+     *
+     * @remarks
+     *
+     * While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
+     */
+    meetingId: number;
+    /**
+     * Meeting Occurrence ID. Provide this field to view meeting details of a particular occurrence of the [recurring meeting](https://support.zoom.us/hc/en-us/articles/214973206-Scheduling-Recurring-Meetings).
+     */
+    occurrenceId?: string;
+    /**
+     * Set the value of this field to `true` if you would like to view meeting details of all previous occurrences of a [recurring meeting](https://support.zoom.us/hc/en-us/articles/214973206-Scheduling-Recurring-Meetings).
+     */
+    showPreviousOccurrences?: boolean;
 }
 /**
  * Occurence object. This object is only returned for Recurring Webinars.
-**/
-export declare class Meeting200ApplicationJsonOccurrences extends SpeakeasyBase {
+ */
+export declare class Meeting200ApplicationXMLOccurrences extends SpeakeasyBase {
+    /**
+     * Duration.
+     */
     duration?: number;
+    /**
+     * Occurrence ID: Unique Identifier that identifies an occurrence of a recurring webinar. [Recurring webinars](https://support.zoom.us/hc/en-us/articles/216354763-How-to-Schedule-A-Recurring-Webinar) can have a maximum of 50 occurrences.
+     */
     occurrenceId?: string;
+    /**
+     * Start time.
+     */
     startTime?: Date;
+    /**
+     * Occurrence status.
+     */
     status?: string;
 }
-export declare enum Meeting200ApplicationJsonRecurrenceWeeklyDaysEnum {
+/**
+ * Use this field **only if you're scheduling a recurring meeting of type** `3` to state the week of the month when the meeting should recur. If you use this field, **you must also use the `monthly_week_day` field to state the day of the week when the meeting should recur.** <br>`-1` - Last week of the month.<br>`1` - First week of the month.<br>`2` - Second week of the month.<br>`3` - Third week of the month.<br>`4` - Fourth week of the month.
+ */
+export declare enum Meeting200ApplicationXMLRecurrenceMonthlyWeekEnum {
+    Minus1 = "-1",
+    One = "1",
+    Two = "2",
+    Three = "3",
+    Four = "4"
+}
+/**
+ * Use this field **only if you're scheduling a recurring meeting of type** `3` to state a specific day in a week when the monthly meeting should recur. To use this field, you must also use the `monthly_week` field.
+ *
+ * @remarks
+ *
+ * <br>`1` - Sunday.<br>`2` - Monday.<br>`3` - Tuesday.<br>`4` -  Wednesday.<br>`5` - Thursday.<br>`6` - Friday.<br>`7` - Saturday.
+ */
+export declare enum Meeting200ApplicationXMLRecurrenceMonthlyWeekDayEnum {
+    One = "1",
+    Two = "2",
+    Three = "3",
+    Four = "4",
+    Five = "5",
+    Six = "6",
+    Seven = "7"
+}
+/**
+ * Recurrence meeting types:<br>`1` - Daily.<br>`2` - Weekly.<br>`3` - Monthly.
+ */
+export declare enum Meeting200ApplicationXMLRecurrenceTypeEnum {
+    One = "1",
+    Two = "2",
+    Three = "3"
+}
+/**
+ * This field is required **if you're scheduling a recurring meeting of type** `2` to state which day(s) of the week the meeting should repeat. <br> <br> The value for this field could be a number between `1` to `7` in string format. For instance, if the meeting should recur on Sunday, provide `"1"` as the value of this field.<br><br> **Note:** If you would like the meeting to occur on multiple days of a week, you should provide comma separated values for this field. For instance, if the meeting should recur on Sundays and Tuesdays provide `"1,3"` as the value of this field.
+ *
+ * @remarks
+ *
+ *  <br>`1`  - Sunday. <br>`2` - Monday.<br>`3` - Tuesday.<br>`4` -  Wednesday.<br>`5` -  Thursday.<br>`6` - Friday.<br>`7` - Saturday.
+ */
+export declare enum Meeting200ApplicationXMLRecurrenceWeeklyDaysEnum {
     One = "1",
     Two = "2",
     Three = "3",
@@ -30,170 +94,1255 @@ export declare enum Meeting200ApplicationJsonRecurrenceWeeklyDaysEnum {
 }
 /**
  * Recurrence object. Use this object only for a meeting with type `8` i.e., a recurring meeting with fixed time.
-**/
-export declare class Meeting200ApplicationJsonRecurrence extends SpeakeasyBase {
+ */
+export declare class Meeting200ApplicationXMLRecurrence extends SpeakeasyBase {
+    /**
+     * Select the final date on which the meeting will recur before it is canceled. Should be in UTC time, such as 2017-11-25T12:00:00Z. (Cannot be used with "end_times".)
+     */
     endDateTime?: Date;
+    /**
+     * Select how many times the meeting should recur before it is canceled. (Cannot be used with "end_date_time".)
+     */
     endTimes?: number;
+    /**
+     * Use this field **only if you're scheduling a recurring meeting of type** `3` to state which day in a month, the meeting should recur. The value range is from 1 to 31.
+     *
+     * @remarks
+     *
+     * For instance, if you would like the meeting to recur on 23rd of each month, provide `23` as the value of this field and `1` as the value of the `repeat_interval` field. Instead, if you would like the meeting to recur every three months, on 23rd of the month, change the value of the `repeat_interval` field to `3`.
+     */
     monthlyDay?: number;
-    monthlyWeek?: number;
-    monthlyWeekDay?: number;
+    /**
+     * Use this field **only if you're scheduling a recurring meeting of type** `3` to state the week of the month when the meeting should recur. If you use this field, **you must also use the `monthly_week_day` field to state the day of the week when the meeting should recur.** <br>`-1` - Last week of the month.<br>`1` - First week of the month.<br>`2` - Second week of the month.<br>`3` - Third week of the month.<br>`4` - Fourth week of the month.
+     */
+    monthlyWeek?: Meeting200ApplicationXMLRecurrenceMonthlyWeekEnum;
+    /**
+     * Use this field **only if you're scheduling a recurring meeting of type** `3` to state a specific day in a week when the monthly meeting should recur. To use this field, you must also use the `monthly_week` field.
+     *
+     * @remarks
+     *
+     * <br>`1` - Sunday.<br>`2` - Monday.<br>`3` - Tuesday.<br>`4` -  Wednesday.<br>`5` - Thursday.<br>`6` - Friday.<br>`7` - Saturday.
+     */
+    monthlyWeekDay?: Meeting200ApplicationXMLRecurrenceMonthlyWeekDayEnum;
+    /**
+     * Define the interval at which the meeting should recur. For instance, if you would like to schedule a meeting that recurs every two months, you must set the value of this field as `2` and the value of the `type` parameter as `3`.
+     *
+     * @remarks
+     *
+     * For a daily meeting, the maximum interval you can set is `90` days. For a weekly meeting the maximum interval that you can set is  of `12` weeks. For a monthly meeting, there is a maximum of `3` months.
+     *
+     *
+     */
     repeatInterval?: number;
-    type: number;
-    weeklyDays?: Meeting200ApplicationJsonRecurrenceWeeklyDaysEnum;
+    /**
+     * Recurrence meeting types:<br>`1` - Daily.<br>`2` - Weekly.<br>`3` - Monthly.
+     */
+    type: Meeting200ApplicationXMLRecurrenceTypeEnum;
+    /**
+     * This field is required **if you're scheduling a recurring meeting of type** `2` to state which day(s) of the week the meeting should repeat. <br> <br> The value for this field could be a number between `1` to `7` in string format. For instance, if the meeting should recur on Sunday, provide `"1"` as the value of this field.<br><br> **Note:** If you would like the meeting to occur on multiple days of a week, you should provide comma separated values for this field. For instance, if the meeting should recur on Sundays and Tuesdays provide `"1,3"` as the value of this field.
+     *
+     * @remarks
+     *
+     *  <br>`1`  - Sunday. <br>`2` - Monday.<br>`3` - Tuesday.<br>`4` -  Wednesday.<br>`5` -  Thursday.<br>`6` - Friday.<br>`7` - Saturday.
+     */
+    weeklyDays?: Meeting200ApplicationXMLRecurrenceWeeklyDaysEnum;
 }
-export declare enum Meeting200ApplicationJsonSettingsApprovedOrDeniedCountriesOrRegionsMethodEnum {
+/**
+ * Enable registration and set approval for the registration. Note that this feature requires the host to be of **Licensed** user type. **Registration cannot be enabled for a basic user.** <br><br>
+ *
+ * @remarks
+ *
+ * `0` - Automatically approve.<br>`1` - Manually approve.<br>`2` - No registration required.
+ */
+export declare enum Meeting200ApplicationXMLSettingsApprovalTypeEnum {
+    Zero = "0",
+    One = "1",
+    Two = "2"
+}
+/**
+ * Specify whether to allow users from specific regions to join this meeting; or block users from specific regions from joining this meeting. <br><br>
+ *
+ * @remarks
+ * `approve`: Allow users from specific regions/countries to join this meeting. If this setting is selected, the approved regions/countries must be included in the `approved_list`.<br><br>
+ * `deny`: Block users from specific regions/countries from joining this meeting. If this setting is selected, the approved regions/countries must be included in the `denied_list`
+ */
+export declare enum Meeting200ApplicationXMLSettingsApprovedOrDeniedCountriesOrRegionsMethodEnum {
     Approve = "approve",
     Deny = "deny"
 }
 /**
  * Approve or block users from specific regions/countries from joining this meeting.
  *
-**/
-export declare class Meeting200ApplicationJsonSettingsApprovedOrDeniedCountriesOrRegions extends SpeakeasyBase {
+ * @remarks
+ *
+ */
+export declare class Meeting200ApplicationXMLSettingsApprovedOrDeniedCountriesOrRegions extends SpeakeasyBase {
+    /**
+     * List of countries/regions from where participants can join this meeting.
+     */
     approvedList?: string[];
+    /**
+     * List of countries/regions from where participants can not join this meeting.
+     */
     deniedList?: string[];
+    /**
+     * `true`: Setting enabled to either allow users or block users from specific regions to join your meetings. <br>
+     *
+     * @remarks
+     *
+     * `false`: Setting disabled.
+     */
     enable?: boolean;
-    method?: Meeting200ApplicationJsonSettingsApprovedOrDeniedCountriesOrRegionsMethodEnum;
+    /**
+     * Specify whether to allow users from specific regions to join this meeting; or block users from specific regions from joining this meeting. <br><br>
+     *
+     * @remarks
+     * `approve`: Allow users from specific regions/countries to join this meeting. If this setting is selected, the approved regions/countries must be included in the `approved_list`.<br><br>
+     * `deny`: Block users from specific regions/countries from joining this meeting. If this setting is selected, the approved regions/countries must be included in the `denied_list`
+     */
+    method?: Meeting200ApplicationXMLSettingsApprovedOrDeniedCountriesOrRegionsMethodEnum;
 }
-export declare enum Meeting200ApplicationJsonSettingsAudioEnum {
+/**
+ * Determine how participants can join the audio portion of the meeting.<br>`both` - Both Telephony and VoIP.<br>`telephony` - Telephony only.<br>`voip` - VoIP only.
+ */
+export declare enum Meeting200ApplicationXMLSettingsAudioEnum {
     Both = "both",
     Telephony = "telephony",
     Voip = "voip"
 }
-export declare class Meeting200ApplicationJsonSettingsAuthenticationException extends SpeakeasyBase {
+export declare class Meeting200ApplicationXMLSettingsAuthenticationException extends SpeakeasyBase {
+    /**
+     * Email address of the participant.
+     */
     email?: string;
+    /**
+     * Name of the participant.
+     */
     name?: string;
 }
-export declare enum Meeting200ApplicationJsonSettingsAutoRecordingEnum {
+/**
+ * Automatic recording:<br>`local` - Record on local.<br>`cloud` -  Record on cloud.<br>`none` - Disabled.
+ */
+export declare enum Meeting200ApplicationXMLSettingsAutoRecordingEnum {
     Local = "local",
     Cloud = "cloud",
     None = "none"
 }
-export declare class Meeting200ApplicationJsonSettingsBreakoutRoomRooms extends SpeakeasyBase {
+export declare class Meeting200ApplicationXMLSettingsBreakoutRoomRooms extends SpeakeasyBase {
+    /**
+     * Name of the breakout room.
+     */
     name?: string;
+    /**
+     * Email addresses of the participants who are to be assigned to the breakout room.
+     */
     participants?: string[];
 }
 /**
  * Setting to [pre-assign breakout rooms](https://support.zoom.us/hc/en-us/articles/360032752671-Pre-assigning-participants-to-breakout-rooms#h_36f71353-4190-48a2-b999-ca129861c1f4).
-**/
-export declare class Meeting200ApplicationJsonSettingsBreakoutRoom extends SpeakeasyBase {
+ */
+export declare class Meeting200ApplicationXMLSettingsBreakoutRoom extends SpeakeasyBase {
+    /**
+     * Set the value of this field to `true` if you would like to enable the [breakout room pre-assign](https://support.zoom.us/hc/en-us/articles/360032752671-Pre-assigning-participants-to-breakout-rooms#h_36f71353-4190-48a2-b999-ca129861c1f4) option.
+     */
     enable?: boolean;
-    rooms?: Meeting200ApplicationJsonSettingsBreakoutRoomRooms[];
+    /**
+     * Create room(s).
+     */
+    rooms?: Meeting200ApplicationXMLSettingsBreakoutRoomRooms[];
 }
-export declare class Meeting200ApplicationJsonSettingsCustomKeys extends SpeakeasyBase {
+export declare class Meeting200ApplicationXMLSettingsCustomKeys extends SpeakeasyBase {
+    /**
+     * Custom key associated with the user.
+     */
     key?: string;
+    /**
+     * Value of the custom key associated with the user.
+     */
     value?: string;
 }
-export declare enum Meeting200ApplicationJsonSettingsEncryptionTypeEnum {
+/**
+ * Choose between enhanced encryption and [end-to-end encryption](https://support.zoom.us/hc/en-us/articles/360048660871) when starting or a meeting. When using end-to-end encryption, several features (e.g. cloud recording, phone/SIP/H.323 dial-in) will be **automatically disabled**. <br><br>The value of this field can be one of the following:<br>
+ *
+ * @remarks
+ * `enhanced_encryption`: Enhanced encryption. Encryption is stored in the cloud if you enable this option. <br>
+ *
+ * `e2ee`: [End-to-end encryption](https://support.zoom.us/hc/en-us/articles/360048660871). The encryption key is stored in your local device and can not be obtained by anyone else. Enabling this setting also **disables** the following features: join before host, cloud recording, streaming, live transcription, breakout rooms, polling, 1:1 private chat, and meeting reactions.
+ */
+export declare enum Meeting200ApplicationXMLSettingsEncryptionTypeEnum {
     EnhancedEncryption = "enhanced_encryption",
     E2ee = "e2ee"
 }
-export declare enum Meeting200ApplicationJsonSettingsGlobalDialInNumbersTypeEnum {
+/**
+ * Type of number.
+ */
+export declare enum Meeting200ApplicationXMLSettingsGlobalDialInNumbersTypeEnum {
     Toll = "toll",
     Tollfree = "tollfree"
 }
-export declare class Meeting200ApplicationJsonSettingsGlobalDialInNumbers extends SpeakeasyBase {
+export declare class Meeting200ApplicationXMLSettingsGlobalDialInNumbers extends SpeakeasyBase {
+    /**
+     * City of the number, if any. For example, Chicago.
+     */
     city?: string;
+    /**
+     * Country code. For example, BR.
+     */
     country?: string;
+    /**
+     * Full name of country. For example, Brazil.
+     */
     countryName?: string;
+    /**
+     * Phone number. For example, +1 2332357613.
+     */
     number?: string;
-    type?: Meeting200ApplicationJsonSettingsGlobalDialInNumbersTypeEnum;
+    /**
+     * Type of number.
+     */
+    type?: Meeting200ApplicationXMLSettingsGlobalDialInNumbersTypeEnum;
 }
-export declare class Meeting200ApplicationJsonSettingsLanguageInterpretationInterpreters extends SpeakeasyBase {
+/**
+ * If the value of "join_before_host" field is set to true, this field can be used to indicate time limits within which a participant may join a meeting before a host. The value of this field can be one of the following:
+ *
+ * @remarks
+ *
+ * *  `0`: Allow participant to join anytime.
+ * *  `5`: Allow participant to join 5 minutes before meeting start time.
+ *  * `10`: Allow participant to join 10 minutes before meeting start time.
+ */
+export declare enum Meeting200ApplicationXMLSettingsJbhTimeEnum {
+    Zero = "0",
+    Five = "5",
+    Ten = "10"
+}
+export declare class Meeting200ApplicationXMLSettingsLanguageInterpretationInterpreters extends SpeakeasyBase {
+    /**
+     * Email address of the interpreter.
+     */
     email?: string;
+    /**
+     * Languages for interpretation. The string must contain two [country Ids](https://marketplace.zoom.us/docs/api-reference/other-references/abbreviation-lists#countries) separated by a comma.
+     *
+     * @remarks
+     *
+     * For example, if the language is to be interpreted from English to Chinese, the value of this field should be "US,CN".
+     */
     languages?: string;
 }
-export declare class Meeting200ApplicationJsonSettingsLanguageInterpretation extends SpeakeasyBase {
+export declare class Meeting200ApplicationXMLSettingsLanguageInterpretation extends SpeakeasyBase {
     enable?: boolean;
-    interpreters?: Meeting200ApplicationJsonSettingsLanguageInterpretationInterpreters[];
+    /**
+     * Information associated with the interpreter.
+     */
+    interpreters?: Meeting200ApplicationXMLSettingsLanguageInterpretationInterpreters[];
+}
+/**
+ * Registration type. Used for recurring meeting with fixed time only. <br>`1` Attendees register once and can attend any of the occurrences.<br>`2` Attendees need to register for each occurrence to attend.<br>`3` Attendees register once and can choose one or more occurrences to attend.
+ */
+export declare enum Meeting200ApplicationXMLSettingsRegistrationTypeEnum {
+    One = "1",
+    Two = "2",
+    Three = "3"
 }
 /**
  * Meeting settings.
-**/
-export declare class Meeting200ApplicationJsonSettings extends SpeakeasyBase {
+ */
+export declare class Meeting200ApplicationXMLSettings extends SpeakeasyBase {
+    /**
+     * Allow attendees to join the meeting from multiple devices. This setting only works for meetings that require [registration](https://support.zoom.us/hc/en-us/articles/211579443-Setting-up-registration-for-a-meeting).
+     */
     allowMultipleDevices?: boolean;
+    /**
+     * Alternative host's emails or IDs: multiple values are separated by a semicolon.
+     */
     alternativeHosts?: string;
+    /**
+     * Flag to determine whether to send email notifications to alternative hosts, default value is true.
+     */
     alternativeHostsEmailNotification?: boolean;
-    approvalType?: number;
-    approvedOrDeniedCountriesOrRegions?: Meeting200ApplicationJsonSettingsApprovedOrDeniedCountriesOrRegions;
-    audio?: Meeting200ApplicationJsonSettingsAudioEnum;
+    /**
+     * Enable registration and set approval for the registration. Note that this feature requires the host to be of **Licensed** user type. **Registration cannot be enabled for a basic user.** <br><br>
+     *
+     * @remarks
+     *
+     * `0` - Automatically approve.<br>`1` - Manually approve.<br>`2` - No registration required.
+     */
+    approvalType?: Meeting200ApplicationXMLSettingsApprovalTypeEnum;
+    /**
+     * Approve or block users from specific regions/countries from joining this meeting.
+     *
+     * @remarks
+     *
+     */
+    approvedOrDeniedCountriesOrRegions?: Meeting200ApplicationXMLSettingsApprovedOrDeniedCountriesOrRegions;
+    /**
+     * Determine how participants can join the audio portion of the meeting.<br>`both` - Both Telephony and VoIP.<br>`telephony` - Telephony only.<br>`voip` - VoIP only.
+     */
+    audio?: Meeting200ApplicationXMLSettingsAudioEnum;
+    /**
+     * If user has configured ["Sign Into Zoom with Specified Domains"](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars#h_5c0df2e1-cfd2-469f-bb4a-c77d7c0cca6f) option, this will list the domains that are authenticated.
+     */
     authenticationDomains?: string;
-    authenticationException?: Meeting200ApplicationJsonSettingsAuthenticationException[];
+    /**
+     * The participants added here will receive unique meeting invite links and bypass authentication.
+     */
+    authenticationException?: Meeting200ApplicationXMLSettingsAuthenticationException[];
+    /**
+     * Authentication name set in the [authentication profile](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars#h_5c0df2e1-cfd2-469f-bb4a-c77d7c0cca6f).
+     */
     authenticationName?: string;
+    /**
+     * Meeting authentication option id.
+     */
     authenticationOption?: string;
-    autoRecording?: Meeting200ApplicationJsonSettingsAutoRecordingEnum;
-    breakoutRoom?: Meeting200ApplicationJsonSettingsBreakoutRoom;
+    /**
+     * Automatic recording:<br>`local` - Record on local.<br>`cloud` -  Record on cloud.<br>`none` - Disabled.
+     */
+    autoRecording?: Meeting200ApplicationXMLSettingsAutoRecordingEnum;
+    /**
+     * Setting to [pre-assign breakout rooms](https://support.zoom.us/hc/en-us/articles/360032752671-Pre-assigning-participants-to-breakout-rooms#h_36f71353-4190-48a2-b999-ca129861c1f4).
+     */
+    breakoutRoom?: Meeting200ApplicationXMLSettingsBreakoutRoom;
+    /**
+     * Close registration after event date
+     */
     closeRegistration?: boolean;
+    /**
+     * Host meeting in China.
+     */
     cnMeeting?: boolean;
+    /**
+     * Contact email for registration
+     */
     contactEmail?: string;
+    /**
+     * Contact name for registration
+     */
     contactName?: string;
-    customKeys?: Meeting200ApplicationJsonSettingsCustomKeys[];
-    encryptionType?: Meeting200ApplicationJsonSettingsEncryptionTypeEnum;
+    /**
+     * Custom keys and values assigned to the meeting.
+     */
+    customKeys?: Meeting200ApplicationXMLSettingsCustomKeys[];
+    /**
+     * Choose between enhanced encryption and [end-to-end encryption](https://support.zoom.us/hc/en-us/articles/360048660871) when starting or a meeting. When using end-to-end encryption, several features (e.g. cloud recording, phone/SIP/H.323 dial-in) will be **automatically disabled**. <br><br>The value of this field can be one of the following:<br>
+     *
+     * @remarks
+     * `enhanced_encryption`: Enhanced encryption. Encryption is stored in the cloud if you enable this option. <br>
+     *
+     * `e2ee`: [End-to-end encryption](https://support.zoom.us/hc/en-us/articles/360048660871). The encryption key is stored in your local device and can not be obtained by anyone else. Enabling this setting also **disables** the following features: join before host, cloud recording, streaming, live transcription, breakout rooms, polling, 1:1 private chat, and meeting reactions.
+     */
+    encryptionType?: Meeting200ApplicationXMLSettingsEncryptionTypeEnum;
+    /**
+     * Only signed in users can join this meeting.
+     *
+     * @remarks
+     *
+     * **This field is deprecated and will not be supported in the future.**  <br><br>As an alternative, use the "meeting_authentication", "authentication_option" and "authentication_domains" fields to understand the [authentication configurations](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars) set for the meeting.
+     */
     enforceLogin?: boolean;
+    /**
+     * Only signed in users with specified domains can join meetings.
+     *
+     * @remarks
+     *
+     * **This field is deprecated and will not be supported in the future.**  <br><br>As an alternative, use the "meeting_authentication", "authentication_option" and "authentication_domains" fields to understand the [authentication configurations](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars) set for the meeting.
+     */
     enforceLoginDomains?: string;
+    /**
+     * List of global dial-in countries
+     */
     globalDialInCountries?: string[];
-    globalDialInNumbers?: Meeting200ApplicationJsonSettingsGlobalDialInNumbers[];
+    /**
+     * Global Dial-in Countries/Regions
+     */
+    globalDialInNumbers?: Meeting200ApplicationXMLSettingsGlobalDialInNumbers[];
+    /**
+     * Start video when the host joins the meeting.
+     */
     hostVideo?: boolean;
+    /**
+     * Host meeting in India.
+     */
     inMeeting?: boolean;
-    jbhTime?: number;
+    /**
+     * If the value of "join_before_host" field is set to true, this field can be used to indicate time limits within which a participant may join a meeting before a host. The value of this field can be one of the following:
+     *
+     * @remarks
+     *
+     * *  `0`: Allow participant to join anytime.
+     * *  `5`: Allow participant to join 5 minutes before meeting start time.
+     *  * `10`: Allow participant to join 10 minutes before meeting start time.
+     */
+    jbhTime?: Meeting200ApplicationXMLSettingsJbhTimeEnum;
+    /**
+     * Allow participants to join the meeting before the host starts the meeting. Only used for scheduled or recurring meetings.
+     */
     joinBeforeHost?: boolean;
-    languageInterpretation?: Meeting200ApplicationJsonSettingsLanguageInterpretation;
+    languageInterpretation?: Meeting200ApplicationXMLSettingsLanguageInterpretation;
+    /**
+     * `true`- Only authenticated users can join meetings.
+     */
     meetingAuthentication?: boolean;
+    /**
+     * Mute participants upon entry.
+     */
     muteUponEntry?: boolean;
+    /**
+     * Start video when participants join the meeting.
+     */
     participantVideo?: boolean;
+    /**
+     * Send confirmation email to registrants upon successful registration.
+     */
     registrantsConfirmationEmail?: boolean;
+    /**
+     * Send email notifications to registrants about approval, cancellation, denial of the registration. The value of this field must be set to true in order to use the `registrants_confirmation_email` field.
+     */
     registrantsEmailNotification?: boolean;
-    registrationType?: number;
+    /**
+     * Registration type. Used for recurring meeting with fixed time only. <br>`1` Attendees register once and can attend any of the occurrences.<br>`2` Attendees need to register for each occurrence to attend.<br>`3` Attendees register once and can choose one or more occurrences to attend.
+     */
+    registrationType?: Meeting200ApplicationXMLSettingsRegistrationTypeEnum;
+    /**
+     * Show social share buttons on the meeting registration page.
+     *
+     * @remarks
+     * This setting only works for meetings that require [registration](https://support.zoom.us/hc/en-us/articles/211579443-Setting-up-registration-for-a-meeting).
+     */
     showShareButton?: boolean;
+    /**
+     * Use a personal meeting ID. Only used for scheduled meetings and recurring meetings with no fixed time.
+     */
     usePmi?: boolean;
+    /**
+     * Enable waiting room
+     */
     waitingRoom?: boolean;
+    /**
+     * Add watermark when viewing a shared screen.
+     */
     watermark?: boolean;
 }
-export declare enum Meeting200ApplicationJsonStatusEnum {
+/**
+ * Meeting status
+ */
+export declare enum Meeting200ApplicationXMLStatusEnum {
     Waiting = "waiting",
     Started = "started"
 }
-export declare class Meeting200ApplicationJsonTrackingFields extends SpeakeasyBase {
+export declare class Meeting200ApplicationXMLTrackingFields extends SpeakeasyBase {
+    /**
+     * Label of the tracking field.
+     */
     field?: string;
+    /**
+     * Value for the field.
+     */
     value?: string;
+    /**
+     * Indicates whether the [tracking field](https://support.zoom.us/hc/en-us/articles/115000293426-Scheduling-Tracking-Fields) is visible in the meeting scheduling options in the Zoom Web Portal or not.
+     *
+     * @remarks
+     *
+     * `true`: Tracking field is visible. <br>
+     *
+     * `false`: Tracking field is not visible to the users when they look at the meeting details in the Zoom Web Portal but the field was used while scheduling this meeting via API. An invisible tracking field can be used by users while scheduling meetings via API only.
+     */
     visible?: boolean;
 }
 /**
+ * Meeting Types:<br>`1` - Instant meeting.<br>`2` - Scheduled meeting.<br>`3` - Recurring meeting with no fixed time.<br>`4` - PMI Meeting<br>
+ *
+ * @remarks
+ * `8` - Recurring meeting with a fixed time.
+ */
+export declare enum Meeting200ApplicationXMLTypeEnum {
+    One = "1",
+    Two = "2",
+    Three = "3",
+    Eight = "8"
+}
+/**
  * Meeting object.
-**/
-export declare class Meeting200ApplicationJson extends SpeakeasyBase {
+ */
+export declare class Meeting200ApplicationXML extends SpeakeasyBase {
+    /**
+     * Meeting description
+     */
     agenda?: string;
+    /**
+     * Unique identifier of the scheduler who scheduled this meeting on behalf of the host. This field is only returned if you used "schedule_for" option in the [Create a Meeting API request](https://marketplace.zoom.us/docs/api-reference/zoom-api/meetings/meetingcreate).
+     */
     assistantId?: string;
+    /**
+     * Time of creation.
+     */
     createdAt?: Date;
+    /**
+     * Meeting duration.
+     */
     duration?: number;
+    /**
+     * Encrypted passcode for third party endpoints (H323/SIP).
+     */
     encryptedPassword?: string;
+    /**
+     * H.323/SIP room system passcode.
+     */
     h323Password?: string;
+    /**
+     * Email address of the meeting host.
+     */
     hostEmail?: string;
+    /**
+     * ID of the user who is set as host of meeting.
+     */
     hostId?: string;
+    /**
+     * [Meeting ID](https://support.zoom.us/hc/en-us/articles/201362373-What-is-a-Meeting-ID-): Unique identifier of the meeting in "**long**" format(represented as int64 data type in JSON), also known as the meeting number.
+     */
     id?: number;
+    /**
+     * URL for participants to join the meeting. This URL should only be shared with users that you would like to invite for the meeting.
+     */
     joinUrl?: string;
-    occurrences?: Meeting200ApplicationJsonOccurrences[];
+    /**
+     * Array of occurrence objects.
+     */
+    occurrences?: Meeting200ApplicationXMLOccurrences[];
+    /**
+     * Meeting passcode.
+     */
     password?: string;
+    /**
+     * Personal Meeting Id. Only used for scheduled meetings and recurring meetings with no fixed time.
+     */
     pmi?: number;
-    recurrence?: Meeting200ApplicationJsonRecurrence;
-    settings?: Meeting200ApplicationJsonSettings;
+    /**
+     * Recurrence object. Use this object only for a meeting with type `8` i.e., a recurring meeting with fixed time.
+     */
+    recurrence?: Meeting200ApplicationXMLRecurrence;
+    /**
+     * Meeting settings.
+     */
+    settings?: Meeting200ApplicationXMLSettings;
+    /**
+     * Meeting start time in GMT/UTC. Start time will not be returned if the meeting is an **instant** meeting.
+     *
+     * @remarks
+     *
+     */
     startTime?: Date;
+    /**
+     * <br><aside>The <code>start_url</code> of a Meeting is a URL using which a host or an alternative host can start the Meeting.
+     *
+     * @remarks
+     *
+     * The expiration time for the <code>start_url</code> field listed in the response of [Create a Meeting API](https://marketplace.zoom.us/docs/api-reference/zoom-api/meetings/meetingcreate) is two hours for all regular users.
+     *
+     * For users created using the <code>custCreate</code> option via the [Create Users](https://marketplace.zoom.us/docs/api-reference/zoom-api/users/usercreate) API, the expiration time of the <code>start_url</code> field is 90 days.
+     *
+     * For security reasons, to retrieve the updated value for the <code>start_url</code> field programmatically (after the expiry time), you must call the [Retrieve a Meeting API](https://marketplace.zoom.us/docs/api-reference/zoom-api/meetings/meeting) and refer to the value of the <code>start_url</code> field in the response.</aside><br>This URL should only be used by the host of the meeting and **should not be shared with anyone other than the host** of the meeting as anyone with this URL will be able to login to the Zoom Client as the host of the meeting.
+     */
     startUrl?: string;
-    status?: Meeting200ApplicationJsonStatusEnum;
+    /**
+     * Meeting status
+     */
+    status?: Meeting200ApplicationXMLStatusEnum;
+    /**
+     * Timezone to format the meeting start time on the .
+     */
     timezone?: string;
+    /**
+     * Meeting topic.
+     */
     topic?: string;
-    trackingFields?: Meeting200ApplicationJsonTrackingFields[];
-    type?: number;
+    /**
+     * Tracking fields
+     */
+    trackingFields?: Meeting200ApplicationXMLTrackingFields[];
+    /**
+     * Meeting Types:<br>`1` - Instant meeting.<br>`2` - Scheduled meeting.<br>`3` - Recurring meeting with no fixed time.<br>`4` - PMI Meeting<br>
+     *
+     * @remarks
+     * `8` - Recurring meeting with a fixed time.
+     */
+    type?: Meeting200ApplicationXMLTypeEnum;
+    /**
+     * Unique meeting ID. Each meeting instance will generate its own Meeting UUID (i.e., after a meeting ends, a new UUID will be generated for the next instance of the meeting). You can retrieve a list of UUIDs from past meeting instances using [this API](https://marketplace.zoom.us/docs/api-reference/zoom-api/meetings/pastmeetings) . Please double encode your UUID when using it for API calls if the UUID begins with a '/'or contains '//' in it.
+     *
+     * @remarks
+     *
+     */
     uuid?: string;
 }
-export declare class MeetingRequest extends SpeakeasyBase {
-    pathParams: MeetingPathParams;
-    queryParams: MeetingQueryParams;
-    security: MeetingSecurity;
+/**
+ * Occurence object. This object is only returned for Recurring Webinars.
+ */
+export declare class Meeting200ApplicationJSONOccurrences extends SpeakeasyBase {
+    /**
+     * Duration.
+     */
+    duration?: number;
+    /**
+     * Occurrence ID: Unique Identifier that identifies an occurrence of a recurring webinar. [Recurring webinars](https://support.zoom.us/hc/en-us/articles/216354763-How-to-Schedule-A-Recurring-Webinar) can have a maximum of 50 occurrences.
+     */
+    occurrenceId?: string;
+    /**
+     * Start time.
+     */
+    startTime?: Date;
+    /**
+     * Occurrence status.
+     */
+    status?: string;
+}
+/**
+ * Use this field **only if you're scheduling a recurring meeting of type** `3` to state the week of the month when the meeting should recur. If you use this field, **you must also use the `monthly_week_day` field to state the day of the week when the meeting should recur.** <br>`-1` - Last week of the month.<br>`1` - First week of the month.<br>`2` - Second week of the month.<br>`3` - Third week of the month.<br>`4` - Fourth week of the month.
+ */
+export declare enum Meeting200ApplicationJSONRecurrenceMonthlyWeekEnum {
+    Minus1 = "-1",
+    One = "1",
+    Two = "2",
+    Three = "3",
+    Four = "4"
+}
+/**
+ * Use this field **only if you're scheduling a recurring meeting of type** `3` to state a specific day in a week when the monthly meeting should recur. To use this field, you must also use the `monthly_week` field.
+ *
+ * @remarks
+ *
+ * <br>`1` - Sunday.<br>`2` - Monday.<br>`3` - Tuesday.<br>`4` -  Wednesday.<br>`5` - Thursday.<br>`6` - Friday.<br>`7` - Saturday.
+ */
+export declare enum Meeting200ApplicationJSONRecurrenceMonthlyWeekDayEnum {
+    One = "1",
+    Two = "2",
+    Three = "3",
+    Four = "4",
+    Five = "5",
+    Six = "6",
+    Seven = "7"
+}
+/**
+ * Recurrence meeting types:<br>`1` - Daily.<br>`2` - Weekly.<br>`3` - Monthly.
+ */
+export declare enum Meeting200ApplicationJSONRecurrenceTypeEnum {
+    One = "1",
+    Two = "2",
+    Three = "3"
+}
+/**
+ * This field is required **if you're scheduling a recurring meeting of type** `2` to state which day(s) of the week the meeting should repeat. <br> <br> The value for this field could be a number between `1` to `7` in string format. For instance, if the meeting should recur on Sunday, provide `"1"` as the value of this field.<br><br> **Note:** If you would like the meeting to occur on multiple days of a week, you should provide comma separated values for this field. For instance, if the meeting should recur on Sundays and Tuesdays provide `"1,3"` as the value of this field.
+ *
+ * @remarks
+ *
+ *  <br>`1`  - Sunday. <br>`2` - Monday.<br>`3` - Tuesday.<br>`4` -  Wednesday.<br>`5` -  Thursday.<br>`6` - Friday.<br>`7` - Saturday.
+ */
+export declare enum Meeting200ApplicationJSONRecurrenceWeeklyDaysEnum {
+    One = "1",
+    Two = "2",
+    Three = "3",
+    Four = "4",
+    Five = "5",
+    Six = "6",
+    Seven = "7"
+}
+/**
+ * Recurrence object. Use this object only for a meeting with type `8` i.e., a recurring meeting with fixed time.
+ */
+export declare class Meeting200ApplicationJSONRecurrence extends SpeakeasyBase {
+    /**
+     * Select the final date on which the meeting will recur before it is canceled. Should be in UTC time, such as 2017-11-25T12:00:00Z. (Cannot be used with "end_times".)
+     */
+    endDateTime?: Date;
+    /**
+     * Select how many times the meeting should recur before it is canceled. (Cannot be used with "end_date_time".)
+     */
+    endTimes?: number;
+    /**
+     * Use this field **only if you're scheduling a recurring meeting of type** `3` to state which day in a month, the meeting should recur. The value range is from 1 to 31.
+     *
+     * @remarks
+     *
+     * For instance, if you would like the meeting to recur on 23rd of each month, provide `23` as the value of this field and `1` as the value of the `repeat_interval` field. Instead, if you would like the meeting to recur every three months, on 23rd of the month, change the value of the `repeat_interval` field to `3`.
+     */
+    monthlyDay?: number;
+    /**
+     * Use this field **only if you're scheduling a recurring meeting of type** `3` to state the week of the month when the meeting should recur. If you use this field, **you must also use the `monthly_week_day` field to state the day of the week when the meeting should recur.** <br>`-1` - Last week of the month.<br>`1` - First week of the month.<br>`2` - Second week of the month.<br>`3` - Third week of the month.<br>`4` - Fourth week of the month.
+     */
+    monthlyWeek?: Meeting200ApplicationJSONRecurrenceMonthlyWeekEnum;
+    /**
+     * Use this field **only if you're scheduling a recurring meeting of type** `3` to state a specific day in a week when the monthly meeting should recur. To use this field, you must also use the `monthly_week` field.
+     *
+     * @remarks
+     *
+     * <br>`1` - Sunday.<br>`2` - Monday.<br>`3` - Tuesday.<br>`4` -  Wednesday.<br>`5` - Thursday.<br>`6` - Friday.<br>`7` - Saturday.
+     */
+    monthlyWeekDay?: Meeting200ApplicationJSONRecurrenceMonthlyWeekDayEnum;
+    /**
+     * Define the interval at which the meeting should recur. For instance, if you would like to schedule a meeting that recurs every two months, you must set the value of this field as `2` and the value of the `type` parameter as `3`.
+     *
+     * @remarks
+     *
+     * For a daily meeting, the maximum interval you can set is `90` days. For a weekly meeting the maximum interval that you can set is  of `12` weeks. For a monthly meeting, there is a maximum of `3` months.
+     *
+     *
+     */
+    repeatInterval?: number;
+    /**
+     * Recurrence meeting types:<br>`1` - Daily.<br>`2` - Weekly.<br>`3` - Monthly.
+     */
+    type: Meeting200ApplicationJSONRecurrenceTypeEnum;
+    /**
+     * This field is required **if you're scheduling a recurring meeting of type** `2` to state which day(s) of the week the meeting should repeat. <br> <br> The value for this field could be a number between `1` to `7` in string format. For instance, if the meeting should recur on Sunday, provide `"1"` as the value of this field.<br><br> **Note:** If you would like the meeting to occur on multiple days of a week, you should provide comma separated values for this field. For instance, if the meeting should recur on Sundays and Tuesdays provide `"1,3"` as the value of this field.
+     *
+     * @remarks
+     *
+     *  <br>`1`  - Sunday. <br>`2` - Monday.<br>`3` - Tuesday.<br>`4` -  Wednesday.<br>`5` -  Thursday.<br>`6` - Friday.<br>`7` - Saturday.
+     */
+    weeklyDays?: Meeting200ApplicationJSONRecurrenceWeeklyDaysEnum;
+}
+/**
+ * Enable registration and set approval for the registration. Note that this feature requires the host to be of **Licensed** user type. **Registration cannot be enabled for a basic user.** <br><br>
+ *
+ * @remarks
+ *
+ * `0` - Automatically approve.<br>`1` - Manually approve.<br>`2` - No registration required.
+ */
+export declare enum Meeting200ApplicationJSONSettingsApprovalTypeEnum {
+    Zero = "0",
+    One = "1",
+    Two = "2"
+}
+/**
+ * Specify whether to allow users from specific regions to join this meeting; or block users from specific regions from joining this meeting. <br><br>
+ *
+ * @remarks
+ * `approve`: Allow users from specific regions/countries to join this meeting. If this setting is selected, the approved regions/countries must be included in the `approved_list`.<br><br>
+ * `deny`: Block users from specific regions/countries from joining this meeting. If this setting is selected, the approved regions/countries must be included in the `denied_list`
+ */
+export declare enum Meeting200ApplicationJSONSettingsApprovedOrDeniedCountriesOrRegionsMethodEnum {
+    Approve = "approve",
+    Deny = "deny"
+}
+/**
+ * Approve or block users from specific regions/countries from joining this meeting.
+ *
+ * @remarks
+ *
+ */
+export declare class Meeting200ApplicationJSONSettingsApprovedOrDeniedCountriesOrRegions extends SpeakeasyBase {
+    /**
+     * List of countries/regions from where participants can join this meeting.
+     */
+    approvedList?: string[];
+    /**
+     * List of countries/regions from where participants can not join this meeting.
+     */
+    deniedList?: string[];
+    /**
+     * `true`: Setting enabled to either allow users or block users from specific regions to join your meetings. <br>
+     *
+     * @remarks
+     *
+     * `false`: Setting disabled.
+     */
+    enable?: boolean;
+    /**
+     * Specify whether to allow users from specific regions to join this meeting; or block users from specific regions from joining this meeting. <br><br>
+     *
+     * @remarks
+     * `approve`: Allow users from specific regions/countries to join this meeting. If this setting is selected, the approved regions/countries must be included in the `approved_list`.<br><br>
+     * `deny`: Block users from specific regions/countries from joining this meeting. If this setting is selected, the approved regions/countries must be included in the `denied_list`
+     */
+    method?: Meeting200ApplicationJSONSettingsApprovedOrDeniedCountriesOrRegionsMethodEnum;
+}
+/**
+ * Determine how participants can join the audio portion of the meeting.<br>`both` - Both Telephony and VoIP.<br>`telephony` - Telephony only.<br>`voip` - VoIP only.
+ */
+export declare enum Meeting200ApplicationJSONSettingsAudioEnum {
+    Both = "both",
+    Telephony = "telephony",
+    Voip = "voip"
+}
+export declare class Meeting200ApplicationJSONSettingsAuthenticationException extends SpeakeasyBase {
+    /**
+     * Email address of the participant.
+     */
+    email?: string;
+    /**
+     * Name of the participant.
+     */
+    name?: string;
+}
+/**
+ * Automatic recording:<br>`local` - Record on local.<br>`cloud` -  Record on cloud.<br>`none` - Disabled.
+ */
+export declare enum Meeting200ApplicationJSONSettingsAutoRecordingEnum {
+    Local = "local",
+    Cloud = "cloud",
+    None = "none"
+}
+export declare class Meeting200ApplicationJSONSettingsBreakoutRoomRooms extends SpeakeasyBase {
+    /**
+     * Name of the breakout room.
+     */
+    name?: string;
+    /**
+     * Email addresses of the participants who are to be assigned to the breakout room.
+     */
+    participants?: string[];
+}
+/**
+ * Setting to [pre-assign breakout rooms](https://support.zoom.us/hc/en-us/articles/360032752671-Pre-assigning-participants-to-breakout-rooms#h_36f71353-4190-48a2-b999-ca129861c1f4).
+ */
+export declare class Meeting200ApplicationJSONSettingsBreakoutRoom extends SpeakeasyBase {
+    /**
+     * Set the value of this field to `true` if you would like to enable the [breakout room pre-assign](https://support.zoom.us/hc/en-us/articles/360032752671-Pre-assigning-participants-to-breakout-rooms#h_36f71353-4190-48a2-b999-ca129861c1f4) option.
+     */
+    enable?: boolean;
+    /**
+     * Create room(s).
+     */
+    rooms?: Meeting200ApplicationJSONSettingsBreakoutRoomRooms[];
+}
+export declare class Meeting200ApplicationJSONSettingsCustomKeys extends SpeakeasyBase {
+    /**
+     * Custom key associated with the user.
+     */
+    key?: string;
+    /**
+     * Value of the custom key associated with the user.
+     */
+    value?: string;
+}
+/**
+ * Choose between enhanced encryption and [end-to-end encryption](https://support.zoom.us/hc/en-us/articles/360048660871) when starting or a meeting. When using end-to-end encryption, several features (e.g. cloud recording, phone/SIP/H.323 dial-in) will be **automatically disabled**. <br><br>The value of this field can be one of the following:<br>
+ *
+ * @remarks
+ * `enhanced_encryption`: Enhanced encryption. Encryption is stored in the cloud if you enable this option. <br>
+ *
+ * `e2ee`: [End-to-end encryption](https://support.zoom.us/hc/en-us/articles/360048660871). The encryption key is stored in your local device and can not be obtained by anyone else. Enabling this setting also **disables** the following features: join before host, cloud recording, streaming, live transcription, breakout rooms, polling, 1:1 private chat, and meeting reactions.
+ */
+export declare enum Meeting200ApplicationJSONSettingsEncryptionTypeEnum {
+    EnhancedEncryption = "enhanced_encryption",
+    E2ee = "e2ee"
+}
+/**
+ * Type of number.
+ */
+export declare enum Meeting200ApplicationJSONSettingsGlobalDialInNumbersTypeEnum {
+    Toll = "toll",
+    Tollfree = "tollfree"
+}
+export declare class Meeting200ApplicationJSONSettingsGlobalDialInNumbers extends SpeakeasyBase {
+    /**
+     * City of the number, if any. For example, Chicago.
+     */
+    city?: string;
+    /**
+     * Country code. For example, BR.
+     */
+    country?: string;
+    /**
+     * Full name of country. For example, Brazil.
+     */
+    countryName?: string;
+    /**
+     * Phone number. For example, +1 2332357613.
+     */
+    number?: string;
+    /**
+     * Type of number.
+     */
+    type?: Meeting200ApplicationJSONSettingsGlobalDialInNumbersTypeEnum;
+}
+/**
+ * If the value of "join_before_host" field is set to true, this field can be used to indicate time limits within which a participant may join a meeting before a host. The value of this field can be one of the following:
+ *
+ * @remarks
+ *
+ * *  `0`: Allow participant to join anytime.
+ * *  `5`: Allow participant to join 5 minutes before meeting start time.
+ *  * `10`: Allow participant to join 10 minutes before meeting start time.
+ */
+export declare enum Meeting200ApplicationJSONSettingsJbhTimeEnum {
+    Zero = "0",
+    Five = "5",
+    Ten = "10"
+}
+export declare class Meeting200ApplicationJSONSettingsLanguageInterpretationInterpreters extends SpeakeasyBase {
+    /**
+     * Email address of the interpreter.
+     */
+    email?: string;
+    /**
+     * Languages for interpretation. The string must contain two [country Ids](https://marketplace.zoom.us/docs/api-reference/other-references/abbreviation-lists#countries) separated by a comma.
+     *
+     * @remarks
+     *
+     * For example, if the language is to be interpreted from English to Chinese, the value of this field should be "US,CN".
+     */
+    languages?: string;
+}
+export declare class Meeting200ApplicationJSONSettingsLanguageInterpretation extends SpeakeasyBase {
+    enable?: boolean;
+    /**
+     * Information associated with the interpreter.
+     */
+    interpreters?: Meeting200ApplicationJSONSettingsLanguageInterpretationInterpreters[];
+}
+/**
+ * Registration type. Used for recurring meeting with fixed time only. <br>`1` Attendees register once and can attend any of the occurrences.<br>`2` Attendees need to register for each occurrence to attend.<br>`3` Attendees register once and can choose one or more occurrences to attend.
+ */
+export declare enum Meeting200ApplicationJSONSettingsRegistrationTypeEnum {
+    One = "1",
+    Two = "2",
+    Three = "3"
+}
+/**
+ * Meeting settings.
+ */
+export declare class Meeting200ApplicationJSONSettings extends SpeakeasyBase {
+    /**
+     * Allow attendees to join the meeting from multiple devices. This setting only works for meetings that require [registration](https://support.zoom.us/hc/en-us/articles/211579443-Setting-up-registration-for-a-meeting).
+     */
+    allowMultipleDevices?: boolean;
+    /**
+     * Alternative host's emails or IDs: multiple values are separated by a semicolon.
+     */
+    alternativeHosts?: string;
+    /**
+     * Flag to determine whether to send email notifications to alternative hosts, default value is true.
+     */
+    alternativeHostsEmailNotification?: boolean;
+    /**
+     * Enable registration and set approval for the registration. Note that this feature requires the host to be of **Licensed** user type. **Registration cannot be enabled for a basic user.** <br><br>
+     *
+     * @remarks
+     *
+     * `0` - Automatically approve.<br>`1` - Manually approve.<br>`2` - No registration required.
+     */
+    approvalType?: Meeting200ApplicationJSONSettingsApprovalTypeEnum;
+    /**
+     * Approve or block users from specific regions/countries from joining this meeting.
+     *
+     * @remarks
+     *
+     */
+    approvedOrDeniedCountriesOrRegions?: Meeting200ApplicationJSONSettingsApprovedOrDeniedCountriesOrRegions;
+    /**
+     * Determine how participants can join the audio portion of the meeting.<br>`both` - Both Telephony and VoIP.<br>`telephony` - Telephony only.<br>`voip` - VoIP only.
+     */
+    audio?: Meeting200ApplicationJSONSettingsAudioEnum;
+    /**
+     * If user has configured ["Sign Into Zoom with Specified Domains"](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars#h_5c0df2e1-cfd2-469f-bb4a-c77d7c0cca6f) option, this will list the domains that are authenticated.
+     */
+    authenticationDomains?: string;
+    /**
+     * The participants added here will receive unique meeting invite links and bypass authentication.
+     */
+    authenticationException?: Meeting200ApplicationJSONSettingsAuthenticationException[];
+    /**
+     * Authentication name set in the [authentication profile](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars#h_5c0df2e1-cfd2-469f-bb4a-c77d7c0cca6f).
+     */
+    authenticationName?: string;
+    /**
+     * Meeting authentication option id.
+     */
+    authenticationOption?: string;
+    /**
+     * Automatic recording:<br>`local` - Record on local.<br>`cloud` -  Record on cloud.<br>`none` - Disabled.
+     */
+    autoRecording?: Meeting200ApplicationJSONSettingsAutoRecordingEnum;
+    /**
+     * Setting to [pre-assign breakout rooms](https://support.zoom.us/hc/en-us/articles/360032752671-Pre-assigning-participants-to-breakout-rooms#h_36f71353-4190-48a2-b999-ca129861c1f4).
+     */
+    breakoutRoom?: Meeting200ApplicationJSONSettingsBreakoutRoom;
+    /**
+     * Close registration after event date
+     */
+    closeRegistration?: boolean;
+    /**
+     * Host meeting in China.
+     */
+    cnMeeting?: boolean;
+    /**
+     * Contact email for registration
+     */
+    contactEmail?: string;
+    /**
+     * Contact name for registration
+     */
+    contactName?: string;
+    /**
+     * Custom keys and values assigned to the meeting.
+     */
+    customKeys?: Meeting200ApplicationJSONSettingsCustomKeys[];
+    /**
+     * Choose between enhanced encryption and [end-to-end encryption](https://support.zoom.us/hc/en-us/articles/360048660871) when starting or a meeting. When using end-to-end encryption, several features (e.g. cloud recording, phone/SIP/H.323 dial-in) will be **automatically disabled**. <br><br>The value of this field can be one of the following:<br>
+     *
+     * @remarks
+     * `enhanced_encryption`: Enhanced encryption. Encryption is stored in the cloud if you enable this option. <br>
+     *
+     * `e2ee`: [End-to-end encryption](https://support.zoom.us/hc/en-us/articles/360048660871). The encryption key is stored in your local device and can not be obtained by anyone else. Enabling this setting also **disables** the following features: join before host, cloud recording, streaming, live transcription, breakout rooms, polling, 1:1 private chat, and meeting reactions.
+     */
+    encryptionType?: Meeting200ApplicationJSONSettingsEncryptionTypeEnum;
+    /**
+     * Only signed in users can join this meeting.
+     *
+     * @remarks
+     *
+     * **This field is deprecated and will not be supported in the future.**  <br><br>As an alternative, use the "meeting_authentication", "authentication_option" and "authentication_domains" fields to understand the [authentication configurations](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars) set for the meeting.
+     */
+    enforceLogin?: boolean;
+    /**
+     * Only signed in users with specified domains can join meetings.
+     *
+     * @remarks
+     *
+     * **This field is deprecated and will not be supported in the future.**  <br><br>As an alternative, use the "meeting_authentication", "authentication_option" and "authentication_domains" fields to understand the [authentication configurations](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars) set for the meeting.
+     */
+    enforceLoginDomains?: string;
+    /**
+     * List of global dial-in countries
+     */
+    globalDialInCountries?: string[];
+    /**
+     * Global Dial-in Countries/Regions
+     */
+    globalDialInNumbers?: Meeting200ApplicationJSONSettingsGlobalDialInNumbers[];
+    /**
+     * Start video when the host joins the meeting.
+     */
+    hostVideo?: boolean;
+    /**
+     * Host meeting in India.
+     */
+    inMeeting?: boolean;
+    /**
+     * If the value of "join_before_host" field is set to true, this field can be used to indicate time limits within which a participant may join a meeting before a host. The value of this field can be one of the following:
+     *
+     * @remarks
+     *
+     * *  `0`: Allow participant to join anytime.
+     * *  `5`: Allow participant to join 5 minutes before meeting start time.
+     *  * `10`: Allow participant to join 10 minutes before meeting start time.
+     */
+    jbhTime?: Meeting200ApplicationJSONSettingsJbhTimeEnum;
+    /**
+     * Allow participants to join the meeting before the host starts the meeting. Only used for scheduled or recurring meetings.
+     */
+    joinBeforeHost?: boolean;
+    languageInterpretation?: Meeting200ApplicationJSONSettingsLanguageInterpretation;
+    /**
+     * `true`- Only authenticated users can join meetings.
+     */
+    meetingAuthentication?: boolean;
+    /**
+     * Mute participants upon entry.
+     */
+    muteUponEntry?: boolean;
+    /**
+     * Start video when participants join the meeting.
+     */
+    participantVideo?: boolean;
+    /**
+     * Send confirmation email to registrants upon successful registration.
+     */
+    registrantsConfirmationEmail?: boolean;
+    /**
+     * Send email notifications to registrants about approval, cancellation, denial of the registration. The value of this field must be set to true in order to use the `registrants_confirmation_email` field.
+     */
+    registrantsEmailNotification?: boolean;
+    /**
+     * Registration type. Used for recurring meeting with fixed time only. <br>`1` Attendees register once and can attend any of the occurrences.<br>`2` Attendees need to register for each occurrence to attend.<br>`3` Attendees register once and can choose one or more occurrences to attend.
+     */
+    registrationType?: Meeting200ApplicationJSONSettingsRegistrationTypeEnum;
+    /**
+     * Show social share buttons on the meeting registration page.
+     *
+     * @remarks
+     * This setting only works for meetings that require [registration](https://support.zoom.us/hc/en-us/articles/211579443-Setting-up-registration-for-a-meeting).
+     */
+    showShareButton?: boolean;
+    /**
+     * Use a personal meeting ID. Only used for scheduled meetings and recurring meetings with no fixed time.
+     */
+    usePmi?: boolean;
+    /**
+     * Enable waiting room
+     */
+    waitingRoom?: boolean;
+    /**
+     * Add watermark when viewing a shared screen.
+     */
+    watermark?: boolean;
+}
+/**
+ * Meeting status
+ */
+export declare enum Meeting200ApplicationJSONStatusEnum {
+    Waiting = "waiting",
+    Started = "started"
+}
+export declare class Meeting200ApplicationJSONTrackingFields extends SpeakeasyBase {
+    /**
+     * Label of the tracking field.
+     */
+    field?: string;
+    /**
+     * Value for the field.
+     */
+    value?: string;
+    /**
+     * Indicates whether the [tracking field](https://support.zoom.us/hc/en-us/articles/115000293426-Scheduling-Tracking-Fields) is visible in the meeting scheduling options in the Zoom Web Portal or not.
+     *
+     * @remarks
+     *
+     * `true`: Tracking field is visible. <br>
+     *
+     * `false`: Tracking field is not visible to the users when they look at the meeting details in the Zoom Web Portal but the field was used while scheduling this meeting via API. An invisible tracking field can be used by users while scheduling meetings via API only.
+     */
+    visible?: boolean;
+}
+/**
+ * Meeting Types:<br>`1` - Instant meeting.<br>`2` - Scheduled meeting.<br>`3` - Recurring meeting with no fixed time.<br>`4` - PMI Meeting<br>
+ *
+ * @remarks
+ * `8` - Recurring meeting with a fixed time.
+ */
+export declare enum Meeting200ApplicationJSONTypeEnum {
+    One = "1",
+    Two = "2",
+    Three = "3",
+    Eight = "8"
+}
+/**
+ * Meeting object.
+ */
+export declare class Meeting200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Meeting description
+     */
+    agenda?: string;
+    /**
+     * Unique identifier of the scheduler who scheduled this meeting on behalf of the host. This field is only returned if you used "schedule_for" option in the [Create a Meeting API request](https://marketplace.zoom.us/docs/api-reference/zoom-api/meetings/meetingcreate).
+     */
+    assistantId?: string;
+    /**
+     * Time of creation.
+     */
+    createdAt?: Date;
+    /**
+     * Meeting duration.
+     */
+    duration?: number;
+    /**
+     * Encrypted passcode for third party endpoints (H323/SIP).
+     */
+    encryptedPassword?: string;
+    /**
+     * H.323/SIP room system passcode.
+     */
+    h323Password?: string;
+    /**
+     * Email address of the meeting host.
+     */
+    hostEmail?: string;
+    /**
+     * ID of the user who is set as host of meeting.
+     */
+    hostId?: string;
+    /**
+     * [Meeting ID](https://support.zoom.us/hc/en-us/articles/201362373-What-is-a-Meeting-ID-): Unique identifier of the meeting in "**long**" format(represented as int64 data type in JSON), also known as the meeting number.
+     */
+    id?: number;
+    /**
+     * URL for participants to join the meeting. This URL should only be shared with users that you would like to invite for the meeting.
+     */
+    joinUrl?: string;
+    /**
+     * Array of occurrence objects.
+     */
+    occurrences?: Meeting200ApplicationJSONOccurrences[];
+    /**
+     * Meeting passcode.
+     */
+    password?: string;
+    /**
+     * Personal Meeting Id. Only used for scheduled meetings and recurring meetings with no fixed time.
+     */
+    pmi?: number;
+    /**
+     * Recurrence object. Use this object only for a meeting with type `8` i.e., a recurring meeting with fixed time.
+     */
+    recurrence?: Meeting200ApplicationJSONRecurrence;
+    /**
+     * Meeting settings.
+     */
+    settings?: Meeting200ApplicationJSONSettings;
+    /**
+     * Meeting start time in GMT/UTC. Start time will not be returned if the meeting is an **instant** meeting.
+     *
+     * @remarks
+     *
+     */
+    startTime?: Date;
+    /**
+     * <br><aside>The <code>start_url</code> of a Meeting is a URL using which a host or an alternative host can start the Meeting.
+     *
+     * @remarks
+     *
+     * The expiration time for the <code>start_url</code> field listed in the response of [Create a Meeting API](https://marketplace.zoom.us/docs/api-reference/zoom-api/meetings/meetingcreate) is two hours for all regular users.
+     *
+     * For users created using the <code>custCreate</code> option via the [Create Users](https://marketplace.zoom.us/docs/api-reference/zoom-api/users/usercreate) API, the expiration time of the <code>start_url</code> field is 90 days.
+     *
+     * For security reasons, to retrieve the updated value for the <code>start_url</code> field programmatically (after the expiry time), you must call the [Retrieve a Meeting API](https://marketplace.zoom.us/docs/api-reference/zoom-api/meetings/meeting) and refer to the value of the <code>start_url</code> field in the response.</aside><br>This URL should only be used by the host of the meeting and **should not be shared with anyone other than the host** of the meeting as anyone with this URL will be able to login to the Zoom Client as the host of the meeting.
+     */
+    startUrl?: string;
+    /**
+     * Meeting status
+     */
+    status?: Meeting200ApplicationJSONStatusEnum;
+    /**
+     * Timezone to format the meeting start time on the .
+     */
+    timezone?: string;
+    /**
+     * Meeting topic.
+     */
+    topic?: string;
+    /**
+     * Tracking fields
+     */
+    trackingFields?: Meeting200ApplicationJSONTrackingFields[];
+    /**
+     * Meeting Types:<br>`1` - Instant meeting.<br>`2` - Scheduled meeting.<br>`3` - Recurring meeting with no fixed time.<br>`4` - PMI Meeting<br>
+     *
+     * @remarks
+     * `8` - Recurring meeting with a fixed time.
+     */
+    type?: Meeting200ApplicationJSONTypeEnum;
+    /**
+     * Unique meeting ID. Each meeting instance will generate its own Meeting UUID (i.e., after a meeting ends, a new UUID will be generated for the next instance of the meeting). You can retrieve a list of UUIDs from past meeting instances using [this API](https://marketplace.zoom.us/docs/api-reference/zoom-api/meetings/pastmeetings) . Please double encode your UUID when using it for API calls if the UUID begins with a '/'or contains '//' in it.
+     *
+     * @remarks
+     *
+     */
+    uuid?: string;
 }
 export declare class MeetingResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    meeting200ApplicationJSONObject?: Meeting200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * **HTTP Status Code:** `200`<br>
+     *
+     * @remarks
+     * Meeting object returned.
+     */
+    meeting200ApplicationJSONObject?: Meeting200ApplicationJSON;
 }

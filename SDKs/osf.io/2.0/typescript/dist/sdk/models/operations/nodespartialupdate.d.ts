@@ -1,12 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class NodesPartialUpdatePathParams extends SpeakeasyBase {
-    nodeId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class NodesPartialUpdateRequest extends SpeakeasyBase {
-    pathParams: NodesPartialUpdatePathParams;
-    request: Record<string, any>;
+    requestBody: Record<string, any>;
+    /**
+     * The unique identifier of the node.
+     */
+    nodeId: string;
 }
 export declare class NodesPartialUpdateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

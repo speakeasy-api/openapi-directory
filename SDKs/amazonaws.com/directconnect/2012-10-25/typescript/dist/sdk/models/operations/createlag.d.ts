@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum CreateLagXAmzTargetEnum {
     OvertureServiceCreateLag = "OvertureService.CreateLag"
 }
-export declare class CreateLagHeaders extends SpeakeasyBase {
+export declare class CreateLagRequest extends SpeakeasyBase {
+    createLagRequest: shared.CreateLagRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class CreateLagHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: CreateLagXAmzTargetEnum;
 }
-export declare class CreateLagRequest extends SpeakeasyBase {
-    headers: CreateLagHeaders;
-    request: shared.CreateLagRequest;
-}
 export declare class CreateLagResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * DirectConnectClientException
+     */
     directConnectClientException?: any;
+    /**
+     * DirectConnectServerException
+     */
     directConnectServerException?: any;
+    /**
+     * DuplicateTagKeysException
+     */
     duplicateTagKeysException?: any;
+    /**
+     * Success
+     */
     lag?: shared.Lag;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyTagsException
+     */
     tooManyTagsException?: any;
 }

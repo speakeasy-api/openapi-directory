@@ -1,4 +1,7 @@
-export declare enum MessageCode400AisEnum {
+/**
+ * Message codes defined for AIS for HTTP Error code 400 (BAD_REQUEST).
+ */
+export declare enum MessageCode400AISEnum {
     FormatError = "FORMAT_ERROR",
     ParameterNotConsistent = "PARAMETER_NOT_CONSISTENT",
     ParameterNotSupported = "PARAMETER_NOT_SUPPORTED",

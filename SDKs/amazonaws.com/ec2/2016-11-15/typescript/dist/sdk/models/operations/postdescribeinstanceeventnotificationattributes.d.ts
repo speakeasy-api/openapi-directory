@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeInstanceEventNotificationAttributesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeInstanceEventNotificationAttributesActionEnum {
     DescribeInstanceEventNotificationAttributes = "DescribeInstanceEventNotificationAttributes"
 }
-export declare enum PostDescribeInstanceEventNotificationAttributesVersionEnum {
+export declare enum POSTDescribeInstanceEventNotificationAttributesVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDescribeInstanceEventNotificationAttributesQueryParams extends SpeakeasyBase {
-    action: PostDescribeInstanceEventNotificationAttributesActionEnum;
-    version: PostDescribeInstanceEventNotificationAttributesVersionEnum;
-}
-export declare class PostDescribeInstanceEventNotificationAttributesHeaders extends SpeakeasyBase {
+export declare class POSTDescribeInstanceEventNotificationAttributesRequest extends SpeakeasyBase {
+    action: POSTDescribeInstanceEventNotificationAttributesActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDescribeInstanceEventNotificationAttributesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDescribeInstanceEventNotificationAttributesHeaders exte
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeInstanceEventNotificationAttributesRequest extends SpeakeasyBase {
-    queryParams: PostDescribeInstanceEventNotificationAttributesQueryParams;
-    headers: PostDescribeInstanceEventNotificationAttributesHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeInstanceEventNotificationAttributesResponse extends SpeakeasyBase {
+export declare class POSTDescribeInstanceEventNotificationAttributesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

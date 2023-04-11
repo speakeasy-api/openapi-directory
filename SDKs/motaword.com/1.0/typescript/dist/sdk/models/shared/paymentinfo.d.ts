@@ -10,9 +10,13 @@ export declare class PaymentInfoCorporate extends SpeakeasyBase {
     contactEmailAddress?: string;
     paymentCode?: string;
 }
+/**
+ * Returns billing and saved card information for user, and their corporate if present.
+ */
 export declare class PaymentInfo extends SpeakeasyBase {
     billing?: BillingAddress;
     card?: CreditCard;
+    cards?: CreditCard[];
     corporate?: PaymentInfoCorporate;
     sharedCard?: CreditCard;
 }

@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Rule violated.
+ */
 export declare enum MobileFriendlyIssueRuleEnum {
     MobileFriendlyRuleUnspecified = "MOBILE_FRIENDLY_RULE_UNSPECIFIED",
     UsesIncompatiblePlugins = "USES_INCOMPATIBLE_PLUGINS",
@@ -10,7 +13,10 @@ export declare enum MobileFriendlyIssueRuleEnum {
 }
 /**
  * Mobile-friendly issue.
-**/
+ */
 export declare class MobileFriendlyIssue extends SpeakeasyBase {
+    /**
+     * Rule violated.
+     */
     rule?: MobileFriendlyIssueRuleEnum;
 }

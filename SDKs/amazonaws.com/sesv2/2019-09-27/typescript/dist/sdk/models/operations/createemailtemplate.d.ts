@@ -1,5 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CreateEmailTemplateHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+/**
+ * The content of the email, composed of a subject line, an HTML part, and a text-only part.
+ */
+export declare class CreateEmailTemplateRequestBodyTemplateContent extends SpeakeasyBase {
+    html?: string;
+    subject?: string;
+    text?: string;
+}
+export declare class CreateEmailTemplateRequestBody extends SpeakeasyBase {
+    /**
+     * The content of the email, composed of a subject line, an HTML part, and a text-only part.
+     */
+    templateContent: CreateEmailTemplateRequestBodyTemplateContent;
+    /**
+     * The name of the template. You will refer to this name when you send email using the <code>SendTemplatedEmail</code> or <code>SendBulkTemplatedEmail</code> operations.
+     */
+    templateName: string;
+}
+export declare class CreateEmailTemplateRequest extends SpeakeasyBase {
+    requestBody: CreateEmailTemplateRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -8,28 +28,28 @@ export declare class CreateEmailTemplateHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-/**
- * The content of the email, composed of a subject line, an HTML part, and a text-only part.
-**/
-export declare class CreateEmailTemplateRequestBodyTemplateContent extends SpeakeasyBase {
-    html?: string;
-    subject?: string;
-    text?: string;
-}
-export declare class CreateEmailTemplateRequestBody extends SpeakeasyBase {
-    templateContent: CreateEmailTemplateRequestBodyTemplateContent;
-    templateName: string;
-}
-export declare class CreateEmailTemplateRequest extends SpeakeasyBase {
-    headers: CreateEmailTemplateHeaders;
-    request: CreateEmailTemplateRequestBody;
-}
 export declare class CreateEmailTemplateResponse extends SpeakeasyBase {
+    /**
+     * AlreadyExistsException
+     */
     alreadyExistsException?: any;
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     createEmailTemplateResponse?: Record<string, any>;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

@@ -1,0 +1,74 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { CardInfo } from "./cardinfo";
+/**
+ * The status of the payment instrument. If a status is not specified when creating a payment instrument, it is set to **Active** by default. However, there can be exceptions for cards based on the `card.formFactor` and the `issuingCountryCode`. For example, when issuing physical cards in the US, the default status is **Requested**.
+ *
+ * @remarks
+ *
+ * Possible values:
+ *
+ *  * **Active**:  The payment instrument is active and can be used to make payments.
+ *
+ *  * **Requested**: The payment instrument has been requested. This state is applicable for physical cards.
+ *
+ * * **Inactive**: The payment instrument is inactive and cannot be used to make payments.
+ *
+ *  * **Suspended**: The payment instrument is temporarily suspended and cannot be used to make payments.
+ *
+ *  * **Closed**: The payment instrument is permanently closed. This action cannot be undone.
+ *
+ * * **Stolen**
+ *
+ *  * **Lost**
+ *
+ *
+ */
+export declare enum PaymentInstrumentUpdateRequestStatusEnum {
+    Active = "Active",
+    Closed = "Closed",
+    Inactive = "Inactive",
+    Lost = "Lost",
+    Requested = "Requested",
+    Stolen = "Stolen",
+    Suspended = "Suspended",
+    Blocked = "blocked",
+    Discarded = "discarded"
+}
+export declare class PaymentInstrumentUpdateRequest extends SpeakeasyBase {
+    /**
+     * The unique identifier of the balance account associated with this payment instrument.
+     *
+     * @remarks
+     * >You can only change the balance account ID if the payment instrument has **Requested** or **Inactive** status.
+     */
+    balanceAccountId?: string;
+    card?: CardInfo;
+    /**
+     * The status of the payment instrument. If a status is not specified when creating a payment instrument, it is set to **Active** by default. However, there can be exceptions for cards based on the `card.formFactor` and the `issuingCountryCode`. For example, when issuing physical cards in the US, the default status is **Requested**.
+     *
+     * @remarks
+     *
+     * Possible values:
+     *
+     *  * **Active**:  The payment instrument is active and can be used to make payments.
+     *
+     *  * **Requested**: The payment instrument has been requested. This state is applicable for physical cards.
+     *
+     * * **Inactive**: The payment instrument is inactive and cannot be used to make payments.
+     *
+     *  * **Suspended**: The payment instrument is temporarily suspended and cannot be used to make payments.
+     *
+     *  * **Closed**: The payment instrument is permanently closed. This action cannot be undone.
+     *
+     * * **Stolen**
+     *
+     *  * **Lost**
+     *
+     *
+     */
+    status?: PaymentInstrumentUpdateRequestStatusEnum;
+    /**
+     * Comment for the status of the payment instrument.
+     */
+    statusComment?: string;
+}

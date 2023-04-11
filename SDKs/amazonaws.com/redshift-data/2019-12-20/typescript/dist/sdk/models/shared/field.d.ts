@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * A data value in a column.
-**/
+ */
 export declare class Field extends SpeakeasyBase {
     blobValue?: string;
     booleanValue?: boolean;

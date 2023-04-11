@@ -1,11 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { HrefType } from "./hreftype";
-import { TppMessage403Piis } from "./tppmessage403piis";
+import { TppMessage403PIIS } from "./tppmessage403piis";
 /**
  * NextGen specific definition of reporting error information in case of a HTTP error code 403.
  *
-**/
-export declare class Error403NgPiis extends SpeakeasyBase {
+ * @remarks
+ *
+ */
+export declare class Error403NGPIIS extends SpeakeasyBase {
+    /**
+     * A _link object with all availabel link types.
+     *
+     * @remarks
+     *
+     */
     links?: Record<string, HrefType>;
-    tppMessages?: TppMessage403Piis[];
+    tppMessages?: TppMessage403PIIS[];
 }

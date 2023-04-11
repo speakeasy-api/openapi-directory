@@ -1,30 +1,34 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { DmsSslModeValueEnum } from "./dmssslmodevalueenum";
 import { DmsTransferSettings } from "./dmstransfersettings";
 import { DocDbSettings } from "./docdbsettings";
 import { DynamoDbSettings } from "./dynamodbsettings";
 import { ElasticsearchSettings } from "./elasticsearchsettings";
-import { ReplicationEndpointTypeValueEnum } from "./replicationendpointtypevalueenum";
-import { IbmDb2Settings } from "./ibmdb2settings";
+import { GcpMySQLSettings } from "./gcpmysqlsettings";
+import { IBMDb2Settings } from "./ibmdb2settings";
 import { KafkaSettings } from "./kafkasettings";
 import { KinesisSettings } from "./kinesissettings";
-import { MicrosoftSqlServerSettings } from "./microsoftsqlserversettings";
+import { MicrosoftSQLServerSettings } from "./microsoftsqlserversettings";
 import { MongoDbSettings } from "./mongodbsettings";
-import { MySqlSettings } from "./mysqlsettings";
+import { MySQLSettings } from "./mysqlsettings";
 import { NeptuneSettings } from "./neptunesettings";
 import { OracleSettings } from "./oraclesettings";
-import { PostgreSqlSettings } from "./postgresqlsettings";
+import { PostgreSQLSettings } from "./postgresqlsettings";
 import { RedisSettings } from "./redissettings";
 import { RedshiftSettings } from "./redshiftsettings";
+import { ReplicationEndpointTypeValueEnum } from "./replicationendpointtypevalueenum";
 import { S3Settings } from "./s3settings";
-import { DmsSslModeValueEnum } from "./dmssslmodevalueenum";
 import { SybaseSettings } from "./sybasesettings";
 /**
  * <p>Describes an endpoint of a database instance in response to operations such as the following:</p> <ul> <li> <p> <code>CreateEndpoint</code> </p> </li> <li> <p> <code>DescribeEndpoint</code> </p> </li> <li> <p> <code>ModifyEndpoint</code> </p> </li> </ul>
-**/
+ */
 export declare class Endpoint extends SpeakeasyBase {
     certificateArn?: string;
     databaseName?: string;
     dmsTransferSettings?: DmsTransferSettings;
+    /**
+     * Provides information that defines a DocumentDB endpoint.
+     */
     docDbSettings?: DocDbSettings;
     dynamoDbSettings?: DynamoDbSettings;
     elasticsearchSettings?: ElasticsearchSettings;
@@ -36,17 +40,18 @@ export declare class Endpoint extends SpeakeasyBase {
     externalId?: string;
     externalTableDefinition?: string;
     extraConnectionAttributes?: string;
-    ibmDb2Settings?: IbmDb2Settings;
+    gcpMySQLSettings?: GcpMySQLSettings;
+    ibmDb2Settings?: IBMDb2Settings;
     kafkaSettings?: KafkaSettings;
     kinesisSettings?: KinesisSettings;
     kmsKeyId?: string;
-    microsoftSQLServerSettings?: MicrosoftSqlServerSettings;
+    microsoftSQLServerSettings?: MicrosoftSQLServerSettings;
     mongoDbSettings?: MongoDbSettings;
-    mySQLSettings?: MySqlSettings;
+    mySQLSettings?: MySQLSettings;
     neptuneSettings?: NeptuneSettings;
     oracleSettings?: OracleSettings;
     port?: number;
-    postgreSQLSettings?: PostgreSqlSettings;
+    postgreSQLSettings?: PostgreSQLSettings;
     redisSettings?: RedisSettings;
     redshiftSettings?: RedshiftSettings;
     s3Settings?: S3Settings;

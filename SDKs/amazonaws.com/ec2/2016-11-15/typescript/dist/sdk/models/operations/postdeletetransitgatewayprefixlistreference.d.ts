@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteTransitGatewayPrefixListReferenceActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteTransitGatewayPrefixListReferenceActionEnum {
     DeleteTransitGatewayPrefixListReference = "DeleteTransitGatewayPrefixListReference"
 }
-export declare enum PostDeleteTransitGatewayPrefixListReferenceVersionEnum {
+export declare enum POSTDeleteTransitGatewayPrefixListReferenceVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDeleteTransitGatewayPrefixListReferenceQueryParams extends SpeakeasyBase {
-    action: PostDeleteTransitGatewayPrefixListReferenceActionEnum;
-    version: PostDeleteTransitGatewayPrefixListReferenceVersionEnum;
-}
-export declare class PostDeleteTransitGatewayPrefixListReferenceHeaders extends SpeakeasyBase {
+export declare class POSTDeleteTransitGatewayPrefixListReferenceRequest extends SpeakeasyBase {
+    action: POSTDeleteTransitGatewayPrefixListReferenceActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteTransitGatewayPrefixListReferenceVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteTransitGatewayPrefixListReferenceHeaders extends 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteTransitGatewayPrefixListReferenceRequest extends SpeakeasyBase {
-    queryParams: PostDeleteTransitGatewayPrefixListReferenceQueryParams;
-    headers: PostDeleteTransitGatewayPrefixListReferenceHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteTransitGatewayPrefixListReferenceResponse extends SpeakeasyBase {
+export declare class POSTDeleteTransitGatewayPrefixListReferenceResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

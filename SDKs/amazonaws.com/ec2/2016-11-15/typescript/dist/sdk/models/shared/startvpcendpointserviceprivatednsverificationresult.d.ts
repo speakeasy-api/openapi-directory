@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class StartVpcEndpointServicePrivateDnsVerificationResult extends SpeakeasyBase {
-    returnValue?: Record<string, any>;
+    returnValue?: boolean;
 }

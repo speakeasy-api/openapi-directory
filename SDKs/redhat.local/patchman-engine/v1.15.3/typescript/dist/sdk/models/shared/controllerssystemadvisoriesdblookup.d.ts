@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ControllersSystemAdvisoriesDbLookup extends SpeakeasyBase {
+export declare class ControllersSystemAdvisoriesDBLookup extends SpeakeasyBase {
     advisoryType?: number;
     cveCount?: number;
     description?: string;

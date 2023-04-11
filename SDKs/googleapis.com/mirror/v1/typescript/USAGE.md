@@ -1,53 +1,61 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { MirrorAccountsInsertRequest, MirrorAccountsInsertResponse } from "openapi/src/sdk/models/operations";
+import {
+  MirrorAccountsInsertRequest,
+  MirrorAccountsInsertResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: MirrorAccountsInsertRequest = {
-  pathParams: {
-    accountName: "sit",
-    accountType: "voluptas",
-    userToken: "culpa",
-  },
-  queryParams: {
-    alt: "json",
-    fields: "consequuntur",
-    key: "dolor",
-    oauthToken: "expedita",
-    prettyPrint: true,
-    quotaUser: "fugit",
-    userIp: "et",
-  },
-  request: {
+  account: {
     authTokens: [
       {
-        authToken: "rerum",
-        type: "dicta",
+        authToken: "provident",
+        type: "distinctio",
+      },
+      {
+        authToken: "quibusdam",
+        type: "unde",
+      },
+      {
+        authToken: "nulla",
+        type: "corrupti",
       },
     ],
     features: [
-      "voluptatum",
+      "vel",
+      "error",
+      "deserunt",
+      "suscipit",
     ],
-    password: "et",
+    password: "iure",
     userData: [
       {
-        key: "dolorem",
-        value: "et",
+        key: "debitis",
+        value: "ipsa",
       },
       {
-        key: "voluptate",
-        value: "iste",
-      },
-      {
-        key: "vitae",
-        value: "totam",
+        key: "delectus",
+        value: "tempora",
       },
     ],
   },
+  accountName: "suscipit",
+  accountType: "molestiae",
+  alt: AltEnum.Json,
+  fields: "minus",
+  key: "placeat",
+  oauthToken: "voluptatum",
+  prettyPrint: false,
+  quotaUser: "iusto",
+  userIp: "excepturi",
+  userToken: "nisi",
 };
 
 sdk.accounts.mirrorAccountsInsert(req).then((res: MirrorAccountsInsertResponse | AxiosError) => {

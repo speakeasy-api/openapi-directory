@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Services {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,10 +9,11 @@ export declare class Services {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getV05HiServicesServiceId - Get bridge service details/profile by the serviceId provided.
+     * Get bridge service details/profile by the serviceId provided.
      *
+     * @remarks
      * This API is meant for displaying the bridge service details by the serviceId provided .
      *
-    **/
+     */
     getV05HiServicesServiceId(req: operations.GetV05HiServicesServiceIdRequest, config?: AxiosRequestConfig): Promise<operations.GetV05HiServicesServiceIdResponse>;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetRegexMatchSetXAmzTargetEnum {
-    Awswaf20150824GetRegexMatchSet = "AWSWAF_20150824.GetRegexMatchSet"
+    AWSWAF20150824GetRegexMatchSet = "AWSWAF_20150824.GetRegexMatchSet"
 }
-export declare class GetRegexMatchSetHeaders extends SpeakeasyBase {
+export declare class GetRegexMatchSetRequest extends SpeakeasyBase {
+    getRegexMatchSetRequest: shared.GetRegexMatchSetRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class GetRegexMatchSetHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetRegexMatchSetXAmzTargetEnum;
 }
-export declare class GetRegexMatchSetRequest extends SpeakeasyBase {
-    headers: GetRegexMatchSetHeaders;
-    request: shared.GetRegexMatchSetRequest;
-}
 export declare class GetRegexMatchSetResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getRegexMatchSetResponse?: shared.GetRegexMatchSetResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFInvalidAccountException
+     */
     wafInvalidAccountException?: any;
+    /**
+     * WAFNonexistentItemException
+     */
     wafNonexistentItemException?: any;
 }

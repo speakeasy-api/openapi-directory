@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetOrganizationConfigRuleDetailedStatusQueryParams extends SpeakeasyBase {
-    limit?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum GetOrganizationConfigRuleDetailedStatusXAmzTargetEnum {
     StarlingDoveServiceGetOrganizationConfigRuleDetailedStatus = "StarlingDoveService.GetOrganizationConfigRuleDetailedStatus"
 }
-export declare class GetOrganizationConfigRuleDetailedStatusHeaders extends SpeakeasyBase {
+export declare class GetOrganizationConfigRuleDetailedStatusRequest extends SpeakeasyBase {
+    getOrganizationConfigRuleDetailedStatusRequest: shared.GetOrganizationConfigRuleDetailedStatusRequest;
+    /**
+     * Pagination limit
+     */
+    limit?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,17 +23,28 @@ export declare class GetOrganizationConfigRuleDetailedStatusHeaders extends Spea
     xAmzSignedHeaders?: string;
     xAmzTarget: GetOrganizationConfigRuleDetailedStatusXAmzTargetEnum;
 }
-export declare class GetOrganizationConfigRuleDetailedStatusRequest extends SpeakeasyBase {
-    queryParams: GetOrganizationConfigRuleDetailedStatusQueryParams;
-    headers: GetOrganizationConfigRuleDetailedStatusHeaders;
-    request: shared.GetOrganizationConfigRuleDetailedStatusRequest;
-}
 export declare class GetOrganizationConfigRuleDetailedStatusResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getOrganizationConfigRuleDetailedStatusResponse?: shared.GetOrganizationConfigRuleDetailedStatusResponse;
+    /**
+     * InvalidLimitException
+     */
     invalidLimitException?: any;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * NoSuchOrganizationConfigRuleException
+     */
     noSuchOrganizationConfigRuleException?: any;
+    /**
+     * OrganizationAccessDeniedException
+     */
     organizationAccessDeniedException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

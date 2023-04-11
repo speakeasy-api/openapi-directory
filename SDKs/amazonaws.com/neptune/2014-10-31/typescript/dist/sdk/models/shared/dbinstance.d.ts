@@ -1,17 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbParameterGroupStatusList } from "./dbparametergroupstatuslist";
-import { DbSecurityGroupMembershipList } from "./dbsecuritygroupmembershiplist";
-import { DbSubnetGroup } from "./dbsubnetgroup";
+import { DBInstanceStatusInfoList } from "./dbinstancestatusinfolist";
+import { DBParameterGroupStatusList } from "./dbparametergroupstatuslist";
+import { DBSecurityGroupMembershipList } from "./dbsecuritygroupmembershiplist";
+import { DBSubnetGroup } from "./dbsubnetgroup";
 import { DomainMembershipList } from "./domainmembershiplist";
 import { Endpoint } from "./endpoint";
 import { OptionGroupMembershipList } from "./optiongroupmembershiplist";
 import { PendingModifiedValues } from "./pendingmodifiedvalues";
-import { DbInstanceStatusInfoList } from "./dbinstancestatusinfolist";
 import { VpcSecurityGroupMembershipList } from "./vpcsecuritygroupmembershiplist";
 /**
  * <p>Contains the details of an Amazon Neptune DB instance.</p> <p>This data type is used as a response element in the <a>DescribeDBInstances</a> action.</p>
-**/
-export declare class DbInstance extends SpeakeasyBase {
+ */
+export declare class DBInstance extends SpeakeasyBase {
     allocatedStorage?: number;
     autoMinorVersionUpgrade?: boolean;
     availabilityZone?: string;
@@ -25,9 +25,9 @@ export declare class DbInstance extends SpeakeasyBase {
     dbInstanceIdentifier?: string;
     dbInstanceStatus?: string;
     dbName?: string;
-    dbParameterGroups?: DbParameterGroupStatusList[];
-    dbSecurityGroups?: DbSecurityGroupMembershipList[];
-    dbSubnetGroup?: DbSubnetGroup;
+    dbParameterGroups?: DBParameterGroupStatusList[];
+    dbSecurityGroups?: DBSecurityGroupMembershipList[];
+    dbSubnetGroup?: DBSubnetGroup;
     dbInstancePort?: number;
     dbiResourceId?: string;
     deletionProtection?: boolean;
@@ -54,12 +54,12 @@ export declare class DbInstance extends SpeakeasyBase {
     preferredBackupWindow?: string;
     preferredMaintenanceWindow?: string;
     promotionTier?: number;
-    publiclyAccessible?: Record<string, any>;
-    readReplicaDBClusterIdentifiers?: Record<string, any>[];
-    readReplicaDBInstanceIdentifiers?: Record<string, any>[];
+    publiclyAccessible?: boolean;
+    readReplicaDBClusterIdentifiers?: string[];
+    readReplicaDBInstanceIdentifiers?: string[];
     readReplicaSourceDBInstanceIdentifier?: string;
     secondaryAvailabilityZone?: string;
-    statusInfos?: DbInstanceStatusInfoList[];
+    statusInfos?: DBInstanceStatusInfoList[];
     storageEncrypted?: boolean;
     storageType?: string;
     tdeCredentialArn?: string;

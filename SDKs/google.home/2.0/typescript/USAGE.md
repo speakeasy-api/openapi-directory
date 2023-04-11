@@ -1,22 +1,21 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AccessibilityRequest, AccessibilityResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  shared.AccessibilityRequest,
+  AccessibilityResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    castLocalAuthorizationToken: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: AccessibilityRequest = {
-  request: {
-    endpointEnabled: false,
-    hotwordEnabled: false,
+    castLocalAuthorizationToken: "YOUR_API_KEY_HERE",
   },
+});
+
+const req: shared.AccessibilityRequest = {
+  endpointEnabled: false,
+  hotwordEnabled: false,
 };
 
 sdk.assistant.accessibility(req).then((res: AccessibilityResponse | AxiosError) => {

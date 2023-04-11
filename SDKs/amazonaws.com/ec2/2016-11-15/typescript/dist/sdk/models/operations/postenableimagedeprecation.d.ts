@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostEnableImageDeprecationActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTEnableImageDeprecationActionEnum {
     EnableImageDeprecation = "EnableImageDeprecation"
 }
-export declare enum PostEnableImageDeprecationVersionEnum {
+export declare enum POSTEnableImageDeprecationVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostEnableImageDeprecationQueryParams extends SpeakeasyBase {
-    action: PostEnableImageDeprecationActionEnum;
-    version: PostEnableImageDeprecationVersionEnum;
-}
-export declare class PostEnableImageDeprecationHeaders extends SpeakeasyBase {
+export declare class POSTEnableImageDeprecationRequest extends SpeakeasyBase {
+    action: POSTEnableImageDeprecationActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTEnableImageDeprecationVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostEnableImageDeprecationHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostEnableImageDeprecationRequest extends SpeakeasyBase {
-    queryParams: PostEnableImageDeprecationQueryParams;
-    headers: PostEnableImageDeprecationHeaders;
-    request?: Uint8Array;
-}
-export declare class PostEnableImageDeprecationResponse extends SpeakeasyBase {
+export declare class POSTEnableImageDeprecationResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

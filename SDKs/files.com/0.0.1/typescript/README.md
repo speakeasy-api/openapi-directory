@@ -6,33 +6,33 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/files.com/0.0.1/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/files.com/0.0.1/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetActionNotificationExportResultsRequest, GetActionNotificationExportResultsResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetActionNotificationExportResultsRequest,
+  GetActionNotificationExportResultsResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetActionNotificationExportResultsRequest = {
-  queryParams: {
-    actionNotificationExportId: 8717895732742165505,
-    cursor: "voluptas",
-    perPage: 6050128673802995827,
-    userId: 501233450539197794,
-  },
+  actionNotificationExportId: 548814,
+  cursor: "provident",
+  perPage: 715190,
+  userId: 844266,
 };
 
 sdk.actionNotificationExportResults.getActionNotificationExportResults(req).then((res: GetActionNotificationExportResultsResponse | AxiosError) => {
@@ -42,28 +42,29 @@ sdk.actionNotificationExportResults.getActionNotificationExportResults(req).then
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### action_notification_export_results
+
+### actionNotificationExportResults
 
 * `getActionNotificationExportResults` - List Action Notification Export Results
 
-### action_notification_exports
+### actionNotificationExports
 
 * `getActionNotificationExportsId` - Show Action Notification Export
 * `postActionNotificationExports` - Create Action Notification Export
 
-### action_webhook_failures
+### actionWebhookFailures
 
 * `postActionWebhookFailuresIdRetry` - retry Action Webhook Failure
 
-### api_key
+### apiKey
 
 * `apiKeyDeleteCurrent` - Delete current API key.  (Requires current API connection to be using an API key.)
 * `apiKeyFindCurrent` - Show information about current API key.  (Requires current API connection to be using an API key.)
 * `apiKeyUpdateCurrent` - Update current API key.  (Requires current API connection to be using an API key.)
 
-### api_keys
+### apiKeys
 
 * `deleteApiKeysId` - Delete Api Key
 * `getApiKeys` - List Api Keys
@@ -75,13 +76,34 @@ sdk.actionNotificationExportResults.getActionNotificationExportResults(req).then
 
 * `getApps` - List Apps
 
-### as2_keys
+### as2IncomingMessages
 
-* `deleteAs2KeysId` - Delete As2 Key
-* `getAs2Keys` - List As2 Keys
-* `getAs2KeysId` - Show As2 Key
-* `patchAs2KeysId` - Update As2 Key
-* `postAs2Keys` - Create As2 Key
+* `getAs2IncomingMessages` - List As2 Incoming Messages
+
+### as2OutgoingMessages
+
+* `getAs2OutgoingMessages` - List As2 Outgoing Messages
+
+### as2Partners
+
+* `deleteAs2PartnersId` - Delete As2 Partner
+* `getAs2Partners` - List As2 Partners
+* `getAs2PartnersId` - Show As2 Partner
+* `patchAs2PartnersId` - Update As2 Partner
+* `postAs2Partners` - Create As2 Partner
+
+### as2Stations
+
+* `deleteAs2StationsId` - Delete As2 Station
+* `getAs2Stations` - List As2 Stations
+* `getAs2StationsId` - Show As2 Station
+* `patchAs2StationsId` - Update As2 Station
+* `postAs2Stations` - Create As2 Station
+
+### automationRuns
+
+* `getAutomationRuns` - List Automation Runs
+* `getAutomationRunsId` - Show Automation Run
 
 ### automations
 
@@ -91,7 +113,7 @@ sdk.actionNotificationExportResults.getActionNotificationExportResults(req).then
 * `patchAutomationsId` - Update Automation
 * `postAutomations` - Create Automation
 
-### bandwidth_snapshots
+### bandwidthSnapshots
 
 * `getBandwidthSnapshots` - List Bandwidth Snapshots
 
@@ -105,16 +127,24 @@ sdk.actionNotificationExportResults.getActionNotificationExportResults(req).then
 * `postBehaviors` - Create Behavior
 * `postBehaviorsWebhookTest` - Test webhook.
 
-### bundle_downloads
+### bundleDownloads
 
 * `getBundleDownloads` - List Bundle Downloads
 
-### bundle_recipients
+### bundleNotifications
+
+* `deleteBundleNotificationsId` - Delete Bundle Notification
+* `getBundleNotifications` - List Bundle Notifications
+* `getBundleNotificationsId` - Show Bundle Notification
+* `patchBundleNotificationsId` - Update Bundle Notification
+* `postBundleNotifications` - Create Bundle Notification
+
+### bundleRecipients
 
 * `getBundleRecipients` - List Bundle Recipients
 * `postBundleRecipients` - Create Bundle Recipient
 
-### bundle_registrations
+### bundleRegistrations
 
 * `getBundleRegistrations` - List Bundle Registrations
 
@@ -135,36 +165,36 @@ sdk.actionNotificationExportResults.getActionNotificationExportResults(req).then
 * `patchClickwrapsId` - Update Clickwrap
 * `postClickwraps` - Create Clickwrap
 
-### dns_records
+### dnsRecords
 
 * `getDnsRecords` - Show site DNS configuration.
 
-### external_events
+### externalEvents
 
 * `getExternalEvents` - List External Events
 * `getExternalEventsId` - Show External Event
 * `postExternalEvents` - Create External Event
 
-### file_actions
+### fileActions
 
 * `fileActionBeginUpload` - Begin file upload
 * `fileActionCopy` - Copy file/folder
-* `fileActionMetadata` - Return metadata for file/folder
+* `fileActionFind` - Find file/folder by path
 * `fileActionMove` - Move file/folder
 
-### file_comment_reactions
+### fileCommentReactions
 
 * `deleteFileCommentReactionsId` - Delete File Comment Reaction
 * `postFileCommentReactions` - Create File Comment Reaction
 
-### file_comments
+### fileComments
 
 * `deleteFileCommentsId` - Delete File Comment
 * `fileCommentListForPath` - List File Comments by path
 * `patchFileCommentsId` - Update File Comment
 * `postFileComments` - Create File Comment
 
-### file_migrations
+### fileMigrations
 
 * `getFileMigrationsId` - Show File Migration
 
@@ -180,13 +210,15 @@ sdk.actionNotificationExportResults.getActionNotificationExportResults(req).then
 * `folderListForPath` - List Folders by path
 * `postFoldersPath` - Create folder
 
-### form_field_sets
+### formFieldSets
 
 * `deleteFormFieldSetsId` - Delete Form Field Set
 * `getFormFieldSets` - List Form Field Sets
 * `getFormFieldSetsId` - Show Form Field Set
+* `patchFormFieldSetsId` - Update Form Field Set
+* `postFormFieldSets` - Create Form Field Set
 
-### group_users
+### groupUsers
 
 * `deleteGroupUsersId` - Delete Group User
 * `getGroupUsers` - List Group Users
@@ -214,25 +246,25 @@ sdk.actionNotificationExportResults.getActionNotificationExportResults(req).then
 * `historyListForUser` - List history for specific user.
 * `historyListLogins` - List site login history.
 
-### history_export_results
+### historyExportResults
 
 * `getHistoryExportResults` - List History Export Results
 
-### history_exports
+### historyExports
 
 * `getHistoryExportsId` - Show History Export
 * `postHistoryExports` - Create History Export
 
-### inbox_recipients
+### inboxRecipients
 
 * `getInboxRecipients` - List Inbox Recipients
 * `postInboxRecipients` - Create Inbox Recipient
 
-### inbox_registrations
+### inboxRegistrations
 
 * `getInboxRegistrations` - List Inbox Registrations
 
-### inbox_uploads
+### inboxUploads
 
 * `getInboxUploads` - List Inbox Uploads
 
@@ -241,9 +273,10 @@ sdk.actionNotificationExportResults.getActionNotificationExportResults(req).then
 * `getInvoices` - List Invoices
 * `getInvoicesId` - Show Invoice
 
-### ip_addresses
+### ipAddresses
 
 * `getIpAddresses` - List IP Addresses associated with the current site
+* `getIpAddressesExavaultReserved` - List all possible public ExaVault IP addresses
 * `getIpAddressesReserved` - List all possible public IP addresses
 
 ### locks
@@ -252,14 +285,14 @@ sdk.actionNotificationExportResults.getActionNotificationExportResults(req).then
 * `lockListForPath` - List Locks by path
 * `postLocksPath` - Create Lock
 
-### message_comment_reactions
+### messageCommentReactions
 
 * `deleteMessageCommentReactionsId` - Delete Message Comment Reaction
 * `getMessageCommentReactions` - List Message Comment Reactions
 * `getMessageCommentReactionsId` - Show Message Comment Reaction
 * `postMessageCommentReactions` - Create Message Comment Reaction
 
-### message_comments
+### messageComments
 
 * `deleteMessageCommentsId` - Delete Message Comment
 * `getMessageComments` - List Message Comments
@@ -267,7 +300,7 @@ sdk.actionNotificationExportResults.getActionNotificationExportResults(req).then
 * `patchMessageCommentsId` - Update Message Comment
 * `postMessageComments` - Create Message Comment
 
-### message_reactions
+### messageReactions
 
 * `deleteMessageReactionsId` - Delete Message Reaction
 * `getMessageReactions` - List Message Reactions
@@ -301,6 +334,10 @@ sdk.actionNotificationExportResults.getActionNotificationExportResults(req).then
 * `getPermissions` - List Permissions
 * `postPermissions` - Create Permission
 
+### priorities
+
+* `getPriorities` - List Priorities
+
 ### projects
 
 * `deleteProjectsId` - Delete Project
@@ -309,7 +346,7 @@ sdk.actionNotificationExportResults.getActionNotificationExportResults(req).then
 * `patchProjectsId` - Update Project
 * `postProjects` - Create Project
 
-### public_keys
+### publicKeys
 
 * `deletePublicKeysId` - Delete Public Key
 * `getPublicKeys` - List Public Keys
@@ -317,13 +354,19 @@ sdk.actionNotificationExportResults.getActionNotificationExportResults(req).then
 * `patchPublicKeysId` - Update Public Key
 * `postPublicKeys` - Create Public Key
 
-### remote_servers
+### remoteBandwidthSnapshots
+
+* `getRemoteBandwidthSnapshots` - List Remote Bandwidth Snapshots
+
+### remoteServers
 
 * `deleteRemoteServersId` - Delete Remote Server
 * `getRemoteServers` - List Remote Servers
 * `getRemoteServersId` - Show Remote Server
+* `getRemoteServersIdConfigurationFile` - Download configuration file (required for some Remote Server integrations, such as the Files.com Agent)
 * `patchRemoteServersId` - Update Remote Server
 * `postRemoteServers` - Create Remote Server
+* `postRemoteServersIdConfigurationFile` - Post local changes, check in, and download configuration file (used by some Remote Server integrations, such as the Files.com Agent)
 
 ### requests
 
@@ -337,9 +380,17 @@ sdk.actionNotificationExportResults.getActionNotificationExportResults(req).then
 * `deleteSessions` - Delete user session (log out)
 * `postSessions` - Create user session (log in)
 
-### settings_changes
+### settingsChanges
 
 * `getSettingsChanges` - List Settings Changes
+
+### sftpHostKeys
+
+* `deleteSftpHostKeysId` - Delete Sftp Host Key
+* `getSftpHostKeys` - List Sftp Host Keys
+* `getSftpHostKeysId` - Show Sftp Host Key
+* `patchSftpHostKeysId` - Update Sftp Host Key
+* `postSftpHostKeys` - Create Sftp Host Key
 
 ### site
 
@@ -352,10 +403,11 @@ sdk.actionNotificationExportResults.getActionNotificationExportResults(req).then
 * `postSiteApiKeys` - Create Api Key
 * `postSiteTestWebhook` - Test webhook.
 
-### sso_strategies
+### ssoStrategies
 
 * `getSsoStrategies` - List Sso Strategies
 * `getSsoStrategiesId` - Show Sso Strategy
+* `postSsoStrategiesIdSync` - Synchronize provisioning data with the SSO remote server.
 
 ### styles
 
@@ -363,34 +415,28 @@ sdk.actionNotificationExportResults.getActionNotificationExportResults(req).then
 * `getStylesPath` - Show Style
 * `patchStylesPath` - Update Style
 
-### sync_jobs
-
-* `getSyncJobs` - List Sync Jobs
-
-### usage_daily_snapshots
+### usageDailySnapshots
 
 * `getUsageDailySnapshots` - List Usage Daily Snapshots
 
-### usage_snapshots
+### usageSnapshots
 
 * `getUsageSnapshots` - List Usage Snapshots
 
 ### user
 
 * `getUserApiKeys` - List Api Keys
-* `getUserAs2Keys` - List As2 Keys
 * `getUserGroups` - List Group Users
 * `getUserPublicKeys` - List Public Keys
 * `patchUser` - Update User
 * `postUserApiKeys` - Create Api Key
-* `postUserAs2Keys` - Create As2 Key
 * `postUserPublicKeys` - Create Public Key
 
-### user_cipher_uses
+### userCipherUses
 
 * `getUserCipherUses` - List User Cipher Uses
 
-### user_requests
+### userRequests
 
 * `deleteUserRequestsId` - Delete User Request
 * `getUserRequests` - List User Requests
@@ -403,7 +449,6 @@ sdk.actionNotificationExportResults.getActionNotificationExportResults(req).then
 * `getUsers` - List Users
 * `getUsersId` - Show User
 * `getUsersUserIdApiKeys` - List Api Keys
-* `getUsersUserIdAs2Keys` - List As2 Keys
 * `getUsersUserIdCipherUses` - List User Cipher Uses
 * `getUsersUserIdGroups` - List Group Users
 * `getUsersUserIdPermissions` - List Permissions
@@ -414,13 +459,23 @@ sdk.actionNotificationExportResults.getActionNotificationExportResults(req).then
 * `postUsersIdResendWelcomeEmail` - Resend user welcome email
 * `postUsersIdUnlock` - Unlock user who has been locked out due to failed logins.
 * `postUsersUserIdApiKeys` - Create Api Key
-* `postUsersUserIdAs2Keys` - Create As2 Key
 * `postUsersUserIdPublicKeys` - Create Public Key
 
-### webhook_tests
+### webhookTests
 
 * `postWebhookTests` - Create Webhook Test
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

@@ -1,25 +1,34 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AppsListInstallationsForAuthenticatedUserQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class AppsListInstallationsForAuthenticatedUserRequest extends SpeakeasyBase {
+    /**
+     * Page number of the results to fetch.
+     */
     page?: number;
+    /**
+     * The number of results per page (max 100).
+     */
     perPage?: number;
 }
-export declare class AppsListInstallationsForAuthenticatedUser200ApplicationJson extends SpeakeasyBase {
+/**
+ * You can find the permissions for the installation under the `permissions` key.
+ */
+export declare class AppsListInstallationsForAuthenticatedUser200ApplicationJSON extends SpeakeasyBase {
     installations: shared.Installation[];
     totalCount: number;
 }
-export declare class AppsListInstallationsForAuthenticatedUser415ApplicationJson extends SpeakeasyBase {
-    documentationUrl: string;
-    message: string;
-}
-export declare class AppsListInstallationsForAuthenticatedUserRequest extends SpeakeasyBase {
-    queryParams: AppsListInstallationsForAuthenticatedUserQueryParams;
-}
 export declare class AppsListInstallationsForAuthenticatedUserResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
-    appsListInstallationsForAuthenticatedUser200ApplicationJSONObject?: AppsListInstallationsForAuthenticatedUser200ApplicationJson;
-    appsListInstallationsForAuthenticatedUser415ApplicationJSONObject?: AppsListInstallationsForAuthenticatedUser415ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * You can find the permissions for the installation under the `permissions` key.
+     */
+    appsListInstallationsForAuthenticatedUser200ApplicationJSONObject?: AppsListInstallationsForAuthenticatedUser200ApplicationJSON;
+    /**
+     * Requires authentication
+     */
     basicError?: shared.BasicError;
 }

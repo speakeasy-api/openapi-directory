@@ -4,7 +4,7 @@ import { StatusReason } from "./statusreason";
 import { TypeEnum } from "./typeenum";
 /**
  * Contains information about the analyzer.
-**/
+ */
 export declare class AnalyzerSummary extends SpeakeasyBase {
     arn: string;
     createdAt: Date;

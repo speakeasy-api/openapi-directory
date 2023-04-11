@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetAnnotationsByAccIdAndRgdIdUsingGetPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETAnnotationsByAccIdAndRgdIdUsingGETRequest extends SpeakeasyBase {
+    /**
+     * Ontology Term Accession ID
+     */
     accId: string;
+    /**
+     * RGD ID
+     */
     rgdId: number;
 }
-export declare class GetAnnotationsByAccIdAndRgdIdUsingGetRequest extends SpeakeasyBase {
-    pathParams: GetAnnotationsByAccIdAndRgdIdUsingGetPathParams;
-}
-export declare class GetAnnotationsByAccIdAndRgdIdUsingGetResponse extends SpeakeasyBase {
+export declare class GETAnnotationsByAccIdAndRgdIdUsingGETResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

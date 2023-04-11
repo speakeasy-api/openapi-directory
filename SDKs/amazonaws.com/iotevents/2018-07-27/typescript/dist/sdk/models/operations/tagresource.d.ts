@@ -1,9 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class TagResourceQueryParams extends SpeakeasyBase {
-    resourceArn: string;
+import { AxiosResponse } from "axios";
+export declare class TagResourceRequestBody extends SpeakeasyBase {
+    /**
+     * The new or modified tags for the resource.
+     */
+    tags: shared.Tag[];
 }
-export declare class TagResourceHeaders extends SpeakeasyBase {
+export declare class TagResourceRequest extends SpeakeasyBase {
+    requestBody: TagResourceRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,23 +16,41 @@ export declare class TagResourceHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class TagResourceRequestBody extends SpeakeasyBase {
-    tags: shared.Tag[];
-}
-export declare class TagResourceRequest extends SpeakeasyBase {
-    queryParams: TagResourceQueryParams;
-    headers: TagResourceHeaders;
-    request: TagResourceRequestBody;
+    /**
+     * The ARN of the resource.
+     */
+    resourceArn: string;
 }
 export declare class TagResourceResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalFailureException
+     */
     internalFailureException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * ResourceInUseException
+     */
     resourceInUseException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     tagResourceResponse?: Record<string, any>;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

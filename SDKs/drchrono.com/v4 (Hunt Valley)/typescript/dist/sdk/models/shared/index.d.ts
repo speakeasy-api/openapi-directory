@@ -47,7 +47,6 @@ export * from "./phonecalllog";
 export * from "./prescriptionmessage";
 export * from "./reminderprofile";
 export * from "./scannedclinicaldocument";
-export * from "./security";
 export * from "./soapnotecustomreport";
 export * from "./soapnotelineitemfieldtype";
 export * from "./soapnotelineitemfieldvalue";

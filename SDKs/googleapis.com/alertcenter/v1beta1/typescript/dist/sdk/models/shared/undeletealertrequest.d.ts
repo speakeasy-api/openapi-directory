@@ -1,7 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * A request to undelete a specific alert that was marked for deletion.
-**/
+ */
 export declare class UndeleteAlertRequest extends SpeakeasyBase {
+    /**
+     * Optional. The unique identifier of the Google Workspace account of the customer the alert is associated with. The `customer_id` must have the initial "C" stripped (for example, `046psxkn`). Inferred from the caller identity if not provided. [Find your customer ID](https://support.google.com/cloudidentity/answer/10070793).
+     */
     customerId?: string;
 }

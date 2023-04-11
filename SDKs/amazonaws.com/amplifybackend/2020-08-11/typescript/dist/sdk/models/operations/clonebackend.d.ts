@@ -1,10 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CloneBackendPathParams extends SpeakeasyBase {
-    appId: string;
-    backendEnvironmentName: string;
+import { AxiosResponse } from "axios";
+export declare class CloneBackendRequestBody extends SpeakeasyBase {
+    /**
+     * The name of the destination backend environment to be created.
+     */
+    targetEnvironmentName: string;
 }
-export declare class CloneBackendHeaders extends SpeakeasyBase {
+export declare class CloneBackendRequest extends SpeakeasyBase {
+    requestBody: CloneBackendRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,21 +16,37 @@ export declare class CloneBackendHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class CloneBackendRequestBody extends SpeakeasyBase {
-    targetEnvironmentName: string;
-}
-export declare class CloneBackendRequest extends SpeakeasyBase {
-    pathParams: CloneBackendPathParams;
-    headers: CloneBackendHeaders;
-    request: CloneBackendRequestBody;
+    /**
+     * The app ID.
+     */
+    appId: string;
+    /**
+     * The name of the backend environment.
+     */
+    backendEnvironmentName: string;
 }
 export declare class CloneBackendResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
+    /**
+     * Success
+     */
     cloneBackendResponse?: shared.CloneBackendResponse;
     contentType: string;
+    /**
+     * GatewayTimeoutException
+     */
     gatewayTimeoutException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

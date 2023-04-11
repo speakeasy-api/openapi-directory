@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostRunInstancesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTRunInstancesActionEnum {
     RunInstances = "RunInstances"
 }
-export declare enum PostRunInstancesVersionEnum {
+export declare enum POSTRunInstancesVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostRunInstancesQueryParams extends SpeakeasyBase {
-    action: PostRunInstancesActionEnum;
-    version: PostRunInstancesVersionEnum;
-}
-export declare class PostRunInstancesHeaders extends SpeakeasyBase {
+export declare class POSTRunInstancesRequest extends SpeakeasyBase {
+    action: POSTRunInstancesActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTRunInstancesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostRunInstancesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostRunInstancesRequest extends SpeakeasyBase {
-    queryParams: PostRunInstancesQueryParams;
-    headers: PostRunInstancesHeaders;
-    request?: Uint8Array;
-}
-export declare class PostRunInstancesResponse extends SpeakeasyBase {
+export declare class POSTRunInstancesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

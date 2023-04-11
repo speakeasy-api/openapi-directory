@@ -1,9 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeDashboardPathParams extends SpeakeasyBase {
-    dashboardId: string;
-}
-export declare class DescribeDashboardHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DescribeDashboardRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,17 +9,33 @@ export declare class DescribeDashboardHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DescribeDashboardRequest extends SpeakeasyBase {
-    pathParams: DescribeDashboardPathParams;
-    headers: DescribeDashboardHeaders;
+    /**
+     * The ID of the dashboard.
+     */
+    dashboardId: string;
 }
 export declare class DescribeDashboardResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeDashboardResponse?: shared.DescribeDashboardResponse;
+    /**
+     * InternalFailureException
+     */
     internalFailureException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

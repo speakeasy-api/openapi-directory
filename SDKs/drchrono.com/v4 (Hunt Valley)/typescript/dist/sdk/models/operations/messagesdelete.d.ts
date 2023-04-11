@@ -1,10 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class MessagesDeletePathParams extends SpeakeasyBase {
-    id: string;
+import { AxiosResponse } from "axios";
+export declare class MessagesDeleteSecurity extends SpeakeasyBase {
+    drchronoOauth2: string;
 }
-export declare class MessagesDeleteQueryParams extends SpeakeasyBase {
+export declare class MessagesDeleteRequest extends SpeakeasyBase {
     doctor?: number;
+    id: string;
     owner?: number;
     patient?: number;
     receivedSince?: string;
@@ -12,15 +13,8 @@ export declare class MessagesDeleteQueryParams extends SpeakeasyBase {
     type?: string;
     updatedSince?: string;
 }
-export declare class MessagesDeleteSecurity extends SpeakeasyBase {
-    drchronoOauth2: shared.SchemeDrchronoOauth2;
-}
-export declare class MessagesDeleteRequest extends SpeakeasyBase {
-    pathParams: MessagesDeletePathParams;
-    queryParams: MessagesDeleteQueryParams;
-    security: MessagesDeleteSecurity;
-}
 export declare class MessagesDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

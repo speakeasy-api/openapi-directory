@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteTableXAmzTargetEnum {
-    DynamoDb20111205DeleteTable = "DynamoDB_20111205.DeleteTable"
+    DynamoDB20111205DeleteTable = "DynamoDB_20111205.DeleteTable"
 }
-export declare class DeleteTableHeaders extends SpeakeasyBase {
+export declare class DeleteTableRequest extends SpeakeasyBase {
+    deleteTableInput: shared.DeleteTableInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class DeleteTableHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteTableXAmzTargetEnum;
 }
-export declare class DeleteTableRequest extends SpeakeasyBase {
-    headers: DeleteTableHeaders;
-    request: shared.DeleteTableInput;
-}
 export declare class DeleteTableResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deleteTableOutput?: shared.DeleteTableOutput;
+    /**
+     * InternalServerError
+     */
     internalServerError?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * ResourceInUseException
+     */
     resourceInUseException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
 }

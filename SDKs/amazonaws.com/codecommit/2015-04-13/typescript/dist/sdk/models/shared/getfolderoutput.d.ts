@@ -3,6 +3,9 @@ import { File } from "./file";
 import { Folder } from "./folder";
 import { SubModule } from "./submodule";
 import { SymbolicLink } from "./symboliclink";
+/**
+ * Success
+ */
 export declare class GetFolderOutput extends SpeakeasyBase {
     commitId: string;
     files?: File[];

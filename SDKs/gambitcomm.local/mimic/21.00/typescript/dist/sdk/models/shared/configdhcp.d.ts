@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ConfigDhcp extends SpeakeasyBase {
+/**
+ * successful operation
+ */
+export declare class ConfigDHCP extends SpeakeasyBase {
     addOptions?: string;
     classid?: string;
     hwaddr?: string;

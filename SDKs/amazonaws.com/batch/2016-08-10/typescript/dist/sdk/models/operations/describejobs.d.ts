@@ -1,6 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeJobsHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DescribeJobsRequestBody extends SpeakeasyBase {
+    /**
+     * A list of up to 100 job IDs.
+     */
+    jobs: string[];
+}
+export declare class DescribeJobsRequest extends SpeakeasyBase {
+    requestBody: DescribeJobsRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -9,17 +17,20 @@ export declare class DescribeJobsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DescribeJobsRequestBody extends SpeakeasyBase {
-    jobs: string[];
-}
-export declare class DescribeJobsRequest extends SpeakeasyBase {
-    headers: DescribeJobsHeaders;
-    request: DescribeJobsRequestBody;
-}
 export declare class DescribeJobsResponse extends SpeakeasyBase {
+    /**
+     * ClientException
+     */
     clientException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     describeJobsResponse?: shared.DescribeJobsResponse;
-    serverException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServerException
+     */
+    serverException?: any;
 }

@@ -1,28 +1,23 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { ImageOcrImageLinesWithLocationRequest, ImageOcrImageLinesWithLocationResponse } from "openapi/src/sdk/models/operations";
+import {
+  ImageOcrImageLinesWithLocationRequest,
+  ImageOcrImageLinesWithLocationResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: ImageOcrImageLinesWithLocationRequest = {
-  security: {
-    apikey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  },
-  headers: {
-    language: "sit",
-    preprocessing: "voluptas",
-  },
-  request: {
+  requestBody: {
     imageFile: {
-      content: "culpa".encode(),
-      imageFile: "expedita",
+      content: "corrupti".encode(),
+      imageFile: "provident",
     },
   },
+  language: "distinctio",
+  preprocessing: "quibusdam",
 };
 
 sdk.imageOcr.imageOcrImageLinesWithLocation(req).then((res: ImageOcrImageLinesWithLocationResponse | AxiosError) => {

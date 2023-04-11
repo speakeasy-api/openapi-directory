@@ -1,22 +1,17 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveRequest, DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveResponse } from "openapi/src/sdk/models/operations";
+import {
+  DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveRequest,
+  DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveRequest = {
-  security: {
-    developerHapikey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  },
-  pathParams: {
-    appId: 8717895732742165505,
-    cardId: "voluptas",
-  },
+  appId: 548814,
+  cardId: "provident",
 };
 
 sdk.cards.deleteCrmV3ExtensionsCardsAppIdCardIdArchive(req).then((res: DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveResponse | AxiosError) => {

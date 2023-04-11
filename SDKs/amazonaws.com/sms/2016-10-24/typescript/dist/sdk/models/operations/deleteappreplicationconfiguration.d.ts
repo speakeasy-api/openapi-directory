@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteAppReplicationConfigurationXAmzTargetEnum {
-    AwsServerMigrationServiceV20161024DeleteAppReplicationConfiguration = "AWSServerMigrationService_V2016_10_24.DeleteAppReplicationConfiguration"
+    AWSServerMigrationServiceV20161024DeleteAppReplicationConfiguration = "AWSServerMigrationService_V2016_10_24.DeleteAppReplicationConfiguration"
 }
-export declare class DeleteAppReplicationConfigurationHeaders extends SpeakeasyBase {
+export declare class DeleteAppReplicationConfigurationRequest extends SpeakeasyBase {
+    deleteAppReplicationConfigurationRequest: shared.DeleteAppReplicationConfigurationRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class DeleteAppReplicationConfigurationHeaders extends SpeakeasyB
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteAppReplicationConfigurationXAmzTargetEnum;
 }
-export declare class DeleteAppReplicationConfigurationRequest extends SpeakeasyBase {
-    headers: DeleteAppReplicationConfigurationHeaders;
-    request: shared.DeleteAppReplicationConfigurationRequest;
-}
 export declare class DeleteAppReplicationConfigurationResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deleteAppReplicationConfigurationResponse?: Record<string, any>;
+    /**
+     * InternalError
+     */
     internalError?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * MissingRequiredParameterException
+     */
     missingRequiredParameterException?: any;
+    /**
+     * OperationNotPermittedException
+     */
     operationNotPermittedException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnauthorizedOperationException
+     */
     unauthorizedOperationException?: any;
 }

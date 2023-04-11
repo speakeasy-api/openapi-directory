@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListDomainsQueryParams extends SpeakeasyBase {
-    maximumPageSize?: string;
-    nextPageToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListDomainsXAmzTargetEnum {
     SimpleWorkflowServiceListDomains = "SimpleWorkflowService.ListDomains"
 }
-export declare class ListDomainsHeaders extends SpeakeasyBase {
+export declare class ListDomainsRequest extends SpeakeasyBase {
+    listDomainsInput: shared.ListDomainsInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,15 +14,25 @@ export declare class ListDomainsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: ListDomainsXAmzTargetEnum;
-}
-export declare class ListDomainsRequest extends SpeakeasyBase {
-    queryParams: ListDomainsQueryParams;
-    headers: ListDomainsHeaders;
-    request: shared.ListDomainsInput;
+    /**
+     * Pagination limit
+     */
+    maximumPageSize?: string;
+    /**
+     * Pagination token
+     */
+    nextPageToken?: string;
 }
 export declare class ListDomainsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     domainInfos?: shared.DomainInfos;
+    /**
+     * OperationNotPermittedFault
+     */
     operationNotPermittedFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ExtrasGraphsDeletePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ExtrasGraphsDeleteRequest extends SpeakeasyBase {
-    pathParams: ExtrasGraphsDeletePathParams;
+    /**
+     * A unique integer value identifying this graph.
+     */
+    id: number;
 }
 export declare class ExtrasGraphsDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

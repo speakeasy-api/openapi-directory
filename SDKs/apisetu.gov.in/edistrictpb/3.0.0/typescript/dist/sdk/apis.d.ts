@@ -1,6 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class ApIs {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+export declare class APIs {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,45 +9,52 @@ export declare class ApIs {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * btcer - Birth Certificate
+     * Birth Certificate
      *
+     * @remarks
      * API to verify Birth Certificate.
-    **/
-    btcer(req: operations.BtcerRequest, config?: AxiosRequestConfig): Promise<operations.BtcerResponse>;
+     */
+    btcer(req: operations.BtcerRequestBody, security: operations.BtcerSecurity, config?: AxiosRequestConfig): Promise<operations.BtcerResponse>;
     /**
-     * dtcer - Death Certificate
+     * Death Certificate
      *
+     * @remarks
      * API to verify Death Certificate.
-    **/
-    dtcer(req: operations.DtcerRequest, config?: AxiosRequestConfig): Promise<operations.DtcerResponse>;
+     */
+    dtcer(req: operations.DtcerRequestBody, security: operations.DtcerSecurity, config?: AxiosRequestConfig): Promise<operations.DtcerResponse>;
     /**
-     * ewcer - Economically Weaker Section Certificate
+     * Economically Weaker Section Certificate
      *
+     * @remarks
      * API to verify Economically Weaker Section Certificate.
-    **/
-    ewcer(req: operations.EwcerRequest, config?: AxiosRequestConfig): Promise<operations.EwcerResponse>;
+     */
+    ewcer(req: operations.EwcerRequestBody, security: operations.EwcerSecurity, config?: AxiosRequestConfig): Promise<operations.EwcerResponse>;
     /**
-     * obcer - OBC Certificate
+     * OBC Certificate
      *
+     * @remarks
      * API to verify OBC Certificate.
-    **/
-    obcer(req: operations.ObcerRequest, config?: AxiosRequestConfig): Promise<operations.ObcerResponse>;
+     */
+    obcer(req: operations.ObcerRequestBody, security: operations.ObcerSecurity, config?: AxiosRequestConfig): Promise<operations.ObcerResponse>;
     /**
-     * racer - Rural Area Certificate
+     * Rural Area Certificate
      *
+     * @remarks
      * API to verify Rural Area Certificate.
-    **/
-    racer(req: operations.RacerRequest, config?: AxiosRequestConfig): Promise<operations.RacerResponse>;
+     */
+    racer(req: operations.RacerRequestBody, security: operations.RacerSecurity, config?: AxiosRequestConfig): Promise<operations.RacerResponse>;
     /**
-     * rscer - Residence Certificate
+     * Residence Certificate
      *
+     * @remarks
      * API to verify Residence Certificate.
-    **/
-    rscer(req: operations.RscerRequest, config?: AxiosRequestConfig): Promise<operations.RscerResponse>;
+     */
+    rscer(req: operations.RscerRequestBody, security: operations.RscerSecurity, config?: AxiosRequestConfig): Promise<operations.RscerResponse>;
     /**
-     * shcer - SC/ST  Certificate
+     * SC/ST  Certificate
      *
+     * @remarks
      * API to verify SC/ST  Certificate.
-    **/
-    shcer(req: operations.ShcerRequest, config?: AxiosRequestConfig): Promise<operations.ShcerResponse>;
+     */
+    shcer(req: operations.ShcerRequestBody, security: operations.ShcerSecurity, config?: AxiosRequestConfig): Promise<operations.ShcerResponse>;
 }

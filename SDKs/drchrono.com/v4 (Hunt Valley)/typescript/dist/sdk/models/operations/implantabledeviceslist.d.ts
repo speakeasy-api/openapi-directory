@@ -1,6 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ImplantableDevicesListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ImplantableDevicesListSecurity extends SpeakeasyBase {
+    drchronoOauth2: string;
+}
+export declare class ImplantableDevicesListRequest extends SpeakeasyBase {
     cursor?: string;
     doctor?: number;
     muDate?: string;
@@ -8,23 +12,29 @@ export declare class ImplantableDevicesListQueryParams extends SpeakeasyBase {
     pageSize?: number;
     patient?: number;
 }
-export declare class ImplantableDevicesListSecurity extends SpeakeasyBase {
-    drchronoOauth2: shared.SchemeDrchronoOauth2;
-}
 /**
  * Paginated Result
-**/
-export declare class ImplantableDevicesList200ApplicationJson extends SpeakeasyBase {
+ */
+export declare class ImplantableDevicesList200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * result data
+     */
     data?: shared.ImplantableDevice[];
+    /**
+     * Next Paginated page
+     */
     next?: string;
+    /**
+     * Previous paginated page
+     */
     previous?: string;
-}
-export declare class ImplantableDevicesListRequest extends SpeakeasyBase {
-    queryParams: ImplantableDevicesListQueryParams;
-    security: ImplantableDevicesListSecurity;
 }
 export declare class ImplantableDevicesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    implantableDevicesList200ApplicationJSONObject?: ImplantableDevicesList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
+    implantableDevicesList200ApplicationJSONObject?: ImplantableDevicesList200ApplicationJSON;
 }

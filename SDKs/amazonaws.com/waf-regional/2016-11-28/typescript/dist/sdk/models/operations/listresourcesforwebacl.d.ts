@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum ListResourcesForWebAclxAmzTargetEnum {
-    AwswafRegional20161128ListResourcesForWebAcl = "AWSWAF_Regional_20161128.ListResourcesForWebACL"
+import { AxiosResponse } from "axios";
+export declare enum ListResourcesForWebACLXAmzTargetEnum {
+    AWSWAFRegional20161128ListResourcesForWebACL = "AWSWAF_Regional_20161128.ListResourcesForWebACL"
 }
-export declare class ListResourcesForWebAclHeaders extends SpeakeasyBase {
+export declare class ListResourcesForWebACLRequest extends SpeakeasyBase {
+    listResourcesForWebACLRequest: shared.ListResourcesForWebACLRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,18 +13,30 @@ export declare class ListResourcesForWebAclHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: ListResourcesForWebAclxAmzTargetEnum;
+    xAmzTarget: ListResourcesForWebACLXAmzTargetEnum;
 }
-export declare class ListResourcesForWebAclRequest extends SpeakeasyBase {
-    headers: ListResourcesForWebAclHeaders;
-    request: shared.ListResourcesForWebAclRequest;
-}
-export declare class ListResourcesForWebAclResponse extends SpeakeasyBase {
+export declare class ListResourcesForWebACLResponse extends SpeakeasyBase {
     contentType: string;
-    listResourcesForWebACLResponse?: shared.ListResourcesForWebAclResponse;
+    /**
+     * Success
+     */
+    listResourcesForWebACLResponse?: shared.ListResourcesForWebACLResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFInvalidAccountException
+     */
     wafInvalidAccountException?: any;
+    /**
+     * WAFInvalidParameterException
+     */
     wafInvalidParameterException?: any;
+    /**
+     * WAFNonexistentItemException
+     */
     wafNonexistentItemException?: any;
 }

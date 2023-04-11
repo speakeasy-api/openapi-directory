@@ -1,5 +1,10 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * License Template operations
+ *
+ * @see {@link https://netlicensing.io/wiki/license-template-services} - License Template Services
+ */
 export declare class LicenseTemplate {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,33 +14,38 @@ export declare class LicenseTemplate {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createLicenseTemplate - Create License Template
+     * Create License Template
      *
+     * @remarks
      * Creates a new License Template
-    **/
-    createLicenseTemplate(req: operations.CreateLicenseTemplateRequest, config?: AxiosRequestConfig): Promise<operations.CreateLicenseTemplateResponse>;
+     */
+    createLicenseTemplate(req: operations.CreateLicenseTemplateRequestBody, security: operations.CreateLicenseTemplateSecurity, config?: AxiosRequestConfig): Promise<operations.CreateLicenseTemplateResponse>;
     /**
-     * deleteLicenseTemplate - Delete License Template
+     * Delete License Template
      *
+     * @remarks
      * Delete a License Template by 'number'.
-    **/
-    deleteLicenseTemplate(req: operations.DeleteLicenseTemplateRequest, config?: AxiosRequestConfig): Promise<operations.DeleteLicenseTemplateResponse>;
+     */
+    deleteLicenseTemplate(req: operations.DeleteLicenseTemplateRequest, security: operations.DeleteLicenseTemplateSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteLicenseTemplateResponse>;
     /**
-     * getLicenseTemplate - Get License Template
+     * Get License Template
      *
+     * @remarks
      * Return a License Template by 'licenseTemplateNumber'
-    **/
-    getLicenseTemplate(req: operations.GetLicenseTemplateRequest, config?: AxiosRequestConfig): Promise<operations.GetLicenseTemplateResponse>;
+     */
+    getLicenseTemplate(req: operations.GetLicenseTemplateRequest, security: operations.GetLicenseTemplateSecurity, config?: AxiosRequestConfig): Promise<operations.GetLicenseTemplateResponse>;
     /**
-     * listLicenseTemplates - List License Templates
+     * List License Templates
      *
+     * @remarks
      * Return a list of all License Templates for the current Vendor
-    **/
-    listLicenseTemplates(req: operations.ListLicenseTemplatesRequest, config?: AxiosRequestConfig): Promise<operations.ListLicenseTemplatesResponse>;
+     */
+    listLicenseTemplates(config?: AxiosRequestConfig): Promise<operations.ListLicenseTemplatesResponse>;
     /**
-     * updateLicenseTemplate - Update License Template
+     * Update License Template
      *
+     * @remarks
      * Sets the provided properties to a License Template. Return an updated License Template
-    **/
-    updateLicenseTemplate(req: operations.UpdateLicenseTemplateRequest, config?: AxiosRequestConfig): Promise<operations.UpdateLicenseTemplateResponse>;
+     */
+    updateLicenseTemplate(req: operations.UpdateLicenseTemplateRequest, security: operations.UpdateLicenseTemplateSecurity, config?: AxiosRequestConfig): Promise<operations.UpdateLicenseTemplateResponse>;
 }

@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class UpdateConnectivityInfoResponse extends SpeakeasyBase {
-    message?: Record<string, any>;
+    message?: string;
     version?: string;
 }

@@ -1,6 +1,16 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class AccountInformationServiceAis {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * The Account Information Service (AIS) offers the following services:
+ *
+ * @remarks
+ *   * Transaction reports for a given account or card account including balances if applicable
+ *   * Balances of a given account or card account
+ *   * A list of available accounts or card account
+ *   * Account details of a given account or card account or of the list of all accessible accounts or card account  relative to a granted consent
+ *
+ */
+export declare class AccountInformationServiceAIS {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,8 +19,9 @@ export declare class AccountInformationServiceAis {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createConsent - Create consent
+     * Create consent
      *
+     * @remarks
      * This method create a consent resource, defining access rights to dedicated accounts of
      * a given PSU-ID. These accounts are addressed explicitly in the method as
      * parameters as a core function.
@@ -31,17 +42,19 @@ export declare class AccountInformationServiceAis {
      *   * to see the list of available payment accounts or
      *   * to see the list of available payment accounts with balances.
      *
-    **/
-    createConsent(req: operations.CreateConsentRequest, config?: AxiosRequestConfig): Promise<operations.CreateConsentResponse>;
+     */
+    createConsent(req: operations.CreateConsentRequest, security: operations.CreateConsentSecurity, config?: AxiosRequestConfig): Promise<operations.CreateConsentResponse>;
     /**
-     * deleteConsent - Delete Consent
+     * Delete Consent
      *
+     * @remarks
      * The TPP can delete an account information consent object if needed.
-    **/
-    deleteConsent(req: operations.DeleteConsentRequest, config?: AxiosRequestConfig): Promise<operations.DeleteConsentResponse>;
+     */
+    deleteConsent(req: operations.DeleteConsentRequest, security: operations.DeleteConsentSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteConsentResponse>;
     /**
-     * getAccountList - Read account list
+     * Read account list
      *
+     * @remarks
      * Read the identifiers of the available payment account together with
      * booking balance information, depending on the consent granted.
      *
@@ -59,11 +72,12 @@ export declare class AccountInformationServiceAis {
      * In this case, this endpoint will deliver the information about all available payment accounts
      * of the PSU at this ASPSP.
      *
-    **/
-    getAccountList(req: operations.GetAccountListRequest, config?: AxiosRequestConfig): Promise<operations.GetAccountListResponse>;
+     */
+    getAccountList(req: operations.GetAccountListRequest, security: operations.GetAccountListSecurity, config?: AxiosRequestConfig): Promise<operations.GetAccountListResponse>;
     /**
-     * getBalances - Read balance
+     * Read balance
      *
+     * @remarks
      * Reads account data from a given account addressed by "account-id".
      *
      * **Remark:** This account-id can be a tokenised identification due to data protection reason since the path
@@ -72,64 +86,71 @@ export declare class AccountInformationServiceAis {
      *
      * The account-id is constant at least throughout the lifecycle of a given consent.
      *
-    **/
-    getBalances(req: operations.GetBalancesRequest, config?: AxiosRequestConfig): Promise<operations.GetBalancesResponse>;
+     */
+    getBalances(req: operations.GetBalancesRequest, security: operations.GetBalancesSecurity, config?: AxiosRequestConfig): Promise<operations.GetBalancesResponse>;
     /**
-     * getConsentAuthorisation - Get consent authorisation sub-resources request
+     * Get consent authorisation sub-resources request
      *
+     * @remarks
      * Return a list of all authorisation subresources IDs which have been created.
      *
      * This function returns an array of hyperlinks to all generated authorisation sub-resources.
      *
-    **/
-    getConsentAuthorisation(req: operations.GetConsentAuthorisationRequest, config?: AxiosRequestConfig): Promise<operations.GetConsentAuthorisationResponse>;
+     */
+    getConsentAuthorisation(req: operations.GetConsentAuthorisationRequest, security: operations.GetConsentAuthorisationSecurity, config?: AxiosRequestConfig): Promise<operations.GetConsentAuthorisationResponse>;
     /**
-     * getConsentInformation - Get consent request
+     * Get consent request
      *
+     * @remarks
      * Returns the content of an account information consent object.
      * This is returning the data for the TPP especially in cases,
      * where the consent was directly managed between ASPSP and PSU e.g. in a redirect SCA Approach.
      *
-    **/
-    getConsentInformation(req: operations.GetConsentInformationRequest, config?: AxiosRequestConfig): Promise<operations.GetConsentInformationResponse>;
+     */
+    getConsentInformation(req: operations.GetConsentInformationRequest, security: operations.GetConsentInformationSecurity, config?: AxiosRequestConfig): Promise<operations.GetConsentInformationResponse>;
     /**
-     * getConsentScaStatus - Read the SCA status of the consent authorisation
+     * Read the SCA status of the consent authorisation
      *
+     * @remarks
      * This method returns the SCA status of a consent initiation's authorisation sub-resource.
      *
-    **/
-    getConsentScaStatus(req: operations.GetConsentScaStatusRequest, config?: AxiosRequestConfig): Promise<operations.GetConsentScaStatusResponse>;
+     */
+    getConsentScaStatus(req: operations.GetConsentScaStatusRequest, security: operations.GetConsentScaStatusSecurity, config?: AxiosRequestConfig): Promise<operations.GetConsentScaStatusResponse>;
     /**
-     * getConsentStatus - Consent status request
+     * Consent status request
      *
+     * @remarks
      * Read the status of an account information consent resource.
-    **/
-    getConsentStatus(req: operations.GetConsentStatusRequest, config?: AxiosRequestConfig): Promise<operations.GetConsentStatusResponse>;
+     */
+    getConsentStatus(req: operations.GetConsentStatusRequest, security: operations.GetConsentStatusSecurity, config?: AxiosRequestConfig): Promise<operations.GetConsentStatusResponse>;
     /**
-     * getTransactionDetails - Read transaction details
+     * Read transaction details
      *
+     * @remarks
      * Reads transaction details from a given transaction addressed by "transactionId" on a given account addressed by "account-id".
      * This call is only available on transactions as reported in a JSON format.
      *
      * **Remark:** Please note that the PATH might be already given in detail by the corresponding entry of the response of the
      * "Read Transaction List" call within the _links subfield.
      *
-    **/
-    getTransactionDetails(req: operations.GetTransactionDetailsRequest, config?: AxiosRequestConfig): Promise<operations.GetTransactionDetailsResponse>;
+     */
+    getTransactionDetails(req: operations.GetTransactionDetailsRequest, security: operations.GetTransactionDetailsSecurity, config?: AxiosRequestConfig): Promise<operations.GetTransactionDetailsResponse>;
     /**
-     * getTransactionList - Read transaction list of an account
+     * Read transaction list of an account
      *
+     * @remarks
      * Read transaction reports or transaction lists of a given account ddressed by "account-id", depending on the steering parameter
      * "bookingStatus" together with balances.
      *
      * For a given account, additional parameters are e.g. the attributes "dateFrom" and "dateTo".
      * The ASPSP might add balance information, if transaction lists without balances are not supported.
      *
-    **/
-    getTransactionList(req: operations.GetTransactionListRequest, config?: AxiosRequestConfig): Promise<operations.GetTransactionListResponse>;
+     */
+    getTransactionList(req: operations.GetTransactionListRequest, security: operations.GetTransactionListSecurity, config?: AxiosRequestConfig): Promise<operations.GetTransactionListResponse>;
     /**
-     * readAccountDetails - Read account details
+     * Read account details
      *
+     * @remarks
      * Reads details about an account, with balances where required.
      * It is assumed that a consent of the PSU to
      * this access is already given and stored on the ASPSP system.
@@ -143,11 +164,12 @@ export declare class AccountInformationServiceAis {
      *
      * Give detailed information about the addressed account together with balance information
      *
-    **/
-    readAccountDetails(req: operations.ReadAccountDetailsRequest, config?: AxiosRequestConfig): Promise<operations.ReadAccountDetailsResponse>;
+     */
+    readAccountDetails(req: operations.ReadAccountDetailsRequest, security: operations.ReadAccountDetailsSecurity, config?: AxiosRequestConfig): Promise<operations.ReadAccountDetailsResponse>;
     /**
-     * startConsentAuthorisation - Start the authorisation process for a consent
+     * Start the authorisation process for a consent
      *
+     * @remarks
      * Create an authorisation sub-resource and start the authorisation process of a consent.
      * The message might in addition transmit authentication and authorisation related data.
      *
@@ -181,11 +203,12 @@ export declare class AccountInformationServiceAis {
      *     executing the cancellation.
      *   * The signing basket needs to be authorised yet.
      *
-    **/
-    startConsentAuthorisation(req: operations.StartConsentAuthorisationRequest, config?: AxiosRequestConfig): Promise<operations.StartConsentAuthorisationResponse>;
+     */
+    startConsentAuthorisation(req: operations.StartConsentAuthorisationRequest, security: operations.StartConsentAuthorisationSecurity, config?: AxiosRequestConfig): Promise<operations.StartConsentAuthorisationResponse>;
     /**
-     * updateConsentsPsuData - Update PSU Data for consents
+     * Update PSU Data for consents
      *
+     * @remarks
      * This method update PSU data on the consents  resource if needed.
      * It may authorise a consent within the Embedded SCA Approach where needed.
      *
@@ -225,6 +248,6 @@ export declare class AccountInformationServiceAis {
      *     therefore many optional elements are not present.
      *     Maybe in a later version the access path will change.
      *
-    **/
-    updateConsentsPsuData(req: operations.UpdateConsentsPsuDataRequest, config?: AxiosRequestConfig): Promise<operations.UpdateConsentsPsuDataResponse>;
+     */
+    updateConsentsPsuData(req: operations.UpdateConsentsPsuDataRequest, security: operations.UpdateConsentsPsuDataSecurity, config?: AxiosRequestConfig): Promise<operations.UpdateConsentsPsuDataResponse>;
 }

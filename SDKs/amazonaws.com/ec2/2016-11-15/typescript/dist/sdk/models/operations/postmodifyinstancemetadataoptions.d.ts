@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostModifyInstanceMetadataOptionsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTModifyInstanceMetadataOptionsActionEnum {
     ModifyInstanceMetadataOptions = "ModifyInstanceMetadataOptions"
 }
-export declare enum PostModifyInstanceMetadataOptionsVersionEnum {
+export declare enum POSTModifyInstanceMetadataOptionsVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostModifyInstanceMetadataOptionsQueryParams extends SpeakeasyBase {
-    action: PostModifyInstanceMetadataOptionsActionEnum;
-    version: PostModifyInstanceMetadataOptionsVersionEnum;
-}
-export declare class PostModifyInstanceMetadataOptionsHeaders extends SpeakeasyBase {
+export declare class POSTModifyInstanceMetadataOptionsRequest extends SpeakeasyBase {
+    action: POSTModifyInstanceMetadataOptionsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTModifyInstanceMetadataOptionsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostModifyInstanceMetadataOptionsHeaders extends SpeakeasyB
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostModifyInstanceMetadataOptionsRequest extends SpeakeasyBase {
-    queryParams: PostModifyInstanceMetadataOptionsQueryParams;
-    headers: PostModifyInstanceMetadataOptionsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostModifyInstanceMetadataOptionsResponse extends SpeakeasyBase {
+export declare class POSTModifyInstanceMetadataOptionsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

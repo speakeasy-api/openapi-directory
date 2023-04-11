@@ -2,13 +2,34 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { GkeNodePoolAcceleratorConfig } from "./gkenodepoolacceleratorconfig";
 /**
  * Parameters that describe cluster nodes.
-**/
+ */
 export declare class GkeNodeConfig extends SpeakeasyBase {
+    /**
+     * Optional. A list of hardware accelerators (https://cloud.google.com/compute/docs/gpus) to attach to each node.
+     */
     accelerators?: GkeNodePoolAcceleratorConfig[];
+    /**
+     * Optional. The Customer Managed Encryption Key (CMEK) (https://cloud.google.com/kubernetes-engine/docs/how-to/using-cmek) used to encrypt the boot disk attached to each node in the node pool. Specify the key using the following format: projects/KEY_PROJECT_ID/locations/LOCATION /keyRings/RING_NAME/cryptoKeys/KEY_NAME.
+     */
     bootDiskKmsKey?: string;
+    /**
+     * Optional. The number of local SSD disks to attach to the node, which is limited by the maximum number of disks allowable per zone (see Adding Local SSDs (https://cloud.google.com/compute/docs/disks/local-ssd)).
+     */
     localSsdCount?: number;
+    /**
+     * Optional. The name of a Compute Engine machine type (https://cloud.google.com/compute/docs/machine-types).
+     */
     machineType?: string;
+    /**
+     * Optional. Minimum CPU platform (https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform) to be used by this instance. The instance may be scheduled on the specified or a newer CPU platform. Specify the friendly names of CPU platforms, such as "Intel Haswell"` or Intel Sandy Bridge".
+     */
     minCpuPlatform?: string;
+    /**
+     * Optional. Whether the nodes are created as legacy preemptible VM instances (https://cloud.google.com/compute/docs/instances/preemptible). Also see Spot VMs, preemptible VM instances without a maximum lifetime. Legacy and Spot preemptible nodes cannot be used in a node pool with the CONTROLLER role or in the DEFAULT node pool if the CONTROLLER role is not assigned (the DEFAULT node pool will assume the CONTROLLER role).
+     */
     preemptible?: boolean;
+    /**
+     * Optional. Whether the nodes are created as Spot VM instances (https://cloud.google.com/compute/docs/instances/spot). Spot VMs are the latest update to legacy preemptible VMs. Spot VMs do not have a maximum lifetime. Legacy and Spot preemptible nodes cannot be used in a node pool with the CONTROLLER role or in the DEFAULT node pool if the CONTROLLER role is not assigned (the DEFAULT node pool will assume the CONTROLLER role).
+     */
     spot?: boolean;
 }

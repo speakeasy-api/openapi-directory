@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolDhcpGetStatisticsPathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolDhcpGetStatisticsRequest extends SpeakeasyBase {
-    pathParams: ProtocolDhcpGetStatisticsPathParams;
+    /**
+     * Agent to show DHCP statistics
+     */
+    agentNum: number;
 }
 export declare class ProtocolDhcpGetStatisticsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolDhcpGetStatistics200ApplicationJSONInt32Integers?: number[];
 }

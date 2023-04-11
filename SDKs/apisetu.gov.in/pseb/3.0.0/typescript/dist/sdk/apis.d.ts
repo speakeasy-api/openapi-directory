@@ -1,6 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class ApIs {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+export declare class APIs {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,33 +9,38 @@ export declare class ApIs {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * cemst - Class VIII Marksheet
+     * Class VIII Marksheet
      *
+     * @remarks
      * API to verify Class VIII Marksheet.
-    **/
-    cemst(req: operations.CemstRequest, config?: AxiosRequestConfig): Promise<operations.CemstResponse>;
+     */
+    cemst(req: operations.CemstRequestBody, security: operations.CemstSecurity, config?: AxiosRequestConfig): Promise<operations.CemstResponse>;
     /**
-     * cfmst - Class V Marksheet
+     * Class V Marksheet
      *
+     * @remarks
      * API to verify Class V Marksheet.
-    **/
-    cfmst(req: operations.CfmstRequest, config?: AxiosRequestConfig): Promise<operations.CfmstResponse>;
+     */
+    cfmst(req: operations.CfmstRequestBody, security: operations.CfmstSecurity, config?: AxiosRequestConfig): Promise<operations.CfmstResponse>;
     /**
-     * hscer - Class XII Marksheet
+     * Class XII Marksheet
      *
+     * @remarks
      * API to verify Class XII Marksheet.
-    **/
-    hscer(req: operations.HscerRequest, config?: AxiosRequestConfig): Promise<operations.HscerResponse>;
+     */
+    hscer(req: operations.HscerRequestBody, security: operations.HscerSecurity, config?: AxiosRequestConfig): Promise<operations.HscerResponse>;
     /**
-     * micer - Migration Certificate
+     * Migration Certificate
      *
+     * @remarks
      * API to verify Migration Certificate.
-    **/
-    micer(req: operations.MicerRequest, config?: AxiosRequestConfig): Promise<operations.MicerResponse>;
+     */
+    micer(req: operations.MicerRequestBody, security: operations.MicerSecurity, config?: AxiosRequestConfig): Promise<operations.MicerResponse>;
     /**
-     * sscer - Class X Marksheet
+     * Class X Marksheet
      *
+     * @remarks
      * API to verify Class X Marksheet.
-    **/
-    sscer(req: operations.SscerRequest, config?: AxiosRequestConfig): Promise<operations.SscerResponse>;
+     */
+    sscer(req: operations.SscerRequestBody, security: operations.SscerSecurity, config?: AxiosRequestConfig): Promise<operations.SscerResponse>;
 }

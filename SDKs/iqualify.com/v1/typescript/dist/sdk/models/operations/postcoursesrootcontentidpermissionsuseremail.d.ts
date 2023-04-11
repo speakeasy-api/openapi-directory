@@ -1,23 +1,37 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PostCoursesRootContentIdPermissionsUserEmailPathParams extends SpeakeasyBase {
-    rootContentId: string;
-    userEmail: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PostCoursesRootContentIdPermissionsUserEmailPermissionToBeGrantedToTheUser extends SpeakeasyBase {
     isBuilder?: boolean;
     isReviewer?: boolean;
 }
-export declare class PostCoursesRootContentIdPermissionsUserEmail201ApplicationJson extends SpeakeasyBase {
-    contentId?: string;
-}
 export declare class PostCoursesRootContentIdPermissionsUserEmailRequest extends SpeakeasyBase {
-    pathParams: PostCoursesRootContentIdPermissionsUserEmailPathParams;
-    request: PostCoursesRootContentIdPermissionsUserEmailPermissionToBeGrantedToTheUser;
+    requestBody: PostCoursesRootContentIdPermissionsUserEmailPermissionToBeGrantedToTheUser;
+    /**
+     * The content Id
+     */
+    rootContentId: string;
+    /**
+     * The user email
+     */
+    userEmail: string;
+}
+/**
+ * user successfully added to the course with the specified permission.
+ */
+export declare class PostCoursesRootContentIdPermissionsUserEmail201ApplicationJSON extends SpeakeasyBase {
+    contentId?: string;
 }
 export declare class PostCoursesRootContentIdPermissionsUserEmailResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Bad Request
+     */
     error?: shared.ErrorT;
     statusCode: number;
-    postCoursesRootContentIdPermissionsUserEmail201ApplicationJSONObject?: PostCoursesRootContentIdPermissionsUserEmail201ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * user successfully added to the course with the specified permission.
+     */
+    postCoursesRootContentIdPermissionsUserEmail201ApplicationJSONObject?: PostCoursesRootContentIdPermissionsUserEmail201ApplicationJSON;
 }

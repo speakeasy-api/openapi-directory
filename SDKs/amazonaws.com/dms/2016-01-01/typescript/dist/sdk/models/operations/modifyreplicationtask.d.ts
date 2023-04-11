@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum ModifyReplicationTaskXAmzTargetEnum {
-    AmazonDmSv20160101ModifyReplicationTask = "AmazonDMSv20160101.ModifyReplicationTask"
+    AmazonDMSv20160101ModifyReplicationTask = "AmazonDMSv20160101.ModifyReplicationTask"
 }
-export declare class ModifyReplicationTaskHeaders extends SpeakeasyBase {
+export declare class ModifyReplicationTaskRequest extends SpeakeasyBase {
+    modifyReplicationTaskMessage: shared.ModifyReplicationTaskMessage;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class ModifyReplicationTaskHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ModifyReplicationTaskXAmzTargetEnum;
 }
-export declare class ModifyReplicationTaskRequest extends SpeakeasyBase {
-    headers: ModifyReplicationTaskHeaders;
-    request: shared.ModifyReplicationTaskMessage;
-}
 export declare class ModifyReplicationTaskResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidResourceStateFault
+     */
     invalidResourceStateFault?: any;
+    /**
+     * KMSKeyNotAccessibleFault
+     */
     kmsKeyNotAccessibleFault?: any;
+    /**
+     * Success
+     */
     modifyReplicationTaskResponse?: shared.ModifyReplicationTaskResponse;
+    /**
+     * ResourceAlreadyExistsFault
+     */
     resourceAlreadyExistsFault?: any;
-    resourceNotFoundFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundFault
+     */
+    resourceNotFoundFault?: any;
 }

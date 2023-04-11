@@ -1,12 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetEventsEventIdPathParams extends SpeakeasyBase {
-    eventId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetEventsEventIdRequest extends SpeakeasyBase {
-    pathParams: GetEventsEventIdPathParams;
+    /**
+     * The id of the event
+     */
+    eventId: string;
 }
 export declare class GetEventsEventIdResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

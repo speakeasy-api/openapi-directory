@@ -1,18 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PostProjectWebhookPathParams extends SpeakeasyBase {
-    id: number;
-}
-export declare class PostProjectWebhookRequestBody extends SpeakeasyBase {
-    callbackUrl?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PostProjectWebhookRequest extends SpeakeasyBase {
-    pathParams: PostProjectWebhookPathParams;
-    request?: PostProjectWebhookRequestBody;
+    webhook?: shared.Webhook;
+    /**
+     * Project ID
+     */
+    id: number;
 }
 export declare class PostProjectWebhookResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * ProjectNotFound
+     */
     error?: shared.ErrorT;
+    /**
+     * Updated project
+     */
     project?: shared.Project;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,3 +1,6 @@
+/**
+ * Indicate on which indicator or value you want to make your formula
+ */
 export declare enum PerformanceIndicatorFormulaParameterTypeEnum {
     Cost = "Cost",
     TotalSales = "TotalSales",

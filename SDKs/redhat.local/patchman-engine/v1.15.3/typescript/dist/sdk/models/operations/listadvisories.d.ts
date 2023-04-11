@@ -1,5 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class ListAdvisoriesSecurity extends SpeakeasyBase {
+    rhIdentity: string;
+}
+/**
+ * Sort field
+ */
 export declare enum ListAdvisoriesSortEnum {
     Id = "id",
     Name = "name",
@@ -8,31 +15,70 @@ export declare enum ListAdvisoriesSortEnum {
     PublicDate = "public_date",
     ApplicableSystems = "applicable_systems"
 }
-export declare class ListAdvisoriesQueryParams extends SpeakeasyBase {
-    filterAdvisoryType?: string;
-    filterApplicableSystems?: string;
-    filterDescription?: string;
-    filterId?: string;
-    filterPublicDate?: string;
-    filterSeverity?: string;
-    filterSynopsis?: string;
-    filterSystemProfileSapSidsIn?: string[];
-    filterSystemProfileSapSystem?: string;
-    limit?: number;
-    offset?: number;
-    search?: string;
-    sort?: ListAdvisoriesSortEnum;
-    tags?: string[];
-}
-export declare class ListAdvisoriesSecurity extends SpeakeasyBase {
-    rhIdentity: shared.SchemeRhIdentity;
-}
 export declare class ListAdvisoriesRequest extends SpeakeasyBase {
-    queryParams: ListAdvisoriesQueryParams;
-    security: ListAdvisoriesSecurity;
+    /**
+     * Filter
+     */
+    filterAdvisoryType?: string;
+    /**
+     * Filter
+     */
+    filterApplicableSystems?: string;
+    /**
+     * Filter
+     */
+    filterDescription?: string;
+    /**
+     * Filter
+     */
+    filterId?: string;
+    /**
+     * Filter
+     */
+    filterPublicDate?: string;
+    /**
+     * Filter
+     */
+    filterSeverity?: string;
+    /**
+     * Filter
+     */
+    filterSynopsis?: string;
+    /**
+     * Filter systems by their SAP SIDs
+     */
+    filterSystemProfileSapSidsIn?: string[];
+    /**
+     * Filter only SAP systems
+     */
+    filterSystemProfileSapSystem?: string;
+    /**
+     * Limit for paging, set -1 to return all
+     */
+    limit?: number;
+    /**
+     * Offset for paging
+     */
+    offset?: number;
+    /**
+     * Find matching text
+     */
+    search?: string;
+    /**
+     * Sort field
+     */
+    sort?: ListAdvisoriesSortEnum;
+    /**
+     * Tag filter
+     */
+    tags?: string[];
 }
 export declare class ListAdvisoriesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
     controllersAdvisoriesResponse?: shared.ControllersAdvisoriesResponse;
 }

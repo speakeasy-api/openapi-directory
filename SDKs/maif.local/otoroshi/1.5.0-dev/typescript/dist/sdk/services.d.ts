@@ -1,5 +1,9 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Everything about Otoroshi service descriptors
+ */
 export declare class Services {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,93 +13,108 @@ export declare class Services {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * allServices - Get all services
-     *
      * Get all services
-    **/
-    allServices(req: operations.AllServicesRequest, config?: AxiosRequestConfig): Promise<operations.AllServicesResponse>;
-    /**
-     * createService - Create a new service descriptor
      *
+     * @remarks
+     * Get all services
+     */
+    allServices(config?: AxiosRequestConfig): Promise<operations.AllServicesResponse>;
+    /**
      * Create a new service descriptor
-    **/
-    createService(req: operations.CreateServiceRequest, config?: AxiosRequestConfig): Promise<operations.CreateServiceResponse>;
-    /**
-     * createServiceTemplate - Create a service descriptor error template
      *
+     * @remarks
+     * Create a new service descriptor
+     */
+    createService(req: shared.Service, security: operations.CreateServiceSecurity, config?: AxiosRequestConfig): Promise<operations.CreateServiceResponse>;
+    /**
+     * Create a service descriptor error template
+     *
+     * @remarks
      * Update a service descriptor targets
-    **/
-    createServiceTemplate(req: operations.CreateServiceTemplateRequest, config?: AxiosRequestConfig): Promise<operations.CreateServiceTemplateResponse>;
+     */
+    createServiceTemplate(req: operations.CreateServiceTemplateRequest, security: operations.CreateServiceTemplateSecurity, config?: AxiosRequestConfig): Promise<operations.CreateServiceTemplateResponse>;
     /**
-     * deleteService - Delete a service descriptor
-     *
      * Delete a service descriptor
-    **/
-    deleteService(req: operations.DeleteServiceRequest, config?: AxiosRequestConfig): Promise<operations.DeleteServiceResponse>;
-    /**
-     * deleteServiceTemplate - Delete a service descriptor error template
      *
+     * @remarks
+     * Delete a service descriptor
+     */
+    deleteService(req: operations.DeleteServiceRequest, security: operations.DeleteServiceSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteServiceResponse>;
+    /**
      * Delete a service descriptor error template
-    **/
-    deleteServiceTemplate(req: operations.DeleteServiceTemplateRequest, config?: AxiosRequestConfig): Promise<operations.DeleteServiceTemplateResponse>;
-    /**
-     * patchService - Update a service descriptor with a diff
      *
+     * @remarks
+     * Delete a service descriptor error template
+     */
+    deleteServiceTemplate(req: operations.DeleteServiceTemplateRequest, security: operations.DeleteServiceTemplateSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteServiceTemplateResponse>;
+    /**
      * Update a service descriptor with a diff
-    **/
-    patchService(req: operations.PatchServiceRequest, config?: AxiosRequestConfig): Promise<operations.PatchServiceResponse>;
-    /**
-     * service - Get a service descriptor
      *
+     * @remarks
+     * Update a service descriptor with a diff
+     */
+    patchService(req: operations.PatchServiceRequest, security: operations.PatchServiceSecurity, config?: AxiosRequestConfig): Promise<operations.PatchServiceResponse>;
+    /**
      * Get a service descriptor
-    **/
-    service(req: operations.ServiceRequest, config?: AxiosRequestConfig): Promise<operations.ServiceResponse>;
-    /**
-     * serviceAddTarget - Add a target to a service descriptor
      *
+     * @remarks
+     * Get a service descriptor
+     */
+    service(req: operations.ServiceRequest, security: operations.ServiceSecurity, config?: AxiosRequestConfig): Promise<operations.ServiceResponse>;
+    /**
      * Add a target to a service descriptor
-    **/
-    serviceAddTarget(req: operations.ServiceAddTargetRequest, config?: AxiosRequestConfig): Promise<operations.ServiceAddTargetResponse>;
-    /**
-     * serviceDeleteTarget - Delete a service descriptor target
      *
+     * @remarks
+     * Add a target to a service descriptor
+     */
+    serviceAddTarget(req: operations.ServiceAddTargetRequest, security: operations.ServiceAddTargetSecurity, config?: AxiosRequestConfig): Promise<operations.ServiceAddTargetResponse>;
+    /**
      * Delete a service descriptor target
-    **/
-    serviceDeleteTarget(req: operations.ServiceDeleteTargetRequest, config?: AxiosRequestConfig): Promise<operations.ServiceDeleteTargetResponse>;
-    /**
-     * serviceGroupServices - Get all services descriptor for a group
      *
+     * @remarks
+     * Delete a service descriptor target
+     */
+    serviceDeleteTarget(req: operations.ServiceDeleteTargetRequest, security: operations.ServiceDeleteTargetSecurity, config?: AxiosRequestConfig): Promise<operations.ServiceDeleteTargetResponse>;
+    /**
      * Get all services descriptor for a group
-    **/
-    serviceGroupServices(req: operations.ServiceGroupServicesRequest, config?: AxiosRequestConfig): Promise<operations.ServiceGroupServicesResponse>;
-    /**
-     * serviceTargets - Get a service descriptor targets
      *
+     * @remarks
+     * Get all services descriptor for a group
+     */
+    serviceGroupServices(req: operations.ServiceGroupServicesRequest, security: operations.ServiceGroupServicesSecurity, config?: AxiosRequestConfig): Promise<operations.ServiceGroupServicesResponse>;
+    /**
      * Get a service descriptor targets
-    **/
-    serviceTargets(req: operations.ServiceTargetsRequest, config?: AxiosRequestConfig): Promise<operations.ServiceTargetsResponse>;
-    /**
-     * serviceTemplate - Get a service descriptor error template
      *
+     * @remarks
+     * Get a service descriptor targets
+     */
+    serviceTargets(req: operations.ServiceTargetsRequest, security: operations.ServiceTargetsSecurity, config?: AxiosRequestConfig): Promise<operations.ServiceTargetsResponse>;
+    /**
      * Get a service descriptor error template
-    **/
-    serviceTemplate(req: operations.ServiceTemplateRequest, config?: AxiosRequestConfig): Promise<operations.ServiceTemplateResponse>;
-    /**
-     * updateService - Update a service descriptor
      *
+     * @remarks
+     * Get a service descriptor error template
+     */
+    serviceTemplate(req: operations.ServiceTemplateRequest, security: operations.ServiceTemplateSecurity, config?: AxiosRequestConfig): Promise<operations.ServiceTemplateResponse>;
+    /**
      * Update a service descriptor
-    **/
-    updateService(req: operations.UpdateServiceRequest, config?: AxiosRequestConfig): Promise<operations.UpdateServiceResponse>;
-    /**
-     * updateServiceTargets - Update a service descriptor targets
      *
+     * @remarks
+     * Update a service descriptor
+     */
+    updateService(req: operations.UpdateServiceRequest, security: operations.UpdateServiceSecurity, config?: AxiosRequestConfig): Promise<operations.UpdateServiceResponse>;
+    /**
      * Update a service descriptor targets
-    **/
-    updateServiceTargets(req: operations.UpdateServiceTargetsRequest, config?: AxiosRequestConfig): Promise<operations.UpdateServiceTargetsResponse>;
-    /**
-     * updateServiceTemplate - Update an error template to a service descriptor
      *
+     * @remarks
+     * Update a service descriptor targets
+     */
+    updateServiceTargets(req: operations.UpdateServiceTargetsRequest, security: operations.UpdateServiceTargetsSecurity, config?: AxiosRequestConfig): Promise<operations.UpdateServiceTargetsResponse>;
+    /**
      * Update an error template to a service descriptor
-    **/
-    updateServiceTemplate(req: operations.UpdateServiceTemplateRequest, config?: AxiosRequestConfig): Promise<operations.UpdateServiceTemplateResponse>;
+     *
+     * @remarks
+     * Update an error template to a service descriptor
+     */
+    updateServiceTemplate(req: operations.UpdateServiceTemplateRequest, security: operations.UpdateServiceTemplateSecurity, config?: AxiosRequestConfig): Promise<operations.UpdateServiceTemplateResponse>;
 }

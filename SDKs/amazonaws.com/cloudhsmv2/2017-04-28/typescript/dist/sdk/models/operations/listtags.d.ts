@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListTagsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListTagsXAmzTargetEnum {
     BaldrApiServiceListTags = "BaldrApiService.ListTags"
 }
-export declare class ListTagsHeaders extends SpeakeasyBase {
+export declare class ListTagsRequest extends SpeakeasyBase {
+    listTagsRequest: shared.ListTagsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,19 +23,36 @@ export declare class ListTagsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListTagsXAmzTargetEnum;
 }
-export declare class ListTagsRequest extends SpeakeasyBase {
-    queryParams: ListTagsQueryParams;
-    headers: ListTagsHeaders;
-    request: shared.ListTagsRequest;
-}
 export declare class ListTagsResponse extends SpeakeasyBase {
+    /**
+     * CloudHsmAccessDeniedException
+     */
     cloudHsmAccessDeniedException?: any;
+    /**
+     * CloudHsmInternalFailureException
+     */
     cloudHsmInternalFailureException?: any;
+    /**
+     * CloudHsmInvalidRequestException
+     */
     cloudHsmInvalidRequestException?: any;
+    /**
+     * CloudHsmResourceNotFoundException
+     */
     cloudHsmResourceNotFoundException?: any;
+    /**
+     * CloudHsmServiceException
+     */
     cloudHsmServiceException?: any;
+    /**
+     * CloudHsmTagException
+     */
     cloudHsmTagException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     listTagsResponse?: shared.ListTagsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

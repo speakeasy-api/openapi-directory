@@ -1,15 +1,58 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * OK. Article private file
+ */
 export declare class PrivateFile extends SpeakeasyBase {
-    computedMd5?: string;
-    downloadUrl?: string;
-    id?: number;
-    isLinkOnly?: boolean;
-    name?: string;
-    previewState?: string;
-    size?: number;
-    status?: string;
-    suppliedMd5?: string;
-    uploadToken?: string;
-    uploadUrl?: string;
-    viewerType?: string;
+    /**
+     * File computed md5
+     */
+    computedMd5: string;
+    /**
+     * Url for file download
+     */
+    downloadUrl: string;
+    /**
+     * File id
+     */
+    id: number;
+    /**
+     * True if the file is attached to a public item version
+     */
+    isAttachedToPublicVersion: boolean;
+    /**
+     * True if file is hosted somewhere else
+     */
+    isLinkOnly: boolean;
+    /**
+     * File name
+     */
+    name: string;
+    /**
+     * File preview state
+     */
+    previewState: string;
+    /**
+     * File size
+     */
+    size: number;
+    /**
+     * Status for file upload
+     */
+    status: string;
+    /**
+     * File supplied md5
+     */
+    suppliedMd5: string;
+    /**
+     * Token for file upload
+     */
+    uploadToken: string;
+    /**
+     * Upload url for file
+     */
+    uploadUrl: string;
+    /**
+     * File viewer type
+     */
+    viewerType: string;
 }

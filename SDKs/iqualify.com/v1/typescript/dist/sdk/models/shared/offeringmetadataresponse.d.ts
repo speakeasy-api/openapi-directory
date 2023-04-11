@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { OfferingMetadata } from "./offeringmetadata";
+/**
+ * offering created
+ */
 export declare class OfferingMetadataResponse extends SpeakeasyBase {
     contentId?: string;
     coverImageUrl?: string;
@@ -14,6 +17,9 @@ export declare class OfferingMetadataResponse extends SpeakeasyBase {
     isReadonly?: boolean;
     metadata?: OfferingMetadata;
     name?: string;
+    /**
+     * content can contain html
+     */
     overview?: string;
     price?: number;
     start?: Date;

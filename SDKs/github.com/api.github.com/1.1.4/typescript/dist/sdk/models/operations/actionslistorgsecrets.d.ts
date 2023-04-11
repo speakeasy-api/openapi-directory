@@ -1,23 +1,34 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ActionsListOrgSecretsPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ActionsListOrgSecretsRequest extends SpeakeasyBase {
+    /**
+     * The organization name. The name is not case sensitive.
+     */
     org: string;
-}
-export declare class ActionsListOrgSecretsQueryParams extends SpeakeasyBase {
+    /**
+     * Page number of the results to fetch.
+     */
     page?: number;
+    /**
+     * The number of results per page (max 100).
+     */
     perPage?: number;
 }
-export declare class ActionsListOrgSecrets200ApplicationJson extends SpeakeasyBase {
+/**
+ * Response
+ */
+export declare class ActionsListOrgSecrets200ApplicationJSON extends SpeakeasyBase {
     secrets: shared.OrganizationActionsSecret[];
     totalCount: number;
 }
-export declare class ActionsListOrgSecretsRequest extends SpeakeasyBase {
-    pathParams: ActionsListOrgSecretsPathParams;
-    queryParams: ActionsListOrgSecretsQueryParams;
-}
 export declare class ActionsListOrgSecretsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
-    actionsListOrgSecrets200ApplicationJSONObject?: ActionsListOrgSecrets200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
+    actionsListOrgSecrets200ApplicationJSONObject?: ActionsListOrgSecrets200ApplicationJSON;
 }

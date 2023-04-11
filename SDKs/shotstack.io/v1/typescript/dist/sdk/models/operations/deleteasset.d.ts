@@ -1,16 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class DeleteAssetPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteAssetSecurity extends SpeakeasyBase {
-    developerKey: shared.SchemeDeveloperKey;
+    developerKey: string;
 }
 export declare class DeleteAssetRequest extends SpeakeasyBase {
-    pathParams: DeleteAssetPathParams;
-    security: DeleteAssetSecurity;
+    /**
+     * The id of the asset in UUID format
+     */
+    id: string;
 }
 export declare class DeleteAssetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteOpenIdConnectProviderActionEnum {
-    DeleteOpenIdConnectProvider = "DeleteOpenIDConnectProvider"
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteOpenIDConnectProviderActionEnum {
+    DeleteOpenIDConnectProvider = "DeleteOpenIDConnectProvider"
 }
-export declare enum PostDeleteOpenIdConnectProviderVersionEnum {
+export declare enum POSTDeleteOpenIDConnectProviderVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostDeleteOpenIdConnectProviderQueryParams extends SpeakeasyBase {
-    action: PostDeleteOpenIdConnectProviderActionEnum;
-    version: PostDeleteOpenIdConnectProviderVersionEnum;
-}
-export declare class PostDeleteOpenIdConnectProviderHeaders extends SpeakeasyBase {
+export declare class POSTDeleteOpenIDConnectProviderRequest extends SpeakeasyBase {
+    action: POSTDeleteOpenIDConnectProviderActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteOpenIDConnectProviderVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteOpenIdConnectProviderHeaders extends SpeakeasyBas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteOpenIdConnectProviderRequest extends SpeakeasyBase {
-    queryParams: PostDeleteOpenIdConnectProviderQueryParams;
-    headers: PostDeleteOpenIdConnectProviderHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteOpenIdConnectProviderResponse extends SpeakeasyBase {
+export declare class POSTDeleteOpenIDConnectProviderResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

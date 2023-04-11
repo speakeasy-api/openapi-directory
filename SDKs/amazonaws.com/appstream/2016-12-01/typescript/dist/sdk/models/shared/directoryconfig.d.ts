@@ -1,0 +1,13 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { CertificateBasedAuthProperties } from "./certificatebasedauthproperties";
+import { ServiceAccountCredentials } from "./serviceaccountcredentials";
+/**
+ * Describes the configuration information required to join fleets and image builders to Microsoft Active Directory domains.
+ */
+export declare class DirectoryConfig extends SpeakeasyBase {
+    certificateBasedAuthProperties?: CertificateBasedAuthProperties;
+    createdTime?: Date;
+    directoryName: string;
+    organizationalUnitDistinguishedNames?: string[];
+    serviceAccountCredentials?: ServiceAccountCredentials;
+}

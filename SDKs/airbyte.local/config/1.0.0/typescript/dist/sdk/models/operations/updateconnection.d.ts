@@ -1,11 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdateConnectionRequest extends SpeakeasyBase {
-    request: shared.ConnectionUpdate;
-}
+import { AxiosResponse } from "axios";
 export declare class UpdateConnectionResponse extends SpeakeasyBase {
+    /**
+     * Successful operation
+     */
     connectionRead?: shared.ConnectionRead;
     contentType: string;
+    /**
+     * Input failed validation
+     */
     invalidInputExceptionInfo?: shared.InvalidInputExceptionInfo;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

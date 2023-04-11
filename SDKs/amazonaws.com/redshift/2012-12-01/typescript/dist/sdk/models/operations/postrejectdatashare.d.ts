@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostRejectDataShareActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTRejectDataShareActionEnum {
     RejectDataShare = "RejectDataShare"
 }
-export declare enum PostRejectDataShareVersionEnum {
+export declare enum POSTRejectDataShareVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostRejectDataShareQueryParams extends SpeakeasyBase {
-    action: PostRejectDataShareActionEnum;
-    version: PostRejectDataShareVersionEnum;
-}
-export declare class PostRejectDataShareHeaders extends SpeakeasyBase {
+export declare class POSTRejectDataShareRequest extends SpeakeasyBase {
+    action: POSTRejectDataShareActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTRejectDataShareVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostRejectDataShareHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostRejectDataShareRequest extends SpeakeasyBase {
-    queryParams: PostRejectDataShareQueryParams;
-    headers: PostRejectDataShareHeaders;
-    request?: Uint8Array;
-}
-export declare class PostRejectDataShareResponse extends SpeakeasyBase {
+export declare class POSTRejectDataShareResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,37 +1,65 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class UnliWithoutApplicationnkApplicationSecurity extends SpeakeasyBase {
+    basicAuth?: shared.SchemeBasicAuth;
+    bearerAuth?: string;
+}
+/**
+ * Provider of the account you want to unlink an application from
+ */
 export declare enum UnliWithoutApplicationnkApplicationProviderEnum {
     Messenger = "messenger",
     ViberServiceMsg = "viber_service_msg",
     Whatsapp = "whatsapp"
 }
-export declare class UnliWithoutApplicationnkApplicationPathParams extends SpeakeasyBase {
+export declare class UnliWithoutApplicationnkApplicationRequest extends SpeakeasyBase {
+    /**
+     * Id of the application you want to unlink
+     */
     applicationId: string;
+    /**
+     * External id of the account you want to unlink an application from
+     */
     externalId: string;
+    /**
+     * Provider of the account you want to unlink an application from
+     */
     provider: UnliWithoutApplicationnkApplicationProviderEnum;
 }
-export declare class UnliWithoutApplicationnkApplicationSecurity extends SpeakeasyBase {
-    bearerAuth?: shared.SchemeBearerAuth;
-    basicAuth?: shared.SchemeBasicAuth;
-}
-export declare class UnliWithoutApplicationnkApplication403ApplicationJson extends SpeakeasyBase {
+/**
+ * Conflict.
+ */
+export declare class UnliWithoutApplicationnkApplication409ApplicationJSON extends SpeakeasyBase {
+    /**
+     * The application is not linked or doesn't exist.
+     */
     detail?: string;
     title?: string;
     type?: string;
 }
-export declare class UnliWithoutApplicationnkApplication409ApplicationJson extends SpeakeasyBase {
+/**
+ * Forbidden.
+ */
+export declare class UnliWithoutApplicationnkApplication403ApplicationJSON extends SpeakeasyBase {
     detail?: string;
     title?: string;
     type?: string;
-}
-export declare class UnliWithoutApplicationnkApplicationRequest extends SpeakeasyBase {
-    pathParams: UnliWithoutApplicationnkApplicationPathParams;
-    security: UnliWithoutApplicationnkApplicationSecurity;
 }
 export declare class UnliWithoutApplicationnkApplicationResponse extends SpeakeasyBase {
+    /**
+     * Unauthorized.
+     */
     fourHundredAndOneResponse?: shared.FourHundredAndOneResponse;
     contentType: string;
     statusCode: number;
-    unliWithoutApplicationnkApplication403ApplicationJSONObject?: UnliWithoutApplicationnkApplication403ApplicationJson;
-    unliWithoutApplicationnkApplication409ApplicationJSONObject?: UnliWithoutApplicationnkApplication409ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Forbidden.
+     */
+    unliWithoutApplicationnkApplication403ApplicationJSONObject?: UnliWithoutApplicationnkApplication403ApplicationJSON;
+    /**
+     * Conflict.
+     */
+    unliWithoutApplicationnkApplication409ApplicationJSONObject?: UnliWithoutApplicationnkApplication409ApplicationJSON;
 }

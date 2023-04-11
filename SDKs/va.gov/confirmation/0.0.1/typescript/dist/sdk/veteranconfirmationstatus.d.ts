@@ -1,5 +1,9 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Veteran Confirmation - Veteran Status
+ */
 export declare class VeteranConfirmationStatus {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +13,7 @@ export declare class VeteranConfirmationStatus {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getVeteranStatus - Get confirmation about an individual's Veteran status according to the VA
-    **/
-    getVeteranStatus(req: operations.GetVeteranStatusRequest, config?: AxiosRequestConfig): Promise<operations.GetVeteranStatusResponse>;
+     * Get confirmation about an individual's Veteran status according to the VA
+     */
+    getVeteranStatus(req: shared.VeteranStatusRequest, security: operations.GetVeteranStatusSecurity, config?: AxiosRequestConfig): Promise<operations.GetVeteranStatusResponse>;
 }

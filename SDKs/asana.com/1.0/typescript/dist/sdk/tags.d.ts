@@ -1,5 +1,12 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * A tag is a label that can be attached to any task in Asana. It exists in a single workspace or organization.
+ *
+ * @remarks
+ *
+ * Tags have some metadata associated with them, but it is possible that we will simplify them in the future so it is not encouraged to rely too heavily on it. Unlike projects, tags do not provide any ordering on the tasks they are associated with.
+ */
 export declare class Tags {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +16,9 @@ export declare class Tags {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createTag - Create a tag
+     * Create a tag
      *
+     * @remarks
      * Creates a new tag in a workspace or organization.
      *
      * Every tag is required to be created in a specific workspace or
@@ -19,11 +27,12 @@ export declare class Tags {
      * organization.
      *
      * Returns the full record of the newly created tag.
-    **/
+     */
     createTag(req: operations.CreateTagRequest, config?: AxiosRequestConfig): Promise<operations.CreateTagResponse>;
     /**
-     * createTagForWorkspace - Create a tag in a workspace
+     * Create a tag in a workspace
      *
+     * @remarks
      * Creates a new tag in a workspace or organization.
      *
      * Every tag is required to be created in a specific workspace or
@@ -32,44 +41,50 @@ export declare class Tags {
      * organization.
      *
      * Returns the full record of the newly created tag.
-    **/
+     */
     createTagForWorkspace(req: operations.CreateTagForWorkspaceRequest, config?: AxiosRequestConfig): Promise<operations.CreateTagForWorkspaceResponse>;
     /**
-     * deleteTag - Delete a tag
+     * Delete a tag
      *
+     * @remarks
      * A specific, existing tag can be deleted by making a DELETE request on
      * the URL for that tag.
      *
      * Returns an empty data record.
-    **/
+     */
     deleteTag(req: operations.DeleteTagRequest, config?: AxiosRequestConfig): Promise<operations.DeleteTagResponse>;
     /**
-     * getTag - Get a tag
+     * Get a tag
      *
+     * @remarks
      * Returns the complete tag record for a single tag.
-    **/
+     */
     getTag(req: operations.GetTagRequest, config?: AxiosRequestConfig): Promise<operations.GetTagResponse>;
     /**
-     * getTags - Get multiple tags
+     * Get multiple tags
      *
+     * @remarks
      * Returns the compact tag records for some filtered set of tags. Use one or more of the parameters provided to filter the tags returned.
-    **/
+     */
     getTags(req: operations.GetTagsRequest, config?: AxiosRequestConfig): Promise<operations.GetTagsResponse>;
     /**
-     * getTagsForTask - Get a task's tags
+     * Get a task's tags
      *
+     * @remarks
      * Get a compact representation of all of the tags the task has.
-    **/
+     */
     getTagsForTask(req: operations.GetTagsForTaskRequest, config?: AxiosRequestConfig): Promise<operations.GetTagsForTaskResponse>;
     /**
-     * getTagsForWorkspace - Get tags in a workspace
+     * Get tags in a workspace
      *
+     * @remarks
      * Returns the compact tag records for some filtered set of tags. Use one or more of the parameters provided to filter the tags returned.
-    **/
+     */
     getTagsForWorkspace(req: operations.GetTagsForWorkspaceRequest, config?: AxiosRequestConfig): Promise<operations.GetTagsForWorkspaceResponse>;
     /**
-     * updateTag - Update a tag
+     * Update a tag
      *
+     * @remarks
      * Updates the properties of a tag. Only the fields provided in the `data`
      * block will be updated; any unspecified fields will remain unchanged.
      *
@@ -78,6 +93,6 @@ export declare class Tags {
      * you last retrieved the tag.
      *
      * Returns the complete updated tag record.
-    **/
+     */
     updateTag(req: operations.UpdateTagRequest, config?: AxiosRequestConfig): Promise<operations.UpdateTagResponse>;
 }

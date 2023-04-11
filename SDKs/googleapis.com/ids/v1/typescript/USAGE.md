@@ -1,48 +1,49 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { IdsProjectsLocationsEndpointsCreateRequest, IdsProjectsLocationsEndpointsCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  IdsProjectsLocationsEndpointsCreateRequest,
+  IdsProjectsLocationsEndpointsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  EndpointSeverityEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: IdsProjectsLocationsEndpointsCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    endpointId: "dolor",
-    fields: "expedita",
-    key: "voluptas",
-    oauthToken: "fugit",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    requestId: "rerum",
-    uploadType: "dicta",
-    uploadProtocol: "debitis",
-  },
-  request: {
-    description: "voluptatum",
+  dollarXgafv: XgafvEnum.Two,
+  endpointInput: {
+    description: "provident",
     labels: {
-      "ut": "dolorem",
+      "quibusdam": "unde",
+      "nulla": "corrupti",
+      "illum": "vel",
     },
-    network: "et",
-    severity: "SEVERITY_UNSPECIFIED",
-    trafficLogs: true,
+    network: "error",
+    severity: EndpointSeverityEnum.Medium,
+    threatExceptions: [
+      "iure",
+      "magnam",
+    ],
+    trafficLogs: false,
   },
+  accessToken: "debitis",
+  alt: AltEnum.Json,
+  callback: "delectus",
+  endpointId: "tempora",
+  fields: "suscipit",
+  key: "molestiae",
+  oauthToken: "minus",
+  parent: "placeat",
+  prettyPrint: false,
+  quotaUser: "voluptatum",
+  requestId: "iusto",
+  uploadType: "excepturi",
+  uploadProtocol: "nisi",
 };
 
 sdk.projects.idsProjectsLocationsEndpointsCreate(req).then((res: IdsProjectsLocationsEndpointsCreateResponse | AxiosError) => {

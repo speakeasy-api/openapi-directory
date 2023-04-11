@@ -5,7 +5,7 @@ import { UploadConfiguration } from "./uploadconfiguration";
 import { WorldConfig } from "./worldconfig";
 /**
  * Information about a simulation application configuration.
-**/
+ */
 export declare class SimulationApplicationConfig extends SpeakeasyBase {
     application: string;
     applicationVersion?: string;

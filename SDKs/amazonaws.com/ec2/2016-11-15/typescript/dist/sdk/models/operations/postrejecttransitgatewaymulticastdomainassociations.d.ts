@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostRejectTransitGatewayMulticastDomainAssociationsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTRejectTransitGatewayMulticastDomainAssociationsActionEnum {
     RejectTransitGatewayMulticastDomainAssociations = "RejectTransitGatewayMulticastDomainAssociations"
 }
-export declare enum PostRejectTransitGatewayMulticastDomainAssociationsVersionEnum {
+export declare enum POSTRejectTransitGatewayMulticastDomainAssociationsVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostRejectTransitGatewayMulticastDomainAssociationsQueryParams extends SpeakeasyBase {
-    action: PostRejectTransitGatewayMulticastDomainAssociationsActionEnum;
-    version: PostRejectTransitGatewayMulticastDomainAssociationsVersionEnum;
-}
-export declare class PostRejectTransitGatewayMulticastDomainAssociationsHeaders extends SpeakeasyBase {
+export declare class POSTRejectTransitGatewayMulticastDomainAssociationsRequest extends SpeakeasyBase {
+    action: POSTRejectTransitGatewayMulticastDomainAssociationsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTRejectTransitGatewayMulticastDomainAssociationsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostRejectTransitGatewayMulticastDomainAssociationsHeaders 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostRejectTransitGatewayMulticastDomainAssociationsRequest extends SpeakeasyBase {
-    queryParams: PostRejectTransitGatewayMulticastDomainAssociationsQueryParams;
-    headers: PostRejectTransitGatewayMulticastDomainAssociationsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostRejectTransitGatewayMulticastDomainAssociationsResponse extends SpeakeasyBase {
+export declare class POSTRejectTransitGatewayMulticastDomainAssociationsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

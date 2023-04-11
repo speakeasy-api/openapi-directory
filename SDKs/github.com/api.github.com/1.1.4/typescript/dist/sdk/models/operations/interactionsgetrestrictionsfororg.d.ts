@@ -1,13 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class InteractionsGetRestrictionsForOrgPathParams extends SpeakeasyBase {
-    org: string;
-}
+import { AxiosResponse } from "axios";
 export declare class InteractionsGetRestrictionsForOrgRequest extends SpeakeasyBase {
-    pathParams: InteractionsGetRestrictionsForOrgPathParams;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    org: string;
 }
 export declare class InteractionsGetRestrictionsForOrgResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    interactionLimitResponse?: shared.InteractionLimitResponse;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
+    interactionsGetRestrictionsForOrg200ApplicationJSONAnyOf?: any;
 }

@@ -1,0 +1,117 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Returns data about a character's status with a given Objective. Combine with DestinyObjectiveDefinition static data for display purposes.
+ */
+export declare class DestinyEntitiesItemsDestinyItemComponentMetricObjective extends SpeakeasyBase {
+    /**
+     * If the Objective has an Activity associated with it, this is the unique identifier of the Activity being referred to. Use to look up the DestinyActivityDefinition in static data. This will give localized data about *what* you should be playing for the objective to be achieved.
+     */
+    activityHash?: number;
+    /**
+     * Whether or not the Objective is completed.
+     */
+    complete?: boolean;
+    /**
+     * As of Forsaken, objectives' completion value is determined dynamically at runtime.
+     *
+     * @remarks
+     * This value represents the threshold of progress you need to surpass in order for this objective to be considered "complete".
+     * If you were using objective data, switch from using the DestinyObjectiveDefinition's "completionValue" to this value.
+     */
+    completionValue?: number;
+    /**
+     * If the Objective has a Destination associated with it, this is the unique identifier of the Destination being referred to. Use to look up the DestinyDestinationDefinition in static data. This will give localized data about *where* in the universe the objective should be achieved.
+     */
+    destinationHash?: number;
+    /**
+     * The unique identifier of the Objective being referred to. Use to look up the DestinyObjectiveDefinition in static data.
+     */
+    objectiveHash?: number;
+    /**
+     * If progress has been made, and the progress can be measured numerically, this will be the value of that progress. You can compare it to the DestinyObjectiveDefinition.completionValue property for current vs. upper bounds, and use DestinyObjectiveDefinition.inProgressValueStyle or completedValueStyle to determine how this should be rendered. Note that progress, in Destiny 2, need not be a literal numeric progression. It could be one of a number of possible values, even a Timestamp. Always examine DestinyObjectiveDefinition.inProgressValueStyle or completedValueStyle before rendering progress.
+     */
+    progress?: number;
+    /**
+     * If this is true, the objective is visible in-game. Otherwise, it's not yet visible to the player. Up to you if you want to honor this property.
+     */
+    visible?: boolean;
+}
+/**
+ * The base item component, filled with properties that are generally useful to know in any item request or that don't feel worthwhile to put in their own component.
+ */
+export declare class DestinyEntitiesItemsDestinyItemComponent extends SpeakeasyBase {
+    /**
+     * If the item is bound to a location, it will be specified in this enum.
+     */
+    bindStatus?: number;
+    /**
+     * The hash identifier for the specific inventory bucket in which the item is located.
+     */
+    bucketHash?: number;
+    /**
+     * If the item can expire, this is the date at which it will/did expire.
+     */
+    expirationDate?: Date;
+    /**
+     * If this is true, the object is actually a "wrapper" of the object it's representing. This means that it's not the actual item itself, but rather an item that must be "opened" in game before you have and can use the item.
+     *
+     * @remarks
+     *  Wrappers are an evolution of "bundles", which give an easy way to let you preview the contents of what you purchased while still letting you get a refund before you "open" it.
+     */
+    isWrapper?: boolean;
+    /**
+     * The identifier for the item's definition, which is where most of the useful static information for the item can be found.
+     */
+    itemHash?: number;
+    /**
+     * If the item is instanced, it will have an instance ID. Lack of an instance ID implies that the item has no distinct local qualities aside from stack size.
+     */
+    itemInstanceId?: number;
+    /**
+     * If available, a list that describes which item values (rewards) should be shown (true) or hidden (false).
+     */
+    itemValueVisibility?: boolean[];
+    /**
+     * An easy reference for where the item is located. Redundant if you got the item from an Inventory, but useful when making detail calls on specific items.
+     */
+    location?: number;
+    /**
+     * If the item can be locked, this will indicate that state.
+     */
+    lockable?: boolean;
+    /**
+     * The identifier for the currently-selected metric definition, to be displayed on the emblem nameplate.
+     */
+    metricHash?: number;
+    /**
+     * The objective progress for the currently-selected metric definition, to be displayed on the emblem nameplate.
+     */
+    metricObjective?: DestinyEntitiesItemsDestinyItemComponentMetricObjective;
+    /**
+     * If populated, this is the hash of the item whose icon (and other secondary styles, but *not* the human readable strings) should override whatever icons/styles are on the item being sold.
+     *
+     * @remarks
+     * If you don't do this, certain items whose styles are being overridden by socketed items - such as the "Recycle Shader" item - would show whatever their default icon/style is, and it wouldn't be pretty or look accurate.
+     */
+    overrideStyleItemHash?: number;
+    /**
+     * The quantity of the item in this stack. Note that Instanced items cannot stack. If an instanced item, this value will always be 1 (as the stack has exactly one item in it)
+     */
+    quantity?: number;
+    /**
+     * A flags enumeration indicating the transient/custom states of the item that affect how it is rendered: whether it's tracked or locked for example, or whether it has a masterwork plug inserted.
+     */
+    state?: number;
+    /**
+     * If this is populated, it is a list of indexes into DestinyInventoryItemDefinition.tooltipNotifications for any special tooltip messages that need to be shown for this item.
+     */
+    tooltipNotificationIndexes?: number[];
+    /**
+     * If there is a known error state that would cause this item to not be transferable, this Flags enum will indicate all of those error states. Otherwise, it will be 0 (CanTransfer).
+     */
+    transferStatus?: number;
+    /**
+     * The version of this item, used to index into the versions list in the item definition quality block.
+     */
+    versionNumber?: number;
+}

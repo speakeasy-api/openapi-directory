@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class ChatChannels {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class ChatChannels {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createChannel - Create a channel
+     * Create a channel
      *
+     * @remarks
      * Zoom chat channels allow users to communicate via chat in private or public groups. Use this API to create a channel for a user.<br>
      * **Scopes**:`chat_channel:write` or `chat_channel:write:admin`<br>
      *
@@ -19,11 +20,12 @@ export declare class ChatChannels {
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
      *
      *
-    **/
-    createChannel(req: operations.CreateChannelRequest, config?: AxiosRequestConfig): Promise<operations.CreateChannelResponse>;
+     */
+    createChannel(req: operations.CreateChannelRequest, security: operations.CreateChannelSecurity, config?: AxiosRequestConfig): Promise<operations.CreateChannelResponse>;
     /**
-     * deleteUserLevelChannel - Delete a channel
+     * Delete a channel
      *
+     * @remarks
      * Zoom chat [channels](https://support.zoom.us/hc/en-us/articles/200912909-Getting-Started-With-Channels-Group-Messaging-) allow users to communicate via chat in private or public groups. Use this API to delete a specific channel.
      *
      * **Scope:** `chat_channel:write`<br>
@@ -33,11 +35,12 @@ export declare class ChatChannels {
      *
      *
      *
-    **/
+     */
     deleteUserLevelChannel(req: operations.DeleteUserLevelChannelRequest, config?: AxiosRequestConfig): Promise<operations.DeleteUserLevelChannelResponse>;
     /**
-     * getChannels - List user's channels
+     * List user's channels
      *
+     * @remarks
      * Zoom chat [channels](https://support.zoom.us/hc/en-us/articles/200912909-Getting-Started-With-Channels-Group-Messaging-) allow users to communicate via chat in private or public groups. Use this API to list a user's chat channels.
      *
      * **Scope**: `chat_channel:read` or `chat_channel:read:admin`<br>
@@ -48,11 +51,12 @@ export declare class ChatChannels {
      *
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
      *
-    **/
-    getChannels(req: operations.GetChannelsRequest, config?: AxiosRequestConfig): Promise<operations.GetChannelsResponse>;
+     */
+    getChannels(req: operations.GetChannelsRequest, security: operations.GetChannelsSecurity, config?: AxiosRequestConfig): Promise<operations.GetChannelsResponse>;
     /**
-     * getUserLevelChannel - Get a channel
+     * Get a channel
      *
+     * @remarks
      * Zoom chat [channels](https://support.zoom.us/hc/en-us/articles/200912909-Getting-Started-With-Channels-Group-Messaging-) allow users to communicate via chat in private or public groups. Use this API to get information about a specific channel.
      *
      * **Scope:** `chat_channel:read`	<br>
@@ -62,33 +66,36 @@ export declare class ChatChannels {
      *
      *
      *
-    **/
-    getUserLevelChannel(req: operations.GetUserLevelChannelRequest, config?: AxiosRequestConfig): Promise<operations.GetUserLevelChannelResponse>;
+     */
+    getUserLevelChannel(req: operations.GetUserLevelChannelRequest, security: operations.GetUserLevelChannelSecurity, config?: AxiosRequestConfig): Promise<operations.GetUserLevelChannelResponse>;
     /**
-     * joinChannel - Join a channel
+     * Join a channel
      *
+     * @remarks
      * A [channel](https://support.zoom.us/hc/en-us/articles/200912909-Getting-Started-With-Channels-Group-Messaging-) can have one or multiple members. Use this API to join a channel that is open for anyone in the same organization to join. You cannot use this API to join private channels that only allows invited members to be a part of it.
      *
      * <p style="background-color:#e1f5fe; color:#01579b; padding:8px"> <b>Note: </b>This API only supports <b>user-managed</b> <a href="https://marketplace.zoom.us/docs/guides/getting-started/app-types/create-oauth-app">OAuth app</a>.</p><br>
      *
      * **Scope:** `chat_channel:write`<br>
      * **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-    **/
-    joinChannel(req: operations.JoinChannelRequest, config?: AxiosRequestConfig): Promise<operations.JoinChannelResponse>;
+     */
+    joinChannel(req: operations.JoinChannelRequest, security: operations.JoinChannelSecurity, config?: AxiosRequestConfig): Promise<operations.JoinChannelResponse>;
     /**
-     * leaveChannel - Leave a channel
+     * Leave a channel
      *
+     * @remarks
      * If you're no longer interested in being a member of an existing channel, you can leave the channel at any time. Use this API to leave a specific channel. After leaving the channel, you can no longer access information from that channel.
      *
      * <p style="background-color:#e1f5fe; color:#01579b; padding:8px"> <b>Note: </b>This API only supports <b>user-managed</b> <a href="https://marketplace.zoom.us/docs/guides/getting-started/app-types/create-oauth-app">OAuth app</a>.</p><br>
      *
      * **Scope:** `chat_channel:write`<br>
      * **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-    **/
-    leaveChannel(req: operations.LeaveChannelRequest, config?: AxiosRequestConfig): Promise<operations.LeaveChannelResponse>;
+     */
+    leaveChannel(req: operations.LeaveChannelRequest, security: operations.LeaveChannelSecurity, config?: AxiosRequestConfig): Promise<operations.LeaveChannelResponse>;
     /**
-     * removeAUserLevelChannelMember - Remove a member
+     * Remove a member
      *
+     * @remarks
      *  A [channel](https://support.zoom.us/hc/en-us/articles/200912909-Getting-Started-With-Channels-Group-Messaging-) can have one or multiple members. Use this API to remove a member from a chat channel.<br><br>
      *  **Scopes:** `chat_channel:write`<br>
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
@@ -97,11 +104,12 @@ export declare class ChatChannels {
      *
      *
      *
-    **/
-    removeAUserLevelChannelMember(req: operations.RemoveAUserLevelChannelMemberRequest, config?: AxiosRequestConfig): Promise<operations.RemoveAUserLevelChannelMemberResponse>;
+     */
+    removeAUserLevelChannelMember(req: operations.RemoveAUserLevelChannelMemberRequest, security: operations.RemoveAUserLevelChannelMemberSecurity, config?: AxiosRequestConfig): Promise<operations.RemoveAUserLevelChannelMemberResponse>;
     /**
-     * updateUserLevelChannel - Update a channel
+     * Update a channel
      *
+     * @remarks
      * Zoom chat channels allow users to communicate via chat in private or public channels. Use this API to update the name of a specific channel that you created.
      *
      * **Scope:** `chat_channel:write`	<br>
@@ -110,6 +118,6 @@ export declare class ChatChannels {
      * <p style="background-color:#e1f5fe; color:#01579b; padding:8px"> <b>Note: </b> This API only supports <b>user-managed</b> <a href="https://marketplace.zoom.us/docs/guides/getting-started/app-types/create-oauth-app">OAuth app</a>.</p><br>
      *
      *
-    **/
-    updateUserLevelChannel(req: operations.UpdateUserLevelChannelRequest, config?: AxiosRequestConfig): Promise<operations.UpdateUserLevelChannelResponse>;
+     */
+    updateUserLevelChannel(req: operations.UpdateUserLevelChannelRequest, security: operations.UpdateUserLevelChannelSecurity, config?: AxiosRequestConfig): Promise<operations.UpdateUserLevelChannelResponse>;
 }

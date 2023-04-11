@@ -1,69 +1,91 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { TranslateProjectsLocationsBatchTranslateDocumentRequest, TranslateProjectsLocationsBatchTranslateDocumentResponse } from "openapi/src/sdk/models/operations";
+import {
+  TranslateProjectsLocationsBatchTranslateDocumentRequest,
+  TranslateProjectsLocationsBatchTranslateDocumentResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: TranslateProjectsLocationsBatchTranslateDocumentRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  batchTranslateDocumentRequest: {
+    customizedAttribution: "provident",
+    enableShadowRemovalNativePdf: false,
     formatConversions: {
-      "debitis": "voluptatum",
-      "et": "ut",
-      "dolorem": "et",
+      "quibusdam": "unde",
+      "nulla": "corrupti",
+      "illum": "vel",
     },
     glossaries: {
-      "iste": {
-        glossary: "vitae",
-        ignoreCase: true,
+      "deserunt": {
+        glossary: "suscipit",
+        ignoreCase: false,
+      },
+      "iure": {
+        glossary: "magnam",
+        ignoreCase: false,
+      },
+      "debitis": {
+        glossary: "ipsa",
+        ignoreCase: false,
       },
     },
     inputConfigs: [
       {
         gcsSource: {
-          inputUri: "illum",
+          inputUri: "tempora",
+        },
+      },
+      {
+        gcsSource: {
+          inputUri: "suscipit",
+        },
+      },
+      {
+        gcsSource: {
+          inputUri: "molestiae",
+        },
+      },
+      {
+        gcsSource: {
+          inputUri: "minus",
         },
       },
     ],
     models: {
-      "vel": "odio",
+      "voluptatum": "iusto",
+      "excepturi": "nisi",
+      "recusandae": "temporibus",
+      "ab": "quis",
     },
     outputConfig: {
       gcsDestination: {
-        outputUriPrefix: "dolore",
+        outputUriPrefix: "veritatis",
       },
     },
-    sourceLanguageCode: "id",
+    sourceLanguageCode: "deserunt",
     targetLanguageCodes: [
-      "accusantium",
+      "ipsam",
     ],
   },
+  accessToken: "repellendus",
+  alt: AltEnum.Proto,
+  callback: "quo",
+  fields: "odit",
+  key: "at",
+  oauthToken: "at",
+  parent: "maiores",
+  prettyPrint: false,
+  quotaUser: "molestiae",
+  uploadType: "quod",
+  uploadProtocol: "quod",
 };
 
 sdk.projects.translateProjectsLocationsBatchTranslateDocument(req).then((res: TranslateProjectsLocationsBatchTranslateDocumentResponse | AxiosError) => {

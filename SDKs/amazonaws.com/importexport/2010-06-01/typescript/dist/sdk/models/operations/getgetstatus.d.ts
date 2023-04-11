@@ -1,30 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetGetStatusActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETGETStatusActionEnum {
     GetStatus = "GetStatus"
 }
-export declare enum GetGetStatusOperationEnum {
+export declare enum GETGETStatusOperationEnum {
     GetStatus = "GetStatus"
 }
-export declare enum GetGetStatusVersionEnum {
+export declare enum GETGETStatusVersionEnum {
     TwoThousandAndTen0601 = "2010-06-01"
 }
-export declare class GetGetStatusQueryParams extends SpeakeasyBase {
+export declare class GETGETStatusRequest extends SpeakeasyBase {
     apiVersion?: string;
     awsAccessKeyId: string;
-    action: GetGetStatusActionEnum;
+    action: GETGETStatusActionEnum;
     jobId: string;
-    operation: GetGetStatusOperationEnum;
+    operation: GETGETStatusOperationEnum;
     signature: string;
     signatureMethod: string;
     signatureVersion: string;
     timestamp: string;
-    version: GetGetStatusVersionEnum;
+    version: GETGETStatusVersionEnum;
 }
-export declare class GetGetStatusRequest extends SpeakeasyBase {
-    queryParams: GetGetStatusQueryParams;
-}
-export declare class GetGetStatusResponse extends SpeakeasyBase {
+export declare class GETGETStatusResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,36 +1,59 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetRevisionChangesetUsingGetQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETRevisionChangesetUsingGETRequest extends SpeakeasyBase {
     padID?: string;
     rev?: string;
 }
-export declare class GetRevisionChangesetUsingGet200ApplicationJson extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class GETRevisionChangesetUsingGet500ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class GetRevisionChangesetUsingGet400ApplicationJson extends SpeakeasyBase {
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class GETRevisionChangesetUsingGet401ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class GetRevisionChangesetUsingGet401ApplicationJson extends SpeakeasyBase {
+/**
+ * generic api error (code 1)
+ */
+export declare class GETRevisionChangesetUsingGet400ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class GetRevisionChangesetUsingGet500ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class GETRevisionChangesetUsingGet200ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class GetRevisionChangesetUsingGetRequest extends SpeakeasyBase {
-    queryParams: GetRevisionChangesetUsingGetQueryParams;
-}
-export declare class GetRevisionChangesetUsingGetResponse extends SpeakeasyBase {
+export declare class GETRevisionChangesetUsingGETResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getRevisionChangesetUsingGET200ApplicationJSONObject?: GetRevisionChangesetUsingGet200ApplicationJson;
-    getRevisionChangesetUsingGET400ApplicationJSONObject?: GetRevisionChangesetUsingGet400ApplicationJson;
-    getRevisionChangesetUsingGET401ApplicationJSONObject?: GetRevisionChangesetUsingGet401ApplicationJson;
-    getRevisionChangesetUsingGET500ApplicationJSONObject?: GetRevisionChangesetUsingGet500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    getRevisionChangesetUsingGET200ApplicationJSONObject?: GETRevisionChangesetUsingGet200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    getRevisionChangesetUsingGET400ApplicationJSONObject?: GETRevisionChangesetUsingGet400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    getRevisionChangesetUsingGET401ApplicationJSONObject?: GETRevisionChangesetUsingGet401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    getRevisionChangesetUsingGET500ApplicationJSONObject?: GETRevisionChangesetUsingGet500ApplicationJSON;
 }

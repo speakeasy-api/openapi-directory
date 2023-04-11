@@ -1,21 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { CapacityProviderStrategyItem } from "./capacityproviderstrategyitem";
 import { DeploymentConfiguration } from "./deploymentconfiguration";
+import { LoadBalancer } from "./loadbalancer";
 import { NetworkConfiguration } from "./networkconfiguration";
 import { PlacementConstraint } from "./placementconstraint";
 import { PlacementStrategy } from "./placementstrategy";
+import { PropagateTagsEnum } from "./propagatetagsenum";
+import { ServiceConnectConfiguration } from "./serviceconnectconfiguration";
+import { ServiceRegistry } from "./serviceregistry";
 export declare class UpdateServiceRequest extends SpeakeasyBase {
     capacityProviderStrategy?: CapacityProviderStrategyItem[];
     cluster?: string;
     deploymentConfiguration?: DeploymentConfiguration;
     desiredCount?: number;
+    enableECSManagedTags?: boolean;
     enableExecuteCommand?: boolean;
     forceNewDeployment?: boolean;
     healthCheckGracePeriodSeconds?: number;
+    loadBalancers?: LoadBalancer[];
     networkConfiguration?: NetworkConfiguration;
     placementConstraints?: PlacementConstraint[];
     placementStrategy?: PlacementStrategy[];
     platformVersion?: string;
+    propagateTags?: PropagateTagsEnum;
     service: string;
+    serviceConnectConfiguration?: ServiceConnectConfiguration;
+    serviceRegistries?: ServiceRegistry[];
     taskDefinition?: string;
 }

@@ -1,16 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class CreateTaxRatesSecurity extends SpeakeasyBase {
-    zettleApiKey?: shared.SchemeZettleApiKey;
-    zettleOauth?: shared.SchemeZettleOauth;
-}
-export declare class CreateTaxRatesRequest extends SpeakeasyBase {
-    request: shared.TaxRatesCreateRequest;
-    security: CreateTaxRatesSecurity;
+    zettleOauth: string;
 }
 export declare class CreateTaxRatesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Invalid request body
+     */
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Tax rates created
+     */
     taxRatesResponse?: shared.TaxRatesResponse;
 }

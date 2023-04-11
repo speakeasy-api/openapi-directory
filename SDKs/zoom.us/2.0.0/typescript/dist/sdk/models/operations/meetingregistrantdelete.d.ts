@@ -1,16 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class MeetingregistrantdeletePathParams extends SpeakeasyBase {
-    meetingId: number;
-    registrantId: string;
-}
-export declare class MeetingregistrantdeleteQueryParams extends SpeakeasyBase {
-    occurrenceId?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class MeetingregistrantdeleteRequest extends SpeakeasyBase {
-    pathParams: MeetingregistrantdeletePathParams;
-    queryParams: MeetingregistrantdeleteQueryParams;
+    /**
+     * The meeting ID.
+     */
+    meetingId: number;
+    /**
+     * The meeting occurence ID.
+     */
+    occurrenceId?: string;
+    /**
+     * The meeting registrant ID.
+     */
+    registrantId: string;
 }
 export declare class MeetingregistrantdeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

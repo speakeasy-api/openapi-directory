@@ -1,19 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ImageInput } from "./image";
-import { QuestionInput } from "./question";
-import { Image } from "./image";
-import { Question } from "./question";
+import { Image, ImageInput } from "./image";
+import { Question, QuestionInput } from "./question";
 /**
  * A form item containing a single question.
-**/
-export declare class QuestionItemInput extends SpeakeasyBase {
-    image?: ImageInput;
-    question?: QuestionInput;
+ */
+export declare class QuestionItem extends SpeakeasyBase {
+    /**
+     * Data representing an image.
+     */
+    image?: Image;
+    /**
+     * Any question. The specific type of question is known by its `kind`.
+     */
+    question?: Question;
 }
 /**
  * A form item containing a single question.
-**/
-export declare class QuestionItem extends SpeakeasyBase {
-    image?: Image;
-    question?: Question;
+ */
+export declare class QuestionItemInput extends SpeakeasyBase {
+    /**
+     * Data representing an image.
+     */
+    image?: ImageInput;
+    /**
+     * Any question. The specific type of question is known by its `kind`.
+     */
+    question?: QuestionInput;
 }

@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteSetupV1ServicesIdPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteSetupV1ServicesIdRequest extends SpeakeasyBase {
-    pathParams: DeleteSetupV1ServicesIdPathParams;
+    /**
+     * id of service object
+     */
+    id: string;
 }
 export declare class DeleteSetupV1ServicesIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     serviceViewModel?: shared.ServiceViewModel;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

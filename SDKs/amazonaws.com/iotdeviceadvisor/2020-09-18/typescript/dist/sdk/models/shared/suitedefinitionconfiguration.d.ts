@@ -1,12 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { DeviceUnderTest } from "./deviceundertest";
+import { ProtocolEnum } from "./protocolenum";
 /**
- * Gets Suite Definition Configuration.
-**/
+ * Gets the suite definition configuration.
+ */
 export declare class SuiteDefinitionConfiguration extends SpeakeasyBase {
-    devicePermissionRoleArn?: string;
+    devicePermissionRoleArn: string;
     devices?: DeviceUnderTest[];
     intendedForQualification?: boolean;
-    rootGroup?: string;
-    suiteDefinitionName?: string;
+    isLongDurationTest?: boolean;
+    protocol?: ProtocolEnum;
+    rootGroup: string;
+    suiteDefinitionName: string;
 }

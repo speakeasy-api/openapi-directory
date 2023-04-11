@@ -1,19 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetListQueueTagsPathParams extends SpeakeasyBase {
-    accountNumber: number;
-    queueName: string;
-}
-export declare enum GetListQueueTagsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETListQueueTagsActionEnum {
     ListQueueTags = "ListQueueTags"
 }
-export declare enum GetListQueueTagsVersionEnum {
+export declare enum GETListQueueTagsVersionEnum {
     TwoThousandAndTwelve1105 = "2012-11-05"
 }
-export declare class GetListQueueTagsQueryParams extends SpeakeasyBase {
-    action: GetListQueueTagsActionEnum;
-    version: GetListQueueTagsVersionEnum;
-}
-export declare class GetListQueueTagsHeaders extends SpeakeasyBase {
+export declare class GETListQueueTagsRequest extends SpeakeasyBase {
+    /**
+     * The AWS account number
+     */
+    accountNumber: number;
+    action: GETListQueueTagsActionEnum;
+    /**
+     * The name of the queue
+     */
+    queueName: string;
+    version: GETListQueueTagsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -22,13 +25,9 @@ export declare class GetListQueueTagsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetListQueueTagsRequest extends SpeakeasyBase {
-    pathParams: GetListQueueTagsPathParams;
-    queryParams: GetListQueueTagsQueryParams;
-    headers: GetListQueueTagsHeaders;
-}
-export declare class GetListQueueTagsResponse extends SpeakeasyBase {
+export declare class GETListQueueTagsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

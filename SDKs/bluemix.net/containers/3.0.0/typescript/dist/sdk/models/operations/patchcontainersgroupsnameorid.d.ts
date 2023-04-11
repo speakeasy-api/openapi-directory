@@ -1,17 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PatchContainersGroupsNameOrIdPathParams extends SpeakeasyBase {
-    nameOrId: string;
-}
-export declare class PatchContainersGroupsNameOrIdHeaders extends SpeakeasyBase {
-    xAuthProjectId: string;
-    xAuthToken: string;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class PatchContainersGroupsNameOrIdRequest extends SpeakeasyBase {
-    pathParams: PatchContainersGroupsNameOrIdPathParams;
-    headers: PatchContainersGroupsNameOrIdHeaders;
-    request: any;
+    /**
+     * The container group parameter that you want to update.
+     */
+    containersGroupsNameOrIdPatchUpdatedInfo: shared.ContainersGroupsNameOrIdPatchUpdatedInfo;
+    /**
+     * The unique ID of your organization space where you want to create or work with your containers. Run `cf space <space_name> --guid`, where `<space_name>` is the name of your space, to retrieve your space ID.
+     */
+    xAuthProjectId: string;
+    /**
+     * The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
+     */
+    xAuthToken: string;
+    /**
+     * The name or unique ID of the container group that you want to update.
+     */
+    nameOrId: string;
 }
 export declare class PatchContainersGroupsNameOrIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

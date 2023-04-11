@@ -15,7 +15,6 @@ export * from "./outdatedlibrary";
 export * from "./scanconfig";
 export * from "./scanrun";
 export * from "./schedule";
-export * from "./security";
 export * from "./violatingresource";
 export * from "./vulnerableheaders";
 export * from "./vulnerableparameters";

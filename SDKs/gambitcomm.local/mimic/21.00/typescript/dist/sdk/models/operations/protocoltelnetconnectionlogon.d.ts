@@ -1,15 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolTelnetConnectionLogonPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ProtocolTelnetConnectionLogonRequest extends SpeakeasyBase {
+    /**
+     * Agent to manipulate TELNET connection
+     */
     agentNum: number;
     connectionID: number;
     password: string;
     user: string;
 }
-export declare class ProtocolTelnetConnectionLogonRequest extends SpeakeasyBase {
-    pathParams: ProtocolTelnetConnectionLogonPathParams;
-}
 export declare class ProtocolTelnetConnectionLogonResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolTelnetConnectionLogon200ApplicationJSONStrings?: string[];
 }

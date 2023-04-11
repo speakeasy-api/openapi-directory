@@ -1,12 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UsersCheckFollowingForUserPathParams extends SpeakeasyBase {
-    targetUser: string;
-    username: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UsersCheckFollowingForUserRequest extends SpeakeasyBase {
-    pathParams: UsersCheckFollowingForUserPathParams;
+    targetUser: string;
+    /**
+     * The handle for the GitHub user account.
+     */
+    username: string;
 }
 export declare class UsersCheckFollowingForUserResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

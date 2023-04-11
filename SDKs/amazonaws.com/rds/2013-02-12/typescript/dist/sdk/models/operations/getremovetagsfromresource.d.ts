@@ -1,17 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetRemoveTagsFromResourceActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETRemoveTagsFromResourceActionEnum {
     RemoveTagsFromResource = "RemoveTagsFromResource"
 }
-export declare enum GetRemoveTagsFromResourceVersionEnum {
+export declare enum GETRemoveTagsFromResourceVersionEnum {
     TwoThousandAndThirteen0212 = "2013-02-12"
 }
-export declare class GetRemoveTagsFromResourceQueryParams extends SpeakeasyBase {
-    action: GetRemoveTagsFromResourceActionEnum;
+export declare class GETRemoveTagsFromResourceRequest extends SpeakeasyBase {
+    action: GETRemoveTagsFromResourceActionEnum;
     resourceName: string;
     tagKeys: string[];
-    version: GetRemoveTagsFromResourceVersionEnum;
-}
-export declare class GetRemoveTagsFromResourceHeaders extends SpeakeasyBase {
+    version: GETRemoveTagsFromResourceVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +19,9 @@ export declare class GetRemoveTagsFromResourceHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetRemoveTagsFromResourceRequest extends SpeakeasyBase {
-    queryParams: GetRemoveTagsFromResourceQueryParams;
-    headers: GetRemoveTagsFromResourceHeaders;
-}
-export declare class GetRemoveTagsFromResourceResponse extends SpeakeasyBase {
+export declare class GETRemoveTagsFromResourceResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,22 +1,31 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AddOrUpdateIntegrationLinkPathParams extends SpeakeasyBase {
-    environmentId: string;
-    integrationLinkType: shared.IntegrationLinkTypeEnum;
-    key: string;
-    settingId: number;
-}
-export declare class AddOrUpdateIntegrationLinkRequests extends SpeakeasyBase {
-    addOrUpdateIntegrationLinkModel?: shared.AddOrUpdateIntegrationLinkModel;
-    addOrUpdateIntegrationLinkModel1?: shared.AddOrUpdateIntegrationLinkModel;
-    addOrUpdateIntegrationLinkModel2?: shared.AddOrUpdateIntegrationLinkModel;
-}
+import { AxiosResponse } from "axios";
 export declare class AddOrUpdateIntegrationLinkRequest extends SpeakeasyBase {
-    pathParams: AddOrUpdateIntegrationLinkPathParams;
-    request?: AddOrUpdateIntegrationLinkRequests;
+    addOrUpdateIntegrationLinkModel?: shared.AddOrUpdateIntegrationLinkModel;
+    /**
+     * The identifier of the Environment.
+     */
+    environmentId: string;
+    /**
+     * The integration link's type.
+     */
+    integrationLinkType: shared.IntegrationLinkTypeEnum;
+    /**
+     * The key of the integration link.
+     */
+    key: string;
+    /**
+     * The id of the Setting.
+     */
+    settingId: number;
 }
 export declare class AddOrUpdateIntegrationLinkResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * When everything is ok, the integration link data returned.
+     */
     integrationLinkModel?: shared.IntegrationLinkModel;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

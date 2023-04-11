@@ -1,11 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Overview of delivery performance for messages that were successfully delivered. All percentages are calculated with countMessagesAccepted as the denominator. These categories are not mutually exclusive; a message can be delayed for multiple reasons.
-**/
+ */
 export declare class GoogleFirebaseFcmDataV1beta1DeliveryPerformancePercents extends SpeakeasyBase {
+    /**
+     * The percentage of accepted messages that were delayed because the device was in doze mode. Only [normal priority messages](https://firebase.google.com/docs/cloud-messaging/concept-options#setting-the-priority-of-a-message) should be delayed due to doze mode.
+     */
     delayedDeviceDoze?: number;
+    /**
+     * The percentage of accepted messages that were delayed because the target device was not connected at the time of sending. These messages were eventually delivered when the device reconnected.
+     */
     delayedDeviceOffline?: number;
+    /**
+     * The percentage of accepted messages that were delayed due to message throttling, such as [collapsible message throttling](https://firebase.google.com/docs/cloud-messaging/concept-options#collapsible_throttling) or [maximum message rate throttling](https://firebase.google.com/docs/cloud-messaging/concept-options#device_throttling).
+     */
     delayedMessageThrottled?: number;
+    /**
+     * The percentage of accepted messages that were delayed because the intended device user-profile was [stopped](https://firebase.google.com/docs/cloud-messaging/android/receive#handling_messages) on the target device at the time of the send. The messages were eventually delivered when the user-profile was started again.
+     */
     delayedUserStopped?: number;
+    /**
+     * The percentage of accepted messages that were delivered to the device without delay from the FCM system.
+     */
     deliveredNoDelay?: number;
 }

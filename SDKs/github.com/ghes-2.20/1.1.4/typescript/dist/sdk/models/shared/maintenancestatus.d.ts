@@ -3,6 +3,9 @@ export declare class MaintenanceStatusConnectionServices extends SpeakeasyBase {
     name: string;
     number: number;
 }
+/**
+ * Response
+ */
 export declare class MaintenanceStatus extends SpeakeasyBase {
     connectionServices?: MaintenanceStatusConnectionServices[];
     scheduledTime?: string;

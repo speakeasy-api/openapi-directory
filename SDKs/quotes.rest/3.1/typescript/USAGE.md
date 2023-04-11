@@ -1,21 +1,16 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DeleteQuoteRequest, DeleteQuoteResponse } from "openapi/src/sdk/models/operations";
+import {
+  DeleteQuoteRequest,
+  DeleteQuoteResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: DeleteQuoteRequest = {
-  security: {
-    xTheySaidSoApiSecret: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  },
-  queryParams: {
-    id: "sit",
-  },
+  id: "corrupti",
 };
 
 sdk.privateQuotes.deleteQuote(req).then((res: DeleteQuoteResponse | AxiosError) => {

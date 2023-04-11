@@ -1,15 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ImageInput } from "./image";
-import { Image } from "./image";
+import { Image, ImageInput } from "./image";
 /**
  * An item containing an image.
-**/
-export declare class ImageItemInput extends SpeakeasyBase {
-    image?: ImageInput;
+ */
+export declare class ImageItem extends SpeakeasyBase {
+    /**
+     * Data representing an image.
+     */
+    image?: Image;
 }
 /**
  * An item containing an image.
-**/
-export declare class ImageItem extends SpeakeasyBase {
-    image?: Image;
+ */
+export declare class ImageItemInput extends SpeakeasyBase {
+    /**
+     * Data representing an image.
+     */
+    image?: ImageInput;
 }

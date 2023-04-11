@@ -1,15 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { JobCommand } from "./jobcommand";
+import { CodeGenConfigurationNode } from "./codegenconfigurationnode";
 import { ConnectionsList } from "./connectionslist";
+import { ExecutionClassEnum } from "./executionclassenum";
 import { ExecutionProperty } from "./executionproperty";
+import { JobCommand } from "./jobcommand";
 import { NotificationProperty } from "./notificationproperty";
+import { SourceControlDetails } from "./sourcecontroldetails";
 import { WorkerTypeEnum } from "./workertypeenum";
 export declare class CreateJobRequest extends SpeakeasyBase {
-    allocatedCapacity?: Record<string, any>;
+    allocatedCapacity?: number;
+    codeGenConfigurationNodes?: Record<string, CodeGenConfigurationNode>;
     command: JobCommand;
     connections?: ConnectionsList;
     defaultArguments?: Record<string, string>;
     description?: string;
+    executionClass?: ExecutionClassEnum;
     executionProperty?: ExecutionProperty;
     glueVersion?: string;
     logUri?: string;
@@ -21,6 +26,7 @@ export declare class CreateJobRequest extends SpeakeasyBase {
     numberOfWorkers?: number;
     role: string;
     securityConfiguration?: string;
+    sourceControlDetails?: SourceControlDetails;
     tags?: Record<string, string>;
     timeout?: number;
     workerType?: WorkerTypeEnum;

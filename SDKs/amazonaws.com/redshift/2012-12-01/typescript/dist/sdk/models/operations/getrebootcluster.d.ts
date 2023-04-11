@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetRebootClusterActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETRebootClusterActionEnum {
     RebootCluster = "RebootCluster"
 }
-export declare enum GetRebootClusterVersionEnum {
+export declare enum GETRebootClusterVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class GetRebootClusterQueryParams extends SpeakeasyBase {
-    action: GetRebootClusterActionEnum;
+export declare class GETRebootClusterRequest extends SpeakeasyBase {
+    action: GETRebootClusterActionEnum;
+    /**
+     * The cluster identifier.
+     */
     clusterIdentifier: string;
-    version: GetRebootClusterVersionEnum;
-}
-export declare class GetRebootClusterHeaders extends SpeakeasyBase {
+    version: GETRebootClusterVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetRebootClusterHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetRebootClusterRequest extends SpeakeasyBase {
-    queryParams: GetRebootClusterQueryParams;
-    headers: GetRebootClusterHeaders;
-}
-export declare class GetRebootClusterResponse extends SpeakeasyBase {
+export declare class GETRebootClusterResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

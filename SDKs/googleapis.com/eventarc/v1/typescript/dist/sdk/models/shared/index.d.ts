@@ -23,7 +23,6 @@ export * from "./location";
 export * from "./policy";
 export * from "./provider";
 export * from "./pubsub";
-export * from "./security";
 export * from "./setiampolicyrequest";
 export * from "./statecondition";
 export * from "./testiampermissionsrequest";

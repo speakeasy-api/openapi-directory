@@ -1,5 +1,9 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * SourceDefinition specification related resources.
+ */
 export declare class SourceDefinitionSpecification {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +13,7 @@ export declare class SourceDefinitionSpecification {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getSourceDefinitionSpecification - Get specification for a SourceDefinition.
-    **/
-    getSourceDefinitionSpecification(req: operations.GetSourceDefinitionSpecificationRequest, config?: AxiosRequestConfig): Promise<operations.GetSourceDefinitionSpecificationResponse>;
+     * Get specification for a SourceDefinition.
+     */
+    getSourceDefinitionSpecification(req: shared.SourceDefinitionIdWithWorkspaceId, config?: AxiosRequestConfig): Promise<operations.GetSourceDefinitionSpecificationResponse>;
 }

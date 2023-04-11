@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostVerifyDomainIdentityActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTVerifyDomainIdentityActionEnum {
     VerifyDomainIdentity = "VerifyDomainIdentity"
 }
-export declare enum PostVerifyDomainIdentityVersionEnum {
+export declare enum POSTVerifyDomainIdentityVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostVerifyDomainIdentityQueryParams extends SpeakeasyBase {
-    action: PostVerifyDomainIdentityActionEnum;
-    version: PostVerifyDomainIdentityVersionEnum;
-}
-export declare class PostVerifyDomainIdentityHeaders extends SpeakeasyBase {
+export declare class POSTVerifyDomainIdentityRequest extends SpeakeasyBase {
+    action: POSTVerifyDomainIdentityActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTVerifyDomainIdentityVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostVerifyDomainIdentityHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostVerifyDomainIdentityRequest extends SpeakeasyBase {
-    queryParams: PostVerifyDomainIdentityQueryParams;
-    headers: PostVerifyDomainIdentityHeaders;
-    request?: Uint8Array;
-}
-export declare class PostVerifyDomainIdentityResponse extends SpeakeasyBase {
+export declare class POSTVerifyDomainIdentityResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

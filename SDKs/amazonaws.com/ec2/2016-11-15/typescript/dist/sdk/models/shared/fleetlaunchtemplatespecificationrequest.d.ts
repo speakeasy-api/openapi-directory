@@ -1,0 +1,9 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * <p>The Amazon EC2 launch template that can be used by an EC2 Fleet to configure Amazon EC2 instances. You must specify either the ID or name of the launch template in the request, but not both.</p> <p>For information about launch templates, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html">Launch an instance from a launch template</a> in the <i>Amazon EC2 User Guide</i>.</p>
+ */
+export declare class FleetLaunchTemplateSpecificationRequest extends SpeakeasyBase {
+    launchTemplateId?: string;
+    launchTemplateName?: string;
+    version?: string;
+}

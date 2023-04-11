@@ -1,27 +1,32 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetConfigureHealthCheckActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETConfigureHealthCheckActionEnum {
     ConfigureHealthCheck = "ConfigureHealthCheck"
 }
 /**
  * Information about a health check.
-**/
-export declare class GetConfigureHealthCheckHealthCheck extends SpeakeasyBase {
+ */
+export declare class GETConfigureHealthCheckHealthCheck extends SpeakeasyBase {
     healthyThreshold: number;
     interval: number;
     target: string;
     timeout: number;
     unhealthyThreshold: number;
 }
-export declare enum GetConfigureHealthCheckVersionEnum {
+export declare enum GETConfigureHealthCheckVersionEnum {
     TwoThousandAndTwelve0601 = "2012-06-01"
 }
-export declare class GetConfigureHealthCheckQueryParams extends SpeakeasyBase {
-    action: GetConfigureHealthCheckActionEnum;
-    healthCheck: GetConfigureHealthCheckHealthCheck;
+export declare class GETConfigureHealthCheckRequest extends SpeakeasyBase {
+    action: GETConfigureHealthCheckActionEnum;
+    /**
+     * The configuration information.
+     */
+    healthCheck: GETConfigureHealthCheckHealthCheck;
+    /**
+     * The name of the load balancer.
+     */
     loadBalancerName: string;
-    version: GetConfigureHealthCheckVersionEnum;
-}
-export declare class GetConfigureHealthCheckHeaders extends SpeakeasyBase {
+    version: GETConfigureHealthCheckVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -30,12 +35,9 @@ export declare class GetConfigureHealthCheckHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetConfigureHealthCheckRequest extends SpeakeasyBase {
-    queryParams: GetConfigureHealthCheckQueryParams;
-    headers: GetConfigureHealthCheckHeaders;
-}
-export declare class GetConfigureHealthCheckResponse extends SpeakeasyBase {
+export declare class GETConfigureHealthCheckResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

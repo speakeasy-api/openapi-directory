@@ -1,5 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { Edit } from "./edit";
+/**
+ * The status of the render task. <ul>
+ *
+ * @remarks
+ *   <li>`queued` - render is queued waiting to be rendered</li>
+ *   <li>`fetching` - assets are being fetched</li>
+ *   <li>`rendering` - the asset is being rendered</li>
+ *   <li>`saving` - the final asset is being saved to storage</li>
+ *   <li>`done` - the asset is ready to be downloaded</li>
+ *   <li>`failed` - there was an error rendering the asset</li>
+ * </ul>
+ */
 export declare enum RenderResponseDataStatusEnum {
     Queued = "queued",
     Fetching = "fetching",
@@ -10,19 +22,67 @@ export declare enum RenderResponseDataStatusEnum {
 }
 /**
  * The response data returned with the [RenderResponse](#tocs_renderresponse) including status and URL.
-**/
+ */
 export declare class RenderResponseData extends SpeakeasyBase {
+    /**
+     * The time the render task was initially queued.
+     */
     created: string;
+    /**
+     * An edit defines the arrangement of a video on a timeline, an audio edit or an image design and the output format.
+     */
     data: Edit;
+    /**
+     * The output video or audio length in seconds.
+     */
     duration?: number;
+    /**
+     * An error message, only displayed if an error occurred.
+     */
     error?: string;
+    /**
+     * The id of the render task in UUID format.
+     */
     id: string;
+    /**
+     * The owner id of the render task.
+     */
     owner: string;
+    /**
+     * The customer subscription plan.
+     */
     plan?: string;
+    /**
+     * The URL of the poster image if requested. This will only be available if status is done.
+     */
     poster?: string;
+    /**
+     * The time taken to render the asset in milliseconds.
+     */
     renderTime?: number;
+    /**
+     * The status of the render task. <ul>
+     *
+     * @remarks
+     *   <li>`queued` - render is queued waiting to be rendered</li>
+     *   <li>`fetching` - assets are being fetched</li>
+     *   <li>`rendering` - the asset is being rendered</li>
+     *   <li>`saving` - the final asset is being saved to storage</li>
+     *   <li>`done` - the asset is ready to be downloaded</li>
+     *   <li>`failed` - there was an error rendering the asset</li>
+     * </ul>
+     */
     status: RenderResponseDataStatusEnum;
+    /**
+     * The URL of the thumbnail image if requested. This will only be available if status is done.
+     */
     thumbnail?: string;
+    /**
+     * The time the render status was last updated.
+     */
     updated: string;
+    /**
+     * The URL of the final asset. This will only be available if status is done. This is a temporary URL and will be deleted after 24 hours. By default all assets are copied to the Shotstack hosting and CDN destination.
+     */
     url?: string;
 }

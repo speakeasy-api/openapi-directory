@@ -1,4 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { NullableSimpleUser } from "./nullablesimpleuser";
+import { SimpleUser } from "./simpleuser";
 export declare class BaseGistFiles extends SpeakeasyBase {
     filename?: string;
     language?: string;
@@ -7,32 +9,8 @@ export declare class BaseGistFiles extends SpeakeasyBase {
     type?: string;
 }
 /**
- * Simple User
-**/
-export declare class BaseGistSimpleUser extends SpeakeasyBase {
-    avatarUrl: string;
-    eventsUrl: string;
-    followersUrl: string;
-    followingUrl: string;
-    gistsUrl: string;
-    gravatarId: string;
-    htmlUrl: string;
-    id: number;
-    login: string;
-    nodeId: string;
-    organizationsUrl: string;
-    receivedEventsUrl: string;
-    reposUrl: string;
-    siteAdmin: boolean;
-    starredAt?: string;
-    starredUrl: string;
-    subscriptionsUrl: string;
-    type: string;
-    url: string;
-}
-/**
  * Base Gist
-**/
+ */
 export declare class BaseGist extends SpeakeasyBase {
     comments: number;
     commentsUrl: string;
@@ -48,10 +26,16 @@ export declare class BaseGist extends SpeakeasyBase {
     htmlUrl: string;
     id: string;
     nodeId: string;
-    owner?: BaseGistSimpleUser;
+    /**
+     * Simple User
+     */
+    owner?: SimpleUser;
     public: boolean;
     truncated?: boolean;
     updatedAt: Date;
     url: string;
-    user: BaseGistSimpleUser;
+    /**
+     * Simple User
+     */
+    user: NullableSimpleUser;
 }

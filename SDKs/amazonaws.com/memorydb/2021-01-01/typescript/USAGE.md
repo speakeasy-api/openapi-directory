@@ -1,36 +1,38 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { BatchUpdateClusterRequest, BatchUpdateClusterResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  BatchUpdateClusterRequest,
+  BatchUpdateClusterResponse,
+  BatchUpdateClusterXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: BatchUpdateClusterRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "AmazonMemoryDB.BatchUpdateCluster",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
+});
+
+const req: BatchUpdateClusterRequest = {
+  batchUpdateClusterRequest: {
     clusterNames: [
-      "et",
+      "provident",
+      "distinctio",
+      "quibusdam",
     ],
     serviceUpdate: {
-      serviceUpdateNameToApply: "nihil",
+      serviceUpdateNameToApply: "unde",
     },
   },
+  xAmzAlgorithm: "nulla",
+  xAmzContentSha256: "corrupti",
+  xAmzCredential: "illum",
+  xAmzDate: "vel",
+  xAmzSecurityToken: "error",
+  xAmzSignature: "deserunt",
+  xAmzSignedHeaders: "suscipit",
+  xAmzTarget: BatchUpdateClusterXAmzTargetEnum.AmazonMemoryDBBatchUpdateCluster,
 };
 
 sdk.batchUpdateCluster(req).then((res: BatchUpdateClusterResponse | AxiosError) => {

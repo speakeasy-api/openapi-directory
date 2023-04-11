@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeEnvironmentResourcesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeEnvironmentResourcesActionEnum {
     DescribeEnvironmentResources = "DescribeEnvironmentResources"
 }
-export declare enum GetDescribeEnvironmentResourcesVersionEnum {
+export declare enum GETDescribeEnvironmentResourcesVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetDescribeEnvironmentResourcesQueryParams extends SpeakeasyBase {
-    action: GetDescribeEnvironmentResourcesActionEnum;
+export declare class GETDescribeEnvironmentResourcesRequest extends SpeakeasyBase {
+    action: GETDescribeEnvironmentResourcesActionEnum;
+    /**
+     * <p>The ID of the environment to retrieve AWS resource usage data.</p> <p> Condition: You must specify either this or an EnvironmentName, or both. If you do not specify either, AWS Elastic Beanstalk returns <code>MissingRequiredParameter</code> error. </p>
+     */
     environmentId?: string;
+    /**
+     * <p>The name of the environment to retrieve AWS resource usage data.</p> <p> Condition: You must specify either this or an EnvironmentId, or both. If you do not specify either, AWS Elastic Beanstalk returns <code>MissingRequiredParameter</code> error. </p>
+     */
     environmentName?: string;
-    version: GetDescribeEnvironmentResourcesVersionEnum;
-}
-export declare class GetDescribeEnvironmentResourcesHeaders extends SpeakeasyBase {
+    version: GETDescribeEnvironmentResourcesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetDescribeEnvironmentResourcesHeaders extends SpeakeasyBas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeEnvironmentResourcesRequest extends SpeakeasyBase {
-    queryParams: GetDescribeEnvironmentResourcesQueryParams;
-    headers: GetDescribeEnvironmentResourcesHeaders;
-}
-export declare class GetDescribeEnvironmentResourcesResponse extends SpeakeasyBase {
+export declare class GETDescribeEnvironmentResourcesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

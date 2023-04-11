@@ -9,15 +9,21 @@ export declare enum CommitComparisonStatusEnum {
 }
 /**
  * Commit Comparison
-**/
+ */
 export declare class CommitComparison extends SpeakeasyBase {
     aheadBy: number;
+    /**
+     * Commit
+     */
     baseCommit: Commit;
     behindBy: number;
     commits: Commit[];
     diffUrl: string;
     files?: DiffEntry[];
     htmlUrl: string;
+    /**
+     * Commit
+     */
     mergeBaseCommit: Commit;
     patchUrl: string;
     permalinkUrl: string;

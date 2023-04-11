@@ -1,35 +1,64 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum HooksPostActionEnum {
+import { AxiosResponse } from "axios";
+/**
+ * Determines the action to execute.
+ */
+export declare enum HooksPOSTActionEnum {
     Subscribe = "subscribe",
     Unsubscribe = "unsubscribe"
 }
-export declare enum HooksPostEventTypeEnum {
+/**
+ * Type of event for which you would like to receive a webhook.
+ */
+export declare enum HooksPOSTEventTypeEnum {
     All = "all",
     SmsMo = "sms_mo",
     Dlr = "dlr",
     VoiceStatus = "voice_status"
 }
-export declare enum HooksPostRequestMethodEnum {
+/**
+ * Request method in which you want to receive the webhook.
+ */
+export declare enum HooksPOSTRequestMethodEnum {
     Post = "POST",
     Json = "JSON",
     Get = "GET"
 }
-export declare class HooksPostQueryParams extends SpeakeasyBase {
-    action: HooksPostActionEnum;
-    eventType?: HooksPostEventTypeEnum;
+export declare class HooksPOSTRequest extends SpeakeasyBase {
+    /**
+     * Determines the action to execute.
+     */
+    action: HooksPOSTActionEnum;
+    /**
+     * Type of event for which you would like to receive a webhook.
+     */
+    eventType?: HooksPOSTEventTypeEnum;
+    /**
+     * The Webhook ID you wish to unsubscribe.
+     */
     id?: number;
-    requestMethod?: HooksPostRequestMethodEnum;
+    /**
+     * Request method in which you want to receive the webhook.
+     */
+    requestMethod?: HooksPOSTRequestMethodEnum;
+    /**
+     * Target URL of your Webhook.
+     */
     targetUrl?: string;
 }
-export declare class HooksPost200ApplicationJson extends SpeakeasyBase {
+/**
+ * Hook subscribed
+ */
+export declare class HooksPost200ApplicationJSON extends SpeakeasyBase {
     id?: number;
     success?: boolean;
 }
-export declare class HooksPostRequest extends SpeakeasyBase {
-    queryParams: HooksPostQueryParams;
-}
-export declare class HooksPostResponse extends SpeakeasyBase {
+export declare class HooksPOSTResponse extends SpeakeasyBase {
     contentType: string;
-    hooksPOST200ApplicationJSONObject?: HooksPost200ApplicationJson;
+    /**
+     * Hook subscribed
+     */
+    hooksPOST200ApplicationJSONObject?: HooksPost200ApplicationJSON;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

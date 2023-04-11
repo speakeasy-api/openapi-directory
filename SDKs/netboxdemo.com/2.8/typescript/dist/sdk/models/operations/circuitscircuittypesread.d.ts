@@ -1,13 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CircuitsCircuitTypesReadPathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class CircuitsCircuitTypesReadRequest extends SpeakeasyBase {
-    pathParams: CircuitsCircuitTypesReadPathParams;
+    /**
+     * A unique integer value identifying this circuit type.
+     */
+    id: number;
 }
 export declare class CircuitsCircuitTypesReadResponse extends SpeakeasyBase {
     circuitType?: shared.CircuitType;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

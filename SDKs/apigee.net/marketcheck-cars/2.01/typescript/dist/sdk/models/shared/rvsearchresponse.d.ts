@@ -1,11 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { RvBaseListing } from "./rvbaselisting";
+import { RVBaseListing } from "./rvbaselisting";
 /**
  * RV search query response
-**/
-export declare class RvSearchResponse extends SpeakeasyBase {
+ */
+export declare class RVSearchResponse extends SpeakeasyBase {
     facets?: Record<string, any>;
-    listings?: RvBaseListing[];
+    listings?: RVBaseListing[];
+    /**
+     * The number of listings found
+     */
     numFound?: number;
     rangeFacets?: Record<string, any>;
     stats?: Record<string, any>;

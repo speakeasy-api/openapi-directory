@@ -1,9 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { RuleSet } from "./ruleset";
 import { EntityTypeEnum } from "./entitytypeenum";
+import { IpAddressRange } from "./ipaddressrange";
+import { IpNumericRange } from "./ipnumericrange";
 import { IpV4Address } from "./ipv4address";
 import { Reference } from "./reference";
-export declare class BaseIpSet extends SpeakeasyBase {
+import { RuleSet } from "./ruleset";
+/**
+ * OK
+ */
+export declare class BaseIPSet extends SpeakeasyBase {
     directDestinationRules?: RuleSet[];
     directSourceRules?: RuleSet[];
     entityId?: string;
@@ -11,8 +16,8 @@ export declare class BaseIpSet extends SpeakeasyBase {
     indirectDestinationRules?: RuleSet[];
     indirectSourceRules?: RuleSet[];
     ipAddresses?: IpV4Address[];
-    ipNumericRanges?: any[];
-    ipRanges?: any[];
+    ipNumericRanges?: IpNumericRange[];
+    ipRanges?: IpAddressRange[];
     name?: string;
     parentSecurityGroups?: Reference[];
     translatedVmCount?: number;

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateRelationalDatabaseParametersXAmzTargetEnum {
     Lightsail20161128UpdateRelationalDatabaseParameters = "Lightsail_20161128.UpdateRelationalDatabaseParameters"
 }
-export declare class UpdateRelationalDatabaseParametersHeaders extends SpeakeasyBase {
+export declare class UpdateRelationalDatabaseParametersRequest extends SpeakeasyBase {
+    updateRelationalDatabaseParametersRequest: shared.UpdateRelationalDatabaseParametersRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,19 +15,40 @@ export declare class UpdateRelationalDatabaseParametersHeaders extends Speakeasy
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateRelationalDatabaseParametersXAmzTargetEnum;
 }
-export declare class UpdateRelationalDatabaseParametersRequest extends SpeakeasyBase {
-    headers: UpdateRelationalDatabaseParametersHeaders;
-    request: shared.UpdateRelationalDatabaseParametersRequest;
-}
 export declare class UpdateRelationalDatabaseParametersResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * AccountSetupInProgressException
+     */
     accountSetupInProgressException?: any;
     contentType: string;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
+    /**
+     * OperationFailureException
+     */
     operationFailureException?: any;
-    serviceException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceException
+     */
+    serviceException?: any;
+    /**
+     * UnauthenticatedException
+     */
     unauthenticatedException?: any;
+    /**
+     * Success
+     */
     updateRelationalDatabaseParametersResult?: shared.UpdateRelationalDatabaseParametersResult;
 }

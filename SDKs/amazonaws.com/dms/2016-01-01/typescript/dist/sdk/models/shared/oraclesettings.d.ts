@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { CharLengthSemanticsEnum } from "./charlengthsemanticsenum";
 /**
  * Provides information that defines an Oracle endpoint.
-**/
+ */
 export declare class OracleSettings extends SpeakeasyBase {
     accessAlternateDirectly?: boolean;
     addSupplementalLogging?: boolean;
@@ -14,6 +14,7 @@ export declare class OracleSettings extends SpeakeasyBase {
     asmServer?: string;
     asmUser?: string;
     charLengthSemantics?: CharLengthSemanticsEnum;
+    convertTimestampWithZoneToUTC?: boolean;
     databaseName?: string;
     directPathNoLog?: boolean;
     directPathParallelLoad?: boolean;
@@ -38,6 +39,7 @@ export declare class OracleSettings extends SpeakeasyBase {
     serverName?: string;
     spatialDataOptionToGeoJsonFunctionName?: string;
     standbyDelayTime?: number;
+    trimSpaceInChar?: boolean;
     useAlternateFolderForOnline?: boolean;
     useBFile?: boolean;
     useDirectPathFullLoad?: boolean;

@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeDbProxyTargetGroupsActionEnum {
-    DescribeDbProxyTargetGroups = "DescribeDBProxyTargetGroups"
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeDBProxyTargetGroupsActionEnum {
+    DescribeDBProxyTargetGroups = "DescribeDBProxyTargetGroups"
 }
-export declare enum PostDescribeDbProxyTargetGroupsVersionEnum {
+export declare enum POSTDescribeDBProxyTargetGroupsVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class PostDescribeDbProxyTargetGroupsQueryParams extends SpeakeasyBase {
-    action: PostDescribeDbProxyTargetGroupsActionEnum;
+export declare class POSTDescribeDBProxyTargetGroupsRequest extends SpeakeasyBase {
+    action: POSTDescribeDBProxyTargetGroupsActionEnum;
+    /**
+     * Pagination token
+     */
     marker?: string;
+    /**
+     * Pagination limit
+     */
     maxRecords?: string;
-    version: PostDescribeDbProxyTargetGroupsVersionEnum;
-}
-export declare class PostDescribeDbProxyTargetGroupsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeDBProxyTargetGroupsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeDbProxyTargetGroupsHeaders extends SpeakeasyBas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeDbProxyTargetGroupsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeDbProxyTargetGroupsQueryParams;
-    headers: PostDescribeDbProxyTargetGroupsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeDbProxyTargetGroupsResponse extends SpeakeasyBase {
+export declare class POSTDescribeDBProxyTargetGroupsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

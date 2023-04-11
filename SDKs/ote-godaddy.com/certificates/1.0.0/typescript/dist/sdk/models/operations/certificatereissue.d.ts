@@ -1,13 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CertificateReissuePathParams extends SpeakeasyBase {
-    certificateId: string;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class CertificateReissueRequest extends SpeakeasyBase {
-    pathParams: CertificateReissuePathParams;
-    request: any;
+    /**
+     * The reissue request info
+     */
+    certificateReissue: shared.CertificateReissue;
+    /**
+     * Certificate id to reissue
+     */
+    certificateId: string;
 }
 export declare class CertificateReissueResponse extends SpeakeasyBase {
     contentType: string;
-    error?: any;
+    /**
+     * Request was malformed
+     */
+    error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

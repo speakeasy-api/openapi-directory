@@ -1,9 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetApiPathParams extends SpeakeasyBase {
-    apiId: string;
-}
-export declare class GetApiHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetApiRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,15 +9,25 @@ export declare class GetApiHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class GetApiRequest extends SpeakeasyBase {
-    pathParams: GetApiPathParams;
-    headers: GetApiHeaders;
+    /**
+     * The API identifier.
+     */
+    apiId: string;
 }
 export declare class GetApiResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getApiResponse?: shared.GetApiResponse;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

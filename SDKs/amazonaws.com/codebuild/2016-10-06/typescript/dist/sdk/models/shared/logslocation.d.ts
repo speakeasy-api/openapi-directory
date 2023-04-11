@@ -3,7 +3,7 @@ import { CloudWatchLogsConfig } from "./cloudwatchlogsconfig";
 import { S3LogsConfig } from "./s3logsconfig";
 /**
  * Information about build logs in CloudWatch Logs.
-**/
+ */
 export declare class LogsLocation extends SpeakeasyBase {
     cloudWatchLogs?: CloudWatchLogsConfig;
     cloudWatchLogsArn?: string;

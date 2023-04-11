@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Describes a command.
-**/
+ */
 export declare class Command extends SpeakeasyBase {
     acknowledgedAt?: string;
     commandId?: string;

@@ -1,12 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UnlockUserPathParams extends SpeakeasyBase {
-    userId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UnlockUserRequest extends SpeakeasyBase {
-    pathParams: UnlockUserPathParams;
-    request?: Uint8Array;
+    requestBody?: Uint8Array;
+    userId: string;
 }
 export declare class UnlockUserResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

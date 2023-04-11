@@ -1,12 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetSetupV1CustomersIdPrivacyPathParams extends SpeakeasyBase {
-    id: string;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class GetSetupV1CustomersIdPrivacyRequest extends SpeakeasyBase {
-    pathParams: GetSetupV1CustomersIdPrivacyPathParams;
+    /**
+     * id of customer object
+     */
+    id: string;
 }
 export declare class GetSetupV1CustomersIdPrivacyResponse extends SpeakeasyBase {
     contentType: string;
-    customerPrivacyViewModel?: Record<string, any>;
+    /**
+     * Success
+     */
+    customerPrivacyViewModel?: shared.CustomerPrivacyViewModel;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

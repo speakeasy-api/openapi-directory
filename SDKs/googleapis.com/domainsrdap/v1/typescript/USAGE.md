@@ -1,29 +1,31 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DomainsrdapAutnumGetRequest, DomainsrdapAutnumGetResponse } from "openapi/src/sdk/models/operations";
+import {
+  DomainsrdapAutnumGetRequest,
+  DomainsrdapAutnumGetResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: DomainsrdapAutnumGetRequest = {
-  pathParams: {
-    autnumId: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
+  dollarXgafv: XgafvEnum.Two,
+  accessToken: "provident",
+  alt: AltEnum.Proto,
+  autnumId: "quibusdam",
+  callback: "unde",
+  fields: "nulla",
+  key: "corrupti",
+  oauthToken: "illum",
+  prettyPrint: false,
+  quotaUser: "vel",
+  uploadType: "error",
+  uploadProtocol: "deserunt",
 };
 
 sdk.autnum.domainsrdapAutnumGet(req).then((res: DomainsrdapAutnumGetResponse | AxiosError) => {

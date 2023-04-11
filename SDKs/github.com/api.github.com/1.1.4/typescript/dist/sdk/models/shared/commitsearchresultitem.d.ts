@@ -1,43 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Verification } from "./verification";
 import { MinimalRepository } from "./minimalrepository";
+import { NullableGitUser } from "./nullablegituser";
+import { NullableSimpleUser } from "./nullablesimpleuser";
 import { SearchResultTextMatches } from "./searchresulttextmatches";
-/**
- * Simple User
-**/
-export declare class CommitSearchResultItemSimpleUser extends SpeakeasyBase {
-    avatarUrl: string;
-    eventsUrl: string;
-    followersUrl: string;
-    followingUrl: string;
-    gistsUrl: string;
-    gravatarId: string;
-    htmlUrl: string;
-    id: number;
-    login: string;
-    nodeId: string;
-    organizationsUrl: string;
-    receivedEventsUrl: string;
-    reposUrl: string;
-    siteAdmin: boolean;
-    starredAt?: string;
-    starredUrl: string;
-    subscriptionsUrl: string;
-    type: string;
-    url: string;
-}
+import { Verification } from "./verification";
 export declare class CommitSearchResultItemCommitAuthor extends SpeakeasyBase {
     date: Date;
     email: string;
     name: string;
-}
-/**
- * Metaproperties for Git author/committer information.
-**/
-export declare class CommitSearchResultItemCommitGitUser extends SpeakeasyBase {
-    date?: string;
-    email?: string;
-    name?: string;
 }
 export declare class CommitSearchResultItemCommitTree extends SpeakeasyBase {
     sha: string;
@@ -46,19 +16,14 @@ export declare class CommitSearchResultItemCommitTree extends SpeakeasyBase {
 export declare class CommitSearchResultItemCommit extends SpeakeasyBase {
     author: CommitSearchResultItemCommitAuthor;
     commentCount: number;
-    committer: CommitSearchResultItemCommitGitUser;
+    /**
+     * Metaproperties for Git author/committer information.
+     */
+    committer: NullableGitUser;
     message: string;
     tree: CommitSearchResultItemCommitTree;
     url: string;
     verification?: Verification;
-}
-/**
- * Metaproperties for Git author/committer information.
-**/
-export declare class CommitSearchResultItemGitUser extends SpeakeasyBase {
-    date?: string;
-    email?: string;
-    name?: string;
 }
 export declare class CommitSearchResultItemParents extends SpeakeasyBase {
     htmlUrl?: string;
@@ -67,15 +32,24 @@ export declare class CommitSearchResultItemParents extends SpeakeasyBase {
 }
 /**
  * Commit Search Result Item
-**/
+ */
 export declare class CommitSearchResultItem extends SpeakeasyBase {
-    author: CommitSearchResultItemSimpleUser;
+    /**
+     * A GitHub user.
+     */
+    author: NullableSimpleUser;
     commentsUrl: string;
     commit: CommitSearchResultItemCommit;
-    committer: CommitSearchResultItemGitUser;
+    /**
+     * Metaproperties for Git author/committer information.
+     */
+    committer: NullableGitUser;
     htmlUrl: string;
     nodeId: string;
     parents: CommitSearchResultItemParents[];
+    /**
+     * Minimal Repository
+     */
     repository: MinimalRepository;
     score: number;
     sha: string;

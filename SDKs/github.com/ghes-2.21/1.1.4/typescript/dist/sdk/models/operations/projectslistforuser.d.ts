@@ -1,26 +1,51 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ProjectsListForUserPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+/**
+ * Indicates the state of the projects to return. Can be either `open`, `closed`, or `all`.
+ */
+export declare enum ProjectsListForUserStateEnum {
+    Open = "open",
+    Closed = "closed",
+    All = "all"
+}
+export declare class ProjectsListForUserRequest extends SpeakeasyBase {
+    /**
+     * Page number of the results to fetch.
+     */
+    page?: number;
+    /**
+     * Results per page (max 100)
+     */
+    perPage?: number;
+    /**
+     * Indicates the state of the projects to return. Can be either `open`, `closed`, or `all`.
+     */
+    state?: ProjectsListForUserStateEnum;
     username: string;
 }
-export declare class ProjectsListForUserQueryParams extends SpeakeasyBase {
-    page?: number;
-    perPage?: number;
-    state?: shared.UsernameEnum1;
-}
-export declare class ProjectsListForUser415ApplicationJson extends SpeakeasyBase {
+/**
+ * Preview header missing
+ */
+export declare class ProjectsListForUser415ApplicationJSON extends SpeakeasyBase {
     documentationUrl: string;
     message: string;
 }
-export declare class ProjectsListForUserRequest extends SpeakeasyBase {
-    pathParams: ProjectsListForUserPathParams;
-    queryParams: ProjectsListForUserQueryParams;
-}
 export declare class ProjectsListForUserResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     projects?: shared.Project[];
-    projectsListForUser415ApplicationJSONObject?: ProjectsListForUser415ApplicationJson;
+    /**
+     * Preview header missing
+     */
+    projectsListForUser415ApplicationJSONObject?: ProjectsListForUser415ApplicationJSON;
+    /**
+     * Validation failed
+     */
     validationError?: shared.ValidationError;
 }

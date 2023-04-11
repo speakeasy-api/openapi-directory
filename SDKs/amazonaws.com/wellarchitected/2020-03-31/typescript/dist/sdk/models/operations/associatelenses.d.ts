@@ -1,8 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class AssociateLensesPathParams extends SpeakeasyBase {
-    workloadId: string;
+import { AxiosResponse } from "axios";
+export declare class AssociateLensesRequestBody extends SpeakeasyBase {
+    /**
+     * <p>List of lens aliases to associate or disassociate with a workload. Up to 10 lenses can be specified.</p> <p>Identify a lens using its <a>LensSummary$LensAlias</a>.</p>
+     */
+    lensAliases: string[];
 }
-export declare class AssociateLensesHeaders extends SpeakeasyBase {
+export declare class AssociateLensesRequest extends SpeakeasyBase {
+    requestBody: AssociateLensesRequestBody;
+    workloadId: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,21 +17,32 @@ export declare class AssociateLensesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class AssociateLensesRequestBody extends SpeakeasyBase {
-    lensAliases: string[];
-}
-export declare class AssociateLensesRequest extends SpeakeasyBase {
-    pathParams: AssociateLensesPathParams;
-    headers: AssociateLensesHeaders;
-    request: AssociateLensesRequestBody;
-}
 export declare class AssociateLensesResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

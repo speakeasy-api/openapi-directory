@@ -1,6 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CircuitsCircuitsListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class CircuitsCircuitsListRequest extends SpeakeasyBase {
     cid?: string;
     cidIc?: string;
     cidIe?: string;
@@ -35,7 +36,13 @@ export declare class CircuitsCircuitsListQueryParams extends SpeakeasyBase {
     lastUpdated?: string;
     lastUpdatedGte?: string;
     lastUpdatedLte?: string;
+    /**
+     * Number of results to return per page.
+     */
     limit?: number;
+    /**
+     * The initial index from which to return the results.
+     */
     offset?: number;
     provider?: string;
     providerN?: string;
@@ -67,17 +74,15 @@ export declare class CircuitsCircuitsListQueryParams extends SpeakeasyBase {
     typeId?: string;
     typeIdN?: string;
 }
-export declare class CircuitsCircuitsList200ApplicationJson extends SpeakeasyBase {
+export declare class CircuitsCircuitsList200ApplicationJSON extends SpeakeasyBase {
     count: number;
     next?: string;
     previous?: string;
     results: shared.Circuit[];
 }
-export declare class CircuitsCircuitsListRequest extends SpeakeasyBase {
-    queryParams: CircuitsCircuitsListQueryParams;
-}
 export declare class CircuitsCircuitsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    circuitsCircuitsList200ApplicationJSONObject?: CircuitsCircuitsList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    circuitsCircuitsList200ApplicationJSONObject?: CircuitsCircuitsList200ApplicationJSON;
 }

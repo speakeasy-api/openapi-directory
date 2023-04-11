@@ -1,17 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class DeleteTierPathParams extends SpeakeasyBase {
-    id: string;
-    tierId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteTierSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
+    apiKeyAuth: string;
 }
 export declare class DeleteTierRequest extends SpeakeasyBase {
-    pathParams: DeleteTierPathParams;
-    security: DeleteTierSecurity;
+    /**
+     * entity id
+     */
+    id: string;
+    tierId: string;
 }
 export declare class DeleteTierResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

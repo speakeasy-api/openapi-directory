@@ -1,31 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetListJobsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETListJobsActionEnum {
     ListJobs = "ListJobs"
 }
-export declare enum GetListJobsOperationEnum {
+export declare enum GETListJobsOperationEnum {
     ListJobs = "ListJobs"
 }
-export declare enum GetListJobsVersionEnum {
+export declare enum GETListJobsVersionEnum {
     TwoThousandAndTen0601 = "2010-06-01"
 }
-export declare class GetListJobsQueryParams extends SpeakeasyBase {
+export declare class GETListJobsRequest extends SpeakeasyBase {
     apiVersion?: string;
     awsAccessKeyId: string;
-    action: GetListJobsActionEnum;
+    action: GETListJobsActionEnum;
     marker?: string;
     maxJobs?: number;
-    operation: GetListJobsOperationEnum;
+    operation: GETListJobsOperationEnum;
     signature: string;
     signatureMethod: string;
     signatureVersion: string;
     timestamp: string;
-    version: GetListJobsVersionEnum;
+    version: GETListJobsVersionEnum;
 }
-export declare class GetListJobsRequest extends SpeakeasyBase {
-    queryParams: GetListJobsQueryParams;
-}
-export declare class GetListJobsResponse extends SpeakeasyBase {
+export declare class GETListJobsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

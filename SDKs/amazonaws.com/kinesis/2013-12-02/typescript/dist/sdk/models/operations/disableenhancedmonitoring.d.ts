@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DisableEnhancedMonitoringXAmzTargetEnum {
     Kinesis20131202DisableEnhancedMonitoring = "Kinesis_20131202.DisableEnhancedMonitoring"
 }
-export declare class DisableEnhancedMonitoringHeaders extends SpeakeasyBase {
+export declare class DisableEnhancedMonitoringRequest extends SpeakeasyBase {
+    disableEnhancedMonitoringInput: shared.DisableEnhancedMonitoringInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,32 @@ export declare class DisableEnhancedMonitoringHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DisableEnhancedMonitoringXAmzTargetEnum;
 }
-export declare class DisableEnhancedMonitoringRequest extends SpeakeasyBase {
-    headers: DisableEnhancedMonitoringHeaders;
-    request: shared.DisableEnhancedMonitoringInput;
-}
 export declare class DisableEnhancedMonitoringResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
+    accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     enhancedMonitoringOutput?: shared.EnhancedMonitoringOutput;
+    /**
+     * InvalidArgumentException
+     */
     invalidArgumentException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
-    resourceInUseException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceInUseException
+     */
+    resourceInUseException?: any;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
 }

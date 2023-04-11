@@ -1,4 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+export declare enum WritableVirtualMachineStatusEnum {
+    One = "1",
+    Zero = "0",
+    Three = "3"
+}
 export declare class WritableVirtualMachineInput extends SpeakeasyBase {
     cluster: number;
     comments?: string;
@@ -11,7 +16,7 @@ export declare class WritableVirtualMachineInput extends SpeakeasyBase {
     primaryIp4?: number;
     primaryIp6?: number;
     role?: number;
-    status?: number;
+    status?: WritableVirtualMachineStatusEnum;
     tags?: string[];
     tenant?: number;
     vcpus?: number;

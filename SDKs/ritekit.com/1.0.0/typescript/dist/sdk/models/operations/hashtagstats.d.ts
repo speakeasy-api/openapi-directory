@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class HashtagStatsQueryParams extends SpeakeasyBase {
-    tags: any[];
-}
+import { AxiosResponse } from "axios";
 export declare class HashtagStatsRequest extends SpeakeasyBase {
-    queryParams: HashtagStatsQueryParams;
+    /**
+     * Hashtag(s) without # mark
+     */
+    tags: any[];
 }
 export declare class HashtagStatsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

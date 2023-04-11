@@ -1,36 +1,38 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AddEventSourceRequest, AddEventSourceResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  AddEventSourceRequest,
+  AddEventSourceResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    hmac: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: AddEventSourceRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-  },
-  request: {
-    batchSize: 6044372234677422456,
-    eventSource: "fugit",
-    functionName: "et",
+  requestBody: {
+    batchSize: 548814,
+    eventSource: "provident",
+    functionName: "distinctio",
     parameters: {
-      "rerum": "dicta",
+      "unde": "nulla",
+      "corrupti": "illum",
+      "vel": "error",
+      "deserunt": "suscipit",
     },
-    role: "debitis",
+    role: "iure",
   },
+  xAmzAlgorithm: "magnam",
+  xAmzContentSha256: "debitis",
+  xAmzCredential: "ipsa",
+  xAmzDate: "delectus",
+  xAmzSecurityToken: "tempora",
+  xAmzSignature: "suscipit",
+  xAmzSignedHeaders: "molestiae",
 };
 
 sdk.addEventSource(req).then((res: AddEventSourceResponse | AxiosError) => {

@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * List available and installed integrations
+ */
 export declare class Integrations {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,11 +12,11 @@ export declare class Integrations {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getIntegrations - Integrations available and installed in the account
-    **/
+     * Integrations available and installed in the account
+     */
     getIntegrations(config?: AxiosRequestConfig): Promise<operations.GetIntegrationsResponse>;
     /**
-     * getTargetsTargetIdIntegrations - Integrations available and installed for the target
-    **/
+     * Integrations available and installed for the target
+     */
     getTargetsTargetIdIntegrations(req: operations.GetTargetsTargetIdIntegrationsRequest, config?: AxiosRequestConfig): Promise<operations.GetTargetsTargetIdIntegrationsResponse>;
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCancelConversionTaskActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCancelConversionTaskActionEnum {
     CancelConversionTask = "CancelConversionTask"
 }
-export declare enum PostCancelConversionTaskVersionEnum {
+export declare enum POSTCancelConversionTaskVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostCancelConversionTaskQueryParams extends SpeakeasyBase {
-    action: PostCancelConversionTaskActionEnum;
-    version: PostCancelConversionTaskVersionEnum;
-}
-export declare class PostCancelConversionTaskHeaders extends SpeakeasyBase {
+export declare class POSTCancelConversionTaskRequest extends SpeakeasyBase {
+    action: POSTCancelConversionTaskActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCancelConversionTaskVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +18,8 @@ export declare class PostCancelConversionTaskHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCancelConversionTaskRequest extends SpeakeasyBase {
-    queryParams: PostCancelConversionTaskQueryParams;
-    headers: PostCancelConversionTaskHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCancelConversionTaskResponse extends SpeakeasyBase {
+export declare class POSTCancelConversionTaskResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

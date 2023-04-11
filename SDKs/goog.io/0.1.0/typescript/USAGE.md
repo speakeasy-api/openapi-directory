@@ -1,21 +1,20 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CrawlRequest, CrawlResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CrawlRequest,
+  CrawlResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    apikey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: CrawlRequest = {
-  pathParams: {
-    query: "sit",
+    apikey: "YOUR_API_KEY_HERE",
   },
+});
+
+const req: CrawlRequest = {
+  query: "corrupti",
 };
 
 sdk.crawl(req).then((res: CrawlResponse | AxiosError) => {

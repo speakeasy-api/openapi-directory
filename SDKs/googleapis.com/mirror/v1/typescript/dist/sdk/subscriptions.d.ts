@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Subscriptions {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,19 +9,19 @@ export declare class Subscriptions {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * mirrorSubscriptionsDelete - Deletes a subscription.
-    **/
-    mirrorSubscriptionsDelete(req: operations.MirrorSubscriptionsDeleteRequest, config?: AxiosRequestConfig): Promise<operations.MirrorSubscriptionsDeleteResponse>;
+     * Deletes a subscription.
+     */
+    mirrorSubscriptionsDelete(req: operations.MirrorSubscriptionsDeleteRequest, security: operations.MirrorSubscriptionsDeleteSecurity, config?: AxiosRequestConfig): Promise<operations.MirrorSubscriptionsDeleteResponse>;
     /**
-     * mirrorSubscriptionsInsert - Creates a new subscription.
-    **/
-    mirrorSubscriptionsInsert(req: operations.MirrorSubscriptionsInsertRequest, config?: AxiosRequestConfig): Promise<operations.MirrorSubscriptionsInsertResponse>;
+     * Creates a new subscription.
+     */
+    mirrorSubscriptionsInsert(req: operations.MirrorSubscriptionsInsertRequest, security: operations.MirrorSubscriptionsInsertSecurity, config?: AxiosRequestConfig): Promise<operations.MirrorSubscriptionsInsertResponse>;
     /**
-     * mirrorSubscriptionsList - Retrieves a list of subscriptions for the authenticated user and service.
-    **/
-    mirrorSubscriptionsList(req: operations.MirrorSubscriptionsListRequest, config?: AxiosRequestConfig): Promise<operations.MirrorSubscriptionsListResponse>;
+     * Retrieves a list of subscriptions for the authenticated user and service.
+     */
+    mirrorSubscriptionsList(req: operations.MirrorSubscriptionsListRequest, security: operations.MirrorSubscriptionsListSecurity, config?: AxiosRequestConfig): Promise<operations.MirrorSubscriptionsListResponse>;
     /**
-     * mirrorSubscriptionsUpdate - Updates an existing subscription in place.
-    **/
-    mirrorSubscriptionsUpdate(req: operations.MirrorSubscriptionsUpdateRequest, config?: AxiosRequestConfig): Promise<operations.MirrorSubscriptionsUpdateResponse>;
+     * Updates an existing subscription in place.
+     */
+    mirrorSubscriptionsUpdate(req: operations.MirrorSubscriptionsUpdateRequest, security: operations.MirrorSubscriptionsUpdateSecurity, config?: AxiosRequestConfig): Promise<operations.MirrorSubscriptionsUpdateResponse>;
 }

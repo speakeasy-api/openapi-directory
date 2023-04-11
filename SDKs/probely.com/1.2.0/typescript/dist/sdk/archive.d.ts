@@ -1,5 +1,15 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * If you only require a small number of active targets at a time but don't
+ *
+ * @remarks
+ * want to lose their history by deleting one to add another it is now
+ * possible to archive targets.
+ * This feature is still experimental, please contact our support if you
+ * are interested.
+ *
+ */
 export declare class Archive {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,15 +19,15 @@ export declare class Archive {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * postTargetsActivate - Activate targets
-    **/
-    postTargetsActivate(req: operations.PostTargetsActivateRequest, config?: AxiosRequestConfig): Promise<operations.PostTargetsActivateResponse>;
+     * Activate targets
+     */
+    postTargetsActivate(req: string[], config?: AxiosRequestConfig): Promise<operations.PostTargetsActivateResponse>;
     /**
-     * postTargetsArchive - Archive targets
-    **/
-    postTargetsArchive(req: operations.PostTargetsArchiveRequest, config?: AxiosRequestConfig): Promise<operations.PostTargetsArchiveResponse>;
+     * Archive targets
+     */
+    postTargetsArchive(req: string[], config?: AxiosRequestConfig): Promise<operations.PostTargetsArchiveResponse>;
     /**
-     * postTargetsArchived - List archived targets
-    **/
-    postTargetsArchived(req: operations.PostTargetsArchivedRequest, config?: AxiosRequestConfig): Promise<operations.PostTargetsArchivedResponse>;
+     * List archived targets
+     */
+    postTargetsArchived(req: string[], config?: AxiosRequestConfig): Promise<operations.PostTargetsArchivedResponse>;
 }

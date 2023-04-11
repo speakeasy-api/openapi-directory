@@ -1,14 +1,41 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { CreateOrderRatePlanOverride } from "./createorderrateplanoverride";
 import { CancelSubscription } from "./cancelsubscription";
 import { CreateOrderCreateSubscription } from "./createordercreatesubscription";
-import { OwnerTransfer } from "./ownertransfer";
-import { RemoveProduct } from "./removeproduct";
+import { CreateOrderRatePlanOverride } from "./createorderrateplanoverride";
+import { CreateOrderRatePlanUpdate } from "./createorderrateplanupdate";
 import { CreateOrderResume } from "./createorderresume";
 import { CreateOrderSuspend } from "./createordersuspend";
 import { CreateOrderTermsAndConditions } from "./createordertermsandconditions";
+import { OwnerTransfer } from "./ownertransfer";
+import { RemoveProduct } from "./removeproduct";
 import { TriggerDate } from "./triggerdate";
-import { CreateOrderRatePlanUpdate } from "./createorderrateplanupdate";
+/**
+ * Type of order action.
+ *
+ * @remarks
+ *
+ * Unless the type of order action is `RenewSubscription`, you must use the corresponding field to provide information about the order action. For example, if the type of order action is `AddProduct`, you must set the `addProduct` field.
+ *
+ * Zuora returns an error if you set a field that corresponds to a different type of order action. For example, if the type of order action is `AddProduct`, Zuora returns an error if you set the `updateProduct` field.
+ *
+ * A [pending order](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders/Pending_Order_and_Subscription) supports the following order actions:
+ *  * CreateSubscription
+ *  * AddProduct
+ *  * UpdateProduct
+ *  * RemoveProduct
+ *  * RenewSubscription
+ *  * TermsAndConditions
+ *
+ * However, pending orders created through all order actions except for "Create new subscription":
+ *  * Do not impact the subscription status.
+ *  * Are in **Limited Availability**. If you want to have access to the feature, submit a request at [Zuora Global Support](https://support.zuora.com).
+ *
+ * A pending order is created in either of the following conditions:
+ *  * [Zuora is configured to require service activation](https://knowledgecenter.zuora.com/CB_Billing/Billing_Settings/Define_Default_Subscription_Settings#Require_Service_Activation_of_Orders.3F) and the service activation date is not set in your "Create an order" call.
+ *  * [Zuora is configured to require customer acceptance](https://knowledgecenter.zuora.com/CB_Billing/Billing_Settings/Define_Default_Subscription_Settings#Require_Customer_Acceptance_of_Orders.3F) and the customer acceptance date is not set in your "Create an order" call.
+ *  * When a charge in the subscription has its `triggerEvent` field set as `SpecificDate` and the `specificTriggerDate` field is not set in your "Create an order" API call.
+ *
+ */
 export declare enum CreateOrderOrderActionTypeEnum {
     CreateSubscription = "CreateSubscription",
     TermsAndConditions = "TermsAndConditions",
@@ -22,16 +49,133 @@ export declare enum CreateOrderOrderActionTypeEnum {
     Resume = "Resume"
 }
 export declare class CreateOrderOrderAction extends SpeakeasyBase {
+    /**
+     * Information about an order action of type `addProduct`.
+     *
+     * @remarks
+     *
+     * If you want to create a pending order through the "Add product" order action, and if the charge's trigger condition is `Specific Date`, you must set a charge number in the `chargeNumber` field for the "Add product" order action. In this case, if you do not set it, Zuora will not generate the charge number for you.
+     *
+     * See more information about pending orders in [Pending Order and Subscription](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders/Pending_Order_and_Subscription).
+     *
+     */
     addProduct?: CreateOrderRatePlanOverride;
+    /**
+     * Information about an order action of type `CancelSubscription`.
+     *
+     * @remarks
+     *
+     */
     cancelSubscription?: CancelSubscription;
+    /**
+     * Information about an order action of type `CreateSubscription`.
+     *
+     * @remarks
+     *
+     */
     createSubscription?: CreateOrderCreateSubscription;
+    /**
+     * Container for custom fields of an Order Action object.
+     *
+     * @remarks
+     *
+     */
     customFields?: Record<string, any>;
+    /**
+     * Information about an order action of type `OwnerTransfer`.
+     *
+     * @remarks
+     *
+     * **Note:** The Owner Transfer feature is in **Limited Availability**. If you wish to have access to the feature, submit a request at [Zuora Global Support](http://support.zuora.com/).
+     *
+     */
     ownerTransfer?: OwnerTransfer;
+    /**
+     * Information about an order action of type `RemoveProduct`.
+     *
+     * @remarks
+     *
+     */
     removeProduct?: RemoveProduct;
+    /**
+     * Information about an order action of type `Resume`.
+     *
+     * @remarks
+     *
+     */
     resume?: CreateOrderResume;
+    /**
+     * Information about an order action of type `Suspend`.
+     *
+     * @remarks
+     *
+     */
     suspend?: CreateOrderSuspend;
+    /**
+     * Information about an order action of type `TermsAndConditions`.
+     *
+     * @remarks
+     *
+     */
     termsAndConditions?: CreateOrderTermsAndConditions;
+    /**
+     * Container for the contract effective, service activation, and customer acceptance dates of the order action.
+     *
+     * @remarks
+     *
+     * If [Zuora is configured to require service activation](https://knowledgecenter.zuora.com/CB_Billing/Billing_Settings/Define_Default_Subscription_Settings#Require_Service_Activation_of_Orders.3F) and the `ServiceActivation` field is not set for a `CreateSubscription` order action, a `Pending` order and a `Pending Activation` subscription are created.
+     *
+     * If [Zuora is configured to require customer acceptance](https://knowledgecenter.zuora.com/CB_Billing/Billing_Settings/Define_Default_Subscription_Settings#Require_Customer_Acceptance_of_Orders.3F) and the `CustomerAcceptance` field is not set for a `CreateSubscription` order action, a `Pending` order and a `Pending Acceptance` subscription are created. At the same time, if the service activation date field is also required and not set, a `Pending` order and a `Pending Activation` subscription are created instead.
+     *
+     * If [Zuora is configured to require service activation](https://knowledgecenter.zuora.com/CB_Billing/Billing_Settings/Define_Default_Subscription_Settings#Require_Service_Activation_of_Orders.3F) and the `ServiceActivation` field is not set for either of the following order actions, a `Pending` order is created. The subscription status is not impacted. **Note:** This feature is in **Limited Availability**. If you want to have access to the feature, submit a request at [Zuora Global Support](http://support.zuora.com/).
+     *  * AddProduct
+     *  * UpdateProduct
+     *  * RemoveProduct
+     *  * RenewSubscription
+     *  * TermsAndConditions
+     *
+     * If [Zuora is configured to require customer acceptance](https://knowledgecenter.zuora.com/CB_Billing/Billing_Settings/Define_Default_Subscription_Settings#Require_Customer_Acceptance_of_Orders.3F) and the `CustomerAcceptance` field is not set for either of the following order actions, a `Pending` order is created. The subscription status is not impacted. **Note:** This feature is in **Limited Availability**. If you want to have access to the feature, submit a request at [Zuora Global Support](http://support.zuora.com/).
+     *  * AddProduct
+     *  * UpdateProduct
+     *  * RemoveProduct
+     *  * RenewSubscription
+     *  * TermsAndConditions
+     *
+     */
     triggerDates?: TriggerDate[];
+    /**
+     * Type of order action.
+     *
+     * @remarks
+     *
+     * Unless the type of order action is `RenewSubscription`, you must use the corresponding field to provide information about the order action. For example, if the type of order action is `AddProduct`, you must set the `addProduct` field.
+     *
+     * Zuora returns an error if you set a field that corresponds to a different type of order action. For example, if the type of order action is `AddProduct`, Zuora returns an error if you set the `updateProduct` field.
+     *
+     * A [pending order](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders/Pending_Order_and_Subscription) supports the following order actions:
+     *  * CreateSubscription
+     *  * AddProduct
+     *  * UpdateProduct
+     *  * RemoveProduct
+     *  * RenewSubscription
+     *  * TermsAndConditions
+     *
+     * However, pending orders created through all order actions except for "Create new subscription":
+     *  * Do not impact the subscription status.
+     *  * Are in **Limited Availability**. If you want to have access to the feature, submit a request at [Zuora Global Support](https://support.zuora.com).
+     *
+     * A pending order is created in either of the following conditions:
+     *  * [Zuora is configured to require service activation](https://knowledgecenter.zuora.com/CB_Billing/Billing_Settings/Define_Default_Subscription_Settings#Require_Service_Activation_of_Orders.3F) and the service activation date is not set in your "Create an order" call.
+     *  * [Zuora is configured to require customer acceptance](https://knowledgecenter.zuora.com/CB_Billing/Billing_Settings/Define_Default_Subscription_Settings#Require_Customer_Acceptance_of_Orders.3F) and the customer acceptance date is not set in your "Create an order" call.
+     *  * When a charge in the subscription has its `triggerEvent` field set as `SpecificDate` and the `specificTriggerDate` field is not set in your "Create an order" API call.
+     *
+     */
     type: CreateOrderOrderActionTypeEnum;
+    /**
+     * Information about an order action of type `UpdateProduct`.
+     *
+     * @remarks
+     *
+     */
     updateProduct?: CreateOrderRatePlanUpdate;
 }

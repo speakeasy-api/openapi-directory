@@ -1,26 +1,40 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReposListPullRequestsAssociatedWithCommitPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ReposListPullRequestsAssociatedWithCommitRequest extends SpeakeasyBase {
+    /**
+     * commit_sha parameter
+     */
     commitSha: string;
     owner: string;
+    /**
+     * Page number of the results to fetch.
+     */
+    page?: number;
+    /**
+     * Results per page (max 100)
+     */
+    perPage?: number;
     repo: string;
 }
-export declare class ReposListPullRequestsAssociatedWithCommitQueryParams extends SpeakeasyBase {
-    page?: number;
-    perPage?: number;
-}
-export declare class ReposListPullRequestsAssociatedWithCommit415ApplicationJson extends SpeakeasyBase {
+/**
+ * Preview header missing
+ */
+export declare class ReposListPullRequestsAssociatedWithCommit415ApplicationJSON extends SpeakeasyBase {
     documentationUrl: string;
     message: string;
 }
-export declare class ReposListPullRequestsAssociatedWithCommitRequest extends SpeakeasyBase {
-    pathParams: ReposListPullRequestsAssociatedWithCommitPathParams;
-    queryParams: ReposListPullRequestsAssociatedWithCommitQueryParams;
-}
 export declare class ReposListPullRequestsAssociatedWithCommitResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     pullRequestSimples?: shared.PullRequestSimple[];
-    reposListPullRequestsAssociatedWithCommit415ApplicationJSONObject?: ReposListPullRequestsAssociatedWithCommit415ApplicationJson;
+    /**
+     * Preview header missing
+     */
+    reposListPullRequestsAssociatedWithCommit415ApplicationJSONObject?: ReposListPullRequestsAssociatedWithCommit415ApplicationJSON;
 }

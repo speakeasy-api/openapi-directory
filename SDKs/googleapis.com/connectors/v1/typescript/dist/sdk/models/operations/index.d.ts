@@ -1,3 +1,4 @@
+export * from "./connectorsprojectslocationsconnectionsconnectionschemametadatarefresh";
 export * from "./connectorsprojectslocationsconnectionscreate";
 export * from "./connectorsprojectslocationsconnectionslist";
 export * from "./connectorsprojectslocationsconnectionspatch";

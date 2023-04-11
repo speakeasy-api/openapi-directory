@@ -1,21 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CustomAppointmentFieldsReadPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class CustomAppointmentFieldsReadQueryParams extends SpeakeasyBase {
-    doctor?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class CustomAppointmentFieldsReadSecurity extends SpeakeasyBase {
-    drchronoOauth2: shared.SchemeDrchronoOauth2;
+    drchronoOauth2: string;
 }
 export declare class CustomAppointmentFieldsReadRequest extends SpeakeasyBase {
-    pathParams: CustomAppointmentFieldsReadPathParams;
-    queryParams: CustomAppointmentFieldsReadQueryParams;
-    security: CustomAppointmentFieldsReadSecurity;
+    doctor?: number;
+    id: string;
 }
 export declare class CustomAppointmentFieldsReadResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * OK
+     */
     customAppointmentFieldType?: shared.CustomAppointmentFieldType;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

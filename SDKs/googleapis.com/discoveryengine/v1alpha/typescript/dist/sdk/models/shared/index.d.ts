@@ -26,5 +26,4 @@ export * from "./googlelongrunninglistoperationsresponse";
 export * from "./googlelongrunningoperation";
 export * from "./googlerpcstatus";
 export * from "./googletypedate";
-export * from "./security";
 export * from "./xgafvenum";

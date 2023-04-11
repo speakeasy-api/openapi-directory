@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum RecordActivityTaskHeartbeatXAmzTargetEnum {
     SimpleWorkflowServiceRecordActivityTaskHeartbeat = "SimpleWorkflowService.RecordActivityTaskHeartbeat"
 }
-export declare class RecordActivityTaskHeartbeatHeaders extends SpeakeasyBase {
+export declare class RecordActivityTaskHeartbeatRequest extends SpeakeasyBase {
+    recordActivityTaskHeartbeatInput: shared.RecordActivityTaskHeartbeatInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class RecordActivityTaskHeartbeatHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: RecordActivityTaskHeartbeatXAmzTargetEnum;
 }
-export declare class RecordActivityTaskHeartbeatRequest extends SpeakeasyBase {
-    headers: RecordActivityTaskHeartbeatHeaders;
-    request: shared.RecordActivityTaskHeartbeatInput;
-}
 export declare class RecordActivityTaskHeartbeatResponse extends SpeakeasyBase {
+    /**
+     * Success
+     */
     activityTaskStatus?: shared.ActivityTaskStatus;
     contentType: string;
+    /**
+     * OperationNotPermittedFault
+     */
     operationNotPermittedFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnknownResourceFault
+     */
     unknownResourceFault?: any;
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostAcceptTransitGatewayVpcAttachmentActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTAcceptTransitGatewayVpcAttachmentActionEnum {
     AcceptTransitGatewayVpcAttachment = "AcceptTransitGatewayVpcAttachment"
 }
-export declare enum PostAcceptTransitGatewayVpcAttachmentVersionEnum {
+export declare enum POSTAcceptTransitGatewayVpcAttachmentVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostAcceptTransitGatewayVpcAttachmentQueryParams extends SpeakeasyBase {
-    action: PostAcceptTransitGatewayVpcAttachmentActionEnum;
-    version: PostAcceptTransitGatewayVpcAttachmentVersionEnum;
-}
-export declare class PostAcceptTransitGatewayVpcAttachmentHeaders extends SpeakeasyBase {
+export declare class POSTAcceptTransitGatewayVpcAttachmentRequest extends SpeakeasyBase {
+    action: POSTAcceptTransitGatewayVpcAttachmentActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTAcceptTransitGatewayVpcAttachmentVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostAcceptTransitGatewayVpcAttachmentHeaders extends Speake
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostAcceptTransitGatewayVpcAttachmentRequest extends SpeakeasyBase {
-    queryParams: PostAcceptTransitGatewayVpcAttachmentQueryParams;
-    headers: PostAcceptTransitGatewayVpcAttachmentHeaders;
-    request?: Uint8Array;
-}
-export declare class PostAcceptTransitGatewayVpcAttachmentResponse extends SpeakeasyBase {
+export declare class POSTAcceptTransitGatewayVpcAttachmentResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

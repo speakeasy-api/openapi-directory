@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Describes the configuration of an Auto Scaling group.
-**/
+ */
 export declare class AutoScalingGroupConfiguration extends SpeakeasyBase {
     desiredCapacity?: number;
     instanceType?: string;

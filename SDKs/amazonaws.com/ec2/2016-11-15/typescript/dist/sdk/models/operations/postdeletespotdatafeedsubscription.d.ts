@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteSpotDatafeedSubscriptionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteSpotDatafeedSubscriptionActionEnum {
     DeleteSpotDatafeedSubscription = "DeleteSpotDatafeedSubscription"
 }
-export declare enum PostDeleteSpotDatafeedSubscriptionVersionEnum {
+export declare enum POSTDeleteSpotDatafeedSubscriptionVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDeleteSpotDatafeedSubscriptionQueryParams extends SpeakeasyBase {
-    action: PostDeleteSpotDatafeedSubscriptionActionEnum;
-    version: PostDeleteSpotDatafeedSubscriptionVersionEnum;
-}
-export declare class PostDeleteSpotDatafeedSubscriptionHeaders extends SpeakeasyBase {
+export declare class POSTDeleteSpotDatafeedSubscriptionRequest extends SpeakeasyBase {
+    action: POSTDeleteSpotDatafeedSubscriptionActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteSpotDatafeedSubscriptionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +18,8 @@ export declare class PostDeleteSpotDatafeedSubscriptionHeaders extends Speakeasy
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteSpotDatafeedSubscriptionRequest extends SpeakeasyBase {
-    queryParams: PostDeleteSpotDatafeedSubscriptionQueryParams;
-    headers: PostDeleteSpotDatafeedSubscriptionHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteSpotDatafeedSubscriptionResponse extends SpeakeasyBase {
+export declare class POSTDeleteSpotDatafeedSubscriptionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

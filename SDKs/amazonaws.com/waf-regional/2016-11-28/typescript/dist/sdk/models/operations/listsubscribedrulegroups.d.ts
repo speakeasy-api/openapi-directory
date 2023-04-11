@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum ListSubscribedRuleGroupsXAmzTargetEnum {
-    AwswafRegional20161128ListSubscribedRuleGroups = "AWSWAF_Regional_20161128.ListSubscribedRuleGroups"
+    AWSWAFRegional20161128ListSubscribedRuleGroups = "AWSWAF_Regional_20161128.ListSubscribedRuleGroups"
 }
-export declare class ListSubscribedRuleGroupsHeaders extends SpeakeasyBase {
+export declare class ListSubscribedRuleGroupsRequest extends SpeakeasyBase {
+    listSubscribedRuleGroupsRequest: shared.ListSubscribedRuleGroupsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class ListSubscribedRuleGroupsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListSubscribedRuleGroupsXAmzTargetEnum;
 }
-export declare class ListSubscribedRuleGroupsRequest extends SpeakeasyBase {
-    headers: ListSubscribedRuleGroupsHeaders;
-    request: shared.ListSubscribedRuleGroupsRequest;
-}
 export declare class ListSubscribedRuleGroupsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     listSubscribedRuleGroupsResponse?: shared.ListSubscribedRuleGroupsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFNonexistentItemException
+     */
     wafNonexistentItemException?: any;
 }

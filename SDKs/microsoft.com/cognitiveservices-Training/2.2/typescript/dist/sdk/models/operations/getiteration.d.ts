@@ -1,19 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetIterationPathParams extends SpeakeasyBase {
-    iterationId: string;
-    projectId: string;
-}
-export declare class GetIterationHeaders extends SpeakeasyBase {
-    trainingKey: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetIterationRequest extends SpeakeasyBase {
-    pathParams: GetIterationPathParams;
-    headers: GetIterationHeaders;
+    trainingKey: string;
+    /**
+     * The id of the iteration to get.
+     */
+    iterationId: string;
+    /**
+     * The id of the project the iteration belongs to.
+     */
+    projectId: string;
 }
 export declare class GetIterationResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
+    /**
+     * OK
+     */
     iteration?: shared.Iteration;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

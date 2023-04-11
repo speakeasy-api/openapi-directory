@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetRemoveUserFromGroupActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETRemoveUserFromGroupActionEnum {
     RemoveUserFromGroup = "RemoveUserFromGroup"
 }
-export declare enum GetRemoveUserFromGroupVersionEnum {
+export declare enum GETRemoveUserFromGroupVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class GetRemoveUserFromGroupQueryParams extends SpeakeasyBase {
-    action: GetRemoveUserFromGroupActionEnum;
+export declare class GETRemoveUserFromGroupRequest extends SpeakeasyBase {
+    action: GETRemoveUserFromGroupActionEnum;
+    /**
+     * <p>The name of the group to update.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
+     */
     groupName: string;
+    /**
+     * <p>The name of the user to remove.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
+     */
     userName: string;
-    version: GetRemoveUserFromGroupVersionEnum;
-}
-export declare class GetRemoveUserFromGroupHeaders extends SpeakeasyBase {
+    version: GETRemoveUserFromGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetRemoveUserFromGroupHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetRemoveUserFromGroupRequest extends SpeakeasyBase {
-    queryParams: GetRemoveUserFromGroupQueryParams;
-    headers: GetRemoveUserFromGroupHeaders;
-}
-export declare class GetRemoveUserFromGroupResponse extends SpeakeasyBase {
+export declare class GETRemoveUserFromGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

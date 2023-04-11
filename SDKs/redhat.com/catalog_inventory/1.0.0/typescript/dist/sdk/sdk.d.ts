@@ -1,6 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-import { Security } from "./models/shared";
+import * as shared from "./models/shared";
 import { ServiceCredential } from "./servicecredential";
 import { ServiceCredentialType } from "./servicecredentialtype";
 import { ServiceInstance } from "./serviceinstance";
@@ -11,12 +10,31 @@ import { ServicePlan } from "./serviceplan";
 import { Source } from "./source";
 import { Tags } from "./tags";
 import { Task } from "./task";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://cloud.redhat.com/{basePath}", "http://localhost:{port}/{basePath}"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * The security details required to authenticate the SDK
+     */
+    security?: shared.Security;
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    security?: Security;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * Catalog Inventory
+ */
 export declare class SDK {
     serviceCredential: ServiceCredential;
     serviceCredentialType: ServiceCredentialType;
@@ -34,15 +52,17 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
     /**
-     * getDocumentation - Return this API document in JSON format
-    **/
+     * Return this API document in JSON format
+     */
     getDocumentation(config?: AxiosRequestConfig): Promise<operations.GetDocumentationResponse>;
     /**
-     * postGraphQl - Perform a GraphQL Query
+     * Perform a GraphQL Query
      *
+     * @remarks
      * Performs a GraphQL Query
-    **/
-    postGraphQl(req: operations.PostGraphQlRequest, config?: AxiosRequestConfig): Promise<operations.PostGraphQlResponse>;
+     */
+    postGraphQL(req: shared.GraphQLRequest, config?: AxiosRequestConfig): Promise<operations.PostGraphQLResponse>;
 }

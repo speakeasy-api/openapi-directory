@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class AllWorkspaces200ApplicationJsonWorkspaces extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class AllWorkspaces200ApplicationJSONWorkspaces extends SpeakeasyBase {
     id?: string;
     name?: string;
     type?: string;
 }
-export declare class AllWorkspaces200ApplicationJson extends SpeakeasyBase {
-    workspaces?: AllWorkspaces200ApplicationJsonWorkspaces[];
+/**
+ * Valid Response
+ */
+export declare class AllWorkspaces200ApplicationJSON extends SpeakeasyBase {
+    workspaces?: AllWorkspaces200ApplicationJSONWorkspaces[];
 }
 export declare class AllWorkspacesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    allWorkspaces200ApplicationJSONObject?: AllWorkspaces200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Valid Response
+     */
+    allWorkspaces200ApplicationJSONObject?: AllWorkspaces200ApplicationJSON;
 }

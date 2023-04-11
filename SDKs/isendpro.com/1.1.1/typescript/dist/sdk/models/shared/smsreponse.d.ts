@@ -1,4 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SmsReponse extends SpeakeasyBase {
-    etat?: any;
+import { SMSReponseEtat } from "./smsreponseetat";
+/**
+ * Reponse OK
+ */
+export declare class SMSReponse extends SpeakeasyBase {
+    etat?: SMSReponseEtat;
 }

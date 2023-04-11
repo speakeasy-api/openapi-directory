@@ -1,19 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreateProductSlugPathParams extends SpeakeasyBase {
-    organizationUuid: string;
-}
+import { AxiosResponse } from "axios";
 export declare class CreateProductSlugSecurity extends SpeakeasyBase {
-    zettleOauth?: shared.SchemeZettleOauth;
-    zettleApiKey?: shared.SchemeZettleApiKey;
+    zettleOauth: string;
 }
 export declare class CreateProductSlugRequest extends SpeakeasyBase {
-    pathParams: CreateProductSlugPathParams;
-    request: shared.CreateSlugRequest;
-    security: CreateProductSlugSecurity;
+    createSlugRequest: shared.CreateSlugRequest;
+    organizationUuid: string;
 }
 export declare class CreateProductSlugResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Product slug
+     */
     slugResponse?: shared.SlugResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

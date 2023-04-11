@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateRulesOfIpGroupXAmzTargetEnum {
     WorkspacesServiceUpdateRulesOfIpGroup = "WorkspacesService.UpdateRulesOfIpGroup"
 }
-export declare class UpdateRulesOfIpGroupHeaders extends SpeakeasyBase {
+export declare class UpdateRulesOfIpGroupRequest extends SpeakeasyBase {
+    updateRulesOfIpGroupRequest: shared.UpdateRulesOfIpGroupRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class UpdateRulesOfIpGroupHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateRulesOfIpGroupXAmzTargetEnum;
 }
-export declare class UpdateRulesOfIpGroupRequest extends SpeakeasyBase {
-    headers: UpdateRulesOfIpGroupHeaders;
-    request: shared.UpdateRulesOfIpGroupRequest;
-}
 export declare class UpdateRulesOfIpGroupResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InvalidParameterValuesException
+     */
     invalidParameterValuesException?: any;
+    /**
+     * InvalidResourceStateException
+     */
     invalidResourceStateException?: any;
+    /**
+     * ResourceLimitExceededException
+     */
     resourceLimitExceededException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     updateRulesOfIpGroupResult?: Record<string, any>;
 }

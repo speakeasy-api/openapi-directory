@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Definitions and configuration for the CRM cards your app can display.
+ */
 export declare class Cards {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,33 +12,38 @@ export declare class Cards {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteCrmV3ExtensionsCardsAppIdCardIdArchive - Delete a card
+     * Delete a card
      *
+     * @remarks
      * Permanently deletes a card definition with the given ID. Once deleted, data fetch requests for this card will no longer be sent to your service. This can't be undone.
-    **/
-    deleteCrmV3ExtensionsCardsAppIdCardIdArchive(req: operations.DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveRequest, config?: AxiosRequestConfig): Promise<operations.DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveResponse>;
+     */
+    deleteCrmV3ExtensionsCardsAppIdCardIdArchive(req: operations.DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveRequest, security: operations.DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveResponse>;
     /**
-     * getCrmV3ExtensionsCardsAppIdCardIdGetById - Get a card.
+     * Get a card.
      *
+     * @remarks
      * Returns the definition for a card with the given ID.
-    **/
-    getCrmV3ExtensionsCardsAppIdCardIdGetById(req: operations.GetCrmV3ExtensionsCardsAppIdCardIdGetByIdRequest, config?: AxiosRequestConfig): Promise<operations.GetCrmV3ExtensionsCardsAppIdCardIdGetByIdResponse>;
+     */
+    getCrmV3ExtensionsCardsAppIdCardIdGetById(req: operations.GetCrmV3ExtensionsCardsAppIdCardIdGetByIdRequest, security: operations.GetCrmV3ExtensionsCardsAppIdCardIdGetByIdSecurity, config?: AxiosRequestConfig): Promise<operations.GetCrmV3ExtensionsCardsAppIdCardIdGetByIdResponse>;
     /**
-     * getCrmV3ExtensionsCardsAppIdGetAll - Get all cards
+     * Get all cards
      *
+     * @remarks
      * Returns a list of cards for a given app.
-    **/
-    getCrmV3ExtensionsCardsAppIdGetAll(req: operations.GetCrmV3ExtensionsCardsAppIdGetAllRequest, config?: AxiosRequestConfig): Promise<operations.GetCrmV3ExtensionsCardsAppIdGetAllResponse>;
+     */
+    getCrmV3ExtensionsCardsAppIdGetAll(req: operations.GetCrmV3ExtensionsCardsAppIdGetAllRequest, security: operations.GetCrmV3ExtensionsCardsAppIdGetAllSecurity, config?: AxiosRequestConfig): Promise<operations.GetCrmV3ExtensionsCardsAppIdGetAllResponse>;
     /**
-     * patchCrmV3ExtensionsCardsAppIdCardIdUpdate - Update a card
+     * Update a card
      *
+     * @remarks
      * Update a card definition with new details.
-    **/
-    patchCrmV3ExtensionsCardsAppIdCardIdUpdate(req: operations.PatchCrmV3ExtensionsCardsAppIdCardIdUpdateRequest, config?: AxiosRequestConfig): Promise<operations.PatchCrmV3ExtensionsCardsAppIdCardIdUpdateResponse>;
+     */
+    patchCrmV3ExtensionsCardsAppIdCardIdUpdate(req: operations.PatchCrmV3ExtensionsCardsAppIdCardIdUpdateRequest, security: operations.PatchCrmV3ExtensionsCardsAppIdCardIdUpdateSecurity, config?: AxiosRequestConfig): Promise<operations.PatchCrmV3ExtensionsCardsAppIdCardIdUpdateResponse>;
     /**
-     * postCrmV3ExtensionsCardsAppIdCreate - Create a new card
+     * Create a new card
      *
+     * @remarks
      * Defines a new card that will become active on an account when this app is installed.
-    **/
-    postCrmV3ExtensionsCardsAppIdCreate(req: operations.PostCrmV3ExtensionsCardsAppIdCreateRequest, config?: AxiosRequestConfig): Promise<operations.PostCrmV3ExtensionsCardsAppIdCreateResponse>;
+     */
+    postCrmV3ExtensionsCardsAppIdCreate(req: operations.PostCrmV3ExtensionsCardsAppIdCreateRequest, security: operations.PostCrmV3ExtensionsCardsAppIdCreateSecurity, config?: AxiosRequestConfig): Promise<operations.PostCrmV3ExtensionsCardsAppIdCreateResponse>;
 }

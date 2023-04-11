@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The data type of the Parameter.
+ */
 export declare enum InputParameterDataTypeEnum {
     DataTypeUnspecified = "DATA_TYPE_UNSPECIFIED",
     DataTypeInt = "DATA_TYPE_INT",
@@ -48,11 +51,26 @@ export declare enum InputParameterDataTypeEnum {
 }
 /**
  * Metadata of an input parameter.
-**/
+ */
 export declare class InputParameter extends SpeakeasyBase {
+    /**
+     * The data type of the Parameter.
+     */
     dataType?: InputParameterDataTypeEnum;
+    /**
+     * The following field specifies the default value of the Parameter provided by the external system if a value is not provided.
+     */
     defaultValue?: any;
+    /**
+     * A brief description of the Parameter.
+     */
     description?: string;
+    /**
+     * Specifies whether a null value is allowed.
+     */
     nullable?: boolean;
+    /**
+     * Name of the Parameter.
+     */
     parameter?: string;
 }

@@ -1,15 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class InteractionsSetRestrictionsForOrgPathParams extends SpeakeasyBase {
-    org: string;
-}
+import { AxiosResponse } from "axios";
 export declare class InteractionsSetRestrictionsForOrgRequest extends SpeakeasyBase {
-    pathParams: InteractionsSetRestrictionsForOrgPathParams;
-    request?: shared.InteractionLimit;
+    interactionLimit: shared.InteractionLimit;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    org: string;
 }
 export declare class InteractionsSetRestrictionsForOrgResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     interactionLimitResponse?: shared.InteractionLimitResponse;
+    /**
+     * Validation failed, or the endpoint has been spammed.
+     */
     validationError?: shared.ValidationError;
 }

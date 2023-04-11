@@ -1,22 +1,34 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetPathParams extends SpeakeasyBase {
-    shopperId: string;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetIncludesEnum {
     CustomerId = "customerId"
 }
-export declare class GetQueryParams extends SpeakeasyBase {
-    includes?: GetIncludesEnum[];
-}
 export declare class GetRequest extends SpeakeasyBase {
-    pathParams: GetPathParams;
-    queryParams: GetQueryParams;
+    /**
+     * Additional properties to be included in the response shopper object
+     */
+    includes?: GetIncludesEnum[];
+    /**
+     * Shopper whose details are to be retrieved
+     */
+    shopperId: string;
 }
 export declare class GetResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    error?: any;
-    errorLimit?: any;
-    shopper?: any;
+    /**
+     * Request was malformed
+     */
+    error?: shared.ErrorT;
+    /**
+     * Too many requests received within interval
+     */
+    errorLimit?: shared.ErrorLimit;
+    /**
+     * Request was successful
+     */
+    shopper?: shared.Shopper;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

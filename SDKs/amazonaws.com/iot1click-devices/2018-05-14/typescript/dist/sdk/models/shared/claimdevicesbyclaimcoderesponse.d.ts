@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class ClaimDevicesByClaimCodeResponse extends SpeakeasyBase {
-    claimCode?: Record<string, any>;
-    total?: Record<string, any>;
+    claimCode?: string;
+    total?: number;
 }

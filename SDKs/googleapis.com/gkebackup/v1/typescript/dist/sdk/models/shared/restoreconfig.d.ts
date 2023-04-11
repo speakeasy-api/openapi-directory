@@ -3,16 +3,25 @@ import { ClusterResourceRestoreScope } from "./clusterresourcerestorescope";
 import { NamespacedNames } from "./namespacednames";
 import { Namespaces } from "./namespaces";
 import { SubstitutionRule } from "./substitutionrule";
+/**
+ * Defines the behavior for handling the situation where cluster-scoped resources being restored already exist in the target cluster. This MUST be set to a value other than CLUSTER_RESOURCE_CONFLICT_POLICY_UNSPECIFIED if cluster_resource_restore_scope is not empty.
+ */
 export declare enum RestoreConfigClusterResourceConflictPolicyEnum {
     ClusterResourceConflictPolicyUnspecified = "CLUSTER_RESOURCE_CONFLICT_POLICY_UNSPECIFIED",
     UseExistingVersion = "USE_EXISTING_VERSION",
     UseBackupVersion = "USE_BACKUP_VERSION"
 }
+/**
+ * Defines the behavior for handling the situation where sets of namespaced resources being restored already exist in the target cluster. This MUST be set to a value other than NAMESPACED_RESOURCE_RESTORE_MODE_UNSPECIFIED.
+ */
 export declare enum RestoreConfigNamespacedResourceRestoreModeEnum {
     NamespacedResourceRestoreModeUnspecified = "NAMESPACED_RESOURCE_RESTORE_MODE_UNSPECIFIED",
     DeleteAndRestore = "DELETE_AND_RESTORE",
     FailOnConflict = "FAIL_ON_CONFLICT"
 }
+/**
+ * Specifies the mechanism to be used to restore volume data. Default: VOLUME_DATA_RESTORE_POLICY_UNSPECIFIED (will be treated as NO_VOLUME_DATA_RESTORATION).
+ */
 export declare enum RestoreConfigVolumeDataRestorePolicyEnum {
     VolumeDataRestorePolicyUnspecified = "VOLUME_DATA_RESTORE_POLICY_UNSPECIFIED",
     RestoreVolumeDataFromBackup = "RESTORE_VOLUME_DATA_FROM_BACKUP",
@@ -20,15 +29,39 @@ export declare enum RestoreConfigVolumeDataRestorePolicyEnum {
     NoVolumeDataRestoration = "NO_VOLUME_DATA_RESTORATION"
 }
 /**
- * Configuration of a restore. Next id: 9
-**/
+ * Configuration of a restore. Next id: 12
+ */
 export declare class RestoreConfig extends SpeakeasyBase {
+    /**
+     * Restore all namespaced resources in the Backup if set to "True". Specifying this field to "False" is an error.
+     */
     allNamespaces?: boolean;
+    /**
+     * Defines the behavior for handling the situation where cluster-scoped resources being restored already exist in the target cluster. This MUST be set to a value other than CLUSTER_RESOURCE_CONFLICT_POLICY_UNSPECIFIED if cluster_resource_restore_scope is not empty.
+     */
     clusterResourceConflictPolicy?: RestoreConfigClusterResourceConflictPolicyEnum;
+    /**
+     * Defines the scope of cluster-scoped resources to restore. Some group kinds are not reasonable choices for a restore, and will cause an error if selected here. Any scope selection that would restore "all valid" resources automatically excludes these group kinds. - gkebackup.gke.io/BackupJob - gkebackup.gke.io/RestoreJob - metrics.k8s.io/NodeMetrics - migration.k8s.io/StorageState - migration.k8s.io/StorageVersionMigration - Node - snapshot.storage.k8s.io/VolumeSnapshotContent - storage.k8s.io/CSINode Some group kinds are driven by restore configuration elsewhere, and will cause an error if selected here. - Namespace - PersistentVolume
+     */
     clusterResourceRestoreScope?: ClusterResourceRestoreScope;
+    /**
+     * Defines the behavior for handling the situation where sets of namespaced resources being restored already exist in the target cluster. This MUST be set to a value other than NAMESPACED_RESOURCE_RESTORE_MODE_UNSPECIFIED.
+     */
     namespacedResourceRestoreMode?: RestoreConfigNamespacedResourceRestoreModeEnum;
+    /**
+     * A list of namespaced Kubernetes resources.
+     */
     selectedApplications?: NamespacedNames;
+    /**
+     * A list of Kubernetes Namespaces
+     */
     selectedNamespaces?: Namespaces;
+    /**
+     * A list of transformation rules to be applied against Kubernetes resources as they are selected for restoration from a Backup. Rules are executed in order defined - this order matters, as changes made by a rule may impact the filtering logic of subsequent rules. An empty list means no substitution will occur.
+     */
     substitutionRules?: SubstitutionRule[];
+    /**
+     * Specifies the mechanism to be used to restore volume data. Default: VOLUME_DATA_RESTORE_POLICY_UNSPECIFIED (will be treated as NO_VOLUME_DATA_RESTORATION).
+     */
     volumeDataRestorePolicy?: RestoreConfigVolumeDataRestorePolicyEnum;
 }

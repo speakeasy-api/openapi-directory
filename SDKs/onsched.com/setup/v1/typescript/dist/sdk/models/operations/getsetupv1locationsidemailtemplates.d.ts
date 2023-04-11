@@ -1,12 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetSetupV1LocationsIdEmailTemplatesPathParams extends SpeakeasyBase {
-    id: string;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class GetSetupV1LocationsIdEmailTemplatesRequest extends SpeakeasyBase {
-    pathParams: GetSetupV1LocationsIdEmailTemplatesPathParams;
+    id: string;
 }
 export declare class GetSetupV1LocationsIdEmailTemplatesResponse extends SpeakeasyBase {
     contentType: string;
-    emailTemplateListViewModel?: Record<string, any>;
+    /**
+     * Success
+     */
+    emailTemplateListViewModel?: shared.EmailTemplateListViewModel;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

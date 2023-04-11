@@ -1,10 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { PaymentMethodEnum } from "./paymentmethodenum";
-import { BeezUpCommonInfoSummaries } from "./beezupcommoninfosummaries";
+import { BeezUPCommonInfoSummaries } from "./beezupcommoninfosummaries";
 import { CreditCardInfoResponseLinks } from "./creditcardinforesponselinks";
+import { CreditCardInfoWithCardType } from "./creditcardinfowithcardtype";
+import { PaymentMethodEnum } from "./paymentmethodenum";
+/**
+ * User credit card information
+ */
 export declare class CreditCardInfoResponse extends SpeakeasyBase {
-    creditCardInfo?: any;
+    creditCardInfo?: CreditCardInfoWithCardType;
+    /**
+     * Payment method
+     */
     currentPaymentMethod: PaymentMethodEnum;
-    info?: BeezUpCommonInfoSummaries;
+    info?: BeezUPCommonInfoSummaries;
+    /**
+     * The different actions you can make on this offer
+     */
     links: CreditCardInfoResponseLinks;
 }

@@ -1,8 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class UpdateScriptTagPathParams extends SpeakeasyBase {
-    scriptTagId: number;
+import { AxiosResponse } from "axios";
+export declare class UpdateScriptTagSecurity extends SpeakeasyBase {
+    oAuth2: string;
 }
+/**
+ * スクリプトを出力するページ。
+ *
+ * @remarks
+ *
+ * - `all`: ショップページと注文完了ページの両方
+ * - `shop`: ショップページ
+ * - `thanks_page`: 注文完了ページ
+ * - `cart`: カートの途中のページ
+ *
+ */
 export declare enum UpdateScriptTagRequestBodyScriptTagDisplayScopeEnum {
     All = "all",
     Shop = "shop",
@@ -10,38 +21,92 @@ export declare enum UpdateScriptTagRequestBodyScriptTagDisplayScopeEnum {
     Cart = "cart"
 }
 export declare class UpdateScriptTagRequestBodyScriptTag extends SpeakeasyBase {
+    /**
+     * スクリプトを出力するページ。
+     *
+     * @remarks
+     *
+     * - `all`: ショップページと注文完了ページの両方
+     * - `shop`: ショップページ
+     * - `thanks_page`: 注文完了ページ
+     * - `cart`: カートの途中のページ
+     *
+     */
     displayScope?: UpdateScriptTagRequestBodyScriptTagDisplayScopeEnum;
+    /**
+     * スクリプトURL
+     */
     src?: string;
 }
+/**
+ * 作成するスクリプトタグの情報
+ */
 export declare class UpdateScriptTagRequestBody extends SpeakeasyBase {
     scriptTag?: UpdateScriptTagRequestBodyScriptTag;
 }
-export declare class UpdateScriptTagSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+export declare class UpdateScriptTagRequest extends SpeakeasyBase {
+    /**
+     * 作成するスクリプトタグの情報
+     */
+    requestBody?: UpdateScriptTagRequestBody;
+    /**
+     * スクリプトタグID
+     */
+    scriptTagId: number;
 }
-export declare enum UpdateScriptTag200ApplicationJsonScriptTagDisplayScopeEnum {
+/**
+ * スクリプトを出力するページ。
+ *
+ * @remarks
+ *
+ * - `all`: ショップページと注文完了ページの両方
+ * - `shop`: ショップページ
+ * - `thanks_page`: 注文完了ページ
+ * - `cart`: カートの途中のページ
+ *
+ */
+export declare enum UpdateScriptTag200ApplicationJSONScriptTagDisplayScopeEnum {
     All = "all",
     Shop = "shop",
     ThanksPage = "thanks_page",
     Cart = "cart"
 }
-export declare class UpdateScriptTag200ApplicationJsonScriptTag extends SpeakeasyBase {
-    displayScope?: UpdateScriptTag200ApplicationJsonScriptTagDisplayScopeEnum;
+export declare class UpdateScriptTag200ApplicationJSONScriptTag extends SpeakeasyBase {
+    /**
+     * スクリプトを出力するページ。
+     *
+     * @remarks
+     *
+     * - `all`: ショップページと注文完了ページの両方
+     * - `shop`: ショップページ
+     * - `thanks_page`: 注文完了ページ
+     * - `cart`: カートの途中のページ
+     *
+     */
+    displayScope?: UpdateScriptTag200ApplicationJSONScriptTagDisplayScopeEnum;
+    /**
+     * スクリプトタグID
+     */
     id?: number;
+    /**
+     * 作成日時
+     */
     makeDate?: number;
+    /**
+     * スクリプトURL
+     */
     src?: string;
+    /**
+     * 更新日時
+     */
     updateDate?: number;
 }
-export declare class UpdateScriptTag200ApplicationJson extends SpeakeasyBase {
-    scriptTag?: UpdateScriptTag200ApplicationJsonScriptTag;
-}
-export declare class UpdateScriptTagRequest extends SpeakeasyBase {
-    pathParams: UpdateScriptTagPathParams;
-    request?: UpdateScriptTagRequestBody;
-    security: UpdateScriptTagSecurity;
+export declare class UpdateScriptTag200ApplicationJSON extends SpeakeasyBase {
+    scriptTag?: UpdateScriptTag200ApplicationJSONScriptTag;
 }
 export declare class UpdateScriptTagResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateScriptTag200ApplicationJSONObject?: UpdateScriptTag200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    updateScriptTag200ApplicationJSONObject?: UpdateScriptTag200ApplicationJSON;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteBatchPredictionXAmzTargetEnum {
-    AmazonMl20141212DeleteBatchPrediction = "AmazonML_20141212.DeleteBatchPrediction"
+    AmazonML20141212DeleteBatchPrediction = "AmazonML_20141212.DeleteBatchPrediction"
 }
-export declare class DeleteBatchPredictionHeaders extends SpeakeasyBase {
+export declare class DeleteBatchPredictionRequest extends SpeakeasyBase {
+    deleteBatchPredictionInput: shared.DeleteBatchPredictionInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class DeleteBatchPredictionHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteBatchPredictionXAmzTargetEnum;
 }
-export declare class DeleteBatchPredictionRequest extends SpeakeasyBase {
-    headers: DeleteBatchPredictionHeaders;
-    request: shared.DeleteBatchPredictionInput;
-}
 export declare class DeleteBatchPredictionResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deleteBatchPredictionOutput?: shared.DeleteBatchPredictionOutput;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
 }

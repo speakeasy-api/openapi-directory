@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Revisions {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +9,7 @@ export declare class Revisions {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * gamesRevisionsCheck - Checks whether the games client is out of date.
-    **/
-    gamesRevisionsCheck(req: operations.GamesRevisionsCheckRequest, config?: AxiosRequestConfig): Promise<operations.GamesRevisionsCheckResponse>;
+     * Checks whether the games client is out of date.
+     */
+    gamesRevisionsCheck(req: operations.GamesRevisionsCheckRequest, security: operations.GamesRevisionsCheckSecurity, config?: AxiosRequestConfig): Promise<operations.GamesRevisionsCheckResponse>;
 }

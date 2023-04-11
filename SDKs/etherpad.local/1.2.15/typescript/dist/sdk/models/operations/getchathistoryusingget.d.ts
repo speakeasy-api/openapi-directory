@@ -1,46 +1,69 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetChatHistoryUsingGetQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETChatHistoryUsingGETRequest extends SpeakeasyBase {
     end?: string;
     padID?: string;
     start?: string;
 }
-export declare class GetChatHistoryUsingGet200ApplicationJsonDataMessages extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class GETChatHistoryUsingGet500ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class GETChatHistoryUsingGet401ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+/**
+ * generic api error (code 1)
+ */
+export declare class GETChatHistoryUsingGet400ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+export declare class GETChatHistoryUsingGet200ApplicationJSONDataMessages extends SpeakeasyBase {
     text?: string;
     time?: number;
     userId?: string;
     userName?: string;
 }
-export declare class GetChatHistoryUsingGet200ApplicationJsonData extends SpeakeasyBase {
-    messages?: GetChatHistoryUsingGet200ApplicationJsonDataMessages[];
+export declare class GETChatHistoryUsingGet200ApplicationJSONData extends SpeakeasyBase {
+    messages?: GETChatHistoryUsingGet200ApplicationJSONDataMessages[];
 }
-export declare class GetChatHistoryUsingGet200ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class GETChatHistoryUsingGet200ApplicationJSON extends SpeakeasyBase {
     code?: number;
-    data?: GetChatHistoryUsingGet200ApplicationJsonData;
+    data?: GETChatHistoryUsingGet200ApplicationJSONData;
     message?: string;
 }
-export declare class GetChatHistoryUsingGet400ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class GetChatHistoryUsingGet401ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class GetChatHistoryUsingGet500ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class GetChatHistoryUsingGetRequest extends SpeakeasyBase {
-    queryParams: GetChatHistoryUsingGetQueryParams;
-}
-export declare class GetChatHistoryUsingGetResponse extends SpeakeasyBase {
+export declare class GETChatHistoryUsingGETResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getChatHistoryUsingGET200ApplicationJSONObject?: GetChatHistoryUsingGet200ApplicationJson;
-    getChatHistoryUsingGET400ApplicationJSONObject?: GetChatHistoryUsingGet400ApplicationJson;
-    getChatHistoryUsingGET401ApplicationJSONObject?: GetChatHistoryUsingGet401ApplicationJson;
-    getChatHistoryUsingGET500ApplicationJSONObject?: GetChatHistoryUsingGet500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    getChatHistoryUsingGET200ApplicationJSONObject?: GETChatHistoryUsingGet200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    getChatHistoryUsingGET400ApplicationJSONObject?: GETChatHistoryUsingGet400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    getChatHistoryUsingGET401ApplicationJSONObject?: GETChatHistoryUsingGet401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    getChatHistoryUsingGET500ApplicationJSONObject?: GETChatHistoryUsingGet500ApplicationJSON;
 }

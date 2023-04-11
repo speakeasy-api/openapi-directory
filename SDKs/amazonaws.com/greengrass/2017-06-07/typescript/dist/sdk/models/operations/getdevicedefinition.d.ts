@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetDeviceDefinitionPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetDeviceDefinitionRequest extends SpeakeasyBase {
+    /**
+     * The ID of the device definition.
+     */
     deviceDefinitionId: string;
-}
-export declare class GetDeviceDefinitionHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,13 +14,16 @@ export declare class GetDeviceDefinitionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeviceDefinitionRequest extends SpeakeasyBase {
-    pathParams: GetDeviceDefinitionPathParams;
-    headers: GetDeviceDefinitionHeaders;
-}
 export declare class GetDeviceDefinitionResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getDeviceDefinitionResponse?: shared.GetDeviceDefinitionResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

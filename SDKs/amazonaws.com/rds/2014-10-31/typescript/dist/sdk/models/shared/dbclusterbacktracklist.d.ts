@@ -1,8 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * This data type is used as a response element in the <code>DescribeDBClusterBacktracks</code> action.
-**/
-export declare class DbClusterBacktrackList extends SpeakeasyBase {
+ */
+export declare class DBClusterBacktrackList extends SpeakeasyBase {
     backtrackIdentifier?: string;
     backtrackRequestCreationTime?: Date;
     backtrackTo?: Date;

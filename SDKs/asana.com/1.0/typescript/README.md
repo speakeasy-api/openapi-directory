@@ -6,81 +6,87 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/asana.com/1.0/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/asana.com/1.0/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateAttachmentForTaskRequest, CreateAttachmentForTaskResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CreateAttachmentForObjectRequest,
+  CreateAttachmentForObjectResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AttachmentRequestResourceSubtypeEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    personalAccessToken: {
-      authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-    },
-  }
-));
-    
-const req: CreateAttachmentForTaskRequest = {
-  pathParams: {
-    taskGid: "sit",
+    oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
   },
-  queryParams: {
-    limit: 2259404117704393152,
-    offset: "culpa",
-    optFields: [
-      "consequuntur",
-      "dolor",
-    ],
-    optPretty: true,
-  },
-  request: {
+});
+
+const req: CreateAttachmentForObjectRequest = {
+  attachmentRequest: {
+    connectToApp: false,
     file: {
-      content: "voluptas".encode(),
-      file: "fugit",
+      content: "corrupti".encode(),
+      file: "provident",
     },
-    name: "et",
-    resourceSubtype: "asana_file_attachments",
-    url: "rerum",
+    name: "distinctio",
+    parent: "quibusdam",
+    resourceSubtype: AttachmentRequestResourceSubtypeEnum.External,
+    url: "unde",
   },
+  optFields: [
+    "corrupti",
+    "illum",
+    "vel",
+    "error",
+  ],
+  optPretty: false,
 };
 
-sdk.attachments.createAttachmentForTask(req).then((res: CreateAttachmentForTaskResponse | AxiosError) => {
+sdk.attachments.createAttachmentForObject(req).then((res: CreateAttachmentForObjectResponse | AxiosError) => {
    // handle response
 });
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### Attachments
 
-* `createAttachmentForTask` - Upload an attachment
+### attachments
+
+* `createAttachmentForObject` - Upload an attachment
 * `deleteAttachment` - Delete an attachment
 * `getAttachment` - Get an attachment
-* `getAttachmentsForTask` - Get attachments for a task
+* `getAttachmentsForObject` - Get attachments from an object
 
-### Batch API
+### auditLogAPI
+
+* `getAuditLogEvents` - Get audit log events
+
+### batchAPI
 
 * `createBatchRequest` - Submit parallel requests
 
-### Custom Field Settings
+### customFieldSettings
 
 * `getCustomFieldSettingsForPortfolio` - Get a portfolio's custom fields
 * `getCustomFieldSettingsForProject` - Get a project's custom fields
 
-### Custom Fields
+### customFields
 
 * `createCustomField` - Create a custom field
 * `createEnumOptionForCustomField` - Create an enum option
@@ -91,45 +97,47 @@ sdk.attachments.createAttachmentForTask(req).then((res: CreateAttachmentForTaskR
 * `updateCustomField` - Update a custom field
 * `updateEnumOption` - Update an enum option
 
-### Events
+### events
 
 * `getEvents` - Get events on a resource
 
-### Goals
+### goalRelationships
+
+* `addSupportingRelationship` - Add a supporting goal relationship
+* `getGoalRelationship` - Get a goal relationship
+* `getGoalRelationships` - Get goal relationships
+* `removeSupportingRelationship` - Removes a supporting goal relationship
+* `updateGoalRelationship` - Update a goal relationship
+
+### goals
 
 * `addFollowers` - Add a collaborator to a goal
-* `addSubgoal` - Add a subgoal to a parent goal
-* `addSupportingWorkForGoal` - Add a project/portfolio as supporting work for a goal.
 * `createGoal` - Create a goal
 * `createGoalMetric` - Create a goal metric
 * `deleteGoal` - Delete a goal
 * `getGoal` - Get a goal
 * `getGoals` - Get goals
 * `getParentGoalsForGoal` - Get parent goals from a goal
-* `getSubgoalsForGoal` - Get subgoals from a goal
 * `removeFollowers` - Remove a collaborator from a goal
-* `removeSubgoal` - Remove a subgoal from a goal
-* `removeSupportingWorkForGoal` - Remove a project/portfolio as supporting work for a goal.
-* `supportingWork` - Get supporting work from a goal
 * `updateGoal` - Update a goal
 * `updateGoalMetric` - Update a goal metric
 
-### Jobs
+### jobs
 
 * `getJob` - Get a job by id
 
-### Organization Exports
+### organizationExports
 
 * `createOrganizationExport` - Create an organization export request
 * `getOrganizationExport` - Get details on an org export request
 
-### Portfolio Memberships
+### portfolioMemberships
 
 * `getPortfolioMembership` - Get a portfolio membership
 * `getPortfolioMemberships` - Get multiple portfolio memberships
 * `getPortfolioMembershipsForPortfolio` - Get memberships from a portfolio
 
-### Portfolios
+### portfolios
 
 * `addCustomFieldSettingForPortfolio` - Add a custom field to a portfolio
 * `addItemForPortfolio` - Add a portfolio item
@@ -144,19 +152,33 @@ sdk.attachments.createAttachmentForTask(req).then((res: CreateAttachmentForTaskR
 * `removeMembersForPortfolio` - Remove users from a portfolio
 * `updatePortfolio` - Update a portfolio
 
-### Project Memberships
+### projectBriefs
+
+* `createProjectBrief` - Create a project brief
+* `deleteProjectBrief` - Delete a project brief
+* `getProjectBrief` - Get a project brief
+* `updateProjectBrief` - Update a project brief
+
+### projectMemberships
 
 * `getProjectMembership` - Get a project membership
 * `getProjectMembershipsForProject` - Get memberships from a project
 
-### Project Statuses
+### projectStatuses
 
 * `createProjectStatusForProject` - Create a project status
 * `deleteProjectStatus` - Delete a project status
 * `getProjectStatus` - Get a project status
 * `getProjectStatusesForProject` - Get statuses from a project
 
-### Projects
+### projectTemplates
+
+* `getProjectTemplate` - Get a project template
+* `getProjectTemplates` - Get multiple project templates
+* `getProjectTemplatesForTeam` - Get a team's project templates
+* `instantiateProject` - Instantiate a project from a project template
+
+### projects
 
 * `addCustomFieldSettingForProject` - Add a custom field to a project
 * `addFollowersForProject` - Add followers to a project
@@ -172,12 +194,13 @@ sdk.attachments.createAttachmentForTask(req).then((res: CreateAttachmentForTaskR
 * `getProjectsForTeam` - Get a team's projects
 * `getProjectsForWorkspace` - Get all projects in a workspace
 * `getTaskCountsForProject` - Get task count of a project
+* `projectSaveAsTemplate` - Create a project template from a project
 * `removeCustomFieldSettingForProject` - Remove a custom field from a project
 * `removeFollowersForProject` - Remove followers from a project
 * `removeMembersForProject` - Remove users from a project
 * `updateProject` - Update a project
 
-### Sections
+### sections
 
 * `addTaskForSection` - Add task to section
 * `createSectionForProject` - Create a section in a project
@@ -187,7 +210,14 @@ sdk.attachments.createAttachmentForTask(req).then((res: CreateAttachmentForTaskR
 * `insertSectionForProject` - Move or Insert sections
 * `updateSection` - Update a section
 
-### Stories
+### statusUpdates
+
+* `createStatusForObject` - Create a status update
+* `deleteStatus` - Delete a status update
+* `getStatus` - Get a status update
+* `getStatusesForObject` - Get status updates from an object
+
+### stories
 
 * `createStoryForTask` - Create a story on a task
 * `deleteStory` - Delete a story
@@ -195,7 +225,7 @@ sdk.attachments.createAttachmentForTask(req).then((res: CreateAttachmentForTaskR
 * `getStory` - Get a story
 * `updateStory` - Update a story
 
-### Tags
+### tags
 
 * `createTag` - Create a tag
 * `createTagForWorkspace` - Create a tag in a workspace
@@ -206,7 +236,7 @@ sdk.attachments.createAttachmentForTask(req).then((res: CreateAttachmentForTaskR
 * `getTagsForWorkspace` - Get tags in a workspace
 * `updateTag` - Update a tag
 
-### Tasks
+### tasks
 
 * `addDependenciesForTask` - Set dependencies for a task
 * `addDependentsForTask` - Set dependents for a task
@@ -235,37 +265,38 @@ sdk.attachments.createAttachmentForTask(req).then((res: CreateAttachmentForTaskR
 * `setParentForTask` - Set the parent of a task
 * `updateTask` - Update a task
 
-### Team Memberships
+### teamMemberships
 
 * `getTeamMembership` - Get a team membership
 * `getTeamMemberships` - Get team memberships
 * `getTeamMembershipsForTeam` - Get memberships from a team
 * `getTeamMembershipsForUser` - Get memberships from a user
 
-### Teams
+### teams
 
 * `addUserForTeam` - Add a user to a team
 * `createTeam` - Create a team
 * `getTeam` - Get a team
-* `getTeamsForOrganization` - Get teams in an organization
 * `getTeamsForUser` - Get teams for a user
+* `getTeamsForWorkspace` - Get teams in a workspace
 * `removeUserForTeam` - Remove a user from a team
+* `updateTeam` - Update a team
 
-### Time Periods
+### timePeriods
 
 * `getTimePeriod` - Get a time period
 * `getTimePeriods` - Get time periods
 
-### Typeahead
+### typeahead
 
 * `typeaheadForWorkspace` - Get objects via typeahead
 
-### User Task Lists
+### userTaskLists
 
 * `getUserTaskList` - Get a user task list
 * `getUserTaskListForUser` - Get a user's task list
 
-### Users
+### users
 
 * `getFavoritesForUser` - Get a user's favorites
 * `getUser` - Get a user
@@ -273,27 +304,39 @@ sdk.attachments.createAttachmentForTask(req).then((res: CreateAttachmentForTaskR
 * `getUsersForTeam` - Get users in a team
 * `getUsersForWorkspace` - Get users in a workspace or organization
 
-### Webhooks
+### webhooks
 
 * `createWebhook` - Establish a webhook
 * `deleteWebhook` - Delete a webhook
 * `getWebhook` - Get a webhook
 * `getWebhooks` - Get multiple webhooks
+* `updateWebhook` - Update a webhook
 
-### Workspace Memberships
+### workspaceMemberships
 
 * `getWorkspaceMembership` - Get a workspace membership
 * `getWorkspaceMembershipsForUser` - Get workspace memberships for a user
 * `getWorkspaceMembershipsForWorkspace` - Get the workspace memberships for a workspace
 
-### Workspaces
+### workspaces
 
 * `addUserForWorkspace` - Add a user to a workspace or organization
 * `getWorkspace` - Get a workspace
 * `getWorkspaces` - Get multiple workspaces
 * `removeUserForWorkspace` - Remove a user from a workspace or organization
 * `updateWorkspace` - Update a workspace
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

@@ -1,6 +1,9 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class IsochroneApi {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Everything about isochrones
+ */
+export declare class IsochroneAPI {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,8 +12,9 @@ export declare class IsochroneApi {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getIsochrone - Isochrone Endpoint
+     * Isochrone Endpoint
      *
+     * @remarks
      * ### Example
      * You can get an example response via:
      *
@@ -40,6 +44,6 @@ export declare class IsochroneApi {
      * ### API Clients and Examples
      * See the [clients](#section/API-Clients) section in the main documentation, and [live examples](https://graphhopper.com/api/1/examples/#isochrone).
      *
-    **/
+     */
     getIsochrone(req: operations.GetIsochroneRequest, config?: AxiosRequestConfig): Promise<operations.GetIsochroneResponse>;
 }

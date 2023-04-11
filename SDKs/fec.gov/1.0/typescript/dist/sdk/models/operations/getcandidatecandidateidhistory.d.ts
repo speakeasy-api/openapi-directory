@@ -1,24 +1,60 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetCandidateCandidateIdHistoryPathParams extends SpeakeasyBase {
-    candidateId: string;
-}
-export declare class GetCandidateCandidateIdHistoryQueryParams extends SpeakeasyBase {
-    apiKey: string;
-    electionFull?: boolean;
-    page?: number;
-    perPage?: number;
-    sort?: string;
-    sortHideNull?: boolean;
-    sortNullOnly?: boolean;
-    sortNullsLast?: boolean;
-}
+import { AxiosResponse } from "axios";
 export declare class GetCandidateCandidateIdHistoryRequest extends SpeakeasyBase {
-    pathParams: GetCandidateCandidateIdHistoryPathParams;
-    queryParams: GetCandidateCandidateIdHistoryQueryParams;
+    /**
+     *
+     * @remarks
+     * API key for https://api.data.gov. Get one at https://api.data.gov/signup.
+     *
+     */
+    apiKey: string;
+    /**
+     *
+     * @remarks
+     * A unique identifier assigned to each candidate registered with the FEC.
+     * If a person runs for several offices, that person will have separate candidate IDs for each office.
+     *
+     */
+    candidateId: string;
+    /**
+     * `True` indicates that full election period of a candidate.
+     *
+     * @remarks
+     * `False` indicates that two year election cycle.
+     */
+    electionFull?: boolean;
+    /**
+     * For paginating through results, starting at page 1
+     */
+    page?: number;
+    /**
+     * The number of results returned per page. Defaults to 20.
+     */
+    perPage?: number;
+    /**
+     * Provide a field to sort by. Use `-` for descending order.
+     *
+     * @remarks
+     *
+     */
+    sort?: string;
+    /**
+     * Hide null values on sorted column(s).
+     */
+    sortHideNull?: boolean;
+    /**
+     * Toggle that filters out all rows having sort column that is non-null
+     */
+    sortNullOnly?: boolean;
+    /**
+     * Toggle that sorts null values last
+     */
+    sortNullsLast?: boolean;
 }
 export declare class GetCandidateCandidateIdHistoryResponse extends SpeakeasyBase {
     candidateHistoryPage?: shared.CandidateHistoryPage;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

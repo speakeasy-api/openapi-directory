@@ -20,5 +20,6 @@ export declare enum LifecycleStateEnum {
     WarmedTerminatingProceed = "Warmed:Terminating:Proceed",
     WarmedTerminated = "Warmed:Terminated",
     WarmedStopped = "Warmed:Stopped",
-    WarmedRunning = "Warmed:Running"
+    WarmedRunning = "Warmed:Running",
+    WarmedHibernated = "Warmed:Hibernated"
 }

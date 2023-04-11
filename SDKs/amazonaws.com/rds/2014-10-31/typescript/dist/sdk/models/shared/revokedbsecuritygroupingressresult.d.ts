@@ -1,5 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbSecurityGroup } from "./dbsecuritygroup";
-export declare class RevokeDbSecurityGroupIngressResult extends SpeakeasyBase {
-    dbSecurityGroup?: DbSecurityGroup;
+import { DBSecurityGroup } from "./dbsecuritygroup";
+/**
+ * Success
+ */
+export declare class RevokeDBSecurityGroupIngressResult extends SpeakeasyBase {
+    /**
+     * <p>Contains the details for an Amazon RDS DB security group.</p> <p>This data type is used as a response element in the <code>DescribeDBSecurityGroups</code> action.</p>
+     */
+    dbSecurityGroup?: DBSecurityGroup;
 }

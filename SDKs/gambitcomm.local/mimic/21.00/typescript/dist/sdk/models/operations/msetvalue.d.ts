@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class MsetValuePathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class MsetValueRequest extends SpeakeasyBase {
-    pathParams: MsetValuePathParams;
-    request?: string[][];
+    /**
+     * objInsVarValArray
+     */
+    requestBody?: string[][];
+    /**
+     * Agent of the value space
+     */
+    agentNum: number;
 }
 export declare class MsetValueResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     msetValue200ApplicationJSONString?: string;
 }

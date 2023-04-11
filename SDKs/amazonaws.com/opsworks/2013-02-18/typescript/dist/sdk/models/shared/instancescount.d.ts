@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Describes how many instances a stack has for each status.
-**/
+ */
 export declare class InstancesCount extends SpeakeasyBase {
     assigning?: number;
     booting?: number;

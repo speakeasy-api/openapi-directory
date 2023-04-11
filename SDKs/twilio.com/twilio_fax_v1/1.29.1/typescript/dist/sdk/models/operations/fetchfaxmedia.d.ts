@@ -1,20 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare const FetchFaxMediaServerList: readonly ["https://fax.twilio.com"];
-export declare class FetchFaxMediaPathParams extends SpeakeasyBase {
-    faxSid: string;
-    sid: string;
-}
 export declare class FetchFaxMediaSecurity extends SpeakeasyBase {
-    accountSidAuthToken: shared.SchemeAccountSidAuthToken;
+    password: string;
+    username: string;
 }
 export declare class FetchFaxMediaRequest extends SpeakeasyBase {
-    serverURL?: string;
-    pathParams: FetchFaxMediaPathParams;
-    security: FetchFaxMediaSecurity;
+    /**
+     * The SID of the fax with the FaxMedia resource to fetch.
+     */
+    faxSid: string;
+    /**
+     * The Twilio-provided string that uniquely identifies the FaxMedia resource to fetch.
+     */
+    sid: string;
 }
 export declare class FetchFaxMediaResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
     faxV1FaxFaxMedia?: shared.FaxV1FaxFaxMedia;
 }

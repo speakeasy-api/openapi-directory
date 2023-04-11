@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostGetHostReservationPurchasePreviewActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTGetHostReservationPurchasePreviewActionEnum {
     GetHostReservationPurchasePreview = "GetHostReservationPurchasePreview"
 }
-export declare enum PostGetHostReservationPurchasePreviewVersionEnum {
+export declare enum POSTGetHostReservationPurchasePreviewVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostGetHostReservationPurchasePreviewQueryParams extends SpeakeasyBase {
-    action: PostGetHostReservationPurchasePreviewActionEnum;
-    version: PostGetHostReservationPurchasePreviewVersionEnum;
-}
-export declare class PostGetHostReservationPurchasePreviewHeaders extends SpeakeasyBase {
+export declare class POSTGetHostReservationPurchasePreviewRequest extends SpeakeasyBase {
+    action: POSTGetHostReservationPurchasePreviewActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTGetHostReservationPurchasePreviewVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostGetHostReservationPurchasePreviewHeaders extends Speake
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostGetHostReservationPurchasePreviewRequest extends SpeakeasyBase {
-    queryParams: PostGetHostReservationPurchasePreviewQueryParams;
-    headers: PostGetHostReservationPurchasePreviewHeaders;
-    request?: Uint8Array;
-}
-export declare class PostGetHostReservationPurchasePreviewResponse extends SpeakeasyBase {
+export declare class POSTGetHostReservationPurchasePreviewResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

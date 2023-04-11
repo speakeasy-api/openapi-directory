@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Projects {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,15 +9,15 @@ export declare class Projects {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * policysimulatorProjectsLocationsReplaysCreate - Creates and starts a Replay using the given ReplayConfig.
-    **/
-    policysimulatorProjectsLocationsReplaysCreate(req: operations.PolicysimulatorProjectsLocationsReplaysCreateRequest, config?: AxiosRequestConfig): Promise<operations.PolicysimulatorProjectsLocationsReplaysCreateResponse>;
+     * Creates and starts a Replay using the given ReplayConfig.
+     */
+    policysimulatorProjectsLocationsReplaysCreate(req: operations.PolicysimulatorProjectsLocationsReplaysCreateRequest, security: operations.PolicysimulatorProjectsLocationsReplaysCreateSecurity, config?: AxiosRequestConfig): Promise<operations.PolicysimulatorProjectsLocationsReplaysCreateResponse>;
     /**
-     * policysimulatorProjectsLocationsReplaysOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/* /operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
-    **/
-    policysimulatorProjectsLocationsReplaysOperationsList(req: operations.PolicysimulatorProjectsLocationsReplaysOperationsListRequest, config?: AxiosRequestConfig): Promise<operations.PolicysimulatorProjectsLocationsReplaysOperationsListResponse>;
+     * Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
+     */
+    policysimulatorProjectsLocationsReplaysOperationsList(req: operations.PolicysimulatorProjectsLocationsReplaysOperationsListRequest, security: operations.PolicysimulatorProjectsLocationsReplaysOperationsListSecurity, config?: AxiosRequestConfig): Promise<operations.PolicysimulatorProjectsLocationsReplaysOperationsListResponse>;
     /**
-     * policysimulatorProjectsLocationsReplaysResultsList - Lists the results of running a Replay.
-    **/
-    policysimulatorProjectsLocationsReplaysResultsList(req: operations.PolicysimulatorProjectsLocationsReplaysResultsListRequest, config?: AxiosRequestConfig): Promise<operations.PolicysimulatorProjectsLocationsReplaysResultsListResponse>;
+     * Lists the results of running a Replay.
+     */
+    policysimulatorProjectsLocationsReplaysResultsList(req: operations.PolicysimulatorProjectsLocationsReplaysResultsListRequest, security: operations.PolicysimulatorProjectsLocationsReplaysResultsListSecurity, config?: AxiosRequestConfig): Promise<operations.PolicysimulatorProjectsLocationsReplaysResultsListResponse>;
 }

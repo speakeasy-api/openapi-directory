@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Operations about history_export_results
+ */
 export declare class HistoryExportResults {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,10 @@ export declare class HistoryExportResults {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getHistoryExportResults - List History Export Results
-     *
      * List History Export Results
-    **/
+     *
+     * @remarks
+     * List History Export Results
+     */
     getHistoryExportResults(req: operations.GetHistoryExportResultsRequest, config?: AxiosRequestConfig): Promise<operations.GetHistoryExportResultsResponse>;
 }

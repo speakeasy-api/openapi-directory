@@ -1,8 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CloudassetAssetsListPathParams extends SpeakeasyBase {
-    parent: string;
+import { AxiosResponse } from "axios";
+export declare class CloudassetAssetsListSecurity extends SpeakeasyBase {
+    oauth2: string;
+    oauth2c: string;
 }
+/**
+ * Asset content type. If not specified, no content but the asset name will be returned.
+ */
 export declare enum CloudassetAssetsListContentTypeEnum {
     ContentTypeUnspecified = "CONTENT_TYPE_UNSPECIFIED",
     Resource = "RESOURCE",
@@ -10,35 +15,82 @@ export declare enum CloudassetAssetsListContentTypeEnum {
     OrgPolicy = "ORG_POLICY",
     AccessPolicy = "ACCESS_POLICY"
 }
-export declare class CloudassetAssetsListQueryParams extends SpeakeasyBase {
-    dollarXgafv?: shared.XgafvEnum;
-    accessToken?: string;
-    alt?: shared.AltEnum;
-    assetTypes?: string[];
-    callback?: string;
-    contentType?: CloudassetAssetsListContentTypeEnum;
-    fields?: string;
-    key?: string;
-    oauthToken?: string;
-    pageSize?: number;
-    pageToken?: string;
-    prettyPrint?: boolean;
-    quotaUser?: string;
-    readTime?: string;
-    uploadType?: string;
-    uploadProtocol?: string;
-}
-export declare class CloudassetAssetsListSecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
-}
 export declare class CloudassetAssetsListRequest extends SpeakeasyBase {
-    pathParams: CloudassetAssetsListPathParams;
-    queryParams: CloudassetAssetsListQueryParams;
-    security: CloudassetAssetsListSecurity;
+    /**
+     * V1 error format.
+     */
+    dollarXgafv?: shared.XgafvEnum;
+    /**
+     * OAuth access token.
+     */
+    accessToken?: string;
+    /**
+     * Data format for response.
+     */
+    alt?: shared.AltEnum;
+    /**
+     * A list of asset types to take a snapshot for. For example: "compute.googleapis.com/Disk". Regular expression is also supported. For example: * "compute.googleapis.com.*" snapshots resources whose asset type starts with "compute.googleapis.com". * ".*Instance" snapshots resources whose asset type ends with "Instance". * ".*Instance.*" snapshots resources whose asset type contains "Instance". See [RE2](https://github.com/google/re2/wiki/Syntax) for all supported regular expression syntax. If the regular expression does not match any supported asset type, an INVALID_ARGUMENT error will be returned. If specified, only matching assets will be returned, otherwise, it will snapshot all asset types. See [Introduction to Cloud Asset Inventory](https://cloud.google.com/asset-inventory/docs/overview) for all supported asset types.
+     */
+    assetTypes?: string[];
+    /**
+     * JSONP
+     */
+    callback?: string;
+    /**
+     * Asset content type. If not specified, no content but the asset name will be returned.
+     */
+    contentType?: CloudassetAssetsListContentTypeEnum;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauthToken?: string;
+    /**
+     * The maximum number of assets to be returned in a single response. Default is 100, minimum is 1, and maximum is 1000.
+     */
+    pageSize?: number;
+    /**
+     * The `next_page_token` returned from the previous `ListAssetsResponse`, or unspecified for the first `ListAssetsRequest`. It is a continuation of a prior `ListAssets` call, and the API should return the next page of assets.
+     */
+    pageToken?: string;
+    /**
+     * Required. Name of the organization or project the assets belong to. Format: "organizations/[organization-number]" (such as "organizations/123"), "projects/[project-id]" (such as "projects/my-project-id"), or "projects/[project-number]" (such as "projects/12345").
+     */
+    parent: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * Timestamp to take an asset snapshot. This can only be set to a timestamp between the current time and the current time minus 35 days (inclusive). If not specified, the current time will be used. Due to delays in resource data collection and indexing, there is a volatile window during which running the same query may get different results.
+     */
+    readTime?: string;
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    uploadType?: string;
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    uploadProtocol?: string;
 }
 export declare class CloudassetAssetsListResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful response
+     */
     listAssetsResponse?: shared.ListAssetsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

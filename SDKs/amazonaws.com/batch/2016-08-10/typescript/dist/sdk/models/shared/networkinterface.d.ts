@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
- * An object representing the elastic network interface for a multi-node parallel job node.
-**/
+ * An object that represents the elastic network interface for a multi-node parallel job node.
+ */
 export declare class NetworkInterface extends SpeakeasyBase {
     attachmentId?: string;
     ipv6Address?: string;

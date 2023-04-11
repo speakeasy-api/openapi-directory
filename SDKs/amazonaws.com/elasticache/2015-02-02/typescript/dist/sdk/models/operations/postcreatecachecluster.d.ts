@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateCacheClusterActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateCacheClusterActionEnum {
     CreateCacheCluster = "CreateCacheCluster"
 }
-export declare enum PostCreateCacheClusterVersionEnum {
+export declare enum POSTCreateCacheClusterVersionEnum {
     TwoThousandAndFifteen0202 = "2015-02-02"
 }
-export declare class PostCreateCacheClusterQueryParams extends SpeakeasyBase {
-    action: PostCreateCacheClusterActionEnum;
-    version: PostCreateCacheClusterVersionEnum;
-}
-export declare class PostCreateCacheClusterHeaders extends SpeakeasyBase {
+export declare class POSTCreateCacheClusterRequest extends SpeakeasyBase {
+    action: POSTCreateCacheClusterActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateCacheClusterVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateCacheClusterHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateCacheClusterRequest extends SpeakeasyBase {
-    queryParams: PostCreateCacheClusterQueryParams;
-    headers: PostCreateCacheClusterHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateCacheClusterResponse extends SpeakeasyBase {
+export declare class POSTCreateCacheClusterResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteGlobalJwtVerifierPathParams extends SpeakeasyBase {
-    verifierId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteGlobalJwtVerifierSecurity extends SpeakeasyBase {
-    otoroshiAuth: shared.SchemeOtoroshiAuth;
+    password: string;
+    username: string;
 }
 export declare class DeleteGlobalJwtVerifierRequest extends SpeakeasyBase {
-    pathParams: DeleteGlobalJwtVerifierPathParams;
-    security: DeleteGlobalJwtVerifierSecurity;
+    /**
+     * The jwt verifier id
+     */
+    verifierId: string;
 }
 export declare class DeleteGlobalJwtVerifierResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful operation
+     */
     deleted?: shared.Deleted;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

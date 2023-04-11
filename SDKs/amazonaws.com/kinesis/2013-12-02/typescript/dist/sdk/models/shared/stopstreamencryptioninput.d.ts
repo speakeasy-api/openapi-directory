@@ -3,5 +3,6 @@ import { EncryptionTypeEnum } from "./encryptiontypeenum";
 export declare class StopStreamEncryptionInput extends SpeakeasyBase {
     encryptionType: EncryptionTypeEnum;
     keyId: string;
-    streamName: string;
+    streamARN?: string;
+    streamName?: string;
 }

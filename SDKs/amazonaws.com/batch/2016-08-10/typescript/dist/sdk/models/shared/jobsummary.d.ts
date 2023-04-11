@@ -1,11 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ArrayPropertiesSummary } from "./arraypropertiessummary";
 import { ContainerSummary } from "./containersummary";
-import { NodePropertiesSummary } from "./nodepropertiessummary";
 import { JobStatusEnum } from "./jobstatusenum";
+import { NodePropertiesSummary } from "./nodepropertiessummary";
 /**
- * An object representing summary details of a job.
-**/
+ * An object that represents summary details of a job.
+ */
 export declare class JobSummary extends SpeakeasyBase {
     arrayProperties?: ArrayPropertiesSummary;
     container?: ContainerSummary;

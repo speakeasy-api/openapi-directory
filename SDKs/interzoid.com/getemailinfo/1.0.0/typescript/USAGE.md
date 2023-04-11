@@ -1,17 +1,17 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetemailinfoRequest, GetemailinfoResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetemailinfoRequest,
+  GetemailinfoResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetemailinfoRequest = {
-  queryParams: {
-    email: "sit",
-    license: "voluptas",
-  },
+  email: "Larue_Rau85@yahoo.com",
+  license: "corrupti",
 };
 
 sdk.emailAddressInformation.getemailinfo(req).then((res: GetemailinfoResponse | AxiosError) => {

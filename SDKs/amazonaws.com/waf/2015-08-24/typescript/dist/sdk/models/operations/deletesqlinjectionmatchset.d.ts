@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteSqlInjectionMatchSetXAmzTargetEnum {
-    Awswaf20150824DeleteSqlInjectionMatchSet = "AWSWAF_20150824.DeleteSqlInjectionMatchSet"
+    AWSWAF20150824DeleteSqlInjectionMatchSet = "AWSWAF_20150824.DeleteSqlInjectionMatchSet"
 }
-export declare class DeleteSqlInjectionMatchSetHeaders extends SpeakeasyBase {
+export declare class DeleteSqlInjectionMatchSetRequest extends SpeakeasyBase {
+    deleteSqlInjectionMatchSetRequest: shared.DeleteSqlInjectionMatchSetRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class DeleteSqlInjectionMatchSetHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteSqlInjectionMatchSetXAmzTargetEnum;
 }
-export declare class DeleteSqlInjectionMatchSetRequest extends SpeakeasyBase {
-    headers: DeleteSqlInjectionMatchSetHeaders;
-    request: shared.DeleteSqlInjectionMatchSetRequest;
-}
 export declare class DeleteSqlInjectionMatchSetResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deleteSqlInjectionMatchSetResponse?: shared.DeleteSqlInjectionMatchSetResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFInvalidAccountException
+     */
     wafInvalidAccountException?: any;
+    /**
+     * WAFNonEmptyEntityException
+     */
     wafNonEmptyEntityException?: any;
+    /**
+     * WAFNonexistentItemException
+     */
     wafNonexistentItemException?: any;
+    /**
+     * WAFReferencedItemException
+     */
     wafReferencedItemException?: any;
+    /**
+     * WAFStaleDataException
+     */
     wafStaleDataException?: any;
 }

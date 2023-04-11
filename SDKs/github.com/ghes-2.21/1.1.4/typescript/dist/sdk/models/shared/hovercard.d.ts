@@ -5,7 +5,7 @@ export declare class HovercardContexts extends SpeakeasyBase {
 }
 /**
  * Hovercard
-**/
+ */
 export declare class Hovercard extends SpeakeasyBase {
     contexts: HovercardContexts[];
 }

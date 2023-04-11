@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteVpcEndpointConnectionNotificationsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteVpcEndpointConnectionNotificationsActionEnum {
     DeleteVpcEndpointConnectionNotifications = "DeleteVpcEndpointConnectionNotifications"
 }
-export declare enum PostDeleteVpcEndpointConnectionNotificationsVersionEnum {
+export declare enum POSTDeleteVpcEndpointConnectionNotificationsVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDeleteVpcEndpointConnectionNotificationsQueryParams extends SpeakeasyBase {
-    action: PostDeleteVpcEndpointConnectionNotificationsActionEnum;
-    version: PostDeleteVpcEndpointConnectionNotificationsVersionEnum;
-}
-export declare class PostDeleteVpcEndpointConnectionNotificationsHeaders extends SpeakeasyBase {
+export declare class POSTDeleteVpcEndpointConnectionNotificationsRequest extends SpeakeasyBase {
+    action: POSTDeleteVpcEndpointConnectionNotificationsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteVpcEndpointConnectionNotificationsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteVpcEndpointConnectionNotificationsHeaders extends
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteVpcEndpointConnectionNotificationsRequest extends SpeakeasyBase {
-    queryParams: PostDeleteVpcEndpointConnectionNotificationsQueryParams;
-    headers: PostDeleteVpcEndpointConnectionNotificationsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteVpcEndpointConnectionNotificationsResponse extends SpeakeasyBase {
+export declare class POSTDeleteVpcEndpointConnectionNotificationsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

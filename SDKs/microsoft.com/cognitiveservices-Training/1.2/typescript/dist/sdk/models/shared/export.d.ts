@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare enum ExportPlatformEnum {
-    CoreMl = "CoreML",
+    CoreML = "CoreML",
     TensorFlow = "TensorFlow"
 }
 export declare enum ExportStatusEnum {
@@ -8,6 +8,9 @@ export declare enum ExportStatusEnum {
     Failed = "Failed",
     Done = "Done"
 }
+/**
+ * OK
+ */
 export declare class Export extends SpeakeasyBase {
     downloadUri?: string;
     platform?: ExportPlatformEnum;

@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class AchievementConfigurations {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,23 +9,23 @@ export declare class AchievementConfigurations {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * gamesConfigurationAchievementConfigurationsDelete - Delete the achievement configuration with the given ID.
-    **/
-    gamesConfigurationAchievementConfigurationsDelete(req: operations.GamesConfigurationAchievementConfigurationsDeleteRequest, config?: AxiosRequestConfig): Promise<operations.GamesConfigurationAchievementConfigurationsDeleteResponse>;
+     * Delete the achievement configuration with the given ID.
+     */
+    gamesConfigurationAchievementConfigurationsDelete(req: operations.GamesConfigurationAchievementConfigurationsDeleteRequest, security: operations.GamesConfigurationAchievementConfigurationsDeleteSecurity, config?: AxiosRequestConfig): Promise<operations.GamesConfigurationAchievementConfigurationsDeleteResponse>;
     /**
-     * gamesConfigurationAchievementConfigurationsGet - Retrieves the metadata of the achievement configuration with the given ID.
-    **/
-    gamesConfigurationAchievementConfigurationsGet(req: operations.GamesConfigurationAchievementConfigurationsGetRequest, config?: AxiosRequestConfig): Promise<operations.GamesConfigurationAchievementConfigurationsGetResponse>;
+     * Retrieves the metadata of the achievement configuration with the given ID.
+     */
+    gamesConfigurationAchievementConfigurationsGet(req: operations.GamesConfigurationAchievementConfigurationsGetRequest, security: operations.GamesConfigurationAchievementConfigurationsGetSecurity, config?: AxiosRequestConfig): Promise<operations.GamesConfigurationAchievementConfigurationsGetResponse>;
     /**
-     * gamesConfigurationAchievementConfigurationsInsert - Insert a new achievement configuration in this application.
-    **/
-    gamesConfigurationAchievementConfigurationsInsert(req: operations.GamesConfigurationAchievementConfigurationsInsertRequest, config?: AxiosRequestConfig): Promise<operations.GamesConfigurationAchievementConfigurationsInsertResponse>;
+     * Insert a new achievement configuration in this application.
+     */
+    gamesConfigurationAchievementConfigurationsInsert(req: operations.GamesConfigurationAchievementConfigurationsInsertRequest, security: operations.GamesConfigurationAchievementConfigurationsInsertSecurity, config?: AxiosRequestConfig): Promise<operations.GamesConfigurationAchievementConfigurationsInsertResponse>;
     /**
-     * gamesConfigurationAchievementConfigurationsList - Returns a list of the achievement configurations in this application.
-    **/
-    gamesConfigurationAchievementConfigurationsList(req: operations.GamesConfigurationAchievementConfigurationsListRequest, config?: AxiosRequestConfig): Promise<operations.GamesConfigurationAchievementConfigurationsListResponse>;
+     * Returns a list of the achievement configurations in this application.
+     */
+    gamesConfigurationAchievementConfigurationsList(req: operations.GamesConfigurationAchievementConfigurationsListRequest, security: operations.GamesConfigurationAchievementConfigurationsListSecurity, config?: AxiosRequestConfig): Promise<operations.GamesConfigurationAchievementConfigurationsListResponse>;
     /**
-     * gamesConfigurationAchievementConfigurationsUpdate - Update the metadata of the achievement configuration with the given ID.
-    **/
-    gamesConfigurationAchievementConfigurationsUpdate(req: operations.GamesConfigurationAchievementConfigurationsUpdateRequest, config?: AxiosRequestConfig): Promise<operations.GamesConfigurationAchievementConfigurationsUpdateResponse>;
+     * Update the metadata of the achievement configuration with the given ID.
+     */
+    gamesConfigurationAchievementConfigurationsUpdate(req: operations.GamesConfigurationAchievementConfigurationsUpdateRequest, security: operations.GamesConfigurationAchievementConfigurationsUpdateSecurity, config?: AxiosRequestConfig): Promise<operations.GamesConfigurationAchievementConfigurationsUpdateResponse>;
 }

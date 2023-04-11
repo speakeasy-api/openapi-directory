@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Causes that the analysis is aborted.
+ */
 export declare enum AbortInfoCauseEnum {
     CauseUnspecified = "CAUSE_UNSPECIFIED",
     UnknownNetwork = "UNKNOWN_NETWORK",
@@ -21,9 +24,18 @@ export declare enum AbortInfoCauseEnum {
 }
 /**
  * Details of the final state "abort" and associated resource.
-**/
+ */
 export declare class AbortInfo extends SpeakeasyBase {
+    /**
+     * Causes that the analysis is aborted.
+     */
     cause?: AbortInfoCauseEnum;
+    /**
+     * List of project IDs that the user has specified in the request but does not have permission to access network configs. Analysis is aborted in this case with the PERMISSION_DENIED cause.
+     */
     projectsMissingPermission?: string[];
+    /**
+     * URI of the resource that caused the abort.
+     */
     resourceUri?: string;
 }

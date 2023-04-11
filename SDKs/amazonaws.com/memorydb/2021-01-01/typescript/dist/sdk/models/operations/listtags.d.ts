@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum ListTagsXAmzTargetEnum {
-    AmazonMemoryDbListTags = "AmazonMemoryDB.ListTags"
+    AmazonMemoryDBListTags = "AmazonMemoryDB.ListTags"
 }
-export declare class ListTagsHeaders extends SpeakeasyBase {
+export declare class ListTagsRequest extends SpeakeasyBase {
+    listTagsRequest: shared.ListTagsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,21 +15,48 @@ export declare class ListTagsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListTagsXAmzTargetEnum;
 }
-export declare class ListTagsRequest extends SpeakeasyBase {
-    headers: ListTagsHeaders;
-    request: shared.ListTagsRequest;
-}
 export declare class ListTagsResponse extends SpeakeasyBase {
+    /**
+     * ACLNotFoundFault
+     */
     aclNotFoundFault?: any;
+    /**
+     * ClusterNotFoundFault
+     */
     clusterNotFoundFault?: any;
     contentType: string;
+    /**
+     * InvalidARNFault
+     */
     invalidARNFault?: any;
+    /**
+     * InvalidClusterStateFault
+     */
     invalidClusterStateFault?: any;
+    /**
+     * Success
+     */
     listTagsResponse?: shared.ListTagsResponse;
+    /**
+     * ParameterGroupNotFoundFault
+     */
     parameterGroupNotFoundFault?: any;
-    serviceLinkedRoleNotFoundFault?: any;
-    snapshotNotFoundFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceLinkedRoleNotFoundFault
+     */
+    serviceLinkedRoleNotFoundFault?: any;
+    /**
+     * SnapshotNotFoundFault
+     */
+    snapshotNotFoundFault?: any;
+    /**
+     * SubnetGroupNotFoundFault
+     */
     subnetGroupNotFoundFault?: any;
+    /**
+     * UserNotFoundFault
+     */
     userNotFoundFault?: any;
 }

@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeConnectionsQueryParams extends SpeakeasyBase {
-    marker?: string;
-    maxRecords?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum DescribeConnectionsXAmzTargetEnum {
-    AmazonDmSv20160101DescribeConnections = "AmazonDMSv20160101.DescribeConnections"
+    AmazonDMSv20160101DescribeConnections = "AmazonDMSv20160101.DescribeConnections"
 }
-export declare class DescribeConnectionsHeaders extends SpeakeasyBase {
+export declare class DescribeConnectionsRequest extends SpeakeasyBase {
+    describeConnectionsMessage: shared.DescribeConnectionsMessage;
+    /**
+     * Pagination token
+     */
+    marker?: string;
+    /**
+     * Pagination limit
+     */
+    maxRecords?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,14 +23,16 @@ export declare class DescribeConnectionsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeConnectionsXAmzTargetEnum;
 }
-export declare class DescribeConnectionsRequest extends SpeakeasyBase {
-    queryParams: DescribeConnectionsQueryParams;
-    headers: DescribeConnectionsHeaders;
-    request: shared.DescribeConnectionsMessage;
-}
 export declare class DescribeConnectionsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeConnectionsResponse?: shared.DescribeConnectionsResponse;
+    /**
+     * ResourceNotFoundFault
+     */
     resourceNotFoundFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

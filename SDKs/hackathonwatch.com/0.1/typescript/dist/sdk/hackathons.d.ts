@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Operations about hackathons
+ */
 export declare class Hackathons {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,11 +12,11 @@ export declare class Hackathons {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getHackathonsIdFormat - Return the detail of a given hackathon
-    **/
-    getHackathonsIdFormat(req: operations.GetHackathonsIdFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetHackathonsIdFormatResponse>;
+     * Return the detail of a given hackathon
+     */
+    getHackathonsIdFormat(req: operations.GETHackathonsIdFormatRequest, config?: AxiosRequestConfig): Promise<operations.GETHackathonsIdFormatResponse>;
     /**
-     * getHackathonsComingFormat - Return a list of coming hackathons
-    **/
-    getHackathonsComingFormat(req: operations.GetHackathonsComingFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetHackathonsComingFormatResponse>;
+     * Return a list of coming hackathons
+     */
+    getHackathonsComingFormat(req: operations.GETHackathonsComingFormatRequest, config?: AxiosRequestConfig): Promise<operations.GETHackathonsComingFormatResponse>;
 }

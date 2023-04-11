@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostReceiveMessageActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTReceiveMessageActionEnum {
     ReceiveMessage = "ReceiveMessage"
 }
-export declare enum PostReceiveMessageVersionEnum {
+export declare enum POSTReceiveMessageVersionEnum {
     TwoThousandAndTwelve1105 = "2012-11-05"
 }
-export declare class PostReceiveMessageQueryParams extends SpeakeasyBase {
-    action: PostReceiveMessageActionEnum;
-    version: PostReceiveMessageVersionEnum;
-}
-export declare class PostReceiveMessageHeaders extends SpeakeasyBase {
+export declare class POSTReceiveMessageRequest extends SpeakeasyBase {
+    action: POSTReceiveMessageActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTReceiveMessageVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostReceiveMessageHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostReceiveMessageRequest extends SpeakeasyBase {
-    queryParams: PostReceiveMessageQueryParams;
-    headers: PostReceiveMessageHeaders;
-    request?: Uint8Array;
-}
-export declare class PostReceiveMessageResponse extends SpeakeasyBase {
+export declare class POSTReceiveMessageResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

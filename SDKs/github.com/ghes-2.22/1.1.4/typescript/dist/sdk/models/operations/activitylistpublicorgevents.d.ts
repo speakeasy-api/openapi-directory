@@ -1,18 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ActivityListPublicOrgEventsPathParams extends SpeakeasyBase {
-    org: string;
-}
-export declare class ActivityListPublicOrgEventsQueryParams extends SpeakeasyBase {
-    page?: number;
-    perPage?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ActivityListPublicOrgEventsRequest extends SpeakeasyBase {
-    pathParams: ActivityListPublicOrgEventsPathParams;
-    queryParams: ActivityListPublicOrgEventsQueryParams;
+    org: string;
+    /**
+     * Page number of the results to fetch.
+     */
+    page?: number;
+    /**
+     * Results per page (max 100)
+     */
+    perPage?: number;
 }
 export declare class ActivityListPublicOrgEventsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     events?: shared.Event[];
 }

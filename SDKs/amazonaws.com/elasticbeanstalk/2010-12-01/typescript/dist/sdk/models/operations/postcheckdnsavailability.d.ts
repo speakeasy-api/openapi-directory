@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCheckDnsAvailabilityActionEnum {
-    CheckDnsAvailability = "CheckDNSAvailability"
+import { AxiosResponse } from "axios";
+export declare enum POSTCheckDNSAvailabilityActionEnum {
+    CheckDNSAvailability = "CheckDNSAvailability"
 }
-export declare enum PostCheckDnsAvailabilityVersionEnum {
+export declare enum POSTCheckDNSAvailabilityVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostCheckDnsAvailabilityQueryParams extends SpeakeasyBase {
-    action: PostCheckDnsAvailabilityActionEnum;
-    version: PostCheckDnsAvailabilityVersionEnum;
-}
-export declare class PostCheckDnsAvailabilityHeaders extends SpeakeasyBase {
+export declare class POSTCheckDNSAvailabilityRequest extends SpeakeasyBase {
+    action: POSTCheckDNSAvailabilityActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCheckDNSAvailabilityVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCheckDnsAvailabilityHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCheckDnsAvailabilityRequest extends SpeakeasyBase {
-    queryParams: PostCheckDnsAvailabilityQueryParams;
-    headers: PostCheckDnsAvailabilityHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCheckDnsAvailabilityResponse extends SpeakeasyBase {
+export declare class POSTCheckDNSAvailabilityResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,41 +1,64 @@
-import { AxiosInstance } from "axios";
-import { CrmCleanseApi } from "./crmcleanseapi";
 import { CarCachedImage } from "./carcachedimage";
 import { CarSearch } from "./carsearch";
-import { CarsHistoryApi } from "./carshistoryapi";
-import { CarsMarketApi } from "./carsmarketapi";
-import { DealerApi } from "./dealerapi";
+import { CarsHistoryAPI } from "./carshistoryapi";
+import { CarsMarketAPI } from "./carsmarketapi";
+import { ClientFilters } from "./clientfilters";
+import { CRMCleanseAPI } from "./crmcleanseapi";
+import { DealerAPI } from "./dealerapi";
 import { HeavyEquipmentSearch } from "./heavyequipmentsearch";
+import * as shared from "./models/shared";
 import { MotorcycleSearch } from "./motorcyclesearch";
-import { OemIncentiveSearch } from "./oemincentivesearch";
-import { RvSearch } from "./rvsearch";
+import { OEMIncentiveSearch } from "./oemincentivesearch";
 import { RankCarListings } from "./rankcarlistings";
 import { RecallSearch } from "./recallsearch";
-import { VinDecoderApi } from "./vindecoderapi";
+import { RVSearch } from "./rvsearch";
+import { VINDecoderAPI } from "./vindecoderapi";
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://marketcheck-prod.apigee.net/v2"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * The security details required to authenticate the SDK
+     */
+    security?: shared.Security;
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * One API serving data spanned across multiple verticals
+ */
 export declare class SDK {
-    crmCleanseAPI: CrmCleanseApi;
+    crmCleanseAPI: CRMCleanseAPI;
     carCachedImage: CarCachedImage;
     carSearch: CarSearch;
-    carsHistoryAPI: CarsHistoryApi;
-    carsMarketAPI: CarsMarketApi;
-    dealerAPI: DealerApi;
+    carsHistoryAPI: CarsHistoryAPI;
+    carsMarketAPI: CarsMarketAPI;
+    dealerAPI: DealerAPI;
     heavyEquipmentSearch: HeavyEquipmentSearch;
     motorcycleSearch: MotorcycleSearch;
-    oemIncentiveSearch: OemIncentiveSearch;
-    rvSearch: RvSearch;
+    oemIncentiveSearch: OEMIncentiveSearch;
+    rvSearch: RVSearch;
     rankCarListings: RankCarListings;
     recallSearch: RecallSearch;
-    vinDecoderAPI: VinDecoderApi;
+    vinDecoderAPI: VINDecoderAPI;
+    clientFilters: ClientFilters;
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
 }

@@ -1,4 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
 export declare class CreateCollectionRequestBodyCollectionInfo extends SpeakeasyBase {
     description?: string;
     name?: string;
@@ -34,27 +35,37 @@ export declare class CreateCollectionRequestBodyCollection extends SpeakeasyBase
 export declare class CreateCollectionRequestBody extends SpeakeasyBase {
     collection?: CreateCollectionRequestBodyCollection;
 }
-export declare class CreateCollection200ApplicationJsonCollection extends SpeakeasyBase {
+export declare class CreateCollection400ApplicationJSONError extends SpeakeasyBase {
+    message?: string;
+    name?: string;
+}
+/**
+ * Malformed Request
+ */
+export declare class CreateCollection400ApplicationJSON extends SpeakeasyBase {
+    error?: CreateCollection400ApplicationJSONError;
+}
+export declare class CreateCollection200ApplicationJSONCollection extends SpeakeasyBase {
     id?: string;
     name?: string;
     uid?: string;
 }
-export declare class CreateCollection200ApplicationJson extends SpeakeasyBase {
-    collection?: CreateCollection200ApplicationJsonCollection;
-}
-export declare class CreateCollection400ApplicationJsonError extends SpeakeasyBase {
-    message?: string;
-    name?: string;
-}
-export declare class CreateCollection400ApplicationJson extends SpeakeasyBase {
-    error?: CreateCollection400ApplicationJsonError;
-}
-export declare class CreateCollectionRequest extends SpeakeasyBase {
-    request?: CreateCollectionRequestBody;
+/**
+ * Create Collection in a Workspace
+ */
+export declare class CreateCollection200ApplicationJSON extends SpeakeasyBase {
+    collection?: CreateCollection200ApplicationJSONCollection;
 }
 export declare class CreateCollectionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createCollection200ApplicationJSONObject?: CreateCollection200ApplicationJson;
-    createCollection400ApplicationJSONObject?: CreateCollection400ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Create Collection in a Workspace
+     */
+    createCollection200ApplicationJSONObject?: CreateCollection200ApplicationJSON;
+    /**
+     * Malformed Request
+     */
+    createCollection400ApplicationJSONObject?: CreateCollection400ApplicationJSON;
 }

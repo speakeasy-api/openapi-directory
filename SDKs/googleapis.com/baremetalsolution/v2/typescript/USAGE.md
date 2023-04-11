@@ -1,37 +1,31 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchRequest, BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchResponse } from "openapi/src/sdk/models/operations";
+import {
+  BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchRequest,
+  BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    location: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
+  dollarXgafv: XgafvEnum.Two,
+  accessToken: "provident",
+  alt: AltEnum.Proto,
+  callback: "quibusdam",
+  fields: "unde",
+  key: "nulla",
+  location: "corrupti",
+  oauthToken: "illum",
+  prettyPrint: false,
+  quotaUser: "vel",
+  uploadType: "error",
+  uploadProtocol: "deserunt",
 };
 
 sdk.projects.baremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetch(req).then((res: BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchResponse | AxiosError) => {

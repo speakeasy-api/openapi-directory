@@ -1,0 +1,11 @@
+/**
+ * Baudrate to use for the communication - valid values 300, 600, 1200, 2400, 4800, 9600
+ */
+export declare enum BaudrateEnum {
+    ThreeHundred = "300",
+    SixHundred = "600",
+    OneThousandTwoHundred = "1200",
+    TwoThousandFourHundred = "2400",
+    FourThousandEightHundred = "4800",
+    NineThousandSixHundred = "9600"
+}

@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Provides information about an event tracker.
-**/
+ */
 export declare class EventTracker extends SpeakeasyBase {
     accountId?: string;
     creationDateTime?: Date;

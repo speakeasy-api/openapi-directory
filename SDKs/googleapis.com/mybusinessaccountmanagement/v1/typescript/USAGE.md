@@ -1,53 +1,60 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { MybusinessaccountmanagementAccountsCreateRequest, MybusinessaccountmanagementAccountsCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  MybusinessaccountmanagementAccountsCreateRequest,
+  MybusinessaccountmanagementAccountsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  AccountTypeEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: MybusinessaccountmanagementAccountsCreateRequest = {
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "voluptas",
-    alt: "media",
-    callback: "expedita",
-    fields: "consequuntur",
-    key: "dolor",
-    oauthToken: "expedita",
-    prettyPrint: true,
-    quotaUser: "fugit",
-    uploadType: "et",
-    uploadProtocol: "nihil",
-  },
-  request: {
-    accountName: "rerum",
-    name: "dicta",
+  dollarXgafv: XgafvEnum.Two,
+  accountInput: {
+    accountName: "provident",
+    name: "distinctio",
     organizationInfo: {
       address: {
         addressLines: [
-          "voluptatum",
+          "unde",
+          "nulla",
+          "corrupti",
+          "illum",
         ],
-        administrativeArea: "et",
-        languageCode: "ut",
-        locality: "dolorem",
-        organization: "et",
-        postalCode: "voluptate",
+        administrativeArea: "vel",
+        languageCode: "error",
+        locality: "deserunt",
+        organization: "suscipit",
+        postalCode: "28092",
         recipients: [
-          "vitae",
-          "totam",
-          "dolores",
+          "molestiae",
+          "minus",
         ],
-        regionCode: "illum",
-        revision: 6392442863481646880,
-        sortingCode: "vel",
-        sublocality: "odio",
+        regionCode: "placeat",
+        revision: 528895,
+        sortingCode: "iusto",
+        sublocality: "excepturi",
       },
     },
-    primaryOwner: "dolore",
-    type: "LOCATION_GROUP",
+    primaryOwner: "nisi",
+    type: AccountTypeEnum.Organization,
   },
+  accessToken: "temporibus",
+  alt: AltEnum.Json,
+  callback: "quis",
+  fields: "veritatis",
+  key: "deserunt",
+  oauthToken: "perferendis",
+  prettyPrint: false,
+  quotaUser: "ipsam",
+  uploadType: "repellendus",
+  uploadProtocol: "sapiente",
 };
 
 sdk.accounts.mybusinessaccountmanagementAccountsCreate(req).then((res: MybusinessaccountmanagementAccountsCreateResponse | AxiosError) => {

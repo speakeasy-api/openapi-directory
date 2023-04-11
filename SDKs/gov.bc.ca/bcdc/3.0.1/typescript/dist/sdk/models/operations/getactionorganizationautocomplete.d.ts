@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetActionOrganizationAutocompleteQueryParams extends SpeakeasyBase {
-    limit?: number;
-    q?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetActionOrganizationAutocompleteRequest extends SpeakeasyBase {
-    queryParams: GetActionOrganizationAutocompleteQueryParams;
+    /**
+     * The maximum number of organizations to return (optional)
+     */
+    limit?: number;
+    /**
+     * The string to search for
+     */
+    q?: string;
 }
 export declare class GetActionOrganizationAutocompleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

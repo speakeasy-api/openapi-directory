@@ -1,4 +1,4 @@
-export declare enum JqStateEnum {
+export declare enum JQStateEnum {
     Enabled = "ENABLED",
     Disabled = "DISABLED"
 }

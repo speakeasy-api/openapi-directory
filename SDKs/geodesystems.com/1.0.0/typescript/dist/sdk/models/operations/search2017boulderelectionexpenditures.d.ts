@@ -1,36 +1,113 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class Search2017BoulderElectionExpendituresQueryParams extends SpeakeasyBase {
-    changedateFrom?: Date;
-    changedateTo?: Date;
-    createdateFrom?: Date;
-    createdateTo?: Date;
-    description?: string;
-    filesuffix?: string;
-    fromdate?: Date;
-    group?: string;
-    max?: number;
-    maxlatitude?: number;
-    maxlongitude?: number;
-    minlatitude?: number;
-    minlongitude?: number;
-    name?: string;
-    searchDb2017BoulderElectionExpendituresCity?: string;
-    searchDb2017BoulderElectionExpendituresCommittee?: string;
-    searchDb2017BoulderElectionExpendituresExpenditure?: number;
-    searchDb2017BoulderElectionExpendituresName?: string;
-    searchDb2017BoulderElectionExpendituresPurpose?: string;
-    searchDb2017BoulderElectionExpendituresState?: string;
-    searchDb2017BoulderElectionExpendituresStreet?: string;
-    searchDb2017BoulderElectionExpendituresTransactionDate?: string;
-    searchDb2017BoulderElectionExpendituresZip?: string;
-    skip?: number;
-    text?: string;
-    todate?: Date;
-}
+import { AxiosResponse } from "axios";
 export declare class Search2017BoulderElectionExpendituresRequest extends SpeakeasyBase {
-    queryParams: Search2017BoulderElectionExpendituresQueryParams;
+    /**
+     * Archive change date from
+     */
+    changedateFrom?: Date;
+    /**
+     * Archive change date to
+     */
+    changedateTo?: Date;
+    /**
+     * Archive create date from
+     */
+    createdateFrom?: Date;
+    /**
+     * Archive create date to
+     */
+    createdateTo?: Date;
+    /**
+     * Search description
+     */
+    description?: string;
+    /**
+     * File suffix
+     */
+    filesuffix?: string;
+    /**
+     * From date
+     */
+    fromdate?: Date;
+    /**
+     * Parent entry
+     */
+    group?: string;
+    /**
+     * Max number of results
+     */
+    max?: number;
+    /**
+     * Northern bounds of search
+     */
+    maxlatitude?: number;
+    /**
+     * Eastern bounds of search
+     */
+    maxlongitude?: number;
+    /**
+     * Southern bounds of search
+     */
+    minlatitude?: number;
+    /**
+     * Western bounds of search
+     */
+    minlongitude?: number;
+    /**
+     * Search name
+     */
+    name?: string;
+    /**
+     * City
+     */
+    searchDb2017BoulderElectionExpendituresCity?: string;
+    /**
+     * Committee
+     */
+    searchDb2017BoulderElectionExpendituresCommittee?: string;
+    /**
+     * Expenditure
+     */
+    searchDb2017BoulderElectionExpendituresExpenditure?: number;
+    /**
+     * Name
+     */
+    searchDb2017BoulderElectionExpendituresName?: string;
+    /**
+     * Purpose
+     */
+    searchDb2017BoulderElectionExpendituresPurpose?: string;
+    /**
+     * State
+     */
+    searchDb2017BoulderElectionExpendituresState?: string;
+    /**
+     * Street
+     */
+    searchDb2017BoulderElectionExpendituresStreet?: string;
+    /**
+     * Transaction Date
+     */
+    searchDb2017BoulderElectionExpendituresTransactionDate?: string;
+    /**
+     * Zip
+     */
+    searchDb2017BoulderElectionExpendituresZip?: string;
+    /**
+     * Number to skip
+     */
+    skip?: number;
+    /**
+     * Search text
+     */
+    text?: string;
+    /**
+     * To date
+     */
+    todate?: Date;
 }
 export declare class Search2017BoulderElectionExpendituresResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

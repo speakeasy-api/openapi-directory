@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeregisterTargetsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeregisterTargetsActionEnum {
     DeregisterTargets = "DeregisterTargets"
 }
-export declare enum PostDeregisterTargetsVersionEnum {
+export declare enum POSTDeregisterTargetsVersionEnum {
     TwoThousandAndFifteen1201 = "2015-12-01"
 }
-export declare class PostDeregisterTargetsQueryParams extends SpeakeasyBase {
-    action: PostDeregisterTargetsActionEnum;
-    version: PostDeregisterTargetsVersionEnum;
-}
-export declare class PostDeregisterTargetsHeaders extends SpeakeasyBase {
+export declare class POSTDeregisterTargetsRequest extends SpeakeasyBase {
+    action: POSTDeregisterTargetsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeregisterTargetsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeregisterTargetsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeregisterTargetsRequest extends SpeakeasyBase {
-    queryParams: PostDeregisterTargetsQueryParams;
-    headers: PostDeregisterTargetsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeregisterTargetsResponse extends SpeakeasyBase {
+export declare class POSTDeregisterTargetsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DcimDeviceRolesUpdatePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DcimDeviceRolesUpdateRequest extends SpeakeasyBase {
-    pathParams: DcimDeviceRolesUpdatePathParams;
-    request: shared.DeviceRoleInput;
+    deviceRoleInput: shared.DeviceRoleInput;
+    /**
+     * A unique integer value identifying this device role.
+     */
+    id: number;
 }
 export declare class DcimDeviceRolesUpdateResponse extends SpeakeasyBase {
     contentType: string;
     deviceRole?: shared.DeviceRole;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

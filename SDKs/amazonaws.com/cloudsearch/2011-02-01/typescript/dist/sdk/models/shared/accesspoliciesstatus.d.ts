@@ -2,8 +2,14 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { OptionStatus } from "./optionstatus";
 /**
  * A <code>PolicyDocument</code> that specifies access policies for the search domain's services, and the current status of those policies.
-**/
+ */
 export declare class AccessPoliciesStatus extends SpeakeasyBase {
+    /**
+     * <p>An IAM access policy as described in <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/index.html?AccessPolicyLanguage.html" target="_blank">The Access Policy Language</a> in <i>Using AWS Identity and Access Management</i>. The maximum size of an access policy document is 100 KB.</p> <p>Example: <code>{"Statement": [{"Effect":"Allow", "Action": "*", "Resource": "arn:aws:cs:us-east-1:1234567890:search/movies", "Condition": { "IpAddress": { "aws:SourceIp": ["203.0.113.1/32"] } }}, {"Effect":"Allow", "Action": "*", "Resource": "arn:aws:cs:us-east-1:1234567890:documents/movies", "Condition": { "IpAddress": { "aws:SourceIp": ["203.0.113.1/32"] } }} ] }</code></p>
+     */
     options: string;
+    /**
+     * The status of an option, including when it was last updated and whether it is actively in use for searches.
+     */
     status: OptionStatus;
 }

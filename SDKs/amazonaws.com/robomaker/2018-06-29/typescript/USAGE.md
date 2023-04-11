@@ -1,34 +1,33 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { BatchDeleteWorldsRequest, BatchDeleteWorldsResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  BatchDeleteWorldsRequest,
+  BatchDeleteWorldsResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: BatchDeleteWorldsRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
+});
+
+const req: BatchDeleteWorldsRequest = {
+  requestBody: {
     worlds: [
-      "fugit",
-      "et",
-      "nihil",
+      "provident",
+      "distinctio",
+      "quibusdam",
     ],
   },
+  xAmzAlgorithm: "unde",
+  xAmzContentSha256: "nulla",
+  xAmzCredential: "corrupti",
+  xAmzDate: "illum",
+  xAmzSecurityToken: "vel",
+  xAmzSignature: "error",
+  xAmzSignedHeaders: "deserunt",
 };
 
 sdk.batchDeleteWorlds(req).then((res: BatchDeleteWorldsResponse | AxiosError) => {

@@ -1,16 +1,16 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { ConnectRequest, ConnectResponse } from "openapi/src/sdk/models/operations";
+import {
+  ConnectRequestBody,
+  ConnectResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: ConnectRequest = {
-  request: {
-    endpoint: "sit",
-  },
+
+const req: ConnectRequestBody = {
+  endpoint: "corrupti",
 };
 
 sdk.connect(req).then((res: ConnectResponse | AxiosError) => {

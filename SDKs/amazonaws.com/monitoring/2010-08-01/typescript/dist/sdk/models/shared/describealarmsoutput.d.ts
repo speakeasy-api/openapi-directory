@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { CompositeAlarm } from "./compositealarm";
 import { MetricAlarm } from "./metricalarm";
+/**
+ * Success
+ */
 export declare class DescribeAlarmsOutput extends SpeakeasyBase {
     compositeAlarms?: CompositeAlarm[];
     metricAlarms?: MetricAlarm[];

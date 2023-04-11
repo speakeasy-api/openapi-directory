@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class ServiceHealth {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,15 +9,17 @@ export declare class ServiceHealth {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getHealthReady - Check Service Readiness
+     * Check Service Readiness
      *
+     * @remarks
      * Gets the combined health status of the service and all functionalities and dependencies.
-    **/
+     */
     getHealthReady(config?: AxiosRequestConfig): Promise<operations.GetHealthReadyResponse>;
     /**
-     * getHealthVendors - Check Available Vendors
+     * Check Available Vendors
      *
+     * @remarks
      * List the supported vendors and their current status.
-    **/
+     */
     getHealthVendors(config?: AxiosRequestConfig): Promise<operations.GetHealthVendorsResponse>;
 }

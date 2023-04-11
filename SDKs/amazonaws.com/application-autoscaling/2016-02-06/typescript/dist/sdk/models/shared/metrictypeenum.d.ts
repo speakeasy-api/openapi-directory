@@ -1,0 +1,23 @@
+export declare enum MetricTypeEnum {
+    DynamoDBReadCapacityUtilization = "DynamoDBReadCapacityUtilization",
+    DynamoDBWriteCapacityUtilization = "DynamoDBWriteCapacityUtilization",
+    ALBRequestCountPerTarget = "ALBRequestCountPerTarget",
+    RDSReaderAverageCPUUtilization = "RDSReaderAverageCPUUtilization",
+    RDSReaderAverageDatabaseConnections = "RDSReaderAverageDatabaseConnections",
+    Ec2SpotFleetRequestAverageCPUUtilization = "EC2SpotFleetRequestAverageCPUUtilization",
+    Ec2SpotFleetRequestAverageNetworkIn = "EC2SpotFleetRequestAverageNetworkIn",
+    Ec2SpotFleetRequestAverageNetworkOut = "EC2SpotFleetRequestAverageNetworkOut",
+    SageMakerVariantInvocationsPerInstance = "SageMakerVariantInvocationsPerInstance",
+    ECSServiceAverageCPUUtilization = "ECSServiceAverageCPUUtilization",
+    ECSServiceAverageMemoryUtilization = "ECSServiceAverageMemoryUtilization",
+    AppStreamAverageCapacityUtilization = "AppStreamAverageCapacityUtilization",
+    ComprehendInferenceUtilization = "ComprehendInferenceUtilization",
+    LambdaProvisionedConcurrencyUtilization = "LambdaProvisionedConcurrencyUtilization",
+    CassandraReadCapacityUtilization = "CassandraReadCapacityUtilization",
+    CassandraWriteCapacityUtilization = "CassandraWriteCapacityUtilization",
+    KafkaBrokerStorageUtilization = "KafkaBrokerStorageUtilization",
+    ElastiCachePrimaryEngineCPUUtilization = "ElastiCachePrimaryEngineCPUUtilization",
+    ElastiCacheReplicaEngineCPUUtilization = "ElastiCacheReplicaEngineCPUUtilization",
+    ElastiCacheDatabaseMemoryUsageCountedForEvictPercentage = "ElastiCacheDatabaseMemoryUsageCountedForEvictPercentage",
+    NeptuneReaderAverageCPUUtilization = "NeptuneReaderAverageCPUUtilization"
+}

@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetUpdateAccountSendingEnabledActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETUpdateAccountSendingEnabledActionEnum {
     UpdateAccountSendingEnabled = "UpdateAccountSendingEnabled"
 }
-export declare enum GetUpdateAccountSendingEnabledVersionEnum {
+export declare enum GETUpdateAccountSendingEnabledVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetUpdateAccountSendingEnabledQueryParams extends SpeakeasyBase {
-    action: GetUpdateAccountSendingEnabledActionEnum;
+export declare class GETUpdateAccountSendingEnabledRequest extends SpeakeasyBase {
+    action: GETUpdateAccountSendingEnabledActionEnum;
+    /**
+     * Describes whether email sending is enabled or disabled for your Amazon SES account in the current AWS Region.
+     */
     enabled?: boolean;
-    version: GetUpdateAccountSendingEnabledVersionEnum;
-}
-export declare class GetUpdateAccountSendingEnabledHeaders extends SpeakeasyBase {
+    version: GETUpdateAccountSendingEnabledVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,11 +21,8 @@ export declare class GetUpdateAccountSendingEnabledHeaders extends SpeakeasyBase
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetUpdateAccountSendingEnabledRequest extends SpeakeasyBase {
-    queryParams: GetUpdateAccountSendingEnabledQueryParams;
-    headers: GetUpdateAccountSendingEnabledHeaders;
-}
-export declare class GetUpdateAccountSendingEnabledResponse extends SpeakeasyBase {
+export declare class GETUpdateAccountSendingEnabledResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

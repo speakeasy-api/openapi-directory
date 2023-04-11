@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { RegistryStatusEnum } from "./registrystatusenum";
+/**
+ * Success
+ */
 export declare class GetRegistryResponse extends SpeakeasyBase {
     createdTime?: string;
     description?: string;

@@ -1,19 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetLegalEntitiesIdPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetLegalEntitiesIdSecurity extends SpeakeasyBase {
+    apiKeyAuth?: string;
     basicAuth?: shared.SchemeBasicAuth;
-    apiKeyAuth?: shared.SchemeApiKeyAuth;
 }
 export declare class GetLegalEntitiesIdRequest extends SpeakeasyBase {
-    pathParams: GetLegalEntitiesIdPathParams;
-    security: GetLegalEntitiesIdSecurity;
+    /**
+     * The unique identifier of the legal entity.
+     */
+    id: string;
 }
 export declare class GetLegalEntitiesIdResponse extends SpeakeasyBase {
     contentType: string;
-    legalEntity?: any;
-    serviceError?: any;
+    /**
+     * OK - the request has succeeded.
+     */
+    legalEntity?: shared.LegalEntity;
+    /**
+     * Bad Request - a problem reading or understanding the request.
+     */
+    serviceError?: shared.ServiceError;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

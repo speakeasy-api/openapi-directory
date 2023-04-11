@@ -8,11 +8,17 @@ export declare enum PostenSatzEnum {
 }
 export declare class Posten extends SpeakeasyBase {
     bezeichnung: string;
+    /**
+     * The amount in cents
+     */
     bruttoBetrag: number;
     externerBelegBelegkreis?: string;
     externerBelegBezeichnung?: string;
     externerBelegReferenz?: string;
     menge: number;
+    /**
+     * The amount in cents
+     */
     nettoBetrag: number;
     satz: PostenSatzEnum;
 }

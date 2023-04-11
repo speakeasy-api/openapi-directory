@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Type of this accelerator.
+ */
 export declare enum AcceleratorConfigTypeEnum {
     AcceleratorTypeUnspecified = "ACCELERATOR_TYPE_UNSPECIFIED",
     NvidiaTeslaK80 = "NVIDIA_TESLA_K80",
@@ -14,9 +17,15 @@ export declare enum AcceleratorConfigTypeEnum {
     TpuV3 = "TPU_V3"
 }
 /**
- * Definition of a hardware accelerator. Note that not all combinations of `type` and `core_count` are valid. Check [GPUs on Compute Engine](/compute/docs/gpus/#gpus-list) to find a valid combination. TPUs are not supported.
-**/
+ * Definition of a hardware accelerator. Note that not all combinations of `type` and `core_count` are valid. Check [GPUs on Compute Engine](https://cloud.google.com/compute/docs/gpus/#gpus-list) to find a valid combination. TPUs are not supported.
+ */
 export declare class AcceleratorConfig extends SpeakeasyBase {
+    /**
+     * Count of cores of this accelerator.
+     */
     coreCount?: string;
+    /**
+     * Type of this accelerator.
+     */
     type?: AcceleratorConfigTypeEnum;
 }

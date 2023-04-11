@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbClusterBacktrackList } from "./dbclusterbacktracklist";
+import { DBClusterBacktrackList } from "./dbclusterbacktracklist";
 /**
  * Contains the result of a successful invocation of the <code>DescribeDBClusterBacktracks</code> action.
-**/
-export declare class DbClusterBacktrackMessage extends SpeakeasyBase {
-    dbClusterBacktracks?: DbClusterBacktrackList[];
+ */
+export declare class DBClusterBacktrackMessage extends SpeakeasyBase {
+    dbClusterBacktracks?: DBClusterBacktrackList[];
     marker?: string;
 }

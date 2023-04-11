@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ServiceQuota } from "./servicequota";
-export declare class GetAwsDefaultServiceQuotaResponse extends SpeakeasyBase {
+/**
+ * Success
+ */
+export declare class GetAWSDefaultServiceQuotaResponse extends SpeakeasyBase {
     quota?: ServiceQuota;
 }

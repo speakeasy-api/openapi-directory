@@ -1,8 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
 export declare enum CreateNewCardNewCardAddressTypeEnum {
     Home = "HOME",
     Business = "BUSINESS"
 }
+/**
+ * Details of the new card
+ */
 export declare class CreateNewCardNewCard extends SpeakeasyBase {
     acceptFeesAndCharges?: boolean;
     addressType?: CreateNewCardNewCardAddressTypeEnum;
@@ -15,17 +19,21 @@ export declare enum CreateNewCardNewCardResponseStatusEnum {
     CreatedActive = "CREATED_ACTIVE",
     CreatedInactive = "CREATED_INACTIVE"
 }
+/**
+ * Card created successfully
+ */
 export declare class CreateNewCardNewCardResponse extends SpeakeasyBase {
     cardId?: number;
     expiryDate?: Date;
     maskedPan?: string;
     status?: CreateNewCardNewCardResponseStatusEnum;
 }
-export declare class CreateNewCardRequest extends SpeakeasyBase {
-    request: CreateNewCardNewCard;
-}
 export declare class CreateNewCardResponse extends SpeakeasyBase {
     contentType: string;
-    newCardResponse?: CreateNewCardNewCardResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Card created successfully
+     */
+    newCardResponse?: CreateNewCardNewCardResponse;
 }

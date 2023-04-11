@@ -1,22 +1,36 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ReportsIndexPathParams extends SpeakeasyBase {
-    reportType: string;
-    version: string;
-}
-export declare class ReportsIndexQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ReportsIndexRequest extends SpeakeasyBase {
+    /**
+     * The end date of the report in the format ddmmyyyy (i.e 31012016)
+     */
     endDate: string;
+    /**
+     * The page offset to return.
+     */
     page: number;
+    /**
+     * The number of rows to return.
+     */
     pageSize: number;
     reportSubTypeId?: number;
+    /**
+     * Report Type Id (i.e Daily, Monthly, Annual)
+     */
+    reportType: string;
+    /**
+     * Comma separated list of site Ids.
+     */
     sites: string;
+    /**
+     * The start date of the report in the format ddmmyyyy (i.e 31012016)
+     */
     startDate: string;
-}
-export declare class ReportsIndexRequest extends SpeakeasyBase {
-    pathParams: ReportsIndexPathParams;
-    queryParams: ReportsIndexQueryParams;
+    version: string;
 }
 export declare class ReportsIndexResponse extends SpeakeasyBase {
     contentType: string;
     object?: Record<string, any>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

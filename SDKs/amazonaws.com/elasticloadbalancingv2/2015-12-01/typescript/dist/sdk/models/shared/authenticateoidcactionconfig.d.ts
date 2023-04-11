@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { AuthenticateOidcActionConditionalBehaviorEnumEnum } from "./authenticateoidcactionconditionalbehaviorenumenum";
 /**
  * Request parameters when using an identity provider (IdP) that is compliant with OpenID Connect (OIDC) to authenticate users.
-**/
+ */
 export declare class AuthenticateOidcActionConfig extends SpeakeasyBase {
     authenticationRequestExtraParams?: Record<string, string>;
     authorizationEndpoint: string;

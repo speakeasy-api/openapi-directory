@@ -1,12 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetRestoreDbInstanceToPointInTimeActionEnum {
-    RestoreDbInstanceToPointInTime = "RestoreDBInstanceToPointInTime"
+import { AxiosResponse } from "axios";
+export declare enum GETRestoreDBInstanceToPointInTimeActionEnum {
+    RestoreDBInstanceToPointInTime = "RestoreDBInstanceToPointInTime"
 }
-export declare enum GetRestoreDbInstanceToPointInTimeVersionEnum {
+export declare enum GETRestoreDBInstanceToPointInTimeVersionEnum {
     TwoThousandAndThirteen0110 = "2013-01-10"
 }
-export declare class GetRestoreDbInstanceToPointInTimeQueryParams extends SpeakeasyBase {
-    action: GetRestoreDbInstanceToPointInTimeActionEnum;
+export declare class GETRestoreDBInstanceToPointInTimeRequest extends SpeakeasyBase {
+    action: GETRestoreDBInstanceToPointInTimeActionEnum;
     autoMinorVersionUpgrade?: boolean;
     availabilityZone?: string;
     dbInstanceClass?: string;
@@ -23,9 +24,7 @@ export declare class GetRestoreDbInstanceToPointInTimeQueryParams extends Speake
     sourceDBInstanceIdentifier: string;
     targetDBInstanceIdentifier: string;
     useLatestRestorableTime?: boolean;
-    version: GetRestoreDbInstanceToPointInTimeVersionEnum;
-}
-export declare class GetRestoreDbInstanceToPointInTimeHeaders extends SpeakeasyBase {
+    version: GETRestoreDBInstanceToPointInTimeVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -34,12 +33,9 @@ export declare class GetRestoreDbInstanceToPointInTimeHeaders extends SpeakeasyB
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetRestoreDbInstanceToPointInTimeRequest extends SpeakeasyBase {
-    queryParams: GetRestoreDbInstanceToPointInTimeQueryParams;
-    headers: GetRestoreDbInstanceToPointInTimeHeaders;
-}
-export declare class GetRestoreDbInstanceToPointInTimeResponse extends SpeakeasyBase {
+export declare class GETRestoreDBInstanceToPointInTimeResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

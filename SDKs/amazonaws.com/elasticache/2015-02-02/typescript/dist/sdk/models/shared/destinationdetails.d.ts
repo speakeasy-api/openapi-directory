@@ -3,7 +3,7 @@ import { CloudWatchLogsDestinationDetails } from "./cloudwatchlogsdestinationdet
 import { KinesisFirehoseDestinationDetails } from "./kinesisfirehosedestinationdetails";
 /**
  * Configuration details of either a CloudWatch Logs destination or Kinesis Data Firehose destination.
-**/
+ */
 export declare class DestinationDetails extends SpeakeasyBase {
     cloudWatchLogsDetails?: CloudWatchLogsDestinationDetails;
     kinesisFirehoseDetails?: KinesisFirehoseDestinationDetails;

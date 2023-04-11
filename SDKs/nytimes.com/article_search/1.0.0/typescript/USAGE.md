@@ -1,30 +1,30 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetArticlesearchJsonRequest, GetArticlesearchJsonResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GetArticlesearchJsonRequest,
+  GetArticlesearchJsonResponse,
+  GetArticlesearchJsonSortEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    apikey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: GetArticlesearchJsonRequest = {
-  queryParams: {
-    beginDate: "sit",
-    endDate: "voluptas",
-    facetField: "culpa",
-    facetFilter: false,
-    fl: "consequuntur",
-    fq: "dolor",
-    hl: true,
-    page: 6044372234677422456,
-    q: "fugit",
-    sort: "newest",
+    apikey: "YOUR_API_KEY_HERE",
   },
+});
+
+const req: GetArticlesearchJsonRequest = {
+  beginDate: "corrupti",
+  endDate: "provident",
+  facetField: "distinctio",
+  facetFilter: false,
+  fl: "quibusdam",
+  fq: "unde",
+  hl: false,
+  page: 857946,
+  q: "corrupti",
+  sort: GetArticlesearchJsonSortEnum.Oldest,
 };
 
 sdk.stories.getArticlesearchJson(req).then((res: GetArticlesearchJsonResponse | AxiosError) => {

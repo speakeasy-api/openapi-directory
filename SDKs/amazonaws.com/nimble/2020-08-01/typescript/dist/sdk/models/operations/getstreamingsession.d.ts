@@ -1,10 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetStreamingSessionPathParams extends SpeakeasyBase {
-    sessionId: string;
-    studioId: string;
-}
-export declare class GetStreamingSessionHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetStreamingSessionRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,20 +9,49 @@ export declare class GetStreamingSessionHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class GetStreamingSessionRequest extends SpeakeasyBase {
-    pathParams: GetStreamingSessionPathParams;
-    headers: GetStreamingSessionHeaders;
+    /**
+     * The streaming session ID.
+     */
+    sessionId: string;
+    /**
+     * The studio ID.
+     */
+    studioId: string;
 }
 export declare class GetStreamingSessionResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getStreamingSessionResponse?: shared.GetStreamingSessionResponse;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
-    serviceQuotaExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceQuotaExceededException
+     */
+    serviceQuotaExceededException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

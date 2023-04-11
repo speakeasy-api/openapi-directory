@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeReplaceRootVolumeTasksActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeReplaceRootVolumeTasksActionEnum {
     DescribeReplaceRootVolumeTasks = "DescribeReplaceRootVolumeTasks"
 }
-export declare enum PostDescribeReplaceRootVolumeTasksVersionEnum {
+export declare enum POSTDescribeReplaceRootVolumeTasksVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDescribeReplaceRootVolumeTasksQueryParams extends SpeakeasyBase {
-    action: PostDescribeReplaceRootVolumeTasksActionEnum;
+export declare class POSTDescribeReplaceRootVolumeTasksRequest extends SpeakeasyBase {
+    action: POSTDescribeReplaceRootVolumeTasksActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostDescribeReplaceRootVolumeTasksVersionEnum;
-}
-export declare class PostDescribeReplaceRootVolumeTasksHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeReplaceRootVolumeTasksVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeReplaceRootVolumeTasksHeaders extends Speakeasy
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeReplaceRootVolumeTasksRequest extends SpeakeasyBase {
-    queryParams: PostDescribeReplaceRootVolumeTasksQueryParams;
-    headers: PostDescribeReplaceRootVolumeTasksHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeReplaceRootVolumeTasksResponse extends SpeakeasyBase {
+export declare class POSTDescribeReplaceRootVolumeTasksResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

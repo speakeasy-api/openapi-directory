@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDecodeAuthorizationMessageActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDecodeAuthorizationMessageActionEnum {
     DecodeAuthorizationMessage = "DecodeAuthorizationMessage"
 }
-export declare enum GetDecodeAuthorizationMessageVersionEnum {
+export declare enum GETDecodeAuthorizationMessageVersionEnum {
     TwoThousandAndEleven0615 = "2011-06-15"
 }
-export declare class GetDecodeAuthorizationMessageQueryParams extends SpeakeasyBase {
-    action: GetDecodeAuthorizationMessageActionEnum;
+export declare class GETDecodeAuthorizationMessageRequest extends SpeakeasyBase {
+    action: GETDecodeAuthorizationMessageActionEnum;
+    /**
+     * The encoded message that was returned with the response.
+     */
     encodedMessage: string;
-    version: GetDecodeAuthorizationMessageVersionEnum;
-}
-export declare class GetDecodeAuthorizationMessageHeaders extends SpeakeasyBase {
+    version: GETDecodeAuthorizationMessageVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDecodeAuthorizationMessageHeaders extends SpeakeasyBase 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDecodeAuthorizationMessageRequest extends SpeakeasyBase {
-    queryParams: GetDecodeAuthorizationMessageQueryParams;
-    headers: GetDecodeAuthorizationMessageHeaders;
-}
-export declare class GetDecodeAuthorizationMessageResponse extends SpeakeasyBase {
+export declare class GETDecodeAuthorizationMessageResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,0 +1,26 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class CreateShippingFulfillmentSecurity extends SpeakeasyBase {
+    apiAuth: string;
+}
+export declare class CreateShippingFulfillmentRequest extends SpeakeasyBase {
+    /**
+     * fulfillment payload
+     */
+    shippingFulfillmentDetails: shared.ShippingFulfillmentDetails;
+    /**
+     * The unique identifier of the order. Order ID values are shown in My eBay/Seller Hub, and are also returned by the <b>getOrders</b> method in the <b>orders.orderId</b> field.
+     */
+    orderId: string;
+}
+export declare class CreateShippingFulfillmentResponse extends SpeakeasyBase {
+    contentType: string;
+    headers?: Record<string, string[]>;
+    statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Created. The call also returns the following location code: <br><br><code>{ENV}/sell/fulfillment/v1/order/{ORDERID}/shipping_fulfillment/{FULFILLMENTID}</code> <br><br>The <code>ENV</code> string is the HTTPS path to the same eBay supported environment in which this call was issued. The <code>ORDERID</code> parameter is the unique identifier of the order addressed by this call; for example, <code>01-03955-36441</code>. The <code>FULFILLMENTID</code> parameter identifies the newly created fulfillment; for example, <code>9405509699937003457459</code>. Use this Get Fulfillment URI to retrieve the contents of the new fulfillment.
+     */
+    createShippingFulfillment201ApplicationJSONObject?: Record<string, any>;
+}

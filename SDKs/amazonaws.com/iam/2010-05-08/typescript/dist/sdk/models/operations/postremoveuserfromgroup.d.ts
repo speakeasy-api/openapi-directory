@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostRemoveUserFromGroupActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTRemoveUserFromGroupActionEnum {
     RemoveUserFromGroup = "RemoveUserFromGroup"
 }
-export declare enum PostRemoveUserFromGroupVersionEnum {
+export declare enum POSTRemoveUserFromGroupVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostRemoveUserFromGroupQueryParams extends SpeakeasyBase {
-    action: PostRemoveUserFromGroupActionEnum;
-    version: PostRemoveUserFromGroupVersionEnum;
-}
-export declare class PostRemoveUserFromGroupHeaders extends SpeakeasyBase {
+export declare class POSTRemoveUserFromGroupRequest extends SpeakeasyBase {
+    action: POSTRemoveUserFromGroupActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTRemoveUserFromGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostRemoveUserFromGroupHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostRemoveUserFromGroupRequest extends SpeakeasyBase {
-    queryParams: PostRemoveUserFromGroupQueryParams;
-    headers: PostRemoveUserFromGroupHeaders;
-    request?: Uint8Array;
-}
-export declare class PostRemoveUserFromGroupResponse extends SpeakeasyBase {
+export declare class POSTRemoveUserFromGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

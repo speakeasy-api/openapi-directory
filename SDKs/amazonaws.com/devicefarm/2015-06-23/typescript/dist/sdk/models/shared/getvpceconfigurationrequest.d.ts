@@ -1,4 +1,4 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetVpceConfigurationRequest extends SpeakeasyBase {
+export declare class GetVPCEConfigurationRequest extends SpeakeasyBase {
     arn: string;
 }

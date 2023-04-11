@@ -1,6 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class VinDecoderApi {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+export declare class VINDecoderAPI {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,27 +9,38 @@ export declare class VinDecoderApi {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * decode - VIN Decoder
+     * VIN Decoder
      *
+     * @remarks
      * Get the basic information on specifications for a car identified by a valid VIN
-    **/
+     */
     decode(req: operations.DecodeRequest, config?: AxiosRequestConfig): Promise<operations.DecodeResponse>;
     /**
-     * decodeViaEpi - EPI VIN Decoder
+     * EPI VIN Decoder
      *
+     * @remarks
      * Get the basic information on specifications for a car identified by a valid VIN from EPI's decoder
-    **/
-    decodeViaEpi(req: operations.DecodeViaEpiRequest, config?: AxiosRequestConfig): Promise<operations.DecodeViaEpiResponse>;
+     */
+    decodeViaEPI(req: operations.DecodeViaEPIRequest, config?: AxiosRequestConfig): Promise<operations.DecodeViaEPIResponse>;
     /**
-     * getTaxonomyTerms - API for getting terms from taxonomy
+     * NeoVIN Decoder
      *
+     * @remarks
+     * Get the basic information on specifications for a car identified by a valid VIN from NeoVIN decoder
+     */
+    decodeViaNeoVIN(req: operations.DecodeViaNeoVINRequest, config?: AxiosRequestConfig): Promise<operations.DecodeViaNeoVINResponse>;
+    /**
+     * API for getting terms from taxonomy
+     *
+     * @remarks
      * Facets on taxonomy
-    **/
+     */
     getTaxonomyTerms(req: operations.GetTaxonomyTermsRequest, config?: AxiosRequestConfig): Promise<operations.GetTaxonomyTermsResponse>;
     /**
-     * getSpecsCarAutoComplete - API for auto-completion of inputs based on taxonomy
+     * API for auto-completion of inputs based on taxonomy
      *
+     * @remarks
      * Auto-complete the inputs of your end users, not from active set but from taxonomy (decoder database)
-    **/
+     */
     getSpecsCarAutoComplete(req: operations.GetSpecsCarAutoCompleteRequest, config?: AxiosRequestConfig): Promise<operations.GetSpecsCarAutoCompleteResponse>;
 }

@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteContinuousProjectPathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteContinuousProjectRequest extends SpeakeasyBase {
-    pathParams: DeleteContinuousProjectPathParams;
+    /**
+     * Continuous project ID
+     */
+    id: number;
 }
 export declare class DeleteContinuousProjectResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * ProjectNotFound
+     */
     error?: shared.ErrorT;
+    /**
+     * Continuous project deleted successfully
+     */
     operationStatus?: shared.OperationStatus;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

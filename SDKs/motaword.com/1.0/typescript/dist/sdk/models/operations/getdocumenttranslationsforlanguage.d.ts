@@ -1,15 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetDocumentTranslationsForLanguagePathParams extends SpeakeasyBase {
-    documentId: number;
-    language: string;
-    projectId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetDocumentTranslationsForLanguageRequest extends SpeakeasyBase {
-    pathParams: GetDocumentTranslationsForLanguagePathParams;
+    /**
+     * Document ID
+     */
+    documentId: number;
+    /**
+     * Target language code.
+     */
+    language: string;
+    /**
+     * Project ID
+     */
+    projectId: number;
 }
 export declare class GetDocumentTranslationsForLanguageResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response for strings and their translations
+     */
     stringList?: shared.StringList;
 }

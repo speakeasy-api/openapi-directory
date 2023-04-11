@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum InstallToRemoteAccessSessionXAmzTargetEnum {
     DeviceFarm20150623InstallToRemoteAccessSession = "DeviceFarm_20150623.InstallToRemoteAccessSession"
 }
-export declare class InstallToRemoteAccessSessionHeaders extends SpeakeasyBase {
+export declare class InstallToRemoteAccessSessionRequest extends SpeakeasyBase {
+    installToRemoteAccessSessionRequest: shared.InstallToRemoteAccessSessionRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class InstallToRemoteAccessSessionHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: InstallToRemoteAccessSessionXAmzTargetEnum;
 }
-export declare class InstallToRemoteAccessSessionRequest extends SpeakeasyBase {
-    headers: InstallToRemoteAccessSessionHeaders;
-    request: shared.InstallToRemoteAccessSessionRequest;
-}
 export declare class InstallToRemoteAccessSessionResponse extends SpeakeasyBase {
+    /**
+     * ArgumentException
+     */
     argumentException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     installToRemoteAccessSessionResult?: shared.InstallToRemoteAccessSessionResult;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
+    /**
+     * ServiceAccountException
+     */
     serviceAccountException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

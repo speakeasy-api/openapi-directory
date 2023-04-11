@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetEcObyIdPathParams extends SpeakeasyBase {
-    ecoID: string;
+import { AxiosResponse } from "axios";
+export declare class GetECObyIDRequest extends SpeakeasyBase {
+    /**
+     * An [evidence code ontology](http://www.ebi.ac.uk/ols/v2/browse.do?ontName=ECO) ID.
+     */
+    ecoId: string;
 }
-export declare class GetEcObyIdRequest extends SpeakeasyBase {
-    pathParams: GetEcObyIdPathParams;
-}
-export declare class GetEcObyIdResponse extends SpeakeasyBase {
+export declare class GetECObyIDResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

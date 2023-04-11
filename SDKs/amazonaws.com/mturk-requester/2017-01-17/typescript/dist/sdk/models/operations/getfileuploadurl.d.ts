@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum GetFileUploadUrlxAmzTargetEnum {
-    MTurkRequesterServiceV20170117GetFileUploadUrl = "MTurkRequesterServiceV20170117.GetFileUploadURL"
+import { AxiosResponse } from "axios";
+export declare enum GetFileUploadURLXAmzTargetEnum {
+    MTurkRequesterServiceV20170117GetFileUploadURL = "MTurkRequesterServiceV20170117.GetFileUploadURL"
 }
-export declare class GetFileUploadUrlHeaders extends SpeakeasyBase {
+export declare class GetFileUploadURLRequest extends SpeakeasyBase {
+    getFileUploadURLRequest: shared.GetFileUploadURLRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,16 +13,22 @@ export declare class GetFileUploadUrlHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: GetFileUploadUrlxAmzTargetEnum;
+    xAmzTarget: GetFileUploadURLXAmzTargetEnum;
 }
-export declare class GetFileUploadUrlRequest extends SpeakeasyBase {
-    headers: GetFileUploadUrlHeaders;
-    request: shared.GetFileUploadUrlRequest;
-}
-export declare class GetFileUploadUrlResponse extends SpeakeasyBase {
+export declare class GetFileUploadURLResponse extends SpeakeasyBase {
     contentType: string;
-    getFileUploadURLResponse?: shared.GetFileUploadUrlResponse;
+    /**
+     * Success
+     */
+    getFileUploadURLResponse?: shared.GetFileUploadURLResponse;
+    /**
+     * RequestError
+     */
     requestError?: any;
+    /**
+     * ServiceFault
+     */
     serviceFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

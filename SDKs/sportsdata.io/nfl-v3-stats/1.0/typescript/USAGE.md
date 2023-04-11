@@ -1,21 +1,21 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AreGamesInProgressRequest, AreGamesInProgressResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  AreGamesInProgressRequest,
+  AreGamesInProgressResponse,
+  AreGamesInProgressFormatEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    apiKeyHeader: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: AreGamesInProgressRequest = {
-  pathParams: {
-    format: "XML",
+    apiKeyHeader: "YOUR_API_KEY_HERE",
   },
+});
+
+const req: AreGamesInProgressRequest = {
+  format: AreGamesInProgressFormatEnum.Json,
 };
 
 sdk.areGamesInProgress(req).then((res: AreGamesInProgressResponse | AxiosError) => {

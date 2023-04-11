@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { Document } from "./document";
 import { ThemeResponse } from "./themeresponse";
+/**
+ * assessment successfully updated
+ */
 export declare class AssessmentResponse extends SpeakeasyBase {
     content?: string;
     documents?: Document[];

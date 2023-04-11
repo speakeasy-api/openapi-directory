@@ -1,8 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class TripsTripDetailsQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class TripsTripDetailsRequest extends SpeakeasyBase {
     trackToken?: string;
 }
-export declare class TripsTripDetails200ApplicationJsonResultTrackAddressFinishParts extends SpeakeasyBase {
+export declare class TripsTripDetails200ApplicationJSONResultTrackAddressFinishParts extends SpeakeasyBase {
     city?: string;
     countryCode?: string;
     district?: string;
@@ -10,7 +11,7 @@ export declare class TripsTripDetails200ApplicationJsonResultTrackAddressFinishP
     postalCode?: string;
     street?: string;
 }
-export declare class TripsTripDetails200ApplicationJsonResultTrackAddressStartParts extends SpeakeasyBase {
+export declare class TripsTripDetails200ApplicationJSONResultTrackAddressStartParts extends SpeakeasyBase {
     city?: string;
     countryCode?: string;
     district?: string;
@@ -18,7 +19,7 @@ export declare class TripsTripDetails200ApplicationJsonResultTrackAddressStartPa
     postalCode?: string;
     street?: string;
 }
-export declare class TripsTripDetails200ApplicationJsonResultTrackPoints extends SpeakeasyBase {
+export declare class TripsTripDetails200ApplicationJSONResultTrackPoints extends SpeakeasyBase {
     alertType?: string;
     alertValue?: number;
     cornering?: boolean;
@@ -38,12 +39,12 @@ export declare class TripsTripDetails200ApplicationJsonResultTrackPoints extends
     totalMeters?: number;
     yaw?: number;
 }
-export declare class TripsTripDetails200ApplicationJsonResultTrack extends SpeakeasyBase {
+export declare class TripsTripDetails200ApplicationJSONResultTrack extends SpeakeasyBase {
     accelerationCount?: number;
     addressEnd?: string;
-    addressFinishParts?: TripsTripDetails200ApplicationJsonResultTrackAddressFinishParts;
+    addressFinishParts?: TripsTripDetails200ApplicationJSONResultTrackAddressFinishParts;
     addressStart?: string;
-    addressStartParts?: TripsTripDetails200ApplicationJsonResultTrackAddressStartParts;
+    addressStartParts?: TripsTripDetails200ApplicationJSONResultTrackAddressStartParts;
     beaconId?: number;
     cityFinish?: string;
     cityStart?: string;
@@ -61,7 +62,7 @@ export declare class TripsTripDetails200ApplicationJsonResultTrack extends Speak
     midOverSpeedMileage?: number;
     originChanged?: boolean;
     phoneUsage?: number;
-    points?: TripsTripDetails200ApplicationJsonResultTrackPoints[];
+    points?: TripsTripDetails200ApplicationJSONResultTrackPoints[];
     rating?: number;
     rating100?: number;
     ratingAcceleration?: number;
@@ -80,19 +81,23 @@ export declare class TripsTripDetails200ApplicationJsonResultTrack extends Speak
     status?: string;
     trackOriginCode?: string;
 }
-export declare class TripsTripDetails200ApplicationJsonResult extends SpeakeasyBase {
+export declare class TripsTripDetails200ApplicationJSONResult extends SpeakeasyBase {
     code?: number;
-    track?: TripsTripDetails200ApplicationJsonResultTrack;
+    track?: TripsTripDetails200ApplicationJSONResultTrack;
 }
-export declare class TripsTripDetails200ApplicationJson extends SpeakeasyBase {
-    result?: TripsTripDetails200ApplicationJsonResult;
-}
-export declare class TripsTripDetailsRequest extends SpeakeasyBase {
-    queryParams: TripsTripDetailsQueryParams;
+/**
+ * Success
+ */
+export declare class TripsTripDetails200ApplicationJSON extends SpeakeasyBase {
+    result?: TripsTripDetails200ApplicationJSONResult;
 }
 export declare class TripsTripDetailsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
-    tripsTripDetails200ApplicationJSONObject?: TripsTripDetails200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
+    tripsTripDetails200ApplicationJSONObject?: TripsTripDetails200ApplicationJSON;
 }

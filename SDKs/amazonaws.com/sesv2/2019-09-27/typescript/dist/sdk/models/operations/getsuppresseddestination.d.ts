@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetSuppressedDestinationPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetSuppressedDestinationRequest extends SpeakeasyBase {
+    /**
+     * The email address that's on the account suppression list.
+     */
     emailAddress: string;
-}
-export declare class GetSuppressedDestinationHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,15 +14,24 @@ export declare class GetSuppressedDestinationHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetSuppressedDestinationRequest extends SpeakeasyBase {
-    pathParams: GetSuppressedDestinationPathParams;
-    headers: GetSuppressedDestinationHeaders;
-}
 export declare class GetSuppressedDestinationResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getSuppressedDestinationResponse?: shared.GetSuppressedDestinationResponse;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

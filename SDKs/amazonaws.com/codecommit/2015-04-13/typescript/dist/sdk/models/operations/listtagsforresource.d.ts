@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum ListTagsForResourceXAmzTargetEnum {
     CodeCommit20150413ListTagsForResource = "CodeCommit_20150413.ListTagsForResource"
 }
-export declare class ListTagsForResourceHeaders extends SpeakeasyBase {
+export declare class ListTagsForResourceRequest extends SpeakeasyBase {
+    listTagsForResourceInput: shared.ListTagsForResourceInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class ListTagsForResourceHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListTagsForResourceXAmzTargetEnum;
 }
-export declare class ListTagsForResourceRequest extends SpeakeasyBase {
-    headers: ListTagsForResourceHeaders;
-    request: shared.ListTagsForResourceInput;
-}
 export declare class ListTagsForResourceResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidRepositoryNameException
+     */
     invalidRepositoryNameException?: any;
+    /**
+     * InvalidResourceArnException
+     */
     invalidResourceArnException?: any;
+    /**
+     * Success
+     */
     listTagsForResourceOutput?: shared.ListTagsForResourceOutput;
+    /**
+     * RepositoryDoesNotExistException
+     */
     repositoryDoesNotExistException?: any;
-    resourceArnRequiredException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceArnRequiredException
+     */
+    resourceArnRequiredException?: any;
 }

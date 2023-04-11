@@ -1,20 +1,33 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteSubmissionCommentPathParams extends SpeakeasyBase {
-    assignment: string;
-    class: string;
-    comment: string;
-    submission: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteSubmissionCommentSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class DeleteSubmissionCommentRequest extends SpeakeasyBase {
-    pathParams: DeleteSubmissionCommentPathParams;
-    security: DeleteSubmissionCommentSecurity;
+    /**
+     * Unique identifier of the assignment
+     */
+    assignment: string;
+    /**
+     * Unique identifier of the class
+     */
+    class: string;
+    /**
+     * Unique identifier of the comment
+     */
+    comment: string;
+    /**
+     * Unique identifier of the submission
+     */
+    submission: string;
 }
 export declare class DeleteSubmissionCommentResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Error
+     */
     flatErrorResponse?: shared.FlatErrorResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

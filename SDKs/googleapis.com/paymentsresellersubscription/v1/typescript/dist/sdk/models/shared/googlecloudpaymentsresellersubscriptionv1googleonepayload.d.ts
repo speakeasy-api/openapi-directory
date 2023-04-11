@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The type of offering the subscription was sold by the partner. e.g. VAS.
+ */
 export declare enum GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayloadOfferingEnum {
     OfferingUnspecified = "OFFERING_UNSPECIFIED",
     OfferingVasBundle = "OFFERING_VAS_BUNDLE",
@@ -6,6 +9,9 @@ export declare enum GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayloadOff
     OfferingHardBundle = "OFFERING_HARD_BUNDLE",
     OfferingSoftBundle = "OFFERING_SOFT_BUNDLE"
 }
+/**
+ * The type of sales channel through which the subscription was sold.
+ */
 export declare enum GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayloadSalesChannelEnum {
     ChannelUnspecified = "CHANNEL_UNSPECIFIED",
     ChannelRetail = "CHANNEL_RETAIL",
@@ -15,10 +21,22 @@ export declare enum GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayloadSal
 }
 /**
  * Payload specific to Google One products.
-**/
+ */
 export declare class GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayload extends SpeakeasyBase {
+    /**
+     * Campaign attributed to sales of this subscription.
+     */
     campaigns?: string[];
+    /**
+     * The type of offering the subscription was sold by the partner. e.g. VAS.
+     */
     offering?: GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayloadOfferingEnum;
+    /**
+     * The type of sales channel through which the subscription was sold.
+     */
     salesChannel?: GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayloadSalesChannelEnum;
+    /**
+     * The identifier for the partner store where the subscription was sold.
+     */
     storeId?: string;
 }

@@ -1,17 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class UnfollowUserPathParams extends SpeakeasyBase {
-    followUserId: number;
-    userId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class UnfollowUserSecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
+    oauth2: string;
 }
 export declare class UnfollowUserRequest extends SpeakeasyBase {
-    pathParams: UnfollowUserPathParams;
-    security: UnfollowUserSecurity;
+    /**
+     * The ID of the following user.
+     */
+    followUserId: number;
+    /**
+     * The ID of the user.
+     */
+    userId: number;
 }
 export declare class UnfollowUserResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

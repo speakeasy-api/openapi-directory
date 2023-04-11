@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteLocalGatewayRouteActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteLocalGatewayRouteActionEnum {
     DeleteLocalGatewayRoute = "DeleteLocalGatewayRoute"
 }
-export declare enum PostDeleteLocalGatewayRouteVersionEnum {
+export declare enum POSTDeleteLocalGatewayRouteVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDeleteLocalGatewayRouteQueryParams extends SpeakeasyBase {
-    action: PostDeleteLocalGatewayRouteActionEnum;
-    version: PostDeleteLocalGatewayRouteVersionEnum;
-}
-export declare class PostDeleteLocalGatewayRouteHeaders extends SpeakeasyBase {
+export declare class POSTDeleteLocalGatewayRouteRequest extends SpeakeasyBase {
+    action: POSTDeleteLocalGatewayRouteActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteLocalGatewayRouteVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteLocalGatewayRouteHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteLocalGatewayRouteRequest extends SpeakeasyBase {
-    queryParams: PostDeleteLocalGatewayRouteQueryParams;
-    headers: PostDeleteLocalGatewayRouteHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteLocalGatewayRouteResponse extends SpeakeasyBase {
+export declare class POSTDeleteLocalGatewayRouteResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

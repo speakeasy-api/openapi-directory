@@ -1,15 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeletePermissionAppsAppIdPathParams extends SpeakeasyBase {
-    appId: string;
-}
-export declare class DeletePermissionAppsAppIdQueryParams extends SpeakeasyBase {
-    userId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeletePermissionAppsAppIdRequest extends SpeakeasyBase {
-    pathParams: DeletePermissionAppsAppIdPathParams;
-    queryParams: DeletePermissionAppsAppIdQueryParams;
+    /**
+     * The id of the app
+     */
+    appId: string;
+    /**
+     * The id of the user
+     */
+    userId: string;
 }
 export declare class DeletePermissionAppsAppIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

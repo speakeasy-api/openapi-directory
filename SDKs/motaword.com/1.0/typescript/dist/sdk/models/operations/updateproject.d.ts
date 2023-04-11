@@ -1,22 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdateProjectPathParams extends SpeakeasyBase {
-    id: number;
-}
-export declare class UpdateProjectRequestBody extends SpeakeasyBase {
-    callbackUrl?: string;
-    couponCode?: string;
-    custom?: string[];
-    sourceLanguage?: string;
-    targetLanguages?: string[];
-}
+import { AxiosResponse } from "axios";
 export declare class UpdateProjectRequest extends SpeakeasyBase {
-    pathParams: UpdateProjectPathParams;
-    request?: UpdateProjectRequestBody;
+    projectUpdate?: shared.ProjectUpdate;
+    /**
+     * Project ID
+     */
+    id: number;
 }
 export declare class UpdateProjectResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * ProjectNotFound
+     */
     error?: shared.ErrorT;
+    /**
+     * Updated project
+     */
     project?: shared.Project;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

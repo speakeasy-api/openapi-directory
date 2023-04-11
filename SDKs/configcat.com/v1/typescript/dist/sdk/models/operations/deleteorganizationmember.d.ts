@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteOrganizationMemberPathParams extends SpeakeasyBase {
-    organizationId: string;
-    userId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteOrganizationMemberRequest extends SpeakeasyBase {
-    pathParams: DeleteOrganizationMemberPathParams;
+    /**
+     * The identifier of the Organization.
+     */
+    organizationId: string;
+    /**
+     * The identifier of the Member.
+     */
+    userId: string;
 }
 export declare class DeleteOrganizationMemberResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

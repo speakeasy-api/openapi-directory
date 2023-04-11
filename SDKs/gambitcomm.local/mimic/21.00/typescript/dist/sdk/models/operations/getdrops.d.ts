@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetDropsPathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetDropsRequest extends SpeakeasyBase {
-    pathParams: GetDropsPathParams;
+    /**
+     * Agent to return the drop rate
+     */
+    agentNum: number;
 }
 export declare class GetDropsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     getDrops200ApplicationJSONInt32Integer?: number;
 }

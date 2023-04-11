@@ -3,7 +3,7 @@ import { VpcEndpoint } from "./vpcendpoint";
 import { VpcSecurityGroupMembershipList } from "./vpcsecuritygroupmembershiplist";
 /**
  * Describes a Redshift-managed VPC endpoint.
-**/
+ */
 export declare class EndpointAccess extends SpeakeasyBase {
     address?: string;
     clusterIdentifier?: string;
@@ -13,6 +13,9 @@ export declare class EndpointAccess extends SpeakeasyBase {
     port?: number;
     resourceOwner?: string;
     subnetGroupName?: string;
+    /**
+     * The connection endpoint for connecting to an Amazon Redshift cluster through the proxy.
+     */
     vpcEndpoint?: VpcEndpoint;
     vpcSecurityGroups?: VpcSecurityGroupMembershipList[];
 }

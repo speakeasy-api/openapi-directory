@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetCredentialsForIdentityXAmzTargetEnum {
-    AwsCognitoIdentityServiceGetCredentialsForIdentity = "AWSCognitoIdentityService.GetCredentialsForIdentity"
+    AWSCognitoIdentityServiceGetCredentialsForIdentity = "AWSCognitoIdentityService.GetCredentialsForIdentity"
 }
-export declare class GetCredentialsForIdentityHeaders extends SpeakeasyBase {
+export declare class GetCredentialsForIdentityRequest extends SpeakeasyBase {
+    getCredentialsForIdentityInput: shared.GetCredentialsForIdentityInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,20 +15,44 @@ export declare class GetCredentialsForIdentityHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetCredentialsForIdentityXAmzTargetEnum;
 }
-export declare class GetCredentialsForIdentityRequest extends SpeakeasyBase {
-    headers: GetCredentialsForIdentityHeaders;
-    request: shared.GetCredentialsForIdentityInput;
-}
 export declare class GetCredentialsForIdentityResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * ExternalServiceException
+     */
     externalServiceException?: any;
+    /**
+     * Success
+     */
     getCredentialsForIdentityResponse?: shared.GetCredentialsForIdentityResponse;
+    /**
+     * InternalErrorException
+     */
     internalErrorException?: any;
+    /**
+     * InvalidIdentityPoolConfigurationException
+     */
     invalidIdentityPoolConfigurationException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * NotAuthorizedException
+     */
     notAuthorizedException?: any;
-    resourceConflictException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceConflictException
+     */
+    resourceConflictException?: any;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

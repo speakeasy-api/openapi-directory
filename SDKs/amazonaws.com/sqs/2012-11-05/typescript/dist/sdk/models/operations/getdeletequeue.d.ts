@@ -1,19 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetDeleteQueuePathParams extends SpeakeasyBase {
-    accountNumber: number;
-    queueName: string;
-}
-export declare enum GetDeleteQueueActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteQueueActionEnum {
     DeleteQueue = "DeleteQueue"
 }
-export declare enum GetDeleteQueueVersionEnum {
+export declare enum GETDeleteQueueVersionEnum {
     TwoThousandAndTwelve1105 = "2012-11-05"
 }
-export declare class GetDeleteQueueQueryParams extends SpeakeasyBase {
-    action: GetDeleteQueueActionEnum;
-    version: GetDeleteQueueVersionEnum;
-}
-export declare class GetDeleteQueueHeaders extends SpeakeasyBase {
+export declare class GETDeleteQueueRequest extends SpeakeasyBase {
+    /**
+     * The AWS account number
+     */
+    accountNumber: number;
+    action: GETDeleteQueueActionEnum;
+    /**
+     * The name of the queue
+     */
+    queueName: string;
+    version: GETDeleteQueueVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -22,12 +25,8 @@ export declare class GetDeleteQueueHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteQueueRequest extends SpeakeasyBase {
-    pathParams: GetDeleteQueuePathParams;
-    queryParams: GetDeleteQueueQueryParams;
-    headers: GetDeleteQueueHeaders;
-}
-export declare class GetDeleteQueueResponse extends SpeakeasyBase {
+export declare class GETDeleteQueueResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

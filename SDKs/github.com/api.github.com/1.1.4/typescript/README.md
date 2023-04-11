@@ -6,127 +6,183 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/github.com/api.github.com/1.1.4/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/github.com/api.github.com/1.1.4/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest, ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgResponse } from "openapi/src/sdk/models/operations";
+import {
+  ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequest,
+  ActionsAddCustomLabelsToSelfHostedRunnerForOrgResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest = {
-  pathParams: {
-    org: "sit",
-    repositoryId: 2259404117704393152,
-    runnerGroupId: 6050128673802995827,
+
+const req: ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequest = {
+  requestBody: {
+    labels: [
+      "provident",
+      "distinctio",
+      "quibusdam",
+    ],
   },
+  org: "unde",
+  runnerId: 857946,
 };
 
-sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgResponse | AxiosError) => {
+sdk.actions.actionsAddCustomLabelsToSelfHostedRunnerForOrg(req).then((res: ActionsAddCustomLabelsToSelfHostedRunnerForOrgResponse | AxiosError) => {
    // handle response
 });
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### actions
 
-* `actionsAddRepoAccessToSelfHostedRunnerGroupInOrg` - Add repository access to a self-hosted runner group in an organization
+* `actionsAddCustomLabelsToSelfHostedRunnerForOrg` - Add custom labels to a self-hosted runner for an organization
+* `actionsAddCustomLabelsToSelfHostedRunnerForRepo` - Add custom labels to a self-hosted runner for a repository
 * `actionsAddSelectedRepoToOrgSecret` - Add selected repository to an organization secret
-* `actionsAddSelfHostedRunnerToGroupForOrg` - Add a self-hosted runner to a group for an organization
+* `actionsAddSelectedRepoToOrgVariable` - Add selected repository to an organization variable
+* `actionsAddSelectedRepoToRequiredWorkflow` - Add a repository to a required workflow
+* `actionsApproveWorkflowRun` - Approve a workflow run for a fork pull request
 * `actionsCancelWorkflowRun` - Cancel a workflow run
+* `actionsCreateEnvironmentVariable` - Create an environment variable
 * `actionsCreateOrUpdateEnvironmentSecret` - Create or update an environment secret
 * `actionsCreateOrUpdateOrgSecret` - Create or update an organization secret
 * `actionsCreateOrUpdateRepoSecret` - Create or update a repository secret
+* `actionsCreateOrgVariable` - Create an organization variable
 * `actionsCreateRegistrationTokenForOrg` - Create a registration token for an organization
 * `actionsCreateRegistrationTokenForRepo` - Create a registration token for a repository
 * `actionsCreateRemoveTokenForOrg` - Create a remove token for an organization
 * `actionsCreateRemoveTokenForRepo` - Create a remove token for a repository
-* `actionsCreateSelfHostedRunnerGroupForOrg` - Create a self-hosted runner group for an organization
+* `actionsCreateRepoVariable` - Create a repository variable
+* `actionsCreateRequiredWorkflow` - Create a required workflow
 * `actionsCreateWorkflowDispatch` - Create a workflow dispatch event
+* `actionsDeleteActionsCacheById` - Delete a GitHub Actions cache for a repository (using a cache ID)
+* `actionsDeleteActionsCacheByKey` - Delete GitHub Actions caches for a repository (using a cache key)
 * `actionsDeleteArtifact` - Delete an artifact
 * `actionsDeleteEnvironmentSecret` - Delete an environment secret
+* `actionsDeleteEnvironmentVariable` - Delete an environment variable
 * `actionsDeleteOrgSecret` - Delete an organization secret
+* `actionsDeleteOrgVariable` - Delete an organization variable
 * `actionsDeleteRepoSecret` - Delete a repository secret
+* `actionsDeleteRepoVariable` - Delete a repository variable
+* `actionsDeleteRequiredWorkflow` - Delete a required workflow
 * `actionsDeleteSelfHostedRunnerFromOrg` - Delete a self-hosted runner from an organization
 * `actionsDeleteSelfHostedRunnerFromRepo` - Delete a self-hosted runner from a repository
-* `actionsDeleteSelfHostedRunnerGroupFromOrg` - Delete a self-hosted runner group from an organization
 * `actionsDeleteWorkflowRun` - Delete a workflow run
 * `actionsDeleteWorkflowRunLogs` - Delete workflow run logs
 * `actionsDisableSelectedRepositoryGithubActionsOrganization` - Disable a selected repository for GitHub Actions in an organization
 * `actionsDisableWorkflow` - Disable a workflow
 * `actionsDownloadArtifact` - Download an artifact
 * `actionsDownloadJobLogsForWorkflowRun` - Download job logs for a workflow run
+* `actionsDownloadWorkflowRunAttemptLogs` - Download workflow run attempt logs
 * `actionsDownloadWorkflowRunLogs` - Download workflow run logs
 * `actionsEnableSelectedRepositoryGithubActionsOrganization` - Enable a selected repository for GitHub Actions in an organization
 * `actionsEnableWorkflow` - Enable a workflow
-* `actionsGetAllowedActionsOrganization` - Get allowed actions for an organization
-* `actionsGetAllowedActionsRepository` - Get allowed actions for a repository
+* `actionsGetActionsCacheList` - List GitHub Actions caches for a repository
+* `actionsGetActionsCacheUsage` - Get GitHub Actions cache usage for a repository
+* `actionsGetActionsCacheUsageByRepoForOrg` - List repositories with GitHub Actions cache usage for an organization
+* `actionsGetActionsCacheUsageForOrg` - Get GitHub Actions cache usage for an organization
+* `actionsGetAllowedActionsOrganization` - Get allowed actions and reusable workflows for an organization
+* `actionsGetAllowedActionsRepository` - Get allowed actions and reusable workflows for a repository
 * `actionsGetArtifact` - Get an artifact
+* `actionsGetCustomOidcSubClaimForRepo` - Get the customization template for an OIDC subject claim for a repository
 * `actionsGetEnvironmentPublicKey` - Get an environment public key
 * `actionsGetEnvironmentSecret` - Get an environment secret
+* `actionsGetEnvironmentVariable` - Get an environment variable
+* `actionsGetGithubActionsDefaultWorkflowPermissionsOrganization` - Get default workflow permissions for an organization
+* `actionsGetGithubActionsDefaultWorkflowPermissionsRepository` - Get default workflow permissions for a repository
 * `actionsGetGithubActionsPermissionsOrganization` - Get GitHub Actions permissions for an organization
 * `actionsGetGithubActionsPermissionsRepository` - Get GitHub Actions permissions for a repository
 * `actionsGetJobForWorkflowRun` - Get a job for a workflow run
 * `actionsGetOrgPublicKey` - Get an organization public key
 * `actionsGetOrgSecret` - Get an organization secret
+* `actionsGetOrgVariable` - Get an organization variable
 * `actionsGetPendingDeploymentsForRun` - Get pending deployments for a workflow run
 * `actionsGetRepoPublicKey` - Get a repository public key
+* `actionsGetRepoRequiredWorkflow` - Get a required workflow entity for a repository
+* `actionsGetRepoRequiredWorkflowUsage` - Get required workflow usage
 * `actionsGetRepoSecret` - Get a repository secret
+* `actionsGetRepoVariable` - Get a repository variable
+* `actionsGetRequiredWorkflow` - Get a required workflow
 * `actionsGetReviewsForRun` - Get the review history for a workflow run
 * `actionsGetSelfHostedRunnerForOrg` - Get a self-hosted runner for an organization
 * `actionsGetSelfHostedRunnerForRepo` - Get a self-hosted runner for a repository
-* `actionsGetSelfHostedRunnerGroupForOrg` - Get a self-hosted runner group for an organization
 * `actionsGetWorkflow` - Get a workflow
+* `actionsGetWorkflowAccessToRepository` - Get the level of access for workflows outside of the repository
 * `actionsGetWorkflowRun` - Get a workflow run
+* `actionsGetWorkflowRunAttempt` - Get a workflow run attempt
 * `actionsGetWorkflowRunUsage` - Get workflow run usage
 * `actionsGetWorkflowUsage` - Get workflow usage
 * `actionsListArtifactsForRepo` - List artifacts for a repository
 * `actionsListEnvironmentSecrets` - List environment secrets
+* `actionsListEnvironmentVariables` - List environment variables
 * `actionsListJobsForWorkflowRun` - List jobs for a workflow run
+* `actionsListJobsForWorkflowRunAttempt` - List jobs for a workflow run attempt
+* `actionsListLabelsForSelfHostedRunnerForOrg` - List labels for a self-hosted runner for an organization
+* `actionsListLabelsForSelfHostedRunnerForRepo` - List labels for a self-hosted runner for a repository
 * `actionsListOrgSecrets` - List organization secrets
-* `actionsListRepoAccessToSelfHostedRunnerGroupInOrg` - List repository access to a self-hosted runner group in an organization
+* `actionsListOrgVariables` - List organization variables
+* `actionsListRepoRequiredWorkflows` - List repository required workflows
 * `actionsListRepoSecrets` - List repository secrets
+* `actionsListRepoVariables` - List repository variables
 * `actionsListRepoWorkflows` - List repository workflows
+* `actionsListRequiredWorkflowRuns` - List workflow runs for a required workflow
+* `actionsListRequiredWorkflows` - List required workflows
 * `actionsListRunnerApplicationsForOrg` - List runner applications for an organization
 * `actionsListRunnerApplicationsForRepo` - List runner applications for a repository
 * `actionsListSelectedReposForOrgSecret` - List selected repositories for an organization secret
+* `actionsListSelectedReposForOrgVariable` - List selected repositories for an organization variable
 * `actionsListSelectedRepositoriesEnabledGithubActionsOrganization` - List selected repositories enabled for GitHub Actions in an organization
-* `actionsListSelfHostedRunnerGroupsForOrg` - List self-hosted runner groups for an organization
+* `actionsListSelectedRepositoriesRequiredWorkflow` - List selected repositories for a required workflow
 * `actionsListSelfHostedRunnersForOrg` - List self-hosted runners for an organization
 * `actionsListSelfHostedRunnersForRepo` - List self-hosted runners for a repository
-* `actionsListSelfHostedRunnersInGroupForOrg` - List self-hosted runners in a group for an organization
 * `actionsListWorkflowRunArtifacts` - List workflow run artifacts
-* `actionsListWorkflowRuns` - List workflow runs
+* `actionsListWorkflowRuns` - List workflow runs for a workflow
 * `actionsListWorkflowRunsForRepo` - List workflow runs for a repository
+* `actionsReRunJobForWorkflowRun` - Re-run a job from a workflow run
 * `actionsReRunWorkflow` - Re-run a workflow
-* `actionsRemoveRepoAccessToSelfHostedRunnerGroupInOrg` - Remove repository access to a self-hosted runner group in an organization
+* `actionsReRunWorkflowFailedJobs` - Re-run failed jobs from a workflow run
+* `actionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrg` - Remove all custom labels from a self-hosted runner for an organization
+* `actionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepo` - Remove all custom labels from a self-hosted runner for a repository
+* `actionsRemoveCustomLabelFromSelfHostedRunnerForOrg` - Remove a custom label from a self-hosted runner for an organization
+* `actionsRemoveCustomLabelFromSelfHostedRunnerForRepo` - Remove a custom label from a self-hosted runner for a repository
 * `actionsRemoveSelectedRepoFromOrgSecret` - Remove selected repository from an organization secret
-* `actionsRemoveSelfHostedRunnerFromGroupForOrg` - Remove a self-hosted runner from a group for an organization
+* `actionsRemoveSelectedRepoFromOrgVariable` - Remove selected repository from an organization variable
+* `actionsRemoveSelectedRepoFromRequiredWorkflow` - Remove a selected repository from required workflow
 * `actionsReviewPendingDeploymentsForRun` - Review pending deployments for a workflow run
-* `actionsSetAllowedActionsOrganization` - Set allowed actions for an organization
-* `actionsSetAllowedActionsRepository` - Set allowed actions for a repository
+* `actionsSetAllowedActionsOrganization` - Set allowed actions and reusable workflows for an organization
+* `actionsSetAllowedActionsRepository` - Set allowed actions and reusable workflows for a repository
+* `actionsSetCustomLabelsForSelfHostedRunnerForOrg` - Set custom labels for a self-hosted runner for an organization
+* `actionsSetCustomLabelsForSelfHostedRunnerForRepo` - Set custom labels for a self-hosted runner for a repository
+* `actionsSetCustomOidcSubClaimForRepo` - Set the customization template for an OIDC subject claim for a repository
+* `actionsSetGithubActionsDefaultWorkflowPermissionsOrganization` - Set default workflow permissions for an organization
+* `actionsSetGithubActionsDefaultWorkflowPermissionsRepository` - Set default workflow permissions for a repository
 * `actionsSetGithubActionsPermissionsOrganization` - Set GitHub Actions permissions for an organization
 * `actionsSetGithubActionsPermissionsRepository` - Set GitHub Actions permissions for a repository
-* `actionsSetRepoAccessToSelfHostedRunnerGroupInOrg` - Set repository access for a self-hosted runner group in an organization
 * `actionsSetSelectedReposForOrgSecret` - Set selected repositories for an organization secret
+* `actionsSetSelectedReposForOrgVariable` - Set selected repositories for an organization variable
+* `actionsSetSelectedReposToRequiredWorkflow` - Sets repositories for a required workflow
 * `actionsSetSelectedRepositoriesEnabledGithubActionsOrganization` - Set selected repositories enabled for GitHub Actions in an organization
-* `actionsSetSelfHostedRunnersInGroupForOrg` - Set self-hosted runners in a group for an organization
-* `actionsUpdateSelfHostedRunnerGroupForOrg` - Update a self-hosted runner group for an organization
+* `actionsSetWorkflowAccessToRepository` - Set the level of access for workflows outside of the repository
+* `actionsUpdateEnvironmentVariable` - Update an environment variable
+* `actionsUpdateOrgVariable` - Update an organization variable
+* `actionsUpdateRepoVariable` - Update a repository variable
+* `actionsUpdateRequiredWorkflow` - Update a required workflow
 
 ### activity
 
@@ -164,10 +220,8 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 
 ### apps
 
-* `appsAddRepoToInstallation` - Add a repository to an app installation
-* `appsCheckAuthorization` - Check an authorization
+* `appsAddRepoToInstallationForAuthenticatedUser` - Add a repository to an app installation
 * `appsCheckToken` - Check a token
-* `appsCreateContentAttachment` - Create a content attachment
 * `appsCreateFromManifest` - Create a GitHub App from a manifest
 * `appsCreateInstallationAccessToken` - Create an installation access token for an app
 * `appsDeleteAuthorization` - Delete an app authorization
@@ -182,6 +236,7 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 * `appsGetSubscriptionPlanForAccountStubbed` - Get a subscription plan for an account (stubbed)
 * `appsGetUserInstallation` - Get a user installation for the authenticated app
 * `appsGetWebhookConfigForApp` - Get a webhook configuration for an app
+* `appsGetWebhookDelivery` - Get a delivery for an app webhook
 * `appsListAccountsForPlan` - List accounts for a plan
 * `appsListAccountsForPlanStubbed` - List accounts for a plan (stubbed)
 * `appsListInstallationReposForAuthenticatedUser` - List repositories accessible to the user access token
@@ -192,30 +247,22 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 * `appsListReposAccessibleToInstallation` - List repositories accessible to the app installation
 * `appsListSubscriptionsForAuthenticatedUser` - List subscriptions for the authenticated user
 * `appsListSubscriptionsForAuthenticatedUserStubbed` - List subscriptions for the authenticated user (stubbed)
-* `appsRemoveRepoFromInstallation` - Remove a repository from an app installation
-* `appsResetAuthorization` - Reset an authorization
+* `appsListWebhookDeliveries` - List deliveries for an app webhook
+* `appsRedeliverWebhookDelivery` - Redeliver a delivery for an app webhook
+* `appsRemoveRepoFromInstallationForAuthenticatedUser` - Remove a repository from an app installation
 * `appsResetToken` - Reset a token
-* `appsRevokeAuthorizationForApplication` - Revoke an authorization for an application
-* `appsRevokeGrantForApplication` - Revoke a grant for an application
 * `appsRevokeInstallationAccessToken` - Revoke an installation access token
 * `appsScopeToken` - Create a scoped access token
 * `appsSuspendInstallation` - Suspend an app installation
 * `appsUnsuspendInstallation` - Unsuspend an app installation
 * `appsUpdateWebhookConfigForApp` - Update a webhook configuration for an app
 
-### audit-log
-
-* `auditLogGetAuditLog` - Get the audit log for an enterprise
-
 ### billing
 
-* `billingGetGithubActionsBillingGhe` - Get GitHub Actions billing for an enterprise
 * `billingGetGithubActionsBillingOrg` - Get GitHub Actions billing for an organization
 * `billingGetGithubActionsBillingUser` - Get GitHub Actions billing for a user
-* `billingGetGithubPackagesBillingGhe` - Get GitHub Packages billing for an enterprise
 * `billingGetGithubPackagesBillingOrg` - Get GitHub Packages billing for an organization
 * `billingGetGithubPackagesBillingUser` - Get GitHub Packages billing for a user
-* `billingGetSharedStorageBillingGhe` - Get shared storage billing for an enterprise
 * `billingGetSharedStorageBillingOrg` - Get shared storage billing for an organization
 * `billingGetSharedStorageBillingUser` - Get shared storage billing for a user
 
@@ -229,73 +276,111 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 * `checksListForRef` - List check runs for a Git reference
 * `checksListForSuite` - List check runs in a check suite
 * `checksListSuitesForRef` - List check suites for a Git reference
+* `checksRerequestRun` - Rerequest a check run
 * `checksRerequestSuite` - Rerequest a check suite
 * `checksSetSuitesPreferences` - Update repository preferences for check suites
 * `checksUpdate` - Update a check run
 
-### code-scanning
+### codeScanning
 
 * `codeScanningDeleteAnalysis` - Delete a code scanning analysis from a repository
 * `codeScanningGetAlert` - Get a code scanning alert
 * `codeScanningGetAnalysis` - Get a code scanning analysis for a repository
+* `codeScanningGetCodeqlDatabase` - Get a CodeQL database for a repository
 * `codeScanningGetSarif` - Get information about a SARIF upload
+* `codeScanningListAlertInstances` - List instances of a code scanning alert
+* `codeScanningListAlertsForOrg` - List code scanning alerts for an organization
 * `codeScanningListAlertsForRepo` - List code scanning alerts for a repository
-* `codeScanningListAlertsInstances` - List instances of a code scanning alert
+* `codeScanningListCodeqlDatabases` - List CodeQL databases for a repository
 * `codeScanningListRecentAnalyses` - List code scanning analyses for a repository
 * `codeScanningUpdateAlert` - Update a code scanning alert
 * `codeScanningUploadSarif` - Upload an analysis as SARIF data
 
-### codes-of-conduct
+### codesOfConduct
 
 * `codesOfConductGetAllCodesOfConduct` - Get all codes of conduct
 * `codesOfConductGetConductCode` - Get a code of conduct
-* `codesOfConductGetForRepo` - Get the code of conduct for a repository
+
+### codespaces
+
+* `codespacesAddRepositoryForSecretForAuthenticatedUser` - Add a selected repository to a user secret
+* `codespacesAddSelectedRepoToOrgSecret` - Add selected repository to an organization secret
+* `codespacesCodespaceMachinesForAuthenticatedUser` - List machine types for a codespace
+* `codespacesCreateForAuthenticatedUser` - Create a codespace for the authenticated user
+* `codespacesCreateOrUpdateOrgSecret` - Create or update an organization secret
+* `codespacesCreateOrUpdateRepoSecret` - Create or update a repository secret
+* `codespacesCreateOrUpdateSecretForAuthenticatedUser` - Create or update a secret for the authenticated user
+* `codespacesCreateWithPrForAuthenticatedUser` - Create a codespace from a pull request
+* `codespacesCreateWithRepoForAuthenticatedUser` - Create a codespace in a repository
+* `codespacesDeleteCodespacesBillingUsers` - Removes users from Codespaces billing for an organization
+* `codespacesDeleteForAuthenticatedUser` - Delete a codespace for the authenticated user
+* `codespacesDeleteFromOrganization` - Delete a codespace from the organization
+* `codespacesDeleteOrgSecret` - Delete an organization secret
+* `codespacesDeleteRepoSecret` - Delete a repository secret
+* `codespacesDeleteSecretForAuthenticatedUser` - Delete a secret for the authenticated user
+* `codespacesExportForAuthenticatedUser` - Export a codespace for the authenticated user
+* `codespacesGetCodespacesForUserInOrg` - List codespaces for a user in organization
+* `codespacesGetExportDetailsForAuthenticatedUser` - Get details about a codespace export
+* `codespacesGetForAuthenticatedUser` - Get a codespace for the authenticated user
+* `codespacesGetOrgPublicKey` - Get an organization public key
+* `codespacesGetOrgSecret` - Get an organization secret
+* `codespacesGetPublicKeyForAuthenticatedUser` - Get public key for the authenticated user
+* `codespacesGetRepoPublicKey` - Get a repository public key
+* `codespacesGetRepoSecret` - Get a repository secret
+* `codespacesGetSecretForAuthenticatedUser` - Get a secret for the authenticated user
+* `codespacesListDevcontainersInRepositoryForAuthenticatedUser` - List devcontainer configurations in a repository for the authenticated user
+* `codespacesListForAuthenticatedUser` - List codespaces for the authenticated user
+* `codespacesListInOrganization` - List codespaces for the organization
+* `codespacesListInRepositoryForAuthenticatedUser` - List codespaces in a repository for the authenticated user
+* `codespacesListOrgSecrets` - List organization secrets
+* `codespacesListRepoSecrets` - List repository secrets
+* `codespacesListRepositoriesForSecretForAuthenticatedUser` - List selected repositories for a user secret
+* `codespacesListSecretsForAuthenticatedUser` - List secrets for the authenticated user
+* `codespacesListSelectedReposForOrgSecret` - List selected repositories for an organization secret
+* `codespacesPreFlightWithRepoForAuthenticatedUser` - Get default attributes for a codespace
+* `codespacesPublishForAuthenticatedUser` - Create a repository from an unpublished codespace
+* `codespacesRemoveRepositoryForSecretForAuthenticatedUser` - Remove a selected repository from a user secret
+* `codespacesRemoveSelectedRepoFromOrgSecret` - Remove selected repository from an organization secret
+* `codespacesRepoMachinesForAuthenticatedUser` - List available machine types for a repository
+* `codespacesSetCodespacesBilling` - Manage access control for organization codespaces
+* `codespacesSetCodespacesBillingUsers` - Add users to Codespaces billing for an organization
+* `codespacesSetRepositoriesForSecretForAuthenticatedUser` - Set selected repositories for a user secret
+* `codespacesSetSelectedReposForOrgSecret` - Set selected repositories for an organization secret
+* `codespacesStartForAuthenticatedUser` - Start a codespace for the authenticated user
+* `codespacesStopForAuthenticatedUser` - Stop a codespace for the authenticated user
+* `codespacesStopInOrganization` - Stop a codespace for an organization user
+* `codespacesUpdateForAuthenticatedUser` - Update a codespace for the authenticated user
+
+### dependabot
+
+* `dependabotAddSelectedRepoToOrgSecret` - Add selected repository to an organization secret
+* `dependabotCreateOrUpdateOrgSecret` - Create or update an organization secret
+* `dependabotCreateOrUpdateRepoSecret` - Create or update a repository secret
+* `dependabotDeleteOrgSecret` - Delete an organization secret
+* `dependabotDeleteRepoSecret` - Delete a repository secret
+* `dependabotGetAlert` - Get a Dependabot alert
+* `dependabotGetOrgPublicKey` - Get an organization public key
+* `dependabotGetOrgSecret` - Get an organization secret
+* `dependabotGetRepoPublicKey` - Get a repository public key
+* `dependabotGetRepoSecret` - Get a repository secret
+* `dependabotListAlertsForEnterprise` - List Dependabot alerts for an enterprise
+* `dependabotListAlertsForOrg` - List Dependabot alerts for an organization
+* `dependabotListAlertsForRepo` - List Dependabot alerts for a repository
+* `dependabotListOrgSecrets` - List organization secrets
+* `dependabotListRepoSecrets` - List repository secrets
+* `dependabotListSelectedReposForOrgSecret` - List selected repositories for an organization secret
+* `dependabotRemoveSelectedRepoFromOrgSecret` - Remove selected repository from an organization secret
+* `dependabotSetSelectedReposForOrgSecret` - Set selected repositories for an organization secret
+* `dependabotUpdateAlert` - Update a Dependabot alert
+
+### dependencyGraph
+
+* `dependencyGraphCreateRepositorySnapshot` - Create a snapshot of dependencies for a repository
+* `dependencyGraphDiffRange` - Get a diff of the dependencies between commits
 
 ### emojis
 
 * `emojisGet` - Get emojis
-
-### enterprise-admin
-
-* `enterpriseAdminAddOrgAccessToSelfHostedRunnerGroupInEnterprise` - Add organization access to a self-hosted runner group in an enterprise
-* `enterpriseAdminAddSelfHostedRunnerToGroupForEnterprise` - Add a self-hosted runner to a group for an enterprise
-* `enterpriseAdminCreateRegistrationTokenForEnterprise` - Create a registration token for an enterprise
-* `enterpriseAdminCreateRemoveTokenForEnterprise` - Create a remove token for an enterprise
-* `enterpriseAdminCreateSelfHostedRunnerGroupForEnterprise` - Create a self-hosted runner group for an enterprise
-* `enterpriseAdminDeleteScimGroupFromEnterprise` - Delete a SCIM group from an enterprise
-* `enterpriseAdminDeleteSelfHostedRunnerFromEnterprise` - Delete a self-hosted runner from an enterprise
-* `enterpriseAdminDeleteSelfHostedRunnerGroupFromEnterprise` - Delete a self-hosted runner group from an enterprise
-* `enterpriseAdminDeleteUserFromEnterprise` - Delete a SCIM user from an enterprise
-* `enterpriseAdminDisableSelectedOrganizationGithubActionsEnterprise` - Disable a selected organization for GitHub Actions in an enterprise
-* `enterpriseAdminEnableSelectedOrganizationGithubActionsEnterprise` - Enable a selected organization for GitHub Actions in an enterprise
-* `enterpriseAdminGetAllowedActionsEnterprise` - Get allowed actions for an enterprise
-* `enterpriseAdminGetGithubActionsPermissionsEnterprise` - Get GitHub Actions permissions for an enterprise
-* `enterpriseAdminGetProvisioningInformationForEnterpriseGroup` - Get SCIM provisioning information for an enterprise group
-* `enterpriseAdminGetProvisioningInformationForEnterpriseUser` - Get SCIM provisioning information for an enterprise user
-* `enterpriseAdminGetSelfHostedRunnerForEnterprise` - Get a self-hosted runner for an enterprise
-* `enterpriseAdminGetSelfHostedRunnerGroupForEnterprise` - Get a self-hosted runner group for an enterprise
-* `enterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterprise` - List organization access to a self-hosted runner group in an enterprise
-* `enterpriseAdminListProvisionedGroupsEnterprise` - List provisioned SCIM groups for an enterprise
-* `enterpriseAdminListProvisionedIdentitiesEnterprise` - List SCIM provisioned identities for an enterprise
-* `enterpriseAdminListRunnerApplicationsForEnterprise` - List runner applications for an enterprise
-* `enterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterprise` - List selected organizations enabled for GitHub Actions in an enterprise
-* `enterpriseAdminListSelfHostedRunnerGroupsForEnterprise` - List self-hosted runner groups for an enterprise
-* `enterpriseAdminListSelfHostedRunnersForEnterprise` - List self-hosted runners for an enterprise
-* `enterpriseAdminListSelfHostedRunnersInGroupForEnterprise` - List self-hosted runners in a group for an enterprise
-* `enterpriseAdminProvisionAndInviteEnterpriseGroup` - Provision a SCIM enterprise group and invite users
-* `enterpriseAdminProvisionAndInviteEnterpriseUser` - Provision and invite a SCIM enterprise user
-* `enterpriseAdminRemoveOrgAccessToSelfHostedRunnerGroupInEnterprise` - Remove organization access to a self-hosted runner group in an enterprise
-* `enterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterprise` - Remove a self-hosted runner from a group for an enterprise
-* `enterpriseAdminSetAllowedActionsEnterprise` - Set allowed actions for an enterprise
-* `enterpriseAdminSetGithubActionsPermissionsEnterprise` - Set GitHub Actions permissions for an enterprise
-* `enterpriseAdminSetInformationForProvisionedEnterpriseGroup` - Set SCIM information for a provisioned enterprise group
-* `enterpriseAdminSetInformationForProvisionedEnterpriseUser` - Set SCIM information for a provisioned enterprise user
-* `enterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterprise` - Set organization access for a self-hosted runner group in an enterprise
-* `enterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterprise` - Set selected organizations enabled for GitHub Actions in an enterprise
-* `enterpriseAdminSetSelfHostedRunnersInGroupForEnterprise` - Set self-hosted runners in a group for an enterprise
-* `enterpriseAdminUpdateAttributeForEnterpriseGroup` - Update an attribute for a SCIM enterprise group
-* `enterpriseAdminUpdateAttributeForEnterpriseUser` - Update an attribute for a SCIM enterprise user
-* `enterpriseAdminUpdateSelfHostedRunnerGroupForEnterprise` - Update a self-hosted runner group for an enterprise
 
 ### gists
 
@@ -358,6 +443,7 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 * `issuesAddAssignees` - Add assignees to an issue
 * `issuesAddLabels` - Add labels to an issue
 * `issuesCheckUserCanBeAssigned` - Check if a user can be assigned
+* `issuesCheckUserCanBeAssignedToIssue` - Check if a user can be assigned to a issue
 * `issuesCreate` - Create an issue
 * `issuesCreateComment` - Create an issue comment
 * `issuesCreateLabel` - Create a label
@@ -409,6 +495,7 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 ### meta
 
 * `metaGet` - Get GitHub meta information
+* `metaGetAllVersions` - Get all API versions
 * `metaGetOctocat` - Get Octocat
 * `metaGetZen` - Get the Zen of GitHub
 * `metaRoot` - GitHub API Root
@@ -427,8 +514,8 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 * `migrationsGetStatusForOrg` - Get an organization migration status
 * `migrationsListForAuthenticatedUser` - List user migrations
 * `migrationsListForOrg` - List organization migrations
+* `migrationsListReposForAuthenticatedUser` - List repositories for a user migration
 * `migrationsListReposForOrg` - List repositories in an organization migration
-* `migrationsListReposForUser` - List repositories for a user migration
 * `migrationsMapCommitAuthor` - Map a commit author
 * `migrationsSetLfsPreference` - Update Git LFS preference
 * `migrationsStartForAuthenticatedUser` - Start a user migration
@@ -438,21 +525,14 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 * `migrationsUnlockRepoForOrg` - Unlock an organization repository
 * `migrationsUpdateImport` - Update an import
 
-### oauth-authorizations
+### oidc
 
-* `oauthAuthorizationsCreateAuthorization` - Create a new authorization
-* `oauthAuthorizationsDeleteAuthorization` - Delete an authorization
-* `oauthAuthorizationsDeleteGrant` - Delete a grant
-* `oauthAuthorizationsGetAuthorization` - Get a single authorization
-* `oauthAuthorizationsGetGrant` - Get a single grant
-* `oauthAuthorizationsGetOrCreateAuthorizationForApp` - Get-or-create an authorization for a specific app
-* `oauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprint` - Get-or-create an authorization for a specific app and fingerprint
-* `oauthAuthorizationsListAuthorizations` - List your authorizations
-* `oauthAuthorizationsListGrants` - List your grants
-* `oauthAuthorizationsUpdateAuthorization` - Update an existing authorization
+* `oidcGetOidcCustomSubTemplateForOrg` - Get the customization template for an OIDC subject claim for an organization
+* `oidcUpdateOidcCustomSubTemplateForOrg` - Set the customization template for an OIDC subject claim for an organization
 
 ### orgs
 
+* `orgsAddSecurityManagerTeam` - Add a security manager team
 * `orgsBlockUser` - Block a user from an organization
 * `orgsCancelInvitation` - Cancel an organization invitation
 * `orgsCheckBlockedUser` - Check if a user is blocked by an organization
@@ -462,12 +542,13 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 * `orgsCreateInvitation` - Create an organization invitation
 * `orgsCreateWebhook` - Create an organization webhook
 * `orgsDeleteWebhook` - Delete an organization webhook
+* `orgsEnableOrDisableSecurityProductOnAllOrgRepos` - Enable or disable a security feature for an organization
 * `orgsGet` - Get an organization
-* `orgsGetAuditLog` - Get the audit log for an organization
 * `orgsGetMembershipForAuthenticatedUser` - Get an organization membership for the authenticated user
 * `orgsGetMembershipForUser` - Get organization membership for a user
 * `orgsGetWebhook` - Get an organization webhook
 * `orgsGetWebhookConfigForOrg` - Get a webhook configuration for an organization
+* `orgsGetWebhookDelivery` - Get a webhook delivery for an organization webhook
 * `orgsList` - List organizations
 * `orgsListAppInstallations` - List app installations for an organization
 * `orgsListBlockedUsers` - List users blocked by an organization
@@ -480,14 +561,16 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 * `orgsListOutsideCollaborators` - List outside collaborators for an organization
 * `orgsListPendingInvitations` - List pending organization invitations
 * `orgsListPublicMembers` - List public organization members
-* `orgsListSamlSsoAuthorizations` - List SAML SSO authorizations for an organization
+* `orgsListSecurityManagerTeams` - List security manager teams
+* `orgsListWebhookDeliveries` - List deliveries for an organization webhook
 * `orgsListWebhooks` - List organization webhooks
 * `orgsPingWebhook` - Ping an organization webhook
+* `orgsRedeliverWebhookDelivery` - Redeliver a delivery for an organization webhook
 * `orgsRemoveMember` - Remove an organization member
 * `orgsRemoveMembershipForUser` - Remove organization membership for a user
 * `orgsRemoveOutsideCollaborator` - Remove outside collaborator from an organization
 * `orgsRemovePublicMembershipForAuthenticatedUser` - Remove public organization membership for the authenticated user
-* `orgsRemoveSamlSsoAuthorization` - Remove a SAML SSO authorization for an organization
+* `orgsRemoveSecurityManagerTeam` - Remove a security manager team
 * `orgsSetMembershipForUser` - Set organization membership for a user
 * `orgsSetPublicMembershipForAuthenticatedUser` - Set public organization membership for the authenticated user
 * `orgsUnblockUser` - Unblock a user from an organization
@@ -500,21 +583,28 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 
 * `packagesDeletePackageForAuthenticatedUser` - Delete a package for the authenticated user
 * `packagesDeletePackageForOrg` - Delete a package for an organization
+* `packagesDeletePackageForUser` - Delete a package for a user
 * `packagesDeletePackageVersionForAuthenticatedUser` - Delete a package version for the authenticated user
 * `packagesDeletePackageVersionForOrg` - Delete package version for an organization
-* `packagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUser` - Get all package versions for a package owned by the authenticated user
-* `packagesGetAllPackageVersionsForPackageOwnedByOrg` - Get all package versions for a package owned by an organization
-* `packagesGetAllPackageVersionsForPackageOwnedByUser` - Get all package versions for a package owned by a user
+* `packagesDeletePackageVersionForUser` - Delete package version for a user
+* `packagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUser` - List package versions for a package owned by the authenticated user
+* `packagesGetAllPackageVersionsForPackageOwnedByOrg` - List package versions for a package owned by an organization
+* `packagesGetAllPackageVersionsForPackageOwnedByUser` - List package versions for a package owned by a user
 * `packagesGetPackageForAuthenticatedUser` - Get a package for the authenticated user
 * `packagesGetPackageForOrganization` - Get a package for an organization
 * `packagesGetPackageForUser` - Get a package for a user
 * `packagesGetPackageVersionForAuthenticatedUser` - Get a package version for the authenticated user
 * `packagesGetPackageVersionForOrganization` - Get a package version for an organization
 * `packagesGetPackageVersionForUser` - Get a package version for a user
+* `packagesListPackagesForAuthenticatedUser` - List packages for the authenticated user's namespace
+* `packagesListPackagesForOrganization` - List packages for an organization
+* `packagesListPackagesForUser` - List packages for a user
 * `packagesRestorePackageForAuthenticatedUser` - Restore a package for the authenticated user
 * `packagesRestorePackageForOrg` - Restore a package for an organization
+* `packagesRestorePackageForUser` - Restore a package for a user
 * `packagesRestorePackageVersionForAuthenticatedUser` - Restore a package version for the authenticated user
 * `packagesRestorePackageVersionForOrg` - Restore package version for an organization
+* `packagesRestorePackageVersionForUser` - Restore package version for a user
 
 ### projects
 
@@ -561,7 +651,7 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 * `pullsListCommentsForReview` - List comments for a pull request review
 * `pullsListCommits` - List commits on a pull request
 * `pullsListFiles` - List pull requests files
-* `pullsListRequestedReviewers` - List requested reviewers for a pull request
+* `pullsListRequestedReviewers` - Get all requested reviewers for a pull request
 * `pullsListReviewComments` - List review comments on a pull request
 * `pullsListReviewCommentsForRepo` - List review comments in a repository
 * `pullsListReviews` - List reviews for a pull request
@@ -574,7 +664,7 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 * `pullsUpdateReview` - Update a review for a pull request
 * `pullsUpdateReviewComment` - Update a review comment for a pull request
 
-### rate-limit
+### rateLimit
 
 * `rateLimitGet` - Get rate limit status for the authenticated user
 
@@ -584,6 +674,7 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 * `reactionsCreateForIssue` - Create reaction for an issue
 * `reactionsCreateForIssueComment` - Create reaction for an issue comment
 * `reactionsCreateForPullRequestReviewComment` - Create reaction for a pull request review comment
+* `reactionsCreateForRelease` - Create reaction for a release
 * `reactionsCreateForTeamDiscussionCommentInOrg` - Create reaction for a team discussion comment
 * `reactionsCreateForTeamDiscussionCommentLegacy` - Create reaction for a team discussion comment (Legacy)
 * `reactionsCreateForTeamDiscussionInOrg` - Create reaction for a team discussion
@@ -592,13 +683,14 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 * `reactionsDeleteForIssue` - Delete an issue reaction
 * `reactionsDeleteForIssueComment` - Delete an issue comment reaction
 * `reactionsDeleteForPullRequestComment` - Delete a pull request comment reaction
+* `reactionsDeleteForRelease` - Delete a release reaction
 * `reactionsDeleteForTeamDiscussion` - Delete team discussion reaction
 * `reactionsDeleteForTeamDiscussionComment` - Delete team discussion comment reaction
-* `reactionsDeleteLegacy` - Delete a reaction (Legacy)
 * `reactionsListForCommitComment` - List reactions for a commit comment
 * `reactionsListForIssue` - List reactions for an issue
 * `reactionsListForIssueComment` - List reactions for an issue comment
 * `reactionsListForPullRequestReviewComment` - List reactions for a pull request review comment
+* `reactionsListForRelease` - List reactions for a release
 * `reactionsListForTeamDiscussionCommentInOrg` - List reactions for a team discussion comment
 * `reactionsListForTeamDiscussionCommentLegacy` - List reactions for a team discussion comment (Legacy)
 * `reactionsListForTeamDiscussionInOrg` - List reactions for a team discussion
@@ -606,7 +698,7 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 
 ### repos
 
-* `reposAcceptInvitation` - Accept a repository invitation
+* `reposAcceptInvitationForAuthenticatedUser` - Accept a repository invitation
 * `reposAddAppAccessRestrictions` - Add app access restrictions
 * `reposAddCollaborator` - Add a repository collaborator
 * `reposAddStatusCheckContexts` - Add status check contexts
@@ -614,12 +706,15 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 * `reposAddUserAccessRestrictions` - Add user access restrictions
 * `reposCheckCollaborator` - Check if a user is a repository collaborator
 * `reposCheckVulnerabilityAlerts` - Check if vulnerability alerts are enabled for a repository
+* `reposCodeownersErrors` - List CODEOWNERS errors
 * `reposCompareCommits` - Compare two commits
+* `reposCreateAutolink` - Create an autolink reference for a repository
 * `reposCreateCommitComment` - Create a commit comment
 * `reposCreateCommitSignatureProtection` - Create commit signature protection
 * `reposCreateCommitStatus` - Create a commit status
 * `reposCreateDeployKey` - Create a deploy key
 * `reposCreateDeployment` - Create a deployment
+* `reposCreateDeploymentBranchPolicy` - Create a deployment branch policy
 * `reposCreateDeploymentStatus` - Create a deployment status
 * `reposCreateDispatchEvent` - Create a repository dispatch event
 * `reposCreateForAuthenticatedUser` - Create a repository for the authenticated user
@@ -627,40 +722,49 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 * `reposCreateInOrg` - Create an organization repository
 * `reposCreateOrUpdateEnvironment` - Create or update an environment
 * `reposCreateOrUpdateFileContents` - Create or update file contents
+* `reposCreatePagesDeployment` - Create a GitHub Pages deployment
 * `reposCreatePagesSite` - Create a GitHub Pages site
 * `reposCreateRelease` - Create a release
+* `reposCreateTagProtection` - Create a tag protection state for a repository
 * `reposCreateUsingTemplate` - Create a repository using a template
 * `reposCreateWebhook` - Create a repository webhook
-* `reposDeclineInvitation` - Decline a repository invitation
+* `reposDeclineInvitationForAuthenticatedUser` - Decline a repository invitation
 * `reposDelete` - Delete a repository
 * `reposDeleteAccessRestrictions` - Delete access restrictions
 * `reposDeleteAdminBranchProtection` - Delete admin branch protection
 * `reposDeleteAnEnvironment` - Delete an environment
+* `reposDeleteAutolink` - Delete an autolink reference from a repository
 * `reposDeleteBranchProtection` - Delete branch protection
 * `reposDeleteCommitComment` - Delete a commit comment
 * `reposDeleteCommitSignatureProtection` - Delete commit signature protection
 * `reposDeleteDeployKey` - Delete a deploy key
 * `reposDeleteDeployment` - Delete a deployment
+* `reposDeleteDeploymentBranchPolicy` - Delete a deployment branch policy
 * `reposDeleteFile` - Delete a file
 * `reposDeleteInvitation` - Delete a repository invitation
 * `reposDeletePagesSite` - Delete a GitHub Pages site
 * `reposDeletePullRequestReviewProtection` - Delete pull request review protection
 * `reposDeleteRelease` - Delete a release
 * `reposDeleteReleaseAsset` - Delete a release asset
+* `reposDeleteTagProtection` - Delete a tag protection state for a repository
 * `reposDeleteWebhook` - Delete a repository webhook
 * `reposDisableAutomatedSecurityFixes` - Disable automated security fixes
+* `reposDisableLfsForRepo` - Disable Git LFS for a repository
 * `reposDisableVulnerabilityAlerts` - Disable vulnerability alerts
 * `reposDownloadTarballArchive` - Download a repository archive (tar)
 * `reposDownloadZipballArchive` - Download a repository archive (zip)
 * `reposEnableAutomatedSecurityFixes` - Enable automated security fixes
+* `reposEnableLfsForRepo` - Enable Git LFS for a repository
 * `reposEnableVulnerabilityAlerts` - Enable vulnerability alerts
+* `reposGenerateReleaseNotes` - Generate release notes content for a release
 * `reposGet` - Get a repository
 * `reposGetAccessRestrictions` - Get access restrictions
 * `reposGetAdminBranchProtection` - Get admin branch protection
-* `reposGetAllEnvironments` - Get all environments
+* `reposGetAllEnvironments` - List environments
 * `reposGetAllStatusCheckContexts` - Get all status check contexts
 * `reposGetAllTopics` - Get all repository topics
 * `reposGetAppsWithAccessToProtectedBranch` - Get apps with access to the protected branch
+* `reposGetAutolink` - Get an autolink reference of a repository
 * `reposGetBranch` - Get a branch
 * `reposGetBranchProtection` - Get branch protection
 * `reposGetClones` - Get repository clones
@@ -676,17 +780,19 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 * `reposGetContributorsStats` - Get all contributor commit activity
 * `reposGetDeployKey` - Get a deploy key
 * `reposGetDeployment` - Get a deployment
+* `reposGetDeploymentBranchPolicy` - Get a deployment branch policy
 * `reposGetDeploymentStatus` - Get a deployment status
 * `reposGetEnvironment` - Get an environment
 * `reposGetLatestPagesBuild` - Get latest Pages build
 * `reposGetLatestRelease` - Get the latest release
 * `reposGetPages` - Get a GitHub Pages site
 * `reposGetPagesBuild` - Get GitHub Pages build
+* `reposGetPagesHealthCheck` - Get a DNS health check for GitHub Pages
 * `reposGetParticipationStats` - Get the weekly commit count
 * `reposGetPullRequestReviewProtection` - Get pull request review protection
 * `reposGetPunchCardStats` - Get the hourly commit count for each day
 * `reposGetReadme` - Get a repository README
-* `reposGetReadmeFromAltPath` - Get a repository README
+* `reposGetReadmeInDirectory` - Get a repository README for a directory
 * `reposGetRelease` - Get a release
 * `reposGetReleaseAsset` - Get a release asset
 * `reposGetReleaseByTag` - Get a release by tag name
@@ -698,6 +804,8 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 * `reposGetViews` - Get page views
 * `reposGetWebhook` - Get a repository webhook
 * `reposGetWebhookConfigForRepo` - Get a webhook configuration for a repository
+* `reposGetWebhookDelivery` - Get a delivery for a repository webhook
+* `reposListAutolinks` - List all autolinks of a repository
 * `reposListBranches` - List branches
 * `reposListBranchesForHeadCommit` - List branches for HEAD commit
 * `reposListCollaborators` - List repository collaborators
@@ -707,6 +815,7 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 * `reposListCommits` - List commits
 * `reposListContributors` - List repository contributors
 * `reposListDeployKeys` - List deploy keys
+* `reposListDeploymentBranchPolicies` - List deployment branch policies
 * `reposListDeploymentStatuses` - List deployment statuses
 * `reposListDeployments` - List deployments
 * `reposListForAuthenticatedUser` - List repositories for the authenticated user
@@ -721,11 +830,15 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 * `reposListPullRequestsAssociatedWithCommit` - List pull requests associated with a commit
 * `reposListReleaseAssets` - List release assets
 * `reposListReleases` - List releases
+* `reposListTagProtection` - List tag protection states for a repository
 * `reposListTags` - List repository tags
 * `reposListTeams` - List repository teams
+* `reposListWebhookDeliveries` - List deliveries for a repository webhook
 * `reposListWebhooks` - List repository webhooks
 * `reposMerge` - Merge a branch
+* `reposMergeUpstream` - Sync a fork branch with the upstream repository
 * `reposPingWebhook` - Ping a repository webhook
+* `reposRedeliverWebhookDelivery` - Redeliver a delivery for a repository webhook
 * `reposRemoveAppAccessRestrictions` - Remove app access restrictions
 * `reposRemoveCollaborator` - Remove a repository collaborator
 * `reposRemoveStatusCheckContexts` - Remove status check contexts
@@ -745,6 +858,7 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 * `reposUpdate` - Update a repository
 * `reposUpdateBranchProtection` - Update branch protection
 * `reposUpdateCommitComment` - Update a commit comment
+* `reposUpdateDeploymentBranchPolicy` - Update a deployment branch policy
 * `reposUpdateInformationAboutPagesSite` - Update information about a GitHub Pages site
 * `reposUpdateInvitation` - Update a repository invitation
 * `reposUpdatePullRequestReviewProtection` - Update pull request review protection
@@ -754,15 +868,6 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 * `reposUpdateWebhook` - Update a repository webhook
 * `reposUpdateWebhookConfigForRepo` - Update a webhook configuration for a repository
 * `reposUploadReleaseAsset` - Upload a release asset
-
-### scim
-
-* `scimDeleteUserFromOrg` - Delete a SCIM user from an organization
-* `scimGetProvisioningInformationForUser` - Get SCIM provisioning information for a user
-* `scimListProvisionedIdentities` - List SCIM provisioned identities
-* `scimProvisionAndInviteUser` - Provision and invite a SCIM user
-* `scimSetInformationForProvisionedUser` - Update a provisioned organization membership
-* `scimUpdateAttributeForUser` - Update an attribute for a SCIM user
 
 ### search
 
@@ -774,10 +879,13 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 * `searchTopics` - Search topics
 * `searchUsers` - Search users
 
-### secret-scanning
+### secretScanning
 
 * `secretScanningGetAlert` - Get a secret scanning alert
+* `secretScanningListAlertsForEnterprise` - List secret scanning alerts for an enterprise
+* `secretScanningListAlertsForOrg` - List secret scanning alerts for an organization
 * `secretScanningListAlertsForRepo` - List secret scanning alerts for a repository
+* `secretScanningListLocationsForAlert` - List locations for a secret scanning alert
 * `secretScanningUpdateAlert` - Update a secret scanning alert
 
 ### teams
@@ -798,8 +906,6 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 * `teamsCreateDiscussionCommentLegacy` - Create a discussion comment (Legacy)
 * `teamsCreateDiscussionInOrg` - Create a discussion
 * `teamsCreateDiscussionLegacy` - Create a discussion (Legacy)
-* `teamsCreateOrUpdateIdpGroupConnectionsInOrg` - Create or update IdP group connections
-* `teamsCreateOrUpdateIdpGroupConnectionsLegacy` - Create or update IdP group connections (Legacy)
 * `teamsDeleteDiscussionCommentInOrg` - Delete a discussion comment
 * `teamsDeleteDiscussionCommentLegacy` - Delete a discussion comment (Legacy)
 * `teamsDeleteDiscussionInOrg` - Delete a discussion
@@ -823,9 +929,6 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 * `teamsListDiscussionsInOrg` - List discussions
 * `teamsListDiscussionsLegacy` - List discussions (Legacy)
 * `teamsListForAuthenticatedUser` - List teams for the authenticated user
-* `teamsListIdpGroupsForLegacy` - List IdP groups for a team (Legacy)
-* `teamsListIdpGroupsForOrg` - List IdP groups for an organization
-* `teamsListIdpGroupsInOrg` - List IdP groups for a team
 * `teamsListMembersInOrg` - List team members
 * `teamsListMembersLegacy` - List team members (Legacy)
 * `teamsListPendingInvitationsInOrg` - List pending team invitations
@@ -850,39 +953,55 @@ sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Act
 
 ### users
 
-* `usersAddEmailForAuthenticated` - Add an email address for the authenticated user
+* `usersAddEmailForAuthenticatedUser` - Add an email address for the authenticated user
 * `usersBlock` - Block a user
 * `usersCheckBlocked` - Check if a user is blocked by the authenticated user
 * `usersCheckFollowingForUser` - Check if a user follows another user
 * `usersCheckPersonIsFollowedByAuthenticated` - Check if a person is followed by the authenticated user
-* `usersCreateGpgKeyForAuthenticated` - Create a GPG key for the authenticated user
-* `usersCreatePublicSshKeyForAuthenticated` - Create a public SSH key for the authenticated user
-* `usersDeleteEmailForAuthenticated` - Delete an email address for the authenticated user
-* `usersDeleteGpgKeyForAuthenticated` - Delete a GPG key for the authenticated user
-* `usersDeletePublicSshKeyForAuthenticated` - Delete a public SSH key for the authenticated user
+* `usersCreateGpgKeyForAuthenticatedUser` - Create a GPG key for the authenticated user
+* `usersCreatePublicSshKeyForAuthenticatedUser` - Create a public SSH key for the authenticated user
+* `usersCreateSshSigningKeyForAuthenticatedUser` - Create a SSH signing key for the authenticated user
+* `usersDeleteEmailForAuthenticatedUser` - Delete an email address for the authenticated user
+* `usersDeleteGpgKeyForAuthenticatedUser` - Delete a GPG key for the authenticated user
+* `usersDeletePublicSshKeyForAuthenticatedUser` - Delete a public SSH key for the authenticated user
+* `usersDeleteSshSigningKeyForAuthenticatedUser` - Delete an SSH signing key for the authenticated user
 * `usersFollow` - Follow a user
 * `usersGetAuthenticated` - Get the authenticated user
 * `usersGetByUsername` - Get a user
 * `usersGetContextForUser` - Get contextual information for a user
-* `usersGetGpgKeyForAuthenticated` - Get a GPG key for the authenticated user
-* `usersGetPublicSshKeyForAuthenticated` - Get a public SSH key for the authenticated user
+* `usersGetGpgKeyForAuthenticatedUser` - Get a GPG key for the authenticated user
+* `usersGetPublicSshKeyForAuthenticatedUser` - Get a public SSH key for the authenticated user
+* `usersGetSshSigningKeyForAuthenticatedUser` - Get an SSH signing key for the authenticated user
 * `usersList` - List users
-* `usersListBlockedByAuthenticated` - List users blocked by the authenticated user
-* `usersListEmailsForAuthenticated` - List email addresses for the authenticated user
-* `usersListFollowedByAuthenticated` - List the people the authenticated user follows
+* `usersListBlockedByAuthenticatedUser` - List users blocked by the authenticated user
+* `usersListEmailsForAuthenticatedUser` - List email addresses for the authenticated user
+* `usersListFollowedByAuthenticatedUser` - List the people the authenticated user follows
 * `usersListFollowersForAuthenticatedUser` - List followers of the authenticated user
 * `usersListFollowersForUser` - List followers of a user
 * `usersListFollowingForUser` - List the people a user follows
-* `usersListGpgKeysForAuthenticated` - List GPG keys for the authenticated user
+* `usersListGpgKeysForAuthenticatedUser` - List GPG keys for the authenticated user
 * `usersListGpgKeysForUser` - List GPG keys for a user
-* `usersListPublicEmailsForAuthenticated` - List public email addresses for the authenticated user
+* `usersListPublicEmailsForAuthenticatedUser` - List public email addresses for the authenticated user
 * `usersListPublicKeysForUser` - List public keys for a user
-* `usersListPublicSshKeysForAuthenticated` - List public SSH keys for the authenticated user
-* `usersSetPrimaryEmailVisibilityForAuthenticated` - Set primary email visibility for the authenticated user
+* `usersListPublicSshKeysForAuthenticatedUser` - List public SSH keys for the authenticated user
+* `usersListSshSigningKeysForAuthenticatedUser` - List SSH signing keys for the authenticated user
+* `usersListSshSigningKeysForUser` - List SSH signing keys for a user
+* `usersSetPrimaryEmailVisibilityForAuthenticatedUser` - Set primary email visibility for the authenticated user
 * `usersUnblock` - Unblock a user
 * `usersUnfollow` - Unfollow a user
 * `usersUpdateAuthenticated` - Update the authenticated user
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

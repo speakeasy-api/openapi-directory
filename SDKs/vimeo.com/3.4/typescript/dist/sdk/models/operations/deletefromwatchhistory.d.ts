@@ -1,16 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class DeleteFromWatchHistoryPathParams extends SpeakeasyBase {
-    videoId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteFromWatchHistorySecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
+    oauth2: string;
 }
 export declare class DeleteFromWatchHistoryRequest extends SpeakeasyBase {
-    pathParams: DeleteFromWatchHistoryPathParams;
-    security: DeleteFromWatchHistorySecurity;
+    /**
+     * The ID of the video.
+     */
+    videoId: number;
 }
 export declare class DeleteFromWatchHistoryResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,6 +1,7 @@
 export * from "./altenum";
 export * from "./auditconfig";
 export * from "./auditlogconfig";
+export * from "./auxiliaryversionconfig";
 export * from "./backendmetastore";
 export * from "./backup";
 export * from "./binding";
@@ -28,8 +29,8 @@ export * from "./operation";
 export * from "./policy";
 export * from "./restore";
 export * from "./restoreservicerequest";
+export * from "./scalingconfig";
 export * from "./secret";
-export * from "./security";
 export * from "./service";
 export * from "./setiampolicyrequest";
 export * from "./status";

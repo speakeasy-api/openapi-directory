@@ -1,8 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetFamilyDetailsQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetFamilyDetailsRequest extends SpeakeasyBase {
+    /**
+     * {{apiKeyDescription}}
+     */
+    ocpApimSubscriptionKey?: string;
+    /**
+     * (Required) a numeric identifier of the family
+     */
     id?: string;
 }
-export declare class GetFamilyDetails200ApplicationJson extends SpeakeasyBase {
+/**
+ * Details of the family for 'plot twist'
+ */
+export declare class GetFamilyDetails200ApplicationJSON extends SpeakeasyBase {
     definition?: string;
     description?: string;
     hypernyms?: number[][];
@@ -11,11 +22,12 @@ export declare class GetFamilyDetails200ApplicationJson extends SpeakeasyBase {
     wikidata?: string;
     wordnet30?: string;
 }
-export declare class GetFamilyDetailsRequest extends SpeakeasyBase {
-    queryParams: GetFamilyDetailsQueryParams;
-}
 export declare class GetFamilyDetailsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getFamilyDetails200ApplicationJSONObject?: GetFamilyDetails200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Details of the family for 'plot twist'
+     */
+    getFamilyDetails200ApplicationJSONObject?: GetFamilyDetails200ApplicationJSON;
 }

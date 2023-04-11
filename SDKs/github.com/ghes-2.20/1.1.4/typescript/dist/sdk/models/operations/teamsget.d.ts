@@ -1,13 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class TeamsGetPathParams extends SpeakeasyBase {
-    teamId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class TeamsGetRequest extends SpeakeasyBase {
-    pathParams: TeamsGetPathParams;
+    teamId: number;
 }
 export declare class TeamsGetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     teamFull?: shared.TeamFull;
 }

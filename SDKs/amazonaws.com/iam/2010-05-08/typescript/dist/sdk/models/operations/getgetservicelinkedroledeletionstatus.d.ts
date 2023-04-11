@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetGetServiceLinkedRoleDeletionStatusActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETGETServiceLinkedRoleDeletionStatusActionEnum {
     GetServiceLinkedRoleDeletionStatus = "GetServiceLinkedRoleDeletionStatus"
 }
-export declare enum GetGetServiceLinkedRoleDeletionStatusVersionEnum {
+export declare enum GETGETServiceLinkedRoleDeletionStatusVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class GetGetServiceLinkedRoleDeletionStatusQueryParams extends SpeakeasyBase {
-    action: GetGetServiceLinkedRoleDeletionStatusActionEnum;
+export declare class GETGETServiceLinkedRoleDeletionStatusRequest extends SpeakeasyBase {
+    action: GETGETServiceLinkedRoleDeletionStatusActionEnum;
+    /**
+     * The deletion task identifier. This identifier is returned by the <a>DeleteServiceLinkedRole</a> operation in the format <code>task/aws-service-role/&lt;service-principal-name&gt;/&lt;role-name&gt;/&lt;task-uuid&gt;</code>.
+     */
     deletionTaskId: string;
-    version: GetGetServiceLinkedRoleDeletionStatusVersionEnum;
-}
-export declare class GetGetServiceLinkedRoleDeletionStatusHeaders extends SpeakeasyBase {
+    version: GETGETServiceLinkedRoleDeletionStatusVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetGetServiceLinkedRoleDeletionStatusHeaders extends Speake
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetGetServiceLinkedRoleDeletionStatusRequest extends SpeakeasyBase {
-    queryParams: GetGetServiceLinkedRoleDeletionStatusQueryParams;
-    headers: GetGetServiceLinkedRoleDeletionStatusHeaders;
-}
-export declare class GetGetServiceLinkedRoleDeletionStatusResponse extends SpeakeasyBase {
+export declare class GETGETServiceLinkedRoleDeletionStatusResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,12 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetAnnotsByRefrerenceUsingGetPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETAnnotsByRefrerenceUsingGETRequest extends SpeakeasyBase {
+    /**
+     * Reference RGD ID
+     */
     refRgdId: number;
 }
-export declare class GetAnnotsByRefrerenceUsingGetRequest extends SpeakeasyBase {
-    pathParams: GetAnnotsByRefrerenceUsingGetPathParams;
-}
-export declare class GetAnnotsByRefrerenceUsingGetResponse extends SpeakeasyBase {
+export declare class GETAnnotsByRefrerenceUsingGETResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

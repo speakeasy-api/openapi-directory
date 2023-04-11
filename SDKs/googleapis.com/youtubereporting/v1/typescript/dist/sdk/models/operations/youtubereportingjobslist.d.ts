@@ -1,40 +1,86 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class YoutubereportingJobsListQueryParams extends SpeakeasyBase {
-    dollarXgafv?: shared.XgafvEnum;
-    accessToken?: string;
-    alt?: shared.AltEnum;
-    callback?: string;
-    fields?: string;
-    includeSystemManaged?: boolean;
-    key?: string;
-    oauthToken?: string;
-    onBehalfOfContentOwner?: string;
-    pageSize?: number;
-    pageToken?: string;
-    prettyPrint?: boolean;
-    quotaUser?: string;
-    uploadType?: string;
-    uploadProtocol?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class YoutubereportingJobsListSecurityOption1 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class YoutubereportingJobsListSecurityOption2 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class YoutubereportingJobsListSecurity extends SpeakeasyBase {
     option1?: YoutubereportingJobsListSecurityOption1;
     option2?: YoutubereportingJobsListSecurityOption2;
 }
 export declare class YoutubereportingJobsListRequest extends SpeakeasyBase {
-    queryParams: YoutubereportingJobsListQueryParams;
-    security: YoutubereportingJobsListSecurity;
+    /**
+     * V1 error format.
+     */
+    dollarXgafv?: shared.XgafvEnum;
+    /**
+     * OAuth access token.
+     */
+    accessToken?: string;
+    /**
+     * Data format for response.
+     */
+    alt?: shared.AltEnum;
+    /**
+     * JSONP
+     */
+    callback?: string;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * If set to true, also system-managed jobs will be returned; otherwise only user-created jobs will be returned. System-managed jobs can neither be modified nor deleted.
+     */
+    includeSystemManaged?: boolean;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauthToken?: string;
+    /**
+     * The content owner's external ID on which behalf the user is acting on. If not set, the user is acting for himself (his own channel).
+     */
+    onBehalfOfContentOwner?: string;
+    /**
+     * Requested page size. Server may return fewer jobs than requested. If unspecified, server will pick an appropriate default.
+     */
+    pageSize?: number;
+    /**
+     * A token identifying a page of results the server should return. Typically, this is the value of ListReportTypesResponse.next_page_token returned in response to the previous call to the `ListJobs` method.
+     */
+    pageToken?: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    uploadType?: string;
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    uploadProtocol?: string;
 }
 export declare class YoutubereportingJobsListResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful response
+     */
     listJobsResponse?: shared.ListJobsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

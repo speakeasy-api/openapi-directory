@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class OfferingLearners {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,45 +9,52 @@ export declare class OfferingLearners {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteOfferingsOfferingIdUsersMarkerEmailMarks - Remove learners from coach's marking list
+     * Remove learners from coach's marking list
      *
+     * @remarks
      * Removes an array of learners from coach's marking list.
-    **/
+     */
     deleteOfferingsOfferingIdUsersMarkerEmailMarks(req: operations.DeleteOfferingsOfferingIdUsersMarkerEmailMarksRequest, config?: AxiosRequestConfig): Promise<operations.DeleteOfferingsOfferingIdUsersMarkerEmailMarksResponse>;
     /**
-     * deleteOfferingsOfferingIdUsersUserEmail - Removes user from the offering
+     * Removes user from the offering
      *
+     * @remarks
      * Removes a user from the offering.
-    **/
+     */
     deleteOfferingsOfferingIdUsersUserEmail(req: operations.DeleteOfferingsOfferingIdUsersUserEmailRequest, config?: AxiosRequestConfig): Promise<operations.DeleteOfferingsOfferingIdUsersUserEmailResponse>;
     /**
-     * getOfferingsOfferingIdUsers - Find offering's users
+     * Find offering's users
      *
+     * @remarks
      * Responds with a list of users in the offering (facilitators, learners and markers.).
-    **/
+     */
     getOfferingsOfferingIdUsers(req: operations.GetOfferingsOfferingIdUsersRequest, config?: AxiosRequestConfig): Promise<operations.GetOfferingsOfferingIdUsersResponse>;
     /**
-     * getOfferingsOfferingIdUsersMarkerEmailMarks - Find Learners marked by a coach
+     * Find Learners marked by a coach
      *
+     * @remarks
      * Responds with all learners marked by the specified coach.
-    **/
+     */
     getOfferingsOfferingIdUsersMarkerEmailMarks(req: operations.GetOfferingsOfferingIdUsersMarkerEmailMarksRequest, config?: AxiosRequestConfig): Promise<operations.GetOfferingsOfferingIdUsersMarkerEmailMarksResponse>;
     /**
-     * patchUsersUserEmailTransfer - Transfer a user between offerings
+     * Transfer a user between offerings
      *
+     * @remarks
      * Moves the user's access and progress from one offering to another.
-    **/
+     */
     patchUsersUserEmailTransfer(req: operations.PatchUsersUserEmailTransferRequest, config?: AxiosRequestConfig): Promise<operations.PatchUsersUserEmailTransferResponse>;
     /**
-     * postOfferingsOfferingIdUsers - Adds user to the offering
+     * Adds user to the offering
      *
+     * @remarks
      * Adds one or more users to the offering.
-    **/
+     */
     postOfferingsOfferingIdUsers(req: operations.PostOfferingsOfferingIdUsersRequest, config?: AxiosRequestConfig): Promise<operations.PostOfferingsOfferingIdUsersResponse>;
     /**
-     * postOfferingsOfferingIdUsersMarkerEmailMarks - Add learners to be marked by a coach
+     * Add learners to be marked by a coach
      *
+     * @remarks
      * Adds an array of learners to be marked by the specified coach.
-    **/
+     */
     postOfferingsOfferingIdUsersMarkerEmailMarks(req: operations.PostOfferingsOfferingIdUsersMarkerEmailMarksRequest, config?: AxiosRequestConfig): Promise<operations.PostOfferingsOfferingIdUsersMarkerEmailMarksResponse>;
 }

@@ -1,15 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeStorageActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeStorageActionEnum {
     DescribeStorage = "DescribeStorage"
 }
-export declare enum GetDescribeStorageVersionEnum {
+export declare enum GETDescribeStorageVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class GetDescribeStorageQueryParams extends SpeakeasyBase {
-    action: GetDescribeStorageActionEnum;
-    version: GetDescribeStorageVersionEnum;
-}
-export declare class GetDescribeStorageHeaders extends SpeakeasyBase {
+export declare class GETDescribeStorageRequest extends SpeakeasyBase {
+    action: GETDescribeStorageActionEnum;
+    version: GETDescribeStorageVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +17,9 @@ export declare class GetDescribeStorageHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeStorageRequest extends SpeakeasyBase {
-    queryParams: GetDescribeStorageQueryParams;
-    headers: GetDescribeStorageHeaders;
-}
-export declare class GetDescribeStorageResponse extends SpeakeasyBase {
+export declare class GETDescribeStorageResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

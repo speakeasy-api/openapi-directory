@@ -15,7 +15,6 @@ export * from "./listspokesresponse";
 export * from "./location";
 export * from "./policy";
 export * from "./routerapplianceinstance";
-export * from "./security";
 export * from "./setiampolicyrequest";
 export * from "./spoke";
 export * from "./testiampermissionsrequest";

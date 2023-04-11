@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetBankAccountPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetBankAccountRequest extends SpeakeasyBase {
+    /**
+     * The unique identifier of the application in Noyo
+     */
     applicationId: string;
+    /**
+     * The unique identifier of the bank account in Noyo
+     */
     bankAccountId: string;
 }
-export declare class GetBankAccountRequest extends SpeakeasyBase {
-    pathParams: GetBankAccountPathParams;
-}
 export declare class GetBankAccountResponse extends SpeakeasyBase {
+    /**
+     * Successful Response - Returns a single Bank Account
+     */
     bankAccountResult?: shared.BankAccountResult;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

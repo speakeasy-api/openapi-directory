@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeRegistriesQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum DescribeRegistriesXAmzTargetEnum {
     SpencerFrontendServiceDescribeRegistries = "SpencerFrontendService.DescribeRegistries"
 }
-export declare class DescribeRegistriesHeaders extends SpeakeasyBase {
+export declare class DescribeRegistriesRequest extends SpeakeasyBase {
+    describeRegistriesRequest: shared.DescribeRegistriesRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,17 +14,33 @@ export declare class DescribeRegistriesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeRegistriesXAmzTargetEnum;
-}
-export declare class DescribeRegistriesRequest extends SpeakeasyBase {
-    queryParams: DescribeRegistriesQueryParams;
-    headers: DescribeRegistriesHeaders;
-    request: shared.DescribeRegistriesRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class DescribeRegistriesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeRegistriesResponse?: shared.DescribeRegistriesResponse;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * ServerException
+     */
     serverException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnsupportedCommandException
+     */
     unsupportedCommandException?: any;
 }

@@ -1,0 +1,38 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Indicates Ekm provisioning error if any.
+ */
+export declare enum GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningErrorDomainEnum {
+    EkmProvisioningErrorDomainUnspecified = "EKM_PROVISIONING_ERROR_DOMAIN_UNSPECIFIED",
+    UnspecifiedError = "UNSPECIFIED_ERROR",
+    GoogleServerError = "GOOGLE_SERVER_ERROR",
+    ExternalUserError = "EXTERNAL_USER_ERROR",
+    ExternalPartnerError = "EXTERNAL_PARTNER_ERROR",
+    TimeoutError = "TIMEOUT_ERROR"
+}
+/**
+ * Indicates Ekm enrollment Provisioning of a given workload.
+ */
+export declare enum GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningStateEnum {
+    EkmProvisioningStateUnspecified = "EKM_PROVISIONING_STATE_UNSPECIFIED",
+    EkmProvisioningStatePending = "EKM_PROVISIONING_STATE_PENDING",
+    EkmProvisioningStateFailed = "EKM_PROVISIONING_STATE_FAILED",
+    EkmProvisioningStateCompleted = "EKM_PROVISIONING_STATE_COMPLETED"
+}
+/**
+ * External key management systems(EKM) Provisioning response
+ */
+export declare class GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponse extends SpeakeasyBase {
+    /**
+     * Indicates Ekm provisioning error if any.
+     */
+    ekmProvisioningErrorDomain?: GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningErrorDomainEnum;
+    /**
+     * Detailed error message if Ekm provisioning fails
+     */
+    ekmProvisioningErrorMessage?: string;
+    /**
+     * Indicates Ekm enrollment Provisioning of a given workload.
+     */
+    ekmProvisioningState?: GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningStateEnum;
+}

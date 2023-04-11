@@ -1,10 +1,73 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetBackendApiPathParams extends SpeakeasyBase {
-    appId: string;
-    backendEnvironmentName: string;
+import { AxiosResponse } from "axios";
+/**
+ * The strategy for conflict resolution.
+ */
+export declare enum GetBackendAPIRequestBodyResourceConfigConflictResolutionResolutionStrategyEnum {
+    OptimisticConcurrency = "OPTIMISTIC_CONCURRENCY",
+    Lambda = "LAMBDA",
+    Automerge = "AUTOMERGE",
+    None = "NONE"
 }
-export declare class GetBackendApiHeaders extends SpeakeasyBase {
+/**
+ * The conflict resolution strategy for your data stored in the data models.
+ */
+export declare class GetBackendAPIRequestBodyResourceConfigConflictResolution extends SpeakeasyBase {
+    resolutionStrategy?: GetBackendAPIRequestBodyResourceConfigConflictResolutionResolutionStrategyEnum;
+}
+/**
+ * Describes the authentication mode.
+ */
+export declare enum GetBackendAPIRequestBodyResourceConfigDefaultAuthTypeModeEnum {
+    ApiKey = "API_KEY",
+    AwsIam = "AWS_IAM",
+    AmazonCognitoUserPools = "AMAZON_COGNITO_USER_POOLS",
+    OpenidConnect = "OPENID_CONNECT"
+}
+/**
+ * Describes settings for the authentication mode.
+ */
+export declare class GetBackendAPIRequestBodyResourceConfigDefaultAuthTypeSettings extends SpeakeasyBase {
+    cognitoUserPoolId?: string;
+    description?: string;
+    expirationTime?: number;
+    openIDAuthTTL?: string;
+    openIDClientID?: string;
+    openIDIatTTL?: string;
+    openIDIssueURL?: string;
+    openIDProviderName?: string;
+}
+/**
+ * The default authentication type for interacting with the configured data models in your Amplify project.
+ */
+export declare class GetBackendAPIRequestBodyResourceConfigDefaultAuthType extends SpeakeasyBase {
+    mode?: GetBackendAPIRequestBodyResourceConfigDefaultAuthTypeModeEnum;
+    settings?: GetBackendAPIRequestBodyResourceConfigDefaultAuthTypeSettings;
+}
+/**
+ * The resource config for the data model, configured as a part of the Amplify project.
+ */
+export declare class GetBackendAPIRequestBodyResourceConfig extends SpeakeasyBase {
+    additionalAuthTypes?: shared.BackendAPIAuthType[];
+    apiName?: string;
+    conflictResolution?: GetBackendAPIRequestBodyResourceConfigConflictResolution;
+    defaultAuthType?: GetBackendAPIRequestBodyResourceConfigDefaultAuthType;
+    service?: string;
+    transformSchema?: string;
+}
+export declare class GetBackendAPIRequestBody extends SpeakeasyBase {
+    /**
+     * The resource config for the data model, configured as a part of the Amplify project.
+     */
+    resourceConfig?: GetBackendAPIRequestBodyResourceConfig;
+    /**
+     * The name of this resource.
+     */
+    resourceName: string;
+}
+export declare class GetBackendAPIRequest extends SpeakeasyBase {
+    requestBody: GetBackendAPIRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,59 +75,37 @@ export declare class GetBackendApiHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
+    /**
+     * The app ID.
+     */
+    appId: string;
+    /**
+     * The name of the backend environment.
+     */
+    backendEnvironmentName: string;
 }
-/**
- * The conflict resolution strategy for your data stored in the data models.
-**/
-export declare class GetBackendApiRequestBodyResourceConfigConflictResolution extends SpeakeasyBase {
-    resolutionStrategy?: Record<string, any>;
-}
-/**
- * Describes settings for the authentication mode.
-**/
-export declare class GetBackendApiRequestBodyResourceConfigDefaultAuthTypeSettings extends SpeakeasyBase {
-    cognitoUserPoolId?: Record<string, any>;
-    description?: Record<string, any>;
-    expirationTime?: Record<string, any>;
-    openIDAuthTTL?: Record<string, any>;
-    openIDClientID?: Record<string, any>;
-    openIDIatTTL?: Record<string, any>;
-    openIDIssueURL?: Record<string, any>;
-    openIDProviderName?: Record<string, any>;
-}
-/**
- * The default authentication type for interacting with the configured data models in your Amplify project.
-**/
-export declare class GetBackendApiRequestBodyResourceConfigDefaultAuthType extends SpeakeasyBase {
-    mode?: Record<string, any>;
-    settings?: GetBackendApiRequestBodyResourceConfigDefaultAuthTypeSettings;
-}
-/**
- * The resource config for the data model, configured as a part of the Amplify project.
-**/
-export declare class GetBackendApiRequestBodyResourceConfig extends SpeakeasyBase {
-    additionalAuthTypes?: Record<string, any>;
-    apiName?: Record<string, any>;
-    conflictResolution?: GetBackendApiRequestBodyResourceConfigConflictResolution;
-    defaultAuthType?: GetBackendApiRequestBodyResourceConfigDefaultAuthType;
-    service?: Record<string, any>;
-    transformSchema?: Record<string, any>;
-}
-export declare class GetBackendApiRequestBody extends SpeakeasyBase {
-    resourceConfig?: GetBackendApiRequestBodyResourceConfig;
-    resourceName: string;
-}
-export declare class GetBackendApiRequest extends SpeakeasyBase {
-    pathParams: GetBackendApiPathParams;
-    headers: GetBackendApiHeaders;
-    request: GetBackendApiRequestBody;
-}
-export declare class GetBackendApiResponse extends SpeakeasyBase {
+export declare class GetBackendAPIResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * GatewayTimeoutException
+     */
     gatewayTimeoutException?: any;
-    getBackendAPIResponse?: shared.GetBackendApiResponse;
+    /**
+     * Success
+     */
+    getBackendAPIResponse?: shared.GetBackendAPIResponse;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

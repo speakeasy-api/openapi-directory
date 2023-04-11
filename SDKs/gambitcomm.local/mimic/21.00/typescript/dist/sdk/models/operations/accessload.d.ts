@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class AccessLoadPathParams extends SpeakeasyBase {
-    filename: string;
-}
+import { AxiosResponse } from "axios";
 export declare class AccessLoadRequest extends SpeakeasyBase {
-    pathParams: AccessLoadPathParams;
+    /**
+     * Filename to load
+     */
+    filename: string;
 }
 export declare class AccessLoadResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     accessLoad200ApplicationJSONStrings?: string[];
 }

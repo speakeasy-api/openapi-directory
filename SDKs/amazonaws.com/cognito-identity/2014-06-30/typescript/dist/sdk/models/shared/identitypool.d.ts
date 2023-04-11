@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { CognitoIdentityProvider } from "./cognitoidentityprovider";
 /**
  * An object representing an Amazon Cognito identity pool.
-**/
+ */
 export declare class IdentityPool extends SpeakeasyBase {
     allowClassicFlow?: boolean;
     allowUnauthenticatedIdentities: boolean;

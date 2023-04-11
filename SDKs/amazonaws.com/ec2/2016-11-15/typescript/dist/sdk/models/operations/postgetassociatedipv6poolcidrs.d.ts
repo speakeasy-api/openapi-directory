@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostGetAssociatedIpv6PoolCidrsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTGetAssociatedIpv6PoolCidrsActionEnum {
     GetAssociatedIpv6PoolCidrs = "GetAssociatedIpv6PoolCidrs"
 }
-export declare enum PostGetAssociatedIpv6PoolCidrsVersionEnum {
+export declare enum POSTGetAssociatedIpv6PoolCidrsVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostGetAssociatedIpv6PoolCidrsQueryParams extends SpeakeasyBase {
-    action: PostGetAssociatedIpv6PoolCidrsActionEnum;
+export declare class POSTGetAssociatedIpv6PoolCidrsRequest extends SpeakeasyBase {
+    action: POSTGetAssociatedIpv6PoolCidrsActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostGetAssociatedIpv6PoolCidrsVersionEnum;
-}
-export declare class PostGetAssociatedIpv6PoolCidrsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTGetAssociatedIpv6PoolCidrsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostGetAssociatedIpv6PoolCidrsHeaders extends SpeakeasyBase
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostGetAssociatedIpv6PoolCidrsRequest extends SpeakeasyBase {
-    queryParams: PostGetAssociatedIpv6PoolCidrsQueryParams;
-    headers: PostGetAssociatedIpv6PoolCidrsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostGetAssociatedIpv6PoolCidrsResponse extends SpeakeasyBase {
+export declare class POSTGetAssociatedIpv6PoolCidrsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

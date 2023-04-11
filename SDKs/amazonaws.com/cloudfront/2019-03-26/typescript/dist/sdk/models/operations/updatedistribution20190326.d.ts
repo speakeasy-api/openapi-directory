@@ -1,9 +1,44 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UpdateDistribution20190326PathParams extends SpeakeasyBase {
-    id: string;
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+/**
+ * A distribution configuration.
+ */
+export declare class UpdateDistribution20190326RequestBodyDistributionConfig extends SpeakeasyBase {
+    aliases?: shared.Aliases;
+    cacheBehaviors?: shared.CacheBehaviors;
+    callerReference?: string;
+    comment?: string;
+    customErrorResponses?: shared.CustomErrorResponses;
+    defaultCacheBehavior?: shared.DefaultCacheBehavior;
+    defaultRootObject?: string;
+    enabled?: boolean;
+    httpVersion?: shared.HttpVersionEnum;
+    isIpv6Enabled?: boolean;
+    logging?: shared.LoggingConfig;
+    originGroups?: shared.OriginGroups;
+    origins?: shared.Origins;
+    priceClass?: shared.PriceClassEnum;
+    restrictions?: shared.Restrictions;
+    viewerCertificate?: shared.ViewerCertificate;
+    webACLId?: string;
 }
-export declare class UpdateDistribution20190326Headers extends SpeakeasyBase {
+export declare class UpdateDistribution20190326RequestBody extends SpeakeasyBase {
+    /**
+     * A distribution configuration.
+     */
+    distributionConfig: UpdateDistribution20190326RequestBodyDistributionConfig;
+}
+export declare class UpdateDistribution20190326Request extends SpeakeasyBase {
+    /**
+     * The distribution's id.
+     */
+    id: string;
+    /**
+     * The value of the <code>ETag</code> header that you received when retrieving the distribution's configuration. For example: <code>E2QWRUHAPOMQZL</code>.
+     */
     ifMatch?: string;
+    requestBody: Uint8Array;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,13 +47,9 @@ export declare class UpdateDistribution20190326Headers extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class UpdateDistribution20190326Request extends SpeakeasyBase {
-    pathParams: UpdateDistribution20190326PathParams;
-    headers: UpdateDistribution20190326Headers;
-    request: Uint8Array;
-}
 export declare class UpdateDistribution20190326Response extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

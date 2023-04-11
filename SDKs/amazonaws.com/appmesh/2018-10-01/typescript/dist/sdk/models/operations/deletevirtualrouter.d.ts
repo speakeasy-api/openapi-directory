@@ -1,10 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteVirtualRouterPathParams extends SpeakeasyBase {
-    meshName: string;
-    virtualRouterName: string;
-}
-export declare class DeleteVirtualRouterHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteVirtualRouterRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,20 +9,49 @@ export declare class DeleteVirtualRouterHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DeleteVirtualRouterRequest extends SpeakeasyBase {
-    pathParams: DeleteVirtualRouterPathParams;
-    headers: DeleteVirtualRouterHeaders;
+    /**
+     * The name of the service mesh in which to delete the virtual router.
+     */
+    meshName: string;
+    /**
+     * The name of the virtual router to delete.
+     */
+    virtualRouterName: string;
 }
 export declare class DeleteVirtualRouterResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteVirtualRouterOutput?: shared.DeleteVirtualRouterOutput;
+    /**
+     * ForbiddenException
+     */
     forbiddenException?: any;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
+    /**
+     * ResourceInUseException
+     */
     resourceInUseException?: any;
+    /**
+     * ServiceUnavailableException
+     */
     serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

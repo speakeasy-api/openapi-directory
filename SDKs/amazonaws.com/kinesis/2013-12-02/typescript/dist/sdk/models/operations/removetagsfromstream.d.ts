@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum RemoveTagsFromStreamXAmzTargetEnum {
     Kinesis20131202RemoveTagsFromStream = "Kinesis_20131202.RemoveTagsFromStream"
 }
-export declare class RemoveTagsFromStreamHeaders extends SpeakeasyBase {
+export declare class RemoveTagsFromStreamRequest extends SpeakeasyBase {
+    removeTagsFromStreamInput: shared.RemoveTagsFromStreamInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,28 @@ export declare class RemoveTagsFromStreamHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: RemoveTagsFromStreamXAmzTargetEnum;
 }
-export declare class RemoveTagsFromStreamRequest extends SpeakeasyBase {
-    headers: RemoveTagsFromStreamHeaders;
-    request: shared.RemoveTagsFromStreamInput;
-}
 export declare class RemoveTagsFromStreamResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
+    accessDeniedException?: any;
     contentType: string;
+    /**
+     * InvalidArgumentException
+     */
     invalidArgumentException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * ResourceInUseException
+     */
     resourceInUseException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

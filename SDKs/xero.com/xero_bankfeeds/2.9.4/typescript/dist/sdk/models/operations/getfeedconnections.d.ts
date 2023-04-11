@@ -1,22 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetFeedConnectionsQueryParams extends SpeakeasyBase {
-    page?: number;
-    pageSize?: number;
-}
-export declare class GetFeedConnectionsHeaders extends SpeakeasyBase {
-    xeroTenantId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetFeedConnectionsSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class GetFeedConnectionsRequest extends SpeakeasyBase {
-    queryParams: GetFeedConnectionsQueryParams;
-    headers: GetFeedConnectionsHeaders;
-    security: GetFeedConnectionsSecurity;
+    /**
+     * Xero identifier for Tenant
+     */
+    xeroTenantId: string;
+    /**
+     * Page number which specifies the set of records to retrieve. By default the number of the records per set is 10. Example - https://api.xero.com/bankfeeds.xro/1.0/FeedConnections?page=1 to get the second set of the records. When page value is not a number or a negative number, by default, the first set of records is returned.
+     */
+    page?: number;
+    /**
+     * Page size which specifies how many records per page will be returned (default 10). Example - https://api.xero.com/bankfeeds.xro/1.0/FeedConnections?pageSize=100 to specify page size of 100.
+     */
+    pageSize?: number;
 }
 export declare class GetFeedConnectionsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * search results matching criteria returned with pagination and items array
+     */
     feedConnections?: shared.FeedConnections;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

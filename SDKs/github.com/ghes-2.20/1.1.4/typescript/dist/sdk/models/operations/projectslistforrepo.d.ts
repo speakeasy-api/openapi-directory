@@ -1,23 +1,45 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ProjectsListForRepoPathParams extends SpeakeasyBase {
-    owner: string;
-    repo: string;
-}
-export declare class ProjectsListForRepoQueryParams extends SpeakeasyBase {
-    page?: number;
-    perPage?: number;
-    state?: shared.RepoEnum2;
+import { AxiosResponse } from "axios";
+/**
+ * Indicates the state of the projects to return. Can be either `open`, `closed`, or `all`.
+ */
+export declare enum ProjectsListForRepoStateEnum {
+    Open = "open",
+    Closed = "closed",
+    All = "all"
 }
 export declare class ProjectsListForRepoRequest extends SpeakeasyBase {
-    pathParams: ProjectsListForRepoPathParams;
-    queryParams: ProjectsListForRepoQueryParams;
+    owner: string;
+    /**
+     * Page number of the results to fetch.
+     */
+    page?: number;
+    /**
+     * Results per page (max 100)
+     */
+    perPage?: number;
+    repo: string;
+    /**
+     * Indicates the state of the projects to return. Can be either `open`, `closed`, or `all`.
+     */
+    state?: ProjectsListForRepoStateEnum;
 }
 export declare class ProjectsListForRepoResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Requires authentication
+     */
     basicError?: shared.BasicError;
+    /**
+     * Response
+     */
     projects?: shared.Project[];
+    /**
+     * Validation failed
+     */
     validationErrorSimple?: shared.ValidationErrorSimple;
 }

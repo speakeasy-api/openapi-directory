@@ -1,8 +1,70 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Type of objective function, i.e. `min` or `min-max`.
+ *
+ * @remarks
+ *
+ *  * `min`: Minimizes the objective value.
+ *  * `min-max`: Minimizes the maximum objective value.
+ *
+ * For instance, `min` -> `vehicles` minimizes the number of employed vehicles.
+ * `min` -> `completion_time` minimizes the sum of your vehicle routes' completion time.
+ *
+ * If you use, for example, `min-max` -> `completion_time`, it minimizes the maximum of your vehicle routes' completion time, i.e. it minimizes the overall makespan.
+ * This only makes sense if you have more than one vehicle. In case of one vehicle, switching from `min` to `min-max` should not have any impact.
+ * If you have more than one vehicle, then the algorithm tries to constantly move stops from one vehicle to another such that
+ * the completion time of longest vehicle route can be further reduced. For example, if you have one vehicle that takes 8 hours
+ * to serve all customers, adding another vehicle (and using `min-max`) might halve the time to serve all customers to 4 hours. However,
+ * this usually comes with higher transport costs.
+ *
+ * If you want to minimize `vehicles` first and, second, `completion_time`, you can also combine different objectives like this:
+ *
+ * ```json
+ * "objectives" : [
+ *    {
+ *       "type": "min",
+ *       "value": "vehicles"
+ *    },
+ *    {
+ *       "type": "min",
+ *       "value": "completion_time"
+ *    }
+ * ]
+ * ```
+ *
+ * If you want to balance activities or the number of stops among all employed drivers, you need to specify it as follows:
+ *
+ * ```json
+ * "objectives" : [
+ *    {
+ *       "type": "min-max",
+ *       "value": "completion_time"
+ *    },
+ *    {
+ *       "type": "min-max",
+ *       "value": "activities"
+ *    }
+ * ]
+ * ```
+ *
+ */
 export declare enum ObjectiveTypeEnum {
     Min = "min",
     MinMax = "min-max"
 }
+/**
+ * The value of the objective function.
+ *
+ * @remarks
+ * The objective value `transport_time` solely considers the time
+ * your drivers spend on the road, i.e. transport time. In contrary to `transport_time`, `completion_time` also takes waiting times at customer sites into account.
+ * The `completion_time` of a route is defined as the time from starting to ending the route,
+ * i.e. the route's transport time, the sum of waiting times plus the sum of activity durations.
+ * Note that choosing `transport_time` or `completion_time` only makes a difference if you specified time windows for your services/shipments since only in
+ * scenarios with time windows waiting times can occur.
+ * The objective value `vehicles` can only be used along with `min` and minimizes vehicles.
+ *
+ */
 export declare enum ObjectiveValueEnum {
     CompletionTime = "completion_time",
     TransportTime = "transport_time",
@@ -10,6 +72,68 @@ export declare enum ObjectiveValueEnum {
     Activities = "activities"
 }
 export declare class Objective extends SpeakeasyBase {
+    /**
+     * Type of objective function, i.e. `min` or `min-max`.
+     *
+     * @remarks
+     *
+     *  * `min`: Minimizes the objective value.
+     *  * `min-max`: Minimizes the maximum objective value.
+     *
+     * For instance, `min` -> `vehicles` minimizes the number of employed vehicles.
+     * `min` -> `completion_time` minimizes the sum of your vehicle routes' completion time.
+     *
+     * If you use, for example, `min-max` -> `completion_time`, it minimizes the maximum of your vehicle routes' completion time, i.e. it minimizes the overall makespan.
+     * This only makes sense if you have more than one vehicle. In case of one vehicle, switching from `min` to `min-max` should not have any impact.
+     * If you have more than one vehicle, then the algorithm tries to constantly move stops from one vehicle to another such that
+     * the completion time of longest vehicle route can be further reduced. For example, if you have one vehicle that takes 8 hours
+     * to serve all customers, adding another vehicle (and using `min-max`) might halve the time to serve all customers to 4 hours. However,
+     * this usually comes with higher transport costs.
+     *
+     * If you want to minimize `vehicles` first and, second, `completion_time`, you can also combine different objectives like this:
+     *
+     * ```json
+     * "objectives" : [
+     *    {
+     *       "type": "min",
+     *       "value": "vehicles"
+     *    },
+     *    {
+     *       "type": "min",
+     *       "value": "completion_time"
+     *    }
+     * ]
+     * ```
+     *
+     * If you want to balance activities or the number of stops among all employed drivers, you need to specify it as follows:
+     *
+     * ```json
+     * "objectives" : [
+     *    {
+     *       "type": "min-max",
+     *       "value": "completion_time"
+     *    },
+     *    {
+     *       "type": "min-max",
+     *       "value": "activities"
+     *    }
+     * ]
+     * ```
+     *
+     */
     type: ObjectiveTypeEnum;
+    /**
+     * The value of the objective function.
+     *
+     * @remarks
+     * The objective value `transport_time` solely considers the time
+     * your drivers spend on the road, i.e. transport time. In contrary to `transport_time`, `completion_time` also takes waiting times at customer sites into account.
+     * The `completion_time` of a route is defined as the time from starting to ending the route,
+     * i.e. the route's transport time, the sum of waiting times plus the sum of activity durations.
+     * Note that choosing `transport_time` or `completion_time` only makes a difference if you specified time windows for your services/shipments since only in
+     * scenarios with time windows waiting times can occur.
+     * The objective value `vehicles` can only be used along with `min` and minimizes vehicles.
+     *
+     */
     value: ObjectiveValueEnum;
 }

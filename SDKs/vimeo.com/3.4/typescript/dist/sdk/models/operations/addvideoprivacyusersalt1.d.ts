@@ -1,18 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AddVideoPrivacyUsersAlt1PathParams extends SpeakeasyBase {
-    channelId: number;
-    videoId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class AddVideoPrivacyUsersAlt1Security extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
+    oauth2: string;
 }
 export declare class AddVideoPrivacyUsersAlt1Request extends SpeakeasyBase {
-    pathParams: AddVideoPrivacyUsersAlt1PathParams;
-    security: AddVideoPrivacyUsersAlt1Security;
+    /**
+     * The ID of the channel.
+     */
+    channelId: number;
+    /**
+     * The ID of the video.
+     */
+    videoId: number;
 }
 export declare class AddVideoPrivacyUsersAlt1Response extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The users can now view the private video.
+     */
     users?: shared.User[];
 }

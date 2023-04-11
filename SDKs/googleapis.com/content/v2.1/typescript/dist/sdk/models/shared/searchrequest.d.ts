@@ -1,0 +1,18 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Request message for the ReportService.Search method.
+ */
+export declare class SearchRequest extends SpeakeasyBase {
+    /**
+     * Number of ReportRows to retrieve in a single page. Defaults to the maximum of 1000. Values above 1000 are coerced to 1000.
+     */
+    pageSize?: number;
+    /**
+     * Token of the page to retrieve. If not specified, the first page of results is returned. In order to request the next page of results, the value obtained from `next_page_token` in the previous response should be used.
+     */
+    pageToken?: string;
+    /**
+     * Required. Query that defines performance metrics to retrieve and dimensions according to which the metrics are to be segmented. For details on how to construct your query, see the [Query Language guide](https://developers.google.com/shopping-content/guides/reports/query-language/overview).
+     */
+    query?: string;
+}

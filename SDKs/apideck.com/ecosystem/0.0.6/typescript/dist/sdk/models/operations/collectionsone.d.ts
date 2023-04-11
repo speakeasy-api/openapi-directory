@@ -1,14 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CollectionsOnePathParams extends SpeakeasyBase {
-    ecosystemId: string;
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class CollectionsOneRequest extends SpeakeasyBase {
-    pathParams: CollectionsOnePathParams;
+    ecosystemId: string;
+    /**
+     * ID of the record you are acting upon.
+     */
+    id: string;
 }
 export declare class CollectionsOneResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Collection
+     */
     getCollectionResponse?: shared.GetCollectionResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

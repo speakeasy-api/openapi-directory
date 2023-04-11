@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum BatchGetCrawlersXAmzTargetEnum {
-    AwsGlueBatchGetCrawlers = "AWSGlue.BatchGetCrawlers"
+    AWSGlueBatchGetCrawlers = "AWSGlue.BatchGetCrawlers"
 }
-export declare class BatchGetCrawlersHeaders extends SpeakeasyBase {
+export declare class BatchGetCrawlersRequest extends SpeakeasyBase {
+    batchGetCrawlersRequest: shared.BatchGetCrawlersRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class BatchGetCrawlersHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: BatchGetCrawlersXAmzTargetEnum;
 }
-export declare class BatchGetCrawlersRequest extends SpeakeasyBase {
-    headers: BatchGetCrawlersHeaders;
-    request: shared.BatchGetCrawlersRequest;
-}
 export declare class BatchGetCrawlersResponse extends SpeakeasyBase {
+    /**
+     * Success
+     */
     batchGetCrawlersResponse?: shared.BatchGetCrawlersResponse;
     contentType: string;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

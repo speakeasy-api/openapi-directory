@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The shutdown reason.
+ */
 export declare enum GoogleChromeManagementV1BootPerformanceReportShutdownReasonEnum {
     ShutdownReasonUnspecified = "SHUTDOWN_REASON_UNSPECIFIED",
     UserRequest = "USER_REQUEST",
@@ -8,12 +11,30 @@ export declare enum GoogleChromeManagementV1BootPerformanceReportShutdownReasonE
 }
 /**
  * Boot performance report of a device. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDeviceBootMode](https://chromeenterprise.google/policies/#ReportDeviceBootMode) * Data Collection Frequency: On every boot up event * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: Yes * Reported for affiliated users only: N/A
-**/
+ */
 export declare class GoogleChromeManagementV1BootPerformanceReport extends SpeakeasyBase {
+    /**
+     * Total time to boot up.
+     */
     bootUpDuration?: string;
+    /**
+     * The timestamp when power came on.
+     */
     bootUpTime?: string;
+    /**
+     * Timestamp when the report was collected.
+     */
     reportTime?: string;
+    /**
+     * Total time since shutdown start to power off.
+     */
     shutdownDuration?: string;
+    /**
+     * The shutdown reason.
+     */
     shutdownReason?: GoogleChromeManagementV1BootPerformanceReportShutdownReasonEnum;
+    /**
+     * The timestamp when shutdown.
+     */
     shutdownTime?: string;
 }

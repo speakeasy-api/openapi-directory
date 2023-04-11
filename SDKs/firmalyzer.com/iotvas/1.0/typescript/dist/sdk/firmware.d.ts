@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Firmware {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,31 +9,31 @@ export declare class Firmware {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * firmwareAccountsFirmwareFirmwareHashAccountsGet - Get default accounts and password hashes of a firmware
-    **/
-    firmwareAccountsFirmwareFirmwareHashAccountsGet(req: operations.FirmwareAccountsFirmwareFirmwareHashAccountsGetRequest, config?: AxiosRequestConfig): Promise<operations.FirmwareAccountsFirmwareFirmwareHashAccountsGetResponse>;
+     * Get default accounts and password hashes of a firmware
+     */
+    getAccounts(req: operations.GetAccountsRequest, security: operations.GetAccountsSecurity, config?: AxiosRequestConfig): Promise<operations.GetAccountsResponse>;
     /**
-     * firmwareConfigIssuesFirmwareFirmwareHashConfigIssuesGet - Get default OS configuration issues of a device firmware
-    **/
-    firmwareConfigIssuesFirmwareFirmwareHashConfigIssuesGet(req: operations.FirmwareConfigIssuesFirmwareFirmwareHashConfigIssuesGetRequest, config?: AxiosRequestConfig): Promise<operations.FirmwareConfigIssuesFirmwareFirmwareHashConfigIssuesGetResponse>;
+     * Get default OS configuration issues of a device firmware
+     */
+    getConfigIssues(req: operations.GetConfigIssuesRequest, security: operations.GetConfigIssuesSecurity, config?: AxiosRequestConfig): Promise<operations.GetConfigIssuesResponse>;
     /**
-     * firmwareExpiredCertsFirmwareFirmwareHashExpiredCertsGet - Get expired digital certificates embedded in a device firmware
-    **/
-    firmwareExpiredCertsFirmwareFirmwareHashExpiredCertsGet(req: operations.FirmwareExpiredCertsFirmwareFirmwareHashExpiredCertsGetRequest, config?: AxiosRequestConfig): Promise<operations.FirmwareExpiredCertsFirmwareFirmwareHashExpiredCertsGetResponse>;
+     * Get expired digital certificates embedded in a device firmware
+     */
+    getExpiredCerts(req: operations.GetExpiredCertsRequest, security: operations.GetExpiredCertsSecurity, config?: AxiosRequestConfig): Promise<operations.GetExpiredCertsResponse>;
     /**
-     * firmwarePrivateKeysFirmwareFirmwareHashPrivateKeysGet - Get private crypto keys embedded in a device firmware
-    **/
-    firmwarePrivateKeysFirmwareFirmwareHashPrivateKeysGet(req: operations.FirmwarePrivateKeysFirmwareFirmwareHashPrivateKeysGetRequest, config?: AxiosRequestConfig): Promise<operations.FirmwarePrivateKeysFirmwareFirmwareHashPrivateKeysGetResponse>;
+     * Get private crypto keys embedded in a device firmware
+     */
+    getPrivateKeys(req: operations.GetPrivateKeysRequest, security: operations.GetPrivateKeysSecurity, config?: AxiosRequestConfig): Promise<operations.GetPrivateKeysResponse>;
     /**
-     * firmwareRiskFirmwareFirmwareHashRiskGet - Get iot device firmware risk analysis
-    **/
-    firmwareRiskFirmwareFirmwareHashRiskGet(req: operations.FirmwareRiskFirmwareFirmwareHashRiskGetRequest, config?: AxiosRequestConfig): Promise<operations.FirmwareRiskFirmwareFirmwareHashRiskGetResponse>;
+     * Get iot device firmware risk analysis
+     */
+    getRisk(req: operations.GetRiskRequest, security: operations.GetRiskSecurity, config?: AxiosRequestConfig): Promise<operations.GetRiskResponse>;
     /**
-     * firmwareWeakCertsFirmwareFirmwareHashWeakCertsGet - Get certificates with weak fingerprinting algorithms that are mebedded in a device firmware
-    **/
-    firmwareWeakCertsFirmwareFirmwareHashWeakCertsGet(req: operations.FirmwareWeakCertsFirmwareFirmwareHashWeakCertsGetRequest, config?: AxiosRequestConfig): Promise<operations.FirmwareWeakCertsFirmwareFirmwareHashWeakCertsGetResponse>;
+     * Get certificates with weak fingerprinting algorithms that are mebedded in a device firmware
+     */
+    getWeakCerts(req: operations.GetWeakCertsRequest, security: operations.GetWeakCertsSecurity, config?: AxiosRequestConfig): Promise<operations.GetWeakCertsResponse>;
     /**
-     * firmwareWeakKeysFirmwareFirmwareHashWeakKeysGet - Get weak crypto keys with short length
-    **/
-    firmwareWeakKeysFirmwareFirmwareHashWeakKeysGet(req: operations.FirmwareWeakKeysFirmwareFirmwareHashWeakKeysGetRequest, config?: AxiosRequestConfig): Promise<operations.FirmwareWeakKeysFirmwareFirmwareHashWeakKeysGetResponse>;
+     * Get weak crypto keys with short length
+     */
+    getWeakKeys(req: operations.GetWeakKeysRequest, security: operations.GetWeakKeysSecurity, config?: AxiosRequestConfig): Promise<operations.GetWeakKeysResponse>;
 }

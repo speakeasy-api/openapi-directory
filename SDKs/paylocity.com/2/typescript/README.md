@@ -6,50 +6,45 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/paylocity.com/2/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/paylocity.com/2/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AddOrUpdateAdditionalRatesRequest, AddOrUpdateAdditionalRatesResponse } from "openapi/src/sdk/models/operations";
+import {
+  AddOrUpdateAdditionalRatesRequest,
+  AddOrUpdateAdditionalRatesResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: AddOrUpdateAdditionalRatesRequest = {
-  security: {
-    paylocityAuth: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
+  additionalRate: {
+    changeReason: "corrupti",
+    costCenter1: "provident",
+    costCenter2: "distinctio",
+    costCenter3: "quibusdam",
+    effectiveDate: "unde",
+    endCheckDate: "nulla",
+    job: "corrupti",
+    rate: 8472.52,
+    rateCode: "vel",
+    rateNotes: "error",
+    ratePer: "deserunt",
+    shift: "suscipit",
   },
-  pathParams: {
-    companyId: "sit",
-    employeeId: "voluptas",
-  },
-  request: {
-    changeReason: "culpa",
-    costCenter1: "expedita",
-    costCenter2: "consequuntur",
-    costCenter3: "dolor",
-    effectiveDate: "expedita",
-    endCheckDate: "voluptas",
-    job: "fugit",
-    rate: 28.100000,
-    rateCode: "rerum",
-    rateNotes: "dicta",
-    ratePer: "debitis",
-    shift: "voluptatum",
-  },
+  companyId: "iure",
+  employeeId: "magnam",
 };
 
 sdk.additionalRates.addOrUpdateAdditionalRates(req).then((res: AddOrUpdateAdditionalRatesResponse | AxiosError) => {
@@ -59,33 +54,34 @@ sdk.additionalRates.addOrUpdateAdditionalRates(req).then((res: AddOrUpdateAdditi
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### Additional Rates
+
+### additionalRates
 
 * `addOrUpdateAdditionalRates` - Add/update additional rates
 
-### Client Credentials
+### clientCredentials
 
 * `addClientSecret` - Obtain new client secret.
 
-### Company Codes
+### companyCodes
 
 * `getAllCompanyCodesAndDescriptionsByResource` - Get All Company Codes
 
-### Company-Specific Schema
+### companySpecificSchema
 
-* `getCompanySpecificOpenApiDocumentation` - Get Company-Specific Open API Documentation
+* `getCompanySpecificOpenAPIDocumentation` - Get Company-Specific Open API Documentation
 
-### Custom Fields
+### customFields
 
 * `getAllCustomFieldsByCategory` - Get All Custom Fields
 
-### Direct Deposit
+### directDeposit
 
 * `getAllDirectDeposit` - Get All Direct Deposit
 
-### Earnings
+### earnings
 
 * `addOrUpdateAnEmployeeEarning` - Add/Update Earning
 * `deleteEarningByEarningCodeAndStartDate` - Delete Earning by Earning Code and Start Date
@@ -93,47 +89,63 @@ sdk.additionalRates.addOrUpdateAdditionalRates(req).then((res: AddOrUpdateAdditi
 * `getEarningByEarningCodeAndStartDate` - Get Earning by Earning Code and Start Date
 * `getEarningsByEarningCode` - Get Earnings by Earning Code
 
-### Emergency Contacts
+### emergencyContacts
 
 * `addOrUpdateEmergencyContacts` - Add/update emergency contacts
 
-### Employee
+### employee
 
 * `addEmployee` - Add new employee
 * `getAllEmployees` - Get all employees
 * `getEmployee` - Get employee
 * `updateEmployee` - Update employee
 
-### Employee Benefit Setup
+### employeeBenefitSetup
 
 * `updateOrAddEmployeeBenefitSetup` - Add/update employee's benefit setup
 
-### Employee Staging
+### employeeStaging
 
 * `addNewEmployeeToWebLink` - Add new employee to Web Link
 
-### Local Taxes
+### localTaxes
 
 * `addLocalTax` - Add new local tax
 * `deleteLocalTaxByTaxCode` - Delete local tax by tax code
 * `getAllLocalTaxes` - Get all local taxes
 * `getLocalTaxByTaxCode` - Get local taxes by tax code
 
-### Non-Primary State Tax
+### nonPrimaryStateTax
 
 * `addOrUpdateNonPrimaryStateTax` - Add/update non-primary state tax
 
-### PayStatements
+### payStatements
 
 * `getsEmployeePayStatementDetailDataBasedOnTheSpecifiedYear` - Get employee pay statement details data for the specified year.
 * `getsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDate` - Get employee pay statement details data for the specified year and check date.
 * `getsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYear` - Get employee pay statement summary data for the specified year.
 * `getsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDate` - Get employee pay statement summary data for the specified year and check date.
 
-### Primary State Tax
+### primaryStateTax
 
 * `addOrUpdatePrimaryStateTax` - Add/update primary state tax
 
+### sensitiveData
+
+* `addOrUpdateSensitiveData` - Add/update sensitive data
+* `getSensitiveData` - Get sensitive data
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

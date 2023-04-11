@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteVpnConnectionRouteActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteVpnConnectionRouteActionEnum {
     DeleteVpnConnectionRoute = "DeleteVpnConnectionRoute"
 }
-export declare enum GetDeleteVpnConnectionRouteVersionEnum {
+export declare enum GETDeleteVpnConnectionRouteVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetDeleteVpnConnectionRouteQueryParams extends SpeakeasyBase {
-    action: GetDeleteVpnConnectionRouteActionEnum;
+export declare class GETDeleteVpnConnectionRouteRequest extends SpeakeasyBase {
+    action: GETDeleteVpnConnectionRouteActionEnum;
+    /**
+     * The CIDR block associated with the local subnet of the customer network.
+     */
     destinationCidrBlock: string;
-    version: GetDeleteVpnConnectionRouteVersionEnum;
+    version: GETDeleteVpnConnectionRouteVersionEnum;
+    /**
+     * The ID of the VPN connection.
+     */
     vpnConnectionId: string;
-}
-export declare class GetDeleteVpnConnectionRouteHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,11 +25,8 @@ export declare class GetDeleteVpnConnectionRouteHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteVpnConnectionRouteRequest extends SpeakeasyBase {
-    queryParams: GetDeleteVpnConnectionRouteQueryParams;
-    headers: GetDeleteVpnConnectionRouteHeaders;
-}
-export declare class GetDeleteVpnConnectionRouteResponse extends SpeakeasyBase {
+export declare class GETDeleteVpnConnectionRouteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

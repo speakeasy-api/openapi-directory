@@ -9,13 +9,34 @@ export declare enum GooglePrivacyDlpV2InfoTypeDescriptionSupportedByEnum {
 }
 /**
  * InfoType description.
-**/
+ */
 export declare class GooglePrivacyDlpV2InfoTypeDescription extends SpeakeasyBase {
+    /**
+     * The category of the infoType.
+     */
     categories?: GooglePrivacyDlpV2InfoTypeCategory[];
+    /**
+     * Description of the infotype. Translated when language is provided in the request.
+     */
     description?: string;
+    /**
+     * Human readable form of the infoType name.
+     */
     displayName?: string;
+    /**
+     * Internal name of the infoType.
+     */
     name?: string;
+    /**
+     * Score is a summary of all elements in the data profile. A higher number means more sensitive.
+     */
     sensitivityScore?: GooglePrivacyDlpV2SensitivityScore;
+    /**
+     * Which parts of the API supports this InfoType.
+     */
     supportedBy?: GooglePrivacyDlpV2InfoTypeDescriptionSupportedByEnum[];
+    /**
+     * A list of available versions for the infotype.
+     */
     versions?: GooglePrivacyDlpV2VersionDescription[];
 }

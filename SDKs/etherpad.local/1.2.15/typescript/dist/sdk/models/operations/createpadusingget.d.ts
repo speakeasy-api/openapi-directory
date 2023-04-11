@@ -1,36 +1,59 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CreatePadUsingGetQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class CreatePadUsingGETRequest extends SpeakeasyBase {
     padID?: string;
     text?: string;
 }
-export declare class CreatePadUsingGet200ApplicationJson extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class CreatePadUsingGet500ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class CreatePadUsingGet400ApplicationJson extends SpeakeasyBase {
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class CreatePadUsingGet401ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class CreatePadUsingGet401ApplicationJson extends SpeakeasyBase {
+/**
+ * generic api error (code 1)
+ */
+export declare class CreatePadUsingGet400ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class CreatePadUsingGet500ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class CreatePadUsingGet200ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class CreatePadUsingGetRequest extends SpeakeasyBase {
-    queryParams: CreatePadUsingGetQueryParams;
-}
-export declare class CreatePadUsingGetResponse extends SpeakeasyBase {
+export declare class CreatePadUsingGETResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createPadUsingGET200ApplicationJSONObject?: CreatePadUsingGet200ApplicationJson;
-    createPadUsingGET400ApplicationJSONObject?: CreatePadUsingGet400ApplicationJson;
-    createPadUsingGET401ApplicationJSONObject?: CreatePadUsingGet401ApplicationJson;
-    createPadUsingGET500ApplicationJSONObject?: CreatePadUsingGet500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    createPadUsingGET200ApplicationJSONObject?: CreatePadUsingGet200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    createPadUsingGET400ApplicationJSONObject?: CreatePadUsingGet400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    createPadUsingGET401ApplicationJSONObject?: CreatePadUsingGet401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    createPadUsingGET500ApplicationJSONObject?: CreatePadUsingGet500ApplicationJSON;
 }

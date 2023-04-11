@@ -1,12 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CollectionsLinkedNodesRelationshipsDeletePathParams extends SpeakeasyBase {
-    collectionId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class CollectionsLinkedNodesRelationshipsDeleteRequest extends SpeakeasyBase {
-    pathParams: CollectionsLinkedNodesRelationshipsDeletePathParams;
-    request: Record<string, any>;
+    requestBody: Record<string, any>;
+    /**
+     * A short id for that collection
+     */
+    collectionId: string;
 }
 export declare class CollectionsLinkedNodesRelationshipsDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

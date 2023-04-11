@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class People {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class People {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * peopleSearchRead - Return cast search result
+     * Return cast search result
      *
+     * @remarks
      * Return cast search result
      *
      * ### Response Class (Status 200)
@@ -21,6 +22,6 @@ export declare class People {
      *
      * For more details on how cast are listed [see here][ref].
      * [ref]: https://etmdb.com/en/cast-list/-updated_date
-    **/
+     */
     peopleSearchRead(req: operations.PeopleSearchReadRequest, config?: AxiosRequestConfig): Promise<operations.PeopleSearchReadResponse>;
 }

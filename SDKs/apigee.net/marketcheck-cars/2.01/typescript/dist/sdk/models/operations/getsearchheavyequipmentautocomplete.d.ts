@@ -1,33 +1,140 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetSearchHeavyEquipmentAutoCompleteQueryParams extends SpeakeasyBase {
-    apiKey?: string;
-    bodyType?: string;
-    city?: string;
-    color?: string;
-    drivetrain?: string;
-    engine?: string;
-    field: shared.ApiKeyEnum4;
-    fuelType?: string;
-    ignoreCase?: boolean;
-    input: string;
-    inventoryType?: shared.InventoryTypeEnum;
-    make?: string;
-    model?: string;
-    sortBy?: shared.InventoryTypeEnum1;
-    state?: string;
-    termCounts?: boolean;
-    transmission?: string;
-    trim?: string;
-    vehicleType?: string;
-    year?: string;
+import { AxiosResponse } from "axios";
+/**
+ * Field name for which you want auto-completion
+ */
+export declare enum GetSearchHeavyEquipmentAutoCompleteFieldEnum {
+    Make = "make",
+    Model = "model",
+    Trim = "trim",
+    BodyType = "body_type",
+    Transmission = "transmission",
+    Drivetrain = "drivetrain",
+    FuelType = "fuel_type",
+    ExteriorColor = "exterior_color",
+    InteriorColor = "interior_color",
+    Engine = "engine",
+    Category = "category",
+    SubCategory = "sub_category",
+    State = "state",
+    City = "city"
+}
+/**
+ * Sort the response, either by index or count(default)
+ */
+export declare enum GetSearchHeavyEquipmentAutoCompleteSortByEnum {
+    Index = "index",
+    Count = "count"
 }
 export declare class GetSearchHeavyEquipmentAutoCompleteRequest extends SpeakeasyBase {
-    queryParams: GetSearchHeavyEquipmentAutoCompleteQueryParams;
+    /**
+     * The API Authentication Key. Mandatory with all API calls.
+     */
+    apiKey?: string;
+    /**
+     * To filter listing on their body type
+     */
+    bodyType?: string;
+    /**
+     * To filter listing on City in which they are listed
+     */
+    city?: string;
+    /**
+     * Color of the vehicle
+     */
+    color?: string;
+    /**
+     * To filter listing on their drivetrain
+     */
+    drivetrain?: string;
+    /**
+     * To filter listing on their engine
+     */
+    engine?: string;
+    /**
+     * Provide minimum count value for facets
+     */
+    facetMinCount?: number;
+    /**
+     * Field name for which you want auto-completion
+     */
+    field: GetSearchHeavyEquipmentAutoCompleteFieldEnum;
+    /**
+     * To filter listing on their fuel type
+     */
+    fuelType?: string;
+    /**
+     * Boolean variable to indicate ignore case of current input
+     */
+    ignoreCase?: boolean;
+    /**
+     * Input entered so far
+     */
+    input: string;
+    /**
+     * To filter listing on their condition. Either used or new
+     */
+    inventoryType?: shared.InventoryTypeEnum;
+    /**
+     * To filter listings on their make
+     */
+    make?: string;
+    /**
+     * To filter listings on their model
+     */
+    model?: string;
+    /**
+     * Radius around the search location (Unit - Miles)
+     */
+    radius?: number;
+    /**
+     * seller type for autocomplete
+     */
+    sellerType?: string;
+    /**
+     * Sort the response, either by index or count(default)
+     */
+    sortBy?: GetSearchHeavyEquipmentAutoCompleteSortByEnum;
+    /**
+     * To filter listing on State in which they are listed
+     */
+    state?: string;
+    /**
+     * Boolean variable to indicate wheather to include term counts as well in response
+     */
+    termCounts?: boolean;
+    /**
+     * To filter listing on their transmission
+     */
+    transmission?: string;
+    /**
+     * To filter listing on their trim
+     */
+    trim?: string;
+    /**
+     * To filter listing on their vehicle type
+     */
+    vehicleType?: string;
+    /**
+     * To filter listing on their year
+     */
+    year?: string;
+    /**
+     * To filter listing on ZIP around which they are listed
+     */
+    zip?: string;
 }
 export declare class GetSearchHeavyEquipmentAutoCompleteResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Error
+     */
     error?: shared.ErrorT;
+    /**
+     * Unique terms available in given field for auto completion
+     */
     searchAutoCompleteResponse?: shared.SearchAutoCompleteResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

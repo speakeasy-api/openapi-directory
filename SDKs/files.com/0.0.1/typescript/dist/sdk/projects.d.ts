@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Operations about projects
+ */
 export declare class Projects {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,33 +12,38 @@ export declare class Projects {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteProjectsId - Delete Project
-     *
      * Delete Project
-    **/
+     *
+     * @remarks
+     * Delete Project
+     */
     deleteProjectsId(req: operations.DeleteProjectsIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteProjectsIdResponse>;
     /**
-     * getProjects - List Projects
-     *
      * List Projects
-    **/
+     *
+     * @remarks
+     * List Projects
+     */
     getProjects(req: operations.GetProjectsRequest, config?: AxiosRequestConfig): Promise<operations.GetProjectsResponse>;
     /**
-     * getProjectsId - Show Project
-     *
      * Show Project
-    **/
+     *
+     * @remarks
+     * Show Project
+     */
     getProjectsId(req: operations.GetProjectsIdRequest, config?: AxiosRequestConfig): Promise<operations.GetProjectsIdResponse>;
     /**
-     * patchProjectsId - Update Project
-     *
      * Update Project
-    **/
+     *
+     * @remarks
+     * Update Project
+     */
     patchProjectsId(req: operations.PatchProjectsIdRequest, config?: AxiosRequestConfig): Promise<operations.PatchProjectsIdResponse>;
     /**
-     * postProjects - Create Project
-     *
      * Create Project
-    **/
-    postProjects(req: operations.PostProjectsRequest, config?: AxiosRequestConfig): Promise<operations.PostProjectsResponse>;
+     *
+     * @remarks
+     * Create Project
+     */
+    postProjects(req: operations.PostProjectsRequestBody, config?: AxiosRequestConfig): Promise<operations.PostProjectsResponse>;
 }

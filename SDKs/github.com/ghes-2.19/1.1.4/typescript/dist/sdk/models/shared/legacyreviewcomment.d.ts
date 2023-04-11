@@ -33,6 +33,9 @@ export declare class LegacyReviewCommentUser extends SpeakeasyBase {
     type?: string;
     url?: string;
 }
+/**
+ * Response
+ */
 export declare class LegacyReviewComment extends SpeakeasyBase {
     links?: LegacyReviewCommentLinks;
     authorAssociation?: string;

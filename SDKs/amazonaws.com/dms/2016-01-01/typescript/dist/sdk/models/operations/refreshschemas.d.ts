@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum RefreshSchemasXAmzTargetEnum {
-    AmazonDmSv20160101RefreshSchemas = "AmazonDMSv20160101.RefreshSchemas"
+    AmazonDMSv20160101RefreshSchemas = "AmazonDMSv20160101.RefreshSchemas"
 }
-export declare class RefreshSchemasHeaders extends SpeakeasyBase {
+export declare class RefreshSchemasRequest extends SpeakeasyBase {
+    refreshSchemasMessage: shared.RefreshSchemasMessage;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class RefreshSchemasHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: RefreshSchemasXAmzTargetEnum;
 }
-export declare class RefreshSchemasRequest extends SpeakeasyBase {
-    headers: RefreshSchemasHeaders;
-    request: shared.RefreshSchemasMessage;
-}
 export declare class RefreshSchemasResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidResourceStateFault
+     */
     invalidResourceStateFault?: any;
+    /**
+     * KMSKeyNotAccessibleFault
+     */
     kmsKeyNotAccessibleFault?: any;
+    /**
+     * Success
+     */
     refreshSchemasResponse?: shared.RefreshSchemasResponse;
-    resourceNotFoundFault?: any;
-    resourceQuotaExceededFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundFault
+     */
+    resourceNotFoundFault?: any;
+    /**
+     * ResourceQuotaExceededFault
+     */
+    resourceQuotaExceededFault?: any;
 }

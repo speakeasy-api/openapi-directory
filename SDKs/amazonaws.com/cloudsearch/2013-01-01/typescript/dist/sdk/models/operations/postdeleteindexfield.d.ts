@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteIndexFieldActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteIndexFieldActionEnum {
     DeleteIndexField = "DeleteIndexField"
 }
-export declare enum PostDeleteIndexFieldVersionEnum {
+export declare enum POSTDeleteIndexFieldVersionEnum {
     TwoThousandAndThirteen0101 = "2013-01-01"
 }
-export declare class PostDeleteIndexFieldQueryParams extends SpeakeasyBase {
-    action: PostDeleteIndexFieldActionEnum;
-    version: PostDeleteIndexFieldVersionEnum;
-}
-export declare class PostDeleteIndexFieldHeaders extends SpeakeasyBase {
+export declare class POSTDeleteIndexFieldRequest extends SpeakeasyBase {
+    action: POSTDeleteIndexFieldActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteIndexFieldVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteIndexFieldHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteIndexFieldRequest extends SpeakeasyBase {
-    queryParams: PostDeleteIndexFieldQueryParams;
-    headers: PostDeleteIndexFieldHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteIndexFieldResponse extends SpeakeasyBase {
+export declare class POSTDeleteIndexFieldResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

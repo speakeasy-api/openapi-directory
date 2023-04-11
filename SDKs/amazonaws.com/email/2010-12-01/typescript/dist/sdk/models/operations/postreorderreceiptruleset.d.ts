@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostReorderReceiptRuleSetActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTReorderReceiptRuleSetActionEnum {
     ReorderReceiptRuleSet = "ReorderReceiptRuleSet"
 }
-export declare enum PostReorderReceiptRuleSetVersionEnum {
+export declare enum POSTReorderReceiptRuleSetVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostReorderReceiptRuleSetQueryParams extends SpeakeasyBase {
-    action: PostReorderReceiptRuleSetActionEnum;
-    version: PostReorderReceiptRuleSetVersionEnum;
-}
-export declare class PostReorderReceiptRuleSetHeaders extends SpeakeasyBase {
+export declare class POSTReorderReceiptRuleSetRequest extends SpeakeasyBase {
+    action: POSTReorderReceiptRuleSetActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTReorderReceiptRuleSetVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostReorderReceiptRuleSetHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostReorderReceiptRuleSetRequest extends SpeakeasyBase {
-    queryParams: PostReorderReceiptRuleSetQueryParams;
-    headers: PostReorderReceiptRuleSetHeaders;
-    request?: Uint8Array;
-}
-export declare class PostReorderReceiptRuleSetResponse extends SpeakeasyBase {
+export declare class POSTReorderReceiptRuleSetResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

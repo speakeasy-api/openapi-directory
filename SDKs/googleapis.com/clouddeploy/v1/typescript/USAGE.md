@@ -1,108 +1,193 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { ClouddeployProjectsLocationsDeliveryPipelinesCreateRequest, ClouddeployProjectsLocationsDeliveryPipelinesCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  ClouddeployProjectsLocationsDeliveryPipelinesCreateRequest,
+  ClouddeployProjectsLocationsDeliveryPipelinesCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: ClouddeployProjectsLocationsDeliveryPipelinesCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    deliveryPipelineId: "dolor",
-    fields: "expedita",
-    key: "voluptas",
-    oauthToken: "fugit",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    requestId: "rerum",
-    uploadType: "dicta",
-    uploadProtocol: "debitis",
-    validateOnly: true,
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  deliveryPipelineInput: {
     annotations: {
-      "ut": "dolorem",
+      "distinctio": "quibusdam",
+      "unde": "nulla",
+      "corrupti": "illum",
     },
     condition: {
       pipelineReadyCondition: {
         status: false,
-        updateTime: "voluptate",
+        updateTime: "vel",
       },
       targetsPresentCondition: {
         missingTargets: [
-          "vitae",
-          "totam",
-          "dolores",
+          "deserunt",
+          "suscipit",
+          "iure",
         ],
         status: false,
-        updateTime: "debitis",
+        updateTime: "magnam",
+      },
+      targetsTypeCondition: {
+        errorDetails: "debitis",
+        status: false,
       },
     },
-    description: "vel",
-    etag: "odio",
+    description: "ipsa",
+    etag: "delectus",
     labels: {
-      "id": "aspernatur",
-      "accusantium": "totam",
+      "suscipit": "molestiae",
+      "minus": "placeat",
     },
-    name: "commodi",
+    name: "voluptatum",
     serialPipeline: {
       stages: [
         {
           profiles: [
-            "aut",
-            "odit",
+            "nisi",
+            "recusandae",
+            "temporibus",
           ],
           strategy: {
-            standard: {
-              verify: true,
+            canary: {
+              canaryDeployment: {
+                percentages: [
+                  337396,
+                ],
+                verify: false,
+              },
+              customCanaryDeployment: {
+                phaseConfigs: [
+                  {
+                    percentage: 648172,
+                    phaseId: "perferendis",
+                    profiles: [
+                      "repellendus",
+                      "sapiente",
+                    ],
+                    verify: false,
+                  },
+                ],
+              },
+              runtimeConfig: {
+                cloudRun: {
+                  automaticTrafficControl: false,
+                },
+                kubernetes: {
+                  gatewayServiceMesh: {
+                    deployment: "quo",
+                    httpRoute: "odit",
+                    service: "at",
+                  },
+                  serviceNetworking: {
+                    deployment: "at",
+                    service: "maiores",
+                  },
+                },
+              },
             },
-          },
-          targetId: "voluptas",
-        },
-        {
-          profiles: [
-            "aut",
-            "illo",
-          ],
-          strategy: {
             standard: {
               verify: false,
             },
           },
-          targetId: "officiis",
+          targetId: "molestiae",
         },
         {
           profiles: [
-            "consectetur",
-            "nobis",
+            "quod",
+            "esse",
+            "totam",
+            "porro",
           ],
           strategy: {
+            canary: {
+              canaryDeployment: {
+                percentages: [
+                  118274,
+                  720633,
+                  639921,
+                ],
+                verify: false,
+              },
+              customCanaryDeployment: {
+                phaseConfigs: [
+                  {
+                    percentage: 143353,
+                    phaseId: "deleniti",
+                    profiles: [
+                      "optio",
+                      "totam",
+                      "beatae",
+                      "commodi",
+                    ],
+                    verify: false,
+                  },
+                  {
+                    percentage: 473600,
+                    phaseId: "modi",
+                    profiles: [
+                      "impedit",
+                    ],
+                    verify: false,
+                  },
+                  {
+                    percentage: 736918,
+                    phaseId: "esse",
+                    profiles: [
+                      "excepturi",
+                    ],
+                    verify: false,
+                  },
+                ],
+              },
+              runtimeConfig: {
+                cloudRun: {
+                  automaticTrafficControl: false,
+                },
+                kubernetes: {
+                  gatewayServiceMesh: {
+                    deployment: "aspernatur",
+                    httpRoute: "perferendis",
+                    service: "ad",
+                  },
+                  serviceNetworking: {
+                    deployment: "natus",
+                    service: "sed",
+                  },
+                },
+              },
+            },
             standard: {
               verify: false,
             },
           },
-          targetId: "qui",
+          targetId: "iste",
         },
       ],
     },
-    suspended: true,
+    suspended: false,
   },
+  accessToken: "dolor",
+  alt: AltEnum.Media,
+  callback: "laboriosam",
+  deliveryPipelineId: "hic",
+  fields: "saepe",
+  key: "fuga",
+  oauthToken: "in",
+  parent: "corporis",
+  prettyPrint: false,
+  quotaUser: "iste",
+  requestId: "iure",
+  uploadType: "saepe",
+  uploadProtocol: "quidem",
+  validateOnly: false,
 };
 
 sdk.projects.clouddeployProjectsLocationsDeliveryPipelinesCreate(req).then((res: ClouddeployProjectsLocationsDeliveryPipelinesCreateResponse | AxiosError) => {

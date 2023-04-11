@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetVerifyDomainDkimActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETVerifyDomainDkimActionEnum {
     VerifyDomainDkim = "VerifyDomainDkim"
 }
-export declare enum GetVerifyDomainDkimVersionEnum {
+export declare enum GETVerifyDomainDkimVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetVerifyDomainDkimQueryParams extends SpeakeasyBase {
-    action: GetVerifyDomainDkimActionEnum;
+export declare class GETVerifyDomainDkimRequest extends SpeakeasyBase {
+    action: GETVerifyDomainDkimActionEnum;
+    /**
+     * The name of the domain to be verified for Easy DKIM signing.
+     */
     domain: string;
-    version: GetVerifyDomainDkimVersionEnum;
-}
-export declare class GetVerifyDomainDkimHeaders extends SpeakeasyBase {
+    version: GETVerifyDomainDkimVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetVerifyDomainDkimHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetVerifyDomainDkimRequest extends SpeakeasyBase {
-    queryParams: GetVerifyDomainDkimQueryParams;
-    headers: GetVerifyDomainDkimHeaders;
-}
-export declare class GetVerifyDomainDkimResponse extends SpeakeasyBase {
+export declare class GETVerifyDomainDkimResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

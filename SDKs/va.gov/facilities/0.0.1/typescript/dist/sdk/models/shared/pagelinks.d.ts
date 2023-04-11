@@ -4,6 +4,9 @@ export declare class PageLinks extends SpeakeasyBase {
     last?: string;
     next?: string;
     prev?: string;
+    /**
+     * /services/va_facilities/v0/facilities?id=vha_688
+     */
     related?: string;
     self: string;
 }

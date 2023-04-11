@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetModifyClusterSnapshotScheduleActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETModifyClusterSnapshotScheduleActionEnum {
     ModifyClusterSnapshotSchedule = "ModifyClusterSnapshotSchedule"
 }
-export declare enum GetModifyClusterSnapshotScheduleVersionEnum {
+export declare enum GETModifyClusterSnapshotScheduleVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class GetModifyClusterSnapshotScheduleQueryParams extends SpeakeasyBase {
-    action: GetModifyClusterSnapshotScheduleActionEnum;
+export declare class GETModifyClusterSnapshotScheduleRequest extends SpeakeasyBase {
+    action: GETModifyClusterSnapshotScheduleActionEnum;
+    /**
+     * A unique identifier for the cluster whose snapshot schedule you want to modify.
+     */
     clusterIdentifier: string;
+    /**
+     * A boolean to indicate whether to remove the assoiciation between the cluster and the schedule.
+     */
     disassociateSchedule?: boolean;
+    /**
+     * A unique alphanumeric identifier for the schedule that you want to associate with the cluster.
+     */
     scheduleIdentifier?: string;
-    version: GetModifyClusterSnapshotScheduleVersionEnum;
-}
-export declare class GetModifyClusterSnapshotScheduleHeaders extends SpeakeasyBase {
+    version: GETModifyClusterSnapshotScheduleVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +29,9 @@ export declare class GetModifyClusterSnapshotScheduleHeaders extends SpeakeasyBa
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetModifyClusterSnapshotScheduleRequest extends SpeakeasyBase {
-    queryParams: GetModifyClusterSnapshotScheduleQueryParams;
-    headers: GetModifyClusterSnapshotScheduleHeaders;
-}
-export declare class GetModifyClusterSnapshotScheduleResponse extends SpeakeasyBase {
+export declare class GETModifyClusterSnapshotScheduleResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

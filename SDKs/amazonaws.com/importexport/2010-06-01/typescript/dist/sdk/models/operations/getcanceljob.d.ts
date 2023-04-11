@@ -1,30 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetCancelJobActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETCancelJobActionEnum {
     CancelJob = "CancelJob"
 }
-export declare enum GetCancelJobOperationEnum {
+export declare enum GETCancelJobOperationEnum {
     CancelJob = "CancelJob"
 }
-export declare enum GetCancelJobVersionEnum {
+export declare enum GETCancelJobVersionEnum {
     TwoThousandAndTen0601 = "2010-06-01"
 }
-export declare class GetCancelJobQueryParams extends SpeakeasyBase {
+export declare class GETCancelJobRequest extends SpeakeasyBase {
     apiVersion?: string;
     awsAccessKeyId: string;
-    action: GetCancelJobActionEnum;
+    action: GETCancelJobActionEnum;
     jobId: string;
-    operation: GetCancelJobOperationEnum;
+    operation: GETCancelJobOperationEnum;
     signature: string;
     signatureMethod: string;
     signatureVersion: string;
     timestamp: string;
-    version: GetCancelJobVersionEnum;
+    version: GETCancelJobVersionEnum;
 }
-export declare class GetCancelJobRequest extends SpeakeasyBase {
-    queryParams: GetCancelJobQueryParams;
-}
-export declare class GetCancelJobResponse extends SpeakeasyBase {
+export declare class GETCancelJobResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

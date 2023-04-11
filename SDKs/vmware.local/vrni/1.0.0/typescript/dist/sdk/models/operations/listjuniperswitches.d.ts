@@ -1,13 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListJuniperSwitchesSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
-}
-export declare class ListJuniperSwitchesRequest extends SpeakeasyBase {
-    security: ListJuniperSwitchesSecurity;
-}
+import { AxiosResponse } from "axios";
 export declare class ListJuniperSwitchesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * OK
+     */
     dataSourceListResponse?: shared.DataSourceListResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

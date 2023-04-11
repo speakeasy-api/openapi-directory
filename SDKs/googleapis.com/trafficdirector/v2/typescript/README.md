@@ -6,109 +6,140 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/trafficdirector/v2/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/trafficdirector/v2/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { TrafficdirectorDiscoveryClientStatusRequest, TrafficdirectorDiscoveryClientStatusResponse } from "openapi/src/sdk/models/operations";
+import {
+  TrafficdirectorDiscoveryClientStatusRequest,
+  TrafficdirectorDiscoveryClientStatusResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: TrafficdirectorDiscoveryClientStatusRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "voluptas",
-    alt: "media",
-    callback: "expedita",
-    fields: "consequuntur",
-    key: "dolor",
-    oauthToken: "expedita",
-    prettyPrint: true,
-    quotaUser: "fugit",
-    uploadType: "et",
-    uploadProtocol: "nihil",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  clientStatusRequest: {
     nodeMatchers: [
       {
         nodeId: {
-          exact: "dicta",
-          ignoreCase: true,
-          prefix: "voluptatum",
-          regex: "et",
+          exact: "distinctio",
+          ignoreCase: false,
+          prefix: "quibusdam",
+          regex: "unde",
           safeRegex: {
             googleRe2: {
-              maxProgramSize: 7144924247938981575,
+              maxProgramSize: 857946,
             },
-            regex: "dolorem",
+            regex: "corrupti",
           },
-          suffix: "et",
+          suffix: "illum",
         },
         nodeMetadatas: [
           {
             path: [
               {
-                key: "vitae",
+                key: "deserunt",
               },
               {
-                key: "totam",
+                key: "suscipit",
               },
               {
-                key: "dolores",
+                key: "iure",
               },
             ],
             value: {
               boolMatch: false,
               doubleMatch: {
-                exact: 86.099998,
+                exact: 2975.34,
                 range: {
-                  end: 20.200001,
-                  start: 12.200000,
+                  end: 8917.73,
+                  start: 567.13,
                 },
               },
               listMatch: {
-                oneOf: {
-                
-                },
+                oneOf: {},
               },
               nullMatch: {
-                "totam": "commodi",
-                "quis": "est",
-                "aut": "odit",
+                "tempora": "suscipit",
+                "molestiae": "minus",
+                "placeat": "voluptatum",
+                "iusto": "excepturi",
               },
-              presentMatch: true,
+              presentMatch: false,
               stringMatch: {
-                exact: "voluptas",
-                ignoreCase: true,
-                prefix: "aut",
-                regex: "illo",
+                exact: "nisi",
+                ignoreCase: false,
+                prefix: "recusandae",
+                regex: "temporibus",
                 safeRegex: {
                   googleRe2: {
-                    maxProgramSize: 5558237345453186302,
+                    maxProgramSize: 71036,
                   },
-                  regex: "officiis",
+                  regex: "quis",
                 },
-                suffix: "autem",
+                suffix: "veritatis",
+              },
+            },
+          },
+          {
+            path: [
+              {
+                key: "perferendis",
+              },
+              {
+                key: "ipsam",
+              },
+              {
+                key: "repellendus",
+              },
+            ],
+            value: {
+              boolMatch: false,
+              doubleMatch: {
+                exact: 9571.56,
+                range: {
+                  end: 7781.57,
+                  start: 1403.5,
+                },
+              },
+              listMatch: {
+                oneOf: {},
+              },
+              nullMatch: {
+                "at": "maiores",
+                "molestiae": "quod",
+                "quod": "esse",
+                "totam": "porro",
+              },
+              presentMatch: false,
+              stringMatch: {
+                exact: "dolorum",
+                ignoreCase: false,
+                prefix: "dicta",
+                regex: "nam",
+                safeRegex: {
+                  googleRe2: {
+                    maxProgramSize: 639921,
+                  },
+                  regex: "occaecati",
+                },
+                suffix: "fugit",
               },
             },
           },
@@ -116,59 +147,152 @@ const req: TrafficdirectorDiscoveryClientStatusRequest = {
       },
       {
         nodeId: {
-          exact: "consectetur",
+          exact: "deleniti",
           ignoreCase: false,
-          prefix: "odio",
-          regex: "qui",
+          prefix: "hic",
+          regex: "optio",
           safeRegex: {
             googleRe2: {
-              maxProgramSize: 388440063886460141,
+              maxProgramSize: 521848,
             },
-            regex: "at",
+            regex: "beatae",
           },
-          suffix: "ipsum",
+          suffix: "commodi",
         },
         nodeMetadatas: [
           {
             path: [
               {
-                key: "sint",
+                key: "qui",
               },
               {
-                key: "inventore",
+                key: "impedit",
               },
             ],
             value: {
-              boolMatch: true,
+              boolMatch: false,
               doubleMatch: {
-                exact: 56.099998,
+                exact: 7369.18,
                 range: {
-                  end: 30.200001,
-                  start: 97.099998,
+                  end: 4561.5,
+                  start: 2165.5,
                 },
               },
               listMatch: {
-                oneOf: {
-                
-                },
+                oneOf: {},
               },
               nullMatch: {
-                "beatae": "veritatis",
-                "in": "et",
+                "aspernatur": "perferendis",
+                "ad": "natus",
+                "sed": "iste",
               },
               presentMatch: false,
               stringMatch: {
-                exact: "ipsum",
-                ignoreCase: true,
-                prefix: "dolores",
-                regex: "placeat",
+                exact: "dolor",
+                ignoreCase: false,
+                prefix: "natus",
+                regex: "laboriosam",
                 safeRegex: {
                   googleRe2: {
-                    maxProgramSize: 2118716725206170867,
+                    maxProgramSize: 943749,
                   },
-                  regex: "rerum",
+                  regex: "saepe",
                 },
-                suffix: "mollitia",
+                suffix: "fuga",
+              },
+            },
+          },
+          {
+            path: [
+              {
+                key: "corporis",
+              },
+              {
+                key: "iste",
+              },
+            ],
+            value: {
+              boolMatch: false,
+              doubleMatch: {
+                exact: 4370.32,
+                range: {
+                  end: 9023.49,
+                  start: 6976.31,
+                },
+              },
+              listMatch: {
+                oneOf: {},
+              },
+              nullMatch: {
+                "ipsa": "reiciendis",
+              },
+              presentMatch: false,
+              stringMatch: {
+                exact: "est",
+                ignoreCase: false,
+                prefix: "mollitia",
+                regex: "laborum",
+                safeRegex: {
+                  googleRe2: {
+                    maxProgramSize: 170909,
+                  },
+                  regex: "dolorem",
+                },
+                suffix: "corporis",
+              },
+            },
+          },
+        ],
+      },
+      {
+        nodeId: {
+          exact: "explicabo",
+          ignoreCase: false,
+          prefix: "nobis",
+          regex: "enim",
+          safeRegex: {
+            googleRe2: {
+              maxProgramSize: 607831,
+            },
+            regex: "nemo",
+          },
+          suffix: "minima",
+        },
+        nodeMetadatas: [
+          {
+            path: [
+              {
+                key: "iure",
+              },
+            ],
+            value: {
+              boolMatch: false,
+              doubleMatch: {
+                exact: 6342.74,
+                range: {
+                  end: 9883.74,
+                  start: 9589.5,
+                },
+              },
+              listMatch: {
+                oneOf: {},
+              },
+              nullMatch: {
+                "mollitia": "dolorem",
+              },
+              presentMatch: false,
+              stringMatch: {
+                exact: "culpa",
+                ignoreCase: false,
+                prefix: "consequuntur",
+                regex: "repellat",
+                safeRegex: {
+                  googleRe2: {
+                    maxProgramSize: 653108,
+                  },
+                  regex: "occaecati",
+                },
+                suffix: "numquam",
               },
             },
           },
@@ -178,184 +302,87 @@ const req: TrafficdirectorDiscoveryClientStatusRequest = {
                 key: "quam",
               },
               {
-                key: "reprehenderit",
+                key: "molestiae",
               },
             ],
             value: {
-              boolMatch: true,
+              boolMatch: false,
               doubleMatch: {
-                exact: 78.099998,
+                exact: 2444.25,
                 range: {
-                  end: 31.100000,
-                  start: 13.100000,
+                  end: 6235.1,
+                  start: 1589.69,
                 },
               },
               listMatch: {
-                oneOf: {
-                
-                },
+                oneOf: {},
               },
               nullMatch: {
-                "ab": "neque",
-                "ullam": "et",
-                "accusantium": "esse",
+                "vitae": "laborum",
+                "animi": "enim",
               },
-              presentMatch: true,
+              presentMatch: false,
               stringMatch: {
-                exact: "quam",
+                exact: "odit",
                 ignoreCase: false,
-                prefix: "cumque",
-                regex: "soluta",
+                prefix: "quo",
+                regex: "sequi",
                 safeRegex: {
                   googleRe2: {
-                    maxProgramSize: 759605945513541974,
+                    maxProgramSize: 949572,
                   },
-                  regex: "voluptates",
+                  regex: "ipsam",
                 },
-                suffix: "magni",
+                suffix: "id",
               },
             },
           },
-        ],
-      },
-      {
-        nodeId: {
-          exact: "et",
-          ignoreCase: true,
-          prefix: "qui",
-          regex: "earum",
-          safeRegex: {
-            googleRe2: {
-              maxProgramSize: 4391202566038595699,
-            },
-            regex: "omnis",
-          },
-          suffix: "ut",
-        },
-        nodeMetadatas: [
           {
             path: [
               {
-                key: "commodi",
+                key: "aut",
+              },
+              {
+                key: "quasi",
               },
               {
                 key: "error",
               },
-            ],
-            value: {
-              boolMatch: false,
-              doubleMatch: {
-                exact: 3.200000,
-                range: {
-                  end: 19.100000,
-                  start: 80.199997,
-                },
-              },
-              listMatch: {
-                oneOf: {
-                
-                },
-              },
-              nullMatch: {
-                "aut": "quas",
-              },
-              presentMatch: true,
-              stringMatch: {
-                exact: "laudantium",
-                ignoreCase: true,
-                prefix: "ipsa",
-                regex: "expedita",
-                safeRegex: {
-                  googleRe2: {
-                    maxProgramSize: 8204648627352676445,
-                  },
-                  regex: "perferendis",
-                },
-                suffix: "atque",
-              },
-            },
-          },
-          {
-            path: [
               {
-                key: "quisquam",
+                key: "temporibus",
               },
             ],
             value: {
               boolMatch: false,
               doubleMatch: {
-                exact: 42.099998,
+                exact: 6736.6,
                 range: {
-                  end: 15.200000,
-                  start: 66.099998,
+                  end: 960.98,
+                  start: 9719.45,
                 },
               },
               listMatch: {
-                oneOf: {
-                
-                },
+                oneOf: {},
               },
               nullMatch: {
-                "quis": "cumque",
-                "minima": "necessitatibus",
-                "est": "quis",
-              },
-              presentMatch: true,
-              stringMatch: {
-                exact: "labore",
-                ignoreCase: false,
-                prefix: "impedit",
-                regex: "ad",
-                safeRegex: {
-                  googleRe2: {
-                    maxProgramSize: 8953538234431013647,
-                  },
-                  regex: "vel",
-                },
-                suffix: "qui",
-              },
-            },
-          },
-          {
-            path: [
-              {
-                key: "nihil",
-              },
-              {
-                key: "tempora",
-              },
-            ],
-            value: {
-              boolMatch: true,
-              doubleMatch: {
-                exact: 59.099998,
-                range: {
-                  end: 68.099998,
-                  start: 66.099998,
-                },
-              },
-              listMatch: {
-                oneOf: {
-                
-                },
-              },
-              nullMatch: {
-                "placeat": "qui",
-                "nisi": "quis",
+                "vero": "nihil",
+                "praesentium": "voluptatibus",
+                "ipsa": "omnis",
+                "voluptate": "cum",
               },
               presentMatch: false,
               stringMatch: {
-                exact: "porro",
-                ignoreCase: true,
-                prefix: "et",
-                regex: "accusamus",
+                exact: "perferendis",
+                ignoreCase: false,
+                prefix: "doloremque",
+                regex: "reprehenderit",
                 safeRegex: {
                   googleRe2: {
-                    maxProgramSize: 7953274849279451463,
+                    maxProgramSize: 282807,
                   },
-                  regex: "laborum",
+                  regex: "maiores",
                 },
-                suffix: "rerum",
+                suffix: "dicta",
               },
             },
           },
@@ -363,6 +390,16 @@ const req: TrafficdirectorDiscoveryClientStatusRequest = {
       },
     ],
   },
+  accessToken: "corporis",
+  alt: AltEnum.Json,
+  callback: "iusto",
+  fields: "dicta",
+  key: "harum",
+  oauthToken: "enim",
+  prettyPrint: false,
+  quotaUser: "accusamus",
+  uploadType: "commodi",
+  uploadProtocol: "repudiandae",
 };
 
 sdk.discovery.trafficdirectorDiscoveryClientStatus(req).then((res: TrafficdirectorDiscoveryClientStatusResponse | AxiosError) => {
@@ -372,12 +409,24 @@ sdk.discovery.trafficdirectorDiscoveryClientStatus(req).then((res: Trafficdirect
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### discovery
 
 * `trafficdirectorDiscoveryClientStatus`
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

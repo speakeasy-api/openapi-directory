@@ -1,5 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class V1 {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,11 +10,15 @@ export declare class V1 {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * addExpiryListings - Add expiry listings into GoDaddy Auction
-    **/
-    addExpiryListings(req: operations.AddExpiryListingsRequest, config?: AxiosRequestConfig): Promise<operations.AddExpiryListingsResponse>;
+     * Add expiry listings into GoDaddy Auction
+     */
+    addExpiryListingsJson(req: shared.AftermarketListingExpiryCreate[], config?: AxiosRequestConfig): Promise<operations.AddExpiryListingsJsonResponse>;
     /**
-     * deleteListings - Remove listings from GoDaddy Auction
-    **/
+     * Add expiry listings into GoDaddy Auction
+     */
+    addExpiryListingsRaw(req: Uint8Array, config?: AxiosRequestConfig): Promise<operations.AddExpiryListingsRawResponse>;
+    /**
+     * Remove listings from GoDaddy Auction
+     */
     deleteListings(req: operations.DeleteListingsRequest, config?: AxiosRequestConfig): Promise<operations.DeleteListingsResponse>;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum RetryStageExecutionXAmzTargetEnum {
     CodePipeline20150709RetryStageExecution = "CodePipeline_20150709.RetryStageExecution"
 }
-export declare class RetryStageExecutionHeaders extends SpeakeasyBase {
+export declare class RetryStageExecutionRequest extends SpeakeasyBase {
+    retryStageExecutionInput: shared.RetryStageExecutionInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class RetryStageExecutionHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: RetryStageExecutionXAmzTargetEnum;
 }
-export declare class RetryStageExecutionRequest extends SpeakeasyBase {
-    headers: RetryStageExecutionHeaders;
-    request: shared.RetryStageExecutionInput;
-}
 export declare class RetryStageExecutionResponse extends SpeakeasyBase {
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * NotLatestPipelineExecutionException
+     */
     notLatestPipelineExecutionException?: any;
+    /**
+     * PipelineNotFoundException
+     */
     pipelineNotFoundException?: any;
+    /**
+     * Success
+     */
     retryStageExecutionOutput?: shared.RetryStageExecutionOutput;
-    stageNotFoundException?: any;
+    /**
+     * StageNotRetryableException
+     */
     stageNotRetryableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * StageNotFoundException
+     */
+    stageNotFoundException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

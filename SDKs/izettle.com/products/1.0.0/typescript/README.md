@@ -6,43 +6,46 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/izettle.com/products/1.0.0/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/izettle.com/products/1.0.0/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateCategoriesRequest, CreateCategoriesResponse } from "openapi/src/sdk/models/operations";
+import {
+  CreateCategoriesRequest,
+  CreateCategoriesResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: CreateCategoriesRequest = {
-  security: {
-    zettleApiKey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  },
-  pathParams: {
-    organizationUuid: "sit",
-  },
-  request: {
+  createCategoriesRequest: {
     categories: [
       {
-        name: "culpa",
-        uuid: "expedita",
+        name: "provident",
+        uuid: "bd9d8d69-a674-4e0f-867c-c8796ed151a0",
+      },
+      {
+        name: "ipsam",
+        uuid: "dfc2ddf7-cc78-4ca1-ba92-8fc816742cb7",
+      },
+      {
+        name: "ipsum",
+        uuid: "92059293-96fe-4a75-96eb-10faaa2352c5",
       },
     ],
   },
+  organizationUuid: "955907af-f1a3-4a2f-a946-7739251aa52c",
 };
 
 sdk.categories.createCategories(req).then((res: CreateCategoriesResponse | AxiosError) => {
@@ -52,62 +55,76 @@ sdk.categories.createCategories(req).then((res: CreateCategoriesResponse | Axios
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### categories
 
-* `createCategories` - Creates a new category
-* `getProductTypes` - Retrieves all categories
+* `createCategories` - Create a new category
+* `deleteCategory` - Delete a category
+* `getProductTypes` - Retrieve all categories
+* `renameCategory` - Rename a category
 
 ### discounts
 
-* `createDiscount` - Creates a discount
-* `deleteDiscount` - Deletes a single discount 
-* `getAllDiscounts` - Retrieves all discounts
-* `getDiscount` - Retrieves a single discount
-* `updateDiscount` - Updates a single discount
+* `createDiscount` - Create a discount
+* `deleteDiscount` - Delete a single discount 
+* `getAllDiscounts` - Retrieve all discounts
+* `getDiscount` - Retrieve a single discount
+* `updateDiscount` - Update a single discount
 
 ### images
 
-* `getAllImageUrls` - Retrieves all library item images
+* `getAllImageUrls` - Retrieve all library item images
 
 ### import
 
-* `getLatestImportStatus` - Gets status for latest import
-* `getStatusByUuid` - Gets status for an import
-* `importLibraryV2` - Bulk import library items
+* `getLatestImportStatus` - Get status for latest import
+* `getStatusByUuid` - Get status for an import
+* `importLibraryV2` - Import library items
 
 ### library
 
-* `getLibrary` - Retrieves the entire library
+* `getLibrary` - Retrieve the entire library
 
 ### products
 
-* `countAllProducts` - Retrieves the count of existing products
-* `createProduct` - Creates a new product
-* `deleteProduct` - Deletes a single product
-* `deleteProducts` - Deletes a list of products
-* `getAllOptions` - Retrieves an aggregate of active Options in the library
-* `getAllProductsInPos` - Retrieves all products visible in POS
-* `getAllProductsV2` - Retrieves all products visible in POS – v2
-* `getProduct` - Retrieves a single product
-* `updateProduct` - Updates a single product
+* `countAllProducts` - Retrieve the count of existing products
+* `createProduct` - Create a new product
+* `deleteProduct` - Delete a single product
+* `deleteProducts` - Delete a list of products
+* `getAllOptions` - Retrieve an aggregate of active Options in the library
+* `getAllProductsInPos` - Retrieve all products visible in POS
+* `getAllProductsV2` - Retrieve all products visible in POS – v2
+* `getProduct` - Retrieve a single product
+* `updateProduct` - Update a single product
 
-### products/online
+### productsOnline
 
-* `createProductSlug` - Creates a product identifier
+* `createProductSlug` - Create a product identifier
 
 ### taxes
 
-* `createTaxRates` - Creates new tax rates
-* `deleteTaxRate` - Deletes a single tax rate
-* `getProductCountForAllTaxes` - Gets all tax rates and a count of products associated with each
-* `getTaxRate` - Gets a single tax rate
-* `getTaxRates` - Gets all tax rates available
-* `getTaxSettings` - Gets the organization tax settings 
-* `setTaxationMode` - Updates the organization tax settings
-* `updateTaxRate` - Updates a single tax rate
-
+* `createTaxRates` - Create new tax rates
+* `deleteTaxRate` - Delete a single tax rate
+* `getProductCountForAllTaxes` - Get all tax rates and a count of products associated with each
+* `getTaxRate` - Get a single tax rate
+* `getTaxRates` - Get all available tax rates
+* `getTaxSettings` - Get the organization tax settings 
+* `setTaxationMode` - Update the organization tax settings
+* `updateTaxRate` - Update a single tax rate
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

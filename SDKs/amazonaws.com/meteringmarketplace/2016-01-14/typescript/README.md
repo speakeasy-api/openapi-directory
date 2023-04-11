@@ -6,65 +6,185 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/amazonaws.com/meteringmarketplace/2016-01-14/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/amazonaws.com/meteringmarketplace/2016-01-14/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { BatchMeterUsageRequest, BatchMeterUsageResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  BatchMeterUsageRequest,
+  BatchMeterUsageResponse,
+  BatchMeterUsageXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: BatchMeterUsageRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "AWSMPMeteringService.BatchMeterUsage",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
-    productCode: "fugit",
+});
+
+const req: BatchMeterUsageRequest = {
+  batchMeterUsageRequest: {
+    productCode: "corrupti",
     usageRecords: [
       {
-        customerIdentifier: "nihil",
-        dimension: "rerum",
-        quantity: 7837839688282259259,
-        timestamp: "2004-06-02T10:14:12Z",
+        customerIdentifier: "distinctio",
+        dimension: "quibusdam",
+        quantity: 602763,
+        timestamp: "2021-05-14T08:28:11.899Z",
         usageAllocations: [
           {
-            allocatedUsageQuantity: 2339563716805116249,
+            allocatedUsageQuantity: 423655,
             tags: [
               {
-                key: "dolorem",
-                value: "et",
+                key: "deserunt",
+                value: "suscipit",
               },
               {
-                key: "voluptate",
-                value: "iste",
+                key: "iure",
+                value: "magnam",
               },
               {
-                key: "vitae",
+                key: "debitis",
+                value: "ipsa",
+              },
+            ],
+          },
+          {
+            allocatedUsageQuantity: 963663,
+            tags: [
+              {
+                key: "suscipit",
+                value: "molestiae",
+              },
+              {
+                key: "minus",
+                value: "placeat",
+              },
+            ],
+          },
+          {
+            allocatedUsageQuantity: 528895,
+            tags: [
+              {
+                key: "excepturi",
+                value: "nisi",
+              },
+              {
+                key: "recusandae",
+                value: "temporibus",
+              },
+            ],
+          },
+          {
+            allocatedUsageQuantity: 71036,
+            tags: [
+              {
+                key: "veritatis",
+                value: "deserunt",
+              },
+              {
+                key: "perferendis",
+                value: "ipsam",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        customerIdentifier: "repellendus",
+        dimension: "sapiente",
+        quantity: 778157,
+        timestamp: "2022-02-17T10:41:36.857Z",
+        usageAllocations: [
+          {
+            allocatedUsageQuantity: 978619,
+            tags: [
+              {
+                key: "quod",
+                value: "quod",
+              },
+              {
+                key: "esse",
                 value: "totam",
+              },
+            ],
+          },
+          {
+            allocatedUsageQuantity: 780529,
+            tags: [
+              {
+                key: "dicta",
+                value: "nam",
+              },
+              {
+                key: "officia",
+                value: "occaecati",
+              },
+              {
+                key: "fugit",
+                value: "deleniti",
+              },
+            ],
+          },
+          {
+            allocatedUsageQuantity: 944669,
+            tags: [
+              {
+                key: "totam",
+                value: "beatae",
+              },
+              {
+                key: "commodi",
+                value: "molestiae",
+              },
+              {
+                key: "modi",
+                value: "qui",
+              },
+              {
+                key: "impedit",
+                value: "cum",
+              },
+            ],
+          },
+          {
+            allocatedUsageQuantity: 456150,
+            tags: [
+              {
+                key: "excepturi",
+                value: "aspernatur",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        customerIdentifier: "perferendis",
+        dimension: "ad",
+        quantity: 617636,
+        timestamp: "2022-05-22T14:02:28.908Z",
+        usageAllocations: [
+          {
+            allocatedUsageQuantity: 616934,
+            tags: [
+              {
+                key: "hic",
+                value: "saepe",
+              },
+              {
+                key: "fuga",
+                value: "in",
               },
             ],
           },
@@ -72,6 +192,14 @@ const req: BatchMeterUsageRequest = {
       },
     ],
   },
+  xAmzAlgorithm: "corporis",
+  xAmzContentSha256: "iste",
+  xAmzCredential: "iure",
+  xAmzDate: "saepe",
+  xAmzSecurityToken: "quidem",
+  xAmzSignature: "architecto",
+  xAmzSignedHeaders: "ipsa",
+  xAmzTarget: BatchMeterUsageXAmzTargetEnum.AWSMPMeteringServiceBatchMeterUsage,
 };
 
 sdk.batchMeterUsage(req).then((res: BatchMeterUsageResponse | AxiosError) => {
@@ -81,15 +209,26 @@ sdk.batchMeterUsage(req).then((res: BatchMeterUsageResponse | AxiosError) => {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
-* `batchMeterUsage` - <p>BatchMeterUsage is called from a SaaS application listed on the AWS Marketplace to post metering records for a set of customers.</p> <p>For identical requests, the API is idempotent; requests can be retried with the same records or a subset of the input records.</p> <p>Every request to BatchMeterUsage is for one product. If you need to meter usage for multiple products, you must make multiple calls to BatchMeterUsage.</p> <p>BatchMeterUsage can process up to 25 UsageRecords at a time.</p> <p>A UsageRecord can optionally include multiple usage allocations, to provide customers with usagedata split into buckets by tags that you define (or allow the customer to define).</p> <p>BatchMeterUsage requests must be less than 1MB in size.</p>
-* `meterUsage` - <p>API to emit metering records. For identical requests, the API is idempotent. It simply returns the metering record ID.</p> <p>MeterUsage is authenticated on the buyer's AWS account using credentials from the EC2 instance, ECS task, or EKS pod.</p> <p>MeterUsage can optionally include multiple usage allocations, to provide customers with usage data split into buckets by tags that you define (or allow the customer to define).</p>
-* `registerUsage` - <p>Paid container software products sold through AWS Marketplace must integrate with the AWS Marketplace Metering Service and call the RegisterUsage operation for software entitlement and metering. Free and BYOL products for Amazon ECS or Amazon EKS aren't required to call RegisterUsage, but you may choose to do so if you would like to receive usage data in your seller reports. The sections below explain the behavior of RegisterUsage. RegisterUsage performs two primary functions: metering and entitlement.</p> <ul> <li> <p> <i>Entitlement</i>: RegisterUsage allows you to verify that the customer running your paid software is subscribed to your product on AWS Marketplace, enabling you to guard against unauthorized use. Your container image that integrates with RegisterUsage is only required to guard against unauthorized use at container startup, as such a CustomerNotSubscribedException/PlatformNotSupportedException will only be thrown on the initial call to RegisterUsage. Subsequent calls from the same Amazon ECS task instance (e.g. task-id) or Amazon EKS pod will not throw a CustomerNotSubscribedException, even if the customer unsubscribes while the Amazon ECS task or Amazon EKS pod is still running.</p> </li> <li> <p> <i>Metering</i>: RegisterUsage meters software use per ECS task, per hour, or per pod for Amazon EKS with usage prorated to the second. A minimum of 1 minute of usage applies to tasks that are short lived. For example, if a customer has a 10 node Amazon ECS or Amazon EKS cluster and a service configured as a Daemon Set, then Amazon ECS or Amazon EKS will launch a task on all 10 cluster nodes and the customer will be charged: (10 * hourly_rate). Metering for software use is automatically handled by the AWS Marketplace Metering Control Plane -- your software is not required to perform any metering specific actions, other than call RegisterUsage once for metering of software use to commence. The AWS Marketplace Metering Control Plane will also continue to bill customers for running ECS tasks and Amazon EKS pods, regardless of the customers subscription state, removing the need for your software to perform entitlement checks at runtime.</p> </li> </ul>
-* `resolveCustomer` - ResolveCustomer is called by a SaaS application during the registration process. When a buyer visits your website during the registration process, the buyer submits a registration token through their browser. The registration token is resolved through this API to obtain a CustomerIdentifier and product code.
-
+* `batchMeterUsage` - <p> <code>BatchMeterUsage</code> is called from a SaaS application listed on AWS Marketplace to post metering records for a set of customers.</p> <p>For identical requests, the API is idempotent; requests can be retried with the same records or a subset of the input records.</p> <p>Every request to <code>BatchMeterUsage</code> is for one product. If you need to meter usage for multiple products, you must make multiple calls to <code>BatchMeterUsage</code>.</p> <p>Usage records are expected to be submitted as quickly as possible after the event that is being recorded, and are not accepted more than 6 hours after the event.</p> <p> <code>BatchMeterUsage</code> can process up to 25 <code>UsageRecords</code> at a time.</p> <p>A <code>UsageRecord</code> can optionally include multiple usage allocations, to provide customers with usage data split into buckets by tags that you define (or allow the customer to define).</p> <p> <code>BatchMeterUsage</code> returns a list of <code>UsageRecordResult</code> objects, showing the result for each <code>UsageRecord</code>, as well as a list of <code>UnprocessedRecords</code>, indicating errors in the service side that you should retry.</p> <p> <code>BatchMeterUsage</code> requests must be less than 1MB in size.</p> <note> <p>For an example of using <code>BatchMeterUsage</code>, see <a href="https://docs.aws.amazon.com/marketplace/latest/userguide/saas-code-examples.html#saas-batchmeterusage-example"> BatchMeterUsage code example</a> in the <i>AWS Marketplace Seller Guide</i>.</p> </note>
+* `meterUsage` - <p>API to emit metering records. For identical requests, the API is idempotent. It simply returns the metering record ID.</p> <p> <code>MeterUsage</code> is authenticated on the buyer's AWS account using credentials from the EC2 instance, ECS task, or EKS pod.</p> <p> <code>MeterUsage</code> can optionally include multiple usage allocations, to provide customers with usage data split into buckets by tags that you define (or allow the customer to define).</p> <p>Usage records are expected to be submitted as quickly as possible after the event that is being recorded, and are not accepted more than 6 hours after the event.</p>
+* `registerUsage` - <p>Paid container software products sold through AWS Marketplace must integrate with the AWS Marketplace Metering Service and call the <code>RegisterUsage</code> operation for software entitlement and metering. Free and BYOL products for Amazon ECS or Amazon EKS aren't required to call <code>RegisterUsage</code>, but you may choose to do so if you would like to receive usage data in your seller reports. The sections below explain the behavior of <code>RegisterUsage</code>. <code>RegisterUsage</code> performs two primary functions: metering and entitlement.</p> <ul> <li> <p> <i>Entitlement</i>: <code>RegisterUsage</code> allows you to verify that the customer running your paid software is subscribed to your product on AWS Marketplace, enabling you to guard against unauthorized use. Your container image that integrates with <code>RegisterUsage</code> is only required to guard against unauthorized use at container startup, as such a <code>CustomerNotSubscribedException</code> or <code>PlatformNotSupportedException</code> will only be thrown on the initial call to <code>RegisterUsage</code>. Subsequent calls from the same Amazon ECS task instance (e.g. task-id) or Amazon EKS pod will not throw a <code>CustomerNotSubscribedException</code>, even if the customer unsubscribes while the Amazon ECS task or Amazon EKS pod is still running.</p> </li> <li> <p> <i>Metering</i>: <code>RegisterUsage</code> meters software use per ECS task, per hour, or per pod for Amazon EKS with usage prorated to the second. A minimum of 1 minute of usage applies to tasks that are short lived. For example, if a customer has a 10 node Amazon ECS or Amazon EKS cluster and a service configured as a Daemon Set, then Amazon ECS or Amazon EKS will launch a task on all 10 cluster nodes and the customer will be charged: (10 * hourly_rate). Metering for software use is automatically handled by the AWS Marketplace Metering Control Plane -- your software is not required to perform any metering specific actions, other than call <code>RegisterUsage</code> once for metering of software use to commence. The AWS Marketplace Metering Control Plane will also continue to bill customers for running ECS tasks and Amazon EKS pods, regardless of the customers subscription state, removing the need for your software to perform entitlement checks at runtime.</p> </li> </ul>
+* `resolveCustomer` - <p> <code>ResolveCustomer</code> is called by a SaaS application during the registration process. When a buyer visits your website during the registration process, the buyer submits a registration token through their browser. The registration token is resolved through this API to obtain a <code>CustomerIdentifier</code> along with the <code>CustomerAWSAccountId</code> and <code>ProductCode</code>.</p> <note> <p>The API needs to called from the seller account id used to publish the SaaS application to successfully resolve the token.</p> <p>For an example of using <code>ResolveCustomer</code>, see <a href="https://docs.aws.amazon.com/marketplace/latest/userguide/saas-code-examples.html#saas-resolvecustomer-example"> ResolveCustomer code example</a> in the <i>AWS Marketplace Seller Guide</i>.</p> </note>
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

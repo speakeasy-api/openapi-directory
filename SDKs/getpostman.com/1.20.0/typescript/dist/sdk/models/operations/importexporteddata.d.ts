@@ -1,29 +1,40 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ImportExportedData200ApplicationJsonCollections extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ImportExportedData400ApplicationJSONErrorDetails extends SpeakeasyBase {
+    param?: string;
+}
+export declare class ImportExportedData400ApplicationJSONError extends SpeakeasyBase {
+    details?: ImportExportedData400ApplicationJSONErrorDetails;
+    message?: string;
+    name?: string;
+}
+/**
+ * Error: Param Missing
+ */
+export declare class ImportExportedData400ApplicationJSON extends SpeakeasyBase {
+    error?: ImportExportedData400ApplicationJSONError;
+}
+export declare class ImportExportedData200ApplicationJSONCollections extends SpeakeasyBase {
     id?: string;
     name?: string;
     uid?: string;
 }
-export declare class ImportExportedData200ApplicationJson extends SpeakeasyBase {
-    collections?: ImportExportedData200ApplicationJsonCollections[];
-}
-export declare class ImportExportedData400ApplicationJsonErrorDetails extends SpeakeasyBase {
-    param?: string;
-}
-export declare class ImportExportedData400ApplicationJsonError extends SpeakeasyBase {
-    details?: ImportExportedData400ApplicationJsonErrorDetails;
-    message?: string;
-    name?: string;
-}
-export declare class ImportExportedData400ApplicationJson extends SpeakeasyBase {
-    error?: ImportExportedData400ApplicationJsonError;
-}
-export declare class ImportExportedDataRequest extends SpeakeasyBase {
-    request?: Uint8Array;
+/**
+ * Success: Import to a specific workspace with workspace ID passed as a query parameter
+ */
+export declare class ImportExportedData200ApplicationJSON extends SpeakeasyBase {
+    collections?: ImportExportedData200ApplicationJSONCollections[];
 }
 export declare class ImportExportedDataResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    importExportedData200ApplicationJSONObject?: ImportExportedData200ApplicationJson;
-    importExportedData400ApplicationJSONObject?: ImportExportedData400ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success: Import to a specific workspace with workspace ID passed as a query parameter
+     */
+    importExportedData200ApplicationJSONObject?: ImportExportedData200ApplicationJSON;
+    /**
+     * Error: Param Missing
+     */
+    importExportedData400ApplicationJSONObject?: ImportExportedData400ApplicationJSON;
 }

@@ -4,7 +4,7 @@ import { OnPremConfig } from "./onpremconfig";
 import { TagListEntry } from "./taglistentry";
 /**
  * CreateLocationNfsRequest
-**/
+ */
 export declare class CreateLocationNfsRequest extends SpeakeasyBase {
     mountOptions?: NfsMountOptions;
     onPremConfig: OnPremConfig;

@@ -1,15 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostListAvailableSolutionStacksActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTListAvailableSolutionStacksActionEnum {
     ListAvailableSolutionStacks = "ListAvailableSolutionStacks"
 }
-export declare enum PostListAvailableSolutionStacksVersionEnum {
+export declare enum POSTListAvailableSolutionStacksVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostListAvailableSolutionStacksQueryParams extends SpeakeasyBase {
-    action: PostListAvailableSolutionStacksActionEnum;
-    version: PostListAvailableSolutionStacksVersionEnum;
-}
-export declare class PostListAvailableSolutionStacksHeaders extends SpeakeasyBase {
+export declare class POSTListAvailableSolutionStacksRequest extends SpeakeasyBase {
+    action: POSTListAvailableSolutionStacksActionEnum;
+    version: POSTListAvailableSolutionStacksVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +17,9 @@ export declare class PostListAvailableSolutionStacksHeaders extends SpeakeasyBas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostListAvailableSolutionStacksRequest extends SpeakeasyBase {
-    queryParams: PostListAvailableSolutionStacksQueryParams;
-    headers: PostListAvailableSolutionStacksHeaders;
-}
-export declare class PostListAvailableSolutionStacksResponse extends SpeakeasyBase {
+export declare class POSTListAvailableSolutionStacksResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

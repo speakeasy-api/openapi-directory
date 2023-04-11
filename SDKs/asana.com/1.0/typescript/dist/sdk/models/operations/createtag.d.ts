@@ -1,22 +1,49 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreateTagQueryParams extends SpeakeasyBase {
-    optFields?: string[];
-    optPretty?: boolean;
-}
+import { AxiosResponse } from "axios";
+/**
+ * The tag to create.
+ */
 export declare class CreateTagRequestBodyInput extends SpeakeasyBase {
     data?: shared.TagRequestInput;
 }
-export declare class CreateTag201ApplicationJson extends SpeakeasyBase {
-    data?: shared.TagResponse;
-}
 export declare class CreateTagRequest extends SpeakeasyBase {
-    queryParams: CreateTagQueryParams;
-    request: CreateTagRequestBodyInput;
+    /**
+     * The tag to create.
+     */
+    requestBody: CreateTagRequestBodyInput;
+    /**
+     * Defines fields to return.
+     *
+     * @remarks
+     * Some requests return *compact* representations of objects in order to conserve resources and complete the request more efficiently. Other times requests return more information than you may need. This option allows you to list the exact set of fields that the API should be sure to return for the objects. The field names should be provided as paths, described below.
+     * The id of included objects will always be returned, regardless of the field options.
+     */
+    optFields?: string[];
+    /**
+     * Provides “pretty” output.
+     *
+     * @remarks
+     * Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
+     */
+    optPretty?: boolean;
+}
+/**
+ * Successfully created the newly specified tag.
+ */
+export declare class CreateTag201ApplicationJSON extends SpeakeasyBase {
+    data?: shared.TagResponse;
 }
 export declare class CreateTagResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * This usually occurs because of a missing or malformed parameter. Check the documentation and the syntax of your request and try again.
+     */
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    createTag201ApplicationJSONObject?: CreateTag201ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successfully created the newly specified tag.
+     */
+    createTag201ApplicationJSONObject?: CreateTag201ApplicationJSON;
 }

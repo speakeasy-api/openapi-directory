@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum CreateVpceConfigurationXAmzTargetEnum {
-    DeviceFarm20150623CreateVpceConfiguration = "DeviceFarm_20150623.CreateVPCEConfiguration"
+import { AxiosResponse } from "axios";
+export declare enum CreateVPCEConfigurationXAmzTargetEnum {
+    DeviceFarm20150623CreateVPCEConfiguration = "DeviceFarm_20150623.CreateVPCEConfiguration"
 }
-export declare class CreateVpceConfigurationHeaders extends SpeakeasyBase {
+export declare class CreateVPCEConfigurationRequest extends SpeakeasyBase {
+    createVPCEConfigurationRequest: shared.CreateVPCEConfigurationRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,17 +13,26 @@ export declare class CreateVpceConfigurationHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: CreateVpceConfigurationXAmzTargetEnum;
+    xAmzTarget: CreateVPCEConfigurationXAmzTargetEnum;
 }
-export declare class CreateVpceConfigurationRequest extends SpeakeasyBase {
-    headers: CreateVpceConfigurationHeaders;
-    request: shared.CreateVpceConfigurationRequest;
-}
-export declare class CreateVpceConfigurationResponse extends SpeakeasyBase {
+export declare class CreateVPCEConfigurationResponse extends SpeakeasyBase {
+    /**
+     * ArgumentException
+     */
     argumentException?: any;
     contentType: string;
-    createVPCEConfigurationResult?: shared.CreateVpceConfigurationResult;
+    /**
+     * Success
+     */
+    createVPCEConfigurationResult?: shared.CreateVPCEConfigurationResult;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
-    serviceAccountException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceAccountException
+     */
+    serviceAccountException?: any;
 }

@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { InsightsConfiguration } from "./insightsconfiguration";
 /**
  * Details and metadata for a group.
-**/
+ */
 export declare class Group extends SpeakeasyBase {
     filterExpression?: string;
     groupARN?: string;

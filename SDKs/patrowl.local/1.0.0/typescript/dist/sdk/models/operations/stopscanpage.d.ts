@@ -1,12 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class StopScanPagePathParams extends SpeakeasyBase {
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class StopScanPageRequest extends SpeakeasyBase {
+    /**
+     * Numeric ID of the scan to stop
+     */
     scanId: number;
 }
-export declare class StopScanPageRequest extends SpeakeasyBase {
-    pathParams: StopScanPagePathParams;
-}
 export declare class StopScanPageResponse extends SpeakeasyBase {
-    apiResponse?: any;
+    /**
+     * successful operation
+     */
+    apiResponse?: shared.ApiResponse;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

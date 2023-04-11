@@ -1,3 +1,6 @@
+/**
+ * Indicate the download strategy (simple uri, ftps, ftplatest file, etc...)
+ */
 export declare enum DownloadCatalogStrategyEnum {
     SimpleUri = "SimpleUri",
     FtpLatest = "FtpLatest",

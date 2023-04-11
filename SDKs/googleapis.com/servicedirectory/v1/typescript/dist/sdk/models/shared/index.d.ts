@@ -13,7 +13,6 @@ export * from "./namespace";
 export * from "./policy";
 export * from "./resolveservicerequest";
 export * from "./resolveserviceresponse";
-export * from "./security";
 export * from "./service";
 export * from "./setiampolicyrequest";
 export * from "./testiampermissionsrequest";

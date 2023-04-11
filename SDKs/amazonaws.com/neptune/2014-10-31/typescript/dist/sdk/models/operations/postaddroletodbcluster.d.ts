@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostAddRoleToDbClusterActionEnum {
-    AddRoleToDbCluster = "AddRoleToDBCluster"
+import { AxiosResponse } from "axios";
+export declare enum POSTAddRoleToDBClusterActionEnum {
+    AddRoleToDBCluster = "AddRoleToDBCluster"
 }
-export declare enum PostAddRoleToDbClusterVersionEnum {
+export declare enum POSTAddRoleToDBClusterVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class PostAddRoleToDbClusterQueryParams extends SpeakeasyBase {
-    action: PostAddRoleToDbClusterActionEnum;
-    version: PostAddRoleToDbClusterVersionEnum;
-}
-export declare class PostAddRoleToDbClusterHeaders extends SpeakeasyBase {
+export declare class POSTAddRoleToDBClusterRequest extends SpeakeasyBase {
+    action: POSTAddRoleToDBClusterActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTAddRoleToDBClusterVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostAddRoleToDbClusterHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostAddRoleToDbClusterRequest extends SpeakeasyBase {
-    queryParams: PostAddRoleToDbClusterQueryParams;
-    headers: PostAddRoleToDbClusterHeaders;
-    request?: Uint8Array;
-}
-export declare class PostAddRoleToDbClusterResponse extends SpeakeasyBase {
+export declare class POSTAddRoleToDBClusterResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

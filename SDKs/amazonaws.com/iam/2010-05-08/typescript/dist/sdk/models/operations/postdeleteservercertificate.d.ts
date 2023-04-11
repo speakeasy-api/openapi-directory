@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteServerCertificateActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteServerCertificateActionEnum {
     DeleteServerCertificate = "DeleteServerCertificate"
 }
-export declare enum PostDeleteServerCertificateVersionEnum {
+export declare enum POSTDeleteServerCertificateVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostDeleteServerCertificateQueryParams extends SpeakeasyBase {
-    action: PostDeleteServerCertificateActionEnum;
-    version: PostDeleteServerCertificateVersionEnum;
-}
-export declare class PostDeleteServerCertificateHeaders extends SpeakeasyBase {
+export declare class POSTDeleteServerCertificateRequest extends SpeakeasyBase {
+    action: POSTDeleteServerCertificateActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteServerCertificateVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteServerCertificateHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteServerCertificateRequest extends SpeakeasyBase {
-    queryParams: PostDeleteServerCertificateQueryParams;
-    headers: PostDeleteServerCertificateHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteServerCertificateResponse extends SpeakeasyBase {
+export declare class POSTDeleteServerCertificateResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

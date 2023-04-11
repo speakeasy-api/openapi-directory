@@ -1,31 +1,33 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { SafebrowsingEncodedFullHashesGetRequest, SafebrowsingEncodedFullHashesGetResponse } from "openapi/src/sdk/models/operations";
+import {
+  SafebrowsingEncodedFullHashesGetRequest,
+  SafebrowsingEncodedFullHashesGetResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: SafebrowsingEncodedFullHashesGetRequest = {
-  pathParams: {
-    encodedRequest: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    clientId: "dolor",
-    clientVersion: "expedita",
-    fields: "voluptas",
-    key: "fugit",
-    oauthToken: "et",
-    prettyPrint: true,
-    quotaUser: "rerum",
-    uploadType: "dicta",
-    uploadProtocol: "debitis",
-  },
+  dollarXgafv: XgafvEnum.Two,
+  accessToken: "provident",
+  alt: AltEnum.Proto,
+  callback: "quibusdam",
+  clientId: "unde",
+  clientVersion: "nulla",
+  encodedRequest: "corrupti",
+  fields: "illum",
+  key: "vel",
+  oauthToken: "error",
+  prettyPrint: false,
+  quotaUser: "deserunt",
+  uploadType: "suscipit",
+  uploadProtocol: "iure",
 };
 
 sdk.encodedFullHashes.safebrowsingEncodedFullHashesGet(req).then((res: SafebrowsingEncodedFullHashesGetResponse | AxiosError) => {

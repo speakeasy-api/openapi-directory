@@ -4,7 +4,7 @@ export declare enum ExportFlavorEnum {
     Windows = "Windows"
 }
 export declare enum ExportPlatformEnum {
-    CoreMl = "CoreML",
+    CoreML = "CoreML",
     TensorFlow = "TensorFlow",
     DockerFile = "DockerFile",
     Onnx = "ONNX"
@@ -14,6 +14,9 @@ export declare enum ExportStatusEnum {
     Failed = "Failed",
     Done = "Done"
 }
+/**
+ * OK
+ */
 export declare class Export extends SpeakeasyBase {
     downloadUri?: string;
     flavor?: ExportFlavorEnum;

@@ -1,0 +1,16 @@
+export declare enum ErrorCodeEnum {
+    AccessDenied = "ACCESS_DENIED",
+    InvalidUrlError = "INVALID_URL_ERROR",
+    InvalidImportOptionsError = "INVALID_IMPORT_OPTIONS_ERROR",
+    InvalidTableIdError = "INVALID_TABLE_ID_ERROR",
+    InvalidTableColumnIdError = "INVALID_TABLE_COLUMN_ID_ERROR",
+    TableNotFoundError = "TABLE_NOT_FOUND_ERROR",
+    FileEmptyError = "FILE_EMPTY_ERROR",
+    InvalidFileTypeError = "INVALID_FILE_TYPE_ERROR",
+    FileParsingError = "FILE_PARSING_ERROR",
+    FileSizeLimitError = "FILE_SIZE_LIMIT_ERROR",
+    FileNotFoundError = "FILE_NOT_FOUND_ERROR",
+    UnknownError = "UNKNOWN_ERROR",
+    ResourceNotFoundError = "RESOURCE_NOT_FOUND_ERROR",
+    SystemLimitError = "SYSTEM_LIMIT_ERROR"
+}

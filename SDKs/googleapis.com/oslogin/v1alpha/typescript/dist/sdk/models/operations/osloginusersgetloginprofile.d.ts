@@ -1,50 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class OsloginUsersGetLoginProfilePathParams extends SpeakeasyBase {
-    name: string;
-}
-export declare enum OsloginUsersGetLoginProfileOperatingSystemTypeEnum {
-    OperatingSystemTypeUnspecified = "OPERATING_SYSTEM_TYPE_UNSPECIFIED",
-    Linux = "LINUX",
-    Windows = "WINDOWS"
-}
-export declare enum OsloginUsersGetLoginProfileViewEnum {
-    LoginProfileViewUnspecified = "LOGIN_PROFILE_VIEW_UNSPECIFIED",
-    Basic = "BASIC",
-    SecurityKey = "SECURITY_KEY"
-}
-export declare class OsloginUsersGetLoginProfileQueryParams extends SpeakeasyBase {
-    dollarXgafv?: shared.XgafvEnum;
-    accessToken?: string;
-    alt?: shared.AltEnum;
-    callback?: string;
-    fields?: string;
-    key?: string;
-    oauthToken?: string;
-    operatingSystemType?: OsloginUsersGetLoginProfileOperatingSystemTypeEnum;
-    prettyPrint?: boolean;
-    projectId?: string;
-    quotaUser?: string;
-    systemId?: string;
-    uploadType?: string;
-    uploadProtocol?: string;
-    view?: OsloginUsersGetLoginProfileViewEnum;
-}
+import { AxiosResponse } from "axios";
 export declare class OsloginUsersGetLoginProfileSecurityOption1 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class OsloginUsersGetLoginProfileSecurityOption2 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class OsloginUsersGetLoginProfileSecurityOption3 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class OsloginUsersGetLoginProfileSecurityOption4 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class OsloginUsersGetLoginProfileSecurity extends SpeakeasyBase {
     option1?: OsloginUsersGetLoginProfileSecurityOption1;
@@ -52,13 +23,94 @@ export declare class OsloginUsersGetLoginProfileSecurity extends SpeakeasyBase {
     option3?: OsloginUsersGetLoginProfileSecurityOption3;
     option4?: OsloginUsersGetLoginProfileSecurityOption4;
 }
+/**
+ * The type of operating system associated with the account.
+ */
+export declare enum OsloginUsersGetLoginProfileOperatingSystemTypeEnum {
+    OperatingSystemTypeUnspecified = "OPERATING_SYSTEM_TYPE_UNSPECIFIED",
+    Linux = "LINUX",
+    Windows = "WINDOWS"
+}
+/**
+ * The view configures whether to retrieve security keys information.
+ */
+export declare enum OsloginUsersGetLoginProfileViewEnum {
+    LoginProfileViewUnspecified = "LOGIN_PROFILE_VIEW_UNSPECIFIED",
+    Basic = "BASIC",
+    SecurityKey = "SECURITY_KEY"
+}
 export declare class OsloginUsersGetLoginProfileRequest extends SpeakeasyBase {
-    pathParams: OsloginUsersGetLoginProfilePathParams;
-    queryParams: OsloginUsersGetLoginProfileQueryParams;
-    security: OsloginUsersGetLoginProfileSecurity;
+    /**
+     * V1 error format.
+     */
+    dollarXgafv?: shared.XgafvEnum;
+    /**
+     * OAuth access token.
+     */
+    accessToken?: string;
+    /**
+     * Data format for response.
+     */
+    alt?: shared.AltEnum;
+    /**
+     * JSONP
+     */
+    callback?: string;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * Required. The unique ID for the user in format `users/{user}`.
+     */
+    name: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauthToken?: string;
+    /**
+     * The type of operating system associated with the account.
+     */
+    operatingSystemType?: OsloginUsersGetLoginProfileOperatingSystemTypeEnum;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * The project ID of the Google Cloud Platform project.
+     */
+    projectId?: string;
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * A system ID for filtering the results of the request.
+     */
+    systemId?: string;
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    uploadType?: string;
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    uploadProtocol?: string;
+    /**
+     * The view configures whether to retrieve security keys information.
+     */
+    view?: OsloginUsersGetLoginProfileViewEnum;
 }
 export declare class OsloginUsersGetLoginProfileResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful response
+     */
     loginProfile?: shared.LoginProfile;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,10 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetResourceDefinitionVersionPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetResourceDefinitionVersionRequest extends SpeakeasyBase {
+    /**
+     * The ID of the resource definition.
+     */
     resourceDefinitionId: string;
+    /**
+     * The ID of the resource definition version. This value maps to the ''Version'' property of the corresponding ''VersionInformation'' object, which is returned by ''ListResourceDefinitionVersions'' requests. If the version is the last one that was associated with a resource definition, the value also maps to the ''LatestVersion'' property of the corresponding ''DefinitionInformation'' object.
+     */
     resourceDefinitionVersionId: string;
-}
-export declare class GetResourceDefinitionVersionHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,13 +18,16 @@ export declare class GetResourceDefinitionVersionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetResourceDefinitionVersionRequest extends SpeakeasyBase {
-    pathParams: GetResourceDefinitionVersionPathParams;
-    headers: GetResourceDefinitionVersionHeaders;
-}
 export declare class GetResourceDefinitionVersionResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getResourceDefinitionVersionResponse?: shared.GetResourceDefinitionVersionResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

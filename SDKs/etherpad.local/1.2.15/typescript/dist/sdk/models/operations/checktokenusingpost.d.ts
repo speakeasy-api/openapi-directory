@@ -1,29 +1,55 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CheckTokenUsingPost200ApplicationJson extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+/**
+ * internal api error (code 2)
+ */
+export declare class CheckTokenUsingPost500ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class CheckTokenUsingPost400ApplicationJson extends SpeakeasyBase {
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class CheckTokenUsingPost401ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class CheckTokenUsingPost401ApplicationJson extends SpeakeasyBase {
+/**
+ * generic api error (code 1)
+ */
+export declare class CheckTokenUsingPost400ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class CheckTokenUsingPost500ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class CheckTokenUsingPost200ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class CheckTokenUsingPostResponse extends SpeakeasyBase {
+export declare class CheckTokenUsingPOSTResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    checkTokenUsingPOST200ApplicationJSONObject?: CheckTokenUsingPost200ApplicationJson;
-    checkTokenUsingPOST400ApplicationJSONObject?: CheckTokenUsingPost400ApplicationJson;
-    checkTokenUsingPOST401ApplicationJSONObject?: CheckTokenUsingPost401ApplicationJson;
-    checkTokenUsingPOST500ApplicationJSONObject?: CheckTokenUsingPost500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    checkTokenUsingPOST200ApplicationJSONObject?: CheckTokenUsingPost200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    checkTokenUsingPOST400ApplicationJSONObject?: CheckTokenUsingPost400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    checkTokenUsingPOST401ApplicationJSONObject?: CheckTokenUsingPost401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    checkTokenUsingPOST500ApplicationJSONObject?: CheckTokenUsingPost500ApplicationJSON;
 }

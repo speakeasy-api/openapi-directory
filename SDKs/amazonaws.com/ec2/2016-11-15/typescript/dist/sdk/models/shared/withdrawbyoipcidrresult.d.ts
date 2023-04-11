@@ -1,13 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
- * Information about the address pool.
-**/
-export declare class WithdrawByoipCidrResultByoipCidr extends SpeakeasyBase {
-    cidr?: Record<string, any>;
-    description?: Record<string, any>;
-    state?: Record<string, any>;
-    statusMessage?: Record<string, any>;
+ * The state of the address pool.
+ */
+export declare enum WithdrawByoipCidrResultByoipCidrStateEnum {
+    Advertised = "advertised",
+    Deprovisioned = "deprovisioned",
+    FailedDeprovision = "failed-deprovision",
+    FailedProvision = "failed-provision",
+    PendingDeprovision = "pending-deprovision",
+    PendingProvision = "pending-provision",
+    Provisioned = "provisioned",
+    ProvisionedNotPubliclyAdvertisable = "provisioned-not-publicly-advertisable"
 }
+/**
+ * Information about the address pool.
+ */
+export declare class WithdrawByoipCidrResultByoipCidr extends SpeakeasyBase {
+    cidr?: string;
+    description?: string;
+    state?: WithdrawByoipCidrResultByoipCidrStateEnum;
+    statusMessage?: string;
+}
+/**
+ * Success
+ */
 export declare class WithdrawByoipCidrResult extends SpeakeasyBase {
     byoipCidr?: WithdrawByoipCidrResultByoipCidr;
 }

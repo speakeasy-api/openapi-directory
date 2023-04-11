@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdatePartitionXAmzTargetEnum {
-    AwsGlueUpdatePartition = "AWSGlue.UpdatePartition"
+    AWSGlueUpdatePartition = "AWSGlue.UpdatePartition"
 }
-export declare class UpdatePartitionHeaders extends SpeakeasyBase {
+export declare class UpdatePartitionRequest extends SpeakeasyBase {
+    updatePartitionRequest: shared.UpdatePartitionRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class UpdatePartitionHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdatePartitionXAmzTargetEnum;
 }
-export declare class UpdatePartitionRequest extends SpeakeasyBase {
-    headers: UpdatePartitionHeaders;
-    request: shared.UpdatePartitionRequest;
-}
 export declare class UpdatePartitionResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * GlueEncryptionException
+     */
     glueEncryptionException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     updatePartitionResponse?: Record<string, any>;
 }

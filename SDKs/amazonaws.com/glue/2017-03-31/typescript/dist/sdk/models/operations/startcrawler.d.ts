@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum StartCrawlerXAmzTargetEnum {
-    AwsGlueStartCrawler = "AWSGlue.StartCrawler"
+    AWSGlueStartCrawler = "AWSGlue.StartCrawler"
 }
-export declare class StartCrawlerHeaders extends SpeakeasyBase {
+export declare class StartCrawlerRequest extends SpeakeasyBase {
+    startCrawlerRequest: shared.StartCrawlerRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class StartCrawlerHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: StartCrawlerXAmzTargetEnum;
 }
-export declare class StartCrawlerRequest extends SpeakeasyBase {
-    headers: StartCrawlerHeaders;
-    request: shared.StartCrawlerRequest;
-}
 export declare class StartCrawlerResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * CrawlerRunningException
+     */
     crawlerRunningException?: any;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
+    /**
+     * Success
+     */
     startCrawlerResponse?: Record<string, any>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

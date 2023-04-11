@@ -1,13 +1,75 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PutSubscriptionSuspendResponseType extends SpeakeasyBase {
+export declare class PUTSubscriptionSuspendResponseType extends SpeakeasyBase {
+    /**
+     * The credit memo ID, if a credit memo is generated during the subscription process.
+     *
+     * @remarks
+     *
+     * **Note:** This container is only available if you set the Zuora REST API minor version to 207.0 or later in the request header, and you have  [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
+     *
+     */
     creditMemoId?: string;
+    /**
+     * Invoice ID, if an invoice is generated during the subscription process.
+     *
+     * @remarks
+     *
+     */
     invoiceId?: string;
+    /**
+     * Payment amount, if a payment is collected.
+     *
+     * @remarks
+     *
+     */
     paidAmount?: number;
+    /**
+     * Payment ID, if a payment is collected.
+     *
+     * @remarks
+     *
+     */
     paymentId?: string;
+    /**
+     * The date when subscription resumption takes effect, in the format yyyy-mm-dd.
+     *
+     * @remarks
+     *
+     */
     resumeDate?: Date;
+    /**
+     * The subscription ID.
+     *
+     * @remarks
+     *
+     */
     subscriptionId?: string;
+    /**
+     * Returns `true` if the request was processed successfully.
+     *
+     * @remarks
+     *
+     */
     success?: boolean;
+    /**
+     * The date when subscription suspension takes effect, in the format yyyy-mm-dd.
+     *
+     * @remarks
+     *
+     */
     suspendDate?: Date;
+    /**
+     * The date when the new subscription term ends, in the format yyyy-mm-dd.
+     *
+     * @remarks
+     *
+     */
     termEndDate?: Date;
+    /**
+     * Change in the total contracted value of the subscription as a result of the update.
+     *
+     * @remarks
+     *
+     */
     totalDeltaTcv?: number;
 }

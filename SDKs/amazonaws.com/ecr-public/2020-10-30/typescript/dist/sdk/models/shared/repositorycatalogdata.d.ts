@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * The catalog data for a repository. This data is publicly visible in the Amazon ECR Public Gallery.
-**/
+ */
 export declare class RepositoryCatalogData extends SpeakeasyBase {
     aboutText?: string;
     architectures?: string[];

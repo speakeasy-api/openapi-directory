@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetAssociateSubnetCidrBlockActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETAssociateSubnetCidrBlockActionEnum {
     AssociateSubnetCidrBlock = "AssociateSubnetCidrBlock"
 }
-export declare enum GetAssociateSubnetCidrBlockVersionEnum {
+export declare enum GETAssociateSubnetCidrBlockVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetAssociateSubnetCidrBlockQueryParams extends SpeakeasyBase {
-    action: GetAssociateSubnetCidrBlockActionEnum;
+export declare class GETAssociateSubnetCidrBlockRequest extends SpeakeasyBase {
+    action: GETAssociateSubnetCidrBlockActionEnum;
+    /**
+     * The IPv6 CIDR block for your subnet. The subnet must have a /64 prefix length.
+     */
     ipv6CidrBlock: string;
+    /**
+     * The ID of your subnet.
+     */
     subnetId: string;
-    version: GetAssociateSubnetCidrBlockVersionEnum;
-}
-export declare class GetAssociateSubnetCidrBlockHeaders extends SpeakeasyBase {
+    version: GETAssociateSubnetCidrBlockVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetAssociateSubnetCidrBlockHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetAssociateSubnetCidrBlockRequest extends SpeakeasyBase {
-    queryParams: GetAssociateSubnetCidrBlockQueryParams;
-    headers: GetAssociateSubnetCidrBlockHeaders;
-}
-export declare class GetAssociateSubnetCidrBlockResponse extends SpeakeasyBase {
+export declare class GETAssociateSubnetCidrBlockResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

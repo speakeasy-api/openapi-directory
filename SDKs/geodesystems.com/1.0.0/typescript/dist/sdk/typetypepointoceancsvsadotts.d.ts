@@ -1,6 +1,9 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class TypeTypePointOceanCsvSadoTts {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Search API for 'SADO TTS Data' entry type
+ */
+export declare class TypeTypePointOceanCsvSadoTTS {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,9 +12,10 @@ export declare class TypeTypePointOceanCsvSadoTts {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * searchTypePointOceanCsvSadoTts - Search API for 'SADO TTS Data' entry type
+     * Search API for 'SADO TTS Data' entry type
      *
+     * @remarks
      * API to search for entries of type SADO TTS Data
-    **/
-    searchTypePointOceanCsvSadoTts(req: operations.SearchTypePointOceanCsvSadoTtsRequest, config?: AxiosRequestConfig): Promise<operations.SearchTypePointOceanCsvSadoTtsResponse>;
+     */
+    searchTypePointOceanCsvSadoTTS(req: operations.SearchTypePointOceanCsvSadoTTSRequest, config?: AxiosRequestConfig): Promise<operations.SearchTypePointOceanCsvSadoTTSResponse>;
 }

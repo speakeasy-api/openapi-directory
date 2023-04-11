@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum BatchUpdateClusterXAmzTargetEnum {
-    AmazonMemoryDbBatchUpdateCluster = "AmazonMemoryDB.BatchUpdateCluster"
+    AmazonMemoryDBBatchUpdateCluster = "AmazonMemoryDB.BatchUpdateCluster"
 }
-export declare class BatchUpdateClusterHeaders extends SpeakeasyBase {
+export declare class BatchUpdateClusterRequest extends SpeakeasyBase {
+    batchUpdateClusterRequest: shared.BatchUpdateClusterRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class BatchUpdateClusterHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: BatchUpdateClusterXAmzTargetEnum;
 }
-export declare class BatchUpdateClusterRequest extends SpeakeasyBase {
-    headers: BatchUpdateClusterHeaders;
-    request: shared.BatchUpdateClusterRequest;
-}
 export declare class BatchUpdateClusterResponse extends SpeakeasyBase {
+    /**
+     * Success
+     */
     batchUpdateClusterResponse?: shared.BatchUpdateClusterResponse;
     contentType: string;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
+    /**
+     * ServiceUpdateNotFoundFault
+     */
     serviceUpdateNotFoundFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

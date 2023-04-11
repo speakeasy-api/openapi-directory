@@ -1,4 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class HlrReponse extends SpeakeasyBase {
-    etat?: any;
+import { HLRReponseEtat } from "./hlrreponseetat";
+/**
+ * Reponse OK
+ */
+export declare class HLRReponse extends SpeakeasyBase {
+    etat?: HLRReponseEtat;
 }

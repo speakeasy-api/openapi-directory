@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostUpdateServerCertificateActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTUpdateServerCertificateActionEnum {
     UpdateServerCertificate = "UpdateServerCertificate"
 }
-export declare enum PostUpdateServerCertificateVersionEnum {
+export declare enum POSTUpdateServerCertificateVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostUpdateServerCertificateQueryParams extends SpeakeasyBase {
-    action: PostUpdateServerCertificateActionEnum;
-    version: PostUpdateServerCertificateVersionEnum;
-}
-export declare class PostUpdateServerCertificateHeaders extends SpeakeasyBase {
+export declare class POSTUpdateServerCertificateRequest extends SpeakeasyBase {
+    action: POSTUpdateServerCertificateActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTUpdateServerCertificateVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostUpdateServerCertificateHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostUpdateServerCertificateRequest extends SpeakeasyBase {
-    queryParams: PostUpdateServerCertificateQueryParams;
-    headers: PostUpdateServerCertificateHeaders;
-    request?: Uint8Array;
-}
-export declare class PostUpdateServerCertificateResponse extends SpeakeasyBase {
+export declare class POSTUpdateServerCertificateResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

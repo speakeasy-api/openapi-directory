@@ -1,15 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PutConsumerV1AppointmentsIdConfirmPathParams extends SpeakeasyBase {
-    id: number;
-}
-export declare class PutConsumerV1AppointmentsIdConfirmQueryParams extends SpeakeasyBase {
-    undo?: boolean;
-}
+import { AxiosResponse } from "axios";
 export declare class PutConsumerV1AppointmentsIdConfirmRequest extends SpeakeasyBase {
-    pathParams: PutConsumerV1AppointmentsIdConfirmPathParams;
-    queryParams: PutConsumerV1AppointmentsIdConfirmQueryParams;
+    /**
+     * appointment id to confirm
+     */
+    id: number;
+    /**
+     * Use this parameter to undo the confirmed status
+     */
+    undo?: boolean;
 }
 export declare class PutConsumerV1AppointmentsIdConfirmResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

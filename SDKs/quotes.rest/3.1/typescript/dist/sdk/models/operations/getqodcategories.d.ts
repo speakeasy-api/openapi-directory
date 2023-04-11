@@ -1,17 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetQodCategoriesQueryParams extends SpeakeasyBase {
-    detailed?: boolean;
-    language?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetQodCategoriesSecurity extends SpeakeasyBase {
-    xTheySaidSoApiSecret: shared.SchemeXTheySaidSoApiSecret;
+    xTheySaidSoApiSecret: string;
 }
 export declare class GetQodCategoriesRequest extends SpeakeasyBase {
-    queryParams: GetQodCategoriesQueryParams;
-    security: GetQodCategoriesSecurity;
+    /**
+     * Return detailed information of the categories. Note the data format changes between the two values of this switch.
+     */
+    detailed?: boolean;
+    /**
+     * Language of the QOD category. The language must be supported in our QOD system.
+     */
+    language?: string;
 }
 export declare class GetQodCategoriesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostPurgeQueueActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTPurgeQueueActionEnum {
     PurgeQueue = "PurgeQueue"
 }
-export declare enum PostPurgeQueueVersionEnum {
+export declare enum POSTPurgeQueueVersionEnum {
     TwoThousandAndTwelve1105 = "2012-11-05"
 }
-export declare class PostPurgeQueueQueryParams extends SpeakeasyBase {
-    action: PostPurgeQueueActionEnum;
-    version: PostPurgeQueueVersionEnum;
-}
-export declare class PostPurgeQueueHeaders extends SpeakeasyBase {
+export declare class POSTPurgeQueueRequest extends SpeakeasyBase {
+    action: POSTPurgeQueueActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTPurgeQueueVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostPurgeQueueHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostPurgeQueueRequest extends SpeakeasyBase {
-    queryParams: PostPurgeQueueQueryParams;
-    headers: PostPurgeQueueHeaders;
-    request?: Uint8Array;
-}
-export declare class PostPurgeQueueResponse extends SpeakeasyBase {
+export declare class POSTPurgeQueueResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

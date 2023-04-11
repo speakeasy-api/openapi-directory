@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum StopStreamEncryptionXAmzTargetEnum {
     Kinesis20131202StopStreamEncryption = "Kinesis_20131202.StopStreamEncryption"
 }
-export declare class StopStreamEncryptionHeaders extends SpeakeasyBase {
+export declare class StopStreamEncryptionRequest extends SpeakeasyBase {
+    stopStreamEncryptionInput: shared.StopStreamEncryptionInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,28 @@ export declare class StopStreamEncryptionHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: StopStreamEncryptionXAmzTargetEnum;
 }
-export declare class StopStreamEncryptionRequest extends SpeakeasyBase {
-    headers: StopStreamEncryptionHeaders;
-    request: shared.StopStreamEncryptionInput;
-}
 export declare class StopStreamEncryptionResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
+    accessDeniedException?: any;
     contentType: string;
+    /**
+     * InvalidArgumentException
+     */
     invalidArgumentException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
-    resourceInUseException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceInUseException
+     */
+    resourceInUseException?: any;
 }

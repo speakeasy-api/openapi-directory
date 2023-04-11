@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Apps {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,11 +9,11 @@ export declare class Apps {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * driveAppsGet - Gets a specific app.
-    **/
-    driveAppsGet(req: operations.DriveAppsGetRequest, config?: AxiosRequestConfig): Promise<operations.DriveAppsGetResponse>;
+     * Gets a specific app.
+     */
+    driveAppsGet(req: operations.DriveAppsGetRequest, security: operations.DriveAppsGetSecurity, config?: AxiosRequestConfig): Promise<operations.DriveAppsGetResponse>;
     /**
-     * driveAppsList - Lists a user's installed apps.
-    **/
-    driveAppsList(req: operations.DriveAppsListRequest, config?: AxiosRequestConfig): Promise<operations.DriveAppsListResponse>;
+     * Lists a user's installed apps.
+     */
+    driveAppsList(req: operations.DriveAppsListRequest, security: operations.DriveAppsListSecurity, config?: AxiosRequestConfig): Promise<operations.DriveAppsListResponse>;
 }

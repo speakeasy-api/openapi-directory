@@ -5,7 +5,7 @@ import { PlacementStatistics } from "./placementstatistics";
 import { Tag } from "./tag";
 /**
  * The results of the predictive inbox placement test.
-**/
+ */
 export declare class GetDeliverabilityTestReportResponse extends SpeakeasyBase {
     deliverabilityTestReport: DeliverabilityTestReport;
     ispPlacements: IspPlacement[];

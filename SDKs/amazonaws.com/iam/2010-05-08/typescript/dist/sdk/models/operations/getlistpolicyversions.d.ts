@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetListPolicyVersionsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETListPolicyVersionsActionEnum {
     ListPolicyVersions = "ListPolicyVersions"
 }
-export declare enum GetListPolicyVersionsVersionEnum {
+export declare enum GETListPolicyVersionsVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class GetListPolicyVersionsQueryParams extends SpeakeasyBase {
-    action: GetListPolicyVersionsActionEnum;
+export declare class GETListPolicyVersionsRequest extends SpeakeasyBase {
+    action: GETListPolicyVersionsActionEnum;
+    /**
+     * Use this parameter only when paginating results and only after you receive a response indicating that the results are truncated. Set it to the value of the <code>Marker</code> element in the response that you received to indicate where the next call should start.
+     */
     marker?: string;
+    /**
+     * <p>Use this only when paginating results to indicate the maximum number of items you want in the response. If additional items exist beyond the maximum you specify, the <code>IsTruncated</code> response element is <code>true</code>.</p> <p>If you do not include this parameter, the number of items defaults to 100. Note that IAM might return fewer results, even when there are more results available. In that case, the <code>IsTruncated</code> response element returns <code>true</code>, and <code>Marker</code> contains a value to include in the subsequent call that tells the service where to continue from.</p>
+     */
     maxItems?: number;
+    /**
+     * <p>The Amazon Resource Name (ARN) of the IAM policy for which you want the versions.</p> <p>For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>.</p>
+     */
     policyArn: string;
-    version: GetListPolicyVersionsVersionEnum;
-}
-export declare class GetListPolicyVersionsHeaders extends SpeakeasyBase {
+    version: GETListPolicyVersionsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +29,9 @@ export declare class GetListPolicyVersionsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetListPolicyVersionsRequest extends SpeakeasyBase {
-    queryParams: GetListPolicyVersionsQueryParams;
-    headers: GetListPolicyVersionsHeaders;
-}
-export declare class GetListPolicyVersionsResponse extends SpeakeasyBase {
+export declare class GETListPolicyVersionsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

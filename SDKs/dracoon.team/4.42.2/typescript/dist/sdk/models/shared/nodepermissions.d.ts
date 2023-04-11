@@ -1,0 +1,50 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Node permissions
+ */
+export declare class NodePermissions extends SpeakeasyBase {
+    /**
+     * User / Group may update metadata of nodes: rename files and folders, change classification, etc.
+     */
+    change: boolean;
+    /**
+     * User / Group may upload files, create folders and copy / move files to this room, overwriting is not possible.
+     */
+    create: boolean;
+    /**
+     * User / Group may overwrite and remove files / folders, move files from this room.
+     */
+    delete: boolean;
+    /**
+     * User / Group may permanently remove files / folders from the recycle bin.
+     */
+    deleteRecycleBin: boolean;
+    /**
+     * User / Group may grant all of the above permissions to other users and groups independently,
+     *
+     * @remarks
+     *
+     * may update room metadata and create / update / delete subordinary rooms, has all permissions.
+     */
+    manage: boolean;
+    /**
+     * User / Group may create Download Shares for files and containers view all previously created Download Shares in this room.
+     */
+    manageDownloadShare: boolean;
+    /**
+     * User / Group may create Upload Shares for containers, view all previously created Upload Shares in this room.
+     */
+    manageUploadShare: boolean;
+    /**
+     * User / Group may see all rooms, files and folders in the room and download everything, copy files from this room.
+     */
+    read: boolean;
+    /**
+     * User / Group may look up files / folders in the recycle bin.
+     */
+    readRecycleBin: boolean;
+    /**
+     * User / Group may restore files / folders from recycle bin - room permissions required.
+     */
+    restoreRecycleBin: boolean;
+}

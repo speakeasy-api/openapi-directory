@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostRegisterDbProxyTargetsActionEnum {
-    RegisterDbProxyTargets = "RegisterDBProxyTargets"
+import { AxiosResponse } from "axios";
+export declare enum POSTRegisterDBProxyTargetsActionEnum {
+    RegisterDBProxyTargets = "RegisterDBProxyTargets"
 }
-export declare enum PostRegisterDbProxyTargetsVersionEnum {
+export declare enum POSTRegisterDBProxyTargetsVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class PostRegisterDbProxyTargetsQueryParams extends SpeakeasyBase {
-    action: PostRegisterDbProxyTargetsActionEnum;
-    version: PostRegisterDbProxyTargetsVersionEnum;
-}
-export declare class PostRegisterDbProxyTargetsHeaders extends SpeakeasyBase {
+export declare class POSTRegisterDBProxyTargetsRequest extends SpeakeasyBase {
+    action: POSTRegisterDBProxyTargetsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTRegisterDBProxyTargetsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostRegisterDbProxyTargetsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostRegisterDbProxyTargetsRequest extends SpeakeasyBase {
-    queryParams: PostRegisterDbProxyTargetsQueryParams;
-    headers: PostRegisterDbProxyTargetsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostRegisterDbProxyTargetsResponse extends SpeakeasyBase {
+export declare class POSTRegisterDBProxyTargetsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,5 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { ApiMapping } from "./apimapping";
+/**
+ * Success
+ */
 export declare class GetApiMappingsResponse extends SpeakeasyBase {
-    items?: Record<string, any>;
-    nextToken?: Record<string, any>;
+    items?: ApiMapping[];
+    nextToken?: string;
 }

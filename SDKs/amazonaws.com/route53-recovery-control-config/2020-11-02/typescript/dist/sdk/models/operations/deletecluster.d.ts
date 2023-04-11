@@ -1,8 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteClusterPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteClusterRequest extends SpeakeasyBase {
+    /**
+     * The Amazon Resource Name (ARN) of the cluster that you're deleting.
+     */
     clusterArn: string;
-}
-export declare class DeleteClusterHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,18 +13,36 @@ export declare class DeleteClusterHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeleteClusterRequest extends SpeakeasyBase {
-    pathParams: DeleteClusterPathParams;
-    headers: DeleteClusterHeaders;
-}
 export declare class DeleteClusterResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteClusterResponse?: Record<string, any>;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

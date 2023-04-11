@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostBatchDeleteScheduledActionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTBatchDeleteScheduledActionActionEnum {
     BatchDeleteScheduledAction = "BatchDeleteScheduledAction"
 }
-export declare enum PostBatchDeleteScheduledActionVersionEnum {
+export declare enum POSTBatchDeleteScheduledActionVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class PostBatchDeleteScheduledActionQueryParams extends SpeakeasyBase {
-    action: PostBatchDeleteScheduledActionActionEnum;
-    version: PostBatchDeleteScheduledActionVersionEnum;
-}
-export declare class PostBatchDeleteScheduledActionHeaders extends SpeakeasyBase {
+export declare class POSTBatchDeleteScheduledActionRequest extends SpeakeasyBase {
+    action: POSTBatchDeleteScheduledActionActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTBatchDeleteScheduledActionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostBatchDeleteScheduledActionHeaders extends SpeakeasyBase
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostBatchDeleteScheduledActionRequest extends SpeakeasyBase {
-    queryParams: PostBatchDeleteScheduledActionQueryParams;
-    headers: PostBatchDeleteScheduledActionHeaders;
-    request?: Uint8Array;
-}
-export declare class PostBatchDeleteScheduledActionResponse extends SpeakeasyBase {
+export declare class POSTBatchDeleteScheduledActionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

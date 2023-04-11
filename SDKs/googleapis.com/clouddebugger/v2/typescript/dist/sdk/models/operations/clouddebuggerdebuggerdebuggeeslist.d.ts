@@ -1,0 +1,82 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class ClouddebuggerDebuggerDebuggeesListSecurityOption1 extends SpeakeasyBase {
+    oauth2: string;
+    oauth2c: string;
+}
+export declare class ClouddebuggerDebuggerDebuggeesListSecurityOption2 extends SpeakeasyBase {
+    oauth2: string;
+    oauth2c: string;
+}
+export declare class ClouddebuggerDebuggerDebuggeesListSecurity extends SpeakeasyBase {
+    option1?: ClouddebuggerDebuggerDebuggeesListSecurityOption1;
+    option2?: ClouddebuggerDebuggerDebuggeesListSecurityOption2;
+}
+export declare class ClouddebuggerDebuggerDebuggeesListRequest extends SpeakeasyBase {
+    /**
+     * V1 error format.
+     */
+    dollarXgafv?: shared.XgafvEnum;
+    /**
+     * OAuth access token.
+     */
+    accessToken?: string;
+    /**
+     * Data format for response.
+     */
+    alt?: shared.AltEnum;
+    /**
+     * JSONP
+     */
+    callback?: string;
+    /**
+     * Required. The client version making the call. Schema: `domain/type/version` (e.g., `google.com/intellij/v1`).
+     */
+    clientVersion?: string;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * When set to `true`, the result includes all debuggees. Otherwise, the result includes only debuggees that are active.
+     */
+    includeInactive?: boolean;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauthToken?: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * Required. Project number of a Google Cloud project whose debuggees to list.
+     */
+    project?: string;
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    uploadType?: string;
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    uploadProtocol?: string;
+}
+export declare class ClouddebuggerDebuggerDebuggeesListResponse extends SpeakeasyBase {
+    contentType: string;
+    /**
+     * Successful response
+     */
+    listDebuggeesResponse?: shared.ListDebuggeesResponse;
+    statusCode: number;
+    rawResponse?: AxiosResponse;
+}

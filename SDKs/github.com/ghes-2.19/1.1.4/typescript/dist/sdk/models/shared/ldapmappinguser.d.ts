@@ -7,7 +7,7 @@ export declare class LdapMappingUserPlan extends SpeakeasyBase {
 }
 /**
  * Ldap Private User
-**/
+ */
 export declare class LdapMappingUser extends SpeakeasyBase {
     avatarUrl: string;
     bio: string;

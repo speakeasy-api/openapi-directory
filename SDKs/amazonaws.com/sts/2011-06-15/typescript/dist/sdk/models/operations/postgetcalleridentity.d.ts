@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostGetCallerIdentityActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTGetCallerIdentityActionEnum {
     GetCallerIdentity = "GetCallerIdentity"
 }
-export declare enum PostGetCallerIdentityVersionEnum {
+export declare enum POSTGetCallerIdentityVersionEnum {
     TwoThousandAndEleven0615 = "2011-06-15"
 }
-export declare class PostGetCallerIdentityQueryParams extends SpeakeasyBase {
-    action: PostGetCallerIdentityActionEnum;
-    version: PostGetCallerIdentityVersionEnum;
-}
-export declare class PostGetCallerIdentityHeaders extends SpeakeasyBase {
+export declare class POSTGetCallerIdentityRequest extends SpeakeasyBase {
+    action: POSTGetCallerIdentityActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTGetCallerIdentityVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostGetCallerIdentityHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostGetCallerIdentityRequest extends SpeakeasyBase {
-    queryParams: PostGetCallerIdentityQueryParams;
-    headers: PostGetCallerIdentityHeaders;
-    request?: Uint8Array;
-}
-export declare class PostGetCallerIdentityResponse extends SpeakeasyBase {
+export declare class POSTGetCallerIdentityResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

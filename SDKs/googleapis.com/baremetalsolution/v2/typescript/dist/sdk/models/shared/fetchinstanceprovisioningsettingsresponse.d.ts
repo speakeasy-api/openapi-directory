@@ -1,8 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { OsImage } from "./osimage";
+import { OSImage } from "./osimage";
 /**
  * Response with all provisioning settings.
-**/
+ */
 export declare class FetchInstanceProvisioningSettingsResponse extends SpeakeasyBase {
-    images?: OsImage[];
+    /**
+     * The OS images available.
+     */
+    images?: OSImage[];
 }

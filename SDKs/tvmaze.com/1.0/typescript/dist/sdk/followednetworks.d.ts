@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class FollowedNetworks {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,19 +9,19 @@ export declare class FollowedNetworks {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteUserFollowsNetworksNetworkId - Unfollow a network
-    **/
+     * Unfollow a network
+     */
     deleteUserFollowsNetworksNetworkId(req: operations.DeleteUserFollowsNetworksNetworkIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteUserFollowsNetworksNetworkIdResponse>;
     /**
-     * getUserFollowsNetworks - List the followed networks
-    **/
+     * List the followed networks
+     */
     getUserFollowsNetworks(req: operations.GetUserFollowsNetworksRequest, config?: AxiosRequestConfig): Promise<operations.GetUserFollowsNetworksResponse>;
     /**
-     * getUserFollowsNetworksNetworkId - Check if a network is followed
-    **/
+     * Check if a network is followed
+     */
     getUserFollowsNetworksNetworkId(req: operations.GetUserFollowsNetworksNetworkIdRequest, config?: AxiosRequestConfig): Promise<operations.GetUserFollowsNetworksNetworkIdResponse>;
     /**
-     * putUserFollowsNetworksNetworkId - Follow a network
-    **/
+     * Follow a network
+     */
     putUserFollowsNetworksNetworkId(req: operations.PutUserFollowsNetworksNetworkIdRequest, config?: AxiosRequestConfig): Promise<operations.PutUserFollowsNetworksNetworkIdResponse>;
 }

@@ -1,13 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProductsApiFindQueryParams extends SpeakeasyBase {
-    page?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ProductsApiFindRequest extends SpeakeasyBase {
-    queryParams: ProductsApiFindQueryParams;
-    request: any;
+    requestBody: any;
+    page?: number;
 }
 export declare class ProductsApiFindResponse extends SpeakeasyBase {
     contentType: string;
     productsApiFind200ApplicationJSONOneOf?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

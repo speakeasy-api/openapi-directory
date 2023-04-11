@@ -1,6 +1,9 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class PolicyApi {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Allows you to add, remove and modify policy modules. *Policy module identifiers are only used for management purposes. They are not used outside the Policy API.*
+ */
+export declare class PolicyAPI {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,26 +12,30 @@ export declare class PolicyApi {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deletePolicyModule - Delete a policy module
+     * Delete a policy module
      *
+     * @remarks
      * This API endpoint removes an existing policy module from the server
-    **/
+     */
     deletePolicyModule(req: operations.DeletePolicyModuleRequest, config?: AxiosRequestConfig): Promise<operations.DeletePolicyModuleResponse>;
     /**
-     * getPolicies - List policies
+     * List policies
      *
+     * @remarks
      * This API endpoint responds with a list of all policy modules on the server (result response)
-    **/
+     */
     getPolicies(req: operations.GetPoliciesRequest, config?: AxiosRequestConfig): Promise<operations.GetPoliciesResponse>;
     /**
-     * getPolicyModule - Get a policy module
+     * Get a policy module
      *
+     * @remarks
      * This API endpoint returns the details of the specified policy module (`{id}`)
-    **/
+     */
     getPolicyModule(req: operations.GetPolicyModuleRequest, config?: AxiosRequestConfig): Promise<operations.GetPolicyModuleResponse>;
     /**
-     * putPolicyModule - Create or update a policy module
+     * Create or update a policy module
      *
+     * @remarks
      * - If the policy module does not exist, it is created.
      * - If the policy module already exists, it is replaced.
      *
@@ -50,6 +57,6 @@ export declare class PolicyApi {
      *   	networks[m].public == true
      * }
      * ```
-    **/
+     */
     putPolicyModule(req: operations.PutPolicyModuleRequest, config?: AxiosRequestConfig): Promise<operations.PutPolicyModuleResponse>;
 }

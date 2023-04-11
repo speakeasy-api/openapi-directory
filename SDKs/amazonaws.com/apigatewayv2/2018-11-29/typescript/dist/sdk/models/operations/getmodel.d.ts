@@ -1,10 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetModelPathParams extends SpeakeasyBase {
-    apiId: string;
-    modelId: string;
-}
-export declare class GetModelHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetModelRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,15 +9,29 @@ export declare class GetModelHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class GetModelRequest extends SpeakeasyBase {
-    pathParams: GetModelPathParams;
-    headers: GetModelHeaders;
+    /**
+     * The API identifier.
+     */
+    apiId: string;
+    /**
+     * The model ID.
+     */
+    modelId: string;
 }
 export declare class GetModelResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getModelResponse?: shared.GetModelResponse;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

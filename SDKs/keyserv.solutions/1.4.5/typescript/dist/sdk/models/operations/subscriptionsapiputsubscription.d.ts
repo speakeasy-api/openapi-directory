@@ -1,8 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SubscriptionsApiPutSubscriptionRequest extends SpeakeasyBase {
-    request: any;
-}
+import { AxiosResponse } from "axios";
 export declare class SubscriptionsApiPutSubscriptionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { EvaluationMethodEnum } from "./evaluationmethodenum";
 import { DetectorModelVersionStatusEnum } from "./detectormodelversionstatusenum";
+import { EvaluationMethodEnum } from "./evaluationmethodenum";
 /**
  * Information about how the detector model is configured.
-**/
+ */
 export declare class DetectorModelConfiguration extends SpeakeasyBase {
     creationTime?: Date;
     detectorModelArn?: string;

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UntagResourceXAmzTargetEnum {
     OpsWorks20130218UntagResource = "OpsWorks_20130218.UntagResource"
 }
-export declare class UntagResourceHeaders extends SpeakeasyBase {
+export declare class UntagResourceRequest extends SpeakeasyBase {
+    untagResourceRequest: shared.UntagResourceRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,13 +15,16 @@ export declare class UntagResourceHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UntagResourceXAmzTargetEnum;
 }
-export declare class UntagResourceRequest extends SpeakeasyBase {
-    headers: UntagResourceHeaders;
-    request: shared.UntagResourceRequest;
-}
 export declare class UntagResourceResponse extends SpeakeasyBase {
     contentType: string;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

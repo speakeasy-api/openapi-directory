@@ -1,14 +1,19 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { PostDisableRequest, PostDisableResponse } from "openapi/src/sdk/models/operations";
+import {
+  shared.DisableRequest,
+  PostDisableResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: PostDisableRequest = {
-  request: "sit",
+
+const req: shared.DisableRequest = {
+  contract: "corrupti",
+  merchantAccount: "provident",
+  recurringDetailReference: "distinctio",
+  shopperReference: "quibusdam",
 };
 
 sdk.postDisable(req).then((res: PostDisableResponse | AxiosError) => {

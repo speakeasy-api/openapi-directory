@@ -1,4 +1,5 @@
 export * from "./batchacknowledgealarm";
+export * from "./batchdeletedetector";
 export * from "./batchdisablealarm";
 export * from "./batchenablealarm";
 export * from "./batchputmessage";

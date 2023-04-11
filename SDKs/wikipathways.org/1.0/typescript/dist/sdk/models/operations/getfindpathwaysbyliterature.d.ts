@@ -1,4 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
 export declare enum GetFindPathwaysByLiteratureFormatEnum {
     Json = "json",
     Xml = "xml",
@@ -7,14 +8,15 @@ export declare enum GetFindPathwaysByLiteratureFormatEnum {
     Jpg = "jpg",
     Pdf = "pdf"
 }
-export declare class GetFindPathwaysByLiteratureQueryParams extends SpeakeasyBase {
-    format?: GetFindPathwaysByLiteratureFormatEnum;
-    query: string;
-}
 export declare class GetFindPathwaysByLiteratureRequest extends SpeakeasyBase {
-    queryParams: GetFindPathwaysByLiteratureQueryParams;
+    format?: GetFindPathwaysByLiteratureFormatEnum;
+    /**
+     * The query, can be a pubmed id, author name or title keyword.
+     */
+    query: string;
 }
 export declare class GetFindPathwaysByLiteratureResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

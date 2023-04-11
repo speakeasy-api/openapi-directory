@@ -1,16 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListAnswersPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListAnswersRequest extends SpeakeasyBase {
     lensAlias: string;
-    workloadId: string;
-}
-export declare class ListAnswersQueryParams extends SpeakeasyBase {
+    /**
+     * The maximum number of results to return for this request.
+     */
     maxResults?: number;
     milestoneNumber?: number;
     nextToken?: string;
     pillarId?: string;
-}
-export declare class ListAnswersHeaders extends SpeakeasyBase {
+    workloadId: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,18 +19,32 @@ export declare class ListAnswersHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class ListAnswersRequest extends SpeakeasyBase {
-    pathParams: ListAnswersPathParams;
-    queryParams: ListAnswersQueryParams;
-    headers: ListAnswersHeaders;
-}
 export declare class ListAnswersResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * Success
+     */
     listAnswersOutput?: shared.ListAnswersOutput;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

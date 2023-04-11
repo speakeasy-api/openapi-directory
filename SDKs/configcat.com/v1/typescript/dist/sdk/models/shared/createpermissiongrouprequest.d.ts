@@ -1,28 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { AccessTypeEnum } from "./accesstypeenum";
-import { EnvironmentAccessModel } from "./environmentaccessmodel";
+import { CreateOrUpdateEnvironmentAccessModel } from "./createorupdateenvironmentaccessmodel";
 import { EnvironmentAccessTypeEnum } from "./environmentaccesstypeenum";
 export declare class CreatePermissionGroupRequest extends SpeakeasyBase {
     accessType?: AccessTypeEnum;
     canCreateOrUpdateConfig?: boolean;
     canCreateOrUpdateEnvironment?: boolean;
+    canCreateOrUpdateSegments?: boolean;
     canCreateOrUpdateSetting?: boolean;
     canCreateOrUpdateTag?: boolean;
     canDeleteConfig?: boolean;
     canDeleteEnvironment?: boolean;
+    canDeleteSegments?: boolean;
     canDeleteSetting?: boolean;
     canDeleteTag?: boolean;
     canManageIntegrations?: boolean;
     canManageMembers?: boolean;
     canManageProductPreferences?: boolean;
     canManageWebhook?: boolean;
-    canRotateSdkKey?: boolean;
+    canRotateSDKKey?: boolean;
     canTagSetting?: boolean;
     canUseExportImport?: boolean;
     canViewProductAuditLog?: boolean;
     canViewProductStatistics?: boolean;
-    canViewSdkKey?: boolean;
-    environmentAccesses?: EnvironmentAccessModel[];
+    canViewSDKKey?: boolean;
+    environmentAccesses?: CreateOrUpdateEnvironmentAccessModel[];
     name: string;
     newEnvironmentAccessType?: EnvironmentAccessTypeEnum;
 }

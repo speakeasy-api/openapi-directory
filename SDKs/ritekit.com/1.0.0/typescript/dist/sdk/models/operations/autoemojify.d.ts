@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class AutoEmojifyQueryParams extends SpeakeasyBase {
-    text: string;
-}
+import { AxiosResponse } from "axios";
 export declare class AutoEmojifyRequest extends SpeakeasyBase {
-    queryParams: AutoEmojifyQueryParams;
+    /**
+     * Text of the post
+     */
+    text: string;
 }
 export declare class AutoEmojifyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,35 +1,29 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateLicenseRequest, CreateLicenseResponse } from "openapi/src/sdk/models/operations";
+import {
+  CreateLicenseRequestBody,
+  CreateLicenseResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: CreateLicenseRequest = {
-  security: {
-    basicAuth: {
-      password: "YOUR_PASSWORD_HERE",
-      username: "YOUR_USERNAME_HERE",
-    },
-  },
-  request: {
-    active: false,
-    currency: "voluptas",
-    hidden: true,
-    licenseTemplateNumber: "expedita",
-    licenseeNumber: "consequuntur",
-    name: "dolor",
-    number: "expedita",
-    parentfeature: "voluptas",
-    price: 88.099998,
-    quantity: "nihil",
-    startDate: "2004-06-02T10:14:12Z",
-    timeVolume: "voluptatum",
-    timeVolumePeriod: "et",
-    usedQuantity: "ut",
-  },
+
+const req: CreateLicenseRequestBody = {
+  active: false,
+  currency: "corrupti",
+  hidden: false,
+  licenseTemplateNumber: "provident",
+  licenseeNumber: "distinctio",
+  name: "quibusdam",
+  number: "unde",
+  parentfeature: "nulla",
+  price: 5448.83,
+  quantity: "illum",
+  startDate: "2022-05-18T09:34:54.894Z",
+  timeVolume: "deserunt",
+  timeVolumePeriod: "suscipit",
+  usedQuantity: "iure",
 };
 
 sdk.license.createLicense(req).then((res: CreateLicenseResponse | AxiosError) => {

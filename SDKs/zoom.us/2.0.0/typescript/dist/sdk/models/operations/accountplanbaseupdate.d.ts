@@ -1,30 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class AccountPlanBaseUpdatePathParams extends SpeakeasyBase {
-    accountId: string;
-}
+import { AxiosResponse } from "axios";
 /**
  * Account base plan object.
-**/
-export declare class AccountPlanBaseUpdateApplicationJson extends SpeakeasyBase {
+ */
+export declare class AccountPlanBaseUpdateApplicationJSON extends SpeakeasyBase {
+    /**
+     * Account base plan number of hosts. For a Pro Plan please select a value between 1 and 9. For a Business Plan please select a value between 10 and 49. For a Education Plan please select a value between 20 and 149. For a Free Trial Plan please select a value between 1 and 9999.
+     */
     hosts: number;
+    /**
+     * Account base <a href="https://marketplace.zoom.us/docs/api-reference/other-references/plans">plan type.</a>
+     */
     type: string;
-}
-/**
- * Account base plan object.
-**/
-export declare class AccountPlanBaseUpdateMultipartFormData extends SpeakeasyBase {
-    hosts: number;
-    type: string;
-}
-export declare class AccountPlanBaseUpdateRequests extends SpeakeasyBase {
-    object?: AccountPlanBaseUpdateApplicationJson;
-    object1?: AccountPlanBaseUpdateMultipartFormData;
 }
 export declare class AccountPlanBaseUpdateRequest extends SpeakeasyBase {
-    pathParams: AccountPlanBaseUpdatePathParams;
-    request: AccountPlanBaseUpdateRequests;
+    requestBody: AccountPlanBaseUpdateApplicationJSON;
+    /**
+     * The account ID.
+     */
+    accountId: string;
 }
 export declare class AccountPlanBaseUpdateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

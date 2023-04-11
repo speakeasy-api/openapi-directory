@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListComplianceStatusQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListComplianceStatusXAmzTargetEnum {
-    Awsfms20180101ListComplianceStatus = "AWSFMS_20180101.ListComplianceStatus"
+    AWSFMS20180101ListComplianceStatus = "AWSFMS_20180101.ListComplianceStatus"
 }
-export declare class ListComplianceStatusHeaders extends SpeakeasyBase {
+export declare class ListComplianceStatusRequest extends SpeakeasyBase {
+    listComplianceStatusRequest: shared.ListComplianceStatusRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,15 +23,20 @@ export declare class ListComplianceStatusHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListComplianceStatusXAmzTargetEnum;
 }
-export declare class ListComplianceStatusRequest extends SpeakeasyBase {
-    queryParams: ListComplianceStatusQueryParams;
-    headers: ListComplianceStatusHeaders;
-    request: shared.ListComplianceStatusRequest;
-}
 export declare class ListComplianceStatusResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalErrorException
+     */
     internalErrorException?: any;
+    /**
+     * Success
+     */
     listComplianceStatusResponse?: shared.ListComplianceStatusResponse;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

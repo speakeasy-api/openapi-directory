@@ -1,23 +1,70 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GroupPathParams extends SpeakeasyBase {
-    groupId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GroupSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
-}
-export declare class Group200ApplicationJson extends SpeakeasyBase {
-    id?: string;
-    name?: string;
-    totalMembers?: number;
+    oAuth: string;
 }
 export declare class GroupRequest extends SpeakeasyBase {
-    pathParams: GroupPathParams;
-    security: GroupSecurity;
+    /**
+     * The group ID.<br>
+     *
+     * @remarks
+     * Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups).
+     */
+    groupId: string;
+}
+/**
+ * **HTTP Status Code:** `200`<br> Group returned.<br>
+ *
+ * @remarks
+ * **Error Code:** `200`<br>
+ * Only available for Paid account,{accountId}.
+ */
+export declare class Group200ApplicationXML extends SpeakeasyBase {
+    /**
+     * Group ID.
+     */
+    id?: string;
+    /**
+     * Group name.
+     */
+    name?: string;
+    /**
+     * Total count of members in the group.
+     */
+    totalMembers?: number;
+}
+/**
+ * **HTTP Status Code:** `200`<br> Group returned.<br>
+ *
+ * @remarks
+ * **Error Code:** `200`<br>
+ * Only available for Paid account,{accountId}.
+ */
+export declare class Group200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Group ID.
+     */
+    id?: string;
+    /**
+     * Group name.
+     */
+    name?: string;
+    /**
+     * Total count of members in the group.
+     */
+    totalMembers?: number;
 }
 export declare class GroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    group200ApplicationJSONObject?: Group200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * **HTTP Status Code:** `200`<br> Group returned.<br>
+     *
+     * @remarks
+     * **Error Code:** `200`<br>
+     * Only available for Paid account,{accountId}.
+     */
+    group200ApplicationJSONObject?: Group200ApplicationJSON;
 }

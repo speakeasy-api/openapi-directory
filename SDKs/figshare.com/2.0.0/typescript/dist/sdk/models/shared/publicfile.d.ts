@@ -1,10 +1,34 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * OK. File representation
+ */
 export declare class PublicFile extends SpeakeasyBase {
-    computedMd5?: string;
-    downloadUrl?: string;
-    id?: number;
-    isLinkOnly?: boolean;
-    name?: string;
-    size?: number;
-    suppliedMd5?: string;
+    /**
+     * File computed md5
+     */
+    computedMd5: string;
+    /**
+     * Url for file download
+     */
+    downloadUrl: string;
+    /**
+     * File id
+     */
+    id: number;
+    /**
+     * True if file is hosted somewhere else
+     */
+    isLinkOnly: boolean;
+    /**
+     * File name
+     */
+    name: string;
+    /**
+     * File size
+     */
+    size: number;
+    /**
+     * File supplied md5
+     */
+    suppliedMd5: string;
 }

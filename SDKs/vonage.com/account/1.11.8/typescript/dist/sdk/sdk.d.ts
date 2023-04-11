@@ -1,10 +1,30 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://api.vonage.com/t/vbc.prod/provisioning"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * The Vonage Business Cloud Account API enables you to retrieve information about accounts.
+ *
+ * @remarks
+ *
+ * Your application must subscribe to the Provisioning API suite to use this API.
+ *
+ */
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -12,17 +32,18 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
     /**
-     * accountCtrlGetAccountServicesByAccountId - Get account data by ID
-    **/
-    accountCtrlGetAccountServicesByAccountId(req: operations.AccountCtrlGetAccountServicesByAccountIdRequest, config?: AxiosRequestConfig): Promise<operations.AccountCtrlGetAccountServicesByAccountIdResponse>;
+     * Get account data by ID
+     */
+    accountCtrlGetAccountServicesByAccountID(req: operations.AccountCtrlGetAccountServicesByAccountIDRequest, security: operations.AccountCtrlGetAccountServicesByAccountIDSecurity, config?: AxiosRequestConfig): Promise<operations.AccountCtrlGetAccountServicesByAccountIDResponse>;
     /**
-     * accountCtrlGetLocationById - Get location data by account ID and location ID
-    **/
-    accountCtrlGetLocationById(req: operations.AccountCtrlGetLocationByIdRequest, config?: AxiosRequestConfig): Promise<operations.AccountCtrlGetLocationByIdResponse>;
+     * Get location data by account ID and location ID
+     */
+    accountCtrlGetLocationByID(req: operations.AccountCtrlGetLocationByIDRequest, security: operations.AccountCtrlGetLocationByIDSecurity, config?: AxiosRequestConfig): Promise<operations.AccountCtrlGetLocationByIDResponse>;
     /**
-     * accountCtrlGetLocationsByAccountId - Get account locations data by account ID
-    **/
-    accountCtrlGetLocationsByAccountId(req: operations.AccountCtrlGetLocationsByAccountIdRequest, config?: AxiosRequestConfig): Promise<operations.AccountCtrlGetLocationsByAccountIdResponse>;
+     * Get account locations data by account ID
+     */
+    accountCtrlGetLocationsByAccountID(req: operations.AccountCtrlGetLocationsByAccountIDRequest, security: operations.AccountCtrlGetLocationsByAccountIDSecurity, config?: AxiosRequestConfig): Promise<operations.AccountCtrlGetLocationsByAccountIDResponse>;
 }

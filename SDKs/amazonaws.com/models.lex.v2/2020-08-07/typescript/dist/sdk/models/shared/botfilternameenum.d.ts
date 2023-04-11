@@ -1,3 +1,4 @@
 export declare enum BotFilterNameEnum {
-    BotName = "BotName"
+    BotName = "BotName",
+    BotType = "BotType"
 }

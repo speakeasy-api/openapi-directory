@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SetDelayPathParams extends SpeakeasyBase {
-    agentNum: number;
-    delay: number;
-}
+import { AxiosResponse } from "axios";
 export declare class SetDelayRequest extends SpeakeasyBase {
-    pathParams: SetDelayPathParams;
+    /**
+     * Agent to set the delay time
+     */
+    agentNum: number;
+    /**
+     * Delay time of the agent
+     */
+    delay: number;
 }
 export declare class SetDelayResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     setDelay200ApplicationJSONInt32Integer?: number;
 }

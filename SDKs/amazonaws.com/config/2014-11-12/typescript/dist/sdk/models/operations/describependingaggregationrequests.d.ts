@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribePendingAggregationRequestsQueryParams extends SpeakeasyBase {
-    limit?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum DescribePendingAggregationRequestsXAmzTargetEnum {
     StarlingDoveServiceDescribePendingAggregationRequests = "StarlingDoveService.DescribePendingAggregationRequests"
 }
-export declare class DescribePendingAggregationRequestsHeaders extends SpeakeasyBase {
+export declare class DescribePendingAggregationRequestsRequest extends SpeakeasyBase {
+    describePendingAggregationRequestsRequest: shared.DescribePendingAggregationRequestsRequest;
+    /**
+     * Pagination limit
+     */
+    limit?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,16 +23,24 @@ export declare class DescribePendingAggregationRequestsHeaders extends Speakeasy
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribePendingAggregationRequestsXAmzTargetEnum;
 }
-export declare class DescribePendingAggregationRequestsRequest extends SpeakeasyBase {
-    queryParams: DescribePendingAggregationRequestsQueryParams;
-    headers: DescribePendingAggregationRequestsHeaders;
-    request: shared.DescribePendingAggregationRequestsRequest;
-}
 export declare class DescribePendingAggregationRequestsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describePendingAggregationRequestsResponse?: shared.DescribePendingAggregationRequestsResponse;
+    /**
+     * InvalidLimitException
+     */
     invalidLimitException?: any;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

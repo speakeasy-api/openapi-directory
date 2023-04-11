@@ -1,30 +1,40 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * The Amazon S3 bucket for the disk image.
-**/
+ */
 export declare class ImportSnapshotResultSnapshotTaskDetailUserBucket extends SpeakeasyBase {
-    s3Bucket?: Record<string, any>;
-    s3Key?: Record<string, any>;
+    s3Bucket?: string;
+    s3Key?: string;
 }
 /**
  * Information about the import snapshot task.
-**/
+ */
 export declare class ImportSnapshotResultSnapshotTaskDetail extends SpeakeasyBase {
-    description?: Record<string, any>;
-    diskImageSize?: Record<string, any>;
-    encrypted?: Record<string, any>;
-    format?: Record<string, any>;
-    kmsKeyId?: Record<string, any>;
-    progress?: Record<string, any>;
-    snapshotId?: Record<string, any>;
-    status?: Record<string, any>;
-    statusMessage?: Record<string, any>;
-    url?: Record<string, any>;
+    description?: string;
+    diskImageSize?: number;
+    encrypted?: boolean;
+    format?: string;
+    kmsKeyId?: string;
+    progress?: string;
+    snapshotId?: string;
+    status?: string;
+    statusMessage?: string;
+    url?: string;
     userBucket?: ImportSnapshotResultSnapshotTaskDetailUserBucket;
 }
+/**
+ * Describes a tag.
+ */
+export declare class ImportSnapshotResultTags extends SpeakeasyBase {
+    key?: string;
+    value?: string;
+}
+/**
+ * Success
+ */
 export declare class ImportSnapshotResult extends SpeakeasyBase {
-    description?: Record<string, any>;
-    importTaskId?: Record<string, any>;
+    description?: string;
+    importTaskId?: string;
     snapshotTaskDetail?: ImportSnapshotResultSnapshotTaskDetail;
-    tags?: Record<string, any>;
+    tags?: ImportSnapshotResultTags[];
 }

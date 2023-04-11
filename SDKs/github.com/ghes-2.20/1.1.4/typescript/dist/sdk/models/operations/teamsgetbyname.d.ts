@@ -1,15 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class TeamsGetByNamePathParams extends SpeakeasyBase {
-    org: string;
-    teamSlug: string;
-}
+import { AxiosResponse } from "axios";
 export declare class TeamsGetByNameRequest extends SpeakeasyBase {
-    pathParams: TeamsGetByNamePathParams;
+    org: string;
+    /**
+     * team_slug parameter
+     */
+    teamSlug: string;
 }
 export declare class TeamsGetByNameResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Resource not found
+     */
     basicError?: shared.BasicError;
+    /**
+     * Response
+     */
     teamFull?: shared.TeamFull;
 }

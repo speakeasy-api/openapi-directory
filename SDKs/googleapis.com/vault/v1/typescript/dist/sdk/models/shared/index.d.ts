@@ -44,7 +44,6 @@ export * from "./removeheldaccountsresponse";
 export * from "./removematterpermissionsrequest";
 export * from "./reopenmatterresponse";
 export * from "./savedquery";
-export * from "./security";
 export * from "./shareddriveinfo";
 export * from "./sitesurlinfo";
 export * from "./status";

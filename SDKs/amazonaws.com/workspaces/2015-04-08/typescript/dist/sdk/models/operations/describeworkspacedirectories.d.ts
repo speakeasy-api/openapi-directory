@@ -1,12 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeWorkspaceDirectoriesQueryParams extends SpeakeasyBase {
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum DescribeWorkspaceDirectoriesXAmzTargetEnum {
     WorkspacesServiceDescribeWorkspaceDirectories = "WorkspacesService.DescribeWorkspaceDirectories"
 }
-export declare class DescribeWorkspaceDirectoriesHeaders extends SpeakeasyBase {
+export declare class DescribeWorkspaceDirectoriesRequest extends SpeakeasyBase {
+    describeWorkspaceDirectoriesRequest: shared.DescribeWorkspaceDirectoriesRequest;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,14 +19,16 @@ export declare class DescribeWorkspaceDirectoriesHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeWorkspaceDirectoriesXAmzTargetEnum;
 }
-export declare class DescribeWorkspaceDirectoriesRequest extends SpeakeasyBase {
-    queryParams: DescribeWorkspaceDirectoriesQueryParams;
-    headers: DescribeWorkspaceDirectoriesHeaders;
-    request: shared.DescribeWorkspaceDirectoriesRequest;
-}
 export declare class DescribeWorkspaceDirectoriesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeWorkspaceDirectoriesResult?: shared.DescribeWorkspaceDirectoriesResult;
+    /**
+     * InvalidParameterValuesException
+     */
     invalidParameterValuesException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -6,5 +6,7 @@ export declare enum SecurityServiceTypeEnum {
     SecurityGroupsContentAudit = "SECURITY_GROUPS_CONTENT_AUDIT",
     SecurityGroupsUsageAudit = "SECURITY_GROUPS_USAGE_AUDIT",
     NetworkFirewall = "NETWORK_FIREWALL",
-    DnsFirewall = "DNS_FIREWALL"
+    DnsFirewall = "DNS_FIREWALL",
+    ThirdPartyFirewall = "THIRD_PARTY_FIREWALL",
+    ImportNetworkFirewall = "IMPORT_NETWORK_FIREWALL"
 }

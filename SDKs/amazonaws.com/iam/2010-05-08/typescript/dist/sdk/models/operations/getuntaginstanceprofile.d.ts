@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetUntagInstanceProfileActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETUntagInstanceProfileActionEnum {
     UntagInstanceProfile = "UntagInstanceProfile"
 }
-export declare enum GetUntagInstanceProfileVersionEnum {
+export declare enum GETUntagInstanceProfileVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class GetUntagInstanceProfileQueryParams extends SpeakeasyBase {
-    action: GetUntagInstanceProfileActionEnum;
+export declare class GETUntagInstanceProfileRequest extends SpeakeasyBase {
+    action: GETUntagInstanceProfileActionEnum;
+    /**
+     * <p>The name of the IAM instance profile from which you want to remove tags.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
+     */
     instanceProfileName: string;
+    /**
+     * A list of key names as a simple array of strings. The tags with matching keys are removed from the specified instance profile.
+     */
     tagKeys: string[];
-    version: GetUntagInstanceProfileVersionEnum;
-}
-export declare class GetUntagInstanceProfileHeaders extends SpeakeasyBase {
+    version: GETUntagInstanceProfileVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetUntagInstanceProfileHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetUntagInstanceProfileRequest extends SpeakeasyBase {
-    queryParams: GetUntagInstanceProfileQueryParams;
-    headers: GetUntagInstanceProfileHeaders;
-}
-export declare class GetUntagInstanceProfileResponse extends SpeakeasyBase {
+export declare class GETUntagInstanceProfileResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

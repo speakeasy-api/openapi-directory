@@ -1,16 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class PostAccountHolderTransactionListSecurity extends SpeakeasyBase {
+    apiKeyAuth?: string;
     basicAuth?: shared.SchemeBasicAuth;
-    apiKeyAuth?: shared.SchemeApiKeyAuth;
-}
-export declare class PostAccountHolderTransactionListRequest extends SpeakeasyBase {
-    request?: any;
-    security: PostAccountHolderTransactionListSecurity;
 }
 export declare class PostAccountHolderTransactionListResponse extends SpeakeasyBase {
-    accountHolderTransactionListResponse?: any;
+    /**
+     * OK - the request has succeeded.
+     */
+    accountHolderTransactionListResponse?: shared.AccountHolderTransactionListResponse;
     contentType: string;
-    serviceError?: any;
+    /**
+     * Bad Request - a problem reading or understanding the request.
+     */
+    serviceError?: shared.ServiceError;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

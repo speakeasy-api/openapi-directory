@@ -1,29 +1,40 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { PostAutomationV4ActionsCallbacksCompleteCompleteBatchRequest, PostAutomationV4ActionsCallbacksCompleteCompleteBatchResponse } from "openapi/src/sdk/models/operations";
+import {
+  shared.BatchInputCallbackCompletionBatchRequest,
+  PostAutomationV4ActionsCallbacksCompleteCompleteBatchResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: PostAutomationV4ActionsCallbacksCompleteCompleteBatchRequest = {
-  security: {
-    oauth2Legacy: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  request: {
-    inputs: [
-      {
-        callbackId: "voluptas",
-        outputFields: {
-          "expedita": "consequuntur",
-          "dolor": "expedita",
-        },
+
+const req: shared.BatchInputCallbackCompletionBatchRequest = {
+  inputs: [
+    {
+      callbackId: "provident",
+      outputFields: {
+        "quibusdam": "unde",
+        "nulla": "corrupti",
+        "illum": "vel",
       },
-    ],
-  },
+    },
+    {
+      callbackId: "error",
+      outputFields: {
+        "suscipit": "iure",
+        "magnam": "debitis",
+        "ipsa": "delectus",
+      },
+    },
+    {
+      callbackId: "tempora",
+      outputFields: {
+        "molestiae": "minus",
+        "placeat": "voluptatum",
+      },
+    },
+  ],
 };
 
 sdk.callbacks.postAutomationV4ActionsCallbacksCompleteCompleteBatch(req).then((res: PostAutomationV4ActionsCallbacksCompleteCompleteBatchResponse | AxiosError) => {

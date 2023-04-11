@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { CloudHsmObjectStateEnum } from "./cloudhsmobjectstateenum";
 /**
  * Contains the output of the <a>DescribeHapg</a> action.
-**/
+ */
 export declare class DescribeHapgResponse extends SpeakeasyBase {
     hapgArn?: string;
     hapgSerial?: string;

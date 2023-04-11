@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteSubnetCidrReservationActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteSubnetCidrReservationActionEnum {
     DeleteSubnetCidrReservation = "DeleteSubnetCidrReservation"
 }
-export declare enum PostDeleteSubnetCidrReservationVersionEnum {
+export declare enum POSTDeleteSubnetCidrReservationVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDeleteSubnetCidrReservationQueryParams extends SpeakeasyBase {
-    action: PostDeleteSubnetCidrReservationActionEnum;
-    version: PostDeleteSubnetCidrReservationVersionEnum;
-}
-export declare class PostDeleteSubnetCidrReservationHeaders extends SpeakeasyBase {
+export declare class POSTDeleteSubnetCidrReservationRequest extends SpeakeasyBase {
+    action: POSTDeleteSubnetCidrReservationActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteSubnetCidrReservationVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteSubnetCidrReservationHeaders extends SpeakeasyBas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteSubnetCidrReservationRequest extends SpeakeasyBase {
-    queryParams: PostDeleteSubnetCidrReservationQueryParams;
-    headers: PostDeleteSubnetCidrReservationHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteSubnetCidrReservationResponse extends SpeakeasyBase {
+export declare class POSTDeleteSubnetCidrReservationResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

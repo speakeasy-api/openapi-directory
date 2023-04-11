@@ -1,18 +1,28 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetPaymentRunDataPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETPaymentRunDataRequest extends SpeakeasyBase {
+    /**
+     * A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+     *
+     * @remarks
+     *
+     * The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+     *
+     */
+    zuoraTrackId?: string;
+    /**
+     * The unique ID of a payment run. For example, 402890245f097f39015f0f074a2e0566.
+     *
+     * @remarks
+     *
+     */
     paymentRunId: string;
 }
-export declare class GetPaymentRunDataHeaders extends SpeakeasyBase {
-    zuoraTrackId?: string;
-}
-export declare class GetPaymentRunDataRequest extends SpeakeasyBase {
-    pathParams: GetPaymentRunDataPathParams;
-    headers: GetPaymentRunDataHeaders;
-}
-export declare class GetPaymentRunDataResponse extends SpeakeasyBase {
+export declare class GETPaymentRunDataResponse extends SpeakeasyBase {
     contentType: string;
-    getPaymentRunDataArrayResponse?: shared.GetPaymentRunDataArrayResponse;
-    headers: Record<string, string[]>;
+    getPaymentRunDataArrayResponse?: shared.GETPaymentRunDataArrayResponse;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,0 +1,64 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { EdgeLocation } from "./edgelocation";
+import { EndpointInfo } from "./endpointinfo";
+import { LatencyDistribution } from "./latencydistribution";
+import { Status } from "./status";
+/**
+ * The reason probing was aborted.
+ */
+export declare enum ProbingDetailsAbortCauseEnum {
+    ProbingAbortCauseUnspecified = "PROBING_ABORT_CAUSE_UNSPECIFIED",
+    PermissionDenied = "PERMISSION_DENIED",
+    NoSourceLocation = "NO_SOURCE_LOCATION"
+}
+/**
+ * The overall result of active probing.
+ */
+export declare enum ProbingDetailsResultEnum {
+    ProbingResultUnspecified = "PROBING_RESULT_UNSPECIFIED",
+    Reachable = "REACHABLE",
+    Unreachable = "UNREACHABLE",
+    ReachabilityInconsistent = "REACHABILITY_INCONSISTENT",
+    Undetermined = "UNDETERMINED"
+}
+/**
+ * Results of active probing from the last run of the test.
+ */
+export declare class ProbingDetails extends SpeakeasyBase {
+    /**
+     * The reason probing was aborted.
+     */
+    abortCause?: ProbingDetailsAbortCauseEnum;
+    /**
+     * Representation of a network edge location as per https://cloud.google.com/vpc/docs/edge-locations.
+     */
+    destinationEgressLocation?: EdgeLocation;
+    /**
+     * For display only. The specification of the endpoints for the test. EndpointInfo is derived from source and destination Endpoint and validated by the backend data plane model.
+     */
+    endpointInfo?: EndpointInfo;
+    /**
+     * The `Status` type defines a logical error model that is suitable for different programming environments, including REST APIs and RPC APIs. It is used by [gRPC](https://github.com/grpc). Each `Status` message contains three pieces of data: error code, error message, and error details. You can find out more about this error model and how to work with it in the [API Design Guide](https://cloud.google.com/apis/design/errors).
+     */
+    error?: Status;
+    /**
+     * Describes measured latency distribution.
+     */
+    probingLatency?: LatencyDistribution;
+    /**
+     * The overall result of active probing.
+     */
+    result?: ProbingDetailsResultEnum;
+    /**
+     * Number of probes sent.
+     */
+    sentProbeCount?: number;
+    /**
+     * Number of probes that reached the destination.
+     */
+    successfulProbeCount?: number;
+    /**
+     * The time that reachability was assessed through active probing.
+     */
+    verifyTime?: string;
+}

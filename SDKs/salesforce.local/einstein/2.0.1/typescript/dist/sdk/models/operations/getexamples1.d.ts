@@ -1,28 +1,41 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetExamples1PathParams extends SpeakeasyBase {
-    datasetId: string;
+import { AxiosResponse } from "axios";
+export declare class GetExamples1Security extends SpeakeasyBase {
+    bearerToken: string;
 }
+/**
+ * return examples that were created in the dataset as feedback
+ */
 export declare enum GetExamples1SourceEnum {
     All = "all",
     Feedback = "feedback",
     Upload = "upload"
 }
-export declare class GetExamples1QueryParams extends SpeakeasyBase {
-    count?: string;
-    offset?: string;
-    source?: GetExamples1SourceEnum;
-}
-export declare class GetExamples1Security extends SpeakeasyBase {
-    bearerToken: shared.SchemeBearerToken;
-}
 export declare class GetExamples1Request extends SpeakeasyBase {
-    pathParams: GetExamples1PathParams;
-    queryParams: GetExamples1QueryParams;
-    security: GetExamples1Security;
+    /**
+     * Number of examples to return.
+     */
+    count?: string;
+    /**
+     * Dataset Id
+     */
+    datasetId: string;
+    /**
+     * Index of the example from which you want to start paging.
+     */
+    offset?: string;
+    /**
+     * return examples that were created in the dataset as feedback
+     */
+    source?: GetExamples1SourceEnum;
 }
 export declare class GetExamples1Response extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     exampleList?: shared.ExampleList;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

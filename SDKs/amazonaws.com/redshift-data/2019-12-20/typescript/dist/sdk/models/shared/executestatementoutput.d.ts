@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class ExecuteStatementOutput extends SpeakeasyBase {
     clusterIdentifier?: string;
     createdAt?: Date;
@@ -6,4 +9,5 @@ export declare class ExecuteStatementOutput extends SpeakeasyBase {
     dbUser?: string;
     id?: string;
     secretArn?: string;
+    workgroupName?: string;
 }

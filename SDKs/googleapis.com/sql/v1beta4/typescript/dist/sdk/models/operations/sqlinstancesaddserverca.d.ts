@@ -1,41 +1,78 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class SqlInstancesAddServerCaPathParams extends SpeakeasyBase {
-    instance: string;
-    project: string;
-}
-export declare class SqlInstancesAddServerCaQueryParams extends SpeakeasyBase {
-    dollarXgafv?: shared.XgafvEnum;
-    accessToken?: string;
-    alt?: shared.AltEnum;
-    callback?: string;
-    fields?: string;
-    key?: string;
-    oauthToken?: string;
-    prettyPrint?: boolean;
-    quotaUser?: string;
-    uploadType?: string;
-    uploadProtocol?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class SqlInstancesAddServerCaSecurityOption1 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class SqlInstancesAddServerCaSecurityOption2 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class SqlInstancesAddServerCaSecurity extends SpeakeasyBase {
     option1?: SqlInstancesAddServerCaSecurityOption1;
     option2?: SqlInstancesAddServerCaSecurityOption2;
 }
 export declare class SqlInstancesAddServerCaRequest extends SpeakeasyBase {
-    pathParams: SqlInstancesAddServerCaPathParams;
-    queryParams: SqlInstancesAddServerCaQueryParams;
-    security: SqlInstancesAddServerCaSecurity;
+    /**
+     * V1 error format.
+     */
+    dollarXgafv?: shared.XgafvEnum;
+    /**
+     * OAuth access token.
+     */
+    accessToken?: string;
+    /**
+     * Data format for response.
+     */
+    alt?: shared.AltEnum;
+    /**
+     * JSONP
+     */
+    callback?: string;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * Cloud SQL instance ID. This does not include the project ID.
+     */
+    instance: string;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauthToken?: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * Project ID of the project that contains the instance.
+     */
+    project: string;
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    uploadType?: string;
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    uploadProtocol?: string;
 }
 export declare class SqlInstancesAddServerCaResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful response
+     */
     operation?: shared.Operation;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

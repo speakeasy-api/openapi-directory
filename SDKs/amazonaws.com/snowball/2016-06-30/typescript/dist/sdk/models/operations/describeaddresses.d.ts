@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeAddressesQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum DescribeAddressesXAmzTargetEnum {
-    AwsieSnowballJobManagementServiceDescribeAddresses = "AWSIESnowballJobManagementService.DescribeAddresses"
+    AWSIESnowballJobManagementServiceDescribeAddresses = "AWSIESnowballJobManagementService.DescribeAddresses"
 }
-export declare class DescribeAddressesHeaders extends SpeakeasyBase {
+export declare class DescribeAddressesRequest extends SpeakeasyBase {
+    describeAddressesRequest: shared.DescribeAddressesRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,15 +23,20 @@ export declare class DescribeAddressesHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeAddressesXAmzTargetEnum;
 }
-export declare class DescribeAddressesRequest extends SpeakeasyBase {
-    queryParams: DescribeAddressesQueryParams;
-    headers: DescribeAddressesHeaders;
-    request: shared.DescribeAddressesRequest;
-}
 export declare class DescribeAddressesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeAddressesResult?: shared.DescribeAddressesResult;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * InvalidResourceException
+     */
     invalidResourceException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

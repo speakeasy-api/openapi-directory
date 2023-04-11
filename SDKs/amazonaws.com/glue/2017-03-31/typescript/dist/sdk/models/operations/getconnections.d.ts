@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetConnectionsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum GetConnectionsXAmzTargetEnum {
-    AwsGlueGetConnections = "AWSGlue.GetConnections"
+    AWSGlueGetConnections = "AWSGlue.GetConnections"
 }
-export declare class GetConnectionsHeaders extends SpeakeasyBase {
+export declare class GetConnectionsRequest extends SpeakeasyBase {
+    getConnectionsRequest: shared.GetConnectionsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,17 +23,28 @@ export declare class GetConnectionsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetConnectionsXAmzTargetEnum;
 }
-export declare class GetConnectionsRequest extends SpeakeasyBase {
-    queryParams: GetConnectionsQueryParams;
-    headers: GetConnectionsHeaders;
-    request: shared.GetConnectionsRequest;
-}
 export declare class GetConnectionsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * Success
+     */
     getConnectionsResponse?: shared.GetConnectionsResponse;
+    /**
+     * GlueEncryptionException
+     */
     glueEncryptionException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

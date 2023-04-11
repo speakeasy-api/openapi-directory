@@ -7,7 +7,10 @@ export declare enum VoiceOptionsCoveredDataEnum {
 }
 /**
  * Additional options for Voice search
-**/
+ */
 export declare class VoiceOptions extends SpeakeasyBase {
+    /**
+     * Datatypes to search
+     */
     coveredData?: VoiceOptionsCoveredDataEnum[];
 }

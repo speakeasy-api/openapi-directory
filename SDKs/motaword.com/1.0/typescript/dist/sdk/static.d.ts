@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Static {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,29 +9,33 @@ export declare class Static {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getEndpoints - Available endpoints
+     * Available endpoints
      *
-     * The root endpoint will provide you a JSON Swagger definition.
+     * @remarks
+     * The root endpoint will provide you with an OpenAPI definition of MotaWord API.
      *
-    **/
+     */
     getEndpoints(config?: AxiosRequestConfig): Promise<operations.GetEndpointsResponse>;
     /**
-     * getFormats - Get a list of supported formats
+     * List of supported file formats
      *
+     * @remarks
      * Get a list of supported formats for documents, style guides and extensions.
      *
-    **/
+     */
     getFormats(config?: AxiosRequestConfig): Promise<operations.GetFormatsResponse>;
     /**
-     * getLanguages - Get a list of supported languages
+     * List of supported languages
      *
+     * @remarks
      * Get a list of supported languages
-    **/
+     */
     getLanguages(config?: AxiosRequestConfig): Promise<operations.GetLanguagesResponse>;
     /**
-     * getSwaggerJson - Get Swagger JSON
+     * OpenAPI YAML representation of our API
      *
-     * Get Swagger JSON
-    **/
-    getSwaggerJson(config?: AxiosRequestConfig): Promise<operations.GetSwaggerJsonResponse>;
+     * @remarks
+     * Get Swagger YAML
+     */
+    getSwaggerYaml(config?: AxiosRequestConfig): Promise<operations.GetSwaggerYamlResponse>;
 }

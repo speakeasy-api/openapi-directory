@@ -3,8 +3,14 @@ import { MysqlRdbms } from "./mysqlrdbms";
 import { OracleRdbms } from "./oraclerdbms";
 /**
  * Backfill strategy to automatically backfill the Stream's objects. Specific objects can be excluded.
-**/
+ */
 export declare class BackfillAllStrategy extends SpeakeasyBase {
+    /**
+     * MySQL database structure
+     */
     mysqlExcludedObjects?: MysqlRdbms;
+    /**
+     * Oracle database structure.
+     */
     oracleExcludedObjects?: OracleRdbms;
 }

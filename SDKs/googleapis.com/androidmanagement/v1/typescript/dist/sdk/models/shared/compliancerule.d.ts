@@ -1,0 +1,24 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { ApiLevelCondition } from "./apilevelcondition";
+import { NonComplianceDetailCondition } from "./noncompliancedetailcondition";
+/**
+ * A rule declaring which mitigating actions to take when a device is not compliant with its policy. For every rule, there is always an implicit mitigating action to set policy_compliant to false for the Device resource, and display a message on the device indicating that the device is not compliant with its policy. Other mitigating actions may optionally be taken as well, depending on the field values in the rule.
+ */
+export declare class ComplianceRule extends SpeakeasyBase {
+    /**
+     * A compliance rule condition which is satisfied if the Android Framework API level on the device doesn't meet a minimum requirement. There can only be one rule with this type of condition per policy.
+     */
+    apiLevelCondition?: ApiLevelCondition;
+    /**
+     * If set to true, the rule includes a mitigating action to disable apps so that the device is effectively disabled, but app data is preserved. If the device is running an app in locked task mode, the app will be closed and a UI showing the reason for non-compliance will be displayed.
+     */
+    disableApps?: boolean;
+    /**
+     * A compliance rule condition which is satisfied if there exists any matching NonComplianceDetail for the device. A NonComplianceDetail matches a NonComplianceDetailCondition if all the fields which are set within the NonComplianceDetailCondition match the corresponding NonComplianceDetail fields.
+     */
+    nonComplianceDetailCondition?: NonComplianceDetailCondition;
+    /**
+     * If set, the rule includes a mitigating action to disable apps specified in the list, but app data is preserved.
+     */
+    packageNamesToDisable?: string[];
+}

@@ -1,9 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { MessageCode404SBSEnum } from "./messagecode404sbsenum";
 import { TppMessageCategoryEnum } from "./tppmessagecategoryenum";
-import { MessageCode404SbsEnum } from "./messagecode404sbsenum";
-export declare class TppMessage404Sbs extends SpeakeasyBase {
+export declare class TppMessage404SBS extends SpeakeasyBase {
+    /**
+     * Category of the TPP message category.
+     */
     category: TppMessageCategoryEnum;
-    code: MessageCode404SbsEnum;
+    /**
+     * Message codes defined for signing baskets for HTTP Error code 404 (NOT FOUND).
+     */
+    code: MessageCode404SBSEnum;
     path?: string;
+    /**
+     * Additional explaining text to the TPP.
+     */
     text?: string;
 }

@@ -6,45 +6,41 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/configcat.com/v1/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/configcat.com/v1/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetAuditlogsRequest, GetAuditlogsResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GetAuditlogsRequest,
+  GetAuditlogsResponse,
+  GetAuditlogsAuditLogTypeEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    basic: {
-      password: "YOUR_PASSWORD_HERE",
-      username: "YOUR_USERNAME_HERE",
-    },
-  }
-));
-    
+    password: "YOUR_PASSWORD_HERE",
+    username: "YOUR_USERNAME_HERE",
+  },
+});
+
 const req: GetAuditlogsRequest = {
-  pathParams: {
-    productId: "sit",
-  },
-  queryParams: {
-    auditLogType: {
-      "culpa": "expedita",
-    },
-    configId: "consequuntur",
-    environmentId: "dolor",
-    fromUtcDateTime: "2009-11-26T21:53:53Z",
-    toUtcDateTime: "1978-05-28T16:08:43Z",
-  },
+  auditLogType: GetAuditlogsAuditLogTypeEnum.IntegrationLinkAdded,
+  configId: "9bd9d8d6-9a67-44e0-b467-cc8796ed151a",
+  environmentId: "05dfc2dd-f7cc-478c-a1ba-928fc816742c",
+  fromUtcDateTime: "2022-02-02T00:14:45.467Z",
+  productId: "39205929-396f-4ea7-996e-b10faaa2352c",
+  toUtcDateTime: "2022-05-24T03:24:11.703Z",
 };
 
 sdk.auditLogs.getAuditlogs(req).then((res: GetAuditlogsResponse | AxiosError) => {
@@ -54,15 +50,21 @@ sdk.auditLogs.getAuditlogs(req).then((res: GetAuditlogsResponse | AxiosError) =>
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### Audit logs
+
+### auditLogs
 
 * `getAuditlogs` - List Audit log items for Product
 * `getDeletedSettings` - List Deleted Settings
 * `getOrganizationAuditlogs` - List Audit log items for Organization
 
-### Configs
+### codeReferences
+
+* `postV1CodeReferences`
+* `postV1CodeReferencesDeleteReports`
+
+### configs
 
 * `createConfig` - Create Config
 * `deleteConfig` - Delete Config
@@ -70,7 +72,7 @@ sdk.auditLogs.getAuditlogs(req).then((res: GetAuditlogsResponse | AxiosError) =>
 * `getConfigs` - List Configs
 * `updateConfig` - Update Config
 
-### Environments
+### environments
 
 * `createEnvironment` - Create Environment
 * `deleteEnvironment` - Delete Environment
@@ -78,20 +80,20 @@ sdk.auditLogs.getAuditlogs(req).then((res: GetAuditlogsResponse | AxiosError) =>
 * `getEnvironments` - List Environments
 * `updateEnvironment` - Update Environment
 
-### Feature Flag & Setting values
+### featureFlagAndSettingValues
 
 * `getSettingValue` - Get value
 * `getSettingValues` - Get values
 * `replaceSettingValue` - Replace value
 * `updateSettingValue` - Update value
 
-### Feature Flag & Setting values using SDK Key
+### featureFlagAndSettingValuesUsingSDKKey
 
 * `getSettingValueBySdkkey` - Get value
 * `replaceSettingValueBySdkkey` - Replace value
 * `updateSettingValueBySdkkey` - Update value
 
-### Feature Flags & Settings
+### featureFlagsAndSettings
 
 * `createSetting` - Create Flag
 * `deleteSetting` - Delete Flag
@@ -99,29 +101,32 @@ sdk.auditLogs.getAuditlogs(req).then((res: GetAuditlogsResponse | AxiosError) =>
 * `getSettings` - List Flags
 * `updateSetting` - Update Flag
 
-### Integration links
+### integrationLinks
 
 * `addOrUpdateIntegrationLink` - Add or update Integration link
 * `deleteIntegrationLink` - Delete Integration link
 * `getIntegrationLinkDetails` - Get Integration link
+* `jiraAddOrUpdateIntegrationLink`
+* `postV1JiraConnect`
 
-### Me
+### me
 
 * `getMe` - Get authenticated user details
 
-### Members
+### members
 
+* `addMemberToGroup` - Update Member Permissions
 * `deleteOrganizationMember` - Delete Member from Organization
 * `deleteProductMember` - Delete Member from Product
 * `getOrganizationMembers` - List Organization Members
 * `getProductMembers` - List Product Members
 * `inviteMember` - Invite Member
 
-### Organizations
+### organizations
 
 * `getOrganizations` - List Organizations
 
-### Permission Groups
+### permissionGroups
 
 * `createPermissionGroup` - Create Permission Group
 * `deletePermissionGroup` - Delete Permission Group
@@ -129,7 +134,7 @@ sdk.auditLogs.getAuditlogs(req).then((res: GetAuditlogsResponse | AxiosError) =>
 * `getPermissionGroups` - List Permission Groups
 * `updatePermissionGroup` - Update Permission Group
 
-### Products
+### products
 
 * `createProduct` - Create Product
 * `deleteProduct` - Delete Product
@@ -137,11 +142,19 @@ sdk.auditLogs.getAuditlogs(req).then((res: GetAuditlogsResponse | AxiosError) =>
 * `getProducts` - List Products
 * `updateProduct` - Update Product
 
-### SDK Keys
+### sdkKeys
 
-* `getSdkKeys` - Get SDK Key
+* `getSDKKeys` - Get SDK Key
 
-### Tags
+### segments
+
+* `createSegment` - Create Segment
+* `deleteSegment` - Delete Segment
+* `getSegment` - Get Segment
+* `getSegments` - List Segments
+* `updateSegment` - Update Segment
+
+### tags
 
 * `createTag` - Create Tag
 * `deleteTag` - Delete Tag
@@ -149,7 +162,18 @@ sdk.auditLogs.getAuditlogs(req).then((res: GetAuditlogsResponse | AxiosError) =>
 * `getTag` - Get Tag
 * `getTags` - List Tags
 * `updateTag` - Update Tag
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

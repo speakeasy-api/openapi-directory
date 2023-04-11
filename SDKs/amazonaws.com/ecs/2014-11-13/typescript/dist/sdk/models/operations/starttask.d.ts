@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum StartTaskXAmzTargetEnum {
     AmazonEc2ContainerServiceV20141113StartTask = "AmazonEC2ContainerServiceV20141113.StartTask"
 }
-export declare class StartTaskHeaders extends SpeakeasyBase {
+export declare class StartTaskRequest extends SpeakeasyBase {
+    startTaskRequest: shared.StartTaskRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class StartTaskHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: StartTaskXAmzTargetEnum;
 }
-export declare class StartTaskRequest extends SpeakeasyBase {
-    headers: StartTaskHeaders;
-    request: shared.StartTaskRequest;
-}
 export declare class StartTaskResponse extends SpeakeasyBase {
+    /**
+     * ClientException
+     */
     clientException?: any;
+    /**
+     * ClusterNotFoundException
+     */
     clusterNotFoundException?: any;
     contentType: string;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * ServerException
+     */
     serverException?: any;
+    /**
+     * Success
+     */
     startTaskResponse?: shared.StartTaskResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

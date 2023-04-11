@@ -1,36 +1,82 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class MetastoreProjectsLocationsServicesBackupsListPathParams extends SpeakeasyBase {
-    parent: string;
-}
-export declare class MetastoreProjectsLocationsServicesBackupsListQueryParams extends SpeakeasyBase {
-    dollarXgafv?: shared.XgafvEnum;
-    accessToken?: string;
-    alt?: shared.AltEnum;
-    callback?: string;
-    fields?: string;
-    filter?: string;
-    key?: string;
-    oauthToken?: string;
-    orderBy?: string;
-    pageSize?: number;
-    pageToken?: string;
-    prettyPrint?: boolean;
-    quotaUser?: string;
-    uploadType?: string;
-    uploadProtocol?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class MetastoreProjectsLocationsServicesBackupsListSecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class MetastoreProjectsLocationsServicesBackupsListRequest extends SpeakeasyBase {
-    pathParams: MetastoreProjectsLocationsServicesBackupsListPathParams;
-    queryParams: MetastoreProjectsLocationsServicesBackupsListQueryParams;
-    security: MetastoreProjectsLocationsServicesBackupsListSecurity;
+    /**
+     * V1 error format.
+     */
+    dollarXgafv?: shared.XgafvEnum;
+    /**
+     * OAuth access token.
+     */
+    accessToken?: string;
+    /**
+     * Data format for response.
+     */
+    alt?: shared.AltEnum;
+    /**
+     * JSONP
+     */
+    callback?: string;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * Optional. The filter to apply to list results.
+     */
+    filter?: string;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauthToken?: string;
+    /**
+     * Optional. Specify the ordering of results as described in Sorting Order (https://cloud.google.com/apis/design/design_patterns#sorting_order). If not specified, the results will be sorted in the default order.
+     */
+    orderBy?: string;
+    /**
+     * Optional. The maximum number of backups to return. The response may contain less than the maximum number. If unspecified, no more than 500 backups are returned. The maximum value is 1000; values above 1000 are changed to 1000.
+     */
+    pageSize?: number;
+    /**
+     * Optional. A page token, received from a previous DataprocMetastore.ListBackups call. Provide this token to retrieve the subsequent page.To retrieve the first page, supply an empty page token.When paginating, other parameters provided to DataprocMetastore.ListBackups must match the call that provided the page token.
+     */
+    pageToken?: string;
+    /**
+     * Required. The relative resource name of the service whose backups to list, in the following form:projects/{project_number}/locations/{location_id}/services/{service_id}/backups.
+     */
+    parent: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    uploadType?: string;
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    uploadProtocol?: string;
 }
 export declare class MetastoreProjectsLocationsServicesBackupsListResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful response
+     */
     listBackupsResponse?: shared.ListBackupsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

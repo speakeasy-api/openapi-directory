@@ -1,5 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { CompatibleEnvironmentTemplateInput } from "./compatibleenvironmenttemplateinput";
+import { ServiceTemplateSupportedComponentSourceTypeEnum } from "./servicetemplatesupportedcomponentsourcetypeenum";
 import { TemplateVersionStatusEnum } from "./templateversionstatusenum";
 export declare class UpdateServiceTemplateVersionInput extends SpeakeasyBase {
     compatibleEnvironmentTemplates?: CompatibleEnvironmentTemplateInput[];
@@ -7,5 +8,6 @@ export declare class UpdateServiceTemplateVersionInput extends SpeakeasyBase {
     majorVersion: string;
     minorVersion: string;
     status?: TemplateVersionStatusEnum;
+    supportedComponentSources?: ServiceTemplateSupportedComponentSourceTypeEnum[];
     templateName: string;
 }

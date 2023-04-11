@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { SslPolicy } from "./sslpolicy";
-export declare class DescribeSslPoliciesOutput extends SpeakeasyBase {
+/**
+ * Success
+ */
+export declare class DescribeSSLPoliciesOutput extends SpeakeasyBase {
     nextMarker?: string;
     sslPolicies?: SslPolicy[];
 }

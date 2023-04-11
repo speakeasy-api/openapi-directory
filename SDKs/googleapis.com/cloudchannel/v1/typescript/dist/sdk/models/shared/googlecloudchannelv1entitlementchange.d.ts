@@ -1,0 +1,116 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { GoogleCloudChannelV1Parameter } from "./googlecloudchannelv1parameter";
+import { GoogleCloudChannelV1ProvisionedService } from "./googlecloudchannelv1provisionedservice";
+/**
+ * The Entitlement's activation reason
+ */
+export declare enum GoogleCloudChannelV1EntitlementChangeActivationReasonEnum {
+    ActivationReasonUnspecified = "ACTIVATION_REASON_UNSPECIFIED",
+    ResellerRevokedSuspension = "RESELLER_REVOKED_SUSPENSION",
+    CustomerAcceptedPendingTos = "CUSTOMER_ACCEPTED_PENDING_TOS",
+    RenewalSettingsChanged = "RENEWAL_SETTINGS_CHANGED",
+    OtherActivationReason = "OTHER_ACTIVATION_REASON"
+}
+/**
+ * Cancellation reason for the Entitlement.
+ */
+export declare enum GoogleCloudChannelV1EntitlementChangeCancellationReasonEnum {
+    CancellationReasonUnspecified = "CANCELLATION_REASON_UNSPECIFIED",
+    ServiceTerminated = "SERVICE_TERMINATED",
+    RelationshipEnded = "RELATIONSHIP_ENDED",
+    PartialTransfer = "PARTIAL_TRANSFER"
+}
+/**
+ * The change action type.
+ */
+export declare enum GoogleCloudChannelV1EntitlementChangeChangeTypeEnum {
+    ChangeTypeUnspecified = "CHANGE_TYPE_UNSPECIFIED",
+    Created = "CREATED",
+    PricePlanSwitched = "PRICE_PLAN_SWITCHED",
+    CommitmentChanged = "COMMITMENT_CHANGED",
+    Renewed = "RENEWED",
+    Suspended = "SUSPENDED",
+    Activated = "ACTIVATED",
+    Cancelled = "CANCELLED",
+    SkuChanged = "SKU_CHANGED",
+    RenewalSettingChanged = "RENEWAL_SETTING_CHANGED",
+    PaidSubscriptionStarted = "PAID_SUBSCRIPTION_STARTED",
+    LicenseCapChanged = "LICENSE_CAP_CHANGED",
+    SuspensionDetailsChanged = "SUSPENSION_DETAILS_CHANGED",
+    TrialEndDateExtended = "TRIAL_END_DATE_EXTENDED",
+    TrialStarted = "TRIAL_STARTED"
+}
+/**
+ * Operator type responsible for the change.
+ */
+export declare enum GoogleCloudChannelV1EntitlementChangeOperatorTypeEnum {
+    OperatorTypeUnspecified = "OPERATOR_TYPE_UNSPECIFIED",
+    CustomerServiceRepresentative = "CUSTOMER_SERVICE_REPRESENTATIVE",
+    System = "SYSTEM",
+    Customer = "CUSTOMER",
+    Reseller = "RESELLER"
+}
+/**
+ * Suspension reason for the Entitlement.
+ */
+export declare enum GoogleCloudChannelV1EntitlementChangeSuspensionReasonEnum {
+    SuspensionReasonUnspecified = "SUSPENSION_REASON_UNSPECIFIED",
+    ResellerInitiated = "RESELLER_INITIATED",
+    TrialEnded = "TRIAL_ENDED",
+    RenewalWithTypeCancel = "RENEWAL_WITH_TYPE_CANCEL",
+    PendingTosAcceptance = "PENDING_TOS_ACCEPTANCE",
+    Other = "OTHER"
+}
+/**
+ * Change event entry for Entitlement order history
+ */
+export declare class GoogleCloudChannelV1EntitlementChange extends SpeakeasyBase {
+    /**
+     * The Entitlement's activation reason
+     */
+    activationReason?: GoogleCloudChannelV1EntitlementChangeActivationReasonEnum;
+    /**
+     * Cancellation reason for the Entitlement.
+     */
+    cancellationReason?: GoogleCloudChannelV1EntitlementChangeCancellationReasonEnum;
+    /**
+     * The change action type.
+     */
+    changeType?: GoogleCloudChannelV1EntitlementChangeChangeTypeEnum;
+    /**
+     * The submitted time of the change.
+     */
+    createTime?: string;
+    /**
+     * Required. Resource name of an entitlement in the form: accounts/{account_id}/customers/{customer_id}/entitlements/{entitlement_id}
+     */
+    entitlement?: string;
+    /**
+     * Required. Resource name of the Offer at the time of change. Takes the form: accounts/{account_id}/offers/{offer_id}.
+     */
+    offer?: string;
+    /**
+     * Human-readable identifier that shows what operator made a change. When the operator_type is RESELLER, this is the user's email address. For all other operator types, this is empty.
+     */
+    operator?: string;
+    /**
+     * Operator type responsible for the change.
+     */
+    operatorType?: GoogleCloudChannelV1EntitlementChangeOperatorTypeEnum;
+    /**
+     * e.g. purchase_number change reason, entered by CRS.
+     */
+    otherChangeReason?: string;
+    /**
+     * Extended parameters, such as: purchase_order_number, gcp_details; internal_correlation_id, long_running_operation_id, order_id; etc.
+     */
+    parameters?: GoogleCloudChannelV1Parameter[];
+    /**
+     * Service provisioned for an entitlement.
+     */
+    provisionedService?: GoogleCloudChannelV1ProvisionedService;
+    /**
+     * Suspension reason for the Entitlement.
+     */
+    suspensionReason?: GoogleCloudChannelV1EntitlementChangeSuspensionReasonEnum;
+}

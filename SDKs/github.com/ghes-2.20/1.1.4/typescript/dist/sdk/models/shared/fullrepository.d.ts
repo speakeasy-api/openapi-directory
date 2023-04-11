@@ -1,294 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { CodeOfConductSimple } from "./codeofconductsimple";
-import { SimpleUser } from "./simpleuser";
+import { NullableLicenseSimple } from "./nullablelicensesimple";
+import { NullableRepository } from "./nullablerepository";
+import { NullableSimpleUser } from "./nullablesimpleuser";
 import { Repository } from "./repository";
-/**
- * License Simple
-**/
-export declare class FullRepositoryLicenseSimple extends SpeakeasyBase {
-    htmlUrl?: string;
-    key: string;
-    name: string;
-    nodeId: string;
-    spdxId: string;
-    url: string;
-}
-/**
- * Simple User
-**/
-export declare class FullRepositorySimpleUser extends SpeakeasyBase {
-    avatarUrl: string;
-    eventsUrl: string;
-    followersUrl: string;
-    followingUrl: string;
-    gistsUrl: string;
-    gravatarId: string;
-    htmlUrl: string;
-    id: number;
-    login: string;
-    nodeId: string;
-    organizationsUrl: string;
-    receivedEventsUrl: string;
-    reposUrl: string;
-    siteAdmin: boolean;
-    starredAt?: string;
-    starredUrl: string;
-    subscriptionsUrl: string;
-    type: string;
-    url: string;
-}
+import { SimpleUser } from "./simpleuser";
 export declare class FullRepositoryPermissions extends SpeakeasyBase {
     admin: boolean;
     pull: boolean;
     push: boolean;
 }
 /**
- * License Simple
-**/
-export declare class FullRepositoryRepositoryLicenseSimple extends SpeakeasyBase {
-    htmlUrl?: string;
-    key: string;
-    name: string;
-    nodeId: string;
-    spdxId: string;
-    url: string;
-}
-/**
- * Simple User
-**/
-export declare class FullRepositoryRepositorySimpleUser extends SpeakeasyBase {
-    avatarUrl: string;
-    eventsUrl: string;
-    followersUrl: string;
-    followingUrl: string;
-    gistsUrl: string;
-    gravatarId: string;
-    htmlUrl: string;
-    id: number;
-    login: string;
-    nodeId: string;
-    organizationsUrl: string;
-    receivedEventsUrl: string;
-    reposUrl: string;
-    siteAdmin: boolean;
-    starredAt?: string;
-    starredUrl: string;
-    subscriptionsUrl: string;
-    type: string;
-    url: string;
-}
-export declare class FullRepositoryRepositoryPermissions extends SpeakeasyBase {
-    admin: boolean;
-    maintain?: boolean;
-    pull: boolean;
-    push: boolean;
-    triage?: boolean;
-}
-export declare class FullRepositoryRepositoryTemplateRepositoryOwner extends SpeakeasyBase {
-    avatarUrl?: string;
-    eventsUrl?: string;
-    followersUrl?: string;
-    followingUrl?: string;
-    gistsUrl?: string;
-    gravatarId?: string;
-    htmlUrl?: string;
-    id?: number;
-    login?: string;
-    nodeId?: string;
-    organizationsUrl?: string;
-    receivedEventsUrl?: string;
-    reposUrl?: string;
-    siteAdmin?: boolean;
-    starredUrl?: string;
-    subscriptionsUrl?: string;
-    type?: string;
-    url?: string;
-}
-export declare class FullRepositoryRepositoryTemplateRepositoryPermissions extends SpeakeasyBase {
-    admin?: boolean;
-    pull?: boolean;
-    push?: boolean;
-}
-export declare class FullRepositoryRepositoryTemplateRepository extends SpeakeasyBase {
-    allowMergeCommit?: boolean;
-    allowRebaseMerge?: boolean;
-    allowSquashMerge?: boolean;
-    anonymousAccessEnabled?: boolean;
-    archiveUrl?: string;
-    archived?: boolean;
-    assigneesUrl?: string;
-    blobsUrl?: string;
-    branchesUrl?: string;
-    cloneUrl?: string;
-    collaboratorsUrl?: string;
-    commentsUrl?: string;
-    commitsUrl?: string;
-    compareUrl?: string;
-    contentsUrl?: string;
-    contributorsUrl?: string;
-    createdAt?: string;
-    defaultBranch?: string;
-    deploymentsUrl?: string;
-    description?: string;
-    disabled?: boolean;
-    downloadsUrl?: string;
-    eventsUrl?: string;
-    fork?: boolean;
-    forksCount?: number;
-    forksUrl?: string;
-    fullName?: string;
-    gitCommitsUrl?: string;
-    gitRefsUrl?: string;
-    gitTagsUrl?: string;
-    gitUrl?: string;
-    hasDownloads?: boolean;
-    hasIssues?: boolean;
-    hasPages?: boolean;
-    hasProjects?: boolean;
-    hasWiki?: boolean;
-    homepage?: string;
-    hooksUrl?: string;
-    htmlUrl?: string;
-    id?: number;
-    isTemplate?: boolean;
-    issueCommentUrl?: string;
-    issueEventsUrl?: string;
-    issuesUrl?: string;
-    keysUrl?: string;
-    labelsUrl?: string;
-    language?: string;
-    languagesUrl?: string;
-    mergesUrl?: string;
-    milestonesUrl?: string;
-    mirrorUrl?: string;
-    name?: string;
-    networkCount?: number;
-    nodeId?: string;
-    notificationsUrl?: string;
-    openIssuesCount?: number;
-    owner?: FullRepositoryRepositoryTemplateRepositoryOwner;
-    permissions?: FullRepositoryRepositoryTemplateRepositoryPermissions;
-    private?: boolean;
-    pullsUrl?: string;
-    pushedAt?: string;
-    releasesUrl?: string;
-    size?: number;
-    sshUrl?: string;
-    stargazersCount?: number;
-    stargazersUrl?: string;
-    statusesUrl?: string;
-    subscribersCount?: number;
-    subscribersUrl?: string;
-    subscriptionUrl?: string;
-    svnUrl?: string;
-    tagsUrl?: string;
-    teamsUrl?: string;
-    topics?: string[];
-    treesUrl?: string;
-    updatedAt?: string;
-    url?: string;
-    visibility?: string;
-    watchersCount?: number;
-}
-/**
- * A git repository
-**/
-export declare class FullRepositoryRepository extends SpeakeasyBase {
-    allowMergeCommit?: boolean;
-    allowRebaseMerge?: boolean;
-    allowSquashMerge?: boolean;
-    anonymousAccessEnabled?: boolean;
-    archiveUrl: string;
-    archived: boolean;
-    assigneesUrl: string;
-    blobsUrl: string;
-    branchesUrl: string;
-    cloneUrl: string;
-    collaboratorsUrl: string;
-    commentsUrl: string;
-    commitsUrl: string;
-    compareUrl: string;
-    contentsUrl: string;
-    contributorsUrl: string;
-    createdAt: Date;
-    defaultBranch: string;
-    deploymentsUrl: string;
-    description: string;
-    disabled: boolean;
-    downloadsUrl: string;
-    eventsUrl: string;
-    fork: boolean;
-    forks: number;
-    forksCount: number;
-    forksUrl: string;
-    fullName: string;
-    gitCommitsUrl: string;
-    gitRefsUrl: string;
-    gitTagsUrl: string;
-    gitUrl: string;
-    hasDownloads: boolean;
-    hasIssues: boolean;
-    hasPages: boolean;
-    hasProjects: boolean;
-    hasWiki: boolean;
-    homepage: string;
-    hooksUrl: string;
-    htmlUrl: string;
-    id: number;
-    isTemplate?: boolean;
-    issueCommentUrl: string;
-    issueEventsUrl: string;
-    issuesUrl: string;
-    keysUrl: string;
-    labelsUrl: string;
-    language: string;
-    languagesUrl: string;
-    license: FullRepositoryRepositoryLicenseSimple;
-    masterBranch?: string;
-    mergesUrl: string;
-    milestonesUrl: string;
-    mirrorUrl: string;
-    name: string;
-    networkCount?: number;
-    nodeId: string;
-    notificationsUrl: string;
-    openIssues: number;
-    openIssuesCount: number;
-    organization?: FullRepositoryRepositorySimpleUser;
-    owner: FullRepositoryRepositorySimpleUser;
-    permissions?: FullRepositoryRepositoryPermissions;
-    private: boolean;
-    pullsUrl: string;
-    pushedAt: Date;
-    releasesUrl: string;
-    size: number;
-    sshUrl: string;
-    stargazersCount: number;
-    stargazersUrl: string;
-    starredAt?: string;
-    statusesUrl: string;
-    subscribersCount?: number;
-    subscribersUrl: string;
-    subscriptionUrl: string;
-    svnUrl: string;
-    tagsUrl: string;
-    teamsUrl: string;
-    templateRepository?: FullRepositoryRepositoryTemplateRepository;
-    topics?: string[];
-    treesUrl: string;
-    updatedAt: Date;
-    url: string;
-    visibility?: string;
-    watchers: number;
-    watchersCount: number;
-}
-/**
  * Full Repository
-**/
+ */
 export declare class FullRepository extends SpeakeasyBase {
+    allowForking?: boolean;
     allowMergeCommit?: boolean;
     allowRebaseMerge?: boolean;
     allowSquashMerge?: boolean;
+    /**
+     * Whether anonymous git access is allowed.
+     */
     anonymousAccessEnabled?: boolean;
     archiveUrl: string;
     archived: boolean;
@@ -296,6 +28,9 @@ export declare class FullRepository extends SpeakeasyBase {
     blobsUrl: string;
     branchesUrl: string;
     cloneUrl: string;
+    /**
+     * Code of Conduct Simple
+     */
     codeOfConduct?: CodeOfConductSimple;
     collaboratorsUrl: string;
     commentsUrl: string;
@@ -307,6 +42,9 @@ export declare class FullRepository extends SpeakeasyBase {
     defaultBranch: string;
     deploymentsUrl: string;
     description: string;
+    /**
+     * Returns whether or not this repository disabled.
+     */
     disabled: boolean;
     downloadsUrl: string;
     eventsUrl: string;
@@ -319,7 +57,6 @@ export declare class FullRepository extends SpeakeasyBase {
     gitRefsUrl: string;
     gitTagsUrl: string;
     gitUrl: string;
-    hasAdvancedSecurity?: boolean;
     hasDownloads: boolean;
     hasIssues: boolean;
     hasPages: boolean;
@@ -337,7 +74,10 @@ export declare class FullRepository extends SpeakeasyBase {
     labelsUrl: string;
     language: string;
     languagesUrl: string;
-    license: FullRepositoryLicenseSimple;
+    /**
+     * License Simple
+     */
+    license: NullableLicenseSimple;
     masterBranch?: string;
     mergesUrl: string;
     milestonesUrl: string;
@@ -348,8 +88,17 @@ export declare class FullRepository extends SpeakeasyBase {
     notificationsUrl: string;
     openIssues: number;
     openIssuesCount: number;
-    organization?: FullRepositorySimpleUser;
+    /**
+     * Simple User
+     */
+    organization?: NullableSimpleUser;
+    /**
+     * Simple User
+     */
     owner: SimpleUser;
+    /**
+     * A git repository
+     */
     parent?: Repository;
     permissions?: FullRepositoryPermissions;
     private: boolean;
@@ -357,6 +106,9 @@ export declare class FullRepository extends SpeakeasyBase {
     pushedAt: Date;
     releasesUrl: string;
     size: number;
+    /**
+     * A git repository
+     */
     source?: Repository;
     sshUrl: string;
     stargazersCount: number;
@@ -368,11 +120,17 @@ export declare class FullRepository extends SpeakeasyBase {
     svnUrl: string;
     tagsUrl: string;
     teamsUrl: string;
-    templateRepository?: FullRepositoryRepository;
+    /**
+     * A git repository
+     */
+    templateRepository?: NullableRepository;
     topics?: string[];
     treesUrl: string;
     updatedAt: Date;
     url: string;
+    /**
+     * The repository visibility: public, private, or internal.
+     */
     visibility?: string;
     watchers: number;
     watchersCount: number;

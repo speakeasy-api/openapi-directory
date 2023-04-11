@@ -1,20 +1,49 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteProjectUsernameProjectEnvvarNamePathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteProjectUsernameProjectEnvvarNameRequest extends SpeakeasyBase {
+    /**
+     * XXXXXXXXXX
+     *
+     * @remarks
+     *
+     */
     name: string;
+    /**
+     * XXXXXXXXX
+     *
+     * @remarks
+     *
+     */
     project: string;
+    /**
+     * XXXXXXXXX
+     *
+     * @remarks
+     *
+     */
     username: string;
 }
-export declare enum DeleteProjectUsernameProjectEnvvarName200ApplicationJsonMessageEnum {
+export declare enum DeleteProjectUsernameProjectEnvvarName200ApplicationJSONMessageEnum {
     Ok = "OK"
 }
-export declare class DeleteProjectUsernameProjectEnvvarName200ApplicationJson extends SpeakeasyBase {
-    message?: DeleteProjectUsernameProjectEnvvarName200ApplicationJsonMessageEnum;
-}
-export declare class DeleteProjectUsernameProjectEnvvarNameRequest extends SpeakeasyBase {
-    pathParams: DeleteProjectUsernameProjectEnvvarNamePathParams;
+/**
+ * Deletes the environment variable named ':name'
+ *
+ * @remarks
+ *
+ */
+export declare class DeleteProjectUsernameProjectEnvvarName200ApplicationJSON extends SpeakeasyBase {
+    message?: DeleteProjectUsernameProjectEnvvarName200ApplicationJSONMessageEnum;
 }
 export declare class DeleteProjectUsernameProjectEnvvarNameResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deleteProjectUsernameProjectEnvvarName200ApplicationJSONObject?: DeleteProjectUsernameProjectEnvvarName200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Deletes the environment variable named ':name'
+     *
+     * @remarks
+     *
+     */
+    deleteProjectUsernameProjectEnvvarName200ApplicationJSONObject?: DeleteProjectUsernameProjectEnvvarName200ApplicationJSON;
 }

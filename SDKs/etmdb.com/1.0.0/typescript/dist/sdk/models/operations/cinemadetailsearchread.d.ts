@@ -1,11 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CinemaDetailSearchReadPathParams extends SpeakeasyBase {
-    cinemaName: string;
-}
+import { AxiosResponse } from "axios";
 export declare class CinemaDetailSearchReadRequest extends SpeakeasyBase {
-    pathParams: CinemaDetailSearchReadPathParams;
+    cinemaName: string;
 }
 export declare class CinemaDetailSearchReadResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

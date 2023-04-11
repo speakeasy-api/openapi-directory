@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PutBinIdPathParams extends SpeakeasyBase {
-    id: string;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class PutBinIdRequest extends SpeakeasyBase {
-    pathParams: PutBinIdPathParams;
+    id: string;
 }
 export declare class PutBinIdResponse extends SpeakeasyBase {
     contentType: string;
-    error?: any;
+    /**
+     * Wrong security key
+     */
+    error?: shared.ErrorT;
     statusCode: number;
-    updateStatus?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bin data updated
+     */
+    updateStatus?: shared.UpdateStatus;
 }

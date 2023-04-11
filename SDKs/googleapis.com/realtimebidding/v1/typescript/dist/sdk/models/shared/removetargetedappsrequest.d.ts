@@ -1,7 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * A request to stop targeting the provided apps in a specific pretargeting configuration. The pretargeting configuration itself specifies how these apps are targeted. in PretargetingConfig.appTargeting.mobileAppTargeting.
-**/
+ */
 export declare class RemoveTargetedAppsRequest extends SpeakeasyBase {
+    /**
+     * A list of app IDs to stop targeting in the pretargeting configuration. These values will be removed from the list of targeted app IDs in PretargetingConfig.appTargeting.mobileAppTargeting.values.
+     */
     appIds?: string[];
 }

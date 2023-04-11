@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class LifecycleOperations {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,45 +9,52 @@ export declare class LifecycleOperations {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * activateUser - Activate User
-     *
      * Activate User
-    **/
+     *
+     * @remarks
+     * Activate User
+     */
     activateUser(req: operations.ActivateUserRequest, config?: AxiosRequestConfig): Promise<operations.ActivateUserResponse>;
     /**
-     * deactivateUser - Deactivate User
-     *
      * Deactivate User
-    **/
+     *
+     * @remarks
+     * Deactivate User
+     */
     deactivateUser(req: operations.DeactivateUserRequest, config?: AxiosRequestConfig): Promise<operations.DeactivateUserResponse>;
     /**
-     * resetPassword - Reset Password
-     *
      * Reset Password
-    **/
+     *
+     * @remarks
+     * Reset Password
+     */
     resetPassword(req: operations.ResetPasswordRequest, config?: AxiosRequestConfig): Promise<operations.ResetPasswordResponse>;
     /**
-     * setTempPassword - Set Temp Password
-     *
      * Set Temp Password
-    **/
+     *
+     * @remarks
+     * Set Temp Password
+     */
     setTempPassword(req: operations.SetTempPasswordRequest, config?: AxiosRequestConfig): Promise<operations.SetTempPasswordResponse>;
     /**
-     * suspendUser - Suspend User
-     *
      * Suspend User
-    **/
+     *
+     * @remarks
+     * Suspend User
+     */
     suspendUser(req: operations.SuspendUserRequest, config?: AxiosRequestConfig): Promise<operations.SuspendUserResponse>;
     /**
-     * unlockUser - Unlock User
-     *
      * Unlock User
-    **/
+     *
+     * @remarks
+     * Unlock User
+     */
     unlockUser(req: operations.UnlockUserRequest, config?: AxiosRequestConfig): Promise<operations.UnlockUserResponse>;
     /**
-     * unsuspendUser - Unsuspend User
-     *
      * Unsuspend User
-    **/
+     *
+     * @remarks
+     * Unsuspend User
+     */
     unsuspendUser(req: operations.UnsuspendUserRequest, config?: AxiosRequestConfig): Promise<operations.UnsuspendUserResponse>;
 }

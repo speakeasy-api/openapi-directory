@@ -1,26 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class ReferencesAirlinesByAirlineCodeGetPathParams extends SpeakeasyBase {
-    airlineCode: string;
-}
-export declare class ReferencesAirlinesByAirlineCodeGetQueryParams extends SpeakeasyBase {
-    limit?: string;
-    offset?: string;
-}
-export declare class ReferencesAirlinesByAirlineCodeGetHeaders extends SpeakeasyBase {
-    accept: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ReferencesAirlinesByAirlineCodeGetSecurity extends SpeakeasyBase {
-    auth: shared.SchemeAuth;
+    auth: string;
 }
 export declare class ReferencesAirlinesByAirlineCodeGetRequest extends SpeakeasyBase {
-    pathParams: ReferencesAirlinesByAirlineCodeGetPathParams;
-    queryParams: ReferencesAirlinesByAirlineCodeGetQueryParams;
-    headers: ReferencesAirlinesByAirlineCodeGetHeaders;
-    security: ReferencesAirlinesByAirlineCodeGetSecurity;
+    /**
+     * http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+     */
+    accept: string;
+    /**
+     * 2-character IATA airline/carrier code
+     */
+    airlineCode: string;
+    /**
+     * Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)
+     */
+    limit?: string;
+    /**
+     * Number of records skipped. Defaults to 0
+     */
+    offset?: string;
 }
 export declare class ReferencesAirlinesByAirlineCodeGetResponse extends SpeakeasyBase {
     contentType: string;
     referencesAirlinesByAirlineCodeGet200ApplicationJSONObject?: Record<string, any>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,20 +1,33 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetSubmissionHistoryPathParams extends SpeakeasyBase {
-    assignment: string;
-    class: string;
-    submission: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetSubmissionHistorySecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class GetSubmissionHistoryRequest extends SpeakeasyBase {
-    pathParams: GetSubmissionHistoryPathParams;
-    security: GetSubmissionHistorySecurity;
+    /**
+     * Unique identifier of the assignment
+     */
+    assignment: string;
+    /**
+     * Unique identifier of the class
+     */
+    class: string;
+    /**
+     * Unique identifier of the submission
+     */
+    submission: string;
 }
 export declare class GetSubmissionHistoryResponse extends SpeakeasyBase {
+    /**
+     * The history of the submission
+     */
     assignmentSubmissionHistories?: shared.AssignmentSubmissionHistory[];
     contentType: string;
+    /**
+     * Not granted to access to this submission
+     */
     flatErrorResponse?: shared.FlatErrorResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

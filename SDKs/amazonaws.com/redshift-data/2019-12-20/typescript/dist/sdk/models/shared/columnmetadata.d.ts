@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * The properties (metadata) of a column.
-**/
+ */
 export declare class ColumnMetadata extends SpeakeasyBase {
     columnDefault?: string;
     isCaseSensitive?: boolean;

@@ -1,5 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ApnsSandboxChannelResponse } from "./apnssandboxchannelresponse";
+import { APNSSandboxChannelResponse } from "./apnssandboxchannelresponse";
+/**
+ * Success
+ */
 export declare class DeleteApnsSandboxChannelResponse extends SpeakeasyBase {
-    apnsSandboxChannelResponse: ApnsSandboxChannelResponse;
+    /**
+     * Provides information about the status and settings of the APNs (Apple Push Notification service) sandbox channel for an application.
+     */
+    apnsSandboxChannelResponse: APNSSandboxChannelResponse;
 }

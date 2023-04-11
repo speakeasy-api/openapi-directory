@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteNamedQueryXAmzTargetEnum {
     AmazonAthenaDeleteNamedQuery = "AmazonAthena.DeleteNamedQuery"
 }
-export declare class DeleteNamedQueryHeaders extends SpeakeasyBase {
+export declare class DeleteNamedQueryRequest extends SpeakeasyBase {
+    deleteNamedQueryInput: shared.DeleteNamedQueryInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class DeleteNamedQueryHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteNamedQueryXAmzTargetEnum;
 }
-export declare class DeleteNamedQueryRequest extends SpeakeasyBase {
-    headers: DeleteNamedQueryHeaders;
-    request: shared.DeleteNamedQueryInput;
-}
 export declare class DeleteNamedQueryResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deleteNamedQueryOutput?: Record<string, any>;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

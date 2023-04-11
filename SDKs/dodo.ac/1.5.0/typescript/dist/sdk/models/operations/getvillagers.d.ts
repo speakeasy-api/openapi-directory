@@ -1,0 +1,136 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare enum GetVillagersGameEnum {
+    Dnm = "DNM",
+    Ac = "AC",
+    EPlus = "E_PLUS",
+    Ww = "WW",
+    Cf = "CF",
+    Nl = "NL",
+    Wa = "WA",
+    Nh = "NH",
+    Film = "FILM",
+    Hhd = "HHD",
+    Pc = "PC"
+}
+/**
+ * Retrieve villagers with a certain personality. For 'sisterly', note that the community often also calls it 'uchi' or 'big sister'.
+ */
+export declare enum GetVillagersPersonalityEnum {
+    Lazy = "lazy",
+    Jock = "jock",
+    Cranky = "cranky",
+    Smug = "smug",
+    Normal = "normal",
+    Peppy = "peppy",
+    Snooty = "snooty",
+    Sisterly = "sisterly"
+}
+/**
+ * Retrieve villagers of a certain species.
+ */
+export declare enum GetVillagersSpeciesEnum {
+    Alligator = "alligator",
+    Anteater = "anteater",
+    Bear = "bear",
+    Bird = "bird",
+    Bull = "bull",
+    Cat = "cat",
+    Cub = "cub",
+    Chicken = "chicken",
+    Cow = "cow",
+    Deer = "deer",
+    Dog = "dog",
+    Duck = "duck",
+    Eagle = "eagle",
+    Elephant = "elephant",
+    Frog = "frog",
+    Goat = "goat",
+    Gorilla = "gorilla",
+    Hamster = "hamster",
+    Hippo = "hippo",
+    Horse = "horse",
+    Koala = "koala",
+    Kangaroo = "kangaroo",
+    Lion = "lion",
+    Monkey = "monkey",
+    Mouse = "mouse",
+    Octopus = "octopus",
+    Ostrich = "ostrich",
+    Penguin = "penguin",
+    Pig = "pig",
+    Rabbit = "rabbit",
+    Rhino = "rhino",
+    Sheep = "sheep",
+    Squirrel = "squirrel",
+    Tiger = "tiger",
+    Wolf = "wolf"
+}
+export declare class GetVillagersRequest extends SpeakeasyBase {
+    /**
+     * The version of the API you are calling, written as `1.0.0`. This is specified as required as good practice, but it is not actually enforced by the API. If you do not specify a version, you will be served the latest version, which may eventually result in breaking changes.
+     */
+    acceptVersion: string;
+    /**
+     * Your UUID secret key, granted to you by the Nookipedia team. Required for accessing the API.
+     */
+    xApiKey: string;
+    /**
+     * Use with `birthmonth` to get villager(s) born on a specific day. Value should be an int, 1 through 31.
+     */
+    birthday?: string;
+    /**
+     * Retrieve villagers born in a specific month. Value may be the month's name (`jan`, `january`) or the integer representing the month (`01`, `1`).
+     */
+    birthmonth?: string;
+    /**
+     * When set to `true`, only villager names are returned. Instead of an array of objects with all details, the return will be an array of strings.
+     */
+    excludedetails?: string;
+    /**
+     * Retrieve villagers that appear in all listed games. For example, if you want only villagers that appear in both *New Horizons* and *Pocket Camp*, you would send in `?game=nh&game=pc`.
+     */
+    game?: GetVillagersGameEnum[];
+    /**
+     * Villager name. For most names you will get back an array with one object, but note that names are not a unique identifier across the series, as there are 3 names that are shared by multiple villagers (Lulu, Petunia, Carmen). For those 3 names you will get back an array with 2 objects. How you disambiguate between these villagers is up to you.
+     */
+    name?: string;
+    /**
+     * When set to `true`, an `nh_details` object will be included that contains *New Horizons* details about the villager. If the villager does not appear in *New Horizons*, the returned `nh_details` field will be set to null.
+     */
+    nhdetails?: string;
+    /**
+     * Retrieve villagers with a certain personality. For 'sisterly', note that the community often also calls it 'uchi' or 'big sister'.
+     */
+    personality?: GetVillagersPersonalityEnum;
+    /**
+     * Retrieve villagers of a certain species.
+     */
+    species?: GetVillagersSpeciesEnum;
+    /**
+     * Specify the desired width of returned image URLs. When unspecified, the linked image(s) returned by the API will be full-resolution. Note that images can only be reduced in size; specifying a width greater than than the maximum size will return the default full-size image URL. Note that requesting specific image sizes for long lists may result in a very long response time.
+     */
+    thumbsize?: number;
+}
+export declare class GetVillagersResponse extends SpeakeasyBase {
+    contentType: string;
+    /**
+     * One of the inputs (usually query parameters) has an invalid value.
+     */
+    error400?: shared.Error400;
+    /**
+     * Failed to authenticate user from `X-API-KEY`.
+     */
+    error401?: shared.Error401;
+    /**
+     * There was an error fetching the requested data.
+     */
+    error500?: shared.Error500;
+    statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * A JSON array of villagers.
+     */
+    villagers?: shared.Villager[];
+}

@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteTransitGatewayVpcAttachmentActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteTransitGatewayVpcAttachmentActionEnum {
     DeleteTransitGatewayVpcAttachment = "DeleteTransitGatewayVpcAttachment"
 }
-export declare enum GetDeleteTransitGatewayVpcAttachmentVersionEnum {
+export declare enum GETDeleteTransitGatewayVpcAttachmentVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetDeleteTransitGatewayVpcAttachmentQueryParams extends SpeakeasyBase {
-    action: GetDeleteTransitGatewayVpcAttachmentActionEnum;
+export declare class GETDeleteTransitGatewayVpcAttachmentRequest extends SpeakeasyBase {
+    action: GETDeleteTransitGatewayVpcAttachmentActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
+    /**
+     * The ID of the attachment.
+     */
     transitGatewayAttachmentId: string;
-    version: GetDeleteTransitGatewayVpcAttachmentVersionEnum;
-}
-export declare class GetDeleteTransitGatewayVpcAttachmentHeaders extends SpeakeasyBase {
+    version: GETDeleteTransitGatewayVpcAttachmentVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetDeleteTransitGatewayVpcAttachmentHeaders extends Speakea
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteTransitGatewayVpcAttachmentRequest extends SpeakeasyBase {
-    queryParams: GetDeleteTransitGatewayVpcAttachmentQueryParams;
-    headers: GetDeleteTransitGatewayVpcAttachmentHeaders;
-}
-export declare class GetDeleteTransitGatewayVpcAttachmentResponse extends SpeakeasyBase {
+export declare class GETDeleteTransitGatewayVpcAttachmentResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

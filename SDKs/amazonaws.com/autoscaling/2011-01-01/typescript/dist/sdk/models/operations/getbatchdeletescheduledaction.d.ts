@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetBatchDeleteScheduledActionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETBatchDeleteScheduledActionActionEnum {
     BatchDeleteScheduledAction = "BatchDeleteScheduledAction"
 }
-export declare enum GetBatchDeleteScheduledActionVersionEnum {
+export declare enum GETBatchDeleteScheduledActionVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class GetBatchDeleteScheduledActionQueryParams extends SpeakeasyBase {
-    action: GetBatchDeleteScheduledActionActionEnum;
+export declare class GETBatchDeleteScheduledActionRequest extends SpeakeasyBase {
+    action: GETBatchDeleteScheduledActionActionEnum;
+    /**
+     * The name of the Auto Scaling group.
+     */
     autoScalingGroupName: string;
+    /**
+     * The names of the scheduled actions to delete. The maximum number allowed is 50.
+     */
     scheduledActionNames: string[];
-    version: GetBatchDeleteScheduledActionVersionEnum;
-}
-export declare class GetBatchDeleteScheduledActionHeaders extends SpeakeasyBase {
+    version: GETBatchDeleteScheduledActionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetBatchDeleteScheduledActionHeaders extends SpeakeasyBase 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetBatchDeleteScheduledActionRequest extends SpeakeasyBase {
-    queryParams: GetBatchDeleteScheduledActionQueryParams;
-    headers: GetBatchDeleteScheduledActionHeaders;
-}
-export declare class GetBatchDeleteScheduledActionResponse extends SpeakeasyBase {
+export declare class GETBatchDeleteScheduledActionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

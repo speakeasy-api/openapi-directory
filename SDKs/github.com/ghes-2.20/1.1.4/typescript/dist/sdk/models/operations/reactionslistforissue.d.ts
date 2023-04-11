@@ -1,28 +1,61 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReactionsListForIssuePathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+/**
+ * Returns a single [reaction type](https://docs.github.com/enterprise-server@2.20/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to an issue.
+ */
+export declare enum ReactionsListForIssueContentEnum {
+    Plus1 = "+1",
+    Minus1 = "-1",
+    Laugh = "laugh",
+    Confused = "confused",
+    Heart = "heart",
+    Hooray = "hooray",
+    Rocket = "rocket",
+    Eyes = "eyes"
+}
+export declare class ReactionsListForIssueRequest extends SpeakeasyBase {
+    /**
+     * Returns a single [reaction type](https://docs.github.com/enterprise-server@2.20/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to an issue.
+     */
+    content?: ReactionsListForIssueContentEnum;
+    /**
+     * issue_number parameter
+     */
     issueNumber: number;
     owner: string;
+    /**
+     * Page number of the results to fetch.
+     */
+    page?: number;
+    /**
+     * Results per page (max 100)
+     */
+    perPage?: number;
     repo: string;
 }
-export declare class ReactionsListForIssueQueryParams extends SpeakeasyBase {
-    content?: shared.IssueNumberEnum;
-    page?: number;
-    perPage?: number;
-}
-export declare class ReactionsListForIssue415ApplicationJson extends SpeakeasyBase {
+/**
+ * Preview header missing
+ */
+export declare class ReactionsListForIssue415ApplicationJSON extends SpeakeasyBase {
     documentationUrl: string;
     message: string;
 }
-export declare class ReactionsListForIssueRequest extends SpeakeasyBase {
-    pathParams: ReactionsListForIssuePathParams;
-    queryParams: ReactionsListForIssueQueryParams;
-}
 export declare class ReactionsListForIssueResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Resource not found
+     */
     basicError?: shared.BasicError;
+    /**
+     * Response
+     */
     reactions?: shared.Reaction[];
-    reactionsListForIssue415ApplicationJSONObject?: ReactionsListForIssue415ApplicationJson;
+    /**
+     * Preview header missing
+     */
+    reactionsListForIssue415ApplicationJSONObject?: ReactionsListForIssue415ApplicationJSON;
 }

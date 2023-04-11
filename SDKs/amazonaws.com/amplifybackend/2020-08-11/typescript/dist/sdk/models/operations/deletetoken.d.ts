@@ -1,10 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteTokenPathParams extends SpeakeasyBase {
-    appId: string;
-    sessionId: string;
-}
-export declare class DeleteTokenHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteTokenRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,17 +9,37 @@ export declare class DeleteTokenHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DeleteTokenRequest extends SpeakeasyBase {
-    pathParams: DeleteTokenPathParams;
-    headers: DeleteTokenHeaders;
+    /**
+     * The app ID.
+     */
+    appId: string;
+    /**
+     * The session ID.
+     */
+    sessionId: string;
 }
 export declare class DeleteTokenResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteTokenResponse?: shared.DeleteTokenResponse;
+    /**
+     * GatewayTimeoutException
+     */
     gatewayTimeoutException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

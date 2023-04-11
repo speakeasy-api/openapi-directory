@@ -1,23 +1,44 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetSchedulesScheduleFSubIdPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetSchedulesScheduleFSubIdRequest extends SpeakeasyBase {
+    /**
+     *
+     * @remarks
+     * API key for https://api.data.gov. Get one at https://api.data.gov/signup.
+     *
+     */
+    apiKey: string;
+    /**
+     * For paginating through results, starting at page 1
+     */
+    page?: number;
+    /**
+     * The number of results returned per page. Defaults to 20.
+     */
+    perPage?: number;
     subId: string;
 }
-export declare class GetSchedulesScheduleFSubIdQueryParams extends SpeakeasyBase {
-    apiKey: string;
-    page?: number;
-    perPage?: number;
-}
-export declare class GetSchedulesScheduleFSubIdDefaultApplicationJsonResults extends SpeakeasyBase {
+export declare class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults extends SpeakeasyBase {
     actionCode?: string;
     actionCodeFull?: string;
     aggregateGeneralElectionExpenditure?: string;
     backReferenceScheduleName?: string;
     backReferenceTransactionId?: string;
     candidateFirstName?: string;
+    /**
+     *
+     * @remarks
+     * A unique identifier assigned to each candidate registered with the FEC.
+     * If a person runs for several offices, that person will have separate candidate IDs for each office.
+     *
+     */
     candidateId?: string;
     candidateLastName?: string;
     candidateMiddleName?: string;
+    /**
+     * Name of candidate running for office
+     */
     candidateName?: string;
     candidateOffice?: string;
     candidateOfficeDistrict?: string;
@@ -30,6 +51,12 @@ export declare class GetSchedulesScheduleFSubIdDefaultApplicationJsonResults ext
     catologCodeFull?: string;
     committee?: shared.CommitteeHistory;
     committeeDesignatedCoordinatedExpenditureIndicator?: string;
+    /**
+     *
+     * @remarks
+     * A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
+     *
+     */
     committeeId?: string;
     committeeName?: string;
     conduitCommitteeCity?: string;
@@ -51,6 +78,12 @@ export declare class GetSchedulesScheduleFSubIdDefaultApplicationJsonResults ext
     expenditureTypeFull?: string;
     fileNumber?: number;
     filingForm?: string;
+    /**
+     *
+     * @remarks
+     * An unique identifier for each page where the electronic or paper filing is reported.
+     *
+     */
     imageNumber?: string;
     lineNumber?: string;
     linkId?: number;
@@ -64,7 +97,71 @@ export declare class GetSchedulesScheduleFSubIdDefaultApplicationJsonResults ext
     payeeMiddleName?: string;
     payeeName?: string;
     pdfUrl?: string;
+    /**
+     * Name of report where the underlying data comes from:
+     *
+     * @remarks
+     *     - 10D Pre-Election
+     *     - 10G Pre-General
+     *     - 10P Pre-Primary
+     *     - 10R Pre-Run-Off
+     *     - 10S Pre-Special
+     *     - 12C Pre-Convention
+     *     - 12G Pre-General
+     *     - 12P Pre-Primary
+     *     - 12R Pre-Run-Off
+     *     - 12S Pre-Special
+     *     - 30D Post-Election
+     *     - 30G Post-General
+     *     - 30P Post-Primary
+     *     - 30R Post-Run-Off
+     *     - 30S Post-Special
+     *     - 60D Post-Convention
+     *     - M1  January Monthly
+     *     - M10 October Monthly
+     *     - M11 November Monthly
+     *     - M12 December Monthly
+     *     - M2  February Monthly
+     *     - M3  March Monthly
+     *     - M4  April Monthly
+     *     - M5  May Monthly
+     *     - M6  June Monthly
+     *     - M7  July Monthly
+     *     - M8  August Monthly
+     *     - M9  September Monthly
+     *     - MY  Mid-Year Report
+     *     - Q1  April Quarterly
+     *     - Q2  July Quarterly
+     *     - Q3  October Quarterly
+     *     - TER Termination Report
+     *     - YE  Year-End
+     *     - ADJ COMP ADJUST AMEND
+     *     - CA  COMPREHENSIVE AMEND
+     *     - 90S Post Inaugural Supplement
+     *     - 90D Post Inaugural
+     *     - 48  48 Hour Notification
+     *     - 24  24 Hour Notification
+     *     - M7S July Monthly/Semi-Annual
+     *     - MSA Monthly Semi-Annual (MY)
+     *     - MYS Monthly Year End/Semi-Annual
+     *     - Q2S July Quarterly/Semi-Annual
+     *     - QSA Quarterly Semi-Annual (MY)
+     *     - QYS Quarterly Year End/Semi-Annual
+     *     - QYE Quarterly Semi-Annual (YE)
+     *     - QMS Quarterly Mid-Year/ Semi-Annual
+     *     - MSY Monthly Semi-Annual (YE)
+     *
+     */
     reportType?: string;
+    /**
+     *
+     * @remarks
+     * Forms with coverage date -
+     *     year from the coverage ending date.
+     * Forms without coverage date -
+     *     year from the receipt date.
+     *
+     */
     reportYear?: number;
     scheduleType?: string;
     scheduleTypeFull?: string;
@@ -75,16 +172,13 @@ export declare class GetSchedulesScheduleFSubIdDefaultApplicationJsonResults ext
     unlimitedSpendingFlag?: string;
     unlimitedSpendingFlagFull?: string;
 }
-export declare class GetSchedulesScheduleFSubIdDefaultApplicationJson extends SpeakeasyBase {
+export declare class GetSchedulesScheduleFSubIdDefaultApplicationJSON extends SpeakeasyBase {
     pagination?: shared.OffsetInfo;
-    results?: GetSchedulesScheduleFSubIdDefaultApplicationJsonResults[];
-}
-export declare class GetSchedulesScheduleFSubIdRequest extends SpeakeasyBase {
-    pathParams: GetSchedulesScheduleFSubIdPathParams;
-    queryParams: GetSchedulesScheduleFSubIdQueryParams;
+    results?: GetSchedulesScheduleFSubIdDefaultApplicationJSONResults[];
 }
 export declare class GetSchedulesScheduleFSubIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getSchedulesScheduleFSubIdDefaultApplicationJSONObject?: GetSchedulesScheduleFSubIdDefaultApplicationJson;
+    rawResponse?: AxiosResponse;
+    getSchedulesScheduleFSubIdDefaultApplicationJSONObject?: GetSchedulesScheduleFSubIdDefaultApplicationJSON;
 }

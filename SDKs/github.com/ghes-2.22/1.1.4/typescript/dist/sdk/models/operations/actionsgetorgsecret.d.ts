@@ -1,14 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ActionsGetOrgSecretPathParams extends SpeakeasyBase {
-    org: string;
-    secretName: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ActionsGetOrgSecretRequest extends SpeakeasyBase {
-    pathParams: ActionsGetOrgSecretPathParams;
+    org: string;
+    /**
+     * secret_name parameter
+     */
+    secretName: string;
 }
 export declare class ActionsGetOrgSecretResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     organizationActionsSecret?: shared.OrganizationActionsSecret;
 }

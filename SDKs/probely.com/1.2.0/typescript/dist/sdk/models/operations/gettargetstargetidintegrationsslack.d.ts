@@ -1,21 +1,41 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetTargetsTargetIdIntegrationsSlackPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetTargetsTargetIdIntegrationsSlackRequest extends SpeakeasyBase {
+    /**
+     * Target id
+     */
     targetId: string;
 }
-export declare class GetTargetsTargetIdIntegrationsSlack401ApplicationJson extends SpeakeasyBase {
+/**
+ * Not allowed to perform operation
+ */
+export declare class GetTargetsTargetIdIntegrationsSlack403ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error message.
+     */
     detail?: string;
 }
-export declare class GetTargetsTargetIdIntegrationsSlack403ApplicationJson extends SpeakeasyBase {
+/**
+ * Access token is missing or invalid
+ */
+export declare class GetTargetsTargetIdIntegrationsSlack401ApplicationJSON extends SpeakeasyBase {
     detail?: string;
-}
-export declare class GetTargetsTargetIdIntegrationsSlackRequest extends SpeakeasyBase {
-    pathParams: GetTargetsTargetIdIntegrationsSlackPathParams;
 }
 export declare class GetTargetsTargetIdIntegrationsSlackResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Slack integration
+     */
     slack?: shared.Slack;
     statusCode: number;
-    getTargetsTargetIdIntegrationsSlack401ApplicationJSONObject?: GetTargetsTargetIdIntegrationsSlack401ApplicationJson;
-    getTargetsTargetIdIntegrationsSlack403ApplicationJSONObject?: GetTargetsTargetIdIntegrationsSlack403ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Access token is missing or invalid
+     */
+    getTargetsTargetIdIntegrationsSlack401ApplicationJSONObject?: GetTargetsTargetIdIntegrationsSlack401ApplicationJSON;
+    /**
+     * Not allowed to perform operation
+     */
+    getTargetsTargetIdIntegrationsSlack403ApplicationJSONObject?: GetTargetsTargetIdIntegrationsSlack403ApplicationJSON;
 }

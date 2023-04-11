@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeEventSubscriptionsQueryParams extends SpeakeasyBase {
-    marker?: string;
-    maxRecords?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum DescribeEventSubscriptionsXAmzTargetEnum {
-    AmazonDmSv20160101DescribeEventSubscriptions = "AmazonDMSv20160101.DescribeEventSubscriptions"
+    AmazonDMSv20160101DescribeEventSubscriptions = "AmazonDMSv20160101.DescribeEventSubscriptions"
 }
-export declare class DescribeEventSubscriptionsHeaders extends SpeakeasyBase {
+export declare class DescribeEventSubscriptionsRequest extends SpeakeasyBase {
+    describeEventSubscriptionsMessage: shared.DescribeEventSubscriptionsMessage;
+    /**
+     * Pagination token
+     */
+    marker?: string;
+    /**
+     * Pagination limit
+     */
+    maxRecords?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,14 +23,16 @@ export declare class DescribeEventSubscriptionsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeEventSubscriptionsXAmzTargetEnum;
 }
-export declare class DescribeEventSubscriptionsRequest extends SpeakeasyBase {
-    queryParams: DescribeEventSubscriptionsQueryParams;
-    headers: DescribeEventSubscriptionsHeaders;
-    request: shared.DescribeEventSubscriptionsMessage;
-}
 export declare class DescribeEventSubscriptionsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeEventSubscriptionsResponse?: shared.DescribeEventSubscriptionsResponse;
+    /**
+     * ResourceNotFoundFault
+     */
     resourceNotFoundFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

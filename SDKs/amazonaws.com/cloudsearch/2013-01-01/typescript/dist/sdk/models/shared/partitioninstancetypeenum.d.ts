@@ -1,3 +1,6 @@
+/**
+ * The instance type (such as <code>search.m1.small</code>) on which an index partition is hosted.
+ */
 export declare enum PartitionInstanceTypeEnum {
     SearchM1Small = "search.m1.small",
     SearchM1Large = "search.m1.large",

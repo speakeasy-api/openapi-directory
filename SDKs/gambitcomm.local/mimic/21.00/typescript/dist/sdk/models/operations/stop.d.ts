@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class StopPathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class StopRequest extends SpeakeasyBase {
-    pathParams: StopPathParams;
+    /**
+     * Agent to return the primary IP
+     */
+    agentNum: number;
 }
 export declare class StopResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     stop200ApplicationJSONString?: string;
 }

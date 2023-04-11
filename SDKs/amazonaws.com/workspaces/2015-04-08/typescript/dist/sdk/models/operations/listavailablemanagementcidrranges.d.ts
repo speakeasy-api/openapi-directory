@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum ListAvailableManagementCidrRangesXAmzTargetEnum {
     WorkspacesServiceListAvailableManagementCidrRanges = "WorkspacesService.ListAvailableManagementCidrRanges"
 }
-export declare class ListAvailableManagementCidrRangesHeaders extends SpeakeasyBase {
+export declare class ListAvailableManagementCidrRangesRequest extends SpeakeasyBase {
+    listAvailableManagementCidrRangesRequest: shared.ListAvailableManagementCidrRangesRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class ListAvailableManagementCidrRangesHeaders extends SpeakeasyB
     xAmzSignedHeaders?: string;
     xAmzTarget: ListAvailableManagementCidrRangesXAmzTargetEnum;
 }
-export declare class ListAvailableManagementCidrRangesRequest extends SpeakeasyBase {
-    headers: ListAvailableManagementCidrRangesHeaders;
-    request: shared.ListAvailableManagementCidrRangesRequest;
-}
 export declare class ListAvailableManagementCidrRangesResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InvalidParameterValuesException
+     */
     invalidParameterValuesException?: any;
+    /**
+     * Success
+     */
     listAvailableManagementCidrRangesResult?: shared.ListAvailableManagementCidrRangesResult;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

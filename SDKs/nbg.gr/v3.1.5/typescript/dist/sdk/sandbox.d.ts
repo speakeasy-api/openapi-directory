@@ -1,5 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Sandbox {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,27 +10,31 @@ export declare class Sandbox {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteSandboxSandboxId - Delete Sandbox
-     *
      * Delete Sandbox
-    **/
-    deleteSandboxSandboxId(req: operations.DeleteSandboxSandboxIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteSandboxSandboxIdResponse>;
-    /**
-     * getSandboxSandboxId - Export Sandbox
      *
+     * @remarks
+     * Delete Sandbox
+     */
+    deleteSandboxSandboxId(req: operations.DeleteSandboxSandboxIdRequest, security: operations.DeleteSandboxSandboxIdSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteSandboxSandboxIdResponse>;
+    /**
      * Export Sandbox
-    **/
-    getSandboxSandboxId(req: operations.GetSandboxSandboxIdRequest, config?: AxiosRequestConfig): Promise<operations.GetSandboxSandboxIdResponse>;
-    /**
-     * postSandbox - Create Sandbox
      *
+     * @remarks
+     * Export Sandbox
+     */
+    getSandboxSandboxId(req: operations.GetSandboxSandboxIdRequest, security: operations.GetSandboxSandboxIdSecurity, config?: AxiosRequestConfig): Promise<operations.GetSandboxSandboxIdResponse>;
+    /**
      * Create Sandbox
-    **/
-    postSandbox(req: operations.PostSandboxRequest, config?: AxiosRequestConfig): Promise<operations.PostSandboxResponse>;
-    /**
-     * putSandbox - Import Sandbox
      *
+     * @remarks
+     * Create Sandbox
+     */
+    postSandbox(req: shared.SandboxRequest, security: operations.PostSandboxSecurity, config?: AxiosRequestConfig): Promise<operations.PostSandboxResponse>;
+    /**
      * Import Sandbox
-    **/
-    putSandbox(req: operations.PutSandboxRequest, config?: AxiosRequestConfig): Promise<operations.PutSandboxResponse>;
+     *
+     * @remarks
+     * Import Sandbox
+     */
+    putSandbox(req: shared.Sandbox, security: operations.PutSandboxSecurity, config?: AxiosRequestConfig): Promise<operations.PutSandboxResponse>;
 }

@@ -1,4 +1,5 @@
 export * from "./deleteordersid";
+export * from "./getaccounting";
 export * from "./getinventory";
 export * from "./getorder";
 export * from "./getorders";

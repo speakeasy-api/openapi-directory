@@ -1,7 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { ChangeStatusEnum } from "./changestatusenum";
 import { ChangeSummary } from "./changesummary";
 import { FailureCodeEnum } from "./failurecodeenum";
-import { ChangeStatusEnum } from "./changestatusenum";
+/**
+ * Success
+ */
 export declare class DescribeChangeSetResponse extends SpeakeasyBase {
     changeSet?: ChangeSummary[];
     changeSetArn?: string;

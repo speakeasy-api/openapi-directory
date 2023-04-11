@@ -3,7 +3,6 @@ export * from "./generateaccesstokenrequest";
 export * from "./generateaccesstokenresponse";
 export * from "./generateidtokenrequest";
 export * from "./generateidtokenresponse";
-export * from "./security";
 export * from "./signblobrequest";
 export * from "./signblobresponse";
 export * from "./signjwtrequest";

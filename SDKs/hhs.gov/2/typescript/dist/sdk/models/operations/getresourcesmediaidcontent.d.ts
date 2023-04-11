@@ -1,16 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetResourcesMediaIdContentPathParams extends SpeakeasyBase {
-    id: number;
-}
-export declare class GetResourcesMediaIdContentQueryParams extends SpeakeasyBase {
-    calledByBuild?: boolean;
-}
+import { AxiosResponse } from "axios";
 export declare class GetResourcesMediaIdContentRequest extends SpeakeasyBase {
-    pathParams: GetResourcesMediaIdContentPathParams;
-    queryParams: GetResourcesMediaIdContentQueryParams;
+    /**
+     * The method that called this method
+     */
+    calledByBuild?: boolean;
+    /**
+     * The id of the media to show content for.
+     */
+    id: number;
 }
 export declare class GetResourcesMediaIdContentResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Returns the raw content (html, image, etc...) for the MediaItem identified by the 'id'.
+     */
     getResourcesMediaIdContent200ApplicationJSONString?: string;
 }

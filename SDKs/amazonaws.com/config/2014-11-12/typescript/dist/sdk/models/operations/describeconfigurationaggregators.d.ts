@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeConfigurationAggregatorsQueryParams extends SpeakeasyBase {
-    limit?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum DescribeConfigurationAggregatorsXAmzTargetEnum {
     StarlingDoveServiceDescribeConfigurationAggregators = "StarlingDoveService.DescribeConfigurationAggregators"
 }
-export declare class DescribeConfigurationAggregatorsHeaders extends SpeakeasyBase {
+export declare class DescribeConfigurationAggregatorsRequest extends SpeakeasyBase {
+    describeConfigurationAggregatorsRequest: shared.DescribeConfigurationAggregatorsRequest;
+    /**
+     * Pagination limit
+     */
+    limit?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,17 +23,28 @@ export declare class DescribeConfigurationAggregatorsHeaders extends SpeakeasyBa
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeConfigurationAggregatorsXAmzTargetEnum;
 }
-export declare class DescribeConfigurationAggregatorsRequest extends SpeakeasyBase {
-    queryParams: DescribeConfigurationAggregatorsQueryParams;
-    headers: DescribeConfigurationAggregatorsHeaders;
-    request: shared.DescribeConfigurationAggregatorsRequest;
-}
 export declare class DescribeConfigurationAggregatorsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeConfigurationAggregatorsResponse?: shared.DescribeConfigurationAggregatorsResponse;
+    /**
+     * InvalidLimitException
+     */
     invalidLimitException?: any;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
+    /**
+     * NoSuchConfigurationAggregatorException
+     */
     noSuchConfigurationAggregatorException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

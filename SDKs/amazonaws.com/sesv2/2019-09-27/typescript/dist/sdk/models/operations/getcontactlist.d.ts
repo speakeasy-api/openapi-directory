@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetContactListPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetContactListRequest extends SpeakeasyBase {
+    /**
+     * The name of the contact list.
+     */
     contactListName: string;
-}
-export declare class GetContactListHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,15 +14,24 @@ export declare class GetContactListHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetContactListRequest extends SpeakeasyBase {
-    pathParams: GetContactListPathParams;
-    headers: GetContactListHeaders;
-}
 export declare class GetContactListResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getContactListResponse?: shared.GetContactListResponse;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

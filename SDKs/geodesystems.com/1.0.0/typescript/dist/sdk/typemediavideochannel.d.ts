@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Search API for 'Video Channel' entry type
+ */
 export declare class TypeMediaVideoChannel {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,10 @@ export declare class TypeMediaVideoChannel {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * searchMediaVideoChannel - Search API for 'Video Channel' entry type
+     * Search API for 'Video Channel' entry type
      *
+     * @remarks
      * API to search for entries of type Video Channel
-    **/
+     */
     searchMediaVideoChannel(req: operations.SearchMediaVideoChannelRequest, config?: AxiosRequestConfig): Promise<operations.SearchMediaVideoChannelResponse>;
 }

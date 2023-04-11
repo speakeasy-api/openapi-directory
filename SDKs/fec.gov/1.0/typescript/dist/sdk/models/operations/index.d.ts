@@ -14,6 +14,7 @@ export * from "./getcandidatecandidateidtotals";
 export * from "./getcandidates";
 export * from "./getcandidatessearch";
 export * from "./getcandidatestotals";
+export * from "./getcandidatestotalsaggregates";
 export * from "./getcandidatestotalsbyoffice";
 export * from "./getcandidatestotalsbyofficebyparty";
 export * from "./getcommitteecommitteeid";

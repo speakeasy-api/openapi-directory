@@ -1,12 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteAssetModelPathParams extends SpeakeasyBase {
-    assetModelId: string;
-}
-export declare class DeleteAssetModelQueryParams extends SpeakeasyBase {
-    clientToken?: string;
-}
-export declare class DeleteAssetModelHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteAssetModelRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -14,19 +9,41 @@ export declare class DeleteAssetModelHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DeleteAssetModelRequest extends SpeakeasyBase {
-    pathParams: DeleteAssetModelPathParams;
-    queryParams: DeleteAssetModelQueryParams;
-    headers: DeleteAssetModelHeaders;
+    /**
+     * The ID of the asset model to delete.
+     */
+    assetModelId: string;
+    /**
+     * A unique case-sensitive identifier that you can provide to ensure the idempotency of the request. Don't reuse this client token if a new idempotent request is required.
+     */
+    clientToken?: string;
 }
 export declare class DeleteAssetModelResponse extends SpeakeasyBase {
+    /**
+     * ConflictingOperationException
+     */
     conflictingOperationException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteAssetModelResponse?: shared.DeleteAssetModelResponse;
+    /**
+     * InternalFailureException
+     */
     internalFailureException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

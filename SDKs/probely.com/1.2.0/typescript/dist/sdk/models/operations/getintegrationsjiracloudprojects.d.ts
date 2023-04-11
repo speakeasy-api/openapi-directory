@@ -1,15 +1,35 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetIntegrationsJiraCloudProjects401ApplicationJson extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+/**
+ * Not allowed to perform operation
+ */
+export declare class GetIntegrationsJiraCloudProjects403ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error message.
+     */
     detail?: string;
 }
-export declare class GetIntegrationsJiraCloudProjects403ApplicationJson extends SpeakeasyBase {
+/**
+ * Access token is missing or invalid
+ */
+export declare class GetIntegrationsJiraCloudProjects401ApplicationJSON extends SpeakeasyBase {
     detail?: string;
 }
 export declare class GetIntegrationsJiraCloudProjectsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Jira projects
+     */
     jiraProjects?: shared.JiraProject[];
     statusCode: number;
-    getIntegrationsJiraCloudProjects401ApplicationJSONObject?: GetIntegrationsJiraCloudProjects401ApplicationJson;
-    getIntegrationsJiraCloudProjects403ApplicationJSONObject?: GetIntegrationsJiraCloudProjects403ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Access token is missing or invalid
+     */
+    getIntegrationsJiraCloudProjects401ApplicationJSONObject?: GetIntegrationsJiraCloudProjects401ApplicationJSON;
+    /**
+     * Not allowed to perform operation
+     */
+    getIntegrationsJiraCloudProjects403ApplicationJSONObject?: GetIntegrationsJiraCloudProjects403ApplicationJSON;
 }

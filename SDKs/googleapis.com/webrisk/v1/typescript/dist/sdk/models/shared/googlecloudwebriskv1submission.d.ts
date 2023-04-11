@@ -1,15 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GoogleCloudWebriskV1SubmissionThreatTypesEnum {
-    ThreatTypeUnspecified = "THREAT_TYPE_UNSPECIFIED",
-    Malware = "MALWARE",
-    SocialEngineering = "SOCIAL_ENGINEERING",
-    UnwantedSoftware = "UNWANTED_SOFTWARE",
-    SocialEngineeringExtendedCoverage = "SOCIAL_ENGINEERING_EXTENDED_COVERAGE"
-}
 /**
  * Wraps a URI that might be displaying malicious content.
-**/
+ */
 export declare class GoogleCloudWebriskV1Submission extends SpeakeasyBase {
-    threatTypes?: GoogleCloudWebriskV1SubmissionThreatTypesEnum[];
+    /**
+     * Required. The URI that is being reported for malicious content to be analyzed.
+     */
     uri?: string;
 }

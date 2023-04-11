@@ -1,23 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { NullableLicenseSimple } from "./nullablelicensesimple";
 export declare class LicenseContentLinks extends SpeakeasyBase {
     git: string;
     html: string;
     self: string;
 }
 /**
- * License Simple
-**/
-export declare class LicenseContentLicenseSimple extends SpeakeasyBase {
-    htmlUrl?: string;
-    key: string;
-    name: string;
-    nodeId: string;
-    spdxId: string;
-    url: string;
-}
-/**
  * License Content
-**/
+ */
 export declare class LicenseContent extends SpeakeasyBase {
     links: LicenseContentLinks;
     content: string;
@@ -25,7 +15,10 @@ export declare class LicenseContent extends SpeakeasyBase {
     encoding: string;
     gitUrl: string;
     htmlUrl: string;
-    license: LicenseContentLicenseSimple;
+    /**
+     * License Simple
+     */
+    license: NullableLicenseSimple;
     name: string;
     path: string;
     sha: string;

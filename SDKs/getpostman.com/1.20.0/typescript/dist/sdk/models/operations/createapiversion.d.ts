@@ -1,7 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CreateApiVersionPathParams extends SpeakeasyBase {
-    apiId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class CreateApiVersionRequestBodyVersionSourceRelations extends SpeakeasyBase {
     documentation?: boolean;
     mock?: boolean;
@@ -19,20 +17,27 @@ export declare class CreateApiVersionRequestBodyVersion extends SpeakeasyBase {
 export declare class CreateApiVersionRequestBody extends SpeakeasyBase {
     version?: CreateApiVersionRequestBodyVersion;
 }
-export declare class CreateApiVersion200ApplicationJsonVersion extends SpeakeasyBase {
+export declare class CreateApiVersionRequest extends SpeakeasyBase {
+    requestBody?: CreateApiVersionRequestBody;
+    apiId: string;
+}
+export declare class CreateApiVersion200ApplicationJSONVersion extends SpeakeasyBase {
     api?: string;
     id?: string;
     name?: string;
 }
-export declare class CreateApiVersion200ApplicationJson extends SpeakeasyBase {
-    version?: CreateApiVersion200ApplicationJsonVersion;
-}
-export declare class CreateApiVersionRequest extends SpeakeasyBase {
-    pathParams: CreateApiVersionPathParams;
-    request?: CreateApiVersionRequestBody;
+/**
+ * Create API version
+ */
+export declare class CreateApiVersion200ApplicationJSON extends SpeakeasyBase {
+    version?: CreateApiVersion200ApplicationJSONVersion;
 }
 export declare class CreateApiVersionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createApiVersion200ApplicationJSONObject?: CreateApiVersion200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Create API version
+     */
+    createApiVersion200ApplicationJSONObject?: CreateApiVersion200ApplicationJSON;
 }

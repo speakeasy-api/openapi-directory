@@ -1,5 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostRejectPaymentResponseFinanceInformationTransferredToAccountingEnum {
+/**
+ * Whether the refund was transferred to an external accounting system. Use this field for integration with accounting systems, such as NetSuite.
+ *
+ * @remarks
+ *
+ */
+export declare enum POSTRejectPaymentResponseFinanceInformationTransferredToAccountingEnum {
     Processing = "Processing",
     Yes = "Yes",
     No = "No",
@@ -9,22 +15,68 @@ export declare enum PostRejectPaymentResponseFinanceInformationTransferredToAcco
 /**
  * Container for the finance information related to the refund.
  *
-**/
-export declare class PostRejectPaymentResponseFinanceInformation extends SpeakeasyBase {
+ * @remarks
+ *
+ */
+export declare class POSTRejectPaymentResponseFinanceInformation extends SpeakeasyBase {
+    /**
+     * The accounting code that maps to a bank account in your accounting system.
+     *
+     * @remarks
+     *
+     */
     bankAccountAccountingCode?: string;
+    /**
+     * The type of the accounting code that maps to a bank account in your accounting system.
+     *
+     * @remarks
+     *
+     *
+     */
     bankAccountAccountingCodeType?: string;
-    transferredToAccounting?: PostRejectPaymentResponseFinanceInformationTransferredToAccountingEnum;
+    /**
+     * Whether the refund was transferred to an external accounting system. Use this field for integration with accounting systems, such as NetSuite.
+     *
+     * @remarks
+     *
+     */
+    transferredToAccounting?: POSTRejectPaymentResponseFinanceInformationTransferredToAccountingEnum;
+    /**
+     * The accounting code for the unapplied payment.
+     *
+     * @remarks
+     *
+     */
     unappliedPaymentAccountingCode?: string;
+    /**
+     * The type of the accounting code for the unapplied payment.
+     *
+     * @remarks
+     *
+     *
+     */
     unappliedPaymentAccountingCodeType?: string;
 }
-export declare enum PostRejectPaymentResponseGatewayStateEnum {
+/**
+ * The status of the payment in the gateway; used for reconciliation.
+ *
+ * @remarks
+ *
+ */
+export declare enum POSTRejectPaymentResponseGatewayStateEnum {
     MarkedForSubmission = "MarkedForSubmission",
     Submitted = "Submitted",
     Settled = "Settled",
     NotSubmitted = "NotSubmitted",
     FailedToSettle = "FailedToSettle"
 }
-export declare enum PostRejectPaymentResponseMethodTypeEnum {
+/**
+ * How an external refund was issued to a customer.
+ *
+ * @remarks
+ *
+ */
+export declare enum POSTRejectPaymentResponseMethodTypeEnum {
     Ach = "ACH",
     Cash = "Cash",
     Check = "Check",
@@ -36,42 +88,246 @@ export declare enum PostRejectPaymentResponseMethodTypeEnum {
     BankTransfer = "BankTransfer",
     Other = "Other"
 }
-export declare enum PostRejectPaymentResponseTypeEnum {
+/**
+ * The type of the payment.
+ *
+ * @remarks
+ *
+ */
+export declare enum POSTRejectPaymentResponseTypeEnum {
     External = "External",
     Electronic = "Electronic"
 }
-export declare class PostRejectPaymentResponse extends SpeakeasyBase {
+export declare class POSTRejectPaymentResponse extends SpeakeasyBase {
+    /**
+     * The ID of the customer account that the payment is for.
+     *
+     * @remarks
+     *
+     */
     accountId?: string;
+    /**
+     * The total amount of the payment.
+     *
+     * @remarks
+     *
+     */
     amount?: number;
+    /**
+     * The date and time when the payment was cancelled, in `yyyy-mm-dd hh:mm:ss` format.
+     *
+     * @remarks
+     *
+     */
     cancelledOn?: Date;
+    /**
+     * Comments about the payment.
+     *
+     * @remarks
+     *
+     */
     comment?: string;
+    /**
+     * The ID of the Zuora user who created the refund.
+     *
+     * @remarks
+     *
+     */
     createdById?: string;
+    /**
+     * The date and time when the chargeback is created, in `yyyy-mm-dd hh:mm:ss` format. For example, 2019-03-01 15:31:10.
+     *
+     * @remarks
+     *
+     */
     createdDate?: Date;
+    /**
+     * The ID of the credit memo that is refunded.
+     *
+     * @remarks
+     *
+     */
     creditMemoId?: string;
-    financeInformation?: PostRejectPaymentResponseFinanceInformation;
+    /**
+     * Container for the finance information related to the refund.
+     *
+     * @remarks
+     *
+     */
+    financeInformation?: POSTRejectPaymentResponseFinanceInformation;
+    /**
+     * The ID of the gateway instance that processes the payment.
+     *
+     * @remarks
+     *
+     */
     gatewayId?: string;
+    /**
+     * The message returned from the payment gateway for the payment. This message is gateway-dependent.
+     *
+     * @remarks
+     *
+     */
     gatewayResponse?: string;
+    /**
+     * The code returned from the payment gateway for the payment. This code is gateway-dependent.
+     *
+     * @remarks
+     *
+     */
     gatewayResponseCode?: string;
-    gatewayState?: PostRejectPaymentResponseGatewayStateEnum;
+    /**
+     * The status of the payment in the gateway; used for reconciliation.
+     *
+     * @remarks
+     *
+     */
+    gatewayState?: POSTRejectPaymentResponseGatewayStateEnum;
+    /**
+     * The ID of the payment chargeback.
+     *
+     * @remarks
+     *
+     */
     id?: string;
+    /**
+     * The date and time when a charge was marked and waiting for batch submission to the payment process, in `yyyy-mm-dd hh:mm:ss` format.
+     *
+     * @remarks
+     *
+     */
     markedForSubmissionOn?: Date;
-    methodType?: PostRejectPaymentResponseMethodTypeEnum;
+    /**
+     * How an external refund was issued to a customer.
+     *
+     * @remarks
+     *
+     */
+    methodType?: POSTRejectPaymentResponseMethodTypeEnum;
+    /**
+     * The unique identification number of the payment. For example, P-00000001.
+     *
+     * @remarks
+     *
+     */
     number?: string;
+    /**
+     * The ID of the payment that is refunded.
+     *
+     * @remarks
+     *
+     */
     paymentId?: string;
+    /**
+     * The unique ID of the payment method that the customer used to make the payment.
+     *
+     * @remarks
+     *
+     */
     paymentMethodId?: string;
+    /**
+     * The unique ID of the payment method snapshot which is a copy of the particular Payment Method used in a transaction.
+     *
+     * @remarks
+     *
+     */
     paymentMethodSnapshotId?: string;
+    /**
+     * A code identifying the reason for the transaction.
+     *
+     * @remarks
+     *
+     */
     reasonCode?: string;
+    /**
+     * The transaction ID returned by the payment gateway for an electronic refund. Use this field to reconcile refunds between your gateway and Zuora Payments.
+     *
+     * @remarks
+     *
+     */
     referenceId?: string;
+    /**
+     * The date when the refund takes effect, in `yyyy-mm-dd` format. For example, 2017-03-01.
+     *
+     * @remarks
+     *
+     */
     refundDate?: Date;
+    /**
+     * The date and time when the refund was issued, in `yyyy-mm-dd hh:mm:ss` format.
+     *
+     * @remarks
+     *
+     */
     refundTransactionTime?: Date;
+    /**
+     * The transaction ID returned by the payment gateway if there is an additional refund.
+     *
+     * @remarks
+     *
+     */
     secondRefundReferenceId?: string;
+    /**
+     * The date and time when the transaction is settled, in `yyyy-mm-dd hh:mm:ss` format.
+     *
+     * @remarks
+     *
+     */
     settledOn?: Date;
+    /**
+     * A payment gateway-specific field that maps Zuora to other gateways.
+     *
+     * @remarks
+     *
+     */
     softDescriptor?: string;
+    /**
+     * A payment gateway-specific field that maps Zuora to other gateways.
+     *
+     * @remarks
+     *
+     */
     softDescriptorPhone?: string;
+    /**
+     * The status of the payment.
+     *
+     * @remarks
+     *
+     */
     status?: string;
+    /**
+     * The date and time when the payment was submitted, in yyyy-mm-dd hh:mm:ss format.
+     *
+     * @remarks
+     *
+     */
     submittedOn?: Date;
+    /**
+     * Returns `true` if the request was processed successfully.
+     *
+     * @remarks
+     *
+     */
     success?: boolean;
-    type?: PostRejectPaymentResponseTypeEnum;
+    /**
+     * The type of the payment.
+     *
+     * @remarks
+     *
+     */
+    type?: POSTRejectPaymentResponseTypeEnum;
+    /**
+     * The ID of the Zuora user who last updated the payment.
+     *
+     * @remarks
+     *
+     */
     updatedById?: string;
+    /**
+     * The date and time when the payment was last updated, in `yyyy-mm-dd hh:mm:ss` format. For example, 2019-03-02 15:36:10.
+     *
+     * @remarks
+     *
+     */
     updatedDate?: Date;
 }

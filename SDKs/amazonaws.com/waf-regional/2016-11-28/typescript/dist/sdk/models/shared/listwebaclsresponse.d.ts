@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { WebAclSummary } from "./webaclsummary";
-export declare class ListWebAcLsResponse extends SpeakeasyBase {
+import { WebACLSummary } from "./webaclsummary";
+/**
+ * Success
+ */
+export declare class ListWebACLsResponse extends SpeakeasyBase {
     nextMarker?: string;
-    webACLs?: WebAclSummary[];
+    webACLs?: WebACLSummary[];
 }

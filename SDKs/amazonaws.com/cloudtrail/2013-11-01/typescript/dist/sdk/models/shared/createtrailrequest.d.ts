@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { Tag } from "./tag";
 /**
  * Specifies the settings for each trail.
-**/
+ */
 export declare class CreateTrailRequest extends SpeakeasyBase {
     cloudWatchLogsLogGroupArn?: string;
     cloudWatchLogsRoleArn?: string;
@@ -15,5 +15,8 @@ export declare class CreateTrailRequest extends SpeakeasyBase {
     s3BucketName: string;
     s3KeyPrefix?: string;
     snsTopicName?: string;
+    /**
+     * A list of tags.
+     */
     tagsList?: Tag[];
 }

@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { TemplateVersionStatusEnum } from "./templateversionstatusenum";
 /**
  * The environment template version data.
-**/
+ */
 export declare class EnvironmentTemplateVersion extends SpeakeasyBase {
     arn: string;
     createdAt: Date;

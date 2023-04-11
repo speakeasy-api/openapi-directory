@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetResetEbsDefaultKmsKeyIdActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETResetEbsDefaultKmsKeyIdActionEnum {
     ResetEbsDefaultKmsKeyId = "ResetEbsDefaultKmsKeyId"
 }
-export declare enum GetResetEbsDefaultKmsKeyIdVersionEnum {
+export declare enum GETResetEbsDefaultKmsKeyIdVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetResetEbsDefaultKmsKeyIdQueryParams extends SpeakeasyBase {
-    action: GetResetEbsDefaultKmsKeyIdActionEnum;
+export declare class GETResetEbsDefaultKmsKeyIdRequest extends SpeakeasyBase {
+    action: GETResetEbsDefaultKmsKeyIdActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
-    version: GetResetEbsDefaultKmsKeyIdVersionEnum;
-}
-export declare class GetResetEbsDefaultKmsKeyIdHeaders extends SpeakeasyBase {
+    version: GETResetEbsDefaultKmsKeyIdVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetResetEbsDefaultKmsKeyIdHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetResetEbsDefaultKmsKeyIdRequest extends SpeakeasyBase {
-    queryParams: GetResetEbsDefaultKmsKeyIdQueryParams;
-    headers: GetResetEbsDefaultKmsKeyIdHeaders;
-}
-export declare class GetResetEbsDefaultKmsKeyIdResponse extends SpeakeasyBase {
+export declare class GETResetEbsDefaultKmsKeyIdResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

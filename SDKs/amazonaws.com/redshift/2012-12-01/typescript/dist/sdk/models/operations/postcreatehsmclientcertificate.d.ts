@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateHsmClientCertificateActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateHsmClientCertificateActionEnum {
     CreateHsmClientCertificate = "CreateHsmClientCertificate"
 }
-export declare enum PostCreateHsmClientCertificateVersionEnum {
+export declare enum POSTCreateHsmClientCertificateVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostCreateHsmClientCertificateQueryParams extends SpeakeasyBase {
-    action: PostCreateHsmClientCertificateActionEnum;
-    version: PostCreateHsmClientCertificateVersionEnum;
-}
-export declare class PostCreateHsmClientCertificateHeaders extends SpeakeasyBase {
+export declare class POSTCreateHsmClientCertificateRequest extends SpeakeasyBase {
+    action: POSTCreateHsmClientCertificateActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateHsmClientCertificateVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateHsmClientCertificateHeaders extends SpeakeasyBase
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateHsmClientCertificateRequest extends SpeakeasyBase {
-    queryParams: PostCreateHsmClientCertificateQueryParams;
-    headers: PostCreateHsmClientCertificateHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateHsmClientCertificateResponse extends SpeakeasyBase {
+export declare class POSTCreateHsmClientCertificateResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteRoleActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteRoleActionEnum {
     DeleteRole = "DeleteRole"
 }
-export declare enum PostDeleteRoleVersionEnum {
+export declare enum POSTDeleteRoleVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostDeleteRoleQueryParams extends SpeakeasyBase {
-    action: PostDeleteRoleActionEnum;
-    version: PostDeleteRoleVersionEnum;
-}
-export declare class PostDeleteRoleHeaders extends SpeakeasyBase {
+export declare class POSTDeleteRoleRequest extends SpeakeasyBase {
+    action: POSTDeleteRoleActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteRoleVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteRoleHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteRoleRequest extends SpeakeasyBase {
-    queryParams: PostDeleteRoleQueryParams;
-    headers: PostDeleteRoleHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteRoleResponse extends SpeakeasyBase {
+export declare class POSTDeleteRoleResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

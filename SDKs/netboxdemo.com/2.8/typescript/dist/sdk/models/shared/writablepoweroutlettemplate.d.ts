@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Phase (for three-phase feeds)
+ */
 export declare enum WritablePowerOutletTemplateFeedLegEnum {
     A = "A",
     B = "B",
@@ -74,6 +77,9 @@ export declare enum WritablePowerOutletTemplateTypeEnum {
 }
 export declare class WritablePowerOutletTemplateInput extends SpeakeasyBase {
     deviceType: number;
+    /**
+     * Phase (for three-phase feeds)
+     */
     feedLeg?: WritablePowerOutletTemplateFeedLegEnum;
     name: string;
     powerPort?: number;

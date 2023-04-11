@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetAuthorizeCacheSecurityGroupIngressActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETAuthorizeCacheSecurityGroupIngressActionEnum {
     AuthorizeCacheSecurityGroupIngress = "AuthorizeCacheSecurityGroupIngress"
 }
-export declare enum GetAuthorizeCacheSecurityGroupIngressVersionEnum {
+export declare enum GETAuthorizeCacheSecurityGroupIngressVersionEnum {
     TwoThousandAndFifteen0202 = "2015-02-02"
 }
-export declare class GetAuthorizeCacheSecurityGroupIngressQueryParams extends SpeakeasyBase {
-    action: GetAuthorizeCacheSecurityGroupIngressActionEnum;
+export declare class GETAuthorizeCacheSecurityGroupIngressRequest extends SpeakeasyBase {
+    action: GETAuthorizeCacheSecurityGroupIngressActionEnum;
+    /**
+     * The cache security group that allows network ingress.
+     */
     cacheSecurityGroupName: string;
+    /**
+     * The Amazon EC2 security group to be authorized for ingress to the cache security group.
+     */
     ec2SecurityGroupName: string;
+    /**
+     * The Amazon account number of the Amazon EC2 security group owner. Note that this is not the same thing as an Amazon access key ID - you must provide a valid Amazon account number for this parameter.
+     */
     ec2SecurityGroupOwnerId: string;
-    version: GetAuthorizeCacheSecurityGroupIngressVersionEnum;
-}
-export declare class GetAuthorizeCacheSecurityGroupIngressHeaders extends SpeakeasyBase {
+    version: GETAuthorizeCacheSecurityGroupIngressVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +29,9 @@ export declare class GetAuthorizeCacheSecurityGroupIngressHeaders extends Speake
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetAuthorizeCacheSecurityGroupIngressRequest extends SpeakeasyBase {
-    queryParams: GetAuthorizeCacheSecurityGroupIngressQueryParams;
-    headers: GetAuthorizeCacheSecurityGroupIngressHeaders;
-}
-export declare class GetAuthorizeCacheSecurityGroupIngressResponse extends SpeakeasyBase {
+export declare class GETAuthorizeCacheSecurityGroupIngressResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,5 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { VpcLink } from "./vpclink";
+/**
+ * Success
+ */
 export declare class GetVpcLinksResponse extends SpeakeasyBase {
-    items?: Record<string, any>;
-    nextToken?: Record<string, any>;
+    items?: VpcLink[];
+    nextToken?: string;
 }

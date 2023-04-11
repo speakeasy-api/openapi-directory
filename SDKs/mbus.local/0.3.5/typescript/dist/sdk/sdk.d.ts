@@ -1,9 +1,21 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare const ServerList: readonly ["http://mbus.local", "https://mbus.local/"];
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
+export declare const ServerList: readonly ["http://mbus.local", "/"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
 export declare class SDK {
     _defaultClient: AxiosInstance;
@@ -12,33 +24,34 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
     /**
-     * get - Gets data from the slave identified by {address}
-    **/
+     * Gets data from the slave identified by {address}
+     */
     get(req: operations.GetRequest, config?: AxiosRequestConfig): Promise<operations.GetResponse>;
     /**
-     * getMulti - Gets data from the slave identified by {address}, and supports multiple responses from the slave
-    **/
+     * Gets data from the slave identified by {address}, and supports multiple responses from the slave
+     */
     getMulti(req: operations.GetMultiRequest, config?: AxiosRequestConfig): Promise<operations.GetMultiResponse>;
     /**
-     * hat - Gets Raspberry Pi Hat information
-    **/
+     * Gets Raspberry Pi Hat information
+     */
     hat(config?: AxiosRequestConfig): Promise<operations.HatResponse>;
     /**
-     * hatOff - Turns off power to the M-Bus
-    **/
+     * Turns off power to the M-Bus
+     */
     hatOff(config?: AxiosRequestConfig): Promise<operations.HatOffResponse>;
     /**
-     * hatOn - Turns on power to the M-Bus
-    **/
+     * Turns on power to the M-Bus
+     */
     hatOn(config?: AxiosRequestConfig): Promise<operations.HatOnResponse>;
     /**
-     * mbusApi - Returns this API specification
-    **/
+     * Returns this API specification
+     */
     mbusApi(config?: AxiosRequestConfig): Promise<operations.MbusApiResponse>;
     /**
-     * scan - Scan the specified device for slaves
-    **/
+     * Scan the specified device for slaves
+     */
     scan(req: operations.ScanRequest, config?: AxiosRequestConfig): Promise<operations.ScanResponse>;
 }

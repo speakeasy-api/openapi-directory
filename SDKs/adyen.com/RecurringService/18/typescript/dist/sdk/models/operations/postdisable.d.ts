@@ -1,9 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PostDisableRequest extends SpeakeasyBase {
-    request?: any;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class PostDisableResponse extends SpeakeasyBase {
     contentType: string;
-    disableResult?: any;
+    /**
+     * OK - the request has succeeded.
+     */
+    disableResult?: shared.DisableResult;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

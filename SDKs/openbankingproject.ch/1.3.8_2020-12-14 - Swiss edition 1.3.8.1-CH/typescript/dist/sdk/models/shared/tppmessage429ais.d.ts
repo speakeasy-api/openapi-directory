@@ -1,9 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { MessageCode429AISEnum } from "./messagecode429aisenum";
 import { TppMessageCategoryEnum } from "./tppmessagecategoryenum";
-import { MessageCode429AisEnum } from "./messagecode429aisenum";
-export declare class TppMessage429Ais extends SpeakeasyBase {
+export declare class TppMessage429AIS extends SpeakeasyBase {
+    /**
+     * Category of the TPP message category.
+     */
     category: TppMessageCategoryEnum;
-    code: MessageCode429AisEnum;
+    /**
+     * Message codes for HTTP Error code 429 (TOO MANY REQUESTS).
+     */
+    code: MessageCode429AISEnum;
     path?: string;
+    /**
+     * Additional explaining text to the TPP.
+     */
     text?: string;
 }

@@ -1,42 +1,38 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AlertcenterAlertsBatchDeleteRequest, AlertcenterAlertsBatchDeleteResponse } from "openapi/src/sdk/models/operations";
+import {
+  AlertcenterAlertsBatchDeleteRequest,
+  AlertcenterAlertsBatchDeleteResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: AlertcenterAlertsBatchDeleteRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "voluptas",
-    alt: "media",
-    callback: "expedita",
-    fields: "consequuntur",
-    key: "dolor",
-    oauthToken: "expedita",
-    prettyPrint: true,
-    quotaUser: "fugit",
-    uploadType: "et",
-    uploadProtocol: "nihil",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  batchDeleteAlertsRequest: {
     alertId: [
-      "dicta",
-      "debitis",
-      "voluptatum",
+      "distinctio",
+      "quibusdam",
+      "unde",
     ],
-    customerId: "et",
+    customerId: "nulla",
   },
+  accessToken: "corrupti",
+  alt: AltEnum.Proto,
+  callback: "vel",
+  fields: "error",
+  key: "deserunt",
+  oauthToken: "suscipit",
+  prettyPrint: false,
+  quotaUser: "iure",
+  uploadType: "magnam",
+  uploadProtocol: "debitis",
 };
 
 sdk.alerts.alertcenterAlertsBatchDelete(req).then((res: AlertcenterAlertsBatchDeleteResponse | AxiosError) => {

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeConfigurationOptionsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeConfigurationOptionsActionEnum {
     DescribeConfigurationOptions = "DescribeConfigurationOptions"
 }
-export declare enum PostDescribeConfigurationOptionsVersionEnum {
+export declare enum POSTDescribeConfigurationOptionsVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostDescribeConfigurationOptionsQueryParams extends SpeakeasyBase {
-    action: PostDescribeConfigurationOptionsActionEnum;
-    version: PostDescribeConfigurationOptionsVersionEnum;
-}
-export declare class PostDescribeConfigurationOptionsHeaders extends SpeakeasyBase {
+export declare class POSTDescribeConfigurationOptionsRequest extends SpeakeasyBase {
+    action: POSTDescribeConfigurationOptionsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDescribeConfigurationOptionsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDescribeConfigurationOptionsHeaders extends SpeakeasyBa
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeConfigurationOptionsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeConfigurationOptionsQueryParams;
-    headers: PostDescribeConfigurationOptionsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeConfigurationOptionsResponse extends SpeakeasyBase {
+export declare class POSTDescribeConfigurationOptionsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeEventCategoriesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeEventCategoriesActionEnum {
     DescribeEventCategories = "DescribeEventCategories"
 }
-export declare enum GetDescribeEventCategoriesVersionEnum {
+export declare enum GETDescribeEventCategoriesVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class GetDescribeEventCategoriesQueryParams extends SpeakeasyBase {
-    action: GetDescribeEventCategoriesActionEnum;
+export declare class GETDescribeEventCategoriesRequest extends SpeakeasyBase {
+    action: GETDescribeEventCategoriesActionEnum;
+    /**
+     * <p>The source type, such as cluster or parameter group, to which the described event categories apply.</p> <p>Valid values: cluster, cluster-snapshot, cluster-parameter-group, cluster-security-group, and scheduled-action.</p>
+     */
     sourceType?: string;
-    version: GetDescribeEventCategoriesVersionEnum;
-}
-export declare class GetDescribeEventCategoriesHeaders extends SpeakeasyBase {
+    version: GETDescribeEventCategoriesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDescribeEventCategoriesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeEventCategoriesRequest extends SpeakeasyBase {
-    queryParams: GetDescribeEventCategoriesQueryParams;
-    headers: GetDescribeEventCategoriesHeaders;
-}
-export declare class GetDescribeEventCategoriesResponse extends SpeakeasyBase {
+export declare class GETDescribeEventCategoriesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

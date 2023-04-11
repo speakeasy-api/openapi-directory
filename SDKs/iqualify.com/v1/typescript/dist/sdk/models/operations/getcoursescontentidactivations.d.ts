@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetCoursesContentIdActivationsPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetCoursesContentIdActivationsRequest extends SpeakeasyBase {
+    /**
+     * The content Id
+     */
     contentId: string;
 }
-export declare class GetCoursesContentIdActivationsRequest extends SpeakeasyBase {
-    pathParams: GetCoursesContentIdActivationsPathParams;
-}
 export declare class GetCoursesContentIdActivationsResponse extends SpeakeasyBase {
+    /**
+     * Activation list.
+     */
     activationResponse?: shared.ActivationResponse;
     contentType: string;
+    /**
+     * No authorization token was found.
+     */
     error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetResumeProcessesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETResumeProcessesActionEnum {
     ResumeProcesses = "ResumeProcesses"
 }
-export declare enum GetResumeProcessesVersionEnum {
+export declare enum GETResumeProcessesVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class GetResumeProcessesQueryParams extends SpeakeasyBase {
-    action: GetResumeProcessesActionEnum;
+export declare class GETResumeProcessesRequest extends SpeakeasyBase {
+    action: GETResumeProcessesActionEnum;
+    /**
+     * The name of the Auto Scaling group.
+     */
     autoScalingGroupName: string;
+    /**
+     * <p>One or more of the following processes:</p> <ul> <li> <p> <code>Launch</code> </p> </li> <li> <p> <code>Terminate</code> </p> </li> <li> <p> <code>AddToLoadBalancer</code> </p> </li> <li> <p> <code>AlarmNotification</code> </p> </li> <li> <p> <code>AZRebalance</code> </p> </li> <li> <p> <code>HealthCheck</code> </p> </li> <li> <p> <code>InstanceRefresh</code> </p> </li> <li> <p> <code>ReplaceUnhealthy</code> </p> </li> <li> <p> <code>ScheduledActions</code> </p> </li> </ul> <p>If you omit this property, all processes are specified.</p>
+     */
     scalingProcesses?: string[];
-    version: GetResumeProcessesVersionEnum;
-}
-export declare class GetResumeProcessesHeaders extends SpeakeasyBase {
+    version: GETResumeProcessesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetResumeProcessesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetResumeProcessesRequest extends SpeakeasyBase {
-    queryParams: GetResumeProcessesQueryParams;
-    headers: GetResumeProcessesHeaders;
-}
-export declare class GetResumeProcessesResponse extends SpeakeasyBase {
+export declare class GETResumeProcessesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

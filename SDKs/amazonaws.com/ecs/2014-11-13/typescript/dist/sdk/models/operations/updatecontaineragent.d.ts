@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateContainerAgentXAmzTargetEnum {
     AmazonEc2ContainerServiceV20141113UpdateContainerAgent = "AmazonEC2ContainerServiceV20141113.UpdateContainerAgent"
 }
-export declare class UpdateContainerAgentHeaders extends SpeakeasyBase {
+export declare class UpdateContainerAgentRequest extends SpeakeasyBase {
+    updateContainerAgentRequest: shared.UpdateContainerAgentRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,19 +15,40 @@ export declare class UpdateContainerAgentHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateContainerAgentXAmzTargetEnum;
 }
-export declare class UpdateContainerAgentRequest extends SpeakeasyBase {
-    headers: UpdateContainerAgentHeaders;
-    request: shared.UpdateContainerAgentRequest;
-}
 export declare class UpdateContainerAgentResponse extends SpeakeasyBase {
+    /**
+     * ClientException
+     */
     clientException?: any;
+    /**
+     * ClusterNotFoundException
+     */
     clusterNotFoundException?: any;
     contentType: string;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * MissingVersionException
+     */
     missingVersionException?: any;
+    /**
+     * NoUpdateAvailableException
+     */
     noUpdateAvailableException?: any;
-    serverException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServerException
+     */
+    serverException?: any;
+    /**
+     * Success
+     */
     updateContainerAgentResponse?: shared.UpdateContainerAgentResponse;
+    /**
+     * UpdateInProgressException
+     */
     updateInProgressException?: any;
 }

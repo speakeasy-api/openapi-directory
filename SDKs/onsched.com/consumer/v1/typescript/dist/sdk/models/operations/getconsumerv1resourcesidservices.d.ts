@@ -1,17 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetConsumerV1ResourcesIdServicesPathParams extends SpeakeasyBase {
-    id: number;
-}
-export declare class GetConsumerV1ResourcesIdServicesQueryParams extends SpeakeasyBase {
-    limit?: number;
-    offset?: number;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class GetConsumerV1ResourcesIdServicesRequest extends SpeakeasyBase {
-    pathParams: GetConsumerV1ResourcesIdServicesPathParams;
-    queryParams: GetConsumerV1ResourcesIdServicesQueryParams;
+    /**
+     * id of resource object
+     */
+    id: number;
+    /**
+     * Page limit default 20, max 100
+     */
+    limit?: number;
+    /**
+     * Starting row of page, default 0
+     */
+    offset?: number;
 }
 export declare class GetConsumerV1ResourcesIdServicesResponse extends SpeakeasyBase {
     contentType: string;
-    resourceServiceListViewModel?: Record<string, any>;
+    /**
+     * list of resource services
+     */
+    resourceServiceListViewModel?: shared.ResourceServiceListViewModel;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

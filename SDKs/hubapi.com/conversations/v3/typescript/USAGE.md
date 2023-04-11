@@ -1,23 +1,18 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { PostVisitorIdentificationV3TokensCreateGenerateTokenRequest, PostVisitorIdentificationV3TokensCreateGenerateTokenResponse } from "openapi/src/sdk/models/operations";
+import {
+  shared.IdentificationTokenGenerationRequest,
+  PostVisitorIdentificationV3TokensCreateGenerateTokenResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: PostVisitorIdentificationV3TokensCreateGenerateTokenRequest = {
-  security: {
-    hapikey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  },
-  request: {
-    email: "sit",
-    firstName: "voluptas",
-    lastName: "culpa",
-  },
+
+const req: shared.IdentificationTokenGenerationRequest = {
+  email: "Larue_Rau85@yahoo.com",
+  firstName: "Karley",
+  lastName: "Stamm",
 };
 
 sdk.generate.postVisitorIdentificationV3TokensCreateGenerateToken(req).then((res: PostVisitorIdentificationV3TokensCreateGenerateTokenResponse | AxiosError) => {

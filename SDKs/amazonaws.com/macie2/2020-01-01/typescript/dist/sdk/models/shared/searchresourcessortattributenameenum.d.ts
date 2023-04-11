@@ -1,3 +1,6 @@
+/**
+ * The property to sort the query results by. Valid values are:
+ */
 export declare enum SearchResourcesSortAttributeNameEnum {
     AccountId = "ACCOUNT_ID",
     ResourceName = "RESOURCE_NAME",

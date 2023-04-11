@@ -1,4 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
+/**
+ * Specify the editor UI language. Defaults to organization editor language.
+ */
 export declare enum GetEditorUrlLanguageEnum {
     En = "en",
     Et = "et",
@@ -6,70 +10,155 @@ export declare enum GetEditorUrlLanguageEnum {
     Sk = "sk",
     Ru = "ru"
 }
-export declare class GetEditorUrlQueryParams extends SpeakeasyBase {
+export declare class GetEditorUrlRequest extends SpeakeasyBase {
+    /**
+     * Data used to generate the PDF. This can be JSON encoded string or a public URL to your JSON file.
+     */
+    requestBody: Record<string, any>;
+    /**
+     * Specify the editor UI language. Defaults to organization editor language.
+     */
     language?: GetEditorUrlLanguageEnum;
+    /**
+     * Template unique identifier
+     */
     templateId: number;
 }
-export declare class GetEditorUrl200ApplicationJson extends SpeakeasyBase {
-    response?: string;
-}
-export declare enum GetEditorUrl401ApplicationJsonErrorEnum {
-    AuthenticationFailedRequestExpired = "Authentication failed: request expired",
-    AuthenticationFailedSignatureOrSecretMissing = "Authentication failed: signature or secret missing",
-    AuthenticationFailedWorkspaceMissing = "Authentication failed: workspace missing",
-    AuthenticationFailedKeyMissing = "Authentication failed: key missing",
-    AuthenticationFailedPropertyIssIssuerMissingInJwt = "Authentication failed: property 'iss' (issuer) missing in JWT",
-    AuthenticationFailedPropertySubSubjectMissingInJwt = "Authentication failed: property 'sub' (subject) missing in JWT",
-    AuthenticationFailedPropertyExpExpirationTimeMissingInJwt = "Authentication failed: property 'exp' (expiration time) missing in JWT",
-    AuthenticationFailedInvalidIssIssuer = "Authentication failed: invalid 'iss' (issuer)",
-    AuthenticationFailedIncorrectSignature = "Authentication failed: incorrect signature",
-    AuthenticationFailed = "Authentication failed"
-}
-export declare class GetEditorUrl401ApplicationJson extends SpeakeasyBase {
-    error?: GetEditorUrl401ApplicationJsonErrorEnum;
+/**
+ * Internal Server Error
+ */
+export declare class GetEditorUrl500ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error description
+     */
+    error?: string;
+    /**
+     * HTTP Error code
+     */
     status?: number;
 }
-export declare enum GetEditorUrl403ApplicationJsonErrorEnum {
-    YourAccountHasExceededTheMonthlyDocumentGenerationLimit = "Your account has exceeded the monthly document generation limit."
-}
-export declare class GetEditorUrl403ApplicationJson extends SpeakeasyBase {
-    error?: GetEditorUrl403ApplicationJsonErrorEnum;
-    status?: number;
-}
-export declare enum GetEditorUrl404ApplicationJsonErrorEnum {
-    EntityNotFound = "Entity not found",
-    ResourceNotFound = "Resource not found",
-    NoneOfTheTemplatesIsAvailableForTheWorkspace = "None of the templates is available for the workspace."
-}
-export declare class GetEditorUrl404ApplicationJson extends SpeakeasyBase {
-    error?: GetEditorUrl404ApplicationJsonErrorEnum;
-    status?: number;
-}
-export declare enum GetEditorUrl422ApplicationJsonErrorEnum {
-    UnableToParseJsonPleaseCheckFormatting = "Unable to parse JSON, please check formatting",
+/**
+ * Error description
+ */
+export declare enum GetEditorUrl422ApplicationJSONErrorEnum {
+    UnableToParseJSONPleaseCheckFormatting = "Unable to parse JSON, please check formatting",
     RequiredParameterMissing = "Required parameter missing",
     RequiredParameterMissingTemplateDefinitionNotDefined = "Required parameter missing: template definition not defined",
     RequiredParameterMissingTemplateNotDefined = "Required parameter missing: template not defined"
 }
-export declare class GetEditorUrl422ApplicationJson extends SpeakeasyBase {
-    error?: GetEditorUrl422ApplicationJsonErrorEnum;
+/**
+ * Unprocessable Entity
+ */
+export declare class GetEditorUrl422ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error description
+     */
+    error?: GetEditorUrl422ApplicationJSONErrorEnum;
+    /**
+     * HTTP Error code
+     */
     status?: number;
 }
-export declare class GetEditorUrl500ApplicationJson extends SpeakeasyBase {
-    error?: string;
+/**
+ * Error description
+ */
+export declare enum GetEditorUrl404ApplicationJSONErrorEnum {
+    EntityNotFound = "Entity not found",
+    ResourceNotFound = "Resource not found",
+    NoneOfTheTemplatesIsAvailableForTheWorkspace = "None of the templates is available for the workspace."
+}
+/**
+ * Not Found
+ */
+export declare class GetEditorUrl404ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error description
+     */
+    error?: GetEditorUrl404ApplicationJSONErrorEnum;
+    /**
+     * HTTP Error code
+     */
     status?: number;
 }
-export declare class GetEditorUrlRequest extends SpeakeasyBase {
-    queryParams: GetEditorUrlQueryParams;
-    request: Record<string, any>;
+/**
+ * Error description
+ */
+export declare enum GetEditorUrl403ApplicationJSONErrorEnum {
+    YourAccountHasExceededTheMonthlyDocumentGenerationLimit = "Your account has exceeded the monthly document generation limit."
+}
+/**
+ * Forbidden
+ */
+export declare class GetEditorUrl403ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error description
+     */
+    error?: GetEditorUrl403ApplicationJSONErrorEnum;
+    /**
+     * HTTP Error code
+     */
+    status?: number;
+}
+/**
+ * Error description
+ */
+export declare enum GetEditorUrl401ApplicationJSONErrorEnum {
+    AuthenticationFailedRequestExpired = "Authentication failed: request expired",
+    AuthenticationFailedSignatureOrSecretMissing = "Authentication failed: signature or secret missing",
+    AuthenticationFailedWorkspaceMissing = "Authentication failed: workspace missing",
+    AuthenticationFailedKeyMissing = "Authentication failed: key missing",
+    AuthenticationFailedPropertyIssIssuerMissingInJWT = "Authentication failed: property 'iss' (issuer) missing in JWT",
+    AuthenticationFailedPropertySubSubjectMissingInJWT = "Authentication failed: property 'sub' (subject) missing in JWT",
+    AuthenticationFailedPropertyExpExpirationTimeMissingInJWT = "Authentication failed: property 'exp' (expiration time) missing in JWT",
+    AuthenticationFailedInvalidIssIssuer = "Authentication failed: invalid 'iss' (issuer)",
+    AuthenticationFailedIncorrectSignature = "Authentication failed: incorrect signature",
+    AuthenticationFailed = "Authentication failed"
+}
+/**
+ * Unauthorized
+ */
+export declare class GetEditorUrl401ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error description
+     */
+    error?: GetEditorUrl401ApplicationJSONErrorEnum;
+    /**
+     * HTTP Error code
+     */
+    status?: number;
+}
+/**
+ * Returns an URL which you can use to redirect your user to the editor or use as iframe source
+ */
+export declare class GetEditorUrl200ApplicationJSON extends SpeakeasyBase {
+    response?: string;
 }
 export declare class GetEditorUrlResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getEditorUrl200ApplicationJSONObject?: GetEditorUrl200ApplicationJson;
-    getEditorUrl401ApplicationJSONObject?: GetEditorUrl401ApplicationJson;
-    getEditorUrl403ApplicationJSONObject?: GetEditorUrl403ApplicationJson;
-    getEditorUrl404ApplicationJSONObject?: GetEditorUrl404ApplicationJson;
-    getEditorUrl422ApplicationJSONObject?: GetEditorUrl422ApplicationJson;
-    getEditorUrl500ApplicationJSONObject?: GetEditorUrl500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Returns an URL which you can use to redirect your user to the editor or use as iframe source
+     */
+    getEditorUrl200ApplicationJSONObject?: GetEditorUrl200ApplicationJSON;
+    /**
+     * Unauthorized
+     */
+    getEditorUrl401ApplicationJSONObject?: GetEditorUrl401ApplicationJSON;
+    /**
+     * Forbidden
+     */
+    getEditorUrl403ApplicationJSONObject?: GetEditorUrl403ApplicationJSON;
+    /**
+     * Not Found
+     */
+    getEditorUrl404ApplicationJSONObject?: GetEditorUrl404ApplicationJSON;
+    /**
+     * Unprocessable Entity
+     */
+    getEditorUrl422ApplicationJSONObject?: GetEditorUrl422ApplicationJSON;
+    /**
+     * Internal Server Error
+     */
+    getEditorUrl500ApplicationJSONObject?: GetEditorUrl500ApplicationJSON;
 }

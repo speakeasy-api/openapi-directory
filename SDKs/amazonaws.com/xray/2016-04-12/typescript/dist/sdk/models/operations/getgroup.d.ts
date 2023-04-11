@@ -1,6 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetGroupHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetGroupRequestBody extends SpeakeasyBase {
+    /**
+     * The ARN of the group that was generated on creation.
+     */
+    groupARN?: string;
+    /**
+     * The case-sensitive name of the group.
+     */
+    groupName?: string;
+}
+export declare class GetGroupRequest extends SpeakeasyBase {
+    requestBody: GetGroupRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -9,18 +21,20 @@ export declare class GetGroupHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetGroupRequestBody extends SpeakeasyBase {
-    groupARN?: string;
-    groupName?: string;
-}
-export declare class GetGroupRequest extends SpeakeasyBase {
-    headers: GetGroupHeaders;
-    request: GetGroupRequestBody;
-}
 export declare class GetGroupResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getGroupResult?: shared.GetGroupResult;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottledException
+     */
     throttledException?: any;
 }

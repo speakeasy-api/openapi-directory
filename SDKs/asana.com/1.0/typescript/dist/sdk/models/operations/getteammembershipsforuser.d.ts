@@ -1,25 +1,62 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetTeamMembershipsForUserPathParams extends SpeakeasyBase {
-    userGid: string;
-}
-export declare class GetTeamMembershipsForUserQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetTeamMembershipsForUserRequest extends SpeakeasyBase {
+    /**
+     * Results per page.
+     *
+     * @remarks
+     * The number of objects to return per page. The value must be between 1 and 100.
+     */
     limit?: number;
+    /**
+     * Offset token.
+     *
+     * @remarks
+     * An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.
+     * 'Note: You can only pass in an offset that was returned to you via a previously paginated request.'
+     */
     offset?: string;
+    /**
+     * Defines fields to return.
+     *
+     * @remarks
+     * Some requests return *compact* representations of objects in order to conserve resources and complete the request more efficiently. Other times requests return more information than you may need. This option allows you to list the exact set of fields that the API should be sure to return for the objects. The field names should be provided as paths, described below.
+     * The id of included objects will always be returned, regardless of the field options.
+     */
     optFields?: string[];
+    /**
+     * Provides “pretty” output.
+     *
+     * @remarks
+     * Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
+     */
     optPretty?: boolean;
+    /**
+     * A string identifying a user. This can either be the string "me", an email, or the gid of a user.
+     */
+    userGid: string;
+    /**
+     * Globally unique identifier for the workspace.
+     */
     workspace: string;
 }
-export declare class GetTeamMembershipsForUser200ApplicationJson extends SpeakeasyBase {
+/**
+ * Successfully retrieved the requested users's memberships.
+ */
+export declare class GetTeamMembershipsForUser200ApplicationJSON extends SpeakeasyBase {
     data?: shared.TeamMembershipCompact[];
-}
-export declare class GetTeamMembershipsForUserRequest extends SpeakeasyBase {
-    pathParams: GetTeamMembershipsForUserPathParams;
-    queryParams: GetTeamMembershipsForUserQueryParams;
 }
 export declare class GetTeamMembershipsForUserResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * This usually occurs because of a missing or malformed parameter. Check the documentation and the syntax of your request and try again.
+     */
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    getTeamMembershipsForUser200ApplicationJSONObject?: GetTeamMembershipsForUser200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successfully retrieved the requested users's memberships.
+     */
+    getTeamMembershipsForUser200ApplicationJSONObject?: GetTeamMembershipsForUser200ApplicationJSON;
 }

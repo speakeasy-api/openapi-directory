@@ -1,9 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PostSearchVersionNumberGeometryFilterExtPathParams extends SpeakeasyBase {
-    ext: shared.ExtEnum;
-    versionNumber: number;
-}
+import { AxiosResponse } from "axios";
 export declare class PostSearchVersionNumberGeometryFilterExtRequestBodyGeometryList extends SpeakeasyBase {
     position?: string;
     radius?: number;
@@ -30,10 +27,18 @@ export declare class PostSearchVersionNumberGeometryFilterExtRequestBody extends
     poiList?: PostSearchVersionNumberGeometryFilterExtRequestBodyPoiList[];
 }
 export declare class PostSearchVersionNumberGeometryFilterExtRequest extends SpeakeasyBase {
-    pathParams: PostSearchVersionNumberGeometryFilterExtPathParams;
-    request?: PostSearchVersionNumberGeometryFilterExtRequestBody;
+    requestBody?: PostSearchVersionNumberGeometryFilterExtRequestBody;
+    /**
+     * Expected response format.
+     */
+    ext: shared.ExtEnum;
+    /**
+     * Service version number. The current value is 2.
+     */
+    versionNumber: shared.VersionNumberEnum;
 }
 export declare class PostSearchVersionNumberGeometryFilterExtResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,13 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class StoryIdCollaboratorsUseridDeletePathParams extends SpeakeasyBase {
-    id: string;
-    storyCollaboratorUserid: string;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class StoryIdCollaboratorsUseridDeleteRequest extends SpeakeasyBase {
-    pathParams: StoryIdCollaboratorsUseridDeletePathParams;
+    /**
+     * the id from the story object
+     */
+    id: string;
+    /**
+     * The presalytics userid (NOT the Id of the story_collaborator object)
+     */
+    storyCollaboratorUserid: string;
 }
 export declare class StoryIdCollaboratorsUseridDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    problemDetail?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad Request
+     */
+    problemDetail?: shared.ProblemDetail;
 }

@@ -1,18 +1,19 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetV1EmailFreeRequest, GetV1EmailFreeResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetV1EmailFreeRequest,
+  GetV1EmailFreeResponse,
+  GetV1EmailFreeFormatEnum,
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetV1EmailFreeRequest = {
-  queryParams: {
-    email: "sit",
-    format: "json",
-    key: "culpa",
-  },
+  email: "Larue_Rau85@yahoo.com",
+  format: GetV1EmailFreeFormatEnum.Xml,
+  key: "illum",
 };
 
 sdk.getV1EmailFree(req).then((res: GetV1EmailFreeResponse | AxiosError) => {

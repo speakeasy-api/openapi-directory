@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class DescribeLunaClientResponse extends SpeakeasyBase {
     certificate?: string;
     certificateFingerprint?: string;

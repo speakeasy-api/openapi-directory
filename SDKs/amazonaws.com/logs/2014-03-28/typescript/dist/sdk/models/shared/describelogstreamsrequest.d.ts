@@ -3,7 +3,8 @@ import { OrderByEnum } from "./orderbyenum";
 export declare class DescribeLogStreamsRequest extends SpeakeasyBase {
     descending?: boolean;
     limit?: number;
-    logGroupName: string;
+    logGroupIdentifier?: string;
+    logGroupName?: string;
     logStreamNamePrefix?: string;
     nextToken?: string;
     orderBy?: OrderByEnum;

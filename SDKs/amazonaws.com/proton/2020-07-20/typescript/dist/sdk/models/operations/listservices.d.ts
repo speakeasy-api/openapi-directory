@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListServicesQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListServicesXAmzTargetEnum {
     AwsProton20200720ListServices = "AwsProton20200720.ListServices"
 }
-export declare class ListServicesHeaders extends SpeakeasyBase {
+export declare class ListServicesRequest extends SpeakeasyBase {
+    listServicesInput: shared.ListServicesInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,18 +14,37 @@ export declare class ListServicesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: ListServicesXAmzTargetEnum;
-}
-export declare class ListServicesRequest extends SpeakeasyBase {
-    queryParams: ListServicesQueryParams;
-    headers: ListServicesHeaders;
-    request: shared.ListServicesInput;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class ListServicesResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * Success
+     */
     listServicesOutput?: shared.ListServicesOutput;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

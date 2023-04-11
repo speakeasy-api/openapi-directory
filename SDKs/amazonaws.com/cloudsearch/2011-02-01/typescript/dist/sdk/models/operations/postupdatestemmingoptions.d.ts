@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostUpdateStemmingOptionsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTUpdateStemmingOptionsActionEnum {
     UpdateStemmingOptions = "UpdateStemmingOptions"
 }
-export declare enum PostUpdateStemmingOptionsVersionEnum {
+export declare enum POSTUpdateStemmingOptionsVersionEnum {
     TwoThousandAndEleven0201 = "2011-02-01"
 }
-export declare class PostUpdateStemmingOptionsQueryParams extends SpeakeasyBase {
-    action: PostUpdateStemmingOptionsActionEnum;
-    version: PostUpdateStemmingOptionsVersionEnum;
-}
-export declare class PostUpdateStemmingOptionsHeaders extends SpeakeasyBase {
+export declare class POSTUpdateStemmingOptionsRequest extends SpeakeasyBase {
+    action: POSTUpdateStemmingOptionsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTUpdateStemmingOptionsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostUpdateStemmingOptionsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostUpdateStemmingOptionsRequest extends SpeakeasyBase {
-    queryParams: PostUpdateStemmingOptionsQueryParams;
-    headers: PostUpdateStemmingOptionsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostUpdateStemmingOptionsResponse extends SpeakeasyBase {
+export declare class POSTUpdateStemmingOptionsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

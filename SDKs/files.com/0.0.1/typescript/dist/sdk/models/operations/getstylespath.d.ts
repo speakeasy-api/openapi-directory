@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetStylesPathPathParams extends SpeakeasyBase {
-    path: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetStylesPathRequest extends SpeakeasyBase {
-    pathParams: GetStylesPathPathParams;
+    /**
+     * Style path.
+     */
+    path: string;
 }
 export declare class GetStylesPathResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The Styles object.
+     */
     styleEntity?: shared.StyleEntity;
 }

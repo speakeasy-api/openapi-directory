@@ -1,115 +1,170 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class MncerSecurity extends SpeakeasyBase {
+    apiKey: string;
+    clientId: string;
+}
 export declare class MncerRequestBodyCertificateParameters extends SpeakeasyBase {
+    /**
+     * ApplicationNumber
+     */
     udf1: string;
 }
+/**
+ * The format of the certificate in response.
+ */
 export declare enum MncerRequestBodyFormatEnum {
     Pdf = "pdf"
 }
+/**
+ * Request format
+ */
 export declare class MncerRequestBody extends SpeakeasyBase {
     certificateParameters?: MncerRequestBodyCertificateParameters;
-    consentArtifact?: any;
+    consentArtifact?: shared.ConsentArtifactSchema;
+    /**
+     * The format of the certificate in response.
+     */
     format: MncerRequestBodyFormatEnum;
+    /**
+     * A unique transaction id for this request in UUID format. It is used for tracking the request.
+     */
     txnId: string;
 }
-export declare class MncerSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
-    clientId: shared.SchemeClientId;
+export declare enum Mncer504ApplicationJSONErrorEnum {
+    GatewayTimeout = "gateway_timeout"
 }
-export declare enum Mncer400ApplicationJsonErrorEnum {
+export declare enum Mncer504ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
+}
+/**
+ * Gateway timeout
+ */
+export declare class Mncer504ApplicationJSON extends SpeakeasyBase {
+    error?: Mncer504ApplicationJSONErrorEnum;
+    errorDescription?: Mncer504ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Mncer503ApplicationJSONErrorEnum {
+    ServiceUnavailable = "service_unavailable"
+}
+export declare enum Mncer503ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
+}
+/**
+ * Service unavailable
+ */
+export declare class Mncer503ApplicationJSON extends SpeakeasyBase {
+    error?: Mncer503ApplicationJSONErrorEnum;
+    errorDescription?: Mncer503ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Mncer502ApplicationJSONErrorEnum {
+    BadGatewy = "bad_gatewy"
+}
+export declare enum Mncer502ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
+}
+/**
+ * Bad gateway
+ */
+export declare class Mncer502ApplicationJSON extends SpeakeasyBase {
+    error?: Mncer502ApplicationJSONErrorEnum;
+    errorDescription?: Mncer502ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Mncer500ApplicationJSONErrorEnum {
+    InternalServerError = "internal_server_error"
+}
+export declare enum Mncer500ApplicationJSONErrorDescriptionEnum {
+    InternalServerError = "Internal server error"
+}
+/**
+ * Internal server error
+ */
+export declare class Mncer500ApplicationJSON extends SpeakeasyBase {
+    error?: Mncer500ApplicationJSONErrorEnum;
+    errorDescription?: Mncer500ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Mncer404ApplicationJSONErrorEnum {
+    RecordNotFound = "record_not_found",
+    UrlNotFound = "url_not_found"
+}
+export declare enum Mncer404ApplicationJSONErrorDescriptionEnum {
+    NoRecordFound = "No record found",
+    YourAPIUrlOrPathIsIncorrect = "Your API url or path is incorrect"
+}
+/**
+ * No record found
+ */
+export declare class Mncer404ApplicationJSON extends SpeakeasyBase {
+    error?: Mncer404ApplicationJSONErrorEnum;
+    errorDescription?: Mncer404ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Mncer401ApplicationJSONErrorEnum {
+    InvalidAuthentication = "invalid_authentication",
+    InvalidAuthorization = "invalid_authorization"
+}
+export declare enum Mncer401ApplicationJSONErrorDescriptionEnum {
+    AuthenticationFailed = "Authentication failed",
+    YouAreNotAuthorizedToUseThisAPI = "You are not authorized to use this API"
+}
+/**
+ * Unauthorized access
+ */
+export declare class Mncer401ApplicationJSON extends SpeakeasyBase {
+    error?: Mncer401ApplicationJSONErrorEnum;
+    errorDescription?: Mncer401ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Mncer400ApplicationJSONErrorEnum {
     MissingParameter = "missing_parameter",
     InvalidParameter = "invalid_parameter",
     InvalidFormat = "invalid_format",
     InvalidTxnid = "invalid_txnid",
     InvalidConsentid = "invalid_consentid"
 }
-export declare enum Mncer400ApplicationJsonErrorDescriptionEnum {
+export declare enum Mncer400ApplicationJSONErrorDescriptionEnum {
     PleaseProvideAllMandatoryParameters = "Please provide all mandatory parameters",
     BadRequest = "Bad request",
     TheFormatParameterIsInvalid = "The format parameter is invalid",
-    TheTxnIdParameterMustBeInUuidFormat = "The txnId parameter must be in UUID format",
-    TheConsentIdParameterMustBeInUuidFormat = "The consentId parameter must be in UUID format"
+    TheTxnIdParameterMustBeInUUIDFormat = "The txnId parameter must be in UUID format",
+    TheConsentIdParameterMustBeInUUIDFormat = "The consentId parameter must be in UUID format"
 }
-export declare class Mncer400ApplicationJson extends SpeakeasyBase {
-    error?: Mncer400ApplicationJsonErrorEnum;
-    errorDescription?: Mncer400ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Mncer401ApplicationJsonErrorEnum {
-    InvalidAuthentication = "invalid_authentication",
-    InvalidAuthorization = "invalid_authorization"
-}
-export declare enum Mncer401ApplicationJsonErrorDescriptionEnum {
-    AuthenticationFailed = "Authentication failed",
-    YouAreNotAuthorizedToUseThisApi = "You are not authorized to use this API"
-}
-export declare class Mncer401ApplicationJson extends SpeakeasyBase {
-    error?: Mncer401ApplicationJsonErrorEnum;
-    errorDescription?: Mncer401ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Mncer404ApplicationJsonErrorEnum {
-    RecordNotFound = "record_not_found",
-    UrlNotFound = "url_not_found"
-}
-export declare enum Mncer404ApplicationJsonErrorDescriptionEnum {
-    NoRecordFound = "No record found",
-    YourApiUrlOrPathIsIncorrect = "Your API url or path is incorrect"
-}
-export declare class Mncer404ApplicationJson extends SpeakeasyBase {
-    error?: Mncer404ApplicationJsonErrorEnum;
-    errorDescription?: Mncer404ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Mncer500ApplicationJsonErrorEnum {
-    InternalServerError = "internal_server_error"
-}
-export declare enum Mncer500ApplicationJsonErrorDescriptionEnum {
-    InternalServerError = "Internal server error"
-}
-export declare class Mncer500ApplicationJson extends SpeakeasyBase {
-    error?: Mncer500ApplicationJsonErrorEnum;
-    errorDescription?: Mncer500ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Mncer502ApplicationJsonErrorEnum {
-    BadGatewy = "bad_gatewy"
-}
-export declare enum Mncer502ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
-}
-export declare class Mncer502ApplicationJson extends SpeakeasyBase {
-    error?: Mncer502ApplicationJsonErrorEnum;
-    errorDescription?: Mncer502ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Mncer503ApplicationJsonErrorEnum {
-    ServiceUnavailable = "service_unavailable"
-}
-export declare enum Mncer503ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
-}
-export declare class Mncer503ApplicationJson extends SpeakeasyBase {
-    error?: Mncer503ApplicationJsonErrorEnum;
-    errorDescription?: Mncer503ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Mncer504ApplicationJsonErrorEnum {
-    GatewayTimeout = "gateway_timeout"
-}
-export declare enum Mncer504ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
-}
-export declare class Mncer504ApplicationJson extends SpeakeasyBase {
-    error?: Mncer504ApplicationJsonErrorEnum;
-    errorDescription?: Mncer504ApplicationJsonErrorDescriptionEnum;
-}
-export declare class MncerRequest extends SpeakeasyBase {
-    request?: MncerRequestBody;
-    security: MncerSecurity;
+/**
+ * Bad request
+ */
+export declare class Mncer400ApplicationJSON extends SpeakeasyBase {
+    error?: Mncer400ApplicationJSONErrorEnum;
+    errorDescription?: Mncer400ApplicationJSONErrorDescriptionEnum;
 }
 export declare class MncerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    mncer400ApplicationJSONObject?: Mncer400ApplicationJson;
-    mncer401ApplicationJSONObject?: Mncer401ApplicationJson;
-    mncer404ApplicationJSONObject?: Mncer404ApplicationJson;
-    mncer500ApplicationJSONObject?: Mncer500ApplicationJson;
-    mncer502ApplicationJSONObject?: Mncer502ApplicationJson;
-    mncer503ApplicationJSONObject?: Mncer503ApplicationJson;
-    mncer504ApplicationJSONObject?: Mncer504ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad request
+     */
+    mncer400ApplicationJSONObject?: Mncer400ApplicationJSON;
+    /**
+     * Unauthorized access
+     */
+    mncer401ApplicationJSONObject?: Mncer401ApplicationJSON;
+    /**
+     * No record found
+     */
+    mncer404ApplicationJSONObject?: Mncer404ApplicationJSON;
+    /**
+     * Internal server error
+     */
+    mncer500ApplicationJSONObject?: Mncer500ApplicationJSON;
+    /**
+     * Bad gateway
+     */
+    mncer502ApplicationJSONObject?: Mncer502ApplicationJSON;
+    /**
+     * Service unavailable
+     */
+    mncer503ApplicationJSONObject?: Mncer503ApplicationJSON;
+    /**
+     * Gateway timeout
+     */
+    mncer504ApplicationJSONObject?: Mncer504ApplicationJSON;
 }

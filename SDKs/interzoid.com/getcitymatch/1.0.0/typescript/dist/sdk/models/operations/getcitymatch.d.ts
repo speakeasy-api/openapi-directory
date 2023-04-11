@@ -1,18 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetcitymatchQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetcitymatchRequest extends SpeakeasyBase {
+    /**
+     * City name from which to generate similarity key
+     */
     city: string;
+    /**
+     * Your Interzoid license API key. Register at www.interzoid.com/register
+     */
     license: string;
 }
-export declare class Getcitymatch200ApplicationJson extends SpeakeasyBase {
+/**
+ * Generated similarity key for city name data
+ */
+export declare class Getcitymatch200ApplicationJSON extends SpeakeasyBase {
     code?: string;
     credits?: string;
     simkey?: string;
 }
-export declare class GetcitymatchRequest extends SpeakeasyBase {
-    queryParams: GetcitymatchQueryParams;
-}
 export declare class GetcitymatchResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getcitymatch200ApplicationJSONObject?: Getcitymatch200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Generated similarity key for city name data
+     */
+    getcitymatch200ApplicationJSONObject?: Getcitymatch200ApplicationJSON;
 }

@@ -1,0 +1,34 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class PutPromotionsIdJsonRequest extends SpeakeasyBase {
+    /**
+     * Promotion parameters.
+     */
+    promotionEdit: shared.PromotionEdit;
+    /**
+     * API OAuth token.
+     */
+    authtoken: string;
+    /**
+     * Id of the Promotion
+     */
+    id: number;
+    /**
+     * API OAuth login.
+     */
+    login: string;
+}
+export declare class PutPromotionsIdJsonResponse extends SpeakeasyBase {
+    contentType: string;
+    /**
+     * Promotion Not Found.
+     */
+    notFound?: shared.NotFound;
+    /**
+     * OK
+     */
+    promotion?: shared.Promotion;
+    statusCode: number;
+    rawResponse?: AxiosResponse;
+}

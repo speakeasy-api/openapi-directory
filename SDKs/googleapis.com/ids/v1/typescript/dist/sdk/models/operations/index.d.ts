@@ -1,6 +1,7 @@
 export * from "./idsprojectslocationsendpointscreate";
 export * from "./idsprojectslocationsendpointsgetiampolicy";
 export * from "./idsprojectslocationsendpointslist";
+export * from "./idsprojectslocationsendpointspatch";
 export * from "./idsprojectslocationsendpointssetiampolicy";
 export * from "./idsprojectslocationsendpointstestiampermissions";
 export * from "./idsprojectslocationslist";

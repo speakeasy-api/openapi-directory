@@ -5,10 +5,10 @@ export declare enum DataSourceTypeEnum {
     BrocadeSwitchDataSource = "BrocadeSwitchDataSource",
     JuniperSwitchDataSource = "JuniperSwitchDataSource",
     VCenterDataSource = "VCenterDataSource",
-    NsxvManagerDataSource = "NSXVManagerDataSource",
-    UcsManagerDataSource = "UCSManagerDataSource",
-    HpvcManagerDataSource = "HPVCManagerDataSource",
-    HpOneViewDataSource = "HPOneViewDataSource",
+    NSXVManagerDataSource = "NSXVManagerDataSource",
+    UCSManagerDataSource = "UCSManagerDataSource",
+    HPVCManagerDataSource = "HPVCManagerDataSource",
+    HPOneViewDataSource = "HPOneViewDataSource",
     PanFirewallDataSource = "PanFirewallDataSource",
     CheckpointFirewallDataSource = "CheckpointFirewallDataSource"
 }

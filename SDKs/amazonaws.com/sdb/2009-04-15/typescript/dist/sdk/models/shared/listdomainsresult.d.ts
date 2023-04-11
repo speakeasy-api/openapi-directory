@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class ListDomainsResult extends SpeakeasyBase {
-    domainNames?: Record<string, any>[];
+    domainNames?: string[];
     nextToken?: string;
 }

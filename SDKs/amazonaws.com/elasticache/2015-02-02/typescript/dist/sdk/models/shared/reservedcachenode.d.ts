@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { RecurringChargeList } from "./recurringchargelist";
 /**
  * Represents the output of a <code>PurchaseReservedCacheNodesOffering</code> operation.
-**/
+ */
 export declare class ReservedCacheNode extends SpeakeasyBase {
     cacheNodeCount?: number;
     cacheNodeType?: string;

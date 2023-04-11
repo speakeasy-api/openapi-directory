@@ -1,0 +1,34 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { Fields1 } from "./fields1";
+import { Self } from "./self";
+export declare class PaymentDetailsResponse extends SpeakeasyBase {
+    connectorResponses: string;
+    showConnectorResponses: boolean;
+    allowInstallments: boolean;
+    allowIssuer: boolean;
+    allowNotification: boolean;
+    connector: string;
+    connectorResponse: string;
+    currencyCode: string;
+    description: string;
+    fields: Fields1[];
+    group: string;
+    id: string;
+    installments: number;
+    installmentsInterestRate: number;
+    installmentsValue: number;
+    isAvailable: boolean;
+    isCustom: boolean;
+    merchantName: string;
+    paymentSystem: number;
+    paymentSystemName: string;
+    provider: string;
+    referenceValue: number;
+    returnCode: string;
+    returnMessage: string;
+    self: Self;
+    sheets: string;
+    status: string;
+    tid: string;
+    value: number;
+}

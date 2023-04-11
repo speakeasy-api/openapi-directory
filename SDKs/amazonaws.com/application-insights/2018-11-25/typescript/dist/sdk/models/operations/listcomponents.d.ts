@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListComponentsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListComponentsXAmzTargetEnum {
     Ec2WindowsBarleyServiceListComponents = "EC2WindowsBarleyService.ListComponents"
 }
-export declare class ListComponentsHeaders extends SpeakeasyBase {
+export declare class ListComponentsRequest extends SpeakeasyBase {
+    listComponentsRequest: shared.ListComponentsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,16 +23,24 @@ export declare class ListComponentsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListComponentsXAmzTargetEnum;
 }
-export declare class ListComponentsRequest extends SpeakeasyBase {
-    queryParams: ListComponentsQueryParams;
-    headers: ListComponentsHeaders;
-    request: shared.ListComponentsRequest;
-}
 export declare class ListComponentsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * Success
+     */
     listComponentsResponse?: shared.ListComponentsResponse;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

@@ -1,21 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class EobsReadPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class EobsReadQueryParams extends SpeakeasyBase {
-    doctor?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class EobsReadSecurity extends SpeakeasyBase {
-    drchronoOauth2: shared.SchemeDrchronoOauth2;
+    drchronoOauth2: string;
 }
 export declare class EobsReadRequest extends SpeakeasyBase {
-    pathParams: EobsReadPathParams;
-    queryParams: EobsReadQueryParams;
-    security: EobsReadSecurity;
+    doctor?: number;
+    id: string;
 }
 export declare class EobsReadResponse extends SpeakeasyBase {
     contentType: string;
-    eobObject?: shared.EobObject;
+    /**
+     * OK
+     */
+    eobObject?: shared.EOBObject;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

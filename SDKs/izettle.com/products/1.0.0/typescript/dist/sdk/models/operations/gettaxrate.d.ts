@@ -1,18 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetTaxRatePathParams extends SpeakeasyBase {
-    taxRateUuid: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetTaxRateSecurity extends SpeakeasyBase {
-    zettleApiKey?: shared.SchemeZettleApiKey;
-    zettleOauth?: shared.SchemeZettleOauth;
+    zettleOauth: string;
 }
 export declare class GetTaxRateRequest extends SpeakeasyBase {
-    pathParams: GetTaxRatePathParams;
-    security: GetTaxRateSecurity;
+    taxRateUuid: string;
 }
 export declare class GetTaxRateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Single tax rate
+     */
     taxRate?: shared.TaxRate;
 }

@@ -1,11 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ResourceLocation } from "./resourcelocation";
-import { OperationTypeEnum } from "./operationtypeenum";
-import { ResourceTypeEnum } from "./resourcetypeenum";
 import { OperationStatusEnum } from "./operationstatusenum";
+import { OperationTypeEnum } from "./operationtypeenum";
+import { ResourceLocation } from "./resourcelocation";
+import { ResourceTypeEnum } from "./resourcetypeenum";
 /**
  * Describes the API operation.
-**/
+ */
 export declare class Operation extends SpeakeasyBase {
     createdAt?: Date;
     errorCode?: string;

@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Operations available to regular developers
+ */
 export declare class PayrollAu {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,129 +12,134 @@ export declare class PayrollAu {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createEmployee - Creates a payroll employee
-    **/
-    createEmployee(req: operations.CreateEmployeeRequest, config?: AxiosRequestConfig): Promise<operations.CreateEmployeeResponse>;
+     * Creates a payroll employee
+     */
+    createEmployee(req: operations.CreateEmployeeRequest, security: operations.CreateEmployeeSecurity, config?: AxiosRequestConfig): Promise<operations.CreateEmployeeResponse>;
     /**
-     * createLeaveApplication - Creates a leave application
-    **/
-    createLeaveApplication(req: operations.CreateLeaveApplicationRequest, config?: AxiosRequestConfig): Promise<operations.CreateLeaveApplicationResponse>;
+     * Creates a leave application
+     */
+    createLeaveApplication(req: operations.CreateLeaveApplicationRequest, security: operations.CreateLeaveApplicationSecurity, config?: AxiosRequestConfig): Promise<operations.CreateLeaveApplicationResponse>;
     /**
-     * createPayItem - Creates a pay item
-    **/
-    createPayItem(req: operations.CreatePayItemRequest, config?: AxiosRequestConfig): Promise<operations.CreatePayItemResponse>;
+     * Creates a pay item
+     */
+    createPayItem(req: operations.CreatePayItemRequest, security: operations.CreatePayItemSecurity, config?: AxiosRequestConfig): Promise<operations.CreatePayItemResponse>;
     /**
-     * createPayRun - Creates a pay run
-    **/
-    createPayRun(req: operations.CreatePayRunRequest, config?: AxiosRequestConfig): Promise<operations.CreatePayRunResponse>;
+     * Creates a pay run
+     */
+    createPayRun(req: operations.CreatePayRunRequest, security: operations.CreatePayRunSecurity, config?: AxiosRequestConfig): Promise<operations.CreatePayRunResponse>;
     /**
-     * createPayrollCalendar - Creates a Payroll Calendar
-    **/
-    createPayrollCalendar(req: operations.CreatePayrollCalendarRequest, config?: AxiosRequestConfig): Promise<operations.CreatePayrollCalendarResponse>;
+     * Creates a Payroll Calendar
+     */
+    createPayrollCalendar(req: operations.CreatePayrollCalendarRequest, security: operations.CreatePayrollCalendarSecurity, config?: AxiosRequestConfig): Promise<operations.CreatePayrollCalendarResponse>;
     /**
-     * createSuperfund - Creates a superfund
-    **/
-    createSuperfund(req: operations.CreateSuperfundRequest, config?: AxiosRequestConfig): Promise<operations.CreateSuperfundResponse>;
+     * Creates a superfund
+     */
+    createSuperfund(req: operations.CreateSuperfundRequest, security: operations.CreateSuperfundSecurity, config?: AxiosRequestConfig): Promise<operations.CreateSuperfundResponse>;
     /**
-     * createTimesheet - Creates a timesheet
-    **/
-    createTimesheet(req: operations.CreateTimesheetRequest, config?: AxiosRequestConfig): Promise<operations.CreateTimesheetResponse>;
+     * Creates a timesheet
+     */
+    createTimesheet(req: operations.CreateTimesheetRequest, security: operations.CreateTimesheetSecurity, config?: AxiosRequestConfig): Promise<operations.CreateTimesheetResponse>;
     /**
-     * getEmployee - Retrieves an employee's detail by unique employee id
-    **/
-    getEmployee(req: operations.GetEmployeeRequest, config?: AxiosRequestConfig): Promise<operations.GetEmployeeResponse>;
+     * Retrieves an employee's detail by unique employee id
+     */
+    getEmployee(req: operations.GetEmployeeRequest, security: operations.GetEmployeeSecurity, config?: AxiosRequestConfig): Promise<operations.GetEmployeeResponse>;
     /**
-     * getEmployees - Searches payroll employees
-    **/
-    getEmployees(req: operations.GetEmployeesRequest, config?: AxiosRequestConfig): Promise<operations.GetEmployeesResponse>;
+     * Searches payroll employees
+     */
+    getEmployees(req: operations.GetEmployeesRequest, security: operations.GetEmployeesSecurity, config?: AxiosRequestConfig): Promise<operations.GetEmployeesResponse>;
     /**
-     * getLeaveApplication - Retrieves a leave application by a unique leave application id
-    **/
-    getLeaveApplication(req: operations.GetLeaveApplicationRequest, config?: AxiosRequestConfig): Promise<operations.GetLeaveApplicationResponse>;
+     * Retrieves a leave application by a unique leave application id
+     */
+    getLeaveApplication(req: operations.GetLeaveApplicationRequest, security: operations.GetLeaveApplicationSecurity, config?: AxiosRequestConfig): Promise<operations.GetLeaveApplicationResponse>;
     /**
-     * getLeaveApplications - Retrieves leave applications
-    **/
-    getLeaveApplications(req: operations.GetLeaveApplicationsRequest, config?: AxiosRequestConfig): Promise<operations.GetLeaveApplicationsResponse>;
+     * Retrieves leave applications
+     */
+    getLeaveApplications(req: operations.GetLeaveApplicationsRequest, security: operations.GetLeaveApplicationsSecurity, config?: AxiosRequestConfig): Promise<operations.GetLeaveApplicationsResponse>;
     /**
-     * getPayItems - Retrieves pay items
-    **/
-    getPayItems(req: operations.GetPayItemsRequest, config?: AxiosRequestConfig): Promise<operations.GetPayItemsResponse>;
+     * Retrieves pay items
+     */
+    getPayItems(req: operations.GetPayItemsRequest, security: operations.GetPayItemsSecurity, config?: AxiosRequestConfig): Promise<operations.GetPayItemsResponse>;
     /**
-     * getPayRun - Retrieves a pay run by using a unique pay run id
-    **/
-    getPayRun(req: operations.GetPayRunRequest, config?: AxiosRequestConfig): Promise<operations.GetPayRunResponse>;
+     * Retrieves a pay run by using a unique pay run id
+     */
+    getPayRun(req: operations.GetPayRunRequest, security: operations.GetPayRunSecurity, config?: AxiosRequestConfig): Promise<operations.GetPayRunResponse>;
     /**
-     * getPayRuns - Retrieves pay runs
-    **/
-    getPayRuns(req: operations.GetPayRunsRequest, config?: AxiosRequestConfig): Promise<operations.GetPayRunsResponse>;
+     * Retrieves pay runs
+     */
+    getPayRuns(req: operations.GetPayRunsRequest, security: operations.GetPayRunsSecurity, config?: AxiosRequestConfig): Promise<operations.GetPayRunsResponse>;
     /**
-     * getPayrollCalendar - Retrieves payroll calendar by using a unique payroll calendar ID
-    **/
-    getPayrollCalendar(req: operations.GetPayrollCalendarRequest, config?: AxiosRequestConfig): Promise<operations.GetPayrollCalendarResponse>;
+     * Retrieves payroll calendar by using a unique payroll calendar ID
+     */
+    getPayrollCalendar(req: operations.GetPayrollCalendarRequest, security: operations.GetPayrollCalendarSecurity, config?: AxiosRequestConfig): Promise<operations.GetPayrollCalendarResponse>;
     /**
-     * getPayrollCalendars - Retrieves payroll calendars
-    **/
-    getPayrollCalendars(req: operations.GetPayrollCalendarsRequest, config?: AxiosRequestConfig): Promise<operations.GetPayrollCalendarsResponse>;
+     * Retrieves payroll calendars
+     */
+    getPayrollCalendars(req: operations.GetPayrollCalendarsRequest, security: operations.GetPayrollCalendarsSecurity, config?: AxiosRequestConfig): Promise<operations.GetPayrollCalendarsResponse>;
     /**
-     * getPayslip - Retrieves for a payslip by a unique payslip id
-    **/
-    getPayslip(req: operations.GetPayslipRequest, config?: AxiosRequestConfig): Promise<operations.GetPayslipResponse>;
+     * Retrieves for a payslip by a unique payslip id
+     */
+    getPayslip(req: operations.GetPayslipRequest, security: operations.GetPayslipSecurity, config?: AxiosRequestConfig): Promise<operations.GetPayslipResponse>;
     /**
-     * getSettings - Retrieves payroll settings
-    **/
-    getSettings(req: operations.GetSettingsRequest, config?: AxiosRequestConfig): Promise<operations.GetSettingsResponse>;
+     * Retrieves payroll settings
+     */
+    getSettings(req: operations.GetSettingsRequest, security: operations.GetSettingsSecurity, config?: AxiosRequestConfig): Promise<operations.GetSettingsResponse>;
     /**
-     * getSuperfund - Retrieves a superfund by using a unique superfund ID
-    **/
-    getSuperfund(req: operations.GetSuperfundRequest, config?: AxiosRequestConfig): Promise<operations.GetSuperfundResponse>;
+     * Retrieves a superfund by using a unique superfund ID
+     */
+    getSuperfund(req: operations.GetSuperfundRequest, security: operations.GetSuperfundSecurity, config?: AxiosRequestConfig): Promise<operations.GetSuperfundResponse>;
     /**
-     * getSuperfundProducts - Retrieves superfund products
-    **/
-    getSuperfundProducts(req: operations.GetSuperfundProductsRequest, config?: AxiosRequestConfig): Promise<operations.GetSuperfundProductsResponse>;
+     * Retrieves superfund products
+     */
+    getSuperfundProducts(req: operations.GetSuperfundProductsRequest, security: operations.GetSuperfundProductsSecurity, config?: AxiosRequestConfig): Promise<operations.GetSuperfundProductsResponse>;
     /**
-     * getSuperfunds - Retrieves superfunds
-    **/
-    getSuperfunds(req: operations.GetSuperfundsRequest, config?: AxiosRequestConfig): Promise<operations.GetSuperfundsResponse>;
+     * Retrieves superfunds
+     */
+    getSuperfunds(req: operations.GetSuperfundsRequest, security: operations.GetSuperfundsSecurity, config?: AxiosRequestConfig): Promise<operations.GetSuperfundsResponse>;
     /**
-     * getTimesheet - Retrieves a timesheet by using a unique timesheet id
-    **/
-    getTimesheet(req: operations.GetTimesheetRequest, config?: AxiosRequestConfig): Promise<operations.GetTimesheetResponse>;
+     * Retrieves a timesheet by using a unique timesheet id
+     */
+    getTimesheet(req: operations.GetTimesheetRequest, security: operations.GetTimesheetSecurity, config?: AxiosRequestConfig): Promise<operations.GetTimesheetResponse>;
     /**
-     * getTimesheets - Retrieves timesheets
-    **/
-    getTimesheets(req: operations.GetTimesheetsRequest, config?: AxiosRequestConfig): Promise<operations.GetTimesheetsResponse>;
+     * Retrieves timesheets
+     */
+    getTimesheets(req: operations.GetTimesheetsRequest, security: operations.GetTimesheetsSecurity, config?: AxiosRequestConfig): Promise<operations.GetTimesheetsResponse>;
     /**
-     * updateEmployee - Updates an employee's detail
+     * Updates an employee's detail
      *
+     * @remarks
      * Update properties on a single employee
-    **/
-    updateEmployee(req: operations.UpdateEmployeeRequest, config?: AxiosRequestConfig): Promise<operations.UpdateEmployeeResponse>;
+     */
+    updateEmployee(req: operations.UpdateEmployeeRequest, security: operations.UpdateEmployeeSecurity, config?: AxiosRequestConfig): Promise<operations.UpdateEmployeeResponse>;
     /**
-     * updateLeaveApplication - Updates a specific leave application
-    **/
-    updateLeaveApplication(req: operations.UpdateLeaveApplicationRequest, config?: AxiosRequestConfig): Promise<operations.UpdateLeaveApplicationResponse>;
+     * Updates a specific leave application
+     */
+    updateLeaveApplication(req: operations.UpdateLeaveApplicationRequest, security: operations.UpdateLeaveApplicationSecurity, config?: AxiosRequestConfig): Promise<operations.UpdateLeaveApplicationResponse>;
     /**
-     * updatePayRun - Updates a pay run
+     * Updates a pay run
      *
+     * @remarks
      * Update properties on a single PayRun
-    **/
-    updatePayRun(req: operations.UpdatePayRunRequest, config?: AxiosRequestConfig): Promise<operations.UpdatePayRunResponse>;
+     */
+    updatePayRun(req: operations.UpdatePayRunRequest, security: operations.UpdatePayRunSecurity, config?: AxiosRequestConfig): Promise<operations.UpdatePayRunResponse>;
     /**
-     * updatePayslip - Updates a payslip
+     * Updates a payslip
      *
+     * @remarks
      * Update lines on a single payslips
-    **/
-    updatePayslip(req: operations.UpdatePayslipRequest, config?: AxiosRequestConfig): Promise<operations.UpdatePayslipResponse>;
+     */
+    updatePayslip(req: operations.UpdatePayslipRequest, security: operations.UpdatePayslipSecurity, config?: AxiosRequestConfig): Promise<operations.UpdatePayslipResponse>;
     /**
-     * updateSuperfund - Updates a superfund
+     * Updates a superfund
      *
+     * @remarks
      * Update properties on a single Superfund
-    **/
-    updateSuperfund(req: operations.UpdateSuperfundRequest, config?: AxiosRequestConfig): Promise<operations.UpdateSuperfundResponse>;
+     */
+    updateSuperfund(req: operations.UpdateSuperfundRequest, security: operations.UpdateSuperfundSecurity, config?: AxiosRequestConfig): Promise<operations.UpdateSuperfundResponse>;
     /**
-     * updateTimesheet - Updates a timesheet
+     * Updates a timesheet
      *
+     * @remarks
      * Update properties on a single timesheet
-    **/
-    updateTimesheet(req: operations.UpdateTimesheetRequest, config?: AxiosRequestConfig): Promise<operations.UpdateTimesheetResponse>;
+     */
+    updateTimesheet(req: operations.UpdateTimesheetRequest, security: operations.UpdateTimesheetSecurity, config?: AxiosRequestConfig): Promise<operations.UpdateTimesheetResponse>;
 }

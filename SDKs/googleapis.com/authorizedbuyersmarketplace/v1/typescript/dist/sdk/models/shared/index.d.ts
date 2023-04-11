@@ -44,7 +44,6 @@ export * from "./proposal";
 export * from "./publisherprofile";
 export * from "./publisherprofilemobileapplication";
 export * from "./rtbmetrics";
-export * from "./security";
 export * from "./sendrfprequest";
 export * from "./subscribeclientsrequest";
 export * from "./technologytargeting";

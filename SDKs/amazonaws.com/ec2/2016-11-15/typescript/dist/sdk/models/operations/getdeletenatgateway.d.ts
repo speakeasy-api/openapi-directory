@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteNatGatewayActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteNatGatewayActionEnum {
     DeleteNatGateway = "DeleteNatGateway"
 }
-export declare enum GetDeleteNatGatewayVersionEnum {
+export declare enum GETDeleteNatGatewayVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetDeleteNatGatewayQueryParams extends SpeakeasyBase {
-    action: GetDeleteNatGatewayActionEnum;
+export declare class GETDeleteNatGatewayRequest extends SpeakeasyBase {
+    action: GETDeleteNatGatewayActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
+    /**
+     * The ID of the NAT gateway.
+     */
     natGatewayId: string;
-    version: GetDeleteNatGatewayVersionEnum;
-}
-export declare class GetDeleteNatGatewayHeaders extends SpeakeasyBase {
+    version: GETDeleteNatGatewayVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetDeleteNatGatewayHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteNatGatewayRequest extends SpeakeasyBase {
-    queryParams: GetDeleteNatGatewayQueryParams;
-    headers: GetDeleteNatGatewayHeaders;
-}
-export declare class GetDeleteNatGatewayResponse extends SpeakeasyBase {
+export declare class GETDeleteNatGatewayResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

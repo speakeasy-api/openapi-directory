@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class StatusQueryParams extends SpeakeasyBase {
-    msgId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class StatusRequest extends SpeakeasyBase {
-    queryParams: StatusQueryParams;
+    /**
+     * The ID from the SMS.
+     */
+    msgId: string;
 }
 export declare class StatusResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
     status200TextPlainString?: string;
 }

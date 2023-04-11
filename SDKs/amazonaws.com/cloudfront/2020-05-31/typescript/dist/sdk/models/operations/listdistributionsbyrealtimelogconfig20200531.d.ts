@@ -1,5 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ListDistributionsByRealtimeLogConfig20200531Headers extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListDistributionsByRealtimeLogConfig20200531RequestBody extends SpeakeasyBase {
+    /**
+     * Use this field when paginating results to indicate where to begin in your list of distributions. The response includes distributions in the list that occur after the marker. To get the next page of the list, set this field's value to the value of <code>NextMarker</code> from the current page's response.
+     */
+    marker?: string;
+    /**
+     * The maximum number of distributions that you want in the response.
+     */
+    maxItems?: string;
+    /**
+     * The Amazon Resource Name (ARN) of the real-time log configuration whose associated distributions you want to list.
+     */
+    realtimeLogConfigArn?: string;
+    /**
+     * The name of the real-time log configuration whose associated distributions you want to list.
+     */
+    realtimeLogConfigName?: string;
+}
+export declare class ListDistributionsByRealtimeLogConfig20200531Request extends SpeakeasyBase {
+    requestBody: Uint8Array;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -8,12 +28,9 @@ export declare class ListDistributionsByRealtimeLogConfig20200531Headers extends
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class ListDistributionsByRealtimeLogConfig20200531Request extends SpeakeasyBase {
-    headers: ListDistributionsByRealtimeLogConfig20200531Headers;
-    request: Uint8Array;
-}
 export declare class ListDistributionsByRealtimeLogConfig20200531Response extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeHsmConfigurationsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeHsmConfigurationsActionEnum {
     DescribeHsmConfigurations = "DescribeHsmConfigurations"
 }
-export declare enum PostDescribeHsmConfigurationsVersionEnum {
+export declare enum POSTDescribeHsmConfigurationsVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostDescribeHsmConfigurationsQueryParams extends SpeakeasyBase {
-    action: PostDescribeHsmConfigurationsActionEnum;
+export declare class POSTDescribeHsmConfigurationsRequest extends SpeakeasyBase {
+    action: POSTDescribeHsmConfigurationsActionEnum;
+    /**
+     * Pagination token
+     */
     marker?: string;
+    /**
+     * Pagination limit
+     */
     maxRecords?: string;
-    version: PostDescribeHsmConfigurationsVersionEnum;
-}
-export declare class PostDescribeHsmConfigurationsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeHsmConfigurationsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeHsmConfigurationsHeaders extends SpeakeasyBase 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeHsmConfigurationsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeHsmConfigurationsQueryParams;
-    headers: PostDescribeHsmConfigurationsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeHsmConfigurationsResponse extends SpeakeasyBase {
+export declare class POSTDescribeHsmConfigurationsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

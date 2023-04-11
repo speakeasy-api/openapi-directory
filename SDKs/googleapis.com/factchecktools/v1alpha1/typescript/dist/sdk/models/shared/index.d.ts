@@ -9,5 +9,4 @@ export * from "./googlefactcheckingfactchecktoolsv1alpha1claimreviewmarkuppage";
 export * from "./googlefactcheckingfactchecktoolsv1alpha1factcheckedclaimsearchresponse";
 export * from "./googlefactcheckingfactchecktoolsv1alpha1listclaimreviewmarkuppagesresponse";
 export * from "./googlefactcheckingfactchecktoolsv1alpha1publisher";
-export * from "./security";
 export * from "./xgafvenum";

@@ -1,22 +1,32 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class SearchperpackageSecurity extends SpeakeasyBase {
+    apiKey: string;
+}
+/**
+ * Whether the query is to be interpreted as a literal (`literal`) instead of as an RE2 regular expression (`regexp`). Literal searches are faster and do not require escaping special characters, regular expression searches are more powerful.
+ */
 export declare enum SearchperpackageMatchModeEnum {
     Literal = "literal",
     Regexp = "regexp"
 }
-export declare class SearchperpackageQueryParams extends SpeakeasyBase {
-    matchMode?: SearchperpackageMatchModeEnum;
-    query: string;
-}
-export declare class SearchperpackageSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
-}
 export declare class SearchperpackageRequest extends SpeakeasyBase {
-    queryParams: SearchperpackageQueryParams;
-    security: SearchperpackageSecurity;
+    /**
+     * Whether the query is to be interpreted as a literal (`literal`) instead of as an RE2 regular expression (`regexp`). Literal searches are faster and do not require escaping special characters, regular expression searches are more powerful.
+     */
+    matchMode?: SearchperpackageMatchModeEnum;
+    /**
+     * The search query, for example `who knows...` (literal) or `who knows\.\.\.` (regular expression). See https://codesearch.debian.net/faq for more details about which keywords are supported. The regular expression flavor is RE2, see https://github.com/google/re2/blob/master/doc/syntax.txt
+     */
+    query: string;
 }
 export declare class SearchperpackageResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * All search results
+     */
     packageSearchResults?: shared.PackageSearchResult[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

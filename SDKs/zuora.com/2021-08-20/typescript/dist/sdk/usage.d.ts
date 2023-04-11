@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Usage {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,31 +9,33 @@ export declare class Usage {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getUsage - Retrieve a usage record
+     * Retrieve a usage record
      *
+     * @remarks
      * This REST API reference describes how to retrieve usage details for an account. Usage data is returned in reverse chronological order.
      *
-    **/
-    getUsage(req: operations.GetUsageRequest, config?: AxiosRequestConfig): Promise<operations.GetUsageResponse>;
+     */
+    getUsage(req: operations.GETUsageRequest, config?: AxiosRequestConfig): Promise<operations.GETUsageResponse>;
     /**
-     * objectDeleteUsage - CRUD: Delete a usage record
-    **/
-    objectDeleteUsage(req: operations.ObjectDeleteUsageRequest, config?: AxiosRequestConfig): Promise<operations.ObjectDeleteUsageResponse>;
+     * CRUD: Delete a usage record
+     */
+    objectDELETEUsage(req: operations.ObjectDELETEUsageRequest, config?: AxiosRequestConfig): Promise<operations.ObjectDELETEUsageResponse>;
     /**
-     * objectGetUsage - CRUD: Retrieve a usage record
-    **/
-    objectGetUsage(req: operations.ObjectGetUsageRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGetUsageResponse>;
+     * CRUD: Retrieve a usage record
+     */
+    objectGETUsage(req: operations.ObjectGETUsageRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGETUsageResponse>;
     /**
-     * objectPostUsage - CRUD: Create a usage record
-    **/
-    objectPostUsage(req: operations.ObjectPostUsageRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPostUsageResponse>;
+     * CRUD: Create a usage record
+     */
+    objectPOSTUsage(req: operations.ObjectPOSTUsageRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPOSTUsageResponse>;
     /**
-     * objectPutUsage - CRUD: Update a usage record
-    **/
-    objectPutUsage(req: operations.ObjectPutUsageRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPutUsageResponse>;
+     * CRUD: Update a usage record
+     */
+    objectPUTUsage(req: operations.ObjectPUTUsageRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPUTUsageResponse>;
     /**
-     * postUsage - Upload a usage file
+     * Upload a usage file
      *
+     * @remarks
      * This REST API reference describes how to post or import usage data for one or more accounts in the CSV format. There are no path or query parameters. The data is uploaded using the HTTP multipart/form-data POST method and applied to the user's tenant.
      *
      * For a use case of this operation, see [Upload usage records](https://www.zuora.com/developer/api-guides/#Upload-usage-records).
@@ -61,6 +63,6 @@ export declare class Usage {
      * | CHARGE_ID       | Enter the charge number (not the charge name). You can see the charge ID, e.g., C-00000001, when you add your rate plan to your subscription and view your individual charges. If your Accounts can have multiple subscriptions and you do not want double or triple counting of usage, you must specify the specific Subscription or Charge ID in each usage record. This field is related to the Charge Number on the subscription rate plan.  <p>**Note:** The value of this column is optional, but the column header is required.</p>  | No      |
      * | DESCRIPTION     | Enter a description for the charge. | No       |
      *
-    **/
-    postUsage(req: operations.PostUsageRequest, config?: AxiosRequestConfig): Promise<operations.PostUsageResponse>;
+     */
+    postUsage(req: operations.POSTUsageRequest, config?: AxiosRequestConfig): Promise<operations.POSTUsageResponse>;
 }

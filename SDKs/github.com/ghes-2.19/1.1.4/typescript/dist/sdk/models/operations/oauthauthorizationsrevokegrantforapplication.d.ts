@@ -1,12 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class OauthAuthorizationsRevokeGrantForApplicationPathParams extends SpeakeasyBase {
-    accessToken: string;
-    clientId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class OauthAuthorizationsRevokeGrantForApplicationRequest extends SpeakeasyBase {
-    pathParams: OauthAuthorizationsRevokeGrantForApplicationPathParams;
+    accessToken: string;
+    /**
+     * The client ID of your GitHub app.
+     */
+    clientId: string;
 }
 export declare class OauthAuthorizationsRevokeGrantForApplicationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

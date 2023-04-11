@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ResourceCount } from "./resourcecount";
+/**
+ * Success
+ */
 export declare class GetDiscoveredResourceCountsResponse extends SpeakeasyBase {
     nextToken?: string;
     resourceCounts?: ResourceCount[];

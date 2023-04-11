@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Information about an Direct Connect location.
-**/
+ */
 export declare class Location extends SpeakeasyBase {
     availableMacSecPortSpeeds?: string[];
     availablePortSpeeds?: string[];

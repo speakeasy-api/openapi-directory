@@ -1,12 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListSuiteRunsQueryParams extends SpeakeasyBase {
-    maxResults?: number;
-    nextToken?: string;
-    suiteDefinitionId?: string;
-    suiteDefinitionVersion?: string;
-}
-export declare class ListSuiteRunsHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListSuiteRunsRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -14,15 +9,37 @@ export declare class ListSuiteRunsHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class ListSuiteRunsRequest extends SpeakeasyBase {
-    queryParams: ListSuiteRunsQueryParams;
-    headers: ListSuiteRunsHeaders;
+    /**
+     * The maximum number of results to return at once.
+     */
+    maxResults?: number;
+    /**
+     * A token to retrieve the next set of results.
+     */
+    nextToken?: string;
+    /**
+     * Lists the test suite runs of the specified test suite based on suite definition ID.
+     */
+    suiteDefinitionId?: string;
+    /**
+     * Must be passed along with <code>suiteDefinitionId</code>. Lists the test suite runs of the specified test suite based on suite definition version.
+     */
+    suiteDefinitionVersion?: string;
 }
 export declare class ListSuiteRunsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * Success
+     */
     listSuiteRunsResponse?: shared.ListSuiteRunsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

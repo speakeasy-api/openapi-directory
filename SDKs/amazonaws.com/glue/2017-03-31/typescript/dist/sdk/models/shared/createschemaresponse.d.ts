@@ -3,6 +3,9 @@ import { CompatibilityEnum } from "./compatibilityenum";
 import { DataFormatEnum } from "./dataformatenum";
 import { SchemaStatusEnum } from "./schemastatusenum";
 import { SchemaVersionStatusEnum } from "./schemaversionstatusenum";
+/**
+ * Success
+ */
 export declare class CreateSchemaResponse extends SpeakeasyBase {
     compatibility?: CompatibilityEnum;
     dataFormat?: DataFormatEnum;

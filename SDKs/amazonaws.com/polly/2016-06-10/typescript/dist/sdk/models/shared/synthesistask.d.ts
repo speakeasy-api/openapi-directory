@@ -8,7 +8,7 @@ import { TextTypeEnum } from "./texttypeenum";
 import { VoiceIdEnum } from "./voiceidenum";
 /**
  * SynthesisTask object that provides information about a speech synthesis task.
-**/
+ */
 export declare class SynthesisTask extends SpeakeasyBase {
     creationTime?: Date;
     engine?: EngineEnum;

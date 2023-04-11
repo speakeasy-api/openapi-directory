@@ -1,4 +1,4 @@
-export declare enum BgpStatusEnum {
+export declare enum BGPStatusEnum {
     Up = "up",
     Down = "down",
     Unknown = "unknown"

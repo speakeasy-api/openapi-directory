@@ -1,6 +1,6 @@
 export declare enum DeploymentTargetTypeEnum {
     InstanceTarget = "InstanceTarget",
     LambdaTarget = "LambdaTarget",
-    EcsTarget = "ECSTarget",
+    ECSTarget = "ECSTarget",
     CloudFormationTarget = "CloudFormationTarget"
 }

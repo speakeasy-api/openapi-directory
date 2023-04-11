@@ -1,7 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class InteractionsGetRestrictionsForAuthenticatedUserResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    interactionLimitResponse?: shared.InteractionLimitResponse;
+    rawResponse?: AxiosResponse;
+    /**
+     * Default response
+     */
+    interactionsGetRestrictionsForAuthenticatedUser200ApplicationJSONAnyOf?: any;
 }

@@ -13,5 +13,4 @@ export * from "./locationsembeddedobject";
 export * from "./locationshalresponse";
 export * from "./nexthref";
 export * from "./prevhref";
-export * from "./security";
 export * from "./selfhref";

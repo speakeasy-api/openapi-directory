@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The place action type.
+ */
 export declare enum PlaceActionTypeMetadataPlaceActionTypeEnum {
     PlaceActionTypeUnspecified = "PLACE_ACTION_TYPE_UNSPECIFIED",
     Appointment = "APPOINTMENT",
@@ -11,8 +14,14 @@ export declare enum PlaceActionTypeMetadataPlaceActionTypeEnum {
 }
 /**
  * Metadata for supported place action types.
-**/
+ */
 export declare class PlaceActionTypeMetadata extends SpeakeasyBase {
+    /**
+     * The localized display name for the attribute, if available; otherwise, the English display name.
+     */
     displayName?: string;
+    /**
+     * The place action type.
+     */
     placeActionType?: PlaceActionTypeMetadataPlaceActionTypeEnum;
 }

@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetSetupV1ResourcesBlocksIdPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetSetupV1ResourcesBlocksIdRequest extends SpeakeasyBase {
-    pathParams: GetSetupV1ResourcesBlocksIdPathParams;
+    /**
+     * id of resourceBlock object
+     */
+    id: string;
 }
 export declare class GetSetupV1ResourcesBlocksIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     resourceBlockViewModel?: shared.ResourceBlockViewModel;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

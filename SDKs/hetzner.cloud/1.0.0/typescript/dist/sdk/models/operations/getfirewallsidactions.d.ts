@@ -1,7 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetFirewallsIdActionsPathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
+/**
+ * Can be used multiple times.
+ */
 export declare enum GetFirewallsIdActionsSortParameterSortEnum {
     Id = "id",
     IdAsc = "id:asc",
@@ -22,62 +23,135 @@ export declare enum GetFirewallsIdActionsSortParameterSortEnum {
     FinishedAsc = "finished:asc",
     FinishedDesc = "finished:desc"
 }
+/**
+ * Can be used multiple times, the response will contain only Actions with specified statuses
+ */
 export declare enum GetFirewallsIdActionsStatusParameterStatusEnum {
     Running = "running",
     Success = "success",
     Error = "error"
 }
-export declare class GetFirewallsIdActionsQueryParams extends SpeakeasyBase {
+export declare class GetFirewallsIdActionsRequest extends SpeakeasyBase {
+    /**
+     * ID of the Resource
+     */
+    id: number;
+    /**
+     * Can be used multiple times.
+     */
     sort?: GetFirewallsIdActionsSortParameterSortEnum;
+    /**
+     * Can be used multiple times, the response will contain only Actions with specified statuses
+     */
     status?: GetFirewallsIdActionsStatusParameterStatusEnum;
 }
 /**
  * Error message for the Action if error occurred, otherwise null
-**/
+ */
 export declare class GetFirewallsIdActionsActionsResponseActionError extends SpeakeasyBase {
+    /**
+     * Fixed machine readable code
+     */
     code: string;
+    /**
+     * Humanized error message
+     */
     message: string;
 }
 export declare class GetFirewallsIdActionsActionsResponseActionResources extends SpeakeasyBase {
+    /**
+     * ID of the Resource
+     */
     id: number;
+    /**
+     * Type of resource referenced
+     */
     type: string;
 }
+/**
+ * Status of the Action
+ */
 export declare enum GetFirewallsIdActionsActionsResponseActionStatusEnum {
     Success = "success",
     Running = "running",
     Error = "error"
 }
 export declare class GetFirewallsIdActionsActionsResponseAction extends SpeakeasyBase {
+    /**
+     * Command executed in the Action
+     */
     command: string;
+    /**
+     * Error message for the Action if error occurred, otherwise null
+     */
     error: GetFirewallsIdActionsActionsResponseActionError;
+    /**
+     * Point in time when the Action was finished (in ISO-8601 format). Only set if the Action is finished otherwise null.
+     */
     finished: string;
+    /**
+     * ID of the Resource
+     */
     id: number;
+    /**
+     * Progress of Action in percent
+     */
     progress: number;
+    /**
+     * Resources the Action relates to
+     */
     resources: GetFirewallsIdActionsActionsResponseActionResources[];
+    /**
+     * Point in time when the Action was started (in ISO-8601 format)
+     */
     started: string;
+    /**
+     * Status of the Action
+     */
     status: GetFirewallsIdActionsActionsResponseActionStatusEnum;
 }
 export declare class GetFirewallsIdActionsActionsResponseMetaPagination extends SpeakeasyBase {
+    /**
+     * ID of the last page available. Can be null if the current page is the last one.
+     */
     lastPage: number;
+    /**
+     * ID of the next page. Can be null if the current page is the last one.
+     */
     nextPage: number;
+    /**
+     * Current page number
+     */
     page: number;
+    /**
+     * Maximum number of items shown per page in the response
+     */
     perPage: number;
+    /**
+     * ID of the previous page. Can be null if the current page is the first one.
+     */
     previousPage: number;
+    /**
+     * The total number of entries that exist in the database for this query. Nullable if unknown.
+     */
     totalEntries: number;
 }
 export declare class GetFirewallsIdActionsActionsResponseMeta extends SpeakeasyBase {
     pagination: GetFirewallsIdActionsActionsResponseMetaPagination;
 }
+/**
+ * The `actions` key contains a list of Actions
+ */
 export declare class GetFirewallsIdActionsActionsResponse extends SpeakeasyBase {
     actions: GetFirewallsIdActionsActionsResponseAction[];
     meta?: GetFirewallsIdActionsActionsResponseMeta;
 }
-export declare class GetFirewallsIdActionsRequest extends SpeakeasyBase {
-    pathParams: GetFirewallsIdActionsPathParams;
-    queryParams: GetFirewallsIdActionsQueryParams;
-}
 export declare class GetFirewallsIdActionsResponse extends SpeakeasyBase {
+    /**
+     * The `actions` key contains a list of Actions
+     */
     actionsResponse?: GetFirewallsIdActionsActionsResponse;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

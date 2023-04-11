@@ -1,18 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CountAllProductsPathParams extends SpeakeasyBase {
-    organizationUuid: string;
-}
+import { AxiosResponse } from "axios";
 export declare class CountAllProductsSecurity extends SpeakeasyBase {
-    zettleApiKey?: shared.SchemeZettleApiKey;
-    zettleOauth?: shared.SchemeZettleOauth;
+    zettleOauth: string;
 }
 export declare class CountAllProductsRequest extends SpeakeasyBase {
-    pathParams: CountAllProductsPathParams;
-    security: CountAllProductsSecurity;
+    organizationUuid: string;
 }
 export declare class CountAllProductsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Count of existing products
+     */
     productCountResponses?: shared.ProductCountResponse[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

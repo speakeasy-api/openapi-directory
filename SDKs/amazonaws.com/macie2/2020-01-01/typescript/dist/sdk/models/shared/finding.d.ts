@@ -1,13 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { FindingCategoryEnum } from "./findingcategoryenum";
 import { ClassificationDetails } from "./classificationdetails";
+import { FindingCategoryEnum } from "./findingcategoryenum";
+import { FindingTypeEnum } from "./findingtypeenum";
 import { PolicyDetails } from "./policydetails";
 import { ResourcesAffected } from "./resourcesaffected";
 import { Severity } from "./severity";
-import { FindingTypeEnum } from "./findingtypeenum";
 /**
  * Provides the details of a finding.
-**/
+ */
 export declare class Finding extends SpeakeasyBase {
     accountId?: string;
     archived?: boolean;

@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeLocalGatewayRouteTableVpcAssociationsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeLocalGatewayRouteTableVpcAssociationsActionEnum {
     DescribeLocalGatewayRouteTableVpcAssociations = "DescribeLocalGatewayRouteTableVpcAssociations"
 }
-export declare enum PostDescribeLocalGatewayRouteTableVpcAssociationsVersionEnum {
+export declare enum POSTDescribeLocalGatewayRouteTableVpcAssociationsVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDescribeLocalGatewayRouteTableVpcAssociationsQueryParams extends SpeakeasyBase {
-    action: PostDescribeLocalGatewayRouteTableVpcAssociationsActionEnum;
+export declare class POSTDescribeLocalGatewayRouteTableVpcAssociationsRequest extends SpeakeasyBase {
+    action: POSTDescribeLocalGatewayRouteTableVpcAssociationsActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostDescribeLocalGatewayRouteTableVpcAssociationsVersionEnum;
-}
-export declare class PostDescribeLocalGatewayRouteTableVpcAssociationsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeLocalGatewayRouteTableVpcAssociationsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeLocalGatewayRouteTableVpcAssociationsHeaders ex
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeLocalGatewayRouteTableVpcAssociationsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeLocalGatewayRouteTableVpcAssociationsQueryParams;
-    headers: PostDescribeLocalGatewayRouteTableVpcAssociationsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeLocalGatewayRouteTableVpcAssociationsResponse extends SpeakeasyBase {
+export declare class POSTDescribeLocalGatewayRouteTableVpcAssociationsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

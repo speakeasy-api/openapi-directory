@@ -13,6 +13,7 @@ export * from "./getresourceshareinvitations";
 export * from "./getresourceshares";
 export * from "./listpendinginvitationresources";
 export * from "./listpermissions";
+export * from "./listpermissionversions";
 export * from "./listprincipals";
 export * from "./listresources";
 export * from "./listresourcesharepermissions";

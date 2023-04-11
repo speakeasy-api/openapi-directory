@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class StartMlLabelingSetGenerationTaskRunResponse extends SpeakeasyBase {
+/**
+ * Success
+ */
+export declare class StartMLLabelingSetGenerationTaskRunResponse extends SpeakeasyBase {
     taskRunId?: string;
 }

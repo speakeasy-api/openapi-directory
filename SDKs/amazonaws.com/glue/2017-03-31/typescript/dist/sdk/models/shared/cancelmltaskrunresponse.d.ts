@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { TaskStatusTypeEnum } from "./taskstatustypeenum";
-export declare class CancelMlTaskRunResponse extends SpeakeasyBase {
+/**
+ * Success
+ */
+export declare class CancelMLTaskRunResponse extends SpeakeasyBase {
     status?: TaskStatusTypeEnum;
     taskRunId?: string;
     transformId?: string;

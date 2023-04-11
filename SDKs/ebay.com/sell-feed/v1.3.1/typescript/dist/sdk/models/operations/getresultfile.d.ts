@@ -1,18 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetResultFilePathParams extends SpeakeasyBase {
-    taskId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetResultFileSecurity extends SpeakeasyBase {
-    apiAuth: shared.SchemeApiAuth;
+    apiAuth: string;
 }
 export declare class GetResultFileRequest extends SpeakeasyBase {
-    pathParams: GetResultFilePathParams;
-    security: GetResultFileSecurity;
+    /**
+     * The ID of the task associated with the file you want to download. This ID was generated when the task was created.
+     */
+    taskId: string;
 }
 export declare class GetResultFileResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

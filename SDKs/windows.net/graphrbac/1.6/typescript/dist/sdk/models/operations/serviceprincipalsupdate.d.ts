@@ -1,23 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ServicePrincipalsUpdatePathParams extends SpeakeasyBase {
-    objectId: string;
-    tenantID: string;
-}
-export declare class ServicePrincipalsUpdateQueryParams extends SpeakeasyBase {
-    apiVersion: string;
-}
-export declare class ServicePrincipalsUpdateRequests extends SpeakeasyBase {
-    servicePrincipalUpdateParameters?: shared.ServicePrincipalUpdateParameters;
-    servicePrincipalUpdateParameters1?: shared.ServicePrincipalUpdateParameters;
-}
+import { AxiosResponse } from "axios";
 export declare class ServicePrincipalsUpdateRequest extends SpeakeasyBase {
-    pathParams: ServicePrincipalsUpdatePathParams;
-    queryParams: ServicePrincipalsUpdateQueryParams;
-    request: ServicePrincipalsUpdateRequests;
+    /**
+     * Parameters to update a service principal.
+     */
+    servicePrincipalUpdateParameters: shared.ServicePrincipalUpdateParameters;
+    /**
+     * Client API version.
+     */
+    apiVersion: string;
+    /**
+     * The object ID of the service principal to delete.
+     */
+    objectId: string;
+    /**
+     * The tenant ID.
+     */
+    tenantID: string;
 }
 export declare class ServicePrincipalsUpdateResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Error response describing why the operation failed.
+     */
     graphError?: shared.GraphError;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

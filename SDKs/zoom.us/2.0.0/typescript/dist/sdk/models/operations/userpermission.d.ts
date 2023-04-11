@@ -1,16 +1,45 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UserPermissionPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class UserPermissionRequest extends SpeakeasyBase {
+    /**
+     * The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+     */
     userId: string;
 }
-export declare class UserPermission200ApplicationJson extends SpeakeasyBase {
+/**
+ * **HTTP Status Code:** `200`<br>
+ *
+ * @remarks
+ * User permissions returned.
+ */
+export declare class UserPermission200ApplicationXML extends SpeakeasyBase {
+    /**
+     * List of user permissions.
+     */
     permissions?: string[];
 }
-export declare class UserPermissionRequest extends SpeakeasyBase {
-    pathParams: UserPermissionPathParams;
+/**
+ * **HTTP Status Code:** `200`<br>
+ *
+ * @remarks
+ * User permissions returned.
+ */
+export declare class UserPermission200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * List of user permissions.
+     */
+    permissions?: string[];
 }
 export declare class UserPermissionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    userPermission200ApplicationJSONObject?: UserPermission200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * **HTTP Status Code:** `200`<br>
+     *
+     * @remarks
+     * User permissions returned.
+     */
+    userPermission200ApplicationJSONObject?: UserPermission200ApplicationJSON;
 }

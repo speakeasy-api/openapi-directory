@@ -1,22 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdatePayRunPathParams extends SpeakeasyBase {
-    payRunID: string;
-}
-export declare class UpdatePayRunHeaders extends SpeakeasyBase {
-    xeroTenantId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UpdatePayRunSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class UpdatePayRunRequest extends SpeakeasyBase {
-    pathParams: UpdatePayRunPathParams;
-    headers: UpdatePayRunHeaders;
-    request?: shared.PayRunInput[];
-    security: UpdatePayRunSecurity;
+    /**
+     * PayRun id for single object
+     */
+    payRunID: string;
+    requestBody?: shared.PayRunInput[];
+    /**
+     * Xero identifier for Tenant
+     */
+    xeroTenantId: string;
 }
 export declare class UpdatePayRunResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * A successful request
+     */
     payRuns?: shared.PayRuns;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

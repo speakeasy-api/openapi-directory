@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListEnvironmentAccountConnectionsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListEnvironmentAccountConnectionsXAmzTargetEnum {
     AwsProton20200720ListEnvironmentAccountConnections = "AwsProton20200720.ListEnvironmentAccountConnections"
 }
-export declare class ListEnvironmentAccountConnectionsHeaders extends SpeakeasyBase {
+export declare class ListEnvironmentAccountConnectionsRequest extends SpeakeasyBase {
+    listEnvironmentAccountConnectionsInput: shared.ListEnvironmentAccountConnectionsInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,18 +14,37 @@ export declare class ListEnvironmentAccountConnectionsHeaders extends SpeakeasyB
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: ListEnvironmentAccountConnectionsXAmzTargetEnum;
-}
-export declare class ListEnvironmentAccountConnectionsRequest extends SpeakeasyBase {
-    queryParams: ListEnvironmentAccountConnectionsQueryParams;
-    headers: ListEnvironmentAccountConnectionsHeaders;
-    request: shared.ListEnvironmentAccountConnectionsInput;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class ListEnvironmentAccountConnectionsResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * Success
+     */
     listEnvironmentAccountConnectionsOutput?: shared.ListEnvironmentAccountConnectionsOutput;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

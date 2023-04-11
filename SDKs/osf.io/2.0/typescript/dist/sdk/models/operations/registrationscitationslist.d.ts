@@ -1,12 +1,53 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class RegistrationsCitationsListPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class RegistrationsCitationsListRequest extends SpeakeasyBase {
+    /**
+     * The unique identifier of the registration.
+     */
     registrationId: string;
 }
-export declare class RegistrationsCitationsListRequest extends SpeakeasyBase {
-    pathParams: RegistrationsCitationsListPathParams;
+/**
+ * The properties of the citation style entity.
+ */
+export declare class RegistrationsCitationsListCitationStyleAttributes extends SpeakeasyBase {
+    /**
+     * The time at which the citation style was first parsed, as an iso8601 formatted timestamp.
+     */
+    dateParsed: Date;
+    /**
+     * The short name for the citation style.
+     */
+    shortTitle?: string;
+    /**
+     * The summary of the citation style.
+     */
+    summary?: string;
+    /**
+     * The official name of the citation style.
+     */
+    title: string;
+}
+export declare class RegistrationsCitationsListCitationStyle extends SpeakeasyBase {
+    /**
+     * The properties of the citation style entity.
+     */
+    attributes: RegistrationsCitationsListCitationStyleAttributes;
+    /**
+     * The identifier of the citation style, e.g. APA.
+     */
+    id: string;
+    /**
+     * URLs to alternative representations of the citation style entity.
+     */
+    links?: Record<string, any>;
+    /**
+     * The type identifier of the citation style entity (`citation-styles`).
+     */
+    type: string;
 }
 export declare class RegistrationsCitationsListResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

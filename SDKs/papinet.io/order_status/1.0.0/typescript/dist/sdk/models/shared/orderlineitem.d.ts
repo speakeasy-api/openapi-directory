@@ -24,7 +24,7 @@ export declare enum OrderLineItemQuantitiesQuantityTypeEnum {
     NominalWeight = "NominalWeight",
     TareWeight = "TareWeight"
 }
-export declare enum OrderLineItemQuantitiesQuantityUomEnum {
+export declare enum OrderLineItemQuantitiesQuantityUOMEnum {
     Bale = "Bale",
     Box = "Box",
     Centimeter = "Centimeter",
@@ -61,7 +61,7 @@ export declare enum OrderLineItemQuantitiesQuantityUomEnum {
 export declare class OrderLineItemQuantities extends SpeakeasyBase {
     quantityContext?: OrderLineItemQuantitiesQuantityContextEnum;
     quantityType?: OrderLineItemQuantitiesQuantityTypeEnum;
-    quantityUOM?: OrderLineItemQuantitiesQuantityUomEnum;
+    quantityUOM?: OrderLineItemQuantitiesQuantityUOMEnum;
     quantityValue?: number;
 }
 export declare class OrderLineItem extends SpeakeasyBase {

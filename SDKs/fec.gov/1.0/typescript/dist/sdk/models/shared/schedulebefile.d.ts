@@ -10,6 +10,12 @@ export declare class ScheduleBEfile extends SpeakeasyBase {
     candidateOffice?: string;
     candidateOfficeDistrict?: string;
     committee?: CommitteeHistory;
+    /**
+     *
+     * @remarks
+     * A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
+     *
+     */
     committeeId?: string;
     csvUrl?: string;
     disbursementAmount?: number;
@@ -20,6 +26,12 @@ export declare class ScheduleBEfile extends SpeakeasyBase {
     fecUrl?: string;
     fileNumber: number;
     filing?: EFilings;
+    /**
+     *
+     * @remarks
+     * An unique identifier for each page where the electronic or paper filing is reported.
+     *
+     */
     imageNumber?: string;
     isNotice?: boolean;
     lineNumber?: string;

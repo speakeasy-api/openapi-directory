@@ -4,7 +4,7 @@ import { InterconnectStateEnum } from "./interconnectstateenum";
 import { Tag } from "./tag";
 /**
  * Information about an interconnect.
-**/
+ */
 export declare class Interconnect extends SpeakeasyBase {
     awsDevice?: string;
     awsDeviceV2?: string;

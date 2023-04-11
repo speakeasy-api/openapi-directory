@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Search API for 'Person' entry type
+ */
 export declare class TypeBioOntologyPerson {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,10 @@ export declare class TypeBioOntologyPerson {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * searchBioOntologyPerson - Search API for 'Person' entry type
+     * Search API for 'Person' entry type
      *
+     * @remarks
      * API to search for entries of type Person
-    **/
+     */
     searchBioOntologyPerson(req: operations.SearchBioOntologyPersonRequest, config?: AxiosRequestConfig): Promise<operations.SearchBioOntologyPersonResponse>;
 }

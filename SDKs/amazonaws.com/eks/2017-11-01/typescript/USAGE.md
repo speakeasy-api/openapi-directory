@@ -1,45 +1,64 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AssociateEncryptionConfigRequest, AssociateEncryptionConfigResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  AssociateEncryptionConfigRequest,
+  AssociateEncryptionConfigResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    hmac: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: AssociateEncryptionConfigRequest = {
-  pathParams: {
-    name: "sit",
-  },
-  headers: {
-    xAmzAlgorithm: "voluptas",
-    xAmzContentSha256: "culpa",
-    xAmzCredential: "expedita",
-    xAmzDate: "consequuntur",
-    xAmzSecurityToken: "dolor",
-    xAmzSignature: "expedita",
-    xAmzSignedHeaders: "voluptas",
-  },
-  request: {
-    clientRequestToken: "fugit",
+  requestBody: {
+    clientRequestToken: "corrupti",
     encryptionConfig: [
       {
         provider: {
-          keyArn: "nihil",
+          keyArn: "distinctio",
         },
         resources: [
-          "dicta",
-          "debitis",
-          "voluptatum",
+          "unde",
+          "nulla",
+          "corrupti",
+          "illum",
+        ],
+      },
+      {
+        provider: {
+          keyArn: "vel",
+        },
+        resources: [
+          "deserunt",
+          "suscipit",
+          "iure",
+        ],
+      },
+      {
+        provider: {
+          keyArn: "magnam",
+        },
+        resources: [
+          "ipsa",
+          "delectus",
+          "tempora",
+          "suscipit",
         ],
       },
     ],
   },
+  xAmzAlgorithm: "molestiae",
+  xAmzContentSha256: "minus",
+  xAmzCredential: "placeat",
+  xAmzDate: "voluptatum",
+  xAmzSecurityToken: "iusto",
+  xAmzSignature: "excepturi",
+  xAmzSignedHeaders: "nisi",
+  name: "recusandae",
 };
 
 sdk.associateEncryptionConfig(req).then((res: AssociateEncryptionConfigResponse | AxiosError) => {

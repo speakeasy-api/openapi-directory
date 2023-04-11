@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum TagResourceXAmzTargetEnum {
     KinesisAnalytics20150814TagResource = "KinesisAnalytics_20150814.TagResource"
 }
-export declare class TagResourceHeaders extends SpeakeasyBase {
+export declare class TagResourceRequest extends SpeakeasyBase {
+    tagResourceRequest: shared.TagResourceRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class TagResourceHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: TagResourceXAmzTargetEnum;
 }
-export declare class TagResourceRequest extends SpeakeasyBase {
-    headers: TagResourceHeaders;
-    request: shared.TagResourceRequest;
-}
 export declare class TagResourceResponse extends SpeakeasyBase {
+    /**
+     * ConcurrentModificationException
+     */
     concurrentModificationException?: any;
     contentType: string;
+    /**
+     * InvalidArgumentException
+     */
     invalidArgumentException?: any;
-    resourceInUseException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceInUseException
+     */
+    resourceInUseException?: any;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * Success
+     */
     tagResourceResponse?: Record<string, any>;
+    /**
+     * TooManyTagsException
+     */
     tooManyTagsException?: any;
 }

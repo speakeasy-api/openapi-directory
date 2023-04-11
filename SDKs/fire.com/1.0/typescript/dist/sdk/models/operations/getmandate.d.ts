@@ -1,13 +1,209 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetMandatePathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetMandateRequest extends SpeakeasyBase {
     mandateUuid: string;
 }
-export declare class GetMandateRequest extends SpeakeasyBase {
-    pathParams: GetMandatePathParams;
+/**
+ * The three letter code for the currency - either `EUR` or `GBP`.
+ */
+export declare enum GetMandateMandateCurrencyCodeEnum {
+    Eur = "EUR",
+    Gbp = "GBP"
+}
+/**
+ * The currency.
+ */
+export declare class GetMandateMandateCurrency extends SpeakeasyBase {
+    /**
+     * The three letter code for the currency - either `EUR` or `GBP`.
+     */
+    code?: GetMandateMandateCurrencyCodeEnum;
+    /**
+     * The name of the currency
+     */
+    description?: string;
+}
+/**
+ * Rejection reason if transaction is rejected
+ */
+export declare enum GetMandateMandateFireRejectionReasonEnum {
+    AccountDoesNotAcceptDirectDebits = "ACCOUNT_DOES_NOT_ACCEPT_DIRECT_DEBITS",
+    Ddic = "DDIC",
+    AccountNotFound = "ACCOUNT_NOT_FOUND",
+    AccountNotLive = "ACCOUNT_NOT_LIVE",
+    CustomerNotFound = "CUSTOMER_NOT_FOUND",
+    BusinessNotLive = "BUSINESS_NOT_LIVE",
+    BusinessNotFull = "BUSINESS_NOT_FULL",
+    PersonalUserNotLive = "PERSONAL_USER_NOT_LIVE",
+    PersonalUserNotFull = "PERSONAL_USER_NOT_FULL",
+    MandateAlreadyExists = "MANDATE_ALREADY_EXISTS",
+    MandateWithDiferentAccount = "MANDATE_WITH_DIFERENT_ACCOUNT",
+    NullMandateReference = "NULL_MANDATE_REFERENCE",
+    InvalidAccountCurrency = "INVALID_ACCOUNT_CURRENCY",
+    InvalidMandateReference = "INVALID_MANDATE_REFERENCE",
+    RequestedByCustomerViaSupport = "REQUESTED_BY_CUSTOMER_VIA_SUPPORT",
+    CustomerAccountClosed = "CUSTOMER_ACCOUNT_CLOSED",
+    CustomerDeceased = "CUSTOMER_DECEASED",
+    AccountTransferred = "ACCOUNT_TRANSFERRED",
+    MandateNotFound = "MANDATE_NOT_FOUND",
+    AccountTransferredToDifferentAccount = "ACCOUNT_TRANSFERRED_TO_DIFFERENT_ACCOUNT",
+    InvalidAccountType = "INVALID_ACCOUNT_TYPE",
+    MandateExpired = "MANDATE_EXPIRED",
+    MandateCancelled = "MANDATE_CANCELLED",
+    RequestedByCustomer = "REQUESTED_BY_CUSTOMER"
+}
+/**
+ * The status of the mandate.
+ *
+ * @remarks
+ * * 'CREATED'
+ * * 'LIVE'
+ * * 'REJECT_REQUESTED'
+ * * 'REJECT_RECORD_IN_PROGRESS'
+ * * 'REJECT_RECORDED'
+ * * 'REJECT_FILE_CREATED'
+ * * 'REJECT_FILE_SENT'
+ * * 'CANCEL_REQUESTED'
+ * * 'CANCEL_RECORD_IN_PROGRESS'
+ * * 'CANCEL_RECORDED'
+ * * 'CANCEL_FILE_CREATED'
+ * * 'CANCEL_FILE_SENT'
+ * * 'COMPLETE'
+ * * 'DORMANT'
+ *
+ */
+export declare enum GetMandateMandateStatusEnum {
+    Created = "CREATED",
+    Live = "LIVE",
+    RejectRequested = "REJECT_REQUESTED",
+    RejectRecordInProgress = "REJECT_RECORD_IN_PROGRESS",
+    RejectRecorded = "REJECT_RECORDED",
+    RejectFileCreated = "REJECT_FILE_CREATED",
+    RejectFileSent = "REJECT_FILE_SENT",
+    CancelRequested = "CANCEL_REQUESTED",
+    CancelRecordInProgress = "CANCEL_RECORD_IN_PROGRESS",
+    CancelRecorded = "CANCEL_RECORDED",
+    CancelFileCreated = "CANCEL_FILE_CREATED",
+    CancelFileSent = "CANCEL_FILE_SENT",
+    Complete = "COMPLETE",
+    Dormant = "DORMANT"
+}
+/**
+ * Retrieve all details for a direct debit mandate.
+ */
+export declare class GetMandateMandate extends SpeakeasyBase {
+    /**
+     * The name of the alias
+     */
+    alias?: string;
+    /**
+     * The currency.
+     */
+    currency?: GetMandateMandateCurrency;
+    /**
+     * Date the direct debit was canceled. Milliseconds since the epoch (1970).
+     */
+    dateCancelled?: Date;
+    /**
+     * Date the direct debit was completed. Milliseconds since the epoch (1970).
+     */
+    dateCompleted?: Date;
+    /**
+     * Date the direct debit was created. Milliseconds since the epoch (1970).
+     */
+    dateCreated?: Date;
+    /**
+     * Rejection reason if transaction is rejected
+     */
+    fireRejectionReason?: GetMandateMandateFireRejectionReasonEnum;
+    /**
+     * Date the direct debit was last updated. Milliseconds since the epoch (1970).
+     */
+    lastUpdated?: Date;
+    /**
+     * The value of largest direct debit collected
+     */
+    latestDirectDebitAmount?: number;
+    /**
+     * The date of latest direct debit collected
+     */
+    latestDirectDebitDate?: Date;
+    /**
+     * the reference of the mandate
+     */
+    mandateReference?: string;
+    /**
+     * The UUID for the mandate
+     */
+    mandateUuid?: string;
+    /**
+     * The number of direct debits collected
+     */
+    numberOfDirectDebitCollected?: number;
+    /**
+     * The name of the alias
+     */
+    originatorAlias?: string;
+    /**
+     * Logo url from party who sets up the direct debit.
+     */
+    originatorLogoUrlLarge?: string;
+    /**
+     * Logo url from party who sets up the direct debit.
+     */
+    originatorLogoUrlSmall?: string;
+    /**
+     * The creator of the party who sets up the direct debit.
+     */
+    originatorName?: string;
+    /**
+     * Set by party who sets up the direct debit.
+     */
+    originatorReference?: string;
+    /**
+     * Reason for cancelation
+     */
+    schemeCancelReason?: string;
+    /**
+     * The cancelation code returned by the bank indicating an issue with the direct debit. Each ARRUD code represents a rejection reason.
+     */
+    schemeCancelReasonCode?: string;
+    /**
+     * The status of the mandate.
+     *
+     * @remarks
+     * * 'CREATED'
+     * * 'LIVE'
+     * * 'REJECT_REQUESTED'
+     * * 'REJECT_RECORD_IN_PROGRESS'
+     * * 'REJECT_RECORDED'
+     * * 'REJECT_FILE_CREATED'
+     * * 'REJECT_FILE_SENT'
+     * * 'CANCEL_REQUESTED'
+     * * 'CANCEL_RECORD_IN_PROGRESS'
+     * * 'CANCEL_RECORDED'
+     * * 'CANCEL_FILE_CREATED'
+     * * 'CANCEL_FILE_SENT'
+     * * 'COMPLETE'
+     * * 'DORMANT'
+     *
+     */
+    status?: GetMandateMandateStatusEnum;
+    /**
+     * Identifier for the fire.com account (assigned by fire.com)
+     */
+    targetIcan?: number;
+    /**
+     * The value of direct debits collected
+     */
+    valueOfDirectDebitCollected?: number;
 }
 export declare class GetMandateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    onemandatesGetResponses200ContentApplication1jsonSchemaPropertiesMandatesItems?: shared.OnemandatesGetResponses200ContentApplication1jsonSchemaPropertiesMandatesItems;
+    rawResponse?: AxiosResponse;
+    /**
+     * Retrieve all details for a direct debit mandate.
+     */
+    mandate?: GetMandateMandate;
 }

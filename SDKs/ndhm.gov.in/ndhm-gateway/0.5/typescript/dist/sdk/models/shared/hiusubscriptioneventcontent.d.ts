@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { ConsentManagerPatientID } from "./consentmanagerpatientid";
 import { EventCategoryDetail } from "./eventcategorydetail";
 import { OrganizationRepresentation } from "./organizationrepresentation";
-import { ConsentManagerPatientId } from "./consentmanagerpatientid";
-export declare class HiuSubscriptionEventContent extends SpeakeasyBase {
+export declare class HIUSubscriptionEventContent extends SpeakeasyBase {
     context: EventCategoryDetail[];
     hip: OrganizationRepresentation;
-    patient: ConsentManagerPatientId;
+    patient: ConsentManagerPatientID;
 }

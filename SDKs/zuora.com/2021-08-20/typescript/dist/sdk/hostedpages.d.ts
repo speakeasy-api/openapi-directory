@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class HostedPages {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class HostedPages {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getHostedPages - List hosted pages
+     * List hosted pages
      *
+     * @remarks
      * Returns the Payment Pages configuration metadata,
      * specifically, page ID, page version, payment method type.
      *
@@ -23,6 +24,6 @@ export declare class HostedPages {
      * ## Notes
      * If you do not have the corresponding tenant setting enabled, e.g., the request `version` parameter set to 2 with the Payment Pages 2.0 setting disabled, you will receive an error.
      *
-    **/
+     */
     getHostedPages(req: operations.GetHostedPagesRequest, config?: AxiosRequestConfig): Promise<operations.GetHostedPagesResponse>;
 }

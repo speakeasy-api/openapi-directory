@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Sort by the specified dimension.
+ */
 export declare enum MediationReportSpecSortConditionDimensionEnum {
     DimensionUnspecified = "DIMENSION_UNSPECIFIED",
     Date = "DATE",
@@ -13,10 +16,13 @@ export declare enum MediationReportSpecSortConditionDimensionEnum {
     Format = "FORMAT",
     Platform = "PLATFORM",
     MobileOsVersion = "MOBILE_OS_VERSION",
-    GmaSdkVersion = "GMA_SDK_VERSION",
+    GmaSDKVersion = "GMA_SDK_VERSION",
     AppVersionName = "APP_VERSION_NAME",
     ServingRestriction = "SERVING_RESTRICTION"
 }
+/**
+ * Sort by the specified metric.
+ */
 export declare enum MediationReportSpecSortConditionMetricEnum {
     MetricUnspecified = "METRIC_UNSPECIFIED",
     AdRequests = "AD_REQUESTS",
@@ -28,6 +34,9 @@ export declare enum MediationReportSpecSortConditionMetricEnum {
     MatchRate = "MATCH_RATE",
     ObservedEcpm = "OBSERVED_ECPM"
 }
+/**
+ * Sorting order of the dimension or metric.
+ */
 export declare enum MediationReportSpecSortConditionOrderEnum {
     SortOrderUnspecified = "SORT_ORDER_UNSPECIFIED",
     Ascending = "ASCENDING",
@@ -35,9 +44,18 @@ export declare enum MediationReportSpecSortConditionOrderEnum {
 }
 /**
  * Sorting direction to be applied on a dimension or a metric.
-**/
+ */
 export declare class MediationReportSpecSortCondition extends SpeakeasyBase {
+    /**
+     * Sort by the specified dimension.
+     */
     dimension?: MediationReportSpecSortConditionDimensionEnum;
+    /**
+     * Sort by the specified metric.
+     */
     metric?: MediationReportSpecSortConditionMetricEnum;
+    /**
+     * Sorting order of the dimension or metric.
+     */
     order?: MediationReportSpecSortConditionOrderEnum;
 }

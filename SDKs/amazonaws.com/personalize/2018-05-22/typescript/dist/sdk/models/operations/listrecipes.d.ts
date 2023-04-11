@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListRecipesQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListRecipesXAmzTargetEnum {
     AmazonPersonalizeListRecipes = "AmazonPersonalize.ListRecipes"
 }
-export declare class ListRecipesHeaders extends SpeakeasyBase {
+export declare class ListRecipesRequest extends SpeakeasyBase {
+    listRecipesRequest: shared.ListRecipesRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,15 +14,29 @@ export declare class ListRecipesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: ListRecipesXAmzTargetEnum;
-}
-export declare class ListRecipesRequest extends SpeakeasyBase {
-    queryParams: ListRecipesQueryParams;
-    headers: ListRecipesHeaders;
-    request: shared.ListRecipesRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class ListRecipesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidInputException
+     */
+    invalidInputException?: any;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * Success
+     */
     listRecipesResponse?: shared.ListRecipesResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

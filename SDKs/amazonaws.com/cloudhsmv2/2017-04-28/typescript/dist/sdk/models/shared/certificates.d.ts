@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Contains one or more certificates or a certificate signing request (CSR).
-**/
+ */
 export declare class Certificates extends SpeakeasyBase {
     awsHardwareCertificate?: string;
     clusterCertificate?: string;

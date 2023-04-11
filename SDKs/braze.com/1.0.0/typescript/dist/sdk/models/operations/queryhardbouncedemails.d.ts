@@ -1,15 +1,56 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class QueryHardBouncedEmailsQueryParams extends SpeakeasyBase {
-    email?: string;
-    endDate?: string;
-    limit?: string;
-    offset?: string;
-    startDate?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class QueryHardBouncedEmailsRequest extends SpeakeasyBase {
-    queryParams: QueryHardBouncedEmailsQueryParams;
+    /**
+     * (Optional*) String
+     *
+     * @remarks
+     *
+     * If provided, we will return whether or not the user has hard bounced.
+     *
+     * *You must provide either an `email` or a `start_date`, and an `end_date`.
+     */
+    email?: string;
+    /**
+     * (Optional*) String in YYYY-MM-DD format
+     *
+     * @remarks
+     *
+     * String in YYYY-MM-DD format. End date of the range to retrieve hard bounces. This is treated as midnight in UTC time by the API.
+     *
+     * *You must provide either an `email` or a `start_date`, and an `end_date`.
+     */
+    endDate?: string;
+    /**
+     * (Optional) Integer
+     *
+     * @remarks
+     *
+     * Optional field to limit the number of results returned. Defaults to 100, maximum is 500.
+     */
+    limit?: string;
+    /**
+     * (Optional) Integer
+     *
+     * @remarks
+     *
+     * Optional beginning point in the list to retrieve from.
+     */
+    offset?: string;
+    /**
+     * (Optional*) String in YYYY-MM-DD format
+     *
+     * @remarks
+     *
+     * Start date of the range to retrieve hard bounces, must be earlier than `end_date`. This is treated as midnight in UTC time by the API.
+     *
+     * *You must provide either an `email` or a `start_date`, and an `end_date`.
+     *
+     */
+    startDate?: string;
 }
 export declare class QueryHardBouncedEmailsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

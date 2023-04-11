@@ -1,21 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetTimesheetPathParams extends SpeakeasyBase {
-    timesheetID: string;
-}
-export declare class GetTimesheetHeaders extends SpeakeasyBase {
-    xeroTenantId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetTimesheetSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class GetTimesheetRequest extends SpeakeasyBase {
-    pathParams: GetTimesheetPathParams;
-    headers: GetTimesheetHeaders;
-    security: GetTimesheetSecurity;
+    /**
+     * Timesheet id for single object
+     */
+    timesheetID: string;
+    /**
+     * Xero identifier for Tenant
+     */
+    xeroTenantId: string;
 }
 export declare class GetTimesheetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * search results matching criteria
+     */
     timesheetObject?: shared.TimesheetObject;
 }

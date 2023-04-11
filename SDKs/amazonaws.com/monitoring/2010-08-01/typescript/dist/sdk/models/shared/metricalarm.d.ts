@@ -1,13 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ComparisonOperatorEnum } from "./comparisonoperatorenum";
 import { Dimension } from "./dimension";
+import { EvaluationStateEnum } from "./evaluationstateenum";
 import { MetricDataQuery } from "./metricdataquery";
+import { StandardUnitEnum } from "./standardunitenum";
 import { StateValueEnum } from "./statevalueenum";
 import { StatisticEnum } from "./statisticenum";
-import { StandardUnitEnum } from "./standardunitenum";
 /**
  * The details about a metric alarm.
-**/
+ */
 export declare class MetricAlarm extends SpeakeasyBase {
     actionsEnabled?: boolean;
     alarmActions?: string[];
@@ -20,6 +21,7 @@ export declare class MetricAlarm extends SpeakeasyBase {
     dimensions?: Dimension[];
     evaluateLowSampleCountPercentile?: string;
     evaluationPeriods?: number;
+    evaluationState?: EvaluationStateEnum;
     extendedStatistic?: string;
     insufficientDataActions?: string[];
     metricName?: string;
@@ -29,6 +31,7 @@ export declare class MetricAlarm extends SpeakeasyBase {
     period?: number;
     stateReason?: string;
     stateReasonData?: string;
+    stateTransitionedTimestamp?: Date;
     stateUpdatedTimestamp?: Date;
     stateValue?: StateValueEnum;
     statistic?: StatisticEnum;

@@ -1,30 +1,29 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AddImageWatermarkV1Request, AddImageWatermarkV1Response } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  AddImageWatermarkV1RequestBody,
+  AddImageWatermarkV1Response
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    apiKey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: AddImageWatermarkV1Request = {
-  request: {
-    file: {
-      content: "sit".encode(),
-      file: "voluptas",
-    },
-    image: {
-      content: "culpa".encode(),
-      image: "expedita",
-    },
-    margin: 15.100000,
-    transparency: 1774932891286980153,
+    apiKey: "YOUR_API_KEY_HERE",
   },
+});
+
+const req: AddImageWatermarkV1RequestBody = {
+  file: {
+    content: "corrupti".encode(),
+    file: "provident",
+  },
+  image: {
+    content: "distinctio".encode(),
+    image: "quibusdam",
+  },
+  margin: 1,
+  transparency: 50,
 };
 
 sdk.addImageWatermarkV1(req).then((res: AddImageWatermarkV1Response | AxiosError) => {

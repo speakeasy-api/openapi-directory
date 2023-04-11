@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteEnvironmentXAmzTargetEnum {
-    AwsCloud9WorkspaceManagementServiceDeleteEnvironment = "AWSCloud9WorkspaceManagementService.DeleteEnvironment"
+    AWSCloud9WorkspaceManagementServiceDeleteEnvironment = "AWSCloud9WorkspaceManagementService.DeleteEnvironment"
 }
-export declare class DeleteEnvironmentHeaders extends SpeakeasyBase {
+export declare class DeleteEnvironmentRequest extends SpeakeasyBase {
+    deleteEnvironmentRequest: shared.DeleteEnvironmentRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,19 +15,40 @@ export declare class DeleteEnvironmentHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteEnvironmentXAmzTargetEnum;
 }
-export declare class DeleteEnvironmentRequest extends SpeakeasyBase {
-    headers: DeleteEnvironmentHeaders;
-    request: shared.DeleteEnvironmentRequest;
-}
 export declare class DeleteEnvironmentResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteEnvironmentResult?: Record<string, any>;
+    /**
+     * ForbiddenException
+     */
     forbiddenException?: any;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteLocationPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteLocationRequest extends SpeakeasyBase {
-    pathParams: DeleteLocationPathParams;
+    /**
+     * The location id that needs to be deleted
+     */
+    id: string;
 }
 export declare class DeleteLocationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

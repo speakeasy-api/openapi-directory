@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * State postal code of the address
+ */
 export declare enum LocationCreateRequestAddressStateEnum {
     Ak = "AK",
     Al = "AL",
@@ -63,18 +66,48 @@ export declare enum LocationCreateRequestAddressStateEnum {
 }
 /**
  * Address of the group location
-**/
+ */
 export declare class LocationCreateRequestAddress extends SpeakeasyBase {
+    /**
+     * City of the address
+     */
     city: string;
+    /**
+     * County of the address
+     */
     county?: string;
+    /**
+     * State postal code of the address
+     */
     state: LocationCreateRequestAddressStateEnum;
+    /**
+     * Line one of the address
+     */
     streetOne: string;
+    /**
+     * Line two of the address
+     */
     streetTwo?: string;
+    /**
+     * Zip code of the address
+     */
     zipCode: string;
 }
 export declare class LocationCreateRequest extends SpeakeasyBase {
+    /**
+     * Address of the group location
+     */
     address: LocationCreateRequestAddress;
+    /**
+     * Boolean field to determine whether the group location should be used as the billing group location
+     */
     billingLocation: boolean;
+    /**
+     * Display name for the group location
+     */
     displayName: string;
+    /**
+     * Boolean field to determine whether the group location should be used as the primary group location
+     */
     primaryLocation: boolean;
 }

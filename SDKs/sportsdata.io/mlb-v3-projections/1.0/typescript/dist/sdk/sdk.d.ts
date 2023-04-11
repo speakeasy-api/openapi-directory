@@ -1,12 +1,30 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-import { Security } from "./models/shared";
-export declare const ServerList: readonly ["http://api.sportsdata.io", "https://api.sportsdata.io", "http://azure-api.sportsdata.io", "https://azure-api.sportsdata.io"];
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
+export declare const ServerList: readonly ["http://azure-api.sportsdata.io/v3/mlb/projections", "https://azure-api.sportsdata.io/v3/mlb/projections"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * The security details required to authenticate the SDK
+     */
+    security?: shared.Security;
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    security?: Security;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * MLB projections API.
+ */
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -14,21 +32,40 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
     /**
-     * dfsSlatesByDate - DFS Slates by Date
-    **/
+     * Depth Charts
+     *
+     * @remarks
+     * Returns Depth Charts for all active MLB teams.
+     */
+    depthCharts(req: operations.DepthChartsRequest, config?: AxiosRequestConfig): Promise<operations.DepthChartsResponse>;
+    /**
+     * DFS Slates by Date
+     */
     dfsSlatesByDate(req: operations.DfsSlatesByDateRequest, config?: AxiosRequestConfig): Promise<operations.DfsSlatesByDateResponse>;
     /**
-     * projectedPlayerGameStatsByDateWInjuriesLineupsDfsSalaries - Projected Player Game Stats by Date (w/ Injuries, Lineups, DFS Salaries)
-    **/
-    projectedPlayerGameStatsByDateWInjuriesLineupsDfsSalaries(req: operations.ProjectedPlayerGameStatsByDateWInjuriesLineupsDfsSalariesRequest, config?: AxiosRequestConfig): Promise<operations.ProjectedPlayerGameStatsByDateWInjuriesLineupsDfsSalariesResponse>;
+     * Injured Players
+     *
+     * @remarks
+     * This endpoint provides all currently injured MLB players, along with injury details.
+     */
+    injuredPlayers(req: operations.InjuredPlayersRequest, config?: AxiosRequestConfig): Promise<operations.InjuredPlayersResponse>;
     /**
-     * projectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalaries - Projected Player Game Stats by Player (w/ Injuries, Lineups, DFS Salaries)
-    **/
-    projectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalaries(req: operations.ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesRequest, config?: AxiosRequestConfig): Promise<operations.ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesResponse>;
+     * Projected Player Game Stats by Date (w/ Injuries, DFS Salaries)
+     */
+    projectedPlayerGameStatsByDateWInjuriesDfsSalaries(req: operations.ProjectedPlayerGameStatsByDateWInjuriesDfsSalariesRequest, config?: AxiosRequestConfig): Promise<operations.ProjectedPlayerGameStatsByDateWInjuriesDfsSalariesResponse>;
     /**
-     * projectedPlayerSeasonStatsWithAdp - Projected Player Season Stats (with ADP)
-    **/
+     * Projected Player Game Stats by Player (w/ Injuries, DFS Salaries)
+     */
+    projectedPlayerGameStatsByPlayerWInjuriesDfsSalaries(req: operations.ProjectedPlayerGameStatsByPlayerWInjuriesDfsSalariesRequest, config?: AxiosRequestConfig): Promise<operations.ProjectedPlayerGameStatsByPlayerWInjuriesDfsSalariesResponse>;
+    /**
+     * Projected Player Season Stats (with ADP)
+     */
     projectedPlayerSeasonStatsWithAdp(req: operations.ProjectedPlayerSeasonStatsWithAdpRequest, config?: AxiosRequestConfig): Promise<operations.ProjectedPlayerSeasonStatsWithAdpResponse>;
+    /**
+     * Starting Lineups by Date
+     */
+    startingLineupsByDate(req: operations.StartingLineupsByDateRequest, config?: AxiosRequestConfig): Promise<operations.StartingLineupsByDateResponse>;
 }

@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Nodes {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,55 +9,55 @@ export declare class Nodes {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * sasportalNodesDevicesSignDevice - Signs a device.
-    **/
-    sasportalNodesDevicesSignDevice(req: operations.SasportalNodesDevicesSignDeviceRequest, config?: AxiosRequestConfig): Promise<operations.SasportalNodesDevicesSignDeviceResponse>;
+     * Signs a device.
+     */
+    sasportalNodesDevicesSignDevice(req: operations.SasportalNodesDevicesSignDeviceRequest, security: operations.SasportalNodesDevicesSignDeviceSecurity, config?: AxiosRequestConfig): Promise<operations.SasportalNodesDevicesSignDeviceResponse>;
     /**
-     * sasportalNodesDevicesUpdateSigned - Updates a signed device.
-    **/
-    sasportalNodesDevicesUpdateSigned(req: operations.SasportalNodesDevicesUpdateSignedRequest, config?: AxiosRequestConfig): Promise<operations.SasportalNodesDevicesUpdateSignedResponse>;
+     * Updates a signed device.
+     */
+    sasportalNodesDevicesUpdateSigned(req: operations.SasportalNodesDevicesUpdateSignedRequest, security: operations.SasportalNodesDevicesUpdateSignedSecurity, config?: AxiosRequestConfig): Promise<operations.SasportalNodesDevicesUpdateSignedResponse>;
     /**
-     * sasportalNodesNodesDelete - Deletes a node.
-    **/
-    sasportalNodesNodesDelete(req: operations.SasportalNodesNodesDeleteRequest, config?: AxiosRequestConfig): Promise<operations.SasportalNodesNodesDeleteResponse>;
+     * Deletes a node.
+     */
+    sasportalNodesNodesDelete(req: operations.SasportalNodesNodesDeleteRequest, security: operations.SasportalNodesNodesDeleteSecurity, config?: AxiosRequestConfig): Promise<operations.SasportalNodesNodesDeleteResponse>;
     /**
-     * sasportalNodesNodesDeploymentsCreate - Creates a new deployment.
-    **/
-    sasportalNodesNodesDeploymentsCreate(req: operations.SasportalNodesNodesDeploymentsCreateRequest, config?: AxiosRequestConfig): Promise<operations.SasportalNodesNodesDeploymentsCreateResponse>;
+     * Creates a new deployment.
+     */
+    sasportalNodesNodesDeploymentsCreate(req: operations.SasportalNodesNodesDeploymentsCreateRequest, security: operations.SasportalNodesNodesDeploymentsCreateSecurity, config?: AxiosRequestConfig): Promise<operations.SasportalNodesNodesDeploymentsCreateResponse>;
     /**
-     * sasportalNodesNodesDeploymentsList - Lists deployments.
-    **/
-    sasportalNodesNodesDeploymentsList(req: operations.SasportalNodesNodesDeploymentsListRequest, config?: AxiosRequestConfig): Promise<operations.SasportalNodesNodesDeploymentsListResponse>;
+     * Lists deployments.
+     */
+    sasportalNodesNodesDeploymentsList(req: operations.SasportalNodesNodesDeploymentsListRequest, security: operations.SasportalNodesNodesDeploymentsListSecurity, config?: AxiosRequestConfig): Promise<operations.SasportalNodesNodesDeploymentsListResponse>;
     /**
-     * sasportalNodesNodesDevicesCreate - Creates a device under a node or customer.
-    **/
-    sasportalNodesNodesDevicesCreate(req: operations.SasportalNodesNodesDevicesCreateRequest, config?: AxiosRequestConfig): Promise<operations.SasportalNodesNodesDevicesCreateResponse>;
+     * Creates a device under a node or customer.
+     */
+    sasportalNodesNodesDevicesCreate(req: operations.SasportalNodesNodesDevicesCreateRequest, security: operations.SasportalNodesNodesDevicesCreateSecurity, config?: AxiosRequestConfig): Promise<operations.SasportalNodesNodesDevicesCreateResponse>;
     /**
-     * sasportalNodesNodesDevicesCreateSigned - Creates a signed device under a node or customer.
-    **/
-    sasportalNodesNodesDevicesCreateSigned(req: operations.SasportalNodesNodesDevicesCreateSignedRequest, config?: AxiosRequestConfig): Promise<operations.SasportalNodesNodesDevicesCreateSignedResponse>;
+     * Creates a signed device under a node or customer.
+     */
+    sasportalNodesNodesDevicesCreateSigned(req: operations.SasportalNodesNodesDevicesCreateSignedRequest, security: operations.SasportalNodesNodesDevicesCreateSignedSecurity, config?: AxiosRequestConfig): Promise<operations.SasportalNodesNodesDevicesCreateSignedResponse>;
     /**
-     * sasportalNodesNodesDevicesList - Lists devices under a node or customer.
-    **/
-    sasportalNodesNodesDevicesList(req: operations.SasportalNodesNodesDevicesListRequest, config?: AxiosRequestConfig): Promise<operations.SasportalNodesNodesDevicesListResponse>;
+     * Lists devices under a node or customer.
+     */
+    sasportalNodesNodesDevicesList(req: operations.SasportalNodesNodesDevicesListRequest, security: operations.SasportalNodesNodesDevicesListSecurity, config?: AxiosRequestConfig): Promise<operations.SasportalNodesNodesDevicesListResponse>;
     /**
-     * sasportalNodesNodesGet - Returns a requested node.
-    **/
-    sasportalNodesNodesGet(req: operations.SasportalNodesNodesGetRequest, config?: AxiosRequestConfig): Promise<operations.SasportalNodesNodesGetResponse>;
+     * Returns a requested node.
+     */
+    sasportalNodesNodesGet(req: operations.SasportalNodesNodesGetRequest, security: operations.SasportalNodesNodesGetSecurity, config?: AxiosRequestConfig): Promise<operations.SasportalNodesNodesGetResponse>;
     /**
-     * sasportalNodesNodesMove - Moves a node under another node or customer.
-    **/
-    sasportalNodesNodesMove(req: operations.SasportalNodesNodesMoveRequest, config?: AxiosRequestConfig): Promise<operations.SasportalNodesNodesMoveResponse>;
+     * Moves a node under another node or customer.
+     */
+    sasportalNodesNodesMove(req: operations.SasportalNodesNodesMoveRequest, security: operations.SasportalNodesNodesMoveSecurity, config?: AxiosRequestConfig): Promise<operations.SasportalNodesNodesMoveResponse>;
     /**
-     * sasportalNodesNodesNodesCreate - Creates a new node.
-    **/
-    sasportalNodesNodesNodesCreate(req: operations.SasportalNodesNodesNodesCreateRequest, config?: AxiosRequestConfig): Promise<operations.SasportalNodesNodesNodesCreateResponse>;
+     * Creates a new node.
+     */
+    sasportalNodesNodesNodesCreate(req: operations.SasportalNodesNodesNodesCreateRequest, security: operations.SasportalNodesNodesNodesCreateSecurity, config?: AxiosRequestConfig): Promise<operations.SasportalNodesNodesNodesCreateResponse>;
     /**
-     * sasportalNodesNodesNodesList - Lists nodes.
-    **/
-    sasportalNodesNodesNodesList(req: operations.SasportalNodesNodesNodesListRequest, config?: AxiosRequestConfig): Promise<operations.SasportalNodesNodesNodesListResponse>;
+     * Lists nodes.
+     */
+    sasportalNodesNodesNodesList(req: operations.SasportalNodesNodesNodesListRequest, security: operations.SasportalNodesNodesNodesListSecurity, config?: AxiosRequestConfig): Promise<operations.SasportalNodesNodesNodesListResponse>;
     /**
-     * sasportalNodesNodesPatch - Updates an existing node.
-    **/
-    sasportalNodesNodesPatch(req: operations.SasportalNodesNodesPatchRequest, config?: AxiosRequestConfig): Promise<operations.SasportalNodesNodesPatchResponse>;
+     * Updates an existing node.
+     */
+    sasportalNodesNodesPatch(req: operations.SasportalNodesNodesPatchRequest, security: operations.SasportalNodesNodesPatchSecurity, config?: AxiosRequestConfig): Promise<operations.SasportalNodesNodesPatchResponse>;
 }

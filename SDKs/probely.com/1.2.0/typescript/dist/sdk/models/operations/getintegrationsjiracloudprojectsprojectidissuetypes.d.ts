@@ -1,25 +1,54 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetIntegrationsJiraCloudProjectsProjectIdIssueTypesPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetIntegrationsJiraCloudProjectsProjectIdIssueTypesRequest extends SpeakeasyBase {
+    /**
+     * Jira Project Id
+     */
     projectId: string;
 }
-export declare class GetIntegrationsJiraCloudProjectsProjectIdIssueTypes401ApplicationJson extends SpeakeasyBase {
+/**
+ * Not found
+ */
+export declare class GetIntegrationsJiraCloudProjectsProjectIdIssueTypes404ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Not found.
+     */
     detail?: string;
 }
-export declare class GetIntegrationsJiraCloudProjectsProjectIdIssueTypes403ApplicationJson extends SpeakeasyBase {
+/**
+ * Not allowed to perform operation
+ */
+export declare class GetIntegrationsJiraCloudProjectsProjectIdIssueTypes403ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error message.
+     */
     detail?: string;
 }
-export declare class GetIntegrationsJiraCloudProjectsProjectIdIssueTypes404ApplicationJson extends SpeakeasyBase {
+/**
+ * Access token is missing or invalid
+ */
+export declare class GetIntegrationsJiraCloudProjectsProjectIdIssueTypes401ApplicationJSON extends SpeakeasyBase {
     detail?: string;
-}
-export declare class GetIntegrationsJiraCloudProjectsProjectIdIssueTypesRequest extends SpeakeasyBase {
-    pathParams: GetIntegrationsJiraCloudProjectsProjectIdIssueTypesPathParams;
 }
 export declare class GetIntegrationsJiraCloudProjectsProjectIdIssueTypesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Jira issue types available in project
+     */
     jiraIssueTypes?: shared.JiraIssueType[];
     statusCode: number;
-    getIntegrationsJiraCloudProjectsProjectIdIssueTypes401ApplicationJSONObject?: GetIntegrationsJiraCloudProjectsProjectIdIssueTypes401ApplicationJson;
-    getIntegrationsJiraCloudProjectsProjectIdIssueTypes403ApplicationJSONObject?: GetIntegrationsJiraCloudProjectsProjectIdIssueTypes403ApplicationJson;
-    getIntegrationsJiraCloudProjectsProjectIdIssueTypes404ApplicationJSONObject?: GetIntegrationsJiraCloudProjectsProjectIdIssueTypes404ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Access token is missing or invalid
+     */
+    getIntegrationsJiraCloudProjectsProjectIdIssueTypes401ApplicationJSONObject?: GetIntegrationsJiraCloudProjectsProjectIdIssueTypes401ApplicationJSON;
+    /**
+     * Not allowed to perform operation
+     */
+    getIntegrationsJiraCloudProjectsProjectIdIssueTypes403ApplicationJSONObject?: GetIntegrationsJiraCloudProjectsProjectIdIssueTypes403ApplicationJSON;
+    /**
+     * Not found
+     */
+    getIntegrationsJiraCloudProjectsProjectIdIssueTypes404ApplicationJSONObject?: GetIntegrationsJiraCloudProjectsProjectIdIssueTypes404ApplicationJSON;
 }

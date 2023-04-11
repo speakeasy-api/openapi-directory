@@ -1,18 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetNumbersBaseQueryParams extends SpeakeasyBase {
-    from?: number;
-    number: number;
-    to: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetNumbersBaseSecurity extends SpeakeasyBase {
-    xMathtoolsApiSecret: shared.SchemeXMathtoolsApiSecret;
+    xMathtoolsApiSecret: string;
 }
 export declare class GetNumbersBaseRequest extends SpeakeasyBase {
-    queryParams: GetNumbersBaseQueryParams;
-    security: GetNumbersBaseSecurity;
+    /**
+     * Base of the supplied number (Optional base 10 assumed by default)
+     */
+    from?: number;
+    /**
+     * Number to convert to the target base
+     */
+    number: number;
+    /**
+     * Target base to convert to
+     */
+    to: number;
 }
 export declare class GetNumbersBaseResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

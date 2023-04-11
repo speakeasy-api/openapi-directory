@@ -1,19 +1,49 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class SourcesV1GetV1SourcesGetQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+/**
+ * An enumeration.
+ */
+export declare enum SourcesV1GetV1SourcesGetOrderBySourcesV1OrderEnum {
+    Name = "name"
+}
+/**
+ * An enumeration.
+ */
+export declare enum SourcesV1GetV1SourcesGetSortSortEnum {
+    Asc = "asc",
+    Desc = "desc"
+}
+export declare class SourcesV1GetV1SourcesGetRequest extends SpeakeasyBase {
+    /**
+     * Change the number of results returned.
+     */
     limit?: number;
     name?: string;
     offset?: number;
-    orderBy?: Record<string, any>;
+    /**
+     * An enumeration.
+     */
+    orderBy?: SourcesV1GetV1SourcesGetOrderBySourcesV1OrderEnum;
+    /**
+     * Paginate through results.
+     */
     page?: number;
-    sort?: Record<string, any>;
-}
-export declare class SourcesV1GetV1SourcesGetRequest extends SpeakeasyBase {
-    queryParams: SourcesV1GetV1SourcesGetQueryParams;
+    /**
+     * Define sort order.
+     */
+    sort?: SourcesV1GetV1SourcesGetSortSortEnum;
 }
 export declare class SourcesV1GetV1SourcesGetResponse extends SpeakeasyBase {
     contentType: string;
-    httpValidationError?: shared.HttpValidationError;
-    openAQResult?: shared.OpenAqResult;
+    /**
+     * Validation Error
+     */
+    httpValidationError?: shared.HTTPValidationError;
+    /**
+     * Successful Response
+     */
+    openAQResult?: shared.OpenAQResult;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,0 +1,15 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { PaymentsProgramOnboardingSteps } from "./paymentsprogramonboardingsteps";
+/**
+ * Type used by the payments program onboarding response
+ */
+export declare class PaymentsProgramOnboardingResponse extends SpeakeasyBase {
+    /**
+     * This enumeration value indicates the eligibility of payment onboarding for the registered site. For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/account/types/api:PaymentsProgramOnboardingStatus'>eBay API documentation</a>
+     */
+    onboardingStatus?: string;
+    /**
+     * An array of the active process steps for payment onboarding and the status of each step. This array includes the step <strong>name</strong>, step <strong>status</strong>, and a <strong>webUrl</strong> to the <code>IN_PROGRESS</code> step. The step names are returned in sequential order.
+     */
+    steps?: PaymentsProgramOnboardingSteps[];
+}

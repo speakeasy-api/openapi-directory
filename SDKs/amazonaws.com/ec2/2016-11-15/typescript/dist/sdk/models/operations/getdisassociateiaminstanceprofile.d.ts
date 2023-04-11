@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDisassociateIamInstanceProfileActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDisassociateIamInstanceProfileActionEnum {
     DisassociateIamInstanceProfile = "DisassociateIamInstanceProfile"
 }
-export declare enum GetDisassociateIamInstanceProfileVersionEnum {
+export declare enum GETDisassociateIamInstanceProfileVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetDisassociateIamInstanceProfileQueryParams extends SpeakeasyBase {
-    action: GetDisassociateIamInstanceProfileActionEnum;
+export declare class GETDisassociateIamInstanceProfileRequest extends SpeakeasyBase {
+    action: GETDisassociateIamInstanceProfileActionEnum;
+    /**
+     * The ID of the IAM instance profile association.
+     */
     associationId: string;
-    version: GetDisassociateIamInstanceProfileVersionEnum;
-}
-export declare class GetDisassociateIamInstanceProfileHeaders extends SpeakeasyBase {
+    version: GETDisassociateIamInstanceProfileVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDisassociateIamInstanceProfileHeaders extends SpeakeasyB
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDisassociateIamInstanceProfileRequest extends SpeakeasyBase {
-    queryParams: GetDisassociateIamInstanceProfileQueryParams;
-    headers: GetDisassociateIamInstanceProfileHeaders;
-}
-export declare class GetDisassociateIamInstanceProfileResponse extends SpeakeasyBase {
+export declare class GETDisassociateIamInstanceProfileResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

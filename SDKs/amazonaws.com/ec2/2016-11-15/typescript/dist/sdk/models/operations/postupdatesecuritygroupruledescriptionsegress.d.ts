@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostUpdateSecurityGroupRuleDescriptionsEgressActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTUpdateSecurityGroupRuleDescriptionsEgressActionEnum {
     UpdateSecurityGroupRuleDescriptionsEgress = "UpdateSecurityGroupRuleDescriptionsEgress"
 }
-export declare enum PostUpdateSecurityGroupRuleDescriptionsEgressVersionEnum {
+export declare enum POSTUpdateSecurityGroupRuleDescriptionsEgressVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostUpdateSecurityGroupRuleDescriptionsEgressQueryParams extends SpeakeasyBase {
-    action: PostUpdateSecurityGroupRuleDescriptionsEgressActionEnum;
-    version: PostUpdateSecurityGroupRuleDescriptionsEgressVersionEnum;
-}
-export declare class PostUpdateSecurityGroupRuleDescriptionsEgressHeaders extends SpeakeasyBase {
+export declare class POSTUpdateSecurityGroupRuleDescriptionsEgressRequest extends SpeakeasyBase {
+    action: POSTUpdateSecurityGroupRuleDescriptionsEgressActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTUpdateSecurityGroupRuleDescriptionsEgressVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostUpdateSecurityGroupRuleDescriptionsEgressHeaders extend
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostUpdateSecurityGroupRuleDescriptionsEgressRequest extends SpeakeasyBase {
-    queryParams: PostUpdateSecurityGroupRuleDescriptionsEgressQueryParams;
-    headers: PostUpdateSecurityGroupRuleDescriptionsEgressHeaders;
-    request?: Uint8Array;
-}
-export declare class PostUpdateSecurityGroupRuleDescriptionsEgressResponse extends SpeakeasyBase {
+export declare class POSTUpdateSecurityGroupRuleDescriptionsEgressResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Chains {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,11 +9,11 @@ export declare class Chains {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * mybusinessChainsGet - Gets the specified chain. Returns `NOT_FOUND` if the chain does not exist.
-    **/
+     * Gets the specified chain. Returns `NOT_FOUND` if the chain does not exist.
+     */
     mybusinessChainsGet(req: operations.MybusinessChainsGetRequest, config?: AxiosRequestConfig): Promise<operations.MybusinessChainsGetResponse>;
     /**
-     * mybusinessChainsSearch - Searches the chain based on chain name.
-    **/
+     * Searches the chain based on chain name.
+     */
     mybusinessChainsSearch(req: operations.MybusinessChainsSearchRequest, config?: AxiosRequestConfig): Promise<operations.MybusinessChainsSearchResponse>;
 }

@@ -1,3 +1,6 @@
+/**
+ * Type of the assignment
+ */
 export declare enum AssignmentTypeEnum {
     None = "none",
     NewScore = "newScore",

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetSubscriptionDefinitionPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetSubscriptionDefinitionRequest extends SpeakeasyBase {
+    /**
+     * The ID of the subscription definition.
+     */
     subscriptionDefinitionId: string;
-}
-export declare class GetSubscriptionDefinitionHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,13 +14,16 @@ export declare class GetSubscriptionDefinitionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetSubscriptionDefinitionRequest extends SpeakeasyBase {
-    pathParams: GetSubscriptionDefinitionPathParams;
-    headers: GetSubscriptionDefinitionHeaders;
-}
 export declare class GetSubscriptionDefinitionResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getSubscriptionDefinitionResponse?: shared.GetSubscriptionDefinitionResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

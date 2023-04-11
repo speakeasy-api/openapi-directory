@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { HIUSubscription } from "./hiusubscription";
 import { SubscriptionStatusEnum } from "./subscriptionstatusenum";
-import { HiuSubscription } from "./hiusubscription";
 export declare class SubscriptionApprovalNotificationNotification extends SpeakeasyBase {
     status: SubscriptionStatusEnum;
-    subscription?: HiuSubscription;
+    subscription?: HIUSubscription;
     subscriptionRequestId?: string;
 }
 export declare class SubscriptionApprovalNotification extends SpeakeasyBase {
     notification: SubscriptionApprovalNotificationNotification;
+    /**
+     * a nonce, unique for each HTTP request
+     */
     requestId: string;
+    /**
+     * Date time format in UTC, includes miliseconds YYYY-MM-DDThh:mm:ss.vZ
+     */
     timestamp: Date;
 }

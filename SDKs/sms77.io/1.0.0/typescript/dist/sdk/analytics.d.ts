@@ -1,5 +1,9 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ *
+ * @see {@link https://www.sms77.io/en/docs/gateway/http-api/analytics} - Retrieve analytics
+ */
 export declare class Analytics {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;

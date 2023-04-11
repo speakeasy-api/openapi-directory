@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostGetConsoleScreenshotActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTGetConsoleScreenshotActionEnum {
     GetConsoleScreenshot = "GetConsoleScreenshot"
 }
-export declare enum PostGetConsoleScreenshotVersionEnum {
+export declare enum POSTGetConsoleScreenshotVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostGetConsoleScreenshotQueryParams extends SpeakeasyBase {
-    action: PostGetConsoleScreenshotActionEnum;
-    version: PostGetConsoleScreenshotVersionEnum;
-}
-export declare class PostGetConsoleScreenshotHeaders extends SpeakeasyBase {
+export declare class POSTGetConsoleScreenshotRequest extends SpeakeasyBase {
+    action: POSTGetConsoleScreenshotActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTGetConsoleScreenshotVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostGetConsoleScreenshotHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostGetConsoleScreenshotRequest extends SpeakeasyBase {
-    queryParams: PostGetConsoleScreenshotQueryParams;
-    headers: PostGetConsoleScreenshotHeaders;
-    request?: Uint8Array;
-}
-export declare class PostGetConsoleScreenshotResponse extends SpeakeasyBase {
+export declare class POSTGetConsoleScreenshotResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

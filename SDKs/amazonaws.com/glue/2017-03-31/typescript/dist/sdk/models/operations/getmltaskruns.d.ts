@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetMlTaskRunsQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare enum GetMLTaskRunsXAmzTargetEnum {
+    AWSGlueGetMLTaskRuns = "AWSGlue.GetMLTaskRuns"
+}
+export declare class GetMLTaskRunsRequest extends SpeakeasyBase {
+    getMLTaskRunsRequest: shared.GetMLTaskRunsRequest;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-}
-export declare enum GetMlTaskRunsXAmzTargetEnum {
-    AwsGlueGetMlTaskRuns = "AWSGlue.GetMLTaskRuns"
-}
-export declare class GetMlTaskRunsHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -15,19 +21,30 @@ export declare class GetMlTaskRunsHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: GetMlTaskRunsXAmzTargetEnum;
+    xAmzTarget: GetMLTaskRunsXAmzTargetEnum;
 }
-export declare class GetMlTaskRunsRequest extends SpeakeasyBase {
-    queryParams: GetMlTaskRunsQueryParams;
-    headers: GetMlTaskRunsHeaders;
-    request: shared.GetMlTaskRunsRequest;
-}
-export declare class GetMlTaskRunsResponse extends SpeakeasyBase {
+export declare class GetMLTaskRunsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
-    getMLTaskRunsResponse?: shared.GetMlTaskRunsResponse;
+    /**
+     * Success
+     */
+    getMLTaskRunsResponse?: shared.GetMLTaskRunsResponse;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

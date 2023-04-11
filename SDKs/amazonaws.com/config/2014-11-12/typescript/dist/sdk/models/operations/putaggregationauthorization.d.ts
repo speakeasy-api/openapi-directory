@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum PutAggregationAuthorizationXAmzTargetEnum {
     StarlingDoveServicePutAggregationAuthorization = "StarlingDoveService.PutAggregationAuthorization"
 }
-export declare class PutAggregationAuthorizationHeaders extends SpeakeasyBase {
+export declare class PutAggregationAuthorizationRequest extends SpeakeasyBase {
+    putAggregationAuthorizationRequest: shared.PutAggregationAuthorizationRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,13 +15,16 @@ export declare class PutAggregationAuthorizationHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: PutAggregationAuthorizationXAmzTargetEnum;
 }
-export declare class PutAggregationAuthorizationRequest extends SpeakeasyBase {
-    headers: PutAggregationAuthorizationHeaders;
-    request: shared.PutAggregationAuthorizationRequest;
-}
 export declare class PutAggregationAuthorizationResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
+    /**
+     * Success
+     */
     putAggregationAuthorizationResponse?: shared.PutAggregationAuthorizationResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

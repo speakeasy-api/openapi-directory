@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetEnableVpcClassicLinkDnsSupportActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETEnableVpcClassicLinkDnsSupportActionEnum {
     EnableVpcClassicLinkDnsSupport = "EnableVpcClassicLinkDnsSupport"
 }
-export declare enum GetEnableVpcClassicLinkDnsSupportVersionEnum {
+export declare enum GETEnableVpcClassicLinkDnsSupportVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetEnableVpcClassicLinkDnsSupportQueryParams extends SpeakeasyBase {
-    action: GetEnableVpcClassicLinkDnsSupportActionEnum;
-    version: GetEnableVpcClassicLinkDnsSupportVersionEnum;
+export declare class GETEnableVpcClassicLinkDnsSupportRequest extends SpeakeasyBase {
+    action: GETEnableVpcClassicLinkDnsSupportActionEnum;
+    version: GETEnableVpcClassicLinkDnsSupportVersionEnum;
+    /**
+     * The ID of the VPC.
+     */
     vpcId?: string;
-}
-export declare class GetEnableVpcClassicLinkDnsSupportHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetEnableVpcClassicLinkDnsSupportHeaders extends SpeakeasyB
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetEnableVpcClassicLinkDnsSupportRequest extends SpeakeasyBase {
-    queryParams: GetEnableVpcClassicLinkDnsSupportQueryParams;
-    headers: GetEnableVpcClassicLinkDnsSupportHeaders;
-}
-export declare class GetEnableVpcClassicLinkDnsSupportResponse extends SpeakeasyBase {
+export declare class GETEnableVpcClassicLinkDnsSupportResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

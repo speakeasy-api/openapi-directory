@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostResumeClusterActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTResumeClusterActionEnum {
     ResumeCluster = "ResumeCluster"
 }
-export declare enum PostResumeClusterVersionEnum {
+export declare enum POSTResumeClusterVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostResumeClusterQueryParams extends SpeakeasyBase {
-    action: PostResumeClusterActionEnum;
-    version: PostResumeClusterVersionEnum;
-}
-export declare class PostResumeClusterHeaders extends SpeakeasyBase {
+export declare class POSTResumeClusterRequest extends SpeakeasyBase {
+    action: POSTResumeClusterActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTResumeClusterVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostResumeClusterHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostResumeClusterRequest extends SpeakeasyBase {
-    queryParams: PostResumeClusterQueryParams;
-    headers: PostResumeClusterHeaders;
-    request?: Uint8Array;
-}
-export declare class PostResumeClusterResponse extends SpeakeasyBase {
+export declare class POSTResumeClusterResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

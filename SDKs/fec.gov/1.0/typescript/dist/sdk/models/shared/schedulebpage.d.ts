@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { SeekInfo } from "./seekinfo";
 import { ScheduleB } from "./scheduleb";
+import { SeekInfo } from "./seekinfo";
 export declare class ScheduleBPage extends SpeakeasyBase {
     pagination?: SeekInfo;
     results?: ScheduleB[];

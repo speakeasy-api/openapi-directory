@@ -4,6 +4,9 @@ export declare class Tenant extends SpeakeasyBase {
     comments?: string;
     created?: Date;
     customFields?: Record<string, any>;
+    /**
+     * Long-form name (optional)
+     */
     description?: string;
     group?: NestedTenantGroup;
     id?: number;

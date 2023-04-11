@@ -6,189 +6,193 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/composer/v1/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/composer/v1/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { ComposerProjectsLocationsEnvironmentsCreateRequest, ComposerProjectsLocationsEnvironmentsCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  ComposerProjectsLocationsEnvironmentsCreateRequest,
+  ComposerProjectsLocationsEnvironmentsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  EnvironmentStateEnum,
+  EnvironmentConfigEnvironmentSizeEnum,
+  NetworkingConfigConnectionTypeEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: ComposerProjectsLocationsEnvironmentsCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  environmentInput: {
     config: {
-      airflowUri: "dicta",
-      dagGcsPrefix: "debitis",
+      airflowUri: "provident",
+      dagGcsPrefix: "distinctio",
       databaseConfig: {
-        machineType: "voluptatum",
+        machineType: "quibusdam",
       },
       encryptionConfig: {
-        kmsKeyName: "et",
+        kmsKeyName: "unde",
       },
-      environmentSize: "ENVIRONMENT_SIZE_LARGE",
-      gkeCluster: "dolorem",
+      environmentSize: EnvironmentConfigEnvironmentSizeEnum.EnvironmentSizeLarge,
+      gkeCluster: "corrupti",
       maintenanceWindow: {
-        endTime: "et",
-        recurrence: "voluptate",
-        startTime: "iste",
+        endTime: "illum",
+        recurrence: "vel",
+        startTime: "error",
       },
       masterAuthorizedNetworksConfig: {
         cidrBlocks: [
           {
-            cidrBlock: "totam",
-            displayName: "dolores",
+            cidrBlock: "suscipit",
+            displayName: "iure",
+          },
+          {
+            cidrBlock: "magnam",
+            displayName: "debitis",
+          },
+          {
+            cidrBlock: "ipsa",
+            displayName: "delectus",
           },
         ],
         enabled: false,
       },
       nodeConfig: {
-        diskSizeGb: 6392442863481646880,
+        diskSizeGb: 272656,
         enableIpMasqAgent: false,
         ipAllocationPolicy: {
-          clusterIpv4CidrBlock: "odio",
-          clusterSecondaryRangeName: "dolore",
-          servicesIpv4CidrBlock: "id",
-          servicesSecondaryRangeName: "aspernatur",
-          useIpAliases: true,
+          clusterIpv4CidrBlock: "suscipit",
+          clusterSecondaryRangeName: "molestiae",
+          servicesIpv4CidrBlock: "minus",
+          servicesSecondaryRangeName: "placeat",
+          useIpAliases: false,
         },
-        location: "totam",
-        machineType: "commodi",
-        network: "quis",
+        location: "voluptatum",
+        machineType: "iusto",
+        network: "excepturi",
         oauthScopes: [
-          "aut",
-          "odit",
+          "recusandae",
+          "temporibus",
         ],
-        serviceAccount: "non",
-        subnetwork: "voluptas",
+        serviceAccount: "ab",
+        subnetwork: "quis",
         tags: [
-          "aut",
-          "illo",
+          "deserunt",
         ],
       },
-      nodeCount: 5558237345453186302,
+      nodeCount: 20218,
       privateEnvironmentConfig: {
-        cloudComposerConnectionSubnetwork: "officiis",
-        cloudComposerNetworkIpv4CidrBlock: "autem",
-        cloudSqlIpv4CidrBlock: "consectetur",
+        cloudComposerConnectionSubnetwork: "ipsam",
+        cloudComposerNetworkIpv4CidrBlock: "repellendus",
+        cloudSqlIpv4CidrBlock: "sapiente",
         enablePrivateEnvironment: false,
         enablePrivatelyUsedPublicIps: false,
         networkingConfig: {
-          connectionType: "CONNECTION_TYPE_UNSPECIFIED",
+          connectionType: NetworkingConfigConnectionTypeEnum.PrivateServiceConnect,
         },
         privateClusterConfig: {
-          enablePrivateEndpoint: true,
-          masterIpv4CidrBlock: "at",
+          enablePrivateEndpoint: false,
+          masterIpv4CidrBlock: "odit",
         },
-        webServerIpv4CidrBlock: "ipsum",
+        webServerIpv4CidrBlock: "at",
       },
       recoveryConfig: {
         scheduledSnapshotsConfig: {
-          enabled: true,
-          snapshotCreationSchedule: "modi",
-          snapshotLocation: "sint",
-          timeZone: "inventore",
+          enabled: false,
+          snapshotCreationSchedule: "at",
+          snapshotLocation: "maiores",
+          timeZone: "molestiae",
         },
       },
       softwareConfig: {
         airflowConfigOverrides: {
-          "exercitationem": "aut",
-          "reprehenderit": "tempore",
-          "maiores": "incidunt",
+          "quod": "esse",
+          "totam": "porro",
+          "dolorum": "dicta",
+          "nam": "officia",
         },
         envVariables: {
-          "beatae": "veritatis",
-          "in": "et",
+          "fugit": "deleniti",
+          "hic": "optio",
+          "totam": "beatae",
         },
-        imageVersion: "omnis",
+        imageVersion: "commodi",
         pypiPackages: {
-          "ex": "dolores",
+          "modi": "qui",
+          "impedit": "cum",
         },
-        pythonVersion: "placeat",
-        schedulerCount: 2118716725206170867,
+        pythonVersion: "esse",
+        schedulerCount: 216550,
       },
       webServerConfig: {
-        machineType: "rerum",
+        machineType: "excepturi",
       },
       webServerNetworkAccessControl: {
         allowedIpRanges: [
           {
-            description: "voluptas",
-            value: "quam",
-          },
-          {
-            description: "reprehenderit",
-            value: "qui",
+            description: "perferendis",
+            value: "ad",
           },
         ],
       },
       workloadsConfig: {
         scheduler: {
-          count: 8056746523676181822,
-          cpu: 72.199997,
-          memoryGb: 72.199997,
-          storageGb: 22.100000,
+          count: 617636,
+          cpu: 1496.75,
+          memoryGb: 6120.96,
+          storageGb: 2223.21,
         },
         webServer: {
-          cpu: 12.100000,
-          memoryGb: 76.099998,
-          storageGb: 40.099998,
+          cpu: 6169.34,
+          memoryGb: 3864.89,
+          storageGb: 9437.49,
         },
         worker: {
-          cpu: 28.100000,
-          maxCount: 3604381780091280195,
-          memoryGb: 20.100000,
-          minCount: 759605945513541974,
-          storageGb: 31.200001,
+          cpu: 9025.99,
+          maxCount: 681820,
+          memoryGb: 4499.5,
+          minCount: 359508,
+          storageGb: 6130.64,
         },
       },
     },
-    createTime: "et",
+    createTime: "iure",
     labels: {
-      "qui": "earum",
-      "illo": "omnis",
-      "ut": "consequatur",
+      "quidem": "architecto",
+      "ipsa": "reiciendis",
+      "est": "mollitia",
+      "laborum": "dolores",
     },
-    name: "dolor",
-    state: "DELETING",
-    updateTime: "error",
-    uuid: "reprehenderit",
+    name: "dolorem",
+    state: EnvironmentStateEnum.Running,
+    updateTime: "explicabo",
+    uuid: "c5955907-aff1-4a3a-afa9-467739251aa5",
   },
+  accessToken: "odit",
+  alt: AltEnum.Proto,
+  callback: "sequi",
+  fields: "tenetur",
+  key: "ipsam",
+  oauthToken: "id",
+  parent: "possimus",
+  prettyPrint: false,
+  quotaUser: "aut",
+  uploadType: "quasi",
+  uploadProtocol: "error",
 };
 
 sdk.projects.composerProjectsLocationsEnvironmentsCreate(req).then((res: ComposerProjectsLocationsEnvironmentsCreateResponse | AxiosError) => {
@@ -198,7 +202,8 @@ sdk.projects.composerProjectsLocationsEnvironmentsCreate(req).then((res: Compose
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### projects
 
@@ -210,8 +215,19 @@ sdk.projects.composerProjectsLocationsEnvironmentsCreate(req).then((res: Compose
 * `composerProjectsLocationsImageVersionsList` - List ImageVersions for provided location.
 * `composerProjectsLocationsOperationsDelete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 * `composerProjectsLocationsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-* `composerProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
-
+* `composerProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

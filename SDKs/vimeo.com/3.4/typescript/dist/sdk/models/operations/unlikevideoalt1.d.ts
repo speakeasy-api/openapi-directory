@@ -1,17 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UnlikeVideoAlt1PathParams extends SpeakeasyBase {
-    videoId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class UnlikeVideoAlt1Security extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
+    oauth2: string;
 }
 export declare class UnlikeVideoAlt1Request extends SpeakeasyBase {
-    pathParams: UnlikeVideoAlt1PathParams;
-    security: UnlikeVideoAlt1Security;
+    /**
+     * The ID of the video.
+     */
+    videoId: number;
 }
 export declare class UnlikeVideoAlt1Response extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The authenticated user can't like videos.
+     */
     legacyError?: shared.LegacyError;
 }

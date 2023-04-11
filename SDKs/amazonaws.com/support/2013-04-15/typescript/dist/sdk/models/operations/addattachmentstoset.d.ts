@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum AddAttachmentsToSetXAmzTargetEnum {
-    AwsSupport20130415AddAttachmentsToSet = "AWSSupport_20130415.AddAttachmentsToSet"
+    AWSSupport20130415AddAttachmentsToSet = "AWSSupport_20130415.AddAttachmentsToSet"
 }
-export declare class AddAttachmentsToSetHeaders extends SpeakeasyBase {
+export declare class AddAttachmentsToSetRequest extends SpeakeasyBase {
+    addAttachmentsToSetRequest: shared.AddAttachmentsToSetRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class AddAttachmentsToSetHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: AddAttachmentsToSetXAmzTargetEnum;
 }
-export declare class AddAttachmentsToSetRequest extends SpeakeasyBase {
-    headers: AddAttachmentsToSetHeaders;
-    request: shared.AddAttachmentsToSetRequest;
-}
 export declare class AddAttachmentsToSetResponse extends SpeakeasyBase {
+    /**
+     * Success
+     */
     addAttachmentsToSetResponse?: shared.AddAttachmentsToSetResponse;
+    /**
+     * AttachmentLimitExceeded
+     */
     attachmentLimitExceeded?: any;
+    /**
+     * AttachmentSetExpired
+     */
     attachmentSetExpired?: any;
+    /**
+     * AttachmentSetIdNotFound
+     */
     attachmentSetIdNotFound?: any;
+    /**
+     * AttachmentSetSizeLimitExceeded
+     */
     attachmentSetSizeLimitExceeded?: any;
     contentType: string;
+    /**
+     * InternalServerError
+     */
     internalServerError?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

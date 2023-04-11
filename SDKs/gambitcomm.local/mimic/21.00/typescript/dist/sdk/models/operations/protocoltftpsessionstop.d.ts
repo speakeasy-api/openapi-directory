@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolTftpSessionStopPathParams extends SpeakeasyBase {
-    agentNum: number;
-    sessionID: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolTftpSessionStopRequest extends SpeakeasyBase {
-    pathParams: ProtocolTftpSessionStopPathParams;
+    /**
+     * Agent to stop TFTP transaction
+     */
+    agentNum: number;
+    /**
+     * SessionID
+     */
+    sessionID: string;
 }
 export declare class ProtocolTftpSessionStopResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolTftpSessionStop200ApplicationJSONString?: string;
 }

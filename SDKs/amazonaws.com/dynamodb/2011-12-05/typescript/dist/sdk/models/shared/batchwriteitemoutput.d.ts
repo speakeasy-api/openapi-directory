@@ -3,7 +3,7 @@ import { BatchWriteResponse } from "./batchwriteresponse";
 import { WriteRequest } from "./writerequest";
 /**
  * A container for <code>BatchWriteItem</code> response
-**/
+ */
 export declare class BatchWriteItemOutput extends SpeakeasyBase {
     responses?: Record<string, BatchWriteResponse>;
     unprocessedItems?: Record<string, WriteRequest[]>;

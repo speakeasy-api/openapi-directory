@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum ListAvailableZonesXAmzTargetEnum {
     CloudHsmFrontendServiceListAvailableZones = "CloudHsmFrontendService.ListAvailableZones"
 }
-export declare class ListAvailableZonesHeaders extends SpeakeasyBase {
+export declare class ListAvailableZonesRequest extends SpeakeasyBase {
+    requestBody: Record<string, any>;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class ListAvailableZonesHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListAvailableZonesXAmzTargetEnum;
 }
-export declare class ListAvailableZonesRequest extends SpeakeasyBase {
-    headers: ListAvailableZonesHeaders;
-    request: Record<string, any>;
-}
 export declare class ListAvailableZonesResponse extends SpeakeasyBase {
+    /**
+     * CloudHsmInternalException
+     */
     cloudHsmInternalException?: any;
+    /**
+     * CloudHsmServiceException
+     */
     cloudHsmServiceException?: any;
     contentType: string;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * Success
+     */
     listAvailableZonesResponse?: shared.ListAvailableZonesResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

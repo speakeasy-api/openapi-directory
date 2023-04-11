@@ -1,8 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PostXmltojsonRequest extends SpeakeasyBase {
-    request: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PostXmltojsonResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

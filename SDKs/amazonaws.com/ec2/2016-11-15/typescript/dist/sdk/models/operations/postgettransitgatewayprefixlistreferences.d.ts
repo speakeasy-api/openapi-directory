@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostGetTransitGatewayPrefixListReferencesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTGetTransitGatewayPrefixListReferencesActionEnum {
     GetTransitGatewayPrefixListReferences = "GetTransitGatewayPrefixListReferences"
 }
-export declare enum PostGetTransitGatewayPrefixListReferencesVersionEnum {
+export declare enum POSTGetTransitGatewayPrefixListReferencesVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostGetTransitGatewayPrefixListReferencesQueryParams extends SpeakeasyBase {
-    action: PostGetTransitGatewayPrefixListReferencesActionEnum;
+export declare class POSTGetTransitGatewayPrefixListReferencesRequest extends SpeakeasyBase {
+    action: POSTGetTransitGatewayPrefixListReferencesActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostGetTransitGatewayPrefixListReferencesVersionEnum;
-}
-export declare class PostGetTransitGatewayPrefixListReferencesHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTGetTransitGatewayPrefixListReferencesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostGetTransitGatewayPrefixListReferencesHeaders extends Sp
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostGetTransitGatewayPrefixListReferencesRequest extends SpeakeasyBase {
-    queryParams: PostGetTransitGatewayPrefixListReferencesQueryParams;
-    headers: PostGetTransitGatewayPrefixListReferencesHeaders;
-    request?: Uint8Array;
-}
-export declare class PostGetTransitGatewayPrefixListReferencesResponse extends SpeakeasyBase {
+export declare class POSTGetTransitGatewayPrefixListReferencesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

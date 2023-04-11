@@ -1,24 +1,53 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteTargetsTargetIdWebhooksIdPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteTargetsTargetIdWebhooksIdRequest extends SpeakeasyBase {
+    /**
+     * Object Id
+     */
     id: string;
+    /**
+     * Target id
+     */
     targetId: string;
 }
-export declare class DeleteTargetsTargetIdWebhooksId401ApplicationJson extends SpeakeasyBase {
+/**
+ * Not found
+ */
+export declare class DeleteTargetsTargetIdWebhooksId404ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Not found.
+     */
     detail?: string;
 }
-export declare class DeleteTargetsTargetIdWebhooksId403ApplicationJson extends SpeakeasyBase {
+/**
+ * Not allowed to perform operation
+ */
+export declare class DeleteTargetsTargetIdWebhooksId403ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error message.
+     */
     detail?: string;
 }
-export declare class DeleteTargetsTargetIdWebhooksId404ApplicationJson extends SpeakeasyBase {
+/**
+ * Access token is missing or invalid
+ */
+export declare class DeleteTargetsTargetIdWebhooksId401ApplicationJSON extends SpeakeasyBase {
     detail?: string;
-}
-export declare class DeleteTargetsTargetIdWebhooksIdRequest extends SpeakeasyBase {
-    pathParams: DeleteTargetsTargetIdWebhooksIdPathParams;
 }
 export declare class DeleteTargetsTargetIdWebhooksIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deleteTargetsTargetIdWebhooksId401ApplicationJSONObject?: DeleteTargetsTargetIdWebhooksId401ApplicationJson;
-    deleteTargetsTargetIdWebhooksId403ApplicationJSONObject?: DeleteTargetsTargetIdWebhooksId403ApplicationJson;
-    deleteTargetsTargetIdWebhooksId404ApplicationJSONObject?: DeleteTargetsTargetIdWebhooksId404ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Access token is missing or invalid
+     */
+    deleteTargetsTargetIdWebhooksId401ApplicationJSONObject?: DeleteTargetsTargetIdWebhooksId401ApplicationJSON;
+    /**
+     * Not allowed to perform operation
+     */
+    deleteTargetsTargetIdWebhooksId403ApplicationJSONObject?: DeleteTargetsTargetIdWebhooksId403ApplicationJSON;
+    /**
+     * Not found
+     */
+    deleteTargetsTargetIdWebhooksId404ApplicationJSONObject?: DeleteTargetsTargetIdWebhooksId404ApplicationJSON;
 }

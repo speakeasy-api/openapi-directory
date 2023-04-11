@@ -1,21 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdateApnsVoipChannelPathParams extends SpeakeasyBase {
-    applicationId: string;
-}
-export declare class UpdateApnsVoipChannelHeaders extends SpeakeasyBase {
-    xAmzAlgorithm?: string;
-    xAmzContentSha256?: string;
-    xAmzCredential?: string;
-    xAmzDate?: string;
-    xAmzSecurityToken?: string;
-    xAmzSignature?: string;
-    xAmzSignedHeaders?: string;
-}
+import { AxiosResponse } from "axios";
 /**
  * Specifies the status and settings of the APNs (Apple Push Notification service) VoIP channel for an application.
-**/
-export declare class UpdateApnsVoipChannelRequestBodyApnsVoipChannelRequest extends SpeakeasyBase {
+ */
+export declare class UpdateAPNSVoipChannelRequestBodyAPNSVoipChannelRequest extends SpeakeasyBase {
     bundleId?: string;
     certificate?: string;
     defaultAuthenticationMethod?: string;
@@ -26,22 +15,59 @@ export declare class UpdateApnsVoipChannelRequestBodyApnsVoipChannelRequest exte
     tokenKeyId?: string;
 }
 export declare class UpdateApnsVoipChannelRequestBody extends SpeakeasyBase {
-    apnsVoipChannelRequest: UpdateApnsVoipChannelRequestBodyApnsVoipChannelRequest;
+    /**
+     * Specifies the status and settings of the APNs (Apple Push Notification service) VoIP channel for an application.
+     */
+    apnsVoipChannelRequest: UpdateAPNSVoipChannelRequestBodyAPNSVoipChannelRequest;
 }
 export declare class UpdateApnsVoipChannelRequest extends SpeakeasyBase {
-    pathParams: UpdateApnsVoipChannelPathParams;
-    headers: UpdateApnsVoipChannelHeaders;
-    request: UpdateApnsVoipChannelRequestBody;
+    requestBody: UpdateApnsVoipChannelRequestBody;
+    xAmzAlgorithm?: string;
+    xAmzContentSha256?: string;
+    xAmzCredential?: string;
+    xAmzDate?: string;
+    xAmzSecurityToken?: string;
+    xAmzSignature?: string;
+    xAmzSignedHeaders?: string;
+    /**
+     * The unique identifier for the application. This identifier is displayed as the <b>Project ID</b> on the Amazon Pinpoint console.
+     */
+    applicationId: string;
 }
 export declare class UpdateApnsVoipChannelResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * ForbiddenException
+     */
     forbiddenException?: any;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
+    /**
+     * MethodNotAllowedException
+     */
     methodNotAllowedException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
+    /**
+     * PayloadTooLargeException
+     */
     payloadTooLargeException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
+    /**
+     * Success
+     */
     updateApnsVoipChannelResponse?: shared.UpdateApnsVoipChannelResponse;
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostUpdateApplicationResourceLifecycleActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTUpdateApplicationResourceLifecycleActionEnum {
     UpdateApplicationResourceLifecycle = "UpdateApplicationResourceLifecycle"
 }
-export declare enum PostUpdateApplicationResourceLifecycleVersionEnum {
+export declare enum POSTUpdateApplicationResourceLifecycleVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostUpdateApplicationResourceLifecycleQueryParams extends SpeakeasyBase {
-    action: PostUpdateApplicationResourceLifecycleActionEnum;
-    version: PostUpdateApplicationResourceLifecycleVersionEnum;
-}
-export declare class PostUpdateApplicationResourceLifecycleHeaders extends SpeakeasyBase {
+export declare class POSTUpdateApplicationResourceLifecycleRequest extends SpeakeasyBase {
+    action: POSTUpdateApplicationResourceLifecycleActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTUpdateApplicationResourceLifecycleVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostUpdateApplicationResourceLifecycleHeaders extends Speak
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostUpdateApplicationResourceLifecycleRequest extends SpeakeasyBase {
-    queryParams: PostUpdateApplicationResourceLifecycleQueryParams;
-    headers: PostUpdateApplicationResourceLifecycleHeaders;
-    request?: Uint8Array;
-}
-export declare class PostUpdateApplicationResourceLifecycleResponse extends SpeakeasyBase {
+export declare class POSTUpdateApplicationResourceLifecycleResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

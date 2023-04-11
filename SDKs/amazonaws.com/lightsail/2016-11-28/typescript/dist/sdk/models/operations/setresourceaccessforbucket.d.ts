@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum SetResourceAccessForBucketXAmzTargetEnum {
     Lightsail20161128SetResourceAccessForBucket = "Lightsail_20161128.SetResourceAccessForBucket"
 }
-export declare class SetResourceAccessForBucketHeaders extends SpeakeasyBase {
+export declare class SetResourceAccessForBucketRequest extends SpeakeasyBase {
+    setResourceAccessForBucketRequest: shared.SetResourceAccessForBucketRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class SetResourceAccessForBucketHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: SetResourceAccessForBucketXAmzTargetEnum;
 }
-export declare class SetResourceAccessForBucketRequest extends SpeakeasyBase {
-    headers: SetResourceAccessForBucketHeaders;
-    request: shared.SetResourceAccessForBucketRequest;
-}
 export declare class SetResourceAccessForBucketResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
+    /**
+     * ServiceException
+     */
     serviceException?: any;
+    /**
+     * Success
+     */
     setResourceAccessForBucketResult?: shared.SetResourceAccessForBucketResult;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnauthenticatedException
+     */
     unauthenticatedException?: any;
 }

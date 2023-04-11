@@ -1,26 +1,46 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
 export declare class PostProfileChangePasswordRequestBody extends SpeakeasyBase {
-    confpassword: Record<string, any>;
-    currentPassword: Record<string, any>;
-    password: Record<string, any>;
+    confpassword: string;
+    currentPassword: string;
+    password: string;
 }
-export declare class PostProfileChangePassword200ApplicationJson extends SpeakeasyBase {
-    message?: string;
+/**
+ * Access token is missing or invalid
+ */
+export declare class PostProfileChangePassword401ApplicationJSON extends SpeakeasyBase {
+    detail?: string;
 }
-export declare class PostProfileChangePassword400ApplicationJson extends SpeakeasyBase {
+/**
+ * Bad Request
+ */
+export declare class PostProfileChangePassword400ApplicationJSON extends SpeakeasyBase {
     lessThanFieldNameGreaterThan?: string[];
     nonFieldErrors?: string[];
 }
-export declare class PostProfileChangePassword401ApplicationJson extends SpeakeasyBase {
-    detail?: string;
-}
-export declare class PostProfileChangePasswordRequest extends SpeakeasyBase {
-    request: PostProfileChangePasswordRequestBody;
+/**
+ * Success
+ */
+export declare class PostProfileChangePassword200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Message
+     */
+    message?: string;
 }
 export declare class PostProfileChangePasswordResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    postProfileChangePassword200ApplicationJSONObject?: PostProfileChangePassword200ApplicationJson;
-    postProfileChangePassword400ApplicationJSONObject?: PostProfileChangePassword400ApplicationJson;
-    postProfileChangePassword401ApplicationJSONObject?: PostProfileChangePassword401ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
+    postProfileChangePassword200ApplicationJSONObject?: PostProfileChangePassword200ApplicationJSON;
+    /**
+     * Bad Request
+     */
+    postProfileChangePassword400ApplicationJSONObject?: PostProfileChangePassword400ApplicationJSON;
+    /**
+     * Access token is missing or invalid
+     */
+    postProfileChangePassword401ApplicationJSONObject?: PostProfileChangePassword401ApplicationJSON;
 }

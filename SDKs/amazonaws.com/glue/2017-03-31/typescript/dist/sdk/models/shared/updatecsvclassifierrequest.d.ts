@@ -2,10 +2,12 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { CsvHeaderOptionEnum } from "./csvheaderoptionenum";
 /**
  * Specifies a custom CSV classifier to be updated.
-**/
+ */
 export declare class UpdateCsvClassifierRequest extends SpeakeasyBase {
     allowSingleColumn?: boolean;
     containsHeader?: CsvHeaderOptionEnum;
+    customDatatypeConfigured?: boolean;
+    customDatatypes?: string[];
     delimiter?: string;
     disableValueTrimming?: boolean;
     header?: string[];

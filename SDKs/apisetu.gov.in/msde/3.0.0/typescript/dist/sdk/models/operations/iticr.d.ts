@@ -1,116 +1,174 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class IticrSecurity extends SpeakeasyBase {
+    apiKey: string;
+    clientId: string;
+}
 export declare class IticrRequestBodyCertificateParameters extends SpeakeasyBase {
+    /**
+     * Full name
+     */
     fullName: string;
+    /**
+     * Certificate No.
+     */
     certno: string;
 }
+/**
+ * The format of the certificate in response.
+ */
 export declare enum IticrRequestBodyFormatEnum {
     Pdf = "pdf"
 }
+/**
+ * Request format
+ */
 export declare class IticrRequestBody extends SpeakeasyBase {
     certificateParameters?: IticrRequestBodyCertificateParameters;
-    consentArtifact?: any;
+    consentArtifact?: shared.ConsentArtifactSchema;
+    /**
+     * The format of the certificate in response.
+     */
     format: IticrRequestBodyFormatEnum;
+    /**
+     * A unique transaction id for this request in UUID format. It is used for tracking the request.
+     */
     txnId: string;
 }
-export declare class IticrSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
-    clientId: shared.SchemeClientId;
+export declare enum Iticr504ApplicationJSONErrorEnum {
+    GatewayTimeout = "gateway_timeout"
 }
-export declare enum Iticr400ApplicationJsonErrorEnum {
+export declare enum Iticr504ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
+}
+/**
+ * Gateway timeout
+ */
+export declare class Iticr504ApplicationJSON extends SpeakeasyBase {
+    error?: Iticr504ApplicationJSONErrorEnum;
+    errorDescription?: Iticr504ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Iticr503ApplicationJSONErrorEnum {
+    ServiceUnavailable = "service_unavailable"
+}
+export declare enum Iticr503ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
+}
+/**
+ * Service unavailable
+ */
+export declare class Iticr503ApplicationJSON extends SpeakeasyBase {
+    error?: Iticr503ApplicationJSONErrorEnum;
+    errorDescription?: Iticr503ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Iticr502ApplicationJSONErrorEnum {
+    BadGatewy = "bad_gatewy"
+}
+export declare enum Iticr502ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
+}
+/**
+ * Bad gateway
+ */
+export declare class Iticr502ApplicationJSON extends SpeakeasyBase {
+    error?: Iticr502ApplicationJSONErrorEnum;
+    errorDescription?: Iticr502ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Iticr500ApplicationJSONErrorEnum {
+    InternalServerError = "internal_server_error"
+}
+export declare enum Iticr500ApplicationJSONErrorDescriptionEnum {
+    InternalServerError = "Internal server error"
+}
+/**
+ * Internal server error
+ */
+export declare class Iticr500ApplicationJSON extends SpeakeasyBase {
+    error?: Iticr500ApplicationJSONErrorEnum;
+    errorDescription?: Iticr500ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Iticr404ApplicationJSONErrorEnum {
+    RecordNotFound = "record_not_found",
+    UrlNotFound = "url_not_found"
+}
+export declare enum Iticr404ApplicationJSONErrorDescriptionEnum {
+    NoRecordFound = "No record found",
+    YourAPIUrlOrPathIsIncorrect = "Your API url or path is incorrect"
+}
+/**
+ * No record found
+ */
+export declare class Iticr404ApplicationJSON extends SpeakeasyBase {
+    error?: Iticr404ApplicationJSONErrorEnum;
+    errorDescription?: Iticr404ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Iticr401ApplicationJSONErrorEnum {
+    InvalidAuthentication = "invalid_authentication",
+    InvalidAuthorization = "invalid_authorization"
+}
+export declare enum Iticr401ApplicationJSONErrorDescriptionEnum {
+    AuthenticationFailed = "Authentication failed",
+    YouAreNotAuthorizedToUseThisAPI = "You are not authorized to use this API"
+}
+/**
+ * Unauthorized access
+ */
+export declare class Iticr401ApplicationJSON extends SpeakeasyBase {
+    error?: Iticr401ApplicationJSONErrorEnum;
+    errorDescription?: Iticr401ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Iticr400ApplicationJSONErrorEnum {
     MissingParameter = "missing_parameter",
     InvalidParameter = "invalid_parameter",
     InvalidFormat = "invalid_format",
     InvalidTxnid = "invalid_txnid",
     InvalidConsentid = "invalid_consentid"
 }
-export declare enum Iticr400ApplicationJsonErrorDescriptionEnum {
+export declare enum Iticr400ApplicationJSONErrorDescriptionEnum {
     PleaseProvideAllMandatoryParameters = "Please provide all mandatory parameters",
     BadRequest = "Bad request",
     TheFormatParameterIsInvalid = "The format parameter is invalid",
-    TheTxnIdParameterMustBeInUuidFormat = "The txnId parameter must be in UUID format",
-    TheConsentIdParameterMustBeInUuidFormat = "The consentId parameter must be in UUID format"
+    TheTxnIdParameterMustBeInUUIDFormat = "The txnId parameter must be in UUID format",
+    TheConsentIdParameterMustBeInUUIDFormat = "The consentId parameter must be in UUID format"
 }
-export declare class Iticr400ApplicationJson extends SpeakeasyBase {
-    error?: Iticr400ApplicationJsonErrorEnum;
-    errorDescription?: Iticr400ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Iticr401ApplicationJsonErrorEnum {
-    InvalidAuthentication = "invalid_authentication",
-    InvalidAuthorization = "invalid_authorization"
-}
-export declare enum Iticr401ApplicationJsonErrorDescriptionEnum {
-    AuthenticationFailed = "Authentication failed",
-    YouAreNotAuthorizedToUseThisApi = "You are not authorized to use this API"
-}
-export declare class Iticr401ApplicationJson extends SpeakeasyBase {
-    error?: Iticr401ApplicationJsonErrorEnum;
-    errorDescription?: Iticr401ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Iticr404ApplicationJsonErrorEnum {
-    RecordNotFound = "record_not_found",
-    UrlNotFound = "url_not_found"
-}
-export declare enum Iticr404ApplicationJsonErrorDescriptionEnum {
-    NoRecordFound = "No record found",
-    YourApiUrlOrPathIsIncorrect = "Your API url or path is incorrect"
-}
-export declare class Iticr404ApplicationJson extends SpeakeasyBase {
-    error?: Iticr404ApplicationJsonErrorEnum;
-    errorDescription?: Iticr404ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Iticr500ApplicationJsonErrorEnum {
-    InternalServerError = "internal_server_error"
-}
-export declare enum Iticr500ApplicationJsonErrorDescriptionEnum {
-    InternalServerError = "Internal server error"
-}
-export declare class Iticr500ApplicationJson extends SpeakeasyBase {
-    error?: Iticr500ApplicationJsonErrorEnum;
-    errorDescription?: Iticr500ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Iticr502ApplicationJsonErrorEnum {
-    BadGatewy = "bad_gatewy"
-}
-export declare enum Iticr502ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
-}
-export declare class Iticr502ApplicationJson extends SpeakeasyBase {
-    error?: Iticr502ApplicationJsonErrorEnum;
-    errorDescription?: Iticr502ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Iticr503ApplicationJsonErrorEnum {
-    ServiceUnavailable = "service_unavailable"
-}
-export declare enum Iticr503ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
-}
-export declare class Iticr503ApplicationJson extends SpeakeasyBase {
-    error?: Iticr503ApplicationJsonErrorEnum;
-    errorDescription?: Iticr503ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Iticr504ApplicationJsonErrorEnum {
-    GatewayTimeout = "gateway_timeout"
-}
-export declare enum Iticr504ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
-}
-export declare class Iticr504ApplicationJson extends SpeakeasyBase {
-    error?: Iticr504ApplicationJsonErrorEnum;
-    errorDescription?: Iticr504ApplicationJsonErrorDescriptionEnum;
-}
-export declare class IticrRequest extends SpeakeasyBase {
-    request?: IticrRequestBody;
-    security: IticrSecurity;
+/**
+ * Bad request
+ */
+export declare class Iticr400ApplicationJSON extends SpeakeasyBase {
+    error?: Iticr400ApplicationJSONErrorEnum;
+    errorDescription?: Iticr400ApplicationJSONErrorDescriptionEnum;
 }
 export declare class IticrResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    iticr400ApplicationJSONObject?: Iticr400ApplicationJson;
-    iticr401ApplicationJSONObject?: Iticr401ApplicationJson;
-    iticr404ApplicationJSONObject?: Iticr404ApplicationJson;
-    iticr500ApplicationJSONObject?: Iticr500ApplicationJson;
-    iticr502ApplicationJSONObject?: Iticr502ApplicationJson;
-    iticr503ApplicationJSONObject?: Iticr503ApplicationJson;
-    iticr504ApplicationJSONObject?: Iticr504ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad request
+     */
+    iticr400ApplicationJSONObject?: Iticr400ApplicationJSON;
+    /**
+     * Unauthorized access
+     */
+    iticr401ApplicationJSONObject?: Iticr401ApplicationJSON;
+    /**
+     * No record found
+     */
+    iticr404ApplicationJSONObject?: Iticr404ApplicationJSON;
+    /**
+     * Internal server error
+     */
+    iticr500ApplicationJSONObject?: Iticr500ApplicationJSON;
+    /**
+     * Bad gateway
+     */
+    iticr502ApplicationJSONObject?: Iticr502ApplicationJSON;
+    /**
+     * Service unavailable
+     */
+    iticr503ApplicationJSONObject?: Iticr503ApplicationJSON;
+    /**
+     * Gateway timeout
+     */
+    iticr504ApplicationJSONObject?: Iticr504ApplicationJSON;
 }

@@ -1,13 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetApiUsagePlansV2Security extends SpeakeasyBase {
-    bearerToken: shared.SchemeBearerToken;
-}
-export declare class GetApiUsagePlansV2Request extends SpeakeasyBase {
-    security: GetApiUsagePlansV2Security;
-}
+import { AxiosResponse } from "axios";
 export declare class GetApiUsagePlansV2Response extends SpeakeasyBase {
+    /**
+     * api usage
+     */
     apiUsageList?: shared.ApiUsageList;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

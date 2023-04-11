@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { SubscriptionDefinitionVersion } from "./subscriptiondefinitionversion";
+/**
+ * Success
+ */
 export declare class GetSubscriptionDefinitionVersionResponse extends SpeakeasyBase {
     arn?: string;
     creationTimestamp?: string;

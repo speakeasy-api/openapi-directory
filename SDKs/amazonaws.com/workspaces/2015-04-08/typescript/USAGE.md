@@ -1,32 +1,32 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AssociateConnectionAliasRequest, AssociateConnectionAliasResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  AssociateConnectionAliasRequest,
+  AssociateConnectionAliasResponse,
+  AssociateConnectionAliasXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    hmac: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: AssociateConnectionAliasRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "WorkspacesService.AssociateConnectionAlias",
+  associateConnectionAliasRequest: {
+    aliasId: "corrupti",
+    resourceId: "provident",
   },
-  request: {
-    aliasId: "fugit",
-    resourceId: "et",
-  },
+  xAmzAlgorithm: "distinctio",
+  xAmzContentSha256: "quibusdam",
+  xAmzCredential: "unde",
+  xAmzDate: "nulla",
+  xAmzSecurityToken: "corrupti",
+  xAmzSignature: "illum",
+  xAmzSignedHeaders: "vel",
+  xAmzTarget: AssociateConnectionAliasXAmzTargetEnum.WorkspacesServiceAssociateConnectionAlias,
 };
 
 sdk.associateConnectionAlias(req).then((res: AssociateConnectionAliasResponse | AxiosError) => {

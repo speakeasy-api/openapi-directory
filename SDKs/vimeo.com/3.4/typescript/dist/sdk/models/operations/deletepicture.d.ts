@@ -1,17 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class DeletePicturePathParams extends SpeakeasyBase {
-    portraitsetId: number;
-    userId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DeletePictureSecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
+    oauth2: string;
 }
 export declare class DeletePictureRequest extends SpeakeasyBase {
-    pathParams: DeletePicturePathParams;
-    security: DeletePictureSecurity;
+    /**
+     * The ID of the picture.
+     */
+    portraitsetId: number;
+    /**
+     * The ID of the user.
+     */
+    userId: number;
 }
 export declare class DeletePictureResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

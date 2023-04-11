@@ -1,29 +1,31 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class UpdateUserLevelChannelPathParams extends SpeakeasyBase {
-    channelId: string;
-}
-export declare class UpdateUserLevelChannelApplicationJson extends SpeakeasyBase {
-    name: string;
-}
-export declare class UpdateUserLevelChannelMultipartFormData extends SpeakeasyBase {
-    name: string;
-}
-export declare class UpdateUserLevelChannelRequests extends SpeakeasyBase {
-    object?: UpdateUserLevelChannelApplicationJson;
-    object1?: UpdateUserLevelChannelMultipartFormData;
-}
+import { AxiosResponse } from "axios";
 export declare class UpdateUserLevelChannelSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
+    oAuth: string;
+}
+export declare class UpdateUserLevelChannelApplicationJSON extends SpeakeasyBase {
+    /**
+     * A new name for the channel.
+     */
+    name: string;
 }
 export declare class UpdateUserLevelChannelRequest extends SpeakeasyBase {
-    pathParams: UpdateUserLevelChannelPathParams;
-    request?: UpdateUserLevelChannelRequests;
-    security: UpdateUserLevelChannelSecurity;
+    requestBody?: UpdateUserLevelChannelApplicationJSON;
+    /**
+     * Channel Id.
+     */
+    channelId: string;
 }
 export declare class UpdateUserLevelChannelResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * **Status Code:** `204`
+     *
+     * @remarks
+     * Channel updated.
+     */
     updateUserLevelChannel204ApplicationJSONAny?: any;
 }

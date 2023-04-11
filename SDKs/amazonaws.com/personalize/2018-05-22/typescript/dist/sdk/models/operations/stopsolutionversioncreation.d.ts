@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum StopSolutionVersionCreationXAmzTargetEnum {
     AmazonPersonalizeStopSolutionVersionCreation = "AmazonPersonalize.StopSolutionVersionCreation"
 }
-export declare class StopSolutionVersionCreationHeaders extends SpeakeasyBase {
+export declare class StopSolutionVersionCreationRequest extends SpeakeasyBase {
+    stopSolutionVersionCreationRequest: shared.StopSolutionVersionCreationRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class StopSolutionVersionCreationHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: StopSolutionVersionCreationXAmzTargetEnum;
 }
-export declare class StopSolutionVersionCreationRequest extends SpeakeasyBase {
-    headers: StopSolutionVersionCreationHeaders;
-    request: shared.StopSolutionVersionCreationRequest;
-}
 export declare class StopSolutionVersionCreationResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * ResourceInUseException
+     */
     resourceInUseException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

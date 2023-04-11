@@ -16,8 +16,14 @@ export declare class DiscoveryclustersClusters extends SpeakeasyBase {
     uid?: string;
     volumes?: Volume[];
 }
+/**
+ * Successful response
+ */
 export declare class Discoveryclusters extends SpeakeasyBase {
     clusters?: DiscoveryclustersClusters[];
+    /**
+     * Resorce type.
+     */
     kind?: string;
     totalClusters?: number;
 }

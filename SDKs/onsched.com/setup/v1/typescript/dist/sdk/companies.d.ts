@@ -1,5 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Companies {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,130 +10,146 @@ export declare class Companies {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteSetupV1CompaniesDomainsId - Deletes a whitelisted domain for the authorized company
-     * Returns view of domain deleted
-    **/
+     * Delete Company Domain
+     *
+     * @remarks
+     * <p>Use this endpoint to <b>Delete</b> an OnSchedJs domain from your authorized company. A valid <b>companyDomain id</b> is required.</p>
+     */
     deleteSetupV1CompaniesDomainsId(req: operations.DeleteSetupV1CompaniesDomainsIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteSetupV1CompaniesDomainsIdResponse>;
     /**
-     * deleteSetupV1CompaniesEmailTemplatesMaster - Deletes custom master email template settings reverting to the default
+     * Delete Master Template Settings
      *
-     * Settings exist for showing or hiding panels
-     * and for changing color schemes
-    **/
+     * @remarks
+     * <p>Use this endpoint to <b>Delete Custom Master Email Template Settings</b>. Deleting a custom master email template setting will reactivate the original default OnSched template settings.</p>
+     */
     deleteSetupV1CompaniesEmailTemplatesMaster(config?: AxiosRequestConfig): Promise<operations.DeleteSetupV1CompaniesEmailTemplatesMasterResponse>;
     /**
-     * deleteSetupV1CompaniesRegionsId - Delete a region
+     * Delete Region
      *
-     * Deletes a region.
-     *
-     * If the region is related to any business locations it cannot be deleted
-    **/
+     * @remarks
+     * <p>Use this endpoint to <b>Delete</b> a region object. A valid <b>region id</b> is required. If the region is related to any business locations it won't be deleted. You must first remove any references to region id from the business locations prior to deleting.</p>
+     */
     deleteSetupV1CompaniesRegionsId(req: operations.DeleteSetupV1CompaniesRegionsIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteSetupV1CompaniesRegionsIdResponse>;
     /**
-     * getSetupV1Companies - Returns a company profile information of the authorized company
-    **/
+     * Get Company
+     *
+     * @remarks
+     * <p>Use this endpoint to return the <b>Authorized Company</b> information. The company is the main entity that oversees all business locations defined below it, hierarchically. </p>
+     * <p>Access to the company credentials gives you access to all business locations defined in the authorized company. Client credentials resolve to a single company and are purposely hidden from this endpoint.</p>
+     */
     getSetupV1Companies(config?: AxiosRequestConfig): Promise<operations.GetSetupV1CompaniesResponse>;
     /**
-     * getSetupV1CompaniesDomains - Returns a list of whitelisted domains for the authorized company
-    **/
+     * List Company Domains
+     *
+     * @remarks
+     * <p>Use this endpoint to return a <b>List of Company Domains</b> for the authorized company. To share the OnSchedJS booking widget on your website or in your application your domain must be listed.</p>
+     */
     getSetupV1CompaniesDomains(config?: AxiosRequestConfig): Promise<operations.GetSetupV1CompaniesDomainsResponse>;
     /**
-     * getSetupV1CompaniesDomainsId - Returns a whitelisted domain for the authorized company
-    **/
+     * Get Company Domain
+     *
+     * @remarks
+     * <p>Use this endpoint to return a <b>Company Domain</b> object. A valid <b>companyDomain id</b> is required. </p>
+     */
     getSetupV1CompaniesDomainsId(req: operations.GetSetupV1CompaniesDomainsIdRequest, config?: AxiosRequestConfig): Promise<operations.GetSetupV1CompaniesDomainsIdResponse>;
     /**
-     * getSetupV1CompaniesEmailTemplates - Returns email template list from the authorized company
+     * List Email Templates
      *
-     * Returns a list of email templates that may be customized
-     * If the template has been customized, the customized property is true.
-     * The scope parameter indicates if the email template has been customized
-     * at Business Location level or Company level.
-     * This endpoint returns only company level templates so the scope is always company
-    **/
+     * @remarks
+     * <p>Use this endpoint to return a <b>List of Email Templates</b> that are provided and may be customized. If the template has been customized, the customized property is true. The scope parameter indicates if the email template has been customized at the Business Location level or Company level. This endpoint returns <b>only company level templates</b>, so the scope is always company.</p>
+     */
     getSetupV1CompaniesEmailTemplates(config?: AxiosRequestConfig): Promise<operations.GetSetupV1CompaniesEmailTemplatesResponse>;
     /**
-     * getSetupV1CompaniesEmailTemplatesMaster - Returns master email template settings
+     * Get Master Template Settings
      *
-     * Settings exist for showing or hiding panels
-     * and for changing color schemes
-    **/
+     * @remarks
+     * <p>Use this endpoint to return the <b>Master Email Template Settings</b>. Settings exist for showing or hiding email panels and for changing color schemes. </p>
+     */
     getSetupV1CompaniesEmailTemplatesMaster(config?: AxiosRequestConfig): Promise<operations.GetSetupV1CompaniesEmailTemplatesMasterResponse>;
     /**
-     * getSetupV1CompaniesEmailTemplatesTemplateName - Returns default or custom email template from the authorized company
+     * Get Email Template
      *
-     * The default email template is returned when a custom template is not found
-     * The response content is in html format.
-    **/
+     * @remarks
+     * <p>Use this endpoint to return the requested <b>Email Template</b>. If it wasn't customized the default template is returned. The response content is in html format. A valid emailTemplate <b>name</b> is required. Find template names by using the: <i>GET  /setup /v1 /companies /email /templates</i> endpoint. Note: The master template cannot be accessed here. </p>
+     * <p>To create custom company email templates, go to the <i>POST  /setup /v1 /locations /{id} /email /templates</i> endpoint and create a template using the Primary Business Location Id.</p>
+     */
     getSetupV1CompaniesEmailTemplatesTemplateName(req: operations.GetSetupV1CompaniesEmailTemplatesTemplateNameRequest, config?: AxiosRequestConfig): Promise<operations.GetSetupV1CompaniesEmailTemplatesTemplateNameResponse>;
     /**
-     * getSetupV1CompaniesRegions - Returns a list of regions.
+     * List Regions
      *
-     * The results are returned in pages. Use the offset and limit parameters to control the page start and size. Default offset is 0, and limit is 20.
-     * Use the other query parameters to optionally filter the results list.
-    **/
+     * @remarks
+     * <p>Use this endpoint to return a list of <b>Regions</b> in the authorized company. The results are returned in pages. Use the offset and limit parameters to control the page start and number of results. Default offset is 0, limit is 20, max is 100. Use the query parameters to filter the results further. </p>
+     */
     getSetupV1CompaniesRegions(req: operations.GetSetupV1CompaniesRegionsRequest, config?: AxiosRequestConfig): Promise<operations.GetSetupV1CompaniesRegionsResponse>;
     /**
-     * getSetupV1CompaniesRegionsId - Get a Region
-    **/
+     * Get Region
+     *
+     * @remarks
+     * <p>Use this endpoint to return a <b>Region</b> object. A valid <b>region id</b> is required.</p>
+     */
     getSetupV1CompaniesRegionsId(req: operations.GetSetupV1CompaniesRegionsIdRequest, config?: AxiosRequestConfig): Promise<operations.GetSetupV1CompaniesRegionsIdResponse>;
     /**
-     * getSetupV1CompaniesTimezonesDate - Returns timezone information for all supported Timezone's
+     * List Time Zones
      *
-     * The result returned is a single location object. An id is required to find the location. Find location id's using the GET consumer/v1/locations end point,
-    **/
+     * @remarks
+     * <p>Use this endpoint to return a <b>List of timezone names, timezoneIana and tzOffset values</b> calculated for the date requested. Daylight Savings may or may not apply depending on the date specified.</p>
+     */
     getSetupV1CompaniesTimezonesDate(req: operations.GetSetupV1CompaniesTimezonesDateRequest, config?: AxiosRequestConfig): Promise<operations.GetSetupV1CompaniesTimezonesDateResponse>;
     /**
-     * postSetupV1Companies - Creates a company profile.
+     * Create Company
      *
-     * Use this endpoint to create a new Company Profile.
-     * This endpoint is restricted by scope and limited to use by OnSched internal apps
-     *
-     * The timezoneName can be expressed as an Iana Timezone e.g. America/New_York
-     * or a Microsoft Timezone e.g. Eastern Standard Time
-    **/
-    postSetupV1Companies(req: operations.PostSetupV1CompaniesRequest, config?: AxiosRequestConfig): Promise<operations.PostSetupV1CompaniesResponse>;
+     * @remarks
+     * <p>Use this endpoint to <b>Create</b> a new authorized company.</p>
+     * <p>
+     *   <b>Note: Special API Partner credentials are required to access this endpoint.</b>
+     * </p>
+     * <p>The <b>name, registrationEmail, phone, country</b> and <b>timezoneName</b> are required fields. For <b>country</b> use the standard ISO 3166 2-character country code.</p>
+     * <p>The <b>timezoneName</b> must be expressed as an IANA Timezone e.g., <i>America/New_York</i>.</p>
+     * <p>For more information: <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">Timezone IANA Wiki</a></p>
+     */
+    postSetupV1Companies(req: shared.CompanyInputModel, config?: AxiosRequestConfig): Promise<operations.PostSetupV1CompaniesResponse>;
     /**
-     * postSetupV1CompaniesDomains - Creates a whitelisted domain for the authorized company
-     * Returns view of domain created
-    **/
-    postSetupV1CompaniesDomains(req: operations.PostSetupV1CompaniesDomainsRequest, config?: AxiosRequestConfig): Promise<operations.PostSetupV1CompaniesDomainsResponse>;
+     * Create Company Domain
+     *
+     * @remarks
+     * <p>Use this endpoint to <b>Create</b> an OnSchedJs domain for your authorized company. To share the OnSchedJS booking widget on your website or in your application you must add the domain.</p>
+     */
+    postSetupV1CompaniesDomains(req: shared.CompanyDomainInputModel, config?: AxiosRequestConfig): Promise<operations.PostSetupV1CompaniesDomainsResponse>;
     /**
-     * postSetupV1CompaniesEmailTemplatesMaster - Updates / creates custom master email template settings
+     * Create Master Template Settings
      *
-     * Settings exist for showing or hiding panels
-     * and for changing color schemes
-    **/
-    postSetupV1CompaniesEmailTemplatesMaster(req: operations.PostSetupV1CompaniesEmailTemplatesMasterRequest, config?: AxiosRequestConfig): Promise<operations.PostSetupV1CompaniesEmailTemplatesMasterResponse>;
+     * @remarks
+     * <p>Use this endpoint to <b>Create Custom Master Email Template Settings</b>. Settings exist for showing or hiding email panels and for changing color schemes. Use the <i>GET  /setup /v1 /companies /email /templates</i> endpoint to display the settings offered. Changes to the Master Template Settings will be reflected in all business locations associated with this company. </p>
+     * <p>The email template endpoints work a little differently than most. There are no endpoints to update the templates, we use the post endpoint to create a custom template instead. This endpoint creates a new custom Master Template Settings file that will be used instead. If you delete it you are deleting the custom template settings you created and the original default Master Template created by OnSched would be reactivated.</p>
+     */
+    postSetupV1CompaniesEmailTemplatesMaster(req: shared.MasterTemplateSettingsInputModel, config?: AxiosRequestConfig): Promise<operations.PostSetupV1CompaniesEmailTemplatesMasterResponse>;
     /**
-     * postSetupV1CompaniesRegions - Create a new region
+     * Create Region
      *
-     * Creates a new region.
-     *
-     * Regions can be mapped to business locations. Locations can be filtered by region id
-    **/
-    postSetupV1CompaniesRegions(req: operations.PostSetupV1CompaniesRegionsRequest, config?: AxiosRequestConfig): Promise<operations.PostSetupV1CompaniesRegionsResponse>;
+     * @remarks
+     * <p>Use this endpoint to <b>Create</b> a region object. Regions can be mapped to business locations. They can be used by the locations endpoints to filter locations by region id.</p>
+     */
+    postSetupV1CompaniesRegions(req: shared.RegionInputModel, config?: AxiosRequestConfig): Promise<operations.PostSetupV1CompaniesRegionsResponse>;
     /**
-     * putSetupV1Companies - Updates a company object.
+     * Update Company
      *
-     * Use this endpoint to update the authorized company.
-     *
-     * Your client credentials resolve to a single company.
-     *
-     * The timezoneName can be expressed as an Iana Timezone e.g. America/New_York
-     * or a Microsoft Timezone e.g. Eastern Standard Time
-    **/
-    putSetupV1Companies(req: operations.PutSetupV1CompaniesRequest, config?: AxiosRequestConfig): Promise<operations.PutSetupV1CompaniesResponse>;
+     * @remarks
+     * <p>Use this endpoint to <b>Update</b> the authorized company information. Your client credentials resolve to a single company. The timezoneName must be expressed as an IANA Timezone, e.g., <i>America/New_York</i>. </p>
+     * <p>For more information: <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">Timezone IANA Wiki</a></p>
+     */
+    putSetupV1Companies(req: shared.CompanyUpdateModel, config?: AxiosRequestConfig): Promise<operations.PutSetupV1CompaniesResponse>;
     /**
-     * putSetupV1CompaniesDomainsId - Updates a whitelisted domain for the authorized company
-     * Returns view of domain updated
-    **/
+     * Update Company Domain
+     *
+     * @remarks
+     * <p>Use this endpoint to <b>Update</b> an OnSchedJs domain for your authorized company. A valid <b>companyDomain id</b> is required.</p>
+     */
     putSetupV1CompaniesDomainsId(req: operations.PutSetupV1CompaniesDomainsIdRequest, config?: AxiosRequestConfig): Promise<operations.PutSetupV1CompaniesDomainsIdResponse>;
     /**
-     * putSetupV1CompaniesRegionsId - Update a region
+     * Update Region
      *
-     * Updates a region.
-     *
-     * Regions can be mapped to business locations. Locations can be filtered by region id.
-    **/
+     * @remarks
+     * <p>Use this endpoint to <b>Update</b> a region object. A valid <b>region id</b> is required.</p>
+     */
     putSetupV1CompaniesRegionsId(req: operations.PutSetupV1CompaniesRegionsIdRequest, config?: AxiosRequestConfig): Promise<operations.PutSetupV1CompaniesRegionsIdResponse>;
 }

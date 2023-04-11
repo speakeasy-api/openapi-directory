@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Files {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class Files {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getFiles - Retrieve a file
+     * Retrieve a file
      *
+     * @remarks
      * Retrieve files such as export results, invoices, and accounting period reports.
      *
      * The response content type depends on the type of file that you retrieve.
@@ -32,6 +33,6 @@ export declare class Files {
      *
      * **Note:** The maximum file size is 2,047 MB. If you have a data request that exceeds this limit, Zuora returns the following 403 response: `<security:max-object-size>2047MB</security:max-object-size>`. Submit a request at <a href="http://support.zuora.com/" target="_blank">Zuora Global Support</a> to determine if large file optimization is an option for you.
      *
-    **/
-    getFiles(req: operations.GetFilesRequest, config?: AxiosRequestConfig): Promise<operations.GetFilesResponse>;
+     */
+    getFiles(req: operations.GETFilesRequest, config?: AxiosRequestConfig): Promise<operations.GETFilesResponse>;
 }

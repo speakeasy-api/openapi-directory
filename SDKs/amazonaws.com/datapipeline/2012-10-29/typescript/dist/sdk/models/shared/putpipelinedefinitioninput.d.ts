@@ -4,7 +4,7 @@ import { ParameterValue } from "./parametervalue";
 import { PipelineObject } from "./pipelineobject";
 /**
  * Contains the parameters for PutPipelineDefinition.
-**/
+ */
 export declare class PutPipelineDefinitionInput extends SpeakeasyBase {
     parameterObjects?: ParameterObject[];
     parameterValues?: ParameterValue[];

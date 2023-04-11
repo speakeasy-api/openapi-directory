@@ -1,34 +1,105 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SearchDbCoIndicatorsQueryParams extends SpeakeasyBase {
-    changedateFrom?: Date;
-    changedateTo?: Date;
-    createdateFrom?: Date;
-    createdateTo?: Date;
-    description?: string;
-    filesuffix?: string;
-    fromdate?: Date;
-    group?: string;
-    max?: number;
-    maxlatitude?: number;
-    maxlongitude?: number;
-    minlatitude?: number;
-    minlongitude?: number;
-    name?: string;
-    searchDbDbCoIndicatorsDescription?: string;
-    searchDbDbCoIndicatorsDomain?: string;
-    searchDbDbCoIndicatorsGeoName?: string;
-    searchDbDbCoIndicatorsIndicatorName?: string;
-    searchDbDbCoIndicatorsLocation?: string;
-    searchDbDbCoIndicatorsMeasure?: number;
-    searchDbDbCoIndicatorsSubdomain?: string;
-    skip?: number;
-    text?: string;
-    todate?: Date;
-}
+import { AxiosResponse } from "axios";
 export declare class SearchDbCoIndicatorsRequest extends SpeakeasyBase {
-    queryParams: SearchDbCoIndicatorsQueryParams;
+    /**
+     * Archive change date from
+     */
+    changedateFrom?: Date;
+    /**
+     * Archive change date to
+     */
+    changedateTo?: Date;
+    /**
+     * Archive create date from
+     */
+    createdateFrom?: Date;
+    /**
+     * Archive create date to
+     */
+    createdateTo?: Date;
+    /**
+     * Search description
+     */
+    description?: string;
+    /**
+     * File suffix
+     */
+    filesuffix?: string;
+    /**
+     * From date
+     */
+    fromdate?: Date;
+    /**
+     * Parent entry
+     */
+    group?: string;
+    /**
+     * Max number of results
+     */
+    max?: number;
+    /**
+     * Northern bounds of search
+     */
+    maxlatitude?: number;
+    /**
+     * Eastern bounds of search
+     */
+    maxlongitude?: number;
+    /**
+     * Southern bounds of search
+     */
+    minlatitude?: number;
+    /**
+     * Western bounds of search
+     */
+    minlongitude?: number;
+    /**
+     * Search name
+     */
+    name?: string;
+    /**
+     * Description
+     */
+    searchDbDbCoIndicatorsDescription?: string;
+    /**
+     * Domain
+     */
+    searchDbDbCoIndicatorsDomain?: string;
+    /**
+     * County
+     */
+    searchDbDbCoIndicatorsGeoName?: string;
+    /**
+     * Indicator
+     */
+    searchDbDbCoIndicatorsIndicatorName?: string;
+    /**
+     * Location
+     */
+    searchDbDbCoIndicatorsLocation?: string;
+    /**
+     * Measure
+     */
+    searchDbDbCoIndicatorsMeasure?: number;
+    /**
+     * Subdomain
+     */
+    searchDbDbCoIndicatorsSubdomain?: string;
+    /**
+     * Number to skip
+     */
+    skip?: number;
+    /**
+     * Search text
+     */
+    text?: string;
+    /**
+     * To date
+     */
+    todate?: Date;
 }
 export declare class SearchDbCoIndicatorsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

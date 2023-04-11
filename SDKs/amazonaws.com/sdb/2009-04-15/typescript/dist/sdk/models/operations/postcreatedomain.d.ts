@@ -1,25 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateDomainActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateDomainActionEnum {
     CreateDomain = "CreateDomain"
 }
-export declare enum PostCreateDomainVersionEnum {
+export declare enum POSTCreateDomainVersionEnum {
     TwoThousandAndNine0415 = "2009-04-15"
 }
-export declare class PostCreateDomainQueryParams extends SpeakeasyBase {
+export declare class POSTCreateDomainRequest extends SpeakeasyBase {
     awsAccessKeyId: string;
-    action: PostCreateDomainActionEnum;
+    action: POSTCreateDomainActionEnum;
+    requestBody?: Uint8Array;
     signature: string;
     signatureMethod: string;
     signatureVersion: string;
     timestamp: string;
-    version: PostCreateDomainVersionEnum;
+    version: POSTCreateDomainVersionEnum;
 }
-export declare class PostCreateDomainRequest extends SpeakeasyBase {
-    queryParams: PostCreateDomainQueryParams;
-    request?: Uint8Array;
-}
-export declare class PostCreateDomainResponse extends SpeakeasyBase {
+export declare class POSTCreateDomainResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

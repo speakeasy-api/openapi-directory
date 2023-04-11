@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListCampaignsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListCampaignsXAmzTargetEnum {
     AmazonPersonalizeListCampaigns = "AmazonPersonalize.ListCampaigns"
 }
-export declare class ListCampaignsHeaders extends SpeakeasyBase {
+export declare class ListCampaignsRequest extends SpeakeasyBase {
+    listCampaignsRequest: shared.ListCampaignsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,16 +14,29 @@ export declare class ListCampaignsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: ListCampaignsXAmzTargetEnum;
-}
-export declare class ListCampaignsRequest extends SpeakeasyBase {
-    queryParams: ListCampaignsQueryParams;
-    headers: ListCampaignsHeaders;
-    request: shared.ListCampaignsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class ListCampaignsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * Success
+     */
     listCampaignsResponse?: shared.ListCampaignsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

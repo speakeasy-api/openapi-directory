@@ -1,38 +1,40 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetClipRequest, GetClipResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GetClipRequest,
+  GetClipResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  ClipFragmentSelectorTypeEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: GetClipRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
+});
+
+const req: GetClipRequest = {
+  requestBody: {
     clipFragmentSelector: {
-      fragmentSelectorType: "SERVER_TIMESTAMP",
+      fragmentSelectorType: ClipFragmentSelectorTypeEnum.ServerTimestamp,
       timestampRange: {
-        endTimestamp: "2011-08-12T10:11:12Z",
-        startTimestamp: "2003-05-13T04:57:12Z",
+        endTimestamp: "2021-07-27T21:52:56.087Z",
+        startTimestamp: "2021-03-11T23:22:42.658Z",
       },
     },
-    streamARN: "rerum",
-    streamName: "dicta",
+    streamARN: "nulla",
+    streamName: "corrupti",
   },
+  xAmzAlgorithm: "illum",
+  xAmzContentSha256: "vel",
+  xAmzCredential: "error",
+  xAmzDate: "deserunt",
+  xAmzSecurityToken: "suscipit",
+  xAmzSignature: "iure",
+  xAmzSignedHeaders: "magnam",
 };
 
 sdk.getClip(req).then((res: GetClipResponse | AxiosError) => {

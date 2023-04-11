@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class PredictionsApi {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,15 +9,35 @@ export declare class PredictionsApi {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deletePrediction - Delete a set of predicted images and their associated prediction results
-    **/
+     * Delete a set of predicted images and their associated prediction results
+     */
     deletePrediction(req: operations.DeletePredictionRequest, config?: AxiosRequestConfig): Promise<operations.DeletePredictionResponse>;
     /**
-     * quickTestImage - Quick test an image
-    **/
+     * Get images that were sent to your prediction endpoint
+     */
+    queryPredictionResultsForm(req: operations.QueryPredictionResultsFormRequest, config?: AxiosRequestConfig): Promise<operations.QueryPredictionResultsFormResponse>;
+    /**
+     * Get images that were sent to your prediction endpoint
+     */
+    queryPredictionResultsJson(req: operations.QueryPredictionResultsJsonRequest, config?: AxiosRequestConfig): Promise<operations.QueryPredictionResultsJsonResponse>;
+    /**
+     * Get images that were sent to your prediction endpoint
+     */
+    queryPredictionResultsRaw(req: operations.QueryPredictionResultsRawRequest, config?: AxiosRequestConfig): Promise<operations.QueryPredictionResultsRawResponse>;
+    /**
+     * Quick test an image
+     */
     quickTestImage(req: operations.QuickTestImageRequest, config?: AxiosRequestConfig): Promise<operations.QuickTestImageResponse>;
     /**
-     * quickTestImageUrl - Quick test an image url
-    **/
-    quickTestImageUrl(req: operations.QuickTestImageUrlRequest, config?: AxiosRequestConfig): Promise<operations.QuickTestImageUrlResponse>;
+     * Quick test an image url
+     */
+    quickTestImageUrlForm(req: operations.QuickTestImageUrlFormRequest, config?: AxiosRequestConfig): Promise<operations.QuickTestImageUrlFormResponse>;
+    /**
+     * Quick test an image url
+     */
+    quickTestImageUrlJson(req: operations.QuickTestImageUrlJsonRequest, config?: AxiosRequestConfig): Promise<operations.QuickTestImageUrlJsonResponse>;
+    /**
+     * Quick test an image url
+     */
+    quickTestImageUrlRaw(req: operations.QuickTestImageUrlRawRequest, config?: AxiosRequestConfig): Promise<operations.QuickTestImageUrlRawResponse>;
 }

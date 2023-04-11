@@ -1,3 +1,6 @@
+/**
+ * State abbreviation for employee home address
+ */
 export declare enum StateEnum {
     Act = "ACT",
     Nsw = "NSW",

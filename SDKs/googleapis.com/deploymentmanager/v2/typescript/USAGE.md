@@ -1,43 +1,35 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DeploymentmanagerDeploymentsCancelPreviewRequest, DeploymentmanagerDeploymentsCancelPreviewResponse } from "openapi/src/sdk/models/operations";
+import {
+  DeploymentmanagerDeploymentsCancelPreviewRequest,
+  DeploymentmanagerDeploymentsCancelPreviewResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: DeploymentmanagerDeploymentsCancelPreviewRequest = {
-  security: {
-    option1: {
-      oauth2: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-      oauth2c: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-    },
+  dollarXgafv: XgafvEnum.Two,
+  deploymentsCancelPreviewRequest: {
+    fingerprint: "provident",
   },
-  pathParams: {
-    deployment: "sit",
-    project: "voluptas",
-  },
-  queryParams: {
-    dollarXgafv: "2",
-    accessToken: "expedita",
-    alt: "proto",
-    callback: "dolor",
-    fields: "expedita",
-    key: "voluptas",
-    oauthToken: "fugit",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    uploadType: "rerum",
-    uploadProtocol: "dicta",
-  },
-  request: {
-    fingerprint: "debitis",
-  },
+  accessToken: "distinctio",
+  alt: AltEnum.Proto,
+  callback: "unde",
+  deployment: "nulla",
+  fields: "corrupti",
+  key: "illum",
+  oauthToken: "vel",
+  prettyPrint: false,
+  project: "error",
+  quotaUser: "deserunt",
+  uploadType: "suscipit",
+  uploadProtocol: "iure",
 };
 
 sdk.deployments.deploymentmanagerDeploymentsCancelPreview(req).then((res: DeploymentmanagerDeploymentsCancelPreviewResponse | AxiosError) => {

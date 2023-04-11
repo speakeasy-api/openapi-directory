@@ -1,9 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteIntegrationPathParams extends SpeakeasyBase {
-    apiId: string;
-    integrationId: string;
-}
-export declare class DeleteIntegrationHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteIntegrationRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,14 +8,25 @@ export declare class DeleteIntegrationHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DeleteIntegrationRequest extends SpeakeasyBase {
-    pathParams: DeleteIntegrationPathParams;
-    headers: DeleteIntegrationHeaders;
+    /**
+     * The API identifier.
+     */
+    apiId: string;
+    /**
+     * The integration ID.
+     */
+    integrationId: string;
 }
 export declare class DeleteIntegrationResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

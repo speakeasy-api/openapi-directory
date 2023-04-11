@@ -1,13 +1,28 @@
-import { AxiosInstance } from "axios";
-import { Operations } from "./operations";
 import { Projects } from "./projects";
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://metastore.googleapis.com/"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * The Dataproc Metastore API is used to manage the lifecycle and configuration of metastore services.
+ *
+ * @see {@link https://cloud.google.com/dataproc-metastore/docs}
+ */
 export declare class SDK {
-    operations: Operations;
     projects: Projects;
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -15,5 +30,6 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
 }

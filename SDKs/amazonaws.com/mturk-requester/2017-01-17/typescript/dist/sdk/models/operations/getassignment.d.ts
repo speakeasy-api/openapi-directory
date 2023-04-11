@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetAssignmentXAmzTargetEnum {
     MTurkRequesterServiceV20170117GetAssignment = "MTurkRequesterServiceV20170117.GetAssignment"
 }
-export declare class GetAssignmentHeaders extends SpeakeasyBase {
+export declare class GetAssignmentRequest extends SpeakeasyBase {
+    getAssignmentRequest: shared.GetAssignmentRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class GetAssignmentHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetAssignmentXAmzTargetEnum;
 }
-export declare class GetAssignmentRequest extends SpeakeasyBase {
-    headers: GetAssignmentHeaders;
-    request: shared.GetAssignmentRequest;
-}
 export declare class GetAssignmentResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getAssignmentResponse?: shared.GetAssignmentResponse;
+    /**
+     * RequestError
+     */
     requestError?: any;
+    /**
+     * ServiceFault
+     */
     serviceFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

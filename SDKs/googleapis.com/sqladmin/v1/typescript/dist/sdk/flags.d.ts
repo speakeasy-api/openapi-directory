@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Flags {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +9,7 @@ export declare class Flags {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * sqlFlagsList - Lists all available database flags for Cloud SQL instances.
-    **/
-    sqlFlagsList(req: operations.SqlFlagsListRequest, config?: AxiosRequestConfig): Promise<operations.SqlFlagsListResponse>;
+     * Lists all available database flags for Cloud SQL instances.
+     */
+    sqlFlagsList(req: operations.SqlFlagsListRequest, security: operations.SqlFlagsListSecurity, config?: AxiosRequestConfig): Promise<operations.SqlFlagsListResponse>;
 }

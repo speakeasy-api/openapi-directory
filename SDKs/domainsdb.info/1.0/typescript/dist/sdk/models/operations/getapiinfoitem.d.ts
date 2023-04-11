@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetApiInfoItemQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetApiInfoItemRequest extends SpeakeasyBase {
+    /**
+     * API key
+     */
     apiKey?: string;
 }
-export declare class GetApiInfoItemRequest extends SpeakeasyBase {
-    queryParams: GetApiInfoItemQueryParams;
-}
 export declare class GetApiInfoItemResponse extends SpeakeasyBase {
-    apiKeyInfo?: shared.ApiKeyInfo;
+    /**
+     * Success
+     */
+    apiKeyInfo?: shared.APIKeyInfo;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

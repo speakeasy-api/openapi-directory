@@ -1,18 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AppsResetTokenPathParams extends SpeakeasyBase {
-    clientId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class AppsResetTokenRequestBody extends SpeakeasyBase {
+    /**
+     * The access_token of the OAuth application.
+     */
     accessToken: string;
 }
 export declare class AppsResetTokenRequest extends SpeakeasyBase {
-    pathParams: AppsResetTokenPathParams;
-    request?: AppsResetTokenRequestBody;
+    requestBody: AppsResetTokenRequestBody;
+    /**
+     * The client ID of the GitHub app.
+     */
+    clientId: string;
 }
 export declare class AppsResetTokenResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     authorization?: shared.Authorization;
+    /**
+     * Validation failed
+     */
     validationError?: shared.ValidationError;
 }

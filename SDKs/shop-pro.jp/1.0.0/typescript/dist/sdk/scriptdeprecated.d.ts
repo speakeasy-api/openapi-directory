@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * スクリプトタグを挿入するAPIです。※新規デベロッパーはこのエンドポイントを利用できません。代わりに [スクリプトタグ](/open_api#tag/script) をご利用ください
+ */
 export declare class ScriptDeprecated {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,23 +12,23 @@ export declare class ScriptDeprecated {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createScriptTag - スクリプトタグの作成
-    **/
-    createScriptTag(req: operations.CreateScriptTagRequest, config?: AxiosRequestConfig): Promise<operations.CreateScriptTagResponse>;
+     * スクリプトタグの作成
+     */
+    createScriptTag(req: operations.CreateScriptTagRequestBody, security: operations.CreateScriptTagSecurity, config?: AxiosRequestConfig): Promise<operations.CreateScriptTagResponse>;
     /**
-     * deleteV1ScriptTagsScriptTagIdJson - スクリプトタグの削除
-    **/
-    deleteV1ScriptTagsScriptTagIdJson(req: operations.DeleteV1ScriptTagsScriptTagIdJsonRequest, config?: AxiosRequestConfig): Promise<operations.DeleteV1ScriptTagsScriptTagIdJsonResponse>;
+     * スクリプトタグの削除
+     */
+    deleteV1ScriptTagsScriptTagIdJson(req: operations.DeleteV1ScriptTagsScriptTagIdJsonRequest, security: operations.DeleteV1ScriptTagsScriptTagIdJsonSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteV1ScriptTagsScriptTagIdJsonResponse>;
     /**
-     * getScriptTag - スクリプトタグの取得
-    **/
-    getScriptTag(req: operations.GetScriptTagRequest, config?: AxiosRequestConfig): Promise<operations.GetScriptTagResponse>;
+     * スクリプトタグの取得
+     */
+    getScriptTag(req: operations.GetScriptTagRequest, security: operations.GetScriptTagSecurity, config?: AxiosRequestConfig): Promise<operations.GetScriptTagResponse>;
     /**
-     * getScriptTags - スクリプトタグの取得
-    **/
-    getScriptTags(req: operations.GetScriptTagsRequest, config?: AxiosRequestConfig): Promise<operations.GetScriptTagsResponse>;
+     * スクリプトタグの取得
+     */
+    getScriptTags(config?: AxiosRequestConfig): Promise<operations.GetScriptTagsResponse>;
     /**
-     * updateScriptTag - スクリプトタグの更新
-    **/
-    updateScriptTag(req: operations.UpdateScriptTagRequest, config?: AxiosRequestConfig): Promise<operations.UpdateScriptTagResponse>;
+     * スクリプトタグの更新
+     */
+    updateScriptTag(req: operations.UpdateScriptTagRequest, security: operations.UpdateScriptTagSecurity, config?: AxiosRequestConfig): Promise<operations.UpdateScriptTagResponse>;
 }

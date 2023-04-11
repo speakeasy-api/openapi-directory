@@ -8,4 +8,3 @@ export * from "./peoplefeed";
 export * from "./person";
 export * from "./place";
 export * from "./plusaclentryresource";
-export * from "./security";

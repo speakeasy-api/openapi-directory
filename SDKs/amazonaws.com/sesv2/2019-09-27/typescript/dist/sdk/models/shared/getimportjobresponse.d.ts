@@ -5,7 +5,7 @@ import { ImportDestination } from "./importdestination";
 import { JobStatusEnum } from "./jobstatusenum";
 /**
  * An HTTP 200 response if the request succeeds, or an error message if the request fails.
-**/
+ */
 export declare class GetImportJobResponse extends SpeakeasyBase {
     completedTimestamp?: Date;
     createdTimestamp?: Date;

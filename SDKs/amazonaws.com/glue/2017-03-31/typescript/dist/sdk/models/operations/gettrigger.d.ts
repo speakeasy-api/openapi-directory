@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetTriggerXAmzTargetEnum {
-    AwsGlueGetTrigger = "AWSGlue.GetTrigger"
+    AWSGlueGetTrigger = "AWSGlue.GetTrigger"
 }
-export declare class GetTriggerHeaders extends SpeakeasyBase {
+export declare class GetTriggerRequest extends SpeakeasyBase {
+    getTriggerRequest: shared.GetTriggerRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class GetTriggerHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetTriggerXAmzTargetEnum;
 }
-export declare class GetTriggerRequest extends SpeakeasyBase {
-    headers: GetTriggerHeaders;
-    request: shared.GetTriggerRequest;
-}
 export declare class GetTriggerResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * Success
+     */
     getTriggerResponse?: shared.GetTriggerResponse;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,16 +1,16 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { ConfigConfigGetRequest, ConfigConfigGetResponse } from "openapi/src/sdk/models/operations";
+import {
+  ConfigConfigGetRequest,
+  ConfigConfigGetResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: ConfigConfigGetRequest = {
-  headers: {
-    authorization: "sit",
-  },
+  authorization: "corrupti",
 };
 
 sdk.configConfigGet(req).then((res: ConfigConfigGetResponse | AxiosError) => {

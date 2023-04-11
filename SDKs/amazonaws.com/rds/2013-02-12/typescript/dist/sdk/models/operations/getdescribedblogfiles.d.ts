@@ -1,21 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeDbLogFilesActionEnum {
-    DescribeDbLogFiles = "DescribeDBLogFiles"
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeDBLogFilesActionEnum {
+    DescribeDBLogFiles = "DescribeDBLogFiles"
 }
-export declare enum GetDescribeDbLogFilesVersionEnum {
+export declare enum GETDescribeDBLogFilesVersionEnum {
     TwoThousandAndThirteen0212 = "2013-02-12"
 }
-export declare class GetDescribeDbLogFilesQueryParams extends SpeakeasyBase {
-    action: GetDescribeDbLogFilesActionEnum;
+export declare class GETDescribeDBLogFilesRequest extends SpeakeasyBase {
+    action: GETDescribeDBLogFilesActionEnum;
     dbInstanceIdentifier: string;
     fileLastWritten?: number;
     fileSize?: number;
     filenameContains?: string;
     marker?: string;
     maxRecords?: number;
-    version: GetDescribeDbLogFilesVersionEnum;
-}
-export declare class GetDescribeDbLogFilesHeaders extends SpeakeasyBase {
+    version: GETDescribeDBLogFilesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -24,12 +23,9 @@ export declare class GetDescribeDbLogFilesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeDbLogFilesRequest extends SpeakeasyBase {
-    queryParams: GetDescribeDbLogFilesQueryParams;
-    headers: GetDescribeDbLogFilesHeaders;
-}
-export declare class GetDescribeDbLogFilesResponse extends SpeakeasyBase {
+export declare class GETDescribeDBLogFilesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

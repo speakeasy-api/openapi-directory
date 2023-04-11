@@ -8,7 +8,10 @@ export declare enum DeviceIntegrityDeviceRecognitionVerdictEnum {
 }
 /**
  * Contains the device attestation information.
-**/
+ */
 export declare class DeviceIntegrity extends SpeakeasyBase {
+    /**
+     * Details about the integrity of the device the app is running on
+     */
     deviceRecognitionVerdict?: DeviceIntegrityDeviceRecognitionVerdictEnum[];
 }

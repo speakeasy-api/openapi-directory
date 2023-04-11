@@ -1,30 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class AccountPlanAddonUpdatePathParams extends SpeakeasyBase {
-    accountId: string;
-}
+import { AxiosResponse } from "axios";
 /**
  * Account plan object.
-**/
-export declare class AccountPlanAddonUpdateApplicationJson extends SpeakeasyBase {
+ */
+export declare class AccountPlanAddonUpdateApplicationJSON extends SpeakeasyBase {
+    /**
+     * Number of hosts for this plan.
+     */
     hosts: number;
+    /**
+     * Account <a href="https://marketplace.zoom.us/docs/api-reference/other-references/plans">plan type.</a>
+     */
     type: string;
-}
-/**
- * Account plan object.
-**/
-export declare class AccountPlanAddonUpdateMultipartFormData extends SpeakeasyBase {
-    hosts: number;
-    type: string;
-}
-export declare class AccountPlanAddonUpdateRequests extends SpeakeasyBase {
-    object?: AccountPlanAddonUpdateApplicationJson;
-    object1?: AccountPlanAddonUpdateMultipartFormData;
 }
 export declare class AccountPlanAddonUpdateRequest extends SpeakeasyBase {
-    pathParams: AccountPlanAddonUpdatePathParams;
-    request: AccountPlanAddonUpdateRequests;
+    requestBody: AccountPlanAddonUpdateApplicationJSON;
+    /**
+     * The account ID.
+     */
+    accountId: string;
 }
 export declare class AccountPlanAddonUpdateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

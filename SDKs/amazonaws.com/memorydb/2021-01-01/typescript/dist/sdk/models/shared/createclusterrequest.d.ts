@@ -4,6 +4,7 @@ export declare class CreateClusterRequest extends SpeakeasyBase {
     aclName: string;
     autoMinorVersionUpgrade?: boolean;
     clusterName: string;
+    dataTiering?: boolean;
     description?: string;
     engineVersion?: string;
     kmsKeyId?: string;

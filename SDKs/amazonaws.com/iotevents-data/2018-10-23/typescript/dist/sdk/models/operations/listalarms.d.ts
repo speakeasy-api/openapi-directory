@@ -1,13 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListAlarmsPathParams extends SpeakeasyBase {
-    alarmModelName: string;
-}
-export declare class ListAlarmsQueryParams extends SpeakeasyBase {
-    maxResults?: number;
-    nextToken?: string;
-}
-export declare class ListAlarmsHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListAlarmsRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -15,19 +9,45 @@ export declare class ListAlarmsHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class ListAlarmsRequest extends SpeakeasyBase {
-    pathParams: ListAlarmsPathParams;
-    queryParams: ListAlarmsQueryParams;
-    headers: ListAlarmsHeaders;
+    /**
+     * The name of the alarm model.
+     */
+    alarmModelName: string;
+    /**
+     * The maximum number of results to be returned per request.
+     */
+    maxResults?: number;
+    /**
+     * The token that you can use to return the next set of results.
+     */
+    nextToken?: string;
 }
 export declare class ListAlarmsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalFailureException
+     */
     internalFailureException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * Success
+     */
     listAlarmsResponse?: shared.ListAlarmsResponse;
-    resourceNotFoundException?: any;
+    /**
+     * ServiceUnavailableException
+     */
     serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

@@ -1,27 +1,47 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetUpdatePartnerStatusActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETUpdatePartnerStatusActionEnum {
     UpdatePartnerStatus = "UpdatePartnerStatus"
 }
-export declare enum GetUpdatePartnerStatusStatusEnum {
+/**
+ * The value of the updated status.
+ */
+export declare enum GETUpdatePartnerStatusStatusEnum {
     Active = "Active",
     Inactive = "Inactive",
     RuntimeFailure = "RuntimeFailure",
     ConnectionFailure = "ConnectionFailure"
 }
-export declare enum GetUpdatePartnerStatusVersionEnum {
+export declare enum GETUpdatePartnerStatusVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class GetUpdatePartnerStatusQueryParams extends SpeakeasyBase {
+export declare class GETUpdatePartnerStatusRequest extends SpeakeasyBase {
+    /**
+     * The Amazon Web Services account ID that owns the cluster.
+     */
     accountId: string;
-    action: GetUpdatePartnerStatusActionEnum;
+    action: GETUpdatePartnerStatusActionEnum;
+    /**
+     * The cluster identifier of the cluster whose partner integration status is being updated.
+     */
     clusterIdentifier: string;
+    /**
+     * The name of the database whose partner integration status is being updated.
+     */
     databaseName: string;
+    /**
+     * The name of the partner whose integration status is being updated.
+     */
     partnerName: string;
-    status: GetUpdatePartnerStatusStatusEnum;
+    /**
+     * The value of the updated status.
+     */
+    status: GETUpdatePartnerStatusStatusEnum;
+    /**
+     * The status message provided by the partner.
+     */
     statusMessage?: string;
-    version: GetUpdatePartnerStatusVersionEnum;
-}
-export declare class GetUpdatePartnerStatusHeaders extends SpeakeasyBase {
+    version: GETUpdatePartnerStatusVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -30,12 +50,9 @@ export declare class GetUpdatePartnerStatusHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetUpdatePartnerStatusRequest extends SpeakeasyBase {
-    queryParams: GetUpdatePartnerStatusQueryParams;
-    headers: GetUpdatePartnerStatusHeaders;
-}
-export declare class GetUpdatePartnerStatusResponse extends SpeakeasyBase {
+export declare class GETUpdatePartnerStatusResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

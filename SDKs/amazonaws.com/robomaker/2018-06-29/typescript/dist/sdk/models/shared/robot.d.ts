@@ -3,7 +3,7 @@ import { ArchitectureEnum } from "./architectureenum";
 import { RobotStatusEnum } from "./robotstatusenum";
 /**
  * Information about a robot.
-**/
+ */
 export declare class Robot extends SpeakeasyBase {
     architecture?: ArchitectureEnum;
     arn?: string;

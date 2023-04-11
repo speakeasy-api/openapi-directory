@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PrivateInstitutionDetailsSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
-}
-export declare class PrivateInstitutionDetailsRequest extends SpeakeasyBase {
-    security: PrivateInstitutionDetailsSecurity;
-}
+import { AxiosResponse } from "axios";
 export declare class PrivateInstitutionDetailsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Forbidden
+     */
     errorMessage?: shared.ErrorMessage;
+    /**
+     * OK. An array of institutions
+     */
     institution?: shared.Institution;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

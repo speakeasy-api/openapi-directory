@@ -6,150 +6,167 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/amazonaws.com/rds/2013-01-10/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/amazonaws.com/rds/2013-01-10/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetAddSourceIdentifierToSubscriptionRequest, GetAddSourceIdentifierToSubscriptionResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GETAddSourceIdentifierToSubscriptionRequest,
+  GETAddSourceIdentifierToSubscriptionResponse,
+  GETAddSourceIdentifierToSubscriptionActionEnum,
+  GETAddSourceIdentifierToSubscriptionVersionEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: GetAddSourceIdentifierToSubscriptionRequest = {
-  queryParams: {
-    action: "AddSourceIdentifierToSubscription",
-    sourceIdentifier: "voluptas",
-    subscriptionName: "culpa",
-    version: "2013-01-10",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  headers: {
-    xAmzAlgorithm: "consequuntur",
-    xAmzContentSha256: "dolor",
-    xAmzCredential: "expedita",
-    xAmzDate: "voluptas",
-    xAmzSecurityToken: "fugit",
-    xAmzSignature: "et",
-    xAmzSignedHeaders: "nihil",
-  },
+});
+
+const req: GETAddSourceIdentifierToSubscriptionRequest = {
+  action: GETAddSourceIdentifierToSubscriptionActionEnum.AddSourceIdentifierToSubscription,
+  sourceIdentifier: "corrupti",
+  subscriptionName: "provident",
+  version: GETAddSourceIdentifierToSubscriptionVersionEnum.TwoThousandAndThirteen0110,
+  xAmzAlgorithm: "distinctio",
+  xAmzContentSha256: "quibusdam",
+  xAmzCredential: "unde",
+  xAmzDate: "nulla",
+  xAmzSecurityToken: "corrupti",
+  xAmzSignature: "illum",
+  xAmzSignedHeaders: "vel",
 };
 
-sdk.getAddSourceIdentifierToSubscription(req).then((res: GetAddSourceIdentifierToSubscriptionResponse | AxiosError) => {
+sdk.getAddSourceIdentifierToSubscription(req).then((res: GETAddSourceIdentifierToSubscriptionResponse | AxiosError) => {
    // handle response
 });
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
 * `getAddSourceIdentifierToSubscription`
-* `getAuthorizeDbSecurityGroupIngress`
-* `getCopyDbSnapshot`
-* `getCreateDbInstanceReadReplica`
-* `getCreateDbParameterGroup`
-* `getCreateDbSecurityGroup`
-* `getCreateDbSnapshot`
+* `getAuthorizeDBSecurityGroupIngress`
+* `getCopyDBSnapshot`
+* `getCreateDBInstance`
+* `getCreateDBInstanceReadReplica`
+* `getCreateDBParameterGroup`
+* `getCreateDBSecurityGroup`
+* `getCreateDBSnapshot`
+* `getCreateDBSubnetGroup`
+* `getCreateEventSubscription`
 * `getCreateOptionGroup`
-* `getDeleteDbInstance`
-* `getDeleteDbParameterGroup`
-* `getDeleteDbSecurityGroup`
-* `getDeleteDbSnapshot`
-* `getDeleteDbSubnetGroup`
+* `getDeleteDBInstance`
+* `getDeleteDBParameterGroup`
+* `getDeleteDBSecurityGroup`
+* `getDeleteDBSnapshot`
+* `getDeleteDBSubnetGroup`
 * `getDeleteEventSubscription`
 * `getDeleteOptionGroup`
-* `getDescribeDbEngineVersions`
-* `getDescribeDbInstances`
-* `getDescribeDbParameterGroups`
-* `getDescribeDbParameters`
-* `getDescribeDbSecurityGroups`
-* `getDescribeDbSnapshots`
-* `getDescribeDbSubnetGroups`
+* `getDescribeDBEngineVersions`
+* `getDescribeDBInstances`
+* `getDescribeDBParameterGroups`
+* `getDescribeDBParameters`
+* `getDescribeDBSecurityGroups`
+* `getDescribeDBSnapshots`
+* `getDescribeDBSubnetGroups`
 * `getDescribeEngineDefaultParameters`
 * `getDescribeEventCategories`
 * `getDescribeEventSubscriptions`
+* `getDescribeEvents`
 * `getDescribeOptionGroupOptions`
 * `getDescribeOptionGroups`
-* `getDescribeOrderableDbInstanceOptions`
-* `getDescribeReservedDbInstances`
-* `getDescribeReservedDbInstancesOfferings`
+* `getDescribeOrderableDBInstanceOptions`
+* `getDescribeReservedDBInstances`
+* `getDescribeReservedDBInstancesOfferings`
 * `getListTagsForResource`
+* `getModifyDBInstance`
+* `getModifyDBSubnetGroup`
+* `getModifyEventSubscription`
 * `getPromoteReadReplica`
-* `getPurchaseReservedDbInstancesOffering`
-* `getRebootDbInstance`
+* `getPurchaseReservedDBInstancesOffering`
+* `getRebootDBInstance`
 * `getRemoveSourceIdentifierFromSubscription`
 * `getRemoveTagsFromResource`
-* `getRestoreDbInstanceFromDbSnapshot`
-* `getRestoreDbInstanceToPointInTime`
-* `getRevokeDbSecurityGroupIngress`
+* `getRestoreDBInstanceFromDBSnapshot`
+* `getRestoreDBInstanceToPointInTime`
+* `getRevokeDBSecurityGroupIngress`
 * `postAddSourceIdentifierToSubscription`
 * `postAddTagsToResource`
-* `postAuthorizeDbSecurityGroupIngress`
-* `postCopyDbSnapshot`
-* `postCreateDbInstance`
-* `postCreateDbInstanceReadReplica`
-* `postCreateDbParameterGroup`
-* `postCreateDbSecurityGroup`
-* `postCreateDbSnapshot`
-* `postCreateDbSubnetGroup`
+* `postAuthorizeDBSecurityGroupIngress`
+* `postCopyDBSnapshot`
+* `postCreateDBInstance`
+* `postCreateDBInstanceReadReplica`
+* `postCreateDBParameterGroup`
+* `postCreateDBSecurityGroup`
+* `postCreateDBSnapshot`
+* `postCreateDBSubnetGroup`
 * `postCreateEventSubscription`
 * `postCreateOptionGroup`
-* `postDeleteDbInstance`
-* `postDeleteDbParameterGroup`
-* `postDeleteDbSecurityGroup`
-* `postDeleteDbSnapshot`
-* `postDeleteDbSubnetGroup`
+* `postDeleteDBInstance`
+* `postDeleteDBParameterGroup`
+* `postDeleteDBSecurityGroup`
+* `postDeleteDBSnapshot`
+* `postDeleteDBSubnetGroup`
 * `postDeleteEventSubscription`
 * `postDeleteOptionGroup`
-* `postDescribeDbEngineVersions`
-* `postDescribeDbInstances`
-* `postDescribeDbParameterGroups`
-* `postDescribeDbParameters`
-* `postDescribeDbSecurityGroups`
-* `postDescribeDbSnapshots`
-* `postDescribeDbSubnetGroups`
+* `postDescribeDBEngineVersions`
+* `postDescribeDBInstances`
+* `postDescribeDBParameterGroups`
+* `postDescribeDBParameters`
+* `postDescribeDBSecurityGroups`
+* `postDescribeDBSnapshots`
+* `postDescribeDBSubnetGroups`
 * `postDescribeEngineDefaultParameters`
 * `postDescribeEventCategories`
 * `postDescribeEventSubscriptions`
 * `postDescribeEvents`
 * `postDescribeOptionGroupOptions`
 * `postDescribeOptionGroups`
-* `postDescribeOrderableDbInstanceOptions`
-* `postDescribeReservedDbInstances`
-* `postDescribeReservedDbInstancesOfferings`
+* `postDescribeOrderableDBInstanceOptions`
+* `postDescribeReservedDBInstances`
+* `postDescribeReservedDBInstancesOfferings`
 * `postListTagsForResource`
-* `postModifyDbInstance`
-* `postModifyDbParameterGroup`
-* `postModifyDbSubnetGroup`
+* `postModifyDBInstance`
+* `postModifyDBParameterGroup`
+* `postModifyDBSubnetGroup`
 * `postModifyEventSubscription`
 * `postModifyOptionGroup`
 * `postPromoteReadReplica`
-* `postPurchaseReservedDbInstancesOffering`
-* `postRebootDbInstance`
+* `postPurchaseReservedDBInstancesOffering`
+* `postRebootDBInstance`
 * `postRemoveSourceIdentifierFromSubscription`
 * `postRemoveTagsFromResource`
-* `postResetDbParameterGroup`
-* `postRestoreDbInstanceFromDbSnapshot`
-* `postRestoreDbInstanceToPointInTime`
-* `postRevokeDbSecurityGroupIngress`
-
+* `postResetDBParameterGroup`
+* `postRestoreDBInstanceFromDBSnapshot`
+* `postRestoreDBInstanceToPointInTime`
+* `postRevokeDBSecurityGroupIngress`
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

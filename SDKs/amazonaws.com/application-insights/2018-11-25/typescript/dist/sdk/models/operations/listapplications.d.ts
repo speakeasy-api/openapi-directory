@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListApplicationsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListApplicationsXAmzTargetEnum {
     Ec2WindowsBarleyServiceListApplications = "EC2WindowsBarleyService.ListApplications"
 }
-export declare class ListApplicationsHeaders extends SpeakeasyBase {
+export declare class ListApplicationsRequest extends SpeakeasyBase {
+    listApplicationsRequest: shared.ListApplicationsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,15 +23,20 @@ export declare class ListApplicationsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListApplicationsXAmzTargetEnum;
 }
-export declare class ListApplicationsRequest extends SpeakeasyBase {
-    queryParams: ListApplicationsQueryParams;
-    headers: ListApplicationsHeaders;
-    request: shared.ListApplicationsRequest;
-}
 export declare class ListApplicationsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * Success
+     */
     listApplicationsResponse?: shared.ListApplicationsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

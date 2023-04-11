@@ -1,24 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PatientVaccineRecordsReadPathParams extends SpeakeasyBase {
-    id: string;
+import { AxiosResponse } from "axios";
+export declare class PatientVaccineRecordsReadSecurity extends SpeakeasyBase {
+    drchronoOauth2: string;
 }
-export declare class PatientVaccineRecordsReadQueryParams extends SpeakeasyBase {
+export declare class PatientVaccineRecordsReadRequest extends SpeakeasyBase {
     cvxCode?: string;
     doctor?: number;
+    id: string;
     patient?: number;
     since?: string;
 }
-export declare class PatientVaccineRecordsReadSecurity extends SpeakeasyBase {
-    drchronoOauth2: shared.SchemeDrchronoOauth2;
-}
-export declare class PatientVaccineRecordsReadRequest extends SpeakeasyBase {
-    pathParams: PatientVaccineRecordsReadPathParams;
-    queryParams: PatientVaccineRecordsReadQueryParams;
-    security: PatientVaccineRecordsReadSecurity;
-}
 export declare class PatientVaccineRecordsReadResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * OK
+     */
     patientVaccineRecord?: shared.PatientVaccineRecord;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,4 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { NullableSimpleUser } from "./nullablesimpleuser";
+/**
+ * The reaction to use
+ */
 export declare enum ReactionContentEnum {
     Plus1 = "+1",
     Minus1 = "-1",
@@ -10,36 +14,18 @@ export declare enum ReactionContentEnum {
     Eyes = "eyes"
 }
 /**
- * Simple User
-**/
-export declare class ReactionSimpleUser extends SpeakeasyBase {
-    avatarUrl: string;
-    eventsUrl: string;
-    followersUrl: string;
-    followingUrl: string;
-    gistsUrl: string;
-    gravatarId: string;
-    htmlUrl: string;
-    id: number;
-    login: string;
-    nodeId: string;
-    organizationsUrl: string;
-    receivedEventsUrl: string;
-    reposUrl: string;
-    siteAdmin: boolean;
-    starredAt?: string;
-    starredUrl: string;
-    subscriptionsUrl: string;
-    type: string;
-    url: string;
-}
-/**
  * Reactions to conversations provide a way to help people express their feelings more simply and effectively.
-**/
+ */
 export declare class Reaction extends SpeakeasyBase {
+    /**
+     * The reaction to use
+     */
     content: ReactionContentEnum;
     createdAt: Date;
     id: number;
     nodeId: string;
-    user: ReactionSimpleUser;
+    /**
+     * A GitHub user.
+     */
+    user: NullableSimpleUser;
 }

@@ -8,7 +8,6 @@ export * from "./networkconfig";
 export * from "./nfsexport";
 export * from "./provisioningconfig";
 export * from "./provisioningquota";
-export * from "./security";
 export * from "./submitprovisioningconfigrequest";
 export * from "./vlanattachment";
 export * from "./volumeconfig";

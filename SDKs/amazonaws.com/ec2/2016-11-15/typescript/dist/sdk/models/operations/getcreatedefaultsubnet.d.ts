@@ -1,17 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetCreateDefaultSubnetActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETCreateDefaultSubnetActionEnum {
     CreateDefaultSubnet = "CreateDefaultSubnet"
 }
-export declare enum GetCreateDefaultSubnetVersionEnum {
+export declare enum GETCreateDefaultSubnetVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetCreateDefaultSubnetQueryParams extends SpeakeasyBase {
-    action: GetCreateDefaultSubnetActionEnum;
+export declare class GETCreateDefaultSubnetRequest extends SpeakeasyBase {
+    action: GETCreateDefaultSubnetActionEnum;
+    /**
+     * The Availability Zone in which to create the default subnet.
+     */
     availabilityZone: string;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
-    version: GetCreateDefaultSubnetVersionEnum;
-}
-export declare class GetCreateDefaultSubnetHeaders extends SpeakeasyBase {
+    /**
+     * Indicates whether to create an IPv6 only subnet. If you already have a default subnet for this Availability Zone, you must delete it before you can create an IPv6 only subnet.
+     */
+    ipv6Native?: boolean;
+    version: GETCreateDefaultSubnetVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +29,9 @@ export declare class GetCreateDefaultSubnetHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetCreateDefaultSubnetRequest extends SpeakeasyBase {
-    queryParams: GetCreateDefaultSubnetQueryParams;
-    headers: GetCreateDefaultSubnetHeaders;
-}
-export declare class GetCreateDefaultSubnetResponse extends SpeakeasyBase {
+export declare class GETCreateDefaultSubnetResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

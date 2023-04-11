@@ -2,8 +2,8 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { ActionEnum } from "./actionenum";
 /**
  * Specifies the settings for a one-time message that's sent directly to an endpoint through the APNs (Apple Push Notification service) channel.
-**/
-export declare class ApnsMessage extends SpeakeasyBase {
+ */
+export declare class APNSMessage extends SpeakeasyBase {
     apnsPushType?: string;
     action?: ActionEnum;
     badge?: number;

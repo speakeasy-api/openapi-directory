@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PostOwnershipUninstallOwnershipIdPathParams extends SpeakeasyBase {
-    ownershipId: string;
-}
-export declare class PostOwnershipUninstallOwnershipIdQueryParams extends SpeakeasyBase {
-    cancelOwnership?: boolean;
-    customData?: string;
-    userId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PostOwnershipUninstallOwnershipIdRequest extends SpeakeasyBase {
-    pathParams: PostOwnershipUninstallOwnershipIdPathParams;
-    queryParams: PostOwnershipUninstallOwnershipIdQueryParams;
+    /**
+     * True if this app will require payment to be re-installed. Default is false
+     */
+    cancelOwnership?: boolean;
+    /**
+     * A custom JSON object to attach to this ownership record
+     */
+    customData?: string;
+    /**
+     * The id of the ownership to be unintalled
+     */
+    ownershipId: string;
+    /**
+     * The id of the User requesting to uninstall the App
+     */
+    userId: string;
 }
 export declare class PostOwnershipUninstallOwnershipIdResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

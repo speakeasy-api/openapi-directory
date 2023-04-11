@@ -1,60 +1,56 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AppengineAppsAuthorizedCertificatesCreateRequest, AppengineAppsAuthorizedCertificatesCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  AppengineAppsAuthorizedCertificatesCreateRequest,
+  AppengineAppsAuthorizedCertificatesCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  ManagedCertificateStatusEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: AppengineAppsAuthorizedCertificatesCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    appsId: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  authorizedCertificate: {
     certificateRawData: {
-      privateKey: "dicta",
-      publicCertificate: "debitis",
+      privateKey: "provident",
+      publicCertificate: "distinctio",
     },
-    displayName: "voluptatum",
-    domainMappingsCount: 2339563716805116249,
+    displayName: "quibusdam",
+    domainMappingsCount: 602763,
     domainNames: [
-      "dolorem",
-      "et",
-      "voluptate",
-    ],
-    expireTime: "iste",
-    id: "vitae",
-    managedCertificate: {
-      lastRenewalTime: "totam",
-      status: "FAILED_RETRYING_NOT_VISIBLE",
-    },
-    name: "illum",
-    visibleDomainMappings: [
+      "corrupti",
+      "illum",
       "vel",
+      "error",
+    ],
+    expireTime: "deserunt",
+    id: "suscipit",
+    managedCertificate: {
+      lastRenewalTime: "iure",
+      status: ManagedCertificateStatusEnum.Pending,
+    },
+    name: "debitis",
+    visibleDomainMappings: [
+      "delectus",
     ],
   },
+  accessToken: "tempora",
+  alt: AltEnum.Media,
+  appsId: "molestiae",
+  callback: "minus",
+  fields: "placeat",
+  key: "voluptatum",
+  oauthToken: "iusto",
+  prettyPrint: false,
+  quotaUser: "excepturi",
+  uploadType: "nisi",
+  uploadProtocol: "recusandae",
 };
 
 sdk.apps.appengineAppsAuthorizedCertificatesCreate(req).then((res: AppengineAppsAuthorizedCertificatesCreateResponse | AxiosError) => {

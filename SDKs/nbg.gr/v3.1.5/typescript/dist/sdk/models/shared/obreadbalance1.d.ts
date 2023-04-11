@@ -1,9 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ObReadDataBalance1 } from "./obreaddatabalance1";
 import { Links } from "./links";
 import { Meta } from "./meta";
-export declare class ObReadBalance1 extends SpeakeasyBase {
-    data: ObReadDataBalance1;
+import { OBReadDataBalance1 } from "./obreaddatabalance1";
+/**
+ * Balances Read
+ */
+export declare class OBReadBalance1 extends SpeakeasyBase {
+    data: OBReadDataBalance1;
+    /**
+     * Links relevant to the payload
+     */
     links: Links;
+    /**
+     * Meta Data relevant to the payload
+     */
     meta: Meta;
 }

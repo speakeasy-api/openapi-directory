@@ -1,5 +1,9 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Webhooks are external URLs which subscribe to receive events via HTTP POST for a specified set of events.
+ */
 export declare class Webhooks {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,23 +13,23 @@ export declare class Webhooks {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createWebhook - Create a new webhook subscription
-    **/
-    createWebhook(req: operations.CreateWebhookRequest, config?: AxiosRequestConfig): Promise<operations.CreateWebhookResponse>;
+     * Create a new webhook subscription
+     */
+    createWebhook(req: shared.WebhookCreate, config?: AxiosRequestConfig): Promise<operations.CreateWebhookResponse>;
     /**
-     * destroyWebhook - Remove a web hook
-    **/
+     * Remove a web hook
+     */
     destroyWebhook(req: operations.DestroyWebhookRequest, config?: AxiosRequestConfig): Promise<operations.DestroyWebhookResponse>;
     /**
-     * listWebhooks - List web hooks
-    **/
+     * List web hooks
+     */
     listWebhooks(config?: AxiosRequestConfig): Promise<operations.ListWebhooksResponse>;
     /**
-     * renewWebhook - Renews a web hook
-    **/
+     * Renews a web hook
+     */
     renewWebhook(req: operations.RenewWebhookRequest, config?: AxiosRequestConfig): Promise<operations.RenewWebhookResponse>;
     /**
-     * viewWebhook - Get web hook details
-    **/
+     * Get web hook details
+     */
     viewWebhook(req: operations.ViewWebhookRequest, config?: AxiosRequestConfig): Promise<operations.ViewWebhookResponse>;
 }

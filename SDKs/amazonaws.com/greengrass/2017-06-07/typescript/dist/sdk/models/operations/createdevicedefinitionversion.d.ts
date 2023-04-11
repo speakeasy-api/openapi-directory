@@ -1,9 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreateDeviceDefinitionVersionPathParams extends SpeakeasyBase {
-    deviceDefinitionId: string;
+import { AxiosResponse } from "axios";
+export declare class CreateDeviceDefinitionVersionRequestBody extends SpeakeasyBase {
+    /**
+     * A list of devices in the definition version.
+     */
+    devices?: shared.Device[];
 }
-export declare class CreateDeviceDefinitionVersionHeaders extends SpeakeasyBase {
+export declare class CreateDeviceDefinitionVersionRequest extends SpeakeasyBase {
+    /**
+     * The ID of the device definition.
+     */
+    deviceDefinitionId: string;
+    requestBody: CreateDeviceDefinitionVersionRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,19 +20,21 @@ export declare class CreateDeviceDefinitionVersionHeaders extends SpeakeasyBase 
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
+    /**
+     * A client token used to correlate requests and responses.
+     */
     xAmznClientToken?: string;
 }
-export declare class CreateDeviceDefinitionVersionRequestBody extends SpeakeasyBase {
-    devices?: shared.Device[];
-}
-export declare class CreateDeviceDefinitionVersionRequest extends SpeakeasyBase {
-    pathParams: CreateDeviceDefinitionVersionPathParams;
-    headers: CreateDeviceDefinitionVersionHeaders;
-    request: CreateDeviceDefinitionVersionRequestBody;
-}
 export declare class CreateDeviceDefinitionVersionResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     createDeviceDefinitionVersionResponse?: shared.CreateDeviceDefinitionVersionResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

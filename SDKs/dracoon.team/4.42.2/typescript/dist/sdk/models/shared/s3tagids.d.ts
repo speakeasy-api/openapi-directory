@@ -1,0 +1,10 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * List of S3 tag IDs
+ */
+export declare class S3TagIds extends SpeakeasyBase {
+    /**
+     * List of S3 tag IDs
+     */
+    ids: number[];
+}

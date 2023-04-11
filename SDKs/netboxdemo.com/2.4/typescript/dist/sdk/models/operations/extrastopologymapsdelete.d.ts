@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ExtrasTopologyMapsDeletePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ExtrasTopologyMapsDeleteRequest extends SpeakeasyBase {
-    pathParams: ExtrasTopologyMapsDeletePathParams;
+    /**
+     * A unique integer value identifying this topology map.
+     */
+    id: number;
 }
 export declare class ExtrasTopologyMapsDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

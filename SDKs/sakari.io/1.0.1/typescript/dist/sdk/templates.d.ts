@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Define reusable message or web templates
+ */
 export declare class Templates {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,23 +12,23 @@ export declare class Templates {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * templatesCreate - Create template
-    **/
-    templatesCreate(req: operations.TemplatesCreateRequest, config?: AxiosRequestConfig): Promise<operations.TemplatesCreateResponse>;
+     * Create template
+     */
+    templatesCreate(req: operations.TemplatesCreateRequest, security: operations.TemplatesCreateSecurity, config?: AxiosRequestConfig): Promise<operations.TemplatesCreateResponse>;
     /**
-     * templatesFetch - Fetch template by ID
-    **/
-    templatesFetch(req: operations.TemplatesFetchRequest, config?: AxiosRequestConfig): Promise<operations.TemplatesFetchResponse>;
+     * Fetch template by ID
+     */
+    templatesFetch(req: operations.TemplatesFetchRequest, security: operations.TemplatesFetchSecurity, config?: AxiosRequestConfig): Promise<operations.TemplatesFetchResponse>;
     /**
-     * templatesFetchAll - Fetch templates
-    **/
-    templatesFetchAll(req: operations.TemplatesFetchAllRequest, config?: AxiosRequestConfig): Promise<operations.TemplatesFetchAllResponse>;
+     * Fetch templates
+     */
+    templatesFetchAll(req: operations.TemplatesFetchAllRequest, security: operations.TemplatesFetchAllSecurity, config?: AxiosRequestConfig): Promise<operations.TemplatesFetchAllResponse>;
     /**
-     * templatesRemove - Deletes a template
-    **/
-    templatesRemove(req: operations.TemplatesRemoveRequest, config?: AxiosRequestConfig): Promise<operations.TemplatesRemoveResponse>;
+     * Deletes a template
+     */
+    templatesRemove(req: operations.TemplatesRemoveRequest, security: operations.TemplatesRemoveSecurity, config?: AxiosRequestConfig): Promise<operations.TemplatesRemoveResponse>;
     /**
-     * templatesUpdate - Updates a template
-    **/
-    templatesUpdate(req: operations.TemplatesUpdateRequest, config?: AxiosRequestConfig): Promise<operations.TemplatesUpdateResponse>;
+     * Updates a template
+     */
+    templatesUpdate(req: operations.TemplatesUpdateRequest, security: operations.TemplatesUpdateSecurity, config?: AxiosRequestConfig): Promise<operations.TemplatesUpdateResponse>;
 }

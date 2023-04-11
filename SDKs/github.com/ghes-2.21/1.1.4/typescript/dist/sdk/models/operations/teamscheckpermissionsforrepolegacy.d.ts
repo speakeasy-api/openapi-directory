@@ -1,15 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class TeamsCheckPermissionsForRepoLegacyPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class TeamsCheckPermissionsForRepoLegacyRequest extends SpeakeasyBase {
     owner: string;
     repo: string;
     teamId: number;
 }
-export declare class TeamsCheckPermissionsForRepoLegacyRequest extends SpeakeasyBase {
-    pathParams: TeamsCheckPermissionsForRepoLegacyPathParams;
-}
 export declare class TeamsCheckPermissionsForRepoLegacyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Alternative response with extra repository information
+     */
     teamRepository?: shared.TeamRepository;
 }

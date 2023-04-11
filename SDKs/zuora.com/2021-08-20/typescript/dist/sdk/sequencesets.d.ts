@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class SequenceSets {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,37 +9,41 @@ export declare class SequenceSets {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteSequenceSet - Delete a sequence set
+     * Delete a sequence set
      *
+     * @remarks
      * Deletes a specific sequence set configured for billing documents, payments, and refunds. Billing documents include invoices, credit memos, and debit memos.
      *
      * **Note**: The Credit and Debit Memos feature is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
-    **/
-    deleteSequenceSet(req: operations.DeleteSequenceSetRequest, config?: AxiosRequestConfig): Promise<operations.DeleteSequenceSetResponse>;
+     */
+    deleteSequenceSet(req: operations.DELETESequenceSetRequest, config?: AxiosRequestConfig): Promise<operations.DELETESequenceSetResponse>;
     /**
-     * getSequenceSet - Retrieve a sequence set
+     * Retrieve a sequence set
      *
+     * @remarks
      * Retrieves information about a specific sequence set configured for billing documents, payments, and refunds. Billing documents include invoices, credit memos, and debit memos
      *
      * **Note**: The Credit and Debit Memos feature is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
-    **/
-    getSequenceSet(req: operations.GetSequenceSetRequest, config?: AxiosRequestConfig): Promise<operations.GetSequenceSetResponse>;
+     */
+    getSequenceSet(req: operations.GETSequenceSetRequest, config?: AxiosRequestConfig): Promise<operations.GETSequenceSetResponse>;
     /**
-     * getSequenceSets - List sequence sets
+     * List sequence sets
      *
+     * @remarks
      * Retrieves information about all sequence sets configured for billing documents, payments, and refunds. Billing documents include invoices, credit memos, and debit memos.
      *
      * You can use query parameters to restrict the data returned in the response.
      *
      * **Note**: The Credit and Debit Memos feature is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
-    **/
-    getSequenceSets(req: operations.GetSequenceSetsRequest, config?: AxiosRequestConfig): Promise<operations.GetSequenceSetsResponse>;
+     */
+    getSequenceSets(req: operations.GETSequenceSetsRequest, config?: AxiosRequestConfig): Promise<operations.GETSequenceSetsResponse>;
     /**
-     * postSequenceSets - Create sequence sets
+     * Create sequence sets
      *
+     * @remarks
      * Creates sequence sets, allowing distinct numbering sequences for billing documents, payments, and refunds. Billing documents include invoices, credit memos, and debit memos.
      *
      * You can create a maximum of 100 sequence sets in one single request. A sequence set comprises a set of custom prefixes and starting numbers that are used for billing documents to generate, and payments and refunds to create.
@@ -48,15 +52,16 @@ export declare class SequenceSets {
      *
      * **Note**: The Credit and Debit Memos feature is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
-    **/
-    postSequenceSets(req: operations.PostSequenceSetsRequest, config?: AxiosRequestConfig): Promise<operations.PostSequenceSetsResponse>;
+     */
+    postSequenceSets(req: operations.POSTSequenceSetsRequest, config?: AxiosRequestConfig): Promise<operations.POSTSequenceSetsResponse>;
     /**
-     * putSequenceSet - Update a sequence set
+     * Update a sequence set
      *
+     * @remarks
      * Updates a specific sequence set configured for billing documents, payments, and refunds. Billing documents include invoices, credit memos, and debit memos.
      *
      * **Note**: The Credit and Debit Memos feature is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
-    **/
-    putSequenceSet(req: operations.PutSequenceSetRequest, config?: AxiosRequestConfig): Promise<operations.PutSequenceSetResponse>;
+     */
+    putSequenceSet(req: operations.PUTSequenceSetRequest, config?: AxiosRequestConfig): Promise<operations.PUTSequenceSetResponse>;
 }

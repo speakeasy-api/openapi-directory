@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Operations about message_comment_reactions
+ */
 export declare class MessageCommentReactions {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,27 +12,31 @@ export declare class MessageCommentReactions {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteMessageCommentReactionsId - Delete Message Comment Reaction
-     *
      * Delete Message Comment Reaction
-    **/
+     *
+     * @remarks
+     * Delete Message Comment Reaction
+     */
     deleteMessageCommentReactionsId(req: operations.DeleteMessageCommentReactionsIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteMessageCommentReactionsIdResponse>;
     /**
-     * getMessageCommentReactions - List Message Comment Reactions
-     *
      * List Message Comment Reactions
-    **/
+     *
+     * @remarks
+     * List Message Comment Reactions
+     */
     getMessageCommentReactions(req: operations.GetMessageCommentReactionsRequest, config?: AxiosRequestConfig): Promise<operations.GetMessageCommentReactionsResponse>;
     /**
-     * getMessageCommentReactionsId - Show Message Comment Reaction
-     *
      * Show Message Comment Reaction
-    **/
+     *
+     * @remarks
+     * Show Message Comment Reaction
+     */
     getMessageCommentReactionsId(req: operations.GetMessageCommentReactionsIdRequest, config?: AxiosRequestConfig): Promise<operations.GetMessageCommentReactionsIdResponse>;
     /**
-     * postMessageCommentReactions - Create Message Comment Reaction
-     *
      * Create Message Comment Reaction
-    **/
-    postMessageCommentReactions(req: operations.PostMessageCommentReactionsRequest, config?: AxiosRequestConfig): Promise<operations.PostMessageCommentReactionsResponse>;
+     *
+     * @remarks
+     * Create Message Comment Reaction
+     */
+    postMessageCommentReactions(req: operations.PostMessageCommentReactionsRequestBody, config?: AxiosRequestConfig): Promise<operations.PostMessageCommentReactionsResponse>;
 }

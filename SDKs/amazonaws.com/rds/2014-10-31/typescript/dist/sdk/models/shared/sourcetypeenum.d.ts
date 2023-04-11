@@ -4,5 +4,8 @@ export declare enum SourceTypeEnum {
     DbSecurityGroup = "db-security-group",
     DbSnapshot = "db-snapshot",
     DbCluster = "db-cluster",
-    DbClusterSnapshot = "db-cluster-snapshot"
+    DbClusterSnapshot = "db-cluster-snapshot",
+    CustomEngineVersion = "custom-engine-version",
+    DbProxy = "db-proxy",
+    BlueGreenDeployment = "blue-green-deployment"
 }

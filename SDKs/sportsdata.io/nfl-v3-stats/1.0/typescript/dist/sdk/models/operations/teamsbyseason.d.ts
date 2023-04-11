@@ -1,13 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class TeamsBySeasonPathParams extends SpeakeasyBase {
-    format: string;
-    season: string;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class TeamsBySeasonRequest extends SpeakeasyBase {
-    pathParams: TeamsBySeasonPathParams;
+    /**
+     * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+     */
+    format: string;
+    /**
+     *
+     * @remarks
+     *           Year of the season and the season type. If no season type is provided, then the default is regular season.
+     *           <br>Examples: <code>2015REG</code>, <code>2015PRE</code>, <code>2015POST</code>.
+     *
+     */
+    season: string;
 }
 export declare class TeamsBySeasonResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    teams?: any[];
+    rawResponse?: AxiosResponse;
+    teams?: shared.Team[];
 }

@@ -1,15 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteListingsQueryParams extends SpeakeasyBase {
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class DeleteListingsRequest extends SpeakeasyBase {
+    /**
+     * A comma separated list of domain names
+     */
     domains: string[];
 }
-export declare class DeleteListingsRequest extends SpeakeasyBase {
-    queryParams: DeleteListingsQueryParams;
-}
 export declare class DeleteListingsResponse extends SpeakeasyBase {
-    aftermarketListingAction?: any;
+    /**
+     * Request was successful
+     */
+    aftermarketListingAction?: shared.AftermarketListingAction;
     body?: Uint8Array;
     contentType: string;
-    error?: any;
-    errorLimit?: any;
+    /**
+     * Request was malformed
+     */
+    error?: shared.ErrorT;
+    /**
+     * Too many requests received within interval
+     */
+    errorLimit?: shared.ErrorLimit;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

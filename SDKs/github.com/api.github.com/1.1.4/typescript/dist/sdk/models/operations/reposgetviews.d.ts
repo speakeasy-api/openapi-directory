@@ -1,19 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReposGetViewsPathParams extends SpeakeasyBase {
-    owner: string;
-    repo: string;
-}
-export declare class ReposGetViewsQueryParams extends SpeakeasyBase {
-    per?: shared.PerEnum;
-}
+import { AxiosResponse } from "axios";
 export declare class ReposGetViewsRequest extends SpeakeasyBase {
-    pathParams: ReposGetViewsPathParams;
-    queryParams: ReposGetViewsQueryParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    owner: string;
+    /**
+     * The time frame to display results for.
+     */
+    per?: shared.PerEnum;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    repo: string;
 }
 export declare class ReposGetViewsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Forbidden
+     */
     basicError?: shared.BasicError;
+    /**
+     * Response
+     */
     viewTraffic?: shared.ViewTraffic;
 }

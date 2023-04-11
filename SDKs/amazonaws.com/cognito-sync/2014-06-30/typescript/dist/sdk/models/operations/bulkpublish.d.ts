@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class BulkPublishPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class BulkPublishRequest extends SpeakeasyBase {
+    /**
+     * A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. GUID generation is unique within a region.
+     */
     identityPoolId: string;
-}
-export declare class BulkPublishHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,18 +14,36 @@ export declare class BulkPublishHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class BulkPublishRequest extends SpeakeasyBase {
-    pathParams: BulkPublishPathParams;
-    headers: BulkPublishHeaders;
-}
 export declare class BulkPublishResponse extends SpeakeasyBase {
+    /**
+     * AlreadyStreamedException
+     */
     alreadyStreamedException?: any;
+    /**
+     * Success
+     */
     bulkPublishResponse?: shared.BulkPublishResponse;
     contentType: string;
+    /**
+     * DuplicateRequestException
+     */
     duplicateRequestException?: any;
+    /**
+     * InternalErrorException
+     */
     internalErrorException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * NotAuthorizedException
+     */
     notAuthorizedException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
 }

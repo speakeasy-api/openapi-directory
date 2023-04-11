@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class WhatsApp {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +9,7 @@ export declare class WhatsApp {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getWaAccount - Retrieve a Whatsapp account
-    **/
-    getWaAccount(req: operations.GetWaAccountRequest, config?: AxiosRequestConfig): Promise<operations.GetWaAccountResponse>;
+     * Retrieve a Whatsapp account
+     */
+    getWAAccount(req: operations.GetWAAccountRequest, security: operations.GetWAAccountSecurity, config?: AxiosRequestConfig): Promise<operations.GetWAAccountResponse>;
 }

@@ -1,8 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { TemplateVersionStatusEnum } from "./templateversionstatusenum";
 /**
- * A summary of the service template version detail data.
-**/
+ * Summary data of an Proton service template version resource.
+ */
 export declare class ServiceTemplateVersionSummary extends SpeakeasyBase {
     arn: string;
     createdAt: Date;

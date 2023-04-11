@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetAutoScalingGroupRecommendationsXAmzTargetEnum {
     ComputeOptimizerServiceGetAutoScalingGroupRecommendations = "ComputeOptimizerService.GetAutoScalingGroupRecommendations"
 }
-export declare class GetAutoScalingGroupRecommendationsHeaders extends SpeakeasyBase {
+export declare class GetAutoScalingGroupRecommendationsRequest extends SpeakeasyBase {
+    getAutoScalingGroupRecommendationsRequest: shared.GetAutoScalingGroupRecommendationsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,20 +15,44 @@ export declare class GetAutoScalingGroupRecommendationsHeaders extends Speakeasy
     xAmzSignedHeaders?: string;
     xAmzTarget: GetAutoScalingGroupRecommendationsXAmzTargetEnum;
 }
-export declare class GetAutoScalingGroupRecommendationsRequest extends SpeakeasyBase {
-    headers: GetAutoScalingGroupRecommendationsHeaders;
-    request: shared.GetAutoScalingGroupRecommendationsRequest;
-}
 export declare class GetAutoScalingGroupRecommendationsResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getAutoScalingGroupRecommendationsResponse?: shared.GetAutoScalingGroupRecommendationsResponse;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
+    /**
+     * MissingAuthenticationToken
+     */
     missingAuthenticationToken?: any;
+    /**
+     * OptInRequiredException
+     */
     optInRequiredException?: any;
-    resourceNotFoundException?: any;
-    serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ServiceUnavailableException
+     */
+    serviceUnavailableException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

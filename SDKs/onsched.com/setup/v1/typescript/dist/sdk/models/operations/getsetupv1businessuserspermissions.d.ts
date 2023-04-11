@@ -1,14 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetSetupV1BusinessusersPermissionsQueryParams extends SpeakeasyBase {
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class GetSetupV1BusinessusersPermissionsRequest extends SpeakeasyBase {
+    /**
+     * Page limit default 20, max 100
+     */
     limit?: number;
+    /**
+     * Starting row of page, default 0
+     */
     offset?: number;
+    /**
+     * Filter permissions by role
+     */
     role?: string;
 }
-export declare class GetSetupV1BusinessusersPermissionsRequest extends SpeakeasyBase {
-    queryParams: GetSetupV1BusinessusersPermissionsQueryParams;
-}
 export declare class GetSetupV1BusinessusersPermissionsResponse extends SpeakeasyBase {
-    businessPermissionListViewModel?: Record<string, any>;
+    /**
+     * Success
+     */
+    businessPermissionListViewModel?: shared.BusinessPermissionListViewModel;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

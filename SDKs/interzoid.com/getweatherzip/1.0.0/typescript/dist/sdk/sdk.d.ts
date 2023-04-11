@@ -1,10 +1,27 @@
-import { AxiosInstance } from "axios";
 import { WeatherByZipCode } from "./weatherbyzipcode";
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://api.interzoid.com"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * This API provides current weather information for US Cities, including temperatures, wind speeds, wind direction, relative humidity, and visibility.
+ *
+ * @see {@link https://www.interzoid.com/services/getweatherzipcode} - API home page and documentation
+ */
 export declare class SDK {
     weatherByZipCode: WeatherByZipCode;
     _defaultClient: AxiosInstance;
@@ -13,5 +30,6 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
 }

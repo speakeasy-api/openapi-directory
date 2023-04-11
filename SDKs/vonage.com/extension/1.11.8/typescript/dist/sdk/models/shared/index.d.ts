@@ -10,6 +10,5 @@ export * from "./line";
 export * from "./links";
 export * from "./nexthref";
 export * from "./prevhref";
-export * from "./security";
 export * from "./selfhref";
 export * from "./validationerrorsresponse";

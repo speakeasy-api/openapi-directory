@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolSnmpv3UserDelPathParams extends SpeakeasyBase {
-    agentNum: number;
-    userName: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolSnmpv3UserDelRequest extends SpeakeasyBase {
-    pathParams: ProtocolSnmpv3UserDelPathParams;
+    /**
+     * Agent to add the SNMPv3 user
+     */
+    agentNum: number;
+    /**
+     * SNMPv3 user name
+     */
+    userName: string;
 }
 export declare class ProtocolSnmpv3UserDelResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolSnmpv3UserDel200ApplicationJSONString?: string;
 }

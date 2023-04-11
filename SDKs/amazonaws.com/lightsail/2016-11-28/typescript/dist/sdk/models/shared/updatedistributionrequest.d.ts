@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { CacheSettings } from "./cachesettings";
-import { CacheBehaviorPerPath } from "./cachebehaviorperpath";
 import { CacheBehavior } from "./cachebehavior";
+import { CacheBehaviorPerPath } from "./cachebehaviorperpath";
+import { CacheSettings } from "./cachesettings";
 import { InputOrigin } from "./inputorigin";
 export declare class UpdateDistributionRequest extends SpeakeasyBase {
     cacheBehaviorSettings?: CacheSettings;

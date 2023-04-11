@@ -1,7 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PatchLocationPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PatchLocationRequestBodyAddress extends SpeakeasyBase {
     city?: string;
     country?: string;
@@ -50,6 +48,9 @@ export declare class PatchLocationRequestBodyOpeningHours extends SpeakeasyBase 
     five?: PatchLocationRequestBodyOpeningHours5[];
     six?: PatchLocationRequestBodyOpeningHours6[];
 }
+/**
+ * Include location properties to create here
+ */
 export declare class PatchLocationRequestBody extends SpeakeasyBase {
     active?: boolean;
     address?: PatchLocationRequestBodyAddress;
@@ -59,17 +60,30 @@ export declare class PatchLocationRequestBody extends SpeakeasyBase {
     operatorName?: string;
     timezone?: string;
 }
-export declare class PatchLocation200ApplicationJson extends SpeakeasyBase {
+export declare class PatchLocationRequest extends SpeakeasyBase {
+    /**
+     * Include location properties to create here
+     */
+    requestBody: PatchLocationRequestBody;
+    /**
+     * ID of location that needs to be updated
+     */
+    id: string;
+}
+/**
+ * Returns the updated location object
+ */
+export declare class PatchLocation200ApplicationJSON extends SpeakeasyBase {
     message?: string;
     ok?: boolean;
     result?: any[];
 }
-export declare class PatchLocationRequest extends SpeakeasyBase {
-    pathParams: PatchLocationPathParams;
-    request: PatchLocationRequestBody;
-}
 export declare class PatchLocationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    patchLocation200ApplicationJSONObject?: PatchLocation200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Returns the updated location object
+     */
+    patchLocation200ApplicationJSONObject?: PatchLocation200ApplicationJSON;
 }

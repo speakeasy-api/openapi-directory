@@ -1,19 +1,34 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+/**
+ * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+ */
 export declare enum PlayerGameLogsBySeasonFormatEnum {
     Json = "JSON",
     Xml = "XML"
 }
-export declare class PlayerGameLogsBySeasonPathParams extends SpeakeasyBase {
-    format: PlayerGameLogsBySeasonFormatEnum;
-    numberofgames: string;
-    playerid: string;
-    season: string;
-}
 export declare class PlayerGameLogsBySeasonRequest extends SpeakeasyBase {
-    pathParams: PlayerGameLogsBySeasonPathParams;
+    /**
+     * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+     */
+    format: PlayerGameLogsBySeasonFormatEnum;
+    /**
+     * How many games to return. Example <code>all</code>, <code>10</code>, <code>25</code>
+     */
+    numberofgames: string;
+    /**
+     * Unique FantasyData Player ID. Example:<code>17920</code>.
+     */
+    playerid: string;
+    /**
+     * Season to get games from. Example <code>2019POST</code>, <code>2020</code>
+     */
+    season: string;
 }
 export declare class PlayerGameLogsBySeasonResponse extends SpeakeasyBase {
     contentType: string;
-    playerGames?: any[];
+    playerGames?: shared.PlayerGame[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -4,7 +4,7 @@ import { SavingsPlanPaymentOptionEnum } from "./savingsplanpaymentoptionenum";
 import { SavingsPlanTypeEnum } from "./savingsplantypeenum";
 /**
  * Information about a Savings Plan offering.
-**/
+ */
 export declare class ParentSavingsPlanOffering extends SpeakeasyBase {
     currency?: CurrencyCodeEnum;
     durationSeconds?: number;

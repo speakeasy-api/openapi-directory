@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PresentationDto extends SpeakeasyBase {
+export declare class PresentationDTO extends SpeakeasyBase {
     backgroundColor?: string;
     imageUrl?: string;
     textColor?: string;

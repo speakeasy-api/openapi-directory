@@ -1,32 +1,63 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AnalyticsManagementProfileFilterLinksPatchPathParams extends SpeakeasyBase {
-    accountId: string;
-    linkId: string;
-    profileId: string;
-    webPropertyId: string;
-}
-export declare class AnalyticsManagementProfileFilterLinksPatchQueryParams extends SpeakeasyBase {
-    alt?: shared.AltEnum;
-    fields?: string;
-    key?: string;
-    oauthToken?: string;
-    prettyPrint?: boolean;
-    quotaUser?: string;
-    userIp?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class AnalyticsManagementProfileFilterLinksPatchSecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class AnalyticsManagementProfileFilterLinksPatchRequest extends SpeakeasyBase {
-    pathParams: AnalyticsManagementProfileFilterLinksPatchPathParams;
-    queryParams: AnalyticsManagementProfileFilterLinksPatchQueryParams;
-    request?: shared.ProfileFilterLinkInput;
-    security: AnalyticsManagementProfileFilterLinksPatchSecurity;
+    profileFilterLinkInput?: shared.ProfileFilterLinkInput;
+    /**
+     * Account ID to which profile filter link belongs.
+     */
+    accountId: string;
+    /**
+     * Data format for the response.
+     */
+    alt?: shared.AltEnum;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * ID of the profile filter link to be updated.
+     */
+    linkId: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauthToken?: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * Profile ID to which filter link belongs
+     */
+    profileId: string;
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    userIp?: string;
+    /**
+     * Web property Id to which profile filter link belongs
+     */
+    webPropertyId: string;
 }
 export declare class AnalyticsManagementProfileFilterLinksPatchResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful response
+     */
     profileFilterLink?: shared.ProfileFilterLink;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

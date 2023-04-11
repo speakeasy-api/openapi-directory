@@ -2,6 +2,9 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { ProjectVisibilityTypeEnum } from "./projectvisibilitytypeenum";
 export declare class UpdateProjectVisibilityInput extends SpeakeasyBase {
     projectArn: string;
+    /**
+     * <p>Specifies the visibility of the project's builds. Possible values are:</p> <dl> <dt>PUBLIC_READ</dt> <dd> <p>The project builds are visible to the public.</p> </dd> <dt>PRIVATE</dt> <dd> <p>The project builds are not visible to the public.</p> </dd> </dl>
+     */
     projectVisibility: ProjectVisibilityTypeEnum;
     resourceAccessRole?: string;
 }

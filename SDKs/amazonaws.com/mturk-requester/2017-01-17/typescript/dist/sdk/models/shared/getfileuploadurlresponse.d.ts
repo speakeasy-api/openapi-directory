@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetFileUploadUrlResponse extends SpeakeasyBase {
+/**
+ * Success
+ */
+export declare class GetFileUploadURLResponse extends SpeakeasyBase {
     fileUploadURL?: string;
 }

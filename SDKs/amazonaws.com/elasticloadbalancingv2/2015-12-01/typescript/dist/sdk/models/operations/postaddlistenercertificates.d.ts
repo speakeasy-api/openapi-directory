@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostAddListenerCertificatesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTAddListenerCertificatesActionEnum {
     AddListenerCertificates = "AddListenerCertificates"
 }
-export declare enum PostAddListenerCertificatesVersionEnum {
+export declare enum POSTAddListenerCertificatesVersionEnum {
     TwoThousandAndFifteen1201 = "2015-12-01"
 }
-export declare class PostAddListenerCertificatesQueryParams extends SpeakeasyBase {
-    action: PostAddListenerCertificatesActionEnum;
-    version: PostAddListenerCertificatesVersionEnum;
-}
-export declare class PostAddListenerCertificatesHeaders extends SpeakeasyBase {
+export declare class POSTAddListenerCertificatesRequest extends SpeakeasyBase {
+    action: POSTAddListenerCertificatesActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTAddListenerCertificatesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostAddListenerCertificatesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostAddListenerCertificatesRequest extends SpeakeasyBase {
-    queryParams: PostAddListenerCertificatesQueryParams;
-    headers: PostAddListenerCertificatesHeaders;
-    request?: Uint8Array;
-}
-export declare class PostAddListenerCertificatesResponse extends SpeakeasyBase {
+export declare class POSTAddListenerCertificatesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

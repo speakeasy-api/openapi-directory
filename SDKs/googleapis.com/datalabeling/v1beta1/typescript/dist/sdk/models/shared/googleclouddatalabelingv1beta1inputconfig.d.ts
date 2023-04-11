@@ -3,6 +3,9 @@ import { GoogleCloudDatalabelingV1beta1BigQuerySource } from "./googleclouddatal
 import { GoogleCloudDatalabelingV1beta1ClassificationMetadata } from "./googleclouddatalabelingv1beta1classificationmetadata";
 import { GoogleCloudDatalabelingV1beta1GcsSource } from "./googleclouddatalabelingv1beta1gcssource";
 import { GoogleCloudDatalabelingV1beta1TextMetadata } from "./googleclouddatalabelingv1beta1textmetadata";
+/**
+ * Optional. The type of annotation to be performed on this data. You must specify this field if you are using this InputConfig in an EvaluationJob.
+ */
 export declare enum GoogleCloudDatalabelingV1beta1InputConfigAnnotationTypeEnum {
     AnnotationTypeUnspecified = "ANNOTATION_TYPE_UNSPECIFIED",
     ImageClassificationAnnotation = "IMAGE_CLASSIFICATION_ANNOTATION",
@@ -19,6 +22,9 @@ export declare enum GoogleCloudDatalabelingV1beta1InputConfigAnnotationTypeEnum 
     TextEntityExtractionAnnotation = "TEXT_ENTITY_EXTRACTION_ANNOTATION",
     GeneralClassificationAnnotation = "GENERAL_CLASSIFICATION_ANNOTATION"
 }
+/**
+ * Required. Data type must be specifed when user tries to import data.
+ */
 export declare enum GoogleCloudDatalabelingV1beta1InputConfigDataTypeEnum {
     DataTypeUnspecified = "DATA_TYPE_UNSPECIFIED",
     Image = "IMAGE",
@@ -28,12 +34,30 @@ export declare enum GoogleCloudDatalabelingV1beta1InputConfigDataTypeEnum {
 }
 /**
  * The configuration of input data, including data type, location, etc.
-**/
+ */
 export declare class GoogleCloudDatalabelingV1beta1InputConfig extends SpeakeasyBase {
+    /**
+     * Optional. The type of annotation to be performed on this data. You must specify this field if you are using this InputConfig in an EvaluationJob.
+     */
     annotationType?: GoogleCloudDatalabelingV1beta1InputConfigAnnotationTypeEnum;
+    /**
+     * The BigQuery location for input data. If used in an EvaluationJob, this is where the service saves the prediction input and output sampled from the model version.
+     */
     bigquerySource?: GoogleCloudDatalabelingV1beta1BigQuerySource;
+    /**
+     * Metadata for classification annotations.
+     */
     classificationMetadata?: GoogleCloudDatalabelingV1beta1ClassificationMetadata;
+    /**
+     * Required. Data type must be specifed when user tries to import data.
+     */
     dataType?: GoogleCloudDatalabelingV1beta1InputConfigDataTypeEnum;
+    /**
+     * Source of the Cloud Storage file to be imported.
+     */
     gcsSource?: GoogleCloudDatalabelingV1beta1GcsSource;
+    /**
+     * Metadata for the text.
+     */
     textMetadata?: GoogleCloudDatalabelingV1beta1TextMetadata;
 }

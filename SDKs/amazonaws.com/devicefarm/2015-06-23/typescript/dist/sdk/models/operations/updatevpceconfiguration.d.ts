@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum UpdateVpceConfigurationXAmzTargetEnum {
-    DeviceFarm20150623UpdateVpceConfiguration = "DeviceFarm_20150623.UpdateVPCEConfiguration"
+import { AxiosResponse } from "axios";
+export declare enum UpdateVPCEConfigurationXAmzTargetEnum {
+    DeviceFarm20150623UpdateVPCEConfiguration = "DeviceFarm_20150623.UpdateVPCEConfiguration"
 }
-export declare class UpdateVpceConfigurationHeaders extends SpeakeasyBase {
+export declare class UpdateVPCEConfigurationRequest extends SpeakeasyBase {
+    updateVPCEConfigurationRequest: shared.UpdateVPCEConfigurationRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,18 +13,30 @@ export declare class UpdateVpceConfigurationHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: UpdateVpceConfigurationXAmzTargetEnum;
+    xAmzTarget: UpdateVPCEConfigurationXAmzTargetEnum;
 }
-export declare class UpdateVpceConfigurationRequest extends SpeakeasyBase {
-    headers: UpdateVpceConfigurationHeaders;
-    request: shared.UpdateVpceConfigurationRequest;
-}
-export declare class UpdateVpceConfigurationResponse extends SpeakeasyBase {
+export declare class UpdateVPCEConfigurationResponse extends SpeakeasyBase {
+    /**
+     * ArgumentException
+     */
     argumentException?: any;
     contentType: string;
+    /**
+     * InvalidOperationException
+     */
     invalidOperationException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
+    /**
+     * ServiceAccountException
+     */
     serviceAccountException?: any;
     statusCode: number;
-    updateVPCEConfigurationResult?: shared.UpdateVpceConfigurationResult;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
+    updateVPCEConfigurationResult?: shared.UpdateVPCEConfigurationResult;
 }

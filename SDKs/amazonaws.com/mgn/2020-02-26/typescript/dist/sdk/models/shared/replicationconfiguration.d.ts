@@ -3,6 +3,9 @@ import { ReplicationConfigurationDataPlaneRoutingEnum } from "./replicationconfi
 import { ReplicationConfigurationDefaultLargeStagingDiskTypeEnum } from "./replicationconfigurationdefaultlargestagingdisktypeenum";
 import { ReplicationConfigurationEbsEncryptionEnum } from "./replicationconfigurationebsencryptionenum";
 import { ReplicationConfigurationReplicatedDisk } from "./replicationconfigurationreplicateddisk";
+/**
+ * Success
+ */
 export declare class ReplicationConfiguration extends SpeakeasyBase {
     associateDefaultSecurityGroup?: boolean;
     bandwidthThrottling?: number;

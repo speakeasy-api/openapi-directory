@@ -1,27 +1,49 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ExtensionCtrlGetAccountExtensionsPathParams extends SpeakeasyBase {
-    accountId: string;
-}
-export declare class ExtensionCtrlGetAccountExtensionsQueryParams extends SpeakeasyBase {
-    email?: string;
-    locationId?: number;
-    loginName?: string;
-    page?: number;
-    pageSize?: number;
-    phoneNumber?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ExtensionCtrlGetAccountExtensionsSecurity extends SpeakeasyBase {
-    bearerAuth: shared.SchemeBearerAuth;
+    bearerAuth: string;
 }
 export declare class ExtensionCtrlGetAccountExtensionsRequest extends SpeakeasyBase {
-    pathParams: ExtensionCtrlGetAccountExtensionsPathParams;
-    queryParams: ExtensionCtrlGetAccountExtensionsQueryParams;
-    security: ExtensionCtrlGetAccountExtensionsSecurity;
+    /**
+     * The Vonage Business Cloud account ID
+     */
+    accountId: string;
+    /**
+     * Filter by email address
+     */
+    email?: string;
+    /**
+     * Filter by location id
+     */
+    locationId?: number;
+    /**
+     * Filter by login name
+     */
+    loginName?: string;
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of records per page
+     */
+    pageSize?: number;
+    /**
+     * Filter by phone number
+     */
+    phoneNumber?: string;
 }
 export declare class ExtensionCtrlGetAccountExtensionsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     endUserRouteHalResponse?: shared.EndUserRouteHalResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Invalid parameters given
+     */
     validationErrorsResponse?: shared.ValidationErrorsResponse;
 }

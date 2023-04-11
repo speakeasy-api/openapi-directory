@@ -1,5 +1,5 @@
-export declare enum HiTypeEnumEnum {
-    OpConsultation = "OPConsultation",
+export declare enum HITypeEnumEnum {
+    OPConsultation = "OPConsultation",
     Prescription = "Prescription",
     DischargeSummary = "DischargeSummary",
     DiagnosticReport = "DiagnosticReport"

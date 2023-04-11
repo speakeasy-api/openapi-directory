@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolNetflowSetCollectorPathParams extends SpeakeasyBase {
-    agentNum: number;
-    collectorIP: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolNetflowSetCollectorRequest extends SpeakeasyBase {
-    pathParams: ProtocolNetflowSetCollectorPathParams;
+    /**
+     * Agent to set the NETFLOW
+     */
+    agentNum: number;
+    /**
+     * file name to load config
+     */
+    collectorIP: string;
 }
 export declare class ProtocolNetflowSetCollectorResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolNetflowSetCollector200ApplicationJSONString?: string;
 }

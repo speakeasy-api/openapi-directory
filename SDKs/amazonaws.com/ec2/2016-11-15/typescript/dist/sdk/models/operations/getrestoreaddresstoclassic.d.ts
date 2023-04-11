@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetRestoreAddressToClassicActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETRestoreAddressToClassicActionEnum {
     RestoreAddressToClassic = "RestoreAddressToClassic"
 }
-export declare enum GetRestoreAddressToClassicVersionEnum {
+export declare enum GETRestoreAddressToClassicVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetRestoreAddressToClassicQueryParams extends SpeakeasyBase {
-    action: GetRestoreAddressToClassicActionEnum;
+export declare class GETRestoreAddressToClassicRequest extends SpeakeasyBase {
+    action: GETRestoreAddressToClassicActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
+    /**
+     * The Elastic IP address.
+     */
     publicIp: string;
-    version: GetRestoreAddressToClassicVersionEnum;
-}
-export declare class GetRestoreAddressToClassicHeaders extends SpeakeasyBase {
+    version: GETRestoreAddressToClassicVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetRestoreAddressToClassicHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetRestoreAddressToClassicRequest extends SpeakeasyBase {
-    queryParams: GetRestoreAddressToClassicQueryParams;
-    headers: GetRestoreAddressToClassicHeaders;
-}
-export declare class GetRestoreAddressToClassicResponse extends SpeakeasyBase {
+export declare class GETRestoreAddressToClassicResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

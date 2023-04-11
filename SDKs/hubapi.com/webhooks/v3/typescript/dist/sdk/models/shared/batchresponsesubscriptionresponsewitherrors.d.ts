@@ -7,6 +7,9 @@ export declare enum BatchResponseSubscriptionResponseWithErrorsStatusEnum {
     Canceled = "CANCELED",
     Complete = "COMPLETE"
 }
+/**
+ * multiple statuses
+ */
 export declare class BatchResponseSubscriptionResponseWithErrors extends SpeakeasyBase {
     completedAt: Date;
     errors?: StandardError[];

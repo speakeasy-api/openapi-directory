@@ -1,8 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteProfilingGroupPathParams extends SpeakeasyBase {
-    profilingGroupName: string;
-}
-export declare class DeleteProfilingGroupHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteProfilingGroupRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -10,18 +8,37 @@ export declare class DeleteProfilingGroupHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DeleteProfilingGroupRequest extends SpeakeasyBase {
-    pathParams: DeleteProfilingGroupPathParams;
-    headers: DeleteProfilingGroupHeaders;
+    /**
+     * The name of the profiling group to delete.
+     */
+    profilingGroupName: string;
 }
 export declare class DeleteProfilingGroupResponse extends SpeakeasyBase {
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteProfilingGroupResponse?: Record<string, any>;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

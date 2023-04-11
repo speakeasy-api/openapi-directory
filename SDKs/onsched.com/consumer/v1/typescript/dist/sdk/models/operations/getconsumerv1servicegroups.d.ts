@@ -1,14 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetConsumerV1ServicegroupsQueryParams extends SpeakeasyBase {
-    limit?: number;
-    locationId?: string;
-    offset?: number;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class GetConsumerV1ServicegroupsRequest extends SpeakeasyBase {
-    queryParams: GetConsumerV1ServicegroupsQueryParams;
+    /**
+     * Page limit default 20, max 100
+     */
+    limit?: number;
+    /**
+     * id of business location, defaults to primary business location
+     */
+    locationId?: string;
+    /**
+     * Starting row of page, default 0
+     */
+    offset?: number;
 }
 export declare class GetConsumerV1ServicegroupsResponse extends SpeakeasyBase {
     contentType: string;
-    serviceGroupListViewModel?: Record<string, any>;
+    /**
+     * Success
+     */
+    serviceGroupListViewModel?: shared.ServiceGroupListViewModel;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,22 +1,21 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetYearMonthJsonRequest, GetYearMonthJsonResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GetYearMonthJsonRequest,
+  GetYearMonthJsonResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    apikey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: GetYearMonthJsonRequest = {
-  pathParams: {
-    month: 8717895732742165505,
-    year: 2259404117704393152,
+    apikey: "YOUR_API_KEY_HERE",
   },
+});
+
+const req: GetYearMonthJsonRequest = {
+  month: 548814,
+  year: 592845,
 };
 
 sdk.archive.getYearMonthJson(req).then((res: GetYearMonthJsonResponse | AxiosError) => {

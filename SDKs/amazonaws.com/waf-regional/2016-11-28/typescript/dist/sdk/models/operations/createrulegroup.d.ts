@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum CreateRuleGroupXAmzTargetEnum {
-    AwswafRegional20161128CreateRuleGroup = "AWSWAF_Regional_20161128.CreateRuleGroup"
+    AWSWAFRegional20161128CreateRuleGroup = "AWSWAF_Regional_20161128.CreateRuleGroup"
 }
-export declare class CreateRuleGroupHeaders extends SpeakeasyBase {
+export declare class CreateRuleGroupRequest extends SpeakeasyBase {
+    createRuleGroupRequest: shared.CreateRuleGroupRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,19 +15,40 @@ export declare class CreateRuleGroupHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: CreateRuleGroupXAmzTargetEnum;
 }
-export declare class CreateRuleGroupRequest extends SpeakeasyBase {
-    headers: CreateRuleGroupHeaders;
-    request: shared.CreateRuleGroupRequest;
-}
 export declare class CreateRuleGroupResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     createRuleGroupResponse?: shared.CreateRuleGroupResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * WAFBadRequestException
+     */
     wafBadRequestException?: any;
+    /**
+     * WAFDisallowedNameException
+     */
     wafDisallowedNameException?: any;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFLimitsExceededException
+     */
     wafLimitsExceededException?: any;
+    /**
+     * WAFStaleDataException
+     */
     wafStaleDataException?: any;
+    /**
+     * WAFTagOperationException
+     */
     wafTagOperationException?: any;
+    /**
+     * WAFTagOperationInternalErrorException
+     */
     wafTagOperationInternalErrorException?: any;
 }

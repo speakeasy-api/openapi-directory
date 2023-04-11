@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CollectionsMetadataSubjectsRelationshipsUpdatePathParams extends SpeakeasyBase {
-    cgmId: string;
-    collectionId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class CollectionsMetadataSubjectsRelationshipsUpdateRequest extends SpeakeasyBase {
-    pathParams: CollectionsMetadataSubjectsRelationshipsUpdatePathParams;
-    request: Record<string, any>;
+    requestBody: Record<string, any>;
+    /**
+     * A short id for that piece of metadata
+     */
+    cgmId: string;
+    /**
+     * A short id for that collection
+     */
+    collectionId: string;
 }
 export declare class CollectionsMetadataSubjectsRelationshipsUpdateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

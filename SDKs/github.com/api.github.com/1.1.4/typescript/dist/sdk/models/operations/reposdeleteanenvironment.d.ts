@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ReposDeleteAnEnvironmentPathParams extends SpeakeasyBase {
-    environmentName: string;
-    owner: string;
-    repo: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ReposDeleteAnEnvironmentRequest extends SpeakeasyBase {
-    pathParams: ReposDeleteAnEnvironmentPathParams;
+    /**
+     * The name of the environment.
+     */
+    environmentName: string;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    owner: string;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    repo: string;
 }
 export declare class ReposDeleteAnEnvironmentResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

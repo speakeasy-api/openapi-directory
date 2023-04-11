@@ -1,52 +1,55 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CountClosedWorkflowExecutionsRequest, CountClosedWorkflowExecutionsResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CountClosedWorkflowExecutionsRequest,
+  CountClosedWorkflowExecutionsResponse,
+  CountClosedWorkflowExecutionsXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
+import {
+  CloseStatusEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: CountClosedWorkflowExecutionsRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "SimpleWorkflowService.CountClosedWorkflowExecutions",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
+});
+
+const req: CountClosedWorkflowExecutionsRequest = {
+  countClosedWorkflowExecutionsInput: {
     closeStatusFilter: {
-      status: "COMPLETED",
+      status: CloseStatusEnum.Terminated,
     },
     closeTimeFilter: {
-      latestDate: "2011-08-12T10:11:12Z",
-      oldestDate: "2003-05-13T04:57:12Z",
+      latestDate: "2021-07-27T21:52:56.087Z",
+      oldestDate: "2021-03-11T23:22:42.658Z",
     },
-    domain: "rerum",
+    domain: "nulla",
     executionFilter: {
-      workflowId: "dicta",
+      workflowId: "corrupti",
     },
     startTimeFilter: {
-      latestDate: "2004-06-02T10:14:12Z",
-      oldestDate: "1981-07-21T06:30:48Z",
+      latestDate: "2021-09-24T02:21:06.409Z",
+      oldestDate: "2021-09-16T11:56:06.019Z",
     },
     tagFilter: {
-      tag: "et",
+      tag: "suscipit",
     },
     typeFilter: {
-      name: "ut",
-      version: "dolorem",
+      name: "iure",
+      version: "magnam",
     },
   },
+  xAmzAlgorithm: "debitis",
+  xAmzContentSha256: "ipsa",
+  xAmzCredential: "delectus",
+  xAmzDate: "tempora",
+  xAmzSecurityToken: "suscipit",
+  xAmzSignature: "molestiae",
+  xAmzSignedHeaders: "minus",
+  xAmzTarget: CountClosedWorkflowExecutionsXAmzTargetEnum.SimpleWorkflowServiceCountClosedWorkflowExecutions,
 };
 
 sdk.countClosedWorkflowExecutions(req).then((res: CountClosedWorkflowExecutionsResponse | AxiosError) => {

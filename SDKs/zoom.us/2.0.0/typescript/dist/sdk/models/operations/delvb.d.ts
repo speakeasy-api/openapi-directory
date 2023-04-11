@@ -1,15 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DelVbPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DelVBRequest extends SpeakeasyBase {
     accountId: string;
-}
-export declare class DelVbQueryParams extends SpeakeasyBase {
+    /**
+     * Provide the id of the file that is to be deleted. To delete multiple files, provide comma separated values for this field.
+     */
     fileIds?: string;
 }
-export declare class DelVbRequest extends SpeakeasyBase {
-    pathParams: DelVbPathParams;
-    queryParams: DelVbQueryParams;
-}
-export declare class DelVbResponse extends SpeakeasyBase {
+export declare class DelVBResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

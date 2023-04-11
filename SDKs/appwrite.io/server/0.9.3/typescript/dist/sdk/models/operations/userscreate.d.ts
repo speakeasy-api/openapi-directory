@@ -1,20 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UsersCreateRequestBody extends SpeakeasyBase {
-    email: string;
-    name?: string;
-    password: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UsersCreateSecurity extends SpeakeasyBase {
-    key: shared.SchemeKey;
-    project: shared.SchemeProject;
+    key: string;
+    project: string;
 }
-export declare class UsersCreateRequest extends SpeakeasyBase {
-    request?: UsersCreateRequestBody;
-    security: UsersCreateSecurity;
+export declare class UsersCreateRequestBody extends SpeakeasyBase {
+    /**
+     * User email.
+     */
+    email: string;
+    /**
+     * User name. Max length: 128 chars.
+     */
+    name?: string;
+    /**
+     * User password. Must be between 6 to 32 chars.
+     */
+    password: string;
 }
 export declare class UsersCreateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * User
+     */
     user?: shared.User;
 }

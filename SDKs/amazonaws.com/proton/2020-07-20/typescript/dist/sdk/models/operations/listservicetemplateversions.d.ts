@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListServiceTemplateVersionsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListServiceTemplateVersionsXAmzTargetEnum {
     AwsProton20200720ListServiceTemplateVersions = "AwsProton20200720.ListServiceTemplateVersions"
 }
-export declare class ListServiceTemplateVersionsHeaders extends SpeakeasyBase {
+export declare class ListServiceTemplateVersionsRequest extends SpeakeasyBase {
+    listServiceTemplateVersionsInput: shared.ListServiceTemplateVersionsInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,19 +14,41 @@ export declare class ListServiceTemplateVersionsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: ListServiceTemplateVersionsXAmzTargetEnum;
-}
-export declare class ListServiceTemplateVersionsRequest extends SpeakeasyBase {
-    queryParams: ListServiceTemplateVersionsQueryParams;
-    headers: ListServiceTemplateVersionsHeaders;
-    request: shared.ListServiceTemplateVersionsInput;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class ListServiceTemplateVersionsResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * Success
+     */
     listServiceTemplateVersionsOutput?: shared.ListServiceTemplateVersionsOutput;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

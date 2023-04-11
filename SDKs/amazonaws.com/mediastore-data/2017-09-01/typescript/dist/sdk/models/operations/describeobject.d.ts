@@ -1,8 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DescribeObjectPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DescribeObjectRequest extends SpeakeasyBase {
+    /**
+     * The path (including the file name) where the object is stored in the container. Format: &lt;folder name&gt;/&lt;folder name&gt;/&lt;file name&gt;
+     */
     path: string;
-}
-export declare class DescribeObjectHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,15 +13,24 @@ export declare class DescribeObjectHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DescribeObjectRequest extends SpeakeasyBase {
-    pathParams: DescribeObjectPathParams;
-    headers: DescribeObjectHeaders;
-}
 export declare class DescribeObjectResponse extends SpeakeasyBase {
+    /**
+     * ContainerNotFoundException
+     */
     containerNotFoundException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     describeObjectResponse?: Record<string, any>;
+    /**
+     * InternalServerError
+     */
     internalServerError?: any;
+    /**
+     * ObjectNotFoundException
+     */
     objectNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

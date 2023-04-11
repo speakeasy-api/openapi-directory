@@ -1,6 +1,14 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class PaymentInitiationServicePis {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * The component for Payment Initiation Service (PIS) offers the following services:
+ *
+ * @remarks
+ *   * Initiation and update of a payment request
+ *   * Status information of a payment
+ *
+ */
+export declare class PaymentInitiationServicePIS {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,8 +17,9 @@ export declare class PaymentInitiationServicePis {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * cancelPayment - Payment cancellation request
+     * Payment cancellation request
      *
+     * @remarks
      * This method initiates the cancellation of a payment.
      * Depending on the payment-service, the payment-product and the ASPSP's implementation,
      * this TPP call might be sufficient to cancel a payment.
@@ -24,53 +33,60 @@ export declare class PaymentInitiationServicePis {
      *   * access method was successful, or
      *   * access method is generally applicable, but further authorisation processes are needed.
      *
-    **/
-    cancelPayment(req: operations.CancelPaymentRequest, config?: AxiosRequestConfig): Promise<operations.CancelPaymentResponse>;
+     */
+    cancelPayment(req: operations.CancelPaymentRequest, security: operations.CancelPaymentSecurity, config?: AxiosRequestConfig): Promise<operations.CancelPaymentResponse>;
     /**
-     * getPaymentCancellationScaStatus - Read the SCA status of the payment cancellation's authorisation
+     * Read the SCA status of the payment cancellation's authorisation
      *
+     * @remarks
      * This method returns the SCA status of a payment initiation's authorisation sub-resource.
      *
-    **/
-    getPaymentCancellationScaStatus(req: operations.GetPaymentCancellationScaStatusRequest, config?: AxiosRequestConfig): Promise<operations.GetPaymentCancellationScaStatusResponse>;
+     */
+    getPaymentCancellationScaStatus(req: operations.GetPaymentCancellationScaStatusRequest, security: operations.GetPaymentCancellationScaStatusSecurity, config?: AxiosRequestConfig): Promise<operations.GetPaymentCancellationScaStatusResponse>;
     /**
-     * getPaymentInformation - Get payment information
+     * Get payment information
      *
+     * @remarks
      * Returns the content of a payment object
-    **/
-    getPaymentInformation(req: operations.GetPaymentInformationRequest, config?: AxiosRequestConfig): Promise<operations.GetPaymentInformationResponse>;
+     */
+    getPaymentInformation(req: operations.GetPaymentInformationRequest, security: operations.GetPaymentInformationSecurity, config?: AxiosRequestConfig): Promise<operations.GetPaymentInformationResponse>;
     /**
-     * getPaymentInitiationAuthorisation - Get payment initiation authorisation sub-resources request
+     * Get payment initiation authorisation sub-resources request
      *
+     * @remarks
      * Read a list of all authorisation subresources IDs which have been created.
      *
      * This function returns an array of hyperlinks to all generated authorisation sub-resources.
      *
-    **/
-    getPaymentInitiationAuthorisation(req: operations.GetPaymentInitiationAuthorisationRequest, config?: AxiosRequestConfig): Promise<operations.GetPaymentInitiationAuthorisationResponse>;
+     */
+    getPaymentInitiationAuthorisation(req: operations.GetPaymentInitiationAuthorisationRequest, security: operations.GetPaymentInitiationAuthorisationSecurity, config?: AxiosRequestConfig): Promise<operations.GetPaymentInitiationAuthorisationResponse>;
     /**
-     * getPaymentInitiationCancellationAuthorisationInformation - Will deliver an array of resource identifications to all generated cancellation authorisation sub-resources
+     * Will deliver an array of resource identifications to all generated cancellation authorisation sub-resources
      *
+     * @remarks
      * Retrieve a list of all created cancellation authorisation sub-resources.
      *
-    **/
-    getPaymentInitiationCancellationAuthorisationInformation(req: operations.GetPaymentInitiationCancellationAuthorisationInformationRequest, config?: AxiosRequestConfig): Promise<operations.GetPaymentInitiationCancellationAuthorisationInformationResponse>;
+     */
+    getPaymentInitiationCancellationAuthorisationInformation(req: operations.GetPaymentInitiationCancellationAuthorisationInformationRequest, security: operations.GetPaymentInitiationCancellationAuthorisationInformationSecurity, config?: AxiosRequestConfig): Promise<operations.GetPaymentInitiationCancellationAuthorisationInformationResponse>;
     /**
-     * getPaymentInitiationScaStatus - Read the SCA status of the payment authorisation
+     * Read the SCA status of the payment authorisation
      *
+     * @remarks
      * This method returns the SCA status of a payment initiation's authorisation sub-resource.
      *
-    **/
-    getPaymentInitiationScaStatus(req: operations.GetPaymentInitiationScaStatusRequest, config?: AxiosRequestConfig): Promise<operations.GetPaymentInitiationScaStatusResponse>;
+     */
+    getPaymentInitiationScaStatus(req: operations.GetPaymentInitiationScaStatusRequest, security: operations.GetPaymentInitiationScaStatusSecurity, config?: AxiosRequestConfig): Promise<operations.GetPaymentInitiationScaStatusResponse>;
     /**
-     * getPaymentInitiationStatus - Payment initiation status request
+     * Payment initiation status request
      *
+     * @remarks
      * Check the transaction status of a payment initiation.
-    **/
-    getPaymentInitiationStatus(req: operations.GetPaymentInitiationStatusRequest, config?: AxiosRequestConfig): Promise<operations.GetPaymentInitiationStatusResponse>;
+     */
+    getPaymentInitiationStatus(req: operations.GetPaymentInitiationStatusRequest, security: operations.GetPaymentInitiationStatusSecurity, config?: AxiosRequestConfig): Promise<operations.GetPaymentInitiationStatusResponse>;
     /**
-     * initiatePayment - Payment initiation request
+     * Payment initiation request
      *
+     * @remarks
      * This method is used to initiate a payment at the ASPSP.
      *
      * ## Variants of payment initiation requests
@@ -118,11 +134,118 @@ export declare class PaymentInitiationServicePis {
      * since all starts of the multiple authorisations are fully equal.
      * In these cases, first an authorisation sub-resource has to be generated following the 'startAuthorisation' link.
      *
-    **/
-    initiatePayment(req: operations.InitiatePaymentRequest, config?: AxiosRequestConfig): Promise<operations.InitiatePaymentResponse>;
+     */
+    initiatePaymentJson(req: operations.InitiatePaymentJsonRequest, security: operations.InitiatePaymentJsonSecurity, config?: AxiosRequestConfig): Promise<operations.InitiatePaymentJsonResponse>;
     /**
-     * startPaymentAuthorisation - Start the authorisation process for a payment initiation
+     * Payment initiation request
      *
+     * @remarks
+     * This method is used to initiate a payment at the ASPSP.
+     *
+     * ## Variants of payment initiation requests
+     *
+     * This method to initiate a payment initiation at the ASPSP can be sent with either a JSON body or an pain.001 body depending on the payment product in the path.
+     *
+     * There are the following **payment products**:
+     *
+     *   - Payment products with payment information in *JSON* format:
+     *     - ***domestic-swiss-credit-transfers-isr***
+     *     - ***domestic-swiss-credit-transfers***
+     *     - ***domestic-swiss-credit-transfers-qr***
+     *     - ***domestic-swiss-foreign-credit-transfers***
+     *     - ***swiss-sepa-credit-transfers***
+     *     - ***swiss-cross-border-credit-transfers***
+     *   - Payment products with payment information in *SIX pain.001* XML format:
+     *     - ***pain.001-sepa-credit-transfers***
+     *     - ***pain.001-cross-border-credit-transfers***
+     *     - ***pain.001-swiss-six-credit-transfers***
+     *
+     * Furthermore the request body depends on the **payment-service**:
+     *   * ***payments***: A single payment initiation request.
+     *   * ***bulk-payments***: A collection of several payment initiation requests.
+     *
+     *     In case of a *pain.001* message there are more than one payments contained in the *pain.001 message.
+     *
+     *     In case of a *JSON* there are several JSON payment blocks contained in a joining list.
+     *   * ***periodic-payments***:
+     *     Create a standing order initiation resource for recurrent i.e. periodic payments addressable under {paymentId}
+     *      with all data relevant for the corresponding payment product and the execution of the standing order contained in a JSON body.
+     *
+     * This is the first step in the API to initiate the related recurring/periodic payment.
+     *
+     * ## Single and mulitilevel SCA Processes
+     *
+     * The payment initiation requests are independent from the need of one or multilevel
+     * SCA processing, i.e. independent from the number of authorisations needed for the execution of payments.
+     *
+     * But the response messages are specific to either one SCA processing or multilevel SCA processing.
+     *
+     * For payment initiation with multilevel SCA, this specification requires an explicit start of the authorisation,
+     * i.e. links directly associated with SCA processing like 'scaRedirect' or 'scaOAuth' cannot be contained in the
+     * response message of a Payment Initation Request for a payment, where multiple authorisations are needed.
+     * Also if any data is needed for the next action, like selecting an SCA method is not supported in the response,
+     * since all starts of the multiple authorisations are fully equal.
+     * In these cases, first an authorisation sub-resource has to be generated following the 'startAuthorisation' link.
+     *
+     */
+    initiatePaymentMultipart(req: operations.InitiatePaymentMultipartRequest, security: operations.InitiatePaymentMultipartSecurity, config?: AxiosRequestConfig): Promise<operations.InitiatePaymentMultipartResponse>;
+    /**
+     * Payment initiation request
+     *
+     * @remarks
+     * This method is used to initiate a payment at the ASPSP.
+     *
+     * ## Variants of payment initiation requests
+     *
+     * This method to initiate a payment initiation at the ASPSP can be sent with either a JSON body or an pain.001 body depending on the payment product in the path.
+     *
+     * There are the following **payment products**:
+     *
+     *   - Payment products with payment information in *JSON* format:
+     *     - ***domestic-swiss-credit-transfers-isr***
+     *     - ***domestic-swiss-credit-transfers***
+     *     - ***domestic-swiss-credit-transfers-qr***
+     *     - ***domestic-swiss-foreign-credit-transfers***
+     *     - ***swiss-sepa-credit-transfers***
+     *     - ***swiss-cross-border-credit-transfers***
+     *   - Payment products with payment information in *SIX pain.001* XML format:
+     *     - ***pain.001-sepa-credit-transfers***
+     *     - ***pain.001-cross-border-credit-transfers***
+     *     - ***pain.001-swiss-six-credit-transfers***
+     *
+     * Furthermore the request body depends on the **payment-service**:
+     *   * ***payments***: A single payment initiation request.
+     *   * ***bulk-payments***: A collection of several payment initiation requests.
+     *
+     *     In case of a *pain.001* message there are more than one payments contained in the *pain.001 message.
+     *
+     *     In case of a *JSON* there are several JSON payment blocks contained in a joining list.
+     *   * ***periodic-payments***:
+     *     Create a standing order initiation resource for recurrent i.e. periodic payments addressable under {paymentId}
+     *      with all data relevant for the corresponding payment product and the execution of the standing order contained in a JSON body.
+     *
+     * This is the first step in the API to initiate the related recurring/periodic payment.
+     *
+     * ## Single and mulitilevel SCA Processes
+     *
+     * The payment initiation requests are independent from the need of one or multilevel
+     * SCA processing, i.e. independent from the number of authorisations needed for the execution of payments.
+     *
+     * But the response messages are specific to either one SCA processing or multilevel SCA processing.
+     *
+     * For payment initiation with multilevel SCA, this specification requires an explicit start of the authorisation,
+     * i.e. links directly associated with SCA processing like 'scaRedirect' or 'scaOAuth' cannot be contained in the
+     * response message of a Payment Initation Request for a payment, where multiple authorisations are needed.
+     * Also if any data is needed for the next action, like selecting an SCA method is not supported in the response,
+     * since all starts of the multiple authorisations are fully equal.
+     * In these cases, first an authorisation sub-resource has to be generated following the 'startAuthorisation' link.
+     *
+     */
+    initiatePaymentRaw(req: operations.InitiatePaymentRawRequest, security: operations.InitiatePaymentRawSecurity, config?: AxiosRequestConfig): Promise<operations.InitiatePaymentRawResponse>;
+    /**
+     * Start the authorisation process for a payment initiation
+     *
+     * @remarks
      * Create an authorisation sub-resource and start the authorisation process.
      * The message might in addition transmit authentication and authorisation related data.
      *
@@ -157,11 +280,12 @@ export declare class PaymentInitiationServicePis {
      *     executing the cancellation.
      *   * The signing basket needs to be authorised yet.
      *
-    **/
-    startPaymentAuthorisation(req: operations.StartPaymentAuthorisationRequest, config?: AxiosRequestConfig): Promise<operations.StartPaymentAuthorisationResponse>;
+     */
+    startPaymentAuthorisation(req: operations.StartPaymentAuthorisationRequest, security: operations.StartPaymentAuthorisationSecurity, config?: AxiosRequestConfig): Promise<operations.StartPaymentAuthorisationResponse>;
     /**
-     * startPaymentInitiationCancellationAuthorisation - Start the authorisation process for the cancellation of the addressed payment
+     * Start the authorisation process for the cancellation of the addressed payment
      *
+     * @remarks
      * Creates an authorisation sub-resource and start the authorisation process of the cancellation of the addressed payment.
      * The message might in addition transmit authentication and authorisation related data.
      *
@@ -195,11 +319,12 @@ export declare class PaymentInitiationServicePis {
      *     executing the cancellation.
      *   * The signing basket needs to be authorised yet.
      *
-    **/
-    startPaymentInitiationCancellationAuthorisation(req: operations.StartPaymentInitiationCancellationAuthorisationRequest, config?: AxiosRequestConfig): Promise<operations.StartPaymentInitiationCancellationAuthorisationResponse>;
+     */
+    startPaymentInitiationCancellationAuthorisation(req: operations.StartPaymentInitiationCancellationAuthorisationRequest, security: operations.StartPaymentInitiationCancellationAuthorisationSecurity, config?: AxiosRequestConfig): Promise<operations.StartPaymentInitiationCancellationAuthorisationResponse>;
     /**
-     * updatePaymentCancellationPsuData - Update PSU data for payment initiation cancellation
+     * Update PSU data for payment initiation cancellation
      *
+     * @remarks
      * This method updates PSU data on the cancellation authorisation resource if needed.
      * It may authorise a cancellation of the payment within the Embedded SCA Approach where needed.
      *
@@ -239,11 +364,12 @@ export declare class PaymentInitiationServicePis {
      *     therefore many optional elements are not present.
      *     Maybe in a later version the access path will change.
      *
-    **/
-    updatePaymentCancellationPsuData(req: operations.UpdatePaymentCancellationPsuDataRequest, config?: AxiosRequestConfig): Promise<operations.UpdatePaymentCancellationPsuDataResponse>;
+     */
+    updatePaymentCancellationPsuData(req: operations.UpdatePaymentCancellationPsuDataRequest, security: operations.UpdatePaymentCancellationPsuDataSecurity, config?: AxiosRequestConfig): Promise<operations.UpdatePaymentCancellationPsuDataResponse>;
     /**
-     * updatePaymentPsuData - Update PSU data for payment initiation
+     * Update PSU data for payment initiation
      *
+     * @remarks
      * This methods updates PSU data on the authorisation resource if needed.
      * It may authorise a payment within the Embedded SCA Approach where needed.
      *
@@ -283,6 +409,6 @@ export declare class PaymentInitiationServicePis {
      *     therefore many optional elements are not present.
      *     Maybe in a later version the access path will change.
      *
-    **/
-    updatePaymentPsuData(req: operations.UpdatePaymentPsuDataRequest, config?: AxiosRequestConfig): Promise<operations.UpdatePaymentPsuDataResponse>;
+     */
+    updatePaymentPsuData(req: operations.UpdatePaymentPsuDataRequest, security: operations.UpdatePaymentPsuDataSecurity, config?: AxiosRequestConfig): Promise<operations.UpdatePaymentPsuDataResponse>;
 }

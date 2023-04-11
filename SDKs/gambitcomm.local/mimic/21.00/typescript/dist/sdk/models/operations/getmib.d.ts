@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetMibPathParams extends SpeakeasyBase {
-    agentNum: number;
-    object: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetMibRequest extends SpeakeasyBase {
-    pathParams: GetMibPathParams;
+    /**
+     * Agent to show the MIB
+     */
+    agentNum: number;
+    /**
+     * Object
+     */
+    object: string;
 }
 export declare class GetMibResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     getMib200ApplicationJSONString?: string;
 }

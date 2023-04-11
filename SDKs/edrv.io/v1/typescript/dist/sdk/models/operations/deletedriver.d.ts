@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteDriverPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteDriverRequest extends SpeakeasyBase {
-    pathParams: DeleteDriverPathParams;
+    /**
+     * The driver id that needs to be deleted
+     */
+    id: string;
 }
 export declare class DeleteDriverResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

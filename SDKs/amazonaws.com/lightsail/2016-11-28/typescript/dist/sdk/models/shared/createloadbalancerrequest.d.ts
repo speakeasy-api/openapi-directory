@@ -10,4 +10,5 @@ export declare class CreateLoadBalancerRequest extends SpeakeasyBase {
     ipAddressType?: IpAddressTypeEnum;
     loadBalancerName: string;
     tags?: Tag[];
+    tlsPolicyName?: string;
 }

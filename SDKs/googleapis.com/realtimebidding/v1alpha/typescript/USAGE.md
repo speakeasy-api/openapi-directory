@@ -1,42 +1,36 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { RealtimebiddingBiddersBiddingFunctionsActivateRequest, RealtimebiddingBiddersBiddingFunctionsActivateResponse } from "openapi/src/sdk/models/operations";
+import {
+  RealtimebiddingBiddersBiddingFunctionsActivateRequest,
+  RealtimebiddingBiddersBiddingFunctionsActivateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: RealtimebiddingBiddersBiddingFunctionsActivateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
+  dollarXgafv: XgafvEnum.Two,
+  requestBody: {
+    "distinctio": "quibusdam",
+    "unde": "nulla",
+    "corrupti": "illum",
   },
-  pathParams: {
-    name: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
-    "debitis": "voluptatum",
-    "et": "ut",
-    "dolorem": "et",
-  },
+  accessToken: "vel",
+  alt: AltEnum.Media,
+  callback: "deserunt",
+  fields: "suscipit",
+  key: "iure",
+  name: "magnam",
+  oauthToken: "debitis",
+  prettyPrint: false,
+  quotaUser: "ipsa",
+  uploadType: "delectus",
+  uploadProtocol: "tempora",
 };
 
 sdk.bidders.realtimebiddingBiddersBiddingFunctionsActivate(req).then((res: RealtimebiddingBiddersBiddingFunctionsActivateResponse | AxiosError) => {

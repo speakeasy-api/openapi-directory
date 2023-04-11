@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListCustomRoutingAcceleratorsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListCustomRoutingAcceleratorsXAmzTargetEnum {
     GlobalAcceleratorV20180706ListCustomRoutingAccelerators = "GlobalAccelerator_V20180706.ListCustomRoutingAccelerators"
 }
-export declare class ListCustomRoutingAcceleratorsHeaders extends SpeakeasyBase {
+export declare class ListCustomRoutingAcceleratorsRequest extends SpeakeasyBase {
+    listCustomRoutingAcceleratorsRequest: shared.ListCustomRoutingAcceleratorsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,16 +23,24 @@ export declare class ListCustomRoutingAcceleratorsHeaders extends SpeakeasyBase 
     xAmzSignedHeaders?: string;
     xAmzTarget: ListCustomRoutingAcceleratorsXAmzTargetEnum;
 }
-export declare class ListCustomRoutingAcceleratorsRequest extends SpeakeasyBase {
-    queryParams: ListCustomRoutingAcceleratorsQueryParams;
-    headers: ListCustomRoutingAcceleratorsHeaders;
-    request: shared.ListCustomRoutingAcceleratorsRequest;
-}
 export declare class ListCustomRoutingAcceleratorsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServiceErrorException
+     */
     internalServiceErrorException?: any;
+    /**
+     * InvalidArgumentException
+     */
     invalidArgumentException?: any;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * Success
+     */
     listCustomRoutingAcceleratorsResponse?: shared.ListCustomRoutingAcceleratorsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

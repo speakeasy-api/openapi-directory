@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeDbClusterEndpointsActionEnum {
-    DescribeDbClusterEndpoints = "DescribeDBClusterEndpoints"
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeDBClusterEndpointsActionEnum {
+    DescribeDBClusterEndpoints = "DescribeDBClusterEndpoints"
 }
-export declare enum PostDescribeDbClusterEndpointsVersionEnum {
+export declare enum POSTDescribeDBClusterEndpointsVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class PostDescribeDbClusterEndpointsQueryParams extends SpeakeasyBase {
-    action: PostDescribeDbClusterEndpointsActionEnum;
+export declare class POSTDescribeDBClusterEndpointsRequest extends SpeakeasyBase {
+    action: POSTDescribeDBClusterEndpointsActionEnum;
+    /**
+     * Pagination token
+     */
     marker?: string;
+    /**
+     * Pagination limit
+     */
     maxRecords?: string;
-    version: PostDescribeDbClusterEndpointsVersionEnum;
-}
-export declare class PostDescribeDbClusterEndpointsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeDBClusterEndpointsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeDbClusterEndpointsHeaders extends SpeakeasyBase
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeDbClusterEndpointsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeDbClusterEndpointsQueryParams;
-    headers: PostDescribeDbClusterEndpointsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeDbClusterEndpointsResponse extends SpeakeasyBase {
+export declare class POSTDescribeDBClusterEndpointsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

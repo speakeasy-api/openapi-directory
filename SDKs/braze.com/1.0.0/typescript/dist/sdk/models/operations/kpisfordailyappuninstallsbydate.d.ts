@@ -1,13 +1,33 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class KpIsForDailyAppUninstallsByDateQueryParams extends SpeakeasyBase {
-    appId?: string;
-    endingAt?: string;
-    length?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class KpIsForDailyAppUninstallsByDateRequest extends SpeakeasyBase {
-    queryParams: KpIsForDailyAppUninstallsByDateQueryParams;
+    /**
+     * (Optional) String
+     *
+     * @remarks
+     *
+     * App API identifier; if excluded, results for all apps in app group will be returned
+     */
+    appId?: string;
+    /**
+     * (Optional) DateTime (ISO 8601 string)
+     *
+     * @remarks
+     *
+     * Point in time when the data series should end - defaults to time of the request
+     */
+    endingAt?: string;
+    /**
+     * (Required) Integer
+     *
+     * @remarks
+     *
+     * Max number of days before ending_at to include in the returned series - must be between 1 and 100 inclusive
+     */
+    length?: string;
 }
 export declare class KpIsForDailyAppUninstallsByDateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

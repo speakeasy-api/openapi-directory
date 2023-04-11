@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetWorkflowRunsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum GetWorkflowRunsXAmzTargetEnum {
-    AwsGlueGetWorkflowRuns = "AWSGlue.GetWorkflowRuns"
+    AWSGlueGetWorkflowRuns = "AWSGlue.GetWorkflowRuns"
 }
-export declare class GetWorkflowRunsHeaders extends SpeakeasyBase {
+export declare class GetWorkflowRunsRequest extends SpeakeasyBase {
+    getWorkflowRunsRequest: shared.GetWorkflowRunsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,17 +23,28 @@ export declare class GetWorkflowRunsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetWorkflowRunsXAmzTargetEnum;
 }
-export declare class GetWorkflowRunsRequest extends SpeakeasyBase {
-    queryParams: GetWorkflowRunsQueryParams;
-    headers: GetWorkflowRunsHeaders;
-    request: shared.GetWorkflowRunsRequest;
-}
 export declare class GetWorkflowRunsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * Success
+     */
     getWorkflowRunsResponse?: shared.GetWorkflowRunsResponse;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

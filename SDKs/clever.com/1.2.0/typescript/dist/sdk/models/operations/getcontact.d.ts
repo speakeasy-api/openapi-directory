@@ -1,14 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetContactPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetContactRequest extends SpeakeasyBase {
-    pathParams: GetContactPathParams;
+    id: string;
 }
 export declare class GetContactResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Entity Not Found
+     */
     notFound?: shared.NotFound;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK Response
+     */
     studentContactResponse?: shared.StudentContactResponse;
 }

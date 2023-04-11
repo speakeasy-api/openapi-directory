@@ -1,18 +1,18 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { ConvertRequest, ConvertResponse } from "openapi/src/sdk/models/operations";
+import {
+  ConvertRequestBody,
+  ConvertResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: ConvertRequest = {
-  request: {
-    hundredsForm: "sit",
-    theNumber: "voluptas",
-    unit: "culpa",
-  },
+
+const req: ConvertRequestBody = {
+  hundredsForm: "مائة",
+  theNumber: "2519.50",
+  unit: " ريال سعودي",
 };
 
 sdk.convert(req).then((res: ConvertResponse | AxiosError) => {

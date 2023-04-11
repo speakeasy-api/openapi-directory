@@ -1,7 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { GetPaymentPartTypewithSuccess } from "./getpaymentparttypewithsuccess";
-export declare class GetPaymentPartsCollectionType extends SpeakeasyBase {
+import { GETPaymentPartTypewithSuccess } from "./getpaymentparttypewithsuccess";
+export declare class GETPaymentPartsCollectionType extends SpeakeasyBase {
+    /**
+     * URL to retrieve the next page of the response if it exists; otherwise absent.
+     *
+     * @remarks
+     *
+     */
     nextPage?: string;
-    parts?: GetPaymentPartTypewithSuccess[];
+    /**
+     * Container for payment parts.
+     *
+     * @remarks
+     *
+     */
+    parts?: GETPaymentPartTypewithSuccess[];
+    /**
+     * Returns `true` if the request was processed successfully.
+     */
     success?: boolean;
 }

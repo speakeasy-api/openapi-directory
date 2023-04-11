@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetEnableVolumeIoActionEnum {
-    EnableVolumeIo = "EnableVolumeIO"
+import { AxiosResponse } from "axios";
+export declare enum GETEnableVolumeIOActionEnum {
+    EnableVolumeIO = "EnableVolumeIO"
 }
-export declare enum GetEnableVolumeIoVersionEnum {
+export declare enum GETEnableVolumeIOVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetEnableVolumeIoQueryParams extends SpeakeasyBase {
-    action: GetEnableVolumeIoActionEnum;
+export declare class GETEnableVolumeIORequest extends SpeakeasyBase {
+    action: GETEnableVolumeIOActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
-    version: GetEnableVolumeIoVersionEnum;
+    version: GETEnableVolumeIOVersionEnum;
+    /**
+     * The ID of the volume.
+     */
     volumeId: string;
-}
-export declare class GetEnableVolumeIoHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,11 +25,8 @@ export declare class GetEnableVolumeIoHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetEnableVolumeIoRequest extends SpeakeasyBase {
-    queryParams: GetEnableVolumeIoQueryParams;
-    headers: GetEnableVolumeIoHeaders;
-}
-export declare class GetEnableVolumeIoResponse extends SpeakeasyBase {
+export declare class GETEnableVolumeIOResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

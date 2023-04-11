@@ -1,4 +1,4 @@
-export declare enum ObExternalStandingOrderStatus1CodeEnum {
+export declare enum OBExternalStandingOrderStatus1CodeEnum {
     Active = "Active",
     Inactive = "Inactive"
 }

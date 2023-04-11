@@ -1,0 +1,22 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Represents a Instance Settings resource. You can use instance settings to configure default settings for Compute Engine VM instances. For example, you can use it to configure default machine type of Compute Engine VM instances.
+ */
+export declare class InstanceSettings extends SpeakeasyBase {
+    /**
+     * Email address of the service account.
+     */
+    email?: string;
+    /**
+     * [Output Only] Type of the resource. Always compute#instance_settings for instance settings.
+     */
+    kind?: string;
+    /**
+     * Partial URL of the machine type resource to use for this instance, in the format: machineTypes/machine-type. This is either provided by the client or chosen by the system. For example, the following is a valid partial url to a predefined machine type: machineTypes/n2-standard-1
+     */
+    machineType?: string;
+    /**
+     * [Output Only] URL of the zone where the resource resides You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
+     */
+    zone?: string;
+}

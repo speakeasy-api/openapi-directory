@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ReposDeleteDeployKeyPathParams extends SpeakeasyBase {
-    keyId: number;
-    owner: string;
-    repo: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ReposDeleteDeployKeyRequest extends SpeakeasyBase {
-    pathParams: ReposDeleteDeployKeyPathParams;
+    /**
+     * The unique identifier of the key.
+     */
+    keyId: number;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    owner: string;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    repo: string;
 }
 export declare class ReposDeleteDeployKeyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

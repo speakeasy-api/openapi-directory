@@ -1,29 +1,28 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostUpdateJobActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTUpdateJobActionEnum {
     UpdateJob = "UpdateJob"
 }
-export declare enum PostUpdateJobOperationEnum {
+export declare enum POSTUpdateJobOperationEnum {
     UpdateJob = "UpdateJob"
 }
-export declare enum PostUpdateJobVersionEnum {
+export declare enum POSTUpdateJobVersionEnum {
     TwoThousandAndTen0601 = "2010-06-01"
 }
-export declare class PostUpdateJobQueryParams extends SpeakeasyBase {
+export declare class POSTUpdateJobRequest extends SpeakeasyBase {
     awsAccessKeyId: string;
-    action: PostUpdateJobActionEnum;
-    operation: PostUpdateJobOperationEnum;
+    action: POSTUpdateJobActionEnum;
+    operation: POSTUpdateJobOperationEnum;
+    requestBody?: Uint8Array;
     signature: string;
     signatureMethod: string;
     signatureVersion: string;
     timestamp: string;
-    version: PostUpdateJobVersionEnum;
+    version: POSTUpdateJobVersionEnum;
 }
-export declare class PostUpdateJobRequest extends SpeakeasyBase {
-    queryParams: PostUpdateJobQueryParams;
-    request?: Uint8Array;
-}
-export declare class PostUpdateJobResponse extends SpeakeasyBase {
+export declare class POSTUpdateJobResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

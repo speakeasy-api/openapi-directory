@@ -5,7 +5,7 @@ import { StepAdjustment } from "./stepadjustment";
 import { TargetTrackingConfiguration } from "./targettrackingconfiguration";
 /**
  * Describes a scaling policy.
-**/
+ */
 export declare class ScalingPolicy extends SpeakeasyBase {
     adjustmentType?: string;
     alarms?: Alarm[];

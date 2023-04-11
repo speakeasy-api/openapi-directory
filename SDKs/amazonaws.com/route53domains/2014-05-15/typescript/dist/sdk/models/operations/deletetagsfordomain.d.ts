@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteTagsForDomainXAmzTargetEnum {
     Route53DomainsV20140515DeleteTagsForDomain = "Route53Domains_v20140515.DeleteTagsForDomain"
 }
-export declare class DeleteTagsForDomainHeaders extends SpeakeasyBase {
+export declare class DeleteTagsForDomainRequest extends SpeakeasyBase {
+    deleteTagsForDomainRequest: shared.DeleteTagsForDomainRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class DeleteTagsForDomainHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteTagsForDomainXAmzTargetEnum;
 }
-export declare class DeleteTagsForDomainRequest extends SpeakeasyBase {
-    headers: DeleteTagsForDomainHeaders;
-    request: shared.DeleteTagsForDomainRequest;
-}
 export declare class DeleteTagsForDomainResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deleteTagsForDomainResponse?: Record<string, any>;
+    /**
+     * InvalidInput
+     */
     invalidInput?: any;
+    /**
+     * OperationLimitExceeded
+     */
     operationLimitExceeded?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnsupportedTLD
+     */
     unsupportedTLD?: any;
 }

@@ -1,24 +1,26 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { FacetsRequest, FacetsResponse } from "openapi/src/sdk/models/operations";
+import {
+  FacetsRequest,
+  FacetsResponse,
+  FacetsSortKeysEnum,
+  FacetsSourceEnum,
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: FacetsRequest = {
-  queryParams: {
-    count: 8717895732742165505,
-    endDate: "2006-05-01",
-    facetFilters: "culpa",
-    searchTerms: "expedita",
-    sortKeys: "updated,,desc",
-    source: "NSIDC",
-    spatial: "expedita",
-    startDate: "1978-05-28",
-    startIndex: 8274930044578894929,
-  },
+  count: 548814,
+  endDate: "2021-07-27",
+  facetFilters: "quibusdam",
+  searchTerms: "unde",
+  sortKeys: FacetsSortKeysEnum.UpdatedDesc,
+  source: FacetsSourceEnum.Ade,
+  spatial: "illum",
+  startDate: "2022-05-18",
+  startIndex: 645894,
 };
 
 sdk.swaggerDocs.facets(req).then((res: FacetsResponse | AxiosError) => {

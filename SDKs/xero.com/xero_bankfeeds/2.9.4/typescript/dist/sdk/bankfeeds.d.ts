@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class BankFeeds {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,43 +9,49 @@ export declare class BankFeeds {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createFeedConnections - Create one or more new feed connection
+     * Create one or more new feed connection
      *
+     * @remarks
      * By passing in the FeedConnections array object in the body, you can create one or more new feed connections
-    **/
-    createFeedConnections(req: operations.CreateFeedConnectionsRequest, config?: AxiosRequestConfig): Promise<operations.CreateFeedConnectionsResponse>;
+     */
+    createFeedConnections(req: operations.CreateFeedConnectionsRequest, security: operations.CreateFeedConnectionsSecurity, config?: AxiosRequestConfig): Promise<operations.CreateFeedConnectionsResponse>;
     /**
-     * createStatements - Creates one or more new statements
-    **/
-    createStatements(req: operations.CreateStatementsRequest, config?: AxiosRequestConfig): Promise<operations.CreateStatementsResponse>;
+     * Creates one or more new statements
+     */
+    createStatements(req: operations.CreateStatementsRequest, security: operations.CreateStatementsSecurity, config?: AxiosRequestConfig): Promise<operations.CreateStatementsResponse>;
     /**
-     * deleteFeedConnections - Delete an existing feed connection
+     * Delete an existing feed connection
      *
+     * @remarks
      * By passing in FeedConnections array object in the body, you can delete a feed connection.
-    **/
-    deleteFeedConnections(req: operations.DeleteFeedConnectionsRequest, config?: AxiosRequestConfig): Promise<operations.DeleteFeedConnectionsResponse>;
+     */
+    deleteFeedConnections(req: operations.DeleteFeedConnectionsRequest, security: operations.DeleteFeedConnectionsSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteFeedConnectionsResponse>;
     /**
-     * getFeedConnection - Retrieve single feed connection based on a unique id provided
+     * Retrieve single feed connection based on a unique id provided
      *
+     * @remarks
      * By passing in a FeedConnection Id options, you can search for matching feed connections
-    **/
-    getFeedConnection(req: operations.GetFeedConnectionRequest, config?: AxiosRequestConfig): Promise<operations.GetFeedConnectionResponse>;
+     */
+    getFeedConnection(req: operations.GetFeedConnectionRequest, security: operations.GetFeedConnectionSecurity, config?: AxiosRequestConfig): Promise<operations.GetFeedConnectionResponse>;
     /**
-     * getFeedConnections - Searches for feed connections
+     * Searches for feed connections
      *
+     * @remarks
      * By passing in the appropriate options, you can search for available feed connections in the system.
-    **/
-    getFeedConnections(req: operations.GetFeedConnectionsRequest, config?: AxiosRequestConfig): Promise<operations.GetFeedConnectionsResponse>;
+     */
+    getFeedConnections(req: operations.GetFeedConnectionsRequest, security: operations.GetFeedConnectionsSecurity, config?: AxiosRequestConfig): Promise<operations.GetFeedConnectionsResponse>;
     /**
-     * getStatement - Retrieve single statement based on unique id provided
+     * Retrieve single statement based on unique id provided
      *
+     * @remarks
      * By passing in a statement id, you can search for matching statements
-    **/
-    getStatement(req: operations.GetStatementRequest, config?: AxiosRequestConfig): Promise<operations.GetStatementResponse>;
+     */
+    getStatement(req: operations.GetStatementRequest, security: operations.GetStatementSecurity, config?: AxiosRequestConfig): Promise<operations.GetStatementResponse>;
     /**
-     * getStatements - Retrieve all statements
+     * Retrieve all statements
      *
+     * @remarks
      * By passing in parameters, you can search for matching statements
-    **/
-    getStatements(req: operations.GetStatementsRequest, config?: AxiosRequestConfig): Promise<operations.GetStatementsResponse>;
+     */
+    getStatements(req: operations.GetStatementsRequest, security: operations.GetStatementsSecurity, config?: AxiosRequestConfig): Promise<operations.GetStatementsResponse>;
 }

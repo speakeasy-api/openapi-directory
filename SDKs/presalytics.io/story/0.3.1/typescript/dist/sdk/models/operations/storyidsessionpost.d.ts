@@ -1,15 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class StoryIdSessionPostPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class StoryIdSessionPostRequest extends SpeakeasyBase {
-    pathParams: StoryIdSessionPostPathParams;
-    request: any;
+    /**
+     * Collaborator user id and permission type
+     */
+    createSessionRequest: shared.CreateSessionRequest;
+    /**
+     * the id from the story object
+     */
+    id: string;
 }
 export declare class StoryIdSessionPostResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    problemDetail?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * Unauthorized
+     */
+    problemDetail?: shared.ProblemDetail;
+    /**
+     * A new session object
+     */
     session?: shared.Session;
 }

@@ -1,7 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class Project extends SpeakeasyBase {
-    id?: number;
-    publishedDate?: string;
-    title?: string;
-    url?: string;
+    /**
+     * Project id
+     */
+    id: number;
+    /**
+     * Date when project was published
+     */
+    publishedDate: string;
+    /**
+     * Project title
+     */
+    title: string;
+    /**
+     * Api endpoint
+     */
+    url: string;
 }

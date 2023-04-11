@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeTableQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum DescribeTableXAmzTargetEnum {
     RedshiftDataDescribeTable = "RedshiftData.DescribeTable"
 }
-export declare class DescribeTableHeaders extends SpeakeasyBase {
+export declare class DescribeTableRequest extends SpeakeasyBase {
+    describeTableRequest: shared.DescribeTableRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,15 +23,24 @@ export declare class DescribeTableHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeTableXAmzTargetEnum;
 }
-export declare class DescribeTableRequest extends SpeakeasyBase {
-    queryParams: DescribeTableQueryParams;
-    headers: DescribeTableHeaders;
-    request: shared.DescribeTableRequest;
-}
 export declare class DescribeTableResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * DatabaseConnectionException
+     */
+    databaseConnectionException?: any;
+    /**
+     * Success
+     */
     describeTableResponse?: shared.DescribeTableResponse;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

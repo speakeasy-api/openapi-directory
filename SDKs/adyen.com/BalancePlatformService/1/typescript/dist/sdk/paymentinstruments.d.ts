@@ -1,5 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class PaymentInstruments {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,29 +10,40 @@ export declare class PaymentInstruments {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getPaymentInstrumentsId - Retrieve a payment instrument.
+     * Get a payment instrument
      *
-     * Returns a specific payment instrument.
-    **/
-    getPaymentInstrumentsId(req: operations.GetPaymentInstrumentsIdRequest, config?: AxiosRequestConfig): Promise<operations.GetPaymentInstrumentsIdResponse>;
+     * @remarks
+     * Returns the details of a payment instrument.
+     */
+    getPaymentInstrumentsId(req: operations.GetPaymentInstrumentsIdRequest, security: operations.GetPaymentInstrumentsIdSecurity, config?: AxiosRequestConfig): Promise<operations.GetPaymentInstrumentsIdResponse>;
     /**
-     * getPaymentInstrumentsIdTransactionRules - Retrieve all transaction rules for a specific payment instrument.
+     * Get the reveal information of a payment instrument
      *
-     * Returns a list of transaction rules associated to a specific payment instrument.
-    **/
-    getPaymentInstrumentsIdTransactionRules(req: operations.GetPaymentInstrumentsIdTransactionRulesRequest, config?: AxiosRequestConfig): Promise<operations.GetPaymentInstrumentsIdTransactionRulesResponse>;
+     * @remarks
+     * Returns the reveal information of a payment instrument.
+     */
+    getPaymentInstrumentsIdReveal(req: operations.GetPaymentInstrumentsIdRevealRequest, security: operations.GetPaymentInstrumentsIdRevealSecurity, config?: AxiosRequestConfig): Promise<operations.GetPaymentInstrumentsIdRevealResponse>;
     /**
-     * patchPaymentInstrumentsId - Update a payment instrument.
+     * Get all transaction rules for a payment instrument
      *
-     * Updates a specific payment instrument. Once a payment instrument is already active, you can only update the status. However, for cards created with a **Requested** or **Inactive** status, you can still update the balance account associated with the card.
-    **/
-    patchPaymentInstrumentsId(req: operations.PatchPaymentInstrumentsIdRequest, config?: AxiosRequestConfig): Promise<operations.PatchPaymentInstrumentsIdResponse>;
+     * @remarks
+     * Returns a list of transaction rules associated with a payment instrument.
+     */
+    getPaymentInstrumentsIdTransactionRules(req: operations.GetPaymentInstrumentsIdTransactionRulesRequest, security: operations.GetPaymentInstrumentsIdTransactionRulesSecurity, config?: AxiosRequestConfig): Promise<operations.GetPaymentInstrumentsIdTransactionRulesResponse>;
     /**
-     * postPaymentInstruments - Create a payment instrument.
+     * Update a payment instrument
      *
-     * Creates a payment instrument, which results in issuing either a physical or a virtual card to your user.
+     * @remarks
+     * Updates a payment instrument. Once a payment instrument is already active, you can only update its status. However, for cards created with **inactive** status, you can still update the balance account associated with the card.
+     */
+    patchPaymentInstrumentsId(req: operations.PatchPaymentInstrumentsIdRequest, security: operations.PatchPaymentInstrumentsIdSecurity, config?: AxiosRequestConfig): Promise<operations.PatchPaymentInstrumentsIdResponse>;
+    /**
+     * Create a payment instrument
      *
-     *  For more information, refer to [Create cards](https://docs.adyen.com/issuing/create-cards).
-    **/
-    postPaymentInstruments(req: operations.PostPaymentInstrumentsRequest, config?: AxiosRequestConfig): Promise<operations.PostPaymentInstrumentsResponse>;
+     * @remarks
+     * Creates a payment instrument to issue a physical card, a virtual card, or a business account to your user.
+     *
+     *  For more information, refer to [Issue cards](https://docs.adyen.com/issuing/create-cards) or [Issue business accounts](https://docs.adyen.com/marketplaces-and-platforms/business-accounts).
+     */
+    postPaymentInstruments(req: shared.PaymentInstrumentInfo, security: operations.PostPaymentInstrumentsSecurity, config?: AxiosRequestConfig): Promise<operations.PostPaymentInstrumentsResponse>;
 }

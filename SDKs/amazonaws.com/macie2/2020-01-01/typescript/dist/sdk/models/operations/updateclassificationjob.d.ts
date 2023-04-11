@@ -1,16 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UpdateClassificationJobPathParams extends SpeakeasyBase {
-    jobId: string;
-}
-export declare class UpdateClassificationJobHeaders extends SpeakeasyBase {
-    xAmzAlgorithm?: string;
-    xAmzContentSha256?: string;
-    xAmzCredential?: string;
-    xAmzDate?: string;
-    xAmzSecurityToken?: string;
-    xAmzSignature?: string;
-    xAmzSignedHeaders?: string;
-}
+import { AxiosResponse } from "axios";
+/**
+ * The status of a classification job. Possible values are:
+ */
 export declare enum UpdateClassificationJobRequestBodyJobStatusEnum {
     Running = "RUNNING",
     Paused = "PAUSED",
@@ -20,22 +12,59 @@ export declare enum UpdateClassificationJobRequestBodyJobStatusEnum {
     UserPaused = "USER_PAUSED"
 }
 export declare class UpdateClassificationJobRequestBody extends SpeakeasyBase {
+    /**
+     * The status of a classification job. Possible values are:
+     */
     jobStatus: UpdateClassificationJobRequestBodyJobStatusEnum;
 }
 export declare class UpdateClassificationJobRequest extends SpeakeasyBase {
-    pathParams: UpdateClassificationJobPathParams;
-    headers: UpdateClassificationJobHeaders;
-    request: UpdateClassificationJobRequestBody;
+    requestBody: UpdateClassificationJobRequestBody;
+    xAmzAlgorithm?: string;
+    xAmzContentSha256?: string;
+    xAmzCredential?: string;
+    xAmzDate?: string;
+    xAmzSecurityToken?: string;
+    xAmzSignature?: string;
+    xAmzSignedHeaders?: string;
+    /**
+     * The unique identifier for the classification job.
+     */
+    jobId: string;
 }
 export declare class UpdateClassificationJobResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
-    resourceNotFoundException?: any;
-    serviceQuotaExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ServiceQuotaExceededException
+     */
+    serviceQuotaExceededException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * Success
+     */
     updateClassificationJobResponse?: Record<string, any>;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

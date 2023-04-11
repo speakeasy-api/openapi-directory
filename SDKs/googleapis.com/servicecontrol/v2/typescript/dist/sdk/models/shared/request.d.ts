@@ -1,0 +1,55 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { Auth } from "./auth";
+/**
+ * This message defines attributes for an HTTP request. If the actual request is not an HTTP request, the runtime system should try to map the actual request to an equivalent HTTP request.
+ */
+export declare class Request extends SpeakeasyBase {
+    /**
+     * This message defines request authentication attributes. Terminology is based on the JSON Web Token (JWT) standard, but the terms also correlate to concepts in other standards.
+     */
+    auth?: Auth;
+    /**
+     * The HTTP request headers. If multiple headers share the same key, they must be merged according to the HTTP spec. All header keys must be lowercased, because HTTP header keys are case-insensitive.
+     */
+    headers?: Record<string, string>;
+    /**
+     * The HTTP request `Host` header value.
+     */
+    host?: string;
+    /**
+     * The unique ID for a request, which can be propagated to downstream systems. The ID should have low probability of collision within a single day for a specific service.
+     */
+    id?: string;
+    /**
+     * The HTTP request method, such as `GET`, `POST`.
+     */
+    method?: string;
+    /**
+     * The HTTP URL path, excluding the query parameters.
+     */
+    path?: string;
+    /**
+     * The network protocol used with the request, such as "http/1.1", "spdy/3", "h2", "h2c", "webrtc", "tcp", "udp", "quic". See https://www.iana.org/assignments/tls-extensiontype-values/tls-extensiontype-values.xhtml#alpn-protocol-ids for details.
+     */
+    protocol?: string;
+    /**
+     * The HTTP URL query in the format of `name1=value1&name2=value2`, as it appears in the first line of the HTTP request. No decoding is performed.
+     */
+    query?: string;
+    /**
+     * A special parameter for request reason. It is used by security systems to associate auditing information with a request.
+     */
+    reason?: string;
+    /**
+     * The HTTP URL scheme, such as `http` and `https`.
+     */
+    scheme?: string;
+    /**
+     * The HTTP request size in bytes. If unknown, it must be -1.
+     */
+    size?: string;
+    /**
+     * The timestamp when the `destination` service receives the last byte of the request.
+     */
+    time?: string;
+}

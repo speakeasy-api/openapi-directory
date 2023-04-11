@@ -5,6 +5,9 @@ export declare class ProjectSettingsSerializer extends SpeakeasyBase {
     compareCrawl?: boolean;
     crawlGzip?: boolean;
     extraHeaders?: string;
+    /**
+     * Keep email in case user delete his social auth connection
+     */
     googleAnalyticsAccountEmail?: string;
     googleAnalyticsNbDays?: number;
     googleAnalyticsSiteId?: number;

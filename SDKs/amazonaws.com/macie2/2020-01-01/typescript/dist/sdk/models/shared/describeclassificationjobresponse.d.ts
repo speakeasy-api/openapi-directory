@@ -1,13 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { JobScheduleFrequency } from "./jobschedulefrequency";
 import { JobStatusEnum } from "./jobstatusenum";
 import { JobTypeEnum } from "./jobtypeenum";
 import { LastRunErrorStatus } from "./lastrunerrorstatus";
 import { ManagedDataIdentifierSelectorEnum } from "./manageddataidentifierselectorenum";
 import { S3JobDefinition } from "./s3jobdefinition";
-import { JobScheduleFrequency } from "./jobschedulefrequency";
 import { Statistics } from "./statistics";
 import { UserPausedDetails } from "./userpauseddetails";
+/**
+ * Success
+ */
 export declare class DescribeClassificationJobResponse extends SpeakeasyBase {
+    allowListIds?: string[];
     clientToken?: string;
     createdAt?: Date;
     customDataIdentifierIds?: string[];

@@ -1,36 +1,59 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class RestoreRevisionUsingPostQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class RestoreRevisionUsingPOSTRequest extends SpeakeasyBase {
     padID?: string;
     rev?: string;
 }
-export declare class RestoreRevisionUsingPost200ApplicationJson extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class RestoreRevisionUsingPost500ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class RestoreRevisionUsingPost400ApplicationJson extends SpeakeasyBase {
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class RestoreRevisionUsingPost401ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class RestoreRevisionUsingPost401ApplicationJson extends SpeakeasyBase {
+/**
+ * generic api error (code 1)
+ */
+export declare class RestoreRevisionUsingPost400ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class RestoreRevisionUsingPost500ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class RestoreRevisionUsingPost200ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class RestoreRevisionUsingPostRequest extends SpeakeasyBase {
-    queryParams: RestoreRevisionUsingPostQueryParams;
-}
-export declare class RestoreRevisionUsingPostResponse extends SpeakeasyBase {
+export declare class RestoreRevisionUsingPOSTResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    restoreRevisionUsingPOST200ApplicationJSONObject?: RestoreRevisionUsingPost200ApplicationJson;
-    restoreRevisionUsingPOST400ApplicationJSONObject?: RestoreRevisionUsingPost400ApplicationJson;
-    restoreRevisionUsingPOST401ApplicationJSONObject?: RestoreRevisionUsingPost401ApplicationJson;
-    restoreRevisionUsingPOST500ApplicationJSONObject?: RestoreRevisionUsingPost500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    restoreRevisionUsingPOST200ApplicationJSONObject?: RestoreRevisionUsingPost200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    restoreRevisionUsingPOST400ApplicationJSONObject?: RestoreRevisionUsingPost400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    restoreRevisionUsingPOST401ApplicationJSONObject?: RestoreRevisionUsingPost401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    restoreRevisionUsingPOST500ApplicationJSONObject?: RestoreRevisionUsingPost500ApplicationJSON;
 }

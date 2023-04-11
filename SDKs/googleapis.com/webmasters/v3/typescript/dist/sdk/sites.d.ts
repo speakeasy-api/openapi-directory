@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Sites {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,19 +9,19 @@ export declare class Sites {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * webmastersSitesAdd - Adds a site to the set of the user's sites in Search Console.
-    **/
-    webmastersSitesAdd(req: operations.WebmastersSitesAddRequest, config?: AxiosRequestConfig): Promise<operations.WebmastersSitesAddResponse>;
+     * Adds a site to the set of the user's sites in Search Console.
+     */
+    webmastersSitesAdd(req: operations.WebmastersSitesAddRequest, security: operations.WebmastersSitesAddSecurity, config?: AxiosRequestConfig): Promise<operations.WebmastersSitesAddResponse>;
     /**
-     * webmastersSitesDelete - Removes a site from the set of the user's Search Console sites.
-    **/
-    webmastersSitesDelete(req: operations.WebmastersSitesDeleteRequest, config?: AxiosRequestConfig): Promise<operations.WebmastersSitesDeleteResponse>;
+     * Removes a site from the set of the user's Search Console sites.
+     */
+    webmastersSitesDelete(req: operations.WebmastersSitesDeleteRequest, security: operations.WebmastersSitesDeleteSecurity, config?: AxiosRequestConfig): Promise<operations.WebmastersSitesDeleteResponse>;
     /**
-     * webmastersSitesGet - Retrieves information about specific site.
-    **/
-    webmastersSitesGet(req: operations.WebmastersSitesGetRequest, config?: AxiosRequestConfig): Promise<operations.WebmastersSitesGetResponse>;
+     * Retrieves information about specific site.
+     */
+    webmastersSitesGet(req: operations.WebmastersSitesGetRequest, security: operations.WebmastersSitesGetSecurity, config?: AxiosRequestConfig): Promise<operations.WebmastersSitesGetResponse>;
     /**
-     * webmastersSitesList - Lists the user's Search Console sites.
-    **/
-    webmastersSitesList(req: operations.WebmastersSitesListRequest, config?: AxiosRequestConfig): Promise<operations.WebmastersSitesListResponse>;
+     * Lists the user's Search Console sites.
+     */
+    webmastersSitesList(req: operations.WebmastersSitesListRequest, security: operations.WebmastersSitesListSecurity, config?: AxiosRequestConfig): Promise<operations.WebmastersSitesListResponse>;
 }

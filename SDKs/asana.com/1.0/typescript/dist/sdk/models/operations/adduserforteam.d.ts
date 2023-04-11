@@ -1,26 +1,56 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AddUserForTeamPathParams extends SpeakeasyBase {
-    teamGid: string;
-}
-export declare class AddUserForTeamQueryParams extends SpeakeasyBase {
-    optFields?: string[];
-    optPretty?: boolean;
-}
+import { AxiosResponse } from "axios";
+/**
+ * The user to add to the team.
+ */
 export declare class AddUserForTeamRequestBody extends SpeakeasyBase {
+    /**
+     * A user identification object for specification with the addUser/removeUser endpoints.
+     */
     data?: shared.TeamAddUserRequest;
 }
-export declare class AddUserForTeam200ApplicationJson extends SpeakeasyBase {
-    data?: shared.UserResponse;
-}
 export declare class AddUserForTeamRequest extends SpeakeasyBase {
-    pathParams: AddUserForTeamPathParams;
-    queryParams: AddUserForTeamQueryParams;
-    request: AddUserForTeamRequestBody;
+    /**
+     * The user to add to the team.
+     */
+    requestBody: AddUserForTeamRequestBody;
+    /**
+     * Defines fields to return.
+     *
+     * @remarks
+     * Some requests return *compact* representations of objects in order to conserve resources and complete the request more efficiently. Other times requests return more information than you may need. This option allows you to list the exact set of fields that the API should be sure to return for the objects. The field names should be provided as paths, described below.
+     * The id of included objects will always be returned, regardless of the field options.
+     */
+    optFields?: string[];
+    /**
+     * Provides “pretty” output.
+     *
+     * @remarks
+     * Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
+     */
+    optPretty?: boolean;
+    /**
+     * Globally unique identifier for the team.
+     */
+    teamGid: string;
+}
+/**
+ * Successfully added user to the team.
+ */
+export declare class AddUserForTeam200ApplicationJSON extends SpeakeasyBase {
+    data?: shared.TeamMembershipResponse;
 }
 export declare class AddUserForTeamResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * This usually occurs because of a missing or malformed parameter. Check the documentation and the syntax of your request and try again.
+     */
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    addUserForTeam200ApplicationJSONObject?: AddUserForTeam200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successfully added user to the team.
+     */
+    addUserForTeam200ApplicationJSONObject?: AddUserForTeam200ApplicationJSON;
 }

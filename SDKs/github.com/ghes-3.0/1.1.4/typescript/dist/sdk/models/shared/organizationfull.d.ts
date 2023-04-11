@@ -8,7 +8,7 @@ export declare class OrganizationFullPlan extends SpeakeasyBase {
 }
 /**
  * Organization Full
-**/
+ */
 export declare class OrganizationFull extends SpeakeasyBase {
     avatarUrl: string;
     billingEmail?: string;
@@ -40,6 +40,7 @@ export declare class OrganizationFull extends SpeakeasyBase {
     membersCanCreatePublicPages?: boolean;
     membersCanCreatePublicRepositories?: boolean;
     membersCanCreateRepositories?: boolean;
+    membersCanForkPrivateRepositories?: boolean;
     membersUrl: string;
     name?: string;
     nodeId: string;

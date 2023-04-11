@@ -1,6 +1,9 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class MapMatchingApi {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Everything about map matching aka "snap to road"
+ */
+export declare class MapMatchingAPI {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,8 +12,9 @@ export declare class MapMatchingApi {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * postGpx - Map-match a GPX file
+     * Map-match a GPX file
      *
+     * @remarks
      * ### Example
      * You get an example response for a GPX via:
      *
@@ -49,6 +53,6 @@ export declare class MapMatchingApi {
      *
      * One request should not exceed the Map Matching API location limit depending on the package, see the pricing in our dashboard.
      *
-    **/
-    postGpx(req: operations.PostGpxRequest, config?: AxiosRequestConfig): Promise<operations.PostGpxResponse>;
+     */
+    postGPX(req: operations.PostGPXRequest, config?: AxiosRequestConfig): Promise<operations.PostGPXResponse>;
 }

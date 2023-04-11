@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetLatestArtifactPathParams extends SpeakeasyBase {
-    artifactId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetLatestArtifactRequest extends SpeakeasyBase {
-    pathParams: GetLatestArtifactPathParams;
+    /**
+     * The artifact ID.  Can be a string (client-provided) or integer (server-generated) representing the unique artifact identifier.
+     */
+    artifactId: string;
 }
 export declare class GetLatestArtifactResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Common response for all operations that can return a `404` error.
+     */
     error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

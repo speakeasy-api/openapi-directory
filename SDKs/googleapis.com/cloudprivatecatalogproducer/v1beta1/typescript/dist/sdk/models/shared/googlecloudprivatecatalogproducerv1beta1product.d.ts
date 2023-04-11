@@ -1,13 +1,167 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * The producer representation of a product which is a child resource of
+ *
+ * @remarks
  * `Catalog` with display metadata and a list of `Version` resources.
-**/
+ */
 export declare class GoogleCloudPrivatecatalogproducerV1beta1Product extends SpeakeasyBase {
+    /**
+     * Required. The type of the product asset, which cannot be changed after the
+     *
+     * @remarks
+     * product is created. It supports the values
+     * `google.deploymentmanager.Template` and
+     * `google.cloudprivatecatalog.ListingOnly`. Other values will be
+     * rejected by the server. Read only after creation.
+     *
+     * The following fields or resource types have different validation rules
+     * under each `asset_type` values:
+     *
+     * * Product.display_metadata has different validation schema for each
+     * asset type value. See its comment for details.
+     * * Version resource isn't allowed to be added under the
+     * `google.cloudprivatecatalog.ListingOnly` type.
+     */
     assetType?: string;
+    /**
+     * Output only. The time when the product was created.
+     */
     createTime?: string;
+    /**
+     * The user-supplied display metadata to describe the product.
+     *
+     * @remarks
+     * The JSON schema of the metadata differs by Product.asset_type.
+     * When the type is `google.deploymentmanager.Template`, the schema is as
+     * follows:
+     *
+     * ```
+     * "$schema": http://json-schema.org/draft-04/schema#
+     * type: object
+     * properties:
+     *   name:
+     *     type: string
+     *     minLength: 1
+     *     maxLength: 64
+     *   description:
+     *     type: string
+     *     minLength: 1
+     *     maxLength: 2048
+     *   tagline:
+     *     type: string
+     *     minLength: 1
+     *     maxLength: 100
+     *   support_info:
+     *     type: string
+     *     minLength: 1
+     *     maxLength: 2048
+     *   creator:
+     *     type: string
+     *     minLength: 1
+     *     maxLength: 100
+     *   documentation:
+     *     type: array
+     *     items:
+     *       type: object
+     *       properties:
+     *         url:
+     *           type: string
+     *           pattern:
+     *           "^(https?)://[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]"
+     *         title:
+     *           type: string
+     *           minLength: 1
+     *           maxLength: 64
+     *         description:
+     *           type: string
+     *           minLength: 1
+     *           maxLength: 2048
+     * required:
+     * - name
+     * - description
+     * additionalProperties: false
+     *
+     * ```
+     *
+     * When the asset type is `google.cloudprivatecatalog.ListingOnly`, the schema
+     * is as follows:
+     *
+     * ```
+     * "$schema": http://json-schema.org/draft-04/schema#
+     * type: object
+     * properties:
+     *   name:
+     *     type: string
+     *     minLength: 1
+     *     maxLength: 64
+     *   description:
+     *     type: string
+     *     minLength: 1
+     *     maxLength: 2048
+     *   tagline:
+     *     type: string
+     *     minLength: 1
+     *     maxLength: 100
+     *   support_info:
+     *     type: string
+     *     minLength: 1
+     *     maxLength: 2048
+     *   creator:
+     *     type: string
+     *     minLength: 1
+     *     maxLength: 100
+     *   documentation:
+     *     type: array
+     *     items:
+     *       type: object
+     *       properties:
+     *         url:
+     *           type: string
+     *           pattern:
+     *           "^(https?)://[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]"
+     *         title:
+     *           type: string
+     *           minLength: 1
+     *           maxLength: 64
+     *         description:
+     *           type: string
+     *           minLength: 1
+     *           maxLength: 2048
+     *   signup_url:
+     *     type: string
+     *     pattern:
+     *     "^(https?)://[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]"
+     * required:
+     * - name
+     * - description
+     * - signup_url
+     * additionalProperties: false
+     * ```
+     */
     displayMetadata?: Record<string, any>;
+    /**
+     * Output only. The public accessible URI of the icon uploaded by
+     *
+     * @remarks
+     * PrivateCatalogProducer.UploadIcon.
+     *
+     * If no icon is uploaded, it will be the default icon's URI.
+     */
     iconUri?: string;
+    /**
+     * Required. The resource name of the product in the format
+     *
+     * @remarks
+     * `catalogs/{catalog_id}/products/a-z*[a-z0-9]'.
+     *
+     * A unique identifier for the product under a catalog, which cannot
+     * be changed after the product is created. The final
+     * segment of the name must between 1 and 256 characters in length.
+     */
     name?: string;
+    /**
+     * Output only. The time when the product was last updated.
+     */
     updateTime?: string;
 }

@@ -1,105 +1,211 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AccesscontextmanagerAccessPoliciesAccessLevelsCreateRequest, AccesscontextmanagerAccessPoliciesAccessLevelsCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  AccesscontextmanagerAccessPoliciesAccessLevelsCreateRequest,
+  AccesscontextmanagerAccessPoliciesAccessLevelsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  BasicLevelCombiningFunctionEnum,
+  DevicePolicyAllowedDeviceManagementLevelsEnum,
+  DevicePolicyAllowedEncryptionStatusesEnum,
+  OsConstraintOsTypeEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: AccesscontextmanagerAccessPoliciesAccessLevelsCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  accessLevel: {
     basic: {
-      combiningFunction: "OR",
+      combiningFunction: BasicLevelCombiningFunctionEnum.Or,
       conditions: [
         {
           devicePolicy: {
             allowedDeviceManagementLevels: [
-              "BASIC",
+              DevicePolicyAllowedDeviceManagementLevelsEnum.Basic,
+              DevicePolicyAllowedDeviceManagementLevelsEnum.Complete,
+              DevicePolicyAllowedDeviceManagementLevelsEnum.Basic,
+              DevicePolicyAllowedDeviceManagementLevelsEnum.Complete,
             ],
             allowedEncryptionStatuses: [
-              "UNENCRYPTED",
-              "UNENCRYPTED",
-              "UNENCRYPTED",
+              DevicePolicyAllowedEncryptionStatusesEnum.Unencrypted,
+              DevicePolicyAllowedEncryptionStatusesEnum.Unencrypted,
             ],
             osConstraints: [
               {
-                minimumVersion: "vitae",
-                osType: "DESKTOP_CHROME_OS",
-                requireVerifiedChromeOs: true,
-              },
-              {
-                minimumVersion: "illum",
-                osType: "DESKTOP_LINUX",
+                minimumVersion: "iure",
+                osType: OsConstraintOsTypeEnum.DesktopWindows,
                 requireVerifiedChromeOs: false,
               },
               {
-                minimumVersion: "odio",
-                osType: "OS_UNSPECIFIED",
+                minimumVersion: "debitis",
+                osType: OsConstraintOsTypeEnum.OsUnspecified,
                 requireVerifiedChromeOs: false,
               },
             ],
-            requireAdminApproval: true,
-            requireCorpOwned: true,
+            requireAdminApproval: false,
+            requireCorpOwned: false,
             requireScreenlock: false,
           },
           ipSubnetworks: [
-            "quis",
-            "est",
+            "tempora",
+            "suscipit",
+            "molestiae",
+            "minus",
           ],
           members: [
-            "odit",
-            "non",
-            "voluptas",
+            "voluptatum",
+            "iusto",
+            "excepturi",
+            "nisi",
           ],
-          negate: true,
+          negate: false,
           regions: [
-            "illo",
+            "temporibus",
+            "ab",
+            "quis",
+            "veritatis",
           ],
           requiredAccessLevels: [
-            "officiis",
-            "autem",
-            "consectetur",
+            "perferendis",
+            "ipsam",
+            "repellendus",
+          ],
+        },
+        {
+          devicePolicy: {
+            allowedDeviceManagementLevels: [
+              DevicePolicyAllowedDeviceManagementLevelsEnum.Complete,
+              DevicePolicyAllowedDeviceManagementLevelsEnum.ManagementUnspecified,
+              DevicePolicyAllowedDeviceManagementLevelsEnum.Complete,
+              DevicePolicyAllowedDeviceManagementLevelsEnum.Complete,
+            ],
+            allowedEncryptionStatuses: [
+              DevicePolicyAllowedEncryptionStatusesEnum.EncryptionUnsupported,
+              DevicePolicyAllowedEncryptionStatusesEnum.Encrypted,
+              DevicePolicyAllowedEncryptionStatusesEnum.Encrypted,
+              DevicePolicyAllowedEncryptionStatusesEnum.EncryptionUnsupported,
+            ],
+            osConstraints: [
+              {
+                minimumVersion: "porro",
+                osType: OsConstraintOsTypeEnum.DesktopChromeOs,
+                requireVerifiedChromeOs: false,
+              },
+              {
+                minimumVersion: "dicta",
+                osType: OsConstraintOsTypeEnum.Android,
+                requireVerifiedChromeOs: false,
+              },
+              {
+                minimumVersion: "officia",
+                osType: OsConstraintOsTypeEnum.DesktopChromeOs,
+                requireVerifiedChromeOs: false,
+              },
+            ],
+            requireAdminApproval: false,
+            requireCorpOwned: false,
+            requireScreenlock: false,
+          },
+          ipSubnetworks: [
+            "deleniti",
+          ],
+          members: [
+            "optio",
+            "totam",
+            "beatae",
+            "commodi",
+          ],
+          negate: false,
+          regions: [
+            "modi",
+            "qui",
+          ],
+          requiredAccessLevels: [
+            "cum",
+            "esse",
+            "ipsum",
+            "excepturi",
+          ],
+        },
+        {
+          devicePolicy: {
+            allowedDeviceManagementLevels: [
+              DevicePolicyAllowedDeviceManagementLevelsEnum.ManagementUnspecified,
+            ],
+            allowedEncryptionStatuses: [
+              DevicePolicyAllowedEncryptionStatusesEnum.Unencrypted,
+              DevicePolicyAllowedEncryptionStatusesEnum.EncryptionUnspecified,
+            ],
+            osConstraints: [
+              {
+                minimumVersion: "dolor",
+                osType: OsConstraintOsTypeEnum.DesktopChromeOs,
+                requireVerifiedChromeOs: false,
+              },
+              {
+                minimumVersion: "laboriosam",
+                osType: OsConstraintOsTypeEnum.Ios,
+                requireVerifiedChromeOs: false,
+              },
+              {
+                minimumVersion: "saepe",
+                osType: OsConstraintOsTypeEnum.DesktopChromeOs,
+                requireVerifiedChromeOs: false,
+              },
+            ],
+            requireAdminApproval: false,
+            requireCorpOwned: false,
+            requireScreenlock: false,
+          },
+          ipSubnetworks: [
+            "corporis",
+            "iste",
+          ],
+          members: [
+            "saepe",
+            "quidem",
+          ],
+          negate: false,
+          regions: [
+            "ipsa",
+          ],
+          requiredAccessLevels: [
+            "est",
+            "mollitia",
+            "laborum",
+            "dolores",
           ],
         },
       ],
     },
     custom: {
       expr: {
-        description: "nobis",
-        expression: "odio",
-        location: "qui",
-        title: "recusandae",
+        description: "dolorem",
+        expression: "corporis",
+        location: "explicabo",
+        title: "Miss",
       },
     },
-    description: "at",
-    name: "ipsum",
-    title: "eveniet",
+    description: "enim",
+    name: "omnis",
+    title: "Mrs.",
   },
+  accessToken: "minima",
+  alt: AltEnum.Media,
+  callback: "accusantium",
+  fields: "iure",
+  key: "culpa",
+  oauthToken: "doloribus",
+  parent: "sapiente",
+  prettyPrint: false,
+  quotaUser: "architecto",
+  uploadType: "mollitia",
+  uploadProtocol: "dolorem",
 };
 
 sdk.accessPolicies.accesscontextmanagerAccessPoliciesAccessLevelsCreate(req).then((res: AccesscontextmanagerAccessPoliciesAccessLevelsCreateResponse | AxiosError) => {

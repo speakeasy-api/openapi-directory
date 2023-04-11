@@ -1,0 +1,18 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The payments program onboarding steps, status, and link.
+ */
+export declare class PaymentsProgramOnboardingSteps extends SpeakeasyBase {
+    /**
+     * The name of the step in the steps array. Over time, these names are subject to change as processes change. The output sample contains example step names. Review an actual call response for updated step names.
+     */
+    name?: string;
+    /**
+     * This enumeration value indicates the status of the associated step. <p> <span class="tablenote"><strong>Note:</strong> Only one step can be <code>IN_PROGRESS</code> at a time.</span></p> For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/account/types/api:PaymentsProgramOnboardingStepStatus'>eBay API documentation</a>
+     */
+    status?: string;
+    /**
+     * This URL provides access to the <code>IN_PROGRESS</code> step.
+     */
+    webUrl?: string;
+}

@@ -1,23 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ApplicationsUpdatePasswordCredentialsPathParams extends SpeakeasyBase {
-    applicationObjectId: string;
-    tenantID: string;
-}
-export declare class ApplicationsUpdatePasswordCredentialsQueryParams extends SpeakeasyBase {
-    apiVersion: string;
-}
-export declare class ApplicationsUpdatePasswordCredentialsRequests extends SpeakeasyBase {
-    passwordCredentialsUpdateParameters?: shared.PasswordCredentialsUpdateParameters;
-    passwordCredentialsUpdateParameters1?: shared.PasswordCredentialsUpdateParameters;
-}
+import { AxiosResponse } from "axios";
 export declare class ApplicationsUpdatePasswordCredentialsRequest extends SpeakeasyBase {
-    pathParams: ApplicationsUpdatePasswordCredentialsPathParams;
-    queryParams: ApplicationsUpdatePasswordCredentialsQueryParams;
-    request: ApplicationsUpdatePasswordCredentialsRequests;
+    /**
+     * Parameters to update passwordCredentials of an existing application.
+     */
+    passwordCredentialsUpdateParameters: shared.PasswordCredentialsUpdateParameters;
+    /**
+     * Client API version.
+     */
+    apiVersion: string;
+    /**
+     * Application object ID.
+     */
+    applicationObjectId: string;
+    /**
+     * The tenant ID.
+     */
+    tenantID: string;
 }
 export declare class ApplicationsUpdatePasswordCredentialsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Error response describing why the operation failed.
+     */
     graphError?: shared.GraphError;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

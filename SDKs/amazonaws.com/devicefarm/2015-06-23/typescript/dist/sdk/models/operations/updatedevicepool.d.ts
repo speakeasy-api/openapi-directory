@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateDevicePoolXAmzTargetEnum {
     DeviceFarm20150623UpdateDevicePool = "DeviceFarm_20150623.UpdateDevicePool"
 }
-export declare class UpdateDevicePoolHeaders extends SpeakeasyBase {
+export declare class UpdateDevicePoolRequest extends SpeakeasyBase {
+    updateDevicePoolRequest: shared.UpdateDevicePoolRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class UpdateDevicePoolHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateDevicePoolXAmzTargetEnum;
 }
-export declare class UpdateDevicePoolRequest extends SpeakeasyBase {
-    headers: UpdateDevicePoolHeaders;
-    request: shared.UpdateDevicePoolRequest;
-}
 export declare class UpdateDevicePoolResponse extends SpeakeasyBase {
+    /**
+     * ArgumentException
+     */
     argumentException?: any;
     contentType: string;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
-    serviceAccountException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceAccountException
+     */
+    serviceAccountException?: any;
+    /**
+     * Success
+     */
     updateDevicePoolResult?: shared.UpdateDevicePoolResult;
 }

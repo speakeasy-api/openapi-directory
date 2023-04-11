@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { Address } from "./address";
 import { TimeWindow } from "./timewindow";
+/**
+ * Specifies type of service. This makes a difference if items are loaded or unloaded, i.e. if one of the size dimensions > 0. If it is specified as `service` or `pickup`, items are loaded and will stay in the vehicle for the rest of the route (and thus consumes capacity for the rest of the route). If it is a `delivery`, items are implicitly loaded at the beginning of the route and will stay in the route until delivery (and thus releases capacity for the rest of the route).
+ */
 export declare enum ServiceTypeEnum {
     Service = "service",
     Pickup = "pickup",
@@ -8,17 +11,56 @@ export declare enum ServiceTypeEnum {
 }
 export declare class Service extends SpeakeasyBase {
     address?: Address;
+    /**
+     * Specifies an array of allowed vehicles, i.e. array of vehicle ids. For example, if this service can only be conducted EITHER by `technician_peter` OR `technician_stefan` specify this as follows: `["technician_peter","technician_stefan"]`.
+     */
     allowedVehicles?: string[];
+    /**
+     * Specifies an array of disallowed vehicles, i.e. array of vehicle ids.
+     */
     disallowedVehicles?: string[];
+    /**
+     * Specifies the duration of the service in seconds, i.e. how long it takes at the customer site.
+     */
     duration?: number;
+    /**
+     * Group this service belongs to. See the group relation and [this post](https://discuss.graphhopper.com/t/4040) on how to utilize this.
+     */
     group?: string;
+    /**
+     * Specifies the id of the service. Ids need to be unique so there must not be two services/shipments with the same id.
+     */
     id: string;
+    /**
+     * Specifies the maximum time in seconds a delivery can stay in the vehicle. Currently, it only works with services of "type":"delivery".
+     */
     maxTimeInVehicle?: number;
+    /**
+     * Meaningful name for service, e.g. `"deliver pizza"`.
+     */
     name?: string;
+    /**
+     * Specifies the preparation time in seconds. It can be used to model parking lot search time since if you have 3 identical locations in a row, it only falls due once.
+     */
     preparationTime?: number;
+    /**
+     * Specifies the priority. Can be 1 = high priority to 10 = low priority. Often there are more services/shipments than the available vehicle fleet can handle. Then you can set priorities to differentiate high priority tasks from those that could be left unassigned. I.e. the lower the priority the earlier these tasks are omitted in the solution.
+     */
     priority?: number;
+    /**
+     * Specifies an array of required skills, i.e. array of string (not case sensitive). For example, if this service needs to be conducted by a technician having a `drilling_machine` and a `screw_driver` then specify the array as follows: `["drilling_machine","screw_driver"]`. This means that the service can only be done by a vehicle (technician) that has the skills `drilling_machine` AND `screw_driver` in its skill array. Otherwise it remains unassigned.
+     */
     requiredSkills?: string[];
+    /**
+     * Size can have multiple dimensions and should be in line with the capacity dimension array of the vehicle type. For example, if the item that needs to be delivered has two size dimension, volume and weight, then specify it as follow [ 20, 5 ] assuming a volume of 20 and a weight of 5.
+     */
     size?: number[];
+    /**
+     * Specifies an array of time window objects (see time_window object below). Specify the time either with the recommended Unix time stamp (the number of seconds since 1970-01-01) or you can also count the seconds relative to Monday morning 00:00 and define the whole week in seconds. For example, Monday 9am is then represented by 9hour * 3600sec/hour = 32400. In turn, Wednesday 1pm corresponds to 2day * 24hour/day * 3600sec/hour + 1day * 13hour/day * 3600sec/hour = 219600. See this tutorial for more information.
+     */
     timeWindows?: TimeWindow[];
+    /**
+     * Specifies type of service. This makes a difference if items are loaded or unloaded, i.e. if one of the size dimensions > 0. If it is specified as `service` or `pickup`, items are loaded and will stay in the vehicle for the rest of the route (and thus consumes capacity for the rest of the route). If it is a `delivery`, items are implicitly loaded at the beginning of the route and will stay in the route until delivery (and thus releases capacity for the rest of the route).
+     */
     type?: ServiceTypeEnum;
 }

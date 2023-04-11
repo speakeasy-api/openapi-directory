@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetChannelInfoPathParams extends SpeakeasyBase {
-    channelId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetChannelInfoRequest extends SpeakeasyBase {
-    pathParams: GetChannelInfoPathParams;
+    /**
+     * The channel identifier
+     */
+    channelId: string;
 }
 export declare class GetChannelInfoResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Channel information
+     */
     channelInfo?: shared.ChannelInfo;
 }

@@ -1,9 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UserSafeScoringAccumulatedValueV1ScoringsIndividualQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class UserSafeScoringAccumulatedValueV1ScoringsIndividualRequest extends SpeakeasyBase {
     endDate?: string;
     startDate?: string;
 }
-export declare class UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJsonResult extends SpeakeasyBase {
+export declare class UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJSONResult extends SpeakeasyBase {
     accelerationScore?: number;
     appId?: string;
     brakingScore?: number;
@@ -15,18 +16,22 @@ export declare class UserSafeScoringAccumulatedValueV1ScoringsIndividual200Appli
     overallScore?: number;
     speedingScore?: number;
 }
-export declare class UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJson extends SpeakeasyBase {
+/**
+ * Success
+ */
+export declare class UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJSON extends SpeakeasyBase {
     errors?: any[];
-    result?: UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJsonResult;
+    result?: UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJSONResult;
     status?: number;
     title?: string;
 }
-export declare class UserSafeScoringAccumulatedValueV1ScoringsIndividualRequest extends SpeakeasyBase {
-    queryParams: UserSafeScoringAccumulatedValueV1ScoringsIndividualQueryParams;
-}
 export declare class UserSafeScoringAccumulatedValueV1ScoringsIndividualResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
-    userSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJSONObject?: UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
+    userSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJSONObject?: UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJSON;
 }

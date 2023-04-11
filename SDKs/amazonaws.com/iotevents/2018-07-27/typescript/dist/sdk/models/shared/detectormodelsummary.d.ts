@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Information about the detector model.
-**/
+ */
 export declare class DetectorModelSummary extends SpeakeasyBase {
     creationTime?: Date;
     detectorModelDescription?: string;

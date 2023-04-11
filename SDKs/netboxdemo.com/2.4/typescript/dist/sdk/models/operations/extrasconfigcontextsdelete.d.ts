@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ExtrasConfigContextsDeletePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ExtrasConfigContextsDeleteRequest extends SpeakeasyBase {
-    pathParams: ExtrasConfigContextsDeletePathParams;
+    /**
+     * A unique integer value identifying this config context.
+     */
+    id: number;
 }
 export declare class ExtrasConfigContextsDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

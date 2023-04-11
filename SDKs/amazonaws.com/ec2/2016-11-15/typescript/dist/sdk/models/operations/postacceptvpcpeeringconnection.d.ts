@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostAcceptVpcPeeringConnectionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTAcceptVpcPeeringConnectionActionEnum {
     AcceptVpcPeeringConnection = "AcceptVpcPeeringConnection"
 }
-export declare enum PostAcceptVpcPeeringConnectionVersionEnum {
+export declare enum POSTAcceptVpcPeeringConnectionVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostAcceptVpcPeeringConnectionQueryParams extends SpeakeasyBase {
-    action: PostAcceptVpcPeeringConnectionActionEnum;
-    version: PostAcceptVpcPeeringConnectionVersionEnum;
-}
-export declare class PostAcceptVpcPeeringConnectionHeaders extends SpeakeasyBase {
+export declare class POSTAcceptVpcPeeringConnectionRequest extends SpeakeasyBase {
+    action: POSTAcceptVpcPeeringConnectionActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTAcceptVpcPeeringConnectionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostAcceptVpcPeeringConnectionHeaders extends SpeakeasyBase
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostAcceptVpcPeeringConnectionRequest extends SpeakeasyBase {
-    queryParams: PostAcceptVpcPeeringConnectionQueryParams;
-    headers: PostAcceptVpcPeeringConnectionHeaders;
-    request?: Uint8Array;
-}
-export declare class PostAcceptVpcPeeringConnectionResponse extends SpeakeasyBase {
+export declare class POSTAcceptVpcPeeringConnectionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

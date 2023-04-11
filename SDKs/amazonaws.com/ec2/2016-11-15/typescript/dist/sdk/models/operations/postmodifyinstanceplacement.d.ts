@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostModifyInstancePlacementActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTModifyInstancePlacementActionEnum {
     ModifyInstancePlacement = "ModifyInstancePlacement"
 }
-export declare enum PostModifyInstancePlacementVersionEnum {
+export declare enum POSTModifyInstancePlacementVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostModifyInstancePlacementQueryParams extends SpeakeasyBase {
-    action: PostModifyInstancePlacementActionEnum;
-    version: PostModifyInstancePlacementVersionEnum;
-}
-export declare class PostModifyInstancePlacementHeaders extends SpeakeasyBase {
+export declare class POSTModifyInstancePlacementRequest extends SpeakeasyBase {
+    action: POSTModifyInstancePlacementActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTModifyInstancePlacementVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostModifyInstancePlacementHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostModifyInstancePlacementRequest extends SpeakeasyBase {
-    queryParams: PostModifyInstancePlacementQueryParams;
-    headers: PostModifyInstancePlacementHeaders;
-    request?: Uint8Array;
-}
-export declare class PostModifyInstancePlacementResponse extends SpeakeasyBase {
+export declare class POSTModifyInstancePlacementResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

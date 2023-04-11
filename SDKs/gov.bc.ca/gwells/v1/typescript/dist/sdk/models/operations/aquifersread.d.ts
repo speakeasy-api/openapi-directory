@@ -1,13 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AquifersReadPathParams extends SpeakeasyBase {
-    aquiferId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class AquifersReadRequest extends SpeakeasyBase {
-    pathParams: AquifersReadPathParams;
+    /**
+     * A unique integer value identifying this aquifer.
+     */
+    aquiferId: number;
 }
 export declare class AquifersReadResponse extends SpeakeasyBase {
     aquifer?: shared.Aquifer;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

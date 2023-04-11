@@ -1,16 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class DeleteVersionPathParams extends SpeakeasyBase {
-    versionId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteVersionSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
+    password: string;
+    username: string;
 }
 export declare class DeleteVersionRequest extends SpeakeasyBase {
-    pathParams: DeleteVersionPathParams;
-    security: DeleteVersionSecurity;
+    /**
+     * Semver version indentifier
+     */
+    versionId: string;
 }
 export declare class DeleteVersionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

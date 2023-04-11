@@ -1,5 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { NestedCableInput } from "./nestedcable";
+export declare enum WritableConsolePortConnectionStatusEnum {
+    False = "false",
+    True = "true"
+}
+/**
+ * Physical port type
+ */
 export declare enum WritableConsolePortTypeEnum {
     De9 = "de-9",
     Db25 = "db-25",
@@ -17,10 +24,13 @@ export declare enum WritableConsolePortTypeEnum {
 }
 export declare class WritableConsolePortInput extends SpeakeasyBase {
     cable?: NestedCableInput;
-    connectionStatus?: boolean;
+    connectionStatus?: WritableConsolePortConnectionStatusEnum;
     description?: string;
     device: number;
     name: string;
     tags?: string[];
+    /**
+     * Physical port type
+     */
     type?: WritableConsolePortTypeEnum;
 }

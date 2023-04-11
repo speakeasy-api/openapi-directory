@@ -1,0 +1,6 @@
+export declare enum ReplicationConfigurationDefaultLargeStagingDiskTypeEnum {
+    Gp2 = "GP2",
+    Gp3 = "GP3",
+    St1 = "ST1",
+    Auto = "AUTO"
+}

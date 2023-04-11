@@ -1,10 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { HitReviewStatusEnum } from "./hitreviewstatusenum";
-import { HitStatusEnum } from "./hitstatusenum";
+import { HITReviewStatusEnum } from "./hitreviewstatusenum";
+import { HITStatusEnum } from "./hitstatusenum";
 import { QualificationRequirement } from "./qualificationrequirement";
 /**
  *  The HIT data structure represents a single HIT, including all the information necessary for a Worker to accept and complete the HIT.
-**/
+ */
 export declare class Hit extends SpeakeasyBase {
     assignmentDurationInSeconds?: number;
     autoApprovalDelayInSeconds?: number;
@@ -14,8 +14,8 @@ export declare class Hit extends SpeakeasyBase {
     hitGroupId?: string;
     hitId?: string;
     hitLayoutId?: string;
-    hitReviewStatus?: HitReviewStatusEnum;
-    hitStatus?: HitStatusEnum;
+    hitReviewStatus?: HITReviewStatusEnum;
+    hitStatus?: HITStatusEnum;
     hitTypeId?: string;
     keywords?: string;
     maxAssignments?: number;
@@ -25,6 +25,9 @@ export declare class Hit extends SpeakeasyBase {
     qualificationRequirements?: QualificationRequirement[];
     question?: string;
     requesterAnnotation?: string;
+    /**
+     * A string representing a currency amount.
+     */
     reward?: string;
     title?: string;
 }

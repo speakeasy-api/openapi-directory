@@ -1,5 +1,11 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * The primary way to interact with the Apicurio Registry API is to add, update,
+ *
+ * @remarks
+ * or delete artifacts. This section includes all of these primary operations.
+ */
 export declare class Artifacts {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +15,9 @@ export declare class Artifacts {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createArtifact - Create artifact
+     * Create artifact
      *
+     * @remarks
      * Creates a new artifact by posting the artifact content.  The body of the request should
      * be the raw content of the artifact.  This is typically in JSON format for *most* of the
      * supported types, but may be in another format for a few (for example, `PROTOBUF`).
@@ -64,21 +71,23 @@ export declare class Artifacts {
      * * The content violates one of the configured global rules (HTTP error `409`)
      * * A server error occurred (HTTP error `500`)
      *
-    **/
+     */
     createArtifact(req: operations.CreateArtifactRequest, config?: AxiosRequestConfig): Promise<operations.CreateArtifactResponse>;
     /**
-     * deleteArtifact - Delete artifact
+     * Delete artifact
      *
+     * @remarks
      * Deletes an artifact completely, resulting in all versions of the artifact also being
      * deleted.  This may fail for one of the following reasons:
      *
      * * No artifact with the `artifactId` exists (HTTP error `404`)
      * * A server error occurred (HTTP error `500`)
-    **/
+     */
     deleteArtifact(req: operations.DeleteArtifactRequest, config?: AxiosRequestConfig): Promise<operations.DeleteArtifactResponse>;
     /**
-     * getArtifactByGlobalId - Get artifact by global ID
+     * Get artifact by global ID
      *
+     * @remarks
      * Gets the content for an artifact version in the registry using its globally unique
      * identifier.
      *
@@ -87,11 +96,12 @@ export declare class Artifacts {
      * * No artifact version with this `globalId` exists (HTTP error `404`)
      * * A server error occurred (HTTP error `500`)
      *
-    **/
+     */
     getArtifactByGlobalId(req: operations.GetArtifactByGlobalIdRequest, config?: AxiosRequestConfig): Promise<operations.GetArtifactByGlobalIdResponse>;
     /**
-     * getLatestArtifact - Get latest artifact
+     * Get latest artifact
      *
+     * @remarks
      * Returns the latest version of the artifact in its raw form.  The `Content-Type` of the
      * response depends on the artifact type.  In most cases, this is `application/json`, but
      * for some types it may be different (for example, `PROTOBUF`).
@@ -101,27 +111,30 @@ export declare class Artifacts {
      * * No artifact with this `artifactId` exists (HTTP error `404`)
      * * A server error occurred (HTTP error `500`)
      *
-    **/
+     */
     getLatestArtifact(req: operations.GetLatestArtifactRequest, config?: AxiosRequestConfig): Promise<operations.GetLatestArtifactResponse>;
     /**
-     * listArtifacts - List all artifact IDs
+     * List all artifact IDs
      *
+     * @remarks
      * Returns a list of IDs of all artifacts in the registry as a flat list.  Typically the
      * server is configured to limit the number of artifact IDs returned when a large number
      * of artifacts exist. In this case, the result of this call may be non-deterministic. The
      * default limit is typically 1000 artifacts.
-    **/
+     */
     listArtifacts(config?: AxiosRequestConfig): Promise<operations.ListArtifactsResponse>;
     /**
-     * searchArtifacts - Search for artifacts
+     * Search for artifacts
      *
+     * @remarks
      * Returns a paginated list of all artifacts that match the provided search criteria.
      *
-    **/
+     */
     searchArtifacts(req: operations.SearchArtifactsRequest, config?: AxiosRequestConfig): Promise<operations.SearchArtifactsResponse>;
     /**
-     * updateArtifact - Update artifact
+     * Update artifact
      *
+     * @remarks
      * Updates an artifact by uploading new content.  The body of the request should
      * be the raw content of the artifact.  This is typically in JSON format for *most*
      * of the supported types, but may be in another format for a few (for example, `PROTOBUF`).
@@ -157,11 +170,12 @@ export declare class Artifacts {
      *
      * When successful, this creates a new version of the artifact, making it the most recent
      * (and therefore official) version of the artifact.
-    **/
+     */
     updateArtifact(req: operations.UpdateArtifactRequest, config?: AxiosRequestConfig): Promise<operations.UpdateArtifactResponse>;
     /**
-     * updateArtifactState - Update artifact state
+     * Update artifact state
      *
+     * @remarks
      * Updates the state of the artifact.  For example, you can use this to mark the latest
      * version of an artifact as `DEPRECATED`.  The operation changes the state of the latest
      * version of the artifact.  If multiple versions exist, only the most recent is changed.
@@ -182,6 +196,6 @@ export declare class Artifacts {
      * * Artifact cannot transition to the given state (HTTP error `400`)
      * * A server error occurred (HTTP error `500`)
      *
-    **/
+     */
     updateArtifactState(req: operations.UpdateArtifactStateRequest, config?: AxiosRequestConfig): Promise<operations.UpdateArtifactStateResponse>;
 }

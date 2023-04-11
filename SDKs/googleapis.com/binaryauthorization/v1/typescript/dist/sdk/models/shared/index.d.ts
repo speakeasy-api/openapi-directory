@@ -11,7 +11,6 @@ export * from "./jwt";
 export * from "./listattestorsresponse";
 export * from "./pkixpublickey";
 export * from "./policy";
-export * from "./security";
 export * from "./setiampolicyrequest";
 export * from "./signature";
 export * from "./testiampermissionsrequest";

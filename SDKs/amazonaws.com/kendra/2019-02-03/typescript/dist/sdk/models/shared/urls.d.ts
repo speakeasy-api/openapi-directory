@@ -1,0 +1,10 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { SeedUrlConfiguration } from "./seedurlconfiguration";
+import { SiteMapsConfiguration } from "./sitemapsconfiguration";
+/**
+ * <p>Provides the configuration information of the URLs to crawl.</p> <p>You can only crawl websites that use the secure communication protocol, Hypertext Transfer Protocol Secure (HTTPS). If you receive an error when crawling a website, it could be that the website is blocked from crawling.</p> <p> <i>When selecting websites to index, you must adhere to the <a href="https://aws.amazon.com/aup/">Amazon Acceptable Use Policy</a> and all other Amazon terms. Remember that you must only use Amazon Kendra Web Crawler to index your own webpages, or webpages that you have authorization to index.</i> </p>
+ */
+export declare class Urls extends SpeakeasyBase {
+    seedUrlConfiguration?: SeedUrlConfiguration;
+    siteMapsConfiguration?: SiteMapsConfiguration;
+}

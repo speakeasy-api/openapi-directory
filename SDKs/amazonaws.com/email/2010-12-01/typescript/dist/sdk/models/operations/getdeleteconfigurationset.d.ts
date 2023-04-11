@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteConfigurationSetActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteConfigurationSetActionEnum {
     DeleteConfigurationSet = "DeleteConfigurationSet"
 }
-export declare enum GetDeleteConfigurationSetVersionEnum {
+export declare enum GETDeleteConfigurationSetVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetDeleteConfigurationSetQueryParams extends SpeakeasyBase {
-    action: GetDeleteConfigurationSetActionEnum;
+export declare class GETDeleteConfigurationSetRequest extends SpeakeasyBase {
+    action: GETDeleteConfigurationSetActionEnum;
+    /**
+     * The name of the configuration set to delete.
+     */
     configurationSetName: string;
-    version: GetDeleteConfigurationSetVersionEnum;
-}
-export declare class GetDeleteConfigurationSetHeaders extends SpeakeasyBase {
+    version: GETDeleteConfigurationSetVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDeleteConfigurationSetHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteConfigurationSetRequest extends SpeakeasyBase {
-    queryParams: GetDeleteConfigurationSetQueryParams;
-    headers: GetDeleteConfigurationSetHeaders;
-}
-export declare class GetDeleteConfigurationSetResponse extends SpeakeasyBase {
+export declare class GETDeleteConfigurationSetResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

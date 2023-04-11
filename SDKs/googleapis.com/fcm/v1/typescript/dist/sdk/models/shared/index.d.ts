@@ -9,7 +9,6 @@ export * from "./fcmoptions";
 export * from "./lightsettings";
 export * from "./message";
 export * from "./notification";
-export * from "./security";
 export * from "./sendmessagerequest";
 export * from "./webpushconfig";
 export * from "./webpushfcmoptions";

@@ -4,7 +4,7 @@ import { RouteFilterPrefix } from "./routefilterprefix";
 import { Tag } from "./tag";
 /**
  * Information about a public virtual interface.
-**/
+ */
 export declare class NewPublicVirtualInterface extends SpeakeasyBase {
     addressFamily?: AddressFamilyEnum;
     amazonAddress?: string;

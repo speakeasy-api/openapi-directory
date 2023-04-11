@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostSendDiagnosticInterruptActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTSendDiagnosticInterruptActionEnum {
     SendDiagnosticInterrupt = "SendDiagnosticInterrupt"
 }
-export declare enum PostSendDiagnosticInterruptVersionEnum {
+export declare enum POSTSendDiagnosticInterruptVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostSendDiagnosticInterruptQueryParams extends SpeakeasyBase {
-    action: PostSendDiagnosticInterruptActionEnum;
-    version: PostSendDiagnosticInterruptVersionEnum;
-}
-export declare class PostSendDiagnosticInterruptHeaders extends SpeakeasyBase {
+export declare class POSTSendDiagnosticInterruptRequest extends SpeakeasyBase {
+    action: POSTSendDiagnosticInterruptActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTSendDiagnosticInterruptVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +18,8 @@ export declare class PostSendDiagnosticInterruptHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostSendDiagnosticInterruptRequest extends SpeakeasyBase {
-    queryParams: PostSendDiagnosticInterruptQueryParams;
-    headers: PostSendDiagnosticInterruptHeaders;
-    request?: Uint8Array;
-}
-export declare class PostSendDiagnosticInterruptResponse extends SpeakeasyBase {
+export declare class POSTSendDiagnosticInterruptResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostModifySnapshotScheduleActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTModifySnapshotScheduleActionEnum {
     ModifySnapshotSchedule = "ModifySnapshotSchedule"
 }
-export declare enum PostModifySnapshotScheduleVersionEnum {
+export declare enum POSTModifySnapshotScheduleVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostModifySnapshotScheduleQueryParams extends SpeakeasyBase {
-    action: PostModifySnapshotScheduleActionEnum;
-    version: PostModifySnapshotScheduleVersionEnum;
-}
-export declare class PostModifySnapshotScheduleHeaders extends SpeakeasyBase {
+export declare class POSTModifySnapshotScheduleRequest extends SpeakeasyBase {
+    action: POSTModifySnapshotScheduleActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTModifySnapshotScheduleVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostModifySnapshotScheduleHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostModifySnapshotScheduleRequest extends SpeakeasyBase {
-    queryParams: PostModifySnapshotScheduleQueryParams;
-    headers: PostModifySnapshotScheduleHeaders;
-    request?: Uint8Array;
-}
-export declare class PostModifySnapshotScheduleResponse extends SpeakeasyBase {
+export declare class POSTModifySnapshotScheduleResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

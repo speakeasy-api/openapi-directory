@@ -1,9 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetGroupsQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetGroupsRequestBody extends SpeakeasyBase {
+    /**
+     * Pagination token.
+     */
     nextToken?: string;
 }
-export declare class GetGroupsHeaders extends SpeakeasyBase {
+export declare class GetGroupsRequest extends SpeakeasyBase {
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
+    requestBody: GetGroupsRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,18 +21,20 @@ export declare class GetGroupsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetGroupsRequestBody extends SpeakeasyBase {
-    nextToken?: string;
-}
-export declare class GetGroupsRequest extends SpeakeasyBase {
-    queryParams: GetGroupsQueryParams;
-    headers: GetGroupsHeaders;
-    request: GetGroupsRequestBody;
-}
 export declare class GetGroupsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getGroupsResult?: shared.GetGroupsResult;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottledException
+     */
     throttledException?: any;
 }

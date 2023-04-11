@@ -1,7 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { SimpleCommit } from "./simplecommit";
-import { PullRequestMinimal } from "./pullrequestminimal";
 import { MinimalRepository } from "./minimalrepository";
+import { NullableIntegration } from "./nullableintegration";
+import { PullRequestMinimal } from "./pullrequestminimal";
+import { SimpleCommit } from "./simplecommit";
 export declare enum CheckSuiteConclusionEnum {
     Success = "success",
     Failure = "failure",
@@ -18,21 +19,33 @@ export declare enum CheckSuiteStatusEnum {
 }
 /**
  * A suite of checks performed on the code of a given code change
-**/
+ */
 export declare class CheckSuite extends SpeakeasyBase {
     after: string;
-    app: Record<string, any>;
+    /**
+     * GitHub apps are a new way to extend GitHub. They can be installed directly on organizations and user accounts and granted access to specific repositories. They come with granular permissions and built-in webhooks. GitHub apps are first class actors within GitHub.
+     */
+    app: NullableIntegration;
     before: string;
     checkRunsUrl: string;
     conclusion: CheckSuiteConclusionEnum;
     createdAt: Date;
     headBranch: string;
+    /**
+     * Simple Commit
+     */
     headCommit: SimpleCommit;
+    /**
+     * The SHA of the head commit that is being checked.
+     */
     headSha: string;
     id: number;
     latestCheckRunsCount: number;
     nodeId: string;
     pullRequests: PullRequestMinimal[];
+    /**
+     * Minimal Repository
+     */
     repository: MinimalRepository;
     status: CheckSuiteStatusEnum;
     updatedAt: Date;

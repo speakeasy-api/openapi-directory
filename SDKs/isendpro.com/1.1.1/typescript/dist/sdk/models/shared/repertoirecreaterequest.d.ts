@@ -1,9 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum RepertoirEcreaterequestRepertoireEditEnum {
+/**
+ * Action à réaliser doit valoir "create" ici.
+ */
+export declare enum REPERTOIREcreaterequestRepertoireEditEnum {
     Create = "create"
 }
-export declare class RepertoirEcreaterequest extends SpeakeasyBase {
+/**
+ * Creation repertoire
+ */
+export declare class REPERTOIREcreaterequest extends SpeakeasyBase {
+    /**
+     * Clé API
+     */
     keyid: string;
-    repertoireEdit: RepertoirEcreaterequestRepertoireEditEnum;
+    /**
+     * Action à réaliser doit valoir "create" ici.
+     */
+    repertoireEdit: REPERTOIREcreaterequestRepertoireEditEnum;
+    /**
+     * Nom du répertoire (libellé) à créer
+     */
     repertoireNom: string;
 }

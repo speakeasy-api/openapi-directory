@@ -1,6 +1,9 @@
+/**
+ * The user language
+ */
 export declare enum FlatLocalesEnum {
     En = "en",
-    EnGb = "en-GB",
+    EnGB = "en-GB",
     Es = "es",
     Fr = "fr",
     De = "de",
@@ -10,7 +13,7 @@ export declare enum FlatLocalesEnum {
     Nl = "nl",
     Pl = "pl",
     Pt = "pt",
-    PtBr = "pt-BR",
+    PtBR = "pt-BR",
     Ro = "ro",
     Ru = "ru",
     Sv = "sv",

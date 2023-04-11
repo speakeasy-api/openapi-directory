@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeStopwordOptionsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeStopwordOptionsActionEnum {
     DescribeStopwordOptions = "DescribeStopwordOptions"
 }
-export declare enum PostDescribeStopwordOptionsVersionEnum {
+export declare enum POSTDescribeStopwordOptionsVersionEnum {
     TwoThousandAndEleven0201 = "2011-02-01"
 }
-export declare class PostDescribeStopwordOptionsQueryParams extends SpeakeasyBase {
-    action: PostDescribeStopwordOptionsActionEnum;
-    version: PostDescribeStopwordOptionsVersionEnum;
-}
-export declare class PostDescribeStopwordOptionsHeaders extends SpeakeasyBase {
+export declare class POSTDescribeStopwordOptionsRequest extends SpeakeasyBase {
+    action: POSTDescribeStopwordOptionsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDescribeStopwordOptionsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDescribeStopwordOptionsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeStopwordOptionsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeStopwordOptionsQueryParams;
-    headers: PostDescribeStopwordOptionsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeStopwordOptionsResponse extends SpeakeasyBase {
+export declare class POSTDescribeStopwordOptionsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

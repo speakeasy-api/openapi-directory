@@ -1,22 +1,45 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetTargetsTargetIdFindingsIdIntegrationsJiraCloudPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetTargetsTargetIdFindingsIdIntegrationsJiraCloudRequest extends SpeakeasyBase {
+    /**
+     * Object Id
+     */
     id: string;
+    /**
+     * Target id
+     */
     targetId: string;
 }
-export declare class GetTargetsTargetIdFindingsIdIntegrationsJiraCloud401ApplicationJson extends SpeakeasyBase {
+/**
+ * Not allowed to perform operation
+ */
+export declare class GetTargetsTargetIdFindingsIdIntegrationsJiraCloud403ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error message.
+     */
     detail?: string;
 }
-export declare class GetTargetsTargetIdFindingsIdIntegrationsJiraCloud403ApplicationJson extends SpeakeasyBase {
+/**
+ * Access token is missing or invalid
+ */
+export declare class GetTargetsTargetIdFindingsIdIntegrationsJiraCloud401ApplicationJSON extends SpeakeasyBase {
     detail?: string;
-}
-export declare class GetTargetsTargetIdFindingsIdIntegrationsJiraCloudRequest extends SpeakeasyBase {
-    pathParams: GetTargetsTargetIdFindingsIdIntegrationsJiraCloudPathParams;
 }
 export declare class GetTargetsTargetIdFindingsIdIntegrationsJiraCloudResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Jira Cloud Finding configuration
+     */
     jiraFinding?: shared.JiraFinding;
     statusCode: number;
-    getTargetsTargetIdFindingsIdIntegrationsJiraCloud401ApplicationJSONObject?: GetTargetsTargetIdFindingsIdIntegrationsJiraCloud401ApplicationJson;
-    getTargetsTargetIdFindingsIdIntegrationsJiraCloud403ApplicationJSONObject?: GetTargetsTargetIdFindingsIdIntegrationsJiraCloud403ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Access token is missing or invalid
+     */
+    getTargetsTargetIdFindingsIdIntegrationsJiraCloud401ApplicationJSONObject?: GetTargetsTargetIdFindingsIdIntegrationsJiraCloud401ApplicationJSON;
+    /**
+     * Not allowed to perform operation
+     */
+    getTargetsTargetIdFindingsIdIntegrationsJiraCloud403ApplicationJSONObject?: GetTargetsTargetIdFindingsIdIntegrationsJiraCloud403ApplicationJSON;
 }

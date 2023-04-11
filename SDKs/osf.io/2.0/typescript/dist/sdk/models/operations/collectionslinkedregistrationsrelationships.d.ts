@@ -1,12 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CollectionsLinkedRegistrationsRelationshipsPathParams extends SpeakeasyBase {
-    collectionId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class CollectionsLinkedRegistrationsRelationshipsRequest extends SpeakeasyBase {
-    pathParams: CollectionsLinkedRegistrationsRelationshipsPathParams;
-    request: Record<string, any>;
+    requestBody: Record<string, any>;
+    /**
+     * A short id for that collection
+     */
+    collectionId: string;
 }
 export declare class CollectionsLinkedRegistrationsRelationshipsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

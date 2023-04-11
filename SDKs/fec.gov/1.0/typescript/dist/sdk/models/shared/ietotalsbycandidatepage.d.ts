@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { IETotalsByCandidate } from "./ietotalsbycandidate";
 import { OffsetInfo } from "./offsetinfo";
-import { IeTotalsByCandidate } from "./ietotalsbycandidate";
-export declare class IeTotalsByCandidatePage extends SpeakeasyBase {
+export declare class IETotalsByCandidatePage extends SpeakeasyBase {
     pagination?: OffsetInfo;
-    results?: IeTotalsByCandidate[];
+    results?: IETotalsByCandidate[];
 }

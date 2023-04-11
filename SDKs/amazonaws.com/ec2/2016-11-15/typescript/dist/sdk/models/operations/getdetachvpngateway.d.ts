@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDetachVpnGatewayActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDetachVpnGatewayActionEnum {
     DetachVpnGateway = "DetachVpnGateway"
 }
-export declare enum GetDetachVpnGatewayVersionEnum {
+export declare enum GETDetachVpnGatewayVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetDetachVpnGatewayQueryParams extends SpeakeasyBase {
-    action: GetDetachVpnGatewayActionEnum;
+export declare class GETDetachVpnGatewayRequest extends SpeakeasyBase {
+    action: GETDetachVpnGatewayActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
-    version: GetDetachVpnGatewayVersionEnum;
+    version: GETDetachVpnGatewayVersionEnum;
+    /**
+     * The ID of the VPC.
+     */
     vpcId: string;
+    /**
+     * The ID of the virtual private gateway.
+     */
     vpnGatewayId: string;
-}
-export declare class GetDetachVpnGatewayHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,11 +29,8 @@ export declare class GetDetachVpnGatewayHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDetachVpnGatewayRequest extends SpeakeasyBase {
-    queryParams: GetDetachVpnGatewayQueryParams;
-    headers: GetDetachVpnGatewayHeaders;
-}
-export declare class GetDetachVpnGatewayResponse extends SpeakeasyBase {
+export declare class GETDetachVpnGatewayResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

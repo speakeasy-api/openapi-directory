@@ -6,157 +6,293 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/amazonaws.com/dynamodb/2011-12-05/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/amazonaws.com/dynamodb/2011-12-05/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { BatchGetItemRequest, BatchGetItemResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  BatchGetItemRequest,
+  BatchGetItemResponse,
+  BatchGetItemXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    hmac: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: BatchGetItemRequest = {
-  queryParams: {
-    requestItems: "sit",
-  },
-  headers: {
-    xAmzAlgorithm: "voluptas",
-    xAmzContentSha256: "culpa",
-    xAmzCredential: "expedita",
-    xAmzDate: "consequuntur",
-    xAmzSecurityToken: "dolor",
-    xAmzSignature: "expedita",
-    xAmzSignedHeaders: "voluptas",
-    xAmzTarget: "DynamoDB_20111205.BatchGetItem",
-  },
-  request: {
+  batchGetItemInput: {
     requestItems: {
-      "nihil": {
+      "provident": {
         attributesToGet: [
-          "dicta",
-          "debitis",
-          "voluptatum",
+          "quibusdam",
+          "unde",
+          "nulla",
         ],
         consistentRead: false,
         keys: [
           {
             hashKeyElement: {
-              b: "dolorem",
+              b: "illum",
               bs: [
-                "voluptate",
-                "iste",
+                "error",
+                "deserunt",
               ],
-              n: "vitae",
+              n: "suscipit",
               ns: [
-                "dolores",
-                "illum",
+                "magnam",
                 "debitis",
               ],
-              s: "vel",
+              s: "ipsa",
               ss: [
-                "dolore",
+                "tempora",
+                "suscipit",
+                "molestiae",
+                "minus",
               ],
             },
             rangeKeyElement: {
-              b: "id",
+              b: "placeat",
               bs: [
-                "accusantium",
+                "iusto",
+                "excepturi",
+                "nisi",
               ],
-              n: "totam",
+              n: "recusandae",
               ns: [
+                "ab",
                 "quis",
-                "est",
-              ],
-              s: "aut",
-              ss: [
-                "non",
-                "voluptas",
-              ],
-            },
-          },
-          {
-            hashKeyElement: {
-              b: "omnis",
-              bs: [
-                "illo",
-              ],
-              n: "sed",
-              ns: [
-                "autem",
-                "consectetur",
-              ],
-              s: "nobis",
-              ss: [
-                "qui",
-              ],
-            },
-            rangeKeyElement: {
-              b: "recusandae",
-              bs: [
-                "ipsum",
-                "eveniet",
-              ],
-              n: "modi",
-              ns: [
-                "inventore",
-              ],
-              s: "ut",
-              ss: [
-                "aut",
-                "reprehenderit",
-                "tempore",
-              ],
-            },
-          },
-          {
-            hashKeyElement: {
-              b: "maiores",
-              bs: [
-                "dolor",
-                "beatae",
                 "veritatis",
+                "deserunt",
               ],
-              n: "in",
-              ns: [
-                "omnis",
-                "ipsum",
-                "ex",
-              ],
-              s: "dolores",
+              s: "perferendis",
               ss: [
-                "vel",
+                "repellendus",
+                "sapiente",
+              ],
+            },
+          },
+          {
+            hashKeyElement: {
+              b: "quo",
+              bs: [
+                "at",
+              ],
+              n: "at",
+              ns: [
+                "molestiae",
+                "quod",
+                "quod",
+                "esse",
+              ],
+              s: "totam",
+              ss: [
+                "dolorum",
+                "dicta",
+                "nam",
+                "officia",
               ],
             },
             rangeKeyElement: {
-              b: "rerum",
+              b: "occaecati",
               bs: [
-                "voluptas",
+                "deleniti",
+              ],
+              n: "hic",
+              ns: [
+                "totam",
+                "beatae",
+                "commodi",
+                "molestiae",
+              ],
+              s: "modi",
+              ss: [
+                "impedit",
+              ],
+            },
+          },
+          {
+            hashKeyElement: {
+              b: "cum",
+              bs: [
+                "ipsum",
+                "excepturi",
+              ],
+              n: "aspernatur",
+              ns: [
+                "ad",
+              ],
+              s: "natus",
+              ss: [
+                "iste",
+              ],
+            },
+            rangeKeyElement: {
+              b: "dolor",
+              bs: [
+                "laboriosam",
+                "hic",
+                "saepe",
+              ],
+              n: "fuga",
+              ns: [
+                "corporis",
+                "iste",
+              ],
+              s: "iure",
+              ss: [
+                "quidem",
+                "architecto",
+                "ipsa",
+                "reiciendis",
+              ],
+            },
+          },
+        ],
+      },
+      "est": {
+        attributesToGet: [
+          "laborum",
+          "dolores",
+          "dolorem",
+        ],
+        consistentRead: false,
+        keys: [
+          {
+            hashKeyElement: {
+              b: "explicabo",
+              bs: [
+                "enim",
+                "omnis",
+                "nemo",
+                "minima",
+              ],
+              n: "excepturi",
+              ns: [
+                "iure",
+              ],
+              s: "culpa",
+              ss: [
+                "sapiente",
+                "architecto",
+                "mollitia",
+                "dolorem",
+              ],
+            },
+            rangeKeyElement: {
+              b: "culpa",
+              bs: [
+                "repellat",
+              ],
+              n: "mollitia",
+              ns: [
+                "numquam",
+                "commodi",
                 "quam",
               ],
-              n: "reprehenderit",
-              ns: [
-                "qui",
-              ],
-              s: "unde",
+              s: "molestiae",
               ss: [
-                "autem",
-                "qui",
+                "error",
+              ],
+            },
+          },
+          {
+            hashKeyElement: {
+              b: "quia",
+              bs: [
+                "vitae",
+                "laborum",
+              ],
+              n: "animi",
+              ns: [
+                "odit",
+                "quo",
+              ],
+              s: "sequi",
+              ss: [
+                "ipsam",
+                "id",
+                "possimus",
+                "aut",
+              ],
+            },
+            rangeKeyElement: {
+              b: "quasi",
+              bs: [
+                "temporibus",
+                "laborum",
+                "quasi",
+              ],
+              n: "reiciendis",
+              ns: [
+                "vero",
+                "nihil",
+                "praesentium",
+                "voluptatibus",
+              ],
+              s: "ipsa",
+              ss: [
+                "voluptate",
+                "cum",
+                "perferendis",
+              ],
+            },
+          },
+        ],
+      },
+      "doloremque": {
+        attributesToGet: [
+          "ut",
+          "maiores",
+        ],
+        consistentRead: false,
+        keys: [
+          {
+            hashKeyElement: {
+              b: "corporis",
+              bs: [
+                "iusto",
+                "dicta",
+              ],
+              n: "harum",
+              ns: [
+                "accusamus",
+                "commodi",
+              ],
+              s: "repudiandae",
+              ss: [
+                "ipsum",
+              ],
+            },
+            rangeKeyElement: {
+              b: "quidem",
+              bs: [
+                "excepturi",
+                "pariatur",
+                "modi",
+              ],
+              n: "praesentium",
+              ns: [
+                "voluptates",
+                "quasi",
+                "repudiandae",
+              ],
+              s: "sint",
+              ss: [
+                "itaque",
               ],
             },
           },
@@ -164,6 +300,15 @@ const req: BatchGetItemRequest = {
       },
     },
   },
+  requestItems: "incidunt",
+  xAmzAlgorithm: "enim",
+  xAmzContentSha256: "consequatur",
+  xAmzCredential: "est",
+  xAmzDate: "quibusdam",
+  xAmzSecurityToken: "explicabo",
+  xAmzSignature: "deserunt",
+  xAmzSignedHeaders: "distinctio",
+  xAmzTarget: BatchGetItemXAmzTargetEnum.DynamoDB20111205BatchGetItem,
 };
 
 sdk.batchGetItem(req).then((res: BatchGetItemResponse | AxiosError) => {
@@ -173,7 +318,7 @@ sdk.batchGetItem(req).then((res: BatchGetItemResponse | AxiosError) => {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
@@ -190,7 +335,18 @@ sdk.batchGetItem(req).then((res: BatchGetItemResponse | AxiosError) => {
 * `scan` - <p>Retrieves one or more items and its attributes by performing a full scan of a table.</p> <p>Provide a <code>ScanFilter</code> to get more specific results.</p>
 * `updateItem` - <p>Edits an existing item's attributes.</p> <p>You can perform a conditional update (insert a new attribute name-value pair if it doesn't exist, or replace an existing name-value pair if it has certain expected attribute values).</p>
 * `updateTable` - <p>Updates the provisioned throughput for the given table.</p> <p>Setting the throughput for a table helps you manage performance and is part of the Provisioned Throughput feature of Amazon DynamoDB.</p>
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

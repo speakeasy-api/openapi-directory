@@ -1,10 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetweatherQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetweatherRequest extends SpeakeasyBase {
+    /**
+     * City for weather information
+     */
     city: string;
+    /**
+     * Your Interzoid license API key. Register at www.interzoid.com/register
+     */
     license: string;
+    /**
+     * State for weather information
+     */
     state: string;
 }
-export declare class Getweather200ApplicationJson extends SpeakeasyBase {
+/**
+ * Current weather information for a US city
+ */
+export declare class Getweather200ApplicationJSON extends SpeakeasyBase {
     city?: string;
     code?: string;
     credits?: string;
@@ -17,11 +30,12 @@ export declare class Getweather200ApplicationJson extends SpeakeasyBase {
     windDir?: string;
     windMPH?: string;
 }
-export declare class GetweatherRequest extends SpeakeasyBase {
-    queryParams: GetweatherQueryParams;
-}
 export declare class GetweatherResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getweather200ApplicationJSONObject?: Getweather200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Current weather information for a US city
+     */
+    getweather200ApplicationJSONObject?: Getweather200ApplicationJSON;
 }

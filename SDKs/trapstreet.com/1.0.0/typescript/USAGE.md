@@ -1,16 +1,16 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetAddressRequest, GetAddressResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetAddressRequest,
+  GetAddressResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetAddressRequest = {
-  pathParams: {
-    address: "sit",
-  },
+  address: "5786 Little Streets",
 };
 
 sdk.getAddress(req).then((res: GetAddressResponse | AxiosError) => {

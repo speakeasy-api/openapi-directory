@@ -1,0 +1,27 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Required for cards with vertical orientation. The height of the media within a rich card with a vertical layout. For a standalone card with horizontal layout, height is not customizable, and this field is ignored.
+ */
+export declare enum GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeightEnum {
+    HeightUnspecified = "HEIGHT_UNSPECIFIED",
+    Short = "SHORT",
+    Medium = "MEDIUM",
+    Tall = "TALL"
+}
+/**
+ * Rich Business Messaging (RBM) Media displayed in Cards The following media-types are currently supported: Image Types * image/jpeg * image/jpg' * image/gif * image/png Video Types * video/h263 * video/m4v * video/mp4 * video/mpeg * video/mpeg4 * video/webm
+ */
+export declare class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMedia extends SpeakeasyBase {
+    /**
+     * Required. Publicly reachable URI of the file. The RBM platform determines the MIME type of the file from the content-type field in the HTTP headers when the platform fetches the file. The content-type field must be present and accurate in the HTTP response from the URL.
+     */
+    fileUri?: string;
+    /**
+     * Required for cards with vertical orientation. The height of the media within a rich card with a vertical layout. For a standalone card with horizontal layout, height is not customizable, and this field is ignored.
+     */
+    height?: GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeightEnum;
+    /**
+     * Optional. Publicly reachable URI of the thumbnail.If you don't provide a thumbnail URI, the RBM platform displays a blank placeholder thumbnail until the user's device downloads the file. Depending on the user's setting, the file may not download automatically and may require the user to tap a download button.
+     */
+    thumbnailUri?: string;
+}

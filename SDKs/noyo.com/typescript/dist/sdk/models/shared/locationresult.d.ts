@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * State postal code of the address
+ */
 export declare enum LocationResultAddressStateEnum {
     Ak = "AK",
     Al = "AL",
@@ -63,23 +66,71 @@ export declare enum LocationResultAddressStateEnum {
 }
 /**
  * Address of the group location
-**/
+ */
 export declare class LocationResultAddress extends SpeakeasyBase {
+    /**
+     * City of the address
+     */
     city: string;
+    /**
+     * County of the address
+     */
     county?: string;
+    /**
+     * State postal code of the address
+     */
     state: LocationResultAddressStateEnum;
+    /**
+     * Line one of the address
+     */
     streetOne: string;
+    /**
+     * Line two of the address
+     */
     streetTwo?: string;
+    /**
+     * Zip code of the address
+     */
     zipCode: string;
 }
+/**
+ * Successful Response - Returns the new Location
+ */
 export declare class LocationResult extends SpeakeasyBase {
+    /**
+     * Address of the group location
+     */
     address: LocationResultAddress;
+    /**
+     * Boolean field to determine whether the group location should be used as the billing group location
+     */
     billingLocation: boolean;
+    /**
+     * The date the record was created
+     */
     created: number;
+    /**
+     * Display name for the group location
+     */
     displayName: string;
+    /**
+     * Unique identifier of the group in Noyo
+     */
     groupId: string;
+    /**
+     * Unique identifier of the record in Noyo
+     */
     id: string;
+    /**
+     * The date the record was last updated
+     */
     modified: number;
+    /**
+     * Boolean field to determine whether the group location should be used as the primary group location
+     */
     primaryLocation: boolean;
+    /**
+     * Current version of the record
+     */
     version: string;
 }

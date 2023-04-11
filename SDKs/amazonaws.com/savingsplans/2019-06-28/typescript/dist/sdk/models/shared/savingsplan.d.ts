@@ -2,11 +2,11 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { CurrencyCodeEnum } from "./currencycodeenum";
 import { SavingsPlanPaymentOptionEnum } from "./savingsplanpaymentoptionenum";
 import { SavingsPlanProductTypeEnum } from "./savingsplanproducttypeenum";
-import { SavingsPlanTypeEnum } from "./savingsplantypeenum";
 import { SavingsPlanStateEnum } from "./savingsplanstateenum";
+import { SavingsPlanTypeEnum } from "./savingsplantypeenum";
 /**
  * Information about a Savings Plan.
-**/
+ */
 export declare class SavingsPlan extends SpeakeasyBase {
     commitment?: string;
     currency?: CurrencyCodeEnum;

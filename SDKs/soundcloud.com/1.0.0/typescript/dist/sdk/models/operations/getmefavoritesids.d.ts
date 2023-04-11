@@ -1,16 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetMeFavoritesIdsQueryParams extends SpeakeasyBase {
-    limit?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetMeFavoritesIdsSecurity extends SpeakeasyBase {
-    authHeader: shared.SchemeAuthHeader;
+    authHeader: string;
 }
 export declare class GetMeFavoritesIdsRequest extends SpeakeasyBase {
-    queryParams: GetMeFavoritesIdsQueryParams;
-    security: GetMeFavoritesIdsSecurity;
+    /**
+     * Number of results to return in the collection.
+     */
+    limit?: number;
 }
 export declare class GetMeFavoritesIdsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

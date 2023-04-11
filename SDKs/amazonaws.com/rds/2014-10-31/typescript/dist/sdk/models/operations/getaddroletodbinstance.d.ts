@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetAddRoleToDbInstanceActionEnum {
-    AddRoleToDbInstance = "AddRoleToDBInstance"
+import { AxiosResponse } from "axios";
+export declare enum GETAddRoleToDBInstanceActionEnum {
+    AddRoleToDBInstance = "AddRoleToDBInstance"
 }
-export declare enum GetAddRoleToDbInstanceVersionEnum {
+export declare enum GETAddRoleToDBInstanceVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class GetAddRoleToDbInstanceQueryParams extends SpeakeasyBase {
-    action: GetAddRoleToDbInstanceActionEnum;
+export declare class GETAddRoleToDBInstanceRequest extends SpeakeasyBase {
+    action: GETAddRoleToDBInstanceActionEnum;
+    /**
+     * The name of the DB instance to associate the IAM role with.
+     */
     dbInstanceIdentifier: string;
+    /**
+     * The name of the feature for the DB instance that the IAM role is to be associated with. For information about supported feature names, see <a>DBEngineVersion</a>.
+     */
     featureName: string;
+    /**
+     * The Amazon Resource Name (ARN) of the IAM role to associate with the DB instance, for example <code>arn:aws:iam::123456789012:role/AccessRole</code>.
+     */
     roleArn: string;
-    version: GetAddRoleToDbInstanceVersionEnum;
-}
-export declare class GetAddRoleToDbInstanceHeaders extends SpeakeasyBase {
+    version: GETAddRoleToDBInstanceVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +29,9 @@ export declare class GetAddRoleToDbInstanceHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetAddRoleToDbInstanceRequest extends SpeakeasyBase {
-    queryParams: GetAddRoleToDbInstanceQueryParams;
-    headers: GetAddRoleToDbInstanceHeaders;
-}
-export declare class GetAddRoleToDbInstanceResponse extends SpeakeasyBase {
+export declare class GETAddRoleToDBInstanceResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

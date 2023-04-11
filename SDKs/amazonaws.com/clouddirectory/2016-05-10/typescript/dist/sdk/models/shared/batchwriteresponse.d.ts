@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { BatchWriteOperationResponse } from "./batchwriteoperationresponse";
+/**
+ * Success
+ */
 export declare class BatchWriteResponse extends SpeakeasyBase {
     responses?: BatchWriteOperationResponse[];
 }

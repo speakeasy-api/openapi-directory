@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListDataCatalogsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListDataCatalogsXAmzTargetEnum {
     AmazonAthenaListDataCatalogs = "AmazonAthena.ListDataCatalogs"
 }
-export declare class ListDataCatalogsHeaders extends SpeakeasyBase {
+export declare class ListDataCatalogsRequest extends SpeakeasyBase {
+    listDataCatalogsInput: shared.ListDataCatalogsInput;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,15 +23,20 @@ export declare class ListDataCatalogsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListDataCatalogsXAmzTargetEnum;
 }
-export declare class ListDataCatalogsRequest extends SpeakeasyBase {
-    queryParams: ListDataCatalogsQueryParams;
-    headers: ListDataCatalogsHeaders;
-    request: shared.ListDataCatalogsInput;
-}
 export declare class ListDataCatalogsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * Success
+     */
     listDataCatalogsOutput?: shared.ListDataCatalogsOutput;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

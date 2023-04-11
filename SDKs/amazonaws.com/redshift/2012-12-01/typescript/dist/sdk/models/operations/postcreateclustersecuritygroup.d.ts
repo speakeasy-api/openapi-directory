@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateClusterSecurityGroupActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateClusterSecurityGroupActionEnum {
     CreateClusterSecurityGroup = "CreateClusterSecurityGroup"
 }
-export declare enum PostCreateClusterSecurityGroupVersionEnum {
+export declare enum POSTCreateClusterSecurityGroupVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostCreateClusterSecurityGroupQueryParams extends SpeakeasyBase {
-    action: PostCreateClusterSecurityGroupActionEnum;
-    version: PostCreateClusterSecurityGroupVersionEnum;
-}
-export declare class PostCreateClusterSecurityGroupHeaders extends SpeakeasyBase {
+export declare class POSTCreateClusterSecurityGroupRequest extends SpeakeasyBase {
+    action: POSTCreateClusterSecurityGroupActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateClusterSecurityGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateClusterSecurityGroupHeaders extends SpeakeasyBase
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateClusterSecurityGroupRequest extends SpeakeasyBase {
-    queryParams: PostCreateClusterSecurityGroupQueryParams;
-    headers: PostCreateClusterSecurityGroupHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateClusterSecurityGroupResponse extends SpeakeasyBase {
+export declare class POSTCreateClusterSecurityGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostUpdatePartnerStatusActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTUpdatePartnerStatusActionEnum {
     UpdatePartnerStatus = "UpdatePartnerStatus"
 }
-export declare enum PostUpdatePartnerStatusVersionEnum {
+export declare enum POSTUpdatePartnerStatusVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostUpdatePartnerStatusQueryParams extends SpeakeasyBase {
-    action: PostUpdatePartnerStatusActionEnum;
-    version: PostUpdatePartnerStatusVersionEnum;
-}
-export declare class PostUpdatePartnerStatusHeaders extends SpeakeasyBase {
+export declare class POSTUpdatePartnerStatusRequest extends SpeakeasyBase {
+    action: POSTUpdatePartnerStatusActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTUpdatePartnerStatusVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostUpdatePartnerStatusHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostUpdatePartnerStatusRequest extends SpeakeasyBase {
-    queryParams: PostUpdatePartnerStatusQueryParams;
-    headers: PostUpdatePartnerStatusHeaders;
-    request?: Uint8Array;
-}
-export declare class PostUpdatePartnerStatusResponse extends SpeakeasyBase {
+export declare class POSTUpdatePartnerStatusResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

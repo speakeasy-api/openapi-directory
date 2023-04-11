@@ -1,47 +1,112 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PutServersIdPathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class PutServersIdUpdateServerRequest extends SpeakeasyBase {
+    /**
+     * User-defined labels (key-value pairs)
+     */
     labels?: Record<string, any>;
+    /**
+     * New name to set
+     */
     name?: string;
 }
-export declare class PutServersId200ApplicationJsonServerDatacenterLocation extends SpeakeasyBase {
-    city: string;
-    country: string;
-    description: string;
+export declare class PutServersIdRequest extends SpeakeasyBase {
+    requestBody?: PutServersIdUpdateServerRequest;
+    /**
+     * ID of the Server
+     */
     id: number;
+}
+export declare class PutServersId200ApplicationJSONServerDatacenterLocation extends SpeakeasyBase {
+    /**
+     * City the Location is closest to
+     */
+    city: string;
+    /**
+     * ISO 3166-1 alpha-2 code of the country the Location resides in
+     */
+    country: string;
+    /**
+     * Description of the Location
+     */
+    description: string;
+    /**
+     * ID of the Location
+     */
+    id: number;
+    /**
+     * Latitude of the city closest to the Location
+     */
     latitude: number;
+    /**
+     * Longitude of the city closest to the Location
+     */
     longitude: number;
+    /**
+     * Unique identifier of the Location
+     */
     name: string;
+    /**
+     * Name of network zone this Location resides in
+     */
     networkZone: string;
 }
 /**
  * The Server types the Datacenter can handle
-**/
-export declare class PutServersId200ApplicationJsonServerDatacenterServerTypes extends SpeakeasyBase {
+ */
+export declare class PutServersId200ApplicationJSONServerDatacenterServerTypes extends SpeakeasyBase {
+    /**
+     * IDs of Server types that are supported and for which the Datacenter has enough resources left
+     */
     available: number[];
+    /**
+     * IDs of Server types that are supported and for which the Datacenter has enough resources left
+     */
     availableForMigration: number[];
+    /**
+     * IDs of Server types that are supported in the Datacenter
+     */
     supported: number[];
 }
 /**
  * Datacenter this Resource is located at
-**/
-export declare class PutServersId200ApplicationJsonServerDatacenter extends SpeakeasyBase {
+ */
+export declare class PutServersId200ApplicationJSONServerDatacenter extends SpeakeasyBase {
+    /**
+     * Description of the Datacenter
+     */
     description: string;
+    /**
+     * ID of the Resource
+     */
     id: number;
-    location: PutServersId200ApplicationJsonServerDatacenterLocation;
+    location: PutServersId200ApplicationJSONServerDatacenterLocation;
+    /**
+     * Unique identifier of the Datacenter
+     */
     name: string;
-    serverTypes: PutServersId200ApplicationJsonServerDatacenterServerTypes;
+    /**
+     * The Server types the Datacenter can handle
+     */
+    serverTypes: PutServersId200ApplicationJSONServerDatacenterServerTypes;
 }
 /**
  * Information about the Server the Image was created from
-**/
-export declare class PutServersId200ApplicationJsonServerImageCreatedFrom extends SpeakeasyBase {
+ */
+export declare class PutServersId200ApplicationJSONServerImageCreatedFrom extends SpeakeasyBase {
+    /**
+     * ID of the Server the Image was created from
+     */
     id: number;
+    /**
+     * Server name at the time the Image was created
+     */
     name: string;
 }
-export declare enum PutServersId200ApplicationJsonServerImageOsFlavorEnum {
+/**
+ * Flavor of operating system contained in the Image
+ */
+export declare enum PutServersId200ApplicationJSONServerImageOsFlavorEnum {
     Ubuntu = "ubuntu",
     Centos = "centos",
     Debian = "debian",
@@ -50,68 +115,166 @@ export declare enum PutServersId200ApplicationJsonServerImageOsFlavorEnum {
 }
 /**
  * Protection configuration for the Resource
-**/
-export declare class PutServersId200ApplicationJsonServerImageProtection extends SpeakeasyBase {
+ */
+export declare class PutServersId200ApplicationJSONServerImageProtection extends SpeakeasyBase {
+    /**
+     * If true, prevents the Resource from being deleted
+     */
     delete: boolean;
 }
-export declare enum PutServersId200ApplicationJsonServerImageStatusEnum {
+/**
+ * Whether the Image can be used or if it's still being created or unavailable
+ */
+export declare enum PutServersId200ApplicationJSONServerImageStatusEnum {
     Available = "available",
     Creating = "creating",
     Unavailable = "unavailable"
 }
-export declare enum PutServersId200ApplicationJsonServerImageTypeEnum {
+/**
+ * Type of the Image
+ */
+export declare enum PutServersId200ApplicationJSONServerImageTypeEnum {
     System = "system",
     App = "app",
     Snapshot = "snapshot",
     Backup = "backup",
     Temporary = "temporary"
 }
-export declare class PutServersId200ApplicationJsonServerImage extends SpeakeasyBase {
+export declare class PutServersId200ApplicationJSONServerImage extends SpeakeasyBase {
+    /**
+     * ID of Server the Image is bound to. Only set for Images of type `backup`.
+     */
     boundTo: number;
-    buildId?: string;
+    /**
+     * Point in time when the Resource was created (in ISO-8601 format)
+     */
     created: string;
-    createdFrom: PutServersId200ApplicationJsonServerImageCreatedFrom;
+    /**
+     * Information about the Server the Image was created from
+     */
+    createdFrom: PutServersId200ApplicationJSONServerImageCreatedFrom;
+    /**
+     * Point in time where the Image was deleted (in ISO-8601 format)
+     */
     deleted: string;
+    /**
+     * Point in time when the Image is considered to be deprecated (in ISO-8601 format)
+     */
     deprecated: string;
+    /**
+     * Description of the Image
+     */
     description: string;
+    /**
+     * Size of the disk contained in the Image in GB
+     */
     diskSize: number;
+    /**
+     * ID of the Resource
+     */
     id: number;
+    /**
+     * Size of the Image file in our storage in GB. For snapshot Images this is the value relevant for calculating costs for the Image.
+     */
     imageSize: number;
+    /**
+     * User-defined labels (key-value pairs)
+     */
     labels: Record<string, string>;
+    /**
+     * Unique identifier of the Image. This value is only set for system Images.
+     */
     name: string;
-    osFlavor: PutServersId200ApplicationJsonServerImageOsFlavorEnum;
+    /**
+     * Flavor of operating system contained in the Image
+     */
+    osFlavor: PutServersId200ApplicationJSONServerImageOsFlavorEnum;
+    /**
+     * Operating system version
+     */
     osVersion: string;
-    protection: PutServersId200ApplicationJsonServerImageProtection;
+    /**
+     * Protection configuration for the Resource
+     */
+    protection: PutServersId200ApplicationJSONServerImageProtection;
+    /**
+     * Indicates that rapid deploy of the Image is available
+     */
     rapidDeploy?: boolean;
-    status: PutServersId200ApplicationJsonServerImageStatusEnum;
-    type: PutServersId200ApplicationJsonServerImageTypeEnum;
+    /**
+     * Whether the Image can be used or if it's still being created or unavailable
+     */
+    status: PutServersId200ApplicationJSONServerImageStatusEnum;
+    /**
+     * Type of the Image
+     */
+    type: PutServersId200ApplicationJSONServerImageTypeEnum;
 }
-export declare enum PutServersId200ApplicationJsonServerIsoTypeEnum {
+/**
+ * Type of the ISO
+ */
+export declare enum PutServersId200ApplicationJSONServerIsoTypeEnum {
     Public = "public",
     Private = "private"
 }
 /**
  * ISO Image that is attached to this Server. Null if no ISO is attached.
-**/
-export declare class PutServersId200ApplicationJsonServerIso extends SpeakeasyBase {
+ */
+export declare class PutServersId200ApplicationJSONServerIso extends SpeakeasyBase {
+    /**
+     * ISO 8601 timestamp of deprecation, null if ISO is still available. After the deprecation time it will no longer be possible to attach the ISO to Servers.
+     */
     deprecated: string;
+    /**
+     * Description of the ISO
+     */
     description: string;
+    /**
+     * ID of the Resource
+     */
     id: number;
+    /**
+     * Unique identifier of the ISO. Only set for public ISOs
+     */
     name: string;
-    type: PutServersId200ApplicationJsonServerIsoTypeEnum;
+    /**
+     * Type of the ISO
+     */
+    type: PutServersId200ApplicationJSONServerIsoTypeEnum;
 }
-export declare enum PutServersId200ApplicationJsonServerPlacementGroupNullableTypeEnum {
+/**
+ * Type of the Placement Group
+ */
+export declare enum PutServersId200ApplicationJSONServerPlacementGroupNullableTypeEnum {
     Spread = "spread"
 }
-export declare class PutServersId200ApplicationJsonServerPlacementGroupNullable extends SpeakeasyBase {
+export declare class PutServersId200ApplicationJSONServerPlacementGroupNullable extends SpeakeasyBase {
+    /**
+     * Point in time when the Resource was created (in ISO-8601 format)
+     */
     created: string;
+    /**
+     * ID of the Resource
+     */
     id: number;
+    /**
+     * User-defined labels (key-value pairs)
+     */
     labels: Record<string, string>;
+    /**
+     * Name of the Resource. Must be unique per Project.
+     */
     name: string;
+    /**
+     * Array of IDs of Servers that are part of this Placement Group
+     */
     servers: number[];
-    type: PutServersId200ApplicationJsonServerPlacementGroupNullableTypeEnum;
+    /**
+     * Type of the Placement Group
+     */
+    type: PutServersId200ApplicationJSONServerPlacementGroupNullableTypeEnum;
 }
-export declare class PutServersId200ApplicationJsonServerPrivateNet extends SpeakeasyBase {
+export declare class PutServersId200ApplicationJSONServerPrivateNet extends SpeakeasyBase {
     aliasIps?: string[];
     ip?: string;
     macAddress?: string;
@@ -119,91 +282,210 @@ export declare class PutServersId200ApplicationJsonServerPrivateNet extends Spea
 }
 /**
  * Protection configuration for the Server
-**/
-export declare class PutServersId200ApplicationJsonServerProtection extends SpeakeasyBase {
+ */
+export declare class PutServersId200ApplicationJSONServerProtection extends SpeakeasyBase {
+    /**
+     * If true, prevents the Server from being deleted
+     */
     delete: boolean;
+    /**
+     * If true, prevents the Server from being rebuilt
+     */
     rebuild: boolean;
 }
-export declare enum PutServersId200ApplicationJsonServerPublicNetServerPublicNetFirewallStatusEnum {
+/**
+ * Status of the Firewall on the Server
+ */
+export declare enum PutServersId200ApplicationJSONServerPublicNetServerPublicNetFirewallStatusEnum {
     Applied = "applied",
     Pending = "pending"
 }
-export declare class PutServersId200ApplicationJsonServerPublicNetServerPublicNetFirewall extends SpeakeasyBase {
+export declare class PutServersId200ApplicationJSONServerPublicNetServerPublicNetFirewall extends SpeakeasyBase {
+    /**
+     * ID of the Resource
+     */
     id?: number;
-    status?: PutServersId200ApplicationJsonServerPublicNetServerPublicNetFirewallStatusEnum;
+    /**
+     * Status of the Firewall on the Server
+     */
+    status?: PutServersId200ApplicationJSONServerPublicNetServerPublicNetFirewallStatusEnum;
 }
 /**
  * IP address (v4) and its reverse DNS entry of this Server
-**/
-export declare class PutServersId200ApplicationJsonServerPublicNetIpv4 extends SpeakeasyBase {
+ */
+export declare class PutServersId200ApplicationJSONServerPublicNetIpv4 extends SpeakeasyBase {
+    /**
+     * If the IP is blocked by our anti abuse dept
+     */
     blocked: boolean;
+    /**
+     * Reverse DNS PTR entry for the IPv4 addresses of this Server
+     */
     dnsPtr: string;
+    /**
+     * ID of the Resource
+     */
+    id?: number;
+    /**
+     * IP address (v4) of this Server
+     */
     ip: string;
 }
-export declare class PutServersId200ApplicationJsonServerPublicNetIpv6DnsPtr extends SpeakeasyBase {
+export declare class PutServersId200ApplicationJSONServerPublicNetIpv6DnsPtr extends SpeakeasyBase {
+    /**
+     * DNS pointer for the specific IP address
+     */
     dnsPtr: string;
+    /**
+     * Single IPv6 address of this Server for which the reverse DNS entry has been set up
+     */
     ip: string;
 }
 /**
  * IPv6 network assigned to this Server and its reverse DNS entry
-**/
-export declare class PutServersId200ApplicationJsonServerPublicNetIpv6 extends SpeakeasyBase {
+ */
+export declare class PutServersId200ApplicationJSONServerPublicNetIpv6 extends SpeakeasyBase {
+    /**
+     * If the IP is blocked by our anti abuse dept
+     */
     blocked: boolean;
-    dnsPtr: PutServersId200ApplicationJsonServerPublicNetIpv6DnsPtr[];
+    /**
+     * Reverse DNS PTR entries for the IPv6 addresses of this Server, `null` by default
+     */
+    dnsPtr: PutServersId200ApplicationJSONServerPublicNetIpv6DnsPtr[];
+    /**
+     * ID of the Resource
+     */
+    id?: number;
+    /**
+     * IP address (v6) of this Server
+     */
     ip: string;
 }
 /**
  * Public network information. The Server's IPv4 address can be found in `public_net->ipv4->ip`
-**/
-export declare class PutServersId200ApplicationJsonServerPublicNet extends SpeakeasyBase {
-    firewalls?: PutServersId200ApplicationJsonServerPublicNetServerPublicNetFirewall[];
+ */
+export declare class PutServersId200ApplicationJSONServerPublicNet extends SpeakeasyBase {
+    /**
+     * Firewalls applied to the public network interface of this Server
+     */
+    firewalls?: PutServersId200ApplicationJSONServerPublicNetServerPublicNetFirewall[];
+    /**
+     * IDs of Floating IPs assigned to this Server
+     */
     floatingIps: number[];
-    ipv4: PutServersId200ApplicationJsonServerPublicNetIpv4;
-    ipv6: PutServersId200ApplicationJsonServerPublicNetIpv6;
+    /**
+     * IP address (v4) and its reverse DNS entry of this Server
+     */
+    ipv4: PutServersId200ApplicationJSONServerPublicNetIpv4;
+    /**
+     * IPv6 network assigned to this Server and its reverse DNS entry
+     */
+    ipv6: PutServersId200ApplicationJSONServerPublicNetIpv6;
 }
-export declare enum PutServersId200ApplicationJsonServerServerTypeCpuTypeEnum {
+/**
+ * Type of cpu
+ */
+export declare enum PutServersId200ApplicationJSONServerServerTypeCpuTypeEnum {
     Shared = "shared",
     Dedicated = "dedicated"
 }
 /**
  * Hourly costs for a Server type in this Location
-**/
-export declare class PutServersId200ApplicationJsonServerServerTypePricesPriceHourly extends SpeakeasyBase {
+ */
+export declare class PutServersId200ApplicationJSONServerServerTypePricesPriceHourly extends SpeakeasyBase {
+    /**
+     * Price with VAT added
+     */
     gross: string;
+    /**
+     * Price without VAT
+     */
     net: string;
 }
 /**
  * Monthly costs for a Server type in this Location
-**/
-export declare class PutServersId200ApplicationJsonServerServerTypePricesPriceMonthly extends SpeakeasyBase {
+ */
+export declare class PutServersId200ApplicationJSONServerServerTypePricesPriceMonthly extends SpeakeasyBase {
+    /**
+     * Price with VAT added
+     */
     gross: string;
+    /**
+     * Price without VAT
+     */
     net: string;
 }
-export declare class PutServersId200ApplicationJsonServerServerTypePrices extends SpeakeasyBase {
+export declare class PutServersId200ApplicationJSONServerServerTypePrices extends SpeakeasyBase {
+    /**
+     * Name of the Location the price is for
+     */
     location: string;
-    priceHourly: PutServersId200ApplicationJsonServerServerTypePricesPriceHourly;
-    priceMonthly: PutServersId200ApplicationJsonServerServerTypePricesPriceMonthly;
+    /**
+     * Hourly costs for a Server type in this Location
+     */
+    priceHourly: PutServersId200ApplicationJSONServerServerTypePricesPriceHourly;
+    /**
+     * Monthly costs for a Server type in this Location
+     */
+    priceMonthly: PutServersId200ApplicationJSONServerServerTypePricesPriceMonthly;
 }
-export declare enum PutServersId200ApplicationJsonServerServerTypeStorageTypeEnum {
+/**
+ * Type of Server boot drive. Local has higher speed. Network has better availability.
+ */
+export declare enum PutServersId200ApplicationJSONServerServerTypeStorageTypeEnum {
     Local = "local",
     Network = "network"
 }
 /**
  * Type of Server - determines how much ram, disk and cpu a Server has
-**/
-export declare class PutServersId200ApplicationJsonServerServerType extends SpeakeasyBase {
+ */
+export declare class PutServersId200ApplicationJSONServerServerType extends SpeakeasyBase {
+    /**
+     * Number of cpu cores a Server of this type will have
+     */
     cores: number;
-    cpuType: PutServersId200ApplicationJsonServerServerTypeCpuTypeEnum;
+    /**
+     * Type of cpu
+     */
+    cpuType: PutServersId200ApplicationJSONServerServerTypeCpuTypeEnum;
+    /**
+     * True if Server type is deprecated
+     */
     deprecated: boolean;
+    /**
+     * Description of the Server type
+     */
     description: string;
+    /**
+     * Disk size a Server of this type will have in GB
+     */
     disk: number;
+    /**
+     * ID of the Server type
+     */
     id: number;
+    /**
+     * Memory a Server of this type will have in GB
+     */
     memory: number;
+    /**
+     * Unique identifier of the Server type
+     */
     name: string;
-    prices: PutServersId200ApplicationJsonServerServerTypePrices[];
-    storageType: PutServersId200ApplicationJsonServerServerTypeStorageTypeEnum;
+    /**
+     * Prices in different Locations
+     */
+    prices: PutServersId200ApplicationJSONServerServerTypePrices[];
+    /**
+     * Type of Server boot drive. Local has higher speed. Network has better availability.
+     */
+    storageType: PutServersId200ApplicationJSONServerServerTypeStorageTypeEnum;
 }
-export declare enum PutServersId200ApplicationJsonServerStatusEnum {
+/**
+ * Status of the Server
+ */
+export declare enum PutServersId200ApplicationJSONServerStatusEnum {
     Running = "running",
     Initializing = "initializing",
     Starting = "starting",
@@ -214,39 +496,99 @@ export declare enum PutServersId200ApplicationJsonServerStatusEnum {
     Rebuilding = "rebuilding",
     Unknown = "unknown"
 }
-export declare class PutServersId200ApplicationJsonServer extends SpeakeasyBase {
+export declare class PutServersId200ApplicationJSONServer extends SpeakeasyBase {
+    /**
+     * Time window (UTC) in which the backup will run, or null if the backups are not enabled
+     */
     backupWindow: string;
+    /**
+     * Point in time when the Resource was created (in ISO-8601 format)
+     */
     created: string;
-    datacenter: PutServersId200ApplicationJsonServerDatacenter;
+    /**
+     * Datacenter this Resource is located at
+     */
+    datacenter: PutServersId200ApplicationJSONServerDatacenter;
+    /**
+     * ID of the Resource
+     */
     id: number;
-    image: PutServersId200ApplicationJsonServerImage;
+    image: PutServersId200ApplicationJSONServerImage;
+    /**
+     * Free Traffic for the current billing period in bytes
+     */
     includedTraffic: number;
+    /**
+     * Inbound Traffic for the current billing period in bytes
+     */
     ingoingTraffic: number;
-    iso: PutServersId200ApplicationJsonServerIso;
+    /**
+     * ISO Image that is attached to this Server. Null if no ISO is attached.
+     */
+    iso: PutServersId200ApplicationJSONServerIso;
+    /**
+     * User-defined labels (key-value pairs)
+     */
     labels: Record<string, string>;
     loadBalancers?: number[];
+    /**
+     * True if Server has been locked and is not available to user
+     */
     locked: boolean;
+    /**
+     * Name of the Server (must be unique per Project and a valid hostname as per RFC 1123)
+     */
     name: string;
+    /**
+     * Outbound Traffic for the current billing period in bytes
+     */
     outgoingTraffic: number;
-    placementGroup?: PutServersId200ApplicationJsonServerPlacementGroupNullable;
+    placementGroup?: PutServersId200ApplicationJSONServerPlacementGroupNullable;
+    /**
+     * Size of the primary Disk
+     */
     primaryDiskSize: number;
-    privateNet: PutServersId200ApplicationJsonServerPrivateNet[];
-    protection: PutServersId200ApplicationJsonServerProtection;
-    publicNet: PutServersId200ApplicationJsonServerPublicNet;
+    /**
+     * Private networks information
+     */
+    privateNet: PutServersId200ApplicationJSONServerPrivateNet[];
+    /**
+     * Protection configuration for the Server
+     */
+    protection: PutServersId200ApplicationJSONServerProtection;
+    /**
+     * Public network information. The Server's IPv4 address can be found in `public_net->ipv4->ip`
+     */
+    publicNet: PutServersId200ApplicationJSONServerPublicNet;
+    /**
+     * True if rescue mode is enabled. Server will then boot into rescue system on next reboot
+     */
     rescueEnabled: boolean;
-    serverType: PutServersId200ApplicationJsonServerServerType;
-    status: PutServersId200ApplicationJsonServerStatusEnum;
+    /**
+     * Type of Server - determines how much ram, disk and cpu a Server has
+     */
+    serverType: PutServersId200ApplicationJSONServerServerType;
+    /**
+     * Status of the Server
+     */
+    status: PutServersId200ApplicationJSONServerStatusEnum;
+    /**
+     * IDs of Volumes assigned to this Server
+     */
     volumes?: number[];
 }
-export declare class PutServersId200ApplicationJson extends SpeakeasyBase {
-    server?: PutServersId200ApplicationJsonServer;
-}
-export declare class PutServersIdRequest extends SpeakeasyBase {
-    pathParams: PutServersIdPathParams;
-    request?: PutServersIdUpdateServerRequest;
+/**
+ * The `server` key in the reply contains the updated Server
+ */
+export declare class PutServersId200ApplicationJSON extends SpeakeasyBase {
+    server?: PutServersId200ApplicationJSONServer;
 }
 export declare class PutServersIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    putServersId200ApplicationJSONObject?: PutServersId200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * The `server` key in the reply contains the updated Server
+     */
+    putServersId200ApplicationJSONObject?: PutServersId200ApplicationJSON;
 }

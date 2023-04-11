@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteConnectionXAmzTargetEnum {
-    AwsGlueDeleteConnection = "AWSGlue.DeleteConnection"
+    AWSGlueDeleteConnection = "AWSGlue.DeleteConnection"
 }
-export declare class DeleteConnectionHeaders extends SpeakeasyBase {
+export declare class DeleteConnectionRequest extends SpeakeasyBase {
+    deleteConnectionRequest: shared.DeleteConnectionRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class DeleteConnectionHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteConnectionXAmzTargetEnum;
 }
-export declare class DeleteConnectionRequest extends SpeakeasyBase {
-    headers: DeleteConnectionHeaders;
-    request: shared.DeleteConnectionRequest;
-}
 export declare class DeleteConnectionResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deleteConnectionResponse?: Record<string, any>;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

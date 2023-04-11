@@ -23,7 +23,6 @@ export * from "./recoveryconfig";
 export * from "./savesnapshotrequest";
 export * from "./scheduledsnapshotsconfig";
 export * from "./schedulerresource";
-export * from "./security";
 export * from "./softwareconfig";
 export * from "./status";
 export * from "./webserverconfig";

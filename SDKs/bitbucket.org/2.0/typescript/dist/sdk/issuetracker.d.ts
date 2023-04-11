@@ -1,5 +1,18 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * The issue resources provide functionality for getting information on
+ *
+ * @remarks
+ * issues in an issue tracker, creating new issues, updating them and deleting
+ * them.
+ *
+ * You can access public issues without authentication, but you can't gain access
+ * to private repositories' issues. By authenticating, you will get the ability
+ * to create issues, as well as access to updating data or deleting issues you
+ * have access to.
+ *
+ */
 export declare class IssueTracker {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,43 +22,70 @@ export declare class IssueTracker {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteRepositoriesWorkspaceRepoSlugIssuesIssueId - Deletes the specified issue. This requires write access to the
+     * Delete an issue
+     *
+     * @remarks
+     * Deletes the specified issue. This requires write access to the
      * repository.
-    **/
-    deleteRepositoriesWorkspaceRepoSlugIssuesIssueId(req: operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdResponse>;
+     */
+    deleteRepositoriesWorkspaceRepoSlugIssuesIssueId(req: operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdRequest, security: operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdResponse>;
     /**
-     * deleteRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPath - Deletes an attachment.
-    **/
-    deleteRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPath(req: operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathRequest, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathResponse>;
+     * Delete an attachment for an issue
+     *
+     * @remarks
+     * Deletes an attachment.
+     */
+    deleteRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPath(req: operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathRequest, security: operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathResponse>;
     /**
-     * deleteRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentId - Deletes the specified comment.
-    **/
-    deleteRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentId(req: operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdResponse>;
+     * Delete a comment on an issue
+     *
+     * @remarks
+     * Deletes the specified comment.
+     */
+    deleteRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentId(req: operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdRequest, security: operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdResponse>;
     /**
-     * deleteRepositoriesWorkspaceRepoSlugIssuesIssueIdVote - Retract your vote.
-    **/
-    deleteRepositoriesWorkspaceRepoSlugIssuesIssueIdVote(req: operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteRequest, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteResponse>;
+     * Remove vote for an issue
+     *
+     * @remarks
+     * Retract your vote.
+     */
+    deleteRepositoriesWorkspaceRepoSlugIssuesIssueIdVote(req: operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteRequest, security: operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteResponse>;
     /**
-     * deleteRepositoriesWorkspaceRepoSlugIssuesIssueIdWatch - Stop watching this issue.
-    **/
-    deleteRepositoriesWorkspaceRepoSlugIssuesIssueIdWatch(req: operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchRequest, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchResponse>;
+     * Stop watching an issue
+     *
+     * @remarks
+     * Stop watching this issue.
+     */
+    deleteRepositoriesWorkspaceRepoSlugIssuesIssueIdWatch(req: operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchRequest, security: operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugComponents - Returns the components that have been defined in the issue tracker.
+     * List components
+     *
+     * @remarks
+     * Returns the components that have been defined in the issue tracker.
      *
      * This resource is only available on repositories that have the issue
      * tracker enabled.
-    **/
-    getRepositoriesWorkspaceRepoSlugComponents(req: operations.GetRepositoriesWorkspaceRepoSlugComponentsRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugComponentsResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugComponents(req: operations.GetRepositoriesWorkspaceRepoSlugComponentsRequest, security: operations.GetRepositoriesWorkspaceRepoSlugComponentsSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugComponentsResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugComponentsComponentId - Returns the specified issue tracker component object.
-    **/
-    getRepositoriesWorkspaceRepoSlugComponentsComponentId(req: operations.GetRepositoriesWorkspaceRepoSlugComponentsComponentIdRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugComponentsComponentIdResponse>;
+     * Get a component for issues
+     *
+     * @remarks
+     * Returns the specified issue tracker component object.
+     */
+    getRepositoriesWorkspaceRepoSlugComponentsComponentId(req: operations.GetRepositoriesWorkspaceRepoSlugComponentsComponentIdRequest, security: operations.GetRepositoriesWorkspaceRepoSlugComponentsComponentIdSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugComponentsComponentIdResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugIssues - Returns the issues in the issue tracker.
-    **/
-    getRepositoriesWorkspaceRepoSlugIssues(req: operations.GetRepositoriesWorkspaceRepoSlugIssuesRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugIssuesResponse>;
+     * List issues
+     *
+     * @remarks
+     * Returns the issues in the issue tracker.
+     */
+    getRepositoriesWorkspaceRepoSlugIssues(req: operations.GetRepositoriesWorkspaceRepoSlugIssuesRequest, security: operations.GetRepositoriesWorkspaceRepoSlugIssuesSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugIssuesResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZip - This endpoint is used to poll for the progress of an issue export
+     * Check issue export status
+     *
+     * @remarks
+     * This endpoint is used to poll for the progress of an issue export
      * job and return the zip file after the job is complete.
      * As long as the job is running, this will return a 200 response
      * with in the response body a description of the current status.
@@ -75,10 +115,13 @@ export declare class IssueTracker {
      * }
      *
      * Once the job has successfully completed, it returns a stream of the zip file.
-    **/
-    getRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZip(req: operations.GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZip(req: operations.GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipRequest, security: operations.GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugIssuesImport - When using GET, this endpoint reports the status of the current import task. Request example:
+     * Check issue import status
+     *
+     * @remarks
+     * When using GET, this endpoint reports the status of the current import task. Request example:
      *
      * ```
      * $ curl -u <username> -X GET https://api.bitbucket.org/2.0/repositories/<owner_username>/<repo_slug>/issues/import
@@ -101,23 +144,32 @@ export declare class IssueTracker {
      * Once it starts running, it is a 202 response with status STARTED and progress filled.
      *
      * After it is finished, it becomes a 200 response with status SUCCESS or FAILURE.
-    **/
-    getRepositoriesWorkspaceRepoSlugIssuesImport(req: operations.GetRepositoriesWorkspaceRepoSlugIssuesImportRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugIssuesImportResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugIssuesImport(req: operations.GetRepositoriesWorkspaceRepoSlugIssuesImportRequest, security: operations.GetRepositoriesWorkspaceRepoSlugIssuesImportSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugIssuesImportResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugIssuesIssueId - Returns the specified issue.
-    **/
-    getRepositoriesWorkspaceRepoSlugIssuesIssueId(req: operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdResponse>;
+     * Get an issue
+     *
+     * @remarks
+     * Returns the specified issue.
+     */
+    getRepositoriesWorkspaceRepoSlugIssuesIssueId(req: operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdRequest, security: operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachments - Returns all attachments for this issue.
+     * List attachments for an issue
+     *
+     * @remarks
+     * Returns all attachments for this issue.
      *
      * This returns the files' meta data. This does not return the files'
      * actual contents.
      *
      * The files are always ordered by their upload date.
-    **/
-    getRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachments(req: operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachments(req: operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsRequest, security: operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPath - Returns the contents of the specified file attachment.
+     * Get attachment for an issue
+     *
+     * @remarks
+     * Returns the contents of the specified file attachment.
      *
      * Note that this endpoint does not return a JSON response, but instead
      * returns a redirect pointing to the actual file that in turn will return
@@ -125,10 +177,13 @@ export declare class IssueTracker {
      *
      * The redirect URL contains a one-time token that has a limited lifetime.
      * As a result, the link should not be persisted, stored, or shared.
-    **/
-    getRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPath(req: operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPath(req: operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathRequest, security: operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugIssuesIssueIdChanges - Returns the list of all changes that have been made to the specified
+     * List changes on an issue
+     *
+     * @remarks
+     * Returns the list of all changes that have been made to the specified
      * issue. Changes are returned in chronological order with the oldest
      * change first.
      *
@@ -233,7 +288,7 @@ export declare class IssueTracker {
      * }
      * ```
      *
-     * Changes support [filtering and sorting](../../../meta/filtering) that
+     * Changes support [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering) that
      * can be used to search for specific changes. For instance, to see
      * when an issue transitioned to "resolved":
      *
@@ -254,75 +309,108 @@ export declare class IssueTracker {
      *
      * The `changes.assignee` field is deprecated will disappear in the
      * future. Use `changes.assignee_account_id` instead.
-    **/
-    getRepositoriesWorkspaceRepoSlugIssuesIssueIdChanges(req: operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugIssuesIssueIdChanges(req: operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesRequest, security: operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeId - Returns the specified issue change object.
+     * Get issue change object
+     *
+     * @remarks
+     * Returns the specified issue change object.
      *
      * This resource is only available on repositories that have the issue
      * tracker enabled.
-    **/
-    getRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeId(req: operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeIdRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeIdResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeId(req: operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeIdRequest, security: operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeIdSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeIdResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugIssuesIssueIdComments - Returns a paginated list of all comments that were made on the
+     * List comments on an issue
+     *
+     * @remarks
+     * Returns a paginated list of all comments that were made on the
      * specified issue.
      *
      * The default sorting is oldest to newest and can be overridden with
      * the `sort` query parameter.
      *
      * This endpoint also supports filtering and sorting of the results. See
-     * [filtering and sorting](../../../../../../meta/filtering) for more details.
-    **/
-    getRepositoriesWorkspaceRepoSlugIssuesIssueIdComments(req: operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsResponse>;
+     * [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering) for more details.
+     */
+    getRepositoriesWorkspaceRepoSlugIssuesIssueIdComments(req: operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsRequest, security: operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentId - Returns the specified issue comment object.
-    **/
-    getRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentId(req: operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdResponse>;
+     * Get a comment on an issue
+     *
+     * @remarks
+     * Returns the specified issue comment object.
+     */
+    getRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentId(req: operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdRequest, security: operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugIssuesIssueIdVote - Check whether the authenticated user has voted for this issue.
+     * Check if current user voted for an issue
+     *
+     * @remarks
+     * Check whether the authenticated user has voted for this issue.
      * A 204 status code indicates that the user has voted, while a 404
      * implies they haven't.
-    **/
-    getRepositoriesWorkspaceRepoSlugIssuesIssueIdVote(req: operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugIssuesIssueIdVote(req: operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteRequest, security: operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugIssuesIssueIdWatch - Indicated whether or not the authenticated user is watching this
+     * Check if current user is watching a issue
+     *
+     * @remarks
+     * Indicated whether or not the authenticated user is watching this
      * issue.
-    **/
-    getRepositoriesWorkspaceRepoSlugIssuesIssueIdWatch(req: operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugIssuesIssueIdWatch(req: operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchRequest, security: operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugMilestones - Returns the milestones that have been defined in the issue tracker.
+     * List milestones
+     *
+     * @remarks
+     * Returns the milestones that have been defined in the issue tracker.
      *
      * This resource is only available on repositories that have the issue
      * tracker enabled.
-    **/
-    getRepositoriesWorkspaceRepoSlugMilestones(req: operations.GetRepositoriesWorkspaceRepoSlugMilestonesRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugMilestonesResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugMilestones(req: operations.GetRepositoriesWorkspaceRepoSlugMilestonesRequest, security: operations.GetRepositoriesWorkspaceRepoSlugMilestonesSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugMilestonesResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugMilestonesMilestoneId - Returns the specified issue tracker milestone object.
-    **/
-    getRepositoriesWorkspaceRepoSlugMilestonesMilestoneId(req: operations.GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdResponse>;
+     * Get a milestone
+     *
+     * @remarks
+     * Returns the specified issue tracker milestone object.
+     */
+    getRepositoriesWorkspaceRepoSlugMilestonesMilestoneId(req: operations.GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdRequest, security: operations.GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugVersions - Returns the versions that have been defined in the issue tracker.
+     * List defined versions for issues
+     *
+     * @remarks
+     * Returns the versions that have been defined in the issue tracker.
      *
      * This resource is only available on repositories that have the issue
      * tracker enabled.
-    **/
-    getRepositoriesWorkspaceRepoSlugVersions(req: operations.GetRepositoriesWorkspaceRepoSlugVersionsRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugVersionsResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugVersions(req: operations.GetRepositoriesWorkspaceRepoSlugVersionsRequest, security: operations.GetRepositoriesWorkspaceRepoSlugVersionsSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugVersionsResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugVersionsVersionId - Returns the specified issue tracker version object.
-    **/
-    getRepositoriesWorkspaceRepoSlugVersionsVersionId(req: operations.GetRepositoriesWorkspaceRepoSlugVersionsVersionIdRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugVersionsVersionIdResponse>;
+     * Get a defined version for issues
+     *
+     * @remarks
+     * Returns the specified issue tracker version object.
+     */
+    getRepositoriesWorkspaceRepoSlugVersionsVersionId(req: operations.GetRepositoriesWorkspaceRepoSlugVersionsVersionIdRequest, security: operations.GetRepositoriesWorkspaceRepoSlugVersionsVersionIdSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugVersionsVersionIdResponse>;
     /**
-     * postRepositoriesWorkspaceRepoSlugIssues - Creates a new issue.
+     * Create an issue
+     *
+     * @remarks
+     * Creates a new issue.
      *
      * This call requires authentication. Private repositories or private
      * issue trackers require the caller to authenticate with an account that
      * has appropriate authorization.
      *
      * The authenticated user is used for the issue's `reporter` field.
-    **/
-    postRepositoriesWorkspaceRepoSlugIssues(req: operations.PostRepositoriesWorkspaceRepoSlugIssuesRequest, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugIssuesResponse>;
+     */
+    postRepositoriesWorkspaceRepoSlugIssues(req: operations.PostRepositoriesWorkspaceRepoSlugIssuesRequest, security: operations.PostRepositoriesWorkspaceRepoSlugIssuesSecurity, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugIssuesResponse>;
     /**
-     * postRepositoriesWorkspaceRepoSlugIssuesExport - A POST request to this endpoint initiates a new background celery task that archives the repo's issues.
+     * Export issues
+     *
+     * @remarks
+     * A POST request to this endpoint initiates a new background celery task that archives the repo's issues.
      *
      * For example, you can run:
      *
@@ -331,10 +419,13 @@ export declare class IssueTracker {
      *
      * When the job has been accepted, it will return a 202 (Accepted) along with a unique url to this job in the
      * 'Location' response header. This url is the endpoint for where the user can obtain their zip files."
-    **/
-    postRepositoriesWorkspaceRepoSlugIssuesExport(req: operations.PostRepositoriesWorkspaceRepoSlugIssuesExportRequest, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugIssuesExportResponse>;
+     */
+    postRepositoriesWorkspaceRepoSlugIssuesExport(req: operations.PostRepositoriesWorkspaceRepoSlugIssuesExportRequest, security: operations.PostRepositoriesWorkspaceRepoSlugIssuesExportSecurity, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugIssuesExportResponse>;
     /**
-     * postRepositoriesWorkspaceRepoSlugIssuesImport - A POST request to this endpoint will import the zip file given by the archive parameter into the repository. All
+     * Import issues
+     *
+     * @remarks
+     * A POST request to this endpoint will import the zip file given by the archive parameter into the repository. All
      * existing issues will be deleted and replaced by the contents of the imported zip file.
      *
      * Imports are done through a multipart/form-data POST. There is one valid and required form field, with the name
@@ -358,20 +449,26 @@ export declare class IssueTracker {
      *     "percent": 0
      * }
      * ```
-    **/
-    postRepositoriesWorkspaceRepoSlugIssuesImport(req: operations.PostRepositoriesWorkspaceRepoSlugIssuesImportRequest, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugIssuesImportResponse>;
+     */
+    postRepositoriesWorkspaceRepoSlugIssuesImport(req: operations.PostRepositoriesWorkspaceRepoSlugIssuesImportRequest, security: operations.PostRepositoriesWorkspaceRepoSlugIssuesImportSecurity, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugIssuesImportResponse>;
     /**
-     * postRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachments - Upload new issue attachments.
+     * Upload an attachment to an issue
+     *
+     * @remarks
+     * Upload new issue attachments.
      *
      * To upload files, perform a `multipart/form-data` POST containing one
      * or more file fields.
      *
      * When a file is uploaded with the same name as an existing attachment,
      * then the existing file will be replaced.
-    **/
-    postRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachments(req: operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsRequest, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse>;
+     */
+    postRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachments(req: operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsRequest, security: operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsSecurity, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse>;
     /**
-     * postRepositoriesWorkspaceRepoSlugIssuesIssueIdChanges - Makes a change to the specified issue.
+     * Modify the state of an issue
+     *
+     * @remarks
+     * Makes a change to the specified issue.
      *
      * For example, to change an issue's state and assignee, create a new
      * change object that modifies these fields:
@@ -409,10 +506,13 @@ export declare class IssueTracker {
      * This call requires authentication. Private repositories or private
      * issue trackers require the caller to authenticate with an account that
      * has appropriate authorization.
-    **/
-    postRepositoriesWorkspaceRepoSlugIssuesIssueIdChanges(req: operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesRequest, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesResponse>;
+     */
+    postRepositoriesWorkspaceRepoSlugIssuesIssueIdChanges(req: operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesRequest, security: operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesSecurity, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesResponse>;
     /**
-     * postRepositoriesWorkspaceRepoSlugIssuesIssueIdComments - Creates a new issue comment.
+     * Create a comment on an issue
+     *
+     * @remarks
+     * Creates a new issue comment.
      *
      * ```
      * $ curl https://api.bitbucket.org/2.0/repositories/atlassian/prlinks/issues/42/comments/ \
@@ -420,10 +520,13 @@ export declare class IssueTracker {
      *   -H 'Content-Type: application/json' \
      *   -d '{"content": {"raw": "Lorem ipsum."}}'
      * ```
-    **/
-    postRepositoriesWorkspaceRepoSlugIssuesIssueIdComments(req: operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsRequest, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsResponse>;
+     */
+    postRepositoriesWorkspaceRepoSlugIssuesIssueIdComments(req: operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsRequest, security: operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsSecurity, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsResponse>;
     /**
-     * putRepositoriesWorkspaceRepoSlugIssuesIssueId - Modifies the issue.
+     * Update an issue
+     *
+     * @remarks
+     * Modifies the issue.
      *
      * ```
      * $ curl https://api.bitbucket.org/2.0/repostories/evzijst/dogslow/issues/123 \
@@ -431,7 +534,7 @@ export declare class IssueTracker {
      *   -d '{
      *   "title": "Updated title",
      *   "assignee": {
-     *     "username": "evzijst"
+     *     "account_id": "5d5355e8c6b9320d9ea5b28d"
      *   },
      *   "priority": "minor",
      *   "version": {
@@ -449,10 +552,13 @@ export declare class IssueTracker {
      * Each time an issue is edited in the UI or through the API, an immutable
      * change record is created under the `/issues/123/changes` endpoint. It
      * also has a comment associated with the change.
-    **/
-    putRepositoriesWorkspaceRepoSlugIssuesIssueId(req: operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdRequest, config?: AxiosRequestConfig): Promise<operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdResponse>;
+     */
+    putRepositoriesWorkspaceRepoSlugIssuesIssueId(req: operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdRequest, security: operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdSecurity, config?: AxiosRequestConfig): Promise<operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdResponse>;
     /**
-     * putRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentId - Updates the content of the specified issue comment. Note that only
+     * Update a comment on an issue
+     *
+     * @remarks
+     * Updates the content of the specified issue comment. Note that only
      * the `content.raw` field can be modified.
      *
      * ```
@@ -461,20 +567,26 @@ export declare class IssueTracker {
      *   -H 'Content-Type: application/json' \
      *   -d '{"content": {"raw": "Lorem ipsum."}'
      * ```
-    **/
-    putRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentId(req: operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdRequest, config?: AxiosRequestConfig): Promise<operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdResponse>;
+     */
+    putRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentId(req: operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdRequest, security: operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdSecurity, config?: AxiosRequestConfig): Promise<operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdResponse>;
     /**
-     * putRepositoriesWorkspaceRepoSlugIssuesIssueIdVote - Vote for this issue.
+     * Vote for an issue
+     *
+     * @remarks
+     * Vote for this issue.
      *
      * To cast your vote, do an empty PUT. The 204 status code indicates that
      * the operation was successful.
-    **/
-    putRepositoriesWorkspaceRepoSlugIssuesIssueIdVote(req: operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteRequest, config?: AxiosRequestConfig): Promise<operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteResponse>;
+     */
+    putRepositoriesWorkspaceRepoSlugIssuesIssueIdVote(req: operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteRequest, security: operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteSecurity, config?: AxiosRequestConfig): Promise<operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteResponse>;
     /**
-     * putRepositoriesWorkspaceRepoSlugIssuesIssueIdWatch - Start watching this issue.
+     * Watch an issue
+     *
+     * @remarks
+     * Start watching this issue.
      *
      * To start watching this issue, do an empty PUT. The 204 status code
      * indicates that the operation was successful.
-    **/
-    putRepositoriesWorkspaceRepoSlugIssuesIssueIdWatch(req: operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchRequest, config?: AxiosRequestConfig): Promise<operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchResponse>;
+     */
+    putRepositoriesWorkspaceRepoSlugIssuesIssueIdWatch(req: operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchRequest, security: operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchSecurity, config?: AxiosRequestConfig): Promise<operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchResponse>;
 }

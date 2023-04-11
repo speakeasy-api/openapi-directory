@@ -1,14 +1,27 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { ApplyYaraRulesRequest, ApplyYaraRulesResponse } from "openapi/src/sdk/models/operations";
+import {
+  ApplyYaraRulesRequestBody,
+  ApplyYaraRulesResponse,
+  ApplyYaraRulesRequestBodyIsUnpackingRequiredEnum,
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: ApplyYaraRulesRequest = {
-  request: "sit",
+
+const req: ApplyYaraRulesRequestBody = {
+  file: {
+    content: "corrupti".encode(),
+    file: "provident",
+  },
+  isUnpackingRequired: ApplyYaraRulesRequestBodyIsUnpackingRequiredEnum.False,
+  rules: [
+    "unde",
+    "nulla",
+    "corrupti",
+    "illum",
+  ],
 };
 
 sdk.applyYaraRules(req).then((res: ApplyYaraRulesResponse | AxiosError) => {

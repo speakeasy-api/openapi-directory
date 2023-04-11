@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { DetectorState } from "./detectorstate";
 /**
  * Information about the detector (instance).
-**/
+ */
 export declare class Detector extends SpeakeasyBase {
     creationTime?: Date;
     detectorModelName?: string;

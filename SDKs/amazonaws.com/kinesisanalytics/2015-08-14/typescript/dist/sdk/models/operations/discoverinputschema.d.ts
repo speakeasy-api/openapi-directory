@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DiscoverInputSchemaXAmzTargetEnum {
     KinesisAnalytics20150814DiscoverInputSchema = "KinesisAnalytics_20150814.DiscoverInputSchema"
 }
-export declare class DiscoverInputSchemaHeaders extends SpeakeasyBase {
+export declare class DiscoverInputSchemaRequest extends SpeakeasyBase {
+    discoverInputSchemaRequest: shared.DiscoverInputSchemaRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class DiscoverInputSchemaHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DiscoverInputSchemaXAmzTargetEnum;
 }
-export declare class DiscoverInputSchemaRequest extends SpeakeasyBase {
-    headers: DiscoverInputSchemaHeaders;
-    request: shared.DiscoverInputSchemaRequest;
-}
 export declare class DiscoverInputSchemaResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     discoverInputSchemaResponse?: shared.DiscoverInputSchemaResponse;
+    /**
+     * InvalidArgumentException
+     */
     invalidArgumentException?: any;
+    /**
+     * ResourceProvisionedThroughputExceededException
+     */
     resourceProvisionedThroughputExceededException?: any;
-    serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceUnavailableException
+     */
+    serviceUnavailableException?: any;
+    /**
+     * UnableToDetectSchemaException
+     */
     unableToDetectSchemaException?: any;
 }

@@ -1,0 +1,14 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * A repricing rule that changes the sale price based on cost of goods sale.
+ */
+export declare class RepricingRuleCostOfGoodsSaleRule extends SpeakeasyBase {
+    /**
+     * The percent change against the COGS. Ex: 20 would mean to set the adjusted price 1.2X of the COGS data.
+     */
+    percentageDelta?: number;
+    /**
+     * The price delta against the COGS. E.g. 2 means $2 more of the COGS.
+     */
+    priceDelta?: string;
+}

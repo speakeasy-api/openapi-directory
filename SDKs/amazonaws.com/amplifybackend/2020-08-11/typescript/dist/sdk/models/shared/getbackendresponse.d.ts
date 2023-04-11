@@ -1,9 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class GetBackendResponse extends SpeakeasyBase {
-    amplifyMetaConfig?: Record<string, any>;
-    appId?: Record<string, any>;
-    appName?: Record<string, any>;
-    backendEnvironmentList?: Record<string, any>;
-    backendEnvironmentName?: Record<string, any>;
-    error?: Record<string, any>;
+    amplifyFeatureFlags?: string;
+    amplifyMetaConfig?: string;
+    appId?: string;
+    appName?: string;
+    backendEnvironmentList?: string[];
+    backendEnvironmentName?: string;
+    error?: string;
 }

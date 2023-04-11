@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The reason the Certificate was revoked.
+ */
 export declare enum RevokedCertificateRevocationReasonEnum {
     RevocationReasonUnspecified = "REVOCATION_REASON_UNSPECIFIED",
     KeyCompromise = "KEY_COMPROMISE",
@@ -12,9 +15,18 @@ export declare enum RevokedCertificateRevocationReasonEnum {
 }
 /**
  * Describes a revoked Certificate.
-**/
+ */
 export declare class RevokedCertificate extends SpeakeasyBase {
+    /**
+     * The resource name for the Certificate in the format `projects/* /locations/* /caPools/* /certificates/*`.
+     */
     certificate?: string;
+    /**
+     * The serial number of the Certificate.
+     */
     hexSerialNumber?: string;
+    /**
+     * The reason the Certificate was revoked.
+     */
     revocationReason?: RevokedCertificateRevocationReasonEnum;
 }

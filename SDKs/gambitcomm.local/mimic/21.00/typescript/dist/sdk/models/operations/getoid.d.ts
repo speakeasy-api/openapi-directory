@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetOidPathParams extends SpeakeasyBase {
-    agentNum: number;
-    object: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetOidRequest extends SpeakeasyBase {
-    pathParams: GetOidPathParams;
+    /**
+     * Agent to show the OID
+     */
+    agentNum: number;
+    /**
+     * Object
+     */
+    object: string;
 }
 export declare class GetOidResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     getOid200ApplicationJSONString?: string;
 }

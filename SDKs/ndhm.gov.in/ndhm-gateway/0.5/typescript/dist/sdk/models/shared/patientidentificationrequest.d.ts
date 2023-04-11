@@ -16,6 +16,12 @@ export declare class PatientIdentificationRequestQuery extends SpeakeasyBase {
 }
 export declare class PatientIdentificationRequest extends SpeakeasyBase {
     query: PatientIdentificationRequestQuery;
+    /**
+     * a nonce, unique for each HTTP request
+     */
     requestId: string;
+    /**
+     * Date time format in UTC, includes miliseconds YYYY-MM-DDThh:mm:ss.vZ
+     */
     timestamp: Date;
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostAssumeRoleWithWebIdentityActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTAssumeRoleWithWebIdentityActionEnum {
     AssumeRoleWithWebIdentity = "AssumeRoleWithWebIdentity"
 }
-export declare enum PostAssumeRoleWithWebIdentityVersionEnum {
+export declare enum POSTAssumeRoleWithWebIdentityVersionEnum {
     TwoThousandAndEleven0615 = "2011-06-15"
 }
-export declare class PostAssumeRoleWithWebIdentityQueryParams extends SpeakeasyBase {
-    action: PostAssumeRoleWithWebIdentityActionEnum;
-    version: PostAssumeRoleWithWebIdentityVersionEnum;
-}
-export declare class PostAssumeRoleWithWebIdentityHeaders extends SpeakeasyBase {
+export declare class POSTAssumeRoleWithWebIdentityRequest extends SpeakeasyBase {
+    action: POSTAssumeRoleWithWebIdentityActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTAssumeRoleWithWebIdentityVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostAssumeRoleWithWebIdentityHeaders extends SpeakeasyBase 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostAssumeRoleWithWebIdentityRequest extends SpeakeasyBase {
-    queryParams: PostAssumeRoleWithWebIdentityQueryParams;
-    headers: PostAssumeRoleWithWebIdentityHeaders;
-    request?: Uint8Array;
-}
-export declare class PostAssumeRoleWithWebIdentityResponse extends SpeakeasyBase {
+export declare class POSTAssumeRoleWithWebIdentityResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

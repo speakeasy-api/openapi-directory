@@ -1,0 +1,224 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Container for custom fields of an Amendment object.
+ *
+ * @remarks
+ *
+ */
+export declare class ProxyGetAmendment extends SpeakeasyBase {
+    /**
+     *  Determines whether the subscription is automatically renewed, or whether it expires at the end of the term and needs to be manually renewed. **Required:** For amendment of type TermsAndConditions when changing the automatic renewal status of a subscription.
+     *
+     * @remarks
+     * **Values**: true, false
+     */
+    autoRenew?: boolean;
+    /**
+     *  A unique alphanumeric string that identifies the amendment.
+     *
+     * @remarks
+     * **Character limit**: 50 **Values**: one of the following:
+     *
+     * - `null` generates a value automatically
+     * - A string
+     *
+     */
+    code?: string;
+    /**
+     *  The date when the amendment's changes become effective for billing purposes.
+     *
+     * @remarks
+     * **Version notes**: --
+     */
+    contractEffectiveDate?: Date;
+    /**
+     *  The user ID of the person who created the amendment.
+     *
+     * @remarks
+     * **Character limit**: 32 **Values**: automatically generated
+     */
+    createdById?: string;
+    /**
+     *  The date when the amendment was created.
+     *
+     * @remarks
+     * **Values**: automatically generated
+     */
+    createdDate?: Date;
+    /**
+     *  The length of the period for the current subscription term. This field can be updated when Status is `Draft`.
+     *
+     * @remarks
+     * **Required**: Only if the value of the Type field is set to `TermsAndConditions` and TermType is set to `TERMED`. This field is not required if TermType is set to `EVERGREEN`.
+     * **Character limit**: **Values**: a valid number
+     */
+    currentTerm?: number;
+    /**
+     *  The period type for the current subscription term. **Values**:
+     *
+     * @remarks
+     *
+     * - `Month` (default)
+     * - `Year`
+     * - `Day`
+     * - `Week`
+     * **Note**:
+     *
+     * - This field can be updated when Status is `Draft`.
+     * - This field is used with the CurrentTerm field to specify the current subscription term.
+     *
+     */
+    currentTermPeriodType?: string;
+    /**
+     * The date when the customer accepts the amendment's changes to the subscription.
+     *
+     * @remarks
+     *
+     * This field is only required if [Zuora is configured to require customer acceptance in Z-Billing](https://knowledgecenter.zuora.com/CB_Billing/W_Billing_and_Payments_Settings/Define_Default_Subscription_Settings) and the subscription is currently in the Pending Acceptance status (the value of the `Status` field is currently `PendingAcceptance`).
+     *
+     */
+    customerAcceptanceDate?: Date;
+    /**
+     *  A description of the amendment.
+     *
+     * @remarks
+     * **Character limit**: 500 **Values**: maximum 500 characters
+     */
+    description?: string;
+    /**
+     *  The date when the amendment's changes take effective. This field validates that the amendment's changes are within valid ranges of products and product rate plans.
+     *
+     * @remarks
+     * **Required**: For the cancellation amendments. Optional for other types of amendments.
+     * **Version notes**: --
+     */
+    effectiveDate?: Date;
+    /**
+     * Object identifier.
+     */
+    id?: string;
+    /**
+     *  The name of the amendment.
+     *
+     * @remarks
+     * **Character limit**: 100 **Values**: a string of 100 characters or fewer
+     */
+    name?: string;
+    /**
+     *  Specifies whether a termed subscription will remain termed or change to evergreen when it is renewed.
+     *
+     * @remarks
+     * **Required**: If TermType is Termed **Values**: RENEW_WITH_SPECIFIC_TERM (default), RENEW_TO_EVERGREEN
+     */
+    renewalSetting?: string;
+    /**
+     *  The term of renewal for the amended subscription. This field can be updated when Status is `Draft`.
+     *
+     * @remarks
+     * **Required**: Only if the value of the Type field is set to `TermsAndConditions`.
+     * **Character limit**: **Values:** a valid number
+     */
+    renewalTerm?: number;
+    /**
+     *  The period type for the subscription renewal term. This field can be updated when Status is `Draft`.
+     *
+     * @remarks
+     * **Required**: Only if the value of the Type field is set to `TermsAndConditions`. This field is used with the RenewalTerm field to specify the subscription renewal term.
+     * **Values**:
+     *
+     * - `Month` (default)
+     * - `Year`
+     * - `Day`
+     * - `Week`
+     *
+     */
+    renewalTermPeriodType?: string;
+    /**
+     * The date when service is activated.
+     *
+     * @remarks
+     *
+     * This field is only required if [Zuora is configured to require service activation in Z-Billing](https://knowledgecenter.zuora.com/CB_Billing/W_Billing_and_Payments_Settings/Define_Default_Subscription_Settings) and the subscription is currently in the Pending Activation status (the value of the `Status` field is currently `PendingActivation`).
+     *
+     */
+    serviceActivationDate?: Date;
+    /**
+     *  The date when the UpdateProduct amendment takes effect. This field is only applicable if there is already a future-dated UpdateProduct amendment on the subscription.
+     *
+     * @remarks
+     * **Required**: Only for the UpdateProduct amendments if there is already a future-dated UpdateProduct amendment on the subscription.
+     * **Version notes**: --
+     */
+    specificUpdateDate?: Date;
+    /**
+     *  The status of the amendment. Type: string (enum) **Character limit**: 17 **Values**: one of the following:
+     *
+     * @remarks
+     *
+     * - Draft (default, if left null)
+     * - Pending Activation
+     * - Pending Acceptance
+     * - Completed
+     *
+     */
+    status?: string;
+    /**
+     *  The ID of the subscription that the amendment changes.
+     *
+     * @remarks
+     * **Character limit**: 32 **Values**: a valid subscription ID
+     */
+    subscriptionId?: string;
+    /**
+     *  The date when the new terms and conditions take effect.
+     *
+     * @remarks
+     *
+     *
+     * **Version notes**: --
+     */
+    termStartDate?: Date;
+    /**
+     *  Indicates if the subscription isTERMED or EVERGREEN.
+     *
+     * @remarks
+     *
+     * - A TERMED subscription has an expiration date, and must be manually renewed.
+     * - An EVERGREEN subscription doesn't have an expiration date, and must be manually ended.
+     *
+     * **Required**: Only when as part of an amendment of type TermsAndConditions &#65279;to change the term type of a subscription. Type: string **Character limit**: 9 **Values**: TERMED, EVERGREEN
+     */
+    termType?: string;
+    /**
+     *  The type of amendment.
+     *
+     * @remarks
+     * **Character limit**: 18 **Values**: one of the following:
+     *
+     * - Cancellation
+     * - NewProduct
+     * - OwnerTransfer
+     * - RemoveProduct
+     * - Renewal
+     * - UpdateProduct
+     * - TermsAndConditions
+     * - SuspendSubscription
+     * - ResumeSubscription
+     *
+     */
+    type?: string;
+    /**
+     *  The ID of the user who last updated the amendment.
+     *
+     * @remarks
+     * **Character limit**: 32 **Values**: automatically generated
+     */
+    updatedById?: string;
+    /**
+     *  The date when the amendment was last updated.
+     *
+     * @remarks
+     * **Values**: automatically generated
+     */
+    updatedDate?: Date;
+}

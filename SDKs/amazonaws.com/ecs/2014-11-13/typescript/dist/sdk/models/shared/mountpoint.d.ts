@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
- * Details on a volume mount point that is used in a container definition.
-**/
+ * Details for a volume mount point that's used in a container definition.
+ */
 export declare class MountPoint extends SpeakeasyBase {
     containerPath?: string;
     readOnly?: boolean;

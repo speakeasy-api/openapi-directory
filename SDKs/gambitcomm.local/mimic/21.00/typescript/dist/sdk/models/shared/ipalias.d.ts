@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class IpAlias extends SpeakeasyBase {
+export declare class IPAlias extends SpeakeasyBase {
     ip?: string;
     interface?: string;
     mask?: string;

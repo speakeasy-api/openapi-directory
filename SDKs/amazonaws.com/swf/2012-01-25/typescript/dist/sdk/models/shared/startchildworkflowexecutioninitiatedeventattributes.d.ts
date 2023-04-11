@@ -4,7 +4,7 @@ import { TaskList } from "./tasklist";
 import { WorkflowType } from "./workflowtype";
 /**
  * Provides the details of the <code>StartChildWorkflowExecutionInitiated</code> event.
-**/
+ */
 export declare class StartChildWorkflowExecutionInitiatedEventAttributes extends SpeakeasyBase {
     childPolicy: ChildPolicyEnum;
     control?: string;

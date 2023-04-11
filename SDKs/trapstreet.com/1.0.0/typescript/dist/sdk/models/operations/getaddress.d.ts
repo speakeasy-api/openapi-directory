@@ -1,12 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetAddressPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetAddressRequest extends SpeakeasyBase {
     address: string;
 }
-export declare class GetAddressRequest extends SpeakeasyBase {
-    pathParams: GetAddressPathParams;
+/**
+ * OK
+ */
+export declare class GetAddress200ApplicationJSON extends SpeakeasyBase {
+    description?: string;
+    trap?: boolean;
 }
 export declare class GetAddressResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getAddress200ApplicationJSONAny?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
+    getAddress200ApplicationJSONObject?: GetAddress200ApplicationJSON;
 }

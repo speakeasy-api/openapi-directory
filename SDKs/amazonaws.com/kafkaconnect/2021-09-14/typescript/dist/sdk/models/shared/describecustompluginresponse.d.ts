@@ -1,6 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { CustomPluginStateEnum } from "./custompluginstateenum";
 import { CustomPluginRevisionSummary } from "./custompluginrevisionsummary";
+import { CustomPluginStateEnum } from "./custompluginstateenum";
+import { StateDescription } from "./statedescription";
+/**
+ * Success
+ */
 export declare class DescribeCustomPluginResponse extends SpeakeasyBase {
     creationTime?: Date;
     customPluginArn?: string;
@@ -8,4 +12,5 @@ export declare class DescribeCustomPluginResponse extends SpeakeasyBase {
     description?: string;
     latestRevision?: CustomPluginRevisionSummary;
     name?: string;
+    stateDescription?: StateDescription;
 }

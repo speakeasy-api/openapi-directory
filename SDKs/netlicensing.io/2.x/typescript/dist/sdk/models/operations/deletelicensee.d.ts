@@ -1,22 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteLicenseePathParams extends SpeakeasyBase {
-    licenseeNumber: string;
-}
-export declare class DeleteLicenseeQueryParams extends SpeakeasyBase {
-    forceCascade?: boolean;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteLicenseeSecurity extends SpeakeasyBase {
-    basicAuth: shared.SchemeBasicAuth;
+    password: string;
+    username: string;
 }
 export declare class DeleteLicenseeRequest extends SpeakeasyBase {
-    pathParams: DeleteLicenseePathParams;
-    queryParams: DeleteLicenseeQueryParams;
-    security: DeleteLicenseeSecurity;
+    /**
+     * Force object deletion and all descendants.
+     */
+    forceCascade?: boolean;
+    /**
+     * Unique number (across all Products of a Vendor) that identifies the Licensee.
+     */
+    licenseeNumber: string;
 }
 export declare class DeleteLicenseeResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    netlicensing?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful request
+     */
+    netlicensing?: shared.Netlicensing;
 }

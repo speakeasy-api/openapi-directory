@@ -1,8 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UpdateConnectorDefinitionPathParams extends SpeakeasyBase {
-    connectorDefinitionId: string;
+import { AxiosResponse } from "axios";
+export declare class UpdateConnectorDefinitionRequestBody extends SpeakeasyBase {
+    /**
+     * The name of the definition.
+     */
+    name?: string;
 }
-export declare class UpdateConnectorDefinitionHeaders extends SpeakeasyBase {
+export declare class UpdateConnectorDefinitionRequest extends SpeakeasyBase {
+    /**
+     * The ID of the connector definition.
+     */
+    connectorDefinitionId: string;
+    requestBody: UpdateConnectorDefinitionRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,17 +20,16 @@ export declare class UpdateConnectorDefinitionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class UpdateConnectorDefinitionRequestBody extends SpeakeasyBase {
-    name?: string;
-}
-export declare class UpdateConnectorDefinitionRequest extends SpeakeasyBase {
-    pathParams: UpdateConnectorDefinitionPathParams;
-    headers: UpdateConnectorDefinitionHeaders;
-    request: UpdateConnectorDefinitionRequestBody;
-}
 export declare class UpdateConnectorDefinitionResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     updateConnectorDefinitionResponse?: Record<string, any>;
 }

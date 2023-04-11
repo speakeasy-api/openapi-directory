@@ -1,12 +1,30 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-import { Security } from "./models/shared";
-export declare const ServerList: readonly ["http://api.sportsdata.io", "https://api.sportsdata.io", "http://azure-api.sportsdata.io", "https://azure-api.sportsdata.io"];
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
+export declare const ServerList: readonly ["http://azure-api.sportsdata.io/v3/mlb/scores", "https://azure-api.sportsdata.io/v3/mlb/scores"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * The security details required to authenticate the SDK
+     */
+    security?: shared.Security;
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    security?: Security;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * MLB scores API.
+ */
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -14,75 +32,84 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
     /**
-     * areGamesInProgress - Are Games In Progress
+     * Are Games In Progress
      *
+     * @remarks
      * Returns <code>true</code> if there is at least one game being played at the time of the request or <code>false</code> if there are none.
-    **/
+     */
     areGamesInProgress(req: operations.AreGamesInProgressRequest, config?: AxiosRequestConfig): Promise<operations.AreGamesInProgressResponse>;
     /**
-     * currentSeason - Current Season
-    **/
+     * Current Season
+     */
     currentSeason(req: operations.CurrentSeasonRequest, config?: AxiosRequestConfig): Promise<operations.CurrentSeasonResponse>;
     /**
-     * gamesByDate - Games by Date
-    **/
+     * Games by Date
+     */
     gamesByDate(req: operations.GamesByDateRequest, config?: AxiosRequestConfig): Promise<operations.GamesByDateResponse>;
     /**
-     * news - News
-    **/
+     * News
+     */
     news(req: operations.NewsRequest, config?: AxiosRequestConfig): Promise<operations.NewsResponse>;
     /**
-     * newsByDate - News by Date
-    **/
+     * News by Date
+     */
     newsByDate(req: operations.NewsByDateRequest, config?: AxiosRequestConfig): Promise<operations.NewsByDateResponse>;
     /**
-     * newsByPlayer - News by Player
-    **/
+     * News by Player
+     */
     newsByPlayer(req: operations.NewsByPlayerRequest, config?: AxiosRequestConfig): Promise<operations.NewsByPlayerResponse>;
     /**
-     * playerDetailsByActive - Player Details by Active
-    **/
+     * Player Details by Active
+     */
     playerDetailsByActive(req: operations.PlayerDetailsByActiveRequest, config?: AxiosRequestConfig): Promise<operations.PlayerDetailsByActiveResponse>;
     /**
-     * playerDetailsByFreeAgents - Player Details by Free Agents
-    **/
+     * Player Details by Free Agents
+     */
     playerDetailsByFreeAgents(req: operations.PlayerDetailsByFreeAgentsRequest, config?: AxiosRequestConfig): Promise<operations.PlayerDetailsByFreeAgentsResponse>;
     /**
-     * playerDetailsByPlayer - Player Details by Player
-    **/
+     * Player Details by Player
+     */
     playerDetailsByPlayer(req: operations.PlayerDetailsByPlayerRequest, config?: AxiosRequestConfig): Promise<operations.PlayerDetailsByPlayerResponse>;
     /**
-     * playersByTeam - Players by Team
-    **/
+     * Players by Team
+     */
     playersByTeam(req: operations.PlayersByTeamRequest, config?: AxiosRequestConfig): Promise<operations.PlayersByTeamResponse>;
     /**
-     * schedules - Schedules
-    **/
+     * Schedules
+     */
     schedules(req: operations.SchedulesRequest, config?: AxiosRequestConfig): Promise<operations.SchedulesResponse>;
     /**
-     * stadiums - Stadiums
-    **/
+     * Stadiums
+     */
     stadiums(req: operations.StadiumsRequest, config?: AxiosRequestConfig): Promise<operations.StadiumsResponse>;
     /**
-     * standings - Standings
-    **/
+     * Standings
+     */
     standings(req: operations.StandingsRequest, config?: AxiosRequestConfig): Promise<operations.StandingsResponse>;
     /**
-     * teamGameStatsByDate - Team Game Stats by Date
-    **/
+     * Team Game Logs By Season
+     *
+     * @remarks
+     * Game by game log of total team statistics.
+     */
+    teamGameLogsBySeason(req: operations.TeamGameLogsBySeasonRequest, config?: AxiosRequestConfig): Promise<operations.TeamGameLogsBySeasonResponse>;
+    /**
+     * Team Game Stats by Date
+     */
     teamGameStatsByDate(req: operations.TeamGameStatsByDateRequest, config?: AxiosRequestConfig): Promise<operations.TeamGameStatsByDateResponse>;
     /**
-     * teamSeasonStats - Team Season Stats
-    **/
+     * Team Season Stats
+     */
     teamSeasonStats(req: operations.TeamSeasonStatsRequest, config?: AxiosRequestConfig): Promise<operations.TeamSeasonStatsResponse>;
     /**
-     * teamsActive - Teams (Active)
-    **/
+     * Teams (Active)
+     */
     teamsActive(req: operations.TeamsActiveRequest, config?: AxiosRequestConfig): Promise<operations.TeamsActiveResponse>;
     /**
-     * teamsAll - Teams (All)
-    **/
+     * Teams (All)
+     */
     teamsAll(req: operations.TeamsAllRequest, config?: AxiosRequestConfig): Promise<operations.TeamsAllResponse>;
 }

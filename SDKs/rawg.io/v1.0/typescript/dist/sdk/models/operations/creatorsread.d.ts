@@ -1,13 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreatorsReadPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class CreatorsReadRequest extends SpeakeasyBase {
-    pathParams: CreatorsReadPathParams;
+    id: string;
 }
 export declare class CreatorsReadResponse extends SpeakeasyBase {
     contentType: string;
     personSingle?: shared.PersonSingle;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

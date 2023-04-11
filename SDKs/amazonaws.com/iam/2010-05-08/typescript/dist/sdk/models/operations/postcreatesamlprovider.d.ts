@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateSamlProviderActionEnum {
-    CreateSamlProvider = "CreateSAMLProvider"
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateSAMLProviderActionEnum {
+    CreateSAMLProvider = "CreateSAMLProvider"
 }
-export declare enum PostCreateSamlProviderVersionEnum {
+export declare enum POSTCreateSAMLProviderVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostCreateSamlProviderQueryParams extends SpeakeasyBase {
-    action: PostCreateSamlProviderActionEnum;
-    version: PostCreateSamlProviderVersionEnum;
-}
-export declare class PostCreateSamlProviderHeaders extends SpeakeasyBase {
+export declare class POSTCreateSAMLProviderRequest extends SpeakeasyBase {
+    action: POSTCreateSAMLProviderActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateSAMLProviderVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateSamlProviderHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateSamlProviderRequest extends SpeakeasyBase {
-    queryParams: PostCreateSamlProviderQueryParams;
-    headers: PostCreateSamlProviderHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateSamlProviderResponse extends SpeakeasyBase {
+export declare class POSTCreateSAMLProviderResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

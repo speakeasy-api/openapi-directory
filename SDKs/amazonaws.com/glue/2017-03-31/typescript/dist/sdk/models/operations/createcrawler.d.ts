@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum CreateCrawlerXAmzTargetEnum {
-    AwsGlueCreateCrawler = "AWSGlue.CreateCrawler"
+    AWSGlueCreateCrawler = "AWSGlue.CreateCrawler"
 }
-export declare class CreateCrawlerHeaders extends SpeakeasyBase {
+export declare class CreateCrawlerRequest extends SpeakeasyBase {
+    createCrawlerRequest: shared.CreateCrawlerRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class CreateCrawlerHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: CreateCrawlerXAmzTargetEnum;
 }
-export declare class CreateCrawlerRequest extends SpeakeasyBase {
-    headers: CreateCrawlerHeaders;
-    request: shared.CreateCrawlerRequest;
-}
 export declare class CreateCrawlerResponse extends SpeakeasyBase {
+    /**
+     * AlreadyExistsException
+     */
     alreadyExistsException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     createCrawlerResponse?: Record<string, any>;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
+    /**
+     * ResourceNumberLimitExceededException
+     */
     resourceNumberLimitExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

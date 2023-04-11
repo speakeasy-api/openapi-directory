@@ -1,6 +1,7 @@
 export * from "./metastoreprojectslocationsfederationscreate";
 export * from "./metastoreprojectslocationsfederationslist";
 export * from "./metastoreprojectslocationslist";
+export * from "./metastoreprojectslocationsoperationscancel";
 export * from "./metastoreprojectslocationsoperationslist";
 export * from "./metastoreprojectslocationsservicesalterlocation";
 export * from "./metastoreprojectslocationsservicesbackupscreate";

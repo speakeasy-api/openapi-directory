@@ -1,19 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class ExportSubmissionsReviewsAsExcelPathParams extends SpeakeasyBase {
-    assignment: string;
-    class: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ExportSubmissionsReviewsAsExcelSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class ExportSubmissionsReviewsAsExcelRequest extends SpeakeasyBase {
-    pathParams: ExportSubmissionsReviewsAsExcelPathParams;
-    security: ExportSubmissionsReviewsAsExcelSecurity;
+    /**
+     * Unique identifier of the assignment
+     */
+    assignment: string;
+    /**
+     * Unique identifier of the class
+     */
+    class: string;
 }
 export declare class ExportSubmissionsReviewsAsExcelResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * List of submissions
+     */
     exportSubmissionsReviewsAsExcel200ApplicationVndOpenxmlformatsOfficedocumentSpreadsheetmlSheetBinaryString?: Uint8Array;
 }

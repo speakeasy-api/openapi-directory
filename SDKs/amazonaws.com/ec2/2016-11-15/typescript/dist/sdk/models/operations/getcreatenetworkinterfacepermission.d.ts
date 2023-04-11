@@ -1,24 +1,41 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetCreateNetworkInterfacePermissionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETCreateNetworkInterfacePermissionActionEnum {
     CreateNetworkInterfacePermission = "CreateNetworkInterfacePermission"
 }
-export declare enum GetCreateNetworkInterfacePermissionPermissionEnum {
+/**
+ * The type of permission to grant.
+ */
+export declare enum GETCreateNetworkInterfacePermissionPermissionEnum {
     InstanceAttach = "INSTANCE-ATTACH",
     EipAssociate = "EIP-ASSOCIATE"
 }
-export declare enum GetCreateNetworkInterfacePermissionVersionEnum {
+export declare enum GETCreateNetworkInterfacePermissionVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetCreateNetworkInterfacePermissionQueryParams extends SpeakeasyBase {
-    action: GetCreateNetworkInterfacePermissionActionEnum;
+export declare class GETCreateNetworkInterfacePermissionRequest extends SpeakeasyBase {
+    action: GETCreateNetworkInterfacePermissionActionEnum;
+    /**
+     * The Amazon Web Services account ID.
+     */
     awsAccountId?: string;
+    /**
+     * The Amazon Web Service. Currently not supported.
+     */
     awsService?: string;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
+    /**
+     * The ID of the network interface.
+     */
     networkInterfaceId: string;
-    permission: GetCreateNetworkInterfacePermissionPermissionEnum;
-    version: GetCreateNetworkInterfacePermissionVersionEnum;
-}
-export declare class GetCreateNetworkInterfacePermissionHeaders extends SpeakeasyBase {
+    /**
+     * The type of permission to grant.
+     */
+    permission: GETCreateNetworkInterfacePermissionPermissionEnum;
+    version: GETCreateNetworkInterfacePermissionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -27,12 +44,9 @@ export declare class GetCreateNetworkInterfacePermissionHeaders extends Speakeas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetCreateNetworkInterfacePermissionRequest extends SpeakeasyBase {
-    queryParams: GetCreateNetworkInterfacePermissionQueryParams;
-    headers: GetCreateNetworkInterfacePermissionHeaders;
-}
-export declare class GetCreateNetworkInterfacePermissionResponse extends SpeakeasyBase {
+export declare class GETCreateNetworkInterfacePermissionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

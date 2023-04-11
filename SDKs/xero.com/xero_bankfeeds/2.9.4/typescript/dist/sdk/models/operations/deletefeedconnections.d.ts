@@ -1,18 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteFeedConnectionsHeaders extends SpeakeasyBase {
-    xeroTenantId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteFeedConnectionsSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class DeleteFeedConnectionsRequest extends SpeakeasyBase {
-    headers: DeleteFeedConnectionsHeaders;
-    request: shared.FeedConnections;
-    security: DeleteFeedConnectionsSecurity;
+    /**
+     * Feed Connections array object in the body
+     */
+    feedConnections: shared.FeedConnections;
+    /**
+     * Xero identifier for Tenant
+     */
+    xeroTenantId: string;
 }
 export declare class DeleteFeedConnectionsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success response for deleted feed connection
+     */
     feedConnections?: shared.FeedConnections;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

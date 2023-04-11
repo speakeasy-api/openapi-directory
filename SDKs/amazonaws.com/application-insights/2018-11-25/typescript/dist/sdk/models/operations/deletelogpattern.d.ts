@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteLogPatternXAmzTargetEnum {
     Ec2WindowsBarleyServiceDeleteLogPattern = "EC2WindowsBarleyService.DeleteLogPattern"
 }
-export declare class DeleteLogPatternHeaders extends SpeakeasyBase {
+export declare class DeleteLogPatternRequest extends SpeakeasyBase {
+    deleteLogPatternRequest: shared.DeleteLogPatternRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class DeleteLogPatternHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteLogPatternXAmzTargetEnum;
 }
-export declare class DeleteLogPatternRequest extends SpeakeasyBase {
-    headers: DeleteLogPatternHeaders;
-    request: shared.DeleteLogPatternRequest;
-}
 export declare class DeleteLogPatternResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteLogPatternResponse?: Record<string, any>;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

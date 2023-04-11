@@ -1,4 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
 export declare enum GetAddonEnum {
     Continent = "continent",
     Country = "country",
@@ -8,10 +9,16 @@ export declare enum GetAddonEnum {
     CountryGroupings = "country_groupings",
     TimeZoneInfo = "time_zone_info"
 }
+/**
+ * Format of the response message.
+ */
 export declare enum GetFormatEnum {
     Json = "json",
     Xml = "xml"
 }
+/**
+ * Translation information. The translation only applicable for continent, country, region and city name for the addon package.
+ */
 export declare enum GetLangEnum {
     Ar = "ar",
     Cs = "cs",
@@ -36,6 +43,9 @@ export declare enum GetLangEnum {
     ZhCn = "zh-cn",
     ZhTw = "zh-tw"
 }
+/**
+ * Web service package of different granularity of return information.
+ */
 export declare enum GetPackageEnum {
     Ws1 = "WS1",
     Ws2 = "WS2",
@@ -63,19 +73,38 @@ export declare enum GetPackageEnum {
     Ws24 = "WS24",
     Ws25 = "WS25"
 }
-export declare class GetQueryParams extends SpeakeasyBase {
-    addon?: GetAddonEnum[];
-    format?: GetFormatEnum;
-    ip: string;
-    key: string;
-    lang?: GetLangEnum;
-    package?: GetPackageEnum;
-}
 export declare class GetRequest extends SpeakeasyBase {
-    queryParams: GetQueryParams;
+    /**
+     * Extra information in addition to the above selected package.
+     */
+    addon?: GetAddonEnum[];
+    /**
+     * Format of the response message.
+     */
+    format?: GetFormatEnum;
+    /**
+     * IP address (IPv4 or IPv6) for reverse IP location lookup purpose. If not present, the server IP address will be used for the location lookup.
+     */
+    ip: string;
+    /**
+     * API Key. Please sign up free trial license key at ip2location.com
+     */
+    key: string;
+    /**
+     * Translation information. The translation only applicable for continent, country, region and city name for the addon package.
+     */
+    lang?: GetLangEnum;
+    /**
+     * Web service package of different granularity of return information.
+     */
+    package?: GetPackageEnum;
 }
 export declare class GetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Get response from IP lookup
+     */
     get200ApplicationJSONString?: string;
 }

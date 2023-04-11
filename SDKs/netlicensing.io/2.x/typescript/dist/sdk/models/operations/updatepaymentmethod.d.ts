@@ -1,23 +1,34 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdatePaymentMethodPathParams extends SpeakeasyBase {
-    paymentMethodNumber: string;
+import { AxiosResponse } from "axios";
+export declare class UpdatePaymentMethodSecurity extends SpeakeasyBase {
+    password: string;
+    username: string;
 }
 export declare class UpdatePaymentMethodRequestBody extends SpeakeasyBase {
+    /**
+     * If set to 'false', the Payment Method is disabled.
+     */
     active?: boolean;
+    /**
+     * The e-mail address of the PayPal account for which you are making the API calls.
+     */
     paypalSubject?: string;
 }
-export declare class UpdatePaymentMethodSecurity extends SpeakeasyBase {
-    basicAuth: shared.SchemeBasicAuth;
-}
 export declare class UpdatePaymentMethodRequest extends SpeakeasyBase {
-    pathParams: UpdatePaymentMethodPathParams;
-    request?: UpdatePaymentMethodRequestBody;
-    security: UpdatePaymentMethodSecurity;
+    requestBody?: UpdatePaymentMethodRequestBody;
+    /**
+     * Payment method number
+     */
+    paymentMethodNumber: string;
 }
 export declare class UpdatePaymentMethodResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    netlicensing?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful request
+     */
+    netlicensing?: shared.Netlicensing;
 }

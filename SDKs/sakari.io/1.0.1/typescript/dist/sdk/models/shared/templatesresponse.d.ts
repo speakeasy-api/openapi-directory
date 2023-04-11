@@ -9,6 +9,9 @@ export declare class TemplatesResponsePagination extends SpeakeasyBase {
     offset?: number;
     totalCount?: number;
 }
+/**
+ * successful operation
+ */
 export declare class TemplatesResponse extends SpeakeasyBase {
     data?: Template[];
     error?: TemplatesResponseError;

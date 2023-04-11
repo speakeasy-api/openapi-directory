@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostRebalanceSlotsInGlobalReplicationGroupActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTRebalanceSlotsInGlobalReplicationGroupActionEnum {
     RebalanceSlotsInGlobalReplicationGroup = "RebalanceSlotsInGlobalReplicationGroup"
 }
-export declare enum PostRebalanceSlotsInGlobalReplicationGroupVersionEnum {
+export declare enum POSTRebalanceSlotsInGlobalReplicationGroupVersionEnum {
     TwoThousandAndFifteen0202 = "2015-02-02"
 }
-export declare class PostRebalanceSlotsInGlobalReplicationGroupQueryParams extends SpeakeasyBase {
-    action: PostRebalanceSlotsInGlobalReplicationGroupActionEnum;
-    version: PostRebalanceSlotsInGlobalReplicationGroupVersionEnum;
-}
-export declare class PostRebalanceSlotsInGlobalReplicationGroupHeaders extends SpeakeasyBase {
+export declare class POSTRebalanceSlotsInGlobalReplicationGroupRequest extends SpeakeasyBase {
+    action: POSTRebalanceSlotsInGlobalReplicationGroupActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTRebalanceSlotsInGlobalReplicationGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostRebalanceSlotsInGlobalReplicationGroupHeaders extends S
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostRebalanceSlotsInGlobalReplicationGroupRequest extends SpeakeasyBase {
-    queryParams: PostRebalanceSlotsInGlobalReplicationGroupQueryParams;
-    headers: PostRebalanceSlotsInGlobalReplicationGroupHeaders;
-    request?: Uint8Array;
-}
-export declare class PostRebalanceSlotsInGlobalReplicationGroupResponse extends SpeakeasyBase {
+export declare class POSTRebalanceSlotsInGlobalReplicationGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

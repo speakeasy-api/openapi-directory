@@ -7,7 +7,10 @@ export declare enum InventoryTypeTargetingInventoryTypesEnum {
 }
 /**
  * Targeting of the inventory types a bid request can originate from.
-**/
+ */
 export declare class InventoryTypeTargeting extends SpeakeasyBase {
+    /**
+     * The list of targeted inventory types for the bid request.
+     */
     inventoryTypes?: InventoryTypeTargetingInventoryTypesEnum[];
 }

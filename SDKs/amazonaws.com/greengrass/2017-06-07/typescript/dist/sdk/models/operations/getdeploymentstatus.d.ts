@@ -1,10 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetDeploymentStatusPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetDeploymentStatusRequest extends SpeakeasyBase {
+    /**
+     * The ID of the deployment.
+     */
     deploymentId: string;
+    /**
+     * The ID of the Greengrass group.
+     */
     groupId: string;
-}
-export declare class GetDeploymentStatusHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,13 +18,16 @@ export declare class GetDeploymentStatusHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeploymentStatusRequest extends SpeakeasyBase {
-    pathParams: GetDeploymentStatusPathParams;
-    headers: GetDeploymentStatusHeaders;
-}
 export declare class GetDeploymentStatusResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getDeploymentStatusResponse?: shared.GetDeploymentStatusResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

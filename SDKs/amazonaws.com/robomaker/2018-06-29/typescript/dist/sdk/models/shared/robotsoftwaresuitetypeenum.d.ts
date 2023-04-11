@@ -1,4 +1,5 @@
 export declare enum RobotSoftwareSuiteTypeEnum {
     Ros = "ROS",
-    Ros2 = "ROS2"
+    Ros2 = "ROS2",
+    General = "General"
 }

@@ -1,13 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CacheNonceGetPathParams extends SpeakeasyBase {
-    nonce: string;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class CacheNonceGetRequest extends SpeakeasyBase {
-    pathParams: CacheNonceGetPathParams;
+    /**
+     * A one-time use token for retieving items in the users cache
+     */
+    nonce: string;
 }
 export declare class CacheNonceGetResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * A cached html subdocument (typically loaded via iframe)
+     */
     loginButton?: string;
     statusCode: number;
-    problemDetail?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * Unauthorized
+     */
+    problemDetail?: shared.ProblemDetail;
 }

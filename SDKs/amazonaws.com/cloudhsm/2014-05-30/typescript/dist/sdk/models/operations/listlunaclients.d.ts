@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum ListLunaClientsXAmzTargetEnum {
     CloudHsmFrontendServiceListLunaClients = "CloudHsmFrontendService.ListLunaClients"
 }
-export declare class ListLunaClientsHeaders extends SpeakeasyBase {
+export declare class ListLunaClientsRequest extends SpeakeasyBase {
+    listLunaClientsRequest: shared.ListLunaClientsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class ListLunaClientsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListLunaClientsXAmzTargetEnum;
 }
-export declare class ListLunaClientsRequest extends SpeakeasyBase {
-    headers: ListLunaClientsHeaders;
-    request: shared.ListLunaClientsRequest;
-}
 export declare class ListLunaClientsResponse extends SpeakeasyBase {
+    /**
+     * CloudHsmInternalException
+     */
     cloudHsmInternalException?: any;
+    /**
+     * CloudHsmServiceException
+     */
     cloudHsmServiceException?: any;
     contentType: string;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * Success
+     */
     listLunaClientsResponse?: shared.ListLunaClientsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

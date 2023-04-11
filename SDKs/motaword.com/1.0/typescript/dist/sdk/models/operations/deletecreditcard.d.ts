@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteCreditCardPathParams extends SpeakeasyBase {
-    cardId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteCreditCardRequest extends SpeakeasyBase {
-    pathParams: DeleteCreditCardPathParams;
+    /**
+     * Credit Card ID
+     */
+    cardId: number;
 }
 export declare class DeleteCreditCardResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * UserNotFound MissingCorporateAccount MissingParameter MissingCreditCard UnauthorizedUser
+     */
     error?: shared.ErrorT;
+    /**
+     * Successful operation
+     */
     operationStatus?: shared.OperationStatus;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

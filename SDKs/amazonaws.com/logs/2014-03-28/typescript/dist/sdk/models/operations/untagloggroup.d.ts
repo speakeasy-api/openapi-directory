@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UntagLogGroupXAmzTargetEnum {
     Logs20140328UntagLogGroup = "Logs_20140328.UntagLogGroup"
 }
-export declare class UntagLogGroupHeaders extends SpeakeasyBase {
+export declare class UntagLogGroupRequest extends SpeakeasyBase {
+    untagLogGroupRequest: shared.UntagLogGroupRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,12 +15,12 @@ export declare class UntagLogGroupHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UntagLogGroupXAmzTargetEnum;
 }
-export declare class UntagLogGroupRequest extends SpeakeasyBase {
-    headers: UntagLogGroupHeaders;
-    request: shared.UntagLogGroupRequest;
-}
 export declare class UntagLogGroupResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

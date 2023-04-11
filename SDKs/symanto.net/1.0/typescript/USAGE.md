@@ -1,28 +1,37 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CommunicationRequest, CommunicationResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CommunicationRequest,
+  CommunicationResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    apiKeyHeader: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: CommunicationRequest = {
-  queryParams: {
-    all: false,
+    apiKeyHeader: "YOUR_API_KEY_HERE",
   },
-  request: [
+});
+
+const req: CommunicationRequest = {
+  requestBody: [
     {
-      id: "culpa",
-      language: "expedita",
-      text: "consequuntur",
+      id: "1",
+      language: "en",
+      text: "I love the service",
+    },
+    {
+      id: "1",
+      language: "en",
+      text: "I love the service",
+    },
+    {
+      id: "1",
+      language: "en",
+      text: "I love the service",
     },
   ],
+  all: false,
 };
 
 sdk.textAnalysis.communication(req).then((res: CommunicationResponse | AxiosError) => {

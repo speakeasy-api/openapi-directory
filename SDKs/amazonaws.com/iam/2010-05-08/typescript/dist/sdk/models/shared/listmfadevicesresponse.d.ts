@@ -1,10 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { MfaDevice } from "./mfadevice";
+import { MFADevice } from "./mfadevice";
 /**
  * Contains the response to a successful <a>ListMFADevices</a> request.
-**/
-export declare class ListMfaDevicesResponse extends SpeakeasyBase {
+ */
+export declare class ListMFADevicesResponse extends SpeakeasyBase {
     isTruncated?: boolean;
-    mfaDevices: MfaDevice[];
+    mfaDevices: MFADevice[];
     marker?: string;
 }

@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DbSnapshotList extends SpeakeasyBase {
+export declare class DBSnapshotList extends SpeakeasyBase {
     allocatedStorage?: number;
     availabilityZone?: string;
     dbInstanceIdentifier?: string;

@@ -1,34 +1,36 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AssignInstanceRequest, AssignInstanceResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  AssignInstanceRequest,
+  AssignInstanceResponse,
+  AssignInstanceXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: AssignInstanceRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "OpsWorks_20130218.AssignInstance",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
-    instanceId: "fugit",
+});
+
+const req: AssignInstanceRequest = {
+  assignInstanceRequest: {
+    instanceId: "corrupti",
     layerIds: [
-      "nihil",
+      "distinctio",
+      "quibusdam",
+      "unde",
     ],
   },
+  xAmzAlgorithm: "nulla",
+  xAmzContentSha256: "corrupti",
+  xAmzCredential: "illum",
+  xAmzDate: "vel",
+  xAmzSecurityToken: "error",
+  xAmzSignature: "deserunt",
+  xAmzSignedHeaders: "suscipit",
+  xAmzTarget: AssignInstanceXAmzTargetEnum.OpsWorks20130218AssignInstance,
 };
 
 sdk.assignInstance(req).then((res: AssignInstanceResponse | AxiosError) => {

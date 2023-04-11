@@ -1,45 +1,41 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { LanguageDocumentsAnalyzeEntitiesRequest, LanguageDocumentsAnalyzeEntitiesResponse } from "openapi/src/sdk/models/operations";
+import {
+  LanguageDocumentsAnalyzeEntitiesRequest,
+  LanguageDocumentsAnalyzeEntitiesResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  AnalyzeEntitiesRequestEncodingTypeEnum,
+  DocumentTypeEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: LanguageDocumentsAnalyzeEntitiesRequest = {
-  security: {
-    option1: {
-      oauth2: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-      oauth2c: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-    },
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "voluptas",
-    alt: "media",
-    callback: "expedita",
-    fields: "consequuntur",
-    key: "dolor",
-    oauthToken: "expedita",
-    prettyPrint: true,
-    quotaUser: "fugit",
-    uploadType: "et",
-    uploadProtocol: "nihil",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  analyzeEntitiesRequest: {
     document: {
-      content: "rerum",
-      gcsContentUri: "dicta",
-      language: "debitis",
-      type: "TYPE_UNSPECIFIED",
+      content: "provident",
+      gcsContentUri: "distinctio",
+      language: "quibusdam",
+      type: DocumentTypeEnum.PlainText,
     },
-    encodingType: "UTF16",
+    encodingType: AnalyzeEntitiesRequestEncodingTypeEnum.Utf32,
   },
+  accessToken: "corrupti",
+  alt: AltEnum.Proto,
+  callback: "vel",
+  fields: "error",
+  key: "deserunt",
+  oauthToken: "suscipit",
+  prettyPrint: false,
+  quotaUser: "iure",
+  uploadType: "magnam",
+  uploadProtocol: "debitis",
 };
 
 sdk.documents.languageDocumentsAnalyzeEntities(req).then((res: LanguageDocumentsAnalyzeEntitiesResponse | AxiosError) => {

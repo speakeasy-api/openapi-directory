@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Media {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +9,7 @@ export declare class Media {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * youtubereportingMediaDownload - Method for media download. Download is supported on the URI `/v1/media/{+name}?alt=media`.
-    **/
-    youtubereportingMediaDownload(req: operations.YoutubereportingMediaDownloadRequest, config?: AxiosRequestConfig): Promise<operations.YoutubereportingMediaDownloadResponse>;
+     * Method for media download. Download is supported on the URI `/v1/media/{+name}?alt=media`.
+     */
+    youtubereportingMediaDownload(req: operations.YoutubereportingMediaDownloadRequest, security: operations.YoutubereportingMediaDownloadSecurity, config?: AxiosRequestConfig): Promise<operations.YoutubereportingMediaDownloadResponse>;
 }

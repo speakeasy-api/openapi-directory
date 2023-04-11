@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetArtifactMetaDataPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetArtifactMetaDataRequest extends SpeakeasyBase {
+    /**
+     * The artifact ID.  Can be a string (client-provided) or integer (server-generated) representing the unique artifact identifier.
+     */
     artifactId: string;
 }
-export declare class GetArtifactMetaDataRequest extends SpeakeasyBase {
-    pathParams: GetArtifactMetaDataPathParams;
-}
 export declare class GetArtifactMetaDataResponse extends SpeakeasyBase {
+    /**
+     * The artifact's metadata.
+     */
     artifactMetaData?: shared.ArtifactMetaData;
     contentType: string;
+    /**
+     * Common response for all operations that can return a `404` error.
+     */
     error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

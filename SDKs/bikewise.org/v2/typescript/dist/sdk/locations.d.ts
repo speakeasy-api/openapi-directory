@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * GeoJSON response for matching incidents
+ */
 export declare class Locations {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +12,9 @@ export declare class Locations {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getVersionLocationsFormat - Unpaginated geojson response
+     * Unpaginated geojson response
      *
+     * @remarks
      * <p><strong>This endpoint behaves exactly like</strong> <code>incidents</code>, but returns a valid geojson <code>FeatureCollection</code> that looks like this:</p>
      *
      * <pre><code>{
@@ -35,15 +39,16 @@ export declare class Locations {
      *
      * <p><strong>Go forth and make maps!</strong></p>
      *
-    **/
-    getVersionLocationsFormat(req: operations.GetVersionLocationsFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetVersionLocationsFormatResponse>;
+     */
+    getVersionLocationsFormat(req: operations.GETVersionLocationsFormatRequest, config?: AxiosRequestConfig): Promise<operations.GETVersionLocationsFormatResponse>;
     /**
-     * getVersionLocationsMarkersFormat - Unpaginated geojson response with simplestyled markers
+     * Unpaginated geojson response with simplestyled markers
      *
+     * @remarks
      * <p>This behaves exactly like the root <code>locations</code> endpoint, but returns <a href="https://github.com/mapbox/simplestyle-spec">simplestyled markers</a> (<a href="https://www.mapbox.com/guides/markers/#simple-style">mapbox styled markers</a>)</p>
      *
      * <p><strong>Go forth and make maps!</strong></p>
      *
-    **/
-    getVersionLocationsMarkersFormat(req: operations.GetVersionLocationsMarkersFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetVersionLocationsMarkersFormatResponse>;
+     */
+    getVersionLocationsMarkersFormat(req: operations.GETVersionLocationsMarkersFormatRequest, config?: AxiosRequestConfig): Promise<operations.GETVersionLocationsMarkersFormatResponse>;
 }

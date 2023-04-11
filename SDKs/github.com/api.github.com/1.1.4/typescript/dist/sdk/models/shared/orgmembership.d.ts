@@ -1,41 +1,45 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { NullableSimpleUser } from "./nullablesimpleuser";
 import { OrganizationSimple } from "./organizationsimple";
 export declare class OrgMembershipPermissions extends SpeakeasyBase {
     canCreateRepository: boolean;
 }
 /**
- * Simple User
-**/
-export declare class OrgMembershipSimpleUser extends SpeakeasyBase {
-    avatarUrl: string;
-    eventsUrl: string;
-    followersUrl: string;
-    followingUrl: string;
-    gistsUrl: string;
-    gravatarId: string;
-    htmlUrl: string;
-    id: number;
-    login: string;
-    nodeId: string;
-    organizationsUrl: string;
-    receivedEventsUrl: string;
-    reposUrl: string;
-    siteAdmin: boolean;
-    starredAt?: string;
-    starredUrl: string;
-    subscriptionsUrl: string;
-    type: string;
-    url: string;
+ * The user's membership type in the organization.
+ */
+export declare enum OrgMembershipRoleEnum {
+    Admin = "admin",
+    Member = "member",
+    BillingManager = "billing_manager"
+}
+/**
+ * The state of the member in the organization. The `pending` state indicates the user has not yet accepted an invitation.
+ */
+export declare enum OrgMembershipStateEnum {
+    Active = "active",
+    Pending = "pending"
 }
 /**
  * Org Membership
-**/
+ */
 export declare class OrgMembership extends SpeakeasyBase {
+    /**
+     * A GitHub organization.
+     */
     organization: OrganizationSimple;
     organizationUrl: string;
     permissions?: OrgMembershipPermissions;
-    role: string;
-    state: string;
+    /**
+     * The user's membership type in the organization.
+     */
+    role: OrgMembershipRoleEnum;
+    /**
+     * The state of the member in the organization. The `pending` state indicates the user has not yet accepted an invitation.
+     */
+    state: OrgMembershipStateEnum;
     url: string;
-    user: OrgMembershipSimpleUser;
+    /**
+     * A GitHub user.
+     */
+    user: NullableSimpleUser;
 }

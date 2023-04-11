@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SetOiddirPathParams extends SpeakeasyBase {
-    agentNum: number;
-    oiddir: string;
-}
+import { AxiosResponse } from "axios";
 export declare class SetOiddirRequest extends SpeakeasyBase {
-    pathParams: SetOiddirPathParams;
+    /**
+     * Agent to set the directory path
+     */
+    agentNum: number;
+    /**
+     * Directory path for the agent
+     */
+    oiddir: string;
 }
 export declare class SetOiddirResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     setOiddir200ApplicationJSONString?: string;
 }

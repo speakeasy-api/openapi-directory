@@ -1,5 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbInstance } from "./dbinstance";
-export declare class ModifyDbInstanceResult extends SpeakeasyBase {
-    dbInstance?: DbInstance;
+import { DBInstance } from "./dbinstance";
+/**
+ * Success
+ */
+export declare class ModifyDBInstanceResult extends SpeakeasyBase {
+    /**
+     * Detailed information about an instance.
+     */
+    dbInstance?: DBInstance;
 }

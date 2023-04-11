@@ -1,14 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class OrgsGetMembershipForAuthenticatedUserPathParams extends SpeakeasyBase {
-    org: string;
-}
+import { AxiosResponse } from "axios";
 export declare class OrgsGetMembershipForAuthenticatedUserRequest extends SpeakeasyBase {
-    pathParams: OrgsGetMembershipForAuthenticatedUserPathParams;
+    org: string;
 }
 export declare class OrgsGetMembershipForAuthenticatedUserResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Forbidden
+     */
     basicError?: shared.BasicError;
+    /**
+     * Response
+     */
     orgMembership?: shared.OrgMembership;
 }

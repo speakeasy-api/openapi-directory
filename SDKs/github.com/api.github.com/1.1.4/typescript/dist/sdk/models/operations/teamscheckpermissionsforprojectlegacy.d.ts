@@ -1,19 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class TeamsCheckPermissionsForProjectLegacyPathParams extends SpeakeasyBase {
-    projectId: number;
-    teamId: number;
-}
-export declare class TeamsCheckPermissionsForProjectLegacy415ApplicationJson extends SpeakeasyBase {
-    documentationUrl: string;
-    message: string;
-}
+import { AxiosResponse } from "axios";
 export declare class TeamsCheckPermissionsForProjectLegacyRequest extends SpeakeasyBase {
-    pathParams: TeamsCheckPermissionsForProjectLegacyPathParams;
+    /**
+     * The unique identifier of the project.
+     */
+    projectId: number;
+    /**
+     * The unique identifier of the team.
+     */
+    teamId: number;
 }
 export declare class TeamsCheckPermissionsForProjectLegacyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     teamProject?: shared.TeamProject;
-    teamsCheckPermissionsForProjectLegacy415ApplicationJSONObject?: TeamsCheckPermissionsForProjectLegacy415ApplicationJson;
 }

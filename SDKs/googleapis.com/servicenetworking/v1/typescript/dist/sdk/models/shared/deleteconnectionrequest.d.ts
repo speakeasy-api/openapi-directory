@@ -1,0 +1,10 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Request to delete a private service access connection. The call will fail if there are any managed service instances using this connection.
+ */
+export declare class DeleteConnectionRequest extends SpeakeasyBase {
+    /**
+     * Required. The network that the consumer is using to connect with services. Must be in the form of projects/{project}/global/networks/{network} {project} is a project number, as in '12345' {network} is a network name.
+     */
+    consumerNetwork?: string;
+}

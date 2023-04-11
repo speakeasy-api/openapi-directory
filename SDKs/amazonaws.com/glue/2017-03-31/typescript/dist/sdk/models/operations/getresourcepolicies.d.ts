@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetResourcePoliciesQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum GetResourcePoliciesXAmzTargetEnum {
-    AwsGlueGetResourcePolicies = "AWSGlue.GetResourcePolicies"
+    AWSGlueGetResourcePolicies = "AWSGlue.GetResourcePolicies"
 }
-export declare class GetResourcePoliciesHeaders extends SpeakeasyBase {
+export declare class GetResourcePoliciesRequest extends SpeakeasyBase {
+    getResourcePoliciesRequest: shared.GetResourcePoliciesRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,17 +23,28 @@ export declare class GetResourcePoliciesHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetResourcePoliciesXAmzTargetEnum;
 }
-export declare class GetResourcePoliciesRequest extends SpeakeasyBase {
-    queryParams: GetResourcePoliciesQueryParams;
-    headers: GetResourcePoliciesHeaders;
-    request: shared.GetResourcePoliciesRequest;
-}
 export declare class GetResourcePoliciesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getResourcePoliciesResponse?: shared.GetResourcePoliciesResponse;
+    /**
+     * GlueEncryptionException
+     */
     glueEncryptionException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

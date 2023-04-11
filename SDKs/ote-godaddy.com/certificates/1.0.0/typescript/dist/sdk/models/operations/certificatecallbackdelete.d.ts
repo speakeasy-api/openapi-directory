@@ -1,12 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CertificateCallbackDeletePathParams extends SpeakeasyBase {
-    certificateId: string;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class CertificateCallbackDeleteRequest extends SpeakeasyBase {
-    pathParams: CertificateCallbackDeletePathParams;
+    /**
+     * Certificate id to unregister callback
+     */
+    certificateId: string;
 }
 export declare class CertificateCallbackDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    error?: any;
+    /**
+     * Request was malformed
+     */
+    error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

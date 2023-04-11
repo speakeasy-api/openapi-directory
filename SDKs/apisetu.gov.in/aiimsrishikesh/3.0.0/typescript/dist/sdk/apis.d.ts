@@ -1,6 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class ApIs {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+export declare class APIs {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,9 +9,10 @@ export declare class ApIs {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * dgcer - Degree/ Diploma Certificate
+     * Degree/ Diploma Certificate
      *
+     * @remarks
      * API to verify Degree/ Diploma Certificate.
-    **/
-    dgcer(req: operations.DgcerRequest, config?: AxiosRequestConfig): Promise<operations.DgcerResponse>;
+     */
+    dgcer(req: operations.DgcerRequestBody, security: operations.DgcerSecurity, config?: AxiosRequestConfig): Promise<operations.DgcerResponse>;
 }

@@ -2,11 +2,11 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { CapacityProviderStrategyItem } from "./capacityproviderstrategyitem";
 import { LaunchTypeEnum } from "./launchtypeenum";
 import { NetworkConfiguration } from "./networkconfiguration";
-import { TaskOverride } from "./taskoverride";
 import { PlacementConstraint } from "./placementconstraint";
 import { PlacementStrategy } from "./placementstrategy";
 import { PropagateTagsEnum } from "./propagatetagsenum";
 import { Tag } from "./tag";
+import { TaskOverride } from "./taskoverride";
 export declare class RunTaskRequest extends SpeakeasyBase {
     capacityProviderStrategy?: CapacityProviderStrategyItem[];
     cluster?: string;

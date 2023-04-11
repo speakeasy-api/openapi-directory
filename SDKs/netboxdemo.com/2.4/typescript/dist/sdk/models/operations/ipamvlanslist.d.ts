@@ -1,11 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class IpamVlansListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class IpamVlansListRequest extends SpeakeasyBase {
     group?: string;
     groupId?: string;
+    /**
+     * Multiple values may be separated by commas.
+     */
     idIn?: string;
+    /**
+     * Number of results to return per page.
+     */
     limit?: number;
     name?: string;
+    /**
+     * The initial index from which to return the results.
+     */
     offset?: number;
     q?: string;
     role?: string;
@@ -18,17 +28,15 @@ export declare class IpamVlansListQueryParams extends SpeakeasyBase {
     tenantId?: string;
     vid?: number;
 }
-export declare class IpamVlansList200ApplicationJson extends SpeakeasyBase {
+export declare class IpamVlansList200ApplicationJSON extends SpeakeasyBase {
     count: number;
     next?: string;
     previous?: string;
     results: shared.Vlan[];
 }
-export declare class IpamVlansListRequest extends SpeakeasyBase {
-    queryParams: IpamVlansListQueryParams;
-}
 export declare class IpamVlansListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    ipamVlansList200ApplicationJSONObject?: IpamVlansList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    ipamVlansList200ApplicationJSONObject?: IpamVlansList200ApplicationJSON;
 }

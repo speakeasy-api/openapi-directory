@@ -3,7 +3,7 @@ import { AlarmTypeEnum } from "./alarmtypeenum";
 import { HistoryItemTypeEnum } from "./historyitemtypeenum";
 /**
  * Represents the history of a specific alarm.
-**/
+ */
 export declare class AlarmHistoryItem extends SpeakeasyBase {
     alarmName?: string;
     alarmType?: AlarmTypeEnum;

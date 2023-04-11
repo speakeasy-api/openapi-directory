@@ -1,17 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class JoinGroupAlt1PathParams extends SpeakeasyBase {
-    groupId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class JoinGroupAlt1Security extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
+    oauth2: string;
 }
 export declare class JoinGroupAlt1Request extends SpeakeasyBase {
-    pathParams: JoinGroupAlt1PathParams;
-    security: JoinGroupAlt1Security;
+    /**
+     * The ID of the group.
+     */
+    groupId: number;
 }
 export declare class JoinGroupAlt1Response extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * * The authenticated user can't join groups.
+     *
+     * @remarks
+     * * The group prohibits the authenticated user from joining, either because the group is not public or because the group's privacy setting is `members`.
+     */
     legacyError?: shared.LegacyError;
 }

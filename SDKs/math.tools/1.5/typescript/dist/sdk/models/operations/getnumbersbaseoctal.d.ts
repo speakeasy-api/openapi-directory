@@ -1,17 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetNumbersBaseOctalQueryParams extends SpeakeasyBase {
-    from?: number;
-    number: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetNumbersBaseOctalSecurity extends SpeakeasyBase {
-    xMathtoolsApiSecret: shared.SchemeXMathtoolsApiSecret;
+    xMathtoolsApiSecret: string;
 }
 export declare class GetNumbersBaseOctalRequest extends SpeakeasyBase {
-    queryParams: GetNumbersBaseOctalQueryParams;
-    security: GetNumbersBaseOctalSecurity;
+    /**
+     * Base of the supplied number (Optional base 10 assumed by default)
+     */
+    from?: number;
+    /**
+     * Number to convert to octal
+     */
+    number: number;
 }
 export declare class GetNumbersBaseOctalResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

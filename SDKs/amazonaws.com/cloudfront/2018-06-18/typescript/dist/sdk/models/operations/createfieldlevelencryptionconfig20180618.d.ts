@@ -1,5 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CreateFieldLevelEncryptionConfig20180618Headers extends SpeakeasyBase {
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+/**
+ * A complex data type that includes the profile configurations specified for field-level encryption.
+ */
+export declare class CreateFieldLevelEncryptionConfig20180618RequestBodyFieldLevelEncryptionConfig extends SpeakeasyBase {
+    callerReference?: string;
+    comment?: string;
+    contentTypeProfileConfig?: shared.ContentTypeProfileConfig;
+    queryArgProfileConfig?: shared.QueryArgProfileConfig;
+}
+export declare class CreateFieldLevelEncryptionConfig20180618RequestBody extends SpeakeasyBase {
+    /**
+     * A complex data type that includes the profile configurations specified for field-level encryption.
+     */
+    fieldLevelEncryptionConfig: CreateFieldLevelEncryptionConfig20180618RequestBodyFieldLevelEncryptionConfig;
+}
+export declare class CreateFieldLevelEncryptionConfig20180618Request extends SpeakeasyBase {
+    requestBody: Uint8Array;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -8,12 +26,9 @@ export declare class CreateFieldLevelEncryptionConfig20180618Headers extends Spe
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class CreateFieldLevelEncryptionConfig20180618Request extends SpeakeasyBase {
-    headers: CreateFieldLevelEncryptionConfig20180618Headers;
-    request: Uint8Array;
-}
 export declare class CreateFieldLevelEncryptionConfig20180618Response extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

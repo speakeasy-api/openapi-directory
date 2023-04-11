@@ -68,6 +68,7 @@ export * from "./enablechannelcatalog";
 export * from "./enablerule";
 export * from "./exportchannelcatalogproductinfolist";
 export * from "./exportorders";
+export * from "./generatebatchorderinvoice";
 export * from "./generateorderinvoice";
 export * from "./getautomatictransitions";
 export * from "./getavailablechannels";

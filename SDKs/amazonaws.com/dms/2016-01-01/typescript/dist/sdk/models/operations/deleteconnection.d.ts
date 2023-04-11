@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteConnectionXAmzTargetEnum {
-    AmazonDmSv20160101DeleteConnection = "AmazonDMSv20160101.DeleteConnection"
+    AmazonDMSv20160101DeleteConnection = "AmazonDMSv20160101.DeleteConnection"
 }
-export declare class DeleteConnectionHeaders extends SpeakeasyBase {
+export declare class DeleteConnectionRequest extends SpeakeasyBase {
+    deleteConnectionMessage: shared.DeleteConnectionMessage;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class DeleteConnectionHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteConnectionXAmzTargetEnum;
 }
-export declare class DeleteConnectionRequest extends SpeakeasyBase {
-    headers: DeleteConnectionHeaders;
-    request: shared.DeleteConnectionMessage;
-}
 export declare class DeleteConnectionResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedFault
+     */
     accessDeniedFault?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteConnectionResponse?: shared.DeleteConnectionResponse;
+    /**
+     * InvalidResourceStateFault
+     */
     invalidResourceStateFault?: any;
-    resourceNotFoundFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundFault
+     */
+    resourceNotFoundFault?: any;
 }

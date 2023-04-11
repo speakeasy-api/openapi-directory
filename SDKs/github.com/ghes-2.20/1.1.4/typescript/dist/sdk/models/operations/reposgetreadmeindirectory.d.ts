@@ -1,21 +1,32 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReposGetReadmeInDirectoryPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ReposGetReadmeInDirectoryRequest extends SpeakeasyBase {
+    /**
+     * The alternate path to look for a README file
+     */
     dir: string;
     owner: string;
-    repo: string;
-}
-export declare class ReposGetReadmeInDirectoryQueryParams extends SpeakeasyBase {
+    /**
+     * The name of the commit/branch/tag. Default: the repository’s default branch (usually `master`)
+     */
     ref?: string;
-}
-export declare class ReposGetReadmeInDirectoryRequest extends SpeakeasyBase {
-    pathParams: ReposGetReadmeInDirectoryPathParams;
-    queryParams: ReposGetReadmeInDirectoryQueryParams;
+    repo: string;
 }
 export declare class ReposGetReadmeInDirectoryResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Resource not found
+     */
     basicError?: shared.BasicError;
+    /**
+     * Response
+     */
     contentFile?: shared.ContentFile;
+    /**
+     * Validation failed
+     */
     validationError?: shared.ValidationError;
 }

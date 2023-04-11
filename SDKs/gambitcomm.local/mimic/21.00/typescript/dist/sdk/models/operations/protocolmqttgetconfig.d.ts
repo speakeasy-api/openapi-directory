@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ProtocolMqttGetConfigPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ProtocolMqttGetConfigRequest extends SpeakeasyBase {
+    /**
+     * Agent to show the MQTT configuration
+     */
     agentNum: number;
 }
-export declare class ProtocolMqttGetConfigRequest extends SpeakeasyBase {
-    pathParams: ProtocolMqttGetConfigPathParams;
-}
 export declare class ProtocolMqttGetConfigResponse extends SpeakeasyBase {
-    configMQTT?: shared.ConfigMqtt;
+    /**
+     * successful operation
+     */
+    configMQTT?: shared.ConfigMQTT;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

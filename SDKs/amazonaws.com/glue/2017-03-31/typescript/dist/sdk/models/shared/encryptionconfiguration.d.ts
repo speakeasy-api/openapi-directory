@@ -4,7 +4,7 @@ import { JobBookmarksEncryption } from "./jobbookmarksencryption";
 import { S3Encryption } from "./s3encryption";
 /**
  * Specifies an encryption configuration.
-**/
+ */
 export declare class EncryptionConfiguration extends SpeakeasyBase {
     cloudWatchEncryption?: CloudWatchEncryption;
     jobBookmarksEncryption?: JobBookmarksEncryption;

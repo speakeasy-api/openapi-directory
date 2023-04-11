@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostUnassignPrivateIpAddressesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTUnassignPrivateIpAddressesActionEnum {
     UnassignPrivateIpAddresses = "UnassignPrivateIpAddresses"
 }
-export declare enum PostUnassignPrivateIpAddressesVersionEnum {
+export declare enum POSTUnassignPrivateIpAddressesVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostUnassignPrivateIpAddressesQueryParams extends SpeakeasyBase {
-    action: PostUnassignPrivateIpAddressesActionEnum;
-    version: PostUnassignPrivateIpAddressesVersionEnum;
-}
-export declare class PostUnassignPrivateIpAddressesHeaders extends SpeakeasyBase {
+export declare class POSTUnassignPrivateIpAddressesRequest extends SpeakeasyBase {
+    action: POSTUnassignPrivateIpAddressesActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTUnassignPrivateIpAddressesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +18,8 @@ export declare class PostUnassignPrivateIpAddressesHeaders extends SpeakeasyBase
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostUnassignPrivateIpAddressesRequest extends SpeakeasyBase {
-    queryParams: PostUnassignPrivateIpAddressesQueryParams;
-    headers: PostUnassignPrivateIpAddressesHeaders;
-    request?: Uint8Array;
-}
-export declare class PostUnassignPrivateIpAddressesResponse extends SpeakeasyBase {
+export declare class POSTUnassignPrivateIpAddressesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

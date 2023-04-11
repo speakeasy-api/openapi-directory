@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The reference type corresponding to this event.
+ */
 export declare enum ApplicationReferenceTypeEnum {
     UnspecifiedReferenceType = "UNSPECIFIED_REFERENCE_TYPE",
     Link = "LINK",
@@ -6,7 +9,10 @@ export declare enum ApplicationReferenceTypeEnum {
 }
 /**
  * Activity in applications other than Drive.
-**/
+ */
 export declare class ApplicationReference extends SpeakeasyBase {
+    /**
+     * The reference type corresponding to this event.
+     */
     type?: ApplicationReferenceTypeEnum;
 }

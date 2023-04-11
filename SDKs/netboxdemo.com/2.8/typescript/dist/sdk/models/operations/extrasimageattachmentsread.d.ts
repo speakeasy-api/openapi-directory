@@ -1,13 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ExtrasImageAttachmentsReadPathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ExtrasImageAttachmentsReadRequest extends SpeakeasyBase {
-    pathParams: ExtrasImageAttachmentsReadPathParams;
+    /**
+     * A unique integer value identifying this image attachment.
+     */
+    id: number;
 }
 export declare class ExtrasImageAttachmentsReadResponse extends SpeakeasyBase {
     contentType: string;
     imageAttachment?: shared.ImageAttachment;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

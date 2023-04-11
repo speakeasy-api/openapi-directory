@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostRemoveRoleFromInstanceProfileActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTRemoveRoleFromInstanceProfileActionEnum {
     RemoveRoleFromInstanceProfile = "RemoveRoleFromInstanceProfile"
 }
-export declare enum PostRemoveRoleFromInstanceProfileVersionEnum {
+export declare enum POSTRemoveRoleFromInstanceProfileVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostRemoveRoleFromInstanceProfileQueryParams extends SpeakeasyBase {
-    action: PostRemoveRoleFromInstanceProfileActionEnum;
-    version: PostRemoveRoleFromInstanceProfileVersionEnum;
-}
-export declare class PostRemoveRoleFromInstanceProfileHeaders extends SpeakeasyBase {
+export declare class POSTRemoveRoleFromInstanceProfileRequest extends SpeakeasyBase {
+    action: POSTRemoveRoleFromInstanceProfileActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTRemoveRoleFromInstanceProfileVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostRemoveRoleFromInstanceProfileHeaders extends SpeakeasyB
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostRemoveRoleFromInstanceProfileRequest extends SpeakeasyBase {
-    queryParams: PostRemoveRoleFromInstanceProfileQueryParams;
-    headers: PostRemoveRoleFromInstanceProfileHeaders;
-    request?: Uint8Array;
-}
-export declare class PostRemoveRoleFromInstanceProfileResponse extends SpeakeasyBase {
+export declare class POSTRemoveRoleFromInstanceProfileResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

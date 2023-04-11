@@ -1,43 +1,37 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { PeopleContactGroupsBatchGetRequest, PeopleContactGroupsBatchGetResponse } from "openapi/src/sdk/models/operations";
+import {
+  PeopleContactGroupsBatchGetRequest,
+  PeopleContactGroupsBatchGetResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: PeopleContactGroupsBatchGetRequest = {
-  security: {
-    option1: {
-      oauth2: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-      oauth2c: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-    },
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "voluptas",
-    alt: "media",
-    callback: "expedita",
-    fields: "consequuntur",
-    groupFields: "dolor",
-    key: "expedita",
-    maxMembers: 6044372234677422456,
-    oauthToken: "fugit",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    resourceNames: [
-      "dicta",
-      "debitis",
-      "voluptatum",
-    ],
-    uploadType: "et",
-    uploadProtocol: "ut",
-  },
+  dollarXgafv: XgafvEnum.Two,
+  accessToken: "provident",
+  alt: AltEnum.Proto,
+  callback: "quibusdam",
+  fields: "unde",
+  groupFields: "nulla",
+  key: "corrupti",
+  maxMembers: 847252,
+  oauthToken: "vel",
+  prettyPrint: false,
+  quotaUser: "error",
+  resourceNames: [
+    "suscipit",
+    "iure",
+    "magnam",
+  ],
+  uploadType: "debitis",
+  uploadProtocol: "ipsa",
 };
 
 sdk.contactGroups.peopleContactGroupsBatchGet(req).then((res: PeopleContactGroupsBatchGetResponse | AxiosError) => {

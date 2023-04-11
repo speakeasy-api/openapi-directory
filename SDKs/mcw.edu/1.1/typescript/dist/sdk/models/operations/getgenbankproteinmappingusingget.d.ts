@@ -1,12 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetGenBankProteinMappingUsingGetPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETGenBankProteinMappingUsingGETRequest extends SpeakeasyBase {
+    /**
+     * RGD ID
+     */
     rgdId: number;
 }
-export declare class GetGenBankProteinMappingUsingGetRequest extends SpeakeasyBase {
-    pathParams: GetGenBankProteinMappingUsingGetPathParams;
-}
-export declare class GetGenBankProteinMappingUsingGetResponse extends SpeakeasyBase {
+export declare class GETGenBankProteinMappingUsingGETResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

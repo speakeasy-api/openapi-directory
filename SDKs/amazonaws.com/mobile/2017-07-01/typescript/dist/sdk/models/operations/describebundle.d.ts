@@ -1,9 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeBundlePathParams extends SpeakeasyBase {
-    bundleId: string;
-}
-export declare class DescribeBundleHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DescribeBundleRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,19 +9,41 @@ export declare class DescribeBundleHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DescribeBundleRequest extends SpeakeasyBase {
-    pathParams: DescribeBundlePathParams;
-    headers: DescribeBundleHeaders;
+    /**
+     *  Unique bundle identifier.
+     */
+    bundleId: string;
 }
 export declare class DescribeBundleResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: shared.BadRequestException;
     contentType: string;
+    /**
+     * Success
+     */
     describeBundleResult?: shared.DescribeBundleResult;
+    /**
+     * InternalFailureException
+     */
     internalFailureException?: shared.InternalFailureException;
+    /**
+     * NotFoundException
+     */
     notFoundException?: shared.NotFoundException;
-    serviceUnavailableException?: shared.ServiceUnavailableException;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceUnavailableException
+     */
+    serviceUnavailableException?: shared.ServiceUnavailableException;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: shared.TooManyRequestsException;
+    /**
+     * UnauthorizedException
+     */
     unauthorizedException?: shared.UnauthorizedException;
 }

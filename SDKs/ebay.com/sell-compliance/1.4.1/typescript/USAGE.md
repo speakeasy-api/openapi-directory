@@ -1,28 +1,21 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetListingViolationsRequest, GetListingViolationsResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetListingViolationsRequest,
+  GetListingViolationsResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetListingViolationsRequest = {
-  security: {
-    apiAuth: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  queryParams: {
-    complianceType: "sit",
-    filter: "voluptas",
-    limit: "culpa",
-    listingId: "expedita",
-    offset: "consequuntur",
-  },
-  headers: {
-    xEBAYCMARKETPLACEID: "dolor",
-  },
+  xEbayCMarketplaceId: "corrupti",
+  complianceType: "provident",
+  filter: "distinctio",
+  limit: "quibusdam",
+  listingId: "unde",
+  offset: "nulla",
 };
 
 sdk.listingViolation.getListingViolations(req).then((res: GetListingViolationsResponse | AxiosError) => {

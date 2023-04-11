@@ -15,7 +15,6 @@ export * from "./newattendanceperiodrequest";
 export * from "./newattendanceperiodresponse";
 export * from "./office";
 export * from "./response";
-export * from "./security";
 export * from "./supervisor";
 export * from "./timeofftyperesource";
 export * from "./updateattendanceperiodrequest";

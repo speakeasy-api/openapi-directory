@@ -1,20 +1,47 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * A representation of the ChannelConnection resource. A ChannelConnection is a resource which event providers create during the activation process to establish a connection between the provider and the subscriber channel.
-**/
+ */
 export declare class ChannelConnection extends SpeakeasyBase {
+    /**
+     * Input only. Activation token for the channel. The token will be used during the creation of ChannelConnection to bind the channel with the provider project. This field will not be stored in the provider resource.
+     */
     activationToken?: string;
+    /**
+     * Required. The name of the connected subscriber Channel. This is a weak reference to avoid cross project and cross accounts references. This must be in `projects/{project}/location/{location}/channels/{channel_id}` format.
+     */
     channel?: string;
+    /**
+     * Output only. The creation time.
+     */
     createTime?: string;
+    /**
+     * Required. The name of the connection.
+     */
     name?: string;
+    /**
+     * Output only. Server assigned ID of the resource. The server guarantees uniqueness and immutability until deleted.
+     */
     uid?: string;
+    /**
+     * Output only. The last-modified time.
+     */
     updateTime?: string;
 }
 /**
  * A representation of the ChannelConnection resource. A ChannelConnection is a resource which event providers create during the activation process to establish a connection between the provider and the subscriber channel.
-**/
+ */
 export declare class ChannelConnectionInput extends SpeakeasyBase {
+    /**
+     * Input only. Activation token for the channel. The token will be used during the creation of ChannelConnection to bind the channel with the provider project. This field will not be stored in the provider resource.
+     */
     activationToken?: string;
+    /**
+     * Required. The name of the connected subscriber Channel. This is a weak reference to avoid cross project and cross accounts references. This must be in `projects/{project}/location/{location}/channels/{channel_id}` format.
+     */
     channel?: string;
+    /**
+     * Required. The name of the connection.
+     */
     name?: string;
 }

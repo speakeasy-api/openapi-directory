@@ -1,9 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum ListCompatibleImagesXAmzTargetEnum {
-    AwsieSnowballJobManagementServiceListCompatibleImages = "AWSIESnowballJobManagementService.ListCompatibleImages"
+    AWSIESnowballJobManagementServiceListCompatibleImages = "AWSIESnowballJobManagementService.ListCompatibleImages"
 }
-export declare class ListCompatibleImagesHeaders extends SpeakeasyBase {
+export declare class ListCompatibleImagesRequest extends SpeakeasyBase {
+    listCompatibleImagesRequest: shared.ListCompatibleImagesRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +23,20 @@ export declare class ListCompatibleImagesHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListCompatibleImagesXAmzTargetEnum;
 }
-export declare class ListCompatibleImagesRequest extends SpeakeasyBase {
-    headers: ListCompatibleImagesHeaders;
-    request: shared.ListCompatibleImagesRequest;
-}
 export declare class ListCompatibleImagesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Ec2RequestFailedException
+     */
     ec2RequestFailedException?: any;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * Success
+     */
     listCompatibleImagesResult?: shared.ListCompatibleImagesResult;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PutUserVotesEpisodesEpisodeIdPathParams extends SpeakeasyBase {
-    episodeId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class PutUserVotesEpisodesEpisodeIdRequest extends SpeakeasyBase {
-    pathParams: PutUserVotesEpisodesEpisodeIdPathParams;
-    request?: shared.EpisodeVoteInput;
+    episodeVoteInput?: shared.EpisodeVoteInput;
+    episodeId: number;
 }
 export declare class PutUserVotesEpisodesEpisodeIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * This episode is now voted for
+     */
     episodeVote?: shared.EpisodeVote;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

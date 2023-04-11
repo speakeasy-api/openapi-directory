@@ -1,36 +1,35 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetAbortEnvironmentUpdateRequest, GetAbortEnvironmentUpdateResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GETAbortEnvironmentUpdateRequest,
+  GETAbortEnvironmentUpdateResponse,
+  GETAbortEnvironmentUpdateActionEnum,
+  GETAbortEnvironmentUpdateVersionEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: GetAbortEnvironmentUpdateRequest = {
-  queryParams: {
-    action: "AbortEnvironmentUpdate",
-    environmentId: "voluptas",
-    environmentName: "culpa",
-    version: "2010-12-01",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  headers: {
-    xAmzAlgorithm: "consequuntur",
-    xAmzContentSha256: "dolor",
-    xAmzCredential: "expedita",
-    xAmzDate: "voluptas",
-    xAmzSecurityToken: "fugit",
-    xAmzSignature: "et",
-    xAmzSignedHeaders: "nihil",
-  },
+});
+
+const req: GETAbortEnvironmentUpdateRequest = {
+  action: GETAbortEnvironmentUpdateActionEnum.AbortEnvironmentUpdate,
+  environmentId: "corrupti",
+  environmentName: "provident",
+  version: GETAbortEnvironmentUpdateVersionEnum.TwoThousandAndTen1201,
+  xAmzAlgorithm: "distinctio",
+  xAmzContentSha256: "quibusdam",
+  xAmzCredential: "unde",
+  xAmzDate: "nulla",
+  xAmzSecurityToken: "corrupti",
+  xAmzSignature: "illum",
+  xAmzSignedHeaders: "vel",
 };
 
-sdk.getAbortEnvironmentUpdate(req).then((res: GetAbortEnvironmentUpdateResponse | AxiosError) => {
+sdk.getAbortEnvironmentUpdate(req).then((res: GETAbortEnvironmentUpdateResponse | AxiosError) => {
    // handle response
 });
 ```

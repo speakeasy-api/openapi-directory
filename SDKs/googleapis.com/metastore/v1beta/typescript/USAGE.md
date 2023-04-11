@@ -1,53 +1,56 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { MetastoreProjectsLocationsFederationsCreateRequest, MetastoreProjectsLocationsFederationsCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  MetastoreProjectsLocationsFederationsCreateRequest,
+  MetastoreProjectsLocationsFederationsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  BackendMetastoreMetastoreTypeEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: MetastoreProjectsLocationsFederationsCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    federationId: "dolor",
-    fields: "expedita",
-    key: "voluptas",
-    oauthToken: "fugit",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    requestId: "rerum",
-    uploadType: "dicta",
-    uploadProtocol: "debitis",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  federationInput: {
     backendMetastores: {
-      "et": {
-        metastoreType: "DATAPROC_METASTORE",
-        name: "dolorem",
+      "distinctio": {
+        metastoreType: BackendMetastoreMetastoreTypeEnum.DataprocMetastore,
+        name: "unde",
+      },
+      "nulla": {
+        metastoreType: BackendMetastoreMetastoreTypeEnum.Bigquery,
+        name: "illum",
+      },
+      "vel": {
+        metastoreType: BackendMetastoreMetastoreTypeEnum.Bigquery,
+        name: "deserunt",
       },
     },
     labels: {
-      "voluptate": "iste",
-      "vitae": "totam",
+      "iure": "magnam",
+      "debitis": "ipsa",
     },
-    name: "dolores",
-    version: "illum",
+    name: "delectus",
+    version: "tempora",
   },
+  accessToken: "suscipit",
+  alt: AltEnum.Media,
+  callback: "minus",
+  federationId: "placeat",
+  fields: "voluptatum",
+  key: "iusto",
+  oauthToken: "excepturi",
+  parent: "nisi",
+  prettyPrint: false,
+  quotaUser: "recusandae",
+  requestId: "temporibus",
+  uploadType: "ab",
+  uploadProtocol: "quis",
 };
 
 sdk.projects.metastoreProjectsLocationsFederationsCreate(req).then((res: MetastoreProjectsLocationsFederationsCreateResponse | AxiosError) => {

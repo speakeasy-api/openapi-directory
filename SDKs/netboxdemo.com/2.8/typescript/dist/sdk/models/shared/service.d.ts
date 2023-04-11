@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { NestedDevice } from "./nesteddevice";
-import { NestedIpAddress } from "./nestedipaddress";
+import { NestedIPAddress } from "./nestedipaddress";
 import { NestedVirtualMachine } from "./nestedvirtualmachine";
 export declare enum ServiceProtocolLabelEnum {
     Tcp = "TCP",
@@ -20,7 +20,7 @@ export declare class Service extends SpeakeasyBase {
     description?: string;
     device?: NestedDevice;
     id?: number;
-    ipaddresses?: NestedIpAddress[];
+    ipaddresses?: NestedIPAddress[];
     lastUpdated?: Date;
     name: string;
     port: number;

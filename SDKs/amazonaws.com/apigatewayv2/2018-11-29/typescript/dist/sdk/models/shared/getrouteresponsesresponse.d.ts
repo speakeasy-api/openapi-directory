@@ -1,5 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { RouteResponse } from "./routeresponse";
+/**
+ * Success
+ */
 export declare class GetRouteResponsesResponse extends SpeakeasyBase {
-    items?: Record<string, any>;
-    nextToken?: Record<string, any>;
+    items?: RouteResponse[];
+    nextToken?: string;
 }

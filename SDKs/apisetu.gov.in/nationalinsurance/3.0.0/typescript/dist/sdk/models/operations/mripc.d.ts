@@ -1,117 +1,178 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class MripcSecurity extends SpeakeasyBase {
+    apiKey: string;
+    clientId: string;
+}
 export declare class MripcRequestBodyCertificateParameters extends SpeakeasyBase {
+    /**
+     * Customer No
+     */
     customerId: string;
+    /**
+     * Policy Number
+     */
     policyNumber: string;
+    /**
+     * Policy Start Date
+     */
     policyStartDate: string;
 }
+/**
+ * The format of the certificate in response.
+ */
 export declare enum MripcRequestBodyFormatEnum {
     Pdf = "pdf"
 }
+/**
+ * Request format
+ */
 export declare class MripcRequestBody extends SpeakeasyBase {
     certificateParameters?: MripcRequestBodyCertificateParameters;
-    consentArtifact?: any;
+    consentArtifact?: shared.ConsentArtifactSchema;
+    /**
+     * The format of the certificate in response.
+     */
     format: MripcRequestBodyFormatEnum;
+    /**
+     * A unique transaction id for this request in UUID format. It is used for tracking the request.
+     */
     txnId: string;
 }
-export declare class MripcSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
-    clientId: shared.SchemeClientId;
+export declare enum Mripc504ApplicationJSONErrorEnum {
+    GatewayTimeout = "gateway_timeout"
 }
-export declare enum Mripc400ApplicationJsonErrorEnum {
+export declare enum Mripc504ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
+}
+/**
+ * Gateway timeout
+ */
+export declare class Mripc504ApplicationJSON extends SpeakeasyBase {
+    error?: Mripc504ApplicationJSONErrorEnum;
+    errorDescription?: Mripc504ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Mripc503ApplicationJSONErrorEnum {
+    ServiceUnavailable = "service_unavailable"
+}
+export declare enum Mripc503ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
+}
+/**
+ * Service unavailable
+ */
+export declare class Mripc503ApplicationJSON extends SpeakeasyBase {
+    error?: Mripc503ApplicationJSONErrorEnum;
+    errorDescription?: Mripc503ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Mripc502ApplicationJSONErrorEnum {
+    BadGatewy = "bad_gatewy"
+}
+export declare enum Mripc502ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
+}
+/**
+ * Bad gateway
+ */
+export declare class Mripc502ApplicationJSON extends SpeakeasyBase {
+    error?: Mripc502ApplicationJSONErrorEnum;
+    errorDescription?: Mripc502ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Mripc500ApplicationJSONErrorEnum {
+    InternalServerError = "internal_server_error"
+}
+export declare enum Mripc500ApplicationJSONErrorDescriptionEnum {
+    InternalServerError = "Internal server error"
+}
+/**
+ * Internal server error
+ */
+export declare class Mripc500ApplicationJSON extends SpeakeasyBase {
+    error?: Mripc500ApplicationJSONErrorEnum;
+    errorDescription?: Mripc500ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Mripc404ApplicationJSONErrorEnum {
+    RecordNotFound = "record_not_found",
+    UrlNotFound = "url_not_found"
+}
+export declare enum Mripc404ApplicationJSONErrorDescriptionEnum {
+    NoRecordFound = "No record found",
+    YourAPIUrlOrPathIsIncorrect = "Your API url or path is incorrect"
+}
+/**
+ * No record found
+ */
+export declare class Mripc404ApplicationJSON extends SpeakeasyBase {
+    error?: Mripc404ApplicationJSONErrorEnum;
+    errorDescription?: Mripc404ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Mripc401ApplicationJSONErrorEnum {
+    InvalidAuthentication = "invalid_authentication",
+    InvalidAuthorization = "invalid_authorization"
+}
+export declare enum Mripc401ApplicationJSONErrorDescriptionEnum {
+    AuthenticationFailed = "Authentication failed",
+    YouAreNotAuthorizedToUseThisAPI = "You are not authorized to use this API"
+}
+/**
+ * Unauthorized access
+ */
+export declare class Mripc401ApplicationJSON extends SpeakeasyBase {
+    error?: Mripc401ApplicationJSONErrorEnum;
+    errorDescription?: Mripc401ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Mripc400ApplicationJSONErrorEnum {
     MissingParameter = "missing_parameter",
     InvalidParameter = "invalid_parameter",
     InvalidFormat = "invalid_format",
     InvalidTxnid = "invalid_txnid",
     InvalidConsentid = "invalid_consentid"
 }
-export declare enum Mripc400ApplicationJsonErrorDescriptionEnum {
+export declare enum Mripc400ApplicationJSONErrorDescriptionEnum {
     PleaseProvideAllMandatoryParameters = "Please provide all mandatory parameters",
     BadRequest = "Bad request",
     TheFormatParameterIsInvalid = "The format parameter is invalid",
-    TheTxnIdParameterMustBeInUuidFormat = "The txnId parameter must be in UUID format",
-    TheConsentIdParameterMustBeInUuidFormat = "The consentId parameter must be in UUID format"
+    TheTxnIdParameterMustBeInUUIDFormat = "The txnId parameter must be in UUID format",
+    TheConsentIdParameterMustBeInUUIDFormat = "The consentId parameter must be in UUID format"
 }
-export declare class Mripc400ApplicationJson extends SpeakeasyBase {
-    error?: Mripc400ApplicationJsonErrorEnum;
-    errorDescription?: Mripc400ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Mripc401ApplicationJsonErrorEnum {
-    InvalidAuthentication = "invalid_authentication",
-    InvalidAuthorization = "invalid_authorization"
-}
-export declare enum Mripc401ApplicationJsonErrorDescriptionEnum {
-    AuthenticationFailed = "Authentication failed",
-    YouAreNotAuthorizedToUseThisApi = "You are not authorized to use this API"
-}
-export declare class Mripc401ApplicationJson extends SpeakeasyBase {
-    error?: Mripc401ApplicationJsonErrorEnum;
-    errorDescription?: Mripc401ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Mripc404ApplicationJsonErrorEnum {
-    RecordNotFound = "record_not_found",
-    UrlNotFound = "url_not_found"
-}
-export declare enum Mripc404ApplicationJsonErrorDescriptionEnum {
-    NoRecordFound = "No record found",
-    YourApiUrlOrPathIsIncorrect = "Your API url or path is incorrect"
-}
-export declare class Mripc404ApplicationJson extends SpeakeasyBase {
-    error?: Mripc404ApplicationJsonErrorEnum;
-    errorDescription?: Mripc404ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Mripc500ApplicationJsonErrorEnum {
-    InternalServerError = "internal_server_error"
-}
-export declare enum Mripc500ApplicationJsonErrorDescriptionEnum {
-    InternalServerError = "Internal server error"
-}
-export declare class Mripc500ApplicationJson extends SpeakeasyBase {
-    error?: Mripc500ApplicationJsonErrorEnum;
-    errorDescription?: Mripc500ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Mripc502ApplicationJsonErrorEnum {
-    BadGatewy = "bad_gatewy"
-}
-export declare enum Mripc502ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
-}
-export declare class Mripc502ApplicationJson extends SpeakeasyBase {
-    error?: Mripc502ApplicationJsonErrorEnum;
-    errorDescription?: Mripc502ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Mripc503ApplicationJsonErrorEnum {
-    ServiceUnavailable = "service_unavailable"
-}
-export declare enum Mripc503ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
-}
-export declare class Mripc503ApplicationJson extends SpeakeasyBase {
-    error?: Mripc503ApplicationJsonErrorEnum;
-    errorDescription?: Mripc503ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Mripc504ApplicationJsonErrorEnum {
-    GatewayTimeout = "gateway_timeout"
-}
-export declare enum Mripc504ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
-}
-export declare class Mripc504ApplicationJson extends SpeakeasyBase {
-    error?: Mripc504ApplicationJsonErrorEnum;
-    errorDescription?: Mripc504ApplicationJsonErrorDescriptionEnum;
-}
-export declare class MripcRequest extends SpeakeasyBase {
-    request?: MripcRequestBody;
-    security: MripcSecurity;
+/**
+ * Bad request
+ */
+export declare class Mripc400ApplicationJSON extends SpeakeasyBase {
+    error?: Mripc400ApplicationJSONErrorEnum;
+    errorDescription?: Mripc400ApplicationJSONErrorDescriptionEnum;
 }
 export declare class MripcResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    mripc400ApplicationJSONObject?: Mripc400ApplicationJson;
-    mripc401ApplicationJSONObject?: Mripc401ApplicationJson;
-    mripc404ApplicationJSONObject?: Mripc404ApplicationJson;
-    mripc500ApplicationJSONObject?: Mripc500ApplicationJson;
-    mripc502ApplicationJSONObject?: Mripc502ApplicationJson;
-    mripc503ApplicationJSONObject?: Mripc503ApplicationJson;
-    mripc504ApplicationJSONObject?: Mripc504ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad request
+     */
+    mripc400ApplicationJSONObject?: Mripc400ApplicationJSON;
+    /**
+     * Unauthorized access
+     */
+    mripc401ApplicationJSONObject?: Mripc401ApplicationJSON;
+    /**
+     * No record found
+     */
+    mripc404ApplicationJSONObject?: Mripc404ApplicationJSON;
+    /**
+     * Internal server error
+     */
+    mripc500ApplicationJSONObject?: Mripc500ApplicationJSON;
+    /**
+     * Bad gateway
+     */
+    mripc502ApplicationJSONObject?: Mripc502ApplicationJSON;
+    /**
+     * Service unavailable
+     */
+    mripc503ApplicationJSONObject?: Mripc503ApplicationJSON;
+    /**
+     * Gateway timeout
+     */
+    mripc504ApplicationJSONObject?: Mripc504ApplicationJSON;
 }

@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * resources concerning a "Registrierkasse"
+ */
 export declare class Registrierkasse {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,11 +12,11 @@ export declare class Registrierkasse {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getDep - Generates a DEP file.
-    **/
-    getDep(req: operations.GetDepRequest, config?: AxiosRequestConfig): Promise<operations.GetDepResponse>;
+     * Generates a DEP file.
+     */
+    getDEP(req: operations.GetDEPRequest, config?: AxiosRequestConfig): Promise<operations.GetDEPResponse>;
     /**
-     * getRegistrierkasse - Returns information about a particular `Registrierkasse`.
-    **/
+     * Returns information about a particular `Registrierkasse`.
+     */
     getRegistrierkasse(req: operations.GetRegistrierkasseRequest, config?: AxiosRequestConfig): Promise<operations.GetRegistrierkasseResponse>;
 }

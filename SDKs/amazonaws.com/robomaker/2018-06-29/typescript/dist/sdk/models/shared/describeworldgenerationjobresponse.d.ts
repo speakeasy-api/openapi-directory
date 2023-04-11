@@ -1,8 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { WorldGenerationJobErrorCodeEnum } from "./worldgenerationjoberrorcodeenum";
 import { FinishedWorldsSummary } from "./finishedworldssummary";
-import { WorldGenerationJobStatusEnum } from "./worldgenerationjobstatusenum";
 import { WorldCount } from "./worldcount";
+import { WorldGenerationJobErrorCodeEnum } from "./worldgenerationjoberrorcodeenum";
+import { WorldGenerationJobStatusEnum } from "./worldgenerationjobstatusenum";
+/**
+ * Success
+ */
 export declare class DescribeWorldGenerationJobResponse extends SpeakeasyBase {
     arn?: string;
     clientRequestToken?: string;

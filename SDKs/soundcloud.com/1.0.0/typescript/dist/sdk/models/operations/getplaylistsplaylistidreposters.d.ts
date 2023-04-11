@@ -1,22 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetPlaylistsPlaylistIdRepostersPathParams extends SpeakeasyBase {
-    playlistId: number;
-}
-export declare class GetPlaylistsPlaylistIdRepostersQueryParams extends SpeakeasyBase {
-    limit?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetPlaylistsPlaylistIdRepostersSecurity extends SpeakeasyBase {
-    clientId: shared.SchemeClientId;
+    clientId: string;
 }
 export declare class GetPlaylistsPlaylistIdRepostersRequest extends SpeakeasyBase {
-    pathParams: GetPlaylistsPlaylistIdRepostersPathParams;
-    queryParams: GetPlaylistsPlaylistIdRepostersQueryParams;
-    security: GetPlaylistsPlaylistIdRepostersSecurity;
+    /**
+     * Number of results to return in the collection.
+     */
+    limit?: number;
+    /**
+     * SoundCloud playlist id
+     */
+    playlistId: number;
 }
 export declare class GetPlaylistsPlaylistIdRepostersResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Unauthorized
+     */
     error?: shared.ErrorT;
+    /**
+     * Success
+     */
     metaUsers?: shared.MetaUsers;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

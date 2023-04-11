@@ -1,5 +1,11 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Use these endpoints to reset a user's password.
+ *
+ * @remarks
+ *
+ */
 export declare class PasswordReset {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,16 +15,16 @@ export declare class PasswordReset {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * postCheck - Check validity of password reset token
-    **/
-    postCheck(req: operations.PostCheckRequest, config?: AxiosRequestConfig): Promise<operations.PostCheckResponse>;
+     * Check validity of password reset token
+     */
+    postCheck(req: operations.PostCheckRequestBody, config?: AxiosRequestConfig): Promise<operations.PostCheckResponse>;
     /**
-     * postReset - Send reset password email
-    **/
-    postReset(req: operations.PostResetRequest, config?: AxiosRequestConfig): Promise<operations.PostResetResponse>;
+     * Send reset password email
+     */
+    postReset(req: operations.PostResetRequestBody, config?: AxiosRequestConfig): Promise<operations.PostResetResponse>;
     /**
-     * postSetpassword - Reset password after asking for a reset (with the token sent by email).
+     * Reset password after asking for a reset (with the token sent by email).
      *
-    **/
-    postSetpassword(req: operations.PostSetpasswordRequest, config?: AxiosRequestConfig): Promise<operations.PostSetpasswordResponse>;
+     */
+    postSetpassword(req: operations.PostSetpasswordRequestBody, config?: AxiosRequestConfig): Promise<operations.PostSetpasswordResponse>;
 }

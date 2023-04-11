@@ -1,8 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteCustomDataIdentifierPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class DeleteCustomDataIdentifierHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteCustomDataIdentifierRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -10,20 +8,45 @@ export declare class DeleteCustomDataIdentifierHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DeleteCustomDataIdentifierRequest extends SpeakeasyBase {
-    pathParams: DeleteCustomDataIdentifierPathParams;
-    headers: DeleteCustomDataIdentifierHeaders;
+    /**
+     * The unique identifier for the Amazon Macie resource that the request applies to.
+     */
+    id: string;
 }
 export declare class DeleteCustomDataIdentifierResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteCustomDataIdentifierResponse?: Record<string, any>;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
+    /**
+     * ServiceQuotaExceededException
+     */
     serviceQuotaExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

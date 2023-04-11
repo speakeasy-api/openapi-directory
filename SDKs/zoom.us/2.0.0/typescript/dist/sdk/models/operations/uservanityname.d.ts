@@ -1,16 +1,45 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UserVanityNameQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class UserVanityNameRequest extends SpeakeasyBase {
+    /**
+     * Personal meeting room name.
+     */
     vanityName: string;
 }
-export declare class UserVanityName200ApplicationJson extends SpeakeasyBase {
+/**
+ * **HTTP Status Code:** `200`<br>
+ *
+ * @remarks
+ * Success.
+ */
+export declare class UserVanityName200ApplicationXML extends SpeakeasyBase {
+    /**
+     * If `true`, it indicates that the personal meeting room with the given name exists.<br> `false` - The room name does not exist.
+     */
     existed?: boolean;
 }
-export declare class UserVanityNameRequest extends SpeakeasyBase {
-    queryParams: UserVanityNameQueryParams;
+/**
+ * **HTTP Status Code:** `200`<br>
+ *
+ * @remarks
+ * Success.
+ */
+export declare class UserVanityName200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * If `true`, it indicates that the personal meeting room with the given name exists.<br> `false` - The room name does not exist.
+     */
+    existed?: boolean;
 }
 export declare class UserVanityNameResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    userVanityName200ApplicationJSONObject?: UserVanityName200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * **HTTP Status Code:** `200`<br>
+     *
+     * @remarks
+     * Success.
+     */
+    userVanityName200ApplicationJSONObject?: UserVanityName200ApplicationJSON;
 }

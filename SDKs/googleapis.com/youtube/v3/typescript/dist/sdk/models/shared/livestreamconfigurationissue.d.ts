@@ -1,9 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * How severe this issue is to the stream.
+ */
 export declare enum LiveStreamConfigurationIssueSeverityEnum {
     Info = "info",
     Warning = "warning",
     Error = "error"
 }
+/**
+ * The kind of error happening.
+ */
 export declare enum LiveStreamConfigurationIssueTypeEnum {
     GopSizeOver = "gopSizeOver",
     GopSizeLong = "gopSizeLong",
@@ -41,8 +47,20 @@ export declare enum LiveStreamConfigurationIssueTypeEnum {
     VideoIngestionFasterThanRealtime = "videoIngestionFasterThanRealtime"
 }
 export declare class LiveStreamConfigurationIssue extends SpeakeasyBase {
+    /**
+     * The long-form description of the issue and how to resolve it.
+     */
     description?: string;
+    /**
+     * The short-form reason for this issue.
+     */
     reason?: string;
+    /**
+     * How severe this issue is to the stream.
+     */
     severity?: LiveStreamConfigurationIssueSeverityEnum;
+    /**
+     * The kind of error happening.
+     */
     type?: LiveStreamConfigurationIssueTypeEnum;
 }

@@ -1,10 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * This complex type describes the start and end dates of the of the time period over which the associated benchmark is computed. All timestamps are based on Mountain Standard Time (MST). The timestamp is formatted as an ISO 8601 string, which is based on the 24-hour Coordinated Universal Time (UTC) clock.
-**/
+ */
 export declare class EvaluationCycle extends SpeakeasyBase {
+    /**
+     * End date and time of the transaction lookback range. All timestamps are based on Mountain Standard Time (MST). The timestamp is formatted as an ISO 8601 string, which is based on the 24-hour Coordinated Universal Time (UTC) clock.
+     */
     endDate?: string;
+    /**
+     * The ISO-8601 date and time at which the seller was evaluated for this customer service metric rating.
+     */
     evaluationDate?: string;
+    /**
+     * This field specifies the transaction lookback period used for the evaluation. The evaluation_type value specified in the request is returned in this field. There are two possible values: CURRENT &ndash; A monthly evaluation that occurs on the 20th of every month. PROJECTED &ndash; A daily evaluation that provides a projection of how the seller is currently performing with regards to the upcoming evaluation period. For implementation help, refer to <a href='https://developer.ebay.com/devzone/rest/api-ref/analytics/types/EvaluationTypeEnum.html'>eBay API documentation</a>
+     */
     evaluationType?: string;
+    /**
+     * The start date and time of the transaction lookback range. All timestamps are based on Mountain Standard Time (MST). The timestamp is formatted as an ISO 8601 string, which is based on the 24-hour Coordinated Universal Time (UTC) clock. Format: [YYYY]-[MM]-[DD]T[hh]:[mm]:[ss].[sss]Z Example: 2018-08-04T07:09:00.000Z
+     */
     startDate?: string;
 }

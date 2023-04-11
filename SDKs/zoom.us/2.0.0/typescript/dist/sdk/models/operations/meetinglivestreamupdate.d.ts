@@ -1,37 +1,41 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class MeetingLiveStreamUpdatePathParams extends SpeakeasyBase {
-    meetingId: number;
-}
-/**
- * Meeting live stream.
-**/
-export declare class MeetingLiveStreamUpdateApplicationJson extends SpeakeasyBase {
-    pageUrl?: string;
-    streamKey: string;
-    streamUrl: string;
-}
-/**
- * Meeting live stream.
-**/
-export declare class MeetingLiveStreamUpdateMultipartFormData extends SpeakeasyBase {
-    pageUrl?: string;
-    streamKey: string;
-    streamUrl: string;
-}
-export declare class MeetingLiveStreamUpdateRequests extends SpeakeasyBase {
-    object?: MeetingLiveStreamUpdateApplicationJson;
-    object1?: MeetingLiveStreamUpdateMultipartFormData;
-}
+import { AxiosResponse } from "axios";
 export declare class MeetingLiveStreamUpdateSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
+    oAuth: string;
+}
+/**
+ * Meeting live stream.
+ */
+export declare class MeetingLiveStreamUpdateApplicationJSON extends SpeakeasyBase {
+    /**
+     * The livestream page URL.
+     */
+    pageUrl?: string;
+    /**
+     * Stream name and key.
+     */
+    streamKey: string;
+    /**
+     * Streaming URL.
+     */
+    streamUrl: string;
 }
 export declare class MeetingLiveStreamUpdateRequest extends SpeakeasyBase {
-    pathParams: MeetingLiveStreamUpdatePathParams;
-    request: MeetingLiveStreamUpdateRequests;
-    security: MeetingLiveStreamUpdateSecurity;
+    /**
+     * Meeting
+     */
+    requestBody: MeetingLiveStreamUpdateApplicationJSON;
+    /**
+     * The meeting ID in **long** format. The data type of this field is "long"(represented as int64 in JSON).
+     *
+     * @remarks
+     *
+     * While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
+     */
+    meetingId: number;
 }
 export declare class MeetingLiveStreamUpdateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

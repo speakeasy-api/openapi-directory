@@ -1,22 +1,22 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AppApiWmmEndpointsWmmMagneticFieldRequest, AppApiWmmEndpointsWmmMagneticFieldResponse } from "openapi/src/sdk/models/operations";
+import {
+  AppApiWMMEndpointsWMMMagneticFieldRequest,
+  AppApiWMMEndpointsWMMMagneticFieldResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: AppApiWmmEndpointsWmmMagneticFieldRequest = {
-  queryParams: {
-    altitude: 74.099998,
-    latitude: 53.099998,
-    longitude: 15.100000,
-    year: 67.199997,
-  },
+
+const req: AppApiWMMEndpointsWMMMagneticFieldRequest = {
+  altitude: 10,
+  latitude: 80,
+  longitude: 100,
+  year: 2020.5,
 };
 
-sdk.appApiWmmEndpointsWmmMagneticField(req).then((res: AppApiWmmEndpointsWmmMagneticFieldResponse | AxiosError) => {
+sdk.appApiWMMEndpointsWMMMagneticField(req).then((res: AppApiWMMEndpointsWMMMagneticFieldResponse | AxiosError) => {
    // handle response
 });
 ```

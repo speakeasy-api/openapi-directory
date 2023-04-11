@@ -9,6 +9,7 @@ import { PlacementConstraint } from "./placementconstraint";
 import { PlacementStrategy } from "./placementstrategy";
 import { PropagateTagsEnum } from "./propagatetagsenum";
 import { SchedulingStrategyEnum } from "./schedulingstrategyenum";
+import { ServiceConnectConfiguration } from "./serviceconnectconfiguration";
 import { ServiceRegistry } from "./serviceregistry";
 import { Tag } from "./tag";
 export declare class CreateServiceRequest extends SpeakeasyBase {
@@ -30,6 +31,7 @@ export declare class CreateServiceRequest extends SpeakeasyBase {
     propagateTags?: PropagateTagsEnum;
     role?: string;
     schedulingStrategy?: SchedulingStrategyEnum;
+    serviceConnectConfiguration?: ServiceConnectConfiguration;
     serviceName: string;
     serviceRegistries?: ServiceRegistry[];
     tags?: Tag[];

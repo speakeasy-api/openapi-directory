@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Attachments {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,40 +9,45 @@ export declare class Attachments {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteAttachments - Delete an attachment
+     * Delete an attachment
      *
+     * @remarks
      * Use the Delete Attachment REST request to delete an attachment from a Zuora object.
-    **/
-    deleteAttachments(req: operations.DeleteAttachmentsRequest, config?: AxiosRequestConfig): Promise<operations.DeleteAttachmentsResponse>;
+     */
+    deleteAttachments(req: operations.DELETEAttachmentsRequest, config?: AxiosRequestConfig): Promise<operations.DELETEAttachmentsResponse>;
     /**
-     * getAttachments - Retrieve an attachment
+     * Retrieve an attachment
      *
+     * @remarks
      * Use the View Attachment REST request to retrieve information about an attachment document.
      *
-    **/
-    getAttachments(req: operations.GetAttachmentsRequest, config?: AxiosRequestConfig): Promise<operations.GetAttachmentsResponse>;
+     */
+    getAttachments(req: operations.GETAttachmentsRequest, config?: AxiosRequestConfig): Promise<operations.GETAttachmentsResponse>;
     /**
-     * getAttachmentsList - List attachments by object type and key
+     * List attachments by object type and key
      *
+     * @remarks
      * Use the View Attachment REST request to get a list of attachments on an account, an invoice, a subscription, a credit memo, or a debit memo.
      *
      * **Note**: The Credit and Debit Memos feature is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
-    **/
-    getAttachmentsList(req: operations.GetAttachmentsListRequest, config?: AxiosRequestConfig): Promise<operations.GetAttachmentsListResponse>;
+     */
+    getAttachmentsList(req: operations.GETAttachmentsListRequest, config?: AxiosRequestConfig): Promise<operations.GETAttachmentsListResponse>;
     /**
-     * postAttachments - Create an attachment
+     * Create an attachment
      *
+     * @remarks
      * Use the Add Attachment REST request with a multipart/form-data to attach a document file to an Account, a Subscription, an Invoice, a Credit Memo, or a Debit Memo.
      *
      * **Note**: The Credit and Debit Memos feature is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
-    **/
-    postAttachments(req: operations.PostAttachmentsRequest, config?: AxiosRequestConfig): Promise<operations.PostAttachmentsResponse>;
+     */
+    postAttachments(req: operations.POSTAttachmentsRequest, config?: AxiosRequestConfig): Promise<operations.POSTAttachmentsResponse>;
     /**
-     * putAttachments - Update an attachment
+     * Update an attachment
      *
+     * @remarks
      * Use the Edit Attachment REST request to make changes to the descriptive fields of an attachment, such as the description and the file name. You cannot change the actual content of the attached file in Zuora. If you need to change the actual content, you need to delete the attachment and add the updated file as a new attachment.
-    **/
-    putAttachments(req: operations.PutAttachmentsRequest, config?: AxiosRequestConfig): Promise<operations.PutAttachmentsResponse>;
+     */
+    putAttachments(req: operations.PUTAttachmentsRequest, config?: AxiosRequestConfig): Promise<operations.PUTAttachmentsResponse>;
 }

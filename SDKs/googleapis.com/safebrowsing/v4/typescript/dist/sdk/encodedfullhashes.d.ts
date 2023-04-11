@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class EncodedFullHashes {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;

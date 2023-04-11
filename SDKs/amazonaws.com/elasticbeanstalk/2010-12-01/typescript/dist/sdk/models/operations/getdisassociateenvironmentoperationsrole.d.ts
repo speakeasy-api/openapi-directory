@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDisassociateEnvironmentOperationsRoleActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDisassociateEnvironmentOperationsRoleActionEnum {
     DisassociateEnvironmentOperationsRole = "DisassociateEnvironmentOperationsRole"
 }
-export declare enum GetDisassociateEnvironmentOperationsRoleVersionEnum {
+export declare enum GETDisassociateEnvironmentOperationsRoleVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetDisassociateEnvironmentOperationsRoleQueryParams extends SpeakeasyBase {
-    action: GetDisassociateEnvironmentOperationsRoleActionEnum;
+export declare class GETDisassociateEnvironmentOperationsRoleRequest extends SpeakeasyBase {
+    action: GETDisassociateEnvironmentOperationsRoleActionEnum;
+    /**
+     * The name of the environment from which to disassociate the operations role.
+     */
     environmentName: string;
-    version: GetDisassociateEnvironmentOperationsRoleVersionEnum;
-}
-export declare class GetDisassociateEnvironmentOperationsRoleHeaders extends SpeakeasyBase {
+    version: GETDisassociateEnvironmentOperationsRoleVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDisassociateEnvironmentOperationsRoleHeaders extends Spe
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDisassociateEnvironmentOperationsRoleRequest extends SpeakeasyBase {
-    queryParams: GetDisassociateEnvironmentOperationsRoleQueryParams;
-    headers: GetDisassociateEnvironmentOperationsRoleHeaders;
-}
-export declare class GetDisassociateEnvironmentOperationsRoleResponse extends SpeakeasyBase {
+export declare class GETDisassociateEnvironmentOperationsRoleResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateAccountAliasActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateAccountAliasActionEnum {
     CreateAccountAlias = "CreateAccountAlias"
 }
-export declare enum PostCreateAccountAliasVersionEnum {
+export declare enum POSTCreateAccountAliasVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostCreateAccountAliasQueryParams extends SpeakeasyBase {
-    action: PostCreateAccountAliasActionEnum;
-    version: PostCreateAccountAliasVersionEnum;
-}
-export declare class PostCreateAccountAliasHeaders extends SpeakeasyBase {
+export declare class POSTCreateAccountAliasRequest extends SpeakeasyBase {
+    action: POSTCreateAccountAliasActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateAccountAliasVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateAccountAliasHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateAccountAliasRequest extends SpeakeasyBase {
-    queryParams: PostCreateAccountAliasQueryParams;
-    headers: PostCreateAccountAliasHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateAccountAliasResponse extends SpeakeasyBase {
+export declare class POSTCreateAccountAliasResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

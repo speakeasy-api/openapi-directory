@@ -1,16 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class DeleteQuoteImageBackgroundQueryParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteQuoteImageBackgroundSecurity extends SpeakeasyBase {
-    xTheySaidSoApiSecret: shared.SchemeXTheySaidSoApiSecret;
+    xTheySaidSoApiSecret: string;
 }
 export declare class DeleteQuoteImageBackgroundRequest extends SpeakeasyBase {
-    queryParams: DeleteQuoteImageBackgroundQueryParams;
-    security: DeleteQuoteImageBackgroundSecurity;
+    /**
+     * Font ID
+     */
+    id: string;
 }
 export declare class DeleteQuoteImageBackgroundResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

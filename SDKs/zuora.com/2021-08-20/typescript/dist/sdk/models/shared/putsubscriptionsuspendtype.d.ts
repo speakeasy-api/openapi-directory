@@ -1,24 +1,305 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PutSubscriptionSuspendType extends SpeakeasyBase {
+/**
+ * Creates an invoice for a subscription. If you have the Invoice Settlement feature enabled, a credit memo might also be created based on the [invoice and credit memo generation rule](https://knowledgecenter.zuora.com/CB_Billing/Invoice_Settlement/Credit_and_Debit_Memos/Rules_for_Generating_Invoices_and_Credit_Memos).
+ *
+ * @remarks
+ *
+ *
+ * The billing documents generated
+ * in this operation is only for this subscription, not for the entire
+ * customer account.
+ *
+ *
+ * Possible values:
+ *
+ * - `true`: An invoice is created. If you have the Invoice Settlement feature enabled, a credit memo might also be created.
+ *
+ *
+ * - `false`: No invoice is created.
+ *
+ *
+ * **Note:** This field is in Zuora REST API version control. Supported
+ * minor versions are `211.0` or later. To use this field in the method,
+ * you must set the `zuora-version` parameter to the minor version number
+ * in the request header.
+ *
+ */
+export declare enum PUTSubscriptionSuspendTypeRunBillingEnum {
+    True = "true",
+    False = "false"
+}
+export declare class PUTSubscriptionSuspendType extends SpeakeasyBase {
+    /**
+     * The priority order to apply credit memos and/or unapplied payments to an invoice. Possible item values are: `CreditMemo`, `UnappliedPayment`.
+     *
+     * @remarks
+     *
+     * **Note:**
+     *   - This field is valid only if the `applyCredit` field is set to `true`.
+     *   - If no value is specified for this field, the default priority order is used, ["CreditMemo", "UnappliedPayment"], to apply credit memos first and then apply unapplied payments.
+     *   - If only one item is specified, only the items of the spedified type are applied to invoices. For example, if the value is `["CreditMemo"]`, only credit memos are used to apply to invoices.
+     *
+     */
     applicationOrder?: string[];
+    /**
+     * Whether to automatically apply credit memos or unapplied payments, or both to an invoice.
+     *
+     * @remarks
+     *
+     * If the value is `true`, the credit memo or unapplied payment, or both will be automatically applied to the invoice. If no value is specified or the value is `false`, no action is taken.
+     *
+     * **Note:** This field is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
+     *
+     */
     applyCredit?: boolean;
+    /**
+     * Whether to automatically apply a credit balance to an invoice.
+     *
+     * @remarks
+     *
+     * If the value is `true`, the credit balance is applied to the invoice. If the value is `false`, no action is taken.
+     *
+     *
+     * To view the credit balance adjustment, retrieve the details of the invoice using the Get Invoices method.
+     *
+     * Prerequisite: `invoice` must be `true`.
+     *
+     * **Note:**
+     *   - If you are using the field `invoiceCollect` rather than the field `invoice`, the `invoiceCollect` value must be `true`.
+     *   - This field is deprecated if you have the Invoice Settlement feature enabled.
+     *
+     */
     applyCreditBalance?: boolean;
+    /**
+     * Collects an automatic payment for a subscription. The collection generated in this operation is only for this subscription, not for the entire customer account.
+     *
+     * @remarks
+     *
+     * If the value is `true`, the automatic payment is collected. If the value is `false`, no action is taken.
+     *
+     * Prerequisite: The `invoice` or `runBilling` field must be `true`.
+     *
+     * **Note**: This field is only available if you set the `zuora-version` request header to `196.0` or later.
+     *
+     */
     collect?: boolean;
+    /**
+     * The date when the customer notifies you that they want to amend their subscription.
+     *
+     * @remarks
+     *
+     */
     contractEffectiveDate?: Date;
+    /**
+     * The date of the billing document, in `yyyy-mm-dd` format. It represents the invoice date for invoices, credit memo date for credit memos, and debit memo date for debit memos.
+     *
+     * @remarks
+     *
+     * - If this field is specified, the specified date is used as the billing document date.
+     * - If this field is not specified, the date specified in the `targetDate` is used as the billing document date.
+     *
+     */
     documentDate?: Date;
+    /**
+     * Whether to extend the subscription term by the length of time the suspension is in effect. Values: `true`, `false`.
+     *
+     * @remarks
+     *
+     */
     extendsTerm?: boolean;
+    /**
+     * **Note:** This field has been replaced by the `runBilling` field. The
+     *
+     * @remarks
+     * `invoice` field is only available for backward compatibility.
+     *
+     *
+     * Creates an invoice for a subscription. The invoice generated in this
+     * operation is only for this subscription, not for the entire customer
+     * account.
+     *
+     *
+     * If the value is `true`, an invoice is created. If the value is
+     * `false`, no action is taken. The default value is `false`.
+     *
+     *
+     * This field is in Zuora REST API version control. Supported minor
+     * versions are `196.0` and `207.0`. To use this field in the method, you
+     * must set the zuora-version parameter to the minor version number in
+     * the request header.
+     *
+     */
     invoice?: boolean;
+    /**
+     * **Note:** This field has been replaced by the `invoice` field
+     *
+     * @remarks
+     * and the `collect` field. `invoiceCollect` is available only for backward
+     * compatibility.
+     *
+     *
+     * **Note**: This field is only available if you set the `zuora-version` request header to `186.0`, `187.0`, `188.0`, or `189.0`.
+     *
+     */
     invoiceCollect?: boolean;
+    /**
+     * **Note:** This field has been replaced by the `targetDate` field. The
+     *
+     * @remarks
+     * `invoiceTargetDate` field is only available for backward
+     * compatibility.
+     *
+     *
+     * Date through which to calculate charges if an invoice is generated, as
+     * yyyy-mm-dd. Default is current date.
+     *
+     *
+     * This field is in Zuora REST API version control. Supported minor
+     * versions are `207.0` and earlier.
+     *
+     */
     invoiceTargetDate?: Date;
+    /**
+     * Whether to set when to resume a subscription when creating a suspend amendment. Values: `true`, `false`.
+     *
+     * @remarks
+     *
+     */
     resume?: boolean;
+    /**
+     * The length of the period used to specify when the subscription is resumed. The subscription resumption takes effect after a specified period based on the suspend date or today's date. You must use this field together with the `resumePeriodsType` field to specify the period.
+     *
+     * @remarks
+     *
+     * **Note:** This field is only applicable when the `suspendPolicy` field is set to `FixedPeriodsFromToday` or `FixedPeriodsFromSuspendDate`.
+     *
+     */
     resumePeriods?: string;
+    /**
+     * The period type used to define when the subscription resumption takes effect. The subscription resumption takes effect after a specified period based on the suspend date or today's date. You must use this field together with the resumePeriods field to specify the period.
+     *
+     * @remarks
+     *
+     * Values: `Day`, `Week`, `Month`, `Year`
+     *
+     * **Note:** This field is only applicable when the `suspendPolicy` field is set to `FixedPeriodsFromToday` or `FixedPeriodsFromSuspendDate`.
+     *
+     */
     resumePeriodsType?: string;
+    /**
+     * Resume methods. Specify a way to resume a subscription. Values:
+     *
+     * @remarks
+     *
+     * * `Today`: The subscription resumption takes effect on today's date.
+     *
+     * * `FixedPeriodsFromSuspendDate`: The subscription resumption takes effect after a specified period based on the suspend date. You must specify the `resumePeriods` and `resumePeriodsType` fields to define the period.
+     *
+     * * `SpecificDate`: The subscription resumption takes effect on a specific date. You must define the specific date in the `resumeSpecificDate` field.
+     *
+     * * `FixedPeriodsFromToday`: The subscription resumption takes effect after a specified period based on the today's date. You must specify the `resumePeriods` and `resumePeriodsType` fields to define the period.
+     *
+     */
     resumePolicy?: string;
+    /**
+     * A specific date when the subscription resumption takes effect, in the format yyyy-mm-dd.
+     *
+     * @remarks
+     *
+     * **Note:** This field is only applicable only when the `resumePolicy` field is set to `SpecificDate`.
+     *
+     * The value should not be earlier than the subscription suspension date.
+     *
+     */
     resumeSpecificDate?: Date;
-    runBilling?: boolean;
+    /**
+     * Creates an invoice for a subscription. If you have the Invoice Settlement feature enabled, a credit memo might also be created based on the [invoice and credit memo generation rule](https://knowledgecenter.zuora.com/CB_Billing/Invoice_Settlement/Credit_and_Debit_Memos/Rules_for_Generating_Invoices_and_Credit_Memos).
+     *
+     * @remarks
+     *
+     *
+     * The billing documents generated
+     * in this operation is only for this subscription, not for the entire
+     * customer account.
+     *
+     *
+     * Possible values:
+     *
+     * - `true`: An invoice is created. If you have the Invoice Settlement feature enabled, a credit memo might also be created.
+     *
+     *
+     * - `false`: No invoice is created.
+     *
+     *
+     * **Note:** This field is in Zuora REST API version control. Supported
+     * minor versions are `211.0` or later. To use this field in the method,
+     * you must set the `zuora-version` parameter to the minor version number
+     * in the request header.
+     *
+     */
+    runBilling?: PUTSubscriptionSuspendTypeRunBillingEnum;
+    /**
+     * The length of the period used to specify when the subscription suspension takes effect. The subscription suspension takes effect after a specified period based on today's date. You must use this field together with the `suspendPeriodsType` field to specify the period.
+     *
+     * @remarks
+     *
+     * **Note:** This field is only applicable only when the suspendPolicy field is set to FixedPeriodsFromToday.
+     *
+     */
     suspendPeriods?: string;
+    /**
+     * The period type used to define when the subscription suspension takes effect. The subscription suspension takes effect after a specified period based on today's date. You must use this field together with the suspendPeriods field to specify the period.
+     *
+     * @remarks
+     *
+     * Type: string (enum)
+     *
+     * Values: `Day`, `Week`, `Month`, `Year`
+     *
+     * **Note:** This field is only applicable only when the suspendPolicy field is set to FixedPeriodsFromToday.
+     *
+     */
     suspendPeriodsType?: string;
+    /**
+     * Suspend methods. Specify a way to suspend a subscription.
+     *
+     * @remarks
+     *
+     * Value:
+     *
+     * * `Today`: The subscription suspension takes effect on today's date.
+     * * `EndOfLastInvoicePeriod`: The subscription suspension takes effect at the end of the last invoice period. The suspend date defaults to a date that is one day after the last invoiced period. You can choose this option to avoid any negative invoices (credits) issued back to the customer after the subscription suspension.
+     * * `SpecificDate`: The subscription suspension takes effect on a specific date. You must define the specific date in the `suspendSpecificDate` field.
+     * * `FixedPeriodsFromToday`: The subscription suspension takes effect after a specified period based on today's date. You must specify the `suspendPeriods` and `suspendPeriodsType` fields to define the period.
+     *
+     */
     suspendPolicy: string;
+    /**
+     * A specific date when the subscription suspension takes effect, in the format yyyy-mm-dd.
+     *
+     * @remarks
+     *
+     * **Note:** This field is only applicable only when the suspendPolicy field is set to SpecificDate.
+     *
+     * The value should not be earlier than the subscription contract effective date, later than the subscription term end date, or within a period for which the customer has been invoiced.
+     *
+     */
     suspendSpecificDate?: Date;
+    /**
+     * Date through which to calculate charges if an invoice or a credit memo is generated, as
+     *
+     * @remarks
+     * yyyy-mm-dd. Default is current date.
+     *
+     *
+     * **Note:** The credit memo is only available if you have the Invoice Settlement feature enabled.
+     *
+     *
+     * This field is in Zuora REST API version control. Supported minor
+     * versions are `211.0` and later. To use this field in the method, you
+     * must set the  `zuora-version` parameter to the minor version number in
+     * the request header.
+     *
+     */
     targetDate?: Date;
 }

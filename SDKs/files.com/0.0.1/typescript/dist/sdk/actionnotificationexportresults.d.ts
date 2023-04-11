@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Operations about action_notification_export_results
+ */
 export declare class ActionNotificationExportResults {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,10 @@ export declare class ActionNotificationExportResults {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getActionNotificationExportResults - List Action Notification Export Results
-     *
      * List Action Notification Export Results
-    **/
+     *
+     * @remarks
+     * List Action Notification Export Results
+     */
     getActionNotificationExportResults(req: operations.GetActionNotificationExportResultsRequest, config?: AxiosRequestConfig): Promise<operations.GetActionNotificationExportResultsResponse>;
 }

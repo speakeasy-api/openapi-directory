@@ -5,7 +5,7 @@ import { EndpointLocation } from "./endpointlocation";
 import { EndpointUser } from "./endpointuser";
 /**
  * Specifies the properties and attributes of an endpoint that's associated with an event.
-**/
+ */
 export declare class PublicEndpoint extends SpeakeasyBase {
     address?: string;
     attributes?: Record<string, string[]>;

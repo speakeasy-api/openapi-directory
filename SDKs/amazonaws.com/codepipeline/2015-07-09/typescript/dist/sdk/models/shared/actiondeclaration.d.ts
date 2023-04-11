@@ -4,7 +4,7 @@ import { InputArtifact } from "./inputartifact";
 import { OutputArtifact } from "./outputartifact";
 /**
  * Represents information about an action declaration.
-**/
+ */
 export declare class ActionDeclaration extends SpeakeasyBase {
     actionTypeId: ActionTypeId;
     configuration?: Record<string, string>;

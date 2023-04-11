@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateEvaluationXAmzTargetEnum {
-    AmazonMl20141212UpdateEvaluation = "AmazonML_20141212.UpdateEvaluation"
+    AmazonML20141212UpdateEvaluation = "AmazonML_20141212.UpdateEvaluation"
 }
-export declare class UpdateEvaluationHeaders extends SpeakeasyBase {
+export declare class UpdateEvaluationRequest extends SpeakeasyBase {
+    updateEvaluationInput: shared.UpdateEvaluationInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class UpdateEvaluationHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateEvaluationXAmzTargetEnum;
 }
-export declare class UpdateEvaluationRequest extends SpeakeasyBase {
-    headers: UpdateEvaluationHeaders;
-    request: shared.UpdateEvaluationInput;
-}
 export declare class UpdateEvaluationResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     updateEvaluationOutput?: shared.UpdateEvaluationOutput;
 }

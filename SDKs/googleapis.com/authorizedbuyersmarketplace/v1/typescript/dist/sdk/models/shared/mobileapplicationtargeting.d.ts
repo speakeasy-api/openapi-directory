@@ -2,7 +2,10 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { FirstPartyMobileApplicationTargeting } from "./firstpartymobileapplicationtargeting";
 /**
  * Mobile application targeting settings.
-**/
+ */
 export declare class MobileApplicationTargeting extends SpeakeasyBase {
+    /**
+     * Represents a list of targeted and excluded mobile application IDs that publishers own. Android App ID, for example, com.google.android.apps.maps, can be found in Google Play Store URL. iOS App ID (which is a number) can be found at the end of iTunes store URL. First party mobile applications is either included or excluded.
+     */
     firstPartyTargeting?: FirstPartyMobileApplicationTargeting;
 }

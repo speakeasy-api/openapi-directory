@@ -1,14 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { RelationalDatabaseHardware } from "./relationaldatabasehardware";
-import { ResourceLocation } from "./resourcelocation";
-import { RelationalDatabaseEndpoint } from "./relationaldatabaseendpoint";
 import { PendingMaintenanceAction } from "./pendingmaintenanceaction";
 import { PendingModifiedRelationalDatabaseValues } from "./pendingmodifiedrelationaldatabasevalues";
+import { RelationalDatabaseEndpoint } from "./relationaldatabaseendpoint";
+import { RelationalDatabaseHardware } from "./relationaldatabasehardware";
+import { ResourceLocation } from "./resourcelocation";
 import { ResourceTypeEnum } from "./resourcetypeenum";
 import { Tag } from "./tag";
 /**
  * Describes a database.
-**/
+ */
 export declare class RelationalDatabase extends SpeakeasyBase {
     arn?: string;
     backupRetentionEnabled?: boolean;

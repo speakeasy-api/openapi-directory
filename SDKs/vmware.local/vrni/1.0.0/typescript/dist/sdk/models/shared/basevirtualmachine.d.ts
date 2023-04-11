@@ -1,8 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { RuleSet } from "./ruleset";
 import { EntityTypeEnum } from "./entitytypeenum";
 import { IpV4Address } from "./ipv4address";
 import { Reference } from "./reference";
+import { RuleSet } from "./ruleset";
+/**
+ * OK
+ */
 export declare class BaseVirtualMachine extends SpeakeasyBase {
     defaultGateway?: string;
     destinationFirewallRules?: RuleSet[];

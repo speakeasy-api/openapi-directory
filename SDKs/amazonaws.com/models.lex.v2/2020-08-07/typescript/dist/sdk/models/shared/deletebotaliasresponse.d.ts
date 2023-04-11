@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { BotAliasStatusEnum } from "./botaliasstatusenum";
+/**
+ * Success
+ */
 export declare class DeleteBotAliasResponse extends SpeakeasyBase {
     botAliasId?: string;
     botAliasStatus?: BotAliasStatusEnum;

@@ -1,8 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { AccountReference16Ch } from "./accountreference16ch";
+import { AccountReference16CH } from "./accountreference16ch";
 import { Amount } from "./amount";
 /**
  * JSON Request body for the "Confirmation of funds service".
+ *
+ * @remarks
  *
  * <table>
  * <tr>
@@ -31,10 +33,29 @@ import { Amount } from "./amount";
  * </tr>
  * </table>
  *
-**/
+ */
 export declare class ConfirmationOfFunds extends SpeakeasyBase {
-    account: AccountReference16Ch;
+    /**
+     * Reference to an account by either
+     *
+     * @remarks
+     *   * IBAN, of a payment accounts, or
+     *   * otherAccountIdentification, for payment accounts if there is no IBAN
+     * adapted from ISO pain.001.001.03.ch.02 CashAccount16-CH_IdTpCcy
+     *
+     */
+    account: AccountReference16CH;
+    /**
+     * Card Number of the card issued by the PIISP.
+     *
+     * @remarks
+     * Should be delivered if available.
+     *
+     */
     cardNumber?: string;
     instructedAmount: Amount;
+    /**
+     * Name payee.
+     */
     payee?: string;
 }

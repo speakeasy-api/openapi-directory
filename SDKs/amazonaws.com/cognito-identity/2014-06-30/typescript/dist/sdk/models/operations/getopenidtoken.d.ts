@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetOpenIdTokenXAmzTargetEnum {
-    AwsCognitoIdentityServiceGetOpenIdToken = "AWSCognitoIdentityService.GetOpenIdToken"
+    AWSCognitoIdentityServiceGetOpenIdToken = "AWSCognitoIdentityService.GetOpenIdToken"
 }
-export declare class GetOpenIdTokenHeaders extends SpeakeasyBase {
+export declare class GetOpenIdTokenRequest extends SpeakeasyBase {
+    getOpenIdTokenInput: shared.GetOpenIdTokenInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,19 +15,40 @@ export declare class GetOpenIdTokenHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetOpenIdTokenXAmzTargetEnum;
 }
-export declare class GetOpenIdTokenRequest extends SpeakeasyBase {
-    headers: GetOpenIdTokenHeaders;
-    request: shared.GetOpenIdTokenInput;
-}
 export declare class GetOpenIdTokenResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * ExternalServiceException
+     */
     externalServiceException?: any;
+    /**
+     * Success
+     */
     getOpenIdTokenResponse?: shared.GetOpenIdTokenResponse;
+    /**
+     * InternalErrorException
+     */
     internalErrorException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * NotAuthorizedException
+     */
     notAuthorizedException?: any;
-    resourceConflictException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceConflictException
+     */
+    resourceConflictException?: any;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

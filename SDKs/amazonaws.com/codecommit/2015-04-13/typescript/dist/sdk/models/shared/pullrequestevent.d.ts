@@ -9,7 +9,7 @@ import { PullRequestSourceReferenceUpdatedEventMetadata } from "./pullrequestsou
 import { PullRequestStatusChangedEventMetadata } from "./pullrequeststatuschangedeventmetadata";
 /**
  * Returns information about a pull request event.
-**/
+ */
 export declare class PullRequestEvent extends SpeakeasyBase {
     actorArn?: string;
     approvalRuleEventMetadata?: ApprovalRuleEventMetadata;

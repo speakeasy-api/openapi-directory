@@ -2,6 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { BatchInferenceJobConfig } from "./batchinferencejobconfig";
 import { BatchInferenceJobInput } from "./batchinferencejobinput";
 import { BatchInferenceJobOutput } from "./batchinferencejoboutput";
+import { Tag } from "./tag";
 export declare class CreateBatchInferenceJobRequest extends SpeakeasyBase {
     batchInferenceJobConfig?: BatchInferenceJobConfig;
     filterArn?: string;
@@ -11,4 +12,5 @@ export declare class CreateBatchInferenceJobRequest extends SpeakeasyBase {
     numResults?: number;
     roleArn: string;
     solutionVersionArn: string;
+    tags?: Tag[];
 }

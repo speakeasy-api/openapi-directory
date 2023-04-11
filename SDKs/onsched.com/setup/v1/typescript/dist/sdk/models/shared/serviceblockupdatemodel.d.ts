@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { RepeatUpdateModel } from "./repeatupdatemodel";
+/**
+ * Service Block update model
+ */
 export declare class ServiceBlockUpdateModel extends SpeakeasyBase {
     endDate?: Date;
     endTime?: number;

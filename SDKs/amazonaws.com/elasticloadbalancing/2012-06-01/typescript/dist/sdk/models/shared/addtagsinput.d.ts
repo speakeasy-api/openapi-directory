@@ -1,0 +1,9 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { Tag } from "./tag";
+/**
+ * Contains the parameters for AddTags.
+ */
+export declare class AddTagsInput extends SpeakeasyBase {
+    loadBalancerNames: string[];
+    tags: Tag[];
+}

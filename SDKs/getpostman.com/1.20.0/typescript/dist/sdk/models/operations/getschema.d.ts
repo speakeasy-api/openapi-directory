@@ -1,10 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetSchemaPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetSchemaRequest extends SpeakeasyBase {
     apiId: string;
     apiVersionId: string;
     schemaId: string;
 }
-export declare class GetSchema200ApplicationJsonSchema extends SpeakeasyBase {
+export declare class GetSchema200ApplicationJSONSchema extends SpeakeasyBase {
     apiVersion?: string;
     createdAt?: string;
     createdBy?: string;
@@ -14,14 +15,18 @@ export declare class GetSchema200ApplicationJsonSchema extends SpeakeasyBase {
     updateBy?: string;
     updatedAt?: string;
 }
-export declare class GetSchema200ApplicationJson extends SpeakeasyBase {
-    schema?: GetSchema200ApplicationJsonSchema;
-}
-export declare class GetSchemaRequest extends SpeakeasyBase {
-    pathParams: GetSchemaPathParams;
+/**
+ * Get schema
+ */
+export declare class GetSchema200ApplicationJSON extends SpeakeasyBase {
+    schema?: GetSchema200ApplicationJSONSchema;
 }
 export declare class GetSchemaResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getSchema200ApplicationJSONObject?: GetSchema200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Get schema
+     */
+    getSchema200ApplicationJSONObject?: GetSchema200ApplicationJSON;
 }

@@ -1,15 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { Resource } from "./resource";
+/**
+ * Prinicipal/Identity for whom the role need to assigned.
+ */
 export declare enum RoleGrantPrincipalEnum {
     PrincipalUnspecified = "PRINCIPAL_UNSPECIFIED",
     ConnectorSa = "CONNECTOR_SA"
 }
 /**
  * This configuration defines all the Cloud IAM roles that needs to be granted to a particular GCP resource for the selected prinicpal like service account. These configurations will let UI display to customers what IAM roles need to be granted by them. Or these configurations can be used by the UI to render a 'grant' button to do the same on behalf of the user.
-**/
+ */
 export declare class RoleGrant extends SpeakeasyBase {
+    /**
+     * Template that UI can use to provide helper text to customers.
+     */
     helperTextTemplate?: string;
+    /**
+     * Prinicipal/Identity for whom the role need to assigned.
+     */
     principal?: RoleGrantPrincipalEnum;
+    /**
+     * Resource definition
+     */
     resource?: Resource;
+    /**
+     * List of roles that need to be granted.
+     */
     roles?: string[];
 }

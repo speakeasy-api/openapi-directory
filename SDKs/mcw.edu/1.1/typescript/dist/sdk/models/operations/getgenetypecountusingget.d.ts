@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetGeneTypeCountUsingGetPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETGeneTypeCountUsingGETRequest extends SpeakeasyBase {
+    /**
+     * dateYYYYMMDD
+     */
     dateYYYYMMDD: string;
+    /**
+     * speciesTypeKey
+     */
     speciesTypeKey: number;
 }
-export declare class GetGeneTypeCountUsingGetRequest extends SpeakeasyBase {
-    pathParams: GetGeneTypeCountUsingGetPathParams;
-}
-export declare class GetGeneTypeCountUsingGetResponse extends SpeakeasyBase {
+export declare class GETGeneTypeCountUsingGETResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

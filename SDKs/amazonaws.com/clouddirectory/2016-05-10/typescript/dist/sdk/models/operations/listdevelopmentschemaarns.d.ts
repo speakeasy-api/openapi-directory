@@ -1,10 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListDevelopmentSchemaArnsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
+import { AxiosResponse } from "axios";
+export declare class ListDevelopmentSchemaArnsRequestBody extends SpeakeasyBase {
+    /**
+     * The maximum number of results to retrieve.
+     */
+    maxResults?: number;
+    /**
+     * The pagination token.
+     */
     nextToken?: string;
 }
-export declare class ListDevelopmentSchemaArnsHeaders extends SpeakeasyBase {
+export declare class ListDevelopmentSchemaArnsRequest extends SpeakeasyBase {
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
+    requestBody: ListDevelopmentSchemaArnsRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,25 +29,44 @@ export declare class ListDevelopmentSchemaArnsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class ListDevelopmentSchemaArnsRequestBody extends SpeakeasyBase {
-    maxResults?: number;
-    nextToken?: string;
-}
-export declare class ListDevelopmentSchemaArnsRequest extends SpeakeasyBase {
-    queryParams: ListDevelopmentSchemaArnsQueryParams;
-    headers: ListDevelopmentSchemaArnsHeaders;
-    request: ListDevelopmentSchemaArnsRequestBody;
-}
 export declare class ListDevelopmentSchemaArnsResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: shared.AccessDeniedException;
     contentType: string;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: shared.InternalServiceException;
+    /**
+     * InvalidArnException
+     */
     invalidArnException?: shared.InvalidArnException;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: shared.InvalidNextTokenException;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: shared.LimitExceededException;
+    /**
+     * Success
+     */
     listDevelopmentSchemaArnsResponse?: shared.ListDevelopmentSchemaArnsResponse;
-    resourceNotFoundException?: shared.ResourceNotFoundException;
-    retryableConflictException?: shared.RetryableConflictException;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: shared.ResourceNotFoundException;
+    /**
+     * RetryableConflictException
+     */
+    retryableConflictException?: shared.RetryableConflictException;
+    /**
+     * ValidationException
+     */
     validationException?: shared.ValidationException;
 }

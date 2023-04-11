@@ -4,7 +4,7 @@ import { ReplicationSubnetGroup } from "./replicationsubnetgroup";
 import { VpcSecurityGroupMembership } from "./vpcsecuritygroupmembership";
 /**
  * Provides information that defines a replication instance.
-**/
+ */
 export declare class ReplicationInstance extends SpeakeasyBase {
     allocatedStorage?: number;
     autoMinorVersionUpgrade?: boolean;
@@ -15,15 +15,17 @@ export declare class ReplicationInstance extends SpeakeasyBase {
     instanceCreateTime?: Date;
     kmsKeyId?: string;
     multiAZ?: boolean;
+    networkType?: string;
     pendingModifiedValues?: ReplicationPendingModifiedValues;
     preferredMaintenanceWindow?: string;
     publiclyAccessible?: boolean;
     replicationInstanceArn?: string;
     replicationInstanceClass?: string;
     replicationInstanceIdentifier?: string;
-    replicationInstancePrivateIpAddress?: Record<string, any>;
+    replicationInstanceIpv6Addresses?: string[];
+    replicationInstancePrivateIpAddress?: string;
     replicationInstancePrivateIpAddresses?: string[];
-    replicationInstancePublicIpAddress?: Record<string, any>;
+    replicationInstancePublicIpAddress?: string;
     replicationInstancePublicIpAddresses?: string[];
     replicationInstanceStatus?: string;
     replicationSubnetGroup?: ReplicationSubnetGroup;

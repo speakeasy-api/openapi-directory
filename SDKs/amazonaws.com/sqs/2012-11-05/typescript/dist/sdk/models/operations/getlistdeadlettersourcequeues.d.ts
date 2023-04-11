@@ -1,21 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetListDeadLetterSourceQueuesPathParams extends SpeakeasyBase {
-    accountNumber: number;
-    queueName: string;
-}
-export declare enum GetListDeadLetterSourceQueuesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETListDeadLetterSourceQueuesActionEnum {
     ListDeadLetterSourceQueues = "ListDeadLetterSourceQueues"
 }
-export declare enum GetListDeadLetterSourceQueuesVersionEnum {
+export declare enum GETListDeadLetterSourceQueuesVersionEnum {
     TwoThousandAndTwelve1105 = "2012-11-05"
 }
-export declare class GetListDeadLetterSourceQueuesQueryParams extends SpeakeasyBase {
-    action: GetListDeadLetterSourceQueuesActionEnum;
+export declare class GETListDeadLetterSourceQueuesRequest extends SpeakeasyBase {
+    /**
+     * The AWS account number
+     */
+    accountNumber: number;
+    action: GETListDeadLetterSourceQueuesActionEnum;
+    /**
+     * Maximum number of results to include in the response. Value range is 1 to 1000. You must set <code>MaxResults</code> to receive a value for <code>NextToken</code> in the response.
+     */
     maxResults?: number;
+    /**
+     * Pagination token to request the next set of results.
+     */
     nextToken?: string;
-    version: GetListDeadLetterSourceQueuesVersionEnum;
-}
-export declare class GetListDeadLetterSourceQueuesHeaders extends SpeakeasyBase {
+    /**
+     * The name of the queue
+     */
+    queueName: string;
+    version: GETListDeadLetterSourceQueuesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -24,13 +33,9 @@ export declare class GetListDeadLetterSourceQueuesHeaders extends SpeakeasyBase 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetListDeadLetterSourceQueuesRequest extends SpeakeasyBase {
-    pathParams: GetListDeadLetterSourceQueuesPathParams;
-    queryParams: GetListDeadLetterSourceQueuesQueryParams;
-    headers: GetListDeadLetterSourceQueuesHeaders;
-}
-export declare class GetListDeadLetterSourceQueuesResponse extends SpeakeasyBase {
+export declare class GETListDeadLetterSourceQueuesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

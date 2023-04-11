@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeLoadBalancerPoliciesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeLoadBalancerPoliciesActionEnum {
     DescribeLoadBalancerPolicies = "DescribeLoadBalancerPolicies"
 }
-export declare enum GetDescribeLoadBalancerPoliciesVersionEnum {
+export declare enum GETDescribeLoadBalancerPoliciesVersionEnum {
     TwoThousandAndTwelve0601 = "2012-06-01"
 }
-export declare class GetDescribeLoadBalancerPoliciesQueryParams extends SpeakeasyBase {
-    action: GetDescribeLoadBalancerPoliciesActionEnum;
+export declare class GETDescribeLoadBalancerPoliciesRequest extends SpeakeasyBase {
+    action: GETDescribeLoadBalancerPoliciesActionEnum;
+    /**
+     * The name of the load balancer.
+     */
     loadBalancerName?: string;
+    /**
+     * The names of the policies.
+     */
     policyNames?: string[];
-    version: GetDescribeLoadBalancerPoliciesVersionEnum;
-}
-export declare class GetDescribeLoadBalancerPoliciesHeaders extends SpeakeasyBase {
+    version: GETDescribeLoadBalancerPoliciesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetDescribeLoadBalancerPoliciesHeaders extends SpeakeasyBas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeLoadBalancerPoliciesRequest extends SpeakeasyBase {
-    queryParams: GetDescribeLoadBalancerPoliciesQueryParams;
-    headers: GetDescribeLoadBalancerPoliciesHeaders;
-}
-export declare class GetDescribeLoadBalancerPoliciesResponse extends SpeakeasyBase {
+export declare class GETDescribeLoadBalancerPoliciesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

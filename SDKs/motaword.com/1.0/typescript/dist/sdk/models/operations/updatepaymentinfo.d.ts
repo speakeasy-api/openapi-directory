@@ -1,11 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdatePaymentInfoRequest extends SpeakeasyBase {
-    request?: shared.UpdatePaymentInfo;
-}
+import { AxiosResponse } from "axios";
 export declare class UpdatePaymentInfoResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * UserNotFound
+     */
     error?: shared.ErrorT;
+    /**
+     * Successful operation
+     */
     paymentInfo?: shared.PaymentInfo;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,28 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { NullableIntegration } from "./nullableintegration";
+import { NullableSimpleUser } from "./nullablesimpleuser";
 /**
- * Simple User
-**/
-export declare class DeploymentStatusSimpleUser extends SpeakeasyBase {
-    avatarUrl: string;
-    eventsUrl: string;
-    followersUrl: string;
-    followingUrl: string;
-    gistsUrl: string;
-    gravatarId: string;
-    htmlUrl: string;
-    id: number;
-    login: string;
-    nodeId: string;
-    organizationsUrl: string;
-    receivedEventsUrl: string;
-    reposUrl: string;
-    siteAdmin: boolean;
-    starredAt?: string;
-    starredUrl: string;
-    subscriptionsUrl: string;
-    type: string;
-    url: string;
-}
+ * The state of the status.
+ */
 export declare enum DeploymentStatusStateEnum {
     Error = "error",
     Failure = "failure",
@@ -34,20 +15,44 @@ export declare enum DeploymentStatusStateEnum {
 }
 /**
  * The status of a deployment.
-**/
+ */
 export declare class DeploymentStatus extends SpeakeasyBase {
     createdAt: Date;
-    creator: DeploymentStatusSimpleUser;
+    /**
+     * Simple User
+     */
+    creator: NullableSimpleUser;
     deploymentUrl: string;
+    /**
+     * A short description of the status.
+     */
     description: string;
+    /**
+     * The environment of the deployment that the status is for.
+     */
     environment?: string;
+    /**
+     * The URL for accessing your environment.
+     */
     environmentUrl?: string;
     id: number;
+    /**
+     * The URL to associate with this status.
+     */
     logUrl?: string;
     nodeId: string;
-    performedViaGithubApp?: Record<string, any>;
+    /**
+     * GitHub apps are a new way to extend GitHub. They can be installed directly on organizations and user accounts and granted access to specific repositories. They come with granular permissions and built-in webhooks. GitHub apps are first class actors within GitHub.
+     */
+    performedViaGithubApp?: NullableIntegration;
     repositoryUrl: string;
+    /**
+     * The state of the status.
+     */
     state: DeploymentStatusStateEnum;
+    /**
+     * Deprecated: the URL to associate with this status.
+     */
     targetUrl: string;
     updatedAt: Date;
     url: string;

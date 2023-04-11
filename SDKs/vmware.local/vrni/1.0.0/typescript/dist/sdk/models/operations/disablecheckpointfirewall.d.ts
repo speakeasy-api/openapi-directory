@@ -1,16 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class DisableCheckpointFirewallPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DisableCheckpointFirewallSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
+    apiKeyAuth: string;
 }
 export declare class DisableCheckpointFirewallRequest extends SpeakeasyBase {
-    pathParams: DisableCheckpointFirewallPathParams;
-    security: DisableCheckpointFirewallSecurity;
+    /**
+     * entity id
+     */
+    id: string;
 }
 export declare class DisableCheckpointFirewallResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

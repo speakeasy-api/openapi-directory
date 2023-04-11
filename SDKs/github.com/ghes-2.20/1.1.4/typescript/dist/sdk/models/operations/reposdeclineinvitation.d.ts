@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReposDeclineInvitationPathParams extends SpeakeasyBase {
-    invitationId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ReposDeclineInvitationRequest extends SpeakeasyBase {
-    pathParams: ReposDeclineInvitationPathParams;
+    /**
+     * invitation_id parameter
+     */
+    invitationId: number;
 }
 export declare class ReposDeclineInvitationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Forbidden
+     */
     basicError?: shared.BasicError;
 }

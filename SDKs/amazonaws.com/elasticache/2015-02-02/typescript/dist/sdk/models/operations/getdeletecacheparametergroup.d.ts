@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteCacheParameterGroupActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteCacheParameterGroupActionEnum {
     DeleteCacheParameterGroup = "DeleteCacheParameterGroup"
 }
-export declare enum GetDeleteCacheParameterGroupVersionEnum {
+export declare enum GETDeleteCacheParameterGroupVersionEnum {
     TwoThousandAndFifteen0202 = "2015-02-02"
 }
-export declare class GetDeleteCacheParameterGroupQueryParams extends SpeakeasyBase {
-    action: GetDeleteCacheParameterGroupActionEnum;
+export declare class GETDeleteCacheParameterGroupRequest extends SpeakeasyBase {
+    action: GETDeleteCacheParameterGroupActionEnum;
+    /**
+     * <p>The name of the cache parameter group to delete.</p> <note> <p>The specified cache security group must not be associated with any clusters.</p> </note>
+     */
     cacheParameterGroupName: string;
-    version: GetDeleteCacheParameterGroupVersionEnum;
-}
-export declare class GetDeleteCacheParameterGroupHeaders extends SpeakeasyBase {
+    version: GETDeleteCacheParameterGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDeleteCacheParameterGroupHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteCacheParameterGroupRequest extends SpeakeasyBase {
-    queryParams: GetDeleteCacheParameterGroupQueryParams;
-    headers: GetDeleteCacheParameterGroupHeaders;
-}
-export declare class GetDeleteCacheParameterGroupResponse extends SpeakeasyBase {
+export declare class GETDeleteCacheParameterGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

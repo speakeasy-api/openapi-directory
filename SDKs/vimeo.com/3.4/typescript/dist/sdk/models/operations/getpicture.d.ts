@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetPicturePathParams extends SpeakeasyBase {
-    portraitsetId: number;
-    userId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetPictureRequest extends SpeakeasyBase {
-    pathParams: GetPicturePathParams;
+    /**
+     * The ID of the picture.
+     */
+    portraitsetId: number;
+    /**
+     * The ID of the user.
+     */
+    userId: number;
 }
 export declare class GetPictureResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The picture was returned.
+     */
     picture?: shared.Picture;
 }

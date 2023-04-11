@@ -1,44 +1,57 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateSuiteDefinitionRequest, CreateSuiteDefinitionResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CreateSuiteDefinitionRequest,
+  CreateSuiteDefinitionResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  ProtocolEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: CreateSuiteDefinitionRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
+});
+
+const req: CreateSuiteDefinitionRequest = {
+  requestBody: {
     suiteDefinitionConfiguration: {
-      devicePermissionRoleArn: "voluptas",
+      devicePermissionRoleArn: "corrupti",
       devices: [
         {
-          certificateArn: "et",
-          thingArn: "nihil",
+          certificateArn: "distinctio",
+          thingArn: "quibusdam",
+        },
+        {
+          certificateArn: "unde",
+          thingArn: "nulla",
+        },
+        {
+          certificateArn: "corrupti",
+          thingArn: "illum",
         },
       ],
-      intendedForQualification: true,
-      rootGroup: "dicta",
-      suiteDefinitionName: "debitis",
+      intendedForQualification: false,
+      isLongDurationTest: false,
+      protocol: ProtocolEnum.MqttV311,
+      rootGroup: "error",
+      suiteDefinitionName: "deserunt",
     },
     tags: {
-      "et": "ut",
+      "iure": "magnam",
+      "debitis": "ipsa",
     },
   },
+  xAmzAlgorithm: "delectus",
+  xAmzContentSha256: "tempora",
+  xAmzCredential: "suscipit",
+  xAmzDate: "molestiae",
+  xAmzSecurityToken: "minus",
+  xAmzSignature: "placeat",
+  xAmzSignedHeaders: "voluptatum",
 };
 
 sdk.createSuiteDefinition(req).then((res: CreateSuiteDefinitionResponse | AxiosError) => {

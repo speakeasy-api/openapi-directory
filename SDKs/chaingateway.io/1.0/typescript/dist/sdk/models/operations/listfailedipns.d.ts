@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListFailedIpNsHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListFailedIPNsRequest extends SpeakeasyBase {
+    /**
+     * API Key
+     */
     authorization: string;
     contentType: string;
 }
-export declare class ListFailedIpNsRequest extends SpeakeasyBase {
-    headers: ListFailedIpNsHeaders;
-}
-export declare class ListFailedIpNsResponse extends SpeakeasyBase {
+export declare class ListFailedIPNsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    listFailedIPNs?: shared.ListFailedIpNs;
+    rawResponse?: AxiosResponse;
+    listFailedIPNs?: shared.ListFailedIPNs;
 }

@@ -4,7 +4,7 @@ import { PropertyNotification } from "./propertynotification";
 import { PropertyType } from "./propertytype";
 /**
  * Contains asset property information.
-**/
+ */
 export declare class Property extends SpeakeasyBase {
     alias?: string;
     dataType: PropertyDataTypeEnum;

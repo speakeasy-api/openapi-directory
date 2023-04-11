@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class GroupItems {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,15 +9,15 @@ export declare class GroupItems {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * youtubeAnalyticsGroupItemsDelete - Removes an item from a group.
-    **/
-    youtubeAnalyticsGroupItemsDelete(req: operations.YoutubeAnalyticsGroupItemsDeleteRequest, config?: AxiosRequestConfig): Promise<operations.YoutubeAnalyticsGroupItemsDeleteResponse>;
+     * Removes an item from a group.
+     */
+    youtubeAnalyticsGroupItemsDelete(req: operations.YoutubeAnalyticsGroupItemsDeleteRequest, security: operations.YoutubeAnalyticsGroupItemsDeleteSecurity, config?: AxiosRequestConfig): Promise<operations.YoutubeAnalyticsGroupItemsDeleteResponse>;
     /**
-     * youtubeAnalyticsGroupItemsInsert - Creates a group item.
-    **/
-    youtubeAnalyticsGroupItemsInsert(req: operations.YoutubeAnalyticsGroupItemsInsertRequest, config?: AxiosRequestConfig): Promise<operations.YoutubeAnalyticsGroupItemsInsertResponse>;
+     * Creates a group item.
+     */
+    youtubeAnalyticsGroupItemsInsert(req: operations.YoutubeAnalyticsGroupItemsInsertRequest, security: operations.YoutubeAnalyticsGroupItemsInsertSecurity, config?: AxiosRequestConfig): Promise<operations.YoutubeAnalyticsGroupItemsInsertResponse>;
     /**
-     * youtubeAnalyticsGroupItemsList - Returns a collection of group items that match the API request parameters.
-    **/
-    youtubeAnalyticsGroupItemsList(req: operations.YoutubeAnalyticsGroupItemsListRequest, config?: AxiosRequestConfig): Promise<operations.YoutubeAnalyticsGroupItemsListResponse>;
+     * Returns a collection of group items that match the API request parameters.
+     */
+    youtubeAnalyticsGroupItemsList(req: operations.YoutubeAnalyticsGroupItemsListRequest, security: operations.YoutubeAnalyticsGroupItemsListSecurity, config?: AxiosRequestConfig): Promise<operations.YoutubeAnalyticsGroupItemsListResponse>;
 }

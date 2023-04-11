@@ -4,6 +4,9 @@ export declare enum ImportResponseStateEnum {
     FinishedSuccess = "FINISHED_SUCCESS",
     FinishedFailed = "FINISHED_FAILED"
 }
+/**
+ * Import status
+ */
 export declare class ImportResponse extends SpeakeasyBase {
     created?: Date;
     errorMessage?: string;

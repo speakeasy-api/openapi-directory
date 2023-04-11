@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum ListVpceConfigurationsXAmzTargetEnum {
-    DeviceFarm20150623ListVpceConfigurations = "DeviceFarm_20150623.ListVPCEConfigurations"
+import { AxiosResponse } from "axios";
+export declare enum ListVPCEConfigurationsXAmzTargetEnum {
+    DeviceFarm20150623ListVPCEConfigurations = "DeviceFarm_20150623.ListVPCEConfigurations"
 }
-export declare class ListVpceConfigurationsHeaders extends SpeakeasyBase {
+export declare class ListVPCEConfigurationsRequest extends SpeakeasyBase {
+    listVPCEConfigurationsRequest: shared.ListVPCEConfigurationsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,16 +13,22 @@ export declare class ListVpceConfigurationsHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: ListVpceConfigurationsXAmzTargetEnum;
+    xAmzTarget: ListVPCEConfigurationsXAmzTargetEnum;
 }
-export declare class ListVpceConfigurationsRequest extends SpeakeasyBase {
-    headers: ListVpceConfigurationsHeaders;
-    request: shared.ListVpceConfigurationsRequest;
-}
-export declare class ListVpceConfigurationsResponse extends SpeakeasyBase {
+export declare class ListVPCEConfigurationsResponse extends SpeakeasyBase {
+    /**
+     * ArgumentException
+     */
     argumentException?: any;
     contentType: string;
-    listVPCEConfigurationsResult?: shared.ListVpceConfigurationsResult;
-    serviceAccountException?: any;
+    /**
+     * Success
+     */
+    listVPCEConfigurationsResult?: shared.ListVPCEConfigurationsResult;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceAccountException
+     */
+    serviceAccountException?: any;
 }

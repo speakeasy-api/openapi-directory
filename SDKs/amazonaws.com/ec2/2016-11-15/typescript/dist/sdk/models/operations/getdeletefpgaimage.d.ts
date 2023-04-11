@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteFpgaImageActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteFpgaImageActionEnum {
     DeleteFpgaImage = "DeleteFpgaImage"
 }
-export declare enum GetDeleteFpgaImageVersionEnum {
+export declare enum GETDeleteFpgaImageVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetDeleteFpgaImageQueryParams extends SpeakeasyBase {
-    action: GetDeleteFpgaImageActionEnum;
+export declare class GETDeleteFpgaImageRequest extends SpeakeasyBase {
+    action: GETDeleteFpgaImageActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
+    /**
+     * The ID of the AFI.
+     */
     fpgaImageId: string;
-    version: GetDeleteFpgaImageVersionEnum;
-}
-export declare class GetDeleteFpgaImageHeaders extends SpeakeasyBase {
+    version: GETDeleteFpgaImageVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetDeleteFpgaImageHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteFpgaImageRequest extends SpeakeasyBase {
-    queryParams: GetDeleteFpgaImageQueryParams;
-    headers: GetDeleteFpgaImageHeaders;
-}
-export declare class GetDeleteFpgaImageResponse extends SpeakeasyBase {
+export declare class GETDeleteFpgaImageResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

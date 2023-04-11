@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeregisterImageActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeregisterImageActionEnum {
     DeregisterImage = "DeregisterImage"
 }
-export declare enum PostDeregisterImageVersionEnum {
+export declare enum POSTDeregisterImageVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDeregisterImageQueryParams extends SpeakeasyBase {
-    action: PostDeregisterImageActionEnum;
-    version: PostDeregisterImageVersionEnum;
-}
-export declare class PostDeregisterImageHeaders extends SpeakeasyBase {
+export declare class POSTDeregisterImageRequest extends SpeakeasyBase {
+    action: POSTDeregisterImageActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeregisterImageVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +18,8 @@ export declare class PostDeregisterImageHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeregisterImageRequest extends SpeakeasyBase {
-    queryParams: PostDeregisterImageQueryParams;
-    headers: PostDeregisterImageHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeregisterImageResponse extends SpeakeasyBase {
+export declare class POSTDeregisterImageResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

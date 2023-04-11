@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Code to uniquely identify the warning type.
+ */
 export declare enum ApiWarningCodeEnum {
     SqlApiWarningCodeUnspecified = "SQL_API_WARNING_CODE_UNSPECIFIED",
     RegionUnreachable = "REGION_UNREACHABLE",
@@ -6,9 +9,18 @@ export declare enum ApiWarningCodeEnum {
 }
 /**
  * An Admin API warning message.
-**/
+ */
 export declare class ApiWarning extends SpeakeasyBase {
+    /**
+     * Code to uniquely identify the warning type.
+     */
     code?: ApiWarningCodeEnum;
+    /**
+     * The warning message.
+     */
     message?: string;
+    /**
+     * The region name for REGION_UNREACHABLE warning.
+     */
     region?: string;
 }

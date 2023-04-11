@@ -1,5 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbClusterSnapshot } from "./dbclustersnapshot";
-export declare class CreateDbClusterSnapshotResult extends SpeakeasyBase {
-    dbClusterSnapshot?: DbClusterSnapshot;
+import { DBClusterSnapshot } from "./dbclustersnapshot";
+/**
+ * Success
+ */
+export declare class CreateDBClusterSnapshotResult extends SpeakeasyBase {
+    /**
+     * <p>Contains the details for an Amazon RDS DB cluster snapshot</p> <p>This data type is used as a response element in the <code>DescribeDBClusterSnapshots</code> action.</p>
+     */
+    dbClusterSnapshot?: DBClusterSnapshot;
 }

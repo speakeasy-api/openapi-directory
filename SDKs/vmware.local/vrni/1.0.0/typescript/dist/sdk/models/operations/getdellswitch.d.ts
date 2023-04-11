@@ -1,17 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetDellSwitchPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetDellSwitchSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
+    apiKeyAuth: string;
 }
 export declare class GetDellSwitchRequest extends SpeakeasyBase {
-    pathParams: GetDellSwitchPathParams;
-    security: GetDellSwitchSecurity;
+    /**
+     * entity id
+     */
+    id: string;
 }
 export declare class GetDellSwitchResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * OK
+     */
     dellSwitchDataSource?: shared.DellSwitchDataSource;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

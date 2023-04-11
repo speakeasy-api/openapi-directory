@@ -1,21 +1,16 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetFoodBrandedBarcodePhpRequest, GetFoodBrandedBarcodePhpResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetFoodBrandedBarcodePhpRequest,
+  GetFoodBrandedBarcodePhpResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetFoodBrandedBarcodePhpRequest = {
-  security: {
-    apiKeyAuth: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  },
-  queryParams: {
-    code: "sit",
-  },
+  code: "corrupti",
 };
 
 sdk.getFoodBrandedBarcodePhp(req).then((res: GetFoodBrandedBarcodePhpResponse | AxiosError) => {

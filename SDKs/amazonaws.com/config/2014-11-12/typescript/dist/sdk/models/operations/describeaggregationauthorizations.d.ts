@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeAggregationAuthorizationsQueryParams extends SpeakeasyBase {
-    limit?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum DescribeAggregationAuthorizationsXAmzTargetEnum {
     StarlingDoveServiceDescribeAggregationAuthorizations = "StarlingDoveService.DescribeAggregationAuthorizations"
 }
-export declare class DescribeAggregationAuthorizationsHeaders extends SpeakeasyBase {
+export declare class DescribeAggregationAuthorizationsRequest extends SpeakeasyBase {
+    describeAggregationAuthorizationsRequest: shared.DescribeAggregationAuthorizationsRequest;
+    /**
+     * Pagination limit
+     */
+    limit?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,16 +23,24 @@ export declare class DescribeAggregationAuthorizationsHeaders extends SpeakeasyB
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeAggregationAuthorizationsXAmzTargetEnum;
 }
-export declare class DescribeAggregationAuthorizationsRequest extends SpeakeasyBase {
-    queryParams: DescribeAggregationAuthorizationsQueryParams;
-    headers: DescribeAggregationAuthorizationsHeaders;
-    request: shared.DescribeAggregationAuthorizationsRequest;
-}
 export declare class DescribeAggregationAuthorizationsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeAggregationAuthorizationsResponse?: shared.DescribeAggregationAuthorizationsResponse;
+    /**
+     * InvalidLimitException
+     */
     invalidLimitException?: any;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

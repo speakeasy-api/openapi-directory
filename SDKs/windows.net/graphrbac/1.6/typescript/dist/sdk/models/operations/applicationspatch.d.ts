@@ -1,23 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ApplicationsPatchPathParams extends SpeakeasyBase {
-    applicationObjectId: string;
-    tenantID: string;
-}
-export declare class ApplicationsPatchQueryParams extends SpeakeasyBase {
-    apiVersion: string;
-}
-export declare class ApplicationsPatchRequests extends SpeakeasyBase {
-    applicationUpdateParameters?: shared.ApplicationUpdateParameters;
-    applicationUpdateParameters1?: shared.ApplicationUpdateParameters;
-}
+import { AxiosResponse } from "axios";
 export declare class ApplicationsPatchRequest extends SpeakeasyBase {
-    pathParams: ApplicationsPatchPathParams;
-    queryParams: ApplicationsPatchQueryParams;
-    request: ApplicationsPatchRequests;
+    /**
+     * Parameters to update an existing application.
+     */
+    applicationUpdateParameters: shared.ApplicationUpdateParameters;
+    /**
+     * Client API version.
+     */
+    apiVersion: string;
+    /**
+     * Application object ID.
+     */
+    applicationObjectId: string;
+    /**
+     * The tenant ID.
+     */
+    tenantID: string;
 }
 export declare class ApplicationsPatchResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Error response describing why the operation failed.
+     */
     graphError?: shared.GraphError;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

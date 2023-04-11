@@ -1,8 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UpdateEventIntegrationPathParams extends SpeakeasyBase {
-    name: string;
+import { AxiosResponse } from "axios";
+export declare class UpdateEventIntegrationRequestBody extends SpeakeasyBase {
+    /**
+     * The description of the event inegration.
+     */
+    description?: string;
 }
-export declare class UpdateEventIntegrationHeaders extends SpeakeasyBase {
+export declare class UpdateEventIntegrationRequest extends SpeakeasyBase {
+    /**
+     * The name of the event integration.
+     */
+    name: string;
+    requestBody: UpdateEventIntegrationRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,21 +20,32 @@ export declare class UpdateEventIntegrationHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class UpdateEventIntegrationRequestBody extends SpeakeasyBase {
-    description?: string;
-}
-export declare class UpdateEventIntegrationRequest extends SpeakeasyBase {
-    pathParams: UpdateEventIntegrationPathParams;
-    headers: UpdateEventIntegrationHeaders;
-    request: UpdateEventIntegrationRequestBody;
-}
 export declare class UpdateEventIntegrationResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InternalServiceError
+     */
     internalServiceError?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * Success
+     */
     updateEventIntegrationResponse?: Record<string, any>;
 }

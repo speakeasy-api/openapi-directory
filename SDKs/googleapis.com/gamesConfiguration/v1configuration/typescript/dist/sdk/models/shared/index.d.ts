@@ -9,5 +9,4 @@ export * from "./leaderboardconfigurationdetail";
 export * from "./leaderboardconfigurationlistresponse";
 export * from "./localizedstring";
 export * from "./localizedstringbundle";
-export * from "./security";
 export * from "./xgafvenum";

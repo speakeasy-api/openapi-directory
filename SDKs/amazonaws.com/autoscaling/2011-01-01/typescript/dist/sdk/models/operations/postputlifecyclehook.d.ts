@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostPutLifecycleHookActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTPutLifecycleHookActionEnum {
     PutLifecycleHook = "PutLifecycleHook"
 }
-export declare enum PostPutLifecycleHookVersionEnum {
+export declare enum POSTPutLifecycleHookVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class PostPutLifecycleHookQueryParams extends SpeakeasyBase {
-    action: PostPutLifecycleHookActionEnum;
-    version: PostPutLifecycleHookVersionEnum;
-}
-export declare class PostPutLifecycleHookHeaders extends SpeakeasyBase {
+export declare class POSTPutLifecycleHookRequest extends SpeakeasyBase {
+    action: POSTPutLifecycleHookActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTPutLifecycleHookVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostPutLifecycleHookHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostPutLifecycleHookRequest extends SpeakeasyBase {
-    queryParams: PostPutLifecycleHookQueryParams;
-    headers: PostPutLifecycleHookHeaders;
-    request?: Uint8Array;
-}
-export declare class PostPutLifecycleHookResponse extends SpeakeasyBase {
+export declare class POSTPutLifecycleHookResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,17 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetRebootDbInstanceActionEnum {
-    RebootDbInstance = "RebootDBInstance"
+import { AxiosResponse } from "axios";
+export declare enum GETRebootDBInstanceActionEnum {
+    RebootDBInstance = "RebootDBInstance"
 }
-export declare enum GetRebootDbInstanceVersionEnum {
+export declare enum GETRebootDBInstanceVersionEnum {
     TwoThousandAndThirteen0212 = "2013-02-12"
 }
-export declare class GetRebootDbInstanceQueryParams extends SpeakeasyBase {
-    action: GetRebootDbInstanceActionEnum;
+export declare class GETRebootDBInstanceRequest extends SpeakeasyBase {
+    action: GETRebootDBInstanceActionEnum;
     dbInstanceIdentifier: string;
     forceFailover?: boolean;
-    version: GetRebootDbInstanceVersionEnum;
-}
-export declare class GetRebootDbInstanceHeaders extends SpeakeasyBase {
+    version: GETRebootDBInstanceVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +19,9 @@ export declare class GetRebootDbInstanceHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetRebootDbInstanceRequest extends SpeakeasyBase {
-    queryParams: GetRebootDbInstanceQueryParams;
-    headers: GetRebootDbInstanceHeaders;
-}
-export declare class GetRebootDbInstanceResponse extends SpeakeasyBase {
+export declare class GETRebootDBInstanceResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

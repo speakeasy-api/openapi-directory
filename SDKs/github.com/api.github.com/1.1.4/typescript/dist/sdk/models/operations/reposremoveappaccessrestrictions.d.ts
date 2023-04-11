@@ -1,20 +1,37 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReposRemoveAppAccessRestrictionsPathParams extends SpeakeasyBase {
-    branch: string;
-    owner: string;
-    repo: string;
-}
-export declare class ReposRemoveAppAccessRestrictionsRequestBody extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ReposRemoveAppAccessRestrictionsRequestBody1 extends SpeakeasyBase {
+    /**
+     * The GitHub Apps that have push access to this branch. Use the slugified version of the app name. **Note**: The list of users, apps, and teams in total is limited to 100 items.
+     */
     apps: string[];
 }
 export declare class ReposRemoveAppAccessRestrictionsRequest extends SpeakeasyBase {
-    pathParams: ReposRemoveAppAccessRestrictionsPathParams;
-    request?: ReposRemoveAppAccessRestrictionsRequestBody;
+    requestBody?: any;
+    /**
+     * The name of the branch. Cannot contain wildcard characters. To use wildcard characters in branch names, use [the GraphQL API](https://docs.github.com/graphql).
+     */
+    branch: string;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    owner: string;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    repo: string;
 }
 export declare class ReposRemoveAppAccessRestrictionsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    integrations?: Record<string, any>[];
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
+    integrations?: shared.Integration[];
+    /**
+     * Validation failed, or the endpoint has been spammed.
+     */
     validationError?: shared.ValidationError;
 }

@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UpdateIpSetResponse extends SpeakeasyBase {
+/**
+ * Success
+ */
+export declare class UpdateIPSetResponse extends SpeakeasyBase {
     changeToken?: string;
 }

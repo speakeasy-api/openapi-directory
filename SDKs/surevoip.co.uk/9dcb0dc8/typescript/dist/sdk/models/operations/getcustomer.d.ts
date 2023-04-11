@@ -1,8 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetCustomerPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetCustomerRequest extends SpeakeasyBase {
+    /**
+     * Account ID of customer
+     */
     account: number;
 }
-export declare class GetCustomer200ApplicationJson extends SpeakeasyBase {
+/**
+ * Found
+ */
+export declare class GetCustomer200ApplicationJSON extends SpeakeasyBase {
     address?: string;
     balance?: number;
     city?: string;
@@ -19,11 +26,12 @@ export declare class GetCustomer200ApplicationJson extends SpeakeasyBase {
     state?: string;
     username?: number;
 }
-export declare class GetCustomerRequest extends SpeakeasyBase {
-    pathParams: GetCustomerPathParams;
-}
 export declare class GetCustomerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getCustomer200ApplicationJSONObject?: GetCustomer200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Found
+     */
+    getCustomer200ApplicationJSONObject?: GetCustomer200ApplicationJSON;
 }

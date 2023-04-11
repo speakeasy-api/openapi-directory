@@ -1,15 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * API Key object
-**/
-export declare class ApiKeyInput extends SpeakeasyBase {
+ */
+export declare class APIKeyInput extends SpeakeasyBase {
+    /**
+     * Custom name for the resource
+     */
     name?: string;
 }
 /**
  * API Key object
-**/
-export declare class ApiKey extends SpeakeasyBase {
+ */
+export declare class APIKey extends SpeakeasyBase {
+    /**
+     * Object id.
+     */
     id?: string;
+    /**
+     * Authentication token
+     */
     key?: string;
+    /**
+     * Custom name for the resource
+     */
     name?: string;
 }

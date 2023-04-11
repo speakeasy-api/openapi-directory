@@ -1,20 +1,39 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class EnterpriseAdminListPreReceiveHooksForOrgPathParams extends SpeakeasyBase {
-    org: string;
-}
-export declare class EnterpriseAdminListPreReceiveHooksForOrgQueryParams extends SpeakeasyBase {
-    direction?: shared.DirectionEnum;
-    page?: number;
-    perPage?: number;
-    sort?: shared.DirectionEnum2;
+import { AxiosResponse } from "axios";
+/**
+ * The sort order for the response collection.
+ */
+export declare enum EnterpriseAdminListPreReceiveHooksForOrgSortEnum {
+    Created = "created",
+    Updated = "updated",
+    Name = "name"
 }
 export declare class EnterpriseAdminListPreReceiveHooksForOrgRequest extends SpeakeasyBase {
-    pathParams: EnterpriseAdminListPreReceiveHooksForOrgPathParams;
-    queryParams: EnterpriseAdminListPreReceiveHooksForOrgQueryParams;
+    /**
+     * One of `asc` (ascending) or `desc` (descending).
+     */
+    direction?: shared.DirectionEnum;
+    org: string;
+    /**
+     * Page number of the results to fetch.
+     */
+    page?: number;
+    /**
+     * Results per page (max 100)
+     */
+    perPage?: number;
+    /**
+     * The sort order for the response collection.
+     */
+    sort?: EnterpriseAdminListPreReceiveHooksForOrgSortEnum;
 }
 export declare class EnterpriseAdminListPreReceiveHooksForOrgResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     orgPreReceiveHooks?: shared.OrgPreReceiveHook[];
 }

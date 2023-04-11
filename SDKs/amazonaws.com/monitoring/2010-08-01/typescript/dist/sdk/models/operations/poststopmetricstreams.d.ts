@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostStopMetricStreamsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTStopMetricStreamsActionEnum {
     StopMetricStreams = "StopMetricStreams"
 }
-export declare enum PostStopMetricStreamsVersionEnum {
+export declare enum POSTStopMetricStreamsVersionEnum {
     TwoThousandAndTen0801 = "2010-08-01"
 }
-export declare class PostStopMetricStreamsQueryParams extends SpeakeasyBase {
-    action: PostStopMetricStreamsActionEnum;
-    version: PostStopMetricStreamsVersionEnum;
-}
-export declare class PostStopMetricStreamsHeaders extends SpeakeasyBase {
+export declare class POSTStopMetricStreamsRequest extends SpeakeasyBase {
+    action: POSTStopMetricStreamsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTStopMetricStreamsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostStopMetricStreamsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostStopMetricStreamsRequest extends SpeakeasyBase {
-    queryParams: PostStopMetricStreamsQueryParams;
-    headers: PostStopMetricStreamsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostStopMetricStreamsResponse extends SpeakeasyBase {
+export declare class POSTStopMetricStreamsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

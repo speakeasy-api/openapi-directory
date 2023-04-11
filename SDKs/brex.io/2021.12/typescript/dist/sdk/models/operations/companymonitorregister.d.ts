@@ -1,23 +1,57 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class CompanyMonitorRegisterPathParams extends SpeakeasyBase {
-    id: string;
+import { AxiosResponse } from "axios";
+export declare class CompanyMonitorRegisterSecurity extends SpeakeasyBase {
+    userKey: string;
 }
+/**
+ * Callback URL where the notifications will be sent to
+ */
 export declare class CompanyMonitorRegisterRequestBody extends SpeakeasyBase {
+    /**
+     * Callback URL
+     */
     callbackUrl: string;
+    /**
+     * ChangeType to monitor
+     */
     changeType: string;
 }
-export declare class CompanyMonitorRegisterSecurity extends SpeakeasyBase {
-    userKey: shared.SchemeUserKey;
-}
 export declare class CompanyMonitorRegisterRequest extends SpeakeasyBase {
-    pathParams: CompanyMonitorRegisterPathParams;
-    request?: CompanyMonitorRegisterRequestBody;
-    security: CompanyMonitorRegisterSecurity;
+    /**
+     * Callback URL where the notifications will be sent to
+     */
+    requestBody?: CompanyMonitorRegisterRequestBody;
+    /**
+     * Company Hex ID
+     */
+    id: string;
+}
+/**
+ * Detailed information about the error
+ */
+export declare class CompanyMonitorRegisterDefaultApplicationJSON extends SpeakeasyBase {
+    code: number;
+    fault?: string;
+    message: string;
+    tag: string;
+}
+/**
+ * Successful webhook registration response
+ */
+export declare class CompanyMonitorRegister200ApplicationJSON extends SpeakeasyBase {
+    monitorStatus: string;
+    notificationId: string;
 }
 export declare class CompanyMonitorRegisterResponse extends SpeakeasyBase {
-    companyMonitorRegister200ApplicationJSONAny?: any;
-    companyMonitorRegisterDefaultApplicationJSONAny?: any;
+    /**
+     * Successful webhook registration response
+     */
+    companyMonitorRegister200ApplicationJSONObject?: CompanyMonitorRegister200ApplicationJSON;
+    /**
+     * Detailed information about the error
+     */
+    companyMonitorRegisterDefaultApplicationJSONObject?: CompanyMonitorRegisterDefaultApplicationJSON;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

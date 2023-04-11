@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { SchemaVersionNumber } from "./schemaversionnumber";
 import { SchemaDiffTypeEnum } from "./schemadifftypeenum";
 import { SchemaId } from "./schemaid";
+import { SchemaVersionNumber } from "./schemaversionnumber";
 export declare class GetSchemaVersionsDiffInput extends SpeakeasyBase {
     firstSchemaVersionNumber: SchemaVersionNumber;
     schemaDiffType: SchemaDiffTypeEnum;

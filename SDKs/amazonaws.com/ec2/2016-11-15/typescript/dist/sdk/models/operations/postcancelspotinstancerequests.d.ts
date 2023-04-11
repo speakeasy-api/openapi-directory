@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCancelSpotInstanceRequestsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCancelSpotInstanceRequestsActionEnum {
     CancelSpotInstanceRequests = "CancelSpotInstanceRequests"
 }
-export declare enum PostCancelSpotInstanceRequestsVersionEnum {
+export declare enum POSTCancelSpotInstanceRequestsVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostCancelSpotInstanceRequestsQueryParams extends SpeakeasyBase {
-    action: PostCancelSpotInstanceRequestsActionEnum;
-    version: PostCancelSpotInstanceRequestsVersionEnum;
-}
-export declare class PostCancelSpotInstanceRequestsHeaders extends SpeakeasyBase {
+export declare class POSTCancelSpotInstanceRequestsRequest extends SpeakeasyBase {
+    action: POSTCancelSpotInstanceRequestsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCancelSpotInstanceRequestsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCancelSpotInstanceRequestsHeaders extends SpeakeasyBase
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCancelSpotInstanceRequestsRequest extends SpeakeasyBase {
-    queryParams: PostCancelSpotInstanceRequestsQueryParams;
-    headers: PostCancelSpotInstanceRequestsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCancelSpotInstanceRequestsResponse extends SpeakeasyBase {
+export declare class POSTCancelSpotInstanceRequestsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

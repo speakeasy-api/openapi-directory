@@ -1,44 +1,67 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetAuthorNameUsingPostQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetAuthorNameUsingPOSTRequest extends SpeakeasyBase {
     authorID?: string;
 }
-export declare class GetAuthorNameUsingPost200ApplicationJsonDataInfo extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class GetAuthorNameUsingPost500ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class GetAuthorNameUsingPost401ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+/**
+ * generic api error (code 1)
+ */
+export declare class GetAuthorNameUsingPost400ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+export declare class GetAuthorNameUsingPost200ApplicationJSONDataInfo extends SpeakeasyBase {
     colorId?: string;
     id?: string;
     name?: string;
     timestamp?: number;
 }
-export declare class GetAuthorNameUsingPost200ApplicationJsonData extends SpeakeasyBase {
-    info?: GetAuthorNameUsingPost200ApplicationJsonDataInfo;
+export declare class GetAuthorNameUsingPost200ApplicationJSONData extends SpeakeasyBase {
+    info?: GetAuthorNameUsingPost200ApplicationJSONDataInfo;
 }
-export declare class GetAuthorNameUsingPost200ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class GetAuthorNameUsingPost200ApplicationJSON extends SpeakeasyBase {
     code?: number;
-    data?: GetAuthorNameUsingPost200ApplicationJsonData;
+    data?: GetAuthorNameUsingPost200ApplicationJSONData;
     message?: string;
 }
-export declare class GetAuthorNameUsingPost400ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class GetAuthorNameUsingPost401ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class GetAuthorNameUsingPost500ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class GetAuthorNameUsingPostRequest extends SpeakeasyBase {
-    queryParams: GetAuthorNameUsingPostQueryParams;
-}
-export declare class GetAuthorNameUsingPostResponse extends SpeakeasyBase {
+export declare class GetAuthorNameUsingPOSTResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getAuthorNameUsingPOST200ApplicationJSONObject?: GetAuthorNameUsingPost200ApplicationJson;
-    getAuthorNameUsingPOST400ApplicationJSONObject?: GetAuthorNameUsingPost400ApplicationJson;
-    getAuthorNameUsingPOST401ApplicationJSONObject?: GetAuthorNameUsingPost401ApplicationJson;
-    getAuthorNameUsingPOST500ApplicationJSONObject?: GetAuthorNameUsingPost500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    getAuthorNameUsingPOST200ApplicationJSONObject?: GetAuthorNameUsingPost200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    getAuthorNameUsingPOST400ApplicationJSONObject?: GetAuthorNameUsingPost400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    getAuthorNameUsingPOST401ApplicationJSONObject?: GetAuthorNameUsingPost401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    getAuthorNameUsingPOST500ApplicationJSONObject?: GetAuthorNameUsingPost500ApplicationJSON;
 }

@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetConnectorsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum GetConnectorsXAmzTargetEnum {
-    AwsServerMigrationServiceV20161024GetConnectors = "AWSServerMigrationService_V2016_10_24.GetConnectors"
+    AWSServerMigrationServiceV20161024GetConnectors = "AWSServerMigrationService_V2016_10_24.GetConnectors"
 }
-export declare class GetConnectorsHeaders extends SpeakeasyBase {
+export declare class GetConnectorsRequest extends SpeakeasyBase {
+    getConnectorsRequest: shared.GetConnectorsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,15 +14,25 @@ export declare class GetConnectorsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: GetConnectorsXAmzTargetEnum;
-}
-export declare class GetConnectorsRequest extends SpeakeasyBase {
-    queryParams: GetConnectorsQueryParams;
-    headers: GetConnectorsHeaders;
-    request: shared.GetConnectorsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class GetConnectorsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getConnectorsResponse?: shared.GetConnectorsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnauthorizedOperationException
+     */
     unauthorizedOperationException?: any;
 }

@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UpdateHitTypeOfHitRequest extends SpeakeasyBase {
+export declare class UpdateHITTypeOfHITRequest extends SpeakeasyBase {
     hitId: string;
     hitTypeId: string;
 }

@@ -1,18 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetLatestImportStatusPathParams extends SpeakeasyBase {
-    organizationUuid: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetLatestImportStatusSecurity extends SpeakeasyBase {
-    zettleApiKey?: shared.SchemeZettleApiKey;
-    zettleOauth?: shared.SchemeZettleOauth;
+    zettleOauth: string;
 }
 export declare class GetLatestImportStatusRequest extends SpeakeasyBase {
-    pathParams: GetLatestImportStatusPathParams;
-    security: GetLatestImportStatusSecurity;
+    organizationUuid: string;
 }
 export declare class GetLatestImportStatusResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Import status
+     */
     importResponse?: shared.ImportResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

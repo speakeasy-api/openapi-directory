@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolTftpGetArgsPathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolTftpGetArgsRequest extends SpeakeasyBase {
-    pathParams: ProtocolTftpGetArgsPathParams;
+    /**
+     * Agent to show the TFTP argument structure
+     */
+    agentNum: number;
 }
 export declare class ProtocolTftpGetArgsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolTftpGetArgs200ApplicationJSONObject?: Record<string, any>;
 }

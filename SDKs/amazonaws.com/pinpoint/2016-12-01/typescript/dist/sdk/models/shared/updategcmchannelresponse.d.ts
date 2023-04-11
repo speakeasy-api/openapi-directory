@@ -1,5 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { GcmChannelResponse } from "./gcmchannelresponse";
+import { GCMChannelResponse } from "./gcmchannelresponse";
+/**
+ * Success
+ */
 export declare class UpdateGcmChannelResponse extends SpeakeasyBase {
-    gcmChannelResponse: GcmChannelResponse;
+    /**
+     * Provides information about the status and settings of the GCM channel for an application. The GCM channel enables Amazon Pinpoint to send push notifications through the Firebase Cloud Messaging (FCM), formerly Google Cloud Messaging (GCM), service.
+     */
+    gcmChannelResponse: GCMChannelResponse;
 }

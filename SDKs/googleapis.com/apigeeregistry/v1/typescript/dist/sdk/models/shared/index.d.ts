@@ -21,7 +21,6 @@ export * from "./location";
 export * from "./operation";
 export * from "./policy";
 export * from "./rollbackapispecrequest";
-export * from "./security";
 export * from "./setiampolicyrequest";
 export * from "./status";
 export * from "./tagapispecrevisionrequest";

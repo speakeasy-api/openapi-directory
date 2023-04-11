@@ -3,7 +3,7 @@ import { ConnectionTypeEnum } from "./connectiontypeenum";
 import { PhysicalConnectionRequirements } from "./physicalconnectionrequirements";
 /**
  * Defines a connection to a data source.
-**/
+ */
 export declare class Connection extends SpeakeasyBase {
     connectionProperties?: Record<string, string>;
     connectionType?: ConnectionTypeEnum;

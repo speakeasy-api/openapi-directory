@@ -1,23 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetAccessTokenRequestBody extends SpeakeasyBase {
-    grantType: string;
-    password?: string;
-    refreshToken?: string;
-    scope: string;
-    userId?: number;
-    username?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetAccessTokenSecurity extends SpeakeasyBase {
-    basicAuth: shared.SchemeBasicAuth;
-}
-export declare class GetAccessTokenRequest extends SpeakeasyBase {
-    request?: GetAccessTokenRequestBody;
-    security: GetAccessTokenSecurity;
+    password: string;
+    username: string;
 }
 export declare class GetAccessTokenResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    token?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * Authentication response
+     */
+    token?: shared.Token;
+    /**
+     * Authentication error - for vendor auth, it will also fail if their account is not approved yet. In that case, the error response will include "account_status" key.
+     */
     tokenError?: shared.TokenError;
 }

@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolWebGetStatisticsPathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolWebGetStatisticsRequest extends SpeakeasyBase {
-    pathParams: ProtocolWebGetStatisticsPathParams;
+    /**
+     * Agent to show WEB statistics
+     */
+    agentNum: number;
 }
 export declare class ProtocolWebGetStatisticsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolWebGetStatistics200ApplicationJSONInt32Integers?: number[];
 }

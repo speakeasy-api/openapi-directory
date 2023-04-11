@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetRevokeCacheSecurityGroupIngressActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETRevokeCacheSecurityGroupIngressActionEnum {
     RevokeCacheSecurityGroupIngress = "RevokeCacheSecurityGroupIngress"
 }
-export declare enum GetRevokeCacheSecurityGroupIngressVersionEnum {
+export declare enum GETRevokeCacheSecurityGroupIngressVersionEnum {
     TwoThousandAndFifteen0202 = "2015-02-02"
 }
-export declare class GetRevokeCacheSecurityGroupIngressQueryParams extends SpeakeasyBase {
-    action: GetRevokeCacheSecurityGroupIngressActionEnum;
+export declare class GETRevokeCacheSecurityGroupIngressRequest extends SpeakeasyBase {
+    action: GETRevokeCacheSecurityGroupIngressActionEnum;
+    /**
+     * The name of the cache security group to revoke ingress from.
+     */
     cacheSecurityGroupName: string;
+    /**
+     * The name of the Amazon EC2 security group to revoke access from.
+     */
     ec2SecurityGroupName: string;
+    /**
+     * The Amazon account number of the Amazon EC2 security group owner. Note that this is not the same thing as an Amazon access key ID - you must provide a valid Amazon account number for this parameter.
+     */
     ec2SecurityGroupOwnerId: string;
-    version: GetRevokeCacheSecurityGroupIngressVersionEnum;
-}
-export declare class GetRevokeCacheSecurityGroupIngressHeaders extends SpeakeasyBase {
+    version: GETRevokeCacheSecurityGroupIngressVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +29,9 @@ export declare class GetRevokeCacheSecurityGroupIngressHeaders extends Speakeasy
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetRevokeCacheSecurityGroupIngressRequest extends SpeakeasyBase {
-    queryParams: GetRevokeCacheSecurityGroupIngressQueryParams;
-    headers: GetRevokeCacheSecurityGroupIngressHeaders;
-}
-export declare class GetRevokeCacheSecurityGroupIngressResponse extends SpeakeasyBase {
+export declare class GETRevokeCacheSecurityGroupIngressResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum CreateReplicationTaskXAmzTargetEnum {
-    AmazonDmSv20160101CreateReplicationTask = "AmazonDMSv20160101.CreateReplicationTask"
+    AmazonDMSv20160101CreateReplicationTask = "AmazonDMSv20160101.CreateReplicationTask"
 }
-export declare class CreateReplicationTaskHeaders extends SpeakeasyBase {
+export declare class CreateReplicationTaskRequest extends SpeakeasyBase {
+    createReplicationTaskMessage: shared.CreateReplicationTaskMessage;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class CreateReplicationTaskHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: CreateReplicationTaskXAmzTargetEnum;
 }
-export declare class CreateReplicationTaskRequest extends SpeakeasyBase {
-    headers: CreateReplicationTaskHeaders;
-    request: shared.CreateReplicationTaskMessage;
-}
 export declare class CreateReplicationTaskResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedFault
+     */
     accessDeniedFault?: any;
     contentType: string;
+    /**
+     * Success
+     */
     createReplicationTaskResponse?: shared.CreateReplicationTaskResponse;
+    /**
+     * InvalidResourceStateFault
+     */
     invalidResourceStateFault?: any;
+    /**
+     * KMSKeyNotAccessibleFault
+     */
     kmsKeyNotAccessibleFault?: any;
-    resourceAlreadyExistsFault?: any;
-    resourceNotFoundFault?: any;
-    resourceQuotaExceededFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceAlreadyExistsFault
+     */
+    resourceAlreadyExistsFault?: any;
+    /**
+     * ResourceNotFoundFault
+     */
+    resourceNotFoundFault?: any;
+    /**
+     * ResourceQuotaExceededFault
+     */
+    resourceQuotaExceededFault?: any;
 }

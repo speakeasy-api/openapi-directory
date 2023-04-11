@@ -1,12 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeDetectorPathParams extends SpeakeasyBase {
-    detectorModelName: string;
-}
-export declare class DescribeDetectorQueryParams extends SpeakeasyBase {
-    keyValue?: string;
-}
-export declare class DescribeDetectorHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DescribeDetectorRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -14,19 +9,41 @@ export declare class DescribeDetectorHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DescribeDetectorRequest extends SpeakeasyBase {
-    pathParams: DescribeDetectorPathParams;
-    queryParams: DescribeDetectorQueryParams;
-    headers: DescribeDetectorHeaders;
+    /**
+     * The name of the detector model whose detectors (instances) you want information about.
+     */
+    detectorModelName: string;
+    /**
+     * A filter used to limit results to detectors (instances) created because of the given key ID.
+     */
+    keyValue?: string;
 }
 export declare class DescribeDetectorResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeDetectorResponse?: shared.DescribeDetectorResponse;
+    /**
+     * InternalFailureException
+     */
     internalFailureException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
-    resourceNotFoundException?: any;
+    /**
+     * ServiceUnavailableException
+     */
     serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

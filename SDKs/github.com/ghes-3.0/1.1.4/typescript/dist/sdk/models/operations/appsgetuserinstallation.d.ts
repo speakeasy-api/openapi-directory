@@ -1,13 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AppsGetUserInstallationPathParams extends SpeakeasyBase {
-    username: string;
-}
+import { AxiosResponse } from "axios";
 export declare class AppsGetUserInstallationRequest extends SpeakeasyBase {
-    pathParams: AppsGetUserInstallationPathParams;
+    username: string;
 }
 export declare class AppsGetUserInstallationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     installation?: shared.Installation;
 }

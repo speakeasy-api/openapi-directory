@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class IndividualSubscriptionDeletePathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class IndividualSubscriptionDELETERequest extends SpeakeasyBase {
+    /**
+     * Identifier of an individual subscription to notifications about application package changes
+     */
     subscriptionId: string;
 }
-export declare class IndividualSubscriptionDeleteRequest extends SpeakeasyBase {
-    pathParams: IndividualSubscriptionDeletePathParams;
-}
-export declare class IndividualSubscriptionDeleteResponse extends SpeakeasyBase {
+export declare class IndividualSubscriptionDELETEResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Unauthorized :  used when the client did not submit credentials.
+     */
     problemDetails?: shared.ProblemDetails;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

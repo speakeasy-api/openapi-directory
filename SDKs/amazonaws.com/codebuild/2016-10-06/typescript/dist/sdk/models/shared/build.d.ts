@@ -1,20 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { BuildArtifacts } from "./buildartifacts";
-import { StatusTypeEnum } from "./statustypeenum";
-import { ProjectCache } from "./projectcache";
+import { BuildPhase } from "./buildphase";
 import { DebugSession } from "./debugsession";
-import { ProjectEnvironment } from "./projectenvironment";
 import { ExportedEnvironmentVariable } from "./exportedenvironmentvariable";
-import { ProjectFileSystemLocation } from "./projectfilesystemlocation";
 import { LogsLocation } from "./logslocation";
 import { NetworkInterface } from "./networkinterface";
-import { BuildPhase } from "./buildphase";
-import { ProjectSourceVersion } from "./projectsourceversion";
+import { ProjectCache } from "./projectcache";
+import { ProjectEnvironment } from "./projectenvironment";
+import { ProjectFileSystemLocation } from "./projectfilesystemlocation";
 import { ProjectSource } from "./projectsource";
+import { ProjectSourceVersion } from "./projectsourceversion";
+import { StatusTypeEnum } from "./statustypeenum";
 import { VpcConfig } from "./vpcconfig";
 /**
  * Information about a build.
-**/
+ */
 export declare class Build extends SpeakeasyBase {
     arn?: string;
     artifacts?: BuildArtifacts;

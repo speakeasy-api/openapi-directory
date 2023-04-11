@@ -1,15 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReposDeleteCommitCommentPathParams extends SpeakeasyBase {
-    commentId: number;
-    owner: string;
-    repo: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ReposDeleteCommitCommentRequest extends SpeakeasyBase {
-    pathParams: ReposDeleteCommitCommentPathParams;
+    /**
+     * The unique identifier of the comment.
+     */
+    commentId: number;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    owner: string;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    repo: string;
 }
 export declare class ReposDeleteCommitCommentResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Resource not found
+     */
     basicError?: shared.BasicError;
 }

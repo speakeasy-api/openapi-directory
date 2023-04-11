@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum RebuildWorkspacesXAmzTargetEnum {
     WorkspacesServiceRebuildWorkspaces = "WorkspacesService.RebuildWorkspaces"
 }
-export declare class RebuildWorkspacesHeaders extends SpeakeasyBase {
+export declare class RebuildWorkspacesRequest extends SpeakeasyBase {
+    rebuildWorkspacesRequest: shared.RebuildWorkspacesRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,12 +15,16 @@ export declare class RebuildWorkspacesHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: RebuildWorkspacesXAmzTargetEnum;
 }
-export declare class RebuildWorkspacesRequest extends SpeakeasyBase {
-    headers: RebuildWorkspacesHeaders;
-    request: shared.RebuildWorkspacesRequest;
-}
 export declare class RebuildWorkspacesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * OperationNotSupportedException
+     */
+    operationNotSupportedException?: any;
+    /**
+     * Success
+     */
     rebuildWorkspacesResult?: shared.RebuildWorkspacesResult;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

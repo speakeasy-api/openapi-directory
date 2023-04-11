@@ -1,11 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetModifyVolumeActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETModifyVolumeActionEnum {
     ModifyVolume = "ModifyVolume"
 }
-export declare enum GetModifyVolumeVersionEnum {
+export declare enum GETModifyVolumeVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare enum GetModifyVolumeVolumeTypeEnum {
+/**
+ * <p>The target EBS volume type of the volume. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p> <p>Default: The existing type is retained.</p>
+ */
+export declare enum GETModifyVolumeVolumeTypeEnum {
     Standard = "standard",
     Io1 = "io1",
     Io2 = "io2",
@@ -14,18 +18,37 @@ export declare enum GetModifyVolumeVolumeTypeEnum {
     St1 = "st1",
     Gp3 = "gp3"
 }
-export declare class GetModifyVolumeQueryParams extends SpeakeasyBase {
-    action: GetModifyVolumeActionEnum;
+export declare class GETModifyVolumeRequest extends SpeakeasyBase {
+    action: GETModifyVolumeActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
+    /**
+     * <p>The target IOPS rate of the volume. This parameter is valid only for <code>gp3</code>, <code>io1</code>, and <code>io2</code> volumes.</p> <p>The following are the supported values for each volume type:</p> <ul> <li> <p> <code>gp3</code>: 3,000-16,000 IOPS</p> </li> <li> <p> <code>io1</code>: 100-64,000 IOPS</p> </li> <li> <p> <code>io2</code>: 100-64,000 IOPS</p> </li> </ul> <p>Default: The existing value is retained if you keep the same volume type. If you change the volume type to <code>io1</code>, <code>io2</code>, or <code>gp3</code>, the default is 3,000.</p>
+     */
     iops?: number;
+    /**
+     * Specifies whether to enable Amazon EBS Multi-Attach. If you enable Multi-Attach, you can attach the volume to up to 16 <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances"> Nitro-based instances</a> in the same Availability Zone. This parameter is supported with <code>io1</code> and <code>io2</code> volumes only. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volumes-multi.html"> Amazon EBS Multi-Attach</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     */
     multiAttachEnabled?: boolean;
+    /**
+     * <p>The target size of the volume, in GiB. The target volume size must be greater than or equal to the existing size of the volume.</p> <p>The following are the supported volumes sizes for each volume type:</p> <ul> <li> <p> <code>gp2</code> and <code>gp3</code>: 1-16,384</p> </li> <li> <p> <code>io1</code> and <code>io2</code>: 4-16,384</p> </li> <li> <p> <code>st1</code> and <code>sc1</code>: 125-16,384</p> </li> <li> <p> <code>standard</code>: 1-1,024</p> </li> </ul> <p>Default: The existing size is retained.</p>
+     */
     size?: number;
+    /**
+     * <p>The target throughput of the volume, in MiB/s. This parameter is valid only for <code>gp3</code> volumes. The maximum value is 1,000.</p> <p>Default: The existing value is retained if the source and target volume type is <code>gp3</code>. Otherwise, the default value is 125.</p> <p>Valid Range: Minimum value of 125. Maximum value of 1000.</p>
+     */
     throughput?: number;
-    version: GetModifyVolumeVersionEnum;
+    version: GETModifyVolumeVersionEnum;
+    /**
+     * The ID of the volume.
+     */
     volumeId: string;
-    volumeType?: GetModifyVolumeVolumeTypeEnum;
-}
-export declare class GetModifyVolumeHeaders extends SpeakeasyBase {
+    /**
+     * <p>The target EBS volume type of the volume. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p> <p>Default: The existing type is retained.</p>
+     */
+    volumeType?: GETModifyVolumeVolumeTypeEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -34,12 +57,9 @@ export declare class GetModifyVolumeHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetModifyVolumeRequest extends SpeakeasyBase {
-    queryParams: GetModifyVolumeQueryParams;
-    headers: GetModifyVolumeHeaders;
-}
-export declare class GetModifyVolumeResponse extends SpeakeasyBase {
+export declare class GETModifyVolumeResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

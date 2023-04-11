@@ -1,51 +1,49 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class WebinarRegistrantStatusPathParams extends SpeakeasyBase {
-    webinarId: number;
-}
-export declare class WebinarRegistrantStatusQueryParams extends SpeakeasyBase {
-    occurrenceId?: string;
-}
-export declare enum WebinarRegistrantStatusApplicationJsonActionEnum {
-    Approve = "approve",
-    Cancel = "cancel",
-    Deny = "deny"
-}
-export declare class WebinarRegistrantStatusApplicationJsonRegistrants extends SpeakeasyBase {
-    email?: string;
-    id?: string;
-}
-export declare class WebinarRegistrantStatusApplicationJson extends SpeakeasyBase {
-    action: WebinarRegistrantStatusApplicationJsonActionEnum;
-    registrants?: WebinarRegistrantStatusApplicationJsonRegistrants[];
-}
-export declare enum WebinarRegistrantStatusMultipartFormDataActionEnum {
-    Approve = "approve",
-    Cancel = "cancel",
-    Deny = "deny"
-}
-export declare class WebinarRegistrantStatusMultipartFormDataRegistrants extends SpeakeasyBase {
-    email?: string;
-    id?: string;
-}
-export declare class WebinarRegistrantStatusMultipartFormData1 extends SpeakeasyBase {
-    action: WebinarRegistrantStatusMultipartFormDataActionEnum;
-    registrants?: WebinarRegistrantStatusMultipartFormDataRegistrants[];
-}
-export declare class WebinarRegistrantStatusRequests extends SpeakeasyBase {
-    object?: WebinarRegistrantStatusApplicationJson;
-    object1?: WebinarRegistrantStatusMultipartFormData1;
-}
+import { AxiosResponse } from "axios";
 export declare class WebinarRegistrantStatusSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
+    oAuth: string;
+}
+/**
+ * Used to approve a registrant, deny a registrant, or cancel a previously approved registrant.
+ */
+export declare enum WebinarRegistrantStatusApplicationJSONActionEnum {
+    Approve = "approve",
+    Cancel = "cancel",
+    Deny = "deny"
+}
+export declare class WebinarRegistrantStatusApplicationJSONRegistrants extends SpeakeasyBase {
+    /**
+     * Registrant's email address.
+     */
+    email?: string;
+    /**
+     * Registrant ID
+     */
+    id?: string;
+}
+export declare class WebinarRegistrantStatusApplicationJSON extends SpeakeasyBase {
+    /**
+     * Used to approve a registrant, deny a registrant, or cancel a previously approved registrant.
+     */
+    action: WebinarRegistrantStatusApplicationJSONActionEnum;
+    /**
+     * List of registrants.
+     */
+    registrants?: WebinarRegistrantStatusApplicationJSONRegistrants[];
 }
 export declare class WebinarRegistrantStatusRequest extends SpeakeasyBase {
-    pathParams: WebinarRegistrantStatusPathParams;
-    queryParams: WebinarRegistrantStatusQueryParams;
-    request: WebinarRegistrantStatusRequests;
-    security: WebinarRegistrantStatusSecurity;
+    requestBody: WebinarRegistrantStatusApplicationJSON;
+    /**
+     * The meeting occurrence ID.
+     */
+    occurrenceId?: string;
+    /**
+     * The webinar ID in "**long**" format(represented as int64 data type in JSON).
+     */
+    webinarId: number;
 }
 export declare class WebinarRegistrantStatusResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

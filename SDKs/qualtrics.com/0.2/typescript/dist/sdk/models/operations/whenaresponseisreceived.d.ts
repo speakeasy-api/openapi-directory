@@ -1,10 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class WhenAResponseIsReceivedRequest extends SpeakeasyBase {
-    request: shared.SubscribeToEventBody;
-}
+import { AxiosResponse } from "axios";
 export declare class WhenAResponseIsReceivedResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * OK - web hook registered
+     */
     eventSubscriptionsResponse?: shared.EventSubscriptionsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

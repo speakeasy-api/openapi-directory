@@ -1,19 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeregisterDbProxyTargetsActionEnum {
-    DeregisterDbProxyTargets = "DeregisterDBProxyTargets"
+import { AxiosResponse } from "axios";
+export declare enum GETDeregisterDBProxyTargetsActionEnum {
+    DeregisterDBProxyTargets = "DeregisterDBProxyTargets"
 }
-export declare enum GetDeregisterDbProxyTargetsVersionEnum {
+export declare enum GETDeregisterDBProxyTargetsVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class GetDeregisterDbProxyTargetsQueryParams extends SpeakeasyBase {
-    action: GetDeregisterDbProxyTargetsActionEnum;
+export declare class GETDeregisterDBProxyTargetsRequest extends SpeakeasyBase {
+    action: GETDeregisterDBProxyTargetsActionEnum;
+    /**
+     * One or more DB cluster identifiers.
+     */
     dbClusterIdentifiers?: string[];
+    /**
+     * One or more DB instance identifiers.
+     */
     dbInstanceIdentifiers?: string[];
+    /**
+     * The identifier of the <code>DBProxy</code> that is associated with the <code>DBProxyTargetGroup</code>.
+     */
     dbProxyName: string;
+    /**
+     * The identifier of the <code>DBProxyTargetGroup</code>.
+     */
     targetGroupName?: string;
-    version: GetDeregisterDbProxyTargetsVersionEnum;
-}
-export declare class GetDeregisterDbProxyTargetsHeaders extends SpeakeasyBase {
+    version: GETDeregisterDBProxyTargetsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -22,12 +33,9 @@ export declare class GetDeregisterDbProxyTargetsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeregisterDbProxyTargetsRequest extends SpeakeasyBase {
-    queryParams: GetDeregisterDbProxyTargetsQueryParams;
-    headers: GetDeregisterDbProxyTargetsHeaders;
-}
-export declare class GetDeregisterDbProxyTargetsResponse extends SpeakeasyBase {
+export declare class GETDeregisterDBProxyTargetsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Categories {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,11 +9,19 @@ export declare class Categories {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createCategories - Creates a new category
-    **/
-    createCategories(req: operations.CreateCategoriesRequest, config?: AxiosRequestConfig): Promise<operations.CreateCategoriesResponse>;
+     * Create a new category
+     */
+    createCategories(req: operations.CreateCategoriesRequest, security: operations.CreateCategoriesSecurity, config?: AxiosRequestConfig): Promise<operations.CreateCategoriesResponse>;
     /**
-     * getProductTypes - Retrieves all categories
-    **/
-    getProductTypes(req: operations.GetProductTypesRequest, config?: AxiosRequestConfig): Promise<operations.GetProductTypesResponse>;
+     * Delete a category
+     */
+    deleteCategory(req: operations.DeleteCategoryRequest, security: operations.DeleteCategorySecurity, config?: AxiosRequestConfig): Promise<operations.DeleteCategoryResponse>;
+    /**
+     * Retrieve all categories
+     */
+    getProductTypes(req: operations.GetProductTypesRequest, security: operations.GetProductTypesSecurity, config?: AxiosRequestConfig): Promise<operations.GetProductTypesResponse>;
+    /**
+     * Rename a category
+     */
+    renameCategory(req: operations.RenameCategoryRequest, security: operations.RenameCategorySecurity, config?: AxiosRequestConfig): Promise<operations.RenameCategoryResponse>;
 }

@@ -1,4 +1,4 @@
-export declare enum HitAccessActionsEnum {
+export declare enum HITAccessActionsEnum {
     Accept = "Accept",
     PreviewAndAccept = "PreviewAndAccept",
     DiscoverPreviewAndAccept = "DiscoverPreviewAndAccept"

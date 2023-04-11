@@ -1,76 +1,77 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { NetworkservicesProjectsLocationsEndpointPoliciesCreateRequest, NetworkservicesProjectsLocationsEndpointPoliciesCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  NetworkservicesProjectsLocationsEndpointPoliciesCreateRequest,
+  NetworkservicesProjectsLocationsEndpointPoliciesCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  EndpointPolicyTypeEnum,
+  MetadataLabelMatcherMetadataLabelMatchCriteriaEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: NetworkservicesProjectsLocationsEndpointPoliciesCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    endpointPolicyId: "dolor",
-    fields: "expedita",
-    key: "voluptas",
-    oauthToken: "fugit",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    uploadType: "rerum",
-    uploadProtocol: "dicta",
-  },
-  request: {
-    authorizationPolicy: "debitis",
-    clientTlsPolicy: "voluptatum",
-    description: "et",
+  dollarXgafv: XgafvEnum.Two,
+  endpointPolicyInput: {
+    authorizationPolicy: "provident",
+    clientTlsPolicy: "distinctio",
+    description: "quibusdam",
     endpointMatcher: {
       metadataLabelMatcher: {
-        metadataLabelMatchCriteria: "MATCH_ALL",
+        metadataLabelMatchCriteria: MetadataLabelMatcherMetadataLabelMatchCriteriaEnum.MatchAny,
         metadataLabels: [
           {
-            labelName: "et",
-            labelValue: "voluptate",
+            labelName: "corrupti",
+            labelValue: "illum",
           },
           {
-            labelName: "iste",
-            labelValue: "vitae",
+            labelName: "vel",
+            labelValue: "error",
           },
           {
-            labelName: "totam",
-            labelValue: "dolores",
+            labelName: "deserunt",
+            labelValue: "suscipit",
+          },
+          {
+            labelName: "iure",
+            labelValue: "magnam",
           },
         ],
       },
     },
     labels: {
-      "debitis": "vel",
-      "odio": "dolore",
-      "id": "aspernatur",
+      "ipsa": "delectus",
+      "tempora": "suscipit",
+      "molestiae": "minus",
+      "placeat": "voluptatum",
     },
-    name: "accusantium",
-    serverTlsPolicy: "totam",
+    name: "iusto",
+    serverTlsPolicy: "excepturi",
     trafficPortSelector: {
       ports: [
-        "quis",
-        "est",
+        "recusandae",
+        "temporibus",
       ],
     },
-    type: "GRPC_SERVER",
+    type: EndpointPolicyTypeEnum.EndpointPolicyTypeUnspecified,
   },
+  accessToken: "quis",
+  alt: AltEnum.Json,
+  callback: "deserunt",
+  endpointPolicyId: "perferendis",
+  fields: "ipsam",
+  key: "repellendus",
+  oauthToken: "sapiente",
+  parent: "quo",
+  prettyPrint: false,
+  quotaUser: "odit",
+  uploadType: "at",
+  uploadProtocol: "at",
 };
 
 sdk.projects.networkservicesProjectsLocationsEndpointPoliciesCreate(req).then((res: NetworkservicesProjectsLocationsEndpointPoliciesCreateResponse | AxiosError) => {

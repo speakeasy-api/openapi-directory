@@ -1,20 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PostTracksRequests extends SpeakeasyBase {
-    trackDataRequest?: shared.TrackDataRequest;
-    trackDataRequest1?: shared.TrackDataRequest;
-}
+import { AxiosResponse } from "axios";
 export declare class PostTracksSecurity extends SpeakeasyBase {
-    authHeader: shared.SchemeAuthHeader;
-    clientId: shared.SchemeClientId;
-}
-export declare class PostTracksRequest extends SpeakeasyBase {
-    request?: PostTracksRequests;
-    security: PostTracksSecurity;
+    authHeader: string;
+    clientId: string;
 }
 export declare class PostTracksResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Bad Request
+     */
     error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     track?: shared.Track;
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostEnableVgwRoutePropagationActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTEnableVgwRoutePropagationActionEnum {
     EnableVgwRoutePropagation = "EnableVgwRoutePropagation"
 }
-export declare enum PostEnableVgwRoutePropagationVersionEnum {
+export declare enum POSTEnableVgwRoutePropagationVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostEnableVgwRoutePropagationQueryParams extends SpeakeasyBase {
-    action: PostEnableVgwRoutePropagationActionEnum;
-    version: PostEnableVgwRoutePropagationVersionEnum;
-}
-export declare class PostEnableVgwRoutePropagationHeaders extends SpeakeasyBase {
+export declare class POSTEnableVgwRoutePropagationRequest extends SpeakeasyBase {
+    action: POSTEnableVgwRoutePropagationActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTEnableVgwRoutePropagationVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +18,8 @@ export declare class PostEnableVgwRoutePropagationHeaders extends SpeakeasyBase 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostEnableVgwRoutePropagationRequest extends SpeakeasyBase {
-    queryParams: PostEnableVgwRoutePropagationQueryParams;
-    headers: PostEnableVgwRoutePropagationHeaders;
-    request?: Uint8Array;
-}
-export declare class PostEnableVgwRoutePropagationResponse extends SpeakeasyBase {
+export declare class POSTEnableVgwRoutePropagationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

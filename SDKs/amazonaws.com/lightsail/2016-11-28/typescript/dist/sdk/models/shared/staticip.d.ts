@@ -3,7 +3,7 @@ import { ResourceLocation } from "./resourcelocation";
 import { ResourceTypeEnum } from "./resourcetypeenum";
 /**
  * Describes a static IP.
-**/
+ */
 export declare class StaticIp extends SpeakeasyBase {
     arn?: string;
     attachedTo?: string;

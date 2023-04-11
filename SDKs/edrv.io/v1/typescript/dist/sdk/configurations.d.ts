@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Configurations {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,15 +9,15 @@ export declare class Configurations {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getConfiguration - Get one Configuration data
-    **/
+     * Get one Configuration data
+     */
     getConfiguration(req: operations.GetConfigurationRequest, config?: AxiosRequestConfig): Promise<operations.GetConfigurationResponse>;
     /**
-     * getConfigurations - Get Configurations data
-    **/
+     * Get Configurations data
+     */
     getConfigurations(req: operations.GetConfigurationsRequest, config?: AxiosRequestConfig): Promise<operations.GetConfigurationsResponse>;
     /**
-     * postConfigurations - Create connector with parameters
-    **/
-    postConfigurations(req: operations.PostConfigurationsRequest, config?: AxiosRequestConfig): Promise<operations.PostConfigurationsResponse>;
+     * Create connector with parameters
+     */
+    postConfigurations(req: operations.PostConfigurationsRequestBody, config?: AxiosRequestConfig): Promise<operations.PostConfigurationsResponse>;
 }

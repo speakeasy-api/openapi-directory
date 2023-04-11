@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { PerformanceMetrics } from "./performancemetrics";
 import { EntityStatusEnum } from "./entitystatusenum";
+import { PerformanceMetrics } from "./performancemetrics";
 /**
  * Represents the output of a <code>GetEvaluation</code> operation and describes an <code>Evaluation</code>.
-**/
+ */
 export declare class GetEvaluationOutput extends SpeakeasyBase {
     computeTime?: number;
     createdAt?: Date;

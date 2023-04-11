@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { OffsetInfo } from "./offsetinfo";
 import { ElectionsList } from "./electionslist";
+import { OffsetInfo } from "./offsetinfo";
 export declare class ElectionsListPage extends SpeakeasyBase {
     pagination?: OffsetInfo;
     results?: ElectionsList[];

@@ -1,45 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class InstallationPermissions extends SpeakeasyBase {
-    checks?: string;
-    contents?: string;
-    deployments?: string;
-    issues?: string;
-    metadata?: string;
-    organizationAdministration?: string;
-    pullRequests?: string;
-    statuses?: string;
-}
+import { AppPermissions } from "./apppermissions";
+import { NullableSimpleUser } from "./nullablesimpleuser";
+/**
+ * Describe whether all repositories have been selected or there's a selection involved
+ */
 export declare enum InstallationRepositorySelectionEnum {
     All = "all",
     Selected = "selected"
 }
 /**
- * Simple User
-**/
-export declare class InstallationSimpleUser extends SpeakeasyBase {
-    avatarUrl: string;
-    eventsUrl: string;
-    followersUrl: string;
-    followingUrl: string;
-    gistsUrl: string;
-    gravatarId: string;
-    htmlUrl: string;
-    id: number;
-    login: string;
-    nodeId: string;
-    organizationsUrl: string;
-    receivedEventsUrl: string;
-    reposUrl: string;
-    siteAdmin: boolean;
-    starredAt?: string;
-    starredUrl: string;
-    subscriptionsUrl: string;
-    type: string;
-    url: string;
-}
-/**
  * Installation
-**/
+ */
 export declare class Installation extends SpeakeasyBase {
     accessTokensUrl: string;
     account: any;
@@ -50,14 +21,29 @@ export declare class Installation extends SpeakeasyBase {
     events: string[];
     hasMultipleSingleFiles?: boolean;
     htmlUrl: string;
+    /**
+     * The ID of the installation.
+     */
     id: number;
-    permissions: InstallationPermissions;
+    /**
+     * The permissions granted to the user-to-server access token.
+     */
+    permissions: AppPermissions;
     repositoriesUrl: string;
+    /**
+     * Describe whether all repositories have been selected or there's a selection involved
+     */
     repositorySelection: InstallationRepositorySelectionEnum;
     singleFileName: string;
     singleFilePaths?: string[];
-    suspendedAt?: Date;
-    suspendedBy?: InstallationSimpleUser;
+    suspendedAt: Date;
+    /**
+     * A GitHub user.
+     */
+    suspendedBy: NullableSimpleUser;
+    /**
+     * The ID of the user or organization this token is being scoped to.
+     */
     targetId: number;
     targetType: string;
     updatedAt: Date;

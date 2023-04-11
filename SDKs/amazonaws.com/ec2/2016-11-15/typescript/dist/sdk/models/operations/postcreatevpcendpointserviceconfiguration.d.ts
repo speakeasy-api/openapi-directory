@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateVpcEndpointServiceConfigurationActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateVpcEndpointServiceConfigurationActionEnum {
     CreateVpcEndpointServiceConfiguration = "CreateVpcEndpointServiceConfiguration"
 }
-export declare enum PostCreateVpcEndpointServiceConfigurationVersionEnum {
+export declare enum POSTCreateVpcEndpointServiceConfigurationVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostCreateVpcEndpointServiceConfigurationQueryParams extends SpeakeasyBase {
-    action: PostCreateVpcEndpointServiceConfigurationActionEnum;
-    version: PostCreateVpcEndpointServiceConfigurationVersionEnum;
-}
-export declare class PostCreateVpcEndpointServiceConfigurationHeaders extends SpeakeasyBase {
+export declare class POSTCreateVpcEndpointServiceConfigurationRequest extends SpeakeasyBase {
+    action: POSTCreateVpcEndpointServiceConfigurationActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateVpcEndpointServiceConfigurationVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateVpcEndpointServiceConfigurationHeaders extends Sp
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateVpcEndpointServiceConfigurationRequest extends SpeakeasyBase {
-    queryParams: PostCreateVpcEndpointServiceConfigurationQueryParams;
-    headers: PostCreateVpcEndpointServiceConfigurationHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateVpcEndpointServiceConfigurationResponse extends SpeakeasyBase {
+export declare class POSTCreateVpcEndpointServiceConfigurationResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

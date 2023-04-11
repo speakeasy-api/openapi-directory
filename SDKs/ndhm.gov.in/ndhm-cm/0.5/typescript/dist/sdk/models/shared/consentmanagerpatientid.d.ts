@@ -1,4 +1,4 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ConsentManagerPatientId extends SpeakeasyBase {
+export declare class ConsentManagerPatientID extends SpeakeasyBase {
     id: string;
 }

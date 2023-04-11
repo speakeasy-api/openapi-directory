@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
- * Organization Simple
-**/
+ * A GitHub organization.
+ */
 export declare class OrganizationSimple extends SpeakeasyBase {
     avatarUrl: string;
     description: string;

@@ -4,7 +4,7 @@ import { BatchInferenceJobInput } from "./batchinferencejobinput";
 import { BatchInferenceJobOutput } from "./batchinferencejoboutput";
 /**
  * Contains information on a batch inference job.
-**/
+ */
 export declare class BatchInferenceJob extends SpeakeasyBase {
     batchInferenceJobArn?: string;
     batchInferenceJobConfig?: BatchInferenceJobConfig;

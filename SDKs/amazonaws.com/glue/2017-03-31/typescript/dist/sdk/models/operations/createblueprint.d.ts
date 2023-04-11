@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum CreateBlueprintXAmzTargetEnum {
-    AwsGlueCreateBlueprint = "AWSGlue.CreateBlueprint"
+    AWSGlueCreateBlueprint = "AWSGlue.CreateBlueprint"
 }
-export declare class CreateBlueprintHeaders extends SpeakeasyBase {
+export declare class CreateBlueprintRequest extends SpeakeasyBase {
+    createBlueprintRequest: shared.CreateBlueprintRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class CreateBlueprintHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: CreateBlueprintXAmzTargetEnum;
 }
-export declare class CreateBlueprintRequest extends SpeakeasyBase {
-    headers: CreateBlueprintHeaders;
-    request: shared.CreateBlueprintRequest;
-}
 export declare class CreateBlueprintResponse extends SpeakeasyBase {
+    /**
+     * AlreadyExistsException
+     */
     alreadyExistsException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     createBlueprintResponse?: shared.CreateBlueprintResponse;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
+    /**
+     * ResourceNumberLimitExceededException
+     */
     resourceNumberLimitExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

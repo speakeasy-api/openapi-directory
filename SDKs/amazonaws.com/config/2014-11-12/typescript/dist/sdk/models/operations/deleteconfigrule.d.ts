@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteConfigRuleXAmzTargetEnum {
     StarlingDoveServiceDeleteConfigRule = "StarlingDoveService.DeleteConfigRule"
 }
-export declare class DeleteConfigRuleHeaders extends SpeakeasyBase {
+export declare class DeleteConfigRuleRequest extends SpeakeasyBase {
+    deleteConfigRuleRequest: shared.DeleteConfigRuleRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,13 +15,16 @@ export declare class DeleteConfigRuleHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteConfigRuleXAmzTargetEnum;
 }
-export declare class DeleteConfigRuleRequest extends SpeakeasyBase {
-    headers: DeleteConfigRuleHeaders;
-    request: shared.DeleteConfigRuleRequest;
-}
 export declare class DeleteConfigRuleResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * NoSuchConfigRuleException
+     */
     noSuchConfigRuleException?: any;
+    /**
+     * ResourceInUseException
+     */
     resourceInUseException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

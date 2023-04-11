@@ -1,15 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteAccountPasswordPolicyActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteAccountPasswordPolicyActionEnum {
     DeleteAccountPasswordPolicy = "DeleteAccountPasswordPolicy"
 }
-export declare enum PostDeleteAccountPasswordPolicyVersionEnum {
+export declare enum POSTDeleteAccountPasswordPolicyVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostDeleteAccountPasswordPolicyQueryParams extends SpeakeasyBase {
-    action: PostDeleteAccountPasswordPolicyActionEnum;
-    version: PostDeleteAccountPasswordPolicyVersionEnum;
-}
-export declare class PostDeleteAccountPasswordPolicyHeaders extends SpeakeasyBase {
+export declare class POSTDeleteAccountPasswordPolicyRequest extends SpeakeasyBase {
+    action: POSTDeleteAccountPasswordPolicyActionEnum;
+    version: POSTDeleteAccountPasswordPolicyVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +17,9 @@ export declare class PostDeleteAccountPasswordPolicyHeaders extends SpeakeasyBas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteAccountPasswordPolicyRequest extends SpeakeasyBase {
-    queryParams: PostDeleteAccountPasswordPolicyQueryParams;
-    headers: PostDeleteAccountPasswordPolicyHeaders;
-}
-export declare class PostDeleteAccountPasswordPolicyResponse extends SpeakeasyBase {
+export declare class POSTDeleteAccountPasswordPolicyResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

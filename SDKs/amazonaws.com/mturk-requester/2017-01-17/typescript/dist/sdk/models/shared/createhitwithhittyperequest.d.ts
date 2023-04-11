@@ -1,10 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { HITLayoutParameter } from "./hitlayoutparameter";
 import { ReviewPolicy } from "./reviewpolicy";
-import { HitLayoutParameter } from "./hitlayoutparameter";
-export declare class CreateHitWithHitTypeRequest extends SpeakeasyBase {
+export declare class CreateHITWithHITTypeRequest extends SpeakeasyBase {
     assignmentReviewPolicy?: ReviewPolicy;
     hitLayoutId?: string;
-    hitLayoutParameters?: HitLayoutParameter[];
+    hitLayoutParameters?: HITLayoutParameter[];
     hitReviewPolicy?: ReviewPolicy;
     hitTypeId: string;
     lifetimeInSeconds: number;

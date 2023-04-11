@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class CreateFunctionDefinitionResponse extends SpeakeasyBase {
     arn?: string;
     creationTimestamp?: string;

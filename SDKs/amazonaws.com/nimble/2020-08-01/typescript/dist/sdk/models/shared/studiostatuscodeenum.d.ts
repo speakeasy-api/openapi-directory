@@ -1,3 +1,6 @@
+/**
+ * The status code.
+ */
 export declare enum StudioStatusCodeEnum {
     StudioCreated = "STUDIO_CREATED",
     StudioDeleted = "STUDIO_DELETED",
@@ -16,5 +19,6 @@ export declare enum StudioStatusCodeEnum {
     EncryptionKeyNotFound = "ENCRYPTION_KEY_NOT_FOUND",
     EncryptionKeyAccessDenied = "ENCRYPTION_KEY_ACCESS_DENIED",
     AwsSsoConfigurationRepaired = "AWS_SSO_CONFIGURATION_REPAIRED",
-    AwsSsoConfigurationRepairInProgress = "AWS_SSO_CONFIGURATION_REPAIR_IN_PROGRESS"
+    AwsSsoConfigurationRepairInProgress = "AWS_SSO_CONFIGURATION_REPAIR_IN_PROGRESS",
+    AwsStsRegionDisabled = "AWS_STS_REGION_DISABLED"
 }

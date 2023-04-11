@@ -1,10 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { KeyValuePair } from "./keyvaluepair";
 import { ServerSideEncryption } from "./serversideencryption";
 import { StorageClassEnum } from "./storageclassenum";
-import { KeyValuePair } from "./keyvaluepair";
 /**
  * Provides information about the S3 object that a finding applies to.
-**/
+ */
 export declare class S3Object extends SpeakeasyBase {
     bucketArn?: string;
     eTag?: string;

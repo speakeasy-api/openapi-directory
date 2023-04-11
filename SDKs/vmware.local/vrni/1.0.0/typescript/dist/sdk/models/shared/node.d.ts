@@ -4,6 +4,9 @@ export declare enum NodeNodeTypeEnum {
     ProxyVm = "PROXY_VM",
     PlatformVm = "PLATFORM_VM"
 }
+/**
+ * OK
+ */
 export declare class Node extends SpeakeasyBase {
     entityType?: NodeTypeEnum;
     id?: string;

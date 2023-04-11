@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Global access settings
+ */
 export declare enum ProjectEntityGlobalAccessEnum {
     None = "none",
     AnyoneWithRead = "anyone_with_read",
@@ -6,8 +9,14 @@ export declare enum ProjectEntityGlobalAccessEnum {
 }
 /**
  * List Projects
-**/
+ */
 export declare class ProjectEntity extends SpeakeasyBase {
+    /**
+     * Global access settings
+     */
     globalAccess?: ProjectEntityGlobalAccessEnum;
+    /**
+     * Project ID
+     */
     id?: number;
 }

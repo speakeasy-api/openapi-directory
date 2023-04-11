@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetSqlInjectionMatchSetXAmzTargetEnum {
-    Awswaf20150824GetSqlInjectionMatchSet = "AWSWAF_20150824.GetSqlInjectionMatchSet"
+    AWSWAF20150824GetSqlInjectionMatchSet = "AWSWAF_20150824.GetSqlInjectionMatchSet"
 }
-export declare class GetSqlInjectionMatchSetHeaders extends SpeakeasyBase {
+export declare class GetSqlInjectionMatchSetRequest extends SpeakeasyBase {
+    getSqlInjectionMatchSetRequest: shared.GetSqlInjectionMatchSetRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class GetSqlInjectionMatchSetHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetSqlInjectionMatchSetXAmzTargetEnum;
 }
-export declare class GetSqlInjectionMatchSetRequest extends SpeakeasyBase {
-    headers: GetSqlInjectionMatchSetHeaders;
-    request: shared.GetSqlInjectionMatchSetRequest;
-}
 export declare class GetSqlInjectionMatchSetResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getSqlInjectionMatchSetResponse?: shared.GetSqlInjectionMatchSetResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFInvalidAccountException
+     */
     wafInvalidAccountException?: any;
+    /**
+     * WAFNonexistentItemException
+     */
     wafNonexistentItemException?: any;
 }

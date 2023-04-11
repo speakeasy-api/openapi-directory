@@ -4,6 +4,9 @@ import { EnvironmentMatrix } from "./environmentmatrix";
 import { ResultStorage } from "./resultstorage";
 import { TestExecution } from "./testexecution";
 import { TestSpecification } from "./testspecification";
+/**
+ * Output only. Describes why the matrix is considered invalid. Only useful for matrices in the INVALID state.
+ */
 export declare enum TestMatrixInvalidMatrixDetailsEnum {
     InvalidMatrixDetailsUnspecified = "INVALID_MATRIX_DETAILS_UNSPECIFIED",
     DetailsUnavailable = "DETAILS_UNAVAILABLE",
@@ -39,13 +42,15 @@ export declare enum TestMatrixInvalidMatrixDetailsEnum {
     MalformedAppBundle = "MALFORMED_APP_BUNDLE",
     NoCodeApk = "NO_CODE_APK",
     InvalidInputApk = "INVALID_INPUT_APK",
-    InvalidApkPreviewSdk = "INVALID_APK_PREVIEW_SDK",
+    InvalidApkPreviewSDK = "INVALID_APK_PREVIEW_SDK",
     MatrixTooLarge = "MATRIX_TOO_LARGE",
-    DeviceQuotaExceeded = "DEVICE_QUOTA_EXCEEDED",
     TestQuotaExceeded = "TEST_QUOTA_EXCEEDED",
     ServiceNotActivated = "SERVICE_NOT_ACTIVATED",
     UnknownPermissionError = "UNKNOWN_PERMISSION_ERROR"
 }
+/**
+ * Output Only. The overall outcome of the test. Only set when the test matrix state is FINISHED.
+ */
 export declare enum TestMatrixOutcomeSummaryEnum {
     OutcomeSummaryUnspecified = "OUTCOME_SUMMARY_UNSPECIFIED",
     Success = "SUCCESS",
@@ -53,6 +58,9 @@ export declare enum TestMatrixOutcomeSummaryEnum {
     Inconclusive = "INCONCLUSIVE",
     Skipped = "SKIPPED"
 }
+/**
+ * Output only. Indicates the current progress of the test matrix.
+ */
 export declare enum TestMatrixStateEnum {
     TestStateUnspecified = "TEST_STATE_UNSPECIFIED",
     Validating = "VALIDATING",
@@ -68,19 +76,58 @@ export declare enum TestMatrixStateEnum {
 }
 /**
  * TestMatrix captures all details about a test. It contains the environment configuration, test specification, test executions and overall state and outcome.
-**/
+ */
 export declare class TestMatrix extends SpeakeasyBase {
+    /**
+     * Information about the client which invoked the test.
+     */
     clientInfo?: ClientInfo;
+    /**
+     * The matrix of environments in which the test is to be executed.
+     */
     environmentMatrix?: EnvironmentMatrix;
+    /**
+     * If true, only a single attempt at most will be made to run each execution/shard in the matrix. Flaky test attempts are not affected. Normally, 2 or more attempts are made if a potential infrastructure issue is detected. This feature is for latency sensitive workloads. The incidence of execution failures may be significantly greater for fail-fast matrices and support is more limited because of that expectation.
+     */
     failFast?: boolean;
+    /**
+     * The number of times a TestExecution should be re-attempted if one or more of its test cases fail for any reason. The maximum number of reruns allowed is 10. Default is 0, which implies no reruns.
+     */
     flakyTestAttempts?: number;
+    /**
+     * Output only. Describes why the matrix is considered invalid. Only useful for matrices in the INVALID state.
+     */
     invalidMatrixDetails?: TestMatrixInvalidMatrixDetailsEnum;
+    /**
+     * Output Only. The overall outcome of the test. Only set when the test matrix state is FINISHED.
+     */
     outcomeSummary?: TestMatrixOutcomeSummaryEnum;
+    /**
+     * The cloud project that owns the test matrix.
+     */
     projectId?: string;
+    /**
+     * Locations where the results of running the test are stored.
+     */
     resultStorage?: ResultStorage;
+    /**
+     * Output only. Indicates the current progress of the test matrix.
+     */
     state?: TestMatrixStateEnum;
+    /**
+     * Output only. The list of test executions that the service creates for this matrix.
+     */
     testExecutions?: TestExecution[];
+    /**
+     * Output only. Unique id set by the service.
+     */
     testMatrixId?: string;
+    /**
+     * A description of how to run the test.
+     */
     testSpecification?: TestSpecification;
+    /**
+     * Output only. The time this test matrix was initially created.
+     */
     timestamp?: string;
 }

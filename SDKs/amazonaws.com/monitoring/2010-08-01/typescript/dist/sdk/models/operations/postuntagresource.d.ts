@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostUntagResourceActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTUntagResourceActionEnum {
     UntagResource = "UntagResource"
 }
-export declare enum PostUntagResourceVersionEnum {
+export declare enum POSTUntagResourceVersionEnum {
     TwoThousandAndTen0801 = "2010-08-01"
 }
-export declare class PostUntagResourceQueryParams extends SpeakeasyBase {
-    action: PostUntagResourceActionEnum;
-    version: PostUntagResourceVersionEnum;
-}
-export declare class PostUntagResourceHeaders extends SpeakeasyBase {
+export declare class POSTUntagResourceRequest extends SpeakeasyBase {
+    action: POSTUntagResourceActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTUntagResourceVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostUntagResourceHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostUntagResourceRequest extends SpeakeasyBase {
-    queryParams: PostUntagResourceQueryParams;
-    headers: PostUntagResourceHeaders;
-    request?: Uint8Array;
-}
-export declare class PostUntagResourceResponse extends SpeakeasyBase {
+export declare class POSTUntagResourceResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

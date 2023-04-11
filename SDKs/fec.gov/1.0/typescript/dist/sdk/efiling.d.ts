@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Efiling endpoints provide real-time campaign finance data received from electronic filers. Efiling endpoints only contain the most recent four months of data and don't contain the processed and coded data that you can find on other endpoints.
+ */
 export declare class Efiling {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,11 +12,11 @@ export declare class Efiling {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getEfileFilings - Basic information about electronic files coming into the FEC, posted as they are received.
-    **/
+     * Basic information about electronic files coming into the FEC, posted as they are received.
+     */
     getEfileFilings(req: operations.GetEfileFilingsRequest, config?: AxiosRequestConfig): Promise<operations.GetEfileFilingsResponse>;
     /**
-     * getEfileReportsHouseSenate -
+     *
      * Key financial data reported periodically by committees as they are reported. This feed includes summary
      * information from the the House F3 reports, the presidential F3p reports and the PAC and party
      * F3x reports.
@@ -26,10 +29,10 @@ export declare class Efiling {
      * DISCLAIMER: The field labels contained within this resource are subject to change.  We are attempting to succinctly
      * label these fields while conveying clear meaning to ensure accessibility for all users.
      *
-    **/
+     */
     getEfileReportsHouseSenate(req: operations.GetEfileReportsHouseSenateRequest, config?: AxiosRequestConfig): Promise<operations.GetEfileReportsHouseSenateResponse>;
     /**
-     * getEfileReportsPacParty -
+     *
      * Key financial data reported periodically by committees as they are reported. This feed includes summary
      * information from the the House F3 reports, the presidential F3p reports and the PAC and party
      * F3x reports.
@@ -42,10 +45,10 @@ export declare class Efiling {
      * DISCLAIMER: The field labels contained within this resource are subject to change.  We are attempting to succinctly
      * label these fields while conveying clear meaning to ensure accessibility for all users.
      *
-    **/
+     */
     getEfileReportsPacParty(req: operations.GetEfileReportsPacPartyRequest, config?: AxiosRequestConfig): Promise<operations.GetEfileReportsPacPartyResponse>;
     /**
-     * getEfileReportsPresidential -
+     *
      * Key financial data reported periodically by committees as they are reported. This feed includes summary
      * information from the the House F3 reports, the presidential F3p reports and the PAC and party
      * F3x reports.
@@ -58,6 +61,6 @@ export declare class Efiling {
      * DISCLAIMER: The field labels contained within this resource are subject to change.  We are attempting to succinctly
      * label these fields while conveying clear meaning to ensure accessibility for all users.
      *
-    **/
+     */
     getEfileReportsPresidential(req: operations.GetEfileReportsPresidentialRequest, config?: AxiosRequestConfig): Promise<operations.GetEfileReportsPresidentialResponse>;
 }

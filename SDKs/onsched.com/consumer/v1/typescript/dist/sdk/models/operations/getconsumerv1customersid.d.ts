@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetConsumerV1CustomersIdPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetConsumerV1CustomersIdRequest extends SpeakeasyBase {
-    pathParams: GetConsumerV1CustomersIdPathParams;
+    /**
+     * id of customer object
+     */
+    id: string;
 }
 export declare class GetConsumerV1CustomersIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     customerViewModel?: shared.CustomerViewModel;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

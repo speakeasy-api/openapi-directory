@@ -1,5 +1,13 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * You can add labels to findings to help you keep track of you development.
+ *
+ * @remarks
+ * Use these endpoints to manage your labels.
+ *
+ */
 export declare class Labels {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,27 +17,27 @@ export declare class Labels {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteLabelsId - Delete label
-    **/
+     * Delete label
+     */
     deleteLabelsId(req: operations.DeleteLabelsIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteLabelsIdResponse>;
     /**
-     * getLabels - List labels
-    **/
+     * List labels
+     */
     getLabels(req: operations.GetLabelsRequest, config?: AxiosRequestConfig): Promise<operations.GetLabelsResponse>;
     /**
-     * getLabelsId - Retrieve framework
-    **/
+     * Retrieve framework
+     */
     getLabelsId(req: operations.GetLabelsIdRequest, config?: AxiosRequestConfig): Promise<operations.GetLabelsIdResponse>;
     /**
-     * patchLabelsId - Partial update
-    **/
+     * Partial update
+     */
     patchLabelsId(req: operations.PatchLabelsIdRequest, config?: AxiosRequestConfig): Promise<operations.PatchLabelsIdResponse>;
     /**
-     * postLabels - Create label
-    **/
-    postLabels(req: operations.PostLabelsRequest, config?: AxiosRequestConfig): Promise<operations.PostLabelsResponse>;
+     * Create label
+     */
+    postLabels(req: shared.LabelInput, config?: AxiosRequestConfig): Promise<operations.PostLabelsResponse>;
     /**
-     * putLabelsId - Update label
-    **/
+     * Update label
+     */
     putLabelsId(req: operations.PutLabelsIdRequest, config?: AxiosRequestConfig): Promise<operations.PutLabelsIdResponse>;
 }

@@ -1,19 +1,33 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetApiV2PredictionsIdPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetApiV2PredictionsIdRequest extends SpeakeasyBase {
+    /**
+     * ID of match
+     */
     id: number;
 }
-export declare class GetApiV2PredictionsId200ApplicationJson extends SpeakeasyBase {
-    data?: Record<string, any>[];
-}
-export declare class GetApiV2PredictionsId404ApplicationJson extends SpeakeasyBase {
+/**
+ * Bad request, check response for detailed errors.
+ */
+export declare class GetApiV2PredictionsId404ApplicationJSON extends SpeakeasyBase {
     errors?: Record<string, any>;
 }
-export declare class GetApiV2PredictionsIdRequest extends SpeakeasyBase {
-    pathParams: GetApiV2PredictionsIdPathParams;
+/**
+ * Good request, returns object that contains all the predictions for a certain event.
+ */
+export declare class GetApiV2PredictionsId200ApplicationJSON extends SpeakeasyBase {
+    data?: Record<string, any>[];
 }
 export declare class GetApiV2PredictionsIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getApiV2PredictionsId200ApplicationJSONObject?: GetApiV2PredictionsId200ApplicationJson;
-    getApiV2PredictionsId404ApplicationJSONObject?: GetApiV2PredictionsId404ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Good request, returns object that contains all the predictions for a certain event.
+     */
+    getApiV2PredictionsId200ApplicationJSONObject?: GetApiV2PredictionsId200ApplicationJSON;
+    /**
+     * Bad request, check response for detailed errors.
+     */
+    getApiV2PredictionsId404ApplicationJSONObject?: GetApiV2PredictionsId404ApplicationJSON;
 }

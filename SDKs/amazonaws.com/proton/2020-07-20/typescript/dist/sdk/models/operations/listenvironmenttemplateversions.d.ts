@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListEnvironmentTemplateVersionsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListEnvironmentTemplateVersionsXAmzTargetEnum {
     AwsProton20200720ListEnvironmentTemplateVersions = "AwsProton20200720.ListEnvironmentTemplateVersions"
 }
-export declare class ListEnvironmentTemplateVersionsHeaders extends SpeakeasyBase {
+export declare class ListEnvironmentTemplateVersionsRequest extends SpeakeasyBase {
+    listEnvironmentTemplateVersionsInput: shared.ListEnvironmentTemplateVersionsInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,19 +14,41 @@ export declare class ListEnvironmentTemplateVersionsHeaders extends SpeakeasyBas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: ListEnvironmentTemplateVersionsXAmzTargetEnum;
-}
-export declare class ListEnvironmentTemplateVersionsRequest extends SpeakeasyBase {
-    queryParams: ListEnvironmentTemplateVersionsQueryParams;
-    headers: ListEnvironmentTemplateVersionsHeaders;
-    request: shared.ListEnvironmentTemplateVersionsInput;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class ListEnvironmentTemplateVersionsResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * Success
+     */
     listEnvironmentTemplateVersionsOutput?: shared.ListEnvironmentTemplateVersionsOutput;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

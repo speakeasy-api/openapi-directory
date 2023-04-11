@@ -1,3 +1,6 @@
+/**
+ * Usage state of the onboarded instance of the application package
+ */
 export declare enum UsageStateEnum {
     InUse = "IN_USE",
     NotInUse = "NOT_IN_USE"

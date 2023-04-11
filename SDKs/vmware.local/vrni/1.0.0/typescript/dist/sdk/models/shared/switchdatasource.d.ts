@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { PasswordCredentials } from "./passwordcredentials";
 import { DataSourceTypeEnum } from "./datasourcetypeenum";
+import { PasswordCredentials } from "./passwordcredentials";
+/**
+ * OK
+ */
 export declare class SwitchDataSource extends SpeakeasyBase {
     credentials?: PasswordCredentials;
     enabled?: boolean;
@@ -10,5 +13,8 @@ export declare class SwitchDataSource extends SpeakeasyBase {
     ip?: string;
     nickname?: string;
     notes?: string;
+    /**
+     * proxy vm which should register this vcenter
+     */
     proxyId?: string;
 }

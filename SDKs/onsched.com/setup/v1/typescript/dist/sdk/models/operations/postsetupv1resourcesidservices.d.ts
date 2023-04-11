@@ -1,20 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PostSetupV1ResourcesIdServicesPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class PostSetupV1ResourcesIdServicesRequests extends SpeakeasyBase {
-    strings?: string[];
-    strings1?: string[];
-    strings2?: string[];
-    strings3?: string[];
-}
+import { AxiosResponse } from "axios";
 export declare class PostSetupV1ResourcesIdServicesRequest extends SpeakeasyBase {
-    pathParams: PostSetupV1ResourcesIdServicesPathParams;
-    request?: PostSetupV1ResourcesIdServicesRequests;
+    /**
+     * Array of valid service object id's
+     */
+    requestBody?: string[];
+    /**
+     * id of resource object
+     */
+    id: string;
 }
 export declare class PostSetupV1ResourcesIdServicesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     resourceViewModel?: shared.ResourceViewModel;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

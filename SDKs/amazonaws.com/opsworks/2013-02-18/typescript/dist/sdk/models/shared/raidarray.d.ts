@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Describes an instance's RAID array.
-**/
+ */
 export declare class RaidArray extends SpeakeasyBase {
     availabilityZone?: string;
     createdAt?: string;

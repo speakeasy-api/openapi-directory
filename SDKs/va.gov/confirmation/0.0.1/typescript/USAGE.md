@@ -1,26 +1,24 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetVeteranStatusRequest, GetVeteranStatusResponse } from "openapi/src/sdk/models/operations";
+import {
+  shared.VeteranStatusRequest,
+  GetVeteranStatusResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  VeteranStatusRequestGenderEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: GetVeteranStatusRequest = {
-  security: {
-    apikey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  },
-  request: {
-    birthDate: "sit",
-    firstName: "voluptas",
-    gender: "F",
-    lastName: "expedita",
-    middleName: "consequuntur",
-    ssn: "dolor",
-  },
+
+const req: shared.VeteranStatusRequest = {
+  birthDate: "1965-01-01",
+  firstName: "John",
+  gender: VeteranStatusRequestGenderEnum.M,
+  lastName: "Doe",
+  middleName: "Theodore",
+  ssn: "555-55-5555",
 };
 
 sdk.veteranConfirmationStatus.getVeteranStatus(req).then((res: GetVeteranStatusResponse | AxiosError) => {

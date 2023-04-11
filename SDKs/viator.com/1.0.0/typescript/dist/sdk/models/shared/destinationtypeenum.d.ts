@@ -1,3 +1,12 @@
+/**
+ * **destination type specifier**
+ *
+ * @remarks
+ * - `"COUNTRY"`: destination is a country
+ * - `"REGION"`: destination is a recognized region of a country, such as a state, island within a country, stretch of coastline, etc.
+ * - `"CITY"`: destination is a city
+ *
+ */
 export declare enum DestinationTypeEnum {
     City = "CITY",
     Country = "COUNTRY",

@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * The client object contains standard OAuth2/OpenID Connect client properties. To use an OpenID Connect flow, you need a client_id. Certain flows also require a client_secret. The client object contains the client_id and client_secret values, as well as some properties to be displayed to the user (e.g. logo, client name, version).
+ */
 export declare class Client {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +12,9 @@ export declare class Client {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getClientClientId - Get a Client
+     * Get a Client
      *
+     * @remarks
      * Use this endpoint to generate a random client. The client is generated in a deterministic way, on the bases of the client ID given as a path parameter.
      * In the case of identical client IDs, the endpoint will generate the same client object. The properties of the generated client object are randomly generated on the basis of the client ID.
      * In lack of a client ID, all calls generate a different client object to the randomly generated client ID.
@@ -21,22 +25,24 @@ export declare class Client {
      *
      * The result is always a client object. If you want to generate multiple clients in one single step, you can do it by the use of *Fleet* generation.
      * The members of a fleet are clients randomly generated from the fleet name.
-    **/
+     */
     getClientClientId(req: operations.GetClientClientIdRequest, config?: AxiosRequestConfig): Promise<operations.GetClientClientIdResponse>;
     /**
-     * getClientClientIdTokenKind - Get a Client Token
+     * Get a Client Token
      *
+     * @remarks
      * It is used to generate a OpenID Connect token as a path parameter to a client of a given client ID.
      *
      * It is primarily used for testing purposes, when, for example, the token from the standard authentication flow is not available to the test code.
-    **/
+     */
     getClientClientIdTokenKind(req: operations.GetClientClientIdTokenKindRequest, config?: AxiosRequestConfig): Promise<operations.GetClientClientIdTokenKindResponse>;
     /**
-     * postClient - Create a Client Selfie
+     * Create a Client Selfie
      *
+     * @remarks
      * To create a selfie token from the client data, you need an opaqe string token, which contains the encoded client properties sent in the request.
      * Later, the selfie token can be used as a client ID. In this case, the client data is included in the selfie token, that is, the client properties are taken from the token.
      * By the use of a selfie token, you can use your own client objects in the authentication process.
-    **/
-    postClient(req: operations.PostClientRequest, config?: AxiosRequestConfig): Promise<operations.PostClientResponse>;
+     */
+    postClient(req: operations.PostClientRequestBody, config?: AxiosRequestConfig): Promise<operations.PostClientResponse>;
 }

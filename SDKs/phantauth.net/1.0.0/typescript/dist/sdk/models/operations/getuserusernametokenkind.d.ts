@@ -1,4 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
+/**
+ * Token type
+ */
 export declare enum GetUserUsernameTokenKindKindEnum {
     Access = "'access'",
     Refresh = "'refresh'",
@@ -7,18 +11,22 @@ export declare enum GetUserUsernameTokenKindKindEnum {
     Selfie = "'selfie'",
     Plain = "'plain'"
 }
-export declare class GetUserUsernameTokenKindPathParams extends SpeakeasyBase {
-    kind: GetUserUsernameTokenKindKindEnum;
-    username: string;
-}
-export declare class GetUserUsernameTokenKindQueryParams extends SpeakeasyBase {
-    scope?: string;
-}
 export declare class GetUserUsernameTokenKindRequest extends SpeakeasyBase {
-    pathParams: GetUserUsernameTokenKindPathParams;
-    queryParams: GetUserUsernameTokenKindQueryParams;
+    /**
+     * Token type
+     */
+    kind: GetUserUsernameTokenKindKindEnum;
+    /**
+     * OpenID Connect scope
+     */
+    scope?: string;
+    /**
+     * A username or email.
+     */
+    username: string;
 }
 export declare class GetUserUsernameTokenKindResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

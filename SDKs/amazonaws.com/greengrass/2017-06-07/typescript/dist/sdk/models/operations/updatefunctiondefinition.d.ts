@@ -1,8 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UpdateFunctionDefinitionPathParams extends SpeakeasyBase {
-    functionDefinitionId: string;
+import { AxiosResponse } from "axios";
+export declare class UpdateFunctionDefinitionRequestBody extends SpeakeasyBase {
+    /**
+     * The name of the definition.
+     */
+    name?: string;
 }
-export declare class UpdateFunctionDefinitionHeaders extends SpeakeasyBase {
+export declare class UpdateFunctionDefinitionRequest extends SpeakeasyBase {
+    /**
+     * The ID of the Lambda function definition.
+     */
+    functionDefinitionId: string;
+    requestBody: UpdateFunctionDefinitionRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,17 +20,16 @@ export declare class UpdateFunctionDefinitionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class UpdateFunctionDefinitionRequestBody extends SpeakeasyBase {
-    name?: string;
-}
-export declare class UpdateFunctionDefinitionRequest extends SpeakeasyBase {
-    pathParams: UpdateFunctionDefinitionPathParams;
-    headers: UpdateFunctionDefinitionHeaders;
-    request: UpdateFunctionDefinitionRequestBody;
-}
 export declare class UpdateFunctionDefinitionResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     updateFunctionDefinitionResponse?: Record<string, any>;
 }

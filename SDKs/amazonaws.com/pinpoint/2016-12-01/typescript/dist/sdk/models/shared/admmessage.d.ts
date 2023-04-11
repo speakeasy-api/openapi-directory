@@ -2,8 +2,8 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { ActionEnum } from "./actionenum";
 /**
  * Specifies the settings for a one-time message that's sent directly to an endpoint through the ADM (Amazon Device Messaging) channel.
-**/
-export declare class AdmMessage extends SpeakeasyBase {
+ */
+export declare class ADMMessage extends SpeakeasyBase {
     action?: ActionEnum;
     body?: string;
     consolidationKey?: string;

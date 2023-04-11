@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { StringList } from "./stringlist";
+/**
+ * Applies the filter criterion to the specified dimension.
+ */
 export declare enum MediationReportSpecDimensionFilterDimensionEnum {
     DimensionUnspecified = "DIMENSION_UNSPECIFIED",
     Date = "DATE",
@@ -14,14 +17,20 @@ export declare enum MediationReportSpecDimensionFilterDimensionEnum {
     Format = "FORMAT",
     Platform = "PLATFORM",
     MobileOsVersion = "MOBILE_OS_VERSION",
-    GmaSdkVersion = "GMA_SDK_VERSION",
+    GmaSDKVersion = "GMA_SDK_VERSION",
     AppVersionName = "APP_VERSION_NAME",
     ServingRestriction = "SERVING_RESTRICTION"
 }
 /**
  * Describes which report rows to match based on their dimension values.
-**/
+ */
 export declare class MediationReportSpecDimensionFilter extends SpeakeasyBase {
+    /**
+     * Applies the filter criterion to the specified dimension.
+     */
     dimension?: MediationReportSpecDimensionFilterDimensionEnum;
+    /**
+     * List of string values.
+     */
     matchesAny?: StringList;
 }

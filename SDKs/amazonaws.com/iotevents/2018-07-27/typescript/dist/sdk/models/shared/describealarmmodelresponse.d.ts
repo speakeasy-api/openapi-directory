@@ -1,9 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { AlarmCapabilities } from "./alarmcapabilities";
 import { AlarmEventActions } from "./alarmeventactions";
+import { AlarmModelVersionStatusEnum } from "./alarmmodelversionstatusenum";
 import { AlarmNotification } from "./alarmnotification";
 import { AlarmRule } from "./alarmrule";
-import { AlarmModelVersionStatusEnum } from "./alarmmodelversionstatusenum";
+/**
+ * Success
+ */
 export declare class DescribeAlarmModelResponse extends SpeakeasyBase {
     alarmCapabilities?: AlarmCapabilities;
     alarmEventActions?: AlarmEventActions;

@@ -1,5 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Project {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,137 +10,180 @@ export declare class Project {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * cancelProject - Cancel your translation project
-    **/
+     * Assign a CM to the project
+     */
+    assignCM(req: operations.AssignCMRequest, config?: AxiosRequestConfig): Promise<operations.AssignCMResponse>;
+    /**
+     * Cancel your translation project
+     *
+     * @remarks
+     * If you haven't launched your translation project yet, we will delete it. If MotaWord already started working on your project, we will cancel the project and refund the volume that we haven't worked on yet.
+     */
     cancelProject(req: operations.CancelProjectRequest, config?: AxiosRequestConfig): Promise<operations.CancelProjectResponse>;
     /**
-     * createProject - Get a new quote
-     *
      * Create a new project
-    **/
-    createProject(req: operations.CreateProjectRequest, config?: AxiosRequestConfig): Promise<operations.CreateProjectResponse>;
-    /**
-     * deleteProject - Delete a project
      *
-     * Delete(cancel) a project.
-    **/
+     * @remarks
+     * Create a new translation project. Projects are not launched (you are not charged) until you `/launch` the created project.
+     */
+    createProjectJson(req: shared.NewProject, config?: AxiosRequestConfig): Promise<operations.CreateProjectJsonResponse>;
+    /**
+     * Create a new project
+     *
+     * @remarks
+     * Create a new translation project. Projects are not launched (you are not charged) until you `/launch` the created project.
+     */
+    createProjectMultipart(req: shared.NewProject1, config?: AxiosRequestConfig): Promise<operations.CreateProjectMultipartResponse>;
+    /**
+     * Delete your translation project
+     *
+     * @remarks
+     * If you haven't launched your translation project yet, we will delete it. If MotaWord already started working on your project, we will cancel the project and refund the volume that we haven't worked on yet.
+     */
     deleteProject(req: operations.DeleteProjectRequest, config?: AxiosRequestConfig): Promise<operations.DeleteProjectResponse>;
     /**
-     * deliverProject - Deliver project
-    **/
+     * Deliver project
+     *
+     * @remarks
+     * Deliver project to the owner of the project. You can also download your translations in `/package` and `/download` endpoints.
+     */
     deliverProject(req: operations.DeliverProjectRequest, config?: AxiosRequestConfig): Promise<operations.DeliverProjectResponse>;
     /**
-     * download - Download the latest translation package.
+     * Download your translated project
      *
-     * Download the latest translation package. You must have given a /package call beforehand and wait until the packaging status is 'completed'.
-    **/
+     * @remarks
+     * Download the latest translation package. You must have requested a `/package` call beforehand and wait until the packaging status is 'completed'.
+     */
     download(req: operations.DownloadRequest, config?: AxiosRequestConfig): Promise<operations.DownloadResponse>;
     /**
-     * downloadHtmlInvoice - Download invoice as hmtl
+     * Download project invoice (HTML)
      *
-     * Download invoice as html by project id.
-    **/
+     * @remarks
+     * Download your project invoice as HTML. This is useful when you want to show your users the invoice in a webpage.
+     */
     downloadHtmlInvoice(req: operations.DownloadHtmlInvoiceRequest, config?: AxiosRequestConfig): Promise<operations.DownloadHtmlInvoiceResponse>;
     /**
-     * downloadLanguage - Download the latest translation package.
+     * Download your translated project language
      *
-     * Download only the translation package of this language. You must have given a /package call beforehand and wait until the packaging status is 'completed'.
-    **/
+     * @remarks
+     * Download the latest translation package for your target language. You must have requested a `/package` call beforehand and wait until the packaging status is 'completed'.
+     */
     downloadLanguage(req: operations.DownloadLanguageRequest, config?: AxiosRequestConfig): Promise<operations.DownloadLanguageResponse>;
     /**
-     * downloadPdfInvoice - Download invoice as pdf
+     * Download project invoice (PDF)
      *
-     * Download invoice as pdf by project id.
-    **/
+     * @remarks
+     * Download your project invoice as PDF. Your invoice may be in "unpaid" status, in which case youn can see the payment instructions in the PDF file.
+     */
     downloadPdfInvoice(req: operations.DownloadPdfInvoiceRequest, config?: AxiosRequestConfig): Promise<operations.DownloadPdfInvoiceResponse>;
     /**
-     * getInvoice - Get invoice details
+     * View project invoice
      *
-     * Get invoice details
-    **/
+     * @remarks
+     * View your invoice details for your translation project.
+     */
     getInvoice(req: operations.GetInvoiceRequest, config?: AxiosRequestConfig): Promise<operations.GetInvoiceResponse>;
     /**
-     * getProgress - Get project progress
+     * View progress of a project
      *
-     * Get the progress of an already launched project.
-    **/
+     * @remarks
+     * Monitor the translation progress of an already launched project in real-time.
+     */
     getProgress(req: operations.GetProgressRequest, config?: AxiosRequestConfig): Promise<operations.GetProgressResponse>;
     /**
-     * getProject - Get single project
+     * View a translation project
      *
-     * Get single project
-    **/
+     * @remarks
+     * View the details of a translation project in your account.
+     */
     getProject(req: operations.GetProjectRequest, config?: AxiosRequestConfig): Promise<operations.GetProjectResponse>;
     /**
-     * getProjectVendors - Get a list of vendors.
-     *
      * Get a list of vendors.
-    **/
+     *
+     * @remarks
+     * Get a list of vendors.
+     */
     getProjectVendors(req: operations.GetProjectVendorsRequest, config?: AxiosRequestConfig): Promise<operations.GetProjectVendorsResponse>;
     /**
-     * getProjects - Get a list of your projects
+     * View your translation projects
      *
-     * Get a list of your projects
-    **/
+     * @remarks
+     * View the translation projects ordered in your account. If you have the related permission (configured by your account administrator), you can view the projects of your colleagues under the same company account.
+     */
     getProjects(req: operations.GetProjectsRequest, config?: AxiosRequestConfig): Promise<operations.GetProjectsResponse>;
     /**
-     * getQuoteIdFromInternalId - Get Quote Id
-     *
      * Get Quote Id
-    **/
+     *
+     * @remarks
+     * Get Quote Id
+     */
     getQuoteIdFromInternalId(req: operations.GetQuoteIdFromInternalIdRequest, config?: AxiosRequestConfig): Promise<operations.GetQuoteIdFromInternalIdResponse>;
     /**
-     * getVendorProjects - Get a list of your vendor projects
+     * List projects as a vendor
      *
-     * Get a list of your vendor projects
-    **/
+     * @remarks
+     * Get a list of projects that are available to you to work on as a vendor. This is not a list of projects that you ordered as a customer.
+     */
     getVendorProjects(req: operations.GetVendorProjectsRequest, config?: AxiosRequestConfig): Promise<operations.GetVendorProjectsResponse>;
     /**
-     * getVendorProjectsByUserId - Get a list of user/vendor projects
-     *
      * Get a list of user/vendor projects
-    **/
+     *
+     * @remarks
+     * Get a list of user/vendor projects
+     */
     getVendorProjectsByUserId(req: operations.GetVendorProjectsByUserIdRequest, config?: AxiosRequestConfig): Promise<operations.GetVendorProjectsByUserIdResponse>;
     /**
-     * launchProject - Launch your translation project
-    **/
+     * Launch your translation project
+     *
+     * @remarks
+     * Launch your translation project so MotaWord can actually start working on your translation.
+     */
     launchProject(req: operations.LaunchProjectRequest, config?: AxiosRequestConfig): Promise<operations.LaunchProjectResponse>;
     /**
-     * package - Package the translation of all languages to be downloaded.
+     * Package your translated project
      *
-     * Package the translation project, make it ready to be downloaded.
-    **/
+     * @remarks
+     * Package the translations in your project, prepare translated documents and make it ready to be downloaded. Once packaged, you can download your translated project.
+     */
     package(req: operations.PackageRequest, config?: AxiosRequestConfig): Promise<operations.PackageResponse>;
     /**
-     * packageLanguage - Package the translation of a specific target language to be downloaded.
+     * Package your translated project language
      *
-     * Package the translation project, make it ready to be downloaded.
-    **/
+     * @remarks
+     * Package the translations in your project for a specific target language, prepare translated documents and make it ready to be downloaded. Once packaged, you can download your translated project in this target language.
+     */
     packageLanguage(req: operations.PackageLanguageRequest, config?: AxiosRequestConfig): Promise<operations.PackageLanguageResponse>;
     /**
-     * recreateProject - Recreate your translation project from scratch. This is a risky action, you will lose current translations.
-    **/
+     * Recreate your translation project from scratch. This is a risky action, you will lose current translations.
+     */
     recreateProject(req: operations.RecreateProjectRequest, config?: AxiosRequestConfig): Promise<operations.RecreateProjectResponse>;
     /**
-     * submitProjectReports - Submit reports for a project
-    **/
+     * Send a quote email
+     *
+     * @remarks
+     * Send a quote email
+     */
+    sendQuoteEmail(req: operations.SendQuoteEmailRequest, config?: AxiosRequestConfig): Promise<operations.SendQuoteEmailResponse>;
+    /**
+     * Submit feedback report for a project
+     */
     submitProjectReports(req: operations.SubmitProjectReportsRequest, config?: AxiosRequestConfig): Promise<operations.SubmitProjectReportsResponse>;
     /**
-     * trackPackage - Track the status of translation packaging.
+     * Track translation packaging status
      *
-     * This request will tell you the current progress of the translation packaging. You will use the 'key' provided by the /package call.
-    **/
+     * @remarks
+     * Track the packaging status of your translations, by using the `key` from packaging request. Once packaging is completed, you can download your translations via `/download` endpoints.
+     */
     trackPackage(req: operations.TrackPackageRequest, config?: AxiosRequestConfig): Promise<operations.TrackPackageResponse>;
     /**
-     * triggerCallback - Trigger a call to your callback URL related to this project.
-     *
      * Trigger a call to your callback URL related to this project.
-    **/
+     *
+     * @remarks
+     * Trigger a call to your callback URL related to this project.
+     */
     triggerCallback(req: operations.TriggerCallbackRequest, config?: AxiosRequestConfig): Promise<operations.TriggerCallbackResponse>;
     /**
-     * updateProject - Update project language pairs
-     *
-     * Update project language pairs
-    **/
+     * Update project info and settings
+     */
     updateProject(req: operations.UpdateProjectRequest, config?: AxiosRequestConfig): Promise<operations.UpdateProjectResponse>;
 }

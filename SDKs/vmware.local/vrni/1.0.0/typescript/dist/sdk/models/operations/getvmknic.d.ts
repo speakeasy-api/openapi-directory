@@ -1,22 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetVmknicPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class GetVmknicQueryParams extends SpeakeasyBase {
-    time?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetVmknicSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
+    apiKeyAuth: string;
 }
 export declare class GetVmknicRequest extends SpeakeasyBase {
-    pathParams: GetVmknicPathParams;
-    queryParams: GetVmknicQueryParams;
-    security: GetVmknicSecurity;
+    /**
+     * entity id
+     */
+    id: string;
+    /**
+     * time in epoch seconds
+     */
+    time?: number;
 }
 export declare class GetVmknicResponse extends SpeakeasyBase {
+    /**
+     * Bad Request
+     */
     apiError?: shared.ApiError;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
     vmknic?: shared.Vmknic;
 }

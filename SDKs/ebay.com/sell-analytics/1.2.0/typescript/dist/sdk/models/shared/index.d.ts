@@ -18,6 +18,5 @@ export * from "./metricbenchmark";
 export * from "./metricdistribution";
 export * from "./record";
 export * from "./report";
-export * from "./security";
 export * from "./standardsprofile";
 export * from "./value";

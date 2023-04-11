@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostApplySecurityGroupsToClientVpnTargetNetworkActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTApplySecurityGroupsToClientVpnTargetNetworkActionEnum {
     ApplySecurityGroupsToClientVpnTargetNetwork = "ApplySecurityGroupsToClientVpnTargetNetwork"
 }
-export declare enum PostApplySecurityGroupsToClientVpnTargetNetworkVersionEnum {
+export declare enum POSTApplySecurityGroupsToClientVpnTargetNetworkVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostApplySecurityGroupsToClientVpnTargetNetworkQueryParams extends SpeakeasyBase {
-    action: PostApplySecurityGroupsToClientVpnTargetNetworkActionEnum;
-    version: PostApplySecurityGroupsToClientVpnTargetNetworkVersionEnum;
-}
-export declare class PostApplySecurityGroupsToClientVpnTargetNetworkHeaders extends SpeakeasyBase {
+export declare class POSTApplySecurityGroupsToClientVpnTargetNetworkRequest extends SpeakeasyBase {
+    action: POSTApplySecurityGroupsToClientVpnTargetNetworkActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTApplySecurityGroupsToClientVpnTargetNetworkVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostApplySecurityGroupsToClientVpnTargetNetworkHeaders exte
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostApplySecurityGroupsToClientVpnTargetNetworkRequest extends SpeakeasyBase {
-    queryParams: PostApplySecurityGroupsToClientVpnTargetNetworkQueryParams;
-    headers: PostApplySecurityGroupsToClientVpnTargetNetworkHeaders;
-    request?: Uint8Array;
-}
-export declare class PostApplySecurityGroupsToClientVpnTargetNetworkResponse extends SpeakeasyBase {
+export declare class POSTApplySecurityGroupsToClientVpnTargetNetworkResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

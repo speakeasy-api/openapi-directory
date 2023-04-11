@@ -4,9 +4,21 @@ export declare enum AuthorizationCodeGrantTypeEnum {
     ClientCredentials = "client_credentials"
 }
 export declare class AuthorizationCode extends SpeakeasyBase {
+    /**
+     * Authorization code
+     */
     authorizationCode?: string;
+    /**
+     * Client ID
+     */
     clientId?: string;
+    /**
+     * Client secret
+     */
     clientSecret?: string;
     grantType?: AuthorizationCodeGrantTypeEnum;
+    /**
+     * Redirect URI
+     */
     redirectUri?: string;
 }

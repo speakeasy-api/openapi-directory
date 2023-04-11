@@ -1,15 +1,36 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+/**
+ * The type of the concept, used for Constructing a Semantic API Request by Concept Type and Specific Concept Name. The parameter is defined as a name-value pair, as in "concept_type=[nytd_geo|nytd_per|nytd_org|nytd_des]".
+ *
+ * @remarks
+ *
+ */
 export declare enum GetNameConceptTypeSpecificConceptJsonConceptTypeEnum {
     NytdGeo = "nytd_geo",
     NytdPer = "nytd_per",
     NytdOrg = "nytd_org",
     NytdDes = "nytd_des"
 }
-export declare class GetNameConceptTypeSpecificConceptJsonPathParams extends SpeakeasyBase {
-    conceptType: GetNameConceptTypeSpecificConceptJsonConceptTypeEnum;
-    specificConcept: string;
-}
+/**
+ * "all" or comma-separated list of specific optional fields: pages, ticker_symbol, links, taxonomy, combinations, geocodes, article_list, scope_notes, search_api_query
+ *
+ * @remarks
+ *
+ * Optional fields are returned in result_set. They are briefly explained here:
+ *
+ * pages: A list of topic pages associated with a specific concept.
+ * ticker_symbol: If this concept is a publicly traded company, this field contains the ticker symbol.
+ * links: A list of links from this concept to external data resources.
+ * taxonomy: For descriptor concepts, this field returns a list of taxonomic relations to other concepts.
+ * combinations: For descriptor concepts, this field returns a list of the specific meanings tis concept takes on when combined with other concepts.
+ * geocodes: For geographic concepts, the full GIS record from geonames.
+ * article_list: A list of up to 10 articles associated with this concept.
+ * scope_notes: Scope notes contains clarifications and meaning definitions that explicate the relationship between the concept and an article.
+ * search_api_query: Returns the request one would need to submit to the Article Search API to obtain a list of articles annotated with this concept.
+ *
+ */
 export declare enum GetNameConceptTypeSpecificConceptJsonFieldsEnum {
     All = "all",
     Pages = "pages",
@@ -22,22 +43,60 @@ export declare enum GetNameConceptTypeSpecificConceptJsonFieldsEnum {
     ScopeNotes = "scope_notes",
     SearchApiQuery = "search_api_query"
 }
-export declare class GetNameConceptTypeSpecificConceptJsonQueryParams extends SpeakeasyBase {
+export declare class GetNameConceptTypeSpecificConceptJsonRequest extends SpeakeasyBase {
+    /**
+     * The type of the concept, used for Constructing a Semantic API Request by Concept Type and Specific Concept Name. The parameter is defined as a name-value pair, as in "concept_type=[nytd_geo|nytd_per|nytd_org|nytd_des]".
+     *
+     * @remarks
+     *
+     */
+    conceptType: GetNameConceptTypeSpecificConceptJsonConceptTypeEnum;
+    /**
+     * "all" or comma-separated list of specific optional fields: pages, ticker_symbol, links, taxonomy, combinations, geocodes, article_list, scope_notes, search_api_query
+     *
+     * @remarks
+     *
+     * Optional fields are returned in result_set. They are briefly explained here:
+     *
+     * pages: A list of topic pages associated with a specific concept.
+     * ticker_symbol: If this concept is a publicly traded company, this field contains the ticker symbol.
+     * links: A list of links from this concept to external data resources.
+     * taxonomy: For descriptor concepts, this field returns a list of taxonomic relations to other concepts.
+     * combinations: For descriptor concepts, this field returns a list of the specific meanings tis concept takes on when combined with other concepts.
+     * geocodes: For geographic concepts, the full GIS record from geonames.
+     * article_list: A list of up to 10 articles associated with this concept.
+     * scope_notes: Scope notes contains clarifications and meaning definitions that explicate the relationship between the concept and an article.
+     * search_api_query: Returns the request one would need to submit to the Article Search API to obtain a list of articles annotated with this concept.
+     *
+     */
     fields?: GetNameConceptTypeSpecificConceptJsonFieldsEnum;
+    /**
+     * Precedes the search term string. Used in a Search Query. Except for &lt;specific_concept_name&gt;, Search Query will take the required parameters listed above (&lt;concept_type&gt;, &lt;concept_uri&gt;, &lt;article_uri&gt;) as an optional_parameter in addition to the query=&lt;query_term&gt;.
+     */
     query: string;
+    /**
+     * The name of the concept, used for Constructing a Semantic API Request by Concept Type and Specific Concept Name. The parameter is defined in the URI path, as the element immediately preceding ".json" like with "Baseball.json".
+     *
+     * @remarks
+     *
+     */
+    specificConcept: string;
 }
-export declare class GetNameConceptTypeSpecificConceptJson200ApplicationJson extends SpeakeasyBase {
+/**
+ * An array of Concepts
+ */
+export declare class GetNameConceptTypeSpecificConceptJson200ApplicationJSON extends SpeakeasyBase {
     copyright?: string;
     numResults?: number;
     results?: shared.Concept[];
     status?: string;
 }
-export declare class GetNameConceptTypeSpecificConceptJsonRequest extends SpeakeasyBase {
-    pathParams: GetNameConceptTypeSpecificConceptJsonPathParams;
-    queryParams: GetNameConceptTypeSpecificConceptJsonQueryParams;
-}
 export declare class GetNameConceptTypeSpecificConceptJsonResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNameConceptTypeSpecificConceptJSON200ApplicationJSONObject?: GetNameConceptTypeSpecificConceptJson200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * An array of Concepts
+     */
+    getNameConceptTypeSpecificConceptJSON200ApplicationJSONObject?: GetNameConceptTypeSpecificConceptJson200ApplicationJSON;
 }

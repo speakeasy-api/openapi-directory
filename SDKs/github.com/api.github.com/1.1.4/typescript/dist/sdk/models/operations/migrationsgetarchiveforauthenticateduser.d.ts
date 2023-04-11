@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class MigrationsGetArchiveForAuthenticatedUserPathParams extends SpeakeasyBase {
-    migrationId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class MigrationsGetArchiveForAuthenticatedUserRequest extends SpeakeasyBase {
-    pathParams: MigrationsGetArchiveForAuthenticatedUserPathParams;
+    /**
+     * The unique identifier of the migration.
+     */
+    migrationId: number;
 }
 export declare class MigrationsGetArchiveForAuthenticatedUserResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Requires authentication
+     */
     basicError?: shared.BasicError;
 }

@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Response
+ */
 export declare class LicenseInfo extends SpeakeasyBase {
     daysUntilExpiration?: number;
     expireAt?: string;

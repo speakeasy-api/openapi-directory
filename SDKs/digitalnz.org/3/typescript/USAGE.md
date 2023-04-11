@@ -1,57 +1,65 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetRecordsFormatRequest, GetRecordsFormatResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GetRecordsFormatRequest,
+  GetRecordsFormatResponse,
+  GetRecordsFormatAndCategoryEnum,
+  GetRecordsFormatAndHasLargeThumbnailUrlEnum,
+  GetRecordsFormatAndHasLatLngEnum,
+  GetRecordsFormatAndUsageEnum,
+  GetRecordsFormatDirectionEnum,
+  GetRecordsFormatFacetsEnum,
+  GetRecordsFormatSortEnum,
+} from "openapi/dist/sdk/models/operations";
+import {
+  FormatEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    apiKeyAuth: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    apiKeyAuth: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: GetRecordsFormatRequest = {
-  pathParams: {
-    format: "json",
-  },
-  queryParams: {
-    andCategory: "Manuscripts",
-    andCentury: "culpa",
-    andCollection: "expedita",
-    andContentPartner: "consequuntur",
-    andCreator: "dolor",
-    andDate: "expedita",
-    andDcType: "voluptas",
-    andDecade: "fugit",
-    andFormat: "et",
-    andHasLargeThumbnailUrl: "Y",
-    andHasLatLng: true,
-    andIsCommercialUse: false,
-    andOrFilterField: "debitis",
-    andPlacename: "voluptatum",
-    andPrimaryCollection: "et",
-    andSubject: "ut",
-    andTitle: "dolorem",
-    andUsage: "Share",
-    andYear: "voluptate",
-    apiKey: "iste",
-    direction: "asc",
-    excludeFiltersFromFacets: true,
-    facets: [
-      "usage",
-    ],
-    facetsPage: 6392442863481646880,
-    facetsPerPage: 3706853784096366226,
-    fields: "odio",
-    geoBbox: "dolore",
-    page: 4035568504096476779,
-    perPage: 959367522974354090,
-    sort: "syndication_date",
-    text: "totam",
-    withoutFilterField: "commodi",
-  },
+  authenticationToken: "corrupti",
+  andCategory: GetRecordsFormatAndCategoryEnum.ResearchPapers,
+  andCentury: "distinctio",
+  andCollection: "quibusdam",
+  andContentPartner: "unde",
+  andCreator: "nulla",
+  andDate: "corrupti",
+  andDcType: "illum",
+  andDecade: "vel",
+  andFormat: "error",
+  andHasLargeThumbnailUrl: GetRecordsFormatAndHasLargeThumbnailUrlEnum.Y,
+  andHasLatLng: GetRecordsFormatAndHasLatLngEnum.False,
+  andIsCommercialUse: false,
+  andOrFilterField: "suscipit",
+  andPlacename: "iure",
+  andPrimaryCollection: "magnam",
+  andSubject: "debitis",
+  andTitle: "ipsa",
+  andUsage: GetRecordsFormatAndUsageEnum.Unknown,
+  andYear: "tempora",
+  direction: GetRecordsFormatDirectionEnum.Asc,
+  excludeFiltersFromFacets: false,
+  facets: [
+    GetRecordsFormatFacetsEnum.Copyright,
+    GetRecordsFormatFacetsEnum.Copyright,
+  ],
+  facetsPage: 528895,
+  facetsPerPage: 479977,
+  fields: "excepturi",
+  format: FormatEnum.Json,
+  geoBbox: "recusandae",
+  page: 836079,
+  perPage: 71036,
+  sort: GetRecordsFormatSortEnum.SyndicationDate,
+  text: "veritatis",
+  withoutFilterField: "deserunt",
 };
 
 sdk.apiCalls.getRecordsFormat(req).then((res: GetRecordsFormatResponse | AxiosError) => {

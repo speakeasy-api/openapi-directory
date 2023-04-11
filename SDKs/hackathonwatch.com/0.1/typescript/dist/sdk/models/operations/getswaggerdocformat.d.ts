@@ -1,5 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetSwaggerDocFormatResponse extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETSwaggerDocFormatResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

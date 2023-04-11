@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { RelationshipStatusEnum } from "./relationshipstatusenum";
+/**
+ * Success
+ */
 export declare class GetMemberResponse extends SpeakeasyBase {
     accountId?: string;
     administratorAccountId?: string;

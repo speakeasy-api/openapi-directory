@@ -1,20 +1,55 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class RetrieveApiSecretPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class RetrieveAPISecretSecurity extends SpeakeasyBase {
+    password: string;
+    username: string;
+}
+export declare class RetrieveAPISecretRequest extends SpeakeasyBase {
+    /**
+     * The API key to manage secrets for
+     */
     apiKey: string;
+    /**
+     * ID of the API Secret
+     */
     secretId: string;
 }
-export declare class RetrieveApiSecretSecurity extends SpeakeasyBase {
-    basicAuth: shared.SchemeBasicAuth;
+/**
+ * Credentials are missing or invalid
+ */
+export declare class RetrieveAPISecret401ApplicationJSON extends SpeakeasyBase {
+    /**
+     * More detail regarding this error, including the expected value
+     */
+    detail?: string;
+    /**
+     * Internal Trace ID
+     */
+    instance?: string;
+    /**
+     * Description of the error
+     */
+    title?: string;
+    /**
+     * URL for further information
+     */
+    type?: string;
 }
-export declare class RetrieveApiSecretRequest extends SpeakeasyBase {
-    pathParams: RetrieveApiSecretPathParams;
-    security: RetrieveApiSecretSecurity;
-}
-export declare class RetrieveApiSecretResponse extends SpeakeasyBase {
+export declare class RetrieveAPISecretResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    retrieveAPISecret401ApplicationJSONAny?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * Credentials are missing or invalid
+     */
+    retrieveAPISecret401ApplicationJSONObject?: RetrieveAPISecret401ApplicationJSON;
+    /**
+     * Item not found
+     */
     retrieveAPISecret404ApplicationJSONOneOf?: any;
+    /**
+     * API secret response
+     */
     secretInfo?: shared.SecretInfo;
 }

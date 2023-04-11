@@ -1,5 +1,13 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * During the scans we run fingerprinters against the target and record the
+ *
+ * @remarks
+ * result on the site and assets.
+ * You can access our list of frameworks/software here.
+ *
+ */
 export declare class Frameworks {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,11 +17,11 @@ export declare class Frameworks {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getFrameworks - List frameworks
-    **/
+     * List frameworks
+     */
     getFrameworks(req: operations.GetFrameworksRequest, config?: AxiosRequestConfig): Promise<operations.GetFrameworksResponse>;
     /**
-     * getFrameworksId - Retrieve framework
-    **/
+     * Retrieve framework
+     */
     getFrameworksId(req: operations.GetFrameworksIdRequest, config?: AxiosRequestConfig): Promise<operations.GetFrameworksIdResponse>;
 }

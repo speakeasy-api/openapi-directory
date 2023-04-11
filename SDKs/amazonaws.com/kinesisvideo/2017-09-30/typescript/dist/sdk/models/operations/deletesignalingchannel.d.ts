@@ -1,5 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteSignalingChannelHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteSignalingChannelRequestBody extends SpeakeasyBase {
+    /**
+     * The Amazon Resource Name (ARN) of the signaling channel that you want to delete.
+     */
+    channelARN: string;
+    /**
+     * The current version of the signaling channel that you want to delete. You can obtain the current version by invoking the <code>DescribeSignalingChannel</code> or <code>ListSignalingChannels</code> API operations.
+     */
+    currentVersion?: string;
+}
+export declare class DeleteSignalingChannelRequest extends SpeakeasyBase {
+    requestBody: DeleteSignalingChannelRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -8,22 +20,36 @@ export declare class DeleteSignalingChannelHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeleteSignalingChannelRequestBody extends SpeakeasyBase {
-    channelARN: string;
-    currentVersion?: string;
-}
-export declare class DeleteSignalingChannelRequest extends SpeakeasyBase {
-    headers: DeleteSignalingChannelHeaders;
-    request: DeleteSignalingChannelRequestBody;
-}
 export declare class DeleteSignalingChannelResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ClientLimitExceededException
+     */
     clientLimitExceededException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteSignalingChannelOutput?: Record<string, any>;
+    /**
+     * InvalidArgumentException
+     */
     invalidArgumentException?: any;
-    resourceInUseException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceInUseException
+     */
+    resourceInUseException?: any;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * VersionMismatchException
+     */
     versionMismatchException?: any;
 }

@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class TestnetGetAddressUnconfirmedBalancePathParams extends SpeakeasyBase {
-    address: string;
-}
+import { AxiosResponse } from "axios";
 export declare class TestnetGetAddressUnconfirmedBalanceRequest extends SpeakeasyBase {
-    pathParams: TestnetGetAddressUnconfirmedBalancePathParams;
+    /**
+     * Address
+     */
+    address: string;
 }
 export declare class TestnetGetAddressUnconfirmedBalanceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Address unconfirmed balance
+     */
     getAddressUnconfirmedBalanceResponse?: number;
 }

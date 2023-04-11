@@ -1,29 +1,52 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetVideoCreditsPathParams extends SpeakeasyBase {
-    videoId: number;
-}
+import { AxiosResponse } from "axios";
+/**
+ * The sort direction of the results.
+ */
 export declare enum GetVideoCreditsDirectionEnum {
     Asc = "asc",
     Desc = "desc"
 }
+/**
+ * The way to sort the results.
+ */
 export declare enum GetVideoCreditsSortEnum {
     Alphabetical = "alphabetical",
     Date = "date"
 }
-export declare class GetVideoCreditsQueryParams extends SpeakeasyBase {
-    direction?: GetVideoCreditsDirectionEnum;
-    page?: number;
-    perPage?: number;
-    query?: string;
-    sort?: GetVideoCreditsSortEnum;
-}
 export declare class GetVideoCreditsRequest extends SpeakeasyBase {
-    pathParams: GetVideoCreditsPathParams;
-    queryParams: GetVideoCreditsQueryParams;
+    /**
+     * The sort direction of the results.
+     */
+    direction?: GetVideoCreditsDirectionEnum;
+    /**
+     * The page number of the results to show.
+     */
+    page?: number;
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    perPage?: number;
+    /**
+     * The search query to use to filter the results.
+     */
+    query?: string;
+    /**
+     * The way to sort the results.
+     */
+    sort?: GetVideoCreditsSortEnum;
+    /**
+     * The ID of the video.
+     */
+    videoId: number;
 }
 export declare class GetVideoCreditsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The users were returned.
+     */
     credits?: shared.Credit[];
 }

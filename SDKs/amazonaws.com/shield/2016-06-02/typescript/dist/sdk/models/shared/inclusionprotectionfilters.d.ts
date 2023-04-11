@@ -1,0 +1,10 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { ProtectedResourceTypeEnum } from "./protectedresourcetypeenum";
+/**
+ * Narrows the set of protections that the call retrieves. You can retrieve a single protection by providing its name or the ARN (Amazon Resource Name) of its protected resource. You can also retrieve all protections for a specific resource type. You can provide up to one criteria per filter type. Shield Advanced returns protections that exactly match all of the filter criteria that you provide.
+ */
+export declare class InclusionProtectionFilters extends SpeakeasyBase {
+    protectionNames?: string[];
+    resourceArns?: string[];
+    resourceTypes?: ProtectedResourceTypeEnum[];
+}

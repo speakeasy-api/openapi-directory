@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class DeleteEgressOnlyInternetGatewayResult extends SpeakeasyBase {
-    returnCode?: Record<string, any>;
+    returnCode?: boolean;
 }

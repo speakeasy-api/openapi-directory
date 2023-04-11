@@ -1,18 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CheckWatchLaterQueueAlt1PathParams extends SpeakeasyBase {
-    videoId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class CheckWatchLaterQueueAlt1Security extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
+    oauth2: string;
 }
 export declare class CheckWatchLaterQueueAlt1Request extends SpeakeasyBase {
-    pathParams: CheckWatchLaterQueueAlt1PathParams;
-    security: CheckWatchLaterQueueAlt1Security;
+    /**
+     * The ID of the video.
+     */
+    videoId: number;
 }
 export declare class CheckWatchLaterQueueAlt1Response extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The video doesn't appear in the user's Watch Later queue.
+     */
     legacyError?: shared.LegacyError;
+    /**
+     * The video appears in the user's Watch Later queue.
+     */
     video?: shared.Video;
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostUpdateAvailabilityOptionsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTUpdateAvailabilityOptionsActionEnum {
     UpdateAvailabilityOptions = "UpdateAvailabilityOptions"
 }
-export declare enum PostUpdateAvailabilityOptionsVersionEnum {
+export declare enum POSTUpdateAvailabilityOptionsVersionEnum {
     TwoThousandAndThirteen0101 = "2013-01-01"
 }
-export declare class PostUpdateAvailabilityOptionsQueryParams extends SpeakeasyBase {
-    action: PostUpdateAvailabilityOptionsActionEnum;
-    version: PostUpdateAvailabilityOptionsVersionEnum;
-}
-export declare class PostUpdateAvailabilityOptionsHeaders extends SpeakeasyBase {
+export declare class POSTUpdateAvailabilityOptionsRequest extends SpeakeasyBase {
+    action: POSTUpdateAvailabilityOptionsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTUpdateAvailabilityOptionsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostUpdateAvailabilityOptionsHeaders extends SpeakeasyBase 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostUpdateAvailabilityOptionsRequest extends SpeakeasyBase {
-    queryParams: PostUpdateAvailabilityOptionsQueryParams;
-    headers: PostUpdateAvailabilityOptionsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostUpdateAvailabilityOptionsResponse extends SpeakeasyBase {
+export declare class POSTUpdateAvailabilityOptionsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateTableXAmzTargetEnum {
-    DynamoDb20111205UpdateTable = "DynamoDB_20111205.UpdateTable"
+    DynamoDB20111205UpdateTable = "DynamoDB_20111205.UpdateTable"
 }
-export declare class UpdateTableHeaders extends SpeakeasyBase {
+export declare class UpdateTableRequest extends SpeakeasyBase {
+    updateTableInput: shared.UpdateTableInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class UpdateTableHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateTableXAmzTargetEnum;
 }
-export declare class UpdateTableRequest extends SpeakeasyBase {
-    headers: UpdateTableHeaders;
-    request: shared.UpdateTableInput;
-}
 export declare class UpdateTableResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServerError
+     */
     internalServerError?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
-    resourceInUseException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceInUseException
+     */
+    resourceInUseException?: any;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * Success
+     */
     updateTableOutput?: shared.UpdateTableOutput;
 }

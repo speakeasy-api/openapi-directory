@@ -1,21 +1,28 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReplaceVideosInAlbumAlt1PathParams extends SpeakeasyBase {
-    albumId: number;
+import { AxiosResponse } from "axios";
+export declare class ReplaceVideosInAlbumAlt1Security extends SpeakeasyBase {
+    oauth2: string;
 }
 export declare class ReplaceVideosInAlbumAlt1RequestBody extends SpeakeasyBase {
+    /**
+     * A comma-separated list of video URIs.
+     */
     videos: string;
 }
-export declare class ReplaceVideosInAlbumAlt1Security extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-}
 export declare class ReplaceVideosInAlbumAlt1Request extends SpeakeasyBase {
-    pathParams: ReplaceVideosInAlbumAlt1PathParams;
-    request: ReplaceVideosInAlbumAlt1RequestBody;
-    security: ReplaceVideosInAlbumAlt1Security;
+    requestBody: ReplaceVideosInAlbumAlt1RequestBody;
+    /**
+     * The ID of the album.
+     */
+    albumId: number;
 }
 export declare class ReplaceVideosInAlbumAlt1Response extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The authenticated user can't add videos to albums.
+     */
     legacyError?: shared.LegacyError;
 }

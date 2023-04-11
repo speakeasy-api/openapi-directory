@@ -1,15 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdateRulePathParams extends SpeakeasyBase {
-    ruleId: string;
-    storeId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UpdateRuleRequest extends SpeakeasyBase {
-    pathParams: UpdateRulePathParams;
-    request: shared.UpdateRuleRequest;
+    /**
+     * Your rule identifier
+     */
+    ruleId: string;
+    /**
+     * Your store identifier
+     */
+    storeId: string;
+    updateRuleRequest: shared.UpdateRuleRequest;
 }
 export declare class UpdateRuleResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     * Filter does not exist or period on filter cannot be custom
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

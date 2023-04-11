@@ -22,7 +22,6 @@ export * from "./resource";
 export * from "./resourceaccesscontrol";
 export * from "./resourceslistresponse";
 export * from "./resourceupdate";
-export * from "./security";
 export * from "./targetconfiguration";
 export * from "./testpermissionsrequest";
 export * from "./testpermissionsresponse";

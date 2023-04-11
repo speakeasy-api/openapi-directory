@@ -1,4 +1,4 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteVpceConfigurationRequest extends SpeakeasyBase {
+export declare class DeleteVPCEConfigurationRequest extends SpeakeasyBase {
     arn: string;
 }

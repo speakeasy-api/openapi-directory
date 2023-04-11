@@ -3,16 +3,33 @@ import { AsanaNamedResource } from "./asananamedresource";
 import { UserCompact } from "./usercompact";
 /**
  * Information about the type of change that has occurred. This field is only present when the value of the property `action`, describing the action taken on the **resource**, is `changed`.
-**/
+ */
 export declare class EventResponseChange extends SpeakeasyBase {
+    /**
+     * The type of action taken on the **field** which has been changed.  This can be one of `changed`, `added`, or `removed` depending on the nature of the change.
+     */
     action?: string;
+    /**
+     * *Conditional.* This property is only present when the **field's** `action` is `added` _and_ the `added_value` is an Asana resource. This will be only the `gid` and `resource_type` of the resource when the events come from webhooks; this will be the compact representation (and can have fields expanded with [opt_fields](/docs/input-output-options)) when using the [Events](/docs/asana-events) endpoint.
+     */
     addedValue?: any;
+    /**
+     * The name of the field that has changed in the resource.
+     */
     field?: string;
+    /**
+     * *Conditional.* This property is only present when the **field's** `action` is `changed` _and_ the `new_value` is an Asana resource. This will be only the `gid` and `resource_type` of the resource when the events come from webhooks; this will be the compact representation (and can have fields expanded with [opt_fields](/docs/input-output-options)) when using the [Events](/docs/asana-events) endpoint.
+     */
     newValue?: any;
+    /**
+     * *Conditional.* This property is only present when the **field's** `action` is `removed` _and_ the `removed_value` is an Asana resource. This will be only the `gid` and `resource_type` of the resource when the events come from webhooks; this will be the compact representation (and can have fields expanded with [opt_fields](/docs/input-output-options)) when using the [Events](/docs/asana-events) endpoint.
+     */
     removedValue?: any;
 }
 /**
  * An *event* is an object representing a change to a resource that was
+ *
+ * @remarks
  * observed by an event subscription or delivered asynchronously to
  * the target location of an active webhook.
  *
@@ -37,13 +54,13 @@ export declare class EventResponseChange extends SpeakeasyBase {
  *
  *
  * * When at task is added to a project, `Event.action` will be
- * `added`, `Event.parent` will be on object with the `id` and
+ * `added`, `Event.parent` will be an object with the `id` and
  * `type` of the project, and there will be no `change` field.
  *
  *
  * * When an assignee is set on the task, `Event.parent` will be
  * `null`, `Event.action` will be `changed`,
- * `Event.change.action` will be `changed`, and `changed_value` will
+ * `Event.change.action` will be `changed`, and `new_value` will
  * be an object with the user's `id` and `type`.
  *
  *
@@ -51,13 +68,25 @@ export declare class EventResponseChange extends SpeakeasyBase {
  * be `null`, `Event.action` will be `changed`,
  * `Event.change.action` will be `added`, and `added_value` will be
  * an object with the user's `id` and `type`.
-**/
+ */
 export declare class EventResponse extends SpeakeasyBase {
+    /**
+     * The type of action taken on the **resource** that triggered the event.  This can be one of `changed`, `added`, `removed`, `deleted`, or `undeleted` depending on the nature of the event.
+     */
     action?: string;
+    /**
+     * Information about the type of change that has occurred. This field is only present when the value of the property `action`, describing the action taken on the **resource**, is `changed`.
+     */
     change?: EventResponseChange;
+    /**
+     * The timestamp when the event occurred.
+     */
     createdAt?: Date;
     parent?: AsanaNamedResource;
     resource?: AsanaNamedResource;
+    /**
+     * *Deprecated: Refer to the resource_type of the resource.* The type of the resource that generated the event.
+     */
     type?: string;
     user?: UserCompact;
 }

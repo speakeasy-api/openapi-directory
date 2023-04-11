@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class StartMlEvaluationTaskRunResponse extends SpeakeasyBase {
+/**
+ * Success
+ */
+export declare class StartMLEvaluationTaskRunResponse extends SpeakeasyBase {
     taskRunId?: string;
 }

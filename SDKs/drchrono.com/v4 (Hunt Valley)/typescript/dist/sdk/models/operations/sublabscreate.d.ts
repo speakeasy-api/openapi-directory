@@ -1,13 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class SublabsCreateSecurity extends SpeakeasyBase {
-    drchronoOauth2: shared.SchemeDrchronoOauth2;
-}
-export declare class SublabsCreateRequest extends SpeakeasyBase {
-    security: SublabsCreateSecurity;
-}
+import { AxiosResponse } from "axios";
 export declare class SublabsCreateResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Created
+     */
     labVendorLocation?: shared.LabVendorLocation;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

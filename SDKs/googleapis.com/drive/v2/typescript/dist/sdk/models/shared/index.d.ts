@@ -33,7 +33,6 @@ export * from "./property";
 export * from "./propertylist";
 export * from "./revision";
 export * from "./revisionlist";
-export * from "./security";
 export * from "./startpagetoken";
 export * from "./teamdrive";
 export * from "./teamdrivelist";

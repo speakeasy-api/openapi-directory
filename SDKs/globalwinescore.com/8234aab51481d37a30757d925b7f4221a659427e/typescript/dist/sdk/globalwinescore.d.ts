@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class GlobalWineScore {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,15 +9,17 @@ export declare class GlobalWineScore {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getGlobalwinescoresLatest - List all latest GWS
+     * List all latest GWS
      *
+     * @remarks
      * Returns the latest GWS available per wine/vintage.
-    **/
+     */
     getGlobalwinescoresLatest(req: operations.GetGlobalwinescoresLatestRequest, config?: AxiosRequestConfig): Promise<operations.GetGlobalwinescoresLatestResponse>;
     /**
-     * listHistoricalGws - List all historical GWS
+     * List all historical GWS
      *
+     * @remarks
      * Returns all available GWS
-    **/
-    listHistoricalGws(req: operations.ListHistoricalGwsRequest, config?: AxiosRequestConfig): Promise<operations.ListHistoricalGwsResponse>;
+     */
+    listHistoricalGWS(req: operations.ListHistoricalGWSRequest, config?: AxiosRequestConfig): Promise<operations.ListHistoricalGWSResponse>;
 }

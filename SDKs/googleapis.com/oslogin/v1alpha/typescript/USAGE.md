@@ -1,43 +1,37 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { OsloginUsersGetLoginProfileRequest, OsloginUsersGetLoginProfileResponse } from "openapi/src/sdk/models/operations";
+import {
+  OsloginUsersGetLoginProfileRequest,
+  OsloginUsersGetLoginProfileResponse,
+  OsloginUsersGetLoginProfileOperatingSystemTypeEnum,
+  OsloginUsersGetLoginProfileViewEnum,
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: OsloginUsersGetLoginProfileRequest = {
-  security: {
-    option1: {
-      oauth2: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-      oauth2c: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-    },
-  },
-  pathParams: {
-    name: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    operatingSystemType: "OPERATING_SYSTEM_TYPE_UNSPECIFIED",
-    prettyPrint: false,
-    projectId: "nihil",
-    quotaUser: "rerum",
-    systemId: "dicta",
-    uploadType: "debitis",
-    uploadProtocol: "voluptatum",
-    view: "LOGIN_PROFILE_VIEW_UNSPECIFIED",
-  },
+  dollarXgafv: XgafvEnum.Two,
+  accessToken: "provident",
+  alt: AltEnum.Proto,
+  callback: "quibusdam",
+  fields: "unde",
+  key: "nulla",
+  name: "corrupti",
+  oauthToken: "illum",
+  operatingSystemType: OsloginUsersGetLoginProfileOperatingSystemTypeEnum.Linux,
+  prettyPrint: false,
+  projectId: "error",
+  quotaUser: "deserunt",
+  systemId: "suscipit",
+  uploadType: "iure",
+  uploadProtocol: "magnam",
+  view: OsloginUsersGetLoginProfileViewEnum.SecurityKey,
 };
 
 sdk.users.osloginUsersGetLoginProfile(req).then((res: OsloginUsersGetLoginProfileResponse | AxiosError) => {

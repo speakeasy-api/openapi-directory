@@ -16,6 +16,9 @@ export declare class SiteStatus extends SpeakeasyBase {
     value: SiteStatusValueEnum;
 }
 export declare class Site extends SpeakeasyBase {
+    /**
+     * 32-bit autonomous system number
+     */
     asn?: number;
     circuitCount?: number;
     comments?: string;
@@ -26,10 +29,19 @@ export declare class Site extends SpeakeasyBase {
     customFields?: Record<string, any>;
     description?: string;
     deviceCount?: number;
+    /**
+     * Local facility ID or description
+     */
     facility?: string;
     id?: number;
     lastUpdated?: Date;
+    /**
+     * GPS coordinate (latitude)
+     */
     latitude?: string;
+    /**
+     * GPS coordinate (longitude)
+     */
     longitude?: string;
     name: string;
     physicalAddress?: string;

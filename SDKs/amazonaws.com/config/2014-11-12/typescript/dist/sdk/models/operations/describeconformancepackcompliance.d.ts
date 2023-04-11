@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeConformancePackComplianceQueryParams extends SpeakeasyBase {
-    limit?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum DescribeConformancePackComplianceXAmzTargetEnum {
     StarlingDoveServiceDescribeConformancePackCompliance = "StarlingDoveService.DescribeConformancePackCompliance"
 }
-export declare class DescribeConformancePackComplianceHeaders extends SpeakeasyBase {
+export declare class DescribeConformancePackComplianceRequest extends SpeakeasyBase {
+    describeConformancePackComplianceRequest: shared.DescribeConformancePackComplianceRequest;
+    /**
+     * Pagination limit
+     */
+    limit?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,18 +23,32 @@ export declare class DescribeConformancePackComplianceHeaders extends SpeakeasyB
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeConformancePackComplianceXAmzTargetEnum;
 }
-export declare class DescribeConformancePackComplianceRequest extends SpeakeasyBase {
-    queryParams: DescribeConformancePackComplianceQueryParams;
-    headers: DescribeConformancePackComplianceHeaders;
-    request: shared.DescribeConformancePackComplianceRequest;
-}
 export declare class DescribeConformancePackComplianceResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeConformancePackComplianceResponse?: shared.DescribeConformancePackComplianceResponse;
+    /**
+     * InvalidLimitException
+     */
     invalidLimitException?: any;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
+    /**
+     * NoSuchConfigRuleInConformancePackException
+     */
     noSuchConfigRuleInConformancePackException?: any;
+    /**
+     * NoSuchConformancePackException
+     */
     noSuchConformancePackException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

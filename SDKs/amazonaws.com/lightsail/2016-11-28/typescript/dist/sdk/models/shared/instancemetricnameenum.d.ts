@@ -1,10 +1,11 @@
 export declare enum InstanceMetricNameEnum {
-    CpuUtilization = "CPUUtilization",
+    CPUUtilization = "CPUUtilization",
     NetworkIn = "NetworkIn",
     NetworkOut = "NetworkOut",
     StatusCheckFailed = "StatusCheckFailed",
     StatusCheckFailedInstance = "StatusCheckFailed_Instance",
     StatusCheckFailedSystem = "StatusCheckFailed_System",
     BurstCapacityTime = "BurstCapacityTime",
-    BurstCapacityPercentage = "BurstCapacityPercentage"
+    BurstCapacityPercentage = "BurstCapacityPercentage",
+    MetadataNoToken = "MetadataNoToken"
 }

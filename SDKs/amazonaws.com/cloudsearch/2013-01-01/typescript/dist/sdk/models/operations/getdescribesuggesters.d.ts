@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeSuggestersActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeSuggestersActionEnum {
     DescribeSuggesters = "DescribeSuggesters"
 }
-export declare enum GetDescribeSuggestersVersionEnum {
+export declare enum GETDescribeSuggestersVersionEnum {
     TwoThousandAndThirteen0101 = "2013-01-01"
 }
-export declare class GetDescribeSuggestersQueryParams extends SpeakeasyBase {
-    action: GetDescribeSuggestersActionEnum;
+export declare class GETDescribeSuggestersRequest extends SpeakeasyBase {
+    action: GETDescribeSuggestersActionEnum;
+    /**
+     * Whether to display the deployed configuration (<code>true</code>) or include any pending changes (<code>false</code>). Defaults to <code>false</code>.
+     */
     deployed?: boolean;
+    /**
+     * The name of the domain you want to describe.
+     */
     domainName: string;
+    /**
+     * The suggesters you want to describe.
+     */
     suggesterNames?: string[];
-    version: GetDescribeSuggestersVersionEnum;
-}
-export declare class GetDescribeSuggestersHeaders extends SpeakeasyBase {
+    version: GETDescribeSuggestersVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +29,9 @@ export declare class GetDescribeSuggestersHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeSuggestersRequest extends SpeakeasyBase {
-    queryParams: GetDescribeSuggestersQueryParams;
-    headers: GetDescribeSuggestersHeaders;
-}
-export declare class GetDescribeSuggestersResponse extends SpeakeasyBase {
+export declare class GETDescribeSuggestersResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

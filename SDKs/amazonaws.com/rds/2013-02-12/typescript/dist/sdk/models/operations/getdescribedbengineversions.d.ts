@@ -1,12 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeDbEngineVersionsActionEnum {
-    DescribeDbEngineVersions = "DescribeDBEngineVersions"
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeDBEngineVersionsActionEnum {
+    DescribeDBEngineVersions = "DescribeDBEngineVersions"
 }
-export declare enum GetDescribeDbEngineVersionsVersionEnum {
+export declare enum GETDescribeDBEngineVersionsVersionEnum {
     TwoThousandAndThirteen0212 = "2013-02-12"
 }
-export declare class GetDescribeDbEngineVersionsQueryParams extends SpeakeasyBase {
-    action: GetDescribeDbEngineVersionsActionEnum;
+export declare class GETDescribeDBEngineVersionsRequest extends SpeakeasyBase {
+    action: GETDescribeDBEngineVersionsActionEnum;
     dbParameterGroupFamily?: string;
     defaultOnly?: boolean;
     engine?: string;
@@ -14,9 +15,7 @@ export declare class GetDescribeDbEngineVersionsQueryParams extends SpeakeasyBas
     listSupportedCharacterSets?: boolean;
     marker?: string;
     maxRecords?: number;
-    version: GetDescribeDbEngineVersionsVersionEnum;
-}
-export declare class GetDescribeDbEngineVersionsHeaders extends SpeakeasyBase {
+    version: GETDescribeDBEngineVersionsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -25,12 +24,9 @@ export declare class GetDescribeDbEngineVersionsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeDbEngineVersionsRequest extends SpeakeasyBase {
-    queryParams: GetDescribeDbEngineVersionsQueryParams;
-    headers: GetDescribeDbEngineVersionsHeaders;
-}
-export declare class GetDescribeDbEngineVersionsResponse extends SpeakeasyBase {
+export declare class GETDescribeDBEngineVersionsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

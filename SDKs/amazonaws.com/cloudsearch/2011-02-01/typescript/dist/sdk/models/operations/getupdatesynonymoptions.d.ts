@@ -1,17 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetUpdateSynonymOptionsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETUpdateSynonymOptionsActionEnum {
     UpdateSynonymOptions = "UpdateSynonymOptions"
 }
-export declare enum GetUpdateSynonymOptionsVersionEnum {
+export declare enum GETUpdateSynonymOptionsVersionEnum {
     TwoThousandAndEleven0201 = "2011-02-01"
 }
-export declare class GetUpdateSynonymOptionsQueryParams extends SpeakeasyBase {
-    action: GetUpdateSynonymOptionsActionEnum;
+export declare class GETUpdateSynonymOptionsRequest extends SpeakeasyBase {
+    action: GETUpdateSynonymOptionsActionEnum;
     domainName: string;
     synonyms: string;
-    version: GetUpdateSynonymOptionsVersionEnum;
-}
-export declare class GetUpdateSynonymOptionsHeaders extends SpeakeasyBase {
+    version: GETUpdateSynonymOptionsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +19,9 @@ export declare class GetUpdateSynonymOptionsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetUpdateSynonymOptionsRequest extends SpeakeasyBase {
-    queryParams: GetUpdateSynonymOptionsQueryParams;
-    headers: GetUpdateSynonymOptionsHeaders;
-}
-export declare class GetUpdateSynonymOptionsResponse extends SpeakeasyBase {
+export declare class GETUpdateSynonymOptionsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

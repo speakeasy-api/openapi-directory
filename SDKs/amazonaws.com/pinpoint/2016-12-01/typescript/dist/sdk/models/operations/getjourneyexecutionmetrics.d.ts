@@ -1,14 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetJourneyExecutionMetricsPathParams extends SpeakeasyBase {
-    applicationId: string;
-    journeyId: string;
-}
-export declare class GetJourneyExecutionMetricsQueryParams extends SpeakeasyBase {
-    nextToken?: string;
-    pageSize?: string;
-}
-export declare class GetJourneyExecutionMetricsHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetJourneyExecutionMetricsRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,21 +9,57 @@ export declare class GetJourneyExecutionMetricsHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class GetJourneyExecutionMetricsRequest extends SpeakeasyBase {
-    pathParams: GetJourneyExecutionMetricsPathParams;
-    queryParams: GetJourneyExecutionMetricsQueryParams;
-    headers: GetJourneyExecutionMetricsHeaders;
+    /**
+     * The unique identifier for the application. This identifier is displayed as the <b>Project ID</b> on the Amazon Pinpoint console.
+     */
+    applicationId: string;
+    /**
+     * The unique identifier for the journey.
+     */
+    journeyId: string;
+    /**
+     * The  string that specifies which page of results to return in a paginated response. This parameter is not supported for application, campaign, and journey metrics.
+     */
+    nextToken?: string;
+    /**
+     * The maximum number of items to include in each page of a paginated response. This parameter is not supported for application, campaign, and journey metrics.
+     */
+    pageSize?: string;
 }
 export declare class GetJourneyExecutionMetricsResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * ForbiddenException
+     */
     forbiddenException?: any;
+    /**
+     * Success
+     */
     getJourneyExecutionMetricsResponse?: shared.GetJourneyExecutionMetricsResponse;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
+    /**
+     * MethodNotAllowedException
+     */
     methodNotAllowedException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
+    /**
+     * PayloadTooLargeException
+     */
     payloadTooLargeException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

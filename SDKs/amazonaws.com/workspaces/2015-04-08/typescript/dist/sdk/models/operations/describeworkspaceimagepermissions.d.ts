@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeWorkspaceImagePermissionsXAmzTargetEnum {
     WorkspacesServiceDescribeWorkspaceImagePermissions = "WorkspacesService.DescribeWorkspaceImagePermissions"
 }
-export declare class DescribeWorkspaceImagePermissionsHeaders extends SpeakeasyBase {
+export declare class DescribeWorkspaceImagePermissionsRequest extends SpeakeasyBase {
+    describeWorkspaceImagePermissionsRequest: shared.DescribeWorkspaceImagePermissionsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class DescribeWorkspaceImagePermissionsHeaders extends SpeakeasyB
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeWorkspaceImagePermissionsXAmzTargetEnum;
 }
-export declare class DescribeWorkspaceImagePermissionsRequest extends SpeakeasyBase {
-    headers: DescribeWorkspaceImagePermissionsHeaders;
-    request: shared.DescribeWorkspaceImagePermissionsRequest;
-}
 export declare class DescribeWorkspaceImagePermissionsResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     describeWorkspaceImagePermissionsResult?: shared.DescribeWorkspaceImagePermissionsResult;
+    /**
+     * InvalidParameterValuesException
+     */
     invalidParameterValuesException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

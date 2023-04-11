@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostReplaceRouteActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTReplaceRouteActionEnum {
     ReplaceRoute = "ReplaceRoute"
 }
-export declare enum PostReplaceRouteVersionEnum {
+export declare enum POSTReplaceRouteVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostReplaceRouteQueryParams extends SpeakeasyBase {
-    action: PostReplaceRouteActionEnum;
-    version: PostReplaceRouteVersionEnum;
-}
-export declare class PostReplaceRouteHeaders extends SpeakeasyBase {
+export declare class POSTReplaceRouteRequest extends SpeakeasyBase {
+    action: POSTReplaceRouteActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTReplaceRouteVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +18,8 @@ export declare class PostReplaceRouteHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostReplaceRouteRequest extends SpeakeasyBase {
-    queryParams: PostReplaceRouteQueryParams;
-    headers: PostReplaceRouteHeaders;
-    request?: Uint8Array;
-}
-export declare class PostReplaceRouteResponse extends SpeakeasyBase {
+export declare class POSTReplaceRouteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

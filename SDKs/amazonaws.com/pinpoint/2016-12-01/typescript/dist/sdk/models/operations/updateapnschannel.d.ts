@@ -1,21 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdateApnsChannelPathParams extends SpeakeasyBase {
-    applicationId: string;
-}
-export declare class UpdateApnsChannelHeaders extends SpeakeasyBase {
-    xAmzAlgorithm?: string;
-    xAmzContentSha256?: string;
-    xAmzCredential?: string;
-    xAmzDate?: string;
-    xAmzSecurityToken?: string;
-    xAmzSignature?: string;
-    xAmzSignedHeaders?: string;
-}
+import { AxiosResponse } from "axios";
 /**
  * Specifies the status and settings of the APNs (Apple Push Notification service) channel for an application.
-**/
-export declare class UpdateApnsChannelRequestBodyApnsChannelRequest extends SpeakeasyBase {
+ */
+export declare class UpdateAPNSChannelRequestBodyAPNSChannelRequest extends SpeakeasyBase {
     bundleId?: string;
     certificate?: string;
     defaultAuthenticationMethod?: string;
@@ -26,22 +15,59 @@ export declare class UpdateApnsChannelRequestBodyApnsChannelRequest extends Spea
     tokenKeyId?: string;
 }
 export declare class UpdateApnsChannelRequestBody extends SpeakeasyBase {
-    apnsChannelRequest: UpdateApnsChannelRequestBodyApnsChannelRequest;
+    /**
+     * Specifies the status and settings of the APNs (Apple Push Notification service) channel for an application.
+     */
+    apnsChannelRequest: UpdateAPNSChannelRequestBodyAPNSChannelRequest;
 }
 export declare class UpdateApnsChannelRequest extends SpeakeasyBase {
-    pathParams: UpdateApnsChannelPathParams;
-    headers: UpdateApnsChannelHeaders;
-    request: UpdateApnsChannelRequestBody;
+    requestBody: UpdateApnsChannelRequestBody;
+    xAmzAlgorithm?: string;
+    xAmzContentSha256?: string;
+    xAmzCredential?: string;
+    xAmzDate?: string;
+    xAmzSecurityToken?: string;
+    xAmzSignature?: string;
+    xAmzSignedHeaders?: string;
+    /**
+     * The unique identifier for the application. This identifier is displayed as the <b>Project ID</b> on the Amazon Pinpoint console.
+     */
+    applicationId: string;
 }
 export declare class UpdateApnsChannelResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * ForbiddenException
+     */
     forbiddenException?: any;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
+    /**
+     * MethodNotAllowedException
+     */
     methodNotAllowedException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
+    /**
+     * PayloadTooLargeException
+     */
     payloadTooLargeException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
+    /**
+     * Success
+     */
     updateApnsChannelResponse?: shared.UpdateApnsChannelResponse;
 }

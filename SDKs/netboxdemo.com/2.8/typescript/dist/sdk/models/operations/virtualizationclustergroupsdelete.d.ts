@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class VirtualizationClusterGroupsDeletePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class VirtualizationClusterGroupsDeleteRequest extends SpeakeasyBase {
-    pathParams: VirtualizationClusterGroupsDeletePathParams;
+    /**
+     * A unique integer value identifying this cluster group.
+     */
+    id: number;
 }
 export declare class VirtualizationClusterGroupsDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

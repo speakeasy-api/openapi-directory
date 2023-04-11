@@ -1,0 +1,36 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { AssetReportCreateRequestOptions } from "./assetreportcreaterequestoptions";
+import { FreddieReportTypeEnum } from "./freddiereporttypeenum";
+/**
+ * AssetReportCreateRequest defines the request schema for `/asset_report/create`
+ */
+export declare class AssetReportCreateRequest extends SpeakeasyBase {
+    /**
+     * An array of access tokens corresponding to the Items that will be included in the report. The `assets` product must have been initialized for the Items during link; the Assets product cannot be added after initialization.
+     */
+    accessTokens: string[];
+    /**
+     * Your Plaid API `client_id`. The `client_id` is required and may be provided either in the `PLAID-CLIENT-ID` header or as part of a request body.
+     */
+    clientId?: string;
+    /**
+     * The maximum integer number of days of history to include in the Asset Report. If using Fannie Mae Day 1 Certainty, `days_requested` must be at least 61 for new originations or at least 31 for refinancings.
+     *
+     * @remarks
+     *
+     * An Asset Report requested with "Additional History" (that is, with more than 61 days of transaction history) will incur an Additional History fee.
+     */
+    daysRequested: number;
+    /**
+     * An optional object to filter `/asset_report/create` results. If provided, must be non-`null`. The optional `user` object is required for the report to be eligible for Fannie Mae's Day 1 Certainty program.
+     */
+    options?: AssetReportCreateRequestOptions;
+    /**
+     * When set to `VERIFICATION_OF_EMPLOYMENT` and the Asset Report is added to an Audit Copy Token, the Asset Report will be retrieved by Freddie Mac in the Verification Of Employment (VOE) version instead of the default Verification Of Assets (VOA) version.
+     */
+    reportType?: FreddieReportTypeEnum;
+    /**
+     * Your Plaid API `secret`. The `secret` is required and may be provided either in the `PLAID-SECRET` header or as part of a request body.
+     */
+    secret?: string;
+}

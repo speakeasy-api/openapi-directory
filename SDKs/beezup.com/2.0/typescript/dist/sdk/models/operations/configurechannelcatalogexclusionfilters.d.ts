@@ -1,14 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ConfigureChannelCatalogExclusionFiltersPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ConfigureChannelCatalogExclusionFiltersRequest extends SpeakeasyBase {
+    requestBody: shared.ExclusionFilter[];
+    /**
+     * The channel catalog identifier
+     */
     channelCatalogId: string;
 }
-export declare class ConfigureChannelCatalogExclusionFiltersRequest extends SpeakeasyBase {
-    pathParams: ConfigureChannelCatalogExclusionFiltersPathParams;
-    request: shared.ExclusionFilter[];
-}
 export declare class ConfigureChannelCatalogExclusionFiltersResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     * BadRequest. See Error Response for more details
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,11 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteWorkloadPathParams extends SpeakeasyBase {
-    workloadId: string;
-}
-export declare class DeleteWorkloadQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteWorkloadRequest extends SpeakeasyBase {
     clientRequestToken: string;
-}
-export declare class DeleteWorkloadHeaders extends SpeakeasyBase {
+    workloadId: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -14,18 +11,32 @@ export declare class DeleteWorkloadHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeleteWorkloadRequest extends SpeakeasyBase {
-    pathParams: DeleteWorkloadPathParams;
-    queryParams: DeleteWorkloadQueryParams;
-    headers: DeleteWorkloadHeaders;
-}
 export declare class DeleteWorkloadResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

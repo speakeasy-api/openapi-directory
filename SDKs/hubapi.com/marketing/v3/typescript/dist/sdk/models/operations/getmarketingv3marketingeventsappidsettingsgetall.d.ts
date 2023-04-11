@@ -1,19 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetMarketingV3MarketingEventsAppIdSettingsGetAllPathParams extends SpeakeasyBase {
-    appId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetMarketingV3MarketingEventsAppIdSettingsGetAllSecurity extends SpeakeasyBase {
-    hapikey?: shared.SchemeHapikey;
-    developerHapikey?: shared.SchemeDeveloperHapikey;
+    developerHapikey?: string;
+    hapikey?: string;
 }
 export declare class GetMarketingV3MarketingEventsAppIdSettingsGetAllRequest extends SpeakeasyBase {
-    pathParams: GetMarketingV3MarketingEventsAppIdSettingsGetAllPathParams;
-    security: GetMarketingV3MarketingEventsAppIdSettingsGetAllSecurity;
+    appId: number;
 }
 export declare class GetMarketingV3MarketingEventsAppIdSettingsGetAllResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
+    /**
+     * successful operation
+     */
     eventDetailSettings?: shared.EventDetailSettings;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

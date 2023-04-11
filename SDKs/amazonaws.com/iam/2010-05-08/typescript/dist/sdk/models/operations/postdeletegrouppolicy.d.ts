@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteGroupPolicyActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteGroupPolicyActionEnum {
     DeleteGroupPolicy = "DeleteGroupPolicy"
 }
-export declare enum PostDeleteGroupPolicyVersionEnum {
+export declare enum POSTDeleteGroupPolicyVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostDeleteGroupPolicyQueryParams extends SpeakeasyBase {
-    action: PostDeleteGroupPolicyActionEnum;
-    version: PostDeleteGroupPolicyVersionEnum;
-}
-export declare class PostDeleteGroupPolicyHeaders extends SpeakeasyBase {
+export declare class POSTDeleteGroupPolicyRequest extends SpeakeasyBase {
+    action: POSTDeleteGroupPolicyActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteGroupPolicyVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteGroupPolicyHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteGroupPolicyRequest extends SpeakeasyBase {
-    queryParams: PostDeleteGroupPolicyQueryParams;
-    headers: PostDeleteGroupPolicyHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteGroupPolicyResponse extends SpeakeasyBase {
+export declare class POSTDeleteGroupPolicyResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

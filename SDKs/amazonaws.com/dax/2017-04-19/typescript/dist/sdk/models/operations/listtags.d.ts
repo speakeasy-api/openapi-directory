@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum ListTagsXAmzTargetEnum {
     AmazonDaxv3ListTags = "AmazonDAXV3.ListTags"
 }
-export declare class ListTagsHeaders extends SpeakeasyBase {
+export declare class ListTagsRequest extends SpeakeasyBase {
+    listTagsRequest: shared.ListTagsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class ListTagsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListTagsXAmzTargetEnum;
 }
-export declare class ListTagsRequest extends SpeakeasyBase {
-    headers: ListTagsHeaders;
-    request: shared.ListTagsRequest;
-}
 export declare class ListTagsResponse extends SpeakeasyBase {
+    /**
+     * ClusterNotFoundFault
+     */
     clusterNotFoundFault?: any;
     contentType: string;
+    /**
+     * InvalidARNFault
+     */
     invalidARNFault?: any;
+    /**
+     * InvalidClusterStateFault
+     */
     invalidClusterStateFault?: any;
+    /**
+     * InvalidParameterCombinationException
+     */
     invalidParameterCombinationException?: any;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
+    /**
+     * Success
+     */
     listTagsResponse?: shared.ListTagsResponse;
+    /**
+     * ServiceLinkedRoleNotFoundFault
+     */
     serviceLinkedRoleNotFoundFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

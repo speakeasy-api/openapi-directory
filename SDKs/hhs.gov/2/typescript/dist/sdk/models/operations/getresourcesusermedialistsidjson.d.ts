@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetResourcesUserMediaListsIdJsonPathParams extends SpeakeasyBase {
-    id: number;
-}
-export declare class GetResourcesUserMediaListsIdJsonQueryParams extends SpeakeasyBase {
-    displayMethod?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetResourcesUserMediaListsIdJsonRequest extends SpeakeasyBase {
-    pathParams: GetResourcesUserMediaListsIdJsonPathParams;
-    queryParams: GetResourcesUserMediaListsIdJsonQueryParams;
+    /**
+     * Method used to render an html request. Accepts one: [mv, list, feed]
+     */
+    displayMethod?: string;
+    /**
+     * The id of the record to look up
+     */
+    id: number;
 }
 export declare class GetResourcesUserMediaListsIdJsonResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Get a specific user media list by 'id'.
+     */
     mediaItemWrappeds?: shared.MediaItemWrapped[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

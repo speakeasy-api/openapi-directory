@@ -1,12 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { AutoMlResult } from "./automlresult";
-import { SolutionVersionSummary } from "./solutionversionsummary";
+import { AutoMLResult } from "./automlresult";
 import { SolutionConfig } from "./solutionconfig";
+import { SolutionVersionSummary } from "./solutionversionsummary";
 /**
  * An object that provides information about a solution. A solution is a trained model that can be deployed as a campaign.
-**/
+ */
 export declare class Solution extends SpeakeasyBase {
-    autoMLResult?: AutoMlResult;
+    autoMLResult?: AutoMLResult;
     creationDateTime?: Date;
     datasetGroupArn?: string;
     eventType?: string;

@@ -1,16 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeEventCategoriesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeEventCategoriesActionEnum {
     DescribeEventCategories = "DescribeEventCategories"
 }
-export declare enum GetDescribeEventCategoriesVersionEnum {
+export declare enum GETDescribeEventCategoriesVersionEnum {
     TwoThousandAndThirteen0110 = "2013-01-10"
 }
-export declare class GetDescribeEventCategoriesQueryParams extends SpeakeasyBase {
-    action: GetDescribeEventCategoriesActionEnum;
+export declare class GETDescribeEventCategoriesRequest extends SpeakeasyBase {
+    action: GETDescribeEventCategoriesActionEnum;
     sourceType?: string;
-    version: GetDescribeEventCategoriesVersionEnum;
-}
-export declare class GetDescribeEventCategoriesHeaders extends SpeakeasyBase {
+    version: GETDescribeEventCategoriesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +18,9 @@ export declare class GetDescribeEventCategoriesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeEventCategoriesRequest extends SpeakeasyBase {
-    queryParams: GetDescribeEventCategoriesQueryParams;
-    headers: GetDescribeEventCategoriesHeaders;
-}
-export declare class GetDescribeEventCategoriesResponse extends SpeakeasyBase {
+export declare class GETDescribeEventCategoriesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

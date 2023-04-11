@@ -1,20 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PostSetupV1ResourcesIdBlockPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class PostSetupV1ResourcesIdBlockRequests extends SpeakeasyBase {
-    resourceBlockInputModel?: shared.ResourceBlockInputModel;
-    resourceBlockInputModel1?: shared.ResourceBlockInputModel;
-    resourceBlockInputModel2?: shared.ResourceBlockInputModel;
-    resourceBlockInputModel3?: shared.ResourceBlockInputModel;
-}
+import { AxiosResponse } from "axios";
 export declare class PostSetupV1ResourcesIdBlockRequest extends SpeakeasyBase {
-    pathParams: PostSetupV1ResourcesIdBlockPathParams;
-    request?: PostSetupV1ResourcesIdBlockRequests;
+    resourceBlockInputModel?: shared.ResourceBlockInputModel;
+    /**
+     * id of resource object
+     */
+    id: string;
 }
 export declare class PostSetupV1ResourcesIdBlockResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     resourceBlockViewModel?: shared.ResourceBlockViewModel;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

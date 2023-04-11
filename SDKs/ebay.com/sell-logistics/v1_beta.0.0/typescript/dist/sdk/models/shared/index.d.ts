@@ -12,7 +12,6 @@ export * from "./phonenumber";
 export * from "./pickupslot";
 export * from "./purchasedrate";
 export * from "./rate";
-export * from "./security";
 export * from "./shipment";
 export * from "./shipmentcancellation";
 export * from "./shippingquote";

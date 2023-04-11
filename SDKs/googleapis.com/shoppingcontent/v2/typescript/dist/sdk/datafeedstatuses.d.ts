@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Datafeedstatuses {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,15 +9,15 @@ export declare class Datafeedstatuses {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * contentDatafeedstatusesCustombatch - Gets multiple Merchant Center datafeed statuses in a single request.
-    **/
-    contentDatafeedstatusesCustombatch(req: operations.ContentDatafeedstatusesCustombatchRequest, config?: AxiosRequestConfig): Promise<operations.ContentDatafeedstatusesCustombatchResponse>;
+     * Gets multiple Merchant Center datafeed statuses in a single request.
+     */
+    contentDatafeedstatusesCustombatch(req: operations.ContentDatafeedstatusesCustombatchRequest, security: operations.ContentDatafeedstatusesCustombatchSecurity, config?: AxiosRequestConfig): Promise<operations.ContentDatafeedstatusesCustombatchResponse>;
     /**
-     * contentDatafeedstatusesGet - Retrieves the status of a datafeed from your Merchant Center account.
-    **/
-    contentDatafeedstatusesGet(req: operations.ContentDatafeedstatusesGetRequest, config?: AxiosRequestConfig): Promise<operations.ContentDatafeedstatusesGetResponse>;
+     * Retrieves the status of a datafeed from your Merchant Center account.
+     */
+    contentDatafeedstatusesGet(req: operations.ContentDatafeedstatusesGetRequest, security: operations.ContentDatafeedstatusesGetSecurity, config?: AxiosRequestConfig): Promise<operations.ContentDatafeedstatusesGetResponse>;
     /**
-     * contentDatafeedstatusesList - Lists the statuses of the datafeeds in your Merchant Center account.
-    **/
-    contentDatafeedstatusesList(req: operations.ContentDatafeedstatusesListRequest, config?: AxiosRequestConfig): Promise<operations.ContentDatafeedstatusesListResponse>;
+     * Lists the statuses of the datafeeds in your Merchant Center account.
+     */
+    contentDatafeedstatusesList(req: operations.ContentDatafeedstatusesListRequest, security: operations.ContentDatafeedstatusesListSecurity, config?: AxiosRequestConfig): Promise<operations.ContentDatafeedstatusesListResponse>;
 }

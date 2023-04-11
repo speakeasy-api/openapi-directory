@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Search API for 'KML/KMZ File' entry type
+ */
 export declare class TypeGeoKml {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,10 @@ export declare class TypeGeoKml {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * searchGeoKml - Search API for 'KML/KMZ File' entry type
+     * Search API for 'KML/KMZ File' entry type
      *
+     * @remarks
      * API to search for entries of type KML/KMZ File
-    **/
+     */
     searchGeoKml(req: operations.SearchGeoKmlRequest, config?: AxiosRequestConfig): Promise<operations.SearchGeoKmlResponse>;
 }

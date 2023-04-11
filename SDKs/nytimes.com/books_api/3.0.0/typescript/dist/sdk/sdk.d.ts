@@ -1,10 +1,27 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://api.nytimes.com/svc/books/v3"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * The Books API provides information about book reviews and The New York Times bestsellers lists.
+ *
+ * @see {@link http://developer.nytimes.com/}
+ */
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -12,29 +29,30 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
     /**
-     * getListsBestSellersHistoryJson - Best Seller History List
-    **/
-    getListsBestSellersHistoryJson(req: operations.GetListsBestSellersHistoryJsonRequest, config?: AxiosRequestConfig): Promise<operations.GetListsBestSellersHistoryJsonResponse>;
+     * Best Seller History List
+     */
+    getListsBestSellersHistoryJson(req: operations.GETListsBestSellersHistoryJsonRequest, security: operations.GETListsBestSellersHistoryJsonSecurity, config?: AxiosRequestConfig): Promise<operations.GETListsBestSellersHistoryJsonResponse>;
     /**
-     * getListsDateListJson - Best Seller List by Date
-    **/
-    getListsDateListJson(req: operations.GetListsDateListJsonRequest, config?: AxiosRequestConfig): Promise<operations.GetListsDateListJsonResponse>;
+     * Best Seller List by Date
+     */
+    getListsDateListJson(req: operations.GETListsDateListJsonRequest, security: operations.GETListsDateListJsonSecurity, config?: AxiosRequestConfig): Promise<operations.GETListsDateListJsonResponse>;
     /**
-     * getListsFormat - Best Seller List
-    **/
-    getListsFormat(req: operations.GetListsFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetListsFormatResponse>;
+     * Best Seller List
+     */
+    getListsFormat(req: operations.GETListsFormatRequest, security: operations.GETListsFormatSecurity, config?: AxiosRequestConfig): Promise<operations.GETListsFormatResponse>;
     /**
-     * getListsNamesFormat - Best Seller List Names
-    **/
-    getListsNamesFormat(req: operations.GetListsNamesFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetListsNamesFormatResponse>;
+     * Best Seller List Names
+     */
+    getListsNamesFormat(req: operations.GETListsNamesFormatRequest, security: operations.GETListsNamesFormatSecurity, config?: AxiosRequestConfig): Promise<operations.GETListsNamesFormatResponse>;
     /**
-     * getListsOverviewFormat - Best Seller List Overview
-    **/
-    getListsOverviewFormat(req: operations.GetListsOverviewFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetListsOverviewFormatResponse>;
+     * Best Seller List Overview
+     */
+    getListsOverviewFormat(req: operations.GETListsOverviewFormatRequest, security: operations.GETListsOverviewFormatSecurity, config?: AxiosRequestConfig): Promise<operations.GETListsOverviewFormatResponse>;
     /**
-     * getReviewsFormat - Reviews
-    **/
-    getReviewsFormat(req: operations.GetReviewsFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetReviewsFormatResponse>;
+     * Reviews
+     */
+    getReviewsFormat(req: operations.GETReviewsFormatRequest, security: operations.GETReviewsFormatSecurity, config?: AxiosRequestConfig): Promise<operations.GETReviewsFormatResponse>;
 }

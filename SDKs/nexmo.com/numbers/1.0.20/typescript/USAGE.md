@@ -1,26 +1,23 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { BuyANumberRequest, BuyANumberResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  shared.NumberDetails,
+  BuyANumberResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    apiKey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-    apiSecret: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: BuyANumberRequest = {
-  request: {
-    country: "sit",
-    msisdn: "voluptas",
-    targetApiKey: "culpa",
+    apiKey: "YOUR_API_KEY_HERE",
+    apiSecret: "YOUR_API_KEY_HERE",
   },
+});
+
+const req: shared.NumberDetails = {
+  country: "GB",
+  msisdn: "447700900000",
+  targetApiKey: "1a2345b7",
 };
 
 sdk.buyANumber(req).then((res: BuyANumberResponse | AxiosError) => {

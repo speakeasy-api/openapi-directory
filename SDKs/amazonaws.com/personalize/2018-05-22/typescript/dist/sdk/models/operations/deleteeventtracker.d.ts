@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteEventTrackerXAmzTargetEnum {
     AmazonPersonalizeDeleteEventTracker = "AmazonPersonalize.DeleteEventTracker"
 }
-export declare class DeleteEventTrackerHeaders extends SpeakeasyBase {
+export declare class DeleteEventTrackerRequest extends SpeakeasyBase {
+    deleteEventTrackerRequest: shared.DeleteEventTrackerRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class DeleteEventTrackerHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteEventTrackerXAmzTargetEnum;
 }
-export declare class DeleteEventTrackerRequest extends SpeakeasyBase {
-    headers: DeleteEventTrackerHeaders;
-    request: shared.DeleteEventTrackerRequest;
-}
 export declare class DeleteEventTrackerResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * ResourceInUseException
+     */
     resourceInUseException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

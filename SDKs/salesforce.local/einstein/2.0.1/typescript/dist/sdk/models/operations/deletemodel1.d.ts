@@ -1,17 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteModel1PathParams extends SpeakeasyBase {
-    modelId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteModel1Security extends SpeakeasyBase {
-    bearerToken: shared.SchemeBearerToken;
+    bearerToken: string;
 }
 export declare class DeleteModel1Request extends SpeakeasyBase {
-    pathParams: DeleteModel1PathParams;
-    security: DeleteModel1Security;
+    modelId: string;
 }
 export declare class DeleteModel1Response extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Deletion submitted
+     */
     deletionResponse?: shared.DeletionResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

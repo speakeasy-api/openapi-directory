@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Pools {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,63 +9,63 @@ export declare class Pools {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * poolAdd - Adds a pool to the specified account.
-    **/
+     * Adds a pool to the specified account.
+     */
     poolAdd(req: operations.PoolAddRequest, config?: AxiosRequestConfig): Promise<operations.PoolAddResponse>;
     /**
-     * poolDelete - Deletes a pool from the specified account.
-    **/
+     * Deletes a pool from the specified account.
+     */
     poolDelete(req: operations.PoolDeleteRequest, config?: AxiosRequestConfig): Promise<operations.PoolDeleteResponse>;
     /**
-     * poolDisableAutoScale - Disables automatic scaling for a pool.
-    **/
+     * Disables automatic scaling for a pool.
+     */
     poolDisableAutoScale(req: operations.PoolDisableAutoScaleRequest, config?: AxiosRequestConfig): Promise<operations.PoolDisableAutoScaleResponse>;
     /**
-     * poolEnableAutoScale - Enables automatic scaling for a pool.
-    **/
+     * Enables automatic scaling for a pool.
+     */
     poolEnableAutoScale(req: operations.PoolEnableAutoScaleRequest, config?: AxiosRequestConfig): Promise<operations.PoolEnableAutoScaleResponse>;
     /**
-     * poolEvaluateAutoScale - Gets the result of evaluating an automatic scaling formula on the pool.
-    **/
+     * Gets the result of evaluating an automatic scaling formula on the pool.
+     */
     poolEvaluateAutoScale(req: operations.PoolEvaluateAutoScaleRequest, config?: AxiosRequestConfig): Promise<operations.PoolEvaluateAutoScaleResponse>;
     /**
-     * poolExists - Gets basic properties of a pool.
-    **/
+     * Gets basic properties of a pool.
+     */
     poolExists(req: operations.PoolExistsRequest, config?: AxiosRequestConfig): Promise<operations.PoolExistsResponse>;
     /**
-     * poolGet - Gets information about the specified pool.
-    **/
+     * Gets information about the specified pool.
+     */
     poolGet(req: operations.PoolGetRequest, config?: AxiosRequestConfig): Promise<operations.PoolGetResponse>;
     /**
-     * poolGetAllPoolsLifetimeStatistics - Gets lifetime summary statistics for all of the pools in the specified account. Statistics are aggregated across all pools that have ever existed in the account, from account creation to the last update time of the statistics.
-    **/
+     * Gets lifetime summary statistics for all of the pools in the specified account. Statistics are aggregated across all pools that have ever existed in the account, from account creation to the last update time of the statistics.
+     */
     poolGetAllPoolsLifetimeStatistics(req: operations.PoolGetAllPoolsLifetimeStatisticsRequest, config?: AxiosRequestConfig): Promise<operations.PoolGetAllPoolsLifetimeStatisticsResponse>;
     /**
-     * poolList - Lists all of the pools in the specified account.
-    **/
+     * Lists all of the pools in the specified account.
+     */
     poolList(req: operations.PoolListRequest, config?: AxiosRequestConfig): Promise<operations.PoolListResponse>;
     /**
-     * poolListPoolUsageMetrics - Lists the usage metrics, aggregated by pool across individual time intervals, for the specified account.
-    **/
+     * Lists the usage metrics, aggregated by pool across individual time intervals, for the specified account.
+     */
     poolListPoolUsageMetrics(req: operations.PoolListPoolUsageMetricsRequest, config?: AxiosRequestConfig): Promise<operations.PoolListPoolUsageMetricsResponse>;
     /**
-     * poolPatch - Updates the properties of a pool.
-    **/
+     * Updates the properties of a pool.
+     */
     poolPatch(req: operations.PoolPatchRequest, config?: AxiosRequestConfig): Promise<operations.PoolPatchResponse>;
     /**
-     * poolResize - Changes the number of compute nodes that are assigned to a pool.
-    **/
+     * Changes the number of compute nodes that are assigned to a pool.
+     */
     poolResize(req: operations.PoolResizeRequest, config?: AxiosRequestConfig): Promise<operations.PoolResizeResponse>;
     /**
-     * poolStopResize - Stops an ongoing resize operation on the pool. This does not restore the pool to its previous state before the resize operation: it only stops any further changes being made, and the pool maintains its current state.
-    **/
+     * Stops an ongoing resize operation on the pool. This does not restore the pool to its previous state before the resize operation: it only stops any further changes being made, and the pool maintains its current state.
+     */
     poolStopResize(req: operations.PoolStopResizeRequest, config?: AxiosRequestConfig): Promise<operations.PoolStopResizeResponse>;
     /**
-     * poolUpdateProperties - Updates the properties of a pool.
-    **/
+     * Updates the properties of a pool.
+     */
     poolUpdateProperties(req: operations.PoolUpdatePropertiesRequest, config?: AxiosRequestConfig): Promise<operations.PoolUpdatePropertiesResponse>;
     /**
-     * poolUpgradeOs - Upgrades the operating system of the specified pool.
-    **/
-    poolUpgradeOs(req: operations.PoolUpgradeOsRequest, config?: AxiosRequestConfig): Promise<operations.PoolUpgradeOsResponse>;
+     * Upgrades the operating system of the specified pool.
+     */
+    poolUpgradeOS(req: operations.PoolUpgradeOSRequest, config?: AxiosRequestConfig): Promise<operations.PoolUpgradeOSResponse>;
 }

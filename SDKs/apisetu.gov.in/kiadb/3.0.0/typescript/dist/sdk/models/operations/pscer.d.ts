@@ -1,118 +1,182 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class PscerSecurity extends SpeakeasyBase {
+    apiKey: string;
+    clientId: string;
+}
 export declare class PscerRequestBodyCertificateParameters extends SpeakeasyBase {
+    /**
+     * Date of birth in DD-MM-YYYY format
+     */
     dob: string;
+    /**
+     * Full name
+     */
     fullName: string;
+    /**
+     * Registration Number
+     */
     regNum: string;
+    /**
+     * Aadhaar number
+     */
     uid: string;
 }
+/**
+ * The format of the certificate in response.
+ */
 export declare enum PscerRequestBodyFormatEnum {
     Pdf = "pdf"
 }
+/**
+ * Request format
+ */
 export declare class PscerRequestBody extends SpeakeasyBase {
     certificateParameters?: PscerRequestBodyCertificateParameters;
-    consentArtifact?: any;
+    consentArtifact?: shared.ConsentArtifactSchema;
+    /**
+     * The format of the certificate in response.
+     */
     format: PscerRequestBodyFormatEnum;
+    /**
+     * A unique transaction id for this request in UUID format. It is used for tracking the request.
+     */
     txnId: string;
 }
-export declare class PscerSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
-    clientId: shared.SchemeClientId;
+export declare enum Pscer504ApplicationJSONErrorEnum {
+    GatewayTimeout = "gateway_timeout"
 }
-export declare enum Pscer400ApplicationJsonErrorEnum {
+export declare enum Pscer504ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
+}
+/**
+ * Gateway timeout
+ */
+export declare class Pscer504ApplicationJSON extends SpeakeasyBase {
+    error?: Pscer504ApplicationJSONErrorEnum;
+    errorDescription?: Pscer504ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Pscer503ApplicationJSONErrorEnum {
+    ServiceUnavailable = "service_unavailable"
+}
+export declare enum Pscer503ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
+}
+/**
+ * Service unavailable
+ */
+export declare class Pscer503ApplicationJSON extends SpeakeasyBase {
+    error?: Pscer503ApplicationJSONErrorEnum;
+    errorDescription?: Pscer503ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Pscer502ApplicationJSONErrorEnum {
+    BadGatewy = "bad_gatewy"
+}
+export declare enum Pscer502ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
+}
+/**
+ * Bad gateway
+ */
+export declare class Pscer502ApplicationJSON extends SpeakeasyBase {
+    error?: Pscer502ApplicationJSONErrorEnum;
+    errorDescription?: Pscer502ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Pscer500ApplicationJSONErrorEnum {
+    InternalServerError = "internal_server_error"
+}
+export declare enum Pscer500ApplicationJSONErrorDescriptionEnum {
+    InternalServerError = "Internal server error"
+}
+/**
+ * Internal server error
+ */
+export declare class Pscer500ApplicationJSON extends SpeakeasyBase {
+    error?: Pscer500ApplicationJSONErrorEnum;
+    errorDescription?: Pscer500ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Pscer404ApplicationJSONErrorEnum {
+    RecordNotFound = "record_not_found",
+    UrlNotFound = "url_not_found"
+}
+export declare enum Pscer404ApplicationJSONErrorDescriptionEnum {
+    NoRecordFound = "No record found",
+    YourAPIUrlOrPathIsIncorrect = "Your API url or path is incorrect"
+}
+/**
+ * No record found
+ */
+export declare class Pscer404ApplicationJSON extends SpeakeasyBase {
+    error?: Pscer404ApplicationJSONErrorEnum;
+    errorDescription?: Pscer404ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Pscer401ApplicationJSONErrorEnum {
+    InvalidAuthentication = "invalid_authentication",
+    InvalidAuthorization = "invalid_authorization"
+}
+export declare enum Pscer401ApplicationJSONErrorDescriptionEnum {
+    AuthenticationFailed = "Authentication failed",
+    YouAreNotAuthorizedToUseThisAPI = "You are not authorized to use this API"
+}
+/**
+ * Unauthorized access
+ */
+export declare class Pscer401ApplicationJSON extends SpeakeasyBase {
+    error?: Pscer401ApplicationJSONErrorEnum;
+    errorDescription?: Pscer401ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Pscer400ApplicationJSONErrorEnum {
     MissingParameter = "missing_parameter",
     InvalidParameter = "invalid_parameter",
     InvalidFormat = "invalid_format",
     InvalidTxnid = "invalid_txnid",
     InvalidConsentid = "invalid_consentid"
 }
-export declare enum Pscer400ApplicationJsonErrorDescriptionEnum {
+export declare enum Pscer400ApplicationJSONErrorDescriptionEnum {
     PleaseProvideAllMandatoryParameters = "Please provide all mandatory parameters",
     BadRequest = "Bad request",
     TheFormatParameterIsInvalid = "The format parameter is invalid",
-    TheTxnIdParameterMustBeInUuidFormat = "The txnId parameter must be in UUID format",
-    TheConsentIdParameterMustBeInUuidFormat = "The consentId parameter must be in UUID format"
+    TheTxnIdParameterMustBeInUUIDFormat = "The txnId parameter must be in UUID format",
+    TheConsentIdParameterMustBeInUUIDFormat = "The consentId parameter must be in UUID format"
 }
-export declare class Pscer400ApplicationJson extends SpeakeasyBase {
-    error?: Pscer400ApplicationJsonErrorEnum;
-    errorDescription?: Pscer400ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Pscer401ApplicationJsonErrorEnum {
-    InvalidAuthentication = "invalid_authentication",
-    InvalidAuthorization = "invalid_authorization"
-}
-export declare enum Pscer401ApplicationJsonErrorDescriptionEnum {
-    AuthenticationFailed = "Authentication failed",
-    YouAreNotAuthorizedToUseThisApi = "You are not authorized to use this API"
-}
-export declare class Pscer401ApplicationJson extends SpeakeasyBase {
-    error?: Pscer401ApplicationJsonErrorEnum;
-    errorDescription?: Pscer401ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Pscer404ApplicationJsonErrorEnum {
-    RecordNotFound = "record_not_found",
-    UrlNotFound = "url_not_found"
-}
-export declare enum Pscer404ApplicationJsonErrorDescriptionEnum {
-    NoRecordFound = "No record found",
-    YourApiUrlOrPathIsIncorrect = "Your API url or path is incorrect"
-}
-export declare class Pscer404ApplicationJson extends SpeakeasyBase {
-    error?: Pscer404ApplicationJsonErrorEnum;
-    errorDescription?: Pscer404ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Pscer500ApplicationJsonErrorEnum {
-    InternalServerError = "internal_server_error"
-}
-export declare enum Pscer500ApplicationJsonErrorDescriptionEnum {
-    InternalServerError = "Internal server error"
-}
-export declare class Pscer500ApplicationJson extends SpeakeasyBase {
-    error?: Pscer500ApplicationJsonErrorEnum;
-    errorDescription?: Pscer500ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Pscer502ApplicationJsonErrorEnum {
-    BadGatewy = "bad_gatewy"
-}
-export declare enum Pscer502ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
-}
-export declare class Pscer502ApplicationJson extends SpeakeasyBase {
-    error?: Pscer502ApplicationJsonErrorEnum;
-    errorDescription?: Pscer502ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Pscer503ApplicationJsonErrorEnum {
-    ServiceUnavailable = "service_unavailable"
-}
-export declare enum Pscer503ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
-}
-export declare class Pscer503ApplicationJson extends SpeakeasyBase {
-    error?: Pscer503ApplicationJsonErrorEnum;
-    errorDescription?: Pscer503ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Pscer504ApplicationJsonErrorEnum {
-    GatewayTimeout = "gateway_timeout"
-}
-export declare enum Pscer504ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
-}
-export declare class Pscer504ApplicationJson extends SpeakeasyBase {
-    error?: Pscer504ApplicationJsonErrorEnum;
-    errorDescription?: Pscer504ApplicationJsonErrorDescriptionEnum;
-}
-export declare class PscerRequest extends SpeakeasyBase {
-    request?: PscerRequestBody;
-    security: PscerSecurity;
+/**
+ * Bad request
+ */
+export declare class Pscer400ApplicationJSON extends SpeakeasyBase {
+    error?: Pscer400ApplicationJSONErrorEnum;
+    errorDescription?: Pscer400ApplicationJSONErrorDescriptionEnum;
 }
 export declare class PscerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    pscer400ApplicationJSONObject?: Pscer400ApplicationJson;
-    pscer401ApplicationJSONObject?: Pscer401ApplicationJson;
-    pscer404ApplicationJSONObject?: Pscer404ApplicationJson;
-    pscer500ApplicationJSONObject?: Pscer500ApplicationJson;
-    pscer502ApplicationJSONObject?: Pscer502ApplicationJson;
-    pscer503ApplicationJSONObject?: Pscer503ApplicationJson;
-    pscer504ApplicationJSONObject?: Pscer504ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad request
+     */
+    pscer400ApplicationJSONObject?: Pscer400ApplicationJSON;
+    /**
+     * Unauthorized access
+     */
+    pscer401ApplicationJSONObject?: Pscer401ApplicationJSON;
+    /**
+     * No record found
+     */
+    pscer404ApplicationJSONObject?: Pscer404ApplicationJSON;
+    /**
+     * Internal server error
+     */
+    pscer500ApplicationJSONObject?: Pscer500ApplicationJSON;
+    /**
+     * Bad gateway
+     */
+    pscer502ApplicationJSONObject?: Pscer502ApplicationJSON;
+    /**
+     * Service unavailable
+     */
+    pscer503ApplicationJSONObject?: Pscer503ApplicationJSON;
+    /**
+     * Gateway timeout
+     */
+    pscer504ApplicationJSONObject?: Pscer504ApplicationJSON;
 }

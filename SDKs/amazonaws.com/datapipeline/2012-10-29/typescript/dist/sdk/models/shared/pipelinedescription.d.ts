@@ -3,7 +3,7 @@ import { Field } from "./field";
 import { Tag } from "./tag";
 /**
  * Contains pipeline metadata.
-**/
+ */
 export declare class PipelineDescription extends SpeakeasyBase {
     description?: string;
     fields: Field[];

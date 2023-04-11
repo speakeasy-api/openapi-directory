@@ -1,41 +1,133 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SearchBoulder2017ElectionContributionsQueryParams extends SpeakeasyBase {
-    changedateFrom?: Date;
-    changedateTo?: Date;
-    createdateFrom?: Date;
-    createdateTo?: Date;
-    description?: string;
-    filesuffix?: string;
-    fromdate?: Date;
-    group?: string;
-    max?: number;
-    maxlatitude?: number;
-    maxlongitude?: number;
-    minlatitude?: number;
-    minlongitude?: number;
-    name?: string;
-    searchDbBoulder2017ElectionContributionsAmount?: number;
-    searchDbBoulder2017ElectionContributionsCity?: string;
-    searchDbBoulder2017ElectionContributionsCommittee?: string;
-    searchDbBoulder2017ElectionContributionsContributionType?: string;
-    searchDbBoulder2017ElectionContributionsDate?: string;
-    searchDbBoulder2017ElectionContributionsFirstName?: string;
-    searchDbBoulder2017ElectionContributionsFromCandidate?: string;
-    searchDbBoulder2017ElectionContributionsLastName?: string;
-    searchDbBoulder2017ElectionContributionsLocation?: string;
-    searchDbBoulder2017ElectionContributionsMatchAmount?: number;
-    searchDbBoulder2017ElectionContributionsState?: string;
-    searchDbBoulder2017ElectionContributionsStreet?: string;
-    searchDbBoulder2017ElectionContributionsYtdAmount?: number;
-    searchDbBoulder2017ElectionContributionsZip?: string;
-    skip?: number;
-    text?: string;
-    todate?: Date;
-}
+import { AxiosResponse } from "axios";
 export declare class SearchBoulder2017ElectionContributionsRequest extends SpeakeasyBase {
-    queryParams: SearchBoulder2017ElectionContributionsQueryParams;
+    /**
+     * Archive change date from
+     */
+    changedateFrom?: Date;
+    /**
+     * Archive change date to
+     */
+    changedateTo?: Date;
+    /**
+     * Archive create date from
+     */
+    createdateFrom?: Date;
+    /**
+     * Archive create date to
+     */
+    createdateTo?: Date;
+    /**
+     * Search description
+     */
+    description?: string;
+    /**
+     * File suffix
+     */
+    filesuffix?: string;
+    /**
+     * From date
+     */
+    fromdate?: Date;
+    /**
+     * Parent entry
+     */
+    group?: string;
+    /**
+     * Max number of results
+     */
+    max?: number;
+    /**
+     * Northern bounds of search
+     */
+    maxlatitude?: number;
+    /**
+     * Eastern bounds of search
+     */
+    maxlongitude?: number;
+    /**
+     * Southern bounds of search
+     */
+    minlatitude?: number;
+    /**
+     * Western bounds of search
+     */
+    minlongitude?: number;
+    /**
+     * Search name
+     */
+    name?: string;
+    /**
+     * Amount
+     */
+    searchDbBoulder2017ElectionContributionsAmount?: number;
+    /**
+     * City
+     */
+    searchDbBoulder2017ElectionContributionsCity?: string;
+    /**
+     * Committee
+     */
+    searchDbBoulder2017ElectionContributionsCommittee?: string;
+    /**
+     * Contribution Type
+     */
+    searchDbBoulder2017ElectionContributionsContributionType?: string;
+    /**
+     * Date
+     */
+    searchDbBoulder2017ElectionContributionsDate?: string;
+    /**
+     * First Name
+     */
+    searchDbBoulder2017ElectionContributionsFirstName?: string;
+    /**
+     * From Candidate
+     */
+    searchDbBoulder2017ElectionContributionsFromCandidate?: string;
+    /**
+     * Last Name
+     */
+    searchDbBoulder2017ElectionContributionsLastName?: string;
+    /**
+     * Location
+     */
+    searchDbBoulder2017ElectionContributionsLocation?: string;
+    /**
+     * Match Amount
+     */
+    searchDbBoulder2017ElectionContributionsMatchAmount?: number;
+    /**
+     * State
+     */
+    searchDbBoulder2017ElectionContributionsState?: string;
+    /**
+     * Street
+     */
+    searchDbBoulder2017ElectionContributionsStreet?: string;
+    /**
+     * Ytd Amount
+     */
+    searchDbBoulder2017ElectionContributionsYtdAmount?: number;
+    /**
+     * Zip
+     */
+    searchDbBoulder2017ElectionContributionsZip?: string;
+    /**
+     * Number to skip
+     */
+    skip?: number;
+    /**
+     * Search text
+     */
+    text?: string;
+    /**
+     * To date
+     */
+    todate?: Date;
 }
 export declare class SearchBoulder2017ElectionContributionsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,22 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetAllProductsV2PathParams extends SpeakeasyBase {
-    organizationUuid: string;
-}
-export declare class GetAllProductsV2QueryParams extends SpeakeasyBase {
-    sort?: boolean;
-}
+import { AxiosResponse } from "axios";
 export declare class GetAllProductsV2Security extends SpeakeasyBase {
-    zettleApiKey?: shared.SchemeZettleApiKey;
-    zettleOauth?: shared.SchemeZettleOauth;
+    zettleOauth: string;
 }
 export declare class GetAllProductsV2Request extends SpeakeasyBase {
-    pathParams: GetAllProductsV2PathParams;
-    queryParams: GetAllProductsV2QueryParams;
-    security: GetAllProductsV2Security;
+    organizationUuid: string;
+    /**
+     * If true, sorts response by created date
+     */
+    sort?: boolean;
 }
 export declare class GetAllProductsV2Response extends SpeakeasyBase {
     contentType: string;
+    /**
+     * A list of products
+     */
     productResponses?: shared.ProductResponse[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

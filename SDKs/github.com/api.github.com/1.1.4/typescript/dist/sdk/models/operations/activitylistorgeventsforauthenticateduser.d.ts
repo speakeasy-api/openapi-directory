@@ -1,19 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ActivityListOrgEventsForAuthenticatedUserPathParams extends SpeakeasyBase {
-    org: string;
-    username: string;
-}
-export declare class ActivityListOrgEventsForAuthenticatedUserQueryParams extends SpeakeasyBase {
-    page?: number;
-    perPage?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ActivityListOrgEventsForAuthenticatedUserRequest extends SpeakeasyBase {
-    pathParams: ActivityListOrgEventsForAuthenticatedUserPathParams;
-    queryParams: ActivityListOrgEventsForAuthenticatedUserQueryParams;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    org: string;
+    /**
+     * Page number of the results to fetch.
+     */
+    page?: number;
+    /**
+     * The number of results per page (max 100).
+     */
+    perPage?: number;
+    /**
+     * The handle for the GitHub user account.
+     */
+    username: string;
 }
 export declare class ActivityListOrgEventsForAuthenticatedUserResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     events?: shared.Event[];
 }

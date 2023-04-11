@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Sns {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,11 +9,11 @@ export declare class Sns {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * snsGetSnsGet - Sns Get
-    **/
+     * Sns Get
+     */
     snsGetSnsGet(req: operations.SnsGetSnsGetRequest, config?: AxiosRequestConfig): Promise<operations.SnsGetSnsGetResponse>;
     /**
-     * snsPostSnsPost - Sns Post
-    **/
+     * Sns Post
+     */
     snsPostSnsPost(req: operations.SnsPostSnsPostRequest, config?: AxiosRequestConfig): Promise<operations.SnsPostSnsPostResponse>;
 }

@@ -1,0 +1,10 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The request to remove one or more permissions from a note. A permission with the `OWNER` role can't be removed. If removing a permission fails, then the entire request fails and no changes are made. Returns a 400 bad request error if a specified permission does not exist on the note.
+ */
+export declare class BatchDeletePermissionsRequest extends SpeakeasyBase {
+    /**
+     * Required. The names of the permissions to delete. Format: `notes/{note}/permissions/{permission}`
+     */
+    names?: string[];
+}

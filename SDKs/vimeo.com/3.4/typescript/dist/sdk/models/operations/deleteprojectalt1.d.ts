@@ -1,21 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteProjectAlt1PathParams extends SpeakeasyBase {
-    projectId: number;
-}
-export declare class DeleteProjectAlt1QueryParams extends SpeakeasyBase {
-    shouldDeleteClips?: boolean;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteProjectAlt1Security extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
+    oauth2: string;
 }
 export declare class DeleteProjectAlt1Request extends SpeakeasyBase {
-    pathParams: DeleteProjectAlt1PathParams;
-    queryParams: DeleteProjectAlt1QueryParams;
-    security: DeleteProjectAlt1Security;
+    /**
+     * The ID of the project.
+     */
+    projectId: number;
+    /**
+     * Whether to delete all the videos in the project along with the project itself.
+     */
+    shouldDeleteClips?: boolean;
 }
 export declare class DeleteProjectAlt1Response extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Error code 8000: The user credentials are invalid.
+     */
     error?: shared.ErrorT;
 }

@@ -1,15 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeTerminationPolicyTypesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeTerminationPolicyTypesActionEnum {
     DescribeTerminationPolicyTypes = "DescribeTerminationPolicyTypes"
 }
-export declare enum GetDescribeTerminationPolicyTypesVersionEnum {
+export declare enum GETDescribeTerminationPolicyTypesVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class GetDescribeTerminationPolicyTypesQueryParams extends SpeakeasyBase {
-    action: GetDescribeTerminationPolicyTypesActionEnum;
-    version: GetDescribeTerminationPolicyTypesVersionEnum;
-}
-export declare class GetDescribeTerminationPolicyTypesHeaders extends SpeakeasyBase {
+export declare class GETDescribeTerminationPolicyTypesRequest extends SpeakeasyBase {
+    action: GETDescribeTerminationPolicyTypesActionEnum;
+    version: GETDescribeTerminationPolicyTypesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +17,9 @@ export declare class GetDescribeTerminationPolicyTypesHeaders extends SpeakeasyB
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeTerminationPolicyTypesRequest extends SpeakeasyBase {
-    queryParams: GetDescribeTerminationPolicyTypesQueryParams;
-    headers: GetDescribeTerminationPolicyTypesHeaders;
-}
-export declare class GetDescribeTerminationPolicyTypesResponse extends SpeakeasyBase {
+export declare class GETDescribeTerminationPolicyTypesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

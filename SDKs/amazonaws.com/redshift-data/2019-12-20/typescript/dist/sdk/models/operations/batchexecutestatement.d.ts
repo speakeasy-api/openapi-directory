@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum BatchExecuteStatementXAmzTargetEnum {
     RedshiftDataBatchExecuteStatement = "RedshiftData.BatchExecuteStatement"
 }
-export declare class BatchExecuteStatementHeaders extends SpeakeasyBase {
+export declare class BatchExecuteStatementRequest extends SpeakeasyBase {
+    batchExecuteStatementInput: shared.BatchExecuteStatementInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class BatchExecuteStatementHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: BatchExecuteStatementXAmzTargetEnum;
 }
-export declare class BatchExecuteStatementRequest extends SpeakeasyBase {
-    headers: BatchExecuteStatementHeaders;
-    request: shared.BatchExecuteStatementInput;
-}
 export declare class BatchExecuteStatementResponse extends SpeakeasyBase {
+    /**
+     * ActiveStatementsExceededException
+     */
     activeStatementsExceededException?: any;
+    /**
+     * BatchExecuteStatementException
+     */
     batchExecuteStatementException?: any;
+    /**
+     * Success
+     */
     batchExecuteStatementOutput?: shared.BatchExecuteStatementOutput;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

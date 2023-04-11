@@ -1,10 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListEulasQueryParams extends SpeakeasyBase {
-    eulaIds?: string[];
-    nextToken?: string;
-}
-export declare class ListEulasHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListEulasRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,20 +9,49 @@ export declare class ListEulasHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class ListEulasRequest extends SpeakeasyBase {
-    queryParams: ListEulasQueryParams;
-    headers: ListEulasHeaders;
+    /**
+     * The list of EULA IDs that should be returned
+     */
+    eulaIds?: string[];
+    /**
+     * The token for the next set of results, or null if there are no more results.
+     */
+    nextToken?: string;
 }
 export declare class ListEulasResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
+    /**
+     * Success
+     */
     listEulasResponse?: shared.ListEulasResponse;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
-    serviceQuotaExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceQuotaExceededException
+     */
+    serviceQuotaExceededException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

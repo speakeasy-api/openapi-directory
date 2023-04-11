@@ -57,6 +57,9 @@ export declare class DistributionsResponseResult extends SpeakeasyBase {
     elements?: DistributionsResponseResultElements[];
     nextPage?: any;
 }
+/**
+ * Distributions
+ */
 export declare class DistributionsResponse extends SpeakeasyBase {
     meta?: DistributionsResponseMeta;
     result?: DistributionsResponseResult;

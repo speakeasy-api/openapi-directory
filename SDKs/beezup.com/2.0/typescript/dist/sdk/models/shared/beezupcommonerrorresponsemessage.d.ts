@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { BeezUpCommonUserErrorMessage } from "./beezupcommonusererrormessage";
-export declare class BeezUpCommonErrorResponseMessage extends SpeakeasyBase {
-    errors: BeezUpCommonUserErrorMessage[];
+import { BeezUPCommonUserErrorMessage } from "./beezupcommonusererrormessage";
+/**
+ * Occurs when something goes wrong
+ */
+export declare class BeezUPCommonErrorResponseMessage extends SpeakeasyBase {
+    errors: BeezUPCommonUserErrorMessage[];
 }

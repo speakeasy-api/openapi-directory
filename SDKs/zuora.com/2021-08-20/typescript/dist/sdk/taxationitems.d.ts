@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class TaxationItems {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,41 +9,44 @@ export declare class TaxationItems {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteTaxationItem - Delete a taxation item
+     * Delete a taxation item
      *
+     * @remarks
      * Deletes a specific taxation item by ID.
      *
-    **/
-    deleteTaxationItem(req: operations.DeleteTaxationItemRequest, config?: AxiosRequestConfig): Promise<operations.DeleteTaxationItemResponse>;
+     */
+    deleteTaxationItem(req: operations.DELETETaxationItemRequest, config?: AxiosRequestConfig): Promise<operations.DELETETaxationItemResponse>;
     /**
-     * getTaxationItem - Retrieve a taxation item
+     * Retrieve a taxation item
      *
      *
+     * @remarks
      * Retrieves the information about a specific taxation item by ID.
      *
-    **/
-    getTaxationItem(req: operations.GetTaxationItemRequest, config?: AxiosRequestConfig): Promise<operations.GetTaxationItemResponse>;
+     */
+    getTaxationItem(req: operations.GETTaxationItemRequest, config?: AxiosRequestConfig): Promise<operations.GETTaxationItemResponse>;
     /**
-     * objectDeleteTaxationItem - CRUD: Delete a taxation item
-    **/
-    objectDeleteTaxationItem(req: operations.ObjectDeleteTaxationItemRequest, config?: AxiosRequestConfig): Promise<operations.ObjectDeleteTaxationItemResponse>;
+     * CRUD: Delete a taxation item
+     */
+    objectDELETETaxationItem(req: operations.ObjectDELETETaxationItemRequest, config?: AxiosRequestConfig): Promise<operations.ObjectDELETETaxationItemResponse>;
     /**
-     * objectGetTaxationItem - CRUD: Retrieve a taxation item
-    **/
-    objectGetTaxationItem(req: operations.ObjectGetTaxationItemRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGetTaxationItemResponse>;
+     * CRUD: Retrieve a taxation item
+     */
+    objectGETTaxationItem(req: operations.ObjectGETTaxationItemRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGETTaxationItemResponse>;
     /**
-     * objectPostTaxationItem - CRUD: Create a taxation item
-    **/
-    objectPostTaxationItem(req: operations.ObjectPostTaxationItemRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPostTaxationItemResponse>;
+     * CRUD: Create a taxation item
+     */
+    objectPOSTTaxationItem(req: operations.ObjectPOSTTaxationItemRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPOSTTaxationItemResponse>;
     /**
-     * objectPutTaxationItem - CRUD: Update a taxation item
-    **/
-    objectPutTaxationItem(req: operations.ObjectPutTaxationItemRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPutTaxationItemResponse>;
+     * CRUD: Update a taxation item
+     */
+    objectPUTTaxationItem(req: operations.ObjectPUTTaxationItemRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPUTTaxationItemResponse>;
     /**
-     * putTaxationItem - Update a taxation item
+     * Update a taxation item
      *
+     * @remarks
      * Updates a specific taxation item by ID.
      *
-    **/
-    putTaxationItem(req: operations.PutTaxationItemRequest, config?: AxiosRequestConfig): Promise<operations.PutTaxationItemResponse>;
+     */
+    putTaxationItem(req: operations.PUTTaxationItemRequest, config?: AxiosRequestConfig): Promise<operations.PUTTaxationItemResponse>;
 }

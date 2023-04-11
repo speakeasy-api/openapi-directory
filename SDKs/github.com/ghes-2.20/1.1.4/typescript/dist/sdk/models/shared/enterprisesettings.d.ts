@@ -151,6 +151,9 @@ export declare class EnterpriseSettingsEnterprise extends SpeakeasyBase {
     syslog?: EnterpriseSettingsEnterpriseSyslog;
     timezone?: string;
 }
+/**
+ * Response
+ */
 export declare class EnterpriseSettings extends SpeakeasyBase {
     enterprise?: EnterpriseSettingsEnterprise;
     runList?: string[];

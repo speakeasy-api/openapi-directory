@@ -1,19 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AccountUpdateEmailRequestBody extends SpeakeasyBase {
-    email: string;
-    password: string;
-}
+import { AxiosResponse } from "axios";
 export declare class AccountUpdateEmailSecurity extends SpeakeasyBase {
-    jwt: shared.SchemeJwt;
-    project: shared.SchemeProject;
+    jwt: string;
+    project: string;
 }
-export declare class AccountUpdateEmailRequest extends SpeakeasyBase {
-    request?: AccountUpdateEmailRequestBody;
-    security: AccountUpdateEmailSecurity;
+export declare class AccountUpdateEmailRequestBody extends SpeakeasyBase {
+    /**
+     * User email.
+     */
+    email: string;
+    /**
+     * User password. Must be between 6 to 32 chars.
+     */
+    password: string;
 }
 export declare class AccountUpdateEmailResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * User
+     */
     user?: shared.User;
 }

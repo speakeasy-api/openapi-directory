@@ -1,4 +1,5 @@
 export * from "./prodttsasportalcustomerslist";
+export * from "./prodttsasportalcustomersprovisiondeployment";
 export * from "./prodttsasportalinstallergeneratesecret";
 export * from "./prodttsasportalinstallervalidate";
 export * from "./prodttsasportalnodesdevicessigndevice";

@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetAddClientIdToOpenIdConnectProviderActionEnum {
-    AddClientIdToOpenIdConnectProvider = "AddClientIDToOpenIDConnectProvider"
+import { AxiosResponse } from "axios";
+export declare enum GETAddClientIDToOpenIDConnectProviderActionEnum {
+    AddClientIDToOpenIDConnectProvider = "AddClientIDToOpenIDConnectProvider"
 }
-export declare enum GetAddClientIdToOpenIdConnectProviderVersionEnum {
+export declare enum GETAddClientIDToOpenIDConnectProviderVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class GetAddClientIdToOpenIdConnectProviderQueryParams extends SpeakeasyBase {
-    action: GetAddClientIdToOpenIdConnectProviderActionEnum;
+export declare class GETAddClientIDToOpenIDConnectProviderRequest extends SpeakeasyBase {
+    action: GETAddClientIDToOpenIDConnectProviderActionEnum;
+    /**
+     * The client ID (also known as audience) to add to the IAM OpenID Connect provider resource.
+     */
     clientID: string;
+    /**
+     * The Amazon Resource Name (ARN) of the IAM OpenID Connect (OIDC) provider resource to add the client ID to. You can get a list of OIDC provider ARNs by using the <a>ListOpenIDConnectProviders</a> operation.
+     */
     openIDConnectProviderArn: string;
-    version: GetAddClientIdToOpenIdConnectProviderVersionEnum;
-}
-export declare class GetAddClientIdToOpenIdConnectProviderHeaders extends SpeakeasyBase {
+    version: GETAddClientIDToOpenIDConnectProviderVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetAddClientIdToOpenIdConnectProviderHeaders extends Speake
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetAddClientIdToOpenIdConnectProviderRequest extends SpeakeasyBase {
-    queryParams: GetAddClientIdToOpenIdConnectProviderQueryParams;
-    headers: GetAddClientIdToOpenIdConnectProviderHeaders;
-}
-export declare class GetAddClientIdToOpenIdConnectProviderResponse extends SpeakeasyBase {
+export declare class GETAddClientIDToOpenIDConnectProviderResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

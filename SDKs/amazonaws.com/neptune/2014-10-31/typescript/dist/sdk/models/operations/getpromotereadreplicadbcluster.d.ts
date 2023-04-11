@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetPromoteReadReplicaDbClusterActionEnum {
-    PromoteReadReplicaDbCluster = "PromoteReadReplicaDBCluster"
+import { AxiosResponse } from "axios";
+export declare enum GETPromoteReadReplicaDBClusterActionEnum {
+    PromoteReadReplicaDBCluster = "PromoteReadReplicaDBCluster"
 }
-export declare enum GetPromoteReadReplicaDbClusterVersionEnum {
+export declare enum GETPromoteReadReplicaDBClusterVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class GetPromoteReadReplicaDbClusterQueryParams extends SpeakeasyBase {
-    action: GetPromoteReadReplicaDbClusterActionEnum;
+export declare class GETPromoteReadReplicaDBClusterRequest extends SpeakeasyBase {
+    action: GETPromoteReadReplicaDBClusterActionEnum;
+    /**
+     * Not supported.
+     */
     dbClusterIdentifier: string;
-    version: GetPromoteReadReplicaDbClusterVersionEnum;
-}
-export declare class GetPromoteReadReplicaDbClusterHeaders extends SpeakeasyBase {
+    version: GETPromoteReadReplicaDBClusterVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetPromoteReadReplicaDbClusterHeaders extends SpeakeasyBase
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetPromoteReadReplicaDbClusterRequest extends SpeakeasyBase {
-    queryParams: GetPromoteReadReplicaDbClusterQueryParams;
-    headers: GetPromoteReadReplicaDbClusterHeaders;
-}
-export declare class GetPromoteReadReplicaDbClusterResponse extends SpeakeasyBase {
+export declare class GETPromoteReadReplicaDBClusterResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

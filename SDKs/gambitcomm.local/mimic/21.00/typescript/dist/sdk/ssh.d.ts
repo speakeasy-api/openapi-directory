@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Ssh {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,69 +9,80 @@ export declare class Ssh {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * protocolSshGetArgs - Show the agent's SSH argument structure
+     * Show the agent's SSH argument structure
      *
+     * @remarks
      * Agent's SSH configuration with port,rule,prompt,paging_prompt,userdb,keymap
-    **/
+     */
     protocolSshGetArgs(req: operations.ProtocolSshGetArgsRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolSshGetArgsResponse>;
     /**
-     * protocolSshGetConfig - Show the agent's SSH configuration
+     * Show the agent's SSH configuration
      *
+     * @remarks
      * Agent's SSH configuration with port,rule,prompt,paging_prompt,userdb,keymap
-    **/
+     */
     protocolSshGetConfig(req: operations.ProtocolSshGetConfigRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolSshGetConfigResponse>;
     /**
-     * protocolSshGetStatistics - Show the agent's SSH statistics
+     * Show the agent's SSH statistics
      *
+     * @remarks
      * Statistics of fields indicated in the headers
-    **/
+     */
     protocolSshGetStatistics(req: operations.ProtocolSshGetStatisticsRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolSshGetStatisticsResponse>;
     /**
-     * protocolSshGetStatsHdr - Show the SSH statistics headers
+     * Show the SSH statistics headers
      *
+     * @remarks
      * The headers of statistics fields
-    **/
+     */
     protocolSshGetStatsHdr(config?: AxiosRequestConfig): Promise<operations.ProtocolSshGetStatsHdrResponse>;
     /**
-     * protocolSshGetTrace - Show the agent's SSH traffic tracing
+     * Show the agent's SSH traffic tracing
      *
+     * @remarks
      * Trace 1 means enabled, 0 means not
-    **/
+     */
     protocolSshGetTrace(req: operations.ProtocolSshGetTraceRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolSshGetTraceResponse>;
     /**
-     * protocolSshIpaliasDisable - Disable individual IP aliases on the agent and the simulator host
+     * Disable individual IP aliases on the agent and the simulator host
      *
+     * @remarks
      * By default, the MIMIC SSH server listens on all the IP addresses (aliases) that are configured for an agent
-    **/
+     */
     protocolSshIpaliasDisable(req: operations.ProtocolSshIpaliasDisableRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolSshIpaliasDisableResponse>;
     /**
-     * protocolSshIpaliasEnable - Enable individual IP aliases on the agent and the simulator host
+     * Enable individual IP aliases on the agent and the simulator host
      *
+     * @remarks
      * By default, the MIMIC SSH server listens on all the IP addresses (aliases) that are configured for an agent
-    **/
+     */
     protocolSshIpaliasEnable(req: operations.ProtocolSshIpaliasEnableRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolSshIpaliasEnableResponse>;
     /**
-     * protocolSshIpaliasIsenabled - Check individual IP aliases on the agent and the simulator host
+     * Check individual IP aliases on the agent and the simulator host
      *
+     * @remarks
      * By default, the MIMIC SSH server listens on all the IP addresses (aliases) that are configured for an agent
-    **/
+     */
     protocolSshIpaliasIsenabled(req: operations.ProtocolSshIpaliasIsenabledRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolSshIpaliasIsenabledResponse>;
     /**
-     * protocolSshIpaliasList - List all IP aliases on the agent and the simulator host
+     * List all IP aliases on the agent and the simulator host
      *
+     * @remarks
      * By default, the MIMIC SSH server listens on all the IP addresses (aliases) that are configured for an agent
-    **/
+     */
     protocolSshIpaliasList(req: operations.ProtocolSshIpaliasListRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolSshIpaliasListResponse>;
     /**
-     * protocolSshSetConfig - Set the agent's SSH configuration
+     * Set the agent's SSH configuration
      *
+     * @remarks
      * Agent's SSH configuration with port,rule,prompt,paging_prompt,userdb,keymap
-    **/
+     */
     protocolSshSetConfig(req: operations.ProtocolSshSetConfigRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolSshSetConfigResponse>;
     /**
-     * protocolSshSetTrace - Set the agent's SSH traffic tracing
+     * Set the agent's SSH traffic tracing
      *
+     * @remarks
      * 1 to enable, 0 to disable
-    **/
+     */
     protocolSshSetTrace(req: operations.ProtocolSshSetTraceRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolSshSetTraceResponse>;
 }

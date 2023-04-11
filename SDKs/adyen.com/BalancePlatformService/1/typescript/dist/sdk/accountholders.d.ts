@@ -1,5 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class AccountHolders {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,35 +10,35 @@ export declare class AccountHolders {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getAccountHoldersId - Retrieve an account holder.
+     * Get an account holder
      *
-     * Returns a specific account holder.
-    **/
-    getAccountHoldersId(req: operations.GetAccountHoldersIdRequest, config?: AxiosRequestConfig): Promise<operations.GetAccountHoldersIdResponse>;
+     * @remarks
+     * Returns an account holder.
+     */
+    getAccountHoldersId(req: operations.GetAccountHoldersIdRequest, security: operations.GetAccountHoldersIdSecurity, config?: AxiosRequestConfig): Promise<operations.GetAccountHoldersIdResponse>;
     /**
-     * getAccountHoldersIdBalanceAccounts - Retrieve all balance accounts of a specific account holder.
+     * Get all balance accounts of an account holder
      *
-     * Returns a paginated list of balance accounts associated with a specific account holder. To fetch multiple pages, use the query parameters.
+     * @remarks
+     * Returns a paginated list of the balance accounts associated with an account holder. To fetch multiple pages, use the query parameters.
      *
-     * For example, to limit the page to 5 balance accounts and to skip the first 10: `/accountHolders/{id}/balanceAccounts?limit=5&offset=10`.
-    **/
-    getAccountHoldersIdBalanceAccounts(req: operations.GetAccountHoldersIdBalanceAccountsRequest, config?: AxiosRequestConfig): Promise<operations.GetAccountHoldersIdBalanceAccountsResponse>;
+     * For example, to limit the page to 5 balance accounts and skip the first 10, use `/accountHolders/{id}/balanceAccounts?limit=5&offset=10`.
+     */
+    getAccountHoldersIdBalanceAccounts(req: operations.GetAccountHoldersIdBalanceAccountsRequest, security: operations.GetAccountHoldersIdBalanceAccountsSecurity, config?: AxiosRequestConfig): Promise<operations.GetAccountHoldersIdBalanceAccountsResponse>;
     /**
-     * patchAccountHoldersId - Update an account holder.
+     * Update an account holder
      *
-     * Updates a specific account holder. When updating an account holder resource, note that:
-     *
-     * * If a parameter is not provided in the request, the parameter is left unchanged.
-     *
-     * * When updating any parameter in the `contactDetails` object, you must send all other existing `contactDetails` parameters.
-    **/
-    patchAccountHoldersId(req: operations.PatchAccountHoldersIdRequest, config?: AxiosRequestConfig): Promise<operations.PatchAccountHoldersIdResponse>;
+     * @remarks
+     * Updates an account holder. When updating an account holder resource, if a parameter is not provided in the request, it is left unchanged.
+     */
+    patchAccountHoldersId(req: operations.PatchAccountHoldersIdRequest, security: operations.PatchAccountHoldersIdSecurity, config?: AxiosRequestConfig): Promise<operations.PatchAccountHoldersIdResponse>;
     /**
-     * postAccountHolders - Create an account holder.
+     * Create an account holder
      *
-     * Creates an account holder. This resource represents your user's entity within the balance platform.
+     * @remarks
+     * Creates an account holder linked to a [legal entity](https://docs.adyen.com/api-explorer/#/legalentity/latest/post/legalEntities).
      *
-     * For more information, refer to [Create accounts](https://docs.adyen.com/issuing/create-accounts).
-    **/
-    postAccountHolders(req: operations.PostAccountHoldersRequest, config?: AxiosRequestConfig): Promise<operations.PostAccountHoldersResponse>;
+     *
+     */
+    postAccountHolders(req: shared.AccountHolderInfoInput, security: operations.PostAccountHoldersSecurity, config?: AxiosRequestConfig): Promise<operations.PostAccountHoldersResponse>;
 }

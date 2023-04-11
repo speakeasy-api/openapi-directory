@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetConfigurationPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetConfigurationRequest extends SpeakeasyBase {
-    pathParams: GetConfigurationPathParams;
+    /**
+     * ID of Configuration that needs to be fetched
+     */
+    id: string;
 }
 export declare class GetConfigurationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

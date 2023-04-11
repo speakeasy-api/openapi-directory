@@ -1,19 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeletePartnerActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeletePartnerActionEnum {
     DeletePartner = "DeletePartner"
 }
-export declare enum GetDeletePartnerVersionEnum {
+export declare enum GETDeletePartnerVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class GetDeletePartnerQueryParams extends SpeakeasyBase {
+export declare class GETDeletePartnerRequest extends SpeakeasyBase {
+    /**
+     * The Amazon Web Services account ID that owns the cluster.
+     */
     accountId: string;
-    action: GetDeletePartnerActionEnum;
+    action: GETDeletePartnerActionEnum;
+    /**
+     * The cluster identifier of the cluster that receives data from the partner.
+     */
     clusterIdentifier: string;
+    /**
+     * The name of the database that receives data from the partner.
+     */
     databaseName: string;
+    /**
+     * The name of the partner that is authorized to send data.
+     */
     partnerName: string;
-    version: GetDeletePartnerVersionEnum;
-}
-export declare class GetDeletePartnerHeaders extends SpeakeasyBase {
+    version: GETDeletePartnerVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -22,12 +33,9 @@ export declare class GetDeletePartnerHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeletePartnerRequest extends SpeakeasyBase {
-    queryParams: GetDeletePartnerQueryParams;
-    headers: GetDeletePartnerHeaders;
-}
-export declare class GetDeletePartnerResponse extends SpeakeasyBase {
+export declare class GETDeletePartnerResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -3,7 +3,7 @@ import { VirtualGatewayListenerTlsFileCertificate } from "./virtualgatewaylisten
 import { VirtualGatewayListenerTlsSdsCertificate } from "./virtualgatewaylistenertlssdscertificate";
 /**
  * An object that represents the virtual gateway's client's Transport Layer Security (TLS) certificate.
-**/
+ */
 export declare class VirtualGatewayClientTlsCertificate extends SpeakeasyBase {
     file?: VirtualGatewayListenerTlsFileCertificate;
     sds?: VirtualGatewayListenerTlsSdsCertificate;

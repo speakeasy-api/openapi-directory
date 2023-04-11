@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Size of the institute.
+ */
 export declare enum GoogleCloudChannelV1EduDataInstituteSizeEnum {
     InstituteSizeUnspecified = "INSTITUTE_SIZE_UNSPECIFIED",
     Size1100 = "SIZE_1_100",
@@ -9,6 +12,9 @@ export declare enum GoogleCloudChannelV1EduDataInstituteSizeEnum {
     Size500110000 = "SIZE_5001_10000",
     Size10001OrMore = "SIZE_10001_OR_MORE"
 }
+/**
+ * Designated institute type of customer.
+ */
 export declare enum GoogleCloudChannelV1EduDataInstituteTypeEnum {
     InstituteTypeUnspecified = "INSTITUTE_TYPE_UNSPECIFIED",
     K12 = "K12",
@@ -16,9 +22,18 @@ export declare enum GoogleCloudChannelV1EduDataInstituteTypeEnum {
 }
 /**
  * Required Edu Attributes
-**/
+ */
 export declare class GoogleCloudChannelV1EduData extends SpeakeasyBase {
+    /**
+     * Size of the institute.
+     */
     instituteSize?: GoogleCloudChannelV1EduDataInstituteSizeEnum;
+    /**
+     * Designated institute type of customer.
+     */
     instituteType?: GoogleCloudChannelV1EduDataInstituteTypeEnum;
+    /**
+     * Web address for the edu customer's institution.
+     */
     website?: string;
 }

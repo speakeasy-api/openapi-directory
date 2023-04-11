@@ -21,6 +21,9 @@ export declare class WritablePowerFeedInput extends SpeakeasyBase {
     amperage?: number;
     comments?: string;
     customFields?: Record<string, any>;
+    /**
+     * Maximum permissible draw (percentage)
+     */
     maxUtilization?: number;
     name: string;
     phase?: WritablePowerFeedPhaseEnum;

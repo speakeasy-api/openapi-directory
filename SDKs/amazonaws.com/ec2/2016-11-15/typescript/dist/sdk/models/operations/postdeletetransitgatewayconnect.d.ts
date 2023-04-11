@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteTransitGatewayConnectActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteTransitGatewayConnectActionEnum {
     DeleteTransitGatewayConnect = "DeleteTransitGatewayConnect"
 }
-export declare enum PostDeleteTransitGatewayConnectVersionEnum {
+export declare enum POSTDeleteTransitGatewayConnectVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDeleteTransitGatewayConnectQueryParams extends SpeakeasyBase {
-    action: PostDeleteTransitGatewayConnectActionEnum;
-    version: PostDeleteTransitGatewayConnectVersionEnum;
-}
-export declare class PostDeleteTransitGatewayConnectHeaders extends SpeakeasyBase {
+export declare class POSTDeleteTransitGatewayConnectRequest extends SpeakeasyBase {
+    action: POSTDeleteTransitGatewayConnectActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteTransitGatewayConnectVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteTransitGatewayConnectHeaders extends SpeakeasyBas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteTransitGatewayConnectRequest extends SpeakeasyBase {
-    queryParams: PostDeleteTransitGatewayConnectQueryParams;
-    headers: PostDeleteTransitGatewayConnectHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteTransitGatewayConnectResponse extends SpeakeasyBase {
+export declare class POSTDeleteTransitGatewayConnectResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

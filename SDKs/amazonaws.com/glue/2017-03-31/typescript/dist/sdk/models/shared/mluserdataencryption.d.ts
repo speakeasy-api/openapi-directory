@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { MlUserDataEncryptionModeStringEnum } from "./mluserdataencryptionmodestringenum";
+import { MLUserDataEncryptionModeStringEnum } from "./mluserdataencryptionmodestringenum";
 /**
  * The encryption-at-rest settings of the transform that apply to accessing user data.
-**/
-export declare class MlUserDataEncryption extends SpeakeasyBase {
+ */
+export declare class MLUserDataEncryption extends SpeakeasyBase {
     kmsKeyId?: string;
-    mlUserDataEncryptionMode: MlUserDataEncryptionModeStringEnum;
+    mlUserDataEncryptionMode: MLUserDataEncryptionModeStringEnum;
 }

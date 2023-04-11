@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { AttributeValueMetadata } from "./attributevaluemetadata";
+/**
+ * The value type for the attribute. Values set and retrieved should be expected to be of this type.
+ */
 export declare enum AttributeMetadataValueTypeEnum {
     AttributeValueTypeUnspecified = "ATTRIBUTE_VALUE_TYPE_UNSPECIFIED",
     Bool = "BOOL",
@@ -9,13 +12,34 @@ export declare enum AttributeMetadataValueTypeEnum {
 }
 /**
  * Metadata for an attribute. Contains display information for the attribute, including a localized name and a heading for grouping related attributes together.
-**/
+ */
 export declare class AttributeMetadata extends SpeakeasyBase {
+    /**
+     * The ID of the attribute.
+     */
     attributeId?: string;
+    /**
+     * The localized display name for the attribute, if available; otherwise, the English display name.
+     */
     displayName?: string;
+    /**
+     * The localized display name of the group that contains this attribute, if available; otherwise, the English group name. Related attributes are collected into a group and should be displayed together under the heading given here.
+     */
     groupDisplayName?: string;
+    /**
+     * If true, the attribute is deprecated and should no longer be used. If deprecated, updating this attribute will not result in an error, but updates will not be saved. At some point after being deprecated, the attribute will be removed entirely and it will become an error.
+     */
     isDeprecated?: boolean;
+    /**
+     * If true, the attribute supports multiple values. If false, only a single value should be provided.
+     */
     isRepeatable?: boolean;
+    /**
+     * For some types of attributes (for example, enums), a list of supported values and corresponding display names for those values is provided.
+     */
     valueMetadata?: AttributeValueMetadata[];
+    /**
+     * The value type for the attribute. Values set and retrieved should be expected to be of this type.
+     */
     valueType?: AttributeMetadataValueTypeEnum;
 }

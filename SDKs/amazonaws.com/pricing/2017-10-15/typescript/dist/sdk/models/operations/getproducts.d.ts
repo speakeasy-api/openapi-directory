@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetProductsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum GetProductsXAmzTargetEnum {
-    AwsPriceListServiceGetProducts = "AWSPriceListService.GetProducts"
+    AWSPriceListServiceGetProducts = "AWSPriceListService.GetProducts"
 }
-export declare class GetProductsHeaders extends SpeakeasyBase {
+export declare class GetProductsRequest extends SpeakeasyBase {
+    getProductsRequest: shared.GetProductsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,18 +23,32 @@ export declare class GetProductsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetProductsXAmzTargetEnum;
 }
-export declare class GetProductsRequest extends SpeakeasyBase {
-    queryParams: GetProductsQueryParams;
-    headers: GetProductsHeaders;
-    request: shared.GetProductsRequest;
-}
 export declare class GetProductsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * ExpiredNextTokenException
+     */
     expiredNextTokenException?: any;
+    /**
+     * Success
+     */
     getProductsResponse?: shared.GetProductsResponse;
+    /**
+     * InternalErrorException
+     */
     internalErrorException?: any;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

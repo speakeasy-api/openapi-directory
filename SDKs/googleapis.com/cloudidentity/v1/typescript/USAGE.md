@@ -1,34 +1,36 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CloudidentityCustomersUserinvitationsCancelRequest, CloudidentityCustomersUserinvitationsCancelResponse } from "openapi/src/sdk/models/operations";
+import {
+  CloudidentityCustomersUserinvitationsCancelRequest,
+  CloudidentityCustomersUserinvitationsCancelResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: CloudidentityCustomersUserinvitationsCancelRequest = {
-  pathParams: {
-    name: "sit",
+  dollarXgafv: XgafvEnum.Two,
+  requestBody: {
+    "distinctio": "quibusdam",
+    "unde": "nulla",
+    "corrupti": "illum",
   },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
-    "debitis": "voluptatum",
-    "et": "ut",
-    "dolorem": "et",
-  },
+  accessToken: "vel",
+  alt: AltEnum.Media,
+  callback: "deserunt",
+  fields: "suscipit",
+  key: "iure",
+  name: "magnam",
+  oauthToken: "debitis",
+  prettyPrint: false,
+  quotaUser: "ipsa",
+  uploadType: "delectus",
+  uploadProtocol: "tempora",
 };
 
 sdk.customers.cloudidentityCustomersUserinvitationsCancel(req).then((res: CloudidentityCustomersUserinvitationsCancelResponse | AxiosError) => {

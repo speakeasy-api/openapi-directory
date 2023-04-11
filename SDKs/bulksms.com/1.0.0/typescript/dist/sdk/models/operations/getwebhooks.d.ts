@@ -1,13 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetWebhooksSecurity extends SpeakeasyBase {
-    basicAuth: shared.SchemeBasicAuth;
-}
-export declare class GetWebhooksRequest extends SpeakeasyBase {
-    security: GetWebhooksSecurity;
-}
+import { AxiosResponse } from "axios";
 export declare class GetWebhooksResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Array of Webhooks
+     */
     webhooks?: shared.Webhook[];
 }

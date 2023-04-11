@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListEngagementsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListEngagementsXAmzTargetEnum {
-    SsmContactsListEngagements = "SSMContacts.ListEngagements"
+    SSMContactsListEngagements = "SSMContacts.ListEngagements"
 }
-export declare class ListEngagementsHeaders extends SpeakeasyBase {
+export declare class ListEngagementsRequest extends SpeakeasyBase {
+    listEngagementsRequest: shared.ListEngagementsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,17 +23,28 @@ export declare class ListEngagementsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListEngagementsXAmzTargetEnum;
 }
-export declare class ListEngagementsRequest extends SpeakeasyBase {
-    queryParams: ListEngagementsQueryParams;
-    headers: ListEngagementsHeaders;
-    request: shared.ListEngagementsRequest;
-}
 export declare class ListEngagementsResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * Success
+     */
     listEngagementsResult?: shared.ListEngagementsResult;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

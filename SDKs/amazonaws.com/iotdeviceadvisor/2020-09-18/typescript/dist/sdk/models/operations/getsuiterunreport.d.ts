@@ -1,10 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetSuiteRunReportPathParams extends SpeakeasyBase {
-    suiteDefinitionId: string;
-    suiteRunId: string;
-}
-export declare class GetSuiteRunReportHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetSuiteRunReportRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,16 +9,33 @@ export declare class GetSuiteRunReportHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class GetSuiteRunReportRequest extends SpeakeasyBase {
-    pathParams: GetSuiteRunReportPathParams;
-    headers: GetSuiteRunReportHeaders;
+    /**
+     * Suite definition ID of the test suite.
+     */
+    suiteDefinitionId: string;
+    /**
+     * Suite run ID of the test suite run.
+     */
+    suiteRunId: string;
 }
 export declare class GetSuiteRunReportResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getSuiteRunReportResponse?: shared.GetSuiteRunReportResponse;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

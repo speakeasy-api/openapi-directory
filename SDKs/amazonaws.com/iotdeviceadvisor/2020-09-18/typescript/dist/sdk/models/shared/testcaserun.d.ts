@@ -1,8 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { StatusEnum } from "./statusenum";
+import { TestCaseScenario } from "./testcasescenario";
 /**
- * Provides test case run.
-**/
+ * Provides the test case run.
+ */
 export declare class TestCaseRun extends SpeakeasyBase {
     endTime?: Date;
     failure?: string;
@@ -12,5 +13,6 @@ export declare class TestCaseRun extends SpeakeasyBase {
     testCaseDefinitionId?: string;
     testCaseDefinitionName?: string;
     testCaseRunId?: string;
+    testScenarios?: TestCaseScenario[];
     warnings?: string;
 }

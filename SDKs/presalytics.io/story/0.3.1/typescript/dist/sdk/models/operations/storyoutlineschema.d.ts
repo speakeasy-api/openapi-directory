@@ -1,12 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class StoryOutlineSchemaPathParams extends SpeakeasyBase {
-    schemaVersion: string;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class StoryOutlineSchemaRequest extends SpeakeasyBase {
-    pathParams: StoryOutlineSchemaPathParams;
+    /**
+     * The semanitic version of a schema (e.g. '0.3.1')
+     */
+    schemaVersion: string;
 }
 export declare class StoryOutlineSchemaResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    problemDetail?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad Request
+     */
+    problemDetail?: shared.ProblemDetail;
 }

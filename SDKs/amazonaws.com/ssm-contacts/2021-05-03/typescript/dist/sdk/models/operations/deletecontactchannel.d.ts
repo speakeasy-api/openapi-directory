@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteContactChannelXAmzTargetEnum {
-    SsmContactsDeleteContactChannel = "SSMContacts.DeleteContactChannel"
+    SSMContactsDeleteContactChannel = "SSMContacts.DeleteContactChannel"
 }
-export declare class DeleteContactChannelHeaders extends SpeakeasyBase {
+export declare class DeleteContactChannelRequest extends SpeakeasyBase {
+    deleteContactChannelRequest: shared.DeleteContactChannelRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class DeleteContactChannelHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteContactChannelXAmzTargetEnum;
 }
-export declare class DeleteContactChannelRequest extends SpeakeasyBase {
-    headers: DeleteContactChannelHeaders;
-    request: shared.DeleteContactChannelRequest;
-}
 export declare class DeleteContactChannelResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteContactChannelResult?: Record<string, any>;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

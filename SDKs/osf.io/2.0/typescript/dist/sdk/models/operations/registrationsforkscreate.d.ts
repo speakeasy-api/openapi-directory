@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class RegistrationsForksCreatePathParams extends SpeakeasyBase {
-    registrationId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class RegistrationsForksCreateRequest extends SpeakeasyBase {
-    pathParams: RegistrationsForksCreatePathParams;
+    /**
+     * The unique identifier of the registration.
+     */
+    registrationId: string;
 }
 export declare class RegistrationsForksCreateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,18 +1,32 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetCustomersAccountAnnouncementsAnnouncementIdPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetCustomersAccountAnnouncementsAnnouncementIdRequest extends SpeakeasyBase {
+    /**
+     * Account ID of customer
+     */
     account: number;
+    /**
+     * Announcement ID of audio file
+     */
     announcementId: string;
 }
-export declare class GetCustomersAccountAnnouncementsAnnouncementId404ApplicationJson extends SpeakeasyBase {
+/**
+ * Not found
+ */
+export declare class GetCustomersAccountAnnouncementsAnnouncementId404ApplicationJSON extends SpeakeasyBase {
     error?: string;
-}
-export declare class GetCustomersAccountAnnouncementsAnnouncementIdRequest extends SpeakeasyBase {
-    pathParams: GetCustomersAccountAnnouncementsAnnouncementIdPathParams;
 }
 export declare class GetCustomersAccountAnnouncementsAnnouncementIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getCustomersAccountAnnouncementsAnnouncementId404ApplicationJSONObject?: GetCustomersAccountAnnouncementsAnnouncementId404ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Not found
+     */
+    getCustomersAccountAnnouncementsAnnouncementId404ApplicationJSONObject?: GetCustomersAccountAnnouncementsAnnouncementId404ApplicationJSON;
+    /**
+     * OK
+     */
     oneannouncementsPostResponses201ContentApplication1jsonSchema?: shared.OneannouncementsPostResponses201ContentApplication1jsonSchema;
 }

@@ -1,0 +1,83 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { CustomFloodlightVariable } from "./customfloodlightvariable";
+/**
+ * A Conversion represents when a user successfully performs a desired action after seeing an ad.
+ */
+export declare class Conversion extends SpeakeasyBase {
+    /**
+     * Whether this particular request may come from a user under the age of 13, under COPPA compliance.
+     */
+    childDirectedTreatment?: boolean;
+    /**
+     * Custom floodlight variables. This field may only be used when calling batchinsert; it is not supported by batchupdate.
+     */
+    customVariables?: CustomFloodlightVariable[];
+    /**
+     * The display click ID. This field is mutually exclusive with encryptedUserId, encryptedUserIdCandidates[], matchId, mobileDeviceId, gclid, and impressionId. This or encryptedUserId or encryptedUserIdCandidates[] or matchId or mobileDeviceId or gclid or impressionId is a required field.
+     */
+    dclid?: string;
+    /**
+     * The alphanumeric encrypted user ID. When set, encryptionInfo should also be specified. This field is mutually exclusive with encryptedUserIdCandidates[], matchId, mobileDeviceId, gclid, dclid, and impressionId. This or encryptedUserIdCandidates[] or matchId or mobileDeviceId or gclid or dclid or impressionId is a required field.
+     */
+    encryptedUserId?: string;
+    /**
+     * A list of the alphanumeric encrypted user IDs. Any user ID with exposure prior to the conversion timestamp will be used in the inserted conversion. If no such user ID is found then the conversion will be rejected with INVALID_ARGUMENT error. When set, encryptionInfo should also be specified. This field may only be used when calling batchinsert; it is not supported by batchupdate. This field is mutually exclusive with encryptedUserId, matchId, mobileDeviceId, gclid dclid, and impressionId. This or encryptedUserId or matchId or mobileDeviceId or gclid or dclid or impressionId is a required field.
+     */
+    encryptedUserIdCandidates?: string[];
+    /**
+     * Floodlight Activity ID of this conversion. This is a required field.
+     */
+    floodlightActivityId?: string;
+    /**
+     * Floodlight Configuration ID of this conversion. This is a required field.
+     */
+    floodlightConfigurationId?: string;
+    /**
+     * The Google click ID. This field is mutually exclusive with encryptedUserId, encryptedUserIdCandidates[], matchId, mobileDeviceId, dclid, and impressionId. This or encryptedUserId or encryptedUserIdCandidates[] or matchId or mobileDeviceId or dclid or impressionId is a required field.
+     */
+    gclid?: string;
+    /**
+     * The impression ID. This field is mutually exclusive with encryptedUserId, encryptedUserIdCandidates[], matchId, mobileDeviceId, and gclid. One of these identifiers must be set.
+     */
+    impressionId?: string;
+    /**
+     * Identifies what kind of resource this is. Value: the fixed string "dfareporting#conversion".
+     */
+    kind?: string;
+    /**
+     * Whether Limit Ad Tracking is enabled. When set to true, the conversion will be used for reporting but not targeting. This will prevent remarketing.
+     */
+    limitAdTracking?: boolean;
+    /**
+     * The match ID field. A match ID is your own first-party identifier that has been synced with Google using the match ID feature in Floodlight. This field is mutually exclusive with encryptedUserId, encryptedUserIdCandidates[],mobileDeviceId, gclid, dclid, and impressionId. This or encryptedUserId orencryptedUserIdCandidates[] or mobileDeviceId or gclid or dclid or impressionIdis a required field.
+     */
+    matchId?: string;
+    /**
+     * The mobile device ID. This field is mutually exclusive with encryptedUserId, encryptedUserIdCandidates[], matchId, gclid, dclid, and impressionId. This or encryptedUserId or encryptedUserIdCandidates[] or matchId or gclid or dclid or impressionId is a required field.
+     */
+    mobileDeviceId?: string;
+    /**
+     * Whether the conversion was for a non personalized ad.
+     */
+    nonPersonalizedAd?: boolean;
+    /**
+     * The ordinal of the conversion. Use this field to control how conversions of the same user and day are de-duplicated. This is a required field.
+     */
+    ordinal?: string;
+    /**
+     * The quantity of the conversion.
+     */
+    quantity?: string;
+    /**
+     * The timestamp of conversion, in Unix epoch micros. This is a required field.
+     */
+    timestampMicros?: string;
+    /**
+     * Whether this particular request may come from a user under the age of 16 (may differ by country), under compliance with the European Union's General Data Protection Regulation (GDPR).
+     */
+    treatmentForUnderage?: boolean;
+    /**
+     * The value of the conversion.
+     */
+    value?: number;
+}

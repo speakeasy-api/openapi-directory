@@ -1,0 +1,15 @@
+<!-- Start SDK Example Usage -->
+```typescript
+import {
+  AccountsGetResponse
+} from "openapi/dist/sdk/models/operations";
+
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK();
+
+sdk.accounts.accountsGet().then((res: AccountsGetResponse | AxiosError) => {
+   // handle response
+});
+```
+<!-- End SDK Example Usage -->

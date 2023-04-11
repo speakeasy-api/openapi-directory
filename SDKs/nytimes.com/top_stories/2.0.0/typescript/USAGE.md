@@ -1,25 +1,24 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetSectionFormatRequest, GetSectionFormatResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GetSectionFormatRequest,
+  GetSectionFormatResponse,
+  GetSectionFormatFormatEnum,
+  GetSectionFormatSectionEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    apikey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    apikey: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: GetSectionFormatRequest = {
-  pathParams: {
-    format: "json",
-    section: "travel",
-  },
-  queryParams: {
-    callback: "culpa",
-  },
+  callback: "corrupti",
+  format: GetSectionFormatFormatEnum.Jsonp,
+  section: GetSectionFormatSectionEnum.Tmagazine,
 };
 
 sdk.stories.getSectionFormat(req).then((res: GetSectionFormatResponse | AxiosError) => {

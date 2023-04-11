@@ -6,6 +6,9 @@ export declare class ProxyGetRefundTransactionLog extends SpeakeasyBase {
     gatewayReasonCodeDescription?: string;
     gatewayState?: string;
     gatewayTransactionType?: string;
+    /**
+     * Object identifier.
+     */
     id?: string;
     refundId?: string;
     requestString?: string;

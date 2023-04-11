@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Product services
+ */
 export declare class ProductServices {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +12,9 @@ export declare class ProductServices {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * availableProducts - /available/products
+     * /available/products
      *
+     * @remarks
      * Find products that are available
      *
      *  This endpoint returns available products filtered by product code, date range or number of adult travelers
@@ -19,11 +23,12 @@ export declare class ProductServices {
      *  - **Note**: Availability data is limited to a period of **12 months** into the future from the present time on the production server and **6 months** on the sandbox server.
      *
      *
-    **/
+     */
     availableProducts(req: operations.AvailableProductsRequest, config?: AxiosRequestConfig): Promise<operations.AvailableProductsResponse>;
     /**
-     * product - /product
+     * /product
      *
+     * @remarks
      * Get product information
      * This service provides all product details required for a product display page, as well as information required for price checks and booking, such as:
      * - age bands
@@ -46,17 +51,19 @@ export declare class ProductServices {
      *
      * - Videos are no longer provided via this API
      *
-    **/
+     */
     product(req: operations.ProductRequest, config?: AxiosRequestConfig): Promise<operations.ProductResponse>;
     /**
-     * productPhotos - /product/photos
+     * /product/photos
      *
+     * @remarks
      * Get photos of a product submitted by users
-    **/
+     */
     productPhotos(req: operations.ProductPhotosRequest, config?: AxiosRequestConfig): Promise<operations.ProductPhotosResponse>;
     /**
-     * productReviews - /product/reviews
+     * /product/reviews
      *
+     * @remarks
      * Get user-submitted reviews of a product
      *
      * **Note**:
@@ -71,21 +78,23 @@ export declare class ProductServices {
      * https://viatorapi.sandbox.viator.com/service/product/reviews?sortOrder=REVIEW_RATING_A&amp;topX=1-3&amp;code=5010SYDNEY&amp;showUnavailable=false
      * ```
      *
-    **/
+     */
     productReviews(req: operations.ProductReviewsRequest, config?: AxiosRequestConfig): Promise<operations.ProductReviewsResponse>;
     /**
-     * searchFreetext - /search/freetext
+     * /search/freetext
      *
+     * @remarks
      * Free text search
      * - This service provides a **free text search across all products and destinations**
      * - The `text` parameter is required
      * - **Note:** results include a type indicator (`type`) that you can use to display each result appropriately based on its content
      *
-    **/
+     */
     searchFreetext(req: operations.SearchFreetextRequest, config?: AxiosRequestConfig): Promise<operations.SearchFreetextResponse>;
     /**
-     * searchProducts - /search/products
+     * /search/products
      *
+     * @remarks
      * Search for products
      * This service is used to search for products based on various criteria; such as:
      * * the destination (locale) in which it operates
@@ -141,15 +150,16 @@ export declare class ProductServices {
      *
      * - If `startDate` and `endDate` are omitted, 'freesale/on-request' products that are presently within their on-request period may appear to be available to customers, but won't be available at the time of booking.
      *
-    **/
+     */
     searchProducts(req: operations.SearchProductsRequest, config?: AxiosRequestConfig): Promise<operations.SearchProductsResponse>;
     /**
-     * searchProductsCodes - /search/products/codes
+     * /search/products/codes
      *
+     * @remarks
      * Search by product code
      * - This service returns an array of products given an array of product identifiers that is useful for wishlist / shopping cart / user account display
      * - **Note**: requesting an inactive or non-existent product code will return `0`, `null` and blank values (as per the 'invalid_product' example).
      *
-    **/
+     */
     searchProductsCodes(req: operations.SearchProductsCodesRequest, config?: AxiosRequestConfig): Promise<operations.SearchProductsCodesResponse>;
 }

@@ -1,4 +1,4 @@
-export declare enum DbProxyStatusEnum {
+export declare enum DBProxyStatusEnum {
     Available = "available",
     Modifying = "modifying",
     IncompatibleNetwork = "incompatible-network",

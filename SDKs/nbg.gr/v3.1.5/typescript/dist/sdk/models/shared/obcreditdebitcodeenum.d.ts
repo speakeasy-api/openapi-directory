@@ -1,4 +1,4 @@
-export declare enum ObCreditDebitCodeEnum {
+export declare enum OBCreditDebitCodeEnum {
     Credit = "Credit",
     Debit = "Debit"
 }

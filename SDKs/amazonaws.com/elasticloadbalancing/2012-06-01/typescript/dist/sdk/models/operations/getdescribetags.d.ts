@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeTagsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeTagsActionEnum {
     DescribeTags = "DescribeTags"
 }
-export declare enum GetDescribeTagsVersionEnum {
+export declare enum GETDescribeTagsVersionEnum {
     TwoThousandAndTwelve0601 = "2012-06-01"
 }
-export declare class GetDescribeTagsQueryParams extends SpeakeasyBase {
-    action: GetDescribeTagsActionEnum;
+export declare class GETDescribeTagsRequest extends SpeakeasyBase {
+    action: GETDescribeTagsActionEnum;
+    /**
+     * The names of the load balancers.
+     */
     loadBalancerNames: string[];
-    version: GetDescribeTagsVersionEnum;
-}
-export declare class GetDescribeTagsHeaders extends SpeakeasyBase {
+    version: GETDescribeTagsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDescribeTagsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeTagsRequest extends SpeakeasyBase {
-    queryParams: GetDescribeTagsQueryParams;
-    headers: GetDescribeTagsHeaders;
-}
-export declare class GetDescribeTagsResponse extends SpeakeasyBase {
+export declare class GETDescribeTagsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

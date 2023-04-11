@@ -14,6 +14,9 @@ export declare class OfferingMetadata1 extends SpeakeasyBase {
 }
 export declare class Offering extends SpeakeasyBase {
     badge?: OfferingBadge;
+    /**
+     * The identifier for a specific version of a course
+     */
     contentId?: string;
     description?: string;
     earlyCloseOffDate?: Date;
@@ -24,6 +27,9 @@ export declare class Offering extends SpeakeasyBase {
     metadata?: OfferingMetadata1;
     name?: string;
     overview?: string;
+    /**
+     * Every time a course is republished it is assigned a new contentId. rootContentId is the first original contentId associated with a course.
+     */
     rootContentId?: string;
     start?: Date;
     trailerVideoUrl?: string;

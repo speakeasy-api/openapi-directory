@@ -1,24 +1,61 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { FilterRef } from "./filterref";
+import { FilterRef, FilterRefInput } from "./filterref";
 import { ProfileRef } from "./profileref";
-import { FilterRefInput } from "./filterref";
 /**
  * JSON template for an Analytics profile filter link.
-**/
-export declare class ProfileFilterLink extends SpeakeasyBase {
-    filterRef?: FilterRef;
+ */
+export declare class ProfileFilterLinkInput extends SpeakeasyBase {
+    /**
+     * JSON template for a profile filter link.
+     */
+    filterRef?: FilterRefInput;
+    /**
+     * Profile filter link ID.
+     */
     id?: string;
-    kind?: string;
+    /**
+     * JSON template for a linked view (profile).
+     */
     profileRef?: ProfileRef;
+    /**
+     * The rank of this profile filter link relative to the other filters linked to the same profile.
+     *
+     * @remarks
+     * For readonly (i.e., list and get) operations, the rank always starts at 1.
+     * For write (i.e., create, update, or delete) operations, you may specify a value between 0 and 255 inclusively, [0, 255]. In order to insert a link at the end of the list, either don't specify a rank or set a rank to a number greater than the largest rank in the list. In order to insert a link to the beginning of the list specify a rank that is less than or equal to 1. The new link will move all existing filters with the same or lower rank down the list. After the link is inserted/updated/deleted all profile filter links will be renumbered starting at 1.
+     */
     rank?: number;
-    selfLink?: string;
 }
 /**
  * JSON template for an Analytics profile filter link.
-**/
-export declare class ProfileFilterLinkInput extends SpeakeasyBase {
-    filterRef?: FilterRefInput;
+ */
+export declare class ProfileFilterLink extends SpeakeasyBase {
+    /**
+     * JSON template for a profile filter link.
+     */
+    filterRef?: FilterRef;
+    /**
+     * Profile filter link ID.
+     */
     id?: string;
+    /**
+     * Resource type for Analytics filter.
+     */
+    kind?: string;
+    /**
+     * JSON template for a linked view (profile).
+     */
     profileRef?: ProfileRef;
+    /**
+     * The rank of this profile filter link relative to the other filters linked to the same profile.
+     *
+     * @remarks
+     * For readonly (i.e., list and get) operations, the rank always starts at 1.
+     * For write (i.e., create, update, or delete) operations, you may specify a value between 0 and 255 inclusively, [0, 255]. In order to insert a link at the end of the list, either don't specify a rank or set a rank to a number greater than the largest rank in the list. In order to insert a link to the beginning of the list specify a rank that is less than or equal to 1. The new link will move all existing filters with the same or lower rank down the list. After the link is inserted/updated/deleted all profile filter links will be renumbered starting at 1.
+     */
     rank?: number;
+    /**
+     * Link for this profile filter link.
+     */
+    selfLink?: string;
 }

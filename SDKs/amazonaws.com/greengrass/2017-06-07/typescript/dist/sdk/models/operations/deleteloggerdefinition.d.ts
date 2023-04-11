@@ -1,8 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteLoggerDefinitionPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteLoggerDefinitionRequest extends SpeakeasyBase {
+    /**
+     * The ID of the logger definition.
+     */
     loggerDefinitionId: string;
-}
-export declare class DeleteLoggerDefinitionHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,13 +13,16 @@ export declare class DeleteLoggerDefinitionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeleteLoggerDefinitionRequest extends SpeakeasyBase {
-    pathParams: DeleteLoggerDefinitionPathParams;
-    headers: DeleteLoggerDefinitionHeaders;
-}
 export declare class DeleteLoggerDefinitionResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteLoggerDefinitionResponse?: Record<string, any>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

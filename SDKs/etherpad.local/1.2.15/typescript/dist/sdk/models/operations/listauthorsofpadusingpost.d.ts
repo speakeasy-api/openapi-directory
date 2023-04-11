@@ -1,38 +1,61 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ListAuthorsOfPadUsingPostQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListAuthorsOfPadUsingPOSTRequest extends SpeakeasyBase {
     padID?: string;
 }
-export declare class ListAuthorsOfPadUsingPost200ApplicationJsonData extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class ListAuthorsOfPadUsingPost500ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class ListAuthorsOfPadUsingPost401ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+/**
+ * generic api error (code 1)
+ */
+export declare class ListAuthorsOfPadUsingPost400ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+export declare class ListAuthorsOfPadUsingPost200ApplicationJSONData extends SpeakeasyBase {
     authorIDs?: string[];
 }
-export declare class ListAuthorsOfPadUsingPost200ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class ListAuthorsOfPadUsingPost200ApplicationJSON extends SpeakeasyBase {
     code?: number;
-    data?: ListAuthorsOfPadUsingPost200ApplicationJsonData;
+    data?: ListAuthorsOfPadUsingPost200ApplicationJSONData;
     message?: string;
 }
-export declare class ListAuthorsOfPadUsingPost400ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class ListAuthorsOfPadUsingPost401ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class ListAuthorsOfPadUsingPost500ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class ListAuthorsOfPadUsingPostRequest extends SpeakeasyBase {
-    queryParams: ListAuthorsOfPadUsingPostQueryParams;
-}
-export declare class ListAuthorsOfPadUsingPostResponse extends SpeakeasyBase {
+export declare class ListAuthorsOfPadUsingPOSTResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    listAuthorsOfPadUsingPOST200ApplicationJSONObject?: ListAuthorsOfPadUsingPost200ApplicationJson;
-    listAuthorsOfPadUsingPOST400ApplicationJSONObject?: ListAuthorsOfPadUsingPost400ApplicationJson;
-    listAuthorsOfPadUsingPOST401ApplicationJSONObject?: ListAuthorsOfPadUsingPost401ApplicationJson;
-    listAuthorsOfPadUsingPOST500ApplicationJSONObject?: ListAuthorsOfPadUsingPost500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    listAuthorsOfPadUsingPOST200ApplicationJSONObject?: ListAuthorsOfPadUsingPost200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    listAuthorsOfPadUsingPOST400ApplicationJSONObject?: ListAuthorsOfPadUsingPost400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    listAuthorsOfPadUsingPOST401ApplicationJSONObject?: ListAuthorsOfPadUsingPost401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    listAuthorsOfPadUsingPOST500ApplicationJSONObject?: ListAuthorsOfPadUsingPost500ApplicationJSON;
 }

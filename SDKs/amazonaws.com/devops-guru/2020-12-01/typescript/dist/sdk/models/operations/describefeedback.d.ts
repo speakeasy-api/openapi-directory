@@ -1,6 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeFeedbackHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DescribeFeedbackRequestBody extends SpeakeasyBase {
+    /**
+     *  The ID of the insight for which the feedback was provided.
+     */
+    insightId?: string;
+}
+export declare class DescribeFeedbackRequest extends SpeakeasyBase {
+    requestBody: DescribeFeedbackRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -9,20 +17,32 @@ export declare class DescribeFeedbackHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DescribeFeedbackRequestBody extends SpeakeasyBase {
-    insightId?: string;
-}
-export declare class DescribeFeedbackRequest extends SpeakeasyBase {
-    headers: DescribeFeedbackHeaders;
-    request: DescribeFeedbackRequestBody;
-}
 export declare class DescribeFeedbackResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     describeFeedbackResponse?: shared.DescribeFeedbackResponse;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

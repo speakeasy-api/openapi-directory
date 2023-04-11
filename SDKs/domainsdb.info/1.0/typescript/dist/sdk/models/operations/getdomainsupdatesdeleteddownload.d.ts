@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetDomainsUpdatesDeletedDownloadQueryParams extends SpeakeasyBase {
-    apiKey?: string;
-    date?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetDomainsUpdatesDeletedDownloadRequest extends SpeakeasyBase {
-    queryParams: GetDomainsUpdatesDeletedDownloadQueryParams;
+    /**
+     * API key
+     */
+    apiKey?: string;
+    /**
+     * Request date
+     */
+    date?: string;
 }
 export declare class GetDomainsUpdatesDeletedDownloadResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

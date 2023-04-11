@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { File } from "./file";
 import { Category } from "./category";
 import { Collection } from "./collection";
+import { File } from "./file";
 import { Logo } from "./logo";
 import { Media } from "./media";
 import { Partner } from "./partner";

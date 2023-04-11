@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetEventSourcePathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetEventSourceRequest extends SpeakeasyBase {
+    /**
+     * The AWS Lambda assigned ID of the event source mapping.
+     */
     uuid: string;
-}
-export declare class GetEventSourceHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,15 +14,24 @@ export declare class GetEventSourceHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetEventSourceRequest extends SpeakeasyBase {
-    pathParams: GetEventSourcePathParams;
-    headers: GetEventSourceHeaders;
-}
 export declare class GetEventSourceResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     eventSourceConfiguration?: shared.EventSourceConfiguration;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: shared.InvalidParameterValueException;
-    resourceNotFoundException?: shared.ResourceNotFoundException;
+    /**
+     * ServiceException
+     */
     serviceException?: shared.ServiceException;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: shared.ResourceNotFoundException;
 }

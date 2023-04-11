@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeTestCasesQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum DescribeTestCasesXAmzTargetEnum {
     CodeBuild20161006DescribeTestCases = "CodeBuild_20161006.DescribeTestCases"
 }
-export declare class DescribeTestCasesHeaders extends SpeakeasyBase {
+export declare class DescribeTestCasesRequest extends SpeakeasyBase {
+    describeTestCasesInput: shared.DescribeTestCasesInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,16 +14,29 @@ export declare class DescribeTestCasesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeTestCasesXAmzTargetEnum;
-}
-export declare class DescribeTestCasesRequest extends SpeakeasyBase {
-    queryParams: DescribeTestCasesQueryParams;
-    headers: DescribeTestCasesHeaders;
-    request: shared.DescribeTestCasesInput;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class DescribeTestCasesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeTestCasesOutput?: shared.DescribeTestCasesOutput;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
 }

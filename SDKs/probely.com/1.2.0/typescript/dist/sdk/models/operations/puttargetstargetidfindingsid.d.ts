@@ -1,32 +1,70 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PutTargetsTargetIdFindingsIdPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class PutTargetsTargetIdFindingsIdRequest extends SpeakeasyBase {
+    findingUpdateInput: shared.FindingUpdateInput;
+    /**
+     * Object Id
+     */
     id: string;
+    /**
+     * Target id
+     */
     targetId: string;
 }
-export declare class PutTargetsTargetIdFindingsId400ApplicationJson extends SpeakeasyBase {
+/**
+ * Not found
+ */
+export declare class PutTargetsTargetIdFindingsId404ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Not found.
+     */
+    detail?: string;
+}
+/**
+ * Not allowed to perform operation
+ */
+export declare class PutTargetsTargetIdFindingsId403ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error message.
+     */
+    detail?: string;
+}
+/**
+ * Access token is missing or invalid
+ */
+export declare class PutTargetsTargetIdFindingsId401ApplicationJSON extends SpeakeasyBase {
+    detail?: string;
+}
+/**
+ * Bad Request
+ */
+export declare class PutTargetsTargetIdFindingsId400ApplicationJSON extends SpeakeasyBase {
     lessThanFieldNameGreaterThan?: string[];
     nonFieldErrors?: string[];
 }
-export declare class PutTargetsTargetIdFindingsId401ApplicationJson extends SpeakeasyBase {
-    detail?: string;
-}
-export declare class PutTargetsTargetIdFindingsId403ApplicationJson extends SpeakeasyBase {
-    detail?: string;
-}
-export declare class PutTargetsTargetIdFindingsId404ApplicationJson extends SpeakeasyBase {
-    detail?: string;
-}
-export declare class PutTargetsTargetIdFindingsIdRequest extends SpeakeasyBase {
-    pathParams: PutTargetsTargetIdFindingsIdPathParams;
-    request: shared.FindingUpdateInput;
-}
 export declare class PutTargetsTargetIdFindingsIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Finding object
+     */
     finding?: shared.Finding;
     statusCode: number;
-    putTargetsTargetIdFindingsId400ApplicationJSONObject?: PutTargetsTargetIdFindingsId400ApplicationJson;
-    putTargetsTargetIdFindingsId401ApplicationJSONObject?: PutTargetsTargetIdFindingsId401ApplicationJson;
-    putTargetsTargetIdFindingsId403ApplicationJSONObject?: PutTargetsTargetIdFindingsId403ApplicationJson;
-    putTargetsTargetIdFindingsId404ApplicationJSONObject?: PutTargetsTargetIdFindingsId404ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad Request
+     */
+    putTargetsTargetIdFindingsId400ApplicationJSONObject?: PutTargetsTargetIdFindingsId400ApplicationJSON;
+    /**
+     * Access token is missing or invalid
+     */
+    putTargetsTargetIdFindingsId401ApplicationJSONObject?: PutTargetsTargetIdFindingsId401ApplicationJSON;
+    /**
+     * Not allowed to perform operation
+     */
+    putTargetsTargetIdFindingsId403ApplicationJSONObject?: PutTargetsTargetIdFindingsId403ApplicationJSON;
+    /**
+     * Not found
+     */
+    putTargetsTargetIdFindingsId404ApplicationJSONObject?: PutTargetsTargetIdFindingsId404ApplicationJSON;
 }

@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PackageUserTranslationMemoryForLanguageStatusPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class PackageUserTranslationMemoryForLanguageStatusRequest extends SpeakeasyBase {
+    /**
+     * Async operation key
+     */
+    asyncRequestKey: string;
+    /**
+     * Language Code
+     */
     languageCode: string;
 }
-export declare class PackageUserTranslationMemoryForLanguageStatusQueryParams extends SpeakeasyBase {
-    asyncRequestKey: string;
-}
-export declare class PackageUserTranslationMemoryForLanguageStatusRequest extends SpeakeasyBase {
-    pathParams: PackageUserTranslationMemoryForLanguageStatusPathParams;
-    queryParams: PackageUserTranslationMemoryForLanguageStatusQueryParams;
-}
 export declare class PackageUserTranslationMemoryForLanguageStatusResponse extends SpeakeasyBase {
+    /**
+     * Async operation status. Use the key to query status of this operation.
+     */
     asyncOperationStatus?: shared.AsyncOperationStatus;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

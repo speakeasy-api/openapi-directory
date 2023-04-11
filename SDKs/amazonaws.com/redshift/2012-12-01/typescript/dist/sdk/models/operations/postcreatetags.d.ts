@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateTagsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateTagsActionEnum {
     CreateTags = "CreateTags"
 }
-export declare enum PostCreateTagsVersionEnum {
+export declare enum POSTCreateTagsVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostCreateTagsQueryParams extends SpeakeasyBase {
-    action: PostCreateTagsActionEnum;
-    version: PostCreateTagsVersionEnum;
-}
-export declare class PostCreateTagsHeaders extends SpeakeasyBase {
+export declare class POSTCreateTagsRequest extends SpeakeasyBase {
+    action: POSTCreateTagsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateTagsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateTagsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateTagsRequest extends SpeakeasyBase {
-    queryParams: PostCreateTagsQueryParams;
-    headers: PostCreateTagsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateTagsResponse extends SpeakeasyBase {
+export declare class POSTCreateTagsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

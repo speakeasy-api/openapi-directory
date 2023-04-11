@@ -3,7 +3,7 @@ import { OriginRequestPolicy } from "./originrequestpolicy";
 import { OriginRequestPolicyTypeEnum } from "./originrequestpolicytypeenum";
 /**
  * Contains an origin request policy.
-**/
+ */
 export declare class OriginRequestPolicySummaryList extends SpeakeasyBase {
     originRequestPolicy: OriginRequestPolicy;
     type: OriginRequestPolicyTypeEnum;

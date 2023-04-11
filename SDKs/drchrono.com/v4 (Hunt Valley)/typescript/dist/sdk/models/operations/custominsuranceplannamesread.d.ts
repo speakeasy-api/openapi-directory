@@ -1,24 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CustomInsurancePlanNamesReadPathParams extends SpeakeasyBase {
-    id: string;
+import { AxiosResponse } from "axios";
+export declare class CustomInsurancePlanNamesReadSecurity extends SpeakeasyBase {
+    drchronoOauth2: string;
 }
-export declare class CustomInsurancePlanNamesReadQueryParams extends SpeakeasyBase {
+export declare class CustomInsurancePlanNamesReadRequest extends SpeakeasyBase {
     doctor?: number;
+    id: string;
     name?: string;
     since?: string;
     user?: number;
 }
-export declare class CustomInsurancePlanNamesReadSecurity extends SpeakeasyBase {
-    drchronoOauth2: shared.SchemeDrchronoOauth2;
-}
-export declare class CustomInsurancePlanNamesReadRequest extends SpeakeasyBase {
-    pathParams: CustomInsurancePlanNamesReadPathParams;
-    queryParams: CustomInsurancePlanNamesReadQueryParams;
-    security: CustomInsurancePlanNamesReadSecurity;
-}
 export declare class CustomInsurancePlanNamesReadResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * OK
+     */
     customInsurancePlanName?: shared.CustomInsurancePlanName;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

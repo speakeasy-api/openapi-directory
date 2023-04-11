@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteBankAccountPathParams extends SpeakeasyBase {
-    applicationId: string;
-    bankAccountId: string;
-    version: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteBankAccountRequest extends SpeakeasyBase {
-    pathParams: DeleteBankAccountPathParams;
+    /**
+     * The unique identifier of the group application in Noyo
+     */
+    applicationId: string;
+    /**
+     * The unique identifier of the bank account in Noyo
+     */
+    bankAccountId: string;
+    /**
+     * The current version identifier of the bank account
+     */
+    version: string;
 }
 export declare class DeleteBankAccountResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

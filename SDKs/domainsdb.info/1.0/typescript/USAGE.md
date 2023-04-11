@@ -1,20 +1,18 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetDomainsTldZoneIdDownloadRequest, GetDomainsTldZoneIdDownloadResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetDomainsTldZoneIdDownloadRequest,
+  GetDomainsTldZoneIdDownloadResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetDomainsTldZoneIdDownloadRequest = {
-  pathParams: {
-    zoneId: "sit",
-  },
-  queryParams: {
-    apiKey: "voluptas",
-    date: "culpa",
-  },
+  apiKey: "corrupti",
+  date: "provident",
+  zoneId: "distinctio",
 };
 
 sdk.domains.getDomainsTldZoneIdDownload(req).then((res: GetDomainsTldZoneIdDownloadResponse | AxiosError) => {

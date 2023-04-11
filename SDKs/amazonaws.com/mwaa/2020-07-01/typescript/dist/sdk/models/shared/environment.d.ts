@@ -1,12 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { EnvironmentStatusEnum } from "./environmentstatusenum";
 import { LastUpdate } from "./lastupdate";
 import { LoggingConfiguration } from "./loggingconfiguration";
 import { NetworkConfiguration } from "./networkconfiguration";
-import { EnvironmentStatusEnum } from "./environmentstatusenum";
 import { WebserverAccessModeEnum } from "./webserveraccessmodeenum";
 /**
- * The Amazon Managed Workflows for Apache Airflow (MWAA) environment.
-**/
+ * Describes an Amazon Managed Workflows for Apache Airflow (MWAA) environment.
+ */
 export declare class Environment extends SpeakeasyBase {
     airflowConfigurationOptions?: Record<string, string>;
     airflowVersion?: string;

@@ -1,10 +1,57 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListResourcesQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
+import { AxiosResponse } from "axios";
+/**
+ * <p>Specifies that you want to list only the resource shares that match the following:</p> <ul> <li> <p> <b> <code>SELF</code> </b> – resources that your account shares with other accounts</p> </li> <li> <p> <b> <code>OTHER-ACCOUNTS</code> </b> – resources that other accounts share with your account</p> </li> </ul>
+ */
+export declare enum ListResourcesRequestBodyResourceOwnerEnum {
+    Self = "SELF",
+    OtherAccounts = "OTHER-ACCOUNTS"
 }
-export declare class ListResourcesHeaders extends SpeakeasyBase {
+/**
+ * <p>Specifies that you want the results to include only resources that have the specified scope.</p> <ul> <li> <p> <code>ALL</code> – the results include both global and regional resources or resource types.</p> </li> <li> <p> <code>GLOBAL</code> – the results include only global resources or resource types.</p> </li> <li> <p> <code>REGIONAL</code> – the results include only regional resources or resource types.</p> </li> </ul> <p>The default value is <code>ALL</code>.</p>
+ */
+export declare enum ListResourcesRequestBodyResourceRegionScopeEnum {
+    All = "ALL",
+    Regional = "REGIONAL",
+    Global = "GLOBAL"
+}
+export declare class ListResourcesRequestBody extends SpeakeasyBase {
+    /**
+     * Specifies the total number of results that you want included on each page of the response. If you do not include this parameter, it defaults to a value that is specific to the operation. If additional items exist beyond the number you specify, the <code>NextToken</code> response element is returned with a value (not null). Include the specified value as the <code>NextToken</code> request parameter in the next call to the operation to get the next part of the results. Note that the service might return fewer results than the maximum even when there are more results available. You should check <code>NextToken</code> after every operation to ensure that you receive all of the results.
+     */
+    maxResults?: number;
+    /**
+     * Specifies that you want to receive the next page of results. Valid only if you received a <code>NextToken</code> response in the previous request. If you did, it indicates that more output is available. Set this parameter to the value provided by the previous call's <code>NextToken</code> response to request the next page of results.
+     */
+    nextToken?: string;
+    /**
+     * Specifies that you want to list only the resource shares that are associated with the specified principal.
+     */
+    principal?: string;
+    /**
+     * Specifies that you want to list only the resource shares that include resources with the specified <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a>.
+     */
+    resourceArns?: string[];
+    /**
+     * <p>Specifies that you want to list only the resource shares that match the following:</p> <ul> <li> <p> <b> <code>SELF</code> </b> – resources that your account shares with other accounts</p> </li> <li> <p> <b> <code>OTHER-ACCOUNTS</code> </b> – resources that other accounts share with your account</p> </li> </ul>
+     */
+    resourceOwner: ListResourcesRequestBodyResourceOwnerEnum;
+    /**
+     * <p>Specifies that you want the results to include only resources that have the specified scope.</p> <ul> <li> <p> <code>ALL</code> – the results include both global and regional resources or resource types.</p> </li> <li> <p> <code>GLOBAL</code> – the results include only global resources or resource types.</p> </li> <li> <p> <code>REGIONAL</code> – the results include only regional resources or resource types.</p> </li> </ul> <p>The default value is <code>ALL</code>.</p>
+     */
+    resourceRegionScope?: ListResourcesRequestBodyResourceRegionScopeEnum;
+    /**
+     * Specifies that you want to list only resources in the resource shares identified by the specified <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a>.
+     */
+    resourceShareArns?: string[];
+    /**
+     * <p>Specifies that you want to list only the resource shares that include resources of the specified resource type.</p> <p>For valid values, query the <a>ListResourceTypes</a> operation.</p>
+     */
+    resourceType?: string;
+}
+export declare class ListResourcesRequest extends SpeakeasyBase {
+    requestBody: ListResourcesRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,34 +59,49 @@ export declare class ListResourcesHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare enum ListResourcesRequestBodyResourceOwnerEnum {
-    Self = "SELF",
-    OtherAccounts = "OTHER-ACCOUNTS"
-}
-export declare class ListResourcesRequestBody extends SpeakeasyBase {
-    maxResults?: number;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    principal?: string;
-    resourceArns?: string[];
-    resourceOwner: ListResourcesRequestBodyResourceOwnerEnum;
-    resourceShareArns?: string[];
-    resourceType?: string;
-}
-export declare class ListResourcesRequest extends SpeakeasyBase {
-    queryParams: ListResourcesQueryParams;
-    headers: ListResourcesHeaders;
-    request: ListResourcesRequestBody;
 }
 export declare class ListResourcesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * InvalidResourceTypeException
+     */
     invalidResourceTypeException?: any;
+    /**
+     * Success
+     */
     listResourcesResponse?: shared.ListResourcesResponse;
+    /**
+     * MalformedArnException
+     */
     malformedArnException?: any;
-    serverInternalException?: any;
-    serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServerInternalException
+     */
+    serverInternalException?: any;
+    /**
+     * ServiceUnavailableException
+     */
+    serviceUnavailableException?: any;
+    /**
+     * UnknownResourceException
+     */
     unknownResourceException?: any;
 }

@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetFailoverGlobalReplicationGroupActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETFailoverGlobalReplicationGroupActionEnum {
     FailoverGlobalReplicationGroup = "FailoverGlobalReplicationGroup"
 }
-export declare enum GetFailoverGlobalReplicationGroupVersionEnum {
+export declare enum GETFailoverGlobalReplicationGroupVersionEnum {
     TwoThousandAndFifteen0202 = "2015-02-02"
 }
-export declare class GetFailoverGlobalReplicationGroupQueryParams extends SpeakeasyBase {
-    action: GetFailoverGlobalReplicationGroupActionEnum;
+export declare class GETFailoverGlobalReplicationGroupRequest extends SpeakeasyBase {
+    action: GETFailoverGlobalReplicationGroupActionEnum;
+    /**
+     * The name of the Global datastore
+     */
     globalReplicationGroupId: string;
+    /**
+     * The Amazon region of the primary cluster of the Global datastore
+     */
     primaryRegion: string;
+    /**
+     * The name of the primary replication group
+     */
     primaryReplicationGroupId: string;
-    version: GetFailoverGlobalReplicationGroupVersionEnum;
-}
-export declare class GetFailoverGlobalReplicationGroupHeaders extends SpeakeasyBase {
+    version: GETFailoverGlobalReplicationGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +29,9 @@ export declare class GetFailoverGlobalReplicationGroupHeaders extends SpeakeasyB
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetFailoverGlobalReplicationGroupRequest extends SpeakeasyBase {
-    queryParams: GetFailoverGlobalReplicationGroupQueryParams;
-    headers: GetFailoverGlobalReplicationGroupHeaders;
-}
-export declare class GetFailoverGlobalReplicationGroupResponse extends SpeakeasyBase {
+export declare class GETFailoverGlobalReplicationGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

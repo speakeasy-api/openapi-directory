@@ -1,0 +1,30 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { Aggregation } from "./aggregation";
+import { PickTimeSeriesFilter } from "./picktimeseriesfilter";
+import { RatioPart } from "./ratiopart";
+import { StatisticalTimeSeriesFilter } from "./statisticaltimeseriesfilter";
+/**
+ * A pair of time series filters that define a ratio computation. The output time series is the pair-wise division of each aligned element from the numerator and denominator time series.
+ */
+export declare class TimeSeriesFilterRatio extends SpeakeasyBase {
+    /**
+     * Describes a query to build the numerator or denominator of a TimeSeriesFilterRatio.
+     */
+    denominator?: RatioPart;
+    /**
+     * Describes a query to build the numerator or denominator of a TimeSeriesFilterRatio.
+     */
+    numerator?: RatioPart;
+    /**
+     * Describes a ranking-based time series filter. Each input time series is ranked with an aligner. The filter will allow up to num_time_series time series to pass through it, selecting them based on the relative ranking.For example, if ranking_method is METHOD_MEAN,direction is BOTTOM, and num_time_series is 3, then the 3 times series with the lowest mean values will pass through the filter.
+     */
+    pickTimeSeriesFilter?: PickTimeSeriesFilter;
+    /**
+     * Describes how to combine multiple time series to provide a different view of the data. Aggregation of time series is done in two steps. First, each time series in the set is aligned to the same time interval boundaries, then the set of time series is optionally reduced in number.Alignment consists of applying the per_series_aligner operation to each time series after its data has been divided into regular alignment_period time intervals. This process takes all of the data points in an alignment period, applies a mathematical transformation such as averaging, minimum, maximum, delta, etc., and converts them into a single data point per period.Reduction is when the aligned and transformed time series can optionally be combined, reducing the number of time series through similar mathematical transformations. Reduction involves applying a cross_series_reducer to all the time series, optionally sorting the time series into subsets with group_by_fields, and applying the reducer to each subset.The raw time series data can contain a huge amount of information from multiple sources. Alignment and reduction transforms this mass of data into a more manageable and representative collection of data, for example "the 95% latency across the average of all tasks in a cluster". This representative data can be more easily graphed and comprehended, and the individual time series data is still available for later drilldown. For more details, see Filtering and aggregation (https://cloud.google.com/monitoring/api/v3/aggregation).
+     */
+    secondaryAggregation?: Aggregation;
+    /**
+     * A filter that ranks streams based on their statistical relation to other streams in a request. Note: This field is deprecated and completely ignored by the API.
+     */
+    statisticalTimeSeriesFilter?: StatisticalTimeSeriesFilter;
+}

@@ -3,7 +3,7 @@ import { EventCategoryEnum } from "./eventcategoryenum";
 import { LookupAttribute } from "./lookupattribute";
 /**
  * Contains a request for LookupEvents.
-**/
+ */
 export declare class LookupEventsRequest extends SpeakeasyBase {
     endTime?: Date;
     eventCategory?: EventCategoryEnum;

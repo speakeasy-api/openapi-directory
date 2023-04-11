@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetContactPolicyXAmzTargetEnum {
-    SsmContactsGetContactPolicy = "SSMContacts.GetContactPolicy"
+    SSMContactsGetContactPolicy = "SSMContacts.GetContactPolicy"
 }
-export declare class GetContactPolicyHeaders extends SpeakeasyBase {
+export declare class GetContactPolicyRequest extends SpeakeasyBase {
+    getContactPolicyRequest: shared.GetContactPolicyRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class GetContactPolicyHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetContactPolicyXAmzTargetEnum;
 }
-export declare class GetContactPolicyRequest extends SpeakeasyBase {
-    headers: GetContactPolicyHeaders;
-    request: shared.GetContactPolicyRequest;
-}
 export declare class GetContactPolicyResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getContactPolicyResult?: shared.GetContactPolicyResult;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

@@ -1,3 +1,6 @@
+/**
+ * Indicate the compression type
+ */
 export declare enum CompressionFormatStrategyEnum {
     None = "None",
     Zip = "Zip",

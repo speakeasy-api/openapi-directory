@@ -1,16 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteSetupV1LocationsIdDeleteallimagesPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class DeleteSetupV1LocationsIdDeleteallimagesQueryParams extends SpeakeasyBase {
-    uppercase?: boolean;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteSetupV1LocationsIdDeleteallimagesRequest extends SpeakeasyBase {
-    pathParams: DeleteSetupV1LocationsIdDeleteallimagesPathParams;
-    queryParams: DeleteSetupV1LocationsIdDeleteallimagesQueryParams;
+    id: string;
+    uppercase?: boolean;
 }
 export declare class DeleteSetupV1LocationsIdDeleteallimagesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     deleteSetupV1LocationsIdDeleteallimages200ApplicationJSONBoolean?: boolean;
 }

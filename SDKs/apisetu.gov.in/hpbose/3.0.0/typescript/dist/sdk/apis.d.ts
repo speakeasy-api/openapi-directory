@@ -1,6 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class ApIs {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+export declare class APIs {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,15 +9,17 @@ export declare class ApIs {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * hvcer - Class XII Provisional Certificate
+     * Class XII Provisional Certificate
      *
+     * @remarks
      * API to verify Class XII Provisional Certificate.
-    **/
-    hvcer(req: operations.HvcerRequest, config?: AxiosRequestConfig): Promise<operations.HvcerResponse>;
+     */
+    hvcer(req: operations.HvcerRequestBody, security: operations.HvcerSecurity, config?: AxiosRequestConfig): Promise<operations.HvcerResponse>;
     /**
-     * svcer - Class X Provisional Certificate
+     * Class X Provisional Certificate
      *
+     * @remarks
      * API to verify Class X Provisional Certificate.
-    **/
-    svcer(req: operations.SvcerRequest, config?: AxiosRequestConfig): Promise<operations.SvcerResponse>;
+     */
+    svcer(req: operations.SvcerRequestBody, security: operations.SvcerSecurity, config?: AxiosRequestConfig): Promise<operations.SvcerResponse>;
 }

@@ -1,0 +1,21 @@
+/**
+ * option specifying a group of fares, which may be valid under certain conditons
+ *
+ * @remarks
+ * Can be used to specify special fare discount for a passenger
+ *
+ */
+export declare enum TravelerPricingFareOptionEnum {
+    Standard = "STANDARD",
+    InclusiveTour = "INCLUSIVE_TOUR",
+    SpanishMelillaResident = "SPANISH_MELILLA_RESIDENT",
+    SpanishCeutaResident = "SPANISH_CEUTA_RESIDENT",
+    SpanishCanaryResident = "SPANISH_CANARY_RESIDENT",
+    SpanishBalearicResident = "SPANISH_BALEARIC_RESIDENT",
+    AirFranceMetropolitanDiscountPass = "AIR_FRANCE_METROPOLITAN_DISCOUNT_PASS",
+    AirFranceDomDiscountPass = "AIR_FRANCE_DOM_DISCOUNT_PASS",
+    AirFranceCombinedDiscountPass = "AIR_FRANCE_COMBINED_DISCOUNT_PASS",
+    AirFranceFamily = "AIR_FRANCE_FAMILY",
+    AdultWithCompanion = "ADULT_WITH_COMPANION",
+    Companion = "COMPANION"
+}

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteDirectConnectGatewayAssociationXAmzTargetEnum {
     OvertureServiceDeleteDirectConnectGatewayAssociation = "OvertureService.DeleteDirectConnectGatewayAssociation"
 }
-export declare class DeleteDirectConnectGatewayAssociationHeaders extends SpeakeasyBase {
+export declare class DeleteDirectConnectGatewayAssociationRequest extends SpeakeasyBase {
+    deleteDirectConnectGatewayAssociationRequest: shared.DeleteDirectConnectGatewayAssociationRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class DeleteDirectConnectGatewayAssociationHeaders extends Speake
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteDirectConnectGatewayAssociationXAmzTargetEnum;
 }
-export declare class DeleteDirectConnectGatewayAssociationRequest extends SpeakeasyBase {
-    headers: DeleteDirectConnectGatewayAssociationHeaders;
-    request: shared.DeleteDirectConnectGatewayAssociationRequest;
-}
 export declare class DeleteDirectConnectGatewayAssociationResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deleteDirectConnectGatewayAssociationResult?: shared.DeleteDirectConnectGatewayAssociationResult;
+    /**
+     * DirectConnectClientException
+     */
     directConnectClientException?: any;
+    /**
+     * DirectConnectServerException
+     */
     directConnectServerException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

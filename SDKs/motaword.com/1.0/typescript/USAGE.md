@@ -1,21 +1,20 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DeleteCacheRequest, DeleteCacheResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  DeleteCacheRequest,
+  DeleteCacheResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    mwoAuth: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  }
-));
-    
-const req: DeleteCacheRequest = {
-  pathParams: {
-    key: "sit",
+    mwoAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
   },
+});
+
+const req: DeleteCacheRequest = {
+  key: "corrupti",
 };
 
 sdk.deleteCache(req).then((res: DeleteCacheResponse | AxiosError) => {

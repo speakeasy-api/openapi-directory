@@ -1,13 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetReturnsQueryParams extends SpeakeasyBase {
-    fromDate: string;
-    limit?: number;
-    page?: number;
-    toDate: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetReturnsSecurity extends SpeakeasyBase {
-    fdcAuth: shared.SchemeFdcAuth;
+    fdcAuth: string;
+}
+export declare class GetReturnsRequest extends SpeakeasyBase {
+    /**
+     * Date-time in ISO 8601 format for selecting orders after, or at, the specified time
+     */
+    fromDate: string;
+    /**
+     * The numbers of items to return
+     */
+    limit?: number;
+    /**
+     * A multiplier of the number of items (limit parameter) to skip before returning results
+     */
+    page?: number;
+    /**
+     * Date-time in ISO 8601 format for selecting orders before, or at, the specified time
+     */
+    toDate: string;
 }
 export declare class GetReturnsReturnsArrayV2ReturnV2Order extends SpeakeasyBase {
     id?: number;
@@ -58,24 +71,39 @@ export declare class GetReturnsReturnsArrayV2ReturnV2 extends SpeakeasyBase {
     updatedBy: GetReturnsReturnsArrayV2ReturnV2UserV2;
 }
 export declare class GetReturnsReturnsArrayV2MetaPaginationV2 extends SpeakeasyBase {
+    /**
+     * Count of records returned in response, this will be equal to or less then the limit parameter
+     */
     count?: number;
+    /**
+     * Current page of the response, this will match the page parameter
+     */
     currentPage?: number;
+    /**
+     * Total number of records available to request
+     */
     total?: number;
+    /**
+     * Total number of pages available to request
+     */
     totalPages?: number;
 }
 export declare class GetReturnsReturnsArrayV2Meta extends SpeakeasyBase {
     pagination?: GetReturnsReturnsArrayV2MetaPaginationV2;
 }
+/**
+ * Returns
+ */
 export declare class GetReturnsReturnsArrayV2 extends SpeakeasyBase {
     data?: GetReturnsReturnsArrayV2ReturnV2[];
     meta?: GetReturnsReturnsArrayV2Meta;
 }
-export declare class GetReturnsRequest extends SpeakeasyBase {
-    queryParams: GetReturnsQueryParams;
-    security: GetReturnsSecurity;
-}
 export declare class GetReturnsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Returns
+     */
     returnsArrayV2?: GetReturnsReturnsArrayV2;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

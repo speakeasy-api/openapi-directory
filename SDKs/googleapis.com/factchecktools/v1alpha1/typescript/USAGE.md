@@ -1,33 +1,37 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { FactchecktoolsClaimsSearchRequest, FactchecktoolsClaimsSearchResponse } from "openapi/src/sdk/models/operations";
+import {
+  FactchecktoolsClaimsSearchRequest,
+  FactchecktoolsClaimsSearchResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: FactchecktoolsClaimsSearchRequest = {
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "voluptas",
-    alt: "media",
-    callback: "expedita",
-    fields: "consequuntur",
-    key: "dolor",
-    languageCode: "expedita",
-    maxAgeDays: 6044372234677422456,
-    oauthToken: "fugit",
-    offset: 1543572285742637646,
-    pageSize: 2661732831099943416,
-    pageToken: "rerum",
-    prettyPrint: false,
-    query: "debitis",
-    quotaUser: "voluptatum",
-    reviewPublisherSiteFilter: "et",
-    uploadType: "ut",
-    uploadProtocol: "dolorem",
-  },
+  dollarXgafv: XgafvEnum.Two,
+  accessToken: "provident",
+  alt: AltEnum.Proto,
+  callback: "quibusdam",
+  fields: "unde",
+  key: "nulla",
+  languageCode: "corrupti",
+  maxAgeDays: 847252,
+  oauthToken: "vel",
+  offset: 623564,
+  pageSize: 645894,
+  pageToken: "suscipit",
+  prettyPrint: false,
+  query: "iure",
+  quotaUser: "magnam",
+  reviewPublisherSiteFilter: "debitis",
+  uploadType: "ipsa",
+  uploadProtocol: "delectus",
 };
 
 sdk.claims.factchecktoolsClaimsSearch(req).then((res: FactchecktoolsClaimsSearchResponse | AxiosError) => {

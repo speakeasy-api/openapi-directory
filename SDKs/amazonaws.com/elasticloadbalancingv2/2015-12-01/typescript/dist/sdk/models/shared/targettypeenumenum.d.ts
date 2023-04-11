@@ -1,5 +1,6 @@
 export declare enum TargetTypeEnumEnum {
     Instance = "instance",
     Ip = "ip",
-    Lambda = "lambda"
+    Lambda = "lambda",
+    Alb = "alb"
 }

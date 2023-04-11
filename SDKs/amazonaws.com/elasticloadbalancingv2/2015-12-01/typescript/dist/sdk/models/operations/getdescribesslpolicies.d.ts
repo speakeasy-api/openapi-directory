@@ -1,18 +1,38 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeSslPoliciesActionEnum {
-    DescribeSslPolicies = "DescribeSSLPolicies"
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeSSLPoliciesActionEnum {
+    DescribeSSLPolicies = "DescribeSSLPolicies"
 }
-export declare enum GetDescribeSslPoliciesVersionEnum {
+/**
+ *  The type of load balancer. The default lists the SSL policies for all load balancers.
+ */
+export declare enum GETDescribeSSLPoliciesLoadBalancerTypeEnum {
+    Application = "application",
+    Network = "network",
+    Gateway = "gateway"
+}
+export declare enum GETDescribeSSLPoliciesVersionEnum {
     TwoThousandAndFifteen1201 = "2015-12-01"
 }
-export declare class GetDescribeSslPoliciesQueryParams extends SpeakeasyBase {
-    action: GetDescribeSslPoliciesActionEnum;
+export declare class GETDescribeSSLPoliciesRequest extends SpeakeasyBase {
+    action: GETDescribeSSLPoliciesActionEnum;
+    /**
+     *  The type of load balancer. The default lists the SSL policies for all load balancers.
+     */
+    loadBalancerType?: GETDescribeSSLPoliciesLoadBalancerTypeEnum;
+    /**
+     * The marker for the next set of results. (You received this marker from a previous call.)
+     */
     marker?: string;
+    /**
+     * The names of the policies.
+     */
     names?: string[];
+    /**
+     * The maximum number of results to return with this call.
+     */
     pageSize?: number;
-    version: GetDescribeSslPoliciesVersionEnum;
-}
-export declare class GetDescribeSslPoliciesHeaders extends SpeakeasyBase {
+    version: GETDescribeSSLPoliciesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +41,9 @@ export declare class GetDescribeSslPoliciesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeSslPoliciesRequest extends SpeakeasyBase {
-    queryParams: GetDescribeSslPoliciesQueryParams;
-    headers: GetDescribeSslPoliciesHeaders;
-}
-export declare class GetDescribeSslPoliciesResponse extends SpeakeasyBase {
+export declare class GETDescribeSSLPoliciesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

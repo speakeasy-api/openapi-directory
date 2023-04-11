@@ -1,19 +1,33 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetStoreSharesPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetStoreSharesRequest extends SpeakeasyBase {
+    /**
+     * ETag value to identify the last known version of requested resource.\
+     *
+     * @remarks
+     * To avoid useless exchange, we recommend you to indicate the ETag you previously got from this operation.\
+     * If the ETag value does not match the response will be 200 to give you a new content, otherwise the response will be: 304 Not Modified, without any content.\
+     * For more details go to this link: http://tools.ietf.org/html/rfc7232#section-2.3
+     *
+     */
+    ifNoneMatch?: string;
+    /**
+     * Your store identifier
+     */
     storeId: string;
 }
-export declare class GetStoreSharesHeaders extends SpeakeasyBase {
-    ifNoneMatch?: string;
-}
-export declare class GetStoreSharesRequest extends SpeakeasyBase {
-    pathParams: GetStoreSharesPathParams;
-    headers: GetStoreSharesHeaders;
-}
 export declare class GetStoreSharesResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     * Store not found or customer not the owner
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The sharing list of the store
+     */
     storeShares?: shared.StoreShares;
 }

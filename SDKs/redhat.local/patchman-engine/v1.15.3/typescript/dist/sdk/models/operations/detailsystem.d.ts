@@ -1,17 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DetailSystemPathParams extends SpeakeasyBase {
-    inventoryId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DetailSystemSecurity extends SpeakeasyBase {
-    rhIdentity: shared.SchemeRhIdentity;
+    rhIdentity: string;
 }
 export declare class DetailSystemRequest extends SpeakeasyBase {
-    pathParams: DetailSystemPathParams;
-    security: DetailSystemSecurity;
+    /**
+     * Inventory ID
+     */
+    inventoryId: string;
 }
 export declare class DetailSystemResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
     controllersSystemDetailResponse?: shared.ControllersSystemDetailResponse;
 }

@@ -7,7 +7,9 @@ export declare class DocumentLinks extends SpeakeasyBase {
     previewBox?: Href;
     previewPdf?: Href;
     previewPdfViewer?: Href;
+    progress?: Href;
     project?: Href;
     self?: Href;
+    strings?: Href;
     thumbnail?: Href;
 }

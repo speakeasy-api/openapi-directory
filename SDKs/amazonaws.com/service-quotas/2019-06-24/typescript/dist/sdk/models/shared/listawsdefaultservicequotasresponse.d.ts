@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ServiceQuota } from "./servicequota";
-export declare class ListAwsDefaultServiceQuotasResponse extends SpeakeasyBase {
+/**
+ * Success
+ */
+export declare class ListAWSDefaultServiceQuotasResponse extends SpeakeasyBase {
     nextToken?: string;
     quotas?: ServiceQuota[];
 }

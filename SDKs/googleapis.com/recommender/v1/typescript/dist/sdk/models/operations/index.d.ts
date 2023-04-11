@@ -3,6 +3,7 @@ export * from "./recommenderprojectslocationsinsighttypesinsightsmarkaccepted";
 export * from "./recommenderprojectslocationsrecommendersrecommendationsget";
 export * from "./recommenderprojectslocationsrecommendersrecommendationslist";
 export * from "./recommenderprojectslocationsrecommendersrecommendationsmarkclaimed";
+export * from "./recommenderprojectslocationsrecommendersrecommendationsmarkdismissed";
 export * from "./recommenderprojectslocationsrecommendersrecommendationsmarkfailed";
 export * from "./recommenderprojectslocationsrecommendersrecommendationsmarksucceeded";
 export * from "./recommenderprojectslocationsrecommendersupdateconfig";

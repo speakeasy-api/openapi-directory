@@ -1,49 +1,44 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRequest, DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRequest,
+  DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    documentId: "dolor",
-    fields: "expedita",
-    key: "voluptas",
-    oauthToken: "fugit",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    uploadType: "rerum",
-    uploadProtocol: "dicta",
-  },
-  request: {
-    id: "debitis",
-    jsonData: "voluptatum",
-    name: "et",
-    parentDocumentId: "ut",
-    schemaId: "dolorem",
+  dollarXgafv: XgafvEnum.Two,
+  googleCloudDiscoveryengineV1alphaDocument: {
+    id: "provident",
+    jsonData: "distinctio",
+    name: "quibusdam",
+    parentDocumentId: "unde",
+    schemaId: "nulla",
     structData: {
-      "voluptate": "iste",
-      "vitae": "totam",
+      "illum": "vel",
+      "error": "deserunt",
+      "suscipit": "iure",
     },
   },
+  accessToken: "magnam",
+  alt: AltEnum.Proto,
+  callback: "ipsa",
+  documentId: "delectus",
+  fields: "tempora",
+  key: "suscipit",
+  oauthToken: "molestiae",
+  parent: "minus",
+  prettyPrint: false,
+  quotaUser: "placeat",
+  uploadType: "voluptatum",
+  uploadProtocol: "iusto",
 };
 
 sdk.projects.discoveryengineProjectsLocationsDataStoresBranchesDocumentsCreate(req).then((res: DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateResponse | AxiosError) => {

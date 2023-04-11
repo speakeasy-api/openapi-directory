@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeVpcEndpointServicePermissionsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeVpcEndpointServicePermissionsActionEnum {
     DescribeVpcEndpointServicePermissions = "DescribeVpcEndpointServicePermissions"
 }
-export declare enum PostDescribeVpcEndpointServicePermissionsVersionEnum {
+export declare enum POSTDescribeVpcEndpointServicePermissionsVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDescribeVpcEndpointServicePermissionsQueryParams extends SpeakeasyBase {
-    action: PostDescribeVpcEndpointServicePermissionsActionEnum;
+export declare class POSTDescribeVpcEndpointServicePermissionsRequest extends SpeakeasyBase {
+    action: POSTDescribeVpcEndpointServicePermissionsActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostDescribeVpcEndpointServicePermissionsVersionEnum;
-}
-export declare class PostDescribeVpcEndpointServicePermissionsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeVpcEndpointServicePermissionsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeVpcEndpointServicePermissionsHeaders extends Sp
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeVpcEndpointServicePermissionsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeVpcEndpointServicePermissionsQueryParams;
-    headers: PostDescribeVpcEndpointServicePermissionsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeVpcEndpointServicePermissionsResponse extends SpeakeasyBase {
+export declare class POSTDescribeVpcEndpointServicePermissionsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

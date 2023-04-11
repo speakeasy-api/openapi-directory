@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { SlotSummary } from "./slotsummary";
+/**
+ * Success
+ */
 export declare class ListSlotsResponse extends SpeakeasyBase {
     botId?: string;
     botVersion?: string;

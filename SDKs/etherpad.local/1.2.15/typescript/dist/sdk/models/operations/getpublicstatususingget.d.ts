@@ -1,38 +1,61 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetPublicStatusUsingGetQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETPublicStatusUsingGETRequest extends SpeakeasyBase {
     padID?: string;
 }
-export declare class GetPublicStatusUsingGet200ApplicationJsonData extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class GETPublicStatusUsingGet500ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class GETPublicStatusUsingGet401ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+/**
+ * generic api error (code 1)
+ */
+export declare class GETPublicStatusUsingGet400ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+export declare class GETPublicStatusUsingGet200ApplicationJSONData extends SpeakeasyBase {
     publicStatus?: boolean;
 }
-export declare class GetPublicStatusUsingGet200ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class GETPublicStatusUsingGet200ApplicationJSON extends SpeakeasyBase {
     code?: number;
-    data?: GetPublicStatusUsingGet200ApplicationJsonData;
+    data?: GETPublicStatusUsingGet200ApplicationJSONData;
     message?: string;
 }
-export declare class GetPublicStatusUsingGet400ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class GetPublicStatusUsingGet401ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class GetPublicStatusUsingGet500ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class GetPublicStatusUsingGetRequest extends SpeakeasyBase {
-    queryParams: GetPublicStatusUsingGetQueryParams;
-}
-export declare class GetPublicStatusUsingGetResponse extends SpeakeasyBase {
+export declare class GETPublicStatusUsingGETResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getPublicStatusUsingGET200ApplicationJSONObject?: GetPublicStatusUsingGet200ApplicationJson;
-    getPublicStatusUsingGET400ApplicationJSONObject?: GetPublicStatusUsingGet400ApplicationJson;
-    getPublicStatusUsingGET401ApplicationJSONObject?: GetPublicStatusUsingGet401ApplicationJson;
-    getPublicStatusUsingGET500ApplicationJSONObject?: GetPublicStatusUsingGet500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    getPublicStatusUsingGET200ApplicationJSONObject?: GETPublicStatusUsingGet200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    getPublicStatusUsingGET400ApplicationJSONObject?: GETPublicStatusUsingGet400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    getPublicStatusUsingGET401ApplicationJSONObject?: GETPublicStatusUsingGet401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    getPublicStatusUsingGET500ApplicationJSONObject?: GETPublicStatusUsingGet500ApplicationJSON;
 }

@@ -1,0 +1,12 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * user parameters
+ */
+export declare class UserOptions extends SpeakeasyBase {
+    clientAdmin?: boolean;
+    email?: string;
+    firstName?: string;
+    lastName?: string;
+    orgDefaultRole?: string;
+    orgRoles?: Record<string, any>;
+}

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum PutOrganizationConfigRuleXAmzTargetEnum {
     StarlingDoveServicePutOrganizationConfigRule = "StarlingDoveService.PutOrganizationConfigRule"
 }
-export declare class PutOrganizationConfigRuleHeaders extends SpeakeasyBase {
+export declare class PutOrganizationConfigRuleRequest extends SpeakeasyBase {
+    putOrganizationConfigRuleRequest: shared.PutOrganizationConfigRuleRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,20 +15,44 @@ export declare class PutOrganizationConfigRuleHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: PutOrganizationConfigRuleXAmzTargetEnum;
 }
-export declare class PutOrganizationConfigRuleRequest extends SpeakeasyBase {
-    headers: PutOrganizationConfigRuleHeaders;
-    request: shared.PutOrganizationConfigRuleRequest;
-}
 export declare class PutOrganizationConfigRuleResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InsufficientPermissionsException
+     */
     insufficientPermissionsException?: any;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
+    /**
+     * MaxNumberOfOrganizationConfigRulesExceededException
+     */
     maxNumberOfOrganizationConfigRulesExceededException?: any;
+    /**
+     * NoAvailableOrganizationException
+     */
     noAvailableOrganizationException?: any;
+    /**
+     * OrganizationAccessDeniedException
+     */
     organizationAccessDeniedException?: any;
+    /**
+     * OrganizationAllFeaturesNotEnabledException
+     */
     organizationAllFeaturesNotEnabledException?: any;
+    /**
+     * Success
+     */
     putOrganizationConfigRuleResponse?: shared.PutOrganizationConfigRuleResponse;
-    resourceInUseException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceInUseException
+     */
+    resourceInUseException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

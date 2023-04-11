@@ -1,25 +1,25 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AnalyticsRequest, AnalyticsResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  AnalyticsRequest,
+  AnalyticsResponse,
+  AnalyticsGroupByEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    apiKeyAuth: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: AnalyticsRequest = {
-  queryParams: {
-    end: "sit",
-    groupBy: "subaccount",
-    label: "culpa",
-    start: "expedita",
-    subaccounts: "consequuntur",
+    apiKeyAuth: "YOUR_API_KEY_HERE",
   },
+});
+
+const req: AnalyticsRequest = {
+  end: "corrupti",
+  groupBy: AnalyticsGroupByEnum.Subaccount,
+  label: "distinctio",
+  start: "quibusdam",
+  subaccounts: "unde",
 };
 
 sdk.analytics.analytics(req).then((res: AnalyticsResponse | AxiosError) => {

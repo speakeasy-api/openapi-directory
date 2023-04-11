@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class OAuth2PermissionGrantList {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +9,7 @@ export declare class OAuth2PermissionGrantList {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * oAuth2PermissionGrantList - Queries OAuth2 permissions grants for the relevant SP ObjectId of an app.
-    **/
+     * Queries OAuth2 permissions grants for the relevant SP ObjectId of an app.
+     */
     oAuth2PermissionGrantList(req: operations.OAuth2PermissionGrantListRequest, config?: AxiosRequestConfig): Promise<operations.OAuth2PermissionGrantListResponse>;
 }

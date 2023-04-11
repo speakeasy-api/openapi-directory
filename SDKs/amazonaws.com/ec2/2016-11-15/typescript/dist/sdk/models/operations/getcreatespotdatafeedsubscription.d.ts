@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetCreateSpotDatafeedSubscriptionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETCreateSpotDatafeedSubscriptionActionEnum {
     CreateSpotDatafeedSubscription = "CreateSpotDatafeedSubscription"
 }
-export declare enum GetCreateSpotDatafeedSubscriptionVersionEnum {
+export declare enum GETCreateSpotDatafeedSubscriptionVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetCreateSpotDatafeedSubscriptionQueryParams extends SpeakeasyBase {
-    action: GetCreateSpotDatafeedSubscriptionActionEnum;
+export declare class GETCreateSpotDatafeedSubscriptionRequest extends SpeakeasyBase {
+    action: GETCreateSpotDatafeedSubscriptionActionEnum;
+    /**
+     * The name of the Amazon S3 bucket in which to store the Spot Instance data feed. For more information about bucket names, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html#bucketnamingrules">Rules for bucket naming</a> in the <i>Amazon S3 Developer Guide</i>.
+     */
     bucket: string;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
+    /**
+     * The prefix for the data feed file names.
+     */
     prefix?: string;
-    version: GetCreateSpotDatafeedSubscriptionVersionEnum;
-}
-export declare class GetCreateSpotDatafeedSubscriptionHeaders extends SpeakeasyBase {
+    version: GETCreateSpotDatafeedSubscriptionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +29,9 @@ export declare class GetCreateSpotDatafeedSubscriptionHeaders extends SpeakeasyB
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetCreateSpotDatafeedSubscriptionRequest extends SpeakeasyBase {
-    queryParams: GetCreateSpotDatafeedSubscriptionQueryParams;
-    headers: GetCreateSpotDatafeedSubscriptionHeaders;
-}
-export declare class GetCreateSpotDatafeedSubscriptionResponse extends SpeakeasyBase {
+export declare class GETCreateSpotDatafeedSubscriptionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

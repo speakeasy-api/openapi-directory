@@ -1,12 +1,11 @@
-import { AxiosInstance } from "axios";
 import { AbuseReports } from "./abusereports";
 import { Activities } from "./activities";
 import { Captions } from "./captions";
 import { ChannelBanners } from "./channelbanners";
-import { ChannelSections } from "./channelsections";
 import { Channels } from "./channels";
-import { CommentThreads } from "./commentthreads";
+import { ChannelSections } from "./channelsections";
 import { Comments } from "./comments";
+import { CommentThreads } from "./commentthreads";
 import { I18nLanguages } from "./i18nlanguages";
 import { I18nRegions } from "./i18nregions";
 import { LiveBroadcasts } from "./livebroadcasts";
@@ -29,11 +28,29 @@ import { VideoCategories } from "./videocategories";
 import { Videos } from "./videos";
 import { Watermarks } from "./watermarks";
 import { Youtube } from "./youtube";
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://youtube.googleapis.com/"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * The YouTube Data API v3 is an API that provides access to YouTube data, such as videos, playlists, and channels.
+ *
+ * @see {@link https://developers.google.com/youtube/}
+ */
 export declare class SDK {
     abuseReports: AbuseReports;
     activities: Activities;
@@ -71,5 +88,6 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
 }

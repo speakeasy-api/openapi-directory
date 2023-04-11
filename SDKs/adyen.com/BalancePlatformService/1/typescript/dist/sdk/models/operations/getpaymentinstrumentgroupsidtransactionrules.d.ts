@@ -1,19 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetPaymentInstrumentGroupsIdTransactionRulesPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetPaymentInstrumentGroupsIdTransactionRulesSecurity extends SpeakeasyBase {
+    apiKeyAuth?: string;
     basicAuth?: shared.SchemeBasicAuth;
-    apiKeyAuth?: shared.SchemeApiKeyAuth;
 }
 export declare class GetPaymentInstrumentGroupsIdTransactionRulesRequest extends SpeakeasyBase {
-    pathParams: GetPaymentInstrumentGroupsIdTransactionRulesPathParams;
-    security: GetPaymentInstrumentGroupsIdTransactionRulesSecurity;
+    /**
+     * The unique identifier of the payment instrument group.
+     */
+    id: string;
 }
 export declare class GetPaymentInstrumentGroupsIdTransactionRulesResponse extends SpeakeasyBase {
     contentType: string;
-    restServiceError?: any;
     statusCode: number;
-    transactionRulesResponse?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad Request - a problem reading or understanding the request.
+     */
+    restServiceError?: shared.RestServiceError;
+    /**
+     * OK - the request has succeeded.
+     */
+    transactionRulesResponse?: shared.TransactionRulesResponse;
 }

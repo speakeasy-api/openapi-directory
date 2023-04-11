@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class QueryDbQueryParams extends SpeakeasyBase {
-    query: string;
-}
+import { AxiosResponse } from "axios";
 export declare class QueryDbRequest extends SpeakeasyBase {
-    queryParams: QueryDbQueryParams;
+    /**
+     * Query (contact name, dns, domain etc)
+     */
+    query: string;
 }
 export declare class QueryDbResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
     queryDb200ApplicationJSONObject?: Record<string, any>;
 }

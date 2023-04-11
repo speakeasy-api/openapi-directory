@@ -1,0 +1,32 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { PlayerHole } from "./playerhole";
+export declare class PlayerRound extends SpeakeasyBase {
+    backNineStart?: boolean;
+    birdies?: number;
+    bogeyFree?: boolean;
+    bogeys?: number;
+    bounceBackCount?: number;
+    consecutiveBirdieOrBetterCount?: number;
+    day?: string;
+    doubleBogeys?: number;
+    doubleEagles?: number;
+    eagles?: number;
+    holeInOnes?: number;
+    holes?: PlayerHole[];
+    includesFiveOrMoreBirdiesOrBetter?: boolean;
+    includesStreakOfFiveBirdiesOrBetter?: boolean;
+    includesStreakOfFourBirdiesOrBetter?: boolean;
+    includesStreakOfSixBirdiesOrBetter?: boolean;
+    includesStreakOfThreeBirdiesOrBetter?: boolean;
+    longestBirdieOrBetterStreak?: number;
+    number?: number;
+    par?: number;
+    pars?: number;
+    playerRoundID?: number;
+    playerTournamentID?: number;
+    score?: number;
+    teeTime?: string;
+    tripleBogeys?: number;
+    worseThanDoubleBogey?: number;
+    worseThanTripleBogey?: number;
+}

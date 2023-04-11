@@ -1,3 +1,6 @@
+/**
+ * The Publication Type
+ */
 export declare enum PublicationTypeEnum {
     PublishProducts = "PublishProducts",
     PublishOffers = "PublishOffers",

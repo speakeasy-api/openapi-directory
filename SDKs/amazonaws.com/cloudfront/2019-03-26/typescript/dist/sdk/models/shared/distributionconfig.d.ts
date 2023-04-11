@@ -12,7 +12,7 @@ import { Restrictions } from "./restrictions";
 import { ViewerCertificate } from "./viewercertificate";
 /**
  * A distribution configuration.
-**/
+ */
 export declare class DistributionConfig extends SpeakeasyBase {
     aliases?: Aliases;
     cacheBehaviors?: CacheBehaviors;

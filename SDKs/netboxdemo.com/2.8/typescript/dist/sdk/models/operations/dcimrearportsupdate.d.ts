@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DcimRearPortsUpdatePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DcimRearPortsUpdateRequest extends SpeakeasyBase {
-    pathParams: DcimRearPortsUpdatePathParams;
-    request: shared.WritableRearPortInput;
+    writableRearPortInput: shared.WritableRearPortInput;
+    /**
+     * A unique integer value identifying this rear port.
+     */
+    id: number;
 }
 export declare class DcimRearPortsUpdateResponse extends SpeakeasyBase {
     contentType: string;
     rearPort?: shared.RearPort;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

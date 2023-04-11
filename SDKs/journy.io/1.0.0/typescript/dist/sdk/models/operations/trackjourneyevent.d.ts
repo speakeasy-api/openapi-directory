@@ -1,127 +1,180 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
 /**
  * Account identification requires an accountId, domain or both
-**/
+ */
 export declare class TrackJourneyEventRequestBodyIdentificationAccount extends SpeakeasyBase {
+    /**
+     * Unique identifier for the account in your database
+     */
     accountId?: string;
+    /**
+     * The domain associated with the account (e.g. acme-inc.com)
+     */
     domain?: string;
 }
 /**
  * User identification requires a userId, email or both
-**/
+ */
 export declare class TrackJourneyEventRequestBodyIdentificationUser extends SpeakeasyBase {
+    /**
+     * Email address of the user
+     */
     email?: string;
+    /**
+     * Unique identifier for the user in your database
+     */
     userId?: string;
 }
 /**
  * Event identification requires a user, account or both
-**/
+ */
 export declare class TrackJourneyEventRequestBodyIdentification extends SpeakeasyBase {
+    /**
+     * Account identification requires an accountId, domain or both
+     */
     account?: TrackJourneyEventRequestBodyIdentificationAccount;
+    /**
+     * User identification requires a userId, email or both
+     */
     user?: TrackJourneyEventRequestBodyIdentificationUser;
 }
 /**
  * Event for a user or an account
-**/
+ */
 export declare class TrackJourneyEventRequestBody extends SpeakeasyBase {
+    /**
+     * Event identification requires a user, account or both
+     */
     identification: TrackJourneyEventRequestBodyIdentification;
+    /**
+     * Event metadata, possible values are strings, booleans, numbers and datetimes (ISO 8601)
+     */
     metadata?: Record<string, any>;
     name: string;
+    /**
+     * If left blank this defaults to the current datetime
+     */
     triggeredAt?: string;
 }
-export declare class TrackJourneyEvent201ApplicationJsonMeta extends SpeakeasyBase {
+export declare class TrackJourneyEvent500ApplicationJSONMeta extends SpeakeasyBase {
     requestId: string;
     status: number;
 }
 /**
- * The object was created
-**/
-export declare class TrackJourneyEvent201ApplicationJson extends SpeakeasyBase {
+ * The message specifies what is done
+ */
+export declare class TrackJourneyEvent500ApplicationJSON extends SpeakeasyBase {
     message: string;
-    meta: TrackJourneyEvent201ApplicationJsonMeta;
+    meta: TrackJourneyEvent500ApplicationJSONMeta;
+}
+export declare class TrackJourneyEvent429ApplicationJSONMeta extends SpeakeasyBase {
+    requestId: string;
+    status: number;
+}
+/**
+ * The message specifies what is done
+ */
+export declare class TrackJourneyEvent429ApplicationJSON extends SpeakeasyBase {
+    message: string;
+    meta: TrackJourneyEvent429ApplicationJSONMeta;
+}
+export declare class TrackJourneyEvent403ApplicationJSONMeta extends SpeakeasyBase {
+    requestId: string;
+    status: number;
+}
+/**
+ * The message specifies what is done
+ */
+export declare class TrackJourneyEvent403ApplicationJSON extends SpeakeasyBase {
+    message: string;
+    meta: TrackJourneyEvent403ApplicationJSONMeta;
+}
+export declare class TrackJourneyEvent401ApplicationJSONMeta extends SpeakeasyBase {
+    requestId: string;
+    status: number;
+}
+/**
+ * The message specifies what is done
+ */
+export declare class TrackJourneyEvent401ApplicationJSON extends SpeakeasyBase {
+    message: string;
+    meta: TrackJourneyEvent401ApplicationJSONMeta;
 }
 /**
  * All query-, header- and path- parameters that seemed incorrect
-**/
-export declare class TrackJourneyEvent400ApplicationJsonErrorsParameters extends SpeakeasyBase {
+ */
+export declare class TrackJourneyEvent400ApplicationJSONErrorsParameters extends SpeakeasyBase {
     header?: Record<string, string>;
     path?: Record<string, string>;
     query?: Record<string, string>;
 }
 /**
  * Map that sums up all received values that seemed incorrect
-**/
-export declare class TrackJourneyEvent400ApplicationJsonErrors extends SpeakeasyBase {
+ */
+export declare class TrackJourneyEvent400ApplicationJSONErrors extends SpeakeasyBase {
+    /**
+     * All input fields that seemed incorrect
+     */
     fields?: Record<string, string>;
-    parameters?: TrackJourneyEvent400ApplicationJsonErrorsParameters;
+    /**
+     * All query-, header- and path- parameters that seemed incorrect
+     */
+    parameters?: TrackJourneyEvent400ApplicationJSONErrorsParameters;
 }
-export declare class TrackJourneyEvent400ApplicationJsonMeta extends SpeakeasyBase {
+export declare class TrackJourneyEvent400ApplicationJSONMeta extends SpeakeasyBase {
     requestId: string;
     status: number;
 }
 /**
- * Specify the fields and/ or parameters that had errors
-**/
-export declare class TrackJourneyEvent400ApplicationJson extends SpeakeasyBase {
-    errors: TrackJourneyEvent400ApplicationJsonErrors;
+ * The message specifies what is done
+ */
+export declare class TrackJourneyEvent400ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Map that sums up all received values that seemed incorrect
+     */
+    errors: TrackJourneyEvent400ApplicationJSONErrors;
     message: string;
-    meta: TrackJourneyEvent400ApplicationJsonMeta;
+    meta: TrackJourneyEvent400ApplicationJSONMeta;
 }
-export declare class TrackJourneyEvent401ApplicationJsonMeta extends SpeakeasyBase {
+export declare class TrackJourneyEvent201ApplicationJSONMeta extends SpeakeasyBase {
     requestId: string;
     status: number;
 }
 /**
- * The error message should specify what cause the error
-**/
-export declare class TrackJourneyEvent401ApplicationJson extends SpeakeasyBase {
+ * The message specifies what is done
+ */
+export declare class TrackJourneyEvent201ApplicationJSON extends SpeakeasyBase {
     message: string;
-    meta: TrackJourneyEvent401ApplicationJsonMeta;
-}
-export declare class TrackJourneyEvent403ApplicationJsonMeta extends SpeakeasyBase {
-    requestId: string;
-    status: number;
-}
-/**
- * The error message should specify what cause the error
-**/
-export declare class TrackJourneyEvent403ApplicationJson extends SpeakeasyBase {
-    message: string;
-    meta: TrackJourneyEvent403ApplicationJsonMeta;
-}
-export declare class TrackJourneyEvent429ApplicationJsonMeta extends SpeakeasyBase {
-    requestId: string;
-    status: number;
-}
-/**
- * The error message should specify what cause the error
-**/
-export declare class TrackJourneyEvent429ApplicationJson extends SpeakeasyBase {
-    message: string;
-    meta: TrackJourneyEvent429ApplicationJsonMeta;
-}
-export declare class TrackJourneyEvent500ApplicationJsonMeta extends SpeakeasyBase {
-    requestId: string;
-    status: number;
-}
-/**
- * The error message should specify what cause the error
-**/
-export declare class TrackJourneyEvent500ApplicationJson extends SpeakeasyBase {
-    message: string;
-    meta: TrackJourneyEvent500ApplicationJsonMeta;
-}
-export declare class TrackJourneyEventRequest extends SpeakeasyBase {
-    request: TrackJourneyEventRequestBody;
+    meta: TrackJourneyEvent201ApplicationJSONMeta;
 }
 export declare class TrackJourneyEventResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
-    trackJourneyEvent201ApplicationJSONObject?: TrackJourneyEvent201ApplicationJson;
-    trackJourneyEvent400ApplicationJSONObject?: TrackJourneyEvent400ApplicationJson;
-    trackJourneyEvent401ApplicationJSONObject?: TrackJourneyEvent401ApplicationJson;
-    trackJourneyEvent403ApplicationJSONObject?: TrackJourneyEvent403ApplicationJson;
-    trackJourneyEvent429ApplicationJSONObject?: TrackJourneyEvent429ApplicationJson;
-    trackJourneyEvent500ApplicationJSONObject?: TrackJourneyEvent500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Object was created
+     */
+    trackJourneyEvent201ApplicationJSONObject?: TrackJourneyEvent201ApplicationJSON;
+    /**
+     * Bad request, some fields or parameters are incorrect
+     */
+    trackJourneyEvent400ApplicationJSONObject?: TrackJourneyEvent400ApplicationJSON;
+    /**
+     * No API Key was provided or the key is not authorised to perform the action
+     */
+    trackJourneyEvent401ApplicationJSONObject?: TrackJourneyEvent401ApplicationJSON;
+    /**
+     * The API Key provided is currently not enabled
+     */
+    trackJourneyEvent403ApplicationJSONObject?: TrackJourneyEvent403ApplicationJSON;
+    /**
+     * Too many API requests were send
+     */
+    trackJourneyEvent429ApplicationJSONObject?: TrackJourneyEvent429ApplicationJSON;
+    /**
+     * An unexpected error occurred
+     */
+    trackJourneyEvent500ApplicationJSONObject?: TrackJourneyEvent500ApplicationJSON;
 }

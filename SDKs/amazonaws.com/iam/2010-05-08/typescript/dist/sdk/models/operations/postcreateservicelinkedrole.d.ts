@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateServiceLinkedRoleActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateServiceLinkedRoleActionEnum {
     CreateServiceLinkedRole = "CreateServiceLinkedRole"
 }
-export declare enum PostCreateServiceLinkedRoleVersionEnum {
+export declare enum POSTCreateServiceLinkedRoleVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostCreateServiceLinkedRoleQueryParams extends SpeakeasyBase {
-    action: PostCreateServiceLinkedRoleActionEnum;
-    version: PostCreateServiceLinkedRoleVersionEnum;
-}
-export declare class PostCreateServiceLinkedRoleHeaders extends SpeakeasyBase {
+export declare class POSTCreateServiceLinkedRoleRequest extends SpeakeasyBase {
+    action: POSTCreateServiceLinkedRoleActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateServiceLinkedRoleVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateServiceLinkedRoleHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateServiceLinkedRoleRequest extends SpeakeasyBase {
-    queryParams: PostCreateServiceLinkedRoleQueryParams;
-    headers: PostCreateServiceLinkedRoleHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateServiceLinkedRoleResponse extends SpeakeasyBase {
+export declare class POSTCreateServiceLinkedRoleResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

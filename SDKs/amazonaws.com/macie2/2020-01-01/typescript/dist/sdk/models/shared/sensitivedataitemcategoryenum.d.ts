@@ -1,3 +1,6 @@
+/**
+ * For a finding, the category of sensitive data that was detected and produced the finding. For a managed data identifier, the category of sensitive data that the managed data identifier detects. Possible values are:
+ */
 export declare enum SensitiveDataItemCategoryEnum {
     FinancialInformation = "FINANCIAL_INFORMATION",
     PersonalInformation = "PERSONAL_INFORMATION",

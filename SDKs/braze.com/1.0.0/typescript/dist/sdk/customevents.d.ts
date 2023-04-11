@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class CustomEvents {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class CustomEvents {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * customEventsAnalytics - Custom Events Analytics
+     * Custom Events Analytics
      *
+     * @remarks
      * This endpoint allows you to retrieve a series of the number of occurrences of a custom event in your app over a designated time period.
      *
      * ### Components Used
@@ -43,11 +44,12 @@ export declare class CustomEvents {
      * | 401 Unauthorized | Unknown or missing REST API Key                                  |
      * | 429 Rate Limited | Over rate limit                                                  |
      * | 5XX              | Internal server error, you should retry with exponential backoff |
-    **/
+     */
     customEventsAnalytics(req: operations.CustomEventsAnalyticsRequest, config?: AxiosRequestConfig): Promise<operations.CustomEventsAnalyticsResponse>;
     /**
-     * customEventsList - Custom Events List
+     * Custom Events List
      *
+     * @remarks
      * This endpoint allows you to export a list of custom events that have been recorded for your app. The event names are returned in groups of 250, sorted alphabetically.
      *
      *
@@ -77,6 +79,6 @@ export declare class CustomEvents {
      * | 401 Unauthorized | Unknown or missing REST API Key                                  |
      * | 429 Rate Limited | Over rate limit                                                  |
      * | 5XX              | Internal server error, you should retry with exponential backoff |
-    **/
+     */
     customEventsList(req: operations.CustomEventsListRequest, config?: AxiosRequestConfig): Promise<operations.CustomEventsListResponse>;
 }

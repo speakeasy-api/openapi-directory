@@ -1,46 +1,51 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class AddMembersToSharedLineGroupPathParams extends SpeakeasyBase {
-    sharedLineGroupId: string;
-}
-export declare class AddMembersToSharedLineGroupApplicationJsonMembersUsers extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class AddMembersToSharedLineGroupApplicationJSONMembersUsers extends SpeakeasyBase {
+    /**
+     * Email address of the user.
+     */
     email?: string;
+    /**
+     * Unique identifier of the user.
+     */
     id?: string;
 }
 /**
  * Members can comprise of users on the account as well as common area phones. You can add a maximum of 10 members at once.
-**/
-export declare class AddMembersToSharedLineGroupApplicationJsonMembers extends SpeakeasyBase {
+ */
+export declare class AddMembersToSharedLineGroupApplicationJSONMembers extends SpeakeasyBase {
+    /**
+     * Unique identifier(s) of the Common Area Phone.
+     */
     commonAreaPhoneIds?: string[];
-    users?: AddMembersToSharedLineGroupApplicationJsonMembersUsers[];
+    /**
+     * Zoom Phone users on the account.
+     */
+    users?: AddMembersToSharedLineGroupApplicationJSONMembersUsers[];
 }
-export declare class AddMembersToSharedLineGroupApplicationJson extends SpeakeasyBase {
-    members?: AddMembersToSharedLineGroupApplicationJsonMembers;
-}
-export declare class AddMembersToSharedLineGroupMultipartFormDataMembersUsers extends SpeakeasyBase {
-    email?: string;
-    id?: string;
-}
-/**
- * Members can comprise of users on the account as well as common area phones. You can add a maximum of 10 members at once.
-**/
-export declare class AddMembersToSharedLineGroupMultipartFormDataMembers extends SpeakeasyBase {
-    commonAreaPhoneIds?: string[];
-    users?: AddMembersToSharedLineGroupMultipartFormDataMembersUsers[];
-}
-export declare class AddMembersToSharedLineGroupMultipartFormData extends SpeakeasyBase {
-    members?: AddMembersToSharedLineGroupMultipartFormDataMembers;
-}
-export declare class AddMembersToSharedLineGroupRequests extends SpeakeasyBase {
-    object?: AddMembersToSharedLineGroupApplicationJson;
-    object1?: AddMembersToSharedLineGroupMultipartFormData;
+export declare class AddMembersToSharedLineGroupApplicationJSON extends SpeakeasyBase {
+    /**
+     * Members can comprise of users on the account as well as common area phones. You can add a maximum of 10 members at once.
+     */
+    members?: AddMembersToSharedLineGroupApplicationJSONMembers;
 }
 export declare class AddMembersToSharedLineGroupRequest extends SpeakeasyBase {
-    pathParams: AddMembersToSharedLineGroupPathParams;
-    request?: AddMembersToSharedLineGroupRequests;
+    requestBody?: AddMembersToSharedLineGroupApplicationJSON;
+    /**
+     * Unique Identifier of the shared line group.
+     */
+    sharedLineGroupId: string;
 }
 export declare class AddMembersToSharedLineGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * **HTTP Status Code:** `201` **Created**
+     *
+     * @remarks
+     * Members added successfully.
+     */
     addMembersToSharedLineGroup201ApplicationJSONAny?: any;
 }

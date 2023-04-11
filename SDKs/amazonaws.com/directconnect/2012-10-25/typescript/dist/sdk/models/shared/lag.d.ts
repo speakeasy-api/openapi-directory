@@ -6,7 +6,7 @@ import { MacSecKey } from "./macseckey";
 import { Tag } from "./tag";
 /**
  * Information about a link aggregation group (LAG).
-**/
+ */
 export declare class Lag extends SpeakeasyBase {
     allowsHostedConnections?: boolean;
     awsDevice?: string;

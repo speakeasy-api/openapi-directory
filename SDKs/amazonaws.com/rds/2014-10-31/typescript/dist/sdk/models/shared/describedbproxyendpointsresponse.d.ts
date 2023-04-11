@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbProxyEndpoint } from "./dbproxyendpoint";
-export declare class DescribeDbProxyEndpointsResponse extends SpeakeasyBase {
-    dbProxyEndpoints?: DbProxyEndpoint[];
+import { DBProxyEndpoint } from "./dbproxyendpoint";
+/**
+ * Success
+ */
+export declare class DescribeDBProxyEndpointsResponse extends SpeakeasyBase {
+    dbProxyEndpoints?: DBProxyEndpoint[];
     marker?: string;
 }

@@ -1,18 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PostAccountInstitutionReviewCurationIdCommentsPathParams extends SpeakeasyBase {
-    curationId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class PostAccountInstitutionReviewCurationIdCommentsSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class PostAccountInstitutionReviewCurationIdCommentsRequest extends SpeakeasyBase {
-    pathParams: PostAccountInstitutionReviewCurationIdCommentsPathParams;
-    request: shared.CurationCommentCreate;
-    security: PostAccountInstitutionReviewCurationIdCommentsSecurity;
+    /**
+     * The content/value of the comment.
+     */
+    curationCommentCreate: shared.CurationCommentCreate;
+    /**
+     * ID of the curation
+     */
+    curationId: number;
 }
 export declare class PostAccountInstitutionReviewCurationIdCommentsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Forbidden
+     */
     errorMessage?: shared.ErrorMessage;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

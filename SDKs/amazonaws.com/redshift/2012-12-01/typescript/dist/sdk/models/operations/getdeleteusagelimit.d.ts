@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteUsageLimitActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteUsageLimitActionEnum {
     DeleteUsageLimit = "DeleteUsageLimit"
 }
-export declare enum GetDeleteUsageLimitVersionEnum {
+export declare enum GETDeleteUsageLimitVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class GetDeleteUsageLimitQueryParams extends SpeakeasyBase {
-    action: GetDeleteUsageLimitActionEnum;
+export declare class GETDeleteUsageLimitRequest extends SpeakeasyBase {
+    action: GETDeleteUsageLimitActionEnum;
+    /**
+     * The identifier of the usage limit to delete.
+     */
     usageLimitId: string;
-    version: GetDeleteUsageLimitVersionEnum;
-}
-export declare class GetDeleteUsageLimitHeaders extends SpeakeasyBase {
+    version: GETDeleteUsageLimitVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDeleteUsageLimitHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteUsageLimitRequest extends SpeakeasyBase {
-    queryParams: GetDeleteUsageLimitQueryParams;
-    headers: GetDeleteUsageLimitHeaders;
-}
-export declare class GetDeleteUsageLimitResponse extends SpeakeasyBase {
+export declare class GETDeleteUsageLimitResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

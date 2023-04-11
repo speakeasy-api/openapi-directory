@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class FromListPathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class FromListRequest extends SpeakeasyBase {
-    pathParams: FromListPathParams;
+    /**
+     * Agent to show the IP sources
+     */
+    agentNum: number;
 }
 export declare class FromListResponse extends SpeakeasyBase {
     contentType: string;
-    ipSources?: shared.IpSource[];
+    /**
+     * successful operation
+     */
+    ipSources?: shared.IPSource[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

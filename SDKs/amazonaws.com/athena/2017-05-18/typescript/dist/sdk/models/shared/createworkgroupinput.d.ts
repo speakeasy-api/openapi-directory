@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { WorkGroupConfiguration } from "./workgroupconfiguration";
 import { Tag } from "./tag";
+import { WorkGroupConfiguration } from "./workgroupconfiguration";
 export declare class CreateWorkGroupInput extends SpeakeasyBase {
     configuration?: WorkGroupConfiguration;
     description?: string;

@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetUserPaymentInfoPathParams extends SpeakeasyBase {
-    userId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetUserPaymentInfoRequest extends SpeakeasyBase {
-    pathParams: GetUserPaymentInfoPathParams;
+    /**
+     * User ID
+     */
+    userId: number;
 }
 export declare class GetUserPaymentInfoResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * UserNotFound UnauthorizedUser
+     */
     error?: shared.ErrorT;
+    /**
+     * Returns billing and saved card information for user, and their corporate if present.
+     */
     paymentInfo?: shared.PaymentInfo;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

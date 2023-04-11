@@ -15,13 +15,28 @@ export declare class DeviceType extends SpeakeasyBase {
     id?: number;
     instanceCount?: number;
     interfaceOrdering?: DeviceTypeInterfaceOrdering;
+    /**
+     * This type of device has console server ports
+     */
     isConsoleServer?: boolean;
+    /**
+     * Device consumes both front and rear rack faces
+     */
     isFullDepth?: boolean;
+    /**
+     * This type of device has network interfaces
+     */
     isNetworkDevice?: boolean;
+    /**
+     * This type of device has power outlets
+     */
     isPdu?: boolean;
     lastUpdated?: Date;
     manufacturer: NestedManufacturer;
     model: string;
+    /**
+     * Discrete part number (optional)
+     */
     partNumber?: string;
     slug: string;
     subdeviceRole?: DeviceTypeSubdeviceRole;

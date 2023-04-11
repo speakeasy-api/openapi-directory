@@ -1,9 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ListDistributions20171030QueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListDistributions20171030Request extends SpeakeasyBase {
+    /**
+     * Use this when paginating results to indicate where to begin in your list of distributions. The results include distributions in the list that occur after the marker. To get the next page of results, set the <code>Marker</code> to the value of the <code>NextMarker</code> from the current page's response (which is also the ID of the last distribution on that page).
+     */
     marker?: string;
+    /**
+     * The maximum number of distributions you want in the response body.
+     */
     maxItems?: string;
-}
-export declare class ListDistributions20171030Headers extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,12 +17,9 @@ export declare class ListDistributions20171030Headers extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class ListDistributions20171030Request extends SpeakeasyBase {
-    queryParams: ListDistributions20171030QueryParams;
-    headers: ListDistributions20171030Headers;
-}
 export declare class ListDistributions20171030Response extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

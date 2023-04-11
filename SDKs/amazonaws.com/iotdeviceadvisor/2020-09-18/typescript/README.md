@@ -6,58 +6,71 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/amazonaws.com/iotdeviceadvisor/2020-09-18/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/amazonaws.com/iotdeviceadvisor/2020-09-18/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateSuiteDefinitionRequest, CreateSuiteDefinitionResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CreateSuiteDefinitionRequest,
+  CreateSuiteDefinitionResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  ProtocolEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: CreateSuiteDefinitionRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
+});
+
+const req: CreateSuiteDefinitionRequest = {
+  requestBody: {
     suiteDefinitionConfiguration: {
-      devicePermissionRoleArn: "voluptas",
+      devicePermissionRoleArn: "corrupti",
       devices: [
         {
-          certificateArn: "et",
-          thingArn: "nihil",
+          certificateArn: "distinctio",
+          thingArn: "quibusdam",
+        },
+        {
+          certificateArn: "unde",
+          thingArn: "nulla",
+        },
+        {
+          certificateArn: "corrupti",
+          thingArn: "illum",
         },
       ],
-      intendedForQualification: true,
-      rootGroup: "dicta",
-      suiteDefinitionName: "debitis",
+      intendedForQualification: false,
+      isLongDurationTest: false,
+      protocol: ProtocolEnum.MqttV311,
+      rootGroup: "error",
+      suiteDefinitionName: "deserunt",
     },
     tags: {
-      "et": "ut",
+      "iure": "magnam",
+      "debitis": "ipsa",
     },
   },
+  xAmzAlgorithm: "delectus",
+  xAmzContentSha256: "tempora",
+  xAmzCredential: "suscipit",
+  xAmzDate: "molestiae",
+  xAmzSecurityToken: "minus",
+  xAmzSignature: "placeat",
+  xAmzSignedHeaders: "voluptatum",
 };
 
 sdk.createSuiteDefinition(req).then((res: CreateSuiteDefinitionResponse | AxiosError) => {
@@ -67,24 +80,36 @@ sdk.createSuiteDefinition(req).then((res: CreateSuiteDefinitionResponse | AxiosE
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
-* `createSuiteDefinition` - Creates a Device Advisor test suite.
-* `deleteSuiteDefinition` - Deletes a Device Advisor test suite.
-* `getSuiteDefinition` - Gets information about a Device Advisor test suite.
-* `getSuiteRun` - Gets information about a Device Advisor test suite run.
-* `getSuiteRunReport` - Gets a report download link for a successful Device Advisor qualifying test suite run.
-* `listSuiteDefinitions` - Lists the Device Advisor test suites you have created.
-* `listSuiteRuns` - Lists the runs of the specified Device Advisor test suite. You can list all runs of the test suite, or the runs of a specific version of the test suite.
-* `listTagsForResource` - Lists the tags attached to an IoT Device Advisor resource.
-* `startSuiteRun` - Starts a Device Advisor test suite run.
-* `stopSuiteRun` - Stops a Device Advisor test suite run that is currently running.
-* `tagResource` - Adds to and modifies existing tags of an IoT Device Advisor resource.
-* `untagResource` - Removes tags from an IoT Device Advisor resource.
-* `updateSuiteDefinition` - Updates a Device Advisor test suite.
-
+* `createSuiteDefinition` - <p>Creates a Device Advisor test suite.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateSuiteDefinition</a> action.</p>
+* `deleteSuiteDefinition` - <p>Deletes a Device Advisor test suite.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteSuiteDefinition</a> action.</p>
+* `getEndpoint` - Gets information about an Device Advisor endpoint.
+* `getSuiteDefinition` - <p>Gets information about a Device Advisor test suite.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">GetSuiteDefinition</a> action.</p>
+* `getSuiteRun` - <p>Gets information about a Device Advisor test suite run.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">GetSuiteRun</a> action.</p>
+* `getSuiteRunReport` - <p>Gets a report download link for a successful Device Advisor qualifying test suite run.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">GetSuiteRunReport</a> action.</p>
+* `listSuiteDefinitions` - <p>Lists the Device Advisor test suites you have created.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListSuiteDefinitions</a> action.</p>
+* `listSuiteRuns` - <p>Lists runs of the specified Device Advisor test suite. You can list all runs of the test suite, or the runs of a specific version of the test suite.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListSuiteRuns</a> action.</p>
+* `listTagsForResource` - <p>Lists the tags attached to an IoT Device Advisor resource.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListTagsForResource</a> action.</p>
+* `startSuiteRun` - <p>Starts a Device Advisor test suite run.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">StartSuiteRun</a> action.</p>
+* `stopSuiteRun` - <p>Stops a Device Advisor test suite run that is currently running.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">StopSuiteRun</a> action.</p>
+* `tagResource` - <p>Adds to and modifies existing tags of an IoT Device Advisor resource.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">TagResource</a> action.</p>
+* `untagResource` - <p>Removes tags from an IoT Device Advisor resource.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UntagResource</a> action.</p>
+* `updateSuiteDefinition` - <p>Updates a Device Advisor test suite.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateSuiteDefinition</a> action.</p>
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

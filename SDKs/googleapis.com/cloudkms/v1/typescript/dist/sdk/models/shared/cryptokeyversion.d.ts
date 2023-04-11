@@ -1,17 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { KeyOperationAttestationInput } from "./keyoperationattestation";
 import { ExternalProtectionLevelOptions } from "./externalprotectionleveloptions";
-import { KeyOperationAttestation } from "./keyoperationattestation";
-export declare enum CryptoKeyVersionStateEnum {
-    CryptoKeyVersionStateUnspecified = "CRYPTO_KEY_VERSION_STATE_UNSPECIFIED",
-    PendingGeneration = "PENDING_GENERATION",
-    Enabled = "ENABLED",
-    Disabled = "DISABLED",
-    Destroyed = "DESTROYED",
-    DestroyScheduled = "DESTROY_SCHEDULED",
-    PendingImport = "PENDING_IMPORT",
-    ImportFailed = "IMPORT_FAILED"
-}
+import { KeyOperationAttestation, KeyOperationAttestationInput } from "./keyoperationattestation";
+/**
+ * Output only. The CryptoKeyVersionAlgorithm that this CryptoKeyVersion supports.
+ */
 export declare enum CryptoKeyVersionAlgorithmEnum {
     CryptoKeyVersionAlgorithmUnspecified = "CRYPTO_KEY_VERSION_ALGORITHM_UNSPECIFIED",
     GoogleSymmetricEncryption = "GOOGLE_SYMMETRIC_ENCRYPTION",
@@ -43,6 +35,9 @@ export declare enum CryptoKeyVersionAlgorithmEnum {
     HmacSha224 = "HMAC_SHA224",
     ExternalSymmetricEncryption = "EXTERNAL_SYMMETRIC_ENCRYPTION"
 }
+/**
+ * Output only. The ProtectionLevel describing how crypto operations are performed with this CryptoKeyVersion.
+ */
 export declare enum CryptoKeyVersionProtectionLevelEnum {
     ProtectionLevelUnspecified = "PROTECTION_LEVEL_UNSPECIFIED",
     Software = "SOFTWARE",
@@ -51,29 +46,104 @@ export declare enum CryptoKeyVersionProtectionLevelEnum {
     ExternalVpc = "EXTERNAL_VPC"
 }
 /**
+ * The current state of the CryptoKeyVersion.
+ */
+export declare enum CryptoKeyVersionStateEnum {
+    CryptoKeyVersionStateUnspecified = "CRYPTO_KEY_VERSION_STATE_UNSPECIFIED",
+    PendingGeneration = "PENDING_GENERATION",
+    Enabled = "ENABLED",
+    Disabled = "DISABLED",
+    Destroyed = "DESTROYED",
+    DestroyScheduled = "DESTROY_SCHEDULED",
+    PendingImport = "PENDING_IMPORT",
+    ImportFailed = "IMPORT_FAILED",
+    GenerationFailed = "GENERATION_FAILED",
+    PendingExternalDestruction = "PENDING_EXTERNAL_DESTRUCTION",
+    ExternalDestructionFailed = "EXTERNAL_DESTRUCTION_FAILED"
+}
+/**
  * A CryptoKeyVersion represents an individual cryptographic key, and the associated key material. An ENABLED version can be used for cryptographic operations. For security reasons, the raw cryptographic key material represented by a CryptoKeyVersion can never be viewed or exported. It can only be used to encrypt, decrypt, or sign data when an authorized user or application invokes Cloud KMS.
-**/
-export declare class CryptoKeyVersionInput extends SpeakeasyBase {
-    attestation?: KeyOperationAttestationInput;
+ */
+export declare class CryptoKeyVersion extends SpeakeasyBase {
+    /**
+     * Output only. The CryptoKeyVersionAlgorithm that this CryptoKeyVersion supports.
+     */
+    algorithm?: CryptoKeyVersionAlgorithmEnum;
+    /**
+     * Contains an HSM-generated attestation about a key operation. For more information, see [Verifying attestations] (https://cloud.google.com/kms/docs/attest-key).
+     */
+    attestation?: KeyOperationAttestation;
+    /**
+     * Output only. The time at which this CryptoKeyVersion was created.
+     */
+    createTime?: string;
+    /**
+     * Output only. The time this CryptoKeyVersion's key material was destroyed. Only present if state is DESTROYED.
+     */
+    destroyEventTime?: string;
+    /**
+     * Output only. The time this CryptoKeyVersion's key material is scheduled for destruction. Only present if state is DESTROY_SCHEDULED.
+     */
+    destroyTime?: string;
+    /**
+     * Output only. The root cause of the most recent external destruction failure. Only present if state is EXTERNAL_DESTRUCTION_FAILED.
+     */
+    externalDestructionFailureReason?: string;
+    /**
+     * ExternalProtectionLevelOptions stores a group of additional fields for configuring a CryptoKeyVersion that are specific to the EXTERNAL protection level and EXTERNAL_VPC protection levels.
+     */
     externalProtectionLevelOptions?: ExternalProtectionLevelOptions;
+    /**
+     * Output only. The time this CryptoKeyVersion's key material was generated.
+     */
+    generateTime?: string;
+    /**
+     * Output only. The root cause of the most recent generation failure. Only present if state is GENERATION_FAILED.
+     */
+    generationFailureReason?: string;
+    /**
+     * Output only. The root cause of the most recent import failure. Only present if state is IMPORT_FAILED.
+     */
+    importFailureReason?: string;
+    /**
+     * Output only. The name of the ImportJob used in the most recent import of this CryptoKeyVersion. Only present if the underlying key material was imported.
+     */
+    importJob?: string;
+    /**
+     * Output only. The time at which this CryptoKeyVersion's key material was most recently imported.
+     */
+    importTime?: string;
+    /**
+     * Output only. The resource name for this CryptoKeyVersion in the format `projects/* /locations/* /keyRings/* /cryptoKeys/* /cryptoKeyVersions/*`.
+     */
+    name?: string;
+    /**
+     * Output only. The ProtectionLevel describing how crypto operations are performed with this CryptoKeyVersion.
+     */
+    protectionLevel?: CryptoKeyVersionProtectionLevelEnum;
+    /**
+     * Output only. Whether or not this key version is eligible for reimport, by being specified as a target in ImportCryptoKeyVersionRequest.crypto_key_version.
+     */
+    reimportEligible?: boolean;
+    /**
+     * The current state of the CryptoKeyVersion.
+     */
     state?: CryptoKeyVersionStateEnum;
 }
 /**
  * A CryptoKeyVersion represents an individual cryptographic key, and the associated key material. An ENABLED version can be used for cryptographic operations. For security reasons, the raw cryptographic key material represented by a CryptoKeyVersion can never be viewed or exported. It can only be used to encrypt, decrypt, or sign data when an authorized user or application invokes Cloud KMS.
-**/
-export declare class CryptoKeyVersion extends SpeakeasyBase {
-    algorithm?: CryptoKeyVersionAlgorithmEnum;
-    attestation?: KeyOperationAttestation;
-    createTime?: string;
-    destroyEventTime?: string;
-    destroyTime?: string;
+ */
+export declare class CryptoKeyVersionInput extends SpeakeasyBase {
+    /**
+     * Contains an HSM-generated attestation about a key operation. For more information, see [Verifying attestations] (https://cloud.google.com/kms/docs/attest-key).
+     */
+    attestation?: KeyOperationAttestationInput;
+    /**
+     * ExternalProtectionLevelOptions stores a group of additional fields for configuring a CryptoKeyVersion that are specific to the EXTERNAL protection level and EXTERNAL_VPC protection levels.
+     */
     externalProtectionLevelOptions?: ExternalProtectionLevelOptions;
-    generateTime?: string;
-    importFailureReason?: string;
-    importJob?: string;
-    importTime?: string;
-    name?: string;
-    protectionLevel?: CryptoKeyVersionProtectionLevelEnum;
-    reimportEligible?: boolean;
+    /**
+     * The current state of the CryptoKeyVersion.
+     */
     state?: CryptoKeyVersionStateEnum;
 }

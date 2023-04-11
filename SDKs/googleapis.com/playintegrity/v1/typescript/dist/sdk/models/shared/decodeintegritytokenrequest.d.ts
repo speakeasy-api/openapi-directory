@@ -1,7 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Request to decode the integrity token.
-**/
+ */
 export declare class DecodeIntegrityTokenRequest extends SpeakeasyBase {
+    /**
+     * Encoded integrity token.
+     */
     integrityToken?: string;
 }

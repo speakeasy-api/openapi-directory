@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Availability {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,63 +9,47 @@ export declare class Availability {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getConsumerV1AvailabilityServiceIdStartDateEndDate - Returns a list of available times.
+     * Get Available Times
      *
-     * Choose your search criteria carefully. Availability is an expensive call. If you search availability for all resources
-     * then you should only do so for a single date. If you decide to search availability for multiple dates you should only do so
-     * for a specific resource by specifying the optional resourceId parameter.<br /><br />
-     *
-     * Start and End times are specified as military times e.g. 800 = 8:00am, 2230 = 10:30pm.
-     * You will only see availability within the boundary of your business start and end times.<br /><br />
-     *
-     *
-     * dayAvailability will return day availablility for the number of days requested from the start date.<br /><br />
-     *
-     *
-     * firstDayAvailable only works with day availability. If set to true it will look for the first day available within the range specified
-     * by the dayAvailability parameter. The two parameters together can be a clever way to display availability for a week or month.
-     * Tip - pass in the beginning of the week or month, and available times are displayed for the first available date if exists.<br /><br />
-     *
-     * You should only specify the duration parameter if you let your customers choose the duration of the appointment. e.g. from a list.<br /><br />
-     *
-     *
-     * The tz parameter allows you to select a suitable timezone for the customer to book in. Your app should be timezone aware if you
-     * use this option. The requested timezone is specified as an offset(plus or minus) from GMT time.<br /><br />
-     *
-     * Availabity can be complex. We provided an endpoint help you troubleshoot:
-     * /consumer/v1/availability/{serviceId}/{startDate}/{endDate}/unavailable.
-     * This endpoint will show you all the blocks for a given date range. Available times are created from any unblocked time periods.<br /><br />
-     *
-     *
-     * See more information at <a href="https://onsched.readme.io/docs/availability-overview">Availability Overview</a>
-    **/
+     * @remarks
+     * <p>
+     *   <b>Choose your search criteria carefully. Availability is an expensive call.</b> If you search availability for all resources, you should only do so for a single date. If you search availability for multiple dates, you should only do so for a specific resource by specifying the optional resourceId parameter.</p>
+     * <p>A <b>serviceId</b> is required. The <b>startDate</b> and <b>endDate</b> are required and are formatted as: <b>YYYY-MM-DD</b></p>
+     * <p>A <b>resourceId</b> is optional, it is recommended if known at the time of availability call.</p>
+     * <p>
+     *   <b>timezoneName</b> is optional, it allows you to specify the IANA formatted name for the end user's timezone to view availability. e.g., <i>America/New_York</i>. <b>NOTE: This is the recommended approach for your implementation.</b>  The "tzOffset" parameter remains for backward compatibility.  For JavaScript, use moment.js in your client for ease of timezone detection and selection. For iOS, use the name property of the NSTimeZone returned from the localTimeZone method. For .NET, consider NodaTime or TimeZoneConverter via NuGet. </p>
+     * <p>
+     *   <b>duration</b> should only be populated if you allow the end user to select a duration, otherwise the service's duration will be used.</p>
+     * <p>
+     *   <b>startTime</b> and <b>endTime</b> are optional and are specified in <b>military time e.g., 800 = 8:00am, 2230 = 10:30pm</b>. Note: You will only see availability within the boundary of your business location start and end times.</p>
+     * <p>
+     *   <b>dayAvailability</b> will return day level availability for the number of days requested from the start date. See <i>GET /consumer/v1/availability/{serviceId}/{startDate}/{endDate}/days</i> for details.</p>
+     * <p>
+     *   <b>firstDayAvailable</b> only works with day availability. If set to true it will look for the first day available within the range specified by the dayAvailability parameter. The two parameters together can be a clever way to display availability for a week or month. Tip - pass in the beginning of the week or month, and available times are displayed for the first available date if exists.</p>
+     * <p>
+     *   <b>tzOffset</b> allows you to pass in the timezone offset for the end user's timezone of choice, e.g., (-240) for EST. If you use this option, your application should be timezone aware. The requested timezone is specified as an offset (plus or minus) from GMT time.</p>
+     * <p>Availability can be complex. For further troubleshooting refer to the: <i><b>GET /consumer/v1/availability/{serviceId}/{startDate}/{endDate}/unavailable</b></i> endpoint. This endpoint will show you all unavailable times for a given date range. Available times are created from any unblocked time periods. For more information: <a href="https://onsched.readme.io/docs/availability-overview">Availability Overview</a></p>
+     */
     getConsumerV1AvailabilityServiceIdStartDateEndDate(req: operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateRequest, config?: AxiosRequestConfig): Promise<operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateResponse>;
     /**
-     * getConsumerV1AvailabilityServiceIdStartDateEndDateDays - Returns a list of available days.
+     * Get Available Days
      *
-     * This end point is used to show day level availability. For example if the business is closed, or there is a public holiday.
-     *
-     * Day level availability is a good way to restrict your choices of dates in your app and improve usability.
-    **/
+     * @remarks
+     * <p>This endpoint will return <b>Day Level Availability</b> for the range of dates requested. For example, if the business is closed, or there is a public holiday this endpoint will return that the "Day is unavailable".</p>
+     * <p>Day Availability is a high-level check for Holidays and Open/Available hours of a location, service and/or resource and should be used to restrict your choices of days available in your application to improve usability and performance.</p>
+     * <p>A <b>serviceId</b> is required. The <b>startDate</b> and <b>endDate</b> are required and are formatted as: <b>YYYY-MM-DD</b></p>
+     * <p>The locationId is optional, however if not supplied it defaults to the Primary Business Location for open/closed hours information. It is recommended you always provide the locationId.</p>
+     * <p>A <b>resourceId</b> is optional. If used the available days will be return day availability for the resource specified.</p>
+     * <p>The <b>tzOffset</b> parameter should be used if the appointment requester, the end user, is in a different timezone than the location or resource.</p>
+     */
     getConsumerV1AvailabilityServiceIdStartDateEndDateDays(req: operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysRequest, config?: AxiosRequestConfig): Promise<operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysResponse>;
     /**
-     * getConsumerV1AvailabilityServiceIdStartDateEndDateTimes - Returns a list of available times.
+     * Get Unavailable Times
      *
-     * <b>Deprecation Notice</b> : This endpoint is no longer being maintained and will be deprecated in a future release.
-     *             Use the /consumer/v1/availability{serviceId}/{startDate}/{endDate} endpoint instead.
-    **/
-    getConsumerV1AvailabilityServiceIdStartDateEndDateTimes(req: operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateTimesRequest, config?: AxiosRequestConfig): Promise<operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateTimesResponse>;
-    /**
-     * getConsumerV1AvailabilityServiceIdStartDateEndDateUnavailable - Returns a list of unavailable times.
-     *
-     * This endpoint is used to show unavailable times and provides information why the time is unavailable.
-    **/
+     * @remarks
+     * <p>This endpoint is used to show <b>Unavailable</b> times and provides valuable information as to why a time slot is unavailable. If you question your availability results, populate the same parameters to this endpoint to find out why.</p>
+     * <p>A <b>serviceId</b> is required. The <b>startDate</b> and <b>endDate</b> are required and are formatted as: <b>YYYY-MM-DD</b></p>
+     * <p>Location hours, holidays, services, resources, blocks, allocations, and appointments are just some of variables that may cause time slots to become unavailable. Use this endpoint to understand why you don't see availability.</p>
+     */
     getConsumerV1AvailabilityServiceIdStartDateEndDateUnavailable(req: operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableRequest, config?: AxiosRequestConfig): Promise<operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableResponse>;
-    /**
-     * getConsumerV1AvailabilityServiceIdStartDateEndDateWindows - Returns a list of available booking window times.
-     *
-     * This end point may be removed in the next release. It is used for server based availability from UnavailableTimes.
-     * Use the v1/consumer/availability{serviceId}/{startDate}/{endDate} endpoint instead.
-    **/
-    getConsumerV1AvailabilityServiceIdStartDateEndDateWindows(req: operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateWindowsRequest, config?: AxiosRequestConfig): Promise<operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateWindowsResponse>;
 }

@@ -1,0 +1,3 @@
+export * from "./getscreenshotstargetscreenshottestidtargetversionidcomparisonbaseresultid";
+export * from "./getscreenshotstargetscreenshottestidtargetversionidcomparisonparallelbaseversionid";
+export * from "./getscreenshotstargetscreenshottestidtargetversionidtargetresultidcomparisonbaseresultid";

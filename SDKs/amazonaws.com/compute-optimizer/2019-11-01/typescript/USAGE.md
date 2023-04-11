@@ -1,48 +1,48 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DescribeRecommendationExportJobsRequest, DescribeRecommendationExportJobsResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  DeleteRecommendationPreferencesRequest,
+  DeleteRecommendationPreferencesResponse,
+  DeleteRecommendationPreferencesXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
+import {
+  ScopeNameEnum,
+  ResourceTypeEnum,
+  RecommendationPreferenceNameEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
+    hmac: "YOUR_API_KEY_HERE",
+  },
+});
+
+const req: DeleteRecommendationPreferencesRequest = {
+  deleteRecommendationPreferencesRequest: {
+    recommendationPreferenceNames: [
+      RecommendationPreferenceNameEnum.InferredWorkloadTypes,
+      RecommendationPreferenceNameEnum.ExternalMetricsPreference,
+      RecommendationPreferenceNameEnum.ExternalMetricsPreference,
+    ],
+    resourceType: ResourceTypeEnum.LambdaFunction,
+    scope: {
+      name: ScopeNameEnum.ResourceArn,
+      value: "corrupti",
     },
-  }
-));
-    
-const req: DescribeRecommendationExportJobsRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "ComputeOptimizerService.DescribeRecommendationExportJobs",
   },
-  request: {
-    filters: [
-      {
-        name: "ResourceType",
-        values: [
-          "rerum",
-        ],
-      },
-    ],
-    jobIds: [
-      "debitis",
-      "voluptatum",
-      "et",
-    ],
-    maxResults: 7144924247938981575,
-    nextToken: "dolorem",
-  },
+  xAmzAlgorithm: "illum",
+  xAmzContentSha256: "vel",
+  xAmzCredential: "error",
+  xAmzDate: "deserunt",
+  xAmzSecurityToken: "suscipit",
+  xAmzSignature: "iure",
+  xAmzSignedHeaders: "magnam",
+  xAmzTarget: DeleteRecommendationPreferencesXAmzTargetEnum.ComputeOptimizerServiceDeleteRecommendationPreferences,
 };
 
-sdk.describeRecommendationExportJobs(req).then((res: DescribeRecommendationExportJobsResponse | AxiosError) => {
+sdk.deleteRecommendationPreferences(req).then((res: DeleteRecommendationPreferencesResponse | AxiosError) => {
    // handle response
 });
 ```

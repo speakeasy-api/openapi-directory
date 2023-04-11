@@ -1,16 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostListMetricsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTListMetricsActionEnum {
     ListMetrics = "ListMetrics"
 }
-export declare enum PostListMetricsVersionEnum {
+export declare enum POSTListMetricsVersionEnum {
     TwoThousandAndTen0801 = "2010-08-01"
 }
-export declare class PostListMetricsQueryParams extends SpeakeasyBase {
-    action: PostListMetricsActionEnum;
+export declare class POSTListMetricsRequest extends SpeakeasyBase {
+    action: POSTListMetricsActionEnum;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostListMetricsVersionEnum;
-}
-export declare class PostListMetricsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTListMetricsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,13 +22,9 @@ export declare class PostListMetricsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostListMetricsRequest extends SpeakeasyBase {
-    queryParams: PostListMetricsQueryParams;
-    headers: PostListMetricsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostListMetricsResponse extends SpeakeasyBase {
+export declare class POSTListMetricsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

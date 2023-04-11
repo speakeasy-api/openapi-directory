@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Operations about payments
+ */
 export declare class Payments {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,15 +12,17 @@ export declare class Payments {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getPayments - List Payments
-     *
      * List Payments
-    **/
+     *
+     * @remarks
+     * List Payments
+     */
     getPayments(req: operations.GetPaymentsRequest, config?: AxiosRequestConfig): Promise<operations.GetPaymentsResponse>;
     /**
-     * getPaymentsId - Show Payment
-     *
      * Show Payment
-    **/
+     *
+     * @remarks
+     * Show Payment
+     */
     getPaymentsId(req: operations.GetPaymentsIdRequest, config?: AxiosRequestConfig): Promise<operations.GetPaymentsIdResponse>;
 }

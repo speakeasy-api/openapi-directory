@@ -1,13 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetProfileSecurity extends SpeakeasyBase {
-    basicAuth: shared.SchemeBasicAuth;
-}
-export declare class GetProfileRequest extends SpeakeasyBase {
-    security: GetProfileSecurity;
-}
+import { AxiosResponse } from "axios";
 export declare class GetProfileResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * A Profile object
+     */
     profile?: shared.Profile;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

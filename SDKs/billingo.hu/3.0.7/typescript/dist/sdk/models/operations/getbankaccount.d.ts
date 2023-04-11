@@ -1,17 +1,28 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetBankAccountPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetBankAccountRequest extends SpeakeasyBase {
     id: number;
 }
-export declare class GetBankAccountRequest extends SpeakeasyBase {
-    pathParams: GetBankAccountPathParams;
-}
 export declare class GetBankAccountResponse extends SpeakeasyBase {
+    /**
+     * Success response
+     */
     bankAccount?: shared.BankAccount;
+    /**
+     * The request is malformed.
+     */
     clientErrorResponse?: shared.ClientErrorResponse;
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
+    /**
+     * Internal server error.
+     */
     serverErrorResponse?: shared.ServerErrorResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Validation errors occured.
+     */
     validationErrorResponse?: shared.ValidationErrorResponse;
 }

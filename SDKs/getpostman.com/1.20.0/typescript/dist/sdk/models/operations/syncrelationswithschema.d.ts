@@ -1,26 +1,49 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SyncRelationsWithSchemaPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class SyncRelationsWithSchemaRequest extends SpeakeasyBase {
+    /**
+     * Id of the API
+     */
     apiId: string;
+    /**
+     * Id of the API version
+     */
     apiVersionId: string;
+    /**
+     * Relation id
+     */
     entityId: string;
+    /**
+     * Relation type (e.g documentation, contracttest, integrationtest, testsuite, mock, monitor)
+     */
     entityType: string;
 }
-export declare class SyncRelationsWithSchema200ApplicationJson extends SpeakeasyBase {
-    success?: boolean;
-}
-export declare class SyncRelationsWithSchema400ApplicationJsonError extends SpeakeasyBase {
+export declare class SyncRelationsWithSchema400ApplicationJSONError extends SpeakeasyBase {
     message?: string;
     name?: string;
 }
-export declare class SyncRelationsWithSchema400ApplicationJson extends SpeakeasyBase {
-    error?: SyncRelationsWithSchema400ApplicationJsonError;
+/**
+ * Failed to sync
+ */
+export declare class SyncRelationsWithSchema400ApplicationJSON extends SpeakeasyBase {
+    error?: SyncRelationsWithSchema400ApplicationJSONError;
 }
-export declare class SyncRelationsWithSchemaRequest extends SpeakeasyBase {
-    pathParams: SyncRelationsWithSchemaPathParams;
+/**
+ * Successful sync
+ */
+export declare class SyncRelationsWithSchema200ApplicationJSON extends SpeakeasyBase {
+    success?: boolean;
 }
 export declare class SyncRelationsWithSchemaResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    syncRelationsWithSchema200ApplicationJSONObject?: SyncRelationsWithSchema200ApplicationJson;
-    syncRelationsWithSchema400ApplicationJSONObject?: SyncRelationsWithSchema400ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful sync
+     */
+    syncRelationsWithSchema200ApplicationJSONObject?: SyncRelationsWithSchema200ApplicationJSON;
+    /**
+     * Failed to sync
+     */
+    syncRelationsWithSchema400ApplicationJSONObject?: SyncRelationsWithSchema400ApplicationJSON;
 }

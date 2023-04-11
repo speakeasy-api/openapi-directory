@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDefineSuggesterActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDefineSuggesterActionEnum {
     DefineSuggester = "DefineSuggester"
 }
-export declare enum PostDefineSuggesterVersionEnum {
+export declare enum POSTDefineSuggesterVersionEnum {
     TwoThousandAndThirteen0101 = "2013-01-01"
 }
-export declare class PostDefineSuggesterQueryParams extends SpeakeasyBase {
-    action: PostDefineSuggesterActionEnum;
-    version: PostDefineSuggesterVersionEnum;
-}
-export declare class PostDefineSuggesterHeaders extends SpeakeasyBase {
+export declare class POSTDefineSuggesterRequest extends SpeakeasyBase {
+    action: POSTDefineSuggesterActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDefineSuggesterVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDefineSuggesterHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDefineSuggesterRequest extends SpeakeasyBase {
-    queryParams: PostDefineSuggesterQueryParams;
-    headers: PostDefineSuggesterHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDefineSuggesterResponse extends SpeakeasyBase {
+export declare class POSTDefineSuggesterResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

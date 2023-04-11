@@ -1,6 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AppointmentsListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class AppointmentsListSecurity extends SpeakeasyBase {
+    drchronoOauth2: string;
+}
+export declare class AppointmentsListRequest extends SpeakeasyBase {
     cursor?: string;
     date?: string;
     dateRange?: string;
@@ -11,23 +15,29 @@ export declare class AppointmentsListQueryParams extends SpeakeasyBase {
     since?: string;
     status?: string;
 }
-export declare class AppointmentsListSecurity extends SpeakeasyBase {
-    drchronoOauth2: shared.SchemeDrchronoOauth2;
-}
 /**
  * Paginated Result
-**/
-export declare class AppointmentsList200ApplicationJson extends SpeakeasyBase {
+ */
+export declare class AppointmentsList200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * result data
+     */
     data?: shared.Appointment[];
+    /**
+     * Next Paginated page
+     */
     next?: string;
+    /**
+     * Previous paginated page
+     */
     previous?: string;
-}
-export declare class AppointmentsListRequest extends SpeakeasyBase {
-    queryParams: AppointmentsListQueryParams;
-    security: AppointmentsListSecurity;
 }
 export declare class AppointmentsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    appointmentsList200ApplicationJSONObject?: AppointmentsList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
+    appointmentsList200ApplicationJSONObject?: AppointmentsList200ApplicationJSON;
 }

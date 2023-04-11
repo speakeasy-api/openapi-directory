@@ -13,7 +13,6 @@ export * from "./entity";
 export * from "./entitymention";
 export * from "./features";
 export * from "./partofspeech";
-export * from "./security";
 export * from "./sentence";
 export * from "./sentiment";
 export * from "./textspan";

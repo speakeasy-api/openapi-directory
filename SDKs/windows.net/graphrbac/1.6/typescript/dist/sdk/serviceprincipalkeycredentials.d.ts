@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class ServicePrincipalKeyCredentials {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,11 +9,11 @@ export declare class ServicePrincipalKeyCredentials {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * servicePrincipalsListKeyCredentials - Get the keyCredentials associated with the specified service principal.
-    **/
+     * Get the keyCredentials associated with the specified service principal.
+     */
     servicePrincipalsListKeyCredentials(req: operations.ServicePrincipalsListKeyCredentialsRequest, config?: AxiosRequestConfig): Promise<operations.ServicePrincipalsListKeyCredentialsResponse>;
     /**
-     * servicePrincipalsUpdateKeyCredentials - Update the keyCredentials associated with a service principal.
-    **/
+     * Update the keyCredentials associated with a service principal.
+     */
     servicePrincipalsUpdateKeyCredentials(req: operations.ServicePrincipalsUpdateKeyCredentialsRequest, config?: AxiosRequestConfig): Promise<operations.ServicePrincipalsUpdateKeyCredentialsResponse>;
 }

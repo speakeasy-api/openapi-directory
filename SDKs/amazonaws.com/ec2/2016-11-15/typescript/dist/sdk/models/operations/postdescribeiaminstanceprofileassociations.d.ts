@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeIamInstanceProfileAssociationsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeIamInstanceProfileAssociationsActionEnum {
     DescribeIamInstanceProfileAssociations = "DescribeIamInstanceProfileAssociations"
 }
-export declare enum PostDescribeIamInstanceProfileAssociationsVersionEnum {
+export declare enum POSTDescribeIamInstanceProfileAssociationsVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDescribeIamInstanceProfileAssociationsQueryParams extends SpeakeasyBase {
-    action: PostDescribeIamInstanceProfileAssociationsActionEnum;
+export declare class POSTDescribeIamInstanceProfileAssociationsRequest extends SpeakeasyBase {
+    action: POSTDescribeIamInstanceProfileAssociationsActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostDescribeIamInstanceProfileAssociationsVersionEnum;
-}
-export declare class PostDescribeIamInstanceProfileAssociationsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeIamInstanceProfileAssociationsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeIamInstanceProfileAssociationsHeaders extends S
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeIamInstanceProfileAssociationsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeIamInstanceProfileAssociationsQueryParams;
-    headers: PostDescribeIamInstanceProfileAssociationsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeIamInstanceProfileAssociationsResponse extends SpeakeasyBase {
+export declare class POSTDescribeIamInstanceProfileAssociationsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

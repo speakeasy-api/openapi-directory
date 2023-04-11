@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ResourceTypeEnum } from "./resourcetypeenum";
 import { FindingStatusEnum } from "./findingstatusenum";
+import { ResourceTypeEnum } from "./resourcetypeenum";
 /**
  * Contains details about the analyzed resource.
-**/
+ */
 export declare class AnalyzedResource extends SpeakeasyBase {
     actions?: string[];
     analyzedAt: Date;

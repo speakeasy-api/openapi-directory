@@ -1,20 +1,34 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DownloadTranslatedDocumentForLanguagePathParams extends SpeakeasyBase {
-    documentId: number;
-    language: string;
-    projectId: number;
-}
-export declare class DownloadTranslatedDocumentForLanguageQueryParams extends SpeakeasyBase {
-    certified?: boolean;
-}
+import { AxiosResponse } from "axios";
 export declare class DownloadTranslatedDocumentForLanguageRequest extends SpeakeasyBase {
-    pathParams: DownloadTranslatedDocumentForLanguagePathParams;
-    queryParams: DownloadTranslatedDocumentForLanguageQueryParams;
+    /**
+     * Download certified translation
+     */
+    certified?: boolean;
+    /**
+     * Document ID
+     */
+    documentId: number;
+    /**
+     * Target language code.
+     */
+    language: string;
+    /**
+     * Project ID
+     */
+    projectId: number;
 }
 export declare class DownloadTranslatedDocumentForLanguageResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * DocumentNotFound
+     */
     error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * File
+     */
     downloadTranslatedDocumentForLanguage200ApplicationOctetStreamBinaryString?: Uint8Array;
 }

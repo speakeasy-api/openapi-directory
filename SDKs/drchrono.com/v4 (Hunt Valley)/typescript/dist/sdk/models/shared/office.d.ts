@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Two-letter country code
+ */
 export declare enum OfficeCountryEnum {
     Unknown = "",
     Af = "AF",
@@ -254,10 +257,22 @@ export declare enum OfficeCountryEnum {
     Zw = "ZW"
 }
 export declare class OfficeOfficeOnlineHours extends SpeakeasyBase {
+    /**
+     * `0`(Monday), ..., `6`(Sunday)
+     */
     day?: number;
+    /**
+     * From `0` to `23`
+     */
     hour?: number;
+    /**
+     * One of `0`, `15`, `30` or `45`
+     */
     minute?: number;
 }
+/**
+ * Two-letter abbreviation
+ */
 export declare enum OfficeStateEnum {
     Al = "AL",
     Ak = "AK",
@@ -319,22 +334,52 @@ export declare enum OfficeStateEnum {
     Wi = "WI",
     Wy = "WY"
 }
+/**
+ * OK
+ */
 export declare class Office extends SpeakeasyBase {
     address?: string;
+    /**
+     * Indicates that the object has been soft-deleted and should not be used
+     */
     archived?: boolean;
     city?: string;
+    /**
+     * Two-letter country code
+     */
     country?: OfficeCountryEnum;
+    /**
+     * ID of the doctor who owns the office
+     */
     doctor?: string;
+    /**
+     * Truncated to the hour. Default is `24:00`
+     */
     endTime?: string;
     examRooms?: string;
     faxNumber?: string;
     id?: number;
     name?: string;
+    /**
+     * Default is `false`
+     */
     onlineScheduling?: boolean;
+    /**
+     * Array of timslots
+     */
     onlineTimeslots?: OfficeOfficeOnlineHours[];
     phoneNumber?: string;
+    /**
+     * Truncated to the hour. Default is `00:00:00`
+     */
     startTime?: string;
+    /**
+     * Two-letter abbreviation
+     */
     state?: OfficeStateEnum;
+    /**
+     * Billing Tax ID #
+     */
     taxIdNumberProfessional?: string;
     zipCode?: string;
 }

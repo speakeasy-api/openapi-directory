@@ -1,4 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { SeverityLevel } from "./severitylevel";
+/**
+ * Success
+ */
 export declare class GetCustomDataIdentifierResponse extends SpeakeasyBase {
     arn?: string;
     createdAt?: Date;
@@ -10,5 +14,6 @@ export declare class GetCustomDataIdentifierResponse extends SpeakeasyBase {
     maximumMatchDistance?: number;
     name?: string;
     regex?: string;
+    severityLevels?: SeverityLevel[];
     tags?: Record<string, string>;
 }

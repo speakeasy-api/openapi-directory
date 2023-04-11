@@ -1,18 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbClusterRoles } from "./dbclusterroles";
-import { DbClusterMemberList } from "./dbclustermemberlist";
+import { DBClusterMemberList } from "./dbclustermemberlist";
+import { DBClusterRoles } from "./dbclusterroles";
 import { VpcSecurityGroupMembershipList } from "./vpcsecuritygroupmembershiplist";
 /**
  * Detailed information about a cluster.
-**/
-export declare class DbCluster extends SpeakeasyBase {
-    associatedRoles?: DbClusterRoles[];
-    availabilityZones?: Record<string, any>[];
+ */
+export declare class DBCluster extends SpeakeasyBase {
+    associatedRoles?: DBClusterRoles[];
+    availabilityZones?: string[];
     backupRetentionPeriod?: number;
+    cloneGroupId?: string;
     clusterCreateTime?: Date;
     dbClusterArn?: string;
     dbClusterIdentifier?: string;
-    dbClusterMembers?: DbClusterMemberList[];
+    dbClusterMembers?: DBClusterMemberList[];
     dbClusterParameterGroup?: string;
     dbSubnetGroup?: string;
     dbClusterResourceId?: string;
@@ -31,7 +32,7 @@ export declare class DbCluster extends SpeakeasyBase {
     port?: number;
     preferredBackupWindow?: string;
     preferredMaintenanceWindow?: string;
-    readReplicaIdentifiers?: Record<string, any>[];
+    readReplicaIdentifiers?: string[];
     readerEndpoint?: string;
     replicationSourceIdentifier?: string;
     status?: string;

@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Asset {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,21 +9,24 @@ export declare class Asset {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getAsset - Asset Detail
+     * Asset Detail
      *
+     * @remarks
      * Return the content of the selected asset.
-    **/
-    getAsset(req: operations.GetAssetRequest, config?: AxiosRequestConfig): Promise<operations.GetAssetResponse>;
+     */
+    getAsset(req: operations.GetAssetRequest, security: operations.GetAssetSecurity, config?: AxiosRequestConfig): Promise<operations.GetAssetResponse>;
     /**
-     * getAssetContributors - Asset Contributors
+     * Asset Contributors
      *
+     * @remarks
      * Return the contributors of the selected asset.
-    **/
-    getAssetContributors(req: operations.GetAssetContributorsRequest, config?: AxiosRequestConfig): Promise<operations.GetAssetContributorsResponse>;
+     */
+    getAssetContributors(req: operations.GetAssetContributorsRequest, security: operations.GetAssetContributorsSecurity, config?: AxiosRequestConfig): Promise<operations.GetAssetContributorsResponse>;
     /**
-     * listAssets - Asset Collection
+     * Asset Collection
      *
+     * @remarks
      * Return a collection of Assets.
-    **/
-    listAssets(req: operations.ListAssetsRequest, config?: AxiosRequestConfig): Promise<operations.ListAssetsResponse>;
+     */
+    listAssets(req: operations.ListAssetsRequest, security: operations.ListAssetsSecurity, config?: AxiosRequestConfig): Promise<operations.ListAssetsResponse>;
 }

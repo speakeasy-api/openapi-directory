@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SchedulePathParams extends SpeakeasyBase {
-    format: string;
-    season: string;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class ScheduleRequest extends SpeakeasyBase {
-    pathParams: SchedulePathParams;
+    /**
+     * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+     */
+    format: string;
+    /**
+     * Year of the season (with optional season type).<br>Examples: <code>2018</code>, <code>2018PRE</code>, <code>2018POST</code>, <code>2018STAR</code>, <code>2019</code>, etc.
+     */
+    season: string;
 }
 export declare class ScheduleResponse extends SpeakeasyBase {
     contentType: string;
-    schedules?: any[];
+    schedules?: shared.Schedule[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

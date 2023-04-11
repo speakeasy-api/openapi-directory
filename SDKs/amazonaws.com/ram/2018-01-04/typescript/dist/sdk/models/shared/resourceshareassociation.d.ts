@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ResourceShareAssociationTypeEnum } from "./resourceshareassociationtypeenum";
 import { ResourceShareAssociationStatusEnum } from "./resourceshareassociationstatusenum";
+import { ResourceShareAssociationTypeEnum } from "./resourceshareassociationtypeenum";
 /**
- * Describes an association with a resource share.
-**/
+ * Describes an association with a resource share and either a principal or a resource.
+ */
 export declare class ResourceShareAssociation extends SpeakeasyBase {
     associatedEntity?: string;
     associationType?: ResourceShareAssociationTypeEnum;

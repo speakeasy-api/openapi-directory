@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeLocalGatewayVirtualInterfaceGroupsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeLocalGatewayVirtualInterfaceGroupsActionEnum {
     DescribeLocalGatewayVirtualInterfaceGroups = "DescribeLocalGatewayVirtualInterfaceGroups"
 }
-export declare enum PostDescribeLocalGatewayVirtualInterfaceGroupsVersionEnum {
+export declare enum POSTDescribeLocalGatewayVirtualInterfaceGroupsVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDescribeLocalGatewayVirtualInterfaceGroupsQueryParams extends SpeakeasyBase {
-    action: PostDescribeLocalGatewayVirtualInterfaceGroupsActionEnum;
+export declare class POSTDescribeLocalGatewayVirtualInterfaceGroupsRequest extends SpeakeasyBase {
+    action: POSTDescribeLocalGatewayVirtualInterfaceGroupsActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostDescribeLocalGatewayVirtualInterfaceGroupsVersionEnum;
-}
-export declare class PostDescribeLocalGatewayVirtualInterfaceGroupsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeLocalGatewayVirtualInterfaceGroupsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeLocalGatewayVirtualInterfaceGroupsHeaders exten
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeLocalGatewayVirtualInterfaceGroupsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeLocalGatewayVirtualInterfaceGroupsQueryParams;
-    headers: PostDescribeLocalGatewayVirtualInterfaceGroupsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeLocalGatewayVirtualInterfaceGroupsResponse extends SpeakeasyBase {
+export declare class POSTDescribeLocalGatewayVirtualInterfaceGroupsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetStopActivityStreamActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETStopActivityStreamActionEnum {
     StopActivityStream = "StopActivityStream"
 }
-export declare enum GetStopActivityStreamVersionEnum {
+export declare enum GETStopActivityStreamVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class GetStopActivityStreamQueryParams extends SpeakeasyBase {
-    action: GetStopActivityStreamActionEnum;
+export declare class GETStopActivityStreamRequest extends SpeakeasyBase {
+    action: GETStopActivityStreamActionEnum;
+    /**
+     * Specifies whether or not the database activity stream is to stop as soon as possible, regardless of the maintenance window for the database.
+     */
     applyImmediately?: boolean;
+    /**
+     * The Amazon Resource Name (ARN) of the DB cluster for the database activity stream. For example, <code>arn:aws:rds:us-east-1:12345667890:cluster:das-cluster</code>.
+     */
     resourceArn: string;
-    version: GetStopActivityStreamVersionEnum;
-}
-export declare class GetStopActivityStreamHeaders extends SpeakeasyBase {
+    version: GETStopActivityStreamVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetStopActivityStreamHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetStopActivityStreamRequest extends SpeakeasyBase {
-    queryParams: GetStopActivityStreamQueryParams;
-    headers: GetStopActivityStreamHeaders;
-}
-export declare class GetStopActivityStreamResponse extends SpeakeasyBase {
+export declare class GETStopActivityStreamResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

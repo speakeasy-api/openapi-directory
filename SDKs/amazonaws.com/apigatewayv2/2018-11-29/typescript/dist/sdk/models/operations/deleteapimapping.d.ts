@@ -1,9 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteApiMappingPathParams extends SpeakeasyBase {
-    apiMappingId: string;
-    domainName: string;
-}
-export declare class DeleteApiMappingHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteApiMappingRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,15 +8,29 @@ export declare class DeleteApiMappingHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DeleteApiMappingRequest extends SpeakeasyBase {
-    pathParams: DeleteApiMappingPathParams;
-    headers: DeleteApiMappingHeaders;
+    /**
+     * The API mapping identifier.
+     */
+    apiMappingId: string;
+    /**
+     * The domain name.
+     */
+    domainName: string;
 }
 export declare class DeleteApiMappingResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

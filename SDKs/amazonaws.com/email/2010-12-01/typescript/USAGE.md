@@ -1,36 +1,35 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetCloneReceiptRuleSetRequest, GetCloneReceiptRuleSetResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GETCloneReceiptRuleSetRequest,
+  GETCloneReceiptRuleSetResponse,
+  GETCloneReceiptRuleSetActionEnum,
+  GETCloneReceiptRuleSetVersionEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: GetCloneReceiptRuleSetRequest = {
-  queryParams: {
-    action: "CloneReceiptRuleSet",
-    originalRuleSetName: "voluptas",
-    ruleSetName: "culpa",
-    version: "2010-12-01",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  headers: {
-    xAmzAlgorithm: "consequuntur",
-    xAmzContentSha256: "dolor",
-    xAmzCredential: "expedita",
-    xAmzDate: "voluptas",
-    xAmzSecurityToken: "fugit",
-    xAmzSignature: "et",
-    xAmzSignedHeaders: "nihil",
-  },
+});
+
+const req: GETCloneReceiptRuleSetRequest = {
+  action: GETCloneReceiptRuleSetActionEnum.CloneReceiptRuleSet,
+  originalRuleSetName: "corrupti",
+  ruleSetName: "provident",
+  version: GETCloneReceiptRuleSetVersionEnum.TwoThousandAndTen1201,
+  xAmzAlgorithm: "distinctio",
+  xAmzContentSha256: "quibusdam",
+  xAmzCredential: "unde",
+  xAmzDate: "nulla",
+  xAmzSecurityToken: "corrupti",
+  xAmzSignature: "illum",
+  xAmzSignedHeaders: "vel",
 };
 
-sdk.getCloneReceiptRuleSet(req).then((res: GetCloneReceiptRuleSetResponse | AxiosError) => {
+sdk.getCloneReceiptRuleSet(req).then((res: GETCloneReceiptRuleSetResponse | AxiosError) => {
    // handle response
 });
 ```

@@ -1,38 +1,44 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { ChromeuxreportRecordsQueryRecordRequest, ChromeuxreportRecordsQueryRecordResponse } from "openapi/src/sdk/models/operations";
+import {
+  ChromeuxreportRecordsQueryHistoryRecordRequest,
+  ChromeuxreportRecordsQueryHistoryRecordResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  QueryHistoryRequestFormFactorEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: ChromeuxreportRecordsQueryRecordRequest = {
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "voluptas",
-    alt: "media",
-    callback: "expedita",
-    fields: "consequuntur",
-    key: "dolor",
-    oauthToken: "expedita",
-    prettyPrint: true,
-    quotaUser: "fugit",
-    uploadType: "et",
-    uploadProtocol: "nihil",
-  },
-  request: {
-    effectiveConnectionType: "rerum",
-    formFactor: "TABLET",
+
+const req: ChromeuxreportRecordsQueryHistoryRecordRequest = {
+  dollarXgafv: XgafvEnum.Two,
+  queryHistoryRequest: {
+    formFactor: QueryHistoryRequestFormFactorEnum.Desktop,
     metrics: [
-      "voluptatum",
+      "quibusdam",
+      "unde",
+      "nulla",
     ],
-    origin: "et",
-    url: "ut",
+    origin: "corrupti",
+    url: "illum",
   },
+  accessToken: "vel",
+  alt: AltEnum.Media,
+  callback: "deserunt",
+  fields: "suscipit",
+  key: "iure",
+  oauthToken: "magnam",
+  prettyPrint: false,
+  quotaUser: "debitis",
+  uploadType: "ipsa",
+  uploadProtocol: "delectus",
 };
 
-sdk.records.chromeuxreportRecordsQueryRecord(req).then((res: ChromeuxreportRecordsQueryRecordResponse | AxiosError) => {
+sdk.records.chromeuxreportRecordsQueryHistoryRecord(req).then((res: ChromeuxreportRecordsQueryHistoryRecordResponse | AxiosError) => {
    // handle response
 });
 ```

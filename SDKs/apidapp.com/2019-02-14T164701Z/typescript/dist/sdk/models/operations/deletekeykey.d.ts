@@ -1,12 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteKeyKeyPathParams extends SpeakeasyBase {
-    key: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteKeyKeyRequest extends SpeakeasyBase {
-    pathParams: DeleteKeyKeyPathParams;
+    key: string;
 }
 export declare class DeleteKeyKeyResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * 200 response
+     */
     empty?: Record<string, any>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

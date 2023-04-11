@@ -1,17 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetOrderTaskPathParams extends SpeakeasyBase {
-    taskId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetOrderTaskSecurity extends SpeakeasyBase {
-    apiAuth: shared.SchemeApiAuth;
+    apiAuth: string;
 }
 export declare class GetOrderTaskRequest extends SpeakeasyBase {
-    pathParams: GetOrderTaskPathParams;
-    security: GetOrderTaskSecurity;
+    /**
+     * The ID of the task. This ID is generated when the task was created by the <b> createOrderTask</b> method.
+     */
+    taskId: string;
 }
 export declare class GetOrderTaskResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     orderTask?: shared.OrderTask;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

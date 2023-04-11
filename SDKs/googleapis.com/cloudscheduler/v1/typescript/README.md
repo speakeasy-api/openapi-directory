@@ -6,120 +6,134 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/cloudscheduler/v1/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/cloudscheduler/v1/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CloudschedulerProjectsLocationsJobsCreateRequest, CloudschedulerProjectsLocationsJobsCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  CloudschedulerProjectsLocationsJobsCreateRequest,
+  CloudschedulerProjectsLocationsJobsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  JobStateEnum,
+  HttpTargetHttpMethodEnum,
+  AppEngineHttpTargetHttpMethodEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: CloudschedulerProjectsLocationsJobsCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  job: {
     appEngineHttpTarget: {
       appEngineRouting: {
-        host: "dicta",
-        instance: "debitis",
-        service: "voluptatum",
-        version: "et",
+        host: "provident",
+        instance: "distinctio",
+        service: "quibusdam",
+        version: "unde",
       },
-      body: "ut",
+      body: "nulla",
       headers: {
-        "et": "voluptate",
-        "iste": "vitae",
-        "totam": "dolores",
+        "illum": "vel",
+        "error": "deserunt",
+        "suscipit": "iure",
       },
-      httpMethod: "POST",
+      httpMethod: AppEngineHttpTargetHttpMethodEnum.Get,
       relativeUri: "debitis",
     },
-    attemptDeadline: "vel",
-    description: "odio",
+    attemptDeadline: "ipsa",
+    description: "delectus",
     httpTarget: {
-      body: "dolore",
+      body: "tempora",
       headers: {
-        "aspernatur": "accusantium",
-        "totam": "commodi",
+        "molestiae": "minus",
+        "placeat": "voluptatum",
       },
-      httpMethod: "PATCH",
+      httpMethod: HttpTargetHttpMethodEnum.Head,
       oauthToken: {
-        scope: "est",
-        serviceAccountEmail: "aut",
+        scope: "excepturi",
+        serviceAccountEmail: "nisi",
       },
       oidcToken: {
-        audience: "odit",
-        serviceAccountEmail: "non",
+        audience: "recusandae",
+        serviceAccountEmail: "temporibus",
       },
-      uri: "voluptas",
+      uri: "http://gloomy-blanket.name",
     },
-    lastAttemptTime: "omnis",
-    name: "aut",
+    lastAttemptTime: "perferendis",
+    name: "ipsam",
     pubsubTarget: {
       attributes: {
-        "sed": "officiis",
+        "sapiente": "quo",
+        "odit": "at",
+        "at": "maiores",
+        "molestiae": "quod",
       },
-      data: "autem",
-      topicName: "consectetur",
+      data: "quod",
+      topicName: "esse",
     },
     retryConfig: {
-      maxBackoffDuration: "nobis",
-      maxDoublings: 4345851588384648695,
-      maxRetryDuration: "qui",
-      minBackoffDuration: "recusandae",
-      retryCount: 7561811714888168464,
+      maxBackoffDuration: "totam",
+      maxDoublings: 780529,
+      maxRetryDuration: "dolorum",
+      minBackoffDuration: "dicta",
+      retryCount: 720633,
     },
-    schedule: "ipsum",
-    scheduleTime: "eveniet",
-    state: "UPDATE_FAILED",
+    schedule: "officia",
+    scheduleTime: "occaecati",
+    state: JobStateEnum.StateUnspecified,
     status: {
-      code: 7338728586234333996,
+      code: 537373,
       details: [
         {
-          "exercitationem": "aut",
-          "reprehenderit": "tempore",
-          "maiores": "incidunt",
+          "totam": "beatae",
+          "commodi": "molestiae",
+          "modi": "qui",
+          "impedit": "cum",
+        },
+        {
+          "ipsum": "excepturi",
+          "aspernatur": "perferendis",
+        },
+        {
+          "natus": "sed",
+          "iste": "dolor",
+        },
+        {
+          "laboriosam": "hic",
+          "saepe": "fuga",
+          "in": "corporis",
         },
       ],
-      message: "dolor",
+      message: "iste",
     },
-    timeZone: "beatae",
-    userUpdateTime: "veritatis",
+    timeZone: "iure",
+    userUpdateTime: "saepe",
   },
+  accessToken: "quidem",
+  alt: AltEnum.Json,
+  callback: "ipsa",
+  fields: "reiciendis",
+  key: "est",
+  oauthToken: "mollitia",
+  parent: "laborum",
+  prettyPrint: false,
+  quotaUser: "dolores",
+  uploadType: "dolorem",
+  uploadProtocol: "corporis",
 };
 
 sdk.projects.cloudschedulerProjectsLocationsJobsCreate(req).then((res: CloudschedulerProjectsLocationsJobsCreateResponse | AxiosError) => {
@@ -129,7 +143,8 @@ sdk.projects.cloudschedulerProjectsLocationsJobsCreate(req).then((res: Cloudsche
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### projects
 
@@ -142,7 +157,18 @@ sdk.projects.cloudschedulerProjectsLocationsJobsCreate(req).then((res: Cloudsche
 * `cloudschedulerProjectsLocationsJobsResume` - Resume a job. This method reenables a job after it has been Job.State.PAUSED. The state of a job is stored in Job.state; after calling this method it will be set to Job.State.ENABLED. A job must be in Job.State.PAUSED to be resumed.
 * `cloudschedulerProjectsLocationsJobsRun` - Forces a job to run now. When this method is called, Cloud Scheduler will dispatch the job, even if the job is already running.
 * `cloudschedulerProjectsLocationsList` - Lists information about the supported locations for this service.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

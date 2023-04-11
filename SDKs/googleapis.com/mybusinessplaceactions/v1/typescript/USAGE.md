@@ -1,35 +1,38 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { MybusinessplaceactionsLocationsPlaceActionLinksCreateRequest, MybusinessplaceactionsLocationsPlaceActionLinksCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  MybusinessplaceactionsLocationsPlaceActionLinksCreateRequest,
+  MybusinessplaceactionsLocationsPlaceActionLinksCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  PlaceActionLinkPlaceActionTypeEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: MybusinessplaceactionsLocationsPlaceActionLinksCreateRequest = {
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  placeActionLinkInput: {
     isPreferred: false,
-    name: "debitis",
-    placeActionType: "PLACE_ACTION_TYPE_UNSPECIFIED",
-    uri: "et",
+    name: "provident",
+    placeActionType: PlaceActionLinkPlaceActionTypeEnum.FoodDelivery,
+    uri: "https://outstanding-strait.name",
   },
+  accessToken: "illum",
+  alt: AltEnum.Media,
+  callback: "error",
+  fields: "deserunt",
+  key: "suscipit",
+  oauthToken: "iure",
+  parent: "magnam",
+  prettyPrint: false,
+  quotaUser: "debitis",
+  uploadType: "ipsa",
+  uploadProtocol: "delectus",
 };
 
 sdk.locations.mybusinessplaceactionsLocationsPlaceActionLinksCreate(req).then((res: MybusinessplaceactionsLocationsPlaceActionLinksCreateResponse | AxiosError) => {

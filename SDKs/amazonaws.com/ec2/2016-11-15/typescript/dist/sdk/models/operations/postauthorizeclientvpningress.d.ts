@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostAuthorizeClientVpnIngressActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTAuthorizeClientVpnIngressActionEnum {
     AuthorizeClientVpnIngress = "AuthorizeClientVpnIngress"
 }
-export declare enum PostAuthorizeClientVpnIngressVersionEnum {
+export declare enum POSTAuthorizeClientVpnIngressVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostAuthorizeClientVpnIngressQueryParams extends SpeakeasyBase {
-    action: PostAuthorizeClientVpnIngressActionEnum;
-    version: PostAuthorizeClientVpnIngressVersionEnum;
-}
-export declare class PostAuthorizeClientVpnIngressHeaders extends SpeakeasyBase {
+export declare class POSTAuthorizeClientVpnIngressRequest extends SpeakeasyBase {
+    action: POSTAuthorizeClientVpnIngressActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTAuthorizeClientVpnIngressVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostAuthorizeClientVpnIngressHeaders extends SpeakeasyBase 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostAuthorizeClientVpnIngressRequest extends SpeakeasyBase {
-    queryParams: PostAuthorizeClientVpnIngressQueryParams;
-    headers: PostAuthorizeClientVpnIngressHeaders;
-    request?: Uint8Array;
-}
-export declare class PostAuthorizeClientVpnIngressResponse extends SpeakeasyBase {
+export declare class POSTAuthorizeClientVpnIngressResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

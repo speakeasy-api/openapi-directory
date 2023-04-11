@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class ServicePrincipalAppRoleAssignedTo {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +9,7 @@ export declare class ServicePrincipalAppRoleAssignedTo {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * servicePrincipalsListAppRoleAssignedTo - Principals (users, groups, and service principals) that are assigned to this service principal.
-    **/
+     * Principals (users, groups, and service principals) that are assigned to this service principal.
+     */
     servicePrincipalsListAppRoleAssignedTo(req: operations.ServicePrincipalsListAppRoleAssignedToRequest, config?: AxiosRequestConfig): Promise<operations.ServicePrincipalsListAppRoleAssignedToResponse>;
 }

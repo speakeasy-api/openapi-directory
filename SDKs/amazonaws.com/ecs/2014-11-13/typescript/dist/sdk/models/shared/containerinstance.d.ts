@@ -2,12 +2,13 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { AgentUpdateStatusEnum } from "./agentupdatestatusenum";
 import { Attachment } from "./attachment";
 import { Attribute } from "./attribute";
+import { ContainerInstanceHealthStatus } from "./containerinstancehealthstatus";
 import { Resource } from "./resource";
 import { Tag } from "./tag";
 import { VersionInfo } from "./versioninfo";
 /**
- * An EC2 instance that is running the Amazon ECS agent and has been registered with a cluster.
-**/
+ * An Amazon EC2 or External instance that's running the Amazon ECS agent and has been registered with a cluster.
+ */
 export declare class ContainerInstance extends SpeakeasyBase {
     agentConnected?: boolean;
     agentUpdateStatus?: AgentUpdateStatusEnum;
@@ -16,6 +17,7 @@ export declare class ContainerInstance extends SpeakeasyBase {
     capacityProviderName?: string;
     containerInstanceArn?: string;
     ec2InstanceId?: string;
+    healthStatus?: ContainerInstanceHealthStatus;
     pendingTasksCount?: number;
     registeredAt?: Date;
     registeredResources?: Resource[];

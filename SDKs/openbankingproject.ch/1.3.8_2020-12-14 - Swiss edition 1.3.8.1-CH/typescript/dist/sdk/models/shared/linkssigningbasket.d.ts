@@ -2,6 +2,8 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { HrefType } from "./hreftype";
 /**
  * A list of hyperlinks to be recognised by the TPP. The actual hyperlinks used in the
+ *
+ * @remarks
  * response depend on the dynamical decisions of the ASPSP when processing the request.
  *
  * Remark: All links can be relative or full links, to be decided by the ASPSP.
@@ -45,17 +47,50 @@ import { HrefType } from "./hreftype";
  *     The link to retrieve the scaStatus of the corresponding authorisation sub-resource.
  *     This link is only contained, if an authorisation sub-resource has been already created.
  *
-**/
+ */
 export declare class LinksSigningBasket extends SpeakeasyBase {
+    /**
+     * Link to a resource.
+     */
     scaOAuth?: HrefType;
+    /**
+     * Link to a resource.
+     */
     scaRedirect?: HrefType;
+    /**
+     * Link to a resource.
+     */
     scaStatus?: HrefType;
+    /**
+     * Link to a resource.
+     */
     self?: HrefType;
+    /**
+     * Link to a resource.
+     */
     startAuthorisation?: HrefType;
+    /**
+     * Link to a resource.
+     */
     startAuthorisationWithAuthenticationMethodSelection?: HrefType;
+    /**
+     * Link to a resource.
+     */
     startAuthorisationWithEncryptedPsuAuthentication?: HrefType;
+    /**
+     * Link to a resource.
+     */
     startAuthorisationWithPsuAuthentication?: HrefType;
+    /**
+     * Link to a resource.
+     */
     startAuthorisationWithPsuIdentification?: HrefType;
+    /**
+     * Link to a resource.
+     */
     startAuthorisationWithTransactionAuthorisation?: HrefType;
+    /**
+     * Link to a resource.
+     */
     status?: HrefType;
 }

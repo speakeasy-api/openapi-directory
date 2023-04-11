@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDisassociateTransitGatewayRouteTableActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDisassociateTransitGatewayRouteTableActionEnum {
     DisassociateTransitGatewayRouteTable = "DisassociateTransitGatewayRouteTable"
 }
-export declare enum PostDisassociateTransitGatewayRouteTableVersionEnum {
+export declare enum POSTDisassociateTransitGatewayRouteTableVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDisassociateTransitGatewayRouteTableQueryParams extends SpeakeasyBase {
-    action: PostDisassociateTransitGatewayRouteTableActionEnum;
-    version: PostDisassociateTransitGatewayRouteTableVersionEnum;
-}
-export declare class PostDisassociateTransitGatewayRouteTableHeaders extends SpeakeasyBase {
+export declare class POSTDisassociateTransitGatewayRouteTableRequest extends SpeakeasyBase {
+    action: POSTDisassociateTransitGatewayRouteTableActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDisassociateTransitGatewayRouteTableVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDisassociateTransitGatewayRouteTableHeaders extends Spe
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDisassociateTransitGatewayRouteTableRequest extends SpeakeasyBase {
-    queryParams: PostDisassociateTransitGatewayRouteTableQueryParams;
-    headers: PostDisassociateTransitGatewayRouteTableHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDisassociateTransitGatewayRouteTableResponse extends SpeakeasyBase {
+export declare class POSTDisassociateTransitGatewayRouteTableResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

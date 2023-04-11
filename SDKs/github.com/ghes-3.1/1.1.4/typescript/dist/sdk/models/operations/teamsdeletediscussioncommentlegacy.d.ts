@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class TeamsDeleteDiscussionCommentLegacyPathParams extends SpeakeasyBase {
-    commentNumber: number;
-    discussionNumber: number;
-    teamId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class TeamsDeleteDiscussionCommentLegacyRequest extends SpeakeasyBase {
-    pathParams: TeamsDeleteDiscussionCommentLegacyPathParams;
+    /**
+     * The number that identifies the comment.
+     */
+    commentNumber: number;
+    /**
+     * The number that identifies the discussion.
+     */
+    discussionNumber: number;
+    /**
+     * The unique identifier of the team.
+     */
+    teamId: number;
 }
 export declare class TeamsDeleteDiscussionCommentLegacyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

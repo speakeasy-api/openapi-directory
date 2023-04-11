@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateDbInstanceReadReplicaActionEnum {
-    CreateDbInstanceReadReplica = "CreateDBInstanceReadReplica"
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateDBInstanceReadReplicaActionEnum {
+    CreateDBInstanceReadReplica = "CreateDBInstanceReadReplica"
 }
-export declare enum PostCreateDbInstanceReadReplicaVersionEnum {
+export declare enum POSTCreateDBInstanceReadReplicaVersionEnum {
     TwoThousandAndThirteen0909 = "2013-09-09"
 }
-export declare class PostCreateDbInstanceReadReplicaQueryParams extends SpeakeasyBase {
-    action: PostCreateDbInstanceReadReplicaActionEnum;
-    version: PostCreateDbInstanceReadReplicaVersionEnum;
-}
-export declare class PostCreateDbInstanceReadReplicaHeaders extends SpeakeasyBase {
+export declare class POSTCreateDBInstanceReadReplicaRequest extends SpeakeasyBase {
+    action: POSTCreateDBInstanceReadReplicaActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateDBInstanceReadReplicaVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateDbInstanceReadReplicaHeaders extends SpeakeasyBas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateDbInstanceReadReplicaRequest extends SpeakeasyBase {
-    queryParams: PostCreateDbInstanceReadReplicaQueryParams;
-    headers: PostCreateDbInstanceReadReplicaHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateDbInstanceReadReplicaResponse extends SpeakeasyBase {
+export declare class POSTCreateDBInstanceReadReplicaResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

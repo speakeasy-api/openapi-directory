@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteOptionGroupActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteOptionGroupActionEnum {
     DeleteOptionGroup = "DeleteOptionGroup"
 }
-export declare enum GetDeleteOptionGroupVersionEnum {
+export declare enum GETDeleteOptionGroupVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class GetDeleteOptionGroupQueryParams extends SpeakeasyBase {
-    action: GetDeleteOptionGroupActionEnum;
+export declare class GETDeleteOptionGroupRequest extends SpeakeasyBase {
+    action: GETDeleteOptionGroupActionEnum;
+    /**
+     * <p>The name of the option group to be deleted.</p> <note> <p>You can't delete default option groups.</p> </note>
+     */
     optionGroupName: string;
-    version: GetDeleteOptionGroupVersionEnum;
-}
-export declare class GetDeleteOptionGroupHeaders extends SpeakeasyBase {
+    version: GETDeleteOptionGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDeleteOptionGroupHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteOptionGroupRequest extends SpeakeasyBase {
-    queryParams: GetDeleteOptionGroupQueryParams;
-    headers: GetDeleteOptionGroupHeaders;
-}
-export declare class GetDeleteOptionGroupResponse extends SpeakeasyBase {
+export declare class GETDeleteOptionGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

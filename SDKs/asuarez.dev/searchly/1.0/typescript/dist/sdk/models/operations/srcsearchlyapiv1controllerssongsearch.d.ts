@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class SrcSearchlyApiV1ControllersSongSearchQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class SrcSearchlyApiV1ControllersSongSearchRequest extends SpeakeasyBase {
+    /**
+     * Query.
+     */
     query: string;
 }
-export declare class SrcSearchlyApiV1ControllersSongSearchRequest extends SpeakeasyBase {
-    queryParams: SrcSearchlyApiV1ControllersSongSearchQueryParams;
-}
 export declare class SrcSearchlyApiV1ControllersSongSearchResponse extends SpeakeasyBase {
-    apiResponseSong?: shared.ApiResponseSong;
+    /**
+     * Standard SearchLy API v1 JSON response. You should check the `error` attribute to determine if there was an error.
+     */
+    apiResponseSong?: shared.APIResponseSong;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Unexpected error.
+     */
     srcSearchlyApiV1ControllersSongSearchDefaultApplicationTextString?: string;
 }

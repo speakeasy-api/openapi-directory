@@ -1,78 +1,82 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { WorkloadmanagerProjectsLocationsEvaluationsCreateRequest, WorkloadmanagerProjectsLocationsEvaluationsCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  WorkloadmanagerProjectsLocationsEvaluationsCreateRequest,
+  WorkloadmanagerProjectsLocationsEvaluationsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  ResourceStatusStateEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: WorkloadmanagerProjectsLocationsEvaluationsCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    evaluationId: "dolor",
-    fields: "expedita",
-    key: "voluptas",
-    oauthToken: "fugit",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    requestId: "rerum",
-    uploadType: "dicta",
-    uploadProtocol: "debitis",
-  },
-  request: {
-    description: "voluptatum",
+  dollarXgafv: XgafvEnum.Two,
+  evaluationInput: {
+    description: "provident",
     labels: {
-      "ut": "dolorem",
+      "quibusdam": "unde",
+      "nulla": "corrupti",
+      "illum": "vel",
     },
-    name: "et",
+    name: "error",
     resourceFilter: {
       gceInstanceFilter: {
         serviceAccounts: [
-          "iste",
+          "suscipit",
+          "iure",
+          "magnam",
         ],
       },
       inclusionLabels: {
-        "totam": "dolores",
+        "ipsa": "delectus",
+        "tempora": "suscipit",
+        "molestiae": "minus",
+        "placeat": "voluptatum",
       },
       resourceIdPatterns: [
-        "debitis",
-        "vel",
-        "odio",
+        "excepturi",
+        "nisi",
       ],
       scopes: [
-        "id",
-        "aspernatur",
+        "temporibus",
+        "ab",
+        "quis",
+        "veritatis",
       ],
     },
     resourceStatus: {
       rulesNewerVersions: [
-        "totam",
-        "commodi",
-        "quis",
+        "perferendis",
+        "ipsam",
+        "repellendus",
       ],
-      state: "CREATING",
+      state: ResourceStatusStateEnum.Deleting,
     },
     ruleNames: [
       "odit",
-      "non",
-      "voluptas",
+      "at",
+      "at",
+      "maiores",
     ],
   },
+  accessToken: "molestiae",
+  alt: AltEnum.Proto,
+  callback: "quod",
+  evaluationId: "esse",
+  fields: "totam",
+  key: "porro",
+  oauthToken: "dolorum",
+  parent: "dicta",
+  prettyPrint: false,
+  quotaUser: "nam",
+  requestId: "officia",
+  uploadType: "occaecati",
+  uploadProtocol: "fugit",
 };
 
 sdk.projects.workloadmanagerProjectsLocationsEvaluationsCreate(req).then((res: WorkloadmanagerProjectsLocationsEvaluationsCreateResponse | AxiosError) => {

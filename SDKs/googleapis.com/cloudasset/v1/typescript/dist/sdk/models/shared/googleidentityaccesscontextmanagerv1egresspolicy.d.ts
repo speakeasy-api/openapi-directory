@@ -1,0 +1,16 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { GoogleIdentityAccesscontextmanagerV1EgressFrom } from "./googleidentityaccesscontextmanagerv1egressfrom";
+import { GoogleIdentityAccesscontextmanagerV1EgressTo } from "./googleidentityaccesscontextmanagerv1egressto";
+/**
+ * Policy for egress from perimeter. EgressPolicies match requests based on `egress_from` and `egress_to` stanzas. For an EgressPolicy to match, both `egress_from` and `egress_to` stanzas must be matched. If an EgressPolicy matches a request, the request is allowed to span the ServicePerimeter boundary. For example, an EgressPolicy can be used to allow VMs on networks within the ServicePerimeter to access a defined set of projects outside the perimeter in certain contexts (e.g. to read data from a Cloud Storage bucket or query against a BigQuery dataset). EgressPolicies are concerned with the *resources* that a request relates as well as the API services and API actions being used. They do not related to the direction of data movement. More detailed documentation for this concept can be found in the descriptions of EgressFrom and EgressTo.
+ */
+export declare class GoogleIdentityAccesscontextmanagerV1EgressPolicy extends SpeakeasyBase {
+    /**
+     * Defines the conditions under which an EgressPolicy matches a request. Conditions based on information about the source of the request. Note that if the destination of the request is also protected by a ServicePerimeter, then that ServicePerimeter must have an IngressPolicy which allows access in order for this request to succeed.
+     */
+    egressFrom?: GoogleIdentityAccesscontextmanagerV1EgressFrom;
+    /**
+     * Defines the conditions under which an EgressPolicy matches a request. Conditions are based on information about the ApiOperation intended to be performed on the `resources` specified. Note that if the destination of the request is also protected by a ServicePerimeter, then that ServicePerimeter must have an IngressPolicy which allows access in order for this request to succeed. The request must match `operations` AND `resources` fields in order to be allowed egress out of the perimeter.
+     */
+    egressTo?: GoogleIdentityAccesscontextmanagerV1EgressTo;
+}

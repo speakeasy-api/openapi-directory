@@ -1,15 +1,32 @@
-import { AxiosInstance } from "axios";
 import { BucketAccessControls } from "./bucketaccesscontrols";
 import { Buckets } from "./buckets";
 import { Channels } from "./channels";
 import { DefaultObjectAccessControls } from "./defaultobjectaccesscontrols";
 import { ObjectAccessControls } from "./objectaccesscontrols";
 import { Objects } from "./objects";
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://storage.googleapis.com/storage/v1beta2"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * Lets you store and retrieve potentially-large, immutable data objects.
+ *
+ * @see {@link https://developers.google.com/storage/docs/json_api/}
+ */
 export declare class SDK {
     bucketAccessControls: BucketAccessControls;
     buckets: Buckets;
@@ -23,5 +40,6 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
 }

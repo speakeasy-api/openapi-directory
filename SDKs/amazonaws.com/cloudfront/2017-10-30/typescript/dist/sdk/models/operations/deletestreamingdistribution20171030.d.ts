@@ -1,8 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteStreamingDistribution20171030PathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteStreamingDistribution20171030Request extends SpeakeasyBase {
+    /**
+     * The distribution ID.
+     */
     id: string;
-}
-export declare class DeleteStreamingDistribution20171030Headers extends SpeakeasyBase {
+    /**
+     * The value of the <code>ETag</code> header that you received when you disabled the streaming distribution. For example: <code>E2QWRUHAPOMQZL</code>.
+     */
     ifMatch?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
@@ -12,12 +17,9 @@ export declare class DeleteStreamingDistribution20171030Headers extends Speakeas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeleteStreamingDistribution20171030Request extends SpeakeasyBase {
-    pathParams: DeleteStreamingDistribution20171030PathParams;
-    headers: DeleteStreamingDistribution20171030Headers;
-}
 export declare class DeleteStreamingDistribution20171030Response extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

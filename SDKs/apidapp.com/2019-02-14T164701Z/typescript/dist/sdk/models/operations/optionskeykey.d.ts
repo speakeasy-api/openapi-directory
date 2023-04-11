@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class OptionsKeyKeyPathParams extends SpeakeasyBase {
-    key: string;
-}
+import { AxiosResponse } from "axios";
 export declare class OptionsKeyKeyRequest extends SpeakeasyBase {
-    pathParams: OptionsKeyKeyPathParams;
+    /**
+     * Automatically added
+     */
+    key: string;
 }
 export declare class OptionsKeyKeyResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * 200 response
+     */
     empty?: Record<string, any>;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

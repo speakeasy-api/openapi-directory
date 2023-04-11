@@ -1,17 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { AnalysisTypeEnum } from "./analysistypeenum";
+import { ConfigFileStateEnum } from "./configfilestateenum";
+import { JobStateEnum } from "./jobstateenum";
 import { Metrics } from "./metrics";
 import { ProviderTypeEnum } from "./providertypeenum";
 import { SourceCodeType } from "./sourcecodetype";
-import { JobStateEnum } from "./jobstateenum";
 import { TypeEnum } from "./typeenum";
 /**
- *  Information about a code review. A code review belongs to the associated repository that contains the reviewed code.
-**/
+ * Information about a code review. A code review belongs to the associated repository that contains the reviewed code.
+ */
 export declare class CodeReview extends SpeakeasyBase {
     analysisTypes?: AnalysisTypeEnum[];
     associationArn?: string;
     codeReviewArn?: string;
+    configFileState?: ConfigFileStateEnum;
     createdTimeStamp?: Date;
     lastUpdatedTimeStamp?: Date;
     metrics?: Metrics;

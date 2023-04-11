@@ -1,5 +1,9 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ *
+ * @see {@link https://sms77.io/en/docs/gateway/http-api/sms-disptach} - Send one/multiple SMS
+ */
 export declare class Sms {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;

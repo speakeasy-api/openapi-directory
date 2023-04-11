@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum RegisterContainerInstanceXAmzTargetEnum {
     AmazonEc2ContainerServiceV20141113RegisterContainerInstance = "AmazonEC2ContainerServiceV20141113.RegisterContainerInstance"
 }
-export declare class RegisterContainerInstanceHeaders extends SpeakeasyBase {
+export declare class RegisterContainerInstanceRequest extends SpeakeasyBase {
+    registerContainerInstanceRequest: shared.RegisterContainerInstanceRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class RegisterContainerInstanceHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: RegisterContainerInstanceXAmzTargetEnum;
 }
-export declare class RegisterContainerInstanceRequest extends SpeakeasyBase {
-    headers: RegisterContainerInstanceHeaders;
-    request: shared.RegisterContainerInstanceRequest;
-}
 export declare class RegisterContainerInstanceResponse extends SpeakeasyBase {
+    /**
+     * ClientException
+     */
     clientException?: any;
     contentType: string;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * Success
+     */
     registerContainerInstanceResponse?: shared.RegisterContainerInstanceResponse;
+    /**
+     * ServerException
+     */
     serverException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

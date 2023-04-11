@@ -1,5 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class CustomerContracts {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,45 +10,49 @@ export declare class CustomerContracts {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createContract - Create a new contract
+     * Create a new contract
      *
+     * @remarks
      * Now you are ready to create your contract. Before that, please ensure that you check the offer with the same request parameterts. /offers
      *
-    **/
-    createContract(req: operations.CreateContractRequest, config?: AxiosRequestConfig): Promise<operations.CreateContractResponse>;
+     */
+    createContract(req: shared.OfferRequest, config?: AxiosRequestConfig): Promise<operations.CreateContractResponse>;
     /**
-     * deleteNextContract - Delete your next contract
-    **/
+     * Delete your next contract
+     */
     deleteNextContract(config?: AxiosRequestConfig): Promise<operations.DeleteNextContractResponse>;
     /**
-     * getBillingPeriods - Get billing periods conditions
-    **/
+     * Get billing periods conditions
+     */
     getBillingPeriods(req: operations.GetBillingPeriodsRequest, config?: AxiosRequestConfig): Promise<operations.GetBillingPeriodsResponse>;
     /**
-     * getContracts - Get contract list
-    **/
+     * Get contract list
+     */
     getContracts(req: operations.GetContractsRequest, config?: AxiosRequestConfig): Promise<operations.GetContractsResponse>;
     /**
-     * getOffer - Get offer pricing
+     * Get offer pricing
      *
+     * @remarks
      * Get the offer pricing then you can create your contract with the same request parameters. /v2/user/customer/contracts
      *
-    **/
-    getOffer(req: operations.GetOfferRequest, config?: AxiosRequestConfig): Promise<operations.GetOfferResponse>;
+     */
+    getOffer(req: shared.OfferRequest, config?: AxiosRequestConfig): Promise<operations.GetOfferResponse>;
     /**
-     * getStandardOffers - Get all standard offers
-    **/
+     * Get all standard offers
+     */
     getStandardOffers(req: operations.GetStandardOffersRequest, config?: AxiosRequestConfig): Promise<operations.GetStandardOffersResponse>;
     /**
-     * reactivateCurrentContract - Reactivate your terminated contract.
+     * Reactivate your terminated contract.
      *
+     * @remarks
      * By calling this operation you can re-enable the auto renewal.
-    **/
+     */
     reactivateCurrentContract(config?: AxiosRequestConfig): Promise<operations.ReactivateCurrentContractResponse>;
     /**
-     * terminateCurrentContract - Schedule termination of your current contract at the end of the commitment.
+     * Schedule termination of your current contract at the end of the commitment.
      *
+     * @remarks
      * By default your contract are automatically renew. By calling this operation you can disable the auto renewal.
-    **/
-    terminateCurrentContract(req: operations.TerminateCurrentContractRequest, config?: AxiosRequestConfig): Promise<operations.TerminateCurrentContractResponse>;
+     */
+    terminateCurrentContract(req: shared.TerminateContract, config?: AxiosRequestConfig): Promise<operations.TerminateCurrentContractResponse>;
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostChangeMessageVisibilityActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTChangeMessageVisibilityActionEnum {
     ChangeMessageVisibility = "ChangeMessageVisibility"
 }
-export declare enum PostChangeMessageVisibilityVersionEnum {
+export declare enum POSTChangeMessageVisibilityVersionEnum {
     TwoThousandAndTwelve1105 = "2012-11-05"
 }
-export declare class PostChangeMessageVisibilityQueryParams extends SpeakeasyBase {
-    action: PostChangeMessageVisibilityActionEnum;
-    version: PostChangeMessageVisibilityVersionEnum;
-}
-export declare class PostChangeMessageVisibilityHeaders extends SpeakeasyBase {
+export declare class POSTChangeMessageVisibilityRequest extends SpeakeasyBase {
+    action: POSTChangeMessageVisibilityActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTChangeMessageVisibilityVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostChangeMessageVisibilityHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostChangeMessageVisibilityRequest extends SpeakeasyBase {
-    queryParams: PostChangeMessageVisibilityQueryParams;
-    headers: PostChangeMessageVisibilityHeaders;
-    request?: Uint8Array;
-}
-export declare class PostChangeMessageVisibilityResponse extends SpeakeasyBase {
+export declare class POSTChangeMessageVisibilityResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

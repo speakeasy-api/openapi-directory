@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetSetSecurityGroupsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETSetSecurityGroupsActionEnum {
     SetSecurityGroups = "SetSecurityGroups"
 }
-export declare enum GetSetSecurityGroupsVersionEnum {
+export declare enum GETSetSecurityGroupsVersionEnum {
     TwoThousandAndFifteen1201 = "2015-12-01"
 }
-export declare class GetSetSecurityGroupsQueryParams extends SpeakeasyBase {
-    action: GetSetSecurityGroupsActionEnum;
+export declare class GETSetSecurityGroupsRequest extends SpeakeasyBase {
+    action: GETSetSecurityGroupsActionEnum;
+    /**
+     * The Amazon Resource Name (ARN) of the load balancer.
+     */
     loadBalancerArn: string;
+    /**
+     * The IDs of the security groups.
+     */
     securityGroups: string[];
-    version: GetSetSecurityGroupsVersionEnum;
-}
-export declare class GetSetSecurityGroupsHeaders extends SpeakeasyBase {
+    version: GETSetSecurityGroupsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetSetSecurityGroupsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetSetSecurityGroupsRequest extends SpeakeasyBase {
-    queryParams: GetSetSecurityGroupsQueryParams;
-    headers: GetSetSecurityGroupsHeaders;
-}
-export declare class GetSetSecurityGroupsResponse extends SpeakeasyBase {
+export declare class GETSetSecurityGroupsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

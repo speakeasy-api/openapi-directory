@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ExportIterationPathParams extends SpeakeasyBase {
-    iterationId: string;
-    projectId: string;
-}
+import { AxiosResponse } from "axios";
+/**
+ * The flavor of the target platform.
+ */
 export declare enum ExportIterationFlavorEnum {
     Linux = "Linux",
     Windows = "Windows",
@@ -13,25 +13,45 @@ export declare enum ExportIterationFlavorEnum {
     TensorFlowNormal = "TensorFlowNormal",
     TensorFlowLite = "TensorFlowLite"
 }
+/**
+ * The target platform.
+ */
 export declare enum ExportIterationPlatformEnum {
-    CoreMl = "CoreML",
+    CoreML = "CoreML",
     TensorFlow = "TensorFlow",
     DockerFile = "DockerFile",
     Onnx = "ONNX",
     Vaidk = "VAIDK"
 }
-export declare class ExportIterationQueryParams extends SpeakeasyBase {
-    flavor?: ExportIterationFlavorEnum;
-    platform: ExportIterationPlatformEnum;
-}
 export declare class ExportIterationRequest extends SpeakeasyBase {
-    pathParams: ExportIterationPathParams;
-    queryParams: ExportIterationQueryParams;
+    /**
+     * The flavor of the target platform.
+     */
+    flavor?: ExportIterationFlavorEnum;
+    /**
+     * The iteration id.
+     */
+    iterationId: string;
+    /**
+     * The target platform.
+     */
+    platform: ExportIterationPlatformEnum;
+    /**
+     * The project id.
+     */
+    projectId: string;
 }
 export declare class ExportIterationResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
+    /**
+     * Error response
+     */
     customVisionError?: shared.CustomVisionError;
+    /**
+     * OK
+     */
     export?: shared.Export;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

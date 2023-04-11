@@ -1,9 +1,28 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UpdateCloudFrontOriginAccessIdentity20170325PathParams extends SpeakeasyBase {
-    id: string;
+import { AxiosResponse } from "axios";
+/**
+ * Origin access identity configuration. Send a <code>GET</code> request to the <code>/<i>CloudFront API version</i>/CloudFront/identity ID/config</code> resource.
+ */
+export declare class UpdateCloudFrontOriginAccessIdentity20170325RequestBodyCloudFrontOriginAccessIdentityConfig extends SpeakeasyBase {
+    callerReference?: string;
+    comment?: string;
 }
-export declare class UpdateCloudFrontOriginAccessIdentity20170325Headers extends SpeakeasyBase {
+export declare class UpdateCloudFrontOriginAccessIdentity20170325RequestBody extends SpeakeasyBase {
+    /**
+     * Origin access identity configuration. Send a <code>GET</code> request to the <code>/<i>CloudFront API version</i>/CloudFront/identity ID/config</code> resource.
+     */
+    cloudFrontOriginAccessIdentityConfig: UpdateCloudFrontOriginAccessIdentity20170325RequestBodyCloudFrontOriginAccessIdentityConfig;
+}
+export declare class UpdateCloudFrontOriginAccessIdentity20170325Request extends SpeakeasyBase {
+    /**
+     * The identity's id.
+     */
+    id: string;
+    /**
+     * The value of the <code>ETag</code> header that you received when retrieving the identity's configuration. For example: <code>E2QWRUHAPOMQZL</code>.
+     */
     ifMatch?: string;
+    requestBody: Uint8Array;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,13 +31,9 @@ export declare class UpdateCloudFrontOriginAccessIdentity20170325Headers extends
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class UpdateCloudFrontOriginAccessIdentity20170325Request extends SpeakeasyBase {
-    pathParams: UpdateCloudFrontOriginAccessIdentity20170325PathParams;
-    headers: UpdateCloudFrontOriginAccessIdentity20170325Headers;
-    request: Uint8Array;
-}
 export declare class UpdateCloudFrontOriginAccessIdentity20170325Response extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,23 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetGetShippingLabelActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETGETShippingLabelActionEnum {
     GetShippingLabel = "GetShippingLabel"
 }
-export declare enum GetGetShippingLabelOperationEnum {
+export declare enum GETGETShippingLabelOperationEnum {
     GetShippingLabel = "GetShippingLabel"
 }
-export declare enum GetGetShippingLabelVersionEnum {
+export declare enum GETGETShippingLabelVersionEnum {
     TwoThousandAndTen0601 = "2010-06-01"
 }
-export declare class GetGetShippingLabelQueryParams extends SpeakeasyBase {
+export declare class GETGETShippingLabelRequest extends SpeakeasyBase {
     apiVersion?: string;
     awsAccessKeyId: string;
-    action: GetGetShippingLabelActionEnum;
-    operation: GetGetShippingLabelOperationEnum;
+    action: GETGETShippingLabelActionEnum;
+    operation: GETGETShippingLabelOperationEnum;
     signature: string;
     signatureMethod: string;
     signatureVersion: string;
     timestamp: string;
-    version: GetGetShippingLabelVersionEnum;
+    version: GETGETShippingLabelVersionEnum;
     city?: string;
     company?: string;
     country?: string;
@@ -30,11 +31,9 @@ export declare class GetGetShippingLabelQueryParams extends SpeakeasyBase {
     street2?: string;
     street3?: string;
 }
-export declare class GetGetShippingLabelRequest extends SpeakeasyBase {
-    queryParams: GetGetShippingLabelQueryParams;
-}
-export declare class GetGetShippingLabelResponse extends SpeakeasyBase {
+export declare class GETGETShippingLabelResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

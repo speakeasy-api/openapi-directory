@@ -1,26 +1,21 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DeleteWorkspaceIdMembersMemberIdActivitiesIdRequest, DeleteWorkspaceIdMembersMemberIdActivitiesIdResponse } from "openapi/src/sdk/models/operations";
+import {
+  DeleteWorkspaceSlugMembersMemberSlugActivitiesIdRequest,
+  DeleteWorkspaceSlugMembersMemberSlugActivitiesIdResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: DeleteWorkspaceIdMembersMemberIdActivitiesIdRequest = {
-  security: {
-    bearer: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  },
-  pathParams: {
-    id: "sit",
-    memberId: "voluptas",
-    workspaceId: "culpa",
-  },
+
+const req: DeleteWorkspaceSlugMembersMemberSlugActivitiesIdRequest = {
+  id: "corrupti",
+  memberSlug: "provident",
+  workspaceSlug: "distinctio",
 };
 
-sdk.activities.deleteWorkspaceIdMembersMemberIdActivitiesId(req).then((res: DeleteWorkspaceIdMembersMemberIdActivitiesIdResponse | AxiosError) => {
+sdk.activities.deleteWorkspaceSlugMembersMemberSlugActivitiesId(req).then((res: DeleteWorkspaceSlugMembersMemberSlugActivitiesIdResponse | AxiosError) => {
    // handle response
 });
 ```

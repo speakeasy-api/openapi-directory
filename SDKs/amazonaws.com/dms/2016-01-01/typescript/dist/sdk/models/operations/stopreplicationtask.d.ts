@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum StopReplicationTaskXAmzTargetEnum {
-    AmazonDmSv20160101StopReplicationTask = "AmazonDMSv20160101.StopReplicationTask"
+    AmazonDMSv20160101StopReplicationTask = "AmazonDMSv20160101.StopReplicationTask"
 }
-export declare class StopReplicationTaskHeaders extends SpeakeasyBase {
+export declare class StopReplicationTaskRequest extends SpeakeasyBase {
+    stopReplicationTaskMessage: shared.StopReplicationTaskMessage;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class StopReplicationTaskHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: StopReplicationTaskXAmzTargetEnum;
 }
-export declare class StopReplicationTaskRequest extends SpeakeasyBase {
-    headers: StopReplicationTaskHeaders;
-    request: shared.StopReplicationTaskMessage;
-}
 export declare class StopReplicationTaskResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidResourceStateFault
+     */
     invalidResourceStateFault?: any;
-    resourceNotFoundFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundFault
+     */
+    resourceNotFoundFault?: any;
+    /**
+     * Success
+     */
     stopReplicationTaskResponse?: shared.StopReplicationTaskResponse;
 }

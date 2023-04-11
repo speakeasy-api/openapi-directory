@@ -1,6 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class FeeSchedulesListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class FeeSchedulesListSecurity extends SpeakeasyBase {
+    drchronoOauth2: string;
+}
+export declare class FeeSchedulesListRequest extends SpeakeasyBase {
     code?: string;
     codeType?: string;
     cursor?: string;
@@ -9,23 +13,29 @@ export declare class FeeSchedulesListQueryParams extends SpeakeasyBase {
     payerId?: string;
     since?: string;
 }
-export declare class FeeSchedulesListSecurity extends SpeakeasyBase {
-    drchronoOauth2: shared.SchemeDrchronoOauth2;
-}
 /**
  * Paginated Result
-**/
-export declare class FeeSchedulesList200ApplicationJson extends SpeakeasyBase {
+ */
+export declare class FeeSchedulesList200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * result data
+     */
     data?: shared.DoctorFeeSchedule[];
+    /**
+     * Next Paginated page
+     */
     next?: string;
+    /**
+     * Previous paginated page
+     */
     previous?: string;
-}
-export declare class FeeSchedulesListRequest extends SpeakeasyBase {
-    queryParams: FeeSchedulesListQueryParams;
-    security: FeeSchedulesListSecurity;
 }
 export declare class FeeSchedulesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    feeSchedulesList200ApplicationJSONObject?: FeeSchedulesList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
+    feeSchedulesList200ApplicationJSONObject?: FeeSchedulesList200ApplicationJSON;
 }

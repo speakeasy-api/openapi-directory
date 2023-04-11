@@ -1,5 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DetachPolicyHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+/**
+ * The reference that identifies an object.
+ */
+export declare class DetachPolicyRequestBodyObjectReference extends SpeakeasyBase {
+    selector?: string;
+}
+/**
+ * The reference that identifies an object.
+ */
+export declare class DetachPolicyRequestBodyPolicyReference extends SpeakeasyBase {
+    selector?: string;
+}
+export declare class DetachPolicyRequestBody extends SpeakeasyBase {
+    /**
+     * The reference that identifies an object.
+     */
+    objectReference: DetachPolicyRequestBodyObjectReference;
+    /**
+     * The reference that identifies an object.
+     */
+    policyReference: DetachPolicyRequestBodyPolicyReference;
+}
+export declare class DetachPolicyRequest extends SpeakeasyBase {
+    requestBody: DetachPolicyRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -7,39 +31,53 @@ export declare class DetachPolicyHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
+    /**
+     * The Amazon Resource Name (ARN) that is associated with the <a>Directory</a> where both objects reside. For more information, see <a>arns</a>.
+     */
     xAmzDataPartition: string;
 }
-/**
- * The reference that identifies an object.
-**/
-export declare class DetachPolicyRequestBodyObjectReference extends SpeakeasyBase {
-    selector?: string;
-}
-/**
- * The reference that identifies an object.
-**/
-export declare class DetachPolicyRequestBodyPolicyReference extends SpeakeasyBase {
-    selector?: string;
-}
-export declare class DetachPolicyRequestBody extends SpeakeasyBase {
-    objectReference: DetachPolicyRequestBodyObjectReference;
-    policyReference: DetachPolicyRequestBodyPolicyReference;
-}
-export declare class DetachPolicyRequest extends SpeakeasyBase {
-    headers: DetachPolicyHeaders;
-    request: DetachPolicyRequestBody;
-}
 export declare class DetachPolicyResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     detachPolicyResponse?: Record<string, any>;
+    /**
+     * DirectoryNotEnabledException
+     */
     directoryNotEnabledException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidArnException
+     */
     invalidArnException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * NotPolicyException
+     */
     notPolicyException?: any;
-    resourceNotFoundException?: any;
-    retryableConflictException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * RetryableConflictException
+     */
+    retryableConflictException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

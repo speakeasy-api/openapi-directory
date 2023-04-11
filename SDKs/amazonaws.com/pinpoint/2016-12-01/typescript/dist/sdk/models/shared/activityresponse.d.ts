@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Provides information about an activity that was performed by a campaign.
-**/
+ */
 export declare class ActivityResponse extends SpeakeasyBase {
     applicationId: string;
     campaignId: string;

@@ -15,7 +15,6 @@ export * from "./pipeline";
 export * from "./resources";
 export * from "./runpipelinerequest";
 export * from "./secret";
-export * from "./security";
 export * from "./serviceaccount";
 export * from "./status";
 export * from "./virtualmachine";

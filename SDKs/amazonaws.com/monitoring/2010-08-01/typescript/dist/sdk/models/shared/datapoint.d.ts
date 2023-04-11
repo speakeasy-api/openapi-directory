@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { StandardUnitEnum } from "./standardunitenum";
 /**
  * Encapsulates the statistical data that CloudWatch computes from metric data.
-**/
+ */
 export declare class Datapoint extends SpeakeasyBase {
     average?: number;
     extendedStatistics?: Record<string, number>;

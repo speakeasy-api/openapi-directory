@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { GoogleTypeExpr } from "./googletypeexpr";
 import { GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembership } from "./googlecloudpolicysimulatorv1bindingexplanationannotatedmembership";
+import { GoogleTypeExpr } from "./googletypeexpr";
+/**
+ * Required. Indicates whether _this binding_ provides the specified permission to the specified principal for the specified resource. This field does _not_ indicate whether the principal actually has the permission for the resource. There might be another binding that overrides this binding. To determine whether the principal actually has the permission, use the `access` field in the TroubleshootIamPolicyResponse.
+ */
 export declare enum GoogleCloudPolicysimulatorV1BindingExplanationAccessEnum {
     AccessStateUnspecified = "ACCESS_STATE_UNSPECIFIED",
     Granted = "GRANTED",
@@ -8,17 +11,26 @@ export declare enum GoogleCloudPolicysimulatorV1BindingExplanationAccessEnum {
     UnknownConditional = "UNKNOWN_CONDITIONAL",
     UnknownInfoDenied = "UNKNOWN_INFO_DENIED"
 }
+/**
+ * The relevance of this binding to the overall determination for the entire policy.
+ */
 export declare enum GoogleCloudPolicysimulatorV1BindingExplanationRelevanceEnum {
     HeuristicRelevanceUnspecified = "HEURISTIC_RELEVANCE_UNSPECIFIED",
     Normal = "NORMAL",
     High = "HIGH"
 }
+/**
+ * Indicates whether the role granted by this binding contains the specified permission.
+ */
 export declare enum GoogleCloudPolicysimulatorV1BindingExplanationRolePermissionEnum {
     RolePermissionUnspecified = "ROLE_PERMISSION_UNSPECIFIED",
     RolePermissionIncluded = "ROLE_PERMISSION_INCLUDED",
     RolePermissionNotIncluded = "ROLE_PERMISSION_NOT_INCLUDED",
     RolePermissionUnknownInfoDenied = "ROLE_PERMISSION_UNKNOWN_INFO_DENIED"
 }
+/**
+ * The relevance of the permission's existence, or nonexistence, in the role to the overall determination for the entire policy.
+ */
 export declare enum GoogleCloudPolicysimulatorV1BindingExplanationRolePermissionRelevanceEnum {
     HeuristicRelevanceUnspecified = "HEURISTIC_RELEVANCE_UNSPECIFIED",
     Normal = "NORMAL",
@@ -26,13 +38,34 @@ export declare enum GoogleCloudPolicysimulatorV1BindingExplanationRolePermission
 }
 /**
  * Details about how a binding in a policy affects a principal's ability to use a permission.
-**/
+ */
 export declare class GoogleCloudPolicysimulatorV1BindingExplanation extends SpeakeasyBase {
+    /**
+     * Required. Indicates whether _this binding_ provides the specified permission to the specified principal for the specified resource. This field does _not_ indicate whether the principal actually has the permission for the resource. There might be another binding that overrides this binding. To determine whether the principal actually has the permission, use the `access` field in the TroubleshootIamPolicyResponse.
+     */
     access?: GoogleCloudPolicysimulatorV1BindingExplanationAccessEnum;
+    /**
+     * Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language. The syntax and semantics of CEL are documented at https://github.com/google/cel-spec. Example (Comparison): title: "Summary size limit" description: "Determines if a summary is less than 100 chars" expression: "document.summary.size() < 100" Example (Equality): title: "Requestor is owner" description: "Determines if requestor is the document owner" expression: "document.owner == request.auth.claims.email" Example (Logic): title: "Public documents" description: "Determine whether the document should be publicly visible" expression: "document.type != 'private' && document.type != 'internal'" Example (Data Manipulation): title: "Notification string" description: "Create a notification string with a timestamp." expression: "'New message received at ' + string(document.create_time)" The exact variables and functions that may be referenced within an expression are determined by the service that evaluates it. See the service documentation for additional information.
+     */
     condition?: GoogleTypeExpr;
+    /**
+     * Indicates whether each principal in the binding includes the principal specified in the request, either directly or indirectly. Each key identifies a principal in the binding, and each value indicates whether the principal in the binding includes the principal in the request. For example, suppose that a binding includes the following principals: * `user:alice@example.com` * `group:product-eng@example.com` The principal in the replayed access tuple is `user:bob@example.com`. This user is a principal of the group `group:product-eng@example.com`. For the first principal in the binding, the key is `user:alice@example.com`, and the `membership` field in the value is set to `MEMBERSHIP_NOT_INCLUDED`. For the second principal in the binding, the key is `group:product-eng@example.com`, and the `membership` field in the value is set to `MEMBERSHIP_INCLUDED`.
+     */
     memberships?: Record<string, GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembership>;
+    /**
+     * The relevance of this binding to the overall determination for the entire policy.
+     */
     relevance?: GoogleCloudPolicysimulatorV1BindingExplanationRelevanceEnum;
+    /**
+     * The role that this binding grants. For example, `roles/compute.serviceAgent`. For a complete list of predefined IAM roles, as well as the permissions in each role, see https://cloud.google.com/iam/help/roles/reference.
+     */
     role?: string;
+    /**
+     * Indicates whether the role granted by this binding contains the specified permission.
+     */
     rolePermission?: GoogleCloudPolicysimulatorV1BindingExplanationRolePermissionEnum;
+    /**
+     * The relevance of the permission's existence, or nonexistence, in the role to the overall determination for the entire policy.
+     */
     rolePermissionRelevance?: GoogleCloudPolicysimulatorV1BindingExplanationRolePermissionRelevanceEnum;
 }

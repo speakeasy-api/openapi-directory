@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeletePermissionPolicyXAmzTargetEnum {
-    AwswafRegional20161128DeletePermissionPolicy = "AWSWAF_Regional_20161128.DeletePermissionPolicy"
+    AWSWAFRegional20161128DeletePermissionPolicy = "AWSWAF_Regional_20161128.DeletePermissionPolicy"
 }
-export declare class DeletePermissionPolicyHeaders extends SpeakeasyBase {
+export declare class DeletePermissionPolicyRequest extends SpeakeasyBase {
+    deletePermissionPolicyRequest: shared.DeletePermissionPolicyRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class DeletePermissionPolicyHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeletePermissionPolicyXAmzTargetEnum;
 }
-export declare class DeletePermissionPolicyRequest extends SpeakeasyBase {
-    headers: DeletePermissionPolicyHeaders;
-    request: shared.DeletePermissionPolicyRequest;
-}
 export declare class DeletePermissionPolicyResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deletePermissionPolicyResponse?: Record<string, any>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFNonexistentItemException
+     */
     wafNonexistentItemException?: any;
+    /**
+     * WAFStaleDataException
+     */
     wafStaleDataException?: any;
 }

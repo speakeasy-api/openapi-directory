@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateQualificationTypeXAmzTargetEnum {
     MTurkRequesterServiceV20170117UpdateQualificationType = "MTurkRequesterServiceV20170117.UpdateQualificationType"
 }
-export declare class UpdateQualificationTypeHeaders extends SpeakeasyBase {
+export declare class UpdateQualificationTypeRequest extends SpeakeasyBase {
+    updateQualificationTypeRequest: shared.UpdateQualificationTypeRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class UpdateQualificationTypeHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateQualificationTypeXAmzTargetEnum;
 }
-export declare class UpdateQualificationTypeRequest extends SpeakeasyBase {
-    headers: UpdateQualificationTypeHeaders;
-    request: shared.UpdateQualificationTypeRequest;
-}
 export declare class UpdateQualificationTypeResponse extends SpeakeasyBase {
     contentType: string;
-    requestError?: any;
-    serviceFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * RequestError
+     */
+    requestError?: any;
+    /**
+     * ServiceFault
+     */
+    serviceFault?: any;
+    /**
+     * Success
+     */
     updateQualificationTypeResponse?: shared.UpdateQualificationTypeResponse;
 }

@@ -1,5 +1,9 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * General data upload endpoints.
+ */
 export declare class Uploads {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,26 +13,30 @@ export declare class Uploads {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * chunkedUpload - Chunked upload of data
+     * Chunked upload of data
      *
+     * @remarks
      * Send chunked data for an **Upload**.
-    **/
-    chunkedUpload(req: operations.ChunkedUploadRequest, config?: AxiosRequestConfig): Promise<operations.ChunkedUploadResponse>;
+     */
+    chunkedUpload(req: operations.ChunkedUploadRequest, security: operations.ChunkedUploadSecurity, config?: AxiosRequestConfig): Promise<operations.ChunkedUploadResponse>;
     /**
-     * fetchUploadStatusById - Retrieve Upload status
+     * Retrieve Upload status
      *
+     * @remarks
      * Check the status of an **Upload** by ID.
-    **/
-    fetchUploadStatusById(req: operations.FetchUploadStatusByIdRequest, config?: AxiosRequestConfig): Promise<operations.FetchUploadStatusByIdResponse>;
+     */
+    fetchUploadStatusById(req: operations.FetchUploadStatusByIdRequest, security: operations.FetchUploadStatusByIdSecurity, config?: AxiosRequestConfig): Promise<operations.FetchUploadStatusByIdResponse>;
     /**
-     * fetchUploadStatuses - Retrieve Upload statuses in batch
+     * Retrieve Upload statuses in batch
      *
+     * @remarks
      * Check the status of multiple **Uploads** (up to 100 per request).
-    **/
-    fetchUploadStatuses(req: operations.FetchUploadStatusesRequest, config?: AxiosRequestConfig): Promise<operations.FetchUploadStatusesResponse>;
+     */
+    fetchUploadStatuses(req: shared.UploadStatusQuery, security: operations.FetchUploadStatusesSecurity, config?: AxiosRequestConfig): Promise<operations.FetchUploadStatusesResponse>;
     /**
-     * postUpload - Initiate a new upload
+     * Initiate a new upload
      *
+     * @remarks
      * Step one in uploading a data product. The method will return an **Upload** ID which the caller will use in subsequent `PUT` requests.
      * The following `contentTypes` may be uploaded:
      *     <details><summary>__image/vnd.climate.thermal.geotiff__</summary>
@@ -123,26 +131,6 @@ export declare class Uploads {
      *
      *     Requires either imagery:write or platform scope.
      *   </details>
-     *   <details><summary> __application/vnd.climate.field.geojson__</summary>
-     *
-     *     Allows for the upload of a valid geojson feature (https://tools.ietf.org/html/rfc7946#section-3.2).
-     *
-     *     The feature must contain the following entry in the properties section:
-     *       * fieldName
-     *
-     *     Optionally, the feature may contain the following entries in the properties properties:
-     *       * farmName - defaults to *default*
-     *       * clientName - defaults to *default*
-     *
-     *     Additionally, the type field of the geometry field must one of the following:
-     *       * Polygon
-     *       * MultiPolygon
-     *
-     *     The coordinates field of the geometry field must contain no more than 10,000 points.
-     *     The total area of the field may not be larger than 20,000 acres in size.
-     *
-     *     Requires either fields:write or platform scope.
-     *   </details>
      *   <details><summary> __application/vnd.climate.rx.planting.shp__</summary>
      *
      *     Allows for the upload of a planting prescription in shapefile format.  The upload must be an archive in the zip format.  It should contain one and only one of each of the following file types:
@@ -153,6 +141,20 @@ export declare class Uploads {
      *     All files with the above suffixes must have the same prefix, ie Back40.shp, Back40.shx and Back40.dbf.
      *
      *     Requires either rx:write or platform scope.
+     *   </details>
+     *   <details><summary> __application/vnd.climate.prescription.zones.shp__</summary>
+     *
+     *     Allows for the upload of a zones prescription in shapefile format.  The upload must be an archive in the zip format.  It should contain one and only one of each of the following file types:
+     *       * .shp
+     *       * .shx
+     *       * .dbf
+     *
+     *     All files with the above suffixes must have the same prefix, ie Back40.shp, Back40.shx and Back40.dbf.
+     *
+     *     The following metadata entries are required:
+     *       * fieldId - field identifier for prescription zones.
+     *
+     *     Requires either rxZones:write or platform scope.
      *   </details>
      *   <details><summary> __application/vnd.climate.modus.xml__</summary>
      *
@@ -196,6 +198,42 @@ export declare class Uploads {
      *
      *     Requires `imagery:write` scope.
      *    </details>
-    **/
-    postUpload(req: operations.PostUploadRequest, config?: AxiosRequestConfig): Promise<operations.PostUploadResponse>;
+     *    <details><summary> __application/vnd.climate.as-applied.zip__</summary>
+     *
+     *     Allows for the upload of a valid application data [supported formats](https://support.climate.com/kt#/kA02A000000DjvOSAS/en_US).
+     *
+     *     The following metadata entries are required:
+     *       * fileName - name of the file being uploaded.
+     *
+     *     The following metadata entries are optional:
+     *       * resourceOwner - the grower's account email, where dealer/partner wants to upload data. As a prerequisite the grower must share their operation with the dealer/partner.
+     *
+     *     Requires `asApplied:write` scope.
+     *    </details>
+     *    <details><summary> __application/vnd.climate.as-planted.zip__</summary>
+     *
+     *     Allows for the upload of a valid planting data [supported formats](https://support.climate.com/kt#/kA02A000000DjvOSAS/en_US).
+     *
+     *     The following metadata entries are required:
+     *       * fileName - name of the file being uploaded.
+     *
+     *     The following metadata entries are optional:
+     *       * resourceOwner - the grower's account email, where dealer/partner wants to upload data. As a prerequisite the grower must share their operation with the dealer/partner.
+     *
+     *     Requires `asPlanted:write` scope.
+     *    </details>
+     *    <details><summary> __application/vnd.climate.as-harvested.zip__</summary>
+     *
+     *     Allows for the upload of a valid harvest data [supported formats](https://support.climate.com/kt#/kA02A000000DjvOSAS/en_US).
+     *
+     *     The following metadata entries are required:
+     *       * fileName - name of the file being uploaded.
+     *
+     *     The following metadata entries are optional:
+     *       * resourceOwner - the grower's account email, where dealer/partner wants to upload data. As a prerequisite the grower must share their operation with the dealer/partner.
+     *
+     *     Requires `asHarvested:write` scope.
+     *    </details>
+     */
+    postUpload(req: operations.PostUploadRequest, security: operations.PostUploadSecurity, config?: AxiosRequestConfig): Promise<operations.PostUploadResponse>;
 }

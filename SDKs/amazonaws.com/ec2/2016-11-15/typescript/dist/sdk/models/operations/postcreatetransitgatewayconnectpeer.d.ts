@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateTransitGatewayConnectPeerActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateTransitGatewayConnectPeerActionEnum {
     CreateTransitGatewayConnectPeer = "CreateTransitGatewayConnectPeer"
 }
-export declare enum PostCreateTransitGatewayConnectPeerVersionEnum {
+export declare enum POSTCreateTransitGatewayConnectPeerVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostCreateTransitGatewayConnectPeerQueryParams extends SpeakeasyBase {
-    action: PostCreateTransitGatewayConnectPeerActionEnum;
-    version: PostCreateTransitGatewayConnectPeerVersionEnum;
-}
-export declare class PostCreateTransitGatewayConnectPeerHeaders extends SpeakeasyBase {
+export declare class POSTCreateTransitGatewayConnectPeerRequest extends SpeakeasyBase {
+    action: POSTCreateTransitGatewayConnectPeerActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateTransitGatewayConnectPeerVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateTransitGatewayConnectPeerHeaders extends Speakeas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateTransitGatewayConnectPeerRequest extends SpeakeasyBase {
-    queryParams: PostCreateTransitGatewayConnectPeerQueryParams;
-    headers: PostCreateTransitGatewayConnectPeerHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateTransitGatewayConnectPeerResponse extends SpeakeasyBase {
+export declare class POSTCreateTransitGatewayConnectPeerResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Tag } from "./tag";
 import { IpRuleItem } from "./ipruleitem";
+import { Tag } from "./tag";
 export declare class CreateIpGroupRequest extends SpeakeasyBase {
     groupDesc?: string;
     groupName: string;

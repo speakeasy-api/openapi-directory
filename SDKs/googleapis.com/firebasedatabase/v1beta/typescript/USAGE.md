@@ -1,45 +1,38 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { FirebasedatabaseProjectsLocationsInstancesCreateRequest, FirebasedatabaseProjectsLocationsInstancesCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  FirebasedatabaseProjectsLocationsInstancesCreateRequest,
+  FirebasedatabaseProjectsLocationsInstancesCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  DatabaseInstanceTypeEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: FirebasedatabaseProjectsLocationsInstancesCreateRequest = {
-  security: {
-    option1: {
-      oauth2: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-      oauth2c: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-    },
+  dollarXgafv: XgafvEnum.Two,
+  databaseInstanceInput: {
+    name: "provident",
+    type: DatabaseInstanceTypeEnum.UserDatabase,
   },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    databaseId: "dolor",
-    fields: "expedita",
-    key: "voluptas",
-    oauthToken: "fugit",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    uploadType: "rerum",
-    uploadProtocol: "dicta",
-    validateOnly: true,
-  },
-  request: {
-    name: "voluptatum",
-    type: "DATABASE_INSTANCE_TYPE_UNSPECIFIED",
-  },
+  accessToken: "quibusdam",
+  alt: AltEnum.Media,
+  callback: "nulla",
+  databaseId: "corrupti",
+  fields: "illum",
+  key: "vel",
+  oauthToken: "error",
+  parent: "deserunt",
+  prettyPrint: false,
+  quotaUser: "suscipit",
+  uploadType: "iure",
+  uploadProtocol: "magnam",
+  validateOnly: false,
 };
 
 sdk.projects.firebasedatabaseProjectsLocationsInstancesCreate(req).then((res: FirebasedatabaseProjectsLocationsInstancesCreateResponse | AxiosError) => {

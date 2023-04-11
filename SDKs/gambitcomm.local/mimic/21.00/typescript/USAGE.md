@@ -1,24 +1,23 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AccessAddRequest, AccessAddResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  AccessAddRequest,
+  AccessAddResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    basicAuth: {
-      password: "YOUR_PASSWORD_HERE",
-      username: "YOUR_USERNAME_HERE",
-    },
-  }
-));
-    
-const req: AccessAddRequest = {
-  pathParams: {
-    agents: "sit",
-    mask: "voluptas",
-    user: "culpa",
+    password: "YOUR_PASSWORD_HERE",
+    username: "YOUR_USERNAME_HERE",
   },
+});
+
+const req: AccessAddRequest = {
+  agents: "corrupti",
+  mask: "provident",
+  user: "distinctio",
 };
 
 sdk.access.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {

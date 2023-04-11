@@ -1,5 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteQueuedSavingsPlanHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteQueuedSavingsPlanRequestBody extends SpeakeasyBase {
+    /**
+     * The ID of the Savings Plan.
+     */
+    savingsPlanId: string;
+}
+export declare class DeleteQueuedSavingsPlanRequest extends SpeakeasyBase {
+    requestBody: DeleteQueuedSavingsPlanRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -8,19 +16,28 @@ export declare class DeleteQueuedSavingsPlanHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeleteQueuedSavingsPlanRequestBody extends SpeakeasyBase {
-    savingsPlanId: string;
-}
-export declare class DeleteQueuedSavingsPlanRequest extends SpeakeasyBase {
-    headers: DeleteQueuedSavingsPlanHeaders;
-    request: DeleteQueuedSavingsPlanRequestBody;
-}
 export declare class DeleteQueuedSavingsPlanResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deleteQueuedSavingsPlanResponse?: Record<string, any>;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
-    serviceQuotaExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceQuotaExceededException
+     */
+    serviceQuotaExceededException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

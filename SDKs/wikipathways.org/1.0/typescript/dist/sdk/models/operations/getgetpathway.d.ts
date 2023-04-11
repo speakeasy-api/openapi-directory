@@ -1,4 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
 export declare enum GetGetPathwayFormatEnum {
     Json = "json",
     Xml = "xml",
@@ -7,15 +8,19 @@ export declare enum GetGetPathwayFormatEnum {
     Jpg = "jpg",
     Pdf = "pdf"
 }
-export declare class GetGetPathwayQueryParams extends SpeakeasyBase {
-    format?: GetGetPathwayFormatEnum;
-    pwId: string;
-    revision?: number;
-}
 export declare class GetGetPathwayRequest extends SpeakeasyBase {
-    queryParams: GetGetPathwayQueryParams;
+    format?: GetGetPathwayFormatEnum;
+    /**
+     * The pathway identifier
+     */
+    pwId: string;
+    /**
+     * The revision number of the pathway (use 0 for most recent)
+     */
+    revision?: number;
 }
 export declare class GetGetPathwayResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

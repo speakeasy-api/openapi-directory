@@ -3,4 +3,5 @@ export declare class RateLimit extends SpeakeasyBase {
     limit: number;
     remaining: number;
     reset: number;
+    used: number;
 }

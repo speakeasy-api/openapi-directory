@@ -1,16 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetNumbersIsCubeQueryParams extends SpeakeasyBase {
-    number?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetNumbersIsCubeSecurity extends SpeakeasyBase {
-    xMathtoolsApiSecret: shared.SchemeXMathtoolsApiSecret;
+    xMathtoolsApiSecret: string;
 }
 export declare class GetNumbersIsCubeRequest extends SpeakeasyBase {
-    queryParams: GetNumbersIsCubeQueryParams;
-    security: GetNumbersIsCubeSecurity;
+    /**
+     * Number to check
+     */
+    number?: number;
 }
 export declare class GetNumbersIsCubeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

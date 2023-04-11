@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListFunctionDefinitionVersionsPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListFunctionDefinitionVersionsRequest extends SpeakeasyBase {
+    /**
+     * The ID of the Lambda function definition.
+     */
     functionDefinitionId: string;
-}
-export declare class ListFunctionDefinitionVersionsQueryParams extends SpeakeasyBase {
+    /**
+     * The maximum number of results to be returned per request.
+     */
     maxResults?: string;
+    /**
+     * The token for the next set of results, or ''null'' if there are no additional results.
+     */
     nextToken?: string;
-}
-export declare class ListFunctionDefinitionVersionsHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,14 +22,16 @@ export declare class ListFunctionDefinitionVersionsHeaders extends SpeakeasyBase
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class ListFunctionDefinitionVersionsRequest extends SpeakeasyBase {
-    pathParams: ListFunctionDefinitionVersionsPathParams;
-    queryParams: ListFunctionDefinitionVersionsQueryParams;
-    headers: ListFunctionDefinitionVersionsHeaders;
-}
 export declare class ListFunctionDefinitionVersionsResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     listFunctionDefinitionVersionsResponse?: shared.ListFunctionDefinitionVersionsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

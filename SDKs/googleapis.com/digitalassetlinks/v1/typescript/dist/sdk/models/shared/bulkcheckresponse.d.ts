@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { CheckResponse } from "./checkresponse";
+/**
+ * Error code for the entire request. Present only if the entire request failed. Individual check errors will not trigger the presence of this field.
+ */
 export declare enum BulkCheckResponseBulkErrorCodeEnum {
     ErrorCodeUnspecified = "ERROR_CODE_UNSPECIFIED",
     ErrorCodeInvalidQuery = "ERROR_CODE_INVALID_QUERY",
@@ -15,8 +18,14 @@ export declare enum BulkCheckResponseBulkErrorCodeEnum {
 }
 /**
  * Response for BulkCheck call. Results are sent in a list in the same order in which they were sent. Individual check errors are described in the appropriate check_results entry. If the entire call fails, the response will include a bulk_error_code field describing the error.
-**/
+ */
 export declare class BulkCheckResponse extends SpeakeasyBase {
+    /**
+     * Error code for the entire request. Present only if the entire request failed. Individual check errors will not trigger the presence of this field.
+     */
     bulkErrorCode?: BulkCheckResponseBulkErrorCodeEnum;
+    /**
+     * List of results for each check request. Results are returned in the same order in which they were sent in the request.
+     */
     checkResults?: CheckResponse[];
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostModifyReservedInstancesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTModifyReservedInstancesActionEnum {
     ModifyReservedInstances = "ModifyReservedInstances"
 }
-export declare enum PostModifyReservedInstancesVersionEnum {
+export declare enum POSTModifyReservedInstancesVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostModifyReservedInstancesQueryParams extends SpeakeasyBase {
-    action: PostModifyReservedInstancesActionEnum;
-    version: PostModifyReservedInstancesVersionEnum;
-}
-export declare class PostModifyReservedInstancesHeaders extends SpeakeasyBase {
+export declare class POSTModifyReservedInstancesRequest extends SpeakeasyBase {
+    action: POSTModifyReservedInstancesActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTModifyReservedInstancesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostModifyReservedInstancesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostModifyReservedInstancesRequest extends SpeakeasyBase {
-    queryParams: PostModifyReservedInstancesQueryParams;
-    headers: PostModifyReservedInstancesHeaders;
-    request?: Uint8Array;
-}
-export declare class PostModifyReservedInstancesResponse extends SpeakeasyBase {
+export declare class POSTModifyReservedInstancesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

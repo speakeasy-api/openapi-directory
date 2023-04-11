@@ -1,3 +1,9 @@
+/**
+ * The vehicle profile for which the route should be calculated.
+ *
+ * @remarks
+ *
+ */
 export declare enum VehicleProfileIdEnum {
     Car = "car",
     Bike = "bike",

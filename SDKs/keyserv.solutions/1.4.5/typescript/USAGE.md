@@ -1,16 +1,16 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { KeysApiCurrentRequest, KeysApiCurrentResponse } from "openapi/src/sdk/models/operations";
+import {
+  KeysApiCurrentRequest,
+  KeysApiCurrentResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: KeysApiCurrentRequest = {
-  pathParams: {
-    serial: "sit",
-  },
+  serial: "corrupti",
 };
 
 sdk.keysApi.keysApiCurrent(req).then((res: KeysApiCurrentResponse | AxiosError) => {

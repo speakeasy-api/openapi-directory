@@ -1,36 +1,59 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class AppendTextUsingGetQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class AppendTextUsingGETRequest extends SpeakeasyBase {
     padID?: string;
     text?: string;
 }
-export declare class AppendTextUsingGet200ApplicationJson extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class AppendTextUsingGet500ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class AppendTextUsingGet400ApplicationJson extends SpeakeasyBase {
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class AppendTextUsingGet401ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class AppendTextUsingGet401ApplicationJson extends SpeakeasyBase {
+/**
+ * generic api error (code 1)
+ */
+export declare class AppendTextUsingGet400ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class AppendTextUsingGet500ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class AppendTextUsingGet200ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class AppendTextUsingGetRequest extends SpeakeasyBase {
-    queryParams: AppendTextUsingGetQueryParams;
-}
-export declare class AppendTextUsingGetResponse extends SpeakeasyBase {
+export declare class AppendTextUsingGETResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    appendTextUsingGET200ApplicationJSONObject?: AppendTextUsingGet200ApplicationJson;
-    appendTextUsingGET400ApplicationJSONObject?: AppendTextUsingGet400ApplicationJson;
-    appendTextUsingGET401ApplicationJSONObject?: AppendTextUsingGet401ApplicationJson;
-    appendTextUsingGET500ApplicationJSONObject?: AppendTextUsingGet500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    appendTextUsingGET200ApplicationJSONObject?: AppendTextUsingGet200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    appendTextUsingGET400ApplicationJSONObject?: AppendTextUsingGet400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    appendTextUsingGET401ApplicationJSONObject?: AppendTextUsingGet401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    appendTextUsingGET500ApplicationJSONObject?: AppendTextUsingGet500ApplicationJSON;
 }

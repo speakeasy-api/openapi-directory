@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetValidatePathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetValidateRequest extends SpeakeasyBase {
-    pathParams: GetValidatePathParams;
+    /**
+     * Agent to return the bitmask integer
+     */
+    agentNum: number;
 }
 export declare class GetValidateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     getValidate200ApplicationJSONInt32Integer?: number;
 }

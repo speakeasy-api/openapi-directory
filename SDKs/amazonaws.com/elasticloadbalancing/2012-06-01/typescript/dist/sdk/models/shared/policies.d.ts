@@ -1,11 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { AppCookieStickinessPolicy } from "./appcookiestickinesspolicy";
-import { LbCookieStickinessPolicy } from "./lbcookiestickinesspolicy";
+import { LBCookieStickinessPolicy } from "./lbcookiestickinesspolicy";
 /**
  * The policies for a load balancer.
-**/
+ */
 export declare class Policies extends SpeakeasyBase {
     appCookieStickinessPolicies?: AppCookieStickinessPolicy[];
-    lbCookieStickinessPolicies?: LbCookieStickinessPolicy[];
+    lbCookieStickinessPolicies?: LBCookieStickinessPolicy[];
     otherPolicies?: string[];
 }

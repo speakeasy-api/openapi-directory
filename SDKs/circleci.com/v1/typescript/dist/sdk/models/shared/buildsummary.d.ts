@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { OutcomeEnum } from "./outcomeenum";
 import { StatusEnum } from "./statusenum";
+/**
+ * returns a summary of the build
+ */
 export declare class BuildSummary extends SpeakeasyBase {
     addedAt?: Date;
     buildNum?: number;

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostModifyScheduledActionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTModifyScheduledActionActionEnum {
     ModifyScheduledAction = "ModifyScheduledAction"
 }
-export declare enum PostModifyScheduledActionVersionEnum {
+export declare enum POSTModifyScheduledActionVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostModifyScheduledActionQueryParams extends SpeakeasyBase {
-    action: PostModifyScheduledActionActionEnum;
-    version: PostModifyScheduledActionVersionEnum;
-}
-export declare class PostModifyScheduledActionHeaders extends SpeakeasyBase {
+export declare class POSTModifyScheduledActionRequest extends SpeakeasyBase {
+    action: POSTModifyScheduledActionActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTModifyScheduledActionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostModifyScheduledActionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostModifyScheduledActionRequest extends SpeakeasyBase {
-    queryParams: PostModifyScheduledActionQueryParams;
-    headers: PostModifyScheduledActionHeaders;
-    request?: Uint8Array;
-}
-export declare class PostModifyScheduledActionResponse extends SpeakeasyBase {
+export declare class POSTModifyScheduledActionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

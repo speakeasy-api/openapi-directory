@@ -12,4 +12,3 @@ export * from "./performancereport";
 export * from "./performancereportlist";
 export * from "./pretargetingconfig";
 export * from "./pretargetingconfiglist";
-export * from "./security";

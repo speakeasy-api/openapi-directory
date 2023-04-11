@@ -1,5 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { ActionSubscribeInvoiceItem } from "./actionsubscribeinvoiceitem";
+import { InvoiceDataInvoice } from "./invoicedatainvoice";
 export declare class ActionSubscribeInvoiceData extends SpeakeasyBase {
-    invoice?: Record<string, any>;
-    invoiceItem?: Record<string, any>[];
+    invoice?: InvoiceDataInvoice;
+    invoiceItem?: ActionSubscribeInvoiceItem[];
 }

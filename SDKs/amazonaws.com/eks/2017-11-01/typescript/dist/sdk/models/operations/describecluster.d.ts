@@ -1,9 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeClusterPathParams extends SpeakeasyBase {
-    name: string;
-}
-export declare class DescribeClusterHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DescribeClusterRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,17 +9,33 @@ export declare class DescribeClusterHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DescribeClusterRequest extends SpeakeasyBase {
-    pathParams: DescribeClusterPathParams;
-    headers: DescribeClusterHeaders;
+    /**
+     * The name of the cluster to describe.
+     */
+    name: string;
 }
 export declare class DescribeClusterResponse extends SpeakeasyBase {
+    /**
+     * ClientException
+     */
     clientException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     describeClusterResponse?: shared.DescribeClusterResponse;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
-    serverException?: any;
-    serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServerException
+     */
+    serverException?: any;
+    /**
+     * ServiceUnavailableException
+     */
+    serviceUnavailableException?: any;
 }

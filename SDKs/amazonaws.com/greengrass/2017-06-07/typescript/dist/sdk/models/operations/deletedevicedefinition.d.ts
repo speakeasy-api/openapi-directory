@@ -1,8 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteDeviceDefinitionPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteDeviceDefinitionRequest extends SpeakeasyBase {
+    /**
+     * The ID of the device definition.
+     */
     deviceDefinitionId: string;
-}
-export declare class DeleteDeviceDefinitionHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,13 +13,16 @@ export declare class DeleteDeviceDefinitionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeleteDeviceDefinitionRequest extends SpeakeasyBase {
-    pathParams: DeleteDeviceDefinitionPathParams;
-    headers: DeleteDeviceDefinitionHeaders;
-}
 export declare class DeleteDeviceDefinitionResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteDeviceDefinitionResponse?: Record<string, any>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostResetServiceSpecificCredentialActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTResetServiceSpecificCredentialActionEnum {
     ResetServiceSpecificCredential = "ResetServiceSpecificCredential"
 }
-export declare enum PostResetServiceSpecificCredentialVersionEnum {
+export declare enum POSTResetServiceSpecificCredentialVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostResetServiceSpecificCredentialQueryParams extends SpeakeasyBase {
-    action: PostResetServiceSpecificCredentialActionEnum;
-    version: PostResetServiceSpecificCredentialVersionEnum;
-}
-export declare class PostResetServiceSpecificCredentialHeaders extends SpeakeasyBase {
+export declare class POSTResetServiceSpecificCredentialRequest extends SpeakeasyBase {
+    action: POSTResetServiceSpecificCredentialActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTResetServiceSpecificCredentialVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostResetServiceSpecificCredentialHeaders extends Speakeasy
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostResetServiceSpecificCredentialRequest extends SpeakeasyBase {
-    queryParams: PostResetServiceSpecificCredentialQueryParams;
-    headers: PostResetServiceSpecificCredentialHeaders;
-    request?: Uint8Array;
-}
-export declare class PostResetServiceSpecificCredentialResponse extends SpeakeasyBase {
+export declare class POSTResetServiceSpecificCredentialResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolDhcpGetArgsPathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolDhcpGetArgsRequest extends SpeakeasyBase {
-    pathParams: ProtocolDhcpGetArgsPathParams;
+    /**
+     * Agent to show the DHCP argument structure
+     */
+    agentNum: number;
 }
 export declare class ProtocolDhcpGetArgsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolDhcpGetArgs200ApplicationJSONObject?: Record<string, any>;
 }

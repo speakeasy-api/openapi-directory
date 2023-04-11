@@ -1,20 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class FetchUploadStatusByIdPathParams extends SpeakeasyBase {
-    uploadId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class FetchUploadStatusByIdSecurity extends SpeakeasyBase {
-    apiKey?: shared.SchemeApiKey;
-    oauth2AuthorizationCode?: shared.SchemeOauth2AuthorizationCode;
+    apiKey?: string;
+    oauth2AuthorizationCode?: string;
 }
 export declare class FetchUploadStatusByIdRequest extends SpeakeasyBase {
-    pathParams: FetchUploadStatusByIdPathParams;
-    security: FetchUploadStatusByIdSecurity;
+    /**
+     * Unique identifier of an Upload.
+     */
+    uploadId: string;
 }
 export declare class FetchUploadStatusByIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Bad Input
+     */
     error?: shared.ErrorT;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
     uploadStatus?: shared.UploadStatus;
 }

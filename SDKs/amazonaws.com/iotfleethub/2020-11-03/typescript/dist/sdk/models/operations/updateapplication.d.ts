@@ -1,8 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UpdateApplicationPathParams extends SpeakeasyBase {
-    applicationId: string;
+import { AxiosResponse } from "axios";
+export declare class UpdateApplicationRequestBody extends SpeakeasyBase {
+    /**
+     * An optional description of the web application.
+     */
+    applicationDescription?: string;
+    /**
+     * The name of the web application.
+     */
+    applicationName?: string;
+    /**
+     * A unique case-sensitive identifier that you can provide to ensure the idempotency of the request. Don't reuse this client token if a new idempotent request is required.
+     */
+    clientToken?: string;
 }
-export declare class UpdateApplicationHeaders extends SpeakeasyBase {
+export declare class UpdateApplicationRequest extends SpeakeasyBase {
+    requestBody: UpdateApplicationRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -10,24 +23,37 @@ export declare class UpdateApplicationHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class UpdateApplicationRequestBody extends SpeakeasyBase {
-    applicationDescription?: string;
-    applicationName?: string;
-    clientToken?: string;
-}
-export declare class UpdateApplicationRequest extends SpeakeasyBase {
-    pathParams: UpdateApplicationPathParams;
-    headers: UpdateApplicationHeaders;
-    request: UpdateApplicationRequestBody;
+    /**
+     * The unique Id of the web application.
+     */
+    applicationId: string;
 }
 export declare class UpdateApplicationResponse extends SpeakeasyBase {
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * InternalFailureException
+     */
     internalFailureException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * Success
+     */
     updateApplicationResponse?: Record<string, any>;
 }

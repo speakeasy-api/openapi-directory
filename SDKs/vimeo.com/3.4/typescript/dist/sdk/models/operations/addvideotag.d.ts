@@ -1,19 +1,32 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AddVideoTagPathParams extends SpeakeasyBase {
-    videoId: number;
-    word: string;
-}
+import { AxiosResponse } from "axios";
 export declare class AddVideoTagSecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
+    oauth2: string;
 }
 export declare class AddVideoTagRequest extends SpeakeasyBase {
-    pathParams: AddVideoTagPathParams;
-    security: AddVideoTagSecurity;
+    /**
+     * The ID of the video.
+     */
+    videoId: number;
+    /**
+     * The tag word.
+     */
+    word: string;
 }
 export declare class AddVideoTagResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * * The tag is invalid.
+     *
+     * @remarks
+     * * An unsupported parameter was supplied.
+     */
     legacyError?: shared.LegacyError;
+    /**
+     * The tag was added.
+     */
     tag?: shared.Tag;
 }

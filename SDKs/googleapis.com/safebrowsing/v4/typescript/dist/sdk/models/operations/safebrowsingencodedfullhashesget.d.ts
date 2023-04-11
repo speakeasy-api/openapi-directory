@@ -1,29 +1,70 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class SafebrowsingEncodedFullHashesGetPathParams extends SpeakeasyBase {
-    encodedRequest: string;
-}
-export declare class SafebrowsingEncodedFullHashesGetQueryParams extends SpeakeasyBase {
-    dollarXgafv?: shared.XgafvEnum;
-    accessToken?: string;
-    alt?: shared.AltEnum;
-    callback?: string;
-    clientId?: string;
-    clientVersion?: string;
-    fields?: string;
-    key?: string;
-    oauthToken?: string;
-    prettyPrint?: boolean;
-    quotaUser?: string;
-    uploadType?: string;
-    uploadProtocol?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class SafebrowsingEncodedFullHashesGetRequest extends SpeakeasyBase {
-    pathParams: SafebrowsingEncodedFullHashesGetPathParams;
-    queryParams: SafebrowsingEncodedFullHashesGetQueryParams;
+    /**
+     * V1 error format.
+     */
+    dollarXgafv?: shared.XgafvEnum;
+    /**
+     * OAuth access token.
+     */
+    accessToken?: string;
+    /**
+     * Data format for response.
+     */
+    alt?: shared.AltEnum;
+    /**
+     * JSONP
+     */
+    callback?: string;
+    /**
+     * A client ID that (hopefully) uniquely identifies the client implementation of the Safe Browsing API.
+     */
+    clientId?: string;
+    /**
+     * The version of the client implementation.
+     */
+    clientVersion?: string;
+    /**
+     * A serialized FindFullHashesRequest proto.
+     */
+    encodedRequest: string;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauthToken?: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    uploadType?: string;
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    uploadProtocol?: string;
 }
 export declare class SafebrowsingEncodedFullHashesGetResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful response
+     */
     googleSecuritySafebrowsingV4FindFullHashesResponse?: shared.GoogleSecuritySafebrowsingV4FindFullHashesResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

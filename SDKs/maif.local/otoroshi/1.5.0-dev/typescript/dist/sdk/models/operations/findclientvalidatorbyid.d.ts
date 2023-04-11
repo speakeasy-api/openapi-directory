@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class FindClientValidatorByIdPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class FindClientValidatorByIdSecurity extends SpeakeasyBase {
-    otoroshiAuth: shared.SchemeOtoroshiAuth;
+    password: string;
+    username: string;
 }
 export declare class FindClientValidatorByIdRequest extends SpeakeasyBase {
-    pathParams: FindClientValidatorByIdPathParams;
-    security: FindClientValidatorByIdSecurity;
+    /**
+     * The auth. config id
+     */
+    id: string;
 }
 export declare class FindClientValidatorByIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful operation
+     */
     validationAuthority?: shared.ValidationAuthority;
 }

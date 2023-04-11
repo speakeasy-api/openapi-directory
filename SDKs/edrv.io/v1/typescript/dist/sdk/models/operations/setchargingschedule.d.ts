@@ -1,14 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class Setchargingschedule201ApplicationJson extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class SetchargingscheduleRequestBodySchedule extends SpeakeasyBase {
+    endDate?: string;
+    limit?: number;
+    startDate?: string;
+    unit?: string;
+}
+export declare class SetchargingscheduleRequestBody extends SpeakeasyBase {
+    connector?: string;
+    schedule?: SetchargingscheduleRequestBodySchedule[];
+}
+/**
+ * A successful response
+ */
+export declare class Setchargingschedule201ApplicationJSON extends SpeakeasyBase {
     command?: Record<string, any>;
     message?: string;
     ok?: boolean;
 }
-export declare class SetchargingscheduleRequest extends SpeakeasyBase {
-    request: any;
-}
 export declare class SetchargingscheduleResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    setchargingschedule201ApplicationJSONObject?: Setchargingschedule201ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * A successful response
+     */
+    setchargingschedule201ApplicationJSONObject?: Setchargingschedule201ApplicationJSON;
 }

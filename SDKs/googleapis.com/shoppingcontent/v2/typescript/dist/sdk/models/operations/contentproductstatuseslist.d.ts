@@ -1,37 +1,86 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ContentProductstatusesListPathParams extends SpeakeasyBase {
-    merchantId: string;
-}
-export declare class ContentProductstatusesListQueryParams extends SpeakeasyBase {
-    dollarXgafv?: shared.XgafvEnum;
-    accessToken?: string;
-    alt?: shared.AltEnum;
-    callback?: string;
-    destinations?: string[];
-    fields?: string;
-    includeAttributes?: boolean;
-    includeInvalidInsertedItems?: boolean;
-    key?: string;
-    maxResults?: number;
-    oauthToken?: string;
-    pageToken?: string;
-    prettyPrint?: boolean;
-    quotaUser?: string;
-    uploadType?: string;
-    uploadProtocol?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ContentProductstatusesListSecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class ContentProductstatusesListRequest extends SpeakeasyBase {
-    pathParams: ContentProductstatusesListPathParams;
-    queryParams: ContentProductstatusesListQueryParams;
-    security: ContentProductstatusesListSecurity;
+    /**
+     * V1 error format.
+     */
+    dollarXgafv?: shared.XgafvEnum;
+    /**
+     * OAuth access token.
+     */
+    accessToken?: string;
+    /**
+     * Data format for response.
+     */
+    alt?: shared.AltEnum;
+    /**
+     * JSONP
+     */
+    callback?: string;
+    /**
+     * If set, only issues for the specified destinations are returned, otherwise only issues for the Shopping destination.
+     */
+    destinations?: string[];
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * Flag to include full product data in the results of the list request. The default value is false.
+     */
+    includeAttributes?: boolean;
+    /**
+     * Flag to include the invalid inserted items in the result of the list request. By default the invalid items are not shown (the default value is false).
+     */
+    includeInvalidInsertedItems?: boolean;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * The maximum number of product statuses to return in the response, used for paging.
+     */
+    maxResults?: number;
+    /**
+     * The ID of the account that contains the products. This account cannot be a multi-client account.
+     */
+    merchantId: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauthToken?: string;
+    /**
+     * The token returned by the previous request.
+     */
+    pageToken?: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    uploadType?: string;
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    uploadProtocol?: string;
 }
 export declare class ContentProductstatusesListResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful response
+     */
     productstatusesListResponse?: shared.ProductstatusesListResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

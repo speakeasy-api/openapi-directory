@@ -1,23 +1,31 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetTaggedImageCountPathParams extends SpeakeasyBase {
-    projectId: string;
-}
-export declare class GetTaggedImageCountQueryParams extends SpeakeasyBase {
-    iterationId?: string;
-    tagIds?: string[];
-}
-export declare class GetTaggedImageCountHeaders extends SpeakeasyBase {
-    trainingKey: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetTaggedImageCountRequest extends SpeakeasyBase {
-    pathParams: GetTaggedImageCountPathParams;
-    queryParams: GetTaggedImageCountQueryParams;
-    headers: GetTaggedImageCountHeaders;
+    trainingKey: string;
+    /**
+     * The iteration id. Defaults to workspace
+     */
+    iterationId?: string;
+    /**
+     * The project id
+     */
+    projectId: string;
+    /**
+     * A list of tags ids to filter the images to count. Defaults to all tags when null.
+     */
+    tagIds?: string[];
 }
 export declare class GetTaggedImageCountResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
+    /**
+     * OK
+     */
     getTaggedImageCount200ApplicationJSONInt32Integer?: number;
+    /**
+     * OK
+     */
     getTaggedImageCount200TextJSONInt32Integer?: number;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

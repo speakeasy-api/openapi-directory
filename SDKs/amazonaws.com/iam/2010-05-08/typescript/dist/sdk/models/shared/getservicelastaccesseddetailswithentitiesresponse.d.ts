@@ -2,6 +2,9 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { EntityDetails } from "./entitydetails";
 import { ErrorDetails } from "./errordetails";
 import { JobStatusTypeEnum } from "./jobstatustypeenum";
+/**
+ * Success
+ */
 export declare class GetServiceLastAccessedDetailsWithEntitiesResponse extends SpeakeasyBase {
     entityDetailsList: EntityDetails[];
     error?: ErrorDetails;

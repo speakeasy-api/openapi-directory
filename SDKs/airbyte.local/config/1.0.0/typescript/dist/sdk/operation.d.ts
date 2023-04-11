@@ -1,5 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Operation {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,29 +10,30 @@ export declare class Operation {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * checkOperation - Check if an operation to be created is valid
-    **/
-    checkOperation(req: operations.CheckOperationRequest, config?: AxiosRequestConfig): Promise<operations.CheckOperationResponse>;
+     * Check if an operation to be created is valid
+     */
+    checkOperation(req: shared.OperatorConfiguration, config?: AxiosRequestConfig): Promise<operations.CheckOperationResponse>;
     /**
-     * createOperation - Create an operation to be applied as part of a connection pipeline
-    **/
-    createOperation(req: operations.CreateOperationRequest, config?: AxiosRequestConfig): Promise<operations.CreateOperationResponse>;
+     * Create an operation to be applied as part of a connection pipeline
+     */
+    createOperation(req: shared.OperationCreate, config?: AxiosRequestConfig): Promise<operations.CreateOperationResponse>;
     /**
-     * deleteOperation - Delete an operation
-    **/
-    deleteOperation(req: operations.DeleteOperationRequest, config?: AxiosRequestConfig): Promise<operations.DeleteOperationResponse>;
+     * Delete an operation
+     */
+    deleteOperation(req: shared.OperationIdRequestBody, config?: AxiosRequestConfig): Promise<operations.DeleteOperationResponse>;
     /**
-     * getOperation - Returns an operation
-    **/
-    getOperation(req: operations.GetOperationRequest, config?: AxiosRequestConfig): Promise<operations.GetOperationResponse>;
+     * Returns an operation
+     */
+    getOperation(req: shared.OperationIdRequestBody, config?: AxiosRequestConfig): Promise<operations.GetOperationResponse>;
     /**
-     * listOperationsForConnection - Returns all operations for a connection.
+     * Returns all operations for a connection.
      *
+     * @remarks
      * List operations for connection.
-    **/
-    listOperationsForConnection(req: operations.ListOperationsForConnectionRequest, config?: AxiosRequestConfig): Promise<operations.ListOperationsForConnectionResponse>;
+     */
+    listOperationsForConnection(req: shared.ConnectionIdRequestBody, config?: AxiosRequestConfig): Promise<operations.ListOperationsForConnectionResponse>;
     /**
-     * updateOperation - Update an operation
-    **/
-    updateOperation(req: operations.UpdateOperationRequest, config?: AxiosRequestConfig): Promise<operations.UpdateOperationResponse>;
+     * Update an operation
+     */
+    updateOperation(req: shared.OperationUpdate, config?: AxiosRequestConfig): Promise<operations.UpdateOperationResponse>;
 }

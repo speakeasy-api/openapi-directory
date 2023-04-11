@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateServiceSpecificCredentialActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateServiceSpecificCredentialActionEnum {
     CreateServiceSpecificCredential = "CreateServiceSpecificCredential"
 }
-export declare enum PostCreateServiceSpecificCredentialVersionEnum {
+export declare enum POSTCreateServiceSpecificCredentialVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostCreateServiceSpecificCredentialQueryParams extends SpeakeasyBase {
-    action: PostCreateServiceSpecificCredentialActionEnum;
-    version: PostCreateServiceSpecificCredentialVersionEnum;
-}
-export declare class PostCreateServiceSpecificCredentialHeaders extends SpeakeasyBase {
+export declare class POSTCreateServiceSpecificCredentialRequest extends SpeakeasyBase {
+    action: POSTCreateServiceSpecificCredentialActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateServiceSpecificCredentialVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateServiceSpecificCredentialHeaders extends Speakeas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateServiceSpecificCredentialRequest extends SpeakeasyBase {
-    queryParams: PostCreateServiceSpecificCredentialQueryParams;
-    headers: PostCreateServiceSpecificCredentialHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateServiceSpecificCredentialResponse extends SpeakeasyBase {
+export declare class POSTCreateServiceSpecificCredentialResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

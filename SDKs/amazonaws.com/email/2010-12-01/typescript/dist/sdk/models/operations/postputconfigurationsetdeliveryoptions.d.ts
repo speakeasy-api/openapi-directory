@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostPutConfigurationSetDeliveryOptionsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTPutConfigurationSetDeliveryOptionsActionEnum {
     PutConfigurationSetDeliveryOptions = "PutConfigurationSetDeliveryOptions"
 }
-export declare enum PostPutConfigurationSetDeliveryOptionsVersionEnum {
+export declare enum POSTPutConfigurationSetDeliveryOptionsVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostPutConfigurationSetDeliveryOptionsQueryParams extends SpeakeasyBase {
-    action: PostPutConfigurationSetDeliveryOptionsActionEnum;
-    version: PostPutConfigurationSetDeliveryOptionsVersionEnum;
-}
-export declare class PostPutConfigurationSetDeliveryOptionsHeaders extends SpeakeasyBase {
+export declare class POSTPutConfigurationSetDeliveryOptionsRequest extends SpeakeasyBase {
+    action: POSTPutConfigurationSetDeliveryOptionsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTPutConfigurationSetDeliveryOptionsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostPutConfigurationSetDeliveryOptionsHeaders extends Speak
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostPutConfigurationSetDeliveryOptionsRequest extends SpeakeasyBase {
-    queryParams: PostPutConfigurationSetDeliveryOptionsQueryParams;
-    headers: PostPutConfigurationSetDeliveryOptionsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostPutConfigurationSetDeliveryOptionsResponse extends SpeakeasyBase {
+export declare class POSTPutConfigurationSetDeliveryOptionsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

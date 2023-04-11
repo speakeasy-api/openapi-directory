@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateLocationSmbXAmzTargetEnum {
     FmrsServiceUpdateLocationSmb = "FmrsService.UpdateLocationSmb"
 }
-export declare class UpdateLocationSmbHeaders extends SpeakeasyBase {
+export declare class UpdateLocationSmbRequest extends SpeakeasyBase {
+    updateLocationSmbRequest: shared.UpdateLocationSmbRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class UpdateLocationSmbHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateLocationSmbXAmzTargetEnum;
 }
-export declare class UpdateLocationSmbRequest extends SpeakeasyBase {
-    headers: UpdateLocationSmbHeaders;
-    request: shared.UpdateLocationSmbRequest;
-}
 export declare class UpdateLocationSmbResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalException
+     */
     internalException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     updateLocationSmbResponse?: Record<string, any>;
 }

@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDisableAlarmActionsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDisableAlarmActionsActionEnum {
     DisableAlarmActions = "DisableAlarmActions"
 }
-export declare enum GetDisableAlarmActionsVersionEnum {
+export declare enum GETDisableAlarmActionsVersionEnum {
     TwoThousandAndTen0801 = "2010-08-01"
 }
-export declare class GetDisableAlarmActionsQueryParams extends SpeakeasyBase {
-    action: GetDisableAlarmActionsActionEnum;
+export declare class GETDisableAlarmActionsRequest extends SpeakeasyBase {
+    action: GETDisableAlarmActionsActionEnum;
+    /**
+     * The names of the alarms.
+     */
     alarmNames: string[];
-    version: GetDisableAlarmActionsVersionEnum;
-}
-export declare class GetDisableAlarmActionsHeaders extends SpeakeasyBase {
+    version: GETDisableAlarmActionsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,11 +21,8 @@ export declare class GetDisableAlarmActionsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDisableAlarmActionsRequest extends SpeakeasyBase {
-    queryParams: GetDisableAlarmActionsQueryParams;
-    headers: GetDisableAlarmActionsHeaders;
-}
-export declare class GetDisableAlarmActionsResponse extends SpeakeasyBase {
+export declare class GETDisableAlarmActionsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

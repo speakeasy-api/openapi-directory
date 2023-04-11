@@ -6,7 +6,7 @@ import { NetworkInterface } from "./networkinterface";
 import { Os } from "./os";
 /**
  * Source server properties.
-**/
+ */
 export declare class SourceProperties extends SpeakeasyBase {
     cpus?: Cpu[];
     disks?: Disk[];

@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * optional resource requirements to run workers (blank for unbounded allocations)
-**/
+ */
 export declare class ResourceRequirements extends SpeakeasyBase {
     cpuLimit?: string;
     cpuRequest?: string;

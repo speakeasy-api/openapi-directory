@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class EnterpriseAdminDeletePreReceiveHookPathParams extends SpeakeasyBase {
-    preReceiveHookId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class EnterpriseAdminDeletePreReceiveHookRequest extends SpeakeasyBase {
-    pathParams: EnterpriseAdminDeletePreReceiveHookPathParams;
+    /**
+     * The unique identifier of the pre-receive hook.
+     */
+    preReceiveHookId: number;
 }
 export declare class EnterpriseAdminDeletePreReceiveHookResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

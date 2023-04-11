@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { LfTagPair } from "./lftagpair";
+import { LFTagPair } from "./lftagpair";
 /**
- * A structure containing the name of a column resource and the tags attached to it.
-**/
-export declare class ColumnLfTag extends SpeakeasyBase {
-    lfTags?: LfTagPair[];
+ * A structure containing the name of a column resource and the LF-tags attached to it.
+ */
+export declare class ColumnLFTag extends SpeakeasyBase {
+    lfTags?: LFTagPair[];
     name?: string;
 }

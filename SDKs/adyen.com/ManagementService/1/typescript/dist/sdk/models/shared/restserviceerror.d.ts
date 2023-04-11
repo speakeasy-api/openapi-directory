@@ -1,0 +1,41 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { InvalidField } from "./invalidfield";
+import { JSONObject } from "./jsonobject";
+/**
+ * Bad Request - a problem reading or understanding the request.
+ */
+export declare class RestServiceError extends SpeakeasyBase {
+    /**
+     * A human-readable explanation specific to this occurrence of the problem.
+     */
+    detail: string;
+    /**
+     * A code that identifies the problem type.
+     */
+    errorCode: string;
+    /**
+     * A unique URI that identifies the specific occurrence of the problem.
+     */
+    instance?: string;
+    /**
+     * Detailed explanation of each validation error, when applicable.
+     */
+    invalidFields?: InvalidField[];
+    /**
+     * A unique reference for the request, essentially the same as `pspReference`.
+     */
+    requestId?: string;
+    response?: JSONObject;
+    /**
+     * The HTTP status code.
+     */
+    status: number;
+    /**
+     * A short, human-readable summary of the problem type.
+     */
+    title: string;
+    /**
+     * A URI that identifies the problem type, pointing to human-readable documentation on this problem type.
+     */
+    type: string;
+}

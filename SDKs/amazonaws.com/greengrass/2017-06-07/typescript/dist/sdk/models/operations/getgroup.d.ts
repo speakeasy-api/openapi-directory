@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetGroupPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetGroupRequest extends SpeakeasyBase {
+    /**
+     * The ID of the Greengrass group.
+     */
     groupId: string;
-}
-export declare class GetGroupHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,13 +14,16 @@ export declare class GetGroupHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetGroupRequest extends SpeakeasyBase {
-    pathParams: GetGroupPathParams;
-    headers: GetGroupHeaders;
-}
 export declare class GetGroupResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getGroupResponse?: shared.GetGroupResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

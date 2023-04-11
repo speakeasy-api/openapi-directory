@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ConditionValue } from "./conditionvalue";
+/**
+ * The type of condition.
+ */
 export declare enum BooleanConditionTypeEnum {
     ConditionTypeUnspecified = "CONDITION_TYPE_UNSPECIFIED",
     NumberGreater = "NUMBER_GREATER",
@@ -36,8 +39,14 @@ export declare enum BooleanConditionTypeEnum {
 }
 /**
  * A condition that can evaluate to true or false. BooleanConditions are used by conditional formatting, data validation, and the criteria in filters.
-**/
+ */
 export declare class BooleanCondition extends SpeakeasyBase {
+    /**
+     * The type of condition.
+     */
     type?: BooleanConditionTypeEnum;
+    /**
+     * The values of the condition. The number of supported values depends on the condition type. Some support zero values, others one or two values, and ConditionType.ONE_OF_LIST supports an arbitrary number of values.
+     */
     values?: ConditionValue[];
 }

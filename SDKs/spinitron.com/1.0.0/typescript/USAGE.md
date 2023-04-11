@@ -1,30 +1,33 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetPersonasRequest, GetPersonasResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GetPersonasRequest,
+  GetPersonasResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    httpBearer: {
-      authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-    },
-  }
-));
-    
-const req: GetPersonasRequest = {
-  queryParams: {
-    count: 8717895732742165505,
-    expand: [
-      "culpa",
-    ],
-    fields: [
-      "consequuntur",
-      "dolor",
-    ],
-    name: "expedita",
-    page: 6044372234677422456,
+    accessToken: "YOUR_API_KEY_HERE",
   },
+});
+
+const req: GetPersonasRequest = {
+  count: 548814,
+  expand: [
+    "distinctio",
+    "quibusdam",
+    "unde",
+  ],
+  fields: [
+    "corrupti",
+    "illum",
+    "vel",
+    "error",
+  ],
+  name: "deserunt",
+  page: 384382,
 };
 
 sdk.persona.getPersonas(req).then((res: GetPersonasResponse | AxiosError) => {

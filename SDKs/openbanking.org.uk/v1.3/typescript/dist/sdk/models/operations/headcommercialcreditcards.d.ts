@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class HeadCommercialCreditCardsHeaders extends SpeakeasyBase {
-    ifModifiedSince?: string;
-    ifNoneMatch?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class HeadCommercialCreditCardsRequest extends SpeakeasyBase {
-    headers: HeadCommercialCreditCardsHeaders;
+    /**
+     * Used for conditional request, to retrieve data only if modified since a given date
+     */
+    ifModifiedSince?: string;
+    /**
+     * Used for conditional request, to retrieve data only if the given Etag value does not match
+     */
+    ifNoneMatch?: string;
 }
 export declare class HeadCommercialCreditCardsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * No response
+     */
     noResponse?: Record<string, any>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

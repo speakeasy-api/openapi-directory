@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UndeprecateDomainXAmzTargetEnum {
     SimpleWorkflowServiceUndeprecateDomain = "SimpleWorkflowService.UndeprecateDomain"
 }
-export declare class UndeprecateDomainHeaders extends SpeakeasyBase {
+export declare class UndeprecateDomainRequest extends SpeakeasyBase {
+    undeprecateDomainInput: shared.UndeprecateDomainInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class UndeprecateDomainHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UndeprecateDomainXAmzTargetEnum;
 }
-export declare class UndeprecateDomainRequest extends SpeakeasyBase {
-    headers: UndeprecateDomainHeaders;
-    request: shared.UndeprecateDomainInput;
-}
 export declare class UndeprecateDomainResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * DomainAlreadyExistsFault
+     */
     domainAlreadyExistsFault?: any;
+    /**
+     * OperationNotPermittedFault
+     */
     operationNotPermittedFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnknownResourceFault
+     */
     unknownResourceFault?: any;
 }

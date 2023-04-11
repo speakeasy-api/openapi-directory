@@ -1,513 +1,611 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { TranscoderProjectsLocationsJobTemplatesCreateRequest, TranscoderProjectsLocationsJobTemplatesCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  TranscoderProjectsLocationsJobTemplatesCreateRequest,
+  TranscoderProjectsLocationsJobTemplatesCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  AnimationFadeFadeTypeEnum,
+  ManifestTypeEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: TranscoderProjectsLocationsJobTemplatesCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    jobTemplateId: "expedita",
-    key: "voluptas",
-    oauthToken: "fugit",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    uploadType: "rerum",
-    uploadProtocol: "dicta",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  jobTemplate: {
     config: {
       adBreaks: [
         {
-          startTimeOffset: "voluptatum",
+          startTimeOffset: "distinctio",
+        },
+        {
+          startTimeOffset: "quibusdam",
+        },
+        {
+          startTimeOffset: "unde",
         },
       ],
       editList: [
         {
-          endTimeOffset: "ut",
+          endTimeOffset: "corrupti",
           inputs: [
-            "et",
-            "voluptate",
-            "iste",
+            "vel",
+            "error",
+            "deserunt",
+            "suscipit",
           ],
-          key: "vitae",
-          startTimeOffset: "totam",
+          key: "iure",
+          startTimeOffset: "magnam",
+        },
+        {
+          endTimeOffset: "debitis",
+          inputs: [
+            "delectus",
+          ],
+          key: "tempora",
+          startTimeOffset: "suscipit",
+        },
+        {
+          endTimeOffset: "molestiae",
+          inputs: [
+            "placeat",
+            "voluptatum",
+            "iusto",
+            "excepturi",
+          ],
+          key: "nisi",
+          startTimeOffset: "recusandae",
+        },
+        {
+          endTimeOffset: "temporibus",
+          inputs: [
+            "quis",
+          ],
+          key: "veritatis",
+          startTimeOffset: "deserunt",
         },
       ],
       elementaryStreams: [
         {
           audioStream: {
-            bitrateBps: 1929546706668609706,
-            channelCount: 6392442863481646880,
+            bitrateBps: 368241,
+            channelCount: 832620,
             channelLayout: [
-              "odio",
-              "dolore",
+              "quo",
+              "odit",
+              "at",
+              "at",
             ],
-            codec: "id",
+            codec: "maiores",
+            displayName: "molestiae",
+            languageCode: "quod",
             mapping: [
               {
-                atomKey: "accusantium",
-                gainDb: 45.099998,
-                inputChannel: 2897681629866238117,
-                inputKey: "est",
-                inputTrack: 5974317550424871033,
-                outputChannel: 3317123977833389635,
+                atomKey: "esse",
+                gainDb: 5204.78,
+                inputChannel: 780529,
+                inputKey: "dolorum",
+                inputTrack: 118274,
+                outputChannel: 720633,
+              },
+              {
+                atomKey: "officia",
+                gainDb: 5820.2,
+                inputChannel: 143353,
+                inputKey: "deleniti",
+                inputTrack: 944669,
+                outputChannel: 758616,
+              },
+              {
+                atomKey: "totam",
+                gainDb: 1059.07,
+                inputChannel: 414662,
+                inputKey: "molestiae",
+                inputTrack: 264555,
+                outputChannel: 186332,
+              },
+              {
+                atomKey: "impedit",
+                gainDb: 7369.18,
+                inputChannel: 456150,
+                inputKey: "ipsum",
+                inputTrack: 568434,
+                outputChannel: 135218,
               },
             ],
-            sampleRateHertz: 5001958211167890979,
+            sampleRateHertz: 18789,
           },
-          key: "voluptas",
+          key: "ad",
           textStream: {
-            codec: "omnis",
+            codec: "natus",
+            displayName: "sed",
+            languageCode: "iste",
             mapping: [
               {
-                atomKey: "illo",
-                inputKey: "sed",
-                inputTrack: 7845762441295307478,
+                atomKey: "natus",
+                inputKey: "laboriosam",
+                inputTrack: 943749,
               },
             ],
           },
           videoStream: {
             h264: {
-              allowOpenGop: true,
-              aqStrength: 68.099998,
-              bFrameCount: 4345851588384648695,
+              allowOpenGop: false,
+              aqStrength: 9025.99,
+              bFrameCount: 681820,
               bPyramid: false,
-              bitrateBps: 388440063886460141,
-              crfLevel: 7561811714888168464,
+              bitrateBps: 449950,
+              crfLevel: 359508,
               enableTwoPass: false,
-              entropyCoder: "eveniet",
-              frameRate: 19.100000,
-              gopDuration: "inventore",
-              gopFrameCount: 7847956203786849690,
-              heightPixels: 406703151708498928,
-              pixelFormat: "aut",
-              preset: "reprehenderit",
-              profile: "tempore",
-              rateControlMode: "maiores",
-              tune: "incidunt",
-              vbvFullnessBits: 7242748068272024738,
-              vbvSizeBits: 7719717197379695442,
-              widthPixels: 4112921325496946042,
+              entropyCoder: "iste",
+              frameRate: 4370.32,
+              gopDuration: "saepe",
+              gopFrameCount: 697631,
+              heightPixels: 99280,
+              pixelFormat: "ipsa",
+              preset: "reiciendis",
+              profile: "est",
+              rateControlMode: "mollitia",
+              tune: "laborum",
+              vbvFullnessBits: 170909,
+              vbvSizeBits: 210382,
+              widthPixels: 358152,
             },
             h265: {
-              allowOpenGop: true,
-              aqStrength: 69.199997,
-              bFrameCount: 4564823113789767141,
-              bPyramid: true,
-              bitrateBps: 7014402135919778893,
-              crfLevel: 3983722386484812742,
-              enableTwoPass: true,
-              frameRate: 93.199997,
-              gopDuration: "voluptas",
-              gopFrameCount: 8097022081922209513,
-              heightPixels: 7481608503761597087,
-              pixelFormat: "qui",
-              preset: "qui",
-              profile: "unde",
-              rateControlMode: "in",
-              tune: "autem",
-              vbvFullnessBits: 8086159467323165929,
-              vbvSizeBits: 35604086129376003,
-              widthPixels: 8559453321117178323,
+              allowOpenGop: false,
+              aqStrength: 1289.26,
+              bFrameCount: 750686,
+              bPyramid: false,
+              bitrateBps: 315428,
+              crfLevel: 607831,
+              enableTwoPass: false,
+              frameRate: 3637.11,
+              gopDuration: "minima",
+              gopFrameCount: 570197,
+              heightPixels: 38425,
+              pixelFormat: "iure",
+              preset: "culpa",
+              profile: "doloribus",
+              rateControlMode: "sapiente",
+              tune: "architecto",
+              vbvFullnessBits: 652790,
+              vbvSizeBits: 208876,
+              widthPixels: 635059,
             },
             vp9: {
-              bitrateBps: 2006924026344156168,
-              crfLevel: 8218430188258725598,
-              frameRate: 76.099998,
-              gopDuration: "accusantium",
-              gopFrameCount: 3462733497206508461,
-              heightPixels: 5902760509050140210,
+              bitrateBps: 161309,
+              crfLevel: 995300,
+              frameRate: 6531.08,
+              gopDuration: "occaecati",
+              gopFrameCount: 253291,
+              heightPixels: 414369,
               pixelFormat: "quam",
-              profile: "velit",
-              rateControlMode: "cumque",
-              widthPixels: 3331863358128628835,
+              profile: "molestiae",
+              rateControlMode: "velit",
+              widthPixels: 623510,
             },
           },
         },
       ],
       inputs: [
         {
-          key: "voluptates",
+          key: "quis",
           preprocessingConfig: {
             audio: {
               highBoost: false,
               lowBoost: false,
-              lufs: 41.099998,
+              lufs: 1103.75,
             },
             color: {
-              brightness: 59.200001,
-              contrast: 6.100000,
-              saturation: 82.099998,
+              brightness: 6747.52,
+              contrast: 6563.3,
+              saturation: 3172.02,
             },
             crop: {
-              bottomPixels: 7945398411639602224,
-              leftPixels: 1925401661646756611,
-              rightPixels: 150340687756601720,
-              topPixels: 4989862523986425397,
-            },
-            deblock: {
-              enabled: true,
-              strength: 19.100000,
-            },
-            deinterlace: {
-              bwdif: {
-                deinterlaceAllFrames: true,
-                mode: "a",
-                parity: "soluta",
-              },
-              yadif: {
-                deinterlaceAllFrames: true,
-                disableSpatialInterlacing: true,
-                mode: "consequuntur",
-                parity: "laudantium",
-              },
-            },
-            denoise: {
-              strength: 73.199997,
-              tune: "expedita",
-            },
-            pad: {
-              bottomPixels: 8204648627352676445,
-              leftPixels: 4234137922270959652,
-              rightPixels: 8497925768463229012,
-              topPixels: 5311927246208705713,
-            },
-          },
-          uri: "quisquam",
-        },
-        {
-          key: "explicabo",
-          preprocessingConfig: {
-            audio: {
-              highBoost: true,
-              lowBoost: true,
-              lufs: 15.200000,
-            },
-            color: {
-              brightness: 66.099998,
-              contrast: 94.199997,
-              saturation: 97.199997,
-            },
-            crop: {
-              bottomPixels: 2333048574390956331,
-              leftPixels: 9205243623417456715,
-              rightPixels: 190417550815006435,
-              topPixels: 7478610059307147871,
+              bottomPixels: 138183,
+              leftPixels: 778346,
+              rightPixels: 196582,
+              topPixels: 949572,
             },
             deblock: {
               enabled: false,
-              strength: 27.200001,
+              strength: 3687.25,
             },
             deinterlace: {
               bwdif: {
-                deinterlaceAllFrames: true,
-                mode: "expedita",
-                parity: "vel",
+                deinterlaceAllFrames: false,
+                mode: "id",
+                parity: "possimus",
               },
               yadif: {
-                deinterlaceAllFrames: true,
+                deinterlaceAllFrames: false,
                 disableSpatialInterlacing: false,
-                mode: "nihil",
-                parity: "tempora",
+                mode: "aut",
+                parity: "quasi",
               },
             },
             denoise: {
-              strength: 42.200001,
-              tune: "sunt",
+              strength: 6228.46,
+              tune: "temporibus",
             },
             pad: {
-              bottomPixels: 157519078836327761,
-              leftPixels: 2867593906384393455,
-              rightPixels: 7506934391669544280,
-              topPixels: 952897656927189675,
+              bottomPixels: 673660,
+              leftPixels: 96098,
+              rightPixels: 971945,
+              topPixels: 976460,
             },
           },
-          uri: "vel",
+          uri: "https://klutzy-level.org",
         },
       ],
       manifests: [
         {
-          fileName: "qui",
+          fileName: "omnis",
           muxStreams: [
-            "quis",
-            "adipisci",
+            "cum",
+            "perferendis",
           ],
-          type: "DASH",
+          type: ManifestTypeEnum.ManifestTypeUnspecified,
         },
       ],
       muxStreams: [
         {
-          container: "et",
+          container: "ut",
           elementaryStreams: [
-            "numquam",
-            "laborum",
-            "rerum",
+            "dicta",
+            "corporis",
+            "dolore",
+            "iusto",
           ],
-          fileName: "ut",
-          key: "laborum",
+          fileName: "dicta",
+          key: "harum",
           segmentSettings: {
             individualSegments: false,
-            segmentDuration: "quis",
+            segmentDuration: "enim",
           },
         },
         {
-          container: "minus",
+          container: "accusamus",
           elementaryStreams: [
-            "aperiam",
+            "repudiandae",
+            "quae",
           ],
-          fileName: "consequuntur",
-          key: "excepturi",
-          segmentSettings: {
-            individualSegments: true,
-            segmentDuration: "inventore",
-          },
-        },
-        {
-          container: "delectus",
-          elementaryStreams: [
-            "animi",
-          ],
-          fileName: "animi",
-          key: "ut",
+          fileName: "ipsum",
+          key: "quidem",
           segmentSettings: {
             individualSegments: false,
-            segmentDuration: "fuga",
+            segmentDuration: "molestias",
           },
         },
       ],
       output: {
-        uri: "sed",
+        uri: "https://treasured-dirt.name",
       },
       overlays: [
         {
           animations: [
             {
               animationEnd: {
-                startTimeOffset: "consequuntur",
+                startTimeOffset: "quasi",
               },
               animationFade: {
-                endTimeOffset: "non",
-                fadeType: "FADE_OUT",
-                startTimeOffset: "provident",
+                endTimeOffset: "repudiandae",
+                fadeType: AnimationFadeFadeTypeEnum.FadeIn,
+                startTimeOffset: "veritatis",
                 xy: {
-                  x: 99.099998,
-                  y: 22.100000,
+                  x: 9292.97,
+                  y: 2777.18,
                 },
               },
               animationStatic: {
                 startTimeOffset: "enim",
                 xy: {
-                  x: 85.099998,
-                  y: 84.199997,
+                  x: 93.56,
+                  y: 6674.11,
                 },
               },
             },
             {
               animationEnd: {
-                startTimeOffset: "neque",
+                startTimeOffset: "quibusdam",
               },
               animationFade: {
-                endTimeOffset: "consequuntur",
-                fadeType: "FADE_TYPE_UNSPECIFIED",
-                startTimeOffset: "et",
+                endTimeOffset: "explicabo",
+                fadeType: AnimationFadeFadeTypeEnum.FadeIn,
+                startTimeOffset: "distinctio",
                 xy: {
-                  x: 28.100000,
-                  y: 93.099998,
+                  x: 8413.86,
+                  y: 2894.06,
                 },
               },
               animationStatic: {
-                startTimeOffset: "quia",
+                startTimeOffset: "modi",
                 xy: {
-                  x: 39.200001,
-                  y: 30.200001,
+                  x: 1831.91,
+                  y: 3978.21,
                 },
               },
             },
             {
               animationEnd: {
-                startTimeOffset: "ut",
+                startTimeOffset: "cupiditate",
               },
               animationFade: {
-                endTimeOffset: "necessitatibus",
-                fadeType: "FADE_OUT",
-                startTimeOffset: "possimus",
+                endTimeOffset: "quos",
+                fadeType: AnimationFadeFadeTypeEnum.FadeTypeUnspecified,
+                startTimeOffset: "magni",
                 xy: {
-                  x: 62.200001,
-                  y: 90.199997,
+                  x: 8289.4,
+                  y: 3698.08,
                 },
               },
               animationStatic: {
-                startTimeOffset: "sunt",
+                startTimeOffset: "alias",
                 xy: {
-                  x: 59.099998,
-                  y: 88.099998,
+                  x: 1464.41,
+                  y: 6778.17,
+                },
+              },
+            },
+            {
+              animationEnd: {
+                startTimeOffset: "excepturi",
+              },
+              animationFade: {
+                endTimeOffset: "tempora",
+                fadeType: AnimationFadeFadeTypeEnum.FadeOut,
+                startTimeOffset: "tempore",
+                xy: {
+                  x: 2884.76,
+                  y: 9621.89,
+                },
+              },
+              animationStatic: {
+                startTimeOffset: "eum",
+                xy: {
+                  x: 2487.53,
+                  y: 7561.07,
                 },
               },
             },
           ],
           image: {
-            alpha: 10.200000,
+            alpha: 5761.57,
             resolution: {
-              x: 54.200001,
-              y: 63.099998,
+              x: 3960.98,
+              y: 5920.42,
             },
-            uri: "dolores",
+            uri: "https://nonstop-pate.biz",
           },
         },
         {
           animations: [
             {
               animationEnd: {
-                startTimeOffset: "impedit",
+                startTimeOffset: "a",
               },
               animationFade: {
-                endTimeOffset: "non",
-                fadeType: "FADE_TYPE_UNSPECIFIED",
-                startTimeOffset: "ut",
+                endTimeOffset: "dolorum",
+                fadeType: AnimationFadeFadeTypeEnum.FadeIn,
+                startTimeOffset: "in",
                 xy: {
-                  x: 63.099998,
-                  y: 23.100000,
+                  x: 8464.09,
+                  y: 9785.71,
                 },
               },
               animationStatic: {
-                startTimeOffset: "ipsam",
+                startTimeOffset: "rerum",
                 xy: {
-                  x: 78.199997,
-                  y: 46.099998,
+                  x: 1162.02,
+                  y: 2974.37,
                 },
               },
             },
             {
               animationEnd: {
-                startTimeOffset: "delectus",
+                startTimeOffset: "cumque",
               },
               animationFade: {
-                endTimeOffset: "rerum",
-                fadeType: "FADE_IN",
-                startTimeOffset: "repellat",
+                endTimeOffset: "facere",
+                fadeType: AnimationFadeFadeTypeEnum.FadeIn,
+                startTimeOffset: "aliquid",
                 xy: {
-                  x: 26.200001,
-                  y: 9.200000,
+                  x: 6754.39,
+                  y: 8811.04,
                 },
               },
               animationStatic: {
-                startTimeOffset: "voluptas",
+                startTimeOffset: "non",
                 xy: {
-                  x: 64.199997,
-                  y: 32.099998,
+                  x: 5812.73,
+                  y: 3132.18,
+                },
+              },
+            },
+            {
+              animationEnd: {
+                startTimeOffset: "accusamus",
+              },
+              animationFade: {
+                endTimeOffset: "delectus",
+                fadeType: AnimationFadeFadeTypeEnum.FadeOut,
+                startTimeOffset: "provident",
+                xy: {
+                  x: 7252.55,
+                  y: 6596.69,
+                },
+              },
+              animationStatic: {
+                startTimeOffset: "blanditiis",
+                xy: {
+                  x: 5332.06,
+                  y: 9560.84,
+                },
+              },
+            },
+            {
+              animationEnd: {
+                startTimeOffset: "amet",
+              },
+              animationFade: {
+                endTimeOffset: "deserunt",
+                fadeType: AnimationFadeFadeTypeEnum.FadeIn,
+                startTimeOffset: "vel",
+                xy: {
+                  x: 6188.09,
+                  y: 6063.93,
+                },
+              },
+              animationStatic: {
+                startTimeOffset: "molestiae",
+                xy: {
+                  x: 191.93,
+                  y: 4701.32,
                 },
               },
             },
           ],
           image: {
-            alpha: 30.200001,
+            alpha: 3015.75,
             resolution: {
-              x: 3.100000,
-              y: 73.199997,
+              x: 7160.75,
+              y: 6601.74,
             },
-            uri: "quae",
+            uri: "http://flawed-gherkin.name",
           },
         },
         {
           animations: [
             {
               animationEnd: {
-                startTimeOffset: "recusandae",
+                startTimeOffset: "eum",
               },
               animationFade: {
-                endTimeOffset: "qui",
-                fadeType: "FADE_IN",
-                startTimeOffset: "et",
+                endTimeOffset: "vero",
+                fadeType: AnimationFadeFadeTypeEnum.FadeTypeUnspecified,
+                startTimeOffset: "architecto",
                 xy: {
-                  x: 7.100000,
-                  y: 43.200001,
+                  x: 2982.82,
+                  y: 923.73,
                 },
               },
               animationStatic: {
-                startTimeOffset: "et",
+                startTimeOffset: "excepturi",
                 xy: {
-                  x: 90.099998,
-                  y: 16.200001,
+                  x: 3540.47,
+                  y: 5908.73,
                 },
               },
             },
             {
               animationEnd: {
-                startTimeOffset: "nihil",
+                startTimeOffset: "quos",
               },
               animationFade: {
-                endTimeOffset: "adipisci",
-                fadeType: "FADE_OUT",
-                startTimeOffset: "illum",
+                endTimeOffset: "sint",
+                fadeType: AnimationFadeFadeTypeEnum.FadeTypeUnspecified,
+                startTimeOffset: "mollitia",
                 xy: {
-                  x: 32.099998,
-                  y: 40.099998,
+                  x: 9689.62,
+                  y: 6521.03,
                 },
               },
               animationStatic: {
-                startTimeOffset: "quidem",
+                startTimeOffset: "ad",
                 xy: {
-                  x: 49.200001,
-                  y: 40.200001,
+                  x: 4314.18,
+                  y: 2212.62,
+                },
+              },
+            },
+            {
+              animationEnd: {
+                startTimeOffset: "necessitatibus",
+              },
+              animationFade: {
+                endTimeOffset: "odit",
+                fadeType: AnimationFadeFadeTypeEnum.FadeIn,
+                startTimeOffset: "quasi",
+                xy: {
+                  x: 4358.65,
+                  y: 9840.43,
+                },
+              },
+              animationStatic: {
+                startTimeOffset: "debitis",
+                xy: {
+                  x: 2603.41,
+                  y: 8061.94,
                 },
               },
             },
           ],
           image: {
-            alpha: 81.099998,
+            alpha: 5370.23,
             resolution: {
-              x: 2.200000,
-              y: 65.199997,
+              x: 7038.89,
+              y: 4479.26,
             },
-            uri: "totam",
+            uri: "http://burly-trachoma.info",
           },
         },
       ],
       pubsubDestination: {
-        topic: "aut",
+        topic: "expedita",
       },
       spriteSheets: [
         {
-          columnCount: 7167106058699817943,
-          endTimeOffset: "necessitatibus",
-          filePrefix: "et",
-          format: "culpa",
-          interval: "repellendus",
-          quality: 4761677689824345557,
-          rowCount: 5168005730101237705,
-          spriteHeightPixels: 2118949171484888039,
-          spriteWidthPixels: 4628132784885150210,
-          startTimeOffset: "molestias",
-          totalCount: 4841391702283203193,
+          columnCount: 998848,
+          endTimeOffset: "quibusdam",
+          filePrefix: "sed",
+          format: "saepe",
+          interval: "pariatur",
+          quality: 37559,
+          rowCount: 162493,
+          spriteHeightPixels: 508315,
+          spriteWidthPixels: 615560,
+          startTimeOffset: "magni",
+          totalCount: 123820,
+        },
+        {
+          columnCount: 779051,
+          endTimeOffset: "illum",
+          filePrefix: "pariatur",
+          format: "maxime",
+          interval: "ea",
+          quality: 569101,
+          rowCount: 139972,
+          spriteHeightPixels: 407183,
+          spriteWidthPixels: 33222,
+          startTimeOffset: "ab",
+          totalCount: 982575,
         },
       ],
     },
     labels: {
-      "et": "saepe",
-      "commodi": "in",
-      "quibusdam": "asperiores",
+      "ipsam": "voluptate",
+      "autem": "nam",
+      "eaque": "pariatur",
     },
-    name: "quo",
+    name: "nemo",
   },
+  accessToken: "voluptatibus",
+  alt: AltEnum.Json,
+  callback: "fugiat",
+  fields: "amet",
+  jobTemplateId: "aut",
+  key: "cumque",
+  oauthToken: "corporis",
+  parent: "hic",
+  prettyPrint: false,
+  quotaUser: "libero",
+  uploadType: "nobis",
+  uploadProtocol: "dolores",
 };
 
 sdk.projects.transcoderProjectsLocationsJobTemplatesCreate(req).then((res: TranscoderProjectsLocationsJobTemplatesCreateResponse | AxiosError) => {

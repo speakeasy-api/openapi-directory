@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetStoreTrackedClicksPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetStoreTrackedClicksRequest extends SpeakeasyBase {
+    /**
+     * The amount of clicks to retrieve
+     */
+    count?: number;
+    /**
+     * Your store identifier
+     */
     storeId: string;
 }
-export declare class GetStoreTrackedClicksQueryParams extends SpeakeasyBase {
-    count?: number;
-}
-export declare class GetStoreTrackedClicksRequest extends SpeakeasyBase {
-    pathParams: GetStoreTrackedClicksPathParams;
-    queryParams: GetStoreTrackedClicksQueryParams;
-}
 export declare class GetStoreTrackedClicksResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     * Store or resource not found
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Click list
+     */
     trackedClicks?: shared.TrackedClicks;
 }

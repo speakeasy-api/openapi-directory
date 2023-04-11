@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SendSshPublicKeyResponse extends SpeakeasyBase {
+/**
+ * Success
+ */
+export declare class SendSSHPublicKeyResponse extends SpeakeasyBase {
     requestId?: string;
     success?: boolean;
 }

@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetGetRoleActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETGETRoleActionEnum {
     GetRole = "GetRole"
 }
-export declare enum GetGetRoleVersionEnum {
+export declare enum GETGETRoleVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class GetGetRoleQueryParams extends SpeakeasyBase {
-    action: GetGetRoleActionEnum;
+export declare class GETGETRoleRequest extends SpeakeasyBase {
+    action: GETGETRoleActionEnum;
+    /**
+     * <p>The name of the IAM role to get information about.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
+     */
     roleName: string;
-    version: GetGetRoleVersionEnum;
-}
-export declare class GetGetRoleHeaders extends SpeakeasyBase {
+    version: GETGETRoleVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetGetRoleHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetGetRoleRequest extends SpeakeasyBase {
-    queryParams: GetGetRoleQueryParams;
-    headers: GetGetRoleHeaders;
-}
-export declare class GetGetRoleResponse extends SpeakeasyBase {
+export declare class GETGETRoleResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

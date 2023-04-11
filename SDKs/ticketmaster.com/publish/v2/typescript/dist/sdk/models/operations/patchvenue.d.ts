@@ -1,18 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PatchVenuePathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class PatchVenueHeaders extends SpeakeasyBase {
-    tmpsCorrelationId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PatchVenueRequest extends SpeakeasyBase {
-    pathParams: PatchVenuePathParams;
-    headers: PatchVenueHeaders;
-    request: shared.AugmentationData;
+    /**
+     * Patch to apply
+     */
+    augmentationData: shared.AugmentationData;
+    /**
+     * Unique correlation id to be able to trace the request in our system
+     */
+    tmpsCorrelationId: string;
+    /**
+     * ID of the venue the patch will be applied
+     */
+    id: string;
 }
 export declare class PatchVenueResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

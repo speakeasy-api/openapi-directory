@@ -1,3 +1,6 @@
+/**
+ * An enumeration.
+ */
 export declare enum EntityTypesEnum {
     Government = "government",
     Community = "community",

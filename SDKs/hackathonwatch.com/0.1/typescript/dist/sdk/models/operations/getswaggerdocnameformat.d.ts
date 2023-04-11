@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetSwaggerDocNameFormatPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETSwaggerDocNameFormatRequest extends SpeakeasyBase {
+    /**
+     * Resource name of mounted API
+     */
     name: string;
 }
-export declare class GetSwaggerDocNameFormatRequest extends SpeakeasyBase {
-    pathParams: GetSwaggerDocNameFormatPathParams;
-}
-export declare class GetSwaggerDocNameFormatResponse extends SpeakeasyBase {
+export declare class GETSwaggerDocNameFormatResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

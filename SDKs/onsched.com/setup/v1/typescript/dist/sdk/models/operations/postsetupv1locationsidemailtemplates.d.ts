@@ -1,20 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PostSetupV1LocationsIdEmailTemplatesPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class PostSetupV1LocationsIdEmailTemplatesRequest extends SpeakeasyBase {
+    /**
+     * Input model for email template
+     */
+    emailTemplateInputModel?: shared.EmailTemplateInputModel;
+    /**
+     * id of business location, defaults to primary business location
+     */
     id: string;
 }
-export declare class PostSetupV1LocationsIdEmailTemplatesRequests extends SpeakeasyBase {
-    emailTemplateInputModel?: Record<string, any>;
-    emailTemplateInputModel1?: Record<string, any>;
-    emailTemplateInputModel2?: Record<string, any>;
-    emailTemplateInputModel3?: Record<string, any>;
-}
-export declare class PostSetupV1LocationsIdEmailTemplatesRequest extends SpeakeasyBase {
-    pathParams: PostSetupV1LocationsIdEmailTemplatesPathParams;
-    request?: PostSetupV1LocationsIdEmailTemplatesRequests;
-}
 export declare class PostSetupV1LocationsIdEmailTemplatesResponse extends SpeakeasyBase {
+    /**
+     * Success
+     */
     contentResult?: shared.ContentResult;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

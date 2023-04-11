@@ -1,30 +1,39 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PullsUpdateBranchPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class PullsUpdateBranchRequestBody extends SpeakeasyBase {
+    /**
+     * The expected SHA of the pull request's HEAD ref. This is the most recent commit on the pull request's branch. If the expected SHA does not match the pull request's HEAD, you will receive a `422 Unprocessable Entity` status. You can use the "[List commits](https://docs.github.com/enterprise-server@2.22/rest/reference/repos#list-commits)" endpoint to find the most recent commit SHA. Default: SHA of the pull request's current HEAD ref.
+     */
+    expectedHeadSha?: string;
+}
+export declare class PullsUpdateBranchRequest extends SpeakeasyBase {
+    requestBody?: PullsUpdateBranchRequestBody;
     owner: string;
     pullNumber: number;
     repo: string;
 }
-export declare class PullsUpdateBranchRequestBody extends SpeakeasyBase {
-    expectedHeadSha?: string;
-}
-export declare class PullsUpdateBranch202ApplicationJson extends SpeakeasyBase {
+/**
+ * Response
+ */
+export declare class PullsUpdateBranch202ApplicationJSON extends SpeakeasyBase {
     message?: string;
     url?: string;
-}
-export declare class PullsUpdateBranch415ApplicationJson extends SpeakeasyBase {
-    documentationUrl: string;
-    message: string;
-}
-export declare class PullsUpdateBranchRequest extends SpeakeasyBase {
-    pathParams: PullsUpdateBranchPathParams;
-    request?: PullsUpdateBranchRequestBody;
 }
 export declare class PullsUpdateBranchResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Forbidden
+     */
     basicError?: shared.BasicError;
-    pullsUpdateBranch202ApplicationJSONObject?: PullsUpdateBranch202ApplicationJson;
-    pullsUpdateBranch415ApplicationJSONObject?: PullsUpdateBranch415ApplicationJson;
+    /**
+     * Response
+     */
+    pullsUpdateBranch202ApplicationJSONObject?: PullsUpdateBranch202ApplicationJSON;
+    /**
+     * Validation failed
+     */
     validationError?: shared.ValidationError;
 }

@@ -1,18 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class RemoveVideoFromProjectAlt1PathParams extends SpeakeasyBase {
-    projectId: number;
-    videoId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class RemoveVideoFromProjectAlt1Security extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
+    oauth2: string;
 }
 export declare class RemoveVideoFromProjectAlt1Request extends SpeakeasyBase {
-    pathParams: RemoveVideoFromProjectAlt1PathParams;
-    security: RemoveVideoFromProjectAlt1Security;
+    /**
+     * The ID of the project.
+     */
+    projectId: number;
+    /**
+     * The ID of the video.
+     */
+    videoId: number;
 }
 export declare class RemoveVideoFromProjectAlt1Response extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Error code 2204: The input is invalid.
+     */
     error?: shared.ErrorT;
 }

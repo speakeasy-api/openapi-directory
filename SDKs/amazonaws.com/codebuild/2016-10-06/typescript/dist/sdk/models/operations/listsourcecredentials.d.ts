@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum ListSourceCredentialsXAmzTargetEnum {
     CodeBuild20161006ListSourceCredentials = "CodeBuild_20161006.ListSourceCredentials"
 }
-export declare class ListSourceCredentialsHeaders extends SpeakeasyBase {
+export declare class ListSourceCredentialsRequest extends SpeakeasyBase {
+    requestBody: Record<string, any>;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,13 +15,16 @@ export declare class ListSourceCredentialsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListSourceCredentialsXAmzTargetEnum;
 }
-export declare class ListSourceCredentialsRequest extends SpeakeasyBase {
-    headers: ListSourceCredentialsHeaders;
-    request: Record<string, any>;
-}
 export declare class ListSourceCredentialsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * Success
+     */
     listSourceCredentialsOutput?: shared.ListSourceCredentialsOutput;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

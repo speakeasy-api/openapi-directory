@@ -1,22 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdateSuperfundPathParams extends SpeakeasyBase {
-    superFundID: string;
-}
-export declare class UpdateSuperfundHeaders extends SpeakeasyBase {
-    xeroTenantId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UpdateSuperfundSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class UpdateSuperfundRequest extends SpeakeasyBase {
-    pathParams: UpdateSuperfundPathParams;
-    headers: UpdateSuperfundHeaders;
-    request?: shared.SuperFundInput[];
-    security: UpdateSuperfundSecurity;
+    requestBody?: shared.SuperFundInput[];
+    /**
+     * Superfund id for single object
+     */
+    superFundID: string;
+    /**
+     * Xero identifier for Tenant
+     */
+    xeroTenantId: string;
 }
 export declare class UpdateSuperfundResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * A successful request
+     */
     superFunds?: shared.SuperFunds;
 }

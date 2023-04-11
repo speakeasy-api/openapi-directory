@@ -1,24 +1,17 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetAssetRequest, GetAssetResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetAssetRequest,
+  GetAssetResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetAssetRequest = {
-  security: {
-    apikey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  },
-  pathParams: {
-    assetId: "sit",
-  },
-  queryParams: {
-    aliases: false,
-  },
+  aliases: false,
+  assetId: "corrupti",
 };
 
 sdk.asset.getAsset(req).then((res: GetAssetResponse | AxiosError) => {

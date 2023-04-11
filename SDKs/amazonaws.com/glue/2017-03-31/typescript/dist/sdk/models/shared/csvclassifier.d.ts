@@ -2,11 +2,13 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { CsvHeaderOptionEnum } from "./csvheaderoptionenum";
 /**
  * A classifier for custom <code>CSV</code> content.
-**/
+ */
 export declare class CsvClassifier extends SpeakeasyBase {
     allowSingleColumn?: boolean;
     containsHeader?: CsvHeaderOptionEnum;
     creationTime?: Date;
+    customDatatypeConfigured?: boolean;
+    customDatatypes?: string[];
     delimiter?: string;
     disableValueTrimming?: boolean;
     header?: string[];

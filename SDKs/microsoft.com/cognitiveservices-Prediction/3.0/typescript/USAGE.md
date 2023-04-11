@@ -1,31 +1,28 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { ClassifyImageRequest, ClassifyImageResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  ClassifyImageRequest,
+  ClassifyImageResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    apimKey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    apimKey: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: ClassifyImageRequest = {
-  pathParams: {
-    projectId: "sit",
-    publishedName: "voluptas",
-  },
-  queryParams: {
-    application: "culpa",
-  },
-  request: {
+  requestBody: {
     imageData: {
-      content: "expedita".encode(),
-      imageData: "consequuntur",
+      content: "corrupti".encode(),
+      imageData: "provident",
     },
   },
+  application: "distinctio",
+  projectId: "d9d8d69a-674e-40f4-a7cc-8796ed151a05",
+  publishedName: "repellendus",
 };
 
 sdk.imagePredictionApi.classifyImage(req).then((res: ClassifyImageResponse | AxiosError) => {

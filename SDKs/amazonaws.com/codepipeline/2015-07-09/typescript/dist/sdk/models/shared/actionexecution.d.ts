@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ErrorDetails } from "./errordetails";
 import { ActionExecutionStatusEnum } from "./actionexecutionstatusenum";
+import { ErrorDetails } from "./errordetails";
 /**
  * Represents information about the run of an action.
-**/
+ */
 export declare class ActionExecution extends SpeakeasyBase {
     actionExecutionId?: string;
     errorDetails?: ErrorDetails;

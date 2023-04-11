@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { DimensionKeyDescription } from "./dimensionkeydescription";
 import { ResponsePartitionKey } from "./responsepartitionkey";
+/**
+ * Success
+ */
 export declare class DescribeDimensionKeysResponse extends SpeakeasyBase {
     alignedEndTime?: Date;
     alignedStartTime?: Date;

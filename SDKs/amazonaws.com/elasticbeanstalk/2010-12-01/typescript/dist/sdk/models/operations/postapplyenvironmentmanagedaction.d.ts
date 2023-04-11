@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostApplyEnvironmentManagedActionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTApplyEnvironmentManagedActionActionEnum {
     ApplyEnvironmentManagedAction = "ApplyEnvironmentManagedAction"
 }
-export declare enum PostApplyEnvironmentManagedActionVersionEnum {
+export declare enum POSTApplyEnvironmentManagedActionVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostApplyEnvironmentManagedActionQueryParams extends SpeakeasyBase {
-    action: PostApplyEnvironmentManagedActionActionEnum;
-    version: PostApplyEnvironmentManagedActionVersionEnum;
-}
-export declare class PostApplyEnvironmentManagedActionHeaders extends SpeakeasyBase {
+export declare class POSTApplyEnvironmentManagedActionRequest extends SpeakeasyBase {
+    action: POSTApplyEnvironmentManagedActionActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTApplyEnvironmentManagedActionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostApplyEnvironmentManagedActionHeaders extends SpeakeasyB
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostApplyEnvironmentManagedActionRequest extends SpeakeasyBase {
-    queryParams: PostApplyEnvironmentManagedActionQueryParams;
-    headers: PostApplyEnvironmentManagedActionHeaders;
-    request?: Uint8Array;
-}
-export declare class PostApplyEnvironmentManagedActionResponse extends SpeakeasyBase {
+export declare class POSTApplyEnvironmentManagedActionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

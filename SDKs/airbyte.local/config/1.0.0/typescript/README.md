@@ -6,258 +6,153 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/airbyte.local/config/1.0.0/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/airbyte.local/config/1.0.0/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateConnectionRequest, CreateConnectionResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  shared.SaveStatsRequestBody,
+  SaveStatsResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
-  security: {
-    bearerAuth: {
-      authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-    },
-  }
-));
-    
-const req: CreateConnectionRequest = {
-  request: {
-    destinationId: "sit",
-    name: "voluptas",
-    namespaceDefinition: "destination",
-    namespaceFormat: "expedita",
-    operationIds: [
-      "dolor",
-      "expedita",
-      "voluptas",
-    ],
-    prefix: "fugit",
-    resourceRequirements: {
-      cpuLimit: "et",
-      cpuRequest: "nihil",
-      memoryLimit: "rerum",
-      memoryRequest: "dicta",
-    },
-    schedule: {
-      timeUnit: "weeks",
-      units: 5617773211005988520,
-    },
-    sourceId: "et",
-    status: "deprecated",
-    syncCatalog: {
-      streams: [
-        {
-          config: {
-            aliasName: "et",
-            cursorField: [
-              "iste",
-            ],
-            destinationSyncMode: "append",
-            primaryKey: [
-              [
-                "illum",
-              ],
-              [
-                "vel",
-              ],
-              [
-                "dolore",
-              ],
-            ],
-            selected: false,
-            syncMode: "incremental",
-          },
-          stream: {
-            defaultCursorField: [
-              "totam",
-              "commodi",
-              "quis",
-            ],
-            jsonSchema: {
-              "aut": "odit",
-              "non": "voluptas",
-            },
-            name: "omnis",
-            namespace: "aut",
-            sourceDefinedCursor: true,
-            sourceDefinedPrimaryKey: [
-              [
-                "autem",
-                "consectetur",
-              ],
-              [
-                "odio",
-              ],
-              [
-                "recusandae",
-              ],
-            ],
-            supportedSyncModes: [
-              "full_refresh",
-              "full_refresh",
-            ],
-          },
-        },
-        {
-          config: {
-            aliasName: "modi",
-            cursorField: [
-              "inventore",
-            ],
-            destinationSyncMode: "append_dedup",
-            primaryKey: [
-              [
-                "reprehenderit",
-                "tempore",
-                "maiores",
-              ],
-              [
-                "dolor",
-                "beatae",
-                "veritatis",
-              ],
-              [
-                "et",
-                "omnis",
-                "ipsum",
-              ],
-            ],
-            selected: true,
-            syncMode: "full_refresh",
-          },
-          stream: {
-            defaultCursorField: [
-              "vel",
-            ],
-            jsonSchema: {
-              "mollitia": "voluptas",
-              "quam": "reprehenderit",
-              "qui": "qui",
-            },
-            name: "unde",
-            namespace: "in",
-            sourceDefinedCursor: false,
-            sourceDefinedPrimaryKey: [
-              [
-                "itaque",
-                "ab",
-                "neque",
-              ],
-            ],
-            supportedSyncModes: [
-              "full_refresh",
-              "full_refresh",
-              "full_refresh",
-            ],
-          },
-        },
-        {
-          config: {
-            aliasName: "architecto",
-            cursorField: [
-              "velit",
-            ],
-            destinationSyncMode: "overwrite",
-            primaryKey: [
-              [
-                "voluptates",
-                "magni",
-              ],
-            ],
-            selected: false,
-            syncMode: "incremental",
-          },
-          stream: {
-            defaultCursorField: [
-              "earum",
-            ],
-            jsonSchema: {
-              "omnis": "ut",
-            },
-            name: "consequatur",
-            namespace: "dolor",
-            sourceDefinedCursor: true,
-            sourceDefinedPrimaryKey: [
-              [
-                "consectetur",
-              ],
-            ],
-            supportedSyncModes: [
-              "incremental",
-            ],
-          },
-        },
-      ],
-    },
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK();
+
+const req: shared.SaveStatsRequestBody = {
+  attemptNumber: 548814,
+  jobId: 592845,
+  stats: {
+    bytesEmitted: 715190,
+    estimatedBytes: 844266,
+    estimatedRecords: 602763,
+    recordsCommitted: 857946,
+    recordsEmitted: 544883,
+    stateMessagesEmitted: 847252,
   },
+  streamStats: [
+    {
+      stats: {
+        bytesEmitted: 623564,
+        estimatedBytes: 645894,
+        estimatedRecords: 384382,
+        recordsCommitted: 437587,
+        recordsEmitted: 297534,
+        stateMessagesEmitted: 891773,
+      },
+      streamName: "ipsa",
+      streamNamespace: "delectus",
+    },
+    {
+      stats: {
+        bytesEmitted: 272656,
+        estimatedBytes: 383441,
+        estimatedRecords: 477665,
+        recordsCommitted: 791725,
+        recordsEmitted: 812169,
+        stateMessagesEmitted: 528895,
+      },
+      streamName: "iusto",
+      streamNamespace: "excepturi",
+    },
+  ],
 };
 
-sdk.connection.createConnection(req).then((res: CreateConnectionResponse | AxiosError) => {
+sdk.attempt.saveStats(req).then((res: SaveStatsResponse | AxiosError) => {
    // handle response
 });
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
+
+### attempt
+
+* `saveStats` - For worker to set sync stats of a running attempt.
+* `saveSyncConfig` - For worker to save the AttemptSyncConfig for an attempt.
+* `setWorkflowInAttempt` - For worker to register the workflow id in attempt.
 
 ### connection
 
 * `createConnection` - Create a connection between a source and a destination
 * `deleteConnection` - Delete a connection
 * `getConnection` - Get a connection
-* `getState` - Fetch the current state for a connection.
+* `listAllConnectionsForWorkspace` - Returns all connections for a workspace, including deleted connections.
 * `listConnectionsForWorkspace` - Returns all connections for a workspace.
 * `resetConnection` - Reset the data for the connection. Deletes data generated by the connection in the destination. Resets any cursors back to initial state.
+* `searchConnections` - Search connections
 * `syncConnection` - Trigger a manual sync of the connection
 * `updateConnection` - Update a connection
-
-### deployment
-
-* `exportArchive` - Export Airbyte Configuration and Data Archive
-* `importArchive` - Import Airbyte Configuration and Data Archive
 
 ### destination
 
 * `checkConnectionToDestination` - Check connection to the destination
 * `checkConnectionToDestinationForUpdate` - Check connection for a proposed update to a destination
+* `cloneDestination` - Clone destination
 * `createDestination` - Create a destination
 * `deleteDestination` - Delete the destination
 * `getDestination` - Get configured destination
 * `listDestinationsForWorkspace` - List configured destinations for a workspace
+* `searchDestinations` - Search destinations
 * `updateDestination` - Update a destination
 
-### destination_definition
+### destinationDefinition
 
-* `createDestinationDefinition` - Creates a destinationsDefinition
+* `createCustomDestinationDefinition` - Creates a custom destinationDefinition for the given workspace
+* `deleteDestinationDefinition` - Delete a destination definition
 * `getDestinationDefinition` - Get destinationDefinition
+* `getDestinationDefinitionForWorkspace` - Get a destinationDefinition that is configured for the given workspace
+* `grantDestinationDefinitionToWorkspace` - grant a private, non-custom destinationDefinition to a given workspace
 * `listDestinationDefinitions` - List all the destinationDefinitions the current Airbyte deployment is configured to use
+* `listDestinationDefinitionsForWorkspace` - List all the destinationDefinitions the given workspace is configured to use
 * `listLatestDestinationDefinitions` - List the latest destinationDefinitions Airbyte supports
+* `listPrivateDestinationDefinitions` - List all private, non-custom destinationDefinitions, and for each indicate whether the given workspace has a grant for using the definition. Used by admins to view and modify a given workspace's grants.
+* `revokeDestinationDefinitionFromWorkspace` - revoke a grant to a private, non-custom destinationDefinition from a given workspace
 * `updateDestinationDefinition` - Update destinationDefinition
 
-### destination_definition_specification
+### destinationDefinitionSpecification
 
 * `getDestinationDefinitionSpecification` - Get specification for a destinationDefinition
+
+### destinationOauth
+
+* `completeDestinationOAuth` - Given a destination def ID generate an access/refresh token etc.
+* `getDestinationOAuthConsent` - Given a destination connector definition ID, return the URL to the consent screen where to redirect the user to.
+* `setInstancewideDestinationOauthParams` - Sets instancewide variables to be used for the oauth flow when creating this destination. When set, these variables will be injected into a connector's configuration before any interaction with the connector image itself. This enables running oauth flows with consistent variables e.g: the company's Google Ads developer_token, client_id, and client_secret without the user having to know about these variables.
+
 
 ### health
 
 * `getHealthCheck` - Health Check
 
+### internal
+
+* `createOrUpdateState` - Create or update the state for a connection.
+* `getAttemptNormalizationStatusesForJob` - Get normalization status to determine if we can bypass normalization phase
+* `saveStats` - For worker to set sync stats of a running attempt.
+* `saveSyncConfig` - For worker to save the AttemptSyncConfig for an attempt.
+* `setWorkflowInAttempt` - For worker to register the workflow id in attempt.
+* `writeDiscoverCatalogResult` - Should only called from worker, to write result from discover activity back to DB.
+
 ### jobs
 
 * `cancelJob` - Cancels a job
+* `getAttemptNormalizationStatusesForJob` - Get normalization status to determine if we can bypass normalization phase
+* `getJobDebugInfo` - Gets all information needed to debug this job
 * `getJobInfo` - Get information about a job
+* `getJobInfoLight` - Get information about a job excluding attempt info and logs
+* `getLastReplicationJob`
 * `listJobsFor` - Returns recent jobs for a connection. Jobs are returned in descending order by createdAt.
 
 ### logs
@@ -291,32 +186,60 @@ sdk.connection.createConnection(req).then((res: CreateConnectionResponse | Axios
 
 * `checkConnectionToSource` - Check connection to the source
 * `checkConnectionToSourceForUpdate` - Check connection for a proposed update to a source
+* `cloneSource` - Clone source
 * `createSource` - Create a source
 * `deleteSource` - Delete a source
 * `discoverSchemaForSource` - Discover the schema catalog of the source
+* `getMostRecentSourceActorCatalog` - Get most recent ActorCatalog for source
 * `getSource` - Get source
 * `listSourcesForWorkspace` - List sources for workspace
+* `searchSources` - Search sources
 * `updateSource` - Update a source
+* `writeDiscoverCatalogResult` - Should only called from worker, to write result from discover activity back to DB.
 
-### source_definition
+### sourceDefinition
 
-* `createSourceDefinition` - Creates a sourceDefinition
+* `createCustomSourceDefinition` - Creates a custom sourceDefinition for the given workspace
+* `deleteSourceDefinition` - Delete a source definition
 * `getSourceDefinition` - Get source
+* `getSourceDefinitionForWorkspace` - Get a sourceDefinition that is configured for the given workspace
+* `grantSourceDefinitionToWorkspace` - grant a private, non-custom sourceDefinition to a given workspace
 * `listLatestSourceDefinitions` - List the latest sourceDefinitions Airbyte supports
+* `listPrivateSourceDefinitions` - List all private, non-custom sourceDefinitions, and for each indicate whether the given workspace has a grant for using the definition. Used by admins to view and modify a given workspace's grants.
 * `listSourceDefinitions` - List all the sourceDefinitions the current Airbyte deployment is configured to use
+* `listSourceDefinitionsForWorkspace` - List all the sourceDefinitions the given workspace is configured to use
+* `revokeSourceDefinitionFromWorkspace` - revoke a grant to a private, non-custom sourceDefinition from a given workspace
 * `updateSourceDefinition` - Update a sourceDefinition
 
-### source_definition_specification
+### sourceDefinitionSpecification
 
 * `getSourceDefinitionSpecification` - Get specification for a SourceDefinition.
 
-### web_backend
+### sourceOauth
 
+* `completeSourceOAuth` - Given a source def ID generate an access/refresh token etc.
+* `getSourceOAuthConsent` - Given a source connector definition ID, return the URL to the consent screen where to redirect the user to.
+* `setInstancewideSourceOauthParams` - Sets instancewide variables to be used for the oauth flow when creating this source. When set, these variables will be injected into a connector's configuration before any interaction with the connector image itself. This enables running oauth flows with consistent variables e.g: the company's Google Ads developer_token, client_id, and client_secret without the user having to know about these variables.
+
+
+### state
+
+* `createOrUpdateState` - Create or update the state for a connection.
+* `getState` - Fetch the current state for a connection.
+
+### webBackend
+
+* `getStateType` - Fetch the current state type for a connection.
+* `webBackendCheckUpdates` - Returns a summary of source and destination definitions that could be updated.
 * `webBackendCreateConnection` - Create a connection
 * `webBackendGetConnection` - Get a connection
-* `webBackendListConnectionsForWorkspace` - Returns all connections for a workspace.
-* `webBackendRecreateDestination` - Recreate a destination
-* `webBackendRecreateSource` - Recreate a source
+* `webBackendGetWorkspaceState` - Returns the current state of a workspace
+* `webBackendListConnectionsForWorkspace` - Returns all non-deleted connections for a workspace.
+* `webBackendListGeographies` - Returns available geographies can be selected to run data syncs in a particular geography.
+The 'auto' entry indicates that the sync will be automatically assigned to a geography according
+to the platform default behavior. Entries other than 'auto' are two-letter country codes that
+follow the ISO 3166-1 alpha-2 standard.
+
 * `webBackendUpdateConnection` - Update a connection
 
 ### workspace
@@ -324,10 +247,24 @@ sdk.connection.createConnection(req).then((res: CreateConnectionResponse | Axios
 * `createWorkspace` - Creates a workspace
 * `deleteWorkspace` - Deletes a workspace
 * `getWorkspace` - Find workspace by ID
+* `getWorkspaceByConnectionId` - Find workspace by connection id
 * `getWorkspaceBySlug` - Find workspace by slug
 * `listWorkspaces` - List all workspaces registered in the current Airbyte deployment
 * `updateWorkspace` - Update workspace state
-
+* `updateWorkspaceFeedback` - Update workspace feedback state
+* `updateWorkspaceName` - Update workspace name
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

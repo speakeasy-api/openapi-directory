@@ -1,6 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DcimRearPortTemplatesListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DcimRearPortTemplatesListRequest extends SpeakeasyBase {
     devicetypeId?: string;
     devicetypeIdN?: string;
     id?: string;
@@ -9,6 +10,9 @@ export declare class DcimRearPortTemplatesListQueryParams extends SpeakeasyBase 
     idLt?: string;
     idLte?: string;
     idN?: string;
+    /**
+     * Number of results to return per page.
+     */
     limit?: number;
     name?: string;
     nameIc?: string;
@@ -20,6 +24,9 @@ export declare class DcimRearPortTemplatesListQueryParams extends SpeakeasyBase 
     nameNie?: string;
     nameNiew?: string;
     nameNisw?: string;
+    /**
+     * The initial index from which to return the results.
+     */
     offset?: number;
     positions?: string;
     positionsGt?: string;
@@ -31,17 +38,15 @@ export declare class DcimRearPortTemplatesListQueryParams extends SpeakeasyBase 
     type?: string;
     typeN?: string;
 }
-export declare class DcimRearPortTemplatesList200ApplicationJson extends SpeakeasyBase {
+export declare class DcimRearPortTemplatesList200ApplicationJSON extends SpeakeasyBase {
     count: number;
     next?: string;
     previous?: string;
     results: shared.RearPortTemplate[];
 }
-export declare class DcimRearPortTemplatesListRequest extends SpeakeasyBase {
-    queryParams: DcimRearPortTemplatesListQueryParams;
-}
 export declare class DcimRearPortTemplatesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dcimRearPortTemplatesList200ApplicationJSONObject?: DcimRearPortTemplatesList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    dcimRearPortTemplatesList200ApplicationJSONObject?: DcimRearPortTemplatesList200ApplicationJSON;
 }

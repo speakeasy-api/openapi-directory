@@ -1,21 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetSubscriptionPushReportingPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetSubscriptionPushReportingRequest extends SpeakeasyBase {
     id: string;
-}
-export declare class GetSubscriptionPushReportingQueryParams extends SpeakeasyBase {
     pageNumber?: number;
     pageSize?: number;
 }
-export declare class GetSubscriptionPushReportingRequest extends SpeakeasyBase {
-    pathParams: GetSubscriptionPushReportingPathParams;
-    queryParams: GetSubscriptionPushReportingQueryParams;
-}
 export declare class GetSubscriptionPushReportingResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     * Occurs when something goes wrong
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The subscription is not found
+     */
     errorResponseMessage?: shared.ErrorResponseMessage;
+    /**
+     * Subscription push reporting info
+     */
     subscriptionPushReportings?: shared.SubscriptionPushReporting[];
 }

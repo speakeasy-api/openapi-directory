@@ -1,8 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { SampledHttpRequest } from "./sampledhttprequest";
+import { SampledHTTPRequest } from "./sampledhttprequest";
 import { TimeWindow } from "./timewindow";
+/**
+ * Success
+ */
 export declare class GetSampledRequestsResponse extends SpeakeasyBase {
     populationSize?: number;
-    sampledRequests?: SampledHttpRequest[];
+    sampledRequests?: SampledHTTPRequest[];
     timeWindow?: TimeWindow;
 }

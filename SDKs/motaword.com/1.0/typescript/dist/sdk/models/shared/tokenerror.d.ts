@@ -10,6 +10,9 @@ export declare enum TokenErrorAccountStatusEnum {
     Webinar = "webinar",
     Course = "course"
 }
+/**
+ * Authentication error - for vendor auth, it will also fail if their account is not approved yet. In that case, the error response will include "account_status" key.
+ */
 export declare class TokenError extends SpeakeasyBase {
     accountStatus?: TokenErrorAccountStatusEnum;
     code?: string;

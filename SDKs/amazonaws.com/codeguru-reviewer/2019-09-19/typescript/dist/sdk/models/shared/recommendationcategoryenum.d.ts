@@ -1,6 +1,6 @@
 export declare enum RecommendationCategoryEnum {
-    AwsBestPractices = "AWSBestPractices",
-    AwsCloudFormationIssues = "AWSCloudFormationIssues",
+    AWSBestPractices = "AWSBestPractices",
+    AWSCloudFormationIssues = "AWSCloudFormationIssues",
     DuplicateCode = "DuplicateCode",
     CodeMaintenanceIssues = "CodeMaintenanceIssues",
     ConcurrencyIssues = "ConcurrencyIssues",

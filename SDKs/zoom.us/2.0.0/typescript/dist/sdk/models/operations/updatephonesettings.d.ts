@@ -1,35 +1,36 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class UpdatePhoneSettingsPathParams extends SpeakeasyBase {
-    accountId: string;
-}
-export declare class UpdatePhoneSettingsApplicationJsonByoc extends SpeakeasyBase {
-    enable?: boolean;
-}
-export declare class UpdatePhoneSettingsApplicationJson extends SpeakeasyBase {
-    byoc?: UpdatePhoneSettingsApplicationJsonByoc;
-}
-export declare class UpdatePhoneSettingsMultipartFormDataByoc extends SpeakeasyBase {
-    enable?: boolean;
-}
-export declare class UpdatePhoneSettingsMultipartFormData extends SpeakeasyBase {
-    byoc?: UpdatePhoneSettingsMultipartFormDataByoc;
-}
-export declare class UpdatePhoneSettingsRequests extends SpeakeasyBase {
-    object?: UpdatePhoneSettingsApplicationJson;
-    object1?: UpdatePhoneSettingsMultipartFormData;
-}
+import { AxiosResponse } from "axios";
 export declare class UpdatePhoneSettingsSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
+    oAuth: string;
+}
+export declare class UpdatePhoneSettingsApplicationJSONByoc extends SpeakeasyBase {
+    /**
+     * Set the value of this field to `true` to allow a sub account to add BYOC numbers from the Zoom web admin portal.
+     */
+    enable?: boolean;
+}
+export declare class UpdatePhoneSettingsApplicationJSON extends SpeakeasyBase {
+    byoc?: UpdatePhoneSettingsApplicationJSONByoc;
 }
 export declare class UpdatePhoneSettingsRequest extends SpeakeasyBase {
-    pathParams: UpdatePhoneSettingsPathParams;
-    request?: UpdatePhoneSettingsRequests;
-    security: UpdatePhoneSettingsSecurity;
+    requestBody?: UpdatePhoneSettingsApplicationJSON;
+    /**
+     * Unique identifier of the sub account.
+     */
+    accountId: string;
 }
 export declare class UpdatePhoneSettingsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * **Response HTTP code**: `204` **No Content.**<br>
+     *
+     * @remarks
+     * Updated successfully.
+     *
+     *
+     */
     updatePhoneSettings204ApplicationJSONAny?: any;
 }

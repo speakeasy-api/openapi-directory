@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Search API for 'Tasks' entry type
+ */
 export declare class TypeTasks {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,10 @@ export declare class TypeTasks {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * searchTasks - Search API for 'Tasks' entry type
+     * Search API for 'Tasks' entry type
      *
+     * @remarks
      * API to search for entries of type Tasks
-    **/
+     */
     searchTasks(req: operations.SearchTasksRequest, config?: AxiosRequestConfig): Promise<operations.SearchTasksResponse>;
 }

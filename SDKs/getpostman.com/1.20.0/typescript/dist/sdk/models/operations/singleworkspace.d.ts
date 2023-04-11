@@ -1,41 +1,52 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SingleWorkspacePathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class SingleWorkspaceRequest extends SpeakeasyBase {
     workspaceId: string;
 }
-export declare class SingleWorkspace200ApplicationJsonWorkspaceCollections extends SpeakeasyBase {
+export declare class SingleWorkspace404ApplicationJSONError extends SpeakeasyBase {
+    message?: string;
+    name?: string;
+}
+/**
+ * Workspace Not Found
+ */
+export declare class SingleWorkspace404ApplicationJSON extends SpeakeasyBase {
+    error?: SingleWorkspace404ApplicationJSONError;
+}
+export declare class SingleWorkspace200ApplicationJSONWorkspaceCollections extends SpeakeasyBase {
     id?: string;
     name?: string;
     uid?: string;
 }
-export declare class SingleWorkspace200ApplicationJsonWorkspaceEnvironments extends SpeakeasyBase {
+export declare class SingleWorkspace200ApplicationJSONWorkspaceEnvironments extends SpeakeasyBase {
     id?: string;
     name?: string;
     uid?: string;
 }
-export declare class SingleWorkspace200ApplicationJsonWorkspace extends SpeakeasyBase {
-    collections?: SingleWorkspace200ApplicationJsonWorkspaceCollections[];
+export declare class SingleWorkspace200ApplicationJSONWorkspace extends SpeakeasyBase {
+    collections?: SingleWorkspace200ApplicationJSONWorkspaceCollections[];
     description?: string;
-    environments?: SingleWorkspace200ApplicationJsonWorkspaceEnvironments[];
+    environments?: SingleWorkspace200ApplicationJSONWorkspaceEnvironments[];
     id?: string;
     name?: string;
     type?: string;
 }
-export declare class SingleWorkspace200ApplicationJson extends SpeakeasyBase {
-    workspace?: SingleWorkspace200ApplicationJsonWorkspace;
-}
-export declare class SingleWorkspace404ApplicationJsonError extends SpeakeasyBase {
-    message?: string;
-    name?: string;
-}
-export declare class SingleWorkspace404ApplicationJson extends SpeakeasyBase {
-    error?: SingleWorkspace404ApplicationJsonError;
-}
-export declare class SingleWorkspaceRequest extends SpeakeasyBase {
-    pathParams: SingleWorkspacePathParams;
+/**
+ * Valid Response
+ */
+export declare class SingleWorkspace200ApplicationJSON extends SpeakeasyBase {
+    workspace?: SingleWorkspace200ApplicationJSONWorkspace;
 }
 export declare class SingleWorkspaceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    singleWorkspace200ApplicationJSONObject?: SingleWorkspace200ApplicationJson;
-    singleWorkspace404ApplicationJSONObject?: SingleWorkspace404ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Valid Response
+     */
+    singleWorkspace200ApplicationJSONObject?: SingleWorkspace200ApplicationJSON;
+    /**
+     * Workspace Not Found
+     */
+    singleWorkspace404ApplicationJSONObject?: SingleWorkspace404ApplicationJSON;
 }

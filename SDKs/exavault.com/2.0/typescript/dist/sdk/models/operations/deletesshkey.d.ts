@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteSshKeyPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteSSHKeyRequest extends SpeakeasyBase {
+    /**
+     * Access token required to make the API call.
+     */
+    evAccessToken: string;
+    /**
+     * API key required to make the API call.
+     */
+    evApiKey: string;
     id: string;
 }
-export declare class DeleteSshKeyHeaders extends SpeakeasyBase {
-    evAccessToken: string;
-    evApiKey: string;
-}
-export declare class DeleteSshKeyRequest extends SpeakeasyBase {
-    pathParams: DeleteSshKeyPathParams;
-    headers: DeleteSshKeyHeaders;
-}
-export declare class DeleteSshKeyResponse extends SpeakeasyBase {
+export declare class DeleteSSHKeyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

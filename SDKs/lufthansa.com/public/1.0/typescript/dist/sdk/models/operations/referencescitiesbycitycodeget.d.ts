@@ -1,27 +1,33 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class ReferencesCitiesByCityCodeGetPathParams extends SpeakeasyBase {
-    cityCode: string;
-}
-export declare class ReferencesCitiesByCityCodeGetQueryParams extends SpeakeasyBase {
-    lang?: string;
-    limit?: string;
-    offset?: string;
-}
-export declare class ReferencesCitiesByCityCodeGetHeaders extends SpeakeasyBase {
-    accept: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ReferencesCitiesByCityCodeGetSecurity extends SpeakeasyBase {
-    auth: shared.SchemeAuth;
+    auth: string;
 }
 export declare class ReferencesCitiesByCityCodeGetRequest extends SpeakeasyBase {
-    pathParams: ReferencesCitiesByCityCodeGetPathParams;
-    queryParams: ReferencesCitiesByCityCodeGetQueryParams;
-    headers: ReferencesCitiesByCityCodeGetHeaders;
-    security: ReferencesCitiesByCityCodeGetSecurity;
+    /**
+     * http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+     */
+    accept: string;
+    /**
+     * 3-letter IATA city code
+     */
+    cityCode: string;
+    /**
+     * 2 letter ISO 3166-1 language code
+     */
+    lang?: string;
+    /**
+     * Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)
+     */
+    limit?: string;
+    /**
+     * Number of records skipped. Defaults to 0
+     */
+    offset?: string;
 }
 export declare class ReferencesCitiesByCityCodeGetResponse extends SpeakeasyBase {
     contentType: string;
     referencesCitiesByCityCodeGet200ApplicationJSONObject?: Record<string, any>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,19 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeLoadBalancersActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeLoadBalancersActionEnum {
     DescribeLoadBalancers = "DescribeLoadBalancers"
 }
-export declare enum GetDescribeLoadBalancersVersionEnum {
+export declare enum GETDescribeLoadBalancersVersionEnum {
     TwoThousandAndFifteen1201 = "2015-12-01"
 }
-export declare class GetDescribeLoadBalancersQueryParams extends SpeakeasyBase {
-    action: GetDescribeLoadBalancersActionEnum;
+export declare class GETDescribeLoadBalancersRequest extends SpeakeasyBase {
+    action: GETDescribeLoadBalancersActionEnum;
+    /**
+     * The Amazon Resource Names (ARN) of the load balancers. You can specify up to 20 load balancers in a single call.
+     */
     loadBalancerArns?: string[];
+    /**
+     * The marker for the next set of results. (You received this marker from a previous call.)
+     */
     marker?: string;
+    /**
+     * The names of the load balancers.
+     */
     names?: string[];
+    /**
+     * The maximum number of results to return with this call.
+     */
     pageSize?: number;
-    version: GetDescribeLoadBalancersVersionEnum;
-}
-export declare class GetDescribeLoadBalancersHeaders extends SpeakeasyBase {
+    version: GETDescribeLoadBalancersVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -22,12 +33,9 @@ export declare class GetDescribeLoadBalancersHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeLoadBalancersRequest extends SpeakeasyBase {
-    queryParams: GetDescribeLoadBalancersQueryParams;
-    headers: GetDescribeLoadBalancersHeaders;
-}
-export declare class GetDescribeLoadBalancersResponse extends SpeakeasyBase {
+export declare class GETDescribeLoadBalancersResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

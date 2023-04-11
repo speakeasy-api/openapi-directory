@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum AllocatePrivateVirtualInterfaceXAmzTargetEnum {
     OvertureServiceAllocatePrivateVirtualInterface = "OvertureService.AllocatePrivateVirtualInterface"
 }
-export declare class AllocatePrivateVirtualInterfaceHeaders extends SpeakeasyBase {
+export declare class AllocatePrivateVirtualInterfaceRequest extends SpeakeasyBase {
+    allocatePrivateVirtualInterfaceRequest: shared.AllocatePrivateVirtualInterfaceRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class AllocatePrivateVirtualInterfaceHeaders extends SpeakeasyBas
     xAmzSignedHeaders?: string;
     xAmzTarget: AllocatePrivateVirtualInterfaceXAmzTargetEnum;
 }
-export declare class AllocatePrivateVirtualInterfaceRequest extends SpeakeasyBase {
-    headers: AllocatePrivateVirtualInterfaceHeaders;
-    request: shared.AllocatePrivateVirtualInterfaceRequest;
-}
 export declare class AllocatePrivateVirtualInterfaceResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * DirectConnectClientException
+     */
     directConnectClientException?: any;
+    /**
+     * DirectConnectServerException
+     */
     directConnectServerException?: any;
+    /**
+     * DuplicateTagKeysException
+     */
     duplicateTagKeysException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyTagsException
+     */
     tooManyTagsException?: any;
+    /**
+     * Success
+     */
     virtualInterface?: shared.VirtualInterface;
 }

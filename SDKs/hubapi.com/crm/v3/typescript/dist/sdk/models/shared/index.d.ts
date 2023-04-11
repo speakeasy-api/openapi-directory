@@ -17,5 +17,4 @@ export * from "./iframeactionbody";
 export * from "./integratorcardpayloadresponse";
 export * from "./integratorobjectresult";
 export * from "./objecttoken";
-export * from "./security";
 export * from "./toplevelactions";

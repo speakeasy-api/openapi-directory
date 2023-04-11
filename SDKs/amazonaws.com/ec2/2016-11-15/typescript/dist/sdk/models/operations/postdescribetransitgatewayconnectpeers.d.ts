@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeTransitGatewayConnectPeersActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeTransitGatewayConnectPeersActionEnum {
     DescribeTransitGatewayConnectPeers = "DescribeTransitGatewayConnectPeers"
 }
-export declare enum PostDescribeTransitGatewayConnectPeersVersionEnum {
+export declare enum POSTDescribeTransitGatewayConnectPeersVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDescribeTransitGatewayConnectPeersQueryParams extends SpeakeasyBase {
-    action: PostDescribeTransitGatewayConnectPeersActionEnum;
+export declare class POSTDescribeTransitGatewayConnectPeersRequest extends SpeakeasyBase {
+    action: POSTDescribeTransitGatewayConnectPeersActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostDescribeTransitGatewayConnectPeersVersionEnum;
-}
-export declare class PostDescribeTransitGatewayConnectPeersHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeTransitGatewayConnectPeersVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeTransitGatewayConnectPeersHeaders extends Speak
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeTransitGatewayConnectPeersRequest extends SpeakeasyBase {
-    queryParams: PostDescribeTransitGatewayConnectPeersQueryParams;
-    headers: PostDescribeTransitGatewayConnectPeersHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeTransitGatewayConnectPeersResponse extends SpeakeasyBase {
+export declare class POSTDescribeTransitGatewayConnectPeersResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

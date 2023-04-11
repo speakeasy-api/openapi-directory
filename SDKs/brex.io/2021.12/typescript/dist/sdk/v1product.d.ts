@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Product Search, Order and Retrieve methods
+ */
 export declare class V1Product {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,75 +12,87 @@ export declare class V1Product {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * productAvailability - Retrieves a document availability result
+     * Retrieves a document availability result
      *
+     * @remarks
      * Check availability and valid options for a particular product for a particular company identfied by its id
-    **/
-    productAvailability(req: operations.ProductAvailabilityRequest, config?: AxiosRequestConfig): Promise<operations.ProductAvailabilityResponse>;
+     */
+    productAvailability(req: operations.ProductAvailabilityRequest, security: operations.ProductAvailabilitySecurity, config?: AxiosRequestConfig): Promise<operations.ProductAvailabilityResponse>;
     /**
-     * productCatalog - Returns a catalog of products
+     * Returns a catalog of products
      *
+     * @remarks
      * Returns a catalog of purchasable products available with some metadata for a particular country
-    **/
-    productCatalog(req: operations.ProductCatalogRequest, config?: AxiosRequestConfig): Promise<operations.ProductCatalogResponse>;
+     */
+    productCatalog(req: operations.ProductCatalogRequest, security: operations.ProductCatalogSecurity, config?: AxiosRequestConfig): Promise<operations.ProductCatalogResponse>;
     /**
-     * productNotifier - Returns metadata for a notifier
+     * Returns metadata for a notifier
      *
+     * @remarks
      * Queries and returns all metadata associated with a notifier identified by its notifer id
-    **/
-    productNotifier(req: operations.ProductNotifierRequest, config?: AxiosRequestConfig): Promise<operations.ProductNotifierResponse>;
+     */
+    productNotifier(req: operations.ProductNotifierRequest, security: operations.ProductNotifierSecurity, config?: AxiosRequestConfig): Promise<operations.ProductNotifierResponse>;
     /**
-     * productNotifierCreate - Creates a notifier for an order
+     * Creates a notifier for an order
      *
+     * @remarks
      * Create a notifier for a particular order. Parameters can be supplied in the path
-    **/
-    productNotifierCreate(req: operations.ProductNotifierCreateRequest, config?: AxiosRequestConfig): Promise<operations.ProductNotifierCreateResponse>;
+     */
+    productNotifierCreate(req: operations.ProductNotifierCreateRequest, security: operations.ProductNotifierCreateSecurity, config?: AxiosRequestConfig): Promise<operations.ProductNotifierCreateResponse>;
     /**
-     * productOrder - Places a product order
+     * Places a product order
      *
+     * @remarks
      * Place an order for a particular product identified by its SKU for a particular company identified by its id
-    **/
-    productOrder(req: operations.ProductOrderRequest, config?: AxiosRequestConfig): Promise<operations.ProductOrderResponse>;
+     */
+    productOrder(req: operations.ProductOrderRequest, security: operations.ProductOrderSecurity, config?: AxiosRequestConfig): Promise<operations.ProductOrderResponse>;
     /**
-     * productOrderConcierge - Places a concierge order
+     * Places a concierge order
      *
+     * @remarks
      * Place an order for a concierge product
-    **/
-    productOrderConcierge(req: operations.ProductOrderConciergeRequest, config?: AxiosRequestConfig): Promise<operations.ProductOrderConciergeResponse>;
+     */
+    productOrderConcierge(req: operations.ProductOrderConciergeRequestBody, security: operations.ProductOrderConciergeSecurity, config?: AxiosRequestConfig): Promise<operations.ProductOrderConciergeResponse>;
     /**
-     * productOrderUbo - Places a UBO order
+     * Places a UBO order
      *
+     * @remarks
      * Place an order for a UBO (ultimate beneficial owner) discovery report
-    **/
-    productOrderUbo(req: operations.ProductOrderUboRequest, config?: AxiosRequestConfig): Promise<operations.ProductOrderUboResponse>;
+     */
+    productOrderUbo(req: operations.ProductOrderUboRequestBody, security: operations.ProductOrderUboSecurity, config?: AxiosRequestConfig): Promise<operations.ProductOrderUboResponse>;
     /**
-     * productOrderWithOption - Places a product order
+     * Places a product order
      *
+     * @remarks
      * Place an order for a particular product identified by its SKU with a particular option for a particular company identified by its id
-    **/
-    productOrderWithOption(req: operations.ProductOrderWithOptionRequest, config?: AxiosRequestConfig): Promise<operations.ProductOrderWithOptionResponse>;
+     */
+    productOrderWithOption(req: operations.ProductOrderWithOptionRequest, security: operations.ProductOrderWithOptionSecurity, config?: AxiosRequestConfig): Promise<operations.ProductOrderWithOptionResponse>;
     /**
-     * productRetrieve - Retrieves the result of an order
+     * Retrieves the result of an order
      *
+     * @remarks
      * Retrieves the document or structured data associated with a completed order identified with its order id
-    **/
-    productRetrieve(req: operations.ProductRetrieveRequest, config?: AxiosRequestConfig): Promise<operations.ProductRetrieveResponse>;
+     */
+    productRetrieve(req: operations.ProductRetrieveRequest, security: operations.ProductRetrieveSecurity, config?: AxiosRequestConfig): Promise<operations.ProductRetrieveResponse>;
     /**
-     * productSearch - Returns a list of products
+     * Returns a list of products
      *
+     * @remarks
      * Search for possible products for a particular company identified by its id
-    **/
-    productSearch(req: operations.ProductSearchRequest, config?: AxiosRequestConfig): Promise<operations.ProductSearchResponse>;
+     */
+    productSearch(req: operations.ProductSearchRequest, security: operations.ProductSearchSecurity, config?: AxiosRequestConfig): Promise<operations.ProductSearchResponse>;
     /**
-     * productStatus - Returns metadata for a order
+     * Returns metadata for a order
      *
+     * @remarks
      * Retrieve the current status of an order identified by its order id
-    **/
-    productStatus(req: operations.ProductStatusRequest, config?: AxiosRequestConfig): Promise<operations.ProductStatusResponse>;
+     */
+    productStatus(req: operations.ProductStatusRequest, security: operations.ProductStatusSecurity, config?: AxiosRequestConfig): Promise<operations.ProductStatusResponse>;
     /**
-     * productUpdateAction - Updates metadata of an order
+     * Updates metadata of an order
      *
+     * @remarks
      * Update an existing order identified by its order id
-    **/
-    productUpdateAction(req: operations.ProductUpdateActionRequest, config?: AxiosRequestConfig): Promise<operations.ProductUpdateActionResponse>;
+     */
+    productUpdateAction(req: operations.ProductUpdateActionRequest, security: operations.ProductUpdateActionSecurity, config?: AxiosRequestConfig): Promise<operations.ProductUpdateActionResponse>;
 }

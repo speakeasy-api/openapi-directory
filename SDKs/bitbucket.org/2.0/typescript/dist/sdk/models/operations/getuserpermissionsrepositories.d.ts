@@ -1,20 +1,33 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetUserPermissionsRepositoriesQueryParams extends SpeakeasyBase {
-    q?: string;
-    sort?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetUserPermissionsRepositoriesSecurity extends SpeakeasyBase {
-    oauth2?: shared.SchemeOauth2;
+    apiKey?: string;
     basic?: shared.SchemeBasic;
-    apiKey?: shared.SchemeApiKey;
+    oauth2?: string;
 }
 export declare class GetUserPermissionsRepositoriesRequest extends SpeakeasyBase {
-    queryParams: GetUserPermissionsRepositoriesQueryParams;
-    security: GetUserPermissionsRepositoriesSecurity;
+    /**
+     *
+     * @remarks
+     * Query string to narrow down the response as per
+     * [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
+     */
+    q?: string;
+    /**
+     *
+     * @remarks
+     * Name of a response property sort the result by as per
+     * [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
+     */
+    sort?: string;
 }
 export declare class GetUserPermissionsRepositoriesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Repository permissions for the repositories a caller has explicit access to.
+     */
     paginatedRepositoryPermissions?: shared.PaginatedRepositoryPermissions;
 }

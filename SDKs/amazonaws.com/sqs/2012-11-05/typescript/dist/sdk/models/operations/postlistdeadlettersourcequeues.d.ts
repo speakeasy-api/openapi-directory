@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostListDeadLetterSourceQueuesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTListDeadLetterSourceQueuesActionEnum {
     ListDeadLetterSourceQueues = "ListDeadLetterSourceQueues"
 }
-export declare enum PostListDeadLetterSourceQueuesVersionEnum {
+export declare enum POSTListDeadLetterSourceQueuesVersionEnum {
     TwoThousandAndTwelve1105 = "2012-11-05"
 }
-export declare class PostListDeadLetterSourceQueuesQueryParams extends SpeakeasyBase {
-    action: PostListDeadLetterSourceQueuesActionEnum;
+export declare class POSTListDeadLetterSourceQueuesRequest extends SpeakeasyBase {
+    action: POSTListDeadLetterSourceQueuesActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostListDeadLetterSourceQueuesVersionEnum;
-}
-export declare class PostListDeadLetterSourceQueuesHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTListDeadLetterSourceQueuesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostListDeadLetterSourceQueuesHeaders extends SpeakeasyBase
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostListDeadLetterSourceQueuesRequest extends SpeakeasyBase {
-    queryParams: PostListDeadLetterSourceQueuesQueryParams;
-    headers: PostListDeadLetterSourceQueuesHeaders;
-    request?: Uint8Array;
-}
-export declare class PostListDeadLetterSourceQueuesResponse extends SpeakeasyBase {
+export declare class POSTListDeadLetterSourceQueuesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

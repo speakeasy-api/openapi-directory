@@ -1,36 +1,39 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DeparturesGetForStopRequest, DeparturesGetForStopResponse } from "openapi/src/sdk/models/operations";
+import {
+  DeparturesGetForStopRequest,
+  DeparturesGetForStopResponse,
+  DeparturesGetForStopExpandEnum,
+  DeparturesGetForStopRouteTypeEnum,
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: DeparturesGetForStopRequest = {
-  pathParams: {
-    routeType: 8717895732742165505,
-    stopId: 2259404117704393152,
-  },
-  queryParams: {
-    dateUtc: "1978-05-13T03:50:47Z",
-    devid: "expedita",
-    directionId: 3390393562759376202,
-    expand: [
-      "VehiclePosition",
-      "None",
-    ],
-    gtfs: true,
-    includeCancelled: false,
-    includeGeopath: true,
-    lookBackwards: true,
-    maxResults: 7837839688282259259,
-    platformNumbers: [
-      5617773211005988520,
-    ],
-    signature: "et",
-    token: "ut",
-  },
+  dateUtc: "2021-10-25T05:21:43.948Z",
+  devid: "distinctio",
+  directionId: 844266,
+  expand: [
+    DeparturesGetForStopExpandEnum.VehiclePosition,
+    DeparturesGetForStopExpandEnum.Direction,
+    DeparturesGetForStopExpandEnum.VehiclePosition,
+  ],
+  gtfs: false,
+  includeCancelled: false,
+  includeGeopath: false,
+  lookBackwards: false,
+  maxResults: 423655,
+  platformNumbers: [
+    645894,
+    384382,
+    437587,
+  ],
+  routeType: DeparturesGetForStopRouteTypeEnum.One,
+  signature: "debitis",
+  stopId: 56713,
+  token: "delectus",
 };
 
 sdk.departures.departuresGetForStop(req).then((res: DeparturesGetForStopResponse | AxiosError) => {

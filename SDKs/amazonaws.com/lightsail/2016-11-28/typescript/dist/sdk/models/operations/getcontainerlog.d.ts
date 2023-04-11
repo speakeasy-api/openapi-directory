@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetContainerLogXAmzTargetEnum {
     Lightsail20161128GetContainerLog = "Lightsail_20161128.GetContainerLog"
 }
-export declare class GetContainerLogHeaders extends SpeakeasyBase {
+export declare class GetContainerLogRequest extends SpeakeasyBase {
+    getContainerLogRequest: shared.GetContainerLogRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class GetContainerLogHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetContainerLogXAmzTargetEnum;
 }
-export declare class GetContainerLogRequest extends SpeakeasyBase {
-    headers: GetContainerLogHeaders;
-    request: shared.GetContainerLogRequest;
-}
 export declare class GetContainerLogResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getContainerLogResult?: shared.GetContainerLogResult;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
+    /**
+     * ServiceException
+     */
     serviceException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnauthenticatedException
+     */
     unauthenticatedException?: any;
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostRejectTransitGatewayPeeringAttachmentActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTRejectTransitGatewayPeeringAttachmentActionEnum {
     RejectTransitGatewayPeeringAttachment = "RejectTransitGatewayPeeringAttachment"
 }
-export declare enum PostRejectTransitGatewayPeeringAttachmentVersionEnum {
+export declare enum POSTRejectTransitGatewayPeeringAttachmentVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostRejectTransitGatewayPeeringAttachmentQueryParams extends SpeakeasyBase {
-    action: PostRejectTransitGatewayPeeringAttachmentActionEnum;
-    version: PostRejectTransitGatewayPeeringAttachmentVersionEnum;
-}
-export declare class PostRejectTransitGatewayPeeringAttachmentHeaders extends SpeakeasyBase {
+export declare class POSTRejectTransitGatewayPeeringAttachmentRequest extends SpeakeasyBase {
+    action: POSTRejectTransitGatewayPeeringAttachmentActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTRejectTransitGatewayPeeringAttachmentVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostRejectTransitGatewayPeeringAttachmentHeaders extends Sp
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostRejectTransitGatewayPeeringAttachmentRequest extends SpeakeasyBase {
-    queryParams: PostRejectTransitGatewayPeeringAttachmentQueryParams;
-    headers: PostRejectTransitGatewayPeeringAttachmentHeaders;
-    request?: Uint8Array;
-}
-export declare class PostRejectTransitGatewayPeeringAttachmentResponse extends SpeakeasyBase {
+export declare class POSTRejectTransitGatewayPeeringAttachmentResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

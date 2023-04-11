@@ -1,40 +1,34 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { RecommenderProjectsLocationsInsightTypesInsightsListRequest, RecommenderProjectsLocationsInsightTypesInsightsListResponse } from "openapi/src/sdk/models/operations";
+import {
+  RecommenderProjectsLocationsInsightTypesInsightsListRequest,
+  RecommenderProjectsLocationsInsightTypesInsightsListResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: RecommenderProjectsLocationsInsightTypesInsightsListRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    filter: "expedita",
-    key: "voluptas",
-    oauthToken: "fugit",
-    pageSize: 1543572285742637646,
-    pageToken: "nihil",
-    prettyPrint: true,
-    quotaUser: "dicta",
-    uploadType: "debitis",
-    uploadProtocol: "voluptatum",
-  },
+  dollarXgafv: XgafvEnum.Two,
+  accessToken: "provident",
+  alt: AltEnum.Proto,
+  callback: "quibusdam",
+  fields: "unde",
+  filter: "nulla",
+  key: "corrupti",
+  oauthToken: "illum",
+  pageSize: 423655,
+  pageToken: "error",
+  parent: "deserunt",
+  prettyPrint: false,
+  quotaUser: "suscipit",
+  uploadType: "iure",
+  uploadProtocol: "magnam",
 };
 
 sdk.projects.recommenderProjectsLocationsInsightTypesInsightsList(req).then((res: RecommenderProjectsLocationsInsightTypesInsightsListResponse | AxiosError) => {

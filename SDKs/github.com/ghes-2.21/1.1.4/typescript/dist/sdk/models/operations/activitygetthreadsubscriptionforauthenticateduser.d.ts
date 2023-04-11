@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ActivityGetThreadSubscriptionForAuthenticatedUserPathParams extends SpeakeasyBase {
-    threadId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ActivityGetThreadSubscriptionForAuthenticatedUserRequest extends SpeakeasyBase {
-    pathParams: ActivityGetThreadSubscriptionForAuthenticatedUserPathParams;
+    /**
+     * thread_id parameter
+     */
+    threadId: number;
 }
 export declare class ActivityGetThreadSubscriptionForAuthenticatedUserResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Requires authentication
+     */
     basicError?: shared.BasicError;
+    /**
+     * Response
+     */
     threadSubscription?: shared.ThreadSubscription;
 }

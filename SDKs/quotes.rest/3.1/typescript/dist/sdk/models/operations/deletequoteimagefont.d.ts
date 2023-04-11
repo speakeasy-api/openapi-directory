@@ -1,16 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class DeleteQuoteImageFontQueryParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteQuoteImageFontSecurity extends SpeakeasyBase {
-    xTheySaidSoApiSecret: shared.SchemeXTheySaidSoApiSecret;
+    xTheySaidSoApiSecret: string;
 }
 export declare class DeleteQuoteImageFontRequest extends SpeakeasyBase {
-    queryParams: DeleteQuoteImageFontQueryParams;
-    security: DeleteQuoteImageFontSecurity;
+    /**
+     * Font ID
+     */
+    id: string;
 }
 export declare class DeleteQuoteImageFontResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,15 +1,49 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SearchFlightOffersHeaders extends SpeakeasyBase {
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class SearchFlightOffersRequest extends SpeakeasyBase {
+    /**
+     * list of criteria to retrieve a list of flight offers
+     */
+    getFlightOffersQuery: shared.GetFlightOffersQuery;
+    /**
+     * the HTTP method to apply
+     */
     xHTTPMethodOverride: string;
 }
-export declare class SearchFlightOffersRequest extends SpeakeasyBase {
-    headers: SearchFlightOffersHeaders;
-    request: any;
+/**
+ * Successful Operation
+ */
+export declare class SearchFlightOffersSuccess extends SpeakeasyBase {
+    data: shared.FlightOffer[];
+    dictionaries?: shared.Dictionaries;
+    meta?: shared.CollectionMeta;
+    warnings?: shared.Issue[];
 }
 export declare class SearchFlightOffersResponse extends SpeakeasyBase {
     contentType: string;
-    error400?: any;
-    error500?: any;
+    /**
+     * code    | title
+     *
+     * @remarks
+     * ------- | -------------------------------------
+     * 425     | INVALID DATE
+     * 477     | INVALID FORMAT
+     * 2668    | PARAMETER COMBINATION INVALID/RESTRICTED
+     * 4926    | INVALID DATA RECEIVED
+     * 10661   | MAXIMUM NUMBER OF OCCURRENCES EXCEEDED
+     * 32171   | MANDATORY DATA MISSING
+     *
+     */
+    error400?: shared.Error400;
+    /**
+     * Unexpected error
+     */
+    error500?: shared.Error500;
     statusCode: number;
-    success?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful Operation
+     */
+    success?: SearchFlightOffersSuccess;
 }

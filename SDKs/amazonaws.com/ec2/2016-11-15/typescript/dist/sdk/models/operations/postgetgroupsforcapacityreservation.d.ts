@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostGetGroupsForCapacityReservationActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTGetGroupsForCapacityReservationActionEnum {
     GetGroupsForCapacityReservation = "GetGroupsForCapacityReservation"
 }
-export declare enum PostGetGroupsForCapacityReservationVersionEnum {
+export declare enum POSTGetGroupsForCapacityReservationVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostGetGroupsForCapacityReservationQueryParams extends SpeakeasyBase {
-    action: PostGetGroupsForCapacityReservationActionEnum;
+export declare class POSTGetGroupsForCapacityReservationRequest extends SpeakeasyBase {
+    action: POSTGetGroupsForCapacityReservationActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostGetGroupsForCapacityReservationVersionEnum;
-}
-export declare class PostGetGroupsForCapacityReservationHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTGetGroupsForCapacityReservationVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostGetGroupsForCapacityReservationHeaders extends Speakeas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostGetGroupsForCapacityReservationRequest extends SpeakeasyBase {
-    queryParams: PostGetGroupsForCapacityReservationQueryParams;
-    headers: PostGetGroupsForCapacityReservationHeaders;
-    request?: Uint8Array;
-}
-export declare class PostGetGroupsForCapacityReservationResponse extends SpeakeasyBase {
+export declare class POSTGetGroupsForCapacityReservationResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

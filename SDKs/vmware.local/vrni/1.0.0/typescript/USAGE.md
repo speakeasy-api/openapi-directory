@@ -1,21 +1,16 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AddApplicationRequest, AddApplicationResponse } from "openapi/src/sdk/models/operations";
+import {
+  shared.ApplicationRequest,
+  AddApplicationResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: AddApplicationRequest = {
-  security: {
-    apiKeyAuth: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  },
-  request: {
-    name: "sit",
-  },
+
+const req: shared.ApplicationRequest = {
+  name: "corrupti",
 };
 
 sdk.applications.addApplication(req).then((res: AddApplicationResponse | AxiosError) => {

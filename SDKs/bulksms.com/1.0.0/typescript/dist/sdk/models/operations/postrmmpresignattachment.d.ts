@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class PostRmmPreSignAttachmentSecurity extends SpeakeasyBase {
-    basicAuth: shared.SchemeBasicAuth;
-}
-export declare class PostRmmPreSignAttachmentRequest extends SpeakeasyBase {
-    request: shared.PreSignRequest;
-    security: PostRmmPreSignAttachmentSecurity;
+    password: string;
+    username: string;
 }
 export declare class PostRmmPreSignAttachmentResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * A PreSignInfo object
+     */
     preSignInfo?: shared.PreSignInfo;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

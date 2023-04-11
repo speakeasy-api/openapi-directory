@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum TagResourceXAmzTargetEnum {
     ComAmazonawsCodestarConnectionsCodeStarConnections20191201TagResource = "com.amazonaws.codestar.connections.CodeStar_connections_20191201.TagResource"
 }
-export declare class TagResourceHeaders extends SpeakeasyBase {
+export declare class TagResourceRequest extends SpeakeasyBase {
+    tagResourceInput: shared.TagResourceInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class TagResourceHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: TagResourceXAmzTargetEnum;
 }
-export declare class TagResourceRequest extends SpeakeasyBase {
-    headers: TagResourceHeaders;
-    request: shared.TagResourceInput;
-}
 export declare class TagResourceResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * Success
+     */
     tagResourceOutput?: Record<string, any>;
 }

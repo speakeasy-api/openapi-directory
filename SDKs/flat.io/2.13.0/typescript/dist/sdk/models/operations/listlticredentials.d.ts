@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListLtiCredentialsSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
-}
-export declare class ListLtiCredentialsRequest extends SpeakeasyBase {
-    security: ListLtiCredentialsSecurity;
-}
+import { AxiosResponse } from "axios";
 export declare class ListLtiCredentialsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Not admin of an organization
+     */
     flatErrorResponse?: shared.FlatErrorResponse;
+    /**
+     * The list of LTI Credentials
+     */
     ltiCredentials?: shared.LtiCredentials[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,34 +1,71 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class NotebooksProjectsLocationsEnvironmentsCreatePathParams extends SpeakeasyBase {
-    parent: string;
-}
-export declare class NotebooksProjectsLocationsEnvironmentsCreateQueryParams extends SpeakeasyBase {
-    dollarXgafv?: shared.XgafvEnum;
-    accessToken?: string;
-    alt?: shared.AltEnum;
-    callback?: string;
-    environmentId?: string;
-    fields?: string;
-    key?: string;
-    oauthToken?: string;
-    prettyPrint?: boolean;
-    quotaUser?: string;
-    uploadType?: string;
-    uploadProtocol?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class NotebooksProjectsLocationsEnvironmentsCreateSecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class NotebooksProjectsLocationsEnvironmentsCreateRequest extends SpeakeasyBase {
-    pathParams: NotebooksProjectsLocationsEnvironmentsCreatePathParams;
-    queryParams: NotebooksProjectsLocationsEnvironmentsCreateQueryParams;
-    request?: shared.EnvironmentInput;
-    security: NotebooksProjectsLocationsEnvironmentsCreateSecurity;
+    /**
+     * V1 error format.
+     */
+    dollarXgafv?: shared.XgafvEnum;
+    environmentInput?: shared.EnvironmentInput;
+    /**
+     * OAuth access token.
+     */
+    accessToken?: string;
+    /**
+     * Data format for response.
+     */
+    alt?: shared.AltEnum;
+    /**
+     * JSONP
+     */
+    callback?: string;
+    /**
+     * Required. User-defined unique ID of this environment. The `environment_id` must be 1 to 63 characters long and contain only lowercase letters, numeric characters, and dashes. The first character must be a lowercase letter and the last character cannot be a dash.
+     */
+    environmentId?: string;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauthToken?: string;
+    /**
+     * Required. Format: `projects/{project_id}/locations/{location}`
+     */
+    parent: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    uploadType?: string;
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    uploadProtocol?: string;
 }
 export declare class NotebooksProjectsLocationsEnvironmentsCreateResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful response
+     */
     operation?: shared.Operation;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

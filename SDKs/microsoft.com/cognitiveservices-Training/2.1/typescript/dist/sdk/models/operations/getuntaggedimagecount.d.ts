@@ -1,22 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetUntaggedImageCountPathParams extends SpeakeasyBase {
-    projectId: string;
-}
-export declare class GetUntaggedImageCountQueryParams extends SpeakeasyBase {
-    iterationId?: string;
-}
-export declare class GetUntaggedImageCountHeaders extends SpeakeasyBase {
-    trainingKey: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetUntaggedImageCountRequest extends SpeakeasyBase {
-    pathParams: GetUntaggedImageCountPathParams;
-    queryParams: GetUntaggedImageCountQueryParams;
-    headers: GetUntaggedImageCountHeaders;
+    trainingKey: string;
+    /**
+     * The iteration id. Defaults to workspace
+     */
+    iterationId?: string;
+    /**
+     * The project id
+     */
+    projectId: string;
 }
 export declare class GetUntaggedImageCountResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
+    /**
+     * OK
+     */
     getUntaggedImageCount200ApplicationJSONInt32Integer?: number;
+    /**
+     * OK
+     */
     getUntaggedImageCount200TextJSONInt32Integer?: number;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

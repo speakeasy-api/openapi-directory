@@ -5,4 +5,6 @@ export declare class UpdateTableRequest extends SpeakeasyBase {
     databaseName: string;
     skipArchive?: boolean;
     tableInput: TableInput;
+    transactionId?: string;
+    versionId?: string;
 }

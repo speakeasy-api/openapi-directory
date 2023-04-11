@@ -1,5 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { ZObjectUpdate } from "./zobjectupdate";
 export declare class ProxyActionupdateRequest extends SpeakeasyBase {
-    objects: Record<string, any>[];
+    objects: ZObjectUpdate[];
     type: string;
 }

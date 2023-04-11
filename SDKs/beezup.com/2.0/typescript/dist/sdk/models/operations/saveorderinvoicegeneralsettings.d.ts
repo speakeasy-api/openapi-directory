@@ -1,11 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class SaveOrderInvoiceGeneralSettingsRequest extends SpeakeasyBase {
-    request: shared.OrderInvoiceGeneralSettings;
-}
+import { AxiosResponse } from "axios";
 export declare class SaveOrderInvoiceGeneralSettingsResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     * Occurs when something goes wrong
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The settingsgeneral did not pass the validation
+     *
+     * @remarks
+     *
+     */
     errorResponseMessage?: shared.ErrorResponseMessage;
 }

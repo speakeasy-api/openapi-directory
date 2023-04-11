@@ -1,0 +1,35 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { AdGroup } from "./adgroup";
+/**
+ * A container for the details of a paged collection of ad groups.<br /><br /><span class="tablenote"><b>Note:</b> This type only applies to the Cost Per Click (CPC) funding model; it does not apply to the Cost Per Sale (CPS) funding model.</span>
+ */
+export declare class AdGroupPagedCollectionResponse extends SpeakeasyBase {
+    /**
+     * The details of existing ad groups, such as the name, ID, and status of the ad groups.
+     */
+    adGroups?: AdGroup[];
+    /**
+     * The URI of the current page of results from the result set.
+     */
+    href?: string;
+    /**
+     * The number of items returned on a single page from the result set. This value can be set in the request with the <b>limit</b> query parameter.
+     */
+    limit?: number;
+    /**
+     * The call URI that can be used to retrieve the next page in the result set. This value is returned only if there is an additional page of results to display from the result set.
+     */
+    next?: string;
+    /**
+     * The number of results skipped in the result set before listing the first returned result. This value can be set in the request with the <b>offset</b> query parameter. <p><b>Default:</b> 0</p><br><span class="tablenote"><b>Note: </b>The items in a paginated result set use a zero-based list, where the first item in the list has an offset of <code>0</code>.</span>
+     */
+    offset?: number;
+    /**
+     * The call URI that can be used to retrieve the previous page in the result set. Basically, all of the request parameters will remain the same except the offset value, which will be decreased to retrieve the previous page of results.
+     */
+    prev?: string;
+    /**
+     * The total number of items retrieved in the result set.<br /><br /><span class="tablenote"><b>Note: </b>If no items are found, this field is returned with a value of <code>0</code>.</span>
+     */
+    total?: number;
+}

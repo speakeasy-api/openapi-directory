@@ -1,11 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetCheckForUpdateQueryParams extends SpeakeasyBase {
-    isTestflight?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetCheckForUpdateRequest extends SpeakeasyBase {
-    queryParams: GetCheckForUpdateQueryParams;
+    isTestflight?: number;
 }
 export declare class GetCheckForUpdateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

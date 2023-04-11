@@ -1,4 +1,7 @@
-export declare enum MessageCode401PisEnum {
+/**
+ * Message codes defined for PIS for HTTP Error code 401 (UNAUTHORIZED).
+ */
+export declare enum MessageCode401PISEnum {
     CertificateInvalid = "CERTIFICATE_INVALID",
     RoleInvalid = "ROLE_INVALID",
     CertificateExpired = "CERTIFICATE_EXPIRED",

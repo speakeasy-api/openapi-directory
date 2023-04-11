@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostAssignIpv6AddressesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTAssignIpv6AddressesActionEnum {
     AssignIpv6Addresses = "AssignIpv6Addresses"
 }
-export declare enum PostAssignIpv6AddressesVersionEnum {
+export declare enum POSTAssignIpv6AddressesVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostAssignIpv6AddressesQueryParams extends SpeakeasyBase {
-    action: PostAssignIpv6AddressesActionEnum;
-    version: PostAssignIpv6AddressesVersionEnum;
-}
-export declare class PostAssignIpv6AddressesHeaders extends SpeakeasyBase {
+export declare class POSTAssignIpv6AddressesRequest extends SpeakeasyBase {
+    action: POSTAssignIpv6AddressesActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTAssignIpv6AddressesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostAssignIpv6AddressesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostAssignIpv6AddressesRequest extends SpeakeasyBase {
-    queryParams: PostAssignIpv6AddressesQueryParams;
-    headers: PostAssignIpv6AddressesHeaders;
-    request?: Uint8Array;
-}
-export declare class PostAssignIpv6AddressesResponse extends SpeakeasyBase {
+export declare class POSTAssignIpv6AddressesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,17 +1,17 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetareacodefromnumberRequest, GetareacodefromnumberResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetareacodefromnumberRequest,
+  GetareacodefromnumberResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetareacodefromnumberRequest = {
-  queryParams: {
-    license: "sit",
-    number: "voluptas",
-  },
+  license: "corrupti",
+  number: "provident",
 };
 
 sdk.areaCodeInformation.getareacodefromnumber(req).then((res: GetareacodefromnumberResponse | AxiosError) => {

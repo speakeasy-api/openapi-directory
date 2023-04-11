@@ -1,24 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class WellsFilesListPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class WellsFilesListRequest extends SpeakeasyBase {
     tag: string;
 }
-export declare class WellsFilesList200ApplicationJsonPrivate extends SpeakeasyBase {
+export declare class WellsFilesList200ApplicationJSONPrivate extends SpeakeasyBase {
     name?: string;
     url?: string;
 }
-export declare class WellsFilesList200ApplicationJsonPublic extends SpeakeasyBase {
+export declare class WellsFilesList200ApplicationJSONPublic extends SpeakeasyBase {
     name?: string;
     url?: string;
 }
-export declare class WellsFilesList200ApplicationJson extends SpeakeasyBase {
-    private?: WellsFilesList200ApplicationJsonPrivate[];
-    public?: WellsFilesList200ApplicationJsonPublic[];
-}
-export declare class WellsFilesListRequest extends SpeakeasyBase {
-    pathParams: WellsFilesListPathParams;
+/**
+ * OK
+ */
+export declare class WellsFilesList200ApplicationJSON extends SpeakeasyBase {
+    private?: WellsFilesList200ApplicationJSONPrivate[];
+    public?: WellsFilesList200ApplicationJSONPublic[];
 }
 export declare class WellsFilesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    wellsFilesList200ApplicationJSONObject?: WellsFilesList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
+    wellsFilesList200ApplicationJSONObject?: WellsFilesList200ApplicationJSON;
 }

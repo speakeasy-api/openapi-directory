@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeregisterElasticIpXAmzTargetEnum {
     OpsWorks20130218DeregisterElasticIp = "OpsWorks_20130218.DeregisterElasticIp"
 }
-export declare class DeregisterElasticIpHeaders extends SpeakeasyBase {
+export declare class DeregisterElasticIpRequest extends SpeakeasyBase {
+    deregisterElasticIpRequest: shared.DeregisterElasticIpRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,13 +15,16 @@ export declare class DeregisterElasticIpHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeregisterElasticIpXAmzTargetEnum;
 }
-export declare class DeregisterElasticIpRequest extends SpeakeasyBase {
-    headers: DeregisterElasticIpHeaders;
-    request: shared.DeregisterElasticIpRequest;
-}
 export declare class DeregisterElasticIpResponse extends SpeakeasyBase {
     contentType: string;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

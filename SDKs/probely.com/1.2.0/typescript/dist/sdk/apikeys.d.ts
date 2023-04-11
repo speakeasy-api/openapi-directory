@@ -1,6 +1,16 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class ApiKeys {
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * API keys allow you to perform operations without using your regular user.
+ *
+ * @remarks
+ * There are two endpoints for API keys:
+ *   * one to create keys that can only access the current scope;
+ *   * one that allows the user to perform operations like creating targets.
+ *
+ */
+export declare class APIKeys {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,35 +19,35 @@ export declare class ApiKeys {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteKeysId - Delete account API key
-    **/
+     * Delete account API key
+     */
     deleteKeysId(req: operations.DeleteKeysIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteKeysIdResponse>;
     /**
-     * deleteTargetsTargetIdKeysId - Delete target API key
-    **/
+     * Delete target API key
+     */
     deleteTargetsTargetIdKeysId(req: operations.DeleteTargetsTargetIdKeysIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteTargetsTargetIdKeysIdResponse>;
     /**
-     * getKeys - List API keys allowed to operate on account
-    **/
+     * List API keys allowed to operate on account
+     */
     getKeys(req: operations.GetKeysRequest, config?: AxiosRequestConfig): Promise<operations.GetKeysResponse>;
     /**
-     * getKeysId - Retrieve account API key
-    **/
+     * Retrieve account API key
+     */
     getKeysId(req: operations.GetKeysIdRequest, config?: AxiosRequestConfig): Promise<operations.GetKeysIdResponse>;
     /**
-     * getTargetsTargetIdKeys - List target specific API keys
-    **/
+     * List target specific API keys
+     */
     getTargetsTargetIdKeys(req: operations.GetTargetsTargetIdKeysRequest, config?: AxiosRequestConfig): Promise<operations.GetTargetsTargetIdKeysResponse>;
     /**
-     * getTargetsTargetIdKeysId - Retrieve target API key
-    **/
+     * Retrieve target API key
+     */
     getTargetsTargetIdKeysId(req: operations.GetTargetsTargetIdKeysIdRequest, config?: AxiosRequestConfig): Promise<operations.GetTargetsTargetIdKeysIdResponse>;
     /**
-     * postKeys - Create account API key
-    **/
-    postKeys(req: operations.PostKeysRequest, config?: AxiosRequestConfig): Promise<operations.PostKeysResponse>;
+     * Create account API key
+     */
+    postKeys(req: shared.APIKeyInput, config?: AxiosRequestConfig): Promise<operations.PostKeysResponse>;
     /**
-     * postTargetsTargetIdKeys - Create target API key
-    **/
+     * Create target API key
+     */
     postTargetsTargetIdKeys(req: operations.PostTargetsTargetIdKeysRequest, config?: AxiosRequestConfig): Promise<operations.PostTargetsTargetIdKeysResponse>;
 }

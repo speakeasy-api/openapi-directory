@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteTargetGroupActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteTargetGroupActionEnum {
     DeleteTargetGroup = "DeleteTargetGroup"
 }
-export declare enum GetDeleteTargetGroupVersionEnum {
+export declare enum GETDeleteTargetGroupVersionEnum {
     TwoThousandAndFifteen1201 = "2015-12-01"
 }
-export declare class GetDeleteTargetGroupQueryParams extends SpeakeasyBase {
-    action: GetDeleteTargetGroupActionEnum;
+export declare class GETDeleteTargetGroupRequest extends SpeakeasyBase {
+    action: GETDeleteTargetGroupActionEnum;
+    /**
+     * The Amazon Resource Name (ARN) of the target group.
+     */
     targetGroupArn: string;
-    version: GetDeleteTargetGroupVersionEnum;
-}
-export declare class GetDeleteTargetGroupHeaders extends SpeakeasyBase {
+    version: GETDeleteTargetGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDeleteTargetGroupHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteTargetGroupRequest extends SpeakeasyBase {
-    queryParams: GetDeleteTargetGroupQueryParams;
-    headers: GetDeleteTargetGroupHeaders;
-}
-export declare class GetDeleteTargetGroupResponse extends SpeakeasyBase {
+export declare class GETDeleteTargetGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

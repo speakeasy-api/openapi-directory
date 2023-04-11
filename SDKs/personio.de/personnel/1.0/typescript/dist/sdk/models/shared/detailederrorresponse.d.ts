@@ -15,6 +15,9 @@ export declare class DetailedErrorResponseError extends SpeakeasyBase {
     detailedMessage?: DetailedErrorResponseErrorDetailedMessage[];
     message?: string;
 }
+/**
+ * Invalid request
+ */
 export declare class DetailedErrorResponse extends SpeakeasyBase {
     error: DetailedErrorResponseError;
     success: boolean;

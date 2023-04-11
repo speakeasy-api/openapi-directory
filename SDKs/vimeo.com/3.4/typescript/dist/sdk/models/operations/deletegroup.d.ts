@@ -1,17 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteGroupPathParams extends SpeakeasyBase {
-    groupId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteGroupSecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
+    oauth2: string;
 }
 export declare class DeleteGroupRequest extends SpeakeasyBase {
-    pathParams: DeleteGroupPathParams;
-    security: DeleteGroupSecurity;
+    /**
+     * The ID of the group.
+     */
+    groupId: number;
 }
 export declare class DeleteGroupResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The authenticated user isn't the group owner.
+     */
     legacyError?: shared.LegacyError;
 }

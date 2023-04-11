@@ -1,4 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
 export declare class PostLocationsRequestBodyAddress extends SpeakeasyBase {
     city?: string;
     country?: string;
@@ -9,6 +10,9 @@ export declare class PostLocationsRequestBodyCoordinates extends SpeakeasyBase {
     latitude?: number;
     longitude?: number;
 }
+/**
+ * Include location properties to create here
+ */
 export declare class PostLocationsRequestBody extends SpeakeasyBase {
     active?: boolean;
     address: PostLocationsRequestBodyAddress;
@@ -16,16 +20,20 @@ export declare class PostLocationsRequestBody extends SpeakeasyBase {
     coordinates: PostLocationsRequestBodyCoordinates;
     operatorName: string;
 }
-export declare class PostLocations200ApplicationJson extends SpeakeasyBase {
+/**
+ * Returns the newly created location object
+ */
+export declare class PostLocations200ApplicationJSON extends SpeakeasyBase {
     message?: string;
     ok?: boolean;
     result?: Record<string, any>;
 }
-export declare class PostLocationsRequest extends SpeakeasyBase {
-    request: PostLocationsRequestBody;
-}
 export declare class PostLocationsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    postLocations200ApplicationJSONObject?: PostLocations200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Returns the newly created location object
+     */
+    postLocations200ApplicationJSONObject?: PostLocations200ApplicationJSON;
 }

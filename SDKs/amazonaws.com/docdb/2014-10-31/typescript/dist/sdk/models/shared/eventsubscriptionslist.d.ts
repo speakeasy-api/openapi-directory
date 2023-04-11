@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Detailed information about an event to which you have subscribed.
-**/
+ */
 export declare class EventSubscriptionsList extends SpeakeasyBase {
     custSubscriptionId?: string;
     customerAwsId?: string;
     enabled?: boolean;
-    eventCategoriesList?: Record<string, any>[];
+    eventCategoriesList?: string[];
     eventSubscriptionArn?: string;
     snsTopicArn?: string;
-    sourceIdsList?: Record<string, any>[];
+    sourceIdsList?: string[];
     sourceType?: string;
     status?: string;
     subscriptionCreationTime?: string;

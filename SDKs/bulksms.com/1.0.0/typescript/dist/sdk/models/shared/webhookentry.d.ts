@@ -1,18 +1,127 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Specifies how to invoke your webhook.
+ *
+ * @remarks
+ *
+ * If the value is `ONE` the array POSTed to your webhook will contain no more than a single message.  Use this option if your webhook logic is unable to handle more than one messages at a time.
+ *
+ * If the value is `MANY` the array POSTed to your webhook can contain up to 10 messages.  This is the recommended option.  The number of calls made to your webhook would be less and this will speed up your total processing time.
+ * If your webhook fails for an invoke that has more than one message, each message in the array will automatically be retried one at a time.
+ *
+ * This value defaults to `ONE` - but it is recommended that you set this property to `MANY`.
+ *
+ */
 export declare enum WebhookEntryInvokeOptionEnum {
     One = "ONE",
     Many = "MANY"
 }
+/**
+ * Specifies when the webhook will be triggered.
+ *
+ * @remarks
+ *
+ * Please note the values are case sensitive.
+ *
+ * If the value is `SENT`, the webhook will be called when a status update becomes available for a message you sent (i.e. a mobile terminating (MT) message).
+ *
+ * If the value is `RECEIVED`, the webhook will be called when a message is received (i.e. a mobile originating (MO) message).
+ *
+ * Note that this field forces you to create two separate webhook entries if you want to collect all messages.  However,  you can use the same `url` for both webhooks if you want.
+ *
+ */
 export declare enum WebhookEntryTriggerScopeEnum {
     Sent = "SENT",
     Received = "RECEIVED"
 }
+/**
+ * Contains the property values for your new webhook
+ *
+ * @remarks
+ *
+ */
 export declare class WebhookEntry extends SpeakeasyBase {
+    /**
+     * Indicates whether you want the webhook activated.
+     *
+     * @remarks
+     *
+     * If the value is `true`, the webhook at the given `url` will be invoked with an empty array (`[]`) as part of the validation process.
+     * If the webhook responds with a `2xx` status code, the submission is accepted; if not the webhook is not created (or updated).
+     *
+     * If the value is `false` the webhook will be inactive, and it will not be invoked when messages are `SENT` or `RECEIVED`.
+     *
+     * The default value is `true`.
+     *
+     */
     active?: boolean;
+    /**
+     * The email address to which emails will be sent if there are problem with invoking the webhook.
+     *
+     * @remarks
+     *
+     * The value must be a valid email address.
+     * If this value is `null`, no email will be sent.
+     *
+     * It is `null` by default.
+     *
+     */
     contactEmailAddress?: string;
+    /**
+     * Specifies how to invoke your webhook.
+     *
+     * @remarks
+     *
+     * If the value is `ONE` the array POSTed to your webhook will contain no more than a single message.  Use this option if your webhook logic is unable to handle more than one messages at a time.
+     *
+     * If the value is `MANY` the array POSTed to your webhook can contain up to 10 messages.  This is the recommended option.  The number of calls made to your webhook would be less and this will speed up your total processing time.
+     * If your webhook fails for an invoke that has more than one message, each message in the array will automatically be retried one at a time.
+     *
+     * This value defaults to `ONE` - but it is recommended that you set this property to `MANY`.
+     *
+     */
     invokeOption?: WebhookEntryInvokeOptionEnum;
+    /**
+     * A text identifier for the webhook.
+     *
+     * @remarks
+     * More than one webhook cannot have the same name.
+     *
+     */
     name: string;
+    /**
+     * Indicates whether you want to show this webhook on the Web App.
+     *
+     * @remarks
+     *
+     * Webhooks shown there can be updated by the user that use the public Web site.
+     *
+     * The default value is `true`.
+     *
+     */
     onWebApp?: boolean;
+    /**
+     * Specifies when the webhook will be triggered.
+     *
+     * @remarks
+     *
+     * Please note the values are case sensitive.
+     *
+     * If the value is `SENT`, the webhook will be called when a status update becomes available for a message you sent (i.e. a mobile terminating (MT) message).
+     *
+     * If the value is `RECEIVED`, the webhook will be called when a message is received (i.e. a mobile originating (MO) message).
+     *
+     * Note that this field forces you to create two separate webhook entries if you want to collect all messages.  However,  you can use the same `url` for both webhooks if you want.
+     *
+     */
     triggerScope: WebhookEntryTriggerScopeEnum;
+    /**
+     * The location of the webhook.
+     *
+     * @remarks
+     *
+     * In addition to being a [valid URI](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier#Syntax), the url must also start with `http` or `https`.
+     *
+     */
     url: string;
 }

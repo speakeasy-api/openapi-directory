@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
+/**
+ * Include Configuration properties to create here
+ */
 export declare class PostConfigurationsRequestBody extends SpeakeasyBase {
     key?: string;
     value?: string;
 }
-export declare class PostConfigurations201ApplicationJson extends SpeakeasyBase {
+/**
+ * A successful response
+ */
+export declare class PostConfigurations201ApplicationJSON extends SpeakeasyBase {
     message?: string;
     ok?: boolean;
     result?: Record<string, any>;
 }
-export declare class PostConfigurationsRequest extends SpeakeasyBase {
-    request: PostConfigurationsRequestBody;
-}
 export declare class PostConfigurationsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    postConfigurations201ApplicationJSONObject?: PostConfigurations201ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * A successful response
+     */
+    postConfigurations201ApplicationJSONObject?: PostConfigurations201ApplicationJSON;
 }

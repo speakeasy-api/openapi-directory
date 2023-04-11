@@ -2,6 +2,9 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { DocumentLinks } from "./documentlinks";
 import { ManualFile } from "./manualfile";
 export declare class DocumentInSearch extends SpeakeasyBase {
+    /**
+     * Extension of the file
+     */
     fileType?: string;
     hasCustomPackage?: boolean;
     id?: number;
@@ -16,6 +19,9 @@ export declare class DocumentInSearch extends SpeakeasyBase {
     sourceLanguage?: string;
     subject?: string;
     targetLanguages?: string[];
+    /**
+     * Unix epoch time
+     */
     uploadedAt?: number;
     wordCount?: number;
 }

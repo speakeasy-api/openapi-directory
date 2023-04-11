@@ -1,5 +1,9 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Resources that return predictions for text input.
+ */
 export declare class LanguagePrediction {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,15 +13,17 @@ export declare class LanguagePrediction {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * intentMultipart - Prediction for Intent
+     * Prediction for Intent
      *
+     * @remarks
      * Returns an intent prediction for the given string.
-    **/
-    intentMultipart(req: operations.IntentMultipartRequest, config?: AxiosRequestConfig): Promise<operations.IntentMultipartResponse>;
+     */
+    intentMultipart(req: shared.IntentPredictRequest, security: operations.IntentMultipartSecurity, config?: AxiosRequestConfig): Promise<operations.IntentMultipartResponse>;
     /**
-     * sentimentMultipart - Prediction for Sentiment
+     * Prediction for Sentiment
      *
+     * @remarks
      * Returns a sentiment prediction for the given string.
-    **/
-    sentimentMultipart(req: operations.SentimentMultipartRequest, config?: AxiosRequestConfig): Promise<operations.SentimentMultipartResponse>;
+     */
+    sentimentMultipart(req: shared.SentimentPredictRequest, security: operations.SentimentMultipartSecurity, config?: AxiosRequestConfig): Promise<operations.SentimentMultipartResponse>;
 }

@@ -1,31 +1,35 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { DmsSslModeValueEnum } from "./dmssslmodevalueenum";
 import { DmsTransferSettings } from "./dmstransfersettings";
 import { DocDbSettings } from "./docdbsettings";
 import { DynamoDbSettings } from "./dynamodbsettings";
 import { ElasticsearchSettings } from "./elasticsearchsettings";
-import { ReplicationEndpointTypeValueEnum } from "./replicationendpointtypevalueenum";
-import { IbmDb2Settings } from "./ibmdb2settings";
+import { GcpMySQLSettings } from "./gcpmysqlsettings";
+import { IBMDb2Settings } from "./ibmdb2settings";
 import { KafkaSettings } from "./kafkasettings";
 import { KinesisSettings } from "./kinesissettings";
-import { MicrosoftSqlServerSettings } from "./microsoftsqlserversettings";
+import { MicrosoftSQLServerSettings } from "./microsoftsqlserversettings";
 import { MongoDbSettings } from "./mongodbsettings";
-import { MySqlSettings } from "./mysqlsettings";
+import { MySQLSettings } from "./mysqlsettings";
 import { NeptuneSettings } from "./neptunesettings";
 import { OracleSettings } from "./oraclesettings";
-import { PostgreSqlSettings } from "./postgresqlsettings";
+import { PostgreSQLSettings } from "./postgresqlsettings";
 import { RedisSettings } from "./redissettings";
 import { RedshiftSettings } from "./redshiftsettings";
+import { ReplicationEndpointTypeValueEnum } from "./replicationendpointtypevalueenum";
 import { S3Settings } from "./s3settings";
-import { DmsSslModeValueEnum } from "./dmssslmodevalueenum";
 import { SybaseSettings } from "./sybasesettings";
 import { Tag } from "./tag";
 /**
  * <p/>
-**/
+ */
 export declare class CreateEndpointMessage extends SpeakeasyBase {
     certificateArn?: string;
     databaseName?: string;
     dmsTransferSettings?: DmsTransferSettings;
+    /**
+     * Provides information that defines a DocumentDB endpoint.
+     */
     docDbSettings?: DocDbSettings;
     dynamoDbSettings?: DynamoDbSettings;
     elasticsearchSettings?: ElasticsearchSettings;
@@ -34,19 +38,23 @@ export declare class CreateEndpointMessage extends SpeakeasyBase {
     engineName: string;
     externalTableDefinition?: string;
     extraConnectionAttributes?: string;
-    ibmDb2Settings?: IbmDb2Settings;
+    gcpMySQLSettings?: GcpMySQLSettings;
+    ibmDb2Settings?: IBMDb2Settings;
     kafkaSettings?: KafkaSettings;
     kinesisSettings?: KinesisSettings;
     kmsKeyId?: string;
-    microsoftSQLServerSettings?: MicrosoftSqlServerSettings;
+    microsoftSQLServerSettings?: MicrosoftSQLServerSettings;
     mongoDbSettings?: MongoDbSettings;
-    mySQLSettings?: MySqlSettings;
+    mySQLSettings?: MySQLSettings;
     neptuneSettings?: NeptuneSettings;
     oracleSettings?: OracleSettings;
     password?: string;
     port?: number;
-    postgreSQLSettings?: PostgreSqlSettings;
+    postgreSQLSettings?: PostgreSQLSettings;
     redisSettings?: RedisSettings;
+    /**
+     * Provides information that defines an Amazon Redshift endpoint.
+     */
     redshiftSettings?: RedshiftSettings;
     resourceIdentifier?: string;
     s3Settings?: S3Settings;

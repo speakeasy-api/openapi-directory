@@ -64,6 +64,7 @@ export * from "./seasonlastcompleted";
 export * from "./seasonupcoming";
 export * from "./stadiums";
 export * from "./standings";
+export * from "./teamgamelogsbyseason";
 export * from "./teamgamestats";
 export * from "./teamsactive";
 export * from "./teamsall";

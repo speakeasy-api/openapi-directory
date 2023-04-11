@@ -4,13 +4,11 @@ export declare class SettingDataModel extends SpeakeasyBase {
     createdAt?: Date;
     creatorEmail?: string;
     creatorFullName?: string;
-    expirationWarningAt?: Date;
     hint?: string;
     isWatching?: boolean;
     key?: string;
     name?: string;
-    ownerEmail?: string;
-    ownerFullName?: string;
+    order?: number;
     settingId?: number;
     settingType?: SettingTypeEnum;
 }

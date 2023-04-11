@@ -1,77 +1,181 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class MergeTemplatesQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class MergeTemplatesRequest extends SpeakeasyBase {
+    /**
+     * Data used to specify templates and data objects which are used to merge the template
+     */
+    requestBody: shared.BatchData[];
+    /**
+     * Document format. The zip option will return a ZIP file with PDF files.
+     */
     format?: shared.FormatEnum;
+    /**
+     * Document name, returned in the meta data.
+     */
     name?: string;
+    /**
+     * Response format. With the url option, the document is stored for 30 days and automatically deleted.
+     */
     output?: shared.OutputEnum;
 }
-export declare class MergeTemplates200ApplicationJsonMeta extends SpeakeasyBase {
-    contentType?: string;
-    displayName?: string;
-    encoding?: string;
-    name?: string;
-}
-export declare class MergeTemplates200ApplicationJson extends SpeakeasyBase {
-    meta?: MergeTemplates200ApplicationJsonMeta;
-    response?: string;
-}
-export declare enum MergeTemplates401ApplicationJsonErrorEnum {
-    AuthenticationFailedRequestExpired = "Authentication failed: request expired",
-    AuthenticationFailedSignatureOrSecretMissing = "Authentication failed: signature or secret missing",
-    AuthenticationFailedWorkspaceMissing = "Authentication failed: workspace missing",
-    AuthenticationFailedKeyMissing = "Authentication failed: key missing",
-    AuthenticationFailedPropertyIssIssuerMissingInJwt = "Authentication failed: property 'iss' (issuer) missing in JWT",
-    AuthenticationFailedPropertySubSubjectMissingInJwt = "Authentication failed: property 'sub' (subject) missing in JWT",
-    AuthenticationFailedPropertyExpExpirationTimeMissingInJwt = "Authentication failed: property 'exp' (expiration time) missing in JWT",
-    AuthenticationFailedInvalidIssIssuer = "Authentication failed: invalid 'iss' (issuer)",
-    AuthenticationFailedIncorrectSignature = "Authentication failed: incorrect signature",
-    AuthenticationFailed = "Authentication failed"
-}
-export declare class MergeTemplates401ApplicationJson extends SpeakeasyBase {
-    error?: MergeTemplates401ApplicationJsonErrorEnum;
+/**
+ * Internal Server Error
+ */
+export declare class MergeTemplates500ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error description
+     */
+    error?: string;
+    /**
+     * HTTP Error code
+     */
     status?: number;
 }
-export declare enum MergeTemplates403ApplicationJsonErrorEnum {
-    YourAccountHasExceededTheMonthlyDocumentGenerationLimit = "Your account has exceeded the monthly document generation limit."
-}
-export declare class MergeTemplates403ApplicationJson extends SpeakeasyBase {
-    error?: MergeTemplates403ApplicationJsonErrorEnum;
-    status?: number;
-}
-export declare enum MergeTemplates404ApplicationJsonErrorEnum {
-    EntityNotFound = "Entity not found",
-    ResourceNotFound = "Resource not found",
-    NoneOfTheTemplatesIsAvailableForTheWorkspace = "None of the templates is available for the workspace."
-}
-export declare class MergeTemplates404ApplicationJson extends SpeakeasyBase {
-    error?: MergeTemplates404ApplicationJsonErrorEnum;
-    status?: number;
-}
-export declare enum MergeTemplates422ApplicationJsonErrorEnum {
-    UnableToParseJsonPleaseCheckFormatting = "Unable to parse JSON, please check formatting",
+/**
+ * Error description
+ */
+export declare enum MergeTemplates422ApplicationJSONErrorEnum {
+    UnableToParseJSONPleaseCheckFormatting = "Unable to parse JSON, please check formatting",
     RequiredParameterMissing = "Required parameter missing",
     RequiredParameterMissingTemplateDefinitionNotDefined = "Required parameter missing: template definition not defined",
     RequiredParameterMissingTemplateNotDefined = "Required parameter missing: template not defined"
 }
-export declare class MergeTemplates422ApplicationJson extends SpeakeasyBase {
-    error?: MergeTemplates422ApplicationJsonErrorEnum;
+/**
+ * Unprocessable Entity
+ */
+export declare class MergeTemplates422ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error description
+     */
+    error?: MergeTemplates422ApplicationJSONErrorEnum;
+    /**
+     * HTTP Error code
+     */
     status?: number;
 }
-export declare class MergeTemplates500ApplicationJson extends SpeakeasyBase {
-    error?: string;
+/**
+ * Error description
+ */
+export declare enum MergeTemplates404ApplicationJSONErrorEnum {
+    EntityNotFound = "Entity not found",
+    ResourceNotFound = "Resource not found",
+    NoneOfTheTemplatesIsAvailableForTheWorkspace = "None of the templates is available for the workspace."
+}
+/**
+ * Not Found
+ */
+export declare class MergeTemplates404ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error description
+     */
+    error?: MergeTemplates404ApplicationJSONErrorEnum;
+    /**
+     * HTTP Error code
+     */
     status?: number;
 }
-export declare class MergeTemplatesRequest extends SpeakeasyBase {
-    queryParams: MergeTemplatesQueryParams;
-    request: shared.BatchData[];
+/**
+ * Error description
+ */
+export declare enum MergeTemplates403ApplicationJSONErrorEnum {
+    YourAccountHasExceededTheMonthlyDocumentGenerationLimit = "Your account has exceeded the monthly document generation limit."
+}
+/**
+ * Forbidden
+ */
+export declare class MergeTemplates403ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error description
+     */
+    error?: MergeTemplates403ApplicationJSONErrorEnum;
+    /**
+     * HTTP Error code
+     */
+    status?: number;
+}
+/**
+ * Error description
+ */
+export declare enum MergeTemplates401ApplicationJSONErrorEnum {
+    AuthenticationFailedRequestExpired = "Authentication failed: request expired",
+    AuthenticationFailedSignatureOrSecretMissing = "Authentication failed: signature or secret missing",
+    AuthenticationFailedWorkspaceMissing = "Authentication failed: workspace missing",
+    AuthenticationFailedKeyMissing = "Authentication failed: key missing",
+    AuthenticationFailedPropertyIssIssuerMissingInJWT = "Authentication failed: property 'iss' (issuer) missing in JWT",
+    AuthenticationFailedPropertySubSubjectMissingInJWT = "Authentication failed: property 'sub' (subject) missing in JWT",
+    AuthenticationFailedPropertyExpExpirationTimeMissingInJWT = "Authentication failed: property 'exp' (expiration time) missing in JWT",
+    AuthenticationFailedInvalidIssIssuer = "Authentication failed: invalid 'iss' (issuer)",
+    AuthenticationFailedIncorrectSignature = "Authentication failed: incorrect signature",
+    AuthenticationFailed = "Authentication failed"
+}
+/**
+ * Unauthorized
+ */
+export declare class MergeTemplates401ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error description
+     */
+    error?: MergeTemplates401ApplicationJSONErrorEnum;
+    /**
+     * HTTP Error code
+     */
+    status?: number;
+}
+export declare class MergeTemplates200ApplicationJSONMeta extends SpeakeasyBase {
+    /**
+     * Document content type.
+     */
+    contentType?: string;
+    /**
+     * Document name without the file extension.
+     */
+    displayName?: string;
+    /**
+     * Document encoding
+     */
+    encoding?: string;
+    /**
+     * Document name. This value is automatically generated if name attribute is not defined in request.
+     */
+    name?: string;
+}
+/**
+ * Document data
+ */
+export declare class MergeTemplates200ApplicationJSON extends SpeakeasyBase {
+    meta?: MergeTemplates200ApplicationJSONMeta;
+    /**
+     * Base64 encoded document if the output=base64 is used or URL to the document when the output=url is used.
+     */
+    response?: string;
 }
 export declare class MergeTemplatesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    mergeTemplates200ApplicationJSONObject?: MergeTemplates200ApplicationJson;
-    mergeTemplates401ApplicationJSONObject?: MergeTemplates401ApplicationJson;
-    mergeTemplates403ApplicationJSONObject?: MergeTemplates403ApplicationJson;
-    mergeTemplates404ApplicationJSONObject?: MergeTemplates404ApplicationJson;
-    mergeTemplates422ApplicationJSONObject?: MergeTemplates422ApplicationJson;
-    mergeTemplates500ApplicationJSONObject?: MergeTemplates500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Document data
+     */
+    mergeTemplates200ApplicationJSONObject?: MergeTemplates200ApplicationJSON;
+    /**
+     * Unauthorized
+     */
+    mergeTemplates401ApplicationJSONObject?: MergeTemplates401ApplicationJSON;
+    /**
+     * Forbidden
+     */
+    mergeTemplates403ApplicationJSONObject?: MergeTemplates403ApplicationJSON;
+    /**
+     * Not Found
+     */
+    mergeTemplates404ApplicationJSONObject?: MergeTemplates404ApplicationJSON;
+    /**
+     * Unprocessable Entity
+     */
+    mergeTemplates422ApplicationJSONObject?: MergeTemplates422ApplicationJSON;
+    /**
+     * Internal Server Error
+     */
+    mergeTemplates500ApplicationJSONObject?: MergeTemplates500ApplicationJSON;
 }

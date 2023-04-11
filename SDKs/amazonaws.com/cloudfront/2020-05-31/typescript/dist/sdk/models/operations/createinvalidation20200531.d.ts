@@ -1,8 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CreateInvalidation20200531PathParams extends SpeakeasyBase {
-    distributionId: string;
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+/**
+ * An invalidation batch.
+ */
+export declare class CreateInvalidation20200531RequestBodyInvalidationBatch extends SpeakeasyBase {
+    callerReference?: string;
+    paths?: shared.Paths;
 }
-export declare class CreateInvalidation20200531Headers extends SpeakeasyBase {
+export declare class CreateInvalidation20200531RequestBody extends SpeakeasyBase {
+    /**
+     * An invalidation batch.
+     */
+    invalidationBatch: CreateInvalidation20200531RequestBodyInvalidationBatch;
+}
+export declare class CreateInvalidation20200531Request extends SpeakeasyBase {
+    /**
+     * The distribution's id.
+     */
+    distributionId: string;
+    requestBody: Uint8Array;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,13 +28,9 @@ export declare class CreateInvalidation20200531Headers extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class CreateInvalidation20200531Request extends SpeakeasyBase {
-    pathParams: CreateInvalidation20200531PathParams;
-    headers: CreateInvalidation20200531Headers;
-    request: Uint8Array;
-}
 export declare class CreateInvalidation20200531Response extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,61 +1,141 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetTemplates200ApplicationJson extends SpeakeasyBase {
-    response?: shared.Template[];
-}
-export declare enum GetTemplates401ApplicationJsonErrorEnum {
-    AuthenticationFailedRequestExpired = "Authentication failed: request expired",
-    AuthenticationFailedSignatureOrSecretMissing = "Authentication failed: signature or secret missing",
-    AuthenticationFailedWorkspaceMissing = "Authentication failed: workspace missing",
-    AuthenticationFailedKeyMissing = "Authentication failed: key missing",
-    AuthenticationFailedPropertyIssIssuerMissingInJwt = "Authentication failed: property 'iss' (issuer) missing in JWT",
-    AuthenticationFailedPropertySubSubjectMissingInJwt = "Authentication failed: property 'sub' (subject) missing in JWT",
-    AuthenticationFailedPropertyExpExpirationTimeMissingInJwt = "Authentication failed: property 'exp' (expiration time) missing in JWT",
-    AuthenticationFailedInvalidIssIssuer = "Authentication failed: invalid 'iss' (issuer)",
-    AuthenticationFailedIncorrectSignature = "Authentication failed: incorrect signature",
-    AuthenticationFailed = "Authentication failed"
-}
-export declare class GetTemplates401ApplicationJson extends SpeakeasyBase {
-    error?: GetTemplates401ApplicationJsonErrorEnum;
+import { AxiosResponse } from "axios";
+/**
+ * Internal Server Error
+ */
+export declare class GetTemplates500ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error description
+     */
+    error?: string;
+    /**
+     * HTTP Error code
+     */
     status?: number;
 }
-export declare enum GetTemplates403ApplicationJsonErrorEnum {
-    YourAccountHasExceededTheMonthlyDocumentGenerationLimit = "Your account has exceeded the monthly document generation limit."
-}
-export declare class GetTemplates403ApplicationJson extends SpeakeasyBase {
-    error?: GetTemplates403ApplicationJsonErrorEnum;
-    status?: number;
-}
-export declare enum GetTemplates404ApplicationJsonErrorEnum {
-    EntityNotFound = "Entity not found",
-    ResourceNotFound = "Resource not found",
-    NoneOfTheTemplatesIsAvailableForTheWorkspace = "None of the templates is available for the workspace."
-}
-export declare class GetTemplates404ApplicationJson extends SpeakeasyBase {
-    error?: GetTemplates404ApplicationJsonErrorEnum;
-    status?: number;
-}
-export declare enum GetTemplates422ApplicationJsonErrorEnum {
-    UnableToParseJsonPleaseCheckFormatting = "Unable to parse JSON, please check formatting",
+/**
+ * Error description
+ */
+export declare enum GetTemplates422ApplicationJSONErrorEnum {
+    UnableToParseJSONPleaseCheckFormatting = "Unable to parse JSON, please check formatting",
     RequiredParameterMissing = "Required parameter missing",
     RequiredParameterMissingTemplateDefinitionNotDefined = "Required parameter missing: template definition not defined",
     RequiredParameterMissingTemplateNotDefined = "Required parameter missing: template not defined"
 }
-export declare class GetTemplates422ApplicationJson extends SpeakeasyBase {
-    error?: GetTemplates422ApplicationJsonErrorEnum;
+/**
+ * Unprocessable Entity
+ */
+export declare class GetTemplates422ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error description
+     */
+    error?: GetTemplates422ApplicationJSONErrorEnum;
+    /**
+     * HTTP Error code
+     */
     status?: number;
 }
-export declare class GetTemplates500ApplicationJson extends SpeakeasyBase {
-    error?: string;
+/**
+ * Error description
+ */
+export declare enum GetTemplates404ApplicationJSONErrorEnum {
+    EntityNotFound = "Entity not found",
+    ResourceNotFound = "Resource not found",
+    NoneOfTheTemplatesIsAvailableForTheWorkspace = "None of the templates is available for the workspace."
+}
+/**
+ * Not Found
+ */
+export declare class GetTemplates404ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error description
+     */
+    error?: GetTemplates404ApplicationJSONErrorEnum;
+    /**
+     * HTTP Error code
+     */
     status?: number;
+}
+/**
+ * Error description
+ */
+export declare enum GetTemplates403ApplicationJSONErrorEnum {
+    YourAccountHasExceededTheMonthlyDocumentGenerationLimit = "Your account has exceeded the monthly document generation limit."
+}
+/**
+ * Forbidden
+ */
+export declare class GetTemplates403ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error description
+     */
+    error?: GetTemplates403ApplicationJSONErrorEnum;
+    /**
+     * HTTP Error code
+     */
+    status?: number;
+}
+/**
+ * Error description
+ */
+export declare enum GetTemplates401ApplicationJSONErrorEnum {
+    AuthenticationFailedRequestExpired = "Authentication failed: request expired",
+    AuthenticationFailedSignatureOrSecretMissing = "Authentication failed: signature or secret missing",
+    AuthenticationFailedWorkspaceMissing = "Authentication failed: workspace missing",
+    AuthenticationFailedKeyMissing = "Authentication failed: key missing",
+    AuthenticationFailedPropertyIssIssuerMissingInJWT = "Authentication failed: property 'iss' (issuer) missing in JWT",
+    AuthenticationFailedPropertySubSubjectMissingInJWT = "Authentication failed: property 'sub' (subject) missing in JWT",
+    AuthenticationFailedPropertyExpExpirationTimeMissingInJWT = "Authentication failed: property 'exp' (expiration time) missing in JWT",
+    AuthenticationFailedInvalidIssIssuer = "Authentication failed: invalid 'iss' (issuer)",
+    AuthenticationFailedIncorrectSignature = "Authentication failed: incorrect signature",
+    AuthenticationFailed = "Authentication failed"
+}
+/**
+ * Unauthorized
+ */
+export declare class GetTemplates401ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error description
+     */
+    error?: GetTemplates401ApplicationJSONErrorEnum;
+    /**
+     * HTTP Error code
+     */
+    status?: number;
+}
+/**
+ * An array of template objects
+ */
+export declare class GetTemplates200ApplicationJSON extends SpeakeasyBase {
+    response?: shared.Template[];
 }
 export declare class GetTemplatesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getTemplates200ApplicationJSONObject?: GetTemplates200ApplicationJson;
-    getTemplates401ApplicationJSONObject?: GetTemplates401ApplicationJson;
-    getTemplates403ApplicationJSONObject?: GetTemplates403ApplicationJson;
-    getTemplates404ApplicationJSONObject?: GetTemplates404ApplicationJson;
-    getTemplates422ApplicationJSONObject?: GetTemplates422ApplicationJson;
-    getTemplates500ApplicationJSONObject?: GetTemplates500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * An array of template objects
+     */
+    getTemplates200ApplicationJSONObject?: GetTemplates200ApplicationJSON;
+    /**
+     * Unauthorized
+     */
+    getTemplates401ApplicationJSONObject?: GetTemplates401ApplicationJSON;
+    /**
+     * Forbidden
+     */
+    getTemplates403ApplicationJSONObject?: GetTemplates403ApplicationJSON;
+    /**
+     * Not Found
+     */
+    getTemplates404ApplicationJSONObject?: GetTemplates404ApplicationJSON;
+    /**
+     * Unprocessable Entity
+     */
+    getTemplates422ApplicationJSONObject?: GetTemplates422ApplicationJSON;
+    /**
+     * Internal Server Error
+     */
+    getTemplates500ApplicationJSONObject?: GetTemplates500ApplicationJSON;
 }

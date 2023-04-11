@@ -1,8 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Team } from "./team";
+import { BranchRestrictionPolicy } from "./branchrestrictionpolicy";
 import { SimpleUser } from "./simpleuser";
 import { StatusCheckPolicy } from "./statuscheckpolicy";
-import { BranchRestrictionPolicy } from "./branchrestrictionpolicy";
+import { Team } from "./team";
 export declare class ProtectedBranchAllowDeletions extends SpeakeasyBase {
     enabled: boolean;
 }
@@ -39,7 +39,7 @@ export declare class ProtectedBranchRequiredSignatures extends SpeakeasyBase {
 }
 /**
  * Branch protections protect branches
-**/
+ */
 export declare class ProtectedBranch extends SpeakeasyBase {
     allowDeletions?: ProtectedBranchAllowDeletions;
     allowForcePushes?: ProtectedBranchAllowForcePushes;
@@ -48,7 +48,13 @@ export declare class ProtectedBranch extends SpeakeasyBase {
     requiredLinearHistory?: ProtectedBranchRequiredLinearHistory;
     requiredPullRequestReviews?: ProtectedBranchRequiredPullRequestReviews;
     requiredSignatures?: ProtectedBranchRequiredSignatures;
+    /**
+     * Status Check Policy
+     */
     requiredStatusChecks?: StatusCheckPolicy;
+    /**
+     * Branch Restriction Policy
+     */
     restrictions?: BranchRestrictionPolicy;
     url: string;
 }

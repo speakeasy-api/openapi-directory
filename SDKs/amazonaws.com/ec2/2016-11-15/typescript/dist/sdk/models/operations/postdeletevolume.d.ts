@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteVolumeActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteVolumeActionEnum {
     DeleteVolume = "DeleteVolume"
 }
-export declare enum PostDeleteVolumeVersionEnum {
+export declare enum POSTDeleteVolumeVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDeleteVolumeQueryParams extends SpeakeasyBase {
-    action: PostDeleteVolumeActionEnum;
-    version: PostDeleteVolumeVersionEnum;
-}
-export declare class PostDeleteVolumeHeaders extends SpeakeasyBase {
+export declare class POSTDeleteVolumeRequest extends SpeakeasyBase {
+    action: POSTDeleteVolumeActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteVolumeVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +18,8 @@ export declare class PostDeleteVolumeHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteVolumeRequest extends SpeakeasyBase {
-    queryParams: PostDeleteVolumeQueryParams;
-    headers: PostDeleteVolumeHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteVolumeResponse extends SpeakeasyBase {
+export declare class POSTDeleteVolumeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

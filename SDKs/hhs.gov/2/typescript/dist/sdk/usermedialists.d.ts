@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Get media from user generated lists.
+ */
 export declare class UserMediaLists {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,10 @@ export declare class UserMediaLists {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getResourcesUserMediaListsIdJson - Get UserMediaList by ID
+     * Get UserMediaList by ID
      *
+     * @remarks
      * Get a specific user media list.
-    **/
+     */
     getResourcesUserMediaListsIdJson(req: operations.GetResourcesUserMediaListsIdJsonRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesUserMediaListsIdJsonResponse>;
 }

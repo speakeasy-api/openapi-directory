@@ -1,10 +1,45 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListPrincipalsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
+import { AxiosResponse } from "axios";
+/**
+ * <p>Specifies that you want to list information for only resource shares that match the following:</p> <ul> <li> <p> <b> <code>SELF</code> </b> – principals that your account is sharing resources with</p> </li> <li> <p> <b> <code>OTHER-ACCOUNTS</code> </b> – principals that are sharing resources with your account</p> </li> </ul>
+ */
+export declare enum ListPrincipalsRequestBodyResourceOwnerEnum {
+    Self = "SELF",
+    OtherAccounts = "OTHER-ACCOUNTS"
 }
-export declare class ListPrincipalsHeaders extends SpeakeasyBase {
+export declare class ListPrincipalsRequestBody extends SpeakeasyBase {
+    /**
+     * Specifies the total number of results that you want included on each page of the response. If you do not include this parameter, it defaults to a value that is specific to the operation. If additional items exist beyond the number you specify, the <code>NextToken</code> response element is returned with a value (not null). Include the specified value as the <code>NextToken</code> request parameter in the next call to the operation to get the next part of the results. Note that the service might return fewer results than the maximum even when there are more results available. You should check <code>NextToken</code> after every operation to ensure that you receive all of the results.
+     */
+    maxResults?: number;
+    /**
+     * Specifies that you want to receive the next page of results. Valid only if you received a <code>NextToken</code> response in the previous request. If you did, it indicates that more output is available. Set this parameter to the value provided by the previous call's <code>NextToken</code> response to request the next page of results.
+     */
+    nextToken?: string;
+    /**
+     * <p>Specifies that you want to list information for only the listed principals.</p> <p>You can include the following values:</p> <ul> <li> <p>An Amazon Web Services account ID, for example: <code>123456789012</code> </p> </li> <li> <p>An <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resoure Name (ARN)</a> of an organization in Organizations, for example: <code>organizations::123456789012:organization/o-exampleorgid</code> </p> </li> <li> <p>An ARN of an organizational unit (OU) in Organizations, for example: <code>organizations::123456789012:ou/o-exampleorgid/ou-examplerootid-exampleouid123</code> </p> </li> <li> <p>An ARN of an IAM role, for example: <code>iam::123456789012:role/rolename</code> </p> </li> <li> <p>An ARN of an IAM user, for example: <code>iam::123456789012user/username</code> </p> </li> </ul> <note> <p>Not all resource types can be shared with IAM roles and users. For more information, see <a href="https://docs.aws.amazon.com/ram/latest/userguide/permissions.html#permissions-rbp-supported-resource-types">Sharing with IAM roles and users</a> in the <i>Resource Access Manager User Guide</i>.</p> </note>
+     */
+    principals?: string[];
+    /**
+     * Specifies that you want to list principal information for the resource share with the specified <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resoure Name (ARN)</a>.
+     */
+    resourceArn?: string;
+    /**
+     * <p>Specifies that you want to list information for only resource shares that match the following:</p> <ul> <li> <p> <b> <code>SELF</code> </b> – principals that your account is sharing resources with</p> </li> <li> <p> <b> <code>OTHER-ACCOUNTS</code> </b> – principals that are sharing resources with your account</p> </li> </ul>
+     */
+    resourceOwner: ListPrincipalsRequestBodyResourceOwnerEnum;
+    /**
+     * Specifies that you want to list information for only principals associated with the resource shares specified by a list the <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a>.
+     */
+    resourceShareArns?: string[];
+    /**
+     * <p>Specifies that you want to list information for only principals associated with resource shares that include the specified resource type.</p> <p>For a list of valid values, query the <a>ListResourceTypes</a> operation.</p>
+     */
+    resourceType?: string;
+}
+export declare class ListPrincipalsRequest extends SpeakeasyBase {
+    requestBody: ListPrincipalsRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,33 +47,45 @@ export declare class ListPrincipalsHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare enum ListPrincipalsRequestBodyResourceOwnerEnum {
-    Self = "SELF",
-    OtherAccounts = "OTHER-ACCOUNTS"
-}
-export declare class ListPrincipalsRequestBody extends SpeakeasyBase {
-    maxResults?: number;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    principals?: string[];
-    resourceArn?: string;
-    resourceOwner: ListPrincipalsRequestBodyResourceOwnerEnum;
-    resourceShareArns?: string[];
-    resourceType?: string;
-}
-export declare class ListPrincipalsRequest extends SpeakeasyBase {
-    queryParams: ListPrincipalsQueryParams;
-    headers: ListPrincipalsHeaders;
-    request: ListPrincipalsRequestBody;
 }
 export declare class ListPrincipalsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * Success
+     */
     listPrincipalsResponse?: shared.ListPrincipalsResponse;
+    /**
+     * MalformedArnException
+     */
     malformedArnException?: any;
-    serverInternalException?: any;
-    serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServerInternalException
+     */
+    serverInternalException?: any;
+    /**
+     * ServiceUnavailableException
+     */
+    serviceUnavailableException?: any;
+    /**
+     * UnknownResourceException
+     */
     unknownResourceException?: any;
 }

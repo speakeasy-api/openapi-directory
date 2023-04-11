@@ -1,14 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetSDKKeysPathParams extends SpeakeasyBase {
-    configId: string;
-    environmentId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetSDKKeysRequest extends SpeakeasyBase {
-    pathParams: GetSDKKeysPathParams;
+    /**
+     * The identifier of the Config.
+     */
+    configId: string;
+    /**
+     * The identifier of the Environment.
+     */
+    environmentId: string;
 }
 export declare class GetSDKKeysResponse extends SpeakeasyBase {
     contentType: string;
     sdkKeysModel?: shared.SDKKeysModel;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

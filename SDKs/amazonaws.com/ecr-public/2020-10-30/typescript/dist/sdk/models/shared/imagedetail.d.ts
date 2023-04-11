@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
- * An object that describes an image returned by a <a>DescribeImages</a> operation.
-**/
+ * An object that describes an image that's returned by a <a>DescribeImages</a> operation.
+ */
 export declare class ImageDetail extends SpeakeasyBase {
     artifactMediaType?: string;
     imageDigest?: string;

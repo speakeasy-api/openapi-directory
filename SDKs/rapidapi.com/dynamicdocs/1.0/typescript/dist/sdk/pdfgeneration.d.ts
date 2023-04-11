@@ -1,6 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class PdfGeneration {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+export declare class PDFGeneration {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,9 +9,10 @@ export declare class PdfGeneration {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * compile - Compile New Document PDF
+     * Compile New Document PDF
      *
+     * @remarks
      * Compile a PDF document from a specific template
-    **/
+     */
     compile(req: operations.CompileRequest, config?: AxiosRequestConfig): Promise<operations.CompileResponse>;
 }

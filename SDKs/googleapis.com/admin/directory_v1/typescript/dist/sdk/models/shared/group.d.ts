@@ -1,0 +1,46 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Google Groups provide your users the ability to send messages to groups of people using the group's email address. For more information about common tasks, see the [Developer's Guide](https://developers.google.com/admin-sdk/directory/v1/guides/manage-groups). For information about other types of groups, see the [Cloud Identity Groups API documentation](https://cloud.google.com/identity/docs/groups). Note: The user calling the API (or being impersonated by a service account) must have an assigned [role](https://developers.google.com/admin-sdk/directory/v1/guides/manage-roles) that includes Admin API Groups permissions, such as Super Admin or Groups Admin.
+ */
+export declare class Group extends SpeakeasyBase {
+    /**
+     * Read-only. Value is `true` if this group was created by an administrator rather than a user.
+     */
+    adminCreated?: boolean;
+    /**
+     * Read-only. The list of a group's alias email addresses. To add, update, or remove a group's aliases, use the `groups.aliases` methods. If edited in a group's POST or PUT request, the edit is ignored.
+     */
+    aliases?: string[];
+    /**
+     * An extended description to help users determine the purpose of a group. For example, you can include information about who should join the group, the types of messages to send to the group, links to FAQs about the group, or related groups. Maximum length is `4,096` characters.
+     */
+    description?: string;
+    /**
+     * The number of users that are direct members of the group. If a group is a member (child) of this group (the parent), members of the child group are not counted in the `directMembersCount` property of the parent group.
+     */
+    directMembersCount?: string;
+    /**
+     * The group's email address. If your account has multiple domains, select the appropriate domain for the email address. The `email` must be unique. This property is required when creating a group. Group email addresses are subject to the same character usage rules as usernames, see the [help center](https://support.google.com/a/answer/9193374) for details.
+     */
+    email?: string;
+    /**
+     * ETag of the resource.
+     */
+    etag?: string;
+    /**
+     * Read-only. The unique ID of a group. A group `id` can be used as a group request URI's `groupKey`.
+     */
+    id?: string;
+    /**
+     * The type of the API resource. For Groups resources, the value is `admin#directory#group`.
+     */
+    kind?: string;
+    /**
+     * The group's display name.
+     */
+    name?: string;
+    /**
+     * Read-only. The list of the group's non-editable alias email addresses that are outside of the account's primary domain or subdomains. These are functioning email addresses used by the group. This is a read-only property returned in the API's response for a group. If edited in a group's POST or PUT request, the edit is ignored.
+     */
+    nonEditableAliases?: string[];
+}

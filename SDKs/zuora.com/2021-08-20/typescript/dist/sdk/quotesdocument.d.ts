@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class QuotesDocument {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class QuotesDocument {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * postQuotesDocument - Generate a quote document
+     * Generate a quote document
      *
+     * @remarks
      * The `document` call generates a quote document and returns the generated document URL. You can directly access the generated quote file through the returned URL.
      *
      * The `document` call should be only used from Zuora Quotes.
@@ -23,6 +24,6 @@ export declare class QuotesDocument {
      *
      * We can work with you to determine if large file optimization is an option for you.
      *
-    **/
-    postQuotesDocument(req: operations.PostQuotesDocumentRequest, config?: AxiosRequestConfig): Promise<operations.PostQuotesDocumentResponse>;
+     */
+    postQuotesDocument(req: operations.POSTQuotesDocumentRequest, config?: AxiosRequestConfig): Promise<operations.POSTQuotesDocumentResponse>;
 }

@@ -1,8 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Type of email address
+ */
 export declare enum DependentEditRequestPersonContactEmailAddressTypeEnum {
     Home = "home",
     Work = "work"
 }
+/**
+ * Preferred method of contact for the person
+ */
 export declare enum DependentEditRequestPersonContactPreferredMethodEnum {
     Email = "email",
     HomePhone = "home-phone",
@@ -12,16 +18,40 @@ export declare enum DependentEditRequestPersonContactPreferredMethodEnum {
 }
 /**
  * Contact information for the person
-**/
+ */
 export declare class DependentEditRequestPersonContact extends SpeakeasyBase {
+    /**
+     * Email address of the person
+     */
     emailAddress?: string;
+    /**
+     * Type of email address
+     */
     emailAddressType?: DependentEditRequestPersonContactEmailAddressTypeEnum;
+    /**
+     * Home phone number in E.164 format
+     */
     homePhone?: string;
+    /**
+     * Preferred written or spoken language of the person
+     */
     preferredLanguage?: string;
+    /**
+     * Preferred method of contact for the person
+     */
     preferredMethod?: DependentEditRequestPersonContactPreferredMethodEnum;
+    /**
+     * True if the person can speak or communicate in English
+     */
     speaksEnglish?: boolean;
+    /**
+     * Work phone number in E.164 format
+     */
     workPhone?: string;
 }
+/**
+ * Primary state of the federally-recognized American Indian or Alaska Native tribe, if applicable
+ */
 export declare enum DependentEditRequestPersonDetailsAmericanIndianStateEnum {
     Ak = "AK",
     Al = "AL",
@@ -86,19 +116,37 @@ export declare enum DependentEditRequestPersonDetailsAmericanIndianStateEnum {
 }
 /**
  * American Indian status details (if applicable)
-**/
+ */
 export declare class DependentEditRequestPersonDetailsAmericanIndian extends SpeakeasyBase {
+    /**
+     * Primary state of the federally-recognized American Indian or Alaska Native tribe, if applicable
+     */
     state?: DependentEditRequestPersonDetailsAmericanIndianStateEnum;
+    /**
+     * Name of the federally-recognized American Indian or Alaska Native tribe, if applicable
+     */
     tribe?: string;
 }
 /**
  * Disability details (if applicable)
-**/
+ */
 export declare class DependentEditRequestPersonDetailsDisability extends SpeakeasyBase {
+    /**
+     * True if the disability impacts the ability to communicate or read
+     */
     communication?: boolean;
+    /**
+     * True if the member has a disability
+     */
     disabled?: boolean;
+    /**
+     * Description of the disability
+     */
     reason?: string;
 }
+/**
+ * Type of tobacco use
+ */
 export declare enum DependentEditRequestPersonDetailsTobaccoTypesEnum {
     ChewingTobacco = "chewing-tobacco",
     Cigarettes = "cigarettes",
@@ -106,23 +154,53 @@ export declare enum DependentEditRequestPersonDetailsTobaccoTypesEnum {
 }
 /**
  * Tobacco usage details (if applicable)
-**/
+ */
 export declare class DependentEditRequestPersonDetailsTobacco extends SpeakeasyBase {
+    /**
+     * Duration of tobacco use
+     */
     duration?: string;
+    /**
+     * Frequency of tobacco use
+     */
     frequency?: string;
+    /**
+     * List of types of tobacco use
+     */
     types?: DependentEditRequestPersonDetailsTobaccoTypesEnum[];
+    /**
+     * True if the person uses tobacco of any kind
+     */
     user?: boolean;
 }
 /**
  * Additional personal details of the person
-**/
+ */
 export declare class DependentEditRequestPersonDetails extends SpeakeasyBase {
+    /**
+     * American Indian status details (if applicable)
+     */
     americanIndian?: DependentEditRequestPersonDetailsAmericanIndian;
+    /**
+     * Disability details (if applicable)
+     */
     disability?: DependentEditRequestPersonDetailsDisability;
+    /**
+     * True if the person is in the military
+     */
     isMilitary?: boolean;
+    /**
+     * True if the person is a student
+     */
     isStudent?: boolean;
+    /**
+     * Tobacco usage details (if applicable)
+     */
     tobacco?: DependentEditRequestPersonDetailsTobacco;
 }
+/**
+ * State postal code of the address
+ */
 export declare enum DependentEditRequestPersonHomeAddressStateEnum {
     Ak = "AK",
     Al = "AL",
@@ -187,15 +265,36 @@ export declare enum DependentEditRequestPersonHomeAddressStateEnum {
 }
 /**
  * Home address of the person
-**/
+ */
 export declare class DependentEditRequestPersonHomeAddress extends SpeakeasyBase {
+    /**
+     * City of the address
+     */
     city: string;
+    /**
+     * County of the address
+     */
     county?: string;
+    /**
+     * State postal code of the address
+     */
     state: DependentEditRequestPersonHomeAddressStateEnum;
+    /**
+     * Line one of the address
+     */
     streetOne: string;
+    /**
+     * Line two of the address
+     */
     streetTwo?: string;
+    /**
+     * Zip code of the address
+     */
     zipCode: string;
 }
+/**
+ * State postal code of the address
+ */
 export declare enum DependentEditRequestPersonMailingAddressStateEnum {
     Ak = "AK",
     Al = "AL",
@@ -260,15 +359,36 @@ export declare enum DependentEditRequestPersonMailingAddressStateEnum {
 }
 /**
  * Mailing address for the person
-**/
+ */
 export declare class DependentEditRequestPersonMailingAddress extends SpeakeasyBase {
+    /**
+     * City of the address
+     */
     city: string;
+    /**
+     * County of the address
+     */
     county?: string;
+    /**
+     * State postal code of the address
+     */
     state: DependentEditRequestPersonMailingAddressStateEnum;
+    /**
+     * Line one of the address
+     */
     streetOne: string;
+    /**
+     * Line two of the address
+     */
     streetTwo?: string;
+    /**
+     * Zip code of the address
+     */
     zipCode: string;
 }
+/**
+ * Marital status of the person
+ */
 export declare enum DependentEditRequestPersonMaritalStatusEnum {
     Divorced = "divorced",
     DomesticPartner = "domestic-partner",
@@ -277,6 +397,9 @@ export declare enum DependentEditRequestPersonMaritalStatusEnum {
     Single = "single",
     Widowed = "widowed"
 }
+/**
+ * Sex of the person
+ */
 export declare enum DependentEditRequestPersonSexEnum {
     F = "F",
     M = "M",
@@ -285,21 +408,60 @@ export declare enum DependentEditRequestPersonSexEnum {
 }
 /**
  * Personal information for the dependent
-**/
+ */
 export declare class DependentEditRequestPerson extends SpeakeasyBase {
+    /**
+     * Contact information for the person
+     */
     contact?: DependentEditRequestPersonContact;
+    /**
+     * ISO-8601 date string for the date of birth of the person
+     */
     dateOfBirth?: Date;
+    /**
+     * Additional personal details of the person
+     */
     details?: DependentEditRequestPersonDetails;
+    /**
+     * First name of the person
+     */
     firstName?: string;
+    /**
+     * Home address of the person
+     */
     homeAddress?: DependentEditRequestPersonHomeAddress;
+    /**
+     * Last name of the person
+     */
     lastName?: string;
+    /**
+     * Mailing address for the person
+     */
     mailingAddress?: DependentEditRequestPersonMailingAddress;
+    /**
+     * Marital status of the person
+     */
     maritalStatus?: DependentEditRequestPersonMaritalStatusEnum;
+    /**
+     * Middle name of the person
+     */
     middleName?: string;
+    /**
+     * Sex of the person
+     */
     sex?: DependentEditRequestPersonSexEnum;
+    /**
+     * Social Security Number of the person
+     */
     ssn?: string;
+    /**
+     * Suffix of the person
+     */
     suffix?: string;
 }
+/**
+ * Relationship of the dependent to the employee
+ */
 export declare enum DependentEditRequestRelationshipEnum {
     AdoptedChild = "adopted-child",
     Child = "child",
@@ -314,6 +476,12 @@ export declare enum DependentEditRequestRelationshipEnum {
     StepChild = "step-child"
 }
 export declare class DependentEditRequest extends SpeakeasyBase {
+    /**
+     * Personal information for the dependent
+     */
     person?: DependentEditRequestPerson;
+    /**
+     * Relationship of the dependent to the employee
+     */
     relationship?: DependentEditRequestRelationshipEnum;
 }

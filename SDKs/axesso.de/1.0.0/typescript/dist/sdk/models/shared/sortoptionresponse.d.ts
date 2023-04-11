@@ -4,6 +4,9 @@ export declare class SortOptionResponseSortOptions extends SpeakeasyBase {
     sortName?: string;
     strategy?: string;
 }
+/**
+ * successful operation
+ */
 export declare class SortOptionResponse extends SpeakeasyBase {
     responseMessage?: string;
     responseStatus?: string;

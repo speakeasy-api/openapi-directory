@@ -1,19 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class RemoveVideoFromAlbumPathParams extends SpeakeasyBase {
-    albumId: number;
-    userId: number;
-    videoId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class RemoveVideoFromAlbumSecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
+    oauth2: string;
 }
 export declare class RemoveVideoFromAlbumRequest extends SpeakeasyBase {
-    pathParams: RemoveVideoFromAlbumPathParams;
-    security: RemoveVideoFromAlbumSecurity;
+    /**
+     * The ID of the album.
+     */
+    albumId: number;
+    /**
+     * The ID of the user.
+     */
+    userId: number;
+    /**
+     * The ID of the video.
+     */
+    videoId: number;
 }
 export declare class RemoveVideoFromAlbumResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The supplied token doesn't have the proper scopes, or the authenticated user can't edit the album.
+     */
     legacyError?: shared.LegacyError;
 }

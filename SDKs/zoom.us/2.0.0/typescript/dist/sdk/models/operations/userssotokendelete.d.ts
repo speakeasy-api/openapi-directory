@@ -1,16 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class UserSsoTokenDeletePathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class UserSSOTokenDeleteSecurity extends SpeakeasyBase {
+    oAuth: string;
+}
+export declare class UserSSOTokenDeleteRequest extends SpeakeasyBase {
+    /**
+     * The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+     */
     userId: string;
 }
-export declare class UserSsoTokenDeleteSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
-}
-export declare class UserSsoTokenDeleteRequest extends SpeakeasyBase {
-    pathParams: UserSsoTokenDeletePathParams;
-    security: UserSsoTokenDeleteSecurity;
-}
-export declare class UserSsoTokenDeleteResponse extends SpeakeasyBase {
+export declare class UserSSOTokenDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

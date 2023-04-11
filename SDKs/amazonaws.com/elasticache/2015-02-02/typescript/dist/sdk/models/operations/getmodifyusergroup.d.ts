@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetModifyUserGroupActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETModifyUserGroupActionEnum {
     ModifyUserGroup = "ModifyUserGroup"
 }
-export declare enum GetModifyUserGroupVersionEnum {
+export declare enum GETModifyUserGroupVersionEnum {
     TwoThousandAndFifteen0202 = "2015-02-02"
 }
-export declare class GetModifyUserGroupQueryParams extends SpeakeasyBase {
-    action: GetModifyUserGroupActionEnum;
+export declare class GETModifyUserGroupRequest extends SpeakeasyBase {
+    action: GETModifyUserGroupActionEnum;
+    /**
+     * The ID of the user group.
+     */
     userGroupId: string;
+    /**
+     * The list of user IDs to add to the user group.
+     */
     userIdsToAdd?: string[];
+    /**
+     * The list of user IDs to remove from the user group.
+     */
     userIdsToRemove?: string[];
-    version: GetModifyUserGroupVersionEnum;
-}
-export declare class GetModifyUserGroupHeaders extends SpeakeasyBase {
+    version: GETModifyUserGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +29,9 @@ export declare class GetModifyUserGroupHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetModifyUserGroupRequest extends SpeakeasyBase {
-    queryParams: GetModifyUserGroupQueryParams;
-    headers: GetModifyUserGroupHeaders;
-}
-export declare class GetModifyUserGroupResponse extends SpeakeasyBase {
+export declare class GETModifyUserGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

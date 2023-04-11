@@ -1,0 +1,8 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Information about the tag keys to register for the current Region. You can either specify individual tag keys or register all tag keys in the current Region. You must specify either <code>IncludeAllTagsOfInstance</code> or <code>InstanceTagKeys</code> in the request
+ */
+export declare class RegisterInstanceTagAttributeRequest extends SpeakeasyBase {
+    includeAllTagsOfInstance?: boolean;
+    instanceTagKeys?: string[];
+}

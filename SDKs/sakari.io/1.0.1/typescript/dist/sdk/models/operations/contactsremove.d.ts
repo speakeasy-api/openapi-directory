@@ -1,21 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class ContactsRemovePathParams extends SpeakeasyBase {
-    accountId: string;
-    contactId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ContactsRemoveSecurity extends SpeakeasyBase {
-    sakariAuth: shared.SchemeSakariAuth;
-}
-export declare class ContactsRemove200ApplicationJson extends SpeakeasyBase {
-    success?: boolean;
+    sakariAuth: string;
 }
 export declare class ContactsRemoveRequest extends SpeakeasyBase {
-    pathParams: ContactsRemovePathParams;
-    security: ContactsRemoveSecurity;
+    /**
+     * Account to apply operations to
+     */
+    accountId: string;
+    /**
+     * Contact id to delete
+     */
+    contactId: string;
+}
+/**
+ * successful operation
+ */
+export declare class ContactsRemove200ApplicationJSON extends SpeakeasyBase {
+    success?: boolean;
 }
 export declare class ContactsRemoveResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    contactsRemove200ApplicationJSONObject?: ContactsRemove200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
+    contactsRemove200ApplicationJSONObject?: ContactsRemove200ApplicationJSON;
 }

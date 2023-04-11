@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetAddressBalancePathParams extends SpeakeasyBase {
-    address: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetAddressBalanceRequest extends SpeakeasyBase {
-    pathParams: GetAddressBalancePathParams;
+    /**
+     * Address
+     */
+    address: string;
 }
 export declare class GetAddressBalanceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Address balance
+     */
     getAddressBalanceResponse?: number;
 }

@@ -1,20 +1,34 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetAlbumVideoPathParams extends SpeakeasyBase {
-    albumId: number;
-    userId: number;
-    videoId: number;
-}
-export declare class GetAlbumVideoQueryParams extends SpeakeasyBase {
-    password?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetAlbumVideoRequest extends SpeakeasyBase {
-    pathParams: GetAlbumVideoPathParams;
-    queryParams: GetAlbumVideoQueryParams;
+    /**
+     * The ID of the album.
+     */
+    albumId: number;
+    /**
+     * The password of the album.
+     */
+    password?: string;
+    /**
+     * The ID of the user.
+     */
+    userId: number;
+    /**
+     * The ID of the video.
+     */
+    videoId: number;
 }
 export declare class GetAlbumVideoResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * No such album exists, or the video wasn't found in it.
+     */
     legacyError?: shared.LegacyError;
+    /**
+     * The video was returned.
+     */
     video?: shared.Video;
 }

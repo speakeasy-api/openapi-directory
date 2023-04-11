@@ -1,20 +1,16 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { PostCloseAccountHolderRequest, PostCloseAccountHolderResponse } from "openapi/src/sdk/models/operations";
+import {
+  shared.CloseAccountHolderRequest,
+  PostCloseAccountHolderResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: PostCloseAccountHolderRequest = {
-  security: {
-    basicAuth: {
-      password: "YOUR_PASSWORD_HERE",
-      username: "YOUR_USERNAME_HERE",
-    },
-  },
-  request: "sit",
+
+const req: shared.CloseAccountHolderRequest = {
+  accountHolderCode: "corrupti",
 };
 
 sdk.accountHolders.postCloseAccountHolder(req).then((res: PostCloseAccountHolderResponse | AxiosError) => {

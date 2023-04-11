@@ -1,9 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreateBackendConfigPathParams extends SpeakeasyBase {
-    appId: string;
+import { AxiosResponse } from "axios";
+export declare class CreateBackendConfigRequestBody extends SpeakeasyBase {
+    /**
+     * The app ID for the backend manager.
+     */
+    backendManagerAppId?: string;
 }
-export declare class CreateBackendConfigHeaders extends SpeakeasyBase {
+export declare class CreateBackendConfigRequest extends SpeakeasyBase {
+    requestBody: CreateBackendConfigRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,21 +16,33 @@ export declare class CreateBackendConfigHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class CreateBackendConfigRequestBody extends SpeakeasyBase {
-    backendManagerAppId?: string;
-}
-export declare class CreateBackendConfigRequest extends SpeakeasyBase {
-    pathParams: CreateBackendConfigPathParams;
-    headers: CreateBackendConfigHeaders;
-    request: CreateBackendConfigRequestBody;
+    /**
+     * The app ID.
+     */
+    appId: string;
 }
 export declare class CreateBackendConfigResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     createBackendConfigResponse?: shared.CreateBackendConfigResponse;
+    /**
+     * GatewayTimeoutException
+     */
     gatewayTimeoutException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

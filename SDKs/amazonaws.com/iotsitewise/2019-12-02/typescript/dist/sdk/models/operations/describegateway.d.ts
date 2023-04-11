@@ -1,9 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeGatewayPathParams extends SpeakeasyBase {
-    gatewayId: string;
-}
-export declare class DescribeGatewayHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DescribeGatewayRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,17 +9,33 @@ export declare class DescribeGatewayHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DescribeGatewayRequest extends SpeakeasyBase {
-    pathParams: DescribeGatewayPathParams;
-    headers: DescribeGatewayHeaders;
+    /**
+     * The ID of the gateway device.
+     */
+    gatewayId: string;
 }
 export declare class DescribeGatewayResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeGatewayResponse?: shared.DescribeGatewayResponse;
+    /**
+     * InternalFailureException
+     */
     internalFailureException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

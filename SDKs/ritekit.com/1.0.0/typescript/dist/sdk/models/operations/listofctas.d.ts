@@ -1,5 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ListOfCtAsResponse extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListOfCTAsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

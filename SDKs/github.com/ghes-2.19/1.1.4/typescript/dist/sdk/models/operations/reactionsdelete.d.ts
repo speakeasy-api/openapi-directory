@@ -1,15 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ReactionsDeletePathParams extends SpeakeasyBase {
-    reactionId: number;
-}
-export declare class ReactionsDeleteHeaders extends SpeakeasyBase {
-    accept: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ReactionsDeleteRequest extends SpeakeasyBase {
-    pathParams: ReactionsDeletePathParams;
-    headers: ReactionsDeleteHeaders;
+    /**
+     * This API is under preview and subject to change.
+     */
+    accept: string;
+    reactionId: number;
 }
 export declare class ReactionsDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

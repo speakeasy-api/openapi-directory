@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDetachUserPolicyActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDetachUserPolicyActionEnum {
     DetachUserPolicy = "DetachUserPolicy"
 }
-export declare enum PostDetachUserPolicyVersionEnum {
+export declare enum POSTDetachUserPolicyVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostDetachUserPolicyQueryParams extends SpeakeasyBase {
-    action: PostDetachUserPolicyActionEnum;
-    version: PostDetachUserPolicyVersionEnum;
-}
-export declare class PostDetachUserPolicyHeaders extends SpeakeasyBase {
+export declare class POSTDetachUserPolicyRequest extends SpeakeasyBase {
+    action: POSTDetachUserPolicyActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDetachUserPolicyVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDetachUserPolicyHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDetachUserPolicyRequest extends SpeakeasyBase {
-    queryParams: PostDetachUserPolicyQueryParams;
-    headers: PostDetachUserPolicyHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDetachUserPolicyResponse extends SpeakeasyBase {
+export declare class POSTDetachUserPolicyResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

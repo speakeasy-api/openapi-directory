@@ -1,17 +1,17 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetaddressmatchRequest, GetaddressmatchResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetaddressmatchRequest,
+  GetaddressmatchResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetaddressmatchRequest = {
-  queryParams: {
-    address: "sit",
-    license: "voluptas",
-  },
+  address: "5786 Little Streets",
+  license: "vel",
 };
 
 sdk.streetAddressSimilarityKey.getaddressmatch(req).then((res: GetaddressmatchResponse | AxiosError) => {

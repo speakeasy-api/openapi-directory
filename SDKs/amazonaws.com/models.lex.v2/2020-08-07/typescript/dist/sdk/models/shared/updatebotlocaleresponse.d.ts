@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { BotLocaleStatusEnum } from "./botlocalestatusenum";
 import { VoiceSettings } from "./voicesettings";
+/**
+ * Success
+ */
 export declare class UpdateBotLocaleResponse extends SpeakeasyBase {
     botId?: string;
     botLocaleStatus?: BotLocaleStatusEnum;
@@ -12,5 +15,6 @@ export declare class UpdateBotLocaleResponse extends SpeakeasyBase {
     localeId?: string;
     localeName?: string;
     nluIntentConfidenceThreshold?: number;
+    recommendedActions?: string[];
     voiceSettings?: VoiceSettings;
 }

@@ -1,45 +1,39 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { YoutubereportingJobsCreateRequest, YoutubereportingJobsCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  YoutubereportingJobsCreateRequest,
+  YoutubereportingJobsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: YoutubereportingJobsCreateRequest = {
-  security: {
-    option1: {
-      oauth2: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-      oauth2c: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-    },
+  dollarXgafv: XgafvEnum.Two,
+  job: {
+    createTime: "provident",
+    expireTime: "distinctio",
+    id: "quibusdam",
+    name: "unde",
+    reportTypeId: "nulla",
+    systemManaged: false,
   },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "voluptas",
-    alt: "media",
-    callback: "expedita",
-    fields: "consequuntur",
-    key: "dolor",
-    oauthToken: "expedita",
-    onBehalfOfContentOwner: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
-    createTime: "dicta",
-    expireTime: "debitis",
-    id: "voluptatum",
-    name: "et",
-    reportTypeId: "ut",
-    systemManaged: true,
-  },
+  accessToken: "corrupti",
+  alt: AltEnum.Proto,
+  callback: "vel",
+  fields: "error",
+  key: "deserunt",
+  oauthToken: "suscipit",
+  onBehalfOfContentOwner: "iure",
+  prettyPrint: false,
+  quotaUser: "magnam",
+  uploadType: "debitis",
+  uploadProtocol: "ipsa",
 };
 
 sdk.jobs.youtubereportingJobsCreate(req).then((res: YoutubereportingJobsCreateResponse | AxiosError) => {

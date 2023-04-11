@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbClusterRoles } from "./dbclusterroles";
-import { DbClusterMemberList } from "./dbclustermemberlist";
-import { DbClusterOptionGroupMemberships } from "./dbclusteroptiongroupmemberships";
+import { ClusterPendingModifiedValues } from "./clusterpendingmodifiedvalues";
+import { DBClusterMemberList } from "./dbclustermemberlist";
+import { DBClusterOptionGroupMemberships } from "./dbclusteroptiongroupmemberships";
+import { DBClusterRoles } from "./dbclusterroles";
+import { ServerlessV2ScalingConfigurationInfo } from "./serverlessv2scalingconfigurationinfo";
 import { VpcSecurityGroupMembershipList } from "./vpcsecuritygroupmembershiplist";
 /**
  * <p>Contains the details of an Amazon Neptune DB cluster.</p> <p>This data type is used as a response element in the <a>DescribeDBClusters</a> action.</p>
-**/
-export declare class DbClusterList extends SpeakeasyBase {
+ */
+export declare class DBClusterList extends SpeakeasyBase {
     allocatedStorage?: number;
-    associatedRoles?: DbClusterRoles[];
+    associatedRoles?: DBClusterRoles[];
     automaticRestartTime?: Date;
-    availabilityZones?: Record<string, any>[];
+    availabilityZones?: string[];
     backupRetentionPeriod?: number;
     characterSetName?: string;
     cloneGroupId?: string;
@@ -19,8 +21,8 @@ export declare class DbClusterList extends SpeakeasyBase {
     crossAccountClone?: boolean;
     dbClusterArn?: string;
     dbClusterIdentifier?: string;
-    dbClusterMembers?: DbClusterMemberList[];
-    dbClusterOptionGroupMemberships?: DbClusterOptionGroupMemberships[];
+    dbClusterMembers?: DBClusterMemberList[];
+    dbClusterOptionGroupMemberships?: DBClusterOptionGroupMemberships[];
     dbClusterParameterGroup?: string;
     dbSubnetGroup?: string;
     databaseName?: string;
@@ -31,19 +33,25 @@ export declare class DbClusterList extends SpeakeasyBase {
     endpoint?: string;
     engine?: string;
     engineVersion?: string;
+    globalClusterIdentifier?: string;
     hostedZoneId?: string;
     iamDatabaseAuthenticationEnabled?: boolean;
     kmsKeyId?: string;
     latestRestorableTime?: Date;
     masterUsername?: string;
     multiAZ?: boolean;
+    pendingModifiedValues?: ClusterPendingModifiedValues;
     percentProgress?: string;
     port?: number;
     preferredBackupWindow?: string;
     preferredMaintenanceWindow?: string;
-    readReplicaIdentifiers?: Record<string, any>[];
+    readReplicaIdentifiers?: string[];
     readerEndpoint?: string;
     replicationSourceIdentifier?: string;
+    /**
+     * <p>Shows the scaling configuration for a Neptune Serverless DB cluster.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/neptune/latest/userguide/neptune-serverless-using.html">Using Amazon Neptune Serverless</a> in the <i>Amazon Neptune User Guide</i>.</p>
+     */
+    serverlessV2ScalingConfiguration?: ServerlessV2ScalingConfigurationInfo;
     status?: string;
     storageEncrypted?: boolean;
     vpcSecurityGroups?: VpcSecurityGroupMembershipList[];

@@ -1,21 +1,20 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetAccountsRequest, GetAccountsResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GetAccountsRequest,
+  GetAccountsResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    cookieAuth: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: GetAccountsRequest = {
-  queryParams: {
-    account: "sit",
+    cookieAuth: "YOUR_API_KEY_HERE",
   },
+});
+
+const req: GetAccountsRequest = {
+  account: "corrupti",
 };
 
 sdk.accountAndPortfolio.getAccounts(req).then((res: GetAccountsResponse | AxiosError) => {

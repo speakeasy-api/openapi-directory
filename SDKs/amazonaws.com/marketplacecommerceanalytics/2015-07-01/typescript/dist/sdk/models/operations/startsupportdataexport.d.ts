@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum StartSupportDataExportXAmzTargetEnum {
     MarketplaceCommerceAnalytics20150701StartSupportDataExport = "MarketplaceCommerceAnalytics20150701.StartSupportDataExport"
 }
-export declare class StartSupportDataExportHeaders extends SpeakeasyBase {
+export declare class StartSupportDataExportRequest extends SpeakeasyBase {
+    startSupportDataExportRequest: shared.StartSupportDataExportRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,13 +15,16 @@ export declare class StartSupportDataExportHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: StartSupportDataExportXAmzTargetEnum;
 }
-export declare class StartSupportDataExportRequest extends SpeakeasyBase {
-    headers: StartSupportDataExportHeaders;
-    request: shared.StartSupportDataExportRequest;
-}
 export declare class StartSupportDataExportResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * MarketplaceCommerceAnalyticsException
+     */
     marketplaceCommerceAnalyticsException?: any;
+    /**
+     * Success
+     */
     startSupportDataExportResult?: shared.StartSupportDataExportResult;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

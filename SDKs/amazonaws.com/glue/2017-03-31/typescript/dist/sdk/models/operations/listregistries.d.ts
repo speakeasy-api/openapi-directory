@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListRegistriesQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListRegistriesXAmzTargetEnum {
-    AwsGlueListRegistries = "AWSGlue.ListRegistries"
+    AWSGlueListRegistries = "AWSGlue.ListRegistries"
 }
-export declare class ListRegistriesHeaders extends SpeakeasyBase {
+export declare class ListRegistriesRequest extends SpeakeasyBase {
+    listRegistriesInput: shared.ListRegistriesInput;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,16 +23,24 @@ export declare class ListRegistriesHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListRegistriesXAmzTargetEnum;
 }
-export declare class ListRegistriesRequest extends SpeakeasyBase {
-    queryParams: ListRegistriesQueryParams;
-    headers: ListRegistriesHeaders;
-    request: shared.ListRegistriesInput;
-}
 export declare class ListRegistriesResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * Success
+     */
     listRegistriesResponse?: shared.ListRegistriesResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

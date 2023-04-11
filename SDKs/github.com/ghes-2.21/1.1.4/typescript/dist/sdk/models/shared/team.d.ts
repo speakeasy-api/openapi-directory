@@ -1,24 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-/**
- * Groups of organization members that gives permissions on specified repositories.
-**/
-export declare class TeamTeamSimple extends SpeakeasyBase {
-    description: string;
-    htmlUrl: string;
-    id: number;
-    ldapDn?: string;
-    membersUrl: string;
-    name: string;
-    nodeId: string;
-    permission: string;
-    privacy?: string;
-    repositoriesUrl: string;
-    slug: string;
-    url: string;
+import { NullableTeamSimple } from "./nullableteamsimple";
+export declare class TeamPermissions extends SpeakeasyBase {
+    admin: boolean;
+    maintain: boolean;
+    pull: boolean;
+    push: boolean;
+    triage: boolean;
 }
 /**
  * Groups of organization members that gives permissions on specified repositories.
-**/
+ */
 export declare class Team extends SpeakeasyBase {
     description: string;
     htmlUrl: string;
@@ -26,8 +17,12 @@ export declare class Team extends SpeakeasyBase {
     membersUrl: string;
     name: string;
     nodeId: string;
-    parent?: TeamTeamSimple;
+    /**
+     * Groups of organization members that gives permissions on specified repositories.
+     */
+    parent: NullableTeamSimple;
     permission: string;
+    permissions?: TeamPermissions;
     privacy?: string;
     repositoriesUrl: string;
     slug: string;

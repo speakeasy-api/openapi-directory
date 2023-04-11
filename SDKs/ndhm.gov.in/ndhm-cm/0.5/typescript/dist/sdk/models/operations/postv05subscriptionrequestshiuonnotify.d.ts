@@ -1,15 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PostV05SubscriptionRequestsHiuOnNotifyHeaders extends SpeakeasyBase {
-    authorization: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PostV05SubscriptionRequestsHiuOnNotifyRequest extends SpeakeasyBase {
-    headers: PostV05SubscriptionRequestsHiuOnNotifyHeaders;
-    request: shared.HiuSubscriptionRequestNotificationAcknowledgement;
+    /**
+     * Access token which was issued after successful login with gateway auth server.
+     */
+    authorization: string;
+    hiuSubscriptionRequestNotificationAcknowledgement: shared.HIUSubscriptionRequestNotificationAcknowledgement;
 }
 export declare class PostV05SubscriptionRequestsHiuOnNotifyResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
+    /**
+     * **Causes:**
+     *
+     * @remarks
+     *   * Invalid/Expired/Empty token.
+     *
+     */
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

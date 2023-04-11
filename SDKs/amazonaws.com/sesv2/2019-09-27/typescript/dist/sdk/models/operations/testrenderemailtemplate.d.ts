@@ -1,9 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class TestRenderEmailTemplatePathParams extends SpeakeasyBase {
-    templateName: string;
+import { AxiosResponse } from "axios";
+export declare class TestRenderEmailTemplateRequestBody extends SpeakeasyBase {
+    /**
+     * An object that defines the values to use for message variables in the template. This object is a set of key-value pairs. Each key defines a message variable in the template. The corresponding value defines the value to use for that variable.
+     */
+    templateData: string;
 }
-export declare class TestRenderEmailTemplateHeaders extends SpeakeasyBase {
+export declare class TestRenderEmailTemplateRequest extends SpeakeasyBase {
+    requestBody: TestRenderEmailTemplateRequestBody;
+    /**
+     * The name of the template.
+     */
+    templateName: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,19 +21,24 @@ export declare class TestRenderEmailTemplateHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class TestRenderEmailTemplateRequestBody extends SpeakeasyBase {
-    templateData: string;
-}
-export declare class TestRenderEmailTemplateRequest extends SpeakeasyBase {
-    pathParams: TestRenderEmailTemplatePathParams;
-    headers: TestRenderEmailTemplateHeaders;
-    request: TestRenderEmailTemplateRequestBody;
-}
 export declare class TestRenderEmailTemplateResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     testRenderEmailTemplateResponse?: shared.TestRenderEmailTemplateResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

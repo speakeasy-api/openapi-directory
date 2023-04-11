@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class ProductRatePlans {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,28 +9,29 @@ export declare class ProductRatePlans {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getProductRatePlans - List all product rate plans of a product
+     * List all product rate plans of a product
      *
+     * @remarks
      * Retrieves information about all product rate plans of a specific product.
      *
      * For a use case of this operation, see [Retrieve the product catalog](https://www.zuora.com/developer/api-guides/#Retrieve-the-product-catalog).
      *
-    **/
-    getProductRatePlans(req: operations.GetProductRatePlansRequest, config?: AxiosRequestConfig): Promise<operations.GetProductRatePlansResponse>;
+     */
+    getProductRatePlans(req: operations.GETProductRatePlansRequest, config?: AxiosRequestConfig): Promise<operations.GETProductRatePlansResponse>;
     /**
-     * objectDeleteProductRatePlan - CRUD: Delete a product rate plan
-    **/
-    objectDeleteProductRatePlan(req: operations.ObjectDeleteProductRatePlanRequest, config?: AxiosRequestConfig): Promise<operations.ObjectDeleteProductRatePlanResponse>;
+     * CRUD: Delete a product rate plan
+     */
+    objectDELETEProductRatePlan(req: operations.ObjectDELETEProductRatePlanRequest, config?: AxiosRequestConfig): Promise<operations.ObjectDELETEProductRatePlanResponse>;
     /**
-     * objectGetProductRatePlan - CRUD: Retrieve a product rate plan
-    **/
-    objectGetProductRatePlan(req: operations.ObjectGetProductRatePlanRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGetProductRatePlanResponse>;
+     * CRUD: Retrieve a product rate plan
+     */
+    objectGETProductRatePlan(req: operations.ObjectGETProductRatePlanRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGETProductRatePlanResponse>;
     /**
-     * objectPostProductRatePlan - CRUD: Create a product rate plan
-    **/
-    objectPostProductRatePlan(req: operations.ObjectPostProductRatePlanRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPostProductRatePlanResponse>;
+     * CRUD: Create a product rate plan
+     */
+    objectPOSTProductRatePlan(req: operations.ObjectPOSTProductRatePlanRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPOSTProductRatePlanResponse>;
     /**
-     * objectPutProductRatePlan - CRUD: Update a product rate plan
-    **/
-    objectPutProductRatePlan(req: operations.ObjectPutProductRatePlanRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPutProductRatePlanResponse>;
+     * CRUD: Update a product rate plan
+     */
+    objectPUTProductRatePlan(req: operations.ObjectPUTProductRatePlanRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPUTProductRatePlanResponse>;
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostBatchModifyClusterSnapshotsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTBatchModifyClusterSnapshotsActionEnum {
     BatchModifyClusterSnapshots = "BatchModifyClusterSnapshots"
 }
-export declare enum PostBatchModifyClusterSnapshotsVersionEnum {
+export declare enum POSTBatchModifyClusterSnapshotsVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostBatchModifyClusterSnapshotsQueryParams extends SpeakeasyBase {
-    action: PostBatchModifyClusterSnapshotsActionEnum;
-    version: PostBatchModifyClusterSnapshotsVersionEnum;
-}
-export declare class PostBatchModifyClusterSnapshotsHeaders extends SpeakeasyBase {
+export declare class POSTBatchModifyClusterSnapshotsRequest extends SpeakeasyBase {
+    action: POSTBatchModifyClusterSnapshotsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTBatchModifyClusterSnapshotsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostBatchModifyClusterSnapshotsHeaders extends SpeakeasyBas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostBatchModifyClusterSnapshotsRequest extends SpeakeasyBase {
-    queryParams: PostBatchModifyClusterSnapshotsQueryParams;
-    headers: PostBatchModifyClusterSnapshotsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostBatchModifyClusterSnapshotsResponse extends SpeakeasyBase {
+export declare class POSTBatchModifyClusterSnapshotsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

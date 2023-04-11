@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetCancelInstanceRefreshActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETCancelInstanceRefreshActionEnum {
     CancelInstanceRefresh = "CancelInstanceRefresh"
 }
-export declare enum GetCancelInstanceRefreshVersionEnum {
+export declare enum GETCancelInstanceRefreshVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class GetCancelInstanceRefreshQueryParams extends SpeakeasyBase {
-    action: GetCancelInstanceRefreshActionEnum;
+export declare class GETCancelInstanceRefreshRequest extends SpeakeasyBase {
+    action: GETCancelInstanceRefreshActionEnum;
+    /**
+     * The name of the Auto Scaling group.
+     */
     autoScalingGroupName: string;
-    version: GetCancelInstanceRefreshVersionEnum;
-}
-export declare class GetCancelInstanceRefreshHeaders extends SpeakeasyBase {
+    version: GETCancelInstanceRefreshVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetCancelInstanceRefreshHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetCancelInstanceRefreshRequest extends SpeakeasyBase {
-    queryParams: GetCancelInstanceRefreshQueryParams;
-    headers: GetCancelInstanceRefreshHeaders;
-}
-export declare class GetCancelInstanceRefreshResponse extends SpeakeasyBase {
+export declare class GETCancelInstanceRefreshResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

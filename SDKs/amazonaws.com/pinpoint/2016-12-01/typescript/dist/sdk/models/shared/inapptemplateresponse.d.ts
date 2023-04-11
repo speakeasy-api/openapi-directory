@@ -4,7 +4,7 @@ import { LayoutEnum } from "./layoutenum";
 import { TemplateTypeEnum } from "./templatetypeenum";
 /**
  * In-App Template Response.
-**/
+ */
 export declare class InAppTemplateResponse extends SpeakeasyBase {
     arn?: string;
     content?: InAppMessageContent[];

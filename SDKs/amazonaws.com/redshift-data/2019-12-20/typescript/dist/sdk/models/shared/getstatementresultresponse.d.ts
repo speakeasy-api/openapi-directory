@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ColumnMetadata } from "./columnmetadata";
 import { Field } from "./field";
+/**
+ * Success
+ */
 export declare class GetStatementResultResponse extends SpeakeasyBase {
     columnMetadata?: ColumnMetadata[];
     nextToken?: string;

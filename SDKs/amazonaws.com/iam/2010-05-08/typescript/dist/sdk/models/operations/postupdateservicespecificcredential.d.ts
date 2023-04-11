@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostUpdateServiceSpecificCredentialActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTUpdateServiceSpecificCredentialActionEnum {
     UpdateServiceSpecificCredential = "UpdateServiceSpecificCredential"
 }
-export declare enum PostUpdateServiceSpecificCredentialVersionEnum {
+export declare enum POSTUpdateServiceSpecificCredentialVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostUpdateServiceSpecificCredentialQueryParams extends SpeakeasyBase {
-    action: PostUpdateServiceSpecificCredentialActionEnum;
-    version: PostUpdateServiceSpecificCredentialVersionEnum;
-}
-export declare class PostUpdateServiceSpecificCredentialHeaders extends SpeakeasyBase {
+export declare class POSTUpdateServiceSpecificCredentialRequest extends SpeakeasyBase {
+    action: POSTUpdateServiceSpecificCredentialActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTUpdateServiceSpecificCredentialVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostUpdateServiceSpecificCredentialHeaders extends Speakeas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostUpdateServiceSpecificCredentialRequest extends SpeakeasyBase {
-    queryParams: PostUpdateServiceSpecificCredentialQueryParams;
-    headers: PostUpdateServiceSpecificCredentialHeaders;
-    request?: Uint8Array;
-}
-export declare class PostUpdateServiceSpecificCredentialResponse extends SpeakeasyBase {
+export declare class POSTUpdateServiceSpecificCredentialResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

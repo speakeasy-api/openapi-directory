@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CreateIpSetRequest extends SpeakeasyBase {
+export declare class CreateIPSetRequest extends SpeakeasyBase {
     changeToken: string;
     name: string;
 }

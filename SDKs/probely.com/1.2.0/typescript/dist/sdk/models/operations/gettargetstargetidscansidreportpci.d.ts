@@ -1,21 +1,44 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetTargetsTargetIdScansIdReportPciPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetTargetsTargetIdScansIdReportPciRequest extends SpeakeasyBase {
+    /**
+     * Object Id
+     */
     id: string;
+    /**
+     * Target id
+     */
     targetId: string;
 }
-export declare class GetTargetsTargetIdScansIdReportPci401ApplicationJson extends SpeakeasyBase {
+/**
+ * Not found
+ */
+export declare class GetTargetsTargetIdScansIdReportPci404ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Not found.
+     */
     detail?: string;
 }
-export declare class GetTargetsTargetIdScansIdReportPci404ApplicationJson extends SpeakeasyBase {
+/**
+ * Access token is missing or invalid
+ */
+export declare class GetTargetsTargetIdScansIdReportPci401ApplicationJSON extends SpeakeasyBase {
     detail?: string;
-}
-export declare class GetTargetsTargetIdScansIdReportPciRequest extends SpeakeasyBase {
-    pathParams: GetTargetsTargetIdScansIdReportPciPathParams;
 }
 export declare class GetTargetsTargetIdScansIdReportPciResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Scan report PDF
+     */
     getTargetsTargetIdScansIdReportPci200ApplicationPdfBinaryString?: Uint8Array;
-    getTargetsTargetIdScansIdReportPci401ApplicationJSONObject?: GetTargetsTargetIdScansIdReportPci401ApplicationJson;
-    getTargetsTargetIdScansIdReportPci404ApplicationJSONObject?: GetTargetsTargetIdScansIdReportPci404ApplicationJson;
+    /**
+     * Access token is missing or invalid
+     */
+    getTargetsTargetIdScansIdReportPci401ApplicationJSONObject?: GetTargetsTargetIdScansIdReportPci401ApplicationJSON;
+    /**
+     * Not found
+     */
+    getTargetsTargetIdScansIdReportPci404ApplicationJSONObject?: GetTargetsTargetIdScansIdReportPci404ApplicationJSON;
 }

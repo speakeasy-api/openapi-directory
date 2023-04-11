@@ -1,29 +1,43 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AppsListInstallationReposForAuthenticatedUserPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class AppsListInstallationReposForAuthenticatedUserRequest extends SpeakeasyBase {
+    /**
+     * This API is under preview and subject to change.
+     */
+    accept: string;
+    /**
+     * installation_id parameter
+     */
     installationId: number;
-}
-export declare class AppsListInstallationReposForAuthenticatedUserQueryParams extends SpeakeasyBase {
+    /**
+     * Page number of the results to fetch.
+     */
     page?: number;
+    /**
+     * Results per page (max 100)
+     */
     perPage?: number;
 }
-export declare class AppsListInstallationReposForAuthenticatedUserHeaders extends SpeakeasyBase {
-    accept: string;
-}
-export declare class AppsListInstallationReposForAuthenticatedUser200ApplicationJson extends SpeakeasyBase {
+/**
+ * The access the user has to each repository is included in the hash under the `permissions` key.
+ */
+export declare class AppsListInstallationReposForAuthenticatedUser200ApplicationJSON extends SpeakeasyBase {
     repositories: shared.Repository[];
     repositorySelection?: string;
     totalCount: number;
 }
-export declare class AppsListInstallationReposForAuthenticatedUserRequest extends SpeakeasyBase {
-    pathParams: AppsListInstallationReposForAuthenticatedUserPathParams;
-    queryParams: AppsListInstallationReposForAuthenticatedUserQueryParams;
-    headers: AppsListInstallationReposForAuthenticatedUserHeaders;
-}
 export declare class AppsListInstallationReposForAuthenticatedUserResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
-    appsListInstallationReposForAuthenticatedUser200ApplicationJSONObject?: AppsListInstallationReposForAuthenticatedUser200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * The access the user has to each repository is included in the hash under the `permissions` key.
+     */
+    appsListInstallationReposForAuthenticatedUser200ApplicationJSONObject?: AppsListInstallationReposForAuthenticatedUser200ApplicationJSON;
+    /**
+     * Forbidden
+     */
     basicError?: shared.BasicError;
 }

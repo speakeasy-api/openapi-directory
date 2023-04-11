@@ -1,0 +1,23 @@
+export declare enum LastUpdateStatusReasonCodeEnum {
+    EniLimitExceeded = "EniLimitExceeded",
+    InsufficientRolePermissions = "InsufficientRolePermissions",
+    InvalidConfiguration = "InvalidConfiguration",
+    InternalError = "InternalError",
+    SubnetOutOfIPAddresses = "SubnetOutOfIPAddresses",
+    InvalidSubnet = "InvalidSubnet",
+    InvalidSecurityGroup = "InvalidSecurityGroup",
+    ImageDeleted = "ImageDeleted",
+    ImageAccessDenied = "ImageAccessDenied",
+    InvalidImage = "InvalidImage",
+    KMSKeyAccessDenied = "KMSKeyAccessDenied",
+    KMSKeyNotFound = "KMSKeyNotFound",
+    InvalidStateKMSKey = "InvalidStateKMSKey",
+    DisabledKMSKey = "DisabledKMSKey",
+    EFSIOError = "EFSIOError",
+    EFSMountConnectivityError = "EFSMountConnectivityError",
+    EFSMountFailure = "EFSMountFailure",
+    EFSMountTimeout = "EFSMountTimeout",
+    InvalidRuntime = "InvalidRuntime",
+    InvalidZipFileException = "InvalidZipFileException",
+    FunctionError = "FunctionError"
+}

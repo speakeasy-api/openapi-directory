@@ -25,4 +25,3 @@ export * from "./landlordsummarymodel";
 export * from "./landlordsummarytenancymodel";
 export * from "./landlordtenancymodel";
 export * from "./lettingslandlorddocument";
-export * from "./security";

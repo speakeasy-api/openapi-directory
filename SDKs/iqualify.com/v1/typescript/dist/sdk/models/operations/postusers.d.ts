@@ -1,11 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PostUsersRequest extends SpeakeasyBase {
-    request: shared.User;
-}
+import { AxiosResponse } from "axios";
 export declare class PostUsersResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Bad Request
+     */
     error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * user added
+     */
     userResponse?: shared.UserResponse;
 }

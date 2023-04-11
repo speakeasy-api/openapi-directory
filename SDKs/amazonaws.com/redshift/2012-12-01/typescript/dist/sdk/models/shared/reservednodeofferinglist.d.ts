@@ -3,7 +3,7 @@ import { RecurringChargeList } from "./recurringchargelist";
 import { ReservedNodeOfferingTypeEnum } from "./reservednodeofferingtypeenum";
 /**
  * Describes a reserved node offering.
-**/
+ */
 export declare class ReservedNodeOfferingList extends SpeakeasyBase {
     currencyCode?: string;
     duration?: number;

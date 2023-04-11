@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UntagResourceXAmzTargetEnum {
     KinesisAnalytics20150814UntagResource = "KinesisAnalytics_20150814.UntagResource"
 }
-export declare class UntagResourceHeaders extends SpeakeasyBase {
+export declare class UntagResourceRequest extends SpeakeasyBase {
+    untagResourceRequest: shared.UntagResourceRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class UntagResourceHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UntagResourceXAmzTargetEnum;
 }
-export declare class UntagResourceRequest extends SpeakeasyBase {
-    headers: UntagResourceHeaders;
-    request: shared.UntagResourceRequest;
-}
 export declare class UntagResourceResponse extends SpeakeasyBase {
+    /**
+     * ConcurrentModificationException
+     */
     concurrentModificationException?: any;
     contentType: string;
+    /**
+     * InvalidArgumentException
+     */
     invalidArgumentException?: any;
-    resourceInUseException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceInUseException
+     */
+    resourceInUseException?: any;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * TooManyTagsException
+     */
     tooManyTagsException?: any;
+    /**
+     * Success
+     */
     untagResourceResponse?: Record<string, any>;
 }

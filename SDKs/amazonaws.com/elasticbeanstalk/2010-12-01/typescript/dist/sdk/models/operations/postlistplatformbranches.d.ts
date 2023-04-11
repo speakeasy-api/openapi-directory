@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostListPlatformBranchesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTListPlatformBranchesActionEnum {
     ListPlatformBranches = "ListPlatformBranches"
 }
-export declare enum PostListPlatformBranchesVersionEnum {
+export declare enum POSTListPlatformBranchesVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostListPlatformBranchesQueryParams extends SpeakeasyBase {
-    action: PostListPlatformBranchesActionEnum;
+export declare class POSTListPlatformBranchesRequest extends SpeakeasyBase {
+    action: POSTListPlatformBranchesActionEnum;
+    /**
+     * Pagination limit
+     */
     maxRecords?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostListPlatformBranchesVersionEnum;
-}
-export declare class PostListPlatformBranchesHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTListPlatformBranchesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostListPlatformBranchesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostListPlatformBranchesRequest extends SpeakeasyBase {
-    queryParams: PostListPlatformBranchesQueryParams;
-    headers: PostListPlatformBranchesHeaders;
-    request?: Uint8Array;
-}
-export declare class PostListPlatformBranchesResponse extends SpeakeasyBase {
+export declare class POSTListPlatformBranchesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

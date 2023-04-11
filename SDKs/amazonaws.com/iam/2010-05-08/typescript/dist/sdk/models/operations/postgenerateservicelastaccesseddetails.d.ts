@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostGenerateServiceLastAccessedDetailsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTGenerateServiceLastAccessedDetailsActionEnum {
     GenerateServiceLastAccessedDetails = "GenerateServiceLastAccessedDetails"
 }
-export declare enum PostGenerateServiceLastAccessedDetailsVersionEnum {
+export declare enum POSTGenerateServiceLastAccessedDetailsVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostGenerateServiceLastAccessedDetailsQueryParams extends SpeakeasyBase {
-    action: PostGenerateServiceLastAccessedDetailsActionEnum;
-    version: PostGenerateServiceLastAccessedDetailsVersionEnum;
-}
-export declare class PostGenerateServiceLastAccessedDetailsHeaders extends SpeakeasyBase {
+export declare class POSTGenerateServiceLastAccessedDetailsRequest extends SpeakeasyBase {
+    action: POSTGenerateServiceLastAccessedDetailsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTGenerateServiceLastAccessedDetailsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostGenerateServiceLastAccessedDetailsHeaders extends Speak
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostGenerateServiceLastAccessedDetailsRequest extends SpeakeasyBase {
-    queryParams: PostGenerateServiceLastAccessedDetailsQueryParams;
-    headers: PostGenerateServiceLastAccessedDetailsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostGenerateServiceLastAccessedDetailsResponse extends SpeakeasyBase {
+export declare class POSTGenerateServiceLastAccessedDetailsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

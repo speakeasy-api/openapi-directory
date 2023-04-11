@@ -1,20 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PatchWebhooksV3AppIdSubscriptionsSubscriptionIdUpdatePathParams extends SpeakeasyBase {
-    appId: number;
-    subscriptionId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class PatchWebhooksV3AppIdSubscriptionsSubscriptionIdUpdateSecurity extends SpeakeasyBase {
-    developerHapikey: shared.SchemeDeveloperHapikey;
+    developerHapikey: string;
 }
 export declare class PatchWebhooksV3AppIdSubscriptionsSubscriptionIdUpdateRequest extends SpeakeasyBase {
-    pathParams: PatchWebhooksV3AppIdSubscriptionsSubscriptionIdUpdatePathParams;
-    request: shared.SubscriptionPatchRequest;
-    security: PatchWebhooksV3AppIdSubscriptionsSubscriptionIdUpdateSecurity;
+    subscriptionPatchRequest: shared.SubscriptionPatchRequest;
+    appId: number;
+    subscriptionId: number;
 }
 export declare class PatchWebhooksV3AppIdSubscriptionsSubscriptionIdUpdateResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     subscriptionResponse?: shared.SubscriptionResponse;
 }

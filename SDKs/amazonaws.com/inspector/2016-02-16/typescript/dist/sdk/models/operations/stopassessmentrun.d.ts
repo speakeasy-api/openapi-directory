@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum StopAssessmentRunXAmzTargetEnum {
     InspectorServiceStopAssessmentRun = "InspectorService.StopAssessmentRun"
 }
-export declare class StopAssessmentRunHeaders extends SpeakeasyBase {
+export declare class StopAssessmentRunRequest extends SpeakeasyBase {
+    stopAssessmentRunRequest: shared.StopAssessmentRunRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class StopAssessmentRunHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: StopAssessmentRunXAmzTargetEnum;
 }
-export declare class StopAssessmentRunRequest extends SpeakeasyBase {
-    headers: StopAssessmentRunHeaders;
-    request: shared.StopAssessmentRunRequest;
-}
 export declare class StopAssessmentRunResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InternalException
+     */
     internalException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * NoSuchEntityException
+     */
     noSuchEntityException?: any;
+    /**
+     * ServiceTemporarilyUnavailableException
+     */
     serviceTemporarilyUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

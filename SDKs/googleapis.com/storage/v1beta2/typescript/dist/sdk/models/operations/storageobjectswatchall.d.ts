@@ -1,52 +1,95 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class StorageObjectsWatchAllPathParams extends SpeakeasyBase {
-    bucket: string;
-}
-export declare enum StorageObjectsWatchAllProjectionEnum {
-    Full = "full",
-    NoAcl = "noAcl"
-}
-export declare class StorageObjectsWatchAllQueryParams extends SpeakeasyBase {
-    alt?: shared.AltEnum;
-    delimiter?: string;
-    fields?: string;
-    key?: string;
-    maxResults?: number;
-    oauthToken?: string;
-    pageToken?: string;
-    prefix?: string;
-    prettyPrint?: boolean;
-    projection?: StorageObjectsWatchAllProjectionEnum;
-    quotaUser?: string;
-    userIp?: string;
-    versions?: boolean;
-}
+import { AxiosResponse } from "axios";
 export declare class StorageObjectsWatchAllSecurityOption1 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class StorageObjectsWatchAllSecurityOption2 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class StorageObjectsWatchAllSecurityOption3 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class StorageObjectsWatchAllSecurity extends SpeakeasyBase {
     option1?: StorageObjectsWatchAllSecurityOption1;
     option2?: StorageObjectsWatchAllSecurityOption2;
     option3?: StorageObjectsWatchAllSecurityOption3;
 }
+/**
+ * Set of properties to return. Defaults to noAcl.
+ */
+export declare enum StorageObjectsWatchAllProjectionEnum {
+    Full = "full",
+    NoAcl = "noAcl"
+}
 export declare class StorageObjectsWatchAllRequest extends SpeakeasyBase {
-    pathParams: StorageObjectsWatchAllPathParams;
-    queryParams: StorageObjectsWatchAllQueryParams;
-    request?: shared.Channel;
-    security: StorageObjectsWatchAllSecurity;
+    channel?: shared.Channel;
+    /**
+     * Data format for the response.
+     */
+    alt?: shared.AltEnum;
+    /**
+     * Name of the bucket in which to look for objects.
+     */
+    bucket: string;
+    /**
+     * Returns results in a directory-like mode. items will contain only objects whose names, aside from the prefix, do not contain delimiter. Objects whose names, aside from the prefix, contain delimiter will have their name, truncated after the delimiter, returned in prefixes. Duplicate prefixes are omitted.
+     */
+    delimiter?: string;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * Maximum number of items plus prefixes to return. As duplicate prefixes are omitted, fewer total results may be returned than requested.
+     */
+    maxResults?: number;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauthToken?: string;
+    /**
+     * A previously-returned page token representing part of the larger set of results to view.
+     */
+    pageToken?: string;
+    /**
+     * Filter results to objects whose names begin with this prefix.
+     */
+    prefix?: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * Set of properties to return. Defaults to noAcl.
+     */
+    projection?: StorageObjectsWatchAllProjectionEnum;
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    userIp?: string;
+    /**
+     * If true, lists all versions of a file as distinct results.
+     */
+    versions?: boolean;
 }
 export declare class StorageObjectsWatchAllResponse extends SpeakeasyBase {
+    /**
+     * Successful response
+     */
     channel?: shared.Channel;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

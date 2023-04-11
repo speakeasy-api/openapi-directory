@@ -1,12 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class NewsPathParams extends SpeakeasyBase {
-    format: string;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class NewsRequest extends SpeakeasyBase {
-    pathParams: NewsPathParams;
+    /**
+     * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+     */
+    format: string;
 }
 export declare class NewsResponse extends SpeakeasyBase {
     contentType: string;
-    news?: any[];
+    news?: shared.News[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

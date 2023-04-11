@@ -1,13 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CertificateDownloadEntitlementQueryParams extends SpeakeasyBase {
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class CertificateDownloadEntitlementRequest extends SpeakeasyBase {
+    /**
+     * Entitlement id to download
+     */
     entitlementId: string;
 }
-export declare class CertificateDownloadEntitlementRequest extends SpeakeasyBase {
-    queryParams: CertificateDownloadEntitlementQueryParams;
-}
 export declare class CertificateDownloadEntitlementResponse extends SpeakeasyBase {
-    certificateBundle?: any;
+    /**
+     * Certificate retrieved
+     */
+    certificateBundle?: shared.CertificateBundle;
     contentType: string;
-    error?: any;
+    /**
+     * Request was malformed
+     */
+    error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

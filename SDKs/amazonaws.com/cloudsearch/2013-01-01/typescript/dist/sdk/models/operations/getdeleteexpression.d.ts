@@ -1,17 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteExpressionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteExpressionActionEnum {
     DeleteExpression = "DeleteExpression"
 }
-export declare enum GetDeleteExpressionVersionEnum {
+export declare enum GETDeleteExpressionVersionEnum {
     TwoThousandAndThirteen0101 = "2013-01-01"
 }
-export declare class GetDeleteExpressionQueryParams extends SpeakeasyBase {
-    action: GetDeleteExpressionActionEnum;
+export declare class GETDeleteExpressionRequest extends SpeakeasyBase {
+    action: GETDeleteExpressionActionEnum;
     domainName: string;
+    /**
+     * The name of the <code><a>Expression</a></code> to delete.
+     */
     expressionName: string;
-    version: GetDeleteExpressionVersionEnum;
-}
-export declare class GetDeleteExpressionHeaders extends SpeakeasyBase {
+    version: GETDeleteExpressionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +22,9 @@ export declare class GetDeleteExpressionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteExpressionRequest extends SpeakeasyBase {
-    queryParams: GetDeleteExpressionQueryParams;
-    headers: GetDeleteExpressionHeaders;
-}
-export declare class GetDeleteExpressionResponse extends SpeakeasyBase {
+export declare class GETDeleteExpressionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

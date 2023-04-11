@@ -1,21 +1,34 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class FunctionsListQueryParams extends SpeakeasyBase {
-    limit?: number;
-    offset?: number;
-    orderType?: string;
-    search?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class FunctionsListSecurity extends SpeakeasyBase {
-    key: shared.SchemeKey;
-    project: shared.SchemeProject;
+    key: string;
+    project: string;
 }
 export declare class FunctionsListRequest extends SpeakeasyBase {
-    queryParams: FunctionsListQueryParams;
-    security: FunctionsListSecurity;
+    /**
+     * Results limit value. By default will return maximum 25 results. Maximum of 100 results allowed per request.
+     */
+    limit?: number;
+    /**
+     * Results offset. The default value is 0. Use this param to manage pagination.
+     */
+    offset?: number;
+    /**
+     * Order result by ASC or DESC order.
+     */
+    orderType?: string;
+    /**
+     * Search term to filter your list results. Max length: 256 chars.
+     */
+    search?: string;
 }
 export declare class FunctionsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Functions List
+     */
     functionList?: shared.FunctionList;
 }

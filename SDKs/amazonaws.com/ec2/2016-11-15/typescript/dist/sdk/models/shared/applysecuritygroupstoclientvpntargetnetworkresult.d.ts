@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class ApplySecurityGroupsToClientVpnTargetNetworkResult extends SpeakeasyBase {
-    securityGroupIds?: Record<string, any>;
+    securityGroupIds?: string[];
 }

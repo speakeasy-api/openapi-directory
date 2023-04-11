@@ -1,10 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { SshPublicKeyMetadata } from "./sshpublickeymetadata";
+import { SSHPublicKeyMetadata } from "./sshpublickeymetadata";
 /**
  * Contains the response to a successful <a>ListSSHPublicKeys</a> request.
-**/
-export declare class ListSshPublicKeysResponse extends SpeakeasyBase {
+ */
+export declare class ListSSHPublicKeysResponse extends SpeakeasyBase {
     isTruncated?: boolean;
     marker?: string;
-    sshPublicKeys?: SshPublicKeyMetadata[];
+    sshPublicKeys?: SSHPublicKeyMetadata[];
 }

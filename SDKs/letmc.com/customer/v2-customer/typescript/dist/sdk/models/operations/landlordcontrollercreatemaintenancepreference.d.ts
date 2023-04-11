@@ -1,22 +1,45 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class LandlordControllerCreateMaintenancePreferencePathParams extends SpeakeasyBase {
-    shortName: string;
-}
-export declare class LandlordControllerCreateMaintenancePreferenceQueryParams extends SpeakeasyBase {
-    name: string;
-    notes: string;
-    tenancyID: string;
-    token: string;
-}
+import { AxiosResponse } from "axios";
 export declare class LandlordControllerCreateMaintenancePreferenceRequest extends SpeakeasyBase {
-    pathParams: LandlordControllerCreateMaintenancePreferencePathParams;
-    queryParams: LandlordControllerCreateMaintenancePreferenceQueryParams;
+    /**
+     * Name of the maintenance preference to add
+     */
+    name: string;
+    /**
+     * Notes of the maintenance preference to add
+     */
+    notes: string;
+    /**
+     * The unique client short-name
+     */
+    shortName: string;
+    /**
+     * The Tenancy ID
+     */
+    tenancyID: string;
+    /**
+     * The login token returned from the /session POST call
+     */
+    token: string;
 }
 export declare class LandlordControllerCreateMaintenancePreferenceResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * OK
+     */
     landlordControllerCreateMaintenancePreference200ApplicationJSONString?: string;
+    /**
+     * OK
+     */
     landlordControllerCreateMaintenancePreference200ApplicationXMLString?: string;
+    /**
+     * OK
+     */
     landlordControllerCreateMaintenancePreference200TextJSONString?: string;
+    /**
+     * OK
+     */
     landlordControllerCreateMaintenancePreference200TextXMLString?: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

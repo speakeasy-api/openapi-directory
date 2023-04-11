@@ -1,14 +1,28 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PostProjectUsernameProjectEnvvarPathParams extends SpeakeasyBase {
-    project: string;
-    username: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PostProjectUsernameProjectEnvvarRequest extends SpeakeasyBase {
-    pathParams: PostProjectUsernameProjectEnvvarPathParams;
+    /**
+     * XXXXXXXXX
+     *
+     * @remarks
+     *
+     */
+    project: string;
+    /**
+     * XXXXXXXXX
+     *
+     * @remarks
+     *
+     */
+    username: string;
 }
 export declare class PostProjectUsernameProjectEnvvarResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * XXX
+     */
     envvar?: shared.Envvar;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -20,5 +20,9 @@ export declare enum ExportableLambdaFunctionFieldEnum {
     RecommendationOptionsProjectedUtilizationMetricsDurationLowerBound = "RecommendationOptionsProjectedUtilizationMetricsDurationLowerBound",
     RecommendationOptionsProjectedUtilizationMetricsDurationUpperBound = "RecommendationOptionsProjectedUtilizationMetricsDurationUpperBound",
     RecommendationOptionsProjectedUtilizationMetricsDurationExpected = "RecommendationOptionsProjectedUtilizationMetricsDurationExpected",
-    LastRefreshTimestamp = "LastRefreshTimestamp"
+    LastRefreshTimestamp = "LastRefreshTimestamp",
+    CurrentPerformanceRisk = "CurrentPerformanceRisk",
+    RecommendationOptionsSavingsOpportunityPercentage = "RecommendationOptionsSavingsOpportunityPercentage",
+    RecommendationOptionsEstimatedMonthlySavingsCurrency = "RecommendationOptionsEstimatedMonthlySavingsCurrency",
+    RecommendationOptionsEstimatedMonthlySavingsValue = "RecommendationOptionsEstimatedMonthlySavingsValue"
 }

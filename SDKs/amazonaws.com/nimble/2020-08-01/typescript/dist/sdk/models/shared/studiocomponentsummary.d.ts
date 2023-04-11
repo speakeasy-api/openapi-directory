@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { StudioComponentSubtypeEnum } from "./studiocomponentsubtypeenum";
 import { StudioComponentTypeEnum } from "./studiocomponenttypeenum";
+/**
+ * The studio component's summary.
+ */
 export declare class StudioComponentSummary extends SpeakeasyBase {
     createdAt?: Date;
     createdBy?: string;

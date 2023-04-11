@@ -1,17 +1,18 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetFindInteractionsRequest, GetFindInteractionsResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetFindInteractionsRequest,
+  GetFindInteractionsResponse,
+  GetFindInteractionsFormatEnum,
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetFindInteractionsRequest = {
-  queryParams: {
-    format: "json",
-    query: "voluptas",
-  },
+  format: GetFindInteractionsFormatEnum.Dump,
+  query: "provident",
 };
 
 sdk.allFunctions.getFindInteractions(req).then((res: GetFindInteractionsResponse | AxiosError) => {

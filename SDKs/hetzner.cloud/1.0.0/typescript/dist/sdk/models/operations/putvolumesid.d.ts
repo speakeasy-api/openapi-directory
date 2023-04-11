@@ -1,62 +1,139 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PutVolumesIdPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 /**
  * User-defined labels (key-value pairs)
-**/
+ */
 export declare class PutVolumesIdUpdateVolumeRequestLabels extends SpeakeasyBase {
     labelkey?: string;
 }
 export declare class PutVolumesIdUpdateVolumeRequest extends SpeakeasyBase {
+    /**
+     * User-defined labels (key-value pairs)
+     */
     labels?: PutVolumesIdUpdateVolumeRequestLabels;
+    /**
+     * New Volume name
+     */
     name: string;
+}
+export declare class PutVolumesIdRequest extends SpeakeasyBase {
+    requestBody?: PutVolumesIdUpdateVolumeRequest;
+    /**
+     * ID of the Volume to update
+     */
+    id: string;
 }
 /**
  * Location of the Volume. Volume can only be attached to Servers in the same Location.
-**/
-export declare class PutVolumesId200ApplicationJsonVolumeLocation extends SpeakeasyBase {
+ */
+export declare class PutVolumesId200ApplicationJSONVolumeLocation extends SpeakeasyBase {
+    /**
+     * City the Location is closest to
+     */
     city: string;
+    /**
+     * ISO 3166-1 alpha-2 code of the country the Location resides in
+     */
     country: string;
+    /**
+     * Description of the Location
+     */
     description: string;
+    /**
+     * ID of the Location
+     */
     id: number;
+    /**
+     * Latitude of the city closest to the Location
+     */
     latitude: number;
+    /**
+     * Longitude of the city closest to the Location
+     */
     longitude: number;
+    /**
+     * Unique identifier of the Location
+     */
     name: string;
+    /**
+     * Name of network zone this Location resides in
+     */
     networkZone: string;
 }
 /**
  * Protection configuration for the Resource
-**/
-export declare class PutVolumesId200ApplicationJsonVolumeProtection extends SpeakeasyBase {
+ */
+export declare class PutVolumesId200ApplicationJSONVolumeProtection extends SpeakeasyBase {
+    /**
+     * If true, prevents the Resource from being deleted
+     */
     delete: boolean;
 }
-export declare enum PutVolumesId200ApplicationJsonVolumeStatusEnum {
+/**
+ * Current status of the Volume
+ */
+export declare enum PutVolumesId200ApplicationJSONVolumeStatusEnum {
     Creating = "creating",
     Available = "available"
 }
-export declare class PutVolumesId200ApplicationJsonVolume extends SpeakeasyBase {
+export declare class PutVolumesId200ApplicationJSONVolume extends SpeakeasyBase {
+    /**
+     * Point in time when the Resource was created (in ISO-8601 format)
+     */
     created: string;
+    /**
+     * Filesystem of the Volume if formatted on creation, null if not formatted on creation
+     */
     format: string;
+    /**
+     * ID of the Resource
+     */
     id: number;
+    /**
+     * User-defined labels (key-value pairs)
+     */
     labels: Record<string, string>;
+    /**
+     * Device path on the file system for the Volume
+     */
     linuxDevice: string;
-    location: PutVolumesId200ApplicationJsonVolumeLocation;
+    /**
+     * Location of the Volume. Volume can only be attached to Servers in the same Location.
+     */
+    location: PutVolumesId200ApplicationJSONVolumeLocation;
+    /**
+     * Name of the Resource. Must be unique per Project.
+     */
     name: string;
-    protection: PutVolumesId200ApplicationJsonVolumeProtection;
+    /**
+     * Protection configuration for the Resource
+     */
+    protection: PutVolumesId200ApplicationJSONVolumeProtection;
+    /**
+     * ID of the Server the Volume is attached to, null if it is not attached at all
+     */
     server: number;
+    /**
+     * Size in GB of the Volume
+     */
     size: number;
-    status: PutVolumesId200ApplicationJsonVolumeStatusEnum;
+    /**
+     * Current status of the Volume
+     */
+    status: PutVolumesId200ApplicationJSONVolumeStatusEnum;
 }
-export declare class PutVolumesId200ApplicationJson extends SpeakeasyBase {
-    volume: PutVolumesId200ApplicationJsonVolume;
-}
-export declare class PutVolumesIdRequest extends SpeakeasyBase {
-    pathParams: PutVolumesIdPathParams;
-    request?: PutVolumesIdUpdateVolumeRequest;
+/**
+ * The `volume` key contains the updated volume
+ */
+export declare class PutVolumesId200ApplicationJSON extends SpeakeasyBase {
+    volume: PutVolumesId200ApplicationJSONVolume;
 }
 export declare class PutVolumesIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    putVolumesId200ApplicationJSONObject?: PutVolumesId200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * The `volume` key contains the updated volume
+     */
+    putVolumesId200ApplicationJSONObject?: PutVolumesId200ApplicationJSON;
 }

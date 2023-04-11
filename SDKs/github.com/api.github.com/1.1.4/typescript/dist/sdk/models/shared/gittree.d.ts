@@ -9,9 +9,12 @@ export declare class GitTreeTree extends SpeakeasyBase {
 }
 /**
  * The hierarchy between files in a Git repository.
-**/
+ */
 export declare class GitTree extends SpeakeasyBase {
     sha: string;
+    /**
+     * Objects specifying a tree structure
+     */
     tree: GitTreeTree[];
     truncated: boolean;
     url: string;

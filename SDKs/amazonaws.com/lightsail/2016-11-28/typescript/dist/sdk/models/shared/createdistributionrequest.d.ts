@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { CacheSettings } from "./cachesettings";
-import { CacheBehaviorPerPath } from "./cachebehaviorperpath";
 import { CacheBehavior } from "./cachebehavior";
-import { IpAddressTypeEnum } from "./ipaddresstypeenum";
+import { CacheBehaviorPerPath } from "./cachebehaviorperpath";
+import { CacheSettings } from "./cachesettings";
 import { InputOrigin } from "./inputorigin";
+import { IpAddressTypeEnum } from "./ipaddresstypeenum";
 import { Tag } from "./tag";
 export declare class CreateDistributionRequest extends SpeakeasyBase {
     bundleId: string;

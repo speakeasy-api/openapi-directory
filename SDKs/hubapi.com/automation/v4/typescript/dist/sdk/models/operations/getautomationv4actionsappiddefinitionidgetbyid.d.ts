@@ -1,23 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetAutomationV4ActionsAppIdDefinitionIdGetByIdPathParams extends SpeakeasyBase {
-    appId: number;
-    definitionId: string;
-}
-export declare class GetAutomationV4ActionsAppIdDefinitionIdGetByIdQueryParams extends SpeakeasyBase {
-    archived?: boolean;
-}
+import { AxiosResponse } from "axios";
 export declare class GetAutomationV4ActionsAppIdDefinitionIdGetByIdSecurity extends SpeakeasyBase {
-    developerHapikey: shared.SchemeDeveloperHapikey;
+    developerHapikey: string;
 }
 export declare class GetAutomationV4ActionsAppIdDefinitionIdGetByIdRequest extends SpeakeasyBase {
-    pathParams: GetAutomationV4ActionsAppIdDefinitionIdGetByIdPathParams;
-    queryParams: GetAutomationV4ActionsAppIdDefinitionIdGetByIdQueryParams;
-    security: GetAutomationV4ActionsAppIdDefinitionIdGetByIdSecurity;
+    appId: number;
+    /**
+     * Whether to include archived custom actions.
+     */
+    archived?: boolean;
+    /**
+     * The ID of the custom workflow action.
+     */
+    definitionId: string;
 }
 export declare class GetAutomationV4ActionsAppIdDefinitionIdGetByIdResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
+    /**
+     * successful operation
+     */
     extensionActionDefinition?: shared.ExtensionActionDefinition;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

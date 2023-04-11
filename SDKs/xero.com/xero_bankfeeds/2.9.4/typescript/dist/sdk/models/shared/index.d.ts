@@ -6,7 +6,6 @@ export * from "./error";
 export * from "./feedconnection";
 export * from "./feedconnections";
 export * from "./pagination";
-export * from "./security";
 export * from "./startbalance";
 export * from "./statement";
 export * from "./statementline";

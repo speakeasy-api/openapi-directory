@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum GetAwsDefaultServiceQuotaXAmzTargetEnum {
-    ServiceQuotasV20190624GetAwsDefaultServiceQuota = "ServiceQuotasV20190624.GetAWSDefaultServiceQuota"
+import { AxiosResponse } from "axios";
+export declare enum GetAWSDefaultServiceQuotaXAmzTargetEnum {
+    ServiceQuotasV20190624GetAWSDefaultServiceQuota = "ServiceQuotasV20190624.GetAWSDefaultServiceQuota"
 }
-export declare class GetAwsDefaultServiceQuotaHeaders extends SpeakeasyBase {
+export declare class GetAWSDefaultServiceQuotaRequest extends SpeakeasyBase {
+    getAWSDefaultServiceQuotaRequest: shared.GetAWSDefaultServiceQuotaRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,19 +13,34 @@ export declare class GetAwsDefaultServiceQuotaHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: GetAwsDefaultServiceQuotaXAmzTargetEnum;
+    xAmzTarget: GetAWSDefaultServiceQuotaXAmzTargetEnum;
 }
-export declare class GetAwsDefaultServiceQuotaRequest extends SpeakeasyBase {
-    headers: GetAwsDefaultServiceQuotaHeaders;
-    request: shared.GetAwsDefaultServiceQuotaRequest;
-}
-export declare class GetAwsDefaultServiceQuotaResponse extends SpeakeasyBase {
+export declare class GetAWSDefaultServiceQuotaResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
-    getAWSDefaultServiceQuotaResponse?: shared.GetAwsDefaultServiceQuotaResponse;
+    /**
+     * Success
+     */
+    getAWSDefaultServiceQuotaResponse?: shared.GetAWSDefaultServiceQuotaResponse;
+    /**
+     * IllegalArgumentException
+     */
     illegalArgumentException?: any;
+    /**
+     * NoSuchResourceException
+     */
     noSuchResourceException?: any;
+    /**
+     * ServiceException
+     */
     serviceException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

@@ -3,9 +3,15 @@ import { ExportOrderListFormatEnum } from "./exportorderlistformatenum";
 import { OrderListRequestWithoutPagination } from "./orderlistrequestwithoutpagination";
 /**
  * The message request to export order list. The store identifier is requested to regroup the exportations.
-**/
+ */
 export declare class ExportOrderListRequest extends SpeakeasyBase {
+    /**
+     * The type of the file to export
+     */
     format?: ExportOrderListFormatEnum;
     orderListRequestWithoutPagination: OrderListRequestWithoutPagination;
+    /**
+     * The store identifier
+     */
     storeId: string;
 }

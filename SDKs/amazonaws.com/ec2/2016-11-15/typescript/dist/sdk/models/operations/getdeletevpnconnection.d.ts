@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteVpnConnectionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteVpnConnectionActionEnum {
     DeleteVpnConnection = "DeleteVpnConnection"
 }
-export declare enum GetDeleteVpnConnectionVersionEnum {
+export declare enum GETDeleteVpnConnectionVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetDeleteVpnConnectionQueryParams extends SpeakeasyBase {
-    action: GetDeleteVpnConnectionActionEnum;
+export declare class GETDeleteVpnConnectionRequest extends SpeakeasyBase {
+    action: GETDeleteVpnConnectionActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
-    version: GetDeleteVpnConnectionVersionEnum;
+    version: GETDeleteVpnConnectionVersionEnum;
+    /**
+     * The ID of the VPN connection.
+     */
     vpnConnectionId: string;
-}
-export declare class GetDeleteVpnConnectionHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,11 +25,8 @@ export declare class GetDeleteVpnConnectionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteVpnConnectionRequest extends SpeakeasyBase {
-    queryParams: GetDeleteVpnConnectionQueryParams;
-    headers: GetDeleteVpnConnectionHeaders;
-}
-export declare class GetDeleteVpnConnectionResponse extends SpeakeasyBase {
+export declare class GETDeleteVpnConnectionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

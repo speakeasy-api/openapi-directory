@@ -1,3 +1,6 @@
+/**
+ * <p>The current status of the studio component resource.</p> <p>When the resource is in the <code>READY</code> state, the status code signals what the last mutation made to the resource was.</p> <p>When the resource is in a <code>CREATE_FAILED</code>, <code>UPDATE_FAILED</code>, or <code>DELETE_FAILED</code> state, the status code signals what went wrong and why the mutation failed.</p>
+ */
 export declare enum StudioComponentStatusCodeEnum {
     ActiveDirectoryAlreadyExists = "ACTIVE_DIRECTORY_ALREADY_EXISTS",
     StudioComponentCreated = "STUDIO_COMPONENT_CREATED",

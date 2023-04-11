@@ -1,17 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AppsGetUserInstallationPathParams extends SpeakeasyBase {
-    username: string;
-}
-export declare class AppsGetUserInstallationHeaders extends SpeakeasyBase {
-    accept: string;
-}
+import { AxiosResponse } from "axios";
 export declare class AppsGetUserInstallationRequest extends SpeakeasyBase {
-    pathParams: AppsGetUserInstallationPathParams;
-    headers: AppsGetUserInstallationHeaders;
+    /**
+     * This API is under preview and subject to change.
+     */
+    accept: string;
+    username: string;
 }
 export declare class AppsGetUserInstallationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     installationGhes2?: shared.InstallationGhes2;
 }

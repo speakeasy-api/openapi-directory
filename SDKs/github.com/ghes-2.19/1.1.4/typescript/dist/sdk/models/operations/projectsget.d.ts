@@ -1,14 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ProjectsGetPathParams extends SpeakeasyBase {
-    projectId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ProjectsGetRequest extends SpeakeasyBase {
-    pathParams: ProjectsGetPathParams;
+    projectId: number;
 }
 export declare class ProjectsGetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Requires authentication
+     */
     basicError?: shared.BasicError;
+    /**
+     * Response
+     */
     project?: shared.Project;
 }

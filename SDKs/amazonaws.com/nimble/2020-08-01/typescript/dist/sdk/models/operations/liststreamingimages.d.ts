@@ -1,13 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListStreamingImagesPathParams extends SpeakeasyBase {
-    studioId: string;
-}
-export declare class ListStreamingImagesQueryParams extends SpeakeasyBase {
-    nextToken?: string;
-    owner?: string;
-}
-export declare class ListStreamingImagesHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListStreamingImagesRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -15,21 +9,53 @@ export declare class ListStreamingImagesHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class ListStreamingImagesRequest extends SpeakeasyBase {
-    pathParams: ListStreamingImagesPathParams;
-    queryParams: ListStreamingImagesQueryParams;
-    headers: ListStreamingImagesHeaders;
+    /**
+     * The token for the next set of results, or null if there are no more results.
+     */
+    nextToken?: string;
+    /**
+     * Filter this request to streaming images with the given owner
+     */
+    owner?: string;
+    /**
+     * The studio ID.
+     */
+    studioId: string;
 }
 export declare class ListStreamingImagesResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
+    /**
+     * Success
+     */
     listStreamingImagesResponse?: shared.ListStreamingImagesResponse;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
-    serviceQuotaExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceQuotaExceededException
+     */
+    serviceQuotaExceededException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

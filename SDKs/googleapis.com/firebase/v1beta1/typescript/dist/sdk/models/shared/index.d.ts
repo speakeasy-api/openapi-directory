@@ -20,7 +20,6 @@ export * from "./projectinfo";
 export * from "./removeanalyticsrequest";
 export * from "./removewebapprequest";
 export * from "./searchfirebaseappsresponse";
-export * from "./security";
 export * from "./shacertificate";
 export * from "./status";
 export * from "./undeletewebapprequest";

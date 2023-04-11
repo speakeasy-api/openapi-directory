@@ -1,22 +1,33 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetListIdentitiesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETListIdentitiesActionEnum {
     ListIdentities = "ListIdentities"
 }
-export declare enum GetListIdentitiesIdentityTypeEnum {
+/**
+ * The type of the identities to list. Possible values are "EmailAddress" and "Domain". If this parameter is omitted, then all identities will be listed.
+ */
+export declare enum GETListIdentitiesIdentityTypeEnum {
     EmailAddress = "EmailAddress",
     Domain = "Domain"
 }
-export declare enum GetListIdentitiesVersionEnum {
+export declare enum GETListIdentitiesVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetListIdentitiesQueryParams extends SpeakeasyBase {
-    action: GetListIdentitiesActionEnum;
-    identityType?: GetListIdentitiesIdentityTypeEnum;
+export declare class GETListIdentitiesRequest extends SpeakeasyBase {
+    action: GETListIdentitiesActionEnum;
+    /**
+     * The type of the identities to list. Possible values are "EmailAddress" and "Domain". If this parameter is omitted, then all identities will be listed.
+     */
+    identityType?: GETListIdentitiesIdentityTypeEnum;
+    /**
+     * The maximum number of identities per page. Possible values are 1-1000 inclusive.
+     */
     maxItems?: number;
+    /**
+     * The token to use for pagination.
+     */
     nextToken?: string;
-    version: GetListIdentitiesVersionEnum;
-}
-export declare class GetListIdentitiesHeaders extends SpeakeasyBase {
+    version: GETListIdentitiesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -25,12 +36,9 @@ export declare class GetListIdentitiesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetListIdentitiesRequest extends SpeakeasyBase {
-    queryParams: GetListIdentitiesQueryParams;
-    headers: GetListIdentitiesHeaders;
-}
-export declare class GetListIdentitiesResponse extends SpeakeasyBase {
+export declare class GETListIdentitiesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

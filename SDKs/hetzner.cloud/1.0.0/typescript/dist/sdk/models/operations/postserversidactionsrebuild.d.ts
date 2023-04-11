@@ -1,46 +1,105 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PostServersIdActionsRebuildPathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
+/**
+ * To select which Image to rebuild from you can either pass an ID or a name as the `image` argument. Passing a name only works for `system` Images since the other Image types do not have a name set.
+ */
 export declare class PostServersIdActionsRebuildRebuildServerRequest extends SpeakeasyBase {
+    /**
+     * ID or name of Image to rebuilt from.
+     */
     image: string;
+}
+export declare class PostServersIdActionsRebuildRequest extends SpeakeasyBase {
+    /**
+     * To select which Image to rebuild from you can either pass an ID or a name as the `image` argument. Passing a name only works for `system` Images since the other Image types do not have a name set.
+     */
+    requestBody?: PostServersIdActionsRebuildRebuildServerRequest;
+    /**
+     * ID of the Server
+     */
+    id: number;
 }
 /**
  * Error message for the Action if error occurred, otherwise null
-**/
-export declare class PostServersIdActionsRebuild201ApplicationJsonActionError extends SpeakeasyBase {
+ */
+export declare class PostServersIdActionsRebuild201ApplicationJSONActionError extends SpeakeasyBase {
+    /**
+     * Fixed machine readable code
+     */
     code: string;
+    /**
+     * Humanized error message
+     */
     message: string;
 }
-export declare class PostServersIdActionsRebuild201ApplicationJsonActionResources extends SpeakeasyBase {
+export declare class PostServersIdActionsRebuild201ApplicationJSONActionResources extends SpeakeasyBase {
+    /**
+     * ID of the Resource
+     */
     id: number;
+    /**
+     * Type of resource referenced
+     */
     type: string;
 }
-export declare enum PostServersIdActionsRebuild201ApplicationJsonActionStatusEnum {
+/**
+ * Status of the Action
+ */
+export declare enum PostServersIdActionsRebuild201ApplicationJSONActionStatusEnum {
     Success = "success",
     Running = "running",
     Error = "error"
 }
-export declare class PostServersIdActionsRebuild201ApplicationJsonAction extends SpeakeasyBase {
+export declare class PostServersIdActionsRebuild201ApplicationJSONAction extends SpeakeasyBase {
+    /**
+     * Command executed in the Action
+     */
     command: string;
-    error: PostServersIdActionsRebuild201ApplicationJsonActionError;
+    /**
+     * Error message for the Action if error occurred, otherwise null
+     */
+    error: PostServersIdActionsRebuild201ApplicationJSONActionError;
+    /**
+     * Point in time when the Action was finished (in ISO-8601 format). Only set if the Action is finished otherwise null.
+     */
     finished: string;
+    /**
+     * ID of the Resource
+     */
     id: number;
+    /**
+     * Progress of Action in percent
+     */
     progress: number;
-    resources: PostServersIdActionsRebuild201ApplicationJsonActionResources[];
+    /**
+     * Resources the Action relates to
+     */
+    resources: PostServersIdActionsRebuild201ApplicationJSONActionResources[];
+    /**
+     * Point in time when the Action was started (in ISO-8601 format)
+     */
     started: string;
-    status: PostServersIdActionsRebuild201ApplicationJsonActionStatusEnum;
+    /**
+     * Status of the Action
+     */
+    status: PostServersIdActionsRebuild201ApplicationJSONActionStatusEnum;
 }
-export declare class PostServersIdActionsRebuild201ApplicationJson extends SpeakeasyBase {
-    action?: PostServersIdActionsRebuild201ApplicationJsonAction;
+/**
+ * The `action` key in the reply contains an Action object with this structure
+ */
+export declare class PostServersIdActionsRebuild201ApplicationJSON extends SpeakeasyBase {
+    action?: PostServersIdActionsRebuild201ApplicationJSONAction;
+    /**
+     * New root password when not using SSH keys
+     */
     rootPassword?: string;
-}
-export declare class PostServersIdActionsRebuildRequest extends SpeakeasyBase {
-    pathParams: PostServersIdActionsRebuildPathParams;
-    request?: PostServersIdActionsRebuildRebuildServerRequest;
 }
 export declare class PostServersIdActionsRebuildResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    postServersIdActionsRebuild201ApplicationJSONObject?: PostServersIdActionsRebuild201ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * The `action` key in the reply contains an Action object with this structure
+     */
+    postServersIdActionsRebuild201ApplicationJSONObject?: PostServersIdActionsRebuild201ApplicationJSON;
 }

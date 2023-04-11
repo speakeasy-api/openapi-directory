@@ -1,3 +1,4 @@
 export declare enum LogTypeEnum {
-    SlowLog = "slow-log"
+    SlowLog = "slow-log",
+    EngineLog = "engine-log"
 }

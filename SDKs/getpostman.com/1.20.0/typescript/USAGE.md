@@ -1,23 +1,23 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateApiRequest, CreateApiResponse } from "openapi/src/sdk/models/operations";
+import {
+  CreateApiRequest,
+  CreateApiResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: CreateApiRequest = {
-  queryParams: {
-    workspace: "sit",
-  },
-  request: {
+  requestBody: {
     api: {
-      description: "voluptas",
-      name: "culpa",
-      summary: "expedita",
+      description: "This is description.",
+      name: "Sync Service API",
+      summary: "This is supposed to be a short summary.",
     },
   },
+  workspace: "{{workspaceId}}",
 };
 
 sdk.api.createApi(req).then((res: CreateApiResponse | AxiosError) => {

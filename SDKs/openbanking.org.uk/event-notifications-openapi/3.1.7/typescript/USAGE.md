@@ -1,18 +1,18 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateEventNotificationRequest, CreateEventNotificationResponse } from "openapi/src/sdk/models/operations";
+import {
+  CreateEventNotificationRequest,
+  CreateEventNotificationResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: CreateEventNotificationRequest = {
-  headers: {
-    xFapiFinancialId: "sit",
-    xFapiInteractionId: "voluptas",
-  },
-  request: "culpa",
+  requestBody: "corrupti",
+  xFapiFinancialId: "provident",
+  xFapiInteractionId: "distinctio",
 };
 
 sdk.eventNotification.createEventNotification(req).then((res: CreateEventNotificationResponse | AxiosError) => {

@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteRulePathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteRuleRequest extends SpeakeasyBase {
+    /**
+     * Your rule identifier
+     */
     ruleId: string;
+    /**
+     * Your store identifier
+     */
     storeId: string;
 }
-export declare class DeleteRuleRequest extends SpeakeasyBase {
-    pathParams: DeleteRulePathParams;
-}
 export declare class DeleteRuleResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     * Rule not found
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

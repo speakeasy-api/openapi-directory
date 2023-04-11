@@ -1,10 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListGroupsQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListGroupsRequest extends SpeakeasyBase {
+    /**
+     * The maximum number of results to be returned per request.
+     */
     maxResults?: string;
+    /**
+     * The token for the next set of results, or ''null'' if there are no additional results.
+     */
     nextToken?: string;
-}
-export declare class ListGroupsHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,12 +18,12 @@ export declare class ListGroupsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class ListGroupsRequest extends SpeakeasyBase {
-    queryParams: ListGroupsQueryParams;
-    headers: ListGroupsHeaders;
-}
 export declare class ListGroupsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     listGroupsResponse?: shared.ListGroupsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

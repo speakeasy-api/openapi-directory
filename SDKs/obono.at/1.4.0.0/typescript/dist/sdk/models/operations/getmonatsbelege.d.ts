@@ -1,18 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetMonatsbelegePathParams extends SpeakeasyBase {
-    registrierkasseUuid: string;
-}
-export declare class GetMonatsbelegeQueryParams extends SpeakeasyBase {
-    month?: number;
-    year?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetMonatsbelegeRequest extends SpeakeasyBase {
-    pathParams: GetMonatsbelegePathParams;
-    queryParams: GetMonatsbelegeQueryParams;
+    month?: number;
+    /**
+     * The `_uuid` of the `Registrierkasse`.
+     */
+    registrierkasseUuid: string;
+    year?: number;
 }
 export declare class GetMonatsbelegeResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Information about `Monatsbelege`.
+     */
     monatsbelegs?: shared.Monatsbeleg[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

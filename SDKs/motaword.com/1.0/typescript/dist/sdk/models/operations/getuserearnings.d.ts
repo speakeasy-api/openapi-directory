@@ -1,18 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetUserEarningsPathParams extends SpeakeasyBase {
-    userId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetUserEarningsSecurity extends SpeakeasyBase {
-    mwoAuth: shared.SchemeMwoAuth;
+    mwoAuth: string;
 }
 export declare class GetUserEarningsRequest extends SpeakeasyBase {
-    pathParams: GetUserEarningsPathParams;
-    security: GetUserEarningsSecurity;
+    /**
+     * User ID
+     */
+    userId: number;
 }
 export declare class GetUserEarningsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Earnings for vendors
+     */
     earnings?: shared.Earnings;
+    /**
+     * UserNotFound
+     */
     error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

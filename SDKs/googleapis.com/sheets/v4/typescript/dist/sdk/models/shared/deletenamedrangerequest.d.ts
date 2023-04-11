@@ -1,7 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Removes the named range with the given ID from the spreadsheet.
-**/
+ */
 export declare class DeleteNamedRangeRequest extends SpeakeasyBase {
+    /**
+     * The ID of the named range to delete.
+     */
     namedRangeId?: string;
 }

@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteClusterSubnetGroupActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteClusterSubnetGroupActionEnum {
     DeleteClusterSubnetGroup = "DeleteClusterSubnetGroup"
 }
-export declare enum GetDeleteClusterSubnetGroupVersionEnum {
+export declare enum GETDeleteClusterSubnetGroupVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class GetDeleteClusterSubnetGroupQueryParams extends SpeakeasyBase {
-    action: GetDeleteClusterSubnetGroupActionEnum;
+export declare class GETDeleteClusterSubnetGroupRequest extends SpeakeasyBase {
+    action: GETDeleteClusterSubnetGroupActionEnum;
+    /**
+     * The name of the cluster subnet group name to be deleted.
+     */
     clusterSubnetGroupName: string;
-    version: GetDeleteClusterSubnetGroupVersionEnum;
-}
-export declare class GetDeleteClusterSubnetGroupHeaders extends SpeakeasyBase {
+    version: GETDeleteClusterSubnetGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDeleteClusterSubnetGroupHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteClusterSubnetGroupRequest extends SpeakeasyBase {
-    queryParams: GetDeleteClusterSubnetGroupQueryParams;
-    headers: GetDeleteClusterSubnetGroupHeaders;
-}
-export declare class GetDeleteClusterSubnetGroupResponse extends SpeakeasyBase {
+export declare class GETDeleteClusterSubnetGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

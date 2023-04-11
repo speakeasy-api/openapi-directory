@@ -1,8 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetFieldLevelEncryption20181105PathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetFieldLevelEncryption20181105Request extends SpeakeasyBase {
+    /**
+     * Request the ID for the field-level encryption configuration information.
+     */
     id: string;
-}
-export declare class GetFieldLevelEncryption20181105Headers extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,12 +13,9 @@ export declare class GetFieldLevelEncryption20181105Headers extends SpeakeasyBas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetFieldLevelEncryption20181105Request extends SpeakeasyBase {
-    pathParams: GetFieldLevelEncryption20181105PathParams;
-    headers: GetFieldLevelEncryption20181105Headers;
-}
 export declare class GetFieldLevelEncryption20181105Response extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

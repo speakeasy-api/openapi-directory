@@ -1,101 +1,185 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { MfaModeEnum } from "./mfamodeenum";
-import { BackendAuthSocialProviderConfig } from "./backendauthsocialproviderconfig";
+import { AdditionalConstraintsElementEnum } from "./additionalconstraintselementenum";
 import { BackendAuthAppleProviderConfig } from "./backendauthappleproviderconfig";
+import { BackendAuthSocialProviderConfig } from "./backendauthsocialproviderconfig";
+import { MFAModeEnum } from "./mfamodeenum";
+import { MfaTypesElementEnum } from "./mfatypeselementenum";
+import { OAuthScopesElementEnum } from "./oauthscopeselementenum";
+import { RequiredSignUpAttributesElementEnum } from "./requiredsignupattributeselementenum";
+/**
+ * Defines whether you want to configure only authentication or both authentication and authorization settings.
+ */
+export declare enum GetBackendAuthResponseResourceConfigAuthResourcesEnum {
+    UserPoolOnly = "USER_POOL_ONLY",
+    IdentityPoolAndUserPool = "IDENTITY_POOL_AND_USER_POOL"
+}
 /**
  * Describes the authorization configuration for the Amazon Cognito identity pool, provisioned as a part of your auth resource in the Amplify project.
-**/
+ */
 export declare class GetBackendAuthResponseResourceConfigIdentityPoolConfigs extends SpeakeasyBase {
-    identityPoolName: Record<string, any>;
-    unauthenticatedLogin: Record<string, any>;
+    identityPoolName: string;
+    unauthenticatedLogin: boolean;
 }
 /**
- * The configuration for the email sent when an app user forgets their password.
-**/
+ * Defines the service name to use when configuring an authentication resource in your Amplify project.
+ */
+export declare enum GetBackendAuthResponseResourceConfigServiceEnum {
+    Cognito = "COGNITO"
+}
+/**
+ * <b>(DEPRECATED)</b> Describes which mode to use (either SMS or email) to deliver messages to app users who want to recover their password.
+ */
+export declare enum GetBackendAuthResponseResourceConfigUserPoolConfigsForgotPasswordDeliveryMethodEnum {
+    Email = "EMAIL",
+    Sms = "SMS"
+}
+/**
+ * <b>(DEPRECATED)</b> The configuration for the email sent when an app user forgets their password.
+ */
 export declare class GetBackendAuthResponseResourceConfigUserPoolConfigsForgotPasswordEmailSettings extends SpeakeasyBase {
-    emailMessage?: Record<string, any>;
-    emailSubject?: Record<string, any>;
+    emailMessage?: string;
+    emailSubject?: string;
 }
 /**
- * The configuration for the SMS message sent when an app user forgets their password.
-**/
+ * <b>(DEPRECATED)</b> The configuration for the SMS message sent when an app user forgets their password.
+ */
 export declare class GetBackendAuthResponseResourceConfigUserPoolConfigsForgotPasswordSmsSettings extends SpeakeasyBase {
-    smsMessage?: Record<string, any>;
+    smsMessage?: string;
 }
 /**
- * Describes the forgotten password policy for your Amazon Cognito user pool, configured as a part of your Amplify project.
-**/
+ * <b>(DEPRECATED)</b> Describes the forgotten password policy for your Amazon Cognito user pool, configured as a part of your Amplify project.
+ */
 export declare class GetBackendAuthResponseResourceConfigUserPoolConfigsForgotPassword extends SpeakeasyBase {
-    deliveryMethod: Record<string, any>;
+    deliveryMethod: GetBackendAuthResponseResourceConfigUserPoolConfigsForgotPasswordDeliveryMethodEnum;
     emailSettings?: GetBackendAuthResponseResourceConfigUserPoolConfigsForgotPasswordEmailSettings;
     smsSettings?: GetBackendAuthResponseResourceConfigUserPoolConfigsForgotPasswordSmsSettings;
 }
 /**
  * Describes the configuration settings and methods for your Amplify app users to use MFA.
-**/
+ */
 export declare class GetBackendAuthResponseResourceConfigUserPoolConfigsMfaSettings extends SpeakeasyBase {
-    mfaTypes?: Record<string, any>;
-    smsMessage?: Record<string, any>;
+    mfaTypes?: MfaTypesElementEnum[];
+    smsMessage?: string;
 }
 /**
  * Describes whether to apply multi-factor authentication policies for your Amazon Cognito user pool configured as a part of your Amplify project.
-**/
+ */
 export declare class GetBackendAuthResponseResourceConfigUserPoolConfigsMfa extends SpeakeasyBase {
-    mfaMode: MfaModeEnum;
+    mfaMode: MFAModeEnum;
     settings?: GetBackendAuthResponseResourceConfigUserPoolConfigsMfaSettings;
 }
 /**
+ * The OAuth grant type that you use to allow app users to authenticate from your Amplify app.
+ */
+export declare enum GetBackendAuthResponseResourceConfigUserPoolConfigsOAuthOAuthGrantTypeEnum {
+    Code = "CODE",
+    Implicit = "IMPLICIT"
+}
+/**
  * The settings for using social providers to access your Amplify app.
-**/
+ */
 export declare class GetBackendAuthResponseResourceConfigUserPoolConfigsOAuthSocialProviderSettings extends SpeakeasyBase {
+    /**
+     * Describes third-party social federation configurations for allowing your app users to sign in using OAuth.
+     */
     facebook?: BackendAuthSocialProviderConfig;
+    /**
+     * Describes third-party social federation configurations for allowing your app users to sign in using OAuth.
+     */
     google?: BackendAuthSocialProviderConfig;
+    /**
+     * Describes third-party social federation configurations for allowing your app users to sign in using OAuth.
+     */
     loginWithAmazon?: BackendAuthSocialProviderConfig;
+    /**
+     * Describes Apple social federation configurations for allowing your app users to sign in using OAuth.
+     */
     signInWithApple?: BackendAuthAppleProviderConfig;
 }
 /**
  * Describes the OAuth policy and rules for your Amazon Cognito user pool, configured as a part of your Amplify project.
-**/
+ */
 export declare class GetBackendAuthResponseResourceConfigUserPoolConfigsOAuth extends SpeakeasyBase {
-    domainPrefix?: Record<string, any>;
-    oAuthGrantType: Record<string, any>;
-    oAuthScopes: Record<string, any>;
-    redirectSignInURIs: Record<string, any>;
-    redirectSignOutURIs: Record<string, any>;
+    domainPrefix?: string;
+    oAuthGrantType: GetBackendAuthResponseResourceConfigUserPoolConfigsOAuthOAuthGrantTypeEnum;
+    oAuthScopes: OAuthScopesElementEnum[];
+    redirectSignInURIs: string[];
+    redirectSignOutURIs: string[];
     socialProviderSettings?: GetBackendAuthResponseResourceConfigUserPoolConfigsOAuthSocialProviderSettings;
 }
 /**
  * Describes the password policy for your Amazon Cognito user pool, configured as a part of your Amplify project.
-**/
+ */
 export declare class GetBackendAuthResponseResourceConfigUserPoolConfigsPasswordPolicy extends SpeakeasyBase {
-    additionalConstraints?: Record<string, any>;
-    minimumLength: Record<string, any>;
+    additionalConstraints?: AdditionalConstraintsElementEnum[];
+    minimumLength: number;
+}
+/**
+ * Describes the sign-in methods that your Amplify app users use to log in using the Amazon Cognito user pool, configured as a part of your Amplify project.
+ */
+export declare enum GetBackendAuthResponseResourceConfigUserPoolConfigsSignInMethodEnum {
+    Email = "EMAIL",
+    EmailAndPhoneNumber = "EMAIL_AND_PHONE_NUMBER",
+    PhoneNumber = "PHONE_NUMBER",
+    Username = "USERNAME"
+}
+/**
+ * The type of verification message to send.
+ */
+export declare enum GetBackendAuthResponseResourceConfigUserPoolConfigsVerificationMessageDeliveryMethodEnum {
+    Email = "EMAIL",
+    Sms = "SMS"
+}
+/**
+ * The settings for the email message.
+ */
+export declare class GetBackendAuthResponseResourceConfigUserPoolConfigsVerificationMessageEmailSettings extends SpeakeasyBase {
+    emailMessage?: string;
+    emailSubject?: string;
+}
+/**
+ * The settings for the SMS message.
+ */
+export declare class GetBackendAuthResponseResourceConfigUserPoolConfigsVerificationMessageSmsSettings extends SpeakeasyBase {
+    smsMessage?: string;
+}
+/**
+ * Describes the email or SMS verification message for your Amazon Cognito user pool, configured as a part of your Amplify project.
+ */
+export declare class GetBackendAuthResponseResourceConfigUserPoolConfigsVerificationMessage extends SpeakeasyBase {
+    deliveryMethod: GetBackendAuthResponseResourceConfigUserPoolConfigsVerificationMessageDeliveryMethodEnum;
+    emailSettings?: GetBackendAuthResponseResourceConfigUserPoolConfigsVerificationMessageEmailSettings;
+    smsSettings?: GetBackendAuthResponseResourceConfigUserPoolConfigsVerificationMessageSmsSettings;
 }
 /**
  * Describes authentication configuration for the Amazon Cognito user pool, provisioned as a part of your auth resource in the Amplify project.
-**/
+ */
 export declare class GetBackendAuthResponseResourceConfigUserPoolConfigs extends SpeakeasyBase {
     forgotPassword?: GetBackendAuthResponseResourceConfigUserPoolConfigsForgotPassword;
     mfa?: GetBackendAuthResponseResourceConfigUserPoolConfigsMfa;
     oAuth?: GetBackendAuthResponseResourceConfigUserPoolConfigsOAuth;
     passwordPolicy?: GetBackendAuthResponseResourceConfigUserPoolConfigsPasswordPolicy;
-    requiredSignUpAttributes: Record<string, any>;
-    signInMethod: Record<string, any>;
-    userPoolName: Record<string, any>;
+    requiredSignUpAttributes: RequiredSignUpAttributesElementEnum[];
+    signInMethod: GetBackendAuthResponseResourceConfigUserPoolConfigsSignInMethodEnum;
+    userPoolName: string;
+    verificationMessage?: GetBackendAuthResponseResourceConfigUserPoolConfigsVerificationMessage;
 }
 /**
  * The resource configuration for authorization requests to the backend of your Amplify project.
-**/
+ */
 export declare class GetBackendAuthResponseResourceConfig extends SpeakeasyBase {
-    authResources: Record<string, any>;
+    authResources: GetBackendAuthResponseResourceConfigAuthResourcesEnum;
     identityPoolConfigs?: GetBackendAuthResponseResourceConfigIdentityPoolConfigs;
-    service: Record<string, any>;
+    service: GetBackendAuthResponseResourceConfigServiceEnum;
     userPoolConfigs: GetBackendAuthResponseResourceConfigUserPoolConfigs;
 }
+/**
+ * Success
+ */
 export declare class GetBackendAuthResponse extends SpeakeasyBase {
-    appId?: Record<string, any>;
-    backendEnvironmentName?: Record<string, any>;
-    error?: Record<string, any>;
+    appId?: string;
+    backendEnvironmentName?: string;
+    error?: string;
     resourceConfig?: GetBackendAuthResponseResourceConfig;
-    resourceName?: Record<string, any>;
+    resourceName?: string;
 }

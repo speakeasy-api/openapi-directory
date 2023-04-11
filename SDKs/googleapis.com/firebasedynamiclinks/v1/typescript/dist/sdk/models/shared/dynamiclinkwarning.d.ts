@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The warning code.
+ */
 export declare enum DynamicLinkWarningWarningCodeEnum {
     CodeUnspecified = "CODE_UNSPECIFIED",
     NotInProjectAndroidPackageName = "NOT_IN_PROJECT_ANDROID_PACKAGE_NAME",
@@ -32,9 +35,18 @@ export declare enum DynamicLinkWarningWarningCodeEnum {
 }
 /**
  * Dynamic Links warning messages.
-**/
+ */
 export declare class DynamicLinkWarning extends SpeakeasyBase {
+    /**
+     * The warning code.
+     */
     warningCode?: DynamicLinkWarningWarningCodeEnum;
+    /**
+     * The document describing the warning, and helps resolve.
+     */
     warningDocumentLink?: string;
+    /**
+     * The warning message to help developers improve their requests.
+     */
     warningMessage?: string;
 }

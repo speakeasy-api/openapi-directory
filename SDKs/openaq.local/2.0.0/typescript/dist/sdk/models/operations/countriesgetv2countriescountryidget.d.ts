@@ -1,23 +1,58 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CountriesGetV2CountriesCountryIdGetPathParams extends SpeakeasyBase {
-    countryId: string;
+import { AxiosResponse } from "axios";
+/**
+ * An enumeration.
+ */
+export declare enum CountriesGetV2CountriesCountryIdGetOrderByCountriesOrderEnum {
+    Country = "country",
+    FirstUpdated = "firstUpdated",
+    LastUpdated = "lastUpdated",
+    Locations = "locations",
+    Count = "count"
 }
-export declare class CountriesGetV2CountriesCountryIdGetQueryParams extends SpeakeasyBase {
-    country?: string[];
-    limit?: number;
-    offset?: number;
-    orderBy?: Record<string, any>;
-    page?: number;
-    sort?: Record<string, any>;
+/**
+ * An enumeration.
+ */
+export declare enum CountriesGetV2CountriesCountryIdGetSortSortEnum {
+    Asc = "asc",
+    Desc = "desc"
 }
 export declare class CountriesGetV2CountriesCountryIdGetRequest extends SpeakeasyBase {
-    pathParams: CountriesGetV2CountriesCountryIdGetPathParams;
-    queryParams: CountriesGetV2CountriesCountryIdGetQueryParams;
+    /**
+     *
+     * @remarks
+     *         Limit results by a certain country using two letter country code.
+     *         (ex. ?country=US or ?country=US&country=MX)
+     *
+     */
+    country?: string[];
+    countryId: string;
+    limit?: number;
+    offset?: number;
+    /**
+     * An enumeration.
+     */
+    orderBy?: CountriesGetV2CountriesCountryIdGetOrderByCountriesOrderEnum;
+    /**
+     * Paginate through results.
+     */
+    page?: number;
+    /**
+     * Define sort order.
+     */
+    sort?: CountriesGetV2CountriesCountryIdGetSortSortEnum;
 }
 export declare class CountriesGetV2CountriesCountryIdGetResponse extends SpeakeasyBase {
     contentType: string;
-    httpValidationError?: shared.HttpValidationError;
-    openAQCountriesResult?: shared.OpenAqCountriesResult;
+    /**
+     * Validation Error
+     */
+    httpValidationError?: shared.HTTPValidationError;
+    /**
+     * Successful Response
+     */
+    openAQCountriesResult?: shared.OpenAQCountriesResult;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

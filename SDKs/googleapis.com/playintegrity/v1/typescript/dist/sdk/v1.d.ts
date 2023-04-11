@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class V1 {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +9,7 @@ export declare class V1 {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * playintegrityDecodeIntegrityToken - Decodes the integrity token and returns the token payload.
-    **/
-    playintegrityDecodeIntegrityToken(req: operations.PlayintegrityDecodeIntegrityTokenRequest, config?: AxiosRequestConfig): Promise<operations.PlayintegrityDecodeIntegrityTokenResponse>;
+     * Decodes the integrity token and returns the token payload.
+     */
+    playintegrityDecodeIntegrityToken(req: operations.PlayintegrityDecodeIntegrityTokenRequest, security: operations.PlayintegrityDecodeIntegrityTokenSecurity, config?: AxiosRequestConfig): Promise<operations.PlayintegrityDecodeIntegrityTokenResponse>;
 }

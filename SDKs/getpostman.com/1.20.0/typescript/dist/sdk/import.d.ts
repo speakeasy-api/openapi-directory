@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Import {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class Import {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * importExportedData - Import exported data
+     * Import exported data
      *
+     * @remarks
      * This endpoint allows you to import your exported Postman data.
      * For more information about how you can export your data, refer <a href="https://go.postman.co/me/export">Export your Postman data.</a>
      *
@@ -19,11 +20,12 @@ export declare class Import {
      * **Note**: Refer to examples for different scenarios.
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header.
-    **/
-    importExportedData(req: operations.ImportExportedDataRequest, config?: AxiosRequestConfig): Promise<operations.ImportExportedDataResponse>;
+     */
+    importExportedData(req: Uint8Array, config?: AxiosRequestConfig): Promise<operations.ImportExportedDataResponse>;
     /**
-     * importExternalApiSpecification - Import external API specification
+     * Import external API specification
      *
+     * @remarks
      * This endpoint allows you to import external API specifications into Postman.
      *
      * Currently, this endpoint only supports the <a href="https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.2.md">OpenAPI</a> specification, for which the `importType` will be `openapi`.
@@ -43,6 +45,6 @@ export declare class Import {
      * **Note**: Refer to examples for different scenarios.
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header.
-    **/
-    importExternalApiSpecification(req: operations.ImportExternalApiSpecificationRequest, config?: AxiosRequestConfig): Promise<operations.ImportExternalApiSpecificationResponse>;
+     */
+    importExternalApiSpecification(req: operations.ImportExternalApiSpecificationRequestBody, config?: AxiosRequestConfig): Promise<operations.ImportExternalApiSpecificationResponse>;
 }

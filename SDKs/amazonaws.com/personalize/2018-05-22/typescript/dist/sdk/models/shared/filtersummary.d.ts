@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * A short summary of a filter's attributes.
-**/
+ */
 export declare class FilterSummary extends SpeakeasyBase {
     creationDateTime?: Date;
     datasetGroupArn?: string;

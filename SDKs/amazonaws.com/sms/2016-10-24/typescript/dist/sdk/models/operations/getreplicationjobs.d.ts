@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetReplicationJobsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum GetReplicationJobsXAmzTargetEnum {
-    AwsServerMigrationServiceV20161024GetReplicationJobs = "AWSServerMigrationService_V2016_10_24.GetReplicationJobs"
+    AWSServerMigrationServiceV20161024GetReplicationJobs = "AWSServerMigrationService_V2016_10_24.GetReplicationJobs"
 }
-export declare class GetReplicationJobsHeaders extends SpeakeasyBase {
+export declare class GetReplicationJobsRequest extends SpeakeasyBase {
+    getReplicationJobsRequest: shared.GetReplicationJobsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,17 +14,33 @@ export declare class GetReplicationJobsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: GetReplicationJobsXAmzTargetEnum;
-}
-export declare class GetReplicationJobsRequest extends SpeakeasyBase {
-    queryParams: GetReplicationJobsQueryParams;
-    headers: GetReplicationJobsHeaders;
-    request: shared.GetReplicationJobsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class GetReplicationJobsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getReplicationJobsResponse?: shared.GetReplicationJobsResponse;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * MissingRequiredParameterException
+     */
     missingRequiredParameterException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnauthorizedOperationException
+     */
     unauthorizedOperationException?: any;
 }

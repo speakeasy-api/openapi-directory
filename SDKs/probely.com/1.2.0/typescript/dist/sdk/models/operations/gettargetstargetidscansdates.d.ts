@@ -1,20 +1,40 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetTargetsTargetIdScansDatesPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetTargetsTargetIdScansDatesRequest extends SpeakeasyBase {
+    /**
+     * Target id
+     */
     targetId: string;
 }
-export declare class GetTargetsTargetIdScansDates401ApplicationJson extends SpeakeasyBase {
+/**
+ * Not found
+ */
+export declare class GetTargetsTargetIdScansDates404ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Not found.
+     */
     detail?: string;
 }
-export declare class GetTargetsTargetIdScansDates404ApplicationJson extends SpeakeasyBase {
+/**
+ * Access token is missing or invalid
+ */
+export declare class GetTargetsTargetIdScansDates401ApplicationJSON extends SpeakeasyBase {
     detail?: string;
-}
-export declare class GetTargetsTargetIdScansDatesRequest extends SpeakeasyBase {
-    pathParams: GetTargetsTargetIdScansDatesPathParams;
 }
 export declare class GetTargetsTargetIdScansDatesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Dates for which there are scans
+     */
     getTargetsTargetIdScansDates200ApplicationJSONDateStrings?: Date[];
-    getTargetsTargetIdScansDates401ApplicationJSONObject?: GetTargetsTargetIdScansDates401ApplicationJson;
-    getTargetsTargetIdScansDates404ApplicationJSONObject?: GetTargetsTargetIdScansDates404ApplicationJson;
+    /**
+     * Access token is missing or invalid
+     */
+    getTargetsTargetIdScansDates401ApplicationJSONObject?: GetTargetsTargetIdScansDates401ApplicationJSON;
+    /**
+     * Not found
+     */
+    getTargetsTargetIdScansDates404ApplicationJSONObject?: GetTargetsTargetIdScansDates404ApplicationJSON;
 }

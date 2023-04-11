@@ -1,40 +1,34 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { ClassroomCoursesAliasesCreateRequest, ClassroomCoursesAliasesCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  ClassroomCoursesAliasesCreateRequest,
+  ClassroomCoursesAliasesCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: ClassroomCoursesAliasesCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
+  dollarXgafv: XgafvEnum.Two,
+  courseAlias: {
+    alias: "provident",
   },
-  pathParams: {
-    courseId: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
-    alias: "dicta",
-  },
+  accessToken: "distinctio",
+  alt: AltEnum.Proto,
+  callback: "unde",
+  courseId: "nulla",
+  fields: "corrupti",
+  key: "illum",
+  oauthToken: "vel",
+  prettyPrint: false,
+  quotaUser: "error",
+  uploadType: "deserunt",
+  uploadProtocol: "suscipit",
 };
 
 sdk.courses.classroomCoursesAliasesCreate(req).then((res: ClassroomCoursesAliasesCreateResponse | AxiosError) => {

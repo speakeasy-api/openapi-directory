@@ -1,17 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetAssetByRenderIdPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetAssetByRenderIdSecurity extends SpeakeasyBase {
-    developerKey: shared.SchemeDeveloperKey;
+    developerKey: string;
 }
 export declare class GetAssetByRenderIdRequest extends SpeakeasyBase {
-    pathParams: GetAssetByRenderIdPathParams;
-    security: GetAssetByRenderIdSecurity;
+    /**
+     * The render id associated with the asset in UUID format
+     */
+    id: string;
 }
 export declare class GetAssetByRenderIdResponse extends SpeakeasyBase {
+    /**
+     * Get one or more assets by render id
+     */
     assetRenderResponse?: shared.AssetRenderResponse;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

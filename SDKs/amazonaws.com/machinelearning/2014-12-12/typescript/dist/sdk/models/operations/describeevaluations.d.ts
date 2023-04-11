@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeEvaluationsQueryParams extends SpeakeasyBase {
-    limit?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum DescribeEvaluationsXAmzTargetEnum {
-    AmazonMl20141212DescribeEvaluations = "AmazonML_20141212.DescribeEvaluations"
+    AmazonML20141212DescribeEvaluations = "AmazonML_20141212.DescribeEvaluations"
 }
-export declare class DescribeEvaluationsHeaders extends SpeakeasyBase {
+export declare class DescribeEvaluationsRequest extends SpeakeasyBase {
+    describeEvaluationsInput: shared.DescribeEvaluationsInput;
+    /**
+     * Pagination limit
+     */
+    limit?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,15 +23,20 @@ export declare class DescribeEvaluationsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeEvaluationsXAmzTargetEnum;
 }
-export declare class DescribeEvaluationsRequest extends SpeakeasyBase {
-    queryParams: DescribeEvaluationsQueryParams;
-    headers: DescribeEvaluationsHeaders;
-    request: shared.DescribeEvaluationsInput;
-}
 export declare class DescribeEvaluationsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeEvaluationsOutput?: shared.DescribeEvaluationsOutput;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

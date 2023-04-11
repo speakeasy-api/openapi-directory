@@ -1,20 +1,64 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetEntityConnectionsQueryParams extends SpeakeasyBase {
-    pageSize?: number;
-    type?: shared.GlobalRequestPageSizeEntityConnectionEnum;
+import { AxiosResponse } from "axios";
+/**
+ * Specifies whether to retrieve inbound or outbound connections for an entity.
+ *
+ * @remarks
+ *
+ * Possible values:
+ *  - `inbound`: All the incoming connections to the entity.
+ *  - `outbound`: All the outgoing connections from the entity.
+ *
+ * If you do not specify this field in the request, both the inbound and outbound connections are returned.
+ *
+ */
+export declare enum GETEntityConnectionsTypeEnum {
+    Inbound = "inbound",
+    Outbound = "outbound"
 }
-export declare class GetEntityConnectionsHeaders extends SpeakeasyBase {
+export declare class GETEntityConnectionsRequest extends SpeakeasyBase {
+    /**
+     * An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+     *
+     * @remarks
+     *
+     */
     zuoraEntityIds?: string;
+    /**
+     * A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+     *
+     * @remarks
+     *
+     * The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+     *
+     */
     zuoraTrackId?: string;
+    /**
+     * Number of rows returned per page.
+     *
+     * @remarks
+     *
+     */
+    pageSize?: number;
+    /**
+     * Specifies whether to retrieve inbound or outbound connections for an entity.
+     *
+     * @remarks
+     *
+     * Possible values:
+     *  - `inbound`: All the incoming connections to the entity.
+     *  - `outbound`: All the outgoing connections from the entity.
+     *
+     * If you do not specify this field in the request, both the inbound and outbound connections are returned.
+     *
+     */
+    type?: GETEntityConnectionsTypeEnum;
 }
-export declare class GetEntityConnectionsRequest extends SpeakeasyBase {
-    queryParams: GetEntityConnectionsQueryParams;
-    headers: GetEntityConnectionsHeaders;
-}
-export declare class GetEntityConnectionsResponse extends SpeakeasyBase {
+export declare class GETEntityConnectionsResponse extends SpeakeasyBase {
     contentType: string;
-    getEntityConnectionsResponseType?: shared.GetEntityConnectionsResponseType;
-    headers: Record<string, string[]>;
+    getEntityConnectionsResponseType?: shared.GETEntityConnectionsResponseType;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,0 +1,11 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { CopyOptionEnum } from "./copyoptionenum";
+export declare class CopyProductInput extends SpeakeasyBase {
+    acceptLanguage?: string;
+    copyOptions?: CopyOptionEnum[];
+    idempotencyToken: string;
+    sourceProductArn: string;
+    sourceProvisioningArtifactIdentifiers?: Record<string, string>[];
+    targetProductId?: string;
+    targetProductName?: string;
+}

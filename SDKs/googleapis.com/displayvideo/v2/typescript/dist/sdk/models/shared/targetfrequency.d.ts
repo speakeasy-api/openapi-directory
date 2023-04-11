@@ -1,0 +1,30 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The unit of time in which the target frequency will be applied. The following time unit is applicable: * `TIME_UNIT_WEEKS`
+ */
+export declare enum TargetFrequencyTimeUnitEnum {
+    TimeUnitUnspecified = "TIME_UNIT_UNSPECIFIED",
+    TimeUnitLifetime = "TIME_UNIT_LIFETIME",
+    TimeUnitMonths = "TIME_UNIT_MONTHS",
+    TimeUnitWeeks = "TIME_UNIT_WEEKS",
+    TimeUnitDays = "TIME_UNIT_DAYS",
+    TimeUnitHours = "TIME_UNIT_HOURS",
+    TimeUnitMinutes = "TIME_UNIT_MINUTES"
+}
+/**
+ * Setting that controls the average number of times the ads will show to the same person over a certain period of time.
+ */
+export declare class TargetFrequency extends SpeakeasyBase {
+    /**
+     * The target number of times, on average, the ads will be shown to the same person in the timespan dictated by time_unit and time_unit_count.
+     */
+    targetCount?: string;
+    /**
+     * The unit of time in which the target frequency will be applied. The following time unit is applicable: * `TIME_UNIT_WEEKS`
+     */
+    timeUnit?: TargetFrequencyTimeUnitEnum;
+    /**
+     * The number of time_unit the target frequency will last. The following restrictions apply based on the value of time_unit: * `TIME_UNIT_WEEKS` - must be 1
+     */
+    timeUnitCount?: number;
+}

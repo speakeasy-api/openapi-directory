@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Playlists {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,19 +9,19 @@ export declare class Playlists {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * youtubePlaylistsDelete - Deletes a resource.
-    **/
-    youtubePlaylistsDelete(req: operations.YoutubePlaylistsDeleteRequest, config?: AxiosRequestConfig): Promise<operations.YoutubePlaylistsDeleteResponse>;
+     * Deletes a resource.
+     */
+    youtubePlaylistsDelete(req: operations.YoutubePlaylistsDeleteRequest, security: operations.YoutubePlaylistsDeleteSecurity, config?: AxiosRequestConfig): Promise<operations.YoutubePlaylistsDeleteResponse>;
     /**
-     * youtubePlaylistsInsert - Inserts a new resource into this collection.
-    **/
-    youtubePlaylistsInsert(req: operations.YoutubePlaylistsInsertRequest, config?: AxiosRequestConfig): Promise<operations.YoutubePlaylistsInsertResponse>;
+     * Inserts a new resource into this collection.
+     */
+    youtubePlaylistsInsert(req: operations.YoutubePlaylistsInsertRequest, security: operations.YoutubePlaylistsInsertSecurity, config?: AxiosRequestConfig): Promise<operations.YoutubePlaylistsInsertResponse>;
     /**
-     * youtubePlaylistsList - Retrieves a list of resources, possibly filtered.
-    **/
-    youtubePlaylistsList(req: operations.YoutubePlaylistsListRequest, config?: AxiosRequestConfig): Promise<operations.YoutubePlaylistsListResponse>;
+     * Retrieves a list of resources, possibly filtered.
+     */
+    youtubePlaylistsList(req: operations.YoutubePlaylistsListRequest, security: operations.YoutubePlaylistsListSecurity, config?: AxiosRequestConfig): Promise<operations.YoutubePlaylistsListResponse>;
     /**
-     * youtubePlaylistsUpdate - Updates an existing resource.
-    **/
-    youtubePlaylistsUpdate(req: operations.YoutubePlaylistsUpdateRequest, config?: AxiosRequestConfig): Promise<operations.YoutubePlaylistsUpdateResponse>;
+     * Updates an existing resource.
+     */
+    youtubePlaylistsUpdate(req: operations.YoutubePlaylistsUpdateRequest, security: operations.YoutubePlaylistsUpdateSecurity, config?: AxiosRequestConfig): Promise<operations.YoutubePlaylistsUpdateResponse>;
 }

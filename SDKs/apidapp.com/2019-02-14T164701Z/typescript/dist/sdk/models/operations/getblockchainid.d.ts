@@ -1,18 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetBlockchainIdPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetBlockchainIdSecurity extends SpeakeasyBase {
-    key2: shared.SchemeKey2;
+    key2: string;
 }
 export declare class GetBlockchainIdRequest extends SpeakeasyBase {
-    pathParams: GetBlockchainIdPathParams;
-    security: GetBlockchainIdSecurity;
+    id: string;
 }
 export declare class GetBlockchainIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * 200 response
+     */
     empty?: Record<string, any>;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

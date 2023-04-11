@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Information about a repository.
-**/
+ */
 export declare class RepositoryMetadata extends SpeakeasyBase {
     arn?: string;
     accountId?: string;

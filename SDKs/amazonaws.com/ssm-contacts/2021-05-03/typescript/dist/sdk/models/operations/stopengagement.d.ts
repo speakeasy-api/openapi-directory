@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum StopEngagementXAmzTargetEnum {
-    SsmContactsStopEngagement = "SSMContacts.StopEngagement"
+    SSMContactsStopEngagement = "SSMContacts.StopEngagement"
 }
-export declare class StopEngagementHeaders extends SpeakeasyBase {
+export declare class StopEngagementRequest extends SpeakeasyBase {
+    stopEngagementRequest: shared.StopEngagementRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class StopEngagementHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: StopEngagementXAmzTargetEnum;
 }
-export declare class StopEngagementRequest extends SpeakeasyBase {
-    headers: StopEngagementHeaders;
-    request: shared.StopEngagementRequest;
-}
 export declare class StopEngagementResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * Success
+     */
     stopEngagementResult?: Record<string, any>;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

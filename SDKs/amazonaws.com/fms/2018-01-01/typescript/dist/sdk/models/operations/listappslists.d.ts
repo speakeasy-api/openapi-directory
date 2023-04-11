@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListAppsListsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListAppsListsXAmzTargetEnum {
-    Awsfms20180101ListAppsLists = "AWSFMS_20180101.ListAppsLists"
+    AWSFMS20180101ListAppsLists = "AWSFMS_20180101.ListAppsLists"
 }
-export declare class ListAppsListsHeaders extends SpeakeasyBase {
+export declare class ListAppsListsRequest extends SpeakeasyBase {
+    listAppsListsRequest: shared.ListAppsListsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,17 +23,28 @@ export declare class ListAppsListsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListAppsListsXAmzTargetEnum;
 }
-export declare class ListAppsListsRequest extends SpeakeasyBase {
-    queryParams: ListAppsListsQueryParams;
-    headers: ListAppsListsHeaders;
-    request: shared.ListAppsListsRequest;
-}
 export declare class ListAppsListsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalErrorException
+     */
     internalErrorException?: any;
+    /**
+     * InvalidOperationException
+     */
     invalidOperationException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * Success
+     */
     listAppsListsResponse?: shared.ListAppsListsResponse;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

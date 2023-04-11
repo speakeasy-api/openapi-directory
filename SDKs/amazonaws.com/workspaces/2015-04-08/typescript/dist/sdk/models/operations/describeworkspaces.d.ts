@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeWorkspacesQueryParams extends SpeakeasyBase {
-    limit?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum DescribeWorkspacesXAmzTargetEnum {
     WorkspacesServiceDescribeWorkspaces = "WorkspacesService.DescribeWorkspaces"
 }
-export declare class DescribeWorkspacesHeaders extends SpeakeasyBase {
+export declare class DescribeWorkspacesRequest extends SpeakeasyBase {
+    describeWorkspacesRequest: shared.DescribeWorkspacesRequest;
+    /**
+     * Pagination limit
+     */
+    limit?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,15 +23,20 @@ export declare class DescribeWorkspacesHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeWorkspacesXAmzTargetEnum;
 }
-export declare class DescribeWorkspacesRequest extends SpeakeasyBase {
-    queryParams: DescribeWorkspacesQueryParams;
-    headers: DescribeWorkspacesHeaders;
-    request: shared.DescribeWorkspacesRequest;
-}
 export declare class DescribeWorkspacesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeWorkspacesResult?: shared.DescribeWorkspacesResult;
+    /**
+     * InvalidParameterValuesException
+     */
     invalidParameterValuesException?: any;
-    resourceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceUnavailableException
+     */
+    resourceUnavailableException?: any;
 }

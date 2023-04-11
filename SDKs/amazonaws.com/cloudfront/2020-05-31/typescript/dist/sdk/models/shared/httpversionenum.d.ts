@@ -1,4 +1,6 @@
 export declare enum HttpVersionEnum {
     Http11 = "http1.1",
-    Http2 = "http2"
+    Http2 = "http2",
+    Http3 = "http3",
+    Http2and3 = "http2and3"
 }

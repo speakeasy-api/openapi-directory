@@ -1,7 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { PublicEndpoint } from "./publicendpoint";
 import { Event } from "./event";
+import { PublicEndpoint } from "./publicendpoint";
+/**
+ * Specifies a batch of endpoints and events to process.
+ */
 export declare class EventsBatch extends SpeakeasyBase {
-    endpoint?: PublicEndpoint;
-    events?: Record<string, Event>;
+    endpoint: PublicEndpoint;
+    events: Record<string, Event>;
 }

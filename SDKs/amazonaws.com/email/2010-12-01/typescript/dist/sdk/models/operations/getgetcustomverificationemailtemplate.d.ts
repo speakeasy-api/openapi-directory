@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetGetCustomVerificationEmailTemplateActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETGETCustomVerificationEmailTemplateActionEnum {
     GetCustomVerificationEmailTemplate = "GetCustomVerificationEmailTemplate"
 }
-export declare enum GetGetCustomVerificationEmailTemplateVersionEnum {
+export declare enum GETGETCustomVerificationEmailTemplateVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetGetCustomVerificationEmailTemplateQueryParams extends SpeakeasyBase {
-    action: GetGetCustomVerificationEmailTemplateActionEnum;
+export declare class GETGETCustomVerificationEmailTemplateRequest extends SpeakeasyBase {
+    action: GETGETCustomVerificationEmailTemplateActionEnum;
+    /**
+     * The name of the custom verification email template that you want to retrieve.
+     */
     templateName: string;
-    version: GetGetCustomVerificationEmailTemplateVersionEnum;
-}
-export declare class GetGetCustomVerificationEmailTemplateHeaders extends SpeakeasyBase {
+    version: GETGETCustomVerificationEmailTemplateVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetGetCustomVerificationEmailTemplateHeaders extends Speake
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetGetCustomVerificationEmailTemplateRequest extends SpeakeasyBase {
-    queryParams: GetGetCustomVerificationEmailTemplateQueryParams;
-    headers: GetGetCustomVerificationEmailTemplateHeaders;
-}
-export declare class GetGetCustomVerificationEmailTemplateResponse extends SpeakeasyBase {
+export declare class GETGETCustomVerificationEmailTemplateResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

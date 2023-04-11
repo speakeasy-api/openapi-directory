@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class DeleteTrafficMirrorFilterResult extends SpeakeasyBase {
-    trafficMirrorFilterId?: Record<string, any>;
+    trafficMirrorFilterId?: string;
 }

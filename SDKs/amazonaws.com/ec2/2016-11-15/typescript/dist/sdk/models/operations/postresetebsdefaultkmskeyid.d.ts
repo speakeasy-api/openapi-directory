@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostResetEbsDefaultKmsKeyIdActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTResetEbsDefaultKmsKeyIdActionEnum {
     ResetEbsDefaultKmsKeyId = "ResetEbsDefaultKmsKeyId"
 }
-export declare enum PostResetEbsDefaultKmsKeyIdVersionEnum {
+export declare enum POSTResetEbsDefaultKmsKeyIdVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostResetEbsDefaultKmsKeyIdQueryParams extends SpeakeasyBase {
-    action: PostResetEbsDefaultKmsKeyIdActionEnum;
-    version: PostResetEbsDefaultKmsKeyIdVersionEnum;
-}
-export declare class PostResetEbsDefaultKmsKeyIdHeaders extends SpeakeasyBase {
+export declare class POSTResetEbsDefaultKmsKeyIdRequest extends SpeakeasyBase {
+    action: POSTResetEbsDefaultKmsKeyIdActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTResetEbsDefaultKmsKeyIdVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostResetEbsDefaultKmsKeyIdHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostResetEbsDefaultKmsKeyIdRequest extends SpeakeasyBase {
-    queryParams: PostResetEbsDefaultKmsKeyIdQueryParams;
-    headers: PostResetEbsDefaultKmsKeyIdHeaders;
-    request?: Uint8Array;
-}
-export declare class PostResetEbsDefaultKmsKeyIdResponse extends SpeakeasyBase {
+export declare class POSTResetEbsDefaultKmsKeyIdResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

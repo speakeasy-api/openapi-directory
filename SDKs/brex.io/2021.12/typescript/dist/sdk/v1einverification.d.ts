@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * US EIN tax number methods
+ */
 export declare class V1EinVerification {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,21 +12,24 @@ export declare class V1EinVerification {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * einVerificationBasic - Verifies an EIN number
+     * Verifies an EIN number
      *
+     * @remarks
      * Performs a basic verification check of a given EIN tax number.
-    **/
-    einVerificationBasic(req: operations.EinVerificationBasicRequest, config?: AxiosRequestConfig): Promise<operations.EinVerificationBasicResponse>;
+     */
+    einVerificationBasic(req: operations.EinVerificationBasicRequest, security: operations.EinVerificationBasicSecurity, config?: AxiosRequestConfig): Promise<operations.EinVerificationBasicResponse>;
     /**
-     * einVerificationComprehensive - Verifies EIN number and retrieves company data
+     * Verifies EIN number and retrieves company data
      *
+     * @remarks
      * Comprehensive verification of a given EIN number. Additionally to the basic verification it will lookup company details
-    **/
-    einVerificationComprehensive(req: operations.EinVerificationComprehensiveRequest, config?: AxiosRequestConfig): Promise<operations.EinVerificationComprehensiveResponse>;
+     */
+    einVerificationComprehensive(req: operations.EinVerificationComprehensiveRequest, security: operations.EinVerificationComprehensiveSecurity, config?: AxiosRequestConfig): Promise<operations.EinVerificationComprehensiveResponse>;
     /**
-     * einVerificationLookup - Retrieves a list of EIN numbers
+     * Retrieves a list of EIN numbers
      *
+     * @remarks
      * Lookup EIN number for a company by its company name
-    **/
-    einVerificationLookup(req: operations.EinVerificationLookupRequest, config?: AxiosRequestConfig): Promise<operations.EinVerificationLookupResponse>;
+     */
+    einVerificationLookup(req: operations.EinVerificationLookupRequest, security: operations.EinVerificationLookupSecurity, config?: AxiosRequestConfig): Promise<operations.EinVerificationLookupResponse>;
 }

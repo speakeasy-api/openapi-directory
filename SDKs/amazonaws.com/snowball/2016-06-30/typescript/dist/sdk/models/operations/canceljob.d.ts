@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum CancelJobXAmzTargetEnum {
-    AwsieSnowballJobManagementServiceCancelJob = "AWSIESnowballJobManagementService.CancelJob"
+    AWSIESnowballJobManagementServiceCancelJob = "AWSIESnowballJobManagementService.CancelJob"
 }
-export declare class CancelJobHeaders extends SpeakeasyBase {
+export declare class CancelJobRequest extends SpeakeasyBase {
+    cancelJobRequest: shared.CancelJobRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class CancelJobHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: CancelJobXAmzTargetEnum;
 }
-export declare class CancelJobRequest extends SpeakeasyBase {
-    headers: CancelJobHeaders;
-    request: shared.CancelJobRequest;
-}
 export declare class CancelJobResponse extends SpeakeasyBase {
+    /**
+     * Success
+     */
     cancelJobResult?: Record<string, any>;
     contentType: string;
+    /**
+     * InvalidJobStateException
+     */
     invalidJobStateException?: any;
+    /**
+     * InvalidResourceException
+     */
     invalidResourceException?: any;
+    /**
+     * KMSRequestFailedException
+     */
     kmsRequestFailedException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

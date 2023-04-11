@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostWithdrawByoipCidrActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTWithdrawByoipCidrActionEnum {
     WithdrawByoipCidr = "WithdrawByoipCidr"
 }
-export declare enum PostWithdrawByoipCidrVersionEnum {
+export declare enum POSTWithdrawByoipCidrVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostWithdrawByoipCidrQueryParams extends SpeakeasyBase {
-    action: PostWithdrawByoipCidrActionEnum;
-    version: PostWithdrawByoipCidrVersionEnum;
-}
-export declare class PostWithdrawByoipCidrHeaders extends SpeakeasyBase {
+export declare class POSTWithdrawByoipCidrRequest extends SpeakeasyBase {
+    action: POSTWithdrawByoipCidrActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTWithdrawByoipCidrVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostWithdrawByoipCidrHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostWithdrawByoipCidrRequest extends SpeakeasyBase {
-    queryParams: PostWithdrawByoipCidrQueryParams;
-    headers: PostWithdrawByoipCidrHeaders;
-    request?: Uint8Array;
-}
-export declare class PostWithdrawByoipCidrResponse extends SpeakeasyBase {
+export declare class POSTWithdrawByoipCidrResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

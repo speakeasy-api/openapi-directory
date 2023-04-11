@@ -1,20 +1,28 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class TeamsListProjectsInOrgPathParams extends SpeakeasyBase {
-    org: string;
-    teamSlug: string;
-}
-export declare class TeamsListProjectsInOrgQueryParams extends SpeakeasyBase {
-    page?: number;
-    perPage?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class TeamsListProjectsInOrgRequest extends SpeakeasyBase {
-    pathParams: TeamsListProjectsInOrgPathParams;
-    queryParams: TeamsListProjectsInOrgQueryParams;
+    org: string;
+    /**
+     * Page number of the results to fetch.
+     */
+    page?: number;
+    /**
+     * Results per page (max 100)
+     */
+    perPage?: number;
+    /**
+     * team_slug parameter
+     */
+    teamSlug: string;
 }
 export declare class TeamsListProjectsInOrgResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     teamProjects?: shared.TeamProject[];
 }

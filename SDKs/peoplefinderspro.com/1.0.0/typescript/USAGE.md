@@ -1,31 +1,31 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { SearchRequest, SearchResponse } from "openapi/src/sdk/models/operations";
+import {
+  SearchRequest,
+  SearchResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: SearchRequest = {
-  headers: {
-    galaxyApName: "sit",
-    galaxyApPassword: "voluptas",
-    galaxySearchType: "culpa",
-  },
-  request: {
+  requestBody: {
     address: {
-      addressLine1: "expedita",
-      addressLine2: "consequuntur",
+      addressLine1: "corrupti",
+      addressLine2: "provident",
     },
-    age: 96.199997,
-    dob: "voluptas",
-    email: "fugit",
-    firstName: "et",
-    lastName: "nihil",
-    middleName: "rerum",
-    phoneNumber: "dicta",
+    age: 7151.9,
+    dob: "quibusdam",
+    email: "Ryan.Little62@yahoo.com",
+    firstName: "Luna",
+    lastName: "Hoppe",
+    middleName: "iure",
+    phoneNumber: "magnam",
   },
+  galaxyApName: "debitis",
+  galaxyApPassword: "ipsa",
+  galaxySearchType: "delectus",
 };
 
 sdk.search(req).then((res: SearchResponse | AxiosError) => {

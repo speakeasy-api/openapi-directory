@@ -1,12 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ListDistributionsByCachePolicyId20200531PathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListDistributionsByCachePolicyId20200531Request extends SpeakeasyBase {
+    /**
+     * The ID of the cache policy whose associated distribution IDs you want to list.
+     */
     cachePolicyId: string;
-}
-export declare class ListDistributionsByCachePolicyId20200531QueryParams extends SpeakeasyBase {
+    /**
+     * Use this field when paginating results to indicate where to begin in your list of distribution IDs. The response includes distribution IDs in the list that occur after the marker. To get the next page of the list, set this field's value to the value of <code>NextMarker</code> from the current page's response.
+     */
     marker?: string;
+    /**
+     * The maximum number of distribution IDs that you want in the response.
+     */
     maxItems?: string;
-}
-export declare class ListDistributionsByCachePolicyId20200531Headers extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -15,13 +21,9 @@ export declare class ListDistributionsByCachePolicyId20200531Headers extends Spe
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class ListDistributionsByCachePolicyId20200531Request extends SpeakeasyBase {
-    pathParams: ListDistributionsByCachePolicyId20200531PathParams;
-    queryParams: ListDistributionsByCachePolicyId20200531QueryParams;
-    headers: ListDistributionsByCachePolicyId20200531Headers;
-}
 export declare class ListDistributionsByCachePolicyId20200531Response extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

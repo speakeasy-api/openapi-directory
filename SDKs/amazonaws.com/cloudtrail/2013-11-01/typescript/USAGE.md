@@ -1,37 +1,45 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AddTagsRequest, AddTagsResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  AddTagsRequest,
+  AddTagsResponse,
+  AddTagsXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: AddTagsRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.AddTags",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
-    resourceId: "fugit",
+});
+
+const req: AddTagsRequest = {
+  addTagsRequest: {
+    resourceId: "corrupti",
     tagsList: [
       {
-        key: "nihil",
-        value: "rerum",
+        key: "distinctio",
+        value: "quibusdam",
+      },
+      {
+        key: "unde",
+        value: "nulla",
+      },
+      {
+        key: "corrupti",
+        value: "illum",
       },
     ],
   },
+  xAmzAlgorithm: "vel",
+  xAmzContentSha256: "error",
+  xAmzCredential: "deserunt",
+  xAmzDate: "suscipit",
+  xAmzSecurityToken: "iure",
+  xAmzSignature: "magnam",
+  xAmzSignedHeaders: "debitis",
+  xAmzTarget: AddTagsXAmzTargetEnum.ComAmazonawsCloudtrailV20131101CloudTrail20131101AddTags,
 };
 
 sdk.addTags(req).then((res: AddTagsResponse | AxiosError) => {

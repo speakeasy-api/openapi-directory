@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class EnterpriseAdminDisableSelectedOrganizationGithubActionsEnterprisePathParams extends SpeakeasyBase {
-    enterprise: string;
-    orgId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class EnterpriseAdminDisableSelectedOrganizationGithubActionsEnterpriseRequest extends SpeakeasyBase {
-    pathParams: EnterpriseAdminDisableSelectedOrganizationGithubActionsEnterprisePathParams;
+    /**
+     * The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+     */
+    enterprise: string;
+    /**
+     * The unique identifier of the organization.
+     */
+    orgId: number;
 }
 export declare class EnterpriseAdminDisableSelectedOrganizationGithubActionsEnterpriseResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

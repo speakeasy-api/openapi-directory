@@ -1,23 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ApplicationsAddOwnerPathParams extends SpeakeasyBase {
-    applicationObjectId: string;
-    tenantID: string;
-}
-export declare class ApplicationsAddOwnerQueryParams extends SpeakeasyBase {
-    apiVersion: string;
-}
-export declare class ApplicationsAddOwnerRequests extends SpeakeasyBase {
-    addOwnerParameters?: Record<string, Record<string, any>>;
-    addOwnerParameters1?: Record<string, Record<string, any>>;
-}
+import { AxiosResponse } from "axios";
 export declare class ApplicationsAddOwnerRequest extends SpeakeasyBase {
-    pathParams: ApplicationsAddOwnerPathParams;
-    queryParams: ApplicationsAddOwnerQueryParams;
-    request: ApplicationsAddOwnerRequests;
+    /**
+     * The URL of the owner object, such as https://graph.windows.net/0b1f9851-1bf0-433f-aec3-cb9272f093dc/directoryObjects/f260bbc4-c254-447b-94cf-293b5ec434dd.
+     */
+    requestBody: Record<string, Record<string, any>>;
+    /**
+     * Client API version.
+     */
+    apiVersion: string;
+    /**
+     * The object ID of the application to which to add the owner.
+     */
+    applicationObjectId: string;
+    /**
+     * The tenant ID.
+     */
+    tenantID: string;
 }
 export declare class ApplicationsAddOwnerResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Error response describing why the operation failed.
+     */
     graphError?: shared.GraphError;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

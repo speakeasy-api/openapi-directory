@@ -5,6 +5,9 @@ export declare class GlobalHookConfig extends SpeakeasyBase {
     secret?: string;
     url?: string;
 }
+/**
+ * Response
+ */
 export declare class GlobalHook extends SpeakeasyBase {
     active?: boolean;
     config?: GlobalHookConfig;

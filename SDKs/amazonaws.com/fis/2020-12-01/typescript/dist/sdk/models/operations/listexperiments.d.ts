@@ -1,10 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListExperimentsQueryParams extends SpeakeasyBase {
-    maxResults?: number;
-    nextToken?: string;
-}
-export declare class ListExperimentsHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListExperimentsRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,14 +9,25 @@ export declare class ListExperimentsHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class ListExperimentsRequest extends SpeakeasyBase {
-    queryParams: ListExperimentsQueryParams;
-    headers: ListExperimentsHeaders;
+    /**
+     * The maximum number of results to return with a single call. To retrieve the remaining results, make another call with the returned <code>nextToken</code> value.
+     */
+    maxResults?: number;
+    /**
+     * The token for the next page of results.
+     */
+    nextToken?: string;
 }
 export declare class ListExperimentsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     listExperimentsResponse?: shared.ListExperimentsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

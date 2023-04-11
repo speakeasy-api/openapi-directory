@@ -1,14 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListLaunchProfileMembersPathParams extends SpeakeasyBase {
-    launchProfileId: string;
-    studioId: string;
-}
-export declare class ListLaunchProfileMembersQueryParams extends SpeakeasyBase {
-    maxResults?: number;
-    nextToken?: string;
-}
-export declare class ListLaunchProfileMembersHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListLaunchProfileMembersRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,21 +9,57 @@ export declare class ListLaunchProfileMembersHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class ListLaunchProfileMembersRequest extends SpeakeasyBase {
-    pathParams: ListLaunchProfileMembersPathParams;
-    queryParams: ListLaunchProfileMembersQueryParams;
-    headers: ListLaunchProfileMembersHeaders;
+    /**
+     * The ID of the launch profile used to control access from the streaming session.
+     */
+    launchProfileId: string;
+    /**
+     * The max number of results to return in the response.
+     */
+    maxResults?: number;
+    /**
+     * The token for the next set of results, or null if there are no more results.
+     */
+    nextToken?: string;
+    /**
+     * The studio ID.
+     */
+    studioId: string;
 }
 export declare class ListLaunchProfileMembersResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
+    /**
+     * Success
+     */
     listLaunchProfileMembersResponse?: shared.ListLaunchProfileMembersResponse;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
-    serviceQuotaExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceQuotaExceededException
+     */
+    serviceQuotaExceededException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

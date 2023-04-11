@@ -6,35 +6,34 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/edrv.io/v1/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/edrv.io/v1/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DeleteChargeStationRequest, DeleteChargeStationResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  DeleteChargeStationRequest,
+  DeleteChargeStationResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  }
-));
-    
-const req: DeleteChargeStationRequest = {
-  pathParams: {
-    id: "sit",
+    oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
   },
+});
+
+const req: DeleteChargeStationRequest = {
+  id: "corrupti",
 };
 
 sdk.chargeStations.deleteChargeStation(req).then((res: DeleteChargeStationResponse | AxiosError) => {
@@ -44,9 +43,10 @@ sdk.chargeStations.deleteChargeStation(req).then((res: DeleteChargeStationRespon
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### Charge Stations
+
+### chargeStations
 
 * `deleteChargeStation` - Use to delete a charge station
 * `getChargeStation` - Get a single charge station's data
@@ -55,7 +55,7 @@ sdk.chargeStations.deleteChargeStation(req).then((res: DeleteChargeStationRespon
 * `patchChargeStation` - Update a charge station's data
 * `postChargeStations` - Create a new charge station
 
-### Commands
+### commands
 
 * `cancelreservation` - Use to request a delete an existing reservation. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
 * `getCommands` - Get Commands data
@@ -67,13 +67,13 @@ sdk.chargeStations.deleteChargeStation(req).then((res: DeleteChargeStationRespon
 * `reset` - Use to request a reset command. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
 * `unlockconnector` - Use to request an unlock command for a connector. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
 
-### Configurations
+### configurations
 
 * `getConfiguration` - Get one Configuration data
 * `getConfigurations` - Get Configurations data
 * `postConfigurations` - Create connector with parameters
 
-### Connectors
+### connectors
 
 * `deleteConnector` - Delete a connector
 * `getConnector` - Get a connector
@@ -81,7 +81,7 @@ sdk.chargeStations.deleteChargeStation(req).then((res: DeleteChargeStationRespon
 * `patchConnector` - Update a connector's data
 * `postConnectors` - Create a new connector
 
-### Drivers
+### drivers
 
 * `deleteDriver` - Delete a driver
 * `getDriver` - Get a driver's data
@@ -89,7 +89,7 @@ sdk.chargeStations.deleteChargeStation(req).then((res: DeleteChargeStationRespon
 * `patchDriver` - Update a driver's data
 * `postDrivers` - Create a new driver
 
-### Locations
+### locations
 
 * `deleteLocation` - Delete a location
 * `getLocation` - Get a location's data
@@ -97,28 +97,28 @@ sdk.chargeStations.deleteChargeStation(req).then((res: DeleteChargeStationRespon
 * `patchLocation` - Update a location's data
 * `postLocations` - Create a new location
 
-### Organizations
+### organizations
 
 * `getOrganization` - Get one organization's data by id
 * `getOrganizations` - Get an array of all Organizations
 * `patchOrganization` - Update an organization's data
 
-### Realtime
+### realtime
 
 * `getRealtime` - Use to request a Websockets handshake
 
-### Reservations
+### reservations
 
 * `getReservation` - Get one reservation data
 * `getReservations` - Get Reservations data
 * `updatereservation` - Use to request a update an existing reservation. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
 
-### Smart Charging
+### smartCharging
 
 * `deletechargingschedule` - Delete a smart charging schedule
 * `setchargingschedule` - Set one of charging power or current of a specific chargestation connector
 
-### Tokens
+### tokens
 
 * `deleteToken` - Use to delete a token
 * `getToken` - Get a single token's data
@@ -126,13 +126,13 @@ sdk.chargeStations.deleteChargeStation(req).then((res: DeleteChargeStationRespon
 * `patchToken` - Update a token
 * `postTokens` - Create a new token
 
-### Transactions
+### transactions
 
 * `getTransaction` - Get a specific transaction
 * `getTransactionCost` - Get a specific transaction's cost
 * `getTransactions` - Get a list of transactions
 
-### Vehicles
+### vehicles
 
 * `getVehicle` - Get a vehicle's data
 * `getVehicleBattery` - Get a vehicle's battery
@@ -141,7 +141,18 @@ sdk.chargeStations.deleteChargeStation(req).then((res: DeleteChargeStationRespon
 * `getVehicleOdometer` - Get a vehicle's odometer
 * `getVehicles` - List all vehicles
 * `postCharge` - Change charge
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

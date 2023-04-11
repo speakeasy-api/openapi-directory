@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeReplicationTasksQueryParams extends SpeakeasyBase {
-    marker?: string;
-    maxRecords?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum DescribeReplicationTasksXAmzTargetEnum {
-    AmazonDmSv20160101DescribeReplicationTasks = "AmazonDMSv20160101.DescribeReplicationTasks"
+    AmazonDMSv20160101DescribeReplicationTasks = "AmazonDMSv20160101.DescribeReplicationTasks"
 }
-export declare class DescribeReplicationTasksHeaders extends SpeakeasyBase {
+export declare class DescribeReplicationTasksRequest extends SpeakeasyBase {
+    describeReplicationTasksMessage: shared.DescribeReplicationTasksMessage;
+    /**
+     * Pagination token
+     */
+    marker?: string;
+    /**
+     * Pagination limit
+     */
+    maxRecords?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,14 +23,16 @@ export declare class DescribeReplicationTasksHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeReplicationTasksXAmzTargetEnum;
 }
-export declare class DescribeReplicationTasksRequest extends SpeakeasyBase {
-    queryParams: DescribeReplicationTasksQueryParams;
-    headers: DescribeReplicationTasksHeaders;
-    request: shared.DescribeReplicationTasksMessage;
-}
 export declare class DescribeReplicationTasksResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeReplicationTasksResponse?: shared.DescribeReplicationTasksResponse;
+    /**
+     * ResourceNotFoundFault
+     */
     resourceNotFoundFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

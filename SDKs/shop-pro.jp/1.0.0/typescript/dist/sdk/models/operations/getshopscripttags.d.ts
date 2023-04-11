@@ -1,30 +1,62 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetShopScriptTagsSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
-}
-export declare enum GetShopScriptTags200ApplicationJsonScriptTagsDisplayScopeEnum {
+import { AxiosResponse } from "axios";
+/**
+ * スクリプトを出力するページ
+ *
+ * @remarks
+ * - `shop`: ショップページ
+ * - `thanks_page`: 注文完了ページ
+ *
+ */
+export declare enum GetShopScriptTags200ApplicationJSONScriptTagsDisplayScopeEnum {
     Shop = "shop",
     ThanksPage = "thanks_page"
 }
-export declare class GetShopScriptTags200ApplicationJsonScriptTags extends SpeakeasyBase {
+export declare class GetShopScriptTags200ApplicationJSONScriptTags extends SpeakeasyBase {
+    /**
+     * アカウントID
+     */
     accountId?: string;
-    displayScope?: GetShopScriptTags200ApplicationJsonScriptTagsDisplayScopeEnum;
+    /**
+     * スクリプトを出力するページ
+     *
+     * @remarks
+     * - `shop`: ショップページ
+     * - `thanks_page`: 注文完了ページ
+     *
+     */
+    displayScope?: GetShopScriptTags200ApplicationJSONScriptTagsDisplayScopeEnum;
+    /**
+     * スクリプトタグID
+     */
     id?: number;
+    /**
+     * スクリプトファイルのハッシュ値（script tagのintegrity属性）
+     */
     integrity?: string;
+    /**
+     * 作成日時
+     */
     makeDate?: number;
+    /**
+     * OAuthアプリケーションID
+     */
     oauthApplicationId?: number;
+    /**
+     * スクリプトURL
+     */
     src?: string;
+    /**
+     * 更新日時
+     */
     updateDate?: number;
 }
-export declare class GetShopScriptTags200ApplicationJson extends SpeakeasyBase {
-    scriptTags?: GetShopScriptTags200ApplicationJsonScriptTags[];
-}
-export declare class GetShopScriptTagsRequest extends SpeakeasyBase {
-    security: GetShopScriptTagsSecurity;
+export declare class GetShopScriptTags200ApplicationJSON extends SpeakeasyBase {
+    scriptTags?: GetShopScriptTags200ApplicationJSONScriptTags[];
 }
 export declare class GetShopScriptTagsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getShopScriptTags200ApplicationJSONObject?: GetShopScriptTags200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    getShopScriptTags200ApplicationJSONObject?: GetShopScriptTags200ApplicationJSON;
 }

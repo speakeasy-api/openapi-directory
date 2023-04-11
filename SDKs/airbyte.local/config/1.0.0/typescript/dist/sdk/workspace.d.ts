@@ -1,5 +1,9 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Workspace related resources.
+ */
 export declare class Workspace {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,27 +13,39 @@ export declare class Workspace {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createWorkspace - Creates a workspace
-    **/
-    createWorkspace(req: operations.CreateWorkspaceRequest, config?: AxiosRequestConfig): Promise<operations.CreateWorkspaceResponse>;
+     * Creates a workspace
+     */
+    createWorkspace(req: shared.WorkspaceCreate, config?: AxiosRequestConfig): Promise<operations.CreateWorkspaceResponse>;
     /**
-     * deleteWorkspace - Deletes a workspace
-    **/
-    deleteWorkspace(req: operations.DeleteWorkspaceRequest, config?: AxiosRequestConfig): Promise<operations.DeleteWorkspaceResponse>;
+     * Deletes a workspace
+     */
+    deleteWorkspace(req: shared.WorkspaceIdRequestBody, config?: AxiosRequestConfig): Promise<operations.DeleteWorkspaceResponse>;
     /**
-     * getWorkspace - Find workspace by ID
-    **/
-    getWorkspace(req: operations.GetWorkspaceRequest, config?: AxiosRequestConfig): Promise<operations.GetWorkspaceResponse>;
+     * Find workspace by ID
+     */
+    getWorkspace(req: shared.WorkspaceIdRequestBody, config?: AxiosRequestConfig): Promise<operations.GetWorkspaceResponse>;
     /**
-     * getWorkspaceBySlug - Find workspace by slug
-    **/
-    getWorkspaceBySlug(req: operations.GetWorkspaceBySlugRequest, config?: AxiosRequestConfig): Promise<operations.GetWorkspaceBySlugResponse>;
+     * Find workspace by connection id
+     */
+    getWorkspaceByConnectionId(req: shared.ConnectionIdRequestBody, config?: AxiosRequestConfig): Promise<operations.GetWorkspaceByConnectionIdResponse>;
     /**
-     * listWorkspaces - List all workspaces registered in the current Airbyte deployment
-    **/
+     * Find workspace by slug
+     */
+    getWorkspaceBySlug(req: shared.SlugRequestBody, config?: AxiosRequestConfig): Promise<operations.GetWorkspaceBySlugResponse>;
+    /**
+     * List all workspaces registered in the current Airbyte deployment
+     */
     listWorkspaces(config?: AxiosRequestConfig): Promise<operations.ListWorkspacesResponse>;
     /**
-     * updateWorkspace - Update workspace state
-    **/
-    updateWorkspace(req: operations.UpdateWorkspaceRequest, config?: AxiosRequestConfig): Promise<operations.UpdateWorkspaceResponse>;
+     * Update workspace state
+     */
+    updateWorkspace(req: shared.WorkspaceUpdate, config?: AxiosRequestConfig): Promise<operations.UpdateWorkspaceResponse>;
+    /**
+     * Update workspace feedback state
+     */
+    updateWorkspaceFeedback(req: shared.WorkspaceGiveFeedback, config?: AxiosRequestConfig): Promise<operations.UpdateWorkspaceFeedbackResponse>;
+    /**
+     * Update workspace name
+     */
+    updateWorkspaceName(req: shared.WorkspaceUpdateName, config?: AxiosRequestConfig): Promise<operations.UpdateWorkspaceNameResponse>;
 }

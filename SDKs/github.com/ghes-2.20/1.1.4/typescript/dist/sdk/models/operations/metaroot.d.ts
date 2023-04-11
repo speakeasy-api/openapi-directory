@@ -1,5 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class MetaRoot200ApplicationJson extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+/**
+ * Response
+ */
+export declare class MetaRoot200ApplicationJSON extends SpeakeasyBase {
     authorizationsUrl: string;
     codeSearchUrl: string;
     commitSearchUrl: string;
@@ -37,5 +41,9 @@ export declare class MetaRoot200ApplicationJson extends SpeakeasyBase {
 export declare class MetaRootResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    metaRoot200ApplicationJSONObject?: MetaRoot200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
+    metaRoot200ApplicationJSONObject?: MetaRoot200ApplicationJSON;
 }

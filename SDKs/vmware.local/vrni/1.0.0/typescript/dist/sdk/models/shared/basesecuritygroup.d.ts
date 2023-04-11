@@ -1,7 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { RuleSet } from "./ruleset";
-import { Reference } from "./reference";
 import { EntityTypeEnum } from "./entitytypeenum";
+import { Reference } from "./reference";
+import { RuleSet } from "./ruleset";
+/**
+ * OK
+ */
 export declare class BaseSecurityGroup extends SpeakeasyBase {
     directDestinationRules?: RuleSet[];
     directMembers?: Reference[];

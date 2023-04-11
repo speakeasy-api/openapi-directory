@@ -14,6 +14,7 @@ export * from "./batchgetreportgroupsinput";
 export * from "./batchgetreportgroupsoutput";
 export * from "./batchgetreportsinput";
 export * from "./batchgetreportsoutput";
+export * from "./batchreportmodetypeenum";
 export * from "./batchrestrictions";
 export * from "./bucketowneraccessenum";
 export * from "./build";

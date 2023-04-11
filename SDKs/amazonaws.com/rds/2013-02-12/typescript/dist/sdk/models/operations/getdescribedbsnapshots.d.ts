@@ -1,20 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeDbSnapshotsActionEnum {
-    DescribeDbSnapshots = "DescribeDBSnapshots"
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeDBSnapshotsActionEnum {
+    DescribeDBSnapshots = "DescribeDBSnapshots"
 }
-export declare enum GetDescribeDbSnapshotsVersionEnum {
+export declare enum GETDescribeDBSnapshotsVersionEnum {
     TwoThousandAndThirteen0212 = "2013-02-12"
 }
-export declare class GetDescribeDbSnapshotsQueryParams extends SpeakeasyBase {
-    action: GetDescribeDbSnapshotsActionEnum;
+export declare class GETDescribeDBSnapshotsRequest extends SpeakeasyBase {
+    action: GETDescribeDBSnapshotsActionEnum;
     dbInstanceIdentifier?: string;
     dbSnapshotIdentifier?: string;
     marker?: string;
     maxRecords?: number;
     snapshotType?: string;
-    version: GetDescribeDbSnapshotsVersionEnum;
-}
-export declare class GetDescribeDbSnapshotsHeaders extends SpeakeasyBase {
+    version: GETDescribeDBSnapshotsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -23,12 +22,9 @@ export declare class GetDescribeDbSnapshotsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeDbSnapshotsRequest extends SpeakeasyBase {
-    queryParams: GetDescribeDbSnapshotsQueryParams;
-    headers: GetDescribeDbSnapshotsHeaders;
-}
-export declare class GetDescribeDbSnapshotsResponse extends SpeakeasyBase {
+export declare class GETDescribeDBSnapshotsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

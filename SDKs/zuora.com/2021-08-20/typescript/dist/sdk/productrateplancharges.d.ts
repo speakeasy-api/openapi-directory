@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class ProductRatePlanCharges {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,30 +9,33 @@ export declare class ProductRatePlanCharges {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * objectDeleteProductRatePlanCharge - CRUD: Delete a product rate plan charge
+     * CRUD: Delete a product rate plan charge
      *
+     * @remarks
      * Deletes a product rate plan charge.
      *
-    **/
-    objectDeleteProductRatePlanCharge(req: operations.ObjectDeleteProductRatePlanChargeRequest, config?: AxiosRequestConfig): Promise<operations.ObjectDeleteProductRatePlanChargeResponse>;
+     */
+    objectDELETEProductRatePlanCharge(req: operations.ObjectDELETEProductRatePlanChargeRequest, config?: AxiosRequestConfig): Promise<operations.ObjectDELETEProductRatePlanChargeResponse>;
     /**
-     * objectGetProductRatePlanCharge - CRUD: Retrieve a product rate plan charge
-    **/
-    objectGetProductRatePlanCharge(req: operations.ObjectGetProductRatePlanChargeRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGetProductRatePlanChargeResponse>;
+     * CRUD: Retrieve a product rate plan charge
+     */
+    objectGETProductRatePlanCharge(req: operations.ObjectGETProductRatePlanChargeRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGETProductRatePlanChargeResponse>;
     /**
-     * objectPostProductRatePlanCharge - CRUD: Create a product rate plan charge
+     * CRUD: Create a product rate plan charge
      *
+     * @remarks
      * Creates a product rate plan charge for a specified rate plan charge.
      *
      * Product rate plan charges can be of three types, one-time fees, recurring fees, and usage fees.
      *
-    **/
-    objectPostProductRatePlanCharge(req: operations.ObjectPostProductRatePlanChargeRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPostProductRatePlanChargeResponse>;
+     */
+    objectPOSTProductRatePlanCharge(req: operations.ObjectPOSTProductRatePlanChargeRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPOSTProductRatePlanChargeResponse>;
     /**
-     * objectPutProductRatePlanCharge - CRUD: Update a product rate plan charge
+     * CRUD: Update a product rate plan charge
      *
+     * @remarks
      * Updates the information about a product rate plan charge.
      *
-    **/
-    objectPutProductRatePlanCharge(req: operations.ObjectPutProductRatePlanChargeRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPutProductRatePlanChargeResponse>;
+     */
+    objectPUTProductRatePlanCharge(req: operations.ObjectPUTProductRatePlanChargeRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPUTProductRatePlanChargeResponse>;
 }

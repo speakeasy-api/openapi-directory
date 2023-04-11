@@ -1,33 +1,35 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { BatchDeleteBuildsRequest, BatchDeleteBuildsResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  BatchDeleteBuildsRequest,
+  BatchDeleteBuildsResponse,
+  BatchDeleteBuildsXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: BatchDeleteBuildsRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "CodeBuild_20161006.BatchDeleteBuilds",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
+});
+
+const req: BatchDeleteBuildsRequest = {
+  batchDeleteBuildsInput: {
     ids: [
-      "et",
+      "provident",
+      "distinctio",
+      "quibusdam",
     ],
   },
+  xAmzAlgorithm: "unde",
+  xAmzContentSha256: "nulla",
+  xAmzCredential: "corrupti",
+  xAmzDate: "illum",
+  xAmzSecurityToken: "vel",
+  xAmzSignature: "error",
+  xAmzSignedHeaders: "deserunt",
+  xAmzTarget: BatchDeleteBuildsXAmzTargetEnum.CodeBuild20161006BatchDeleteBuilds,
 };
 
 sdk.batchDeleteBuilds(req).then((res: BatchDeleteBuildsResponse | AxiosError) => {

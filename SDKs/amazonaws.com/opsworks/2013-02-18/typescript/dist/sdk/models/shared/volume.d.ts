@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Describes an instance's Amazon EBS volume.
-**/
+ */
 export declare class Volume extends SpeakeasyBase {
     availabilityZone?: string;
     device?: string;

@@ -6,39 +6,36 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/openchannel.io/market/2.0.24/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/openchannel.io/market/2.0.24/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DeleteAppsAppIdRequest, DeleteAppsAppIdResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  DeleteAppsAppIdRequest,
+  DeleteAppsAppIdResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    basicAuth: {
-      password: "YOUR_PASSWORD_HERE",
-      username: "YOUR_USERNAME_HERE",
-    },
-  }
-));
-    
+    password: "YOUR_PASSWORD_HERE",
+    username: "YOUR_USERNAME_HERE",
+  },
+});
+
 const req: DeleteAppsAppIdRequest = {
-  pathParams: {
-    appId: "sit",
-  },
-  queryParams: {
-    developerId: "voluptas",
-  },
+  appId: "corrupti",
+  developerId: "provident",
 };
 
 sdk.appsFindAndModifyApps.deleteAppsAppId(req).then((res: DeleteAppsAppIdResponse | AxiosError) => {
@@ -48,9 +45,10 @@ sdk.appsFindAndModifyApps.deleteAppsAppId(req).then((res: DeleteAppsAppIdRespons
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### apps : Find and modify apps
+
+### appsFindAndModifyApps
 
 * `deleteAppsAppId` - Removes app and all versions
 * `deleteAppsAppIdVersionsVersion` - Removes AppVersion
@@ -67,12 +65,12 @@ sdk.appsFindAndModifyApps.deleteAppsAppId(req).then((res: DeleteAppsAppIdRespons
 * `postAppsAppIdVersionsVersion` - Updates the app or creates a new version
 * `postAppsAppIdVersionsVersionStatus` - Allows a developer or administrator to change the status of apps
 
-### custom-gateway : Process payments and refunds
+### customGatewayProcessPaymentsAndRefunds
 
 * `postCustomGatewayPaymentOwnershipId` - Adds a payment for an app on behalf of a user
 * `postCustomGatewayRefundOwnershipId` - Fully or partially refund payment for an app on behalf of a user
 
-### developerAccounts : Find and modify developer accounts
+### developerAccountsFindAndModifyDeveloperAccounts
 
 * `deleteDeveloperAccountsDeveloperAccountId` - Removes the developer account
 * `getDeveloperAccounts` - Returns a paginated list of developerAccounts
@@ -80,7 +78,7 @@ sdk.appsFindAndModifyApps.deleteAppsAppId(req).then((res: DeleteAppsAppIdRespons
 * `patchDeveloperAccountsDeveloperAccountId` - Updates the developer account fields
 * `postDeveloperAccountsDeveloperAccountId` - Updates the developer account or adds the developer account if it doesn't exist
 
-### developers : Find and modify developers
+### developersFindAndModifyDevelopers
 
 * `deleteDevelopersDeveloperId` - Removes a single developer
 * `getDevelopers` - Returns a paginated list of developers
@@ -88,11 +86,11 @@ sdk.appsFindAndModifyApps.deleteAppsAppId(req).then((res: DeleteAppsAppIdRespons
 * `patchDevelopersDeveloperId` - Updates the developer fields
 * `postDevelopersDeveloperId` - Updates the developer record or adds the developer if it doesn't exist
 
-### events : Find events
+### eventsFindEvents
 
 * `getEventsEventId` - Returns an event
 
-### files : Upload files 
+### filesUploadFiles
 
 * `getFiles` - Returns a paginated list of files
 * `getFilesByIdOrUrl` - Get the details for a file.
@@ -100,11 +98,11 @@ sdk.appsFindAndModifyApps.deleteAppsAppId(req).then((res: DeleteAppsAppIdRespons
 * `postFiles` - Uploads a file.
 * `postFilesUrl` - Uploads a file from a URL
 
-### markets : This marketplace
+### marketsThisMarketplace
 
 * `getMarketsThis` - Returns the current marketplace
 
-### ownership : Find ownership
+### ownershipFindOwnership
 
 * `getOwnership` - Returns a paginated list of app licenses
 * `getOwnershipOwnershipId` - Returns an ownership record
@@ -113,13 +111,13 @@ sdk.appsFindAndModifyApps.deleteAppsAppId(req).then((res: DeleteAppsAppIdRespons
 * `postOwnershipUninstallOwnershipId` - Uninstalls a license for a particular user and app (uninstalls app)
 * `postOwnershipOwnershipId` - Updates an ownership record
 
-### permission : Add and remove permissions 
+### permissionAddAndRemovePermissions
 
 * `deletePermissionAppsAppId` - Removes permission that allows the app to access this user's data
 * `getPermissionAppsAppId` - Returns permission that allows the app to access this user's data
 * `postPermissionAppsAppId` - Adds permission to allow the app to access this user's data
 
-### reviews : Find and modify reviews 
+### reviewsFindAndModifyReviews
 
 * `deleteReviewsReviewId` - Remove a review
 * `getReviews` - Find reviews for a particular App and marketplace. Results are automatically paginated when limit is set
@@ -128,13 +126,13 @@ sdk.appsFindAndModifyApps.deleteAppsAppId(req).then((res: DeleteAppsAppIdRespons
 * `postReviews` - Post a review from a User and returns the new post
 * `postReviewsReviewId` - Update a review from a User and returns the new post
 
-### stats: Find marketplace statistics
+### statsFindMarketplaceStatistics
 
 * `getStatsSeriesPeriodFields` - Return a timeseries for a particular field
 * `getStatsTotal` - Returns the total number of events for a particular field.
 * `postStatsIncrementField` - Increments a statistics field
 
-### stripe-gateway : Process payments and refunds 
+### stripeGatewayProcessPaymentsAndRefunds
 
 * `deleteStripeGatewayDeveloperDeveloperIdAccountsStripeId` - Disconnects a developer's Stripe account
 * `deleteStripeGatewayUserUserIdCardsCardId` - Removes a credit card for a user
@@ -144,14 +142,14 @@ sdk.appsFindAndModifyApps.deleteAppsAppId(req).then((res: DeleteAppsAppIdRespons
 * `postStripeGatewayUserUserIdCards` - Adds credit card for this user
 * `postStripeGatewayUserUserIdCardsCardId` - Updates a credit card for this user
 
-### transactions : Find payments and refunds 
+### transactionsFindPaymentsAndRefunds
 
 * `deleteTransactionsTransactionId` - Deleted a transaction
 * `getTransactions` - Returns a paginated list of transactions
 * `getTransactionsTransactionId` - Returns a transaction
 * `postTransactionsTransactionId` - Updates a transaction
 
-### userAccounts : Find and modify user accounts 
+### userAccountsFindAndModifyUserAccounts
 
 * `deleteUserAccountsUserAccountId` - Removes the user account
 * `getUserAccounts` - Returns a paginated list of userAccounts
@@ -159,14 +157,25 @@ sdk.appsFindAndModifyApps.deleteAppsAppId(req).then((res: DeleteAppsAppIdRespons
 * `patchUserAccountsUserAccountId` - Updates the user account fields
 * `postUserAccountsUserAccountId` - Updates the user account or adds the user account if it doesn't exist
 
-### users : Find and modify users 
+### usersFindAndModifyUsers
 
 * `deleteUsersUserId` - Removes a single user
 * `getUsers` - Returns a paginated list of users
 * `getUsersUserId` - Return a single user
 * `patchUsersUserId` - Updates user fields
 * `postUsersUserId` - Updates a single user or adds the user if they don't exist
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

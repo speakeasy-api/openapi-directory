@@ -1,5 +1,10 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Access quote of the day service. Use this to get the quote of the day in various categories. This is a free API that is available to public. You must credit They Said So if you are using the free version.
+ *
+ * @see {@link https://theysaidso.com/api/quote#qod} - Find out more
+ */
 export declare class QuoteOfTheDay {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,18 +14,18 @@ export declare class QuoteOfTheDay {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getQod - Gets `Quote of the Day`. Optional `category` param determines the category of returned quote of the day
+     * Gets `Quote of the Day`. Optional `category` param determines the category of returned quote of the day
      *
-    **/
-    getQod(req: operations.GetQodRequest, config?: AxiosRequestConfig): Promise<operations.GetQodResponse>;
+     */
+    getQod(req: operations.GetQodRequest, security: operations.GetQodSecurity, config?: AxiosRequestConfig): Promise<operations.GetQodResponse>;
     /**
-     * getQodCategories - Gets a list of `Quote of the Day` Categories.
+     * Gets a list of `Quote of the Day` Categories.
      *
-    **/
-    getQodCategories(req: operations.GetQodCategoriesRequest, config?: AxiosRequestConfig): Promise<operations.GetQodCategoriesResponse>;
+     */
+    getQodCategories(req: operations.GetQodCategoriesRequest, security: operations.GetQodCategoriesSecurity, config?: AxiosRequestConfig): Promise<operations.GetQodCategoriesResponse>;
     /**
-     * getQodLanguages - Gets a list of supported languages for `Quote of the Day`.
+     * Gets a list of supported languages for `Quote of the Day`.
      *
-    **/
-    getQodLanguages(req: operations.GetQodLanguagesRequest, config?: AxiosRequestConfig): Promise<operations.GetQodLanguagesResponse>;
+     */
+    getQodLanguages(config?: AxiosRequestConfig): Promise<operations.GetQodLanguagesResponse>;
 }

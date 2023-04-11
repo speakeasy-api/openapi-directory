@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostStartInstanceRefreshActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTStartInstanceRefreshActionEnum {
     StartInstanceRefresh = "StartInstanceRefresh"
 }
-export declare enum PostStartInstanceRefreshVersionEnum {
+export declare enum POSTStartInstanceRefreshVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class PostStartInstanceRefreshQueryParams extends SpeakeasyBase {
-    action: PostStartInstanceRefreshActionEnum;
-    version: PostStartInstanceRefreshVersionEnum;
-}
-export declare class PostStartInstanceRefreshHeaders extends SpeakeasyBase {
+export declare class POSTStartInstanceRefreshRequest extends SpeakeasyBase {
+    action: POSTStartInstanceRefreshActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTStartInstanceRefreshVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostStartInstanceRefreshHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostStartInstanceRefreshRequest extends SpeakeasyBase {
-    queryParams: PostStartInstanceRefreshQueryParams;
-    headers: PostStartInstanceRefreshHeaders;
-    request?: Uint8Array;
-}
-export declare class PostStartInstanceRefreshResponse extends SpeakeasyBase {
+export declare class POSTStartInstanceRefreshResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

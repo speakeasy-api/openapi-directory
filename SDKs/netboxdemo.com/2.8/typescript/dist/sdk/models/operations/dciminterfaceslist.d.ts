@@ -1,6 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DcimInterfacesListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DcimInterfacesListRequest extends SpeakeasyBase {
     cabled?: string;
     connectionStatus?: string;
     connectionStatusN?: string;
@@ -26,6 +27,9 @@ export declare class DcimInterfacesListQueryParams extends SpeakeasyBase {
     kind?: string;
     lagId?: string;
     lagIdN?: string;
+    /**
+     * Number of results to return per page.
+     */
     limit?: number;
     macAddress?: string;
     macAddressIc?: string;
@@ -56,6 +60,9 @@ export declare class DcimInterfacesListQueryParams extends SpeakeasyBase {
     nameNie?: string;
     nameNiew?: string;
     nameNisw?: string;
+    /**
+     * The initial index from which to return the results.
+     */
     offset?: number;
     q?: string;
     region?: string;
@@ -73,17 +80,15 @@ export declare class DcimInterfacesListQueryParams extends SpeakeasyBase {
     vlan?: string;
     vlanId?: string;
 }
-export declare class DcimInterfacesList200ApplicationJson extends SpeakeasyBase {
+export declare class DcimInterfacesList200ApplicationJSON extends SpeakeasyBase {
     count: number;
     next?: string;
     previous?: string;
     results: shared.DeviceInterface[];
 }
-export declare class DcimInterfacesListRequest extends SpeakeasyBase {
-    queryParams: DcimInterfacesListQueryParams;
-}
 export declare class DcimInterfacesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dcimInterfacesList200ApplicationJSONObject?: DcimInterfacesList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    dcimInterfacesList200ApplicationJSONObject?: DcimInterfacesList200ApplicationJSON;
 }

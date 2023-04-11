@@ -1,15 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetQtlListByPositionUsingGetPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETQtlListByPositionUsingGETRequest extends SpeakeasyBase {
+    /**
+     * Chromosome
+     */
     chr: string;
+    /**
+     * A list of assembly map keys can be found using the lookup service
+     */
     mapKey: number;
+    /**
+     * Start Position
+     */
     start: number;
+    /**
+     * Stop Position
+     */
     stop: number;
 }
-export declare class GetQtlListByPositionUsingGetRequest extends SpeakeasyBase {
-    pathParams: GetQtlListByPositionUsingGetPathParams;
-}
-export declare class GetQtlListByPositionUsingGetResponse extends SpeakeasyBase {
+export declare class GETQtlListByPositionUsingGETResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

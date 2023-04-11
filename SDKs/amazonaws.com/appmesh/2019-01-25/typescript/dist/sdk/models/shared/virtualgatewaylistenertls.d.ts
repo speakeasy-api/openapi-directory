@@ -4,7 +4,7 @@ import { VirtualGatewayListenerTlsModeEnum } from "./virtualgatewaylistenertlsmo
 import { VirtualGatewayListenerTlsValidationContext } from "./virtualgatewaylistenertlsvalidationcontext";
 /**
  * An object that represents the Transport Layer Security (TLS) properties for a listener.
-**/
+ */
 export declare class VirtualGatewayListenerTls extends SpeakeasyBase {
     certificate: VirtualGatewayListenerTlsCertificate;
     mode: VirtualGatewayListenerTlsModeEnum;

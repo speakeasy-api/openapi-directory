@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ResendWebhookActivityEntryPathParams extends SpeakeasyBase {
-    activityId: string;
-}
-export declare class ResendWebhookActivityEntryHeaders extends SpeakeasyBase {
-    evAccessToken: string;
-    evApiKey: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ResendWebhookActivityEntryRequest extends SpeakeasyBase {
-    pathParams: ResendWebhookActivityEntryPathParams;
-    headers: ResendWebhookActivityEntryHeaders;
+    /**
+     * Webhooks activity entry ID
+     */
+    activityId: string;
+    /**
+     * Access token required to make the API call.
+     */
+    evAccessToken: string;
+    /**
+     * API key required to make the API call.
+     */
+    evApiKey: string;
 }
 export declare class ResendWebhookActivityEntryResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful operation
+     */
     emptyResponse?: shared.EmptyResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

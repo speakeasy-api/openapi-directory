@@ -6,7 +6,7 @@ import { Tag } from "./tag";
 import { TrackingOptions } from "./trackingoptions";
 /**
  * Information about a configuration set.
-**/
+ */
 export declare class GetConfigurationSetResponse extends SpeakeasyBase {
     configurationSetName?: string;
     deliveryOptions?: DeliveryOptions;

@@ -1,5 +1,6 @@
 export * from "./aregamesinprogress";
 export * from "./byeweeks";
+export * from "./depthcharts";
 export * from "./gamestatsbyseasondeprecateduseteamgamestatsinstead";
 export * from "./gamestatsbyweekdeprecateduseteamgamestatsinstead";
 export * from "./news";
@@ -22,6 +23,7 @@ export * from "./seasonlastcompleted";
 export * from "./seasonupcoming";
 export * from "./stadiums";
 export * from "./standings";
+export * from "./teamgamelogsbyseason";
 export * from "./teamgamestats";
 export * from "./teamsactive";
 export * from "./teamsall";

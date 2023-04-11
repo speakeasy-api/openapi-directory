@@ -1,5 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UntagResourceHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class UntagResourceRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -7,20 +8,37 @@ export declare class UntagResourceHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class UntagResourceRequestBody extends SpeakeasyBase {
-    arn: string;
+    /**
+     * The Amazon Resource Name (ARN) of the notification rule from which to remove the tags.
+     */
+    resourceArn: string;
+    /**
+     * The key names of the tags to remove.
+     */
     tagKeys: string[];
 }
-export declare class UntagResourceRequest extends SpeakeasyBase {
-    headers: UntagResourceHeaders;
-    request: UntagResourceRequestBody;
-}
 export declare class UntagResourceResponse extends SpeakeasyBase {
+    /**
+     * ConcurrentModificationException
+     */
     concurrentModificationException?: any;
     contentType: string;
-    resourceNotFoundException?: any;
+    /**
+     * LimitExceededException
+     */
+    limitExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * Success
+     */
     untagResourceResult?: Record<string, any>;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

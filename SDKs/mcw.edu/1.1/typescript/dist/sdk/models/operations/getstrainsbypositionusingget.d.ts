@@ -1,15 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetStrainsByPositionUsingGetPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETStrainsByPositionUsingGETRequest extends SpeakeasyBase {
+    /**
+     * Chromosome
+     */
     chr: string;
+    /**
+     * RGD Map Key (available through lookup service)
+     */
     mapKey: number;
+    /**
+     * Start Position
+     */
     start: number;
+    /**
+     * Stop Position
+     */
     stop: number;
 }
-export declare class GetStrainsByPositionUsingGetRequest extends SpeakeasyBase {
-    pathParams: GetStrainsByPositionUsingGetPathParams;
-}
-export declare class GetStrainsByPositionUsingGetResponse extends SpeakeasyBase {
+export declare class GETStrainsByPositionUsingGETResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

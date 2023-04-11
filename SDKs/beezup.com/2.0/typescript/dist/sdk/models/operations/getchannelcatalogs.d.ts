@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetChannelCatalogsQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetChannelCatalogsRequest extends SpeakeasyBase {
+    /**
+     * The store identifier
+     */
     storeId?: string;
 }
-export declare class GetChannelCatalogsRequest extends SpeakeasyBase {
-    queryParams: GetChannelCatalogsQueryParams;
-}
 export declare class GetChannelCatalogsResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     * Occurs when something goes wrong
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
     channelCatalogList?: shared.ChannelCatalogList;
 }

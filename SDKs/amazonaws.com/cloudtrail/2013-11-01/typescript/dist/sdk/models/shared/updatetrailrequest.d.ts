@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Specifies settings to update for the trail.
-**/
+ */
 export declare class UpdateTrailRequest extends SpeakeasyBase {
     cloudWatchLogsLogGroupArn?: string;
     cloudWatchLogsRoleArn?: string;

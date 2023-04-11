@@ -4,7 +4,7 @@ import { ConnectorStatusEnum } from "./connectorstatusenum";
 import { VmManagerTypeEnum } from "./vmmanagertypeenum";
 /**
  * Represents a connector.
-**/
+ */
 export declare class Connector extends SpeakeasyBase {
     associatedOn?: Date;
     capabilityList?: ConnectorCapabilityEnum[];

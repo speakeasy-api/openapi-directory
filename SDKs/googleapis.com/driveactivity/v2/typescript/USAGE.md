@@ -1,53 +1,49 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DriveactivityActivityQueryRequest, DriveactivityActivityQueryResponse } from "openapi/src/sdk/models/operations";
+import {
+  DriveactivityActivityQueryRequest,
+  DriveactivityActivityQueryResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: DriveactivityActivityQueryRequest = {
-  security: {
-    option1: {
-      oauth2: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-      oauth2c: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-    },
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "voluptas",
-    alt: "media",
-    callback: "expedita",
-    fields: "consequuntur",
-    key: "dolor",
-    oauthToken: "expedita",
-    prettyPrint: true,
-    quotaUser: "fugit",
-    uploadType: "et",
-    uploadProtocol: "nihil",
-  },
-  request: {
-    ancestorName: "rerum",
+  dollarXgafv: XgafvEnum.Two,
+  queryDriveActivityRequest: {
+    ancestorName: "provident",
     consolidationStrategy: {
       legacy: {
-        "debitis": "voluptatum",
-        "et": "ut",
-        "dolorem": "et",
+        "quibusdam": "unde",
+        "nulla": "corrupti",
+        "illum": "vel",
       },
       none: {
-        "iste": "vitae",
+        "deserunt": "suscipit",
+        "iure": "magnam",
+        "debitis": "ipsa",
       },
     },
-    filter: "totam",
-    itemName: "dolores",
-    pageSize: 1929546706668609706,
-    pageToken: "debitis",
+    filter: "delectus",
+    itemName: "tempora",
+    pageSize: 383441,
+    pageToken: "molestiae",
   },
+  accessToken: "minus",
+  alt: AltEnum.Proto,
+  callback: "voluptatum",
+  fields: "iusto",
+  key: "excepturi",
+  oauthToken: "nisi",
+  prettyPrint: false,
+  quotaUser: "recusandae",
+  uploadType: "temporibus",
+  uploadProtocol: "ab",
 };
 
 sdk.activity.driveactivityActivityQuery(req).then((res: DriveactivityActivityQueryResponse | AxiosError) => {

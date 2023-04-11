@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListDatasetsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListDatasetsXAmzTargetEnum {
     AmazonForecastListDatasets = "AmazonForecast.ListDatasets"
 }
-export declare class ListDatasetsHeaders extends SpeakeasyBase {
+export declare class ListDatasetsRequest extends SpeakeasyBase {
+    listDatasetsRequest: shared.ListDatasetsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,14 +23,16 @@ export declare class ListDatasetsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListDatasetsXAmzTargetEnum;
 }
-export declare class ListDatasetsRequest extends SpeakeasyBase {
-    queryParams: ListDatasetsQueryParams;
-    headers: ListDatasetsHeaders;
-    request: shared.ListDatasetsRequest;
-}
 export declare class ListDatasetsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * Success
+     */
     listDatasetsResponse?: shared.ListDatasetsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

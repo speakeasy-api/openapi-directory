@@ -1,27 +1,38 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteMonitorPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteMonitorRequest extends SpeakeasyBase {
     monitorUid: string;
 }
-export declare class DeleteMonitor200ApplicationJsonMonitor extends SpeakeasyBase {
-    id?: string;
-    uid?: string;
-}
-export declare class DeleteMonitor200ApplicationJson extends SpeakeasyBase {
-    monitor?: DeleteMonitor200ApplicationJsonMonitor;
-}
-export declare class DeleteMonitor404ApplicationJsonError extends SpeakeasyBase {
+export declare class DeleteMonitor404ApplicationJSONError extends SpeakeasyBase {
     message?: string;
     name?: string;
 }
-export declare class DeleteMonitor404ApplicationJson extends SpeakeasyBase {
-    error?: DeleteMonitor404ApplicationJsonError;
+/**
+ * Monitor Not Found
+ */
+export declare class DeleteMonitor404ApplicationJSON extends SpeakeasyBase {
+    error?: DeleteMonitor404ApplicationJSONError;
 }
-export declare class DeleteMonitorRequest extends SpeakeasyBase {
-    pathParams: DeleteMonitorPathParams;
+export declare class DeleteMonitor200ApplicationJSONMonitor extends SpeakeasyBase {
+    id?: string;
+    uid?: string;
+}
+/**
+ * Monitor Deleted
+ */
+export declare class DeleteMonitor200ApplicationJSON extends SpeakeasyBase {
+    monitor?: DeleteMonitor200ApplicationJSONMonitor;
 }
 export declare class DeleteMonitorResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deleteMonitor200ApplicationJSONObject?: DeleteMonitor200ApplicationJson;
-    deleteMonitor404ApplicationJSONObject?: DeleteMonitor404ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Monitor Deleted
+     */
+    deleteMonitor200ApplicationJSONObject?: DeleteMonitor200ApplicationJSON;
+    /**
+     * Monitor Not Found
+     */
+    deleteMonitor404ApplicationJSONObject?: DeleteMonitor404ApplicationJSON;
 }

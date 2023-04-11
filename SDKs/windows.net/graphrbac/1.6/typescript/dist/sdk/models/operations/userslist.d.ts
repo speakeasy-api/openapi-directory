@@ -1,21 +1,38 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UsersListPathParams extends SpeakeasyBase {
-    tenantID: string;
-}
-export declare class UsersListQueryParams extends SpeakeasyBase {
-    dollarExpand?: string;
-    dollarFilter?: string;
-    dollarTop?: number;
-    apiVersion: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UsersListRequest extends SpeakeasyBase {
-    pathParams: UsersListPathParams;
-    queryParams: UsersListQueryParams;
+    /**
+     * The expand value for the operation result.
+     */
+    dollarExpand?: string;
+    /**
+     * The filter to apply to the operation.
+     */
+    dollarFilter?: string;
+    /**
+     * (Optional) Set the maximum number of results per response.
+     */
+    dollarTop?: number;
+    /**
+     * Client API version.
+     */
+    apiVersion: string;
+    /**
+     * The tenant ID.
+     */
+    tenantID: string;
 }
 export declare class UsersListResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Error response describing why the operation failed.
+     */
     graphError?: shared.GraphError;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK. The operation was successful.
+     */
     userListResult?: shared.UserListResult;
 }

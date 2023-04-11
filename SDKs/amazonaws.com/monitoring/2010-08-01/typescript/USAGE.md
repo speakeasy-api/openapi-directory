@@ -1,37 +1,38 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetDeleteAlarmsRequest, GetDeleteAlarmsResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GETDeleteAlarmsRequest,
+  GETDeleteAlarmsResponse,
+  GETDeleteAlarmsActionEnum,
+  GETDeleteAlarmsVersionEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: GetDeleteAlarmsRequest = {
-  queryParams: {
-    action: "DeleteAlarms",
-    alarmNames: [
-      "culpa",
-    ],
-    version: "2010-08-01",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  headers: {
-    xAmzAlgorithm: "consequuntur",
-    xAmzContentSha256: "dolor",
-    xAmzCredential: "expedita",
-    xAmzDate: "voluptas",
-    xAmzSecurityToken: "fugit",
-    xAmzSignature: "et",
-    xAmzSignedHeaders: "nihil",
-  },
+});
+
+const req: GETDeleteAlarmsRequest = {
+  action: GETDeleteAlarmsActionEnum.DeleteAlarms,
+  alarmNames: [
+    "provident",
+    "distinctio",
+    "quibusdam",
+  ],
+  version: GETDeleteAlarmsVersionEnum.TwoThousandAndTen0801,
+  xAmzAlgorithm: "unde",
+  xAmzContentSha256: "nulla",
+  xAmzCredential: "corrupti",
+  xAmzDate: "illum",
+  xAmzSecurityToken: "vel",
+  xAmzSignature: "error",
+  xAmzSignedHeaders: "deserunt",
 };
 
-sdk.getDeleteAlarms(req).then((res: GetDeleteAlarmsResponse | AxiosError) => {
+sdk.getDeleteAlarms(req).then((res: GETDeleteAlarmsResponse | AxiosError) => {
    // handle response
 });
 ```

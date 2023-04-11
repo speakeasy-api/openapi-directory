@@ -12,7 +12,6 @@ export * from "./operation";
 export * from "./policy";
 export * from "./searchfoldersrequest";
 export * from "./searchfoldersresponse";
-export * from "./security";
 export * from "./setiampolicyrequest";
 export * from "./status";
 export * from "./testiampermissionsrequest";

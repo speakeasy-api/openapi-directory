@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Canvas {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class Canvas {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * canvasDataAnalyticsSummary - Canvas Data Analytics Summary
+     * Canvas Data Analytics Summary
      *
+     * @remarks
      * This endpoint allows you to export rollups of time series data for a Canvas, providing a concise summary of a Canvas' results.
      *
      * ### Components Used
@@ -64,11 +65,12 @@ export declare class Canvas {
      *   "message": (required, string) the status of the export, returns 'success' when completed without errors
      * }
      * ```
-    **/
+     */
     canvasDataAnalyticsSummary(req: operations.CanvasDataAnalyticsSummaryRequest, config?: AxiosRequestConfig): Promise<operations.CanvasDataAnalyticsSummaryResponse>;
     /**
-     * canvasDataSeriesAnalytics - Canvas Data Series Analytics
+     * Canvas Data Series Analytics
      *
+     * @remarks
      * This endpoint allows you to export time series data for a Canvas.
      *
      * ### Components Used
@@ -128,11 +130,12 @@ export declare class Canvas {
      *   "message": (required, string) the status of the export, returns 'success' when completed without errors
      * }
      * ```
-    **/
+     */
     canvasDataSeriesAnalytics(req: operations.CanvasDataSeriesAnalyticsRequest, config?: AxiosRequestConfig): Promise<operations.CanvasDataSeriesAnalyticsResponse>;
     /**
-     * canvasDetails - Canvas Details
+     * Canvas Details
      *
+     * @remarks
      * This endpoint allows you to export metadata about a Canvas, such as its name, when it was created, its current status, and more.
      *
      * ### Components Used
@@ -182,11 +185,12 @@ export declare class Canvas {
      *   "message": (required, string) the status of the export, returns 'success' when completed without errors
      * }
      * ```
-    **/
+     */
     canvasDetails(req: operations.CanvasDetailsRequest, config?: AxiosRequestConfig): Promise<operations.CanvasDetailsResponse>;
     /**
-     * canvasList - Canvas List
+     * Canvas List
      *
+     * @remarks
      * This endpoint allows you to export a list of Canvases, including the name, Canvas API Identifier and associated Tags. The Canvases are returned in groups of 100 sorted by time of creation (oldest to newest by default).
      *
      * > Archived Canvases will not be included in the API response unless the `include_archived` field is specified. Canvases that are stopped but not archived, however, will be returned by default.
@@ -210,6 +214,6 @@ export declare class Canvas {
      *   "message": (required, string) the status of the export, returns 'success' when completed without errors
      * }
      * ```
-    **/
+     */
     canvasList(req: operations.CanvasListRequest, config?: AxiosRequestConfig): Promise<operations.CanvasListResponse>;
 }

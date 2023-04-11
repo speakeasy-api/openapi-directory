@@ -7,6 +7,7 @@ export declare class CreateRepositoryRequest extends SpeakeasyBase {
     encryptionConfiguration?: EncryptionConfiguration;
     imageScanningConfiguration?: ImageScanningConfiguration;
     imageTagMutability?: ImageTagMutabilityEnum;
+    registryId?: string;
     repositoryName: string;
     tags?: Tag[];
 }

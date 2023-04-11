@@ -3,8 +3,9 @@ import { OptionGroupOptionSettingsList } from "./optiongroupoptionsettingslist";
 import { OptionGroupOptionVersionsList } from "./optiongroupoptionversionslist";
 /**
  * Available option.
-**/
+ */
 export declare class OptionGroupOptionsList extends SpeakeasyBase {
+    copyableCrossAccount?: boolean;
     defaultPort?: number;
     description?: string;
     engineName?: string;
@@ -13,8 +14,8 @@ export declare class OptionGroupOptionsList extends SpeakeasyBase {
     name?: string;
     optionGroupOptionSettings?: OptionGroupOptionSettingsList[];
     optionGroupOptionVersions?: OptionGroupOptionVersionsList[];
-    optionsConflictsWith?: Record<string, any>[];
-    optionsDependedOn?: Record<string, any>[];
+    optionsConflictsWith?: string[];
+    optionsDependedOn?: string[];
     permanent?: boolean;
     persistent?: boolean;
     portRequired?: boolean;

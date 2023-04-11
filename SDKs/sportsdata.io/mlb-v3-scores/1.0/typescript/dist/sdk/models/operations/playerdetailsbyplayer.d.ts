@@ -1,17 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+/**
+ * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+ */
 export declare enum PlayerDetailsByPlayerFormatEnum {
     Xml = "XML",
     Json = "JSON"
 }
-export declare class PlayerDetailsByPlayerPathParams extends SpeakeasyBase {
-    format: PlayerDetailsByPlayerFormatEnum;
-    playerid: string;
-}
 export declare class PlayerDetailsByPlayerRequest extends SpeakeasyBase {
-    pathParams: PlayerDetailsByPlayerPathParams;
+    /**
+     * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+     */
+    format: PlayerDetailsByPlayerFormatEnum;
+    /**
+     * Unique FantasyData Player ID.
+     *
+     * @remarks
+     * Example:<code>10000507</code>.
+     */
+    playerid: string;
 }
 export declare class PlayerDetailsByPlayerResponse extends SpeakeasyBase {
     contentType: string;
-    player?: any;
+    player?: shared.Player;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

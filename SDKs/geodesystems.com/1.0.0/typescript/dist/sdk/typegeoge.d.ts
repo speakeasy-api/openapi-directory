@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Search API for 'GeoJson File' entry type
+ */
 export declare class TypeGeoGe {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,10 @@ export declare class TypeGeoGe {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * searchGeoGeojson - Search API for 'GeoJson File' entry type
+     * Search API for 'GeoJson File' entry type
      *
+     * @remarks
      * API to search for entries of type GeoJson File
-    **/
+     */
     searchGeoGeojson(req: operations.SearchGeoGeojsonRequest, config?: AxiosRequestConfig): Promise<operations.SearchGeoGeojsonResponse>;
 }

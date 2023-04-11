@@ -2,8 +2,8 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { QuoteFieldsEnum } from "./quotefieldsenum";
 /**
  * Contains information about the comma-separated value (CSV) file that the job results are stored in.
-**/
-export declare class CsvOutput extends SpeakeasyBase {
+ */
+export declare class CSVOutput extends SpeakeasyBase {
     fieldDelimiter?: string;
     quoteCharacter?: string;
     quoteEscapeCharacter?: string;

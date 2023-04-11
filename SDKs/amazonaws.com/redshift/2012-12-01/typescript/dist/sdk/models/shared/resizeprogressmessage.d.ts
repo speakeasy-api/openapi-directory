@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Describes the result of a cluster resize operation.
-**/
+ */
 export declare class ResizeProgressMessage extends SpeakeasyBase {
     avgResizeRateInMegaBytesPerSecond?: number;
     dataTransferProgressPercent?: number;

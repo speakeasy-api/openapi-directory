@@ -1,31 +1,31 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AssociateMemberAccountRequest, AssociateMemberAccountResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  AssociateMemberAccountRequest,
+  AssociateMemberAccountResponse,
+  AssociateMemberAccountXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    hmac: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: AssociateMemberAccountRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "MacieService.AssociateMemberAccount",
+  associateMemberAccountRequest: {
+    memberAccountId: "corrupti",
   },
-  request: {
-    memberAccountId: "fugit",
-  },
+  xAmzAlgorithm: "provident",
+  xAmzContentSha256: "distinctio",
+  xAmzCredential: "quibusdam",
+  xAmzDate: "unde",
+  xAmzSecurityToken: "nulla",
+  xAmzSignature: "corrupti",
+  xAmzSignedHeaders: "illum",
+  xAmzTarget: AssociateMemberAccountXAmzTargetEnum.MacieServiceAssociateMemberAccount,
 };
 
 sdk.associateMemberAccount(req).then((res: AssociateMemberAccountResponse | AxiosError) => {

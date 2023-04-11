@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class LiveChatBans {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,11 +9,11 @@ export declare class LiveChatBans {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * youtubeLiveChatBansDelete - Deletes a chat ban.
-    **/
-    youtubeLiveChatBansDelete(req: operations.YoutubeLiveChatBansDeleteRequest, config?: AxiosRequestConfig): Promise<operations.YoutubeLiveChatBansDeleteResponse>;
+     * Deletes a chat ban.
+     */
+    youtubeLiveChatBansDelete(req: operations.YoutubeLiveChatBansDeleteRequest, security: operations.YoutubeLiveChatBansDeleteSecurity, config?: AxiosRequestConfig): Promise<operations.YoutubeLiveChatBansDeleteResponse>;
     /**
-     * youtubeLiveChatBansInsert - Inserts a new resource into this collection.
-    **/
-    youtubeLiveChatBansInsert(req: operations.YoutubeLiveChatBansInsertRequest, config?: AxiosRequestConfig): Promise<operations.YoutubeLiveChatBansInsertResponse>;
+     * Inserts a new resource into this collection.
+     */
+    youtubeLiveChatBansInsert(req: operations.YoutubeLiveChatBansInsertRequest, security: operations.YoutubeLiveChatBansInsertSecurity, config?: AxiosRequestConfig): Promise<operations.YoutubeLiveChatBansInsertResponse>;
 }

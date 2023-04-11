@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AutoPauseAutoImportPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class AutoPauseAutoImportRequest extends SpeakeasyBase {
+    /**
+     * Your store identifier
+     */
     storeId: string;
 }
-export declare class AutoPauseAutoImportRequest extends SpeakeasyBase {
-    pathParams: AutoPauseAutoImportPathParams;
-}
 export declare class AutoPauseAutoImportResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     * Occurs when the catalog auto import is not configured.
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

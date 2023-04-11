@@ -1,21 +1,20 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CheckDomainRequest, CheckDomainResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CheckDomainRequest,
+  CheckDomainResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    apiKeyAuth: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: CheckDomainRequest = {
-  pathParams: {
-    domain: "sit",
+    apiKeyAuth: "YOUR_API_KEY_HERE",
   },
+});
+
+const req: CheckDomainRequest = {
+  domain: "corrupti",
 };
 
 sdk.checkDomain(req).then((res: CheckDomainResponse | AxiosError) => {

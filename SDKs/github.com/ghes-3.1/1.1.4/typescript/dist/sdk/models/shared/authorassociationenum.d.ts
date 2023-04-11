@@ -1,3 +1,6 @@
+/**
+ * How the author is associated with the repository.
+ */
 export declare enum AuthorAssociationEnum {
     Collaborator = "COLLABORATOR",
     Contributor = "CONTRIBUTOR",

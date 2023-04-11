@@ -1,30 +1,23 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { OptCapProgramInPriceRequest, OptCapProgramInPriceResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  OptCapProgramInPriceRequest,
+  OptCapProgramInPriceResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
-  security: {
-    basicScheme: {
-      password: "YOUR_PASSWORD_HERE",
-      username: "YOUR_USERNAME_HERE",
-    },
-  }
-));
-    
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK();
+
 const req: OptCapProgramInPriceRequest = {
-  headers: {
-    authorization: "sit",
-    wmCONSUMERCHANNELTYPE: "voluptas",
-    wmQOSCORRELATIONID: "culpa",
-    wmSECACCESSTOKEN: "expedita",
-    wmSVCNAME: "consequuntur",
-  },
-  request: {
+  requestBody: {
     subsidyEnrolled: false,
-    subsidyPreference: true,
+    subsidyPreference: false,
   },
+  wmConsumerChannelType: "corrupti",
+  wmQosCorrelationId: "provident",
+  wmSecAccessToken: "distinctio",
+  wmSvcName: "quibusdam",
 };
 
 sdk.prices.optCapProgramInPrice(req).then((res: OptCapProgramInPriceResponse | AxiosError) => {

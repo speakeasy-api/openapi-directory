@@ -1,21 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class OfficesAddExamRoomPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class OfficesAddExamRoomQueryParams extends SpeakeasyBase {
-    doctor?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class OfficesAddExamRoomSecurity extends SpeakeasyBase {
-    drchronoOauth2: shared.SchemeDrchronoOauth2;
+    drchronoOauth2: string;
 }
 export declare class OfficesAddExamRoomRequest extends SpeakeasyBase {
-    pathParams: OfficesAddExamRoomPathParams;
-    queryParams: OfficesAddExamRoomQueryParams;
-    security: OfficesAddExamRoomSecurity;
+    doctor?: number;
+    id: string;
 }
 export declare class OfficesAddExamRoomResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Created
+     */
     office?: shared.Office;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

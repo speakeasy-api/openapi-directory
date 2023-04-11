@@ -1,117 +1,132 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { RemotebuildexecutionProjectsInstancesCreateRequest, RemotebuildexecutionProjectsInstancesCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  RemotebuildexecutionProjectsInstancesCreateRequest,
+  RemotebuildexecutionProjectsInstancesCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyActionHermeticityEnum,
+  GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyActionIsolationEnum,
+  GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxExecutionEnum,
+  GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxIsolationEnum,
+  GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyMacExecutionEnum,
+  GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyVmVerificationEnum,
+  GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyWindowsExecutionEnum,
+  GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: RemotebuildexecutionProjectsInstancesCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  googleDevtoolsRemotebuildexecutionAdminV1alphaCreateInstanceRequestInput: {
     instance: {
       featurePolicy: {
-        actionHermeticity: "ACTION_HERMETICITY_BEST_EFFORT",
-        actionIsolation: "ACTION_ISOLATION_UNSPECIFIED",
+        actionHermeticity: GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyActionHermeticityEnum.ActionHermeticityEnforced,
+        actionIsolation: GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyActionIsolationEnum.ActionIsolationEnforced,
         containerImageSources: {
           allowedValues: [
-            "et",
+            "unde",
+            "nulla",
+            "corrupti",
+            "illum",
           ],
-          policy: "RESTRICTED",
+          policy: GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum.Allowed,
         },
         dockerAddCapabilities: {
           allowedValues: [
-            "et",
-            "voluptate",
-            "iste",
+            "deserunt",
+            "suscipit",
+            "iure",
           ],
-          policy: "POLICY_UNSPECIFIED",
+          policy: GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum.Allowed,
         },
         dockerChrootPath: {
           allowedValues: [
-            "dolores",
-            "illum",
-            "debitis",
+            "ipsa",
+            "delectus",
+            "tempora",
+            "suscipit",
           ],
-          policy: "POLICY_UNSPECIFIED",
+          policy: GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum.Allowed,
         },
         dockerNetwork: {
           allowedValues: [
-            "dolore",
+            "placeat",
+            "voluptatum",
+            "iusto",
+            "excepturi",
           ],
-          policy: "POLICY_UNSPECIFIED",
+          policy: GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum.Allowed,
         },
         dockerPrivileged: {
           allowedValues: [
-            "accusantium",
+            "temporibus",
+            "ab",
+            "quis",
+            "veritatis",
           ],
-          policy: "ALLOWED",
+          policy: GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum.Forbidden,
         },
         dockerRunAsContainerProvidedUser: {
           allowedValues: [
-            "quis",
-            "est",
+            "ipsam",
           ],
-          policy: "POLICY_UNSPECIFIED",
+          policy: GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum.Restricted,
         },
         dockerRunAsRoot: {
           allowedValues: [
-            "non",
-            "voluptas",
+            "quo",
+            "odit",
+            "at",
+            "at",
           ],
-          policy: "RESTRICTED",
+          policy: GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum.Restricted,
         },
         dockerRuntime: {
           allowedValues: [
-            "illo",
+            "quod",
+            "quod",
           ],
-          policy: "FORBIDDEN",
+          policy: GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum.Allowed,
         },
         dockerSiblingContainers: {
           allowedValues: [
-            "autem",
-            "consectetur",
+            "porro",
+            "dolorum",
+            "dicta",
           ],
-          policy: "POLICY_UNSPECIFIED",
+          policy: GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum.Forbidden,
         },
-        linuxExecution: "LINUX_EXECUTION_UNRESTRICTED",
-        linuxIsolation: "LINUX_ISOLATION_UNSPECIFIED",
-        macExecution: "MAC_EXECUTION_UNSPECIFIED",
-        vmVerification: "VM_VERIFICATION_GCP_TOKEN",
-        windowsExecution: "WINDOWS_EXECUTION_UNRESTRICTED",
+        linuxExecution: GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxExecutionEnum.LinuxExecutionHardenedGvisor,
+        linuxIsolation: GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxIsolationEnum.Gvisor,
+        macExecution: GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyMacExecutionEnum.MacExecutionUnspecified,
+        vmVerification: GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyVmVerificationEnum.VmVerificationGcpToken,
+        windowsExecution: GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyWindowsExecutionEnum.WindowsExecutionTerminal,
       },
-      location: "eveniet",
-      loggingEnabled: false,
-      name: "sint",
-      state: "CREATING",
+      location: "optio",
+      schedulerNotificationConfig: {
+        topic: "totam",
+      },
     },
-    instanceId: "ut",
-    parent: "exercitationem",
+    instanceId: "beatae",
+    parent: "commodi",
   },
+  accessToken: "molestiae",
+  alt: AltEnum.Json,
+  callback: "qui",
+  fields: "impedit",
+  key: "cum",
+  oauthToken: "esse",
+  parent: "ipsum",
+  prettyPrint: false,
+  quotaUser: "excepturi",
+  uploadType: "aspernatur",
+  uploadProtocol: "perferendis",
 };
 
 sdk.projects.remotebuildexecutionProjectsInstancesCreate(req).then((res: RemotebuildexecutionProjectsInstancesCreateResponse | AxiosError) => {

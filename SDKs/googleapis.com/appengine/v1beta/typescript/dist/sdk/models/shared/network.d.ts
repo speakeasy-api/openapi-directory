@@ -1,0 +1,38 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The IP mode for instances. Only applicable in the App Engine flexible environment.
+ */
+export declare enum NetworkInstanceIpModeEnum {
+    InstanceIpModeUnspecified = "INSTANCE_IP_MODE_UNSPECIFIED",
+    External = "EXTERNAL",
+    Internal = "INTERNAL"
+}
+/**
+ * Extra network settings. Only applicable in the App Engine flexible environment.
+ */
+export declare class Network extends SpeakeasyBase {
+    /**
+     * List of ports, or port pairs, to forward from the virtual machine to the application container. Only applicable in the App Engine flexible environment.
+     */
+    forwardedPorts?: string[];
+    /**
+     * The IP mode for instances. Only applicable in the App Engine flexible environment.
+     */
+    instanceIpMode?: NetworkInstanceIpModeEnum;
+    /**
+     * Tag to apply to the instance during creation. Only applicable in the App Engine flexible environment.
+     */
+    instanceTag?: string;
+    /**
+     * Google Compute Engine network where the virtual machines are created. Specify the short name, not the resource path.Defaults to default.
+     */
+    name?: string;
+    /**
+     * Enable session affinity. Only applicable in the App Engine flexible environment.
+     */
+    sessionAffinity?: boolean;
+    /**
+     * Google Cloud Platform sub-network where the virtual machines are created. Specify the short name, not the resource path.If a subnetwork name is specified, a network name will also be required unless it is for the default network. If the network that the instance is being created in is a Legacy network, then the IP address is allocated from the IPv4Range. If the network that the instance is being created in is an auto Subnet Mode Network, then only network name should be specified (not the subnetwork_name) and the IP address is created from the IPCidrRange of the subnetwork that exists in that zone for that network. If the network that the instance is being created in is a custom Subnet Mode Network, then the subnetwork_name must be specified and the IP address is created from the IPCidrRange of the subnetwork.If specified, the subnetwork must exist in the same region as the App Engine flexible environment application.
+     */
+    subnetworkName?: string;
+}

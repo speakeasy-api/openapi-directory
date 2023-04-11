@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetCrawlerMetricsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum GetCrawlerMetricsXAmzTargetEnum {
-    AwsGlueGetCrawlerMetrics = "AWSGlue.GetCrawlerMetrics"
+    AWSGlueGetCrawlerMetrics = "AWSGlue.GetCrawlerMetrics"
 }
-export declare class GetCrawlerMetricsHeaders extends SpeakeasyBase {
+export declare class GetCrawlerMetricsRequest extends SpeakeasyBase {
+    getCrawlerMetricsRequest: shared.GetCrawlerMetricsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,14 +23,16 @@ export declare class GetCrawlerMetricsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetCrawlerMetricsXAmzTargetEnum;
 }
-export declare class GetCrawlerMetricsRequest extends SpeakeasyBase {
-    queryParams: GetCrawlerMetricsQueryParams;
-    headers: GetCrawlerMetricsHeaders;
-    request: shared.GetCrawlerMetricsRequest;
-}
 export declare class GetCrawlerMetricsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getCrawlerMetricsResponse?: shared.GetCrawlerMetricsResponse;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

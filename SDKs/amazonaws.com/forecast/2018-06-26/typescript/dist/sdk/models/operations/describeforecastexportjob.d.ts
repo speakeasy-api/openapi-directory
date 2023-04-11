@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeForecastExportJobXAmzTargetEnum {
     AmazonForecastDescribeForecastExportJob = "AmazonForecast.DescribeForecastExportJob"
 }
-export declare class DescribeForecastExportJobHeaders extends SpeakeasyBase {
+export declare class DescribeForecastExportJobRequest extends SpeakeasyBase {
+    describeForecastExportJobRequest: shared.DescribeForecastExportJobRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class DescribeForecastExportJobHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeForecastExportJobXAmzTargetEnum;
 }
-export declare class DescribeForecastExportJobRequest extends SpeakeasyBase {
-    headers: DescribeForecastExportJobHeaders;
-    request: shared.DescribeForecastExportJobRequest;
-}
 export declare class DescribeForecastExportJobResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeForecastExportJobResponse?: shared.DescribeForecastExportJobResponse;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
 }

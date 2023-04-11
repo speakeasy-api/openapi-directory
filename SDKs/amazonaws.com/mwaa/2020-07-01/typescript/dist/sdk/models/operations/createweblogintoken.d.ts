@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreateWebLoginTokenPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class CreateWebLoginTokenRequest extends SpeakeasyBase {
+    /**
+     * The name of the Amazon MWAA environment. For example, <code>MyMWAAEnvironment</code>.
+     */
     name: string;
-}
-export declare class CreateWebLoginTokenHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,16 +14,28 @@ export declare class CreateWebLoginTokenHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class CreateWebLoginTokenRequest extends SpeakeasyBase {
-    pathParams: CreateWebLoginTokenPathParams;
-    headers: CreateWebLoginTokenHeaders;
-}
 export declare class CreateWebLoginTokenResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     createWebLoginTokenResponse?: shared.CreateWebLoginTokenResponse;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

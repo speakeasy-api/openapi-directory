@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCopyOptionGroupActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCopyOptionGroupActionEnum {
     CopyOptionGroup = "CopyOptionGroup"
 }
-export declare enum PostCopyOptionGroupVersionEnum {
+export declare enum POSTCopyOptionGroupVersionEnum {
     TwoThousandAndFourteen0901 = "2014-09-01"
 }
-export declare class PostCopyOptionGroupQueryParams extends SpeakeasyBase {
-    action: PostCopyOptionGroupActionEnum;
-    version: PostCopyOptionGroupVersionEnum;
-}
-export declare class PostCopyOptionGroupHeaders extends SpeakeasyBase {
+export declare class POSTCopyOptionGroupRequest extends SpeakeasyBase {
+    action: POSTCopyOptionGroupActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCopyOptionGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCopyOptionGroupHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCopyOptionGroupRequest extends SpeakeasyBase {
-    queryParams: PostCopyOptionGroupQueryParams;
-    headers: PostCopyOptionGroupHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCopyOptionGroupResponse extends SpeakeasyBase {
+export declare class POSTCopyOptionGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

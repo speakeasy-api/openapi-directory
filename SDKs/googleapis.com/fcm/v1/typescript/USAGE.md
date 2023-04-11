@@ -1,149 +1,150 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { FcmProjectsMessagesSendRequest, FcmProjectsMessagesSendResponse } from "openapi/src/sdk/models/operations";
+import {
+  FcmProjectsMessagesSendRequest,
+  FcmProjectsMessagesSendResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  AndroidConfigPriorityEnum,
+  AndroidNotificationNotificationPriorityEnum,
+  AndroidNotificationVisibilityEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: FcmProjectsMessagesSendRequest = {
-  security: {
-    option1: {
-      oauth2: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-      oauth2c: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  sendMessageRequest: {
     message: {
       android: {
-        collapseKey: "dicta",
+        collapseKey: "provident",
         data: {
-          "voluptatum": "et",
+          "quibusdam": "unde",
+          "nulla": "corrupti",
+          "illum": "vel",
         },
         directBootOk: false,
         fcmOptions: {
-          analyticsLabel: "dolorem",
+          analyticsLabel: "error",
         },
         notification: {
-          body: "et",
+          body: "deserunt",
           bodyLocArgs: [
-            "iste",
+            "iure",
+            "magnam",
           ],
-          bodyLocKey: "vitae",
-          bypassProxyNotification: true,
-          channelId: "dolores",
-          clickAction: "illum",
-          color: "debitis",
+          bodyLocKey: "debitis",
+          bypassProxyNotification: false,
+          channelId: "ipsa",
+          clickAction: "delectus",
+          color: "tempora",
           defaultLightSettings: false,
           defaultSound: false,
-          defaultVibrateTimings: true,
-          eventTime: "id",
-          icon: "aspernatur",
-          image: "accusantium",
+          defaultVibrateTimings: false,
+          eventTime: "suscipit",
+          icon: "molestiae",
+          image: "minus",
           lightSettings: {
             color: {
-              alpha: 45.099998,
-              blue: 78.199997,
-              green: 0.100000,
-              red: 49.099998,
+              alpha: 8121.69,
+              blue: 5288.95,
+              green: 4799.77,
+              red: 5680.45,
             },
-            lightOffDuration: "omnis",
-            lightOnDuration: "aut",
+            lightOffDuration: "nisi",
+            lightOnDuration: "recusandae",
           },
-          localOnly: true,
-          notificationCount: 5558237345453186302,
-          notificationPriority: "PRIORITY_MIN",
-          sound: "autem",
-          sticky: true,
-          tag: "nobis",
-          ticker: "odio",
-          title: "qui",
+          localOnly: false,
+          notificationCount: 836079,
+          notificationPriority: AndroidNotificationNotificationPriorityEnum.PriorityUnspecified,
+          sound: "quis",
+          sticky: false,
+          tag: "veritatis",
+          ticker: "deserunt",
+          title: "Mr.",
           titleLocArgs: [
-            "at",
-            "ipsum",
-            "eveniet",
+            "repellendus",
+            "sapiente",
           ],
-          titleLocKey: "modi",
+          titleLocKey: "quo",
           vibrateTimings: [
-            "inventore",
+            "at",
           ],
-          visibility: "PUBLIC",
+          visibility: AndroidNotificationVisibilityEnum.Secret,
         },
-        priority: "NORMAL",
-        restrictedPackageName: "aut",
-        ttl: "reprehenderit",
+        priority: AndroidConfigPriorityEnum.High,
+        restrictedPackageName: "molestiae",
+        ttl: "quod",
       },
       apns: {
         fcmOptions: {
-          analyticsLabel: "tempore",
-          image: "maiores",
+          analyticsLabel: "quod",
+          image: "esse",
         },
         headers: {
-          "dolor": "beatae",
-          "veritatis": "in",
-          "et": "omnis",
+          "porro": "dolorum",
+          "dicta": "nam",
+          "officia": "occaecati",
         },
         payload: {
-          "ex": "dolores",
+          "deleniti": "hic",
         },
       },
-      condition: "placeat",
+      condition: "optio",
       data: {
-        "rerum": "mollitia",
-        "voluptas": "quam",
+        "beatae": "commodi",
+        "molestiae": "modi",
+        "qui": "impedit",
       },
       fcmOptions: {
-        analyticsLabel: "reprehenderit",
+        analyticsLabel: "cum",
       },
-      name: "qui",
+      name: "esse",
       notification: {
-        body: "qui",
-        image: "unde",
-        title: "in",
+        body: "ipsum",
+        image: "excepturi",
+        title: "Mr.",
       },
-      token: "autem",
-      topic: "qui",
+      token: "perferendis",
+      topic: "ad",
       webpush: {
         data: {
-          "itaque": "ab",
-          "neque": "ullam",
-          "et": "accusantium",
+          "sed": "iste",
+          "dolor": "natus",
+          "laboriosam": "hic",
         },
         fcmOptions: {
-          analyticsLabel: "esse",
-          link: "architecto",
+          analyticsLabel: "saepe",
+          link: "fuga",
         },
         headers: {
-          "velit": "cumque",
+          "corporis": "iste",
+          "iure": "saepe",
         },
         notification: {
-          "sunt": "voluptates",
+          "architecto": "ipsa",
+          "reiciendis": "est",
+          "mollitia": "laborum",
         },
       },
     },
     validateOnly: false,
   },
+  accessToken: "dolores",
+  alt: AltEnum.Json,
+  callback: "corporis",
+  fields: "explicabo",
+  key: "nobis",
+  oauthToken: "enim",
+  parent: "omnis",
+  prettyPrint: false,
+  quotaUser: "nemo",
+  uploadType: "minima",
+  uploadProtocol: "excepturi",
 };
 
 sdk.projects.fcmProjectsMessagesSend(req).then((res: FcmProjectsMessagesSendResponse | AxiosError) => {

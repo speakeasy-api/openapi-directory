@@ -1,0 +1,178 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { CountryCodeEnum } from "./countrycodeenum";
+import { LinkTokenCreateInstitutionData } from "./linktokencreateinstitutiondata";
+import { LinkTokenCreateRequestAuth } from "./linktokencreaterequestauth";
+import { LinkTokenCreateRequestDepositSwitch } from "./linktokencreaterequestdepositswitch";
+import { LinkTokenCreateRequestEmployment } from "./linktokencreaterequestemployment";
+import { LinkTokenCreateRequestIdentityVerification } from "./linktokencreaterequestidentityverification";
+import { LinkTokenCreateRequestIncomeVerification } from "./linktokencreaterequestincomeverification";
+import { LinkTokenCreateRequestPaymentInitiation } from "./linktokencreaterequestpaymentinitiation";
+import { LinkTokenCreateRequestTransfer } from "./linktokencreaterequesttransfer";
+import { LinkTokenCreateRequestUpdate } from "./linktokencreaterequestupdate";
+import { LinkTokenCreateRequestUser } from "./linktokencreaterequestuser";
+import { LinkTokenEUConfig } from "./linktokeneuconfig";
+import { LinkTokenInvestments } from "./linktokeninvestments";
+import { ProductsEnum } from "./productsenum";
+/**
+ * LinkTokenCreateRequest defines the request schema for `/link/token/create`
+ */
+export declare class LinkTokenCreateRequest extends SpeakeasyBase {
+    /**
+     * The `access_token` associated with the Item to update or reference, used when updating, modifying, or accessing an existing `access_token`. Used when launching Link in update mode, when completing the Same-day (manual) Micro-deposit flow, or (optionally) when initializing Link for a returning user as part of the Transfer UI flow.
+     */
+    accessToken?: string;
+    /**
+     * By default, Link will provide limited account filtering: it will only display Institutions that are compatible with all products supplied in the `products` parameter of `/link/token/create`, and, if `auth` is specified in the `products` array, will also filter out accounts other than `checking` and `savings` accounts on the Account Select pane. You can further limit the accounts shown in Link by using `account_filters` to specify the account subtypes to be shown in Link. Only the specified subtypes will be shown. This filtering applies to both the Account Select view (if enabled) and the Institution Select view. Institutions that do not support the selected subtypes will be omitted from Link. To indicate that all subtypes should be shown, use the value `"all"`. If the `account_filters` filter is used, any account type for which a filter is not specified will be entirely omitted from Link. For a full list of valid types and subtypes, see the [Account schema](https://plaid.com/docs/api/accounts#account-type-schema).
+     *
+     * @remarks
+     *
+     * For institutions using OAuth, the filter will not affect the list of accounts shown by the bank in the OAuth window.
+     *
+     */
+    accountFilters?: Record<string, any>;
+    /**
+     * (Beta) This field has no effect unless you are participating in the Product Scope Transparency beta program.
+     *
+     * @remarks
+     * List of additional Plaid product(s) you wish to collect consent for. These products will not be billed until you start using them by calling the relevant endpoints.
+     *
+     * `balance` is *not* a valid value, the Balance product does not require explicit initialization and will automatically have consent collected.
+     *
+     * Institutions that do not support these products will still be shown in Link
+     */
+    additionalConsentedProducts?: ProductsEnum[];
+    /**
+     * The name of your app's Android package. Required if using the `link_token` to initialize Link on Android. When creating a `link_token` for initializing Link on other platforms, this field must be left blank. Any package name specified here must also be added to the Allowed Android package names setting on the [developer dashboard](https://dashboard.plaid.com/team/api).
+     */
+    androidPackageName?: string;
+    /**
+     * Specifies options for initializing Link for use with the Auth product. This field can be used to enable or disable extended Auth flows for the resulting Link session. Omitting any field will result in a default that can be configured by your account manager.
+     */
+    auth?: LinkTokenCreateRequestAuth;
+    /**
+     * Your Plaid API `client_id`. The `client_id` is required and may be provided either in the `PLAID-CLIENT-ID` header or as part of a request body.
+     */
+    clientId?: string;
+    /**
+     * The name of your application, as it should be displayed in Link. Maximum length of 30 characters. If a value longer than 30 characters is provided, Link will display "This Application" instead.
+     */
+    clientName: string;
+    /**
+     * Specify an array of Plaid-supported country codes using the ISO-3166-1 alpha-2 country code standard. Institutions from all listed countries will be shown. For a complete mapping of supported products by country, see https://plaid.com/global/.
+     *
+     * @remarks
+     *
+     * If Link is launched with multiple country codes, only products that you are enabled for in all countries will be used by Link. Note that while all countries are enabled by default in Sandbox and Development, in Production only US and Canada are enabled by default. To gain access to European institutions in the Production environment, [file a product access Support ticket](https://dashboard.plaid.com/support/new/product-and-development/product-troubleshooting/request-product-access) via the Plaid dashboard. If you initialize with a European country code, your users will see the European consent panel during the Link flow.
+     *
+     * If using a Link customization, make sure the country codes in the customization match those specified in `country_codes`. If both `country_codes` and a Link customization are used, the value in `country_codes` may override the value in the customization.
+     *
+     * If using the Auth features Instant Match, Same-day Micro-deposits, or Automated Micro-deposits, `country_codes` must be set to `['US']`.
+     */
+    countryCodes: CountryCodeEnum[];
+    /**
+     * Specifies options for initializing Link for use with the Deposit Switch (beta) product. This field is required if `deposit_switch` is included in the `products` array.
+     */
+    depositSwitch?: LinkTokenCreateRequestDepositSwitch;
+    /**
+     * Specifies options for initializing Link for use with the Employment product. This field is required if `employment` is included in the `products` array.
+     */
+    employment?: LinkTokenCreateRequestEmployment;
+    /**
+     * Configuration parameters for EU flows
+     */
+    euConfig?: LinkTokenEUConfig;
+    /**
+     * Specifies option for initializing Link for use with the Identity Verification product.
+     */
+    identityVerification?: LinkTokenCreateRequestIdentityVerification;
+    /**
+     * Specifies options for initializing Link for use with the Income product. This field is required if `income_verification` is included in the `products` array.
+     */
+    incomeVerification?: LinkTokenCreateRequestIncomeVerification;
+    /**
+     * A map containing data used to highlight institutions in Link.
+     */
+    institutionData?: LinkTokenCreateInstitutionData;
+    /**
+     * Used for certain Europe-only configurations, as well as certain legacy use cases in other regions.
+     */
+    institutionId?: string;
+    /**
+     * Configuration parameters for the Investments product
+     */
+    investments?: LinkTokenInvestments;
+    /**
+     * The language that Link should be displayed in.
+     *
+     * @remarks
+     *
+     * Supported languages are:
+     * - Danish (`'da'`)
+     * - Dutch (`'nl'`)
+     * - English (`'en'`)
+     * - Estonian (`'et'`)
+     * - French (`'fr'`)
+     * - German (`'de'`)
+     * - Italian (`'it'`)
+     * - Latvian (`'lv'`)
+     * - Lithuanian (`'lt'`)
+     * - Norwegian (`'no'`)
+     * - Polish (`'po'`)
+     * - Romanian (`'ro'`)
+     * - Spanish (`'es'`)
+     * - Swedish (`'se'`)
+     *
+     * When using a Link customization, the language configured here must match the setting in the customization, or the customization will not be applied.
+     */
+    language: string;
+    /**
+     * The name of the Link customization from the Plaid Dashboard to be applied to Link. If not specified, the `default` customization will be used. When using a Link customization, the language in the customization must match the language selected via the `language` parameter, and the countries in the customization should match the country codes selected via `country_codes`.
+     */
+    linkCustomizationName?: string;
+    /**
+     * Specifies options for initializing Link for use with the Payment Initiation (Europe) product. This field is required if `payment_initiation` is included in the `products` array. Either `payment_id` or `consent_id` must be provided.
+     */
+    paymentInitiation?: LinkTokenCreateRequestPaymentInitiation;
+    /**
+     * List of Plaid product(s) you wish to use. If launching Link in update mode, should be omitted; required otherwise.
+     *
+     * @remarks
+     *
+     * `balance` is *not* a valid value, the Balance product does not require explicit initialization and will automatically be initialized when any other product is initialized.
+     *
+     * The products specified here will determine which institutions will be available to your users in Link. Only institutions that support *all* requested products can be selected; a if a user attempts to select an institution that does not support a listed product, a "Connectivity not supported" error message will appear in Link. To maximize the number of institutions available, initialize Link with the minimal product set required for your use case. Additional products can be added after Link initialization by calling the relevant endpoints. For details and exceptions, see [Choosing when to initialize products](https://plaid.com/docs/link/initializing-products/).
+     *
+     * Note that, unless you have opted to disable Instant Match support, institutions that support Instant Match will also be shown in Link if `auth` is specified as a product, even though these institutions do not contain `auth` in their product array.
+     *
+     * In Production, you will be billed for each product that you specify when initializing Link. Note that a product cannot be removed from an Item once the Item has been initialized with that product. To stop billing on an Item for subscription-based products, such as Liabilities, Investments, and Transactions, remove the Item via `/item/remove`.
+     */
+    products?: ProductsEnum[];
+    /**
+     * A URI indicating the destination where a user should be forwarded after completing the Link flow; used to support OAuth authentication flows when launching Link in the browser or via a webview. The `redirect_uri` should not contain any query parameters. When used in Production or Development, must be an https URI. To specify any subdomain, use `*` as a wildcard character, e.g. `https://*.example.com/oauth.html`. If `android_package_name` is specified, this field should be left blank.  Note that any redirect URI must also be added to the Allowed redirect URIs list in the [developer dashboard](https://dashboard.plaid.com/team/api).
+     */
+    redirectUri?: string;
+    /**
+     * Your Plaid API `secret`. The `secret` is required and may be provided either in the `PLAID-SECRET` header or as part of a request body.
+     */
+    secret?: string;
+    /**
+     * Specifies options for initializing Link for use with the Transfer product.
+     */
+    transfer?: LinkTokenCreateRequestTransfer;
+    /**
+     * Specifies options for initializing Link for [update mode](https://plaid.com/docs/link/update-mode).
+     */
+    update?: LinkTokenCreateRequestUpdate;
+    /**
+     * An object specifying information about the end user who will be linking their account.
+     */
+    user: LinkTokenCreateRequestUser;
+    /**
+     * A user token generated using `/user/create`. Any Item created during the Link session will be associated with the user.
+     */
+    userToken?: string;
+    /**
+     * The destination URL to which any webhooks should be sent.
+     */
+    webhook?: string;
+}

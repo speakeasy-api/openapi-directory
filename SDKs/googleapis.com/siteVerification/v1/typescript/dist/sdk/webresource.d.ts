@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class WebResource {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,31 +9,31 @@ export declare class WebResource {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * siteVerificationWebResourceDelete - Relinquish ownership of a website or domain.
-    **/
-    siteVerificationWebResourceDelete(req: operations.SiteVerificationWebResourceDeleteRequest, config?: AxiosRequestConfig): Promise<operations.SiteVerificationWebResourceDeleteResponse>;
+     * Relinquish ownership of a website or domain.
+     */
+    siteVerificationWebResourceDelete(req: operations.SiteVerificationWebResourceDeleteRequest, security: operations.SiteVerificationWebResourceDeleteSecurity, config?: AxiosRequestConfig): Promise<operations.SiteVerificationWebResourceDeleteResponse>;
     /**
-     * siteVerificationWebResourceGet - Get the most current data for a website or domain.
-    **/
-    siteVerificationWebResourceGet(req: operations.SiteVerificationWebResourceGetRequest, config?: AxiosRequestConfig): Promise<operations.SiteVerificationWebResourceGetResponse>;
+     * Get the most current data for a website or domain.
+     */
+    siteVerificationWebResourceGet(req: operations.SiteVerificationWebResourceGetRequest, security: operations.SiteVerificationWebResourceGetSecurity, config?: AxiosRequestConfig): Promise<operations.SiteVerificationWebResourceGetResponse>;
     /**
-     * siteVerificationWebResourceGetToken - Get a verification token for placing on a website or domain.
-    **/
-    siteVerificationWebResourceGetToken(req: operations.SiteVerificationWebResourceGetTokenRequest, config?: AxiosRequestConfig): Promise<operations.SiteVerificationWebResourceGetTokenResponse>;
+     * Get a verification token for placing on a website or domain.
+     */
+    siteVerificationWebResourceGetToken(req: operations.SiteVerificationWebResourceGetTokenRequest, security: operations.SiteVerificationWebResourceGetTokenSecurity, config?: AxiosRequestConfig): Promise<operations.SiteVerificationWebResourceGetTokenResponse>;
     /**
-     * siteVerificationWebResourceInsert - Attempt verification of a website or domain.
-    **/
-    siteVerificationWebResourceInsert(req: operations.SiteVerificationWebResourceInsertRequest, config?: AxiosRequestConfig): Promise<operations.SiteVerificationWebResourceInsertResponse>;
+     * Attempt verification of a website or domain.
+     */
+    siteVerificationWebResourceInsert(req: operations.SiteVerificationWebResourceInsertRequest, security: operations.SiteVerificationWebResourceInsertSecurity, config?: AxiosRequestConfig): Promise<operations.SiteVerificationWebResourceInsertResponse>;
     /**
-     * siteVerificationWebResourceList - Get the list of your verified websites and domains.
-    **/
-    siteVerificationWebResourceList(req: operations.SiteVerificationWebResourceListRequest, config?: AxiosRequestConfig): Promise<operations.SiteVerificationWebResourceListResponse>;
+     * Get the list of your verified websites and domains.
+     */
+    siteVerificationWebResourceList(req: operations.SiteVerificationWebResourceListRequest, security: operations.SiteVerificationWebResourceListSecurity, config?: AxiosRequestConfig): Promise<operations.SiteVerificationWebResourceListResponse>;
     /**
-     * siteVerificationWebResourcePatch - Modify the list of owners for your website or domain. This method supports patch semantics.
-    **/
-    siteVerificationWebResourcePatch(req: operations.SiteVerificationWebResourcePatchRequest, config?: AxiosRequestConfig): Promise<operations.SiteVerificationWebResourcePatchResponse>;
+     * Modify the list of owners for your website or domain. This method supports patch semantics.
+     */
+    siteVerificationWebResourcePatch(req: operations.SiteVerificationWebResourcePatchRequest, security: operations.SiteVerificationWebResourcePatchSecurity, config?: AxiosRequestConfig): Promise<operations.SiteVerificationWebResourcePatchResponse>;
     /**
-     * siteVerificationWebResourceUpdate - Modify the list of owners for your website or domain.
-    **/
-    siteVerificationWebResourceUpdate(req: operations.SiteVerificationWebResourceUpdateRequest, config?: AxiosRequestConfig): Promise<operations.SiteVerificationWebResourceUpdateResponse>;
+     * Modify the list of owners for your website or domain.
+     */
+    siteVerificationWebResourceUpdate(req: operations.SiteVerificationWebResourceUpdateRequest, security: operations.SiteVerificationWebResourceUpdateSecurity, config?: AxiosRequestConfig): Promise<operations.SiteVerificationWebResourceUpdateResponse>;
 }

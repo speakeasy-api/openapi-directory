@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum RegisterUsageXAmzTargetEnum {
-    AwsmpMeteringServiceRegisterUsage = "AWSMPMeteringService.RegisterUsage"
+    AWSMPMeteringServiceRegisterUsage = "AWSMPMeteringService.RegisterUsage"
 }
-export declare class RegisterUsageHeaders extends SpeakeasyBase {
+export declare class RegisterUsageRequest extends SpeakeasyBase {
+    registerUsageRequest: shared.RegisterUsageRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,20 +15,44 @@ export declare class RegisterUsageHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: RegisterUsageXAmzTargetEnum;
 }
-export declare class RegisterUsageRequest extends SpeakeasyBase {
-    headers: RegisterUsageHeaders;
-    request: shared.RegisterUsageRequest;
-}
 export declare class RegisterUsageResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * CustomerNotEntitledException
+     */
     customerNotEntitledException?: any;
+    /**
+     * DisabledApiException
+     */
     disabledApiException?: any;
+    /**
+     * InternalServiceErrorException
+     */
     internalServiceErrorException?: any;
+    /**
+     * InvalidProductCodeException
+     */
     invalidProductCodeException?: any;
+    /**
+     * InvalidPublicKeyVersionException
+     */
     invalidPublicKeyVersionException?: any;
+    /**
+     * InvalidRegionException
+     */
     invalidRegionException?: any;
+    /**
+     * PlatformNotSupportedException
+     */
     platformNotSupportedException?: any;
+    /**
+     * Success
+     */
     registerUsageResult?: shared.RegisterUsageResult;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

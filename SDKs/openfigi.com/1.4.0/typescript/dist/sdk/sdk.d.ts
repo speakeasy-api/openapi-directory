@@ -1,12 +1,30 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-import { Security } from "./models/shared";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://api.openfigi.com/{basePath}"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * The security details required to authenticate the SDK
+     */
+    security?: shared.Security;
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    security?: Security;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * A free & open API for FIGI discovery.
+ */
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -14,13 +32,14 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
     /**
-     * getMappingValuesKey - Get values for enum-like fields.
-    **/
+     * Get values for enum-like fields.
+     */
     getMappingValuesKey(req: operations.GetMappingValuesKeyRequest, config?: AxiosRequestConfig): Promise<operations.GetMappingValuesKeyResponse>;
     /**
-     * postMapping - Allows mapping from third-party identifiers to FIGIs.
-    **/
-    postMapping(req: operations.PostMappingRequest, config?: AxiosRequestConfig): Promise<operations.PostMappingResponse>;
+     * Allows mapping from third-party identifiers to FIGIs.
+     */
+    postMapping(req: shared.MappingJob[], config?: AxiosRequestConfig): Promise<operations.PostMappingResponse>;
 }

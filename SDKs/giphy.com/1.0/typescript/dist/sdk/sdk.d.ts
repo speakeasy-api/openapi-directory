@@ -1,13 +1,33 @@
-import { AxiosInstance } from "axios";
-import { Security } from "./models/shared";
 import { Gifs } from "./gifs";
+import * as shared from "./models/shared";
 import { Stickers } from "./stickers";
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://api.giphy.com/v1"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * The security details required to authenticate the SDK
+     */
+    security?: shared.Security;
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    security?: Security;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * Giphy API
+ *
+ * @see {@link https://developers.giphy.com/docs/} - Official Giphy Documentation
+ */
 export declare class SDK {
     gifs: Gifs;
     stickers: Stickers;
@@ -17,5 +37,6 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
 }

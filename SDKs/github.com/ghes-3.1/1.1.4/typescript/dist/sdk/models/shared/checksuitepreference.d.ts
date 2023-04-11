@@ -9,8 +9,11 @@ export declare class CheckSuitePreferencePreferences extends SpeakeasyBase {
 }
 /**
  * Check suite configuration preferences for a repository.
-**/
+ */
 export declare class CheckSuitePreference extends SpeakeasyBase {
     preferences: CheckSuitePreferencePreferences;
+    /**
+     * Minimal Repository
+     */
     repository: MinimalRepository;
 }

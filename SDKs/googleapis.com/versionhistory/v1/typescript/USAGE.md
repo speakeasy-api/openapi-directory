@@ -1,31 +1,33 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { VersionhistoryPlatformsChannelsListRequest, VersionhistoryPlatformsChannelsListResponse } from "openapi/src/sdk/models/operations";
+import {
+  VersionhistoryPlatformsChannelsListRequest,
+  VersionhistoryPlatformsChannelsListResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: VersionhistoryPlatformsChannelsListRequest = {
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    pageSize: 8274930044578894929,
-    pageToken: "et",
-    prettyPrint: true,
-    quotaUser: "rerum",
-    uploadType: "dicta",
-    uploadProtocol: "debitis",
-  },
+  dollarXgafv: XgafvEnum.Two,
+  accessToken: "provident",
+  alt: AltEnum.Proto,
+  callback: "quibusdam",
+  fields: "unde",
+  key: "nulla",
+  oauthToken: "corrupti",
+  pageSize: 847252,
+  pageToken: "vel",
+  parent: "error",
+  prettyPrint: false,
+  quotaUser: "deserunt",
+  uploadType: "suscipit",
+  uploadProtocol: "iure",
 };
 
 sdk.platforms.versionhistoryPlatformsChannelsList(req).then((res: VersionhistoryPlatformsChannelsListResponse | AxiosError) => {

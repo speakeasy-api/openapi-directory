@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { PrincipalPermissions } from "./principalpermissions";
 import { DatabaseIdentifier } from "./databaseidentifier";
+import { PrincipalPermissions } from "./principalpermissions";
 /**
  * The structure used to create or update a database.
-**/
+ */
 export declare class DatabaseInput extends SpeakeasyBase {
     createTableDefaultPermissions?: PrincipalPermissions[];
     description?: string;

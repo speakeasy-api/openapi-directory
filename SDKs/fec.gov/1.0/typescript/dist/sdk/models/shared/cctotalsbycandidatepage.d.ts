@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { CCTotalsByCandidate } from "./cctotalsbycandidate";
 import { OffsetInfo } from "./offsetinfo";
-import { CcTotalsByCandidate } from "./cctotalsbycandidate";
-export declare class CcTotalsByCandidatePage extends SpeakeasyBase {
+export declare class CCTotalsByCandidatePage extends SpeakeasyBase {
     pagination?: OffsetInfo;
-    results?: CcTotalsByCandidate[];
+    results?: CCTotalsByCandidate[];
 }

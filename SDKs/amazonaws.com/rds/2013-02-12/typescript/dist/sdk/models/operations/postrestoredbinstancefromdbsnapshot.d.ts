@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostRestoreDbInstanceFromDbSnapshotActionEnum {
-    RestoreDbInstanceFromDbSnapshot = "RestoreDBInstanceFromDBSnapshot"
+import { AxiosResponse } from "axios";
+export declare enum POSTRestoreDBInstanceFromDBSnapshotActionEnum {
+    RestoreDBInstanceFromDBSnapshot = "RestoreDBInstanceFromDBSnapshot"
 }
-export declare enum PostRestoreDbInstanceFromDbSnapshotVersionEnum {
+export declare enum POSTRestoreDBInstanceFromDBSnapshotVersionEnum {
     TwoThousandAndThirteen0212 = "2013-02-12"
 }
-export declare class PostRestoreDbInstanceFromDbSnapshotQueryParams extends SpeakeasyBase {
-    action: PostRestoreDbInstanceFromDbSnapshotActionEnum;
-    version: PostRestoreDbInstanceFromDbSnapshotVersionEnum;
-}
-export declare class PostRestoreDbInstanceFromDbSnapshotHeaders extends SpeakeasyBase {
+export declare class POSTRestoreDBInstanceFromDBSnapshotRequest extends SpeakeasyBase {
+    action: POSTRestoreDBInstanceFromDBSnapshotActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTRestoreDBInstanceFromDBSnapshotVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostRestoreDbInstanceFromDbSnapshotHeaders extends Speakeas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostRestoreDbInstanceFromDbSnapshotRequest extends SpeakeasyBase {
-    queryParams: PostRestoreDbInstanceFromDbSnapshotQueryParams;
-    headers: PostRestoreDbInstanceFromDbSnapshotHeaders;
-    request?: Uint8Array;
-}
-export declare class PostRestoreDbInstanceFromDbSnapshotResponse extends SpeakeasyBase {
+export declare class POSTRestoreDBInstanceFromDBSnapshotResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

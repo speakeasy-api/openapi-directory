@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Imports {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,14 +9,15 @@ export declare class Imports {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * objectGetImport - CRUD: Retrieve an import
-    **/
-    objectGetImport(req: operations.ObjectGetImportRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGetImportResponse>;
+     * CRUD: Retrieve an import
+     */
+    objectGETImport(req: operations.ObjectGETImportRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGETImportResponse>;
     /**
-     * objectPostImport - CRUD: Create an import
+     * CRUD: Create an import
      *
+     * @remarks
      * Creates a data import.
      *
-    **/
-    objectPostImport(req: operations.ObjectPostImportRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPostImportResponse>;
+     */
+    objectPOSTImport(req: operations.ObjectPOSTImportRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPOSTImportResponse>;
 }

@@ -1,8 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteSafetyRulePathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteSafetyRuleRequest extends SpeakeasyBase {
+    /**
+     * The ARN of the safety rule.
+     */
     safetyRuleArn: string;
-}
-export declare class DeleteSafetyRuleHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,15 +13,24 @@ export declare class DeleteSafetyRuleHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeleteSafetyRuleRequest extends SpeakeasyBase {
-    pathParams: DeleteSafetyRulePathParams;
-    headers: DeleteSafetyRuleHeaders;
-}
 export declare class DeleteSafetyRuleResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deleteSafetyRuleResponse?: Record<string, any>;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

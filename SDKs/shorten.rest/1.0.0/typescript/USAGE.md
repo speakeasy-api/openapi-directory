@@ -1,65 +1,66 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateAliasRequest, CreateAliasResponse } from "openapi/src/sdk/models/operations";
+import {
+  CreateAliasRequest,
+  CreateAliasResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: CreateAliasRequest = {
-  security: {
-    apiKeyAuth: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  },
-  queryParams: {
-    aliasName: "sit",
-    domainName: "voluptas",
-  },
-  request: {
+  createAliasModel: {
     destinations: [
       {
-        country: "expedita",
-        os: "consequuntur",
-        url: "dolor",
+        country: "Montenegro",
+        os: "distinctio",
+        url: "quibusdam",
       },
       {
-        country: "expedita",
-        os: "voluptas",
-        url: "fugit",
+        country: "Mozambique",
+        os: "nulla",
+        url: "corrupti",
+      },
+      {
+        country: "Suriname",
+        os: "vel",
+        url: "error",
       },
     ],
     metatags: [
       {
-        content: "nihil",
-        name: "rerum",
+        content: "suscipit",
+        name: "iure",
+      },
+      {
+        content: "magnam",
+        name: "debitis",
+      },
+      {
+        content: "ipsa",
+        name: "delectus",
       },
     ],
     snippets: [
       {
-        id: "debitis",
+        id: "suscipit",
         parameters: {
-          "et": "ut",
+          "minus": "placeat",
+          "voluptatum": "iusto",
         },
       },
       {
-        id: "dolorem",
+        id: "excepturi",
         parameters: {
-          "voluptate": "iste",
-          "vitae": "totam",
-        },
-      },
-      {
-        id: "dolores",
-        parameters: {
-          "debitis": "vel",
-          "odio": "dolore",
-          "id": "aspernatur",
+          "recusandae": "temporibus",
+          "ab": "quis",
         },
       },
     ],
   },
+  aliasName: "veritatis",
+  domainName: "deserunt",
 };
 
 sdk.alias.createAlias(req).then((res: CreateAliasResponse | AxiosError) => {

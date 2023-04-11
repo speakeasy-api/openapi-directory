@@ -1,6 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ExtrasExportTemplatesListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ExtrasExportTemplatesListRequest extends SpeakeasyBase {
     contentType?: string;
     contentTypeN?: string;
     id?: string;
@@ -9,6 +10,9 @@ export declare class ExtrasExportTemplatesListQueryParams extends SpeakeasyBase 
     idLt?: string;
     idLte?: string;
     idN?: string;
+    /**
+     * Number of results to return per page.
+     */
     limit?: number;
     name?: string;
     nameIc?: string;
@@ -20,21 +24,22 @@ export declare class ExtrasExportTemplatesListQueryParams extends SpeakeasyBase 
     nameNie?: string;
     nameNiew?: string;
     nameNisw?: string;
+    /**
+     * The initial index from which to return the results.
+     */
     offset?: number;
     templateLanguage?: string;
     templateLanguageN?: string;
 }
-export declare class ExtrasExportTemplatesList200ApplicationJson extends SpeakeasyBase {
+export declare class ExtrasExportTemplatesList200ApplicationJSON extends SpeakeasyBase {
     count: number;
     next?: string;
     previous?: string;
     results: shared.ExportTemplate[];
 }
-export declare class ExtrasExportTemplatesListRequest extends SpeakeasyBase {
-    queryParams: ExtrasExportTemplatesListQueryParams;
-}
 export declare class ExtrasExportTemplatesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    extrasExportTemplatesList200ApplicationJSONObject?: ExtrasExportTemplatesList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    extrasExportTemplatesList200ApplicationJSONObject?: ExtrasExportTemplatesList200ApplicationJSON;
 }

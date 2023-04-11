@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeScheduledActionsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeScheduledActionsActionEnum {
     DescribeScheduledActions = "DescribeScheduledActions"
 }
-export declare enum PostDescribeScheduledActionsVersionEnum {
+export declare enum POSTDescribeScheduledActionsVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostDescribeScheduledActionsQueryParams extends SpeakeasyBase {
-    action: PostDescribeScheduledActionsActionEnum;
+export declare class POSTDescribeScheduledActionsRequest extends SpeakeasyBase {
+    action: POSTDescribeScheduledActionsActionEnum;
+    /**
+     * Pagination token
+     */
     marker?: string;
+    /**
+     * Pagination limit
+     */
     maxRecords?: string;
-    version: PostDescribeScheduledActionsVersionEnum;
-}
-export declare class PostDescribeScheduledActionsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeScheduledActionsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeScheduledActionsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeScheduledActionsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeScheduledActionsQueryParams;
-    headers: PostDescribeScheduledActionsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeScheduledActionsResponse extends SpeakeasyBase {
+export declare class POSTDescribeScheduledActionsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,15 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetTimezoneAreaLocationRegionTxtPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetTimezoneAreaLocationRegionTxtRequest extends SpeakeasyBase {
     area: string;
     location: string;
     region: string;
 }
-export declare class GetTimezoneAreaLocationRegionTxtRequest extends SpeakeasyBase {
-    pathParams: GetTimezoneAreaLocationRegionTxtPathParams;
-}
 export declare class GetTimezoneAreaLocationRegionTxtResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * the current time for the timezone requested in plain text
+     */
     dateTimeTextResponse?: string;
+    /**
+     * an error response in plain text
+     */
     errorTextResponse?: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

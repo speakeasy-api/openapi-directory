@@ -1,31 +1,21 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DeleteAccountAccessConsentsConsentIdRequest, DeleteAccountAccessConsentsConsentIdResponse } from "openapi/src/sdk/models/operations";
+import {
+  DeleteAccountAccessConsentsConsentIdRequest,
+  DeleteAccountAccessConsentsConsentIdResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: DeleteAccountAccessConsentsConsentIdRequest = {
-  security: {
-    clientCredentialsToken: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    clientId: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  },
-  pathParams: {
-    consentId: "sit",
-  },
-  headers: {
-    sandboxId: "voluptas",
-    xCustomerUserAgent: "culpa",
-    xFapiAuthDate: "expedita",
-    xFapiCustomerIpAddress: "consequuntur",
-    xFapiInteractionId: "dolor",
-  },
+  consentId: "corrupti",
+  sandboxId: "provident",
+  xCustomerUserAgent: "distinctio",
+  xFapiAuthDate: "quibusdam",
+  xFapiCustomerIpAddress: "unde",
+  xFapiInteractionId: "nulla",
 };
 
 sdk.accountAccess.deleteAccountAccessConsentsConsentId(req).then((res: DeleteAccountAccessConsentsConsentIdResponse | AxiosError) => {

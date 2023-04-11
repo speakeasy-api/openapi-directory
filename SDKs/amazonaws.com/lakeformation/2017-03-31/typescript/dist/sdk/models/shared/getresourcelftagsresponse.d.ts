@@ -1,8 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { LfTagPair } from "./lftagpair";
-import { ColumnLfTag } from "./columnlftag";
-export declare class GetResourceLfTagsResponse extends SpeakeasyBase {
-    lfTagOnDatabase?: LfTagPair[];
-    lfTagsOnColumns?: ColumnLfTag[];
-    lfTagsOnTable?: LfTagPair[];
+import { ColumnLFTag } from "./columnlftag";
+import { LFTagPair } from "./lftagpair";
+/**
+ * Success
+ */
+export declare class GetResourceLFTagsResponse extends SpeakeasyBase {
+    lfTagOnDatabase?: LFTagPair[];
+    lfTagsOnColumns?: ColumnLFTag[];
+    lfTagsOnTable?: LFTagPair[];
 }

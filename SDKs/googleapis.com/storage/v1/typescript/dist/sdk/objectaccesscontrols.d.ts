@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class ObjectAccessControls {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,27 +9,27 @@ export declare class ObjectAccessControls {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * storageObjectAccessControlsDelete - Permanently deletes the ACL entry for the specified entity on the specified object.
-    **/
-    storageObjectAccessControlsDelete(req: operations.StorageObjectAccessControlsDeleteRequest, config?: AxiosRequestConfig): Promise<operations.StorageObjectAccessControlsDeleteResponse>;
+     * Permanently deletes the ACL entry for the specified entity on the specified object.
+     */
+    storageObjectAccessControlsDelete(req: operations.StorageObjectAccessControlsDeleteRequest, security: operations.StorageObjectAccessControlsDeleteSecurity, config?: AxiosRequestConfig): Promise<operations.StorageObjectAccessControlsDeleteResponse>;
     /**
-     * storageObjectAccessControlsGet - Returns the ACL entry for the specified entity on the specified object.
-    **/
-    storageObjectAccessControlsGet(req: operations.StorageObjectAccessControlsGetRequest, config?: AxiosRequestConfig): Promise<operations.StorageObjectAccessControlsGetResponse>;
+     * Returns the ACL entry for the specified entity on the specified object.
+     */
+    storageObjectAccessControlsGet(req: operations.StorageObjectAccessControlsGetRequest, security: operations.StorageObjectAccessControlsGetSecurity, config?: AxiosRequestConfig): Promise<operations.StorageObjectAccessControlsGetResponse>;
     /**
-     * storageObjectAccessControlsInsert - Creates a new ACL entry on the specified object.
-    **/
-    storageObjectAccessControlsInsert(req: operations.StorageObjectAccessControlsInsertRequest, config?: AxiosRequestConfig): Promise<operations.StorageObjectAccessControlsInsertResponse>;
+     * Creates a new ACL entry on the specified object.
+     */
+    storageObjectAccessControlsInsert(req: operations.StorageObjectAccessControlsInsertRequest, security: operations.StorageObjectAccessControlsInsertSecurity, config?: AxiosRequestConfig): Promise<operations.StorageObjectAccessControlsInsertResponse>;
     /**
-     * storageObjectAccessControlsList - Retrieves ACL entries on the specified object.
-    **/
-    storageObjectAccessControlsList(req: operations.StorageObjectAccessControlsListRequest, config?: AxiosRequestConfig): Promise<operations.StorageObjectAccessControlsListResponse>;
+     * Retrieves ACL entries on the specified object.
+     */
+    storageObjectAccessControlsList(req: operations.StorageObjectAccessControlsListRequest, security: operations.StorageObjectAccessControlsListSecurity, config?: AxiosRequestConfig): Promise<operations.StorageObjectAccessControlsListResponse>;
     /**
-     * storageObjectAccessControlsPatch - Patches an ACL entry on the specified object.
-    **/
-    storageObjectAccessControlsPatch(req: operations.StorageObjectAccessControlsPatchRequest, config?: AxiosRequestConfig): Promise<operations.StorageObjectAccessControlsPatchResponse>;
+     * Patches an ACL entry on the specified object.
+     */
+    storageObjectAccessControlsPatch(req: operations.StorageObjectAccessControlsPatchRequest, security: operations.StorageObjectAccessControlsPatchSecurity, config?: AxiosRequestConfig): Promise<operations.StorageObjectAccessControlsPatchResponse>;
     /**
-     * storageObjectAccessControlsUpdate - Updates an ACL entry on the specified object.
-    **/
-    storageObjectAccessControlsUpdate(req: operations.StorageObjectAccessControlsUpdateRequest, config?: AxiosRequestConfig): Promise<operations.StorageObjectAccessControlsUpdateResponse>;
+     * Updates an ACL entry on the specified object.
+     */
+    storageObjectAccessControlsUpdate(req: operations.StorageObjectAccessControlsUpdateRequest, security: operations.StorageObjectAccessControlsUpdateSecurity, config?: AxiosRequestConfig): Promise<operations.StorageObjectAccessControlsUpdateResponse>;
 }

@@ -22,6 +22,9 @@ export declare class PreReceiveHookScriptRepository extends SpeakeasyBase {
     id?: number;
     url?: string;
 }
+/**
+ * Response
+ */
 export declare class PreReceiveHook extends SpeakeasyBase {
     allowDownstreamConfiguration?: boolean;
     enforcement?: string;

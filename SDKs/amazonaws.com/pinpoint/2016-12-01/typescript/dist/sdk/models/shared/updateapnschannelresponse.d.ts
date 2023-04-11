@@ -1,5 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ApnsChannelResponse } from "./apnschannelresponse";
+import { APNSChannelResponse } from "./apnschannelresponse";
+/**
+ * Success
+ */
 export declare class UpdateApnsChannelResponse extends SpeakeasyBase {
-    apnsChannelResponse: ApnsChannelResponse;
+    /**
+     * Provides information about the status and settings of the APNs (Apple Push Notification service) channel for an application.
+     */
+    apnsChannelResponse: APNSChannelResponse;
 }

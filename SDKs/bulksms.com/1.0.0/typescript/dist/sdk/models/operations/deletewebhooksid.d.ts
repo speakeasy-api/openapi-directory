@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteWebhooksIdPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteWebhooksIdRequest extends SpeakeasyBase {
-    pathParams: DeleteWebhooksIdPathParams;
+    /**
+     * The `id` of the webhook
+     */
+    id: string;
 }
 export declare class DeleteWebhooksIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * A webhook with the given id does not exit
+     */
     error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

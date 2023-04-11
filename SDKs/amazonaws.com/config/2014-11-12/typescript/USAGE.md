@@ -1,40 +1,57 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { BatchGetAggregateResourceConfigRequest, BatchGetAggregateResourceConfigResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  BatchGetAggregateResourceConfigRequest,
+  BatchGetAggregateResourceConfigResponse,
+  BatchGetAggregateResourceConfigXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
+import {
+  ResourceTypeEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: BatchGetAggregateResourceConfigRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "StarlingDoveService.BatchGetAggregateResourceConfig",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
-    configurationAggregatorName: "fugit",
+});
+
+const req: BatchGetAggregateResourceConfigRequest = {
+  batchGetAggregateResourceConfigRequest: {
+    configurationAggregatorName: "corrupti",
     resourceIdentifiers: [
       {
-        resourceId: "nihil",
-        resourceName: "rerum",
-        resourceType: "AWS::ApiGateway::Stage",
-        sourceAccountId: "debitis",
-        sourceRegion: "voluptatum",
+        resourceId: "distinctio",
+        resourceName: "quibusdam",
+        resourceType: ResourceTypeEnum.AWSDataSyncLocationNFS,
+        sourceAccountId: "nulla",
+        sourceRegion: "corrupti",
+      },
+      {
+        resourceId: "illum",
+        resourceName: "vel",
+        resourceType: ResourceTypeEnum.AWSGuardDutyIPSet,
+        sourceAccountId: "deserunt",
+        sourceRegion: "suscipit",
+      },
+      {
+        resourceId: "iure",
+        resourceName: "magnam",
+        resourceType: ResourceTypeEnum.AWSIoTSiteWiseDashboard,
+        sourceAccountId: "ipsa",
+        sourceRegion: "delectus",
       },
     ],
   },
+  xAmzAlgorithm: "tempora",
+  xAmzContentSha256: "suscipit",
+  xAmzCredential: "molestiae",
+  xAmzDate: "minus",
+  xAmzSecurityToken: "placeat",
+  xAmzSignature: "voluptatum",
+  xAmzSignedHeaders: "iusto",
+  xAmzTarget: BatchGetAggregateResourceConfigXAmzTargetEnum.StarlingDoveServiceBatchGetAggregateResourceConfig,
 };
 
 sdk.batchGetAggregateResourceConfig(req).then((res: BatchGetAggregateResourceConfigResponse | AxiosError) => {

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum GetContainerApiMetadataXAmzTargetEnum {
-    Lightsail20161128GetContainerApiMetadata = "Lightsail_20161128.GetContainerAPIMetadata"
+import { AxiosResponse } from "axios";
+export declare enum GetContainerAPIMetadataXAmzTargetEnum {
+    Lightsail20161128GetContainerAPIMetadata = "Lightsail_20161128.GetContainerAPIMetadata"
 }
-export declare class GetContainerApiMetadataHeaders extends SpeakeasyBase {
+export declare class GetContainerAPIMetadataRequest extends SpeakeasyBase {
+    requestBody: Record<string, any>;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,17 +13,26 @@ export declare class GetContainerApiMetadataHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: GetContainerApiMetadataXAmzTargetEnum;
+    xAmzTarget: GetContainerAPIMetadataXAmzTargetEnum;
 }
-export declare class GetContainerApiMetadataRequest extends SpeakeasyBase {
-    headers: GetContainerApiMetadataHeaders;
-    request: Record<string, any>;
-}
-export declare class GetContainerApiMetadataResponse extends SpeakeasyBase {
+export declare class GetContainerAPIMetadataResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
-    getContainerAPIMetadataResult?: shared.GetContainerApiMetadataResult;
+    /**
+     * Success
+     */
+    getContainerAPIMetadataResult?: shared.GetContainerAPIMetadataResult;
+    /**
+     * ServiceException
+     */
     serviceException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnauthenticatedException
+     */
     unauthenticatedException?: any;
 }

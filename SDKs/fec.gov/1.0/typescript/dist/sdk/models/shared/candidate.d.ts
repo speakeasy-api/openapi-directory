@@ -1,49 +1,310 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class CandidatePrincipalCommittees extends SpeakeasyBase {
+    /**
+     *
+     * @remarks
+     * Affiliated committee or connected organization
+     *
+     */
     affiliatedCommitteeName?: string;
+    /**
+     *
+     * @remarks
+     * A unique identifier assigned to each candidate registered with the FEC.
+     * If a person runs for several offices, that person will have separate candidate IDs for each office.
+     *
+     */
     candidateIds?: string[];
+    /**
+     *
+     * @remarks
+     * A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
+     *
+     */
     committeeId: string;
+    /**
+     * The one-letter type code of the organization:
+     *
+     * @remarks
+     *         - C communication cost
+     *         - D delegate
+     *         - E electioneering communication
+     *         - H House
+     *         - I independent expenditure filer (not a committee)
+     *         - N PAC - nonqualified
+     *         - O independent expenditure-only (super PACs)
+     *         - P presidential
+     *         - Q PAC - qualified
+     *         - S Senate
+     *         - U single candidate independent expenditure
+     *         - V PAC with non-contribution account, nonqualified
+     *         - W PAC with non-contribution account, qualified
+     *         - X party, nonqualified
+     *         - Y party, qualified
+     *         - Z national party non-federal account
+     *
+     */
     committeeType?: string;
+    /**
+     * The one-letter type code of the organization:
+     *
+     * @remarks
+     *         - C communication cost
+     *         - D delegate
+     *         - E electioneering communication
+     *         - H House
+     *         - I independent expenditure filer (not a committee)
+     *         - N PAC - nonqualified
+     *         - O independent expenditure-only (super PACs)
+     *         - P presidential
+     *         - Q PAC - qualified
+     *         - S Senate
+     *         - U single candidate independent expenditure
+     *         - V PAC with non-contribution account, nonqualified
+     *         - W PAC with non-contribution account, qualified
+     *         - X party, nonqualified
+     *         - Y party, qualified
+     *         - Z national party non-federal account
+     *
+     */
     committeeTypeFull?: string;
+    /**
+     *
+     * @remarks
+     * A two year election cycle that the committee was active- (after original registration
+     * date but before expiration date in Form 1s) The cycle begins with
+     * an odd year and is named for its ending, even year.
+     *
+     */
     cycles?: number[];
+    /**
+     * The one-letter designation code of the organization:
+     *
+     * @remarks
+     *          - A authorized by a candidate
+     *          - J joint fundraising committee
+     *          - P principal campaign committee of a candidate
+     *          - U unauthorized
+     *          - B lobbyist/registrant PAC
+     *          - D leadership PAC
+     *
+     */
     designation?: string;
+    /**
+     * The one-letter designation code of the organization:
+     *
+     * @remarks
+     *          - A authorized by a candidate
+     *          - J joint fundraising committee
+     *          - P principal campaign committee of a candidate
+     *          - U unauthorized
+     *          - B lobbyist/registrant PAC
+     *          - D leadership PAC
+     *
+     */
     designationFull?: string;
+    /**
+     * The one-letter
+     *
+     * @remarks
+     *     code of the filing frequency:
+     *          - A Administratively terminated
+     *          - D Debt
+     *          - M Monthly filer
+     *          - Q Quarterly filer
+     *          - T Terminated
+     *          - W Waived
+     *
+     */
     filingFrequency?: string;
+    /**
+     * The day the FEC received the committee's first Form 1
+     */
+    firstF1Date?: Date;
+    /**
+     * The day the FEC received the committee's first filing. This is usually a Form 1 committee registration.
+     */
     firstFileDate?: Date;
+    /**
+     * The day the FEC received the committee's most recent Form 1
+     */
     lastF1Date?: Date;
+    /**
+     * The day the FEC received the committee's most recent filing
+     */
     lastFileDate?: Date;
+    /**
+     * The name of the committee. If a committee changes its name,     the most recent name will be shown. Committee names are not unique. Use committee_id     for looking up records.
+     */
     name?: string;
+    /**
+     * The one-letter code for the kind for organization:
+     *
+     * @remarks
+     *         - C corporation
+     *         - L labor organization
+     *         - M membership organization
+     *         - T trade association
+     *         - V cooperative
+     *         - W corporation without capital stock
+     *
+     */
     organizationType?: string;
+    /**
+     * The one-letter code for the kind for organization:
+     *
+     * @remarks
+     *         - C corporation
+     *         - L labor organization
+     *         - M membership organization
+     *         - T trade association
+     *         - V cooperative
+     *         - W corporation without capital stock
+     *
+     */
     organizationTypeFull?: string;
+    /**
+     * Three-letter code for the party affiliated with a candidate or committee. For example, DEM for Democratic Party and REP for Republican Party.
+     */
     party?: string;
+    /**
+     * Three-letter code for the party affiliated with a candidate or committee. For example, DEM for Democratic Party and REP for Republican Party.
+     */
     partyFull?: string;
+    /**
+     *
+     * @remarks
+     * State of the committee's address as filed on the Form 1
+     *
+     */
     state?: string;
+    /**
+     * Name of the Committee's treasurer. If multiple treasurers for the committee, the most recent treasurer will be shown.
+     */
     treasurerName?: string;
 }
 export declare class Candidate extends SpeakeasyBase {
+    /**
+     * Last year a candidate was active. This field is specific to the candidate_id so if the same person runs for another office, there may be a different record for them.
+     */
     activeThrough?: number;
+    /**
+     *
+     * @remarks
+     * A unique identifier assigned to each candidate registered with the FEC.
+     * If a person runs for several offices, that person will have separate candidate IDs for each office.
+     *
+     */
     candidateId?: string;
+    /**
+     *  Candidates who are actively seeking office. If no value is specified, all candidates
+     *
+     * @remarks
+     * are returned. When True is specified, only active candidates are returned. When False is
+     * specified, only inactive candidates are returned.
+     *
+     */
     candidateInactive?: boolean;
+    /**
+     * One-letter code explaining if the candidate is:
+     *
+     * @remarks
+     *         - C present candidate
+     *         - F future candidate
+     *         - N not yet a candidate
+     *         - P prior candidate
+     *
+     */
     candidateStatus?: string;
+    /**
+     *
+     * @remarks
+     * Two-year election cycle in which a candidate runs for office.
+     * Calculated from Form 2. The cycle begins with
+     * an odd year and is named for its ending, even year. This cycle follows
+     * the traditional house election cycle and subdivides the presidential
+     * and Senate elections into comparable two-year blocks. To retrieve data for
+     * the entire four years of a presidential term or six years of a senatorial term,
+     * you will need the `election_full` flag.
+     *
+     */
     cycles?: number[];
+    /**
+     * Two-digit US House distirict of the office the candidate is running for. Presidential, Senate and House at-large candidates will have District 00.
+     */
     district?: string;
+    /**
+     * One-letter code explaining if the candidate is:
+     *
+     * @remarks
+     *         - C present candidate
+     *         - F future candidate
+     *         - N not yet a candidate
+     *         - P prior candidate
+     *
+     */
     districtNumber?: number;
+    /**
+     * Two-digit US House distirict of the office the candidate is running for. Presidential, Senate and House at-large candidates will have District 00.
+     */
     electionDistricts?: string[];
+    /**
+     * Years in which a candidate ran for office.
+     */
     electionYears?: number[];
     federalFundsFlag?: boolean;
+    /**
+     * The day the FEC received the candidate's first filing. This is a F2 candidate registration.
+     */
     firstFileDate?: Date;
     hasRaisedFunds?: boolean;
+    /**
+     * inactive years
+     */
     inactiveElectionYears?: number[];
+    /**
+     * One-letter code ('I', 'C', 'O') explaining if the candidate is an incumbent, a challenger, or if the seat is open.
+     */
     incumbentChallenge?: string;
+    /**
+     * Explains if the candidate is an incumbent, a challenger, or if the seat is open.
+     */
     incumbentChallengeFull?: string;
+    /**
+     * The day the FEC received the candidate's most recent Form 2
+     */
     lastF2Date?: Date;
+    /**
+     * The day the FEC received the candidate's most recent filing
+     */
     lastFileDate?: Date;
+    /**
+     * Date the information was loaded into the FEC systems. This can be affected by reseting systems and other factors, refer to receipt_date for the day that the FEC received the paper or electronic document. Keep in mind that paper filings take more time to process and there can be a lag between load_date and receipt_date. This field can be helpful to identify paper records that have been processed recently.
+     */
     loadDate?: Date;
+    /**
+     * Name of candidate running for office
+     */
     name?: string;
+    /**
+     * Federal office candidate runs for: H, S or P
+     */
     office?: string;
+    /**
+     * Federal office candidate runs for: House, Senate or presidential
+     */
     officeFull?: string;
+    /**
+     * Three-letter code for the party affiliated with a candidate or committee. For example, DEM for Democratic Party and REP for Republican Party.
+     */
     party?: string;
+    /**
+     * Party affiliated with a candidate or committee
+     */
     partyFull?: string;
     principalCommittees?: CandidatePrincipalCommittees[];
+    /**
+     * US state or territory where a candidate runs for office
+     */
     state?: string;
 }

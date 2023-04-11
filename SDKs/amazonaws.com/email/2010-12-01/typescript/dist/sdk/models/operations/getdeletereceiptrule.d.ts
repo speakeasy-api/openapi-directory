@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteReceiptRuleActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteReceiptRuleActionEnum {
     DeleteReceiptRule = "DeleteReceiptRule"
 }
-export declare enum GetDeleteReceiptRuleVersionEnum {
+export declare enum GETDeleteReceiptRuleVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetDeleteReceiptRuleQueryParams extends SpeakeasyBase {
-    action: GetDeleteReceiptRuleActionEnum;
+export declare class GETDeleteReceiptRuleRequest extends SpeakeasyBase {
+    action: GETDeleteReceiptRuleActionEnum;
+    /**
+     * The name of the receipt rule to delete.
+     */
     ruleName: string;
+    /**
+     * The name of the receipt rule set that contains the receipt rule to delete.
+     */
     ruleSetName: string;
-    version: GetDeleteReceiptRuleVersionEnum;
-}
-export declare class GetDeleteReceiptRuleHeaders extends SpeakeasyBase {
+    version: GETDeleteReceiptRuleVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetDeleteReceiptRuleHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteReceiptRuleRequest extends SpeakeasyBase {
-    queryParams: GetDeleteReceiptRuleQueryParams;
-    headers: GetDeleteReceiptRuleHeaders;
-}
-export declare class GetDeleteReceiptRuleResponse extends SpeakeasyBase {
+export declare class GETDeleteReceiptRuleResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

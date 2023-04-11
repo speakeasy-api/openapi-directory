@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The MIME type of this media file. Can be used to filter the response of the creatives.list method.
+ */
 export declare enum MediaFileMimeTypeEnum {
     VideoMimeTypeUnspecified = "VIDEO_MIME_TYPE_UNSPECIFIED",
     MimeVideoXflv = "MIME_VIDEO_XFLV",
@@ -21,8 +24,14 @@ export declare enum MediaFileMimeTypeEnum {
 }
 /**
  * Information about each media file in the VAST.
-**/
+ */
 export declare class MediaFile extends SpeakeasyBase {
+    /**
+     * Bitrate of the video file, in Kbps. Can be used to filter the response of the creatives.list method.
+     */
     bitrate?: string;
+    /**
+     * The MIME type of this media file. Can be used to filter the response of the creatives.list method.
+     */
     mimeType?: MediaFileMimeTypeEnum;
 }

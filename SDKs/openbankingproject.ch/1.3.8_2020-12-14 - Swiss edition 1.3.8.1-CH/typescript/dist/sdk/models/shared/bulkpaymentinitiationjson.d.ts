@@ -1,19 +1,56 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { AccountReference16Ch } from "./accountreference16ch";
-import { DebtorAgent7Ch } from "./debtoragent7ch";
+import { AccountReference16CH } from "./accountreference16ch";
+import { DebtorAgent7CH } from "./debtoragent7ch";
 import { PaymentInitiationBulkElementJson } from "./paymentinitiationbulkelementjson";
 /**
  * Generic Body for a bulk payment initation via JSON.
+ *
+ * @remarks
  *
  * paymentInformationId is contained in code but commented since it is n.a.
  * and not all ASPSP are able to support this field now.
  * In a later version the field will be mandatory.
  *
-**/
+ */
 export declare class BulkPaymentInitiationJson extends SpeakeasyBase {
+    /**
+     * If this element equals 'true', the PSU prefers only one booking entry.
+     *
+     * @remarks
+     * If this element equals 'false', the PSU prefers individual booking of all contained individual transactions.
+     *
+     * The ASPSP will follow this preference according to contracts agreed on with the PSU.
+     *
+     */
     batchBookingPreferred?: boolean;
-    debtorAccount: AccountReference16Ch;
-    debtorAgent: DebtorAgent7Ch;
+    /**
+     * Reference to an account by either
+     *
+     * @remarks
+     *   * IBAN, of a payment accounts, or
+     *   * otherAccountIdentification, for payment accounts if there is no IBAN
+     * adapted from ISO pain.001.001.03.ch.02 CashAccount16-CH_IdTpCcy
+     *
+     */
+    debtorAccount: AccountReference16CH;
+    /**
+     * Reference to an debtorAgent by either
+     *
+     * @remarks
+     *   * BIC, of the debtor bank, or
+     *   * IID, of the debtor bank
+     * adapted from ISO pain.001.001.03.ch.02 FinancialInstitutionIdentification7-CH_BicOrClrId
+     *
+     */
+    debtorAgent: DebtorAgent7CH;
+    /**
+     * A list of generic JSON bodies payment initations for bulk payments via JSON.
+     *
+     * @remarks
+     *
+     * Note: Some fields from single payments do not occcur in a bulk payment element
+     *
+     */
     payments: PaymentInitiationBulkElementJson[];
     requestedExecutionDate?: Date;
     requestedExecutionTime?: Date;

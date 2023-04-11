@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Search API for 'Boulder Rental Housing' entry type
+ */
 export declare class TypeBolderRentalHousing {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,10 @@ export declare class TypeBolderRentalHousing {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * searchBolderRentalHousing - Search API for 'Boulder Rental Housing' entry type
+     * Search API for 'Boulder Rental Housing' entry type
      *
+     * @remarks
      * API to search for entries of type Boulder Rental Housing
-    **/
+     */
     searchBolderRentalHousing(req: operations.SearchBolderRentalHousingRequest, config?: AxiosRequestConfig): Promise<operations.SearchBolderRentalHousingResponse>;
 }

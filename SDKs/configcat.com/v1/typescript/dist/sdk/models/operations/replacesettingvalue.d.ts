@@ -1,25 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReplaceSettingValuePathParams extends SpeakeasyBase {
-    environmentId: string;
-    settingId: number;
-}
-export declare class ReplaceSettingValueQueryParams extends SpeakeasyBase {
-    reason?: string;
-}
-export declare class ReplaceSettingValueRequests extends SpeakeasyBase {
-    updateSettingValueModel?: shared.UpdateSettingValueModel;
-    updateSettingValueModel1?: shared.UpdateSettingValueModel;
-    updateSettingValueModel2?: shared.UpdateSettingValueModel;
-}
+import { AxiosResponse } from "axios";
 export declare class ReplaceSettingValueRequest extends SpeakeasyBase {
-    pathParams: ReplaceSettingValuePathParams;
-    queryParams: ReplaceSettingValueQueryParams;
-    request: ReplaceSettingValueRequests;
+    updateSettingValueModel: shared.UpdateSettingValueModel;
+    /**
+     * The identifier of the Environment.
+     */
+    environmentId: string;
+    /**
+     * The reason note for the Audit Log if the Product's "Config changes require a reason" preference is turned on.
+     */
+    reason?: string;
+    /**
+     * The id of the Setting.
+     */
+    settingId: number;
 }
 export declare class ReplaceSettingValueResponse extends SpeakeasyBase {
     contentType: string;
     settingValueModel?: shared.SettingValueModel;
     settingValueModelHaljson?: shared.SettingValueModelHaljson;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

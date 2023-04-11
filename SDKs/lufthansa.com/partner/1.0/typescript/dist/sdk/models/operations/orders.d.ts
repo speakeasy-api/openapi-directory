@@ -1,22 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class OrdersPathParams extends SpeakeasyBase {
-    name: string;
-    orderID: string;
-}
-export declare class OrdersHeaders extends SpeakeasyBase {
-    accept: string;
-}
+import { AxiosResponse } from "axios";
 export declare class OrdersSecurity extends SpeakeasyBase {
-    auth: shared.SchemeAuth;
+    auth: string;
 }
 export declare class OrdersRequest extends SpeakeasyBase {
-    pathParams: OrdersPathParams;
-    headers: OrdersHeaders;
-    security: OrdersSecurity;
+    /**
+     * http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+     */
+    accept: string;
+    /**
+     * Surname of traveller
+     */
+    name: string;
+    /**
+     * Unique order identifier
+     */
+    orderID: string;
 }
 export declare class OrdersResponse extends SpeakeasyBase {
     contentType: string;
     orders200ApplicationJSONString?: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

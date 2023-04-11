@@ -5,6 +5,9 @@ export declare class PatientMessagePatientMessageAttachment extends SpeakeasyBas
     doctor?: number;
     updatedAt?: string;
 }
+/**
+ * Created
+ */
 export declare class PatientMessage extends SpeakeasyBase {
     attachments?: PatientMessagePatientMessageAttachment[];
     body?: string;

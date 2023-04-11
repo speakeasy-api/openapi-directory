@@ -1,15 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SessionControllerLogoutPathParams extends SpeakeasyBase {
-    shortName: string;
-}
-export declare class SessionControllerLogoutQueryParams extends SpeakeasyBase {
-    token: string;
-}
+import { AxiosResponse } from "axios";
 export declare class SessionControllerLogoutRequest extends SpeakeasyBase {
-    pathParams: SessionControllerLogoutPathParams;
-    queryParams: SessionControllerLogoutQueryParams;
+    /**
+     * The unique client short-name
+     */
+    shortName: string;
+    /**
+     * The login token returned from the /session POST call
+     */
+    token: string;
 }
 export declare class SessionControllerLogoutResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

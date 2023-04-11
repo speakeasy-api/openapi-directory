@@ -17,7 +17,7 @@ export declare enum SessionActivityEntryTypeEnum {
 }
 /**
  * Single entry of session activity
-**/
+ */
 export declare class SessionActivityEntry extends SpeakeasyBase {
     attributes?: SessionActivityEntryAttributes;
     id?: number;

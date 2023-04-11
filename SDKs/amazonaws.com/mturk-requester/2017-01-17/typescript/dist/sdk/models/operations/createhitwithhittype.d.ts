@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum CreateHitWithHitTypeXAmzTargetEnum {
-    MTurkRequesterServiceV20170117CreateHitWithHitType = "MTurkRequesterServiceV20170117.CreateHITWithHITType"
+import { AxiosResponse } from "axios";
+export declare enum CreateHITWithHITTypeXAmzTargetEnum {
+    MTurkRequesterServiceV20170117CreateHITWithHITType = "MTurkRequesterServiceV20170117.CreateHITWithHITType"
 }
-export declare class CreateHitWithHitTypeHeaders extends SpeakeasyBase {
+export declare class CreateHITWithHITTypeRequest extends SpeakeasyBase {
+    createHITWithHITTypeRequest: shared.CreateHITWithHITTypeRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,16 +13,22 @@ export declare class CreateHitWithHitTypeHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: CreateHitWithHitTypeXAmzTargetEnum;
+    xAmzTarget: CreateHITWithHITTypeXAmzTargetEnum;
 }
-export declare class CreateHitWithHitTypeRequest extends SpeakeasyBase {
-    headers: CreateHitWithHitTypeHeaders;
-    request: shared.CreateHitWithHitTypeRequest;
-}
-export declare class CreateHitWithHitTypeResponse extends SpeakeasyBase {
+export declare class CreateHITWithHITTypeResponse extends SpeakeasyBase {
     contentType: string;
-    createHITWithHITTypeResponse?: shared.CreateHitWithHitTypeResponse;
+    /**
+     * Success
+     */
+    createHITWithHITTypeResponse?: shared.CreateHITWithHITTypeResponse;
+    /**
+     * RequestError
+     */
     requestError?: any;
+    /**
+     * ServiceFault
+     */
     serviceFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

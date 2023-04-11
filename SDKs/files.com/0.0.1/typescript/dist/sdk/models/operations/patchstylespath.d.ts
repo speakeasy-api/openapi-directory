@@ -1,21 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PatchStylesPathPathParams extends SpeakeasyBase {
-    path: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PatchStylesPathRequestBodyFile extends SpeakeasyBase {
     content: Uint8Array;
     file: string;
 }
 export declare class PatchStylesPathRequestBody extends SpeakeasyBase {
+    /**
+     * Logo for custom branding.
+     */
     file: PatchStylesPathRequestBodyFile;
 }
 export declare class PatchStylesPathRequest extends SpeakeasyBase {
-    pathParams: PatchStylesPathPathParams;
-    request: PatchStylesPathRequestBody;
+    requestBody: PatchStylesPathRequestBody;
+    /**
+     * Style path.
+     */
+    path: string;
 }
 export declare class PatchStylesPathResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The Styles object.
+     */
     styleEntity?: shared.StyleEntity;
 }

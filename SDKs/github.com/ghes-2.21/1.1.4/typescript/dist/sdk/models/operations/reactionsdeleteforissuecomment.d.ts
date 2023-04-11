@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ReactionsDeleteForIssueCommentPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ReactionsDeleteForIssueCommentRequest extends SpeakeasyBase {
+    /**
+     * comment_id parameter
+     */
     commentId: number;
     owner: string;
     reactionId: number;
     repo: string;
 }
-export declare class ReactionsDeleteForIssueCommentRequest extends SpeakeasyBase {
-    pathParams: ReactionsDeleteForIssueCommentPathParams;
-}
 export declare class ReactionsDeleteForIssueCommentResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

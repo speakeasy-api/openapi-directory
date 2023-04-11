@@ -1,10 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The group of relevant businesses where this infoType is commonly used
+ */
 export declare enum GooglePrivacyDlpV2InfoTypeCategoryIndustryCategoryEnum {
     IndustryUnspecified = "INDUSTRY_UNSPECIFIED",
     Finance = "FINANCE",
     Health = "HEALTH",
     Telecommunications = "TELECOMMUNICATIONS"
 }
+/**
+ * The region or country that issued the ID or document represented by the infoType.
+ */
 export declare enum GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum {
     LocationUnspecified = "LOCATION_UNSPECIFIED",
     Global = "GLOBAL",
@@ -16,6 +22,7 @@ export declare enum GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum {
     Chile = "CHILE",
     China = "CHINA",
     Colombia = "COLOMBIA",
+    Croatia = "CROATIA",
     Denmark = "DENMARK",
     France = "FRANCE",
     Finland = "FINLAND",
@@ -29,6 +36,7 @@ export declare enum GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum {
     Japan = "JAPAN",
     Korea = "KOREA",
     Mexico = "MEXICO",
+    NewZealand = "NEW_ZEALAND",
     TheNetherlands = "THE_NETHERLANDS",
     Norway = "NORWAY",
     Paraguay = "PARAGUAY",
@@ -46,9 +54,11 @@ export declare enum GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum {
     UnitedStates = "UNITED_STATES",
     Uruguay = "URUGUAY",
     Venezuela = "VENEZUELA",
-    Internal = "INTERNAL",
-    NewZealand = "NEW_ZEALAND"
+    Internal = "INTERNAL"
 }
+/**
+ * The class of identifiers where this infoType belongs
+ */
 export declare enum GooglePrivacyDlpV2InfoTypeCategoryTypeCategoryEnum {
     TypeUnspecified = "TYPE_UNSPECIFIED",
     Pii = "PII",
@@ -61,9 +71,18 @@ export declare enum GooglePrivacyDlpV2InfoTypeCategoryTypeCategoryEnum {
 }
 /**
  * Classification of infoTypes to organize them according to geographic location, industry, and data type.
-**/
+ */
 export declare class GooglePrivacyDlpV2InfoTypeCategory extends SpeakeasyBase {
+    /**
+     * The group of relevant businesses where this infoType is commonly used
+     */
     industryCategory?: GooglePrivacyDlpV2InfoTypeCategoryIndustryCategoryEnum;
+    /**
+     * The region or country that issued the ID or document represented by the infoType.
+     */
     locationCategory?: GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum;
+    /**
+     * The class of identifiers where this infoType belongs
+     */
     typeCategory?: GooglePrivacyDlpV2InfoTypeCategoryTypeCategoryEnum;
 }

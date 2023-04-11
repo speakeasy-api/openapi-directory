@@ -1,18 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { AzStatusEnum } from "./azstatusenum";
-import { Endpoint } from "./endpoint";
+import { AZStatusEnum } from "./azstatusenum";
 import { ClusterPendingUpdates } from "./clusterpendingupdates";
+import { DataTieringStatusEnum } from "./datatieringstatusenum";
+import { Endpoint } from "./endpoint";
 import { SecurityGroupMembership } from "./securitygroupmembership";
 import { Shard } from "./shard";
 /**
  * Contains all of the attributes of a specific cluster.
-**/
+ */
 export declare class Cluster extends SpeakeasyBase {
     aclName?: string;
     arn?: string;
     autoMinorVersionUpgrade?: boolean;
-    availabilityMode?: AzStatusEnum;
+    availabilityMode?: AZStatusEnum;
     clusterEndpoint?: Endpoint;
+    dataTiering?: DataTieringStatusEnum;
     description?: string;
     enginePatchVersion?: string;
     engineVersion?: string;

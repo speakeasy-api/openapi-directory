@@ -1,34 +1,105 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SearchProjectSiteQueryParams extends SpeakeasyBase {
-    changedateFrom?: Date;
-    changedateTo?: Date;
-    createdateFrom?: Date;
-    createdateTo?: Date;
-    description?: string;
-    filesuffix?: string;
-    fromdate?: Date;
-    group?: string;
-    max?: number;
-    maxlatitude?: number;
-    maxlongitude?: number;
-    minlatitude?: number;
-    minlongitude?: number;
-    name?: string;
-    searchProjectSiteCountry?: string;
-    searchProjectSiteCounty?: string;
-    searchProjectSiteNetwork?: string;
-    searchProjectSiteShortName?: string;
-    searchProjectSiteSiteType?: string;
-    searchProjectSiteState?: string;
-    searchProjectSiteStatus?: string;
-    skip?: number;
-    text?: string;
-    todate?: Date;
-}
+import { AxiosResponse } from "axios";
 export declare class SearchProjectSiteRequest extends SpeakeasyBase {
-    queryParams: SearchProjectSiteQueryParams;
+    /**
+     * Archive change date from
+     */
+    changedateFrom?: Date;
+    /**
+     * Archive change date to
+     */
+    changedateTo?: Date;
+    /**
+     * Archive create date from
+     */
+    createdateFrom?: Date;
+    /**
+     * Archive create date to
+     */
+    createdateTo?: Date;
+    /**
+     * Search description
+     */
+    description?: string;
+    /**
+     * File suffix
+     */
+    filesuffix?: string;
+    /**
+     * From date
+     */
+    fromdate?: Date;
+    /**
+     * Parent entry
+     */
+    group?: string;
+    /**
+     * Max number of results
+     */
+    max?: number;
+    /**
+     * Northern bounds of search
+     */
+    maxlatitude?: number;
+    /**
+     * Eastern bounds of search
+     */
+    maxlongitude?: number;
+    /**
+     * Southern bounds of search
+     */
+    minlatitude?: number;
+    /**
+     * Western bounds of search
+     */
+    minlongitude?: number;
+    /**
+     * Search name
+     */
+    name?: string;
+    /**
+     * Country
+     */
+    searchProjectSiteCountry?: string;
+    /**
+     * County
+     */
+    searchProjectSiteCounty?: string;
+    /**
+     * Network
+     */
+    searchProjectSiteNetwork?: string;
+    /**
+     * Short Name
+     */
+    searchProjectSiteShortName?: string;
+    /**
+     * Site Type
+     */
+    searchProjectSiteSiteType?: string;
+    /**
+     * State/Province
+     */
+    searchProjectSiteState?: string;
+    /**
+     * Status
+     */
+    searchProjectSiteStatus?: string;
+    /**
+     * Number to skip
+     */
+    skip?: number;
+    /**
+     * Search text
+     */
+    text?: string;
+    /**
+     * To date
+     */
+    todate?: Date;
 }
 export declare class SearchProjectSiteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

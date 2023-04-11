@@ -1,31 +1,33 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AssociateServiceQuotaTemplateRequest, AssociateServiceQuotaTemplateResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  AssociateServiceQuotaTemplateRequest,
+  AssociateServiceQuotaTemplateResponse,
+  AssociateServiceQuotaTemplateXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    hmac: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: AssociateServiceQuotaTemplateRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "ServiceQuotasV20190624.AssociateServiceQuotaTemplate",
+  requestBody: {
+    "provident": "distinctio",
+    "quibusdam": "unde",
+    "nulla": "corrupti",
   },
-  request: {
-    "et": "nihil",
-  },
+  xAmzAlgorithm: "illum",
+  xAmzContentSha256: "vel",
+  xAmzCredential: "error",
+  xAmzDate: "deserunt",
+  xAmzSecurityToken: "suscipit",
+  xAmzSignature: "iure",
+  xAmzSignedHeaders: "magnam",
+  xAmzTarget: AssociateServiceQuotaTemplateXAmzTargetEnum.ServiceQuotasV20190624AssociateServiceQuotaTemplate,
 };
 
 sdk.associateServiceQuotaTemplate(req).then((res: AssociateServiceQuotaTemplateResponse | AxiosError) => {

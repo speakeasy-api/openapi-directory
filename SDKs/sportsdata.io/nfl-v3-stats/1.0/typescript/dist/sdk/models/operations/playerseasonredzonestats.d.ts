@@ -1,17 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+/**
+ * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+ */
 export declare enum PlayerSeasonRedZoneStatsFormatEnum {
     Xml = "XML",
     Json = "JSON"
 }
-export declare class PlayerSeasonRedZoneStatsPathParams extends SpeakeasyBase {
-    format: PlayerSeasonRedZoneStatsFormatEnum;
-    season: string;
-}
 export declare class PlayerSeasonRedZoneStatsRequest extends SpeakeasyBase {
-    pathParams: PlayerSeasonRedZoneStatsPathParams;
+    /**
+     * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+     */
+    format: PlayerSeasonRedZoneStatsFormatEnum;
+    /**
+     * Year of the season and the season type. If no season type is provided, then the default is regular season.
+     *
+     * @remarks
+     *           <br>Examples: <code>2015REG</code>, <code>2015PRE</code>, <code>2015POST</code>.
+     *
+     */
+    season: string;
 }
 export declare class PlayerSeasonRedZoneStatsResponse extends SpeakeasyBase {
     contentType: string;
-    playerSeasonRedZones?: any[];
+    playerSeasonRedZones?: shared.PlayerSeasonRedZone[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

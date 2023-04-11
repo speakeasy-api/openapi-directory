@@ -1,17 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class WebhooksFetchAllPathParams extends SpeakeasyBase {
-    accountId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class WebhooksFetchAllSecurity extends SpeakeasyBase {
-    sakariAuth: shared.SchemeSakariAuth;
+    sakariAuth: string;
 }
 export declare class WebhooksFetchAllRequest extends SpeakeasyBase {
-    pathParams: WebhooksFetchAllPathParams;
-    security: WebhooksFetchAllSecurity;
+    /**
+     * Account to apply operations to
+     */
+    accountId: string;
 }
 export declare class WebhooksFetchAllResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     webhooksResponse?: shared.WebhooksResponse;
 }

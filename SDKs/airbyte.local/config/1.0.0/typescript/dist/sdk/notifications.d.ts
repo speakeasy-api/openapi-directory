@@ -1,5 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Notifications {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +10,7 @@ export declare class Notifications {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * tryNotificationConfig - Try sending a notifications
-    **/
-    tryNotificationConfig(req: operations.TryNotificationConfigRequest, config?: AxiosRequestConfig): Promise<operations.TryNotificationConfigResponse>;
+     * Try sending a notifications
+     */
+    tryNotificationConfig(req: shared.Notification, config?: AxiosRequestConfig): Promise<operations.TryNotificationConfigResponse>;
 }

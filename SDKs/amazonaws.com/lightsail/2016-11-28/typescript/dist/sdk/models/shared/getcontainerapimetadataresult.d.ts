@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetContainerApiMetadataResult extends SpeakeasyBase {
+/**
+ * Success
+ */
+export declare class GetContainerAPIMetadataResult extends SpeakeasyBase {
     metadata?: Record<string, string>[];
 }

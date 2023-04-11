@@ -1,0 +1,36 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { AnywhereConfiguration } from "./anywhereconfiguration";
+import { CertificateConfiguration } from "./certificateconfiguration";
+import { ComputeTypeEnum } from "./computetypeenum";
+import { Ec2InstanceTypeEnum } from "./ec2instancetypeenum";
+import { FleetTypeEnum } from "./fleettypeenum";
+import { IpPermission } from "./ippermission";
+import { LocationConfiguration } from "./locationconfiguration";
+import { ProtectionPolicyEnum } from "./protectionpolicyenum";
+import { ResourceCreationLimitPolicy } from "./resourcecreationlimitpolicy";
+import { RuntimeConfiguration } from "./runtimeconfiguration";
+import { Tag } from "./tag";
+export declare class CreateFleetInput extends SpeakeasyBase {
+    anywhereConfiguration?: AnywhereConfiguration;
+    buildId?: string;
+    certificateConfiguration?: CertificateConfiguration;
+    computeType?: ComputeTypeEnum;
+    description?: string;
+    ec2InboundPermissions?: IpPermission[];
+    ec2InstanceType?: Ec2InstanceTypeEnum;
+    fleetType?: FleetTypeEnum;
+    instanceRoleArn?: string;
+    locations?: LocationConfiguration[];
+    logPaths?: string[];
+    metricGroups?: string[];
+    name: string;
+    newGameSessionProtectionPolicy?: ProtectionPolicyEnum;
+    peerVpcAwsAccountId?: string;
+    peerVpcId?: string;
+    resourceCreationLimitPolicy?: ResourceCreationLimitPolicy;
+    runtimeConfiguration?: RuntimeConfiguration;
+    scriptId?: string;
+    serverLaunchParameters?: string;
+    serverLaunchPath?: string;
+    tags?: Tag[];
+}

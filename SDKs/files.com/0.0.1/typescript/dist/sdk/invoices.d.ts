@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Operations about invoices
+ */
 export declare class Invoices {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,15 +12,17 @@ export declare class Invoices {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getInvoices - List Invoices
-     *
      * List Invoices
-    **/
+     *
+     * @remarks
+     * List Invoices
+     */
     getInvoices(req: operations.GetInvoicesRequest, config?: AxiosRequestConfig): Promise<operations.GetInvoicesResponse>;
     /**
-     * getInvoicesId - Show Invoice
-     *
      * Show Invoice
-    **/
+     *
+     * @remarks
+     * Show Invoice
+     */
     getInvoicesId(req: operations.GetInvoicesIdRequest, config?: AxiosRequestConfig): Promise<operations.GetInvoicesIdResponse>;
 }

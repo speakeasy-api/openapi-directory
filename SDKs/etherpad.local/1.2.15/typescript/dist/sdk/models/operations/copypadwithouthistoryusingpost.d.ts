@@ -1,37 +1,60 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CopyPadWithoutHistoryUsingPostQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class CopyPadWithoutHistoryUsingPOSTRequest extends SpeakeasyBase {
     destinationID?: string;
     force?: string;
     sourceID?: string;
 }
-export declare class CopyPadWithoutHistoryUsingPost200ApplicationJson extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class CopyPadWithoutHistoryUsingPost500ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class CopyPadWithoutHistoryUsingPost400ApplicationJson extends SpeakeasyBase {
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class CopyPadWithoutHistoryUsingPost401ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class CopyPadWithoutHistoryUsingPost401ApplicationJson extends SpeakeasyBase {
+/**
+ * generic api error (code 1)
+ */
+export declare class CopyPadWithoutHistoryUsingPost400ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class CopyPadWithoutHistoryUsingPost500ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class CopyPadWithoutHistoryUsingPost200ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class CopyPadWithoutHistoryUsingPostRequest extends SpeakeasyBase {
-    queryParams: CopyPadWithoutHistoryUsingPostQueryParams;
-}
-export declare class CopyPadWithoutHistoryUsingPostResponse extends SpeakeasyBase {
+export declare class CopyPadWithoutHistoryUsingPOSTResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    copyPadWithoutHistoryUsingPOST200ApplicationJSONObject?: CopyPadWithoutHistoryUsingPost200ApplicationJson;
-    copyPadWithoutHistoryUsingPOST400ApplicationJSONObject?: CopyPadWithoutHistoryUsingPost400ApplicationJson;
-    copyPadWithoutHistoryUsingPOST401ApplicationJSONObject?: CopyPadWithoutHistoryUsingPost401ApplicationJson;
-    copyPadWithoutHistoryUsingPOST500ApplicationJSONObject?: CopyPadWithoutHistoryUsingPost500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    copyPadWithoutHistoryUsingPOST200ApplicationJSONObject?: CopyPadWithoutHistoryUsingPost200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    copyPadWithoutHistoryUsingPOST400ApplicationJSONObject?: CopyPadWithoutHistoryUsingPost400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    copyPadWithoutHistoryUsingPOST401ApplicationJSONObject?: CopyPadWithoutHistoryUsingPost401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    copyPadWithoutHistoryUsingPOST500ApplicationJSONObject?: CopyPadWithoutHistoryUsingPost500ApplicationJSON;
 }

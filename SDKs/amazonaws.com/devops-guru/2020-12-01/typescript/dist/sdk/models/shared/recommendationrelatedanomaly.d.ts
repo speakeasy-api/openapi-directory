@@ -3,8 +3,9 @@ import { RecommendationRelatedAnomalyResource } from "./recommendationrelatedano
 import { RecommendationRelatedAnomalySourceDetail } from "./recommendationrelatedanomalysourcedetail";
 /**
  *  Information about an anomaly that is related to a recommendation.
-**/
+ */
 export declare class RecommendationRelatedAnomaly extends SpeakeasyBase {
+    anomalyId?: string;
     resources?: RecommendationRelatedAnomalyResource[];
     sourceDetails?: RecommendationRelatedAnomalySourceDetail[];
 }

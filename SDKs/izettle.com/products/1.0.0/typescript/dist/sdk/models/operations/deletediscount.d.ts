@@ -1,18 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class DeleteDiscountPathParams extends SpeakeasyBase {
-    discountUuid: string;
-    organizationUuid: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteDiscountSecurity extends SpeakeasyBase {
-    zettleApiKey?: shared.SchemeZettleApiKey;
-    zettleOauth?: shared.SchemeZettleOauth;
+    zettleOauth: string;
 }
 export declare class DeleteDiscountRequest extends SpeakeasyBase {
-    pathParams: DeleteDiscountPathParams;
-    security: DeleteDiscountSecurity;
+    discountUuid: string;
+    organizationUuid: string;
 }
 export declare class DeleteDiscountResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

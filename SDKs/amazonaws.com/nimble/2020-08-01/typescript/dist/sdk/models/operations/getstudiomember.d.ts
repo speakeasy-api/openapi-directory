@@ -1,10 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetStudioMemberPathParams extends SpeakeasyBase {
-    principalId: string;
-    studioId: string;
-}
-export declare class GetStudioMemberHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetStudioMemberRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,20 +9,49 @@ export declare class GetStudioMemberHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class GetStudioMemberRequest extends SpeakeasyBase {
-    pathParams: GetStudioMemberPathParams;
-    headers: GetStudioMemberHeaders;
+    /**
+     * The principal ID. This currently supports a IAM Identity Center UserId.
+     */
+    principalId: string;
+    /**
+     * The studio ID.
+     */
+    studioId: string;
 }
 export declare class GetStudioMemberResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getStudioMemberResponse?: shared.GetStudioMemberResponse;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
-    serviceQuotaExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceQuotaExceededException
+     */
+    serviceQuotaExceededException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

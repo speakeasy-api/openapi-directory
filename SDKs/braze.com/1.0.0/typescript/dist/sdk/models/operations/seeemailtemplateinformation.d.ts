@@ -1,11 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SeeEmailTemplateInformationQueryParams extends SpeakeasyBase {
-    emailTemplateId?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class SeeEmailTemplateInformationRequest extends SpeakeasyBase {
-    queryParams: SeeEmailTemplateInformationQueryParams;
+    /**
+     * (Required) String
+     *
+     * @remarks
+     *
+     * Your email template's API Identifier.
+     */
+    emailTemplateId?: string;
 }
 export declare class SeeEmailTemplateInformationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

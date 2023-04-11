@@ -1,16 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class PostCreateTestCardRangesSecurity extends SpeakeasyBase {
+    apiKeyAuth?: string;
     basicAuth?: shared.SchemeBasicAuth;
-    apiKeyAuth?: shared.SchemeApiKeyAuth;
-}
-export declare class PostCreateTestCardRangesRequest extends SpeakeasyBase {
-    request?: any;
-    security: PostCreateTestCardRangesSecurity;
 }
 export declare class PostCreateTestCardRangesResponse extends SpeakeasyBase {
     contentType: string;
-    createTestCardRangesResult?: any;
-    serviceError?: any;
+    /**
+     * OK - the request has succeeded.
+     */
+    createTestCardRangesResult?: shared.CreateTestCardRangesResult;
+    /**
+     * Bad Request - a problem reading or understanding the request.
+     */
+    serviceError?: shared.ServiceError;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostListVirtualMfaDevicesActionEnum {
-    ListVirtualMfaDevices = "ListVirtualMFADevices"
+import { AxiosResponse } from "axios";
+export declare enum POSTListVirtualMFADevicesActionEnum {
+    ListVirtualMFADevices = "ListVirtualMFADevices"
 }
-export declare enum PostListVirtualMfaDevicesVersionEnum {
+export declare enum POSTListVirtualMFADevicesVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostListVirtualMfaDevicesQueryParams extends SpeakeasyBase {
-    action: PostListVirtualMfaDevicesActionEnum;
+export declare class POSTListVirtualMFADevicesRequest extends SpeakeasyBase {
+    action: POSTListVirtualMFADevicesActionEnum;
+    /**
+     * Pagination token
+     */
     marker?: string;
+    /**
+     * Pagination limit
+     */
     maxItems?: string;
-    version: PostListVirtualMfaDevicesVersionEnum;
-}
-export declare class PostListVirtualMfaDevicesHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTListVirtualMFADevicesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostListVirtualMfaDevicesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostListVirtualMfaDevicesRequest extends SpeakeasyBase {
-    queryParams: PostListVirtualMfaDevicesQueryParams;
-    headers: PostListVirtualMfaDevicesHeaders;
-    request?: Uint8Array;
-}
-export declare class PostListVirtualMfaDevicesResponse extends SpeakeasyBase {
+export declare class POSTListVirtualMFADevicesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

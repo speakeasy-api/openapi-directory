@@ -3,8 +3,8 @@ import { ResourceShareFeatureSetEnum } from "./resourcesharefeaturesetenum";
 import { ResourceShareStatusEnum } from "./resourcesharestatusenum";
 import { Tag } from "./tag";
 /**
- * Describes a resource share.
-**/
+ * Describes a resource share in RAM.
+ */
 export declare class ResourceShare extends SpeakeasyBase {
     allowExternalPrincipals?: boolean;
     creationTime?: Date;

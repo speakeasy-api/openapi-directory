@@ -1,29 +1,56 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class TaskListPathParams extends SpeakeasyBase {
-    jobId: string;
-}
-export declare class TaskListQueryParams extends SpeakeasyBase {
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class TaskListRequest extends SpeakeasyBase {
+    /**
+     * Sets an OData $expand clause.
+     */
     dollarExpand?: string;
+    /**
+     * Sets an OData $filter clause.
+     */
     dollarFilter?: string;
+    /**
+     * Sets an OData $select clause.
+     */
     dollarSelect?: string;
+    /**
+     * Client API Version.
+     */
     apiVersion: string;
+    /**
+     * Caller generated request identity, in the form of a GUID with no decoration such as curly braces e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
+     */
+    clientRequestId?: string;
+    /**
+     * The id of the job.
+     */
+    jobId: string;
+    /**
+     * Sets the maximum number of items to return in the response.
+     */
     maxresults?: number;
+    /**
+     * The time the request was issued. If not specified, this header will be automatically populated with the current system clock time.
+     */
+    ocpDate?: string;
+    /**
+     * Specifies if the server should return the client-request-id identifier in the response.
+     */
+    returnClientRequestId?: boolean;
+    /**
+     * Sets the maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
+     */
     timeout?: number;
 }
-export declare class TaskListHeaders extends SpeakeasyBase {
-    clientRequestId?: string;
-    ocpDate?: string;
-    returnClientRequestId?: boolean;
-}
-export declare class TaskListRequest extends SpeakeasyBase {
-    pathParams: TaskListPathParams;
-    queryParams: TaskListQueryParams;
-    headers: TaskListHeaders;
-}
 export declare class TaskListResponse extends SpeakeasyBase {
-    batchError?: any;
-    cloudTaskListResult?: any;
+    /**
+     * Error from the Batch service
+     */
+    batchError?: shared.BatchError;
+    cloudTaskListResult?: shared.CloudTaskListResult;
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,66 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DriveFilesUpdatePathParams extends SpeakeasyBase {
-    fileId: string;
-}
-export declare enum DriveFilesUpdateModifiedDateBehaviorEnum {
-    FromBody = "fromBody",
-    FromBodyIfNeeded = "fromBodyIfNeeded",
-    FromBodyOrNow = "fromBodyOrNow",
-    NoChange = "noChange",
-    Now = "now",
-    NowIfNeeded = "nowIfNeeded"
-}
-export declare class DriveFilesUpdateQueryParams extends SpeakeasyBase {
-    addParents?: string;
-    alt?: shared.AltEnum;
-    convert?: boolean;
-    enforceSingleParent?: boolean;
-    fields?: string;
-    includeLabels?: string;
-    includePermissionsForView?: string;
-    key?: string;
-    modifiedDateBehavior?: DriveFilesUpdateModifiedDateBehaviorEnum;
-    newRevision?: boolean;
-    oauthToken?: string;
-    ocr?: boolean;
-    ocrLanguage?: string;
-    pinned?: boolean;
-    prettyPrint?: boolean;
-    quotaUser?: string;
-    removeParents?: string;
-    setModifiedDate?: boolean;
-    supportsAllDrives?: boolean;
-    supportsTeamDrives?: boolean;
-    timedTextLanguage?: string;
-    timedTextTrackName?: string;
-    updateViewedDate?: boolean;
-    useContentAsIndexableText?: boolean;
-    userIp?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DriveFilesUpdateSecurityOption1 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class DriveFilesUpdateSecurityOption2 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class DriveFilesUpdateSecurityOption3 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class DriveFilesUpdateSecurityOption4 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class DriveFilesUpdateSecurityOption5 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class DriveFilesUpdateSecurityOption6 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class DriveFilesUpdateSecurity extends SpeakeasyBase {
     option1?: DriveFilesUpdateSecurityOption1;
@@ -70,14 +33,130 @@ export declare class DriveFilesUpdateSecurity extends SpeakeasyBase {
     option5?: DriveFilesUpdateSecurityOption5;
     option6?: DriveFilesUpdateSecurityOption6;
 }
+/**
+ * Determines the behavior in which modifiedDate is updated. This overrides setModifiedDate.
+ */
+export declare enum DriveFilesUpdateModifiedDateBehaviorEnum {
+    FromBody = "fromBody",
+    FromBodyIfNeeded = "fromBodyIfNeeded",
+    FromBodyOrNow = "fromBodyOrNow",
+    NoChange = "noChange",
+    Now = "now",
+    NowIfNeeded = "nowIfNeeded"
+}
 export declare class DriveFilesUpdateRequest extends SpeakeasyBase {
-    pathParams: DriveFilesUpdatePathParams;
-    queryParams: DriveFilesUpdateQueryParams;
-    request?: Uint8Array;
-    security: DriveFilesUpdateSecurity;
+    requestBody?: Uint8Array;
+    /**
+     * Comma-separated list of parent IDs to add.
+     */
+    addParents?: string;
+    /**
+     * Data format for the response.
+     */
+    alt?: shared.AltEnum;
+    /**
+     * This parameter is deprecated and has no function.
+     */
+    convert?: boolean;
+    /**
+     * Deprecated. Adding files to multiple folders is no longer supported. Use shortcuts instead.
+     */
+    enforceSingleParent?: boolean;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * The ID of the file to update.
+     */
+    fileId: string;
+    /**
+     * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+     */
+    includeLabels?: string;
+    /**
+     * Specifies which additional view's permissions to include in the response. Only 'published' is supported.
+     */
+    includePermissionsForView?: string;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * Determines the behavior in which modifiedDate is updated. This overrides setModifiedDate.
+     */
+    modifiedDateBehavior?: DriveFilesUpdateModifiedDateBehaviorEnum;
+    /**
+     * Whether a blob upload should create a new revision. If false, the blob data in the current head revision is replaced. If true or not set, a new blob is created as head revision, and previous unpinned revisions are preserved for a short period of time. Pinned revisions are stored indefinitely, using additional storage quota, up to a maximum of 200 revisions. For details on how revisions are retained, see the Drive Help Center. Note that this field is ignored if there is no payload in the request.
+     */
+    newRevision?: boolean;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauthToken?: string;
+    /**
+     * Whether to attempt OCR on .jpg, .png, .gif, or .pdf uploads.
+     */
+    ocr?: boolean;
+    /**
+     * If ocr is true, hints at the language to use. Valid values are BCP 47 codes.
+     */
+    ocrLanguage?: string;
+    /**
+     * Whether to pin the new revision. A file can have a maximum of 200 pinned revisions. Note that this field is ignored if there is no payload in the request.
+     */
+    pinned?: boolean;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * Comma-separated list of parent IDs to remove.
+     */
+    removeParents?: string;
+    /**
+     * Whether to set the modified date using the value supplied in the request body. Setting this field to true is equivalent to modifiedDateBehavior=fromBodyOrNow, and false is equivalent to modifiedDateBehavior=now. To prevent any changes to the modified date set modifiedDateBehavior=noChange.
+     */
+    setModifiedDate?: boolean;
+    /**
+     * Whether the requesting application supports both My Drives and shared drives.
+     */
+    supportsAllDrives?: boolean;
+    /**
+     * Deprecated use supportsAllDrives instead.
+     */
+    supportsTeamDrives?: boolean;
+    /**
+     * The language of the timed text.
+     */
+    timedTextLanguage?: string;
+    /**
+     * The timed text track name.
+     */
+    timedTextTrackName?: string;
+    /**
+     * Whether to update the view date after successfully updating the file.
+     */
+    updateViewedDate?: boolean;
+    /**
+     * Whether to use the content as indexable text.
+     */
+    useContentAsIndexableText?: boolean;
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    userIp?: string;
 }
 export declare class DriveFilesUpdateResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful response
+     */
     file?: shared.File;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

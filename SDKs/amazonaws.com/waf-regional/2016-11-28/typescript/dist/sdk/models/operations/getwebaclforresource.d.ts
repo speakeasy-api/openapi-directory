@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum GetWebAclForResourceXAmzTargetEnum {
-    AwswafRegional20161128GetWebAclForResource = "AWSWAF_Regional_20161128.GetWebACLForResource"
+import { AxiosResponse } from "axios";
+export declare enum GetWebACLForResourceXAmzTargetEnum {
+    AWSWAFRegional20161128GetWebACLForResource = "AWSWAF_Regional_20161128.GetWebACLForResource"
 }
-export declare class GetWebAclForResourceHeaders extends SpeakeasyBase {
+export declare class GetWebACLForResourceRequest extends SpeakeasyBase {
+    getWebACLForResourceRequest: shared.GetWebACLForResourceRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,19 +13,34 @@ export declare class GetWebAclForResourceHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: GetWebAclForResourceXAmzTargetEnum;
+    xAmzTarget: GetWebACLForResourceXAmzTargetEnum;
 }
-export declare class GetWebAclForResourceRequest extends SpeakeasyBase {
-    headers: GetWebAclForResourceHeaders;
-    request: shared.GetWebAclForResourceRequest;
-}
-export declare class GetWebAclForResourceResponse extends SpeakeasyBase {
+export declare class GetWebACLForResourceResponse extends SpeakeasyBase {
     contentType: string;
-    getWebACLForResourceResponse?: shared.GetWebAclForResourceResponse;
+    /**
+     * Success
+     */
+    getWebACLForResourceResponse?: shared.GetWebACLForResourceResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFInvalidAccountException
+     */
     wafInvalidAccountException?: any;
+    /**
+     * WAFInvalidParameterException
+     */
     wafInvalidParameterException?: any;
+    /**
+     * WAFNonexistentItemException
+     */
     wafNonexistentItemException?: any;
+    /**
+     * WAFUnavailableEntityException
+     */
     wafUnavailableEntityException?: any;
 }

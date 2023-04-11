@@ -1,8 +1,0 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ResourceShareTypeEnum = void 0;
-var ResourceShareTypeEnum;
-(function (ResourceShareTypeEnum) {
-    ResourceShareTypeEnum["Foreign"] = "FOREIGN";
-    ResourceShareTypeEnum["All"] = "ALL";
-})(ResourceShareTypeEnum = exports.ResourceShareTypeEnum || (exports.ResourceShareTypeEnum = {}));

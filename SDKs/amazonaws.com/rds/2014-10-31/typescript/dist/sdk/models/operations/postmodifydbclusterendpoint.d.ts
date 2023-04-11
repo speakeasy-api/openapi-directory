@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostModifyDbClusterEndpointActionEnum {
-    ModifyDbClusterEndpoint = "ModifyDBClusterEndpoint"
+import { AxiosResponse } from "axios";
+export declare enum POSTModifyDBClusterEndpointActionEnum {
+    ModifyDBClusterEndpoint = "ModifyDBClusterEndpoint"
 }
-export declare enum PostModifyDbClusterEndpointVersionEnum {
+export declare enum POSTModifyDBClusterEndpointVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class PostModifyDbClusterEndpointQueryParams extends SpeakeasyBase {
-    action: PostModifyDbClusterEndpointActionEnum;
-    version: PostModifyDbClusterEndpointVersionEnum;
-}
-export declare class PostModifyDbClusterEndpointHeaders extends SpeakeasyBase {
+export declare class POSTModifyDBClusterEndpointRequest extends SpeakeasyBase {
+    action: POSTModifyDBClusterEndpointActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTModifyDBClusterEndpointVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostModifyDbClusterEndpointHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostModifyDbClusterEndpointRequest extends SpeakeasyBase {
-    queryParams: PostModifyDbClusterEndpointQueryParams;
-    headers: PostModifyDbClusterEndpointHeaders;
-    request?: Uint8Array;
-}
-export declare class PostModifyDbClusterEndpointResponse extends SpeakeasyBase {
+export declare class POSTModifyDBClusterEndpointResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DisassociateRoleFromGroupPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DisassociateRoleFromGroupRequest extends SpeakeasyBase {
+    /**
+     * The ID of the Greengrass group.
+     */
     groupId: string;
-}
-export declare class DisassociateRoleFromGroupHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,14 +14,20 @@ export declare class DisassociateRoleFromGroupHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DisassociateRoleFromGroupRequest extends SpeakeasyBase {
-    pathParams: DisassociateRoleFromGroupPathParams;
-    headers: DisassociateRoleFromGroupHeaders;
-}
 export declare class DisassociateRoleFromGroupResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     disassociateRoleFromGroupResponse?: shared.DisassociateRoleFromGroupResponse;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

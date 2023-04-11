@@ -1,0 +1,17 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The state of the Google account on the device. "enabled" indicates that the Google account on the device can be used to access Google services (including Google Play), while "disabled" means that it cannot. A new device is initially in the "disabled" state.
+ */
+export declare enum DeviceStateAccountStateEnum {
+    Enabled = "enabled",
+    Disabled = "disabled"
+}
+/**
+ * The state of a user's device, as accessed by the getState and setState methods on device resources.
+ */
+export declare class DeviceState extends SpeakeasyBase {
+    /**
+     * The state of the Google account on the device. "enabled" indicates that the Google account on the device can be used to access Google services (including Google Play), while "disabled" means that it cannot. A new device is initially in the "disabled" state.
+     */
+    accountState?: DeviceStateAccountStateEnum;
+}

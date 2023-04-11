@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListFirewallsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListFirewallsXAmzTargetEnum {
     NetworkFirewall20201112ListFirewalls = "NetworkFirewall_20201112.ListFirewalls"
 }
-export declare class ListFirewallsHeaders extends SpeakeasyBase {
+export declare class ListFirewallsRequest extends SpeakeasyBase {
+    listFirewallsRequest: shared.ListFirewallsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,16 +23,24 @@ export declare class ListFirewallsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListFirewallsXAmzTargetEnum;
 }
-export declare class ListFirewallsRequest extends SpeakeasyBase {
-    queryParams: ListFirewallsQueryParams;
-    headers: ListFirewallsHeaders;
-    request: shared.ListFirewallsRequest;
-}
 export declare class ListFirewallsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServerError
+     */
     internalServerError?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * Success
+     */
     listFirewallsResponse?: shared.ListFirewallsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

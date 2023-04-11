@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeConnectionAliasesXAmzTargetEnum {
     WorkspacesServiceDescribeConnectionAliases = "WorkspacesService.DescribeConnectionAliases"
 }
-export declare class DescribeConnectionAliasesHeaders extends SpeakeasyBase {
+export declare class DescribeConnectionAliasesRequest extends SpeakeasyBase {
+    describeConnectionAliasesRequest: shared.DescribeConnectionAliasesRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class DescribeConnectionAliasesHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeConnectionAliasesXAmzTargetEnum;
 }
-export declare class DescribeConnectionAliasesRequest extends SpeakeasyBase {
-    headers: DescribeConnectionAliasesHeaders;
-    request: shared.DescribeConnectionAliasesRequest;
-}
 export declare class DescribeConnectionAliasesResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     describeConnectionAliasesResult?: shared.DescribeConnectionAliasesResult;
+    /**
+     * InvalidParameterValuesException
+     */
     invalidParameterValuesException?: any;
+    /**
+     * OperationNotSupportedException
+     */
     operationNotSupportedException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,57 +1,197 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SearchConstructionPermitsQueryParams extends SpeakeasyBase {
-    changedateFrom?: Date;
-    changedateTo?: Date;
-    createdateFrom?: Date;
-    createdateTo?: Date;
-    description?: string;
-    filesuffix?: string;
-    fromdate?: Date;
-    group?: string;
-    max?: number;
-    maxlatitude?: number;
-    maxlongitude?: number;
-    minlatitude?: number;
-    minlongitude?: number;
-    name?: string;
-    searchDbConstructionPermitsAddress?: string;
-    searchDbConstructionPermitsAffordableHsgUnit?: number;
-    searchDbConstructionPermitsApplied?: string;
-    searchDbConstructionPermitsApproved?: string;
-    searchDbConstructionPermitsBuildingUsesAndWorkScopes?: string;
-    searchDbConstructionPermitsCaseStatus?: string;
-    searchDbConstructionPermitsCategory?: string;
-    searchDbConstructionPermitsCoDate?: string;
-    searchDbConstructionPermitsCompletionDate?: string;
-    searchDbConstructionPermitsContractorCompany?: string;
-    searchDbConstructionPermitsContractorFirstName?: string;
-    searchDbConstructionPermitsContractorLastName?: string;
-    searchDbConstructionPermitsExistingResUnit?: number;
-    searchDbConstructionPermitsIssued?: string;
-    searchDbConstructionPermitsNarrativeDescription?: string;
-    searchDbConstructionPermitsNewResUnit?: number;
-    searchDbConstructionPermitsNewSf?: number;
-    searchDbConstructionPermitsOwner1Company?: string;
-    searchDbConstructionPermitsOwner1FirstName?: string;
-    searchDbConstructionPermitsOwner1LastName?: string;
-    searchDbConstructionPermitsOwner2Company?: string;
-    searchDbConstructionPermitsOwner2FirstName?: string;
-    searchDbConstructionPermitsOwner2LastName?: string;
-    searchDbConstructionPermitsPermitTypes?: string;
-    searchDbConstructionPermitsPrimaryCompany?: string;
-    searchDbConstructionPermitsPrimaryFirstName?: string;
-    searchDbConstructionPermitsPrimaryLastName?: string;
-    searchDbConstructionPermitsRemodelSf?: number;
-    searchDbConstructionPermitsTotalProjectValue?: number;
-    searchDbConstructionPermitsTotalSubpermitValue?: number;
-    skip?: number;
-    text?: string;
-    todate?: Date;
-}
+import { AxiosResponse } from "axios";
 export declare class SearchConstructionPermitsRequest extends SpeakeasyBase {
-    queryParams: SearchConstructionPermitsQueryParams;
+    /**
+     * Archive change date from
+     */
+    changedateFrom?: Date;
+    /**
+     * Archive change date to
+     */
+    changedateTo?: Date;
+    /**
+     * Archive create date from
+     */
+    createdateFrom?: Date;
+    /**
+     * Archive create date to
+     */
+    createdateTo?: Date;
+    /**
+     * Search description
+     */
+    description?: string;
+    /**
+     * File suffix
+     */
+    filesuffix?: string;
+    /**
+     * From date
+     */
+    fromdate?: Date;
+    /**
+     * Parent entry
+     */
+    group?: string;
+    /**
+     * Max number of results
+     */
+    max?: number;
+    /**
+     * Northern bounds of search
+     */
+    maxlatitude?: number;
+    /**
+     * Eastern bounds of search
+     */
+    maxlongitude?: number;
+    /**
+     * Southern bounds of search
+     */
+    minlatitude?: number;
+    /**
+     * Western bounds of search
+     */
+    minlongitude?: number;
+    /**
+     * Search name
+     */
+    name?: string;
+    /**
+     * Address
+     */
+    searchDbConstructionPermitsAddress?: string;
+    /**
+     * Affordable Hsg Unit
+     */
+    searchDbConstructionPermitsAffordableHsgUnit?: number;
+    /**
+     * Applied
+     */
+    searchDbConstructionPermitsApplied?: string;
+    /**
+     * Approved
+     */
+    searchDbConstructionPermitsApproved?: string;
+    /**
+     * Building Uses And Work Scopes
+     */
+    searchDbConstructionPermitsBuildingUsesAndWorkScopes?: string;
+    /**
+     * Case Status
+     */
+    searchDbConstructionPermitsCaseStatus?: string;
+    /**
+     * Category
+     */
+    searchDbConstructionPermitsCategory?: string;
+    /**
+     * Co Date
+     */
+    searchDbConstructionPermitsCoDate?: string;
+    /**
+     * Completion Date
+     */
+    searchDbConstructionPermitsCompletionDate?: string;
+    /**
+     * Contractor Company
+     */
+    searchDbConstructionPermitsContractorCompany?: string;
+    /**
+     * Contractor First Name
+     */
+    searchDbConstructionPermitsContractorFirstName?: string;
+    /**
+     * Contractor Last Name
+     */
+    searchDbConstructionPermitsContractorLastName?: string;
+    /**
+     * Existing Res Unit
+     */
+    searchDbConstructionPermitsExistingResUnit?: number;
+    /**
+     * Issued
+     */
+    searchDbConstructionPermitsIssued?: string;
+    /**
+     * Narrative Description
+     */
+    searchDbConstructionPermitsNarrativeDescription?: string;
+    /**
+     * New Res Unit
+     */
+    searchDbConstructionPermitsNewResUnit?: number;
+    /**
+     * New Sf
+     */
+    searchDbConstructionPermitsNewSf?: number;
+    /**
+     * Owner1 Company
+     */
+    searchDbConstructionPermitsOwner1Company?: string;
+    /**
+     * Owner1 First Name
+     */
+    searchDbConstructionPermitsOwner1FirstName?: string;
+    /**
+     * Owner1 Last Name
+     */
+    searchDbConstructionPermitsOwner1LastName?: string;
+    /**
+     * Owner2 Company
+     */
+    searchDbConstructionPermitsOwner2Company?: string;
+    /**
+     * Owner2 First Name
+     */
+    searchDbConstructionPermitsOwner2FirstName?: string;
+    /**
+     * Owner2 Last Name
+     */
+    searchDbConstructionPermitsOwner2LastName?: string;
+    /**
+     * Permit Types
+     */
+    searchDbConstructionPermitsPermitTypes?: string;
+    /**
+     * Primary Company
+     */
+    searchDbConstructionPermitsPrimaryCompany?: string;
+    /**
+     * Primary First Name
+     */
+    searchDbConstructionPermitsPrimaryFirstName?: string;
+    /**
+     * Primary Last Name
+     */
+    searchDbConstructionPermitsPrimaryLastName?: string;
+    /**
+     * Remodel Sf
+     */
+    searchDbConstructionPermitsRemodelSf?: number;
+    /**
+     * Total Project Value
+     */
+    searchDbConstructionPermitsTotalProjectValue?: number;
+    /**
+     * Total Subpermit Value
+     */
+    searchDbConstructionPermitsTotalSubpermitValue?: number;
+    /**
+     * Number to skip
+     */
+    skip?: number;
+    /**
+     * Search text
+     */
+    text?: string;
+    /**
+     * To date
+     */
+    todate?: Date;
 }
 export declare class SearchConstructionPermitsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

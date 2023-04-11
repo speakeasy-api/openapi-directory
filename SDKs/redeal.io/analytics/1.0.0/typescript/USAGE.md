@@ -1,21 +1,22 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetEventsRequest, GetEventsResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetEventsRequest,
+  GetEventsResponse,
+  GetEventsTypeEnum,
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetEventsRequest = {
-  queryParams: {
-    company: "sit",
-    deal: "voluptas",
-    nexttoken: "culpa",
-    queryexecutionid: "expedita",
-    site: "consequuntur",
-    type: "clicks",
-  },
+  company: "Medhurst - Rau",
+  deal: "quibusdam",
+  nexttoken: "unde",
+  queryexecutionid: "nulla",
+  site: "corrupti",
+  type: GetEventsTypeEnum.Contacts,
 };
 
 sdk.developers.getEvents(req).then((res: GetEventsResponse | AxiosError) => {

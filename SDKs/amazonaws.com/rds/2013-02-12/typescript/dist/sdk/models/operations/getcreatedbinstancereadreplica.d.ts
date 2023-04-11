@@ -1,12 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetCreateDbInstanceReadReplicaActionEnum {
-    CreateDbInstanceReadReplica = "CreateDBInstanceReadReplica"
+import { AxiosResponse } from "axios";
+export declare enum GETCreateDBInstanceReadReplicaActionEnum {
+    CreateDBInstanceReadReplica = "CreateDBInstanceReadReplica"
 }
-export declare enum GetCreateDbInstanceReadReplicaVersionEnum {
+export declare enum GETCreateDBInstanceReadReplicaVersionEnum {
     TwoThousandAndThirteen0212 = "2013-02-12"
 }
-export declare class GetCreateDbInstanceReadReplicaQueryParams extends SpeakeasyBase {
-    action: GetCreateDbInstanceReadReplicaActionEnum;
+export declare class GETCreateDBInstanceReadReplicaRequest extends SpeakeasyBase {
+    action: GETCreateDBInstanceReadReplicaActionEnum;
     autoMinorVersionUpgrade?: boolean;
     availabilityZone?: string;
     dbInstanceClass?: string;
@@ -16,9 +17,7 @@ export declare class GetCreateDbInstanceReadReplicaQueryParams extends Speakeasy
     port?: number;
     publiclyAccessible?: boolean;
     sourceDBInstanceIdentifier: string;
-    version: GetCreateDbInstanceReadReplicaVersionEnum;
-}
-export declare class GetCreateDbInstanceReadReplicaHeaders extends SpeakeasyBase {
+    version: GETCreateDBInstanceReadReplicaVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -27,12 +26,9 @@ export declare class GetCreateDbInstanceReadReplicaHeaders extends SpeakeasyBase
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetCreateDbInstanceReadReplicaRequest extends SpeakeasyBase {
-    queryParams: GetCreateDbInstanceReadReplicaQueryParams;
-    headers: GetCreateDbInstanceReadReplicaHeaders;
-}
-export declare class GetCreateDbInstanceReadReplicaResponse extends SpeakeasyBase {
+export declare class GETCreateDBInstanceReadReplicaResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

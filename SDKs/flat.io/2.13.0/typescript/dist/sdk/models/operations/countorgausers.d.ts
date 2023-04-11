@@ -1,21 +1,37 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CountOrgaUsersQueryParams extends SpeakeasyBase {
-    group?: string[];
-    noActiveLicense?: boolean;
-    q?: string;
-    role?: shared.RoleEnum[];
-}
+import { AxiosResponse } from "axios";
 export declare class CountOrgaUsersSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class CountOrgaUsersRequest extends SpeakeasyBase {
-    queryParams: CountOrgaUsersQueryParams;
-    security: CountOrgaUsersSecurity;
+    /**
+     * Filter users by group
+     */
+    group?: string[];
+    /**
+     * Filter users who don't have an active license
+     */
+    noActiveLicense?: boolean;
+    /**
+     * The query to search
+     */
+    q?: string;
+    /**
+     * Filter users by role
+     */
+    role?: shared.RoleEnum[];
 }
 export declare class CountOrgaUsersResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Error
+     */
     flatErrorResponse?: shared.FlatErrorResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Number of users
+     */
     countOrgaUsers200ApplicationJSONInteger?: number;
 }

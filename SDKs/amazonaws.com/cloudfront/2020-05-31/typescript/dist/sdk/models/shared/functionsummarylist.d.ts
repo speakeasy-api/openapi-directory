@@ -3,7 +3,7 @@ import { FunctionConfig } from "./functionconfig";
 import { FunctionMetadata } from "./functionmetadata";
 /**
  * Contains configuration information and metadata about a CloudFront function.
-**/
+ */
 export declare class FunctionSummaryList extends SpeakeasyBase {
     functionConfig: FunctionConfig;
     functionMetadata: FunctionMetadata;

@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetAssociateTransitGatewayRouteTableActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETAssociateTransitGatewayRouteTableActionEnum {
     AssociateTransitGatewayRouteTable = "AssociateTransitGatewayRouteTable"
 }
-export declare enum GetAssociateTransitGatewayRouteTableVersionEnum {
+export declare enum GETAssociateTransitGatewayRouteTableVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetAssociateTransitGatewayRouteTableQueryParams extends SpeakeasyBase {
-    action: GetAssociateTransitGatewayRouteTableActionEnum;
+export declare class GETAssociateTransitGatewayRouteTableRequest extends SpeakeasyBase {
+    action: GETAssociateTransitGatewayRouteTableActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
+    /**
+     * The ID of the attachment.
+     */
     transitGatewayAttachmentId: string;
+    /**
+     * The ID of the transit gateway route table.
+     */
     transitGatewayRouteTableId: string;
-    version: GetAssociateTransitGatewayRouteTableVersionEnum;
-}
-export declare class GetAssociateTransitGatewayRouteTableHeaders extends SpeakeasyBase {
+    version: GETAssociateTransitGatewayRouteTableVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +29,9 @@ export declare class GetAssociateTransitGatewayRouteTableHeaders extends Speakea
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetAssociateTransitGatewayRouteTableRequest extends SpeakeasyBase {
-    queryParams: GetAssociateTransitGatewayRouteTableQueryParams;
-    headers: GetAssociateTransitGatewayRouteTableHeaders;
-}
-export declare class GetAssociateTransitGatewayRouteTableResponse extends SpeakeasyBase {
+export declare class GETAssociateTransitGatewayRouteTableResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

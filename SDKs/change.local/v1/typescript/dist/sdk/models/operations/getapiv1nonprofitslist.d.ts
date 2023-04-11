@@ -1,17 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetApiV1NonprofitsListQueryParams extends SpeakeasyBase {
-    name?: string;
-    page?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetApiV1NonprofitsListSecurity extends SpeakeasyBase {
-    basicAuth: shared.SchemeBasicAuth;
+    password: string;
+    username: string;
 }
 export declare class GetApiV1NonprofitsListRequest extends SpeakeasyBase {
-    queryParams: GetApiV1NonprofitsListQueryParams;
-    security: GetApiV1NonprofitsListSecurity;
+    /**
+     * A string to search.
+     */
+    name?: string;
+    /**
+     * The page to return. This endpoint is paginated, and returns up to 30 nonprofits at a time.
+     */
+    page?: number;
 }
 export declare class GetApiV1NonprofitsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

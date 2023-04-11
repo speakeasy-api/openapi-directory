@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { StatusEnum } from "./statusenum";
 /**
  * An object describing a Kinesis video stream.
-**/
+ */
 export declare class StreamInfo extends SpeakeasyBase {
     creationTime?: Date;
     dataRetentionInHours?: number;

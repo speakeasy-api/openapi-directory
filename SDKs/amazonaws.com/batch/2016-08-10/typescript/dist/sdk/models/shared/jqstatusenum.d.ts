@@ -1,4 +1,4 @@
-export declare enum JqStatusEnum {
+export declare enum JQStatusEnum {
     Creating = "CREATING",
     Updating = "UPDATING",
     Deleting = "DELETING",

@@ -1,9 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeUsersXAmzTargetEnum {
-    AmazonMemoryDbDescribeUsers = "AmazonMemoryDB.DescribeUsers"
+    AmazonMemoryDBDescribeUsers = "AmazonMemoryDB.DescribeUsers"
 }
-export declare class DescribeUsersHeaders extends SpeakeasyBase {
+export declare class DescribeUsersRequest extends SpeakeasyBase {
+    describeUsersRequest: shared.DescribeUsersRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +23,20 @@ export declare class DescribeUsersHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeUsersXAmzTargetEnum;
 }
-export declare class DescribeUsersRequest extends SpeakeasyBase {
-    headers: DescribeUsersHeaders;
-    request: shared.DescribeUsersRequest;
-}
 export declare class DescribeUsersResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeUsersResponse?: shared.DescribeUsersResponse;
+    /**
+     * InvalidParameterCombinationException
+     */
     invalidParameterCombinationException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UserNotFoundFault
+     */
     userNotFoundFault?: any;
 }

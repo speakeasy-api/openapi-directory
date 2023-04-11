@@ -1,12 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SearchPathwaysUsingGetPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class SearchPathwaysUsingGETRequest extends SpeakeasyBase {
+    /**
+     * Free text search string
+     */
     searchString: string;
 }
-export declare class SearchPathwaysUsingGetRequest extends SpeakeasyBase {
-    pathParams: SearchPathwaysUsingGetPathParams;
-}
-export declare class SearchPathwaysUsingGetResponse extends SpeakeasyBase {
+export declare class SearchPathwaysUsingGETResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

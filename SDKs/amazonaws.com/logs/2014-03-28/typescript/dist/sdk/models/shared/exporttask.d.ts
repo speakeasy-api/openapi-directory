@@ -3,7 +3,7 @@ import { ExportTaskExecutionInfo } from "./exporttaskexecutioninfo";
 import { ExportTaskStatus } from "./exporttaskstatus";
 /**
  * Represents an export task.
-**/
+ */
 export declare class ExportTask extends SpeakeasyBase {
     destination?: string;
     destinationPrefix?: string;

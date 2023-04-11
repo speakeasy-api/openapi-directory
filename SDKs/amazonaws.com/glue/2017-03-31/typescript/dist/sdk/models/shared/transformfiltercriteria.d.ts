@@ -4,7 +4,7 @@ import { TransformStatusTypeEnum } from "./transformstatustypeenum";
 import { TransformTypeEnum } from "./transformtypeenum";
 /**
  * The criteria used to filter the machine learning transforms.
-**/
+ */
 export declare class TransformFilterCriteria extends SpeakeasyBase {
     createdAfter?: Date;
     createdBefore?: Date;

@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteServiceSpecificCredentialActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteServiceSpecificCredentialActionEnum {
     DeleteServiceSpecificCredential = "DeleteServiceSpecificCredential"
 }
-export declare enum GetDeleteServiceSpecificCredentialVersionEnum {
+export declare enum GETDeleteServiceSpecificCredentialVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class GetDeleteServiceSpecificCredentialQueryParams extends SpeakeasyBase {
-    action: GetDeleteServiceSpecificCredentialActionEnum;
+export declare class GETDeleteServiceSpecificCredentialRequest extends SpeakeasyBase {
+    action: GETDeleteServiceSpecificCredentialActionEnum;
+    /**
+     * <p>The unique identifier of the service-specific credential. You can get this value by calling <a>ListServiceSpecificCredentials</a>.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters that can consist of any upper or lowercased letter or digit.</p>
+     */
     serviceSpecificCredentialId: string;
+    /**
+     * <p>The name of the IAM user associated with the service-specific credential. If this value is not specified, then the operation assumes the user whose credentials are used to call the operation.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
+     */
     userName?: string;
-    version: GetDeleteServiceSpecificCredentialVersionEnum;
-}
-export declare class GetDeleteServiceSpecificCredentialHeaders extends SpeakeasyBase {
+    version: GETDeleteServiceSpecificCredentialVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetDeleteServiceSpecificCredentialHeaders extends Speakeasy
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteServiceSpecificCredentialRequest extends SpeakeasyBase {
-    queryParams: GetDeleteServiceSpecificCredentialQueryParams;
-    headers: GetDeleteServiceSpecificCredentialHeaders;
-}
-export declare class GetDeleteServiceSpecificCredentialResponse extends SpeakeasyBase {
+export declare class GETDeleteServiceSpecificCredentialResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetCreateAccessKeyActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETCreateAccessKeyActionEnum {
     CreateAccessKey = "CreateAccessKey"
 }
-export declare enum GetCreateAccessKeyVersionEnum {
+export declare enum GETCreateAccessKeyVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class GetCreateAccessKeyQueryParams extends SpeakeasyBase {
-    action: GetCreateAccessKeyActionEnum;
+export declare class GETCreateAccessKeyRequest extends SpeakeasyBase {
+    action: GETCreateAccessKeyActionEnum;
+    /**
+     * <p>The name of the IAM user that the new key will belong to.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
+     */
     userName?: string;
-    version: GetCreateAccessKeyVersionEnum;
-}
-export declare class GetCreateAccessKeyHeaders extends SpeakeasyBase {
+    version: GETCreateAccessKeyVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetCreateAccessKeyHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetCreateAccessKeyRequest extends SpeakeasyBase {
-    queryParams: GetCreateAccessKeyQueryParams;
-    headers: GetCreateAccessKeyHeaders;
-}
-export declare class GetCreateAccessKeyResponse extends SpeakeasyBase {
+export declare class GETCreateAccessKeyResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

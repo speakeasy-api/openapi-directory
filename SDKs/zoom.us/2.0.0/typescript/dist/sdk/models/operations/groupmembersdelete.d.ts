@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GroupMembersDeletePathParams extends SpeakeasyBase {
-    groupId: string;
-    memberId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GroupMembersDeleteSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
+    oAuth: string;
 }
 export declare class GroupMembersDeleteRequest extends SpeakeasyBase {
-    pathParams: GroupMembersDeletePathParams;
-    security: GroupMembersDeleteSecurity;
+    /**
+     * The group ID.<br>
+     *
+     * @remarks
+     * Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups).
+     */
+    groupId: string;
+    /**
+     * The member ID.
+     */
+    memberId: string;
 }
 export declare class GroupMembersDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,5 +1,6 @@
 export * from "./createsuitedefinition";
 export * from "./deletesuitedefinition";
+export * from "./getendpoint";
 export * from "./getsuitedefinition";
 export * from "./getsuiterun";
 export * from "./getsuiterunreport";

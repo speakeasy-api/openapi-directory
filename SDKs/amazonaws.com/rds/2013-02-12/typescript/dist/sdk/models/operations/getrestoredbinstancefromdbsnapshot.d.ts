@@ -1,12 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetRestoreDbInstanceFromDbSnapshotActionEnum {
-    RestoreDbInstanceFromDbSnapshot = "RestoreDBInstanceFromDBSnapshot"
+import { AxiosResponse } from "axios";
+export declare enum GETRestoreDBInstanceFromDBSnapshotActionEnum {
+    RestoreDBInstanceFromDBSnapshot = "RestoreDBInstanceFromDBSnapshot"
 }
-export declare enum GetRestoreDbInstanceFromDbSnapshotVersionEnum {
+export declare enum GETRestoreDBInstanceFromDBSnapshotVersionEnum {
     TwoThousandAndThirteen0212 = "2013-02-12"
 }
-export declare class GetRestoreDbInstanceFromDbSnapshotQueryParams extends SpeakeasyBase {
-    action: GetRestoreDbInstanceFromDbSnapshotActionEnum;
+export declare class GETRestoreDBInstanceFromDBSnapshotRequest extends SpeakeasyBase {
+    action: GETRestoreDBInstanceFromDBSnapshotActionEnum;
     autoMinorVersionUpgrade?: boolean;
     availabilityZone?: string;
     dbInstanceClass?: string;
@@ -21,9 +22,7 @@ export declare class GetRestoreDbInstanceFromDbSnapshotQueryParams extends Speak
     optionGroupName?: string;
     port?: number;
     publiclyAccessible?: boolean;
-    version: GetRestoreDbInstanceFromDbSnapshotVersionEnum;
-}
-export declare class GetRestoreDbInstanceFromDbSnapshotHeaders extends SpeakeasyBase {
+    version: GETRestoreDBInstanceFromDBSnapshotVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -32,12 +31,9 @@ export declare class GetRestoreDbInstanceFromDbSnapshotHeaders extends Speakeasy
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetRestoreDbInstanceFromDbSnapshotRequest extends SpeakeasyBase {
-    queryParams: GetRestoreDbInstanceFromDbSnapshotQueryParams;
-    headers: GetRestoreDbInstanceFromDbSnapshotHeaders;
-}
-export declare class GetRestoreDbInstanceFromDbSnapshotResponse extends SpeakeasyBase {
+export declare class GETRestoreDBInstanceFromDBSnapshotResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

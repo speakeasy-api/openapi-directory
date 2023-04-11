@@ -1,21 +1,31 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class FetchFarmOrganizationByTypeAndIdPathParams extends SpeakeasyBase {
-    farmOrganizationId: string;
-    farmOrganizationType: shared.FarmOrganizationTypeEnum;
-}
+import { AxiosResponse } from "axios";
 export declare class FetchFarmOrganizationByTypeAndIdSecurity extends SpeakeasyBase {
-    apiKey?: shared.SchemeApiKey;
-    oauth2AuthorizationCode?: shared.SchemeOauth2AuthorizationCode;
+    apiKey?: string;
+    oauth2AuthorizationCode?: string;
 }
 export declare class FetchFarmOrganizationByTypeAndIdRequest extends SpeakeasyBase {
-    pathParams: FetchFarmOrganizationByTypeAndIdPathParams;
-    security: FetchFarmOrganizationByTypeAndIdSecurity;
+    /**
+     * Unique identifier of the farm organization.
+     */
+    farmOrganizationId: string;
+    /**
+     * Type of the farm organization.
+     */
+    farmOrganizationType: shared.FarmOrganizationTypeEnum;
 }
 export declare class FetchFarmOrganizationByTypeAndIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Bad Input
+     */
     error?: shared.ErrorT;
-    farmOrganization?: any;
-    headers: Record<string, string[]>;
+    /**
+     * Returns the requested farm organization.
+     */
+    farmOrganization?: shared.FarmOrganization;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

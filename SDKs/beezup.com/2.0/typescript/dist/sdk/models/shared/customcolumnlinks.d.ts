@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { LinksCatalogChangeCustomColumnExpressionLink } from "./linkscatalogchangecustomcolumnexpressionlink";
+import { LinksCatalogChangeCustomColumnUserNameLink } from "./linkscatalogchangecustomcolumnusernamelink";
 import { LinksCatalogDeleteCustomColumnLink } from "./linkscatalogdeletecustomcolumnlink";
 import { LinksCatalogGetCustomColumnExpressionLink } from "./linkscataloggetcustomcolumnexpressionlink";
-import { LinksCatalogChangeCustomColumnUserNameLink } from "./linkscatalogchangecustomcolumnusernamelink";
 import { LinksCatalogSaveCustomColumnLink } from "./linkscatalogsavecustomcolumnlink";
-import { LinksCatalogChangeCustomColumnExpressionLink } from "./linkscatalogchangecustomcolumnexpressionlink";
 export declare class CustomColumnLinks extends SpeakeasyBase {
     delete: LinksCatalogDeleteCustomColumnLink;
     expression: LinksCatalogGetCustomColumnExpressionLink;

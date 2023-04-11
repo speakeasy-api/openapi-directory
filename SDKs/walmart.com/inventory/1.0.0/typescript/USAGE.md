@@ -1,30 +1,21 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetInventoryRequest, GetInventoryResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GetInventoryRequest,
+  GetInventoryResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
-  security: {
-    basicScheme: {
-      password: "YOUR_PASSWORD_HERE",
-      username: "YOUR_USERNAME_HERE",
-    },
-  }
-));
-    
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK();
+
 const req: GetInventoryRequest = {
-  queryParams: {
-    shipNode: "sit",
-    sku: "voluptas",
-  },
-  headers: {
-    authorization: "culpa",
-    wmCONSUMERCHANNELTYPE: "expedita",
-    wmQOSCORRELATIONID: "consequuntur",
-    wmSECACCESSTOKEN: "dolor",
-    wmSVCNAME: "expedita",
-  },
+  wmConsumerChannelType: "corrupti",
+  wmQosCorrelationId: "provident",
+  wmSecAccessToken: "distinctio",
+  wmSvcName: "quibusdam",
+  shipNode: "unde",
+  sku: "nulla",
 };
 
 sdk.inventory.getInventory(req).then((res: GetInventoryResponse | AxiosError) => {

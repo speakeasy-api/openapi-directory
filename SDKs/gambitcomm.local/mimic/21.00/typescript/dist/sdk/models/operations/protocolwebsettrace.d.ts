@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolWebSetTracePathParams extends SpeakeasyBase {
-    agentNum: number;
-    enableOrNot: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolWebSetTraceRequest extends SpeakeasyBase {
-    pathParams: ProtocolWebSetTracePathParams;
+    /**
+     * Agent to set the WEB tracing
+     */
+    agentNum: number;
+    /**
+     * Value to set the WEB tracing
+     */
+    enableOrNot: string;
 }
 export declare class ProtocolWebSetTraceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolWebSetTrace200ApplicationJSONString?: string;
 }

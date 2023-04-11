@@ -7,7 +7,6 @@ export * from "./renewalsettings";
 export * from "./resellernotifygetwatchdetailsresponse";
 export * from "./resellernotifyresource";
 export * from "./seats";
-export * from "./security";
 export * from "./subscription";
 export * from "./subscriptions";
 export * from "./xgafvenum";

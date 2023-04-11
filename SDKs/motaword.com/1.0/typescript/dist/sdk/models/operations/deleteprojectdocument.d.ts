@@ -1,15 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteProjectDocumentPathParams extends SpeakeasyBase {
-    documentId: number;
-    projectId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteProjectDocumentRequest extends SpeakeasyBase {
-    pathParams: DeleteProjectDocumentPathParams;
+    /**
+     * Document ID
+     */
+    documentId: number;
+    /**
+     * Project ID
+     */
+    projectId: number;
 }
 export declare class DeleteProjectDocumentResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * DocumentNotFound
+     */
     error?: shared.ErrorT;
+    /**
+     * Document deleted successfully
+     */
     operationStatus?: shared.OperationStatus;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

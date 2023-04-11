@@ -1,12 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetChromosomesByAssemblyUsingGetPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETChromosomesByAssemblyUsingGETRequest extends SpeakeasyBase {
+    /**
+     * mapKey
+     */
     mapKey: number;
 }
-export declare class GetChromosomesByAssemblyUsingGetRequest extends SpeakeasyBase {
-    pathParams: GetChromosomesByAssemblyUsingGetPathParams;
-}
-export declare class GetChromosomesByAssemblyUsingGetResponse extends SpeakeasyBase {
+export declare class GETChromosomesByAssemblyUsingGETResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

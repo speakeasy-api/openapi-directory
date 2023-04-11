@@ -1,10 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeJobsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
+import { AxiosResponse } from "axios";
+/**
+ * Request to describe Job log filters.
+ */
+export declare class DescribeJobsRequestBodyFilters extends SpeakeasyBase {
+    fromDate?: string;
+    jobIDs?: string[];
+    toDate?: string;
+}
+export declare class DescribeJobsRequestBody extends SpeakeasyBase {
+    /**
+     * Request to describe Job log filters.
+     */
+    filters?: DescribeJobsRequestBodyFilters;
+    /**
+     * Request to describe job log items by max results.
+     */
+    maxResults?: number;
+    /**
+     * Request to describe job log items by next token.
+     */
     nextToken?: string;
 }
-export declare class DescribeJobsHeaders extends SpeakeasyBase {
+export declare class DescribeJobsRequest extends SpeakeasyBase {
+    requestBody: DescribeJobsRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,29 +32,29 @@ export declare class DescribeJobsHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-/**
- * Request to describe Job log filters.
-**/
-export declare class DescribeJobsRequestBodyFilters extends SpeakeasyBase {
-    fromDate?: string;
-    jobIDs?: string[];
-    toDate?: string;
-}
-export declare class DescribeJobsRequestBody extends SpeakeasyBase {
-    filters: DescribeJobsRequestBodyFilters;
-    maxResults?: number;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-}
-export declare class DescribeJobsRequest extends SpeakeasyBase {
-    queryParams: DescribeJobsQueryParams;
-    headers: DescribeJobsHeaders;
-    request: DescribeJobsRequestBody;
 }
 export declare class DescribeJobsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeJobsResponse?: shared.DescribeJobsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UninitializedAccountException
+     */
     uninitializedAccountException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

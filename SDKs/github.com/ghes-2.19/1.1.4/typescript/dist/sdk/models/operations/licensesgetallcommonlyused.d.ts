@@ -1,15 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class LicensesGetAllCommonlyUsedQueryParams extends SpeakeasyBase {
-    featured?: boolean;
-    page?: number;
-    perPage?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class LicensesGetAllCommonlyUsedRequest extends SpeakeasyBase {
-    queryParams: LicensesGetAllCommonlyUsedQueryParams;
+    featured?: boolean;
+    /**
+     * Page number of the results to fetch.
+     */
+    page?: number;
+    /**
+     * Results per page (max 100)
+     */
+    perPage?: number;
 }
 export declare class LicensesGetAllCommonlyUsedResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     licenseSimples?: shared.LicenseSimple[];
 }

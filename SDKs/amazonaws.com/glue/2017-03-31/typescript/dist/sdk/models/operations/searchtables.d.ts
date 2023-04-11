@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class SearchTablesQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum SearchTablesXAmzTargetEnum {
-    AwsGlueSearchTables = "AWSGlue.SearchTables"
+    AWSGlueSearchTables = "AWSGlue.SearchTables"
 }
-export declare class SearchTablesHeaders extends SpeakeasyBase {
+export declare class SearchTablesRequest extends SpeakeasyBase {
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
+    searchTablesRequest: shared.SearchTablesRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,16 +23,24 @@ export declare class SearchTablesHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: SearchTablesXAmzTargetEnum;
 }
-export declare class SearchTablesRequest extends SpeakeasyBase {
-    queryParams: SearchTablesQueryParams;
-    headers: SearchTablesHeaders;
-    request: shared.SearchTablesRequest;
-}
 export declare class SearchTablesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
+    /**
+     * Success
+     */
     searchTablesResponse?: shared.SearchTablesResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

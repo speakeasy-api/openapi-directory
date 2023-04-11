@@ -1,10 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ModificationState } from "./modificationstate";
-import { WorkspaceStateEnum } from "./workspacestateenum";
+import { RelatedWorkspaceProperties } from "./relatedworkspaceproperties";
 import { WorkspaceProperties } from "./workspaceproperties";
+import { WorkspaceStateEnum } from "./workspacestateenum";
 /**
  * Describes a WorkSpace.
-**/
+ */
 export declare class Workspace extends SpeakeasyBase {
     bundleId?: string;
     computerName?: string;
@@ -13,6 +14,7 @@ export declare class Workspace extends SpeakeasyBase {
     errorMessage?: string;
     ipAddress?: string;
     modificationStates?: ModificationState[];
+    relatedWorkspaces?: RelatedWorkspaceProperties[];
     rootVolumeEncryptionEnabled?: boolean;
     state?: WorkspaceStateEnum;
     subnetId?: string;

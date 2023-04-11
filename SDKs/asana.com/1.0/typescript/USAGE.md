@@ -1,42 +1,43 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateAttachmentForTaskRequest, CreateAttachmentForTaskResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CreateAttachmentForObjectRequest,
+  CreateAttachmentForObjectResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AttachmentRequestResourceSubtypeEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    personalAccessToken: {
-      authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-    },
-  }
-));
-    
-const req: CreateAttachmentForTaskRequest = {
-  pathParams: {
-    taskGid: "sit",
+    oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
   },
-  queryParams: {
-    limit: 2259404117704393152,
-    offset: "culpa",
-    optFields: [
-      "consequuntur",
-      "dolor",
-    ],
-    optPretty: true,
-  },
-  request: {
+});
+
+const req: CreateAttachmentForObjectRequest = {
+  attachmentRequest: {
+    connectToApp: false,
     file: {
-      content: "voluptas".encode(),
-      file: "fugit",
+      content: "corrupti".encode(),
+      file: "provident",
     },
-    name: "et",
-    resourceSubtype: "asana_file_attachments",
-    url: "rerum",
+    name: "distinctio",
+    parent: "quibusdam",
+    resourceSubtype: AttachmentRequestResourceSubtypeEnum.External,
+    url: "unde",
   },
+  optFields: [
+    "corrupti",
+    "illum",
+    "vel",
+    "error",
+  ],
+  optPretty: false,
 };
 
-sdk.attachments.createAttachmentForTask(req).then((res: CreateAttachmentForTaskResponse | AxiosError) => {
+sdk.attachments.createAttachmentForObject(req).then((res: CreateAttachmentForObjectResponse | AxiosError) => {
    // handle response
 });
 ```

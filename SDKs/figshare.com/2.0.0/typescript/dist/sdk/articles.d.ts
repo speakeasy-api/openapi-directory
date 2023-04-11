@@ -1,5 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Articles {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,268 +10,326 @@ export declare class Articles {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * accountArticleReport - Account Article Report
+     * Account Article Report
      *
+     * @remarks
      * Return status on all reports generated for the account from the oauth credentials
-    **/
-    accountArticleReport(req: operations.AccountArticleReportRequest, config?: AxiosRequestConfig): Promise<operations.AccountArticleReportResponse>;
+     */
+    accountArticleReport(req: operations.AccountArticleReportRequest, security: operations.AccountArticleReportSecurity, config?: AxiosRequestConfig): Promise<operations.AccountArticleReportResponse>;
     /**
-     * accountArticleReportGenerate - Initiate a new Report
+     * Initiate a new Report
      *
-     * Initiate a new Article Report for this Account
-    **/
-    accountArticleReportGenerate(req: operations.AccountArticleReportGenerateRequest, config?: AxiosRequestConfig): Promise<operations.AccountArticleReportGenerateResponse>;
+     * @remarks
+     * Initiate a new Article Report for this Account. There is a limit of 1 report per day.
+     */
+    accountArticleReportGenerate(config?: AxiosRequestConfig): Promise<operations.AccountArticleReportGenerateResponse>;
     /**
-     * articleDetails - View article details
+     * View article details
      *
+     * @remarks
      * View an article
-    **/
+     */
     articleDetails(req: operations.ArticleDetailsRequest, config?: AxiosRequestConfig): Promise<operations.ArticleDetailsResponse>;
     /**
-     * articleFileDetails - Article file details
+     * Article file details
      *
+     * @remarks
      * File by id
-    **/
+     */
     articleFileDetails(req: operations.ArticleFileDetailsRequest, config?: AxiosRequestConfig): Promise<operations.ArticleFileDetailsResponse>;
     /**
-     * articleFiles - List article files
+     * List article files
      *
+     * @remarks
      * Files list for article
-    **/
+     */
     articleFiles(req: operations.ArticleFilesRequest, config?: AxiosRequestConfig): Promise<operations.ArticleFilesResponse>;
     /**
-     * articleVersionConfidentiality - Public Article Confidentiality for article version
+     * Public Article Confidentiality for article version
      *
+     * @remarks
      * Confidentiality for article version. The confidentiality feature is now deprecated. This has been replaced by the new extended embargo functionality and all items that used to be confidential have now been migrated to items with a permanent embargo on files. All API endpoints related to this functionality will remain for backwards compatibility, but will now be attached to the new extended embargo workflows.
-    **/
+     */
     articleVersionConfidentiality(req: operations.ArticleVersionConfidentialityRequest, config?: AxiosRequestConfig): Promise<operations.ArticleVersionConfidentialityResponse>;
     /**
-     * articleVersionDetails - Article details for version
+     * Article details for version
      *
+     * @remarks
      * Article with specified version
-    **/
+     */
     articleVersionDetails(req: operations.ArticleVersionDetailsRequest, config?: AxiosRequestConfig): Promise<operations.ArticleVersionDetailsResponse>;
     /**
-     * articleVersionEmbargo - Public Article Embargo for article version
+     * Public Article Embargo for article version
      *
+     * @remarks
      * Embargo for article version
-    **/
+     */
     articleVersionEmbargo(req: operations.ArticleVersionEmbargoRequest, config?: AxiosRequestConfig): Promise<operations.ArticleVersionEmbargoResponse>;
     /**
-     * articleVersionUpdateThumb - Article Version Update Thumb
+     * Update article version
      *
-     * For a given public article version update the article thumb by choosing one of the associated files
-    **/
-    articleVersionUpdateThumb(req: operations.ArticleVersionUpdateThumbRequest, config?: AxiosRequestConfig): Promise<operations.ArticleVersionUpdateThumbResponse>;
+     * @remarks
+     * Updating an article version by passing body parameters; request can also be made with the PATCH method.
+     */
+    articleVersionUpdate(req: operations.ArticleVersionUpdateRequest, security: operations.ArticleVersionUpdateSecurity, config?: AxiosRequestConfig): Promise<operations.ArticleVersionUpdateResponse>;
     /**
-     * articleVersions - List article versions
+     * Update article version thumbnail
      *
+     * @remarks
+     * For a given public article version update the article thumbnail by choosing one of the associated files
+     */
+    articleVersionUpdateThumb(req: operations.ArticleVersionUpdateThumbRequest, security: operations.ArticleVersionUpdateThumbSecurity, config?: AxiosRequestConfig): Promise<operations.ArticleVersionUpdateThumbResponse>;
+    /**
+     * List article versions
+     *
+     * @remarks
      * List public article versions
-    **/
+     */
     articleVersions(req: operations.ArticleVersionsRequest, config?: AxiosRequestConfig): Promise<operations.ArticleVersionsResponse>;
     /**
-     * articlesList - Public Articles
+     * Public Articles
      *
+     * @remarks
      * Returns a list of public articles
-    **/
+     */
     articlesList(req: operations.ArticlesListRequest, config?: AxiosRequestConfig): Promise<operations.ArticlesListResponse>;
     /**
-     * articlesSearch - Public Articles Search
+     * Public Articles Search
      *
+     * @remarks
      * Returns a list of public articles, filtered by the search parameters
-    **/
+     */
     articlesSearch(req: operations.ArticlesSearchRequest, config?: AxiosRequestConfig): Promise<operations.ArticlesSearchResponse>;
     /**
-     * privateArticleAuthorDelete - Delete article author
+     * Delete article author
      *
+     * @remarks
      * De-associate author from article
-    **/
-    privateArticleAuthorDelete(req: operations.PrivateArticleAuthorDeleteRequest, config?: AxiosRequestConfig): Promise<operations.PrivateArticleAuthorDeleteResponse>;
+     */
+    privateArticleAuthorDelete(req: operations.PrivateArticleAuthorDeleteRequest, security: operations.PrivateArticleAuthorDeleteSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateArticleAuthorDeleteResponse>;
     /**
-     * privateArticleAuthorsAdd - Add article authors
+     * Add article authors
      *
+     * @remarks
      * Associate new authors with the article. This will add new authors to the list of already associated authors
-    **/
-    privateArticleAuthorsAdd(req: operations.PrivateArticleAuthorsAddRequest, config?: AxiosRequestConfig): Promise<operations.PrivateArticleAuthorsAddResponse>;
+     */
+    privateArticleAuthorsAdd(req: operations.PrivateArticleAuthorsAddRequest, security: operations.PrivateArticleAuthorsAddSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateArticleAuthorsAddResponse>;
     /**
-     * privateArticleAuthorsList - List article authors
-     *
      * List article authors
-    **/
-    privateArticleAuthorsList(req: operations.PrivateArticleAuthorsListRequest, config?: AxiosRequestConfig): Promise<operations.PrivateArticleAuthorsListResponse>;
-    /**
-     * privateArticleAuthorsReplace - Replace article authors
      *
+     * @remarks
+     * List article authors
+     */
+    privateArticleAuthorsList(req: operations.PrivateArticleAuthorsListRequest, security: operations.PrivateArticleAuthorsListSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateArticleAuthorsListResponse>;
+    /**
+     * Replace article authors
+     *
+     * @remarks
      * Associate new authors with the article. This will remove all already associated authors and add these new ones
-    **/
-    privateArticleAuthorsReplace(req: operations.PrivateArticleAuthorsReplaceRequest, config?: AxiosRequestConfig): Promise<operations.PrivateArticleAuthorsReplaceResponse>;
+     */
+    privateArticleAuthorsReplace(req: operations.PrivateArticleAuthorsReplaceRequest, security: operations.PrivateArticleAuthorsReplaceSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateArticleAuthorsReplaceResponse>;
     /**
-     * privateArticleCategoriesAdd - Add article categories
+     * Add article categories
      *
+     * @remarks
      * Associate new categories with the article. This will add new categories to the list of already associated categories
-    **/
-    privateArticleCategoriesAdd(req: operations.PrivateArticleCategoriesAddRequest, config?: AxiosRequestConfig): Promise<operations.PrivateArticleCategoriesAddResponse>;
+     */
+    privateArticleCategoriesAdd(req: operations.PrivateArticleCategoriesAddRequest, security: operations.PrivateArticleCategoriesAddSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateArticleCategoriesAddResponse>;
     /**
-     * privateArticleCategoriesList - List article categories
-     *
      * List article categories
-    **/
-    privateArticleCategoriesList(req: operations.PrivateArticleCategoriesListRequest, config?: AxiosRequestConfig): Promise<operations.PrivateArticleCategoriesListResponse>;
-    /**
-     * privateArticleCategoriesReplace - Replace article categories
      *
+     * @remarks
+     * List article categories
+     */
+    privateArticleCategoriesList(req: operations.PrivateArticleCategoriesListRequest, security: operations.PrivateArticleCategoriesListSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateArticleCategoriesListResponse>;
+    /**
+     * Replace article categories
+     *
+     * @remarks
      * Associate new categories with the article. This will remove all already associated categories and add these new ones
-    **/
-    privateArticleCategoriesReplace(req: operations.PrivateArticleCategoriesReplaceRequest, config?: AxiosRequestConfig): Promise<operations.PrivateArticleCategoriesReplaceResponse>;
+     */
+    privateArticleCategoriesReplace(req: operations.PrivateArticleCategoriesReplaceRequest, security: operations.PrivateArticleCategoriesReplaceSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateArticleCategoriesReplaceResponse>;
     /**
-     * privateArticleCategoryDelete - Delete article category
+     * Delete article category
      *
+     * @remarks
      * De-associate category from article
-    **/
-    privateArticleCategoryDelete(req: operations.PrivateArticleCategoryDeleteRequest, config?: AxiosRequestConfig): Promise<operations.PrivateArticleCategoryDeleteResponse>;
+     */
+    privateArticleCategoryDelete(req: operations.PrivateArticleCategoryDeleteRequest, security: operations.PrivateArticleCategoryDeleteSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateArticleCategoryDeleteResponse>;
     /**
-     * privateArticleConfidentialityDelete - Delete article confidentiality
+     * Delete article confidentiality
      *
+     * @remarks
      * Delete confidentiality settings. The confidentiality feature is now deprecated. This has been replaced by the new extended embargo functionality and all items that used to be confidential have now been migrated to items with a permanent embargo on files. All API endpoints related to this functionality will remain for backwards compatibility, but will now be attached to the new extended embargo workflows.
-    **/
-    privateArticleConfidentialityDelete(req: operations.PrivateArticleConfidentialityDeleteRequest, config?: AxiosRequestConfig): Promise<operations.PrivateArticleConfidentialityDeleteResponse>;
+     */
+    privateArticleConfidentialityDelete(req: operations.PrivateArticleConfidentialityDeleteRequest, security: operations.PrivateArticleConfidentialityDeleteSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateArticleConfidentialityDeleteResponse>;
     /**
-     * privateArticleConfidentialityDetails - Article confidentiality details
+     * Article confidentiality details
      *
+     * @remarks
      * View confidentiality settings. The confidentiality feature is now deprecated. This has been replaced by the new extended embargo functionality and all items that used to be confidential have now been migrated to items with a permanent embargo on files. All API endpoints related to this functionality will remain for backwards compatibility, but will now be attached to the new extended embargo workflows.
-    **/
-    privateArticleConfidentialityDetails(req: operations.PrivateArticleConfidentialityDetailsRequest, config?: AxiosRequestConfig): Promise<operations.PrivateArticleConfidentialityDetailsResponse>;
+     */
+    privateArticleConfidentialityDetails(req: operations.PrivateArticleConfidentialityDetailsRequest, security: operations.PrivateArticleConfidentialityDetailsSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateArticleConfidentialityDetailsResponse>;
     /**
-     * privateArticleConfidentialityUpdate - Update article confidentiality
+     * Update article confidentiality
      *
+     * @remarks
      * Update confidentiality settings. The confidentiality feature is now deprecated. This has been replaced by the new extended embargo functionality and all items that used to be confidential have now been migrated to items with a permanent embargo on files. All API endpoints related to this functionality will remain for backwards compatibility, but will now be attached to the new extended embargo workflows.
-    **/
-    privateArticleConfidentialityUpdate(req: operations.PrivateArticleConfidentialityUpdateRequest, config?: AxiosRequestConfig): Promise<operations.PrivateArticleConfidentialityUpdateResponse>;
+     */
+    privateArticleConfidentialityUpdate(req: operations.PrivateArticleConfidentialityUpdateRequest, security: operations.PrivateArticleConfidentialityUpdateSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateArticleConfidentialityUpdateResponse>;
     /**
-     * privateArticleCreate - Create new Article
+     * Create new Article
      *
+     * @remarks
      * Create a new Article by sending article information
-    **/
-    privateArticleCreate(req: operations.PrivateArticleCreateRequest, config?: AxiosRequestConfig): Promise<operations.PrivateArticleCreateResponse>;
+     */
+    privateArticleCreate(req: shared.ArticleCreate, security: operations.PrivateArticleCreateSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateArticleCreateResponse>;
     /**
-     * privateArticleDelete - Delete article
+     * Delete article
      *
+     * @remarks
      * Delete an article
-    **/
-    privateArticleDelete(req: operations.PrivateArticleDeleteRequest, config?: AxiosRequestConfig): Promise<operations.PrivateArticleDeleteResponse>;
+     */
+    privateArticleDelete(req: operations.PrivateArticleDeleteRequest, security: operations.PrivateArticleDeleteSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateArticleDeleteResponse>;
     /**
-     * privateArticleDetails - Article details
+     * Article details
      *
+     * @remarks
      * View a private article
-    **/
-    privateArticleDetails(req: operations.PrivateArticleDetailsRequest, config?: AxiosRequestConfig): Promise<operations.PrivateArticleDetailsResponse>;
+     */
+    privateArticleDetails(req: operations.PrivateArticleDetailsRequest, security: operations.PrivateArticleDetailsSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateArticleDetailsResponse>;
     /**
-     * privateArticleEmbargoDelete - Delete Article Embargo
+     * Delete Article Embargo
      *
+     * @remarks
      * Will lift the embargo for the specified article
-    **/
-    privateArticleEmbargoDelete(req: operations.PrivateArticleEmbargoDeleteRequest, config?: AxiosRequestConfig): Promise<operations.PrivateArticleEmbargoDeleteResponse>;
+     */
+    privateArticleEmbargoDelete(req: operations.PrivateArticleEmbargoDeleteRequest, security: operations.PrivateArticleEmbargoDeleteSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateArticleEmbargoDeleteResponse>;
     /**
-     * privateArticleEmbargoDetails - Article Embargo Details
+     * Article Embargo Details
      *
+     * @remarks
      * View a private article embargo details
-    **/
-    privateArticleEmbargoDetails(req: operations.PrivateArticleEmbargoDetailsRequest, config?: AxiosRequestConfig): Promise<operations.PrivateArticleEmbargoDetailsResponse>;
+     */
+    privateArticleEmbargoDetails(req: operations.PrivateArticleEmbargoDetailsRequest, security: operations.PrivateArticleEmbargoDetailsSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateArticleEmbargoDetailsResponse>;
     /**
-     * privateArticleEmbargoUpdate - Update Article Embargo
+     * Update Article Embargo
      *
+     * @remarks
      * Note: setting an article under whole embargo does not imply that the article will be published when the embargo will expire. You must explicitly call the publish endpoint to enable this functionality.
-    **/
-    privateArticleEmbargoUpdate(req: operations.PrivateArticleEmbargoUpdateRequest, config?: AxiosRequestConfig): Promise<operations.PrivateArticleEmbargoUpdateResponse>;
+     */
+    privateArticleEmbargoUpdate(req: operations.PrivateArticleEmbargoUpdateRequest, security: operations.PrivateArticleEmbargoUpdateSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateArticleEmbargoUpdateResponse>;
     /**
-     * privateArticleFile - Single File
+     * Single File
      *
+     * @remarks
      * View details of file for specified article
-    **/
-    privateArticleFile(req: operations.PrivateArticleFileRequest, config?: AxiosRequestConfig): Promise<operations.PrivateArticleFileResponse>;
+     */
+    privateArticleFile(req: operations.PrivateArticleFileRequest, security: operations.PrivateArticleFileSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateArticleFileResponse>;
     /**
-     * privateArticleFileDelete - File Delete
+     * File Delete
      *
+     * @remarks
      * Complete file upload
-    **/
-    privateArticleFileDelete(req: operations.PrivateArticleFileDeleteRequest, config?: AxiosRequestConfig): Promise<operations.PrivateArticleFileDeleteResponse>;
+     */
+    privateArticleFileDelete(req: operations.PrivateArticleFileDeleteRequest, security: operations.PrivateArticleFileDeleteSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateArticleFileDeleteResponse>;
     /**
-     * privateArticleFilesList - List article files
+     * List article files
      *
+     * @remarks
      * List private files
-    **/
-    privateArticleFilesList(req: operations.PrivateArticleFilesListRequest, config?: AxiosRequestConfig): Promise<operations.PrivateArticleFilesListResponse>;
+     */
+    privateArticleFilesList(req: operations.PrivateArticleFilesListRequest, security: operations.PrivateArticleFilesListSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateArticleFilesListResponse>;
     /**
-     * privateArticlePrivateLink - List private links
-     *
      * List private links
-    **/
-    privateArticlePrivateLink(req: operations.PrivateArticlePrivateLinkRequest, config?: AxiosRequestConfig): Promise<operations.PrivateArticlePrivateLinkResponse>;
-    /**
-     * privateArticlePrivateLinkCreate - Create private link
      *
+     * @remarks
+     * List private links
+     */
+    privateArticlePrivateLink(req: operations.PrivateArticlePrivateLinkRequest, security: operations.PrivateArticlePrivateLinkSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateArticlePrivateLinkResponse>;
+    /**
+     * Create private link
+     *
+     * @remarks
      * Create new private link for this article
-    **/
-    privateArticlePrivateLinkCreate(req: operations.PrivateArticlePrivateLinkCreateRequest, config?: AxiosRequestConfig): Promise<operations.PrivateArticlePrivateLinkCreateResponse>;
+     */
+    privateArticlePrivateLinkCreate(req: operations.PrivateArticlePrivateLinkCreateRequest, security: operations.PrivateArticlePrivateLinkCreateSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateArticlePrivateLinkCreateResponse>;
     /**
-     * privateArticlePrivateLinkDelete - Disable private link
+     * Disable private link
      *
+     * @remarks
      * Disable/delete private link for this article
-    **/
-    privateArticlePrivateLinkDelete(req: operations.PrivateArticlePrivateLinkDeleteRequest, config?: AxiosRequestConfig): Promise<operations.PrivateArticlePrivateLinkDeleteResponse>;
+     */
+    privateArticlePrivateLinkDelete(req: operations.PrivateArticlePrivateLinkDeleteRequest, security: operations.PrivateArticlePrivateLinkDeleteSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateArticlePrivateLinkDeleteResponse>;
     /**
-     * privateArticlePrivateLinkUpdate - Update private link
+     * Update private link
      *
+     * @remarks
      * Update existing private link for this article
-    **/
-    privateArticlePrivateLinkUpdate(req: operations.PrivateArticlePrivateLinkUpdateRequest, config?: AxiosRequestConfig): Promise<operations.PrivateArticlePrivateLinkUpdateResponse>;
+     */
+    privateArticlePrivateLinkUpdate(req: operations.PrivateArticlePrivateLinkUpdateRequest, security: operations.PrivateArticlePrivateLinkUpdateSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateArticlePrivateLinkUpdateResponse>;
     /**
-     * privateArticlePublish - Private Article Publish
+     * Private Article Publish
      *
-     * - If the whole article is under embargo, it will not be published immediatly, but when the embargo expires or is lifted.
+     * @remarks
+     * - If the whole article is under embargo, it will not be published immediately, but when the embargo expires or is lifted.
      * - When an article is published, a new public version will be generated. Any further updates to the article will affect the private article data. In order to make these changes publicly visible, an explicit publish operation is needed.
-    **/
-    privateArticlePublish(req: operations.PrivateArticlePublishRequest, config?: AxiosRequestConfig): Promise<operations.PrivateArticlePublishResponse>;
+     */
+    privateArticlePublish(req: operations.PrivateArticlePublishRequest, security: operations.PrivateArticlePublishSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateArticlePublishResponse>;
     /**
-     * privateArticleReserveDoi - Private Article Reserve DOI
+     * Private Article Reserve DOI
      *
+     * @remarks
      * Reserve DOI for article
-    **/
-    privateArticleReserveDoi(req: operations.PrivateArticleReserveDoiRequest, config?: AxiosRequestConfig): Promise<operations.PrivateArticleReserveDoiResponse>;
+     */
+    privateArticleReserveDoi(req: operations.PrivateArticleReserveDoiRequest, security: operations.PrivateArticleReserveDoiSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateArticleReserveDoiResponse>;
     /**
-     * privateArticleReserveHandle - Private Article Reserve Handle
+     * Private Article Reserve Handle
      *
+     * @remarks
      * Reserve Handle for article
-    **/
-    privateArticleReserveHandle(req: operations.PrivateArticleReserveHandleRequest, config?: AxiosRequestConfig): Promise<operations.PrivateArticleReserveHandleResponse>;
+     */
+    privateArticleReserveHandle(req: operations.PrivateArticleReserveHandleRequest, security: operations.PrivateArticleReserveHandleSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateArticleReserveHandleResponse>;
     /**
-     * privateArticleUpdate - Update article
+     * Private Article Resource
      *
-     * Updating an article by passing body parameters
-    **/
-    privateArticleUpdate(req: operations.PrivateArticleUpdateRequest, config?: AxiosRequestConfig): Promise<operations.PrivateArticleUpdateResponse>;
+     * @remarks
+     * Edit article resource data.
+     */
+    privateArticleResource(req: operations.PrivateArticleResourceRequest, security: operations.PrivateArticleResourceSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateArticleResourceResponse>;
     /**
-     * privateArticleUploadComplete - Complete Upload
+     * Update article
      *
+     * @remarks
+     * Updating an article by passing body parameters; request can also be made with the PATCH method.
+     */
+    privateArticleUpdate(req: operations.PrivateArticleUpdateRequest, security: operations.PrivateArticleUpdateSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateArticleUpdateResponse>;
+    /**
+     * Complete Upload
+     *
+     * @remarks
      * Complete file upload
-    **/
-    privateArticleUploadComplete(req: operations.PrivateArticleUploadCompleteRequest, config?: AxiosRequestConfig): Promise<operations.PrivateArticleUploadCompleteResponse>;
+     */
+    privateArticleUploadComplete(req: operations.PrivateArticleUploadCompleteRequest, security: operations.PrivateArticleUploadCompleteSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateArticleUploadCompleteResponse>;
     /**
-     * privateArticleUploadInitiate - Initiate Upload
+     * Initiate Upload
      *
+     * @remarks
      * Initiate a new file upload within the article. Either use the link property to point to an existing file that resides elsewhere and will not be uploaded to Figshare or use the other 3 parameters (md5, name, size).
-    **/
-    privateArticleUploadInitiate(req: operations.PrivateArticleUploadInitiateRequest, config?: AxiosRequestConfig): Promise<operations.PrivateArticleUploadInitiateResponse>;
+     */
+    privateArticleUploadInitiate(req: operations.PrivateArticleUploadInitiateRequest, security: operations.PrivateArticleUploadInitiateSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateArticleUploadInitiateResponse>;
     /**
-     * privateArticlesList - Private Articles
+     * Private Articles
      *
+     * @remarks
      * Get Own Articles
-    **/
-    privateArticlesList(req: operations.PrivateArticlesListRequest, config?: AxiosRequestConfig): Promise<operations.PrivateArticlesListResponse>;
+     */
+    privateArticlesList(req: operations.PrivateArticlesListRequest, security: operations.PrivateArticlesListSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateArticlesListResponse>;
     /**
-     * privateArticlesSearch - Private Articles search
+     * Private Articles search
      *
+     * @remarks
      * Returns a list of private articles filtered by the search parameters
-    **/
-    privateArticlesSearch(req: operations.PrivateArticlesSearchRequest, config?: AxiosRequestConfig): Promise<operations.PrivateArticlesSearchResponse>;
+     */
+    privateArticlesSearch(req: shared.PrivateArticleSearch, security: operations.PrivateArticlesSearchSecurity, config?: AxiosRequestConfig): Promise<operations.PrivateArticlesSearchResponse>;
 }

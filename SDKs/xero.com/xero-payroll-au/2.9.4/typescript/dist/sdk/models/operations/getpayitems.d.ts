@@ -1,25 +1,41 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetPayItemsQueryParams extends SpeakeasyBase {
-    order?: string;
-    page?: number;
-    where?: string;
-}
-export declare class GetPayItemsHeaders extends SpeakeasyBase {
-    ifModifiedSince?: string;
-    xeroTenantId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetPayItemsSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class GetPayItemsRequest extends SpeakeasyBase {
-    queryParams: GetPayItemsQueryParams;
-    headers: GetPayItemsHeaders;
-    security: GetPayItemsSecurity;
+    /**
+     * Only records created or modified since this timestamp will be returned
+     */
+    ifModifiedSince?: string;
+    /**
+     * Xero identifier for Tenant
+     */
+    xeroTenantId: string;
+    /**
+     * Order by an any element
+     */
+    order?: string;
+    /**
+     * e.g. page=1 – Up to 100 objects will be returned in a single API call
+     */
+    page?: number;
+    /**
+     * Filter by an any element
+     */
+    where?: string;
 }
 export declare class GetPayItemsResponse extends SpeakeasyBase {
-    apiException?: shared.ApiException;
+    /**
+     * validation error for a bad request
+     */
+    apiException?: shared.APIException;
     contentType: string;
+    /**
+     * search results matching criteria
+     */
     payItems?: shared.PayItems;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,19 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteLocalTaxByTaxCodePathParams extends SpeakeasyBase {
-    companyId: string;
-    employeeId: string;
-    taxCode: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteLocalTaxByTaxCodeSecurity extends SpeakeasyBase {
-    paylocityAuth: shared.SchemePaylocityAuth;
+    paylocityAuth: string;
 }
 export declare class DeleteLocalTaxByTaxCodeRequest extends SpeakeasyBase {
-    pathParams: DeleteLocalTaxByTaxCodePathParams;
-    security: DeleteLocalTaxByTaxCodeSecurity;
+    /**
+     * Company Id
+     */
+    companyId: string;
+    /**
+     * Employee Id
+     */
+    employeeId: string;
+    /**
+     * Tax Code
+     */
+    taxCode: string;
 }
 export declare class DeleteLocalTaxByTaxCodeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad Request
+     */
     errors?: shared.ErrorT[];
 }

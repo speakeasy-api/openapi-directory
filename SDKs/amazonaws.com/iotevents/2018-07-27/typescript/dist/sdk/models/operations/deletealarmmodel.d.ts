@@ -1,8 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteAlarmModelPathParams extends SpeakeasyBase {
-    alarmModelName: string;
-}
-export declare class DeleteAlarmModelHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteAlarmModelRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -10,19 +8,41 @@ export declare class DeleteAlarmModelHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DeleteAlarmModelRequest extends SpeakeasyBase {
-    pathParams: DeleteAlarmModelPathParams;
-    headers: DeleteAlarmModelHeaders;
+    /**
+     * The name of the alarm model.
+     */
+    alarmModelName: string;
 }
 export declare class DeleteAlarmModelResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deleteAlarmModelResponse?: Record<string, any>;
+    /**
+     * InternalFailureException
+     */
     internalFailureException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
-    resourceInUseException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
-    serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceInUseException
+     */
+    resourceInUseException?: any;
+    /**
+     * ServiceUnavailableException
+     */
+    serviceUnavailableException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

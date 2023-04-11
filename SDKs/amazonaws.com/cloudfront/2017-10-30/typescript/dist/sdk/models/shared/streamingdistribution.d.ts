@@ -3,7 +3,7 @@ import { ActiveTrustedSigners } from "./activetrustedsigners";
 import { StreamingDistributionConfig } from "./streamingdistributionconfig";
 /**
  * A streaming distribution.
-**/
+ */
 export declare class StreamingDistribution extends SpeakeasyBase {
     arn: string;
     activeTrustedSigners: ActiveTrustedSigners;

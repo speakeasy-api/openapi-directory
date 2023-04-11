@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum PutConformancePackXAmzTargetEnum {
     StarlingDoveServicePutConformancePack = "StarlingDoveService.PutConformancePack"
 }
-export declare class PutConformancePackHeaders extends SpeakeasyBase {
+export declare class PutConformancePackRequest extends SpeakeasyBase {
+    putConformancePackRequest: shared.PutConformancePackRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class PutConformancePackHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: PutConformancePackXAmzTargetEnum;
 }
-export declare class PutConformancePackRequest extends SpeakeasyBase {
-    headers: PutConformancePackHeaders;
-    request: shared.PutConformancePackRequest;
-}
 export declare class PutConformancePackResponse extends SpeakeasyBase {
+    /**
+     * ConformancePackTemplateValidationException
+     */
     conformancePackTemplateValidationException?: any;
     contentType: string;
+    /**
+     * InsufficientPermissionsException
+     */
     insufficientPermissionsException?: any;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
+    /**
+     * MaxNumberOfConformancePacksExceededException
+     */
     maxNumberOfConformancePacksExceededException?: any;
+    /**
+     * Success
+     */
     putConformancePackResponse?: shared.PutConformancePackResponse;
-    resourceInUseException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceInUseException
+     */
+    resourceInUseException?: any;
 }

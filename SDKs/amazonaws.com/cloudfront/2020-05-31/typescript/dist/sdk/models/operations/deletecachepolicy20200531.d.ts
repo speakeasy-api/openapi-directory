@@ -1,8 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteCachePolicy20200531PathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteCachePolicy20200531Request extends SpeakeasyBase {
+    /**
+     * The unique identifier for the cache policy that you are deleting. To get the identifier, you can use <code>ListCachePolicies</code>.
+     */
     id: string;
-}
-export declare class DeleteCachePolicy20200531Headers extends SpeakeasyBase {
+    /**
+     * The version of the cache policy that you are deleting. The version is the cache policy's <code>ETag</code> value, which you can get using <code>ListCachePolicies</code>, <code>GetCachePolicy</code>, or <code>GetCachePolicyConfig</code>.
+     */
     ifMatch?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
@@ -12,12 +17,9 @@ export declare class DeleteCachePolicy20200531Headers extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeleteCachePolicy20200531Request extends SpeakeasyBase {
-    pathParams: DeleteCachePolicy20200531PathParams;
-    headers: DeleteCachePolicy20200531Headers;
-}
 export declare class DeleteCachePolicy20200531Response extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

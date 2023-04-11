@@ -1,6 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreateTypedLinkFacetHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+/**
+ * Defines the typed links structure and its attributes. To create a typed link facet, use the <a>CreateTypedLinkFacet</a> API.
+ */
+export declare class CreateTypedLinkFacetRequestBodyFacet extends SpeakeasyBase {
+    attributes?: shared.TypedLinkAttributeDefinition[];
+    identityAttributeOrder?: string[];
+    name?: string;
+}
+export declare class CreateTypedLinkFacetRequestBody extends SpeakeasyBase {
+    /**
+     * Defines the typed links structure and its attributes. To create a typed link facet, use the <a>CreateTypedLinkFacet</a> API.
+     */
+    facet: CreateTypedLinkFacetRequestBodyFacet;
+}
+export declare class CreateTypedLinkFacetRequest extends SpeakeasyBase {
+    requestBody: CreateTypedLinkFacetRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -8,35 +24,57 @@ export declare class CreateTypedLinkFacetHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
+    /**
+     * The Amazon Resource Name (ARN) that is associated with the schema. For more information, see <a>arns</a>.
+     */
     xAmzDataPartition: string;
 }
-/**
- * Defines the typed links structure and its attributes. To create a typed link facet, use the <a>CreateTypedLinkFacet</a> API.
-**/
-export declare class CreateTypedLinkFacetRequestBodyFacet extends SpeakeasyBase {
-    attributes?: shared.TypedLinkAttributeDefinition[];
-    identityAttributeOrder?: string[];
-    name?: string;
-}
-export declare class CreateTypedLinkFacetRequestBody extends SpeakeasyBase {
-    facet: CreateTypedLinkFacetRequestBodyFacet;
-}
-export declare class CreateTypedLinkFacetRequest extends SpeakeasyBase {
-    headers: CreateTypedLinkFacetHeaders;
-    request: CreateTypedLinkFacetRequestBody;
-}
 export declare class CreateTypedLinkFacetResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: shared.AccessDeniedException;
     contentType: string;
+    /**
+     * Success
+     */
     createTypedLinkFacetResponse?: Record<string, any>;
+    /**
+     * FacetAlreadyExistsException
+     */
     facetAlreadyExistsException?: shared.FacetAlreadyExistsException;
+    /**
+     * FacetValidationException
+     */
     facetValidationException?: shared.FacetValidationException;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: shared.InternalServiceException;
+    /**
+     * InvalidArnException
+     */
     invalidArnException?: shared.InvalidArnException;
+    /**
+     * InvalidRuleException
+     */
     invalidRuleException?: shared.InvalidRuleException;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: shared.LimitExceededException;
-    resourceNotFoundException?: shared.ResourceNotFoundException;
-    retryableConflictException?: shared.RetryableConflictException;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: shared.ResourceNotFoundException;
+    /**
+     * RetryableConflictException
+     */
+    retryableConflictException?: shared.RetryableConflictException;
+    /**
+     * ValidationException
+     */
     validationException?: shared.ValidationException;
 }

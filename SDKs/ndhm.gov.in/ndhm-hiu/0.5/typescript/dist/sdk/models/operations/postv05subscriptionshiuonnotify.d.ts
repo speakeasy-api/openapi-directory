@@ -1,16 +1,28 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PostV05SubscriptionsHiuOnNotifyHeaders extends SpeakeasyBase {
-    authorization: string;
-    xCMID: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PostV05SubscriptionsHiuOnNotifyRequest extends SpeakeasyBase {
-    headers: PostV05SubscriptionsHiuOnNotifyHeaders;
-    request: shared.HiuSubscriptionNotificationAcknowledgment;
+    /**
+     * Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
+     */
+    authorization: string;
+    hiuSubscriptionNotificationAcknowledgment: shared.HIUSubscriptionNotificationAcknowledgment;
+    /**
+     * Suffix of the consent manager to which the request was intended.
+     */
+    xCmId: string;
 }
 export declare class PostV05SubscriptionsHiuOnNotifyResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
+    /**
+     * **Causes:**
+     *
+     * @remarks
+     *   * Invalid/Expired/Empty token.
+     *
+     */
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

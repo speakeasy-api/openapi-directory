@@ -1,0 +1,10 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Stats split by a defined in context granularity.
+ */
+export declare class GranularStats extends SpeakeasyBase {
+    /**
+     * A map from granularity key to example count for that key. E.g. for hour_of_day `13` means 1pm, or for month_of_year `5` means May).
+     */
+    buckets?: Record<string, string>;
+}

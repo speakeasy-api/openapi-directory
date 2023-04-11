@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Provides information about the status and settings of the email channel for an application.
-**/
+ */
 export declare class EmailChannelResponse extends SpeakeasyBase {
     applicationId?: string;
     configurationSet?: string;

@@ -1,10 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AddressViewModel } from "./addressviewmodel";
+import { ContactViewModel } from "./contactviewmodel";
+import { CustomFieldViewModel } from "./customfieldviewmodel";
+/**
+ * Success
+ */
 export declare class CustomerViewModel extends SpeakeasyBase {
+    address?: AddressViewModel;
     birthdate?: string;
     businessName?: string;
     companyName?: string;
+    contact?: ContactViewModel;
     createdBy?: string;
     createdOn?: string;
+    customFields?: Record<string, CustomFieldViewModel>;
     deletedStatus?: boolean;
     deletedTime?: string;
     disabled?: boolean;
@@ -25,7 +34,7 @@ export declare class CustomerViewModel extends SpeakeasyBase {
     modifiedOn?: string;
     name?: string;
     notificationType?: string;
-    objectName?: string;
+    object?: string;
     registeredBy?: string;
     registrationDate?: string;
     resourceId?: string;

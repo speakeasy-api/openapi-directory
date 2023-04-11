@@ -1,27 +1,43 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetV4LayersScoutingObservationsQueryParams extends SpeakeasyBase {
-    occurredAfter?: Date;
-    occurredBefore?: Date;
-}
-export declare class GetV4LayersScoutingObservationsHeaders extends SpeakeasyBase {
-    xLimit?: number;
-    xNextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetV4LayersScoutingObservationsSecurity extends SpeakeasyBase {
-    apiKey?: shared.SchemeApiKey;
-    oauth2AuthorizationCode?: shared.SchemeOauth2AuthorizationCode;
+    apiKey?: string;
+    oauth2AuthorizationCode?: string;
 }
 export declare class GetV4LayersScoutingObservationsRequest extends SpeakeasyBase {
-    queryParams: GetV4LayersScoutingObservationsQueryParams;
-    headers: GetV4LayersScoutingObservationsHeaders;
-    security: GetV4LayersScoutingObservationsSecurity;
+    /**
+     * Max number of results to return per batch.  Must be between 1 and 100 inclusive.  Defaults to 100.
+     */
+    xLimit?: number;
+    /**
+     * Opaque string which allows for fetching the next batch of results.  Can be used to poll for changes.
+     */
+    xNextToken?: string;
+    /**
+     * Optional start time by which to filter layer results. Time must be in ISO 8601 format with time zone, e.g. 2016-05-13T00:00:00Z (https://tools.ietf.org/html/rfc3339). Layers with an end time at or after (inclusive) the specified time will match this filter. If both occurredAfter and occurredBefore are populated, occurredAfter must be <= occurredBefore.
+     */
+    occurredAfter?: Date;
+    /**
+     * Optional end time by which to filter layer results. Time must be in ISO 8601 format with time zone, e.g. 2016-05-13T00:00:00Z (https://tools.ietf.org/html/rfc3339). Layers with a start time at or before (inclusive) the specified time. If both occurredAfter and occurredBefore are populated, occurredAfter must be <= occurredBefore.
+     */
+    occurredBefore?: Date;
 }
 export declare class GetV4LayersScoutingObservationsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Not Modified
+     */
     empty?: Record<string, any>;
+    /**
+     * Bad Input
+     */
     error?: shared.ErrorT;
-    headers: Record<string, string[]>;
-    scoutingObservations?: any;
+    headers?: Record<string, string[]>;
+    /**
+     * OK
+     */
+    scoutingObservations?: shared.ScoutingObservations;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

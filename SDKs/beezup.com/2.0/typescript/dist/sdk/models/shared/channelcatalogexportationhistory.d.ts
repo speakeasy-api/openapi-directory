@@ -1,9 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ChannelCatalogExportationReporting } from "./channelcatalogexportationreporting";
+import { BeezUPCommonPaginationResult } from "./beezupcommonpaginationresult";
 import { ChannelCatalogExportationHistoryLinks } from "./channelcatalogexportationhistorylinks";
-import { BeezUpCommonPaginationResult } from "./beezupcommonpaginationresult";
+import { ChannelCatalogExportationReporting } from "./channelcatalogexportationreporting";
+/**
+ * Channel catalog exportation history
+ */
 export declare class ChannelCatalogExportationHistory extends SpeakeasyBase {
     exportations: ChannelCatalogExportationReporting[];
     links: ChannelCatalogExportationHistoryLinks;
-    paginationResult?: BeezUpCommonPaginationResult;
+    paginationResult?: BeezUPCommonPaginationResult;
 }

@@ -3,6 +3,9 @@ export declare class ErrorError extends SpeakeasyBase {
     details?: string;
     name?: string;
 }
+/**
+ * No authorization token was found.
+ */
 export declare class ErrorT extends SpeakeasyBase {
     error?: ErrorError;
 }

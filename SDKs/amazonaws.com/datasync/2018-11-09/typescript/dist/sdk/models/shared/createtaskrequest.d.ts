@@ -1,11 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { FilterRule } from "./filterrule";
 import { Options } from "./options";
-import { TaskSchedule } from "./taskschedule";
 import { TagListEntry } from "./taglistentry";
+import { TaskSchedule } from "./taskschedule";
 /**
  * CreateTaskRequest
-**/
+ */
 export declare class CreateTaskRequest extends SpeakeasyBase {
     cloudWatchLogGroupArn?: string;
     destinationLocationArn: string;

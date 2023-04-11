@@ -1,40 +1,63 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CreateSessionUsingPostQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class CreateSessionUsingPOSTRequest extends SpeakeasyBase {
     authorID?: string;
     groupID?: string;
     validUntil?: string;
 }
-export declare class CreateSessionUsingPost200ApplicationJsonData extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class CreateSessionUsingPost500ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class CreateSessionUsingPost401ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+/**
+ * generic api error (code 1)
+ */
+export declare class CreateSessionUsingPost400ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+export declare class CreateSessionUsingPost200ApplicationJSONData extends SpeakeasyBase {
     sessionID?: string;
 }
-export declare class CreateSessionUsingPost200ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class CreateSessionUsingPost200ApplicationJSON extends SpeakeasyBase {
     code?: number;
-    data?: CreateSessionUsingPost200ApplicationJsonData;
+    data?: CreateSessionUsingPost200ApplicationJSONData;
     message?: string;
 }
-export declare class CreateSessionUsingPost400ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class CreateSessionUsingPost401ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class CreateSessionUsingPost500ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class CreateSessionUsingPostRequest extends SpeakeasyBase {
-    queryParams: CreateSessionUsingPostQueryParams;
-}
-export declare class CreateSessionUsingPostResponse extends SpeakeasyBase {
+export declare class CreateSessionUsingPOSTResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createSessionUsingPOST200ApplicationJSONObject?: CreateSessionUsingPost200ApplicationJson;
-    createSessionUsingPOST400ApplicationJSONObject?: CreateSessionUsingPost400ApplicationJson;
-    createSessionUsingPOST401ApplicationJSONObject?: CreateSessionUsingPost401ApplicationJson;
-    createSessionUsingPOST500ApplicationJSONObject?: CreateSessionUsingPost500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    createSessionUsingPOST200ApplicationJSONObject?: CreateSessionUsingPost200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    createSessionUsingPOST400ApplicationJSONObject?: CreateSessionUsingPost400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    createSessionUsingPOST401ApplicationJSONObject?: CreateSessionUsingPost401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    createSessionUsingPOST500ApplicationJSONObject?: CreateSessionUsingPost500ApplicationJSON;
 }

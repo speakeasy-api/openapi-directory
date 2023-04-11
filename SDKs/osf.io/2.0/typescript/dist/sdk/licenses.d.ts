@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Licenses {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class Licenses {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * licenseList - List all licenses
+     * List all licenses
      *
+     * @remarks
      * A paginated list of licenses. The returned licenses are sorted by their name.
      * #### Returns
      * Returns a JSON object containing `data` and `links` keys.
@@ -23,16 +24,17 @@ export declare class Licenses {
      * You can optionally request that the response only include licenses that match your filters by utilizing the `filter` query parameter, e.g. [https://api.osf.io/v2/licenses/?filter[name]=apache](https://api.osf.io/v2/licenses/?filter[name]=apache).
      *
      * Licenses may be filtered by their `id`, and `name`.
-    **/
+     */
     licenseList(config?: AxiosRequestConfig): Promise<operations.LicenseListResponse>;
     /**
-     * licensesRead - Retrieve a license
+     * Retrieve a license
      *
+     * @remarks
      * Retrieves the details of a license.
      * #### Returns
      * Returns a JSON object with a `data` key containing the representation of the requested license, if the request is successful.
      *
      * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
-    **/
+     */
     licensesRead(req: operations.LicensesReadRequest, config?: AxiosRequestConfig): Promise<operations.LicensesReadResponse>;
 }

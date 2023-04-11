@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetAggregateConformancePackComplianceSummaryQueryParams extends SpeakeasyBase {
-    limit?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum GetAggregateConformancePackComplianceSummaryXAmzTargetEnum {
     StarlingDoveServiceGetAggregateConformancePackComplianceSummary = "StarlingDoveService.GetAggregateConformancePackComplianceSummary"
 }
-export declare class GetAggregateConformancePackComplianceSummaryHeaders extends SpeakeasyBase {
+export declare class GetAggregateConformancePackComplianceSummaryRequest extends SpeakeasyBase {
+    getAggregateConformancePackComplianceSummaryRequest: shared.GetAggregateConformancePackComplianceSummaryRequest;
+    /**
+     * Pagination limit
+     */
+    limit?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,17 +23,28 @@ export declare class GetAggregateConformancePackComplianceSummaryHeaders extends
     xAmzSignedHeaders?: string;
     xAmzTarget: GetAggregateConformancePackComplianceSummaryXAmzTargetEnum;
 }
-export declare class GetAggregateConformancePackComplianceSummaryRequest extends SpeakeasyBase {
-    queryParams: GetAggregateConformancePackComplianceSummaryQueryParams;
-    headers: GetAggregateConformancePackComplianceSummaryHeaders;
-    request: shared.GetAggregateConformancePackComplianceSummaryRequest;
-}
 export declare class GetAggregateConformancePackComplianceSummaryResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getAggregateConformancePackComplianceSummaryResponse?: shared.GetAggregateConformancePackComplianceSummaryResponse;
+    /**
+     * InvalidLimitException
+     */
     invalidLimitException?: any;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * NoSuchConfigurationAggregatorException
+     */
     noSuchConfigurationAggregatorException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

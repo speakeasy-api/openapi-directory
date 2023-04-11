@@ -1,9 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeEventsXAmzTargetEnum {
-    AmazonMemoryDbDescribeEvents = "AmazonMemoryDB.DescribeEvents"
+    AmazonMemoryDBDescribeEvents = "AmazonMemoryDB.DescribeEvents"
 }
-export declare class DescribeEventsHeaders extends SpeakeasyBase {
+export declare class DescribeEventsRequest extends SpeakeasyBase {
+    describeEventsRequest: shared.DescribeEventsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +23,24 @@ export declare class DescribeEventsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeEventsXAmzTargetEnum;
 }
-export declare class DescribeEventsRequest extends SpeakeasyBase {
-    headers: DescribeEventsHeaders;
-    request: shared.DescribeEventsRequest;
-}
 export declare class DescribeEventsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeEventsResponse?: shared.DescribeEventsResponse;
+    /**
+     * InvalidParameterCombinationException
+     */
     invalidParameterCombinationException?: any;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
+    /**
+     * ServiceLinkedRoleNotFoundFault
+     */
     serviceLinkedRoleNotFoundFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

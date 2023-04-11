@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeInstanceAttributeActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeInstanceAttributeActionEnum {
     DescribeInstanceAttribute = "DescribeInstanceAttribute"
 }
-export declare enum PostDescribeInstanceAttributeVersionEnum {
+export declare enum POSTDescribeInstanceAttributeVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDescribeInstanceAttributeQueryParams extends SpeakeasyBase {
-    action: PostDescribeInstanceAttributeActionEnum;
-    version: PostDescribeInstanceAttributeVersionEnum;
-}
-export declare class PostDescribeInstanceAttributeHeaders extends SpeakeasyBase {
+export declare class POSTDescribeInstanceAttributeRequest extends SpeakeasyBase {
+    action: POSTDescribeInstanceAttributeActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDescribeInstanceAttributeVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDescribeInstanceAttributeHeaders extends SpeakeasyBase 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeInstanceAttributeRequest extends SpeakeasyBase {
-    queryParams: PostDescribeInstanceAttributeQueryParams;
-    headers: PostDescribeInstanceAttributeHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeInstanceAttributeResponse extends SpeakeasyBase {
+export declare class POSTDescribeInstanceAttributeResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

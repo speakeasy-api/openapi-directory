@@ -1,11 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteUserVotesShowsShowIdPathParams extends SpeakeasyBase {
-    showId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteUserVotesShowsShowIdRequest extends SpeakeasyBase {
-    pathParams: DeleteUserVotesShowsShowIdPathParams;
+    showId: number;
 }
 export declare class DeleteUserVotesShowsShowIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

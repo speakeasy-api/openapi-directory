@@ -1,0 +1,2154 @@
+# openapi
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+### NPM
+
+```bash
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/dns/v1/typescript
+```
+
+### Yarn
+
+```bash
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/dns/v1/typescript
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```typescript
+import {
+  DnsChangesCreateRequest,
+  DnsChangesCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  ChangeStatusEnum,
+  RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum,
+  RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK();
+
+const req: DnsChangesCreateRequest = {
+  dollarXgafv: XgafvEnum.Two,
+  change: {
+    additions: [
+      {
+        kind: "distinctio",
+        name: "quibusdam",
+        routingPolicy: {
+          geo: {
+            enableFencing: false,
+            items: [
+              {
+                healthCheckedTargets: {
+                  internalLoadBalancers: [
+                    {
+                      ipAddress: "corrupti",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                      kind: "vel",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                      networkUrl: "deserunt",
+                      port: "suscipit",
+                      project: "iure",
+                      region: "magnam",
+                    },
+                    {
+                      ipAddress: "debitis",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Undefined,
+                      kind: "delectus",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                      networkUrl: "suscipit",
+                      port: "molestiae",
+                      project: "minus",
+                      region: "placeat",
+                    },
+                    {
+                      ipAddress: "voluptatum",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                      kind: "excepturi",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                      networkUrl: "recusandae",
+                      port: "temporibus",
+                      project: "ab",
+                      region: "quis",
+                    },
+                    {
+                      ipAddress: "veritatis",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                      kind: "perferendis",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                      networkUrl: "repellendus",
+                      port: "sapiente",
+                      project: "quo",
+                      region: "odit",
+                    },
+                  ],
+                },
+                kind: "at",
+                location: "at",
+                rrdatas: [
+                  "molestiae",
+                  "quod",
+                  "quod",
+                  "esse",
+                ],
+                signatureRrdatas: [
+                  "porro",
+                  "dolorum",
+                  "dicta",
+                ],
+              },
+              {
+                healthCheckedTargets: {
+                  internalLoadBalancers: [
+                    {
+                      ipAddress: "officia",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                      kind: "fugit",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                      networkUrl: "hic",
+                      port: "optio",
+                      project: "totam",
+                      region: "beatae",
+                    },
+                    {
+                      ipAddress: "commodi",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                      kind: "modi",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                      networkUrl: "impedit",
+                      port: "cum",
+                      project: "esse",
+                      region: "ipsum",
+                    },
+                    {
+                      ipAddress: "excepturi",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Undefined,
+                      kind: "perferendis",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                      networkUrl: "natus",
+                      port: "sed",
+                      project: "iste",
+                      region: "dolor",
+                    },
+                  ],
+                },
+                kind: "natus",
+                location: "laboriosam",
+                rrdatas: [
+                  "saepe",
+                  "fuga",
+                  "in",
+                  "corporis",
+                ],
+                signatureRrdatas: [
+                  "iure",
+                  "saepe",
+                  "quidem",
+                ],
+              },
+              {
+                healthCheckedTargets: {
+                  internalLoadBalancers: [
+                    {
+                      ipAddress: "ipsa",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                      kind: "est",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                      networkUrl: "laborum",
+                      port: "dolores",
+                      project: "dolorem",
+                      region: "corporis",
+                    },
+                  ],
+                },
+                kind: "explicabo",
+                location: "nobis",
+                rrdatas: [
+                  "omnis",
+                  "nemo",
+                ],
+                signatureRrdatas: [
+                  "excepturi",
+                  "accusantium",
+                ],
+              },
+            ],
+            kind: "iure",
+          },
+          kind: "culpa",
+          primaryBackup: {
+            backupGeoTargets: {
+              enableFencing: false,
+              items: [
+                {
+                  healthCheckedTargets: {
+                    internalLoadBalancers: [
+                      {
+                        ipAddress: "architecto",
+                        ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                        kind: "dolorem",
+                        loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                        networkUrl: "consequuntur",
+                        port: "repellat",
+                        project: "mollitia",
+                        region: "occaecati",
+                      },
+                      {
+                        ipAddress: "numquam",
+                        ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                        kind: "quam",
+                        loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                        networkUrl: "velit",
+                        port: "error",
+                        project: "quia",
+                        region: "quis",
+                      },
+                      {
+                        ipAddress: "vitae",
+                        ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                        kind: "animi",
+                        loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                        networkUrl: "odit",
+                        port: "quo",
+                        project: "sequi",
+                        region: "tenetur",
+                      },
+                      {
+                        ipAddress: "ipsam",
+                        ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                        kind: "possimus",
+                        loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                        networkUrl: "quasi",
+                        port: "error",
+                        project: "temporibus",
+                        region: "laborum",
+                      },
+                    ],
+                  },
+                  kind: "quasi",
+                  location: "reiciendis",
+                  rrdatas: [
+                    "vero",
+                    "nihil",
+                    "praesentium",
+                    "voluptatibus",
+                  ],
+                  signatureRrdatas: [
+                    "omnis",
+                  ],
+                },
+                {
+                  healthCheckedTargets: {
+                    internalLoadBalancers: [
+                      {
+                        ipAddress: "cum",
+                        ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Undefined,
+                        kind: "doloremque",
+                        loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                        networkUrl: "ut",
+                        port: "maiores",
+                        project: "dicta",
+                        region: "corporis",
+                      },
+                      {
+                        ipAddress: "dolore",
+                        ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                        kind: "dicta",
+                        loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                        networkUrl: "enim",
+                        port: "accusamus",
+                        project: "commodi",
+                        region: "repudiandae",
+                      },
+                    ],
+                  },
+                  kind: "quae",
+                  location: "ipsum",
+                  rrdatas: [
+                    "molestias",
+                    "excepturi",
+                    "pariatur",
+                  ],
+                  signatureRrdatas: [
+                    "praesentium",
+                    "rem",
+                  ],
+                },
+                {
+                  healthCheckedTargets: {
+                    internalLoadBalancers: [
+                      {
+                        ipAddress: "quasi",
+                        ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                        kind: "sint",
+                        loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                        networkUrl: "itaque",
+                        port: "incidunt",
+                        project: "enim",
+                        region: "consequatur",
+                      },
+                      {
+                        ipAddress: "est",
+                        ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                        kind: "explicabo",
+                        loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                        networkUrl: "distinctio",
+                        port: "quibusdam",
+                        project: "labore",
+                        region: "modi",
+                      },
+                      {
+                        ipAddress: "qui",
+                        ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                        kind: "cupiditate",
+                        loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                        networkUrl: "perferendis",
+                        port: "magni",
+                        project: "assumenda",
+                        region: "ipsam",
+                      },
+                      {
+                        ipAddress: "alias",
+                        ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Undefined,
+                        kind: "dolorum",
+                        loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                        networkUrl: "tempora",
+                        port: "facilis",
+                        project: "tempore",
+                        region: "labore",
+                      },
+                    ],
+                  },
+                  kind: "delectus",
+                  location: "eum",
+                  rrdatas: [
+                    "eligendi",
+                  ],
+                  signatureRrdatas: [
+                    "aliquid",
+                    "provident",
+                    "necessitatibus",
+                  ],
+                },
+                {
+                  healthCheckedTargets: {
+                    internalLoadBalancers: [
+                      {
+                        ipAddress: "officia",
+                        ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Undefined,
+                        kind: "debitis",
+                        loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                        networkUrl: "dolorum",
+                        port: "in",
+                        project: "in",
+                        region: "illum",
+                      },
+                      {
+                        ipAddress: "maiores",
+                        ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                        kind: "dicta",
+                        loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                        networkUrl: "cumque",
+                        port: "facere",
+                        project: "ea",
+                        region: "aliquid",
+                      },
+                      {
+                        ipAddress: "laborum",
+                        ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                        kind: "non",
+                        loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                        networkUrl: "enim",
+                        port: "accusamus",
+                        project: "delectus",
+                        region: "quidem",
+                      },
+                    ],
+                  },
+                  kind: "provident",
+                  location: "nam",
+                  rrdatas: [
+                    "blanditiis",
+                    "deleniti",
+                    "sapiente",
+                  ],
+                  signatureRrdatas: [
+                    "deserunt",
+                  ],
+                },
+              ],
+              kind: "nisi",
+            },
+            kind: "vel",
+            primaryTargets: {
+              internalLoadBalancers: [
+                {
+                  ipAddress: "omnis",
+                  ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                  kind: "perferendis",
+                  loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                  networkUrl: "magnam",
+                  port: "distinctio",
+                  project: "id",
+                  region: "labore",
+                },
+                {
+                  ipAddress: "labore",
+                  ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                  kind: "natus",
+                  loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                  networkUrl: "eum",
+                  port: "vero",
+                  project: "aspernatur",
+                  region: "architecto",
+                },
+                {
+                  ipAddress: "magnam",
+                  ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Undefined,
+                  kind: "excepturi",
+                  loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                  networkUrl: "provident",
+                  port: "quos",
+                  project: "sint",
+                  region: "accusantium",
+                },
+              ],
+            },
+            trickleTraffic: 6532.01,
+          },
+          wrr: {
+            items: [
+              {
+                healthCheckedTargets: {
+                  internalLoadBalancers: [
+                    {
+                      ipAddress: "ad",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                      kind: "dolor",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                      networkUrl: "odit",
+                      port: "nemo",
+                      project: "quasi",
+                      region: "iure",
+                    },
+                    {
+                      ipAddress: "doloribus",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                      kind: "eius",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                      networkUrl: "deleniti",
+                      port: "facilis",
+                      project: "in",
+                      region: "architecto",
+                    },
+                    {
+                      ipAddress: "architecto",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                      kind: "ullam",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                      networkUrl: "nihil",
+                      port: "repellat",
+                      project: "quibusdam",
+                      region: "sed",
+                    },
+                  ],
+                },
+                kind: "saepe",
+                rrdatas: [
+                  "accusantium",
+                  "consequuntur",
+                  "praesentium",
+                  "natus",
+                ],
+                signatureRrdatas: [
+                  "sunt",
+                ],
+                weight: 7790.51,
+              },
+              {
+                healthCheckedTargets: {
+                  internalLoadBalancers: [
+                    {
+                      ipAddress: "pariatur",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                      kind: "ea",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                      networkUrl: "odit",
+                      port: "ea",
+                      project: "accusantium",
+                      region: "ab",
+                    },
+                    {
+                      ipAddress: "maiores",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                      kind: "ipsam",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                      networkUrl: "autem",
+                      port: "nam",
+                      project: "eaque",
+                      region: "pariatur",
+                    },
+                    {
+                      ipAddress: "nemo",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                      kind: "perferendis",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                      networkUrl: "amet",
+                      port: "aut",
+                      project: "cumque",
+                      region: "corporis",
+                    },
+                    {
+                      ipAddress: "hic",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                      kind: "nobis",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                      networkUrl: "quis",
+                      port: "totam",
+                      project: "dignissimos",
+                      region: "eaque",
+                    },
+                  ],
+                },
+                kind: "quis",
+                rrdatas: [
+                  "eos",
+                ],
+                signatureRrdatas: [
+                  "dolores",
+                ],
+                weight: 7936.98,
+              },
+              {
+                healthCheckedTargets: {
+                  internalLoadBalancers: [
+                    {
+                      ipAddress: "dolor",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                      kind: "nostrum",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                      networkUrl: "recusandae",
+                      port: "omnis",
+                      project: "facilis",
+                      region: "perspiciatis",
+                    },
+                    {
+                      ipAddress: "voluptatem",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                      kind: "consequuntur",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                      networkUrl: "error",
+                      port: "eaque",
+                      project: "occaecati",
+                      region: "rerum",
+                    },
+                  ],
+                },
+                kind: "adipisci",
+                rrdatas: [
+                  "earum",
+                  "modi",
+                  "iste",
+                  "dolorum",
+                ],
+                signatureRrdatas: [
+                  "pariatur",
+                  "provident",
+                  "nobis",
+                ],
+                weight: 7301.22,
+              },
+              {
+                healthCheckedTargets: {
+                  internalLoadBalancers: [
+                    {
+                      ipAddress: "quaerat",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                      kind: "aliquid",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                      networkUrl: "dolorem",
+                      port: "dolor",
+                      project: "qui",
+                      region: "ipsum",
+                    },
+                    {
+                      ipAddress: "hic",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                      kind: "cum",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                      networkUrl: "dignissimos",
+                      port: "reiciendis",
+                      project: "amet",
+                      region: "dolorum",
+                    },
+                    {
+                      ipAddress: "numquam",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Undefined,
+                      kind: "ipsa",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                      networkUrl: "iure",
+                      port: "odio",
+                      project: "quaerat",
+                      region: "accusamus",
+                    },
+                    {
+                      ipAddress: "quidem",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                      kind: "voluptas",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                      networkUrl: "eos",
+                      port: "atque",
+                      project: "sit",
+                      region: "fugiat",
+                    },
+                  ],
+                },
+                kind: "ab",
+                rrdatas: [
+                  "dolorum",
+                  "iusto",
+                  "voluptate",
+                ],
+                signatureRrdatas: [
+                  "deleniti",
+                  "omnis",
+                  "necessitatibus",
+                ],
+                weight: 7146.97,
+              },
+            ],
+            kind: "asperiores",
+          },
+        },
+        rrdatas: [
+          "ipsum",
+          "voluptate",
+        ],
+        signatureRrdatas: [
+          "saepe",
+          "eius",
+          "aspernatur",
+        ],
+        ttl: 20651,
+        type: "amet",
+      },
+      {
+        kind: "optio",
+        name: "accusamus",
+        routingPolicy: {
+          geo: {
+            enableFencing: false,
+            items: [
+              {
+                healthCheckedTargets: {
+                  internalLoadBalancers: [
+                    {
+                      ipAddress: "suscipit",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                      kind: "provident",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                      networkUrl: "repellendus",
+                      port: "totam",
+                      project: "similique",
+                      region: "alias",
+                    },
+                    {
+                      ipAddress: "at",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Undefined,
+                      kind: "tempora",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                      networkUrl: "quod",
+                      port: "officiis",
+                      project: "qui",
+                      region: "dolorum",
+                    },
+                    {
+                      ipAddress: "a",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                      kind: "harum",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                      networkUrl: "ipsum",
+                      port: "quisquam",
+                      project: "tenetur",
+                      region: "amet",
+                    },
+                    {
+                      ipAddress: "tempore",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                      kind: "numquam",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                      networkUrl: "dolorem",
+                      port: "sapiente",
+                      project: "totam",
+                      region: "nihil",
+                    },
+                  ],
+                },
+                kind: "sit",
+                location: "expedita",
+                rrdatas: [
+                  "sed",
+                ],
+                signatureRrdatas: [
+                  "libero",
+                  "voluptas",
+                ],
+              },
+              {
+                healthCheckedTargets: {
+                  internalLoadBalancers: [
+                    {
+                      ipAddress: "quam",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Undefined,
+                      kind: "incidunt",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                      networkUrl: "cupiditate",
+                      port: "maxime",
+                      project: "pariatur",
+                      region: "soluta",
+                    },
+                    {
+                      ipAddress: "dicta",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                      kind: "totam",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                      networkUrl: "aspernatur",
+                      port: "dolores",
+                      project: "distinctio",
+                      region: "facilis",
+                    },
+                    {
+                      ipAddress: "aliquid",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                      kind: "molestias",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                      networkUrl: "qui",
+                      port: "neque",
+                      project: "fugit",
+                      region: "magni",
+                    },
+                  ],
+                },
+                kind: "odio",
+                location: "sunt",
+                rrdatas: [
+                  "nam",
+                  "hic",
+                ],
+                signatureRrdatas: [
+                  "cumque",
+                ],
+              },
+            ],
+            kind: "soluta",
+          },
+          kind: "nobis",
+          primaryBackup: {
+            backupGeoTargets: {
+              enableFencing: false,
+              items: [
+                {
+                  healthCheckedTargets: {
+                    internalLoadBalancers: [
+                      {
+                        ipAddress: "ipsum",
+                        ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Undefined,
+                        kind: "nobis",
+                        loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                        networkUrl: "tempore",
+                        port: "cupiditate",
+                        project: "aperiam",
+                        region: "delectus",
+                      },
+                      {
+                        ipAddress: "dolorem",
+                        ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Undefined,
+                        kind: "labore",
+                        loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                        networkUrl: "dolorum",
+                        port: "architecto",
+                        project: "quae",
+                        region: "aut",
+                      },
+                      {
+                        ipAddress: "quas",
+                        ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                        kind: "consequatur",
+                        loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                        networkUrl: "repellendus",
+                        port: "porro",
+                        project: "doloribus",
+                        region: "ut",
+                      },
+                      {
+                        ipAddress: "facilis",
+                        ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                        kind: "qui",
+                        loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                        networkUrl: "laudantium",
+                        port: "odio",
+                        project: "occaecati",
+                        region: "voluptatibus",
+                      },
+                    ],
+                  },
+                  kind: "quisquam",
+                  location: "vero",
+                  rrdatas: [
+                    "quis",
+                    "ipsum",
+                    "delectus",
+                  ],
+                  signatureRrdatas: [
+                    "consectetur",
+                    "vero",
+                  ],
+                },
+              ],
+              kind: "tenetur",
+            },
+            kind: "dignissimos",
+            primaryTargets: {
+              internalLoadBalancers: [
+                {
+                  ipAddress: "distinctio",
+                  ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                  kind: "odio",
+                  loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                  networkUrl: "facilis",
+                  port: "vero",
+                  project: "ducimus",
+                  region: "dolore",
+                },
+                {
+                  ipAddress: "quibusdam",
+                  ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                  kind: "sequi",
+                  loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                  networkUrl: "impedit",
+                  port: "aut",
+                  project: "voluptatibus",
+                  region: "exercitationem",
+                },
+                {
+                  ipAddress: "nulla",
+                  ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Undefined,
+                  kind: "porro",
+                  loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                  networkUrl: "doloribus",
+                  port: "iusto",
+                  project: "eligendi",
+                  region: "ducimus",
+                },
+                {
+                  ipAddress: "alias",
+                  ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                  kind: "tempora",
+                  loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                  networkUrl: "ea",
+                  port: "aspernatur",
+                  project: "vel",
+                  region: "possimus",
+                },
+              ],
+            },
+            trickleTraffic: 2978.42,
+          },
+          wrr: {
+            items: [
+              {
+                healthCheckedTargets: {
+                  internalLoadBalancers: [
+                    {
+                      ipAddress: "laudantium",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Undefined,
+                      kind: "dolor",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                      networkUrl: "quasi",
+                      port: "ex",
+                      project: "nulla",
+                      region: "excepturi",
+                    },
+                    {
+                      ipAddress: "voluptatibus",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                      kind: "sapiente",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                      networkUrl: "saepe",
+                      port: "ea",
+                      project: "impedit",
+                      region: "corporis",
+                    },
+                  ],
+                },
+                kind: "veniam",
+                rrdatas: [
+                  "inventore",
+                  "magnam",
+                ],
+                signatureRrdatas: [
+                  "quo",
+                  "consectetur",
+                ],
+                weight: 9262.13,
+              },
+            ],
+            kind: "aspernatur",
+          },
+        },
+        rrdatas: [
+          "eaque",
+          "a",
+        ],
+        signatureRrdatas: [
+          "aut",
+          "aut",
+          "deleniti",
+        ],
+        ttl: 770581,
+        type: "aliquam",
+      },
+      {
+        kind: "fugit",
+        name: "accusamus",
+        routingPolicy: {
+          geo: {
+            enableFencing: false,
+            items: [
+              {
+                healthCheckedTargets: {
+                  internalLoadBalancers: [
+                    {
+                      ipAddress: "et",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                      kind: "laborum",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                      networkUrl: "velit",
+                      port: "eum",
+                      project: "autem",
+                      region: "nobis",
+                    },
+                    {
+                      ipAddress: "quas",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                      kind: "nulla",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                      networkUrl: "libero",
+                      port: "quasi",
+                      project: "tempora",
+                      region: "numquam",
+                    },
+                  ],
+                },
+                kind: "explicabo",
+                location: "provident",
+                rrdatas: [
+                  "molestiae",
+                ],
+                signatureRrdatas: [
+                  "odio",
+                  "eius",
+                ],
+              },
+            ],
+            kind: "esse",
+          },
+          kind: "esse",
+          primaryBackup: {
+            backupGeoTargets: {
+              enableFencing: false,
+              items: [
+                {
+                  healthCheckedTargets: {
+                    internalLoadBalancers: [
+                      {
+                        ipAddress: "reprehenderit",
+                        ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                        kind: "fugiat",
+                        loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                        networkUrl: "eum",
+                        port: "suscipit",
+                        project: "assumenda",
+                        region: "eos",
+                      },
+                      {
+                        ipAddress: "praesentium",
+                        ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                        kind: "veritatis",
+                        loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                        networkUrl: "id",
+                        port: "quidem",
+                        project: "neque",
+                        region: "quo",
+                      },
+                      {
+                        ipAddress: "illum",
+                        ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                        kind: "fuga",
+                        loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                        networkUrl: "eos",
+                        port: "voluptas",
+                        project: "ab",
+                        region: "cupiditate",
+                      },
+                    ],
+                  },
+                  kind: "consequatur",
+                  location: "tempora",
+                  rrdatas: [
+                    "ipsam",
+                    "aspernatur",
+                    "sequi",
+                    "quo",
+                  ],
+                  signatureRrdatas: [
+                    "recusandae",
+                    "aperiam",
+                  ],
+                },
+                {
+                  healthCheckedTargets: {
+                    internalLoadBalancers: [
+                      {
+                        ipAddress: "quod",
+                        ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                        kind: "inventore",
+                        loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                        networkUrl: "totam",
+                        port: "accusamus",
+                        project: "aliquam",
+                        region: "odio",
+                      },
+                      {
+                        ipAddress: "occaecati",
+                        ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                        kind: "sapiente",
+                        loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                        networkUrl: "deserunt",
+                        port: "molestiae",
+                        project: "accusantium",
+                        region: "porro",
+                      },
+                      {
+                        ipAddress: "eum",
+                        ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                        kind: "praesentium",
+                        loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                        networkUrl: "deleniti",
+                        port: "fugit",
+                        project: "fuga",
+                        region: "mollitia",
+                      },
+                    ],
+                  },
+                  kind: "incidunt",
+                  location: "atque",
+                  rrdatas: [
+                    "minima",
+                  ],
+                  signatureRrdatas: [
+                    "fugit",
+                    "sapiente",
+                  ],
+                },
+                {
+                  healthCheckedTargets: {
+                    internalLoadBalancers: [
+                      {
+                        ipAddress: "ratione",
+                        ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Undefined,
+                        kind: "saepe",
+                        loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                        networkUrl: "atque",
+                        port: "et",
+                        project: "esse",
+                        region: "eveniet",
+                      },
+                    ],
+                  },
+                  kind: "accusamus",
+                  location: "veritatis",
+                  rrdatas: [
+                    "quod",
+                    "nam",
+                  ],
+                  signatureRrdatas: [
+                    "aliquid",
+                    "quasi",
+                    "saepe",
+                    "vel",
+                  ],
+                },
+              ],
+              kind: "harum",
+            },
+            kind: "molestiae",
+            primaryTargets: {
+              internalLoadBalancers: [
+                {
+                  ipAddress: "occaecati",
+                  ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Undefined,
+                  kind: "distinctio",
+                  loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                  networkUrl: "sit",
+                  port: "culpa",
+                  project: "tempore",
+                  region: "adipisci",
+                },
+                {
+                  ipAddress: "cumque",
+                  ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Undefined,
+                  kind: "consequatur",
+                  loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                  networkUrl: "quaerat",
+                  port: "sapiente",
+                  project: "consectetur",
+                  region: "esse",
+                },
+                {
+                  ipAddress: "blanditiis",
+                  ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                  kind: "a",
+                  loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                  networkUrl: "quas",
+                  port: "esse",
+                  project: "quasi",
+                  region: "a",
+                },
+              ],
+            },
+            trickleTraffic: 6216.79,
+          },
+          wrr: {
+            items: [
+              {
+                healthCheckedTargets: {
+                  internalLoadBalancers: [
+                    {
+                      ipAddress: "possimus",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Undefined,
+                      kind: "eveniet",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                      networkUrl: "facere",
+                      port: "veritatis",
+                      project: "consequuntur",
+                      region: "quasi",
+                    },
+                    {
+                      ipAddress: "similique",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                      kind: "aliquid",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                      networkUrl: "quae",
+                      port: "earum",
+                      project: "vel",
+                      region: "in",
+                    },
+                    {
+                      ipAddress: "eius",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                      kind: "illum",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                      networkUrl: "accusantium",
+                      port: "aliquam",
+                      project: "sapiente",
+                      region: "dicta",
+                    },
+                    {
+                      ipAddress: "ullam",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                      kind: "ullam",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                      networkUrl: "aut",
+                      port: "voluptatum",
+                      project: "qui",
+                      region: "quibusdam",
+                    },
+                  ],
+                },
+                kind: "ex",
+                rrdatas: [
+                  "itaque",
+                  "dolorum",
+                  "architecto",
+                ],
+                signatureRrdatas: [
+                  "tenetur",
+                  "quasi",
+                  "at",
+                ],
+                weight: 920.27,
+              },
+              {
+                healthCheckedTargets: {
+                  internalLoadBalancers: [
+                    {
+                      ipAddress: "ipsa",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Undefined,
+                      kind: "veritatis",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                      networkUrl: "adipisci",
+                      port: "iste",
+                      project: "temporibus",
+                      region: "accusantium",
+                    },
+                    {
+                      ipAddress: "rem",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Undefined,
+                      kind: "laudantium",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                      networkUrl: "mollitia",
+                      port: "ab",
+                      project: "corrupti",
+                      region: "non",
+                    },
+                  ],
+                },
+                kind: "voluptatem",
+                rrdatas: [
+                  "occaecati",
+                ],
+                signatureRrdatas: [
+                  "impedit",
+                  "explicabo",
+                ],
+                weight: 3762.26,
+              },
+              {
+                healthCheckedTargets: {
+                  internalLoadBalancers: [
+                    {
+                      ipAddress: "dignissimos",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Undefined,
+                      kind: "maiores",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                      networkUrl: "velit",
+                      port: "voluptatibus",
+                      project: "voluptas",
+                      region: "asperiores",
+                    },
+                  ],
+                },
+                kind: "aperiam",
+                rrdatas: [
+                  "quaerat",
+                  "consequuntur",
+                ],
+                signatureRrdatas: [
+                  "officia",
+                  "maxime",
+                  "dignissimos",
+                  "officia",
+                ],
+                weight: 9894.1,
+              },
+            ],
+            kind: "nemo",
+          },
+        },
+        rrdatas: [
+          "quaerat",
+        ],
+        signatureRrdatas: [
+          "quod",
+          "labore",
+          "ab",
+          "adipisci",
+        ],
+        ttl: 683573,
+        type: "id",
+      },
+    ],
+    deletions: [
+      {
+        kind: "velit",
+        name: "culpa",
+        routingPolicy: {
+          geo: {
+            enableFencing: false,
+            items: [
+              {
+                healthCheckedTargets: {
+                  internalLoadBalancers: [
+                    {
+                      ipAddress: "totam",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                      kind: "vel",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                      networkUrl: "quos",
+                      port: "vel",
+                      project: "labore",
+                      region: "possimus",
+                    },
+                    {
+                      ipAddress: "facilis",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                      kind: "commodi",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                      networkUrl: "corporis",
+                      port: "reiciendis",
+                      project: "assumenda",
+                      region: "nemo",
+                    },
+                    {
+                      ipAddress: "recusandae",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                      kind: "aperiam",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                      networkUrl: "consectetur",
+                      port: "in",
+                      project: "exercitationem",
+                      region: "earum",
+                    },
+                    {
+                      ipAddress: "facere",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Undefined,
+                      kind: "doloribus",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                      networkUrl: "reiciendis",
+                      port: "quidem",
+                      project: "saepe",
+                      region: "necessitatibus",
+                    },
+                  ],
+                },
+                kind: "dolore",
+                location: "sunt",
+                rrdatas: [
+                  "adipisci",
+                  "non",
+                  "amet",
+                  "beatae",
+                ],
+                signatureRrdatas: [
+                  "a",
+                  "debitis",
+                ],
+              },
+              {
+                healthCheckedTargets: {
+                  internalLoadBalancers: [
+                    {
+                      ipAddress: "corporis",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                      kind: "laboriosam",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                      networkUrl: "voluptates",
+                      port: "libero",
+                      project: "vitae",
+                      region: "accusamus",
+                    },
+                  ],
+                },
+                kind: "similique",
+                location: "tempora",
+                rrdatas: [
+                  "voluptas",
+                ],
+                signatureRrdatas: [
+                  "voluptas",
+                  "minima",
+                ],
+              },
+              {
+                healthCheckedTargets: {
+                  internalLoadBalancers: [
+                    {
+                      ipAddress: "dolorum",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Undefined,
+                      kind: "minus",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                      networkUrl: "blanditiis",
+                      port: "in",
+                      project: "dolore",
+                      region: "aliquam",
+                    },
+                    {
+                      ipAddress: "officiis",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                      kind: "ullam",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                      networkUrl: "cum",
+                      port: "blanditiis",
+                      project: "quas",
+                      region: "hic",
+                    },
+                    {
+                      ipAddress: "nesciunt",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                      kind: "corrupti",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                      networkUrl: "totam",
+                      port: "hic",
+                      project: "exercitationem",
+                      region: "nobis",
+                    },
+                  ],
+                },
+                kind: "sit",
+                location: "rerum",
+                rrdatas: [
+                  "reiciendis",
+                ],
+                signatureRrdatas: [
+                  "asperiores",
+                ],
+              },
+            ],
+            kind: "facilis",
+          },
+          kind: "voluptate",
+          primaryBackup: {
+            backupGeoTargets: {
+              enableFencing: false,
+              items: [
+                {
+                  healthCheckedTargets: {
+                    internalLoadBalancers: [
+                      {
+                        ipAddress: "iste",
+                        ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Undefined,
+                        kind: "laborum",
+                        loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                        networkUrl: "in",
+                        port: "commodi",
+                        project: "quidem",
+                        region: "explicabo",
+                      },
+                    ],
+                  },
+                  kind: "voluptas",
+                  location: "unde",
+                  rrdatas: [
+                    "suscipit",
+                  ],
+                  signatureRrdatas: [
+                    "debitis",
+                    "illo",
+                    "reiciendis",
+                    "perferendis",
+                  ],
+                },
+                {
+                  healthCheckedTargets: {
+                    internalLoadBalancers: [
+                      {
+                        ipAddress: "maiores",
+                        ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Undefined,
+                        kind: "sed",
+                        loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                        networkUrl: "eius",
+                        port: "necessitatibus",
+                        project: "ipsum",
+                        region: "ea",
+                      },
+                      {
+                        ipAddress: "occaecati",
+                        ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                        kind: "voluptatibus",
+                        loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                        networkUrl: "tempora",
+                        port: "voluptate",
+                        project: "reiciendis",
+                        region: "ex",
+                      },
+                      {
+                        ipAddress: "sit",
+                        ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Undefined,
+                        kind: "officiis",
+                        loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                        networkUrl: "facilis",
+                        port: "quaerat",
+                        project: "incidunt",
+                        region: "ipsam",
+                      },
+                    ],
+                  },
+                  kind: "debitis",
+                  location: "rem",
+                  rrdatas: [
+                    "nobis",
+                  ],
+                  signatureRrdatas: [
+                    "veniam",
+                    "minima",
+                    "recusandae",
+                  ],
+                },
+                {
+                  healthCheckedTargets: {
+                    internalLoadBalancers: [
+                      {
+                        ipAddress: "nulla",
+                        ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Undefined,
+                        kind: "aperiam",
+                        loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                        networkUrl: "numquam",
+                        port: "veniam",
+                        project: "in",
+                        region: "officiis",
+                      },
+                      {
+                        ipAddress: "beatae",
+                        ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                        kind: "exercitationem",
+                        loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                        networkUrl: "cum",
+                        port: "laboriosam",
+                        project: "dolorum",
+                        region: "voluptatum",
+                      },
+                      {
+                        ipAddress: "error",
+                        ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                        kind: "expedita",
+                        loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                        networkUrl: "neque",
+                        port: "dolorum",
+                        project: "nostrum",
+                        region: "officia",
+                      },
+                      {
+                        ipAddress: "dolorum",
+                        ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                        kind: "accusamus",
+                        loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                        networkUrl: "atque",
+                        port: "fugit",
+                        project: "ut",
+                        region: "fugiat",
+                      },
+                    ],
+                  },
+                  kind: "voluptatem",
+                  location: "culpa",
+                  rrdatas: [
+                    "magnam",
+                    "consequatur",
+                    "esse",
+                  ],
+                  signatureRrdatas: [
+                    "sit",
+                    "voluptatum",
+                  ],
+                },
+              ],
+              kind: "quas",
+            },
+            kind: "repudiandae",
+            primaryTargets: {
+              internalLoadBalancers: [
+                {
+                  ipAddress: "et",
+                  ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                  kind: "ex",
+                  loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                  networkUrl: "sit",
+                  port: "vel",
+                  project: "nostrum",
+                  region: "saepe",
+                },
+                {
+                  ipAddress: "error",
+                  ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Undefined,
+                  kind: "incidunt",
+                  loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                  networkUrl: "dolorem",
+                  port: "harum",
+                  project: "dicta",
+                  region: "architecto",
+                },
+              ],
+            },
+            trickleTraffic: 5771.4,
+          },
+          wrr: {
+            items: [
+              {
+                healthCheckedTargets: {
+                  internalLoadBalancers: [
+                    {
+                      ipAddress: "atque",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                      kind: "nam",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                      networkUrl: "laboriosam",
+                      port: "alias",
+                      project: "amet",
+                      region: "deserunt",
+                    },
+                    {
+                      ipAddress: "voluptate",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                      kind: "reiciendis",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                      networkUrl: "repellendus",
+                      port: "delectus",
+                      project: "voluptates",
+                      region: "perferendis",
+                    },
+                    {
+                      ipAddress: "est",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                      kind: "reprehenderit",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                      networkUrl: "fuga",
+                      port: "praesentium",
+                      project: "mollitia",
+                      region: "veniam",
+                    },
+                  ],
+                },
+                kind: "voluptatem",
+                rrdatas: [
+                  "repudiandae",
+                  "quasi",
+                  "atque",
+                  "reprehenderit",
+                ],
+                signatureRrdatas: [
+                  "totam",
+                  "suscipit",
+                  "quidem",
+                  "maxime",
+                ],
+                weight: 908.85,
+              },
+              {
+                healthCheckedTargets: {
+                  internalLoadBalancers: [
+                    {
+                      ipAddress: "amet",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                      kind: "ea",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                      networkUrl: "error",
+                      port: "officiis",
+                      project: "officiis",
+                      region: "accusamus",
+                    },
+                    {
+                      ipAddress: "natus",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Undefined,
+                      kind: "aspernatur",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                      networkUrl: "maiores",
+                      port: "corrupti",
+                      project: "at",
+                      region: "error",
+                    },
+                  ],
+                },
+                kind: "blanditiis",
+                rrdatas: [
+                  "repudiandae",
+                  "atque",
+                ],
+                signatureRrdatas: [
+                  "sunt",
+                  "recusandae",
+                  "dolorum",
+                ],
+                weight: 8298.98,
+              },
+            ],
+            kind: "labore",
+          },
+        },
+        rrdatas: [
+          "doloremque",
+          "repudiandae",
+          "dicta",
+          "accusantium",
+        ],
+        signatureRrdatas: [
+          "dolores",
+        ],
+        ttl: 316488,
+        type: "laboriosam",
+      },
+      {
+        kind: "velit",
+        name: "a",
+        routingPolicy: {
+          geo: {
+            enableFencing: false,
+            items: [
+              {
+                healthCheckedTargets: {
+                  internalLoadBalancers: [
+                    {
+                      ipAddress: "saepe",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Undefined,
+                      kind: "occaecati",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                      networkUrl: "perspiciatis",
+                      port: "in",
+                      project: "adipisci",
+                      region: "eveniet",
+                    },
+                    {
+                      ipAddress: "occaecati",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Undefined,
+                      kind: "fugit",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                      networkUrl: "quis",
+                      port: "reprehenderit",
+                      project: "error",
+                      region: "illo",
+                    },
+                  ],
+                },
+                kind: "corporis",
+                location: "quidem",
+                rrdatas: [
+                  "non",
+                  "vero",
+                  "doloremque",
+                  "iure",
+                ],
+                signatureRrdatas: [
+                  "totam",
+                ],
+              },
+              {
+                healthCheckedTargets: {
+                  internalLoadBalancers: [
+                    {
+                      ipAddress: "molestiae",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                      kind: "qui",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                      networkUrl: "iure",
+                      port: "necessitatibus",
+                      project: "ratione",
+                      region: "laborum",
+                    },
+                  ],
+                },
+                kind: "distinctio",
+                location: "voluptatum",
+                rrdatas: [
+                  "aliquam",
+                  "ad",
+                  "repellat",
+                ],
+                signatureRrdatas: [
+                  "corporis",
+                ],
+              },
+              {
+                healthCheckedTargets: {
+                  internalLoadBalancers: [
+                    {
+                      ipAddress: "nihil",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                      kind: "voluptas",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                      networkUrl: "maiores",
+                      port: "reiciendis",
+                      project: "dolores",
+                      region: "id",
+                    },
+                    {
+                      ipAddress: "minima",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Undefined,
+                      kind: "dolorum",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                      networkUrl: "quae",
+                      port: "recusandae",
+                      project: "omnis",
+                      region: "quaerat",
+                    },
+                    {
+                      ipAddress: "molestiae",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                      kind: "ut",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                      networkUrl: "adipisci",
+                      port: "debitis",
+                      project: "laudantium",
+                      region: "eum",
+                    },
+                  ],
+                },
+                kind: "nemo",
+                location: "recusandae",
+                rrdatas: [
+                  "provident",
+                  "quis",
+                ],
+                signatureRrdatas: [
+                  "reiciendis",
+                  "provident",
+                ],
+              },
+            ],
+            kind: "aspernatur",
+          },
+          kind: "ullam",
+          primaryBackup: {
+            backupGeoTargets: {
+              enableFencing: false,
+              items: [
+                {
+                  healthCheckedTargets: {
+                    internalLoadBalancers: [
+                      {
+                        ipAddress: "nostrum",
+                        ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                        kind: "provident",
+                        loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                        networkUrl: "animi",
+                        port: "ex",
+                        project: "aliquid",
+                        region: "accusantium",
+                      },
+                      {
+                        ipAddress: "repellat",
+                        ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                        kind: "ullam",
+                        loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                        networkUrl: "nam",
+                        port: "earum",
+                        project: "officia",
+                        region: "laborum",
+                      },
+                      {
+                        ipAddress: "placeat",
+                        ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Undefined,
+                        kind: "voluptatibus",
+                        loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                        networkUrl: "officiis",
+                        port: "sapiente",
+                        project: "cumque",
+                        region: "vitae",
+                      },
+                    ],
+                  },
+                  kind: "rerum",
+                  location: "tempora",
+                  rrdatas: [
+                    "inventore",
+                    "fugit",
+                  ],
+                  signatureRrdatas: [
+                    "quae",
+                    "perferendis",
+                    "velit",
+                    "aspernatur",
+                  ],
+                },
+              ],
+              kind: "eum",
+            },
+            kind: "eius",
+            primaryTargets: {
+              internalLoadBalancers: [
+                {
+                  ipAddress: "at",
+                  ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                  kind: "eos",
+                  loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                  networkUrl: "eum",
+                  port: "dicta",
+                  project: "minima",
+                  region: "beatae",
+                },
+                {
+                  ipAddress: "cupiditate",
+                  ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                  kind: "earum",
+                  loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                  networkUrl: "hic",
+                  port: "illum",
+                  project: "eaque",
+                  region: "earum",
+                },
+                {
+                  ipAddress: "perspiciatis",
+                  ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                  kind: "debitis",
+                  loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                  networkUrl: "porro",
+                  port: "suscipit",
+                  project: "dolorem",
+                  region: "fugit",
+                },
+              ],
+            },
+            trickleTraffic: 7649.95,
+          },
+          wrr: {
+            items: [
+              {
+                healthCheckedTargets: {
+                  internalLoadBalancers: [
+                    {
+                      ipAddress: "animi",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                      kind: "nulla",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                      networkUrl: "quasi",
+                      port: "et",
+                      project: "ducimus",
+                      region: "natus",
+                    },
+                  ],
+                },
+                kind: "occaecati",
+                rrdatas: [
+                  "adipisci",
+                  "quasi",
+                ],
+                signatureRrdatas: [
+                  "doloribus",
+                ],
+                weight: 8595.81,
+              },
+              {
+                healthCheckedTargets: {
+                  internalLoadBalancers: [
+                    {
+                      ipAddress: "ipsa",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Undefined,
+                      kind: "nihil",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                      networkUrl: "dicta",
+                      port: "iusto",
+                      project: "esse",
+                      region: "praesentium",
+                    },
+                    {
+                      ipAddress: "maiores",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                      kind: "vel",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                      networkUrl: "fugiat",
+                      port: "doloremque",
+                      project: "dicta",
+                      region: "odio",
+                    },
+                    {
+                      ipAddress: "tempora",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                      kind: "ex",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                      networkUrl: "aliquid",
+                      port: "ipsa",
+                      project: "laborum",
+                      region: "sunt",
+                    },
+                    {
+                      ipAddress: "nostrum",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                      kind: "expedita",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                      networkUrl: "officia",
+                      port: "suscipit",
+                      project: "aliquid",
+                      region: "perferendis",
+                    },
+                  ],
+                },
+                kind: "eum",
+                rrdatas: [
+                  "iste",
+                  "id",
+                ],
+                signatureRrdatas: [
+                  "error",
+                ],
+                weight: 8224.07,
+              },
+              {
+                healthCheckedTargets: {
+                  internalLoadBalancers: [
+                    {
+                      ipAddress: "mollitia",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                      kind: "libero",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                      networkUrl: "deleniti",
+                      port: "enim",
+                      project: "vitae",
+                      region: "repellendus",
+                    },
+                    {
+                      ipAddress: "ex",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Udp,
+                      kind: "ex",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.None,
+                      networkUrl: "ad",
+                      port: "expedita",
+                      project: "voluptatem",
+                      region: "molestias",
+                    },
+                    {
+                      ipAddress: "cum",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Tcp,
+                      kind: "beatae",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                      networkUrl: "omnis",
+                      port: "veritatis",
+                      project: "rerum",
+                      region: "est",
+                    },
+                    {
+                      ipAddress: "culpa",
+                      ipProtocol: RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum.Undefined,
+                      kind: "sapiente",
+                      loadBalancerType: RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum.RegionalL4ilb,
+                      networkUrl: "architecto",
+                      port: "fuga",
+                      project: "pariatur",
+                      region: "debitis",
+                    },
+                  ],
+                },
+                kind: "voluptatem",
+                rrdatas: [
+                  "deleniti",
+                ],
+                signatureRrdatas: [
+                  "ex",
+                  "sapiente",
+                  "rem",
+                  "minus",
+                ],
+                weight: 3651,
+              },
+            ],
+            kind: "asperiores",
+          },
+        },
+        rrdatas: [
+          "ullam",
+        ],
+        signatureRrdatas: [
+          "illum",
+        ],
+        ttl: 518150,
+        type: "impedit",
+      },
+    ],
+    id: "quibusdam",
+    isServing: false,
+    kind: "nam",
+    startTime: "ipsam",
+    status: ChangeStatusEnum.Done,
+  },
+  accessToken: "dolor",
+  alt: AltEnum.Json,
+  callback: "inventore",
+  clientOperationId: "deleniti",
+  fields: "veritatis",
+  key: "tempora",
+  managedZone: "dolor",
+  oauthToken: "consequatur",
+  prettyPrint: false,
+  project: "architecto",
+  quotaUser: "sit",
+  uploadType: "modi",
+  uploadProtocol: "fugit",
+};
+
+sdk.changes.dnsChangesCreate(req).then((res: DnsChangesCreateResponse | AxiosError) => {
+   // handle response
+});
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## Available Resources and Operations
+
+
+### changes
+
+* `dnsChangesCreate` - Atomically updates the ResourceRecordSet collection.
+* `dnsChangesGet` - Fetches the representation of an existing Change.
+* `dnsChangesList` - Enumerates Changes to a ResourceRecordSet collection.
+
+### dnsKeys
+
+* `dnsDnsKeysGet` - Fetches the representation of an existing DnsKey.
+* `dnsDnsKeysList` - Enumerates DnsKeys to a ResourceRecordSet collection.
+
+### managedZoneOperations
+
+* `dnsManagedZoneOperationsGet` - Fetches the representation of an existing Operation.
+* `dnsManagedZoneOperationsList` - Enumerates Operations for the given ManagedZone.
+
+### managedZones
+
+* `dnsManagedZonesCreate` - Creates a new ManagedZone.
+* `dnsManagedZonesDelete` - Deletes a previously created ManagedZone.
+* `dnsManagedZonesGet` - Fetches the representation of an existing ManagedZone.
+* `dnsManagedZonesGetIamPolicy` - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+* `dnsManagedZonesList` - Enumerates ManagedZones that have been created but not yet deleted.
+* `dnsManagedZonesPatch` - Applies a partial update to an existing ManagedZone.
+* `dnsManagedZonesSetIamPolicy` - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+* `dnsManagedZonesTestIamPermissions` - Returns permissions that a caller has on the specified resource. If the resource does not exist, this returns an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
+* `dnsManagedZonesUpdate` - Updates an existing ManagedZone.
+
+### policies
+
+* `dnsPoliciesCreate` - Creates a new Policy.
+* `dnsPoliciesDelete` - Deletes a previously created Policy. Fails if the policy is still being referenced by a network.
+* `dnsPoliciesGet` - Fetches the representation of an existing Policy.
+* `dnsPoliciesList` - Enumerates all Policies associated with a project.
+* `dnsPoliciesPatch` - Applies a partial update to an existing Policy.
+* `dnsPoliciesUpdate` - Updates an existing Policy.
+
+### projects
+
+* `dnsProjectsGet` - Fetches the representation of an existing Project.
+
+### resourceRecordSets
+
+* `dnsResourceRecordSetsCreate` - Creates a new ResourceRecordSet.
+* `dnsResourceRecordSetsDelete` - Deletes a previously created ResourceRecordSet.
+* `dnsResourceRecordSetsGet` - Fetches the representation of an existing ResourceRecordSet.
+* `dnsResourceRecordSetsList` - Enumerates ResourceRecordSets that you have created but not yet deleted.
+* `dnsResourceRecordSetsPatch` - Applies a partial update to an existing ResourceRecordSet.
+
+### responsePolicies
+
+* `dnsResponsePoliciesCreate` - Creates a new Response Policy
+* `dnsResponsePoliciesDelete` - Deletes a previously created Response Policy. Fails if the response policy is non-empty or still being referenced by a network.
+* `dnsResponsePoliciesGet` - Fetches the representation of an existing Response Policy.
+* `dnsResponsePoliciesList` - Enumerates all Response Policies associated with a project.
+* `dnsResponsePoliciesPatch` - Applies a partial update to an existing Response Policy.
+* `dnsResponsePoliciesUpdate` - Updates an existing Response Policy.
+
+### responsePolicyRules
+
+* `dnsResponsePolicyRulesCreate` - Creates a new Response Policy Rule.
+* `dnsResponsePolicyRulesDelete` - Deletes a previously created Response Policy Rule.
+* `dnsResponsePolicyRulesGet` - Fetches the representation of an existing Response Policy Rule.
+* `dnsResponsePolicyRulesList` - Enumerates all Response Policy Rules associated with a project.
+* `dnsResponsePolicyRulesPatch` - Applies a partial update to an existing Response Policy Rule.
+* `dnsResponsePolicyRulesUpdate` - Updates an existing Response Policy Rule.
+<!-- End SDK Available Operations -->
+
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

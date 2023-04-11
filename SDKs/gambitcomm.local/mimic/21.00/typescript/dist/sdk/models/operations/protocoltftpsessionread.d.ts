@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolTftpSessionReadPathParams extends SpeakeasyBase {
-    agentNum: number;
-    srcfile: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolTftpSessionReadRequest extends SpeakeasyBase {
-    pathParams: ProtocolTftpSessionReadPathParams;
+    /**
+     * Agent to show TFTP statistics
+     */
+    agentNum: number;
+    /**
+     * File name to retrieve from server
+     */
+    srcfile: string;
 }
 export declare class ProtocolTftpSessionReadResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolTftpSessionRead200ApplicationJSONInt32Integers?: number[];
 }

@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Schedule B filings describe itemized disbursements. This data explains how committees and other filers spend their money. These figures are reported as part of forms F3, F3X and F3P.
+ */
 export declare class Disbursements {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +12,7 @@ export declare class Disbursements {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getSchedulesScheduleB -
+     *
      * Schedule B filings describe itemized disbursements. This data
      * explains how committees and other filers spend their money. These figures are
      * reported as part of forms F3, F3X and F3P.
@@ -47,39 +50,39 @@ export declare class Disbursements {
      * Note: because the Schedule B data includes many records, counts for
      * large result sets are approximate; you will want to page through the records until no records are returned.
      *
-    **/
+     */
     getSchedulesScheduleB(req: operations.GetSchedulesScheduleBRequest, config?: AxiosRequestConfig): Promise<operations.GetSchedulesScheduleBResponse>;
     /**
-     * getSchedulesScheduleBByPurpose -
+     *
      * Schedule B disbursements aggregated by disbursement purpose category. To avoid double counting,
      * memoed items are not included.
      * Purpose is a combination of transaction codes, category codes and disbursement description.
      * Inspect the `disbursement_purpose` sql function within the migrations for more details.
      *
-    **/
+     */
     getSchedulesScheduleBByPurpose(req: operations.GetSchedulesScheduleBByPurposeRequest, config?: AxiosRequestConfig): Promise<operations.GetSchedulesScheduleBByPurposeResponse>;
     /**
-     * getSchedulesScheduleBByRecipient -
+     *
      * Schedule B disbursements aggregated by recipient name. To avoid double counting,
      * memoed items are not included.
      *
-    **/
+     */
     getSchedulesScheduleBByRecipient(req: operations.GetSchedulesScheduleBByRecipientRequest, config?: AxiosRequestConfig): Promise<operations.GetSchedulesScheduleBByRecipientResponse>;
     /**
-     * getSchedulesScheduleBByRecipientId -
+     *
      * Schedule B disbursements aggregated by recipient committee ID, if applicable.
      * To avoid double counting, memoed items are not included.
      *
-    **/
+     */
     getSchedulesScheduleBByRecipientId(req: operations.GetSchedulesScheduleBByRecipientIdRequest, config?: AxiosRequestConfig): Promise<operations.GetSchedulesScheduleBByRecipientIdResponse>;
     /**
-     * getSchedulesScheduleBEfile -
+     *
      * Efiling endpoints provide real-time campaign finance data received from electronic filers. Efiling endpoints only contain the most recent four months of data and don't contain the processed and coded data that you can find on other endpoints.
      *
-    **/
+     */
     getSchedulesScheduleBEfile(req: operations.GetSchedulesScheduleBEfileRequest, config?: AxiosRequestConfig): Promise<operations.GetSchedulesScheduleBEfileResponse>;
     /**
-     * getSchedulesScheduleBSubId -
+     *
      * Schedule B filings describe itemized disbursements. This data
      * explains how committees and other filers spend their money. These figures are
      * reported as part of forms F3, F3X and F3P.
@@ -117,6 +120,6 @@ export declare class Disbursements {
      * Note: because the Schedule B data includes many records, counts for
      * large result sets are approximate; you will want to page through the records until no records are returned.
      *
-    **/
+     */
     getSchedulesScheduleBSubId(req: operations.GetSchedulesScheduleBSubIdRequest, config?: AxiosRequestConfig): Promise<operations.GetSchedulesScheduleBSubIdResponse>;
 }

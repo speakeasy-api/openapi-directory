@@ -1,0 +1,7 @@
+export declare enum StatusFlagEnum {
+    PendingAcceptance = "PENDING_ACCEPTANCE",
+    PendingCustomerAction = "PENDING_CUSTOMER_ACTION",
+    PendingAuthorization = "PENDING_AUTHORIZATION",
+    PendingPaymentVerification = "PENDING_PAYMENT_VERIFICATION",
+    PendingSupportCase = "PENDING_SUPPORT_CASE"
+}

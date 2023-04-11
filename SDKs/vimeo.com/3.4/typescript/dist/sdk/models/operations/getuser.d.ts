@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetUserPathParams extends SpeakeasyBase {
-    userId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetUserRequest extends SpeakeasyBase {
-    pathParams: GetUserPathParams;
+    /**
+     * The ID of the user.
+     */
+    userId: number;
 }
 export declare class GetUserResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The user was returned.
+     */
     user?: shared.User;
 }

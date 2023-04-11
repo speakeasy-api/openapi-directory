@@ -1,13 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdateVirtualRouterPathParams extends SpeakeasyBase {
-    meshName: string;
-    virtualRouterName: string;
+import { AxiosResponse } from "axios";
+/**
+ * An object that represents the specification of a virtual router.
+ */
+export declare class UpdateVirtualRouterRequestBodySpec extends SpeakeasyBase {
+    listeners?: shared.VirtualRouterListener[];
 }
-export declare class UpdateVirtualRouterQueryParams extends SpeakeasyBase {
-    meshOwner?: string;
+export declare class UpdateVirtualRouterRequestBody extends SpeakeasyBase {
+    /**
+     * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. Up to 36 letters, numbers, hyphens, and underscores are allowed.
+     */
+    clientToken?: string;
+    /**
+     * An object that represents the specification of a virtual router.
+     */
+    spec: UpdateVirtualRouterRequestBodySpec;
 }
-export declare class UpdateVirtualRouterHeaders extends SpeakeasyBase {
+export declare class UpdateVirtualRouterRequest extends SpeakeasyBase {
+    requestBody: UpdateVirtualRouterRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -15,33 +26,57 @@ export declare class UpdateVirtualRouterHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-/**
- * An object that represents the specification of a virtual router.
-**/
-export declare class UpdateVirtualRouterRequestBodySpec extends SpeakeasyBase {
-    listeners?: shared.VirtualRouterListener[];
-}
-export declare class UpdateVirtualRouterRequestBody extends SpeakeasyBase {
-    clientToken?: string;
-    spec: UpdateVirtualRouterRequestBodySpec;
-}
-export declare class UpdateVirtualRouterRequest extends SpeakeasyBase {
-    pathParams: UpdateVirtualRouterPathParams;
-    queryParams: UpdateVirtualRouterQueryParams;
-    headers: UpdateVirtualRouterHeaders;
-    request: UpdateVirtualRouterRequestBody;
+    /**
+     * The name of the service mesh that the virtual router resides in.
+     */
+    meshName: string;
+    /**
+     * The Amazon Web Services IAM account ID of the service mesh owner. If the account ID is not your own, then it's the ID of the account that shared the mesh with your account. For more information about mesh sharing, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html">Working with shared meshes</a>.
+     */
+    meshOwner?: string;
+    /**
+     * The name of the virtual router to update.
+     */
+    virtualRouterName: string;
 }
 export declare class UpdateVirtualRouterResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * ForbiddenException
+     */
     forbiddenException?: any;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
-    serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceUnavailableException
+     */
+    serviceUnavailableException?: any;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
+    /**
+     * Success
+     */
     updateVirtualRouterOutput?: shared.UpdateVirtualRouterOutput;
 }

@@ -1,19 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CategorizeChannelPathParams extends SpeakeasyBase {
-    category: string;
-    channelId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class CategorizeChannelSecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
+    oauth2: string;
 }
 export declare class CategorizeChannelRequest extends SpeakeasyBase {
-    pathParams: CategorizeChannelPathParams;
-    security: CategorizeChannelSecurity;
+    /**
+     * The name of the category.
+     */
+    category: string;
+    /**
+     * The ID of the channel.
+     */
+    channelId: number;
 }
 export declare class CategorizeChannelResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Error code 2204: You exceeded the maximum number of channel categories.
+     */
     error?: shared.ErrorT;
+    /**
+     * No such channel or category exists.
+     */
     legacyError?: shared.LegacyError;
 }

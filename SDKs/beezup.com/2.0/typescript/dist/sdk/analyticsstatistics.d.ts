@@ -1,5 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class AnalyticsStatistics {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,33 +10,38 @@ export declare class AnalyticsStatistics {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getStoreReportByCategory - Get the report by category
-     *
      * Get the report by category
-    **/
+     *
+     * @remarks
+     * Get the report by category
+     */
     getStoreReportByCategory(req: operations.GetStoreReportByCategoryRequest, config?: AxiosRequestConfig): Promise<operations.GetStoreReportByCategoryResponse>;
     /**
-     * getStoreReportByChannel - Get the report by channel
-     *
      * Get the report by channel
-    **/
+     *
+     * @remarks
+     * Get the report by channel
+     */
     getStoreReportByChannel(req: operations.GetStoreReportByChannelRequest, config?: AxiosRequestConfig): Promise<operations.GetStoreReportByChannelResponse>;
     /**
-     * getStoreReportByDay - Get the report by day for a StoreId
-     *
      * Get the report by day for a StoreId
-    **/
+     *
+     * @remarks
+     * Get the report by day for a StoreId
+     */
     getStoreReportByDay(req: operations.GetStoreReportByDayRequest, config?: AxiosRequestConfig): Promise<operations.GetStoreReportByDayResponse>;
     /**
-     * getStoreReportByDayPerStore - Get the report by day for a StoreId
-     *
      * Get the report by day for a StoreId
-    **/
-    getStoreReportByDayPerStore(req: operations.GetStoreReportByDayPerStoreRequest, config?: AxiosRequestConfig): Promise<operations.GetStoreReportByDayPerStoreResponse>;
-    /**
-     * getStoreReportByProduct - Get the report by product
      *
+     * @remarks
+     * Get the report by day for a StoreId
+     */
+    getStoreReportByDayPerStore(req: shared.ReportByDayRequest, config?: AxiosRequestConfig): Promise<operations.GetStoreReportByDayPerStoreResponse>;
+    /**
      * Get the report by product
-    **/
+     *
+     * @remarks
+     * Get the report by product
+     */
     getStoreReportByProduct(req: operations.GetStoreReportByProductRequest, config?: AxiosRequestConfig): Promise<operations.GetStoreReportByProductResponse>;
 }

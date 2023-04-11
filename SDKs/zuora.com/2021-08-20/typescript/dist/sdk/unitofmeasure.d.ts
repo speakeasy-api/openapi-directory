@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class UnitOfMeasure {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,19 +9,19 @@ export declare class UnitOfMeasure {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * objectDeleteUnitOfMeasure - CRUD: Delete a unit of measure
-    **/
-    objectDeleteUnitOfMeasure(req: operations.ObjectDeleteUnitOfMeasureRequest, config?: AxiosRequestConfig): Promise<operations.ObjectDeleteUnitOfMeasureResponse>;
+     * CRUD: Delete a unit of measure
+     */
+    objectDELETEUnitOfMeasure(req: operations.ObjectDELETEUnitOfMeasureRequest, config?: AxiosRequestConfig): Promise<operations.ObjectDELETEUnitOfMeasureResponse>;
     /**
-     * objectGetUnitOfMeasure - CRUD: Retrieve a unit of measure
-    **/
-    objectGetUnitOfMeasure(req: operations.ObjectGetUnitOfMeasureRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGetUnitOfMeasureResponse>;
+     * CRUD: Retrieve a unit of measure
+     */
+    objectGETUnitOfMeasure(req: operations.ObjectGETUnitOfMeasureRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGETUnitOfMeasureResponse>;
     /**
-     * objectPostUnitOfMeasure - CRUD: Create a unit of measure
-    **/
-    objectPostUnitOfMeasure(req: operations.ObjectPostUnitOfMeasureRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPostUnitOfMeasureResponse>;
+     * CRUD: Create a unit of measure
+     */
+    objectPOSTUnitOfMeasure(req: operations.ObjectPOSTUnitOfMeasureRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPOSTUnitOfMeasureResponse>;
     /**
-     * objectPutUnitOfMeasure - CRUD: Update a unit of measure
-    **/
-    objectPutUnitOfMeasure(req: operations.ObjectPutUnitOfMeasureRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPutUnitOfMeasureResponse>;
+     * CRUD: Update a unit of measure
+     */
+    objectPUTUnitOfMeasure(req: operations.ObjectPUTUnitOfMeasureRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPUTUnitOfMeasureResponse>;
 }

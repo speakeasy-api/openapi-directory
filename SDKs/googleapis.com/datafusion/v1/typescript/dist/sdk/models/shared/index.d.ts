@@ -17,7 +17,6 @@ export * from "./location";
 export * from "./networkconfig";
 export * from "./operation";
 export * from "./policy";
-export * from "./security";
 export * from "./setiampolicyrequest";
 export * from "./status";
 export * from "./testiampermissionsrequest";

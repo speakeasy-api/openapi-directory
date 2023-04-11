@@ -5,9 +5,10 @@ import { SendingOptions } from "./sendingoptions";
 import { SuppressionOptions } from "./suppressionoptions";
 import { Tag } from "./tag";
 import { TrackingOptions } from "./trackingoptions";
+import { VdmOptions } from "./vdmoptions";
 /**
  * Information about a configuration set.
-**/
+ */
 export declare class GetConfigurationSetResponse extends SpeakeasyBase {
     configurationSetName?: string;
     deliveryOptions?: DeliveryOptions;
@@ -16,4 +17,5 @@ export declare class GetConfigurationSetResponse extends SpeakeasyBase {
     suppressionOptions?: SuppressionOptions;
     tags?: Tag[];
     trackingOptions?: TrackingOptions;
+    vdmOptions?: VdmOptions;
 }

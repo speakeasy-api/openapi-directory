@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Operations {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class Operations {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * postBillingPreview - Generate a billing preview
+     * Generate a billing preview
      *
+     * @remarks
      * **Note:** The Billing Preview feature is in **Limited Availability**. If you wish to have access to the feature, submit a request at [Zuora Global Support](http://support.zuora.com/).
      *
      *
@@ -22,11 +23,12 @@ export declare class Operations {
      *
      * If you have the Invoice Settlement feature enabled, you can also generate a preview of future credit memo items for one customer account. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
-    **/
-    postBillingPreview(req: operations.PostBillingPreviewRequest, config?: AxiosRequestConfig): Promise<operations.PostBillingPreviewResponse>;
+     */
+    postBillingPreview(req: operations.POSTBillingPreviewRequest, config?: AxiosRequestConfig): Promise<operations.POSTBillingPreviewResponse>;
     /**
-     * postTransactionInvoicePayment - Invoice and collect
+     * Invoice and collect
      *
+     * @remarks
      * Generates and posts invoices and credit memos and collects payments for posted invoices. Credit memos are only available if you have the Invoice Settlement feature enabled and negative charges exist. Credit memos will not be applied to invoices. If draft invoices and credit memos exist when you run this operation, this operation will post the invoices and credit memos. Note that draft credit memos created from an invoice or a product rate plan charge will not be posted.
      *
      * You can use this operation to generate invoices and collect payments on the posted invoices,
@@ -58,6 +60,6 @@ export declare class Operations {
      * Timeouts may occur when using this method on an account that
      * has an extremely high number of subscriptions.
      *
-    **/
-    postTransactionInvoicePayment(req: operations.PostTransactionInvoicePaymentRequest, config?: AxiosRequestConfig): Promise<operations.PostTransactionInvoicePaymentResponse>;
+     */
+    postTransactionInvoicePayment(req: operations.POSTTransactionInvoicePaymentRequest, config?: AxiosRequestConfig): Promise<operations.POSTTransactionInvoicePaymentResponse>;
 }

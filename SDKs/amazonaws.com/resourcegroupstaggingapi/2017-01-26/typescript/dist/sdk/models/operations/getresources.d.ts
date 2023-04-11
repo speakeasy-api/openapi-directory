@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetResourcesQueryParams extends SpeakeasyBase {
-    paginationToken?: string;
-    resourcesPerPage?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum GetResourcesXAmzTargetEnum {
-    ResourceGroupsTaggingApi20170126GetResources = "ResourceGroupsTaggingAPI_20170126.GetResources"
+    ResourceGroupsTaggingAPI20170126GetResources = "ResourceGroupsTaggingAPI_20170126.GetResources"
 }
-export declare class GetResourcesHeaders extends SpeakeasyBase {
+export declare class GetResourcesRequest extends SpeakeasyBase {
+    getResourcesInput: shared.GetResourcesInput;
+    /**
+     * Pagination token
+     */
+    paginationToken?: string;
+    /**
+     * Pagination limit
+     */
+    resourcesPerPage?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,17 +23,28 @@ export declare class GetResourcesHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetResourcesXAmzTargetEnum;
 }
-export declare class GetResourcesRequest extends SpeakeasyBase {
-    queryParams: GetResourcesQueryParams;
-    headers: GetResourcesHeaders;
-    request: shared.GetResourcesInput;
-}
 export declare class GetResourcesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getResourcesOutput?: shared.GetResourcesOutput;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * PaginationTokenExpiredException
+     */
     paginationTokenExpiredException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottledException
+     */
     throttledException?: any;
 }

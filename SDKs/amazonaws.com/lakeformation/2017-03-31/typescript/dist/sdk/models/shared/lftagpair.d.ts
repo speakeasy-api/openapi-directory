@@ -1,8 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
- * A structure containing a tag key-value pair.
-**/
-export declare class LfTagPair extends SpeakeasyBase {
+ * A structure containing an LF-tag key-value pair.
+ */
+export declare class LFTagPair extends SpeakeasyBase {
     catalogId?: string;
     tagKey: string;
     tagValues: string[];

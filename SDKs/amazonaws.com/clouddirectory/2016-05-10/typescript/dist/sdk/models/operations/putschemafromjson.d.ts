@@ -1,6 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PutSchemaFromJsonHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class PutSchemaFromJsonRequestBody extends SpeakeasyBase {
+    /**
+     * The replacement JSON schema.
+     */
+    document: string;
+}
+export declare class PutSchemaFromJsonRequest extends SpeakeasyBase {
+    requestBody: PutSchemaFromJsonRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -8,25 +16,49 @@ export declare class PutSchemaFromJsonHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
+    /**
+     * The ARN of the schema to update.
+     */
     xAmzDataPartition: string;
 }
-export declare class PutSchemaFromJsonRequestBody extends SpeakeasyBase {
-    document: string;
-}
-export declare class PutSchemaFromJsonRequest extends SpeakeasyBase {
-    headers: PutSchemaFromJsonHeaders;
-    request: PutSchemaFromJsonRequestBody;
-}
 export declare class PutSchemaFromJsonResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: shared.AccessDeniedException;
     contentType: string;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: shared.InternalServiceException;
+    /**
+     * InvalidArnException
+     */
     invalidArnException?: shared.InvalidArnException;
+    /**
+     * InvalidRuleException
+     */
     invalidRuleException?: shared.InvalidRuleException;
+    /**
+     * InvalidSchemaDocException
+     */
     invalidSchemaDocException?: shared.InvalidSchemaDocException;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: shared.LimitExceededException;
+    /**
+     * Success
+     */
     putSchemaFromJsonResponse?: shared.PutSchemaFromJsonResponse;
-    retryableConflictException?: shared.RetryableConflictException;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * RetryableConflictException
+     */
+    retryableConflictException?: shared.RetryableConflictException;
+    /**
+     * ValidationException
+     */
     validationException?: shared.ValidationException;
 }

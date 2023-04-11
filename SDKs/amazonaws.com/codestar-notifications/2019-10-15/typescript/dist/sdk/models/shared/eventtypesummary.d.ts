@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Returns information about an event that has triggered a notification rule.
-**/
+ */
 export declare class EventTypeSummary extends SpeakeasyBase {
     eventTypeId?: string;
     eventTypeName?: string;

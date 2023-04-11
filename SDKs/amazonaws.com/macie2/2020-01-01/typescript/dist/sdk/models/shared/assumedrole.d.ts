@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { SessionContext } from "./sessioncontext";
 /**
  * Provides information about an identity that performed an action on an affected resource by using temporary security credentials. The credentials were obtained using the AssumeRole operation of the Security Token Service (STS) API.
-**/
+ */
 export declare class AssumedRole extends SpeakeasyBase {
     accessKeyId?: string;
     accountId?: string;

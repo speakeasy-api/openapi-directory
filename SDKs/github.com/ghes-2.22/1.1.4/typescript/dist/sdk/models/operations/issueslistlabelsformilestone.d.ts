@@ -1,21 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class IssuesListLabelsForMilestonePathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class IssuesListLabelsForMilestoneRequest extends SpeakeasyBase {
+    /**
+     * milestone_number parameter
+     */
     milestoneNumber: number;
     owner: string;
-    repo: string;
-}
-export declare class IssuesListLabelsForMilestoneQueryParams extends SpeakeasyBase {
+    /**
+     * Page number of the results to fetch.
+     */
     page?: number;
+    /**
+     * Results per page (max 100)
+     */
     perPage?: number;
-}
-export declare class IssuesListLabelsForMilestoneRequest extends SpeakeasyBase {
-    pathParams: IssuesListLabelsForMilestonePathParams;
-    queryParams: IssuesListLabelsForMilestoneQueryParams;
+    repo: string;
 }
 export declare class IssuesListLabelsForMilestoneResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     labels?: shared.Label[];
 }

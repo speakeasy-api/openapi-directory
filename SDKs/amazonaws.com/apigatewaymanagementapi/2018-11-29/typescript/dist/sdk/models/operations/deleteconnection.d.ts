@@ -1,8 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteConnectionPathParams extends SpeakeasyBase {
-    connectionId: string;
-}
-export declare class DeleteConnectionHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteConnectionRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -10,15 +8,22 @@ export declare class DeleteConnectionHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DeleteConnectionRequest extends SpeakeasyBase {
-    pathParams: DeleteConnectionPathParams;
-    headers: DeleteConnectionHeaders;
+    connectionId: string;
 }
 export declare class DeleteConnectionResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * ForbiddenException
+     */
     forbiddenException?: any;
+    /**
+     * GoneException
+     */
     goneException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

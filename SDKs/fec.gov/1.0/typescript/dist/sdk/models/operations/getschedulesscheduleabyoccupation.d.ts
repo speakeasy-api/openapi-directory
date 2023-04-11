@@ -1,22 +1,65 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetSchedulesScheduleAByOccupationQueryParams extends SpeakeasyBase {
-    apiKey: string;
-    committeeId?: string[];
-    cycle?: number[];
-    occupation?: string[];
-    page?: number;
-    perPage?: number;
-    sort?: string;
-    sortHideNull?: boolean;
-    sortNullOnly?: boolean;
-    sortNullsLast?: boolean;
-}
+import { AxiosResponse } from "axios";
 export declare class GetSchedulesScheduleAByOccupationRequest extends SpeakeasyBase {
-    queryParams: GetSchedulesScheduleAByOccupationQueryParams;
+    /**
+     *
+     * @remarks
+     * API key for https://api.data.gov. Get one at https://api.data.gov/signup.
+     *
+     */
+    apiKey: string;
+    /**
+     *
+     * @remarks
+     * A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
+     *
+     */
+    committeeId?: string[];
+    /**
+     *
+     * @remarks
+     * Filter records to only those that were applicable to a given
+     * two-year period.The cycle begins with an odd year and is named
+     * for its ending, even year.
+     *
+     */
+    cycle?: number[];
+    /**
+     * Occupation of contributor as reported on the committee's filing
+     */
+    occupation?: string[];
+    /**
+     * For paginating through results, starting at page 1
+     */
+    page?: number;
+    /**
+     * The number of results returned per page. Defaults to 20.
+     */
+    perPage?: number;
+    /**
+     * Provide a field to sort by. Use `-` for descending order.
+     *
+     * @remarks
+     *
+     */
+    sort?: string;
+    /**
+     * Hide null values on sorted column(s).
+     */
+    sortHideNull?: boolean;
+    /**
+     * Toggle that filters out all rows having sort column that is non-null
+     */
+    sortNullOnly?: boolean;
+    /**
+     * Toggle that sorts null values last
+     */
+    sortNullsLast?: boolean;
 }
 export declare class GetSchedulesScheduleAByOccupationResponse extends SpeakeasyBase {
     contentType: string;
     scheduleAByOccupationPage?: shared.ScheduleAByOccupationPage;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

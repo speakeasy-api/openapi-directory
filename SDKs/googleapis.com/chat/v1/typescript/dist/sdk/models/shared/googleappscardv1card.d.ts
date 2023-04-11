@@ -1,0 +1,46 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { GoogleAppsCardV1CardAction } from "./googleappscardv1cardaction";
+import { GoogleAppsCardV1CardFixedFooter } from "./googleappscardv1cardfixedfooter";
+import { GoogleAppsCardV1CardHeader } from "./googleappscardv1cardheader";
+import { GoogleAppsCardV1Section } from "./googleappscardv1section";
+/**
+ * In Google Workspace add-ons, sets the display properties of the `peekCardHeader`. Not supported by Chat apps.
+ */
+export declare enum GoogleAppsCardV1CardDisplayStyleEnum {
+    DisplayStyleUnspecified = "DISPLAY_STYLE_UNSPECIFIED",
+    Peek = "PEEK",
+    Replace = "REPLACE"
+}
+/**
+ * Cards support a defined layout, interactive UI elements like buttons, and rich media like images. Use cards to present detailed information, gather information from users, and guide users to take a next step. In Google Chat, cards appear in several places: - As stand-alone messages. - Accompanying a text message, just beneath the text message. - As a [dialog](https://developers.google.com/chat/how-tos/dialogs). The following example JSON creates a "contact card" that features: - A header with the contact's name, job title, avatar picture. - A section with the contact information, including formatted text. - Buttons that users can click to share the contact or see more or less info. ![Example contact card](https://developers.google.com/chat/images/card_api_reference.png) ``` { "cardsV2": [ { "cardId": "unique-card-id", "card": { "header": { "title": "Sasha", "subtitle": "Software Engineer", "imageUrl": "https://developers.google.com/chat/images/quickstart-app-avatar.png", "imageType": "CIRCLE", "imageAltText": "Avatar for Sasha", }, "sections": [ { "header": "Contact Info", "collapsible": true, "uncollapsibleWidgetsCount": 1, "widgets": [ { "decoratedText": { "startIcon": { "knownIcon": "EMAIL", }, "text": "sasha@example.com", } }, { "decoratedText": { "startIcon": { "knownIcon": "PERSON", }, "text": "Online", }, }, { "decoratedText": { "startIcon": { "knownIcon": "PHONE", }, "text": "+1 (555) 555-1234", } }, { "buttonList": { "buttons": [ { "text": "Share", "onClick": { "openLink": { "url": "https://example.com/share", } } }, { "text": "Edit", "onClick": { "action": { "function": "goToView", "parameters": [ { "key": "viewType", "value": "EDIT", } ], } } }, ], } }, ], }, ], }, } ], } ```
+ */
+export declare class GoogleAppsCardV1Card extends SpeakeasyBase {
+    /**
+     * The card's actions. Actions are added to the card's toolbar menu. Because Chat app cards have no toolbar, `cardActions[]` is not supported by Chat apps. For example, the following JSON constructs a card action menu with Settings and Send Feedback options: ``` "card_actions": [ { "actionLabel": "Settings", "onClick": { "action": { "functionName": "goToView", "parameters": [ { "key": "viewType", "value": "SETTING" } ], "loadIndicator": "LoadIndicator.SPINNER" } } }, { "actionLabel": "Send Feedback", "onClick": { "openLink": { "url": "https://example.com/feedback" } } } ] ```
+     */
+    cardActions?: GoogleAppsCardV1CardAction[];
+    /**
+     * In Google Workspace add-ons, sets the display properties of the `peekCardHeader`. Not supported by Chat apps.
+     */
+    displayStyle?: GoogleAppsCardV1CardDisplayStyleEnum;
+    /**
+     * A persistent (sticky) footer that that appears at the bottom of the card. Setting `fixedFooter` without specifying a `primaryButton` or a `secondaryButton` causes an error. Chat apps support `fixedFooter` in [dialogs](https://developers.google.com/chat/how-tos/dialogs), but not in [card messages](https://developers.google.com/chat/api/guides/message-formats/cards).
+     */
+    fixedFooter?: GoogleAppsCardV1CardFixedFooter;
+    /**
+     * Represents a card header.
+     */
+    header?: GoogleAppsCardV1CardHeader;
+    /**
+     * Name of the card. Used as a card identifier in card navigation. Because Chat apps don't support card navigation, they ignore this field.
+     */
+    name?: string;
+    /**
+     * Represents a card header.
+     */
+    peekCardHeader?: GoogleAppsCardV1CardHeader;
+    /**
+     * Contains a collection of widgets. Each section has its own, optional header. Sections are visually separated by a line divider.
+     */
+    sections?: GoogleAppsCardV1Section[];
+}

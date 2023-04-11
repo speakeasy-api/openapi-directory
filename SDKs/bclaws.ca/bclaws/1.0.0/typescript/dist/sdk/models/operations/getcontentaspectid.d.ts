@@ -1,5 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetContentAspectIdAspectIdEnum {
+import { AxiosResponse } from "axios";
+/**
+ * The identifier of the 'aspect' (content group) to search
+ */
+export declare enum GetContentAspectIDAspectIDEnum {
     Complete = "complete",
     Corpreg = "corpreg",
     Bcgaz1 = "bcgaz1",
@@ -10,13 +14,14 @@ export declare enum GetContentAspectIdAspectIdEnum {
     Hscr = "hscr",
     ArchOic = "arch_oic"
 }
-export declare class GetContentAspectIdPathParams extends SpeakeasyBase {
-    aspectId: GetContentAspectIdAspectIdEnum;
-}
 export declare class GetContentAspectIdRequest extends SpeakeasyBase {
-    pathParams: GetContentAspectIdPathParams;
+    /**
+     * The identifier of the 'aspect' (content group) to search
+     */
+    aspectId: GetContentAspectIDAspectIDEnum;
 }
 export declare class GetContentAspectIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ActionsGetEnvironmentPublicKeyPathParams extends SpeakeasyBase {
-    environmentName: string;
-    repositoryId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ActionsGetEnvironmentPublicKeyRequest extends SpeakeasyBase {
-    pathParams: ActionsGetEnvironmentPublicKeyPathParams;
+    /**
+     * The name of the environment.
+     */
+    environmentName: string;
+    /**
+     * The unique identifier of the repository.
+     */
+    repositoryId: number;
 }
 export declare class ActionsGetEnvironmentPublicKeyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     actionsPublicKey?: shared.ActionsPublicKey;
 }

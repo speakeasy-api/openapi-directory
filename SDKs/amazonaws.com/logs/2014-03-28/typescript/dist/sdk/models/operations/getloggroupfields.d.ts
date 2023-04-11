@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetLogGroupFieldsXAmzTargetEnum {
     Logs20140328GetLogGroupFields = "Logs_20140328.GetLogGroupFields"
 }
-export declare class GetLogGroupFieldsHeaders extends SpeakeasyBase {
+export declare class GetLogGroupFieldsRequest extends SpeakeasyBase {
+    getLogGroupFieldsRequest: shared.GetLogGroupFieldsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class GetLogGroupFieldsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetLogGroupFieldsXAmzTargetEnum;
 }
-export declare class GetLogGroupFieldsRequest extends SpeakeasyBase {
-    headers: GetLogGroupFieldsHeaders;
-    request: shared.GetLogGroupFieldsRequest;
-}
 export declare class GetLogGroupFieldsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getLogGroupFieldsResponse?: shared.GetLogGroupFieldsResponse;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
-    resourceNotFoundException?: any;
-    serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ServiceUnavailableException
+     */
+    serviceUnavailableException?: any;
 }

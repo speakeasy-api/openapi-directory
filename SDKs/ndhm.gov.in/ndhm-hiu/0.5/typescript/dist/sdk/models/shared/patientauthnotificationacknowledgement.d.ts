@@ -10,7 +10,13 @@ export declare class PatientAuthNotificationAcknowledgementAcknowledgement exten
 export declare class PatientAuthNotificationAcknowledgement extends SpeakeasyBase {
     acknowledgement?: PatientAuthNotificationAcknowledgementAcknowledgement;
     error?: ErrorT;
+    /**
+     * a nonce, unique for each HTTP request
+     */
     requestId: string;
     resp: RequestReference;
+    /**
+     * Date time format in UTC, includes miliseconds YYYY-MM-DDThh:mm:ss.vZ
+     */
     timestamp: Date;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeregisterEcsClusterXAmzTargetEnum {
     OpsWorks20130218DeregisterEcsCluster = "OpsWorks_20130218.DeregisterEcsCluster"
 }
-export declare class DeregisterEcsClusterHeaders extends SpeakeasyBase {
+export declare class DeregisterEcsClusterRequest extends SpeakeasyBase {
+    deregisterEcsClusterRequest: shared.DeregisterEcsClusterRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,13 +15,16 @@ export declare class DeregisterEcsClusterHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeregisterEcsClusterXAmzTargetEnum;
 }
-export declare class DeregisterEcsClusterRequest extends SpeakeasyBase {
-    headers: DeregisterEcsClusterHeaders;
-    request: shared.DeregisterEcsClusterRequest;
-}
 export declare class DeregisterEcsClusterResponse extends SpeakeasyBase {
     contentType: string;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

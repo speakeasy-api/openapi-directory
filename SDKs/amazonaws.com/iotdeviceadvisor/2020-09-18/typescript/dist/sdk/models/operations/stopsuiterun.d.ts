@@ -1,9 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class StopSuiteRunPathParams extends SpeakeasyBase {
-    suiteDefinitionId: string;
-    suiteRunId: string;
-}
-export declare class StopSuiteRunHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class StopSuiteRunRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,16 +8,33 @@ export declare class StopSuiteRunHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class StopSuiteRunRequest extends SpeakeasyBase {
-    pathParams: StopSuiteRunPathParams;
-    headers: StopSuiteRunHeaders;
+    /**
+     * Suite definition ID of the test suite run to be stopped.
+     */
+    suiteDefinitionId: string;
+    /**
+     * Suite run ID of the test suite run to be stopped.
+     */
+    suiteRunId: string;
 }
 export declare class StopSuiteRunResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * Success
+     */
     stopSuiteRunResponse?: Record<string, any>;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

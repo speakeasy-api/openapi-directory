@@ -1,24 +1,32 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UpdatereservationPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UpdatereservationRequestBody extends SpeakeasyBase {
     connector?: number;
     driver?: string;
     endDate?: string;
     evse?: number;
 }
-export declare class Updatereservation201ApplicationJson extends SpeakeasyBase {
+export declare class UpdatereservationRequest extends SpeakeasyBase {
+    requestBody: UpdatereservationRequestBody;
+    /**
+     * ID of the reservation that needs to be fetched
+     */
+    id: string;
+}
+/**
+ * A successful response
+ */
+export declare class Updatereservation201ApplicationJSON extends SpeakeasyBase {
     message?: string;
     ok?: boolean;
     result?: Record<string, any>;
 }
-export declare class UpdatereservationRequest extends SpeakeasyBase {
-    pathParams: UpdatereservationPathParams;
-    request: UpdatereservationRequestBody;
-}
 export declare class UpdatereservationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updatereservation201ApplicationJSONObject?: Updatereservation201ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * A successful response
+     */
+    updatereservation201ApplicationJSONObject?: Updatereservation201ApplicationJSON;
 }

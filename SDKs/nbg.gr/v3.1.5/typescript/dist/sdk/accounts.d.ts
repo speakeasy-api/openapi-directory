@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Accounts {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,15 +9,17 @@ export declare class Accounts {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getAccounts - Get Accounts
-     *
      * Get Accounts
-    **/
-    getAccounts(req: operations.GetAccountsRequest, config?: AxiosRequestConfig): Promise<operations.GetAccountsResponse>;
-    /**
-     * getAccountsAccountId - Get Accounts
      *
+     * @remarks
+     * Get Accounts
+     */
+    getAccounts(req: operations.GetAccountsRequest, security: operations.GetAccountsSecurity, config?: AxiosRequestConfig): Promise<operations.GetAccountsResponse>;
+    /**
+     * Get Accounts
+     *
+     * @remarks
      * Get Accounts by Account ID
-    **/
-    getAccountsAccountId(req: operations.GetAccountsAccountIdRequest, config?: AxiosRequestConfig): Promise<operations.GetAccountsAccountIdResponse>;
+     */
+    getAccountsAccountId(req: operations.GetAccountsAccountIdRequest, security: operations.GetAccountsAccountIdSecurity, config?: AxiosRequestConfig): Promise<operations.GetAccountsAccountIdResponse>;
 }

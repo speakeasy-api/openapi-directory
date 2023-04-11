@@ -1,0 +1,11 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { DataStats } from "./datastats";
+/**
+ * The data statistics of a series of ARRAY values.
+ */
+export declare class ArrayStats extends SpeakeasyBase {
+    /**
+     * The data statistics of a series of values that share the same DataType.
+     */
+    memberStats?: DataStats;
+}

@@ -1,18 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetFactSearchQueryParams extends SpeakeasyBase {
-    category?: string;
-    query?: string;
-    subcategory?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetFactSearchSecurity extends SpeakeasyBase {
-    xFungeneratorsApiSecret: shared.SchemeXFungeneratorsApiSecret;
+    xFungeneratorsApiSecret: string;
 }
 export declare class GetFactSearchRequest extends SpeakeasyBase {
-    queryParams: GetFactSearchQueryParams;
-    security: GetFactSearchSecurity;
+    /**
+     * Category to get the fact from
+     */
+    category?: string;
+    /**
+     * Text to search for in the facts
+     */
+    query?: string;
+    /**
+     * Sub Category to get the fact from
+     */
+    subcategory?: string;
 }
 export declare class GetFactSearchResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

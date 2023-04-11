@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbClusterEndpointList } from "./dbclusterendpointlist";
-export declare class DbClusterEndpointMessage extends SpeakeasyBase {
-    dbClusterEndpoints?: DbClusterEndpointList[];
+import { DBClusterEndpointList } from "./dbclusterendpointlist";
+/**
+ * Success
+ */
+export declare class DBClusterEndpointMessage extends SpeakeasyBase {
+    dbClusterEndpoints?: DBClusterEndpointList[];
     marker?: string;
 }

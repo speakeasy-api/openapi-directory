@@ -1,5 +1,11 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * The SSH resource allows you to manage SSH keys.
+ *
+ * @remarks
+ *
+ */
 export declare class Ssh {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,16 +15,22 @@ export declare class Ssh {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteUsersSelectedUserSshKeysKeyId - Deletes a specific SSH public key from a user's account
+     * Delete a SSH key
+     *
+     * @remarks
+     * Deletes a specific SSH public key from a user's account
      *
      * Example:
      * ```
      * $ curl -X DELETE https://api.bitbucket.org/2.0/users/{ed08f5e1-605b-4f4a-aee4-6c97628a673e}/ssh-keys/{b15b6026-9c02-4626-b4ad-b905f99f763a}
      * ```
-    **/
-    deleteUsersSelectedUserSshKeysKeyId(req: operations.DeleteUsersSelectedUserSshKeysKeyIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteUsersSelectedUserSshKeysKeyIdResponse>;
+     */
+    deleteUsersSelectedUserSshKeysKeyId(req: operations.DeleteUsersSelectedUserSshKeysKeyIdRequest, security: operations.DeleteUsersSelectedUserSshKeysKeyIdSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteUsersSelectedUserSshKeysKeyIdResponse>;
     /**
-     * getUsersSelectedUserSshKeys - Returns a paginated list of the user's SSH public keys.
+     * List SSH keys
+     *
+     * @remarks
+     * Returns a paginated list of the user's SSH public keys.
      *
      * Example:
      *
@@ -64,10 +76,13 @@ export declare class Ssh {
      *     ]
      * }
      * ```
-    **/
-    getUsersSelectedUserSshKeys(req: operations.GetUsersSelectedUserSshKeysRequest, config?: AxiosRequestConfig): Promise<operations.GetUsersSelectedUserSshKeysResponse>;
+     */
+    getUsersSelectedUserSshKeys(req: operations.GetUsersSelectedUserSshKeysRequest, security: operations.GetUsersSelectedUserSshKeysSecurity, config?: AxiosRequestConfig): Promise<operations.GetUsersSelectedUserSshKeysResponse>;
     /**
-     * getUsersSelectedUserSshKeysKeyId - Returns a specific SSH public key belonging to a user.
+     * Get a SSH key
+     *
+     * @remarks
+     * Returns a specific SSH public key belonging to a user.
      *
      * Example:
      * ```
@@ -106,10 +121,13 @@ export declare class Ssh {
      *     "uuid": "{b15b6026-9c02-4626-b4ad-b905f99f763a}"
      * }
      * ```
-    **/
-    getUsersSelectedUserSshKeysKeyId(req: operations.GetUsersSelectedUserSshKeysKeyIdRequest, config?: AxiosRequestConfig): Promise<operations.GetUsersSelectedUserSshKeysKeyIdResponse>;
+     */
+    getUsersSelectedUserSshKeysKeyId(req: operations.GetUsersSelectedUserSshKeysKeyIdRequest, security: operations.GetUsersSelectedUserSshKeysKeyIdSecurity, config?: AxiosRequestConfig): Promise<operations.GetUsersSelectedUserSshKeysKeyIdResponse>;
     /**
-     * postUsersSelectedUserSshKeys - Adds a new SSH public key to the specified user account and returns the resulting key.
+     * Add a new SSH key
+     *
+     * @remarks
+     * Adds a new SSH public key to the specified user account and returns the resulting key.
      *
      * Example:
      * ```
@@ -148,10 +166,13 @@ export declare class Ssh {
      *     "uuid": "{b15b6026-9c02-4626-b4ad-b905f99f763a}"
      * }
      * ```
-    **/
-    postUsersSelectedUserSshKeys(req: operations.PostUsersSelectedUserSshKeysRequest, config?: AxiosRequestConfig): Promise<operations.PostUsersSelectedUserSshKeysResponse>;
+     */
+    postUsersSelectedUserSshKeys(req: operations.PostUsersSelectedUserSshKeysRequest, security: operations.PostUsersSelectedUserSshKeysSecurity, config?: AxiosRequestConfig): Promise<operations.PostUsersSelectedUserSshKeysResponse>;
     /**
-     * putUsersSelectedUserSshKeysKeyId - Updates a specific SSH public key on a user's account
+     * Update a SSH key
+     *
+     * @remarks
+     * Updates a specific SSH public key on a user's account
      *
      * Note: Only the 'comment' field can be updated using this API. To modify the key or comment values, you must delete and add the key again.
      *
@@ -192,6 +213,6 @@ export declare class Ssh {
      *     "uuid": "{b15b6026-9c02-4626-b4ad-b905f99f763a}"
      * }
      * ```
-    **/
-    putUsersSelectedUserSshKeysKeyId(req: operations.PutUsersSelectedUserSshKeysKeyIdRequest, config?: AxiosRequestConfig): Promise<operations.PutUsersSelectedUserSshKeysKeyIdResponse>;
+     */
+    putUsersSelectedUserSshKeysKeyId(req: operations.PutUsersSelectedUserSshKeysKeyIdRequest, security: operations.PutUsersSelectedUserSshKeysKeyIdSecurity, config?: AxiosRequestConfig): Promise<operations.PutUsersSelectedUserSshKeysKeyIdResponse>;
 }

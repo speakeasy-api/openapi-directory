@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDisassociateSubnetCidrBlockActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDisassociateSubnetCidrBlockActionEnum {
     DisassociateSubnetCidrBlock = "DisassociateSubnetCidrBlock"
 }
-export declare enum GetDisassociateSubnetCidrBlockVersionEnum {
+export declare enum GETDisassociateSubnetCidrBlockVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetDisassociateSubnetCidrBlockQueryParams extends SpeakeasyBase {
-    action: GetDisassociateSubnetCidrBlockActionEnum;
+export declare class GETDisassociateSubnetCidrBlockRequest extends SpeakeasyBase {
+    action: GETDisassociateSubnetCidrBlockActionEnum;
+    /**
+     * The association ID for the CIDR block.
+     */
     associationId: string;
-    version: GetDisassociateSubnetCidrBlockVersionEnum;
-}
-export declare class GetDisassociateSubnetCidrBlockHeaders extends SpeakeasyBase {
+    version: GETDisassociateSubnetCidrBlockVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDisassociateSubnetCidrBlockHeaders extends SpeakeasyBase
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDisassociateSubnetCidrBlockRequest extends SpeakeasyBase {
-    queryParams: GetDisassociateSubnetCidrBlockQueryParams;
-    headers: GetDisassociateSubnetCidrBlockHeaders;
-}
-export declare class GetDisassociateSubnetCidrBlockResponse extends SpeakeasyBase {
+export declare class GETDisassociateSubnetCidrBlockResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,18 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdateServicePathParams extends SpeakeasyBase {
-    serviceId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UpdateServiceSecurity extends SpeakeasyBase {
-    otoroshiAuth: shared.SchemeOtoroshiAuth;
+    password: string;
+    username: string;
 }
 export declare class UpdateServiceRequest extends SpeakeasyBase {
-    pathParams: UpdateServicePathParams;
-    request?: shared.Service;
-    security: UpdateServiceSecurity;
+    service?: shared.Service;
+    /**
+     * The service id
+     */
+    serviceId: string;
 }
 export declare class UpdateServiceResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful operation
+     */
     service?: shared.Service;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

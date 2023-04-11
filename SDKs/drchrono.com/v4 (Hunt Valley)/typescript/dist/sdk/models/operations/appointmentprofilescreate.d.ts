@@ -1,17 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AppointmentProfilesCreateQueryParams extends SpeakeasyBase {
-    doctor?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class AppointmentProfilesCreateSecurity extends SpeakeasyBase {
-    drchronoOauth2: shared.SchemeDrchronoOauth2;
+    drchronoOauth2: string;
 }
 export declare class AppointmentProfilesCreateRequest extends SpeakeasyBase {
-    queryParams: AppointmentProfilesCreateQueryParams;
-    security: AppointmentProfilesCreateSecurity;
+    doctor?: number;
 }
 export declare class AppointmentProfilesCreateResponse extends SpeakeasyBase {
+    /**
+     * Created
+     */
     appointmentProfile?: shared.AppointmentProfile;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

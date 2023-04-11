@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum SignalWorkflowExecutionXAmzTargetEnum {
     SimpleWorkflowServiceSignalWorkflowExecution = "SimpleWorkflowService.SignalWorkflowExecution"
 }
-export declare class SignalWorkflowExecutionHeaders extends SpeakeasyBase {
+export declare class SignalWorkflowExecutionRequest extends SpeakeasyBase {
+    signalWorkflowExecutionInput: shared.SignalWorkflowExecutionInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,13 +15,16 @@ export declare class SignalWorkflowExecutionHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: SignalWorkflowExecutionXAmzTargetEnum;
 }
-export declare class SignalWorkflowExecutionRequest extends SpeakeasyBase {
-    headers: SignalWorkflowExecutionHeaders;
-    request: shared.SignalWorkflowExecutionInput;
-}
 export declare class SignalWorkflowExecutionResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * OperationNotPermittedFault
+     */
     operationNotPermittedFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnknownResourceFault
+     */
     unknownResourceFault?: any;
 }

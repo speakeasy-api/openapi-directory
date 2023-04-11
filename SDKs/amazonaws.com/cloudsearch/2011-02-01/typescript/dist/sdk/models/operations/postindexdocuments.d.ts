@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostIndexDocumentsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTIndexDocumentsActionEnum {
     IndexDocuments = "IndexDocuments"
 }
-export declare enum PostIndexDocumentsVersionEnum {
+export declare enum POSTIndexDocumentsVersionEnum {
     TwoThousandAndEleven0201 = "2011-02-01"
 }
-export declare class PostIndexDocumentsQueryParams extends SpeakeasyBase {
-    action: PostIndexDocumentsActionEnum;
-    version: PostIndexDocumentsVersionEnum;
-}
-export declare class PostIndexDocumentsHeaders extends SpeakeasyBase {
+export declare class POSTIndexDocumentsRequest extends SpeakeasyBase {
+    action: POSTIndexDocumentsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTIndexDocumentsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostIndexDocumentsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostIndexDocumentsRequest extends SpeakeasyBase {
-    queryParams: PostIndexDocumentsQueryParams;
-    headers: PostIndexDocumentsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostIndexDocumentsResponse extends SpeakeasyBase {
+export declare class POSTIndexDocumentsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

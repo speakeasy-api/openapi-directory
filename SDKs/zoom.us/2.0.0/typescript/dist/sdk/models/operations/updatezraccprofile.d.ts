@@ -1,37 +1,42 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class UpdateZrAccProfileApplicationJsonBasic extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class UpdateZRAccProfileSecurity extends SpeakeasyBase {
+    oAuth: string;
+}
+export declare class UpdateZRAccProfileApplicationJSONBasic extends SpeakeasyBase {
+    /**
+     * Require code to exit out of the Zoom Rooms application to switch between other apps.
+     *
+     * @remarks
+     *
+     */
     requiredCodeToExt?: boolean;
+    /**
+     * 1-16 digit number or characters used to secure your Zoom Rooms application. This code must be entered on your Zoom Room Controller to change settings or to sign out.
+     */
     roomPasscode?: string;
+    /**
+     * The email address used for reporting Zoom Room issues.
+     */
     supportEmail?: string;
+    /**
+     * The phone number used for reporting Zoom room issues.
+     */
     supportPhone?: string;
 }
-export declare class UpdateZrAccProfileApplicationJson extends SpeakeasyBase {
-    basic?: UpdateZrAccProfileApplicationJsonBasic;
+export declare class UpdateZRAccProfileApplicationJSON extends SpeakeasyBase {
+    basic?: UpdateZRAccProfileApplicationJSONBasic;
 }
-export declare class UpdateZrAccProfileMultipartFormDataBasic extends SpeakeasyBase {
-    requiredCodeToExt?: boolean;
-    roomPasscode?: string;
-    supportEmail?: string;
-    supportPhone?: string;
-}
-export declare class UpdateZrAccProfileMultipartFormData extends SpeakeasyBase {
-    basic?: UpdateZrAccProfileMultipartFormDataBasic;
-}
-export declare class UpdateZrAccProfileRequests extends SpeakeasyBase {
-    object?: UpdateZrAccProfileApplicationJson;
-    object1?: UpdateZrAccProfileMultipartFormData;
-}
-export declare class UpdateZrAccProfileSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
-}
-export declare class UpdateZrAccProfileRequest extends SpeakeasyBase {
-    request?: UpdateZrAccProfileRequests;
-    security: UpdateZrAccProfileSecurity;
-}
-export declare class UpdateZrAccProfileResponse extends SpeakeasyBase {
+export declare class UpdateZRAccProfileResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * **HTTP Status Code:** `204` **No Content**<br>
+     *
+     * @remarks
+     * Profile updated successfully.
+     */
     updateZRAccProfile204ApplicationJSONObject?: Record<string, any>;
 }

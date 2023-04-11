@@ -1,16 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class PostGetPciQuestionnaireUrlSecurity extends SpeakeasyBase {
+    apiKeyAuth?: string;
     basicAuth?: shared.SchemeBasicAuth;
-    apiKeyAuth?: shared.SchemeApiKeyAuth;
-}
-export declare class PostGetPciQuestionnaireUrlRequest extends SpeakeasyBase {
-    request?: any;
-    security: PostGetPciQuestionnaireUrlSecurity;
 }
 export declare class PostGetPciQuestionnaireUrlResponse extends SpeakeasyBase {
     contentType: string;
-    getPciUrlResponse?: any;
-    serviceError?: any;
+    /**
+     * OK - the request has succeeded.
+     */
+    getPciUrlResponse?: shared.GetPciUrlResponse;
+    /**
+     * Bad Request - a problem reading or understanding the request.
+     */
+    serviceError?: shared.ServiceError;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

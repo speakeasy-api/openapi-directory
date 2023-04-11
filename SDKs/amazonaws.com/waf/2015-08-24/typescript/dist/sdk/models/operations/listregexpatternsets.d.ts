@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum ListRegexPatternSetsXAmzTargetEnum {
-    Awswaf20150824ListRegexPatternSets = "AWSWAF_20150824.ListRegexPatternSets"
+    AWSWAF20150824ListRegexPatternSets = "AWSWAF_20150824.ListRegexPatternSets"
 }
-export declare class ListRegexPatternSetsHeaders extends SpeakeasyBase {
+export declare class ListRegexPatternSetsRequest extends SpeakeasyBase {
+    listRegexPatternSetsRequest: shared.ListRegexPatternSetsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class ListRegexPatternSetsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListRegexPatternSetsXAmzTargetEnum;
 }
-export declare class ListRegexPatternSetsRequest extends SpeakeasyBase {
-    headers: ListRegexPatternSetsHeaders;
-    request: shared.ListRegexPatternSetsRequest;
-}
 export declare class ListRegexPatternSetsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     listRegexPatternSetsResponse?: shared.ListRegexPatternSetsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFInvalidAccountException
+     */
     wafInvalidAccountException?: any;
 }

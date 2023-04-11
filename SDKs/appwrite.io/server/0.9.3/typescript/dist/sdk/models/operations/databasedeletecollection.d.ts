@@ -1,17 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class DatabaseDeleteCollectionPathParams extends SpeakeasyBase {
-    collectionId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DatabaseDeleteCollectionSecurity extends SpeakeasyBase {
-    key: shared.SchemeKey;
-    project: shared.SchemeProject;
+    key: string;
+    project: string;
 }
 export declare class DatabaseDeleteCollectionRequest extends SpeakeasyBase {
-    pathParams: DatabaseDeleteCollectionPathParams;
-    security: DatabaseDeleteCollectionSecurity;
+    /**
+     * Collection unique ID.
+     */
+    collectionId: string;
 }
 export declare class DatabaseDeleteCollectionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

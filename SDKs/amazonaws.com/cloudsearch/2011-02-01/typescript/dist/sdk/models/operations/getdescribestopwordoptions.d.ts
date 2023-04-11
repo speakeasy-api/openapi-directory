@@ -1,16 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeStopwordOptionsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeStopwordOptionsActionEnum {
     DescribeStopwordOptions = "DescribeStopwordOptions"
 }
-export declare enum GetDescribeStopwordOptionsVersionEnum {
+export declare enum GETDescribeStopwordOptionsVersionEnum {
     TwoThousandAndEleven0201 = "2011-02-01"
 }
-export declare class GetDescribeStopwordOptionsQueryParams extends SpeakeasyBase {
-    action: GetDescribeStopwordOptionsActionEnum;
+export declare class GETDescribeStopwordOptionsRequest extends SpeakeasyBase {
+    action: GETDescribeStopwordOptionsActionEnum;
     domainName: string;
-    version: GetDescribeStopwordOptionsVersionEnum;
-}
-export declare class GetDescribeStopwordOptionsHeaders extends SpeakeasyBase {
+    version: GETDescribeStopwordOptionsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +18,9 @@ export declare class GetDescribeStopwordOptionsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeStopwordOptionsRequest extends SpeakeasyBase {
-    queryParams: GetDescribeStopwordOptionsQueryParams;
-    headers: GetDescribeStopwordOptionsHeaders;
-}
-export declare class GetDescribeStopwordOptionsResponse extends SpeakeasyBase {
+export declare class GETDescribeStopwordOptionsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,36 +1,36 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AddApplicationCloudWatchLoggingOptionRequest, AddApplicationCloudWatchLoggingOptionResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  AddApplicationCloudWatchLoggingOptionRequest,
+  AddApplicationCloudWatchLoggingOptionResponse,
+  AddApplicationCloudWatchLoggingOptionXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    hmac: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: AddApplicationCloudWatchLoggingOptionRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "KinesisAnalytics_20150814.AddApplicationCloudWatchLoggingOption",
-  },
-  request: {
-    applicationName: "fugit",
+  addApplicationCloudWatchLoggingOptionRequest: {
+    applicationName: "corrupti",
     cloudWatchLoggingOption: {
-      logStreamARN: "et",
-      roleARN: "nihil",
+      logStreamARN: "provident",
+      roleARN: "distinctio",
     },
-    currentApplicationVersionId: 8325060299420976708,
+    currentApplicationVersionId: 844266,
   },
+  xAmzAlgorithm: "unde",
+  xAmzContentSha256: "nulla",
+  xAmzCredential: "corrupti",
+  xAmzDate: "illum",
+  xAmzSecurityToken: "vel",
+  xAmzSignature: "error",
+  xAmzSignedHeaders: "deserunt",
+  xAmzTarget: AddApplicationCloudWatchLoggingOptionXAmzTargetEnum.KinesisAnalytics20150814AddApplicationCloudWatchLoggingOption,
 };
 
 sdk.addApplicationCloudWatchLoggingOption(req).then((res: AddApplicationCloudWatchLoggingOptionResponse | AxiosError) => {

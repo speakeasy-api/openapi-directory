@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListExclusionsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListExclusionsXAmzTargetEnum {
     InspectorServiceListExclusions = "InspectorService.ListExclusions"
 }
-export declare class ListExclusionsHeaders extends SpeakeasyBase {
+export declare class ListExclusionsRequest extends SpeakeasyBase {
+    listExclusionsRequest: shared.ListExclusionsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,18 +14,37 @@ export declare class ListExclusionsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: ListExclusionsXAmzTargetEnum;
-}
-export declare class ListExclusionsRequest extends SpeakeasyBase {
-    queryParams: ListExclusionsQueryParams;
-    headers: ListExclusionsHeaders;
-    request: shared.ListExclusionsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class ListExclusionsResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InternalException
+     */
     internalException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * Success
+     */
     listExclusionsResponse?: shared.ListExclusionsResponse;
+    /**
+     * NoSuchEntityException
+     */
     noSuchEntityException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

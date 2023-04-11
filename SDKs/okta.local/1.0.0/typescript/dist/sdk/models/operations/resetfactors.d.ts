@@ -1,12 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ResetFactorsPathParams extends SpeakeasyBase {
-    userId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ResetFactorsRequest extends SpeakeasyBase {
-    pathParams: ResetFactorsPathParams;
-    request?: Uint8Array;
+    requestBody?: Uint8Array;
+    userId: string;
 }
 export declare class ResetFactorsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

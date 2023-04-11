@@ -60,7 +60,6 @@ export * from "./residence";
 export * from "./searchdirectorypeopleresponse";
 export * from "./searchresponse";
 export * from "./searchresult";
-export * from "./security";
 export * from "./sipaddress";
 export * from "./skill";
 export * from "./source";

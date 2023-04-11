@@ -1,19 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class TeamsUpdateDiscussionCommentPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class TeamsUpdateDiscussionCommentRequestBody extends SpeakeasyBase {
+    /**
+     * The discussion comment's body text.
+     */
+    body: string;
+}
+export declare class TeamsUpdateDiscussionCommentRequest extends SpeakeasyBase {
+    requestBody: TeamsUpdateDiscussionCommentRequestBody;
     commentNumber: number;
     discussionNumber: number;
     teamId: number;
 }
-export declare class TeamsUpdateDiscussionCommentRequestBody extends SpeakeasyBase {
-    body: string;
-}
-export declare class TeamsUpdateDiscussionCommentRequest extends SpeakeasyBase {
-    pathParams: TeamsUpdateDiscussionCommentPathParams;
-    request?: TeamsUpdateDiscussionCommentRequestBody;
-}
 export declare class TeamsUpdateDiscussionCommentResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     teamDiscussionComment?: shared.TeamDiscussionComment;
 }

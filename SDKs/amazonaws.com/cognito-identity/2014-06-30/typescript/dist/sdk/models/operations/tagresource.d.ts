@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum TagResourceXAmzTargetEnum {
-    AwsCognitoIdentityServiceTagResource = "AWSCognitoIdentityService.TagResource"
+    AWSCognitoIdentityServiceTagResource = "AWSCognitoIdentityService.TagResource"
 }
-export declare class TagResourceHeaders extends SpeakeasyBase {
+export declare class TagResourceRequest extends SpeakeasyBase {
+    tagResourceInput: shared.TagResourceInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class TagResourceHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: TagResourceXAmzTargetEnum;
 }
-export declare class TagResourceRequest extends SpeakeasyBase {
-    headers: TagResourceHeaders;
-    request: shared.TagResourceInput;
-}
 export declare class TagResourceResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalErrorException
+     */
     internalErrorException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * NotAuthorizedException
+     */
     notAuthorizedException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     tagResourceResponse?: Record<string, any>;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

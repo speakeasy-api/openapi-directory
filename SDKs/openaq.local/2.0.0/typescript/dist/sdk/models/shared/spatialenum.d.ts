@@ -1,3 +1,6 @@
+/**
+ * An enumeration.
+ */
 export declare enum SpatialEnum {
     Country = "country",
     Location = "location",

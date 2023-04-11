@@ -1,22 +1,34 @@
-import { AxiosInstance } from "axios";
 import { GetDevices } from "./getdevices";
 import { GetLocations } from "./getlocations";
-import { GetOsBrowsers } from "./getosbrowsers";
+import { GetOSBrowsers } from "./getosbrowsers";
 import { GetProfiles } from "./getprofiles";
 import { GetResolutions } from "./getresolutions";
 import { GetScreenshots } from "./getscreenshots";
 import { GetZippedScreenshots } from "./getzippedscreenshots";
 import { StartScreenshotTest } from "./startscreenshottest";
 import { StopScreenshotTest } from "./stopscreenshottest";
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://api.lambdatest.com/screenshots/v1"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
 export declare class SDK {
     getDevices: GetDevices;
     getLocations: GetLocations;
-    getOSBrowsers: GetOsBrowsers;
+    getOSBrowsers: GetOSBrowsers;
     getProfiles: GetProfiles;
     getResolutions: GetResolutions;
     getScreenshots: GetScreenshots;
@@ -29,5 +41,6 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
 }

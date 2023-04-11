@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum ExportAutoScalingGroupRecommendationsXAmzTargetEnum {
     ComputeOptimizerServiceExportAutoScalingGroupRecommendations = "ComputeOptimizerService.ExportAutoScalingGroupRecommendations"
 }
-export declare class ExportAutoScalingGroupRecommendationsHeaders extends SpeakeasyBase {
+export declare class ExportAutoScalingGroupRecommendationsRequest extends SpeakeasyBase {
+    exportAutoScalingGroupRecommendationsRequest: shared.ExportAutoScalingGroupRecommendationsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,20 +15,44 @@ export declare class ExportAutoScalingGroupRecommendationsHeaders extends Speake
     xAmzSignedHeaders?: string;
     xAmzTarget: ExportAutoScalingGroupRecommendationsXAmzTargetEnum;
 }
-export declare class ExportAutoScalingGroupRecommendationsRequest extends SpeakeasyBase {
-    headers: ExportAutoScalingGroupRecommendationsHeaders;
-    request: shared.ExportAutoScalingGroupRecommendationsRequest;
-}
 export declare class ExportAutoScalingGroupRecommendationsResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     exportAutoScalingGroupRecommendationsResponse?: shared.ExportAutoScalingGroupRecommendationsResponse;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * MissingAuthenticationToken
+     */
     missingAuthenticationToken?: any;
+    /**
+     * OptInRequiredException
+     */
     optInRequiredException?: any;
-    serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceUnavailableException
+     */
+    serviceUnavailableException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

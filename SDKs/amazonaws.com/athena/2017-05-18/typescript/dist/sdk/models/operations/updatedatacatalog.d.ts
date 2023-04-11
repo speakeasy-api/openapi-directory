@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateDataCatalogXAmzTargetEnum {
     AmazonAthenaUpdateDataCatalog = "AmazonAthena.UpdateDataCatalog"
 }
-export declare class UpdateDataCatalogHeaders extends SpeakeasyBase {
+export declare class UpdateDataCatalogRequest extends SpeakeasyBase {
+    updateDataCatalogInput: shared.UpdateDataCatalogInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class UpdateDataCatalogHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateDataCatalogXAmzTargetEnum;
 }
-export declare class UpdateDataCatalogRequest extends SpeakeasyBase {
-    headers: UpdateDataCatalogHeaders;
-    request: shared.UpdateDataCatalogInput;
-}
 export declare class UpdateDataCatalogResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     updateDataCatalogOutput?: Record<string, any>;
 }

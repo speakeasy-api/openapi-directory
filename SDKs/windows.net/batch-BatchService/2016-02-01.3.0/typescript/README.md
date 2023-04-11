@@ -6,38 +6,36 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/windows.net/batch-BatchService/2016-02-01.3.0/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/windows.net/batch-BatchService/2016-02-01.3.0/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AccountListNodeAgentSkusRequest, AccountListNodeAgentSkusResponse } from "openapi/src/sdk/models/operations";
+import {
+  AccountListNodeAgentSkusRequest,
+  AccountListNodeAgentSkusResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: AccountListNodeAgentSkusRequest = {
-  queryParams: {
-    dollarFilter: "sit",
-    apiVersion: "voluptas",
-    maxresults: 6050128673802995827,
-    timeout: 501233450539197794,
-  },
-  headers: {
-    clientRequestId: "consequuntur",
-    ocpDate: "dolor",
-    returnClientRequestId: true,
-  },
+  dollarFilter: "corrupti",
+  apiVersion: "provident",
+  clientRequestId: "distinctio",
+  maxresults: 844266,
+  ocpDate: "unde",
+  returnClientRequestId: false,
+  timeout: 857946,
 };
 
 sdk.accounts.accountListNodeAgentSkus(req).then((res: AccountListNodeAgentSkusResponse | AxiosError) => {
@@ -47,18 +45,19 @@ sdk.accounts.accountListNodeAgentSkus(req).then((res: AccountListNodeAgentSkusRe
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### Accounts
+
+### accounts
 
 * `accountListNodeAgentSkus` - Lists all node agent SKUs supported by the Azure Batch service.
 
-### Applications
+### applications
 
 * `applicationGet` - Gets information about the specified application.
 * `applicationList` - Lists all of the applications available in the specified account.
 
-### Certificates
+### certificates
 
 * `certificateAdd` - Adds a certificate to the specified account.
 * `certificateCancelDeletion` - Cancels a failed deletion of a certificate from the specified account.
@@ -66,7 +65,7 @@ sdk.accounts.accountListNodeAgentSkus(req).then((res: AccountListNodeAgentSkusRe
 * `certificateGet` - Gets information about the specified certificate.
 * `certificateList` - Lists all of the certificates that have been added to the specified account.
 
-### ComputeNodes
+### computeNodes
 
 * `computeNodeAddUser` - Adds a user account to the specified compute node.
 * `computeNodeDeleteUser` - Deletes a user account from the specified compute node.
@@ -81,7 +80,7 @@ sdk.accounts.accountListNodeAgentSkus(req).then((res: AccountListNodeAgentSkusRe
 * `computeNodeUpdateUser` - Updates the password or expiration time of a user account on the specified compute node.
 * `poolRemoveNodes` - Removes compute nodes from the specified pool.
 
-### Files
+### files
 
 * `fileDeleteFromComputeNode` - Deletes the specified task file from the compute node.
 * `fileDeleteFromTask` - Deletes the specified task file from the compute node where the task ran.
@@ -92,7 +91,7 @@ sdk.accounts.accountListNodeAgentSkus(req).then((res: AccountListNodeAgentSkusRe
 * `fileListFromComputeNode` - Lists all of the files in task directories on the specified compute node.
 * `fileListFromTask` - Lists the files in a task's directory on its compute node.
 
-### JobSchedules
+### jobSchedules
 
 * `jobScheduleAdd` - Adds a job schedule to the specified account.
 * `jobScheduleDelete` - Deletes a job schedule from the specified account.
@@ -105,7 +104,7 @@ sdk.accounts.accountListNodeAgentSkus(req).then((res: AccountListNodeAgentSkusRe
 * `jobScheduleTerminate` - Terminates a job schedule.
 * `jobScheduleUpdate` - Updates the properties of the specified job schedule.
 
-### Jobs
+### jobs
 
 * `jobAdd` - Adds a job to the specified account.
 * `jobDelete` - Deletes a job.
@@ -120,7 +119,7 @@ sdk.accounts.accountListNodeAgentSkus(req).then((res: AccountListNodeAgentSkusRe
 * `jobTerminate` - Terminates the specified job, marking it as completed.
 * `jobUpdate` - Updates the properties of a job.
 
-### Pools
+### pools
 
 * `poolAdd` - Adds a pool to the specified account.
 * `poolDelete` - Deletes a pool from the specified account.
@@ -136,9 +135,9 @@ sdk.accounts.accountListNodeAgentSkus(req).then((res: AccountListNodeAgentSkusRe
 * `poolResize` - Changes the number of compute nodes that are assigned to a pool.
 * `poolStopResize` - Stops an ongoing resize operation on the pool. This does not restore the pool to its previous state before the resize operation: it only stops any further changes being made, and the pool maintains its current state.
 * `poolUpdateProperties` - Updates the properties of a pool.
-* `poolUpgradeOs` - Upgrades the operating system of the specified pool.
+* `poolUpgradeOS` - Upgrades the operating system of the specified pool.
 
-### Tasks
+### tasks
 
 * `taskAdd` - Adds a task to the specified job.
 * `taskAddCollection` - Adds a collection of tasks to the specified job.
@@ -148,7 +147,18 @@ sdk.accounts.accountListNodeAgentSkus(req).then((res: AccountListNodeAgentSkusRe
 * `taskListSubtasks` - Lists all of the subtasks that are associated with the specified multi-instance task.
 * `taskTerminate` - Terminates the specified task.
 * `taskUpdate` - Updates the properties of the specified task.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

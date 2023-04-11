@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListListenersQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListListenersXAmzTargetEnum {
     GlobalAcceleratorV20180706ListListeners = "GlobalAccelerator_V20180706.ListListeners"
 }
-export declare class ListListenersHeaders extends SpeakeasyBase {
+export declare class ListListenersRequest extends SpeakeasyBase {
+    listListenersRequest: shared.ListListenersRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,17 +23,28 @@ export declare class ListListenersHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListListenersXAmzTargetEnum;
 }
-export declare class ListListenersRequest extends SpeakeasyBase {
-    queryParams: ListListenersQueryParams;
-    headers: ListListenersHeaders;
-    request: shared.ListListenersRequest;
-}
 export declare class ListListenersResponse extends SpeakeasyBase {
+    /**
+     * AcceleratorNotFoundException
+     */
     acceleratorNotFoundException?: any;
     contentType: string;
+    /**
+     * InternalServiceErrorException
+     */
     internalServiceErrorException?: any;
+    /**
+     * InvalidArgumentException
+     */
     invalidArgumentException?: any;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * Success
+     */
     listListenersResponse?: shared.ListListenersResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

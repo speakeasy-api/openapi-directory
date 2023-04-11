@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetConfigurationSetEventDestinationsPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetConfigurationSetEventDestinationsRequest extends SpeakeasyBase {
+    /**
+     * The name of the configuration set that contains the event destination.
+     */
     configurationSetName: string;
-}
-export declare class GetConfigurationSetEventDestinationsHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,15 +14,24 @@ export declare class GetConfigurationSetEventDestinationsHeaders extends Speakea
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetConfigurationSetEventDestinationsRequest extends SpeakeasyBase {
-    pathParams: GetConfigurationSetEventDestinationsPathParams;
-    headers: GetConfigurationSetEventDestinationsHeaders;
-}
 export declare class GetConfigurationSetEventDestinationsResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getConfigurationSetEventDestinationsResponse?: shared.GetConfigurationSetEventDestinationsResponse;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

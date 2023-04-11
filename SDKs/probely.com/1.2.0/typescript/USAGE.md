@@ -1,21 +1,20 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DeleteKeysIdRequest, DeleteKeysIdResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  DeleteKeysIdRequest,
+  DeleteKeysIdResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    jwtAuth: {
-      authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-    },
-  }
-));
-    
-const req: DeleteKeysIdRequest = {
-  pathParams: {
-    id: "sit",
+    jwtAuth: "Bearer YOUR_BEARER_TOKEN_HERE",
   },
+});
+
+const req: DeleteKeysIdRequest = {
+  id: "jMXUw-BE_2vd",
 };
 
 sdk.apiKeys.deleteKeysId(req).then((res: DeleteKeysIdResponse | AxiosError) => {

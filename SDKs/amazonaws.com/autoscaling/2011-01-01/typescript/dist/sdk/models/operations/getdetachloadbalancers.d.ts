@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDetachLoadBalancersActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDetachLoadBalancersActionEnum {
     DetachLoadBalancers = "DetachLoadBalancers"
 }
-export declare enum GetDetachLoadBalancersVersionEnum {
+export declare enum GETDetachLoadBalancersVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class GetDetachLoadBalancersQueryParams extends SpeakeasyBase {
-    action: GetDetachLoadBalancersActionEnum;
+export declare class GETDetachLoadBalancersRequest extends SpeakeasyBase {
+    action: GETDetachLoadBalancersActionEnum;
+    /**
+     * The name of the Auto Scaling group.
+     */
     autoScalingGroupName: string;
+    /**
+     * The names of the load balancers. You can specify up to 10 load balancers.
+     */
     loadBalancerNames: string[];
-    version: GetDetachLoadBalancersVersionEnum;
-}
-export declare class GetDetachLoadBalancersHeaders extends SpeakeasyBase {
+    version: GETDetachLoadBalancersVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetDetachLoadBalancersHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDetachLoadBalancersRequest extends SpeakeasyBase {
-    queryParams: GetDetachLoadBalancersQueryParams;
-    headers: GetDetachLoadBalancersHeaders;
-}
-export declare class GetDetachLoadBalancersResponse extends SpeakeasyBase {
+export declare class GETDetachLoadBalancersResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ListIpSetsRequest extends SpeakeasyBase {
+export declare class ListIPSetsRequest extends SpeakeasyBase {
     limit?: number;
     nextMarker?: string;
 }

@@ -1,10 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { SourceBuildInformation } from "./sourcebuildinformation";
-import { S3Location } from "./s3location";
 import { ApplicationVersionStatusEnum } from "./applicationversionstatusenum";
+import { S3Location } from "./s3location";
+import { SourceBuildInformation } from "./sourcebuildinformation";
 /**
  * Describes the properties of an application version.
-**/
+ */
 export declare class ApplicationVersionDescription extends SpeakeasyBase {
     applicationName?: string;
     applicationVersionArn?: string;

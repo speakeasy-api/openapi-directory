@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Operations about inbox_recipients
+ */
 export declare class InboxRecipients {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,15 +12,17 @@ export declare class InboxRecipients {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getInboxRecipients - List Inbox Recipients
-     *
      * List Inbox Recipients
-    **/
+     *
+     * @remarks
+     * List Inbox Recipients
+     */
     getInboxRecipients(req: operations.GetInboxRecipientsRequest, config?: AxiosRequestConfig): Promise<operations.GetInboxRecipientsResponse>;
     /**
-     * postInboxRecipients - Create Inbox Recipient
-     *
      * Create Inbox Recipient
-    **/
-    postInboxRecipients(req: operations.PostInboxRecipientsRequest, config?: AxiosRequestConfig): Promise<operations.PostInboxRecipientsResponse>;
+     *
+     * @remarks
+     * Create Inbox Recipient
+     */
+    postInboxRecipients(req: operations.PostInboxRecipientsRequestBody, config?: AxiosRequestConfig): Promise<operations.PostInboxRecipientsResponse>;
 }

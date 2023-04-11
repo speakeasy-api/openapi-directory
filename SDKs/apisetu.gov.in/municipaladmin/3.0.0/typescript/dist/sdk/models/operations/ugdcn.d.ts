@@ -1,115 +1,170 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class UgdcnSecurity extends SpeakeasyBase {
+    apiKey: string;
+    clientId: string;
+}
 export declare class UgdcnRequestBodyCertificateParameters extends SpeakeasyBase {
+    /**
+     * DocumentNumber
+     */
     documentNumber: string;
 }
+/**
+ * The format of the certificate in response.
+ */
 export declare enum UgdcnRequestBodyFormatEnum {
     Pdf = "pdf"
 }
+/**
+ * Request format
+ */
 export declare class UgdcnRequestBody extends SpeakeasyBase {
     certificateParameters?: UgdcnRequestBodyCertificateParameters;
-    consentArtifact?: any;
+    consentArtifact?: shared.ConsentArtifactSchema;
+    /**
+     * The format of the certificate in response.
+     */
     format: UgdcnRequestBodyFormatEnum;
+    /**
+     * A unique transaction id for this request in UUID format. It is used for tracking the request.
+     */
     txnId: string;
 }
-export declare class UgdcnSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
-    clientId: shared.SchemeClientId;
+export declare enum Ugdcn504ApplicationJSONErrorEnum {
+    GatewayTimeout = "gateway_timeout"
 }
-export declare enum Ugdcn400ApplicationJsonErrorEnum {
+export declare enum Ugdcn504ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
+}
+/**
+ * Gateway timeout
+ */
+export declare class Ugdcn504ApplicationJSON extends SpeakeasyBase {
+    error?: Ugdcn504ApplicationJSONErrorEnum;
+    errorDescription?: Ugdcn504ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Ugdcn503ApplicationJSONErrorEnum {
+    ServiceUnavailable = "service_unavailable"
+}
+export declare enum Ugdcn503ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
+}
+/**
+ * Service unavailable
+ */
+export declare class Ugdcn503ApplicationJSON extends SpeakeasyBase {
+    error?: Ugdcn503ApplicationJSONErrorEnum;
+    errorDescription?: Ugdcn503ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Ugdcn502ApplicationJSONErrorEnum {
+    BadGatewy = "bad_gatewy"
+}
+export declare enum Ugdcn502ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
+}
+/**
+ * Bad gateway
+ */
+export declare class Ugdcn502ApplicationJSON extends SpeakeasyBase {
+    error?: Ugdcn502ApplicationJSONErrorEnum;
+    errorDescription?: Ugdcn502ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Ugdcn500ApplicationJSONErrorEnum {
+    InternalServerError = "internal_server_error"
+}
+export declare enum Ugdcn500ApplicationJSONErrorDescriptionEnum {
+    InternalServerError = "Internal server error"
+}
+/**
+ * Internal server error
+ */
+export declare class Ugdcn500ApplicationJSON extends SpeakeasyBase {
+    error?: Ugdcn500ApplicationJSONErrorEnum;
+    errorDescription?: Ugdcn500ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Ugdcn404ApplicationJSONErrorEnum {
+    RecordNotFound = "record_not_found",
+    UrlNotFound = "url_not_found"
+}
+export declare enum Ugdcn404ApplicationJSONErrorDescriptionEnum {
+    NoRecordFound = "No record found",
+    YourAPIUrlOrPathIsIncorrect = "Your API url or path is incorrect"
+}
+/**
+ * No record found
+ */
+export declare class Ugdcn404ApplicationJSON extends SpeakeasyBase {
+    error?: Ugdcn404ApplicationJSONErrorEnum;
+    errorDescription?: Ugdcn404ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Ugdcn401ApplicationJSONErrorEnum {
+    InvalidAuthentication = "invalid_authentication",
+    InvalidAuthorization = "invalid_authorization"
+}
+export declare enum Ugdcn401ApplicationJSONErrorDescriptionEnum {
+    AuthenticationFailed = "Authentication failed",
+    YouAreNotAuthorizedToUseThisAPI = "You are not authorized to use this API"
+}
+/**
+ * Unauthorized access
+ */
+export declare class Ugdcn401ApplicationJSON extends SpeakeasyBase {
+    error?: Ugdcn401ApplicationJSONErrorEnum;
+    errorDescription?: Ugdcn401ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Ugdcn400ApplicationJSONErrorEnum {
     MissingParameter = "missing_parameter",
     InvalidParameter = "invalid_parameter",
     InvalidFormat = "invalid_format",
     InvalidTxnid = "invalid_txnid",
     InvalidConsentid = "invalid_consentid"
 }
-export declare enum Ugdcn400ApplicationJsonErrorDescriptionEnum {
+export declare enum Ugdcn400ApplicationJSONErrorDescriptionEnum {
     PleaseProvideAllMandatoryParameters = "Please provide all mandatory parameters",
     BadRequest = "Bad request",
     TheFormatParameterIsInvalid = "The format parameter is invalid",
-    TheTxnIdParameterMustBeInUuidFormat = "The txnId parameter must be in UUID format",
-    TheConsentIdParameterMustBeInUuidFormat = "The consentId parameter must be in UUID format"
+    TheTxnIdParameterMustBeInUUIDFormat = "The txnId parameter must be in UUID format",
+    TheConsentIdParameterMustBeInUUIDFormat = "The consentId parameter must be in UUID format"
 }
-export declare class Ugdcn400ApplicationJson extends SpeakeasyBase {
-    error?: Ugdcn400ApplicationJsonErrorEnum;
-    errorDescription?: Ugdcn400ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Ugdcn401ApplicationJsonErrorEnum {
-    InvalidAuthentication = "invalid_authentication",
-    InvalidAuthorization = "invalid_authorization"
-}
-export declare enum Ugdcn401ApplicationJsonErrorDescriptionEnum {
-    AuthenticationFailed = "Authentication failed",
-    YouAreNotAuthorizedToUseThisApi = "You are not authorized to use this API"
-}
-export declare class Ugdcn401ApplicationJson extends SpeakeasyBase {
-    error?: Ugdcn401ApplicationJsonErrorEnum;
-    errorDescription?: Ugdcn401ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Ugdcn404ApplicationJsonErrorEnum {
-    RecordNotFound = "record_not_found",
-    UrlNotFound = "url_not_found"
-}
-export declare enum Ugdcn404ApplicationJsonErrorDescriptionEnum {
-    NoRecordFound = "No record found",
-    YourApiUrlOrPathIsIncorrect = "Your API url or path is incorrect"
-}
-export declare class Ugdcn404ApplicationJson extends SpeakeasyBase {
-    error?: Ugdcn404ApplicationJsonErrorEnum;
-    errorDescription?: Ugdcn404ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Ugdcn500ApplicationJsonErrorEnum {
-    InternalServerError = "internal_server_error"
-}
-export declare enum Ugdcn500ApplicationJsonErrorDescriptionEnum {
-    InternalServerError = "Internal server error"
-}
-export declare class Ugdcn500ApplicationJson extends SpeakeasyBase {
-    error?: Ugdcn500ApplicationJsonErrorEnum;
-    errorDescription?: Ugdcn500ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Ugdcn502ApplicationJsonErrorEnum {
-    BadGatewy = "bad_gatewy"
-}
-export declare enum Ugdcn502ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
-}
-export declare class Ugdcn502ApplicationJson extends SpeakeasyBase {
-    error?: Ugdcn502ApplicationJsonErrorEnum;
-    errorDescription?: Ugdcn502ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Ugdcn503ApplicationJsonErrorEnum {
-    ServiceUnavailable = "service_unavailable"
-}
-export declare enum Ugdcn503ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
-}
-export declare class Ugdcn503ApplicationJson extends SpeakeasyBase {
-    error?: Ugdcn503ApplicationJsonErrorEnum;
-    errorDescription?: Ugdcn503ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Ugdcn504ApplicationJsonErrorEnum {
-    GatewayTimeout = "gateway_timeout"
-}
-export declare enum Ugdcn504ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
-}
-export declare class Ugdcn504ApplicationJson extends SpeakeasyBase {
-    error?: Ugdcn504ApplicationJsonErrorEnum;
-    errorDescription?: Ugdcn504ApplicationJsonErrorDescriptionEnum;
-}
-export declare class UgdcnRequest extends SpeakeasyBase {
-    request?: UgdcnRequestBody;
-    security: UgdcnSecurity;
+/**
+ * Bad request
+ */
+export declare class Ugdcn400ApplicationJSON extends SpeakeasyBase {
+    error?: Ugdcn400ApplicationJSONErrorEnum;
+    errorDescription?: Ugdcn400ApplicationJSONErrorDescriptionEnum;
 }
 export declare class UgdcnResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    ugdcn400ApplicationJSONObject?: Ugdcn400ApplicationJson;
-    ugdcn401ApplicationJSONObject?: Ugdcn401ApplicationJson;
-    ugdcn404ApplicationJSONObject?: Ugdcn404ApplicationJson;
-    ugdcn500ApplicationJSONObject?: Ugdcn500ApplicationJson;
-    ugdcn502ApplicationJSONObject?: Ugdcn502ApplicationJson;
-    ugdcn503ApplicationJSONObject?: Ugdcn503ApplicationJson;
-    ugdcn504ApplicationJSONObject?: Ugdcn504ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad request
+     */
+    ugdcn400ApplicationJSONObject?: Ugdcn400ApplicationJSON;
+    /**
+     * Unauthorized access
+     */
+    ugdcn401ApplicationJSONObject?: Ugdcn401ApplicationJSON;
+    /**
+     * No record found
+     */
+    ugdcn404ApplicationJSONObject?: Ugdcn404ApplicationJSON;
+    /**
+     * Internal server error
+     */
+    ugdcn500ApplicationJSONObject?: Ugdcn500ApplicationJSON;
+    /**
+     * Bad gateway
+     */
+    ugdcn502ApplicationJSONObject?: Ugdcn502ApplicationJSON;
+    /**
+     * Service unavailable
+     */
+    ugdcn503ApplicationJSONObject?: Ugdcn503ApplicationJSON;
+    /**
+     * Gateway timeout
+     */
+    ugdcn504ApplicationJSONObject?: Ugdcn504ApplicationJSON;
 }

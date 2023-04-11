@@ -1,14 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteRepositoryHostedPropertyValuePathParams extends SpeakeasyBase {
-    appKey: string;
-    propertyName: string;
-    repoSlug: string;
-    workspace: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteRepositoryHostedPropertyValueRequest extends SpeakeasyBase {
-    pathParams: DeleteRepositoryHostedPropertyValuePathParams;
+    /**
+     * The key of the Connect app.
+     */
+    appKey: string;
+    /**
+     * The name of the property.
+     */
+    propertyName: string;
+    /**
+     * The repository.
+     */
+    repoSlug: string;
+    /**
+     * The repository container; either the workspace slug or the UUID in curly braces.
+     */
+    workspace: string;
 }
 export declare class DeleteRepositoryHostedPropertyValueResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

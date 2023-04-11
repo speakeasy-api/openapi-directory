@@ -1,69 +1,149 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteTemplateQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteTemplateRequest extends SpeakeasyBase {
+    /**
+     * Template unique identifier
+     */
     templateId: number;
 }
-export declare class DeleteTemplate200ApplicationJsonResponse extends SpeakeasyBase {
-    success?: boolean;
-}
-export declare class DeleteTemplate200ApplicationJson extends SpeakeasyBase {
-    response?: DeleteTemplate200ApplicationJsonResponse;
-}
-export declare enum DeleteTemplate401ApplicationJsonErrorEnum {
-    AuthenticationFailedRequestExpired = "Authentication failed: request expired",
-    AuthenticationFailedSignatureOrSecretMissing = "Authentication failed: signature or secret missing",
-    AuthenticationFailedWorkspaceMissing = "Authentication failed: workspace missing",
-    AuthenticationFailedKeyMissing = "Authentication failed: key missing",
-    AuthenticationFailedPropertyIssIssuerMissingInJwt = "Authentication failed: property 'iss' (issuer) missing in JWT",
-    AuthenticationFailedPropertySubSubjectMissingInJwt = "Authentication failed: property 'sub' (subject) missing in JWT",
-    AuthenticationFailedPropertyExpExpirationTimeMissingInJwt = "Authentication failed: property 'exp' (expiration time) missing in JWT",
-    AuthenticationFailedInvalidIssIssuer = "Authentication failed: invalid 'iss' (issuer)",
-    AuthenticationFailedIncorrectSignature = "Authentication failed: incorrect signature",
-    AuthenticationFailed = "Authentication failed"
-}
-export declare class DeleteTemplate401ApplicationJson extends SpeakeasyBase {
-    error?: DeleteTemplate401ApplicationJsonErrorEnum;
+/**
+ * Internal Server Error
+ */
+export declare class DeleteTemplate500ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error description
+     */
+    error?: string;
+    /**
+     * HTTP Error code
+     */
     status?: number;
 }
-export declare enum DeleteTemplate403ApplicationJsonErrorEnum {
-    YourAccountHasExceededTheMonthlyDocumentGenerationLimit = "Your account has exceeded the monthly document generation limit."
-}
-export declare class DeleteTemplate403ApplicationJson extends SpeakeasyBase {
-    error?: DeleteTemplate403ApplicationJsonErrorEnum;
-    status?: number;
-}
-export declare enum DeleteTemplate404ApplicationJsonErrorEnum {
-    EntityNotFound = "Entity not found",
-    ResourceNotFound = "Resource not found",
-    NoneOfTheTemplatesIsAvailableForTheWorkspace = "None of the templates is available for the workspace."
-}
-export declare class DeleteTemplate404ApplicationJson extends SpeakeasyBase {
-    error?: DeleteTemplate404ApplicationJsonErrorEnum;
-    status?: number;
-}
-export declare enum DeleteTemplate422ApplicationJsonErrorEnum {
-    UnableToParseJsonPleaseCheckFormatting = "Unable to parse JSON, please check formatting",
+/**
+ * Error description
+ */
+export declare enum DeleteTemplate422ApplicationJSONErrorEnum {
+    UnableToParseJSONPleaseCheckFormatting = "Unable to parse JSON, please check formatting",
     RequiredParameterMissing = "Required parameter missing",
     RequiredParameterMissingTemplateDefinitionNotDefined = "Required parameter missing: template definition not defined",
     RequiredParameterMissingTemplateNotDefined = "Required parameter missing: template not defined"
 }
-export declare class DeleteTemplate422ApplicationJson extends SpeakeasyBase {
-    error?: DeleteTemplate422ApplicationJsonErrorEnum;
+/**
+ * Unprocessable Entity
+ */
+export declare class DeleteTemplate422ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error description
+     */
+    error?: DeleteTemplate422ApplicationJSONErrorEnum;
+    /**
+     * HTTP Error code
+     */
     status?: number;
 }
-export declare class DeleteTemplate500ApplicationJson extends SpeakeasyBase {
-    error?: string;
+/**
+ * Error description
+ */
+export declare enum DeleteTemplate404ApplicationJSONErrorEnum {
+    EntityNotFound = "Entity not found",
+    ResourceNotFound = "Resource not found",
+    NoneOfTheTemplatesIsAvailableForTheWorkspace = "None of the templates is available for the workspace."
+}
+/**
+ * Not Found
+ */
+export declare class DeleteTemplate404ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error description
+     */
+    error?: DeleteTemplate404ApplicationJSONErrorEnum;
+    /**
+     * HTTP Error code
+     */
     status?: number;
 }
-export declare class DeleteTemplateRequest extends SpeakeasyBase {
-    queryParams: DeleteTemplateQueryParams;
+/**
+ * Error description
+ */
+export declare enum DeleteTemplate403ApplicationJSONErrorEnum {
+    YourAccountHasExceededTheMonthlyDocumentGenerationLimit = "Your account has exceeded the monthly document generation limit."
+}
+/**
+ * Forbidden
+ */
+export declare class DeleteTemplate403ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error description
+     */
+    error?: DeleteTemplate403ApplicationJSONErrorEnum;
+    /**
+     * HTTP Error code
+     */
+    status?: number;
+}
+/**
+ * Error description
+ */
+export declare enum DeleteTemplate401ApplicationJSONErrorEnum {
+    AuthenticationFailedRequestExpired = "Authentication failed: request expired",
+    AuthenticationFailedSignatureOrSecretMissing = "Authentication failed: signature or secret missing",
+    AuthenticationFailedWorkspaceMissing = "Authentication failed: workspace missing",
+    AuthenticationFailedKeyMissing = "Authentication failed: key missing",
+    AuthenticationFailedPropertyIssIssuerMissingInJWT = "Authentication failed: property 'iss' (issuer) missing in JWT",
+    AuthenticationFailedPropertySubSubjectMissingInJWT = "Authentication failed: property 'sub' (subject) missing in JWT",
+    AuthenticationFailedPropertyExpExpirationTimeMissingInJWT = "Authentication failed: property 'exp' (expiration time) missing in JWT",
+    AuthenticationFailedInvalidIssIssuer = "Authentication failed: invalid 'iss' (issuer)",
+    AuthenticationFailedIncorrectSignature = "Authentication failed: incorrect signature",
+    AuthenticationFailed = "Authentication failed"
+}
+/**
+ * Unauthorized
+ */
+export declare class DeleteTemplate401ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error description
+     */
+    error?: DeleteTemplate401ApplicationJSONErrorEnum;
+    /**
+     * HTTP Error code
+     */
+    status?: number;
+}
+export declare class DeleteTemplate200ApplicationJSONResponse extends SpeakeasyBase {
+    success?: boolean;
+}
+/**
+ * The request was successfully executed.
+ */
+export declare class DeleteTemplate200ApplicationJSON extends SpeakeasyBase {
+    response?: DeleteTemplate200ApplicationJSONResponse;
 }
 export declare class DeleteTemplateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deleteTemplate200ApplicationJSONObject?: DeleteTemplate200ApplicationJson;
-    deleteTemplate401ApplicationJSONObject?: DeleteTemplate401ApplicationJson;
-    deleteTemplate403ApplicationJSONObject?: DeleteTemplate403ApplicationJson;
-    deleteTemplate404ApplicationJSONObject?: DeleteTemplate404ApplicationJson;
-    deleteTemplate422ApplicationJSONObject?: DeleteTemplate422ApplicationJson;
-    deleteTemplate500ApplicationJSONObject?: DeleteTemplate500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * The request was successfully executed.
+     */
+    deleteTemplate200ApplicationJSONObject?: DeleteTemplate200ApplicationJSON;
+    /**
+     * Unauthorized
+     */
+    deleteTemplate401ApplicationJSONObject?: DeleteTemplate401ApplicationJSON;
+    /**
+     * Forbidden
+     */
+    deleteTemplate403ApplicationJSONObject?: DeleteTemplate403ApplicationJSON;
+    /**
+     * Not Found
+     */
+    deleteTemplate404ApplicationJSONObject?: DeleteTemplate404ApplicationJSON;
+    /**
+     * Unprocessable Entity
+     */
+    deleteTemplate422ApplicationJSONObject?: DeleteTemplate422ApplicationJSON;
+    /**
+     * Internal Server Error
+     */
+    deleteTemplate500ApplicationJSONObject?: DeleteTemplate500ApplicationJSON;
 }

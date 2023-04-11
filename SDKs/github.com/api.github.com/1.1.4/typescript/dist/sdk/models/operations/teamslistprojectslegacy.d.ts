@@ -1,25 +1,31 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class TeamsListProjectsLegacyPathParams extends SpeakeasyBase {
-    teamId: number;
-}
-export declare class TeamsListProjectsLegacyQueryParams extends SpeakeasyBase {
-    page?: number;
-    perPage?: number;
-}
-export declare class TeamsListProjectsLegacy415ApplicationJson extends SpeakeasyBase {
-    documentationUrl: string;
-    message: string;
-}
+import { AxiosResponse } from "axios";
 export declare class TeamsListProjectsLegacyRequest extends SpeakeasyBase {
-    pathParams: TeamsListProjectsLegacyPathParams;
-    queryParams: TeamsListProjectsLegacyQueryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    page?: number;
+    /**
+     * The number of results per page (max 100).
+     */
+    perPage?: number;
+    /**
+     * The unique identifier of the team.
+     */
+    teamId: number;
 }
 export declare class TeamsListProjectsLegacyResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Resource not found
+     */
     basicError?: shared.BasicError;
+    /**
+     * Response
+     */
     teamProjects?: shared.TeamProject[];
-    teamsListProjectsLegacy415ApplicationJSONObject?: TeamsListProjectsLegacy415ApplicationJson;
 }

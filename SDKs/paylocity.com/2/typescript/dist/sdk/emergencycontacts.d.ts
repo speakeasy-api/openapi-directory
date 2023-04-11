@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class EmergencyContacts {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +9,10 @@ export declare class EmergencyContacts {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * addOrUpdateEmergencyContacts - Add/update emergency contacts
+     * Add/update emergency contacts
      *
+     * @remarks
      * Sends new or updated employee emergency contacts directly to Web Pay.
-    **/
-    addOrUpdateEmergencyContacts(req: operations.AddOrUpdateEmergencyContactsRequest, config?: AxiosRequestConfig): Promise<operations.AddOrUpdateEmergencyContactsResponse>;
+     */
+    addOrUpdateEmergencyContacts(req: operations.AddOrUpdateEmergencyContactsRequest, security: operations.AddOrUpdateEmergencyContactsSecurity, config?: AxiosRequestConfig): Promise<operations.AddOrUpdateEmergencyContactsResponse>;
 }

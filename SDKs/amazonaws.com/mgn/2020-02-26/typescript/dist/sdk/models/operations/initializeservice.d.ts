@@ -1,5 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class InitializeServiceHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class InitializeServiceRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -8,13 +9,20 @@ export declare class InitializeServiceHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class InitializeServiceRequest extends SpeakeasyBase {
-    headers: InitializeServiceHeaders;
-}
 export declare class InitializeServiceResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     initializeServiceResponse?: Record<string, any>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

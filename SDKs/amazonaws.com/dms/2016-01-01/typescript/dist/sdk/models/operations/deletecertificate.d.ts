@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteCertificateXAmzTargetEnum {
-    AmazonDmSv20160101DeleteCertificate = "AmazonDMSv20160101.DeleteCertificate"
+    AmazonDMSv20160101DeleteCertificate = "AmazonDMSv20160101.DeleteCertificate"
 }
-export declare class DeleteCertificateHeaders extends SpeakeasyBase {
+export declare class DeleteCertificateRequest extends SpeakeasyBase {
+    deleteCertificateMessage: shared.DeleteCertificateMessage;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class DeleteCertificateHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteCertificateXAmzTargetEnum;
 }
-export declare class DeleteCertificateRequest extends SpeakeasyBase {
-    headers: DeleteCertificateHeaders;
-    request: shared.DeleteCertificateMessage;
-}
 export declare class DeleteCertificateResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deleteCertificateResponse?: shared.DeleteCertificateResponse;
+    /**
+     * InvalidResourceStateFault
+     */
     invalidResourceStateFault?: any;
+    /**
+     * ResourceNotFoundFault
+     */
     resourceNotFoundFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

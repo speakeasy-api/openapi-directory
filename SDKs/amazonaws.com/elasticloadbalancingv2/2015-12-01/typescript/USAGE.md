@@ -1,35 +1,34 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetDeleteListenerRequest, GetDeleteListenerResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GETDeleteListenerRequest,
+  GETDeleteListenerResponse,
+  GETDeleteListenerActionEnum,
+  GETDeleteListenerVersionEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: GetDeleteListenerRequest = {
-  queryParams: {
-    action: "DeleteListener",
-    listenerArn: "voluptas",
-    version: "2015-12-01",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  headers: {
-    xAmzAlgorithm: "expedita",
-    xAmzContentSha256: "consequuntur",
-    xAmzCredential: "dolor",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "voluptas",
-    xAmzSignature: "fugit",
-    xAmzSignedHeaders: "et",
-  },
+});
+
+const req: GETDeleteListenerRequest = {
+  action: GETDeleteListenerActionEnum.DeleteListener,
+  listenerArn: "corrupti",
+  version: GETDeleteListenerVersionEnum.TwoThousandAndFifteen1201,
+  xAmzAlgorithm: "provident",
+  xAmzContentSha256: "distinctio",
+  xAmzCredential: "quibusdam",
+  xAmzDate: "unde",
+  xAmzSecurityToken: "nulla",
+  xAmzSignature: "corrupti",
+  xAmzSignedHeaders: "illum",
 };
 
-sdk.getDeleteListener(req).then((res: GetDeleteListenerResponse | AxiosError) => {
+sdk.getDeleteListener(req).then((res: GETDeleteListenerResponse | AxiosError) => {
    // handle response
 });
 ```

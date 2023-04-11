@@ -1,17 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+/**
+ * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+ */
 export declare enum ProjectedPlayerGameStatsByDateWInjuriesDfsSalariesFormatEnum {
     Xml = "XML",
     Json = "JSON"
 }
-export declare class ProjectedPlayerGameStatsByDateWInjuriesDfsSalariesPathParams extends SpeakeasyBase {
-    date: string;
-    format: ProjectedPlayerGameStatsByDateWInjuriesDfsSalariesFormatEnum;
-}
 export declare class ProjectedPlayerGameStatsByDateWInjuriesDfsSalariesRequest extends SpeakeasyBase {
-    pathParams: ProjectedPlayerGameStatsByDateWInjuriesDfsSalariesPathParams;
+    /**
+     * The date of the game(s).
+     *
+     * @remarks
+     *  <br>Examples: <code>2018-JAN-31</code>, <code>2017-OCT-01</code>.
+     *
+     */
+    date: string;
+    /**
+     * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+     */
+    format: ProjectedPlayerGameStatsByDateWInjuriesDfsSalariesFormatEnum;
 }
 export declare class ProjectedPlayerGameStatsByDateWInjuriesDfsSalariesResponse extends SpeakeasyBase {
     contentType: string;
-    playerGameProjections?: any[];
+    playerGameProjections?: shared.PlayerGameProjection[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

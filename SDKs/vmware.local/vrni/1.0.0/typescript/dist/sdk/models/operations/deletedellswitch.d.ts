@@ -1,16 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class DeleteDellSwitchPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteDellSwitchSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
+    apiKeyAuth: string;
 }
 export declare class DeleteDellSwitchRequest extends SpeakeasyBase {
-    pathParams: DeleteDellSwitchPathParams;
-    security: DeleteDellSwitchSecurity;
+    /**
+     * entity id
+     */
+    id: string;
 }
 export declare class DeleteDellSwitchResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

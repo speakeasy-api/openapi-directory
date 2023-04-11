@@ -1,41 +1,75 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class FirebaseProjectsAndroidAppsCreatePathParams extends SpeakeasyBase {
-    parent: string;
-}
-export declare class FirebaseProjectsAndroidAppsCreateQueryParams extends SpeakeasyBase {
-    dollarXgafv?: shared.XgafvEnum;
-    accessToken?: string;
-    alt?: shared.AltEnum;
-    callback?: string;
-    fields?: string;
-    key?: string;
-    oauthToken?: string;
-    prettyPrint?: boolean;
-    quotaUser?: string;
-    uploadType?: string;
-    uploadProtocol?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class FirebaseProjectsAndroidAppsCreateSecurityOption1 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class FirebaseProjectsAndroidAppsCreateSecurityOption2 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class FirebaseProjectsAndroidAppsCreateSecurity extends SpeakeasyBase {
     option1?: FirebaseProjectsAndroidAppsCreateSecurityOption1;
     option2?: FirebaseProjectsAndroidAppsCreateSecurityOption2;
 }
 export declare class FirebaseProjectsAndroidAppsCreateRequest extends SpeakeasyBase {
-    pathParams: FirebaseProjectsAndroidAppsCreatePathParams;
-    queryParams: FirebaseProjectsAndroidAppsCreateQueryParams;
-    request?: shared.AndroidAppInput;
-    security: FirebaseProjectsAndroidAppsCreateSecurity;
+    /**
+     * V1 error format.
+     */
+    dollarXgafv?: shared.XgafvEnum;
+    androidAppInput?: shared.AndroidAppInput;
+    /**
+     * OAuth access token.
+     */
+    accessToken?: string;
+    /**
+     * Data format for response.
+     */
+    alt?: shared.AltEnum;
+    /**
+     * JSONP
+     */
+    callback?: string;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauthToken?: string;
+    /**
+     * The resource name of the parent FirebaseProject in which to create an AndroidApp, in the format: projects/PROJECT_IDENTIFIER/androidApps Refer to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER values.
+     */
+    parent: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    uploadType?: string;
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    uploadProtocol?: string;
 }
 export declare class FirebaseProjectsAndroidAppsCreateResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful response
+     */
     operation?: shared.Operation;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

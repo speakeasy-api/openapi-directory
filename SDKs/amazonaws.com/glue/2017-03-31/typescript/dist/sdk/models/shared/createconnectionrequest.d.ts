@@ -3,4 +3,5 @@ import { ConnectionInput } from "./connectioninput";
 export declare class CreateConnectionRequest extends SpeakeasyBase {
     catalogId?: string;
     connectionInput: ConnectionInput;
+    tags?: Record<string, string>;
 }

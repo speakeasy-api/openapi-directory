@@ -1,0 +1,92 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { DateTime } from "./datetime";
+import { OrderTrackingSignalLineItemDetails } from "./ordertrackingsignallineitemdetails";
+import { OrderTrackingSignalShipmentLineItemMapping } from "./ordertrackingsignalshipmentlineitemmapping";
+import { OrderTrackingSignalShippingInfo } from "./ordertrackingsignalshippinginfo";
+import { PriceAmount } from "./priceamount";
+/**
+ * Represents a merchant trade from which signals are extracted, e.g. shipping.
+ */
+export declare class OrderTrackingSignalInput extends SpeakeasyBase {
+    /**
+     * The price represented as a number and currency.
+     */
+    customerShippingFee?: PriceAmount;
+    /**
+     * Required. The delivery postal code, as a continuous string without spaces or dashes, e.g. "95016". This field will be anonymized in returned OrderTrackingSignal creation response.
+     */
+    deliveryPostalCode?: string;
+    /**
+     * Required. The [CLDR territory code] (http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml) for the shipping destination.
+     */
+    deliveryRegionCode?: string;
+    /**
+     * Information about line items in the order.
+     */
+    lineItems?: OrderTrackingSignalLineItemDetails[];
+    /**
+     * The Google merchant ID of this order tracking signal. This value is optional. If left unset, the caller's merchant ID is used. You must request access in order to provide data on behalf of another merchant. For more information, see [Submitting Order Tracking Signals](/shopping-content/guides/order-tracking-signals).
+     */
+    merchantId?: string;
+    /**
+     * Represents civil time (or occasionally physical time). This type can represent a civil time in one of a few possible ways: * When utc_offset is set and time_zone is unset: a civil time on a calendar day with a particular offset from UTC. * When time_zone is set and utc_offset is unset: a civil time on a calendar day in a particular time zone. * When neither time_zone nor utc_offset is set: a civil time on a calendar day in local time. The date is relative to the Proleptic Gregorian Calendar. If year, month, or day are 0, the DateTime is considered not to have a specific year, month, or day respectively. This type may also be used to represent a physical time if all the date and time fields are set and either case of the `time_offset` oneof is set. Consider using `Timestamp` message for physical time instead. If your use case also would like to store the user's timezone, that can be done in another field. This type is more flexible than some applications may want. Make sure to document and validate your application's limitations.
+     */
+    orderCreatedTime?: DateTime;
+    /**
+     * Required. The ID of the order on the merchant side. This field will be hashed in returned OrderTrackingSignal creation response.
+     */
+    orderId?: string;
+    /**
+     * The mapping of the line items to the shipment information.
+     */
+    shipmentLineItemMapping?: OrderTrackingSignalShipmentLineItemMapping[];
+    /**
+     * The shipping information for the order.
+     */
+    shippingInfo?: OrderTrackingSignalShippingInfo[];
+}
+/**
+ * Represents a merchant trade from which signals are extracted, e.g. shipping.
+ */
+export declare class OrderTrackingSignal extends SpeakeasyBase {
+    /**
+     * The price represented as a number and currency.
+     */
+    customerShippingFee?: PriceAmount;
+    /**
+     * Required. The delivery postal code, as a continuous string without spaces or dashes, e.g. "95016". This field will be anonymized in returned OrderTrackingSignal creation response.
+     */
+    deliveryPostalCode?: string;
+    /**
+     * Required. The [CLDR territory code] (http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml) for the shipping destination.
+     */
+    deliveryRegionCode?: string;
+    /**
+     * Information about line items in the order.
+     */
+    lineItems?: OrderTrackingSignalLineItemDetails[];
+    /**
+     * The Google merchant ID of this order tracking signal. This value is optional. If left unset, the caller's merchant ID is used. You must request access in order to provide data on behalf of another merchant. For more information, see [Submitting Order Tracking Signals](/shopping-content/guides/order-tracking-signals).
+     */
+    merchantId?: string;
+    /**
+     * Represents civil time (or occasionally physical time). This type can represent a civil time in one of a few possible ways: * When utc_offset is set and time_zone is unset: a civil time on a calendar day with a particular offset from UTC. * When time_zone is set and utc_offset is unset: a civil time on a calendar day in a particular time zone. * When neither time_zone nor utc_offset is set: a civil time on a calendar day in local time. The date is relative to the Proleptic Gregorian Calendar. If year, month, or day are 0, the DateTime is considered not to have a specific year, month, or day respectively. This type may also be used to represent a physical time if all the date and time fields are set and either case of the `time_offset` oneof is set. Consider using `Timestamp` message for physical time instead. If your use case also would like to store the user's timezone, that can be done in another field. This type is more flexible than some applications may want. Make sure to document and validate your application's limitations.
+     */
+    orderCreatedTime?: DateTime;
+    /**
+     * Required. The ID of the order on the merchant side. This field will be hashed in returned OrderTrackingSignal creation response.
+     */
+    orderId?: string;
+    /**
+     * Output only. The ID that uniquely identifies this order tracking signal.
+     */
+    orderTrackingSignalId?: string;
+    /**
+     * The mapping of the line items to the shipment information.
+     */
+    shipmentLineItemMapping?: OrderTrackingSignalShipmentLineItemMapping[];
+    /**
+     * The shipping information for the order.
+     */
+    shippingInfo?: OrderTrackingSignalShippingInfo[];
+}

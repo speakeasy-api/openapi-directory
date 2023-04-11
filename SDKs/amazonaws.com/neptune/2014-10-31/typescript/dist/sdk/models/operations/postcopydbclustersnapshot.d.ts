@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCopyDbClusterSnapshotActionEnum {
-    CopyDbClusterSnapshot = "CopyDBClusterSnapshot"
+import { AxiosResponse } from "axios";
+export declare enum POSTCopyDBClusterSnapshotActionEnum {
+    CopyDBClusterSnapshot = "CopyDBClusterSnapshot"
 }
-export declare enum PostCopyDbClusterSnapshotVersionEnum {
+export declare enum POSTCopyDBClusterSnapshotVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class PostCopyDbClusterSnapshotQueryParams extends SpeakeasyBase {
-    action: PostCopyDbClusterSnapshotActionEnum;
-    version: PostCopyDbClusterSnapshotVersionEnum;
-}
-export declare class PostCopyDbClusterSnapshotHeaders extends SpeakeasyBase {
+export declare class POSTCopyDBClusterSnapshotRequest extends SpeakeasyBase {
+    action: POSTCopyDBClusterSnapshotActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCopyDBClusterSnapshotVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCopyDbClusterSnapshotHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCopyDbClusterSnapshotRequest extends SpeakeasyBase {
-    queryParams: PostCopyDbClusterSnapshotQueryParams;
-    headers: PostCopyDbClusterSnapshotHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCopyDbClusterSnapshotResponse extends SpeakeasyBase {
+export declare class POSTCopyDBClusterSnapshotResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

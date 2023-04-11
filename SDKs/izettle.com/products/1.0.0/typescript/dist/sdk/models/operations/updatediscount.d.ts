@@ -1,25 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdateDiscountPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class UpdateDiscountSecurity extends SpeakeasyBase {
+    zettleOauth: string;
+}
+export declare class UpdateDiscountRequest extends SpeakeasyBase {
+    discountRequest: shared.DiscountRequest;
+    ifMatch?: string;
     discountUuid: string;
     organizationUuid: string;
 }
-export declare class UpdateDiscountHeaders extends SpeakeasyBase {
-    ifMatch?: string;
-}
-export declare class UpdateDiscountSecurity extends SpeakeasyBase {
-    zettleApiKey?: shared.SchemeZettleApiKey;
-    zettleOauth?: shared.SchemeZettleOauth;
-}
-export declare class UpdateDiscountRequest extends SpeakeasyBase {
-    pathParams: UpdateDiscountPathParams;
-    headers: UpdateDiscountHeaders;
-    request: shared.DiscountRequest;
-    security: UpdateDiscountSecurity;
-}
 export declare class UpdateDiscountResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Invalid request body
+     */
     errorResponse?: shared.ErrorResponse;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

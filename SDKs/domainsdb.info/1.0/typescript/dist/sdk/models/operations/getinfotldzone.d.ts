@@ -1,18 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetInfoTldZonePathParams extends SpeakeasyBase {
-    zone: string;
-}
-export declare class GetInfoTldZoneQueryParams extends SpeakeasyBase {
-    limit?: number;
-    page?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetInfoTldZoneRequest extends SpeakeasyBase {
-    pathParams: GetInfoTldZonePathParams;
-    queryParams: GetInfoTldZoneQueryParams;
+    /**
+     * Results per page
+     */
+    limit?: number;
+    /**
+     * Search page to request
+     */
+    page?: string;
+    zone: string;
 }
 export declare class GetInfoTldZoneResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     zoneInfo?: shared.ZoneInfo;
 }

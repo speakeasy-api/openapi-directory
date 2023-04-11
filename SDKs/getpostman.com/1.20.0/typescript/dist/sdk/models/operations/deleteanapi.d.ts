@@ -1,18 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteAnApiPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteAnApiRequest extends SpeakeasyBase {
     apiId: string;
 }
-export declare class DeleteAnApi200ApplicationJsonApi extends SpeakeasyBase {
+export declare class DeleteAnApi200ApplicationJSONApi extends SpeakeasyBase {
     id?: string;
 }
-export declare class DeleteAnApi200ApplicationJson extends SpeakeasyBase {
-    api?: DeleteAnApi200ApplicationJsonApi;
-}
-export declare class DeleteAnApiRequest extends SpeakeasyBase {
-    pathParams: DeleteAnApiPathParams;
+/**
+ * Delete an API
+ */
+export declare class DeleteAnApi200ApplicationJSON extends SpeakeasyBase {
+    api?: DeleteAnApi200ApplicationJSONApi;
 }
 export declare class DeleteAnApiResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deleteAnApi200ApplicationJSONObject?: DeleteAnApi200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Delete an API
+     */
+    deleteAnApi200ApplicationJSONObject?: DeleteAnApi200ApplicationJSON;
 }

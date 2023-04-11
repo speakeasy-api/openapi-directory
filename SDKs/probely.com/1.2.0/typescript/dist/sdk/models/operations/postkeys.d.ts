@@ -1,18 +1,35 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PostKeys401ApplicationJson extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+/**
+ * Not allowed to perform operation
+ */
+export declare class PostKeys403ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error message.
+     */
     detail?: string;
 }
-export declare class PostKeys403ApplicationJson extends SpeakeasyBase {
+/**
+ * Access token is missing or invalid
+ */
+export declare class PostKeys401ApplicationJSON extends SpeakeasyBase {
     detail?: string;
-}
-export declare class PostKeysRequest extends SpeakeasyBase {
-    request: shared.ApiKeyInput;
 }
 export declare class PostKeysResponse extends SpeakeasyBase {
-    apiKey?: shared.ApiKey;
+    /**
+     * API Key object
+     */
+    apiKey?: shared.APIKey;
     contentType: string;
     statusCode: number;
-    postKeys401ApplicationJSONObject?: PostKeys401ApplicationJson;
-    postKeys403ApplicationJSONObject?: PostKeys403ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Access token is missing or invalid
+     */
+    postKeys401ApplicationJSONObject?: PostKeys401ApplicationJSON;
+    /**
+     * Not allowed to perform operation
+     */
+    postKeys403ApplicationJSONObject?: PostKeys403ApplicationJSON;
 }

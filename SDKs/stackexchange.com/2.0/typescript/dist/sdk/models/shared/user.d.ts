@@ -4,6 +4,9 @@ export declare class UserBadgeCounts extends SpeakeasyBase {
     gold?: number;
     silver?: number;
 }
+/**
+ * OK
+ */
 export declare class User extends SpeakeasyBase {
     aboutMe?: string;
     acceptRate?: number;

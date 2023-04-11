@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteSubnetGroupXAmzTargetEnum {
-    AmazonMemoryDbDeleteSubnetGroup = "AmazonMemoryDB.DeleteSubnetGroup"
+    AmazonMemoryDBDeleteSubnetGroup = "AmazonMemoryDB.DeleteSubnetGroup"
 }
-export declare class DeleteSubnetGroupHeaders extends SpeakeasyBase {
+export declare class DeleteSubnetGroupRequest extends SpeakeasyBase {
+    deleteSubnetGroupRequest: shared.DeleteSubnetGroupRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class DeleteSubnetGroupHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteSubnetGroupXAmzTargetEnum;
 }
-export declare class DeleteSubnetGroupRequest extends SpeakeasyBase {
-    headers: DeleteSubnetGroupHeaders;
-    request: shared.DeleteSubnetGroupRequest;
-}
 export declare class DeleteSubnetGroupResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deleteSubnetGroupResponse?: shared.DeleteSubnetGroupResponse;
-    serviceLinkedRoleNotFoundFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceLinkedRoleNotFoundFault
+     */
+    serviceLinkedRoleNotFoundFault?: any;
+    /**
+     * SubnetGroupInUseFault
+     */
     subnetGroupInUseFault?: any;
+    /**
+     * SubnetGroupNotFoundFault
+     */
     subnetGroupNotFoundFault?: any;
 }

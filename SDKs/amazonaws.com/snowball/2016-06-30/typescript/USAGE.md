@@ -1,31 +1,31 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CancelClusterRequest, CancelClusterResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CancelClusterRequest,
+  CancelClusterResponse,
+  CancelClusterXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    hmac: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: CancelClusterRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "AWSIESnowballJobManagementService.CancelCluster",
+  cancelClusterRequest: {
+    clusterId: "corrupti",
   },
-  request: {
-    clusterId: "fugit",
-  },
+  xAmzAlgorithm: "provident",
+  xAmzContentSha256: "distinctio",
+  xAmzCredential: "quibusdam",
+  xAmzDate: "unde",
+  xAmzSecurityToken: "nulla",
+  xAmzSignature: "corrupti",
+  xAmzSignedHeaders: "illum",
+  xAmzTarget: CancelClusterXAmzTargetEnum.AWSIESnowballJobManagementServiceCancelCluster,
 };
 
 sdk.cancelCluster(req).then((res: CancelClusterResponse | AxiosError) => {

@@ -1,118 +1,182 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class IlpmtSecurity extends SpeakeasyBase {
+    apiKey: string;
+    clientId: string;
+}
 export declare class IlpmtRequestBodyCertificateParameters extends SpeakeasyBase {
+    /**
+     * Full name
+     */
     fullName: string;
+    /**
+     * Aadhaar number
+     */
     uid: string;
+    /**
+     * Application ID
+     */
     eILPAppId: string;
+    /**
+     * Contact Number
+     */
     eILPContactNumber: string;
 }
+/**
+ * The format of the certificate in response.
+ */
 export declare enum IlpmtRequestBodyFormatEnum {
     Pdf = "pdf"
 }
+/**
+ * Request format
+ */
 export declare class IlpmtRequestBody extends SpeakeasyBase {
     certificateParameters?: IlpmtRequestBodyCertificateParameters;
-    consentArtifact?: any;
+    consentArtifact?: shared.ConsentArtifactSchema;
+    /**
+     * The format of the certificate in response.
+     */
     format: IlpmtRequestBodyFormatEnum;
+    /**
+     * A unique transaction id for this request in UUID format. It is used for tracking the request.
+     */
     txnId: string;
 }
-export declare class IlpmtSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
-    clientId: shared.SchemeClientId;
+export declare enum Ilpmt504ApplicationJSONErrorEnum {
+    GatewayTimeout = "gateway_timeout"
 }
-export declare enum Ilpmt400ApplicationJsonErrorEnum {
+export declare enum Ilpmt504ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
+}
+/**
+ * Gateway timeout
+ */
+export declare class Ilpmt504ApplicationJSON extends SpeakeasyBase {
+    error?: Ilpmt504ApplicationJSONErrorEnum;
+    errorDescription?: Ilpmt504ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Ilpmt503ApplicationJSONErrorEnum {
+    ServiceUnavailable = "service_unavailable"
+}
+export declare enum Ilpmt503ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
+}
+/**
+ * Service unavailable
+ */
+export declare class Ilpmt503ApplicationJSON extends SpeakeasyBase {
+    error?: Ilpmt503ApplicationJSONErrorEnum;
+    errorDescription?: Ilpmt503ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Ilpmt502ApplicationJSONErrorEnum {
+    BadGatewy = "bad_gatewy"
+}
+export declare enum Ilpmt502ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
+}
+/**
+ * Bad gateway
+ */
+export declare class Ilpmt502ApplicationJSON extends SpeakeasyBase {
+    error?: Ilpmt502ApplicationJSONErrorEnum;
+    errorDescription?: Ilpmt502ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Ilpmt500ApplicationJSONErrorEnum {
+    InternalServerError = "internal_server_error"
+}
+export declare enum Ilpmt500ApplicationJSONErrorDescriptionEnum {
+    InternalServerError = "Internal server error"
+}
+/**
+ * Internal server error
+ */
+export declare class Ilpmt500ApplicationJSON extends SpeakeasyBase {
+    error?: Ilpmt500ApplicationJSONErrorEnum;
+    errorDescription?: Ilpmt500ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Ilpmt404ApplicationJSONErrorEnum {
+    RecordNotFound = "record_not_found",
+    UrlNotFound = "url_not_found"
+}
+export declare enum Ilpmt404ApplicationJSONErrorDescriptionEnum {
+    NoRecordFound = "No record found",
+    YourAPIUrlOrPathIsIncorrect = "Your API url or path is incorrect"
+}
+/**
+ * No record found
+ */
+export declare class Ilpmt404ApplicationJSON extends SpeakeasyBase {
+    error?: Ilpmt404ApplicationJSONErrorEnum;
+    errorDescription?: Ilpmt404ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Ilpmt401ApplicationJSONErrorEnum {
+    InvalidAuthentication = "invalid_authentication",
+    InvalidAuthorization = "invalid_authorization"
+}
+export declare enum Ilpmt401ApplicationJSONErrorDescriptionEnum {
+    AuthenticationFailed = "Authentication failed",
+    YouAreNotAuthorizedToUseThisAPI = "You are not authorized to use this API"
+}
+/**
+ * Unauthorized access
+ */
+export declare class Ilpmt401ApplicationJSON extends SpeakeasyBase {
+    error?: Ilpmt401ApplicationJSONErrorEnum;
+    errorDescription?: Ilpmt401ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Ilpmt400ApplicationJSONErrorEnum {
     MissingParameter = "missing_parameter",
     InvalidParameter = "invalid_parameter",
     InvalidFormat = "invalid_format",
     InvalidTxnid = "invalid_txnid",
     InvalidConsentid = "invalid_consentid"
 }
-export declare enum Ilpmt400ApplicationJsonErrorDescriptionEnum {
+export declare enum Ilpmt400ApplicationJSONErrorDescriptionEnum {
     PleaseProvideAllMandatoryParameters = "Please provide all mandatory parameters",
     BadRequest = "Bad request",
     TheFormatParameterIsInvalid = "The format parameter is invalid",
-    TheTxnIdParameterMustBeInUuidFormat = "The txnId parameter must be in UUID format",
-    TheConsentIdParameterMustBeInUuidFormat = "The consentId parameter must be in UUID format"
+    TheTxnIdParameterMustBeInUUIDFormat = "The txnId parameter must be in UUID format",
+    TheConsentIdParameterMustBeInUUIDFormat = "The consentId parameter must be in UUID format"
 }
-export declare class Ilpmt400ApplicationJson extends SpeakeasyBase {
-    error?: Ilpmt400ApplicationJsonErrorEnum;
-    errorDescription?: Ilpmt400ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Ilpmt401ApplicationJsonErrorEnum {
-    InvalidAuthentication = "invalid_authentication",
-    InvalidAuthorization = "invalid_authorization"
-}
-export declare enum Ilpmt401ApplicationJsonErrorDescriptionEnum {
-    AuthenticationFailed = "Authentication failed",
-    YouAreNotAuthorizedToUseThisApi = "You are not authorized to use this API"
-}
-export declare class Ilpmt401ApplicationJson extends SpeakeasyBase {
-    error?: Ilpmt401ApplicationJsonErrorEnum;
-    errorDescription?: Ilpmt401ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Ilpmt404ApplicationJsonErrorEnum {
-    RecordNotFound = "record_not_found",
-    UrlNotFound = "url_not_found"
-}
-export declare enum Ilpmt404ApplicationJsonErrorDescriptionEnum {
-    NoRecordFound = "No record found",
-    YourApiUrlOrPathIsIncorrect = "Your API url or path is incorrect"
-}
-export declare class Ilpmt404ApplicationJson extends SpeakeasyBase {
-    error?: Ilpmt404ApplicationJsonErrorEnum;
-    errorDescription?: Ilpmt404ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Ilpmt500ApplicationJsonErrorEnum {
-    InternalServerError = "internal_server_error"
-}
-export declare enum Ilpmt500ApplicationJsonErrorDescriptionEnum {
-    InternalServerError = "Internal server error"
-}
-export declare class Ilpmt500ApplicationJson extends SpeakeasyBase {
-    error?: Ilpmt500ApplicationJsonErrorEnum;
-    errorDescription?: Ilpmt500ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Ilpmt502ApplicationJsonErrorEnum {
-    BadGatewy = "bad_gatewy"
-}
-export declare enum Ilpmt502ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
-}
-export declare class Ilpmt502ApplicationJson extends SpeakeasyBase {
-    error?: Ilpmt502ApplicationJsonErrorEnum;
-    errorDescription?: Ilpmt502ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Ilpmt503ApplicationJsonErrorEnum {
-    ServiceUnavailable = "service_unavailable"
-}
-export declare enum Ilpmt503ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
-}
-export declare class Ilpmt503ApplicationJson extends SpeakeasyBase {
-    error?: Ilpmt503ApplicationJsonErrorEnum;
-    errorDescription?: Ilpmt503ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Ilpmt504ApplicationJsonErrorEnum {
-    GatewayTimeout = "gateway_timeout"
-}
-export declare enum Ilpmt504ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
-}
-export declare class Ilpmt504ApplicationJson extends SpeakeasyBase {
-    error?: Ilpmt504ApplicationJsonErrorEnum;
-    errorDescription?: Ilpmt504ApplicationJsonErrorDescriptionEnum;
-}
-export declare class IlpmtRequest extends SpeakeasyBase {
-    request?: IlpmtRequestBody;
-    security: IlpmtSecurity;
+/**
+ * Bad request
+ */
+export declare class Ilpmt400ApplicationJSON extends SpeakeasyBase {
+    error?: Ilpmt400ApplicationJSONErrorEnum;
+    errorDescription?: Ilpmt400ApplicationJSONErrorDescriptionEnum;
 }
 export declare class IlpmtResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    ilpmt400ApplicationJSONObject?: Ilpmt400ApplicationJson;
-    ilpmt401ApplicationJSONObject?: Ilpmt401ApplicationJson;
-    ilpmt404ApplicationJSONObject?: Ilpmt404ApplicationJson;
-    ilpmt500ApplicationJSONObject?: Ilpmt500ApplicationJson;
-    ilpmt502ApplicationJSONObject?: Ilpmt502ApplicationJson;
-    ilpmt503ApplicationJSONObject?: Ilpmt503ApplicationJson;
-    ilpmt504ApplicationJSONObject?: Ilpmt504ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad request
+     */
+    ilpmt400ApplicationJSONObject?: Ilpmt400ApplicationJSON;
+    /**
+     * Unauthorized access
+     */
+    ilpmt401ApplicationJSONObject?: Ilpmt401ApplicationJSON;
+    /**
+     * No record found
+     */
+    ilpmt404ApplicationJSONObject?: Ilpmt404ApplicationJSON;
+    /**
+     * Internal server error
+     */
+    ilpmt500ApplicationJSONObject?: Ilpmt500ApplicationJSON;
+    /**
+     * Bad gateway
+     */
+    ilpmt502ApplicationJSONObject?: Ilpmt502ApplicationJSON;
+    /**
+     * Service unavailable
+     */
+    ilpmt503ApplicationJSONObject?: Ilpmt503ApplicationJSON;
+    /**
+     * Gateway timeout
+     */
+    ilpmt504ApplicationJSONObject?: Ilpmt504ApplicationJSON;
 }

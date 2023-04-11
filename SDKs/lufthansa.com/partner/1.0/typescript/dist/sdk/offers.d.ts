@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Offers {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,69 +9,80 @@ export declare class Offers {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * allFares - All Fares
+     * All Fares
      *
+     * @remarks
      * Retrieves all available fares for a specific Origin & Destination pair on a given date. Available fares are: One-way and Return for 4U. Return only for OS
-    **/
-    allFares(req: operations.AllFaresRequest, config?: AxiosRequestConfig): Promise<operations.AllFaresResponse>;
+     */
+    allFares(req: operations.AllFaresRequest, security: operations.AllFaresSecurity, config?: AxiosRequestConfig): Promise<operations.AllFaresResponse>;
     /**
-     * bestFares - Best Fares
+     * Best Fares
      *
+     * @remarks
      * Retrieve best fares for the requested journey across multiple days or multiple months.
-    **/
-    bestFares(req: operations.BestFaresRequest, config?: AxiosRequestConfig): Promise<operations.BestFaresResponse>;
+     */
+    bestFares(req: operations.BestFaresRequest, security: operations.BestFaresSecurity, config?: AxiosRequestConfig): Promise<operations.BestFaresResponse>;
     /**
-     * deepLinks - Deep Links
+     * Deep Links
      *
+     * @remarks
      * Returns valid deep links for the provided input parameters
-    **/
-    deepLinks(req: operations.DeepLinksRequest, config?: AxiosRequestConfig): Promise<operations.DeepLinksResponse>;
+     */
+    deepLinks(req: operations.DeepLinksRequest, security: operations.DeepLinksSecurity, config?: AxiosRequestConfig): Promise<operations.DeepLinksResponse>;
     /**
-     * fares - Fares
+     * Fares
      *
+     * @remarks
      * Retrieve all available fares per fare family for a specific Origin & Destination on a given date
-    **/
-    fares(req: operations.FaresRequest, config?: AxiosRequestConfig): Promise<operations.FaresResponse>;
+     */
+    fares(req: operations.FaresRequest, security: operations.FaresSecurity, config?: AxiosRequestConfig): Promise<operations.FaresResponse>;
     /**
-     * faresSubscriptions - Fares Subscriptions
+     * Fares Subscriptions
      *
+     * @remarks
      * Create a subscription for best price O&D. Receive regular updates on lowest fares
-    **/
-    faresSubscriptions(req: operations.FaresSubscriptionsRequest, config?: AxiosRequestConfig): Promise<operations.FaresSubscriptionsResponse>;
+     */
+    faresSubscriptions(req: operations.FaresSubscriptionsRequest, security: operations.FaresSubscriptionsSecurity, config?: AxiosRequestConfig): Promise<operations.FaresSubscriptionsResponse>;
     /**
-     * lhDeepLinksFfp - LH Deep Links - FFP
+     * LH Deep Links - FFP
      *
+     * @remarks
      * Returns valid LH deep links (FFP - links to flight selection screen on LH.COM)
-    **/
-    lhDeepLinksFfp(req: operations.LhDeepLinksFfpRequest, config?: AxiosRequestConfig): Promise<operations.LhDeepLinksFfpResponse>;
+     */
+    lhDeepLinksFFP(req: operations.LHDeepLinksFFPRequest, security: operations.LHDeepLinksFFPSecurity, config?: AxiosRequestConfig): Promise<operations.LHDeepLinksFFPResponse>;
     /**
-     * lhDeepLinksItco - LH Deep Links - ITCO
+     * LH Deep Links - ITCO
      *
+     * @remarks
      * Returns valid LH deep links (ITCO - links to shopping cart on LH.COM)
-    **/
-    lhDeepLinksItco(req: operations.LhDeepLinksItcoRequest, config?: AxiosRequestConfig): Promise<operations.LhDeepLinksItcoResponse>;
+     */
+    lhDeepLinksITCO(req: operations.LHDeepLinksITCORequest, security: operations.LHDeepLinksITCOSecurity, config?: AxiosRequestConfig): Promise<operations.LHDeepLinksITCOResponse>;
     /**
-     * lowestFares - Lowest Fares
+     * Lowest Fares
      *
+     * @remarks
      * Retrieve lowest fare for a specific Origin & Destination pair on a given date. Available fares are: One-way and Return for 4U. Return only for OS & LH
-    **/
-    lowestFares(req: operations.LowestFaresRequest, config?: AxiosRequestConfig): Promise<operations.LowestFaresResponse>;
+     */
+    lowestFares(req: operations.LowestFaresRequest, security: operations.LowestFaresSecurity, config?: AxiosRequestConfig): Promise<operations.LowestFaresResponse>;
     /**
-     * ondRoute - OND Route
+     * OND Route
      *
+     * @remarks
      * Returns LH route origin & destination information
-    **/
-    ondRoute(req: operations.OndRouteRequest, config?: AxiosRequestConfig): Promise<operations.OndRouteResponse>;
+     */
+    ondRoute(req: operations.ONDRouteRequest, security: operations.ONDRouteSecurity, config?: AxiosRequestConfig): Promise<operations.ONDRouteResponse>;
     /**
-     * ondStatus - OND Status
+     * OND Status
      *
+     * @remarks
      * Returns LH network route status information. Search for recently added or retired routes
-    **/
-    ondStatus(req: operations.OndStatusRequest, config?: AxiosRequestConfig): Promise<operations.OndStatusResponse>;
+     */
+    ondStatus(req: operations.ONDStatusRequest, security: operations.ONDStatusSecurity, config?: AxiosRequestConfig): Promise<operations.ONDStatusResponse>;
     /**
-     * topOnd - Top OND
+     * Top OND
      *
+     * @remarks
      * Returns LH Top routes per country or across all countries
-    **/
-    topOnd(req: operations.TopOndRequest, config?: AxiosRequestConfig): Promise<operations.TopOndResponse>;
+     */
+    topOND(req: operations.TopONDRequest, security: operations.TopONDSecurity, config?: AxiosRequestConfig): Promise<operations.TopONDResponse>;
 }

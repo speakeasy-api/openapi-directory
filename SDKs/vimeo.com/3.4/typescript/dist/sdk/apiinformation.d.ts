@@ -1,6 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class ApiInformation {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+export declare class APIInformation {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,7 +9,7 @@ export declare class ApiInformation {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getEndpoints - Get an API specification
-    **/
+     * Get an API specification
+     */
     getEndpoints(req: operations.GetEndpointsRequest, config?: AxiosRequestConfig): Promise<operations.GetEndpointsResponse>;
 }

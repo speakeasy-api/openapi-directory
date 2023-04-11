@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteInstanceEventWindowActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteInstanceEventWindowActionEnum {
     DeleteInstanceEventWindow = "DeleteInstanceEventWindow"
 }
-export declare enum PostDeleteInstanceEventWindowVersionEnum {
+export declare enum POSTDeleteInstanceEventWindowVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDeleteInstanceEventWindowQueryParams extends SpeakeasyBase {
-    action: PostDeleteInstanceEventWindowActionEnum;
-    version: PostDeleteInstanceEventWindowVersionEnum;
-}
-export declare class PostDeleteInstanceEventWindowHeaders extends SpeakeasyBase {
+export declare class POSTDeleteInstanceEventWindowRequest extends SpeakeasyBase {
+    action: POSTDeleteInstanceEventWindowActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteInstanceEventWindowVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteInstanceEventWindowHeaders extends SpeakeasyBase 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteInstanceEventWindowRequest extends SpeakeasyBase {
-    queryParams: PostDeleteInstanceEventWindowQueryParams;
-    headers: PostDeleteInstanceEventWindowHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteInstanceEventWindowResponse extends SpeakeasyBase {
+export declare class POSTDeleteInstanceEventWindowResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

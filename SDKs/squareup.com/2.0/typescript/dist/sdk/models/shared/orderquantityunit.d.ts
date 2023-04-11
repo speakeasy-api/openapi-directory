@@ -1,0 +1,37 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { MeasurementUnit } from "./measurementunit";
+/**
+ * Contains the measurement unit for a quantity and a precision that
+ *
+ * @remarks
+ * specifies the number of digits after the decimal point for decimal quantities.
+ */
+export declare class OrderQuantityUnit extends SpeakeasyBase {
+    /**
+     * The version of the catalog object that this measurement unit references.
+     *
+     * @remarks
+     *
+     * This field is set when this is a catalog-backed measurement unit.
+     */
+    catalogVersion?: number;
+    /**
+     * Represents a unit of measurement to use with a quantity, such as ounces
+     *
+     * @remarks
+     * or inches. Exactly one of the following fields are required: `custom_unit`,
+     * `area_unit`, `length_unit`, `volume_unit`, and `weight_unit`.
+     */
+    measurementUnit?: MeasurementUnit;
+    /**
+     * For non-integer quantities, represents the number of digits after the decimal point that are
+     *
+     * @remarks
+     * recorded for this quantity.
+     *
+     * For example, a precision of 1 allows quantities such as `"1.0"` and `"1.1"`, but not `"1.01"`.
+     *
+     * Min: 0. Max: 5.
+     */
+    precision?: number;
+}

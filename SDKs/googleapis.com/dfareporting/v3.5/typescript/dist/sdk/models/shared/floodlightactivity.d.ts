@@ -1,0 +1,278 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { DimensionValue } from "./dimensionvalue";
+import { FloodlightActivityDynamicTag } from "./floodlightactivitydynamictag";
+import { FloodlightActivityPublisherDynamicTag } from "./floodlightactivitypublisherdynamictag";
+/**
+ * Code type used for cache busting in the generated tag. Applicable only when floodlightActivityGroupType is COUNTER and countingMethod is STANDARD_COUNTING or UNIQUE_COUNTING.
+ */
+export declare enum FloodlightActivityCacheBustingTypeEnum {
+    Javascript = "JAVASCRIPT",
+    ActiveServerPage = "ACTIVE_SERVER_PAGE",
+    Jsp = "JSP",
+    Php = "PHP",
+    ColdFusion = "COLD_FUSION"
+}
+/**
+ * Counting method for conversions for this floodlight activity. This is a required field.
+ */
+export declare enum FloodlightActivityCountingMethodEnum {
+    StandardCounting = "STANDARD_COUNTING",
+    UniqueCounting = "UNIQUE_COUNTING",
+    SessionCounting = "SESSION_COUNTING",
+    TransactionsCounting = "TRANSACTIONS_COUNTING",
+    ItemsSoldCounting = "ITEMS_SOLD_COUNTING"
+}
+/**
+ * Type of the associated floodlight activity group. This is a read-only field.
+ */
+export declare enum FloodlightActivityFloodlightActivityGroupTypeEnum {
+    Counter = "COUNTER",
+    Sale = "SALE"
+}
+/**
+ * The type of Floodlight tag this activity will generate. This is a required field.
+ */
+export declare enum FloodlightActivityFloodlightTagTypeEnum {
+    Iframe = "IFRAME",
+    Image = "IMAGE",
+    GlobalSiteTag = "GLOBAL_SITE_TAG"
+}
+/**
+ * The status of the activity. This can only be set to ACTIVE or ARCHIVED_AND_DISABLED. The ARCHIVED status is no longer supported and cannot be set for Floodlight activities. The DISABLED_POLICY status indicates that a Floodlight activity is violating Google policy. Contact your account manager for more information.
+ */
+export declare enum FloodlightActivityStatusEnum {
+    Active = "ACTIVE",
+    ArchivedAndDisabled = "ARCHIVED_AND_DISABLED",
+    Archived = "ARCHIVED",
+    DisabledPolicy = "DISABLED_POLICY"
+}
+/**
+ * Tag format type for the floodlight activity. If left blank, the tag format will default to HTML.
+ */
+export declare enum FloodlightActivityTagFormatEnum {
+    Html = "HTML",
+    Xhtml = "XHTML"
+}
+export declare enum FloodlightActivityUserDefinedVariableTypesEnum {
+    U1 = "U1",
+    U2 = "U2",
+    U3 = "U3",
+    U4 = "U4",
+    U5 = "U5",
+    U6 = "U6",
+    U7 = "U7",
+    U8 = "U8",
+    U9 = "U9",
+    U10 = "U10",
+    U11 = "U11",
+    U12 = "U12",
+    U13 = "U13",
+    U14 = "U14",
+    U15 = "U15",
+    U16 = "U16",
+    U17 = "U17",
+    U18 = "U18",
+    U19 = "U19",
+    U20 = "U20",
+    U21 = "U21",
+    U22 = "U22",
+    U23 = "U23",
+    U24 = "U24",
+    U25 = "U25",
+    U26 = "U26",
+    U27 = "U27",
+    U28 = "U28",
+    U29 = "U29",
+    U30 = "U30",
+    U31 = "U31",
+    U32 = "U32",
+    U33 = "U33",
+    U34 = "U34",
+    U35 = "U35",
+    U36 = "U36",
+    U37 = "U37",
+    U38 = "U38",
+    U39 = "U39",
+    U40 = "U40",
+    U41 = "U41",
+    U42 = "U42",
+    U43 = "U43",
+    U44 = "U44",
+    U45 = "U45",
+    U46 = "U46",
+    U47 = "U47",
+    U48 = "U48",
+    U49 = "U49",
+    U50 = "U50",
+    U51 = "U51",
+    U52 = "U52",
+    U53 = "U53",
+    U54 = "U54",
+    U55 = "U55",
+    U56 = "U56",
+    U57 = "U57",
+    U58 = "U58",
+    U59 = "U59",
+    U60 = "U60",
+    U61 = "U61",
+    U62 = "U62",
+    U63 = "U63",
+    U64 = "U64",
+    U65 = "U65",
+    U66 = "U66",
+    U67 = "U67",
+    U68 = "U68",
+    U69 = "U69",
+    U70 = "U70",
+    U71 = "U71",
+    U72 = "U72",
+    U73 = "U73",
+    U74 = "U74",
+    U75 = "U75",
+    U76 = "U76",
+    U77 = "U77",
+    U78 = "U78",
+    U79 = "U79",
+    U80 = "U80",
+    U81 = "U81",
+    U82 = "U82",
+    U83 = "U83",
+    U84 = "U84",
+    U85 = "U85",
+    U86 = "U86",
+    U87 = "U87",
+    U88 = "U88",
+    U89 = "U89",
+    U90 = "U90",
+    U91 = "U91",
+    U92 = "U92",
+    U93 = "U93",
+    U94 = "U94",
+    U95 = "U95",
+    U96 = "U96",
+    U97 = "U97",
+    U98 = "U98",
+    U99 = "U99",
+    U100 = "U100"
+}
+/**
+ * Contains properties of a Floodlight activity.
+ */
+export declare class FloodlightActivity extends SpeakeasyBase {
+    /**
+     * Account ID of this floodlight activity. This is a read-only field that can be left blank.
+     */
+    accountId?: string;
+    /**
+     * Advertiser ID of this floodlight activity. If this field is left blank, the value will be copied over either from the activity group's advertiser or the existing activity's advertiser.
+     */
+    advertiserId?: string;
+    /**
+     * Represents a DimensionValue resource.
+     */
+    advertiserIdDimensionValue?: DimensionValue;
+    /**
+     * Whether the activity is enabled for attribution.
+     */
+    attributionEnabled?: boolean;
+    /**
+     * Code type used for cache busting in the generated tag. Applicable only when floodlightActivityGroupType is COUNTER and countingMethod is STANDARD_COUNTING or UNIQUE_COUNTING.
+     */
+    cacheBustingType?: FloodlightActivityCacheBustingTypeEnum;
+    /**
+     * Counting method for conversions for this floodlight activity. This is a required field.
+     */
+    countingMethod?: FloodlightActivityCountingMethodEnum;
+    /**
+     * Dynamic floodlight tags.
+     */
+    defaultTags?: FloodlightActivityDynamicTag[];
+    /**
+     * URL where this tag will be deployed. If specified, must be less than 256 characters long.
+     */
+    expectedUrl?: string;
+    /**
+     * Floodlight activity group ID of this floodlight activity. This is a required field.
+     */
+    floodlightActivityGroupId?: string;
+    /**
+     * Name of the associated floodlight activity group. This is a read-only field.
+     */
+    floodlightActivityGroupName?: string;
+    /**
+     * Tag string of the associated floodlight activity group. This is a read-only field.
+     */
+    floodlightActivityGroupTagString?: string;
+    /**
+     * Type of the associated floodlight activity group. This is a read-only field.
+     */
+    floodlightActivityGroupType?: FloodlightActivityFloodlightActivityGroupTypeEnum;
+    /**
+     * Floodlight configuration ID of this floodlight activity. If this field is left blank, the value will be copied over either from the activity group's floodlight configuration or from the existing activity's floodlight configuration.
+     */
+    floodlightConfigurationId?: string;
+    /**
+     * Represents a DimensionValue resource.
+     */
+    floodlightConfigurationIdDimensionValue?: DimensionValue;
+    /**
+     * The type of Floodlight tag this activity will generate. This is a required field.
+     */
+    floodlightTagType?: FloodlightActivityFloodlightTagTypeEnum;
+    /**
+     * ID of this floodlight activity. This is a read-only, auto-generated field.
+     */
+    id?: string;
+    /**
+     * Represents a DimensionValue resource.
+     */
+    idDimensionValue?: DimensionValue;
+    /**
+     * Identifies what kind of resource this is. Value: the fixed string "dfareporting#floodlightActivity".
+     */
+    kind?: string;
+    /**
+     * Name of this floodlight activity. This is a required field. Must be less than 129 characters long and cannot contain quotes.
+     */
+    name?: string;
+    /**
+     * General notes or implementation instructions for the tag.
+     */
+    notes?: string;
+    /**
+     * Publisher dynamic floodlight tags.
+     */
+    publisherTags?: FloodlightActivityPublisherDynamicTag[];
+    /**
+     * Whether this tag should use SSL.
+     */
+    secure?: boolean;
+    /**
+     * Whether the floodlight activity is SSL-compliant. This is a read-only field, its value detected by the system from the floodlight tags.
+     */
+    sslCompliant?: boolean;
+    /**
+     * Whether this floodlight activity must be SSL-compliant.
+     */
+    sslRequired?: boolean;
+    /**
+     * The status of the activity. This can only be set to ACTIVE or ARCHIVED_AND_DISABLED. The ARCHIVED status is no longer supported and cannot be set for Floodlight activities. The DISABLED_POLICY status indicates that a Floodlight activity is violating Google policy. Contact your account manager for more information.
+     */
+    status?: FloodlightActivityStatusEnum;
+    /**
+     * Subaccount ID of this floodlight activity. This is a read-only field that can be left blank.
+     */
+    subaccountId?: string;
+    /**
+     * Tag format type for the floodlight activity. If left blank, the tag format will default to HTML.
+     */
+    tagFormat?: FloodlightActivityTagFormatEnum;
+    /**
+     * Value of the cat= parameter in the floodlight tag, which the ad servers use to identify the activity. This is optional: if empty, a new tag string will be generated for you. This string must be 1 to 8 characters long, with valid characters being a-z0-9[ _ ]. This tag string must also be unique among activities of the same activity group. This field is read-only after insertion.
+     */
+    tagString?: string;
+    /**
+     * List of the user-defined variables used by this conversion tag. These map to the "u[1-100]=" in the tags. Each of these can have a user defined type. Acceptable values are U1 to U100, inclusive.
+     */
+    userDefinedVariableTypes?: FloodlightActivityUserDefinedVariableTypesEnum[];
+}

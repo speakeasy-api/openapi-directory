@@ -1,17 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AlarmStateEnum } from "./alarmstateenum";
 import { ComparisonOperatorEnum } from "./comparisonoperatorenum";
 import { ContactProtocolEnum } from "./contactprotocolenum";
-import { ResourceLocation } from "./resourcelocation";
 import { MetricNameEnum } from "./metricnameenum";
-import { MonitoredResourceInfo } from "./monitoredresourceinfo";
-import { AlarmStateEnum } from "./alarmstateenum";
-import { ResourceTypeEnum } from "./resourcetypeenum";
 import { MetricStatisticEnum } from "./metricstatisticenum";
-import { TreatMissingDataEnum } from "./treatmissingdataenum";
 import { MetricUnitEnum } from "./metricunitenum";
+import { MonitoredResourceInfo } from "./monitoredresourceinfo";
+import { ResourceLocation } from "./resourcelocation";
+import { ResourceTypeEnum } from "./resourcetypeenum";
+import { TreatMissingDataEnum } from "./treatmissingdataenum";
 /**
  * <p>Describes an alarm.</p> <p>An alarm is a way to monitor your Lightsail resource metrics. For more information, see <a href="https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-alarms">Alarms in Amazon Lightsail</a>.</p>
-**/
+ */
 export declare class Alarm extends SpeakeasyBase {
     arn?: string;
     comparisonOperator?: ComparisonOperatorEnum;

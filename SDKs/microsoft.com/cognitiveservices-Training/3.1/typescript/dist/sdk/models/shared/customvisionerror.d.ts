@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The error code.
+ */
 export declare enum CustomVisionErrorCodeEnum {
     NoError = "NoError",
     BadRequest = "BadRequest",
@@ -78,7 +81,7 @@ export declare enum CustomVisionErrorCodeEnum {
     ForbiddenUserDoesNotExist = "ForbiddenUserDoesNotExist",
     ForbiddenUserDisabled = "ForbiddenUserDisabled",
     ForbiddenUserInsufficientCapability = "ForbiddenUserInsufficientCapability",
-    ForbiddenDrModeEnabled = "ForbiddenDRModeEnabled",
+    ForbiddenDRModeEnabled = "ForbiddenDRModeEnabled",
     ForbiddenInvalid = "ForbiddenInvalid",
     NotFound = "NotFound",
     NotFoundProject = "NotFoundProject",
@@ -115,7 +118,16 @@ export declare enum CustomVisionErrorCodeEnum {
     ErrorRegionProposal = "ErrorRegionProposal",
     ErrorInvalid = "ErrorInvalid"
 }
+/**
+ * Error response
+ */
 export declare class CustomVisionError extends SpeakeasyBase {
+    /**
+     * The error code.
+     */
     code: CustomVisionErrorCodeEnum;
+    /**
+     * A message explaining the error reported by the service.
+     */
     message: string;
 }

@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class SystemTimezoneViewModel extends SpeakeasyBase {
     baseUtcOffset?: number;
     daylightName?: string;

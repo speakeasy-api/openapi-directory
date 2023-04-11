@@ -1,11 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ApiKeyOwner200ApplicationJsonOperations extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ApiKeyOwner200ApplicationJSONOperations extends SpeakeasyBase {
     limit?: number;
     name?: string;
     overage?: number;
     usage?: number;
 }
-export declare class ApiKeyOwner200ApplicationJsonUser extends SpeakeasyBase {
+export declare class ApiKeyOwner200ApplicationJSONUser extends SpeakeasyBase {
     avatar?: string;
     email?: string;
     fullName?: string;
@@ -13,12 +14,19 @@ export declare class ApiKeyOwner200ApplicationJsonUser extends SpeakeasyBase {
     isPublic?: boolean;
     username?: string;
 }
-export declare class ApiKeyOwner200ApplicationJson extends SpeakeasyBase {
-    operations?: ApiKeyOwner200ApplicationJsonOperations[];
-    user?: ApiKeyOwner200ApplicationJsonUser;
+/**
+ * Valid Response
+ */
+export declare class ApiKeyOwner200ApplicationJSON extends SpeakeasyBase {
+    operations?: ApiKeyOwner200ApplicationJSONOperations[];
+    user?: ApiKeyOwner200ApplicationJSONUser;
 }
 export declare class ApiKeyOwnerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    apiKeyOwner200ApplicationJSONObject?: ApiKeyOwner200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Valid Response
+     */
+    apiKeyOwner200ApplicationJSONObject?: ApiKeyOwner200ApplicationJSON;
 }

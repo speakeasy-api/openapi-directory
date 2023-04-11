@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateAutoScalingGroupActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateAutoScalingGroupActionEnum {
     CreateAutoScalingGroup = "CreateAutoScalingGroup"
 }
-export declare enum PostCreateAutoScalingGroupVersionEnum {
+export declare enum POSTCreateAutoScalingGroupVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class PostCreateAutoScalingGroupQueryParams extends SpeakeasyBase {
-    action: PostCreateAutoScalingGroupActionEnum;
-    version: PostCreateAutoScalingGroupVersionEnum;
-}
-export declare class PostCreateAutoScalingGroupHeaders extends SpeakeasyBase {
+export declare class POSTCreateAutoScalingGroupRequest extends SpeakeasyBase {
+    action: POSTCreateAutoScalingGroupActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateAutoScalingGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateAutoScalingGroupHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateAutoScalingGroupRequest extends SpeakeasyBase {
-    queryParams: PostCreateAutoScalingGroupQueryParams;
-    headers: PostCreateAutoScalingGroupHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateAutoScalingGroupResponse extends SpeakeasyBase {
+export declare class POSTCreateAutoScalingGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

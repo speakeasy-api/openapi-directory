@@ -1,18 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetConsumerV1ServicesIdResourcesPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class GetConsumerV1ServicesIdResourcesQueryParams extends SpeakeasyBase {
-    limit?: number;
-    locationId?: string;
-    offset?: number;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class GetConsumerV1ServicesIdResourcesRequest extends SpeakeasyBase {
-    pathParams: GetConsumerV1ServicesIdResourcesPathParams;
-    queryParams: GetConsumerV1ServicesIdResourcesQueryParams;
+    /**
+     * id of service object
+     */
+    id: string;
+    /**
+     * Page limit default 20, max 100
+     */
+    limit?: number;
+    /**
+     * id of business location, defaults to primary business location
+     */
+    locationId?: string;
+    /**
+     * Starting row of page, default 0
+     */
+    offset?: number;
 }
 export declare class GetConsumerV1ServicesIdResourcesResponse extends SpeakeasyBase {
     contentType: string;
-    resourceListViewModel?: Record<string, any>;
+    /**
+     * Success
+     */
+    resourceListViewModel?: shared.ResourceListViewModel;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

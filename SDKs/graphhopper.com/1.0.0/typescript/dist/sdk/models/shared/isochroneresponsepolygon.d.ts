@@ -5,7 +5,7 @@ export declare class IsochroneResponsePolygonProperties extends SpeakeasyBase {
 }
 /**
  * A found path
-**/
+ */
 export declare class IsochroneResponsePolygon extends SpeakeasyBase {
     geometry?: Polygon;
     properties?: IsochroneResponsePolygonProperties;

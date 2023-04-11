@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListMlTransformsQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare enum ListMLTransformsXAmzTargetEnum {
+    AWSGlueListMLTransforms = "AWSGlue.ListMLTransforms"
+}
+export declare class ListMLTransformsRequest extends SpeakeasyBase {
+    listMLTransformsRequest: shared.ListMLTransformsRequest;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-}
-export declare enum ListMlTransformsXAmzTargetEnum {
-    AwsGlueListMlTransforms = "AWSGlue.ListMLTransforms"
-}
-export declare class ListMlTransformsHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -15,19 +21,30 @@ export declare class ListMlTransformsHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: ListMlTransformsXAmzTargetEnum;
+    xAmzTarget: ListMLTransformsXAmzTargetEnum;
 }
-export declare class ListMlTransformsRequest extends SpeakeasyBase {
-    queryParams: ListMlTransformsQueryParams;
-    headers: ListMlTransformsHeaders;
-    request: shared.ListMlTransformsRequest;
-}
-export declare class ListMlTransformsResponse extends SpeakeasyBase {
+export declare class ListMLTransformsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
-    listMLTransformsResponse?: shared.ListMlTransformsResponse;
+    /**
+     * Success
+     */
+    listMLTransformsResponse?: shared.ListMLTransformsResponse;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

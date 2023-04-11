@@ -67,6 +67,9 @@ export declare class DrivingLicenseSchemaIssuedToPerson extends SpeakeasyBase {
 export declare class DrivingLicenseSchemaIssuedTo extends SpeakeasyBase {
     person: DrivingLicenseSchemaIssuedToPerson;
 }
+/**
+ * The certificate data in response body in PDF, XML or JSON format as requested in format parameter.
+ */
 export declare class DrivingLicenseSchema extends SpeakeasyBase {
     certificateData: DrivingLicenseSchemaCertificateData;
     issuedBy: DrivingLicenseSchemaIssuedBy;

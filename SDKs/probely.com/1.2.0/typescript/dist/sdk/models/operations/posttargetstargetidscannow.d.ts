@@ -1,8 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PostTargetsTargetIdScanNowPathParams extends SpeakeasyBase {
-    targetId: string;
-}
+import { AxiosResponse } from "axios";
+/**
+ * Override the target's `scan_profile`.
+ *
+ * @remarks
+ *
+ */
 export declare enum PostTargetsTargetIdScanNowRequestBodyScanProfileEnum {
     Safe = "safe",
     Normal = "normal",
@@ -10,30 +14,76 @@ export declare enum PostTargetsTargetIdScanNowRequestBodyScanProfileEnum {
     Lightning = "lightning"
 }
 export declare class PostTargetsTargetIdScanNowRequestBody extends SpeakeasyBase {
+    /**
+     * Override the target's `scan_profile`.
+     *
+     * @remarks
+     *
+     */
     scanProfile?: PostTargetsTargetIdScanNowRequestBodyScanProfileEnum;
 }
-export declare class PostTargetsTargetIdScanNow400ApplicationJson extends SpeakeasyBase {
-    error?: string;
-}
-export declare class PostTargetsTargetIdScanNow401ApplicationJson extends SpeakeasyBase {
-    detail?: string;
-}
-export declare class PostTargetsTargetIdScanNow403ApplicationJson extends SpeakeasyBase {
-    detail?: string;
-}
-export declare class PostTargetsTargetIdScanNow404ApplicationJson extends SpeakeasyBase {
-    detail?: string;
-}
 export declare class PostTargetsTargetIdScanNowRequest extends SpeakeasyBase {
-    pathParams: PostTargetsTargetIdScanNowPathParams;
-    request?: PostTargetsTargetIdScanNowRequestBody;
+    requestBody?: PostTargetsTargetIdScanNowRequestBody;
+    /**
+     * Target id
+     */
+    targetId: string;
+}
+/**
+ * Not found
+ */
+export declare class PostTargetsTargetIdScanNow404ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Not found.
+     */
+    detail?: string;
+}
+/**
+ * Not allowed to perform operation
+ */
+export declare class PostTargetsTargetIdScanNow403ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error message.
+     */
+    detail?: string;
+}
+/**
+ * Access token is missing or invalid
+ */
+export declare class PostTargetsTargetIdScanNow401ApplicationJSON extends SpeakeasyBase {
+    detail?: string;
+}
+/**
+ * Bad Request
+ */
+export declare class PostTargetsTargetIdScanNow400ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error message
+     */
+    error?: string;
 }
 export declare class PostTargetsTargetIdScanNowResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Scan object
+     */
     scan?: shared.Scan;
     statusCode: number;
-    postTargetsTargetIdScanNow400ApplicationJSONObject?: PostTargetsTargetIdScanNow400ApplicationJson;
-    postTargetsTargetIdScanNow401ApplicationJSONObject?: PostTargetsTargetIdScanNow401ApplicationJson;
-    postTargetsTargetIdScanNow403ApplicationJSONObject?: PostTargetsTargetIdScanNow403ApplicationJson;
-    postTargetsTargetIdScanNow404ApplicationJSONObject?: PostTargetsTargetIdScanNow404ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad Request
+     */
+    postTargetsTargetIdScanNow400ApplicationJSONObject?: PostTargetsTargetIdScanNow400ApplicationJSON;
+    /**
+     * Access token is missing or invalid
+     */
+    postTargetsTargetIdScanNow401ApplicationJSONObject?: PostTargetsTargetIdScanNow401ApplicationJSON;
+    /**
+     * Not allowed to perform operation
+     */
+    postTargetsTargetIdScanNow403ApplicationJSONObject?: PostTargetsTargetIdScanNow403ApplicationJSON;
+    /**
+     * Not found
+     */
+    postTargetsTargetIdScanNow404ApplicationJSONObject?: PostTargetsTargetIdScanNow404ApplicationJSON;
 }

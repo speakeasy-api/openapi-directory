@@ -1,32 +1,58 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetAccountsAccountIdTransactionsPathParams extends SpeakeasyBase {
-    accountId: string;
-}
-export declare class GetAccountsAccountIdTransactionsQueryParams extends SpeakeasyBase {
-    fromBookingDateTime?: Date;
-    toBookingDateTime?: Date;
-}
-export declare class GetAccountsAccountIdTransactionsHeaders extends SpeakeasyBase {
-    sandboxId: string;
-    xCustomerUserAgent?: string;
-    xFapiAuthDate?: string;
-    xFapiCustomerIpAddress?: string;
-    xFapiInteractionId?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetAccountsAccountIdTransactionsSecurity extends SpeakeasyBase {
-    authorizationCodeToken: shared.SchemeAuthorizationCodeToken;
-    clientId: shared.SchemeClientId;
+    authorizationCodeToken: string;
+    clientId: string;
 }
 export declare class GetAccountsAccountIdTransactionsRequest extends SpeakeasyBase {
-    pathParams: GetAccountsAccountIdTransactionsPathParams;
-    queryParams: GetAccountsAccountIdTransactionsQueryParams;
-    headers: GetAccountsAccountIdTransactionsHeaders;
-    security: GetAccountsAccountIdTransactionsSecurity;
+    /**
+     * AccountId
+     */
+    accountId: string;
+    /**
+     * The UTC ISO 8601 Date Time to filter transactions FROM NB Time component is optional - set to 00:00:00 for just Date. If the Date Time contains a timezone, the ASPSP must ignore the timezone component.
+     */
+    fromBookingDateTime?: Date;
+    /**
+     * The unique id of the sandbox to be used
+     */
+    sandboxId: string;
+    /**
+     * The UTC ISO 8601 Date Time to filter transactions TO NB Time component is optional - set to 00:00:00 for just Date. If the Date Time contains a timezone, the ASPSP must ignore the timezone component.
+     */
+    toBookingDateTime?: Date;
+    /**
+     * Indicates the user-agent that the PSU is using.
+     */
+    xCustomerUserAgent?: string;
+    /**
+     * The time when the PSU last logged in with the TPP.
+     *
+     * @remarks
+     * All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below:
+     * Sun, 10 Sep 2017 19:43:31 UTC
+     */
+    xFapiAuthDate?: string;
+    /**
+     * The PSU's IP address if the PSU is currently logged in with the TPP.
+     */
+    xFapiCustomerIpAddress?: string;
+    /**
+     * An RFC4122 UID used as a correlation id.
+     */
+    xFapiInteractionId?: string;
 }
 export declare class GetAccountsAccountIdTransactionsResponse extends SpeakeasyBase {
     contentType: string;
-    obErrorResponse1?: shared.ObErrorResponse1;
-    obReadTransaction6?: shared.ObReadTransaction6;
+    /**
+     * Bad request
+     */
+    obErrorResponse1?: shared.OBErrorResponse1;
+    /**
+     * Transactions Read
+     */
+    obReadTransaction6?: shared.OBReadTransaction6;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

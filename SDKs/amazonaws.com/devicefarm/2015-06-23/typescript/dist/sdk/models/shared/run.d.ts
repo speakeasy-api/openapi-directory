@@ -3,18 +3,19 @@ import { BillingMethodEnum } from "./billingmethodenum";
 import { Counters } from "./counters";
 import { CustomerArtifactPaths } from "./customerartifactpaths";
 import { DeviceMinutes } from "./deviceminutes";
+import { DevicePlatformEnum } from "./deviceplatformenum";
 import { DeviceSelectionResult } from "./deviceselectionresult";
+import { ExecutionResultCodeEnum } from "./executionresultcodeenum";
+import { ExecutionResultEnum } from "./executionresultenum";
+import { ExecutionStatusEnum } from "./executionstatusenum";
 import { Location } from "./location";
 import { NetworkProfile } from "./networkprofile";
-import { DevicePlatformEnum } from "./deviceplatformenum";
 import { Radios } from "./radios";
-import { ExecutionResultEnum } from "./executionresultenum";
-import { ExecutionResultCodeEnum } from "./executionresultcodeenum";
-import { ExecutionStatusEnum } from "./executionstatusenum";
 import { TestTypeEnum } from "./testtypeenum";
+import { VpcConfig } from "./vpcconfig";
 /**
  * Represents a test run on a set of devices with a given app package, test parameters, and so on.
-**/
+ */
 export declare class Run extends SpeakeasyBase {
     appUpload?: string;
     arn?: string;
@@ -46,5 +47,6 @@ export declare class Run extends SpeakeasyBase {
     testSpecArn?: string;
     totalJobs?: number;
     type?: TestTypeEnum;
+    vpcConfig?: VpcConfig;
     webUrl?: string;
 }

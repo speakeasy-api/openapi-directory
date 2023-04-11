@@ -1,117 +1,399 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { BatchCreatePartitionRequest, BatchCreatePartitionResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  BatchCreatePartitionRequest,
+  BatchCreatePartitionResponse,
+  BatchCreatePartitionXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: BatchCreatePartitionRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "AWSGlue.BatchCreatePartition",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
-    catalogId: "fugit",
-    databaseName: "et",
+});
+
+const req: BatchCreatePartitionRequest = {
+  batchCreatePartitionRequest: {
+    catalogId: "corrupti",
+    databaseName: "provident",
     partitionInputList: [
       {
-        lastAccessTime: "2004-06-02T10:14:12Z",
-        lastAnalyzedTime: "1981-07-21T06:30:48Z",
+        lastAccessTime: "2021-03-11T23:22:42.658Z",
+        lastAnalyzedTime: "2021-05-14T08:28:11.899Z",
         parameters: {
-          "ut": "dolorem",
+          "vel": "error",
+          "deserunt": "suscipit",
+          "iure": "magnam",
+          "debitis": "ipsa",
         },
         storageDescriptor: {
+          additionalLocations: [
+            "tempora",
+            "suscipit",
+            "molestiae",
+            "minus",
+          ],
           bucketColumns: [
-            "voluptate",
-            "iste",
+            "voluptatum",
+            "iusto",
+            "excepturi",
+            "nisi",
           ],
           columns: [
             {
-              comment: "totam",
-              name: "dolores",
+              comment: "temporibus",
+              name: "ab",
               parameters: {
-                "debitis": "vel",
-                "odio": "dolore",
-                "id": "aspernatur",
+                "veritatis": "deserunt",
+                "perferendis": "ipsam",
               },
-              type: "accusantium",
+              type: "repellendus",
+            },
+            {
+              comment: "sapiente",
+              name: "quo",
+              parameters: {
+                "at": "at",
+              },
+              type: "maiores",
+            },
+            {
+              comment: "molestiae",
+              name: "quod",
+              parameters: {
+                "esse": "totam",
+                "porro": "dolorum",
+                "dicta": "nam",
+                "officia": "occaecati",
+              },
+              type: "fugit",
+            },
+            {
+              comment: "deleniti",
+              name: "hic",
+              parameters: {
+                "totam": "beatae",
+                "commodi": "molestiae",
+                "modi": "qui",
+                "impedit": "cum",
+              },
+              type: "esse",
             },
           ],
           compressed: false,
-          inputFormat: "commodi",
-          location: "quis",
-          numberOfBuckets: 3398579248012586914,
-          outputFormat: "aut",
+          inputFormat: "ipsum",
+          location: "excepturi",
+          numberOfBuckets: 135218,
+          outputFormat: "perferendis",
           parameters: {
-            "non": "voluptas",
-            "omnis": "aut",
+            "natus": "sed",
+            "iste": "dolor",
           },
           schemaReference: {
             schemaId: {
-              registryName: "illo",
-              schemaArn: "sed",
-              schemaName: "officiis",
+              registryName: "natus",
+              schemaArn: "laboriosam",
+              schemaName: "hic",
             },
-            schemaVersionId: "autem",
-            schemaVersionNumber: 8514850266767180993,
+            schemaVersionId: "saepe",
+            schemaVersionNumber: 681820,
           },
           serdeInfo: {
-            name: "nobis",
+            name: "in",
             parameters: {
-              "qui": "recusandae",
+              "iste": "iure",
+              "saepe": "quidem",
             },
-            serializationLibrary: "at",
+            serializationLibrary: "architecto",
           },
           skewedInfo: {
             skewedColumnNames: [
-              "eveniet",
+              "reiciendis",
             ],
             skewedColumnValueLocationMaps: {
-              "sint": "inventore",
-              "ut": "exercitationem",
+              "mollitia": "laborum",
+              "dolores": "dolorem",
+              "corporis": "explicabo",
             },
             skewedColumnValues: [
-              "reprehenderit",
-              "tempore",
-              "maiores",
+              "enim",
+              "omnis",
+              "nemo",
+              "minima",
             ],
           },
           sortColumns: [
             {
-              column: "dolor",
-              sortOrder: 7719717197379695442,
+              column: "accusantium",
+              sortOrder: 438601,
             },
             {
-              column: "veritatis",
-              sortOrder: 2671030200101705776,
+              column: "culpa",
+              sortOrder: 988374,
             },
             {
-              column: "et",
-              sortOrder: 8565714761387219319,
+              column: "sapiente",
+              sortOrder: 102044,
             },
           ],
           storedAsSubDirectories: false,
         },
         values: [
-          "dolores",
+          "dolorem",
+          "culpa",
+          "consequuntur",
+        ],
+      },
+      {
+        lastAccessTime: "2021-01-15T20:18:47.519Z",
+        lastAnalyzedTime: "2022-06-30T02:19:51.375Z",
+        parameters: {
+          "quam": "molestiae",
+          "velit": "error",
+        },
+        storageDescriptor: {
+          additionalLocations: [
+            "quis",
+          ],
+          bucketColumns: [
+            "laborum",
+          ],
+          columns: [
+            {
+              comment: "enim",
+              name: "odit",
+              parameters: {
+                "sequi": "tenetur",
+                "ipsam": "id",
+                "possimus": "aut",
+                "quasi": "error",
+              },
+              type: "temporibus",
+            },
+            {
+              comment: "laborum",
+              name: "quasi",
+              parameters: {
+                "voluptatibus": "vero",
+                "nihil": "praesentium",
+                "voluptatibus": "ipsa",
+                "omnis": "voluptate",
+              },
+              type: "cum",
+            },
+            {
+              comment: "perferendis",
+              name: "doloremque",
+              parameters: {
+                "ut": "maiores",
+                "dicta": "corporis",
+              },
+              type: "dolore",
+            },
+          ],
+          compressed: false,
+          inputFormat: "iusto",
+          location: "dicta",
+          numberOfBuckets: 688661,
+          outputFormat: "enim",
+          parameters: {
+            "commodi": "repudiandae",
+            "quae": "ipsum",
+            "quidem": "molestias",
+            "excepturi": "pariatur",
+          },
+          schemaReference: {
+            schemaId: {
+              registryName: "modi",
+              schemaArn: "praesentium",
+              schemaName: "rem",
+            },
+            schemaVersionId: "voluptates",
+            schemaVersionNumber: 93940,
+          },
+          serdeInfo: {
+            name: "repudiandae",
+            parameters: {
+              "veritatis": "itaque",
+              "incidunt": "enim",
+              "consequatur": "est",
+            },
+            serializationLibrary: "quibusdam",
+          },
+          skewedInfo: {
+            skewedColumnNames: [
+              "deserunt",
+            ],
+            skewedColumnValueLocationMaps: {
+              "quibusdam": "labore",
+              "modi": "qui",
+              "aliquid": "cupiditate",
+            },
+            skewedColumnValues: [
+              "perferendis",
+              "magni",
+              "assumenda",
+            ],
+          },
+          sortColumns: [
+            {
+              column: "alias",
+              sortOrder: 146441,
+            },
+            {
+              column: "dolorum",
+              sortOrder: 569618,
+            },
+          ],
+          storedAsSubDirectories: false,
+        },
+        values: [
+          "facilis",
+          "tempore",
+        ],
+      },
+      {
+        lastAccessTime: "2022-01-14T19:13:42.009Z",
+        lastAnalyzedTime: "2022-10-02T04:55:20.234Z",
+        parameters: {
+          "sint": "aliquid",
+          "provident": "necessitatibus",
+          "sint": "officia",
+          "dolor": "debitis",
+        },
+        storageDescriptor: {
+          additionalLocations: [
+            "dolorum",
+            "in",
+            "in",
+            "illum",
+          ],
+          bucketColumns: [
+            "rerum",
+            "dicta",
+            "magnam",
+            "cumque",
+          ],
+          columns: [
+            {
+              comment: "ea",
+              name: "aliquid",
+              parameters: {
+                "accusamus": "non",
+                "occaecati": "enim",
+                "accusamus": "delectus",
+              },
+              type: "quidem",
+            },
+            {
+              comment: "provident",
+              name: "nam",
+              parameters: {
+                "blanditiis": "deleniti",
+                "sapiente": "amet",
+                "deserunt": "nisi",
+              },
+              type: "vel",
+            },
+            {
+              comment: "natus",
+              name: "omnis",
+              parameters: {
+                "perferendis": "nihil",
+                "magnam": "distinctio",
+              },
+              type: "id",
+            },
+            {
+              comment: "labore",
+              name: "labore",
+              parameters: {
+                "natus": "nobis",
+                "eum": "vero",
+              },
+              type: "aspernatur",
+            },
+          ],
+          compressed: false,
+          inputFormat: "architecto",
+          location: "magnam",
+          numberOfBuckets: 92373,
+          outputFormat: "excepturi",
+          parameters: {
+            "provident": "quos",
+            "sint": "accusantium",
+          },
+          schemaReference: {
+            schemaId: {
+              registryName: "mollitia",
+              schemaArn: "reiciendis",
+              schemaName: "mollitia",
+            },
+            schemaVersionId: "ad",
+            schemaVersionNumber: 431418,
+          },
+          serdeInfo: {
+            name: "dolor",
+            parameters: {
+              "odit": "nemo",
+              "quasi": "iure",
+              "doloribus": "debitis",
+              "eius": "maxime",
+            },
+            serializationLibrary: "deleniti",
+          },
+          skewedInfo: {
+            skewedColumnNames: [
+              "in",
+              "architecto",
+              "architecto",
+            ],
+            skewedColumnValueLocationMaps: {
+              "ullam": "expedita",
+              "nihil": "repellat",
+              "quibusdam": "sed",
+              "saepe": "pariatur",
+            },
+            skewedColumnValues: [
+              "consequuntur",
+            ],
+          },
+          sortColumns: [
+            {
+              column: "natus",
+              sortOrder: 166847,
+            },
+            {
+              column: "sunt",
+              sortOrder: 779051,
+            },
+            {
+              column: "illum",
+              sortOrder: 864934,
+            },
+          ],
+          storedAsSubDirectories: false,
+        },
+        values: [
+          "ea",
+          "excepturi",
+          "odit",
+          "ea",
         ],
       },
     ],
-    tableName: "placeat",
+    tableName: "accusantium",
   },
+  xAmzAlgorithm: "ab",
+  xAmzContentSha256: "maiores",
+  xAmzCredential: "quidem",
+  xAmzDate: "ipsam",
+  xAmzSecurityToken: "voluptate",
+  xAmzSignature: "autem",
+  xAmzSignedHeaders: "nam",
+  xAmzTarget: BatchCreatePartitionXAmzTargetEnum.AWSGlueBatchCreatePartition,
 };
 
 sdk.batchCreatePartition(req).then((res: BatchCreatePartitionResponse | AxiosError) => {

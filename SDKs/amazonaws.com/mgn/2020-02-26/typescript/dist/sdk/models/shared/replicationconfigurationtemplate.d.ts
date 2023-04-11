@@ -2,6 +2,9 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { ReplicationConfigurationDataPlaneRoutingEnum } from "./replicationconfigurationdataplaneroutingenum";
 import { ReplicationConfigurationDefaultLargeStagingDiskTypeEnum } from "./replicationconfigurationdefaultlargestagingdisktypeenum";
 import { ReplicationConfigurationEbsEncryptionEnum } from "./replicationconfigurationebsencryptionenum";
+/**
+ * Success
+ */
 export declare class ReplicationConfigurationTemplate extends SpeakeasyBase {
     arn?: string;
     associateDefaultSecurityGroup?: boolean;

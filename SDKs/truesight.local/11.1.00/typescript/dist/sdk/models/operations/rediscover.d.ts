@@ -1,12 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class RediscoverPathParams extends SpeakeasyBase {
-    deviceId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class RediscoverRequest extends SpeakeasyBase {
-    pathParams: RediscoverPathParams;
+    /**
+     * The ID of the device.
+     */
+    deviceId: number;
 }
 export declare class RediscoverResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

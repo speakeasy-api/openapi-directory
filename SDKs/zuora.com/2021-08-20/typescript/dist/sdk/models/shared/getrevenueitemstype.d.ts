@@ -1,6 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetRevenueItemsType extends SpeakeasyBase {
+import { GETRevenueItemType } from "./getrevenueitemtype";
+export declare class GETRevenueItemsType extends SpeakeasyBase {
+    /**
+     * URL to retrieve the next page of the response if it exists; otherwise absent.
+     *
+     * @remarks
+     *
+     */
     nextPage?: string;
-    revenueItems?: Record<string, any>[];
+    /**
+     * Revenue items are listed in ascending order by the accounting period start date.
+     *
+     * @remarks
+     *
+     */
+    revenueItems?: GETRevenueItemType[];
+    /**
+     * Returns `true` if the request was processed successfully.
+     *
+     * @remarks
+     *
+     */
     success?: boolean;
 }

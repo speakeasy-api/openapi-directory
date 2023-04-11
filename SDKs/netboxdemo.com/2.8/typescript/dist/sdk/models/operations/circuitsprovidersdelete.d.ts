@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CircuitsProvidersDeletePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class CircuitsProvidersDeleteRequest extends SpeakeasyBase {
-    pathParams: CircuitsProvidersDeletePathParams;
+    /**
+     * A unique integer value identifying this provider.
+     */
+    id: number;
 }
 export declare class CircuitsProvidersDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

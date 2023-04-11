@@ -20,7 +20,7 @@ export declare class GpgKeySubkeys extends SpeakeasyBase {
 }
 /**
  * A unique encryption key
-**/
+ */
 export declare class GpgKey extends SpeakeasyBase {
     canCertify: boolean;
     canEncryptComms: boolean;

@@ -45,7 +45,6 @@ export * from "./publisherconnection";
 export * from "./removetargetedappsrequest";
 export * from "./removetargetedpublishersrequest";
 export * from "./removetargetedsitesrequest";
-export * from "./security";
 export * from "./stringtargetingdimension";
 export * from "./urldownloadsize";
 export * from "./urlrestriction";

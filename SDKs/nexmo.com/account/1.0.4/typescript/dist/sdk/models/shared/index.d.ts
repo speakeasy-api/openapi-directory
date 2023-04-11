@@ -11,6 +11,5 @@ export * from "./registeremailrequest";
 export * from "./registeremailresponse";
 export * from "./secretinfo";
 export * from "./secretmgmtlinks";
-export * from "./security";
 export * from "./success";
 export * from "./topuprequest";

@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DecodePathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DecodeRequest extends SpeakeasyBase {
+    /**
+     * The API Authentication Key. Mandatory with all API calls.
+     */
+    apiKey?: string;
+    /**
+     * The VIN to identify the car. Must be a valid 17 char VIN
+     */
     vin: string;
 }
-export declare class DecodeQueryParams extends SpeakeasyBase {
-    apiKey?: string;
-}
-export declare class DecodeRequest extends SpeakeasyBase {
-    pathParams: DecodePathParams;
-    queryParams: DecodeQueryParams;
-}
 export declare class DecodeResponse extends SpeakeasyBase {
+    /**
+     * Basic sepcifications details about the car
+     */
     build?: shared.Build;
     contentType: string;
+    /**
+     * Error
+     */
     error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

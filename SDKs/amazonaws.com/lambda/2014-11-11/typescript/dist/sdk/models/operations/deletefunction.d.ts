@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteFunctionPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteFunctionRequest extends SpeakeasyBase {
+    /**
+     * The Lambda function to delete.
+     */
     functionName: string;
-}
-export declare class DeleteFunctionHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,13 +14,16 @@ export declare class DeleteFunctionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeleteFunctionRequest extends SpeakeasyBase {
-    pathParams: DeleteFunctionPathParams;
-    headers: DeleteFunctionHeaders;
-}
 export declare class DeleteFunctionResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: shared.ResourceNotFoundException;
+    /**
+     * ServiceException
+     */
     serviceException?: shared.ServiceException;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

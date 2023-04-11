@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
- * An object representing summary details of a container within a job.
-**/
+ * An object that represents summary details of a container within a job.
+ */
 export declare class ContainerSummary extends SpeakeasyBase {
     exitCode?: number;
     reason?: string;

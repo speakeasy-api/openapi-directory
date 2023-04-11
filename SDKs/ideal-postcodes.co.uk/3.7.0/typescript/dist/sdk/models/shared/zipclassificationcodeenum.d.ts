@@ -1,0 +1,15 @@
+/**
+ * A field that describes the type of ZIP area that a 5-digit ZIP Code serves, e.g., a single educational institution, post office boxes only, or a single address that has unusually high mail volume or many different addresses.
+ *
+ * @remarks
+ *  - M = Military ZIP Code
+ *  - P = ZIP Code having only Post Office Boxes
+ *  - U = Unique ZIP Code (ZIP assigned to a single organization)
+ *  - Blank = Standard ZIP with many addresses assigned to it
+ */
+export declare enum ZipClassificationCodeEnum {
+    Unknown = "",
+    M = "M",
+    P = "P",
+    U = "U"
+}

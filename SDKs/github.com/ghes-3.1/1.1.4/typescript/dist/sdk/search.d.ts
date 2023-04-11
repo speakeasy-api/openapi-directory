@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Look for stuff on GitHub.
+ */
 export declare class Search {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +12,9 @@ export declare class Search {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * searchCode - Search code
+     * Search code
      *
+     * @remarks
      * Searches for query terms inside of a file. This method returns up to 100 results [per page](https://docs.github.com/enterprise-server@3.1/rest/overview/resources-in-the-rest-api#pagination).
      *
      * When searching for code, you can get text match metadata for the file **content** and file **path** fields when you pass the `text-match` media type. For more details about how to receive highlighted search results, see [Text match metadata](https://docs.github.com/enterprise-server@3.1/rest/reference/search#text-match-metadata).
@@ -30,12 +34,13 @@ export declare class Search {
      * *   You must always include at least one search term when searching source code. For example, searching for [`language:go`](https://github.com/search?utf8=%E2%9C%93&q=language%3Ago&type=Code) is not valid, while [`amazing
      * language:go`](https://github.com/search?utf8=%E2%9C%93&q=amazing+language%3Ago&type=Code) is.
      *
-     * https://docs.github.com/enterprise-server@3.1/rest/reference/search#search-code - API method documentation
-    **/
+     * @see {@link https://docs.github.com/enterprise-server@3.1/rest/reference/search#search-code} - API method documentation
+     */
     searchCode(req: operations.SearchCodeRequest, config?: AxiosRequestConfig): Promise<operations.SearchCodeResponse>;
     /**
-     * searchCommits - Search commits
+     * Search commits
      *
+     * @remarks
      * Find commits via various criteria on the default branch (usually `master`). This method returns up to 100 results [per page](https://docs.github.com/enterprise-server@3.1/rest/overview/resources-in-the-rest-api#pagination).
      *
      * When searching for commits, you can get text match metadata for the **message** field when you provide the `text-match` media type. For more details about how to receive highlighted search results, see [Text match
@@ -45,12 +50,13 @@ export declare class Search {
      *
      * `q=repo:octocat/Spoon-Knife+css`
      *
-     * https://docs.github.com/enterprise-server@3.1/rest/reference/search#search-commits - API method documentation
-    **/
+     * @see {@link https://docs.github.com/enterprise-server@3.1/rest/reference/search#search-commits} - API method documentation
+     */
     searchCommits(req: operations.SearchCommitsRequest, config?: AxiosRequestConfig): Promise<operations.SearchCommitsResponse>;
     /**
-     * searchIssuesAndPullRequests - Search issues and pull requests
+     * Search issues and pull requests
      *
+     * @remarks
      * Find issues by state and keyword. This method returns up to 100 results [per page](https://docs.github.com/enterprise-server@3.1/rest/overview/resources-in-the-rest-api#pagination).
      *
      * When searching for issues, you can get text match metadata for the issue **title**, issue **body**, and issue **comment body** fields when you pass the `text-match` media type. For more details about how to receive highlighted
@@ -64,12 +70,13 @@ export declare class Search {
      *
      * **Note:** For [user-to-server](https://docs.github.com/developers/apps/identifying-and-authorizing-users-for-github-apps#user-to-server-requests) GitHub App requests, you can't retrieve a combination of issues and pull requests in a single query. Requests that don't include the `is:issue` or `is:pull-request` qualifier will receive an HTTP `422 Unprocessable Entity` response. To get results for both issues and pull requests, you must send separate queries for issues and pull requests. For more information about the `is` qualifier, see "[Searching only issues or pull requests](https://docs.github.com/github/searching-for-information-on-github/searching-issues-and-pull-requests#search-only-issues-or-pull-requests)."
      *
-     * https://docs.github.com/enterprise-server@3.1/rest/reference/search#search-issues-and-pull-requests - API method documentation
-    **/
+     * @see {@link https://docs.github.com/enterprise-server@3.1/rest/reference/search#search-issues-and-pull-requests} - API method documentation
+     */
     searchIssuesAndPullRequests(req: operations.SearchIssuesAndPullRequestsRequest, config?: AxiosRequestConfig): Promise<operations.SearchIssuesAndPullRequestsResponse>;
     /**
-     * searchLabels - Search labels
+     * Search labels
      *
+     * @remarks
      * Find labels in a repository with names or descriptions that match search keywords. Returns up to 100 results [per page](https://docs.github.com/enterprise-server@3.1/rest/overview/resources-in-the-rest-api#pagination).
      *
      * When searching for labels, you can get text match metadata for the label **name** and **description** fields when you pass the `text-match` media type. For more details about how to receive highlighted search results, see [Text match metadata](https://docs.github.com/enterprise-server@3.1/rest/reference/search#text-match-metadata).
@@ -80,12 +87,13 @@ export declare class Search {
      *
      * The labels that best match the query appear first in the search results.
      *
-     * https://docs.github.com/enterprise-server@3.1/rest/reference/search#search-labels - API method documentation
-    **/
+     * @see {@link https://docs.github.com/enterprise-server@3.1/rest/reference/search#search-labels} - API method documentation
+     */
     searchLabels(req: operations.SearchLabelsRequest, config?: AxiosRequestConfig): Promise<operations.SearchLabelsResponse>;
     /**
-     * searchRepos - Search repositories
+     * Search repositories
      *
+     * @remarks
      * Find repositories via various criteria. This method returns up to 100 results [per page](https://docs.github.com/enterprise-server@3.1/rest/overview/resources-in-the-rest-api#pagination).
      *
      * When searching for repositories, you can get text match metadata for the **name** and **description** fields when you pass the `text-match` media type. For more details about how to receive highlighted search results, see [Text match metadata](https://docs.github.com/enterprise-server@3.1/rest/reference/search#text-match-metadata).
@@ -100,13 +108,14 @@ export declare class Search {
      *
      * `q=topic:ruby+topic:rails`
      *
-     * https://docs.github.com/enterprise-server@3.1/rest/reference/search#search-repositories - API method documentation
-    **/
+     * @see {@link https://docs.github.com/enterprise-server@3.1/rest/reference/search#search-repositories} - API method documentation
+     */
     searchRepos(req: operations.SearchReposRequest, config?: AxiosRequestConfig): Promise<operations.SearchReposResponse>;
     /**
-     * searchTopics - Search topics
+     * Search topics
      *
-     * Find topics via various criteria. Results are sorted by best match. This method returns up to 100 results [per page](https://docs.github.com/enterprise-server@3.1/rest/overview/resources-in-the-rest-api#pagination). See "[Searching topics](https://help.github.com/articles/searching-topics/)" for a detailed list of qualifiers.
+     * @remarks
+     * Find topics via various criteria. Results are sorted by best match. This method returns up to 100 results [per page](https://docs.github.com/enterprise-server@3.1/rest/overview/resources-in-the-rest-api#pagination). See "[Searching topics](https://docs.github.com/articles/searching-topics/)" for a detailed list of qualifiers.
      *
      * When searching for topics, you can get text match metadata for the topic's **short\_description**, **description**, **name**, or **display\_name** field when you pass the `text-match` media type. For more details about how to receive highlighted search results, see [Text match metadata](https://docs.github.com/enterprise-server@3.1/rest/reference/search#text-match-metadata).
      *
@@ -116,12 +125,13 @@ export declare class Search {
      *
      * This query searches for topics with the keyword `ruby` and limits the results to find only topics that are featured. The topics that are the best match for the query appear first in the search results.
      *
-     * https://docs.github.com/enterprise-server@3.1/rest/reference/search#search-topics - API method documentation
-    **/
+     * @see {@link https://docs.github.com/enterprise-server@3.1/rest/reference/search#search-topics} - API method documentation
+     */
     searchTopics(req: operations.SearchTopicsRequest, config?: AxiosRequestConfig): Promise<operations.SearchTopicsResponse>;
     /**
-     * searchUsers - Search users
+     * Search users
      *
+     * @remarks
      * Find users via various criteria. This method returns up to 100 results [per page](https://docs.github.com/enterprise-server@3.1/rest/overview/resources-in-the-rest-api#pagination).
      *
      * When searching for users, you can get text match metadata for the issue **login**, **email**, and **name** fields when you pass the `text-match` media type. For more details about highlighting search results, see [Text match metadata](https://docs.github.com/enterprise-server@3.1/rest/reference/search#text-match-metadata). For more details about how to receive highlighted search results, see [Text match metadata](https://docs.github.com/enterprise-server@3.1/rest/reference/search#text-match-metadata).
@@ -132,7 +142,7 @@ export declare class Search {
      *
      * This query searches for users with the name `tom`. The results are restricted to users with more than 42 repositories and over 1,000 followers.
      *
-     * https://docs.github.com/enterprise-server@3.1/rest/reference/search#search-users - API method documentation
-    **/
+     * @see {@link https://docs.github.com/enterprise-server@3.1/rest/reference/search#search-users} - API method documentation
+     */
     searchUsers(req: operations.SearchUsersRequest, config?: AxiosRequestConfig): Promise<operations.SearchUsersResponse>;
 }

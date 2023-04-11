@@ -1,36 +1,82 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ClouddeployProjectsLocationsTargetsDeletePathParams extends SpeakeasyBase {
-    name: string;
-}
-export declare class ClouddeployProjectsLocationsTargetsDeleteQueryParams extends SpeakeasyBase {
-    dollarXgafv?: shared.XgafvEnum;
-    accessToken?: string;
-    allowMissing?: boolean;
-    alt?: shared.AltEnum;
-    callback?: string;
-    etag?: string;
-    fields?: string;
-    key?: string;
-    oauthToken?: string;
-    prettyPrint?: boolean;
-    quotaUser?: string;
-    requestId?: string;
-    uploadType?: string;
-    uploadProtocol?: string;
-    validateOnly?: boolean;
-}
+import { AxiosResponse } from "axios";
 export declare class ClouddeployProjectsLocationsTargetsDeleteSecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class ClouddeployProjectsLocationsTargetsDeleteRequest extends SpeakeasyBase {
-    pathParams: ClouddeployProjectsLocationsTargetsDeletePathParams;
-    queryParams: ClouddeployProjectsLocationsTargetsDeleteQueryParams;
-    security: ClouddeployProjectsLocationsTargetsDeleteSecurity;
+    /**
+     * V1 error format.
+     */
+    dollarXgafv?: shared.XgafvEnum;
+    /**
+     * OAuth access token.
+     */
+    accessToken?: string;
+    /**
+     * Optional. If set to true, then deleting an already deleted or non-existing DeliveryPipeline will succeed.
+     */
+    allowMissing?: boolean;
+    /**
+     * Data format for response.
+     */
+    alt?: shared.AltEnum;
+    /**
+     * JSONP
+     */
+    callback?: string;
+    /**
+     * Optional. This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
+     */
+    etag?: string;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * Required. The name of the `Target` to delete. Format should be projects/{project_id}/locations/{location_name}/targets/{target_name}.
+     */
+    name: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauthToken?: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes after the first request. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+     */
+    requestId?: string;
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    uploadType?: string;
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    uploadProtocol?: string;
+    /**
+     * Optional. If set, validate the request and preview the review, but do not actually post it.
+     */
+    validateOnly?: boolean;
 }
 export declare class ClouddeployProjectsLocationsTargetsDeleteResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful response
+     */
     operation?: shared.Operation;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

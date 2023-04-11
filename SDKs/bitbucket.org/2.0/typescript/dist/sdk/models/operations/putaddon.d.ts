@@ -1,15 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class PutAddonSecurity extends SpeakeasyBase {
-    oauth2?: shared.SchemeOauth2;
-    basic?: shared.SchemeBasic;
-    apiKey?: shared.SchemeApiKey;
-}
-export declare class PutAddonRequest extends SpeakeasyBase {
-    security: PutAddonSecurity;
-}
+import { AxiosResponse } from "axios";
 export declare class PutAddonResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Scopes have increased or decreased to none.
+     */
     error?: Record<string, any>;
 }

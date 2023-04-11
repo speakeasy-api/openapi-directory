@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AppsDeleteInstallationPathParams extends SpeakeasyBase {
-    installationId: number;
-}
-export declare class AppsDeleteInstallationHeaders extends SpeakeasyBase {
-    accept: string;
-}
+import { AxiosResponse } from "axios";
 export declare class AppsDeleteInstallationRequest extends SpeakeasyBase {
-    pathParams: AppsDeleteInstallationPathParams;
-    headers: AppsDeleteInstallationHeaders;
+    /**
+     * This API is under preview and subject to change.
+     */
+    accept: string;
+    /**
+     * installation_id parameter
+     */
+    installationId: number;
 }
 export declare class AppsDeleteInstallationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Resource not found
+     */
     basicError?: shared.BasicError;
 }

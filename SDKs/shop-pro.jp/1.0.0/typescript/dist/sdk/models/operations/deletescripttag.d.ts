@@ -1,16 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class DeleteScriptTagPathParams extends SpeakeasyBase {
-    scriptTagId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteScriptTagSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class DeleteScriptTagRequest extends SpeakeasyBase {
-    pathParams: DeleteScriptTagPathParams;
-    security: DeleteScriptTagSecurity;
+    /**
+     * スクリプトタグID
+     */
+    scriptTagId: number;
 }
 export declare class DeleteScriptTagResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

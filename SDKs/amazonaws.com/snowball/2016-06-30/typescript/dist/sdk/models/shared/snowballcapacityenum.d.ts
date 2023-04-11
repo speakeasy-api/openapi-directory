@@ -6,5 +6,6 @@ export declare enum SnowballCapacityEnum {
     T98 = "T98",
     T8 = "T8",
     T14 = "T14",
+    T32 = "T32",
     NoPreference = "NoPreference"
 }

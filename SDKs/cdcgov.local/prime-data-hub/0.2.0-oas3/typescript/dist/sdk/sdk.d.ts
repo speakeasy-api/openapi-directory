@@ -1,10 +1,25 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["http://cdcgov.local"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * A router of public health data from multiple senders and receivers
+ */
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -12,61 +27,62 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
     /**
-     * deleteSettingsOrganizationsOrganizationName - Delete an organization (and the associated receivers and senders)
-    **/
-    deleteSettingsOrganizationsOrganizationName(req: operations.DeleteSettingsOrganizationsOrganizationNameRequest, config?: AxiosRequestConfig): Promise<operations.DeleteSettingsOrganizationsOrganizationNameResponse>;
+     * Delete an organization (and the associated receivers and senders)
+     */
+    deleteSettingsOrganizationsOrganizationName(req: operations.DeleteSettingsOrganizationsOrganizationNameRequest, security: operations.DeleteSettingsOrganizationsOrganizationNameSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteSettingsOrganizationsOrganizationNameResponse>;
     /**
-     * deleteSettingsOrganizationsOrganizationNameReceiversReceiverName - Delete a receiver
-    **/
-    deleteSettingsOrganizationsOrganizationNameReceiversReceiverName(req: operations.DeleteSettingsOrganizationsOrganizationNameReceiversReceiverNameRequest, config?: AxiosRequestConfig): Promise<operations.DeleteSettingsOrganizationsOrganizationNameReceiversReceiverNameResponse>;
+     * Delete a receiver
+     */
+    deleteSettingsOrganizationsOrganizationNameReceiversReceiverName(req: operations.DeleteSettingsOrganizationsOrganizationNameReceiversReceiverNameRequest, security: operations.DeleteSettingsOrganizationsOrganizationNameReceiversReceiverNameSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteSettingsOrganizationsOrganizationNameReceiversReceiverNameResponse>;
     /**
-     * deleteSettingsOrganizationsOrganizationNameSendersSenderName - Delete a sender
-    **/
-    deleteSettingsOrganizationsOrganizationNameSendersSenderName(req: operations.DeleteSettingsOrganizationsOrganizationNameSendersSenderNameRequest, config?: AxiosRequestConfig): Promise<operations.DeleteSettingsOrganizationsOrganizationNameSendersSenderNameResponse>;
+     * Delete a sender
+     */
+    deleteSettingsOrganizationsOrganizationNameSendersSenderName(req: operations.DeleteSettingsOrganizationsOrganizationNameSendersSenderNameRequest, security: operations.DeleteSettingsOrganizationsOrganizationNameSendersSenderNameSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteSettingsOrganizationsOrganizationNameSendersSenderNameResponse>;
     /**
-     * getSettingsOrganizations - The settings for all organizations of the system. Must have admin access.
-    **/
-    getSettingsOrganizations(req: operations.GetSettingsOrganizationsRequest, config?: AxiosRequestConfig): Promise<operations.GetSettingsOrganizationsResponse>;
+     * The settings for all organizations of the system. Must have admin access.
+     */
+    getSettingsOrganizations(config?: AxiosRequestConfig): Promise<operations.GetSettingsOrganizationsResponse>;
     /**
-     * getSettingsOrganizationsOrganizationName - A single organization settings
-    **/
-    getSettingsOrganizationsOrganizationName(req: operations.GetSettingsOrganizationsOrganizationNameRequest, config?: AxiosRequestConfig): Promise<operations.GetSettingsOrganizationsOrganizationNameResponse>;
+     * A single organization settings
+     */
+    getSettingsOrganizationsOrganizationName(req: operations.GetSettingsOrganizationsOrganizationNameRequest, security: operations.GetSettingsOrganizationsOrganizationNameSecurity, config?: AxiosRequestConfig): Promise<operations.GetSettingsOrganizationsOrganizationNameResponse>;
     /**
-     * getSettingsOrganizationsOrganizationNameReceivers - A list of receivers and their current settings
-    **/
-    getSettingsOrganizationsOrganizationNameReceivers(req: operations.GetSettingsOrganizationsOrganizationNameReceiversRequest, config?: AxiosRequestConfig): Promise<operations.GetSettingsOrganizationsOrganizationNameReceiversResponse>;
+     * A list of receivers and their current settings
+     */
+    getSettingsOrganizationsOrganizationNameReceivers(req: operations.GetSettingsOrganizationsOrganizationNameReceiversRequest, security: operations.GetSettingsOrganizationsOrganizationNameReceiversSecurity, config?: AxiosRequestConfig): Promise<operations.GetSettingsOrganizationsOrganizationNameReceiversResponse>;
     /**
-     * getSettingsOrganizationsOrganizationNameReceiversReceiverName - The settings of a single of receiver
-    **/
-    getSettingsOrganizationsOrganizationNameReceiversReceiverName(req: operations.GetSettingsOrganizationsOrganizationNameReceiversReceiverNameRequest, config?: AxiosRequestConfig): Promise<operations.GetSettingsOrganizationsOrganizationNameReceiversReceiverNameResponse>;
+     * The settings of a single of receiver
+     */
+    getSettingsOrganizationsOrganizationNameReceiversReceiverName(req: operations.GetSettingsOrganizationsOrganizationNameReceiversReceiverNameRequest, security: operations.GetSettingsOrganizationsOrganizationNameReceiversReceiverNameSecurity, config?: AxiosRequestConfig): Promise<operations.GetSettingsOrganizationsOrganizationNameReceiversReceiverNameResponse>;
     /**
-     * getSettingsOrganizationsOrganizationNameSenders - A list of senders
-    **/
-    getSettingsOrganizationsOrganizationNameSenders(req: operations.GetSettingsOrganizationsOrganizationNameSendersRequest, config?: AxiosRequestConfig): Promise<operations.GetSettingsOrganizationsOrganizationNameSendersResponse>;
+     * A list of senders
+     */
+    getSettingsOrganizationsOrganizationNameSenders(req: operations.GetSettingsOrganizationsOrganizationNameSendersRequest, security: operations.GetSettingsOrganizationsOrganizationNameSendersSecurity, config?: AxiosRequestConfig): Promise<operations.GetSettingsOrganizationsOrganizationNameSendersResponse>;
     /**
-     * getSettingsOrganizationsOrganizationNameSendersSenderName - The settings of a single of sender
-    **/
-    getSettingsOrganizationsOrganizationNameSendersSenderName(req: operations.GetSettingsOrganizationsOrganizationNameSendersSenderNameRequest, config?: AxiosRequestConfig): Promise<operations.GetSettingsOrganizationsOrganizationNameSendersSenderNameResponse>;
+     * The settings of a single of sender
+     */
+    getSettingsOrganizationsOrganizationNameSendersSenderName(req: operations.GetSettingsOrganizationsOrganizationNameSendersSenderNameRequest, security: operations.GetSettingsOrganizationsOrganizationNameSendersSenderNameSecurity, config?: AxiosRequestConfig): Promise<operations.GetSettingsOrganizationsOrganizationNameSendersSenderNameResponse>;
     /**
-     * headSettingsOrganizations - Retrived the last modified for all settings of the system. Must have admin access.
-    **/
-    headSettingsOrganizations(req: operations.HeadSettingsOrganizationsRequest, config?: AxiosRequestConfig): Promise<operations.HeadSettingsOrganizationsResponse>;
+     * Retrived the last modified for all settings of the system. Must have admin access.
+     */
+    headSettingsOrganizations(config?: AxiosRequestConfig): Promise<operations.HeadSettingsOrganizationsResponse>;
     /**
-     * postReports - Post a report to the data hub
-    **/
-    postReports(req: operations.PostReportsRequest, config?: AxiosRequestConfig): Promise<operations.PostReportsResponse>;
+     * Post a report to the data hub
+     */
+    postReports(req: operations.PostReportsRequest, security: operations.PostReportsSecurity, config?: AxiosRequestConfig): Promise<operations.PostReportsResponse>;
     /**
-     * putSettingsOrganizationsOrganizationName - Create or update the direct settings associated with an organization
-    **/
-    putSettingsOrganizationsOrganizationName(req: operations.PutSettingsOrganizationsOrganizationNameRequest, config?: AxiosRequestConfig): Promise<operations.PutSettingsOrganizationsOrganizationNameResponse>;
+     * Create or update the direct settings associated with an organization
+     */
+    putSettingsOrganizationsOrganizationName(req: operations.PutSettingsOrganizationsOrganizationNameRequest, security: operations.PutSettingsOrganizationsOrganizationNameSecurity, config?: AxiosRequestConfig): Promise<operations.PutSettingsOrganizationsOrganizationNameResponse>;
     /**
-     * putSettingsOrganizationsOrganizationNameReceiversReceiverName - Update a single reciever
-    **/
-    putSettingsOrganizationsOrganizationNameReceiversReceiverName(req: operations.PutSettingsOrganizationsOrganizationNameReceiversReceiverNameRequest, config?: AxiosRequestConfig): Promise<operations.PutSettingsOrganizationsOrganizationNameReceiversReceiverNameResponse>;
+     * Update a single reciever
+     */
+    putSettingsOrganizationsOrganizationNameReceiversReceiverName(req: operations.PutSettingsOrganizationsOrganizationNameReceiversReceiverNameRequest, security: operations.PutSettingsOrganizationsOrganizationNameReceiversReceiverNameSecurity, config?: AxiosRequestConfig): Promise<operations.PutSettingsOrganizationsOrganizationNameReceiversReceiverNameResponse>;
     /**
-     * putSettingsOrganizationsOrganizationNameSendersSenderName - Update a single sender
-    **/
-    putSettingsOrganizationsOrganizationNameSendersSenderName(req: operations.PutSettingsOrganizationsOrganizationNameSendersSenderNameRequest, config?: AxiosRequestConfig): Promise<operations.PutSettingsOrganizationsOrganizationNameSendersSenderNameResponse>;
+     * Update a single sender
+     */
+    putSettingsOrganizationsOrganizationNameSendersSenderName(req: operations.PutSettingsOrganizationsOrganizationNameSendersSenderNameRequest, security: operations.PutSettingsOrganizationsOrganizationNameSendersSenderNameSecurity, config?: AxiosRequestConfig): Promise<operations.PutSettingsOrganizationsOrganizationNameSendersSenderNameResponse>;
 }

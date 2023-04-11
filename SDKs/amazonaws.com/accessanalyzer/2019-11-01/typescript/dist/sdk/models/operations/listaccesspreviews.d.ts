@@ -1,11 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListAccessPreviewsQueryParams extends SpeakeasyBase {
-    analyzerArn: string;
-    maxResults?: number;
-    nextToken?: string;
-}
-export declare class ListAccessPreviewsHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListAccessPreviewsRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +9,45 @@ export declare class ListAccessPreviewsHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class ListAccessPreviewsRequest extends SpeakeasyBase {
-    queryParams: ListAccessPreviewsQueryParams;
-    headers: ListAccessPreviewsHeaders;
+    /**
+     * The <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-getting-started.html#permission-resources">ARN of the analyzer</a> used to generate the access preview.
+     */
+    analyzerArn: string;
+    /**
+     * The maximum number of results to return in the response.
+     */
+    maxResults?: number;
+    /**
+     * A token used for pagination of results returned.
+     */
+    nextToken?: string;
 }
 export declare class ListAccessPreviewsResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * Success
+     */
     listAccessPreviewsResponse?: shared.ListAccessPreviewsResponse;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

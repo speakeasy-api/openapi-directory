@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { TargetIdTypeEnum } from "./targetidtypeenum";
 /**
  * A count of noncompliant resources.
-**/
+ */
 export declare class Summary extends SpeakeasyBase {
     lastUpdated?: string;
     nonCompliantResources?: number;

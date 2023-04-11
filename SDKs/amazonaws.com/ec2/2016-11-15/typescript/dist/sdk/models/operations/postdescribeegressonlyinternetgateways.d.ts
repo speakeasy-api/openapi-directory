@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeEgressOnlyInternetGatewaysActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeEgressOnlyInternetGatewaysActionEnum {
     DescribeEgressOnlyInternetGateways = "DescribeEgressOnlyInternetGateways"
 }
-export declare enum PostDescribeEgressOnlyInternetGatewaysVersionEnum {
+export declare enum POSTDescribeEgressOnlyInternetGatewaysVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDescribeEgressOnlyInternetGatewaysQueryParams extends SpeakeasyBase {
-    action: PostDescribeEgressOnlyInternetGatewaysActionEnum;
+export declare class POSTDescribeEgressOnlyInternetGatewaysRequest extends SpeakeasyBase {
+    action: POSTDescribeEgressOnlyInternetGatewaysActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostDescribeEgressOnlyInternetGatewaysVersionEnum;
-}
-export declare class PostDescribeEgressOnlyInternetGatewaysHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeEgressOnlyInternetGatewaysVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeEgressOnlyInternetGatewaysHeaders extends Speak
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeEgressOnlyInternetGatewaysRequest extends SpeakeasyBase {
-    queryParams: PostDescribeEgressOnlyInternetGatewaysQueryParams;
-    headers: PostDescribeEgressOnlyInternetGatewaysHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeEgressOnlyInternetGatewaysResponse extends SpeakeasyBase {
+export declare class POSTDescribeEgressOnlyInternetGatewaysResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

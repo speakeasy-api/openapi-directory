@@ -1,15 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { ImportResourceTypeEnum } from "./importresourcetypeenum";
 import { ImportStatusEnum } from "./importstatusenum";
 import { MergeStrategyEnum } from "./mergestrategyenum";
 /**
  * Provides summary information about an import in an import list.
-**/
+ */
 export declare class ImportSummary extends SpeakeasyBase {
     creationDateTime?: Date;
     importId?: string;
     importStatus?: ImportStatusEnum;
     importedResourceId?: string;
     importedResourceName?: string;
+    importedResourceType?: ImportResourceTypeEnum;
     lastUpdatedDateTime?: Date;
     mergeStrategy?: MergeStrategyEnum;
 }

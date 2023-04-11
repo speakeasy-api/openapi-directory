@@ -1,7 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { Operation } from "./operation";
+/**
+ * Success
+ */
 export declare class GetOperationsForResourceResult extends SpeakeasyBase {
-    nextPageCount?: Record<string, any>;
+    nextPageCount?: string;
     nextPageToken?: string;
     operations?: Operation[];
 }

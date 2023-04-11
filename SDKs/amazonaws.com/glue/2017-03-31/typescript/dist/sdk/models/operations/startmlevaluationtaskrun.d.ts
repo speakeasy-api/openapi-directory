@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum StartMlEvaluationTaskRunXAmzTargetEnum {
-    AwsGlueStartMlEvaluationTaskRun = "AWSGlue.StartMLEvaluationTaskRun"
+import { AxiosResponse } from "axios";
+export declare enum StartMLEvaluationTaskRunXAmzTargetEnum {
+    AWSGlueStartMLEvaluationTaskRun = "AWSGlue.StartMLEvaluationTaskRun"
 }
-export declare class StartMlEvaluationTaskRunHeaders extends SpeakeasyBase {
+export declare class StartMLEvaluationTaskRunRequest extends SpeakeasyBase {
+    startMLEvaluationTaskRunRequest: shared.StartMLEvaluationTaskRunRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,20 +13,38 @@ export declare class StartMlEvaluationTaskRunHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: StartMlEvaluationTaskRunXAmzTargetEnum;
+    xAmzTarget: StartMLEvaluationTaskRunXAmzTargetEnum;
 }
-export declare class StartMlEvaluationTaskRunRequest extends SpeakeasyBase {
-    headers: StartMlEvaluationTaskRunHeaders;
-    request: shared.StartMlEvaluationTaskRunRequest;
-}
-export declare class StartMlEvaluationTaskRunResponse extends SpeakeasyBase {
+export declare class StartMLEvaluationTaskRunResponse extends SpeakeasyBase {
+    /**
+     * ConcurrentRunsExceededException
+     */
     concurrentRunsExceededException?: any;
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * MLTransformNotReadyException
+     */
     mlTransformNotReadyException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
-    startMLEvaluationTaskRunResponse?: shared.StartMlEvaluationTaskRunResponse;
+    /**
+     * Success
+     */
+    startMLEvaluationTaskRunResponse?: shared.StartMLEvaluationTaskRunResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

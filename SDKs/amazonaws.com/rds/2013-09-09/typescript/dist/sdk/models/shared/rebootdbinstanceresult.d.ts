@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbInstance } from "./dbinstance";
-export declare class RebootDbInstanceResult extends SpeakeasyBase {
-    dbInstance?: DbInstance;
+import { DBInstance } from "./dbinstance";
+/**
+ * Success
+ */
+export declare class RebootDBInstanceResult extends SpeakeasyBase {
+    dbInstance?: DBInstance;
 }

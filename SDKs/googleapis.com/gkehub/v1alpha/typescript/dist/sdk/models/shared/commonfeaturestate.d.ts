@@ -1,13 +1,42 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { AppDevExperienceFeatureState } from "./appdevexperiencefeaturestate";
-import { ServiceMeshFeatureState } from "./servicemeshfeaturestate";
 import { FeatureState } from "./featurestate";
+import { ServiceMeshFeatureState } from "./servicemeshfeaturestate";
 /**
  * CommonFeatureState contains Hub-wide Feature status information.
-**/
+ */
 export declare class CommonFeatureState extends SpeakeasyBase {
+    /**
+     * State for App Dev Exp Feature.
+     */
     appdevexperience?: AppDevExperienceFeatureState;
+    /**
+     * **FleetObservability**: An empty state left as an example Hub-wide Feature state.
+     */
     fleetobservability?: Record<string, any>;
+    /**
+     * **Service Mesh**: State for the whole Hub, as analyzed by the Service Mesh Hub Controller.
+     */
     servicemesh?: ServiceMeshFeatureState;
+    /**
+     * FeatureState describes the high-level state of a Feature. It may be used to describe a Feature's state at the environ-level, or per-membershop, depending on the context.
+     */
+    state?: FeatureState;
+}
+/**
+ * CommonFeatureState contains Hub-wide Feature status information.
+ */
+export declare class CommonFeatureStateInput extends SpeakeasyBase {
+    /**
+     * State for App Dev Exp Feature.
+     */
+    appdevexperience?: AppDevExperienceFeatureState;
+    /**
+     * **FleetObservability**: An empty state left as an example Hub-wide Feature state.
+     */
+    fleetobservability?: Record<string, any>;
+    /**
+     * FeatureState describes the high-level state of a Feature. It may be used to describe a Feature's state at the environ-level, or per-membershop, depending on the context.
+     */
     state?: FeatureState;
 }

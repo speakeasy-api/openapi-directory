@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteDatabaseXAmzTargetEnum {
     Timestream20181101DeleteDatabase = "Timestream_20181101.DeleteDatabase"
 }
-export declare class DeleteDatabaseHeaders extends SpeakeasyBase {
+export declare class DeleteDatabaseRequest extends SpeakeasyBase {
+    deleteDatabaseRequest: shared.DeleteDatabaseRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class DeleteDatabaseHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteDatabaseXAmzTargetEnum;
 }
-export declare class DeleteDatabaseRequest extends SpeakeasyBase {
-    headers: DeleteDatabaseHeaders;
-    request: shared.DeleteDatabaseRequest;
-}
 export declare class DeleteDatabaseResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidEndpointException
+     */
     invalidEndpointException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

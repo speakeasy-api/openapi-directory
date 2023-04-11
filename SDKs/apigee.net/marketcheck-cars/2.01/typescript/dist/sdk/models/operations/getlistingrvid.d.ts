@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetListingRvIdPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class GetListingRvIdQueryParams extends SpeakeasyBase {
-    apiKey?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetListingRvIdRequest extends SpeakeasyBase {
-    pathParams: GetListingRvIdPathParams;
-    queryParams: GetListingRvIdQueryParams;
+    /**
+     * The API Authentication Key. Mandatory with all API calls.
+     */
+    apiKey?: string;
+    /**
+     * Listing id to get all the listing attributes
+     */
+    id: string;
 }
 export declare class GetListingRvIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Error
+     */
     error?: shared.ErrorT;
-    rvListing?: shared.RvListing;
+    /**
+     * RV listing for the given id
+     */
+    rvListing?: shared.RVListing;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

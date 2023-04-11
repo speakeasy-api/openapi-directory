@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListActivityTypesQueryParams extends SpeakeasyBase {
-    maximumPageSize?: string;
-    nextPageToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListActivityTypesXAmzTargetEnum {
     SimpleWorkflowServiceListActivityTypes = "SimpleWorkflowService.ListActivityTypes"
 }
-export declare class ListActivityTypesHeaders extends SpeakeasyBase {
+export declare class ListActivityTypesRequest extends SpeakeasyBase {
+    listActivityTypesInput: shared.ListActivityTypesInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,16 +14,29 @@ export declare class ListActivityTypesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: ListActivityTypesXAmzTargetEnum;
-}
-export declare class ListActivityTypesRequest extends SpeakeasyBase {
-    queryParams: ListActivityTypesQueryParams;
-    headers: ListActivityTypesHeaders;
-    request: shared.ListActivityTypesInput;
+    /**
+     * Pagination limit
+     */
+    maximumPageSize?: string;
+    /**
+     * Pagination token
+     */
+    nextPageToken?: string;
 }
 export declare class ListActivityTypesResponse extends SpeakeasyBase {
+    /**
+     * Success
+     */
     activityTypeInfos?: shared.ActivityTypeInfos;
     contentType: string;
+    /**
+     * OperationNotPermittedFault
+     */
     operationNotPermittedFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnknownResourceFault
+     */
     unknownResourceFault?: any;
 }

@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetChartInfoUsingGet1PathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETChartInfoUsingGet1Request extends SpeakeasyBase {
+    /**
+     * Species Type Key - 3=rat 4=chinchilla
+     */
     speciesTypeKey: number;
+    /**
+     * List of term accession IDs
+     */
     termString: string;
 }
-export declare class GetChartInfoUsingGet1Request extends SpeakeasyBase {
-    pathParams: GetChartInfoUsingGet1PathParams;
-}
-export declare class GetChartInfoUsingGet1Response extends SpeakeasyBase {
+export declare class GETChartInfoUsingGet1Response extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

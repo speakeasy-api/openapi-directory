@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum CreatePreparedStatementXAmzTargetEnum {
     AmazonAthenaCreatePreparedStatement = "AmazonAthena.CreatePreparedStatement"
 }
-export declare class CreatePreparedStatementHeaders extends SpeakeasyBase {
+export declare class CreatePreparedStatementRequest extends SpeakeasyBase {
+    createPreparedStatementInput: shared.CreatePreparedStatementInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class CreatePreparedStatementHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: CreatePreparedStatementXAmzTargetEnum;
 }
-export declare class CreatePreparedStatementRequest extends SpeakeasyBase {
-    headers: CreatePreparedStatementHeaders;
-    request: shared.CreatePreparedStatementInput;
-}
 export declare class CreatePreparedStatementResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     createPreparedStatementOutput?: Record<string, any>;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

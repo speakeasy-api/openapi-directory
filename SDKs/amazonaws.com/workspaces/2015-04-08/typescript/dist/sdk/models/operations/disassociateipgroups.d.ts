@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DisassociateIpGroupsXAmzTargetEnum {
     WorkspacesServiceDisassociateIpGroups = "WorkspacesService.DisassociateIpGroups"
 }
-export declare class DisassociateIpGroupsHeaders extends SpeakeasyBase {
+export declare class DisassociateIpGroupsRequest extends SpeakeasyBase {
+    disassociateIpGroupsRequest: shared.DisassociateIpGroupsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class DisassociateIpGroupsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DisassociateIpGroupsXAmzTargetEnum;
 }
-export declare class DisassociateIpGroupsRequest extends SpeakeasyBase {
-    headers: DisassociateIpGroupsHeaders;
-    request: shared.DisassociateIpGroupsRequest;
-}
 export declare class DisassociateIpGroupsResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     disassociateIpGroupsResult?: Record<string, any>;
+    /**
+     * InvalidParameterValuesException
+     */
     invalidParameterValuesException?: any;
+    /**
+     * InvalidResourceStateException
+     */
     invalidResourceStateException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
 }

@@ -1,16 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PullsGetPathParams extends SpeakeasyBase {
-    owner: string;
-    pullNumber: number;
-    repo: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PullsGetRequest extends SpeakeasyBase {
-    pathParams: PullsGetPathParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    owner: string;
+    /**
+     * The number that identifies the pull request.
+     */
+    pullNumber: number;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    repo: string;
 }
 export declare class PullsGetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Resource not found
+     */
     basicError?: shared.BasicError;
+    /**
+     * Pass the appropriate [media type](https://docs.github.com/enterprise-server@3.1/rest/overview/media-types/#commits-commit-comparison-and-pull-requests) to fetch diff and patch formats.
+     */
     pullRequest?: shared.PullRequest;
 }

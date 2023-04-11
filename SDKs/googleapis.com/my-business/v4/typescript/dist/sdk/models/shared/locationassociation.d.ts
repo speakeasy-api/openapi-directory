@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The category that this location photo belongs to.
+ */
 export declare enum LocationAssociationCategoryEnum {
     CategoryUnspecified = "CATEGORY_UNSPECIFIED",
     Cover = "COVER",
@@ -17,8 +20,14 @@ export declare enum LocationAssociationCategoryEnum {
 }
 /**
  * How the media item is associated with its location.
-**/
+ */
 export declare class LocationAssociation extends SpeakeasyBase {
+    /**
+     * The category that this location photo belongs to.
+     */
     category?: LocationAssociationCategoryEnum;
+    /**
+     * The ID of a price list item that this location photo is associated with.
+     */
     priceListItemId?: string;
 }

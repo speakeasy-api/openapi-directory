@@ -1,22 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetApiSpecificationQueryParams extends SpeakeasyBase {
-    page?: number;
-    perPage?: number;
+import { AxiosResponse } from "axios";
+export declare class GetAPISpecificationSecurity extends SpeakeasyBase {
+    password: string;
+    username: string;
 }
-export declare class GetApiSpecificationHeaders extends SpeakeasyBase {
+export declare class GetAPISpecificationRequest extends SpeakeasyBase {
+    /**
+     * Used to specify further pages (starts at 1)
+     */
+    page?: number;
+    /**
+     * Number of items to include in pagination (up to 100, defaults to 10)
+     */
+    perPage?: number;
+    /**
+     * Version number of your docs project, for example, v3.0. To see all valid versions for your docs project call https://docs.readme.com/developers/reference/version#getversions.
+     */
     xReadmeVersion: string;
 }
-export declare class GetApiSpecificationSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
-}
-export declare class GetApiSpecificationRequest extends SpeakeasyBase {
-    queryParams: GetApiSpecificationQueryParams;
-    headers: GetApiSpecificationHeaders;
-    security: GetApiSpecificationSecurity;
-}
-export declare class GetApiSpecificationResponse extends SpeakeasyBase {
+export declare class GetAPISpecificationResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

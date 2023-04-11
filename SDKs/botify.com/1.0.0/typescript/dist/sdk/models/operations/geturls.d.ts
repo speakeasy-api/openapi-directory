@@ -1,22 +1,46 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetUrlsPathParams extends SpeakeasyBase {
-    analysisSlug: string;
-    projectSlug: string;
-    username: string;
-}
+import { AxiosResponse } from "axios";
+/**
+ * Analysis context to execute the query
+ */
 export declare enum GetUrlsAreaEnum {
     Current = "current",
     Disappeared = "disappeared",
     New = "new",
     SearchEnginesOrphans = "search_engines_orphans"
 }
-export declare class GetUrlsQueryParams extends SpeakeasyBase {
+export declare class GetUrlsRequest extends SpeakeasyBase {
+    urlsQuery?: shared.UrlsQuery;
+    /**
+     * Analysis' identifier
+     */
+    analysisSlug: string;
+    /**
+     * Analysis context to execute the query
+     */
     area?: GetUrlsAreaEnum;
+    /**
+     * Page Number
+     */
     page?: number;
+    /**
+     * Project's identifier
+     */
+    projectSlug: string;
+    /**
+     * Page Size
+     */
     size?: number;
+    /**
+     * User's identifier
+     */
+    username: string;
 }
-export declare class GetUrls200ApplicationJson extends SpeakeasyBase {
+/**
+ * Successful operation
+ */
+export declare class GetUrls200ApplicationJSON extends SpeakeasyBase {
     count?: number;
     next?: string;
     page?: number;
@@ -24,14 +48,16 @@ export declare class GetUrls200ApplicationJson extends SpeakeasyBase {
     results?: Record<string, any>[];
     size?: number;
 }
-export declare class GetUrlsRequest extends SpeakeasyBase {
-    pathParams: GetUrlsPathParams;
-    queryParams: GetUrlsQueryParams;
-    request?: shared.UrlsQuery;
-}
 export declare class GetUrlsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * error payload
+     */
     defaultPayload?: shared.DefaultPayload;
     statusCode: number;
-    getUrls200ApplicationJSONObject?: GetUrls200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful operation
+     */
+    getUrls200ApplicationJSONObject?: GetUrls200ApplicationJSON;
 }

@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Indicates whether the binding includes the principal.
+ */
 export declare enum GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembershipMembershipEnum {
     MembershipUnspecified = "MEMBERSHIP_UNSPECIFIED",
     MembershipIncluded = "MEMBERSHIP_INCLUDED",
@@ -6,12 +9,24 @@ export declare enum GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembe
     MembershipUnknownInfoDenied = "MEMBERSHIP_UNKNOWN_INFO_DENIED",
     MembershipUnknownUnsupported = "MEMBERSHIP_UNKNOWN_UNSUPPORTED"
 }
+/**
+ * The relevance of the principal's status to the overall determination for the binding.
+ */
 export declare enum GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembershipRelevanceEnum {
     HeuristicRelevanceUnspecified = "HEURISTIC_RELEVANCE_UNSPECIFIED",
     Normal = "NORMAL",
     High = "HIGH"
 }
+/**
+ * Details about whether the binding includes the principal.
+ */
 export declare class GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembership extends SpeakeasyBase {
+    /**
+     * Indicates whether the binding includes the principal.
+     */
     membership?: GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembershipMembershipEnum;
+    /**
+     * The relevance of the principal's status to the overall determination for the binding.
+     */
     relevance?: GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembershipRelevanceEnum;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum ListTagsForResourceXAmzTargetEnum {
-    AwsCognitoIdentityServiceListTagsForResource = "AWSCognitoIdentityService.ListTagsForResource"
+    AWSCognitoIdentityServiceListTagsForResource = "AWSCognitoIdentityService.ListTagsForResource"
 }
-export declare class ListTagsForResourceHeaders extends SpeakeasyBase {
+export declare class ListTagsForResourceRequest extends SpeakeasyBase {
+    listTagsForResourceInput: shared.ListTagsForResourceInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class ListTagsForResourceHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListTagsForResourceXAmzTargetEnum;
 }
-export declare class ListTagsForResourceRequest extends SpeakeasyBase {
-    headers: ListTagsForResourceHeaders;
-    request: shared.ListTagsForResourceInput;
-}
 export declare class ListTagsForResourceResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalErrorException
+     */
     internalErrorException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * Success
+     */
     listTagsForResourceResponse?: shared.ListTagsForResourceResponse;
+    /**
+     * NotAuthorizedException
+     */
     notAuthorizedException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum PutContactPolicyXAmzTargetEnum {
-    SsmContactsPutContactPolicy = "SSMContacts.PutContactPolicy"
+    SSMContactsPutContactPolicy = "SSMContacts.PutContactPolicy"
 }
-export declare class PutContactPolicyHeaders extends SpeakeasyBase {
+export declare class PutContactPolicyRequest extends SpeakeasyBase {
+    putContactPolicyRequest: shared.PutContactPolicyRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class PutContactPolicyHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: PutContactPolicyXAmzTargetEnum;
 }
-export declare class PutContactPolicyRequest extends SpeakeasyBase {
-    headers: PutContactPolicyHeaders;
-    request: shared.PutContactPolicyRequest;
-}
 export declare class PutContactPolicyResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * Success
+     */
     putContactPolicyResult?: Record<string, any>;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

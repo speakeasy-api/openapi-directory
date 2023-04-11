@@ -3,7 +3,7 @@ import { NodeUpdateInitiatedByEnum } from "./nodeupdateinitiatedbyenum";
 import { NodeUpdateStatusEnum } from "./nodeupdatestatusenum";
 /**
  * The status of the service update on the cache node
-**/
+ */
 export declare class CacheNodeUpdateStatusList extends SpeakeasyBase {
     cacheNodeId?: string;
     nodeDeletionDate?: Date;

@@ -1,6 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class MarkAsArchivedHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class MarkAsArchivedRequestBody extends SpeakeasyBase {
+    /**
+     * Mark as archived by Source Server ID.
+     */
+    sourceServerID: string;
+}
+export declare class MarkAsArchivedRequest extends SpeakeasyBase {
+    requestBody: MarkAsArchivedRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -9,18 +17,24 @@ export declare class MarkAsArchivedHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class MarkAsArchivedRequestBody extends SpeakeasyBase {
-    sourceServerID: string;
-}
-export declare class MarkAsArchivedRequest extends SpeakeasyBase {
-    headers: MarkAsArchivedHeaders;
-    request: MarkAsArchivedRequestBody;
-}
 export declare class MarkAsArchivedResponse extends SpeakeasyBase {
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
+    /**
+     * Success
+     */
     sourceServer?: shared.SourceServer;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UninitializedAccountException
+     */
     uninitializedAccountException?: any;
 }

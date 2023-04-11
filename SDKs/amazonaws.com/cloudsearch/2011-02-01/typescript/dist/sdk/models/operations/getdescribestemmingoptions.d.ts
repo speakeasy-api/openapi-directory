@@ -1,16 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeStemmingOptionsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeStemmingOptionsActionEnum {
     DescribeStemmingOptions = "DescribeStemmingOptions"
 }
-export declare enum GetDescribeStemmingOptionsVersionEnum {
+export declare enum GETDescribeStemmingOptionsVersionEnum {
     TwoThousandAndEleven0201 = "2011-02-01"
 }
-export declare class GetDescribeStemmingOptionsQueryParams extends SpeakeasyBase {
-    action: GetDescribeStemmingOptionsActionEnum;
+export declare class GETDescribeStemmingOptionsRequest extends SpeakeasyBase {
+    action: GETDescribeStemmingOptionsActionEnum;
     domainName: string;
-    version: GetDescribeStemmingOptionsVersionEnum;
-}
-export declare class GetDescribeStemmingOptionsHeaders extends SpeakeasyBase {
+    version: GETDescribeStemmingOptionsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +18,9 @@ export declare class GetDescribeStemmingOptionsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeStemmingOptionsRequest extends SpeakeasyBase {
-    queryParams: GetDescribeStemmingOptionsQueryParams;
-    headers: GetDescribeStemmingOptionsHeaders;
-}
-export declare class GetDescribeStemmingOptionsResponse extends SpeakeasyBase {
+export declare class GETDescribeStemmingOptionsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

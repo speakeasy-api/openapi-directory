@@ -1,22 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetTrainedModelLearningCurve1PathParams extends SpeakeasyBase {
-    modelId: string;
-}
-export declare class GetTrainedModelLearningCurve1QueryParams extends SpeakeasyBase {
-    count?: string;
-    offset?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetTrainedModelLearningCurve1Security extends SpeakeasyBase {
-    bearerToken: shared.SchemeBearerToken;
+    bearerToken: string;
 }
 export declare class GetTrainedModelLearningCurve1Request extends SpeakeasyBase {
-    pathParams: GetTrainedModelLearningCurve1PathParams;
-    queryParams: GetTrainedModelLearningCurve1QueryParams;
-    security: GetTrainedModelLearningCurve1Security;
+    /**
+     * Number of epoch to return. Maximum valid value is 25.
+     */
+    count?: string;
+    modelId: string;
+    /**
+     * Index of the epoch from which you want to start paging
+     */
+    offset?: string;
 }
 export declare class GetTrainedModelLearningCurve1Response extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Learning Curve
+     */
     learningCurveList?: shared.LearningCurveList;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

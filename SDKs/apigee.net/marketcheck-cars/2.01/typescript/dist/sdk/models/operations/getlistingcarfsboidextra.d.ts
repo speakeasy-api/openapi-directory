@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetListingCarFsboIdExtraPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class GetListingCarFsboIdExtraQueryParams extends SpeakeasyBase {
-    apiKey?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetListingCarFsboIdExtraRequest extends SpeakeasyBase {
-    pathParams: GetListingCarFsboIdExtraPathParams;
-    queryParams: GetListingCarFsboIdExtraQueryParams;
+    /**
+     * The API Authentication Key. Mandatory with all API calls.
+     */
+    apiKey?: string;
+    /**
+     * Listing id to get all the listing attributes
+     */
+    id: string;
 }
 export declare class GetListingCarFsboIdExtraResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Error
+     */
     error?: shared.ErrorT;
+    /**
+     * ListingAttributes for the given listing id
+     */
     listingExtraAttributes?: shared.ListingExtraAttributes;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

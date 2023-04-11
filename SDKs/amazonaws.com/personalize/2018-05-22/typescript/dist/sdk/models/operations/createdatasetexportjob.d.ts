@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum CreateDatasetExportJobXAmzTargetEnum {
     AmazonPersonalizeCreateDatasetExportJob = "AmazonPersonalize.CreateDatasetExportJob"
 }
-export declare class CreateDatasetExportJobHeaders extends SpeakeasyBase {
+export declare class CreateDatasetExportJobRequest extends SpeakeasyBase {
+    createDatasetExportJobRequest: shared.CreateDatasetExportJobRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,36 @@ export declare class CreateDatasetExportJobHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: CreateDatasetExportJobXAmzTargetEnum;
 }
-export declare class CreateDatasetExportJobRequest extends SpeakeasyBase {
-    headers: CreateDatasetExportJobHeaders;
-    request: shared.CreateDatasetExportJobRequest;
-}
 export declare class CreateDatasetExportJobResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     createDatasetExportJobResponse?: shared.CreateDatasetExportJobResponse;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * ResourceAlreadyExistsException
+     */
     resourceAlreadyExistsException?: any;
-    resourceInUseException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceInUseException
+     */
+    resourceInUseException?: any;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * TooManyTagsException
+     */
+    tooManyTagsException?: any;
 }

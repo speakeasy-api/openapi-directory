@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetEmbedPresetsAlt1QueryParams extends SpeakeasyBase {
-    page?: number;
-    perPage?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetEmbedPresetsAlt1Request extends SpeakeasyBase {
-    queryParams: GetEmbedPresetsAlt1QueryParams;
+    /**
+     * The page number of the results to show.
+     */
+    page?: number;
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    perPage?: number;
 }
 export declare class GetEmbedPresetsAlt1Response extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The embed presets were returned.
+     */
     presets?: shared.Presets[];
 }

@@ -1,14 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class LicensesGetPathParams extends SpeakeasyBase {
-    license: string;
-}
+import { AxiosResponse } from "axios";
 export declare class LicensesGetRequest extends SpeakeasyBase {
-    pathParams: LicensesGetPathParams;
+    license: string;
 }
 export declare class LicensesGetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Forbidden
+     */
     basicError?: shared.BasicError;
+    /**
+     * Response
+     */
     license?: shared.License;
 }

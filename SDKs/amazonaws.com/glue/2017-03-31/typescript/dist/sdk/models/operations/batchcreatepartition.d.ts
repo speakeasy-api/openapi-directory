@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum BatchCreatePartitionXAmzTargetEnum {
-    AwsGlueBatchCreatePartition = "AWSGlue.BatchCreatePartition"
+    AWSGlueBatchCreatePartition = "AWSGlue.BatchCreatePartition"
 }
-export declare class BatchCreatePartitionHeaders extends SpeakeasyBase {
+export declare class BatchCreatePartitionRequest extends SpeakeasyBase {
+    batchCreatePartitionRequest: shared.BatchCreatePartitionRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,19 +15,40 @@ export declare class BatchCreatePartitionHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: BatchCreatePartitionXAmzTargetEnum;
 }
-export declare class BatchCreatePartitionRequest extends SpeakeasyBase {
-    headers: BatchCreatePartitionHeaders;
-    request: shared.BatchCreatePartitionRequest;
-}
 export declare class BatchCreatePartitionResponse extends SpeakeasyBase {
+    /**
+     * AlreadyExistsException
+     */
     alreadyExistsException?: any;
+    /**
+     * Success
+     */
     batchCreatePartitionResponse?: shared.BatchCreatePartitionResponse;
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * GlueEncryptionException
+     */
     glueEncryptionException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
-    resourceNumberLimitExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNumberLimitExceededException
+     */
+    resourceNumberLimitExceededException?: any;
 }

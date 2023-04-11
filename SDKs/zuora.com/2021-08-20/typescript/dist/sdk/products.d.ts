@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Products {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,19 +9,19 @@ export declare class Products {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * objectDeleteProduct - CRUD: Delete a product
-    **/
-    objectDeleteProduct(req: operations.ObjectDeleteProductRequest, config?: AxiosRequestConfig): Promise<operations.ObjectDeleteProductResponse>;
+     * CRUD: Delete a product
+     */
+    objectDELETEProduct(req: operations.ObjectDELETEProductRequest, config?: AxiosRequestConfig): Promise<operations.ObjectDELETEProductResponse>;
     /**
-     * objectGetProduct - CRUD: Retrieve a product
-    **/
-    objectGetProduct(req: operations.ObjectGetProductRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGetProductResponse>;
+     * CRUD: Retrieve a product
+     */
+    objectGETProduct(req: operations.ObjectGETProductRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGETProductResponse>;
     /**
-     * objectPostProduct - CRUD: Create a product
-    **/
-    objectPostProduct(req: operations.ObjectPostProductRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPostProductResponse>;
+     * CRUD: Create a product
+     */
+    objectPOSTProduct(req: operations.ObjectPOSTProductRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPOSTProductResponse>;
     /**
-     * objectPutProduct - CRUD: Update a product
-    **/
-    objectPutProduct(req: operations.ObjectPutProductRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPutProductResponse>;
+     * CRUD: Update a product
+     */
+    objectPUTProduct(req: operations.ObjectPUTProductRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPUTProductResponse>;
 }

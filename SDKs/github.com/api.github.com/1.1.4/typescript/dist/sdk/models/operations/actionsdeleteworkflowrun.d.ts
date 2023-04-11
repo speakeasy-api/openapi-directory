@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ActionsDeleteWorkflowRunPathParams extends SpeakeasyBase {
-    owner: string;
-    repo: string;
-    runId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ActionsDeleteWorkflowRunRequest extends SpeakeasyBase {
-    pathParams: ActionsDeleteWorkflowRunPathParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    owner: string;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    repo: string;
+    /**
+     * The unique identifier of the workflow run.
+     */
+    runId: number;
 }
 export declare class ActionsDeleteWorkflowRunResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

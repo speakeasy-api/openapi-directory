@@ -1,15 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ActivateSubscriptionPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ActivateSubscriptionRequest extends SpeakeasyBase {
+    activateSubscriptionRequest?: shared.ActivateSubscriptionRequest;
     id: string;
 }
-export declare class ActivateSubscriptionRequest extends SpeakeasyBase {
-    pathParams: ActivateSubscriptionPathParams;
-    request?: shared.ActivateSubscriptionRequest;
-}
 export declare class ActivateSubscriptionResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     * Occurs when something goes wrong
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Activation subscription request is invalid
+     */
     errorResponseMessage?: shared.ErrorResponseMessage;
 }

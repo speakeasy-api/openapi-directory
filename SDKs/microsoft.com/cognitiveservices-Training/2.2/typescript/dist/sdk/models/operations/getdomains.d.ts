@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetDomainsHeaders extends SpeakeasyBase {
-    trainingKey: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetDomainsRequest extends SpeakeasyBase {
-    headers: GetDomainsHeaders;
+    trainingKey: string;
 }
 export declare class GetDomainsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
+    /**
+     * OK
+     */
     domains?: shared.Domain[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

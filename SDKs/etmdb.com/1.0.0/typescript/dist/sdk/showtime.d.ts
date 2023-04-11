@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Showtime {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class Showtime {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * showtimeSearchallRead - Return showtime search result
+     * Return showtime search result
      *
+     * @remarks
      * Return showtime search result
      *
      * ### Response Class (Status 200)
@@ -20,6 +21,6 @@ export declare class Showtime {
      *
      * For more details about showtime, check each cinema from the cinema list [see here][ref].
      * [ref]: https://etmdb.com/en/movie-list/-updated_date
-    **/
+     */
     showtimeSearchallRead(req: operations.ShowtimeSearchallReadRequest, config?: AxiosRequestConfig): Promise<operations.ShowtimeSearchallReadResponse>;
 }

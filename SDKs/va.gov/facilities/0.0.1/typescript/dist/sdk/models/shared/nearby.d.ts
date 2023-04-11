@@ -5,7 +5,7 @@ export declare enum NearbyTypeEnum {
 }
 /**
  * JSON API-compliant object describing a nearby VA facility
-**/
+ */
 export declare class Nearby extends SpeakeasyBase {
     attributes: NearbyAttributes;
     id: string;

@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListGroupVersionsPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListGroupVersionsRequest extends SpeakeasyBase {
+    /**
+     * The ID of the Greengrass group.
+     */
     groupId: string;
-}
-export declare class ListGroupVersionsQueryParams extends SpeakeasyBase {
+    /**
+     * The maximum number of results to be returned per request.
+     */
     maxResults?: string;
+    /**
+     * The token for the next set of results, or ''null'' if there are no additional results.
+     */
     nextToken?: string;
-}
-export declare class ListGroupVersionsHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,14 +22,16 @@ export declare class ListGroupVersionsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class ListGroupVersionsRequest extends SpeakeasyBase {
-    pathParams: ListGroupVersionsPathParams;
-    queryParams: ListGroupVersionsQueryParams;
-    headers: ListGroupVersionsHeaders;
-}
 export declare class ListGroupVersionsResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     listGroupVersionsResponse?: shared.ListGroupVersionsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

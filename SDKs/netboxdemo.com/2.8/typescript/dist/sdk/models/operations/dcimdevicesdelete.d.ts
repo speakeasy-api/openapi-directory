@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DcimDevicesDeletePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DcimDevicesDeleteRequest extends SpeakeasyBase {
-    pathParams: DcimDevicesDeletePathParams;
+    /**
+     * A unique integer value identifying this device.
+     */
+    id: number;
 }
 export declare class DcimDevicesDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

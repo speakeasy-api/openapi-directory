@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Activities {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +9,7 @@ export declare class Activities {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * youtubeActivitiesList - Retrieves a list of resources, possibly filtered.
-    **/
-    youtubeActivitiesList(req: operations.YoutubeActivitiesListRequest, config?: AxiosRequestConfig): Promise<operations.YoutubeActivitiesListResponse>;
+     * Retrieves a list of resources, possibly filtered.
+     */
+    youtubeActivitiesList(req: operations.YoutubeActivitiesListRequest, security: operations.YoutubeActivitiesListSecurity, config?: AxiosRequestConfig): Promise<operations.YoutubeActivitiesListResponse>;
 }

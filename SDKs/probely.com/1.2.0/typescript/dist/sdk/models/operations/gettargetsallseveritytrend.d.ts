@@ -1,27 +1,53 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetTargetsAllSeverityTrend200ApplicationJsonResultsHigh extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetTargetsAllSeverityTrend200ApplicationJSONResultsHigh extends SpeakeasyBase {
+    /**
+     * Date time
+     */
     zero?: Date;
+    /**
+     * Risk score
+     */
     one?: number;
 }
-export declare class GetTargetsAllSeverityTrend200ApplicationJsonResultsLow extends SpeakeasyBase {
+export declare class GetTargetsAllSeverityTrend200ApplicationJSONResultsLow extends SpeakeasyBase {
+    /**
+     * Date time
+     */
     zero?: Date;
+    /**
+     * Risk score
+     */
     one?: number;
 }
-export declare class GetTargetsAllSeverityTrend200ApplicationJsonResultsMedium extends SpeakeasyBase {
+export declare class GetTargetsAllSeverityTrend200ApplicationJSONResultsMedium extends SpeakeasyBase {
+    /**
+     * Date time
+     */
     zero?: Date;
+    /**
+     * Risk score
+     */
     one?: number;
 }
-export declare class GetTargetsAllSeverityTrend200ApplicationJsonResults extends SpeakeasyBase {
-    high?: GetTargetsAllSeverityTrend200ApplicationJsonResultsHigh[];
-    low?: GetTargetsAllSeverityTrend200ApplicationJsonResultsLow[];
-    medium?: GetTargetsAllSeverityTrend200ApplicationJsonResultsMedium[];
+export declare class GetTargetsAllSeverityTrend200ApplicationJSONResults extends SpeakeasyBase {
+    high?: GetTargetsAllSeverityTrend200ApplicationJSONResultsHigh[];
+    low?: GetTargetsAllSeverityTrend200ApplicationJSONResultsLow[];
+    medium?: GetTargetsAllSeverityTrend200ApplicationJSONResultsMedium[];
 }
-export declare class GetTargetsAllSeverityTrend200ApplicationJson extends SpeakeasyBase {
-    results?: GetTargetsAllSeverityTrend200ApplicationJsonResults;
+/**
+ * Severity trend plot data
+ */
+export declare class GetTargetsAllSeverityTrend200ApplicationJSON extends SpeakeasyBase {
+    results?: GetTargetsAllSeverityTrend200ApplicationJSONResults;
     step?: number;
 }
 export declare class GetTargetsAllSeverityTrendResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getTargetsAllSeverityTrend200ApplicationJSONObject?: GetTargetsAllSeverityTrend200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Severity trend plot data
+     */
+    getTargetsAllSeverityTrend200ApplicationJSONObject?: GetTargetsAllSeverityTrend200ApplicationJSON;
 }

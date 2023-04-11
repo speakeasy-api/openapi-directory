@@ -1,22 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ClinicalNoteFieldTypesReadPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class ClinicalNoteFieldTypesReadQueryParams extends SpeakeasyBase {
-    clinicalNoteTemplate?: number;
-    doctor?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ClinicalNoteFieldTypesReadSecurity extends SpeakeasyBase {
-    drchronoOauth2: shared.SchemeDrchronoOauth2;
+    drchronoOauth2: string;
 }
 export declare class ClinicalNoteFieldTypesReadRequest extends SpeakeasyBase {
-    pathParams: ClinicalNoteFieldTypesReadPathParams;
-    queryParams: ClinicalNoteFieldTypesReadQueryParams;
-    security: ClinicalNoteFieldTypesReadSecurity;
+    clinicalNoteTemplate?: number;
+    doctor?: number;
+    id: string;
 }
 export declare class ClinicalNoteFieldTypesReadResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * OK
+     */
     soapNoteLineItemFieldType?: shared.SoapNoteLineItemFieldType;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

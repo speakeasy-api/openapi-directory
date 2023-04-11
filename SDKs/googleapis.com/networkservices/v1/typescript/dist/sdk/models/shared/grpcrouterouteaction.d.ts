@@ -4,10 +4,22 @@ import { GrpcRouteFaultInjectionPolicy } from "./grpcroutefaultinjectionpolicy";
 import { GrpcRouteRetryPolicy } from "./grpcrouteretrypolicy";
 /**
  * Specifies how to route matched traffic.
-**/
+ */
 export declare class GrpcRouteRouteAction extends SpeakeasyBase {
+    /**
+     * Optional. The destination services to which traffic should be forwarded. If multiple destinations are specified, traffic will be split between Backend Service(s) according to the weight field of these destinations.
+     */
     destinations?: GrpcRouteDestination[];
+    /**
+     * The specification for fault injection introduced into traffic to test the resiliency of clients to destination service failure. As part of fault injection, when clients send requests to a destination, delays can be introduced on a percentage of requests before sending those requests to the destination service. Similarly requests from clients can be aborted by for a percentage of requests.
+     */
     faultInjectionPolicy?: GrpcRouteFaultInjectionPolicy;
+    /**
+     * The specifications for retries.
+     */
     retryPolicy?: GrpcRouteRetryPolicy;
+    /**
+     * Optional. Specifies the timeout for selected route. Timeout is computed from the time the request has been fully processed (i.e. end of stream) up until the response has been completely processed. Timeout includes all retries.
+     */
     timeout?: string;
 }

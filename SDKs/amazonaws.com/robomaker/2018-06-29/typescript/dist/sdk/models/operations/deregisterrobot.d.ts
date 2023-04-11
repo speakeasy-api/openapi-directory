@@ -1,6 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeregisterRobotHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeregisterRobotRequestBody extends SpeakeasyBase {
+    /**
+     * The Amazon Resource Name (ARN) of the fleet.
+     */
+    fleet: string;
+    /**
+     * The Amazon Resource Name (ARN) of the robot.
+     */
+    robot: string;
+}
+export declare class DeregisterRobotRequest extends SpeakeasyBase {
+    requestBody: DeregisterRobotRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -9,20 +21,28 @@ export declare class DeregisterRobotHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeregisterRobotRequestBody extends SpeakeasyBase {
-    fleet: string;
-    robot: string;
-}
-export declare class DeregisterRobotRequest extends SpeakeasyBase {
-    headers: DeregisterRobotHeaders;
-    request: DeregisterRobotRequestBody;
-}
 export declare class DeregisterRobotResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deregisterRobotResponse?: shared.DeregisterRobotResponse;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

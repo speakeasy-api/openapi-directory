@@ -3,7 +3,7 @@ import { Comment } from "./comment";
 import { Location } from "./location";
 /**
  * Returns information about comments on a pull request.
-**/
+ */
 export declare class CommentsForPullRequest extends SpeakeasyBase {
     afterBlobId?: string;
     afterCommitId?: string;

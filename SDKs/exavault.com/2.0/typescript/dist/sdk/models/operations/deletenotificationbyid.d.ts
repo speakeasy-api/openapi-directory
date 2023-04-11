@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteNotificationByIdPathParams extends SpeakeasyBase {
-    id: number;
-}
-export declare class DeleteNotificationByIdHeaders extends SpeakeasyBase {
-    evAccessToken: string;
-    evApiKey: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteNotificationByIdRequest extends SpeakeasyBase {
-    pathParams: DeleteNotificationByIdPathParams;
-    headers: DeleteNotificationByIdHeaders;
+    /**
+     * Access token required to make the API call.
+     */
+    evAccessToken: string;
+    /**
+     * API Key required to make the API call.
+     */
+    evApiKey: string;
+    /**
+     * ID of the notification. Use [GET /notifications](#operation/listNotifications) if you need to lookup an ID.
+     */
+    id: number;
 }
 export declare class DeleteNotificationByIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful Operation
+     */
     emptyResponse?: shared.EmptyResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

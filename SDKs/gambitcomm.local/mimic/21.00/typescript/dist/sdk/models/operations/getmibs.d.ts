@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetMibsPathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetMibsRequest extends SpeakeasyBase {
-    pathParams: GetMibsPathParams;
+    /**
+     * Agent to return the MIB triplets
+     */
+    agentNum: number;
 }
 export declare class GetMibsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     triplets?: shared.Triplet[];
 }

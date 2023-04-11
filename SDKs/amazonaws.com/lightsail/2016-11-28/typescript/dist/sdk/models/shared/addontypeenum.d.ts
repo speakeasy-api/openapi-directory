@@ -1,3 +1,4 @@
 export declare enum AddOnTypeEnum {
-    AutoSnapshot = "AutoSnapshot"
+    AutoSnapshot = "AutoSnapshot",
+    StopInstanceOnIdle = "StopInstanceOnIdle"
 }

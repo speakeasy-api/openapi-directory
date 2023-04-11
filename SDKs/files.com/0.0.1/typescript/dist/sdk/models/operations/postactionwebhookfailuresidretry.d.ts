@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PostActionWebhookFailuresIdRetryPathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class PostActionWebhookFailuresIdRetryRequest extends SpeakeasyBase {
-    pathParams: PostActionWebhookFailuresIdRetryPathParams;
+    /**
+     * Action Webhook Failure ID.
+     */
+    id: number;
 }
 export declare class PostActionWebhookFailuresIdRetryResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

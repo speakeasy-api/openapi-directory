@@ -1,0 +1,21 @@
+export declare enum HandlerErrorCodeEnum {
+    NotUpdatable = "NotUpdatable",
+    InvalidRequest = "InvalidRequest",
+    AccessDenied = "AccessDenied",
+    InvalidCredentials = "InvalidCredentials",
+    AlreadyExists = "AlreadyExists",
+    NotFound = "NotFound",
+    ResourceConflict = "ResourceConflict",
+    Throttling = "Throttling",
+    ServiceLimitExceeded = "ServiceLimitExceeded",
+    NotStabilized = "NotStabilized",
+    GeneralServiceException = "GeneralServiceException",
+    ServiceInternalError = "ServiceInternalError",
+    NetworkFailure = "NetworkFailure",
+    InternalFailure = "InternalFailure",
+    InvalidTypeConfiguration = "InvalidTypeConfiguration",
+    HandlerInternalFailure = "HandlerInternalFailure",
+    NonCompliant = "NonCompliant",
+    Unknown = "Unknown",
+    UnsupportedTarget = "UnsupportedTarget"
+}

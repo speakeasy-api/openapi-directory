@@ -1,5 +1,22 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * With Custom Objects service, you can define custom objects, extending the Zuora data model to accommodate your specific use cases.
+ *
+ * @remarks
+ *
+ * If you use Postman, you can import the custom objects endpoints as a collection into your Postman app and try out different requests to learn how the API works. Click the following button to get started:
+ *
+ * [![Run in Postman](https://run.pstmn.io/button.svg)](https://www.getpostman.com/run-collection/1f068ba43651bf63c0d4)
+ *
+ * You can sign up for a free account on the [Postman website](https://identity.getpostman.com/signup) and download the app in case you do not use Postman yet.
+ *
+ * Note that the Custom Object Definitions API is versioned by `Zuora-Version` in the request header. The response may be different for the same request with a different API version. Specify `Zuora-Version` in the request header if you expect a specific response schema.
+ *
+ * ### Error handling
+ * If the Custom Objects API call fails, an error code will be returned in the response body. See [Custom Objects API error code](https://knowledgecenter.zuora.com/Central_Platform/Custom_Objects/Z_Custom_Objects_API#Custom_Objects_API_error_code) for details.
+ *
+ */
 export declare class CustomObjectDefinitions {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,31 +26,35 @@ export declare class CustomObjectDefinitions {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteCustomObjectDefinitionByType - Delete a custom object definition
+     * Delete a custom object definition
      *
+     * @remarks
      * Deletes the custom object definition for the provided type.
      *
      * **Note:** A custom object definition can only be deleted if no record of this custom object type exists.
      *
-    **/
+     */
     deleteCustomObjectDefinitionByType(req: operations.DeleteCustomObjectDefinitionByTypeRequest, config?: AxiosRequestConfig): Promise<operations.DeleteCustomObjectDefinitionByTypeResponse>;
     /**
-     * getAllCustomObjectDefinitionsInNamespace - List custom object definitions
+     * List custom object definitions
      *
+     * @remarks
      * Get all custom objects definitions for a given tenant. If you want to copy all the existing custom objects from an old tenant to a new tenant, you can call this operation in your old tenant and then use its response directly as the request of the [Create custom object definitions](https://www.zuora.com/developer/api-reference/#operation/POST_CustomObjectDefinitions) call in the new tenant to import all the custom objects from the old tenant.
      *
-    **/
-    getAllCustomObjectDefinitionsInNamespace(req: operations.GetAllCustomObjectDefinitionsInNamespaceRequest, config?: AxiosRequestConfig): Promise<operations.GetAllCustomObjectDefinitionsInNamespaceResponse>;
+     */
+    getAllCustomObjectDefinitionsInNamespace(req: operations.GETAllCustomObjectDefinitionsInNamespaceRequest, config?: AxiosRequestConfig): Promise<operations.GETAllCustomObjectDefinitionsInNamespaceResponse>;
     /**
-     * getCustomObjectDefinitionByType - Retrieve a custom object definition
+     * Retrieve a custom object definition
      *
+     * @remarks
      * Retrieves the custom object definition by type for the given tenant.
      *
-    **/
-    getCustomObjectDefinitionByType(req: operations.GetCustomObjectDefinitionByTypeRequest, config?: AxiosRequestConfig): Promise<operations.GetCustomObjectDefinitionByTypeResponse>;
+     */
+    getCustomObjectDefinitionByType(req: operations.GETCustomObjectDefinitionByTypeRequest, config?: AxiosRequestConfig): Promise<operations.GETCustomObjectDefinitionByTypeResponse>;
     /**
-     * postCustomObjectDefinitions - Create custom object definitions
+     * Create custom object definitions
      *
+     * @remarks
      * You can post custom object definitions with the request body schema described below.
      *
      * This operation also allows you to use the [List custom object definitions](https://www.zuora.com/developer/api-reference/#operation/GET_AllCustomObjectDefinitionsInNamespace) response schema as its request schema. If you want to copy all the existing custom objects from an old tenant to a new tenant, you can make a [List custom object definitions](https://www.zuora.com/developer/api-reference/#operation/GET_AllCustomObjectDefinitionsInNamespace) call in your old tenant and then use its response directly as the request of this operation in the new tenant to import all the custom objects from the old tenant.
@@ -54,11 +75,12 @@ export declare class CustomObjectDefinitions {
      * * The maximum number of picklist options is 250.
      * * The default maximum number of characters for the Text field is 512. You can configure the max length up to 4,096 characters when creating or updating the custom object definition via API.
      *
-    **/
-    postCustomObjectDefinitions(req: operations.PostCustomObjectDefinitionsRequest, config?: AxiosRequestConfig): Promise<operations.PostCustomObjectDefinitionsResponse>;
+     */
+    postCustomObjectDefinitions(req: operations.POSTCustomObjectDefinitionsRequest, config?: AxiosRequestConfig): Promise<operations.POSTCustomObjectDefinitionsResponse>;
     /**
-     * postUpdateCustomObjectDefinition - Update a custom object definition
+     * Update a custom object definition
      *
+     * @remarks
      * Updates a custom object definition by posting migration resource to initiate the migration of definitions.
      *
      * ## Limitations
@@ -70,6 +92,6 @@ export declare class CustomObjectDefinitions {
      * * You can only add required fields to custom objects with no records.
      * * You can change optional fields to required only on the custom objects with no records.
      *
-    **/
-    postUpdateCustomObjectDefinition(req: operations.PostUpdateCustomObjectDefinitionRequest, config?: AxiosRequestConfig): Promise<operations.PostUpdateCustomObjectDefinitionResponse>;
+     */
+    postUpdateCustomObjectDefinition(req: operations.POSTUpdateCustomObjectDefinitionRequest, config?: AxiosRequestConfig): Promise<operations.POSTUpdateCustomObjectDefinitionResponse>;
 }

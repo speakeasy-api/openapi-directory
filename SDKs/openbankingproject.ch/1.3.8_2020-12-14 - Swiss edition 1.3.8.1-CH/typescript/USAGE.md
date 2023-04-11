@@ -1,117 +1,169 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateConsentRequest, CreateConsentResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CreateConsentRequest,
+  CreateConsentResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AccountAccessAllPsd2Enum,
+  AccountAccessAvailableAccountsEnum,
+  AccountAccessAvailableAccountsWithBalanceEnum,
+  PSUHttpMethodEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
-  security: {
-    bearerAuthOAuth: {
-      authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-    },
-  }
-));
-    
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK();
+
 const req: CreateConsentRequest = {
-  security: {
-    bearerAuthOAuth: {
-      authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-    },
-  },
-  headers: {
-    digest: "sit",
-    psuAccept: "voluptas",
-    psuAcceptCharset: "culpa",
-    psuAcceptEncoding: "expedita",
-    psuAcceptLanguage: "consequuntur",
-    psuCorporateID: "dolor",
-    psuCorporateIDType: "expedita",
-    psuDeviceID: "voluptas",
-    psuGeoLocation: "fugit",
-    psuHttpMethod: "PATCH",
-    psuID: "nihil",
-    psuIDType: "rerum",
-    psuIPAddress: "dicta",
-    psuIPPort: "debitis",
-    psuUserAgent: "voluptatum",
-    signature: "et",
-    tppBrandLoggingInformation: "ut",
-    tppExplicitAuthorisationPreferred: true,
-    tppNokRedirectURI: "et",
-    tppNotificationContentPreferred: "voluptate",
-    tppNotificationURI: "iste",
-    tppRedirectPreferred: true,
-    tppRedirectURI: "totam",
-    tppSignatureCertificate: "dolores",
-    xRequestID: "illum",
-  },
-  request: {
+  digest: "corrupti",
+  psuAccept: "provident",
+  psuAcceptCharset: "distinctio",
+  psuAcceptEncoding: "quibusdam",
+  psuAcceptLanguage: "unde",
+  psuCorporateID: "nulla",
+  psuCorporateIDType: "corrupti",
+  psuDeviceID: "illum",
+  psuGeoLocation: "vel",
+  psuHttpMethod: PSUHttpMethodEnum.Patch,
+  psuId: "deserunt",
+  psuIDType: "suscipit",
+  psuIPAddress: "112.76.228.14",
+  psuIPPort: "delectus",
+  psuUserAgent: "tempora",
+  signature: "suscipit",
+  tppBrandLoggingInformation: "molestiae",
+  tppExplicitAuthorisationPreferred: false,
+  tppNokRedirectURI: "https://studious-lynx.info",
+  tppNotificationContentPreferred: "excepturi",
+  tppNotificationURI: "nisi",
+  tppRedirectPreferred: false,
+  tppRedirectURI: "https://tangible-bathroom.info",
+  tppSignatureCertificate: "veritatis",
+  xRequestID: "deserunt",
+  consents: {
     access: {
       accounts: [
         {
-          cashAccountType: "vel",
-          currency: "odio",
-          iban: "dolore",
-          otherAccountIdentification: "id",
+          cashAccountType: "ipsam",
+          currency: "EUR",
+          iban: "FR7612345987650123456789014",
+          otherAccountIdentification: "90-100100-0",
         },
       ],
       additionalInformation: {
         ownerName: [
           {
-            cashAccountType: "accusantium",
-            currency: "totam",
-            iban: "commodi",
-            otherAccountIdentification: "quis",
+            cashAccountType: "sapiente",
+            currency: "EUR",
+            iban: "FR7612345987650123456789014",
+            otherAccountIdentification: "90-100100-0",
+          },
+          {
+            cashAccountType: "quo",
+            currency: "EUR",
+            iban: "FR7612345987650123456789014",
+            otherAccountIdentification: "90-100100-0",
+          },
+          {
+            cashAccountType: "odit",
+            currency: "EUR",
+            iban: "FR7612345987650123456789014",
+            otherAccountIdentification: "90-100100-0",
+          },
+          {
+            cashAccountType: "at",
+            currency: "EUR",
+            iban: "FR7612345987650123456789014",
+            otherAccountIdentification: "90-100100-0",
           },
         ],
         trustedBeneficiaries: [
           {
-            cashAccountType: "aut",
-            currency: "odit",
-            iban: "non",
-            otherAccountIdentification: "voluptas",
+            cashAccountType: "maiores",
+            currency: "EUR",
+            iban: "FR7612345987650123456789014",
+            otherAccountIdentification: "90-100100-0",
           },
           {
-            cashAccountType: "omnis",
-            currency: "aut",
-            iban: "illo",
-            otherAccountIdentification: "sed",
+            cashAccountType: "molestiae",
+            currency: "EUR",
+            iban: "FR7612345987650123456789014",
+            otherAccountIdentification: "90-100100-0",
+          },
+          {
+            cashAccountType: "quod",
+            currency: "EUR",
+            iban: "FR7612345987650123456789014",
+            otherAccountIdentification: "90-100100-0",
+          },
+          {
+            cashAccountType: "quod",
+            currency: "EUR",
+            iban: "FR7612345987650123456789014",
+            otherAccountIdentification: "90-100100-0",
           },
         ],
       },
-      allPsd2: "allAccountsWithOwnerName",
-      availableAccounts: "allAccountsWithOwnerName",
-      availableAccountsWithBalance: "allAccounts",
+      allPsd2: AccountAccessAllPsd2Enum.AllAccounts,
+      availableAccounts: AccountAccessAvailableAccountsEnum.AllAccountsWithOwnerName,
+      availableAccountsWithBalance: AccountAccessAvailableAccountsWithBalanceEnum.AllAccountsWithOwnerName,
       balances: [
         {
-          cashAccountType: "odio",
-          currency: "qui",
-          iban: "recusandae",
-          otherAccountIdentification: "at",
+          cashAccountType: "dicta",
+          currency: "EUR",
+          iban: "FR7612345987650123456789014",
+          otherAccountIdentification: "90-100100-0",
+        },
+        {
+          cashAccountType: "nam",
+          currency: "EUR",
+          iban: "FR7612345987650123456789014",
+          otherAccountIdentification: "90-100100-0",
+        },
+        {
+          cashAccountType: "officia",
+          currency: "EUR",
+          iban: "FR7612345987650123456789014",
+          otherAccountIdentification: "90-100100-0",
         },
       ],
       restrictedTo: [
-        "eveniet",
+        "fugit",
+        "deleniti",
+        "hic",
       ],
       transactions: [
         {
-          cashAccountType: "sint",
-          currency: "inventore",
-          iban: "ut",
-          otherAccountIdentification: "exercitationem",
+          cashAccountType: "totam",
+          currency: "EUR",
+          iban: "FR7612345987650123456789014",
+          otherAccountIdentification: "90-100100-0",
         },
         {
-          cashAccountType: "aut",
-          currency: "reprehenderit",
-          iban: "tempore",
-          otherAccountIdentification: "maiores",
+          cashAccountType: "beatae",
+          currency: "EUR",
+          iban: "FR7612345987650123456789014",
+          otherAccountIdentification: "90-100100-0",
+        },
+        {
+          cashAccountType: "commodi",
+          currency: "EUR",
+          iban: "FR7612345987650123456789014",
+          otherAccountIdentification: "90-100100-0",
+        },
+        {
+          cashAccountType: "molestiae",
+          currency: "EUR",
+          iban: "FR7612345987650123456789014",
+          otherAccountIdentification: "90-100100-0",
         },
       ],
     },
     combinedServiceIndicator: false,
-    frequencyPerDay: 7242748068272024738,
+    frequencyPerDay: 4,
     recurringIndicator: false,
-    validUntil: "1992-08-27",
+    validUntil: "2020-12-31",
   },
 };
 

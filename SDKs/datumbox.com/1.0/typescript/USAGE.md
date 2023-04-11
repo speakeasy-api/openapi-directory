@@ -1,17 +1,17 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AdultContentDetectionRequest, AdultContentDetectionResponse } from "openapi/src/sdk/models/operations";
+import {
+  AdultContentDetectionRequestBody,
+  AdultContentDetectionResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: AdultContentDetectionRequest = {
-  request: {
-    apiKey: "sit",
-    text: "voluptas",
-  },
+
+const req: AdultContentDetectionRequestBody = {
+  apiKey: "corrupti",
+  text: "provident",
 };
 
 sdk.documentClassification.adultContentDetection(req).then((res: AdultContentDetectionResponse | AxiosError) => {

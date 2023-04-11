@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListRulesPackagesQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListRulesPackagesXAmzTargetEnum {
     InspectorServiceListRulesPackages = "InspectorService.ListRulesPackages"
 }
-export declare class ListRulesPackagesHeaders extends SpeakeasyBase {
+export declare class ListRulesPackagesRequest extends SpeakeasyBase {
+    listRulesPackagesRequest: shared.ListRulesPackagesRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,17 +14,33 @@ export declare class ListRulesPackagesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: ListRulesPackagesXAmzTargetEnum;
-}
-export declare class ListRulesPackagesRequest extends SpeakeasyBase {
-    queryParams: ListRulesPackagesQueryParams;
-    headers: ListRulesPackagesHeaders;
-    request: shared.ListRulesPackagesRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class ListRulesPackagesResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InternalException
+     */
     internalException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * Success
+     */
     listRulesPackagesResponse?: shared.ListRulesPackagesResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

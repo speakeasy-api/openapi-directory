@@ -33,7 +33,8 @@ export declare class OnlineSettingsViewModel extends SpeakeasyBase {
     lateRescheduleAction?: number;
     lateRescheduleHours?: number;
     liveMode?: boolean;
-    objectName?: string;
+    locationId?: string;
+    object?: string;
     resourceAnyLabel?: string;
     resourceLabel?: string;
     resourceSelection?: boolean;

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeletePartitionXAmzTargetEnum {
-    AwsGlueDeletePartition = "AWSGlue.DeletePartition"
+    AWSGlueDeletePartition = "AWSGlue.DeletePartition"
 }
-export declare class DeletePartitionHeaders extends SpeakeasyBase {
+export declare class DeletePartitionRequest extends SpeakeasyBase {
+    deletePartitionRequest: shared.DeletePartitionRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class DeletePartitionHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeletePartitionXAmzTargetEnum;
 }
-export declare class DeletePartitionRequest extends SpeakeasyBase {
-    headers: DeletePartitionHeaders;
-    request: shared.DeletePartitionRequest;
-}
 export declare class DeletePartitionResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deletePartitionResponse?: Record<string, any>;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

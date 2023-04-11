@@ -1,18 +1,34 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+/**
+ * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+ */
 export declare enum FantasyDefenseSeasonStatsByTeamFormatEnum {
     Xml = "XML",
     Json = "JSON"
 }
-export declare class FantasyDefenseSeasonStatsByTeamPathParams extends SpeakeasyBase {
-    format: FantasyDefenseSeasonStatsByTeamFormatEnum;
-    season: string;
-    team: string;
-}
 export declare class FantasyDefenseSeasonStatsByTeamRequest extends SpeakeasyBase {
-    pathParams: FantasyDefenseSeasonStatsByTeamPathParams;
+    /**
+     * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+     */
+    format: FantasyDefenseSeasonStatsByTeamFormatEnum;
+    /**
+     * Year of the season and the season type. If no season type is provided, then the default is regular season.
+     *
+     * @remarks
+     *           <br>Examples: <code>2015REG</code>, <code>2015PRE</code>, <code>2015POST</code>.
+     *
+     */
+    season: string;
+    /**
+     * Abbreviation of the team. Example: <code>WAS</code>.
+     */
+    team: string;
 }
 export declare class FantasyDefenseSeasonStatsByTeamResponse extends SpeakeasyBase {
     contentType: string;
-    fantasyDefenseSeason?: any;
+    fantasyDefenseSeason?: shared.FantasyDefenseSeason;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

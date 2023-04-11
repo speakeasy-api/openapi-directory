@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListTablesQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListTablesXAmzTargetEnum {
     Timestream20181101ListTables = "Timestream_20181101.ListTables"
 }
-export declare class ListTablesHeaders extends SpeakeasyBase {
+export declare class ListTablesRequest extends SpeakeasyBase {
+    listTablesRequest: shared.ListTablesRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,19 +23,36 @@ export declare class ListTablesHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListTablesXAmzTargetEnum;
 }
-export declare class ListTablesRequest extends SpeakeasyBase {
-    queryParams: ListTablesQueryParams;
-    headers: ListTablesHeaders;
-    request: shared.ListTablesRequest;
-}
 export declare class ListTablesResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidEndpointException
+     */
     invalidEndpointException?: any;
+    /**
+     * Success
+     */
     listTablesResponse?: shared.ListTablesResponse;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

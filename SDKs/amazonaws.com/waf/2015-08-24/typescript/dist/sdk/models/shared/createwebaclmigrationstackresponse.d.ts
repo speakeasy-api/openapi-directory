@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CreateWebAclMigrationStackResponse extends SpeakeasyBase {
+/**
+ * Success
+ */
+export declare class CreateWebACLMigrationStackResponse extends SpeakeasyBase {
     s3ObjectUrl: string;
 }

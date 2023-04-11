@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Members {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,39 +9,45 @@ export declare class Members {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteWorkspaceIdMembersId - Delete a member
-    **/
-    deleteWorkspaceIdMembersId(req: operations.DeleteWorkspaceIdMembersIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteWorkspaceIdMembersIdResponse>;
+     * Delete a member
+     */
+    deleteWorkspaceSlugMembersMemberSlug(req: operations.DeleteWorkspaceSlugMembersMemberSlugRequest, security: operations.DeleteWorkspaceSlugMembersMemberSlugSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteWorkspaceSlugMembersMemberSlugResponse>;
     /**
-     * deleteWorkspaceIdMembersMemberIdIdentities - Remove identity from a member
-    **/
-    deleteWorkspaceIdMembersMemberIdIdentities(req: operations.DeleteWorkspaceIdMembersMemberIdIdentitiesRequest, config?: AxiosRequestConfig): Promise<operations.DeleteWorkspaceIdMembersMemberIdIdentitiesResponse>;
+     * Remove identity from a member
+     */
+    deleteWorkspaceSlugMembersMemberSlugIdentities(req: operations.DeleteWorkspaceSlugMembersMemberSlugIdentitiesRequest, security: operations.DeleteWorkspaceSlugMembersMemberSlugIdentitiesSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteWorkspaceSlugMembersMemberSlugIdentitiesResponse>;
     /**
-     * getWorkspaceIdMembers - List members in a workspace
-    **/
-    getWorkspaceIdMembers(req: operations.GetWorkspaceIdMembersRequest, config?: AxiosRequestConfig): Promise<operations.GetWorkspaceIdMembersResponse>;
+     * List members in a workspace
+     */
+    getWorkspaceSlugMembers(req: operations.GetWorkspaceSlugMembersRequest, security: operations.GetWorkspaceSlugMembersSecurity, config?: AxiosRequestConfig): Promise<operations.GetWorkspaceSlugMembersResponse>;
     /**
-     * getWorkspaceIdMembersFind - Find a member by an identity
+     * Find a member by an identity
      *
+     * @remarks
      * Provide a source and one of username/uid/email params to return a member with that identity, if one exists. Common values for source include github, twitter, and email.
-    **/
-    getWorkspaceIdMembersFind(req: operations.GetWorkspaceIdMembersFindRequest, config?: AxiosRequestConfig): Promise<operations.GetWorkspaceIdMembersFindResponse>;
+     */
+    getWorkspaceSlugMembersFind(req: operations.GetWorkspaceSlugMembersFindRequest, security: operations.GetWorkspaceSlugMembersFindSecurity, config?: AxiosRequestConfig): Promise<operations.GetWorkspaceSlugMembersFindResponse>;
     /**
-     * getWorkspaceIdMembersId - Get a member
-    **/
-    getWorkspaceIdMembersId(req: operations.GetWorkspaceIdMembersIdRequest, config?: AxiosRequestConfig): Promise<operations.GetWorkspaceIdMembersIdResponse>;
+     * Get a member
+     */
+    getWorkspaceSlugMembersMemberSlug(req: operations.GetWorkspaceSlugMembersMemberSlugRequest, security: operations.GetWorkspaceSlugMembersMemberSlugSecurity, config?: AxiosRequestConfig): Promise<operations.GetWorkspaceSlugMembersMemberSlugResponse>;
     /**
-     * postWorkspaceIdMembers - Create or update a member
+     * List members in an organization
+     */
+    getWorkspaceSlugOrganizationsOrganizationIdMembers(req: operations.GetWorkspaceSlugOrganizationsOrganizationIdMembersRequest, security: operations.GetWorkspaceSlugOrganizationsOrganizationIdMembersSecurity, config?: AxiosRequestConfig): Promise<operations.GetWorkspaceSlugOrganizationsOrganizationIdMembersResponse>;
+    /**
+     * Create or update a member
      *
+     * @remarks
      * This method is useful when you know a member's identity in another system and want to create or update the corresponding Orbit member. Identities can be specified in the identity object or member attributes like member.github. If no member exists, a new member will be created and linked to any provided identities.
-    **/
-    postWorkspaceIdMembers(req: operations.PostWorkspaceIdMembersRequest, config?: AxiosRequestConfig): Promise<operations.PostWorkspaceIdMembersResponse>;
+     */
+    postWorkspaceSlugMembers(req: operations.PostWorkspaceSlugMembersRequest, security: operations.PostWorkspaceSlugMembersSecurity, config?: AxiosRequestConfig): Promise<operations.PostWorkspaceSlugMembersResponse>;
     /**
-     * postWorkspaceIdMembersMemberIdIdentities - Add identity to a member
-    **/
-    postWorkspaceIdMembersMemberIdIdentities(req: operations.PostWorkspaceIdMembersMemberIdIdentitiesRequest, config?: AxiosRequestConfig): Promise<operations.PostWorkspaceIdMembersMemberIdIdentitiesResponse>;
+     * Add identity to a member
+     */
+    postWorkspaceSlugMembersMemberSlugIdentities(req: operations.PostWorkspaceSlugMembersMemberSlugIdentitiesRequest, security: operations.PostWorkspaceSlugMembersMemberSlugIdentitiesSecurity, config?: AxiosRequestConfig): Promise<operations.PostWorkspaceSlugMembersMemberSlugIdentitiesResponse>;
     /**
-     * putWorkspaceIdMembersId - Update a member
-    **/
-    putWorkspaceIdMembersId(req: operations.PutWorkspaceIdMembersIdRequest, config?: AxiosRequestConfig): Promise<operations.PutWorkspaceIdMembersIdResponse>;
+     * Update a member
+     */
+    putWorkspaceSlugMembersMemberSlug(req: operations.PutWorkspaceSlugMembersMemberSlugRequest, security: operations.PutWorkspaceSlugMembersMemberSlugSecurity, config?: AxiosRequestConfig): Promise<operations.PutWorkspaceSlugMembersMemberSlugResponse>;
 }

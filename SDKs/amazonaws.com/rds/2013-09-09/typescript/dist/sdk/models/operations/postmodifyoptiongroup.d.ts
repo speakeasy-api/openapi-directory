@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostModifyOptionGroupActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTModifyOptionGroupActionEnum {
     ModifyOptionGroup = "ModifyOptionGroup"
 }
-export declare enum PostModifyOptionGroupVersionEnum {
+export declare enum POSTModifyOptionGroupVersionEnum {
     TwoThousandAndThirteen0909 = "2013-09-09"
 }
-export declare class PostModifyOptionGroupQueryParams extends SpeakeasyBase {
-    action: PostModifyOptionGroupActionEnum;
-    version: PostModifyOptionGroupVersionEnum;
-}
-export declare class PostModifyOptionGroupHeaders extends SpeakeasyBase {
+export declare class POSTModifyOptionGroupRequest extends SpeakeasyBase {
+    action: POSTModifyOptionGroupActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTModifyOptionGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostModifyOptionGroupHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostModifyOptionGroupRequest extends SpeakeasyBase {
-    queryParams: PostModifyOptionGroupQueryParams;
-    headers: PostModifyOptionGroupHeaders;
-    request?: Uint8Array;
-}
-export declare class PostModifyOptionGroupResponse extends SpeakeasyBase {
+export declare class POSTModifyOptionGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

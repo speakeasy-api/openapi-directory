@@ -1,17 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { IpAddressInterface } from "./ipaddressinterface";
-import { NestedIpAddress } from "./nestedipaddress";
+import { IPAddressInterface } from "./ipaddressinterface";
+import { NestedIPAddress } from "./nestedipaddress";
 import { NestedTenant } from "./nestedtenant";
-import { NestedVrf } from "./nestedvrf";
-export declare enum IpAddressFamilyLabelEnum {
+import { NestedVRF } from "./nestedvrf";
+export declare enum IPAddressFamilyLabelEnum {
     IPv4 = "IPv4",
     IPv6 = "IPv6"
 }
-export declare class IpAddressFamily extends SpeakeasyBase {
-    label: IpAddressFamilyLabelEnum;
-    value: number;
+export declare enum IPAddressFamilyValueEnum {
+    Four = "4",
+    Six = "6"
 }
-export declare enum IpAddressRoleLabelEnum {
+export declare class IPAddressFamily extends SpeakeasyBase {
+    label: IPAddressFamilyLabelEnum;
+    value: IPAddressFamilyValueEnum;
+}
+export declare enum IPAddressRoleLabelEnum {
     Loopback = "Loopback",
     Secondary = "Secondary",
     Anycast = "Anycast",
@@ -21,7 +25,7 @@ export declare enum IpAddressRoleLabelEnum {
     Glbp = "GLBP",
     Carp = "CARP"
 }
-export declare enum IpAddressRoleValueEnum {
+export declare enum IPAddressRoleValueEnum {
     Loopback = "loopback",
     Secondary = "secondary",
     Anycast = "anycast",
@@ -31,41 +35,47 @@ export declare enum IpAddressRoleValueEnum {
     Glbp = "glbp",
     Carp = "carp"
 }
-export declare class IpAddressRole extends SpeakeasyBase {
-    label: IpAddressRoleLabelEnum;
-    value: IpAddressRoleValueEnum;
+export declare class IPAddressRole extends SpeakeasyBase {
+    label: IPAddressRoleLabelEnum;
+    value: IPAddressRoleValueEnum;
 }
-export declare enum IpAddressStatusLabelEnum {
+export declare enum IPAddressStatusLabelEnum {
     Active = "Active",
     Reserved = "Reserved",
     Deprecated = "Deprecated",
     Dhcp = "DHCP"
 }
-export declare enum IpAddressStatusValueEnum {
+export declare enum IPAddressStatusValueEnum {
     Active = "active",
     Reserved = "reserved",
     Deprecated = "deprecated",
     Dhcp = "dhcp"
 }
-export declare class IpAddressStatus extends SpeakeasyBase {
-    label: IpAddressStatusLabelEnum;
-    value: IpAddressStatusValueEnum;
+export declare class IPAddressStatus extends SpeakeasyBase {
+    label: IPAddressStatusLabelEnum;
+    value: IPAddressStatusValueEnum;
 }
-export declare class IpAddress extends SpeakeasyBase {
+export declare class IPAddress extends SpeakeasyBase {
+    /**
+     * IPv4 or IPv6 address (with mask)
+     */
     address: string;
     created?: Date;
     customFields?: Record<string, any>;
     description?: string;
+    /**
+     * Hostname or FQDN (not case-sensitive)
+     */
     dnsName?: string;
-    family?: IpAddressFamily;
+    family?: IPAddressFamily;
     id?: number;
-    interface?: IpAddressInterface;
+    interface?: IPAddressInterface;
     lastUpdated?: Date;
-    natInside?: NestedIpAddress;
-    natOutside?: NestedIpAddress;
-    role?: IpAddressRole;
-    status?: IpAddressStatus;
+    natInside?: NestedIPAddress;
+    natOutside?: NestedIPAddress;
+    role?: IPAddressRole;
+    status?: IPAddressStatus;
     tags?: string[];
     tenant?: NestedTenant;
-    vrf?: NestedVrf;
+    vrf?: NestedVRF;
 }

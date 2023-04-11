@@ -1,36 +1,59 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SetPublicStatusUsingPostQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class SetPublicStatusUsingPOSTRequest extends SpeakeasyBase {
     padID?: string;
     publicStatus?: string;
 }
-export declare class SetPublicStatusUsingPost200ApplicationJson extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class SetPublicStatusUsingPost500ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class SetPublicStatusUsingPost400ApplicationJson extends SpeakeasyBase {
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class SetPublicStatusUsingPost401ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class SetPublicStatusUsingPost401ApplicationJson extends SpeakeasyBase {
+/**
+ * generic api error (code 1)
+ */
+export declare class SetPublicStatusUsingPost400ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class SetPublicStatusUsingPost500ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class SetPublicStatusUsingPost200ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class SetPublicStatusUsingPostRequest extends SpeakeasyBase {
-    queryParams: SetPublicStatusUsingPostQueryParams;
-}
-export declare class SetPublicStatusUsingPostResponse extends SpeakeasyBase {
+export declare class SetPublicStatusUsingPOSTResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    setPublicStatusUsingPOST200ApplicationJSONObject?: SetPublicStatusUsingPost200ApplicationJson;
-    setPublicStatusUsingPOST400ApplicationJSONObject?: SetPublicStatusUsingPost400ApplicationJson;
-    setPublicStatusUsingPOST401ApplicationJSONObject?: SetPublicStatusUsingPost401ApplicationJson;
-    setPublicStatusUsingPOST500ApplicationJSONObject?: SetPublicStatusUsingPost500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    setPublicStatusUsingPOST200ApplicationJSONObject?: SetPublicStatusUsingPost200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    setPublicStatusUsingPOST400ApplicationJSONObject?: SetPublicStatusUsingPost400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    setPublicStatusUsingPOST401ApplicationJSONObject?: SetPublicStatusUsingPost401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    setPublicStatusUsingPOST500ApplicationJSONObject?: SetPublicStatusUsingPost500ApplicationJSON;
 }

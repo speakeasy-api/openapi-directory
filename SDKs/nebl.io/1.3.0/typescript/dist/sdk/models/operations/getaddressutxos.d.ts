@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetAddressUtxosPathParams extends SpeakeasyBase {
-    address: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetAddressUtxosRequest extends SpeakeasyBase {
-    pathParams: GetAddressUtxosPathParams;
+    /**
+     * Address
+     */
+    address: string;
 }
 export declare class GetAddressUtxosResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UTXOs at an address
+     */
     getAddressUtxosResponse?: shared.GetAddressUtxosResponse[];
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum CreateRegistryXAmzTargetEnum {
-    AwsGlueCreateRegistry = "AWSGlue.CreateRegistry"
+    AWSGlueCreateRegistry = "AWSGlue.CreateRegistry"
 }
-export declare class CreateRegistryHeaders extends SpeakeasyBase {
+export declare class CreateRegistryRequest extends SpeakeasyBase {
+    createRegistryInput: shared.CreateRegistryInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,36 @@ export declare class CreateRegistryHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: CreateRegistryXAmzTargetEnum;
 }
-export declare class CreateRegistryRequest extends SpeakeasyBase {
-    headers: CreateRegistryHeaders;
-    request: shared.CreateRegistryInput;
-}
 export declare class CreateRegistryResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * AlreadyExistsException
+     */
     alreadyExistsException?: any;
+    /**
+     * ConcurrentModificationException
+     */
+    concurrentModificationException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     createRegistryResponse?: shared.CreateRegistryResponse;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * ResourceNumberLimitExceededException
+     */
     resourceNumberLimitExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

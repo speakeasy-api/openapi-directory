@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { MlModelFilterVariableEnum } from "./mlmodelfiltervariableenum";
+import { MLModelFilterVariableEnum } from "./mlmodelfiltervariableenum";
 import { SortOrderEnum } from "./sortorderenum";
-export declare class DescribeMlModelsInput extends SpeakeasyBase {
+export declare class DescribeMLModelsInput extends SpeakeasyBase {
     eq?: string;
-    filterVariable?: MlModelFilterVariableEnum;
+    filterVariable?: MLModelFilterVariableEnum;
     ge?: string;
     gt?: string;
     le?: string;

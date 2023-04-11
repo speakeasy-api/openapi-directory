@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteSshPublicKeyActionEnum {
-    DeleteSshPublicKey = "DeleteSSHPublicKey"
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteSSHPublicKeyActionEnum {
+    DeleteSSHPublicKey = "DeleteSSHPublicKey"
 }
-export declare enum PostDeleteSshPublicKeyVersionEnum {
+export declare enum POSTDeleteSSHPublicKeyVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostDeleteSshPublicKeyQueryParams extends SpeakeasyBase {
-    action: PostDeleteSshPublicKeyActionEnum;
-    version: PostDeleteSshPublicKeyVersionEnum;
-}
-export declare class PostDeleteSshPublicKeyHeaders extends SpeakeasyBase {
+export declare class POSTDeleteSSHPublicKeyRequest extends SpeakeasyBase {
+    action: POSTDeleteSSHPublicKeyActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteSSHPublicKeyVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteSshPublicKeyHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteSshPublicKeyRequest extends SpeakeasyBase {
-    queryParams: PostDeleteSshPublicKeyQueryParams;
-    headers: PostDeleteSshPublicKeyHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteSshPublicKeyResponse extends SpeakeasyBase {
+export declare class POSTDeleteSSHPublicKeyResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListReportsForReportGroupQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListReportsForReportGroupXAmzTargetEnum {
     CodeBuild20161006ListReportsForReportGroup = "CodeBuild_20161006.ListReportsForReportGroup"
 }
-export declare class ListReportsForReportGroupHeaders extends SpeakeasyBase {
+export declare class ListReportsForReportGroupRequest extends SpeakeasyBase {
+    listReportsForReportGroupInput: shared.ListReportsForReportGroupInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,16 +14,29 @@ export declare class ListReportsForReportGroupHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: ListReportsForReportGroupXAmzTargetEnum;
-}
-export declare class ListReportsForReportGroupRequest extends SpeakeasyBase {
-    queryParams: ListReportsForReportGroupQueryParams;
-    headers: ListReportsForReportGroupHeaders;
-    request: shared.ListReportsForReportGroupInput;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class ListReportsForReportGroupResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * Success
+     */
     listReportsForReportGroupOutput?: shared.ListReportsForReportGroupOutput;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
 }

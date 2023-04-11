@@ -1,8 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteInputPathParams extends SpeakeasyBase {
-    inputName: string;
-}
-export declare class DeleteInputHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteInputRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -10,19 +8,41 @@ export declare class DeleteInputHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DeleteInputRequest extends SpeakeasyBase {
-    pathParams: DeleteInputPathParams;
-    headers: DeleteInputHeaders;
+    /**
+     * The name of the input to delete.
+     */
+    inputName: string;
 }
 export declare class DeleteInputResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deleteInputResponse?: Record<string, any>;
+    /**
+     * InternalFailureException
+     */
     internalFailureException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * ResourceInUseException
+     */
     resourceInUseException?: any;
-    resourceNotFoundException?: any;
+    /**
+     * ServiceUnavailableException
+     */
     serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

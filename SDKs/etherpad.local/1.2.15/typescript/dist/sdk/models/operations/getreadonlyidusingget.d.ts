@@ -1,38 +1,61 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetReadOnlyIdUsingGetQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETReadOnlyIDUsingGETRequest extends SpeakeasyBase {
     padID?: string;
 }
-export declare class GetReadOnlyIdUsingGet200ApplicationJsonData extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class GETReadOnlyIDUsingGet500ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class GETReadOnlyIDUsingGet401ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+/**
+ * generic api error (code 1)
+ */
+export declare class GETReadOnlyIDUsingGet400ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+export declare class GETReadOnlyIDUsingGet200ApplicationJSONData extends SpeakeasyBase {
     readOnlyID?: string;
 }
-export declare class GetReadOnlyIdUsingGet200ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class GETReadOnlyIDUsingGet200ApplicationJSON extends SpeakeasyBase {
     code?: number;
-    data?: GetReadOnlyIdUsingGet200ApplicationJsonData;
+    data?: GETReadOnlyIDUsingGet200ApplicationJSONData;
     message?: string;
 }
-export declare class GetReadOnlyIdUsingGet400ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class GetReadOnlyIdUsingGet401ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class GetReadOnlyIdUsingGet500ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class GetReadOnlyIdUsingGetRequest extends SpeakeasyBase {
-    queryParams: GetReadOnlyIdUsingGetQueryParams;
-}
-export declare class GetReadOnlyIdUsingGetResponse extends SpeakeasyBase {
+export declare class GETReadOnlyIDUsingGETResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getReadOnlyIDUsingGET200ApplicationJSONObject?: GetReadOnlyIdUsingGet200ApplicationJson;
-    getReadOnlyIDUsingGET400ApplicationJSONObject?: GetReadOnlyIdUsingGet400ApplicationJson;
-    getReadOnlyIDUsingGET401ApplicationJSONObject?: GetReadOnlyIdUsingGet401ApplicationJson;
-    getReadOnlyIDUsingGET500ApplicationJSONObject?: GetReadOnlyIdUsingGet500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    getReadOnlyIDUsingGET200ApplicationJSONObject?: GETReadOnlyIDUsingGet200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    getReadOnlyIDUsingGET400ApplicationJSONObject?: GETReadOnlyIDUsingGet400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    getReadOnlyIDUsingGET401ApplicationJSONObject?: GETReadOnlyIDUsingGet401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    getReadOnlyIDUsingGET500ApplicationJSONObject?: GETReadOnlyIDUsingGet500ApplicationJSON;
 }

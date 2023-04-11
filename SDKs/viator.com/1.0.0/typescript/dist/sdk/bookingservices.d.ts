@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Booking services
+ */
 export declare class BookingServices {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +12,9 @@ export declare class BookingServices {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * bookingAvailability - /booking/availability
+     * /booking/availability
      *
+     * @remarks
      * Get the tour-grade with the lowest price that is available for a product on each day of the specified month
      *
      * This service:
@@ -22,11 +26,12 @@ export declare class BookingServices {
      *
      *   - Availability data is limited to a period of **12 months** into the future from the present time on the production server and **6 months** on the sandbox server.
      *
-    **/
+     */
     bookingAvailability(req: operations.BookingAvailabilityRequest, config?: AxiosRequestConfig): Promise<operations.BookingAvailabilityResponse>;
     /**
-     * bookingAvailabilityDates - /booking/availability/dates
+     * /booking/availability/dates
      *
+     * @remarks
      * Get dates on which a product is available
      *
      * This service:
@@ -38,11 +43,12 @@ export declare class BookingServices {
      *   - The user's desired traveler mix may not be eligible for booking; these details can be displayed when you retrieve its list of tour grades
      *   - Availability data is limited to a period of **12 months** into the future from the present time on the production server and **6 months** on the sandbox server.
      *
-    **/
+     */
     bookingAvailabilityDates(req: operations.BookingAvailabilityDatesRequest, config?: AxiosRequestConfig): Promise<operations.BookingAvailabilityDatesResponse>;
     /**
-     * bookingAvailabilityTourgrades - /booking/availability/tourgrades
+     * /booking/availability/tourgrades
      *
+     * @remarks
      * Get the tour grades of a product that are currently available
      *
      * This service reports:
@@ -51,22 +57,24 @@ export declare class BookingServices {
      *
      * **Note**: Availability data is limited to a period of **12 months** into the future from the present time on the production server and **6 months** on the sandbox server.
      *
-    **/
+     */
     bookingAvailabilityTourgrades(req: operations.BookingAvailabilityTourgradesRequest, config?: AxiosRequestConfig): Promise<operations.BookingAvailabilityTourgradesResponse>;
     /**
-     * bookingAvailabilityTourgradesPricingmatrix - /booking/availability/tourgrades/pricingmatrix
+     * /booking/availability/tourgrades/pricingmatrix
      *
+     * @remarks
      * Get a pricing matrix that includes availability and tour-grades for a product
      *
      * Given a month, this service returns days with available tour grades only (i.e., days which have at least one tourgrade available), and the pricing matrix for that tour grade for that day.
      *
      * - **Note**: Availability data is limited to a period of **12 months** into the future from the present time on the production server and **6 months** on the sandbox server.
      *
-    **/
+     */
     bookingAvailabilityTourgradesPricingmatrix(req: operations.BookingAvailabilityTourgradesPricingmatrixRequest, config?: AxiosRequestConfig): Promise<operations.BookingAvailabilityTourgradesPricingmatrixResponse>;
     /**
-     * bookingBook - /booking/book
+     * /booking/book
      *
+     * @remarks
      * Make a booking
      *
      * For more information, see:
@@ -77,30 +85,33 @@ export declare class BookingServices {
      *   - [Making a booking](#section/Common-workflows-and-data-validation/Making-a-booking)
      *   - [Supplier communications](#section/Key-concepts/Supplier-communications)
      *
-    **/
+     */
     bookingBook(req: operations.BookingBookRequest, config?: AxiosRequestConfig): Promise<operations.BookingBookResponse>;
     /**
-     * bookingCalculateprice - /booking/calculateprice
+     * /booking/calculateprice
      *
+     * @remarks
      * Confirm the price of a tour / activity prior to booking
      *
      * For more information, see: [Calculating prices](#section/Common-workflows-and-data-validation/Calculating-prices)
      *
      * - **Note**: Availability and pricing data is limited to a period of **six months** into the future from the present time
      *
-    **/
+     */
     bookingCalculateprice(req: operations.BookingCalculatepriceRequest, config?: AxiosRequestConfig): Promise<operations.BookingCalculatepriceResponse>;
     /**
-     * bookingHotels - /booking/hotels
+     * /booking/hotels
      *
+     * @remarks
      * Get hotel pick-ups
      * Lists the hotel pickups available for either a product or a destination
      *
-    **/
+     */
     bookingHotels(req: operations.BookingHotelsRequest, config?: AxiosRequestConfig): Promise<operations.BookingHotelsResponse>;
     /**
-     * bookingMybookings - /booking/mybookings
+     * /booking/mybookings
      *
+     * @remarks
      * Get a user's bookings with travel dates in the future.
      *
      * This service can also be used to check the status of a booking.
@@ -109,11 +120,12 @@ export declare class BookingServices {
      * - A `voucherKey`, **or...**
      * - An email address (`email`) and a booking reference (`itineraryOrItemId`) ([Booking Reference](#section/Key-concepts/Booking-references))
      *
-    **/
+     */
     bookingMybookings(req: operations.BookingMybookingsRequest, config?: AxiosRequestConfig): Promise<operations.BookingMybookingsResponse>;
     /**
-     * bookingPastbooking - /booking/pastbooking
+     * /booking/pastbooking
      *
+     * @remarks
      * Get the details of a single specific past booking based on the `voucherKey` or `itemId` and email address sent in the request.
      *
      * **Note**: this service will only return past bookings that were made with the same API key that was used to make the booking
@@ -134,20 +146,22 @@ export declare class BookingServices {
      *
      * For more information, see: [Reviewing bookings](#section/Common-workflows-and-data-validation/Reviewing-bookings)
      *
-    **/
+     */
     bookingPastbooking(req: operations.BookingPastbookingRequest, config?: AxiosRequestConfig): Promise<operations.BookingPastbookingResponse>;
     /**
-     * bookingPricingmatrix - /booking/pricingmatrix
+     * /booking/pricingmatrix
      *
+     * @remarks
      * Get the pricing matrix for tour-grades, product age bands and pax mixes
      *
      * For more information, see: [Get the tour-grade pricing matrix](#section/Common-workflows-and-data-validation/Get-the-tour-grade-pricing-matrix)
      *
-    **/
+     */
     bookingPricingmatrix(req: operations.BookingPricingmatrixRequest, config?: AxiosRequestConfig): Promise<operations.BookingPricingmatrixResponse>;
     /**
-     * bookingStatus - /booking/status
+     * /booking/status
      *
+     * @remarks
      * Get the booking status for multiple items based on different criteria
      *
      * This service:
@@ -174,11 +188,12 @@ export declare class BookingServices {
      * }
      * ```
      *
-    **/
+     */
     bookingStatus(req: operations.BookingStatusRequest, config?: AxiosRequestConfig): Promise<operations.BookingStatusResponse>;
     /**
-     * bookingStatusItems - /booking/status/items
+     * /booking/status/items
      *
+     * @remarks
      * Get brief booking statuses
      *
      * This service is similar to [/booking/status](#operation/bookingStatus) in that it:
@@ -187,11 +202,12 @@ export declare class BookingServices {
      *
      * However, it differs in that it returns a multi-item array of booking items with less detail than what would be received from [/booking/status](#operation/bookingStatus).
      *
-    **/
+     */
     bookingStatusItems(req: operations.BookingStatusItemsRequest, config?: AxiosRequestConfig): Promise<operations.BookingStatusItemsResponse>;
     /**
-     * bookingVoucher - /booking/voucher
+     * /booking/voucher
      *
+     * @remarks
      * Get voucher details
      * - Use this service to retrieve the voucher details of a booked item.
      * - The data returned is HTML-formatted and can be wrapped in a header and/or footer.
@@ -202,11 +218,12 @@ export declare class BookingServices {
      * **or**
      * - voucherKey=1005851866:4af44c13ecf3f1a7d3f9ef2fc00c2257e08fa42ae20f877f3039ff9b52aba24e:580669678&amp;fullHTML=true&amp;mobileVoucher=true
      *
-    **/
+     */
     bookingVoucher(req: operations.BookingVoucherRequest, config?: AxiosRequestConfig): Promise<operations.BookingVoucherResponse>;
     /**
-     * cancelBooking - /bookings/{booking-reference}/cancel
+     * /bookings/{booking-reference}/cancel
      *
+     * @remarks
      * Submits a cancellation request for the specified booking
      *
      * For information on how to use this service, see: [Cancellation API workflow](#section/Common-workflows-and-data-validation/Cancellation-API-workflow)
@@ -216,11 +233,12 @@ export declare class BookingServices {
      *   * This service &lt;u&gt;requires&lt;/u&gt; [exp-api-key](#section/Authentication/exp-api-key) to be included as a header parameter. Please speak to your account manager if you have not yet been issued an exp-api-key.
      *   * The base URL for the server for this endpoint is different from the older endpoints described in this document. Use `https://api.sandbox.viator.com/partner/bookings/{booking-reference}/cancel`
      *
-    **/
-    cancelBooking(req: operations.CancelBookingRequest, config?: AxiosRequestConfig): Promise<operations.CancelBookingResponse>;
+     */
+    cancelBooking(req: operations.CancelBookingRequest, serverURL?: string, config?: AxiosRequestConfig): Promise<operations.CancelBookingResponse>;
     /**
-     * cancelBookingQuote - /bookings/{booking-reference}/cancel-quote
+     * /bookings/{booking-reference}/cancel-quote
      *
+     * @remarks
      * Retrieves a quote for the cancellation of a booking
      *
      * For information on how to use this service, see: [Cancellation API workflow](#section/Common-workflows-and-data-validation/Cancellation-API-workflow)
@@ -230,11 +248,12 @@ export declare class BookingServices {
      *   * This service &lt;u&gt;requires&lt;/u&gt; [exp-api-key](#section/Authentication/exp-api-key) to be included as a header parameter. Please speak to your account manager if you have not yet been issued an exp-api-key.
      *   * The base URL for the server for this endpoint is different from the older endpoints described in this document. Use `https://api.sandbox.viator.com/partner/bookings/{booking-reference}/cancel-quote`
      *
-    **/
-    cancelBookingQuote(req: operations.CancelBookingQuoteRequest, config?: AxiosRequestConfig): Promise<operations.CancelBookingQuoteResponse>;
+     */
+    cancelBookingQuote(req: operations.CancelBookingQuoteRequest, serverURL?: string, config?: AxiosRequestConfig): Promise<operations.CancelBookingQuoteResponse>;
     /**
-     * cancellationReasons - /bookings/cancel-reasons
+     * /bookings/cancel-reasons
      *
+     * @remarks
      * Retrieves a dictionary of unique identification codes (`cancellationReasonCode`) and their associated natural-language descriptions (`cancellationReasonText`).
      *
      * For information on how to use this service, see: [Cancellation API workflow](#section/Common-workflows-and-data-validation/Cancellation-API-workflow)
@@ -244,6 +263,6 @@ export declare class BookingServices {
      *   * This service &lt;u&gt;requires&lt;/u&gt; [exp-api-key](#section/Authentication/exp-api-key) to be included as a header parameter. Please speak to your account manager if you have not yet been issued an exp-api-key.
      *   * The base URL for the server for this endpoint is different from the older endpoints described in this document. Use `https://api.sandbox.viator.com/partner/cancel-reasons`
      *
-    **/
-    cancellationReasons(req: operations.CancellationReasonsRequest, config?: AxiosRequestConfig): Promise<operations.CancellationReasonsResponse>;
+     */
+    cancellationReasons(req: operations.CancellationReasonsRequest, serverURL?: string, config?: AxiosRequestConfig): Promise<operations.CancellationReasonsResponse>;
 }

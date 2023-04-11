@@ -1,19 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetWaAccountPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetWAAccountSecurity extends SpeakeasyBase {
+    basicAuth?: shared.SchemeBasicAuth;
+    bearerAuth?: string;
+}
+export declare class GetWAAccountRequest extends SpeakeasyBase {
+    /**
+     * External id of the account you want to retrieve. In this case it will be the WhatsApp number.
+     */
     externalId: string;
 }
-export declare class GetWaAccountSecurity extends SpeakeasyBase {
-    bearerAuth?: shared.SchemeBearerAuth;
-    basicAuth?: shared.SchemeBasicAuth;
-}
-export declare class GetWaAccountRequest extends SpeakeasyBase {
-    pathParams: GetWaAccountPathParams;
-    security: GetWaAccountSecurity;
-}
-export declare class GetWaAccountResponse extends SpeakeasyBase {
+export declare class GetWAAccountResponse extends SpeakeasyBase {
+    /**
+     * Unauthorized.
+     */
     fourHundredAndOneResponse?: shared.FourHundredAndOneResponse;
     contentType: string;
     statusCode: number;
-    waAccountResponse?: shared.WaAccountResponse;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK.
+     */
+    waAccountResponse?: shared.WAAccountResponse;
 }

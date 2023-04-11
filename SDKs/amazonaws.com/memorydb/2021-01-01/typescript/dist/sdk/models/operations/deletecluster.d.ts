@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteClusterXAmzTargetEnum {
-    AmazonMemoryDbDeleteCluster = "AmazonMemoryDB.DeleteCluster"
+    AmazonMemoryDBDeleteCluster = "AmazonMemoryDB.DeleteCluster"
 }
-export declare class DeleteClusterHeaders extends SpeakeasyBase {
+export declare class DeleteClusterRequest extends SpeakeasyBase {
+    deleteClusterRequest: shared.DeleteClusterRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class DeleteClusterHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteClusterXAmzTargetEnum;
 }
-export declare class DeleteClusterRequest extends SpeakeasyBase {
-    headers: DeleteClusterHeaders;
-    request: shared.DeleteClusterRequest;
-}
 export declare class DeleteClusterResponse extends SpeakeasyBase {
+    /**
+     * ClusterNotFoundFault
+     */
     clusterNotFoundFault?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteClusterResponse?: shared.DeleteClusterResponse;
+    /**
+     * InvalidClusterStateFault
+     */
     invalidClusterStateFault?: any;
+    /**
+     * InvalidParameterCombinationException
+     */
     invalidParameterCombinationException?: any;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
-    serviceLinkedRoleNotFoundFault?: any;
-    snapshotAlreadyExistsFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceLinkedRoleNotFoundFault
+     */
+    serviceLinkedRoleNotFoundFault?: any;
+    /**
+     * SnapshotAlreadyExistsFault
+     */
+    snapshotAlreadyExistsFault?: any;
 }

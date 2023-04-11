@@ -1,9 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ExtrasConfigContextsListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ExtrasConfigContextsListRequest extends SpeakeasyBase {
     isActive?: string;
+    /**
+     * Number of results to return per page.
+     */
     limit?: number;
     name?: string;
+    /**
+     * The initial index from which to return the results.
+     */
     offset?: number;
     platform?: string;
     platformId?: string;
@@ -19,17 +26,15 @@ export declare class ExtrasConfigContextsListQueryParams extends SpeakeasyBase {
     tenantGroupId?: string;
     tenantId?: string;
 }
-export declare class ExtrasConfigContextsList200ApplicationJson extends SpeakeasyBase {
+export declare class ExtrasConfigContextsList200ApplicationJSON extends SpeakeasyBase {
     count: number;
     next?: string;
     previous?: string;
     results: shared.ConfigContext[];
 }
-export declare class ExtrasConfigContextsListRequest extends SpeakeasyBase {
-    queryParams: ExtrasConfigContextsListQueryParams;
-}
 export declare class ExtrasConfigContextsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    extrasConfigContextsList200ApplicationJSONObject?: ExtrasConfigContextsList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    extrasConfigContextsList200ApplicationJSONObject?: ExtrasConfigContextsList200ApplicationJSON;
 }

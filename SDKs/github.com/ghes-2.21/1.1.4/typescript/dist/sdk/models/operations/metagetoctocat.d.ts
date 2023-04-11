@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class MetaGetOctocatQueryParams extends SpeakeasyBase {
-    s?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class MetaGetOctocatRequest extends SpeakeasyBase {
-    queryParams: MetaGetOctocatQueryParams;
+    /**
+     * The words to show in Octocat's speech bubble
+     */
+    s?: string;
 }
 export declare class MetaGetOctocatResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     metaGetOctocat200ApplicationOctocatStreamString?: string;
 }

@@ -1,53 +1,48 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CloudprofilerProjectsProfilesCreateRequest, CloudprofilerProjectsProfilesCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  CloudprofilerProjectsProfilesCreateRequest,
+  CloudprofilerProjectsProfilesCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  CreateProfileRequestProfileTypeEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: CloudprofilerProjectsProfilesCreateRequest = {
-  security: {
-    option1: {
-      oauth2: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-      oauth2c: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  createProfileRequest: {
     deployment: {
       labels: {
-        "debitis": "voluptatum",
-        "et": "ut",
-        "dolorem": "et",
+        "distinctio": "quibusdam",
+        "unde": "nulla",
+        "corrupti": "illum",
       },
-      projectId: "voluptate",
-      target: "iste",
+      projectId: "vel",
+      target: "error",
     },
     profileType: [
-      "WALL",
+      CreateProfileRequestProfileTypeEnum.Heap,
+      CreateProfileRequestProfileTypeEnum.Heap,
+      CreateProfileRequestProfileTypeEnum.Wall,
     ],
   },
+  accessToken: "debitis",
+  alt: AltEnum.Json,
+  callback: "delectus",
+  fields: "tempora",
+  key: "suscipit",
+  oauthToken: "molestiae",
+  parent: "minus",
+  prettyPrint: false,
+  quotaUser: "placeat",
+  uploadType: "voluptatum",
+  uploadProtocol: "iusto",
 };
 
 sdk.projects.cloudprofilerProjectsProfilesCreate(req).then((res: CloudprofilerProjectsProfilesCreateResponse | AxiosError) => {

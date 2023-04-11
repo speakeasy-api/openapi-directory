@@ -1,16 +1,16 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetReisezentrenRequest, GetReisezentrenResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetReisezentrenRequest,
+  GetReisezentrenResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetReisezentrenRequest = {
-  queryParams: {
-    name: "sit",
-  },
+  name: "corrupti",
 };
 
 sdk.getReisezentren(req).then((res: GetReisezentrenResponse | AxiosError) => {

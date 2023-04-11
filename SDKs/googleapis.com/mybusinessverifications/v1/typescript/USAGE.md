@@ -1,53 +1,56 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { MybusinessverificationsLocationsFetchVerificationOptionsRequest, MybusinessverificationsLocationsFetchVerificationOptionsResponse } from "openapi/src/sdk/models/operations";
+import {
+  MybusinessverificationsLocationsFetchVerificationOptionsRequest,
+  MybusinessverificationsLocationsFetchVerificationOptionsResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: MybusinessverificationsLocationsFetchVerificationOptionsRequest = {
-  pathParams: {
-    location: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  fetchVerificationOptionsRequest: {
     context: {
       address: {
         addressLines: [
-          "debitis",
-          "voluptatum",
-          "et",
+          "distinctio",
+          "quibusdam",
+          "unde",
         ],
-        administrativeArea: "ut",
-        languageCode: "dolorem",
-        locality: "et",
-        organization: "voluptate",
-        postalCode: "iste",
+        administrativeArea: "nulla",
+        languageCode: "corrupti",
+        locality: "illum",
+        organization: "vel",
+        postalCode: "63428-0923",
         recipients: [
-          "totam",
+          "minus",
+          "placeat",
         ],
-        regionCode: "dolores",
-        revision: 1929546706668609706,
-        sortingCode: "debitis",
-        sublocality: "vel",
+        regionCode: "voluptatum",
+        revision: 479977,
+        sortingCode: "excepturi",
+        sublocality: "nisi",
       },
     },
-    languageCode: "odio",
+    languageCode: "recusandae",
   },
+  accessToken: "temporibus",
+  alt: AltEnum.Json,
+  callback: "quis",
+  fields: "veritatis",
+  key: "deserunt",
+  location: "perferendis",
+  oauthToken: "ipsam",
+  prettyPrint: false,
+  quotaUser: "repellendus",
+  uploadType: "sapiente",
+  uploadProtocol: "quo",
 };
 
 sdk.locations.mybusinessverificationsLocationsFetchVerificationOptions(req).then((res: MybusinessverificationsLocationsFetchVerificationOptionsResponse | AxiosError) => {

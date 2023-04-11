@@ -1,25 +1,43 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class TaskAddPathParams extends SpeakeasyBase {
-    jobId: string;
-}
-export declare class TaskAddQueryParams extends SpeakeasyBase {
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class TaskAddRequest extends SpeakeasyBase {
+    /**
+     * The task to be added.
+     */
+    taskAddParameter: shared.TaskAddParameter;
+    /**
+     * Client API Version.
+     */
     apiVersion: string;
+    /**
+     * The caller-generated request identity, in the form of a GUID with no decoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
+     */
+    clientRequestId?: string;
+    /**
+     * The id of the job to which the task is to be added.
+     */
+    jobId: string;
+    /**
+     * The time the request was issued. If not specified, this header will be automatically populated with the current system clock time.
+     */
+    ocpDate?: string;
+    /**
+     * Whether the server should return the client-request-id identifier in the response.
+     */
+    returnClientRequestId?: boolean;
+    /**
+     * The maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
+     */
     timeout?: number;
 }
-export declare class TaskAddHeaders extends SpeakeasyBase {
-    clientRequestId?: string;
-    ocpDate?: string;
-    returnClientRequestId?: boolean;
-}
-export declare class TaskAddRequest extends SpeakeasyBase {
-    pathParams: TaskAddPathParams;
-    queryParams: TaskAddQueryParams;
-    headers: TaskAddHeaders;
-    request: any;
-}
 export declare class TaskAddResponse extends SpeakeasyBase {
-    batchError?: any;
+    /**
+     * The error from the Batch service.
+     */
+    batchError?: shared.BatchError;
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

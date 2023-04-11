@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Verify Requests
+ */
 export declare class Requests {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +12,9 @@ export declare class Requests {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * verifyRequest - Request a Verification
+     * Request a Verification
      *
+     * @remarks
      * Use Verify request to generate and send a PIN to your user:
      *
      * 1. Create a request to send a verification code to your user.
@@ -20,6 +24,6 @@ export declare class Requests {
      * 3. Use the `request_id` field in the response for the Verify check.
      *
      * *Note that this endpoint is available by `GET` request as well as `POST`.*
-    **/
+     */
     verifyRequest(req: operations.VerifyRequestRequest, config?: AxiosRequestConfig): Promise<operations.VerifyRequestResponse>;
 }

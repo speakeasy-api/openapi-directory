@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class CreateDataExporterConfigSecurity extends SpeakeasyBase {
-    otoroshiAuth: shared.SchemeOtoroshiAuth;
-}
-export declare class CreateDataExporterConfigRequest extends SpeakeasyBase {
-    request?: shared.DataExporterConfig;
-    security: CreateDataExporterConfigSecurity;
+    password: string;
+    username: string;
 }
 export declare class CreateDataExporterConfigResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful operation
+     */
     dataExporterConfig?: shared.DataExporterConfig;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

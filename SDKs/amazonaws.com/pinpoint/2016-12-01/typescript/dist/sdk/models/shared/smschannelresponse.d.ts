@@ -1,8 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Provides information about the status and settings of the SMS channel for an application.
-**/
-export declare class SmsChannelResponse extends SpeakeasyBase {
+ */
+export declare class SMSChannelResponse extends SpeakeasyBase {
     applicationId?: string;
     creationDate?: string;
     enabled?: boolean;

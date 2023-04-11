@@ -1,5 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { BookingFieldViewModel } from "./bookingfieldviewmodel";
+/**
+ * Success
+ */
 export declare class BookingFieldListViewModel extends SpeakeasyBase {
-    objectName?: string;
+    bookingFields?: BookingFieldViewModel[];
+    object?: string;
     total?: number;
 }

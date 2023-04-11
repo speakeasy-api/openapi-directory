@@ -1,19 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteAlbumLogoPathParams extends SpeakeasyBase {
-    albumId: number;
-    logoId: number;
-    userId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteAlbumLogoSecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
+    oauth2: string;
 }
 export declare class DeleteAlbumLogoRequest extends SpeakeasyBase {
-    pathParams: DeleteAlbumLogoPathParams;
-    security: DeleteAlbumLogoSecurity;
+    /**
+     * The ID of the album.
+     */
+    albumId: number;
+    /**
+     * The ID of the custom logo.
+     */
+    logoId: number;
+    /**
+     * The ID of the user.
+     */
+    userId: number;
 }
 export declare class DeleteAlbumLogoResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The authenticated user can't modify this album.
+     */
     legacyError?: shared.LegacyError;
 }

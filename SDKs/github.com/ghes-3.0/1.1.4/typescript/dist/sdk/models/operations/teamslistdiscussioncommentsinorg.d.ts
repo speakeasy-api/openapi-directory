@@ -1,22 +1,33 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class TeamsListDiscussionCommentsInOrgPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class TeamsListDiscussionCommentsInOrgRequest extends SpeakeasyBase {
+    /**
+     * One of `asc` (ascending) or `desc` (descending).
+     */
+    direction?: shared.DirectionEnum;
     discussionNumber: number;
     org: string;
-    teamSlug: string;
-}
-export declare class TeamsListDiscussionCommentsInOrgQueryParams extends SpeakeasyBase {
-    direction?: shared.DirectionEnum;
+    /**
+     * Page number of the results to fetch.
+     */
     page?: number;
+    /**
+     * Results per page (max 100)
+     */
     perPage?: number;
-}
-export declare class TeamsListDiscussionCommentsInOrgRequest extends SpeakeasyBase {
-    pathParams: TeamsListDiscussionCommentsInOrgPathParams;
-    queryParams: TeamsListDiscussionCommentsInOrgQueryParams;
+    /**
+     * team_slug parameter
+     */
+    teamSlug: string;
 }
 export declare class TeamsListDiscussionCommentsInOrgResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     teamDiscussionComments?: shared.TeamDiscussionComment[];
 }

@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetTransactionsIdPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetTransactionsIdRequest extends SpeakeasyBase {
-    pathParams: GetTransactionsIdPathParams;
+    /**
+     * The unique identifier for the transaction.
+     *
+     * @remarks
+     *
+     */
+    id: string;
 }
 export declare class GetTransactionsIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful Response
+     */
     getTransactionResponse?: shared.GetTransactionResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

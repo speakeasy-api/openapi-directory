@@ -1,25 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteAttributesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteAttributesActionEnum {
     DeleteAttributes = "DeleteAttributes"
 }
-export declare enum PostDeleteAttributesVersionEnum {
+export declare enum POSTDeleteAttributesVersionEnum {
     TwoThousandAndNine0415 = "2009-04-15"
 }
-export declare class PostDeleteAttributesQueryParams extends SpeakeasyBase {
+export declare class POSTDeleteAttributesRequest extends SpeakeasyBase {
     awsAccessKeyId: string;
-    action: PostDeleteAttributesActionEnum;
+    action: POSTDeleteAttributesActionEnum;
+    requestBody?: Uint8Array;
     signature: string;
     signatureMethod: string;
     signatureVersion: string;
     timestamp: string;
-    version: PostDeleteAttributesVersionEnum;
+    version: POSTDeleteAttributesVersionEnum;
 }
-export declare class PostDeleteAttributesRequest extends SpeakeasyBase {
-    queryParams: PostDeleteAttributesQueryParams;
-    request?: Uint8Array;
-}
-export declare class PostDeleteAttributesResponse extends SpeakeasyBase {
+export declare class POSTDeleteAttributesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

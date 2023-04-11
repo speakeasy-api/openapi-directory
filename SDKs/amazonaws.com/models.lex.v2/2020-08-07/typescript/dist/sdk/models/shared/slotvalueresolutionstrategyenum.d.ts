@@ -1,4 +1,5 @@
 export declare enum SlotValueResolutionStrategyEnum {
     OriginalValue = "OriginalValue",
-    TopResolution = "TopResolution"
+    TopResolution = "TopResolution",
+    Concatenation = "Concatenation"
 }

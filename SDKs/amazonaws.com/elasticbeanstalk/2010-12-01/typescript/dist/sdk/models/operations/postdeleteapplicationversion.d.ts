@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteApplicationVersionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteApplicationVersionActionEnum {
     DeleteApplicationVersion = "DeleteApplicationVersion"
 }
-export declare enum PostDeleteApplicationVersionVersionEnum {
+export declare enum POSTDeleteApplicationVersionVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostDeleteApplicationVersionQueryParams extends SpeakeasyBase {
-    action: PostDeleteApplicationVersionActionEnum;
-    version: PostDeleteApplicationVersionVersionEnum;
-}
-export declare class PostDeleteApplicationVersionHeaders extends SpeakeasyBase {
+export declare class POSTDeleteApplicationVersionRequest extends SpeakeasyBase {
+    action: POSTDeleteApplicationVersionActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteApplicationVersionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteApplicationVersionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteApplicationVersionRequest extends SpeakeasyBase {
-    queryParams: PostDeleteApplicationVersionQueryParams;
-    headers: PostDeleteApplicationVersionHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteApplicationVersionResponse extends SpeakeasyBase {
+export declare class POSTDeleteApplicationVersionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

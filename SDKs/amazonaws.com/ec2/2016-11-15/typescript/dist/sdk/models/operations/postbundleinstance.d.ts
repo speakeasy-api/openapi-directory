@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostBundleInstanceActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTBundleInstanceActionEnum {
     BundleInstance = "BundleInstance"
 }
-export declare enum PostBundleInstanceVersionEnum {
+export declare enum POSTBundleInstanceVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostBundleInstanceQueryParams extends SpeakeasyBase {
-    action: PostBundleInstanceActionEnum;
-    version: PostBundleInstanceVersionEnum;
-}
-export declare class PostBundleInstanceHeaders extends SpeakeasyBase {
+export declare class POSTBundleInstanceRequest extends SpeakeasyBase {
+    action: POSTBundleInstanceActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTBundleInstanceVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostBundleInstanceHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostBundleInstanceRequest extends SpeakeasyBase {
-    queryParams: PostBundleInstanceQueryParams;
-    headers: PostBundleInstanceHeaders;
-    request?: Uint8Array;
-}
-export declare class PostBundleInstanceResponse extends SpeakeasyBase {
+export declare class POSTBundleInstanceResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

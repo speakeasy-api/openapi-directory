@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class NodesDeletePathParams extends SpeakeasyBase {
-    nodeId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class NodesDeleteRequest extends SpeakeasyBase {
-    pathParams: NodesDeletePathParams;
+    /**
+     * The unique identifier of the node.
+     */
+    nodeId: string;
 }
 export declare class NodesDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

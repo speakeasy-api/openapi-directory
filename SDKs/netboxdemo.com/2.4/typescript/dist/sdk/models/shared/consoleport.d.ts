@@ -1,8 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { NestedConsoleServerPort } from "./nestedconsoleserverport";
 import { NestedDevice } from "./nesteddevice";
+export declare enum ConsolePortConnectionStatusEnum {
+    False = "false",
+    True = "true"
+}
 export declare class ConsolePort extends SpeakeasyBase {
-    connectionStatus?: boolean;
+    connectionStatus?: ConsolePortConnectionStatusEnum;
     csPort?: NestedConsoleServerPort;
     device: NestedDevice;
     id?: number;

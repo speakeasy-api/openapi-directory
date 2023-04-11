@@ -1,20 +1,34 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetVideoPrivacyUsersAlt1PathParams extends SpeakeasyBase {
-    channelId: number;
-    videoId: number;
-}
-export declare class GetVideoPrivacyUsersAlt1QueryParams extends SpeakeasyBase {
-    page?: number;
-    perPage?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetVideoPrivacyUsersAlt1Request extends SpeakeasyBase {
-    pathParams: GetVideoPrivacyUsersAlt1PathParams;
-    queryParams: GetVideoPrivacyUsersAlt1QueryParams;
+    /**
+     * The ID of the channel.
+     */
+    channelId: number;
+    /**
+     * The page number of the results to show.
+     */
+    page?: number;
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    perPage?: number;
+    /**
+     * The ID of the video.
+     */
+    videoId: number;
 }
 export declare class GetVideoPrivacyUsersAlt1Response extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * No users can view the private video.
+     */
     legacyError?: shared.LegacyError;
+    /**
+     * The users were returned.
+     */
     users?: shared.User[];
 }

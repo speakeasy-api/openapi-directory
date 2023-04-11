@@ -1,11 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteWorkspacePathParams extends SpeakeasyBase {
-    workspaceId: string;
-}
-export declare class DeleteWorkspaceQueryParams extends SpeakeasyBase {
-    clientToken?: string;
-}
-export declare class DeleteWorkspaceHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteWorkspaceRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +8,41 @@ export declare class DeleteWorkspaceHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DeleteWorkspaceRequest extends SpeakeasyBase {
-    pathParams: DeleteWorkspacePathParams;
-    queryParams: DeleteWorkspaceQueryParams;
-    headers: DeleteWorkspaceHeaders;
+    /**
+     * Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     */
+    clientToken?: string;
+    /**
+     * The ID of the workspace to delete.
+     */
+    workspaceId: string;
 }
 export declare class DeleteWorkspaceResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
+    conflictException?: any;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

@@ -1,5 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class RootV1StatisticsConsolidatedDailyQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class RootV1StatisticsConsolidatedDailyRequest extends SpeakeasyBase {
     appId?: string;
     companyId?: string;
     deviceToken?: string;
@@ -8,11 +9,9 @@ export declare class RootV1StatisticsConsolidatedDailyQueryParams extends Speake
     startDate?: string;
     tag?: string;
 }
-export declare class RootV1StatisticsConsolidatedDailyRequest extends SpeakeasyBase {
-    queryParams: RootV1StatisticsConsolidatedDailyQueryParams;
-}
 export declare class RootV1StatisticsConsolidatedDailyResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,22 +1,42 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetGetInsightRuleReportActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETGETInsightRuleReportActionEnum {
     GetInsightRuleReport = "GetInsightRuleReport"
 }
-export declare enum GetGetInsightRuleReportVersionEnum {
+export declare enum GETGETInsightRuleReportVersionEnum {
     TwoThousandAndTen0801 = "2010-08-01"
 }
-export declare class GetGetInsightRuleReportQueryParams extends SpeakeasyBase {
-    action: GetGetInsightRuleReportActionEnum;
+export declare class GETGETInsightRuleReportRequest extends SpeakeasyBase {
+    action: GETGETInsightRuleReportActionEnum;
+    /**
+     * The end time of the data to use in the report. When used in a raw HTTP Query API, it is formatted as <code>yyyy-MM-dd'T'HH:mm:ss</code>. For example, <code>2019-07-01T23:59:59</code>.
+     */
     endTime: Date;
+    /**
+     * The maximum number of contributors to include in the report. The range is 1 to 100. If you omit this, the default of 10 is used.
+     */
     maxContributorCount?: number;
+    /**
+     * <p>Specifies which metrics to use for aggregation of contributor values for the report. You can specify one or more of the following metrics:</p> <ul> <li> <p> <code>UniqueContributors</code> -- the number of unique contributors for each data point.</p> </li> <li> <p> <code>MaxContributorValue</code> -- the value of the top contributor for each data point. The identity of the contributor might change for each data point in the graph.</p> <p>If this rule aggregates by COUNT, the top contributor for each data point is the contributor with the most occurrences in that period. If the rule aggregates by SUM, the top contributor is the contributor with the highest sum in the log field specified by the rule's <code>Value</code>, during that period.</p> </li> <li> <p> <code>SampleCount</code> -- the number of data points matched by the rule.</p> </li> <li> <p> <code>Sum</code> -- the sum of the values from all contributors during the time period represented by that data point.</p> </li> <li> <p> <code>Minimum</code> -- the minimum value from a single observation during the time period represented by that data point.</p> </li> <li> <p> <code>Maximum</code> -- the maximum value from a single observation during the time period represented by that data point.</p> </li> <li> <p> <code>Average</code> -- the average value from all contributors during the time period represented by that data point.</p> </li> </ul>
+     */
     metrics?: string[];
+    /**
+     * Determines what statistic to use to rank the contributors. Valid values are SUM and MAXIMUM.
+     */
     orderBy?: string;
+    /**
+     * The period, in seconds, to use for the statistics in the <code>InsightRuleMetricDatapoint</code> results.
+     */
     period: number;
+    /**
+     * The name of the rule that you want to see data from.
+     */
     ruleName: string;
+    /**
+     * The start time of the data to use in the report. When used in a raw HTTP Query API, it is formatted as <code>yyyy-MM-dd'T'HH:mm:ss</code>. For example, <code>2019-07-01T23:59:59</code>.
+     */
     startTime: Date;
-    version: GetGetInsightRuleReportVersionEnum;
-}
-export declare class GetGetInsightRuleReportHeaders extends SpeakeasyBase {
+    version: GETGETInsightRuleReportVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -25,12 +45,9 @@ export declare class GetGetInsightRuleReportHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetGetInsightRuleReportRequest extends SpeakeasyBase {
-    queryParams: GetGetInsightRuleReportQueryParams;
-    headers: GetGetInsightRuleReportHeaders;
-}
-export declare class GetGetInsightRuleReportResponse extends SpeakeasyBase {
+export declare class GETGETInsightRuleReportResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

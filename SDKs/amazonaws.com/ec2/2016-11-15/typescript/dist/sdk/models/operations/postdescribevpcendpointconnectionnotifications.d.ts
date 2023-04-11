@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeVpcEndpointConnectionNotificationsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeVpcEndpointConnectionNotificationsActionEnum {
     DescribeVpcEndpointConnectionNotifications = "DescribeVpcEndpointConnectionNotifications"
 }
-export declare enum PostDescribeVpcEndpointConnectionNotificationsVersionEnum {
+export declare enum POSTDescribeVpcEndpointConnectionNotificationsVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDescribeVpcEndpointConnectionNotificationsQueryParams extends SpeakeasyBase {
-    action: PostDescribeVpcEndpointConnectionNotificationsActionEnum;
+export declare class POSTDescribeVpcEndpointConnectionNotificationsRequest extends SpeakeasyBase {
+    action: POSTDescribeVpcEndpointConnectionNotificationsActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostDescribeVpcEndpointConnectionNotificationsVersionEnum;
-}
-export declare class PostDescribeVpcEndpointConnectionNotificationsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeVpcEndpointConnectionNotificationsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeVpcEndpointConnectionNotificationsHeaders exten
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeVpcEndpointConnectionNotificationsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeVpcEndpointConnectionNotificationsQueryParams;
-    headers: PostDescribeVpcEndpointConnectionNotificationsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeVpcEndpointConnectionNotificationsResponse extends SpeakeasyBase {
+export declare class POSTDescribeVpcEndpointConnectionNotificationsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

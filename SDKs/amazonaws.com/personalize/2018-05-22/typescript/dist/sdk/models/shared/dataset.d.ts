@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Provides metadata for a dataset.
-**/
+ */
 export declare class Dataset extends SpeakeasyBase {
     creationDateTime?: Date;
     datasetArn?: string;

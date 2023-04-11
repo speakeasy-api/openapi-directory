@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeReservedNodeOfferingsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeReservedNodeOfferingsActionEnum {
     DescribeReservedNodeOfferings = "DescribeReservedNodeOfferings"
 }
-export declare enum PostDescribeReservedNodeOfferingsVersionEnum {
+export declare enum POSTDescribeReservedNodeOfferingsVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostDescribeReservedNodeOfferingsQueryParams extends SpeakeasyBase {
-    action: PostDescribeReservedNodeOfferingsActionEnum;
+export declare class POSTDescribeReservedNodeOfferingsRequest extends SpeakeasyBase {
+    action: POSTDescribeReservedNodeOfferingsActionEnum;
+    /**
+     * Pagination token
+     */
     marker?: string;
+    /**
+     * Pagination limit
+     */
     maxRecords?: string;
-    version: PostDescribeReservedNodeOfferingsVersionEnum;
-}
-export declare class PostDescribeReservedNodeOfferingsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeReservedNodeOfferingsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeReservedNodeOfferingsHeaders extends SpeakeasyB
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeReservedNodeOfferingsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeReservedNodeOfferingsQueryParams;
-    headers: PostDescribeReservedNodeOfferingsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeReservedNodeOfferingsResponse extends SpeakeasyBase {
+export declare class POSTDescribeReservedNodeOfferingsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

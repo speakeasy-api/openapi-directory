@@ -1,8 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ExportBundlePathParams extends SpeakeasyBase {
-    bundleId: string;
-}
+import { AxiosResponse } from "axios";
+/**
+ *  Developer desktop or target mobile app or website platform.
+ */
 export declare enum ExportBundlePlatformEnum {
     Osx = "OSX",
     Windows = "WINDOWS",
@@ -12,11 +13,7 @@ export declare enum ExportBundlePlatformEnum {
     Android = "ANDROID",
     Javascript = "JAVASCRIPT"
 }
-export declare class ExportBundleQueryParams extends SpeakeasyBase {
-    platform?: ExportBundlePlatformEnum;
-    projectId?: string;
-}
-export declare class ExportBundleHeaders extends SpeakeasyBase {
+export declare class ExportBundleRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -24,20 +21,49 @@ export declare class ExportBundleHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class ExportBundleRequest extends SpeakeasyBase {
-    pathParams: ExportBundlePathParams;
-    queryParams: ExportBundleQueryParams;
-    headers: ExportBundleHeaders;
+    /**
+     *  Unique bundle identifier.
+     */
+    bundleId: string;
+    /**
+     *  Developer desktop or target application platform.
+     */
+    platform?: ExportBundlePlatformEnum;
+    /**
+     *  Unique project identifier.
+     */
+    projectId?: string;
 }
 export declare class ExportBundleResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: shared.BadRequestException;
     contentType: string;
+    /**
+     * Success
+     */
     exportBundleResult?: shared.ExportBundleResult;
+    /**
+     * InternalFailureException
+     */
     internalFailureException?: shared.InternalFailureException;
+    /**
+     * NotFoundException
+     */
     notFoundException?: shared.NotFoundException;
-    serviceUnavailableException?: shared.ServiceUnavailableException;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceUnavailableException
+     */
+    serviceUnavailableException?: shared.ServiceUnavailableException;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: shared.TooManyRequestsException;
+    /**
+     * UnauthorizedException
+     */
     unauthorizedException?: shared.UnauthorizedException;
 }

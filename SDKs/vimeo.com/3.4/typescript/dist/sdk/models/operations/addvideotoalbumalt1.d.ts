@@ -1,18 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AddVideoToAlbumAlt1PathParams extends SpeakeasyBase {
-    albumId: number;
-    videoId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class AddVideoToAlbumAlt1Security extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
+    oauth2: string;
 }
 export declare class AddVideoToAlbumAlt1Request extends SpeakeasyBase {
-    pathParams: AddVideoToAlbumAlt1PathParams;
-    security: AddVideoToAlbumAlt1Security;
+    /**
+     * The ID of the album.
+     */
+    albumId: number;
+    /**
+     * The ID of the video.
+     */
+    videoId: number;
 }
 export declare class AddVideoToAlbumAlt1Response extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The supplied token doesn't have the proper scopes, or the authenticated user can't edit the album.
+     */
     legacyError?: shared.LegacyError;
 }

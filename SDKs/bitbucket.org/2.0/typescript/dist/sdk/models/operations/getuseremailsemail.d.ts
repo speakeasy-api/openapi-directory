@@ -1,19 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetUserEmailsEmailPathParams extends SpeakeasyBase {
-    email: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetUserEmailsEmailSecurity extends SpeakeasyBase {
-    oauth2?: shared.SchemeOauth2;
+    apiKey?: string;
     basic?: shared.SchemeBasic;
-    apiKey?: shared.SchemeApiKey;
+    oauth2?: string;
 }
 export declare class GetUserEmailsEmailRequest extends SpeakeasyBase {
-    pathParams: GetUserEmailsEmailPathParams;
-    security: GetUserEmailsEmailSecurity;
+    /**
+     * Email address of the user.
+     */
+    email: string;
 }
 export declare class GetUserEmailsEmailResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Unexpected error.
+     */
     error?: Record<string, any>;
 }

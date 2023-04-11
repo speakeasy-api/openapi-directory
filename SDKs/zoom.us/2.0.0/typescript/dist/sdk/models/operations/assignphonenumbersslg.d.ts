@@ -1,30 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class AssignPhoneNumbersSlgPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class AssignPhoneNumbersSLGApplicationJSONPhoneNumbers extends SpeakeasyBase {
+    /**
+     * Unique Identifier of the phone number.
+     */
+    id?: string;
+    /**
+     * Phone number.
+     */
+    number?: string;
+}
+export declare class AssignPhoneNumbersSLGApplicationJSON extends SpeakeasyBase {
+    /**
+     * Phone number(s) to be assigned to the Shared Line Group.
+     */
+    phoneNumbers?: AssignPhoneNumbersSLGApplicationJSONPhoneNumbers[];
+}
+export declare class AssignPhoneNumbersSLGRequest extends SpeakeasyBase {
+    requestBody?: AssignPhoneNumbersSLGApplicationJSON;
+    /**
+     * Unique Identifier of the Shared Line Group.
+     */
     sharedLineGroupId: string;
 }
-export declare class AssignPhoneNumbersSlgApplicationJsonPhoneNumbers extends SpeakeasyBase {
-    id?: string;
-    number?: string;
-}
-export declare class AssignPhoneNumbersSlgApplicationJson extends SpeakeasyBase {
-    phoneNumbers?: AssignPhoneNumbersSlgApplicationJsonPhoneNumbers[];
-}
-export declare class AssignPhoneNumbersSlgMultipartFormDataPhoneNumbers extends SpeakeasyBase {
-    id?: string;
-    number?: string;
-}
-export declare class AssignPhoneNumbersSlgMultipartFormData1 extends SpeakeasyBase {
-    phoneNumbers?: AssignPhoneNumbersSlgMultipartFormDataPhoneNumbers[];
-}
-export declare class AssignPhoneNumbersSlgRequests extends SpeakeasyBase {
-    object?: AssignPhoneNumbersSlgApplicationJson;
-    object1?: AssignPhoneNumbersSlgMultipartFormData1;
-}
-export declare class AssignPhoneNumbersSlgRequest extends SpeakeasyBase {
-    pathParams: AssignPhoneNumbersSlgPathParams;
-    request?: AssignPhoneNumbersSlgRequests;
-}
-export declare class AssignPhoneNumbersSlgResponse extends SpeakeasyBase {
+export declare class AssignPhoneNumbersSLGResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

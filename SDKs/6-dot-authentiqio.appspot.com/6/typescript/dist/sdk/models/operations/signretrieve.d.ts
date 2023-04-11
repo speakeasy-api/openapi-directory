@@ -1,19 +1,34 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SignRetrievePathParams extends SpeakeasyBase {
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class SignRetrieveRequest extends SpeakeasyBase {
+    /**
+     * Job ID (20 chars)
+     */
     job: string;
 }
-export declare class SignRetrieveJwt extends SpeakeasyBase {
+/**
+ * Successful response (JWT)
+ */
+export declare class SignRetrieveJWT extends SpeakeasyBase {
     exp?: number;
     field?: string;
+    /**
+     * base64safe encoded public signing key
+     */
     sub?: string;
-}
-export declare class SignRetrieveRequest extends SpeakeasyBase {
-    pathParams: SignRetrievePathParams;
 }
 export declare class SignRetrieveResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    error?: any;
-    jwt?: SignRetrieveJwt;
+    /**
+     * Job not found `unknown-job`
+     */
+    error?: shared.ErrorT;
+    /**
+     * Successful response (JWT)
+     */
+    jwt?: SignRetrieveJWT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

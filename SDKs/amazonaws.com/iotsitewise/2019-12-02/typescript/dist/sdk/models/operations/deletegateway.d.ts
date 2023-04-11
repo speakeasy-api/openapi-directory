@@ -1,8 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteGatewayPathParams extends SpeakeasyBase {
-    gatewayId: string;
-}
-export declare class DeleteGatewayHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteGatewayRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -10,16 +8,29 @@ export declare class DeleteGatewayHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DeleteGatewayRequest extends SpeakeasyBase {
-    pathParams: DeleteGatewayPathParams;
-    headers: DeleteGatewayHeaders;
+    /**
+     * The ID of the gateway to delete.
+     */
+    gatewayId: string;
 }
 export declare class DeleteGatewayResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalFailureException
+     */
     internalFailureException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

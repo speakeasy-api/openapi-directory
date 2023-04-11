@@ -1,19 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeEnvironmentManagedActionHistoryActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeEnvironmentManagedActionHistoryActionEnum {
     DescribeEnvironmentManagedActionHistory = "DescribeEnvironmentManagedActionHistory"
 }
-export declare enum GetDescribeEnvironmentManagedActionHistoryVersionEnum {
+export declare enum GETDescribeEnvironmentManagedActionHistoryVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetDescribeEnvironmentManagedActionHistoryQueryParams extends SpeakeasyBase {
-    action: GetDescribeEnvironmentManagedActionHistoryActionEnum;
+export declare class GETDescribeEnvironmentManagedActionHistoryRequest extends SpeakeasyBase {
+    action: GETDescribeEnvironmentManagedActionHistoryActionEnum;
+    /**
+     * The environment ID of the target environment.
+     */
     environmentId?: string;
+    /**
+     * The name of the target environment.
+     */
     environmentName?: string;
+    /**
+     * The maximum number of items to return for a single request.
+     */
     maxItems?: number;
+    /**
+     * The pagination token returned by a previous request.
+     */
     nextToken?: string;
-    version: GetDescribeEnvironmentManagedActionHistoryVersionEnum;
-}
-export declare class GetDescribeEnvironmentManagedActionHistoryHeaders extends SpeakeasyBase {
+    version: GETDescribeEnvironmentManagedActionHistoryVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -22,12 +33,9 @@ export declare class GetDescribeEnvironmentManagedActionHistoryHeaders extends S
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeEnvironmentManagedActionHistoryRequest extends SpeakeasyBase {
-    queryParams: GetDescribeEnvironmentManagedActionHistoryQueryParams;
-    headers: GetDescribeEnvironmentManagedActionHistoryHeaders;
-}
-export declare class GetDescribeEnvironmentManagedActionHistoryResponse extends SpeakeasyBase {
+export declare class GETDescribeEnvironmentManagedActionHistoryResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

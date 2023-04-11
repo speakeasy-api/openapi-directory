@@ -1,3 +1,4 @@
-export declare enum AutoMlOverrideStrategyEnum {
-    LatencyOptimized = "LatencyOptimized"
+export declare enum AutoMLOverrideStrategyEnum {
+    LatencyOptimized = "LatencyOptimized",
+    AccuracyOptimized = "AccuracyOptimized"
 }

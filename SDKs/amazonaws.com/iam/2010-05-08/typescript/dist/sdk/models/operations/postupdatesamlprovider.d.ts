@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostUpdateSamlProviderActionEnum {
-    UpdateSamlProvider = "UpdateSAMLProvider"
+import { AxiosResponse } from "axios";
+export declare enum POSTUpdateSAMLProviderActionEnum {
+    UpdateSAMLProvider = "UpdateSAMLProvider"
 }
-export declare enum PostUpdateSamlProviderVersionEnum {
+export declare enum POSTUpdateSAMLProviderVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostUpdateSamlProviderQueryParams extends SpeakeasyBase {
-    action: PostUpdateSamlProviderActionEnum;
-    version: PostUpdateSamlProviderVersionEnum;
-}
-export declare class PostUpdateSamlProviderHeaders extends SpeakeasyBase {
+export declare class POSTUpdateSAMLProviderRequest extends SpeakeasyBase {
+    action: POSTUpdateSAMLProviderActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTUpdateSAMLProviderVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostUpdateSamlProviderHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostUpdateSamlProviderRequest extends SpeakeasyBase {
-    queryParams: PostUpdateSamlProviderQueryParams;
-    headers: PostUpdateSamlProviderHeaders;
-    request?: Uint8Array;
-}
-export declare class PostUpdateSamlProviderResponse extends SpeakeasyBase {
+export declare class POSTUpdateSAMLProviderResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

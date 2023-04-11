@@ -1,8 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Provides information about the status and settings of the APNs (Apple Push Notification service) VoIP channel for an application.
-**/
-export declare class ApnsVoipChannelResponse extends SpeakeasyBase {
+ */
+export declare class APNSVoipChannelResponse extends SpeakeasyBase {
     applicationId?: string;
     creationDate?: string;
     defaultAuthenticationMethod?: string;

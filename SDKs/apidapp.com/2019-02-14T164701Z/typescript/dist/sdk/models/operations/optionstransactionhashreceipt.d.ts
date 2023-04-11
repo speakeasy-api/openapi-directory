@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class OptionsTransactionHashReceiptPathParams extends SpeakeasyBase {
-    hash: string;
-}
+import { AxiosResponse } from "axios";
 export declare class OptionsTransactionHashReceiptRequest extends SpeakeasyBase {
-    pathParams: OptionsTransactionHashReceiptPathParams;
+    /**
+     * Automatically added
+     */
+    hash: string;
 }
 export declare class OptionsTransactionHashReceiptResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * 200 response
+     */
     empty?: Record<string, any>;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,36 +1,59 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SetHtmlUsingGetQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class SetHTMLUsingGETRequest extends SpeakeasyBase {
     html?: string;
     padID?: string;
 }
-export declare class SetHtmlUsingGet200ApplicationJson extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class SetHTMLUsingGet500ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class SetHtmlUsingGet400ApplicationJson extends SpeakeasyBase {
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class SetHTMLUsingGet401ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class SetHtmlUsingGet401ApplicationJson extends SpeakeasyBase {
+/**
+ * generic api error (code 1)
+ */
+export declare class SetHTMLUsingGet400ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class SetHtmlUsingGet500ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class SetHTMLUsingGet200ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class SetHtmlUsingGetRequest extends SpeakeasyBase {
-    queryParams: SetHtmlUsingGetQueryParams;
-}
-export declare class SetHtmlUsingGetResponse extends SpeakeasyBase {
+export declare class SetHTMLUsingGETResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    setHTMLUsingGET200ApplicationJSONObject?: SetHtmlUsingGet200ApplicationJson;
-    setHTMLUsingGET400ApplicationJSONObject?: SetHtmlUsingGet400ApplicationJson;
-    setHTMLUsingGET401ApplicationJSONObject?: SetHtmlUsingGet401ApplicationJson;
-    setHTMLUsingGET500ApplicationJSONObject?: SetHtmlUsingGet500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    setHTMLUsingGET200ApplicationJSONObject?: SetHTMLUsingGet200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    setHTMLUsingGET400ApplicationJSONObject?: SetHTMLUsingGet400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    setHTMLUsingGET401ApplicationJSONObject?: SetHTMLUsingGet401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    setHTMLUsingGET500ApplicationJSONObject?: SetHTMLUsingGet500ApplicationJSON;
 }

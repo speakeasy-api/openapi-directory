@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateSubnetGroupXAmzTargetEnum {
     AmazonDaxv3UpdateSubnetGroup = "AmazonDAXV3.UpdateSubnetGroup"
 }
-export declare class UpdateSubnetGroupHeaders extends SpeakeasyBase {
+export declare class UpdateSubnetGroupRequest extends SpeakeasyBase {
+    updateSubnetGroupRequest: shared.UpdateSubnetGroupRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class UpdateSubnetGroupHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateSubnetGroupXAmzTargetEnum;
 }
-export declare class UpdateSubnetGroupRequest extends SpeakeasyBase {
-    headers: UpdateSubnetGroupHeaders;
-    request: shared.UpdateSubnetGroupRequest;
-}
 export declare class UpdateSubnetGroupResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidSubnet
+     */
     invalidSubnet?: any;
+    /**
+     * ServiceLinkedRoleNotFoundFault
+     */
     serviceLinkedRoleNotFoundFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * SubnetGroupNotFoundFault
+     */
     subnetGroupNotFoundFault?: any;
+    /**
+     * SubnetInUse
+     */
     subnetInUse?: any;
+    /**
+     * SubnetQuotaExceededFault
+     */
     subnetQuotaExceededFault?: any;
+    /**
+     * Success
+     */
     updateSubnetGroupResponse?: shared.UpdateSubnetGroupResponse;
 }

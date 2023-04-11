@@ -1,12 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class SecretsSecretRolesListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class SecretsSecretRolesListRequest extends SpeakeasyBase {
     id?: string;
     idGt?: string;
     idGte?: string;
     idLt?: string;
     idLte?: string;
     idN?: string;
+    /**
+     * Number of results to return per page.
+     */
     limit?: number;
     name?: string;
     nameIc?: string;
@@ -18,6 +22,9 @@ export declare class SecretsSecretRolesListQueryParams extends SpeakeasyBase {
     nameNie?: string;
     nameNiew?: string;
     nameNisw?: string;
+    /**
+     * The initial index from which to return the results.
+     */
     offset?: number;
     q?: string;
     slug?: string;
@@ -31,17 +38,15 @@ export declare class SecretsSecretRolesListQueryParams extends SpeakeasyBase {
     slugNiew?: string;
     slugNisw?: string;
 }
-export declare class SecretsSecretRolesList200ApplicationJson extends SpeakeasyBase {
+export declare class SecretsSecretRolesList200ApplicationJSON extends SpeakeasyBase {
     count: number;
     next?: string;
     previous?: string;
     results: shared.SecretRole[];
 }
-export declare class SecretsSecretRolesListRequest extends SpeakeasyBase {
-    queryParams: SecretsSecretRolesListQueryParams;
-}
 export declare class SecretsSecretRolesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    secretsSecretRolesList200ApplicationJSONObject?: SecretsSecretRolesList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    secretsSecretRolesList200ApplicationJSONObject?: SecretsSecretRolesList200ApplicationJSON;
 }

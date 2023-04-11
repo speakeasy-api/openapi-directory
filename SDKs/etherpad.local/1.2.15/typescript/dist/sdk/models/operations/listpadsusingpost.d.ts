@@ -1,38 +1,61 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ListPadsUsingPostQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListPadsUsingPOSTRequest extends SpeakeasyBase {
     groupID?: string;
 }
-export declare class ListPadsUsingPost200ApplicationJsonData extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class ListPadsUsingPost500ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class ListPadsUsingPost401ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+/**
+ * generic api error (code 1)
+ */
+export declare class ListPadsUsingPost400ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+export declare class ListPadsUsingPost200ApplicationJSONData extends SpeakeasyBase {
     padIDs?: string[];
 }
-export declare class ListPadsUsingPost200ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class ListPadsUsingPost200ApplicationJSON extends SpeakeasyBase {
     code?: number;
-    data?: ListPadsUsingPost200ApplicationJsonData;
+    data?: ListPadsUsingPost200ApplicationJSONData;
     message?: string;
 }
-export declare class ListPadsUsingPost400ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class ListPadsUsingPost401ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class ListPadsUsingPost500ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class ListPadsUsingPostRequest extends SpeakeasyBase {
-    queryParams: ListPadsUsingPostQueryParams;
-}
-export declare class ListPadsUsingPostResponse extends SpeakeasyBase {
+export declare class ListPadsUsingPOSTResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    listPadsUsingPOST200ApplicationJSONObject?: ListPadsUsingPost200ApplicationJson;
-    listPadsUsingPOST400ApplicationJSONObject?: ListPadsUsingPost400ApplicationJson;
-    listPadsUsingPOST401ApplicationJSONObject?: ListPadsUsingPost401ApplicationJson;
-    listPadsUsingPOST500ApplicationJSONObject?: ListPadsUsingPost500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    listPadsUsingPOST200ApplicationJSONObject?: ListPadsUsingPost200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    listPadsUsingPOST400ApplicationJSONObject?: ListPadsUsingPost400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    listPadsUsingPOST401ApplicationJSONObject?: ListPadsUsingPost401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    listPadsUsingPOST500ApplicationJSONObject?: ListPadsUsingPost500ApplicationJSON;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateRoutingControlStateXAmzTargetEnum {
-    ToggleCustomerApiUpdateRoutingControlState = "ToggleCustomerAPI.UpdateRoutingControlState"
+    ToggleCustomerAPIUpdateRoutingControlState = "ToggleCustomerAPI.UpdateRoutingControlState"
 }
-export declare class UpdateRoutingControlStateHeaders extends SpeakeasyBase {
+export declare class UpdateRoutingControlStateRequest extends SpeakeasyBase {
+    updateRoutingControlStateRequest: shared.UpdateRoutingControlStateRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,19 +15,40 @@ export declare class UpdateRoutingControlStateHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateRoutingControlStateXAmzTargetEnum;
 }
-export declare class UpdateRoutingControlStateRequest extends SpeakeasyBase {
-    headers: UpdateRoutingControlStateHeaders;
-    request: shared.UpdateRoutingControlStateRequest;
-}
 export declare class UpdateRoutingControlStateResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * EndpointTemporarilyUnavailableException
+     */
     endpointTemporarilyUnavailableException?: any;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * Success
+     */
     updateRoutingControlStateResponse?: Record<string, any>;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

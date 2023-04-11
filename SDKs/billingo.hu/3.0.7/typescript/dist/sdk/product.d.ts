@@ -1,5 +1,9 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Product object represents your document's product.
+ */
 export declare class Product {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,33 +13,38 @@ export declare class Product {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createProduct - Create a product
+     * Create a product
      *
+     * @remarks
      * Create a new product. Returns a product object if the create is succeded.
-    **/
-    createProduct(req: operations.CreateProductRequest, config?: AxiosRequestConfig): Promise<operations.CreateProductResponse>;
+     */
+    createProduct(req: shared.ProductInput, config?: AxiosRequestConfig): Promise<operations.CreateProductResponse>;
     /**
-     * deleteProduct - Delete a product
+     * Delete a product
      *
+     * @remarks
      * Delete an existing product.
-    **/
+     */
     deleteProduct(req: operations.DeleteProductRequest, config?: AxiosRequestConfig): Promise<operations.DeleteProductResponse>;
     /**
-     * getProduct - Retrieve a product
+     * Retrieve a product
      *
+     * @remarks
      * Retrieves the details of an existing product.
-    **/
+     */
     getProduct(req: operations.GetProductRequest, config?: AxiosRequestConfig): Promise<operations.GetProductResponse>;
     /**
-     * listProduct - List all product
+     * List all product
      *
+     * @remarks
      * Returns a list of your products. The partners are returned sorted by creation date, with the most recent partners appearing first.
-    **/
+     */
     listProduct(req: operations.ListProductRequest, config?: AxiosRequestConfig): Promise<operations.ListProductResponse>;
     /**
-     * updateProduct - Update a product
+     * Update a product
      *
+     * @remarks
      * Update an existing product. Returns a product object if the update is succeded.
-    **/
+     */
     updateProduct(req: operations.UpdateProductRequest, config?: AxiosRequestConfig): Promise<operations.UpdateProductResponse>;
 }

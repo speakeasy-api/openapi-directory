@@ -1,0 +1,95 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class ComputeServiceAttachmentsPatchSecurityOption1 extends SpeakeasyBase {
+    oauth2: string;
+    oauth2c: string;
+}
+export declare class ComputeServiceAttachmentsPatchSecurityOption2 extends SpeakeasyBase {
+    oauth2: string;
+    oauth2c: string;
+}
+export declare class ComputeServiceAttachmentsPatchSecurity extends SpeakeasyBase {
+    option1?: ComputeServiceAttachmentsPatchSecurityOption1;
+    option2?: ComputeServiceAttachmentsPatchSecurityOption2;
+}
+export declare class ComputeServiceAttachmentsPatchRequest extends SpeakeasyBase {
+    /**
+     * V1 error format.
+     */
+    dollarXgafv?: shared.XgafvEnum;
+    serviceAttachment1?: shared.ServiceAttachment;
+    /**
+     * OAuth access token.
+     */
+    accessToken?: string;
+    /**
+     * Data format for response.
+     */
+    alt?: shared.AltEnum;
+    /**
+     * JSONP
+     */
+    callback?: string;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauthToken?: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * Project ID for this request.
+     */
+    project: string;
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * This flag determines how to change the status of consumer connections, when the connection policy for the corresponding project or network is modified. If the flag is false, the default case, then existing ACCEPTED and REJECTED consumer connections stay in that state. For example, even if the project is removed from the accept list, existing ACCEPTED connections will stay the same. If the flag is true, then the connection can change from ACCEPTED or REJECTED to pending when the connection policy is modified. For example, if a project is removed from the reject list, its existing REJECTED connections will move to the PENDING state. If the project is also added to the accept list, then those connections will move to the ACCEPTED state.
+     */
+    reconcileConnections?: boolean;
+    /**
+     * The region scoping this request and should conform to RFC1035.
+     */
+    region: string;
+    /**
+     * An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+     */
+    requestId?: string;
+    /**
+     * The resource id of the ServiceAttachment to patch. It should conform to RFC1035 resource name or be a string form on an unsigned long number.
+     */
+    serviceAttachmentPathParameter: string;
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    uploadType?: string;
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    uploadProtocol?: string;
+    /**
+     * Legacy name for parameter that has been superseded by `quotaUser`.
+     */
+    userIp?: string;
+}
+export declare class ComputeServiceAttachmentsPatchResponse extends SpeakeasyBase {
+    contentType: string;
+    /**
+     * Successful response
+     */
+    operation?: shared.Operation;
+    statusCode: number;
+    rawResponse?: AxiosResponse;
+}

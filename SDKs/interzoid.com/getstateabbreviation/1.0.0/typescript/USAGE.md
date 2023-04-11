@@ -1,17 +1,17 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetstateabbreviationRequest, GetstateabbreviationResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetstateabbreviationRequest,
+  GetstateabbreviationResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetstateabbreviationRequest = {
-  queryParams: {
-    license: "sit",
-    state: "voluptas",
-  },
+  license: "corrupti",
+  state: "provident",
 };
 
 sdk.stateDataStandardization.getstateabbreviation(req).then((res: GetstateabbreviationResponse | AxiosError) => {

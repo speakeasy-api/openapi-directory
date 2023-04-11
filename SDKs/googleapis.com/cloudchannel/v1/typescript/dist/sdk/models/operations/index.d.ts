@@ -13,6 +13,7 @@ export * from "./cloudchannelaccountscustomersentitlementschangeparameters";
 export * from "./cloudchannelaccountscustomersentitlementschangerenewalsettings";
 export * from "./cloudchannelaccountscustomersentitlementscreate";
 export * from "./cloudchannelaccountscustomersentitlementslist";
+export * from "./cloudchannelaccountscustomersentitlementslistentitlementchanges";
 export * from "./cloudchannelaccountscustomersentitlementslookupoffer";
 export * from "./cloudchannelaccountscustomersentitlementsstartpaidservice";
 export * from "./cloudchannelaccountscustomersentitlementssuspend";

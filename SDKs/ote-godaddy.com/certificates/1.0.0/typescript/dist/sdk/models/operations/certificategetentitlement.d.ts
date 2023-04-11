@@ -1,14 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CertificateGetEntitlementQueryParams extends SpeakeasyBase {
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class CertificateGetEntitlementRequest extends SpeakeasyBase {
+    /**
+     * Entitlement id to lookup
+     */
     entitlementId: string;
+    /**
+     * Fetch only the most recent certificate
+     */
     latest?: boolean;
 }
-export declare class CertificateGetEntitlementRequest extends SpeakeasyBase {
-    queryParams: CertificateGetEntitlementQueryParams;
-}
 export declare class CertificateGetEntitlementResponse extends SpeakeasyBase {
-    certificates?: any[];
+    /**
+     * Certificate details retrieved
+     */
+    certificates?: shared.Certificate[];
     contentType: string;
-    error?: any;
+    /**
+     * Request was malformed
+     */
+    error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

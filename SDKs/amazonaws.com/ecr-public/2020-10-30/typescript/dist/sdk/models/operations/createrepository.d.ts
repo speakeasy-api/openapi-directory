@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum CreateRepositoryXAmzTargetEnum {
     SpencerFrontendServiceCreateRepository = "SpencerFrontendService.CreateRepository"
 }
-export declare class CreateRepositoryHeaders extends SpeakeasyBase {
+export declare class CreateRepositoryRequest extends SpeakeasyBase {
+    createRepositoryRequest: shared.CreateRepositoryRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,40 @@ export declare class CreateRepositoryHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: CreateRepositoryXAmzTargetEnum;
 }
-export declare class CreateRepositoryRequest extends SpeakeasyBase {
-    headers: CreateRepositoryHeaders;
-    request: shared.CreateRepositoryRequest;
-}
 export declare class CreateRepositoryResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     createRepositoryResponse?: shared.CreateRepositoryResponse;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * InvalidTagParameterException
+     */
     invalidTagParameterException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * RepositoryAlreadyExistsException
+     */
     repositoryAlreadyExistsException?: any;
+    /**
+     * ServerException
+     */
     serverException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyTagsException
+     */
     tooManyTagsException?: any;
+    /**
+     * UnsupportedCommandException
+     */
+    unsupportedCommandException?: any;
 }

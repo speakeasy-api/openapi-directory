@@ -1,17 +1,16 @@
-import { AxiosInstance } from "axios";
-import { Security } from "./models/shared";
 import { Access } from "./access";
 import { Agent } from "./agent";
 import { Coap } from "./coap";
-import { Dhcp } from "./dhcp";
 import { Daemon } from "./daemon";
+import { Dhcp } from "./dhcp";
 import { Ipmi } from "./ipmi";
+import * as shared from "./models/shared";
 import { Mqtt } from "./mqtt";
 import { Netflow } from "./netflow";
 import { Proxy } from "./proxy";
 import { Sflow } from "./sflow";
 import { Snmptcp } from "./snmptcp";
-import { SnmPv3 } from "./snmpv3";
+import { SNMPv3 } from "./snmpv3";
 import { Ssh } from "./ssh";
 import { Syslog } from "./syslog";
 import { Telnet } from "./telnet";
@@ -19,12 +18,33 @@ import { Tftp } from "./tftp";
 import { Tod } from "./tod";
 import { Valuespace } from "./valuespace";
 import { Web } from "./web";
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["http://gambitcomm.local", "http://127.0.0.1"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * The security details required to authenticate the SDK
+     */
+    security?: shared.Security;
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    security?: Security;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * This is the API for MIMIC client to connect to MIMIC daemon.
+ *
+ * @see {@link https://www.gambitcomm.com/site/about.php} - Find out more about Gambit
+ */
 export declare class SDK {
     access: Access;
     agent: Agent;
@@ -37,7 +57,7 @@ export declare class SDK {
     proxy: Proxy;
     sflow: Sflow;
     snmptcp: Snmptcp;
-    snmPv3: SnmPv3;
+    snmPv3: SNMPv3;
     ssh: Ssh;
     syslog: Syslog;
     telnet: Telnet;
@@ -51,5 +71,6 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
 }

@@ -1,10 +1,13 @@
+/**
+ * <p>A list of the variables to use in searching or filtering <code>Evaluation</code>.</p> <ul> <li> <p> <code>CreatedAt</code> - Sets the search criteria to <code>Evaluation</code> creation date.</p> </li> <li> <p> <code>Status</code> - Sets the search criteria to <code>Evaluation</code> status.</p> </li> <li> <p> <code>Name</code> - Sets the search criteria to the contents of <code>Evaluation</code> <b> </b> <code>Name</code>.</p> </li> <li> <p> <code>IAMUser</code> - Sets the search criteria to the user account that invoked an evaluation.</p> </li> <li> <p> <code>MLModelId</code> - Sets the search criteria to the <code>Predictor</code> that was evaluated.</p> </li> <li> <p> <code>DataSourceId</code> - Sets the search criteria to the <code>DataSource</code> used in evaluation.</p> </li> <li> <p> <code>DataUri</code> - Sets the search criteria to the data file(s) used in evaluation. The URL can identify either a file or an Amazon Simple Storage Service (Amazon S3) bucket or directory.</p> </li> </ul>
+ */
 export declare enum EvaluationFilterVariableEnum {
     CreatedAt = "CreatedAt",
     LastUpdatedAt = "LastUpdatedAt",
     Status = "Status",
     Name = "Name",
-    IamUser = "IAMUser",
-    MlModelId = "MLModelId",
+    IAMUser = "IAMUser",
+    MLModelId = "MLModelId",
     DataSourceId = "DataSourceId",
-    DataUri = "DataURI"
+    DataURI = "DataURI"
 }

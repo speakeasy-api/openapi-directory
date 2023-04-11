@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DescribeDbLogFilesList } from "./describedblogfileslist";
-export declare class DescribeDbLogFilesResponse extends SpeakeasyBase {
-    describeDBLogFiles?: DescribeDbLogFilesList[];
+import { DescribeDBLogFilesList } from "./describedblogfileslist";
+/**
+ * Success
+ */
+export declare class DescribeDBLogFilesResponse extends SpeakeasyBase {
+    describeDBLogFiles?: DescribeDBLogFilesList[];
     marker?: string;
 }

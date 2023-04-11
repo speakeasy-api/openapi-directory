@@ -23,15 +23,24 @@ export declare class Properties extends SpeakeasyBase {
     classification?: string;
     detailedServices?: DetailedService[];
     facilityType: PropertiesFacilityTypeEnum;
+    /**
+     * Standard hours of operation. Currently formatted as descriptive text suitable for display, with no guarantee of a standard parseable format. Hours of operation may vary due to holidays or other events.
+     */
     hours?: Hours;
     id: string;
     mobile?: boolean;
     name?: string;
+    /**
+     * Current status of facility operations. The overall status of the facility, which can be: Normal Hours and Services, Facility Notice, Limited Hours and/or Services, or Closed. This field replaces active_status.
+     */
     operatingStatus: OperatingStatus;
     operationalHoursSpecialInstructions?: string;
     phone?: Phone;
     satisfaction?: Satisfaction;
     services?: Services;
+    /**
+     * Facility time zone
+     */
     timeZone?: string;
     visn?: string;
     waitTimes?: WaitTimes;

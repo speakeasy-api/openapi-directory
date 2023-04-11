@@ -1,26 +1,38 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetVehiclesVehicleidLocationPathParams extends SpeakeasyBase {
-    vehicleId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetVehiclesVehicleidLocationSecurity extends SpeakeasyBase {
-    userAccessToken?: shared.SchemeUserAccessToken;
-    userAccessToken1?: shared.SchemeUserAccessToken;
+    userAccessToken?: string;
+    userAccessToken1?: string;
+}
+export declare class GetVehiclesVehicleidLocationRequest extends SpeakeasyBase {
+    /**
+     * ID of the Vehicle
+     */
+    vehicleId: string;
 }
 /**
  * Vehicle's GPS coordinates with timestamp
-**/
-export declare class GetVehiclesVehicleidLocation200ApplicationJson extends SpeakeasyBase {
+ */
+export declare class GetVehiclesVehicleidLocation200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * ISO8601 UTC timestamp of last received location
+     */
     lastUpdated?: Date;
+    /**
+     * Latitude in degrees
+     */
     latitude?: number;
+    /**
+     * Longitude in degrees
+     */
     longitude?: number;
-}
-export declare class GetVehiclesVehicleidLocationRequest extends SpeakeasyBase {
-    pathParams: GetVehiclesVehicleidLocationPathParams;
-    security: GetVehiclesVehicleidLocationSecurity;
 }
 export declare class GetVehiclesVehicleidLocationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getVehiclesVehicleidLocation200ApplicationJSONObject?: GetVehiclesVehicleidLocation200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Vehicle's GPS coordinates with timestamp
+     */
+    getVehiclesVehicleidLocation200ApplicationJSONObject?: GetVehiclesVehicleidLocation200ApplicationJSON;
 }

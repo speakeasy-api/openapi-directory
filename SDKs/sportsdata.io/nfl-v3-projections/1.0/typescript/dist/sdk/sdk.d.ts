@@ -1,12 +1,30 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-import { Security } from "./models/shared";
-export declare const ServerList: readonly ["http://api.sportsdata.io", "https://api.sportsdata.io", "http://azure-api.sportsdata.io", "https://azure-api.sportsdata.io"];
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
+export declare const ServerList: readonly ["http://azure-api.sportsdata.io/v3/nfl/projections", "https://azure-api.sportsdata.io/v3/nfl/projections"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * The security details required to authenticate the SDK
+     */
+    security?: shared.Security;
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    security?: Security;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * NFL projected stats API.
+ */
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -14,57 +32,79 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
     /**
-     * dfsSlatesByDate - DFS Slates by Date
-    **/
+     * DFS Slate Ownership Projections by SlateID
+     *
+     * @remarks
+     * Slate Ownership Projections for a specific slate. Projections are for GPP format ownership. Will return an empty list if the slate is not yet projected or not a slate we have projections for.
+     */
+    dfsSlateOwnershipProjectionsBySlateid(req: operations.DfsSlateOwnershipProjectionsBySlateidRequest, config?: AxiosRequestConfig): Promise<operations.DfsSlateOwnershipProjectionsBySlateidResponse>;
+    /**
+     * DFS Slates by Date
+     */
     dfsSlatesByDate(req: operations.DfsSlatesByDateRequest, config?: AxiosRequestConfig): Promise<operations.DfsSlatesByDateResponse>;
     /**
-     * dfsSlatesByWeek - DFS Slates by Week
-    **/
+     * DFS Slates by Week
+     */
     dfsSlatesByWeek(req: operations.DfsSlatesByWeekRequest, config?: AxiosRequestConfig): Promise<operations.DfsSlatesByWeekResponse>;
     /**
-     * idpProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalaries - IDP Projected Player Game Stats by Player (w/ Injuries, Lineups, DFS Salaries)
-    **/
+     * IDP Projected Player Game Stats by Player (w/ Injuries, Lineups, DFS Salaries)
+     */
     idpProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalaries(req: operations.IdpProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesRequest, config?: AxiosRequestConfig): Promise<operations.IdpProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesResponse>;
     /**
-     * idpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalaries - IDP Projected Player Game Stats by Team (w/ Injuries, Lineups, DFS Salaries)
-    **/
+     * IDP Projected Player Game Stats by Team (w/ Injuries, Lineups, DFS Salaries)
+     */
     idpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalaries(req: operations.IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesRequest, config?: AxiosRequestConfig): Promise<operations.IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesResponse>;
     /**
-     * idpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalaries - IDP Projected Player Game Stats by Week (w/ Injuries, Lineups, DFS Salaries)
-    **/
+     * IDP Projected Player Game Stats by Week (w/ Injuries, Lineups, DFS Salaries)
+     */
     idpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalaries(req: operations.IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesRequest, config?: AxiosRequestConfig): Promise<operations.IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesResponse>;
     /**
-     * projectedFantasyDefenseGameStatsWDfsSalaries - Projected Fantasy Defense Game Stats (w/ DFS Salaries)
-    **/
+     * Injured Players
+     *
+     * @remarks
+     * This endpoint provides all currently injured NFL players, along with injury details.
+     */
+    injuredPlayers(req: operations.InjuredPlayersRequest, config?: AxiosRequestConfig): Promise<operations.InjuredPlayersResponse>;
+    /**
+     * Projected Fantasy Defense Game Stats (w/ DFS Salaries)
+     */
     projectedFantasyDefenseGameStatsWDfsSalaries(req: operations.ProjectedFantasyDefenseGameStatsWDfsSalariesRequest, config?: AxiosRequestConfig): Promise<operations.ProjectedFantasyDefenseGameStatsWDfsSalariesResponse>;
     /**
-     * projectedFantasyDefenseSeasonStatsWByeWeekAdp - Projected Fantasy Defense Season Stats (w/ Bye Week, ADP)
-    **/
-    projectedFantasyDefenseSeasonStatsWByeWeekAdp(req: operations.ProjectedFantasyDefenseSeasonStatsWByeWeekAdpRequest, config?: AxiosRequestConfig): Promise<operations.ProjectedFantasyDefenseSeasonStatsWByeWeekAdpResponse>;
+     * Projected Fantasy Defense Season Stats (w/ ADP)
+     */
+    projectedFantasyDefenseSeasonStatsWAdp(req: operations.ProjectedFantasyDefenseSeasonStatsWAdpRequest, config?: AxiosRequestConfig): Promise<operations.ProjectedFantasyDefenseSeasonStatsWAdpResponse>;
     /**
-     * projectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalaries - Projected Player Game Stats by Player (w/ Injuries, Lineups, DFS Salaries)
-    **/
+     * Projected Player Game Stats by Player (w/ Injuries, Lineups, DFS Salaries)
+     */
     projectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalaries(req: operations.ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesRequest, config?: AxiosRequestConfig): Promise<operations.ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesResponse>;
     /**
-     * projectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalaries - Projected Player Game Stats by Team (w/ Injuries, Lineups, DFS Salaries)
-    **/
+     * Projected Player Game Stats by Team (w/ Injuries, Lineups, DFS Salaries)
+     */
     projectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalaries(req: operations.ProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesRequest, config?: AxiosRequestConfig): Promise<operations.ProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesResponse>;
     /**
-     * projectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalaries - Projected Player Game Stats by Week (w/ Injuries, Lineups, DFS Salaries)
-    **/
+     * Projected Player Game Stats by Week (w/ Injuries, Lineups, DFS Salaries)
+     */
     projectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalaries(req: operations.ProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesRequest, config?: AxiosRequestConfig): Promise<operations.ProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesResponse>;
     /**
-     * projectedPlayerSeasonStatsByPlayerWByeWeekAdp - Projected Player Season Stats by Player (w/ Bye Week, ADP)
-    **/
-    projectedPlayerSeasonStatsByPlayerWByeWeekAdp(req: operations.ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpRequest, config?: AxiosRequestConfig): Promise<operations.ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpResponse>;
+     * Projected Player Season Stats by Player (w/ ADP)
+     */
+    projectedPlayerSeasonStatsByPlayerWAdp(req: operations.ProjectedPlayerSeasonStatsByPlayerWAdpRequest, config?: AxiosRequestConfig): Promise<operations.ProjectedPlayerSeasonStatsByPlayerWAdpResponse>;
     /**
-     * projectedPlayerSeasonStatsByTeamWByeWeekAdp - Projected Player Season Stats by Team (w/ Bye Week, ADP)
-    **/
-    projectedPlayerSeasonStatsByTeamWByeWeekAdp(req: operations.ProjectedPlayerSeasonStatsByTeamWByeWeekAdpRequest, config?: AxiosRequestConfig): Promise<operations.ProjectedPlayerSeasonStatsByTeamWByeWeekAdpResponse>;
+     * Projected Player Season Stats by Team (w/ ADP)
+     */
+    projectedPlayerSeasonStatsByTeamWAdp(req: operations.ProjectedPlayerSeasonStatsByTeamWAdpRequest, config?: AxiosRequestConfig): Promise<operations.ProjectedPlayerSeasonStatsByTeamWAdpResponse>;
     /**
-     * projectedPlayerSeasonStatsWByeWeekAdp - Projected Player Season Stats (w/ Bye Week, ADP)
-    **/
-    projectedPlayerSeasonStatsWByeWeekAdp(req: operations.ProjectedPlayerSeasonStatsWByeWeekAdpRequest, config?: AxiosRequestConfig): Promise<operations.ProjectedPlayerSeasonStatsWByeWeekAdpResponse>;
+     * Projected Player Season Stats (w/ ADP)
+     */
+    projectedPlayerSeasonStatsWAdp(req: operations.ProjectedPlayerSeasonStatsWAdpRequest, config?: AxiosRequestConfig): Promise<operations.ProjectedPlayerSeasonStatsWAdpResponse>;
+    /**
+     * Upcoming DFS Slate Ownership Projections
+     *
+     * @remarks
+     * Grabs DFS Slates which have not yet started for which we have DFS Ownership projections.
+     */
+    upcomingDfsSlateOwnershipProjections(req: operations.UpcomingDfsSlateOwnershipProjectionsRequest, config?: AxiosRequestConfig): Promise<operations.UpcomingDfsSlateOwnershipProjectionsResponse>;
 }

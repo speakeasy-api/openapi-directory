@@ -1,21 +1,20 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { BatchReadFileRequest, BatchReadFileResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  shared.ImageUrl,
+  BatchReadFileResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    apimKey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: BatchReadFileRequest = {
-  request: {
-    url: "sit",
+    apimKey: "YOUR_API_KEY_HERE",
   },
+});
+
+const req: shared.ImageUrl = {
+  url: "corrupti",
 };
 
 sdk.batchReadFile(req).then((res: BatchReadFileResponse | AxiosError) => {

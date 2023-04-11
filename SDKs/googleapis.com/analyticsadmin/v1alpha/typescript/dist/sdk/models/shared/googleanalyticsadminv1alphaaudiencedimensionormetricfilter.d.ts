@@ -1,0 +1,38 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterBetweenFilter } from "./googleanalyticsadminv1alphaaudiencedimensionormetricfilterbetweenfilter";
+import { GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterInListFilter } from "./googleanalyticsadminv1alphaaudiencedimensionormetricfilterinlistfilter";
+import { GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterNumericFilter } from "./googleanalyticsadminv1alphaaudiencedimensionormetricfilternumericfilter";
+import { GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterStringFilter } from "./googleanalyticsadminv1alphaaudiencedimensionormetricfilterstringfilter";
+/**
+ * A specific filter for a single dimension or metric.
+ */
+export declare class GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilter extends SpeakeasyBase {
+    /**
+     * Optional. Indicates whether this filter needs dynamic evaluation or not. If set to true, users join the Audience if they ever met the condition (static evaluation). If unset or set to false, user evaluation for an Audience is dynamic; users are added to an Audience when they meet the conditions and then removed when they no longer meet them. This can only be set when Audience scope is ACROSS_ALL_SESSIONS.
+     */
+    atAnyPointInTime?: boolean;
+    /**
+     * A filter for numeric or date values between certain values on a dimension or metric.
+     */
+    betweenFilter?: GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterBetweenFilter;
+    /**
+     * Required. Immutable. The dimension name or metric name to filter.
+     */
+    fieldName?: string;
+    /**
+     * Optional. If set, specifies the time window for which to evaluate data in number of days. If not set, then audience data is evaluated against lifetime data (i.e., infinite time window). For example, if set to 1 day, only the current day's data is evaluated. The reference point is the current day when at_any_point_in_time is unset or false. It can only be set when Audience scope is ACROSS_ALL_SESSIONS and cannot be greater than 60 days.
+     */
+    inAnyNDayPeriod?: number;
+    /**
+     * A filter for a string dimension that matches a particular list of options.
+     */
+    inListFilter?: GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterInListFilter;
+    /**
+     * A filter for numeric or date values on a dimension or metric.
+     */
+    numericFilter?: GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterNumericFilter;
+    /**
+     * A filter for a string-type dimension that matches a particular pattern.
+     */
+    stringFilter?: GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterStringFilter;
+}

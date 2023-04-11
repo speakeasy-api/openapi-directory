@@ -1,38 +1,61 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class AppendChatMessageUsingGetQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class AppendChatMessageUsingGETRequest extends SpeakeasyBase {
     authorID?: string;
     padID?: string;
     text?: string;
     time?: string;
 }
-export declare class AppendChatMessageUsingGet200ApplicationJson extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class AppendChatMessageUsingGet500ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class AppendChatMessageUsingGet400ApplicationJson extends SpeakeasyBase {
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class AppendChatMessageUsingGet401ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class AppendChatMessageUsingGet401ApplicationJson extends SpeakeasyBase {
+/**
+ * generic api error (code 1)
+ */
+export declare class AppendChatMessageUsingGet400ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class AppendChatMessageUsingGet500ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class AppendChatMessageUsingGet200ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class AppendChatMessageUsingGetRequest extends SpeakeasyBase {
-    queryParams: AppendChatMessageUsingGetQueryParams;
-}
-export declare class AppendChatMessageUsingGetResponse extends SpeakeasyBase {
+export declare class AppendChatMessageUsingGETResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    appendChatMessageUsingGET200ApplicationJSONObject?: AppendChatMessageUsingGet200ApplicationJson;
-    appendChatMessageUsingGET400ApplicationJSONObject?: AppendChatMessageUsingGet400ApplicationJson;
-    appendChatMessageUsingGET401ApplicationJSONObject?: AppendChatMessageUsingGet401ApplicationJson;
-    appendChatMessageUsingGET500ApplicationJSONObject?: AppendChatMessageUsingGet500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    appendChatMessageUsingGET200ApplicationJSONObject?: AppendChatMessageUsingGet200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    appendChatMessageUsingGET400ApplicationJSONObject?: AppendChatMessageUsingGet400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    appendChatMessageUsingGET401ApplicationJSONObject?: AppendChatMessageUsingGet401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    appendChatMessageUsingGET500ApplicationJSONObject?: AppendChatMessageUsingGet500ApplicationJSON;
 }

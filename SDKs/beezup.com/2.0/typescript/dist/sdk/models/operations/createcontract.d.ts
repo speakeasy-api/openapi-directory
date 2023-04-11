@@ -1,11 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreateContractRequest extends SpeakeasyBase {
-    request: shared.OfferRequest;
-}
+import { AxiosResponse } from "axios";
 export declare class CreateContractResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     * Bad request. (Invalid billing period, invalid offer, etc.)
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * New contract has been created. Some warnings can be present in response.
+     */
     createContractResponse?: shared.CreateContractResponse;
 }

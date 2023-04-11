@@ -1,12 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetStripeGatewayDeveloperDeveloperIdAccountsPathParams extends SpeakeasyBase {
-    developerId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetStripeGatewayDeveloperDeveloperIdAccountsRequest extends SpeakeasyBase {
-    pathParams: GetStripeGatewayDeveloperDeveloperIdAccountsPathParams;
+    /**
+     * The id of the developer connecting their Stripe account
+     */
+    developerId: string;
 }
 export declare class GetStripeGatewayDeveloperDeveloperIdAccountsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

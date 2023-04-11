@@ -1,8 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UpdateSubscriptionDefinitionPathParams extends SpeakeasyBase {
-    subscriptionDefinitionId: string;
+import { AxiosResponse } from "axios";
+export declare class UpdateSubscriptionDefinitionRequestBody extends SpeakeasyBase {
+    /**
+     * The name of the definition.
+     */
+    name?: string;
 }
-export declare class UpdateSubscriptionDefinitionHeaders extends SpeakeasyBase {
+export declare class UpdateSubscriptionDefinitionRequest extends SpeakeasyBase {
+    requestBody: UpdateSubscriptionDefinitionRequestBody;
+    /**
+     * The ID of the subscription definition.
+     */
+    subscriptionDefinitionId: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,17 +20,16 @@ export declare class UpdateSubscriptionDefinitionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class UpdateSubscriptionDefinitionRequestBody extends SpeakeasyBase {
-    name?: string;
-}
-export declare class UpdateSubscriptionDefinitionRequest extends SpeakeasyBase {
-    pathParams: UpdateSubscriptionDefinitionPathParams;
-    headers: UpdateSubscriptionDefinitionHeaders;
-    request: UpdateSubscriptionDefinitionRequestBody;
-}
 export declare class UpdateSubscriptionDefinitionResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     updateSubscriptionDefinitionResponse?: Record<string, any>;
 }

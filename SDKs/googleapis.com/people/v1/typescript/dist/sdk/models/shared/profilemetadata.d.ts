@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Output only. The profile object type.
+ */
 export declare enum ProfileMetadataObjectTypeEnum {
     ObjectTypeUnspecified = "OBJECT_TYPE_UNSPECIFIED",
     Person = "PERSON",
@@ -12,8 +15,14 @@ export declare enum ProfileMetadataUserTypesEnum {
 }
 /**
  * The metadata about a profile.
-**/
+ */
 export declare class ProfileMetadata extends SpeakeasyBase {
+    /**
+     * Output only. The profile object type.
+     */
     objectType?: ProfileMetadataObjectTypeEnum;
+    /**
+     * Output only. The user types.
+     */
     userTypes?: ProfileMetadataUserTypesEnum[];
 }

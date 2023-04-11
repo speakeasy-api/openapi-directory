@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum ListSizeConstraintSetsXAmzTargetEnum {
-    Awswaf20150824ListSizeConstraintSets = "AWSWAF_20150824.ListSizeConstraintSets"
+    AWSWAF20150824ListSizeConstraintSets = "AWSWAF_20150824.ListSizeConstraintSets"
 }
-export declare class ListSizeConstraintSetsHeaders extends SpeakeasyBase {
+export declare class ListSizeConstraintSetsRequest extends SpeakeasyBase {
+    listSizeConstraintSetsRequest: shared.ListSizeConstraintSetsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class ListSizeConstraintSetsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListSizeConstraintSetsXAmzTargetEnum;
 }
-export declare class ListSizeConstraintSetsRequest extends SpeakeasyBase {
-    headers: ListSizeConstraintSetsHeaders;
-    request: shared.ListSizeConstraintSetsRequest;
-}
 export declare class ListSizeConstraintSetsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     listSizeConstraintSetsResponse?: shared.ListSizeConstraintSetsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFInvalidAccountException
+     */
     wafInvalidAccountException?: any;
 }

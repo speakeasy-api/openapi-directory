@@ -1,66 +1,59 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DatalabelingProjectsAnnotationSpecSetsCreateRequest, DatalabelingProjectsAnnotationSpecSetsCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  DatalabelingProjectsAnnotationSpecSetsCreateRequest,
+  DatalabelingProjectsAnnotationSpecSetsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: DatalabelingProjectsAnnotationSpecSetsCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  googleCloudDatalabelingV1beta1CreateAnnotationSpecSetRequest: {
     annotationSpecSet: {
       annotationSpecs: [
         {
-          description: "debitis",
-          displayName: "voluptatum",
-          index: 2339563716805116249,
+          description: "distinctio",
+          displayName: "quibusdam",
+          index: 602763,
         },
         {
-          description: "ut",
-          displayName: "dolorem",
-          index: 7259475919510918339,
+          description: "nulla",
+          displayName: "corrupti",
+          index: 847252,
         },
         {
-          description: "voluptate",
-          displayName: "iste",
-          index: 3930927879439176946,
+          description: "vel",
+          displayName: "error",
+          index: 645894,
         },
       ],
       blockingResources: [
-        "dolores",
-        "illum",
-        "debitis",
+        "iure",
+        "magnam",
       ],
-      description: "vel",
-      displayName: "odio",
-      name: "dolore",
+      description: "debitis",
+      displayName: "ipsa",
+      name: "delectus",
     },
   },
+  accessToken: "tempora",
+  alt: AltEnum.Media,
+  callback: "molestiae",
+  fields: "minus",
+  key: "placeat",
+  oauthToken: "voluptatum",
+  parent: "iusto",
+  prettyPrint: false,
+  quotaUser: "excepturi",
+  uploadType: "nisi",
+  uploadProtocol: "recusandae",
 };
 
 sdk.projects.datalabelingProjectsAnnotationSpecSetsCreate(req).then((res: DatalabelingProjectsAnnotationSpecSetsCreateResponse | AxiosError) => {

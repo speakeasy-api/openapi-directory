@@ -1,0 +1,38 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Container for charge model configuration data.
+ *
+ * @remarks
+ *
+ * **Note**: This field is only available if you have the High Water Mark, Pre-Rated Pricing, or Multi-Attribute Pricing charge models enabled. These charge models are available for customers with Enterprise and Nine editions by default. If you are a Growth customer, see [Zuora Editions](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/C_Zuora_Editions) for pricing information.
+ *
+ */
+export declare class ChargeModelConfigurationType extends SpeakeasyBase {
+    /**
+     * The custom field that carries the per-unit rate for each usage record. For example, `perUnitAmount__c`.
+     *
+     * @remarks
+     *
+     * This field is only available for the usage-based charges that use the Pre-Rated Per Unit Pricing charge model. The charge model is available for customers with Enterprise and Nine editions by default. If you are a Growth customer, see [Zuora Editions](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/C_Zuora_Editions) for pricing information.
+     *
+     */
+    customFieldPerUnitRate?: string;
+    /**
+     * The custom field that carries the total amount to charge for a usage record. For example, `totalAmount__c`.
+     *
+     * @remarks
+     *
+     * This field is only available for the usage-based charges that use the Pre-Rated Pricing charge model. The charge model is available for customers with Enterprise and Nine editions by default. If you are a Growth customer, see [Zuora Editions](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/C_Zuora_Editions) for pricing information.
+     *
+     */
+    customFieldTotalAmount?: string;
+    /**
+     * The pricing formula to calculate actual rating amount for each usage record.
+     *
+     * @remarks
+     *
+     * This field is only available for the usage-based charges that use the Multi-Attribute Pricing charge model. The charge model is available for customers with Enterprise and Nine editions by default. If you are a Growth customer, see [Zuora Editions](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/C_Zuora_Editions) for pricing information.
+     *
+     */
+    formula?: string;
+}

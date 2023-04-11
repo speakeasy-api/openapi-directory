@@ -1,18 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetCreateDbParameterGroupActionEnum {
-    CreateDbParameterGroup = "CreateDBParameterGroup"
+import { AxiosResponse } from "axios";
+export declare enum GETCreateDBParameterGroupActionEnum {
+    CreateDBParameterGroup = "CreateDBParameterGroup"
 }
-export declare enum GetCreateDbParameterGroupVersionEnum {
+export declare enum GETCreateDBParameterGroupVersionEnum {
     TwoThousandAndThirteen0212 = "2013-02-12"
 }
-export declare class GetCreateDbParameterGroupQueryParams extends SpeakeasyBase {
-    action: GetCreateDbParameterGroupActionEnum;
+export declare class GETCreateDBParameterGroupRequest extends SpeakeasyBase {
+    action: GETCreateDBParameterGroupActionEnum;
     dbParameterGroupFamily: string;
     dbParameterGroupName: string;
     description: string;
-    version: GetCreateDbParameterGroupVersionEnum;
-}
-export declare class GetCreateDbParameterGroupHeaders extends SpeakeasyBase {
+    version: GETCreateDBParameterGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +20,9 @@ export declare class GetCreateDbParameterGroupHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetCreateDbParameterGroupRequest extends SpeakeasyBase {
-    queryParams: GetCreateDbParameterGroupQueryParams;
-    headers: GetCreateDbParameterGroupHeaders;
-}
-export declare class GetCreateDbParameterGroupResponse extends SpeakeasyBase {
+export declare class GETCreateDBParameterGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

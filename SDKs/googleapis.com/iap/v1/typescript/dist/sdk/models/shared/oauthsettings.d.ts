@@ -1,7 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Configuration for OAuth login&consent flow behavior as well as for OAuth Credentials.
-**/
+ */
 export declare class OAuthSettings extends SpeakeasyBase {
+    /**
+     * Domain hint to send as hd=? parameter in OAuth request flow. Enables redirect to primary IDP by skipping Google's login screen. https://developers.google.com/identity/protocols/OpenIDConnect#hd-param Note: IAP does not verify that the id token's hd claim matches this value since access behavior is managed by IAM policies.
+     */
     loginHint?: string;
 }

@@ -1,39 +1,70 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AnalyticsManagementCustomMetricsListPathParams extends SpeakeasyBase {
-    accountId: string;
-    webPropertyId: string;
-}
-export declare class AnalyticsManagementCustomMetricsListQueryParams extends SpeakeasyBase {
-    alt?: shared.AltEnum;
-    fields?: string;
-    key?: string;
-    maxResults?: number;
-    oauthToken?: string;
-    prettyPrint?: boolean;
-    quotaUser?: string;
-    startIndex?: number;
-    userIp?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class AnalyticsManagementCustomMetricsListSecurityOption1 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class AnalyticsManagementCustomMetricsListSecurityOption2 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class AnalyticsManagementCustomMetricsListSecurity extends SpeakeasyBase {
     option1?: AnalyticsManagementCustomMetricsListSecurityOption1;
     option2?: AnalyticsManagementCustomMetricsListSecurityOption2;
 }
 export declare class AnalyticsManagementCustomMetricsListRequest extends SpeakeasyBase {
-    pathParams: AnalyticsManagementCustomMetricsListPathParams;
-    queryParams: AnalyticsManagementCustomMetricsListQueryParams;
-    security: AnalyticsManagementCustomMetricsListSecurity;
+    /**
+     * Account ID for the custom metrics to retrieve.
+     */
+    accountId: string;
+    /**
+     * Data format for the response.
+     */
+    alt?: shared.AltEnum;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * The maximum number of custom metrics to include in this response.
+     */
+    maxResults?: number;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauthToken?: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * An index of the first entity to retrieve. Use this parameter as a pagination mechanism along with the max-results parameter.
+     */
+    startIndex?: number;
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    userIp?: string;
+    /**
+     * Web property ID for the custom metrics to retrieve.
+     */
+    webPropertyId: string;
 }
 export declare class AnalyticsManagementCustomMetricsListResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful response
+     */
     customMetrics?: shared.CustomMetrics;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

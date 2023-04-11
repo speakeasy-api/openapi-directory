@@ -1,11 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { AddressFamilyEnum } from "./addressfamilyenum";
-import { BgpPeerStateEnum } from "./bgppeerstateenum";
-import { BgpStatusEnum } from "./bgpstatusenum";
+import { BGPPeerStateEnum } from "./bgppeerstateenum";
+import { BGPStatusEnum } from "./bgpstatusenum";
 /**
  * Information about a BGP peer.
-**/
-export declare class BgpPeer extends SpeakeasyBase {
+ */
+export declare class BGPPeer extends SpeakeasyBase {
     addressFamily?: AddressFamilyEnum;
     amazonAddress?: string;
     asn?: number;
@@ -13,7 +13,7 @@ export declare class BgpPeer extends SpeakeasyBase {
     awsDeviceV2?: string;
     awsLogicalDeviceId?: string;
     bgpPeerId?: string;
-    bgpPeerState?: BgpPeerStateEnum;
-    bgpStatus?: BgpStatusEnum;
+    bgpPeerState?: BGPPeerStateEnum;
+    bgpStatus?: BGPStatusEnum;
     customerAddress?: string;
 }

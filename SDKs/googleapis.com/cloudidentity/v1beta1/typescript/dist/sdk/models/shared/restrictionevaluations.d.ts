@@ -1,0 +1,11 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { MembershipRoleRestrictionEvaluation } from "./membershiprolerestrictionevaluation";
+/**
+ * Evaluations of restrictions applied to parent group on this membership.
+ */
+export declare class RestrictionEvaluations extends SpeakeasyBase {
+    /**
+     * The evaluated state of this restriction.
+     */
+    memberRestrictionEvaluation?: MembershipRoleRestrictionEvaluation;
+}

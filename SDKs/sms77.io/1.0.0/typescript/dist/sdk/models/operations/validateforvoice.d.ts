@@ -1,18 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ValidateForVoiceQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ValidateForVoiceRequest extends SpeakeasyBase {
+    /**
+     * The callback URL which gets queried right after validation.
+     */
     callback?: string;
+    /**
+     * Determines the recipient. Can only be a number, not a contact from your address book.
+     */
     number: string;
 }
-export declare class ValidateForVoice200ApplicationJson extends SpeakeasyBase {
+/**
+ * OK
+ */
+export declare class ValidateForVoice200ApplicationJSON extends SpeakeasyBase {
     code?: string;
     error?: string;
     success?: boolean;
 }
-export declare class ValidateForVoiceRequest extends SpeakeasyBase {
-    queryParams: ValidateForVoiceQueryParams;
-}
 export declare class ValidateForVoiceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    validateForVoice200ApplicationJSONObject?: ValidateForVoice200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
+    validateForVoice200ApplicationJSONObject?: ValidateForVoice200ApplicationJSON;
 }

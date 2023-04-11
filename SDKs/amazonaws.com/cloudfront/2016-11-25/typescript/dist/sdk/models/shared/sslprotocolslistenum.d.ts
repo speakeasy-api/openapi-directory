@@ -1,0 +1,6 @@
+export declare enum SslProtocolsListEnum {
+    SSLv3 = "SSLv3",
+    TLSv1 = "TLSv1",
+    TLSv11 = "TLSv1.1",
+    TLSv12 = "TLSv1.2"
+}

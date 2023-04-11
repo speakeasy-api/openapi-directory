@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostPauseClusterActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTPauseClusterActionEnum {
     PauseCluster = "PauseCluster"
 }
-export declare enum PostPauseClusterVersionEnum {
+export declare enum POSTPauseClusterVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostPauseClusterQueryParams extends SpeakeasyBase {
-    action: PostPauseClusterActionEnum;
-    version: PostPauseClusterVersionEnum;
-}
-export declare class PostPauseClusterHeaders extends SpeakeasyBase {
+export declare class POSTPauseClusterRequest extends SpeakeasyBase {
+    action: POSTPauseClusterActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTPauseClusterVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostPauseClusterHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostPauseClusterRequest extends SpeakeasyBase {
-    queryParams: PostPauseClusterQueryParams;
-    headers: PostPauseClusterHeaders;
-    request?: Uint8Array;
-}
-export declare class PostPauseClusterResponse extends SpeakeasyBase {
+export declare class POSTPauseClusterResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

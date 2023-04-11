@@ -1,36 +1,35 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetAddSourceIdentifierToSubscriptionRequest, GetAddSourceIdentifierToSubscriptionResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GETAddSourceIdentifierToSubscriptionRequest,
+  GETAddSourceIdentifierToSubscriptionResponse,
+  GETAddSourceIdentifierToSubscriptionActionEnum,
+  GETAddSourceIdentifierToSubscriptionVersionEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: GetAddSourceIdentifierToSubscriptionRequest = {
-  queryParams: {
-    action: "AddSourceIdentifierToSubscription",
-    sourceIdentifier: "voluptas",
-    subscriptionName: "culpa",
-    version: "2013-02-12",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  headers: {
-    xAmzAlgorithm: "consequuntur",
-    xAmzContentSha256: "dolor",
-    xAmzCredential: "expedita",
-    xAmzDate: "voluptas",
-    xAmzSecurityToken: "fugit",
-    xAmzSignature: "et",
-    xAmzSignedHeaders: "nihil",
-  },
+});
+
+const req: GETAddSourceIdentifierToSubscriptionRequest = {
+  action: GETAddSourceIdentifierToSubscriptionActionEnum.AddSourceIdentifierToSubscription,
+  sourceIdentifier: "corrupti",
+  subscriptionName: "provident",
+  version: GETAddSourceIdentifierToSubscriptionVersionEnum.TwoThousandAndThirteen0212,
+  xAmzAlgorithm: "distinctio",
+  xAmzContentSha256: "quibusdam",
+  xAmzCredential: "unde",
+  xAmzDate: "nulla",
+  xAmzSecurityToken: "corrupti",
+  xAmzSignature: "illum",
+  xAmzSignedHeaders: "vel",
 };
 
-sdk.getAddSourceIdentifierToSubscription(req).then((res: GetAddSourceIdentifierToSubscriptionResponse | AxiosError) => {
+sdk.getAddSourceIdentifierToSubscription(req).then((res: GETAddSourceIdentifierToSubscriptionResponse | AxiosError) => {
    // handle response
 });
 ```

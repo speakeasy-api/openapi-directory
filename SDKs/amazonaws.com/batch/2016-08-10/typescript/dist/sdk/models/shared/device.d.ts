@@ -1,8 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { DeviceCgroupPermissionEnum } from "./devicecgrouppermissionenum";
 /**
- * <p>An object representing a container instance host device.</p> <note> <p>This object isn't applicable to jobs that are running on Fargate resources and shouldn't be provided.</p> </note>
-**/
+ * <p>An object that represents a container instance host device.</p> <note> <p>This object isn't applicable to jobs that are running on Fargate resources and shouldn't be provided.</p> </note>
+ */
 export declare class Device extends SpeakeasyBase {
     containerPath?: string;
     hostPath: string;

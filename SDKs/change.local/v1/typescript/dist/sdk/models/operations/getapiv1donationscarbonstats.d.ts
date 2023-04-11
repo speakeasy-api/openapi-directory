@@ -1,16 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetApiV1DonationsCarbonStatsQueryParams extends SpeakeasyBase {
-    id?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetApiV1DonationsCarbonStatsSecurity extends SpeakeasyBase {
-    basicAuth: shared.SchemeBasicAuth;
+    password: string;
+    username: string;
 }
 export declare class GetApiV1DonationsCarbonStatsRequest extends SpeakeasyBase {
-    queryParams: GetApiV1DonationsCarbonStatsQueryParams;
-    security: GetApiV1DonationsCarbonStatsSecurity;
+    /**
+     * The id of a donation to the CarbonFund nonprofit. Ids are returned when a donation is created. If an ID is not provided, the total stats for all donations to CarbonFund are returned.
+     */
+    id?: number;
 }
 export declare class GetApiV1DonationsCarbonStatsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

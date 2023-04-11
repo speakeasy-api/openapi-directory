@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteUserDefinedFunctionXAmzTargetEnum {
-    AwsGlueDeleteUserDefinedFunction = "AWSGlue.DeleteUserDefinedFunction"
+    AWSGlueDeleteUserDefinedFunction = "AWSGlue.DeleteUserDefinedFunction"
 }
-export declare class DeleteUserDefinedFunctionHeaders extends SpeakeasyBase {
+export declare class DeleteUserDefinedFunctionRequest extends SpeakeasyBase {
+    deleteUserDefinedFunctionRequest: shared.DeleteUserDefinedFunctionRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class DeleteUserDefinedFunctionHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteUserDefinedFunctionXAmzTargetEnum;
 }
-export declare class DeleteUserDefinedFunctionRequest extends SpeakeasyBase {
-    headers: DeleteUserDefinedFunctionHeaders;
-    request: shared.DeleteUserDefinedFunctionRequest;
-}
 export declare class DeleteUserDefinedFunctionResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deleteUserDefinedFunctionResponse?: Record<string, any>;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

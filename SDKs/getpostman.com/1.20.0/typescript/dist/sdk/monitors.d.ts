@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Monitors {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,18 +9,20 @@ export declare class Monitors {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * allMonitors - All Monitors
+     * All Monitors
      *
+     * @remarks
      * The `/monitors` endpoint returns a list of all [monitors](https://monitor.getpostman.com/) that are accessible by you.
      *
      * The response contains an array of monitors information containing the `name`, `id`, `owner` and `uid` of each monitor.
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
+     */
     allMonitors(config?: AxiosRequestConfig): Promise<operations.AllMonitorsResponse>;
     /**
-     * createMonitor - Create Monitor
+     * Create Monitor
      *
+     * @remarks
      * This endpoint allows you to create a monitor.
      *
      * Some sample `cron` values are:
@@ -43,35 +45,39 @@ export declare class Monitors {
      *
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
-    createMonitor(req: operations.CreateMonitorRequest, config?: AxiosRequestConfig): Promise<operations.CreateMonitorResponse>;
+     */
+    createMonitor(req: operations.CreateMonitorRequestBody, config?: AxiosRequestConfig): Promise<operations.CreateMonitorResponse>;
     /**
-     * deleteMonitor - Delete Monitor
+     * Delete Monitor
      *
+     * @remarks
      * This endpoint can be used to delete an existing monitor using its `uid`.
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
+     */
     deleteMonitor(req: operations.DeleteMonitorRequest, config?: AxiosRequestConfig): Promise<operations.DeleteMonitorResponse>;
     /**
-     * runAMonitor - Run a Monitor
+     * Run a Monitor
      *
+     * @remarks
      * This endpoint will run the monitor instantly and wait for the monitor to run completely. It responds with the run results.
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
+     */
     runAMonitor(req: operations.RunAMonitorRequest, config?: AxiosRequestConfig): Promise<operations.RunAMonitorResponse>;
     /**
-     * singleMonitor - Single Monitor
+     * Single Monitor
      *
+     * @remarks
      * This endpoint fetches you basic information about the monitor using its `uid`.
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
+     */
     singleMonitor(req: operations.SingleMonitorRequest, config?: AxiosRequestConfig): Promise<operations.SingleMonitorResponse>;
     /**
-     * updateMonitor - Update Monitor
+     * Update Monitor
      *
+     * @remarks
      * This endpoint allows you to update a monitor using its `uid`. Only the monitor name and its schedule can be updated.
      *
      * Some example `cron` values are:
@@ -91,6 +97,6 @@ export declare class Monitors {
      * For more information about the format of the `timezone` value, check this [list of time zones.](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
+     */
     updateMonitor(req: operations.UpdateMonitorRequest, config?: AxiosRequestConfig): Promise<operations.UpdateMonitorResponse>;
 }

@@ -1,0 +1,17 @@
+export declare enum AutoMLMetricExtendedEnumEnum {
+    Accuracy = "Accuracy",
+    Mse = "MSE",
+    F1 = "F1",
+    F1macro = "F1macro",
+    Auc = "AUC",
+    Rmse = "RMSE",
+    Mae = "MAE",
+    R2 = "R2",
+    BalancedAccuracy = "BalancedAccuracy",
+    Precision = "Precision",
+    PrecisionMacro = "PrecisionMacro",
+    Recall = "Recall",
+    RecallMacro = "RecallMacro",
+    LogLoss = "LogLoss",
+    InferenceLatency = "InferenceLatency"
+}

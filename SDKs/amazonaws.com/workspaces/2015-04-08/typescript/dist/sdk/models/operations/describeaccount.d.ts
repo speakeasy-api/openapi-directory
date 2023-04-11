@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeAccountXAmzTargetEnum {
     WorkspacesServiceDescribeAccount = "WorkspacesService.DescribeAccount"
 }
-export declare class DescribeAccountHeaders extends SpeakeasyBase {
+export declare class DescribeAccountRequest extends SpeakeasyBase {
+    requestBody: Record<string, any>;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,13 +15,16 @@ export declare class DescribeAccountHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeAccountXAmzTargetEnum;
 }
-export declare class DescribeAccountRequest extends SpeakeasyBase {
-    headers: DescribeAccountHeaders;
-    request: Record<string, any>;
-}
 export declare class DescribeAccountResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     describeAccountResult?: shared.DescribeAccountResult;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

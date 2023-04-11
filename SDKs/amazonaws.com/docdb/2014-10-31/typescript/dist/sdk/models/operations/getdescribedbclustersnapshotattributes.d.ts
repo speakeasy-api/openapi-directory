@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeDbClusterSnapshotAttributesActionEnum {
-    DescribeDbClusterSnapshotAttributes = "DescribeDBClusterSnapshotAttributes"
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeDBClusterSnapshotAttributesActionEnum {
+    DescribeDBClusterSnapshotAttributes = "DescribeDBClusterSnapshotAttributes"
 }
-export declare enum GetDescribeDbClusterSnapshotAttributesVersionEnum {
+export declare enum GETDescribeDBClusterSnapshotAttributesVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class GetDescribeDbClusterSnapshotAttributesQueryParams extends SpeakeasyBase {
-    action: GetDescribeDbClusterSnapshotAttributesActionEnum;
+export declare class GETDescribeDBClusterSnapshotAttributesRequest extends SpeakeasyBase {
+    action: GETDescribeDBClusterSnapshotAttributesActionEnum;
+    /**
+     * The identifier for the cluster snapshot to describe the attributes for.
+     */
     dbClusterSnapshotIdentifier: string;
-    version: GetDescribeDbClusterSnapshotAttributesVersionEnum;
-}
-export declare class GetDescribeDbClusterSnapshotAttributesHeaders extends SpeakeasyBase {
+    version: GETDescribeDBClusterSnapshotAttributesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDescribeDbClusterSnapshotAttributesHeaders extends Speak
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeDbClusterSnapshotAttributesRequest extends SpeakeasyBase {
-    queryParams: GetDescribeDbClusterSnapshotAttributesQueryParams;
-    headers: GetDescribeDbClusterSnapshotAttributesHeaders;
-}
-export declare class GetDescribeDbClusterSnapshotAttributesResponse extends SpeakeasyBase {
+export declare class GETDescribeDBClusterSnapshotAttributesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostGetSshPublicKeyActionEnum {
-    GetSshPublicKey = "GetSSHPublicKey"
+import { AxiosResponse } from "axios";
+export declare enum POSTGetSSHPublicKeyActionEnum {
+    GetSSHPublicKey = "GetSSHPublicKey"
 }
-export declare enum PostGetSshPublicKeyVersionEnum {
+export declare enum POSTGetSSHPublicKeyVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostGetSshPublicKeyQueryParams extends SpeakeasyBase {
-    action: PostGetSshPublicKeyActionEnum;
-    version: PostGetSshPublicKeyVersionEnum;
-}
-export declare class PostGetSshPublicKeyHeaders extends SpeakeasyBase {
+export declare class POSTGetSSHPublicKeyRequest extends SpeakeasyBase {
+    action: POSTGetSSHPublicKeyActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTGetSSHPublicKeyVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostGetSshPublicKeyHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostGetSshPublicKeyRequest extends SpeakeasyBase {
-    queryParams: PostGetSshPublicKeyQueryParams;
-    headers: PostGetSshPublicKeyHeaders;
-    request?: Uint8Array;
-}
-export declare class PostGetSshPublicKeyResponse extends SpeakeasyBase {
+export declare class POSTGetSSHPublicKeyResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

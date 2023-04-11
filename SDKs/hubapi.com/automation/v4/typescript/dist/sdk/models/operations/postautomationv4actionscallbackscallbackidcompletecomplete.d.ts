@@ -1,20 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PostAutomationV4ActionsCallbacksCallbackIdCompleteCompletePathParams extends SpeakeasyBase {
-    callbackId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PostAutomationV4ActionsCallbacksCallbackIdCompleteCompleteSecurity extends SpeakeasyBase {
-    oauth2Legacy?: shared.SchemeOauth2Legacy;
-    hapikey?: shared.SchemeHapikey;
-    privateAppsLegacy?: shared.SchemePrivateAppsLegacy;
+    hapikey?: string;
+    oauth2Legacy?: string;
+    privateAppsLegacy?: string;
 }
 export declare class PostAutomationV4ActionsCallbacksCallbackIdCompleteCompleteRequest extends SpeakeasyBase {
-    pathParams: PostAutomationV4ActionsCallbacksCallbackIdCompleteCompletePathParams;
-    request: shared.CallbackCompletionRequest;
-    security: PostAutomationV4ActionsCallbacksCallbackIdCompleteCompleteSecurity;
+    /**
+     * The result of the completed action.
+     */
+    callbackCompletionRequest: shared.CallbackCompletionRequest;
+    /**
+     * The ID of the target app.
+     */
+    callbackId: string;
 }
 export declare class PostAutomationV4ActionsCallbacksCallbackIdCompleteCompleteResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

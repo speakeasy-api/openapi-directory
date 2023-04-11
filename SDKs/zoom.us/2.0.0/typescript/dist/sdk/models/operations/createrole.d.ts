@@ -1,37 +1,67 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class CreateRoleApplicationJson extends SpeakeasyBase {
-    description?: string;
-    name?: string;
-    privileges?: string[];
-}
-export declare class CreateRoleMultipartFormData extends SpeakeasyBase {
-    description?: string;
-    name?: string;
-    privileges?: string[];
-}
-export declare class CreateRoleRequests extends SpeakeasyBase {
-    object?: CreateRoleApplicationJson;
-    object1?: CreateRoleMultipartFormData;
-}
+import { AxiosResponse } from "axios";
 export declare class CreateRoleSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
+    oAuth: string;
 }
-export declare class CreateRole201ApplicationJson extends SpeakeasyBase {
+export declare class CreateRoleApplicationJSON extends SpeakeasyBase {
+    /**
+     * Description of the role.
+     */
     description?: string;
-    id?: string;
+    /**
+     * Name of the role.
+     */
     name?: string;
+    /**
+     * Privileges assigned to the role. Can be one or a combination of [these permissions](https://marketplace.zoom.us/docs/api-reference/other-references/privileges).
+     */
     privileges?: string[];
-    totalMembers?: number;
 }
-export declare class CreateRoleRequest extends SpeakeasyBase {
-    request?: CreateRoleRequests;
-    security: CreateRoleSecurity;
+/**
+ * **Status Code:** `201`<br>
+ *
+ * @remarks
+ * Role created.
+ */
+export declare class CreateRole201ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Description of the role.
+     */
+    description?: string;
+    /**
+     * Role Id
+     */
+    id?: string;
+    /**
+     * Name of the role.
+     */
+    name?: string;
+    /**
+     * [Privileges](https://marketplace.zoom.us/docs/api-reference/other-references/privileges) provided to the role.
+     */
+    privileges?: string[];
+    /**
+     * Total members assigned to the role.
+     */
+    totalMembers?: number;
 }
 export declare class CreateRoleResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * **Status Code:** `200`<br>
+     *
+     * @remarks
+     * You do not have the permission to create a role.
+     */
     createRole200ApplicationJSONAny?: any;
-    createRole201ApplicationJSONObject?: CreateRole201ApplicationJson;
+    /**
+     * **Status Code:** `201`<br>
+     *
+     * @remarks
+     * Role created.
+     */
+    createRole201ApplicationJSONObject?: CreateRole201ApplicationJSON;
 }

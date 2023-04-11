@@ -1,36 +1,32 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { ChangeServerLifeCycleStateRequest, ChangeServerLifeCycleStateResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  ArchiveApplicationRequest,
+  ArchiveApplicationResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: ChangeServerLifeCycleStateRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
-    lifeCycle: {
-      state: "CUTOVER",
-    },
-    sourceServerID: "fugit",
+});
+
+const req: ArchiveApplicationRequest = {
+  requestBody: {
+    applicationID: "corrupti",
   },
+  xAmzAlgorithm: "provident",
+  xAmzContentSha256: "distinctio",
+  xAmzCredential: "quibusdam",
+  xAmzDate: "unde",
+  xAmzSecurityToken: "nulla",
+  xAmzSignature: "corrupti",
+  xAmzSignedHeaders: "illum",
 };
 
-sdk.changeServerLifeCycleState(req).then((res: ChangeServerLifeCycleStateResponse | AxiosError) => {
+sdk.archiveApplication(req).then((res: ArchiveApplicationResponse | AxiosError) => {
    // handle response
 });
 ```

@@ -1,24 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDefineRankExpressionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDefineRankExpressionActionEnum {
     DefineRankExpression = "DefineRankExpression"
 }
 /**
  * A named expression that can be evaluated at search time and used for ranking or thresholding in a search query.
-**/
-export declare class GetDefineRankExpressionRankExpression extends SpeakeasyBase {
+ */
+export declare class GETDefineRankExpressionRankExpression extends SpeakeasyBase {
     rankExpression: string;
     rankName: string;
 }
-export declare enum GetDefineRankExpressionVersionEnum {
+export declare enum GETDefineRankExpressionVersionEnum {
     TwoThousandAndEleven0201 = "2011-02-01"
 }
-export declare class GetDefineRankExpressionQueryParams extends SpeakeasyBase {
-    action: GetDefineRankExpressionActionEnum;
+export declare class GETDefineRankExpressionRequest extends SpeakeasyBase {
+    action: GETDefineRankExpressionActionEnum;
     domainName: string;
-    rankExpression: GetDefineRankExpressionRankExpression;
-    version: GetDefineRankExpressionVersionEnum;
-}
-export declare class GetDefineRankExpressionHeaders extends SpeakeasyBase {
+    /**
+     * A named expression that can be evaluated at search time and used for ranking or thresholding in a search query.
+     */
+    rankExpression: GETDefineRankExpressionRankExpression;
+    version: GETDefineRankExpressionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -27,12 +29,9 @@ export declare class GetDefineRankExpressionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDefineRankExpressionRequest extends SpeakeasyBase {
-    queryParams: GetDefineRankExpressionQueryParams;
-    headers: GetDefineRankExpressionHeaders;
-}
-export declare class GetDefineRankExpressionResponse extends SpeakeasyBase {
+export declare class GETDefineRankExpressionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

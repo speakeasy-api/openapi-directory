@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostModifyDbProxyEndpointActionEnum {
-    ModifyDbProxyEndpoint = "ModifyDBProxyEndpoint"
+import { AxiosResponse } from "axios";
+export declare enum POSTModifyDBProxyEndpointActionEnum {
+    ModifyDBProxyEndpoint = "ModifyDBProxyEndpoint"
 }
-export declare enum PostModifyDbProxyEndpointVersionEnum {
+export declare enum POSTModifyDBProxyEndpointVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class PostModifyDbProxyEndpointQueryParams extends SpeakeasyBase {
-    action: PostModifyDbProxyEndpointActionEnum;
-    version: PostModifyDbProxyEndpointVersionEnum;
-}
-export declare class PostModifyDbProxyEndpointHeaders extends SpeakeasyBase {
+export declare class POSTModifyDBProxyEndpointRequest extends SpeakeasyBase {
+    action: POSTModifyDBProxyEndpointActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTModifyDBProxyEndpointVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostModifyDbProxyEndpointHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostModifyDbProxyEndpointRequest extends SpeakeasyBase {
-    queryParams: PostModifyDbProxyEndpointQueryParams;
-    headers: PostModifyDbProxyEndpointHeaders;
-    request?: Uint8Array;
-}
-export declare class PostModifyDbProxyEndpointResponse extends SpeakeasyBase {
+export declare class POSTModifyDBProxyEndpointResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

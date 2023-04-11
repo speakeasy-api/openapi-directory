@@ -1,0 +1,47 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { GoogleCloudDialogflowV2AgentAssistantFeedbackSummarizationFeedback } from "./googleclouddialogflowv2agentassistantfeedbacksummarizationfeedback";
+/**
+ * Optional. Whether or not the suggested answer is relevant. For example: * Query: "Can I change my mailing address?" * Suggested document says: "Items must be returned/exchanged within 60 days of the purchase date." * answer_relevance: AnswerRelevance.IRRELEVANT
+ */
+export declare enum GoogleCloudDialogflowV2AgentAssistantFeedbackAnswerRelevanceEnum {
+    AnswerRelevanceUnspecified = "ANSWER_RELEVANCE_UNSPECIFIED",
+    Irrelevant = "IRRELEVANT",
+    Relevant = "RELEVANT"
+}
+/**
+ * Optional. Whether or not the information in the document is correct. For example: * Query: "Can I return the package in 2 days once received?" * Suggested document says: "Items must be returned/exchanged within 60 days of the purchase date." * Ground truth: "No return or exchange is allowed." * [document_correctness]: INCORRECT
+ */
+export declare enum GoogleCloudDialogflowV2AgentAssistantFeedbackDocumentCorrectnessEnum {
+    DocumentCorrectnessUnspecified = "DOCUMENT_CORRECTNESS_UNSPECIFIED",
+    Incorrect = "INCORRECT",
+    Correct = "CORRECT"
+}
+/**
+ * Optional. Whether or not the suggested document is efficient. For example, if the document is poorly written, hard to understand, hard to use or too long to find useful information, document_efficiency is DocumentEfficiency.INEFFICIENT.
+ */
+export declare enum GoogleCloudDialogflowV2AgentAssistantFeedbackDocumentEfficiencyEnum {
+    DocumentEfficiencyUnspecified = "DOCUMENT_EFFICIENCY_UNSPECIFIED",
+    Inefficient = "INEFFICIENT",
+    Efficient = "EFFICIENT"
+}
+/**
+ * Detail feedback of Agent Assist result.
+ */
+export declare class GoogleCloudDialogflowV2AgentAssistantFeedback extends SpeakeasyBase {
+    /**
+     * Optional. Whether or not the suggested answer is relevant. For example: * Query: "Can I change my mailing address?" * Suggested document says: "Items must be returned/exchanged within 60 days of the purchase date." * answer_relevance: AnswerRelevance.IRRELEVANT
+     */
+    answerRelevance?: GoogleCloudDialogflowV2AgentAssistantFeedbackAnswerRelevanceEnum;
+    /**
+     * Optional. Whether or not the information in the document is correct. For example: * Query: "Can I return the package in 2 days once received?" * Suggested document says: "Items must be returned/exchanged within 60 days of the purchase date." * Ground truth: "No return or exchange is allowed." * [document_correctness]: INCORRECT
+     */
+    documentCorrectness?: GoogleCloudDialogflowV2AgentAssistantFeedbackDocumentCorrectnessEnum;
+    /**
+     * Optional. Whether or not the suggested document is efficient. For example, if the document is poorly written, hard to understand, hard to use or too long to find useful information, document_efficiency is DocumentEfficiency.INEFFICIENT.
+     */
+    documentEfficiency?: GoogleCloudDialogflowV2AgentAssistantFeedbackDocumentEfficiencyEnum;
+    /**
+     * Feedback for conversation summarization.
+     */
+    summarizationFeedback?: GoogleCloudDialogflowV2AgentAssistantFeedbackSummarizationFeedback;
+}

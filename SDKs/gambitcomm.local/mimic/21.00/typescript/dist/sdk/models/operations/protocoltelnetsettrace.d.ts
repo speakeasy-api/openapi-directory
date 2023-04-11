@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolTelnetSetTracePathParams extends SpeakeasyBase {
-    agentNum: number;
-    enableOrNot: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolTelnetSetTraceRequest extends SpeakeasyBase {
-    pathParams: ProtocolTelnetSetTracePathParams;
+    /**
+     * Agent to set the TELNET tracing
+     */
+    agentNum: number;
+    /**
+     * Value to set the TELNET tracing
+     */
+    enableOrNot: string;
 }
 export declare class ProtocolTelnetSetTraceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolTelnetSetTrace200ApplicationJSONString?: string;
 }

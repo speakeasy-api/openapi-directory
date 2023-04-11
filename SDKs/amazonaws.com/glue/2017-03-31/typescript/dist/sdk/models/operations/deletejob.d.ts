@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteJobXAmzTargetEnum {
-    AwsGlueDeleteJob = "AWSGlue.DeleteJob"
+    AWSGlueDeleteJob = "AWSGlue.DeleteJob"
 }
-export declare class DeleteJobHeaders extends SpeakeasyBase {
+export declare class DeleteJobRequest extends SpeakeasyBase {
+    deleteJobRequest: shared.DeleteJobRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class DeleteJobHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteJobXAmzTargetEnum;
 }
-export declare class DeleteJobRequest extends SpeakeasyBase {
-    headers: DeleteJobHeaders;
-    request: shared.DeleteJobRequest;
-}
 export declare class DeleteJobResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deleteJobResponse?: shared.DeleteJobResponse;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

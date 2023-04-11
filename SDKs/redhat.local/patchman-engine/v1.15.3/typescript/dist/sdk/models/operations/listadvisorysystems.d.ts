@@ -1,8 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListAdvisorySystemsPathParams extends SpeakeasyBase {
-    advisoryId: string;
+import { AxiosResponse } from "axios";
+export declare class ListAdvisorySystemsSecurity extends SpeakeasyBase {
+    rhIdentity: string;
 }
+/**
+ * Sort field
+ */
 export declare enum ListAdvisorySystemsSortEnum {
     Id = "id",
     DisplayName = "display_name",
@@ -14,39 +18,102 @@ export declare enum ListAdvisorySystemsSortEnum {
     OtherCount = "other_count",
     Stale = "stale"
 }
-export declare class ListAdvisorySystemsQueryParams extends SpeakeasyBase {
-    filterCreated?: string;
-    filterCulledTimestamp?: string;
-    filterDisplayName?: string;
-    filterId?: string;
-    filterInsightsId?: string;
-    filterLastEvaluation?: string;
-    filterLastUpload?: string;
-    filterOtherCount?: string;
-    filterRhbaCount?: string;
-    filterRheaCount?: string;
-    filterRhsaCount?: string;
-    filterStale?: string;
-    filterStaleTimestamp?: string;
-    filterStaleWarningTimestamp?: string;
-    filterSystemProfileSapSidsIn?: string[];
-    filterSystemProfileSapSystem?: string;
-    limit?: number;
-    offset?: number;
-    search?: string;
-    sort?: ListAdvisorySystemsSortEnum;
-    tags?: string[];
-}
-export declare class ListAdvisorySystemsSecurity extends SpeakeasyBase {
-    rhIdentity: shared.SchemeRhIdentity;
-}
 export declare class ListAdvisorySystemsRequest extends SpeakeasyBase {
-    pathParams: ListAdvisorySystemsPathParams;
-    queryParams: ListAdvisorySystemsQueryParams;
-    security: ListAdvisorySystemsSecurity;
+    /**
+     * Advisory ID
+     */
+    advisoryId: string;
+    /**
+     * Filter
+     */
+    filterCreated?: string;
+    /**
+     * Filter
+     */
+    filterCulledTimestamp?: string;
+    /**
+     * Filter
+     */
+    filterDisplayName?: string;
+    /**
+     * Filter
+     */
+    filterId?: string;
+    /**
+     * Filter
+     */
+    filterInsightsId?: string;
+    /**
+     * Filter
+     */
+    filterLastEvaluation?: string;
+    /**
+     * Filter
+     */
+    filterLastUpload?: string;
+    /**
+     * Filter
+     */
+    filterOtherCount?: string;
+    /**
+     * Filter
+     */
+    filterRhbaCount?: string;
+    /**
+     * Filter
+     */
+    filterRheaCount?: string;
+    /**
+     * Filter
+     */
+    filterRhsaCount?: string;
+    /**
+     * Filter
+     */
+    filterStale?: string;
+    /**
+     * Filter
+     */
+    filterStaleTimestamp?: string;
+    /**
+     * Filter
+     */
+    filterStaleWarningTimestamp?: string;
+    /**
+     * Filter systems by their SAP SIDs
+     */
+    filterSystemProfileSapSidsIn?: string[];
+    /**
+     * Filter only SAP systems
+     */
+    filterSystemProfileSapSystem?: string;
+    /**
+     * Limit for paging, set -1 to return all
+     */
+    limit?: number;
+    /**
+     * Offset for paging
+     */
+    offset?: number;
+    /**
+     * Find matching text
+     */
+    search?: string;
+    /**
+     * Sort field
+     */
+    sort?: ListAdvisorySystemsSortEnum;
+    /**
+     * Tag filter
+     */
+    tags?: string[];
 }
 export declare class ListAdvisorySystemsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
     controllersAdvisorySystemsResponse?: shared.ControllersAdvisorySystemsResponse;
 }

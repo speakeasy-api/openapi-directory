@@ -1,10 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeExecutionPathParams extends SpeakeasyBase {
-    managedDeviceId: string;
-    taskId: string;
-}
-export declare class DescribeExecutionHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DescribeExecutionRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,18 +9,41 @@ export declare class DescribeExecutionHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DescribeExecutionRequest extends SpeakeasyBase {
-    pathParams: DescribeExecutionPathParams;
-    headers: DescribeExecutionHeaders;
+    /**
+     * The ID of the managed device.
+     */
+    managedDeviceId: string;
+    /**
+     * The ID of the task that the action is describing.
+     */
+    taskId: string;
 }
 export declare class DescribeExecutionResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     describeExecutionOutput?: shared.DescribeExecutionOutput;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

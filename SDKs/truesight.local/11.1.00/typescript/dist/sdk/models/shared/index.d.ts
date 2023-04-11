@@ -8,5 +8,4 @@ export * from "./groupconfiguration";
 export * from "./groupsummary";
 export * from "./reinitializeactionconfiguration";
 export * from "./resultpage";
-export * from "./security";
 export * from "./servicesummary";

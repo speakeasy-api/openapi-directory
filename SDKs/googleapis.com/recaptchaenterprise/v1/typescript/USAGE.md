@@ -1,44 +1,50 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { RecaptchaenterpriseProjectsAssessmentsAnnotateRequest, RecaptchaenterpriseProjectsAssessmentsAnnotateResponse } from "openapi/src/sdk/models/operations";
+import {
+  RecaptchaenterpriseProjectsAssessmentsAnnotateRequest,
+  RecaptchaenterpriseProjectsAssessmentsAnnotateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestAnnotationEnum,
+  GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum,
+  GoogleCloudRecaptchaenterpriseV1TransactionEventEventTypeEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: RecaptchaenterpriseProjectsAssessmentsAnnotateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    name: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
-    annotation: "PASSWORD_INCORRECT",
-    hashedAccountId: "debitis",
+  dollarXgafv: XgafvEnum.Two,
+  googleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest: {
+    annotation: GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestAnnotationEnum.Fraudulent,
+    hashedAccountId: "distinctio",
     reasons: [
-      "TRANSACTION_ACCEPTED",
+      GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum.InitiatedTwoFactor,
+      GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum.CorrectPassword,
+      GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum.PaymentHeuristics,
+      GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum.CorrectPassword,
     ],
+    transactionEvent: {
+      eventTime: "vel",
+      eventType: GoogleCloudRecaptchaenterpriseV1TransactionEventEventTypeEnum.FraudNotification,
+      reason: "deserunt",
+      value: 3843.82,
+    },
   },
+  accessToken: "iure",
+  alt: AltEnum.Json,
+  callback: "debitis",
+  fields: "ipsa",
+  key: "delectus",
+  name: "tempora",
+  oauthToken: "suscipit",
+  prettyPrint: false,
+  quotaUser: "molestiae",
+  uploadType: "minus",
+  uploadProtocol: "placeat",
 };
 
 sdk.projects.recaptchaenterpriseProjectsAssessmentsAnnotate(req).then((res: RecaptchaenterpriseProjectsAssessmentsAnnotateResponse | AxiosError) => {

@@ -9,7 +9,7 @@ export declare enum LiveStreamStatusStreamStatusEnum {
 }
 /**
  * Brief description of the live stream status.
-**/
+ */
 export declare class LiveStreamStatus extends SpeakeasyBase {
     healthStatus?: LiveStreamHealthStatus;
     streamStatus?: LiveStreamStatusStreamStatusEnum;

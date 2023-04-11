@@ -1,8 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteOriginRequestPolicy20200531PathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteOriginRequestPolicy20200531Request extends SpeakeasyBase {
+    /**
+     * The unique identifier for the origin request policy that you are deleting. To get the identifier, you can use <code>ListOriginRequestPolicies</code>.
+     */
     id: string;
-}
-export declare class DeleteOriginRequestPolicy20200531Headers extends SpeakeasyBase {
+    /**
+     * The version of the origin request policy that you are deleting. The version is the origin request policy's <code>ETag</code> value, which you can get using <code>ListOriginRequestPolicies</code>, <code>GetOriginRequestPolicy</code>, or <code>GetOriginRequestPolicyConfig</code>.
+     */
     ifMatch?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
@@ -12,12 +17,9 @@ export declare class DeleteOriginRequestPolicy20200531Headers extends SpeakeasyB
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeleteOriginRequestPolicy20200531Request extends SpeakeasyBase {
-    pathParams: DeleteOriginRequestPolicy20200531PathParams;
-    headers: DeleteOriginRequestPolicy20200531Headers;
-}
 export declare class DeleteOriginRequestPolicy20200531Response extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

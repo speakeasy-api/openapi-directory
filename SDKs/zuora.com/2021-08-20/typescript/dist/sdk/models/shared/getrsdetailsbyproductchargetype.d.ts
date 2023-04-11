@@ -1,6 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetrsDetailsByProductChargeType extends SpeakeasyBase {
+import { GETRSDetailForProductChargeType } from "./getrsdetailforproductchargetype";
+export declare class GETRSDetailsByProductChargeType extends SpeakeasyBase {
+    /**
+     * URL to retrieve the next page of the response if it exists; otherwise absent.
+     *
+     * @remarks
+     *
+     */
     nextPage?: string;
-    revenueSchedules?: Record<string, any>[];
+    /**
+     * How revenue will be recognized over time.
+     *
+     * @remarks
+     *
+     */
+    revenueSchedules?: GETRSDetailForProductChargeType[];
+    /**
+     * Returns `true` if the request was processed successfully.
+     */
     success?: boolean;
 }

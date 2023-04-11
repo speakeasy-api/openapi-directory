@@ -1,5 +1,16 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Content Blocks are an Email Templating feature that allow you to:
+ *
+ * @remarks
+ * - Create a consistent look and feel to your Email campaigns using Content Blocks as Headers and Footers.
+ * - Distribute the same offer codes through different channels.
+ * - Create pre-defined assets that can be used to build messages with consistent information and assets.
+ * - Copy entire message bodies to other messages.
+ *
+ * You can edit Content Blocks in the Templates & Media section of the Braze UI, or here, via API.
+ */
 export declare class ContentBlocks {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +20,9 @@ export declare class ContentBlocks {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * listAvailableContentBlocks - List Available Content Blocks
+     * List Available Content Blocks
      *
+     * @remarks
      * This endpoint will list existing Content Block information.
      *
      * ### Successful Response Properties
@@ -57,11 +69,12 @@ export declare class ContentBlocks {
      *
      * - `Offset must be greater than 0.`
      * The `offset` parameter must be an integer (positive number) greater than 0.
-    **/
+     */
     listAvailableContentBlocks(req: operations.ListAvailableContentBlocksRequest, config?: AxiosRequestConfig): Promise<operations.ListAvailableContentBlocksResponse>;
     /**
-     * seeContentBlockInformation - See Content Block Information
+     * See Content Block Information
      *
+     * @remarks
      * This endpoint will call information for an existing Content Block.
      *
      * ### Successful Response Properties
@@ -90,6 +103,6 @@ export declare class ContentBlocks {
      * - `Content Block has been deleted - content not available.` - This Content Block, though it may have existed earlier, has been deleted.
      *
      * - `Include Inclusion Data - error` - One of true or false is not provided.
-    **/
+     */
     seeContentBlockInformation(req: operations.SeeContentBlockInformationRequest, config?: AxiosRequestConfig): Promise<operations.SeeContentBlockInformationResponse>;
 }

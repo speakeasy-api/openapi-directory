@@ -1,19 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetModifyDbClusterEndpointActionEnum {
-    ModifyDbClusterEndpoint = "ModifyDBClusterEndpoint"
+import { AxiosResponse } from "axios";
+export declare enum GETModifyDBClusterEndpointActionEnum {
+    ModifyDBClusterEndpoint = "ModifyDBClusterEndpoint"
 }
-export declare enum GetModifyDbClusterEndpointVersionEnum {
+export declare enum GETModifyDBClusterEndpointVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class GetModifyDbClusterEndpointQueryParams extends SpeakeasyBase {
-    action: GetModifyDbClusterEndpointActionEnum;
+export declare class GETModifyDBClusterEndpointRequest extends SpeakeasyBase {
+    action: GETModifyDBClusterEndpointActionEnum;
+    /**
+     * The identifier of the endpoint to modify. This parameter is stored as a lowercase string.
+     */
     dbClusterEndpointIdentifier: string;
+    /**
+     * The type of the endpoint. One of: <code>READER</code>, <code>WRITER</code>, <code>ANY</code>.
+     */
     endpointType?: string;
+    /**
+     * List of DB instance identifiers that aren't part of the custom endpoint group. All other eligible instances are reachable through the custom endpoint. Only relevant if the list of static members is empty.
+     */
     excludedMembers?: string[];
+    /**
+     * List of DB instance identifiers that are part of the custom endpoint group.
+     */
     staticMembers?: string[];
-    version: GetModifyDbClusterEndpointVersionEnum;
-}
-export declare class GetModifyDbClusterEndpointHeaders extends SpeakeasyBase {
+    version: GETModifyDBClusterEndpointVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -22,12 +33,9 @@ export declare class GetModifyDbClusterEndpointHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetModifyDbClusterEndpointRequest extends SpeakeasyBase {
-    queryParams: GetModifyDbClusterEndpointQueryParams;
-    headers: GetModifyDbClusterEndpointHeaders;
-}
-export declare class GetModifyDbClusterEndpointResponse extends SpeakeasyBase {
+export declare class GETModifyDBClusterEndpointResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

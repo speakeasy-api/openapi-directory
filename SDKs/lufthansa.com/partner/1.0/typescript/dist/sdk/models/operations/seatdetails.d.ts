@@ -1,26 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class SeatDetailsPathParams extends SpeakeasyBase {
-    aircraftCode: string;
-    cabinCode: string;
-}
-export declare class SeatDetailsQueryParams extends SpeakeasyBase {
-    lang?: string;
-}
-export declare class SeatDetailsHeaders extends SpeakeasyBase {
-    accept: string;
-}
+import { AxiosResponse } from "axios";
 export declare class SeatDetailsSecurity extends SpeakeasyBase {
-    auth: shared.SchemeAuth;
+    auth: string;
 }
 export declare class SeatDetailsRequest extends SpeakeasyBase {
-    pathParams: SeatDetailsPathParams;
-    queryParams: SeatDetailsQueryParams;
-    headers: SeatDetailsHeaders;
-    security: SeatDetailsSecurity;
+    /**
+     * http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+     */
+    accept: string;
+    /**
+     * Aircraft type. 3-character IATA equipment code
+     */
+    aircraftCode: string;
+    /**
+     * Cabin class: M, E, C, F (Acceptable values are: "", "M", "E", "C", "F")
+     */
+    cabinCode: string;
+    /**
+     * 2-letter ISO 3166-1 language code
+     */
+    lang?: string;
 }
 export declare class SeatDetailsResponse extends SpeakeasyBase {
     contentType: string;
     seatDetails200ApplicationJSONString?: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

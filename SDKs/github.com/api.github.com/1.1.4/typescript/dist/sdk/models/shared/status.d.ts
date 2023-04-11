@@ -1,13 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { SimpleUser } from "./simpleuser";
+import { NullableSimpleUser } from "./nullablesimpleuser";
 /**
  * The status of a commit.
-**/
+ */
 export declare class Status extends SpeakeasyBase {
     avatarUrl: string;
     context: string;
     createdAt: string;
-    creator: SimpleUser;
+    /**
+     * A GitHub user.
+     */
+    creator: NullableSimpleUser;
     description: string;
     id: number;
     nodeId: string;

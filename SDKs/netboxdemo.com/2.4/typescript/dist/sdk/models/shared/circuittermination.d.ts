@@ -14,6 +14,9 @@ export declare class CircuitTermination extends SpeakeasyBase {
     ppInfo?: string;
     site: NestedSite;
     termSide: CircuitTerminationTerminationEnum;
+    /**
+     * Upstream speed, if different from port speed
+     */
     upstreamSpeed?: number;
     xconnectId?: string;
 }

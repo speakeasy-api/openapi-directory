@@ -1,24 +1,20 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { ControlChargerChargingRequest, ControlChargerChargingResponse } from "openapi/src/sdk/models/operations";
+import {
+  ControlChargerChargingRequest,
+  ControlChargerChargingResponse,
+  ControlChargerChargingRequestBodyActionEnum,
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: ControlChargerChargingRequest = {
-  security: {
-    userAccessToken: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
+  requestBody: {
+    action: ControlChargerChargingRequestBodyActionEnum.Start,
   },
-  pathParams: {
-    chargerId: "sit",
-  },
-  request: {
-    action: "START",
-  },
+  chargerId: "corrupti",
 };
 
 sdk.chargers.controlChargerCharging(req).then((res: ControlChargerChargingResponse | AxiosError) => {

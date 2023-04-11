@@ -1,6 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class BatchUpdateDetectorHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class BatchUpdateDetectorRequestBody extends SpeakeasyBase {
+    /**
+     * The list of detectors (instances) to update, along with the values to update.
+     */
+    detectors: shared.UpdateDetectorRequest[];
+}
+export declare class BatchUpdateDetectorRequest extends SpeakeasyBase {
+    requestBody: BatchUpdateDetectorRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -9,19 +17,28 @@ export declare class BatchUpdateDetectorHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class BatchUpdateDetectorRequestBody extends SpeakeasyBase {
-    detectors: shared.UpdateDetectorRequest[];
-}
-export declare class BatchUpdateDetectorRequest extends SpeakeasyBase {
-    headers: BatchUpdateDetectorHeaders;
-    request: BatchUpdateDetectorRequestBody;
-}
 export declare class BatchUpdateDetectorResponse extends SpeakeasyBase {
+    /**
+     * Success
+     */
     batchUpdateDetectorResponse?: shared.BatchUpdateDetectorResponse;
     contentType: string;
+    /**
+     * InternalFailureException
+     */
     internalFailureException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
-    serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceUnavailableException
+     */
+    serviceUnavailableException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

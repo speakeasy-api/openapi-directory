@@ -1,13 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { AppLaunchConfigurationStatusEnum } from "./applaunchconfigurationstatusenum";
-import { LaunchDetails } from "./launchdetails";
 import { AppLaunchStatusEnum } from "./applaunchstatusenum";
 import { AppReplicationConfigurationStatusEnum } from "./appreplicationconfigurationstatusenum";
 import { AppReplicationStatusEnum } from "./appreplicationstatusenum";
 import { AppStatusEnum } from "./appstatusenum";
+import { LaunchDetails } from "./launchdetails";
 /**
  * Information about the application.
-**/
+ */
 export declare class AppSummary extends SpeakeasyBase {
     appId?: string;
     creationTime?: Date;

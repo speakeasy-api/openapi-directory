@@ -6,30 +6,30 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/iqualify.com/v1/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/iqualify.com/v1/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GetResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    authorization: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
+    authorization: "YOUR_API_KEY_HERE",
+  },
+});
 
 sdk.apiInfo.get().then((res: GetResponse | AxiosError) => {
    // handle response
@@ -38,13 +38,14 @@ sdk.apiInfo.get().then((res: GetResponse | AxiosError) => {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### API info
+
+### apiInfo
 
 * `get` - List supported endpoints URLs
 
-### Assessment data
+### assessmentData
 
 * `getOfferingsOfferingIdAnalyticsActivitiesResponses` - Find open response activity attempts
 * `getOfferingsOfferingIdAnalyticsMarksAssignments` - Find assessment marks
@@ -53,7 +54,7 @@ sdk.apiInfo.get().then((res: GetResponse | AxiosError) => {
 * `getOfferingsOfferingIdAnalyticsSubmissionsOpenResponseAssessmentId` - Find submissions to a specified open response assessment, including marks if any
 * `getOfferingsOfferingIdAnalyticsSubmissionsUserEmailAssignmentsAssessmentId` - Find a learner's submission to a specified assessment, including marks if any
 
-### Assessment groups
+### assessmentGroups
 
 * `deleteOfferingsOfferingIdGroupsGroupIdLearnersUserEmail` - Remove a learner from an assessment group
 * `getOfferingsOfferingIdGroups` - Find assessment groups
@@ -61,7 +62,7 @@ sdk.apiInfo.get().then((res: GetResponse | AxiosError) => {
 * `postOfferingsOfferingIdGroups` - Add an assessment group
 * `postOfferingsOfferingIdGroupsGroupIdLearners` - Add a learner to an assessment group
 
-### Assessment management
+### assessmentManagement
 
 * `deleteOfferingsOfferingIdAssessmentsAssessmentIdDocumentsDocumentId` - Remove assessment document
 * `deleteOfferingsOfferingIdUsersUserEmailAssessmentsAssessmentId` - Reset user's assessment to draft state
@@ -72,13 +73,13 @@ sdk.apiInfo.get().then((res: GetResponse | AxiosError) => {
 * `patchOfferingsOfferingIdAssessmentsAssessmentId` - Update assessment details
 * `patchOfferingsOfferingIdAssessmentsAssessmentIdUserEmail` - Update the due dates for a learner's quiz attempt
 
-### Badges
+### badges
 
 * `getOfferingsOfferingIdBadges` - Find offering badges
 * `getUsersUserEmailBadges` - Find user's badges
 * `postOfferingsOfferingIdUsersUserEmailBadgesAward` - Award badge
 
-### Channels
+### channels
 
 * `deleteOfferingsOfferingIdChannelsChannelIdLearners` - Remove learners from a group channel
 * `getOfferingsOfferingIdAnalyticsChannelsChannelIdComments` - Find comments
@@ -90,7 +91,7 @@ sdk.apiInfo.get().then((res: GetResponse | AxiosError) => {
 * `postOfferingsOfferingIdChannels` - Add channel
 * `postOfferingsOfferingIdChannelsChannelIdLearners` - Add learners to a group channel
 
-### Course mappings
+### courseMappings
 
 * `deleteCourseMappingsOfferingIdExternalCourseId` - Remove course mapping
 * `getCourseMappings` - Find course mappings
@@ -98,14 +99,14 @@ sdk.apiInfo.get().then((res: GetResponse | AxiosError) => {
 * `getCourseMappingsOfferingId` - Find course mappings by offeringId
 * `putCourseMappingsOfferingIdExternalCourseId` - Add course mapping
 
-### Course metadata
+### courseMetadata
 
 * `putCoursesContentIdMetadataCategory` - Update course category
 * `putCoursesContentIdMetadataLevel` - Update course level
 * `putCoursesContentIdMetadataTags` - Update course tags
 * `putCoursesContentIdMetadataTopic` - Update course topic
 
-### Courses
+### courses
 
 * `getCourses` - Find courses
 * `getCoursesContentId` - Find course by contentId
@@ -113,7 +114,7 @@ sdk.apiInfo.get().then((res: GetResponse | AxiosError) => {
 * `getCoursesContentIdPermissions` - Find users who have access to the contentId provided
 * `postCoursesRootContentIdPermissionsUserEmail` - Update course access
 
-### Learner activity
+### learnerActivity
 
 * `getOfferingsOfferingIdAnalyticsLearnersProgress` - Find learner progress in a specified offering
 * `getOfferingsOfferingIdAnalyticsSocialNotes` - Find shared social notes in an offering
@@ -121,7 +122,7 @@ sdk.apiInfo.get().then((res: GetResponse | AxiosError) => {
 * `getUsersUserEmailOfferingsOfferingIdProgress` - Find learner's progress in a specified offering
 * `getUsersUserEmailProgress` - Find learner's progress in offerings
 
-### Offering learners
+### offeringLearners
 
 * `deleteOfferingsOfferingIdUsersMarkerEmailMarks` - Remove learners from coach's marking list
 * `deleteOfferingsOfferingIdUsersUserEmail` - Removes user from the offering
@@ -131,14 +132,14 @@ sdk.apiInfo.get().then((res: GetResponse | AxiosError) => {
 * `postOfferingsOfferingIdUsers` - Adds user to the offering
 * `postOfferingsOfferingIdUsersMarkerEmailMarks` - Add learners to be marked by a coach
 
-### Offering metadata
+### offeringMetadata
 
 * `putOfferingsOfferingIdMetadataCategory` - Update offering category metadata
 * `putOfferingsOfferingIdMetadataLevel` - Update offering level metadata
 * `putOfferingsOfferingIdMetadataTags` - Update offering tags metadata
 * `putOfferingsOfferingIdMetadataTopic` - Update offering topic metadata
 
-### Offerings
+### offerings
 
 * `getOfferings` - Find current, past and future offerings
 * `getOfferingsCurrent` - Find active offerings
@@ -149,16 +150,16 @@ sdk.apiInfo.get().then((res: GetResponse | AxiosError) => {
 * `patchOfferingsOfferingId` - Update offering
 * `postOfferings` - Create offering
 
-### Organisation
+### organisation
 
 * `getOrg` - Gets the current organisation
 
-### Pulses
+### pulses
 
 * `getOfferingsOfferingIdAnalyticsPulses` - Find all pulse IDs in the specified offering
 * `getOfferingsOfferingIdAnalyticsPulsesPulseIdResponses` - Find pulses by offeringId and pulseId
 
-### Users in iQualify
+### usersInIQualify
 
 * `getUsersUserEmail` - Find user by email
 * `getUsersUserEmailOfferings` - Find user's offerings
@@ -168,7 +169,18 @@ sdk.apiInfo.get().then((res: GetResponse | AxiosError) => {
 * `postUsersUserEmailOfferings` - Adds the user to the specified offerings as a learner
 * `postUsersUserEmailPermissionsPermissionName` - Add permission to user
 * `putUsersUserEmailSuspend` - Suspend user
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateClusterXAmzTargetEnum {
-    AmazonMemoryDbUpdateCluster = "AmazonMemoryDB.UpdateCluster"
+    AmazonMemoryDBUpdateCluster = "AmazonMemoryDB.UpdateCluster"
 }
-export declare class UpdateClusterHeaders extends SpeakeasyBase {
+export declare class UpdateClusterRequest extends SpeakeasyBase {
+    updateClusterRequest: shared.UpdateClusterRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,28 +15,76 @@ export declare class UpdateClusterHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateClusterXAmzTargetEnum;
 }
-export declare class UpdateClusterRequest extends SpeakeasyBase {
-    headers: UpdateClusterHeaders;
-    request: shared.UpdateClusterRequest;
-}
 export declare class UpdateClusterResponse extends SpeakeasyBase {
+    /**
+     * ACLNotFoundFault
+     */
     aclNotFoundFault?: any;
+    /**
+     * ClusterNotFoundFault
+     */
     clusterNotFoundFault?: any;
+    /**
+     * ClusterQuotaForCustomerExceededFault
+     */
     clusterQuotaForCustomerExceededFault?: any;
     contentType: string;
+    /**
+     * InvalidACLStateFault
+     */
     invalidACLStateFault?: any;
+    /**
+     * InvalidClusterStateFault
+     */
     invalidClusterStateFault?: any;
+    /**
+     * InvalidKMSKeyFault
+     */
     invalidKMSKeyFault?: any;
+    /**
+     * InvalidNodeStateFault
+     */
     invalidNodeStateFault?: any;
+    /**
+     * InvalidParameterCombinationException
+     */
     invalidParameterCombinationException?: any;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
+    /**
+     * InvalidVPCNetworkStateFault
+     */
     invalidVPCNetworkStateFault?: any;
+    /**
+     * NoOperationFault
+     */
     noOperationFault?: any;
+    /**
+     * NodeQuotaForClusterExceededFault
+     */
     nodeQuotaForClusterExceededFault?: any;
+    /**
+     * NodeQuotaForCustomerExceededFault
+     */
     nodeQuotaForCustomerExceededFault?: any;
+    /**
+     * ParameterGroupNotFoundFault
+     */
     parameterGroupNotFoundFault?: any;
-    serviceLinkedRoleNotFoundFault?: any;
-    shardsPerClusterQuotaExceededFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceLinkedRoleNotFoundFault
+     */
+    serviceLinkedRoleNotFoundFault?: any;
+    /**
+     * ShardsPerClusterQuotaExceededFault
+     */
+    shardsPerClusterQuotaExceededFault?: any;
+    /**
+     * Success
+     */
     updateClusterResponse?: shared.UpdateClusterResponse;
 }

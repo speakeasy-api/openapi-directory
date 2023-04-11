@@ -1,50 +1,60 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ActivityStreamModeEnum } from "./activitystreammodeenum";
+import { ActivityStreamPolicyStatusEnum } from "./activitystreampolicystatusenum";
 import { ActivityStreamStatusEnum } from "./activitystreamstatusenum";
-import { DbInstanceRoles } from "./dbinstanceroles";
-import { DbInstanceAutomatedBackupsReplicationList } from "./dbinstanceautomatedbackupsreplicationlist";
-import { DbParameterGroupStatusList } from "./dbparametergroupstatuslist";
-import { DbSecurityGroupMembershipList } from "./dbsecuritygroupmembershiplist";
-import { DbSubnetGroup } from "./dbsubnetgroup";
+import { AutomationModeEnum } from "./automationmodeenum";
+import { CertificateDetails } from "./certificatedetails";
+import { DBInstanceAutomatedBackupsReplicationList } from "./dbinstanceautomatedbackupsreplicationlist";
+import { DBInstanceRoles } from "./dbinstanceroles";
+import { DBInstanceStatusInfoList } from "./dbinstancestatusinfolist";
+import { DBParameterGroupStatusList } from "./dbparametergroupstatuslist";
+import { DBSecurityGroupMembershipList } from "./dbsecuritygroupmembershiplist";
+import { DBSubnetGroup } from "./dbsubnetgroup";
 import { DomainMembershipList } from "./domainmembershiplist";
 import { Endpoint } from "./endpoint";
+import { MasterUserSecret } from "./masterusersecret";
 import { OptionGroupMembershipList } from "./optiongroupmembershiplist";
 import { PendingModifiedValues } from "./pendingmodifiedvalues";
 import { ProcessorFeatureList } from "./processorfeaturelist";
 import { ReplicaModeEnum } from "./replicamodeenum";
-import { DbInstanceStatusInfoList } from "./dbinstancestatusinfolist";
 import { TagList } from "./taglist";
 import { VpcSecurityGroupMembershipList } from "./vpcsecuritygroupmembershiplist";
 /**
- * <p>Contains the details of an Amazon RDS DB instance. </p> <p>This data type is used as a response element in the <code>DescribeDBInstances</code> action. </p>
-**/
-export declare class DbInstanceList extends SpeakeasyBase {
+ * <p>Contains the details of an Amazon RDS DB instance.</p> <p>This data type is used as a response element in the operations <code>CreateDBInstance</code>, <code>CreateDBInstanceReadReplica</code>, <code>DeleteDBInstance</code>, <code>DescribeDBInstances</code>, <code>ModifyDBInstance</code>, <code>PromoteReadReplica</code>, <code>RebootDBInstance</code>, <code>RestoreDBInstanceFromDBSnapshot</code>, <code>RestoreDBInstanceFromS3</code>, <code>RestoreDBInstanceToPointInTime</code>, <code>StartDBInstance</code>, and <code>StopDBInstance</code>.</p>
+ */
+export declare class DBInstanceList extends SpeakeasyBase {
     activityStreamEngineNativeAuditFieldsIncluded?: boolean;
     activityStreamKinesisStreamName?: string;
     activityStreamKmsKeyId?: string;
     activityStreamMode?: ActivityStreamModeEnum;
+    activityStreamPolicyStatus?: ActivityStreamPolicyStatusEnum;
     activityStreamStatus?: ActivityStreamStatusEnum;
     allocatedStorage?: number;
-    associatedRoles?: DbInstanceRoles[];
+    associatedRoles?: DBInstanceRoles[];
     autoMinorVersionUpgrade?: boolean;
     automaticRestartTime?: Date;
+    automationMode?: AutomationModeEnum;
     availabilityZone?: string;
     awsBackupRecoveryPointArn?: string;
     backupRetentionPeriod?: number;
+    backupTarget?: string;
     caCertificateIdentifier?: string;
+    certificateDetails?: CertificateDetails;
     characterSetName?: string;
     copyTagsToSnapshot?: boolean;
+    customIamInstanceProfile?: string;
     customerOwnedIpEnabled?: boolean;
     dbClusterIdentifier?: string;
     dbInstanceArn?: string;
-    dbInstanceAutomatedBackupsReplications?: DbInstanceAutomatedBackupsReplicationList[];
+    dbInstanceAutomatedBackupsReplications?: DBInstanceAutomatedBackupsReplicationList[];
     dbInstanceClass?: string;
     dbInstanceIdentifier?: string;
     dbInstanceStatus?: string;
     dbName?: string;
-    dbParameterGroups?: DbParameterGroupStatusList[];
-    dbSecurityGroups?: DbSecurityGroupMembershipList[];
-    dbSubnetGroup?: DbSubnetGroup;
+    dbParameterGroups?: DBParameterGroupStatusList[];
+    dbSecurityGroups?: DBSecurityGroupMembershipList[];
+    dbSubnetGroup?: DBSubnetGroup;
+    dbSystemId?: string;
     dbInstancePort?: number;
     dbiResourceId?: string;
     deletionProtection?: boolean;
@@ -61,12 +71,14 @@ export declare class DbInstanceList extends SpeakeasyBase {
     latestRestorableTime?: Date;
     licenseModel?: string;
     listenerEndpoint?: Endpoint;
+    masterUserSecret?: MasterUserSecret;
     masterUsername?: string;
     maxAllocatedStorage?: number;
     monitoringInterval?: number;
     monitoringRoleArn?: string;
     multiAZ?: boolean;
     ncharCharacterSetName?: string;
+    networkType?: string;
     optionGroupMemberships?: OptionGroupMembershipList[];
     pendingModifiedValues?: PendingModifiedValues;
     performanceInsightsEnabled?: boolean;
@@ -77,14 +89,20 @@ export declare class DbInstanceList extends SpeakeasyBase {
     processorFeatures?: ProcessorFeatureList[];
     promotionTier?: number;
     publiclyAccessible?: boolean;
-    readReplicaDBClusterIdentifiers?: Record<string, any>[];
-    readReplicaDBInstanceIdentifiers?: Record<string, any>[];
+    readReplicaDBClusterIdentifiers?: string[];
+    readReplicaDBInstanceIdentifiers?: string[];
+    readReplicaSourceDBClusterIdentifier?: string;
     readReplicaSourceDBInstanceIdentifier?: string;
     replicaMode?: ReplicaModeEnum;
+    resumeFullAutomationModeTime?: Date;
     secondaryAvailabilityZone?: string;
-    statusInfos?: DbInstanceStatusInfoList[];
+    statusInfos?: DBInstanceStatusInfoList[];
     storageEncrypted?: boolean;
+    storageThroughput?: number;
     storageType?: string;
+    /**
+     * A list of tags. For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS Resources</a> in the <i>Amazon RDS User Guide.</i>
+     */
     tagList?: TagList[];
     tdeCredentialArn?: string;
     timezone?: string;

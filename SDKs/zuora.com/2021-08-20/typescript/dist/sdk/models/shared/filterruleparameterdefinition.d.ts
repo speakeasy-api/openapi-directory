@@ -1,4 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The type of the value.
+ *
+ * @remarks
+ *
+ */
 export declare enum FilterRuleParameterDefinitionValueTypeEnum {
     String = "STRING",
     Byte = "BYTE",
@@ -28,9 +34,33 @@ export declare enum FilterRuleParameterDefinitionValueTypeEnum {
     LocalDateTimeArray = "LOCAL_DATE_TIME_ARRAY",
     TimestampArray = "TIMESTAMP_ARRAY"
 }
+/**
+ * Definition of a filter rule parameter.
+ *
+ * @remarks
+ *
+ */
 export declare class FilterRuleParameterDefinition extends SpeakeasyBase {
     description?: string;
+    /**
+     * The display name of the parameter.
+     *
+     * @remarks
+     *
+     */
     displayName?: string;
+    /**
+     * The option values of the parameter.
+     *
+     * @remarks
+     *
+     */
     options?: string[];
+    /**
+     * The type of the value.
+     *
+     * @remarks
+     *
+     */
     valueType?: FilterRuleParameterDefinitionValueTypeEnum;
 }

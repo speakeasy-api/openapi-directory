@@ -1,30 +1,25 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetListsBestSellersHistoryJsonRequest, GetListsBestSellersHistoryJsonResponse } from "openapi/src/sdk/models/operations";
+import {
+  GETListsBestSellersHistoryJsonRequest,
+  GETListsBestSellersHistoryJsonResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: GetListsBestSellersHistoryJsonRequest = {
-  security: {
-    apiKey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  },
-  queryParams: {
-    ageGroup: "sit",
-    author: "voluptas",
-    contributor: "culpa",
-    isbn: "expedita",
-    price: "consequuntur",
-    publisher: "dolor",
-    title: "expedita",
-  },
+
+const req: GETListsBestSellersHistoryJsonRequest = {
+  ageGroup: "corrupti",
+  author: "provident",
+  contributor: "distinctio",
+  isbn: "quibusdam",
+  price: "unde",
+  publisher: "nulla",
+  title: "Ms.",
 };
 
-sdk.getListsBestSellersHistoryJson(req).then((res: GetListsBestSellersHistoryJsonResponse | AxiosError) => {
+sdk.getListsBestSellersHistoryJson(req).then((res: GETListsBestSellersHistoryJsonResponse | AxiosError) => {
    // handle response
 });
 ```

@@ -14,6 +14,9 @@ export declare enum WritableDeviceWithConfigContextStatusEnum {
     Decommissioning = "decommissioning"
 }
 export declare class WritableDeviceWithConfigContextInput extends SpeakeasyBase {
+    /**
+     * A unique tag used to identify this device
+     */
     assetTag?: string;
     cluster?: number;
     comments?: string;
@@ -25,6 +28,9 @@ export declare class WritableDeviceWithConfigContextInput extends SpeakeasyBase 
     name?: string;
     parentDevice?: NestedDeviceInput;
     platform?: number;
+    /**
+     * The lowest-numbered unit occupied by the device
+     */
     position?: number;
     primaryIp4?: number;
     primaryIp6?: number;

@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListPoliciesQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListPoliciesXAmzTargetEnum {
-    Awsfms20180101ListPolicies = "AWSFMS_20180101.ListPolicies"
+    AWSFMS20180101ListPolicies = "AWSFMS_20180101.ListPolicies"
 }
-export declare class ListPoliciesHeaders extends SpeakeasyBase {
+export declare class ListPoliciesRequest extends SpeakeasyBase {
+    listPoliciesRequest: shared.ListPoliciesRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,17 +23,28 @@ export declare class ListPoliciesHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListPoliciesXAmzTargetEnum;
 }
-export declare class ListPoliciesRequest extends SpeakeasyBase {
-    queryParams: ListPoliciesQueryParams;
-    headers: ListPoliciesHeaders;
-    request: shared.ListPoliciesRequest;
-}
 export declare class ListPoliciesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalErrorException
+     */
     internalErrorException?: any;
+    /**
+     * InvalidOperationException
+     */
     invalidOperationException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * Success
+     */
     listPoliciesResponse?: shared.ListPoliciesResponse;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

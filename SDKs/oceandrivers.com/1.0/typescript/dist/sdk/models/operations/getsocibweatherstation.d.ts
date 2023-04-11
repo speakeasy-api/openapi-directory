@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetSocibWeatherStationPathParams extends SpeakeasyBase {
-    period: string;
-    stationName: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetSocibWeatherStationRequest extends SpeakeasyBase {
-    pathParams: GetSocibWeatherStationPathParams;
+    /**
+     * Period of time to get the data. Options: lastdata lasthour lastday
+     */
+    period: string;
+    /**
+     * station name currently: boyaenderrocat | playadepalma
+     */
+    stationName: string;
 }
 export declare class GetSocibWeatherStationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

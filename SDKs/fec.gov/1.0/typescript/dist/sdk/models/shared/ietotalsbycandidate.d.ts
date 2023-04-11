@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class IeTotalsByCandidate extends SpeakeasyBase {
+export declare class IETotalsByCandidate extends SpeakeasyBase {
     candidateId?: string;
     cycle?: number;
     supportOpposeIndicator?: string;

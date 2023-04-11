@@ -1,118 +1,182 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class MicerSecurity extends SpeakeasyBase {
+    apiKey: string;
+    clientId: string;
+}
 export declare class MicerRequestBodyCertificateParameters extends SpeakeasyBase {
+    /**
+     * Application No
+     */
     appno: string;
+    /**
+     * Date Of Birth
+     */
     dateOfBirth: string;
+    /**
+     * Enrollment No
+     */
     enrolno: string;
+    /**
+     * Roll No
+     */
     rollno: string;
 }
+/**
+ * The format of the certificate in response.
+ */
 export declare enum MicerRequestBodyFormatEnum {
     Pdf = "pdf"
 }
+/**
+ * Request format
+ */
 export declare class MicerRequestBody extends SpeakeasyBase {
     certificateParameters?: MicerRequestBodyCertificateParameters;
-    consentArtifact?: any;
+    consentArtifact?: shared.ConsentArtifactSchema;
+    /**
+     * The format of the certificate in response.
+     */
     format: MicerRequestBodyFormatEnum;
+    /**
+     * A unique transaction id for this request in UUID format. It is used for tracking the request.
+     */
     txnId: string;
 }
-export declare class MicerSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
-    clientId: shared.SchemeClientId;
+export declare enum Micer504ApplicationJSONErrorEnum {
+    GatewayTimeout = "gateway_timeout"
 }
-export declare enum Micer400ApplicationJsonErrorEnum {
+export declare enum Micer504ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
+}
+/**
+ * Gateway timeout
+ */
+export declare class Micer504ApplicationJSON extends SpeakeasyBase {
+    error?: Micer504ApplicationJSONErrorEnum;
+    errorDescription?: Micer504ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Micer503ApplicationJSONErrorEnum {
+    ServiceUnavailable = "service_unavailable"
+}
+export declare enum Micer503ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
+}
+/**
+ * Service unavailable
+ */
+export declare class Micer503ApplicationJSON extends SpeakeasyBase {
+    error?: Micer503ApplicationJSONErrorEnum;
+    errorDescription?: Micer503ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Micer502ApplicationJSONErrorEnum {
+    BadGatewy = "bad_gatewy"
+}
+export declare enum Micer502ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
+}
+/**
+ * Bad gateway
+ */
+export declare class Micer502ApplicationJSON extends SpeakeasyBase {
+    error?: Micer502ApplicationJSONErrorEnum;
+    errorDescription?: Micer502ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Micer500ApplicationJSONErrorEnum {
+    InternalServerError = "internal_server_error"
+}
+export declare enum Micer500ApplicationJSONErrorDescriptionEnum {
+    InternalServerError = "Internal server error"
+}
+/**
+ * Internal server error
+ */
+export declare class Micer500ApplicationJSON extends SpeakeasyBase {
+    error?: Micer500ApplicationJSONErrorEnum;
+    errorDescription?: Micer500ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Micer404ApplicationJSONErrorEnum {
+    RecordNotFound = "record_not_found",
+    UrlNotFound = "url_not_found"
+}
+export declare enum Micer404ApplicationJSONErrorDescriptionEnum {
+    NoRecordFound = "No record found",
+    YourAPIUrlOrPathIsIncorrect = "Your API url or path is incorrect"
+}
+/**
+ * No record found
+ */
+export declare class Micer404ApplicationJSON extends SpeakeasyBase {
+    error?: Micer404ApplicationJSONErrorEnum;
+    errorDescription?: Micer404ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Micer401ApplicationJSONErrorEnum {
+    InvalidAuthentication = "invalid_authentication",
+    InvalidAuthorization = "invalid_authorization"
+}
+export declare enum Micer401ApplicationJSONErrorDescriptionEnum {
+    AuthenticationFailed = "Authentication failed",
+    YouAreNotAuthorizedToUseThisAPI = "You are not authorized to use this API"
+}
+/**
+ * Unauthorized access
+ */
+export declare class Micer401ApplicationJSON extends SpeakeasyBase {
+    error?: Micer401ApplicationJSONErrorEnum;
+    errorDescription?: Micer401ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Micer400ApplicationJSONErrorEnum {
     MissingParameter = "missing_parameter",
     InvalidParameter = "invalid_parameter",
     InvalidFormat = "invalid_format",
     InvalidTxnid = "invalid_txnid",
     InvalidConsentid = "invalid_consentid"
 }
-export declare enum Micer400ApplicationJsonErrorDescriptionEnum {
+export declare enum Micer400ApplicationJSONErrorDescriptionEnum {
     PleaseProvideAllMandatoryParameters = "Please provide all mandatory parameters",
     BadRequest = "Bad request",
     TheFormatParameterIsInvalid = "The format parameter is invalid",
-    TheTxnIdParameterMustBeInUuidFormat = "The txnId parameter must be in UUID format",
-    TheConsentIdParameterMustBeInUuidFormat = "The consentId parameter must be in UUID format"
+    TheTxnIdParameterMustBeInUUIDFormat = "The txnId parameter must be in UUID format",
+    TheConsentIdParameterMustBeInUUIDFormat = "The consentId parameter must be in UUID format"
 }
-export declare class Micer400ApplicationJson extends SpeakeasyBase {
-    error?: Micer400ApplicationJsonErrorEnum;
-    errorDescription?: Micer400ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Micer401ApplicationJsonErrorEnum {
-    InvalidAuthentication = "invalid_authentication",
-    InvalidAuthorization = "invalid_authorization"
-}
-export declare enum Micer401ApplicationJsonErrorDescriptionEnum {
-    AuthenticationFailed = "Authentication failed",
-    YouAreNotAuthorizedToUseThisApi = "You are not authorized to use this API"
-}
-export declare class Micer401ApplicationJson extends SpeakeasyBase {
-    error?: Micer401ApplicationJsonErrorEnum;
-    errorDescription?: Micer401ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Micer404ApplicationJsonErrorEnum {
-    RecordNotFound = "record_not_found",
-    UrlNotFound = "url_not_found"
-}
-export declare enum Micer404ApplicationJsonErrorDescriptionEnum {
-    NoRecordFound = "No record found",
-    YourApiUrlOrPathIsIncorrect = "Your API url or path is incorrect"
-}
-export declare class Micer404ApplicationJson extends SpeakeasyBase {
-    error?: Micer404ApplicationJsonErrorEnum;
-    errorDescription?: Micer404ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Micer500ApplicationJsonErrorEnum {
-    InternalServerError = "internal_server_error"
-}
-export declare enum Micer500ApplicationJsonErrorDescriptionEnum {
-    InternalServerError = "Internal server error"
-}
-export declare class Micer500ApplicationJson extends SpeakeasyBase {
-    error?: Micer500ApplicationJsonErrorEnum;
-    errorDescription?: Micer500ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Micer502ApplicationJsonErrorEnum {
-    BadGatewy = "bad_gatewy"
-}
-export declare enum Micer502ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
-}
-export declare class Micer502ApplicationJson extends SpeakeasyBase {
-    error?: Micer502ApplicationJsonErrorEnum;
-    errorDescription?: Micer502ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Micer503ApplicationJsonErrorEnum {
-    ServiceUnavailable = "service_unavailable"
-}
-export declare enum Micer503ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
-}
-export declare class Micer503ApplicationJson extends SpeakeasyBase {
-    error?: Micer503ApplicationJsonErrorEnum;
-    errorDescription?: Micer503ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Micer504ApplicationJsonErrorEnum {
-    GatewayTimeout = "gateway_timeout"
-}
-export declare enum Micer504ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
-}
-export declare class Micer504ApplicationJson extends SpeakeasyBase {
-    error?: Micer504ApplicationJsonErrorEnum;
-    errorDescription?: Micer504ApplicationJsonErrorDescriptionEnum;
-}
-export declare class MicerRequest extends SpeakeasyBase {
-    request?: MicerRequestBody;
-    security: MicerSecurity;
+/**
+ * Bad request
+ */
+export declare class Micer400ApplicationJSON extends SpeakeasyBase {
+    error?: Micer400ApplicationJSONErrorEnum;
+    errorDescription?: Micer400ApplicationJSONErrorDescriptionEnum;
 }
 export declare class MicerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    micer400ApplicationJSONObject?: Micer400ApplicationJson;
-    micer401ApplicationJSONObject?: Micer401ApplicationJson;
-    micer404ApplicationJSONObject?: Micer404ApplicationJson;
-    micer500ApplicationJSONObject?: Micer500ApplicationJson;
-    micer502ApplicationJSONObject?: Micer502ApplicationJson;
-    micer503ApplicationJSONObject?: Micer503ApplicationJson;
-    micer504ApplicationJSONObject?: Micer504ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad request
+     */
+    micer400ApplicationJSONObject?: Micer400ApplicationJSON;
+    /**
+     * Unauthorized access
+     */
+    micer401ApplicationJSONObject?: Micer401ApplicationJSON;
+    /**
+     * No record found
+     */
+    micer404ApplicationJSONObject?: Micer404ApplicationJSON;
+    /**
+     * Internal server error
+     */
+    micer500ApplicationJSONObject?: Micer500ApplicationJSON;
+    /**
+     * Bad gateway
+     */
+    micer502ApplicationJSONObject?: Micer502ApplicationJSON;
+    /**
+     * Service unavailable
+     */
+    micer503ApplicationJSONObject?: Micer503ApplicationJSON;
+    /**
+     * Gateway timeout
+     */
+    micer504ApplicationJSONObject?: Micer504ApplicationJSON;
 }

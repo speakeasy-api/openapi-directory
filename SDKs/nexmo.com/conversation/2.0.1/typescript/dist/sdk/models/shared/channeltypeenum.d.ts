@@ -1,3 +1,6 @@
+/**
+ * Channel type
+ */
 export declare enum ChannelTypeEnum {
     App = "app",
     Phone = "phone",

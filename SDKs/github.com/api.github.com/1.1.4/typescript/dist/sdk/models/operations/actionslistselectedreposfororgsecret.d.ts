@@ -1,23 +1,37 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ActionsListSelectedReposForOrgSecretPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ActionsListSelectedReposForOrgSecretRequest extends SpeakeasyBase {
+    /**
+     * The organization name. The name is not case sensitive.
+     */
     org: string;
+    /**
+     * Page number of the results to fetch.
+     */
+    page?: number;
+    /**
+     * The number of results per page (max 100).
+     */
+    perPage?: number;
+    /**
+     * The name of the secret.
+     */
     secretName: string;
 }
-export declare class ActionsListSelectedReposForOrgSecretQueryParams extends SpeakeasyBase {
-    page?: number;
-    perPage?: number;
-}
-export declare class ActionsListSelectedReposForOrgSecret200ApplicationJson extends SpeakeasyBase {
+/**
+ * Response
+ */
+export declare class ActionsListSelectedReposForOrgSecret200ApplicationJSON extends SpeakeasyBase {
     repositories: shared.MinimalRepository[];
     totalCount: number;
-}
-export declare class ActionsListSelectedReposForOrgSecretRequest extends SpeakeasyBase {
-    pathParams: ActionsListSelectedReposForOrgSecretPathParams;
-    queryParams: ActionsListSelectedReposForOrgSecretQueryParams;
 }
 export declare class ActionsListSelectedReposForOrgSecretResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    actionsListSelectedReposForOrgSecret200ApplicationJSONObject?: ActionsListSelectedReposForOrgSecret200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
+    actionsListSelectedReposForOrgSecret200ApplicationJSONObject?: ActionsListSelectedReposForOrgSecret200ApplicationJSON;
 }

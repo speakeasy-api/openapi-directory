@@ -1,23 +1,46 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PostBillingEstimate400ApplicationJson extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+/**
+ * Not allowed to perform operation
+ */
+export declare class PostBillingEstimate403ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error message.
+     */
+    detail?: string;
+}
+/**
+ * Access token is missing or invalid
+ */
+export declare class PostBillingEstimate401ApplicationJSON extends SpeakeasyBase {
+    detail?: string;
+}
+/**
+ * Bad Request
+ */
+export declare class PostBillingEstimate400ApplicationJSON extends SpeakeasyBase {
     lessThanFieldNameGreaterThan?: string[];
     nonFieldErrors?: string[];
 }
-export declare class PostBillingEstimate401ApplicationJson extends SpeakeasyBase {
-    detail?: string;
-}
-export declare class PostBillingEstimate403ApplicationJson extends SpeakeasyBase {
-    detail?: string;
-}
-export declare class PostBillingEstimateRequest extends SpeakeasyBase {
-    request: shared.SubscriptionInput;
-}
 export declare class PostBillingEstimateResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Charges
+     */
     invoice?: shared.Invoice;
     statusCode: number;
-    postBillingEstimate400ApplicationJSONObject?: PostBillingEstimate400ApplicationJson;
-    postBillingEstimate401ApplicationJSONObject?: PostBillingEstimate401ApplicationJson;
-    postBillingEstimate403ApplicationJSONObject?: PostBillingEstimate403ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad Request
+     */
+    postBillingEstimate400ApplicationJSONObject?: PostBillingEstimate400ApplicationJSON;
+    /**
+     * Access token is missing or invalid
+     */
+    postBillingEstimate401ApplicationJSONObject?: PostBillingEstimate401ApplicationJSON;
+    /**
+     * Not allowed to perform operation
+     */
+    postBillingEstimate403ApplicationJSONObject?: PostBillingEstimate403ApplicationJSON;
 }

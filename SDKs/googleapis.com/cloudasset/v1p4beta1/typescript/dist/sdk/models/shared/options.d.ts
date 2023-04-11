@@ -1,0 +1,30 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Contains request options.
+ */
+export declare class Options extends SpeakeasyBase {
+    /**
+     * Optional. If true, the response will include access analysis from identities to resources via service account impersonation. This is a very expensive operation, because many derived queries will be executed. For example, if the request analyzes for which resources user A has permission P, and there's an IAM policy states user A has iam.serviceAccounts.getAccessToken permission to a service account SA, and there's another IAM policy states service account SA has permission P to a GCP folder F, then user A potentially has access to the GCP folder F. And those advanced analysis results will be included in AnalyzeIamPolicyResponse.service_account_impersonation_analysis. Another example, if the request analyzes for who has permission P to a GCP folder F, and there's an IAM policy states user A has iam.serviceAccounts.actAs permission to a service account SA, and there's another IAM policy states service account SA has permission P to the GCP folder F, then user A potentially has access to the GCP folder F. And those advanced analysis results will be included in AnalyzeIamPolicyResponse.service_account_impersonation_analysis. Default is false.
+     */
+    analyzeServiceAccountImpersonation?: boolean;
+    /**
+     * Optional. If true, the identities section of the result will expand any Google groups appearing in an IAM policy binding. If identity_selector is specified, the identity in the result will be determined by the selector, and this flag will have no effect. Default is false.
+     */
+    expandGroups?: boolean;
+    /**
+     * Optional. If true, the resource section of the result will expand any resource attached to an IAM policy to include resources lower in the resource hierarchy. For example, if the request analyzes for which resources user A has permission P, and the results include an IAM policy with P on a GCP folder, the results will also include resources in that folder with permission P. If resource_selector is specified, the resource section of the result will be determined by the selector, and this flag will have no effect. Default is false.
+     */
+    expandResources?: boolean;
+    /**
+     * Optional. If true, the access section of result will expand any roles appearing in IAM policy bindings to include their permissions. If access_selector is specified, the access section of the result will be determined by the selector, and this flag will have no effect. Default is false.
+     */
+    expandRoles?: boolean;
+    /**
+     * Optional. If true, the result will output group identity edges, starting from the binding's group members, to any expanded identities. Default is false.
+     */
+    outputGroupEdges?: boolean;
+    /**
+     * Optional. If true, the result will output resource edges, starting from the policy attached resource, to any expanded resources. Default is false.
+     */
+    outputResourceEdges?: boolean;
+}

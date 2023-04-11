@@ -1,17 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class LatestPackagePathParams extends SpeakeasyBase {
-    packageName: string;
-}
+import { AxiosResponse } from "axios";
 export declare class LatestPackageSecurity extends SpeakeasyBase {
-    rhIdentity: shared.SchemeRhIdentity;
+    rhIdentity: string;
 }
 export declare class LatestPackageRequest extends SpeakeasyBase {
-    pathParams: LatestPackagePathParams;
-    security: LatestPackageSecurity;
+    /**
+     * package_name - latest, nevra - exact version
+     */
+    packageName: string;
 }
 export declare class LatestPackageResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
     controllersPackageDetailResponse?: shared.ControllersPackageDetailResponse;
 }

@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class TeamsDeleteLegacyPathParams extends SpeakeasyBase {
-    teamId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class TeamsDeleteLegacyRequest extends SpeakeasyBase {
-    pathParams: TeamsDeleteLegacyPathParams;
+    /**
+     * The unique identifier of the team.
+     */
+    teamId: number;
 }
 export declare class TeamsDeleteLegacyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Resource not found
+     */
     basicError?: shared.BasicError;
+    /**
+     * Validation failed
+     */
     validationError?: shared.ValidationError;
 }

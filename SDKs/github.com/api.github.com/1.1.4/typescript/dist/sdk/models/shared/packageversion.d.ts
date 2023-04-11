@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class PackageVersionPackageVersionMetadataContainerMetadata extends SpeakeasyBase {
-    tags: any[];
+    tags: string[];
 }
 export declare class PackageVersionPackageVersionMetadataDockerMetadata extends SpeakeasyBase {
-    tag?: any[];
+    tag?: string[];
 }
 export declare enum PackageVersionPackageVersionMetadataPackageTypeEnum {
     Npm = "npm",
@@ -20,15 +20,21 @@ export declare class PackageVersionPackageVersionMetadata extends SpeakeasyBase 
 }
 /**
  * A version of a software package
-**/
+ */
 export declare class PackageVersion extends SpeakeasyBase {
     createdAt: Date;
     deletedAt?: Date;
     description?: string;
     htmlUrl?: string;
+    /**
+     * Unique identifier of the package version.
+     */
     id: number;
     license?: string;
     metadata?: PackageVersionPackageVersionMetadata;
+    /**
+     * The name of the package version.
+     */
     name: string;
     packageHtmlUrl: string;
     updatedAt: Date;

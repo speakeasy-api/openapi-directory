@@ -1,19 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare const DeleteFaxMediaServerList: readonly ["https://fax.twilio.com"];
-export declare class DeleteFaxMediaPathParams extends SpeakeasyBase {
-    faxSid: string;
-    sid: string;
-}
 export declare class DeleteFaxMediaSecurity extends SpeakeasyBase {
-    accountSidAuthToken: shared.SchemeAccountSidAuthToken;
+    password: string;
+    username: string;
 }
 export declare class DeleteFaxMediaRequest extends SpeakeasyBase {
-    serverURL?: string;
-    pathParams: DeleteFaxMediaPathParams;
-    security: DeleteFaxMediaSecurity;
+    /**
+     * The SID of the fax with the FaxMedia resource to delete.
+     */
+    faxSid: string;
+    /**
+     * The Twilio-provided string that uniquely identifies the FaxMedia resource to delete.
+     */
+    sid: string;
 }
 export declare class DeleteFaxMediaResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

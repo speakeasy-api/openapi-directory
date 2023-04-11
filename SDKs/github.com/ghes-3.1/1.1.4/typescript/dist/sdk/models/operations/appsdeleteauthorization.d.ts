@@ -1,17 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AppsDeleteAuthorizationPathParams extends SpeakeasyBase {
-    clientId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class AppsDeleteAuthorizationRequestBody extends SpeakeasyBase {
-    accessToken?: string;
+    /**
+     * The OAuth access token used to authenticate to the GitHub API.
+     */
+    accessToken: string;
 }
 export declare class AppsDeleteAuthorizationRequest extends SpeakeasyBase {
-    pathParams: AppsDeleteAuthorizationPathParams;
-    request?: AppsDeleteAuthorizationRequestBody;
+    requestBody: AppsDeleteAuthorizationRequestBody;
+    /**
+     * The client ID of the GitHub app.
+     */
+    clientId: string;
 }
 export declare class AppsDeleteAuthorizationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Validation failed
+     */
     validationError?: shared.ValidationError;
 }

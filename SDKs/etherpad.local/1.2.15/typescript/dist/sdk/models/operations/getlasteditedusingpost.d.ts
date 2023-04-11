@@ -1,38 +1,61 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetLastEditedUsingPostQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetLastEditedUsingPOSTRequest extends SpeakeasyBase {
     padID?: string;
 }
-export declare class GetLastEditedUsingPost200ApplicationJsonData extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class GetLastEditedUsingPost500ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class GetLastEditedUsingPost401ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+/**
+ * generic api error (code 1)
+ */
+export declare class GetLastEditedUsingPost400ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+export declare class GetLastEditedUsingPost200ApplicationJSONData extends SpeakeasyBase {
     lastEdited?: number;
 }
-export declare class GetLastEditedUsingPost200ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class GetLastEditedUsingPost200ApplicationJSON extends SpeakeasyBase {
     code?: number;
-    data?: GetLastEditedUsingPost200ApplicationJsonData;
+    data?: GetLastEditedUsingPost200ApplicationJSONData;
     message?: string;
 }
-export declare class GetLastEditedUsingPost400ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class GetLastEditedUsingPost401ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class GetLastEditedUsingPost500ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class GetLastEditedUsingPostRequest extends SpeakeasyBase {
-    queryParams: GetLastEditedUsingPostQueryParams;
-}
-export declare class GetLastEditedUsingPostResponse extends SpeakeasyBase {
+export declare class GetLastEditedUsingPOSTResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getLastEditedUsingPOST200ApplicationJSONObject?: GetLastEditedUsingPost200ApplicationJson;
-    getLastEditedUsingPOST400ApplicationJSONObject?: GetLastEditedUsingPost400ApplicationJson;
-    getLastEditedUsingPOST401ApplicationJSONObject?: GetLastEditedUsingPost401ApplicationJson;
-    getLastEditedUsingPOST500ApplicationJSONObject?: GetLastEditedUsingPost500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    getLastEditedUsingPOST200ApplicationJSONObject?: GetLastEditedUsingPost200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    getLastEditedUsingPOST400ApplicationJSONObject?: GetLastEditedUsingPost400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    getLastEditedUsingPOST401ApplicationJSONObject?: GetLastEditedUsingPost401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    getLastEditedUsingPOST500ApplicationJSONObject?: GetLastEditedUsingPost500ApplicationJSON;
 }

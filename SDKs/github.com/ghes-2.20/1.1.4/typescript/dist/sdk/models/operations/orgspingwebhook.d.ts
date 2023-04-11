@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class OrgsPingWebhookPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class OrgsPingWebhookRequest extends SpeakeasyBase {
     hookId: number;
     org: string;
-}
-export declare class OrgsPingWebhookRequest extends SpeakeasyBase {
-    pathParams: OrgsPingWebhookPathParams;
 }
 export declare class OrgsPingWebhookResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Resource not found
+     */
     basicError?: shared.BasicError;
 }

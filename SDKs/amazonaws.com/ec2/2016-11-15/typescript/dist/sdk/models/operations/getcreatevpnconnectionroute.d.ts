@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetCreateVpnConnectionRouteActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETCreateVpnConnectionRouteActionEnum {
     CreateVpnConnectionRoute = "CreateVpnConnectionRoute"
 }
-export declare enum GetCreateVpnConnectionRouteVersionEnum {
+export declare enum GETCreateVpnConnectionRouteVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetCreateVpnConnectionRouteQueryParams extends SpeakeasyBase {
-    action: GetCreateVpnConnectionRouteActionEnum;
+export declare class GETCreateVpnConnectionRouteRequest extends SpeakeasyBase {
+    action: GETCreateVpnConnectionRouteActionEnum;
+    /**
+     * The CIDR block associated with the local subnet of the customer network.
+     */
     destinationCidrBlock: string;
-    version: GetCreateVpnConnectionRouteVersionEnum;
+    version: GETCreateVpnConnectionRouteVersionEnum;
+    /**
+     * The ID of the VPN connection.
+     */
     vpnConnectionId: string;
-}
-export declare class GetCreateVpnConnectionRouteHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,11 +25,8 @@ export declare class GetCreateVpnConnectionRouteHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetCreateVpnConnectionRouteRequest extends SpeakeasyBase {
-    queryParams: GetCreateVpnConnectionRouteQueryParams;
-    headers: GetCreateVpnConnectionRouteHeaders;
-}
-export declare class GetCreateVpnConnectionRouteResponse extends SpeakeasyBase {
+export declare class GETCreateVpnConnectionRouteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

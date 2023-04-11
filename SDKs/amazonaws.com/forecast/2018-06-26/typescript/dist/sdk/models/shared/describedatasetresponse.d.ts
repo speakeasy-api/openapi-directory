@@ -3,6 +3,9 @@ import { DatasetTypeEnum } from "./datasettypeenum";
 import { DomainEnum } from "./domainenum";
 import { EncryptionConfig } from "./encryptionconfig";
 import { Schema } from "./schema";
+/**
+ * Success
+ */
 export declare class DescribeDatasetResponse extends SpeakeasyBase {
     creationTime?: Date;
     dataFrequency?: string;

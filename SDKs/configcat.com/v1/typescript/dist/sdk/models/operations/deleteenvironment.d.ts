@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteEnvironmentPathParams extends SpeakeasyBase {
-    environmentId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteEnvironmentRequest extends SpeakeasyBase {
-    pathParams: DeleteEnvironmentPathParams;
+    /**
+     * The identifier of the Environment.
+     */
+    environmentId: string;
 }
 export declare class DeleteEnvironmentResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

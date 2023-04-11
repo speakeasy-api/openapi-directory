@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetResetNetworkInterfaceAttributeActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETResetNetworkInterfaceAttributeActionEnum {
     ResetNetworkInterfaceAttribute = "ResetNetworkInterfaceAttribute"
 }
-export declare enum GetResetNetworkInterfaceAttributeVersionEnum {
+export declare enum GETResetNetworkInterfaceAttributeVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetResetNetworkInterfaceAttributeQueryParams extends SpeakeasyBase {
-    action: GetResetNetworkInterfaceAttributeActionEnum;
+export declare class GETResetNetworkInterfaceAttributeRequest extends SpeakeasyBase {
+    action: GETResetNetworkInterfaceAttributeActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
+    /**
+     * The ID of the network interface.
+     */
     networkInterfaceId: string;
+    /**
+     * The source/destination checking attribute. Resets the value to <code>true</code>.
+     */
     sourceDestCheck?: string;
-    version: GetResetNetworkInterfaceAttributeVersionEnum;
-}
-export declare class GetResetNetworkInterfaceAttributeHeaders extends SpeakeasyBase {
+    version: GETResetNetworkInterfaceAttributeVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,11 +29,8 @@ export declare class GetResetNetworkInterfaceAttributeHeaders extends SpeakeasyB
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetResetNetworkInterfaceAttributeRequest extends SpeakeasyBase {
-    queryParams: GetResetNetworkInterfaceAttributeQueryParams;
-    headers: GetResetNetworkInterfaceAttributeHeaders;
-}
-export declare class GetResetNetworkInterfaceAttributeResponse extends SpeakeasyBase {
+export declare class GETResetNetworkInterfaceAttributeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,18 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CancelProjectPathParams extends SpeakeasyBase {
-    id: number;
-}
-export declare class CancelProjectRequestBody extends SpeakeasyBase {
-    reason?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class CancelProjectRequest extends SpeakeasyBase {
-    pathParams: CancelProjectPathParams;
-    request?: CancelProjectRequestBody;
+    cancelProjectRequest?: shared.CancelProjectRequest;
+    /**
+     * Project ID
+     */
+    id: number;
 }
 export declare class CancelProjectResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * ProjectNotFound
+     */
     error?: shared.ErrorT;
+    /**
+     * Project canceled successfully
+     */
     operationStatus?: shared.OperationStatus;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

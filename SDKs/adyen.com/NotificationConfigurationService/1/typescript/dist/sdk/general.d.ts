@@ -1,5 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class General {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,39 +10,45 @@ export declare class General {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * postCreateNotificationConfiguration - Subscribe to notifications.
+     * Subscribe to notifications
      *
+     * @remarks
      * Creates a subscription to notifications informing you of events on your platform. After the subscription is created, the events specified in the configuration will be sent to the URL specified in the configuration. Subscriptions must be configured on a per-event basis (as opposed to, for example, a per-account holder basis), so all event notifications of a marketplace and of a given type will be sent to the same endpoint(s). A marketplace may have multiple endpoints if desired; an event notification may be sent to as many or as few different endpoints as configured.
-    **/
-    postCreateNotificationConfiguration(req: operations.PostCreateNotificationConfigurationRequest, config?: AxiosRequestConfig): Promise<operations.PostCreateNotificationConfigurationResponse>;
+     */
+    postCreateNotificationConfiguration(req: shared.CreateNotificationConfigurationRequest, security: operations.PostCreateNotificationConfigurationSecurity, config?: AxiosRequestConfig): Promise<operations.PostCreateNotificationConfigurationResponse>;
     /**
-     * postDeleteNotificationConfigurations - Delete an existing notification subscription configuration.
+     * Delete a notification subscription configuration
      *
-     * This endpoint is used to delete an existing notification subscription configuration. After the subscription is deleted, no further event notifications will be sent to the URL that was in the subscription.
-    **/
-    postDeleteNotificationConfigurations(req: operations.PostDeleteNotificationConfigurationsRequest, config?: AxiosRequestConfig): Promise<operations.PostDeleteNotificationConfigurationsResponse>;
+     * @remarks
+     * Deletes an existing notification subscription configuration. After the subscription is deleted, no further event notifications will be sent to the URL defined in the subscription.
+     */
+    postDeleteNotificationConfigurations(req: shared.DeleteNotificationConfigurationRequest, security: operations.PostDeleteNotificationConfigurationsSecurity, config?: AxiosRequestConfig): Promise<operations.PostDeleteNotificationConfigurationsResponse>;
     /**
-     * postGetNotificationConfiguration - Retrieve an existing notification subscription configuration.
+     * Get a notification subscription configuration
      *
-     * This endpoint is used to retrieve the details of the configuration of a notification subscription.
-    **/
-    postGetNotificationConfiguration(req: operations.PostGetNotificationConfigurationRequest, config?: AxiosRequestConfig): Promise<operations.PostGetNotificationConfigurationResponse>;
+     * @remarks
+     * Returns the details of the configuration of a notification subscription.
+     */
+    postGetNotificationConfiguration(req: shared.GetNotificationConfigurationRequest, security: operations.PostGetNotificationConfigurationSecurity, config?: AxiosRequestConfig): Promise<operations.PostGetNotificationConfigurationResponse>;
     /**
-     * postGetNotificationConfigurationList - Retrieve a list of existing notification subscription configurations.
+     * Get a list of notification subscription configurations
      *
-     * This endpoint is used to retrieve the details of the configurations of all of the notification subscriptions in the marketplace of the executing user.
-    **/
-    postGetNotificationConfigurationList(req: operations.PostGetNotificationConfigurationListRequest, config?: AxiosRequestConfig): Promise<operations.PostGetNotificationConfigurationListResponse>;
+     * @remarks
+     * Returns the details of the configurations of all of the notification subscriptions in the platform of the executing user.
+     */
+    postGetNotificationConfigurationList(req: Record<string, any>, security: operations.PostGetNotificationConfigurationListSecurity, config?: AxiosRequestConfig): Promise<operations.PostGetNotificationConfigurationListResponse>;
     /**
-     * postTestNotificationConfiguration - Test an existing notification configuration.
+     * Test a notification configuration
      *
-     * This endpoint is used to test an existing notification subscription configuration. For each event type specified, a test notification will be generated and sent to the URL configured in the subscription specified.
-    **/
-    postTestNotificationConfiguration(req: operations.PostTestNotificationConfigurationRequest, config?: AxiosRequestConfig): Promise<operations.PostTestNotificationConfigurationResponse>;
+     * @remarks
+     * Tests an existing notification subscription configuration. For each event type specified, a test notification will be generated and sent to the URL configured in the subscription specified.
+     */
+    postTestNotificationConfiguration(req: shared.TestNotificationConfigurationRequest, security: operations.PostTestNotificationConfigurationSecurity, config?: AxiosRequestConfig): Promise<operations.PostTestNotificationConfigurationResponse>;
     /**
-     * postUpdateNotificationConfiguration - Update an existing notification subscription configuration.
+     * Update a notification subscription configuration
      *
-     * This endpoint is used to update an existing notification subscription configuration. If updating the event types, all event types desired must be provided, otherwise the previous event type configuration will be overwritten.
-    **/
-    postUpdateNotificationConfiguration(req: operations.PostUpdateNotificationConfigurationRequest, config?: AxiosRequestConfig): Promise<operations.PostUpdateNotificationConfigurationResponse>;
+     * @remarks
+     * Updates an existing notification subscription configuration. If you are updating the event types, you must provide all event types, otherwise the previous event type configuration will be overwritten.
+     */
+    postUpdateNotificationConfiguration(req: shared.UpdateNotificationConfigurationRequest, security: operations.PostUpdateNotificationConfigurationSecurity, config?: AxiosRequestConfig): Promise<operations.PostUpdateNotificationConfigurationResponse>;
 }

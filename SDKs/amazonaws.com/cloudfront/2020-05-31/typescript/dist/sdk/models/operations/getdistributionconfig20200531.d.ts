@@ -1,8 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetDistributionConfig20200531PathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetDistributionConfig20200531Request extends SpeakeasyBase {
+    /**
+     * The distribution's ID. If the ID is empty, an empty distribution configuration is returned.
+     */
     id: string;
-}
-export declare class GetDistributionConfig20200531Headers extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,12 +13,9 @@ export declare class GetDistributionConfig20200531Headers extends SpeakeasyBase 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDistributionConfig20200531Request extends SpeakeasyBase {
-    pathParams: GetDistributionConfig20200531PathParams;
-    headers: GetDistributionConfig20200531Headers;
-}
 export declare class GetDistributionConfig20200531Response extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

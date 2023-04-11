@@ -2,8 +2,8 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { FileHeaderInfoEnum } from "./fileheaderinfoenum";
 /**
  * Contains information about the comma-separated value (CSV) file to select from.
-**/
-export declare class CsvInput extends SpeakeasyBase {
+ */
+export declare class CSVInput extends SpeakeasyBase {
     comments?: string;
     fieldDelimiter?: string;
     fileHeaderInfo?: FileHeaderInfoEnum;

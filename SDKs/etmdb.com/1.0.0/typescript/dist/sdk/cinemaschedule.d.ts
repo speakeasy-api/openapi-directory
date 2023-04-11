@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class CinemaSchedule {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class CinemaSchedule {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * cinemaScheduleSearchRead - Return cinema schedule search result
+     * Return cinema schedule search result
      *
+     * @remarks
      * Return cinema schedule search result
      *
      * ### Response Class (Status 200)
@@ -20,11 +21,12 @@ export declare class CinemaSchedule {
      *
      * For more details about cinema schedule, check each cinema from the cinema list [see here][ref].
      * [ref]: https://etmdb.com/en/movie-list/-updated_date
-    **/
+     */
     cinemaScheduleSearchRead(req: operations.CinemaScheduleSearchReadRequest, config?: AxiosRequestConfig): Promise<operations.CinemaScheduleSearchReadResponse>;
     /**
-     * cinemaScheduleSearchallRead - Return cinema schedule search result
+     * Return cinema schedule search result
      *
+     * @remarks
      * Return cinema schedule search result
      *
      * ### Response Class (Status 200)
@@ -36,6 +38,6 @@ export declare class CinemaSchedule {
      *
      * For more details about cinema schedule, check each cinema from the cinema list [see here][ref].
      * [ref]: https://etmdb.com/en/movie-list/-updated_date
-    **/
+     */
     cinemaScheduleSearchallRead(req: operations.CinemaScheduleSearchallReadRequest, config?: AxiosRequestConfig): Promise<operations.CinemaScheduleSearchallReadResponse>;
 }

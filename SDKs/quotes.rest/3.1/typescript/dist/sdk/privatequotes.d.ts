@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Create and manage your own Quotes. You need an API key to access this service.
+ */
 export declare class PrivateQuotes {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,36 +12,36 @@ export declare class PrivateQuotes {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteQuote - Delete a quote. The user needs to be the owner of the quote to be able to delete it.
+     * Delete a quote. The user needs to be the owner of the quote to be able to delete it.
      *
-    **/
-    deleteQuote(req: operations.DeleteQuoteRequest, config?: AxiosRequestConfig): Promise<operations.DeleteQuoteResponse>;
+     */
+    deleteQuote(req: operations.DeleteQuoteRequest, security: operations.DeleteQuoteSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteQuoteResponse>;
     /**
-     * getQuote - Gets a `Quote` with a given `id`.
-    **/
-    getQuote(req: operations.GetQuoteRequest, config?: AxiosRequestConfig): Promise<operations.GetQuoteResponse>;
+     * Gets a `Quote` with a given `id`.
+     */
+    getQuote(req: operations.GetQuoteRequest, security: operations.GetQuoteSecurity, config?: AxiosRequestConfig): Promise<operations.GetQuoteResponse>;
     /**
-     * getQuoteList - Get the list of quotes in your private collection.
-    **/
-    getQuoteList(req: operations.GetQuoteListRequest, config?: AxiosRequestConfig): Promise<operations.GetQuoteListResponse>;
+     * Get the list of quotes in your private collection.
+     */
+    getQuoteList(req: operations.GetQuoteListRequest, security: operations.GetQuoteListSecurity, config?: AxiosRequestConfig): Promise<operations.GetQuoteListResponse>;
     /**
-     * patchQuote - Update a quote
-    **/
-    patchQuote(req: operations.PatchQuoteRequest, config?: AxiosRequestConfig): Promise<operations.PatchQuoteResponse>;
+     * Update a quote
+     */
+    patchQuote(req: operations.PatchQuoteRequest, security: operations.PatchQuoteSecurity, config?: AxiosRequestConfig): Promise<operations.PatchQuoteResponse>;
     /**
-     * postQuote - Add a new quote to your private collection. Same as 'PUT' but added since some clients don't handle PUT well.
-    **/
-    postQuote(req: operations.PostQuoteRequest, config?: AxiosRequestConfig): Promise<operations.PostQuoteResponse>;
+     * Add a new quote to your private collection. Same as 'PUT' but added since some clients don't handle PUT well.
+     */
+    postQuote(req: operations.PostQuoteRequest, security: operations.PostQuoteSecurity, config?: AxiosRequestConfig): Promise<operations.PostQuoteResponse>;
     /**
-     * postQuoteTagsAdd - Add a tag to a given Quote.
-    **/
-    postQuoteTagsAdd(req: operations.PostQuoteTagsAddRequest, config?: AxiosRequestConfig): Promise<operations.PostQuoteTagsAddResponse>;
+     * Add a tag to a given Quote.
+     */
+    postQuoteTagsAdd(req: operations.PostQuoteTagsAddRequest, security: operations.PostQuoteTagsAddSecurity, config?: AxiosRequestConfig): Promise<operations.PostQuoteTagsAddResponse>;
     /**
-     * postQuoteTagsRemove - Remove a tag from a given quote.
-    **/
-    postQuoteTagsRemove(req: operations.PostQuoteTagsRemoveRequest, config?: AxiosRequestConfig): Promise<operations.PostQuoteTagsRemoveResponse>;
+     * Remove a tag from a given quote.
+     */
+    postQuoteTagsRemove(req: operations.PostQuoteTagsRemoveRequest, security: operations.PostQuoteTagsRemoveSecurity, config?: AxiosRequestConfig): Promise<operations.PostQuoteTagsRemoveResponse>;
     /**
-     * putQuote - Add a new quote to your private collection.
-    **/
-    putQuote(req: operations.PutQuoteRequest, config?: AxiosRequestConfig): Promise<operations.PutQuoteResponse>;
+     * Add a new quote to your private collection.
+     */
+    putQuote(req: operations.PutQuoteRequest, security: operations.PutQuoteSecurity, config?: AxiosRequestConfig): Promise<operations.PutQuoteResponse>;
 }

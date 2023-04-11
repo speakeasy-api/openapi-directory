@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Operations about clickwraps
+ */
 export declare class Clickwraps {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,33 +12,38 @@ export declare class Clickwraps {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteClickwrapsId - Delete Clickwrap
-     *
      * Delete Clickwrap
-    **/
+     *
+     * @remarks
+     * Delete Clickwrap
+     */
     deleteClickwrapsId(req: operations.DeleteClickwrapsIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteClickwrapsIdResponse>;
     /**
-     * getClickwraps - List Clickwraps
-     *
      * List Clickwraps
-    **/
+     *
+     * @remarks
+     * List Clickwraps
+     */
     getClickwraps(req: operations.GetClickwrapsRequest, config?: AxiosRequestConfig): Promise<operations.GetClickwrapsResponse>;
     /**
-     * getClickwrapsId - Show Clickwrap
-     *
      * Show Clickwrap
-    **/
+     *
+     * @remarks
+     * Show Clickwrap
+     */
     getClickwrapsId(req: operations.GetClickwrapsIdRequest, config?: AxiosRequestConfig): Promise<operations.GetClickwrapsIdResponse>;
     /**
-     * patchClickwrapsId - Update Clickwrap
-     *
      * Update Clickwrap
-    **/
+     *
+     * @remarks
+     * Update Clickwrap
+     */
     patchClickwrapsId(req: operations.PatchClickwrapsIdRequest, config?: AxiosRequestConfig): Promise<operations.PatchClickwrapsIdResponse>;
     /**
-     * postClickwraps - Create Clickwrap
-     *
      * Create Clickwrap
-    **/
-    postClickwraps(req: operations.PostClickwrapsRequest, config?: AxiosRequestConfig): Promise<operations.PostClickwrapsResponse>;
+     *
+     * @remarks
+     * Create Clickwrap
+     */
+    postClickwraps(req: operations.PostClickwrapsRequestBody, config?: AxiosRequestConfig): Promise<operations.PostClickwrapsResponse>;
 }

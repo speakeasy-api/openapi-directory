@@ -1,6 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DcimVirtualChassisListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DcimVirtualChassisListRequest extends SpeakeasyBase {
     domain?: string;
     domainIc?: string;
     domainIe?: string;
@@ -17,7 +18,13 @@ export declare class DcimVirtualChassisListQueryParams extends SpeakeasyBase {
     idLt?: string;
     idLte?: string;
     idN?: string;
+    /**
+     * Number of results to return per page.
+     */
     limit?: number;
+    /**
+     * The initial index from which to return the results.
+     */
     offset?: number;
     q?: string;
     region?: string;
@@ -35,17 +42,15 @@ export declare class DcimVirtualChassisListQueryParams extends SpeakeasyBase {
     tenantId?: string;
     tenantIdN?: string;
 }
-export declare class DcimVirtualChassisList200ApplicationJson extends SpeakeasyBase {
+export declare class DcimVirtualChassisList200ApplicationJSON extends SpeakeasyBase {
     count: number;
     next?: string;
     previous?: string;
     results: shared.VirtualChassis[];
 }
-export declare class DcimVirtualChassisListRequest extends SpeakeasyBase {
-    queryParams: DcimVirtualChassisListQueryParams;
-}
 export declare class DcimVirtualChassisListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dcimVirtualChassisList200ApplicationJSONObject?: DcimVirtualChassisList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    dcimVirtualChassisList200ApplicationJSONObject?: DcimVirtualChassisList200ApplicationJSON;
 }

@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class HashtagHistoryPathParams extends SpeakeasyBase {
-    hashtag: string;
-}
+import { AxiosResponse } from "axios";
 export declare class HashtagHistoryRequest extends SpeakeasyBase {
-    pathParams: HashtagHistoryPathParams;
+    /**
+     * Hashtag without # mark
+     */
+    hashtag: string;
 }
 export declare class HashtagHistoryResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

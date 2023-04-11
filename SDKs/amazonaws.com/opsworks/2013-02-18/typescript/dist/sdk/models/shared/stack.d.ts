@@ -1,11 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ChefConfiguration } from "./chefconfiguration";
-import { StackConfigurationManager } from "./stackconfigurationmanager";
-import { Source } from "./source";
 import { RootDeviceTypeEnum } from "./rootdevicetypeenum";
+import { Source } from "./source";
+import { StackConfigurationManager } from "./stackconfigurationmanager";
 /**
  * Describes a stack.
-**/
+ */
 export declare class Stack extends SpeakeasyBase {
     agentVersion?: string;
     arn?: string;

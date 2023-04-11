@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DownloadPdfInvoicePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DownloadPdfInvoiceRequest extends SpeakeasyBase {
-    pathParams: DownloadPdfInvoicePathParams;
+    /**
+     * Project ID
+     */
+    id: number;
 }
 export declare class DownloadPdfInvoiceResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * ProjectNotFound or InvoiceNotFound
+     */
     error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Invoice
+     */
     downloadPdfInvoice200ApplicationPdfBinaryString?: Uint8Array;
 }

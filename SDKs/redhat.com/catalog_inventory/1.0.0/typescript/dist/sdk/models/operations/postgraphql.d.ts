@@ -1,10 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PostGraphQlRequest extends SpeakeasyBase {
-    request: shared.GraphQlRequest;
-}
-export declare class PostGraphQlResponse extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class PostGraphQLResponse extends SpeakeasyBase {
     contentType: string;
-    graphQLResponse?: shared.GraphQlResponse;
+    /**
+     * GraphQL Query Response
+     */
+    graphQLResponse?: shared.GraphQLResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

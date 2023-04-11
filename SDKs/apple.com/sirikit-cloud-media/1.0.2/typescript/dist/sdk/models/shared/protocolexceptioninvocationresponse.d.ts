@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ProtocolException } from "./protocolexception";
 import { ExecutionMetrics } from "./executionmetrics";
+import { ProtocolException } from "./protocolexception";
 export declare class ProtocolExceptionInvocationResponse extends SpeakeasyBase {
     debug?: string;
     exception: ProtocolException;

@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class V1Tax {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class V1Tax {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * taxRatesByCountryCode - Tax rates by Country Code
+     * Tax rates by Country Code
      *
+     * @remarks
      * Get request. This method returns all tax rates for country discovered based on country code. The country code must be 2 letters ISO 3166-1 alfa-2 country code (see <a href="https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes">here</a> for more information). You can use 'filter' parameter to narrow results to selected type of tax
      * <p>For US sales tax you can filter the tax rate you want for each state or zip code with one of the following: (they are case sensitive)</p>
      * <ul>
@@ -73,11 +74,12 @@ export declare class V1Tax {
      *     return false;
      *   }</code></pre>
      *
-    **/
+     */
     taxRatesByCountryCode(req: operations.TaxRatesByCountryCodeRequest, config?: AxiosRequestConfig): Promise<operations.TaxRatesByCountryCodeResponse>;
     /**
-     * taxRatesByIpAddress - Tax rates by IP address
+     * Tax rates by IP address
      *
+     * @remarks
      * Get request. This method returns all tax rates for country discovered on either your IP address or IP address param. The IP param is not required. When empty, the taxrates.io will try to discover your IP address and based on this will retrieve the tax rates. You can use 'filter' parameter to narrow results to selected type of tax
      * <p>For US sales tax you can filter the tax rate you want for each state or zip code with one of the following: (they are case sensitive)</p>
      * <ul>
@@ -140,6 +142,6 @@ export declare class V1Tax {
      *     return false;
      *   }</code></pre>
      *
-    **/
+     */
     taxRatesByIpAddress(req: operations.TaxRatesByIpAddressRequest, config?: AxiosRequestConfig): Promise<operations.TaxRatesByIpAddressResponse>;
 }

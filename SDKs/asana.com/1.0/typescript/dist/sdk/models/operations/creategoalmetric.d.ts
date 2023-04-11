@@ -1,26 +1,53 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreateGoalMetricPathParams extends SpeakeasyBase {
-    goalGid: string;
-}
-export declare class CreateGoalMetricQueryParams extends SpeakeasyBase {
-    optFields?: string[];
-    optPretty?: boolean;
-}
+import { AxiosResponse } from "axios";
+/**
+ * The goal metric to create.
+ */
 export declare class CreateGoalMetricRequestBodyInput extends SpeakeasyBase {
     data?: shared.GoalMetricRequestInput;
 }
-export declare class CreateGoalMetric200ApplicationJson extends SpeakeasyBase {
-    data?: shared.GoalResponse;
-}
 export declare class CreateGoalMetricRequest extends SpeakeasyBase {
-    pathParams: CreateGoalMetricPathParams;
-    queryParams: CreateGoalMetricQueryParams;
-    request: CreateGoalMetricRequestBodyInput;
+    /**
+     * The goal metric to create.
+     */
+    requestBody: CreateGoalMetricRequestBodyInput;
+    /**
+     * Globally unique identifier for the goal.
+     */
+    goalGid: string;
+    /**
+     * Defines fields to return.
+     *
+     * @remarks
+     * Some requests return *compact* representations of objects in order to conserve resources and complete the request more efficiently. Other times requests return more information than you may need. This option allows you to list the exact set of fields that the API should be sure to return for the objects. The field names should be provided as paths, described below.
+     * The id of included objects will always be returned, regardless of the field options.
+     */
+    optFields?: string[];
+    /**
+     * Provides “pretty” output.
+     *
+     * @remarks
+     * Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
+     */
+    optPretty?: boolean;
+}
+/**
+ * Successfully created a new goal metric.
+ */
+export declare class CreateGoalMetric200ApplicationJSON extends SpeakeasyBase {
+    data?: shared.GoalResponse;
 }
 export declare class CreateGoalMetricResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * This usually occurs because of a missing or malformed parameter. Check the documentation and the syntax of your request and try again.
+     */
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    createGoalMetric200ApplicationJSONObject?: CreateGoalMetric200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successfully created a new goal metric.
+     */
+    createGoalMetric200ApplicationJSONObject?: CreateGoalMetric200ApplicationJSON;
 }

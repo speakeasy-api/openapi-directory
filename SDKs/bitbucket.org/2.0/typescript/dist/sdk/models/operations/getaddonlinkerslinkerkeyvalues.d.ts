@@ -1,19 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetAddonLinkersLinkerKeyValuesPathParams extends SpeakeasyBase {
-    linkerKey: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetAddonLinkersLinkerKeyValuesSecurity extends SpeakeasyBase {
-    oauth2?: shared.SchemeOauth2;
+    apiKey?: string;
     basic?: shared.SchemeBasic;
-    apiKey?: shared.SchemeApiKey;
+    oauth2?: string;
 }
 export declare class GetAddonLinkersLinkerKeyValuesRequest extends SpeakeasyBase {
-    pathParams: GetAddonLinkersLinkerKeyValuesPathParams;
-    security: GetAddonLinkersLinkerKeyValuesSecurity;
+    /**
+     * The unique key of a [linker module](/cloud/bitbucket/modules/linker/)
+     *
+     * @remarks
+     * as defined in an application descriptor.
+     */
+    linkerKey: string;
 }
 export declare class GetAddonLinkersLinkerKeyValuesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Authentication must use app JWT
+     */
     error?: Record<string, any>;
 }

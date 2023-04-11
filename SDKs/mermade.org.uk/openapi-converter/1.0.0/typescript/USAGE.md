@@ -1,18 +1,19 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { ConvertRequest, ConvertResponse } from "openapi/src/sdk/models/operations";
+import {
+  ConvertRequestBody,
+  ConvertResponse,
+  ConvertRequestBodyValidateEnum,
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: ConvertRequest = {
-  request: {
-    filename: "sit",
-    source: "voluptas",
-    validate: "on",
-  },
+
+const req: ConvertRequestBody = {
+  filename: "corrupti",
+  source: "provident",
+  validate: ConvertRequestBodyValidateEnum.On,
 };
 
 sdk.conversion.convert(req).then((res: ConvertResponse | AxiosError) => {

@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class DeleteNatGatewayResult extends SpeakeasyBase {
-    natGatewayId?: Record<string, any>;
+    natGatewayId?: string;
 }

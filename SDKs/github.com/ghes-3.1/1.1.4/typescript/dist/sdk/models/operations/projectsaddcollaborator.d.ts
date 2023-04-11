@@ -1,29 +1,41 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ProjectsAddCollaboratorPathParams extends SpeakeasyBase {
-    projectId: number;
-    username: string;
-}
+import { AxiosResponse } from "axios";
+/**
+ * The permission to grant the collaborator.
+ */
 export declare enum ProjectsAddCollaboratorRequestBodyPermissionEnum {
     Read = "read",
     Write = "write",
     Admin = "admin"
 }
 export declare class ProjectsAddCollaboratorRequestBody extends SpeakeasyBase {
+    /**
+     * The permission to grant the collaborator.
+     */
     permission?: ProjectsAddCollaboratorRequestBodyPermissionEnum;
 }
-export declare class ProjectsAddCollaborator415ApplicationJson extends SpeakeasyBase {
-    documentationUrl: string;
-    message: string;
-}
 export declare class ProjectsAddCollaboratorRequest extends SpeakeasyBase {
-    pathParams: ProjectsAddCollaboratorPathParams;
-    request?: ProjectsAddCollaboratorRequestBody;
+    requestBody?: ProjectsAddCollaboratorRequestBody;
+    /**
+     * The unique identifier of the project.
+     */
+    projectId: number;
+    /**
+     * The handle for the GitHub user account.
+     */
+    username: string;
 }
 export declare class ProjectsAddCollaboratorResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Requires authentication
+     */
     basicError?: shared.BasicError;
-    projectsAddCollaborator415ApplicationJSONObject?: ProjectsAddCollaborator415ApplicationJson;
+    /**
+     * Validation failed
+     */
     validationError?: shared.ValidationError;
 }

@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Marketplacenotes {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,11 +9,11 @@ export declare class Marketplacenotes {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * adexchangebuyerMarketplacenotesInsert - Add notes to the proposal
-    **/
-    adexchangebuyerMarketplacenotesInsert(req: operations.AdexchangebuyerMarketplacenotesInsertRequest, config?: AxiosRequestConfig): Promise<operations.AdexchangebuyerMarketplacenotesInsertResponse>;
+     * Add notes to the proposal
+     */
+    adexchangebuyerMarketplacenotesInsert(req: operations.AdexchangebuyerMarketplacenotesInsertRequest, security: operations.AdexchangebuyerMarketplacenotesInsertSecurity, config?: AxiosRequestConfig): Promise<operations.AdexchangebuyerMarketplacenotesInsertResponse>;
     /**
-     * adexchangebuyerMarketplacenotesList - Get all the notes associated with a proposal
-    **/
-    adexchangebuyerMarketplacenotesList(req: operations.AdexchangebuyerMarketplacenotesListRequest, config?: AxiosRequestConfig): Promise<operations.AdexchangebuyerMarketplacenotesListResponse>;
+     * Get all the notes associated with a proposal
+     */
+    adexchangebuyerMarketplacenotesList(req: operations.AdexchangebuyerMarketplacenotesListRequest, security: operations.AdexchangebuyerMarketplacenotesListSecurity, config?: AxiosRequestConfig): Promise<operations.AdexchangebuyerMarketplacenotesListResponse>;
 }

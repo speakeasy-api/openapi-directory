@@ -1,38 +1,61 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class AppendChatMessageUsingPostQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class AppendChatMessageUsingPOSTRequest extends SpeakeasyBase {
     authorID?: string;
     padID?: string;
     text?: string;
     time?: string;
 }
-export declare class AppendChatMessageUsingPost200ApplicationJson extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class AppendChatMessageUsingPost500ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class AppendChatMessageUsingPost400ApplicationJson extends SpeakeasyBase {
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class AppendChatMessageUsingPost401ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class AppendChatMessageUsingPost401ApplicationJson extends SpeakeasyBase {
+/**
+ * generic api error (code 1)
+ */
+export declare class AppendChatMessageUsingPost400ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class AppendChatMessageUsingPost500ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class AppendChatMessageUsingPost200ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class AppendChatMessageUsingPostRequest extends SpeakeasyBase {
-    queryParams: AppendChatMessageUsingPostQueryParams;
-}
-export declare class AppendChatMessageUsingPostResponse extends SpeakeasyBase {
+export declare class AppendChatMessageUsingPOSTResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    appendChatMessageUsingPOST200ApplicationJSONObject?: AppendChatMessageUsingPost200ApplicationJson;
-    appendChatMessageUsingPOST400ApplicationJSONObject?: AppendChatMessageUsingPost400ApplicationJson;
-    appendChatMessageUsingPOST401ApplicationJSONObject?: AppendChatMessageUsingPost401ApplicationJson;
-    appendChatMessageUsingPOST500ApplicationJSONObject?: AppendChatMessageUsingPost500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    appendChatMessageUsingPOST200ApplicationJSONObject?: AppendChatMessageUsingPost200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    appendChatMessageUsingPOST400ApplicationJSONObject?: AppendChatMessageUsingPost400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    appendChatMessageUsingPOST401ApplicationJSONObject?: AppendChatMessageUsingPost401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    appendChatMessageUsingPOST500ApplicationJSONObject?: AppendChatMessageUsingPost500ApplicationJSON;
 }

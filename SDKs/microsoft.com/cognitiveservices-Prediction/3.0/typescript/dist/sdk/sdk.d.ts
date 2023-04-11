@@ -1,11 +1,26 @@
-import { AxiosInstance } from "axios";
-import { Security } from "./models/shared";
 import { ImagePredictionApi } from "./imagepredictionapi";
+import * as shared from "./models/shared";
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://southcentralus.api.cognitive.microsoft.com/customvision/v3.0/prediction", "https://{Endpoint}/customvision/v3.0/prediction"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * The security details required to authenticate the SDK
+     */
+    security?: shared.Security;
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    security?: Security;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
 export declare class SDK {
     imagePredictionApi: ImagePredictionApi;
@@ -15,5 +30,6 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
 }

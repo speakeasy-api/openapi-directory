@@ -1,15 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SessionControllerResetPasswordPathParams extends SpeakeasyBase {
-    shortName: string;
-}
-export declare class SessionControllerResetPasswordQueryParams extends SpeakeasyBase {
-    email: string;
-}
+import { AxiosResponse } from "axios";
 export declare class SessionControllerResetPasswordRequest extends SpeakeasyBase {
-    pathParams: SessionControllerResetPasswordPathParams;
-    queryParams: SessionControllerResetPasswordQueryParams;
+    /**
+     * The login Email Address.
+     */
+    email: string;
+    /**
+     * The unique client short-name
+     */
+    shortName: string;
 }
 export declare class SessionControllerResetPasswordResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

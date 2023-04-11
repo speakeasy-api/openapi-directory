@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum StartMlLabelingSetGenerationTaskRunXAmzTargetEnum {
-    AwsGlueStartMlLabelingSetGenerationTaskRun = "AWSGlue.StartMLLabelingSetGenerationTaskRun"
+import { AxiosResponse } from "axios";
+export declare enum StartMLLabelingSetGenerationTaskRunXAmzTargetEnum {
+    AWSGlueStartMLLabelingSetGenerationTaskRun = "AWSGlue.StartMLLabelingSetGenerationTaskRun"
 }
-export declare class StartMlLabelingSetGenerationTaskRunHeaders extends SpeakeasyBase {
+export declare class StartMLLabelingSetGenerationTaskRunRequest extends SpeakeasyBase {
+    startMLLabelingSetGenerationTaskRunRequest: shared.StartMLLabelingSetGenerationTaskRunRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,19 +13,34 @@ export declare class StartMlLabelingSetGenerationTaskRunHeaders extends Speakeas
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: StartMlLabelingSetGenerationTaskRunXAmzTargetEnum;
+    xAmzTarget: StartMLLabelingSetGenerationTaskRunXAmzTargetEnum;
 }
-export declare class StartMlLabelingSetGenerationTaskRunRequest extends SpeakeasyBase {
-    headers: StartMlLabelingSetGenerationTaskRunHeaders;
-    request: shared.StartMlLabelingSetGenerationTaskRunRequest;
-}
-export declare class StartMlLabelingSetGenerationTaskRunResponse extends SpeakeasyBase {
+export declare class StartMLLabelingSetGenerationTaskRunResponse extends SpeakeasyBase {
+    /**
+     * ConcurrentRunsExceededException
+     */
     concurrentRunsExceededException?: any;
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
-    startMLLabelingSetGenerationTaskRunResponse?: shared.StartMlLabelingSetGenerationTaskRunResponse;
+    /**
+     * Success
+     */
+    startMLLabelingSetGenerationTaskRunResponse?: shared.StartMLLabelingSetGenerationTaskRunResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

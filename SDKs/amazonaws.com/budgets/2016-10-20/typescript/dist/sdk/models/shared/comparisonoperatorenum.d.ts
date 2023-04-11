@@ -1,0 +1,8 @@
+/**
+ * <p> The comparison operator of a notification. Currently, the service supports the following operators:</p> <p> <code>GREATER_THAN</code>, <code>LESS_THAN</code>, <code>EQUAL_TO</code> </p>
+ */
+export declare enum ComparisonOperatorEnum {
+    GreaterThan = "GREATER_THAN",
+    LessThan = "LESS_THAN",
+    EqualTo = "EQUAL_TO"
+}

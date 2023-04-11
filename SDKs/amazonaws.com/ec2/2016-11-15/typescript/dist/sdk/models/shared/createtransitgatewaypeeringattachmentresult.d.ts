@@ -1,39 +1,84 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Information about the accepter transit gateway.
-**/
+ */
 export declare class CreateTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentAccepterTgwInfo extends SpeakeasyBase {
-    ownerId?: Record<string, any>;
-    region?: Record<string, any>;
-    transitGatewayId?: Record<string, any>;
+    coreNetworkId?: string;
+    ownerId?: string;
+    region?: string;
+    transitGatewayId?: string;
+}
+/**
+ * Describes whether dynamic routing is enabled or disabled for the transit gateway peering attachment.
+ */
+export declare enum CreateTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentOptionsDynamicRoutingEnum {
+    Enable = "enable",
+    Disable = "disable"
+}
+/**
+ * Details about the transit gateway peering attachment.
+ */
+export declare class CreateTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentOptions extends SpeakeasyBase {
+    dynamicRouting?: CreateTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentOptionsDynamicRoutingEnum;
 }
 /**
  * Information about the requester transit gateway.
-**/
+ */
 export declare class CreateTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentRequesterTgwInfo extends SpeakeasyBase {
-    ownerId?: Record<string, any>;
-    region?: Record<string, any>;
-    transitGatewayId?: Record<string, any>;
+    coreNetworkId?: string;
+    ownerId?: string;
+    region?: string;
+    transitGatewayId?: string;
+}
+/**
+ * The state of the transit gateway peering attachment. Note that the <code>initiating</code> state has been deprecated.
+ */
+export declare enum CreateTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentStateEnum {
+    Initiating = "initiating",
+    InitiatingRequest = "initiatingRequest",
+    PendingAcceptance = "pendingAcceptance",
+    RollingBack = "rollingBack",
+    Pending = "pending",
+    Available = "available",
+    Modifying = "modifying",
+    Deleting = "deleting",
+    Deleted = "deleted",
+    Failed = "failed",
+    Rejected = "rejected",
+    Rejecting = "rejecting",
+    Failing = "failing"
 }
 /**
  * The status of the transit gateway peering attachment.
-**/
+ */
 export declare class CreateTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentStatus extends SpeakeasyBase {
-    code?: Record<string, any>;
-    message?: Record<string, any>;
+    code?: string;
+    message?: string;
+}
+/**
+ * Describes a tag.
+ */
+export declare class CreateTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentTags extends SpeakeasyBase {
+    key?: string;
+    value?: string;
 }
 /**
  * The transit gateway peering attachment.
-**/
+ */
 export declare class CreateTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachment extends SpeakeasyBase {
     accepterTgwInfo?: CreateTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentAccepterTgwInfo;
-    creationTime?: Record<string, any>;
+    accepterTransitGatewayAttachmentId?: string;
+    creationTime?: Date;
+    options?: CreateTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentOptions;
     requesterTgwInfo?: CreateTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentRequesterTgwInfo;
-    state?: Record<string, any>;
+    state?: CreateTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentStateEnum;
     status?: CreateTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentStatus;
-    tags?: Record<string, any>;
-    transitGatewayAttachmentId?: Record<string, any>;
+    tags?: CreateTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentTags[];
+    transitGatewayAttachmentId?: string;
 }
+/**
+ * Success
+ */
 export declare class CreateTransitGatewayPeeringAttachmentResult extends SpeakeasyBase {
     transitGatewayPeeringAttachment?: CreateTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachment;
 }

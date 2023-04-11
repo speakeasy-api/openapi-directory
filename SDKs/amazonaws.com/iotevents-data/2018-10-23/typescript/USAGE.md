@@ -1,49 +1,48 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { BatchAcknowledgeAlarmRequest, BatchAcknowledgeAlarmResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  BatchAcknowledgeAlarmRequest,
+  BatchAcknowledgeAlarmResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: BatchAcknowledgeAlarmRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
+});
+
+const req: BatchAcknowledgeAlarmRequest = {
+  requestBody: {
     acknowledgeActionRequests: [
       {
-        alarmModelName: "fugit",
-        keyValue: "et",
-        note: "nihil",
-        requestId: "rerum",
+        alarmModelName: "provident",
+        keyValue: "distinctio",
+        note: "quibusdam",
+        requestId: "unde",
       },
       {
-        alarmModelName: "dicta",
-        keyValue: "debitis",
-        note: "voluptatum",
-        requestId: "et",
+        alarmModelName: "nulla",
+        keyValue: "corrupti",
+        note: "illum",
+        requestId: "vel",
       },
       {
-        alarmModelName: "ut",
-        keyValue: "dolorem",
-        note: "et",
-        requestId: "voluptate",
+        alarmModelName: "error",
+        keyValue: "deserunt",
+        note: "suscipit",
+        requestId: "iure",
       },
     ],
   },
+  xAmzAlgorithm: "magnam",
+  xAmzContentSha256: "debitis",
+  xAmzCredential: "ipsa",
+  xAmzDate: "delectus",
+  xAmzSecurityToken: "tempora",
+  xAmzSignature: "suscipit",
+  xAmzSignedHeaders: "molestiae",
 };
 
 sdk.batchAcknowledgeAlarm(req).then((res: BatchAcknowledgeAlarmResponse | AxiosError) => {

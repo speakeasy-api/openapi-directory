@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ClusterEndpointEncryptionTypeEnum } from "./clusterendpointencryptiontypeenum";
-import { SseSpecification } from "./ssespecification";
+import { SSESpecification } from "./ssespecification";
 import { Tag } from "./tag";
 export declare class CreateClusterRequest extends SpeakeasyBase {
     availabilityZones?: string[];
@@ -13,7 +13,7 @@ export declare class CreateClusterRequest extends SpeakeasyBase {
     parameterGroupName?: string;
     preferredMaintenanceWindow?: string;
     replicationFactor: number;
-    sseSpecification?: SseSpecification;
+    sseSpecification?: SSESpecification;
     securityGroupIds?: string[];
     subnetGroupName?: string;
     tags?: Tag[];

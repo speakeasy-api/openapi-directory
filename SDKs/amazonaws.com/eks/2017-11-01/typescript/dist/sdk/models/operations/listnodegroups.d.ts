@@ -1,13 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListNodegroupsPathParams extends SpeakeasyBase {
-    name: string;
-}
-export declare class ListNodegroupsQueryParams extends SpeakeasyBase {
-    maxResults?: number;
-    nextToken?: string;
-}
-export declare class ListNodegroupsHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListNodegroupsRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -15,19 +9,45 @@ export declare class ListNodegroupsHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class ListNodegroupsRequest extends SpeakeasyBase {
-    pathParams: ListNodegroupsPathParams;
-    queryParams: ListNodegroupsQueryParams;
-    headers: ListNodegroupsHeaders;
+    /**
+     * The maximum number of node group results returned by <code>ListNodegroups</code> in paginated output. When you use this parameter, <code>ListNodegroups</code> returns only <code>maxResults</code> results in a single page along with a <code>nextToken</code> response element. You can see the remaining results of the initial request by sending another <code>ListNodegroups</code> request with the returned <code>nextToken</code> value. This value can be between 1 and 100. If you don't use this parameter, <code>ListNodegroups</code> returns up to 100 results and a <code>nextToken</code> value if applicable.
+     */
+    maxResults?: number;
+    /**
+     * The name of the Amazon EKS cluster that you would like to list node groups in.
+     */
+    name: string;
+    /**
+     * The <code>nextToken</code> value returned from a previous paginated <code>ListNodegroups</code> request where <code>maxResults</code> was used and the results exceeded the value of that parameter. Pagination continues from the end of the previous results that returned the <code>nextToken</code> value.
+     */
+    nextToken?: string;
 }
 export declare class ListNodegroupsResponse extends SpeakeasyBase {
+    /**
+     * ClientException
+     */
     clientException?: any;
     contentType: string;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * Success
+     */
     listNodegroupsResponse?: shared.ListNodegroupsResponse;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
-    serverException?: any;
-    serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServerException
+     */
+    serverException?: any;
+    /**
+     * ServiceUnavailableException
+     */
+    serviceUnavailableException?: any;
 }

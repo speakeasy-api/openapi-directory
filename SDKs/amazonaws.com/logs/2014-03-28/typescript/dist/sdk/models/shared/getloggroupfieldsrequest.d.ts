@@ -1,5 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class GetLogGroupFieldsRequest extends SpeakeasyBase {
-    logGroupName: string;
+    logGroupIdentifier?: string;
+    logGroupName?: string;
     time?: number;
 }

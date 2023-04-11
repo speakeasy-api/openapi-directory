@@ -1,18 +1,21 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetRequest, GetResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetRequest,
+  GetResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  BaudrateEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetRequest = {
-  pathParams: {
-    address: "sit",
-    baudrate: 2259404117704393152,
-    device: "culpa",
-  },
+  address: "48",
+  baudrate: BaudrateEnum.TwoThousandFourHundred,
+  device: "ttyAMA0",
 };
 
 sdk.get(req).then((res: GetResponse | AxiosError) => {

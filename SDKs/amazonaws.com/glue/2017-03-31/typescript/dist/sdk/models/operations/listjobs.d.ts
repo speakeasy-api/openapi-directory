@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListJobsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListJobsXAmzTargetEnum {
-    AwsGlueListJobs = "AWSGlue.ListJobs"
+    AWSGlueListJobs = "AWSGlue.ListJobs"
 }
-export declare class ListJobsHeaders extends SpeakeasyBase {
+export declare class ListJobsRequest extends SpeakeasyBase {
+    listJobsRequest: shared.ListJobsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,17 +23,28 @@ export declare class ListJobsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListJobsXAmzTargetEnum;
 }
-export declare class ListJobsRequest extends SpeakeasyBase {
-    queryParams: ListJobsQueryParams;
-    headers: ListJobsHeaders;
-    request: shared.ListJobsRequest;
-}
 export declare class ListJobsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * Success
+     */
     listJobsResponse?: shared.ListJobsResponse;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

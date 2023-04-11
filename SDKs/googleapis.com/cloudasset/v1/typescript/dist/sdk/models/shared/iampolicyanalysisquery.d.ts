@@ -1,0 +1,35 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { AccessSelector } from "./accessselector";
+import { ConditionContext } from "./conditioncontext";
+import { IdentitySelector } from "./identityselector";
+import { Options } from "./options";
+import { ResourceSelector } from "./resourceselector";
+/**
+ * IAM policy analysis query message.
+ */
+export declare class IamPolicyAnalysisQuery extends SpeakeasyBase {
+    /**
+     * Specifies roles and/or permissions to analyze, to determine both the identities possessing them and the resources they control. If multiple values are specified, results will include roles or permissions matching any of them. The total number of roles and permissions should be equal or less than 10.
+     */
+    accessSelector?: AccessSelector;
+    /**
+     * The IAM conditions context.
+     */
+    conditionContext?: ConditionContext;
+    /**
+     * Specifies an identity for which to determine resource access, based on roles assigned either directly to them or to the groups they belong to, directly or indirectly.
+     */
+    identitySelector?: IdentitySelector;
+    /**
+     * Contains query options.
+     */
+    options?: Options;
+    /**
+     * Specifies the resource to analyze for access policies, which may be set directly on the resource, or on ancestors such as organizations, folders or projects.
+     */
+    resourceSelector?: ResourceSelector;
+    /**
+     * Required. The relative name of the root asset. Only resources and IAM policies within the scope will be analyzed. This can only be an organization number (such as "organizations/123"), a folder number (such as "folders/123"), a project ID (such as "projects/my-project-id"), or a project number (such as "projects/12345"). To know how to get organization id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id). To know how to get folder or project id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-folders#viewing_or_listing_folders_and_projects).
+     */
+    scope?: string;
+}

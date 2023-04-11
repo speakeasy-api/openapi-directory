@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListEnvironmentTemplatesQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListEnvironmentTemplatesXAmzTargetEnum {
     AwsProton20200720ListEnvironmentTemplates = "AwsProton20200720.ListEnvironmentTemplates"
 }
-export declare class ListEnvironmentTemplatesHeaders extends SpeakeasyBase {
+export declare class ListEnvironmentTemplatesRequest extends SpeakeasyBase {
+    listEnvironmentTemplatesInput: shared.ListEnvironmentTemplatesInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,18 +14,37 @@ export declare class ListEnvironmentTemplatesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: ListEnvironmentTemplatesXAmzTargetEnum;
-}
-export declare class ListEnvironmentTemplatesRequest extends SpeakeasyBase {
-    queryParams: ListEnvironmentTemplatesQueryParams;
-    headers: ListEnvironmentTemplatesHeaders;
-    request: shared.ListEnvironmentTemplatesInput;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class ListEnvironmentTemplatesResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * Success
+     */
     listEnvironmentTemplatesOutput?: shared.ListEnvironmentTemplatesOutput;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

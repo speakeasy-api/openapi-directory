@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Sessions {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,27 +9,31 @@ export declare class Sessions {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * sessionIdDelete - Sessions: Delete by Id
+     * Sessions: Delete by Id
      *
+     * @remarks
      * Remove a session and dependant data.
-    **/
+     */
     sessionIdDelete(req: operations.SessionIdDeleteRequest, config?: AxiosRequestConfig): Promise<operations.SessionIdDeleteResponse>;
     /**
-     * sessionIdGet - Sessions: Get
+     * Sessions: Get
      *
+     * @remarks
      * Get session metadata
-    **/
+     */
     sessionIdGet(req: operations.SessionIdGetRequest, config?: AxiosRequestConfig): Promise<operations.SessionIdGetResponse>;
     /**
-     * storyIdSessionPost - Sessions: Create a Session
+     * Sessions: Create a Session
      *
+     * @remarks
      * Create a new session
-    **/
+     */
     storyIdSessionPost(req: operations.StoryIdSessionPostRequest, config?: AxiosRequestConfig): Promise<operations.StoryIdSessionPostResponse>;
     /**
-     * storyIdSessionsGet - Sessions: List Story Sessions
+     * Sessions: List Story Sessions
      *
+     * @remarks
      * Get a list of sessions asscoaited with this story
-    **/
+     */
     storyIdSessionsGet(req: operations.StoryIdSessionsGetRequest, config?: AxiosRequestConfig): Promise<operations.StoryIdSessionsGetResponse>;
 }

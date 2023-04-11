@@ -1,44 +1,67 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetChatHeadUsingGetQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETChatHeadUsingGETRequest extends SpeakeasyBase {
     padID?: string;
 }
-export declare class GetChatHeadUsingGet200ApplicationJsonDataChatHead extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class GETChatHeadUsingGet500ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class GETChatHeadUsingGet401ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+/**
+ * generic api error (code 1)
+ */
+export declare class GETChatHeadUsingGet400ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+export declare class GETChatHeadUsingGet200ApplicationJSONDataChatHead extends SpeakeasyBase {
     text?: string;
     time?: number;
     userId?: string;
     userName?: string;
 }
-export declare class GetChatHeadUsingGet200ApplicationJsonData extends SpeakeasyBase {
-    chatHead?: GetChatHeadUsingGet200ApplicationJsonDataChatHead;
+export declare class GETChatHeadUsingGet200ApplicationJSONData extends SpeakeasyBase {
+    chatHead?: GETChatHeadUsingGet200ApplicationJSONDataChatHead;
 }
-export declare class GetChatHeadUsingGet200ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class GETChatHeadUsingGet200ApplicationJSON extends SpeakeasyBase {
     code?: number;
-    data?: GetChatHeadUsingGet200ApplicationJsonData;
+    data?: GETChatHeadUsingGet200ApplicationJSONData;
     message?: string;
 }
-export declare class GetChatHeadUsingGet400ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class GetChatHeadUsingGet401ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class GetChatHeadUsingGet500ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class GetChatHeadUsingGetRequest extends SpeakeasyBase {
-    queryParams: GetChatHeadUsingGetQueryParams;
-}
-export declare class GetChatHeadUsingGetResponse extends SpeakeasyBase {
+export declare class GETChatHeadUsingGETResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getChatHeadUsingGET200ApplicationJSONObject?: GetChatHeadUsingGet200ApplicationJson;
-    getChatHeadUsingGET400ApplicationJSONObject?: GetChatHeadUsingGet400ApplicationJson;
-    getChatHeadUsingGET401ApplicationJSONObject?: GetChatHeadUsingGet401ApplicationJson;
-    getChatHeadUsingGET500ApplicationJSONObject?: GetChatHeadUsingGet500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    getChatHeadUsingGET200ApplicationJSONObject?: GETChatHeadUsingGet200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    getChatHeadUsingGET400ApplicationJSONObject?: GETChatHeadUsingGet400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    getChatHeadUsingGET401ApplicationJSONObject?: GETChatHeadUsingGet401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    getChatHeadUsingGET500ApplicationJSONObject?: GETChatHeadUsingGet500ApplicationJSON;
 }

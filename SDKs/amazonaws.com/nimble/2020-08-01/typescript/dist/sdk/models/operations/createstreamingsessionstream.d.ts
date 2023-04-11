@@ -1,11 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreateStreamingSessionStreamPathParams extends SpeakeasyBase {
-    sessionId: string;
-    studioId: string;
+import { AxiosResponse } from "axios";
+export declare class CreateStreamingSessionStreamRequestBody extends SpeakeasyBase {
+    /**
+     * The expiration time in seconds.
+     */
+    expirationInSeconds?: number;
 }
-export declare class CreateStreamingSessionStreamHeaders extends SpeakeasyBase {
+export declare class CreateStreamingSessionStreamRequest extends SpeakeasyBase {
+    requestBody: CreateStreamingSessionStreamRequestBody;
     xAmzAlgorithm?: string;
+    /**
+     * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. If you don’t specify a client token, the Amazon Web Services SDK automatically generates a client token and uses it for the request to ensure idempotency.
+     */
     xAmzClientToken?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,24 +20,49 @@ export declare class CreateStreamingSessionStreamHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class CreateStreamingSessionStreamRequestBody extends SpeakeasyBase {
-    expirationInSeconds?: number;
-}
-export declare class CreateStreamingSessionStreamRequest extends SpeakeasyBase {
-    pathParams: CreateStreamingSessionStreamPathParams;
-    headers: CreateStreamingSessionStreamHeaders;
-    request: CreateStreamingSessionStreamRequestBody;
+    /**
+     * The streaming session ID.
+     */
+    sessionId: string;
+    /**
+     * The studio ID.
+     */
+    studioId: string;
 }
 export declare class CreateStreamingSessionStreamResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     createStreamingSessionStreamResponse?: shared.CreateStreamingSessionStreamResponse;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
-    serviceQuotaExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceQuotaExceededException
+     */
+    serviceQuotaExceededException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

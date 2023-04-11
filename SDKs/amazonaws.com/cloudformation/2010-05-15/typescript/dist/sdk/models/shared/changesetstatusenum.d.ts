@@ -1,0 +1,10 @@
+export declare enum ChangeSetStatusEnum {
+    CreatePending = "CREATE_PENDING",
+    CreateInProgress = "CREATE_IN_PROGRESS",
+    CreateComplete = "CREATE_COMPLETE",
+    DeletePending = "DELETE_PENDING",
+    DeleteInProgress = "DELETE_IN_PROGRESS",
+    DeleteComplete = "DELETE_COMPLETE",
+    DeleteFailed = "DELETE_FAILED",
+    Failed = "FAILED"
+}

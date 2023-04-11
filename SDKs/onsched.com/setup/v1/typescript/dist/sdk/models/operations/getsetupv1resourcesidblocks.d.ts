@@ -1,19 +1,34 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetSetupV1ResourcesIdBlocksPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class GetSetupV1ResourcesIdBlocksQueryParams extends SpeakeasyBase {
-    endDate?: Date;
-    limit?: number;
-    offset?: number;
-    startDate?: Date;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class GetSetupV1ResourcesIdBlocksRequest extends SpeakeasyBase {
-    pathParams: GetSetupV1ResourcesIdBlocksPathParams;
-    queryParams: GetSetupV1ResourcesIdBlocksQueryParams;
+    /**
+     * YYYY-MM-DD, filter on/before endDate
+     */
+    endDate?: Date;
+    /**
+     * id of resource to list blocks for
+     */
+    id: string;
+    /**
+     * Page limit default 20, max 100
+     */
+    limit?: number;
+    /**
+     * Starting row of page, default 0
+     */
+    offset?: number;
+    /**
+     * YYYY-MM-DD, filter blocks on/after startDate
+     */
+    startDate?: Date;
 }
 export declare class GetSetupV1ResourcesIdBlocksResponse extends SpeakeasyBase {
     contentType: string;
-    resourceBlockListViewModel?: Record<string, any>;
+    /**
+     * resource block object's
+     */
+    resourceBlockListViewModel?: shared.ResourceBlockListViewModel;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

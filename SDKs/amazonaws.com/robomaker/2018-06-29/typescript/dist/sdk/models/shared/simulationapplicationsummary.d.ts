@@ -3,7 +3,7 @@ import { RobotSoftwareSuite } from "./robotsoftwaresuite";
 import { SimulationSoftwareSuite } from "./simulationsoftwaresuite";
 /**
  * Summary information for a simulation application.
-**/
+ */
 export declare class SimulationApplicationSummary extends SpeakeasyBase {
     arn?: string;
     lastUpdatedAt?: Date;

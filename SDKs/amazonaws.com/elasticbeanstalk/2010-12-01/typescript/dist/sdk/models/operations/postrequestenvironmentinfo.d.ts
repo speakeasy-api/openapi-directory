@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostRequestEnvironmentInfoActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTRequestEnvironmentInfoActionEnum {
     RequestEnvironmentInfo = "RequestEnvironmentInfo"
 }
-export declare enum PostRequestEnvironmentInfoVersionEnum {
+export declare enum POSTRequestEnvironmentInfoVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostRequestEnvironmentInfoQueryParams extends SpeakeasyBase {
-    action: PostRequestEnvironmentInfoActionEnum;
-    version: PostRequestEnvironmentInfoVersionEnum;
-}
-export declare class PostRequestEnvironmentInfoHeaders extends SpeakeasyBase {
+export declare class POSTRequestEnvironmentInfoRequest extends SpeakeasyBase {
+    action: POSTRequestEnvironmentInfoActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTRequestEnvironmentInfoVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +18,8 @@ export declare class PostRequestEnvironmentInfoHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostRequestEnvironmentInfoRequest extends SpeakeasyBase {
-    queryParams: PostRequestEnvironmentInfoQueryParams;
-    headers: PostRequestEnvironmentInfoHeaders;
-    request?: Uint8Array;
-}
-export declare class PostRequestEnvironmentInfoResponse extends SpeakeasyBase {
+export declare class POSTRequestEnvironmentInfoResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

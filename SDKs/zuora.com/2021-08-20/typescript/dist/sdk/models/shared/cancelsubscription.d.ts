@@ -7,7 +7,9 @@ export declare enum CancelSubscriptionCancellationPolicyEnum {
 /**
  * Information about an order action of type `CancelSubscription`.
  *
-**/
+ * @remarks
+ *
+ */
 export declare class CancelSubscription extends SpeakeasyBase {
     cancellationEffectiveDate?: Date;
     cancellationPolicy: CancelSubscriptionCancellationPolicyEnum;

@@ -1,0 +1,7 @@
+export * from "./airqualityairqualityget";
+export * from "./findplacesfindplacesget";
+export * from "./findplacesprefixfindplacesprefixget";
+export * from "./mapmapget";
+export * from "./nearestplacenearestplaceget";
+export * from "./pointpointget";
+export * from "./timemachinetimemachineget";

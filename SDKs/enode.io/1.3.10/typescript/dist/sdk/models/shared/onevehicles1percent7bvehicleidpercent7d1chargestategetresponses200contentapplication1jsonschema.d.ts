@@ -4,13 +4,64 @@ export declare enum Onevehicles1Percent7BvehicleIdPercent7D1chargeStateGetRespon
     Default = "DEFAULT"
 }
 export declare class Onevehicles1Percent7BvehicleIdPercent7D1chargeStateGetResponses200ContentApplication1jsonSchema extends SpeakeasyBase {
+    /**
+     * Vehicle's maximum physical battery capacity in kWh. This number slowly decreases/degrades over time.
+     */
     batteryCapacity?: number;
+    /**
+     * Remaining battery in percent
+     */
     batteryLevel?: number;
+    /**
+     * Charge limit, as a percent of `batteryCapacity`.
+     */
     chargeLimit?: number;
+    /**
+     * The current charge rate in kW.
+     *
+     * @remarks
+     *
+     * This property is only available when the vehicle is charging, and is `null` any other time.
+     */
     chargeRate?: number;
+    /**
+     * Estimated time until the current charging intent is completed, in minutes.
+     *
+     * @remarks
+     *
+     * This property is only available when the vehicle is charging, and is `null` any other time.
+     */
     chargeTimeRemaining?: number;
+    /**
+     * Current charging status of the vehicle
+     */
     isCharging?: boolean;
+    /**
+     * Array of string constants that explain why the car is or is not charging. May contain multiple values.
+     *
+     * @remarks
+     *
+     * **Any:**
+     * - DEFAULT - the car is not being controlled by Enode
+     *
+     * **Not Charging:**
+     * - NOT_PLUGGED_IN - because the car is not plugged into a charger
+     * - FULLY_CHARGED - because the car is fully charged
+     * - MANUALLY_STOPPED - because the car has been manually commanded to stop charging
+     * - SMART_CHARGING_DELAY - because Smart Charging has identified an opportunity to delay charging until prices are lower
+     *
+     * **Charging:**
+     * - MANUALLY_STARTED - because the car has been manually commanded to start charging
+     * - SMART_CHARGING_ACTIVE - because Smart Charging has identified that this is an optimal time to charge
+     * - SMART_CHARGING_DEADLINE - because, regardless of price, charging must be active to meet the configured deadline
+     */
     isChargingReasons?: Onevehicles1Percent7BvehicleIdPercent7D1chargeStateGetResponses200ContentApplication1jsonSchemaIsChargingReasonsEnum[];
+    /**
+     * Indicates whether the vehicle is connected to a charging box (regardless of whether it is actually charging)
+     */
     isPluggedIn?: boolean;
+    /**
+     * Estimated remaining kilometers
+     */
     range?: number;
 }

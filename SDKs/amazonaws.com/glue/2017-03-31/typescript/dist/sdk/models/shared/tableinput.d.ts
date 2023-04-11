@@ -4,7 +4,7 @@ import { StorageDescriptor } from "./storagedescriptor";
 import { TableIdentifier } from "./tableidentifier";
 /**
  * A structure used to define a table.
-**/
+ */
 export declare class TableInput extends SpeakeasyBase {
     description?: string;
     lastAccessTime?: Date;

@@ -9,6 +9,12 @@ export declare class TestsTests extends SpeakeasyBase {
     runTime?: number;
     source?: string;
 }
+/**
+ * test metadata for a build
+ *
+ * @remarks
+ *
+ */
 export declare class Tests extends SpeakeasyBase {
     tests?: TestsTests[];
 }

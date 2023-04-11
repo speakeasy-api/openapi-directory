@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetGetSamlProviderActionEnum {
-    GetSamlProvider = "GetSAMLProvider"
+import { AxiosResponse } from "axios";
+export declare enum GETGETSAMLProviderActionEnum {
+    GetSAMLProvider = "GetSAMLProvider"
 }
-export declare enum GetGetSamlProviderVersionEnum {
+export declare enum GETGETSAMLProviderVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class GetGetSamlProviderQueryParams extends SpeakeasyBase {
-    action: GetGetSamlProviderActionEnum;
+export declare class GETGETSAMLProviderRequest extends SpeakeasyBase {
+    action: GETGETSAMLProviderActionEnum;
+    /**
+     * <p>The Amazon Resource Name (ARN) of the SAML provider resource object in IAM to get information about.</p> <p>For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>.</p>
+     */
     samlProviderArn: string;
-    version: GetGetSamlProviderVersionEnum;
-}
-export declare class GetGetSamlProviderHeaders extends SpeakeasyBase {
+    version: GETGETSAMLProviderVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetGetSamlProviderHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetGetSamlProviderRequest extends SpeakeasyBase {
-    queryParams: GetGetSamlProviderQueryParams;
-    headers: GetGetSamlProviderHeaders;
-}
-export declare class GetGetSamlProviderResponse extends SpeakeasyBase {
+export declare class GETGETSAMLProviderResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

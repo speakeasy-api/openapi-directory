@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteTransitGatewayMulticastDomainActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteTransitGatewayMulticastDomainActionEnum {
     DeleteTransitGatewayMulticastDomain = "DeleteTransitGatewayMulticastDomain"
 }
-export declare enum PostDeleteTransitGatewayMulticastDomainVersionEnum {
+export declare enum POSTDeleteTransitGatewayMulticastDomainVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDeleteTransitGatewayMulticastDomainQueryParams extends SpeakeasyBase {
-    action: PostDeleteTransitGatewayMulticastDomainActionEnum;
-    version: PostDeleteTransitGatewayMulticastDomainVersionEnum;
-}
-export declare class PostDeleteTransitGatewayMulticastDomainHeaders extends SpeakeasyBase {
+export declare class POSTDeleteTransitGatewayMulticastDomainRequest extends SpeakeasyBase {
+    action: POSTDeleteTransitGatewayMulticastDomainActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteTransitGatewayMulticastDomainVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteTransitGatewayMulticastDomainHeaders extends Spea
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteTransitGatewayMulticastDomainRequest extends SpeakeasyBase {
-    queryParams: PostDeleteTransitGatewayMulticastDomainQueryParams;
-    headers: PostDeleteTransitGatewayMulticastDomainHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteTransitGatewayMulticastDomainResponse extends SpeakeasyBase {
+export declare class POSTDeleteTransitGatewayMulticastDomainResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,14 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolTelnetIpaliasEnablePathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ProtocolTelnetIpaliasEnableRequest extends SpeakeasyBase {
+    /**
+     * Agent to manipulate TELNET IP alias
+     */
     agentNum: number;
     ipaddress: string;
     port: number;
 }
-export declare class ProtocolTelnetIpaliasEnableRequest extends SpeakeasyBase {
-    pathParams: ProtocolTelnetIpaliasEnablePathParams;
-}
 export declare class ProtocolTelnetIpaliasEnableResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolTelnetIpaliasEnable200ApplicationJSONString?: string;
 }

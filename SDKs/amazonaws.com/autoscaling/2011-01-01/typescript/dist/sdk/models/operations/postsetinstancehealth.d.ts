@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostSetInstanceHealthActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTSetInstanceHealthActionEnum {
     SetInstanceHealth = "SetInstanceHealth"
 }
-export declare enum PostSetInstanceHealthVersionEnum {
+export declare enum POSTSetInstanceHealthVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class PostSetInstanceHealthQueryParams extends SpeakeasyBase {
-    action: PostSetInstanceHealthActionEnum;
-    version: PostSetInstanceHealthVersionEnum;
-}
-export declare class PostSetInstanceHealthHeaders extends SpeakeasyBase {
+export declare class POSTSetInstanceHealthRequest extends SpeakeasyBase {
+    action: POSTSetInstanceHealthActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTSetInstanceHealthVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostSetInstanceHealthHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostSetInstanceHealthRequest extends SpeakeasyBase {
-    queryParams: PostSetInstanceHealthQueryParams;
-    headers: PostSetInstanceHealthHeaders;
-    request?: Uint8Array;
-}
-export declare class PostSetInstanceHealthResponse extends SpeakeasyBase {
+export declare class POSTSetInstanceHealthResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

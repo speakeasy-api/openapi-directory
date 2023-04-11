@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { IpSet } from "./ipset";
-export declare class CreateIpSetResponse extends SpeakeasyBase {
+import { IPSet } from "./ipset";
+/**
+ * Success
+ */
+export declare class CreateIPSetResponse extends SpeakeasyBase {
     changeToken?: string;
-    ipSet?: IpSet;
+    ipSet?: IPSet;
 }

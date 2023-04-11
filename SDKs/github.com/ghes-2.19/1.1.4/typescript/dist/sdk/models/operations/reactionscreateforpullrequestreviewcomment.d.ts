@@ -1,10 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReactionsCreateForPullRequestReviewCommentPathParams extends SpeakeasyBase {
-    commentId: number;
-    owner: string;
-    repo: string;
-}
+import { AxiosResponse } from "axios";
+/**
+ * The [reaction type](https://docs.github.com/enterprise-server@2.19/rest/reference/reactions#reaction-types) to add to the pull request review comment.
+ */
 export declare enum ReactionsCreateForPullRequestReviewCommentRequestBodyContentEnum {
     Plus1 = "+1",
     Minus1 = "-1",
@@ -16,20 +15,41 @@ export declare enum ReactionsCreateForPullRequestReviewCommentRequestBodyContent
     Eyes = "eyes"
 }
 export declare class ReactionsCreateForPullRequestReviewCommentRequestBody extends SpeakeasyBase {
+    /**
+     * The [reaction type](https://docs.github.com/enterprise-server@2.19/rest/reference/reactions#reaction-types) to add to the pull request review comment.
+     */
     content: ReactionsCreateForPullRequestReviewCommentRequestBodyContentEnum;
 }
-export declare class ReactionsCreateForPullRequestReviewComment415ApplicationJson extends SpeakeasyBase {
+export declare class ReactionsCreateForPullRequestReviewCommentRequest extends SpeakeasyBase {
+    requestBody: ReactionsCreateForPullRequestReviewCommentRequestBody;
+    /**
+     * comment_id parameter
+     */
+    commentId: number;
+    owner: string;
+    repo: string;
+}
+/**
+ * Preview header missing
+ */
+export declare class ReactionsCreateForPullRequestReviewComment415ApplicationJSON extends SpeakeasyBase {
     documentationUrl: string;
     message: string;
-}
-export declare class ReactionsCreateForPullRequestReviewCommentRequest extends SpeakeasyBase {
-    pathParams: ReactionsCreateForPullRequestReviewCommentPathParams;
-    request?: ReactionsCreateForPullRequestReviewCommentRequestBody;
 }
 export declare class ReactionsCreateForPullRequestReviewCommentResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Reaction exists
+     */
     reaction?: shared.Reaction;
-    reactionsCreateForPullRequestReviewComment415ApplicationJSONObject?: ReactionsCreateForPullRequestReviewComment415ApplicationJson;
+    /**
+     * Preview header missing
+     */
+    reactionsCreateForPullRequestReviewComment415ApplicationJSONObject?: ReactionsCreateForPullRequestReviewComment415ApplicationJSON;
+    /**
+     * Validation failed
+     */
     validationError?: shared.ValidationError;
 }

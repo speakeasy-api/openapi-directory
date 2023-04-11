@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetAddressTotalSentPathParams extends SpeakeasyBase {
-    address: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetAddressTotalSentRequest extends SpeakeasyBase {
-    pathParams: GetAddressTotalSentPathParams;
+    /**
+     * Address
+     */
+    address: string;
 }
 export declare class GetAddressTotalSentResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Total sent by address
+     */
     getAddressTotalSentResponse?: number;
 }

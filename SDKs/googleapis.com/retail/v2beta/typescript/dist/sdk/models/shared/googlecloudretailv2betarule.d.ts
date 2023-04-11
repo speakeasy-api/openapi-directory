@@ -1,0 +1,51 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { GoogleCloudRetailV2betaCondition } from "./googlecloudretailv2betacondition";
+import { GoogleCloudRetailV2betaRuleBoostAction } from "./googlecloudretailv2betaruleboostaction";
+import { GoogleCloudRetailV2betaRuleDoNotAssociateAction } from "./googlecloudretailv2betaruledonotassociateaction";
+import { GoogleCloudRetailV2betaRuleFilterAction } from "./googlecloudretailv2betarulefilteraction";
+import { GoogleCloudRetailV2betaRuleIgnoreAction } from "./googlecloudretailv2betaruleignoreaction";
+import { GoogleCloudRetailV2betaRuleOnewaySynonymsAction } from "./googlecloudretailv2betaruleonewaysynonymsaction";
+import { GoogleCloudRetailV2betaRuleRedirectAction } from "./googlecloudretailv2betaruleredirectaction";
+import { GoogleCloudRetailV2betaRuleReplacementAction } from "./googlecloudretailv2betarulereplacementaction";
+import { GoogleCloudRetailV2betaRuleTwowaySynonymsAction } from "./googlecloudretailv2betaruletwowaysynonymsaction";
+/**
+ * A rule is a condition-action pair * A condition defines when a rule is to be triggered. * An action specifies what occurs on that trigger. Currently rules only work for controls with SOLUTION_TYPE_SEARCH.
+ */
+export declare class GoogleCloudRetailV2betaRule extends SpeakeasyBase {
+    /**
+     * A boost action to apply to results matching condition specified above.
+     */
+    boostAction?: GoogleCloudRetailV2betaRuleBoostAction;
+    /**
+     * Metadata that is used to define a condition that triggers an action. A valid condition must specify at least one of 'query_terms' or 'products_filter'. If multiple fields are specified, the condition is met if all the fields are satisfied e.g. if a set of query terms and product_filter are set, then only items matching the product_filter for requests with a query matching the query terms wil get boosted.
+     */
+    condition?: GoogleCloudRetailV2betaCondition;
+    /**
+     * Prevents `query_term` from being associated with specified terms during search. Example: Don't associate "gShoe" and "cheap".
+     */
+    doNotAssociateAction?: GoogleCloudRetailV2betaRuleDoNotAssociateAction;
+    /**
+     * * Rule Condition: - No Condition.query_terms provided is a global match. - 1 or more Condition.query_terms provided are combined with OR operator. * Action Input: The request query and filter that are applied to the retrieved products, in addition to any filters already provided with the SearchRequest. The AND operator is used to combine the query's existing filters with the filter rule(s). NOTE: May result in 0 results when filters conflict. * Action Result: Filters the returned objects to be ONLY those that passed the filter.
+     */
+    filterAction?: GoogleCloudRetailV2betaRuleFilterAction;
+    /**
+     * Prevents a term in the query from being used in search. Example: Don't search for "shoddy".
+     */
+    ignoreAction?: GoogleCloudRetailV2betaRuleIgnoreAction;
+    /**
+     * Maps a set of terms to a set of synonyms. Set of synonyms will be treated as synonyms of each query term only. `query_terms` will not be treated as synonyms of each other. Example: "sneakers" will use a synonym of "shoes". "shoes" will not use a synonym of "sneakers".
+     */
+    onewaySynonymsAction?: GoogleCloudRetailV2betaRuleOnewaySynonymsAction;
+    /**
+     * Redirects a shopper to a specific page. * Rule Condition: - Must specify Condition.query_terms. * Action Input: Request Query * Action Result: Redirects shopper to provided uri.
+     */
+    redirectAction?: GoogleCloudRetailV2betaRuleRedirectAction;
+    /**
+     * Replaces a term in the query. Multiple replacement candidates can be specified. All `query_terms` will be replaced with the replacement term. Example: Replace "gShoe" with "google shoe".
+     */
+    replacementAction?: GoogleCloudRetailV2betaRuleReplacementAction;
+    /**
+     * Creates a set of terms that will be treated as synonyms of each other. Example: synonyms of "sneakers" and "shoes": * "sneakers" will use a synonym of "shoes". * "shoes" will use a synonym of "sneakers".
+     */
+    twowaySynonymsAction?: GoogleCloudRetailV2betaRuleTwowaySynonymsAction;
+}

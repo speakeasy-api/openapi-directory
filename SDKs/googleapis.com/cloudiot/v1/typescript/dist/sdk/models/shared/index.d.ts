@@ -22,7 +22,6 @@ export * from "./policy";
 export * from "./publickeycertificate";
 export * from "./publickeycredential";
 export * from "./registrycredential";
-export * from "./security";
 export * from "./sendcommandtodevicerequest";
 export * from "./setiampolicyrequest";
 export * from "./statenotificationconfig";

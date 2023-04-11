@@ -6,489 +6,480 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/cloudtrace/v2/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/cloudtrace/v2/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CloudtraceProjectsTracesBatchWriteRequest, CloudtraceProjectsTracesBatchWriteResponse } from "openapi/src/sdk/models/operations";
+import {
+  CloudtraceProjectsTracesBatchWriteRequest,
+  CloudtraceProjectsTracesBatchWriteResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  SpanSpanKindEnum,
+  MessageEventTypeEnum,
+  LinkTypeEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: CloudtraceProjectsTracesBatchWriteRequest = {
-  security: {
-    option1: {
-      oauth2: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-      oauth2c: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-    },
-  },
-  pathParams: {
-    name: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  batchWriteSpansRequest: {
     spans: [
       {
         attributes: {
           attributeMap: {
-            "voluptatum": {
+            "quibusdam": {
               boolValue: false,
-              intValue: "ut",
+              intValue: "unde",
               stringValue: {
-                truncatedByteCount: 161231572858529631,
-                value: "et",
+                truncatedByteCount: 857946,
+                value: "corrupti",
               },
             },
-          },
-          droppedAttributesCount: 7373105480197164748,
-        },
-        childSpanCount: 3287288577352441706,
-        displayName: {
-          truncatedByteCount: 3930927879439176946,
-          value: "totam",
-        },
-        endTime: "dolores",
-        links: {
-          droppedLinksCount: 1929546706668609706,
-          link: [
-            {
-              attributes: {
-                attributeMap: {
-                  "odio": {
-                    boolValue: true,
-                    intValue: "id",
-                    stringValue: {
-                      truncatedByteCount: 959367522974354090,
-                      value: "accusantium",
-                    },
-                  },
-                  "totam": {
-                    boolValue: false,
-                    intValue: "quis",
-                    stringValue: {
-                      truncatedByteCount: 3398579248012586914,
-                      value: "aut",
-                    },
-                  },
-                },
-                droppedAttributesCount: 3317123977833389635,
-              },
-              spanId: "non",
-              traceId: "voluptas",
-              type: "CHILD_LINKED_SPAN",
-            },
-          ],
-        },
-        name: "aut",
-        parentSpanId: "illo",
-        sameProcessAsParentSpan: false,
-        spanId: "officiis",
-        spanKind: "INTERNAL",
-        stackTrace: {
-          stackFrames: {
-            droppedFramesCount: 8514850266767180993,
-            frame: [
-              {
-                columnNumber: "odio",
-                fileName: {
-                  truncatedByteCount: 7699391924090763411,
-                  value: "recusandae",
-                },
-                functionName: {
-                  truncatedByteCount: 7561811714888168464,
-                  value: "ipsum",
-                },
-                lineNumber: "eveniet",
-                loadModule: {
-                  buildId: {
-                    truncatedByteCount: 303089054982227392,
-                    value: "sint",
-                  },
-                  module: {
-                    truncatedByteCount: 5392504858645185670,
-                    value: "ut",
-                  },
-                },
-                originalFunctionName: {
-                  truncatedByteCount: 406703151708498928,
-                  value: "aut",
-                },
-                sourceVersion: {
-                  truncatedByteCount: 5837486892148644279,
-                  value: "tempore",
-                },
-              },
-            ],
-          },
-          stackTraceHashId: "maiores",
-        },
-        startTime: "incidunt",
-        status: {
-          code: 7242748068272024738,
-          details: [
-            {
-              "in": "et",
-              "omnis": "ipsum",
-            },
-            {
-              "dolores": "placeat",
-            },
-            {
-              "rerum": "mollitia",
-              "voluptas": "quam",
-            },
-          ],
-          message: "reprehenderit",
-        },
-        timeEvents: {
-          droppedAnnotationsCount: 6056649900269286653,
-          droppedMessageEventsCount: 8056746523676181822,
-          timeEvent: [
-            {
-              annotation: {
-                attributes: {
-                  attributeMap: {
-                    "autem": {
-                      boolValue: true,
-                      intValue: "ut",
-                      stringValue: {
-                        truncatedByteCount: 8559453321117178323,
-                        value: "ab",
-                      },
-                    },
-                    "neque": {
-                      boolValue: true,
-                      intValue: "et",
-                      stringValue: {
-                        truncatedByteCount: 4304520335772049496,
-                        value: "esse",
-                      },
-                    },
-                  },
-                  droppedAttributesCount: 5902760509050140210,
-                },
-                description: {
-                  truncatedByteCount: 9021104375654741729,
-                  value: "velit",
-                },
-              },
-              messageEvent: {
-                compressedSizeBytes: "cumque",
-                id: "soluta",
-                type: "SENT",
-                uncompressedSizeBytes: "voluptates",
-              },
-              time: "magni",
-            },
-            {
-              annotation: {
-                attributes: {
-                  attributeMap: {
-                    "optio": {
-                      boolValue: true,
-                      intValue: "earum",
-                      stringValue: {
-                        truncatedByteCount: 4391202566038595699,
-                        value: "omnis",
-                      },
-                    },
-                    "ut": {
-                      boolValue: false,
-                      intValue: "dolor",
-                      stringValue: {
-                        truncatedByteCount: 7945398411639602224,
-                        value: "error",
-                      },
-                    },
-                    "reprehenderit": {
-                      boolValue: false,
-                      intValue: "nostrum",
-                      stringValue: {
-                        truncatedByteCount: 950400323440343118,
-                        value: "laboriosam",
-                      },
-                    },
-                  },
-                  droppedAttributesCount: 1937101031588528881,
-                },
-                description: {
-                  truncatedByteCount: 6604365855503062775,
-                  value: "soluta",
-                },
-              },
-              messageEvent: {
-                compressedSizeBytes: "aut",
-                id: "quas",
-                type: "RECEIVED",
-                uncompressedSizeBytes: "laudantium",
-              },
-              time: "autem",
-            },
-            {
-              annotation: {
-                attributes: {
-                  attributeMap: {
-                    "expedita": {
-                      boolValue: false,
-                      intValue: "perferendis",
-                      stringValue: {
-                        truncatedByteCount: 8497925768463229012,
-                        value: "ratione",
-                      },
-                    },
-                  },
-                  droppedAttributesCount: 3967212276624460248,
-                },
-                description: {
-                  truncatedByteCount: 1681876124477381252,
-                  value: "ea",
-                },
-              },
-              messageEvent: {
-                compressedSizeBytes: "maxime",
-                id: "eum",
-                type: "SENT",
-                uncompressedSizeBytes: "et",
-              },
-              time: "rerum",
-            },
-          ],
-        },
-      },
-      {
-        attributes: {
-          attributeMap: {
-            "quis": {
-              boolValue: true,
-              intValue: "minima",
-              stringValue: {
-                truncatedByteCount: 2333048574390956331,
-                value: "est",
-              },
-            },
-            "quis": {
-              boolValue: true,
-              intValue: "labore",
-              stringValue: {
-                truncatedByteCount: 544981646038740619,
-                value: "impedit",
-              },
-            },
-            "ad": {
-              boolValue: true,
+            "illum": {
+              boolValue: false,
               intValue: "vel",
               stringValue: {
-                truncatedByteCount: 5310832663795041070,
-                value: "modi",
+                truncatedByteCount: 623564,
+                value: "deserunt",
+              },
+            },
+            "suscipit": {
+              boolValue: false,
+              intValue: "iure",
+              stringValue: {
+                truncatedByteCount: 297534,
+                value: "debitis",
               },
             },
           },
-          droppedAttributesCount: 8279128640960530079,
+          droppedAttributesCount: 56713,
         },
-        childSpanCount: 1011676084465510524,
+        childSpanCount: 963663,
         displayName: {
-          truncatedByteCount: 8764227983217623240,
-          value: "eaque",
+          truncatedByteCount: 272656,
+          value: "suscipit",
         },
-        endTime: "sunt",
+        endTime: "molestiae",
         links: {
-          droppedLinksCount: 157519078836327761,
+          droppedLinksCount: 791725,
           link: [
             {
               attributes: {
                 attributeMap: {
-                  "vel": {
+                  "iusto": {
                     boolValue: false,
-                    intValue: "placeat",
+                    intValue: "excepturi",
                     stringValue: {
-                      truncatedByteCount: 3755969145755718156,
-                      value: "nisi",
+                      truncatedByteCount: 392785,
+                      value: "recusandae",
                     },
                   },
-                  "quis": {
+                  "temporibus": {
                     boolValue: false,
-                    intValue: "porro",
+                    intValue: "ab",
                     stringValue: {
-                      truncatedByteCount: 4230816687517220040,
-                      value: "et",
+                      truncatedByteCount: 337396,
+                      value: "veritatis",
                     },
                   },
-                  "accusamus": {
-                    boolValue: true,
-                    intValue: "laborum",
+                  "deserunt": {
+                    boolValue: false,
+                    intValue: "perferendis",
                     stringValue: {
-                      truncatedByteCount: 8958290475970215309,
-                      value: "ut",
+                      truncatedByteCount: 368241,
+                      value: "repellendus",
                     },
                   },
                 },
-                droppedAttributesCount: 4400124260933614083,
+                droppedAttributesCount: 957156,
               },
-              spanId: "fugit",
-              traceId: "quis",
-              type: "CHILD_LINKED_SPAN",
+              spanId: "quo",
+              traceId: "odit",
+              type: LinkTypeEnum.ParentLinkedSpan,
+            },
+            {
+              attributes: {
+                attributeMap: {
+                  "maiores": {
+                    boolValue: false,
+                    intValue: "molestiae",
+                    stringValue: {
+                      truncatedByteCount: 799159,
+                      value: "quod",
+                    },
+                  },
+                  "esse": {
+                    boolValue: false,
+                    intValue: "totam",
+                    stringValue: {
+                      truncatedByteCount: 780529,
+                      value: "dolorum",
+                    },
+                  },
+                  "dicta": {
+                    boolValue: false,
+                    intValue: "nam",
+                    stringValue: {
+                      truncatedByteCount: 639921,
+                      value: "occaecati",
+                    },
+                  },
+                  "fugit": {
+                    boolValue: false,
+                    intValue: "deleniti",
+                    stringValue: {
+                      truncatedByteCount: 944669,
+                      value: "optio",
+                    },
+                  },
+                },
+                droppedAttributesCount: 521848,
+              },
+              spanId: "beatae",
+              traceId: "commodi",
+              type: LinkTypeEnum.ChildLinkedSpan,
+            },
+            {
+              attributes: {
+                attributeMap: {
+                  "qui": {
+                    boolValue: false,
+                    intValue: "impedit",
+                    stringValue: {
+                      truncatedByteCount: 736918,
+                      value: "esse",
+                    },
+                  },
+                  "ipsum": {
+                    boolValue: false,
+                    intValue: "excepturi",
+                    stringValue: {
+                      truncatedByteCount: 135218,
+                      value: "perferendis",
+                    },
+                  },
+                },
+                droppedAttributesCount: 324141,
+              },
+              spanId: "natus",
+              traceId: "sed",
+              type: LinkTypeEnum.ChildLinkedSpan,
+            },
+            {
+              attributes: {
+                attributeMap: {
+                  "natus": {
+                    boolValue: false,
+                    intValue: "laboriosam",
+                    stringValue: {
+                      truncatedByteCount: 943749,
+                      value: "saepe",
+                    },
+                  },
+                },
+                droppedAttributesCount: 681820,
+              },
+              spanId: "in",
+              traceId: "corporis",
+              type: LinkTypeEnum.ChildLinkedSpan,
             },
           ],
         },
-        name: "soluta",
-        parentSpanId: "aperiam",
-        sameProcessAsParentSpan: true,
-        spanId: "excepturi",
-        spanKind: "PRODUCER",
+        name: "iure",
+        parentSpanId: "saepe",
+        sameProcessAsParentSpan: false,
+        spanId: "quidem",
+        spanKind: SpanSpanKindEnum.SpanKindUnspecified,
         stackTrace: {
           stackFrames: {
-            droppedFramesCount: 1377327594979300801,
+            droppedFramesCount: 60225,
             frame: [
               {
-                columnNumber: "ipsa",
+                columnNumber: "est",
                 fileName: {
-                  truncatedByteCount: 8997481548049309375,
-                  value: "animi",
+                  truncatedByteCount: 653140,
+                  value: "laborum",
                 },
                 functionName: {
-                  truncatedByteCount: 2606774689767964810,
-                  value: "aliquam",
+                  truncatedByteCount: 170909,
+                  value: "dolorem",
                 },
-                lineNumber: "fuga",
+                lineNumber: "corporis",
                 loadModule: {
                   buildId: {
-                    truncatedByteCount: 7899896093082851758,
-                    value: "sed",
+                    truncatedByteCount: 128926,
+                    value: "nobis",
                   },
                   module: {
-                    truncatedByteCount: 6464511094049078446,
-                    value: "consequuntur",
+                    truncatedByteCount: 315428,
+                    value: "omnis",
                   },
                 },
                 originalFunctionName: {
-                  truncatedByteCount: 3308475210590835610,
-                  value: "cupiditate",
+                  truncatedByteCount: 363711,
+                  value: "minima",
                 },
                 sourceVersion: {
-                  truncatedByteCount: 432317278959866118,
-                  value: "molestiae",
+                  truncatedByteCount: 570197,
+                  value: "accusantium",
+                },
+              },
+              {
+                columnNumber: "iure",
+                fileName: {
+                  truncatedByteCount: 634274,
+                  value: "doloribus",
+                },
+                functionName: {
+                  truncatedByteCount: 958950,
+                  value: "architecto",
+                },
+                lineNumber: "mollitia",
+                loadModule: {
+                  buildId: {
+                    truncatedByteCount: 208876,
+                    value: "culpa",
+                  },
+                  module: {
+                    truncatedByteCount: 161309,
+                    value: "repellat",
+                  },
+                },
+                originalFunctionName: {
+                  truncatedByteCount: 653108,
+                  value: "occaecati",
+                },
+                sourceVersion: {
+                  truncatedByteCount: 253291,
+                  value: "commodi",
+                },
+              },
+              {
+                columnNumber: "quam",
+                fileName: {
+                  truncatedByteCount: 474697,
+                  value: "velit",
+                },
+                functionName: {
+                  truncatedByteCount: 623510,
+                  value: "quia",
+                },
+                lineNumber: "quis",
+                loadModule: {
+                  buildId: {
+                    truncatedByteCount: 110375,
+                    value: "laborum",
+                  },
+                  module: {
+                    truncatedByteCount: 656330,
+                    value: "enim",
+                  },
+                },
+                originalFunctionName: {
+                  truncatedByteCount: 138183,
+                  value: "quo",
+                },
+                sourceVersion: {
+                  truncatedByteCount: 196582,
+                  value: "tenetur",
+                },
+              },
+              {
+                columnNumber: "ipsam",
+                fileName: {
+                  truncatedByteCount: 662527,
+                  value: "possimus",
+                },
+                functionName: {
+                  truncatedByteCount: 13571,
+                  value: "quasi",
+                },
+                lineNumber: "error",
+                loadModule: {
+                  buildId: {
+                    truncatedByteCount: 837945,
+                    value: "laborum",
+                  },
+                  module: {
+                    truncatedByteCount: 96098,
+                    value: "reiciendis",
+                  },
+                },
+                originalFunctionName: {
+                  truncatedByteCount: 976460,
+                  value: "vero",
+                },
+                sourceVersion: {
+                  truncatedByteCount: 468651,
+                  value: "praesentium",
                 },
               },
             ],
           },
-          stackTraceHashId: "pariatur",
+          stackTraceHashId: "voluptatibus",
         },
-        startTime: "quasi",
+        startTime: "ipsa",
         status: {
-          code: 5534365872829545664,
+          code: 604846,
           details: [
             {
-              "sit": "possimus",
+              "perferendis": "doloremque",
+              "reprehenderit": "ut",
+              "maiores": "dicta",
             },
             {
-              "neque": "consequuntur",
-              "quia": "et",
+              "dolore": "iusto",
+              "dicta": "harum",
             },
           ],
-          message: "est",
+          message: "enim",
         },
         timeEvents: {
-          droppedAnnotationsCount: 6028661030721431741,
-          droppedMessageEventsCount: 7949662743330369695,
+          droppedAnnotationsCount: 880476,
+          droppedMessageEventsCount: 414263,
           timeEvent: [
             {
               annotation: {
                 attributes: {
                   attributeMap: {
-                    "temporibus": {
+                    "ipsum": {
                       boolValue: false,
-                      intValue: "quae",
+                      intValue: "quidem",
                       stringValue: {
-                        truncatedByteCount: 5042961816383320698,
-                        value: "ut",
-                      },
-                    },
-                    "necessitatibus": {
-                      boolValue: true,
-                      intValue: "possimus",
-                      stringValue: {
-                        truncatedByteCount: 1123791776565256914,
-                        value: "dolorum",
-                      },
-                    },
-                    "doloribus": {
-                      boolValue: true,
-                      intValue: "sunt",
-                      stringValue: {
-                        truncatedByteCount: 2676265675595725604,
-                        value: "et",
+                        truncatedByteCount: 565189,
+                        value: "excepturi",
                       },
                     },
                   },
-                  droppedAttributesCount: 6499763367080957833,
+                  droppedAttributesCount: 865103,
                 },
                 description: {
-                  truncatedByteCount: 1514803956160473307,
-                  value: "et",
+                  truncatedByteCount: 265389,
+                  value: "praesentium",
                 },
               },
               messageEvent: {
-                compressedSizeBytes: "est",
-                id: "ipsum",
-                type: "TYPE_UNSPECIFIED",
-                uncompressedSizeBytes: "voluptas",
+                compressedSizeBytes: "rem",
+                id: "voluptates",
+                type: MessageEventTypeEnum.TypeUnspecified,
+                uncompressedSizeBytes: "repudiandae",
               },
-              time: "nihil",
+              time: "sint",
             },
             {
               annotation: {
                 attributes: {
                   attributeMap: {
-                    "suscipit": {
-                      boolValue: true,
-                      intValue: "non",
+                    "itaque": {
+                      boolValue: false,
+                      intValue: "incidunt",
                       stringValue: {
-                        truncatedByteCount: 2991421044203248760,
-                        value: "ut",
+                        truncatedByteCount: 318569,
+                        value: "consequatur",
                       },
                     },
                   },
-                  droppedAttributesCount: 3357930257403748968,
+                  droppedAttributesCount: 667411,
                 },
                 description: {
-                  truncatedByteCount: 371208508841907247,
-                  value: "qui",
+                  truncatedByteCount: 842342,
+                  value: "explicabo",
                 },
               },
               messageEvent: {
-                compressedSizeBytes: "quia",
-                id: "ipsam",
-                type: "SENT",
-                uncompressedSizeBytes: "enim",
+                compressedSizeBytes: "deserunt",
+                id: "distinctio",
+                type: MessageEventTypeEnum.Received,
+                uncompressedSizeBytes: "labore",
               },
-              time: "blanditiis",
+              time: "modi",
+            },
+            {
+              annotation: {
+                attributes: {
+                  attributeMap: {
+                    "aliquid": {
+                      boolValue: false,
+                      intValue: "cupiditate",
+                      stringValue: {
+                        truncatedByteCount: 552822,
+                        value: "perferendis",
+                      },
+                    },
+                  },
+                  droppedAttributesCount: 164940,
+                },
+                description: {
+                  truncatedByteCount: 828940,
+                  value: "ipsam",
+                },
+              },
+              messageEvent: {
+                compressedSizeBytes: "alias",
+                id: "fugit",
+                type: MessageEventTypeEnum.Received,
+                uncompressedSizeBytes: "excepturi",
+              },
+              time: "tempora",
+            },
+            {
+              annotation: {
+                attributes: {
+                  attributeMap: {
+                    "tempore": {
+                      boolValue: false,
+                      intValue: "labore",
+                      stringValue: {
+                        truncatedByteCount: 962189,
+                        value: "eum",
+                      },
+                    },
+                    "non": {
+                      boolValue: false,
+                      intValue: "eligendi",
+                      stringValue: {
+                        truncatedByteCount: 576157,
+                        value: "aliquid",
+                      },
+                    },
+                    "provident": {
+                      boolValue: false,
+                      intValue: "necessitatibus",
+                      stringValue: {
+                        truncatedByteCount: 572252,
+                        value: "officia",
+                      },
+                    },
+                  },
+                  droppedAttributesCount: 223081,
+                },
+                description: {
+                  truncatedByteCount: 891555,
+                  value: "a",
+                },
+              },
+              messageEvent: {
+                compressedSizeBytes: "dolorum",
+                id: "in",
+                type: MessageEventTypeEnum.Sent,
+                uncompressedSizeBytes: "illum",
+              },
+              time: "maiores",
             },
           ],
         },
@@ -496,218 +487,841 @@ const req: CloudtraceProjectsTracesBatchWriteRequest = {
       {
         attributes: {
           attributeMap: {
-            "delectus": {
-              boolValue: true,
-              intValue: "dolore",
+            "dicta": {
+              boolValue: false,
+              intValue: "magnam",
               stringValue: {
-                truncatedByteCount: 7274936573655343394,
-                value: "velit",
+                truncatedByteCount: 767024,
+                value: "facere",
+              },
+            },
+            "ea": {
+              boolValue: false,
+              intValue: "aliquid",
+              stringValue: {
+                truncatedByteCount: 675439,
+                value: "accusamus",
+              },
+            },
+            "non": {
+              boolValue: false,
+              intValue: "occaecati",
+              stringValue: {
+                truncatedByteCount: 313218,
+                value: "accusamus",
               },
             },
           },
-          droppedAttributesCount: 1469755398674317289,
+          droppedAttributesCount: 965417,
         },
-        childSpanCount: 8230160685758639177,
+        childSpanCount: 692532,
         displayName: {
-          truncatedByteCount: 6225508190691823821,
-          value: "voluptas",
+          truncatedByteCount: 588465,
+          value: "nam",
         },
-        endTime: "amet",
+        endTime: "id",
         links: {
-          droppedLinksCount: 8268186752735240934,
+          droppedLinksCount: 501324,
           link: [
             {
               attributes: {
                 attributeMap: {
-                  "excepturi": {
+                  "amet": {
                     boolValue: false,
-                    intValue: "corporis",
+                    intValue: "deserunt",
                     stringValue: {
-                      truncatedByteCount: 4588799179103092032,
-                      value: "rem",
+                      truncatedByteCount: 394869,
+                      value: "vel",
                     },
                   },
-                  "doloremque": {
+                  "natus": {
                     boolValue: false,
-                    intValue: "nisi",
+                    intValue: "omnis",
                     stringValue: {
-                      truncatedByteCount: 7977311963062833636,
-                      value: "qui",
+                      truncatedByteCount: 474867,
+                      value: "perferendis",
+                    },
+                  },
+                  "nihil": {
+                    boolValue: false,
+                    intValue: "magnam",
+                    stringValue: {
+                      truncatedByteCount: 716075,
+                      value: "id",
+                    },
+                  },
+                  "labore": {
+                    boolValue: false,
+                    intValue: "labore",
+                    stringValue: {
+                      truncatedByteCount: 383462,
+                      value: "natus",
                     },
                   },
                 },
-                droppedAttributesCount: 3553406609570696275,
+                droppedAttributesCount: 749170,
               },
-              spanId: "et",
-              traceId: "rerum",
-              type: "CHILD_LINKED_SPAN",
+              spanId: "eum",
+              traceId: "vero",
+              type: LinkTypeEnum.TypeUnspecified,
+            },
+            {
+              attributes: {
+                attributeMap: {
+                  "magnam": {
+                    boolValue: false,
+                    intValue: "et",
+                    stringValue: {
+                      truncatedByteCount: 569965,
+                      value: "ullam",
+                    },
+                  },
+                },
+                droppedAttributesCount: 590873,
+              },
+              spanId: "quos",
+              traceId: "sint",
+              type: LinkTypeEnum.TypeUnspecified,
+            },
+            {
+              attributes: {
+                attributeMap: {
+                  "reiciendis": {
+                    boolValue: false,
+                    intValue: "mollitia",
+                    stringValue: {
+                      truncatedByteCount: 320997,
+                      value: "eum",
+                    },
+                  },
+                  "dolor": {
+                    boolValue: false,
+                    intValue: "necessitatibus",
+                    stringValue: {
+                      truncatedByteCount: 141264,
+                      value: "nemo",
+                    },
+                  },
+                  "quasi": {
+                    boolValue: false,
+                    intValue: "iure",
+                    stringValue: {
+                      truncatedByteCount: 984043,
+                      value: "debitis",
+                    },
+                  },
+                },
+                droppedAttributesCount: 260341,
+              },
+              spanId: "maxime",
+              traceId: "deleniti",
+              type: LinkTypeEnum.ParentLinkedSpan,
             },
           ],
         },
-        name: "rem",
-        parentSpanId: "eos",
+        name: "in",
+        parentSpanId: "architecto",
         sameProcessAsParentSpan: false,
-        spanId: "reiciendis",
-        spanKind: "SPAN_KIND_UNSPECIFIED",
+        spanId: "architecto",
+        spanKind: SpanSpanKindEnum.Consumer,
         stackTrace: {
           stackFrames: {
-            droppedFramesCount: 5683174242247563523,
+            droppedFramesCount: 352312,
             frame: [
               {
                 columnNumber: "nihil",
                 fileName: {
-                  truncatedByteCount: 4897843869982862208,
-                  value: "consequatur",
+                  truncatedByteCount: 998848,
+                  value: "quibusdam",
                 },
                 functionName: {
-                  truncatedByteCount: 3196051979344515342,
-                  value: "accusantium",
+                  truncatedByteCount: 149448,
+                  value: "saepe",
                 },
-                lineNumber: "atque",
+                lineNumber: "pariatur",
                 loadModule: {
                   buildId: {
-                    truncatedByteCount: 1444501184389758573,
-                    value: "nisi",
+                    truncatedByteCount: 37559,
+                    value: "consequuntur",
                   },
                   module: {
-                    truncatedByteCount: 1782404925332466934,
-                    value: "est",
+                    truncatedByteCount: 508315,
+                    value: "natus",
                   },
                 },
                 originalFunctionName: {
-                  truncatedByteCount: 9117043256905423229,
-                  value: "vero",
+                  truncatedByteCount: 166847,
+                  value: "sunt",
                 },
                 sourceVersion: {
-                  truncatedByteCount: 8663396966358647741,
-                  value: "totam",
+                  truncatedByteCount: 779051,
+                  value: "illum",
                 },
               },
               {
-                columnNumber: "deserunt",
+                columnNumber: "pariatur",
                 fileName: {
-                  truncatedByteCount: 1958777829936408748,
-                  value: "repellat",
-                },
-                functionName: {
-                  truncatedByteCount: 7470170325123997143,
-                  value: "omnis",
-                },
-                lineNumber: "totam",
-                loadModule: {
-                  buildId: {
-                    truncatedByteCount: 6110482739283003758,
-                    value: "et",
-                  },
-                  module: {
-                    truncatedByteCount: 7167106058699817943,
-                    value: "necessitatibus",
-                  },
-                },
-                originalFunctionName: {
-                  truncatedByteCount: 4525004039791920848,
-                  value: "culpa",
-                },
-                sourceVersion: {
-                  truncatedByteCount: 8364267861508686372,
-                  value: "voluptas",
-                },
-              },
-              {
-                columnNumber: "ut",
-                fileName: {
-                  truncatedByteCount: 2118949171484888039,
-                  value: "architecto",
-                },
-                functionName: {
-                  truncatedByteCount: 9207329833049742865,
-                  value: "rerum",
-                },
-                lineNumber: "quo",
-                loadModule: {
-                  buildId: {
-                    truncatedByteCount: 7465719782626729327,
-                    value: "saepe",
-                  },
-                  module: {
-                    truncatedByteCount: 1215184329252422444,
-                    value: "in",
-                  },
-                },
-                originalFunctionName: {
-                  truncatedByteCount: 8590975497400104807,
-                  value: "asperiores",
-                },
-                sourceVersion: {
-                  truncatedByteCount: 5721519542403305305,
+                  truncatedByteCount: 807319,
                   value: "ea",
+                },
+                functionName: {
+                  truncatedByteCount: 569101,
+                  value: "odit",
+                },
+                lineNumber: "ea",
+                loadModule: {
+                  buildId: {
+                    truncatedByteCount: 33222,
+                    value: "ab",
+                  },
+                  module: {
+                    truncatedByteCount: 982575,
+                    value: "quidem",
+                  },
+                },
+                originalFunctionName: {
+                  truncatedByteCount: 373291,
+                  value: "voluptate",
+                },
+                sourceVersion: {
+                  truncatedByteCount: 420075,
+                  value: "nam",
+                },
+              },
+              {
+                columnNumber: "eaque",
+                fileName: {
+                  truncatedByteCount: 866383,
+                  value: "nemo",
+                },
+                functionName: {
+                  truncatedByteCount: 975522,
+                  value: "perferendis",
+                },
+                lineNumber: "fugiat",
+                loadModule: {
+                  buildId: {
+                    truncatedByteCount: 230742,
+                    value: "aut",
+                  },
+                  module: {
+                    truncatedByteCount: 764912,
+                    value: "corporis",
+                  },
+                },
+                originalFunctionName: {
+                  truncatedByteCount: 944124,
+                  value: "libero",
+                },
+                sourceVersion: {
+                  truncatedByteCount: 749999,
+                  value: "dolores",
                 },
               },
             ],
           },
-          stackTraceHashId: "soluta",
+          stackTraceHashId: "quis",
         },
-        startTime: "tempora",
+        startTime: "totam",
         status: {
-          code: 5850174490929081658,
+          code: 489549,
           details: [
             {
-              "in": "et",
-              "odit": "est",
-            },
-            {
-              "ipsum": "aut",
-              "perspiciatis": "et",
-              "vero": "voluptatem",
+              "nesciunt": "eos",
+              "perferendis": "dolores",
             },
           ],
-          message: "ex",
+          message: "minus",
         },
         timeEvents: {
-          droppedAnnotationsCount: 1253678802066634880,
-          droppedMessageEventsCount: 5185464786920936105,
+          droppedAnnotationsCount: 463451,
+          droppedMessageEventsCount: 223924,
           timeEvent: [
             {
               annotation: {
                 attributes: {
                   attributeMap: {
-                    "ea": {
+                    "hic": {
                       boolValue: false,
-                      intValue: "non",
+                      intValue: "recusandae",
                       stringValue: {
-                        truncatedByteCount: 930977177771307407,
-                        value: "beatae",
+                        truncatedByteCount: 608253,
+                        value: "facilis",
                       },
                     },
-                    "quae": {
+                    "perspiciatis": {
                       boolValue: false,
-                      intValue: "magni",
+                      intValue: "voluptatem",
                       stringValue: {
-                        truncatedByteCount: 6901636176146439792,
-                        value: "sit",
+                        truncatedByteCount: 783645,
+                        value: "consequuntur",
                       },
                     },
                   },
-                  droppedAttributesCount: 3696118768821457648,
+                  droppedAttributesCount: 500026,
                 },
                 description: {
-                  truncatedByteCount: 3450989031171849556,
-                  value: "iusto",
+                  truncatedByteCount: 621479,
+                  value: "eaque",
                 },
               },
               messageEvent: {
-                compressedSizeBytes: "quia",
-                id: "repudiandae",
-                type: "TYPE_UNSPECIFIED",
-                uncompressedSizeBytes: "autem",
+                compressedSizeBytes: "occaecati",
+                id: "rerum",
+                type: MessageEventTypeEnum.TypeUnspecified,
+                uncompressedSizeBytes: "asperiores",
               },
-              time: "odit",
+              time: "earum",
+            },
+            {
+              annotation: {
+                attributes: {
+                  attributeMap: {
+                    "iste": {
+                      boolValue: false,
+                      intValue: "dolorum",
+                      stringValue: {
+                        truncatedByteCount: 535633,
+                        value: "pariatur",
+                      },
+                    },
+                    "provident": {
+                      boolValue: false,
+                      intValue: "nobis",
+                      stringValue: {
+                        truncatedByteCount: 730122,
+                        value: "delectus",
+                      },
+                    },
+                  },
+                  droppedAttributesCount: 311945,
+                },
+                description: {
+                  truncatedByteCount: 554242,
+                  value: "aliquid",
+                },
+              },
+              messageEvent: {
+                compressedSizeBytes: "dolorem",
+                id: "dolorem",
+                type: MessageEventTypeEnum.TypeUnspecified,
+                uncompressedSizeBytes: "qui",
+              },
+              time: "ipsum",
+            },
+            {
+              annotation: {
+                attributes: {
+                  attributeMap: {
+                    "excepturi": {
+                      boolValue: false,
+                      intValue: "cum",
+                      stringValue: {
+                        truncatedByteCount: 452109,
+                        value: "dignissimos",
+                      },
+                    },
+                    "reiciendis": {
+                      boolValue: false,
+                      intValue: "amet",
+                      stringValue: {
+                        truncatedByteCount: 680545,
+                        value: "numquam",
+                      },
+                    },
+                    "veritatis": {
+                      boolValue: false,
+                      intValue: "ipsa",
+                      stringValue: {
+                        truncatedByteCount: 56418,
+                        value: "iure",
+                      },
+                    },
+                    "odio": {
+                      boolValue: false,
+                      intValue: "quaerat",
+                      stringValue: {
+                        truncatedByteCount: 881005,
+                        value: "quidem",
+                      },
+                    },
+                  },
+                  droppedAttributesCount: 976405,
+                },
+                description: {
+                  truncatedByteCount: 377752,
+                  value: "natus",
+                },
+              },
+              messageEvent: {
+                compressedSizeBytes: "eos",
+                id: "atque",
+                type: MessageEventTypeEnum.TypeUnspecified,
+                uncompressedSizeBytes: "fugiat",
+              },
+              time: "ab",
+            },
+            {
+              annotation: {
+                attributes: {
+                  attributeMap: {
+                    "dolorum": {
+                      boolValue: false,
+                      intValue: "iusto",
+                      stringValue: {
+                        truncatedByteCount: 453697,
+                        value: "dolorum",
+                      },
+                    },
+                    "deleniti": {
+                      boolValue: false,
+                      intValue: "omnis",
+                      stringValue: {
+                        truncatedByteCount: 896672,
+                        value: "distinctio",
+                      },
+                    },
+                    "asperiores": {
+                      boolValue: false,
+                      intValue: "nihil",
+                      stringValue: {
+                        truncatedByteCount: 216897,
+                        value: "voluptate",
+                      },
+                    },
+                  },
+                  droppedAttributesCount: 663078,
+                },
+                description: {
+                  truncatedByteCount: 906418,
+                  value: "eius",
+                },
+              },
+              messageEvent: {
+                compressedSizeBytes: "aspernatur",
+                id: "perferendis",
+                type: MessageEventTypeEnum.TypeUnspecified,
+                uncompressedSizeBytes: "optio",
+              },
+              time: "accusamus",
+            },
+          ],
+        },
+      },
+      {
+        attributes: {
+          attributeMap: {
+            "saepe": {
+              boolValue: false,
+              intValue: "suscipit",
+              stringValue: {
+                truncatedByteCount: 645785,
+                value: "provident",
+              },
+            },
+            "minima": {
+              boolValue: false,
+              intValue: "repellendus",
+              stringValue: {
+                truncatedByteCount: 519711,
+                value: "similique",
+              },
+            },
+          },
+          droppedAttributesCount: 55,
+        },
+        childSpanCount: 872651,
+        displayName: {
+          truncatedByteCount: 311860,
+          value: "tempora",
+        },
+        endTime: "vel",
+        links: {
+          droppedLinksCount: 798047,
+          link: [
+            {
+              attributes: {
+                attributeMap: {
+                  "dolorum": {
+                    boolValue: false,
+                    intValue: "a",
+                    stringValue: {
+                      truncatedByteCount: 456130,
+                      value: "harum",
+                    },
+                  },
+                },
+                droppedAttributesCount: 483409,
+              },
+              spanId: "ipsum",
+              traceId: "quisquam",
+              type: LinkTypeEnum.ParentLinkedSpan,
+            },
+            {
+              attributes: {
+                attributeMap: {
+                  "tempore": {
+                    boolValue: false,
+                    intValue: "accusamus",
+                    stringValue: {
+                      truncatedByteCount: 253941,
+                      value: "enim",
+                    },
+                  },
+                },
+                droppedAttributesCount: 213312,
+              },
+              spanId: "sapiente",
+              traceId: "totam",
+              type: LinkTypeEnum.ChildLinkedSpan,
+            },
+            {
+              attributes: {
+                attributeMap: {
+                  "expedita": {
+                    boolValue: false,
+                    intValue: "neque",
+                    stringValue: {
+                      truncatedByteCount: 153694,
+                      value: "vel",
+                    },
+                  },
+                },
+                droppedAttributesCount: 730442,
+              },
+              spanId: "voluptas",
+              traceId: "deserunt",
+              type: LinkTypeEnum.ChildLinkedSpan,
+            },
+            {
+              attributes: {
+                attributeMap: {
+                  "incidunt": {
+                    boolValue: false,
+                    intValue: "qui",
+                    stringValue: {
+                      truncatedByteCount: 586784,
+                      value: "maxime",
+                    },
+                  },
+                },
+                droppedAttributesCount: 863856,
+              },
+              spanId: "soluta",
+              traceId: "dicta",
+              type: LinkTypeEnum.ParentLinkedSpan,
+            },
+          ],
+        },
+        name: "totam",
+        parentSpanId: "incidunt",
+        sameProcessAsParentSpan: false,
+        spanId: "aspernatur",
+        spanKind: SpanSpanKindEnum.Internal,
+        stackTrace: {
+          stackFrames: {
+            droppedFramesCount: 716860,
+            frame: [
+              {
+                columnNumber: "aliquid",
+                fileName: {
+                  truncatedByteCount: 463150,
+                  value: "molestias",
+                },
+                functionName: {
+                  truncatedByteCount: 840429,
+                  value: "qui",
+                },
+                lineNumber: "neque",
+                loadModule: {
+                  buildId: {
+                    truncatedByteCount: 144847,
+                    value: "magni",
+                  },
+                  module: {
+                    truncatedByteCount: 488056,
+                    value: "sunt",
+                  },
+                },
+                originalFunctionName: {
+                  truncatedByteCount: 355613,
+                  value: "nam",
+                },
+                sourceVersion: {
+                  truncatedByteCount: 940432,
+                  value: "voluptatem",
+                },
+              },
+              {
+                columnNumber: "cumque",
+                fileName: {
+                  truncatedByteCount: 746994,
+                  value: "nobis",
+                },
+                functionName: {
+                  truncatedByteCount: 92596,
+                  value: "saepe",
+                },
+                lineNumber: "ipsum",
+                loadModule: {
+                  buildId: {
+                    truncatedByteCount: 83422,
+                    value: "nobis",
+                  },
+                  module: {
+                    truncatedByteCount: 552193,
+                    value: "tempore",
+                  },
+                },
+                originalFunctionName: {
+                  truncatedByteCount: 584476,
+                  value: "aperiam",
+                },
+                sourceVersion: {
+                  truncatedByteCount: 961937,
+                  value: "dolorem",
+                },
+              },
+              {
+                columnNumber: "dolore",
+                fileName: {
+                  truncatedByteCount: 286915,
+                  value: "adipisci",
+                },
+                functionName: {
+                  truncatedByteCount: 677263,
+                  value: "architecto",
+                },
+                lineNumber: "quae",
+                loadModule: {
+                  buildId: {
+                    truncatedByteCount: 16429,
+                    value: "quas",
+                  },
+                  module: {
+                    truncatedByteCount: 929530,
+                    value: "consequatur",
+                  },
+                },
+                originalFunctionName: {
+                  truncatedByteCount: 669917,
+                  value: "repellendus",
+                },
+                sourceVersion: {
+                  truncatedByteCount: 785153,
+                  value: "doloribus",
+                },
+              },
+            ],
+          },
+          stackTraceHashId: "ut",
+        },
+        startTime: "facilis",
+        status: {
+          code: 586410,
+          details: [
+            {
+              "laudantium": "odio",
+            },
+          ],
+          message: "occaecati",
+        },
+        timeEvents: {
+          droppedAnnotationsCount: 977496,
+          droppedMessageEventsCount: 787542,
+          timeEvent: [
+            {
+              annotation: {
+                attributes: {
+                  attributeMap: {
+                    "quis": {
+                      boolValue: false,
+                      intValue: "ipsum",
+                      stringValue: {
+                        truncatedByteCount: 961571,
+                        value: "voluptate",
+                      },
+                    },
+                    "consectetur": {
+                      boolValue: false,
+                      intValue: "vero",
+                      stringValue: {
+                        truncatedByteCount: 949319,
+                        value: "dignissimos",
+                      },
+                    },
+                    "hic": {
+                      boolValue: false,
+                      intValue: "distinctio",
+                      stringValue: {
+                        truncatedByteCount: 799203,
+                        value: "odio",
+                      },
+                    },
+                  },
+                  droppedAttributesCount: 630448,
+                },
+                description: {
+                  truncatedByteCount: 708548,
+                  value: "vero",
+                },
+              },
+              messageEvent: {
+                compressedSizeBytes: "ducimus",
+                id: "dolore",
+                type: MessageEventTypeEnum.Received,
+                uncompressedSizeBytes: "illum",
+              },
+              time: "sequi",
+            },
+            {
+              annotation: {
+                attributes: {
+                  attributeMap: {
+                    "impedit": {
+                      boolValue: false,
+                      intValue: "aut",
+                      stringValue: {
+                        truncatedByteCount: 974259,
+                        value: "exercitationem",
+                      },
+                    },
+                    "nulla": {
+                      boolValue: false,
+                      intValue: "fugit",
+                      stringValue: {
+                        truncatedByteCount: 780427,
+                        value: "maiores",
+                      },
+                    },
+                    "doloribus": {
+                      boolValue: false,
+                      intValue: "iusto",
+                      stringValue: {
+                        truncatedByteCount: 753570,
+                        value: "ducimus",
+                      },
+                    },
+                  },
+                  droppedAttributesCount: 4048,
+                },
+                description: {
+                  truncatedByteCount: 639473,
+                  value: "tempora",
+                },
+              },
+              messageEvent: {
+                compressedSizeBytes: "ipsam",
+                id: "ea",
+                type: MessageEventTypeEnum.TypeUnspecified,
+                uncompressedSizeBytes: "vel",
+              },
+              time: "possimus",
+            },
+            {
+              annotation: {
+                attributes: {
+                  attributeMap: {
+                    "ratione": {
+                      boolValue: false,
+                      intValue: "ex",
+                      stringValue: {
+                        truncatedByteCount: 511319,
+                        value: "dicta",
+                      },
+                    },
+                    "dolor": {
+                      boolValue: false,
+                      intValue: "maiores",
+                      stringValue: {
+                        truncatedByteCount: 97844,
+                        value: "ex",
+                      },
+                    },
+                  },
+                  droppedAttributesCount: 862192,
+                },
+                description: {
+                  truncatedByteCount: 569211,
+                  value: "voluptatibus",
+                },
+              },
+              messageEvent: {
+                compressedSizeBytes: "nostrum",
+                id: "sapiente",
+                type: MessageEventTypeEnum.Received,
+                uncompressedSizeBytes: "saepe",
+              },
+              time: "ea",
+            },
+            {
+              annotation: {
+                attributes: {
+                  attributeMap: {
+                    "corporis": {
+                      boolValue: false,
+                      intValue: "veniam",
+                      stringValue: {
+                        truncatedByteCount: 399499,
+                        value: "inventore",
+                      },
+                    },
+                    "magnam": {
+                      boolValue: false,
+                      intValue: "ea",
+                      stringValue: {
+                        truncatedByteCount: 775220,
+                        value: "consectetur",
+                      },
+                    },
+                    "recusandae": {
+                      boolValue: false,
+                      intValue: "aspernatur",
+                      stringValue: {
+                        truncatedByteCount: 325310,
+                        value: "eaque",
+                      },
+                    },
+                    "a": {
+                      boolValue: false,
+                      intValue: "libero",
+                      stringValue: {
+                        truncatedByteCount: 13948,
+                        value: "aut",
+                      },
+                    },
+                  },
+                  droppedAttributesCount: 533466,
+                },
+                description: {
+                  truncatedByteCount: 770581,
+                  value: "aliquam",
+                },
+              },
+              messageEvent: {
+                compressedSizeBytes: "fugit",
+                id: "accusamus",
+                type: MessageEventTypeEnum.TypeUnspecified,
+                uncompressedSizeBytes: "non",
+              },
+              time: "et",
             },
           ],
         },
       },
     ],
   },
+  accessToken: "dolorum",
+  alt: AltEnum.Proto,
+  callback: "placeat",
+  fields: "velit",
+  key: "eum",
+  name: "autem",
+  oauthToken: "nobis",
+  prettyPrint: false,
+  quotaUser: "quas",
+  uploadType: "assumenda",
+  uploadProtocol: "nulla",
 };
 
 sdk.projects.cloudtraceProjectsTracesBatchWrite(req).then((res: CloudtraceProjectsTracesBatchWriteResponse | AxiosError) => {
@@ -717,13 +1331,25 @@ sdk.projects.cloudtraceProjectsTracesBatchWrite(req).then((res: CloudtraceProjec
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### projects
 
 * `cloudtraceProjectsTracesBatchWrite` - Batch writes new spans to new or existing traces. You cannot update existing spans.
 * `cloudtraceProjectsTracesSpansCreateSpan` - Creates a new span.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

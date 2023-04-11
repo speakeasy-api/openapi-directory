@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Search API for 'Server Side Files' entry type
+ */
 export declare class TypeLocalfiles {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,10 @@ export declare class TypeLocalfiles {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * searchLocalfiles - Search API for 'Server Side Files' entry type
+     * Search API for 'Server Side Files' entry type
      *
+     * @remarks
      * API to search for entries of type Server Side Files
-    **/
+     */
     searchLocalfiles(req: operations.SearchLocalfilesRequest, config?: AxiosRequestConfig): Promise<operations.SearchLocalfilesResponse>;
 }

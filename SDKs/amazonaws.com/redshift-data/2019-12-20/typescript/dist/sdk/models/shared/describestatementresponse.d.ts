@@ -2,6 +2,9 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { SqlParameter } from "./sqlparameter";
 import { StatusStringEnum } from "./statusstringenum";
 import { SubStatementData } from "./substatementdata";
+/**
+ * Success
+ */
 export declare class DescribeStatementResponse extends SpeakeasyBase {
     clusterIdentifier?: string;
     createdAt?: Date;
@@ -21,4 +24,5 @@ export declare class DescribeStatementResponse extends SpeakeasyBase {
     status?: StatusStringEnum;
     subStatements?: SubStatementData[];
     updatedAt?: Date;
+    workgroupName?: string;
 }

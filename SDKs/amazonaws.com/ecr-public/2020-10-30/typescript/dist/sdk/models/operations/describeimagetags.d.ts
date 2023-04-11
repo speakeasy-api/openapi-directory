@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeImageTagsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum DescribeImageTagsXAmzTargetEnum {
     SpencerFrontendServiceDescribeImageTags = "SpencerFrontendService.DescribeImageTags"
 }
-export declare class DescribeImageTagsHeaders extends SpeakeasyBase {
+export declare class DescribeImageTagsRequest extends SpeakeasyBase {
+    describeImageTagsRequest: shared.DescribeImageTagsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,17 +14,37 @@ export declare class DescribeImageTagsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeImageTagsXAmzTargetEnum;
-}
-export declare class DescribeImageTagsRequest extends SpeakeasyBase {
-    queryParams: DescribeImageTagsQueryParams;
-    headers: DescribeImageTagsHeaders;
-    request: shared.DescribeImageTagsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class DescribeImageTagsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeImageTagsResponse?: shared.DescribeImageTagsResponse;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * RepositoryNotFoundException
+     */
     repositoryNotFoundException?: any;
+    /**
+     * ServerException
+     */
     serverException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnsupportedCommandException
+     */
+    unsupportedCommandException?: any;
 }

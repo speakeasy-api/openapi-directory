@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeInstanceEventWindowsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeInstanceEventWindowsActionEnum {
     DescribeInstanceEventWindows = "DescribeInstanceEventWindows"
 }
-export declare enum PostDescribeInstanceEventWindowsVersionEnum {
+export declare enum POSTDescribeInstanceEventWindowsVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDescribeInstanceEventWindowsQueryParams extends SpeakeasyBase {
-    action: PostDescribeInstanceEventWindowsActionEnum;
+export declare class POSTDescribeInstanceEventWindowsRequest extends SpeakeasyBase {
+    action: POSTDescribeInstanceEventWindowsActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostDescribeInstanceEventWindowsVersionEnum;
-}
-export declare class PostDescribeInstanceEventWindowsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeInstanceEventWindowsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeInstanceEventWindowsHeaders extends SpeakeasyBa
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeInstanceEventWindowsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeInstanceEventWindowsQueryParams;
-    headers: PostDescribeInstanceEventWindowsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeInstanceEventWindowsResponse extends SpeakeasyBase {
+export declare class POSTDescribeInstanceEventWindowsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

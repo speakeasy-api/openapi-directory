@@ -1,11 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class TestnetIssueTokenRequest extends SpeakeasyBase {
-    request: shared.IssueTokenRequest;
-}
+import { AxiosResponse } from "axios";
 export declare class TestnetIssueTokenResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Unexpected error
+     */
     error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * An object representing the token created
+     */
     issueTokenResponse?: shared.IssueTokenResponse;
 }

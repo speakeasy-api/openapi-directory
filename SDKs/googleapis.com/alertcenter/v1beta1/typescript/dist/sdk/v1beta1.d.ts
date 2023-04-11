@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class V1beta1 {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,11 +9,11 @@ export declare class V1beta1 {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * alertcenterGetSettings - Returns customer-level settings.
-    **/
-    alertcenterGetSettings(req: operations.AlertcenterGetSettingsRequest, config?: AxiosRequestConfig): Promise<operations.AlertcenterGetSettingsResponse>;
+     * Returns customer-level settings.
+     */
+    alertcenterGetSettings(req: operations.AlertcenterGetSettingsRequest, security: operations.AlertcenterGetSettingsSecurity, config?: AxiosRequestConfig): Promise<operations.AlertcenterGetSettingsResponse>;
     /**
-     * alertcenterUpdateSettings - Updates the customer-level settings.
-    **/
-    alertcenterUpdateSettings(req: operations.AlertcenterUpdateSettingsRequest, config?: AxiosRequestConfig): Promise<operations.AlertcenterUpdateSettingsResponse>;
+     * Updates the customer-level settings.
+     */
+    alertcenterUpdateSettings(req: operations.AlertcenterUpdateSettingsRequest, security: operations.AlertcenterUpdateSettingsSecurity, config?: AxiosRequestConfig): Promise<operations.AlertcenterUpdateSettingsResponse>;
 }

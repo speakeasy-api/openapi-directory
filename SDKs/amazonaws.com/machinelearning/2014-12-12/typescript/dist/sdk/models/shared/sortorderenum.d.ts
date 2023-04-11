@@ -1,3 +1,6 @@
+/**
+ * <p>The sort order specified in a listing condition. Possible values include the following:</p> <ul> <li> <p> <code>asc</code> - Present the information in ascending order (from A-Z).</p> </li> <li> <p> <code>dsc</code> - Present the information in descending order (from Z-A).</p> </li> </ul>
+ */
 export declare enum SortOrderEnum {
     Asc = "asc",
     Dsc = "dsc"

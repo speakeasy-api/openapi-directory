@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Generated Json Key file from Google
+ */
 export declare class GoogleServiceAccountCreds extends SpeakeasyBase {
     authProviderX509CertUrl?: string;
     authUri?: string;

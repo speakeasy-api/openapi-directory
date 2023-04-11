@@ -1,52 +1,44 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Link } from "./link";
-import { SimpleUser } from "./simpleuser";
 import { AuthorAssociationEnum } from "./authorassociationenum";
+import { Link } from "./link";
+import { NullableLicenseSimple } from "./nullablelicensesimple";
+import { NullableMilestone } from "./nullablemilestone";
+import { NullableSimpleUser } from "./nullablesimpleuser";
+import { SimpleUser } from "./simpleuser";
 import { TeamSimple } from "./teamsimple";
 export declare class PullRequestLinks extends SpeakeasyBase {
+    /**
+     * Hypermedia Link
+     */
     comments: Link;
+    /**
+     * Hypermedia Link
+     */
     commits: Link;
+    /**
+     * Hypermedia Link
+     */
     html: Link;
+    /**
+     * Hypermedia Link
+     */
     issue: Link;
+    /**
+     * Hypermedia Link
+     */
     reviewComment: Link;
+    /**
+     * Hypermedia Link
+     */
     reviewComments: Link;
+    /**
+     * Hypermedia Link
+     */
     self: Link;
+    /**
+     * Hypermedia Link
+     */
     statuses: Link;
-}
-/**
- * Simple User
-**/
-export declare class PullRequestSimpleUser extends SpeakeasyBase {
-    avatarUrl: string;
-    eventsUrl: string;
-    followersUrl: string;
-    followingUrl: string;
-    gistsUrl: string;
-    gravatarId: string;
-    htmlUrl: string;
-    id: number;
-    login: string;
-    nodeId: string;
-    organizationsUrl: string;
-    receivedEventsUrl: string;
-    reposUrl: string;
-    siteAdmin: boolean;
-    starredAt?: string;
-    starredUrl: string;
-    subscriptionsUrl: string;
-    type: string;
-    url: string;
-}
-/**
- * License Simple
-**/
-export declare class PullRequestBaseRepoLicenseSimple extends SpeakeasyBase {
-    htmlUrl?: string;
-    key: string;
-    name: string;
-    nodeId: string;
-    spdxId: string;
-    url: string;
 }
 export declare class PullRequestBaseRepoOwner extends SpeakeasyBase {
     avatarUrl: string;
@@ -70,10 +62,13 @@ export declare class PullRequestBaseRepoOwner extends SpeakeasyBase {
 }
 export declare class PullRequestBaseRepoPermissions extends SpeakeasyBase {
     admin: boolean;
+    maintain?: boolean;
     pull: boolean;
     push: boolean;
+    triage?: boolean;
 }
 export declare class PullRequestBaseRepo extends SpeakeasyBase {
+    allowForking?: boolean;
     allowMergeCommit?: boolean;
     allowRebaseMerge?: boolean;
     allowSquashMerge?: boolean;
@@ -122,7 +117,10 @@ export declare class PullRequestBaseRepo extends SpeakeasyBase {
     labelsUrl: string;
     language: string;
     languagesUrl: string;
-    license: PullRequestBaseRepoLicenseSimple;
+    /**
+     * License Simple
+     */
+    license: NullableLicenseSimple;
     masterBranch?: string;
     mergesUrl: string;
     milestonesUrl: string;
@@ -211,10 +209,13 @@ export declare class PullRequestHeadRepoOwner extends SpeakeasyBase {
 }
 export declare class PullRequestHeadRepoPermissions extends SpeakeasyBase {
     admin: boolean;
+    maintain?: boolean;
     pull: boolean;
     push: boolean;
+    triage?: boolean;
 }
 export declare class PullRequestHeadRepo extends SpeakeasyBase {
+    allowForking?: boolean;
     allowMergeCommit?: boolean;
     allowRebaseMerge?: boolean;
     allowSquashMerge?: boolean;
@@ -333,67 +334,27 @@ export declare class PullRequestLabels extends SpeakeasyBase {
     url?: string;
 }
 /**
- * Simple User
-**/
-export declare class PullRequestMilestoneSimpleUser extends SpeakeasyBase {
-    avatarUrl: string;
-    eventsUrl: string;
-    followersUrl: string;
-    followingUrl: string;
-    gistsUrl: string;
-    gravatarId: string;
-    htmlUrl: string;
-    id: number;
-    login: string;
-    nodeId: string;
-    organizationsUrl: string;
-    receivedEventsUrl: string;
-    reposUrl: string;
-    siteAdmin: boolean;
-    starredAt?: string;
-    starredUrl: string;
-    subscriptionsUrl: string;
-    type: string;
-    url: string;
-}
-export declare enum PullRequestMilestoneStateEnum {
-    Open = "open",
-    Closed = "closed"
-}
-/**
- * A collection of related issues and pull requests.
-**/
-export declare class PullRequestMilestone extends SpeakeasyBase {
-    closedAt: Date;
-    closedIssues: number;
-    createdAt: Date;
-    creator: PullRequestMilestoneSimpleUser;
-    description: string;
-    dueOn: Date;
-    htmlUrl: string;
-    id: number;
-    labelsUrl: string;
-    nodeId: string;
-    number: number;
-    openIssues: number;
-    state: PullRequestMilestoneStateEnum;
-    title: string;
-    updatedAt: Date;
-    url: string;
-}
+ * State of this Pull Request. Either `open` or `closed`.
+ */
 export declare enum PullRequestStateEnum {
     Open = "open",
     Closed = "closed"
 }
 /**
  * Pull requests let you tell others about changes you've pushed to a repository on GitHub. Once a pull request is sent, interested parties can review the set of changes, discuss potential modifications, and even push follow-up commits if necessary.
-**/
+ */
 export declare class PullRequest extends SpeakeasyBase {
     links: PullRequestLinks;
     activeLockReason?: string;
     additions: number;
-    assignee: PullRequestSimpleUser;
+    /**
+     * Simple User
+     */
+    assignee: NullableSimpleUser;
     assignees?: SimpleUser[];
+    /**
+     * How the author is associated with the repository.
+     */
     authorAssociation: AuthorAssociationEnum;
     base: PullRequestBase;
     body: string;
@@ -406,6 +367,9 @@ export declare class PullRequest extends SpeakeasyBase {
     createdAt: Date;
     deletions: number;
     diffUrl: string;
+    /**
+     * Indicates whether or not the pull request is a draft.
+     */
     draft?: boolean;
     head: PullRequestHead;
     htmlUrl: string;
@@ -413,15 +377,27 @@ export declare class PullRequest extends SpeakeasyBase {
     issueUrl: string;
     labels: PullRequestLabels[];
     locked: boolean;
+    /**
+     * Indicates whether maintainers can modify the pull request.
+     */
     maintainerCanModify: boolean;
     mergeCommitSha: string;
     mergeable: boolean;
     mergeableState: string;
     merged: boolean;
     mergedAt: Date;
-    mergedBy: PullRequestSimpleUser;
-    milestone: PullRequestMilestone;
+    /**
+     * Simple User
+     */
+    mergedBy: NullableSimpleUser;
+    /**
+     * A collection of related issues and pull requests.
+     */
+    milestone: NullableMilestone;
     nodeId: string;
+    /**
+     * Number uniquely identifying the pull request within its repository.
+     */
     number: number;
     patchUrl: string;
     rebaseable?: boolean;
@@ -430,10 +406,19 @@ export declare class PullRequest extends SpeakeasyBase {
     reviewCommentUrl: string;
     reviewComments: number;
     reviewCommentsUrl: string;
+    /**
+     * State of this Pull Request. Either `open` or `closed`.
+     */
     state: PullRequestStateEnum;
     statusesUrl: string;
+    /**
+     * The title of the pull request.
+     */
     title: string;
     updatedAt: Date;
     url: string;
-    user: PullRequestSimpleUser;
+    /**
+     * Simple User
+     */
+    user: NullableSimpleUser;
 }

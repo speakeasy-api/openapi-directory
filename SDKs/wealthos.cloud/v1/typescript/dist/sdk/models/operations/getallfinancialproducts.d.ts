@@ -1,65 +1,176 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetAllFinancialProductsQueryParams extends SpeakeasyBase {
-    productTypes?: string;
+import { AxiosResponse } from "axios";
+export declare class GetAllFinancialProductsSecurity extends SpeakeasyBase {
+    apiSecretKey: string;
 }
-export declare class GetAllFinancialProductsHeaders extends SpeakeasyBase {
+export declare class GetAllFinancialProductsRequest extends SpeakeasyBase {
+    /**
+     * multiple product types as a comma seperated string
+     */
+    productTypes?: string;
+    /**
+     * ApiSecretKey
+     */
     xApiKey: string;
 }
-export declare class GetAllFinancialProductsSecurity extends SpeakeasyBase {
-    apiSecretKey: shared.SchemeApiSecretKey;
+/**
+ * System error. Retry later. If the error persist, contact WOS support
+ */
+export declare class GetAllFinancialProducts500ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Optional error code
+     */
+    errorCode?: string;
+    /**
+     * Human readable description of the error
+     */
+    message: string;
 }
-export declare enum GetAllFinancialProducts200ApplicationJsonRootTypeForFinancialProductsFlexibleEnum {
+/**
+ * You have sent too many requests to the system. Please retry later. If you need to increase your throtteling limits, please contact WOS support
+ */
+export declare class GetAllFinancialProducts429ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Optional error code
+     */
+    errorCode?: string;
+    /**
+     * Human readable description of the error
+     */
+    message: string;
+}
+/**
+ * The specified resource was not found
+ */
+export declare class GetAllFinancialProducts404ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Optional error code
+     */
+    errorCode?: string;
+    /**
+     * Human readable description of the error
+     */
+    message: string;
+}
+/**
+ * Your authentication information is missing or invalid. Please check the keys are properly set and its correct
+ */
+export declare class GetAllFinancialProducts403ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Optional error code
+     */
+    errorCode?: string;
+    /**
+     * Human readable description of the error
+     */
+    message: string;
+}
+/**
+ * You do not have permissions to access this resource.
+ */
+export declare class GetAllFinancialProducts401ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Optional error code
+     */
+    errorCode?: string;
+    /**
+     * Human readable description of the error
+     */
+    message: string;
+}
+/**
+ * Request is not complete and may have one or more validations errors. Please check the error message and the code
+ */
+export declare class GetAllFinancialProducts400ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Optional error code
+     */
+    errorCode?: string;
+    /**
+     * Human readable description of the error
+     */
+    message: string;
+}
+/**
+ * Whether the regulations allow a financial product to be flexible
+ */
+export declare enum GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsFlexibleEnum {
     Yes = "YES",
     No = "NO"
 }
-export declare class GetAllFinancialProducts200ApplicationJsonRootTypeForFinancialProductsInterestPreferences extends SpeakeasyBase {
+export declare class GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsInterestPreferences extends SpeakeasyBase {
     interestAccrualBasis?: string;
     interestPaymentFrequency?: string;
     payInterest?: string;
 }
-export declare class GetAllFinancialProducts200ApplicationJsonRootTypeForFinancialProductsInvestmentPreferences extends SpeakeasyBase {
+export declare class GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsInvestmentPreferences extends SpeakeasyBase {
     minimumOneOffInvestment?: string;
     minimumRegularMonthlyInvestment?: string;
     regularInvestmentDates?: string[];
     regularInvestmentFrequencies?: string[];
 }
-export declare class GetAllFinancialProducts200ApplicationJsonRootTypeForFinancialProductsWithdrawalPreferences extends SpeakeasyBase {
+export declare class GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsWithdrawalPreferences extends SpeakeasyBase {
     minimumOneOffWithdrawal?: string;
     minimumRegularMonthlyWithdrawal?: string;
     regularWithdrawalFrequencies?: string[];
     regularWithdrawalPaymentDates?: string[];
 }
-export declare class GetAllFinancialProducts200ApplicationJsonRootTypeForFinancialProducts extends SpeakeasyBase {
+export declare class GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProducts extends SpeakeasyBase {
     additionalCashCurrencies?: string[];
     availability?: string[];
     createdAt?: Date;
     dividendOptions?: string[];
     financialProductId: string;
-    flexible?: GetAllFinancialProducts200ApplicationJsonRootTypeForFinancialProductsFlexibleEnum;
-    interestPreferences?: GetAllFinancialProducts200ApplicationJsonRootTypeForFinancialProductsInterestPreferences;
-    investmentPreferences?: GetAllFinancialProducts200ApplicationJsonRootTypeForFinancialProductsInvestmentPreferences;
+    /**
+     * Whether the regulations allow a financial product to be flexible
+     */
+    flexible?: GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsFlexibleEnum;
+    interestPreferences?: GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsInterestPreferences;
+    investmentPreferences?: GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsInvestmentPreferences;
     name: string;
+    /**
+     * Financial product type
+     */
     productType: string;
     updatedAt?: Date;
-    withdrawalPreferences?: GetAllFinancialProducts200ApplicationJsonRootTypeForFinancialProductsWithdrawalPreferences;
+    withdrawalPreferences?: GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsWithdrawalPreferences;
 }
-export declare class GetAllFinancialProducts200ApplicationJson extends SpeakeasyBase {
-    financialProducts: GetAllFinancialProducts200ApplicationJsonRootTypeForFinancialProducts[];
-}
-export declare class GetAllFinancialProductsRequest extends SpeakeasyBase {
-    queryParams: GetAllFinancialProductsQueryParams;
-    headers: GetAllFinancialProductsHeaders;
-    security: GetAllFinancialProductsSecurity;
+/**
+ * A paged array of financial products
+ */
+export declare class GetAllFinancialProducts200ApplicationJSON extends SpeakeasyBase {
+    financialProducts: GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProducts[];
 }
 export declare class GetAllFinancialProductsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getAllFinancialProducts200ApplicationJSONObject?: GetAllFinancialProducts200ApplicationJson;
-    getAllFinancialProducts400ApplicationJSONAny?: any;
-    getAllFinancialProducts401ApplicationJSONAny?: any;
-    getAllFinancialProducts403ApplicationJSONAny?: any;
-    getAllFinancialProducts404ApplicationJSONAny?: any;
-    getAllFinancialProducts429ApplicationJSONAny?: any;
-    getAllFinancialProducts500ApplicationJSONAny?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * A paged array of financial products
+     */
+    getAllFinancialProducts200ApplicationJSONObject?: GetAllFinancialProducts200ApplicationJSON;
+    /**
+     * Request is not complete and may have one or more validations errors. Please check the error message and the code
+     */
+    getAllFinancialProducts400ApplicationJSONObject?: GetAllFinancialProducts400ApplicationJSON;
+    /**
+     * You do not have permissions to access this resource.
+     */
+    getAllFinancialProducts401ApplicationJSONObject?: GetAllFinancialProducts401ApplicationJSON;
+    /**
+     * Your authentication information is missing or invalid. Please check the keys are properly set and its correct
+     */
+    getAllFinancialProducts403ApplicationJSONObject?: GetAllFinancialProducts403ApplicationJSON;
+    /**
+     * The specified resource was not found
+     */
+    getAllFinancialProducts404ApplicationJSONObject?: GetAllFinancialProducts404ApplicationJSON;
+    /**
+     * You have sent too many requests to the system. Please retry later. If you need to increase your throtteling limits, please contact WOS support
+     */
+    getAllFinancialProducts429ApplicationJSONObject?: GetAllFinancialProducts429ApplicationJSON;
+    /**
+     * System error. Retry later. If the error persist, contact WOS support
+     */
+    getAllFinancialProducts500ApplicationJSONObject?: GetAllFinancialProducts500ApplicationJSON;
 }

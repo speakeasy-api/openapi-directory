@@ -1,9 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ObReadDataScheduledPayment3 } from "./obreaddatascheduledpayment3";
 import { Links } from "./links";
 import { Meta } from "./meta";
-export declare class ObReadScheduledPayment3 extends SpeakeasyBase {
-    data: ObReadDataScheduledPayment3;
+import { OBReadDataScheduledPayment3 } from "./obreaddatascheduledpayment3";
+/**
+ * Scheduled Payments Read
+ */
+export declare class OBReadScheduledPayment3 extends SpeakeasyBase {
+    data: OBReadDataScheduledPayment3;
+    /**
+     * Links relevant to the payload
+     */
     links?: Links;
+    /**
+     * Meta Data relevant to the payload
+     */
     meta?: Meta;
 }

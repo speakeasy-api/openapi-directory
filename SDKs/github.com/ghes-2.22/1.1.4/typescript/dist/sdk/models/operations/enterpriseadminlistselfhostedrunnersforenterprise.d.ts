@@ -1,23 +1,34 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class EnterpriseAdminListSelfHostedRunnersForEnterprisePathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class EnterpriseAdminListSelfHostedRunnersForEnterpriseRequest extends SpeakeasyBase {
+    /**
+     * The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+     */
     enterprise: string;
-}
-export declare class EnterpriseAdminListSelfHostedRunnersForEnterpriseQueryParams extends SpeakeasyBase {
+    /**
+     * Page number of the results to fetch.
+     */
     page?: number;
+    /**
+     * Results per page (max 100)
+     */
     perPage?: number;
 }
-export declare class EnterpriseAdminListSelfHostedRunnersForEnterprise200ApplicationJson extends SpeakeasyBase {
+/**
+ * Response
+ */
+export declare class EnterpriseAdminListSelfHostedRunnersForEnterprise200ApplicationJSON extends SpeakeasyBase {
     runners?: shared.RunnerNoLabels[];
     totalCount?: number;
 }
-export declare class EnterpriseAdminListSelfHostedRunnersForEnterpriseRequest extends SpeakeasyBase {
-    pathParams: EnterpriseAdminListSelfHostedRunnersForEnterprisePathParams;
-    queryParams: EnterpriseAdminListSelfHostedRunnersForEnterpriseQueryParams;
-}
 export declare class EnterpriseAdminListSelfHostedRunnersForEnterpriseResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
-    enterpriseAdminListSelfHostedRunnersForEnterprise200ApplicationJSONObject?: EnterpriseAdminListSelfHostedRunnersForEnterprise200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
+    enterpriseAdminListSelfHostedRunnersForEnterprise200ApplicationJSONObject?: EnterpriseAdminListSelfHostedRunnersForEnterprise200ApplicationJSON;
 }

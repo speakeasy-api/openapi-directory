@@ -1,34 +1,33 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetDeviceRegistrationRequest, GetDeviceRegistrationResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GetDeploymentsRequest,
+  GetDeploymentsResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: GetDeviceRegistrationRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
-    deviceFleetName: "voluptas",
-    deviceName: "fugit",
+});
+
+const req: GetDeploymentsRequest = {
+  requestBody: {
+    deviceFleetName: "corrupti",
+    deviceName: "provident",
   },
+  xAmzAlgorithm: "distinctio",
+  xAmzContentSha256: "quibusdam",
+  xAmzCredential: "unde",
+  xAmzDate: "nulla",
+  xAmzSecurityToken: "corrupti",
+  xAmzSignature: "illum",
+  xAmzSignedHeaders: "vel",
 };
 
-sdk.getDeviceRegistration(req).then((res: GetDeviceRegistrationResponse | AxiosError) => {
+sdk.getDeployments(req).then((res: GetDeploymentsResponse | AxiosError) => {
    // handle response
 });
 ```

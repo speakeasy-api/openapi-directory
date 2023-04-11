@@ -1,18 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class RejectVendorApplicationPathParams extends SpeakeasyBase {
-    userId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class RejectVendorApplicationSecurity extends SpeakeasyBase {
-    mwoAuth: shared.SchemeMwoAuth;
+    mwoAuth: string;
 }
 export declare class RejectVendorApplicationRequest extends SpeakeasyBase {
-    pathParams: RejectVendorApplicationPathParams;
-    security: RejectVendorApplicationSecurity;
+    /**
+     * User ID
+     */
+    userId: number;
 }
 export declare class RejectVendorApplicationResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * UserNotFound
+     */
     error?: shared.ErrorT;
+    /**
+     * Vendor application of this user is rejected.
+     */
     operationStatus?: shared.OperationStatus;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

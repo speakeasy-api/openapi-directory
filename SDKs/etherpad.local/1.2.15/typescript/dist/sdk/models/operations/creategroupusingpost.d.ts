@@ -1,32 +1,58 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CreateGroupUsingPost200ApplicationJsonData extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+/**
+ * internal api error (code 2)
+ */
+export declare class CreateGroupUsingPost500ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class CreateGroupUsingPost401ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+/**
+ * generic api error (code 1)
+ */
+export declare class CreateGroupUsingPost400ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+export declare class CreateGroupUsingPost200ApplicationJSONData extends SpeakeasyBase {
     groupID?: string;
 }
-export declare class CreateGroupUsingPost200ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class CreateGroupUsingPost200ApplicationJSON extends SpeakeasyBase {
     code?: number;
-    data?: CreateGroupUsingPost200ApplicationJsonData;
+    data?: CreateGroupUsingPost200ApplicationJSONData;
     message?: string;
 }
-export declare class CreateGroupUsingPost400ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class CreateGroupUsingPost401ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class CreateGroupUsingPost500ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class CreateGroupUsingPostResponse extends SpeakeasyBase {
+export declare class CreateGroupUsingPOSTResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createGroupUsingPOST200ApplicationJSONObject?: CreateGroupUsingPost200ApplicationJson;
-    createGroupUsingPOST400ApplicationJSONObject?: CreateGroupUsingPost400ApplicationJson;
-    createGroupUsingPOST401ApplicationJSONObject?: CreateGroupUsingPost401ApplicationJson;
-    createGroupUsingPOST500ApplicationJSONObject?: CreateGroupUsingPost500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    createGroupUsingPOST200ApplicationJSONObject?: CreateGroupUsingPost200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    createGroupUsingPOST400ApplicationJSONObject?: CreateGroupUsingPost400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    createGroupUsingPOST401ApplicationJSONObject?: CreateGroupUsingPost401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    createGroupUsingPOST500ApplicationJSONObject?: CreateGroupUsingPost500ApplicationJSON;
 }

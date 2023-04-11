@@ -1,0 +1,24 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class PostV05CareContextsOnDiscoverJsonRequest extends SpeakeasyBase {
+    /**
+     * Access token which was issued after successful login with gateway auth server.
+     */
+    authorization: string;
+    patientDiscoveryResult: shared.PatientDiscoveryResult;
+}
+export declare class PostV05CareContextsOnDiscoverJsonResponse extends SpeakeasyBase {
+    body?: Uint8Array;
+    contentType: string;
+    /**
+     * **Causes:**
+     *
+     * @remarks
+     *   * Format mismatch of any of attributes.
+     *
+     */
+    errorResponse?: shared.ErrorResponse;
+    statusCode: number;
+    rawResponse?: AxiosResponse;
+}

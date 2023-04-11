@@ -6,7 +6,7 @@ import { KinesisFirehoseInputUpdate } from "./kinesisfirehoseinputupdate";
 import { KinesisStreamsInputUpdate } from "./kinesisstreamsinputupdate";
 /**
  * Describes updates to a specific input configuration (identified by the <code>InputId</code> of an application).
-**/
+ */
 export declare class InputUpdate extends SpeakeasyBase {
     inputId: string;
     inputParallelismUpdate?: InputParallelismUpdate;

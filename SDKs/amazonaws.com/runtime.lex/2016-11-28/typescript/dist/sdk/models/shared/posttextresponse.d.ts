@@ -1,11 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ActiveContext } from "./activecontext";
-import { PredictedIntent } from "./predictedintent";
 import { DialogStateEnum } from "./dialogstateenum";
-import { MessageFormatTypeEnum } from "./messageformattypeenum";
 import { IntentConfidence } from "./intentconfidence";
+import { MessageFormatTypeEnum } from "./messageformattypeenum";
+import { PredictedIntent } from "./predictedintent";
 import { ResponseCard } from "./responsecard";
 import { SentimentResponse } from "./sentimentresponse";
+/**
+ * Success
+ */
 export declare class PostTextResponse extends SpeakeasyBase {
     activeContexts?: ActiveContext[];
     alternativeIntents?: PredictedIntent[];

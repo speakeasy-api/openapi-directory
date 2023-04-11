@@ -1,21 +1,35 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class OrgsListInvitationTeamsPathParams extends SpeakeasyBase {
-    invitationId: number;
-    org: string;
-}
-export declare class OrgsListInvitationTeamsQueryParams extends SpeakeasyBase {
-    page?: number;
-    perPage?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class OrgsListInvitationTeamsRequest extends SpeakeasyBase {
-    pathParams: OrgsListInvitationTeamsPathParams;
-    queryParams: OrgsListInvitationTeamsQueryParams;
+    /**
+     * The unique identifier of the invitation.
+     */
+    invitationId: number;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    org: string;
+    /**
+     * Page number of the results to fetch.
+     */
+    page?: number;
+    /**
+     * The number of results per page (max 100).
+     */
+    perPage?: number;
 }
 export declare class OrgsListInvitationTeamsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Resource not found
+     */
     basicError?: shared.BasicError;
+    /**
+     * Response
+     */
     teams?: shared.Team[];
 }

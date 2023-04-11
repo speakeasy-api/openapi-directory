@@ -35,6 +35,12 @@ export declare class HealthInformationNotificationNotification extends Speakeasy
 }
 export declare class HealthInformationNotification extends SpeakeasyBase {
     notification: HealthInformationNotificationNotification;
+    /**
+     * a nonce, unique for each HTTP request.
+     */
     requestId: string;
+    /**
+     * Date time format in UTC, includes miliseconds YYYY-MM-DDThh:mm:ss.vZ
+     */
     timestamp: Date;
 }

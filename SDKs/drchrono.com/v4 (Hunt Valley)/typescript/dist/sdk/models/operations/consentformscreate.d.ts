@@ -1,17 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ConsentFormsCreateQueryParams extends SpeakeasyBase {
-    doctor?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ConsentFormsCreateSecurity extends SpeakeasyBase {
-    drchronoOauth2: shared.SchemeDrchronoOauth2;
+    drchronoOauth2: string;
 }
 export declare class ConsentFormsCreateRequest extends SpeakeasyBase {
-    queryParams: ConsentFormsCreateQueryParams;
-    security: ConsentFormsCreateSecurity;
+    doctor?: number;
 }
 export declare class ConsentFormsCreateResponse extends SpeakeasyBase {
+    /**
+     * Created
+     */
     consentForm?: shared.ConsentForm;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

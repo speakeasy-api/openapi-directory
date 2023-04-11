@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * State postal code of the address
+ */
 export declare enum AgentLocationResultAddressStateEnum {
     Ak = "AK",
     Al = "AL",
@@ -63,22 +66,67 @@ export declare enum AgentLocationResultAddressStateEnum {
 }
 /**
  * Address of the agent location
-**/
+ */
 export declare class AgentLocationResultAddress extends SpeakeasyBase {
+    /**
+     * City of the address
+     */
     city: string;
+    /**
+     * County of the address
+     */
     county?: string;
+    /**
+     * State postal code of the address
+     */
     state: AgentLocationResultAddressStateEnum;
+    /**
+     * Line one of the address
+     */
     streetOne: string;
+    /**
+     * Line two of the address
+     */
     streetTwo?: string;
+    /**
+     * Zip code of the address
+     */
     zipCode: string;
 }
+/**
+ * Successful Response - Returns the new Agent Location
+ */
 export declare class AgentLocationResult extends SpeakeasyBase {
+    /**
+     * Address of the agent location
+     */
     address: AgentLocationResultAddress;
+    /**
+     * Unique identifier of the agent in Noyo
+     */
     agentId: string;
+    /**
+     * The date the record was created
+     */
     created: number;
+    /**
+     * Display name for the agent location
+     */
     displayName: string;
+    /**
+     * Unique identifier of the record in Noyo
+     */
     id: string;
+    /**
+     * The date the record was last updated
+     */
     modified: number;
+    /**
+     * Boolean field to determine whether the agent location should be used as the primary agent location
+     */
     primaryLocation: boolean;
+    /**
+     * Current version of the record
+     */
     version: string;
 }

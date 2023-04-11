@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostPurchaseReservedDbInstancesOfferingActionEnum {
-    PurchaseReservedDbInstancesOffering = "PurchaseReservedDBInstancesOffering"
+import { AxiosResponse } from "axios";
+export declare enum POSTPurchaseReservedDBInstancesOfferingActionEnum {
+    PurchaseReservedDBInstancesOffering = "PurchaseReservedDBInstancesOffering"
 }
-export declare enum PostPurchaseReservedDbInstancesOfferingVersionEnum {
+export declare enum POSTPurchaseReservedDBInstancesOfferingVersionEnum {
     TwoThousandAndThirteen0909 = "2013-09-09"
 }
-export declare class PostPurchaseReservedDbInstancesOfferingQueryParams extends SpeakeasyBase {
-    action: PostPurchaseReservedDbInstancesOfferingActionEnum;
-    version: PostPurchaseReservedDbInstancesOfferingVersionEnum;
-}
-export declare class PostPurchaseReservedDbInstancesOfferingHeaders extends SpeakeasyBase {
+export declare class POSTPurchaseReservedDBInstancesOfferingRequest extends SpeakeasyBase {
+    action: POSTPurchaseReservedDBInstancesOfferingActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTPurchaseReservedDBInstancesOfferingVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostPurchaseReservedDbInstancesOfferingHeaders extends Spea
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostPurchaseReservedDbInstancesOfferingRequest extends SpeakeasyBase {
-    queryParams: PostPurchaseReservedDbInstancesOfferingQueryParams;
-    headers: PostPurchaseReservedDbInstancesOfferingHeaders;
-    request?: Uint8Array;
-}
-export declare class PostPurchaseReservedDbInstancesOfferingResponse extends SpeakeasyBase {
+export declare class POSTPurchaseReservedDBInstancesOfferingResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

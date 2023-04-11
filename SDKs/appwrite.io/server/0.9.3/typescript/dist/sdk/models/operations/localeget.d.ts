@@ -1,15 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class LocaleGetSecurity extends SpeakeasyBase {
-    jwt: shared.SchemeJwt;
-    key: shared.SchemeKey;
-    project: shared.SchemeProject;
-}
-export declare class LocaleGetRequest extends SpeakeasyBase {
-    security: LocaleGetSecurity;
-}
+import { AxiosResponse } from "axios";
 export declare class LocaleGetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Locale
+     */
     locale?: shared.Locale;
 }

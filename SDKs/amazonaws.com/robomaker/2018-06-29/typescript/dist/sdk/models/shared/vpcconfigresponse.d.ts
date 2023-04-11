@@ -1,8 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * VPC configuration associated with your simulation job.
-**/
-export declare class VpcConfigResponse extends SpeakeasyBase {
+ */
+export declare class VPCConfigResponse extends SpeakeasyBase {
     assignPublicIp?: boolean;
     securityGroups?: string[];
     subnets?: string[];

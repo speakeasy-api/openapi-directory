@@ -1,10 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListDetectorModelsQueryParams extends SpeakeasyBase {
-    maxResults?: number;
-    nextToken?: string;
-}
-export declare class ListDetectorModelsHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListDetectorModelsRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,17 +9,37 @@ export declare class ListDetectorModelsHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class ListDetectorModelsRequest extends SpeakeasyBase {
-    queryParams: ListDetectorModelsQueryParams;
-    headers: ListDetectorModelsHeaders;
+    /**
+     * The maximum number of results to be returned per request.
+     */
+    maxResults?: number;
+    /**
+     * The token that you can use to return the next set of results.
+     */
+    nextToken?: string;
 }
 export declare class ListDetectorModelsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalFailureException
+     */
     internalFailureException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * Success
+     */
     listDetectorModelsResponse?: shared.ListDetectorModelsResponse;
-    serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceUnavailableException
+     */
+    serviceUnavailableException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListAwsDefaultServiceQuotasQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare enum ListAWSDefaultServiceQuotasXAmzTargetEnum {
+    ServiceQuotasV20190624ListAWSDefaultServiceQuotas = "ServiceQuotasV20190624.ListAWSDefaultServiceQuotas"
+}
+export declare class ListAWSDefaultServiceQuotasRequest extends SpeakeasyBase {
+    listAWSDefaultServiceQuotasRequest: shared.ListAWSDefaultServiceQuotasRequest;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-}
-export declare enum ListAwsDefaultServiceQuotasXAmzTargetEnum {
-    ServiceQuotasV20190624ListAwsDefaultServiceQuotas = "ServiceQuotasV20190624.ListAWSDefaultServiceQuotas"
-}
-export declare class ListAwsDefaultServiceQuotasHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -15,21 +21,38 @@ export declare class ListAwsDefaultServiceQuotasHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: ListAwsDefaultServiceQuotasXAmzTargetEnum;
+    xAmzTarget: ListAWSDefaultServiceQuotasXAmzTargetEnum;
 }
-export declare class ListAwsDefaultServiceQuotasRequest extends SpeakeasyBase {
-    queryParams: ListAwsDefaultServiceQuotasQueryParams;
-    headers: ListAwsDefaultServiceQuotasHeaders;
-    request: shared.ListAwsDefaultServiceQuotasRequest;
-}
-export declare class ListAwsDefaultServiceQuotasResponse extends SpeakeasyBase {
+export declare class ListAWSDefaultServiceQuotasResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * IllegalArgumentException
+     */
     illegalArgumentException?: any;
+    /**
+     * InvalidPaginationTokenException
+     */
     invalidPaginationTokenException?: any;
-    listAWSDefaultServiceQuotasResponse?: shared.ListAwsDefaultServiceQuotasResponse;
+    /**
+     * Success
+     */
+    listAWSDefaultServiceQuotasResponse?: shared.ListAWSDefaultServiceQuotasResponse;
+    /**
+     * NoSuchResourceException
+     */
     noSuchResourceException?: any;
+    /**
+     * ServiceException
+     */
     serviceException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

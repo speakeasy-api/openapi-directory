@@ -1,41 +1,61 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AddNotificationChannelsRequest, AddNotificationChannelsResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  AddNotificationChannelsRequest,
+  AddNotificationChannelsResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  EventPublisherEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    hmac: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: AddNotificationChannelsRequest = {
-  pathParams: {
-    profilingGroupName: "sit",
-  },
-  headers: {
-    xAmzAlgorithm: "voluptas",
-    xAmzContentSha256: "culpa",
-    xAmzCredential: "expedita",
-    xAmzDate: "consequuntur",
-    xAmzSecurityToken: "dolor",
-    xAmzSignature: "expedita",
-    xAmzSignedHeaders: "voluptas",
-  },
-  request: {
+  requestBody: {
     channels: [
       {
         eventPublishers: [
-          "AnomalyDetection",
+          EventPublisherEnum.AnomalyDetection,
+          EventPublisherEnum.AnomalyDetection,
+          EventPublisherEnum.AnomalyDetection,
         ],
-        id: "rerum",
-        uri: "dicta",
+        id: "distinctio",
+        uri: "https://outstanding-strait.name",
+      },
+      {
+        eventPublishers: [
+          EventPublisherEnum.AnomalyDetection,
+          EventPublisherEnum.AnomalyDetection,
+          EventPublisherEnum.AnomalyDetection,
+          EventPublisherEnum.AnomalyDetection,
+        ],
+        id: "vel",
+        uri: "https://present-giggle.info",
+      },
+      {
+        eventPublishers: [
+          EventPublisherEnum.AnomalyDetection,
+          EventPublisherEnum.AnomalyDetection,
+        ],
+        id: "debitis",
+        uri: "http://whirlwind-diver.info",
       },
     ],
   },
+  xAmzAlgorithm: "molestiae",
+  xAmzContentSha256: "minus",
+  xAmzCredential: "placeat",
+  xAmzDate: "voluptatum",
+  xAmzSecurityToken: "iusto",
+  xAmzSignature: "excepturi",
+  xAmzSignedHeaders: "nisi",
+  profilingGroupName: "recusandae",
 };
 
 sdk.addNotificationChannels(req).then((res: AddNotificationChannelsResponse | AxiosError) => {

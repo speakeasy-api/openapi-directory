@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeResizeActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeResizeActionEnum {
     DescribeResize = "DescribeResize"
 }
-export declare enum GetDescribeResizeVersionEnum {
+export declare enum GETDescribeResizeVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class GetDescribeResizeQueryParams extends SpeakeasyBase {
-    action: GetDescribeResizeActionEnum;
+export declare class GETDescribeResizeRequest extends SpeakeasyBase {
+    action: GETDescribeResizeActionEnum;
+    /**
+     * <p>The unique identifier of a cluster whose resize progress you are requesting. This parameter is case-sensitive.</p> <p>By default, resize operations for all clusters defined for an Amazon Web Services account are returned.</p>
+     */
     clusterIdentifier: string;
-    version: GetDescribeResizeVersionEnum;
-}
-export declare class GetDescribeResizeHeaders extends SpeakeasyBase {
+    version: GETDescribeResizeVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDescribeResizeHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeResizeRequest extends SpeakeasyBase {
-    queryParams: GetDescribeResizeQueryParams;
-    headers: GetDescribeResizeHeaders;
-}
-export declare class GetDescribeResizeResponse extends SpeakeasyBase {
+export declare class GETDescribeResizeResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

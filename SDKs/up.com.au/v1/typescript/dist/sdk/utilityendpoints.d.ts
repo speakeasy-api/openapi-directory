@@ -1,5 +1,12 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Some endpoints exist not to expose data, but to test the API
+ *
+ * @remarks
+ * itself. Currently there is only one endpoint in this group: ping!
+ *
+ */
 export declare class UtilityEndpoints {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,13 +16,14 @@ export declare class UtilityEndpoints {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getUtilPing - Ping
+     * Ping
      *
+     * @remarks
      * Make a basic ping request to the API. This is useful to verify that
      * authentication is functioning correctly. On authentication success an
      * HTTP `200` status is returned. On failure an HTTP `401` error response
      * is returned.
      *
-    **/
+     */
     getUtilPing(config?: AxiosRequestConfig): Promise<operations.GetUtilPingResponse>;
 }

@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteConfigurationTemplateActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteConfigurationTemplateActionEnum {
     DeleteConfigurationTemplate = "DeleteConfigurationTemplate"
 }
-export declare enum GetDeleteConfigurationTemplateVersionEnum {
+export declare enum GETDeleteConfigurationTemplateVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetDeleteConfigurationTemplateQueryParams extends SpeakeasyBase {
-    action: GetDeleteConfigurationTemplateActionEnum;
+export declare class GETDeleteConfigurationTemplateRequest extends SpeakeasyBase {
+    action: GETDeleteConfigurationTemplateActionEnum;
+    /**
+     * The name of the application to delete the configuration template from.
+     */
     applicationName: string;
+    /**
+     * The name of the configuration template to delete.
+     */
     templateName: string;
-    version: GetDeleteConfigurationTemplateVersionEnum;
-}
-export declare class GetDeleteConfigurationTemplateHeaders extends SpeakeasyBase {
+    version: GETDeleteConfigurationTemplateVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetDeleteConfigurationTemplateHeaders extends SpeakeasyBase
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteConfigurationTemplateRequest extends SpeakeasyBase {
-    queryParams: GetDeleteConfigurationTemplateQueryParams;
-    headers: GetDeleteConfigurationTemplateHeaders;
-}
-export declare class GetDeleteConfigurationTemplateResponse extends SpeakeasyBase {
+export declare class GETDeleteConfigurationTemplateResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

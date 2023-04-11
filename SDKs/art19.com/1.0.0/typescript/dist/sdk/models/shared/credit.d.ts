@@ -1,10 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ResourceIdentifier } from "./resourceidentifier";
-export declare enum CreditAttributesCreditableTypeEnum {
-    Series = "Series",
-    Season = "Season",
-    Episode = "Episode"
-}
+/**
+ * The type of credit the linked person has on the referenced entity
+ */
 export declare enum CreditAttributesTypeEnum {
     AnchorCredit = "AnchorCredit",
     AssociateProducerCredit = "AssociateProducerCredit",
@@ -32,25 +30,38 @@ export declare enum CreditAttributesTypeEnum {
 }
 export declare class CreditAttributes extends SpeakeasyBase {
     createdAt?: Date;
-    creditableId?: string;
-    creditableType?: CreditAttributesCreditableTypeEnum;
+    /**
+     * The order of this credit within all credits of the referenced creditable entity
+     */
     position?: number;
+    /**
+     * The type of credit the linked person has on the referenced entity
+     */
     type?: CreditAttributesTypeEnum;
     updatedAt?: Date;
+}
+export declare class CreditRelationshipsCreditable extends SpeakeasyBase {
+    data?: ResourceIdentifier;
 }
 export declare class CreditRelationshipsPerson extends SpeakeasyBase {
     data?: ResourceIdentifier;
 }
 export declare class CreditRelationships extends SpeakeasyBase {
+    creditable?: CreditRelationshipsCreditable;
     person?: CreditRelationshipsPerson;
 }
 /**
  * A credit links a specific person to a series, season, or episode in a specific role.
  *
-**/
+ * @remarks
+ *
+ */
 export declare class Credit extends SpeakeasyBase {
     attributes?: CreditAttributes;
     id?: string;
     relationships?: CreditRelationships;
+    /**
+     * The type of resource. This is always `credits`
+     */
     type?: string;
 }

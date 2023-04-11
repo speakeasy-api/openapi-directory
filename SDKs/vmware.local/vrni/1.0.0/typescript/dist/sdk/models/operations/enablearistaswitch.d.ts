@@ -1,16 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class EnableAristaSwitchPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class EnableAristaSwitchSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
+    apiKeyAuth: string;
 }
 export declare class EnableAristaSwitchRequest extends SpeakeasyBase {
-    pathParams: EnableAristaSwitchPathParams;
-    security: EnableAristaSwitchSecurity;
+    /**
+     * entity id
+     */
+    id: string;
 }
 export declare class EnableAristaSwitchResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

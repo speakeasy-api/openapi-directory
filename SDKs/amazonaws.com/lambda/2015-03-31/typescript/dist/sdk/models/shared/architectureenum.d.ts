@@ -1,0 +1,4 @@
+export declare enum ArchitectureEnum {
+    X8664 = "x86_64",
+    Arm64 = "arm64"
+}

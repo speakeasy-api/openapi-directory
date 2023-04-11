@@ -1,17 +1,17 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AddShortlinkRequest, AddShortlinkResponse } from "openapi/src/sdk/models/operations";
+import {
+  shared.ShortlinkRequest,
+  AddShortlinkResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: AddShortlinkRequest = {
-  request: {
-    keyid: "sit",
-    shortlink: "voluptas",
-  },
+
+const req: shared.ShortlinkRequest = {
+  keyid: "corrupti",
+  shortlink: "provident",
 };
 
 sdk.addShortlink.addShortlink(req).then((res: AddShortlinkResponse | AxiosError) => {

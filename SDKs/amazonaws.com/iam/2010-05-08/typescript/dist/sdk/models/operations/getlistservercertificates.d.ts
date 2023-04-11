@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetListServerCertificatesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETListServerCertificatesActionEnum {
     ListServerCertificates = "ListServerCertificates"
 }
-export declare enum GetListServerCertificatesVersionEnum {
+export declare enum GETListServerCertificatesVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class GetListServerCertificatesQueryParams extends SpeakeasyBase {
-    action: GetListServerCertificatesActionEnum;
+export declare class GETListServerCertificatesRequest extends SpeakeasyBase {
+    action: GETListServerCertificatesActionEnum;
+    /**
+     * Use this parameter only when paginating results and only after you receive a response indicating that the results are truncated. Set it to the value of the <code>Marker</code> element in the response that you received to indicate where the next call should start.
+     */
     marker?: string;
+    /**
+     * <p>Use this only when paginating results to indicate the maximum number of items you want in the response. If additional items exist beyond the maximum you specify, the <code>IsTruncated</code> response element is <code>true</code>.</p> <p>If you do not include this parameter, the number of items defaults to 100. Note that IAM might return fewer results, even when there are more results available. In that case, the <code>IsTruncated</code> response element returns <code>true</code>, and <code>Marker</code> contains a value to include in the subsequent call that tells the service where to continue from.</p>
+     */
     maxItems?: number;
+    /**
+     * <p> The path prefix for filtering the results. For example: <code>/company/servercerts</code> would get all server certificates for which the path starts with <code>/company/servercerts</code>.</p> <p>This parameter is optional. If it is not included, it defaults to a slash (/), listing all server certificates. This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of either a forward slash (/) by itself or a string that must begin and end with forward slashes. In addition, it can contain any ASCII character from the ! (<code>\u0021</code>) through the DEL character (<code>\u007F</code>), including most punctuation characters, digits, and upper and lowercased letters.</p>
+     */
     pathPrefix?: string;
-    version: GetListServerCertificatesVersionEnum;
-}
-export declare class GetListServerCertificatesHeaders extends SpeakeasyBase {
+    version: GETListServerCertificatesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +29,9 @@ export declare class GetListServerCertificatesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetListServerCertificatesRequest extends SpeakeasyBase {
-    queryParams: GetListServerCertificatesQueryParams;
-    headers: GetListServerCertificatesHeaders;
-}
-export declare class GetListServerCertificatesResponse extends SpeakeasyBase {
+export declare class GETListServerCertificatesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

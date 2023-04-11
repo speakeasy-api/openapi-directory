@@ -7,6 +7,3 @@ export * from "./batchprojectslocationsoperationsdelete";
 export * from "./batchprojectslocationsoperationsget";
 export * from "./batchprojectslocationsoperationslist";
 export * from "./batchprojectslocationsstatereport";
-export * from "./batchprojectslocationstasksgetiampolicy";
-export * from "./batchprojectslocationstaskssetiampolicy";
-export * from "./batchprojectslocationstaskstestiampermissions";

@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Subscriptions {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,43 +9,47 @@ export declare class Subscriptions {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getSubscriptionsByAccount - List subscriptions by account key
+     * List subscriptions by account key
      *
+     * @remarks
      * Retrieves all subscriptions associated with the specified account. Zuora only returns the latest version of the subscriptions.
      *
      * Subscription data is returned in reverse chronological order based on `updatedDate`.
      *
-    **/
-    getSubscriptionsByAccount(req: operations.GetSubscriptionsByAccountRequest, config?: AxiosRequestConfig): Promise<operations.GetSubscriptionsByAccountResponse>;
+     */
+    getSubscriptionsByAccount(req: operations.GETSubscriptionsByAccountRequest, config?: AxiosRequestConfig): Promise<operations.GETSubscriptionsByAccountResponse>;
     /**
-     * getSubscriptionsByKey - Retrieve a subscription by key
+     * Retrieve a subscription by key
      *
+     * @remarks
      * This REST API reference describes how to retrieve detailed information about a specified subscription in the latest version.
      *
-    **/
-    getSubscriptionsByKey(req: operations.GetSubscriptionsByKeyRequest, config?: AxiosRequestConfig): Promise<operations.GetSubscriptionsByKeyResponse>;
+     */
+    getSubscriptionsByKey(req: operations.GETSubscriptionsByKeyRequest, config?: AxiosRequestConfig): Promise<operations.GETSubscriptionsByKeyResponse>;
     /**
-     * getSubscriptionsByKeyAndVersion - Retrieve a subscription by key and version
+     * Retrieve a subscription by key and version
      *
+     * @remarks
      * This REST API reference describes how to retrieve detailed information about a specified subscription in a specified version. When you create a subscription amendment, you create a new version of the subscription. You can use this method to retrieve information about a subscription in any version.
      *
-    **/
-    getSubscriptionsByKeyAndVersion(req: operations.GetSubscriptionsByKeyAndVersionRequest, config?: AxiosRequestConfig): Promise<operations.GetSubscriptionsByKeyAndVersionResponse>;
+     */
+    getSubscriptionsByKeyAndVersion(req: operations.GETSubscriptionsByKeyAndVersionRequest, config?: AxiosRequestConfig): Promise<operations.GETSubscriptionsByKeyAndVersionResponse>;
     /**
-     * objectDeleteSubscription - CRUD: Delete a subscription
-    **/
-    objectDeleteSubscription(req: operations.ObjectDeleteSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.ObjectDeleteSubscriptionResponse>;
+     * CRUD: Delete a subscription
+     */
+    objectDELETESubscription(req: operations.ObjectDELETESubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.ObjectDELETESubscriptionResponse>;
     /**
-     * objectGetSubscription - CRUD: Retrieve a subscription
-    **/
-    objectGetSubscription(req: operations.ObjectGetSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGetSubscriptionResponse>;
+     * CRUD: Retrieve a subscription
+     */
+    objectGETSubscription(req: operations.ObjectGETSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGETSubscriptionResponse>;
     /**
-     * objectPutSubscription - CRUD: Update a subscription
-    **/
-    objectPutSubscription(req: operations.ObjectPutSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPutSubscriptionResponse>;
+     * CRUD: Update a subscription
+     */
+    objectPUTSubscription(req: operations.ObjectPUTSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPUTSubscriptionResponse>;
     /**
-     * postPreviewSubscription - Preview a subscription
+     * Preview a subscription
      *
+     * @remarks
      * The REST API reference describes how to create a new subscription in preview mode. This call does not require a valid customer account. It can be used to show potential new customers a preview of a subscription with complete details and charges before creating an account, or to let existing customers preview a subscription with all charges before committing.
      *
      * ## Notes
@@ -61,11 +65,12 @@ export declare class Subscriptions {
      * | customerAcceptanceDate (CA) specified      | SA uses value in the request call; CA uses value in the request call| CA uses value in the request call;SA uses CE as default |
      * | customerAcceptanceDate (CA) NOT specified      | SA uses value in the request call; CA uses SA as default |   SA and CA use CE as default |
      *
-    **/
-    postPreviewSubscription(req: operations.PostPreviewSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.PostPreviewSubscriptionResponse>;
+     */
+    postPreviewSubscription(req: operations.POSTPreviewSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.POSTPreviewSubscriptionResponse>;
     /**
-     * postSubscription - Create a subscription
+     * Create a subscription
      *
+     * @remarks
      * This REST API reference describes how to create a new subscription for an existing customer account.
      *
      * ## Notes
@@ -81,38 +86,42 @@ export declare class Subscriptions {
      * | customerAcceptanceDate (CA) specified| SA uses value in the request call; CA uses value in the request call| CA uses value in the request call;SA uses CE as default |
      * | customerAcceptanceDate (CA) NOT specified      | SA uses value in the request call; CA uses SA as default |   SA and CA use CE as default |
      *
-    **/
-    postSubscription(req: operations.PostSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.PostSubscriptionResponse>;
+     */
+    postSubscription(req: operations.POSTSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.POSTSubscriptionResponse>;
     /**
-     * putCancelSubscription - Cancel a subscription
+     * Cancel a subscription
      *
+     * @remarks
      * This REST API reference describes how to cancel an active subscription.
      *
      * **Note**: If you have the Invoice Settlement feature enabled, it is best practice to set the `zuora-version` parameter to `211.0` or later. Otherwise, an error occurs.
      *
-    **/
-    putCancelSubscription(req: operations.PutCancelSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.PutCancelSubscriptionResponse>;
+     */
+    putCancelSubscription(req: operations.PUTCancelSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.PUTCancelSubscriptionResponse>;
     /**
-     * putRenewSubscription - Renew a subscription
+     * Renew a subscription
      *
+     * @remarks
      * Renews a termed subscription using existing renewal terms.
      *
      * **Note**: If you have the Invoice Settlement feature enabled, it is best practice to set the `zuora-version` parameter to `211.0` or later. Otherwise, an error occurs.
      *
-    **/
-    putRenewSubscription(req: operations.PutRenewSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.PutRenewSubscriptionResponse>;
+     */
+    putRenewSubscription(req: operations.PUTRenewSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.PUTRenewSubscriptionResponse>;
     /**
-     * putResumeSubscription - Resume a subscription
+     * Resume a subscription
      *
+     * @remarks
      * This REST API reference describes how to resume a suspended subscription.
      *
      * **Note**: If you have the Invoice Settlement feature enabled, it is best practice to set the `zuora-version` parameter to `211.0` or later. Otherwise, an error occurs.
      *
-    **/
-    putResumeSubscription(req: operations.PutResumeSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.PutResumeSubscriptionResponse>;
+     */
+    putResumeSubscription(req: operations.PUTResumeSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.PUTResumeSubscriptionResponse>;
     /**
-     * putSubscription - Update a subscription
+     * Update a subscription
      *
+     * @remarks
      * Use this call to make the following kinds of changes to a subscription:
      *   * Add a note
      *   * Change the renewal term or auto-renewal flag
@@ -146,22 +155,24 @@ export declare class Subscriptions {
      *
      * If you just override a specific tier, do not include the `startingUnit` field in the request.
      *
-    **/
-    putSubscription(req: operations.PutSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.PutSubscriptionResponse>;
+     */
+    putSubscription(req: operations.PUTSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.PUTSubscriptionResponse>;
     /**
-     * putSuspendSubscription - Suspend a subscription
+     * Suspend a subscription
      *
+     * @remarks
      * This REST API reference describes how to suspend an active subscription.
      *
      * **Note**: If you have the Invoice Settlement feature enabled, it is best practice to set the `zuora-version` parameter to `211.0` or later. Otherwise, an error occurs.
      *
-    **/
-    putSuspendSubscription(req: operations.PutSuspendSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.PutSuspendSubscriptionResponse>;
+     */
+    putSuspendSubscription(req: operations.PUTSuspendSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.PUTSuspendSubscriptionResponse>;
     /**
-     * putUpdateSubscriptionCustomFieldsOfASpecifiedVersion - Update subscription custom fields of a subscription version
+     * Update subscription custom fields of a subscription version
      *
+     * @remarks
      * Updates the custom fields of a specified subscription version.
      *
-    **/
-    putUpdateSubscriptionCustomFieldsOfASpecifiedVersion(req: operations.PutUpdateSubscriptionCustomFieldsOfASpecifiedVersionRequest, config?: AxiosRequestConfig): Promise<operations.PutUpdateSubscriptionCustomFieldsOfASpecifiedVersionResponse>;
+     */
+    putUpdateSubscriptionCustomFieldsOfASpecifiedVersion(req: operations.PUTUpdateSubscriptionCustomFieldsOfASpecifiedVersionRequest, config?: AxiosRequestConfig): Promise<operations.PUTUpdateSubscriptionCustomFieldsOfASpecifiedVersionResponse>;
 }

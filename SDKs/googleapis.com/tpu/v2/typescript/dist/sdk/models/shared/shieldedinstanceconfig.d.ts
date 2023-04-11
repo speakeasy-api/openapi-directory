@@ -1,0 +1,10 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * A set of Shielded Instance options.
+ */
+export declare class ShieldedInstanceConfig extends SpeakeasyBase {
+    /**
+     * Defines whether the instance has Secure Boot enabled.
+     */
+    enableSecureBoot?: boolean;
+}

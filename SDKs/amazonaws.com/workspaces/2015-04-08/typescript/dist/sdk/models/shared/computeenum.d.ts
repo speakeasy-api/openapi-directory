@@ -5,5 +5,7 @@ export declare enum ComputeEnum {
     Power = "POWER",
     Graphics = "GRAPHICS",
     Powerpro = "POWERPRO",
-    Graphicspro = "GRAPHICSPRO"
+    Graphicspro = "GRAPHICSPRO",
+    GraphicsG4Dn = "GRAPHICS_G4DN",
+    GraphicsproG4Dn = "GRAPHICSPRO_G4DN"
 }

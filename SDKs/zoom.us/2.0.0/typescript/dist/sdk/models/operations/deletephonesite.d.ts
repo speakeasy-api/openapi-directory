@@ -1,22 +1,28 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class DeletePhoneSitePathParams extends SpeakeasyBase {
-    siteId: string;
-}
-export declare class DeletePhoneSiteQueryParams extends SpeakeasyBase {
-    transferSiteId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeletePhoneSiteSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
+    oAuth: string;
 }
 export declare class DeletePhoneSiteRequest extends SpeakeasyBase {
-    pathParams: DeletePhoneSitePathParams;
-    queryParams: DeletePhoneSiteQueryParams;
-    security: DeletePhoneSiteSecurity;
+    /**
+     * Unique Identifier of the Site.
+     */
+    siteId: string;
+    /**
+     * The Site ID of another site where the assets of the current site (users, numbers and phones) can be transferred to.
+     */
+    transferSiteId: string;
 }
 export declare class DeletePhoneSiteResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * **HTTP Status Code:** `204`<br>
+     *
+     * @remarks
+     * Phone Site deleted.
+     */
     deletePhoneSite204ApplicationJSONAny?: any;
 }

@@ -1,5 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Comptage {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +10,10 @@ export declare class Comptage {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * comptage - Compter le nombre de caractère
+     * Compter le nombre de caractère
      *
+     * @remarks
      * Compte le nombre de SMS necessaire à un envoi
-    **/
-    comptage(req: operations.ComptageRequest, config?: AxiosRequestConfig): Promise<operations.ComptageResponse>;
+     */
+    comptage(req: shared.ComptageRequest, config?: AxiosRequestConfig): Promise<operations.ComptageResponse>;
 }

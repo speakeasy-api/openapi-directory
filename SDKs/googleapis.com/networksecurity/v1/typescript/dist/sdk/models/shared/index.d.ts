@@ -23,7 +23,6 @@ export * from "./location";
 export * from "./mtlspolicy";
 export * from "./operation";
 export * from "./rule";
-export * from "./security";
 export * from "./servertlspolicy";
 export * from "./source";
 export * from "./status";

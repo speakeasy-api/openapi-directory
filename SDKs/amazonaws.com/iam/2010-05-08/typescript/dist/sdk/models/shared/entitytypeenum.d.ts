@@ -3,5 +3,5 @@ export declare enum EntityTypeEnum {
     Role = "Role",
     Group = "Group",
     LocalManagedPolicy = "LocalManagedPolicy",
-    AwsManagedPolicy = "AWSManagedPolicy"
+    AWSManagedPolicy = "AWSManagedPolicy"
 }

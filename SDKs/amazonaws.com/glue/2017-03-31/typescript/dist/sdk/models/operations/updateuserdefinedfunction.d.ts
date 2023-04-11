@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateUserDefinedFunctionXAmzTargetEnum {
-    AwsGlueUpdateUserDefinedFunction = "AWSGlue.UpdateUserDefinedFunction"
+    AWSGlueUpdateUserDefinedFunction = "AWSGlue.UpdateUserDefinedFunction"
 }
-export declare class UpdateUserDefinedFunctionHeaders extends SpeakeasyBase {
+export declare class UpdateUserDefinedFunctionRequest extends SpeakeasyBase {
+    updateUserDefinedFunctionRequest: shared.UpdateUserDefinedFunctionRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class UpdateUserDefinedFunctionHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateUserDefinedFunctionXAmzTargetEnum;
 }
-export declare class UpdateUserDefinedFunctionRequest extends SpeakeasyBase {
-    headers: UpdateUserDefinedFunctionHeaders;
-    request: shared.UpdateUserDefinedFunctionRequest;
-}
 export declare class UpdateUserDefinedFunctionResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * GlueEncryptionException
+     */
     glueEncryptionException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     updateUserDefinedFunctionResponse?: Record<string, any>;
 }

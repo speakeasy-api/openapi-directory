@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateDefaultVpcActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateDefaultVpcActionEnum {
     CreateDefaultVpc = "CreateDefaultVpc"
 }
-export declare enum PostCreateDefaultVpcVersionEnum {
+export declare enum POSTCreateDefaultVpcVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostCreateDefaultVpcQueryParams extends SpeakeasyBase {
-    action: PostCreateDefaultVpcActionEnum;
-    version: PostCreateDefaultVpcVersionEnum;
-}
-export declare class PostCreateDefaultVpcHeaders extends SpeakeasyBase {
+export declare class POSTCreateDefaultVpcRequest extends SpeakeasyBase {
+    action: POSTCreateDefaultVpcActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateDefaultVpcVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateDefaultVpcHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateDefaultVpcRequest extends SpeakeasyBase {
-    queryParams: PostCreateDefaultVpcQueryParams;
-    headers: PostCreateDefaultVpcHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateDefaultVpcResponse extends SpeakeasyBase {
+export declare class POSTCreateDefaultVpcResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

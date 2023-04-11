@@ -6,4 +6,3 @@ export * from "./product";
 export * from "./productsearchresponse";
 export * from "./productsummary";
 export * from "./refinement";
-export * from "./security";

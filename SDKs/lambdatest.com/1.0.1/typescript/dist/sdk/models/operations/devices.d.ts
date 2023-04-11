@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DevicesQueryParams extends SpeakeasyBase {
-    os?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DevicesSecurity extends SpeakeasyBase {
-    basicAuth: shared.SchemeBasicAuth;
+    password: string;
+    username: string;
 }
 export declare class DevicesRequest extends SpeakeasyBase {
-    queryParams: DevicesQueryParams;
-    security: DevicesSecurity;
+    /**
+     * Fetch details for a particular OS
+     */
+    os?: string;
 }
 export declare class DevicesResponse extends SpeakeasyBase {
-    accessDenied?: any;
+    /**
+     * Access denied. Auth error.
+     */
+    accessDenied?: shared.AccessDenied;
     contentType: string;
     statusCode: number;
-    osDevices?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
+    osDevices?: shared.OsDevices;
 }

@@ -1,12 +1,30 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-import { Security } from "./models/shared";
-export declare const ServerList: readonly ["http://api.sportsdata.io", "https://api.sportsdata.io", "http://azure-api.sportsdata.io", "https://azure-api.sportsdata.io"];
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
+export declare const ServerList: readonly ["http://azure-api.sportsdata.io/v3/csgo/stats", "https://azure-api.sportsdata.io/v3/csgo/stats"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * The security details required to authenticate the SDK
+     */
+    security?: shared.Security;
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    security?: Security;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * CS:GO v3 Stats
+ */
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -14,113 +32,132 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
     /**
-     * areasCountries - Areas (Countries)
-     *
      * Areas (Countries)
-    **/
+     *
+     * @remarks
+     * Areas (Countries)
+     */
     areasCountries(req: operations.AreasCountriesRequest, config?: AxiosRequestConfig): Promise<operations.AreasCountriesResponse>;
     /**
-     * boxScore - Box Score
+     * Box Score
      *
+     * @remarks
      * Box Scores by Date
-    **/
+     */
     boxScore(req: operations.BoxScoreRequest, config?: AxiosRequestConfig): Promise<operations.BoxScoreResponse>;
     /**
-     * boxScoresByDate - Box Scores by Date
-     *
      * Box Scores by Date
-    **/
+     *
+     * @remarks
+     * Box Scores by Date
+     */
     boxScoresByDate(req: operations.BoxScoresByDateRequest, config?: AxiosRequestConfig): Promise<operations.BoxScoresByDateResponse>;
     /**
-     * competitionFixturesLeagueDetails - Competition Fixtures (League Details)
-     *
      * Competition Fixtures (League Details)
-    **/
+     *
+     * @remarks
+     * Competition Fixtures (League Details)
+     */
     competitionFixturesLeagueDetails(req: operations.CompetitionFixturesLeagueDetailsRequest, config?: AxiosRequestConfig): Promise<operations.CompetitionFixturesLeagueDetailsResponse>;
     /**
-     * competitionsLeagues - Competitions (Leagues)
-     *
      * Competitions (Leagues)
-    **/
+     *
+     * @remarks
+     * Competitions (Leagues)
+     */
     competitionsLeagues(req: operations.CompetitionsLeaguesRequest, config?: AxiosRequestConfig): Promise<operations.CompetitionsLeaguesResponse>;
     /**
-     * gamesByDate - Games by Date
-     *
      * Games by Date
-    **/
+     *
+     * @remarks
+     * Games by Date
+     */
     gamesByDate(req: operations.GamesByDateRequest, config?: AxiosRequestConfig): Promise<operations.GamesByDateResponse>;
     /**
-     * membershipsActive - Memberships (Active)
-     *
      * Memberships (Active)
-    **/
+     *
+     * @remarks
+     * Memberships (Active)
+     */
     membershipsActive(req: operations.MembershipsActiveRequest, config?: AxiosRequestConfig): Promise<operations.MembershipsActiveResponse>;
     /**
-     * membershipsByTeamActive - Memberships by Team (Active)
-     *
      * Memberships by Team (Active)
-    **/
+     *
+     * @remarks
+     * Memberships by Team (Active)
+     */
     membershipsByTeamActive(req: operations.MembershipsByTeamActiveRequest, config?: AxiosRequestConfig): Promise<operations.MembershipsByTeamActiveResponse>;
     /**
-     * membershipsByTeamHistorical - Memberships by Team (Historical)
-     *
      * Memberships by Team (Historical)
-    **/
+     *
+     * @remarks
+     * Memberships by Team (Historical)
+     */
     membershipsByTeamHistorical(req: operations.MembershipsByTeamHistoricalRequest, config?: AxiosRequestConfig): Promise<operations.MembershipsByTeamHistoricalResponse>;
     /**
-     * membershipsHistorical - Memberships (Historical)
-     *
      * Memberships (Historical)
-    **/
+     *
+     * @remarks
+     * Memberships (Historical)
+     */
     membershipsHistorical(req: operations.MembershipsHistoricalRequest, config?: AxiosRequestConfig): Promise<operations.MembershipsHistoricalResponse>;
     /**
-     * player - Player
-     *
      * Player
-    **/
+     *
+     * @remarks
+     * Player
+     */
     player(req: operations.PlayerRequest, config?: AxiosRequestConfig): Promise<operations.PlayerResponse>;
     /**
-     * players - Players
-     *
      * Players
-    **/
+     *
+     * @remarks
+     * Players
+     */
     players(req: operations.PlayersRequest, config?: AxiosRequestConfig): Promise<operations.PlayersResponse>;
     /**
-     * playersByTeam - Players by Team
-     *
      * Players by Team
-    **/
+     *
+     * @remarks
+     * Players by Team
+     */
     playersByTeam(req: operations.PlayersByTeamRequest, config?: AxiosRequestConfig): Promise<operations.PlayersByTeamResponse>;
     /**
-     * schedule - Schedule
-     *
      * Schedule
-    **/
+     *
+     * @remarks
+     * Schedule
+     */
     schedule(req: operations.ScheduleRequest, config?: AxiosRequestConfig): Promise<operations.ScheduleResponse>;
     /**
-     * seasonTeams - Season Teams
-     *
      * Season Teams
-    **/
+     *
+     * @remarks
+     * Season Teams
+     */
     seasonTeams(req: operations.SeasonTeamsRequest, config?: AxiosRequestConfig): Promise<operations.SeasonTeamsResponse>;
     /**
-     * standings - Standings
+     * Standings
      *
+     * @remarks
      * Schedule
-    **/
+     */
     standings(req: operations.StandingsRequest, config?: AxiosRequestConfig): Promise<operations.StandingsResponse>;
     /**
-     * teams - Teams
-     *
      * Teams
-    **/
+     *
+     * @remarks
+     * Teams
+     */
     teams(req: operations.TeamsRequest, config?: AxiosRequestConfig): Promise<operations.TeamsResponse>;
     /**
-     * venues - Venues
-     *
      * Venues
-    **/
+     *
+     * @remarks
+     * Venues
+     */
     venues(req: operations.VenuesRequest, config?: AxiosRequestConfig): Promise<operations.VenuesResponse>;
 }

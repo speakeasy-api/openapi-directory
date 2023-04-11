@@ -3,6 +3,8 @@ import { HrefType } from "./hreftype";
 import { Transactions } from "./transactions";
 /**
  * JSON based account report.
+ *
+ * @remarks
  * This account report contains transactions resulting from the query parameters.
  *
  * 'booked' shall be contained if bookingStatus parameter is set to "booked" or "both".
@@ -11,10 +13,19 @@ import { Transactions } from "./transactions";
  *
  * 'information' Only contained if the bookingStatus is set to "information" and if supported by ASPSP.
  *
-**/
+ */
 export declare class AccountReport extends SpeakeasyBase {
     links: Record<string, HrefType>;
+    /**
+     * Array of transaction details.
+     */
     booked?: Transactions[];
+    /**
+     * Array of transaction details.
+     */
     information?: Transactions[];
+    /**
+     * Array of transaction details.
+     */
     pending?: Transactions[];
 }

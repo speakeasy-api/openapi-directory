@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class OntologyTags {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,19 +9,19 @@ export declare class OntologyTags {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getGetPathwaysByOntologyTerm - getPathwaysByOntologyTerm
-    **/
+     * getPathwaysByOntologyTerm
+     */
     getGetPathwaysByOntologyTerm(req: operations.GetGetPathwaysByOntologyTermRequest, config?: AxiosRequestConfig): Promise<operations.GetGetPathwaysByOntologyTermResponse>;
     /**
-     * getGetPathwaysByParentOntologyTerm - getPathwaysByParentOntologyTerm
-    **/
+     * getPathwaysByParentOntologyTerm
+     */
     getGetPathwaysByParentOntologyTerm(req: operations.GetGetPathwaysByParentOntologyTermRequest, config?: AxiosRequestConfig): Promise<operations.GetGetPathwaysByParentOntologyTermResponse>;
     /**
-     * getRemoveOntologyTag - removeOntologyTag
-    **/
+     * removeOntologyTag
+     */
     getRemoveOntologyTag(req: operations.GetRemoveOntologyTagRequest, config?: AxiosRequestConfig): Promise<operations.GetRemoveOntologyTagResponse>;
     /**
-     * getSaveOntologyTag - saveOntologyTag
-    **/
+     * saveOntologyTag
+     */
     getSaveOntologyTag(req: operations.GetSaveOntologyTagRequest, config?: AxiosRequestConfig): Promise<operations.GetSaveOntologyTagResponse>;
 }

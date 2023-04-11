@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum StartTaskExecutionXAmzTargetEnum {
     FmrsServiceStartTaskExecution = "FmrsService.StartTaskExecution"
 }
-export declare class StartTaskExecutionHeaders extends SpeakeasyBase {
+export declare class StartTaskExecutionRequest extends SpeakeasyBase {
+    startTaskExecutionRequest: shared.StartTaskExecutionRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class StartTaskExecutionHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: StartTaskExecutionXAmzTargetEnum;
 }
-export declare class StartTaskExecutionRequest extends SpeakeasyBase {
-    headers: StartTaskExecutionHeaders;
-    request: shared.StartTaskExecutionRequest;
-}
 export declare class StartTaskExecutionResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalException
+     */
     internalException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * Success
+     */
     startTaskExecutionResponse?: shared.StartTaskExecutionResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,14 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class SaveCorporateUserGroupByIdPathParams extends SpeakeasyBase {
-    corporateId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class SaveCorporateUserGroupByIdRequest extends SpeakeasyBase {
-    pathParams: SaveCorporateUserGroupByIdPathParams;
-    request: shared.UserGroup;
+    userGroup: shared.UserGroup;
+    /**
+     * Corporate ID
+     */
+    corporateId: number;
 }
 export declare class SaveCorporateUserGroupByIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * User group list
+     */
     userGroup?: shared.UserGroup;
 }

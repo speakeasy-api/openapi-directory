@@ -1,36 +1,40 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AcceptPageRequest, AcceptPageResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  AcceptPageRequest,
+  AcceptPageResponse,
+  AcceptPageXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
+import {
+  AcceptTypeEnum,
+  AcceptCodeValidationEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    hmac: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: AcceptPageRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "SSMContacts.AcceptPage",
+  acceptPageRequest: {
+    acceptCode: "corrupti",
+    acceptCodeValidation: AcceptCodeValidationEnum.Enforce,
+    acceptType: AcceptTypeEnum.Read,
+    contactChannelId: "quibusdam",
+    note: "unde",
+    pageId: "nulla",
   },
-  request: {
-    acceptCode: "fugit",
-    acceptCodeValidation: "IGNORE",
-    acceptType: "DELIVERED",
-    contactChannelId: "rerum",
-    note: "dicta",
-    pageId: "debitis",
-  },
+  xAmzAlgorithm: "corrupti",
+  xAmzContentSha256: "illum",
+  xAmzCredential: "vel",
+  xAmzDate: "error",
+  xAmzSecurityToken: "deserunt",
+  xAmzSignature: "suscipit",
+  xAmzSignedHeaders: "iure",
+  xAmzTarget: AcceptPageXAmzTargetEnum.SSMContactsAcceptPage,
 };
 
 sdk.acceptPage(req).then((res: AcceptPageResponse | AxiosError) => {

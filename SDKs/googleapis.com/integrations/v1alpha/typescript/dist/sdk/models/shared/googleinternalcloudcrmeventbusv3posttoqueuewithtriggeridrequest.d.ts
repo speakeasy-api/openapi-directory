@@ -1,0 +1,53 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { EnterpriseCrmEventbusProtoEventParameters } from "./enterprisecrmeventbusprotoeventparameters";
+/**
+ * The request priority this request should be processed at. For internal users:
+ */
+export declare enum GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequestPriorityEnum {
+    Unspcified = "UNSPCIFIED",
+    Sheddable = "SHEDDABLE",
+    SheddablePlus = "SHEDDABLE_PLUS",
+    Critical = "CRITICAL",
+    CriticalPlus = "CRITICAL_PLUS"
+}
+/**
+ * Use this request to post all workflows associated with a given trigger id. Next available id: 10
+ */
+export declare class GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest extends SpeakeasyBase {
+    /**
+     * Optional. If the client id is provided, then the combination of trigger id and client id is matched across all the workflows. If the client id is not provided, then workflows with matching trigger id are executed for each client id in the {@link TriggerConfig}. For Api Trigger, the client id is required and will be validated against the allowed clients.
+     */
+    clientId?: string;
+    /**
+     * Optional. Flag to determine whether clients would suppress a warning when no ACTIVE workflows are not found. If this flag is set to be true, an error will not be thrown if the requested trigger_id or client_id is not found in any ACTIVE workflow. Otherwise, the error is always thrown. The flag is set to be false by default.
+     */
+    ignoreErrorIfNoActiveWorkflow?: boolean;
+    /**
+     * LINT.IfChange This message is used for processing and persisting (when applicable) key value pair parameters for each event in the event bus. Please see
+     */
+    parameters?: EnterpriseCrmEventbusProtoEventParameters;
+    /**
+     * The request priority this request should be processed at. For internal users:
+     */
+    priority?: GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequestPriorityEnum;
+    /**
+     * Optional. This is used to de-dup incoming request: if the duplicate request was detected, the response from the previous execution is returned. Must have no more than 36 characters and contain only alphanumeric characters and hyphens.
+     */
+    requestId?: string;
+    /**
+     * Optional. Time in milliseconds since epoch when the given event would be scheduled.
+     */
+    scheduledTime?: string;
+    /**
+     * Optional. Sets test mode in {@link enterprise/crm/eventbus/event_message.proto}.
+     */
+    testMode?: boolean;
+    /**
+     * Matched against all {@link TriggerConfig}s across all workflows. i.e. TriggerConfig.trigger_id.equals(trigger_id) Required.
+     */
+    triggerId?: string;
+    /**
+     * Optional. If provided, the workflow_name is used to filter all the matched workflows having same trigger_id+client_id. A combination of trigger_id, client_id and workflow_name identifies a unique workflow.
+     */
+    workflowName?: string;
+}

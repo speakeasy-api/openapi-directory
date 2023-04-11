@@ -1,7 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ChangePasswordPathParams extends SpeakeasyBase {
-    userId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ChangePasswordRequestBodyNewPassword extends SpeakeasyBase {
     value?: string;
 }
@@ -13,10 +11,11 @@ export declare class ChangePasswordRequestBody extends SpeakeasyBase {
     oldPassword?: ChangePasswordRequestBodyOldPassword;
 }
 export declare class ChangePasswordRequest extends SpeakeasyBase {
-    pathParams: ChangePasswordPathParams;
-    request?: ChangePasswordRequestBody;
+    requestBody?: ChangePasswordRequestBody;
+    userId: string;
 }
 export declare class ChangePasswordResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

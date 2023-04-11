@@ -1,27 +1,21 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateSubAccountRequest, CreateSubAccountResponse } from "openapi/src/sdk/models/operations";
+import {
+  CreateSubAccountRequest,
+  CreateSubAccountResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: CreateSubAccountRequest = {
-  security: {
-    basicAuth: {
-      password: "YOUR_PASSWORD_HERE",
-      username: "YOUR_USERNAME_HERE",
-    },
-  },
-  pathParams: {
-    apiKey: "sit",
-  },
-  request: {
-    name: "voluptas",
-    secret: "culpa",
+  newSubaccountRequest: {
+    name: "Subaccount department A",
+    secret: "Password123",
     usePrimaryAccountBalance: false,
   },
+  apiKey: "corrupti",
 };
 
 sdk.subaccountManagement.createSubAccount(req).then((res: CreateSubAccountResponse | AxiosError) => {

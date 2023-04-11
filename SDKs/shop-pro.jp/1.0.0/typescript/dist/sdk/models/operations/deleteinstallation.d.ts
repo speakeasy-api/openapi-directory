@@ -1,27 +1,49 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class DeleteInstallationSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
-}
+import { AxiosResponse } from "axios";
 /**
  * （従量課金の場合）従量課金アンインストール情報
-**/
-export declare class DeleteInstallation200ApplicationJsonUsageCharge extends SpeakeasyBase {
+ */
+export declare class DeleteInstallation200ApplicationJSONUsageCharge extends SpeakeasyBase {
+    /**
+     * アンインストール後に従量課金APIを利用いただくために必要な情報
+     */
     apiToken?: string;
+    /**
+     * ポイント締め日
+     */
     closingOn?: number;
 }
-export declare class DeleteInstallation200ApplicationJson extends SpeakeasyBase {
+/**
+ * アンインストール成功
+ */
+export declare class DeleteInstallation200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * アンインストールしたショップオーナーのアカウントID
+     */
     accountId?: string;
+    /**
+     * プラン課金ID
+     */
     applicationChargeSourceId?: string;
+    /**
+     * （買い切り以外の課金の場合）課金契約ID
+     */
     recurringApplicationChargeId?: string;
+    /**
+     * アンインストール日時
+     */
     uninstalledAt?: number;
-    usageCharge?: DeleteInstallation200ApplicationJsonUsageCharge;
-}
-export declare class DeleteInstallationRequest extends SpeakeasyBase {
-    security: DeleteInstallationSecurity;
+    /**
+     * （従量課金の場合）従量課金アンインストール情報
+     */
+    usageCharge?: DeleteInstallation200ApplicationJSONUsageCharge;
 }
 export declare class DeleteInstallationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deleteInstallation200ApplicationJSONObject?: DeleteInstallation200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * アンインストール成功
+     */
+    deleteInstallation200ApplicationJSONObject?: DeleteInstallation200ApplicationJSON;
 }

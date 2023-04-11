@@ -1,4 +1,5 @@
 export declare enum TableStatusEnum {
     Active = "ACTIVE",
-    Deleting = "DELETING"
+    Deleting = "DELETING",
+    Restoring = "RESTORING"
 }

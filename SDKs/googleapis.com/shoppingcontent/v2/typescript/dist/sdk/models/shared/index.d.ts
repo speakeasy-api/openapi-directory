@@ -234,7 +234,6 @@ export * from "./rategroup";
 export * from "./refundreason";
 export * from "./returnshipment";
 export * from "./row";
-export * from "./security";
 export * from "./service";
 export * from "./shipmentinvoice";
 export * from "./shipmentinvoicelineiteminvoice";

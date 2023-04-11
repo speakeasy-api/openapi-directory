@@ -1,10 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListSuiteDefinitionsQueryParams extends SpeakeasyBase {
-    maxResults?: number;
-    nextToken?: string;
-}
-export declare class ListSuiteDefinitionsHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListSuiteDefinitionsRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,15 +9,29 @@ export declare class ListSuiteDefinitionsHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class ListSuiteDefinitionsRequest extends SpeakeasyBase {
-    queryParams: ListSuiteDefinitionsQueryParams;
-    headers: ListSuiteDefinitionsHeaders;
+    /**
+     * The maximum number of results to return at once.
+     */
+    maxResults?: number;
+    /**
+     * A token used to get the next set of results.
+     */
+    nextToken?: string;
 }
 export declare class ListSuiteDefinitionsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * Success
+     */
     listSuiteDefinitionsResponse?: shared.ListSuiteDefinitionsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

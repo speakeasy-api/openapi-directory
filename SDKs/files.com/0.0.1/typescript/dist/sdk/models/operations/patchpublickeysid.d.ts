@@ -1,17 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PatchPublicKeysIdPathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class PatchPublicKeysIdRequestBody extends SpeakeasyBase {
+    /**
+     * Internal reference for key.
+     */
     title: string;
 }
 export declare class PatchPublicKeysIdRequest extends SpeakeasyBase {
-    pathParams: PatchPublicKeysIdPathParams;
-    request: PatchPublicKeysIdRequestBody;
+    requestBody: PatchPublicKeysIdRequestBody;
+    /**
+     * Public Key ID.
+     */
+    id: number;
 }
 export declare class PatchPublicKeysIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * The PublicKeys object.
+     */
     publicKeyEntity?: shared.PublicKeyEntity;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -15,7 +15,7 @@ export * from "./localtax";
 export * from "./nonprimarystatetax";
 export * from "./paystatementdetails";
 export * from "./paystatementsummary";
-export * from "./security";
+export * from "./sensitivedata";
 export * from "./stagedemployee";
 export * from "./statetax";
 export * from "./trackingnumberresponse";

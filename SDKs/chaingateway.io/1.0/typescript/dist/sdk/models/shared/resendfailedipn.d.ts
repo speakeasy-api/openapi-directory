@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ResendFailedIpn extends SpeakeasyBase {
+export declare class ResendFailedIPN extends SpeakeasyBase {
     id: number;
     ok: boolean;
 }

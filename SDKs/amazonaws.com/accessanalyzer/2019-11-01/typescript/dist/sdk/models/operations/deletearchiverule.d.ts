@@ -1,12 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteArchiveRulePathParams extends SpeakeasyBase {
-    analyzerName: string;
-    ruleName: string;
-}
-export declare class DeleteArchiveRuleQueryParams extends SpeakeasyBase {
-    clientToken?: string;
-}
-export declare class DeleteArchiveRuleHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteArchiveRuleRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -14,18 +8,41 @@ export declare class DeleteArchiveRuleHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DeleteArchiveRuleRequest extends SpeakeasyBase {
-    pathParams: DeleteArchiveRulePathParams;
-    queryParams: DeleteArchiveRuleQueryParams;
-    headers: DeleteArchiveRuleHeaders;
+    /**
+     * The name of the analyzer that associated with the archive rule to delete.
+     */
+    analyzerName: string;
+    /**
+     * A client token.
+     */
+    clientToken?: string;
+    /**
+     * The name of the rule to delete.
+     */
+    ruleName: string;
 }
 export declare class DeleteArchiveRuleResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

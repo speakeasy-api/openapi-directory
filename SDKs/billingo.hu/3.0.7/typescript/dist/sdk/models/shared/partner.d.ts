@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { Address } from "./address";
+/**
+ * Partner created successfully.
+ */
 export declare class Partner extends SpeakeasyBase {
     accountNumber?: string;
     address: Address;

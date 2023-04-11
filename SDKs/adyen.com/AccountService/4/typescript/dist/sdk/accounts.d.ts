@@ -1,5 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Accounts {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,21 +10,24 @@ export declare class Accounts {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * postCloseAccount - Close an account.
+     * Close an account
      *
-     * Closes an account. If an account is closed, you cannot process transactions, pay out its funds, or reopen it. If payments are made to a closed account, the payments will be directed to your liable account.
-    **/
-    postCloseAccount(req: operations.PostCloseAccountRequest, config?: AxiosRequestConfig): Promise<operations.PostCloseAccountResponse>;
+     * @remarks
+     * Closes an account. If an account is closed, you cannot process transactions, pay out its funds, or reopen it. If payments are made to a closed account, the payments are sent to your liable account.
+     */
+    postCloseAccount(req: shared.CloseAccountRequest, security: operations.PostCloseAccountSecurity, config?: AxiosRequestConfig): Promise<operations.PostCloseAccountResponse>;
     /**
-     * postCreateAccount - Create a new account.
+     * Create an account
      *
-     * Creates an account under an account holder. An account holder can have [multiple accounts](https://docs.adyen.com/platforms/account-holders-and-accounts#create-additional-accounts).
-    **/
-    postCreateAccount(req: operations.PostCreateAccountRequest, config?: AxiosRequestConfig): Promise<operations.PostCreateAccountResponse>;
+     * @remarks
+     * Creates an account under an account holder. An account holder can have [multiple accounts](https://docs.adyen.com/marketplaces-and-platforms/classic/account-holders-and-accounts#create-additional-accounts).
+     */
+    postCreateAccount(req: shared.CreateAccountRequest, security: operations.PostCreateAccountSecurity, config?: AxiosRequestConfig): Promise<operations.PostCreateAccountResponse>;
     /**
-     * postUpdateAccount - Update an account.
+     * Update an account
      *
+     * @remarks
      * Updates the description or payout schedule of an account.
-    **/
-    postUpdateAccount(req: operations.PostUpdateAccountRequest, config?: AxiosRequestConfig): Promise<operations.PostUpdateAccountResponse>;
+     */
+    postUpdateAccount(req: shared.UpdateAccountRequest, security: operations.PostUpdateAccountSecurity, config?: AxiosRequestConfig): Promise<operations.PostUpdateAccountResponse>;
 }

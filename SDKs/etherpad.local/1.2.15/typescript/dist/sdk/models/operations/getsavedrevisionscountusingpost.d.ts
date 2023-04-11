@@ -1,35 +1,58 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetSavedRevisionsCountUsingPostQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetSavedRevisionsCountUsingPOSTRequest extends SpeakeasyBase {
     padID?: string;
 }
-export declare class GetSavedRevisionsCountUsingPost200ApplicationJson extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class GetSavedRevisionsCountUsingPost500ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class GetSavedRevisionsCountUsingPost400ApplicationJson extends SpeakeasyBase {
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class GetSavedRevisionsCountUsingPost401ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class GetSavedRevisionsCountUsingPost401ApplicationJson extends SpeakeasyBase {
+/**
+ * generic api error (code 1)
+ */
+export declare class GetSavedRevisionsCountUsingPost400ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class GetSavedRevisionsCountUsingPost500ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class GetSavedRevisionsCountUsingPost200ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class GetSavedRevisionsCountUsingPostRequest extends SpeakeasyBase {
-    queryParams: GetSavedRevisionsCountUsingPostQueryParams;
-}
-export declare class GetSavedRevisionsCountUsingPostResponse extends SpeakeasyBase {
+export declare class GetSavedRevisionsCountUsingPOSTResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getSavedRevisionsCountUsingPOST200ApplicationJSONObject?: GetSavedRevisionsCountUsingPost200ApplicationJson;
-    getSavedRevisionsCountUsingPOST400ApplicationJSONObject?: GetSavedRevisionsCountUsingPost400ApplicationJson;
-    getSavedRevisionsCountUsingPOST401ApplicationJSONObject?: GetSavedRevisionsCountUsingPost401ApplicationJson;
-    getSavedRevisionsCountUsingPOST500ApplicationJSONObject?: GetSavedRevisionsCountUsingPost500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    getSavedRevisionsCountUsingPOST200ApplicationJSONObject?: GetSavedRevisionsCountUsingPost200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    getSavedRevisionsCountUsingPOST400ApplicationJSONObject?: GetSavedRevisionsCountUsingPost400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    getSavedRevisionsCountUsingPOST401ApplicationJSONObject?: GetSavedRevisionsCountUsingPost401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    getSavedRevisionsCountUsingPOST500ApplicationJSONObject?: GetSavedRevisionsCountUsingPost500ApplicationJSON;
 }

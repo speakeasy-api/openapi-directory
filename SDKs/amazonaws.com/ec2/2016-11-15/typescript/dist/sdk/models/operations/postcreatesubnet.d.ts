@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateSubnetActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateSubnetActionEnum {
     CreateSubnet = "CreateSubnet"
 }
-export declare enum PostCreateSubnetVersionEnum {
+export declare enum POSTCreateSubnetVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostCreateSubnetQueryParams extends SpeakeasyBase {
-    action: PostCreateSubnetActionEnum;
-    version: PostCreateSubnetVersionEnum;
-}
-export declare class PostCreateSubnetHeaders extends SpeakeasyBase {
+export declare class POSTCreateSubnetRequest extends SpeakeasyBase {
+    action: POSTCreateSubnetActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateSubnetVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateSubnetHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateSubnetRequest extends SpeakeasyBase {
-    queryParams: PostCreateSubnetQueryParams;
-    headers: PostCreateSubnetHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateSubnetResponse extends SpeakeasyBase {
+export declare class POSTCreateSubnetResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetSetupV1ServicesIdCalendarPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class GetSetupV1ServicesIdCalendarQueryParams extends SpeakeasyBase {
-    locationId?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetSetupV1ServicesIdCalendarRequest extends SpeakeasyBase {
-    pathParams: GetSetupV1ServicesIdCalendarPathParams;
-    queryParams: GetSetupV1ServicesIdCalendarQueryParams;
+    /**
+     * id of service object
+     */
+    id: string;
+    /**
+     * id of business location, defaults to primary business location
+     */
+    locationId?: string;
 }
 export declare class GetSetupV1ServicesIdCalendarResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     serviceCalendarViewModel?: shared.ServiceCalendarViewModel;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

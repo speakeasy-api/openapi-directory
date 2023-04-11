@@ -6,31 +6,31 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/github.com/ghes-2.19/1.1.4/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/github.com/ghes-2.19/1.1.4/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { ActivityCheckRepoIsStarredByAuthenticatedUserRequest, ActivityCheckRepoIsStarredByAuthenticatedUserResponse } from "openapi/src/sdk/models/operations";
+import {
+  ActivityCheckRepoIsStarredByAuthenticatedUserRequest,
+  ActivityCheckRepoIsStarredByAuthenticatedUserResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: ActivityCheckRepoIsStarredByAuthenticatedUserRequest = {
-  pathParams: {
-    owner: "sit",
-    repo: "voluptas",
-  },
+  owner: "corrupti",
+  repo: "provident",
 };
 
 sdk.activity.activityCheckRepoIsStarredByAuthenticatedUser(req).then((res: ActivityCheckRepoIsStarredByAuthenticatedUserResponse | AxiosError) => {
@@ -40,7 +40,8 @@ sdk.activity.activityCheckRepoIsStarredByAuthenticatedUser(req).then((res: Activ
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### activity
 
@@ -109,7 +110,7 @@ sdk.activity.activityCheckRepoIsStarredByAuthenticatedUser(req).then((res: Activ
 * `checksSetSuitesPreferences` - Update repository preferences for check suites
 * `checksUpdate` - Update a check run
 
-### codes-of-conduct
+### codesOfConduct
 
 * `codesOfConductGetAllCodesOfConduct` - Get all codes of conduct
 * `codesOfConductGetConductCode` - Get a code of conduct
@@ -118,7 +119,7 @@ sdk.activity.activityCheckRepoIsStarredByAuthenticatedUser(req).then((res: Activ
 
 * `emojisGet` - Get emojis
 
-### enterprise-admin
+### enterpriseAdmin
 
 * `enterpriseAdminAddAuthorizedSshKey` - Add an authorized SSH key
 * `enterpriseAdminCreateEnterpriseServerLicense` - Create a GitHub license
@@ -138,17 +139,26 @@ sdk.activity.activityCheckRepoIsStarredByAuthenticatedUser(req).then((res: Activ
 * `enterpriseAdminDemoteSiteAdministrator` - Demote a site administrator
 * `enterpriseAdminEnableOrDisableMaintenanceMode` - Enable or disable maintenance mode
 * `enterpriseAdminGetAllAuthorizedSshKeys` - Get all authorized SSH keys
+* `enterpriseAdminGetAllStats` - Get all statistics
+* `enterpriseAdminGetCommentStats` - Get comment statistics
 * `enterpriseAdminGetConfigurationStatus` - Get the configuration status
 * `enterpriseAdminGetDownloadStatusForPreReceiveEnvironment` - Get the download status for a pre-receive environment
 * `enterpriseAdminGetGlobalWebhook` - Get a global webhook
+* `enterpriseAdminGetHooksStats` - Get hooks statistics
+* `enterpriseAdminGetIssueStats` - Get issue statistics
 * `enterpriseAdminGetLicenseInformation` - Get license information
 * `enterpriseAdminGetMaintenanceStatus` - Get the maintenance status
+* `enterpriseAdminGetMilestoneStats` - Get milestone statistics
+* `enterpriseAdminGetOrgStats` - Get organization statistics
+* `enterpriseAdminGetPagesStats` - Get pages statistics
 * `enterpriseAdminGetPreReceiveEnvironment` - Get a pre-receive environment
 * `enterpriseAdminGetPreReceiveHook` - Get a pre-receive hook
 * `enterpriseAdminGetPreReceiveHookForOrg` - Get a pre-receive hook for an organization
 * `enterpriseAdminGetPreReceiveHookForRepo` - Get a pre-receive hook for a repository
+* `enterpriseAdminGetPullRequestStats` - Get pull request statistics
+* `enterpriseAdminGetRepoStats` - Get repository statistics
 * `enterpriseAdminGetSettings` - Get settings
-* `enterpriseAdminGetTypeStats` - Get statistics
+* `enterpriseAdminGetUserStats` - Get users statistics
 * `enterpriseAdminListGlobalWebhooks` - List global webhooks
 * `enterpriseAdminListPersonalAccessTokens` - List personal access tokens
 * `enterpriseAdminListPreReceiveEnvironments` - List pre-receive environments
@@ -178,6 +188,7 @@ sdk.activity.activityCheckRepoIsStarredByAuthenticatedUser(req).then((res: Activ
 * `enterpriseAdminUpdatePreReceiveHookEnforcementForRepo` - Update pre-receive hook enforcement for a repository
 * `enterpriseAdminUpdateUsernameForUser` - Update the username for a user
 * `enterpriseAdminUpgradeLicense` - Upgrade a license
+* `getEnterpriseStatsGists` - Get gist statistics
 
 ### gists
 
@@ -283,7 +294,7 @@ sdk.activity.activityCheckRepoIsStarredByAuthenticatedUser(req).then((res: Activ
 * `metaGetZen` - Get the Zen of GitHub
 * `metaRoot` - GitHub API Root
 
-### oauth-authorizations
+### oauthAuthorizations
 
 * `oauthAuthorizationsCheckAuthorization` - Check an authorization
 * `oauthAuthorizationsCreateAuthorization` - Create a new authorization
@@ -389,7 +400,7 @@ sdk.activity.activityCheckRepoIsStarredByAuthenticatedUser(req).then((res: Activ
 * `pullsUpdateReview` - Update a review for a pull request
 * `pullsUpdateReviewComment` - Update a review comment for a pull request
 
-### rate-limit
+### rateLimit
 
 * `rateLimitGet` - Get rate limit status for the authenticated user
 
@@ -616,7 +627,18 @@ sdk.activity.activityCheckRepoIsStarredByAuthenticatedUser(req).then((res: Activ
 * `usersListPublicSshKeysForAuthenticated` - List public SSH keys for the authenticated user
 * `usersUnfollow` - Unfollow a user
 * `usersUpdateAuthenticated` - Update the authenticated user
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

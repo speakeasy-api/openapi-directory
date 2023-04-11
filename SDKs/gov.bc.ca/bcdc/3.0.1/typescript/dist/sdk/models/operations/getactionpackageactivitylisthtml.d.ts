@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetActionPackageActivityListHtmlQueryParams extends SpeakeasyBase {
-    id?: string;
-    limit?: number;
-    offset?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetActionPackageActivityListHtmlRequest extends SpeakeasyBase {
-    queryParams: GetActionPackageActivityListHtmlQueryParams;
+    /**
+     * The id or name of the package
+     */
+    id?: string;
+    /**
+     * The maximum number of activities to return
+     */
+    limit?: number;
+    /**
+     * Where to start getting activity items from
+     */
+    offset?: number;
 }
 export declare class GetActionPackageActivityListHtmlResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum CreateXssMatchSetXAmzTargetEnum {
-    Awswaf20150824CreateXssMatchSet = "AWSWAF_20150824.CreateXssMatchSet"
+    AWSWAF20150824CreateXssMatchSet = "AWSWAF_20150824.CreateXssMatchSet"
 }
-export declare class CreateXssMatchSetHeaders extends SpeakeasyBase {
+export declare class CreateXssMatchSetRequest extends SpeakeasyBase {
+    createXssMatchSetRequest: shared.CreateXssMatchSetRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class CreateXssMatchSetHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: CreateXssMatchSetXAmzTargetEnum;
 }
-export declare class CreateXssMatchSetRequest extends SpeakeasyBase {
-    headers: CreateXssMatchSetHeaders;
-    request: shared.CreateXssMatchSetRequest;
-}
 export declare class CreateXssMatchSetResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     createXssMatchSetResponse?: shared.CreateXssMatchSetResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * WAFDisallowedNameException
+     */
     wafDisallowedNameException?: any;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFInvalidAccountException
+     */
     wafInvalidAccountException?: any;
+    /**
+     * WAFInvalidParameterException
+     */
     wafInvalidParameterException?: any;
+    /**
+     * WAFLimitsExceededException
+     */
     wafLimitsExceededException?: any;
+    /**
+     * WAFStaleDataException
+     */
     wafStaleDataException?: any;
 }

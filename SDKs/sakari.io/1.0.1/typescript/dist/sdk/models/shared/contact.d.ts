@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Updated } from "./updated";
 import { ErrorT } from "./error";
 import { Tag } from "./tag";
+import { Updated } from "./updated";
 export declare class ContactMobile extends SpeakeasyBase {
     country?: string;
     number?: string;

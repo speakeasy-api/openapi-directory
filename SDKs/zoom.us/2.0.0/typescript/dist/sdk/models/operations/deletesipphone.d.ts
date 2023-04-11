@@ -1,18 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class DeleteSipPhonePathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteSIPPhoneSecurity extends SpeakeasyBase {
+    oAuth: string;
+}
+export declare class DeleteSIPPhoneRequest extends SpeakeasyBase {
+    /**
+     * Unique Identifier of the SIP Phone. It can be retrieved from the List SIP Phones API.
+     */
     phoneId: string;
 }
-export declare class DeleteSipPhoneSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
-}
-export declare class DeleteSipPhoneRequest extends SpeakeasyBase {
-    pathParams: DeleteSipPhonePathParams;
-    security: DeleteSipPhoneSecurity;
-}
-export declare class DeleteSipPhoneResponse extends SpeakeasyBase {
+export declare class DeleteSIPPhoneResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * **HTTP Status Code:** `204`<br>
+     *
+     * @remarks
+     * SIP Phone deleted.
+     */
     deleteSIPPhone204ApplicationJSONObject?: Record<string, any>;
 }

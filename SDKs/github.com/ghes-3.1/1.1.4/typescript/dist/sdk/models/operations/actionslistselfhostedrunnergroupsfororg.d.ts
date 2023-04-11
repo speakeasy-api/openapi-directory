@@ -1,22 +1,33 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ActionsListSelfHostedRunnerGroupsForOrgPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ActionsListSelfHostedRunnerGroupsForOrgRequest extends SpeakeasyBase {
+    /**
+     * The organization name. The name is not case sensitive.
+     */
     org: string;
-}
-export declare class ActionsListSelfHostedRunnerGroupsForOrgQueryParams extends SpeakeasyBase {
+    /**
+     * Page number of the results to fetch.
+     */
     page?: number;
+    /**
+     * The number of results per page (max 100).
+     */
     perPage?: number;
 }
-export declare class ActionsListSelfHostedRunnerGroupsForOrg200ApplicationJson extends SpeakeasyBase {
+/**
+ * Response
+ */
+export declare class ActionsListSelfHostedRunnerGroupsForOrg200ApplicationJSON extends SpeakeasyBase {
     runnerGroups: shared.RunnerGroupsOrg[];
     totalCount: number;
-}
-export declare class ActionsListSelfHostedRunnerGroupsForOrgRequest extends SpeakeasyBase {
-    pathParams: ActionsListSelfHostedRunnerGroupsForOrgPathParams;
-    queryParams: ActionsListSelfHostedRunnerGroupsForOrgQueryParams;
 }
 export declare class ActionsListSelfHostedRunnerGroupsForOrgResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    actionsListSelfHostedRunnerGroupsForOrg200ApplicationJSONObject?: ActionsListSelfHostedRunnerGroupsForOrg200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
+    actionsListSelfHostedRunnerGroupsForOrg200ApplicationJSONObject?: ActionsListSelfHostedRunnerGroupsForOrg200ApplicationJSON;
 }

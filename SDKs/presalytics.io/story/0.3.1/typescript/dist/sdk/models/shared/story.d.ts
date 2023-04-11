@@ -1,10 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { StoryCollaborator } from "./storycollaborator";
 import { OoxmlDocument } from "./ooxmldocument";
+import { StoryCollaborator } from "./storycollaborator";
 import { StoryOutlineHistory } from "./storyoutlinehistory";
 /**
  * Base model for all types
-**/
+ */
 export declare class Story extends SpeakeasyBase {
     collaborators?: StoryCollaborator[];
     createdAt?: Date;

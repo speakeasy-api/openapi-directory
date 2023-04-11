@@ -1,5 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class CargoGetRouteFromDateProductCodeByOriginAndDestinationGetSecurity extends SpeakeasyBase {
+    auth: string;
+}
+/**
+ * Product code for requested service and specials : 3-letter eg: YNZ
+ */
 export declare enum CargoGetRouteFromDateProductCodeByOriginAndDestinationGetProductCodeEnum {
     Fan = "FAN",
     Fco = "FCO",
@@ -19,25 +25,31 @@ export declare enum CargoGetRouteFromDateProductCodeByOriginAndDestinationGetPro
     Zxf = "ZXF",
     Zxr = "ZXR"
 }
-export declare class CargoGetRouteFromDateProductCodeByOriginAndDestinationGetPathParams extends SpeakeasyBase {
-    destination: string;
-    fromDate: string;
-    origin: string;
-    productCode: CargoGetRouteFromDateProductCodeByOriginAndDestinationGetProductCodeEnum;
-}
-export declare class CargoGetRouteFromDateProductCodeByOriginAndDestinationGetHeaders extends SpeakeasyBase {
-    accept: string;
-}
-export declare class CargoGetRouteFromDateProductCodeByOriginAndDestinationGetSecurity extends SpeakeasyBase {
-    auth: shared.SchemeAuth;
-}
 export declare class CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest extends SpeakeasyBase {
-    pathParams: CargoGetRouteFromDateProductCodeByOriginAndDestinationGetPathParams;
-    headers: CargoGetRouteFromDateProductCodeByOriginAndDestinationGetHeaders;
-    security: CargoGetRouteFromDateProductCodeByOriginAndDestinationGetSecurity;
+    /**
+     * http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+     */
+    accept: string;
+    /**
+     * Arrival airport : 3-letter IATA airport code, e.g. HKG.
+     */
+    destination: string;
+    /**
+     * Departure date in the local time of the departure airport. Based on LAT (Latest Acceptance Time). format : yyyy-MM-dd eg : 2017-07-15
+     */
+    fromDate: string;
+    /**
+     * Departure Airport : 3-letter IATA airport code, e.g. FRA.
+     */
+    origin: string;
+    /**
+     * Product code for requested service and specials : 3-letter eg: YNZ
+     */
+    productCode: CargoGetRouteFromDateProductCodeByOriginAndDestinationGetProductCodeEnum;
 }
 export declare class CargoGetRouteFromDateProductCodeByOriginAndDestinationGetResponse extends SpeakeasyBase {
     cargoGetRouteFromDateProductCodeByOriginAndDestinationGet200ApplicationJSONObject?: Record<string, any>;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

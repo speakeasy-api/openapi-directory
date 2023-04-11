@@ -1,9 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { MessageCode409AISEnum } from "./messagecode409aisenum";
 import { TppMessageCategoryEnum } from "./tppmessagecategoryenum";
-import { MessageCode409AisEnum } from "./messagecode409aisenum";
-export declare class TppMessage409Ais extends SpeakeasyBase {
+export declare class TppMessage409AIS extends SpeakeasyBase {
+    /**
+     * Category of the TPP message category.
+     */
     category: TppMessageCategoryEnum;
-    code: MessageCode409AisEnum;
+    /**
+     * Message codes defined for AIS for HTTP Error code 409 (CONFLICT).
+     */
+    code: MessageCode409AISEnum;
     path?: string;
+    /**
+     * Additional explaining text to the TPP.
+     */
     text?: string;
 }

@@ -1,14 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class StreetsInAWardPathParams extends SpeakeasyBase {
-    country: string;
-    district: string;
-    region: string;
-    ward: string;
-}
+import { AxiosResponse } from "axios";
 export declare class StreetsInAWardRequest extends SpeakeasyBase {
-    pathParams: StreetsInAWardPathParams;
+    /**
+     * Country name in lowercase eg( tanzania)
+     */
+    country: string;
+    /**
+     * Name of the District eg (Rungwe)
+     */
+    district: string;
+    /**
+     * Name of the region eg (Mbeya)
+     */
+    region: string;
+    /**
+     * Name of the Ward eg (Kiwira)
+     */
+    ward: string;
 }
 export declare class StreetsInAWardResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

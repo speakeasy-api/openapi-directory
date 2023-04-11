@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ResolutionsSecurity extends SpeakeasyBase {
-    basicAuth: shared.SchemeBasicAuth;
-}
-export declare class ResolutionsRequest extends SpeakeasyBase {
-    security: ResolutionsSecurity;
-}
+import { AxiosResponse } from "axios";
 export declare class ResolutionsResponse extends SpeakeasyBase {
-    accessDenied?: any;
+    /**
+     * Access denied. Auth error.
+     */
+    accessDenied?: shared.AccessDenied;
     contentType: string;
     statusCode: number;
-    resolutions?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
+    resolutions?: shared.Resolutions;
 }

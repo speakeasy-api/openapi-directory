@@ -1,118 +1,182 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class Ror1bSecurity extends SpeakeasyBase {
+    apiKey: string;
+    clientId: string;
+}
 export declare class Ror1bRequestBodyCertificateParameters extends SpeakeasyBase {
+    /**
+     * Khata No.
+     */
     khatano: string;
+    /**
+     * District
+     */
     level1: string;
+    /**
+     * Tahasil
+     */
     level2: string;
+    /**
+     * Village
+     */
     level3: string;
 }
+/**
+ * The format of the certificate in response.
+ */
 export declare enum Ror1bRequestBodyFormatEnum {
     Pdf = "pdf"
 }
+/**
+ * Request format
+ */
 export declare class Ror1bRequestBody extends SpeakeasyBase {
     certificateParameters?: Ror1bRequestBodyCertificateParameters;
-    consentArtifact?: any;
+    consentArtifact?: shared.ConsentArtifactSchema;
+    /**
+     * The format of the certificate in response.
+     */
     format: Ror1bRequestBodyFormatEnum;
+    /**
+     * A unique transaction id for this request in UUID format. It is used for tracking the request.
+     */
     txnId: string;
 }
-export declare class Ror1bSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
-    clientId: shared.SchemeClientId;
+export declare enum Ror1b504ApplicationJSONErrorEnum {
+    GatewayTimeout = "gateway_timeout"
 }
-export declare enum Ror1b400ApplicationJsonErrorEnum {
+export declare enum Ror1b504ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
+}
+/**
+ * Gateway timeout
+ */
+export declare class Ror1b504ApplicationJSON extends SpeakeasyBase {
+    error?: Ror1b504ApplicationJSONErrorEnum;
+    errorDescription?: Ror1b504ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Ror1b503ApplicationJSONErrorEnum {
+    ServiceUnavailable = "service_unavailable"
+}
+export declare enum Ror1b503ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
+}
+/**
+ * Service unavailable
+ */
+export declare class Ror1b503ApplicationJSON extends SpeakeasyBase {
+    error?: Ror1b503ApplicationJSONErrorEnum;
+    errorDescription?: Ror1b503ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Ror1b502ApplicationJSONErrorEnum {
+    BadGatewy = "bad_gatewy"
+}
+export declare enum Ror1b502ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
+}
+/**
+ * Bad gateway
+ */
+export declare class Ror1b502ApplicationJSON extends SpeakeasyBase {
+    error?: Ror1b502ApplicationJSONErrorEnum;
+    errorDescription?: Ror1b502ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Ror1b500ApplicationJSONErrorEnum {
+    InternalServerError = "internal_server_error"
+}
+export declare enum Ror1b500ApplicationJSONErrorDescriptionEnum {
+    InternalServerError = "Internal server error"
+}
+/**
+ * Internal server error
+ */
+export declare class Ror1b500ApplicationJSON extends SpeakeasyBase {
+    error?: Ror1b500ApplicationJSONErrorEnum;
+    errorDescription?: Ror1b500ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Ror1b404ApplicationJSONErrorEnum {
+    RecordNotFound = "record_not_found",
+    UrlNotFound = "url_not_found"
+}
+export declare enum Ror1b404ApplicationJSONErrorDescriptionEnum {
+    NoRecordFound = "No record found",
+    YourAPIUrlOrPathIsIncorrect = "Your API url or path is incorrect"
+}
+/**
+ * No record found
+ */
+export declare class Ror1b404ApplicationJSON extends SpeakeasyBase {
+    error?: Ror1b404ApplicationJSONErrorEnum;
+    errorDescription?: Ror1b404ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Ror1b401ApplicationJSONErrorEnum {
+    InvalidAuthentication = "invalid_authentication",
+    InvalidAuthorization = "invalid_authorization"
+}
+export declare enum Ror1b401ApplicationJSONErrorDescriptionEnum {
+    AuthenticationFailed = "Authentication failed",
+    YouAreNotAuthorizedToUseThisAPI = "You are not authorized to use this API"
+}
+/**
+ * Unauthorized access
+ */
+export declare class Ror1b401ApplicationJSON extends SpeakeasyBase {
+    error?: Ror1b401ApplicationJSONErrorEnum;
+    errorDescription?: Ror1b401ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Ror1b400ApplicationJSONErrorEnum {
     MissingParameter = "missing_parameter",
     InvalidParameter = "invalid_parameter",
     InvalidFormat = "invalid_format",
     InvalidTxnid = "invalid_txnid",
     InvalidConsentid = "invalid_consentid"
 }
-export declare enum Ror1b400ApplicationJsonErrorDescriptionEnum {
+export declare enum Ror1b400ApplicationJSONErrorDescriptionEnum {
     PleaseProvideAllMandatoryParameters = "Please provide all mandatory parameters",
     BadRequest = "Bad request",
     TheFormatParameterIsInvalid = "The format parameter is invalid",
-    TheTxnIdParameterMustBeInUuidFormat = "The txnId parameter must be in UUID format",
-    TheConsentIdParameterMustBeInUuidFormat = "The consentId parameter must be in UUID format"
+    TheTxnIdParameterMustBeInUUIDFormat = "The txnId parameter must be in UUID format",
+    TheConsentIdParameterMustBeInUUIDFormat = "The consentId parameter must be in UUID format"
 }
-export declare class Ror1b400ApplicationJson extends SpeakeasyBase {
-    error?: Ror1b400ApplicationJsonErrorEnum;
-    errorDescription?: Ror1b400ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Ror1b401ApplicationJsonErrorEnum {
-    InvalidAuthentication = "invalid_authentication",
-    InvalidAuthorization = "invalid_authorization"
-}
-export declare enum Ror1b401ApplicationJsonErrorDescriptionEnum {
-    AuthenticationFailed = "Authentication failed",
-    YouAreNotAuthorizedToUseThisApi = "You are not authorized to use this API"
-}
-export declare class Ror1b401ApplicationJson extends SpeakeasyBase {
-    error?: Ror1b401ApplicationJsonErrorEnum;
-    errorDescription?: Ror1b401ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Ror1b404ApplicationJsonErrorEnum {
-    RecordNotFound = "record_not_found",
-    UrlNotFound = "url_not_found"
-}
-export declare enum Ror1b404ApplicationJsonErrorDescriptionEnum {
-    NoRecordFound = "No record found",
-    YourApiUrlOrPathIsIncorrect = "Your API url or path is incorrect"
-}
-export declare class Ror1b404ApplicationJson extends SpeakeasyBase {
-    error?: Ror1b404ApplicationJsonErrorEnum;
-    errorDescription?: Ror1b404ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Ror1b500ApplicationJsonErrorEnum {
-    InternalServerError = "internal_server_error"
-}
-export declare enum Ror1b500ApplicationJsonErrorDescriptionEnum {
-    InternalServerError = "Internal server error"
-}
-export declare class Ror1b500ApplicationJson extends SpeakeasyBase {
-    error?: Ror1b500ApplicationJsonErrorEnum;
-    errorDescription?: Ror1b500ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Ror1b502ApplicationJsonErrorEnum {
-    BadGatewy = "bad_gatewy"
-}
-export declare enum Ror1b502ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
-}
-export declare class Ror1b502ApplicationJson extends SpeakeasyBase {
-    error?: Ror1b502ApplicationJsonErrorEnum;
-    errorDescription?: Ror1b502ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Ror1b503ApplicationJsonErrorEnum {
-    ServiceUnavailable = "service_unavailable"
-}
-export declare enum Ror1b503ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
-}
-export declare class Ror1b503ApplicationJson extends SpeakeasyBase {
-    error?: Ror1b503ApplicationJsonErrorEnum;
-    errorDescription?: Ror1b503ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Ror1b504ApplicationJsonErrorEnum {
-    GatewayTimeout = "gateway_timeout"
-}
-export declare enum Ror1b504ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
-}
-export declare class Ror1b504ApplicationJson extends SpeakeasyBase {
-    error?: Ror1b504ApplicationJsonErrorEnum;
-    errorDescription?: Ror1b504ApplicationJsonErrorDescriptionEnum;
-}
-export declare class Ror1bRequest extends SpeakeasyBase {
-    request?: Ror1bRequestBody;
-    security: Ror1bSecurity;
+/**
+ * Bad request
+ */
+export declare class Ror1b400ApplicationJSON extends SpeakeasyBase {
+    error?: Ror1b400ApplicationJSONErrorEnum;
+    errorDescription?: Ror1b400ApplicationJSONErrorDescriptionEnum;
 }
 export declare class Ror1bResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    ror1b400ApplicationJSONObject?: Ror1b400ApplicationJson;
-    ror1b401ApplicationJSONObject?: Ror1b401ApplicationJson;
-    ror1b404ApplicationJSONObject?: Ror1b404ApplicationJson;
-    ror1b500ApplicationJSONObject?: Ror1b500ApplicationJson;
-    ror1b502ApplicationJSONObject?: Ror1b502ApplicationJson;
-    ror1b503ApplicationJSONObject?: Ror1b503ApplicationJson;
-    ror1b504ApplicationJSONObject?: Ror1b504ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad request
+     */
+    ror1b400ApplicationJSONObject?: Ror1b400ApplicationJSON;
+    /**
+     * Unauthorized access
+     */
+    ror1b401ApplicationJSONObject?: Ror1b401ApplicationJSON;
+    /**
+     * No record found
+     */
+    ror1b404ApplicationJSONObject?: Ror1b404ApplicationJSON;
+    /**
+     * Internal server error
+     */
+    ror1b500ApplicationJSONObject?: Ror1b500ApplicationJSON;
+    /**
+     * Bad gateway
+     */
+    ror1b502ApplicationJSONObject?: Ror1b502ApplicationJSON;
+    /**
+     * Service unavailable
+     */
+    ror1b503ApplicationJSONObject?: Ror1b503ApplicationJSON;
+    /**
+     * Gateway timeout
+     */
+    ror1b504ApplicationJSONObject?: Ror1b504ApplicationJSON;
 }

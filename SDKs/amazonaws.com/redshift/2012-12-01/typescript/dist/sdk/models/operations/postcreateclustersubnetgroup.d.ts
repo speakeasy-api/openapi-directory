@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateClusterSubnetGroupActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateClusterSubnetGroupActionEnum {
     CreateClusterSubnetGroup = "CreateClusterSubnetGroup"
 }
-export declare enum PostCreateClusterSubnetGroupVersionEnum {
+export declare enum POSTCreateClusterSubnetGroupVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostCreateClusterSubnetGroupQueryParams extends SpeakeasyBase {
-    action: PostCreateClusterSubnetGroupActionEnum;
-    version: PostCreateClusterSubnetGroupVersionEnum;
-}
-export declare class PostCreateClusterSubnetGroupHeaders extends SpeakeasyBase {
+export declare class POSTCreateClusterSubnetGroupRequest extends SpeakeasyBase {
+    action: POSTCreateClusterSubnetGroupActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateClusterSubnetGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateClusterSubnetGroupHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateClusterSubnetGroupRequest extends SpeakeasyBase {
-    queryParams: PostCreateClusterSubnetGroupQueryParams;
-    headers: PostCreateClusterSubnetGroupHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateClusterSubnetGroupResponse extends SpeakeasyBase {
+export declare class POSTCreateClusterSubnetGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

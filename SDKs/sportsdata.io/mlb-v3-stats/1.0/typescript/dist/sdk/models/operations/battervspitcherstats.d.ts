@@ -1,18 +1,36 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+/**
+ * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+ */
 export declare enum BatterVsPitcherStatsFormatEnum {
     Xml = "XML",
     Json = "JSON"
 }
-export declare class BatterVsPitcherStatsPathParams extends SpeakeasyBase {
-    format: BatterVsPitcherStatsFormatEnum;
-    hitterid: string;
-    pitcherid: string;
-}
 export declare class BatterVsPitcherStatsRequest extends SpeakeasyBase {
-    pathParams: BatterVsPitcherStatsPathParams;
+    /**
+     * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+     */
+    format: BatterVsPitcherStatsFormatEnum;
+    /**
+     * Unique FantasyData Player ID.
+     *
+     * @remarks
+     * Example:<code>10000031</code>.
+     */
+    hitterid: string;
+    /**
+     * Unique FantasyData Player ID.
+     *
+     * @remarks
+     * Example:<code>10000618</code>.
+     */
+    pitcherid: string;
 }
 export declare class BatterVsPitcherStatsResponse extends SpeakeasyBase {
     contentType: string;
-    playerSeasons?: any[];
+    playerSeasons?: shared.PlayerSeason[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

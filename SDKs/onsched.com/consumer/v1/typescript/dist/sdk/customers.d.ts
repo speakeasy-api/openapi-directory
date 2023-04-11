@@ -1,5 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Customers {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -8,137 +9,68 @@ export declare class Customers {
     _sdkVersion: string;
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
-    deleteConsumerV1CustomersSubscriptionsId(req: operations.DeleteConsumerV1CustomersSubscriptionsIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteConsumerV1CustomersSubscriptionsIdResponse>;
+    /**
+     * Delete Customer
+     *
+     * @remarks
+     * <p>Use this endpoint to permanently <b>Delete</b> a Customer object. A valid <b>customer id</b> is required.</p>
+     */
     deleteConsumerV1CustomersId(req: operations.DeleteConsumerV1CustomersIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteConsumerV1CustomersIdResponse>;
     /**
-     * getConsumerV1Customers - Returns a list of customers.
+     * List Customers
      *
-     * The results are returned in pages. Use the offset and limit parameters to control the page start and size. Default offset is 0, and limit is 20.
-     * Use the other query parameters to optionally filter the results list.
-    **/
+     * @remarks
+     * <p>Use this endpoint to return a <b>List of Customers</b>. The results are returned in pages. Use the offset and limit parameters to control the page start and number of results. Default offset is 0, limit is 20, max is 100. Use the query parameters to filter the results further.</p>
+     */
     getConsumerV1Customers(req: operations.GetConsumerV1CustomersRequest, config?: AxiosRequestConfig): Promise<operations.GetConsumerV1CustomersResponse>;
     /**
-     * getConsumerV1CustomersBookingfields - Returns a list of customer booking fields
+     * Get Customer Booking Fields
      *
-     * This end point returns Booking Field definitions.
-     *
-     * Customer booking fields are different than Appointment booking fields. Customer booking fields are
-     * stored with each customer. They are used when the information collected during the booking is specific
-     * to a particular visit.
-     *
-     * Use the field, and type to determine how to update field values
-     * in PUT /consumer/v1/appointments/{id}/book
-     *
-     * Customer Booking Fields include any custom customer fields you wish to capture with the Booking and also
-     * miscellaneous customer attributes including Company Name, Customer Demographic information and Address information.
-    **/
+     * @remarks
+     * <p>Use this endpoint to return <b>Customer Booking Fields</b>. Customer booking fields are stored with each customer object. They are used when the information collected during the booking is for a particular customer. Customer Booking Fields include any custom customer fields you define and want to capture with the Booking.</p>
+     */
     getConsumerV1CustomersBookingfields(req: operations.GetConsumerV1CustomersBookingfieldsRequest, config?: AxiosRequestConfig): Promise<operations.GetConsumerV1CustomersBookingfieldsResponse>;
     /**
-     * getConsumerV1CustomersCountries - Returns a list of country objects
+     * List Country Codes
      *
-     * Returns a list of countries with the associated country code. Country codes are based on the 2 character ANSI standard.
-    **/
+     * @remarks
+     * <p>Use this endpoint to return a <b>List of Countries with their associated Country Code</b>. Country codes are based on the 2-character ANSI standard. If your countries of operation are not currently listed, contact us at <i><b>support@onsched.com</b></i>.</p>
+     */
     getConsumerV1CustomersCountries(config?: AxiosRequestConfig): Promise<operations.GetConsumerV1CustomersCountriesResponse>;
     /**
-     * getConsumerV1CustomersCustomfields - Returns a list of customField objects
+     * Get Customer Custom Fields
      *
-     * This end point returns your Customer custom field definitions.
-     *
-     * Customer custom fields are different than Appointment custom fields. Appointment custom fields are
-     * stored with each appointment. They are used when the information collected during the booking is specific
-     * to a particular visit, where as Customer custom fields are stored with the customer profile.
-     *
-     * Use the key field, and type to determine how to update field values
-     * in POST /consumer/v1/customers and PUT /consumer/v1/customers/{id}
-    **/
+     * @remarks
+     * <p>Use this endpoint to return <b>Customer Custom Fields</b>. Customer custom fields are stored with the customer object. They are used when the information collected during the booking is specific to a particular customer.</p>
+     */
     getConsumerV1CustomersCustomfields(req: operations.GetConsumerV1CustomersCustomfieldsRequest, config?: AxiosRequestConfig): Promise<operations.GetConsumerV1CustomersCustomfieldsResponse>;
     /**
-     * getConsumerV1CustomersPlans - Returns a list of customers.
+     * List Country States
      *
-     * The results are returned in pages. Use the offset and limit parameters to control the page start and size. Default offset is 0, and limit is 20.
-     * Use the other query parameters to optionally filter the results list.
-    **/
-    getConsumerV1CustomersPlans(req: operations.GetConsumerV1CustomersPlansRequest, config?: AxiosRequestConfig): Promise<operations.GetConsumerV1CustomersPlansResponse>;
-    /**
-     * getConsumerV1CustomersPlansId - Returns a customer object.
-     *
-     * The result returned is a single customer object. An id is required to find the customer. Find customer id's using either the GET consumer/v1/customers end point,
-     * or the GET consumer/v1/appointments end point. A customer object is automatically created with the first booking if it doesn't already exist.
-    **/
-    getConsumerV1CustomersPlansId(req: operations.GetConsumerV1CustomersPlansIdRequest, config?: AxiosRequestConfig): Promise<operations.GetConsumerV1CustomersPlansIdResponse>;
-    /**
-     * getConsumerV1CustomersStates - Returns a list of state objects
-     *
-     * Returns a list of states with the associated state code and country.
-     *
-     * Contact us if states for your countries of operation are not currently loaded.
-    **/
+     * @remarks
+     * <p>Use this endpoint to return a <b>List of Countries with their associated State Codes</b>. Supply a country code to filter results further. If states for your countries of operation are not currently listed, contact us at <i><b>support@onsched.com</b></i>.</p>
+     */
     getConsumerV1CustomersStates(req: operations.GetConsumerV1CustomersStatesRequest, config?: AxiosRequestConfig): Promise<operations.GetConsumerV1CustomersStatesResponse>;
     /**
-     * getConsumerV1CustomersSubscriptions - Returns a list of customer subscriptions.
+     * Get Customer
      *
-     * The results are returned in pages. Use the offset and limit parameters to control the page start and size. Default offset is 0, and limit is 20.
-     * Use the other query parameters to optionally filter the results list.
-    **/
-    getConsumerV1CustomersSubscriptions(req: operations.GetConsumerV1CustomersSubscriptionsRequest, config?: AxiosRequestConfig): Promise<operations.GetConsumerV1CustomersSubscriptionsResponse>;
-    /**
-     * getConsumerV1CustomersSubscriptionsId - Returns a customer subscription object.
-     *
-     * The result returned is a single customer subscription object.
-    **/
-    getConsumerV1CustomersSubscriptionsId(req: operations.GetConsumerV1CustomersSubscriptionsIdRequest, config?: AxiosRequestConfig): Promise<operations.GetConsumerV1CustomersSubscriptionsIdResponse>;
-    /**
-     * getConsumerV1CustomersId - Returns a customer object.
-     *
-     * The result returned is a single customer object. An id is required to find the customer. Find customer id's using either the GET consumer/v1/customers end point,
-     * or the GET consumer/v1/appointments end point. A customer object is automatically created with the first booking if it doesn't already exist.
-    **/
+     * @remarks
+     * <p>Use this endpoint to return a <b>Customer</b> object. A valid <b>customer id</b> is required. Find customer id's by using the <i>GET /consumer/v1/customers</i> endpoint.</p>
+     */
     getConsumerV1CustomersId(req: operations.GetConsumerV1CustomersIdRequest, config?: AxiosRequestConfig): Promise<operations.GetConsumerV1CustomersIdResponse>;
     /**
-     * getConsumerV1CustomersIdPlanlimitsServiceIdResourceIdDateTimeTz - Returns a list of customer booking limits.
+     * Create Customer
      *
-     * The result returned is list of limit rules as defined by the subscribed customer plan along with Booking Counts/Minutes
-     * The results indicate the remaining bookings count / minutes. Use the results in your app to determine if the customer should continue booking.
-     * You can enforce Limits in periods: Daily,Weekly,Monthly and for maximum total limits. Maximum total limits is based on six months prior to
-     * the DateTimeTz and six months after the DateTimeTz. Daily, Weekly and Monthly limits are based on the calculated period relative to the
-     * subscription plan start. Daily,Weekly and Monthly limits can be setup on a per interval basis e.g. to biweekly, or daily every 10 days.
-     * See customer plans setup in the Portal for more information.
-     * All parameters are required. If resourceId is not applicable for a non-resource calendar, pass zero.
-     * Format of the dateTimeTz field is 2018-10-30T10:00-5:00
-    **/
-    getConsumerV1CustomersIdPlanlimitsServiceIdResourceIdDateTimeTz(req: operations.GetConsumerV1CustomersIdPlanlimitsServiceIdResourceIdDateTimeTzRequest, config?: AxiosRequestConfig): Promise<operations.GetConsumerV1CustomersIdPlanlimitsServiceIdResourceIdDateTimeTzResponse>;
+     * @remarks
+     * <p>Use this endpoint to <b>Create</b> a new Customer. A customer object is automatically created with the first appointment booking if it doesn't already exist. If not specified, the business location id defaults to the primary business location.</p>
+     * <p>Required Fields: <b>Email</b> and <b>Name</b> or <b>First and Lastname</b> depending on customer type. Type 0 = Person, Type 1 = Business. For type 0, the firstname and lastname fields are used. For type 1, the Name field is used, and the name field is also used to populate the lastname.</p>
+     */
+    postConsumerV1Customers(req: shared.CustomerInputModel, config?: AxiosRequestConfig): Promise<operations.PostConsumerV1CustomersResponse>;
     /**
-     * getConsumerV1CustomersIdSubscriptions - Returns a customer subscription object.
+     * Update Customer
      *
-     * The result returned is a single customer subscription object. A customer can only be subsribed to a single Customer Plan
-    **/
-    getConsumerV1CustomersIdSubscriptions(req: operations.GetConsumerV1CustomersIdSubscriptionsRequest, config?: AxiosRequestConfig): Promise<operations.GetConsumerV1CustomersIdSubscriptionsResponse>;
-    /**
-     * postConsumerV1Customers - Creates a new customer object.
-     *
-     * Use this endpoint to create a new customer. If not specified the business location id defaults to the first location in the company.
-     * Email Address and a lastname are required for creating a new customer.
-     * Type 0 = Person, Type 1 = Business
-     * For type 0, the firstname and lastname fields are used. For type 1, the Name field is used and the name field is also used to populate the lastname.
-    **/
-    postConsumerV1Customers(req: operations.PostConsumerV1CustomersRequest, config?: AxiosRequestConfig): Promise<operations.PostConsumerV1CustomersResponse>;
-    /**
-     * postConsumerV1CustomersIdSubscriptions - Creates a new customer subscription object.
-     *
-     * Use this endpoint to create a new customer subscription.
-    **/
-    postConsumerV1CustomersIdSubscriptions(req: operations.PostConsumerV1CustomersIdSubscriptionsRequest, config?: AxiosRequestConfig): Promise<operations.PostConsumerV1CustomersIdSubscriptionsResponse>;
-    /**
-     * putConsumerV1CustomersSubscriptionsId - Updates a customer subscription object.
-     *
-     * Use this endpoint to update customer subscription information.
-    **/
-    putConsumerV1CustomersSubscriptionsId(req: operations.PutConsumerV1CustomersSubscriptionsIdRequest, config?: AxiosRequestConfig): Promise<operations.PutConsumerV1CustomersSubscriptionsIdResponse>;
-    /**
-     * putConsumerV1CustomersId - Updates a customer object.
-     *
-     * Use this endpoint to update customer information. If not specified the business location id defaults to the first location in the company.
-     * Blank fields are not changed
-    **/
+     * @remarks
+     * <p>Use this endpoint to <b>Update</b> a Customer object. A valid <b>customer id</b> is required. Note: Blank fields are not changed.</p>
+     */
     putConsumerV1CustomersId(req: operations.PutConsumerV1CustomersIdRequest, config?: AxiosRequestConfig): Promise<operations.PutConsumerV1CustomersIdResponse>;
 }

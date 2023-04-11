@@ -1,11 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ImGroupDeletePathParams extends SpeakeasyBase {
-    groupId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ImGroupDeleteRequest extends SpeakeasyBase {
-    pathParams: ImGroupDeletePathParams;
+    /**
+     * The group ID.<br>
+     *
+     * @remarks
+     * Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups).
+     */
+    groupId: string;
 }
 export declare class ImGroupDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

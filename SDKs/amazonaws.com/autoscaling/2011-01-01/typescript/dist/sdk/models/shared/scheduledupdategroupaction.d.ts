@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Describes a scheduled scaling action.
-**/
+ */
 export declare class ScheduledUpdateGroupAction extends SpeakeasyBase {
     autoScalingGroupName?: string;
     desiredCapacity?: number;

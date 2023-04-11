@@ -1,17 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReminderProfilesCreateQueryParams extends SpeakeasyBase {
-    doctor?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ReminderProfilesCreateSecurity extends SpeakeasyBase {
-    drchronoOauth2: shared.SchemeDrchronoOauth2;
+    drchronoOauth2: string;
 }
 export declare class ReminderProfilesCreateRequest extends SpeakeasyBase {
-    queryParams: ReminderProfilesCreateQueryParams;
-    security: ReminderProfilesCreateSecurity;
+    doctor?: number;
 }
 export declare class ReminderProfilesCreateResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Created
+     */
     reminderProfile?: shared.ReminderProfile;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

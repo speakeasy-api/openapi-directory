@@ -1,0 +1,55 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { CatalogMeasurementUnit } from "./catalogmeasurementunit";
+import { InventoryAdjustment } from "./inventoryadjustment";
+import { InventoryPhysicalCount } from "./inventoryphysicalcount";
+import { InventoryTransfer } from "./inventorytransfer";
+/**
+ * Represents a single physical count, inventory, adjustment, or transfer
+ *
+ * @remarks
+ * that is part of the history of inventory changes for a particular
+ * [CatalogObject](https://developer.squareup.com/reference/square_2021-08-18/objects/CatalogObject) instance.
+ */
+export declare class InventoryChange extends SpeakeasyBase {
+    /**
+     * Represents a change in state or quantity of product inventory at a
+     *
+     * @remarks
+     * particular time and location.
+     */
+    adjustment?: InventoryAdjustment;
+    /**
+     * Represents the unit used to measure a `CatalogItemVariation` and
+     *
+     * @remarks
+     * specifies the precision for decimal quantities.
+     */
+    measurementUnit?: CatalogMeasurementUnit;
+    /**
+     * The ID of the [CatalogMeasurementUnit](https://developer.squareup.com/reference/square_2021-08-18/objects/CatalogMeasurementUnit) object representing the catalog measurement unit associated with the inventory change.
+     */
+    measurementUnitId?: string;
+    /**
+     * Represents the quantity of an item variation that is physically present
+     *
+     * @remarks
+     * at a specific location, verified by a seller or a seller's employee. For example,
+     * a physical count might come from an employee counting the item variations on
+     * hand or from syncing with an external system.
+     */
+    physicalCount?: InventoryPhysicalCount;
+    /**
+     * Represents the transfer of a quantity of product inventory at a
+     *
+     * @remarks
+     * particular time from one location to another.
+     */
+    transfer?: InventoryTransfer;
+    /**
+     * Indicates how the inventory change is applied. See
+     *
+     * @remarks
+     * [InventoryChangeType](https://developer.squareup.com/reference/square_2021-08-18/enums/InventoryChangeType) for all possible values.
+     */
+    type?: string;
+}

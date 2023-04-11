@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteUserPermissionsBoundaryActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteUserPermissionsBoundaryActionEnum {
     DeleteUserPermissionsBoundary = "DeleteUserPermissionsBoundary"
 }
-export declare enum PostDeleteUserPermissionsBoundaryVersionEnum {
+export declare enum POSTDeleteUserPermissionsBoundaryVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostDeleteUserPermissionsBoundaryQueryParams extends SpeakeasyBase {
-    action: PostDeleteUserPermissionsBoundaryActionEnum;
-    version: PostDeleteUserPermissionsBoundaryVersionEnum;
-}
-export declare class PostDeleteUserPermissionsBoundaryHeaders extends SpeakeasyBase {
+export declare class POSTDeleteUserPermissionsBoundaryRequest extends SpeakeasyBase {
+    action: POSTDeleteUserPermissionsBoundaryActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteUserPermissionsBoundaryVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteUserPermissionsBoundaryHeaders extends SpeakeasyB
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteUserPermissionsBoundaryRequest extends SpeakeasyBase {
-    queryParams: PostDeleteUserPermissionsBoundaryQueryParams;
-    headers: PostDeleteUserPermissionsBoundaryHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteUserPermissionsBoundaryResponse extends SpeakeasyBase {
+export declare class POSTDeleteUserPermissionsBoundaryResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

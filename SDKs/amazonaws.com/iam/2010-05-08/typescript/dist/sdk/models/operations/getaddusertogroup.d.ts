@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetAddUserToGroupActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETAddUserToGroupActionEnum {
     AddUserToGroup = "AddUserToGroup"
 }
-export declare enum GetAddUserToGroupVersionEnum {
+export declare enum GETAddUserToGroupVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class GetAddUserToGroupQueryParams extends SpeakeasyBase {
-    action: GetAddUserToGroupActionEnum;
+export declare class GETAddUserToGroupRequest extends SpeakeasyBase {
+    action: GETAddUserToGroupActionEnum;
+    /**
+     * <p>The name of the group to update.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
+     */
     groupName: string;
+    /**
+     * <p>The name of the user to add.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
+     */
     userName: string;
-    version: GetAddUserToGroupVersionEnum;
-}
-export declare class GetAddUserToGroupHeaders extends SpeakeasyBase {
+    version: GETAddUserToGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetAddUserToGroupHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetAddUserToGroupRequest extends SpeakeasyBase {
-    queryParams: GetAddUserToGroupQueryParams;
-    headers: GetAddUserToGroupHeaders;
-}
-export declare class GetAddUserToGroupResponse extends SpeakeasyBase {
+export declare class GETAddUserToGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

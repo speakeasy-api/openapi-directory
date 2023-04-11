@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class NewAddressHeaders extends SpeakeasyBase {
-    authorization: string;
-}
+import { AxiosResponse } from "axios";
 export declare class NewAddressRequest extends SpeakeasyBase {
-    headers: NewAddressHeaders;
-    request: shared.NewAddressRequest;
+    /**
+     * API Key
+     */
+    authorization: string;
+    newAddressRequest: shared.NewAddressRequest;
 }
 export declare class NewAddressResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
     newAddress?: shared.NewAddress;
 }

@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class FullImportSecurity extends SpeakeasyBase {
-    otoroshiAuth: shared.SchemeOtoroshiAuth;
-}
-export declare class FullImportRequest extends SpeakeasyBase {
-    request?: shared.ImportExport;
-    security: FullImportSecurity;
+    password: string;
+    username: string;
 }
 export declare class FullImportResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful operation
+     */
     done?: shared.Done;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

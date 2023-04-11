@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetGenesByAffyIdUsingGetPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETGenesByAffyIdUsingGETRequest extends SpeakeasyBase {
+    /**
+     * Affymetrix ID
+     */
     affyId: string;
+    /**
+     * A list of RGD species type keys can be found in the lookup service
+     */
     speciesTypeKey: number;
 }
-export declare class GetGenesByAffyIdUsingGetRequest extends SpeakeasyBase {
-    pathParams: GetGenesByAffyIdUsingGetPathParams;
-}
-export declare class GetGenesByAffyIdUsingGetResponse extends SpeakeasyBase {
+export declare class GETGenesByAffyIdUsingGETResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

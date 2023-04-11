@@ -1,35 +1,34 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetDecodeAuthorizationMessageRequest, GetDecodeAuthorizationMessageResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GETDecodeAuthorizationMessageRequest,
+  GETDecodeAuthorizationMessageResponse,
+  GETDecodeAuthorizationMessageActionEnum,
+  GETDecodeAuthorizationMessageVersionEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: GetDecodeAuthorizationMessageRequest = {
-  queryParams: {
-    action: "DecodeAuthorizationMessage",
-    encodedMessage: "voluptas",
-    version: "2011-06-15",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  headers: {
-    xAmzAlgorithm: "expedita",
-    xAmzContentSha256: "consequuntur",
-    xAmzCredential: "dolor",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "voluptas",
-    xAmzSignature: "fugit",
-    xAmzSignedHeaders: "et",
-  },
+});
+
+const req: GETDecodeAuthorizationMessageRequest = {
+  action: GETDecodeAuthorizationMessageActionEnum.DecodeAuthorizationMessage,
+  encodedMessage: "corrupti",
+  version: GETDecodeAuthorizationMessageVersionEnum.TwoThousandAndEleven0615,
+  xAmzAlgorithm: "provident",
+  xAmzContentSha256: "distinctio",
+  xAmzCredential: "quibusdam",
+  xAmzDate: "unde",
+  xAmzSecurityToken: "nulla",
+  xAmzSignature: "corrupti",
+  xAmzSignedHeaders: "illum",
 };
 
-sdk.getDecodeAuthorizationMessage(req).then((res: GetDecodeAuthorizationMessageResponse | AxiosError) => {
+sdk.getDecodeAuthorizationMessage(req).then((res: GETDecodeAuthorizationMessageResponse | AxiosError) => {
    // handle response
 });
 ```

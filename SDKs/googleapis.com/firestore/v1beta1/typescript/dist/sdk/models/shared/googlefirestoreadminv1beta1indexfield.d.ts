@@ -1,0 +1,23 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The field's mode.
+ */
+export declare enum GoogleFirestoreAdminV1beta1IndexFieldModeEnum {
+    ModeUnspecified = "MODE_UNSPECIFIED",
+    Ascending = "ASCENDING",
+    Descending = "DESCENDING",
+    ArrayContains = "ARRAY_CONTAINS"
+}
+/**
+ * A field of an index.
+ */
+export declare class GoogleFirestoreAdminV1beta1IndexField extends SpeakeasyBase {
+    /**
+     * The path of the field. Must match the field path specification described by google.firestore.v1beta1.Document.fields. Special field path `__name__` may be used by itself or at the end of a path. `__type__` may be used only at the end of path.
+     */
+    fieldPath?: string;
+    /**
+     * The field's mode.
+     */
+    mode?: GoogleFirestoreAdminV1beta1IndexFieldModeEnum;
+}

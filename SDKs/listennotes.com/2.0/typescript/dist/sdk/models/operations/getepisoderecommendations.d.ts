@@ -1,22 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetEpisodeRecommendationsPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class GetEpisodeRecommendationsQueryParams extends SpeakeasyBase {
-    safeMode?: number;
-}
-export declare class GetEpisodeRecommendationsHeaders extends SpeakeasyBase {
-    xListenAPIKey: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetEpisodeRecommendationsRequest extends SpeakeasyBase {
-    pathParams: GetEpisodeRecommendationsPathParams;
-    queryParams: GetEpisodeRecommendationsQueryParams;
-    headers: GetEpisodeRecommendationsHeaders;
+    /**
+     * Get API Key on listennotes.com/api
+     */
+    xListenAPIKey: string;
+    /**
+     * Episode id.
+     */
+    id: string;
+    /**
+     * Whether or not to exclude podcasts with explicit language. 1 is yes, and 0 is no.
+     */
+    safeMode?: shared.SafeModeParamEnum;
 }
 export declare class GetEpisodeRecommendationsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * OK
+     */
     getEpisodeRecommendationsResponse?: shared.GetEpisodeRecommendationsResponse;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

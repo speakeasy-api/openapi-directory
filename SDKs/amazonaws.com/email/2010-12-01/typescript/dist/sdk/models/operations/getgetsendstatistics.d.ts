@@ -1,15 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetGetSendStatisticsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETGETSendStatisticsActionEnum {
     GetSendStatistics = "GetSendStatistics"
 }
-export declare enum GetGetSendStatisticsVersionEnum {
+export declare enum GETGETSendStatisticsVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetGetSendStatisticsQueryParams extends SpeakeasyBase {
-    action: GetGetSendStatisticsActionEnum;
-    version: GetGetSendStatisticsVersionEnum;
-}
-export declare class GetGetSendStatisticsHeaders extends SpeakeasyBase {
+export declare class GETGETSendStatisticsRequest extends SpeakeasyBase {
+    action: GETGETSendStatisticsActionEnum;
+    version: GETGETSendStatisticsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +17,9 @@ export declare class GetGetSendStatisticsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetGetSendStatisticsRequest extends SpeakeasyBase {
-    queryParams: GetGetSendStatisticsQueryParams;
-    headers: GetGetSendStatisticsHeaders;
-}
-export declare class GetGetSendStatisticsResponse extends SpeakeasyBase {
+export declare class GETGETSendStatisticsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

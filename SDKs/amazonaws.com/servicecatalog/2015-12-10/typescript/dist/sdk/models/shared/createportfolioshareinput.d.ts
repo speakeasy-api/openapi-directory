@@ -1,0 +1,10 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { OrganizationNode } from "./organizationnode";
+export declare class CreatePortfolioShareInput extends SpeakeasyBase {
+    acceptLanguage?: string;
+    accountId?: string;
+    organizationNode?: OrganizationNode;
+    portfolioId: string;
+    sharePrincipals?: boolean;
+    shareTagOptions?: boolean;
+}

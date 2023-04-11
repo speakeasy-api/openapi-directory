@@ -1,8 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetStreamingDistribution20161125PathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetStreamingDistribution20161125Request extends SpeakeasyBase {
+    /**
+     * The streaming distribution's ID.
+     */
     id: string;
-}
-export declare class GetStreamingDistribution20161125Headers extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,12 +13,9 @@ export declare class GetStreamingDistribution20161125Headers extends SpeakeasyBa
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetStreamingDistribution20161125Request extends SpeakeasyBase {
-    pathParams: GetStreamingDistribution20161125PathParams;
-    headers: GetStreamingDistribution20161125Headers;
-}
 export declare class GetStreamingDistribution20161125Response extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

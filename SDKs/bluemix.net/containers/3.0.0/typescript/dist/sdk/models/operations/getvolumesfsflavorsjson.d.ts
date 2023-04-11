@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetVolumesFsFlavorsJsonHeaders extends SpeakeasyBase {
-    xAuthProjectId: string;
-    xAuthToken: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetVolumesFsFlavorsJsonRequest extends SpeakeasyBase {
-    headers: GetVolumesFsFlavorsJsonHeaders;
+    /**
+     * The unique ID of your organization space where you want to create or work with your containers. Run `cf space <space_name> --guid`, where `<space_name>` is the name of your space, to retrieve your space ID.
+     */
+    xAuthProjectId: string;
+    /**
+     * The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
+     */
+    xAuthToken: string;
 }
 export declare class GetVolumesFsFlavorsJsonResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK. A list of available file share sizes in gigabyte is returned.
+     */
     getVolumesFsFlavorsJSON200ApplicationJSONIntegers?: number[];
 }

@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeClusterVersionsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeClusterVersionsActionEnum {
     DescribeClusterVersions = "DescribeClusterVersions"
 }
-export declare enum PostDescribeClusterVersionsVersionEnum {
+export declare enum POSTDescribeClusterVersionsVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostDescribeClusterVersionsQueryParams extends SpeakeasyBase {
-    action: PostDescribeClusterVersionsActionEnum;
+export declare class POSTDescribeClusterVersionsRequest extends SpeakeasyBase {
+    action: POSTDescribeClusterVersionsActionEnum;
+    /**
+     * Pagination token
+     */
     marker?: string;
+    /**
+     * Pagination limit
+     */
     maxRecords?: string;
-    version: PostDescribeClusterVersionsVersionEnum;
-}
-export declare class PostDescribeClusterVersionsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeClusterVersionsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeClusterVersionsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeClusterVersionsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeClusterVersionsQueryParams;
-    headers: PostDescribeClusterVersionsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeClusterVersionsResponse extends SpeakeasyBase {
+export declare class POSTDescribeClusterVersionsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

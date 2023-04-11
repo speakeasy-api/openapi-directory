@@ -1,37 +1,45 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AddTagsToResourceRequest, AddTagsToResourceResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  AddTagsToResourceRequest,
+  AddTagsToResourceResponse,
+  AddTagsToResourceXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: AddTagsToResourceRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "CloudHsmFrontendService.AddTagsToResource",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
-    resourceArn: "fugit",
+});
+
+const req: AddTagsToResourceRequest = {
+  addTagsToResourceRequest: {
+    resourceArn: "corrupti",
     tagList: [
       {
-        key: "nihil",
-        value: "rerum",
+        key: "distinctio",
+        value: "quibusdam",
+      },
+      {
+        key: "unde",
+        value: "nulla",
+      },
+      {
+        key: "corrupti",
+        value: "illum",
       },
     ],
   },
+  xAmzAlgorithm: "vel",
+  xAmzContentSha256: "error",
+  xAmzCredential: "deserunt",
+  xAmzDate: "suscipit",
+  xAmzSecurityToken: "iure",
+  xAmzSignature: "magnam",
+  xAmzSignedHeaders: "debitis",
+  xAmzTarget: AddTagsToResourceXAmzTargetEnum.CloudHsmFrontendServiceAddTagsToResource,
 };
 
 sdk.addTagsToResource(req).then((res: AddTagsToResourceResponse | AxiosError) => {

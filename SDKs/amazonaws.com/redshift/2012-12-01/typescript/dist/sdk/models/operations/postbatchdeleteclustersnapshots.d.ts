@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostBatchDeleteClusterSnapshotsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTBatchDeleteClusterSnapshotsActionEnum {
     BatchDeleteClusterSnapshots = "BatchDeleteClusterSnapshots"
 }
-export declare enum PostBatchDeleteClusterSnapshotsVersionEnum {
+export declare enum POSTBatchDeleteClusterSnapshotsVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostBatchDeleteClusterSnapshotsQueryParams extends SpeakeasyBase {
-    action: PostBatchDeleteClusterSnapshotsActionEnum;
-    version: PostBatchDeleteClusterSnapshotsVersionEnum;
-}
-export declare class PostBatchDeleteClusterSnapshotsHeaders extends SpeakeasyBase {
+export declare class POSTBatchDeleteClusterSnapshotsRequest extends SpeakeasyBase {
+    action: POSTBatchDeleteClusterSnapshotsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTBatchDeleteClusterSnapshotsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostBatchDeleteClusterSnapshotsHeaders extends SpeakeasyBas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostBatchDeleteClusterSnapshotsRequest extends SpeakeasyBase {
-    queryParams: PostBatchDeleteClusterSnapshotsQueryParams;
-    headers: PostBatchDeleteClusterSnapshotsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostBatchDeleteClusterSnapshotsResponse extends SpeakeasyBase {
+export declare class POSTBatchDeleteClusterSnapshotsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

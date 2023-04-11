@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum PollForActivityTaskXAmzTargetEnum {
     SimpleWorkflowServicePollForActivityTask = "SimpleWorkflowService.PollForActivityTask"
 }
-export declare class PollForActivityTaskHeaders extends SpeakeasyBase {
+export declare class PollForActivityTaskRequest extends SpeakeasyBase {
+    pollForActivityTaskInput: shared.PollForActivityTaskInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class PollForActivityTaskHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: PollForActivityTaskXAmzTargetEnum;
 }
-export declare class PollForActivityTaskRequest extends SpeakeasyBase {
-    headers: PollForActivityTaskHeaders;
-    request: shared.PollForActivityTaskInput;
-}
 export declare class PollForActivityTaskResponse extends SpeakeasyBase {
+    /**
+     * Success
+     */
     activityTask?: shared.ActivityTask;
     contentType: string;
+    /**
+     * LimitExceededFault
+     */
     limitExceededFault?: any;
+    /**
+     * OperationNotPermittedFault
+     */
     operationNotPermittedFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnknownResourceFault
+     */
     unknownResourceFault?: any;
 }

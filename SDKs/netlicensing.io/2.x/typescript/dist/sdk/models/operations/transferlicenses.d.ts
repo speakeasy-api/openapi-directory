@@ -1,22 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class TransferLicensesPathParams extends SpeakeasyBase {
-    licenseeNumber: string;
+import { AxiosResponse } from "axios";
+export declare class TransferLicensesSecurity extends SpeakeasyBase {
+    password: string;
+    username: string;
 }
 export declare class TransferLicensesRequestBody extends SpeakeasyBase {
+    /**
+     * Licensee number which Licenses to be transferred
+     */
     sourceLicenseeNumber: string;
 }
-export declare class TransferLicensesSecurity extends SpeakeasyBase {
-    basicAuth: shared.SchemeBasicAuth;
-}
 export declare class TransferLicensesRequest extends SpeakeasyBase {
-    pathParams: TransferLicensesPathParams;
-    request: TransferLicensesRequestBody;
-    security: TransferLicensesSecurity;
+    requestBody: TransferLicensesRequestBody;
+    /**
+     * Licensee number with a maximum length of 1000 characters
+     */
+    licenseeNumber: string;
 }
 export declare class TransferLicensesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    netlicensing?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful request
+     */
+    netlicensing?: shared.Netlicensing;
 }

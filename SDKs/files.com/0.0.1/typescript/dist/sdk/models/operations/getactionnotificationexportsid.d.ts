@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetActionNotificationExportsIdPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetActionNotificationExportsIdRequest extends SpeakeasyBase {
+    /**
+     * Action Notification Export ID.
+     */
     id: number;
 }
-export declare class GetActionNotificationExportsIdRequest extends SpeakeasyBase {
-    pathParams: GetActionNotificationExportsIdPathParams;
-}
 export declare class GetActionNotificationExportsIdResponse extends SpeakeasyBase {
+    /**
+     * The ActionNotificationExports object.
+     */
     actionNotificationExportEntity?: shared.ActionNotificationExportEntity;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

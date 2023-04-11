@@ -1,17 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class PostQuoteTagsRemoveQueryParams extends SpeakeasyBase {
-    id: string;
-    tags: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PostQuoteTagsRemoveSecurity extends SpeakeasyBase {
-    xTheySaidSoApiSecret: shared.SchemeXTheySaidSoApiSecret;
+    xTheySaidSoApiSecret: string;
 }
 export declare class PostQuoteTagsRemoveRequest extends SpeakeasyBase {
-    queryParams: PostQuoteTagsRemoveQueryParams;
-    security: PostQuoteTagsRemoveSecurity;
+    /**
+     * Quote ID
+     */
+    id: string;
+    /**
+     * Comma Separated tags
+     */
+    tags: string;
 }
 export declare class PostQuoteTagsRemoveResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

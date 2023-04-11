@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { Status } from "./status";
+/**
+ * OK
+ */
 export declare class Strain extends SpeakeasyBase {
     backgroundStrainRgdId?: number;
     chrAltered?: string;

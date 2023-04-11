@@ -1,26 +1,27 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetVersionIncidentsFormatRequest, GetVersionIncidentsFormatResponse } from "openapi/src/sdk/models/operations";
+import {
+  GETVersionIncidentsFormatRequest,
+  GETVersionIncidentsFormatResponse,
+  GETVersionIncidentsFormatIncidentTypeEnum,
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: GetVersionIncidentsFormatRequest = {
-  queryParams: {
-    incidentType: "crash",
-    occurredAfter: 2259404117704393152,
-    occurredBefore: 6050128673802995827,
-    page: 501233450539197794,
-    perPage: 3390393562759376202,
-    proximity: "dolor",
-    proximitySquare: 1774932891286980153,
-    query: "voluptas",
-  },
+
+const req: GETVersionIncidentsFormatRequest = {
+  incidentType: GETVersionIncidentsFormatIncidentTypeEnum.Unconfirmed,
+  occurredAfter: 592845,
+  occurredBefore: 715190,
+  page: 844266,
+  perPage: 602763,
+  proximity: "nulla",
+  proximitySquare: 544883,
+  query: "illum",
 };
 
-sdk.incidents.getVersionIncidentsFormat(req).then((res: GetVersionIncidentsFormatResponse | AxiosError) => {
+sdk.incidents.getVersionIncidentsFormat(req).then((res: GETVersionIncidentsFormatResponse | AxiosError) => {
    // handle response
 });
 ```

@@ -1,0 +1,82 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsListSecurityOption1 extends SpeakeasyBase {
+    oauth2: string;
+    oauth2c: string;
+}
+export declare class IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsListSecurityOption2 extends SpeakeasyBase {
+    oauth2: string;
+    oauth2c: string;
+}
+export declare class IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsListSecurity extends SpeakeasyBase {
+    option1?: IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsListSecurityOption1;
+    option2?: IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsListSecurityOption2;
+}
+export declare class IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsListRequest extends SpeakeasyBase {
+    /**
+     * V1 error format.
+     */
+    dollarXgafv?: shared.XgafvEnum;
+    /**
+     * OAuth access token.
+     */
+    accessToken?: string;
+    /**
+     * Data format for response.
+     */
+    alt?: shared.AltEnum;
+    /**
+     * JSONP
+     */
+    callback?: string;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauthToken?: string;
+    /**
+     * The maximum number of items to return.
+     */
+    pageSize?: number;
+    /**
+     * The next_page_token value returned from a previous List request, if any.
+     */
+    pageToken?: string;
+    /**
+     * The parent resource name, for example, "projects/my-awesome-project".
+     */
+    parent: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    uploadType?: string;
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    uploadProtocol?: string;
+}
+export declare class IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsListResponse extends SpeakeasyBase {
+    contentType: string;
+    /**
+     * Successful response
+     */
+    googleCloudIdentitytoolkitAdminV2ListDefaultSupportedIdpConfigsResponse?: shared.GoogleCloudIdentitytoolkitAdminV2ListDefaultSupportedIdpConfigsResponse;
+    statusCode: number;
+    rawResponse?: AxiosResponse;
+}

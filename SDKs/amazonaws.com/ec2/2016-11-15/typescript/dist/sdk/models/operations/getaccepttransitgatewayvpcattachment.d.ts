@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetAcceptTransitGatewayVpcAttachmentActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETAcceptTransitGatewayVpcAttachmentActionEnum {
     AcceptTransitGatewayVpcAttachment = "AcceptTransitGatewayVpcAttachment"
 }
-export declare enum GetAcceptTransitGatewayVpcAttachmentVersionEnum {
+export declare enum GETAcceptTransitGatewayVpcAttachmentVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetAcceptTransitGatewayVpcAttachmentQueryParams extends SpeakeasyBase {
-    action: GetAcceptTransitGatewayVpcAttachmentActionEnum;
+export declare class GETAcceptTransitGatewayVpcAttachmentRequest extends SpeakeasyBase {
+    action: GETAcceptTransitGatewayVpcAttachmentActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
+    /**
+     * The ID of the attachment.
+     */
     transitGatewayAttachmentId: string;
-    version: GetAcceptTransitGatewayVpcAttachmentVersionEnum;
-}
-export declare class GetAcceptTransitGatewayVpcAttachmentHeaders extends SpeakeasyBase {
+    version: GETAcceptTransitGatewayVpcAttachmentVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetAcceptTransitGatewayVpcAttachmentHeaders extends Speakea
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetAcceptTransitGatewayVpcAttachmentRequest extends SpeakeasyBase {
-    queryParams: GetAcceptTransitGatewayVpcAttachmentQueryParams;
-    headers: GetAcceptTransitGatewayVpcAttachmentHeaders;
-}
-export declare class GetAcceptTransitGatewayVpcAttachmentResponse extends SpeakeasyBase {
+export declare class GETAcceptTransitGatewayVpcAttachmentResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

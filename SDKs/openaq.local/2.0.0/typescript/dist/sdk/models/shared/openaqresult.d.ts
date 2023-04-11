@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class OpenAqResultMeta extends SpeakeasyBase {
+export declare class OpenAQResultMeta extends SpeakeasyBase {
     found?: number;
     license?: string;
     limit?: number;
@@ -7,7 +7,10 @@ export declare class OpenAqResultMeta extends SpeakeasyBase {
     page?: number;
     website?: string;
 }
-export declare class OpenAqResult extends SpeakeasyBase {
-    meta?: OpenAqResultMeta;
+/**
+ * Successful Response
+ */
+export declare class OpenAQResult extends SpeakeasyBase {
+    meta?: OpenAQResultMeta;
     results?: any[];
 }

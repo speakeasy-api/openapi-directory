@@ -1,12 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeReservedDbInstancesOfferingsActionEnum {
-    DescribeReservedDbInstancesOfferings = "DescribeReservedDBInstancesOfferings"
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeReservedDBInstancesOfferingsActionEnum {
+    DescribeReservedDBInstancesOfferings = "DescribeReservedDBInstancesOfferings"
 }
-export declare enum GetDescribeReservedDbInstancesOfferingsVersionEnum {
+export declare enum GETDescribeReservedDBInstancesOfferingsVersionEnum {
     TwoThousandAndThirteen0212 = "2013-02-12"
 }
-export declare class GetDescribeReservedDbInstancesOfferingsQueryParams extends SpeakeasyBase {
-    action: GetDescribeReservedDbInstancesOfferingsActionEnum;
+export declare class GETDescribeReservedDBInstancesOfferingsRequest extends SpeakeasyBase {
+    action: GETDescribeReservedDBInstancesOfferingsActionEnum;
     dbInstanceClass?: string;
     duration?: string;
     marker?: string;
@@ -15,9 +16,7 @@ export declare class GetDescribeReservedDbInstancesOfferingsQueryParams extends 
     offeringType?: string;
     productDescription?: string;
     reservedDBInstancesOfferingId?: string;
-    version: GetDescribeReservedDbInstancesOfferingsVersionEnum;
-}
-export declare class GetDescribeReservedDbInstancesOfferingsHeaders extends SpeakeasyBase {
+    version: GETDescribeReservedDBInstancesOfferingsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -26,12 +25,9 @@ export declare class GetDescribeReservedDbInstancesOfferingsHeaders extends Spea
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeReservedDbInstancesOfferingsRequest extends SpeakeasyBase {
-    queryParams: GetDescribeReservedDbInstancesOfferingsQueryParams;
-    headers: GetDescribeReservedDbInstancesOfferingsHeaders;
-}
-export declare class GetDescribeReservedDbInstancesOfferingsResponse extends SpeakeasyBase {
+export declare class GETDescribeReservedDBInstancesOfferingsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

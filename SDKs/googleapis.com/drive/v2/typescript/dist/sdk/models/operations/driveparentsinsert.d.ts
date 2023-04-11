@@ -1,31 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DriveParentsInsertPathParams extends SpeakeasyBase {
-    fileId: string;
-}
-export declare class DriveParentsInsertQueryParams extends SpeakeasyBase {
-    alt?: shared.AltEnum;
-    enforceSingleParent?: boolean;
-    fields?: string;
-    key?: string;
-    oauthToken?: string;
-    prettyPrint?: boolean;
-    quotaUser?: string;
-    supportsAllDrives?: boolean;
-    supportsTeamDrives?: boolean;
-    userIp?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DriveParentsInsertSecurityOption1 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class DriveParentsInsertSecurityOption2 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class DriveParentsInsertSecurityOption3 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class DriveParentsInsertSecurity extends SpeakeasyBase {
     option1?: DriveParentsInsertSecurityOption1;
@@ -33,13 +19,58 @@ export declare class DriveParentsInsertSecurity extends SpeakeasyBase {
     option3?: DriveParentsInsertSecurityOption3;
 }
 export declare class DriveParentsInsertRequest extends SpeakeasyBase {
-    pathParams: DriveParentsInsertPathParams;
-    queryParams: DriveParentsInsertQueryParams;
-    request?: shared.ParentReference;
-    security: DriveParentsInsertSecurity;
+    parentReference?: shared.ParentReference;
+    /**
+     * Data format for the response.
+     */
+    alt?: shared.AltEnum;
+    /**
+     * Deprecated. Adding files to multiple folders is no longer supported. Use shortcuts instead.
+     */
+    enforceSingleParent?: boolean;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * The ID of the file.
+     */
+    fileId: string;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauthToken?: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * Whether the requesting application supports both My Drives and shared drives.
+     */
+    supportsAllDrives?: boolean;
+    /**
+     * Deprecated use supportsAllDrives instead.
+     */
+    supportsTeamDrives?: boolean;
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    userIp?: string;
 }
 export declare class DriveParentsInsertResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful response
+     */
     parentReference?: shared.ParentReference;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,0 +1,42 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { TableBorderProperties } from "./tableborderproperties";
+import { TableRange } from "./tablerange";
+/**
+ * The border position in the table range the updates should apply to. If a border position is not specified, the updates will apply to all borders in the table range.
+ */
+export declare enum UpdateTableBorderPropertiesRequestBorderPositionEnum {
+    All = "ALL",
+    Bottom = "BOTTOM",
+    Inner = "INNER",
+    InnerHorizontal = "INNER_HORIZONTAL",
+    InnerVertical = "INNER_VERTICAL",
+    Left = "LEFT",
+    Outer = "OUTER",
+    Right = "RIGHT",
+    Top = "TOP"
+}
+/**
+ * Updates the properties of the table borders in a Table.
+ */
+export declare class UpdateTableBorderPropertiesRequest extends SpeakeasyBase {
+    /**
+     * The border position in the table range the updates should apply to. If a border position is not specified, the updates will apply to all borders in the table range.
+     */
+    borderPosition?: UpdateTableBorderPropertiesRequestBorderPositionEnum;
+    /**
+     * The fields that should be updated. At least one field must be specified. The root `tableBorderProperties` is implied and should not be specified. A single `"*"` can be used as short-hand for listing every field. For example to update the table border solid fill color, set `fields` to `"tableBorderFill.solidFill.color"`. To reset a property to its default value, include its field name in the field mask but leave the field itself unset.
+     */
+    fields?: string;
+    /**
+     * The object ID of the table.
+     */
+    objectId?: string;
+    /**
+     * The border styling properties of the TableBorderCell.
+     */
+    tableBorderProperties?: TableBorderProperties;
+    /**
+     * A table range represents a reference to a subset of a table. It's important to note that the cells specified by a table range do not necessarily form a rectangle. For example, let's say we have a 3 x 3 table where all the cells of the last row are merged together. The table looks like this: [ ] A table range with location = (0, 0), row span = 3 and column span = 2 specifies the following cells: x x [ x x x ]
+     */
+    tableRange?: TableRange;
+}

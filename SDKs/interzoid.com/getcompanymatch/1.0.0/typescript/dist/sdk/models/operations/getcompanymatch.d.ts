@@ -1,18 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetcompanymatchQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetcompanymatchRequest extends SpeakeasyBase {
+    /**
+     * Company name from which to generate similarity key
+     */
     company: string;
+    /**
+     * Your Interzoid license API key. Register at www.interzoid.com/register
+     */
     license: string;
 }
-export declare class Getcompanymatch200ApplicationJson extends SpeakeasyBase {
+/**
+ * Generated similarity key for company name data
+ */
+export declare class Getcompanymatch200ApplicationJSON extends SpeakeasyBase {
     code?: string;
     credits?: string;
     simkey?: string;
 }
-export declare class GetcompanymatchRequest extends SpeakeasyBase {
-    queryParams: GetcompanymatchQueryParams;
-}
 export declare class GetcompanymatchResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getcompanymatch200ApplicationJSONObject?: Getcompanymatch200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Generated similarity key for company name data
+     */
+    getcompanymatch200ApplicationJSONObject?: Getcompanymatch200ApplicationJSON;
 }

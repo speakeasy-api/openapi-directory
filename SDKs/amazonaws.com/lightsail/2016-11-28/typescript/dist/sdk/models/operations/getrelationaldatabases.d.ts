@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetRelationalDatabasesXAmzTargetEnum {
     Lightsail20161128GetRelationalDatabases = "Lightsail_20161128.GetRelationalDatabases"
 }
-export declare class GetRelationalDatabasesHeaders extends SpeakeasyBase {
+export declare class GetRelationalDatabasesRequest extends SpeakeasyBase {
+    getRelationalDatabasesRequest: shared.GetRelationalDatabasesRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,19 +15,40 @@ export declare class GetRelationalDatabasesHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetRelationalDatabasesXAmzTargetEnum;
 }
-export declare class GetRelationalDatabasesRequest extends SpeakeasyBase {
-    headers: GetRelationalDatabasesHeaders;
-    request: shared.GetRelationalDatabasesRequest;
-}
 export declare class GetRelationalDatabasesResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * AccountSetupInProgressException
+     */
     accountSetupInProgressException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getRelationalDatabasesResult?: shared.GetRelationalDatabasesResult;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
+    /**
+     * OperationFailureException
+     */
     operationFailureException?: any;
+    /**
+     * ServiceException
+     */
     serviceException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnauthenticatedException
+     */
     unauthenticatedException?: any;
 }

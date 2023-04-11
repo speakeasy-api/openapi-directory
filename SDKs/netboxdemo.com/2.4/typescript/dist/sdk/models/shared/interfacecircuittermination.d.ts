@@ -10,6 +10,9 @@ export declare class InterfaceCircuitTermination extends SpeakeasyBase {
     portSpeed: number;
     ppInfo?: string;
     termSide: InterfaceCircuitTerminationTerminationEnum;
+    /**
+     * Upstream speed, if different from port speed
+     */
     upstreamSpeed?: number;
     xconnectId?: string;
 }

@@ -4,9 +4,24 @@ export declare class OrdersCustomBatchRequestEntryCancelLineItem extends Speakea
     amount?: Price;
     amountPretax?: Price;
     amountTax?: Price;
+    /**
+     * The ID of the line item to cancel. Either lineItemId or productId is required.
+     */
     lineItemId?: string;
+    /**
+     * The ID of the product to cancel. This is the REST ID used in the products service. Either lineItemId or productId is required.
+     */
     productId?: string;
+    /**
+     * The quantity to cancel.
+     */
     quantity?: number;
+    /**
+     * The reason for the cancellation. Acceptable values are: - "`customerInitiatedCancel`" - "`invalidCoupon`" - "`malformedShippingAddress`" - "`noInventory`" - "`other`" - "`priceError`" - "`shippingPriceError`" - "`taxError`" - "`undeliverableShippingAddress`" - "`unsupportedPoBoxAddress`"
+     */
     reason?: string;
+    /**
+     * The explanation of the reason.
+     */
     reasonText?: string;
 }

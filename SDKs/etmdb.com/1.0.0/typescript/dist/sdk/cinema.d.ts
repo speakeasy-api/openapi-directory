@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Cinema {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class Cinema {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * cinemaSearchRead - Return cinema search result
+     * Return cinema search result
      *
+     * @remarks
      * Return cinema search result
      *
      * ### Response Class (Status 200)
@@ -19,6 +20,6 @@ export declare class Cinema {
      *
      * For more details on how cinemas are listed [see here][ref].
      * [ref]: https://etmdb.com/en/cinema-list/-updated_date
-    **/
+     */
     cinemaSearchRead(req: operations.CinemaSearchReadRequest, config?: AxiosRequestConfig): Promise<operations.CinemaSearchReadResponse>;
 }

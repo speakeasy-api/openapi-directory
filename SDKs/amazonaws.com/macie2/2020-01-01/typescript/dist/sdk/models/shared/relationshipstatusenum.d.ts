@@ -1,3 +1,6 @@
+/**
+ * The current status of the relationship between an account and an associated Amazon Macie administrator account. Possible values are:
+ */
 export declare enum RelationshipStatusEnum {
     Enabled = "Enabled",
     Paused = "Paused",

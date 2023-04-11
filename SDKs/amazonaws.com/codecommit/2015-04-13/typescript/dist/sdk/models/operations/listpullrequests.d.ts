@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListPullRequestsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListPullRequestsXAmzTargetEnum {
     CodeCommit20150413ListPullRequests = "CodeCommit_20150413.ListPullRequests"
 }
-export declare class ListPullRequestsHeaders extends SpeakeasyBase {
+export declare class ListPullRequestsRequest extends SpeakeasyBase {
+    listPullRequestsInput: shared.ListPullRequestsInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,27 +14,73 @@ export declare class ListPullRequestsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: ListPullRequestsXAmzTargetEnum;
-}
-export declare class ListPullRequestsRequest extends SpeakeasyBase {
-    queryParams: ListPullRequestsQueryParams;
-    headers: ListPullRequestsHeaders;
-    request: shared.ListPullRequestsInput;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class ListPullRequestsResponse extends SpeakeasyBase {
+    /**
+     * AuthorDoesNotExistException
+     */
     authorDoesNotExistException?: any;
     contentType: string;
+    /**
+     * EncryptionIntegrityChecksFailedException
+     */
     encryptionIntegrityChecksFailedException?: any;
+    /**
+     * EncryptionKeyAccessDeniedException
+     */
     encryptionKeyAccessDeniedException?: any;
+    /**
+     * EncryptionKeyDisabledException
+     */
     encryptionKeyDisabledException?: any;
+    /**
+     * EncryptionKeyNotFoundException
+     */
     encryptionKeyNotFoundException?: any;
+    /**
+     * EncryptionKeyUnavailableException
+     */
     encryptionKeyUnavailableException?: any;
+    /**
+     * InvalidAuthorArnException
+     */
     invalidAuthorArnException?: any;
+    /**
+     * InvalidContinuationTokenException
+     */
     invalidContinuationTokenException?: any;
+    /**
+     * InvalidMaxResultsException
+     */
     invalidMaxResultsException?: any;
+    /**
+     * InvalidPullRequestStatusException
+     */
     invalidPullRequestStatusException?: any;
+    /**
+     * InvalidRepositoryNameException
+     */
     invalidRepositoryNameException?: any;
+    /**
+     * Success
+     */
     listPullRequestsOutput?: shared.ListPullRequestsOutput;
+    /**
+     * RepositoryDoesNotExistException
+     */
     repositoryDoesNotExistException?: any;
+    /**
+     * RepositoryNameRequiredException
+     */
     repositoryNameRequiredException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

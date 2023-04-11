@@ -1,2 +1,3 @@
 export * from "./getrecordsformat";
-export * from "./getrecordsrecordidjson";
+export * from "./getrecordsrecordidformat";
+export * from "./getrecordsrecordidmorelikethisformat";

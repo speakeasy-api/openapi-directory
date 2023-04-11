@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetModifyClusterDbRevisionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETModifyClusterDbRevisionActionEnum {
     ModifyClusterDbRevision = "ModifyClusterDbRevision"
 }
-export declare enum GetModifyClusterDbRevisionVersionEnum {
+export declare enum GETModifyClusterDbRevisionVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class GetModifyClusterDbRevisionQueryParams extends SpeakeasyBase {
-    action: GetModifyClusterDbRevisionActionEnum;
+export declare class GETModifyClusterDbRevisionRequest extends SpeakeasyBase {
+    action: GETModifyClusterDbRevisionActionEnum;
+    /**
+     * <p>The unique identifier of a cluster whose database revision you want to modify. </p> <p>Example: <code>examplecluster</code> </p>
+     */
     clusterIdentifier: string;
+    /**
+     * The identifier of the database revision. You can retrieve this value from the response to the <a>DescribeClusterDbRevisions</a> request.
+     */
     revisionTarget: string;
-    version: GetModifyClusterDbRevisionVersionEnum;
-}
-export declare class GetModifyClusterDbRevisionHeaders extends SpeakeasyBase {
+    version: GETModifyClusterDbRevisionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetModifyClusterDbRevisionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetModifyClusterDbRevisionRequest extends SpeakeasyBase {
-    queryParams: GetModifyClusterDbRevisionQueryParams;
-    headers: GetModifyClusterDbRevisionHeaders;
-}
-export declare class GetModifyClusterDbRevisionResponse extends SpeakeasyBase {
+export declare class GETModifyClusterDbRevisionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { NestedVlanGroup } from "./nestedvlangroup";
 import { NestedRole } from "./nestedrole";
 import { NestedSite } from "./nestedsite";
 import { NestedTenant } from "./nestedtenant";
-export declare class VlanStatus extends SpeakeasyBase {
+import { NestedVLANGroup } from "./nestedvlangroup";
+export declare class VLANStatus extends SpeakeasyBase {
     label: string;
     value: number;
 }
@@ -12,13 +12,13 @@ export declare class Vlan extends SpeakeasyBase {
     customFields?: Record<string, any>;
     description?: string;
     displayName?: string;
-    group?: NestedVlanGroup;
+    group?: NestedVLANGroup;
     id?: number;
     lastUpdated?: Date;
     name: string;
     role?: NestedRole;
     site?: NestedSite;
-    status?: VlanStatus;
+    status?: VLANStatus;
     tags?: string[];
     tenant?: NestedTenant;
     vid: number;

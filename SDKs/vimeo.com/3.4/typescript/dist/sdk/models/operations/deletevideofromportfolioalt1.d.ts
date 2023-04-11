@@ -1,18 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteVideoFromPortfolioAlt1PathParams extends SpeakeasyBase {
-    portfolioId: number;
-    videoId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteVideoFromPortfolioAlt1Security extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
+    oauth2: string;
 }
 export declare class DeleteVideoFromPortfolioAlt1Request extends SpeakeasyBase {
-    pathParams: DeleteVideoFromPortfolioAlt1PathParams;
-    security: DeleteVideoFromPortfolioAlt1Security;
+    /**
+     * The ID of the portfolio.
+     */
+    portfolioId: number;
+    /**
+     * The ID of the video.
+     */
+    videoId: number;
 }
 export declare class DeleteVideoFromPortfolioAlt1Response extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The portfolio wasn't found, or the video wasn't found.
+     */
     legacyError?: shared.LegacyError;
 }

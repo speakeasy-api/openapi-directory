@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostAssociateDataShareConsumerActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTAssociateDataShareConsumerActionEnum {
     AssociateDataShareConsumer = "AssociateDataShareConsumer"
 }
-export declare enum PostAssociateDataShareConsumerVersionEnum {
+export declare enum POSTAssociateDataShareConsumerVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostAssociateDataShareConsumerQueryParams extends SpeakeasyBase {
-    action: PostAssociateDataShareConsumerActionEnum;
-    version: PostAssociateDataShareConsumerVersionEnum;
-}
-export declare class PostAssociateDataShareConsumerHeaders extends SpeakeasyBase {
+export declare class POSTAssociateDataShareConsumerRequest extends SpeakeasyBase {
+    action: POSTAssociateDataShareConsumerActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTAssociateDataShareConsumerVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostAssociateDataShareConsumerHeaders extends SpeakeasyBase
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostAssociateDataShareConsumerRequest extends SpeakeasyBase {
-    queryParams: PostAssociateDataShareConsumerQueryParams;
-    headers: PostAssociateDataShareConsumerHeaders;
-    request?: Uint8Array;
-}
-export declare class PostAssociateDataShareConsumerResponse extends SpeakeasyBase {
+export declare class POSTAssociateDataShareConsumerResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

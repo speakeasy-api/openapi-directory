@@ -1,17 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteRankExpressionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteRankExpressionActionEnum {
     DeleteRankExpression = "DeleteRankExpression"
 }
-export declare enum GetDeleteRankExpressionVersionEnum {
+export declare enum GETDeleteRankExpressionVersionEnum {
     TwoThousandAndEleven0201 = "2011-02-01"
 }
-export declare class GetDeleteRankExpressionQueryParams extends SpeakeasyBase {
-    action: GetDeleteRankExpressionActionEnum;
+export declare class GETDeleteRankExpressionRequest extends SpeakeasyBase {
+    action: GETDeleteRankExpressionActionEnum;
     domainName: string;
+    /**
+     * The name of the <code>RankExpression</code> to delete.
+     */
     rankName: string;
-    version: GetDeleteRankExpressionVersionEnum;
-}
-export declare class GetDeleteRankExpressionHeaders extends SpeakeasyBase {
+    version: GETDeleteRankExpressionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +22,9 @@ export declare class GetDeleteRankExpressionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteRankExpressionRequest extends SpeakeasyBase {
-    queryParams: GetDeleteRankExpressionQueryParams;
-    headers: GetDeleteRankExpressionHeaders;
-}
-export declare class GetDeleteRankExpressionResponse extends SpeakeasyBase {
+export declare class GETDeleteRankExpressionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

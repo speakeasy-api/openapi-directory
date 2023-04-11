@@ -1,16 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetSentencesQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetSentencesRequest extends SpeakeasyBase {
     limit?: number;
 }
-export declare class GetSentences200ApplicationJson extends SpeakeasyBase {
+export declare class GetSentences200ApplicationJSON extends SpeakeasyBase {
     data?: shared.Sentence[];
-}
-export declare class GetSentencesRequest extends SpeakeasyBase {
-    queryParams: GetSentencesQueryParams;
 }
 export declare class GetSentencesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getSentences200ApplicationJSONObject?: GetSentences200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    getSentences200ApplicationJSONObject?: GetSentences200ApplicationJSON;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum MigrateWorkspaceXAmzTargetEnum {
     WorkspacesServiceMigrateWorkspace = "WorkspacesService.MigrateWorkspace"
 }
-export declare class MigrateWorkspaceHeaders extends SpeakeasyBase {
+export declare class MigrateWorkspaceRequest extends SpeakeasyBase {
+    migrateWorkspaceRequest: shared.MigrateWorkspaceRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class MigrateWorkspaceHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: MigrateWorkspaceXAmzTargetEnum;
 }
-export declare class MigrateWorkspaceRequest extends SpeakeasyBase {
-    headers: MigrateWorkspaceHeaders;
-    request: shared.MigrateWorkspaceRequest;
-}
 export declare class MigrateWorkspaceResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InvalidParameterValuesException
+     */
     invalidParameterValuesException?: any;
+    /**
+     * Success
+     */
     migrateWorkspaceResult?: shared.MigrateWorkspaceResult;
+    /**
+     * OperationInProgressException
+     */
     operationInProgressException?: any;
+    /**
+     * OperationNotSupportedException
+     */
     operationNotSupportedException?: any;
-    resourceNotFoundException?: any;
-    resourceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ResourceUnavailableException
+     */
+    resourceUnavailableException?: any;
 }

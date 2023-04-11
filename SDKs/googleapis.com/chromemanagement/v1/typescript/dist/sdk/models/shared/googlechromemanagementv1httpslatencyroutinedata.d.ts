@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Output only. HTTPS latency routine problem if a problem occurred.
+ */
 export declare enum GoogleChromeManagementV1HttpsLatencyRoutineDataProblemEnum {
     HttpsLatencyProblemUnspecified = "HTTPS_LATENCY_PROBLEM_UNSPECIFIED",
     FailedDnsResolutions = "FAILED_DNS_RESOLUTIONS",
@@ -8,8 +11,14 @@ export declare enum GoogleChromeManagementV1HttpsLatencyRoutineDataProblemEnum {
 }
 /**
  * Data that describes the result of the HTTPS latency diagnostics routine, with the HTTPS requests issued to Google websites.
-**/
+ */
 export declare class GoogleChromeManagementV1HttpsLatencyRoutineData extends SpeakeasyBase {
+    /**
+     * Output only. HTTPS latency if routine succeeded or failed because of HIGH_LATENCY or VERY_HIGH_LATENCY.
+     */
     latency?: string;
+    /**
+     * Output only. HTTPS latency routine problem if a problem occurred.
+     */
     problem?: GoogleChromeManagementV1HttpsLatencyRoutineDataProblemEnum;
 }

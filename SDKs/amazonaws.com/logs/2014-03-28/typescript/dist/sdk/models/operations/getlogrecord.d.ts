@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetLogRecordXAmzTargetEnum {
     Logs20140328GetLogRecord = "Logs_20140328.GetLogRecord"
 }
-export declare class GetLogRecordHeaders extends SpeakeasyBase {
+export declare class GetLogRecordRequest extends SpeakeasyBase {
+    getLogRecordRequest: shared.GetLogRecordRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class GetLogRecordHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetLogRecordXAmzTargetEnum;
 }
-export declare class GetLogRecordRequest extends SpeakeasyBase {
-    headers: GetLogRecordHeaders;
-    request: shared.GetLogRecordRequest;
-}
 export declare class GetLogRecordResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getLogRecordResponse?: shared.GetLogRecordResponse;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
-    resourceNotFoundException?: any;
-    serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ServiceUnavailableException
+     */
+    serviceUnavailableException?: any;
 }

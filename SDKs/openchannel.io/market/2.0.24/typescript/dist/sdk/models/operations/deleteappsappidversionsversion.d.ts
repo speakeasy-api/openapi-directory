@@ -1,16 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteAppsAppIdVersionsVersionPathParams extends SpeakeasyBase {
-    appId: string;
-    version: string;
-}
-export declare class DeleteAppsAppIdVersionsVersionQueryParams extends SpeakeasyBase {
-    developerId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteAppsAppIdVersionsVersionRequest extends SpeakeasyBase {
-    pathParams: DeleteAppsAppIdVersionsVersionPathParams;
-    queryParams: DeleteAppsAppIdVersionsVersionQueryParams;
+    /**
+     * The id of the App to be removed
+     */
+    appId: string;
+    /**
+     * The unique id of the developer that is removing this app
+     */
+    developerId: string;
+    /**
+     * The version of the App to be removed
+     */
+    version: string;
 }
 export declare class DeleteAppsAppIdVersionsVersionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

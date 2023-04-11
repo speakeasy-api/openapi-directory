@@ -6,7 +6,7 @@ import { SageMakerMachineLearningModelResourceData } from "./sagemakermachinelea
 import { SecretsManagerSecretResourceData } from "./secretsmanagersecretresourcedata";
 /**
  * A container for resource data. The container takes only one of the following supported resource data types: ''LocalDeviceResourceData'', ''LocalVolumeResourceData'', ''SageMakerMachineLearningModelResourceData'', ''S3MachineLearningModelResourceData'', ''SecretsManagerSecretResourceData''.
-**/
+ */
 export declare class ResourceDataContainer extends SpeakeasyBase {
     localDeviceResourceData?: LocalDeviceResourceData;
     localVolumeResourceData?: LocalVolumeResourceData;

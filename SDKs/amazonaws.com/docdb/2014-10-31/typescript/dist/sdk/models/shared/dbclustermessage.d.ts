@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbClusterList } from "./dbclusterlist";
+import { DBClusterList } from "./dbclusterlist";
 /**
  * Represents the output of <a>DescribeDBClusters</a>.
-**/
-export declare class DbClusterMessage extends SpeakeasyBase {
-    dbClusters?: DbClusterList[];
+ */
+export declare class DBClusterMessage extends SpeakeasyBase {
+    dbClusters?: DBClusterList[];
     marker?: string;
 }

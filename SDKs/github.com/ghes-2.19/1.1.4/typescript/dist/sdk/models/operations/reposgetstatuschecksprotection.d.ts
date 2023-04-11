@@ -1,16 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReposGetStatusChecksProtectionPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ReposGetStatusChecksProtectionRequest extends SpeakeasyBase {
+    /**
+     * The name of the branch.
+     */
     branch: string;
     owner: string;
     repo: string;
 }
-export declare class ReposGetStatusChecksProtectionRequest extends SpeakeasyBase {
-    pathParams: ReposGetStatusChecksProtectionPathParams;
-}
 export declare class ReposGetStatusChecksProtectionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Resource not found
+     */
     basicError?: shared.BasicError;
+    /**
+     * Response
+     */
     statusCheckPolicy?: shared.StatusCheckPolicy;
 }

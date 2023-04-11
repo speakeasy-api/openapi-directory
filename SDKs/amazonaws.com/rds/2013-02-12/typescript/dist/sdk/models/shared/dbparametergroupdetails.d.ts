@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ParametersList } from "./parameterslist";
-export declare class DbParameterGroupDetails extends SpeakeasyBase {
+/**
+ * Success
+ */
+export declare class DBParameterGroupDetails extends SpeakeasyBase {
     marker?: string;
     parameters?: ParametersList[];
 }

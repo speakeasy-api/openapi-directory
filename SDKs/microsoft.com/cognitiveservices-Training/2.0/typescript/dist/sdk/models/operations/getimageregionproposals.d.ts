@@ -1,18 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetImageRegionProposalsPathParams extends SpeakeasyBase {
-    imageId: string;
-    projectId: string;
-}
-export declare class GetImageRegionProposalsHeaders extends SpeakeasyBase {
-    trainingKey: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetImageRegionProposalsRequest extends SpeakeasyBase {
-    pathParams: GetImageRegionProposalsPathParams;
-    headers: GetImageRegionProposalsHeaders;
+    trainingKey: string;
+    /**
+     * The image id
+     */
+    imageId: string;
+    /**
+     * The project id
+     */
+    projectId: string;
 }
 export declare class GetImageRegionProposalsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * OK
+     */
     imageRegionProposal?: shared.ImageRegionProposal;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

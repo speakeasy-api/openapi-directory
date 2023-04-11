@@ -1,3 +1,6 @@
+/**
+ * The storage class of the S3 object. Possible values are:
+ */
 export declare enum StorageClassEnum {
     Standard = "STANDARD",
     ReducedRedundancy = "REDUCED_REDUNDANCY",
@@ -5,5 +8,7 @@ export declare enum StorageClassEnum {
     IntelligentTiering = "INTELLIGENT_TIERING",
     DeepArchive = "DEEP_ARCHIVE",
     OnezoneIa = "ONEZONE_IA",
-    Glacier = "GLACIER"
+    Glacier = "GLACIER",
+    GlacierIr = "GLACIER_IR",
+    Outposts = "OUTPOSTS"
 }

@@ -1,5 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Version {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,33 +10,38 @@ export declare class Version {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createVersion - Create version
+     * Create version
      *
+     * @remarks
      * Create a new version
-    **/
-    createVersion(req: operations.CreateVersionRequest, config?: AxiosRequestConfig): Promise<operations.CreateVersionResponse>;
+     */
+    createVersion(req: shared.Version, security: operations.CreateVersionSecurity, config?: AxiosRequestConfig): Promise<operations.CreateVersionResponse>;
     /**
-     * deleteVersion - Delete version
+     * Delete version
      *
+     * @remarks
      * Delete a version
-    **/
-    deleteVersion(req: operations.DeleteVersionRequest, config?: AxiosRequestConfig): Promise<operations.DeleteVersionResponse>;
+     */
+    deleteVersion(req: operations.DeleteVersionRequest, security: operations.DeleteVersionSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteVersionResponse>;
     /**
-     * getVersion - Get version
+     * Get version
      *
+     * @remarks
      * Returns the version with this version ID
-    **/
-    getVersion(req: operations.GetVersionRequest, config?: AxiosRequestConfig): Promise<operations.GetVersionResponse>;
+     */
+    getVersion(req: operations.GetVersionRequest, security: operations.GetVersionSecurity, config?: AxiosRequestConfig): Promise<operations.GetVersionResponse>;
     /**
-     * getVersions - Get versions
+     * Get versions
      *
+     * @remarks
      * Retrieve a list of versions associated with a project API key
-    **/
-    getVersions(req: operations.GetVersionsRequest, config?: AxiosRequestConfig): Promise<operations.GetVersionsResponse>;
+     */
+    getVersions(config?: AxiosRequestConfig): Promise<operations.GetVersionsResponse>;
     /**
-     * updateVersion - Update version
+     * Update version
      *
+     * @remarks
      * Update an existing version
-    **/
-    updateVersion(req: operations.UpdateVersionRequest, config?: AxiosRequestConfig): Promise<operations.UpdateVersionResponse>;
+     */
+    updateVersion(req: operations.UpdateVersionRequest, security: operations.UpdateVersionSecurity, config?: AxiosRequestConfig): Promise<operations.UpdateVersionResponse>;
 }

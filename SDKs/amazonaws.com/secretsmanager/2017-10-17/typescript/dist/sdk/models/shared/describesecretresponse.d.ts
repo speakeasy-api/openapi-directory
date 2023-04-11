@@ -2,6 +2,9 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { ReplicationStatusType } from "./replicationstatustype";
 import { RotationRulesType } from "./rotationrulestype";
 import { Tag } from "./tag";
+/**
+ * Success
+ */
 export declare class DescribeSecretResponse extends SpeakeasyBase {
     arn?: string;
     createdDate?: Date;
@@ -12,6 +15,7 @@ export declare class DescribeSecretResponse extends SpeakeasyBase {
     lastChangedDate?: Date;
     lastRotatedDate?: Date;
     name?: string;
+    nextRotationDate?: Date;
     owningService?: string;
     primaryRegion?: string;
     replicationStatus?: ReplicationStatusType[];

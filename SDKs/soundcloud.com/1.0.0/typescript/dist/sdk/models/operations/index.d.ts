@@ -56,4 +56,5 @@ export * from "./posttracks";
 export * from "./posttrackstrackidcomments";
 export * from "./putmefollowingsuserid";
 export * from "./putplaylistsplaylistid";
-export * from "./puttrackstrackid";
+export * from "./puttrackstrackidjson";
+export * from "./puttrackstrackidmultipart";

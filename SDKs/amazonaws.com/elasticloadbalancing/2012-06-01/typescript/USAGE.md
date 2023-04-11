@@ -1,39 +1,39 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetApplySecurityGroupsToLoadBalancerRequest, GetApplySecurityGroupsToLoadBalancerResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GETApplySecurityGroupsToLoadBalancerRequest,
+  GETApplySecurityGroupsToLoadBalancerResponse,
+  GETApplySecurityGroupsToLoadBalancerActionEnum,
+  GETApplySecurityGroupsToLoadBalancerVersionEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: GetApplySecurityGroupsToLoadBalancerRequest = {
-  queryParams: {
-    action: "ApplySecurityGroupsToLoadBalancer",
-    loadBalancerName: "voluptas",
-    securityGroups: [
-      "expedita",
-      "consequuntur",
-    ],
-    version: "2012-06-01",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  headers: {
-    xAmzAlgorithm: "expedita",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "fugit",
-    xAmzDate: "et",
-    xAmzSecurityToken: "nihil",
-    xAmzSignature: "rerum",
-    xAmzSignedHeaders: "dicta",
-  },
+});
+
+const req: GETApplySecurityGroupsToLoadBalancerRequest = {
+  action: GETApplySecurityGroupsToLoadBalancerActionEnum.ApplySecurityGroupsToLoadBalancer,
+  loadBalancerName: "corrupti",
+  securityGroups: [
+    "distinctio",
+    "quibusdam",
+    "unde",
+  ],
+  version: GETApplySecurityGroupsToLoadBalancerVersionEnum.TwoThousandAndTwelve0601,
+  xAmzAlgorithm: "nulla",
+  xAmzContentSha256: "corrupti",
+  xAmzCredential: "illum",
+  xAmzDate: "vel",
+  xAmzSecurityToken: "error",
+  xAmzSignature: "deserunt",
+  xAmzSignedHeaders: "suscipit",
 };
 
-sdk.getApplySecurityGroupsToLoadBalancer(req).then((res: GetApplySecurityGroupsToLoadBalancerResponse | AxiosError) => {
+sdk.getApplySecurityGroupsToLoadBalancer(req).then((res: GETApplySecurityGroupsToLoadBalancerResponse | AxiosError) => {
    // handle response
 });
 ```

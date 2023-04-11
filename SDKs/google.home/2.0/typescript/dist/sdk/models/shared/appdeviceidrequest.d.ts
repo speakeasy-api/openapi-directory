@@ -1,4 +1,4 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class AppDeviceIdRequest extends SpeakeasyBase {
+export declare class AppDeviceIDRequest extends SpeakeasyBase {
     appId: string;
 }

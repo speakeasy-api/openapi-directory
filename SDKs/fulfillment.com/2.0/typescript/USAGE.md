@@ -1,17 +1,39 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { PostOauthAccessTokenRequest, PostOauthAccessTokenResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetAccountingRequest,
+  GetAccountingResponse,
+  GetAccountingHydrateEnum,
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: PostOauthAccessTokenRequest = {
-  request: "sit",
+
+const req: GetAccountingRequest = {
+  fromDate: "corrupti",
+  hydrate: [
+    GetAccountingHydrateEnum.Items,
+    GetAccountingHydrateEnum.Items,
+    GetAccountingHydrateEnum.Items,
+  ],
+  limit: 715190,
+  orderIds: [
+    602763,
+    857946,
+    544883,
+    847252,
+  ],
+  page: 423655,
+  toDate: "error",
+  warehouseIds: [
+    384382,
+    437587,
+    297534,
+  ],
 };
 
-sdk.auth.postOauthAccessToken(req).then((res: PostOauthAccessTokenResponse | AxiosError) => {
+sdk.accounting.getAccounting(req).then((res: GetAccountingResponse | AxiosError) => {
    // handle response
 });
 ```

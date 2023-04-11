@@ -1,15 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CheckDomainPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class CheckDomainRequest extends SpeakeasyBase {
+    /**
+     * Domain
+     */
     domain: string;
 }
-export declare class CheckDomain200ApplicationJson extends SpeakeasyBase {
+/**
+ * OK
+ */
+export declare class CheckDomain200ApplicationJSON extends SpeakeasyBase {
     isAvailable?: boolean;
-}
-export declare class CheckDomainRequest extends SpeakeasyBase {
-    pathParams: CheckDomainPathParams;
 }
 export declare class CheckDomainResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    checkDomain200ApplicationJSONObject?: CheckDomain200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
+    checkDomain200ApplicationJSONObject?: CheckDomain200ApplicationJSON;
 }

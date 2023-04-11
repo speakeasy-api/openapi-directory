@@ -1,19 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteMockPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteMockRequest extends SpeakeasyBase {
     mockUid: string;
 }
-export declare class DeleteMock200ApplicationJsonMock extends SpeakeasyBase {
+export declare class DeleteMock200ApplicationJSONMock extends SpeakeasyBase {
     id?: string;
     uid?: string;
 }
-export declare class DeleteMock200ApplicationJson extends SpeakeasyBase {
-    mock?: DeleteMock200ApplicationJsonMock;
-}
-export declare class DeleteMockRequest extends SpeakeasyBase {
-    pathParams: DeleteMockPathParams;
+/**
+ * Successful Response
+ */
+export declare class DeleteMock200ApplicationJSON extends SpeakeasyBase {
+    mock?: DeleteMock200ApplicationJSONMock;
 }
 export declare class DeleteMockResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deleteMock200ApplicationJSONObject?: DeleteMock200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful Response
+     */
+    deleteMock200ApplicationJSONObject?: DeleteMock200ApplicationJSON;
 }

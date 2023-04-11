@@ -1,10 +1,28 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { BeezUpCommonLovLink3 } from "./beezupcommonlovlink3";
-export declare class CatalogIndexLovLinks extends SpeakeasyBase {
-    beezUPColumnDataTypeLov: BeezUpCommonLovLink3;
-    beezUPColumnDisplayGroupLov: BeezUpCommonLovLink3;
-    beezUPColumnImportanceLov: BeezUpCommonLovLink3;
-    beezUPColumnLov: BeezUpCommonLovLink3;
-    compareOptionLov: BeezUpCommonLovLink3;
-    duplicateProductValueStrategyLov: BeezUpCommonLovLink3;
+import { BeezUPCommonLOVLink3 } from "./beezupcommonlovlink3";
+export declare class CatalogIndexLOVLinks extends SpeakeasyBase {
+    /**
+     * Describe the way you have to follow to get access to the LOV
+     */
+    beezUPColumnDataTypeLov: BeezUPCommonLOVLink3;
+    /**
+     * Describe the way you have to follow to get access to the LOV
+     */
+    beezUPColumnDisplayGroupLov: BeezUPCommonLOVLink3;
+    /**
+     * Describe the way you have to follow to get access to the LOV
+     */
+    beezUPColumnImportanceLov: BeezUPCommonLOVLink3;
+    /**
+     * Describe the way you have to follow to get access to the LOV
+     */
+    beezUPColumnLov: BeezUPCommonLOVLink3;
+    /**
+     * Describe the way you have to follow to get access to the LOV
+     */
+    compareOptionLov: BeezUPCommonLOVLink3;
+    /**
+     * Describe the way you have to follow to get access to the LOV
+     */
+    duplicateProductValueStrategyLov: BeezUPCommonLOVLink3;
 }

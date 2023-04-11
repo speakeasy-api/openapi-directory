@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteRateBasedRuleXAmzTargetEnum {
-    Awswaf20150824DeleteRateBasedRule = "AWSWAF_20150824.DeleteRateBasedRule"
+    AWSWAF20150824DeleteRateBasedRule = "AWSWAF_20150824.DeleteRateBasedRule"
 }
-export declare class DeleteRateBasedRuleHeaders extends SpeakeasyBase {
+export declare class DeleteRateBasedRuleRequest extends SpeakeasyBase {
+    deleteRateBasedRuleRequest: shared.DeleteRateBasedRuleRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,20 +15,44 @@ export declare class DeleteRateBasedRuleHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteRateBasedRuleXAmzTargetEnum;
 }
-export declare class DeleteRateBasedRuleRequest extends SpeakeasyBase {
-    headers: DeleteRateBasedRuleHeaders;
-    request: shared.DeleteRateBasedRuleRequest;
-}
 export declare class DeleteRateBasedRuleResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deleteRateBasedRuleResponse?: shared.DeleteRateBasedRuleResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFInvalidAccountException
+     */
     wafInvalidAccountException?: any;
+    /**
+     * WAFNonEmptyEntityException
+     */
     wafNonEmptyEntityException?: any;
+    /**
+     * WAFNonexistentItemException
+     */
     wafNonexistentItemException?: any;
+    /**
+     * WAFReferencedItemException
+     */
     wafReferencedItemException?: any;
+    /**
+     * WAFStaleDataException
+     */
     wafStaleDataException?: any;
+    /**
+     * WAFTagOperationException
+     */
     wafTagOperationException?: any;
+    /**
+     * WAFTagOperationInternalErrorException
+     */
     wafTagOperationInternalErrorException?: any;
 }

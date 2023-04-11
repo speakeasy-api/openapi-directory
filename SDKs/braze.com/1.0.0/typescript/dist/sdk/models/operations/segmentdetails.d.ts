@@ -1,11 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SegmentDetailsQueryParams extends SpeakeasyBase {
-    segmentId?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class SegmentDetailsRequest extends SpeakeasyBase {
-    queryParams: SegmentDetailsQueryParams;
+    /**
+     * (Required) String
+     *
+     * @remarks
+     *
+     * Segment API identifier
+     */
+    segmentId?: string;
 }
 export declare class SegmentDetailsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

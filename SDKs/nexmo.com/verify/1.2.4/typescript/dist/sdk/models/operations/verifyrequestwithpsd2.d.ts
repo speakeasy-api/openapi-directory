@@ -1,14 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class VerifyRequestWithPsd2PathParams extends SpeakeasyBase {
-    format: shared.FormatEnum;
-}
+import { AxiosResponse } from "axios";
 export declare class VerifyRequestWithPsd2Request extends SpeakeasyBase {
-    pathParams: VerifyRequestWithPsd2PathParams;
-    request: shared.Psd2Request;
+    /**
+     * The response format.
+     */
+    format: shared.FormatEnum;
+    psd2Request: shared.Psd2Request;
 }
 export declare class VerifyRequestWithPsd2Response extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
     verifyRequestWithPsd2200ApplicationJSONOneOf?: any;
 }

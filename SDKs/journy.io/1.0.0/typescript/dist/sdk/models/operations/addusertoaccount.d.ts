@@ -1,95 +1,150 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class AddUserToAccountPathParams extends SpeakeasyBase {
-    accountId: string;
+import { AxiosResponse } from "axios";
+/**
+ * Account identification requires an accountId, domain or both
+ */
+export declare class AddUserToAccountRequestBodyAccount extends SpeakeasyBase {
+    /**
+     * Unique identifier for the account in your database
+     */
+    accountId?: string;
+    /**
+     * The domain associated with the account (e.g. acme-inc.com)
+     */
+    domain?: string;
 }
 /**
- * The user being added/removed from the account
-**/
-export declare class AddUserToAccountRequestBody extends SpeakeasyBase {
-    userId: string;
+ * User identification requires a userId, email or both
+ */
+export declare class AddUserToAccountRequestBodyUsersIdentification extends SpeakeasyBase {
+    /**
+     * Email address of the user
+     */
+    email?: string;
+    /**
+     * Unique identifier for the user in your database
+     */
+    userId?: string;
 }
-export declare class AddUserToAccount201ApplicationJsonMeta extends SpeakeasyBase {
+export declare class AddUserToAccountRequestBodyUsers extends SpeakeasyBase {
+    /**
+     * User identification requires a userId, email or both
+     */
+    identification: AddUserToAccountRequestBodyUsersIdentification;
+}
+/**
+ * The identification for user and account
+ */
+export declare class AddUserToAccountRequestBody extends SpeakeasyBase {
+    /**
+     * Account identification requires an accountId, domain or both
+     */
+    account: AddUserToAccountRequestBodyAccount;
+    users: AddUserToAccountRequestBodyUsers[];
+}
+export declare class AddUserToAccount500ApplicationJSONMeta extends SpeakeasyBase {
     requestId: string;
     status: number;
 }
 /**
- * The object was created
-**/
-export declare class AddUserToAccount201ApplicationJson extends SpeakeasyBase {
+ * The message specifies what is done
+ */
+export declare class AddUserToAccount500ApplicationJSON extends SpeakeasyBase {
     message: string;
-    meta: AddUserToAccount201ApplicationJsonMeta;
+    meta: AddUserToAccount500ApplicationJSONMeta;
+}
+export declare class AddUserToAccount429ApplicationJSONMeta extends SpeakeasyBase {
+    requestId: string;
+    status: number;
+}
+/**
+ * The message specifies what is done
+ */
+export declare class AddUserToAccount429ApplicationJSON extends SpeakeasyBase {
+    message: string;
+    meta: AddUserToAccount429ApplicationJSONMeta;
+}
+export declare class AddUserToAccount401ApplicationJSONMeta extends SpeakeasyBase {
+    requestId: string;
+    status: number;
+}
+/**
+ * The message specifies what is done
+ */
+export declare class AddUserToAccount401ApplicationJSON extends SpeakeasyBase {
+    message: string;
+    meta: AddUserToAccount401ApplicationJSONMeta;
 }
 /**
  * All query-, header- and path- parameters that seemed incorrect
-**/
-export declare class AddUserToAccount400ApplicationJsonErrorsParameters extends SpeakeasyBase {
+ */
+export declare class AddUserToAccount400ApplicationJSONErrorsParameters extends SpeakeasyBase {
     header?: Record<string, string>;
     path?: Record<string, string>;
     query?: Record<string, string>;
 }
 /**
  * Map that sums up all received values that seemed incorrect
-**/
-export declare class AddUserToAccount400ApplicationJsonErrors extends SpeakeasyBase {
+ */
+export declare class AddUserToAccount400ApplicationJSONErrors extends SpeakeasyBase {
+    /**
+     * All input fields that seemed incorrect
+     */
     fields?: Record<string, string>;
-    parameters?: AddUserToAccount400ApplicationJsonErrorsParameters;
+    /**
+     * All query-, header- and path- parameters that seemed incorrect
+     */
+    parameters?: AddUserToAccount400ApplicationJSONErrorsParameters;
 }
-export declare class AddUserToAccount400ApplicationJsonMeta extends SpeakeasyBase {
+export declare class AddUserToAccount400ApplicationJSONMeta extends SpeakeasyBase {
     requestId: string;
     status: number;
 }
 /**
- * Specify the fields and/ or parameters that had errors
-**/
-export declare class AddUserToAccount400ApplicationJson extends SpeakeasyBase {
-    errors: AddUserToAccount400ApplicationJsonErrors;
+ * The message specifies what is done
+ */
+export declare class AddUserToAccount400ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Map that sums up all received values that seemed incorrect
+     */
+    errors: AddUserToAccount400ApplicationJSONErrors;
     message: string;
-    meta: AddUserToAccount400ApplicationJsonMeta;
+    meta: AddUserToAccount400ApplicationJSONMeta;
 }
-export declare class AddUserToAccount401ApplicationJsonMeta extends SpeakeasyBase {
+export declare class AddUserToAccount201ApplicationJSONMeta extends SpeakeasyBase {
     requestId: string;
     status: number;
 }
 /**
- * The error message should specify what cause the error
-**/
-export declare class AddUserToAccount401ApplicationJson extends SpeakeasyBase {
+ * The message specifies what is done
+ */
+export declare class AddUserToAccount201ApplicationJSON extends SpeakeasyBase {
     message: string;
-    meta: AddUserToAccount401ApplicationJsonMeta;
-}
-export declare class AddUserToAccount429ApplicationJsonMeta extends SpeakeasyBase {
-    requestId: string;
-    status: number;
-}
-/**
- * The error message should specify what cause the error
-**/
-export declare class AddUserToAccount429ApplicationJson extends SpeakeasyBase {
-    message: string;
-    meta: AddUserToAccount429ApplicationJsonMeta;
-}
-export declare class AddUserToAccount500ApplicationJsonMeta extends SpeakeasyBase {
-    requestId: string;
-    status: number;
-}
-/**
- * The error message should specify what cause the error
-**/
-export declare class AddUserToAccount500ApplicationJson extends SpeakeasyBase {
-    message: string;
-    meta: AddUserToAccount500ApplicationJsonMeta;
-}
-export declare class AddUserToAccountRequest extends SpeakeasyBase {
-    pathParams: AddUserToAccountPathParams;
-    request: AddUserToAccountRequestBody;
+    meta: AddUserToAccount201ApplicationJSONMeta;
 }
 export declare class AddUserToAccountResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
-    addUserToAccount201ApplicationJSONObject?: AddUserToAccount201ApplicationJson;
-    addUserToAccount400ApplicationJSONObject?: AddUserToAccount400ApplicationJson;
-    addUserToAccount401ApplicationJSONObject?: AddUserToAccount401ApplicationJson;
-    addUserToAccount429ApplicationJSONObject?: AddUserToAccount429ApplicationJson;
-    addUserToAccount500ApplicationJSONObject?: AddUserToAccount500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Object was created
+     */
+    addUserToAccount201ApplicationJSONObject?: AddUserToAccount201ApplicationJSON;
+    /**
+     * Bad request, some fields or parameters are incorrect
+     */
+    addUserToAccount400ApplicationJSONObject?: AddUserToAccount400ApplicationJSON;
+    /**
+     * No API Key was provided or the key is not authorised to perform the action
+     */
+    addUserToAccount401ApplicationJSONObject?: AddUserToAccount401ApplicationJSON;
+    /**
+     * Too many API requests were send
+     */
+    addUserToAccount429ApplicationJSONObject?: AddUserToAccount429ApplicationJSON;
+    /**
+     * An unexpected error occurred
+     */
+    addUserToAccount500ApplicationJSONObject?: AddUserToAccount500ApplicationJSON;
 }

@@ -1,21 +1,33 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * The IAM instance profile.
-**/
+ */
 export declare class AssociateIamInstanceProfileResultIamInstanceProfileAssociationIamInstanceProfile extends SpeakeasyBase {
-    arn?: Record<string, any>;
-    id?: Record<string, any>;
+    arn?: string;
+    id?: string;
+}
+/**
+ * The state of the association.
+ */
+export declare enum AssociateIamInstanceProfileResultIamInstanceProfileAssociationStateEnum {
+    Associating = "associating",
+    Associated = "associated",
+    Disassociating = "disassociating",
+    Disassociated = "disassociated"
 }
 /**
  * Information about the IAM instance profile association.
-**/
+ */
 export declare class AssociateIamInstanceProfileResultIamInstanceProfileAssociation extends SpeakeasyBase {
-    associationId?: Record<string, any>;
+    associationId?: string;
     iamInstanceProfile?: AssociateIamInstanceProfileResultIamInstanceProfileAssociationIamInstanceProfile;
-    instanceId?: Record<string, any>;
-    state?: Record<string, any>;
-    timestamp?: Record<string, any>;
+    instanceId?: string;
+    state?: AssociateIamInstanceProfileResultIamInstanceProfileAssociationStateEnum;
+    timestamp?: Date;
 }
+/**
+ * Success
+ */
 export declare class AssociateIamInstanceProfileResult extends SpeakeasyBase {
     iamInstanceProfileAssociation?: AssociateIamInstanceProfileResultIamInstanceProfileAssociation;
 }

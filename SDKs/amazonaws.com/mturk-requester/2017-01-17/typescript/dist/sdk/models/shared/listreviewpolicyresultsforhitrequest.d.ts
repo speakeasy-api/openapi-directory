@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ReviewPolicyLevelEnum } from "./reviewpolicylevelenum";
-export declare class ListReviewPolicyResultsForHitRequest extends SpeakeasyBase {
+export declare class ListReviewPolicyResultsForHITRequest extends SpeakeasyBase {
     hitId: string;
     maxResults?: number;
     nextToken?: string;

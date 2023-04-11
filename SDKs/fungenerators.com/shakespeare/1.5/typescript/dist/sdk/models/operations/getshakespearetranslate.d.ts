@@ -1,16 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetShakespeareTranslateQueryParams extends SpeakeasyBase {
-    text: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetShakespeareTranslateSecurity extends SpeakeasyBase {
-    xFungeneratorsApiSecret: shared.SchemeXFungeneratorsApiSecret;
+    xFungeneratorsApiSecret: string;
 }
 export declare class GetShakespeareTranslateRequest extends SpeakeasyBase {
-    queryParams: GetShakespeareTranslateQueryParams;
-    security: GetShakespeareTranslateSecurity;
+    /**
+     * Text to translate to Shakespeare English.
+     */
+    text: string;
 }
 export declare class GetShakespeareTranslateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

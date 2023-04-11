@@ -1,10 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * <p>Contains the details for an Amazon Neptune DB cluster snapshot</p> <p>This data type is used as a response element in the <a>DescribeDBClusterSnapshots</a> action.</p>
-**/
-export declare class DbClusterSnapshotList extends SpeakeasyBase {
+ */
+export declare class DBClusterSnapshotList extends SpeakeasyBase {
     allocatedStorage?: number;
-    availabilityZones?: Record<string, any>[];
+    availabilityZones?: string[];
     clusterCreateTime?: Date;
     dbClusterIdentifier?: string;
     dbClusterSnapshotArn?: string;

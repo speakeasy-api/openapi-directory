@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetPauseClusterActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETPauseClusterActionEnum {
     PauseCluster = "PauseCluster"
 }
-export declare enum GetPauseClusterVersionEnum {
+export declare enum GETPauseClusterVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class GetPauseClusterQueryParams extends SpeakeasyBase {
-    action: GetPauseClusterActionEnum;
+export declare class GETPauseClusterRequest extends SpeakeasyBase {
+    action: GETPauseClusterActionEnum;
+    /**
+     * The identifier of the cluster to be paused.
+     */
     clusterIdentifier: string;
-    version: GetPauseClusterVersionEnum;
-}
-export declare class GetPauseClusterHeaders extends SpeakeasyBase {
+    version: GETPauseClusterVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetPauseClusterHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetPauseClusterRequest extends SpeakeasyBase {
-    queryParams: GetPauseClusterQueryParams;
-    headers: GetPauseClusterHeaders;
-}
-export declare class GetPauseClusterResponse extends SpeakeasyBase {
+export declare class GETPauseClusterResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

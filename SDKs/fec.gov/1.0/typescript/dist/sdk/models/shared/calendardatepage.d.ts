@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { OffsetInfo } from "./offsetinfo";
 import { CalendarDate } from "./calendardate";
+import { OffsetInfo } from "./offsetinfo";
 export declare class CalendarDatePage extends SpeakeasyBase {
     pagination?: OffsetInfo;
     results?: CalendarDate[];

@@ -1,13 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { EnvironmentLink } from "./environmentlink";
 import { EnvironmentHealthEnum } from "./environmenthealthenum";
 import { EnvironmentHealthStatusEnum } from "./environmenthealthstatusenum";
+import { EnvironmentLink } from "./environmentlink";
 import { EnvironmentResourcesDescription } from "./environmentresourcesdescription";
 import { EnvironmentStatusEnum } from "./environmentstatusenum";
 import { EnvironmentTier } from "./environmenttier";
 /**
  * Describes the properties of an environment.
-**/
+ */
 export declare class EnvironmentDescription extends SpeakeasyBase {
     abortableOperationInProgress?: boolean;
     applicationName?: string;

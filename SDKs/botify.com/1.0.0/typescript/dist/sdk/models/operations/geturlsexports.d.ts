@@ -1,15 +1,32 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetUrlsExportsPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetUrlsExportsRequest extends SpeakeasyBase {
+    /**
+     * Analysis' identifier
+     */
     analysisSlug: string;
+    /**
+     * Page Number
+     */
+    page?: number;
+    /**
+     * Project's identifier
+     */
     projectSlug: string;
+    /**
+     * Page Size
+     */
+    size?: number;
+    /**
+     * User's identifier
+     */
     username: string;
 }
-export declare class GetUrlsExportsQueryParams extends SpeakeasyBase {
-    page?: number;
-    size?: number;
-}
-export declare class GetUrlsExports200ApplicationJson extends SpeakeasyBase {
+/**
+ * Successful operation
+ */
+export declare class GetUrlsExports200ApplicationJSON extends SpeakeasyBase {
     count?: number;
     next?: string;
     page?: number;
@@ -17,13 +34,16 @@ export declare class GetUrlsExports200ApplicationJson extends SpeakeasyBase {
     results?: shared.CsvExportStatus[];
     size?: number;
 }
-export declare class GetUrlsExportsRequest extends SpeakeasyBase {
-    pathParams: GetUrlsExportsPathParams;
-    queryParams: GetUrlsExportsQueryParams;
-}
 export declare class GetUrlsExportsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * error payload
+     */
     defaultPayload?: shared.DefaultPayload;
     statusCode: number;
-    getUrlsExports200ApplicationJSONObject?: GetUrlsExports200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful operation
+     */
+    getUrlsExports200ApplicationJSONObject?: GetUrlsExports200ApplicationJSON;
 }

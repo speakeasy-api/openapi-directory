@@ -1,0 +1,14 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Represents a set of configurations to determine the background check score
+ */
+export declare class ScoreConfig extends SpeakeasyBase {
+    /**
+     * Background check dataset
+     */
+    dataSet: string;
+    /**
+     * Dataset weight for score calculation
+     */
+    weight: string;
+}

@@ -4,6 +4,9 @@ export declare class MarketplacePurchaseMarketplacePendingChange extends Speakea
     effectiveDate?: string;
     id?: number;
     isInstalled?: boolean;
+    /**
+     * Marketplace Listing Plan
+     */
     plan?: MarketplaceListingPlan;
     unitCount?: number;
 }
@@ -13,14 +16,18 @@ export declare class MarketplacePurchaseMarketplacePurchase extends SpeakeasyBas
     isInstalled?: boolean;
     nextBillingDate?: string;
     onFreeTrial?: boolean;
+    /**
+     * Marketplace Listing Plan
+     */
     plan?: MarketplaceListingPlan;
     unitCount?: number;
     updatedAt?: string;
 }
 /**
  * Marketplace Purchase
-**/
+ */
 export declare class MarketplacePurchase extends SpeakeasyBase {
+    email?: string;
     id: number;
     login: string;
     marketplacePendingChange?: MarketplacePurchaseMarketplacePendingChange;

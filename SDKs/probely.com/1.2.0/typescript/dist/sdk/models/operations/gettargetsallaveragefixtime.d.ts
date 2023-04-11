@@ -1,14 +1,31 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetTargetsAllAverageFixTime200ApplicationJsonResults extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetTargetsAllAverageFixTime200ApplicationJSONResults extends SpeakeasyBase {
+    /**
+     * Average fix time in seconds for high severity findings
+     */
     high?: number;
+    /**
+     * Average fix time in seconds for low severity findings
+     */
     low?: number;
+    /**
+     * Average fix time in seconds for medium severity findings
+     */
     medium?: number;
 }
-export declare class GetTargetsAllAverageFixTime200ApplicationJson extends SpeakeasyBase {
-    results?: GetTargetsAllAverageFixTime200ApplicationJsonResults;
+/**
+ * Average fix time plot data
+ */
+export declare class GetTargetsAllAverageFixTime200ApplicationJSON extends SpeakeasyBase {
+    results?: GetTargetsAllAverageFixTime200ApplicationJSONResults;
 }
 export declare class GetTargetsAllAverageFixTimeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getTargetsAllAverageFixTime200ApplicationJSONObject?: GetTargetsAllAverageFixTime200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Average fix time plot data
+     */
+    getTargetsAllAverageFixTime200ApplicationJSONObject?: GetTargetsAllAverageFixTime200ApplicationJSON;
 }

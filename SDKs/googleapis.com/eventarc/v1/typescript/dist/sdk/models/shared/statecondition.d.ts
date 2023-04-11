@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The canonical code of the condition.
+ */
 export declare enum StateConditionCodeEnum {
     Ok = "OK",
     Cancelled = "CANCELLED",
@@ -18,7 +21,16 @@ export declare enum StateConditionCodeEnum {
     Unavailable = "UNAVAILABLE",
     DataLoss = "DATA_LOSS"
 }
+/**
+ * A condition that is part of the trigger state computation.
+ */
 export declare class StateCondition extends SpeakeasyBase {
+    /**
+     * The canonical code of the condition.
+     */
     code?: StateConditionCodeEnum;
+    /**
+     * Human-readable message.
+     */
     message?: string;
 }

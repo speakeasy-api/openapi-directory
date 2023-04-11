@@ -6,66 +6,69 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/amazonaws.com/swf/2012-01-25/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/amazonaws.com/swf/2012-01-25/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CountClosedWorkflowExecutionsRequest, CountClosedWorkflowExecutionsResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CountClosedWorkflowExecutionsRequest,
+  CountClosedWorkflowExecutionsResponse,
+  CountClosedWorkflowExecutionsXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
+import {
+  CloseStatusEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: CountClosedWorkflowExecutionsRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "SimpleWorkflowService.CountClosedWorkflowExecutions",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
+});
+
+const req: CountClosedWorkflowExecutionsRequest = {
+  countClosedWorkflowExecutionsInput: {
     closeStatusFilter: {
-      status: "COMPLETED",
+      status: CloseStatusEnum.Terminated,
     },
     closeTimeFilter: {
-      latestDate: "2011-08-12T10:11:12Z",
-      oldestDate: "2003-05-13T04:57:12Z",
+      latestDate: "2021-07-27T21:52:56.087Z",
+      oldestDate: "2021-03-11T23:22:42.658Z",
     },
-    domain: "rerum",
+    domain: "nulla",
     executionFilter: {
-      workflowId: "dicta",
+      workflowId: "corrupti",
     },
     startTimeFilter: {
-      latestDate: "2004-06-02T10:14:12Z",
-      oldestDate: "1981-07-21T06:30:48Z",
+      latestDate: "2021-09-24T02:21:06.409Z",
+      oldestDate: "2021-09-16T11:56:06.019Z",
     },
     tagFilter: {
-      tag: "et",
+      tag: "suscipit",
     },
     typeFilter: {
-      name: "ut",
-      version: "dolorem",
+      name: "iure",
+      version: "magnam",
     },
   },
+  xAmzAlgorithm: "debitis",
+  xAmzContentSha256: "ipsa",
+  xAmzCredential: "delectus",
+  xAmzDate: "tempora",
+  xAmzSecurityToken: "suscipit",
+  xAmzSignature: "molestiae",
+  xAmzSignedHeaders: "minus",
+  xAmzTarget: CountClosedWorkflowExecutionsXAmzTargetEnum.SimpleWorkflowServiceCountClosedWorkflowExecutions,
 };
 
 sdk.countClosedWorkflowExecutions(req).then((res: CountClosedWorkflowExecutionsResponse | AxiosError) => {
@@ -75,7 +78,7 @@ sdk.countClosedWorkflowExecutions(req).then((res: CountClosedWorkflowExecutionsR
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
@@ -116,7 +119,18 @@ sdk.countClosedWorkflowExecutions(req).then((res: CountClosedWorkflowExecutionsR
 * `undeprecateDomain` - <p>Undeprecates a previously deprecated domain. After a domain has been undeprecated it can be used to create new workflow executions or register new types.</p> <note> <p>This operation is eventually consistent. The results are best effort and may not exactly reflect recent updates and changes.</p> </note> <p> <b>Access Control</b> </p> <p>You can use IAM policies to control this action's access to Amazon SWF resources as follows:</p> <ul> <li> <p>Use a <code>Resource</code> element with the domain name to limit the action to only specified domains.</p> </li> <li> <p>Use an <code>Action</code> element to allow or deny permission to call this action.</p> </li> <li> <p>You cannot use an IAM policy to constrain this action's parameters.</p> </li> </ul> <p>If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the specified constraints, the action fails. The associated event attribute's <code>cause</code> parameter is set to <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon SWF Workflows</a> in the <i>Amazon SWF Developer Guide</i>.</p>
 * `undeprecateWorkflowType` - <p>Undeprecates a previously deprecated <i>workflow type</i>. After a workflow type has been undeprecated, you can create new executions of that type. </p> <note> <p>This operation is eventually consistent. The results are best effort and may not exactly reflect recent updates and changes.</p> </note> <p> <b>Access Control</b> </p> <p>You can use IAM policies to control this action's access to Amazon SWF resources as follows:</p> <ul> <li> <p>Use a <code>Resource</code> element with the domain name to limit the action to only specified domains.</p> </li> <li> <p>Use an <code>Action</code> element to allow or deny permission to call this action.</p> </li> <li> <p>Constrain the following parameters by using a <code>Condition</code> element with the appropriate keys.</p> <ul> <li> <p> <code>workflowType.name</code>: String constraint. The key is <code>swf:workflowType.name</code>.</p> </li> <li> <p> <code>workflowType.version</code>: String constraint. The key is <code>swf:workflowType.version</code>.</p> </li> </ul> </li> </ul> <p>If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the specified constraints, the action fails. The associated event attribute's <code>cause</code> parameter is set to <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon SWF Workflows</a> in the <i>Amazon SWF Developer Guide</i>.</p>
 * `untagResource` - Remove a tag from a Amazon SWF domain.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

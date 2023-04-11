@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteServiceQuotaIncreaseRequestFromTemplateXAmzTargetEnum {
     ServiceQuotasV20190624DeleteServiceQuotaIncreaseRequestFromTemplate = "ServiceQuotasV20190624.DeleteServiceQuotaIncreaseRequestFromTemplate"
 }
-export declare class DeleteServiceQuotaIncreaseRequestFromTemplateHeaders extends SpeakeasyBase {
+export declare class DeleteServiceQuotaIncreaseRequestFromTemplateRequest extends SpeakeasyBase {
+    deleteServiceQuotaIncreaseRequestFromTemplateRequest: shared.DeleteServiceQuotaIncreaseRequestFromTemplateRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,21 +15,48 @@ export declare class DeleteServiceQuotaIncreaseRequestFromTemplateHeaders extend
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteServiceQuotaIncreaseRequestFromTemplateXAmzTargetEnum;
 }
-export declare class DeleteServiceQuotaIncreaseRequestFromTemplateRequest extends SpeakeasyBase {
-    headers: DeleteServiceQuotaIncreaseRequestFromTemplateHeaders;
-    request: shared.DeleteServiceQuotaIncreaseRequestFromTemplateRequest;
-}
 export declare class DeleteServiceQuotaIncreaseRequestFromTemplateResponse extends SpeakeasyBase {
+    /**
+     * AWSServiceAccessNotEnabledException
+     */
     awsServiceAccessNotEnabledException?: any;
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteServiceQuotaIncreaseRequestFromTemplateResponse?: Record<string, any>;
+    /**
+     * DependencyAccessDeniedException
+     */
     dependencyAccessDeniedException?: any;
+    /**
+     * IllegalArgumentException
+     */
     illegalArgumentException?: any;
+    /**
+     * NoAvailableOrganizationException
+     */
     noAvailableOrganizationException?: any;
+    /**
+     * NoSuchResourceException
+     */
     noSuchResourceException?: any;
-    serviceException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceException
+     */
+    serviceException?: any;
+    /**
+     * TemplatesNotAvailableInRegionException
+     */
     templatesNotAvailableInRegionException?: any;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

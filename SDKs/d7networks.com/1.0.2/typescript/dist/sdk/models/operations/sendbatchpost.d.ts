@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class SendbatchPostHeaders extends SpeakeasyBase {
-    accept: string;
-    contentType: string;
-}
+import { AxiosResponse } from "axios";
 export declare class SendbatchPostRequest extends SpeakeasyBase {
-    headers: SendbatchPostHeaders;
-    request: shared.BulkSmsRequest;
+    accept: string;
+    /**
+     * Message Body
+     */
+    bulkSMSRequest: shared.BulkSMSRequest;
+    contentType: string;
 }
 export declare class SendbatchPostResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

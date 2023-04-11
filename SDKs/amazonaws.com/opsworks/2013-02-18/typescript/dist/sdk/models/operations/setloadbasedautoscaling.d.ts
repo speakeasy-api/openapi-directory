@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum SetLoadBasedAutoScalingXAmzTargetEnum {
     OpsWorks20130218SetLoadBasedAutoScaling = "OpsWorks_20130218.SetLoadBasedAutoScaling"
 }
-export declare class SetLoadBasedAutoScalingHeaders extends SpeakeasyBase {
+export declare class SetLoadBasedAutoScalingRequest extends SpeakeasyBase {
+    setLoadBasedAutoScalingRequest: shared.SetLoadBasedAutoScalingRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,13 +15,16 @@ export declare class SetLoadBasedAutoScalingHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: SetLoadBasedAutoScalingXAmzTargetEnum;
 }
-export declare class SetLoadBasedAutoScalingRequest extends SpeakeasyBase {
-    headers: SetLoadBasedAutoScalingHeaders;
-    request: shared.SetLoadBasedAutoScalingRequest;
-}
 export declare class SetLoadBasedAutoScalingResponse extends SpeakeasyBase {
     contentType: string;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

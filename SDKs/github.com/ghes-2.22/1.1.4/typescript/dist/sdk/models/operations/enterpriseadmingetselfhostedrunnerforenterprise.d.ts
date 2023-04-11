@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class EnterpriseAdminGetSelfHostedRunnerForEnterprisePathParams extends SpeakeasyBase {
-    enterprise: string;
-    runnerId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class EnterpriseAdminGetSelfHostedRunnerForEnterpriseRequest extends SpeakeasyBase {
-    pathParams: EnterpriseAdminGetSelfHostedRunnerForEnterprisePathParams;
+    /**
+     * The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+     */
+    enterprise: string;
+    /**
+     * Unique identifier of the self-hosted runner.
+     */
+    runnerId: number;
 }
 export declare class EnterpriseAdminGetSelfHostedRunnerForEnterpriseResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     runnerNoLabels?: shared.RunnerNoLabels;
 }

@@ -24,6 +24,9 @@ export declare class AuthorizationWithUserUser extends SpeakeasyBase {
     type?: string;
     url?: string;
 }
+/**
+ * Response
+ */
 export declare class AuthorizationWithUser extends SpeakeasyBase {
     app?: AuthorizationWithUserApp;
     createdAt?: string;

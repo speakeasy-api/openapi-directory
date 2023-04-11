@@ -1,6 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class BatchWriteHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class BatchWriteRequestBody extends SpeakeasyBase {
+    /**
+     * A list of operations that are part of the batch.
+     */
+    operations: shared.BatchWriteOperation[];
+}
+export declare class BatchWriteRequest extends SpeakeasyBase {
+    requestBody: BatchWriteRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -8,25 +16,49 @@ export declare class BatchWriteHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
+    /**
+     * The Amazon Resource Name (ARN) that is associated with the <a>Directory</a>. For more information, see <a>arns</a>.
+     */
     xAmzDataPartition: string;
 }
-export declare class BatchWriteRequestBody extends SpeakeasyBase {
-    operations: shared.BatchWriteOperation[];
-}
-export declare class BatchWriteRequest extends SpeakeasyBase {
-    headers: BatchWriteHeaders;
-    request: BatchWriteRequestBody;
-}
 export declare class BatchWriteResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * BatchWriteException
+     */
     batchWriteException?: any;
+    /**
+     * Success
+     */
     batchWriteResponse?: shared.BatchWriteResponse;
     contentType: string;
+    /**
+     * DirectoryNotEnabledException
+     */
     directoryNotEnabledException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidArnException
+     */
     invalidArnException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
-    retryableConflictException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * RetryableConflictException
+     */
+    retryableConflictException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

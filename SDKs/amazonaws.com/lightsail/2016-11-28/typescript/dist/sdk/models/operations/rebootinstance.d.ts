@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum RebootInstanceXAmzTargetEnum {
     Lightsail20161128RebootInstance = "Lightsail_20161128.RebootInstance"
 }
-export declare class RebootInstanceHeaders extends SpeakeasyBase {
+export declare class RebootInstanceRequest extends SpeakeasyBase {
+    rebootInstanceRequest: shared.RebootInstanceRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,19 +15,40 @@ export declare class RebootInstanceHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: RebootInstanceXAmzTargetEnum;
 }
-export declare class RebootInstanceRequest extends SpeakeasyBase {
-    headers: RebootInstanceHeaders;
-    request: shared.RebootInstanceRequest;
-}
 export declare class RebootInstanceResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * AccountSetupInProgressException
+     */
     accountSetupInProgressException?: any;
     contentType: string;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
+    /**
+     * OperationFailureException
+     */
     operationFailureException?: any;
+    /**
+     * Success
+     */
     rebootInstanceResult?: shared.RebootInstanceResult;
+    /**
+     * ServiceException
+     */
     serviceException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnauthenticatedException
+     */
     unauthenticatedException?: any;
 }

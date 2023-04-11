@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Type of platform.
+ */
 export declare enum PlatformPlatformTypeEnum {
     PlatformTypeUnspecified = "PLATFORM_TYPE_UNSPECIFIED",
     Win = "WIN",
@@ -18,8 +21,14 @@ export declare enum PlatformPlatformTypeEnum {
 }
 /**
  * Each Platform is owned by a Product and owns a collection of channels. Available platforms are listed in Platform enum below. Not all Channels are available for every Platform (e.g. CANARY does not exist for LINUX).
-**/
+ */
 export declare class Platform extends SpeakeasyBase {
+    /**
+     * Platform name. Format is "{product}/platforms/{platform}"
+     */
     name?: string;
+    /**
+     * Type of platform.
+     */
     platformType?: PlatformPlatformTypeEnum;
 }

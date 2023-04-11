@@ -1,15 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class ListRecommendedRulesSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
-}
-export declare class ListRecommendedRulesRequest extends SpeakeasyBase {
-    request?: shared.RecommendedRulesRequest;
-    security: ListRecommendedRulesSecurity;
+    apiKeyAuth: string;
 }
 export declare class ListRecommendedRulesResponse extends SpeakeasyBase {
+    /**
+     * Bad Request
+     */
     apiError?: shared.ApiError;
     contentType: string;
+    /**
+     * Success
+     */
     recommendedRules?: shared.RecommendedRules;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

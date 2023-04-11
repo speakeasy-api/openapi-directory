@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class GetPasswordDataResult extends SpeakeasyBase {
-    instanceId?: Record<string, any>;
-    passwordData?: Record<string, any>;
-    timestamp?: Record<string, any>;
+    instanceId?: string;
+    passwordData?: string;
+    timestamp?: Date;
 }

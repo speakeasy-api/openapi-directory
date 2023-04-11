@@ -1,16 +1,16 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DeleteCompanyAttendancesIdRequest, DeleteCompanyAttendancesIdResponse } from "openapi/src/sdk/models/operations";
+import {
+  DeleteCompanyAttendancesIdRequest,
+  DeleteCompanyAttendancesIdResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: DeleteCompanyAttendancesIdRequest = {
-  pathParams: {
-    id: 8717895732742165505,
-  },
+  id: 548814,
 };
 
 sdk.deleteCompanyAttendancesId(req).then((res: DeleteCompanyAttendancesIdResponse | AxiosError) => {

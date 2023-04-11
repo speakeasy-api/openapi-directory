@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Stats on Near Earth Object data sets
+ */
 export declare class Stats {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,10 @@ export declare class Stats {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * retrieveCurrentNeoStatistics - Get the Near Earth Object data set totals
+     * Get the Near Earth Object data set totals
      *
+     * @remarks
      * retrieveCurrentNeoStatistics
-    **/
+     */
     retrieveCurrentNeoStatistics(config?: AxiosRequestConfig): Promise<operations.RetrieveCurrentNeoStatisticsResponse>;
 }

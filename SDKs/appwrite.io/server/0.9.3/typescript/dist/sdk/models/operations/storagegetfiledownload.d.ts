@@ -1,18 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class StorageGetFileDownloadPathParams extends SpeakeasyBase {
-    fileId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class StorageGetFileDownloadSecurity extends SpeakeasyBase {
-    jwt: shared.SchemeJwt;
-    key: shared.SchemeKey;
-    project: shared.SchemeProject;
+    jwt: string;
+    key: string;
+    project: string;
 }
 export declare class StorageGetFileDownloadRequest extends SpeakeasyBase {
-    pathParams: StorageGetFileDownloadPathParams;
-    security: StorageGetFileDownloadSecurity;
+    /**
+     * File unique ID.
+     */
+    fileId: string;
 }
 export declare class StorageGetFileDownloadResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

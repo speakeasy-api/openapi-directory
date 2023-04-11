@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { NodeGroupConfiguration } from "./nodegroupconfiguration";
 /**
  * Represents an individual cache node in a snapshot of a cluster.
-**/
+ */
 export declare class NodeSnapshotList extends SpeakeasyBase {
     cacheClusterId?: string;
     cacheNodeCreateTime?: Date;

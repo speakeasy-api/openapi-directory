@@ -2,9 +2,18 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { Crop } from "./crop";
 /**
  * The ImageAsset is used to create video from images to compose an image. The src must be a publicly accessible URL to an image resource such as a jpg or png file.
-**/
+ */
 export declare class ImageAsset extends SpeakeasyBase {
+    /**
+     * Crop the sides of an asset by a relative amount. The size of the crop is specified using a scale between 0 and 1, relative to the screen width - i.e a left crop of 0.5 will crop half of the asset from the left, a top crop  of 0.25 will crop the top by quarter of the asset.
+     */
     crop?: Crop;
+    /**
+     * The image source URL. The URL must be publicly accessible or include credentials.
+     */
     src: string;
+    /**
+     * The type of asset - set to `image` for images.
+     */
     type: string;
 }

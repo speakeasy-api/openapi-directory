@@ -1,117 +1,116 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateConnectorRequest, CreateConnectorResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CreateConnectorRequest,
+  CreateConnectorResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  KafkaClusterEncryptionInTransitTypeEnum,
+  KafkaClusterClientAuthenticationTypeEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: CreateConnectorRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
+});
+
+const req: CreateConnectorRequest = {
+  requestBody: {
     capacity: {
       autoScaling: {
-        maxWorkerCount: 6044372234677422456,
-        mcuCount: 8274930044578894929,
-        minWorkerCount: 1543572285742637646,
+        maxWorkerCount: 548814,
+        mcuCount: 592845,
+        minWorkerCount: 715190,
         scaleInPolicy: {
-          cpuUtilizationPercentage: 2661732831099943416,
+          cpuUtilizationPercentage: 844266,
         },
         scaleOutPolicy: {
-          cpuUtilizationPercentage: 8325060299420976708,
+          cpuUtilizationPercentage: 602763,
         },
       },
       provisionedCapacity: {
-        mcuCount: 7837839688282259259,
-        workerCount: 2518412263346885298,
+        mcuCount: 857946,
+        workerCount: 544883,
       },
     },
     connectorConfiguration: {
-      "et": "ut",
+      "vel": "error",
+      "deserunt": "suscipit",
+      "iure": "magnam",
+      "debitis": "ipsa",
     },
-    connectorDescription: "dolorem",
-    connectorName: "et",
+    connectorDescription: "delectus",
+    connectorName: "tempora",
     kafkaCluster: {
       apacheKafkaCluster: {
-        bootstrapServers: "voluptate",
+        bootstrapServers: "suscipit",
         vpc: {
           securityGroups: [
-            "vitae",
-            "totam",
-            "dolores",
+            "minus",
+            "placeat",
           ],
           subnets: [
-            "debitis",
-            "vel",
-            "odio",
+            "iusto",
+            "excepturi",
+            "nisi",
           ],
         },
       },
     },
     kafkaClusterClientAuthentication: {
-      authenticationType: "IAM",
+      authenticationType: KafkaClusterClientAuthenticationTypeEnum.Iam,
     },
     kafkaClusterEncryptionInTransit: {
-      encryptionType: "PLAINTEXT",
+      encryptionType: KafkaClusterEncryptionInTransitTypeEnum.Tls,
     },
-    kafkaConnectVersion: "aspernatur",
+    kafkaConnectVersion: "ab",
     logDelivery: {
       workerLogDelivery: {
         cloudWatchLogs: {
-          enabled: true,
-          logGroup: "totam",
+          enabled: false,
+          logGroup: "quis",
         },
         firehose: {
-          deliveryStream: "commodi",
-          enabled: true,
+          deliveryStream: "veritatis",
+          enabled: false,
         },
         s3: {
-          bucket: "est",
-          enabled: true,
-          prefix: "odit",
+          bucket: "deserunt",
+          enabled: false,
+          prefix: "perferendis",
         },
       },
     },
     plugins: [
       {
         customPlugin: {
-          customPluginArn: "voluptas",
-          revision: 4778690082005258714,
+          customPluginArn: "repellendus",
+          revision: 957156,
         },
       },
       {
         customPlugin: {
-          customPluginArn: "aut",
-          revision: 6972732843819909978,
-        },
-      },
-      {
-        customPlugin: {
-          customPluginArn: "sed",
-          revision: 7845762441295307478,
+          customPluginArn: "quo",
+          revision: 140350,
         },
       },
     ],
-    serviceExecutionRoleArn: "autem",
+    serviceExecutionRoleArn: "at",
     workerConfiguration: {
-      revision: 8514850266767180993,
-      workerConfigurationArn: "nobis",
+      revision: 870088,
+      workerConfigurationArn: "maiores",
     },
   },
+  xAmzAlgorithm: "molestiae",
+  xAmzContentSha256: "quod",
+  xAmzCredential: "quod",
+  xAmzDate: "esse",
+  xAmzSecurityToken: "totam",
+  xAmzSignature: "porro",
+  xAmzSignedHeaders: "dolorum",
 };
 
 sdk.createConnector(req).then((res: CreateConnectorResponse | AxiosError) => {

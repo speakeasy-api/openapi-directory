@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostListReceiptFiltersActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTListReceiptFiltersActionEnum {
     ListReceiptFilters = "ListReceiptFilters"
 }
-export declare enum PostListReceiptFiltersVersionEnum {
+export declare enum POSTListReceiptFiltersVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostListReceiptFiltersQueryParams extends SpeakeasyBase {
-    action: PostListReceiptFiltersActionEnum;
-    version: PostListReceiptFiltersVersionEnum;
-}
-export declare class PostListReceiptFiltersHeaders extends SpeakeasyBase {
+export declare class POSTListReceiptFiltersRequest extends SpeakeasyBase {
+    action: POSTListReceiptFiltersActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTListReceiptFiltersVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostListReceiptFiltersHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostListReceiptFiltersRequest extends SpeakeasyBase {
-    queryParams: PostListReceiptFiltersQueryParams;
-    headers: PostListReceiptFiltersHeaders;
-    request?: Uint8Array;
-}
-export declare class PostListReceiptFiltersResponse extends SpeakeasyBase {
+export declare class POSTListReceiptFiltersResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

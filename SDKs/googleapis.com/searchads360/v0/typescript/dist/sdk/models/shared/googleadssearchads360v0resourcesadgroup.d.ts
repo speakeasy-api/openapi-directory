@@ -1,0 +1,77 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The ad rotation mode of the ad group.
+ */
+export declare enum GoogleAdsSearchads360V0ResourcesAdGroupAdRotationModeEnum {
+    Unspecified = "UNSPECIFIED",
+    Unknown = "UNKNOWN",
+    Optimize = "OPTIMIZE",
+    RotateForever = "ROTATE_FOREVER"
+}
+/**
+ * The status of the ad group.
+ */
+export declare enum GoogleAdsSearchads360V0ResourcesAdGroupStatusEnum {
+    Unspecified = "UNSPECIFIED",
+    Unknown = "UNKNOWN",
+    Enabled = "ENABLED",
+    Paused = "PAUSED",
+    Removed = "REMOVED"
+}
+/**
+ * Immutable. The type of the ad group.
+ */
+export declare enum GoogleAdsSearchads360V0ResourcesAdGroupTypeEnum {
+    Unspecified = "UNSPECIFIED",
+    Unknown = "UNKNOWN",
+    SearchStandard = "SEARCH_STANDARD",
+    DisplayStandard = "DISPLAY_STANDARD",
+    ShoppingProductAds = "SHOPPING_PRODUCT_ADS",
+    ShoppingShowcaseAds = "SHOPPING_SHOWCASE_ADS",
+    HotelAds = "HOTEL_ADS",
+    ShoppingSmartAds = "SHOPPING_SMART_ADS",
+    VideoBumper = "VIDEO_BUMPER",
+    VideoTrueViewInStream = "VIDEO_TRUE_VIEW_IN_STREAM",
+    VideoTrueViewInDisplay = "VIDEO_TRUE_VIEW_IN_DISPLAY",
+    VideoNonSkippableInStream = "VIDEO_NON_SKIPPABLE_IN_STREAM",
+    VideoOutstream = "VIDEO_OUTSTREAM",
+    SearchDynamicAds = "SEARCH_DYNAMIC_ADS",
+    ShoppingComparisonListingAds = "SHOPPING_COMPARISON_LISTING_ADS",
+    PromotedHotelAds = "PROMOTED_HOTEL_ADS",
+    VideoResponsive = "VIDEO_RESPONSIVE",
+    VideoEfficientReach = "VIDEO_EFFICIENT_REACH",
+    SmartCampaignAds = "SMART_CAMPAIGN_ADS"
+}
+/**
+ * An ad group.
+ */
+export declare class GoogleAdsSearchads360V0ResourcesAdGroup extends SpeakeasyBase {
+    /**
+     * The ad rotation mode of the ad group.
+     */
+    adRotationMode?: GoogleAdsSearchads360V0ResourcesAdGroupAdRotationModeEnum;
+    /**
+     * The maximum CPC (cost-per-click) bid.
+     */
+    cpcBidMicros?: string;
+    /**
+     * Output only. The ID of the ad group.
+     */
+    id?: string;
+    /**
+     * The name of the ad group. This field is required and should not be empty when creating new ad groups. It must contain fewer than 255 UTF-8 full-width characters. It must not contain any null (code point 0x0), NL line feed (code point 0xA) or carriage return (code point 0xD) characters.
+     */
+    name?: string;
+    /**
+     * Immutable. The resource name of the ad group. Ad group resource names have the form: `customers/{customer_id}/adGroups/{ad_group_id}`
+     */
+    resourceName?: string;
+    /**
+     * The status of the ad group.
+     */
+    status?: GoogleAdsSearchads360V0ResourcesAdGroupStatusEnum;
+    /**
+     * Immutable. The type of the ad group.
+     */
+    type?: GoogleAdsSearchads360V0ResourcesAdGroupTypeEnum;
+}

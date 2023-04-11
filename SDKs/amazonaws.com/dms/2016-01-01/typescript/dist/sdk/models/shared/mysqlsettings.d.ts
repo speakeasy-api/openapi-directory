@@ -2,8 +2,8 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { TargetDbTypeEnum } from "./targetdbtypeenum";
 /**
  * Provides information that defines a MySQL endpoint.
-**/
-export declare class MySqlSettings extends SpeakeasyBase {
+ */
+export declare class MySQLSettings extends SpeakeasyBase {
     afterConnectScript?: string;
     cleanSourceMetadataOnMismatch?: boolean;
     databaseName?: string;

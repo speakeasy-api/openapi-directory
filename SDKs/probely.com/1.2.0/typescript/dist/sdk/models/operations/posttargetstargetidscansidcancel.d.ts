@@ -1,26 +1,58 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PostTargetsTargetIdScansIdCancelPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class PostTargetsTargetIdScansIdCancelRequest extends SpeakeasyBase {
+    /**
+     * Object Id
+     */
     id: string;
+    /**
+     * Target id
+     */
     targetId: string;
 }
-export declare class PostTargetsTargetIdScansIdCancel401ApplicationJson extends SpeakeasyBase {
+/**
+ * Not found
+ */
+export declare class PostTargetsTargetIdScansIdCancel404ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Not found.
+     */
     detail?: string;
 }
-export declare class PostTargetsTargetIdScansIdCancel403ApplicationJson extends SpeakeasyBase {
+/**
+ * Not allowed to perform operation
+ */
+export declare class PostTargetsTargetIdScansIdCancel403ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error message.
+     */
     detail?: string;
 }
-export declare class PostTargetsTargetIdScansIdCancel404ApplicationJson extends SpeakeasyBase {
+/**
+ * Access token is missing or invalid
+ */
+export declare class PostTargetsTargetIdScansIdCancel401ApplicationJSON extends SpeakeasyBase {
     detail?: string;
-}
-export declare class PostTargetsTargetIdScansIdCancelRequest extends SpeakeasyBase {
-    pathParams: PostTargetsTargetIdScansIdCancelPathParams;
 }
 export declare class PostTargetsTargetIdScansIdCancelResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Scan object
+     */
     scan?: shared.Scan;
     statusCode: number;
-    postTargetsTargetIdScansIdCancel401ApplicationJSONObject?: PostTargetsTargetIdScansIdCancel401ApplicationJson;
-    postTargetsTargetIdScansIdCancel403ApplicationJSONObject?: PostTargetsTargetIdScansIdCancel403ApplicationJson;
-    postTargetsTargetIdScansIdCancel404ApplicationJSONObject?: PostTargetsTargetIdScansIdCancel404ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Access token is missing or invalid
+     */
+    postTargetsTargetIdScansIdCancel401ApplicationJSONObject?: PostTargetsTargetIdScansIdCancel401ApplicationJSON;
+    /**
+     * Not allowed to perform operation
+     */
+    postTargetsTargetIdScansIdCancel403ApplicationJSONObject?: PostTargetsTargetIdScansIdCancel403ApplicationJSON;
+    /**
+     * Not found
+     */
+    postTargetsTargetIdScansIdCancel404ApplicationJSONObject?: PostTargetsTargetIdScansIdCancel404ApplicationJSON;
 }

@@ -1,21 +1,20 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetActionOrganizationActivityListRequest, GetActionOrganizationActivityListResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GetActionOrganizationActivityListRequest,
+  GetActionOrganizationActivityListResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    githubAccessCode: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  }
-));
-    
-const req: GetActionOrganizationActivityListRequest = {
-  queryParams: {
-    id: "sit",
+    githubAccessCode: "Bearer YOUR_ACCESS_TOKEN_HERE",
   },
+});
+
+const req: GetActionOrganizationActivityListRequest = {
+  id: "corrupti",
 };
 
 sdk.action.getActionOrganizationActivityList(req).then((res: GetActionOrganizationActivityListResponse | AxiosError) => {

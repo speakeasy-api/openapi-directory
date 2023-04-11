@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostTestRenderTemplateActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTTestRenderTemplateActionEnum {
     TestRenderTemplate = "TestRenderTemplate"
 }
-export declare enum PostTestRenderTemplateVersionEnum {
+export declare enum POSTTestRenderTemplateVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostTestRenderTemplateQueryParams extends SpeakeasyBase {
-    action: PostTestRenderTemplateActionEnum;
-    version: PostTestRenderTemplateVersionEnum;
-}
-export declare class PostTestRenderTemplateHeaders extends SpeakeasyBase {
+export declare class POSTTestRenderTemplateRequest extends SpeakeasyBase {
+    action: POSTTestRenderTemplateActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTTestRenderTemplateVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostTestRenderTemplateHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostTestRenderTemplateRequest extends SpeakeasyBase {
-    queryParams: PostTestRenderTemplateQueryParams;
-    headers: PostTestRenderTemplateHeaders;
-    request?: Uint8Array;
-}
-export declare class PostTestRenderTemplateResponse extends SpeakeasyBase {
+export declare class POSTTestRenderTemplateResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

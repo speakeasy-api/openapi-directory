@@ -1,14 +1,43 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListAttachedIndicesQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
+import { AxiosResponse } from "axios";
+/**
+ * The reference that identifies an object.
+ */
+export declare class ListAttachedIndicesRequestBodyTargetReference extends SpeakeasyBase {
+    selector?: string;
 }
+export declare class ListAttachedIndicesRequestBody extends SpeakeasyBase {
+    /**
+     * The maximum number of results to retrieve.
+     */
+    maxResults?: number;
+    /**
+     * The pagination token.
+     */
+    nextToken?: string;
+    /**
+     * The reference that identifies an object.
+     */
+    targetReference: ListAttachedIndicesRequestBodyTargetReference;
+}
+/**
+ * The consistency level to use for this operation.
+ */
 export declare enum ListAttachedIndicesXAmzConsistencyLevelEnum {
     Serializable = "SERIALIZABLE",
     Eventual = "EVENTUAL"
 }
-export declare class ListAttachedIndicesHeaders extends SpeakeasyBase {
+export declare class ListAttachedIndicesRequest extends SpeakeasyBase {
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
+    requestBody: ListAttachedIndicesRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,35 +45,53 @@ export declare class ListAttachedIndicesHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
+    /**
+     * The consistency level to use for this operation.
+     */
     xAmzConsistencyLevel?: ListAttachedIndicesXAmzConsistencyLevelEnum;
+    /**
+     * The ARN of the directory.
+     */
     xAmzDataPartition: string;
 }
-/**
- * The reference that identifies an object.
-**/
-export declare class ListAttachedIndicesRequestBodyTargetReference extends SpeakeasyBase {
-    selector?: string;
-}
-export declare class ListAttachedIndicesRequestBody extends SpeakeasyBase {
-    maxResults?: number;
-    nextToken?: string;
-    targetReference: ListAttachedIndicesRequestBodyTargetReference;
-}
-export declare class ListAttachedIndicesRequest extends SpeakeasyBase {
-    queryParams: ListAttachedIndicesQueryParams;
-    headers: ListAttachedIndicesHeaders;
-    request: ListAttachedIndicesRequestBody;
-}
 export declare class ListAttachedIndicesResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * DirectoryNotEnabledException
+     */
     directoryNotEnabledException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidArnException
+     */
     invalidArnException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * Success
+     */
     listAttachedIndicesResponse?: shared.ListAttachedIndicesResponse;
-    resourceNotFoundException?: any;
-    retryableConflictException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * RetryableConflictException
+     */
+    retryableConflictException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

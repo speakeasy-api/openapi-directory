@@ -1,16 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class DisableNsxvManagerPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DisableNsxvManagerSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
+    apiKeyAuth: string;
 }
 export declare class DisableNsxvManagerRequest extends SpeakeasyBase {
-    pathParams: DisableNsxvManagerPathParams;
-    security: DisableNsxvManagerSecurity;
+    /**
+     * entity id
+     */
+    id: string;
 }
 export declare class DisableNsxvManagerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

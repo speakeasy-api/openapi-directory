@@ -1,16 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+/**
+ * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+ */
 export declare enum IdpFantasyPlayersWithAdpFormatEnum {
     Xml = "XML",
     Json = "JSON"
 }
-export declare class IdpFantasyPlayersWithAdpPathParams extends SpeakeasyBase {
-    format: IdpFantasyPlayersWithAdpFormatEnum;
-}
 export declare class IdpFantasyPlayersWithAdpRequest extends SpeakeasyBase {
-    pathParams: IdpFantasyPlayersWithAdpPathParams;
+    /**
+     * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+     */
+    format: IdpFantasyPlayersWithAdpFormatEnum;
 }
 export declare class IdpFantasyPlayersWithAdpResponse extends SpeakeasyBase {
     contentType: string;
-    fantasyPlayers?: any[];
+    fantasyPlayers?: shared.FantasyPlayer[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

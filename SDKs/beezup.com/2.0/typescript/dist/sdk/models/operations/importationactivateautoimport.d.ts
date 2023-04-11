@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ImportationActivateAutoImportPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ImportationActivateAutoImportRequest extends SpeakeasyBase {
+    /**
+     * Your store identifier
+     */
     storeId: string;
 }
-export declare class ImportationActivateAutoImportRequest extends SpeakeasyBase {
-    pathParams: ImportationActivateAutoImportPathParams;
-}
 export declare class ImportationActivateAutoImportResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     * Occurs when the user tries to auto import a local file.
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

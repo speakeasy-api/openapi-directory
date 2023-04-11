@@ -1,12 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListDeploymentGroupsQueryParams extends SpeakeasyBase {
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListDeploymentGroupsXAmzTargetEnum {
     CodeDeploy20141006ListDeploymentGroups = "CodeDeploy_20141006.ListDeploymentGroups"
 }
-export declare class ListDeploymentGroupsHeaders extends SpeakeasyBase {
+export declare class ListDeploymentGroupsRequest extends SpeakeasyBase {
+    listDeploymentGroupsInput: shared.ListDeploymentGroupsInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -15,18 +14,33 @@ export declare class ListDeploymentGroupsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: ListDeploymentGroupsXAmzTargetEnum;
-}
-export declare class ListDeploymentGroupsRequest extends SpeakeasyBase {
-    queryParams: ListDeploymentGroupsQueryParams;
-    headers: ListDeploymentGroupsHeaders;
-    request: shared.ListDeploymentGroupsInput;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class ListDeploymentGroupsResponse extends SpeakeasyBase {
+    /**
+     * ApplicationDoesNotExistException
+     */
     applicationDoesNotExistException?: any;
+    /**
+     * ApplicationNameRequiredException
+     */
     applicationNameRequiredException?: any;
     contentType: string;
+    /**
+     * InvalidApplicationNameException
+     */
     invalidApplicationNameException?: any;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * Success
+     */
     listDeploymentGroupsOutput?: shared.ListDeploymentGroupsOutput;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

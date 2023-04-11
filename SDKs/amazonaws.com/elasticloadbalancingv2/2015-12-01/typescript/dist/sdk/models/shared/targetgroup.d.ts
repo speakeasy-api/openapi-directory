@@ -1,10 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ProtocolEnumEnum } from "./protocolenumenum";
 import { Matcher } from "./matcher";
+import { ProtocolEnumEnum } from "./protocolenumenum";
+import { TargetGroupIpAddressTypeEnumEnum } from "./targetgroupipaddresstypeenumenum";
 import { TargetTypeEnumEnum } from "./targettypeenumenum";
 /**
  * Information about a target group.
-**/
+ */
 export declare class TargetGroup extends SpeakeasyBase {
     healthCheckEnabled?: boolean;
     healthCheckIntervalSeconds?: number;
@@ -13,6 +14,7 @@ export declare class TargetGroup extends SpeakeasyBase {
     healthCheckProtocol?: ProtocolEnumEnum;
     healthCheckTimeoutSeconds?: number;
     healthyThresholdCount?: number;
+    ipAddressType?: TargetGroupIpAddressTypeEnumEnum;
     loadBalancerArns?: string[];
     matcher?: Matcher;
     port?: number;

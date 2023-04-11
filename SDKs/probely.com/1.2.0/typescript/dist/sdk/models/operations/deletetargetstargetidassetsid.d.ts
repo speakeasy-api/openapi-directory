@@ -1,24 +1,53 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteTargetsTargetIdAssetsIdPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteTargetsTargetIdAssetsIdRequest extends SpeakeasyBase {
+    /**
+     * Object Id
+     */
     id: string;
+    /**
+     * Target id
+     */
     targetId: string;
 }
-export declare class DeleteTargetsTargetIdAssetsId401ApplicationJson extends SpeakeasyBase {
+/**
+ * Not found
+ */
+export declare class DeleteTargetsTargetIdAssetsId404ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Not found.
+     */
     detail?: string;
 }
-export declare class DeleteTargetsTargetIdAssetsId403ApplicationJson extends SpeakeasyBase {
+/**
+ * Not allowed to perform operation
+ */
+export declare class DeleteTargetsTargetIdAssetsId403ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error message.
+     */
     detail?: string;
 }
-export declare class DeleteTargetsTargetIdAssetsId404ApplicationJson extends SpeakeasyBase {
+/**
+ * Access token is missing or invalid
+ */
+export declare class DeleteTargetsTargetIdAssetsId401ApplicationJSON extends SpeakeasyBase {
     detail?: string;
-}
-export declare class DeleteTargetsTargetIdAssetsIdRequest extends SpeakeasyBase {
-    pathParams: DeleteTargetsTargetIdAssetsIdPathParams;
 }
 export declare class DeleteTargetsTargetIdAssetsIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deleteTargetsTargetIdAssetsId401ApplicationJSONObject?: DeleteTargetsTargetIdAssetsId401ApplicationJson;
-    deleteTargetsTargetIdAssetsId403ApplicationJSONObject?: DeleteTargetsTargetIdAssetsId403ApplicationJson;
-    deleteTargetsTargetIdAssetsId404ApplicationJSONObject?: DeleteTargetsTargetIdAssetsId404ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Access token is missing or invalid
+     */
+    deleteTargetsTargetIdAssetsId401ApplicationJSONObject?: DeleteTargetsTargetIdAssetsId401ApplicationJSON;
+    /**
+     * Not allowed to perform operation
+     */
+    deleteTargetsTargetIdAssetsId403ApplicationJSONObject?: DeleteTargetsTargetIdAssetsId403ApplicationJSON;
+    /**
+     * Not found
+     */
+    deleteTargetsTargetIdAssetsId404ApplicationJSONObject?: DeleteTargetsTargetIdAssetsId404ApplicationJSON;
 }

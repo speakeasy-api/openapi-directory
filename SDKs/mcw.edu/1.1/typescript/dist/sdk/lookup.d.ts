@@ -1,5 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Lookup {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,99 +10,99 @@ export declare class Lookup {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getEnsemblGeneMappingUsingGet - Translate an RGD ID to an Ensembl Gene  ID
-    **/
-    getEnsemblGeneMappingUsingGet(req: operations.GetEnsemblGeneMappingUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetEnsemblGeneMappingUsingGetResponse>;
+     * Translate an RGD ID to an Ensembl Gene  ID
+     */
+    getEnsemblGeneMappingUsingGET(req: operations.GETEnsemblGeneMappingUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETEnsemblGeneMappingUsingGETResponse>;
     /**
-     * getEnsemblGeneMappingUsingPost - Translate RGD IDs to Ensembl Gene IDs
-    **/
-    getEnsemblGeneMappingUsingPost(req: operations.GetEnsemblGeneMappingUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.GetEnsemblGeneMappingUsingPostResponse>;
+     * Translate RGD IDs to Ensembl Gene IDs
+     */
+    getEnsemblGeneMappingUsingPOST(req: shared.RGDIDListRequest, config?: AxiosRequestConfig): Promise<operations.GetEnsemblGeneMappingUsingPOSTResponse>;
     /**
-     * getEnsemblProteinMappingUsingGet - Translate an RGD ID to an Ensembl Protein ID
-    **/
-    getEnsemblProteinMappingUsingGet(req: operations.GetEnsemblProteinMappingUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetEnsemblProteinMappingUsingGetResponse>;
+     * Translate an RGD ID to an Ensembl Protein ID
+     */
+    getEnsemblProteinMappingUsingGET(req: operations.GETEnsemblProteinMappingUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETEnsemblProteinMappingUsingGETResponse>;
     /**
-     * getEnsemblProteinMappingUsingPost - Translate RGD IDs to Ensembl Protein IDs
-    **/
-    getEnsemblProteinMappingUsingPost(req: operations.GetEnsemblProteinMappingUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.GetEnsemblProteinMappingUsingPostResponse>;
+     * Translate RGD IDs to Ensembl Protein IDs
+     */
+    getEnsemblProteinMappingUsingPOST(req: shared.RGDIDListRequest, config?: AxiosRequestConfig): Promise<operations.GetEnsemblProteinMappingUsingPOSTResponse>;
     /**
-     * getEnsemblTranscriptMappingUsingGet - Translate an RGD ID to an Ensembl Transcript ID
-    **/
-    getEnsemblTranscriptMappingUsingGet(req: operations.GetEnsemblTranscriptMappingUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetEnsemblTranscriptMappingUsingGetResponse>;
+     * Translate an RGD ID to an Ensembl Transcript ID
+     */
+    getEnsemblTranscriptMappingUsingGET(req: operations.GETEnsemblTranscriptMappingUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETEnsemblTranscriptMappingUsingGETResponse>;
     /**
-     * getEnsemblTranscriptMappingUsingPost - Translate RGD IDs to Ensembl Transcript IDs
-    **/
-    getEnsemblTranscriptMappingUsingPost(req: operations.GetEnsemblTranscriptMappingUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.GetEnsemblTranscriptMappingUsingPostResponse>;
+     * Translate RGD IDs to Ensembl Transcript IDs
+     */
+    getEnsemblTranscriptMappingUsingPOST(req: shared.RGDIDListRequest, config?: AxiosRequestConfig): Promise<operations.GetEnsemblTranscriptMappingUsingPOSTResponse>;
     /**
-     * getGtexMappingUsingGet - Translate an RGD ID to an GTEx ID
-    **/
-    getGtexMappingUsingGet(req: operations.GetGtexMappingUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetGtexMappingUsingGetResponse>;
+     * Translate an RGD ID to an GTEx ID
+     */
+    getGTEXMappingUsingGET(req: operations.GETGTEXMappingUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETGTEXMappingUsingGETResponse>;
     /**
-     * getGtexMappingUsingPost - Translate RGD IDs to GTEx IDs
-    **/
-    getGtexMappingUsingPost(req: operations.GetGtexMappingUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.GetGtexMappingUsingPostResponse>;
+     * Translate RGD IDs to GTEx IDs
+     */
+    getGTEXMappingUsingPOST(req: shared.RGDIDListRequest, config?: AxiosRequestConfig): Promise<operations.GetGTEXMappingUsingPOSTResponse>;
     /**
-     * getGenBankNucleotideMappingUsingGet - Translate an RGD ID to a GenBank Nucleotide ID
-    **/
-    getGenBankNucleotideMappingUsingGet(req: operations.GetGenBankNucleotideMappingUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetGenBankNucleotideMappingUsingGetResponse>;
+     * Translate an RGD ID to a GenBank Nucleotide ID
+     */
+    getGenBankNucleotideMappingUsingGET(req: operations.GETGenBankNucleotideMappingUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETGenBankNucleotideMappingUsingGETResponse>;
     /**
-     * getGenBankNucleotideMappingUsingPost - Translate RGD IDs to GenBank Nucleotide IDs
-    **/
-    getGenBankNucleotideMappingUsingPost(req: operations.GetGenBankNucleotideMappingUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.GetGenBankNucleotideMappingUsingPostResponse>;
+     * Translate RGD IDs to GenBank Nucleotide IDs
+     */
+    getGenBankNucleotideMappingUsingPOST(req: shared.RGDIDListRequest, config?: AxiosRequestConfig): Promise<operations.GetGenBankNucleotideMappingUsingPOSTResponse>;
     /**
-     * getGenBankProteinMappingUsingGet - Translate an RGD ID to a GenBank Protein ID
-    **/
-    getGenBankProteinMappingUsingGet(req: operations.GetGenBankProteinMappingUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetGenBankProteinMappingUsingGetResponse>;
+     * Translate an RGD ID to a GenBank Protein ID
+     */
+    getGenBankProteinMappingUsingGET(req: operations.GETGenBankProteinMappingUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETGenBankProteinMappingUsingGETResponse>;
     /**
-     * getGenBankProteinMappingUsingPost - Translate RGD IDs to GenBank Protein IDs
-    **/
-    getGenBankProteinMappingUsingPost(req: operations.GetGenBankProteinMappingUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.GetGenBankProteinMappingUsingPostResponse>;
+     * Translate RGD IDs to GenBank Protein IDs
+     */
+    getGenBankProteinMappingUsingPOST(req: shared.RGDIDListRequest, config?: AxiosRequestConfig): Promise<operations.GetGenBankProteinMappingUsingPOSTResponse>;
     /**
-     * getGeneTypesUsingGet - Returns a list of gene types avialable in RGD
-    **/
-    getGeneTypesUsingGet(config?: AxiosRequestConfig): Promise<operations.GetGeneTypesUsingGetResponse>;
+     * Returns a list of gene types avialable in RGD
+     */
+    getGeneTypesUsingGET(config?: AxiosRequestConfig): Promise<operations.GETGeneTypesUsingGETResponse>;
     /**
-     * getHgncMappingUsingGet - Translate an RGD ID to an HGNC ID
-    **/
-    getHgncMappingUsingGet(req: operations.GetHgncMappingUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetHgncMappingUsingGetResponse>;
+     * Translate an RGD ID to an HGNC ID
+     */
+    getHGNCMappingUsingGET(req: operations.GETHGNCMappingUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETHGNCMappingUsingGETResponse>;
     /**
-     * getHgncMappingUsingPost - Translate RGD IDs to HGNC IDs
-    **/
-    getHgncMappingUsingPost(req: operations.GetHgncMappingUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.GetHgncMappingUsingPostResponse>;
+     * Translate RGD IDs to HGNC IDs
+     */
+    getHGNCMappingUsingPOST(req: shared.RGDIDListRequest, config?: AxiosRequestConfig): Promise<operations.GetHGNCMappingUsingPOSTResponse>;
     /**
-     * getMgiMappingUsingGet - Translate an RGD ID to an MGI ID
-    **/
-    getMgiMappingUsingGet(req: operations.GetMgiMappingUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetMgiMappingUsingGetResponse>;
+     * Translate an RGD ID to an MGI ID
+     */
+    getMGIMappingUsingGET(req: operations.GETMGIMappingUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETMGIMappingUsingGETResponse>;
     /**
-     * getMgiMappingUsingPost - Translate RGD IDs to MGI IDs
-    **/
-    getMgiMappingUsingPost(req: operations.GetMgiMappingUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.GetMgiMappingUsingPostResponse>;
+     * Translate RGD IDs to MGI IDs
+     */
+    getMGIMappingUsingPOST(req: shared.RGDIDListRequest, config?: AxiosRequestConfig): Promise<operations.GetMGIMappingUsingPOSTResponse>;
     /**
-     * getMapsUsingGet - Return a list assembly maps for a species
-    **/
-    getMapsUsingGet(req: operations.GetMapsUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetMapsUsingGetResponse>;
+     * Return a list assembly maps for a species
+     */
+    getMapsUsingGET(req: operations.GETMapsUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETMapsUsingGETResponse>;
     /**
-     * getMapsUsingGet1 - Return a standardUnit for an ontology if it exists
-    **/
-    getMapsUsingGet1(req: operations.GetMapsUsingGet1Request, config?: AxiosRequestConfig): Promise<operations.GetMapsUsingGet1Response>;
+     * Return a standardUnit for an ontology if it exists
+     */
+    getMapsUsingGET1(req: operations.GETMapsUsingGet1Request, config?: AxiosRequestConfig): Promise<operations.GETMapsUsingGet1Response>;
     /**
-     * getNcbiGeneMappingUsingGet - Translate an RGD ID to an NCBI Gene ID
-    **/
-    getNcbiGeneMappingUsingGet(req: operations.GetNcbiGeneMappingUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetNcbiGeneMappingUsingGetResponse>;
+     * Translate an RGD ID to an NCBI Gene ID
+     */
+    getNCBIGeneMappingUsingGET(req: operations.GETNCBIGeneMappingUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETNCBIGeneMappingUsingGETResponse>;
     /**
-     * getNcbiGeneMappingUsingPost - Translate RGD IDs to NCBI Gene IDs
-    **/
-    getNcbiGeneMappingUsingPost(req: operations.GetNcbiGeneMappingUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.GetNcbiGeneMappingUsingPostResponse>;
+     * Translate RGD IDs to NCBI Gene IDs
+     */
+    getNCBIGeneMappingUsingPOST(req: shared.RGDIDListRequest, config?: AxiosRequestConfig): Promise<operations.GetNCBIGeneMappingUsingPOSTResponse>;
     /**
-     * getSpeciesTypesUsingGet - Return a Map of species type keys available in RGD
-    **/
-    getSpeciesTypesUsingGet(config?: AxiosRequestConfig): Promise<operations.GetSpeciesTypesUsingGetResponse>;
+     * Return a Map of species type keys available in RGD
+     */
+    getSpeciesTypesUsingGET(config?: AxiosRequestConfig): Promise<operations.GETSpeciesTypesUsingGETResponse>;
     /**
-     * getUniProtMappingUsingGet - Translate an RGD ID to a UniProt ID
-    **/
-    getUniProtMappingUsingGet(req: operations.GetUniProtMappingUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetUniProtMappingUsingGetResponse>;
+     * Translate an RGD ID to a UniProt ID
+     */
+    getUniProtMappingUsingGET(req: operations.GETUniProtMappingUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETUniProtMappingUsingGETResponse>;
     /**
-     * getUniProtMappingUsingPost - Translate RGD IDs to UniProt IDs
-    **/
-    getUniProtMappingUsingPost(req: operations.GetUniProtMappingUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.GetUniProtMappingUsingPostResponse>;
+     * Translate RGD IDs to UniProt IDs
+     */
+    getUniProtMappingUsingPOST(req: shared.RGDIDListRequest, config?: AxiosRequestConfig): Promise<operations.GetUniProtMappingUsingPOSTResponse>;
 }

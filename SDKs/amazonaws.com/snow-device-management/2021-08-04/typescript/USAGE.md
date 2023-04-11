@@ -1,30 +1,27 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CancelTaskRequest, CancelTaskResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CancelTaskRequest,
+  CancelTaskResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    hmac: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: CancelTaskRequest = {
-  pathParams: {
-    taskId: "sit",
-  },
-  headers: {
-    xAmzAlgorithm: "voluptas",
-    xAmzContentSha256: "culpa",
-    xAmzCredential: "expedita",
-    xAmzDate: "consequuntur",
-    xAmzSecurityToken: "dolor",
-    xAmzSignature: "expedita",
-    xAmzSignedHeaders: "voluptas",
-  },
+  xAmzAlgorithm: "corrupti",
+  xAmzContentSha256: "provident",
+  xAmzCredential: "distinctio",
+  xAmzDate: "quibusdam",
+  xAmzSecurityToken: "unde",
+  xAmzSignature: "nulla",
+  xAmzSignedHeaders: "corrupti",
+  taskId: "illum",
 };
 
 sdk.cancelTask(req).then((res: CancelTaskResponse | AxiosError) => {

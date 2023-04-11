@@ -1,5 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CreateOriginRequestPolicy20200531Headers extends SpeakeasyBase {
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+/**
+ * <p>An origin request policy configuration.</p> <p>This configuration determines the values that CloudFront includes in requests that it sends to the origin. Each request that CloudFront sends to the origin includes the following:</p> <ul> <li> <p>The request body and the URL path (without the domain name) from the viewer request.</p> </li> <li> <p>The headers that CloudFront automatically includes in every origin request, including <code>Host</code>, <code>User-Agent</code>, and <code>X-Amz-Cf-Id</code>.</p> </li> <li> <p>All HTTP headers, cookies, and URL query strings that are specified in the cache policy or the origin request policy. These can include items from the viewer request and, in the case of headers, additional ones that are added by CloudFront.</p> </li> </ul> <p>CloudFront sends a request when it can't find an object in its cache that matches the request. If you want to send values to the origin and also include them in the cache key, use <code>CachePolicy</code>.</p>
+ */
+export declare class CreateOriginRequestPolicy20200531RequestBodyOriginRequestPolicyConfig extends SpeakeasyBase {
+    comment?: string;
+    cookiesConfig?: shared.OriginRequestPolicyCookiesConfig;
+    headersConfig?: shared.OriginRequestPolicyHeadersConfig;
+    name?: string;
+    queryStringsConfig?: shared.OriginRequestPolicyQueryStringsConfig;
+}
+export declare class CreateOriginRequestPolicy20200531RequestBody extends SpeakeasyBase {
+    /**
+     * <p>An origin request policy configuration.</p> <p>This configuration determines the values that CloudFront includes in requests that it sends to the origin. Each request that CloudFront sends to the origin includes the following:</p> <ul> <li> <p>The request body and the URL path (without the domain name) from the viewer request.</p> </li> <li> <p>The headers that CloudFront automatically includes in every origin request, including <code>Host</code>, <code>User-Agent</code>, and <code>X-Amz-Cf-Id</code>.</p> </li> <li> <p>All HTTP headers, cookies, and URL query strings that are specified in the cache policy or the origin request policy. These can include items from the viewer request and, in the case of headers, additional ones that are added by CloudFront.</p> </li> </ul> <p>CloudFront sends a request when it can't find an object in its cache that matches the request. If you want to send values to the origin and also include them in the cache key, use <code>CachePolicy</code>.</p>
+     */
+    originRequestPolicyConfig: CreateOriginRequestPolicy20200531RequestBodyOriginRequestPolicyConfig;
+}
+export declare class CreateOriginRequestPolicy20200531Request extends SpeakeasyBase {
+    requestBody: Uint8Array;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -8,12 +27,9 @@ export declare class CreateOriginRequestPolicy20200531Headers extends SpeakeasyB
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class CreateOriginRequestPolicy20200531Request extends SpeakeasyBase {
-    headers: CreateOriginRequestPolicy20200531Headers;
-    request: Uint8Array;
-}
 export declare class CreateOriginRequestPolicy20200531Response extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

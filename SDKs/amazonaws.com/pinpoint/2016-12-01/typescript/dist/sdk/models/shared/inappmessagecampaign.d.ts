@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { InAppMessage } from "./inappmessage";
 import { InAppCampaignSchedule } from "./inappcampaignschedule";
+import { InAppMessage } from "./inappmessage";
 /**
  * Targeted in-app message campaign.
-**/
+ */
 export declare class InAppMessageCampaign extends SpeakeasyBase {
     campaignId?: string;
     dailyCap?: number;

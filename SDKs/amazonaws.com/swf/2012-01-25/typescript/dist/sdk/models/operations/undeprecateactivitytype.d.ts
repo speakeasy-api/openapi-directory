@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UndeprecateActivityTypeXAmzTargetEnum {
     SimpleWorkflowServiceUndeprecateActivityType = "SimpleWorkflowService.UndeprecateActivityType"
 }
-export declare class UndeprecateActivityTypeHeaders extends SpeakeasyBase {
+export declare class UndeprecateActivityTypeRequest extends SpeakeasyBase {
+    undeprecateActivityTypeInput: shared.UndeprecateActivityTypeInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class UndeprecateActivityTypeHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UndeprecateActivityTypeXAmzTargetEnum;
 }
-export declare class UndeprecateActivityTypeRequest extends SpeakeasyBase {
-    headers: UndeprecateActivityTypeHeaders;
-    request: shared.UndeprecateActivityTypeInput;
-}
 export declare class UndeprecateActivityTypeResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * OperationNotPermittedFault
+     */
     operationNotPermittedFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TypeAlreadyExistsFault
+     */
     typeAlreadyExistsFault?: any;
+    /**
+     * UnknownResourceFault
+     */
     unknownResourceFault?: any;
 }

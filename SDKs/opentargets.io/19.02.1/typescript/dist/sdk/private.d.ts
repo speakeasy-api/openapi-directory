@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Unstable API methods. Subject to change without prior notice. Use at your own risk.
+ */
 export declare class Private {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,126 +12,144 @@ export declare class Private {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getApiDocs - Browse API documentation
+     * Browse API documentation
      *
+     * @remarks
      * Access api docs as served by Redoc
-    **/
+     */
     getApiDocs(config?: AxiosRequestConfig): Promise<operations.GetApiDocsResponse>;
     /**
-     * getApiSwaggerUi - Browse interactive API documentation
+     * Browse interactive API documentation
      *
+     * @remarks
      * Interactive API docs using swagger-ui
-    **/
-    getApiSwaggerUi(config?: AxiosRequestConfig): Promise<operations.GetApiSwaggerUiResponse>;
+     */
+    getApiSwaggerUI(config?: AxiosRequestConfig): Promise<operations.GetApiSwaggerUIResponse>;
     /**
-     * getAutocomplete - Get `autocomplete` objects.
+     * Get `autocomplete` objects.
      *
+     * @remarks
      * Search for the closest term to autocomplete in the search box.
      *
-    **/
+     */
     getAutocomplete(req: operations.GetAutocompleteRequest, config?: AxiosRequestConfig): Promise<operations.GetAutocompleteResponse>;
     /**
-     * getDiseaseById - Find information about a disease
+     * Find information about a disease
      *
+     * @remarks
      * Get `disease` objects.
      *
-    **/
+     */
     getDiseaseById(req: operations.GetDiseaseByIdRequest, config?: AxiosRequestConfig): Promise<operations.GetDiseaseByIdResponse>;
     /**
-     * getDrugById - Get drug by ID
+     * Get drug by ID
      *
+     * @remarks
      * Get `drug` objects.
      *
-    **/
-    getDrugById(req: operations.GetDrugByIdRequest, config?: AxiosRequestConfig): Promise<operations.GetDrugByIdResponse>;
+     */
+    getDrugByID(req: operations.GetDrugByIDRequest, config?: AxiosRequestConfig): Promise<operations.GetDrugByIDResponse>;
     /**
-     * getEcObyId - Get evidence code by ID
+     * Get evidence code by ID
      *
+     * @remarks
      * Get `ECO` objects.
      *
-    **/
-    getEcObyId(req: operations.GetEcObyIdRequest, config?: AxiosRequestConfig): Promise<operations.GetEcObyIdResponse>;
+     */
+    getECObyID(req: operations.GetECObyIDRequest, config?: AxiosRequestConfig): Promise<operations.GetECObyIDResponse>;
     /**
-     * getQuickSearch - Search most relevant results
+     * Search most relevant results
      *
+     * @remarks
      * Get `search-result` objects. Enables search bar functionality.
      *
-    **/
+     */
     getQuickSearch(req: operations.GetQuickSearchRequest, config?: AxiosRequestConfig): Promise<operations.GetQuickSearchResponse>;
     /**
-     * getRelationByEfoid - Find related entities by disease
+     * Find related entities by disease
      *
+     * @remarks
      * Get `relation` objects starting from diseases.
      *
-    **/
-    getRelationByEfoid(req: operations.GetRelationByEfoidRequest, config?: AxiosRequestConfig): Promise<operations.GetRelationByEfoidResponse>;
+     */
+    getRelationByEFOID(req: operations.GetRelationByEFOIDRequest, config?: AxiosRequestConfig): Promise<operations.GetRelationByEFOIDResponse>;
     /**
-     * getRelationByEnsgid - Find related entities by target
+     * Find related entities by target
      *
+     * @remarks
      * Get `relation` objects starting from diseases.
      *
-    **/
-    getRelationByEnsgid(req: operations.GetRelationByEnsgidRequest, config?: AxiosRequestConfig): Promise<operations.GetRelationByEnsgidResponse>;
+     */
+    getRelationByENSGID(req: operations.GetRelationByENSGIDRequest, config?: AxiosRequestConfig): Promise<operations.GetRelationByENSGIDResponse>;
     /**
-     * getSwagger - Get OpenAPI schema
+     * Get OpenAPI schema
      *
+     * @remarks
      * Get swagger.yaml specs for the API
-    **/
+     */
     getSwagger(config?: AxiosRequestConfig): Promise<operations.GetSwaggerResponse>;
     /**
-     * getTargetByEnsgid - Find information about a target
+     * Find information about a target
      *
+     * @remarks
      * Get `target` objects.
      *
-    **/
-    getTargetByEnsgid(req: operations.GetTargetByEnsgidRequest, config?: AxiosRequestConfig): Promise<operations.GetTargetByEnsgidResponse>;
+     */
+    getTargetByENSGID(req: operations.GetTargetByENSGIDRequest, config?: AxiosRequestConfig): Promise<operations.GetTargetByENSGIDResponse>;
     /**
-     * getTargetExpressionByEnsgid - Query expression levels
+     * Query expression levels
      *
+     * @remarks
      * Get `gene-expression` objects.
      *
-    **/
-    getTargetExpressionByEnsgid(req: operations.GetTargetExpressionByEnsgidRequest, config?: AxiosRequestConfig): Promise<operations.GetTargetExpressionByEnsgidResponse>;
+     */
+    getTargetExpressionByENSGID(req: operations.GetTargetExpressionByENSGIDRequest, config?: AxiosRequestConfig): Promise<operations.GetTargetExpressionByENSGIDResponse>;
     /**
-     * postBestHitSearch - Find the best hit
+     * Find the best hit
      *
+     * @remarks
      * Fire the search method for multiple strings
      *
-    **/
-    postBestHitSearch(req: operations.PostBestHitSearchRequest, config?: AxiosRequestConfig): Promise<operations.PostBestHitSearchResponse>;
+     */
+    postBestHitSearch(req: string, config?: AxiosRequestConfig): Promise<operations.PostBestHitSearchResponse>;
     /**
-     * postDiseaseById - Find information about a list of diseases
+     * Find information about a list of diseases
      *
+     * @remarks
      * Get `disease` objects.
      *
-    **/
-    postDiseaseById(req: operations.PostDiseaseByIdRequest, config?: AxiosRequestConfig): Promise<operations.PostDiseaseByIdResponse>;
+     */
+    postDiseaseById(req: string, config?: AxiosRequestConfig): Promise<operations.PostDiseaseByIdResponse>;
     /**
-     * postEnrichmentTarget - Enrichment analysis
+     * Enrichment analysis
      *
+     * @remarks
      * Returns an enrichment analysis for a list of targets passed in the body
      *
-    **/
-    postEnrichmentTarget(req: operations.PostEnrichmentTargetRequest, config?: AxiosRequestConfig): Promise<operations.PostEnrichmentTargetResponse>;
+     */
+    postEnrichmentTarget(req: string, config?: AxiosRequestConfig): Promise<operations.PostEnrichmentTargetResponse>;
     /**
-     * postRelation - Find related entities
+     * Find related entities
      *
+     * @remarks
      * Get `relation` objects.
      *
-    **/
-    postRelation(req: operations.PostRelationRequest, config?: AxiosRequestConfig): Promise<operations.PostRelationResponse>;
+     */
+    postRelation(req: string, config?: AxiosRequestConfig): Promise<operations.PostRelationResponse>;
     /**
-     * postTargetByEnsgid - Find information about a list of targets
+     * Find information about a list of targets
      *
+     * @remarks
      * Get `target` objects. Used for the target profile page.
      *
-    **/
-    postTargetByEnsgid(req: operations.PostTargetByEnsgidRequest, config?: AxiosRequestConfig): Promise<operations.PostTargetByEnsgidResponse>;
+     */
+    postTargetByENSGID(req: string, config?: AxiosRequestConfig): Promise<operations.PostTargetByENSGIDResponse>;
     /**
-     * postTargetExpressionByEnsgid - Batch query expression levels
+     * Batch query expression levels
      *
+     * @remarks
      * Get `gene-expression` objects.
      *
-    **/
-    postTargetExpressionByEnsgid(req: operations.PostTargetExpressionByEnsgidRequest, config?: AxiosRequestConfig): Promise<operations.PostTargetExpressionByEnsgidResponse>;
+     */
+    postTargetExpressionByENSGID(req: string, config?: AxiosRequestConfig): Promise<operations.PostTargetExpressionByENSGIDResponse>;
 }

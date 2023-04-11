@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostBatchStopUpdateActionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTBatchStopUpdateActionActionEnum {
     BatchStopUpdateAction = "BatchStopUpdateAction"
 }
-export declare enum PostBatchStopUpdateActionVersionEnum {
+export declare enum POSTBatchStopUpdateActionVersionEnum {
     TwoThousandAndFifteen0202 = "2015-02-02"
 }
-export declare class PostBatchStopUpdateActionQueryParams extends SpeakeasyBase {
-    action: PostBatchStopUpdateActionActionEnum;
-    version: PostBatchStopUpdateActionVersionEnum;
-}
-export declare class PostBatchStopUpdateActionHeaders extends SpeakeasyBase {
+export declare class POSTBatchStopUpdateActionRequest extends SpeakeasyBase {
+    action: POSTBatchStopUpdateActionActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTBatchStopUpdateActionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostBatchStopUpdateActionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostBatchStopUpdateActionRequest extends SpeakeasyBase {
-    queryParams: PostBatchStopUpdateActionQueryParams;
-    headers: PostBatchStopUpdateActionHeaders;
-    request?: Uint8Array;
-}
-export declare class PostBatchStopUpdateActionResponse extends SpeakeasyBase {
+export declare class POSTBatchStopUpdateActionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

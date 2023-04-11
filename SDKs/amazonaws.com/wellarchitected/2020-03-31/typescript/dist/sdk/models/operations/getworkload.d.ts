@@ -1,9 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetWorkloadPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetWorkloadRequest extends SpeakeasyBase {
     workloadId: string;
-}
-export declare class GetWorkloadHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,17 +11,32 @@ export declare class GetWorkloadHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetWorkloadRequest extends SpeakeasyBase {
-    pathParams: GetWorkloadPathParams;
-    headers: GetWorkloadHeaders;
-}
 export declare class GetWorkloadResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getWorkloadOutput?: shared.GetWorkloadOutput;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

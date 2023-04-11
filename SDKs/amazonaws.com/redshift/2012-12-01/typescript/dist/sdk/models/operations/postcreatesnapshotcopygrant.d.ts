@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateSnapshotCopyGrantActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateSnapshotCopyGrantActionEnum {
     CreateSnapshotCopyGrant = "CreateSnapshotCopyGrant"
 }
-export declare enum PostCreateSnapshotCopyGrantVersionEnum {
+export declare enum POSTCreateSnapshotCopyGrantVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostCreateSnapshotCopyGrantQueryParams extends SpeakeasyBase {
-    action: PostCreateSnapshotCopyGrantActionEnum;
-    version: PostCreateSnapshotCopyGrantVersionEnum;
-}
-export declare class PostCreateSnapshotCopyGrantHeaders extends SpeakeasyBase {
+export declare class POSTCreateSnapshotCopyGrantRequest extends SpeakeasyBase {
+    action: POSTCreateSnapshotCopyGrantActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateSnapshotCopyGrantVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateSnapshotCopyGrantHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateSnapshotCopyGrantRequest extends SpeakeasyBase {
-    queryParams: PostCreateSnapshotCopyGrantQueryParams;
-    headers: PostCreateSnapshotCopyGrantHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateSnapshotCopyGrantResponse extends SpeakeasyBase {
+export declare class POSTCreateSnapshotCopyGrantResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

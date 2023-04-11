@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreatePlatformVersionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreatePlatformVersionActionEnum {
     CreatePlatformVersion = "CreatePlatformVersion"
 }
-export declare enum PostCreatePlatformVersionVersionEnum {
+export declare enum POSTCreatePlatformVersionVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostCreatePlatformVersionQueryParams extends SpeakeasyBase {
-    action: PostCreatePlatformVersionActionEnum;
-    version: PostCreatePlatformVersionVersionEnum;
-}
-export declare class PostCreatePlatformVersionHeaders extends SpeakeasyBase {
+export declare class POSTCreatePlatformVersionRequest extends SpeakeasyBase {
+    action: POSTCreatePlatformVersionActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreatePlatformVersionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreatePlatformVersionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreatePlatformVersionRequest extends SpeakeasyBase {
-    queryParams: PostCreatePlatformVersionQueryParams;
-    headers: PostCreatePlatformVersionHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreatePlatformVersionResponse extends SpeakeasyBase {
+export declare class POSTCreatePlatformVersionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

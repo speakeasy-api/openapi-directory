@@ -1,18 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteSandboxSandboxIdPathParams extends SpeakeasyBase {
-    sandboxId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteSandboxSandboxIdSecurity extends SpeakeasyBase {
-    authorizationCodeToken: shared.SchemeAuthorizationCodeToken;
-    clientId: shared.SchemeClientId;
+    authorizationCodeToken: string;
+    clientId: string;
 }
 export declare class DeleteSandboxSandboxIdRequest extends SpeakeasyBase {
-    pathParams: DeleteSandboxSandboxIdPathParams;
-    security: DeleteSandboxSandboxIdSecurity;
+    /**
+     * Sandbox Id
+     */
+    sandboxId: string;
 }
 export declare class DeleteSandboxSandboxIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Bad request
+     */
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolNetflowListPathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolNetflowListRequest extends SpeakeasyBase {
-    pathParams: ProtocolNetflowListPathParams;
+    /**
+     * Agent to show NETFLOW statistics
+     */
+    agentNum: number;
 }
 export declare class ProtocolNetflowListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolNetflowList200ApplicationJSONObjects?: Record<string, any>[];
 }

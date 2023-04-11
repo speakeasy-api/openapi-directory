@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeEnvironmentManagedActionHistoryActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeEnvironmentManagedActionHistoryActionEnum {
     DescribeEnvironmentManagedActionHistory = "DescribeEnvironmentManagedActionHistory"
 }
-export declare enum PostDescribeEnvironmentManagedActionHistoryVersionEnum {
+export declare enum POSTDescribeEnvironmentManagedActionHistoryVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostDescribeEnvironmentManagedActionHistoryQueryParams extends SpeakeasyBase {
-    action: PostDescribeEnvironmentManagedActionHistoryActionEnum;
+export declare class POSTDescribeEnvironmentManagedActionHistoryRequest extends SpeakeasyBase {
+    action: POSTDescribeEnvironmentManagedActionHistoryActionEnum;
+    /**
+     * Pagination limit
+     */
     maxItems?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostDescribeEnvironmentManagedActionHistoryVersionEnum;
-}
-export declare class PostDescribeEnvironmentManagedActionHistoryHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeEnvironmentManagedActionHistoryVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeEnvironmentManagedActionHistoryHeaders extends 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeEnvironmentManagedActionHistoryRequest extends SpeakeasyBase {
-    queryParams: PostDescribeEnvironmentManagedActionHistoryQueryParams;
-    headers: PostDescribeEnvironmentManagedActionHistoryHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeEnvironmentManagedActionHistoryResponse extends SpeakeasyBase {
+export declare class POSTDescribeEnvironmentManagedActionHistoryResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

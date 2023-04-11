@@ -3,8 +3,8 @@ import { ContainerOverride } from "./containeroverride";
 import { EphemeralStorage } from "./ephemeralstorage";
 import { InferenceAcceleratorOverride } from "./inferenceacceleratoroverride";
 /**
- * The overrides associated with a task.
-**/
+ * The overrides that are associated with a task.
+ */
 export declare class TaskOverride extends SpeakeasyBase {
     containerOverrides?: ContainerOverride[];
     cpu?: string;

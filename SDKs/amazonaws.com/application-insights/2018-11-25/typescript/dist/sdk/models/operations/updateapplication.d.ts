@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateApplicationXAmzTargetEnum {
     Ec2WindowsBarleyServiceUpdateApplication = "EC2WindowsBarleyService.UpdateApplication"
 }
-export declare class UpdateApplicationHeaders extends SpeakeasyBase {
+export declare class UpdateApplicationRequest extends SpeakeasyBase {
+    updateApplicationRequest: shared.UpdateApplicationRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class UpdateApplicationHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateApplicationXAmzTargetEnum;
 }
-export declare class UpdateApplicationRequest extends SpeakeasyBase {
-    headers: UpdateApplicationHeaders;
-    request: shared.UpdateApplicationRequest;
-}
 export declare class UpdateApplicationResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     updateApplicationResponse?: shared.UpdateApplicationResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

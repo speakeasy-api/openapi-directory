@@ -1,13 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class FindAllScriptsSecurity extends SpeakeasyBase {
-    otoroshiAuth: shared.SchemeOtoroshiAuth;
-}
-export declare class FindAllScriptsRequest extends SpeakeasyBase {
-    security: FindAllScriptsSecurity;
-}
+import { AxiosResponse } from "axios";
 export declare class FindAllScriptsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful operation
+     */
     scripts?: shared.Script[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

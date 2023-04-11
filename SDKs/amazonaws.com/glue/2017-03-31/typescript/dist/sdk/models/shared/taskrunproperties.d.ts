@@ -6,7 +6,7 @@ import { LabelingSetGenerationTaskRunProperties } from "./labelingsetgenerationt
 import { TaskTypeEnum } from "./tasktypeenum";
 /**
  * The configuration properties for the task run.
-**/
+ */
 export declare class TaskRunProperties extends SpeakeasyBase {
     exportLabelsTaskRunProperties?: ExportLabelsTaskRunProperties;
     findMatchesTaskRunProperties?: FindMatchesTaskRunProperties;

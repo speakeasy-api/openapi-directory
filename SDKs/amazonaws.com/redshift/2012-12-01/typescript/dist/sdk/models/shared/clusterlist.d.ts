@@ -1,5 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { AquaConfiguration } from "./aquaconfiguration";
+import { ClusterIamRoleList } from "./clusteriamrolelist";
 import { ClusterNode } from "./clusternode";
 import { ClusterParameterGroupStatusList } from "./clusterparametergroupstatuslist";
 import { ClusterSecurityGroupMembershipList } from "./clustersecuritygroupmembershiplist";
@@ -9,8 +10,8 @@ import { DeferredMaintenanceWindowsList } from "./deferredmaintenancewindowslist
 import { ElasticIpStatus } from "./elasticipstatus";
 import { Endpoint } from "./endpoint";
 import { HsmStatus } from "./hsmstatus";
-import { ClusterIamRoleList } from "./clusteriamrolelist";
 import { PendingModifiedValues } from "./pendingmodifiedvalues";
+import { ReservedNodeExchangeStatus } from "./reservednodeexchangestatus";
 import { ResizeInfo } from "./resizeinfo";
 import { RestoreStatus } from "./restorestatus";
 import { ScheduleStateEnum } from "./schedulestateenum";
@@ -18,7 +19,7 @@ import { TagList } from "./taglist";
 import { VpcSecurityGroupMembershipList } from "./vpcsecuritygroupmembershiplist";
 /**
  * Describes a cluster.
-**/
+ */
 export declare class ClusterList extends SpeakeasyBase {
     allowVersionUpgrade?: boolean;
     aquaConfiguration?: AquaConfiguration;
@@ -40,6 +41,7 @@ export declare class ClusterList extends SpeakeasyBase {
     clusterVersion?: string;
     dbName?: string;
     dataTransferProgress?: DataTransferProgress;
+    defaultIamRoleArn?: string;
     deferredMaintenanceWindows?: DeferredMaintenanceWindowsList[];
     elasticIpStatus?: ElasticIpStatus;
     elasticResizeNumberOfNodeOptions?: string;
@@ -62,6 +64,7 @@ export declare class ClusterList extends SpeakeasyBase {
     pendingModifiedValues?: PendingModifiedValues;
     preferredMaintenanceWindow?: string;
     publiclyAccessible?: boolean;
+    reservedNodeExchangeStatus?: ReservedNodeExchangeStatus;
     resizeInfo?: ResizeInfo;
     restoreStatus?: RestoreStatus;
     snapshotScheduleIdentifier?: string;

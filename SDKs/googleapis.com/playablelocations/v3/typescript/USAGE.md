@@ -1,46 +1,62 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { PlayablelocationsLogImpressionsRequest, PlayablelocationsLogImpressionsResponse } from "openapi/src/sdk/models/operations";
+import {
+  PlayablelocationsLogImpressionsRequest,
+  PlayablelocationsLogImpressionsResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnum,
+  GoogleMapsUnityClientInfoPlatformEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: PlayablelocationsLogImpressionsRequest = {
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "voluptas",
-    alt: "media",
-    callback: "expedita",
-    fields: "consequuntur",
-    key: "dolor",
-    oauthToken: "expedita",
-    prettyPrint: true,
-    quotaUser: "fugit",
-    uploadType: "et",
-    uploadProtocol: "nihil",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  googleMapsPlayablelocationsV3LogImpressionsRequest: {
     clientInfo: {
-      apiClient: "rerum",
-      applicationId: "dicta",
-      applicationVersion: "debitis",
-      deviceModel: "voluptatum",
-      languageCode: "et",
-      operatingSystem: "ut",
-      operatingSystemBuild: "dolorem",
-      platform: "MAC_OS",
+      apiClient: "provident",
+      applicationId: "distinctio",
+      applicationVersion: "quibusdam",
+      deviceModel: "unde",
+      languageCode: "nulla",
+      operatingSystem: "corrupti",
+      operatingSystemBuild: "illum",
+      platform: GoogleMapsUnityClientInfoPlatformEnum.Windows,
     },
     impressions: [
       {
-        gameObjectType: 3287288577352441706,
-        impressionType: "IMPRESSION_TYPE_UNSPECIFIED",
-        locationName: "totam",
+        gameObjectType: 645894,
+        impressionType: GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnum.Presented,
+        locationName: "iure",
+      },
+      {
+        gameObjectType: 297534,
+        impressionType: GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnum.Interacted,
+        locationName: "ipsa",
+      },
+      {
+        gameObjectType: 963663,
+        impressionType: GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnum.ImpressionTypeUnspecified,
+        locationName: "suscipit",
       },
     ],
-    requestId: "dolores",
+    requestId: "molestiae",
   },
+  accessToken: "minus",
+  alt: AltEnum.Proto,
+  callback: "voluptatum",
+  fields: "iusto",
+  key: "excepturi",
+  oauthToken: "nisi",
+  prettyPrint: false,
+  quotaUser: "recusandae",
+  uploadType: "temporibus",
+  uploadProtocol: "ab",
 };
 
 sdk.v3.playablelocationsLogImpressions(req).then((res: PlayablelocationsLogImpressionsResponse | AxiosError) => {

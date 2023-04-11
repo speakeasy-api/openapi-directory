@@ -3,13 +3,16 @@ import { CacheNodeList } from "./cachenodelist";
 import { CacheParameterGroupStatus } from "./cacheparametergroupstatus";
 import { CacheSecurityGroupMembershipList } from "./cachesecuritygroupmembershiplist";
 import { Endpoint } from "./endpoint";
+import { IpDiscoveryEnum } from "./ipdiscoveryenum";
 import { LogDeliveryConfigurationList } from "./logdeliveryconfigurationlist";
+import { NetworkTypeEnum } from "./networktypeenum";
 import { NotificationConfiguration } from "./notificationconfiguration";
 import { PendingModifiedValues } from "./pendingmodifiedvalues";
 import { SecurityGroupMembership } from "./securitygroupmembership";
+import { TransitEncryptionModeEnum } from "./transitencryptionmodeenum";
 /**
  * Contains all of the attributes of a specific cluster.
-**/
+ */
 export declare class CacheCluster extends SpeakeasyBase {
     arn?: string;
     atRestEncryptionEnabled?: boolean;
@@ -28,9 +31,14 @@ export declare class CacheCluster extends SpeakeasyBase {
     configurationEndpoint?: Endpoint;
     engine?: string;
     engineVersion?: string;
+    ipDiscovery?: IpDiscoveryEnum;
     logDeliveryConfigurations?: LogDeliveryConfigurationList[];
+    networkType?: NetworkTypeEnum;
     notificationConfiguration?: NotificationConfiguration;
     numCacheNodes?: number;
+    /**
+     * A group of settings that are applied to the cluster in the future, or that are currently being applied.
+     */
     pendingModifiedValues?: PendingModifiedValues;
     preferredAvailabilityZone?: string;
     preferredMaintenanceWindow?: string;
@@ -41,4 +49,5 @@ export declare class CacheCluster extends SpeakeasyBase {
     snapshotRetentionLimit?: number;
     snapshotWindow?: string;
     transitEncryptionEnabled?: boolean;
+    transitEncryptionMode?: TransitEncryptionModeEnum;
 }

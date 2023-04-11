@@ -1,13 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DcimFrontPortsTracePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DcimFrontPortsTraceRequest extends SpeakeasyBase {
-    pathParams: DcimFrontPortsTracePathParams;
+    /**
+     * A unique integer value identifying this front port.
+     */
+    id: number;
 }
 export declare class DcimFrontPortsTraceResponse extends SpeakeasyBase {
     contentType: string;
     frontPort?: shared.FrontPort;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

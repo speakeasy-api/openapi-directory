@@ -1,21 +1,39 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetRepositoriesWorkspaceRepoSlugPathParams extends SpeakeasyBase {
-    repoSlug: string;
-    workspace: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetRepositoriesWorkspaceRepoSlugSecurity extends SpeakeasyBase {
-    oauth2?: shared.SchemeOauth2;
+    apiKey?: string;
     basic?: shared.SchemeBasic;
-    apiKey?: shared.SchemeApiKey;
+    oauth2?: string;
 }
 export declare class GetRepositoriesWorkspaceRepoSlugRequest extends SpeakeasyBase {
-    pathParams: GetRepositoriesWorkspaceRepoSlugPathParams;
-    security: GetRepositoriesWorkspaceRepoSlugSecurity;
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     *
+     * @remarks
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     *
+     */
+    repoSlug: string;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     *
+     * @remarks
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     *
+     */
+    workspace: string;
 }
 export declare class GetRepositoriesWorkspaceRepoSlugResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * If the repository is private and the authenticated user does not have access to it.
+     */
     error?: Record<string, any>;
+    /**
+     * The repository object.
+     */
     repository?: Record<string, any>;
 }

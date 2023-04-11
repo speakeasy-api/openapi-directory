@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { Section } from "./section";
+/**
+ * OK Response
+ */
 export declare class SectionResponse extends SpeakeasyBase {
     data?: Section;
 }

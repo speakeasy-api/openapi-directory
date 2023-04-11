@@ -1,18 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReactionsDeleteLegacyPathParams extends SpeakeasyBase {
-    reactionId: number;
-}
-export declare class ReactionsDeleteLegacy415ApplicationJson extends SpeakeasyBase {
-    documentationUrl: string;
-    message: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ReactionsDeleteLegacyRequest extends SpeakeasyBase {
-    pathParams: ReactionsDeleteLegacyPathParams;
+    reactionId: number;
 }
 export declare class ReactionsDeleteLegacyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Requires authentication
+     */
     basicError?: shared.BasicError;
-    reactionsDeleteLegacy415ApplicationJSONObject?: ReactionsDeleteLegacy415ApplicationJson;
 }

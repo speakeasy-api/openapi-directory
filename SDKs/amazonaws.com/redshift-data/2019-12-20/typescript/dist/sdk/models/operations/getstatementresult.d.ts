@@ -1,12 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetStatementResultQueryParams extends SpeakeasyBase {
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum GetStatementResultXAmzTargetEnum {
     RedshiftDataGetStatementResult = "RedshiftData.GetStatementResult"
 }
-export declare class GetStatementResultHeaders extends SpeakeasyBase {
+export declare class GetStatementResultRequest extends SpeakeasyBase {
+    getStatementResultRequest: shared.GetStatementResultRequest;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,16 +19,24 @@ export declare class GetStatementResultHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetStatementResultXAmzTargetEnum;
 }
-export declare class GetStatementResultRequest extends SpeakeasyBase {
-    queryParams: GetStatementResultQueryParams;
-    headers: GetStatementResultHeaders;
-    request: shared.GetStatementResultRequest;
-}
 export declare class GetStatementResultResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getStatementResultResponse?: shared.GetStatementResultResponse;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

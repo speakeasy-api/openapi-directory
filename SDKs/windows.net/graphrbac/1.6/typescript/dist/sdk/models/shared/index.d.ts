@@ -14,6 +14,7 @@ export * from "./informationalurl";
 export * from "./keycredentiallistresult";
 export * from "./keycredentialsupdateparameters";
 export * from "./oauth2permission";
+export * from "./oauth2permissiongrant";
 export * from "./oauth2permissiongrantlistresult";
 export * from "./odataerror";
 export * from "./optionalclaim";

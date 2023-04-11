@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ConfigTftp extends SpeakeasyBase {
+/**
+ * successful operation
+ */
+export declare class ConfigTFTP extends SpeakeasyBase {
     cache?: number;
     client?: string;
     dstfile?: string;

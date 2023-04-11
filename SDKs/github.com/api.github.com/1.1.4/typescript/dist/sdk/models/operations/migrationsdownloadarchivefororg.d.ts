@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class MigrationsDownloadArchiveForOrgPathParams extends SpeakeasyBase {
-    migrationId: number;
-    org: string;
-}
+import { AxiosResponse } from "axios";
 export declare class MigrationsDownloadArchiveForOrgRequest extends SpeakeasyBase {
-    pathParams: MigrationsDownloadArchiveForOrgPathParams;
+    /**
+     * The unique identifier of the migration.
+     */
+    migrationId: number;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    org: string;
 }
 export declare class MigrationsDownloadArchiveForOrgResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Resource not found
+     */
     basicError?: shared.BasicError;
 }

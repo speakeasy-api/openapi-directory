@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Key {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,12 +9,12 @@ export declare class Key {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * headKeyPk - HEAD info on Authentiq ID
+     * HEAD info on Authentiq ID
      *
-    **/
-    headKeyPk(req: operations.HeadKeyPkRequest, config?: AxiosRequestConfig): Promise<operations.HeadKeyPkResponse>;
+     */
+    headKeyPK(req: operations.HeadKeyPKRequest, config?: AxiosRequestConfig): Promise<operations.HeadKeyPKResponse>;
     /**
-     * keyBind - Update Authentiq ID by replacing the object.
+     * Update Authentiq ID by replacing the object.
      *
      * v4: `JWT(sub,email,phone)` to bind email/phone hash;
      *
@@ -23,37 +23,37 @@ export declare class Key {
      *
      * See: https://github.com/skion/authentiq/wiki/JWT-Examples
      *
-    **/
+     */
     keyBind(req: operations.KeyBindRequest, config?: AxiosRequestConfig): Promise<operations.KeyBindResponse>;
     /**
-     * keyRegister - Register a new ID `JWT(sub, devtoken)`
+     * Register a new ID `JWT(sub, devtoken)`
      *
      * v5: `JWT(sub, pk, devtoken, ...)`
      *
      * See: https://github.com/skion/authentiq/wiki/JWT-Examples
      *
-    **/
-    keyRegister(req: operations.KeyRegisterRequest, config?: AxiosRequestConfig): Promise<operations.KeyRegisterResponse>;
+     */
+    keyRegister(req: Uint8Array, config?: AxiosRequestConfig): Promise<operations.KeyRegisterResponse>;
     /**
-     * keyRetrieve - Get public details of an Authentiq ID.
+     * Get public details of an Authentiq ID.
      *
-    **/
+     */
     keyRetrieve(req: operations.KeyRetrieveRequest, config?: AxiosRequestConfig): Promise<operations.KeyRetrieveResponse>;
     /**
-     * keyRevoke - Revoke an Identity (Key) with a revocation secret
-    **/
+     * Revoke an Identity (Key) with a revocation secret
+     */
     keyRevoke(req: operations.KeyRevokeRequest, config?: AxiosRequestConfig): Promise<operations.KeyRevokeResponse>;
     /**
-     * keyRevokeNosecret - Revoke an Authentiq ID using email & phone.
+     * Revoke an Authentiq ID using email & phone.
      *
      * If called with `email` and `phone` only, a verification code
      * will be sent by email. Do a second call adding `code` to
      * complete the revocation.
      *
-    **/
+     */
     keyRevokeNosecret(req: operations.KeyRevokeNosecretRequest, config?: AxiosRequestConfig): Promise<operations.KeyRevokeNosecretResponse>;
     /**
-     * keyUpdate - update properties of an Authentiq ID.
+     * update properties of an Authentiq ID.
      * (not operational in v4; use PUT for now)
      *
      * v5: POST issuer-signed email & phone scopes in
@@ -61,6 +61,6 @@ export declare class Key {
      *
      * See: https://github.com/skion/authentiq/wiki/JWT-Examples
      *
-    **/
+     */
     keyUpdate(req: operations.KeyUpdateRequest, config?: AxiosRequestConfig): Promise<operations.KeyUpdateResponse>;
 }

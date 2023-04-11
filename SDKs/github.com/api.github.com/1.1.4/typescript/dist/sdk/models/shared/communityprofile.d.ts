@@ -1,39 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-/**
- * Code of Conduct Simple
-**/
-export declare class CommunityProfileFilesCodeOfConductSimple extends SpeakeasyBase {
-    htmlUrl: string;
-    key: string;
-    name: string;
-    url: string;
-}
-export declare class CommunityProfileFilesCommunityHealthFile extends SpeakeasyBase {
-    htmlUrl: string;
-    url: string;
-}
-/**
- * License Simple
-**/
-export declare class CommunityProfileFilesLicenseSimple extends SpeakeasyBase {
-    htmlUrl?: string;
-    key: string;
-    name: string;
-    nodeId: string;
-    spdxId: string;
-    url: string;
-}
+import { NullableCodeOfConductSimple } from "./nullablecodeofconductsimple";
+import { NullableCommunityHealthFile } from "./nullablecommunityhealthfile";
+import { NullableLicenseSimple } from "./nullablelicensesimple";
 export declare class CommunityProfileFiles extends SpeakeasyBase {
-    codeOfConduct: CommunityProfileFilesCodeOfConductSimple;
-    contributing: CommunityProfileFilesCommunityHealthFile;
-    issueTemplate: CommunityProfileFilesCommunityHealthFile;
-    license: CommunityProfileFilesLicenseSimple;
-    pullRequestTemplate: CommunityProfileFilesCommunityHealthFile;
-    readme: CommunityProfileFilesCommunityHealthFile;
+    /**
+     * Code of Conduct Simple
+     */
+    codeOfConduct: NullableCodeOfConductSimple;
+    codeOfConductFile: NullableCommunityHealthFile;
+    contributing: NullableCommunityHealthFile;
+    issueTemplate: NullableCommunityHealthFile;
+    /**
+     * License Simple
+     */
+    license: NullableLicenseSimple;
+    pullRequestTemplate: NullableCommunityHealthFile;
+    readme: NullableCommunityHealthFile;
 }
 /**
  * Community Profile
-**/
+ */
 export declare class CommunityProfile extends SpeakeasyBase {
     contentReportsEnabled?: boolean;
     description: string;

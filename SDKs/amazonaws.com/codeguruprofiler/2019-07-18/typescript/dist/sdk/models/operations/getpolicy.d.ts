@@ -1,9 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetPolicyPathParams extends SpeakeasyBase {
-    profilingGroupName: string;
-}
-export declare class GetPolicyHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetPolicyRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,16 +9,29 @@ export declare class GetPolicyHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class GetPolicyRequest extends SpeakeasyBase {
-    pathParams: GetPolicyPathParams;
-    headers: GetPolicyHeaders;
+    /**
+     * The name of the profiling group.
+     */
+    profilingGroupName: string;
 }
 export declare class GetPolicyResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getPolicyResponse?: shared.GetPolicyResponse;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

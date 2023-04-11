@@ -1,24 +1,22 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AccountListNodeAgentSkusRequest, AccountListNodeAgentSkusResponse } from "openapi/src/sdk/models/operations";
+import {
+  AccountListNodeAgentSkusRequest,
+  AccountListNodeAgentSkusResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: AccountListNodeAgentSkusRequest = {
-  queryParams: {
-    dollarFilter: "sit",
-    apiVersion: "voluptas",
-    maxresults: 6050128673802995827,
-    timeout: 501233450539197794,
-  },
-  headers: {
-    clientRequestId: "consequuntur",
-    ocpDate: "dolor",
-    returnClientRequestId: true,
-  },
+  dollarFilter: "corrupti",
+  apiVersion: "provident",
+  clientRequestId: "distinctio",
+  maxresults: 844266,
+  ocpDate: "unde",
+  returnClientRequestId: false,
+  timeout: 857946,
 };
 
 sdk.accounts.accountListNodeAgentSkus(req).then((res: AccountListNodeAgentSkusResponse | AxiosError) => {

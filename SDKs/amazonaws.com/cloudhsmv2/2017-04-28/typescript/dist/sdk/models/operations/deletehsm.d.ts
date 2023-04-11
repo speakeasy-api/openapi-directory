@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteHsmXAmzTargetEnum {
     BaldrApiServiceDeleteHsm = "BaldrApiService.DeleteHsm"
 }
-export declare class DeleteHsmHeaders extends SpeakeasyBase {
+export declare class DeleteHsmRequest extends SpeakeasyBase {
+    deleteHsmRequest: shared.DeleteHsmRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class DeleteHsmHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteHsmXAmzTargetEnum;
 }
-export declare class DeleteHsmRequest extends SpeakeasyBase {
-    headers: DeleteHsmHeaders;
-    request: shared.DeleteHsmRequest;
-}
 export declare class DeleteHsmResponse extends SpeakeasyBase {
+    /**
+     * CloudHsmAccessDeniedException
+     */
     cloudHsmAccessDeniedException?: any;
+    /**
+     * CloudHsmInternalFailureException
+     */
     cloudHsmInternalFailureException?: any;
+    /**
+     * CloudHsmInvalidRequestException
+     */
     cloudHsmInvalidRequestException?: any;
+    /**
+     * CloudHsmResourceNotFoundException
+     */
     cloudHsmResourceNotFoundException?: any;
+    /**
+     * CloudHsmServiceException
+     */
     cloudHsmServiceException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteHsmResponse?: shared.DeleteHsmResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Operations about requests
+ */
 export declare class Requests {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,27 +12,31 @@ export declare class Requests {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteRequestsId - Delete Request
-     *
      * Delete Request
-    **/
+     *
+     * @remarks
+     * Delete Request
+     */
     deleteRequestsId(req: operations.DeleteRequestsIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteRequestsIdResponse>;
     /**
-     * getRequests - List Requests
-     *
      * List Requests
-    **/
+     *
+     * @remarks
+     * List Requests
+     */
     getRequests(req: operations.GetRequestsRequest, config?: AxiosRequestConfig): Promise<operations.GetRequestsResponse>;
     /**
-     * getRequestsFoldersPath - List Requests
-     *
      * List Requests
-    **/
+     *
+     * @remarks
+     * List Requests
+     */
     getRequestsFoldersPath(req: operations.GetRequestsFoldersPathRequest, config?: AxiosRequestConfig): Promise<operations.GetRequestsFoldersPathResponse>;
     /**
-     * postRequests - Create Request
-     *
      * Create Request
-    **/
-    postRequests(req: operations.PostRequestsRequest, config?: AxiosRequestConfig): Promise<operations.PostRequestsResponse>;
+     *
+     * @remarks
+     * Create Request
+     */
+    postRequests(req: operations.PostRequestsRequestBody, config?: AxiosRequestConfig): Promise<operations.PostRequestsResponse>;
 }

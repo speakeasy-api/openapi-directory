@@ -1,16 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterprisePathParams extends SpeakeasyBase {
-    enterprise: string;
-    runnerGroupId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequestBody extends SpeakeasyBase {
+    /**
+     * List of organization IDs that can access the runner group.
+     */
     selectedOrganizationIds: number[];
 }
 export declare class EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest extends SpeakeasyBase {
-    pathParams: EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterprisePathParams;
-    request?: EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequestBody;
+    requestBody: EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequestBody;
+    /**
+     * The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+     */
+    enterprise: string;
+    /**
+     * Unique identifier of the self-hosted runner group.
+     */
+    runnerGroupId: number;
 }
 export declare class EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,9 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare enum CreateLfTagXAmzTargetEnum {
-    AwsLakeFormationCreateLfTag = "AWSLakeFormation.CreateLFTag"
+import { AxiosResponse } from "axios";
+export declare class CreateLFTagRequestBody extends SpeakeasyBase {
+    /**
+     * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata store. It contains database definitions, table definitions, and other control information to manage your Lake Formation environment.
+     */
+    catalogId?: string;
+    /**
+     * The key-name for the LF-tag.
+     */
+    tagKey: string;
+    /**
+     * A list of possible values an attribute can take.
+     */
+    tagValues: string[];
 }
-export declare class CreateLfTagHeaders extends SpeakeasyBase {
+export declare class CreateLFTagRequest extends SpeakeasyBase {
+    requestBody: CreateLFTagRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,20 +23,37 @@ export declare class CreateLfTagHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: CreateLfTagXAmzTargetEnum;
 }
-export declare class CreateLfTagRequest extends SpeakeasyBase {
-    headers: CreateLfTagHeaders;
-    request: shared.CreateLfTagRequest;
-}
-export declare class CreateLfTagResponse extends SpeakeasyBase {
+export declare class CreateLFTagResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     createLFTagResponse?: Record<string, any>;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
-    resourceNumberLimitExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNumberLimitExceededException
+     */
+    resourceNumberLimitExceededException?: any;
 }

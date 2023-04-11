@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostImportVolumeActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTImportVolumeActionEnum {
     ImportVolume = "ImportVolume"
 }
-export declare enum PostImportVolumeVersionEnum {
+export declare enum POSTImportVolumeVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostImportVolumeQueryParams extends SpeakeasyBase {
-    action: PostImportVolumeActionEnum;
-    version: PostImportVolumeVersionEnum;
-}
-export declare class PostImportVolumeHeaders extends SpeakeasyBase {
+export declare class POSTImportVolumeRequest extends SpeakeasyBase {
+    action: POSTImportVolumeActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTImportVolumeVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostImportVolumeHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostImportVolumeRequest extends SpeakeasyBase {
-    queryParams: PostImportVolumeQueryParams;
-    headers: PostImportVolumeHeaders;
-    request?: Uint8Array;
-}
-export declare class PostImportVolumeResponse extends SpeakeasyBase {
+export declare class POSTImportVolumeResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

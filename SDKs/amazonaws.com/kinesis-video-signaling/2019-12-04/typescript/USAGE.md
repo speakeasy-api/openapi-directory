@@ -1,33 +1,33 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetIceServerConfigRequest, GetIceServerConfigResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GetIceServerConfigRequest,
+  GetIceServerConfigResponse,
+  GetIceServerConfigRequestBodyServiceEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    hmac: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: GetIceServerConfigRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
+  requestBody: {
+    channelARN: "corrupti",
+    clientId: "provident",
+    service: GetIceServerConfigRequestBodyServiceEnum.Turn,
+    username: "Micheal_Sporer",
   },
-  request: {
-    channelARN: "voluptas",
-    clientId: "fugit",
-    service: "TURN",
-    username: "nihil",
-  },
+  xAmzAlgorithm: "corrupti",
+  xAmzContentSha256: "illum",
+  xAmzCredential: "vel",
+  xAmzDate: "error",
+  xAmzSecurityToken: "deserunt",
+  xAmzSignature: "suscipit",
+  xAmzSignedHeaders: "iure",
 };
 
 sdk.getIceServerConfig(req).then((res: GetIceServerConfigResponse | AxiosError) => {

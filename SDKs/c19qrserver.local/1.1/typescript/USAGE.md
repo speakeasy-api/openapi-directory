@@ -1,21 +1,20 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DeleteSigninSigninIdRequest, DeleteSigninSigninIdResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  DeleteSigninSigninIdRequest,
+  DeleteSigninSigninIdResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    tokenHeader: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: DeleteSigninSigninIdRequest = {
-  pathParams: {
-    signinId: 8717895732742165505,
+    tokenHeader: "YOUR_API_KEY_HERE",
   },
+});
+
+const req: DeleteSigninSigninIdRequest = {
+  signinId: 1,
 };
 
 sdk.attendeesSignins.deleteSigninSigninId(req).then((res: DeleteSigninSigninIdResponse | AxiosError) => {

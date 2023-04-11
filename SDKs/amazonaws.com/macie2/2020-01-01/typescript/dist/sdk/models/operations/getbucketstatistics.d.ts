@@ -1,6 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetBucketStatisticsHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetBucketStatisticsRequestBody extends SpeakeasyBase {
+    /**
+     * The unique identifier for the Amazon Web Services account.
+     */
+    accountId?: string;
+}
+export declare class GetBucketStatisticsRequest extends SpeakeasyBase {
+    requestBody: GetBucketStatisticsRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -9,22 +17,40 @@ export declare class GetBucketStatisticsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetBucketStatisticsRequestBody extends SpeakeasyBase {
-    accountId?: string;
-}
-export declare class GetBucketStatisticsRequest extends SpeakeasyBase {
-    headers: GetBucketStatisticsHeaders;
-    request: GetBucketStatisticsRequestBody;
-}
 export declare class GetBucketStatisticsResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getBucketStatisticsResponse?: shared.GetBucketStatisticsResponse;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
+    /**
+     * ServiceQuotaExceededException
+     */
     serviceQuotaExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

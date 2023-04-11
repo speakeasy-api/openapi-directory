@@ -1,12 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ListHyponymsQueryParams extends SpeakeasyBase {
-    family?: string;
-    maxLevel?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ListHyponymsRequest extends SpeakeasyBase {
-    queryParams: ListHyponymsQueryParams;
+    /**
+     * {{apiKeyDescription}}
+     */
+    ocpApimSubscriptionKey?: string;
+    /**
+     * (Required) a numeric identifier of the family
+     */
+    family?: string;
+    /**
+     * (Required) maximum distance from the family
+     */
+    maxLevel?: string;
 }
 export declare class ListHyponymsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

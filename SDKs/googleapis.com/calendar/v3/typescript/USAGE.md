@@ -1,34 +1,27 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CalendarAclDeleteRequest, CalendarAclDeleteResponse } from "openapi/src/sdk/models/operations";
+import {
+  CalendarAclDeleteRequest,
+  CalendarAclDeleteResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: CalendarAclDeleteRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    calendarId: "sit",
-    ruleId: "voluptas",
-  },
-  queryParams: {
-    alt: "json",
-    fields: "expedita",
-    key: "consequuntur",
-    oauthToken: "dolor",
-    prettyPrint: true,
-    quotaUser: "voluptas",
-    userIp: "fugit",
-  },
+  alt: AltEnum.Json,
+  calendarId: "corrupti",
+  fields: "provident",
+  key: "distinctio",
+  oauthToken: "quibusdam",
+  prettyPrint: false,
+  quotaUser: "unde",
+  ruleId: "nulla",
+  userIp: "corrupti",
 };
 
 sdk.acl.calendarAclDelete(req).then((res: CalendarAclDeleteResponse | AxiosError) => {

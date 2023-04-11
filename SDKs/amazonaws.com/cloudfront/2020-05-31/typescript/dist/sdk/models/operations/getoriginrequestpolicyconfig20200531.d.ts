@@ -1,8 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetOriginRequestPolicyConfig20200531PathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetOriginRequestPolicyConfig20200531Request extends SpeakeasyBase {
+    /**
+     * The unique identifier for the origin request policy. If the origin request policy is attached to a distribution's cache behavior, you can get the policy's identifier using <code>ListDistributions</code> or <code>GetDistribution</code>. If the origin request policy is not attached to a cache behavior, you can get the identifier using <code>ListOriginRequestPolicies</code>.
+     */
     id: string;
-}
-export declare class GetOriginRequestPolicyConfig20200531Headers extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,12 +13,9 @@ export declare class GetOriginRequestPolicyConfig20200531Headers extends Speakea
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetOriginRequestPolicyConfig20200531Request extends SpeakeasyBase {
-    pathParams: GetOriginRequestPolicyConfig20200531PathParams;
-    headers: GetOriginRequestPolicyConfig20200531Headers;
-}
 export declare class GetOriginRequestPolicyConfig20200531Response extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

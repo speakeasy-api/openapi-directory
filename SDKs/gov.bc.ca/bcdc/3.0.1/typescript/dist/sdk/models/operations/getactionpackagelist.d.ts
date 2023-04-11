@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetActionPackageListQueryParams extends SpeakeasyBase {
-    limit?: number;
-    offset?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetActionPackageListRequest extends SpeakeasyBase {
-    queryParams: GetActionPackageListQueryParams;
+    /**
+     * The number of packages to be returned per page
+     */
+    limit?: number;
+    /**
+     * The offset (index) of the first package to return
+     */
+    offset?: number;
 }
 export declare class GetActionPackageListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

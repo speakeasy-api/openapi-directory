@@ -1,18 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreateVideoCustomLogoPathParams extends SpeakeasyBase {
-    videoId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class CreateVideoCustomLogoSecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
+    oauth2: string;
 }
 export declare class CreateVideoCustomLogoRequest extends SpeakeasyBase {
-    pathParams: CreateVideoCustomLogoPathParams;
-    security: CreateVideoCustomLogoSecurity;
+    /**
+     * The ID of the video.
+     */
+    videoId: number;
 }
 export declare class CreateVideoCustomLogoResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * If the user is attempting to upload pictures for another user's videos.
+     */
     legacyError?: shared.LegacyError;
+    /**
+     * Standard request.
+     */
     picture?: shared.Picture;
 }

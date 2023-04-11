@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class GetResolutions {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +9,10 @@ export declare class GetResolutions {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * resolutions - Fetch all available resolution on different OS
-     *
      * Fetch all available resolution on different OS
-    **/
-    resolutions(req: operations.ResolutionsRequest, config?: AxiosRequestConfig): Promise<operations.ResolutionsResponse>;
+     *
+     * @remarks
+     * Fetch all available resolution on different OS
+     */
+    resolutions(config?: AxiosRequestConfig): Promise<operations.ResolutionsResponse>;
 }

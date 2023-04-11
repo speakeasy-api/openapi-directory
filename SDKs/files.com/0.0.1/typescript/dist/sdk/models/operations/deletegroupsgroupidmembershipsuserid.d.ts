@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteGroupsGroupIdMembershipsUserIdPathParams extends SpeakeasyBase {
-    groupId: number;
-    userId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteGroupsGroupIdMembershipsUserIdRequest extends SpeakeasyBase {
-    pathParams: DeleteGroupsGroupIdMembershipsUserIdPathParams;
+    /**
+     * Group ID from which to remove user.
+     */
+    groupId: number;
+    /**
+     * User ID to remove from group.
+     */
+    userId: number;
 }
 export declare class DeleteGroupsGroupIdMembershipsUserIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

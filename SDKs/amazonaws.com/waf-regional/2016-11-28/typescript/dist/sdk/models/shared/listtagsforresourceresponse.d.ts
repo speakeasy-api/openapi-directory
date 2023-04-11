@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { TagInfoForResource } from "./taginfoforresource";
+/**
+ * Success
+ */
 export declare class ListTagsForResourceResponse extends SpeakeasyBase {
     nextMarker?: string;
     tagInfoForResource?: TagInfoForResource;

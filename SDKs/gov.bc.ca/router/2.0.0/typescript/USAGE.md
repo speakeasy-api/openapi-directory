@@ -1,32 +1,33 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetDirectionsOutputFormatRequest, GetDirectionsOutputFormatResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GetDirectionsOutputFormatRequest,
+  GetDirectionsOutputFormatResponse,
+  GetDirectionsOutputFormatCriteriaEnum,
+  GetDirectionsOutputFormatDistanceUnitEnum,
+  GetDirectionsOutputFormatOutputFormatEnum,
+  GetDirectionsOutputFormatOutputSrsEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    apikey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    apikey: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: GetDirectionsOutputFormatRequest = {
-  pathParams: {
-    outputFormat: "json",
-  },
-  queryParams: {
-    correctSide: false,
-    criteria: "fastest",
-    departure: "2019-04-21T07:38:14Z",
-    disable: "consequuntur",
-    distanceUnit: "km",
-    outputSRS: 1774932891286980153,
-    points: "voluptas",
-    roundTrip: true,
-    routeDescription: "et",
-  },
+  correctSide: false,
+  criteria: GetDirectionsOutputFormatCriteriaEnum.Fastest,
+  departure: "2021-07-27T21:52:56.087Z",
+  disable: "quibusdam",
+  distanceUnit: GetDirectionsOutputFormatDistanceUnitEnum.Mi,
+  outputFormat: GetDirectionsOutputFormatOutputFormatEnum.Html,
+  outputSRS: GetDirectionsOutputFormatOutputSrsEnum.TwentySixThousandNineHundredAndEight,
+  points: "illum",
+  roundTrip: false,
+  routeDescription: "vel",
 };
 
 sdk.directions.getDirectionsOutputFormat(req).then((res: GetDirectionsOutputFormatResponse | AxiosError) => {

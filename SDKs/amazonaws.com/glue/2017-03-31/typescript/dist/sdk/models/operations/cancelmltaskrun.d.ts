@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum CancelMlTaskRunXAmzTargetEnum {
-    AwsGlueCancelMlTaskRun = "AWSGlue.CancelMLTaskRun"
+import { AxiosResponse } from "axios";
+export declare enum CancelMLTaskRunXAmzTargetEnum {
+    AWSGlueCancelMLTaskRun = "AWSGlue.CancelMLTaskRun"
 }
-export declare class CancelMlTaskRunHeaders extends SpeakeasyBase {
+export declare class CancelMLTaskRunRequest extends SpeakeasyBase {
+    cancelMLTaskRunRequest: shared.CancelMLTaskRunRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,18 +13,30 @@ export declare class CancelMlTaskRunHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: CancelMlTaskRunXAmzTargetEnum;
+    xAmzTarget: CancelMLTaskRunXAmzTargetEnum;
 }
-export declare class CancelMlTaskRunRequest extends SpeakeasyBase {
-    headers: CancelMlTaskRunHeaders;
-    request: shared.CancelMlTaskRunRequest;
-}
-export declare class CancelMlTaskRunResponse extends SpeakeasyBase {
-    cancelMLTaskRunResponse?: shared.CancelMlTaskRunResponse;
+export declare class CancelMLTaskRunResponse extends SpeakeasyBase {
+    /**
+     * Success
+     */
+    cancelMLTaskRunResponse?: shared.CancelMLTaskRunResponse;
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

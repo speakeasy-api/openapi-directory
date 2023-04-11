@@ -1,19 +1,28 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetV05HiServicesServiceIdPathParams extends SpeakeasyBase {
-    serviceId: string;
-}
-export declare class GetV05HiServicesServiceIdHeaders extends SpeakeasyBase {
-    authorization: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetV05HiServicesServiceIdRequest extends SpeakeasyBase {
-    pathParams: GetV05HiServicesServiceIdPathParams;
-    headers: GetV05HiServicesServiceIdHeaders;
+    /**
+     * Access token which was issued after successful login with gateway auth server.
+     */
+    authorization: string;
+    serviceId: string;
 }
 export declare class GetV05HiServicesServiceIdResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
+    /**
+     * **Causes:**
+     *
+     * @remarks
+     *   * Unauthorized request
+     *
+     */
     errorResponse?: shared.ErrorResponse;
+    /**
+     * service details fetched successfully
+     */
     serviceProfileResponse?: shared.ServiceProfileResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

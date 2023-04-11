@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListTaskExecutionsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListTaskExecutionsXAmzTargetEnum {
     FmrsServiceListTaskExecutions = "FmrsService.ListTaskExecutions"
 }
-export declare class ListTaskExecutionsHeaders extends SpeakeasyBase {
+export declare class ListTaskExecutionsRequest extends SpeakeasyBase {
+    listTaskExecutionsRequest: shared.ListTaskExecutionsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,15 +23,20 @@ export declare class ListTaskExecutionsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListTaskExecutionsXAmzTargetEnum;
 }
-export declare class ListTaskExecutionsRequest extends SpeakeasyBase {
-    queryParams: ListTaskExecutionsQueryParams;
-    headers: ListTaskExecutionsHeaders;
-    request: shared.ListTaskExecutionsRequest;
-}
 export declare class ListTaskExecutionsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalException
+     */
     internalException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * Success
+     */
     listTaskExecutionsResponse?: shared.ListTaskExecutionsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

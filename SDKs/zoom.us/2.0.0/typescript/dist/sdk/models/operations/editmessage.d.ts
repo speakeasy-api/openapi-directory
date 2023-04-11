@@ -1,32 +1,38 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class EditMessagePathParams extends SpeakeasyBase {
-    messageId: string;
-    userId: string;
-}
-export declare class EditMessageApplicationJson extends SpeakeasyBase {
-    message?: string;
-    toChannel?: string;
-    toContact?: string;
-}
-export declare class EditMessageMultipartFormData extends SpeakeasyBase {
-    message?: string;
-    toChannel?: string;
-    toContact?: string;
-}
-export declare class EditMessageRequests extends SpeakeasyBase {
-    object?: EditMessageApplicationJson;
-    object1?: EditMessageMultipartFormData;
-}
+import { AxiosResponse } from "axios";
 export declare class EditMessageSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
+    oAuth: string;
+}
+export declare class EditMessageApplicationJSON extends SpeakeasyBase {
+    /**
+     * The edited message.
+     */
+    message?: string;
+    /**
+     * The Channel ID of the channel where you sent the message.<br>You must provide either `to_contact` or `to_channel` parameter in the API request.
+     *
+     * @remarks
+     *  Channel ID can be retrieved from List User's Channels API.
+     */
+    toChannel?: string;
+    /**
+     * The email address of the contact to whom the message was sent.<br>
+     *
+     * @remarks
+     * You must provide either `to_contact` or `to_channel` parameter in the API request.
+     */
+    toContact?: string;
 }
 export declare class EditMessageRequest extends SpeakeasyBase {
-    pathParams: EditMessagePathParams;
-    request?: EditMessageRequests;
-    security: EditMessageSecurity;
+    requestBody?: EditMessageApplicationJSON;
+    /**
+     * Message ID: Unique Identifier of the message.
+     */
+    messageId: string;
+    userId: string;
 }
 export declare class EditMessageResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostAcceptReservedInstancesExchangeQuoteActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTAcceptReservedInstancesExchangeQuoteActionEnum {
     AcceptReservedInstancesExchangeQuote = "AcceptReservedInstancesExchangeQuote"
 }
-export declare enum PostAcceptReservedInstancesExchangeQuoteVersionEnum {
+export declare enum POSTAcceptReservedInstancesExchangeQuoteVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostAcceptReservedInstancesExchangeQuoteQueryParams extends SpeakeasyBase {
-    action: PostAcceptReservedInstancesExchangeQuoteActionEnum;
-    version: PostAcceptReservedInstancesExchangeQuoteVersionEnum;
-}
-export declare class PostAcceptReservedInstancesExchangeQuoteHeaders extends SpeakeasyBase {
+export declare class POSTAcceptReservedInstancesExchangeQuoteRequest extends SpeakeasyBase {
+    action: POSTAcceptReservedInstancesExchangeQuoteActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTAcceptReservedInstancesExchangeQuoteVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostAcceptReservedInstancesExchangeQuoteHeaders extends Spe
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostAcceptReservedInstancesExchangeQuoteRequest extends SpeakeasyBase {
-    queryParams: PostAcceptReservedInstancesExchangeQuoteQueryParams;
-    headers: PostAcceptReservedInstancesExchangeQuoteHeaders;
-    request?: Uint8Array;
-}
-export declare class PostAcceptReservedInstancesExchangeQuoteResponse extends SpeakeasyBase {
+export declare class POSTAcceptReservedInstancesExchangeQuoteResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

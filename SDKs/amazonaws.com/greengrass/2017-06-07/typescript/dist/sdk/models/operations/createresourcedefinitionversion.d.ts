@@ -1,9 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreateResourceDefinitionVersionPathParams extends SpeakeasyBase {
-    resourceDefinitionId: string;
+import { AxiosResponse } from "axios";
+export declare class CreateResourceDefinitionVersionRequestBody extends SpeakeasyBase {
+    /**
+     * A list of resources.
+     */
+    resources?: shared.Resource[];
 }
-export declare class CreateResourceDefinitionVersionHeaders extends SpeakeasyBase {
+export declare class CreateResourceDefinitionVersionRequest extends SpeakeasyBase {
+    requestBody: CreateResourceDefinitionVersionRequestBody;
+    /**
+     * The ID of the resource definition.
+     */
+    resourceDefinitionId: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,19 +20,21 @@ export declare class CreateResourceDefinitionVersionHeaders extends SpeakeasyBas
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
+    /**
+     * A client token used to correlate requests and responses.
+     */
     xAmznClientToken?: string;
 }
-export declare class CreateResourceDefinitionVersionRequestBody extends SpeakeasyBase {
-    resources?: shared.Resource[];
-}
-export declare class CreateResourceDefinitionVersionRequest extends SpeakeasyBase {
-    pathParams: CreateResourceDefinitionVersionPathParams;
-    headers: CreateResourceDefinitionVersionHeaders;
-    request: CreateResourceDefinitionVersionRequestBody;
-}
 export declare class CreateResourceDefinitionVersionResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     createResourceDefinitionVersionResponse?: shared.CreateResourceDefinitionVersionResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

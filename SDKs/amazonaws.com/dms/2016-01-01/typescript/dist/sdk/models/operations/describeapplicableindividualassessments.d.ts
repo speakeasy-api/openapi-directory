@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeApplicableIndividualAssessmentsQueryParams extends SpeakeasyBase {
-    marker?: string;
-    maxRecords?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum DescribeApplicableIndividualAssessmentsXAmzTargetEnum {
-    AmazonDmSv20160101DescribeApplicableIndividualAssessments = "AmazonDMSv20160101.DescribeApplicableIndividualAssessments"
+    AmazonDMSv20160101DescribeApplicableIndividualAssessments = "AmazonDMSv20160101.DescribeApplicableIndividualAssessments"
 }
-export declare class DescribeApplicableIndividualAssessmentsHeaders extends SpeakeasyBase {
+export declare class DescribeApplicableIndividualAssessmentsRequest extends SpeakeasyBase {
+    describeApplicableIndividualAssessmentsMessage: shared.DescribeApplicableIndividualAssessmentsMessage;
+    /**
+     * Pagination token
+     */
+    marker?: string;
+    /**
+     * Pagination limit
+     */
+    maxRecords?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,16 +23,24 @@ export declare class DescribeApplicableIndividualAssessmentsHeaders extends Spea
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeApplicableIndividualAssessmentsXAmzTargetEnum;
 }
-export declare class DescribeApplicableIndividualAssessmentsRequest extends SpeakeasyBase {
-    queryParams: DescribeApplicableIndividualAssessmentsQueryParams;
-    headers: DescribeApplicableIndividualAssessmentsHeaders;
-    request: shared.DescribeApplicableIndividualAssessmentsMessage;
-}
 export declare class DescribeApplicableIndividualAssessmentsResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedFault
+     */
     accessDeniedFault?: any;
     contentType: string;
+    /**
+     * Success
+     */
     describeApplicableIndividualAssessmentsResponse?: shared.DescribeApplicableIndividualAssessmentsResponse;
+    /**
+     * InvalidResourceStateFault
+     */
     invalidResourceStateFault?: any;
-    resourceNotFoundFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundFault
+     */
+    resourceNotFoundFault?: any;
 }

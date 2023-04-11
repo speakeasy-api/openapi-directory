@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateAppCookieStickinessPolicyActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateAppCookieStickinessPolicyActionEnum {
     CreateAppCookieStickinessPolicy = "CreateAppCookieStickinessPolicy"
 }
-export declare enum PostCreateAppCookieStickinessPolicyVersionEnum {
+export declare enum POSTCreateAppCookieStickinessPolicyVersionEnum {
     TwoThousandAndTwelve0601 = "2012-06-01"
 }
-export declare class PostCreateAppCookieStickinessPolicyQueryParams extends SpeakeasyBase {
-    action: PostCreateAppCookieStickinessPolicyActionEnum;
-    version: PostCreateAppCookieStickinessPolicyVersionEnum;
-}
-export declare class PostCreateAppCookieStickinessPolicyHeaders extends SpeakeasyBase {
+export declare class POSTCreateAppCookieStickinessPolicyRequest extends SpeakeasyBase {
+    action: POSTCreateAppCookieStickinessPolicyActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateAppCookieStickinessPolicyVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateAppCookieStickinessPolicyHeaders extends Speakeas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateAppCookieStickinessPolicyRequest extends SpeakeasyBase {
-    queryParams: PostCreateAppCookieStickinessPolicyQueryParams;
-    headers: PostCreateAppCookieStickinessPolicyHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateAppCookieStickinessPolicyResponse extends SpeakeasyBase {
+export declare class POSTCreateAppCookieStickinessPolicyResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

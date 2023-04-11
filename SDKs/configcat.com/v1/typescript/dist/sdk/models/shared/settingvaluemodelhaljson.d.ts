@@ -1,8 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { IntegrationLinkTypeEnum } from "./integrationlinktypeenum";
-import { SettingTypeEnum } from "./settingtypeenum";
 import { RolloutPercentageItemModel } from "./rolloutpercentageitemmodel";
 import { RolloutRuleModel } from "./rolloutrulemodel";
+import { SettingTypeEnum } from "./settingtypeenum";
 export declare class SettingValueModelHaljsonEmbeddedConfigEmbeddedProductEmbeddedOrganizationLinks extends SpeakeasyBase {
     members?: string;
     products?: string;
@@ -20,14 +20,18 @@ export declare class SettingValueModelHaljsonEmbeddedConfigEmbeddedProductLinks 
     environments?: string;
     members?: string;
     permissionGroups?: string;
+    segments?: string;
     self?: string;
     tags?: string;
 }
 export declare class SettingValueModelHaljsonEmbeddedConfigEmbeddedProduct extends SpeakeasyBase {
     embedded?: SettingValueModelHaljsonEmbeddedConfigEmbeddedProductEmbedded;
     links?: SettingValueModelHaljsonEmbeddedConfigEmbeddedProductLinks;
+    description?: string;
     name?: string;
+    order?: number;
     productId?: string;
+    reasonRequired?: boolean;
 }
 export declare class SettingValueModelHaljsonEmbeddedConfigEmbedded extends SpeakeasyBase {
     product?: SettingValueModelHaljsonEmbeddedConfigEmbeddedProduct;
@@ -40,7 +44,9 @@ export declare class SettingValueModelHaljsonEmbeddedConfig extends SpeakeasyBas
     embedded?: SettingValueModelHaljsonEmbeddedConfigEmbedded;
     links?: SettingValueModelHaljsonEmbeddedConfigLinks;
     configId?: string;
+    description?: string;
     name?: string;
+    order?: number;
 }
 export declare class SettingValueModelHaljsonEmbeddedEnvironmentEmbeddedProductEmbeddedOrganizationLinks extends SpeakeasyBase {
     members?: string;
@@ -59,14 +65,18 @@ export declare class SettingValueModelHaljsonEmbeddedEnvironmentEmbeddedProductL
     environments?: string;
     members?: string;
     permissionGroups?: string;
+    segments?: string;
     self?: string;
     tags?: string;
 }
 export declare class SettingValueModelHaljsonEmbeddedEnvironmentEmbeddedProduct extends SpeakeasyBase {
     embedded?: SettingValueModelHaljsonEmbeddedEnvironmentEmbeddedProductEmbedded;
     links?: SettingValueModelHaljsonEmbeddedEnvironmentEmbeddedProductLinks;
+    description?: string;
     name?: string;
+    order?: number;
     productId?: string;
+    reasonRequired?: boolean;
 }
 export declare class SettingValueModelHaljsonEmbeddedEnvironmentEmbedded extends SpeakeasyBase {
     product?: SettingValueModelHaljsonEmbeddedEnvironmentEmbeddedProduct;
@@ -77,8 +87,12 @@ export declare class SettingValueModelHaljsonEmbeddedEnvironmentLinks extends Sp
 export declare class SettingValueModelHaljsonEmbeddedEnvironment extends SpeakeasyBase {
     embedded?: SettingValueModelHaljsonEmbeddedEnvironmentEmbedded;
     links?: SettingValueModelHaljsonEmbeddedEnvironmentLinks;
+    color?: string;
+    description?: string;
     environmentId?: string;
     name?: string;
+    order?: number;
+    reasonRequired?: boolean;
 }
 export declare class SettingValueModelHaljsonEmbeddedIntegrationLinks extends SpeakeasyBase {
     description?: string;
@@ -90,13 +104,11 @@ export declare class SettingValueModelHaljsonEmbeddedSetting extends SpeakeasyBa
     createdAt?: Date;
     creatorEmail?: string;
     creatorFullName?: string;
-    expirationWarningAt?: Date;
     hint?: string;
     isWatching?: boolean;
     key?: string;
     name?: string;
-    ownerEmail?: string;
-    ownerFullName?: string;
+    order?: number;
     settingId?: number;
     settingType?: SettingTypeEnum;
 }
@@ -116,14 +128,26 @@ export declare class SettingValueModelHaljsonEmbedded extends SpeakeasyBase {
 export declare class SettingValueModelHaljsonLinks extends SpeakeasyBase {
     self?: string;
 }
+/**
+ * When everything is ok, the setting value data returned.
+ */
 export declare class SettingValueModelHaljson extends SpeakeasyBase {
     embedded?: SettingValueModelHaljsonEmbedded;
     links?: SettingValueModelHaljsonLinks;
     lastUpdaterUserEmail?: string;
     lastUpdaterUserFullName?: string;
     readOnly?: boolean;
+    /**
+     * The percentage rule collection.
+     */
     rolloutPercentageItems?: RolloutPercentageItemModel[];
+    /**
+     * The targeting rule collection.
+     */
     rolloutRules?: RolloutRuleModel[];
     updatedAt?: Date;
-    value?: Record<string, any>;
+    /**
+     * The value to serve. It must respect the setting type.
+     */
+    value?: any;
 }

@@ -8,5 +8,4 @@ export * from "./googlehomeenterprisesdmv1liststructuresresponse";
 export * from "./googlehomeenterprisesdmv1parentrelation";
 export * from "./googlehomeenterprisesdmv1room";
 export * from "./googlehomeenterprisesdmv1structure";
-export * from "./security";
 export * from "./xgafvenum";

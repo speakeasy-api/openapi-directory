@@ -1,5 +1,9 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ *
+ * @see {@link https://sms77.io/en/docs/gateway/http-api/pricing} - Retrieve pricing information
+ */
 export declare class Pricing {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;

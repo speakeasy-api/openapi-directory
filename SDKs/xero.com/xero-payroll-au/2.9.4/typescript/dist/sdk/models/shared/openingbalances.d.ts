@@ -8,8 +8,14 @@ export declare class OpeningBalances extends SpeakeasyBase {
     deductionLines?: DeductionLine[];
     earningsLines?: EarningsLine[];
     leaveLines?: LeaveLine[];
+    /**
+     * Opening Balance Date. (YYYY-MM-DD)
+     */
     openingBalanceDate?: string;
     reimbursementLines?: ReimbursementLine[];
     superLines?: SuperLine[];
+    /**
+     * Opening Balance tax
+     */
     tax?: string;
 }

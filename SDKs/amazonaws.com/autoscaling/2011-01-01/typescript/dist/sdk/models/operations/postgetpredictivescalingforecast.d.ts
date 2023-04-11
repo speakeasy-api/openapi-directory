@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostGetPredictiveScalingForecastActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTGetPredictiveScalingForecastActionEnum {
     GetPredictiveScalingForecast = "GetPredictiveScalingForecast"
 }
-export declare enum PostGetPredictiveScalingForecastVersionEnum {
+export declare enum POSTGetPredictiveScalingForecastVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class PostGetPredictiveScalingForecastQueryParams extends SpeakeasyBase {
-    action: PostGetPredictiveScalingForecastActionEnum;
-    version: PostGetPredictiveScalingForecastVersionEnum;
-}
-export declare class PostGetPredictiveScalingForecastHeaders extends SpeakeasyBase {
+export declare class POSTGetPredictiveScalingForecastRequest extends SpeakeasyBase {
+    action: POSTGetPredictiveScalingForecastActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTGetPredictiveScalingForecastVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostGetPredictiveScalingForecastHeaders extends SpeakeasyBa
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostGetPredictiveScalingForecastRequest extends SpeakeasyBase {
-    queryParams: PostGetPredictiveScalingForecastQueryParams;
-    headers: PostGetPredictiveScalingForecastHeaders;
-    request?: Uint8Array;
-}
-export declare class PostGetPredictiveScalingForecastResponse extends SpeakeasyBase {
+export declare class POSTGetPredictiveScalingForecastResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

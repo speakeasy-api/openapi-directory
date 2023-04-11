@@ -1,20 +1,43 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteTargetsTargetIdKeysIdPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteTargetsTargetIdKeysIdRequest extends SpeakeasyBase {
+    /**
+     * Object Id
+     */
     id: string;
+    /**
+     * Target id
+     */
     targetId: string;
 }
-export declare class DeleteTargetsTargetIdKeysId403ApplicationJson extends SpeakeasyBase {
+/**
+ * Not found
+ */
+export declare class DeleteTargetsTargetIdKeysId404ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Not found.
+     */
     detail?: string;
 }
-export declare class DeleteTargetsTargetIdKeysId404ApplicationJson extends SpeakeasyBase {
+/**
+ * Not allowed to perform operation
+ */
+export declare class DeleteTargetsTargetIdKeysId403ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error message.
+     */
     detail?: string;
-}
-export declare class DeleteTargetsTargetIdKeysIdRequest extends SpeakeasyBase {
-    pathParams: DeleteTargetsTargetIdKeysIdPathParams;
 }
 export declare class DeleteTargetsTargetIdKeysIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deleteTargetsTargetIdKeysId403ApplicationJSONObject?: DeleteTargetsTargetIdKeysId403ApplicationJson;
-    deleteTargetsTargetIdKeysId404ApplicationJSONObject?: DeleteTargetsTargetIdKeysId404ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Not allowed to perform operation
+     */
+    deleteTargetsTargetIdKeysId403ApplicationJSONObject?: DeleteTargetsTargetIdKeysId403ApplicationJSON;
+    /**
+     * Not found
+     */
+    deleteTargetsTargetIdKeysId404ApplicationJSONObject?: DeleteTargetsTargetIdKeysId404ApplicationJSON;
 }

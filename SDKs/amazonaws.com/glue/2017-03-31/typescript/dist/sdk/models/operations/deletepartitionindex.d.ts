@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeletePartitionIndexXAmzTargetEnum {
-    AwsGlueDeletePartitionIndex = "AWSGlue.DeletePartitionIndex"
+    AWSGlueDeletePartitionIndex = "AWSGlue.DeletePartitionIndex"
 }
-export declare class DeletePartitionIndexHeaders extends SpeakeasyBase {
+export declare class DeletePartitionIndexRequest extends SpeakeasyBase {
+    deletePartitionIndexRequest: shared.DeletePartitionIndexRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class DeletePartitionIndexHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeletePartitionIndexXAmzTargetEnum;
 }
-export declare class DeletePartitionIndexRequest extends SpeakeasyBase {
-    headers: DeletePartitionIndexHeaders;
-    request: shared.DeletePartitionIndexRequest;
-}
 export declare class DeletePartitionIndexResponse extends SpeakeasyBase {
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deletePartitionIndexResponse?: Record<string, any>;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * GlueEncryptionException
+     */
     glueEncryptionException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

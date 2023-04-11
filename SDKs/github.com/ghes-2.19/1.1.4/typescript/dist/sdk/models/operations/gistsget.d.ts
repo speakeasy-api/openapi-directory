@@ -1,25 +1,39 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GistsGetPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GistsGetRequest extends SpeakeasyBase {
+    /**
+     * gist_id parameter
+     */
     gistId: string;
 }
-export declare class GistsGet403ApplicationJsonBlock extends SpeakeasyBase {
+export declare class GistsGet403ApplicationJSONBlock extends SpeakeasyBase {
     createdAt?: string;
     htmlUrl?: string;
     reason?: string;
 }
-export declare class GistsGet403ApplicationJson extends SpeakeasyBase {
-    block?: GistsGet403ApplicationJsonBlock;
+/**
+ * Forbidden Gist
+ */
+export declare class GistsGet403ApplicationJSON extends SpeakeasyBase {
+    block?: GistsGet403ApplicationJSONBlock;
     documentationUrl?: string;
     message?: string;
-}
-export declare class GistsGetRequest extends SpeakeasyBase {
-    pathParams: GistsGetPathParams;
 }
 export declare class GistsGetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Resource not found
+     */
     basicError?: shared.BasicError;
+    /**
+     * Response
+     */
     gistSimple?: shared.GistSimple;
-    gistsGet403ApplicationJSONObject?: GistsGet403ApplicationJson;
+    /**
+     * Forbidden Gist
+     */
+    gistsGet403ApplicationJSONObject?: GistsGet403ApplicationJSON;
 }

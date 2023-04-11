@@ -1,14 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolSnmptcpIpaliasEnablePathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ProtocolSnmptcpIpaliasEnableRequest extends SpeakeasyBase {
+    /**
+     * Agent to manipulate SNMPTCP IP alias
+     */
     agentNum: number;
     ipaddress: string;
     port: number;
 }
-export declare class ProtocolSnmptcpIpaliasEnableRequest extends SpeakeasyBase {
-    pathParams: ProtocolSnmptcpIpaliasEnablePathParams;
-}
 export declare class ProtocolSnmptcpIpaliasEnableResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolSnmptcpIpaliasEnable200ApplicationJSONString?: string;
 }

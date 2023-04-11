@@ -1,20 +1,28 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class EnterpriseAdminUpdateOrgNamePathParams extends SpeakeasyBase {
-    org: string;
-}
+import { AxiosResponse } from "axios";
 export declare class EnterpriseAdminUpdateOrgNameRequestBody extends SpeakeasyBase {
+    /**
+     * The organization's new name.
+     */
     login: string;
 }
-export declare class EnterpriseAdminUpdateOrgName202ApplicationJson extends SpeakeasyBase {
+export declare class EnterpriseAdminUpdateOrgNameRequest extends SpeakeasyBase {
+    requestBody: EnterpriseAdminUpdateOrgNameRequestBody;
+    org: string;
+}
+/**
+ * Response
+ */
+export declare class EnterpriseAdminUpdateOrgName202ApplicationJSON extends SpeakeasyBase {
     message?: string;
     url?: string;
-}
-export declare class EnterpriseAdminUpdateOrgNameRequest extends SpeakeasyBase {
-    pathParams: EnterpriseAdminUpdateOrgNamePathParams;
-    request?: EnterpriseAdminUpdateOrgNameRequestBody;
 }
 export declare class EnterpriseAdminUpdateOrgNameResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    enterpriseAdminUpdateOrgName202ApplicationJSONObject?: EnterpriseAdminUpdateOrgName202ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
+    enterpriseAdminUpdateOrgName202ApplicationJSONObject?: EnterpriseAdminUpdateOrgName202ApplicationJSON;
 }

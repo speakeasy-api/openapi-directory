@@ -1,10 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { ConsentManagerPatientID } from "./consentmanagerpatientid";
+import { HIUSubscriptionContext } from "./hiusubscriptioncontext";
 import { OrganizationRepresentation } from "./organizationrepresentation";
-import { ConsentManagerPatientId } from "./consentmanagerpatientid";
-import { HiuSubscriptionContext } from "./hiusubscriptioncontext";
-export declare class HiuSubscription extends SpeakeasyBase {
+export declare class HIUSubscription extends SpeakeasyBase {
     hiu: OrganizationRepresentation;
     id: string;
-    patient: ConsentManagerPatientId;
-    sources: HiuSubscriptionContext[];
+    patient: ConsentManagerPatientID;
+    sources: HIUSubscriptionContext[];
 }

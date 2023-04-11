@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { BranchRestrictionPolicy } from "./branchrestrictionpolicy";
 import { ProtectedBranchAdminEnforced } from "./protectedbranchadminenforced";
 import { ProtectedBranchPullRequestReview } from "./protectedbranchpullrequestreview";
-import { BranchRestrictionPolicy } from "./branchrestrictionpolicy";
 export declare class BranchProtectionAllowDeletions extends SpeakeasyBase {
     enabled?: boolean;
 }
@@ -22,22 +22,33 @@ export declare class BranchProtectionRequiredStatusChecks extends SpeakeasyBase 
     contexts: string[];
     contextsUrl?: string;
     enforcementLevel?: string;
+    strict?: boolean;
     url?: string;
 }
 /**
  * Branch Protection
-**/
+ */
 export declare class BranchProtection extends SpeakeasyBase {
     allowDeletions?: BranchProtectionAllowDeletions;
     allowForcePushes?: BranchProtectionAllowForcePushes;
+    enabled?: boolean;
+    /**
+     * Protected Branch Admin Enforced
+     */
     enforceAdmins?: ProtectedBranchAdminEnforced;
     name?: string;
     protectionUrl?: string;
     requiredConversationResolution?: BranchProtectionRequiredConversationResolution;
     requiredLinearHistory?: BranchProtectionRequiredLinearHistory;
+    /**
+     * Protected Branch Pull Request Review
+     */
     requiredPullRequestReviews?: ProtectedBranchPullRequestReview;
     requiredSignatures?: BranchProtectionRequiredSignatures;
     requiredStatusChecks?: BranchProtectionRequiredStatusChecks;
+    /**
+     * Branch Restriction Policy
+     */
     restrictions?: BranchRestrictionPolicy;
     url?: string;
 }

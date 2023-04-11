@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostGetEbsEncryptionByDefaultActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTGetEbsEncryptionByDefaultActionEnum {
     GetEbsEncryptionByDefault = "GetEbsEncryptionByDefault"
 }
-export declare enum PostGetEbsEncryptionByDefaultVersionEnum {
+export declare enum POSTGetEbsEncryptionByDefaultVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostGetEbsEncryptionByDefaultQueryParams extends SpeakeasyBase {
-    action: PostGetEbsEncryptionByDefaultActionEnum;
-    version: PostGetEbsEncryptionByDefaultVersionEnum;
-}
-export declare class PostGetEbsEncryptionByDefaultHeaders extends SpeakeasyBase {
+export declare class POSTGetEbsEncryptionByDefaultRequest extends SpeakeasyBase {
+    action: POSTGetEbsEncryptionByDefaultActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTGetEbsEncryptionByDefaultVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostGetEbsEncryptionByDefaultHeaders extends SpeakeasyBase 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostGetEbsEncryptionByDefaultRequest extends SpeakeasyBase {
-    queryParams: PostGetEbsEncryptionByDefaultQueryParams;
-    headers: PostGetEbsEncryptionByDefaultHeaders;
-    request?: Uint8Array;
-}
-export declare class PostGetEbsEncryptionByDefaultResponse extends SpeakeasyBase {
+export declare class POSTGetEbsEncryptionByDefaultResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

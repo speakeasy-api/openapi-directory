@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Search API for 'Image Loop' entry type
+ */
 export declare class TypeMediaImageloop {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,10 @@ export declare class TypeMediaImageloop {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * searchMediaImageloop - Search API for 'Image Loop' entry type
+     * Search API for 'Image Loop' entry type
      *
+     * @remarks
      * API to search for entries of type Image Loop
-    **/
+     */
     searchMediaImageloop(req: operations.SearchMediaImageloopRequest, config?: AxiosRequestConfig): Promise<operations.SearchMediaImageloopResponse>;
 }

@@ -1,21 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class LabDocumentsPartialUpdatePathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class LabDocumentsPartialUpdateQueryParams extends SpeakeasyBase {
-    doctor?: number;
-    since?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class LabDocumentsPartialUpdateSecurity extends SpeakeasyBase {
-    drchronoOauth2: shared.SchemeDrchronoOauth2;
+    drchronoOauth2: string;
 }
 export declare class LabDocumentsPartialUpdateRequest extends SpeakeasyBase {
-    pathParams: LabDocumentsPartialUpdatePathParams;
-    queryParams: LabDocumentsPartialUpdateQueryParams;
-    security: LabDocumentsPartialUpdateSecurity;
+    doctor?: number;
+    id: string;
+    since?: string;
 }
 export declare class LabDocumentsPartialUpdateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

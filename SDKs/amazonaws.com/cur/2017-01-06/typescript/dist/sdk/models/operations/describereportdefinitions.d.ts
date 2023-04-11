@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeReportDefinitionsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum DescribeReportDefinitionsXAmzTargetEnum {
-    AwsOrigamiServiceGatewayServiceDescribeReportDefinitions = "AWSOrigamiServiceGatewayService.DescribeReportDefinitions"
+    AWSOrigamiServiceGatewayServiceDescribeReportDefinitions = "AWSOrigamiServiceGatewayService.DescribeReportDefinitions"
 }
-export declare class DescribeReportDefinitionsHeaders extends SpeakeasyBase {
+export declare class DescribeReportDefinitionsRequest extends SpeakeasyBase {
+    describeReportDefinitionsRequest: shared.DescribeReportDefinitionsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,14 +23,16 @@ export declare class DescribeReportDefinitionsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeReportDefinitionsXAmzTargetEnum;
 }
-export declare class DescribeReportDefinitionsRequest extends SpeakeasyBase {
-    queryParams: DescribeReportDefinitionsQueryParams;
-    headers: DescribeReportDefinitionsHeaders;
-    request: shared.DescribeReportDefinitionsRequest;
-}
 export declare class DescribeReportDefinitionsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeReportDefinitionsResponse?: shared.DescribeReportDefinitionsResponse;
+    /**
+     * InternalErrorException
+     */
     internalErrorException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

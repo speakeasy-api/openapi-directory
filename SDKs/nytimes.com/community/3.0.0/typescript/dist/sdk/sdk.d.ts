@@ -1,10 +1,27 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["http://api.nytimes.com/svc/community/v3"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * Get access to comments from registered users on New York Times articles.  NOTE: This API is deprecated.
+ *
+ * @see {@link http://developer.nytimes.com/}
+ */
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -12,21 +29,22 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
     /**
-     * getUserContentByDateJson - Comments by Date
-    **/
-    getUserContentByDateJson(req: operations.GetUserContentByDateJsonRequest, config?: AxiosRequestConfig): Promise<operations.GetUserContentByDateJsonResponse>;
+     * Comments by Date
+     */
+    getUserContentByDateJson(req: operations.GETUserContentByDateJsonRequest, security: operations.GETUserContentByDateJsonSecurity, config?: AxiosRequestConfig): Promise<operations.GETUserContentByDateJsonResponse>;
     /**
-     * getUserContentRecentJson - Recent User Comments
-    **/
-    getUserContentRecentJson(req: operations.GetUserContentRecentJsonRequest, config?: AxiosRequestConfig): Promise<operations.GetUserContentRecentJsonResponse>;
+     * Recent User Comments
+     */
+    getUserContentRecentJson(config?: AxiosRequestConfig): Promise<operations.GETUserContentRecentJsonResponse>;
     /**
-     * getUserContentUrlJson - Comments by URL
-    **/
-    getUserContentUrlJson(req: operations.GetUserContentUrlJsonRequest, config?: AxiosRequestConfig): Promise<operations.GetUserContentUrlJsonResponse>;
+     * Comments by URL
+     */
+    getUserContentUrlJson(req: operations.GETUserContentUrlJsonRequest, security: operations.GETUserContentUrlJsonSecurity, config?: AxiosRequestConfig): Promise<operations.GETUserContentUrlJsonResponse>;
     /**
-     * getUserContentUserJson - Comments by User
-    **/
-    getUserContentUserJson(req: operations.GetUserContentUserJsonRequest, config?: AxiosRequestConfig): Promise<operations.GetUserContentUserJsonResponse>;
+     * Comments by User
+     */
+    getUserContentUserJson(req: operations.GETUserContentUserJsonRequest, security: operations.GETUserContentUserJsonSecurity, config?: AxiosRequestConfig): Promise<operations.GETUserContentUserJsonResponse>;
 }

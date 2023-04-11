@@ -43,6 +43,9 @@ export declare class Game extends SpeakeasyBase {
     metacritic?: number;
     name?: string;
     platforms?: GamePlatforms[];
+    /**
+     * in hours
+     */
     playtime?: number;
     rating: number;
     ratingTop?: number;

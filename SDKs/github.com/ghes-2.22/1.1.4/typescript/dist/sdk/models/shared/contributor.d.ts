@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Contributor
-**/
+ */
 export declare class Contributor extends SpeakeasyBase {
     avatarUrl?: string;
     contributions: number;

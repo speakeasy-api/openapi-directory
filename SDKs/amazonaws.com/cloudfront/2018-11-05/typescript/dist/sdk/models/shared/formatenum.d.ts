@@ -1,3 +1,3 @@
 export declare enum FormatEnum {
-    UrlEncoded = "URLEncoded"
+    URLEncoded = "URLEncoded"
 }

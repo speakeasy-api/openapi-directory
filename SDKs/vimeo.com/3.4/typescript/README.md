@@ -6,35 +6,34 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/vimeo.com/3.4/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/vimeo.com/3.4/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetEndpointsRequest, GetEndpointsResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GetEndpointsRequest,
+  GetEndpointsResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  }
-));
-    
-const req: GetEndpointsRequest = {
-  queryParams: {
-    openapi: false,
+    oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
   },
+});
+
+const req: GetEndpointsRequest = {
+  openapi: true,
 };
 
 sdk.apiInformation.getEndpoints(req).then((res: GetEndpointsResponse | AxiosError) => {
@@ -44,13 +43,14 @@ sdk.apiInformation.getEndpoints(req).then((res: GetEndpointsResponse | AxiosErro
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### API Information
+
+### apiInformation
 
 * `getEndpoints` - Get an API specification
 
-### Albums\Album videos
+### albumsAlbumVideos
 
 * `addVideoToAlbum` - Add a specific video to an album
 * `addVideoToAlbumAlt1` - Add a specific video to an album
@@ -65,7 +65,7 @@ sdk.apiInformation.getEndpoints(req).then((res: GetEndpointsResponse | AxiosErro
 * `setVideoAsAlbumThumbnail` - Set a video as the album thumbnail
 * `setVideoAsAlbumThumbnailAlt1` - Set a video as the album thumbnail
 
-### Albums\Custom album logos
+### albumsCustomAlbumLogos
 
 * `createAlbumLogo` - Add a custom album logo
 * `deleteAlbumLogo` - Remove a custom album logo
@@ -73,7 +73,7 @@ sdk.apiInformation.getEndpoints(req).then((res: GetEndpointsResponse | AxiosErro
 * `getAlbumLogos` - Get all the custom logos of an album
 * `replaceAlbumLogo` - Replace a custom album logo
 
-### Albums\Custom album thumbnails
+### albumsCustomAlbumThumbnails
 
 * `createAlbumCustomThumb` - Add a custom uploaded thumbnail
 * `deleteAlbumCustomThumbnail` - Remove a custom uploaded album thumbnail
@@ -81,7 +81,7 @@ sdk.apiInformation.getEndpoints(req).then((res: GetEndpointsResponse | AxiosErro
 * `getAlbumCustomThumbs` - Get all the custom upload thumbnails of an album
 * `replaceAlbumCustomThumb` - Replace a custom uploaded album thumbnail
 
-### Albums\Essentials
+### albumsEssentials
 
 * `createAlbum` - Create an album
 * `createAlbumAlt1` - Create an album
@@ -94,7 +94,7 @@ sdk.apiInformation.getEndpoints(req).then((res: GetEndpointsResponse | AxiosErro
 * `getAlbums` - Get all the albums that belong to a user
 * `getAlbumsAlt1` - Get all the albums that belong to a user
 
-### Authentication Extras\Essentials
+### authenticationExtrasEssentials
 
 * `clientAuth` - Authorize a client with OAuth
 * `convertAccessToken` - Convert OAuth 1 access tokens to OAuth 2 access tokens
@@ -102,20 +102,20 @@ sdk.apiInformation.getEndpoints(req).then((res: GetEndpointsResponse | AxiosErro
 * `exchangeAuthCode` - Exchange an authorization code for an access token
 * `verifyToken` - Verify an OAuth 2 token
 
-### Categories\Channels
+### categoriesChannels
 
 * `getCategoryChannels` - Get all the channels in a category
 
-### Categories\Essentials
+### categoriesEssentials
 
 * `getCategories` - Get all categories
 * `getCategory` - Get a specific category
 
-### Categories\Groups
+### categoriesGroups
 
 * `getCategoryGroups` - Get all the groups in a category
 
-### Categories\Subscriptions
+### categoriesSubscriptions
 
 * `checkIfUserSubscribedToCategory` - Check if a user follows a category
 * `checkIfUserSubscribedToCategoryAlt1` - Check if a user follows a category
@@ -126,21 +126,21 @@ sdk.apiInformation.getEndpoints(req).then((res: GetEndpointsResponse | AxiosErro
 * `unsubscribeFromCategory` - Unsubscribe a user from a category
 * `unsubscribeFromCategoryAlt1` - Unsubscribe a user from a category
 
-### Categories\Videos
+### categoriesVideos
 
 * `checkCategoryForVideo` - Check for a video in a category
 * `getCategoryVideos` - Get all the videos in a category
 * `getVideoCategories` - Get all the categories to which a video belongs
 * `suggestVideoCategory` - Suggest categories for a video
 
-### Channels\Categories
+### channelsCategories
 
 * `addChannelCategories` - Add a list of categories to a channel
 * `categorizeChannel` - Categorize a channel
 * `deleteChannelCategory` - Remove a category from a channel
 * `getChannelCategories` - Get all the categories in a channel
 
-### Channels\Essentials
+### channelsEssentials
 
 * `createChannel` - Create a channel
 * `deleteChannel` - Delete a channel
@@ -150,7 +150,7 @@ sdk.apiInformation.getEndpoints(req).then((res: GetEndpointsResponse | AxiosErro
 * `getChannelSubscriptionsAlt1` - Get all the channels to which a user subscribes
 * `getChannels` - Get all channels
 
-### Channels\Moderators
+### channelsModerators
 
 * `addChannelModerator` - Add a specific channel moderator
 * `addChannelModerators` - Add a list of channel moderators
@@ -160,14 +160,14 @@ sdk.apiInformation.getEndpoints(req).then((res: GetEndpointsResponse | AxiosErro
 * `removeChannelModerators` - Remove a list of channel moderators
 * `replaceChannelModerators` - Replace the moderators of a channel
 
-### Channels\Private channel members
+### channelsPrivateChannelMembers
 
 * `deleteChannelPrivacyUser` - Restrict a user from viewing a private channel
 * `getChannelPrivacyUsers` - Get all the users who can view a private channel
 * `setChannelPrivacyUser` - Permit a specific user to view a private channel
 * `setChannelPrivacyUsers` - Permit a list of users to view a private channel
 
-### Channels\Subscriptions and subscribers
+### channelsSubscriptionsAndSubscribers
 
 * `checkIfUserSubscribedToChannel` - Check if a user follows a channel
 * `checkIfUserSubscribedToChannelAlt1` - Check if a user follows a channel
@@ -177,7 +177,7 @@ sdk.apiInformation.getEndpoints(req).then((res: GetEndpointsResponse | AxiosErro
 * `unsubscribeFromChannel` - Unsubscribe a user from a specific channel
 * `unsubscribeFromChannelAlt1` - Unsubscribe a user from a specific channel
 
-### Channels\Tags
+### channelsTags
 
 * `addChannelTag` - Add a specific tag to a channel
 * `addTagsToChannel` - Add a list of tags to a channel
@@ -185,7 +185,7 @@ sdk.apiInformation.getEndpoints(req).then((res: GetEndpointsResponse | AxiosErro
 * `deleteTagFromChannel` - Remove a tag from a channel
 * `getChannelTags` - Get all the tags that have been added to a channel
 
-### Channels\Videos
+### channelsVideos
 
 * `addVideoToChannel` - Add a specific video to a channel
 * `addVideosToChannel` - Add a list of videos to a channel
@@ -195,7 +195,7 @@ sdk.apiInformation.getEndpoints(req).then((res: GetEndpointsResponse | AxiosErro
 * `getChannelVideos` - Get all the videos in a channel
 * `removeVideosFromChannel` - Remove a list of videos from a channel
 
-### Embed Presets\Custom Logos
+### embedPresetsCustomLogos
 
 * `createCustomLogo` - Add a custom logo
 * `createCustomLogoAlt1` - Add a custom logo
@@ -204,7 +204,7 @@ sdk.apiInformation.getEndpoints(req).then((res: GetEndpointsResponse | AxiosErro
 * `getCustomLogos` - Get all the custom logos that belong to a user
 * `getCustomLogosAlt1` - Get all the custom logos that belong to a user
 
-### Embed Presets\Essentials
+### embedPresetsEssentials
 
 * `editEmbedPreset` - Edit an embed preset
 * `editEmbedPresetAlt1` - Edit an embed preset
@@ -213,7 +213,7 @@ sdk.apiInformation.getEndpoints(req).then((res: GetEndpointsResponse | AxiosErro
 * `getEmbedPresets` - Get all the embed presets that a user has created
 * `getEmbedPresetsAlt1` - Get all the embed presets that a user has created
 
-### Embed Presets\Videos
+### embedPresetsVideos
 
 * `addVideoEmbedPreset` - Add an embed preset to a video
 * `createVideoCustomLogo` - Add a new custom logo to a video
@@ -223,21 +223,21 @@ sdk.apiInformation.getEndpoints(req).then((res: GetEndpointsResponse | AxiosErro
 * `getVideoCustomLogo` - Get a custom video logo
 * `getVideoEmbedPreset` - Check if an embed preset has been added to a video
 
-### Groups\Essentials
+### groupsEssentials
 
 * `createGroup` - Create a group
 * `deleteGroup` - Delete a group
 * `getGroup` - Get a specific group
 * `getGroups` - Get all groups
 
-### Groups\Subscription
+### groupsSubscription
 
 * `joinGroup` - Add a user to a group
 * `joinGroupAlt1` - Add a user to a group
 * `leaveGroup` - Remove a user from a group
 * `leaveGroupAlt1` - Remove a user from a group
 
-### Groups\Users
+### groupsUsers
 
 * `checkIfUserJoinedGroup` - Check if a user has joined a group
 * `checkIfUserJoinedGroupAlt1` - Check if a user has joined a group
@@ -245,14 +245,14 @@ sdk.apiInformation.getEndpoints(req).then((res: GetEndpointsResponse | AxiosErro
 * `getUserGroups` - Get all the groups that a user has joined
 * `getUserGroupsAlt1` - Get all the groups that a user has joined
 
-### Groups\Videos
+### groupsVideos
 
 * `addVideoToGroup` - Add a video to a group
 * `deleteVideoFromGroup` - Remove a video from a group
 * `getGroupVideo` - Get a specific video in a group
 * `getGroupVideos` - Get all the videos in a group
 
-### Likes\Essentials
+### likesEssentials
 
 * `checkIfUserLikedVideo` - Check if a user has liked a video
 * `checkIfUserLikedVideoAlt1` - Check if a user has liked a video
@@ -266,7 +266,7 @@ sdk.apiInformation.getEndpoints(req).then((res: GetEndpointsResponse | AxiosErro
 * `unlikeVideo` - Cause a user to unlike a video
 * `unlikeVideoAlt1` - Cause a user to unlike a video
 
-### On Demand\Backgrounds
+### onDemandBackgrounds
 
 * `createVodBackground` - Add a background to an On Demand page
 * `deleteVodBackground` - Remove a background from an On Demand page
@@ -274,7 +274,7 @@ sdk.apiInformation.getEndpoints(req).then((res: GetEndpointsResponse | AxiosErro
 * `getVodBackground` - Get a specific background of an On Demand page
 * `getVodBackgrounds` - Get all the backgrounds of an On Demand page
 
-### On Demand\Essentials
+### onDemandEssentials
 
 * `createVod` - Create an On Demand page
 * `createVodAlt1` - Create an On Demand page
@@ -284,7 +284,7 @@ sdk.apiInformation.getEndpoints(req).then((res: GetEndpointsResponse | AxiosErro
 * `getUserVodsAlt1` - Get all the On Demand pages of a user
 * `getVod` - Get a specific On Demand page
 
-### On Demand\Genres
+### onDemandGenres
 
 * `addVodGenre` - Add a genre to an On Demand page
 * `deleteVodGenre` - Remove a genre from an On Demand page
@@ -295,14 +295,14 @@ sdk.apiInformation.getEndpoints(req).then((res: GetEndpointsResponse | AxiosErro
 * `getVodGenres` - Get all On Demand genres
 * `getVodGenresByOndemandId` - Get all the genres of an On Demand page
 
-### On Demand\Posters
+### onDemandPosters
 
 * `addVodPoster` - Add a poster to an On Demand page
 * `editVodPoster` - Edit a poster of an On Demand page
 * `getVodPoster` - Get a specific poster of an On Demand page
 * `getVodPosters` - Get all the posters of an On Demand page
 
-### On Demand\Promotions
+### onDemandPromotions
 
 * `createVodPromotion` - Add a promotion to an On Demand page
 * `deleteVodPromotion` - Remove a promotion from an On Demand page
@@ -310,13 +310,13 @@ sdk.apiInformation.getEndpoints(req).then((res: GetEndpointsResponse | AxiosErro
 * `getVodPromotionCodes` - Get all the codes of a promotion on an On Demand page
 * `getVodPromotions` - Get all the promotions on an On Demand page
 
-### On Demand\Purchases and Rentals
+### onDemandPurchasesAndRentals
 
 * `checkIfVodWasPurchased` - Check if a user has made a purchase or rental from an On Demand page
 * `checkIfVodWasPurchasedAlt1` - Check if a user has made a purchase or rental from an On Demand page
 * `getVodPurchases` - Get all the On Demand purchases and rentals that a user has made
 
-### On Demand\Regions
+### onDemandRegions
 
 * `addVodRegion` - Add a specific region to an On Demand page
 * `deleteVodRegion` - Remove a specific region from an On Demand page
@@ -327,27 +327,27 @@ sdk.apiInformation.getEndpoints(req).then((res: GetEndpointsResponse | AxiosErro
 * `getVodRegions` - Get all the regions of an On Demand page
 * `setVodRegions` - Add a list of regions to an On Demand page
 
-### On Demand\Seasons
+### onDemandSeasons
 
 * `getVodSeason` - Get a specific season on an On Demand page
 * `getVodSeasonVideos` - Get all the videos in a season on an On Demand page
 * `getVodSeasons` - Get all the seasons on an On Demand page
 
-### On Demand\Videos
+### onDemandVideos
 
 * `addVideoToVod` - Add a video to an On Demand page
 * `deleteVideoFromVod` - Remove a video from an On Demand page
 * `getVodVideo` - Get a specific video on an On Demand page
 * `getVodVideos` - Get all the videos on an On Demand page
 
-### Portfolios\Essentials
+### portfoliosEssentials
 
 * `getPortfolio` - Get a specific portfolio
 * `getPortfolioAlt1` - Get a specific portfolio
 * `getPortfolios` - Get all the portfolios that belong to a user
 * `getPortfoliosAlt1` - Get all the portfolios that belong to a user
 
-### Portfolios\Videos
+### portfoliosVideos
 
 * `addVideoToPortfolio` - Add a video to a portfolio
 * `addVideoToPortfolioAlt1` - Add a video to a portfolio
@@ -358,7 +358,7 @@ sdk.apiInformation.getEndpoints(req).then((res: GetEndpointsResponse | AxiosErro
 * `getPortfolioVideos` - Get all the videos in a portfolio
 * `getPortfolioVideosAlt1` - Get all the videos in a portfolio
 
-### Projects\Essentials
+### projectsEssentials
 
 * `createProject` - Create a project
 * `createProjectAlt1` - Create a project
@@ -371,7 +371,7 @@ sdk.apiInformation.getEndpoints(req).then((res: GetEndpointsResponse | AxiosErro
 * `getProjects` - Get all the projects that belong to a user
 * `getProjectsAlt1` - Get all the projects that belong to a user
 
-### Projects\Videos
+### projectsVideos
 
 * `addVideoToProject` - Add a specific video to a project
 * `addVideoToProjectAlt1` - Add a specific video to a project
@@ -384,23 +384,23 @@ sdk.apiInformation.getEndpoints(req).then((res: GetEndpointsResponse | AxiosErro
 * `removeVideosFromProject` - Remove a list of videos from a project
 * `removeVideosFromProjectAlt1` - Remove a list of videos from a project
 
-### Tags\Essentials
+### tagsEssentials
 
 * `getTag` - Get a specific tag
 
-### Users\Essentials
+### usersEssentials
 
 * `editUser` - Edit a user
 * `editUserAlt1` - Edit a user
 * `getUser` - Get a user
 * `getUserAlt1` - Get a user
 
-### Users\Feed
+### usersFeed
 
 * `getFeed` - Get all videos in a user's feed
 * `getFeedAlt1` - Get all videos in a user's feed
 
-### Users\Follows
+### usersFollows
 
 * `checkIfUserIsFollowing` - Check if a user is following another user
 * `checkIfUserIsFollowingAlt1` - Check if a user is following another user
@@ -415,11 +415,11 @@ sdk.apiInformation.getEndpoints(req).then((res: GetEndpointsResponse | AxiosErro
 * `unfollowUser` - Unfollow a user
 * `unfollowUserAlt1` - Unfollow a user
 
-### Users\Internal
+### usersInternal
 
 * `searchUsers` - Search for users
 
-### Users\Pictures
+### usersPictures
 
 * `createPicture` - Add a user picture
 * `createPictureAlt1` - Add a user picture
@@ -432,13 +432,13 @@ sdk.apiInformation.getEndpoints(req).then((res: GetEndpointsResponse | AxiosErro
 * `getPictures` - Get all the pictures that belong to a user
 * `getPicturesAlt1` - Get all the pictures that belong to a user
 
-### Users\Watch History
+### usersWatchHistory
 
 * `deleteFromWatchHistory` - Delete a specific video from a user's watch history
 * `deleteWatchHistory` - Delete a user's watch history
 * `getWatchHistory` - Get all the videos that a user has watched
 
-### Videos\Comments
+### videosComments
 
 * `createComment` - Add a comment to a video
 * `createCommentAlt1` - Add a comment to a video
@@ -450,15 +450,15 @@ sdk.apiInformation.getEndpoints(req).then((res: GetEndpointsResponse | AxiosErro
 * `getComments` - Get all the comments on a video
 * `getCommentsAlt1` - Get all the comments on a video
 
-### Videos\Content Ratings
+### videosContentRatings
 
 * `getContentRatings` - Get all content ratings
 
-### Videos\Creative Commons
+### videosCreativeCommons
 
 * `getCcLicenses` - Get all Creative Commons licenses
 
-### Videos\Credits
+### videosCredits
 
 * `addVideoCredit` - Credit a user in a video
 * `addVideoCreditAlt1` - Credit a user in a video
@@ -468,13 +468,13 @@ sdk.apiInformation.getEndpoints(req).then((res: GetEndpointsResponse | AxiosErro
 * `getVideoCredits` - Get all the credited users in a video
 * `getVideoCreditsAlt1` - Get all the credited users in a video
 
-### Videos\Embed Privacy
+### videosEmbedPrivacy
 
 * `addVideoPrivacyDomain` - Permit a video to be embedded on a domain
 * `deleteVideoPrivacyDomain` - Restrict a video from being embedded on a domain
 * `getVideoPrivacyDomains` - Get all the domains on which a video can be embedded
 
-### Videos\Essentials
+### videosEssentials
 
 * `checkIfUserOwnsVideo` - Check if a user owns a video
 * `checkIfUserOwnsVideoAlt1` - Check if a user owns a video
@@ -487,15 +487,15 @@ sdk.apiInformation.getEndpoints(req).then((res: GetEndpointsResponse | AxiosErro
 * `getVideosAlt1` - Get all the videos that a user has uploaded
 * `searchVideos` - Search for videos
 
-### Videos\Languages
+### videosLanguages
 
 * `getLanguages` - Get all languages
 
-### Videos\Recommendations
+### videosRecommendations
 
 * `getRelatedVideos` - Get all the related videos of a video
 
-### Videos\Tags
+### videosTags
 
 * `addVideoTag` - Add a specific tag to a video
 * `addVideoTags` - Add a list of tags to a video
@@ -504,7 +504,7 @@ sdk.apiInformation.getEndpoints(req).then((res: GetEndpointsResponse | AxiosErro
 * `getVideoTags` - Get all the tags of a video
 * `getVideosWithTag` - Get all the videos with a specific tag
 
-### Videos\Text Tracks
+### videosTextTracks
 
 * `createTextTrack` - Add a text track to a video
 * `createTextTrackAlt1` - Add a text track to a video
@@ -514,7 +514,7 @@ sdk.apiInformation.getEndpoints(req).then((res: GetEndpointsResponse | AxiosErro
 * `getTextTracks` - Get all the text tracks of a video
 * `getTextTracksAlt1` - Get all the text tracks of a video
 
-### Videos\Thumbnails
+### videosThumbnails
 
 * `createVideoThumbnail` - Add a video thumbnail
 * `createVideoThumbnailAlt1` - Add a video thumbnail
@@ -524,18 +524,18 @@ sdk.apiInformation.getEndpoints(req).then((res: GetEndpointsResponse | AxiosErro
 * `getVideoThumbnails` - Get all the thumbnails of a video
 * `getVideoThumbnailsAlt1` - Get all the thumbnails of a video
 
-### Videos\Upload
+### videosUpload
 
 * `completeStreamingUpload` - Complete a user's streaming upload
 * `getUploadAttempt` - Get a user's upload attempt
 * `uploadVideo` - Upload a video
 * `uploadVideoAlt1` - Upload a video
 
-### Videos\Versions
+### videosVersions
 
 * `createVideoVersion` - Add a version to a video
 
-### Videos\Viewing Privacy
+### videosViewingPrivacy
 
 * `addVideoPrivacyUser` - Permit a specific user to view a private video
 * `addVideoPrivacyUsers` - Permit a list of users to view a private video
@@ -544,7 +544,7 @@ sdk.apiInformation.getEndpoints(req).then((res: GetEndpointsResponse | AxiosErro
 * `getVideoPrivacyUsers` - Get all the users who can view a user's private videos by default
 * `getVideoPrivacyUsersAlt1` - Get all the users who can view a user's private videos by default
 
-### Watch Later Queue\Essentials
+### watchLaterQueueEssentials
 
 * `addVideoToWatchLater` - Add a video to a user's Watch Later queue
 * `addVideoToWatchLaterAlt1` - Add a video to a user's Watch Later queue
@@ -554,7 +554,18 @@ sdk.apiInformation.getEndpoints(req).then((res: GetEndpointsResponse | AxiosErro
 * `deleteVideoFromWatchLaterAlt1` - Remove a video from a user's Watch Later queue
 * `getWatchLaterQueue` - Get all the videos in a user's Watch Later queue
 * `getWatchLaterQueueAlt1` - Get all the videos in a user's Watch Later queue
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

@@ -1,8 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * A Compute Engine service account, identical to the Compute Engine resource.
-**/
+ */
 export declare class ServiceAccount extends SpeakeasyBase {
+    /**
+     * The service account email address, for example: 123845678986@project.gserviceaccount.com
+     */
     email?: string;
+    /**
+     * The list of OAuth2 scopes to obtain for the service account, for example: https://www.googleapis.com/auth/devstorage.full_control
+     */
     scopes?: string[];
 }

@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetScenPathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetScenRequest extends SpeakeasyBase {
-    pathParams: GetScenPathParams;
+    /**
+     * Agent to return the first scenario number
+     */
+    agentNum: number;
 }
 export declare class GetScenResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     getScen200ApplicationJSONInt32Integer?: number;
 }

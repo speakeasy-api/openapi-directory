@@ -1,13 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DcimPlatformsReadPathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DcimPlatformsReadRequest extends SpeakeasyBase {
-    pathParams: DcimPlatformsReadPathParams;
+    /**
+     * A unique integer value identifying this platform.
+     */
+    id: number;
 }
 export declare class DcimPlatformsReadResponse extends SpeakeasyBase {
     contentType: string;
     platform?: shared.Platform;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

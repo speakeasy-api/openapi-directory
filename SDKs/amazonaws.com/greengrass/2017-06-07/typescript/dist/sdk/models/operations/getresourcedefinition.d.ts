@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetResourceDefinitionPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetResourceDefinitionRequest extends SpeakeasyBase {
+    /**
+     * The ID of the resource definition.
+     */
     resourceDefinitionId: string;
-}
-export declare class GetResourceDefinitionHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,13 +14,16 @@ export declare class GetResourceDefinitionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetResourceDefinitionRequest extends SpeakeasyBase {
-    pathParams: GetResourceDefinitionPathParams;
-    headers: GetResourceDefinitionHeaders;
-}
 export declare class GetResourceDefinitionResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getResourceDefinitionResponse?: shared.GetResourceDefinitionResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

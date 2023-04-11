@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UsersDeleteGpgKeyForAuthenticatedPathParams extends SpeakeasyBase {
-    gpgKeyId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class UsersDeleteGpgKeyForAuthenticatedRequest extends SpeakeasyBase {
-    pathParams: UsersDeleteGpgKeyForAuthenticatedPathParams;
+    /**
+     * gpg_key_id parameter
+     */
+    gpgKeyId: number;
 }
 export declare class UsersDeleteGpgKeyForAuthenticatedResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Requires authentication
+     */
     basicError?: shared.BasicError;
+    /**
+     * Validation failed
+     */
     validationError?: shared.ValidationError;
 }

@@ -1,0 +1,12 @@
+export declare enum OrderStatusEnum {
+    Received = "RECEIVED",
+    Pending = "PENDING",
+    Processing = "PROCESSING",
+    Installing = "INSTALLING",
+    Fulfilled = "FULFILLED",
+    Cancelled = "CANCELLED",
+    Preparing = "PREPARING",
+    InProgress = "IN_PROGRESS",
+    Completed = "COMPLETED",
+    Error = "ERROR"
+}

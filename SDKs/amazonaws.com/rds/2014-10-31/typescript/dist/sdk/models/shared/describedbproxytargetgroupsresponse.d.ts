@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbProxyTargetGroup } from "./dbproxytargetgroup";
-export declare class DescribeDbProxyTargetGroupsResponse extends SpeakeasyBase {
+import { DBProxyTargetGroup } from "./dbproxytargetgroup";
+/**
+ * Success
+ */
+export declare class DescribeDBProxyTargetGroupsResponse extends SpeakeasyBase {
     marker?: string;
-    targetGroups?: DbProxyTargetGroup[];
+    targetGroups?: DBProxyTargetGroup[];
 }

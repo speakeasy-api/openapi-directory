@@ -1,0 +1,6 @@
+export declare enum UplinkGbpsEnum {
+    Uplink1G = "UPLINK_1G",
+    Uplink10G = "UPLINK_10G",
+    Uplink40G = "UPLINK_40G",
+    Uplink100G = "UPLINK_100G"
+}

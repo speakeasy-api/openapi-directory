@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolSflowGetStatisticsPathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolSflowGetStatisticsRequest extends SpeakeasyBase {
-    pathParams: ProtocolSflowGetStatisticsPathParams;
+    /**
+     * Agent to show SFLOW statistics
+     */
+    agentNum: number;
 }
 export declare class ProtocolSflowGetStatisticsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolSflowGetStatistics200ApplicationJSONInt32Integers?: number[];
 }

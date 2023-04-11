@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { Option } from "./option";
+/**
+ * Controls how the field appears in HubSpot.
+ */
 export declare enum FieldTypeDefinitionFieldTypeEnum {
     Booleancheckbox = "booleancheckbox",
     Checkbox = "checkbox",
@@ -17,6 +20,9 @@ export declare enum FieldTypeDefinitionFieldTypeEnum {
     CalculationReadTime = "calculation_read_time",
     Unknown = "unknown"
 }
+/**
+ * This can be set to `OWNER` if the field should contain a HubSpot owner value.
+ */
 export declare enum FieldTypeDefinitionReferencedObjectTypeEnum {
     Contact = "CONTACT",
     Company = "COMPANY",
@@ -81,6 +87,9 @@ export declare enum FieldTypeDefinitionReferencedObjectTypeEnum {
     Template = "TEMPLATE",
     Unknown = "UNKNOWN"
 }
+/**
+ * The data type of the field.
+ */
 export declare enum FieldTypeDefinitionTypeEnum {
     String = "string",
     Number = "number",
@@ -95,12 +104,30 @@ export declare enum FieldTypeDefinitionTypeEnum {
 }
 /**
  * The data type expected by an input field.
-**/
+ */
 export declare class FieldTypeDefinition extends SpeakeasyBase {
+    /**
+     * Controls how the field appears in HubSpot.
+     */
     fieldType?: FieldTypeDefinitionFieldTypeEnum;
+    /**
+     * The input field name.
+     */
     name: string;
+    /**
+     * A list of valid options for the field value.
+     */
     options: Option[];
+    /**
+     * A URL that will accept HTTPS requests when the valid options for the field are fetched.
+     */
     optionsUrl?: string;
+    /**
+     * This can be set to `OWNER` if the field should contain a HubSpot owner value.
+     */
     referencedObjectType?: FieldTypeDefinitionReferencedObjectTypeEnum;
+    /**
+     * The data type of the field.
+     */
     type: FieldTypeDefinitionTypeEnum;
 }

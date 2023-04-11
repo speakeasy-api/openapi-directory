@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetActionPackageShowQueryParams extends SpeakeasyBase {
-    id?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetActionPackageShowRequest extends SpeakeasyBase {
-    queryParams: GetActionPackageShowQueryParams;
+    /**
+     * The package name
+     */
+    id?: string;
 }
 export declare class GetActionPackageShowResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

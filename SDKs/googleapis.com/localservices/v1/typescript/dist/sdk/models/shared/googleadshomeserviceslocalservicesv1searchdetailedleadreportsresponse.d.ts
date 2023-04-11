@@ -2,8 +2,14 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport } from "./googleadshomeserviceslocalservicesv1detailedleadreport";
 /**
  * A page of the response received from the SearchDetailedLeadReports method. A paginated response where more pages are available has `next_page_token` set. This token can be used in a subsequent request to retrieve the next request page.
-**/
+ */
 export declare class GoogleAdsHomeservicesLocalservicesV1SearchDetailedLeadReportsResponse extends SpeakeasyBase {
+    /**
+     * List of detailed lead reports uniquely identified by external lead id.
+     */
     detailedLeadReports?: GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport[];
+    /**
+     * Pagination token to retrieve the next page of results. When `next_page_token` is not filled in, there is no next page and the list returned is the last page in the result set.
+     */
     nextPageToken?: string;
 }

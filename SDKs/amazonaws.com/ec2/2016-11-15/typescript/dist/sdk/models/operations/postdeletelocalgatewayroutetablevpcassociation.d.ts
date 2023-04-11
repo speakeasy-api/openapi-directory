@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteLocalGatewayRouteTableVpcAssociationActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteLocalGatewayRouteTableVpcAssociationActionEnum {
     DeleteLocalGatewayRouteTableVpcAssociation = "DeleteLocalGatewayRouteTableVpcAssociation"
 }
-export declare enum PostDeleteLocalGatewayRouteTableVpcAssociationVersionEnum {
+export declare enum POSTDeleteLocalGatewayRouteTableVpcAssociationVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDeleteLocalGatewayRouteTableVpcAssociationQueryParams extends SpeakeasyBase {
-    action: PostDeleteLocalGatewayRouteTableVpcAssociationActionEnum;
-    version: PostDeleteLocalGatewayRouteTableVpcAssociationVersionEnum;
-}
-export declare class PostDeleteLocalGatewayRouteTableVpcAssociationHeaders extends SpeakeasyBase {
+export declare class POSTDeleteLocalGatewayRouteTableVpcAssociationRequest extends SpeakeasyBase {
+    action: POSTDeleteLocalGatewayRouteTableVpcAssociationActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteLocalGatewayRouteTableVpcAssociationVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteLocalGatewayRouteTableVpcAssociationHeaders exten
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteLocalGatewayRouteTableVpcAssociationRequest extends SpeakeasyBase {
-    queryParams: PostDeleteLocalGatewayRouteTableVpcAssociationQueryParams;
-    headers: PostDeleteLocalGatewayRouteTableVpcAssociationHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteLocalGatewayRouteTableVpcAssociationResponse extends SpeakeasyBase {
+export declare class POSTDeleteLocalGatewayRouteTableVpcAssociationResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

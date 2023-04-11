@@ -32,7 +32,6 @@ export * from "./retrieveimportabledomainsresponse";
 export * from "./retrieveregisterparametersresponse";
 export * from "./retrievetransferparametersresponse";
 export * from "./searchdomainsresponse";
-export * from "./security";
 export * from "./setiampolicyrequest";
 export * from "./status";
 export * from "./testiampermissionsrequest";

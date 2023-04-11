@@ -1,44 +1,56 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CloudtasksApiQueueUpdateRequest, CloudtasksApiQueueUpdateResponse } from "openapi/src/sdk/models/operations";
+import {
+  CloudtasksApiQueueUpdateRequest,
+  CloudtasksApiQueueUpdateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: CloudtasksApiQueueUpdateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "voluptas",
-    alt: "media",
-    appId: "expedita",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
-    contentType: "dicta",
-    data: "debitis",
+  dollarXgafv: XgafvEnum.Two,
+  httpBody: {
+    contentType: "provident",
+    data: "distinctio",
     extensions: [
       {
-        "ut": "dolorem",
+        "nulla": "corrupti",
+        "illum": "vel",
+        "error": "deserunt",
+      },
+      {
+        "iure": "magnam",
+        "debitis": "ipsa",
+      },
+      {
+        "tempora": "suscipit",
+        "molestiae": "minus",
+        "placeat": "voluptatum",
+        "iusto": "excepturi",
+      },
+      {
+        "recusandae": "temporibus",
+        "ab": "quis",
       },
     ],
   },
+  accessToken: "veritatis",
+  alt: AltEnum.Media,
+  appId: "perferendis",
+  callback: "ipsam",
+  fields: "repellendus",
+  key: "sapiente",
+  oauthToken: "quo",
+  prettyPrint: false,
+  quotaUser: "odit",
+  uploadType: "at",
+  uploadProtocol: "at",
 };
 
 sdk.api.cloudtasksApiQueueUpdate(req).then((res: CloudtasksApiQueueUpdateResponse | AxiosError) => {

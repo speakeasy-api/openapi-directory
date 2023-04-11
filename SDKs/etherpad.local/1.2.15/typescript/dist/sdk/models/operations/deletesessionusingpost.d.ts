@@ -1,35 +1,58 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteSessionUsingPostQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteSessionUsingPOSTRequest extends SpeakeasyBase {
     sessionID?: string;
 }
-export declare class DeleteSessionUsingPost200ApplicationJson extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class DeleteSessionUsingPost500ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class DeleteSessionUsingPost400ApplicationJson extends SpeakeasyBase {
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class DeleteSessionUsingPost401ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class DeleteSessionUsingPost401ApplicationJson extends SpeakeasyBase {
+/**
+ * generic api error (code 1)
+ */
+export declare class DeleteSessionUsingPost400ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class DeleteSessionUsingPost500ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class DeleteSessionUsingPost200ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class DeleteSessionUsingPostRequest extends SpeakeasyBase {
-    queryParams: DeleteSessionUsingPostQueryParams;
-}
-export declare class DeleteSessionUsingPostResponse extends SpeakeasyBase {
+export declare class DeleteSessionUsingPOSTResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deleteSessionUsingPOST200ApplicationJSONObject?: DeleteSessionUsingPost200ApplicationJson;
-    deleteSessionUsingPOST400ApplicationJSONObject?: DeleteSessionUsingPost400ApplicationJson;
-    deleteSessionUsingPOST401ApplicationJSONObject?: DeleteSessionUsingPost401ApplicationJson;
-    deleteSessionUsingPOST500ApplicationJSONObject?: DeleteSessionUsingPost500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    deleteSessionUsingPOST200ApplicationJSONObject?: DeleteSessionUsingPost200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    deleteSessionUsingPOST400ApplicationJSONObject?: DeleteSessionUsingPost400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    deleteSessionUsingPOST401ApplicationJSONObject?: DeleteSessionUsingPost401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    deleteSessionUsingPOST500ApplicationJSONObject?: DeleteSessionUsingPost500ApplicationJSON;
 }

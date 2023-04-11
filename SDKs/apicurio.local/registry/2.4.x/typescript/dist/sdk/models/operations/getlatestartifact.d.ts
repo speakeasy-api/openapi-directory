@@ -1,0 +1,30 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class GetLatestArtifactRequest extends SpeakeasyBase {
+    /**
+     * The artifact ID.  Can be a string (client-provided) or UUID (server-generated), representing the unique artifact identifier.
+     */
+    artifactId: string;
+    /**
+     * Allows the user to specify if the content should be dereferenced when being returned
+     */
+    dereference?: boolean;
+    /**
+     * The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
+     */
+    groupId: string;
+}
+export declare class GetLatestArtifactResponse extends SpeakeasyBase {
+    contentType: string;
+    /**
+     * Common response for all operations that can return a `404` error.
+     */
+    error?: shared.ErrorT;
+    /**
+     * The content of one version of one artifact.
+     */
+    fileContent?: Uint8Array;
+    statusCode: number;
+    rawResponse?: AxiosResponse;
+}

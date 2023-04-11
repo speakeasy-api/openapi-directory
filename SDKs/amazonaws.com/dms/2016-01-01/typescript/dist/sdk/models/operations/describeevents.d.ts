@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeEventsQueryParams extends SpeakeasyBase {
-    marker?: string;
-    maxRecords?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum DescribeEventsXAmzTargetEnum {
-    AmazonDmSv20160101DescribeEvents = "AmazonDMSv20160101.DescribeEvents"
+    AmazonDMSv20160101DescribeEvents = "AmazonDMSv20160101.DescribeEvents"
 }
-export declare class DescribeEventsHeaders extends SpeakeasyBase {
+export declare class DescribeEventsRequest extends SpeakeasyBase {
+    describeEventsMessage: shared.DescribeEventsMessage;
+    /**
+     * Pagination token
+     */
+    marker?: string;
+    /**
+     * Pagination limit
+     */
+    maxRecords?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,13 +23,12 @@ export declare class DescribeEventsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeEventsXAmzTargetEnum;
 }
-export declare class DescribeEventsRequest extends SpeakeasyBase {
-    queryParams: DescribeEventsQueryParams;
-    headers: DescribeEventsHeaders;
-    request: shared.DescribeEventsMessage;
-}
 export declare class DescribeEventsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeEventsResponse?: shared.DescribeEventsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

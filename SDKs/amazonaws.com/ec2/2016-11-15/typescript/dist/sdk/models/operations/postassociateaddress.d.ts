@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostAssociateAddressActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTAssociateAddressActionEnum {
     AssociateAddress = "AssociateAddress"
 }
-export declare enum PostAssociateAddressVersionEnum {
+export declare enum POSTAssociateAddressVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostAssociateAddressQueryParams extends SpeakeasyBase {
-    action: PostAssociateAddressActionEnum;
-    version: PostAssociateAddressVersionEnum;
-}
-export declare class PostAssociateAddressHeaders extends SpeakeasyBase {
+export declare class POSTAssociateAddressRequest extends SpeakeasyBase {
+    action: POSTAssociateAddressActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTAssociateAddressVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostAssociateAddressHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostAssociateAddressRequest extends SpeakeasyBase {
-    queryParams: PostAssociateAddressQueryParams;
-    headers: PostAssociateAddressHeaders;
-    request?: Uint8Array;
-}
-export declare class PostAssociateAddressResponse extends SpeakeasyBase {
+export declare class POSTAssociateAddressResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

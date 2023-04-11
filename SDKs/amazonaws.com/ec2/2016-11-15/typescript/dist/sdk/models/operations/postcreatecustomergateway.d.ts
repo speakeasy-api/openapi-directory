@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateCustomerGatewayActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateCustomerGatewayActionEnum {
     CreateCustomerGateway = "CreateCustomerGateway"
 }
-export declare enum PostCreateCustomerGatewayVersionEnum {
+export declare enum POSTCreateCustomerGatewayVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostCreateCustomerGatewayQueryParams extends SpeakeasyBase {
-    action: PostCreateCustomerGatewayActionEnum;
-    version: PostCreateCustomerGatewayVersionEnum;
-}
-export declare class PostCreateCustomerGatewayHeaders extends SpeakeasyBase {
+export declare class POSTCreateCustomerGatewayRequest extends SpeakeasyBase {
+    action: POSTCreateCustomerGatewayActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateCustomerGatewayVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateCustomerGatewayHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateCustomerGatewayRequest extends SpeakeasyBase {
-    queryParams: PostCreateCustomerGatewayQueryParams;
-    headers: PostCreateCustomerGatewayHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateCustomerGatewayResponse extends SpeakeasyBase {
+export declare class POSTCreateCustomerGatewayResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

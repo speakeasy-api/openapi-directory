@@ -1,6 +1,7 @@
 export * from "./bulkcreatetransactions";
 export * from "./createaccount";
 export * from "./createtransaction";
+export * from "./deletetransaction";
 export * from "./getaccountbyid";
 export * from "./getaccounts";
 export * from "./getbudgetbyid";

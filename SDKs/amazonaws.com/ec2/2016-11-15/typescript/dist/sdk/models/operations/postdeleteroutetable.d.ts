@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteRouteTableActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteRouteTableActionEnum {
     DeleteRouteTable = "DeleteRouteTable"
 }
-export declare enum PostDeleteRouteTableVersionEnum {
+export declare enum POSTDeleteRouteTableVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDeleteRouteTableQueryParams extends SpeakeasyBase {
-    action: PostDeleteRouteTableActionEnum;
-    version: PostDeleteRouteTableVersionEnum;
-}
-export declare class PostDeleteRouteTableHeaders extends SpeakeasyBase {
+export declare class POSTDeleteRouteTableRequest extends SpeakeasyBase {
+    action: POSTDeleteRouteTableActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteRouteTableVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +18,8 @@ export declare class PostDeleteRouteTableHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteRouteTableRequest extends SpeakeasyBase {
-    queryParams: PostDeleteRouteTableQueryParams;
-    headers: PostDeleteRouteTableHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteRouteTableResponse extends SpeakeasyBase {
+export declare class POSTDeleteRouteTableResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Pad {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,165 +9,165 @@ export declare class Pad {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * appendChatMessageUsingGet - appends a chat message
-    **/
-    appendChatMessageUsingGet(req: operations.AppendChatMessageUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.AppendChatMessageUsingGetResponse>;
+     * appends a chat message
+     */
+    appendChatMessageUsingGET(req: operations.AppendChatMessageUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.AppendChatMessageUsingGETResponse>;
     /**
-     * appendChatMessageUsingPost - appends a chat message
-    **/
-    appendChatMessageUsingPost(req: operations.AppendChatMessageUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.AppendChatMessageUsingPostResponse>;
+     * appends a chat message
+     */
+    appendChatMessageUsingPOST(req: operations.AppendChatMessageUsingPOSTRequest, config?: AxiosRequestConfig): Promise<operations.AppendChatMessageUsingPOSTResponse>;
     /**
-     * checkTokenUsingGet - returns ok when the current api token is valid
-    **/
-    checkTokenUsingGet(config?: AxiosRequestConfig): Promise<operations.CheckTokenUsingGetResponse>;
+     * returns ok when the current api token is valid
+     */
+    checkTokenUsingGET(config?: AxiosRequestConfig): Promise<operations.CheckTokenUsingGETResponse>;
     /**
-     * checkTokenUsingPost - returns ok when the current api token is valid
-    **/
-    checkTokenUsingPost(config?: AxiosRequestConfig): Promise<operations.CheckTokenUsingPostResponse>;
-    createDiffHtmlUsingGet(req: operations.CreateDiffHtmlUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.CreateDiffHtmlUsingGetResponse>;
-    createDiffHtmlUsingPost(req: operations.CreateDiffHtmlUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.CreateDiffHtmlUsingPostResponse>;
+     * returns ok when the current api token is valid
+     */
+    checkTokenUsingPOST(config?: AxiosRequestConfig): Promise<operations.CheckTokenUsingPOSTResponse>;
+    createDiffHTMLUsingGET(req: operations.CreateDiffHTMLUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.CreateDiffHTMLUsingGETResponse>;
+    createDiffHTMLUsingPOST(req: operations.CreateDiffHTMLUsingPOSTRequest, config?: AxiosRequestConfig): Promise<operations.CreateDiffHTMLUsingPOSTResponse>;
     /**
-     * createPadUsingGet - creates a new (non-group) pad. Note that if you need to create a group Pad, you should call createGroupPad
-    **/
-    createPadUsingGet(req: operations.CreatePadUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.CreatePadUsingGetResponse>;
+     * creates a new (non-group) pad. Note that if you need to create a group Pad, you should call createGroupPad
+     */
+    createPadUsingGET(req: operations.CreatePadUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.CreatePadUsingGETResponse>;
     /**
-     * createPadUsingPost - creates a new (non-group) pad. Note that if you need to create a group Pad, you should call createGroupPad
-    **/
-    createPadUsingPost(req: operations.CreatePadUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.CreatePadUsingPostResponse>;
+     * creates a new (non-group) pad. Note that if you need to create a group Pad, you should call createGroupPad
+     */
+    createPadUsingPOST(req: operations.CreatePadUsingPOSTRequest, config?: AxiosRequestConfig): Promise<operations.CreatePadUsingPOSTResponse>;
     /**
-     * deletePadUsingGet - deletes a pad
-    **/
-    deletePadUsingGet(req: operations.DeletePadUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.DeletePadUsingGetResponse>;
+     * deletes a pad
+     */
+    deletePadUsingGET(req: operations.DeletePadUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.DeletePadUsingGETResponse>;
     /**
-     * deletePadUsingPost - deletes a pad
-    **/
-    deletePadUsingPost(req: operations.DeletePadUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.DeletePadUsingPostResponse>;
+     * deletes a pad
+     */
+    deletePadUsingPOST(req: operations.DeletePadUsingPOSTRequest, config?: AxiosRequestConfig): Promise<operations.DeletePadUsingPOSTResponse>;
     /**
-     * getChatHeadUsingGet - returns the chatHead (chat-message) of the pad
-    **/
-    getChatHeadUsingGet(req: operations.GetChatHeadUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetChatHeadUsingGetResponse>;
+     * returns the chatHead (chat-message) of the pad
+     */
+    getChatHeadUsingGET(req: operations.GETChatHeadUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETChatHeadUsingGETResponse>;
     /**
-     * getChatHeadUsingPost - returns the chatHead (chat-message) of the pad
-    **/
-    getChatHeadUsingPost(req: operations.GetChatHeadUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.GetChatHeadUsingPostResponse>;
+     * returns the chatHead (chat-message) of the pad
+     */
+    getChatHeadUsingPOST(req: operations.GetChatHeadUsingPOSTRequest, config?: AxiosRequestConfig): Promise<operations.GetChatHeadUsingPOSTResponse>;
     /**
-     * getChatHistoryUsingGet - returns the chat history
-    **/
-    getChatHistoryUsingGet(req: operations.GetChatHistoryUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetChatHistoryUsingGetResponse>;
+     * returns the chat history
+     */
+    getChatHistoryUsingGET(req: operations.GETChatHistoryUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETChatHistoryUsingGETResponse>;
     /**
-     * getChatHistoryUsingPost - returns the chat history
-    **/
-    getChatHistoryUsingPost(req: operations.GetChatHistoryUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.GetChatHistoryUsingPostResponse>;
+     * returns the chat history
+     */
+    getChatHistoryUsingPOST(req: operations.GetChatHistoryUsingPOSTRequest, config?: AxiosRequestConfig): Promise<operations.GetChatHistoryUsingPOSTResponse>;
     /**
-     * getHtmlUsingGet - returns the text of a pad formatted as HTML
-    **/
-    getHtmlUsingGet(req: operations.GetHtmlUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetHtmlUsingGetResponse>;
+     * returns the text of a pad formatted as HTML
+     */
+    getHTMLUsingGET(req: operations.GETHTMLUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETHTMLUsingGETResponse>;
     /**
-     * getHtmlUsingPost - returns the text of a pad formatted as HTML
-    **/
-    getHtmlUsingPost(req: operations.GetHtmlUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.GetHtmlUsingPostResponse>;
+     * returns the text of a pad formatted as HTML
+     */
+    getHTMLUsingPOST(req: operations.GetHTMLUsingPOSTRequest, config?: AxiosRequestConfig): Promise<operations.GetHTMLUsingPOSTResponse>;
     /**
-     * getLastEditedUsingGet - returns the timestamp of the last revision of the pad
-    **/
-    getLastEditedUsingGet(req: operations.GetLastEditedUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetLastEditedUsingGetResponse>;
+     * returns the timestamp of the last revision of the pad
+     */
+    getLastEditedUsingGET(req: operations.GETLastEditedUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETLastEditedUsingGETResponse>;
     /**
-     * getLastEditedUsingPost - returns the timestamp of the last revision of the pad
-    **/
-    getLastEditedUsingPost(req: operations.GetLastEditedUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.GetLastEditedUsingPostResponse>;
+     * returns the timestamp of the last revision of the pad
+     */
+    getLastEditedUsingPOST(req: operations.GetLastEditedUsingPOSTRequest, config?: AxiosRequestConfig): Promise<operations.GetLastEditedUsingPOSTResponse>;
     /**
-     * getPublicStatusUsingGet - return true of false
-    **/
-    getPublicStatusUsingGet(req: operations.GetPublicStatusUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetPublicStatusUsingGetResponse>;
+     * return true of false
+     */
+    getPublicStatusUsingGET(req: operations.GETPublicStatusUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETPublicStatusUsingGETResponse>;
     /**
-     * getPublicStatusUsingPost - return true of false
-    **/
-    getPublicStatusUsingPost(req: operations.GetPublicStatusUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.GetPublicStatusUsingPostResponse>;
+     * return true of false
+     */
+    getPublicStatusUsingPOST(req: operations.GetPublicStatusUsingPOSTRequest, config?: AxiosRequestConfig): Promise<operations.GetPublicStatusUsingPOSTResponse>;
     /**
-     * getReadOnlyIdUsingGet - returns the read only link of a pad
-    **/
-    getReadOnlyIdUsingGet(req: operations.GetReadOnlyIdUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetReadOnlyIdUsingGetResponse>;
+     * returns the read only link of a pad
+     */
+    getReadOnlyIDUsingGET(req: operations.GETReadOnlyIDUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETReadOnlyIDUsingGETResponse>;
     /**
-     * getReadOnlyIdUsingPost - returns the read only link of a pad
-    **/
-    getReadOnlyIdUsingPost(req: operations.GetReadOnlyIdUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.GetReadOnlyIdUsingPostResponse>;
+     * returns the read only link of a pad
+     */
+    getReadOnlyIDUsingPOST(req: operations.GetReadOnlyIDUsingPOSTRequest, config?: AxiosRequestConfig): Promise<operations.GetReadOnlyIDUsingPOSTResponse>;
     /**
-     * getRevisionsCountUsingGet - returns the number of revisions of this pad
-    **/
-    getRevisionsCountUsingGet(req: operations.GetRevisionsCountUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetRevisionsCountUsingGetResponse>;
+     * returns the number of revisions of this pad
+     */
+    getRevisionsCountUsingGET(req: operations.GETRevisionsCountUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETRevisionsCountUsingGETResponse>;
     /**
-     * getRevisionsCountUsingPost - returns the number of revisions of this pad
-    **/
-    getRevisionsCountUsingPost(req: operations.GetRevisionsCountUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.GetRevisionsCountUsingPostResponse>;
+     * returns the number of revisions of this pad
+     */
+    getRevisionsCountUsingPOST(req: operations.GetRevisionsCountUsingPOSTRequest, config?: AxiosRequestConfig): Promise<operations.GetRevisionsCountUsingPOSTResponse>;
     /**
-     * getTextUsingGet - returns the text of a pad
-    **/
-    getTextUsingGet(req: operations.GetTextUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetTextUsingGetResponse>;
+     * returns the text of a pad
+     */
+    getTextUsingGET(req: operations.GETTextUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETTextUsingGETResponse>;
     /**
-     * getTextUsingPost - returns the text of a pad
-    **/
-    getTextUsingPost(req: operations.GetTextUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.GetTextUsingPostResponse>;
+     * returns the text of a pad
+     */
+    getTextUsingPOST(req: operations.GetTextUsingPOSTRequest, config?: AxiosRequestConfig): Promise<operations.GetTextUsingPOSTResponse>;
     /**
-     * listAllPadsUsingGet - list all the pads
-    **/
-    listAllPadsUsingGet(config?: AxiosRequestConfig): Promise<operations.ListAllPadsUsingGetResponse>;
+     * list all the pads
+     */
+    listAllPadsUsingGET(config?: AxiosRequestConfig): Promise<operations.ListAllPadsUsingGETResponse>;
     /**
-     * listAllPadsUsingPost - list all the pads
-    **/
-    listAllPadsUsingPost(config?: AxiosRequestConfig): Promise<operations.ListAllPadsUsingPostResponse>;
+     * list all the pads
+     */
+    listAllPadsUsingPOST(config?: AxiosRequestConfig): Promise<operations.ListAllPadsUsingPOSTResponse>;
     /**
-     * listAuthorsOfPadUsingGet - returns an array of authors who contributed to this pad
-    **/
-    listAuthorsOfPadUsingGet(req: operations.ListAuthorsOfPadUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.ListAuthorsOfPadUsingGetResponse>;
+     * returns an array of authors who contributed to this pad
+     */
+    listAuthorsOfPadUsingGET(req: operations.ListAuthorsOfPadUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.ListAuthorsOfPadUsingGETResponse>;
     /**
-     * listAuthorsOfPadUsingPost - returns an array of authors who contributed to this pad
-    **/
-    listAuthorsOfPadUsingPost(req: operations.ListAuthorsOfPadUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.ListAuthorsOfPadUsingPostResponse>;
+     * returns an array of authors who contributed to this pad
+     */
+    listAuthorsOfPadUsingPOST(req: operations.ListAuthorsOfPadUsingPOSTRequest, config?: AxiosRequestConfig): Promise<operations.ListAuthorsOfPadUsingPOSTResponse>;
     /**
-     * padUsersCountUsingGet - returns the number of user that are currently editing this pad
-    **/
-    padUsersCountUsingGet(req: operations.PadUsersCountUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.PadUsersCountUsingGetResponse>;
+     * returns the number of user that are currently editing this pad
+     */
+    padUsersCountUsingGET(req: operations.PadUsersCountUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.PadUsersCountUsingGETResponse>;
     /**
-     * padUsersCountUsingPost - returns the number of user that are currently editing this pad
-    **/
-    padUsersCountUsingPost(req: operations.PadUsersCountUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.PadUsersCountUsingPostResponse>;
+     * returns the number of user that are currently editing this pad
+     */
+    padUsersCountUsingPOST(req: operations.PadUsersCountUsingPOSTRequest, config?: AxiosRequestConfig): Promise<operations.PadUsersCountUsingPOSTResponse>;
     /**
-     * padUsersUsingGet - returns the list of users that are currently editing this pad
-    **/
-    padUsersUsingGet(req: operations.PadUsersUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.PadUsersUsingGetResponse>;
+     * returns the list of users that are currently editing this pad
+     */
+    padUsersUsingGET(req: operations.PadUsersUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.PadUsersUsingGETResponse>;
     /**
-     * padUsersUsingPost - returns the list of users that are currently editing this pad
-    **/
-    padUsersUsingPost(req: operations.PadUsersUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.PadUsersUsingPostResponse>;
+     * returns the list of users that are currently editing this pad
+     */
+    padUsersUsingPOST(req: operations.PadUsersUsingPOSTRequest, config?: AxiosRequestConfig): Promise<operations.PadUsersUsingPOSTResponse>;
     /**
-     * sendClientsMessageUsingGet - sends a custom message of type msg to the pad
-    **/
-    sendClientsMessageUsingGet(req: operations.SendClientsMessageUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.SendClientsMessageUsingGetResponse>;
+     * sends a custom message of type msg to the pad
+     */
+    sendClientsMessageUsingGET(req: operations.SendClientsMessageUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.SendClientsMessageUsingGETResponse>;
     /**
-     * sendClientsMessageUsingPost - sends a custom message of type msg to the pad
-    **/
-    sendClientsMessageUsingPost(req: operations.SendClientsMessageUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.SendClientsMessageUsingPostResponse>;
+     * sends a custom message of type msg to the pad
+     */
+    sendClientsMessageUsingPOST(req: operations.SendClientsMessageUsingPOSTRequest, config?: AxiosRequestConfig): Promise<operations.SendClientsMessageUsingPOSTResponse>;
     /**
-     * setHtmlUsingGet - sets the text of a pad with HTML
-    **/
-    setHtmlUsingGet(req: operations.SetHtmlUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.SetHtmlUsingGetResponse>;
+     * sets the text of a pad with HTML
+     */
+    setHTMLUsingGET(req: operations.SetHTMLUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.SetHTMLUsingGETResponse>;
     /**
-     * setHtmlUsingPost - sets the text of a pad with HTML
-    **/
-    setHtmlUsingPost(req: operations.SetHtmlUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.SetHtmlUsingPostResponse>;
+     * sets the text of a pad with HTML
+     */
+    setHTMLUsingPOST(req: operations.SetHTMLUsingPOSTRequest, config?: AxiosRequestConfig): Promise<operations.SetHTMLUsingPOSTResponse>;
     /**
-     * setPublicStatusUsingGet - sets a boolean for the public status of a pad
-    **/
-    setPublicStatusUsingGet(req: operations.SetPublicStatusUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.SetPublicStatusUsingGetResponse>;
+     * sets a boolean for the public status of a pad
+     */
+    setPublicStatusUsingGET(req: operations.SetPublicStatusUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.SetPublicStatusUsingGETResponse>;
     /**
-     * setPublicStatusUsingPost - sets a boolean for the public status of a pad
-    **/
-    setPublicStatusUsingPost(req: operations.SetPublicStatusUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.SetPublicStatusUsingPostResponse>;
+     * sets a boolean for the public status of a pad
+     */
+    setPublicStatusUsingPOST(req: operations.SetPublicStatusUsingPOSTRequest, config?: AxiosRequestConfig): Promise<operations.SetPublicStatusUsingPOSTResponse>;
     /**
-     * setTextUsingGet - sets the text of a pad
-    **/
-    setTextUsingGet(req: operations.SetTextUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.SetTextUsingGetResponse>;
+     * sets the text of a pad
+     */
+    setTextUsingGET(req: operations.SetTextUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.SetTextUsingGETResponse>;
     /**
-     * setTextUsingPost - sets the text of a pad
-    **/
-    setTextUsingPost(req: operations.SetTextUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.SetTextUsingPostResponse>;
+     * sets the text of a pad
+     */
+    setTextUsingPOST(req: operations.SetTextUsingPOSTRequest, config?: AxiosRequestConfig): Promise<operations.SetTextUsingPOSTResponse>;
 }

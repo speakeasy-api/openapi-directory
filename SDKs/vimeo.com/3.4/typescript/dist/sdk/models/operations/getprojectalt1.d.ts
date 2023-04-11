@@ -1,18 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetProjectAlt1PathParams extends SpeakeasyBase {
-    projectId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetProjectAlt1Security extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
+    oauth2: string;
 }
 export declare class GetProjectAlt1Request extends SpeakeasyBase {
-    pathParams: GetProjectAlt1PathParams;
-    security: GetProjectAlt1Security;
+    /**
+     * The ID of the project.
+     */
+    projectId: number;
 }
 export declare class GetProjectAlt1Response extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Error code 8000: The user credentials are invalid.
+     */
     error?: shared.ErrorT;
+    /**
+     * The project was returned.
+     */
     project?: shared.Project;
 }

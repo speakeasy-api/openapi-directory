@@ -1,0 +1,14 @@
+export declare enum CanaryStateReasonCodeEnum {
+    InvalidPermissions = "INVALID_PERMISSIONS",
+    CreatePending = "CREATE_PENDING",
+    CreateInProgress = "CREATE_IN_PROGRESS",
+    CreateFailed = "CREATE_FAILED",
+    UpdatePending = "UPDATE_PENDING",
+    UpdateInProgress = "UPDATE_IN_PROGRESS",
+    UpdateComplete = "UPDATE_COMPLETE",
+    RollbackComplete = "ROLLBACK_COMPLETE",
+    RollbackFailed = "ROLLBACK_FAILED",
+    DeleteInProgress = "DELETE_IN_PROGRESS",
+    DeleteFailed = "DELETE_FAILED",
+    SyncDeleteInProgress = "SYNC_DELETE_IN_PROGRESS"
+}

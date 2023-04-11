@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostReplaceRouteTableAssociationActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTReplaceRouteTableAssociationActionEnum {
     ReplaceRouteTableAssociation = "ReplaceRouteTableAssociation"
 }
-export declare enum PostReplaceRouteTableAssociationVersionEnum {
+export declare enum POSTReplaceRouteTableAssociationVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostReplaceRouteTableAssociationQueryParams extends SpeakeasyBase {
-    action: PostReplaceRouteTableAssociationActionEnum;
-    version: PostReplaceRouteTableAssociationVersionEnum;
-}
-export declare class PostReplaceRouteTableAssociationHeaders extends SpeakeasyBase {
+export declare class POSTReplaceRouteTableAssociationRequest extends SpeakeasyBase {
+    action: POSTReplaceRouteTableAssociationActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTReplaceRouteTableAssociationVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostReplaceRouteTableAssociationHeaders extends SpeakeasyBa
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostReplaceRouteTableAssociationRequest extends SpeakeasyBase {
-    queryParams: PostReplaceRouteTableAssociationQueryParams;
-    headers: PostReplaceRouteTableAssociationHeaders;
-    request?: Uint8Array;
-}
-export declare class PostReplaceRouteTableAssociationResponse extends SpeakeasyBase {
+export declare class POSTReplaceRouteTableAssociationResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

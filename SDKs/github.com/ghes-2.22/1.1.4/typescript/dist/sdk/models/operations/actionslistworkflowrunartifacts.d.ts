@@ -1,25 +1,36 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ActionsListWorkflowRunArtifactsPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ActionsListWorkflowRunArtifactsRequest extends SpeakeasyBase {
     owner: string;
+    /**
+     * Page number of the results to fetch.
+     */
+    page?: number;
+    /**
+     * Results per page (max 100)
+     */
+    perPage?: number;
     repo: string;
+    /**
+     * The id of the workflow run.
+     */
     runId: number;
 }
-export declare class ActionsListWorkflowRunArtifactsQueryParams extends SpeakeasyBase {
-    page?: number;
-    perPage?: number;
-}
-export declare class ActionsListWorkflowRunArtifacts200ApplicationJson extends SpeakeasyBase {
+/**
+ * Response
+ */
+export declare class ActionsListWorkflowRunArtifacts200ApplicationJSON extends SpeakeasyBase {
     artifacts: shared.Artifact[];
     totalCount: number;
 }
-export declare class ActionsListWorkflowRunArtifactsRequest extends SpeakeasyBase {
-    pathParams: ActionsListWorkflowRunArtifactsPathParams;
-    queryParams: ActionsListWorkflowRunArtifactsQueryParams;
-}
 export declare class ActionsListWorkflowRunArtifactsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
-    actionsListWorkflowRunArtifacts200ApplicationJSONObject?: ActionsListWorkflowRunArtifacts200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
+    actionsListWorkflowRunArtifacts200ApplicationJSONObject?: ActionsListWorkflowRunArtifacts200ApplicationJSON;
 }

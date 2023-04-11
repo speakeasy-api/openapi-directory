@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GenerateChangeSetXAmzTargetEnum {
-    AwsServerMigrationServiceV20161024GenerateChangeSet = "AWSServerMigrationService_V2016_10_24.GenerateChangeSet"
+    AWSServerMigrationServiceV20161024GenerateChangeSet = "AWSServerMigrationService_V2016_10_24.GenerateChangeSet"
 }
-export declare class GenerateChangeSetHeaders extends SpeakeasyBase {
+export declare class GenerateChangeSetRequest extends SpeakeasyBase {
+    generateChangeSetRequest: shared.GenerateChangeSetRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class GenerateChangeSetHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GenerateChangeSetXAmzTargetEnum;
 }
-export declare class GenerateChangeSetRequest extends SpeakeasyBase {
-    headers: GenerateChangeSetHeaders;
-    request: shared.GenerateChangeSetRequest;
-}
 export declare class GenerateChangeSetResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     generateChangeSetResponse?: shared.GenerateChangeSetResponse;
+    /**
+     * InternalError
+     */
     internalError?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * MissingRequiredParameterException
+     */
     missingRequiredParameterException?: any;
+    /**
+     * OperationNotPermittedException
+     */
     operationNotPermittedException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnauthorizedOperationException
+     */
     unauthorizedOperationException?: any;
 }

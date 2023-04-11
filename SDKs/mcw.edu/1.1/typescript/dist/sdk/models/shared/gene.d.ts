@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * OK
+ */
 export declare class Gene extends SpeakeasyBase {
     agrDescription?: string;
     description?: string;

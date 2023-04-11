@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum ModifyReplicationSubnetGroupXAmzTargetEnum {
-    AmazonDmSv20160101ModifyReplicationSubnetGroup = "AmazonDMSv20160101.ModifyReplicationSubnetGroup"
+    AmazonDMSv20160101ModifyReplicationSubnetGroup = "AmazonDMSv20160101.ModifyReplicationSubnetGroup"
 }
-export declare class ModifyReplicationSubnetGroupHeaders extends SpeakeasyBase {
+export declare class ModifyReplicationSubnetGroupRequest extends SpeakeasyBase {
+    modifyReplicationSubnetGroupMessage: shared.ModifyReplicationSubnetGroupMessage;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class ModifyReplicationSubnetGroupHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ModifyReplicationSubnetGroupXAmzTargetEnum;
 }
-export declare class ModifyReplicationSubnetGroupRequest extends SpeakeasyBase {
-    headers: ModifyReplicationSubnetGroupHeaders;
-    request: shared.ModifyReplicationSubnetGroupMessage;
-}
 export declare class ModifyReplicationSubnetGroupResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedFault
+     */
     accessDeniedFault?: any;
     contentType: string;
+    /**
+     * InvalidSubnet
+     */
     invalidSubnet?: any;
+    /**
+     * Success
+     */
     modifyReplicationSubnetGroupResponse?: shared.ModifyReplicationSubnetGroupResponse;
+    /**
+     * ReplicationSubnetGroupDoesNotCoverEnoughAZs
+     */
     replicationSubnetGroupDoesNotCoverEnoughAZs?: any;
-    resourceNotFoundFault?: any;
+    /**
+     * ResourceQuotaExceededFault
+     */
     resourceQuotaExceededFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundFault
+     */
+    resourceNotFoundFault?: any;
+    /**
+     * SubnetAlreadyInUse
+     */
     subnetAlreadyInUse?: any;
 }

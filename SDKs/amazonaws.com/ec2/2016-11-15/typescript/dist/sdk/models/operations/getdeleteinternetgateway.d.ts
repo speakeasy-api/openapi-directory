@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteInternetGatewayActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteInternetGatewayActionEnum {
     DeleteInternetGateway = "DeleteInternetGateway"
 }
-export declare enum GetDeleteInternetGatewayVersionEnum {
+export declare enum GETDeleteInternetGatewayVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetDeleteInternetGatewayQueryParams extends SpeakeasyBase {
-    action: GetDeleteInternetGatewayActionEnum;
+export declare class GETDeleteInternetGatewayRequest extends SpeakeasyBase {
+    action: GETDeleteInternetGatewayActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
+    /**
+     * The ID of the internet gateway.
+     */
     internetGatewayId: string;
-    version: GetDeleteInternetGatewayVersionEnum;
-}
-export declare class GetDeleteInternetGatewayHeaders extends SpeakeasyBase {
+    version: GETDeleteInternetGatewayVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,11 +25,8 @@ export declare class GetDeleteInternetGatewayHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteInternetGatewayRequest extends SpeakeasyBase {
-    queryParams: GetDeleteInternetGatewayQueryParams;
-    headers: GetDeleteInternetGatewayHeaders;
-}
-export declare class GetDeleteInternetGatewayResponse extends SpeakeasyBase {
+export declare class GETDeleteInternetGatewayResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

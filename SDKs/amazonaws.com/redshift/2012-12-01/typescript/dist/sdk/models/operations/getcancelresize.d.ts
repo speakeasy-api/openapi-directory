@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetCancelResizeActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETCancelResizeActionEnum {
     CancelResize = "CancelResize"
 }
-export declare enum GetCancelResizeVersionEnum {
+export declare enum GETCancelResizeVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class GetCancelResizeQueryParams extends SpeakeasyBase {
-    action: GetCancelResizeActionEnum;
+export declare class GETCancelResizeRequest extends SpeakeasyBase {
+    action: GETCancelResizeActionEnum;
+    /**
+     * The unique identifier for the cluster that you want to cancel a resize operation for.
+     */
     clusterIdentifier: string;
-    version: GetCancelResizeVersionEnum;
-}
-export declare class GetCancelResizeHeaders extends SpeakeasyBase {
+    version: GETCancelResizeVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetCancelResizeHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetCancelResizeRequest extends SpeakeasyBase {
-    queryParams: GetCancelResizeQueryParams;
-    headers: GetCancelResizeHeaders;
-}
-export declare class GetCancelResizeResponse extends SpeakeasyBase {
+export declare class GETCancelResizeResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -3,7 +3,7 @@ import { ServerTypeEnum } from "./servertypeenum";
 import { VmServer } from "./vmserver";
 /**
  * Represents a server.
-**/
+ */
 export declare class Server extends SpeakeasyBase {
     replicationJobId?: string;
     replicationJobTerminated?: boolean;

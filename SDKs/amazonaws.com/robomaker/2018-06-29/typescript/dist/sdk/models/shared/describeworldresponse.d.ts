@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class DescribeWorldResponse extends SpeakeasyBase {
     arn?: string;
     createdAt?: Date;

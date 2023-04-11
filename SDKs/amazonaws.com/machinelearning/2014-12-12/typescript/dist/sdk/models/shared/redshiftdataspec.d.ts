@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { RedshiftDatabaseCredentials } from "./redshiftdatabasecredentials";
 import { RedshiftDatabase } from "./redshiftdatabase";
+import { RedshiftDatabaseCredentials } from "./redshiftdatabasecredentials";
 /**
  * Describes the data specification of an Amazon Redshift <code>DataSource</code>.
-**/
+ */
 export declare class RedshiftDataSpec extends SpeakeasyBase {
     dataRearrangement?: string;
     dataSchema?: string;

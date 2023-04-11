@@ -1,12 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class FilesPatchPathParams extends SpeakeasyBase {
-    fileId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class FilesPatchRequest extends SpeakeasyBase {
-    pathParams: FilesPatchPathParams;
-    request: Record<string, any>;
+    requestBody: Record<string, any>;
+    /**
+     * The unique identifier of the file you wish to update.
+     */
+    fileId: string;
 }
 export declare class FilesPatchResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

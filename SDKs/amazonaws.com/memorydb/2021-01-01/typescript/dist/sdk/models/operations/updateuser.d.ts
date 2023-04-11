@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateUserXAmzTargetEnum {
-    AmazonMemoryDbUpdateUser = "AmazonMemoryDB.UpdateUser"
+    AmazonMemoryDBUpdateUser = "AmazonMemoryDB.UpdateUser"
 }
-export declare class UpdateUserHeaders extends SpeakeasyBase {
+export declare class UpdateUserRequest extends SpeakeasyBase {
+    updateUserRequest: shared.UpdateUserRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class UpdateUserHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateUserXAmzTargetEnum;
 }
-export declare class UpdateUserRequest extends SpeakeasyBase {
-    headers: UpdateUserHeaders;
-    request: shared.UpdateUserRequest;
-}
 export declare class UpdateUserResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidParameterCombinationException
+     */
     invalidParameterCombinationException?: any;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
+    /**
+     * InvalidUserStateFault
+     */
     invalidUserStateFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     updateUserResponse?: shared.UpdateUserResponse;
+    /**
+     * UserNotFoundFault
+     */
     userNotFoundFault?: any;
 }

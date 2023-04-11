@@ -1,3 +1,6 @@
+/**
+ * State of a workspace.
+ */
 export declare enum WorkspaceStatusCodeEnum {
     Creating = "CREATING",
     Active = "ACTIVE",

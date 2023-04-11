@@ -1,21 +1,20 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DeleteChargeStationRequest, DeleteChargeStationResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  DeleteChargeStationRequest,
+  DeleteChargeStationResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  }
-));
-    
-const req: DeleteChargeStationRequest = {
-  pathParams: {
-    id: "sit",
+    oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
   },
+});
+
+const req: DeleteChargeStationRequest = {
+  id: "corrupti",
 };
 
 sdk.chargeStations.deleteChargeStation(req).then((res: DeleteChargeStationResponse | AxiosError) => {

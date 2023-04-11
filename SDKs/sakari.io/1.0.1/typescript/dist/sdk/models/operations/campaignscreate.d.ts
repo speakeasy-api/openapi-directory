@@ -1,18 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CampaignsCreatePathParams extends SpeakeasyBase {
-    accountId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class CampaignsCreateSecurity extends SpeakeasyBase {
-    sakariAuth: shared.SchemeSakariAuth;
+    sakariAuth: string;
 }
 export declare class CampaignsCreateRequest extends SpeakeasyBase {
-    pathParams: CampaignsCreatePathParams;
-    request?: shared.CampaignRequest;
-    security: CampaignsCreateSecurity;
+    campaignRequest?: shared.CampaignRequest;
+    /**
+     * Account to apply operations to
+     */
+    accountId: string;
 }
 export declare class CampaignsCreateResponse extends SpeakeasyBase {
+    /**
+     * successful operation
+     */
     campaignResponse?: shared.CampaignResponse;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

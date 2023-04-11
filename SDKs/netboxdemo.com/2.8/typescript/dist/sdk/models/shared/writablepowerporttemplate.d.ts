@@ -68,8 +68,14 @@ export declare enum WritablePowerPortTemplateTypeEnum {
     ItaO = "ita-o"
 }
 export declare class WritablePowerPortTemplateInput extends SpeakeasyBase {
+    /**
+     * Allocated power draw (watts)
+     */
     allocatedDraw?: number;
     deviceType: number;
+    /**
+     * Maximum power draw (watts)
+     */
     maximumDraw?: number;
     name: string;
     type?: WritablePowerPortTemplateTypeEnum;

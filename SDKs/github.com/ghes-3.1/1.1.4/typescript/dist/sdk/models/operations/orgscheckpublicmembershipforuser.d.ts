@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class OrgsCheckPublicMembershipForUserPathParams extends SpeakeasyBase {
-    org: string;
-    username: string;
-}
+import { AxiosResponse } from "axios";
 export declare class OrgsCheckPublicMembershipForUserRequest extends SpeakeasyBase {
-    pathParams: OrgsCheckPublicMembershipForUserPathParams;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    org: string;
+    /**
+     * The handle for the GitHub user account.
+     */
+    username: string;
 }
 export declare class OrgsCheckPublicMembershipForUserResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

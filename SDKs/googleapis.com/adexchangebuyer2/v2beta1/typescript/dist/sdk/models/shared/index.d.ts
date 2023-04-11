@@ -88,7 +88,6 @@ export * from "./relativedaterange";
 export * from "./removedealassociationrequest";
 export * from "./resumeproposaldealsrequest";
 export * from "./rowdimensions";
-export * from "./security";
 export * from "./securitycontext";
 export * from "./seller";
 export * from "./servingcontext";

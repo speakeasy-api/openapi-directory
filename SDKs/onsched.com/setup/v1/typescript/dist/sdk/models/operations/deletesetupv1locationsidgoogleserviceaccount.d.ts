@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteSetupV1LocationsIdGoogleServiceAccountPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteSetupV1LocationsIdGoogleServiceAccountRequest extends SpeakeasyBase {
-    pathParams: DeleteSetupV1LocationsIdGoogleServiceAccountPathParams;
+    /**
+     * id of business location, defaults to primary business location
+     */
+    id: string;
 }
 export declare class DeleteSetupV1LocationsIdGoogleServiceAccountResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,3 +1,6 @@
+/**
+ * Which product you wish to generate a report for.
+ */
 export declare enum ProductWebsocketEnum {
     Sms = "SMS",
     VoiceCall = "VOICE-CALL",

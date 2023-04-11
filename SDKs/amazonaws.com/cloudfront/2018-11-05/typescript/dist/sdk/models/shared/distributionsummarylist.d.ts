@@ -11,7 +11,7 @@ import { Restrictions } from "./restrictions";
 import { ViewerCertificate } from "./viewercertificate";
 /**
  * A summary of the information about a CloudFront distribution.
-**/
+ */
 export declare class DistributionSummaryList extends SpeakeasyBase {
     arn: string;
     aliases: Aliases;

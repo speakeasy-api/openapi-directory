@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetActionOrganizationShowQueryParams extends SpeakeasyBase {
-    id?: string;
-    includeDatasets?: boolean;
-}
+import { AxiosResponse } from "axios";
 export declare class GetActionOrganizationShowRequest extends SpeakeasyBase {
-    queryParams: GetActionOrganizationShowQueryParams;
+    /**
+     * The id or name of the organization
+     */
+    id?: string;
+    /**
+     * include a list of the organization's datasets
+     */
+    includeDatasets?: boolean;
 }
 export declare class GetActionOrganizationShowResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

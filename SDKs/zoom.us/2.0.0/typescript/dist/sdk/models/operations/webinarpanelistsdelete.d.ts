@@ -1,16 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class WebinarPanelistsDeletePathParams extends SpeakeasyBase {
-    webinarId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class WebinarPanelistsDeleteSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
+    oAuth: string;
 }
 export declare class WebinarPanelistsDeleteRequest extends SpeakeasyBase {
-    pathParams: WebinarPanelistsDeletePathParams;
-    security: WebinarPanelistsDeleteSecurity;
+    /**
+     * The webinar ID in "**long**" format(represented as int64 data type in JSON).
+     */
+    webinarId: number;
 }
 export declare class WebinarPanelistsDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

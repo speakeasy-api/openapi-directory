@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListByoipCidrsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListByoipCidrsXAmzTargetEnum {
     GlobalAcceleratorV20180706ListByoipCidrs = "GlobalAccelerator_V20180706.ListByoipCidrs"
 }
-export declare class ListByoipCidrsHeaders extends SpeakeasyBase {
+export declare class ListByoipCidrsRequest extends SpeakeasyBase {
+    listByoipCidrsRequest: shared.ListByoipCidrsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,17 +23,28 @@ export declare class ListByoipCidrsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListByoipCidrsXAmzTargetEnum;
 }
-export declare class ListByoipCidrsRequest extends SpeakeasyBase {
-    queryParams: ListByoipCidrsQueryParams;
-    headers: ListByoipCidrsHeaders;
-    request: shared.ListByoipCidrsRequest;
-}
 export declare class ListByoipCidrsResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InternalServiceErrorException
+     */
     internalServiceErrorException?: any;
+    /**
+     * InvalidArgumentException
+     */
     invalidArgumentException?: any;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * Success
+     */
     listByoipCidrsResponse?: shared.ListByoipCidrsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

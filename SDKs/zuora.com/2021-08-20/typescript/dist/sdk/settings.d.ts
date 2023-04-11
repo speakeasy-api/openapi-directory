@@ -1,5 +1,17 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * The Setting API provides a central API for managing settings in your Zuora tenant.
+ *
+ * @remarks
+ *
+ * If you use Postman, you can import the Settings API endpoints as a collection into your Postman app and try out different requests to learn how the API works. Click the following button to get started:
+ *
+ * [![Run in Postman](https://run.pstmn.io/button.svg)](https://www.getpostman.com/run-collection/1379901-d43e93a3-7d51-437c-b4cd-14163dd62fa2-SWLk4kiK)
+ *
+ * You can sign up for a free account on the [Postman website](https://identity.getpostman.com/signup) and download the app in case you do not use Postman yet.
+ *
+ */
 export declare class Settings {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +21,9 @@ export declare class Settings {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getListAllSettings - List all settings
+     * List all settings
      *
+     * @remarks
      * Get a list of all available settings in your tenant.
      *
      * The response message is by default in JSON format. If you want to receive all the availabe settings in csv format, include `Accept` in the header parameters and set it to `application/csv`.
@@ -48,11 +61,12 @@ export declare class Settings {
      *    * [View custom fields of a specific object](https://knowledgecenter.zuora.com/Central_Platform/API/BB_C_Settings_API/Settings_API_tutorials/View_custom_fields_of_a_specific_object)
      *    * [Update custom fields of a specific object](https://knowledgecenter.zuora.com/Central_Platform/API/BB_C_Settings_API/Settings_API_tutorials/Update_custom_fields_of_a_specific_object)
      *
-    **/
-    getListAllSettings(req: operations.GetListAllSettingsRequest, config?: AxiosRequestConfig): Promise<operations.GetListAllSettingsResponse>;
+     */
+    getListAllSettings(req: operations.GETListAllSettingsRequest, config?: AxiosRequestConfig): Promise<operations.GETListAllSettingsResponse>;
     /**
-     * postProcessSettingsBatchRequest - Submit settings requests
+     * Submit settings requests
      *
+     * @remarks
      * Submit a batch of settings requests by this single API operation.
      *
      * By default, one batch settings request can contain a maximum of 100 single operation requests, including:
@@ -61,6 +75,6 @@ export declare class Settings {
      *
      * This maximum value is configurable.
      *
-    **/
-    postProcessSettingsBatchRequest(req: operations.PostProcessSettingsBatchRequestRequest, config?: AxiosRequestConfig): Promise<operations.PostProcessSettingsBatchRequestResponse>;
+     */
+    postProcessSettingsBatchRequest(req: operations.POSTProcessSettingsBatchRequestRequest, config?: AxiosRequestConfig): Promise<operations.POSTProcessSettingsBatchRequestResponse>;
 }

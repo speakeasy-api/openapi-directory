@@ -5,3 +5,4 @@ export * from "./batchgetrecordresultdetail";
 export * from "./featurevalue";
 export * from "./getrecordresponse";
 export * from "./security";
+export * from "./targetstoreenum";

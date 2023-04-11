@@ -1,18 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UsersGetLogsPathParams extends SpeakeasyBase {
-    userId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UsersGetLogsSecurity extends SpeakeasyBase {
-    key: shared.SchemeKey;
-    project: shared.SchemeProject;
+    key: string;
+    project: string;
 }
 export declare class UsersGetLogsRequest extends SpeakeasyBase {
-    pathParams: UsersGetLogsPathParams;
-    security: UsersGetLogsSecurity;
+    /**
+     * User unique ID.
+     */
+    userId: string;
 }
 export declare class UsersGetLogsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Logs List
+     */
     logList?: shared.LogList;
 }

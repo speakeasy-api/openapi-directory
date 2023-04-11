@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Search API for 'Basic MB point file' entry type
+ */
 export declare class TypeTypeMbPointBasic {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,10 @@ export declare class TypeTypeMbPointBasic {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * searchTypeMbPointBasic - Search API for 'Basic MB point file' entry type
+     * Search API for 'Basic MB point file' entry type
      *
+     * @remarks
      * API to search for entries of type Basic MB point file
-    **/
+     */
     searchTypeMbPointBasic(req: operations.SearchTypeMbPointBasicRequest, config?: AxiosRequestConfig): Promise<operations.SearchTypeMbPointBasicResponse>;
 }

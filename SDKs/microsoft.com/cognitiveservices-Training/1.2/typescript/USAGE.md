@@ -1,16 +1,16 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetAccountInfoRequest, GetAccountInfoResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetAccountInfoRequest,
+  GetAccountInfoResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetAccountInfoRequest = {
-  headers: {
-    trainingKey: "sit",
-  },
+  trainingKey: "corrupti",
 };
 
 sdk.accountApi.getAccountInfo(req).then((res: GetAccountInfoResponse | AxiosError) => {

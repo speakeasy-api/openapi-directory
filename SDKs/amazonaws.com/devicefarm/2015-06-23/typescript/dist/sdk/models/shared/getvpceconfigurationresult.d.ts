@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { VpceConfiguration } from "./vpceconfiguration";
-export declare class GetVpceConfigurationResult extends SpeakeasyBase {
-    vpceConfiguration?: VpceConfiguration;
+import { VPCEConfiguration } from "./vpceconfiguration";
+/**
+ * Success
+ */
+export declare class GetVPCEConfigurationResult extends SpeakeasyBase {
+    vpceConfiguration?: VPCEConfiguration;
 }

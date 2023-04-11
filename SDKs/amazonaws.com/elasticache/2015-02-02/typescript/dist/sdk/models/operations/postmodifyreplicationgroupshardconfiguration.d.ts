@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostModifyReplicationGroupShardConfigurationActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTModifyReplicationGroupShardConfigurationActionEnum {
     ModifyReplicationGroupShardConfiguration = "ModifyReplicationGroupShardConfiguration"
 }
-export declare enum PostModifyReplicationGroupShardConfigurationVersionEnum {
+export declare enum POSTModifyReplicationGroupShardConfigurationVersionEnum {
     TwoThousandAndFifteen0202 = "2015-02-02"
 }
-export declare class PostModifyReplicationGroupShardConfigurationQueryParams extends SpeakeasyBase {
-    action: PostModifyReplicationGroupShardConfigurationActionEnum;
-    version: PostModifyReplicationGroupShardConfigurationVersionEnum;
-}
-export declare class PostModifyReplicationGroupShardConfigurationHeaders extends SpeakeasyBase {
+export declare class POSTModifyReplicationGroupShardConfigurationRequest extends SpeakeasyBase {
+    action: POSTModifyReplicationGroupShardConfigurationActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTModifyReplicationGroupShardConfigurationVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostModifyReplicationGroupShardConfigurationHeaders extends
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostModifyReplicationGroupShardConfigurationRequest extends SpeakeasyBase {
-    queryParams: PostModifyReplicationGroupShardConfigurationQueryParams;
-    headers: PostModifyReplicationGroupShardConfigurationHeaders;
-    request?: Uint8Array;
-}
-export declare class PostModifyReplicationGroupShardConfigurationResponse extends SpeakeasyBase {
+export declare class POSTModifyReplicationGroupShardConfigurationResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

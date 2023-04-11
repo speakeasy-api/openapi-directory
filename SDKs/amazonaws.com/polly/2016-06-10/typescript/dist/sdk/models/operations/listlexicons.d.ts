@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListLexiconsQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListLexiconsRequest extends SpeakeasyBase {
+    /**
+     * An opaque pagination token returned from previous <code>ListLexicons</code> operation. If present, indicates where to continue the list of lexicons.
+     */
     nextToken?: string;
-}
-export declare class ListLexiconsHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,14 +14,20 @@ export declare class ListLexiconsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class ListLexiconsRequest extends SpeakeasyBase {
-    queryParams: ListLexiconsQueryParams;
-    headers: ListLexiconsHeaders;
-}
 export declare class ListLexiconsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * Success
+     */
     listLexiconsOutput?: shared.ListLexiconsOutput;
-    serviceFailureException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceFailureException
+     */
+    serviceFailureException?: any;
 }

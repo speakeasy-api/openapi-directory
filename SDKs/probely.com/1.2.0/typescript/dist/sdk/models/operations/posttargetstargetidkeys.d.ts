@@ -1,31 +1,66 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PostTargetsTargetIdKeysPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class PostTargetsTargetIdKeysRequest extends SpeakeasyBase {
+    apiKeyInput: shared.APIKeyInput;
+    /**
+     * Target id
+     */
     targetId: string;
 }
-export declare class PostTargetsTargetIdKeys400ApplicationJson extends SpeakeasyBase {
+/**
+ * Not found
+ */
+export declare class PostTargetsTargetIdKeys404ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Not found.
+     */
+    detail?: string;
+}
+/**
+ * Not allowed to perform operation
+ */
+export declare class PostTargetsTargetIdKeys403ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error message.
+     */
+    detail?: string;
+}
+/**
+ * Access token is missing or invalid
+ */
+export declare class PostTargetsTargetIdKeys401ApplicationJSON extends SpeakeasyBase {
+    detail?: string;
+}
+/**
+ * Bad Request
+ */
+export declare class PostTargetsTargetIdKeys400ApplicationJSON extends SpeakeasyBase {
     lessThanFieldNameGreaterThan?: string[];
     nonFieldErrors?: string[];
 }
-export declare class PostTargetsTargetIdKeys401ApplicationJson extends SpeakeasyBase {
-    detail?: string;
-}
-export declare class PostTargetsTargetIdKeys403ApplicationJson extends SpeakeasyBase {
-    detail?: string;
-}
-export declare class PostTargetsTargetIdKeys404ApplicationJson extends SpeakeasyBase {
-    detail?: string;
-}
-export declare class PostTargetsTargetIdKeysRequest extends SpeakeasyBase {
-    pathParams: PostTargetsTargetIdKeysPathParams;
-    request: shared.ApiKeyInput;
-}
 export declare class PostTargetsTargetIdKeysResponse extends SpeakeasyBase {
-    apiKey?: shared.ApiKey;
+    /**
+     * API Key object
+     */
+    apiKey?: shared.APIKey;
     contentType: string;
     statusCode: number;
-    postTargetsTargetIdKeys400ApplicationJSONObject?: PostTargetsTargetIdKeys400ApplicationJson;
-    postTargetsTargetIdKeys401ApplicationJSONObject?: PostTargetsTargetIdKeys401ApplicationJson;
-    postTargetsTargetIdKeys403ApplicationJSONObject?: PostTargetsTargetIdKeys403ApplicationJson;
-    postTargetsTargetIdKeys404ApplicationJSONObject?: PostTargetsTargetIdKeys404ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad Request
+     */
+    postTargetsTargetIdKeys400ApplicationJSONObject?: PostTargetsTargetIdKeys400ApplicationJSON;
+    /**
+     * Access token is missing or invalid
+     */
+    postTargetsTargetIdKeys401ApplicationJSONObject?: PostTargetsTargetIdKeys401ApplicationJSON;
+    /**
+     * Not allowed to perform operation
+     */
+    postTargetsTargetIdKeys403ApplicationJSONObject?: PostTargetsTargetIdKeys403ApplicationJSON;
+    /**
+     * Not found
+     */
+    postTargetsTargetIdKeys404ApplicationJSONObject?: PostTargetsTargetIdKeys404ApplicationJSON;
 }

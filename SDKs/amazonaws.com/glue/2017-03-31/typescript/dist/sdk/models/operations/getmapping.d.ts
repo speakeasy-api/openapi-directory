@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetMappingXAmzTargetEnum {
-    AwsGlueGetMapping = "AWSGlue.GetMapping"
+    AWSGlueGetMapping = "AWSGlue.GetMapping"
 }
-export declare class GetMappingHeaders extends SpeakeasyBase {
+export declare class GetMappingRequest extends SpeakeasyBase {
+    getMappingRequest: shared.GetMappingRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class GetMappingHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetMappingXAmzTargetEnum;
 }
-export declare class GetMappingRequest extends SpeakeasyBase {
-    headers: GetMappingHeaders;
-    request: shared.GetMappingRequest;
-}
 export declare class GetMappingResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * Success
+     */
     getMappingResponse?: shared.GetMappingResponse;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

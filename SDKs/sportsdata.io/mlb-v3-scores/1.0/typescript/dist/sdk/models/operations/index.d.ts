@@ -11,6 +11,7 @@ export * from "./playersbyteam";
 export * from "./schedules";
 export * from "./stadiums";
 export * from "./standings";
+export * from "./teamgamelogsbyseason";
 export * from "./teamgamestatsbydate";
 export * from "./teamsactive";
 export * from "./teamsall";

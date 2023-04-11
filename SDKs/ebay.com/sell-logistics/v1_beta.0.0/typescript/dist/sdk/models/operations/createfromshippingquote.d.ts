@@ -1,14 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class CreateFromShippingQuoteSecurity extends SpeakeasyBase {
-    apiAuth: shared.SchemeApiAuth;
-}
-export declare class CreateFromShippingQuoteRequest extends SpeakeasyBase {
-    request: shared.CreateShipmentFromQuoteRequest;
-    security: CreateFromShippingQuoteSecurity;
+    apiAuth: string;
 }
 export declare class CreateFromShippingQuoteResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Created
+     */
     shipment?: shared.Shipment;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

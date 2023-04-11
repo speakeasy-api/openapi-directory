@@ -1,13 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class IpamPrefixesAvailablePrefixesReadPathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class IpamPrefixesAvailablePrefixesReadRequest extends SpeakeasyBase {
-    pathParams: IpamPrefixesAvailablePrefixesReadPathParams;
+    /**
+     * A unique integer value identifying this prefix.
+     */
+    id: number;
 }
 export declare class IpamPrefixesAvailablePrefixesReadResponse extends SpeakeasyBase {
     availablePrefixes?: shared.AvailablePrefix[];
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

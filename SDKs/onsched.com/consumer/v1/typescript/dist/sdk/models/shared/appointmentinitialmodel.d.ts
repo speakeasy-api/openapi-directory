@@ -1,8 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { BookingFieldItem } from "./bookingfielditem";
+import { CustomFieldInputModel } from "./customfieldinputmodel";
 export declare class AppointmentInitialModel extends SpeakeasyBase {
+    appointmentBookingFields?: BookingFieldItem[];
     bookedBy?: string;
     bookingWindowId?: string;
     calendarId?: string;
+    customFields?: CustomFieldInputModel;
+    customerBookingFields?: BookingFieldItem[];
     customerId?: string;
     customerMessage?: string;
     email?: string;

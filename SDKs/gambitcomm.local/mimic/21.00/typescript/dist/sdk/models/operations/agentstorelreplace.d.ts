@@ -1,15 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class AgentStoreLreplacePathParams extends SpeakeasyBase {
-    agentNum: number;
-    index: number;
-    var: string;
-}
+import { AxiosResponse } from "axios";
 export declare class AgentStoreLreplaceRequest extends SpeakeasyBase {
-    pathParams: AgentStoreLreplacePathParams;
-    request?: string;
+    /**
+     * Value
+     */
+    requestBody?: string;
+    /**
+     * Agent of the value space
+     */
+    agentNum: number;
+    /**
+     * Index
+     */
+    index: number;
+    /**
+     * Variable name
+     */
+    var: string;
 }
 export declare class AgentStoreLreplaceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     agentStoreLreplace200ApplicationJSONString?: string;
 }

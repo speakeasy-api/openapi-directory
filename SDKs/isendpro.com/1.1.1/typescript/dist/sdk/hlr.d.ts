@@ -1,5 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Hlr {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,10 +10,11 @@ export declare class Hlr {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getHlr - Vérifier la validité d'un numéro
+     * Vérifier la validité d'un numéro
      *
+     * @remarks
      * Réalise un lookup HLR sur les numéros
      *
-    **/
-    getHlr(req: operations.GetHlrRequest, config?: AxiosRequestConfig): Promise<operations.GetHlrResponse>;
+     */
+    getHlr(req: shared.HLRrequest, config?: AxiosRequestConfig): Promise<operations.GetHlrResponse>;
 }

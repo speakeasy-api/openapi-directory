@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetResumeClusterActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETResumeClusterActionEnum {
     ResumeCluster = "ResumeCluster"
 }
-export declare enum GetResumeClusterVersionEnum {
+export declare enum GETResumeClusterVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class GetResumeClusterQueryParams extends SpeakeasyBase {
-    action: GetResumeClusterActionEnum;
+export declare class GETResumeClusterRequest extends SpeakeasyBase {
+    action: GETResumeClusterActionEnum;
+    /**
+     * The identifier of the cluster to be resumed.
+     */
     clusterIdentifier: string;
-    version: GetResumeClusterVersionEnum;
-}
-export declare class GetResumeClusterHeaders extends SpeakeasyBase {
+    version: GETResumeClusterVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetResumeClusterHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetResumeClusterRequest extends SpeakeasyBase {
-    queryParams: GetResumeClusterQueryParams;
-    headers: GetResumeClusterHeaders;
-}
-export declare class GetResumeClusterResponse extends SpeakeasyBase {
+export declare class GETResumeClusterResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

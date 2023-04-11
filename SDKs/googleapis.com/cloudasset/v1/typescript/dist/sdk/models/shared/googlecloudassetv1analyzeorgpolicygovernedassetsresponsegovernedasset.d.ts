@@ -1,0 +1,25 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { AnalyzerOrgPolicy } from "./analyzerorgpolicy";
+import { GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedIamPolicy } from "./googlecloudassetv1analyzeorgpolicygovernedassetsresponsegovernediampolicy";
+import { GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedResource } from "./googlecloudassetv1analyzeorgpolicygovernedassetsresponsegovernedresource";
+/**
+ * Represents a Google Cloud asset(resource or IAM policy) governed by the organization policies of the AnalyzeOrgPolicyGovernedAssetsRequest.constraint.
+ */
+export declare class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedAsset extends SpeakeasyBase {
+    /**
+     * This organization policy message is a modified version of the one defined in the Organization Policy system. This message contains several fields defined in the original organization policy with some new fields for analysis purpose.
+     */
+    consolidatedPolicy?: AnalyzerOrgPolicy;
+    /**
+     * The IAM policies governed by the organization policies of the AnalyzeOrgPolicyGovernedAssetsRequest.constraint.
+     */
+    governedIamPolicy?: GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedIamPolicy;
+    /**
+     * The Google Cloud resources governed by the organization policies of the AnalyzeOrgPolicyGovernedAssetsRequest.constraint.
+     */
+    governedResource?: GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedResource;
+    /**
+     * The ordered list of all organization policies from the AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource to the scope specified in the request. If the constraint is defined with default policy, it will also appear in the list.
+     */
+    policyBundle?: AnalyzerOrgPolicy[];
+}

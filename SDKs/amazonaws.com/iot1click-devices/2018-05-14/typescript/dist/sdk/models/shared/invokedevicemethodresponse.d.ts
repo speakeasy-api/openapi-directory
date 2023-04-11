@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class InvokeDeviceMethodResponse extends SpeakeasyBase {
-    deviceMethodResponse?: Record<string, any>;
+    deviceMethodResponse?: string;
 }

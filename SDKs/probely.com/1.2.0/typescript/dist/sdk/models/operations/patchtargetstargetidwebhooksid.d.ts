@@ -1,32 +1,70 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PatchTargetsTargetIdWebhooksIdPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class PatchTargetsTargetIdWebhooksIdRequest extends SpeakeasyBase {
+    webhookInput: shared.WebhookInput;
+    /**
+     * Object Id
+     */
     id: string;
+    /**
+     * Target id
+     */
     targetId: string;
 }
-export declare class PatchTargetsTargetIdWebhooksId400ApplicationJson extends SpeakeasyBase {
+/**
+ * Not found
+ */
+export declare class PatchTargetsTargetIdWebhooksId404ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Not found.
+     */
+    detail?: string;
+}
+/**
+ * Not allowed to perform operation
+ */
+export declare class PatchTargetsTargetIdWebhooksId403ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error message.
+     */
+    detail?: string;
+}
+/**
+ * Access token is missing or invalid
+ */
+export declare class PatchTargetsTargetIdWebhooksId401ApplicationJSON extends SpeakeasyBase {
+    detail?: string;
+}
+/**
+ * Bad Request
+ */
+export declare class PatchTargetsTargetIdWebhooksId400ApplicationJSON extends SpeakeasyBase {
     lessThanFieldNameGreaterThan?: string[];
     nonFieldErrors?: string[];
-}
-export declare class PatchTargetsTargetIdWebhooksId401ApplicationJson extends SpeakeasyBase {
-    detail?: string;
-}
-export declare class PatchTargetsTargetIdWebhooksId403ApplicationJson extends SpeakeasyBase {
-    detail?: string;
-}
-export declare class PatchTargetsTargetIdWebhooksId404ApplicationJson extends SpeakeasyBase {
-    detail?: string;
-}
-export declare class PatchTargetsTargetIdWebhooksIdRequest extends SpeakeasyBase {
-    pathParams: PatchTargetsTargetIdWebhooksIdPathParams;
-    request: shared.WebhookInput;
 }
 export declare class PatchTargetsTargetIdWebhooksIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Webhooks
+     */
     webhook?: shared.Webhook;
-    patchTargetsTargetIdWebhooksId400ApplicationJSONObject?: PatchTargetsTargetIdWebhooksId400ApplicationJson;
-    patchTargetsTargetIdWebhooksId401ApplicationJSONObject?: PatchTargetsTargetIdWebhooksId401ApplicationJson;
-    patchTargetsTargetIdWebhooksId403ApplicationJSONObject?: PatchTargetsTargetIdWebhooksId403ApplicationJson;
-    patchTargetsTargetIdWebhooksId404ApplicationJSONObject?: PatchTargetsTargetIdWebhooksId404ApplicationJson;
+    /**
+     * Bad Request
+     */
+    patchTargetsTargetIdWebhooksId400ApplicationJSONObject?: PatchTargetsTargetIdWebhooksId400ApplicationJSON;
+    /**
+     * Access token is missing or invalid
+     */
+    patchTargetsTargetIdWebhooksId401ApplicationJSONObject?: PatchTargetsTargetIdWebhooksId401ApplicationJSON;
+    /**
+     * Not allowed to perform operation
+     */
+    patchTargetsTargetIdWebhooksId403ApplicationJSONObject?: PatchTargetsTargetIdWebhooksId403ApplicationJSON;
+    /**
+     * Not found
+     */
+    patchTargetsTargetIdWebhooksId404ApplicationJSONObject?: PatchTargetsTargetIdWebhooksId404ApplicationJSON;
 }

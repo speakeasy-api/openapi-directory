@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListConnectorDefinitionVersionsPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListConnectorDefinitionVersionsRequest extends SpeakeasyBase {
+    /**
+     * The ID of the connector definition.
+     */
     connectorDefinitionId: string;
-}
-export declare class ListConnectorDefinitionVersionsQueryParams extends SpeakeasyBase {
+    /**
+     * The maximum number of results to be returned per request.
+     */
     maxResults?: string;
+    /**
+     * The token for the next set of results, or ''null'' if there are no additional results.
+     */
     nextToken?: string;
-}
-export declare class ListConnectorDefinitionVersionsHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,14 +22,16 @@ export declare class ListConnectorDefinitionVersionsHeaders extends SpeakeasyBas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class ListConnectorDefinitionVersionsRequest extends SpeakeasyBase {
-    pathParams: ListConnectorDefinitionVersionsPathParams;
-    queryParams: ListConnectorDefinitionVersionsQueryParams;
-    headers: ListConnectorDefinitionVersionsHeaders;
-}
 export declare class ListConnectorDefinitionVersionsResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     listConnectorDefinitionVersionsResponse?: shared.ListConnectorDefinitionVersionsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

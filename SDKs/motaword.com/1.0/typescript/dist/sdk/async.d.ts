@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Async {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +9,10 @@ export declare class Async {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * downloadAsync - Download async request files
+     * Download result of an async operation
      *
-     * Download async request files
-    **/
+     * @remarks
+     * Download the result of an async operation that you have requested in other endpoints.
+     */
     downloadAsync(req: operations.DownloadAsyncRequest, config?: AxiosRequestConfig): Promise<operations.DownloadAsyncResponse>;
 }

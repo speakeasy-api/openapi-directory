@@ -1,15 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetGetSendQuotaActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETGETSendQuotaActionEnum {
     GetSendQuota = "GetSendQuota"
 }
-export declare enum GetGetSendQuotaVersionEnum {
+export declare enum GETGETSendQuotaVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetGetSendQuotaQueryParams extends SpeakeasyBase {
-    action: GetGetSendQuotaActionEnum;
-    version: GetGetSendQuotaVersionEnum;
-}
-export declare class GetGetSendQuotaHeaders extends SpeakeasyBase {
+export declare class GETGETSendQuotaRequest extends SpeakeasyBase {
+    action: GETGETSendQuotaActionEnum;
+    version: GETGETSendQuotaVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +17,9 @@ export declare class GetGetSendQuotaHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetGetSendQuotaRequest extends SpeakeasyBase {
-    queryParams: GetGetSendQuotaQueryParams;
-    headers: GetGetSendQuotaHeaders;
-}
-export declare class GetGetSendQuotaResponse extends SpeakeasyBase {
+export declare class GETGETSendQuotaResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

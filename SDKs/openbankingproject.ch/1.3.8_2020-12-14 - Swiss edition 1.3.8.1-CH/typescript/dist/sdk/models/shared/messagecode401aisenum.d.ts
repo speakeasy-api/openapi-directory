@@ -1,4 +1,7 @@
-export declare enum MessageCode401AisEnum {
+/**
+ * Message codes defined for AIS for HTTP Error code 401 (UNAUTHORIZED).
+ */
+export declare enum MessageCode401AISEnum {
     CertificateInvalid = "CERTIFICATE_INVALID",
     RoleInvalid = "ROLE_INVALID",
     CertificateExpired = "CERTIFICATE_EXPIRED",

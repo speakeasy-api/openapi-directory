@@ -1,20 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeOptionGroupsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeOptionGroupsActionEnum {
     DescribeOptionGroups = "DescribeOptionGroups"
 }
-export declare enum GetDescribeOptionGroupsVersionEnum {
+export declare enum GETDescribeOptionGroupsVersionEnum {
     TwoThousandAndThirteen0212 = "2013-02-12"
 }
-export declare class GetDescribeOptionGroupsQueryParams extends SpeakeasyBase {
-    action: GetDescribeOptionGroupsActionEnum;
+export declare class GETDescribeOptionGroupsRequest extends SpeakeasyBase {
+    action: GETDescribeOptionGroupsActionEnum;
     engineName?: string;
     majorEngineVersion?: string;
     marker?: string;
     maxRecords?: number;
     optionGroupName?: string;
-    version: GetDescribeOptionGroupsVersionEnum;
-}
-export declare class GetDescribeOptionGroupsHeaders extends SpeakeasyBase {
+    version: GETDescribeOptionGroupsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -23,12 +22,9 @@ export declare class GetDescribeOptionGroupsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeOptionGroupsRequest extends SpeakeasyBase {
-    queryParams: GetDescribeOptionGroupsQueryParams;
-    headers: GetDescribeOptionGroupsHeaders;
-}
-export declare class GetDescribeOptionGroupsResponse extends SpeakeasyBase {
+export declare class GETDescribeOptionGroupsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

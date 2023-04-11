@@ -1,22 +1,32 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class EditPicturePathParams extends SpeakeasyBase {
-    portraitsetId: number;
-    userId: number;
+import { AxiosResponse } from "axios";
+export declare class EditPictureSecurity extends SpeakeasyBase {
+    oauth2: string;
 }
 export declare class EditPictureRequestBody extends SpeakeasyBase {
+    /**
+     * Whether the picture is the user's active portrait.
+     */
     active?: boolean;
 }
-export declare class EditPictureSecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-}
 export declare class EditPictureRequest extends SpeakeasyBase {
-    pathParams: EditPicturePathParams;
-    request?: EditPictureRequestBody;
-    security: EditPictureSecurity;
+    requestBody?: EditPictureRequestBody;
+    /**
+     * The ID of the picture.
+     */
+    portraitsetId: number;
+    /**
+     * The ID of the user.
+     */
+    userId: number;
 }
 export declare class EditPictureResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The picture was edited.
+     */
     picture?: shared.Picture;
 }

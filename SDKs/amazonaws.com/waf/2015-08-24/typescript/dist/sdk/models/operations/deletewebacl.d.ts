@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum DeleteWebAclxAmzTargetEnum {
-    Awswaf20150824DeleteWebAcl = "AWSWAF_20150824.DeleteWebACL"
+import { AxiosResponse } from "axios";
+export declare enum DeleteWebACLXAmzTargetEnum {
+    AWSWAF20150824DeleteWebACL = "AWSWAF_20150824.DeleteWebACL"
 }
-export declare class DeleteWebAclHeaders extends SpeakeasyBase {
+export declare class DeleteWebACLRequest extends SpeakeasyBase {
+    deleteWebACLRequest: shared.DeleteWebACLRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,22 +13,46 @@ export declare class DeleteWebAclHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: DeleteWebAclxAmzTargetEnum;
+    xAmzTarget: DeleteWebACLXAmzTargetEnum;
 }
-export declare class DeleteWebAclRequest extends SpeakeasyBase {
-    headers: DeleteWebAclHeaders;
-    request: shared.DeleteWebAclRequest;
-}
-export declare class DeleteWebAclResponse extends SpeakeasyBase {
+export declare class DeleteWebACLResponse extends SpeakeasyBase {
     contentType: string;
-    deleteWebACLResponse?: shared.DeleteWebAclResponse;
+    /**
+     * Success
+     */
+    deleteWebACLResponse?: shared.DeleteWebACLResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFInvalidAccountException
+     */
     wafInvalidAccountException?: any;
+    /**
+     * WAFNonEmptyEntityException
+     */
     wafNonEmptyEntityException?: any;
+    /**
+     * WAFNonexistentItemException
+     */
     wafNonexistentItemException?: any;
+    /**
+     * WAFReferencedItemException
+     */
     wafReferencedItemException?: any;
+    /**
+     * WAFStaleDataException
+     */
     wafStaleDataException?: any;
+    /**
+     * WAFTagOperationException
+     */
     wafTagOperationException?: any;
+    /**
+     * WAFTagOperationInternalErrorException
+     */
     wafTagOperationInternalErrorException?: any;
 }

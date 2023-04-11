@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Tokens {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -8,5 +8,5 @@ export declare class Tokens {
     _sdkVersion: string;
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
-    postOauthV1TokenCreateToken(req: operations.PostOauthV1TokenCreateTokenRequest, config?: AxiosRequestConfig): Promise<operations.PostOauthV1TokenCreateTokenResponse>;
+    postOauthV1TokenCreate(req: operations.PostOauthV1TokenCreateRequestBody, config?: AxiosRequestConfig): Promise<operations.PostOauthV1TokenCreateResponse>;
 }

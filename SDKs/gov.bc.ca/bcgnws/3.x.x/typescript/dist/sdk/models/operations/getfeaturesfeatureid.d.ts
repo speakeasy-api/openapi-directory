@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetFeaturesFeatureIdPathParams extends SpeakeasyBase {
-    featureId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetFeaturesFeatureIdRequest extends SpeakeasyBase {
-    pathParams: GetFeaturesFeatureIdPathParams;
+    /**
+     * The unique identifier for a feature
+     */
+    featureId: number;
 }
 export declare class GetFeaturesFeatureIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

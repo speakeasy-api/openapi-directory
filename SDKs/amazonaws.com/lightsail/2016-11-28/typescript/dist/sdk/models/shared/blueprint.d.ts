@@ -1,10 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { InstancePlatformEnum } from "./instanceplatformenum";
+import { AppCategoryEnum } from "./appcategoryenum";
 import { BlueprintTypeEnum } from "./blueprinttypeenum";
+import { InstancePlatformEnum } from "./instanceplatformenum";
 /**
  * Describes a blueprint (a virtual private server image).
-**/
+ */
 export declare class Blueprint extends SpeakeasyBase {
+    appCategory?: AppCategoryEnum;
     blueprintId?: string;
     description?: string;
     group?: string;

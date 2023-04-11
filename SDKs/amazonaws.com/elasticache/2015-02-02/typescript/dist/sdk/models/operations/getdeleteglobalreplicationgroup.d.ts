@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteGlobalReplicationGroupActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteGlobalReplicationGroupActionEnum {
     DeleteGlobalReplicationGroup = "DeleteGlobalReplicationGroup"
 }
-export declare enum GetDeleteGlobalReplicationGroupVersionEnum {
+export declare enum GETDeleteGlobalReplicationGroupVersionEnum {
     TwoThousandAndFifteen0202 = "2015-02-02"
 }
-export declare class GetDeleteGlobalReplicationGroupQueryParams extends SpeakeasyBase {
-    action: GetDeleteGlobalReplicationGroupActionEnum;
+export declare class GETDeleteGlobalReplicationGroupRequest extends SpeakeasyBase {
+    action: GETDeleteGlobalReplicationGroupActionEnum;
+    /**
+     * The name of the Global datastore
+     */
     globalReplicationGroupId: string;
+    /**
+     * The primary replication group is retained as a standalone replication group.
+     */
     retainPrimaryReplicationGroup: boolean;
-    version: GetDeleteGlobalReplicationGroupVersionEnum;
-}
-export declare class GetDeleteGlobalReplicationGroupHeaders extends SpeakeasyBase {
+    version: GETDeleteGlobalReplicationGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetDeleteGlobalReplicationGroupHeaders extends SpeakeasyBas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteGlobalReplicationGroupRequest extends SpeakeasyBase {
-    queryParams: GetDeleteGlobalReplicationGroupQueryParams;
-    headers: GetDeleteGlobalReplicationGroupHeaders;
-}
-export declare class GetDeleteGlobalReplicationGroupResponse extends SpeakeasyBase {
+export declare class GETDeleteGlobalReplicationGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

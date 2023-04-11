@@ -1,9 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdateGroupCertificateConfigurationPathParams extends SpeakeasyBase {
-    groupId: string;
+import { AxiosResponse } from "axios";
+export declare class UpdateGroupCertificateConfigurationRequestBody extends SpeakeasyBase {
+    /**
+     * The amount of time remaining before the certificate expires, in milliseconds.
+     */
+    certificateExpiryInMilliseconds?: string;
 }
-export declare class UpdateGroupCertificateConfigurationHeaders extends SpeakeasyBase {
+export declare class UpdateGroupCertificateConfigurationRequest extends SpeakeasyBase {
+    /**
+     * The ID of the Greengrass group.
+     */
+    groupId: string;
+    requestBody: UpdateGroupCertificateConfigurationRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,18 +21,20 @@ export declare class UpdateGroupCertificateConfigurationHeaders extends Speakeas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class UpdateGroupCertificateConfigurationRequestBody extends SpeakeasyBase {
-    certificateExpiryInMilliseconds?: string;
-}
-export declare class UpdateGroupCertificateConfigurationRequest extends SpeakeasyBase {
-    pathParams: UpdateGroupCertificateConfigurationPathParams;
-    headers: UpdateGroupCertificateConfigurationHeaders;
-    request: UpdateGroupCertificateConfigurationRequestBody;
-}
 export declare class UpdateGroupCertificateConfigurationResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     updateGroupCertificateConfigurationResponse?: shared.UpdateGroupCertificateConfigurationResponse;
 }

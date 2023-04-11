@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PollForDecisionTaskQueryParams extends SpeakeasyBase {
-    maximumPageSize?: string;
-    nextPageToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum PollForDecisionTaskXAmzTargetEnum {
     SimpleWorkflowServicePollForDecisionTask = "SimpleWorkflowService.PollForDecisionTask"
 }
-export declare class PollForDecisionTaskHeaders extends SpeakeasyBase {
+export declare class PollForDecisionTaskRequest extends SpeakeasyBase {
+    pollForDecisionTaskInput: shared.PollForDecisionTaskInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,17 +14,33 @@ export declare class PollForDecisionTaskHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: PollForDecisionTaskXAmzTargetEnum;
-}
-export declare class PollForDecisionTaskRequest extends SpeakeasyBase {
-    queryParams: PollForDecisionTaskQueryParams;
-    headers: PollForDecisionTaskHeaders;
-    request: shared.PollForDecisionTaskInput;
+    /**
+     * Pagination limit
+     */
+    maximumPageSize?: string;
+    /**
+     * Pagination token
+     */
+    nextPageToken?: string;
 }
 export declare class PollForDecisionTaskResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     decisionTask?: shared.DecisionTask;
+    /**
+     * LimitExceededFault
+     */
     limitExceededFault?: any;
+    /**
+     * OperationNotPermittedFault
+     */
     operationNotPermittedFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnknownResourceFault
+     */
     unknownResourceFault?: any;
 }

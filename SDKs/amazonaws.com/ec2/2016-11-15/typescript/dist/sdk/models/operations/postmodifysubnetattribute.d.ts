@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostModifySubnetAttributeActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTModifySubnetAttributeActionEnum {
     ModifySubnetAttribute = "ModifySubnetAttribute"
 }
-export declare enum PostModifySubnetAttributeVersionEnum {
+export declare enum POSTModifySubnetAttributeVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostModifySubnetAttributeQueryParams extends SpeakeasyBase {
-    action: PostModifySubnetAttributeActionEnum;
-    version: PostModifySubnetAttributeVersionEnum;
-}
-export declare class PostModifySubnetAttributeHeaders extends SpeakeasyBase {
+export declare class POSTModifySubnetAttributeRequest extends SpeakeasyBase {
+    action: POSTModifySubnetAttributeActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTModifySubnetAttributeVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +18,8 @@ export declare class PostModifySubnetAttributeHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostModifySubnetAttributeRequest extends SpeakeasyBase {
-    queryParams: PostModifySubnetAttributeQueryParams;
-    headers: PostModifySubnetAttributeHeaders;
-    request?: Uint8Array;
-}
-export declare class PostModifySubnetAttributeResponse extends SpeakeasyBase {
+export declare class POSTModifySubnetAttributeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

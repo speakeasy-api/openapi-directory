@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostSetAlarmStateActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTSetAlarmStateActionEnum {
     SetAlarmState = "SetAlarmState"
 }
-export declare enum PostSetAlarmStateVersionEnum {
+export declare enum POSTSetAlarmStateVersionEnum {
     TwoThousandAndTen0801 = "2010-08-01"
 }
-export declare class PostSetAlarmStateQueryParams extends SpeakeasyBase {
-    action: PostSetAlarmStateActionEnum;
-    version: PostSetAlarmStateVersionEnum;
-}
-export declare class PostSetAlarmStateHeaders extends SpeakeasyBase {
+export declare class POSTSetAlarmStateRequest extends SpeakeasyBase {
+    action: POSTSetAlarmStateActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTSetAlarmStateVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostSetAlarmStateHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostSetAlarmStateRequest extends SpeakeasyBase {
-    queryParams: PostSetAlarmStateQueryParams;
-    headers: PostSetAlarmStateHeaders;
-    request?: Uint8Array;
-}
-export declare class PostSetAlarmStateResponse extends SpeakeasyBase {
+export declare class POSTSetAlarmStateResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

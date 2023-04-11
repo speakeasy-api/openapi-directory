@@ -1,62 +1,110 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
+ * Describes an IPv4 CIDR block.
+ */
+export declare class AcceptVpcPeeringConnectionResultVpcPeeringConnectionAccepterVpcInfoCidrBlockSet extends SpeakeasyBase {
+    cidrBlock?: string;
+}
+/**
+ * Describes an IPv6 CIDR block.
+ */
+export declare class AcceptVpcPeeringConnectionResultVpcPeeringConnectionAccepterVpcInfoIpv6CidrBlockSet extends SpeakeasyBase {
+    ipv6CidrBlock?: string;
+}
+/**
  * Information about the VPC peering connection options for the accepter or requester VPC.
-**/
+ */
 export declare class AcceptVpcPeeringConnectionResultVpcPeeringConnectionAccepterVpcInfoPeeringOptions extends SpeakeasyBase {
-    allowDnsResolutionFromRemoteVpc?: Record<string, any>;
-    allowEgressFromLocalClassicLinkToRemoteVpc?: Record<string, any>;
-    allowEgressFromLocalVpcToRemoteClassicLink?: Record<string, any>;
+    allowDnsResolutionFromRemoteVpc?: boolean;
+    allowEgressFromLocalClassicLinkToRemoteVpc?: boolean;
+    allowEgressFromLocalVpcToRemoteClassicLink?: boolean;
 }
 /**
  * Information about the accepter VPC. CIDR block information is only returned when describing an active VPC peering connection.
-**/
+ */
 export declare class AcceptVpcPeeringConnectionResultVpcPeeringConnectionAccepterVpcInfo extends SpeakeasyBase {
-    cidrBlock?: Record<string, any>;
-    cidrBlockSet?: Record<string, any>;
-    ipv6CidrBlockSet?: Record<string, any>;
-    ownerId?: Record<string, any>;
+    cidrBlock?: string;
+    cidrBlockSet?: AcceptVpcPeeringConnectionResultVpcPeeringConnectionAccepterVpcInfoCidrBlockSet[];
+    ipv6CidrBlockSet?: AcceptVpcPeeringConnectionResultVpcPeeringConnectionAccepterVpcInfoIpv6CidrBlockSet[];
+    ownerId?: string;
     peeringOptions?: AcceptVpcPeeringConnectionResultVpcPeeringConnectionAccepterVpcInfoPeeringOptions;
-    region?: Record<string, any>;
-    vpcId?: Record<string, any>;
+    region?: string;
+    vpcId?: string;
+}
+/**
+ * Describes an IPv4 CIDR block.
+ */
+export declare class AcceptVpcPeeringConnectionResultVpcPeeringConnectionRequesterVpcInfoCidrBlockSet extends SpeakeasyBase {
+    cidrBlock?: string;
+}
+/**
+ * Describes an IPv6 CIDR block.
+ */
+export declare class AcceptVpcPeeringConnectionResultVpcPeeringConnectionRequesterVpcInfoIpv6CidrBlockSet extends SpeakeasyBase {
+    ipv6CidrBlock?: string;
 }
 /**
  * Information about the VPC peering connection options for the accepter or requester VPC.
-**/
+ */
 export declare class AcceptVpcPeeringConnectionResultVpcPeeringConnectionRequesterVpcInfoPeeringOptions extends SpeakeasyBase {
-    allowDnsResolutionFromRemoteVpc?: Record<string, any>;
-    allowEgressFromLocalClassicLinkToRemoteVpc?: Record<string, any>;
-    allowEgressFromLocalVpcToRemoteClassicLink?: Record<string, any>;
+    allowDnsResolutionFromRemoteVpc?: boolean;
+    allowEgressFromLocalClassicLinkToRemoteVpc?: boolean;
+    allowEgressFromLocalVpcToRemoteClassicLink?: boolean;
 }
 /**
  * Information about the requester VPC. CIDR block information is only returned when describing an active VPC peering connection.
-**/
+ */
 export declare class AcceptVpcPeeringConnectionResultVpcPeeringConnectionRequesterVpcInfo extends SpeakeasyBase {
-    cidrBlock?: Record<string, any>;
-    cidrBlockSet?: Record<string, any>;
-    ipv6CidrBlockSet?: Record<string, any>;
-    ownerId?: Record<string, any>;
+    cidrBlock?: string;
+    cidrBlockSet?: AcceptVpcPeeringConnectionResultVpcPeeringConnectionRequesterVpcInfoCidrBlockSet[];
+    ipv6CidrBlockSet?: AcceptVpcPeeringConnectionResultVpcPeeringConnectionRequesterVpcInfoIpv6CidrBlockSet[];
+    ownerId?: string;
     peeringOptions?: AcceptVpcPeeringConnectionResultVpcPeeringConnectionRequesterVpcInfoPeeringOptions;
-    region?: Record<string, any>;
-    vpcId?: Record<string, any>;
+    region?: string;
+    vpcId?: string;
 }
 /**
  * The status of the VPC peering connection.
-**/
+ */
+export declare enum AcceptVpcPeeringConnectionResultVpcPeeringConnectionStatusCodeEnum {
+    InitiatingRequest = "initiating-request",
+    PendingAcceptance = "pending-acceptance",
+    Active = "active",
+    Deleted = "deleted",
+    Rejected = "rejected",
+    Failed = "failed",
+    Expired = "expired",
+    Provisioning = "provisioning",
+    Deleting = "deleting"
+}
+/**
+ * The status of the VPC peering connection.
+ */
 export declare class AcceptVpcPeeringConnectionResultVpcPeeringConnectionStatus extends SpeakeasyBase {
-    code?: Record<string, any>;
-    message?: Record<string, any>;
+    code?: AcceptVpcPeeringConnectionResultVpcPeeringConnectionStatusCodeEnum;
+    message?: string;
+}
+/**
+ * Describes a tag.
+ */
+export declare class AcceptVpcPeeringConnectionResultVpcPeeringConnectionTags extends SpeakeasyBase {
+    key?: string;
+    value?: string;
 }
 /**
  * Information about the VPC peering connection.
-**/
+ */
 export declare class AcceptVpcPeeringConnectionResultVpcPeeringConnection extends SpeakeasyBase {
     accepterVpcInfo?: AcceptVpcPeeringConnectionResultVpcPeeringConnectionAccepterVpcInfo;
-    expirationTime?: Record<string, any>;
+    expirationTime?: Date;
     requesterVpcInfo?: AcceptVpcPeeringConnectionResultVpcPeeringConnectionRequesterVpcInfo;
     status?: AcceptVpcPeeringConnectionResultVpcPeeringConnectionStatus;
-    tags?: Record<string, any>;
-    vpcPeeringConnectionId?: Record<string, any>;
+    tags?: AcceptVpcPeeringConnectionResultVpcPeeringConnectionTags[];
+    vpcPeeringConnectionId?: string;
 }
+/**
+ * Success
+ */
 export declare class AcceptVpcPeeringConnectionResult extends SpeakeasyBase {
     vpcPeeringConnection?: AcceptVpcPeeringConnectionResultVpcPeeringConnection;
 }

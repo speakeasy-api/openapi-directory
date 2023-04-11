@@ -1,0 +1,9 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { CertificateBasedAuthStatusEnum } from "./certificatebasedauthstatusenum";
+/**
+ * The certificate-based authentication properties used to authenticate SAML 2.0 Identity Provider (IdP) user identities to Active Directory domain-joined streaming instances. Fallback is turned on by default when certificate-based authentication is <b>Enabled</b> . Fallback allows users to log in using their AD domain password if certificate-based authentication is unsuccessful, or to unlock a desktop lock screen. <b>Enabled_no_directory_login_fallback</b> enables certificate-based authentication, but does not allow users to log in using their AD domain password. Users will be disconnected to re-authenticate using certificates.
+ */
+export declare class CertificateBasedAuthProperties extends SpeakeasyBase {
+    certificateAuthorityArn?: string;
+    status?: CertificateBasedAuthStatusEnum;
+}

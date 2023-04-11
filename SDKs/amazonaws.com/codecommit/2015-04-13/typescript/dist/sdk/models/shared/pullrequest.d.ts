@@ -4,7 +4,7 @@ import { PullRequestStatusEnumEnum } from "./pullrequeststatusenumenum";
 import { PullRequestTarget } from "./pullrequesttarget";
 /**
  * Returns information about a pull request.
-**/
+ */
 export declare class PullRequest extends SpeakeasyBase {
     approvalRules?: ApprovalRule[];
     authorArn?: string;

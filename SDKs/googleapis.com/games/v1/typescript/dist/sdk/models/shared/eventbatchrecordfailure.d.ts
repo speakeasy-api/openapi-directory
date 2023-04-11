@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { EventPeriodRange } from "./eventperiodrange";
+/**
+ * The cause for the update failure.
+ */
 export declare enum EventBatchRecordFailureFailureCauseEnum {
     EventFailureCauseUnspecified = "EVENT_FAILURE_CAUSE_UNSPECIFIED",
     TooLarge = "TOO_LARGE",
@@ -11,9 +14,18 @@ export declare enum EventBatchRecordFailureFailureCauseEnum {
 }
 /**
  * A batch update failure resource.
-**/
+ */
 export declare class EventBatchRecordFailure extends SpeakeasyBase {
+    /**
+     * The cause for the update failure.
+     */
     failureCause?: EventBatchRecordFailureFailureCauseEnum;
+    /**
+     * Uniquely identifies the type of this resource. Value is always the fixed string `games#eventBatchRecordFailure`.
+     */
     kind?: string;
+    /**
+     * An event period time range.
+     */
     range?: EventPeriodRange;
 }

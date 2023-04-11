@@ -1,19 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetRegisterDbProxyTargetsActionEnum {
-    RegisterDbProxyTargets = "RegisterDBProxyTargets"
+import { AxiosResponse } from "axios";
+export declare enum GETRegisterDBProxyTargetsActionEnum {
+    RegisterDBProxyTargets = "RegisterDBProxyTargets"
 }
-export declare enum GetRegisterDbProxyTargetsVersionEnum {
+export declare enum GETRegisterDBProxyTargetsVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class GetRegisterDbProxyTargetsQueryParams extends SpeakeasyBase {
-    action: GetRegisterDbProxyTargetsActionEnum;
+export declare class GETRegisterDBProxyTargetsRequest extends SpeakeasyBase {
+    action: GETRegisterDBProxyTargetsActionEnum;
+    /**
+     * One or more DB cluster identifiers.
+     */
     dbClusterIdentifiers?: string[];
+    /**
+     * One or more DB instance identifiers.
+     */
     dbInstanceIdentifiers?: string[];
+    /**
+     * The identifier of the <code>DBProxy</code> that is associated with the <code>DBProxyTargetGroup</code>.
+     */
     dbProxyName: string;
+    /**
+     * The identifier of the <code>DBProxyTargetGroup</code>.
+     */
     targetGroupName?: string;
-    version: GetRegisterDbProxyTargetsVersionEnum;
-}
-export declare class GetRegisterDbProxyTargetsHeaders extends SpeakeasyBase {
+    version: GETRegisterDBProxyTargetsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -22,12 +33,9 @@ export declare class GetRegisterDbProxyTargetsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetRegisterDbProxyTargetsRequest extends SpeakeasyBase {
-    queryParams: GetRegisterDbProxyTargetsQueryParams;
-    headers: GetRegisterDbProxyTargetsHeaders;
-}
-export declare class GetRegisterDbProxyTargetsResponse extends SpeakeasyBase {
+export declare class GETRegisterDBProxyTargetsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

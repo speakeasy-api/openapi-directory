@@ -1,9 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeDetectorModelAnalysisPathParams extends SpeakeasyBase {
-    analysisId: string;
-}
-export declare class DescribeDetectorModelAnalysisHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DescribeDetectorModelAnalysisRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,18 +9,37 @@ export declare class DescribeDetectorModelAnalysisHeaders extends SpeakeasyBase 
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DescribeDetectorModelAnalysisRequest extends SpeakeasyBase {
-    pathParams: DescribeDetectorModelAnalysisPathParams;
-    headers: DescribeDetectorModelAnalysisHeaders;
+    /**
+     * The ID of the analysis result that you want to retrieve.
+     */
+    analysisId: string;
 }
 export declare class DescribeDetectorModelAnalysisResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeDetectorModelAnalysisResponse?: shared.DescribeDetectorModelAnalysisResponse;
+    /**
+     * InternalFailureException
+     */
     internalFailureException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
-    resourceNotFoundException?: any;
+    /**
+     * ServiceUnavailableException
+     */
     serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

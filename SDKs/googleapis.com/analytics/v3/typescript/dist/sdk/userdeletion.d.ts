@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class UserDeletion {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +9,7 @@ export declare class UserDeletion {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * analyticsUserDeletionUserDeletionRequestUpsert - Insert or update a user deletion requests.
-    **/
-    analyticsUserDeletionUserDeletionRequestUpsert(req: operations.AnalyticsUserDeletionUserDeletionRequestUpsertRequest, config?: AxiosRequestConfig): Promise<operations.AnalyticsUserDeletionUserDeletionRequestUpsertResponse>;
+     * Insert or update a user deletion requests.
+     */
+    analyticsUserDeletionUserDeletionRequestUpsert(req: operations.AnalyticsUserDeletionUserDeletionRequestUpsertRequest, security: operations.AnalyticsUserDeletionUserDeletionRequestUpsertSecurity, config?: AxiosRequestConfig): Promise<operations.AnalyticsUserDeletionUserDeletionRequestUpsertResponse>;
 }

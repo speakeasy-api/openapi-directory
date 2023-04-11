@@ -1,45 +1,62 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { PatchAttractionRequest, PatchAttractionResponse } from "openapi/src/sdk/models/operations";
+import {
+  PatchAttractionRequest,
+  PatchAttractionResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AugmentationDataRelatedEntityTypeEnum,
+  ChangeOpEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: PatchAttractionRequest = {
-  pathParams: {
-    id: "sit",
-  },
-  headers: {
-    tmpsCorrelationId: "voluptas",
-  },
-  request: {
+  augmentationData: {
     changes: [
       {
-        from: "expedita",
-        op: "test",
-        path: "dolor",
+        from: "provident",
+        op: ChangeOpEnum.Copy,
+        path: "quibusdam",
         value: {
-          "voluptas": "fugit",
-          "et": "nihil",
+          "nulla": "corrupti",
+          "illum": "vel",
+          "error": "deserunt",
         },
       },
       {
-        from: "rerum",
-        op: "test",
-        path: "debitis",
+        from: "suscipit",
+        op: ChangeOpEnum.Replace,
+        path: "magnam",
         value: {
-          "et": "ut",
+          "ipsa": "delectus",
+          "tempora": "suscipit",
+          "molestiae": "minus",
+          "placeat": "voluptatum",
+        },
+      },
+      {
+        from: "iusto",
+        op: ChangeOpEnum.Move,
+        path: "nisi",
+        value: {
+          "temporibus": "ab",
+          "quis": "veritatis",
+          "deserunt": "perferendis",
+          "ipsam": "repellendus",
         },
       },
     ],
-    relatedEntityId: "dolorem",
-    relatedEntityType: "attraction",
-    score: 94.199997,
-    source: "vitae",
-    versionNumber: 4706154865122290029,
+    relatedEntityId: "sapiente",
+    relatedEntityType: AugmentationDataRelatedEntityTypeEnum.Venue,
+    score: 1403.5,
+    source: "at",
+    versionNumber: 870088,
   },
+  tmpsCorrelationId: "maiores",
+  id: "molestiae",
 };
 
 sdk.patchAttraction(req).then((res: PatchAttractionResponse | AxiosError) => {

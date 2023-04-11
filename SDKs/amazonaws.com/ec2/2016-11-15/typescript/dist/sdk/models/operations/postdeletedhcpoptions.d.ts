@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteDhcpOptionsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteDhcpOptionsActionEnum {
     DeleteDhcpOptions = "DeleteDhcpOptions"
 }
-export declare enum PostDeleteDhcpOptionsVersionEnum {
+export declare enum POSTDeleteDhcpOptionsVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDeleteDhcpOptionsQueryParams extends SpeakeasyBase {
-    action: PostDeleteDhcpOptionsActionEnum;
-    version: PostDeleteDhcpOptionsVersionEnum;
-}
-export declare class PostDeleteDhcpOptionsHeaders extends SpeakeasyBase {
+export declare class POSTDeleteDhcpOptionsRequest extends SpeakeasyBase {
+    action: POSTDeleteDhcpOptionsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteDhcpOptionsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +18,8 @@ export declare class PostDeleteDhcpOptionsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteDhcpOptionsRequest extends SpeakeasyBase {
-    queryParams: PostDeleteDhcpOptionsQueryParams;
-    headers: PostDeleteDhcpOptionsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteDhcpOptionsResponse extends SpeakeasyBase {
+export declare class POSTDeleteDhcpOptionsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { Filter } from "./filter";
 /**
  * <p/>
-**/
+ */
 export declare class DescribeConnectionsMessage extends SpeakeasyBase {
     filters?: Filter[];
     marker?: string;

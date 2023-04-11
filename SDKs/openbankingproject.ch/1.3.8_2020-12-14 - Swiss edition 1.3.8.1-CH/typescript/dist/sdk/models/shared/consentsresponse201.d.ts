@@ -1,18 +1,123 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { HrefType } from "./hreftype";
+import { AuthenticationObject } from "./authenticationobject";
 import { ChallengeData } from "./challengedata";
 import { ChosenScaMethod } from "./chosenscamethod";
 import { ConsentStatusEnum } from "./consentstatusenum";
-import { AuthenticationObject } from "./authenticationobject";
+import { HrefType } from "./hreftype";
 /**
  * Body of the JSON response for a successful consent request.
-**/
+ */
 export declare class ConsentsResponse201 extends SpeakeasyBase {
+    /**
+     * A list of hyperlinks to be recognised by the TPP.
+     *
+     * @remarks
+     *
+     * Type of links admitted in this response (which might be extended by single ASPSPs as indicated in its XS2A
+     * documentation):
+     *   * 'scaRedirect':
+     *     In case of an SCA Redirect Approach, the ASPSP is transmitting the link to which to redirect the
+     *     PSU browser.
+     *   * 'scaOAuth':
+     *     In case of an OAuth2 based Redirect Approach, the ASPSP is transmitting the link where the configuration
+     *     of the OAuth2 Server is defined.
+     *     The configuration follows the OAuth 2.0 Authorisation Server Metadata specification.
+     * * 'confirmation':
+     *   Might be added by the ASPSP if either the "scaRedirect" or "scaOAuth" hyperlink is returned
+     *   in the same response message.
+     *   This hyperlink defines the URL to the resource which needs to be updated with
+     *     * a confirmation code as retrieved after the plain redirect authentication process with the ASPSP authentication server or
+     *     * an access token as retrieved by submitting an authorization code after the integrated OAuth based authentication process with the ASPSP authentication server.
+     *   * 'startAuthorisation':
+     *     In case, where an explicit start of the transaction authorisation is needed,
+     *     but no more data needs to be updated (no authentication method to be selected,
+     *     no PSU identification nor PSU authentication data to be uploaded).
+     *   * 'startAuthorisationWithPsuIdentification':
+     *     The link to the authorisation end-point, where the authorisation sub-resource has to be generated
+     *     while uploading the PSU identification data.
+     *   * 'startAuthorisationWithPsuAuthentication':
+     *     The link to the authorisation end-point, where the authorisation sub-resource has to be generated
+     *     while uploading the PSU authentication data.
+     *   * 'startAuthorisationWithEncryptedPsuAuthentication':
+     *     Same as startAuthorisactionWithPsuAuthentication where the authentication data need to be encrypted on
+     *     application layer in uploading.
+     *   * 'startAuthorisationWithAuthenticationMethodSelection':
+     *     The link to the authorisation end-point, where the authorisation sub-resource has to be generated
+     *     while selecting the authentication method. This link is contained under exactly the same conditions
+     *     as the data element 'scaMethods'
+     *   * 'startAuthorisationWithTransactionAuthorisation':
+     *     The link to the authorisation end-point, where the authorisation sub-resource has to be generated
+     *     while authorising the transaction e.g. by uploading an OTP received by SMS.
+     *   * 'self':
+     *     The link to the Establish Account Information Consent resource created by this request.
+     *     This link can be used to retrieve the resource data.
+     *   * 'status':
+     *     The link to retrieve the status of the account information consent.
+     *   * 'scaStatus': The link to retrieve the scaStatus of the corresponding authorisation sub-resource.
+     *     This link is only contained, if an authorisation sub-resource has been already created.
+     *
+     */
     links: Record<string, HrefType>;
+    /**
+     * It is contained in addition to the data element 'chosenScaMethod' if challenge data is needed for SCA.
+     *
+     * @remarks
+     * In rare cases this attribute is also used in the context of the 'startAuthorisationWithPsuAuthentication' link.
+     *
+     */
     challengeData?: ChallengeData;
+    /**
+     * Authentication object.
+     *
+     * @remarks
+     *
+     */
     chosenScaMethod?: ChosenScaMethod;
+    /**
+     * ID of the corresponding consent object as returned by an account information consent request.
+     *
+     * @remarks
+     *
+     */
     consentId: string;
+    /**
+     * This is the overall lifecycle status of the consent.
+     *
+     * @remarks
+     *
+     * Valid values are:
+     *   - 'received': The consent data have been received and are technically correct.
+     *     The data is not authorised yet.
+     *   - 'rejected': The consent data have been rejected e.g. since no successful authorisation has taken place.
+     *   - 'valid': The consent is accepted and valid for GET account data calls and others as specified in the consent object.
+     *   - 'revokedByPsu': The consent has been revoked by the PSU towards the ASPSP.
+     *   - 'expired': The consent expired.
+     *   - 'terminatedByTpp': The corresponding TPP has terminated the consent by applying the DELETE method to the consent resource.
+     *   - 'partiallyAuthorised': The consent is due to a multi-level authorisation, some but not all mandated authorisations have been performed yet.
+     *
+     * The ASPSP might add further codes. These codes then shall be contained in the ASPSP's documentation of the XS2A interface
+     * and has to be added to this API definition as well.
+     *
+     */
     consentStatus: ConsentStatusEnum;
+    /**
+     * Text to be displayed to the PSU.
+     */
     psuMessage?: string;
+    /**
+     * This data element might be contained, if SCA is required and if the PSU has a choice between different
+     *
+     * @remarks
+     * authentication methods.
+     *
+     * Depending on the risk management of the ASPSP this choice might be offered before or after the PSU
+     * has been identified with the first relevant factor, or if an access token is transported.
+     *
+     * If this data element is contained, then there is also a hyperlink of type 'startAuthorisationWithAuthenticationMethodSelection'
+     * contained in the response body.
+     *
+     * These methods shall be presented towards the PSU for selection by the TPP.
+     *
+     */
     scaMethods?: AuthenticationObject[];
 }

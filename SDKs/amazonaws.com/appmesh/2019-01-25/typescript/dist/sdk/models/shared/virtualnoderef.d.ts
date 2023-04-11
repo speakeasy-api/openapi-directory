@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * An object that represents a virtual node returned by a list operation.
-**/
+ */
 export declare class VirtualNodeRef extends SpeakeasyBase {
     arn: string;
     createdAt: Date;

@@ -1,20 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
+ * Describes a tag.
+ */
+export declare class CreateCustomerGatewayResultCustomerGatewayTags extends SpeakeasyBase {
+    key?: string;
+    value?: string;
+}
+/**
  * Information about the customer gateway.
-**/
+ */
 export declare class CreateCustomerGatewayResultCustomerGateway extends SpeakeasyBase {
-    bgpAsn?: Record<string, any>;
-    certificateArn?: Record<string, any>;
-    customerGatewayId?: Record<string, any>;
-    deviceName?: Record<string, any>;
-    ipAddress?: Record<string, any>;
-    state?: Record<string, any>;
-    tags?: Record<string, any>;
-    type?: Record<string, any>;
+    bgpAsn?: string;
+    certificateArn?: string;
+    customerGatewayId?: string;
+    deviceName?: string;
+    ipAddress?: string;
+    state?: string;
+    tags?: CreateCustomerGatewayResultCustomerGatewayTags[];
+    type?: string;
 }
 /**
  * Contains the output of CreateCustomerGateway.
-**/
+ */
 export declare class CreateCustomerGatewayResult extends SpeakeasyBase {
     customerGateway?: CreateCustomerGatewayResultCustomerGateway;
 }

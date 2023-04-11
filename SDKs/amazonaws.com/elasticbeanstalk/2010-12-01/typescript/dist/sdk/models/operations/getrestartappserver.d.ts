@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetRestartAppServerActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETRestartAppServerActionEnum {
     RestartAppServer = "RestartAppServer"
 }
-export declare enum GetRestartAppServerVersionEnum {
+export declare enum GETRestartAppServerVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetRestartAppServerQueryParams extends SpeakeasyBase {
-    action: GetRestartAppServerActionEnum;
+export declare class GETRestartAppServerRequest extends SpeakeasyBase {
+    action: GETRestartAppServerActionEnum;
+    /**
+     * <p>The ID of the environment to restart the server for.</p> <p> Condition: You must specify either this or an EnvironmentName, or both. If you do not specify either, AWS Elastic Beanstalk returns <code>MissingRequiredParameter</code> error. </p>
+     */
     environmentId?: string;
+    /**
+     * <p>The name of the environment to restart the server for.</p> <p> Condition: You must specify either this or an EnvironmentId, or both. If you do not specify either, AWS Elastic Beanstalk returns <code>MissingRequiredParameter</code> error. </p>
+     */
     environmentName?: string;
-    version: GetRestartAppServerVersionEnum;
-}
-export declare class GetRestartAppServerHeaders extends SpeakeasyBase {
+    version: GETRestartAppServerVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,11 +25,8 @@ export declare class GetRestartAppServerHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetRestartAppServerRequest extends SpeakeasyBase {
-    queryParams: GetRestartAppServerQueryParams;
-    headers: GetRestartAppServerHeaders;
-}
-export declare class GetRestartAppServerResponse extends SpeakeasyBase {
+export declare class GETRestartAppServerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class UpdateSuiteDefinitionResponse extends SpeakeasyBase {
     createdAt?: Date;
     lastUpdatedAt?: Date;

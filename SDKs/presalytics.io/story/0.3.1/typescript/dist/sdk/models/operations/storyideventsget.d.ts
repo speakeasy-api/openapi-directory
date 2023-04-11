@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class StoryIdEventsGetPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class StoryIdEventsGetRequest extends SpeakeasyBase {
-    pathParams: StoryIdEventsGetPathParams;
+    /**
+     * the id from the story object
+     */
+    id: string;
 }
 export declare class StoryIdEventsGetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * An Array of events
+     */
     events?: shared.Event[];
-    problemDetail?: any;
+    /**
+     * Unauthorized
+     */
+    problemDetail?: shared.ProblemDetail;
 }

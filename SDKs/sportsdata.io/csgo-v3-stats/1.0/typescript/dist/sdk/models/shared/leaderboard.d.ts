@@ -1,0 +1,33 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+export declare class Leaderboard extends SpeakeasyBase {
+    aces?: number;
+    assists?: number;
+    averageDamagePerRound?: number;
+    clutch1v2s?: number;
+    clutch1v3s?: number;
+    clutch1v4s?: number;
+    clutch1v5s?: number;
+    dateTime?: string;
+    day?: string;
+    deaths?: number;
+    entryKills?: number;
+    fantasyPoints?: number;
+    gameId?: number;
+    games?: number;
+    headshots?: number;
+    isClosed?: boolean;
+    kast?: number;
+    kills?: number;
+    maps?: number;
+    matchName?: string;
+    name?: string;
+    opponent?: string;
+    opponentId?: number;
+    playerId?: number;
+    quadKills?: number;
+    rating?: number;
+    team?: string;
+    teamId?: number;
+    updated?: string;
+    updatedUtc?: string;
+}

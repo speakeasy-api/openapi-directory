@@ -1,5 +1,14 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * A Git repository is a virtual storage of your project. It
+ *
+ * @remarks
+ * allows you to save versions of your code, which you can access
+ * when needed. The repo resource allows you to access public repos,
+ * or repos that belong to a specific workspace.
+ *
+ */
 export declare class Repositories {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,26 +18,74 @@ export declare class Repositories {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteRepositoriesWorkspaceRepoSlug - Deletes the repository. This is an irreversible operation.
+     * Delete a repository
+     *
+     * @remarks
+     * Deletes the repository. This is an irreversible operation.
      *
      * This does not affect its forks.
-    **/
-    deleteRepositoriesWorkspaceRepoSlug(req: operations.DeleteRepositoriesWorkspaceRepoSlugRequest, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoriesWorkspaceRepoSlugResponse>;
+     */
+    deleteRepositoriesWorkspaceRepoSlug(req: operations.DeleteRepositoriesWorkspaceRepoSlugRequest, security: operations.DeleteRepositoriesWorkspaceRepoSlugSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoriesWorkspaceRepoSlugResponse>;
     /**
-     * deleteRepositoriesWorkspaceRepoSlugHooksUid - Deletes the specified webhook subscription from the given
+     * Delete a webhook for a repository
+     *
+     * @remarks
+     * Deletes the specified webhook subscription from the given
      * repository.
-    **/
-    deleteRepositoriesWorkspaceRepoSlugHooksUid(req: operations.DeleteRepositoriesWorkspaceRepoSlugHooksUidRequest, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoriesWorkspaceRepoSlugHooksUidResponse>;
+     */
+    deleteRepositoriesWorkspaceRepoSlugHooksUid(req: operations.DeleteRepositoriesWorkspaceRepoSlugHooksUidRequest, security: operations.DeleteRepositoriesWorkspaceRepoSlugHooksUidSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoriesWorkspaceRepoSlugHooksUidResponse>;
     /**
-     * getRepositories - Returns a paginated list of all public repositories.
+     * Delete an explicit group permission for a repository
+     *
+     * @remarks
+     * Deletes the repository group permission between the requested repository and group, if one exists.
+     *
+     * Only users with admin permission for the repository may access this resource.
+     *
+     * Example:
+     *
+     * $ curl -X DELETE https://api.bitbucket.org/2.0/repositories/atlassian_tutorial
+     * /geordi/permissions-config/groups/developers
+     *
+     *
+     * HTTP/1.1 204
+     */
+    deleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlug(req: operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest, security: operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugResponse>;
+    /**
+     * Delete an explicit user permission for a repository
+     *
+     * @remarks
+     * Deletes the repository user permission between the requested repository and user, if one exists.
+     *
+     * Only users with admin permission for the repository may access this resource.
+     *
+     * The only authentication method for this endpoint is via app passwords.
+     *
+     * ```
+     * $ curl -X DELETE https://api.bitbucket.org/2.0/repositories/atlassian_tutorial/geordi/
+     * permissions-config/users/557058:ba8948b2-49da-43a9-9e8b-e7249b8e324a
+     *
+     *
+     * HTTP/1.1 204
+     * ```
+     */
+    deleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserId(req: operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdRequest, security: operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdResponse>;
+    /**
+     * List public repositories
+     *
+     * @remarks
+     * Returns a paginated list of all public repositories.
      *
      * This endpoint also supports filtering and sorting of the results. See
-     * [filtering and sorting](../meta/filtering) for more details.
-    **/
-    getRepositories(req: operations.GetRepositoriesRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesResponse>;
+     * [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering) for more details.
+     */
+    getRepositories(req: operations.GetRepositoriesRequest, security: operations.GetRepositoriesSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesResponse>;
     /**
-     * getRepositoriesWorkspace - Returns a paginated list of all repositories owned by the specified
-     * account or UUID.
+     * List repositories in a workspace
+     *
+     * @remarks
+     * Returns a paginated list of all repositories owned by the specified
+     * workspace.
      *
      * The result can be narrowed down based on the authenticated user's role.
      *
@@ -37,30 +94,26 @@ export declare class Repositories {
      * repo the user is an admin on, as that implies write access).
      *
      * This endpoint also supports filtering and sorting of the results. See
-     * [filtering and sorting](../../meta/filtering) for more details.
-    **/
-    getRepositoriesWorkspace(req: operations.GetRepositoriesWorkspaceRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceResponse>;
+     * [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering) for more details.
+     */
+    getRepositoriesWorkspace(req: operations.GetRepositoriesWorkspaceRequest, security: operations.GetRepositoriesWorkspaceSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlug - Returns the object describing this repository.
-    **/
-    getRepositoriesWorkspaceRepoSlug(req: operations.GetRepositoriesWorkspaceRepoSlugRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugResponse>;
+     * Get a repository
+     *
+     * @remarks
+     * Returns the object describing this repository.
+     */
+    getRepositoriesWorkspaceRepoSlug(req: operations.GetRepositoriesWorkspaceRepoSlugRequest, security: operations.GetRepositoriesWorkspaceRepoSlugSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugCommitCommitStatuses - Returns all statuses (e.g. build results) for a specific commit.
-    **/
-    getRepositoriesWorkspaceRepoSlugCommitCommitStatuses(req: operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesResponse>;
-    /**
-     * getRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKey - Returns the specified build status for a commit.
-    **/
-    getRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKey(req: operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyResponse>;
-    /**
-     * getRepositoriesWorkspaceRepoSlugFilehistoryCommitPath - Returns a paginated list of commits that modified the specified file.
+     * List commits that modified a file
+     *
+     * @remarks
+     * Returns a paginated list of commits that modified the specified file.
      *
      * Commits are returned in reverse chronological order. This is roughly
      * equivalent to the following commands:
      *
      *     $ git log --follow --date-order <sha> <path>
-     *
-     *     $ hg log --follow <path>
      *
      * By default, Bitbucket will follow renames and the path name in the
      * returned entries reflects that. This can be turned off using the
@@ -68,7 +121,7 @@ export declare class Repositories {
      *
      * Results are returned in descending chronological order by default, and
      * like most endpoints you can
-     * [filter and sort](../../../../../../meta/filtering) the response to
+     * [filter and sort](/cloud/bitbucket/rest/intro/#filtering) the response to
      * only provide exactly the data you want.
      *
      * For example, if you wanted to find commits made before 2011-05-18
@@ -104,29 +157,247 @@ export declare class Repositories {
      *
      * In the response you can see that the file was renamed to `README.rst`
      * by the commit made on 2011-05-16, and was previously named `README.txt`.
-    **/
-    getRepositoriesWorkspaceRepoSlugFilehistoryCommitPath(req: operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugFilehistoryCommitPath(req: operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest, security: operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugForks - Returns a paginated list of all the forks of the specified
+     * List repository forks
+     *
+     * @remarks
+     * Returns a paginated list of all the forks of the specified
      * repository.
-    **/
-    getRepositoriesWorkspaceRepoSlugForks(req: operations.GetRepositoriesWorkspaceRepoSlugForksRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugForksResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugForks(req: operations.GetRepositoriesWorkspaceRepoSlugForksRequest, security: operations.GetRepositoriesWorkspaceRepoSlugForksSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugForksResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugHooks - Returns a paginated list of webhooks installed on this repository.
-    **/
-    getRepositoriesWorkspaceRepoSlugHooks(req: operations.GetRepositoriesWorkspaceRepoSlugHooksRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugHooksResponse>;
+     * List webhooks for a repository
+     *
+     * @remarks
+     * Returns a paginated list of webhooks installed on this repository.
+     */
+    getRepositoriesWorkspaceRepoSlugHooks(req: operations.GetRepositoriesWorkspaceRepoSlugHooksRequest, security: operations.GetRepositoriesWorkspaceRepoSlugHooksSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugHooksResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugHooksUid - Returns the webhook with the specified id installed on the specified
+     * Get a webhook for a repository
+     *
+     * @remarks
+     * Returns the webhook with the specified id installed on the specified
      * repository.
-    **/
-    getRepositoriesWorkspaceRepoSlugHooksUid(req: operations.GetRepositoriesWorkspaceRepoSlugHooksUidRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugHooksUidResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugHooksUid(req: operations.GetRepositoriesWorkspaceRepoSlugHooksUidRequest, security: operations.GetRepositoriesWorkspaceRepoSlugHooksUidSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugHooksUidResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatuses - Returns all statuses (e.g. build results) for the given pull
-     * request.
-    **/
-    getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatuses(req: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesResponse>;
+     * Retrieve the inheritance state for repository settings
+     */
+    getRepositoriesWorkspaceRepoSlugOverrideSettings(req: operations.GetRepositoriesWorkspaceRepoSlugOverrideSettingsRequest, security: operations.GetRepositoriesWorkspaceRepoSlugOverrideSettingsSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugOverrideSettingsResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugSrc - This endpoint redirects the client to the directory listing of the
+     * List explicit group permissions for a repository
+     *
+     * @remarks
+     * Returns a paginated list of explicit group permissions for the given repository.
+     * This endpoint does not support BBQL features.
+     *
+     * Example:
+     *
+     * ```
+     * $ curl https://api.bitbucket.org/2.0/repositories/atlassian_tutorial/geordi/permissions-config/groups
+     *
+     * HTTP/1.1 200
+     * Location: https://api.bitbucket.org/2.0/repositories/atlassian_tutorial/geordi/permissions-config/groups
+     *
+     * {
+     *   "pagelen": 10,
+     *   "values": [
+     *     {
+     *       "type": "repository_group_permission",
+     *       "group": {
+     *         "type": "group",
+     *         "name": "Administrators",
+     *         "slug": "administrators"
+     *       },
+     *       "permission": "admin",
+     *       "links": {
+     *         "self": {
+     *           "href": "https://api.bitbucket.org/2.0/repositories/atlassian_tutorial/
+     *                    geordi/permissions-config/groups/administrators"
+     *         }
+     *       }
+     *     },
+     *     {
+     *       "type": "repository_group_permission",
+     *       "group": {
+     *         "type": "group",
+     *         "name": "Developers",
+     *         "slug": "developers"
+     *       },
+     *       "permission": "read",
+     *       "links": {
+     *         "self": {
+     *           "href": "https://api.bitbucket.org/2.0/repositories/atlassian_tutorial/
+     *                    geordi/permissions-config/groups/developers"
+     *         }
+     *       }
+     *     }
+     *   ],
+     *   "page": 1,
+     *   "size": 2
+     * }
+     * ```
+     */
+    getRepositoriesWorkspaceRepoSlugPermissionsConfigGroups(req: operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsRequest, security: operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsResponse>;
+    /**
+     * Get an explicit group permission for a repository
+     *
+     * @remarks
+     * Returns the group permission for a given group slug and repository
+     *
+     * Only users with admin permission for the repository may access this resource.
+     *
+     * Permissions can be:
+     *
+     * * `admin`
+     * * `write`
+     * * `read`
+     * * `none`
+     *
+     * Example:
+     *
+     * ```
+     * $ curl https://api.bitbucket.org/2.0/repositories/atlassian_tutorial/geordi/permissions-config/groups/developers
+     *
+     * HTTP/1.1 200
+     * Location:
+     * https://api.bitbucket.org/2.0/repositories/atlassian_tutorial/geordi/permissions-config/groups/developers
+     *
+     * {
+     *     "type": "repository_group_permission",
+     *     "group": {
+     *         "type": "group",
+     *         "name": "Developers",
+     *         "slug": "developers"
+     *     },
+     *     "repository": {
+     *         "type": "repository",
+     *         "name": "geordi",
+     *         "full_name": "atlassian_tutorial/geordi",
+     *         "uuid": "{85d08b4e-571d-44e9-a507-fa476535aa98}"
+     *     },
+     *     "permission": "read",
+     *     "links": {
+     *       "self": {
+     *         "href":
+     *         "https://api.bitbucket.org/2.0/repositories/atlassian_tutorial/geordi/permissions-config/groups/developers"
+     *       }
+     *     }
+     * }
+     * ```
+     */
+    getRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlug(req: operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest, security: operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugResponse>;
+    /**
+     * List explicit user permissions for a repository
+     *
+     * @remarks
+     * Returns a paginated list of explicit user permissions for the given repository.
+     * This endpoint does not support BBQL features.
+     *
+     * Example:
+     *
+     * ```
+     * $ curl https://api.bitbucket.org/2.0/repositories/atlassian_tutorial/geordi/permissions-config/users
+     *
+     * {
+     *   "pagelen": 10,
+     *   "values": [
+     *     {
+     *         "type": "repository_user_permission",
+     *         "user": {
+     *             "type": "user",
+     *             "display_name": "Colin Cameron",
+     *             "uuid": "{d301aafa-d676-4ee0-88be-962be7417567}",
+     *             "account_id": "557058:ba8948b2-49da-43a9-9e8b-e7249b8e324a"
+     *         },
+     *         "permission": "admin",
+     *         "links": {
+     *           "self": {
+     *             "href": "https://api.bitbucket.org/2.0/repositories/atlassian_tutorial/geordi/
+     *                      permissions-config/users/557058:ba8948b2-49da-43a9-9e8b-e7249b8e324a"
+     *           }
+     *         }
+     *     },
+     *     {
+     *       "type": "repository_user_permission",
+     *       "user": {
+     *         "type": "user",
+     *         "display_name": "Sean Conaty",
+     *         "uuid": "{504c3b62-8120-4f0c-a7bc-87800b9d6f70}",
+     *         "account_id": "557058:ba8948b2-49da-43a9-9e8b-e7249b8e324c"
+     *       },
+     *       "permission": "write",
+     *       "links": {
+     *         "self": {
+     *           "href": "https://api.bitbucket.org/2.0//repositories/atlassian_tutorial/geordi/
+     *                    permissions-config/users/557058:ba8948b2-49da-43a9-9e8b-e7249b8e324c"
+     *         }
+     *       }
+     *     }
+     *   ],
+     *   "page": 1,
+     *   "size": 2
+     * }
+     * ```
+     */
+    getRepositoriesWorkspaceRepoSlugPermissionsConfigUsers(req: operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersRequest, security: operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersResponse>;
+    /**
+     * Get an explicit user permission for a repository
+     *
+     * @remarks
+     * Returns the explicit user permission for a given user and repository.
+     *
+     * Only users with admin permission for the repository may access this resource.
+     *
+     * Permissions can be:
+     *
+     * * `admin`
+     * * `write`
+     * * `read`
+     * * `none`
+     *
+     * Example:
+     *
+     * ```
+     * $ curl 'https://api.bitbucket.org/2.0/repositories/atlassian_tutorial/geordi/
+     *         permissions-config/users/557058:ba8948b2-49da-43a9-9e8b-e7249b8e324a'
+     *
+     * HTTP/1.1 200
+     * Location: 'https://api.bitbucket.org/2.0/repositories/atlassian_tutorial/geordi/
+     *            permissions-config/users/557058:ba8948b2-49da-43a9-9e8b-e7249b8e324a'
+     *
+     * {
+     *     "type": "repository_user_permission",
+     *     "user": {
+     *         "type": "user",
+     *         "display_name": "Colin Cameron",
+     *         "uuid": "{d301aafa-d676-4ee0-88be-962be7417567}",
+     *         "account_id": "557058:ba8948b2-49da-43a9-9e8b-e7249b8e324a"
+     *     },
+     *     "repository": {
+     *         "type": "repository",
+     *         "name": "geordi",
+     *         "full_name": "atlassian_tutorial/geordi",
+     *         "uuid": "{85d08b4e-571d-44e9-a507-fa476535aa98}"
+     *     },
+     *     "permission": "admin",
+     *     "links": {
+     *         "self": {
+     *             "href": "https://api.bitbucket.org/2.0/repositories/atlassian_tutorial/geordi/
+     *                      permissions-config/users/557058:ba8948b2-49da-43a9-9e8b-e7249b8e324a"
+     *         }
+     *     }
+     * }
+     * ```
+     */
+    getRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserId(req: operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdRequest, security: operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdResponse>;
+    /**
+     * Get the root directory of the main branch
+     *
+     * @remarks
+     * This endpoint redirects the client to the directory listing of the
      * root directory on the main branch.
      *
      * This is equivalent to directly hitting
@@ -134,13 +405,16 @@ export declare class Repositories {
      * without having to know the name or SHA1 of the repo's main branch.
      *
      * To create new commits, [POST to this endpoint](#post)
-    **/
-    getRepositoriesWorkspaceRepoSlugSrc(req: operations.GetRepositoriesWorkspaceRepoSlugSrcRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugSrcResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugSrc(req: operations.GetRepositoriesWorkspaceRepoSlugSrcRequest, security: operations.GetRepositoriesWorkspaceRepoSlugSrcSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugSrcResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugSrcCommitPath - This endpoints is used to retrieve the contents of a single file,
+     * Get file or directory contents
+     *
+     * @remarks
+     * This endpoints is used to retrieve the contents of a single file,
      * or the contents of a directory at a specified revision.
      *
-     * ## Raw file contents
+     * #### Raw file contents
      *
      * When `path` points to a file, this endpoint returns the raw contents.
      * The response's Content-Type is derived from the filename
@@ -159,7 +433,7 @@ export declare class Repositories {
      * returns the same ETag, regardless on the directory it lives in, or the
      * commit it is on.
      *
-     * ## File meta data
+     * #### File meta data
      *
      * When the request for a file path includes the query parameter
      * `?format=meta`, instead of returning the file's raw contents, Bitbucket
@@ -211,7 +485,7 @@ export declare class Repositories {
      * incurring the overhead of receiving its full contents.
      *
      *
-     * ## Directory listings
+     * #### Directory listings
      *
      * When `path` points to a directory instead of a file, the response is a
      * paginated list of directory and file objects in the same order as the
@@ -321,7 +595,7 @@ export declare class Repositories {
      * }
      * ```
      *
-     * ## Querying, filtering and sorting
+     * #### Querying, filtering and sorting
      *
      * Like most API endpoints, this API supports the Bitbucket
      * querying/filtering syntax and so you could filter a directory listing
@@ -338,21 +612,27 @@ export declare class Repositories {
      *
      * `.../src/eefd5ef/?sort=-size`
      *
-     * See [filtering and sorting](../../../../../../meta/filtering) for more
+     * See [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering) for more
      * details.
-    **/
-    getRepositoriesWorkspaceRepoSlugSrcCommitPath(req: operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugSrcCommitPath(req: operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest, security: operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugWatchers - Returns a paginated list of all the watchers on the specified
+     * List repositories watchers
+     *
+     * @remarks
+     * Returns a paginated list of all the watchers on the specified
      * repository.
-    **/
-    getRepositoriesWorkspaceRepoSlugWatchers(req: operations.GetRepositoriesWorkspaceRepoSlugWatchersRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugWatchersResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugWatchers(req: operations.GetRepositoriesWorkspaceRepoSlugWatchersRequest, security: operations.GetRepositoriesWorkspaceRepoSlugWatchersSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugWatchersResponse>;
     /**
-     * getUserPermissionsRepositories - Returns an object for each repository the caller has explicit access
+     * List repository permissions for a user
+     *
+     * @remarks
+     * Returns an object for each repository the caller has explicit access
      * to and their effective permission — the highest level of permission the
      * caller has. This does not return public repositories that the user was
      * not granted any specific permission in, and does not distinguish between
-     * direct and indirect privileges.
+     * explicit and implicit privileges.
      *
      * Permissions can be:
      *
@@ -390,7 +670,7 @@ export declare class Repositories {
      * }
      * ```
      *
-     * Results may be further [filtered or sorted](../../../meta/filtering) by
+     * Results may be further [filtered or sorted](/cloud/bitbucket/rest/intro/#filtering) by
      * repository or permission by adding the following query string
      * parameters:
      *
@@ -399,10 +679,13 @@ export declare class Repositories {
      *
      * Note that the query parameter values need to be URL escaped so that `=`
      * would become `%3D`.
-    **/
-    getUserPermissionsRepositories(req: operations.GetUserPermissionsRepositoriesRequest, config?: AxiosRequestConfig): Promise<operations.GetUserPermissionsRepositoriesResponse>;
+     */
+    getUserPermissionsRepositories(req: operations.GetUserPermissionsRepositoriesRequest, security: operations.GetUserPermissionsRepositoriesSecurity, config?: AxiosRequestConfig): Promise<operations.GetUserPermissionsRepositoriesResponse>;
     /**
-     * postRepositoriesWorkspaceRepoSlug - Creates a new repository.
+     * Create a repository
+     *
+     * @remarks
+     * Creates a new repository.
      *
      * Note: In order to set the project for the newly created repository,
      * pass in either the project key or the project UUID as part of the
@@ -433,39 +716,15 @@ export declare class Repositories {
      *
      * Note: In the examples above, the workspace ID `teamsinspace`,
      * and/or the repository name `hablanding` can be replaced by UUIDs.
-    **/
-    postRepositoriesWorkspaceRepoSlug(req: operations.PostRepositoriesWorkspaceRepoSlugRequest, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugResponse>;
+     */
+    postRepositoriesWorkspaceRepoSlug(req: operations.PostRepositoriesWorkspaceRepoSlugRequest, security: operations.PostRepositoriesWorkspaceRepoSlugSecurity, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugResponse>;
     /**
-     * postRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuild - Creates a new build status against the specified commit.
+     * Fork a repository
      *
-     * If the specified key already exists, the existing status object will
-     * be overwritten.
+     * @remarks
+     * Creates a new fork of the specified repository.
      *
-     * Example:
-     *
-     * ```
-     * curl https://api.bitbucket.org/2.0/repositories/my-workspace/my-repo/commit/e10dae226959c2194f2b07b077c07762d93821cf/statuses/build/           -X POST -u jdoe -H 'Content-Type: application/json'           -d '{
-     *     "key": "MY-BUILD",
-     *     "state": "SUCCESSFUL",
-     *     "description": "42 tests passed",
-     *     "url": "https://www.example.org/my-build-result"
-     *   }'
-     * ```
-     *
-     * When creating a new commit status, you can use a URI template for the URL.
-     * Templates are URLs that contain variable names that Bitbucket will
-     * evaluate at runtime whenever the URL is displayed anywhere similar to
-     * parameter substitution in
-     * [Bitbucket Connect](https://developer.atlassian.com/bitbucket/concepts/context-parameters.html).
-     * For example, one could use `https://foo.com/builds/{repository.full_name}`
-     * which Bitbucket will turn into `https://foo.com/builds/foo/bar` at render time.
-     * The context variables available are `repository` and `commit`.
-    **/
-    postRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuild(req: operations.PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildRequest, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildResponse>;
-    /**
-     * postRepositoriesWorkspaceRepoSlugForks - Creates a new fork of the specified repository.
-     *
-     * ## Forking a repository
+     * #### Forking a repository
      *
      * To create a fork, specify the workspace explicitly as part of the
      * request body:
@@ -491,7 +750,7 @@ export declare class Repositories {
      * You need contributor access to create new forks within a workspace.
      *
      *
-     * ## Change the properties of a new fork
+     * #### Change the properties of a new fork
      *
      * By default the fork inherits most of its properties from the parent.
      * However, since the optional POST body document follows the normal
@@ -520,10 +779,13 @@ export declare class Repositories {
      * * scm
      * * parent
      * * full_name
-    **/
-    postRepositoriesWorkspaceRepoSlugForks(req: operations.PostRepositoriesWorkspaceRepoSlugForksRequest, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugForksResponse>;
+     */
+    postRepositoriesWorkspaceRepoSlugForks(req: operations.PostRepositoriesWorkspaceRepoSlugForksRequest, security: operations.PostRepositoriesWorkspaceRepoSlugForksSecurity, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugForksResponse>;
     /**
-     * postRepositoriesWorkspaceRepoSlugHooks - Creates a new webhook on the specified repository.
+     * Create a webhook for a repository
+     *
+     * @remarks
+     * Creates a new webhook on the specified repository.
      *
      * Example:
      *
@@ -549,10 +811,13 @@ export declare class Repositories {
      *
      * Also note that the `url` must properly resolve and cannot be an
      * internal, non-routed address.
-    **/
-    postRepositoriesWorkspaceRepoSlugHooks(req: operations.PostRepositoriesWorkspaceRepoSlugHooksRequest, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugHooksResponse>;
+     */
+    postRepositoriesWorkspaceRepoSlugHooks(req: operations.PostRepositoriesWorkspaceRepoSlugHooksRequest, security: operations.PostRepositoriesWorkspaceRepoSlugHooksSecurity, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugHooksResponse>;
     /**
-     * postRepositoriesWorkspaceRepoSlugSrc - This endpoint is used to create new commits in the repository by
+     * Create a commit by uploading a file
+     *
+     * @remarks
+     * This endpoint is used to create new commits in the repository by
      * uploading files.
      *
      * To add a new file to a repository:
@@ -580,7 +845,7 @@ export declare class Repositories {
      * This endpoint accepts `multipart/form-data` (as in the examples above),
      * as well as `application/x-www-form-urlencoded`.
      *
-     * ## multipart/form-data
+     * #### multipart/form-data
      *
      * A `multipart/form-data` post contains a series of "form fields" that
      * identify both the individual files that are being uploaded, as well as
@@ -602,7 +867,7 @@ export declare class Repositories {
      * `Content-Disposition` header will contain the `filename` parameter to
      * distinguish between a file named "message" and the commit message field.
      *
-     * ## application/x-www-form-urlencoded
+     * #### application/x-www-form-urlencoded
      *
      * It is also possible to upload new files using a simple
      * `application/x-www-form-urlencoded` POST. This can be convenient when
@@ -625,7 +890,7 @@ export declare class Repositories {
      * a meta data parameter, then it is interpreted as meta data, not as a
      * file.
      *
-     * ## Executables and links
+     * #### Executables and links
      *
      * While this API aims to facilitate the most common use cases, it is
      * possible to perform some more advanced operations like creating a new
@@ -673,18 +938,21 @@ export declare class Repositories {
      *
      * Note that this API does not support the creation or manipulation of
      * subrepos / submodules.
-    **/
-    postRepositoriesWorkspaceRepoSlugSrc(req: operations.PostRepositoriesWorkspaceRepoSlugSrcRequest, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugSrcResponse>;
+     */
+    postRepositoriesWorkspaceRepoSlugSrc(req: operations.PostRepositoriesWorkspaceRepoSlugSrcRequest, security: operations.PostRepositoriesWorkspaceRepoSlugSrcSecurity, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugSrcResponse>;
     /**
-     * putRepositoriesWorkspaceRepoSlug - Since this endpoint can be used to both update and to create a
+     * Update a repository
+     *
+     * @remarks
+     * Since this endpoint can be used to both update and to create a
      * repository, the request body depends on the intent.
      *
-     * ### Creation
+     * #### Creation
      *
      * See the POST documentation for the repository endpoint for an example
      * of the request body.
      *
-     * ### Update
+     * #### Update
      *
      * Note: Changing the `name` of the repository will cause the location to
      * be changed. This is because the URL of the repo is derived from the
@@ -693,26 +961,13 @@ export declare class Repositories {
      * with an existing repository's slug. But if there is no conflict,
      * the new location will be returned in the `Location` header of the
      * response.
-    **/
-    putRepositoriesWorkspaceRepoSlug(req: operations.PutRepositoriesWorkspaceRepoSlugRequest, config?: AxiosRequestConfig): Promise<operations.PutRepositoriesWorkspaceRepoSlugResponse>;
+     */
+    putRepositoriesWorkspaceRepoSlug(req: operations.PutRepositoriesWorkspaceRepoSlugRequest, security: operations.PutRepositoriesWorkspaceRepoSlugSecurity, config?: AxiosRequestConfig): Promise<operations.PutRepositoriesWorkspaceRepoSlugResponse>;
     /**
-     * putRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKey - Used to update the current status of a build status object on the
-     * specific commit.
+     * Update a webhook for a repository
      *
-     * This operation can also be used to change other properties of the
-     * build status:
-     *
-     * * `state`
-     * * `name`
-     * * `description`
-     * * `url`
-     * * `refname`
-     *
-     * The `key` cannot be changed.
-    **/
-    putRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKey(req: operations.PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyRequest, config?: AxiosRequestConfig): Promise<operations.PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyResponse>;
-    /**
-     * putRepositoriesWorkspaceRepoSlugHooksUid - Updates the specified webhook subscription.
+     * @remarks
+     * Updates the specified webhook subscription.
      *
      * The following properties can be mutated:
      *
@@ -720,6 +975,119 @@ export declare class Repositories {
      * * `url`
      * * `active`
      * * `events`
-    **/
-    putRepositoriesWorkspaceRepoSlugHooksUid(req: operations.PutRepositoriesWorkspaceRepoSlugHooksUidRequest, config?: AxiosRequestConfig): Promise<operations.PutRepositoriesWorkspaceRepoSlugHooksUidResponse>;
+     */
+    putRepositoriesWorkspaceRepoSlugHooksUid(req: operations.PutRepositoriesWorkspaceRepoSlugHooksUidRequest, security: operations.PutRepositoriesWorkspaceRepoSlugHooksUidSecurity, config?: AxiosRequestConfig): Promise<operations.PutRepositoriesWorkspaceRepoSlugHooksUidResponse>;
+    /**
+     * Set the inheritance state for repository settings
+     *
+     */
+    putRepositoriesWorkspaceRepoSlugOverrideSettings(req: operations.PutRepositoriesWorkspaceRepoSlugOverrideSettingsRequest, security: operations.PutRepositoriesWorkspaceRepoSlugOverrideSettingsSecurity, config?: AxiosRequestConfig): Promise<operations.PutRepositoriesWorkspaceRepoSlugOverrideSettingsResponse>;
+    /**
+     * Update an explicit group permission for a repository
+     *
+     * @remarks
+     * Updates the group permission if it exists.
+     *
+     * Only users with admin permission for the repository may access this resource.
+     *
+     * The only authentication method supported for this endpoint is via app passwords.
+     *
+     * Permissions can be:
+     *
+     * * `admin`
+     * * `write`
+     * * `read`
+     *
+     * Example:
+     * ```
+     * $ curl -X PUT -H "Content-Type: application/json"
+     * https://api.bitbucket.org/2.0/repositories/atlassian_tutorial/geordi/permissions-config/groups/developers
+     * -d
+     * '{
+     *     "permission": "write"
+     * }'
+     *
+     * HTTP/1.1 200
+     * Location:
+     * https://api.bitbucket.org/2.0/repositories/atlassian_tutorial/geordi/permissions-config/groups/developers
+     *
+     * {
+     *     "type": "repository_group_permission",
+     *     "group": {
+     *         "type": "group",
+     *         "name": "Developers",
+     *         "slug": "developers"
+     *     },
+     *     "repository": {
+     *         "type": "repository",
+     *         "name": "geordi",
+     *         "full_name": "atlassian_tutorial/geordi",
+     *         "uuid": "{85d08b4e-571d-44e9-a507-fa476535aa98}"
+     *     },
+     *     "permission": "write",
+     *     "links": {
+     *       "self": {
+     *         "href":
+     *         "https://api.bitbucket.org/2.0/repositories/atlassian_tutorial/geordi/permissions-config/groups/developers"
+     *       }
+     *     }
+     * }
+     * ```
+     */
+    putRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlug(req: operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest, security: operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugSecurity, config?: AxiosRequestConfig): Promise<operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugResponse>;
+    /**
+     * Update an explicit user permission for a repository
+     *
+     * @remarks
+     * Updates the explicit user permission for a given user and repository. The selected user must be a member of
+     * the workspace, and cannot be the workspace owner.
+     * Only users with admin permission for the repository may access this resource.
+     *
+     * The only authentication method for this endpoint is via app passwords.
+     *
+     * Permissions can be:
+     *
+     * * `admin`
+     * * `write`
+     * * `read`
+     *
+     * Example:
+     *
+     * ```
+     * $ curl -X PUT -H "Content-Type: application/json" 'https://api.bitbucket.org/2.0/repositories/
+     * atlassian_tutorial/geordi/permissions-config/users/557058:ba8948b2-49da-43a9-9e8b-e7249b8e324a'
+     * -d         '{
+     *     "permission": "write"
+     * }'
+     *
+     * HTTP/1.1 200
+     * Location: 'https://api.bitbucket.org/2.0/repositories/atlassian_tutorial/geordi/
+     * permissions-config/users/557058:ba8948b2-49da-43a9-9e8b-e7249b8e324a'
+     *
+     *
+     * {
+     *     "type": "repository_user_permission",
+     *     "user": {
+     *         "type": "user",
+     *         "display_name": "Colin Cameron",
+     *         "uuid": "{d301aafa-d676-4ee0-88be-962be7417567}",
+     *         "account_id": "557058:ba8948b2-49da-43a9-9e8b-e7249b8e324a"
+     *     },
+     *     "repository": {
+     *         "type": "repository",
+     *         "name": "geordi",
+     *         "full_name": "atlassian_tutorial/geordi",
+     *         "uuid": "{85d08b4e-571d-44e9-a507-fa476535aa98}"
+     *     },
+     *     "permission": "write",
+     *     "links": {
+     *         "self": {
+     *             "href": "https://api.bitbucket.org/2.0/repositories/atlassian_tutorial/geordi/
+     *                      permissions-config/users/557058:ba8948b2-49da-43a9-9e8b-e7249b8e324a"
+     *         }
+     *     }
+     * }
+     * ```
+     */
+    putRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserId(req: operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdRequest, security: operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdSecurity, config?: AxiosRequestConfig): Promise<operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdResponse>;
 }

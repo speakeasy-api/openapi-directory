@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetTagPathParams extends SpeakeasyBase {
-    tagId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetTagRequest extends SpeakeasyBase {
-    pathParams: GetTagPathParams;
+    /**
+     * The identifier of the Tag.
+     */
+    tagId: number;
 }
 export declare class GetTagResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * When everything is ok, the tag data returned.
+     */
     tagModel?: shared.TagModel;
+    /**
+     * When everything is ok, the tag data returned.
+     */
     tagModelHaljson?: shared.TagModelHaljson;
 }

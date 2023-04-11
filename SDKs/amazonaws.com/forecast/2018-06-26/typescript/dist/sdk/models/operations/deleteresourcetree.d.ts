@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteResourceTreeXAmzTargetEnum {
     AmazonForecastDeleteResourceTree = "AmazonForecast.DeleteResourceTree"
 }
-export declare class DeleteResourceTreeHeaders extends SpeakeasyBase {
+export declare class DeleteResourceTreeRequest extends SpeakeasyBase {
+    deleteResourceTreeRequest: shared.DeleteResourceTreeRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class DeleteResourceTreeHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteResourceTreeXAmzTargetEnum;
 }
-export declare class DeleteResourceTreeRequest extends SpeakeasyBase {
-    headers: DeleteResourceTreeHeaders;
-    request: shared.DeleteResourceTreeRequest;
-}
 export declare class DeleteResourceTreeResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * ResourceInUseException
+     */
     resourceInUseException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,9 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeIdentityProviderConfigPathParams extends SpeakeasyBase {
-    name: string;
+import { AxiosResponse } from "axios";
+/**
+ * An object representing an identity provider configuration.
+ */
+export declare class DescribeIdentityProviderConfigRequestBodyIdentityProviderConfig extends SpeakeasyBase {
+    name?: string;
+    type?: string;
 }
-export declare class DescribeIdentityProviderConfigHeaders extends SpeakeasyBase {
+export declare class DescribeIdentityProviderConfigRequestBody extends SpeakeasyBase {
+    /**
+     * An object representing an identity provider configuration.
+     */
+    identityProviderConfig: DescribeIdentityProviderConfigRequestBodyIdentityProviderConfig;
+}
+export declare class DescribeIdentityProviderConfigRequest extends SpeakeasyBase {
+    requestBody: DescribeIdentityProviderConfigRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,29 +23,37 @@ export declare class DescribeIdentityProviderConfigHeaders extends SpeakeasyBase
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-/**
- * An object representing an identity provider configuration.
-**/
-export declare class DescribeIdentityProviderConfigRequestBodyIdentityProviderConfig extends SpeakeasyBase {
-    name?: string;
-    type?: string;
-}
-export declare class DescribeIdentityProviderConfigRequestBody extends SpeakeasyBase {
-    identityProviderConfig: DescribeIdentityProviderConfigRequestBodyIdentityProviderConfig;
-}
-export declare class DescribeIdentityProviderConfigRequest extends SpeakeasyBase {
-    pathParams: DescribeIdentityProviderConfigPathParams;
-    headers: DescribeIdentityProviderConfigHeaders;
-    request: DescribeIdentityProviderConfigRequestBody;
+    /**
+     * The cluster name that the identity provider configuration is associated to.
+     */
+    name: string;
 }
 export declare class DescribeIdentityProviderConfigResponse extends SpeakeasyBase {
+    /**
+     * ClientException
+     */
     clientException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     describeIdentityProviderConfigResponse?: shared.DescribeIdentityProviderConfigResponse;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
-    resourceNotFoundException?: any;
-    serverException?: any;
+    /**
+     * ServiceUnavailableException
+     */
     serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ServerException
+     */
+    serverException?: any;
 }

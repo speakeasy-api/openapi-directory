@@ -1,6 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class ApiSpecification {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+export declare class APISpecification {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,19 +9,19 @@ export declare class ApiSpecification {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteApiSpecification - Delete an API specification in ReadMe
-    **/
-    deleteApiSpecification(req: operations.DeleteApiSpecificationRequest, config?: AxiosRequestConfig): Promise<operations.DeleteApiSpecificationResponse>;
+     * Delete an API specification in ReadMe
+     */
+    deleteAPISpecification(req: operations.DeleteAPISpecificationRequest, security: operations.DeleteAPISpecificationSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteAPISpecificationResponse>;
     /**
-     * getApiSpecification - Get API specification metadata
-    **/
-    getApiSpecification(req: operations.GetApiSpecificationRequest, config?: AxiosRequestConfig): Promise<operations.GetApiSpecificationResponse>;
+     * Get API specification metadata
+     */
+    getAPISpecification(req: operations.GetAPISpecificationRequest, security: operations.GetAPISpecificationSecurity, config?: AxiosRequestConfig): Promise<operations.GetAPISpecificationResponse>;
     /**
-     * updateApiSpecification - Update an API specification in ReadMe
-    **/
-    updateApiSpecification(req: operations.UpdateApiSpecificationRequest, config?: AxiosRequestConfig): Promise<operations.UpdateApiSpecificationResponse>;
+     * Update an API specification in ReadMe
+     */
+    updateAPISpecification(req: operations.UpdateAPISpecificationRequest, security: operations.UpdateAPISpecificationSecurity, config?: AxiosRequestConfig): Promise<operations.UpdateAPISpecificationResponse>;
     /**
-     * uploadApiSpecification - Upload an API specification to ReadMe. Or, to use a newer solution see https://docs.readme.com/guides/docs/automatically-sync-api-specification-with-github
-    **/
-    uploadApiSpecification(req: operations.UploadApiSpecificationRequest, config?: AxiosRequestConfig): Promise<operations.UploadApiSpecificationResponse>;
+     * Upload an API specification to ReadMe. Or, to use a newer solution see https://docs.readme.com/guides/docs/automatically-sync-api-specification-with-github
+     */
+    uploadAPISpecification(req: operations.UploadAPISpecificationRequest, security: operations.UploadAPISpecificationSecurity, config?: AxiosRequestConfig): Promise<operations.UploadAPISpecificationResponse>;
 }

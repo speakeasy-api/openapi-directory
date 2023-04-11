@@ -1,36 +1,59 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SendClientsMessageUsingPostQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class SendClientsMessageUsingPOSTRequest extends SpeakeasyBase {
     msg?: string;
     padID?: string;
 }
-export declare class SendClientsMessageUsingPost200ApplicationJson extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class SendClientsMessageUsingPost500ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class SendClientsMessageUsingPost400ApplicationJson extends SpeakeasyBase {
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class SendClientsMessageUsingPost401ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class SendClientsMessageUsingPost401ApplicationJson extends SpeakeasyBase {
+/**
+ * generic api error (code 1)
+ */
+export declare class SendClientsMessageUsingPost400ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class SendClientsMessageUsingPost500ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class SendClientsMessageUsingPost200ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class SendClientsMessageUsingPostRequest extends SpeakeasyBase {
-    queryParams: SendClientsMessageUsingPostQueryParams;
-}
-export declare class SendClientsMessageUsingPostResponse extends SpeakeasyBase {
+export declare class SendClientsMessageUsingPOSTResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    sendClientsMessageUsingPOST200ApplicationJSONObject?: SendClientsMessageUsingPost200ApplicationJson;
-    sendClientsMessageUsingPOST400ApplicationJSONObject?: SendClientsMessageUsingPost400ApplicationJson;
-    sendClientsMessageUsingPOST401ApplicationJSONObject?: SendClientsMessageUsingPost401ApplicationJson;
-    sendClientsMessageUsingPOST500ApplicationJSONObject?: SendClientsMessageUsingPost500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    sendClientsMessageUsingPOST200ApplicationJSONObject?: SendClientsMessageUsingPost200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    sendClientsMessageUsingPOST400ApplicationJSONObject?: SendClientsMessageUsingPost400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    sendClientsMessageUsingPOST401ApplicationJSONObject?: SendClientsMessageUsingPost401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    sendClientsMessageUsingPOST500ApplicationJSONObject?: SendClientsMessageUsingPost500ApplicationJSON;
 }

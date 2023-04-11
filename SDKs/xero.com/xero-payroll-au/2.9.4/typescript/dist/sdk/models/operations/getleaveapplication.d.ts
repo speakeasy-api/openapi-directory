@@ -1,21 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetLeaveApplicationPathParams extends SpeakeasyBase {
-    leaveApplicationID: string;
-}
-export declare class GetLeaveApplicationHeaders extends SpeakeasyBase {
-    xeroTenantId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetLeaveApplicationSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class GetLeaveApplicationRequest extends SpeakeasyBase {
-    pathParams: GetLeaveApplicationPathParams;
-    headers: GetLeaveApplicationHeaders;
-    security: GetLeaveApplicationSecurity;
+    /**
+     * Leave Application id for single object
+     */
+    leaveApplicationID: string;
+    /**
+     * Xero identifier for Tenant
+     */
+    xeroTenantId: string;
 }
 export declare class GetLeaveApplicationResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * search results matching criteria
+     */
     leaveApplications?: shared.LeaveApplications;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class TenancyTenantsPartialUpdatePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class TenancyTenantsPartialUpdateRequest extends SpeakeasyBase {
-    pathParams: TenancyTenantsPartialUpdatePathParams;
-    request: shared.WritableTenantInput;
+    writableTenantInput: shared.WritableTenantInput;
+    /**
+     * A unique integer value identifying this tenant.
+     */
+    id: number;
 }
 export declare class TenancyTenantsPartialUpdateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
     tenant?: shared.Tenant;
 }

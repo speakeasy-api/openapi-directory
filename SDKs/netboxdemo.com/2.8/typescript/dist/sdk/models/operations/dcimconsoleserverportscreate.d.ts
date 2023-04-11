@@ -1,10 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DcimConsoleServerPortsCreateRequest extends SpeakeasyBase {
-    request: shared.WritableConsoleServerPortInput;
-}
+import { AxiosResponse } from "axios";
 export declare class DcimConsoleServerPortsCreateResponse extends SpeakeasyBase {
     consoleServerPort?: shared.ConsoleServerPort;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeInsightRulesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeInsightRulesActionEnum {
     DescribeInsightRules = "DescribeInsightRules"
 }
-export declare enum PostDescribeInsightRulesVersionEnum {
+export declare enum POSTDescribeInsightRulesVersionEnum {
     TwoThousandAndTen0801 = "2010-08-01"
 }
-export declare class PostDescribeInsightRulesQueryParams extends SpeakeasyBase {
-    action: PostDescribeInsightRulesActionEnum;
+export declare class POSTDescribeInsightRulesRequest extends SpeakeasyBase {
+    action: POSTDescribeInsightRulesActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostDescribeInsightRulesVersionEnum;
-}
-export declare class PostDescribeInsightRulesHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeInsightRulesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeInsightRulesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeInsightRulesRequest extends SpeakeasyBase {
-    queryParams: PostDescribeInsightRulesQueryParams;
-    headers: PostDescribeInsightRulesHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeInsightRulesResponse extends SpeakeasyBase {
+export declare class POSTDescribeInsightRulesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

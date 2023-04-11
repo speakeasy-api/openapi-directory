@@ -1,0 +1,36 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+export declare class Game extends SpeakeasyBase {
+    attendance?: number;
+    awayConference?: string;
+    awayDivision?: string;
+    awayId?: number;
+    awayLineScores?: number[];
+    awayPoints?: number;
+    awayPostWinProb?: number;
+    awayPostgameElo?: number;
+    awayPregameElo?: number;
+    awayTeam?: string;
+    completed?: boolean;
+    conferenceGame?: boolean;
+    excitementIndex?: number;
+    highlights?: string;
+    homeConference?: string;
+    homeDivision?: string;
+    homeId?: number;
+    homeLineScores?: number[];
+    homePoints?: number;
+    homePostWinProb?: number;
+    homePostgameElo?: number;
+    homePregameElo?: number;
+    homeTeam?: string;
+    id?: number;
+    neutralSite?: boolean;
+    notes?: string;
+    season?: number;
+    seasonType?: string;
+    startDate?: string;
+    startTimeTbd?: boolean;
+    venue?: string;
+    venueId?: number;
+    week?: number;
+}

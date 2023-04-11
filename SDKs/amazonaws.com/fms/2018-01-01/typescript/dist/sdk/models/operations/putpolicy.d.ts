@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum PutPolicyXAmzTargetEnum {
-    Awsfms20180101PutPolicy = "AWSFMS_20180101.PutPolicy"
+    AWSFMS20180101PutPolicy = "AWSFMS_20180101.PutPolicy"
 }
-export declare class PutPolicyHeaders extends SpeakeasyBase {
+export declare class PutPolicyRequest extends SpeakeasyBase {
+    putPolicyRequest: shared.PutPolicyRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class PutPolicyHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: PutPolicyXAmzTargetEnum;
 }
-export declare class PutPolicyRequest extends SpeakeasyBase {
-    headers: PutPolicyHeaders;
-    request: shared.PutPolicyRequest;
-}
 export declare class PutPolicyResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalErrorException
+     */
     internalErrorException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * InvalidOperationException
+     */
     invalidOperationException?: any;
+    /**
+     * InvalidTypeException
+     */
     invalidTypeException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * Success
+     */
     putPolicyResponse?: shared.PutPolicyResponse;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

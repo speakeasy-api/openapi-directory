@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListCustomRoutingEndpointGroupsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListCustomRoutingEndpointGroupsXAmzTargetEnum {
     GlobalAcceleratorV20180706ListCustomRoutingEndpointGroups = "GlobalAccelerator_V20180706.ListCustomRoutingEndpointGroups"
 }
-export declare class ListCustomRoutingEndpointGroupsHeaders extends SpeakeasyBase {
+export declare class ListCustomRoutingEndpointGroupsRequest extends SpeakeasyBase {
+    listCustomRoutingEndpointGroupsRequest: shared.ListCustomRoutingEndpointGroupsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,17 +23,28 @@ export declare class ListCustomRoutingEndpointGroupsHeaders extends SpeakeasyBas
     xAmzSignedHeaders?: string;
     xAmzTarget: ListCustomRoutingEndpointGroupsXAmzTargetEnum;
 }
-export declare class ListCustomRoutingEndpointGroupsRequest extends SpeakeasyBase {
-    queryParams: ListCustomRoutingEndpointGroupsQueryParams;
-    headers: ListCustomRoutingEndpointGroupsHeaders;
-    request: shared.ListCustomRoutingEndpointGroupsRequest;
-}
 export declare class ListCustomRoutingEndpointGroupsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServiceErrorException
+     */
     internalServiceErrorException?: any;
+    /**
+     * InvalidArgumentException
+     */
     invalidArgumentException?: any;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * Success
+     */
     listCustomRoutingEndpointGroupsResponse?: shared.ListCustomRoutingEndpointGroupsResponse;
+    /**
+     * ListenerNotFoundException
+     */
     listenerNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

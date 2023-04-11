@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PostUsersUserEmailInviteEmailPathParams extends SpeakeasyBase {
-    userEmail: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PostUsersUserEmailInviteEmailRequest extends SpeakeasyBase {
-    pathParams: PostUsersUserEmailInviteEmailPathParams;
+    /**
+     * user's email
+     */
+    userEmail: string;
 }
 export declare class PostUsersUserEmailInviteEmailResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * No authorization token was found.
+     */
     error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

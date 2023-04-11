@@ -1,22 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class InventoryCategoriesReadPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class InventoryCategoriesReadQueryParams extends SpeakeasyBase {
-    doctor?: number;
-    since?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class InventoryCategoriesReadSecurity extends SpeakeasyBase {
-    drchronoOauth2: shared.SchemeDrchronoOauth2;
+    drchronoOauth2: string;
 }
 export declare class InventoryCategoriesReadRequest extends SpeakeasyBase {
-    pathParams: InventoryCategoriesReadPathParams;
-    queryParams: InventoryCategoriesReadQueryParams;
-    security: InventoryCategoriesReadSecurity;
+    doctor?: number;
+    id: string;
+    since?: string;
 }
 export declare class InventoryCategoriesReadResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * OK
+     */
     inventoryCategory?: shared.InventoryCategory;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

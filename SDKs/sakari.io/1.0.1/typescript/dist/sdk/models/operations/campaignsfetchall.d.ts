@@ -1,24 +1,37 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CampaignsFetchAllPathParams extends SpeakeasyBase {
-    accountId: string;
-}
-export declare class CampaignsFetchAllQueryParams extends SpeakeasyBase {
-    limit?: number;
-    name?: string;
-    offset?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class CampaignsFetchAllSecurity extends SpeakeasyBase {
-    sakariAuth: shared.SchemeSakariAuth;
+    sakariAuth: string;
 }
 export declare class CampaignsFetchAllRequest extends SpeakeasyBase {
-    pathParams: CampaignsFetchAllPathParams;
-    queryParams: CampaignsFetchAllQueryParams;
-    security: CampaignsFetchAllSecurity;
+    /**
+     * Account to apply operations to
+     */
+    accountId: string;
+    /**
+     * Maximum number of results to return
+     */
+    limit?: number;
+    /**
+     * Filter by name or part of
+     */
+    name?: string;
+    /**
+     * Results to skip when paginating through a result set
+     */
+    offset?: number;
 }
 export declare class CampaignsFetchAllResponse extends SpeakeasyBase {
+    /**
+     * successful operation
+     */
     campaignsResponse?: shared.CampaignsResponse;
     contentType: string;
+    /**
+     * invalid request
+     */
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,7 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ProgressSub } from "./progresssub";
 import { ProgressLink } from "./progresslink";
+import { ProgressSub } from "./progresssub";
 import { ProjectStatusEnum } from "./projectstatusenum";
+/**
+ * Progress information
+ */
 export declare class Progress extends SpeakeasyBase {
     languages?: Record<string, ProgressSub>;
     links?: ProgressLink;
@@ -9,4 +12,5 @@ export declare class Progress extends SpeakeasyBase {
     proofreading?: number;
     total?: number;
     translation?: number;
+    wordCount?: number;
 }

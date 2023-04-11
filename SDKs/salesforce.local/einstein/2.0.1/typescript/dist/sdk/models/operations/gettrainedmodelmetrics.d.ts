@@ -1,17 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetTrainedModelMetricsPathParams extends SpeakeasyBase {
-    modelId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetTrainedModelMetricsSecurity extends SpeakeasyBase {
-    bearerToken: shared.SchemeBearerToken;
+    bearerToken: string;
 }
 export declare class GetTrainedModelMetricsRequest extends SpeakeasyBase {
-    pathParams: GetTrainedModelMetricsPathParams;
-    security: GetTrainedModelMetricsSecurity;
+    /**
+     * Model Id
+     */
+    modelId: string;
 }
 export declare class GetTrainedModelMetricsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Model Metrics
+     */
     metrics?: shared.Metrics;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

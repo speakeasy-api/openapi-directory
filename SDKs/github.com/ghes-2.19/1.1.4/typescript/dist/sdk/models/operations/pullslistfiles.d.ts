@@ -1,23 +1,34 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PullsListFilesPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class PullsListFilesRequest extends SpeakeasyBase {
     owner: string;
+    /**
+     * Page number of the results to fetch.
+     */
+    page?: number;
+    /**
+     * Results per page (max 100)
+     */
+    perPage?: number;
     pullNumber: number;
     repo: string;
 }
-export declare class PullsListFilesQueryParams extends SpeakeasyBase {
-    page?: number;
-    perPage?: number;
-}
-export declare class PullsListFilesRequest extends SpeakeasyBase {
-    pathParams: PullsListFilesPathParams;
-    queryParams: PullsListFilesQueryParams;
-}
 export declare class PullsListFilesResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Internal Error
+     */
     basicError?: shared.BasicError;
+    /**
+     * Response
+     */
     diffEntries?: shared.DiffEntry[];
+    /**
+     * Validation failed
+     */
     validationError?: shared.ValidationError;
 }

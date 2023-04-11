@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetExitStandbyActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETExitStandbyActionEnum {
     ExitStandby = "ExitStandby"
 }
-export declare enum GetExitStandbyVersionEnum {
+export declare enum GETExitStandbyVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class GetExitStandbyQueryParams extends SpeakeasyBase {
-    action: GetExitStandbyActionEnum;
+export declare class GETExitStandbyRequest extends SpeakeasyBase {
+    action: GETExitStandbyActionEnum;
+    /**
+     * The name of the Auto Scaling group.
+     */
     autoScalingGroupName: string;
+    /**
+     * The IDs of the instances. You can specify up to 20 instances.
+     */
     instanceIds?: string[];
-    version: GetExitStandbyVersionEnum;
-}
-export declare class GetExitStandbyHeaders extends SpeakeasyBase {
+    version: GETExitStandbyVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetExitStandbyHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetExitStandbyRequest extends SpeakeasyBase {
-    queryParams: GetExitStandbyQueryParams;
-    headers: GetExitStandbyHeaders;
-}
-export declare class GetExitStandbyResponse extends SpeakeasyBase {
+export declare class GETExitStandbyResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

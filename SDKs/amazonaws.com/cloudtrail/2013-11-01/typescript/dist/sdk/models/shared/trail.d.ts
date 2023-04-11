@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * The settings for a trail.
-**/
+ */
 export declare class Trail extends SpeakeasyBase {
     cloudWatchLogsLogGroupArn?: string;
     cloudWatchLogsRoleArn?: string;
@@ -17,6 +17,6 @@ export declare class Trail extends SpeakeasyBase {
     s3BucketName?: string;
     s3KeyPrefix?: string;
     snsTopicARN?: string;
-    snsTopicName?: Record<string, any>;
+    snsTopicName?: string;
     trailARN?: string;
 }

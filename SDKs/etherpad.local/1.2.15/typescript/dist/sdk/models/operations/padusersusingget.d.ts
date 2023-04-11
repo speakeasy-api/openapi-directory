@@ -1,44 +1,67 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PadUsersUsingGetQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class PadUsersUsingGETRequest extends SpeakeasyBase {
     padID?: string;
 }
-export declare class PadUsersUsingGet200ApplicationJsonDataPadUsers extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class PadUsersUsingGet500ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class PadUsersUsingGet401ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+/**
+ * generic api error (code 1)
+ */
+export declare class PadUsersUsingGet400ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+export declare class PadUsersUsingGet200ApplicationJSONDataPadUsers extends SpeakeasyBase {
     colorId?: string;
     id?: string;
     name?: string;
     timestamp?: number;
 }
-export declare class PadUsersUsingGet200ApplicationJsonData extends SpeakeasyBase {
-    padUsers?: PadUsersUsingGet200ApplicationJsonDataPadUsers[];
+export declare class PadUsersUsingGet200ApplicationJSONData extends SpeakeasyBase {
+    padUsers?: PadUsersUsingGet200ApplicationJSONDataPadUsers[];
 }
-export declare class PadUsersUsingGet200ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class PadUsersUsingGet200ApplicationJSON extends SpeakeasyBase {
     code?: number;
-    data?: PadUsersUsingGet200ApplicationJsonData;
+    data?: PadUsersUsingGet200ApplicationJSONData;
     message?: string;
 }
-export declare class PadUsersUsingGet400ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class PadUsersUsingGet401ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class PadUsersUsingGet500ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class PadUsersUsingGetRequest extends SpeakeasyBase {
-    queryParams: PadUsersUsingGetQueryParams;
-}
-export declare class PadUsersUsingGetResponse extends SpeakeasyBase {
+export declare class PadUsersUsingGETResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    padUsersUsingGET200ApplicationJSONObject?: PadUsersUsingGet200ApplicationJson;
-    padUsersUsingGET400ApplicationJSONObject?: PadUsersUsingGet400ApplicationJson;
-    padUsersUsingGET401ApplicationJSONObject?: PadUsersUsingGet401ApplicationJson;
-    padUsersUsingGET500ApplicationJSONObject?: PadUsersUsingGet500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    padUsersUsingGET200ApplicationJSONObject?: PadUsersUsingGet200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    padUsersUsingGET400ApplicationJSONObject?: PadUsersUsingGet400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    padUsersUsingGET401ApplicationJSONObject?: PadUsersUsingGet401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    padUsersUsingGET500ApplicationJSONObject?: PadUsersUsingGet500ApplicationJSON;
 }

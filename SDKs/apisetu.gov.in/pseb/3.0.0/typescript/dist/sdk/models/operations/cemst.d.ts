@@ -1,118 +1,182 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class CemstSecurity extends SpeakeasyBase {
+    apiKey: string;
+    clientId: string;
+}
 export declare class CemstRequestBodyCertificateParameters extends SpeakeasyBase {
+    /**
+     * Full name
+     */
     fullName: string;
+    /**
+     * Aadhaar number
+     */
     uid: string;
+    /**
+     * Roll No
+     */
     rollno: string;
+    /**
+     * Year
+     */
     year: string;
 }
+/**
+ * The format of the certificate in response.
+ */
 export declare enum CemstRequestBodyFormatEnum {
     Pdf = "pdf"
 }
+/**
+ * Request format
+ */
 export declare class CemstRequestBody extends SpeakeasyBase {
     certificateParameters?: CemstRequestBodyCertificateParameters;
-    consentArtifact?: any;
+    consentArtifact?: shared.ConsentArtifactSchema;
+    /**
+     * The format of the certificate in response.
+     */
     format: CemstRequestBodyFormatEnum;
+    /**
+     * A unique transaction id for this request in UUID format. It is used for tracking the request.
+     */
     txnId: string;
 }
-export declare class CemstSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
-    clientId: shared.SchemeClientId;
+export declare enum Cemst504ApplicationJSONErrorEnum {
+    GatewayTimeout = "gateway_timeout"
 }
-export declare enum Cemst400ApplicationJsonErrorEnum {
+export declare enum Cemst504ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
+}
+/**
+ * Gateway timeout
+ */
+export declare class Cemst504ApplicationJSON extends SpeakeasyBase {
+    error?: Cemst504ApplicationJSONErrorEnum;
+    errorDescription?: Cemst504ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Cemst503ApplicationJSONErrorEnum {
+    ServiceUnavailable = "service_unavailable"
+}
+export declare enum Cemst503ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
+}
+/**
+ * Service unavailable
+ */
+export declare class Cemst503ApplicationJSON extends SpeakeasyBase {
+    error?: Cemst503ApplicationJSONErrorEnum;
+    errorDescription?: Cemst503ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Cemst502ApplicationJSONErrorEnum {
+    BadGatewy = "bad_gatewy"
+}
+export declare enum Cemst502ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
+}
+/**
+ * Bad gateway
+ */
+export declare class Cemst502ApplicationJSON extends SpeakeasyBase {
+    error?: Cemst502ApplicationJSONErrorEnum;
+    errorDescription?: Cemst502ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Cemst500ApplicationJSONErrorEnum {
+    InternalServerError = "internal_server_error"
+}
+export declare enum Cemst500ApplicationJSONErrorDescriptionEnum {
+    InternalServerError = "Internal server error"
+}
+/**
+ * Internal server error
+ */
+export declare class Cemst500ApplicationJSON extends SpeakeasyBase {
+    error?: Cemst500ApplicationJSONErrorEnum;
+    errorDescription?: Cemst500ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Cemst404ApplicationJSONErrorEnum {
+    RecordNotFound = "record_not_found",
+    UrlNotFound = "url_not_found"
+}
+export declare enum Cemst404ApplicationJSONErrorDescriptionEnum {
+    NoRecordFound = "No record found",
+    YourAPIUrlOrPathIsIncorrect = "Your API url or path is incorrect"
+}
+/**
+ * No record found
+ */
+export declare class Cemst404ApplicationJSON extends SpeakeasyBase {
+    error?: Cemst404ApplicationJSONErrorEnum;
+    errorDescription?: Cemst404ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Cemst401ApplicationJSONErrorEnum {
+    InvalidAuthentication = "invalid_authentication",
+    InvalidAuthorization = "invalid_authorization"
+}
+export declare enum Cemst401ApplicationJSONErrorDescriptionEnum {
+    AuthenticationFailed = "Authentication failed",
+    YouAreNotAuthorizedToUseThisAPI = "You are not authorized to use this API"
+}
+/**
+ * Unauthorized access
+ */
+export declare class Cemst401ApplicationJSON extends SpeakeasyBase {
+    error?: Cemst401ApplicationJSONErrorEnum;
+    errorDescription?: Cemst401ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Cemst400ApplicationJSONErrorEnum {
     MissingParameter = "missing_parameter",
     InvalidParameter = "invalid_parameter",
     InvalidFormat = "invalid_format",
     InvalidTxnid = "invalid_txnid",
     InvalidConsentid = "invalid_consentid"
 }
-export declare enum Cemst400ApplicationJsonErrorDescriptionEnum {
+export declare enum Cemst400ApplicationJSONErrorDescriptionEnum {
     PleaseProvideAllMandatoryParameters = "Please provide all mandatory parameters",
     BadRequest = "Bad request",
     TheFormatParameterIsInvalid = "The format parameter is invalid",
-    TheTxnIdParameterMustBeInUuidFormat = "The txnId parameter must be in UUID format",
-    TheConsentIdParameterMustBeInUuidFormat = "The consentId parameter must be in UUID format"
+    TheTxnIdParameterMustBeInUUIDFormat = "The txnId parameter must be in UUID format",
+    TheConsentIdParameterMustBeInUUIDFormat = "The consentId parameter must be in UUID format"
 }
-export declare class Cemst400ApplicationJson extends SpeakeasyBase {
-    error?: Cemst400ApplicationJsonErrorEnum;
-    errorDescription?: Cemst400ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Cemst401ApplicationJsonErrorEnum {
-    InvalidAuthentication = "invalid_authentication",
-    InvalidAuthorization = "invalid_authorization"
-}
-export declare enum Cemst401ApplicationJsonErrorDescriptionEnum {
-    AuthenticationFailed = "Authentication failed",
-    YouAreNotAuthorizedToUseThisApi = "You are not authorized to use this API"
-}
-export declare class Cemst401ApplicationJson extends SpeakeasyBase {
-    error?: Cemst401ApplicationJsonErrorEnum;
-    errorDescription?: Cemst401ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Cemst404ApplicationJsonErrorEnum {
-    RecordNotFound = "record_not_found",
-    UrlNotFound = "url_not_found"
-}
-export declare enum Cemst404ApplicationJsonErrorDescriptionEnum {
-    NoRecordFound = "No record found",
-    YourApiUrlOrPathIsIncorrect = "Your API url or path is incorrect"
-}
-export declare class Cemst404ApplicationJson extends SpeakeasyBase {
-    error?: Cemst404ApplicationJsonErrorEnum;
-    errorDescription?: Cemst404ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Cemst500ApplicationJsonErrorEnum {
-    InternalServerError = "internal_server_error"
-}
-export declare enum Cemst500ApplicationJsonErrorDescriptionEnum {
-    InternalServerError = "Internal server error"
-}
-export declare class Cemst500ApplicationJson extends SpeakeasyBase {
-    error?: Cemst500ApplicationJsonErrorEnum;
-    errorDescription?: Cemst500ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Cemst502ApplicationJsonErrorEnum {
-    BadGatewy = "bad_gatewy"
-}
-export declare enum Cemst502ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
-}
-export declare class Cemst502ApplicationJson extends SpeakeasyBase {
-    error?: Cemst502ApplicationJsonErrorEnum;
-    errorDescription?: Cemst502ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Cemst503ApplicationJsonErrorEnum {
-    ServiceUnavailable = "service_unavailable"
-}
-export declare enum Cemst503ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
-}
-export declare class Cemst503ApplicationJson extends SpeakeasyBase {
-    error?: Cemst503ApplicationJsonErrorEnum;
-    errorDescription?: Cemst503ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Cemst504ApplicationJsonErrorEnum {
-    GatewayTimeout = "gateway_timeout"
-}
-export declare enum Cemst504ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
-}
-export declare class Cemst504ApplicationJson extends SpeakeasyBase {
-    error?: Cemst504ApplicationJsonErrorEnum;
-    errorDescription?: Cemst504ApplicationJsonErrorDescriptionEnum;
-}
-export declare class CemstRequest extends SpeakeasyBase {
-    request?: CemstRequestBody;
-    security: CemstSecurity;
+/**
+ * Bad request
+ */
+export declare class Cemst400ApplicationJSON extends SpeakeasyBase {
+    error?: Cemst400ApplicationJSONErrorEnum;
+    errorDescription?: Cemst400ApplicationJSONErrorDescriptionEnum;
 }
 export declare class CemstResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    cemst400ApplicationJSONObject?: Cemst400ApplicationJson;
-    cemst401ApplicationJSONObject?: Cemst401ApplicationJson;
-    cemst404ApplicationJSONObject?: Cemst404ApplicationJson;
-    cemst500ApplicationJSONObject?: Cemst500ApplicationJson;
-    cemst502ApplicationJSONObject?: Cemst502ApplicationJson;
-    cemst503ApplicationJSONObject?: Cemst503ApplicationJson;
-    cemst504ApplicationJSONObject?: Cemst504ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad request
+     */
+    cemst400ApplicationJSONObject?: Cemst400ApplicationJSON;
+    /**
+     * Unauthorized access
+     */
+    cemst401ApplicationJSONObject?: Cemst401ApplicationJSON;
+    /**
+     * No record found
+     */
+    cemst404ApplicationJSONObject?: Cemst404ApplicationJSON;
+    /**
+     * Internal server error
+     */
+    cemst500ApplicationJSONObject?: Cemst500ApplicationJSON;
+    /**
+     * Bad gateway
+     */
+    cemst502ApplicationJSONObject?: Cemst502ApplicationJSON;
+    /**
+     * Service unavailable
+     */
+    cemst503ApplicationJSONObject?: Cemst503ApplicationJSON;
+    /**
+     * Gateway timeout
+     */
+    cemst504ApplicationJSONObject?: Cemst504ApplicationJSON;
 }

@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { VirtualInterface } from "./virtualinterface";
-export declare class DeleteBgpPeerResponse extends SpeakeasyBase {
+/**
+ * Success
+ */
+export declare class DeleteBGPPeerResponse extends SpeakeasyBase {
     virtualInterface?: VirtualInterface;
 }

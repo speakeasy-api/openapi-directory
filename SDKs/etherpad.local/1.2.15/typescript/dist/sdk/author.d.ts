@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Author {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,43 +9,43 @@ export declare class Author {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createAuthorIfNotExistsForUsingGet - this functions helps you to map your application author ids to Etherpad author ids
-    **/
-    createAuthorIfNotExistsForUsingGet(req: operations.CreateAuthorIfNotExistsForUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.CreateAuthorIfNotExistsForUsingGetResponse>;
+     * this functions helps you to map your application author ids to Etherpad author ids
+     */
+    createAuthorIfNotExistsForUsingGET(req: operations.CreateAuthorIfNotExistsForUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.CreateAuthorIfNotExistsForUsingGETResponse>;
     /**
-     * createAuthorIfNotExistsForUsingPost - this functions helps you to map your application author ids to Etherpad author ids
-    **/
-    createAuthorIfNotExistsForUsingPost(req: operations.CreateAuthorIfNotExistsForUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.CreateAuthorIfNotExistsForUsingPostResponse>;
+     * this functions helps you to map your application author ids to Etherpad author ids
+     */
+    createAuthorIfNotExistsForUsingPOST(req: operations.CreateAuthorIfNotExistsForUsingPOSTRequest, config?: AxiosRequestConfig): Promise<operations.CreateAuthorIfNotExistsForUsingPOSTResponse>;
     /**
-     * createAuthorUsingGet - creates a new author
-    **/
-    createAuthorUsingGet(req: operations.CreateAuthorUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.CreateAuthorUsingGetResponse>;
+     * creates a new author
+     */
+    createAuthorUsingGET(req: operations.CreateAuthorUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.CreateAuthorUsingGETResponse>;
     /**
-     * createAuthorUsingPost - creates a new author
-    **/
-    createAuthorUsingPost(req: operations.CreateAuthorUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.CreateAuthorUsingPostResponse>;
+     * creates a new author
+     */
+    createAuthorUsingPOST(req: operations.CreateAuthorUsingPOSTRequest, config?: AxiosRequestConfig): Promise<operations.CreateAuthorUsingPOSTResponse>;
     /**
-     * getAuthorNameUsingGet - Returns the Author Name of the author
-    **/
-    getAuthorNameUsingGet(req: operations.GetAuthorNameUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.GetAuthorNameUsingGetResponse>;
+     * Returns the Author Name of the author
+     */
+    getAuthorNameUsingGET(req: operations.GETAuthorNameUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.GETAuthorNameUsingGETResponse>;
     /**
-     * getAuthorNameUsingPost - Returns the Author Name of the author
-    **/
-    getAuthorNameUsingPost(req: operations.GetAuthorNameUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.GetAuthorNameUsingPostResponse>;
+     * Returns the Author Name of the author
+     */
+    getAuthorNameUsingPOST(req: operations.GetAuthorNameUsingPOSTRequest, config?: AxiosRequestConfig): Promise<operations.GetAuthorNameUsingPOSTResponse>;
     /**
-     * listPadsOfAuthorUsingGet - returns an array of all pads this author contributed to
-    **/
-    listPadsOfAuthorUsingGet(req: operations.ListPadsOfAuthorUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.ListPadsOfAuthorUsingGetResponse>;
+     * returns an array of all pads this author contributed to
+     */
+    listPadsOfAuthorUsingGET(req: operations.ListPadsOfAuthorUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.ListPadsOfAuthorUsingGETResponse>;
     /**
-     * listPadsOfAuthorUsingPost - returns an array of all pads this author contributed to
-    **/
-    listPadsOfAuthorUsingPost(req: operations.ListPadsOfAuthorUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.ListPadsOfAuthorUsingPostResponse>;
+     * returns an array of all pads this author contributed to
+     */
+    listPadsOfAuthorUsingPOST(req: operations.ListPadsOfAuthorUsingPOSTRequest, config?: AxiosRequestConfig): Promise<operations.ListPadsOfAuthorUsingPOSTResponse>;
     /**
-     * listSessionsOfAuthorUsingGet - returns all sessions of an author
-    **/
-    listSessionsOfAuthorUsingGet(req: operations.ListSessionsOfAuthorUsingGetRequest, config?: AxiosRequestConfig): Promise<operations.ListSessionsOfAuthorUsingGetResponse>;
+     * returns all sessions of an author
+     */
+    listSessionsOfAuthorUsingGET(req: operations.ListSessionsOfAuthorUsingGETRequest, config?: AxiosRequestConfig): Promise<operations.ListSessionsOfAuthorUsingGETResponse>;
     /**
-     * listSessionsOfAuthorUsingPost - returns all sessions of an author
-    **/
-    listSessionsOfAuthorUsingPost(req: operations.ListSessionsOfAuthorUsingPostRequest, config?: AxiosRequestConfig): Promise<operations.ListSessionsOfAuthorUsingPostResponse>;
+     * returns all sessions of an author
+     */
+    listSessionsOfAuthorUsingPOST(req: operations.ListSessionsOfAuthorUsingPOSTRequest, config?: AxiosRequestConfig): Promise<operations.ListSessionsOfAuthorUsingPOSTResponse>;
 }

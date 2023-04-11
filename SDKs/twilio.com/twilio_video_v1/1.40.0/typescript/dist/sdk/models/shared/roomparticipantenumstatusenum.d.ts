@@ -1,0 +1,7 @@
+/**
+ * Read only the participants with this status. Can be: `connected` or `disconnected`. For `in-progress` Rooms the default Status is `connected`, for `completed` Rooms only `disconnected` Participants are returned.
+ */
+export declare enum RoomParticipantEnumStatusEnum {
+    Connected = "connected",
+    Disconnected = "disconnected"
+}

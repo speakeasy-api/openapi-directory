@@ -5,7 +5,7 @@ import { MacSecKey } from "./macseckey";
 import { Tag } from "./tag";
 /**
  * Information about an Direct Connect connection.
-**/
+ */
 export declare class Connection extends SpeakeasyBase {
     awsDevice?: string;
     awsDeviceV2?: string;

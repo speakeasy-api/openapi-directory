@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateLocalGatewayRouteActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateLocalGatewayRouteActionEnum {
     CreateLocalGatewayRoute = "CreateLocalGatewayRoute"
 }
-export declare enum PostCreateLocalGatewayRouteVersionEnum {
+export declare enum POSTCreateLocalGatewayRouteVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostCreateLocalGatewayRouteQueryParams extends SpeakeasyBase {
-    action: PostCreateLocalGatewayRouteActionEnum;
-    version: PostCreateLocalGatewayRouteVersionEnum;
-}
-export declare class PostCreateLocalGatewayRouteHeaders extends SpeakeasyBase {
+export declare class POSTCreateLocalGatewayRouteRequest extends SpeakeasyBase {
+    action: POSTCreateLocalGatewayRouteActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateLocalGatewayRouteVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateLocalGatewayRouteHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateLocalGatewayRouteRequest extends SpeakeasyBase {
-    queryParams: PostCreateLocalGatewayRouteQueryParams;
-    headers: PostCreateLocalGatewayRouteHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateLocalGatewayRouteResponse extends SpeakeasyBase {
+export declare class POSTCreateLocalGatewayRouteResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

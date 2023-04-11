@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostRebuildEnvironmentActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTRebuildEnvironmentActionEnum {
     RebuildEnvironment = "RebuildEnvironment"
 }
-export declare enum PostRebuildEnvironmentVersionEnum {
+export declare enum POSTRebuildEnvironmentVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostRebuildEnvironmentQueryParams extends SpeakeasyBase {
-    action: PostRebuildEnvironmentActionEnum;
-    version: PostRebuildEnvironmentVersionEnum;
-}
-export declare class PostRebuildEnvironmentHeaders extends SpeakeasyBase {
+export declare class POSTRebuildEnvironmentRequest extends SpeakeasyBase {
+    action: POSTRebuildEnvironmentActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTRebuildEnvironmentVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostRebuildEnvironmentHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostRebuildEnvironmentRequest extends SpeakeasyBase {
-    queryParams: PostRebuildEnvironmentQueryParams;
-    headers: PostRebuildEnvironmentHeaders;
-    request?: Uint8Array;
-}
-export declare class PostRebuildEnvironmentResponse extends SpeakeasyBase {
+export declare class POSTRebuildEnvironmentResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

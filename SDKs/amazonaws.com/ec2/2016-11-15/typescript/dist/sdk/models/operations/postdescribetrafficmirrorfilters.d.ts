@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeTrafficMirrorFiltersActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeTrafficMirrorFiltersActionEnum {
     DescribeTrafficMirrorFilters = "DescribeTrafficMirrorFilters"
 }
-export declare enum PostDescribeTrafficMirrorFiltersVersionEnum {
+export declare enum POSTDescribeTrafficMirrorFiltersVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDescribeTrafficMirrorFiltersQueryParams extends SpeakeasyBase {
-    action: PostDescribeTrafficMirrorFiltersActionEnum;
+export declare class POSTDescribeTrafficMirrorFiltersRequest extends SpeakeasyBase {
+    action: POSTDescribeTrafficMirrorFiltersActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostDescribeTrafficMirrorFiltersVersionEnum;
-}
-export declare class PostDescribeTrafficMirrorFiltersHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeTrafficMirrorFiltersVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeTrafficMirrorFiltersHeaders extends SpeakeasyBa
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeTrafficMirrorFiltersRequest extends SpeakeasyBase {
-    queryParams: PostDescribeTrafficMirrorFiltersQueryParams;
-    headers: PostDescribeTrafficMirrorFiltersHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeTrafficMirrorFiltersResponse extends SpeakeasyBase {
+export declare class POSTDescribeTrafficMirrorFiltersResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

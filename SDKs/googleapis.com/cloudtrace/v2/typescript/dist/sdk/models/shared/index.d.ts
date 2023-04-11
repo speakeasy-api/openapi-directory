@@ -7,7 +7,6 @@ export * from "./link";
 export * from "./links";
 export * from "./messageevent";
 export * from "./module";
-export * from "./security";
 export * from "./span";
 export * from "./stackframe";
 export * from "./stackframes";

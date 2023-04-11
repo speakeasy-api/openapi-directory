@@ -1,18 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ContactsUpdatePathParams extends SpeakeasyBase {
-    accountId: string;
-    contactId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ContactsUpdateSecurity extends SpeakeasyBase {
-    sakariAuth: shared.SchemeSakariAuth;
+    sakariAuth: string;
 }
 export declare class ContactsUpdateRequest extends SpeakeasyBase {
-    pathParams: ContactsUpdatePathParams;
-    security: ContactsUpdateSecurity;
+    /**
+     * Account to apply operations to
+     */
+    accountId: string;
+    /**
+     * ID of contact
+     */
+    contactId: string;
 }
 export declare class ContactsUpdateResponse extends SpeakeasyBase {
+    /**
+     * successful operation
+     */
     contactResponse?: shared.ContactResponse;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

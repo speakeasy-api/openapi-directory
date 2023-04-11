@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class AgentStoreGetPathParams extends SpeakeasyBase {
-    agentNum: number;
-    var: string;
-}
+import { AxiosResponse } from "axios";
 export declare class AgentStoreGetRequest extends SpeakeasyBase {
-    pathParams: AgentStoreGetPathParams;
+    /**
+     * Agent of the value space
+     */
+    agentNum: number;
+    /**
+     * Variable name
+     */
+    var: string;
 }
 export declare class AgentStoreGetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     agentStoreGet200ApplicationJSONString?: string;
 }

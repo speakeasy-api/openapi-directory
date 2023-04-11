@@ -1,7 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PatchDriverPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PatchDriverRequestBodyAddress extends SpeakeasyBase {
     city?: string;
     country?: string;
@@ -13,6 +11,9 @@ export declare class PatchDriverRequestBodyPhone extends SpeakeasyBase {
     mobile?: string;
     work?: string;
 }
+/**
+ * Include driver properties to create here
+ */
 export declare class PatchDriverRequestBody extends SpeakeasyBase {
     active?: boolean;
     address?: PatchDriverRequestBodyAddress;
@@ -23,17 +24,30 @@ export declare class PatchDriverRequestBody extends SpeakeasyBase {
     source?: string;
     tokens?: any[];
 }
-export declare class PatchDriver200ApplicationJson extends SpeakeasyBase {
+export declare class PatchDriverRequest extends SpeakeasyBase {
+    /**
+     * Include driver properties to create here
+     */
+    requestBody: PatchDriverRequestBody;
+    /**
+     * ID of driver that needs to be updated
+     */
+    id: string;
+}
+/**
+ * Returns the updated driver object
+ */
+export declare class PatchDriver200ApplicationJSON extends SpeakeasyBase {
     message?: string;
     ok?: boolean;
     result?: any[];
 }
-export declare class PatchDriverRequest extends SpeakeasyBase {
-    pathParams: PatchDriverPathParams;
-    request: PatchDriverRequestBody;
-}
 export declare class PatchDriverResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    patchDriver200ApplicationJSONObject?: PatchDriver200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Returns the updated driver object
+     */
+    patchDriver200ApplicationJSONObject?: PatchDriver200ApplicationJSON;
 }

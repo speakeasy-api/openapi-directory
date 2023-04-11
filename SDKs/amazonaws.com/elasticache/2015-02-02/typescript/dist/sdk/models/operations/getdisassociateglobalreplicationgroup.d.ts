@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDisassociateGlobalReplicationGroupActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDisassociateGlobalReplicationGroupActionEnum {
     DisassociateGlobalReplicationGroup = "DisassociateGlobalReplicationGroup"
 }
-export declare enum GetDisassociateGlobalReplicationGroupVersionEnum {
+export declare enum GETDisassociateGlobalReplicationGroupVersionEnum {
     TwoThousandAndFifteen0202 = "2015-02-02"
 }
-export declare class GetDisassociateGlobalReplicationGroupQueryParams extends SpeakeasyBase {
-    action: GetDisassociateGlobalReplicationGroupActionEnum;
+export declare class GETDisassociateGlobalReplicationGroupRequest extends SpeakeasyBase {
+    action: GETDisassociateGlobalReplicationGroupActionEnum;
+    /**
+     * The name of the Global datastore
+     */
     globalReplicationGroupId: string;
+    /**
+     * The name of the secondary cluster you wish to remove from the Global datastore
+     */
     replicationGroupId: string;
+    /**
+     * The Amazon region of secondary cluster you wish to remove from the Global datastore
+     */
     replicationGroupRegion: string;
-    version: GetDisassociateGlobalReplicationGroupVersionEnum;
-}
-export declare class GetDisassociateGlobalReplicationGroupHeaders extends SpeakeasyBase {
+    version: GETDisassociateGlobalReplicationGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +29,9 @@ export declare class GetDisassociateGlobalReplicationGroupHeaders extends Speake
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDisassociateGlobalReplicationGroupRequest extends SpeakeasyBase {
-    queryParams: GetDisassociateGlobalReplicationGroupQueryParams;
-    headers: GetDisassociateGlobalReplicationGroupHeaders;
-}
-export declare class GetDisassociateGlobalReplicationGroupResponse extends SpeakeasyBase {
+export declare class GETDisassociateGlobalReplicationGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,24 +1,24 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { PostCompileRequest, PostCompileResponse } from "openapi/src/sdk/models/operations";
+import {
+  PostCompileRequest,
+  PostCompileResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: PostCompileRequest = {
-  queryParams: {
-    explain: "sit",
-    instrument: false,
-    metrics: true,
-    pretty: false,
+  requestBody: {
+    "provident": "distinctio",
+    "quibusdam": "unde",
+    "nulla": "corrupti",
   },
-  request: {
-    "dolor": "expedita",
-    "voluptas": "fugit",
-    "et": "nihil",
-  },
+  explain: "illum",
+  instrument: false,
+  metrics: false,
+  pretty: false,
 };
 
 sdk.compileAPI.postCompile(req).then((res: PostCompileResponse | AxiosError) => {

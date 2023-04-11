@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum UpdateHitTypeOfHitxAmzTargetEnum {
-    MTurkRequesterServiceV20170117UpdateHitTypeOfHit = "MTurkRequesterServiceV20170117.UpdateHITTypeOfHIT"
+import { AxiosResponse } from "axios";
+export declare enum UpdateHITTypeOfHITXAmzTargetEnum {
+    MTurkRequesterServiceV20170117UpdateHITTypeOfHIT = "MTurkRequesterServiceV20170117.UpdateHITTypeOfHIT"
 }
-export declare class UpdateHitTypeOfHitHeaders extends SpeakeasyBase {
+export declare class UpdateHITTypeOfHITRequest extends SpeakeasyBase {
+    updateHITTypeOfHITRequest: shared.UpdateHITTypeOfHITRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,16 +13,22 @@ export declare class UpdateHitTypeOfHitHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: UpdateHitTypeOfHitxAmzTargetEnum;
+    xAmzTarget: UpdateHITTypeOfHITXAmzTargetEnum;
 }
-export declare class UpdateHitTypeOfHitRequest extends SpeakeasyBase {
-    headers: UpdateHitTypeOfHitHeaders;
-    request: shared.UpdateHitTypeOfHitRequest;
-}
-export declare class UpdateHitTypeOfHitResponse extends SpeakeasyBase {
+export declare class UpdateHITTypeOfHITResponse extends SpeakeasyBase {
     contentType: string;
-    requestError?: any;
-    serviceFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * RequestError
+     */
+    requestError?: any;
+    /**
+     * ServiceFault
+     */
+    serviceFault?: any;
+    /**
+     * Success
+     */
     updateHITTypeOfHITResponse?: Record<string, any>;
 }

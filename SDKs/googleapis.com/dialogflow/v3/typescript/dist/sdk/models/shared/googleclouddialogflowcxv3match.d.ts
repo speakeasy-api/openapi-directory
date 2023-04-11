@@ -1,0 +1,43 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { GoogleCloudDialogflowCxV3Intent } from "./googleclouddialogflowcxv3intent";
+/**
+ * Type of this Match.
+ */
+export declare enum GoogleCloudDialogflowCxV3MatchMatchTypeEnum {
+    MatchTypeUnspecified = "MATCH_TYPE_UNSPECIFIED",
+    Intent = "INTENT",
+    DirectIntent = "DIRECT_INTENT",
+    ParameterFilling = "PARAMETER_FILLING",
+    NoMatch = "NO_MATCH",
+    NoInput = "NO_INPUT",
+    Event = "EVENT"
+}
+/**
+ * Represents one match result of MatchIntent.
+ */
+export declare class GoogleCloudDialogflowCxV3Match extends SpeakeasyBase {
+    /**
+     * The confidence of this match. Values range from 0.0 (completely uncertain) to 1.0 (completely certain). This value is for informational purpose only and is only used to help match the best intent within the classification threshold. This value may change for the same end-user expression at any time due to a model retraining or change in implementation.
+     */
+    confidence?: number;
+    /**
+     * The event that matched the query. Filled for `EVENT`, `NO_MATCH` and `NO_INPUT` match types.
+     */
+    event?: string;
+    /**
+     * An intent represents a user's intent to interact with a conversational agent. You can provide information for the Dialogflow API to use to match user input to an intent by adding training phrases (i.e., examples of user input) to your intent.
+     */
+    intent?: GoogleCloudDialogflowCxV3Intent;
+    /**
+     * Type of this Match.
+     */
+    matchType?: GoogleCloudDialogflowCxV3MatchMatchTypeEnum;
+    /**
+     * The collection of parameters extracted from the query. Depending on your protocol or client library language, this is a map, associative array, symbol table, dictionary, or JSON object composed of a collection of (MapKey, MapValue) pairs: * MapKey type: string * MapKey value: parameter name * MapValue type: If parameter's entity type is a composite entity then use map, otherwise, depending on the parameter value type, it could be one of string, number, boolean, null, list or map. * MapValue value: If parameter's entity type is a composite entity then use map from composite entity property names to property values, otherwise, use parameter value.
+     */
+    parameters?: Record<string, any>;
+    /**
+     * Final text input which was matched during MatchIntent. This value can be different from original input sent in request because of spelling correction or other processing.
+     */
+    resolvedInput?: string;
+}

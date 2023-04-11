@@ -1,32 +1,34 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { PlaydeveloperreportingAnomaliesListRequest, PlaydeveloperreportingAnomaliesListResponse } from "openapi/src/sdk/models/operations";
+import {
+  PlaydeveloperreportingAnomaliesListRequest,
+  PlaydeveloperreportingAnomaliesListResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: PlaydeveloperreportingAnomaliesListRequest = {
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    filter: "expedita",
-    key: "voluptas",
-    oauthToken: "fugit",
-    pageSize: 1543572285742637646,
-    pageToken: "nihil",
-    prettyPrint: true,
-    quotaUser: "dicta",
-    uploadType: "debitis",
-    uploadProtocol: "voluptatum",
-  },
+  dollarXgafv: XgafvEnum.Two,
+  accessToken: "provident",
+  alt: AltEnum.Proto,
+  callback: "quibusdam",
+  fields: "unde",
+  filter: "nulla",
+  key: "corrupti",
+  oauthToken: "illum",
+  pageSize: 423655,
+  pageToken: "error",
+  parent: "deserunt",
+  prettyPrint: false,
+  quotaUser: "suscipit",
+  uploadType: "iure",
+  uploadProtocol: "magnam",
 };
 
 sdk.anomalies.playdeveloperreportingAnomaliesList(req).then((res: PlaydeveloperreportingAnomaliesListResponse | AxiosError) => {

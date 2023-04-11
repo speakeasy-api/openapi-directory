@@ -1,22 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetLayer2NetworkPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class GetLayer2NetworkQueryParams extends SpeakeasyBase {
-    time?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetLayer2NetworkSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
+    apiKeyAuth: string;
 }
 export declare class GetLayer2NetworkRequest extends SpeakeasyBase {
-    pathParams: GetLayer2NetworkPathParams;
-    queryParams: GetLayer2NetworkQueryParams;
-    security: GetLayer2NetworkSecurity;
+    /**
+     * entity id
+     */
+    id: string;
+    /**
+     * time in epoch seconds
+     */
+    time?: number;
 }
 export declare class GetLayer2NetworkResponse extends SpeakeasyBase {
+    /**
+     * Bad Request
+     */
     apiError?: shared.ApiError;
+    /**
+     * OK
+     */
     baseL2Network?: shared.BaseL2Network;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

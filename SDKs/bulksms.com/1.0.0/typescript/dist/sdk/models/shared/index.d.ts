@@ -6,5 +6,6 @@ export * from "./presignrequest";
 export * from "./profile";
 export * from "./security";
 export * from "./submissionentry";
+export * from "./transferentry";
 export * from "./webhook";
 export * from "./webhookentry";

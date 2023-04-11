@@ -1,15 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetListDomainNamesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETListDomainNamesActionEnum {
     ListDomainNames = "ListDomainNames"
 }
-export declare enum GetListDomainNamesVersionEnum {
+export declare enum GETListDomainNamesVersionEnum {
     TwoThousandAndThirteen0101 = "2013-01-01"
 }
-export declare class GetListDomainNamesQueryParams extends SpeakeasyBase {
-    action: GetListDomainNamesActionEnum;
-    version: GetListDomainNamesVersionEnum;
-}
-export declare class GetListDomainNamesHeaders extends SpeakeasyBase {
+export declare class GETListDomainNamesRequest extends SpeakeasyBase {
+    action: GETListDomainNamesActionEnum;
+    version: GETListDomainNamesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +17,9 @@ export declare class GetListDomainNamesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetListDomainNamesRequest extends SpeakeasyBase {
-    queryParams: GetListDomainNamesQueryParams;
-    headers: GetListDomainNamesHeaders;
-}
-export declare class GetListDomainNamesResponse extends SpeakeasyBase {
+export declare class GETListDomainNamesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

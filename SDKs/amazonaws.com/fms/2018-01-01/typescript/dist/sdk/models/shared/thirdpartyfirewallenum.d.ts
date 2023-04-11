@@ -1,0 +1,4 @@
+export declare enum ThirdPartyFirewallEnum {
+    PaloAltoNetworksCloudNgfw = "PALO_ALTO_NETWORKS_CLOUD_NGFW",
+    FortigateCloudNativeFirewall = "FORTIGATE_CLOUD_NATIVE_FIREWALL"
+}

@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class AssetsVariance {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,28 +9,17 @@ export declare class AssetsVariance {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * postAssetsVariance - Variance
+     * Variance
      *
+     * @remarks
      * Compute the variance of one or several asset(s) from either:
-     * * The asset(s) returns
-     * * The assets covariance matrix
-     * * The asset(s) volatility
+     * * The asset returns
+     * * The asset covariance matrix
+     * * The asset volatility(ies)
      *
      * References
      * * [Wikipedia, Variance](https://en.wikipedia.org/wiki/Variance)
      *
-    **/
-    postAssetsVariance(req: operations.PostAssetsVarianceRequest, config?: AxiosRequestConfig): Promise<operations.PostAssetsVarianceResponse>;
-    /**
-     * postAssetsVarianceSample - Sample variance
-     *
-     * Compute the sample variance of one or several asset(s) from the asset(s) returns.
-     *
-     * > This endpoint is similar to the endpoint [`/assets/variance`](#post-/assets/variance), but uses [Bessel's correction](https://en.wikipedia.org/wiki/Bessel%27s_correction) to compute the variance.
-     *
-     * References
-     * * [Wikipedia, Variance](https://en.wikipedia.org/wiki/Variance)
-     *
-    **/
-    postAssetsVarianceSample(req: operations.PostAssetsVarianceSampleRequest, config?: AxiosRequestConfig): Promise<operations.PostAssetsVarianceSampleResponse>;
+     */
+    postAssetsVariance(req: any, config?: AxiosRequestConfig): Promise<operations.PostAssetsVarianceResponse>;
 }

@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteBgpPeerRequest extends SpeakeasyBase {
+export declare class DeleteBGPPeerRequest extends SpeakeasyBase {
     asn?: number;
     bgpPeerId?: string;
     customerAddress?: string;

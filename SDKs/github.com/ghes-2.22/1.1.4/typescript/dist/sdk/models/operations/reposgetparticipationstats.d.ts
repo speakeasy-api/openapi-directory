@@ -1,15 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReposGetParticipationStatsPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ReposGetParticipationStatsRequest extends SpeakeasyBase {
     owner: string;
     repo: string;
-}
-export declare class ReposGetParticipationStatsRequest extends SpeakeasyBase {
-    pathParams: ReposGetParticipationStatsPathParams;
 }
 export declare class ReposGetParticipationStatsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Resource not found
+     */
     basicError?: shared.BasicError;
+    /**
+     * The array order is oldest week (index 0) to most recent week.
+     */
     participationStats?: shared.ParticipationStats;
 }

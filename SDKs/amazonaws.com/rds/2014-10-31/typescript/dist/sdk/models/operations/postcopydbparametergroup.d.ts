@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCopyDbParameterGroupActionEnum {
-    CopyDbParameterGroup = "CopyDBParameterGroup"
+import { AxiosResponse } from "axios";
+export declare enum POSTCopyDBParameterGroupActionEnum {
+    CopyDBParameterGroup = "CopyDBParameterGroup"
 }
-export declare enum PostCopyDbParameterGroupVersionEnum {
+export declare enum POSTCopyDBParameterGroupVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class PostCopyDbParameterGroupQueryParams extends SpeakeasyBase {
-    action: PostCopyDbParameterGroupActionEnum;
-    version: PostCopyDbParameterGroupVersionEnum;
-}
-export declare class PostCopyDbParameterGroupHeaders extends SpeakeasyBase {
+export declare class POSTCopyDBParameterGroupRequest extends SpeakeasyBase {
+    action: POSTCopyDBParameterGroupActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCopyDBParameterGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCopyDbParameterGroupHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCopyDbParameterGroupRequest extends SpeakeasyBase {
-    queryParams: PostCopyDbParameterGroupQueryParams;
-    headers: PostCopyDbParameterGroupHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCopyDbParameterGroupResponse extends SpeakeasyBase {
+export declare class POSTCopyDBParameterGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

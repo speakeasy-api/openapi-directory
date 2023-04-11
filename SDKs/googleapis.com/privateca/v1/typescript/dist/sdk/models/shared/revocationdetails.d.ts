@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Indicates why a Certificate was revoked.
+ */
 export declare enum RevocationDetailsRevocationStateEnum {
     RevocationReasonUnspecified = "REVOCATION_REASON_UNSPECIFIED",
     KeyCompromise = "KEY_COMPROMISE",
@@ -12,8 +15,14 @@ export declare enum RevocationDetailsRevocationStateEnum {
 }
 /**
  * Describes fields that are relavent to the revocation of a Certificate.
-**/
+ */
 export declare class RevocationDetails extends SpeakeasyBase {
+    /**
+     * Indicates why a Certificate was revoked.
+     */
     revocationState?: RevocationDetailsRevocationStateEnum;
+    /**
+     * The time at which this Certificate was revoked.
+     */
     revocationTime?: string;
 }

@@ -1,32 +1,94 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
- * The transit gateway options.
-**/
-export declare class ModifyTransitGatewayResultTransitGatewayOptions extends SpeakeasyBase {
-    amazonSideAsn?: Record<string, any>;
-    associationDefaultRouteTableId?: Record<string, any>;
-    autoAcceptSharedAttachments?: Record<string, any>;
-    defaultRouteTableAssociation?: Record<string, any>;
-    defaultRouteTablePropagation?: Record<string, any>;
-    dnsSupport?: Record<string, any>;
-    multicastSupport?: Record<string, any>;
-    propagationDefaultRouteTableId?: Record<string, any>;
-    transitGatewayCidrBlocks?: Record<string, any>;
-    vpnEcmpSupport?: Record<string, any>;
+ * Indicates whether attachment requests are automatically accepted.
+ */
+export declare enum ModifyTransitGatewayResultTransitGatewayOptionsAutoAcceptSharedAttachmentsEnum {
+    Enable = "enable",
+    Disable = "disable"
 }
 /**
- * Describes a transit gateway.
-**/
-export declare class ModifyTransitGatewayResultTransitGateway extends SpeakeasyBase {
-    creationTime?: Record<string, any>;
-    description?: Record<string, any>;
-    options?: ModifyTransitGatewayResultTransitGatewayOptions;
-    ownerId?: Record<string, any>;
-    state?: Record<string, any>;
-    tags?: Record<string, any>;
-    transitGatewayArn?: Record<string, any>;
-    transitGatewayId?: Record<string, any>;
+ * Indicates whether resource attachments are automatically associated with the default association route table.
+ */
+export declare enum ModifyTransitGatewayResultTransitGatewayOptionsDefaultRouteTableAssociationEnum {
+    Enable = "enable",
+    Disable = "disable"
 }
+/**
+ * Indicates whether resource attachments automatically propagate routes to the default propagation route table.
+ */
+export declare enum ModifyTransitGatewayResultTransitGatewayOptionsDefaultRouteTablePropagationEnum {
+    Enable = "enable",
+    Disable = "disable"
+}
+/**
+ * Indicates whether DNS support is enabled.
+ */
+export declare enum ModifyTransitGatewayResultTransitGatewayOptionsDnsSupportEnum {
+    Enable = "enable",
+    Disable = "disable"
+}
+/**
+ * Indicates whether multicast is enabled on the transit gateway
+ */
+export declare enum ModifyTransitGatewayResultTransitGatewayOptionsMulticastSupportEnum {
+    Enable = "enable",
+    Disable = "disable"
+}
+/**
+ * Indicates whether Equal Cost Multipath Protocol support is enabled.
+ */
+export declare enum ModifyTransitGatewayResultTransitGatewayOptionsVpnEcmpSupportEnum {
+    Enable = "enable",
+    Disable = "disable"
+}
+/**
+ * The transit gateway options.
+ */
+export declare class ModifyTransitGatewayResultTransitGatewayOptions extends SpeakeasyBase {
+    amazonSideAsn?: number;
+    associationDefaultRouteTableId?: string;
+    autoAcceptSharedAttachments?: ModifyTransitGatewayResultTransitGatewayOptionsAutoAcceptSharedAttachmentsEnum;
+    defaultRouteTableAssociation?: ModifyTransitGatewayResultTransitGatewayOptionsDefaultRouteTableAssociationEnum;
+    defaultRouteTablePropagation?: ModifyTransitGatewayResultTransitGatewayOptionsDefaultRouteTablePropagationEnum;
+    dnsSupport?: ModifyTransitGatewayResultTransitGatewayOptionsDnsSupportEnum;
+    multicastSupport?: ModifyTransitGatewayResultTransitGatewayOptionsMulticastSupportEnum;
+    propagationDefaultRouteTableId?: string;
+    transitGatewayCidrBlocks?: string[];
+    vpnEcmpSupport?: ModifyTransitGatewayResultTransitGatewayOptionsVpnEcmpSupportEnum;
+}
+/**
+ * The state of the transit gateway.
+ */
+export declare enum ModifyTransitGatewayResultTransitGatewayStateEnum {
+    Pending = "pending",
+    Available = "available",
+    Modifying = "modifying",
+    Deleting = "deleting",
+    Deleted = "deleted"
+}
+/**
+ * Describes a tag.
+ */
+export declare class ModifyTransitGatewayResultTransitGatewayTags extends SpeakeasyBase {
+    key?: string;
+    value?: string;
+}
+/**
+ * Information about the transit gateway.
+ */
+export declare class ModifyTransitGatewayResultTransitGateway extends SpeakeasyBase {
+    creationTime?: Date;
+    description?: string;
+    options?: ModifyTransitGatewayResultTransitGatewayOptions;
+    ownerId?: string;
+    state?: ModifyTransitGatewayResultTransitGatewayStateEnum;
+    tags?: ModifyTransitGatewayResultTransitGatewayTags[];
+    transitGatewayArn?: string;
+    transitGatewayId?: string;
+}
+/**
+ * Success
+ */
 export declare class ModifyTransitGatewayResult extends SpeakeasyBase {
     transitGateway?: ModifyTransitGatewayResultTransitGateway;
 }

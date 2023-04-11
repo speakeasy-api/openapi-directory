@@ -1,19 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteImagesPathParams extends SpeakeasyBase {
-    projectId: string;
-}
-export declare class DeleteImagesQueryParams extends SpeakeasyBase {
-    imageIds: string[];
-}
-export declare class DeleteImagesHeaders extends SpeakeasyBase {
-    trainingKey: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteImagesRequest extends SpeakeasyBase {
-    pathParams: DeleteImagesPathParams;
-    queryParams: DeleteImagesQueryParams;
-    headers: DeleteImagesHeaders;
+    trainingKey: string;
+    /**
+     * Ids of the images to be deleted. Limited to 256 images per batch
+     */
+    imageIds: string[];
+    /**
+     * The project id
+     */
+    projectId: string;
 }
 export declare class DeleteImagesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

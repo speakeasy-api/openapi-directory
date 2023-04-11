@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeVpcEndpointServiceConfigurationsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeVpcEndpointServiceConfigurationsActionEnum {
     DescribeVpcEndpointServiceConfigurations = "DescribeVpcEndpointServiceConfigurations"
 }
-export declare enum PostDescribeVpcEndpointServiceConfigurationsVersionEnum {
+export declare enum POSTDescribeVpcEndpointServiceConfigurationsVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDescribeVpcEndpointServiceConfigurationsQueryParams extends SpeakeasyBase {
-    action: PostDescribeVpcEndpointServiceConfigurationsActionEnum;
+export declare class POSTDescribeVpcEndpointServiceConfigurationsRequest extends SpeakeasyBase {
+    action: POSTDescribeVpcEndpointServiceConfigurationsActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostDescribeVpcEndpointServiceConfigurationsVersionEnum;
-}
-export declare class PostDescribeVpcEndpointServiceConfigurationsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeVpcEndpointServiceConfigurationsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeVpcEndpointServiceConfigurationsHeaders extends
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeVpcEndpointServiceConfigurationsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeVpcEndpointServiceConfigurationsQueryParams;
-    headers: PostDescribeVpcEndpointServiceConfigurationsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeVpcEndpointServiceConfigurationsResponse extends SpeakeasyBase {
+export declare class POSTDescribeVpcEndpointServiceConfigurationsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

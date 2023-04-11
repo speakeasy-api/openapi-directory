@@ -1,36 +1,59 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SaveRevisionUsingPostQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class SaveRevisionUsingPOSTRequest extends SpeakeasyBase {
     padID?: string;
     rev?: string;
 }
-export declare class SaveRevisionUsingPost200ApplicationJson extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class SaveRevisionUsingPost500ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class SaveRevisionUsingPost400ApplicationJson extends SpeakeasyBase {
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class SaveRevisionUsingPost401ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class SaveRevisionUsingPost401ApplicationJson extends SpeakeasyBase {
+/**
+ * generic api error (code 1)
+ */
+export declare class SaveRevisionUsingPost400ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class SaveRevisionUsingPost500ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class SaveRevisionUsingPost200ApplicationJSON extends SpeakeasyBase {
     code?: number;
     data?: Record<string, any>;
     message?: string;
 }
-export declare class SaveRevisionUsingPostRequest extends SpeakeasyBase {
-    queryParams: SaveRevisionUsingPostQueryParams;
-}
-export declare class SaveRevisionUsingPostResponse extends SpeakeasyBase {
+export declare class SaveRevisionUsingPOSTResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    saveRevisionUsingPOST200ApplicationJSONObject?: SaveRevisionUsingPost200ApplicationJson;
-    saveRevisionUsingPOST400ApplicationJSONObject?: SaveRevisionUsingPost400ApplicationJson;
-    saveRevisionUsingPOST401ApplicationJSONObject?: SaveRevisionUsingPost401ApplicationJson;
-    saveRevisionUsingPOST500ApplicationJSONObject?: SaveRevisionUsingPost500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    saveRevisionUsingPOST200ApplicationJSONObject?: SaveRevisionUsingPost200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    saveRevisionUsingPOST400ApplicationJSONObject?: SaveRevisionUsingPost400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    saveRevisionUsingPOST401ApplicationJSONObject?: SaveRevisionUsingPost401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    saveRevisionUsingPOST500ApplicationJSONObject?: SaveRevisionUsingPost500ApplicationJSON;
 }

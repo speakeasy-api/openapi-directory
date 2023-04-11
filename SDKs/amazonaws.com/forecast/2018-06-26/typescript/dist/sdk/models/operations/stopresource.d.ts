@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum StopResourceXAmzTargetEnum {
     AmazonForecastStopResource = "AmazonForecast.StopResource"
 }
-export declare class StopResourceHeaders extends SpeakeasyBase {
+export declare class StopResourceRequest extends SpeakeasyBase {
+    stopResourceRequest: shared.StopResourceRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class StopResourceHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: StopResourceXAmzTargetEnum;
 }
-export declare class StopResourceRequest extends SpeakeasyBase {
-    headers: StopResourceHeaders;
-    request: shared.StopResourceRequest;
-}
 export declare class StopResourceResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
 }

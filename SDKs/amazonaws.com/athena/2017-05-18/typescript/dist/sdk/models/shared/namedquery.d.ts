@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
- * A query, where <code>QueryString</code> is the list of SQL query statements that comprise the query.
-**/
+ * A query, where <code>QueryString</code> contains the SQL statements that make up the query.
+ */
 export declare class NamedQuery extends SpeakeasyBase {
     database: string;
     description?: string;

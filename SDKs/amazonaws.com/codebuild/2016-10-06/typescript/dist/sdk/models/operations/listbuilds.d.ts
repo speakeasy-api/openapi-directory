@@ -1,12 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListBuildsQueryParams extends SpeakeasyBase {
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListBuildsXAmzTargetEnum {
     CodeBuild20161006ListBuilds = "CodeBuild_20161006.ListBuilds"
 }
-export declare class ListBuildsHeaders extends SpeakeasyBase {
+export declare class ListBuildsRequest extends SpeakeasyBase {
+    listBuildsInput: shared.ListBuildsInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -15,15 +14,21 @@ export declare class ListBuildsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: ListBuildsXAmzTargetEnum;
-}
-export declare class ListBuildsRequest extends SpeakeasyBase {
-    queryParams: ListBuildsQueryParams;
-    headers: ListBuildsHeaders;
-    request: shared.ListBuildsInput;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class ListBuildsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * Success
+     */
     listBuildsOutput?: shared.ListBuildsOutput;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

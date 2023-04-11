@@ -1,21 +1,21 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetMappingValuesKeyRequest, GetMappingValuesKeyResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GetMappingValuesKeyRequest,
+  GetMappingValuesKeyResponse,
+  GetMappingValuesKeyKeyEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    apiKeyAuth: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: GetMappingValuesKeyRequest = {
-  pathParams: {
-    key: "securityType",
+    apiKeyAuth: "YOUR_API_KEY_HERE",
   },
+});
+
+const req: GetMappingValuesKeyRequest = {
+  key: GetMappingValuesKeyKeyEnum.Currency,
 };
 
 sdk.getMappingValuesKey(req).then((res: GetMappingValuesKeyResponse | AxiosError) => {

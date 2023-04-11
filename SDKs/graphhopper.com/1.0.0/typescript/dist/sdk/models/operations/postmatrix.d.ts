@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PostMatrixRequest extends SpeakeasyBase {
-    request?: any;
-}
+import { AxiosResponse } from "axios";
 export declare class PostMatrixResponse extends SpeakeasyBase {
     contentType: string;
-    ghError?: shared.GhError;
-    headers: Record<string, string[]>;
+    /**
+     * Unexpected Error
+     */
+    ghError?: shared.GHError;
+    headers?: Record<string, string[]>;
+    /**
+     * Matrix API response
+     */
     matrixResponse?: shared.MatrixResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

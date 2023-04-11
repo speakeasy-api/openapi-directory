@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteColumnStatisticsForTableXAmzTargetEnum {
-    AwsGlueDeleteColumnStatisticsForTable = "AWSGlue.DeleteColumnStatisticsForTable"
+    AWSGlueDeleteColumnStatisticsForTable = "AWSGlue.DeleteColumnStatisticsForTable"
 }
-export declare class DeleteColumnStatisticsForTableHeaders extends SpeakeasyBase {
+export declare class DeleteColumnStatisticsForTableRequest extends SpeakeasyBase {
+    deleteColumnStatisticsForTableRequest: shared.DeleteColumnStatisticsForTableRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class DeleteColumnStatisticsForTableHeaders extends SpeakeasyBase
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteColumnStatisticsForTableXAmzTargetEnum;
 }
-export declare class DeleteColumnStatisticsForTableRequest extends SpeakeasyBase {
-    headers: DeleteColumnStatisticsForTableHeaders;
-    request: shared.DeleteColumnStatisticsForTableRequest;
-}
 export declare class DeleteColumnStatisticsForTableResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deleteColumnStatisticsForTableResponse?: Record<string, any>;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * GlueEncryptionException
+     */
     glueEncryptionException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

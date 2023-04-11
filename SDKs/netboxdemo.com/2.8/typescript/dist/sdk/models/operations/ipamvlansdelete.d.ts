@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class IpamVlansDeletePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class IpamVlansDeleteRequest extends SpeakeasyBase {
-    pathParams: IpamVlansDeletePathParams;
+    /**
+     * A unique integer value identifying this VLAN.
+     */
+    id: number;
 }
 export declare class IpamVlansDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

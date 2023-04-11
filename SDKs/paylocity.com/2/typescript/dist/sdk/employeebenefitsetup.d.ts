@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class EmployeeBenefitSetup {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +9,10 @@ export declare class EmployeeBenefitSetup {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * updateOrAddEmployeeBenefitSetup - Add/update employee's benefit setup
+     * Add/update employee's benefit setup
      *
+     * @remarks
      * Sends new or updated employee benefit setup information directly to Web Pay.
-    **/
-    updateOrAddEmployeeBenefitSetup(req: operations.UpdateOrAddEmployeeBenefitSetupRequest, config?: AxiosRequestConfig): Promise<operations.UpdateOrAddEmployeeBenefitSetupResponse>;
+     */
+    updateOrAddEmployeeBenefitSetup(req: operations.UpdateOrAddEmployeeBenefitSetupRequest, security: operations.UpdateOrAddEmployeeBenefitSetupSecurity, config?: AxiosRequestConfig): Promise<operations.UpdateOrAddEmployeeBenefitSetupResponse>;
 }

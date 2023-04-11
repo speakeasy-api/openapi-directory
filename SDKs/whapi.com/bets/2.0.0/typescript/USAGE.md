@@ -1,25 +1,21 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CashinRequest, CashinResponse } from "openapi/src/sdk/models/operations";
+import {
+  CashinRequest,
+  CashinResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: CashinRequest = {
-  pathParams: {
-    betId: "sit",
-  },
-  queryParams: {
-    cashInValue: 14.200000,
-    cashinBetDelayId: "expedita",
-  },
-  headers: {
-    apiKey: "consequuntur",
-    apiSecret: "dolor",
-    apiTicket: "expedita",
-  },
+  apiKey: "corrupti",
+  apiSecret: "provident",
+  apiTicket: "distinctio",
+  betId: "quibusdam",
+  cashInValue: 6027.63,
+  cashinBetDelayId: "nulla",
 };
 
 sdk.bets.cashin(req).then((res: CashinResponse | AxiosError) => {

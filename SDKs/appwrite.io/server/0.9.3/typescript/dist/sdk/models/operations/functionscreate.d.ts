@@ -1,24 +1,46 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class FunctionsCreateRequestBody extends SpeakeasyBase {
-    events?: string[];
-    execute: string[];
-    name: string;
-    runtime: string;
-    schedule?: string;
-    timeout?: number;
-    vars?: Record<string, any>;
-}
+import { AxiosResponse } from "axios";
 export declare class FunctionsCreateSecurity extends SpeakeasyBase {
-    key: shared.SchemeKey;
-    project: shared.SchemeProject;
+    key: string;
+    project: string;
 }
-export declare class FunctionsCreateRequest extends SpeakeasyBase {
-    request?: FunctionsCreateRequestBody;
-    security: FunctionsCreateSecurity;
+export declare class FunctionsCreateRequestBody extends SpeakeasyBase {
+    /**
+     * Events list.
+     */
+    events?: string[];
+    /**
+     * An array of strings with execution permissions. By default no user is granted with any execute permissions. [learn more about permissions](/docs/permissions) and get a full list of available permissions.
+     */
+    execute: string[];
+    /**
+     * Function name. Max length: 128 chars.
+     */
+    name: string;
+    /**
+     * Execution runtime.
+     */
+    runtime: string;
+    /**
+     * Schedule CRON syntax.
+     */
+    schedule?: string;
+    /**
+     * Function maximum execution time in seconds.
+     */
+    timeout?: number;
+    /**
+     * Key-value JSON object.
+     */
+    vars?: Record<string, any>;
 }
 export declare class FunctionsCreateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    function?: shared.Function;
+    rawResponse?: AxiosResponse;
+    /**
+     * Function
+     */
+    function?: shared.FunctionT;
 }

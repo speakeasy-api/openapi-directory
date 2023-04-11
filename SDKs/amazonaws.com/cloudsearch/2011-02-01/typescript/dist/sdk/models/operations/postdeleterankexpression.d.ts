@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteRankExpressionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteRankExpressionActionEnum {
     DeleteRankExpression = "DeleteRankExpression"
 }
-export declare enum PostDeleteRankExpressionVersionEnum {
+export declare enum POSTDeleteRankExpressionVersionEnum {
     TwoThousandAndEleven0201 = "2011-02-01"
 }
-export declare class PostDeleteRankExpressionQueryParams extends SpeakeasyBase {
-    action: PostDeleteRankExpressionActionEnum;
-    version: PostDeleteRankExpressionVersionEnum;
-}
-export declare class PostDeleteRankExpressionHeaders extends SpeakeasyBase {
+export declare class POSTDeleteRankExpressionRequest extends SpeakeasyBase {
+    action: POSTDeleteRankExpressionActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteRankExpressionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteRankExpressionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteRankExpressionRequest extends SpeakeasyBase {
-    queryParams: PostDeleteRankExpressionQueryParams;
-    headers: PostDeleteRankExpressionHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteRankExpressionResponse extends SpeakeasyBase {
+export declare class POSTDeleteRankExpressionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

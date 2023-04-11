@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListPreparedStatementsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListPreparedStatementsXAmzTargetEnum {
     AmazonAthenaListPreparedStatements = "AmazonAthena.ListPreparedStatements"
 }
-export declare class ListPreparedStatementsHeaders extends SpeakeasyBase {
+export declare class ListPreparedStatementsRequest extends SpeakeasyBase {
+    listPreparedStatementsInput: shared.ListPreparedStatementsInput;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,15 +23,20 @@ export declare class ListPreparedStatementsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListPreparedStatementsXAmzTargetEnum;
 }
-export declare class ListPreparedStatementsRequest extends SpeakeasyBase {
-    queryParams: ListPreparedStatementsQueryParams;
-    headers: ListPreparedStatementsHeaders;
-    request: shared.ListPreparedStatementsInput;
-}
 export declare class ListPreparedStatementsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * Success
+     */
     listPreparedStatementsOutput?: shared.ListPreparedStatementsOutput;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

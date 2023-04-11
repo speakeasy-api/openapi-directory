@@ -2,8 +2,14 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { WatchInput } from "./watch";
 /**
  * Create a new watch.
-**/
+ */
 export declare class CreateWatchRequestInput extends SpeakeasyBase {
+    /**
+     * A watch for events for a form. When the designated event happens, a notification will be published to the specified target. The notification's attributes will include a `formId` key that has the ID of the watched form and an `eventType` key that has the string of the type. Messages are sent with at-least-once delivery and are only dropped in extraordinary circumstances. Typically all notifications should be reliably delivered within a few seconds; however, in some situations notifications may be delayed. A watch expires seven days after it is created unless it is renewed with watches.renew
+     */
     watch?: WatchInput;
+    /**
+     * The ID to use for the watch. If specified, the ID must not already be in use. If not specified, an ID is generated. This value should be 4-63 characters, and valid characters are /a-z-/.
+     */
     watchId?: string;
 }

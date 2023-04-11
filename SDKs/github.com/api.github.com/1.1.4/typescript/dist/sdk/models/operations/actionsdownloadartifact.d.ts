@@ -1,15 +1,28 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ActionsDownloadArtifactPathParams extends SpeakeasyBase {
-    archiveFormat: string;
-    artifactId: number;
-    owner: string;
-    repo: string;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class ActionsDownloadArtifactRequest extends SpeakeasyBase {
-    pathParams: ActionsDownloadArtifactPathParams;
+    archiveFormat: string;
+    /**
+     * The unique identifier of the artifact.
+     */
+    artifactId: number;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    owner: string;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    repo: string;
 }
 export declare class ActionsDownloadArtifactResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Gone
+     */
+    basicError?: shared.BasicError;
 }

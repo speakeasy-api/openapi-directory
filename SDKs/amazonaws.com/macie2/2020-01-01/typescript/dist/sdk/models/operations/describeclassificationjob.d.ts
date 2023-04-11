@@ -1,9 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeClassificationJobPathParams extends SpeakeasyBase {
-    jobId: string;
-}
-export declare class DescribeClassificationJobHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DescribeClassificationJobRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,20 +9,45 @@ export declare class DescribeClassificationJobHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DescribeClassificationJobRequest extends SpeakeasyBase {
-    pathParams: DescribeClassificationJobPathParams;
-    headers: DescribeClassificationJobHeaders;
+    /**
+     * The unique identifier for the classification job.
+     */
+    jobId: string;
 }
 export declare class DescribeClassificationJobResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     describeClassificationJobResponse?: shared.DescribeClassificationJobResponse;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
+    /**
+     * ServiceQuotaExceededException
+     */
     serviceQuotaExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

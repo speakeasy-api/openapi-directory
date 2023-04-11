@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetPurchaseReservedNodeOfferingActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETPurchaseReservedNodeOfferingActionEnum {
     PurchaseReservedNodeOffering = "PurchaseReservedNodeOffering"
 }
-export declare enum GetPurchaseReservedNodeOfferingVersionEnum {
+export declare enum GETPurchaseReservedNodeOfferingVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class GetPurchaseReservedNodeOfferingQueryParams extends SpeakeasyBase {
-    action: GetPurchaseReservedNodeOfferingActionEnum;
+export declare class GETPurchaseReservedNodeOfferingRequest extends SpeakeasyBase {
+    action: GETPurchaseReservedNodeOfferingActionEnum;
+    /**
+     * <p>The number of reserved nodes that you want to purchase.</p> <p>Default: <code>1</code> </p>
+     */
     nodeCount?: number;
+    /**
+     * The unique identifier of the reserved node offering you want to purchase.
+     */
     reservedNodeOfferingId: string;
-    version: GetPurchaseReservedNodeOfferingVersionEnum;
-}
-export declare class GetPurchaseReservedNodeOfferingHeaders extends SpeakeasyBase {
+    version: GETPurchaseReservedNodeOfferingVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetPurchaseReservedNodeOfferingHeaders extends SpeakeasyBas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetPurchaseReservedNodeOfferingRequest extends SpeakeasyBase {
-    queryParams: GetPurchaseReservedNodeOfferingQueryParams;
-    headers: GetPurchaseReservedNodeOfferingHeaders;
-}
-export declare class GetPurchaseReservedNodeOfferingResponse extends SpeakeasyBase {
+export declare class GETPurchaseReservedNodeOfferingResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

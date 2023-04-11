@@ -1,11 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class EnterpriseAdminPromoteUserToBeSiteAdministratorPathParams extends SpeakeasyBase {
-    username: string;
-}
+import { AxiosResponse } from "axios";
 export declare class EnterpriseAdminPromoteUserToBeSiteAdministratorRequest extends SpeakeasyBase {
-    pathParams: EnterpriseAdminPromoteUserToBeSiteAdministratorPathParams;
+    username: string;
 }
 export declare class EnterpriseAdminPromoteUserToBeSiteAdministratorResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,49 +1,75 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ModifySubaccountPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ModifySubaccountSecurity extends SpeakeasyBase {
+    password: string;
+    username: string;
+}
+export declare class ModifySubaccountRequest extends SpeakeasyBase {
+    modifySubaccountRequest: shared.ModifySubaccountRequest;
+    /**
+     * ID of the primary account
+     */
     apiKey: string;
+    /**
+     * ID of the subaccount
+     */
     subaccountKey: string;
 }
-export declare class ModifySubaccountSecurity extends SpeakeasyBase {
-    basicAuth: shared.SchemeBasicAuth;
+export declare class ModifySubaccount422ApplicationJSONInvalidParameters extends SpeakeasyBase {
+    name?: string;
+    reason?: string;
 }
-export declare class ModifySubaccount401ApplicationJson extends SpeakeasyBase {
+/**
+ * Validation Error
+ */
+export declare class ModifySubaccount422ApplicationJSON extends SpeakeasyBase {
+    detail: string;
+    instance: string;
+    invalidParameters: ModifySubaccount422ApplicationJSONInvalidParameters[];
+    title: string;
+    type: string;
+}
+/**
+ * Invalid API Key
+ */
+export declare class ModifySubaccount404ApplicationJSON extends SpeakeasyBase {
     detail: string;
     instance: string;
     title: string;
     type: string;
 }
 /**
- * Invalid API Key
-**/
-export declare class ModifySubaccount404ApplicationJson extends SpeakeasyBase {
+ * Credential is missing or invalid
+ */
+export declare class ModifySubaccount401ApplicationJSON extends SpeakeasyBase {
     detail: string;
     instance: string;
     title: string;
     type: string;
-}
-export declare class ModifySubaccount422ApplicationJsonInvalidParameters extends SpeakeasyBase {
-    name?: string;
-    reason?: string;
-}
-export declare class ModifySubaccount422ApplicationJson extends SpeakeasyBase {
-    detail: string;
-    instance: string;
-    invalidParameters: ModifySubaccount422ApplicationJsonInvalidParameters[];
-    title: string;
-    type: string;
-}
-export declare class ModifySubaccountRequest extends SpeakeasyBase {
-    pathParams: ModifySubaccountPathParams;
-    request: shared.ModifySubaccountRequest;
-    security: ModifySubaccountSecurity;
 }
 export declare class ModifySubaccountResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    subaccountResponse?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * Subaccount response
+     */
+    subaccountResponse?: shared.SubaccountResponse;
+    /**
+     * Action is forbidden
+     */
     unprovisionedErrorResponse?: shared.UnprovisionedErrorResponse;
-    modifySubaccount401ApplicationJSONObject?: ModifySubaccount401ApplicationJson;
-    modifySubaccount404ApplicationJSONObject?: ModifySubaccount404ApplicationJson;
-    modifySubaccount422ApplicationJSONObject?: ModifySubaccount422ApplicationJson;
+    /**
+     * Credential is missing or invalid
+     */
+    modifySubaccount401ApplicationJSONObject?: ModifySubaccount401ApplicationJSON;
+    /**
+     * The account ID provided does not exist in our system or you do not have access
+     */
+    modifySubaccount404ApplicationJSONObject?: ModifySubaccount404ApplicationJSON;
+    /**
+     * Validation Error
+     */
+    modifySubaccount422ApplicationJSONObject?: ModifySubaccount422ApplicationJSON;
 }

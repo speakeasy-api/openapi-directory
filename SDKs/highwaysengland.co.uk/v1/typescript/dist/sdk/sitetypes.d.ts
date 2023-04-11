@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class SiteTypes {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,11 +9,11 @@ export declare class SiteTypes {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * siteTypesGetSitesForPublicFacingApi - Returns the layer metadata for the LayerId specified.
-    **/
-    siteTypesGetSitesForPublicFacingApi(req: operations.SiteTypesGetSitesForPublicFacingApiRequest, config?: AxiosRequestConfig): Promise<operations.SiteTypesGetSitesForPublicFacingApiResponse>;
+     * Returns the layer metadata for the LayerId specified.
+     */
+    siteTypesGetSitesForPublicFacingAPI(req: operations.SiteTypesGetSitesForPublicFacingAPIRequest, config?: AxiosRequestConfig): Promise<operations.SiteTypesGetSitesForPublicFacingAPIResponse>;
     /**
-     * siteTypesIndex - Return list of site types
-    **/
+     * Return list of site types
+     */
     siteTypesIndex(req: operations.SiteTypesIndexRequest, config?: AxiosRequestConfig): Promise<operations.SiteTypesIndexResponse>;
 }

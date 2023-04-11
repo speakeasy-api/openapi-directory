@@ -1,0 +1,7 @@
+/**
+ * Type of proxy, use residential proxies if your site restricts traffic from datacenters (datacenter by default). Note that residential proxy requests are more expensive than datacenter, see the pricing page for details.
+ */
+export declare enum ProxyEnum {
+    Datacenter = "datacenter",
+    Residential = "residential"
+}

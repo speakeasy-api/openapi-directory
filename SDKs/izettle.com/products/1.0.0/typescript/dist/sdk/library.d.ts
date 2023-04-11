@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Library {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class Library {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getLibrary - Retrieves the entire library
+     * Retrieve the entire library
      *
+     * @remarks
      * Will return the entire library for the authenticated user. If size of the library exceeds server preferences (normally 500) or the value of the optional limit parameter, the result will be paginated. Paginated responses return a Link header, indicating the next URI to fetch. The resulting header value will look something like:
      *
      * <https://products.izettle.com/organizations/self/library?limit=X&offset=Y>; rel="next"
@@ -24,6 +25,6 @@ export declare class Library {
      *
      * If eventLogUuid is provided, the response will only include events affecting the library since that event. Such responses are normally quite small and would be a preferred method for most fat clients after retrieving the initial full library.
      *
-    **/
-    getLibrary(req: operations.GetLibraryRequest, config?: AxiosRequestConfig): Promise<operations.GetLibraryResponse>;
+     */
+    getLibrary(req: operations.GetLibraryRequest, security: operations.GetLibrarySecurity, config?: AxiosRequestConfig): Promise<operations.GetLibraryResponse>;
 }

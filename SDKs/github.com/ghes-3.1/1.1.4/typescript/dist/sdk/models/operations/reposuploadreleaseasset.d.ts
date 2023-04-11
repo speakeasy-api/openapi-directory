@@ -1,23 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare const ReposUploadReleaseAssetServerList: readonly ["https://{origin}"];
-export declare class ReposUploadReleaseAssetPathParams extends SpeakeasyBase {
-    owner: string;
-    releaseId: number;
-    repo: string;
-}
-export declare class ReposUploadReleaseAssetQueryParams extends SpeakeasyBase {
-    label?: string;
-    name?: string;
-}
+import { AxiosResponse } from "axios";
+export declare const ReposUploadReleaseAssetServerList: readonly ["https://uploads.github.com"];
 export declare class ReposUploadReleaseAssetRequest extends SpeakeasyBase {
-    serverURL?: string;
-    pathParams: ReposUploadReleaseAssetPathParams;
-    queryParams: ReposUploadReleaseAssetQueryParams;
-    request?: string;
+    requestBody?: string;
+    label?: string;
+    name: string;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    owner: string;
+    /**
+     * The unique identifier of the release.
+     */
+    releaseId: number;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    repo: string;
 }
 export declare class ReposUploadReleaseAssetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response for successful upload
+     */
     releaseAsset?: shared.ReleaseAsset;
 }

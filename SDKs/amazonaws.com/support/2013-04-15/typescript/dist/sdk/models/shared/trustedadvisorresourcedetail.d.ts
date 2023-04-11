@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Contains information about a resource identified by a Trusted Advisor check.
-**/
+ */
 export declare class TrustedAdvisorResourceDetail extends SpeakeasyBase {
     isSuppressed?: boolean;
     metadata: string[];

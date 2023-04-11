@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeIdFormatActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeIdFormatActionEnum {
     DescribeIdFormat = "DescribeIdFormat"
 }
-export declare enum GetDescribeIdFormatVersionEnum {
+export declare enum GETDescribeIdFormatVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetDescribeIdFormatQueryParams extends SpeakeasyBase {
-    action: GetDescribeIdFormatActionEnum;
+export declare class GETDescribeIdFormatRequest extends SpeakeasyBase {
+    action: GETDescribeIdFormatActionEnum;
+    /**
+     * The type of resource: <code>bundle</code> | <code>conversion-task</code> | <code>customer-gateway</code> | <code>dhcp-options</code> | <code>elastic-ip-allocation</code> | <code>elastic-ip-association</code> | <code>export-task</code> | <code>flow-log</code> | <code>image</code> | <code>import-task</code> | <code>instance</code> | <code>internet-gateway</code> | <code>network-acl</code> | <code>network-acl-association</code> | <code>network-interface</code> | <code>network-interface-attachment</code> | <code>prefix-list</code> | <code>reservation</code> | <code>route-table</code> | <code>route-table-association</code> | <code>security-group</code> | <code>snapshot</code> | <code>subnet</code> | <code>subnet-cidr-block-association</code> | <code>volume</code> | <code>vpc</code> | <code>vpc-cidr-block-association</code> | <code>vpc-endpoint</code> | <code>vpc-peering-connection</code> | <code>vpn-connection</code> | <code>vpn-gateway</code>
+     */
     resource?: string;
-    version: GetDescribeIdFormatVersionEnum;
-}
-export declare class GetDescribeIdFormatHeaders extends SpeakeasyBase {
+    version: GETDescribeIdFormatVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDescribeIdFormatHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeIdFormatRequest extends SpeakeasyBase {
-    queryParams: GetDescribeIdFormatQueryParams;
-    headers: GetDescribeIdFormatHeaders;
-}
-export declare class GetDescribeIdFormatResponse extends SpeakeasyBase {
+export declare class GETDescribeIdFormatResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

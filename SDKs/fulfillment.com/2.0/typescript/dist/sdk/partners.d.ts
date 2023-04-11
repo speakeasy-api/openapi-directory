@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Partners {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,15 +9,17 @@ export declare class Partners {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * putOrdersIdShip - Ship an Order
+     * Ship an Order
      *
+     * @remarks
      * Note, this API is used to update orders and is reserved for our shipping partners.
-    **/
-    putOrdersIdShip(req: operations.PutOrdersIdShipRequest, config?: AxiosRequestConfig): Promise<operations.PutOrdersIdShipResponse>;
+     */
+    putOrdersIdShip(req: operations.PutOrdersIdShipRequest, security: operations.PutOrdersIdShipSecurity, config?: AxiosRequestConfig): Promise<operations.PutOrdersIdShipResponse>;
     /**
-     * putOrdersIdStatus - Update Order Status
+     * Update Order Status
      *
+     * @remarks
      * Note, this API is used to update orders and is reserved for our shipping partners.
-    **/
-    putOrdersIdStatus(req: operations.PutOrdersIdStatusRequest, config?: AxiosRequestConfig): Promise<operations.PutOrdersIdStatusResponse>;
+     */
+    putOrdersIdStatus(req: operations.PutOrdersIdStatusRequest, security: operations.PutOrdersIdStatusSecurity, config?: AxiosRequestConfig): Promise<operations.PutOrdersIdStatusResponse>;
 }

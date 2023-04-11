@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum StopCrawlerScheduleXAmzTargetEnum {
-    AwsGlueStopCrawlerSchedule = "AWSGlue.StopCrawlerSchedule"
+    AWSGlueStopCrawlerSchedule = "AWSGlue.StopCrawlerSchedule"
 }
-export declare class StopCrawlerScheduleHeaders extends SpeakeasyBase {
+export declare class StopCrawlerScheduleRequest extends SpeakeasyBase {
+    stopCrawlerScheduleRequest: shared.StopCrawlerScheduleRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class StopCrawlerScheduleHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: StopCrawlerScheduleXAmzTargetEnum;
 }
-export declare class StopCrawlerScheduleRequest extends SpeakeasyBase {
-    headers: StopCrawlerScheduleHeaders;
-    request: shared.StopCrawlerScheduleRequest;
-}
 export declare class StopCrawlerScheduleResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
+    /**
+     * SchedulerNotRunningException
+     */
     schedulerNotRunningException?: any;
+    /**
+     * SchedulerTransitioningException
+     */
     schedulerTransitioningException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     stopCrawlerScheduleResponse?: Record<string, any>;
 }

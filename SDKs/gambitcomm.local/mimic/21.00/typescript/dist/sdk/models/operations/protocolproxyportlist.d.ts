@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolProxyPortListPathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolProxyPortListRequest extends SpeakeasyBase {
-    pathParams: ProtocolProxyPortListPathParams;
+    /**
+     * Agent to manipulate PROXY target
+     */
+    agentNum: number;
 }
 export declare class ProtocolProxyPortListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolProxyPortList200ApplicationJSONInt32Integers?: number[];
 }

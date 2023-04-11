@@ -1,10 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
- * This complex type defines a &quot;rate&quot; as the quota of calls that can be made to a resource per time window, the remaining number of calls before the threshold is met, the amount of time until the time window resets, and the length of the time window (in seconds).
-**/
+ * This complex type defines a "rate" as the quota of calls that can be made to a resource per time window, the remaining number of calls before the threshold is met, the amount of time until the time window resets, and the length of the time window (in seconds).
+ */
 export declare class Rate extends SpeakeasyBase {
+    /**
+     * The maximum number of requests that can be made to this resource during a set time period. The length of time to which the limit is applied is defined by the associated <b>timeWindow</b> value.  <br><br>This value is often referred to as the "call quota" for the resource.
+     */
     limit?: number;
+    /**
+     * The remaining number of requests that can be made to this resource before the associated time window resets.
+     */
     remaining?: number;
+    /**
+     * The data and time the time window and accumulated calls for this resource reset.  <br><br>When the <b>reset</b> time is reached, the <b>remaining</b> value is reset to the value of <b>limit</b>, and this <b>reset</b> value is reset to the current time plus the number of seconds defined by the <b>timeWindow</b> value. <br><br>The time stamp is formatted as an <a href="http://www.iso.org/iso/home/standards/iso8601.htm " target="_blank">ISO 8601</a> string, which is based on the 24-hour Universal Coordinated Time (UTC) clock. <br><br><b>Format:</b> <code>[YYYY]-[MM]-[DD]T[hh]:[mm]:[ss].[sss]Z</code> <br><b>Example:</b> <code>2018-08-04T07:09:00.000Z</code>
+     */
     reset?: string;
+    /**
+     * A period of time, expressed in seconds. The call quota for a resource is applied to the period of time defined by the value of this field.
+     */
     timeWindow?: number;
 }

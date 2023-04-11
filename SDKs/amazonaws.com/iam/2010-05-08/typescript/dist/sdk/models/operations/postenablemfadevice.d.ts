@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostEnableMfaDeviceActionEnum {
-    EnableMfaDevice = "EnableMFADevice"
+import { AxiosResponse } from "axios";
+export declare enum POSTEnableMFADeviceActionEnum {
+    EnableMFADevice = "EnableMFADevice"
 }
-export declare enum PostEnableMfaDeviceVersionEnum {
+export declare enum POSTEnableMFADeviceVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostEnableMfaDeviceQueryParams extends SpeakeasyBase {
-    action: PostEnableMfaDeviceActionEnum;
-    version: PostEnableMfaDeviceVersionEnum;
-}
-export declare class PostEnableMfaDeviceHeaders extends SpeakeasyBase {
+export declare class POSTEnableMFADeviceRequest extends SpeakeasyBase {
+    action: POSTEnableMFADeviceActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTEnableMFADeviceVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostEnableMfaDeviceHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostEnableMfaDeviceRequest extends SpeakeasyBase {
-    queryParams: PostEnableMfaDeviceQueryParams;
-    headers: PostEnableMfaDeviceHeaders;
-    request?: Uint8Array;
-}
-export declare class PostEnableMfaDeviceResponse extends SpeakeasyBase {
+export declare class POSTEnableMFADeviceResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

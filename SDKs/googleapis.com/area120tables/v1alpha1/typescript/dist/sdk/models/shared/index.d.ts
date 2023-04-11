@@ -15,7 +15,6 @@ export * from "./lookupdetails";
 export * from "./relationshipdetails";
 export * from "./row";
 export * from "./savedview";
-export * from "./security";
 export * from "./table";
 export * from "./updaterowrequest";
 export * from "./workspace";

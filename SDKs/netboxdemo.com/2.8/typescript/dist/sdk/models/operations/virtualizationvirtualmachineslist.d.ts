@@ -1,6 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class VirtualizationVirtualMachinesListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class VirtualizationVirtualMachinesListRequest extends SpeakeasyBase {
     cluster?: string;
     clusterN?: string;
     clusterGroup?: string;
@@ -31,6 +32,9 @@ export declare class VirtualizationVirtualMachinesListQueryParams extends Speake
     lastUpdated?: string;
     lastUpdatedGte?: string;
     lastUpdatedLte?: string;
+    /**
+     * Number of results to return per page.
+     */
     limit?: number;
     localContextData?: string;
     macAddress?: string;
@@ -59,6 +63,9 @@ export declare class VirtualizationVirtualMachinesListQueryParams extends Speake
     nameNie?: string;
     nameNiew?: string;
     nameNisw?: string;
+    /**
+     * The initial index from which to return the results.
+     */
     offset?: number;
     platform?: string;
     platformN?: string;
@@ -96,17 +103,15 @@ export declare class VirtualizationVirtualMachinesListQueryParams extends Speake
     vcpusLte?: string;
     vcpusN?: string;
 }
-export declare class VirtualizationVirtualMachinesList200ApplicationJson extends SpeakeasyBase {
+export declare class VirtualizationVirtualMachinesList200ApplicationJSON extends SpeakeasyBase {
     count: number;
     next?: string;
     previous?: string;
     results: shared.VirtualMachineWithConfigContext[];
 }
-export declare class VirtualizationVirtualMachinesListRequest extends SpeakeasyBase {
-    queryParams: VirtualizationVirtualMachinesListQueryParams;
-}
 export declare class VirtualizationVirtualMachinesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    virtualizationVirtualMachinesList200ApplicationJSONObject?: VirtualizationVirtualMachinesList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    virtualizationVirtualMachinesList200ApplicationJSONObject?: VirtualizationVirtualMachinesList200ApplicationJSON;
 }

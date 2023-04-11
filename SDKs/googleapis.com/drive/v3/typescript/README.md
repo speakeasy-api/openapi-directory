@@ -6,46 +6,39 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/drive/v3/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/drive/v3/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DriveAboutGetRequest, DriveAboutGetResponse } from "openapi/src/sdk/models/operations";
+import {
+  DriveAboutGetRequest,
+  DriveAboutGetResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: DriveAboutGetRequest = {
-  security: {
-    option1: {
-      oauth2: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-      oauth2c: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-    },
-  },
-  queryParams: {
-    alt: "json",
-    fields: "voluptas",
-    key: "culpa",
-    oauthToken: "expedita",
-    prettyPrint: true,
-    quotaUser: "dolor",
-    userIp: "expedita",
-  },
+  alt: AltEnum.Json,
+  fields: "corrupti",
+  key: "provident",
+  oauthToken: "distinctio",
+  prettyPrint: false,
+  quotaUser: "quibusdam",
+  userIp: "unde",
 };
 
 sdk.about.driveAboutGet(req).then((res: DriveAboutGetResponse | AxiosError) => {
@@ -55,7 +48,8 @@ sdk.about.driveAboutGet(req).then((res: DriveAboutGetResponse | AxiosError) => {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### about
 
@@ -65,7 +59,7 @@ sdk.about.driveAboutGet(req).then((res: DriveAboutGetResponse | AxiosError) => {
 
 * `driveChangesGetStartPageToken` - Gets the starting pageToken for listing future changes.
 * `driveChangesList` - Lists the changes for a user or shared drive.
-* `driveChangesWatch` - Subscribes to changes for a user.
+* `driveChangesWatch` - Subscribes to changes for a user. To use this method, you must include the pageToken query parameter.
 
 ### channels
 
@@ -73,7 +67,7 @@ sdk.about.driveAboutGet(req).then((res: DriveAboutGetResponse | AxiosError) => {
 
 ### comments
 
-* `driveCommentsCreate` - Creates a new comment on a file.
+* `driveCommentsCreate` - Creates a comment on a file.
 * `driveCommentsDelete` - Deletes a comment.
 * `driveCommentsGet` - Gets a comment by ID.
 * `driveCommentsList` - Lists a file's comments.
@@ -81,18 +75,18 @@ sdk.about.driveAboutGet(req).then((res: DriveAboutGetResponse | AxiosError) => {
 
 ### drives
 
-* `driveDrivesCreate` - Creates a new shared drive.
+* `driveDrivesCreate` - Creates a shared drive.
 * `driveDrivesDelete` - Permanently deletes a shared drive for which the user is an organizer. The shared drive cannot contain any untrashed items.
 * `driveDrivesGet` - Gets a shared drive's metadata by ID.
 * `driveDrivesHide` - Hides a shared drive from the default view.
 * `driveDrivesList` - Lists the user's shared drives.
 * `driveDrivesUnhide` - Restores a shared drive to the default view.
-* `driveDrivesUpdate` - Updates the metadate for a shared drive.
+* `driveDrivesUpdate` - Updates the metadata for a shared drive.
 
 ### files
 
 * `driveFilesCopy` - Creates a copy of a file and applies any requested updates with patch semantics. Folders cannot be copied.
-* `driveFilesCreate` - Creates a new file.
+* `driveFilesCreate` - Creates a file.
 * `driveFilesDelete` - Permanently deletes a file owned by the user without moving it to the trash. If the file belongs to a shared drive the user must be an organizer on the parent. If the target is a folder, all descendants owned by the user are also deleted.
 * `driveFilesEmptyTrash` - Permanently deletes all of the user's trashed files.
 * `driveFilesExport` - Exports a Google Workspace document to the requested MIME type and returns exported byte content. Note that the exported content is limited to 10MB.
@@ -106,7 +100,7 @@ sdk.about.driveAboutGet(req).then((res: DriveAboutGetResponse | AxiosError) => {
 
 ### permissions
 
-* `drivePermissionsCreate` - Creates a permission for a file or shared drive.
+* `drivePermissionsCreate` - Creates a permission for a file or shared drive. For more information on creating permissions, see Share files, folders & drives.
 * `drivePermissionsDelete` - Deletes a permission.
 * `drivePermissionsGet` - Gets a permission by ID.
 * `drivePermissionsList` - Lists a file's or shared drive's permissions.
@@ -114,7 +108,7 @@ sdk.about.driveAboutGet(req).then((res: DriveAboutGetResponse | AxiosError) => {
 
 ### replies
 
-* `driveRepliesCreate` - Creates a new reply to a comment.
+* `driveRepliesCreate` - Creates a reply to a comment.
 * `driveRepliesDelete` - Deletes a reply.
 * `driveRepliesGet` - Gets a reply by ID.
 * `driveRepliesList` - Lists a comment's replies.
@@ -134,7 +128,18 @@ sdk.about.driveAboutGet(req).then((res: DriveAboutGetResponse | AxiosError) => {
 * `driveTeamdrivesGet` - Deprecated use drives.get instead.
 * `driveTeamdrivesList` - Deprecated use drives.list instead.
 * `driveTeamdrivesUpdate` - Deprecated use drives.update instead
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

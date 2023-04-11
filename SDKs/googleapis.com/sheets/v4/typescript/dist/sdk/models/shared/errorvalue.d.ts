@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The type of error.
+ */
 export declare enum ErrorValueTypeEnum {
     ErrorTypeUnspecified = "ERROR_TYPE_UNSPECIFIED",
     Error = "ERROR",
@@ -13,8 +16,14 @@ export declare enum ErrorValueTypeEnum {
 }
 /**
  * An error in a cell.
-**/
+ */
 export declare class ErrorValue extends SpeakeasyBase {
+    /**
+     * A message with more information about the error (in the spreadsheet's locale).
+     */
     message?: string;
+    /**
+     * The type of error.
+     */
     type?: ErrorValueTypeEnum;
 }

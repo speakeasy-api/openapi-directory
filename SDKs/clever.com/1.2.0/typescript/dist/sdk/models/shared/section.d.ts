@@ -27,7 +27,7 @@ export declare enum SectionSubjectEnum {
     HomeroomAdvisory = "homeroom/advisory",
     InterventionsOnlineLearning = "interventions/online learning",
     TechnologyAndEngineering = "technology and engineering",
-    PeAndHealth = "PE and health",
+    PEAndHealth = "PE and health",
     ArtsAndMusic = "arts and music",
     Other = "other"
 }

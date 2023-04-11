@@ -1,6 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreateFleetHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class CreateFleetRequestBody extends SpeakeasyBase {
+    /**
+     * The name of the fleet.
+     */
+    name: string;
+    /**
+     * A map that contains tag keys and tag values that are attached to the fleet.
+     */
+    tags?: Record<string, string>;
+}
+export declare class CreateFleetRequest extends SpeakeasyBase {
+    requestBody: CreateFleetRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -9,20 +21,28 @@ export declare class CreateFleetHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class CreateFleetRequestBody extends SpeakeasyBase {
-    name: string;
-    tags?: Record<string, string>;
-}
-export declare class CreateFleetRequest extends SpeakeasyBase {
-    headers: CreateFleetHeaders;
-    request: CreateFleetRequestBody;
-}
 export declare class CreateFleetResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     createFleetResponse?: shared.CreateFleetResponse;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

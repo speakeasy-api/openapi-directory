@@ -6,106 +6,102 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/datastream/v1alpha1/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/datastream/v1alpha1/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DatastreamProjectsLocationsConnectionProfilesCreateRequest, DatastreamProjectsLocationsConnectionProfilesCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  DatastreamProjectsLocationsConnectionProfilesCreateRequest,
+  DatastreamProjectsLocationsConnectionProfilesCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: DatastreamProjectsLocationsConnectionProfilesCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    connectionProfileId: "dolor",
-    fields: "expedita",
-    key: "voluptas",
-    oauthToken: "fugit",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    requestId: "rerum",
-    uploadType: "dicta",
-    uploadProtocol: "debitis",
-  },
-  request: {
-    displayName: "voluptatum",
+  dollarXgafv: XgafvEnum.Two,
+  connectionProfileInput: {
+    displayName: "provident",
     forwardSshConnectivity: {
-      hostname: "et",
-      password: "ut",
-      port: 161231572858529631,
-      privateKey: "et",
-      username: "voluptate",
+      hostname: "salty-stag.name",
+      password: "nulla",
+      port: 544883,
+      privateKey: "illum",
+      username: "Henry.Mueller",
     },
     gcsProfile: {
-      bucketName: "iste",
-      rootPath: "vitae",
+      bucketName: "iure",
+      rootPath: "magnam",
     },
     labels: {
-      "dolores": "illum",
-      "debitis": "vel",
-      "odio": "dolore",
+      "ipsa": "delectus",
+      "tempora": "suscipit",
+      "molestiae": "minus",
+      "placeat": "voluptatum",
     },
     mysqlProfile: {
-      hostname: "id",
-      password: "aspernatur",
-      port: 2914295034816259174,
+      hostname: "lawful-missionary.info",
+      password: "recusandae",
+      port: 836079,
       sslConfig: {
-        caCertificate: "totam",
-        clientCertificate: "commodi",
-        clientKey: "quis",
+        caCertificate: "ab",
+        clientCertificate: "quis",
+        clientKey: "veritatis",
       },
-      username: "est",
+      username: "Lydia_Aufderhar",
     },
     noConnectivity: {
-      "odit": "non",
-      "voluptas": "omnis",
-      "aut": "illo",
+      "quo": "odit",
+      "at": "at",
+      "maiores": "molestiae",
+      "quod": "quod",
     },
     oracleProfile: {
       connectionAttributes: {
-        "officiis": "autem",
-        "consectetur": "nobis",
-        "odio": "qui",
+        "totam": "porro",
+        "dolorum": "dicta",
       },
-      databaseService: "recusandae",
-      hostname: "at",
-      password: "ipsum",
-      port: 8902041070398994519,
-      username: "modi",
+      databaseService: "nam",
+      hostname: "posh-muffin.com",
+      password: "deleniti",
+      port: 944669,
+      username: "Nina41",
     },
     privateConnectivity: {
-      privateConnectionName: "sint",
+      privateConnectionName: "molestiae",
     },
     staticServiceIpConnectivity: {
-      "ut": "exercitationem",
+      "qui": "impedit",
+      "cum": "esse",
     },
   },
+  accessToken: "ipsum",
+  alt: AltEnum.Media,
+  callback: "aspernatur",
+  connectionProfileId: "perferendis",
+  fields: "ad",
+  key: "natus",
+  oauthToken: "sed",
+  parent: "iste",
+  prettyPrint: false,
+  quotaUser: "dolor",
+  requestId: "natus",
+  uploadType: "laboriosam",
+  uploadProtocol: "hic",
 };
 
 sdk.projects.datastreamProjectsLocationsConnectionProfilesCreate(req).then((res: DatastreamProjectsLocationsConnectionProfilesCreateResponse | AxiosError) => {
@@ -115,7 +111,8 @@ sdk.projects.datastreamProjectsLocationsConnectionProfilesCreate(req).then((res:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### projects
 
@@ -125,7 +122,7 @@ sdk.projects.datastreamProjectsLocationsConnectionProfilesCreate(req).then((res:
 * `datastreamProjectsLocationsFetchStaticIps` - The FetchStaticIps API call exposes the static IP addresses used by Datastream.
 * `datastreamProjectsLocationsList` - Lists information about the supported locations for this service.
 * `datastreamProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-* `datastreamProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+* `datastreamProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 * `datastreamProjectsLocationsPrivateConnectionsCreate` - Use this method to create a private connectivity configuration.
 * `datastreamProjectsLocationsPrivateConnectionsList` - Use this method to list private connectivity configurations in a project and location.
 * `datastreamProjectsLocationsPrivateConnectionsRoutesCreate` - Use this method to create a route for a private connectivity in a project and location.
@@ -139,7 +136,18 @@ sdk.projects.datastreamProjectsLocationsConnectionProfilesCreate(req).then((res:
 * `datastreamProjectsLocationsStreamsObjectsStartBackfillJob` - Starts backfill job for the specified stream object.
 * `datastreamProjectsLocationsStreamsObjectsStopBackfillJob` - Stops the backfill job for the specified stream object.
 * `datastreamProjectsLocationsStreamsPatch` - Use this method to update the configuration of a stream.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

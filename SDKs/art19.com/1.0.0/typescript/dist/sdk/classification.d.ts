@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Classification {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,11 +9,11 @@ export declare class Classification {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getClassifications - Get a list of classifications
-    **/
-    getClassifications(req: operations.GetClassificationsRequest, config?: AxiosRequestConfig): Promise<operations.GetClassificationsResponse>;
+     * Get a list of classifications
+     */
+    getClassifications(req: operations.GetClassificationsRequest, security: operations.GetClassificationsSecurity, config?: AxiosRequestConfig): Promise<operations.GetClassificationsResponse>;
     /**
-     * getClassificationsId - Get a specific classification
-    **/
-    getClassificationsId(req: operations.GetClassificationsIdRequest, config?: AxiosRequestConfig): Promise<operations.GetClassificationsIdResponse>;
+     * Get a specific classification
+     */
+    getClassificationsId(req: operations.GetClassificationsIdRequest, security: operations.GetClassificationsIdSecurity, config?: AxiosRequestConfig): Promise<operations.GetClassificationsIdResponse>;
 }

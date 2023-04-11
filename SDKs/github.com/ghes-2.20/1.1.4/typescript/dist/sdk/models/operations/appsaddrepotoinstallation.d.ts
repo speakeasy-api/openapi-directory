@@ -1,14 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AppsAddRepoToInstallationPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class AppsAddRepoToInstallationRequest extends SpeakeasyBase {
+    /**
+     * installation_id parameter
+     */
     installationId: number;
     repositoryId: number;
-}
-export declare class AppsAddRepoToInstallationRequest extends SpeakeasyBase {
-    pathParams: AppsAddRepoToInstallationPathParams;
 }
 export declare class AppsAddRepoToInstallationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Forbidden
+     */
     basicError?: shared.BasicError;
 }

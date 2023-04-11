@@ -1,8 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { FirewallActionEnum } from "./firewallactionenum";
-import { Reference } from "./reference";
 import { EntityTypeEnum } from "./entitytypeenum";
+import { FirewallActionEnum } from "./firewallactionenum";
 import { PortRange } from "./portrange";
+import { Reference } from "./reference";
+/**
+ * OK
+ */
 export declare class BaseFirewallRule extends SpeakeasyBase {
     action?: FirewallActionEnum;
     destinationAny?: boolean;

@@ -12,7 +12,6 @@ export * from "./menuitem";
 export * from "./menuvalue";
 export * from "./notification";
 export * from "./notificationconfig";
-export * from "./security";
 export * from "./setting";
 export * from "./subscription";
 export * from "./subscriptionslistresponse";

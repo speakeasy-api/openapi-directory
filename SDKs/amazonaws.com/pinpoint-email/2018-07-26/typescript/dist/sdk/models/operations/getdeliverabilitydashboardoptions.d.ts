@@ -1,6 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetDeliverabilityDashboardOptionsHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetDeliverabilityDashboardOptionsRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -9,14 +10,24 @@ export declare class GetDeliverabilityDashboardOptionsHeaders extends SpeakeasyB
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeliverabilityDashboardOptionsRequest extends SpeakeasyBase {
-    headers: GetDeliverabilityDashboardOptionsHeaders;
-}
 export declare class GetDeliverabilityDashboardOptionsResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getDeliverabilityDashboardOptionsResponse?: shared.GetDeliverabilityDashboardOptionsResponse;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

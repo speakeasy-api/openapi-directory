@@ -1,21 +1,19 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { RetrievePrefixPricingRequest, RetrievePrefixPricingResponse } from "openapi/src/sdk/models/operations";
+import {
+  RetrievePrefixPricingRequest,
+  RetrievePrefixPricingResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: RetrievePrefixPricingRequest = {
-  pathParams: {
-    type: "sit",
-  },
-  queryParams: {
-    apiKey: "voluptas",
-    apiSecret: "culpa",
-    prefix: "expedita",
-  },
+  apiKey: "corrupti",
+  apiSecret: "provident",
+  prefix: "distinctio",
+  type: "quibusdam",
 };
 
 sdk.pricing.retrievePrefixPricing(req).then((res: RetrievePrefixPricingResponse | AxiosError) => {

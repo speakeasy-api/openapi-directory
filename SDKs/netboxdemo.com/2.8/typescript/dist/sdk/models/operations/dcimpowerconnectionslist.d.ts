@@ -1,10 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DcimPowerConnectionsListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DcimPowerConnectionsListRequest extends SpeakeasyBase {
     connectionStatus?: string;
     connectionStatusN?: string;
     device?: string;
     deviceId?: string;
+    /**
+     * Number of results to return per page.
+     */
     limit?: number;
     name?: string;
     nameIc?: string;
@@ -16,20 +20,21 @@ export declare class DcimPowerConnectionsListQueryParams extends SpeakeasyBase {
     nameNie?: string;
     nameNiew?: string;
     nameNisw?: string;
+    /**
+     * The initial index from which to return the results.
+     */
     offset?: number;
     site?: string;
 }
-export declare class DcimPowerConnectionsList200ApplicationJson extends SpeakeasyBase {
+export declare class DcimPowerConnectionsList200ApplicationJSON extends SpeakeasyBase {
     count: number;
     next?: string;
     previous?: string;
     results: shared.PowerPort[];
 }
-export declare class DcimPowerConnectionsListRequest extends SpeakeasyBase {
-    queryParams: DcimPowerConnectionsListQueryParams;
-}
 export declare class DcimPowerConnectionsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dcimPowerConnectionsList200ApplicationJSONObject?: DcimPowerConnectionsList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    dcimPowerConnectionsList200ApplicationJSONObject?: DcimPowerConnectionsList200ApplicationJSON;
 }

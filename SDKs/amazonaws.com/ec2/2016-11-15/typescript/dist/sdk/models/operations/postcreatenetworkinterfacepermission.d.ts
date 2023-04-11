@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateNetworkInterfacePermissionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateNetworkInterfacePermissionActionEnum {
     CreateNetworkInterfacePermission = "CreateNetworkInterfacePermission"
 }
-export declare enum PostCreateNetworkInterfacePermissionVersionEnum {
+export declare enum POSTCreateNetworkInterfacePermissionVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostCreateNetworkInterfacePermissionQueryParams extends SpeakeasyBase {
-    action: PostCreateNetworkInterfacePermissionActionEnum;
-    version: PostCreateNetworkInterfacePermissionVersionEnum;
-}
-export declare class PostCreateNetworkInterfacePermissionHeaders extends SpeakeasyBase {
+export declare class POSTCreateNetworkInterfacePermissionRequest extends SpeakeasyBase {
+    action: POSTCreateNetworkInterfacePermissionActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateNetworkInterfacePermissionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateNetworkInterfacePermissionHeaders extends Speakea
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateNetworkInterfacePermissionRequest extends SpeakeasyBase {
-    queryParams: PostCreateNetworkInterfacePermissionQueryParams;
-    headers: PostCreateNetworkInterfacePermissionHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateNetworkInterfacePermissionResponse extends SpeakeasyBase {
+export declare class POSTCreateNetworkInterfacePermissionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

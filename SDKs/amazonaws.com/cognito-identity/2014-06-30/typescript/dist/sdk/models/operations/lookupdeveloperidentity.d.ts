@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum LookupDeveloperIdentityXAmzTargetEnum {
-    AwsCognitoIdentityServiceLookupDeveloperIdentity = "AWSCognitoIdentityService.LookupDeveloperIdentity"
+    AWSCognitoIdentityServiceLookupDeveloperIdentity = "AWSCognitoIdentityService.LookupDeveloperIdentity"
 }
-export declare class LookupDeveloperIdentityHeaders extends SpeakeasyBase {
+export declare class LookupDeveloperIdentityRequest extends SpeakeasyBase {
+    lookupDeveloperIdentityInput: shared.LookupDeveloperIdentityInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class LookupDeveloperIdentityHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: LookupDeveloperIdentityXAmzTargetEnum;
 }
-export declare class LookupDeveloperIdentityRequest extends SpeakeasyBase {
-    headers: LookupDeveloperIdentityHeaders;
-    request: shared.LookupDeveloperIdentityInput;
-}
 export declare class LookupDeveloperIdentityResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalErrorException
+     */
     internalErrorException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * Success
+     */
     lookupDeveloperIdentityResponse?: shared.LookupDeveloperIdentityResponse;
+    /**
+     * NotAuthorizedException
+     */
     notAuthorizedException?: any;
-    resourceConflictException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceConflictException
+     */
+    resourceConflictException?: any;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

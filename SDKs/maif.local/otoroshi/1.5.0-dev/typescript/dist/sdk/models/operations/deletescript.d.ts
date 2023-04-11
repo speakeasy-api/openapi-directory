@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteScriptPathParams extends SpeakeasyBase {
-    scriptId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteScriptSecurity extends SpeakeasyBase {
-    otoroshiAuth: shared.SchemeOtoroshiAuth;
+    password: string;
+    username: string;
 }
 export declare class DeleteScriptRequest extends SpeakeasyBase {
-    pathParams: DeleteScriptPathParams;
-    security: DeleteScriptSecurity;
+    /**
+     * The script id
+     */
+    scriptId: string;
 }
 export declare class DeleteScriptResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful operation
+     */
     deleted?: shared.Deleted;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class VideosEmbedPrivacy {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,17 +9,18 @@ export declare class VideosEmbedPrivacy {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * addVideoPrivacyDomain - Permit a video to be embedded on a domain
+     * Permit a video to be embedded on a domain
      *
+     * @remarks
      * If domain privacy is enabled for this video, this method permits the video to be embedded on the specified domain.
-    **/
-    addVideoPrivacyDomain(req: operations.AddVideoPrivacyDomainRequest, config?: AxiosRequestConfig): Promise<operations.AddVideoPrivacyDomainResponse>;
+     */
+    addVideoPrivacyDomain(req: operations.AddVideoPrivacyDomainRequest, security: operations.AddVideoPrivacyDomainSecurity, config?: AxiosRequestConfig): Promise<operations.AddVideoPrivacyDomainResponse>;
     /**
-     * deleteVideoPrivacyDomain - Restrict a video from being embedded on a domain
-    **/
-    deleteVideoPrivacyDomain(req: operations.DeleteVideoPrivacyDomainRequest, config?: AxiosRequestConfig): Promise<operations.DeleteVideoPrivacyDomainResponse>;
+     * Restrict a video from being embedded on a domain
+     */
+    deleteVideoPrivacyDomain(req: operations.DeleteVideoPrivacyDomainRequest, security: operations.DeleteVideoPrivacyDomainSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteVideoPrivacyDomainResponse>;
     /**
-     * getVideoPrivacyDomains - Get all the domains on which a video can be embedded
-    **/
+     * Get all the domains on which a video can be embedded
+     */
     getVideoPrivacyDomains(req: operations.GetVideoPrivacyDomainsRequest, config?: AxiosRequestConfig): Promise<operations.GetVideoPrivacyDomainsResponse>;
 }

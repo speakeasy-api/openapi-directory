@@ -1,4 +1,3 @@
-import { AxiosInstance } from "axios";
 import { Acl } from "./acl";
 import { CalendarList } from "./calendarlist";
 import { Calendars } from "./calendars";
@@ -7,11 +6,29 @@ import { Colors } from "./colors";
 import { Events } from "./events";
 import { Freebusy } from "./freebusy";
 import { Settings } from "./settings";
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://www.googleapis.com/calendar/v3"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * Manipulates events and other calendar data.
+ *
+ * @see {@link https://developers.google.com/google-apps/calendar/firstapp}
+ */
 export declare class SDK {
     acl: Acl;
     calendarList: CalendarList;
@@ -27,5 +44,6 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
 }

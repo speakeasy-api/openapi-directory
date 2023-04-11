@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ConfigCoap extends SpeakeasyBase {
+/**
+ * successful operation
+ */
+export declare class ConfigCOAP extends SpeakeasyBase {
     keystore?: string;
     primaryPort?: number;
     rule?: string;

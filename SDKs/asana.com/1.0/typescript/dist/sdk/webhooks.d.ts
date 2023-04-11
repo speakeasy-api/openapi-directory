@@ -1,5 +1,12 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Webhooks allow you to subscribe to notifications about events that occur on Asana resources (e.g., tasks, projects, stories, etc.).
+ *
+ * @remarks
+ *
+ * For a more detailed explanation of webhooks see the [overview of webhooks](/docs/overview-of-webhooks).
+ */
 export declare class Webhooks {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +16,9 @@ export declare class Webhooks {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createWebhook - Establish a webhook
+     * Establish a webhook
      *
+     * @remarks
      * Establishing a webhook is a two-part process. First, a simple HTTP POST
      * request initiates the creation similar to creating any other resource.
      *
@@ -68,24 +76,34 @@ export declare class Webhooks {
      *   }
      * }
      * ```
-    **/
+     */
     createWebhook(req: operations.CreateWebhookRequest, config?: AxiosRequestConfig): Promise<operations.CreateWebhookResponse>;
     /**
-     * deleteWebhook - Delete a webhook
+     * Delete a webhook
      *
+     * @remarks
      * This method *permanently* removes a webhook. Note that it may be possible to receive a request that was already in flight after deleting the webhook, but no further requests will be issued.
-    **/
+     */
     deleteWebhook(req: operations.DeleteWebhookRequest, config?: AxiosRequestConfig): Promise<operations.DeleteWebhookResponse>;
     /**
-     * getWebhook - Get a webhook
+     * Get a webhook
      *
+     * @remarks
      * Returns the full record for the given webhook.
-    **/
+     */
     getWebhook(req: operations.GetWebhookRequest, config?: AxiosRequestConfig): Promise<operations.GetWebhookResponse>;
     /**
-     * getWebhooks - Get multiple webhooks
+     * Get multiple webhooks
      *
+     * @remarks
      * Get the compact representation of all webhooks your app has registered for the authenticated user in the given workspace.
-    **/
+     */
     getWebhooks(req: operations.GetWebhooksRequest, config?: AxiosRequestConfig): Promise<operations.GetWebhooksResponse>;
+    /**
+     * Update a webhook
+     *
+     * @remarks
+     * An existing webhook's filters can be updated by making a PUT request on the URL for that webhook. Note that the webhook's previous `filters` array will be completely overwritten by the `filters` sent in the PUT request.
+     */
+    updateWebhook(req: operations.UpdateWebhookRequest, config?: AxiosRequestConfig): Promise<operations.UpdateWebhookResponse>;
 }

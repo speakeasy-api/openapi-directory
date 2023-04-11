@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Target type where the packet is delivered to.
+ */
 export declare enum DeliverInfoTargetEnum {
     TargetUnspecified = "TARGET_UNSPECIFIED",
     Instance = "INSTANCE",
@@ -12,8 +15,14 @@ export declare enum DeliverInfoTargetEnum {
 }
 /**
  * Details of the final state "deliver" and associated resource.
-**/
+ */
 export declare class DeliverInfo extends SpeakeasyBase {
+    /**
+     * URI of the resource that the packet is delivered to.
+     */
     resourceUri?: string;
+    /**
+     * Target type where the packet is delivered to.
+     */
     target?: DeliverInfoTargetEnum;
 }

@@ -1,23 +1,23 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateContactInMailinglistRequest, CreateContactInMailinglistResponse } from "openapi/src/sdk/models/operations";
+import {
+  CreateContactInMailinglistRequest,
+  CreateContactInMailinglistResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: CreateContactInMailinglistRequest = {
-  pathParams: {
-    directoryId: "sit",
-    mailingListId: "voluptas",
-  },
-  request: {
-    email: "culpa",
-    firstName: "expedita",
-    lastName: "consequuntur",
+  createContactInMailingList: {
+    email: "Larue_Rau85@yahoo.com",
+    firstName: "Karley",
+    lastName: "Stamm",
     unsubscribed: false,
   },
+  directoryId: "vel",
+  mailingListId: "error",
 };
 
 sdk.createContactInMailinglist(req).then((res: CreateContactInMailinglistResponse | AxiosError) => {

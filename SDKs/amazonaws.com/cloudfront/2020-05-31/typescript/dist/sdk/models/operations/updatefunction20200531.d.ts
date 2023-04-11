@@ -1,9 +1,33 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UpdateFunction20200531PathParams extends SpeakeasyBase {
-    name: string;
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+/**
+ * Contains configuration information about a CloudFront function.
+ */
+export declare class UpdateFunction20200531RequestBodyFunctionConfig extends SpeakeasyBase {
+    comment?: string;
+    runtime?: shared.FunctionRuntimeEnum;
 }
-export declare class UpdateFunction20200531Headers extends SpeakeasyBase {
+export declare class UpdateFunction20200531RequestBody extends SpeakeasyBase {
+    /**
+     * The function code. For more information about writing a CloudFront function, see <a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/writing-function-code.html">Writing function code for CloudFront Functions</a> in the <i>Amazon CloudFront Developer Guide</i>.
+     */
+    functionCode: string;
+    /**
+     * Contains configuration information about a CloudFront function.
+     */
+    functionConfig: UpdateFunction20200531RequestBodyFunctionConfig;
+}
+export declare class UpdateFunction20200531Request extends SpeakeasyBase {
+    /**
+     * The current version (<code>ETag</code> value) of the function that you are updating, which you can get using <code>DescribeFunction</code>.
+     */
     ifMatch: string;
+    /**
+     * The name of the function that you are updating.
+     */
+    name: string;
+    requestBody: Uint8Array;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,13 +36,9 @@ export declare class UpdateFunction20200531Headers extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class UpdateFunction20200531Request extends SpeakeasyBase {
-    pathParams: UpdateFunction20200531PathParams;
-    headers: UpdateFunction20200531Headers;
-    request: Uint8Array;
-}
 export declare class UpdateFunction20200531Response extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

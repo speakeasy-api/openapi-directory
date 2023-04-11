@@ -1,15 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteCommitHostedPropertyValuePathParams extends SpeakeasyBase {
-    appKey: string;
-    commit: string;
-    propertyName: string;
-    repoSlug: string;
-    workspace: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteCommitHostedPropertyValueRequest extends SpeakeasyBase {
-    pathParams: DeleteCommitHostedPropertyValuePathParams;
+    /**
+     * The key of the Connect app.
+     */
+    appKey: string;
+    /**
+     * The commit.
+     */
+    commit: string;
+    /**
+     * The name of the property.
+     */
+    propertyName: string;
+    /**
+     * The repository.
+     */
+    repoSlug: string;
+    /**
+     * The repository container; either the workspace slug or the UUID in curly braces.
+     */
+    workspace: string;
 }
 export declare class DeleteCommitHostedPropertyValueResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

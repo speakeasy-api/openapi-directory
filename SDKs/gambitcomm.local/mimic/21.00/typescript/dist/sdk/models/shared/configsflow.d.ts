@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ConfigSflow extends SpeakeasyBase {
+/**
+ * successful operation
+ */
+export declare class ConfigSFLOW extends SpeakeasyBase {
     collector?: string;
     collectorport?: number;
     encodingType?: string;

@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetHackathonsIdFormatPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETHackathonsIdFormatRequest extends SpeakeasyBase {
+    /**
+     * ID of the hackathon for detail information
+     */
     id: number;
 }
-export declare class GetHackathonsIdFormatRequest extends SpeakeasyBase {
-    pathParams: GetHackathonsIdFormatPathParams;
-}
-export declare class GetHackathonsIdFormatResponse extends SpeakeasyBase {
+export declare class GETHackathonsIdFormatResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

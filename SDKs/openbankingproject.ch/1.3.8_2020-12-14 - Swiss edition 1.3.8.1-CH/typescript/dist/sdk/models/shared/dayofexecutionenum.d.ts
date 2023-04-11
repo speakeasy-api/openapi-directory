@@ -1,3 +1,14 @@
+/**
+ * Day of execution as string.
+ *
+ * @remarks
+ *
+ * This string consists of up two characters.
+ * Leading zeroes are not allowed.
+ *
+ * 31 is ultimo of the month.
+ *
+ */
 export declare enum DayOfExecutionEnum {
     One = "1",
     Two = "2",

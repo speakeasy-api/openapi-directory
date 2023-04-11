@@ -11,6 +11,9 @@ export declare class CustomerInputModel extends SpeakeasyBase {
     lastname?: string;
     locationId?: string;
     name?: string;
+    /**
+     * 0 = default(Email), 1 = Email, 2 = SMS, 3 = Email and SMS
+     */
     notificationType?: string;
     sendLeadNotification?: boolean;
     stripeCustomerId?: string;

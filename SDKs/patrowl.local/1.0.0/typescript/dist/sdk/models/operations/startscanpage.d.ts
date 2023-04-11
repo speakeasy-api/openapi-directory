@@ -1,9 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class StartScanPageRequest extends SpeakeasyBase {
-    request: any;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class StartScanPageResponse extends SpeakeasyBase {
-    apiResponse?: any;
+    /**
+     * successful operation
+     */
+    apiResponse?: shared.ApiResponse;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

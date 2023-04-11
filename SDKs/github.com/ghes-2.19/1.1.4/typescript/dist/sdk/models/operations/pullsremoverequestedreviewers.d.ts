@@ -1,21 +1,32 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PullsRemoveRequestedReviewersPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class PullsRemoveRequestedReviewersRequestBody extends SpeakeasyBase {
+    /**
+     * An array of user `login`s that will be removed.
+     */
+    reviewers: string[];
+    /**
+     * An array of team `slug`s that will be removed.
+     */
+    teamReviewers?: string[];
+}
+export declare class PullsRemoveRequestedReviewersRequest extends SpeakeasyBase {
+    requestBody: PullsRemoveRequestedReviewersRequestBody;
     owner: string;
     pullNumber: number;
     repo: string;
 }
-export declare class PullsRemoveRequestedReviewersRequestBody extends SpeakeasyBase {
-    reviewers: string[];
-    teamReviewers?: string[];
-}
-export declare class PullsRemoveRequestedReviewersRequest extends SpeakeasyBase {
-    pathParams: PullsRemoveRequestedReviewersPathParams;
-    request?: PullsRemoveRequestedReviewersRequestBody;
-}
 export declare class PullsRemoveRequestedReviewersResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     pullRequestSimple?: shared.PullRequestSimple;
+    /**
+     * Validation failed
+     */
     validationError?: shared.ValidationError;
 }

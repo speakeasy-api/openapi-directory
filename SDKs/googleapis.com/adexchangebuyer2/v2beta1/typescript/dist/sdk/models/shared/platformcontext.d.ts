@@ -6,7 +6,10 @@ export declare enum PlatformContextPlatformsEnum {
 }
 /**
  * Output only. The type of platform the restriction applies to.
-**/
+ */
 export declare class PlatformContext extends SpeakeasyBase {
+    /**
+     * The platforms this restriction applies to.
+     */
     platforms?: PlatformContextPlatformsEnum[];
 }

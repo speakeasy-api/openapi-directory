@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Search API for 'Construction Permits' entry type
+ */
 export declare class TypeConstructionPermits {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,10 @@ export declare class TypeConstructionPermits {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * searchConstructionPermits - Search API for 'Construction Permits' entry type
+     * Search API for 'Construction Permits' entry type
      *
+     * @remarks
      * API to search for entries of type Construction Permits
-    **/
+     */
     searchConstructionPermits(req: operations.SearchConstructionPermitsRequest, config?: AxiosRequestConfig): Promise<operations.SearchConstructionPermitsResponse>;
 }

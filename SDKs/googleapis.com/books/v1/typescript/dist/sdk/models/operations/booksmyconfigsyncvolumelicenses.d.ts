@@ -1,40 +1,98 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class BooksMyconfigSyncVolumeLicensesSecurity extends SpeakeasyBase {
+    oauth2: string;
+    oauth2c: string;
+}
 export declare enum BooksMyconfigSyncVolumeLicensesFeaturesEnum {
     FeaturesUndefined = "FEATURES_UNDEFINED",
     Rentals = "RENTALS"
 }
-export declare class BooksMyconfigSyncVolumeLicensesQueryParams extends SpeakeasyBase {
-    dollarXgafv?: shared.XgafvEnum;
-    accessToken?: string;
-    alt?: shared.AltEnum;
-    callback?: string;
-    cpksver: string;
-    features?: BooksMyconfigSyncVolumeLicensesFeaturesEnum[];
-    fields?: string;
-    includeNonComicsSeries?: boolean;
-    key?: string;
-    locale?: string;
-    nonce: string;
-    oauthToken?: string;
-    prettyPrint?: boolean;
-    quotaUser?: string;
-    showPreorders?: boolean;
-    source: string;
-    uploadType?: string;
-    uploadProtocol?: string;
-    volumeIds?: string[];
-}
-export declare class BooksMyconfigSyncVolumeLicensesSecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
-}
 export declare class BooksMyconfigSyncVolumeLicensesRequest extends SpeakeasyBase {
-    queryParams: BooksMyconfigSyncVolumeLicensesQueryParams;
-    security: BooksMyconfigSyncVolumeLicensesSecurity;
+    /**
+     * V1 error format.
+     */
+    dollarXgafv?: shared.XgafvEnum;
+    /**
+     * OAuth access token.
+     */
+    accessToken?: string;
+    /**
+     * Data format for response.
+     */
+    alt?: shared.AltEnum;
+    /**
+     * JSONP
+     */
+    callback?: string;
+    /**
+     * The device/version ID from which to release the restriction.
+     */
+    cpksver: string;
+    /**
+     * List of features supported by the client, i.e., 'RENTALS'
+     */
+    features?: BooksMyconfigSyncVolumeLicensesFeaturesEnum[];
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * Set to true to include non-comics series. Defaults to false.
+     */
+    includeNonComicsSeries?: boolean;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * ISO-639-1, ISO-3166-1 codes for message localization, i.e. en_US.
+     */
+    locale?: string;
+    /**
+     * The client nonce value.
+     */
+    nonce: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauthToken?: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * Set to true to show pre-ordered books. Defaults to false.
+     */
+    showPreorders?: boolean;
+    /**
+     * String to identify the originator of this request.
+     */
+    source: string;
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    uploadType?: string;
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    uploadProtocol?: string;
+    /**
+     * The volume(s) to request download restrictions for.
+     */
+    volumeIds?: string[];
 }
 export declare class BooksMyconfigSyncVolumeLicensesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful response
+     */
     volumes?: shared.Volumes;
 }

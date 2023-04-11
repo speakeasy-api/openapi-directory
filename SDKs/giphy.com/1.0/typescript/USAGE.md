@@ -1,21 +1,20 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetGifByIdRequest, GetGifByIdResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GetGifByIdRequest,
+  GetGifByIdResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    apiKey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: GetGifByIdRequest = {
-  pathParams: {
-    gifId: 8717895732742165505,
+    apiKey: "YOUR_API_KEY_HERE",
   },
+});
+
+const req: GetGifByIdRequest = {
+  gifId: 548814,
 };
 
 sdk.gifs.getGifById(req).then((res: GetGifByIdResponse | AxiosError) => {

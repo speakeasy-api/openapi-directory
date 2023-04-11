@@ -1,36 +1,35 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetAcceptReservedNodeExchangeRequest, GetAcceptReservedNodeExchangeResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GETAcceptReservedNodeExchangeRequest,
+  GETAcceptReservedNodeExchangeResponse,
+  GETAcceptReservedNodeExchangeActionEnum,
+  GETAcceptReservedNodeExchangeVersionEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: GetAcceptReservedNodeExchangeRequest = {
-  queryParams: {
-    action: "AcceptReservedNodeExchange",
-    reservedNodeId: "voluptas",
-    targetReservedNodeOfferingId: "culpa",
-    version: "2012-12-01",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  headers: {
-    xAmzAlgorithm: "consequuntur",
-    xAmzContentSha256: "dolor",
-    xAmzCredential: "expedita",
-    xAmzDate: "voluptas",
-    xAmzSecurityToken: "fugit",
-    xAmzSignature: "et",
-    xAmzSignedHeaders: "nihil",
-  },
+});
+
+const req: GETAcceptReservedNodeExchangeRequest = {
+  action: GETAcceptReservedNodeExchangeActionEnum.AcceptReservedNodeExchange,
+  reservedNodeId: "corrupti",
+  targetReservedNodeOfferingId: "provident",
+  version: GETAcceptReservedNodeExchangeVersionEnum.TwoThousandAndTwelve1201,
+  xAmzAlgorithm: "distinctio",
+  xAmzContentSha256: "quibusdam",
+  xAmzCredential: "unde",
+  xAmzDate: "nulla",
+  xAmzSecurityToken: "corrupti",
+  xAmzSignature: "illum",
+  xAmzSignedHeaders: "vel",
 };
 
-sdk.getAcceptReservedNodeExchange(req).then((res: GetAcceptReservedNodeExchangeResponse | AxiosError) => {
+sdk.getAcceptReservedNodeExchange(req).then((res: GETAcceptReservedNodeExchangeResponse | AxiosError) => {
    // handle response
 });
 ```

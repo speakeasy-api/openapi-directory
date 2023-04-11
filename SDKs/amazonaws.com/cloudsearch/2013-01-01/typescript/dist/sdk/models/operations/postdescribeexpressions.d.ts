@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeExpressionsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeExpressionsActionEnum {
     DescribeExpressions = "DescribeExpressions"
 }
-export declare enum PostDescribeExpressionsVersionEnum {
+export declare enum POSTDescribeExpressionsVersionEnum {
     TwoThousandAndThirteen0101 = "2013-01-01"
 }
-export declare class PostDescribeExpressionsQueryParams extends SpeakeasyBase {
-    action: PostDescribeExpressionsActionEnum;
-    version: PostDescribeExpressionsVersionEnum;
-}
-export declare class PostDescribeExpressionsHeaders extends SpeakeasyBase {
+export declare class POSTDescribeExpressionsRequest extends SpeakeasyBase {
+    action: POSTDescribeExpressionsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDescribeExpressionsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDescribeExpressionsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeExpressionsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeExpressionsQueryParams;
-    headers: PostDescribeExpressionsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeExpressionsResponse extends SpeakeasyBase {
+export declare class POSTDescribeExpressionsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeReceiptRuleSetActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeReceiptRuleSetActionEnum {
     DescribeReceiptRuleSet = "DescribeReceiptRuleSet"
 }
-export declare enum GetDescribeReceiptRuleSetVersionEnum {
+export declare enum GETDescribeReceiptRuleSetVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetDescribeReceiptRuleSetQueryParams extends SpeakeasyBase {
-    action: GetDescribeReceiptRuleSetActionEnum;
+export declare class GETDescribeReceiptRuleSetRequest extends SpeakeasyBase {
+    action: GETDescribeReceiptRuleSetActionEnum;
+    /**
+     * The name of the receipt rule set to describe.
+     */
     ruleSetName: string;
-    version: GetDescribeReceiptRuleSetVersionEnum;
-}
-export declare class GetDescribeReceiptRuleSetHeaders extends SpeakeasyBase {
+    version: GETDescribeReceiptRuleSetVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDescribeReceiptRuleSetHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeReceiptRuleSetRequest extends SpeakeasyBase {
-    queryParams: GetDescribeReceiptRuleSetQueryParams;
-    headers: GetDescribeReceiptRuleSetHeaders;
-}
-export declare class GetDescribeReceiptRuleSetResponse extends SpeakeasyBase {
+export declare class GETDescribeReceiptRuleSetResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

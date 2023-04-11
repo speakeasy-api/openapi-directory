@@ -1,11 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare enum WorkflowStateEnum {
     Active = "active",
-    Deleted = "deleted"
+    Deleted = "deleted",
+    DisabledFork = "disabled_fork",
+    DisabledInactivity = "disabled_inactivity",
+    DisabledManually = "disabled_manually"
 }
 /**
  * A GitHub Actions workflow
-**/
+ */
 export declare class Workflow extends SpeakeasyBase {
     badgeUrl: string;
     createdAt: Date;

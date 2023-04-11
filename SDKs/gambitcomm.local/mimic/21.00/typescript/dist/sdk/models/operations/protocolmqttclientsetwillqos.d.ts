@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolMqttClientSetWillqosPathParams extends SpeakeasyBase {
-    agentNum: number;
-    qos: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolMqttClientSetWillqosRequest extends SpeakeasyBase {
-    pathParams: ProtocolMqttClientSetWillqosPathParams;
+    /**
+     * Agent to set MQTT config
+     */
+    agentNum: number;
+    /**
+     * Quality of service field
+     */
+    qos: string;
 }
 export declare class ProtocolMqttClientSetWillqosResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolMqttClientSetWillqos200ApplicationJSONInt32Integers?: number[];
 }

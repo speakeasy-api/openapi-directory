@@ -1,5 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { AuthorAssociationEnum } from "./authorassociationenum";
+import { NullableSimpleUser } from "./nullablesimpleuser";
 export declare class PullRequestReviewLinksHtml extends SpeakeasyBase {
     href: string;
 }
@@ -11,44 +12,35 @@ export declare class PullRequestReviewLinks extends SpeakeasyBase {
     pullRequest: PullRequestReviewLinksPullRequest;
 }
 /**
- * Simple User
-**/
-export declare class PullRequestReviewSimpleUser extends SpeakeasyBase {
-    avatarUrl: string;
-    eventsUrl: string;
-    followersUrl: string;
-    followingUrl: string;
-    gistsUrl: string;
-    gravatarId: string;
-    htmlUrl: string;
-    id: number;
-    login: string;
-    nodeId: string;
-    organizationsUrl: string;
-    receivedEventsUrl: string;
-    reposUrl: string;
-    siteAdmin: boolean;
-    starredAt?: string;
-    starredUrl: string;
-    subscriptionsUrl: string;
-    type: string;
-    url: string;
-}
-/**
  * Pull Request Reviews are reviews on pull requests.
-**/
+ */
 export declare class PullRequestReview extends SpeakeasyBase {
     links: PullRequestReviewLinks;
+    /**
+     * How the author is associated with the repository.
+     */
     authorAssociation: AuthorAssociationEnum;
+    /**
+     * The text of the review.
+     */
     body: string;
     bodyHtml?: string;
     bodyText?: string;
+    /**
+     * A commit SHA for the review.
+     */
     commitId: string;
     htmlUrl: string;
+    /**
+     * Unique identifier of the review
+     */
     id: number;
     nodeId: string;
     pullRequestUrl: string;
     state: string;
     submittedAt?: Date;
-    user: PullRequestReviewSimpleUser;
+    /**
+     * Simple User
+     */
+    user: NullableSimpleUser;
 }

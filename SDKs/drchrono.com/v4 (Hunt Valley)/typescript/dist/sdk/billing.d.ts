@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Create and manage billing resources
+ */
 export declare class Billing {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,92 +12,92 @@ export declare class Billing {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * billingProfilesList - Retrieve or search billing profiles
-    **/
-    billingProfilesList(req: operations.BillingProfilesListRequest, config?: AxiosRequestConfig): Promise<operations.BillingProfilesListResponse>;
+     * Retrieve or search billing profiles
+     */
+    billingProfilesList(req: operations.BillingProfilesListRequest, security: operations.BillingProfilesListSecurity, config?: AxiosRequestConfig): Promise<operations.BillingProfilesListResponse>;
     /**
-     * billingProfilesRead - Retrieve an existing billing profiles
-    **/
-    billingProfilesRead(req: operations.BillingProfilesReadRequest, config?: AxiosRequestConfig): Promise<operations.BillingProfilesReadResponse>;
+     * Retrieve an existing billing profiles
+     */
+    billingProfilesRead(req: operations.BillingProfilesReadRequest, security: operations.BillingProfilesReadSecurity, config?: AxiosRequestConfig): Promise<operations.BillingProfilesReadResponse>;
     /**
-     * commLogsCreate - Create communication (phone call) logs
-    **/
-    commLogsCreate(req: operations.CommLogsCreateRequest, config?: AxiosRequestConfig): Promise<operations.CommLogsCreateResponse>;
+     * Create communication (phone call) logs
+     */
+    commLogsCreate(req: operations.CommLogsCreateRequest, security: operations.CommLogsCreateSecurity, config?: AxiosRequestConfig): Promise<operations.CommLogsCreateResponse>;
     /**
-     * commLogsList - Retrieve or search communicatioin (phone call) logs
-    **/
-    commLogsList(req: operations.CommLogsListRequest, config?: AxiosRequestConfig): Promise<operations.CommLogsListResponse>;
+     * Retrieve or search communicatioin (phone call) logs
+     */
+    commLogsList(req: operations.CommLogsListRequest, security: operations.CommLogsListSecurity, config?: AxiosRequestConfig): Promise<operations.CommLogsListResponse>;
     /**
-     * commLogsPartialUpdate - Update an existing communication (phone call) logs
-    **/
-    commLogsPartialUpdate(req: operations.CommLogsPartialUpdateRequest, config?: AxiosRequestConfig): Promise<operations.CommLogsPartialUpdateResponse>;
+     * Update an existing communication (phone call) logs
+     */
+    commLogsPartialUpdate(req: operations.CommLogsPartialUpdateRequest, security: operations.CommLogsPartialUpdateSecurity, config?: AxiosRequestConfig): Promise<operations.CommLogsPartialUpdateResponse>;
     /**
-     * commLogsRead - Retrieve an existing communication (phone call) logs
-    **/
-    commLogsRead(req: operations.CommLogsReadRequest, config?: AxiosRequestConfig): Promise<operations.CommLogsReadResponse>;
+     * Retrieve an existing communication (phone call) logs
+     */
+    commLogsRead(req: operations.CommLogsReadRequest, security: operations.CommLogsReadSecurity, config?: AxiosRequestConfig): Promise<operations.CommLogsReadResponse>;
     /**
-     * commLogsUpdate - Update an existing communication (phone call) logs
-    **/
-    commLogsUpdate(req: operations.CommLogsUpdateRequest, config?: AxiosRequestConfig): Promise<operations.CommLogsUpdateResponse>;
+     * Update an existing communication (phone call) logs
+     */
+    commLogsUpdate(req: operations.CommLogsUpdateRequest, security: operations.CommLogsUpdateSecurity, config?: AxiosRequestConfig): Promise<operations.CommLogsUpdateResponse>;
     /**
-     * customInsurancePlanNamesList - Retrieve or search custom insurance plan names
-    **/
-    customInsurancePlanNamesList(req: operations.CustomInsurancePlanNamesListRequest, config?: AxiosRequestConfig): Promise<operations.CustomInsurancePlanNamesListResponse>;
+     * Retrieve or search custom insurance plan names
+     */
+    customInsurancePlanNamesList(req: operations.CustomInsurancePlanNamesListRequest, security: operations.CustomInsurancePlanNamesListSecurity, config?: AxiosRequestConfig): Promise<operations.CustomInsurancePlanNamesListResponse>;
     /**
-     * customInsurancePlanNamesRead - Retrieve an existing custom insurance plan name
-    **/
-    customInsurancePlanNamesRead(req: operations.CustomInsurancePlanNamesReadRequest, config?: AxiosRequestConfig): Promise<operations.CustomInsurancePlanNamesReadResponse>;
+     * Retrieve an existing custom insurance plan name
+     */
+    customInsurancePlanNamesRead(req: operations.CustomInsurancePlanNamesReadRequest, security: operations.CustomInsurancePlanNamesReadSecurity, config?: AxiosRequestConfig): Promise<operations.CustomInsurancePlanNamesReadResponse>;
     /**
-     * eligibilityChecksList - Retrieve or search past eligibility checks for patient
-    **/
-    eligibilityChecksList(req: operations.EligibilityChecksListRequest, config?: AxiosRequestConfig): Promise<operations.EligibilityChecksListResponse>;
+     * Retrieve or search past eligibility checks for patient
+     */
+    eligibilityChecksList(req: operations.EligibilityChecksListRequest, security: operations.EligibilityChecksListSecurity, config?: AxiosRequestConfig): Promise<operations.EligibilityChecksListResponse>;
     /**
-     * eligibilityChecksRead - Retrieve an existing past eligibility check
-    **/
-    eligibilityChecksRead(req: operations.EligibilityChecksReadRequest, config?: AxiosRequestConfig): Promise<operations.EligibilityChecksReadResponse>;
+     * Retrieve an existing past eligibility check
+     */
+    eligibilityChecksRead(req: operations.EligibilityChecksReadRequest, security: operations.EligibilityChecksReadSecurity, config?: AxiosRequestConfig): Promise<operations.EligibilityChecksReadResponse>;
     /**
-     * lineItemsCreate - Create billing line item for appointments
-    **/
-    lineItemsCreate(req: operations.LineItemsCreateRequest, config?: AxiosRequestConfig): Promise<operations.LineItemsCreateResponse>;
-    lineItemsDelete(req: operations.LineItemsDeleteRequest, config?: AxiosRequestConfig): Promise<operations.LineItemsDeleteResponse>;
+     * Create billing line item for appointments
+     */
+    lineItemsCreate(req: operations.LineItemsCreateRequest, security: operations.LineItemsCreateSecurity, config?: AxiosRequestConfig): Promise<operations.LineItemsCreateResponse>;
+    lineItemsDelete(req: operations.LineItemsDeleteRequest, security: operations.LineItemsDeleteSecurity, config?: AxiosRequestConfig): Promise<operations.LineItemsDeleteResponse>;
     /**
-     * lineItemsList - Retrieve or search billing line items
-    **/
-    lineItemsList(req: operations.LineItemsListRequest, config?: AxiosRequestConfig): Promise<operations.LineItemsListResponse>;
-    lineItemsPartialUpdate(req: operations.LineItemsPartialUpdateRequest, config?: AxiosRequestConfig): Promise<operations.LineItemsPartialUpdateResponse>;
+     * Retrieve or search billing line items
+     */
+    lineItemsList(req: operations.LineItemsListRequest, security: operations.LineItemsListSecurity, config?: AxiosRequestConfig): Promise<operations.LineItemsListResponse>;
+    lineItemsPartialUpdate(req: operations.LineItemsPartialUpdateRequest, security: operations.LineItemsPartialUpdateSecurity, config?: AxiosRequestConfig): Promise<operations.LineItemsPartialUpdateResponse>;
     /**
-     * lineItemsRead - Retrieve an existing billing line item
-    **/
-    lineItemsRead(req: operations.LineItemsReadRequest, config?: AxiosRequestConfig): Promise<operations.LineItemsReadResponse>;
-    lineItemsUpdate(req: operations.LineItemsUpdateRequest, config?: AxiosRequestConfig): Promise<operations.LineItemsUpdateResponse>;
+     * Retrieve an existing billing line item
+     */
+    lineItemsRead(req: operations.LineItemsReadRequest, security: operations.LineItemsReadSecurity, config?: AxiosRequestConfig): Promise<operations.LineItemsReadResponse>;
+    lineItemsUpdate(req: operations.LineItemsUpdateRequest, security: operations.LineItemsUpdateSecurity, config?: AxiosRequestConfig): Promise<operations.LineItemsUpdateResponse>;
     /**
-     * patientPaymentLogList - Retrieve or search patient payment logs
-    **/
-    patientPaymentLogList(req: operations.PatientPaymentLogListRequest, config?: AxiosRequestConfig): Promise<operations.PatientPaymentLogListResponse>;
+     * Retrieve or search patient payment logs
+     */
+    patientPaymentLogList(req: operations.PatientPaymentLogListRequest, security: operations.PatientPaymentLogListSecurity, config?: AxiosRequestConfig): Promise<operations.PatientPaymentLogListResponse>;
     /**
-     * patientPaymentLogRead - Retrieve an existing patient payment log
-    **/
-    patientPaymentLogRead(req: operations.PatientPaymentLogReadRequest, config?: AxiosRequestConfig): Promise<operations.PatientPaymentLogReadResponse>;
+     * Retrieve an existing patient payment log
+     */
+    patientPaymentLogRead(req: operations.PatientPaymentLogReadRequest, security: operations.PatientPaymentLogReadSecurity, config?: AxiosRequestConfig): Promise<operations.PatientPaymentLogReadResponse>;
     /**
-     * patientPaymentsCreate - Create patient payment
-    **/
-    patientPaymentsCreate(req: operations.PatientPaymentsCreateRequest, config?: AxiosRequestConfig): Promise<operations.PatientPaymentsCreateResponse>;
+     * Create patient payment
+     */
+    patientPaymentsCreate(req: operations.PatientPaymentsCreateRequest, security: operations.PatientPaymentsCreateSecurity, config?: AxiosRequestConfig): Promise<operations.PatientPaymentsCreateResponse>;
     /**
-     * patientPaymentsList - Retrieve or search patient payments
-    **/
-    patientPaymentsList(req: operations.PatientPaymentsListRequest, config?: AxiosRequestConfig): Promise<operations.PatientPaymentsListResponse>;
+     * Retrieve or search patient payments
+     */
+    patientPaymentsList(req: operations.PatientPaymentsListRequest, security: operations.PatientPaymentsListSecurity, config?: AxiosRequestConfig): Promise<operations.PatientPaymentsListResponse>;
     /**
-     * patientPaymentsRead - Retrieve an existing patient payment
-    **/
-    patientPaymentsRead(req: operations.PatientPaymentsReadRequest, config?: AxiosRequestConfig): Promise<operations.PatientPaymentsReadResponse>;
-    proceduresList(req: operations.ProceduresListRequest, config?: AxiosRequestConfig): Promise<operations.ProceduresListResponse>;
-    proceduresRead(req: operations.ProceduresReadRequest, config?: AxiosRequestConfig): Promise<operations.ProceduresReadResponse>;
+     * Retrieve an existing patient payment
+     */
+    patientPaymentsRead(req: operations.PatientPaymentsReadRequest, security: operations.PatientPaymentsReadSecurity, config?: AxiosRequestConfig): Promise<operations.PatientPaymentsReadResponse>;
+    proceduresList(req: operations.ProceduresListRequest, security: operations.ProceduresListSecurity, config?: AxiosRequestConfig): Promise<operations.ProceduresListResponse>;
+    proceduresRead(req: operations.ProceduresReadRequest, security: operations.ProceduresReadSecurity, config?: AxiosRequestConfig): Promise<operations.ProceduresReadResponse>;
     /**
-     * transactionsList - Retrieve or search insurance transactions associated with billing line items
-    **/
-    transactionsList(req: operations.TransactionsListRequest, config?: AxiosRequestConfig): Promise<operations.TransactionsListResponse>;
+     * Retrieve or search insurance transactions associated with billing line items
+     */
+    transactionsList(req: operations.TransactionsListRequest, security: operations.TransactionsListSecurity, config?: AxiosRequestConfig): Promise<operations.TransactionsListResponse>;
     /**
-     * transactionsRead - Retrieve an existing insurance transaction
-    **/
-    transactionsRead(req: operations.TransactionsReadRequest, config?: AxiosRequestConfig): Promise<operations.TransactionsReadResponse>;
+     * Retrieve an existing insurance transaction
+     */
+    transactionsRead(req: operations.TransactionsReadRequest, security: operations.TransactionsReadSecurity, config?: AxiosRequestConfig): Promise<operations.TransactionsReadResponse>;
 }

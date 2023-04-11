@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteConnectorPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteConnectorRequest extends SpeakeasyBase {
-    pathParams: DeleteConnectorPathParams;
+    /**
+     * The connector id that needs to be deleted
+     */
+    id: string;
 }
 export declare class DeleteConnectorResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

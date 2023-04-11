@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { RewritingRuleSerializer } from "./rewritingruleserializer";
-export declare class UrlRewritingRulesSerializer extends SpeakeasyBase {
+/**
+ * Successful operation
+ */
+export declare class URLRewritingRulesSerializer extends SpeakeasyBase {
     rules: RewritingRuleSerializer[];
     urls: string[];
 }

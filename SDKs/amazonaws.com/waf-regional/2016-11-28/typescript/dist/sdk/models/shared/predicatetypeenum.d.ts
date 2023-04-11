@@ -1,5 +1,5 @@
 export declare enum PredicateTypeEnum {
-    IpMatch = "IPMatch",
+    IPMatch = "IPMatch",
     ByteMatch = "ByteMatch",
     SqlInjectionMatch = "SqlInjectionMatch",
     GeoMatch = "GeoMatch",

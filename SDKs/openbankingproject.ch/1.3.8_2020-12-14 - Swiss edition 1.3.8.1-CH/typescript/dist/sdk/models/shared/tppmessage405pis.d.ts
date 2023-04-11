@@ -1,9 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { MessageCode405PISEnum } from "./messagecode405pisenum";
 import { TppMessageCategoryEnum } from "./tppmessagecategoryenum";
-import { MessageCode405PisEnum } from "./messagecode405pisenum";
-export declare class TppMessage405Pis extends SpeakeasyBase {
+export declare class TppMessage405PIS extends SpeakeasyBase {
+    /**
+     * Category of the TPP message category.
+     */
     category: TppMessageCategoryEnum;
-    code: MessageCode405PisEnum;
+    /**
+     * Message codes defined for payment cancelations PIS for HTTP Error code 405 (METHOD NOT ALLOWED).
+     */
+    code: MessageCode405PISEnum;
     path?: string;
+    /**
+     * Additional explaining text to the TPP.
+     */
     text?: string;
 }

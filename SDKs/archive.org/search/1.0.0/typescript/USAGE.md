@@ -1,16 +1,16 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetSearchV1FieldsRequest, GetSearchV1FieldsResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetSearchV1FieldsRequest,
+  GetSearchV1FieldsResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetSearchV1FieldsRequest = {
-  queryParams: {
-    callback: "sit",
-  },
+  callback: "corrupti",
 };
 
 sdk.getSearchV1Fields(req).then((res: GetSearchV1FieldsResponse | AxiosError) => {

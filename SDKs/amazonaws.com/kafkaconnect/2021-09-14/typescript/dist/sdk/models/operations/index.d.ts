@@ -2,6 +2,7 @@ export * from "./createconnector";
 export * from "./createcustomplugin";
 export * from "./createworkerconfiguration";
 export * from "./deleteconnector";
+export * from "./deletecustomplugin";
 export * from "./describeconnector";
 export * from "./describecustomplugin";
 export * from "./describeworkerconfiguration";

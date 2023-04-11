@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Information about a quota increase request.
-**/
+ */
 export declare class ServiceQuotaIncreaseRequestInTemplate extends SpeakeasyBase {
     awsRegion?: string;
     desiredValue?: number;

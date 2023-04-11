@@ -16,5 +16,6 @@ export declare enum NodegroupIssueCodeEnum {
     InsufficientFreeAddresses = "InsufficientFreeAddresses",
     AccessDenied = "AccessDenied",
     InternalFailure = "InternalFailure",
-    ClusterUnreachable = "ClusterUnreachable"
+    ClusterUnreachable = "ClusterUnreachable",
+    Ec2SubnetMissingIpv6Assignment = "Ec2SubnetMissingIpv6Assignment"
 }

@@ -1,13 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteVirtualNodePathParams extends SpeakeasyBase {
-    meshName: string;
-    virtualNodeName: string;
-}
-export declare class DeleteVirtualNodeQueryParams extends SpeakeasyBase {
-    meshOwner?: string;
-}
-export declare class DeleteVirtualNodeHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteVirtualNodeRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -15,21 +9,53 @@ export declare class DeleteVirtualNodeHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DeleteVirtualNodeRequest extends SpeakeasyBase {
-    pathParams: DeleteVirtualNodePathParams;
-    queryParams: DeleteVirtualNodeQueryParams;
-    headers: DeleteVirtualNodeHeaders;
+    /**
+     * The name of the service mesh to delete the virtual node in.
+     */
+    meshName: string;
+    /**
+     * The Amazon Web Services IAM account ID of the service mesh owner. If the account ID is not your own, then it's the ID of the account that shared the mesh with your account. For more information about mesh sharing, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html">Working with shared meshes</a>.
+     */
+    meshOwner?: string;
+    /**
+     * The name of the virtual node to delete.
+     */
+    virtualNodeName: string;
 }
 export declare class DeleteVirtualNodeResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteVirtualNodeOutput?: shared.DeleteVirtualNodeOutput;
+    /**
+     * ForbiddenException
+     */
     forbiddenException?: any;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
-    resourceInUseException?: any;
-    serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceInUseException
+     */
+    resourceInUseException?: any;
+    /**
+     * ServiceUnavailableException
+     */
+    serviceUnavailableException?: any;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

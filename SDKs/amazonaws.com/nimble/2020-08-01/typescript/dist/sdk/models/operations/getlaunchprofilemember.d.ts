@@ -1,11 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetLaunchProfileMemberPathParams extends SpeakeasyBase {
-    launchProfileId: string;
-    principalId: string;
-    studioId: string;
-}
-export declare class GetLaunchProfileMemberHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetLaunchProfileMemberRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,20 +9,53 @@ export declare class GetLaunchProfileMemberHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class GetLaunchProfileMemberRequest extends SpeakeasyBase {
-    pathParams: GetLaunchProfileMemberPathParams;
-    headers: GetLaunchProfileMemberHeaders;
+    /**
+     * The ID of the launch profile used to control access from the streaming session.
+     */
+    launchProfileId: string;
+    /**
+     * The principal ID. This currently supports a IAM Identity Center UserId.
+     */
+    principalId: string;
+    /**
+     * The studio ID.
+     */
+    studioId: string;
 }
 export declare class GetLaunchProfileMemberResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getLaunchProfileMemberResponse?: shared.GetLaunchProfileMemberResponse;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
-    serviceQuotaExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceQuotaExceededException
+     */
+    serviceQuotaExceededException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

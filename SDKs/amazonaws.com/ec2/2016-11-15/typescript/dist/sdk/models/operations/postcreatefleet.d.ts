@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateFleetActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateFleetActionEnum {
     CreateFleet = "CreateFleet"
 }
-export declare enum PostCreateFleetVersionEnum {
+export declare enum POSTCreateFleetVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostCreateFleetQueryParams extends SpeakeasyBase {
-    action: PostCreateFleetActionEnum;
-    version: PostCreateFleetVersionEnum;
-}
-export declare class PostCreateFleetHeaders extends SpeakeasyBase {
+export declare class POSTCreateFleetRequest extends SpeakeasyBase {
+    action: POSTCreateFleetActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateFleetVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateFleetHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateFleetRequest extends SpeakeasyBase {
-    queryParams: PostCreateFleetQueryParams;
-    headers: PostCreateFleetHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateFleetResponse extends SpeakeasyBase {
+export declare class POSTCreateFleetResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

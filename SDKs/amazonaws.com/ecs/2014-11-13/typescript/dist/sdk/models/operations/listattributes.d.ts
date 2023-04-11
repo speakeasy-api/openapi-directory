@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListAttributesQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListAttributesXAmzTargetEnum {
     AmazonEc2ContainerServiceV20141113ListAttributes = "AmazonEC2ContainerServiceV20141113.ListAttributes"
 }
-export declare class ListAttributesHeaders extends SpeakeasyBase {
+export declare class ListAttributesRequest extends SpeakeasyBase {
+    listAttributesRequest: shared.ListAttributesRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,16 +14,29 @@ export declare class ListAttributesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: ListAttributesXAmzTargetEnum;
-}
-export declare class ListAttributesRequest extends SpeakeasyBase {
-    queryParams: ListAttributesQueryParams;
-    headers: ListAttributesHeaders;
-    request: shared.ListAttributesRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class ListAttributesResponse extends SpeakeasyBase {
+    /**
+     * ClusterNotFoundException
+     */
     clusterNotFoundException?: any;
     contentType: string;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * Success
+     */
     listAttributesResponse?: shared.ListAttributesResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

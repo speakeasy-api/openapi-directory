@@ -1,3 +1,6 @@
+/**
+ * An <a href="http://tools.ietf.org/html/rfc4646" target="_blank">IETF RFC 4646</a> language code or <code>mul</code> for multiple languages.
+ */
 export declare enum AnalysisSchemeLanguageEnum {
     Ar = "ar",
     Bg = "bg",

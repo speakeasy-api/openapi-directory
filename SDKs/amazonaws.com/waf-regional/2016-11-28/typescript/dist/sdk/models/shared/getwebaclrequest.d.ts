@@ -1,4 +1,4 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetWebAclRequest extends SpeakeasyBase {
+export declare class GetWebACLRequest extends SpeakeasyBase {
     webACLId: string;
 }

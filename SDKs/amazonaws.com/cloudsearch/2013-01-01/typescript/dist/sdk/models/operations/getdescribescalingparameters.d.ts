@@ -1,16 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeScalingParametersActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeScalingParametersActionEnum {
     DescribeScalingParameters = "DescribeScalingParameters"
 }
-export declare enum GetDescribeScalingParametersVersionEnum {
+export declare enum GETDescribeScalingParametersVersionEnum {
     TwoThousandAndThirteen0101 = "2013-01-01"
 }
-export declare class GetDescribeScalingParametersQueryParams extends SpeakeasyBase {
-    action: GetDescribeScalingParametersActionEnum;
+export declare class GETDescribeScalingParametersRequest extends SpeakeasyBase {
+    action: GETDescribeScalingParametersActionEnum;
     domainName: string;
-    version: GetDescribeScalingParametersVersionEnum;
-}
-export declare class GetDescribeScalingParametersHeaders extends SpeakeasyBase {
+    version: GETDescribeScalingParametersVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +18,9 @@ export declare class GetDescribeScalingParametersHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeScalingParametersRequest extends SpeakeasyBase {
-    queryParams: GetDescribeScalingParametersQueryParams;
-    headers: GetDescribeScalingParametersHeaders;
-}
-export declare class GetDescribeScalingParametersResponse extends SpeakeasyBase {
+export declare class GETDescribeScalingParametersResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

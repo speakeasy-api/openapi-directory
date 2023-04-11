@@ -1,17 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetAssetSettingsHeaders extends SpeakeasyBase {
-    xeroTenantId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetAssetSettingsSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class GetAssetSettingsRequest extends SpeakeasyBase {
-    headers: GetAssetSettingsHeaders;
-    security: GetAssetSettingsSecurity;
+    /**
+     * Xero identifier for Tenant
+     */
+    xeroTenantId: string;
 }
 export declare class GetAssetSettingsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * search results matching criteria
+     */
     setting?: shared.Setting;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

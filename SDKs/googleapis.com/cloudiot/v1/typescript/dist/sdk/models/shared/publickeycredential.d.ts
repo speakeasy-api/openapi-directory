@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The format of the key.
+ */
 export declare enum PublicKeyCredentialFormatEnum {
     UnspecifiedPublicKeyFormat = "UNSPECIFIED_PUBLIC_KEY_FORMAT",
     RsaPem = "RSA_PEM",
@@ -8,8 +11,14 @@ export declare enum PublicKeyCredentialFormatEnum {
 }
 /**
  * A public key format and data.
-**/
+ */
 export declare class PublicKeyCredential extends SpeakeasyBase {
+    /**
+     * The format of the key.
+     */
     format?: PublicKeyCredentialFormatEnum;
+    /**
+     * The key data.
+     */
     key?: string;
 }

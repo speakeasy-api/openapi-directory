@@ -1,16 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class DeleteCustomPagePathParams extends SpeakeasyBase {
-    slug: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteCustomPageSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
+    password: string;
+    username: string;
 }
 export declare class DeleteCustomPageRequest extends SpeakeasyBase {
-    pathParams: DeleteCustomPagePathParams;
-    security: DeleteCustomPageSecurity;
+    /**
+     * Slug of custom page
+     */
+    slug: string;
 }
 export declare class DeleteCustomPageResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

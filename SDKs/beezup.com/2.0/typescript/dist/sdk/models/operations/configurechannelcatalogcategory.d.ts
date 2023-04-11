@@ -1,14 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ConfigureChannelCatalogCategoryPathParams extends SpeakeasyBase {
-    channelCatalogId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ConfigureChannelCatalogCategoryRequest extends SpeakeasyBase {
-    pathParams: ConfigureChannelCatalogCategoryPathParams;
-    request: shared.ConfigureCategoryRequest;
+    /**
+     * The channel catalog identifier
+     */
+    channelCatalogId: string;
+    configureCategoryRequest: shared.ConfigureCategoryRequest;
 }
 export declare class ConfigureChannelCatalogCategoryResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     * BadRequest. See Error Response for more details
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

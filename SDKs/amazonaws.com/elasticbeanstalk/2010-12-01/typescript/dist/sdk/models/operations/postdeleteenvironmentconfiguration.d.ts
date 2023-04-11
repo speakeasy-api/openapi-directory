@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteEnvironmentConfigurationActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteEnvironmentConfigurationActionEnum {
     DeleteEnvironmentConfiguration = "DeleteEnvironmentConfiguration"
 }
-export declare enum PostDeleteEnvironmentConfigurationVersionEnum {
+export declare enum POSTDeleteEnvironmentConfigurationVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostDeleteEnvironmentConfigurationQueryParams extends SpeakeasyBase {
-    action: PostDeleteEnvironmentConfigurationActionEnum;
-    version: PostDeleteEnvironmentConfigurationVersionEnum;
-}
-export declare class PostDeleteEnvironmentConfigurationHeaders extends SpeakeasyBase {
+export declare class POSTDeleteEnvironmentConfigurationRequest extends SpeakeasyBase {
+    action: POSTDeleteEnvironmentConfigurationActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteEnvironmentConfigurationVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +18,8 @@ export declare class PostDeleteEnvironmentConfigurationHeaders extends Speakeasy
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteEnvironmentConfigurationRequest extends SpeakeasyBase {
-    queryParams: PostDeleteEnvironmentConfigurationQueryParams;
-    headers: PostDeleteEnvironmentConfigurationHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteEnvironmentConfigurationResponse extends SpeakeasyBase {
+export declare class POSTDeleteEnvironmentConfigurationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

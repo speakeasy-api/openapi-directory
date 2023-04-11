@@ -1,21 +1,36 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class KeyRevokePathParams extends SpeakeasyBase {
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class KeyRevokeRequest extends SpeakeasyBase {
+    /**
+     * Public Signing Key - Authentiq ID (43 chars)
+     */
     pk: string;
-}
-export declare class KeyRevokeQueryParams extends SpeakeasyBase {
+    /**
+     * revokation secret
+     */
     secret: string;
 }
-export declare class KeyRevoke200ApplicationJson extends SpeakeasyBase {
+/**
+ * Successful response
+ */
+export declare class KeyRevoke200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * done
+     */
     status?: string;
-}
-export declare class KeyRevokeRequest extends SpeakeasyBase {
-    pathParams: KeyRevokePathParams;
-    queryParams: KeyRevokeQueryParams;
 }
 export declare class KeyRevokeResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    error?: any;
+    /**
+     * Key not found / wrong code `auth-error`
+     */
+    error?: shared.ErrorT;
     statusCode: number;
-    keyRevoke200ApplicationJSONObject?: KeyRevoke200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful response
+     */
+    keyRevoke200ApplicationJSONObject?: KeyRevoke200ApplicationJSON;
 }

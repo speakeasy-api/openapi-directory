@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { RelationalDatabaseMetricNameEnum } from "./relationaldatabasemetricnameenum";
 import { MetricStatisticEnum } from "./metricstatisticenum";
 import { MetricUnitEnum } from "./metricunitenum";
+import { RelationalDatabaseMetricNameEnum } from "./relationaldatabasemetricnameenum";
 export declare class GetRelationalDatabaseMetricDataRequest extends SpeakeasyBase {
     endTime: Date;
     metricName: RelationalDatabaseMetricNameEnum;

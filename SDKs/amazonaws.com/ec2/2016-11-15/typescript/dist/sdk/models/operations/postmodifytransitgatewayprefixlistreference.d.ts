@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostModifyTransitGatewayPrefixListReferenceActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTModifyTransitGatewayPrefixListReferenceActionEnum {
     ModifyTransitGatewayPrefixListReference = "ModifyTransitGatewayPrefixListReference"
 }
-export declare enum PostModifyTransitGatewayPrefixListReferenceVersionEnum {
+export declare enum POSTModifyTransitGatewayPrefixListReferenceVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostModifyTransitGatewayPrefixListReferenceQueryParams extends SpeakeasyBase {
-    action: PostModifyTransitGatewayPrefixListReferenceActionEnum;
-    version: PostModifyTransitGatewayPrefixListReferenceVersionEnum;
-}
-export declare class PostModifyTransitGatewayPrefixListReferenceHeaders extends SpeakeasyBase {
+export declare class POSTModifyTransitGatewayPrefixListReferenceRequest extends SpeakeasyBase {
+    action: POSTModifyTransitGatewayPrefixListReferenceActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTModifyTransitGatewayPrefixListReferenceVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostModifyTransitGatewayPrefixListReferenceHeaders extends 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostModifyTransitGatewayPrefixListReferenceRequest extends SpeakeasyBase {
-    queryParams: PostModifyTransitGatewayPrefixListReferenceQueryParams;
-    headers: PostModifyTransitGatewayPrefixListReferenceHeaders;
-    request?: Uint8Array;
-}
-export declare class PostModifyTransitGatewayPrefixListReferenceResponse extends SpeakeasyBase {
+export declare class POSTModifyTransitGatewayPrefixListReferenceResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,0 +1,18 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * An information specific to given column and Tables Model, in context of the Model and the predictions created by it.
+ */
+export declare class TablesModelColumnInfo extends SpeakeasyBase {
+    /**
+     * Output only. The display name of the column (same as the display_name of its ColumnSpec).
+     */
+    columnDisplayName?: string;
+    /**
+     * Output only. The name of the ColumnSpec describing the column. Not populated when this proto is outputted to BigQuery.
+     */
+    columnSpecName?: string;
+    /**
+     * Output only. When given as part of a Model (always populated): Measurement of how much model predictions correctness on the TEST data depend on values in this column. A value between 0 and 1, higher means higher influence. These values are normalized - for all input feature columns of a given model they add to 1. When given back by Predict (populated iff feature_importance param is set) or Batch Predict (populated iff feature_importance param is set): Measurement of how impactful for the prediction returned for the given row the value in this column was. Specifically, the feature importance specifies the marginal contribution that the feature made to the prediction score compared to the baseline score. These values are computed using the Sampled Shapley method.
+     */
+    featureImportance?: number;
+}

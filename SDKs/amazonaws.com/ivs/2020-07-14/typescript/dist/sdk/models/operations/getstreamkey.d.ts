@@ -1,6 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetStreamKeyHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetStreamKeyRequestBody extends SpeakeasyBase {
+    /**
+     * ARN for the stream key to be retrieved.
+     */
+    arn: string;
+}
+export declare class GetStreamKeyRequest extends SpeakeasyBase {
+    requestBody: GetStreamKeyRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -9,18 +17,24 @@ export declare class GetStreamKeyHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetStreamKeyRequestBody extends SpeakeasyBase {
-    arn: string;
-}
-export declare class GetStreamKeyRequest extends SpeakeasyBase {
-    headers: GetStreamKeyHeaders;
-    request: GetStreamKeyRequestBody;
-}
 export declare class GetStreamKeyResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getStreamKeyResponse?: shared.GetStreamKeyResponse;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

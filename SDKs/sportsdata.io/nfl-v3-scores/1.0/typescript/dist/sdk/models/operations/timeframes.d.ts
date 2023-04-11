@@ -1,8 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+/**
+ * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+ */
 export declare enum TimeframesFormatEnum {
     Xml = "XML",
     Json = "JSON"
 }
+/**
+ * The type of timeframes to return.  Valid entries are <code>current</code> or <code>upcoming</code> or <code>completed</code> or <code>recent</code> or <code>all</code>.
+ */
 export declare enum TimeframesTypeEnum {
     Current = "current",
     Upcoming = "upcoming",
@@ -10,15 +18,19 @@ export declare enum TimeframesTypeEnum {
     Recent = "recent",
     All = "all"
 }
-export declare class TimeframesPathParams extends SpeakeasyBase {
-    format: TimeframesFormatEnum;
-    type: TimeframesTypeEnum;
-}
 export declare class TimeframesRequest extends SpeakeasyBase {
-    pathParams: TimeframesPathParams;
+    /**
+     * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+     */
+    format: TimeframesFormatEnum;
+    /**
+     * The type of timeframes to return.  Valid entries are <code>current</code> or <code>upcoming</code> or <code>completed</code> or <code>recent</code> or <code>all</code>.
+     */
+    type: TimeframesTypeEnum;
 }
 export declare class TimeframesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    timeframes?: any[];
+    rawResponse?: AxiosResponse;
+    timeframes?: shared.Timeframe[];
 }

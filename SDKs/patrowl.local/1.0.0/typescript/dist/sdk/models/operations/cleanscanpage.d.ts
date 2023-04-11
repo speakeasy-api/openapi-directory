@@ -1,12 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CleanScanPagePathParams extends SpeakeasyBase {
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class CleanScanPageRequest extends SpeakeasyBase {
+    /**
+     * Numeric ID of the scan to clean
+     */
     scanId: number;
 }
-export declare class CleanScanPageRequest extends SpeakeasyBase {
-    pathParams: CleanScanPagePathParams;
-}
 export declare class CleanScanPageResponse extends SpeakeasyBase {
-    apiResponse?: any;
+    /**
+     * successful operation
+     */
+    apiResponse?: shared.ApiResponse;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

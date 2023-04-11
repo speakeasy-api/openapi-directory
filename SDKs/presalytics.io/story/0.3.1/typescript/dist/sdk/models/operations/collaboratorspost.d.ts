@@ -1,11 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CollaboratorsPostRequest extends SpeakeasyBase {
-    request: any;
-}
+import { AxiosResponse } from "axios";
 export declare class CollaboratorsPostResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Array of all possible permission types
+     */
     permissionTypes?: shared.PermissionType[];
-    problemDetail?: any;
+    /**
+     * Unauthorized
+     */
+    problemDetail?: shared.ProblemDetail;
 }

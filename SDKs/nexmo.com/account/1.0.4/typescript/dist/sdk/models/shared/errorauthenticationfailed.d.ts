@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Authentication Failed
-**/
+ */
 export declare class ErrorAuthenticationFailed extends SpeakeasyBase {
     errorCode?: any;
     errorCodeLabel?: any;

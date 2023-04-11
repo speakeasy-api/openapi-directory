@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { CrawlStatisticsTimePoint } from "./crawlstatisticstimepoint";
+/**
+ * Successful operation
+ */
 export declare class CrawlStatisticsTime extends SpeakeasyBase {
     avgDelay: CrawlStatisticsTimePoint[];
     avgSize: CrawlStatisticsTimePoint[];

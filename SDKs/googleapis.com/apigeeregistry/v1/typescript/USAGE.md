@@ -1,52 +1,49 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { ApigeeregistryProjectsLocationsApisCreateRequest, ApigeeregistryProjectsLocationsApisCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  ApigeeregistryProjectsLocationsApisCreateRequest,
+  ApigeeregistryProjectsLocationsApisCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: ApigeeregistryProjectsLocationsApisCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    apiId: "consequuntur",
-    callback: "dolor",
-    fields: "expedita",
-    key: "voluptas",
-    oauthToken: "fugit",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    uploadType: "rerum",
-    uploadProtocol: "dicta",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  apiInput: {
     annotations: {
-      "voluptatum": "et",
+      "distinctio": "quibusdam",
+      "unde": "nulla",
+      "corrupti": "illum",
     },
-    availability: "ut",
-    description: "dolorem",
-    displayName: "et",
+    availability: "vel",
+    description: "error",
+    displayName: "deserunt",
     labels: {
-      "iste": "vitae",
+      "iure": "magnam",
+      "debitis": "ipsa",
     },
-    name: "totam",
-    recommendedDeployment: "dolores",
-    recommendedVersion: "illum",
+    name: "delectus",
+    recommendedDeployment: "tempora",
+    recommendedVersion: "suscipit",
   },
+  accessToken: "molestiae",
+  alt: AltEnum.Proto,
+  apiId: "placeat",
+  callback: "voluptatum",
+  fields: "iusto",
+  key: "excepturi",
+  oauthToken: "nisi",
+  parent: "recusandae",
+  prettyPrint: false,
+  quotaUser: "temporibus",
+  uploadType: "ab",
+  uploadProtocol: "quis",
 };
 
 sdk.projects.apigeeregistryProjectsLocationsApisCreate(req).then((res: ApigeeregistryProjectsLocationsApisCreateResponse | AxiosError) => {

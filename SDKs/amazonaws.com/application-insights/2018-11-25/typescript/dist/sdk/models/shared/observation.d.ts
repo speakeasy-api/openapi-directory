@@ -3,7 +3,7 @@ import { CloudWatchEventSourceEnum } from "./cloudwatcheventsourceenum";
 import { LogFilterEnum } from "./logfilterenum";
 /**
  * Describes an anomaly or error with the application.
-**/
+ */
 export declare class Observation extends SpeakeasyBase {
     cloudWatchEventDetailType?: string;
     cloudWatchEventId?: string;

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostAttachLoadBalancerTargetGroupsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTAttachLoadBalancerTargetGroupsActionEnum {
     AttachLoadBalancerTargetGroups = "AttachLoadBalancerTargetGroups"
 }
-export declare enum PostAttachLoadBalancerTargetGroupsVersionEnum {
+export declare enum POSTAttachLoadBalancerTargetGroupsVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class PostAttachLoadBalancerTargetGroupsQueryParams extends SpeakeasyBase {
-    action: PostAttachLoadBalancerTargetGroupsActionEnum;
-    version: PostAttachLoadBalancerTargetGroupsVersionEnum;
-}
-export declare class PostAttachLoadBalancerTargetGroupsHeaders extends SpeakeasyBase {
+export declare class POSTAttachLoadBalancerTargetGroupsRequest extends SpeakeasyBase {
+    action: POSTAttachLoadBalancerTargetGroupsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTAttachLoadBalancerTargetGroupsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostAttachLoadBalancerTargetGroupsHeaders extends Speakeasy
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostAttachLoadBalancerTargetGroupsRequest extends SpeakeasyBase {
-    queryParams: PostAttachLoadBalancerTargetGroupsQueryParams;
-    headers: PostAttachLoadBalancerTargetGroupsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostAttachLoadBalancerTargetGroupsResponse extends SpeakeasyBase {
+export declare class POSTAttachLoadBalancerTargetGroupsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

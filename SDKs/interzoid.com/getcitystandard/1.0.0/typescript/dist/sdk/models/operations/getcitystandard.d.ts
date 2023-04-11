@@ -1,18 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetcitystandardQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetcitystandardRequest extends SpeakeasyBase {
+    /**
+     * City name from which to retrieve the standardized version
+     */
     city: string;
+    /**
+     * Your Interzoid license API key. Register at www.interzoid.com/register
+     */
     license: string;
 }
-export declare class Getcitystandard200ApplicationJson extends SpeakeasyBase {
+/**
+ * Standardized city name data
+ */
+export declare class Getcitystandard200ApplicationJSON extends SpeakeasyBase {
     cityStandard?: string;
     code?: string;
     credits?: string;
 }
-export declare class GetcitystandardRequest extends SpeakeasyBase {
-    queryParams: GetcitystandardQueryParams;
-}
 export declare class GetcitystandardResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getcitystandard200ApplicationJSONObject?: Getcitystandard200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Standardized city name data
+     */
+    getcitystandard200ApplicationJSONObject?: Getcitystandard200ApplicationJSON;
 }

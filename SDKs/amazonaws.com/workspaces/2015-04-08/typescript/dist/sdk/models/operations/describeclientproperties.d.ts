@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeClientPropertiesXAmzTargetEnum {
     WorkspacesServiceDescribeClientProperties = "WorkspacesService.DescribeClientProperties"
 }
-export declare class DescribeClientPropertiesHeaders extends SpeakeasyBase {
+export declare class DescribeClientPropertiesRequest extends SpeakeasyBase {
+    describeClientPropertiesRequest: shared.DescribeClientPropertiesRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class DescribeClientPropertiesHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeClientPropertiesXAmzTargetEnum;
 }
-export declare class DescribeClientPropertiesRequest extends SpeakeasyBase {
-    headers: DescribeClientPropertiesHeaders;
-    request: shared.DescribeClientPropertiesRequest;
-}
 export declare class DescribeClientPropertiesResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     describeClientPropertiesResult?: shared.DescribeClientPropertiesResult;
+    /**
+     * InvalidParameterValuesException
+     */
     invalidParameterValuesException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
 }

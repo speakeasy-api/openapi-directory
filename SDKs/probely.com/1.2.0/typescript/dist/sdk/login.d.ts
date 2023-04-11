@@ -1,5 +1,12 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Login users and verify token. For login we make use of [JSON web tokens](https://jwt.io/).
+ *
+ * @remarks
+ *
+ */
 export declare class Login {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,47 +16,51 @@ export declare class Login {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * postAuthObtain - Authenticate user
+     * Authenticate user
      *
+     * @remarks
      * The received token should be used for authenticated requests by including in the Authorization header as `Authorization: JWT <token>`.
      *
-    **/
-    postAuthObtain(req: operations.PostAuthObtainRequest, config?: AxiosRequestConfig): Promise<operations.PostAuthObtainResponse>;
+     */
+    postAuthObtain(req: shared.Login, config?: AxiosRequestConfig): Promise<operations.PostAuthObtainResponse>;
     /**
-     * postAuthRefresh - Replace token with a new one
-    **/
-    postAuthRefresh(req: operations.PostAuthRefreshRequest, config?: AxiosRequestConfig): Promise<operations.PostAuthRefreshResponse>;
+     * Replace token with a new one
+     */
+    postAuthRefresh(req: operations.PostAuthRefreshRequestBody, config?: AxiosRequestConfig): Promise<operations.PostAuthRefreshResponse>;
     /**
-     * postAuthRevoke - Revoke a token
-    **/
-    postAuthRevoke(req: operations.PostAuthRevokeRequest, config?: AxiosRequestConfig): Promise<operations.PostAuthRevokeResponse>;
+     * Revoke a token
+     */
+    postAuthRevoke(req: operations.PostAuthRevokeRequestBody, config?: AxiosRequestConfig): Promise<operations.PostAuthRevokeResponse>;
     /**
-     * postAuthVerify - Verify a token
+     * Verify a token
      *
+     * @remarks
      * Check for the validity of a user token.
      *
-    **/
-    postAuthVerify(req: operations.PostAuthVerifyRequest, config?: AxiosRequestConfig): Promise<operations.PostAuthVerifyResponse>;
+     */
+    postAuthVerify(req: operations.PostAuthVerifyRequestBody, config?: AxiosRequestConfig): Promise<operations.PostAuthVerifyResponse>;
     /**
-     * postEnterpriseAuthObtain - Enterprise user authentication
+     * Enterprise user authentication
      *
+     * @remarks
      * The received token should be used for authenticated requests by including in the Authorization header as `Authorization: JWT <token>`.
      *
-    **/
-    postEnterpriseAuthObtain(req: operations.PostEnterpriseAuthObtainRequest, config?: AxiosRequestConfig): Promise<operations.PostEnterpriseAuthObtainResponse>;
+     */
+    postEnterpriseAuthObtain(req: shared.Login, config?: AxiosRequestConfig): Promise<operations.PostEnterpriseAuthObtainResponse>;
     /**
-     * postEnterpriseAuthRefresh - Enterprise token refresh
-    **/
-    postEnterpriseAuthRefresh(req: operations.PostEnterpriseAuthRefreshRequest, config?: AxiosRequestConfig): Promise<operations.PostEnterpriseAuthRefreshResponse>;
+     * Enterprise token refresh
+     */
+    postEnterpriseAuthRefresh(req: operations.PostEnterpriseAuthRefreshRequestBody, config?: AxiosRequestConfig): Promise<operations.PostEnterpriseAuthRefreshResponse>;
     /**
-     * postEnterpriseAuthRevoke - Enterprise token revokation
-    **/
-    postEnterpriseAuthRevoke(req: operations.PostEnterpriseAuthRevokeRequest, config?: AxiosRequestConfig): Promise<operations.PostEnterpriseAuthRevokeResponse>;
+     * Enterprise token revokation
+     */
+    postEnterpriseAuthRevoke(req: operations.PostEnterpriseAuthRevokeRequestBody, config?: AxiosRequestConfig): Promise<operations.PostEnterpriseAuthRevokeResponse>;
     /**
-     * postEnterpriseAuthVerify - Enterprise token verification
+     * Enterprise token verification
      *
+     * @remarks
      * Check for the validity of a user token.
      *
-    **/
-    postEnterpriseAuthVerify(req: operations.PostEnterpriseAuthVerifyRequest, config?: AxiosRequestConfig): Promise<operations.PostEnterpriseAuthVerifyResponse>;
+     */
+    postEnterpriseAuthVerify(req: operations.PostEnterpriseAuthVerifyRequestBody, config?: AxiosRequestConfig): Promise<operations.PostEnterpriseAuthVerifyResponse>;
 }

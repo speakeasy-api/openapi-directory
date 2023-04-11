@@ -6,6 +6,6 @@ export declare class OptionGroupOptionsList extends SpeakeasyBase {
     majorEngineVersion?: string;
     minimumRequiredMinorEngineVersion?: string;
     name?: string;
-    optionsDependedOn?: Record<string, any>[];
+    optionsDependedOn?: string[];
     portRequired?: boolean;
 }

@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class DeleteTokenResponse extends SpeakeasyBase {
-    isSuccess?: Record<string, any>;
+    isSuccess?: boolean;
 }

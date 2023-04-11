@@ -1,10 +1,27 @@
-import { AxiosInstance } from "axios";
 import { Pagespeedapi } from "./pagespeedapi";
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://www.googleapis.com/pagespeedonline/v2"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * Analyzes the performance of a web page and provides tailored suggestions to make that page faster.
+ *
+ * @see {@link https://developers.google.com/speed/docs/insights/v2/getting-started}
+ */
 export declare class SDK {
     pagespeedapi: Pagespeedapi;
     _defaultClient: AxiosInstance;
@@ -13,5 +30,6 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
 }

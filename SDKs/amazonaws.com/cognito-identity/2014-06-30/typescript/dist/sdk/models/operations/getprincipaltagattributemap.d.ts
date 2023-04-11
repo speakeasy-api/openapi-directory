@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetPrincipalTagAttributeMapXAmzTargetEnum {
-    AwsCognitoIdentityServiceGetPrincipalTagAttributeMap = "AWSCognitoIdentityService.GetPrincipalTagAttributeMap"
+    AWSCognitoIdentityServiceGetPrincipalTagAttributeMap = "AWSCognitoIdentityService.GetPrincipalTagAttributeMap"
 }
-export declare class GetPrincipalTagAttributeMapHeaders extends SpeakeasyBase {
+export declare class GetPrincipalTagAttributeMapRequest extends SpeakeasyBase {
+    getPrincipalTagAttributeMapInput: shared.GetPrincipalTagAttributeMapInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class GetPrincipalTagAttributeMapHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetPrincipalTagAttributeMapXAmzTargetEnum;
 }
-export declare class GetPrincipalTagAttributeMapRequest extends SpeakeasyBase {
-    headers: GetPrincipalTagAttributeMapHeaders;
-    request: shared.GetPrincipalTagAttributeMapInput;
-}
 export declare class GetPrincipalTagAttributeMapResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getPrincipalTagAttributeMapResponse?: shared.GetPrincipalTagAttributeMapResponse;
+    /**
+     * InternalErrorException
+     */
     internalErrorException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * NotAuthorizedException
+     */
     notAuthorizedException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

@@ -1,6 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeSimulationJobBatchHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DescribeSimulationJobBatchRequestBody extends SpeakeasyBase {
+    /**
+     * The id of the batch to describe.
+     */
+    batch: string;
+}
+export declare class DescribeSimulationJobBatchRequest extends SpeakeasyBase {
+    requestBody: DescribeSimulationJobBatchRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -9,18 +17,24 @@ export declare class DescribeSimulationJobBatchHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DescribeSimulationJobBatchRequestBody extends SpeakeasyBase {
-    batch: string;
-}
-export declare class DescribeSimulationJobBatchRequest extends SpeakeasyBase {
-    headers: DescribeSimulationJobBatchHeaders;
-    request: DescribeSimulationJobBatchRequestBody;
-}
 export declare class DescribeSimulationJobBatchResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeSimulationJobBatchResponse?: shared.DescribeSimulationJobBatchResponse;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolSnmpv3GetEnginetimePathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolSnmpv3GetEnginetimeRequest extends SpeakeasyBase {
-    pathParams: ProtocolSnmpv3GetEnginetimePathParams;
+    /**
+     * Agent to show the SNMPv3 engine
+     */
+    agentNum: number;
 }
 export declare class ProtocolSnmpv3GetEnginetimeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolSnmpv3GetEnginetime200ApplicationJSONInt32Integer?: number;
 }

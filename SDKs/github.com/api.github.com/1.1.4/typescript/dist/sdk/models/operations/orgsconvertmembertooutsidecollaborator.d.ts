@@ -1,19 +1,33 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class OrgsConvertMemberToOutsideCollaboratorPathParams extends SpeakeasyBase {
-    org: string;
-    username: string;
-}
-export declare class OrgsConvertMemberToOutsideCollaborator403ApplicationJson extends SpeakeasyBase {
-    documentationUrl?: string;
-    message?: string;
+import { AxiosResponse } from "axios";
+export declare class OrgsConvertMemberToOutsideCollaboratorRequestBody extends SpeakeasyBase {
+    /**
+     * When set to `true`, the request will be performed asynchronously. Returns a 202 status code when the job is successfully queued.
+     */
+    async?: boolean;
 }
 export declare class OrgsConvertMemberToOutsideCollaboratorRequest extends SpeakeasyBase {
-    pathParams: OrgsConvertMemberToOutsideCollaboratorPathParams;
+    requestBody?: OrgsConvertMemberToOutsideCollaboratorRequestBody;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    org: string;
+    /**
+     * The handle for the GitHub user account.
+     */
+    username: string;
 }
 export declare class OrgsConvertMemberToOutsideCollaboratorResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Resource not found
+     */
     basicError?: shared.BasicError;
-    orgsConvertMemberToOutsideCollaborator403ApplicationJSONObject?: OrgsConvertMemberToOutsideCollaborator403ApplicationJson;
+    /**
+     * User is getting converted asynchronously
+     */
+    orgsConvertMemberToOutsideCollaborator202ApplicationJSONObject?: Record<string, any>;
 }

@@ -1,18 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AddVodPosterPathParams extends SpeakeasyBase {
-    ondemandId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class AddVodPosterSecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
+    oauth2: string;
 }
 export declare class AddVodPosterRequest extends SpeakeasyBase {
-    pathParams: AddVodPosterPathParams;
-    security: AddVodPosterSecurity;
+    /**
+     * The ID of the On Demand.
+     */
+    ondemandId: number;
 }
 export declare class AddVodPosterResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * You can't modify another user's On Demand page.
+     */
     legacyError?: shared.LegacyError;
+    /**
+     * The poster was added.
+     */
     picture?: shared.Picture;
 }

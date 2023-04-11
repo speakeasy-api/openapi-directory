@@ -1,9 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetareacodefromnumberQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetareacodefromnumberRequest extends SpeakeasyBase {
+    /**
+     * Your Interzoid license API key. Register at www.interzoid.com/register
+     */
     license: string;
+    /**
+     * Telephone number to retrieve area code information
+     */
     number: string;
 }
-export declare class Getareacodefromnumber200ApplicationJson extends SpeakeasyBase {
+/**
+ * Telephone number area code information
+ */
+export declare class Getareacodefromnumber200ApplicationJSON extends SpeakeasyBase {
     abbreviation?: string;
     areaCode?: string;
     code?: string;
@@ -11,11 +21,12 @@ export declare class Getareacodefromnumber200ApplicationJson extends SpeakeasyBa
     locale?: string;
     primaryCity?: string;
 }
-export declare class GetareacodefromnumberRequest extends SpeakeasyBase {
-    queryParams: GetareacodefromnumberQueryParams;
-}
 export declare class GetareacodefromnumberResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getareacodefromnumber200ApplicationJSONObject?: Getareacodefromnumber200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Telephone number area code information
+     */
+    getareacodefromnumber200ApplicationJSONObject?: Getareacodefromnumber200ApplicationJSON;
 }

@@ -1,15 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DomainRankPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DomainRankRequest extends SpeakeasyBase {
+    /**
+     * Domain
+     */
     domain: string;
 }
-export declare class DomainRank200ApplicationJson extends SpeakeasyBase {
+/**
+ * OK
+ */
+export declare class DomainRank200ApplicationJSON extends SpeakeasyBase {
     rank?: number;
-}
-export declare class DomainRankRequest extends SpeakeasyBase {
-    pathParams: DomainRankPathParams;
 }
 export declare class DomainRankResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    domainRank200ApplicationJSONObject?: DomainRank200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
+    domainRank200ApplicationJSONObject?: DomainRank200ApplicationJSON;
 }

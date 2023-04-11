@@ -1,37 +1,105 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
- * The last error that occurred for VPC endpoint.
-**/
+ * Describes a DNS entry.
+ */
+export declare class CreateVpcEndpointResultVpcEndpointDnsEntries extends SpeakeasyBase {
+    dnsName?: string;
+    hostedZoneId?: string;
+}
+/**
+ * The DNS records created for the endpoint.
+ */
+export declare enum CreateVpcEndpointResultVpcEndpointDnsOptionsDnsRecordIpTypeEnum {
+    Ipv4 = "ipv4",
+    Dualstack = "dualstack",
+    Ipv6 = "ipv6",
+    ServiceDefined = "service-defined"
+}
+/**
+ * The DNS options for the endpoint.
+ */
+export declare class CreateVpcEndpointResultVpcEndpointDnsOptions extends SpeakeasyBase {
+    dnsRecordIpType?: CreateVpcEndpointResultVpcEndpointDnsOptionsDnsRecordIpTypeEnum;
+    privateDnsOnlyForInboundResolverEndpoint?: boolean;
+}
+/**
+ * Describes a security group.
+ */
+export declare class CreateVpcEndpointResultVpcEndpointGroups extends SpeakeasyBase {
+    groupId?: string;
+    groupName?: string;
+}
+/**
+ * The IP address type for the endpoint.
+ */
+export declare enum CreateVpcEndpointResultVpcEndpointIpAddressTypeEnum {
+    Ipv4 = "ipv4",
+    Dualstack = "dualstack",
+    Ipv6 = "ipv6"
+}
+/**
+ * The last error that occurred for endpoint.
+ */
 export declare class CreateVpcEndpointResultVpcEndpointLastError extends SpeakeasyBase {
-    code?: Record<string, any>;
-    message?: Record<string, any>;
+    code?: string;
+    message?: string;
+}
+/**
+ * The state of the endpoint.
+ */
+export declare enum CreateVpcEndpointResultVpcEndpointStateEnum {
+    PendingAcceptance = "PendingAcceptance",
+    Pending = "Pending",
+    Available = "Available",
+    Deleting = "Deleting",
+    Deleted = "Deleted",
+    Rejected = "Rejected",
+    Failed = "Failed",
+    Expired = "Expired"
+}
+/**
+ * Describes a tag.
+ */
+export declare class CreateVpcEndpointResultVpcEndpointTags extends SpeakeasyBase {
+    key?: string;
+    value?: string;
+}
+/**
+ * The type of endpoint.
+ */
+export declare enum CreateVpcEndpointResultVpcEndpointVpcEndpointTypeEnum {
+    Interface = "Interface",
+    Gateway = "Gateway",
+    GatewayLoadBalancer = "GatewayLoadBalancer"
 }
 /**
  * Information about the endpoint.
-**/
+ */
 export declare class CreateVpcEndpointResultVpcEndpoint extends SpeakeasyBase {
-    creationTimestamp?: Record<string, any>;
-    dnsEntries?: Record<string, any>;
-    groups?: Record<string, any>;
+    creationTimestamp?: Date;
+    dnsEntries?: CreateVpcEndpointResultVpcEndpointDnsEntries[];
+    dnsOptions?: CreateVpcEndpointResultVpcEndpointDnsOptions;
+    groups?: CreateVpcEndpointResultVpcEndpointGroups[];
+    ipAddressType?: CreateVpcEndpointResultVpcEndpointIpAddressTypeEnum;
     lastError?: CreateVpcEndpointResultVpcEndpointLastError;
-    networkInterfaceIds?: Record<string, any>;
-    ownerId?: Record<string, any>;
-    policyDocument?: Record<string, any>;
-    privateDnsEnabled?: Record<string, any>;
-    requesterManaged?: Record<string, any>;
-    routeTableIds?: Record<string, any>;
-    serviceName?: Record<string, any>;
-    state?: Record<string, any>;
-    subnetIds?: Record<string, any>;
-    tags?: Record<string, any>;
-    vpcEndpointId?: Record<string, any>;
-    vpcEndpointType?: Record<string, any>;
-    vpcId?: Record<string, any>;
+    networkInterfaceIds?: string[];
+    ownerId?: string;
+    policyDocument?: string;
+    privateDnsEnabled?: boolean;
+    requesterManaged?: boolean;
+    routeTableIds?: string[];
+    serviceName?: string;
+    state?: CreateVpcEndpointResultVpcEndpointStateEnum;
+    subnetIds?: string[];
+    tags?: CreateVpcEndpointResultVpcEndpointTags[];
+    vpcEndpointId?: string;
+    vpcEndpointType?: CreateVpcEndpointResultVpcEndpointVpcEndpointTypeEnum;
+    vpcId?: string;
 }
 /**
- * Contains the output of CreateVpcEndpoint.
-**/
+ * Success
+ */
 export declare class CreateVpcEndpointResult extends SpeakeasyBase {
-    clientToken?: Record<string, any>;
+    clientToken?: string;
     vpcEndpoint?: CreateVpcEndpointResultVpcEndpoint;
 }

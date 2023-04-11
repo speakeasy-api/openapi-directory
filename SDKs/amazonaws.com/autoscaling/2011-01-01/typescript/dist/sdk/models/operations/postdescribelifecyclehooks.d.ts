@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeLifecycleHooksActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeLifecycleHooksActionEnum {
     DescribeLifecycleHooks = "DescribeLifecycleHooks"
 }
-export declare enum PostDescribeLifecycleHooksVersionEnum {
+export declare enum POSTDescribeLifecycleHooksVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class PostDescribeLifecycleHooksQueryParams extends SpeakeasyBase {
-    action: PostDescribeLifecycleHooksActionEnum;
-    version: PostDescribeLifecycleHooksVersionEnum;
-}
-export declare class PostDescribeLifecycleHooksHeaders extends SpeakeasyBase {
+export declare class POSTDescribeLifecycleHooksRequest extends SpeakeasyBase {
+    action: POSTDescribeLifecycleHooksActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDescribeLifecycleHooksVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDescribeLifecycleHooksHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeLifecycleHooksRequest extends SpeakeasyBase {
-    queryParams: PostDescribeLifecycleHooksQueryParams;
-    headers: PostDescribeLifecycleHooksHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeLifecycleHooksResponse extends SpeakeasyBase {
+export declare class POSTDescribeLifecycleHooksResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

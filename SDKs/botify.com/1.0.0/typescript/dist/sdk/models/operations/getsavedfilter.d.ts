@@ -1,16 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetSavedFilterPathParams extends SpeakeasyBase {
-    identifier: string;
-    projectSlug: string;
-    username: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetSavedFilterRequest extends SpeakeasyBase {
-    pathParams: GetSavedFilterPathParams;
+    /**
+     * Saved Filter's identifier
+     */
+    identifier: string;
+    /**
+     * Project's identifier
+     */
+    projectSlug: string;
+    /**
+     * User's identifier
+     */
+    username: string;
 }
 export declare class GetSavedFilterResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * error payload
+     */
     defaultPayload?: shared.DefaultPayload;
+    /**
+     * Successful operation
+     */
     projectSavedFilter?: shared.ProjectSavedFilter;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

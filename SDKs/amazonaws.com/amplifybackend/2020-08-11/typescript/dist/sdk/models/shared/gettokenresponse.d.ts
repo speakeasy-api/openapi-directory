@@ -1,7 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class GetTokenResponse extends SpeakeasyBase {
-    appId?: Record<string, any>;
-    challengeCode?: Record<string, any>;
-    sessionId?: Record<string, any>;
-    ttl?: Record<string, any>;
+    appId?: string;
+    challengeCode?: string;
+    sessionId?: string;
+    ttl?: string;
 }

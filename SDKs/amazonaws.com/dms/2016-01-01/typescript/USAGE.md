@@ -1,38 +1,48 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AddTagsToResourceRequest, AddTagsToResourceResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  AddTagsToResourceRequest,
+  AddTagsToResourceResponse,
+  AddTagsToResourceXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: AddTagsToResourceRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "AmazonDMSv20160101.AddTagsToResource",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
-    resourceArn: "fugit",
+});
+
+const req: AddTagsToResourceRequest = {
+  addTagsToResourceMessage: {
+    resourceArn: "corrupti",
     tags: [
       {
-        key: "nihil",
-        resourceArn: "rerum",
-        value: "dicta",
+        key: "distinctio",
+        resourceArn: "quibusdam",
+        value: "unde",
+      },
+      {
+        key: "nulla",
+        resourceArn: "corrupti",
+        value: "illum",
+      },
+      {
+        key: "vel",
+        resourceArn: "error",
+        value: "deserunt",
       },
     ],
   },
+  xAmzAlgorithm: "suscipit",
+  xAmzContentSha256: "iure",
+  xAmzCredential: "magnam",
+  xAmzDate: "debitis",
+  xAmzSecurityToken: "ipsa",
+  xAmzSignature: "delectus",
+  xAmzSignedHeaders: "tempora",
+  xAmzTarget: AddTagsToResourceXAmzTargetEnum.AmazonDMSv20160101AddTagsToResource,
 };
 
 sdk.addTagsToResource(req).then((res: AddTagsToResourceResponse | AxiosError) => {

@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { TermXRef } from "./termxref";
+/**
+ * OK
+ */
 export declare class Term extends SpeakeasyBase {
     accId?: string;
     comment?: string;

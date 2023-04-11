@@ -1,54 +1,73 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class GetAllAccountsSecurity extends SpeakeasyBase {
+    basicAuth?: shared.SchemeBasicAuth;
+    bearerAuth?: string;
+}
+/**
+ * Filter by provider
+ */
 export declare enum GetAllAccountsProviderEnum {
     Messenger = "messenger",
     ViberServiceMsg = "viber_service_msg",
     Whatsapp = "whatsapp"
 }
-export declare class GetAllAccountsQueryParams extends SpeakeasyBase {
+export declare class GetAllAccountsRequest extends SpeakeasyBase {
+    /**
+     * Page number of the results
+     */
     pageNumber?: number;
+    /**
+     * Page size of the results
+     */
     pageSize?: number;
+    /**
+     * Filter by provider
+     */
     provider?: GetAllAccountsProviderEnum;
 }
-export declare class GetAllAccountsSecurity extends SpeakeasyBase {
-    bearerAuth?: shared.SchemeBearerAuth;
-    basicAuth?: shared.SchemeBasicAuth;
-}
-export declare class GetAllAccounts200ApplicationJsonLinksFirst extends SpeakeasyBase {
+export declare class GetAllAccounts200ApplicationJSONLinksFirst extends SpeakeasyBase {
     href?: string;
 }
-export declare class GetAllAccounts200ApplicationJsonLinksLast extends SpeakeasyBase {
+export declare class GetAllAccounts200ApplicationJSONLinksLast extends SpeakeasyBase {
     href?: string;
 }
-export declare class GetAllAccounts200ApplicationJsonLinksNext extends SpeakeasyBase {
+export declare class GetAllAccounts200ApplicationJSONLinksNext extends SpeakeasyBase {
     href?: string;
 }
-export declare class GetAllAccounts200ApplicationJsonLinksPrev extends SpeakeasyBase {
+export declare class GetAllAccounts200ApplicationJSONLinksPrev extends SpeakeasyBase {
     href?: string;
 }
-export declare class GetAllAccounts200ApplicationJsonLinksSelf extends SpeakeasyBase {
+export declare class GetAllAccounts200ApplicationJSONLinksSelf extends SpeakeasyBase {
     href?: string;
 }
-export declare class GetAllAccounts200ApplicationJsonLinks extends SpeakeasyBase {
-    first?: GetAllAccounts200ApplicationJsonLinksFirst;
-    last?: GetAllAccounts200ApplicationJsonLinksLast;
-    next?: GetAllAccounts200ApplicationJsonLinksNext;
-    prev?: GetAllAccounts200ApplicationJsonLinksPrev;
-    self?: GetAllAccounts200ApplicationJsonLinksSelf;
+export declare class GetAllAccounts200ApplicationJSONLinks extends SpeakeasyBase {
+    first?: GetAllAccounts200ApplicationJSONLinksFirst;
+    last?: GetAllAccounts200ApplicationJSONLinksLast;
+    next?: GetAllAccounts200ApplicationJSONLinksNext;
+    prev?: GetAllAccounts200ApplicationJSONLinksPrev;
+    self?: GetAllAccounts200ApplicationJSONLinksSelf;
 }
-export declare class GetAllAccounts200ApplicationJson extends SpeakeasyBase {
+/**
+ * OK.
+ */
+export declare class GetAllAccounts200ApplicationJSON extends SpeakeasyBase {
     embedded?: shared.GetAllAccountResponse[];
-    links?: GetAllAccounts200ApplicationJsonLinks;
+    links?: GetAllAccounts200ApplicationJSONLinks;
     pageNumber?: number;
     pageSize?: number;
 }
-export declare class GetAllAccountsRequest extends SpeakeasyBase {
-    queryParams: GetAllAccountsQueryParams;
-    security: GetAllAccountsSecurity;
-}
 export declare class GetAllAccountsResponse extends SpeakeasyBase {
+    /**
+     * Unauthorized.
+     */
     fourHundredAndOneResponse?: shared.FourHundredAndOneResponse;
     contentType: string;
-    getAllAccounts200ApplicationJSONObject?: GetAllAccounts200ApplicationJson;
+    /**
+     * OK.
+     */
+    getAllAccounts200ApplicationJSONObject?: GetAllAccounts200ApplicationJSON;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

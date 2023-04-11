@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Users {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class Users {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getEntitiesUserAccessible - Multi-entity: List all entities that a user can access
+     * Multi-entity: List all entities that a user can access
      *
+     * @remarks
      * **Note:** The Multi-entity feature is in **Limited Availability**. If you wish to have access to the feature, submit a request at [Zuora Global Support](http://support.zuora.com/).
      *
      * Retrieves detailed information about all the entities that a user has permission to access.
@@ -18,11 +19,12 @@ export declare class Users {
      * ## User Access Permission
      * You can make the call as any entity user.
      *
-    **/
-    getEntitiesUserAccessible(req: operations.GetEntitiesUserAccessibleRequest, config?: AxiosRequestConfig): Promise<operations.GetEntitiesUserAccessibleResponse>;
+     */
+    getEntitiesUserAccessible(req: operations.GETEntitiesUserAccessibleRequest, config?: AxiosRequestConfig): Promise<operations.GETEntitiesUserAccessibleResponse>;
     /**
-     * putAcceptUserAccess - Multi-entity: Accept user access
+     * Multi-entity: Accept user access
      *
+     * @remarks
      * **Note:** The Multi-entity feature is in **Limited Availability**. If you wish to have access to the feature, submit a request at [Zuora Global Support](http://support.zuora.com/).
      *
      * Accepts user access to an entity.
@@ -30,11 +32,12 @@ export declare class Users {
      * ## User Access Permission
      * You must make the calls as an administrator of the entity that you want to accept the user access to.
      *
-    **/
-    putAcceptUserAccess(req: operations.PutAcceptUserAccessRequest, config?: AxiosRequestConfig): Promise<operations.PutAcceptUserAccessResponse>;
+     */
+    putAcceptUserAccess(req: operations.PUTAcceptUserAccessRequest, config?: AxiosRequestConfig): Promise<operations.PUTAcceptUserAccessResponse>;
     /**
-     * putDenyUserAccess - Multi-entity: Deny user access
+     * Multi-entity: Deny user access
      *
+     * @remarks
      * **Note:** The Multi-entity feature is in **Limited Availability**. If you wish to have access to the feature, submit a request at [Zuora Global Support](http://support.zuora.com/).
      *
      * Denies a user access to an entity.
@@ -42,11 +45,12 @@ export declare class Users {
      * ## User Access Permission
      * You must make the calls as an administrator of the entity that you want to deny the user access to.
      *
-    **/
-    putDenyUserAccess(req: operations.PutDenyUserAccessRequest, config?: AxiosRequestConfig): Promise<operations.PutDenyUserAccessResponse>;
+     */
+    putDenyUserAccess(req: operations.PUTDenyUserAccessRequest, config?: AxiosRequestConfig): Promise<operations.PUTDenyUserAccessResponse>;
     /**
-     * putSendUserAccessRequests - Multi-entity: Send user access requests
+     * Multi-entity: Send user access requests
      *
+     * @remarks
      * **Note:** The Multi-entity feature is in **Limited Availability**. If you wish to have access to the feature, submit a request at [Zuora Global Support](http://support.zuora.com/).
      *
      * Sends access requests to the entities that a user wants to access.
@@ -54,6 +58,6 @@ export declare class Users {
      * ## User Access Permission
      * You must make the call as an administrator of the entity, in which the request user is created. Also, this administrator must have the permission to access the entities that the request user wants to access.
      *
-    **/
-    putSendUserAccessRequests(req: operations.PutSendUserAccessRequestsRequest, config?: AxiosRequestConfig): Promise<operations.PutSendUserAccessRequestsResponse>;
+     */
+    putSendUserAccessRequests(req: operations.PUTSendUserAccessRequestsRequest, config?: AxiosRequestConfig): Promise<operations.PUTSendUserAccessRequestsResponse>;
 }

@@ -1,11 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteIntentPathParams extends SpeakeasyBase {
-    botId: string;
-    botVersion: string;
-    intentId: string;
-    localeId: string;
-}
-export declare class DeleteIntentHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteIntentRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +8,49 @@ export declare class DeleteIntentHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DeleteIntentRequest extends SpeakeasyBase {
-    pathParams: DeleteIntentPathParams;
-    headers: DeleteIntentHeaders;
+    /**
+     * The identifier of the bot associated with the intent.
+     */
+    botId: string;
+    /**
+     * The version of the bot associated with the intent.
+     */
+    botVersion: string;
+    /**
+     * The unique identifier of the intent to delete.
+     */
+    intentId: string;
+    /**
+     * The identifier of the language and locale where the bot will be deleted. The string must match one of the supported locales. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html">Supported languages</a>.
+     */
+    localeId: string;
 }
 export declare class DeleteIntentResponse extends SpeakeasyBase {
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * PreconditionFailedException
+     */
     preconditionFailedException?: any;
-    serviceQuotaExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceQuotaExceededException
+     */
+    serviceQuotaExceededException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

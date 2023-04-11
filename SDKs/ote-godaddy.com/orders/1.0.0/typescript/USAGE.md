@@ -1,20 +1,18 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetRequest, GetResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetRequest,
+  GetResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetRequest = {
-  pathParams: {
-    orderId: "sit",
-  },
-  headers: {
-    xMarketId: "voluptas",
-    xShopperId: "culpa",
-  },
+  xMarketId: "corrupti",
+  xShopperId: "provident",
+  orderId: "distinctio",
 };
 
 sdk.v1.get(req).then((res: GetResponse | AxiosError) => {

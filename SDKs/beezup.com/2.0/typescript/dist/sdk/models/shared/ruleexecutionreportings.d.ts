@@ -1,7 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { BeezUPCommonPaginationResult } from "./beezupcommonpaginationresult";
 import { RuleExecutionReporting } from "./ruleexecutionreporting";
-import { BeezUpCommonPaginationResult } from "./beezupcommonpaginationresult";
+/**
+ * Rules executions list
+ */
 export declare class RuleExecutionReportings extends SpeakeasyBase {
+    /**
+     * The rules executions history
+     */
     executions?: RuleExecutionReporting[];
-    paginationResult?: BeezUpCommonPaginationResult;
+    paginationResult?: BeezUPCommonPaginationResult;
 }

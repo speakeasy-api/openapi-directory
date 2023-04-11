@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class AccessSetAcldbPathParams extends SpeakeasyBase {
-    databaseName: string;
-}
+import { AxiosResponse } from "axios";
 export declare class AccessSetAcldbRequest extends SpeakeasyBase {
-    pathParams: AccessSetAcldbPathParams;
+    /**
+     * Database name to use
+     */
+    databaseName: string;
 }
 export declare class AccessSetAcldbResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     accessSetAcldb200ApplicationJSONString?: string;
 }

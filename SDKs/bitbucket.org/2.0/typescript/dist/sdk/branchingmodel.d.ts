@@ -1,5 +1,17 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * The branching model resource is used to modify the branching model
+ *
+ * @remarks
+ * for a repository.
+ *
+ * You can use the branching model to define a branch based workflow
+ * for your repositories. When you map your workflow to branch types,
+ * you can ensure that branches are named consistently by configuring
+ * which branch types to make available.
+ *
+ */
 export declare class BranchingModel {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +21,12 @@ export declare class BranchingModel {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getRepositoriesWorkspaceRepoSlugBranchingModel - Return the branching model as applied to the repository. This view is
+     * Get the branching model for a repository
+     *
+     * @remarks
+     * Return the branching model as applied to the repository. This view is
      * read-only. The branching model settings can be changed using the
-     * [settings](branching-model/settings#get) API.
+     * [settings](#api-repositories-workspace-repo-slug-branching-model-settings-get) API.
      *
      * The returned object:
      *
@@ -79,10 +94,13 @@ export declare class BranchingModel {
      *   }
      * }
      * ```
-    **/
-    getRepositoriesWorkspaceRepoSlugBranchingModel(req: operations.GetRepositoriesWorkspaceRepoSlugBranchingModelRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugBranchingModelResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugBranchingModel(req: operations.GetRepositoriesWorkspaceRepoSlugBranchingModelRequest, security: operations.GetRepositoriesWorkspaceRepoSlugBranchingModelSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugBranchingModelResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugBranchingModelSettings - Return the branching model configuration for a repository. The returned
+     * Get the branching model config for a repository
+     *
+     * @remarks
+     * Return the branching model configuration for a repository. The returned
      * object:
      *
      * 1. Always has a `development` property for the development branch.
@@ -92,7 +110,7 @@ export declare class BranchingModel {
      *
      * This is the raw configuration for the branching model. A client
      * wishing to see the branching model with its actual current branches may
-     * find the [active model API](../branching-model#get) more useful.
+     * find the [active model API](/cloud/bitbucket/rest/api-group-branching-model/#api-repositories-workspace-repo-slug-branching-model-get) more useful.
      *
      * Example body:
      *
@@ -139,10 +157,141 @@ export declare class BranchingModel {
      *   }
      * }
      * ```
-    **/
-    getRepositoriesWorkspaceRepoSlugBranchingModelSettings(req: operations.GetRepositoriesWorkspaceRepoSlugBranchingModelSettingsRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugBranchingModelSettingsResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugBranchingModelSettings(req: operations.GetRepositoriesWorkspaceRepoSlugBranchingModelSettingsRequest, security: operations.GetRepositoriesWorkspaceRepoSlugBranchingModelSettingsSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugBranchingModelSettingsResponse>;
     /**
-     * putRepositoriesWorkspaceRepoSlugBranchingModelSettings - Update the branching model configuration for a repository.
+     * Get the effective, or currently applied, branching model for a repository
+     */
+    getRepositoriesWorkspaceRepoSlugEffectiveBranchingModel(req: operations.GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelRequest, security: operations.GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelResponse>;
+    /**
+     * Get the branching model for a project
+     *
+     * @remarks
+     * Return the branching model set at the project level. This view is
+     * read-only. The branching model settings can be changed using the
+     * [settings](#api-workspaces-workspace-projects-project-key-branching-model-settings-get)
+     * API.
+     *
+     * The returned object:
+     *
+     * 1. Always has a `development` property. `development.name` is
+     *    the user-specified branch that can be inherited by an individual repository's
+     *    branching model.
+     * 2. Might have a `production` property. `production` will not
+     *    be present when `production` is disabled.
+     *    `production.name` is the user-specified branch that can be
+     *    inherited by an individual repository's branching model.
+     * 3. Always has a `branch_types` array which contains all enabled branch
+     *    types.
+     *
+     * Example body:
+     *
+     * ```
+     * {
+     *   "development": {
+     *     "name": "master",
+     *     "use_mainbranch": true
+     *   },
+     *   "production": {
+     *     "name": "production",
+     *     "use_mainbranch": false
+     *   },
+     *   "branch_types": [
+     *     {
+     *       "kind": "release",
+     *       "prefix": "release/"
+     *     },
+     *     {
+     *       "kind": "hotfix",
+     *       "prefix": "hotfix/"
+     *     },
+     *     {
+     *       "kind": "feature",
+     *       "prefix": "feature/"
+     *     },
+     *     {
+     *       "kind": "bugfix",
+     *       "prefix": "bugfix/"
+     *     }
+     *   ],
+     *   "type": "project_branching_model",
+     *   "links": {
+     *     "self": {
+     *       "href": "https://api.bitbucket.org/.../branching-model"
+     *     }
+     *   }
+     * }
+     * ```
+     */
+    getWorkspacesWorkspaceProjectsProjectKeyBranchingModel(req: operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelRequest, security: operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSecurity, config?: AxiosRequestConfig): Promise<operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelResponse>;
+    /**
+     * Get the branching model config for a project
+     *
+     * @remarks
+     * Return the branching model configuration for a project. The returned
+     * object:
+     *
+     * 1. Always has a `development` property for the development branch.
+     * 2. Always a `production` property for the production branch. The
+     *    production branch can be disabled.
+     * 3. The `branch_types` contains all the branch types.
+     *
+     *
+     * This is the raw configuration for the branching model. A client
+     * wishing to see the branching model with its actual current branches may find the
+     * [active model API](#api-workspaces-workspace-projects-project-key-branching-model-get)
+     * more useful.
+     *
+     * Example body:
+     *
+     * ```
+     * {
+     *   "development": {
+     *     "name": null,
+     *     "use_mainbranch": true
+     *   },
+     *   "production": {
+     *     "name": "production",
+     *     "use_mainbranch": false,
+     *     "enabled": false
+     *   },
+     *   "branch_types": [
+     *     {
+     *       "kind": "release",
+     *       "enabled": true,
+     *       "prefix": "release/"
+     *     },
+     *     {
+     *       "kind": "hotfix",
+     *       "enabled": true,
+     *       "prefix": "hotfix/"
+     *     },
+     *     {
+     *       "kind": "feature",
+     *       "enabled": true,
+     *       "prefix": "feature/"
+     *     },
+     *     {
+     *       "kind": "bugfix",
+     *       "enabled": false,
+     *       "prefix": "bugfix/"
+     *     }
+     *   ],
+     *   "type": "branching_model_settings",
+     *   "links": {
+     *     "self": {
+     *       "href": "https://api.bitbucket.org/.../branching-model/settings"
+     *     }
+     *   }
+     * }
+     * ```
+     */
+    getWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettings(req: operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsRequest, security: operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsSecurity, config?: AxiosRequestConfig): Promise<operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsResponse>;
+    /**
+     * Update the branching model config for a repository
+     *
+     * @remarks
+     * Update the branching model configuration for a repository.
      *
      * The `development` branch can be configured to a specific branch or to
      * track the main branch. When set to a specific branch it must
@@ -221,6 +370,87 @@ export declare class BranchingModel {
      *       ]
      *     }
      * ```
-    **/
-    putRepositoriesWorkspaceRepoSlugBranchingModelSettings(req: operations.PutRepositoriesWorkspaceRepoSlugBranchingModelSettingsRequest, config?: AxiosRequestConfig): Promise<operations.PutRepositoriesWorkspaceRepoSlugBranchingModelSettingsResponse>;
+     *
+     * There is currently a side effect when using this API endpoint. If the
+     * repository is inheriting branching model settings from its project,
+     * updating the branching model for this repository will disable the
+     * project setting inheritance.
+     *
+     *
+     * We have deprecated this side effect and will remove it on 1 August 2022.
+     */
+    putRepositoriesWorkspaceRepoSlugBranchingModelSettings(req: operations.PutRepositoriesWorkspaceRepoSlugBranchingModelSettingsRequest, security: operations.PutRepositoriesWorkspaceRepoSlugBranchingModelSettingsSecurity, config?: AxiosRequestConfig): Promise<operations.PutRepositoriesWorkspaceRepoSlugBranchingModelSettingsResponse>;
+    /**
+     * Update the branching model config for a project
+     *
+     * @remarks
+     * Update the branching model configuration for a project.
+     *
+     * The `development` branch can be configured to a specific branch or to
+     * track the main branch. Any branch name can be supplied, but will only
+     * successfully be applied to a repository via inheritance if that branch
+     * exists for that repository. Only the passed properties will be updated. The
+     * properties not passed will be left unchanged. A request without a
+     * `development` property will leave the development branch unchanged.
+     *
+     * The `production` branch can be a specific branch, the main
+     * branch or disabled. Any branch name can be supplied, but will only
+     * successfully be applied to a repository via inheritance if that branch
+     * exists for that repository. The `enabled` property can be used to enable (`true`)
+     * or disable (`false`) it. Only the passed properties will be updated. The
+     * properties not passed will be left unchanged. A request without a
+     * `production` property will leave the production branch unchanged.
+     *
+     * The `branch_types` property contains the branch types to be updated.
+     * Only the branch types passed will be updated. All updates will be
+     * rejected if it would leave the branching model in an invalid state.
+     * For branch types this means that:
+     *
+     * 1. The prefixes for all enabled branch types are valid. For example,
+     *    it is not possible to use '*' inside a Git prefix.
+     * 2. A prefix of an enabled branch type must not be a prefix of another
+     *    enabled branch type. This is to ensure that a branch can be easily
+     *    classified by its prefix unambiguously.
+     *
+     * It is possible to store an invalid prefix if that branch type would be
+     * left disabled. Only the passed properties will be updated. The
+     * properties not passed will be left unchanged. Each branch type must
+     * have a `kind` property to identify it.
+     *
+     * Example Body:
+     *
+     * ```
+     *     {
+     *       "development": {
+     *         "use_mainbranch": true
+     *       },
+     *       "production": {
+     *         "enabled": true,
+     *         "use_mainbranch": false,
+     *         "name": "production"
+     *       },
+     *       "branch_types": [
+     *         {
+     *           "kind": "bugfix",
+     *           "enabled": true,
+     *           "prefix": "bugfix/"
+     *         },
+     *         {
+     *           "kind": "feature",
+     *           "enabled": true,
+     *           "prefix": "feature/"
+     *         },
+     *         {
+     *           "kind": "hotfix",
+     *           "prefix": "hotfix/"
+     *         },
+     *         {
+     *           "kind": "release",
+     *           "enabled": false,
+     *         }
+     *       ]
+     *     }
+     * ```
+     */
+    putWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettings(req: operations.PutWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsRequest, security: operations.PutWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsSecurity, config?: AxiosRequestConfig): Promise<operations.PutWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsResponse>;
 }

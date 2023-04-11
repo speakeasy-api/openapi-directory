@@ -14,7 +14,7 @@ export declare enum ServicesBenefitsEnum {
     PreDischargeClaimAssistance = "PreDischargeClaimAssistance",
     TransitionAssistance = "TransitionAssistance",
     UpdatingDirectDepositInformation = "UpdatingDirectDepositInformation",
-    VaHomeLoanAssistance = "VAHomeLoanAssistance",
+    VAHomeLoanAssistance = "VAHomeLoanAssistance",
     VocationalRehabilitationAndEmploymentAssistance = "VocationalRehabilitationAndEmploymentAssistance"
 }
 export declare enum ServicesHealthEnum {

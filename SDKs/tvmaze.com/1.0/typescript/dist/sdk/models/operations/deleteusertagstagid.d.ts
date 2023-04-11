@@ -1,11 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteUserTagsTagIdPathParams extends SpeakeasyBase {
-    tagId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteUserTagsTagIdRequest extends SpeakeasyBase {
-    pathParams: DeleteUserTagsTagIdPathParams;
+    tagId: number;
 }
 export declare class DeleteUserTagsTagIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

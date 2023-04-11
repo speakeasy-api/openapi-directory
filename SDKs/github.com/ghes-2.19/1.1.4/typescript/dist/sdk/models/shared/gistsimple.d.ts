@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { GistHistory } from "./gisthistory";
+import { NullableSimpleUser } from "./nullablesimpleuser";
+import { PublicUser } from "./publicuser";
 import { SimpleUser } from "./simpleuser";
 export declare class GistSimpleFiles extends SpeakeasyBase {
     content?: string;
@@ -17,32 +20,8 @@ export declare class GistSimpleGistFiles extends SpeakeasyBase {
     type?: string;
 }
 /**
- * Simple User
-**/
-export declare class GistSimpleGistSimpleUser extends SpeakeasyBase {
-    avatarUrl: string;
-    eventsUrl: string;
-    followersUrl: string;
-    followingUrl: string;
-    gistsUrl: string;
-    gravatarId: string;
-    htmlUrl: string;
-    id: number;
-    login: string;
-    nodeId: string;
-    organizationsUrl: string;
-    receivedEventsUrl: string;
-    reposUrl: string;
-    siteAdmin: boolean;
-    starredAt?: string;
-    starredUrl: string;
-    subscriptionsUrl: string;
-    type: string;
-    url: string;
-}
-/**
  * Gist
-**/
+ */
 export declare class GistSimpleGist extends SpeakeasyBase {
     comments: number;
     commentsUrl: string;
@@ -58,16 +37,32 @@ export declare class GistSimpleGist extends SpeakeasyBase {
     htmlUrl: string;
     id: string;
     nodeId: string;
-    owner?: GistSimpleGistSimpleUser;
+    /**
+     * Simple User
+     */
+    owner?: NullableSimpleUser;
     public: boolean;
     truncated?: boolean;
     updatedAt: Date;
     url: string;
-    user: GistSimpleGistSimpleUser;
+    /**
+     * Simple User
+     */
+    user: NullableSimpleUser;
+}
+export declare class GistSimpleForks extends SpeakeasyBase {
+    createdAt?: Date;
+    id?: string;
+    updatedAt?: Date;
+    url?: string;
+    /**
+     * Public User
+     */
+    user?: PublicUser;
 }
 /**
  * Gist Simple
-**/
+ */
 export declare class GistSimple extends SpeakeasyBase {
     comments?: number;
     commentsUrl?: string;
@@ -75,15 +70,21 @@ export declare class GistSimple extends SpeakeasyBase {
     createdAt?: string;
     description?: string;
     files?: Record<string, GistSimpleFiles>;
+    /**
+     * Gist
+     */
     forkOf?: GistSimpleGist;
-    forks?: Record<string, any>[];
+    forks?: GistSimpleForks[];
     forksUrl?: string;
     gitPullUrl?: string;
     gitPushUrl?: string;
-    history?: Record<string, any>[];
+    history?: GistHistory[];
     htmlUrl?: string;
     id?: string;
     nodeId?: string;
+    /**
+     * Simple User
+     */
     owner?: SimpleUser;
     public?: boolean;
     truncated?: boolean;

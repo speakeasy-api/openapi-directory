@@ -1,3 +1,4 @@
 export declare enum InsightTypeEnum {
-    ApiCallRateInsight = "ApiCallRateInsight"
+    ApiCallRateInsight = "ApiCallRateInsight",
+    ApiErrorRateInsight = "ApiErrorRateInsight"
 }

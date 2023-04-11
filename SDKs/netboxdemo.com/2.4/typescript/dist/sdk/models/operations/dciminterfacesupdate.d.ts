@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DcimInterfacesUpdatePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DcimInterfacesUpdateRequest extends SpeakeasyBase {
-    pathParams: DcimInterfacesUpdatePathParams;
-    request: shared.WritableInterfaceInput;
+    writableInterfaceInput: shared.WritableInterfaceInput;
+    /**
+     * A unique integer value identifying this interface.
+     */
+    id: number;
 }
 export declare class DcimInterfacesUpdateResponse extends SpeakeasyBase {
     contentType: string;
     interface?: shared.Interface;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,190 +1,54 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateConnectionRequest, CreateConnectionResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  shared.SaveStatsRequestBody,
+  SaveStatsResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
-  security: {
-    bearerAuth: {
-      authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-    },
-  }
-));
-    
-const req: CreateConnectionRequest = {
-  request: {
-    destinationId: "sit",
-    name: "voluptas",
-    namespaceDefinition: "destination",
-    namespaceFormat: "expedita",
-    operationIds: [
-      "dolor",
-      "expedita",
-      "voluptas",
-    ],
-    prefix: "fugit",
-    resourceRequirements: {
-      cpuLimit: "et",
-      cpuRequest: "nihil",
-      memoryLimit: "rerum",
-      memoryRequest: "dicta",
-    },
-    schedule: {
-      timeUnit: "weeks",
-      units: 5617773211005988520,
-    },
-    sourceId: "et",
-    status: "deprecated",
-    syncCatalog: {
-      streams: [
-        {
-          config: {
-            aliasName: "et",
-            cursorField: [
-              "iste",
-            ],
-            destinationSyncMode: "append",
-            primaryKey: [
-              [
-                "illum",
-              ],
-              [
-                "vel",
-              ],
-              [
-                "dolore",
-              ],
-            ],
-            selected: false,
-            syncMode: "incremental",
-          },
-          stream: {
-            defaultCursorField: [
-              "totam",
-              "commodi",
-              "quis",
-            ],
-            jsonSchema: {
-              "aut": "odit",
-              "non": "voluptas",
-            },
-            name: "omnis",
-            namespace: "aut",
-            sourceDefinedCursor: true,
-            sourceDefinedPrimaryKey: [
-              [
-                "autem",
-                "consectetur",
-              ],
-              [
-                "odio",
-              ],
-              [
-                "recusandae",
-              ],
-            ],
-            supportedSyncModes: [
-              "full_refresh",
-              "full_refresh",
-            ],
-          },
-        },
-        {
-          config: {
-            aliasName: "modi",
-            cursorField: [
-              "inventore",
-            ],
-            destinationSyncMode: "append_dedup",
-            primaryKey: [
-              [
-                "reprehenderit",
-                "tempore",
-                "maiores",
-              ],
-              [
-                "dolor",
-                "beatae",
-                "veritatis",
-              ],
-              [
-                "et",
-                "omnis",
-                "ipsum",
-              ],
-            ],
-            selected: true,
-            syncMode: "full_refresh",
-          },
-          stream: {
-            defaultCursorField: [
-              "vel",
-            ],
-            jsonSchema: {
-              "mollitia": "voluptas",
-              "quam": "reprehenderit",
-              "qui": "qui",
-            },
-            name: "unde",
-            namespace: "in",
-            sourceDefinedCursor: false,
-            sourceDefinedPrimaryKey: [
-              [
-                "itaque",
-                "ab",
-                "neque",
-              ],
-            ],
-            supportedSyncModes: [
-              "full_refresh",
-              "full_refresh",
-              "full_refresh",
-            ],
-          },
-        },
-        {
-          config: {
-            aliasName: "architecto",
-            cursorField: [
-              "velit",
-            ],
-            destinationSyncMode: "overwrite",
-            primaryKey: [
-              [
-                "voluptates",
-                "magni",
-              ],
-            ],
-            selected: false,
-            syncMode: "incremental",
-          },
-          stream: {
-            defaultCursorField: [
-              "earum",
-            ],
-            jsonSchema: {
-              "omnis": "ut",
-            },
-            name: "consequatur",
-            namespace: "dolor",
-            sourceDefinedCursor: true,
-            sourceDefinedPrimaryKey: [
-              [
-                "consectetur",
-              ],
-            ],
-            supportedSyncModes: [
-              "incremental",
-            ],
-          },
-        },
-      ],
-    },
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK();
+
+const req: shared.SaveStatsRequestBody = {
+  attemptNumber: 548814,
+  jobId: 592845,
+  stats: {
+    bytesEmitted: 715190,
+    estimatedBytes: 844266,
+    estimatedRecords: 602763,
+    recordsCommitted: 857946,
+    recordsEmitted: 544883,
+    stateMessagesEmitted: 847252,
   },
+  streamStats: [
+    {
+      stats: {
+        bytesEmitted: 623564,
+        estimatedBytes: 645894,
+        estimatedRecords: 384382,
+        recordsCommitted: 437587,
+        recordsEmitted: 297534,
+        stateMessagesEmitted: 891773,
+      },
+      streamName: "ipsa",
+      streamNamespace: "delectus",
+    },
+    {
+      stats: {
+        bytesEmitted: 272656,
+        estimatedBytes: 383441,
+        estimatedRecords: 477665,
+        recordsCommitted: 791725,
+        recordsEmitted: 812169,
+        stateMessagesEmitted: 528895,
+      },
+      streamName: "iusto",
+      streamNamespace: "excepturi",
+    },
+  ],
 };
 
-sdk.connection.createConnection(req).then((res: CreateConnectionResponse | AxiosError) => {
+sdk.attempt.saveStats(req).then((res: SaveStatsResponse | AxiosError) => {
    // handle response
 });
 ```

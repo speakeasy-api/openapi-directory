@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ShowServiceCredentialTypePathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ShowServiceCredentialTypeRequest extends SpeakeasyBase {
-    pathParams: ShowServiceCredentialTypePathParams;
+    /**
+     * ID of the resource
+     */
+    id: string;
 }
 export declare class ShowServiceCredentialTypeResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Not found
+     */
     errorNotFound?: shared.ErrorNotFound;
+    /**
+     * ServiceCredentialType info
+     */
     serviceCredentialType?: shared.ServiceCredentialType;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetPolicyXAmzTargetEnum {
-    Awsfms20180101GetPolicy = "AWSFMS_20180101.GetPolicy"
+    AWSFMS20180101GetPolicy = "AWSFMS_20180101.GetPolicy"
 }
-export declare class GetPolicyHeaders extends SpeakeasyBase {
+export declare class GetPolicyRequest extends SpeakeasyBase {
+    getPolicyRequest: shared.GetPolicyRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class GetPolicyHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetPolicyXAmzTargetEnum;
 }
-export declare class GetPolicyRequest extends SpeakeasyBase {
-    headers: GetPolicyHeaders;
-    request: shared.GetPolicyRequest;
-}
 export declare class GetPolicyResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getPolicyResponse?: shared.GetPolicyResponse;
+    /**
+     * InternalErrorException
+     */
     internalErrorException?: any;
+    /**
+     * InvalidOperationException
+     */
     invalidOperationException?: any;
+    /**
+     * InvalidTypeException
+     */
     invalidTypeException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

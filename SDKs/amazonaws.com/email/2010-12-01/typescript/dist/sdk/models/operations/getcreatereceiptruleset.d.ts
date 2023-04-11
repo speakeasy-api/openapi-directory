@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetCreateReceiptRuleSetActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETCreateReceiptRuleSetActionEnum {
     CreateReceiptRuleSet = "CreateReceiptRuleSet"
 }
-export declare enum GetCreateReceiptRuleSetVersionEnum {
+export declare enum GETCreateReceiptRuleSetVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetCreateReceiptRuleSetQueryParams extends SpeakeasyBase {
-    action: GetCreateReceiptRuleSetActionEnum;
+export declare class GETCreateReceiptRuleSetRequest extends SpeakeasyBase {
+    action: GETCreateReceiptRuleSetActionEnum;
+    /**
+     * <p>The name of the rule set to create. The name must:</p> <ul> <li> <p>This value can only contain ASCII letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-).</p> </li> <li> <p>Start and end with a letter or number.</p> </li> <li> <p>Contain less than 64 characters.</p> </li> </ul>
+     */
     ruleSetName: string;
-    version: GetCreateReceiptRuleSetVersionEnum;
-}
-export declare class GetCreateReceiptRuleSetHeaders extends SpeakeasyBase {
+    version: GETCreateReceiptRuleSetVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetCreateReceiptRuleSetHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetCreateReceiptRuleSetRequest extends SpeakeasyBase {
-    queryParams: GetCreateReceiptRuleSetQueryParams;
-    headers: GetCreateReceiptRuleSetHeaders;
-}
-export declare class GetCreateReceiptRuleSetResponse extends SpeakeasyBase {
+export declare class GETCreateReceiptRuleSetResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

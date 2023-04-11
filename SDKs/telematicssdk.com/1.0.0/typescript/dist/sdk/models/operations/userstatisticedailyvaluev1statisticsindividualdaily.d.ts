@@ -1,9 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UserStatisticeDailyValueV1StatisticsIndividualDailyQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class UserStatisticeDailyValueV1StatisticsIndividualDailyRequest extends SpeakeasyBase {
     endDate?: string;
     startDate?: string;
 }
-export declare class UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJsonResult extends SpeakeasyBase {
+export declare class UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONResult extends SpeakeasyBase {
     accelerationCount?: number;
     appId?: string;
     averageSpeedKmh?: number;
@@ -34,18 +35,22 @@ export declare class UserStatisticeDailyValueV1StatisticsIndividualDaily200Appli
     totalSpeedingMile?: number;
     tripsCount?: number;
 }
-export declare class UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJson extends SpeakeasyBase {
+/**
+ * Success
+ */
+export declare class UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSON extends SpeakeasyBase {
     errors?: any[];
-    result?: UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJsonResult[];
+    result?: UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONResult[];
     status?: number;
     title?: string;
 }
-export declare class UserStatisticeDailyValueV1StatisticsIndividualDailyRequest extends SpeakeasyBase {
-    queryParams: UserStatisticeDailyValueV1StatisticsIndividualDailyQueryParams;
-}
 export declare class UserStatisticeDailyValueV1StatisticsIndividualDailyResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
-    userStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONObject?: UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
+    userStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONObject?: UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSON;
 }

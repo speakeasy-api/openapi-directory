@@ -1,5 +1,9 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Operations to complete callbacks for custom workflow actions.
+ */
 export declare class Callbacks {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,15 +13,17 @@ export declare class Callbacks {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * postAutomationV4ActionsCallbacksCompleteCompleteBatch - Complete a batch of callbacks
+     * Complete a batch of callbacks
      *
+     * @remarks
      * Completes the given action callbacks.
-    **/
-    postAutomationV4ActionsCallbacksCompleteCompleteBatch(req: operations.PostAutomationV4ActionsCallbacksCompleteCompleteBatchRequest, config?: AxiosRequestConfig): Promise<operations.PostAutomationV4ActionsCallbacksCompleteCompleteBatchResponse>;
+     */
+    postAutomationV4ActionsCallbacksCompleteCompleteBatch(req: shared.BatchInputCallbackCompletionBatchRequest, security: operations.PostAutomationV4ActionsCallbacksCompleteCompleteBatchSecurity, config?: AxiosRequestConfig): Promise<operations.PostAutomationV4ActionsCallbacksCompleteCompleteBatchResponse>;
     /**
-     * postAutomationV4ActionsCallbacksCallbackIdCompleteComplete - Complete a callback
+     * Complete a callback
      *
+     * @remarks
      * Completes the given action callback.
-    **/
-    postAutomationV4ActionsCallbacksCallbackIdCompleteComplete(req: operations.PostAutomationV4ActionsCallbacksCallbackIdCompleteCompleteRequest, config?: AxiosRequestConfig): Promise<operations.PostAutomationV4ActionsCallbacksCallbackIdCompleteCompleteResponse>;
+     */
+    postAutomationV4ActionsCallbacksCallbackIdCompleteComplete(req: operations.PostAutomationV4ActionsCallbacksCallbackIdCompleteCompleteRequest, security: operations.PostAutomationV4ActionsCallbacksCallbackIdCompleteCompleteSecurity, config?: AxiosRequestConfig): Promise<operations.PostAutomationV4ActionsCallbacksCallbackIdCompleteCompleteResponse>;
 }

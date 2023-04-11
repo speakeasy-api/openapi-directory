@@ -1,5 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { DomainName } from "./domainname";
+/**
+ * Success
+ */
 export declare class GetDomainNamesResponse extends SpeakeasyBase {
-    items?: Record<string, any>;
-    nextToken?: Record<string, any>;
+    items?: DomainName[];
+    nextToken?: string;
 }

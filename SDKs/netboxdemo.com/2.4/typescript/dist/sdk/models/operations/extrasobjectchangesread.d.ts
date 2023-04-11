@@ -1,13 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ExtrasObjectChangesReadPathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ExtrasObjectChangesReadRequest extends SpeakeasyBase {
-    pathParams: ExtrasObjectChangesReadPathParams;
+    /**
+     * A unique integer value identifying this object change.
+     */
+    id: number;
 }
 export declare class ExtrasObjectChangesReadResponse extends SpeakeasyBase {
     contentType: string;
     objectChange?: shared.ObjectChange;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

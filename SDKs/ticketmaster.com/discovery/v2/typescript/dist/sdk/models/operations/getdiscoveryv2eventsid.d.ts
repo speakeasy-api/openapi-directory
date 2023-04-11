@@ -1,21 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetDiscoveryV2EventsIdPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
+/**
+ * True if you want to display licensed content
+ */
 export declare enum GetDiscoveryV2EventsIdIncludeLicensedContentEnum {
     Yes = "yes",
     No = " no"
 }
-export declare class GetDiscoveryV2EventsIdQueryParams extends SpeakeasyBase {
-    includeLicensedContent?: GetDiscoveryV2EventsIdIncludeLicensedContentEnum;
-    locale?: string;
-}
 export declare class GetDiscoveryV2EventsIdRequest extends SpeakeasyBase {
-    pathParams: GetDiscoveryV2EventsIdPathParams;
-    queryParams: GetDiscoveryV2EventsIdQueryParams;
+    /**
+     * ID of the event
+     */
+    id: string;
+    /**
+     * True if you want to display licensed content
+     */
+    includeLicensedContent?: GetDiscoveryV2EventsIdIncludeLicensedContentEnum;
+    /**
+     * The locale in ISO code format. Multiple comma-separated values can be provided. When omitting the country part of the code (e.g. only 'en' or 'fr') then the first matching locale is used. When using a '*' it matches all locales. '*' can only be used at the end (e.g. 'en-us,en,*')
+     */
+    locale?: string;
 }
 export declare class GetDiscoveryV2EventsIdResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum GetMlTransformXAmzTargetEnum {
-    AwsGlueGetMlTransform = "AWSGlue.GetMLTransform"
+import { AxiosResponse } from "axios";
+export declare enum GetMLTransformXAmzTargetEnum {
+    AWSGlueGetMLTransform = "AWSGlue.GetMLTransform"
 }
-export declare class GetMlTransformHeaders extends SpeakeasyBase {
+export declare class GetMLTransformRequest extends SpeakeasyBase {
+    getMLTransformRequest: shared.GetMLTransformRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,18 +13,30 @@ export declare class GetMlTransformHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: GetMlTransformXAmzTargetEnum;
+    xAmzTarget: GetMLTransformXAmzTargetEnum;
 }
-export declare class GetMlTransformRequest extends SpeakeasyBase {
-    headers: GetMlTransformHeaders;
-    request: shared.GetMlTransformRequest;
-}
-export declare class GetMlTransformResponse extends SpeakeasyBase {
+export declare class GetMLTransformResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
-    getMLTransformResponse?: shared.GetMlTransformResponse;
+    /**
+     * Success
+     */
+    getMLTransformResponse?: shared.GetMLTransformResponse;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

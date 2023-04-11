@@ -1,0 +1,19 @@
+/**
+ * Specifies the use case of the transfer. Required for transfers on an ACH network.
+ *
+ * @remarks
+ *
+ * `"ccd"` - Corporate Credit or Debit - fund transfer between two corporate bank accounts
+ *
+ * `"ppd"` - Prearranged Payment or Deposit - the transfer is part of a pre-existing relationship with a consumer, eg. bill payment
+ *
+ * `"tel"` - Telephone-Initiated Entry
+ *
+ * `"web"` - Internet-Initiated Entry - debits from a consumer’s account where their authorization is obtained over the Internet
+ */
+export declare enum ACHClassEnum {
+    Ccd = "ccd",
+    Ppd = "ppd",
+    Tel = "tel",
+    Web = "web"
+}

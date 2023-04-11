@@ -9,6 +9,9 @@ export declare class WebhooksResponsePagination extends SpeakeasyBase {
     offset?: number;
     totalCount?: number;
 }
+/**
+ * successful operation
+ */
 export declare class WebhooksResponse extends SpeakeasyBase {
     data?: Webhook[];
     error?: WebhooksResponseError;

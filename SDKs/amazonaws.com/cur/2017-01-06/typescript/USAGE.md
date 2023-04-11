@@ -1,31 +1,31 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DeleteReportDefinitionRequest, DeleteReportDefinitionResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  DeleteReportDefinitionRequest,
+  DeleteReportDefinitionResponse,
+  DeleteReportDefinitionXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    hmac: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: DeleteReportDefinitionRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "AWSOrigamiServiceGatewayService.DeleteReportDefinition",
+  deleteReportDefinitionRequest: {
+    reportName: "corrupti",
   },
-  request: {
-    reportName: "fugit",
-  },
+  xAmzAlgorithm: "provident",
+  xAmzContentSha256: "distinctio",
+  xAmzCredential: "quibusdam",
+  xAmzDate: "unde",
+  xAmzSecurityToken: "nulla",
+  xAmzSignature: "corrupti",
+  xAmzSignedHeaders: "illum",
+  xAmzTarget: DeleteReportDefinitionXAmzTargetEnum.AWSOrigamiServiceGatewayServiceDeleteReportDefinition,
 };
 
 sdk.deleteReportDefinition(req).then((res: DeleteReportDefinitionResponse | AxiosError) => {

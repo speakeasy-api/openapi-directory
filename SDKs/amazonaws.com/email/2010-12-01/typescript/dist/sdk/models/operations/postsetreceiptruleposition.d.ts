@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostSetReceiptRulePositionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTSetReceiptRulePositionActionEnum {
     SetReceiptRulePosition = "SetReceiptRulePosition"
 }
-export declare enum PostSetReceiptRulePositionVersionEnum {
+export declare enum POSTSetReceiptRulePositionVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostSetReceiptRulePositionQueryParams extends SpeakeasyBase {
-    action: PostSetReceiptRulePositionActionEnum;
-    version: PostSetReceiptRulePositionVersionEnum;
-}
-export declare class PostSetReceiptRulePositionHeaders extends SpeakeasyBase {
+export declare class POSTSetReceiptRulePositionRequest extends SpeakeasyBase {
+    action: POSTSetReceiptRulePositionActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTSetReceiptRulePositionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostSetReceiptRulePositionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostSetReceiptRulePositionRequest extends SpeakeasyBase {
-    queryParams: PostSetReceiptRulePositionQueryParams;
-    headers: PostSetReceiptRulePositionHeaders;
-    request?: Uint8Array;
-}
-export declare class PostSetReceiptRulePositionResponse extends SpeakeasyBase {
+export declare class POSTSetReceiptRulePositionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

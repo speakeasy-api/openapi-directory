@@ -1,27 +1,47 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CodeScanningUpdateAlertPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class CodeScanningUpdateAlertRequestBody extends SpeakeasyBase {
+    /**
+     * **Required when the state is dismissed.** The reason for dismissing or closing the alert. Can be one of: `false positive`, `won't fix`, and `used in tests`.
+     */
+    dismissedReason?: shared.CodeScanningAlertDismissedReasonEnum;
+    /**
+     * Sets the state of the code scanning alert. Can be one of `open` or `dismissed`. You must provide `dismissed_reason` when you set the state to `dismissed`.
+     */
+    state: shared.CodeScanningAlertSetStateEnum;
+}
+export declare class CodeScanningUpdateAlertRequest extends SpeakeasyBase {
+    requestBody: CodeScanningUpdateAlertRequestBody;
+    /**
+     * The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation.
+     */
     alertNumber: number;
     owner: string;
     repo: string;
 }
-export declare class CodeScanningUpdateAlertRequestBody extends SpeakeasyBase {
-    dismissedReason?: shared.CodeScanningAlertDismissedReasonEnum;
-    state: shared.CodeScanningAlertSetStateEnum;
-}
-export declare class CodeScanningUpdateAlert503ApplicationJson extends SpeakeasyBase {
+/**
+ * Service unavailable
+ */
+export declare class CodeScanningUpdateAlert503ApplicationJSON extends SpeakeasyBase {
     code?: string;
     documentationUrl?: string;
     message?: string;
 }
-export declare class CodeScanningUpdateAlertRequest extends SpeakeasyBase {
-    pathParams: CodeScanningUpdateAlertPathParams;
-    request?: CodeScanningUpdateAlertRequestBody;
-}
 export declare class CodeScanningUpdateAlertResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response if the repository is archived or if github advanced security is not enabled for this repository
+     */
     basicError?: shared.BasicError;
+    /**
+     * Response
+     */
     codeScanningAlert?: shared.CodeScanningAlert;
-    codeScanningUpdateAlert503ApplicationJSONObject?: CodeScanningUpdateAlert503ApplicationJson;
+    /**
+     * Service unavailable
+     */
+    codeScanningUpdateAlert503ApplicationJSONObject?: CodeScanningUpdateAlert503ApplicationJSON;
 }

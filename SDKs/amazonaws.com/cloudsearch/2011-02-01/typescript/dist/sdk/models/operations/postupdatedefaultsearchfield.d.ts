@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostUpdateDefaultSearchFieldActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTUpdateDefaultSearchFieldActionEnum {
     UpdateDefaultSearchField = "UpdateDefaultSearchField"
 }
-export declare enum PostUpdateDefaultSearchFieldVersionEnum {
+export declare enum POSTUpdateDefaultSearchFieldVersionEnum {
     TwoThousandAndEleven0201 = "2011-02-01"
 }
-export declare class PostUpdateDefaultSearchFieldQueryParams extends SpeakeasyBase {
-    action: PostUpdateDefaultSearchFieldActionEnum;
-    version: PostUpdateDefaultSearchFieldVersionEnum;
-}
-export declare class PostUpdateDefaultSearchFieldHeaders extends SpeakeasyBase {
+export declare class POSTUpdateDefaultSearchFieldRequest extends SpeakeasyBase {
+    action: POSTUpdateDefaultSearchFieldActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTUpdateDefaultSearchFieldVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostUpdateDefaultSearchFieldHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostUpdateDefaultSearchFieldRequest extends SpeakeasyBase {
-    queryParams: PostUpdateDefaultSearchFieldQueryParams;
-    headers: PostUpdateDefaultSearchFieldHeaders;
-    request?: Uint8Array;
-}
-export declare class PostUpdateDefaultSearchFieldResponse extends SpeakeasyBase {
+export declare class POSTUpdateDefaultSearchFieldResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

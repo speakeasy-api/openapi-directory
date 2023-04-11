@@ -1,9 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetActionPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class GetActionHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetActionRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,15 +9,25 @@ export declare class GetActionHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class GetActionRequest extends SpeakeasyBase {
-    pathParams: GetActionPathParams;
-    headers: GetActionHeaders;
+    /**
+     * The ID of the action.
+     */
+    id: string;
 }
 export declare class GetActionResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getActionResponse?: shared.GetActionResponse;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

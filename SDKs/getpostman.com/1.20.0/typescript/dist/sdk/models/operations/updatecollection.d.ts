@@ -1,7 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UpdateCollectionPathParams extends SpeakeasyBase {
-    collectionUid: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UpdateCollectionRequestBodyCollectionInfo extends SpeakeasyBase {
     postmanId?: string;
     description?: string;
@@ -38,49 +36,74 @@ export declare class UpdateCollectionRequestBodyCollection extends SpeakeasyBase
 export declare class UpdateCollectionRequestBody extends SpeakeasyBase {
     collection?: UpdateCollectionRequestBodyCollection;
 }
-export declare class UpdateCollection200ApplicationJsonCollection extends SpeakeasyBase {
+export declare class UpdateCollectionRequest extends SpeakeasyBase {
+    requestBody?: UpdateCollectionRequestBody;
+    collectionUid: string;
+}
+export declare class UpdateCollection404ApplicationJSONErrorDetails extends SpeakeasyBase {
+    id?: string;
+    item?: string;
+}
+export declare class UpdateCollection404ApplicationJSONError extends SpeakeasyBase {
+    details?: UpdateCollection404ApplicationJSONErrorDetails;
+    message?: string;
+    name?: string;
+}
+/**
+ * Collection Not Found
+ */
+export declare class UpdateCollection404ApplicationJSON extends SpeakeasyBase {
+    error?: UpdateCollection404ApplicationJSONError;
+}
+export declare class UpdateCollection403ApplicationJSONError extends SpeakeasyBase {
+    message?: string;
+    name?: string;
+}
+/**
+ * Not Enough Permissions
+ */
+export declare class UpdateCollection403ApplicationJSON extends SpeakeasyBase {
+    error?: UpdateCollection403ApplicationJSONError;
+}
+export declare class UpdateCollection400ApplicationJSONError extends SpeakeasyBase {
+    message?: string;
+    name?: string;
+}
+/**
+ * Collection ID Mismatch
+ */
+export declare class UpdateCollection400ApplicationJSON extends SpeakeasyBase {
+    error?: UpdateCollection400ApplicationJSONError;
+}
+export declare class UpdateCollection200ApplicationJSONCollection extends SpeakeasyBase {
     id?: string;
     name?: string;
     uid?: string;
 }
-export declare class UpdateCollection200ApplicationJson extends SpeakeasyBase {
-    collection?: UpdateCollection200ApplicationJsonCollection;
-}
-export declare class UpdateCollection400ApplicationJsonError extends SpeakeasyBase {
-    message?: string;
-    name?: string;
-}
-export declare class UpdateCollection400ApplicationJson extends SpeakeasyBase {
-    error?: UpdateCollection400ApplicationJsonError;
-}
-export declare class UpdateCollection403ApplicationJsonError extends SpeakeasyBase {
-    message?: string;
-    name?: string;
-}
-export declare class UpdateCollection403ApplicationJson extends SpeakeasyBase {
-    error?: UpdateCollection403ApplicationJsonError;
-}
-export declare class UpdateCollection404ApplicationJsonErrorDetails extends SpeakeasyBase {
-    id?: string;
-    item?: string;
-}
-export declare class UpdateCollection404ApplicationJsonError extends SpeakeasyBase {
-    details?: UpdateCollection404ApplicationJsonErrorDetails;
-    message?: string;
-    name?: string;
-}
-export declare class UpdateCollection404ApplicationJson extends SpeakeasyBase {
-    error?: UpdateCollection404ApplicationJsonError;
-}
-export declare class UpdateCollectionRequest extends SpeakeasyBase {
-    pathParams: UpdateCollectionPathParams;
-    request?: UpdateCollectionRequestBody;
+/**
+ * Collection Updated
+ */
+export declare class UpdateCollection200ApplicationJSON extends SpeakeasyBase {
+    collection?: UpdateCollection200ApplicationJSONCollection;
 }
 export declare class UpdateCollectionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateCollection200ApplicationJSONObject?: UpdateCollection200ApplicationJson;
-    updateCollection400ApplicationJSONObject?: UpdateCollection400ApplicationJson;
-    updateCollection403ApplicationJSONObject?: UpdateCollection403ApplicationJson;
-    updateCollection404ApplicationJSONObject?: UpdateCollection404ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Collection Updated
+     */
+    updateCollection200ApplicationJSONObject?: UpdateCollection200ApplicationJSON;
+    /**
+     * Collection ID Mismatch
+     */
+    updateCollection400ApplicationJSONObject?: UpdateCollection400ApplicationJSON;
+    /**
+     * Not Enough Permissions
+     */
+    updateCollection403ApplicationJSONObject?: UpdateCollection403ApplicationJSON;
+    /**
+     * Collection Not Found
+     */
+    updateCollection404ApplicationJSONObject?: UpdateCollection404ApplicationJSON;
 }

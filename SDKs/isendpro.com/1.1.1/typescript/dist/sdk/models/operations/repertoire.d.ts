@@ -1,11 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class RepertoireRequest extends SpeakeasyBase {
-    request: shared.RepertoirEmodifrequest;
-}
+import { AxiosResponse } from "axios";
 export declare class RepertoireResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Erreur
+     */
     erreur?: shared.Erreur;
-    repertoirEmodifreponse?: shared.RepertoirEmodifreponse;
+    /**
+     * Successful response
+     */
+    repertoirEmodifreponse?: shared.REPERTOIREmodifreponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

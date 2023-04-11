@@ -1,6 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class RetryDataReplicationHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class RetryDataReplicationRequestBody extends SpeakeasyBase {
+    /**
+     * Retry data replication for Source Server ID.
+     */
+    sourceServerID: string;
+}
+export declare class RetryDataReplicationRequest extends SpeakeasyBase {
+    requestBody: RetryDataReplicationRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -9,18 +17,24 @@ export declare class RetryDataReplicationHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class RetryDataReplicationRequestBody extends SpeakeasyBase {
-    sourceServerID: string;
-}
-export declare class RetryDataReplicationRequest extends SpeakeasyBase {
-    headers: RetryDataReplicationHeaders;
-    request: RetryDataReplicationRequestBody;
-}
 export declare class RetryDataReplicationResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
+    /**
+     * Success
+     */
     sourceServer?: shared.SourceServer;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UninitializedAccountException
+     */
     uninitializedAccountException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

@@ -3,7 +3,7 @@ import { DeliverabilityDashboardAccountStatusEnum } from "./deliverabilitydashbo
 import { DomainDeliverabilityTrackingOption } from "./domaindeliverabilitytrackingoption";
 /**
  * An object that shows the status of the Deliverability dashboard.
-**/
+ */
 export declare class GetDeliverabilityDashboardOptionsResponse extends SpeakeasyBase {
     accountStatus?: DeliverabilityDashboardAccountStatusEnum;
     activeSubscribedDomains?: DomainDeliverabilityTrackingOption[];

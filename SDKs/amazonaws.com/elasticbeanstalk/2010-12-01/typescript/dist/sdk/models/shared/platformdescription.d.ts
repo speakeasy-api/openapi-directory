@@ -1,11 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { CustomAmi } from "./customami";
 import { PlatformFramework } from "./platformframework";
-import { PlatformStatusEnum } from "./platformstatusenum";
 import { PlatformProgrammingLanguage } from "./platformprogramminglanguage";
+import { PlatformStatusEnum } from "./platformstatusenum";
 /**
  * Detailed information about a platform version.
-**/
+ */
 export declare class PlatformDescription extends SpeakeasyBase {
     customAmiList?: CustomAmi[];
     dateCreated?: Date;

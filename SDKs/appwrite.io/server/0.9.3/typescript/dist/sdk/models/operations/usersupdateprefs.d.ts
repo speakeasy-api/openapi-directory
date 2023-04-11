@@ -1,22 +1,28 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class UsersUpdatePrefsPathParams extends SpeakeasyBase {
-    userId: string;
+import { AxiosResponse } from "axios";
+export declare class UsersUpdatePrefsSecurity extends SpeakeasyBase {
+    key: string;
+    project: string;
 }
 export declare class UsersUpdatePrefsRequestBody extends SpeakeasyBase {
+    /**
+     * Prefs key-value JSON object.
+     */
     prefs: Record<string, any>;
 }
-export declare class UsersUpdatePrefsSecurity extends SpeakeasyBase {
-    key: shared.SchemeKey;
-    project: shared.SchemeProject;
-}
 export declare class UsersUpdatePrefsRequest extends SpeakeasyBase {
-    pathParams: UsersUpdatePrefsPathParams;
-    request?: UsersUpdatePrefsRequestBody;
-    security: UsersUpdatePrefsSecurity;
+    requestBody?: UsersUpdatePrefsRequestBody;
+    /**
+     * User unique ID.
+     */
+    userId: string;
 }
 export declare class UsersUpdatePrefsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Preferences
+     */
     preferences?: Record<string, any>;
 }

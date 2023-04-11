@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class OauthAuthorizationsDeleteAuthorizationPathParams extends SpeakeasyBase {
-    authorizationId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class OauthAuthorizationsDeleteAuthorizationRequest extends SpeakeasyBase {
-    pathParams: OauthAuthorizationsDeleteAuthorizationPathParams;
+    /**
+     * authorization_id parameter
+     */
+    authorizationId: number;
 }
 export declare class OauthAuthorizationsDeleteAuthorizationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Requires authentication
+     */
     basicError?: shared.BasicError;
 }

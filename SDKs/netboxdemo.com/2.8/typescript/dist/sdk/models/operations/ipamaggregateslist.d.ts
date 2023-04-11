@@ -1,6 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class IpamAggregatesListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class IpamAggregatesListRequest extends SpeakeasyBase {
     created?: string;
     createdGte?: string;
     createdLte?: string;
@@ -20,7 +21,13 @@ export declare class IpamAggregatesListQueryParams extends SpeakeasyBase {
     lastUpdated?: string;
     lastUpdatedGte?: string;
     lastUpdatedLte?: string;
+    /**
+     * Number of results to return per page.
+     */
     limit?: number;
+    /**
+     * The initial index from which to return the results.
+     */
     offset?: number;
     prefix?: string;
     q?: string;
@@ -31,17 +38,15 @@ export declare class IpamAggregatesListQueryParams extends SpeakeasyBase {
     tag?: string;
     tagN?: string;
 }
-export declare class IpamAggregatesList200ApplicationJson extends SpeakeasyBase {
+export declare class IpamAggregatesList200ApplicationJSON extends SpeakeasyBase {
     count: number;
     next?: string;
     previous?: string;
     results: shared.Aggregate[];
 }
-export declare class IpamAggregatesListRequest extends SpeakeasyBase {
-    queryParams: IpamAggregatesListQueryParams;
-}
 export declare class IpamAggregatesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    ipamAggregatesList200ApplicationJSONObject?: IpamAggregatesList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    ipamAggregatesList200ApplicationJSONObject?: IpamAggregatesList200ApplicationJSON;
 }

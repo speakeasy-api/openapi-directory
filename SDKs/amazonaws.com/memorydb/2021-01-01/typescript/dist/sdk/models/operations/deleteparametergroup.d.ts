@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteParameterGroupXAmzTargetEnum {
-    AmazonMemoryDbDeleteParameterGroup = "AmazonMemoryDB.DeleteParameterGroup"
+    AmazonMemoryDBDeleteParameterGroup = "AmazonMemoryDB.DeleteParameterGroup"
 }
-export declare class DeleteParameterGroupHeaders extends SpeakeasyBase {
+export declare class DeleteParameterGroupRequest extends SpeakeasyBase {
+    deleteParameterGroupRequest: shared.DeleteParameterGroupRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class DeleteParameterGroupHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteParameterGroupXAmzTargetEnum;
 }
-export declare class DeleteParameterGroupRequest extends SpeakeasyBase {
-    headers: DeleteParameterGroupHeaders;
-    request: shared.DeleteParameterGroupRequest;
-}
 export declare class DeleteParameterGroupResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deleteParameterGroupResponse?: shared.DeleteParameterGroupResponse;
+    /**
+     * InvalidParameterCombinationException
+     */
     invalidParameterCombinationException?: any;
+    /**
+     * InvalidParameterGroupStateFault
+     */
     invalidParameterGroupStateFault?: any;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
+    /**
+     * ParameterGroupNotFoundFault
+     */
     parameterGroupNotFoundFault?: any;
-    serviceLinkedRoleNotFoundFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceLinkedRoleNotFoundFault
+     */
+    serviceLinkedRoleNotFoundFault?: any;
 }

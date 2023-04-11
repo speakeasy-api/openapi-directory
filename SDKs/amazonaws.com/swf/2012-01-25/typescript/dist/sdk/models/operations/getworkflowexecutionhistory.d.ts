@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetWorkflowExecutionHistoryQueryParams extends SpeakeasyBase {
-    maximumPageSize?: string;
-    nextPageToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum GetWorkflowExecutionHistoryXAmzTargetEnum {
     SimpleWorkflowServiceGetWorkflowExecutionHistory = "SimpleWorkflowService.GetWorkflowExecutionHistory"
 }
-export declare class GetWorkflowExecutionHistoryHeaders extends SpeakeasyBase {
+export declare class GetWorkflowExecutionHistoryRequest extends SpeakeasyBase {
+    getWorkflowExecutionHistoryInput: shared.GetWorkflowExecutionHistoryInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,16 +14,29 @@ export declare class GetWorkflowExecutionHistoryHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: GetWorkflowExecutionHistoryXAmzTargetEnum;
-}
-export declare class GetWorkflowExecutionHistoryRequest extends SpeakeasyBase {
-    queryParams: GetWorkflowExecutionHistoryQueryParams;
-    headers: GetWorkflowExecutionHistoryHeaders;
-    request: shared.GetWorkflowExecutionHistoryInput;
+    /**
+     * Pagination limit
+     */
+    maximumPageSize?: string;
+    /**
+     * Pagination token
+     */
+    nextPageToken?: string;
 }
 export declare class GetWorkflowExecutionHistoryResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     history?: shared.History;
+    /**
+     * OperationNotPermittedFault
+     */
     operationNotPermittedFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnknownResourceFault
+     */
     unknownResourceFault?: any;
 }

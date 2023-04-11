@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetFilesDownloadQueryParams extends SpeakeasyBase {
-    fileId: string;
-    validSeconds?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetFilesDownloadRequest extends SpeakeasyBase {
-    queryParams: GetFilesDownloadQueryParams;
+    /**
+     * The URL of the file to be uploaded
+     */
+    fileId: string;
+    /**
+     * The number of seconds that this signed URL should be valid for. The default is 60.
+     */
+    validSeconds?: number;
 }
 export declare class GetFilesDownloadResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

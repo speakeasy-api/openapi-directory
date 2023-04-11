@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetEmailIdentityPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetEmailIdentityRequest extends SpeakeasyBase {
+    /**
+     * The email identity.
+     */
     emailIdentity: string;
-}
-export declare class GetEmailIdentityHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,15 +14,24 @@ export declare class GetEmailIdentityHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetEmailIdentityRequest extends SpeakeasyBase {
-    pathParams: GetEmailIdentityPathParams;
-    headers: GetEmailIdentityHeaders;
-}
 export declare class GetEmailIdentityResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getEmailIdentityResponse?: shared.GetEmailIdentityResponse;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

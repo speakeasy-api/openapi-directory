@@ -1,12 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CircuitsCircuitTypesListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class CircuitsCircuitTypesListRequest extends SpeakeasyBase {
     id?: string;
     idGt?: string;
     idGte?: string;
     idLt?: string;
     idLte?: string;
     idN?: string;
+    /**
+     * Number of results to return per page.
+     */
     limit?: number;
     name?: string;
     nameIc?: string;
@@ -18,6 +22,9 @@ export declare class CircuitsCircuitTypesListQueryParams extends SpeakeasyBase {
     nameNie?: string;
     nameNiew?: string;
     nameNisw?: string;
+    /**
+     * The initial index from which to return the results.
+     */
     offset?: number;
     q?: string;
     slug?: string;
@@ -31,17 +38,15 @@ export declare class CircuitsCircuitTypesListQueryParams extends SpeakeasyBase {
     slugNiew?: string;
     slugNisw?: string;
 }
-export declare class CircuitsCircuitTypesList200ApplicationJson extends SpeakeasyBase {
+export declare class CircuitsCircuitTypesList200ApplicationJSON extends SpeakeasyBase {
     count: number;
     next?: string;
     previous?: string;
     results: shared.CircuitType[];
 }
-export declare class CircuitsCircuitTypesListRequest extends SpeakeasyBase {
-    queryParams: CircuitsCircuitTypesListQueryParams;
-}
 export declare class CircuitsCircuitTypesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    circuitsCircuitTypesList200ApplicationJSONObject?: CircuitsCircuitTypesList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    circuitsCircuitTypesList200ApplicationJSONObject?: CircuitsCircuitTypesList200ApplicationJSON;
 }

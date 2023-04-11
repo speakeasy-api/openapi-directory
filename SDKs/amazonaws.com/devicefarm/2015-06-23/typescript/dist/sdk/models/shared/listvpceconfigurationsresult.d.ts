@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { VpceConfiguration } from "./vpceconfiguration";
-export declare class ListVpceConfigurationsResult extends SpeakeasyBase {
+import { VPCEConfiguration } from "./vpceconfiguration";
+/**
+ * Success
+ */
+export declare class ListVPCEConfigurationsResult extends SpeakeasyBase {
     nextToken?: string;
-    vpceConfigurations?: VpceConfiguration[];
+    vpceConfigurations?: VPCEConfiguration[];
 }

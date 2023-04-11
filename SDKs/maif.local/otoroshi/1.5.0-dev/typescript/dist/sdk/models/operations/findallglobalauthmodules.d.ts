@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class FindAllGlobalAuthModulesSecurity extends SpeakeasyBase {
-    otoroshiAuth: shared.SchemeOtoroshiAuth;
-}
-export declare class FindAllGlobalAuthModulesRequest extends SpeakeasyBase {
-    security: FindAllGlobalAuthModulesSecurity;
-}
+import { AxiosResponse } from "axios";
 export declare class FindAllGlobalAuthModulesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful operation
+     */
     findAllGlobalAuthModules200ApplicationJSONOneoves?: any[];
 }

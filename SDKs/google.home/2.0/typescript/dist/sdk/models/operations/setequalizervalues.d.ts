@@ -1,10 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class SetEqualizerValuesRequest extends SpeakeasyBase {
-    request: shared.SetEqualizerValuesRequest;
-}
+import { AxiosResponse } from "axios";
 export declare class SetEqualizerValuesResponse extends SpeakeasyBase {
     contentType: string;
     setEqualizerValues200TextPlainObject?: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,17 +1,28 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetCustomersAccountAnnouncementsPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetCustomersAccountAnnouncementsRequest extends SpeakeasyBase {
+    /**
+     * Account ID of customer
+     */
     account: number;
 }
-export declare class GetCustomersAccountAnnouncements200ApplicationJson extends SpeakeasyBase {
+/**
+ * OK
+ */
+export declare class GetCustomersAccountAnnouncements200ApplicationJSON extends SpeakeasyBase {
     list?: shared.OneannouncementsPostResponses201ContentApplication1jsonSchema[];
-}
-export declare class GetCustomersAccountAnnouncementsRequest extends SpeakeasyBase {
-    pathParams: GetCustomersAccountAnnouncementsPathParams;
 }
 export declare class GetCustomersAccountAnnouncementsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getCustomersAccountAnnouncements200ApplicationJSONObject?: GetCustomersAccountAnnouncements200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
+    getCustomersAccountAnnouncements200ApplicationJSONObject?: GetCustomersAccountAnnouncements200ApplicationJSON;
+    /**
+     * Not found
+     */
     oneannouncementsPostResponses403ContentApplication1jsonSchema?: shared.OneannouncementsPostResponses403ContentApplication1jsonSchema;
 }

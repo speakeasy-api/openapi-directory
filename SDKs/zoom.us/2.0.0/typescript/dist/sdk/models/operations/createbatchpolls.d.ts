@@ -1,68 +1,161 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CreateBatchPollsPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+/**
+ * Question type:<br>`single` - Single choice<br>`mutliple` - Multiple choice
+ */
+export declare enum CreateBatchPollsApplicationJSONQuestionsTypeEnum {
+    Single = "single",
+    Multiple = "multiple"
+}
+export declare class CreateBatchPollsApplicationJSONQuestions extends SpeakeasyBase {
+    /**
+     * Possible answers for the question.
+     */
+    answers?: string[];
+    /**
+     * Name of the question.
+     */
+    name?: string;
+    /**
+     * Question type:<br>`single` - Single choice<br>`mutliple` - Multiple choice
+     */
+    type?: CreateBatchPollsApplicationJSONQuestionsTypeEnum;
+}
+/**
+ * Batch Meeting poll object
+ */
+export declare class CreateBatchPollsApplicationJSON extends SpeakeasyBase {
+    questions?: CreateBatchPollsApplicationJSONQuestions[];
+    /**
+     * Meeting Poll Title.
+     */
+    title?: string;
+}
+export declare class CreateBatchPollsRequest extends SpeakeasyBase {
+    /**
+     * Batch Meeting poll object
+     */
+    requestBody?: CreateBatchPollsApplicationJSON;
     meetingId: string;
 }
-export declare enum CreateBatchPollsApplicationJsonQuestionsTypeEnum {
+/**
+ * Poll question and answer type.
+ */
+export declare enum CreateBatchPolls201ApplicationXMLPollsQuestionsTypeEnum {
     Single = "single",
     Multiple = "multiple"
 }
-export declare class CreateBatchPollsApplicationJsonQuestions extends SpeakeasyBase {
+export declare class CreateBatchPolls201ApplicationXMLPollsQuestions extends SpeakeasyBase {
+    /**
+     * Answers to questons
+     */
     answers?: string[];
+    /**
+     * Name of question.
+     */
     name?: string;
-    type?: CreateBatchPollsApplicationJsonQuestionsTypeEnum;
+    /**
+     * Poll question and answer type.
+     */
+    type?: CreateBatchPolls201ApplicationXMLPollsQuestionsTypeEnum;
 }
-export declare class CreateBatchPollsApplicationJson extends SpeakeasyBase {
-    questions?: CreateBatchPollsApplicationJsonQuestions[];
-    title?: string;
-}
-export declare enum CreateBatchPollsMultipartFormDataQuestionsTypeEnum {
-    Single = "single",
-    Multiple = "multiple"
-}
-export declare class CreateBatchPollsMultipartFormDataQuestions extends SpeakeasyBase {
-    answers?: string[];
-    name?: string;
-    type?: CreateBatchPollsMultipartFormDataQuestionsTypeEnum;
-}
-export declare class CreateBatchPollsMultipartFormData1 extends SpeakeasyBase {
-    questions?: CreateBatchPollsMultipartFormDataQuestions[];
-    title?: string;
-}
-export declare class CreateBatchPollsRequests extends SpeakeasyBase {
-    object?: CreateBatchPollsApplicationJson;
-    object1?: CreateBatchPollsMultipartFormData1;
-}
-export declare enum CreateBatchPolls201ApplicationJsonPollsQuestionsTypeEnum {
-    Single = "single",
-    Multiple = "multiple"
-}
-export declare class CreateBatchPolls201ApplicationJsonPollsQuestions extends SpeakeasyBase {
-    answers?: string[];
-    name?: string;
-    type?: CreateBatchPolls201ApplicationJsonPollsQuestionsTypeEnum;
-}
-export declare enum CreateBatchPolls201ApplicationJsonPollsStatusEnum {
+/**
+ * Status of the Meeting Poll:<br>`notstart` - Poll not started<br>`started` - Poll started<br>`ended` - Poll ended<br>`sharing` - Sharing poll results
+ */
+export declare enum CreateBatchPolls201ApplicationXMLPollsStatusEnum {
     Notstart = "notstart",
     Started = "started",
     Ended = "ended",
     Sharing = "sharing"
 }
-export declare class CreateBatchPolls201ApplicationJsonPolls extends SpeakeasyBase {
+export declare class CreateBatchPolls201ApplicationXMLPolls extends SpeakeasyBase {
+    /**
+     * Meeting Poll ID
+     */
     id?: string;
-    questions?: CreateBatchPolls201ApplicationJsonPollsQuestions[];
-    status?: CreateBatchPolls201ApplicationJsonPollsStatusEnum;
+    questions?: CreateBatchPolls201ApplicationXMLPollsQuestions[];
+    /**
+     * Status of the Meeting Poll:<br>`notstart` - Poll not started<br>`started` - Poll started<br>`ended` - Poll ended<br>`sharing` - Sharing poll results
+     */
+    status?: CreateBatchPolls201ApplicationXMLPollsStatusEnum;
+    /**
+     * Title for the Poll
+     */
     title?: string;
 }
-export declare class CreateBatchPolls201ApplicationJson extends SpeakeasyBase {
-    polls?: CreateBatchPolls201ApplicationJsonPolls[];
+/**
+ * **HTTP Status Code:** `201` <br>
+ *
+ * @remarks
+ * Meeting Poll Created
+ */
+export declare class CreateBatchPolls201ApplicationXML extends SpeakeasyBase {
+    polls?: CreateBatchPolls201ApplicationXMLPolls[];
 }
-export declare class CreateBatchPollsRequest extends SpeakeasyBase {
-    pathParams: CreateBatchPollsPathParams;
-    request?: CreateBatchPollsRequests;
+/**
+ * Poll question and answer type.
+ */
+export declare enum CreateBatchPolls201ApplicationJSONPollsQuestionsTypeEnum {
+    Single = "single",
+    Multiple = "multiple"
+}
+export declare class CreateBatchPolls201ApplicationJSONPollsQuestions extends SpeakeasyBase {
+    /**
+     * Answers to questons
+     */
+    answers?: string[];
+    /**
+     * Name of question.
+     */
+    name?: string;
+    /**
+     * Poll question and answer type.
+     */
+    type?: CreateBatchPolls201ApplicationJSONPollsQuestionsTypeEnum;
+}
+/**
+ * Status of the Meeting Poll:<br>`notstart` - Poll not started<br>`started` - Poll started<br>`ended` - Poll ended<br>`sharing` - Sharing poll results
+ */
+export declare enum CreateBatchPolls201ApplicationJSONPollsStatusEnum {
+    Notstart = "notstart",
+    Started = "started",
+    Ended = "ended",
+    Sharing = "sharing"
+}
+export declare class CreateBatchPolls201ApplicationJSONPolls extends SpeakeasyBase {
+    /**
+     * Meeting Poll ID
+     */
+    id?: string;
+    questions?: CreateBatchPolls201ApplicationJSONPollsQuestions[];
+    /**
+     * Status of the Meeting Poll:<br>`notstart` - Poll not started<br>`started` - Poll started<br>`ended` - Poll ended<br>`sharing` - Sharing poll results
+     */
+    status?: CreateBatchPolls201ApplicationJSONPollsStatusEnum;
+    /**
+     * Title for the Poll
+     */
+    title?: string;
+}
+/**
+ * **HTTP Status Code:** `201` <br>
+ *
+ * @remarks
+ * Meeting Poll Created
+ */
+export declare class CreateBatchPolls201ApplicationJSON extends SpeakeasyBase {
+    polls?: CreateBatchPolls201ApplicationJSONPolls[];
 }
 export declare class CreateBatchPollsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    createBatchPolls201ApplicationJSONObject?: CreateBatchPolls201ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * **HTTP Status Code:** `201` <br>
+     *
+     * @remarks
+     * Meeting Poll Created
+     */
+    createBatchPolls201ApplicationJSONObject?: CreateBatchPolls201ApplicationJSON;
 }

@@ -1,14 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetAdminsForDistrictPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetAdminsForDistrictRequest extends SpeakeasyBase {
-    pathParams: GetAdminsForDistrictPathParams;
+    id: string;
 }
 export declare class GetAdminsForDistrictResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * OK Response
+     */
     districtAdminsResponse?: shared.DistrictAdminsResponse;
+    /**
+     * Entity Not Found
+     */
     notFound?: shared.NotFound;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

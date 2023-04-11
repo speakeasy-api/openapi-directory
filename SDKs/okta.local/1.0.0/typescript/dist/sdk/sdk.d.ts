@@ -1,13 +1,28 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
-import * as operations from "./models/operations";
 import { CreateUser } from "./createuser";
 import { CredentialOperations } from "./credentialoperations";
 import { LifecycleOperations } from "./lifecycleoperations";
+import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["http://okta.local", "https://,"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * The [Okta User API](/docs/api/rest/users.html) provides operations to manage users in your organization.
+ */
 export declare class SDK {
     createUser: CreateUser;
     credentialOperations: CredentialOperations;
@@ -18,17 +33,20 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
     /**
-     * clearUserSessions - Clear User Sessions
-     *
      * Clear User Sessions
-    **/
+     *
+     * @remarks
+     * Clear User Sessions
+     */
     clearUserSessions(req: operations.ClearUserSessionsRequest, config?: AxiosRequestConfig): Promise<operations.ClearUserSessionsResponse>;
     /**
-     * resetFactors - Reset Factors
-     *
      * Reset Factors
-    **/
+     *
+     * @remarks
+     * Reset Factors
+     */
     resetFactors(req: operations.ResetFactorsRequest, config?: AxiosRequestConfig): Promise<operations.ResetFactorsResponse>;
 }

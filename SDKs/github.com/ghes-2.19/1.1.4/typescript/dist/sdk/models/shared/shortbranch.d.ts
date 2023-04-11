@@ -6,11 +6,14 @@ export declare class ShortBranchCommit extends SpeakeasyBase {
 }
 /**
  * Short Branch
-**/
+ */
 export declare class ShortBranch extends SpeakeasyBase {
     commit: ShortBranchCommit;
     name: string;
     protected: boolean;
+    /**
+     * Branch Protection
+     */
     protection?: BranchProtection;
     protectionUrl?: string;
 }

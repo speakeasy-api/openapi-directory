@@ -8,5 +8,7 @@ export declare enum ChatItemTypeEnum {
     Message = "MESSAGE",
     Event = "EVENT",
     Attachment = "ATTACHMENT",
-    ConnectionAck = "CONNECTION_ACK"
+    ConnectionAck = "CONNECTION_ACK",
+    MessageDelivered = "MESSAGE_DELIVERED",
+    MessageRead = "MESSAGE_READ"
 }

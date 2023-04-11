@@ -1,19 +1,33 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SessionControllerGetSessionInfoPathParams extends SpeakeasyBase {
-    shortName: string;
-}
-export declare class SessionControllerGetSessionInfoQueryParams extends SpeakeasyBase {
-    token: string;
-}
+import { AxiosResponse } from "axios";
 export declare class SessionControllerGetSessionInfoRequest extends SpeakeasyBase {
-    pathParams: SessionControllerGetSessionInfoPathParams;
-    queryParams: SessionControllerGetSessionInfoQueryParams;
+    /**
+     * The unique client short-name
+     */
+    shortName: string;
+    /**
+     * The login token returned from the /session POST call
+     */
+    token: string;
 }
 export declare class SessionControllerGetSessionInfoResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * OK
+     */
     sessionControllerGetSessionInfo200ApplicationJSONString?: string;
+    /**
+     * OK
+     */
     sessionControllerGetSessionInfo200ApplicationXMLString?: string;
-    sessionControllerGetSessionInfo200TextJSONString?: string;
+    /**
+     * OK
+     */
     sessionControllerGetSessionInfo200TextXMLString?: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
+    sessionControllerGetSessionInfo200TextJSONString?: string;
 }

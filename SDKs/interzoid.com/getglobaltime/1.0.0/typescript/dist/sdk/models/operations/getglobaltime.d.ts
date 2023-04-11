@@ -1,9 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetglobaltimeQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetglobaltimeRequest extends SpeakeasyBase {
+    /**
+     * Your Interzoid license API key. Register at www.interzoid.com/register
+     */
     license: string;
+    /**
+     * Geographic locale to get the current time for
+     */
     locale: string;
 }
-export declare class Getglobaltime200ApplicationJson extends SpeakeasyBase {
+/**
+ * Current global time in many forms and related information
+ */
+export declare class Getglobaltime200ApplicationJSON extends SpeakeasyBase {
     clockTime?: string;
     code?: string;
     credits?: string;
@@ -21,11 +31,12 @@ export declare class Getglobaltime200ApplicationJson extends SpeakeasyBase {
     year?: string;
     zone?: string;
 }
-export declare class GetglobaltimeRequest extends SpeakeasyBase {
-    queryParams: GetglobaltimeQueryParams;
-}
 export declare class GetglobaltimeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getglobaltime200ApplicationJSONObject?: Getglobaltime200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Current global time in many forms and related information
+     */
+    getglobaltime200ApplicationJSONObject?: Getglobaltime200ApplicationJSON;
 }

@@ -9,6 +9,9 @@ export declare class ClinicalNoteClinicalNoteSection extends SpeakeasyBase {
     name?: string;
     values?: ClinicalNoteClinicalNoteSectionValue[];
 }
+/**
+ * OK
+ */
 export declare class ClinicalNote extends SpeakeasyBase {
     appointment?: string;
     archived?: boolean;

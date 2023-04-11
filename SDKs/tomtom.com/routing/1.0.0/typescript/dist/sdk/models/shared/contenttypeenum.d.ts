@@ -1,3 +1,6 @@
+/**
+ * The content type of the response structure. If the content type is jsonp, a callback method can be specified in the query parameters.
+ */
 export declare enum ContentTypeEnum {
     Xml = "xml",
     Json = "json",

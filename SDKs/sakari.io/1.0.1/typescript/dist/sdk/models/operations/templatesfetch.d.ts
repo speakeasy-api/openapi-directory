@@ -1,18 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class TemplatesFetchPathParams extends SpeakeasyBase {
-    accountId: string;
-    templateId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class TemplatesFetchSecurity extends SpeakeasyBase {
-    sakariAuth: shared.SchemeSakariAuth;
+    sakariAuth: string;
 }
 export declare class TemplatesFetchRequest extends SpeakeasyBase {
-    pathParams: TemplatesFetchPathParams;
-    security: TemplatesFetchSecurity;
+    /**
+     * Account to apply operations to
+     */
+    accountId: string;
+    /**
+     * ID of template to return
+     */
+    templateId: string;
 }
 export declare class TemplatesFetchResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     templateResponse?: shared.TemplateResponse;
 }

@@ -1,8 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ProvisioningEnum } from "./provisioningenum";
 /**
- * The service template summary data.
-**/
+ * Summary data of an Proton service template resource.
+ */
 export declare class ServiceTemplateSummary extends SpeakeasyBase {
     arn: string;
     createdAt: Date;

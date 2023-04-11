@@ -1,9 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetRetainedMessagePathParams extends SpeakeasyBase {
-    topic: string;
-}
-export declare class GetRetainedMessageHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetRetainedMessageRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,20 +9,45 @@ export declare class GetRetainedMessageHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class GetRetainedMessageRequest extends SpeakeasyBase {
-    pathParams: GetRetainedMessagePathParams;
-    headers: GetRetainedMessageHeaders;
+    /**
+     * The topic name of the retained message to retrieve.
+     */
+    topic: string;
 }
 export declare class GetRetainedMessageResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getRetainedMessageResponse?: shared.GetRetainedMessageResponse;
+    /**
+     * InternalFailureException
+     */
     internalFailureException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * MethodNotAllowedException
+     */
     methodNotAllowedException?: any;
-    resourceNotFoundException?: any;
-    serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ServiceUnavailableException
+     */
+    serviceUnavailableException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * UnauthorizedException
+     */
     unauthorizedException?: any;
 }

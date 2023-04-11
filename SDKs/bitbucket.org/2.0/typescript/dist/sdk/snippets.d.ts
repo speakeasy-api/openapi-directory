@@ -1,5 +1,18 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Snippets allow you share code segments or files with yourself, members of
+ *
+ * @remarks
+ * your workspace, or the world.
+ *
+ * Like pull requests, repositories and workspaces, the full set of snippets
+ * is defined by what the current user has access to. This includes all
+ * snippets owned by any of the workspaces the user is a member of, or
+ * snippets by other users that the current user is either watching or has
+ *  collaborated on (for instance by commenting on it).
+ *
+ */
 export declare class Snippets {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,22 +22,34 @@ export declare class Snippets {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteSnippetsWorkspaceEncodedId - Deletes a snippet and returns an empty response.
-    **/
-    deleteSnippetsWorkspaceEncodedId(req: operations.DeleteSnippetsWorkspaceEncodedIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteSnippetsWorkspaceEncodedIdResponse>;
-    /**
-     * deleteSnippetsWorkspaceEncodedIdCommentsCommentId - Deletes a snippet comment.
+     * Delete a snippet
      *
-     * Comments can only be removed by their author.
-    **/
-    deleteSnippetsWorkspaceEncodedIdCommentsCommentId(req: operations.DeleteSnippetsWorkspaceEncodedIdCommentsCommentIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteSnippetsWorkspaceEncodedIdCommentsCommentIdResponse>;
+     * @remarks
+     * Deletes a snippet and returns an empty response.
+     */
+    deleteSnippetsWorkspaceEncodedId(req: operations.DeleteSnippetsWorkspaceEncodedIdRequest, security: operations.DeleteSnippetsWorkspaceEncodedIdSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteSnippetsWorkspaceEncodedIdResponse>;
     /**
-     * deleteSnippetsWorkspaceEncodedIdWatch - Used to stop watching a specific snippet. Returns 204 (No Content)
+     * Delete a comment on a snippet
+     *
+     * @remarks
+     * Deletes a snippet comment.
+     *
+     * Comments can only be removed by the comment author, snippet creator, or workspace admin.
+     */
+    deleteSnippetsWorkspaceEncodedIdCommentsCommentId(req: operations.DeleteSnippetsWorkspaceEncodedIdCommentsCommentIdRequest, security: operations.DeleteSnippetsWorkspaceEncodedIdCommentsCommentIdSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteSnippetsWorkspaceEncodedIdCommentsCommentIdResponse>;
+    /**
+     * Stop watching a snippet
+     *
+     * @remarks
+     * Used to stop watching a specific snippet. Returns 204 (No Content)
      * to indicate success.
-    **/
-    deleteSnippetsWorkspaceEncodedIdWatch(req: operations.DeleteSnippetsWorkspaceEncodedIdWatchRequest, config?: AxiosRequestConfig): Promise<operations.DeleteSnippetsWorkspaceEncodedIdWatchResponse>;
+     */
+    deleteSnippetsWorkspaceEncodedIdWatch(req: operations.DeleteSnippetsWorkspaceEncodedIdWatchRequest, security: operations.DeleteSnippetsWorkspaceEncodedIdWatchSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteSnippetsWorkspaceEncodedIdWatchResponse>;
     /**
-     * deleteSnippetsWorkspaceEncodedIdNodeId - Deletes the snippet.
+     * Delete a previous revision of a snippet
+     *
+     * @remarks
+     * Deletes the snippet.
      *
      * Note that this only works for versioned URLs that point to the latest
      * commit of the snippet. Pointing to an older commit results in a 405
@@ -32,10 +57,13 @@ export declare class Snippets {
      *
      * To delete a snippet, regardless of whether or not concurrent changes
      * are being made to it, use `DELETE /snippets/{encoded_id}` instead.
-    **/
-    deleteSnippetsWorkspaceEncodedIdNodeId(req: operations.DeleteSnippetsWorkspaceEncodedIdNodeIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteSnippetsWorkspaceEncodedIdNodeIdResponse>;
+     */
+    deleteSnippetsWorkspaceEncodedIdNodeId(req: operations.DeleteSnippetsWorkspaceEncodedIdNodeIdRequest, security: operations.DeleteSnippetsWorkspaceEncodedIdNodeIdSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteSnippetsWorkspaceEncodedIdNodeIdResponse>;
     /**
-     * getSnippets - Returns all snippets. Like pull requests, repositories and workspaces, the
+     * List snippets
+     *
+     * @remarks
+     * Returns all snippets. Like pull requests, repositories and workspaces, the
      * full set of snippets is defined by what the current user has access to.
      *
      * This includes all snippets owned by any of the workspaces the user is a member of,
@@ -57,16 +85,22 @@ export declare class Snippets {
      * only supports `application/json` responses and no
      * `multipart/form-data` or `multipart/related`. As a result, it is not
      * possible to include the file contents.
-    **/
-    getSnippets(req: operations.GetSnippetsRequest, config?: AxiosRequestConfig): Promise<operations.GetSnippetsResponse>;
+     */
+    getSnippets(req: operations.GetSnippetsRequest, security: operations.GetSnippetsSecurity, config?: AxiosRequestConfig): Promise<operations.GetSnippetsResponse>;
     /**
-     * getSnippetsWorkspace - Identical to [`/snippets`](../snippets), except that the result is further filtered
+     * List snippets in a workspace
+     *
+     * @remarks
+     * Identical to [`/snippets`](/cloud/bitbucket/rest/api-group-snippets/#api-snippets-get), except that the result is further filtered
      * by the snippet owner and only those that are owned by `{workspace}` are
      * returned.
-    **/
-    getSnippetsWorkspace(req: operations.GetSnippetsWorkspaceRequest, config?: AxiosRequestConfig): Promise<operations.GetSnippetsWorkspaceResponse>;
+     */
+    getSnippetsWorkspace(req: operations.GetSnippetsWorkspaceRequest, security: operations.GetSnippetsWorkspaceSecurity, config?: AxiosRequestConfig): Promise<operations.GetSnippetsWorkspaceResponse>;
     /**
-     * getSnippetsWorkspaceEncodedId - Retrieves a single snippet.
+     * Get a snippet
+     *
+     * @remarks
+     * Retrieves a single snippet.
      *
      * Snippets support multiple content types:
      *
@@ -252,51 +286,75 @@ export declare class Snippets {
      *     73Oc4FHzBaZ8llq4q1mr5B2mOUCt815qYR8eB1hG2VJ7j35q4RofaH7IG+Xrf/PfJhfmwtfFYoIN
      *     AqxFUD6OMxcvkO+UfKfkOyXfKdsv/AYCHMLVkHAFWgAAAABJRU5ErkJggg==
      *     ------------------------------5957323a6b76--
-    **/
-    getSnippetsWorkspaceEncodedId(req: operations.GetSnippetsWorkspaceEncodedIdRequest, config?: AxiosRequestConfig): Promise<operations.GetSnippetsWorkspaceEncodedIdResponse>;
+     */
+    getSnippetsWorkspaceEncodedId(req: operations.GetSnippetsWorkspaceEncodedIdRequest, security: operations.GetSnippetsWorkspaceEncodedIdSecurity, config?: AxiosRequestConfig): Promise<operations.GetSnippetsWorkspaceEncodedIdResponse>;
     /**
-     * getSnippetsWorkspaceEncodedIdComments - Used to retrieve a paginated list of all comments for a specific
+     * List comments on a snippet
+     *
+     * @remarks
+     * Used to retrieve a paginated list of all comments for a specific
      * snippet.
      *
      * This resource works identical to commit and pull request comments.
      *
      * The default sorting is oldest to newest and can be overridden with
      * the `sort` query parameter.
-    **/
-    getSnippetsWorkspaceEncodedIdComments(req: operations.GetSnippetsWorkspaceEncodedIdCommentsRequest, config?: AxiosRequestConfig): Promise<operations.GetSnippetsWorkspaceEncodedIdCommentsResponse>;
+     */
+    getSnippetsWorkspaceEncodedIdComments(req: operations.GetSnippetsWorkspaceEncodedIdCommentsRequest, security: operations.GetSnippetsWorkspaceEncodedIdCommentsSecurity, config?: AxiosRequestConfig): Promise<operations.GetSnippetsWorkspaceEncodedIdCommentsResponse>;
     /**
-     * getSnippetsWorkspaceEncodedIdCommentsCommentId - Returns the specific snippet comment.
-    **/
-    getSnippetsWorkspaceEncodedIdCommentsCommentId(req: operations.GetSnippetsWorkspaceEncodedIdCommentsCommentIdRequest, config?: AxiosRequestConfig): Promise<operations.GetSnippetsWorkspaceEncodedIdCommentsCommentIdResponse>;
+     * Get a comment on a snippet
+     *
+     * @remarks
+     * Returns the specific snippet comment.
+     */
+    getSnippetsWorkspaceEncodedIdCommentsCommentId(req: operations.GetSnippetsWorkspaceEncodedIdCommentsCommentIdRequest, security: operations.GetSnippetsWorkspaceEncodedIdCommentsCommentIdSecurity, config?: AxiosRequestConfig): Promise<operations.GetSnippetsWorkspaceEncodedIdCommentsCommentIdResponse>;
     /**
-     * getSnippetsWorkspaceEncodedIdCommits - Returns the changes (commits) made on this snippet.
-    **/
-    getSnippetsWorkspaceEncodedIdCommits(req: operations.GetSnippetsWorkspaceEncodedIdCommitsRequest, config?: AxiosRequestConfig): Promise<operations.GetSnippetsWorkspaceEncodedIdCommitsResponse>;
+     * List snippet changes
+     *
+     * @remarks
+     * Returns the changes (commits) made on this snippet.
+     */
+    getSnippetsWorkspaceEncodedIdCommits(req: operations.GetSnippetsWorkspaceEncodedIdCommitsRequest, security: operations.GetSnippetsWorkspaceEncodedIdCommitsSecurity, config?: AxiosRequestConfig): Promise<operations.GetSnippetsWorkspaceEncodedIdCommitsResponse>;
     /**
-     * getSnippetsWorkspaceEncodedIdCommitsRevision - Returns the changes made on this snippet in this commit.
-    **/
-    getSnippetsWorkspaceEncodedIdCommitsRevision(req: operations.GetSnippetsWorkspaceEncodedIdCommitsRevisionRequest, config?: AxiosRequestConfig): Promise<operations.GetSnippetsWorkspaceEncodedIdCommitsRevisionResponse>;
+     * Get a previous snippet change
+     *
+     * @remarks
+     * Returns the changes made on this snippet in this commit.
+     */
+    getSnippetsWorkspaceEncodedIdCommitsRevision(req: operations.GetSnippetsWorkspaceEncodedIdCommitsRevisionRequest, security: operations.GetSnippetsWorkspaceEncodedIdCommitsRevisionSecurity, config?: AxiosRequestConfig): Promise<operations.GetSnippetsWorkspaceEncodedIdCommitsRevisionResponse>;
     /**
-     * getSnippetsWorkspaceEncodedIdFilesPath - Convenience resource for getting to a snippet's raw files without the
+     * Get a snippet's raw file at HEAD
+     *
+     * @remarks
+     * Convenience resource for getting to a snippet's raw files without the
      * need for first having to retrieve the snippet itself and having to pull
      * out the versioned file links.
-    **/
-    getSnippetsWorkspaceEncodedIdFilesPath(req: operations.GetSnippetsWorkspaceEncodedIdFilesPathRequest, config?: AxiosRequestConfig): Promise<operations.GetSnippetsWorkspaceEncodedIdFilesPathResponse>;
+     */
+    getSnippetsWorkspaceEncodedIdFilesPath(req: operations.GetSnippetsWorkspaceEncodedIdFilesPathRequest, security: operations.GetSnippetsWorkspaceEncodedIdFilesPathSecurity, config?: AxiosRequestConfig): Promise<operations.GetSnippetsWorkspaceEncodedIdFilesPathResponse>;
     /**
-     * getSnippetsWorkspaceEncodedIdWatch - Used to check if the current user is watching a specific snippet.
+     * Check if the current user is watching a snippet
+     *
+     * @remarks
+     * Used to check if the current user is watching a specific snippet.
      *
      * Returns 204 (No Content) if the user is watching the snippet and 404 if
      * not.
      *
      * Hitting this endpoint anonymously always returns a 404.
-    **/
-    getSnippetsWorkspaceEncodedIdWatch(req: operations.GetSnippetsWorkspaceEncodedIdWatchRequest, config?: AxiosRequestConfig): Promise<operations.GetSnippetsWorkspaceEncodedIdWatchResponse>;
+     */
+    getSnippetsWorkspaceEncodedIdWatch(req: operations.GetSnippetsWorkspaceEncodedIdWatchRequest, security: operations.GetSnippetsWorkspaceEncodedIdWatchSecurity, config?: AxiosRequestConfig): Promise<operations.GetSnippetsWorkspaceEncodedIdWatchResponse>;
     /**
-     * getSnippetsWorkspaceEncodedIdWatchers - Returns a paginated list of all users watching a specific snippet.
-    **/
-    getSnippetsWorkspaceEncodedIdWatchers(req: operations.GetSnippetsWorkspaceEncodedIdWatchersRequest, config?: AxiosRequestConfig): Promise<operations.GetSnippetsWorkspaceEncodedIdWatchersResponse>;
+     * List users watching a snippet
+     *
+     * @remarks
+     * Returns a paginated list of all users watching a specific snippet.
+     */
+    getSnippetsWorkspaceEncodedIdWatchers(req: operations.GetSnippetsWorkspaceEncodedIdWatchersRequest, security: operations.GetSnippetsWorkspaceEncodedIdWatchersSecurity, config?: AxiosRequestConfig): Promise<operations.GetSnippetsWorkspaceEncodedIdWatchersResponse>;
     /**
-     * getSnippetsWorkspaceEncodedIdNodeId - Identical to `GET /snippets/encoded_id`, except that this endpoint
+     * Get a previous revision of a snippet
+     *
+     * @remarks
+     * Identical to `GET /snippets/encoded_id`, except that this endpoint
      * can be used to retrieve the contents of the snippet as it was at an
      * older revision, while `/snippets/encoded_id` always returns the
      * snippet's current revision.
@@ -305,10 +363,13 @@ export declare class Snippets {
      * meta data properties like the title.
      *
      * Other than that, the two endpoints are identical in behavior.
-    **/
-    getSnippetsWorkspaceEncodedIdNodeId(req: operations.GetSnippetsWorkspaceEncodedIdNodeIdRequest, config?: AxiosRequestConfig): Promise<operations.GetSnippetsWorkspaceEncodedIdNodeIdResponse>;
+     */
+    getSnippetsWorkspaceEncodedIdNodeId(req: operations.GetSnippetsWorkspaceEncodedIdNodeIdRequest, security: operations.GetSnippetsWorkspaceEncodedIdNodeIdSecurity, config?: AxiosRequestConfig): Promise<operations.GetSnippetsWorkspaceEncodedIdNodeIdResponse>;
     /**
-     * getSnippetsWorkspaceEncodedIdNodeIdFilesPath - Retrieves the raw contents of a specific file in the snippet. The
+     * Get a snippet's raw file
+     *
+     * @remarks
+     * Retrieves the raw contents of a specific file in the snippet. The
      * `Content-Disposition` header will be "attachment" to avoid issues with
      * malevolent executable files.
      *
@@ -317,10 +378,13 @@ export declare class Snippets {
      *
      * Note that for text files, no character encoding is included as part of
      * the content type.
-    **/
-    getSnippetsWorkspaceEncodedIdNodeIdFilesPath(req: operations.GetSnippetsWorkspaceEncodedIdNodeIdFilesPathRequest, config?: AxiosRequestConfig): Promise<operations.GetSnippetsWorkspaceEncodedIdNodeIdFilesPathResponse>;
+     */
+    getSnippetsWorkspaceEncodedIdNodeIdFilesPath(req: operations.GetSnippetsWorkspaceEncodedIdNodeIdFilesPathRequest, security: operations.GetSnippetsWorkspaceEncodedIdNodeIdFilesPathSecurity, config?: AxiosRequestConfig): Promise<operations.GetSnippetsWorkspaceEncodedIdNodeIdFilesPathResponse>;
     /**
-     * getSnippetsWorkspaceEncodedIdRevisionDiff - Returns the diff of the specified commit against its first parent.
+     * Get snippet changes between versions
+     *
+     * @remarks
+     * Returns the diff of the specified commit against its first parent.
      *
      * Note that this resource is different in functionality from the `patch`
      * resource.
@@ -339,10 +403,13 @@ export declare class Snippets {
      * Note that the character encoding of the contents of the diff is
      * unspecified as Git does not track this, making it hard for
      * Bitbucket to reliably determine this.
-    **/
-    getSnippetsWorkspaceEncodedIdRevisionDiff(req: operations.GetSnippetsWorkspaceEncodedIdRevisionDiffRequest, config?: AxiosRequestConfig): Promise<operations.GetSnippetsWorkspaceEncodedIdRevisionDiffResponse>;
+     */
+    getSnippetsWorkspaceEncodedIdRevisionDiff(req: operations.GetSnippetsWorkspaceEncodedIdRevisionDiffRequest, security: operations.GetSnippetsWorkspaceEncodedIdRevisionDiffSecurity, config?: AxiosRequestConfig): Promise<operations.GetSnippetsWorkspaceEncodedIdRevisionDiffResponse>;
     /**
-     * getSnippetsWorkspaceEncodedIdRevisionPatch - Returns the patch of the specified commit against its first
+     * Get snippet patch between versions
+     *
+     * @remarks
+     * Returns the patch of the specified commit against its first
      * parent.
      *
      * Note that this resource is different in functionality from the `diff`
@@ -362,10 +429,13 @@ export declare class Snippets {
      * Note that the character encoding of the contents of the patch is
      * unspecified as Git does not track this, making it hard for
      * Bitbucket to reliably determine this.
-    **/
-    getSnippetsWorkspaceEncodedIdRevisionPatch(req: operations.GetSnippetsWorkspaceEncodedIdRevisionPatchRequest, config?: AxiosRequestConfig): Promise<operations.GetSnippetsWorkspaceEncodedIdRevisionPatchResponse>;
+     */
+    getSnippetsWorkspaceEncodedIdRevisionPatch(req: operations.GetSnippetsWorkspaceEncodedIdRevisionPatchRequest, security: operations.GetSnippetsWorkspaceEncodedIdRevisionPatchSecurity, config?: AxiosRequestConfig): Promise<operations.GetSnippetsWorkspaceEncodedIdRevisionPatchResponse>;
     /**
-     * postSnippets - Creates a new snippet under the authenticated user's account.
+     * Create a snippet
+     *
+     * @remarks
+     * Creates a new snippet under the authenticated user's account.
      *
      * Snippets can contain multiple files. Both text and binary files are
      * supported.
@@ -404,7 +474,7 @@ export declare class Snippets {
      *     {
      *       "title": "My snippet",
      *       "is_private": true,
-     *       "scm": "hg",
+     *       "scm": "git",
      *       "files": {
      *           "foo.txt": {},
      *           "image.png": {}
@@ -512,25 +582,34 @@ export declare class Snippets {
      * * **is_private=true** -- only workspace members can view the snippet
      *
      * To create the snippet under a workspace, just append the workspace ID
-     * to the URL. See [`/2.0/snippets/{workspace}`](./snippets/%7Bworkspace%7D#post).
-    **/
-    postSnippets(req: operations.PostSnippetsRequest, config?: AxiosRequestConfig): Promise<operations.PostSnippetsResponse>;
+     * to the URL. See [`/2.0/snippets/{workspace}`](/cloud/bitbucket/rest/api-group-snippets/#api-snippets-workspace-post).
+     */
+    postSnippets(req: Record<string, any>, security: operations.PostSnippetsSecurity, config?: AxiosRequestConfig): Promise<operations.PostSnippetsResponse>;
     /**
-     * postSnippetsWorkspace - Identical to [`/snippets`](../snippets#post), except that the new snippet will be
+     * Create a snippet for a workspace
+     *
+     * @remarks
+     * Identical to [`/snippets`](/cloud/bitbucket/rest/api-group-snippets/#api-snippets-post), except that the new snippet will be
      * created under the workspace specified in the path parameter
      * `{workspace}`.
-    **/
-    postSnippetsWorkspace(req: operations.PostSnippetsWorkspaceRequest, config?: AxiosRequestConfig): Promise<operations.PostSnippetsWorkspaceResponse>;
+     */
+    postSnippetsWorkspace(req: operations.PostSnippetsWorkspaceRequest, security: operations.PostSnippetsWorkspaceSecurity, config?: AxiosRequestConfig): Promise<operations.PostSnippetsWorkspaceResponse>;
     /**
-     * postSnippetsWorkspaceEncodedIdComments - Creates a new comment.
+     * Create a comment on a snippet
+     *
+     * @remarks
+     * Creates a new comment.
      *
      * The only required field in the body is `content.raw`.
      *
      * To create a threaded reply to an existing comment, include `parent.id`.
-    **/
-    postSnippetsWorkspaceEncodedIdComments(req: operations.PostSnippetsWorkspaceEncodedIdCommentsRequest, config?: AxiosRequestConfig): Promise<operations.PostSnippetsWorkspaceEncodedIdCommentsResponse>;
+     */
+    postSnippetsWorkspaceEncodedIdComments(req: operations.PostSnippetsWorkspaceEncodedIdCommentsRequest, security: operations.PostSnippetsWorkspaceEncodedIdCommentsSecurity, config?: AxiosRequestConfig): Promise<operations.PostSnippetsWorkspaceEncodedIdCommentsResponse>;
     /**
-     * putSnippetsWorkspaceEncodedId - Used to update a snippet. Use this to add and delete files and to
+     * Update a snippet
+     *
+     * @remarks
+     * Used to update a snippet. Use this to add and delete files and to
      * change a snippet's title.
      *
      * To update a snippet, one can either PUT a full snapshot, or only the
@@ -728,20 +807,31 @@ export declare class Snippets {
      * The default mode of operation is for file parts to be processed,
      * regardless of whether or not they are listed in `files`, as a
      * convenience to the client.
-    **/
-    putSnippetsWorkspaceEncodedId(req: operations.PutSnippetsWorkspaceEncodedIdRequest, config?: AxiosRequestConfig): Promise<operations.PutSnippetsWorkspaceEncodedIdResponse>;
+     */
+    putSnippetsWorkspaceEncodedId(req: operations.PutSnippetsWorkspaceEncodedIdRequest, security: operations.PutSnippetsWorkspaceEncodedIdSecurity, config?: AxiosRequestConfig): Promise<operations.PutSnippetsWorkspaceEncodedIdResponse>;
     /**
-     * putSnippetsWorkspaceEncodedIdCommentsCommentId - Updates a comment.
+     * Update a comment on a snippet
+     *
+     * @remarks
+     * Updates a comment.
+     *
+     * The only required field in the body is `content.raw`.
      *
      * Comments can only be updated by their author.
-    **/
-    putSnippetsWorkspaceEncodedIdCommentsCommentId(req: operations.PutSnippetsWorkspaceEncodedIdCommentsCommentIdRequest, config?: AxiosRequestConfig): Promise<operations.PutSnippetsWorkspaceEncodedIdCommentsCommentIdResponse>;
+     */
+    putSnippetsWorkspaceEncodedIdCommentsCommentId(req: operations.PutSnippetsWorkspaceEncodedIdCommentsCommentIdRequest, security: operations.PutSnippetsWorkspaceEncodedIdCommentsCommentIdSecurity, config?: AxiosRequestConfig): Promise<operations.PutSnippetsWorkspaceEncodedIdCommentsCommentIdResponse>;
     /**
-     * putSnippetsWorkspaceEncodedIdWatch - Used to start watching a specific snippet. Returns 204 (No Content).
-    **/
-    putSnippetsWorkspaceEncodedIdWatch(req: operations.PutSnippetsWorkspaceEncodedIdWatchRequest, config?: AxiosRequestConfig): Promise<operations.PutSnippetsWorkspaceEncodedIdWatchResponse>;
+     * Watch a snippet
+     *
+     * @remarks
+     * Used to start watching a specific snippet. Returns 204 (No Content).
+     */
+    putSnippetsWorkspaceEncodedIdWatch(req: operations.PutSnippetsWorkspaceEncodedIdWatchRequest, security: operations.PutSnippetsWorkspaceEncodedIdWatchSecurity, config?: AxiosRequestConfig): Promise<operations.PutSnippetsWorkspaceEncodedIdWatchResponse>;
     /**
-     * putSnippetsWorkspaceEncodedIdNodeId - Identical to `UPDATE /snippets/encoded_id`, except that this endpoint
+     * Update a previous revision of a snippet
+     *
+     * @remarks
+     * Identical to `UPDATE /snippets/encoded_id`, except that this endpoint
      * takes an explicit commit revision. Only the snippet's "HEAD"/"tip"
      * (most recent) version can be updated and requests on all other,
      * older revisions fail by returning a 405 status.
@@ -755,6 +845,6 @@ export declare class Snippets {
      * operation.
      *
      * Other than that, the two endpoints are identical in behavior.
-    **/
-    putSnippetsWorkspaceEncodedIdNodeId(req: operations.PutSnippetsWorkspaceEncodedIdNodeIdRequest, config?: AxiosRequestConfig): Promise<operations.PutSnippetsWorkspaceEncodedIdNodeIdResponse>;
+     */
+    putSnippetsWorkspaceEncodedIdNodeId(req: operations.PutSnippetsWorkspaceEncodedIdNodeIdRequest, security: operations.PutSnippetsWorkspaceEncodedIdNodeIdSecurity, config?: AxiosRequestConfig): Promise<operations.PutSnippetsWorkspaceEncodedIdNodeIdResponse>;
 }

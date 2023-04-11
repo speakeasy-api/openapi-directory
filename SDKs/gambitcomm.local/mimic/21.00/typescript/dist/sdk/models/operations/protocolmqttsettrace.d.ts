@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolMqttSetTracePathParams extends SpeakeasyBase {
-    agentNum: number;
-    enableOrNot: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolMqttSetTraceRequest extends SpeakeasyBase {
-    pathParams: ProtocolMqttSetTracePathParams;
+    /**
+     * Agent to set the MQTT tracing
+     */
+    agentNum: number;
+    /**
+     * Value to set the MQTT tracing
+     */
+    enableOrNot: string;
 }
 export declare class ProtocolMqttSetTraceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolMqttSetTrace200ApplicationJSONString?: string;
 }

@@ -1,19 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ApplicationsRemoveOwnerPathParams extends SpeakeasyBase {
-    applicationObjectId: string;
-    ownerObjectId: string;
-    tenantID: string;
-}
-export declare class ApplicationsRemoveOwnerQueryParams extends SpeakeasyBase {
-    apiVersion: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ApplicationsRemoveOwnerRequest extends SpeakeasyBase {
-    pathParams: ApplicationsRemoveOwnerPathParams;
-    queryParams: ApplicationsRemoveOwnerQueryParams;
+    /**
+     * Client API version.
+     */
+    apiVersion: string;
+    /**
+     * The object ID of the application from which to remove the owner.
+     */
+    applicationObjectId: string;
+    /**
+     * Owner object id
+     */
+    ownerObjectId: string;
+    /**
+     * The tenant ID.
+     */
+    tenantID: string;
 }
 export declare class ApplicationsRemoveOwnerResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Error response describing why the operation failed.
+     */
     graphError?: shared.GraphError;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

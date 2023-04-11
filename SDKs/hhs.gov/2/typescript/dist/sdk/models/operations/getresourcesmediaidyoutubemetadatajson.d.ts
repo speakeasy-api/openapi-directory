@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetResourcesMediaIdYoutubeMetaDataJsonPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetResourcesMediaIdYoutubeMetaDataJsonRequest extends SpeakeasyBase {
+    /**
+     * The id of the video to show meta data for.
+     */
     id: number;
 }
-export declare class GetResourcesMediaIdYoutubeMetaDataJson200ApplicationJson extends SpeakeasyBase {
+/**
+ * Returns the Youtube metadata, where applicable, for the MediaItem identified by the 'id'.
+ */
+export declare class GetResourcesMediaIdYoutubeMetaDataJson200ApplicationJSON extends SpeakeasyBase {
     callback?: string;
     meta?: shared.Meta;
     results?: Record<string, any>[];
 }
-export declare class GetResourcesMediaIdYoutubeMetaDataJsonRequest extends SpeakeasyBase {
-    pathParams: GetResourcesMediaIdYoutubeMetaDataJsonPathParams;
-}
 export declare class GetResourcesMediaIdYoutubeMetaDataJsonResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getResourcesMediaIdYoutubeMetaDataJSON200ApplicationJSONObject?: GetResourcesMediaIdYoutubeMetaDataJson200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Returns the Youtube metadata, where applicable, for the MediaItem identified by the 'id'.
+     */
+    getResourcesMediaIdYoutubeMetaDataJSON200ApplicationJSONObject?: GetResourcesMediaIdYoutubeMetaDataJson200ApplicationJSON;
 }

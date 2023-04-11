@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetAccountSettingsXAmzTargetEnum {
     DeviceFarm20150623GetAccountSettings = "DeviceFarm_20150623.GetAccountSettings"
 }
-export declare class GetAccountSettingsHeaders extends SpeakeasyBase {
+export declare class GetAccountSettingsRequest extends SpeakeasyBase {
+    requestBody: Record<string, any>;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class GetAccountSettingsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetAccountSettingsXAmzTargetEnum;
 }
-export declare class GetAccountSettingsRequest extends SpeakeasyBase {
-    headers: GetAccountSettingsHeaders;
-    request: Record<string, any>;
-}
 export declare class GetAccountSettingsResponse extends SpeakeasyBase {
+    /**
+     * ArgumentException
+     */
     argumentException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getAccountSettingsResult?: shared.GetAccountSettingsResult;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
+    /**
+     * ServiceAccountException
+     */
     serviceAccountException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

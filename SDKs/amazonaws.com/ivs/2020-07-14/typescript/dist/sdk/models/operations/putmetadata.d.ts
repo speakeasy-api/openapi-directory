@@ -1,5 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PutMetadataHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class PutMetadataRequestBody extends SpeakeasyBase {
+    /**
+     * ARN of the channel into which metadata is inserted. This channel must have an active stream.
+     */
+    channelArn: string;
+    /**
+     * Metadata to insert into the stream. Maximum: 1 KB per request.
+     */
+    metadata: string;
+}
+export declare class PutMetadataRequest extends SpeakeasyBase {
+    requestBody: PutMetadataRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -8,20 +20,28 @@ export declare class PutMetadataHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PutMetadataRequestBody extends SpeakeasyBase {
-    channelArn: string;
-    metadata: string;
-}
-export declare class PutMetadataRequest extends SpeakeasyBase {
-    headers: PutMetadataHeaders;
-    request: PutMetadataRequestBody;
-}
 export declare class PutMetadataResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ChannelNotBroadcasting
+     */
     channelNotBroadcasting?: any;
     contentType: string;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

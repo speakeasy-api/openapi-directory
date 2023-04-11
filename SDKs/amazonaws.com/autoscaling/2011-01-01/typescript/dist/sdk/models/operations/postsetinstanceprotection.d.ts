@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostSetInstanceProtectionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTSetInstanceProtectionActionEnum {
     SetInstanceProtection = "SetInstanceProtection"
 }
-export declare enum PostSetInstanceProtectionVersionEnum {
+export declare enum POSTSetInstanceProtectionVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class PostSetInstanceProtectionQueryParams extends SpeakeasyBase {
-    action: PostSetInstanceProtectionActionEnum;
-    version: PostSetInstanceProtectionVersionEnum;
-}
-export declare class PostSetInstanceProtectionHeaders extends SpeakeasyBase {
+export declare class POSTSetInstanceProtectionRequest extends SpeakeasyBase {
+    action: POSTSetInstanceProtectionActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTSetInstanceProtectionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostSetInstanceProtectionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostSetInstanceProtectionRequest extends SpeakeasyBase {
-    queryParams: PostSetInstanceProtectionQueryParams;
-    headers: PostSetInstanceProtectionHeaders;
-    request?: Uint8Array;
-}
-export declare class PostSetInstanceProtectionResponse extends SpeakeasyBase {
+export declare class POSTSetInstanceProtectionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

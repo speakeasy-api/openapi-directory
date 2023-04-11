@@ -1,0 +1,32 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+export declare class Player extends SpeakeasyBase {
+    birthCity?: string;
+    birthCountry?: string;
+    birthDate?: string;
+    commonName?: string;
+    draftKingsPosition?: string;
+    firstName?: string;
+    foot?: string;
+    gender?: string;
+    height?: number;
+    injuryBodyPart?: string;
+    injuryNotes?: string;
+    injuryStartDate?: string;
+    injuryStatus?: string;
+    jersey?: number;
+    lastName?: string;
+    nationality?: string;
+    photoUrl?: string;
+    playerId?: number;
+    position?: string;
+    positionCategory?: string;
+    rotoWirePlayerID?: number;
+    shortName?: string;
+    updated?: string;
+    usaTodayHeadshotNoBackgroundUpdated?: string;
+    usaTodayHeadshotNoBackgroundUrl?: string;
+    usaTodayHeadshotUpdated?: string;
+    usaTodayHeadshotUrl?: string;
+    usaTodayPlayerID?: number;
+    weight?: number;
+}

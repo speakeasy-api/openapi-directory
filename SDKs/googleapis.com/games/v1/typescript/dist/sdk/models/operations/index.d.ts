@@ -17,6 +17,7 @@ export * from "./gamesleaderboardslist";
 export * from "./gamesmetagamegetmetagameconfig";
 export * from "./gamesmetagamelistcategoriesbyplayer";
 export * from "./gamesplayersget";
+export * from "./gamesplayersgetmultipleapplicationplayerids";
 export * from "./gamesplayersgetscopedplayerids";
 export * from "./gamesplayerslist";
 export * from "./gamesrevisionscheck";

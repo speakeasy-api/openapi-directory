@@ -1,15 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class VerifyControlPathParams extends SpeakeasyBase {
-    format: shared.FormatEnum;
-}
+import { AxiosResponse } from "axios";
 export declare class VerifyControlRequest extends SpeakeasyBase {
-    pathParams: VerifyControlPathParams;
-    request: shared.ControlRequest;
+    controlRequest: shared.ControlRequest;
+    /**
+     * The response format.
+     */
+    format: shared.FormatEnum;
 }
 export declare class VerifyControlResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
     verifyControl200ApplicationJSONOneOf?: any;
 }

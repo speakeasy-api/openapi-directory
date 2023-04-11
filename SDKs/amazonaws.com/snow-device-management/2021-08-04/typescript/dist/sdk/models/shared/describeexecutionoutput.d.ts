@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ExecutionStateEnum } from "./executionstateenum";
+/**
+ * Success
+ */
 export declare class DescribeExecutionOutput extends SpeakeasyBase {
     executionId?: string;
     lastUpdatedAt?: Date;

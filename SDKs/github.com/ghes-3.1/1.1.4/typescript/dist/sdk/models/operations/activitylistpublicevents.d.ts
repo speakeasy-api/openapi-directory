@@ -1,21 +1,38 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ActivityListPublicEventsQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ActivityListPublicEventsRequest extends SpeakeasyBase {
+    /**
+     * Page number of the results to fetch.
+     */
     page?: number;
+    /**
+     * The number of results per page (max 100).
+     */
     perPage?: number;
 }
-export declare class ActivityListPublicEvents503ApplicationJson extends SpeakeasyBase {
+/**
+ * Service unavailable
+ */
+export declare class ActivityListPublicEvents503ApplicationJSON extends SpeakeasyBase {
     code?: string;
     documentationUrl?: string;
     message?: string;
 }
-export declare class ActivityListPublicEventsRequest extends SpeakeasyBase {
-    queryParams: ActivityListPublicEventsQueryParams;
-}
 export declare class ActivityListPublicEventsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    activityListPublicEvents503ApplicationJSONObject?: ActivityListPublicEvents503ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Service unavailable
+     */
+    activityListPublicEvents503ApplicationJSONObject?: ActivityListPublicEvents503ApplicationJSON;
+    /**
+     * Forbidden
+     */
     basicError?: shared.BasicError;
+    /**
+     * Response
+     */
     events?: shared.Event[];
 }

@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DcimSitesPartialUpdatePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DcimSitesPartialUpdateRequest extends SpeakeasyBase {
-    pathParams: DcimSitesPartialUpdatePathParams;
-    request: shared.WritableSiteInput;
+    writableSiteInput: shared.WritableSiteInput;
+    /**
+     * A unique integer value identifying this site.
+     */
+    id: number;
 }
 export declare class DcimSitesPartialUpdateResponse extends SpeakeasyBase {
     contentType: string;
     site?: shared.Site;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

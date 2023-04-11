@@ -1,20 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreateSettingPathParams extends SpeakeasyBase {
-    configId: string;
-}
-export declare class CreateSettingRequests extends SpeakeasyBase {
-    createSettingModel?: shared.CreateSettingModel;
-    createSettingModel1?: shared.CreateSettingModel;
-    createSettingModel2?: shared.CreateSettingModel;
-}
+import { AxiosResponse } from "axios";
 export declare class CreateSettingRequest extends SpeakeasyBase {
-    pathParams: CreateSettingPathParams;
-    request: CreateSettingRequests;
+    createSettingInitialValues: shared.CreateSettingInitialValues;
+    /**
+     * The identifier of the Config.
+     */
+    configId: string;
 }
 export declare class CreateSettingResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * When the creation was successful.
+     */
     settingModel?: shared.SettingModel;
+    /**
+     * When the creation was successful.
+     */
     settingModelHaljson?: shared.SettingModelHaljson;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

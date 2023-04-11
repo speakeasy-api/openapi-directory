@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteTableVersionXAmzTargetEnum {
-    AwsGlueDeleteTableVersion = "AWSGlue.DeleteTableVersion"
+    AWSGlueDeleteTableVersion = "AWSGlue.DeleteTableVersion"
 }
-export declare class DeleteTableVersionHeaders extends SpeakeasyBase {
+export declare class DeleteTableVersionRequest extends SpeakeasyBase {
+    deleteTableVersionRequest: shared.DeleteTableVersionRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class DeleteTableVersionHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteTableVersionXAmzTargetEnum;
 }
-export declare class DeleteTableVersionRequest extends SpeakeasyBase {
-    headers: DeleteTableVersionHeaders;
-    request: shared.DeleteTableVersionRequest;
-}
 export declare class DeleteTableVersionResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deleteTableVersionResponse?: Record<string, any>;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

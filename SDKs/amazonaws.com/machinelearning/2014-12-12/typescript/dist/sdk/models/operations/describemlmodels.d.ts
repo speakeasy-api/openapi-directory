@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeMlModelsQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare enum DescribeMLModelsXAmzTargetEnum {
+    AmazonML20141212DescribeMLModels = "AmazonML_20141212.DescribeMLModels"
+}
+export declare class DescribeMLModelsRequest extends SpeakeasyBase {
+    describeMLModelsInput: shared.DescribeMLModelsInput;
+    /**
+     * Pagination limit
+     */
     limit?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-}
-export declare enum DescribeMlModelsXAmzTargetEnum {
-    AmazonMl20141212DescribeMlModels = "AmazonML_20141212.DescribeMLModels"
-}
-export declare class DescribeMlModelsHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -15,17 +21,22 @@ export declare class DescribeMlModelsHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: DescribeMlModelsXAmzTargetEnum;
+    xAmzTarget: DescribeMLModelsXAmzTargetEnum;
 }
-export declare class DescribeMlModelsRequest extends SpeakeasyBase {
-    queryParams: DescribeMlModelsQueryParams;
-    headers: DescribeMlModelsHeaders;
-    request: shared.DescribeMlModelsInput;
-}
-export declare class DescribeMlModelsResponse extends SpeakeasyBase {
+export declare class DescribeMLModelsResponse extends SpeakeasyBase {
     contentType: string;
-    describeMLModelsOutput?: shared.DescribeMlModelsOutput;
+    /**
+     * Success
+     */
+    describeMLModelsOutput?: shared.DescribeMLModelsOutput;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

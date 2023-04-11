@@ -1,0 +1,32 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The role value representing a user role in GitHub.
+ */
+export declare enum UserRoleValueEnum {
+    UserMixed = "User",
+    UserLower = "user",
+    TwentySevend9891d2c174f45A262781a0e55c80a = "27d9891d-2c17-4f45-a262-781a0e55c80a",
+    RestrictedUserMixed = "Restricted User",
+    RestrictedUserLower = "restricted_user",
+    Oneebc4a02E56c43a692a502ee09b90824 = "1ebc4a02-e56c-43a6-92a5-02ee09b90824",
+    EnterpriseOwnerMixed = "Enterprise Owner",
+    EnterpriseOwnerLower = "enterprise_owner",
+    NineHundredAndEightyOnedf19088014618A08aD91f6206c954 = "981df190-8801-4618-a08a-d91f6206c954",
+    Ba4987abA1c3412aB58c360fc407cb10 = "ba4987ab-a1c3-412a-b58c-360fc407cb10",
+    BillingManagerMixed = "Billing Manager",
+    BillingManagerLower = "billing_manager",
+    Zeroe338b8cCc7f498a928dEa3470d7e7e3 = "0e338b8c-cc7f-498a-928d-ea3470d7e7e3",
+    E6be2762E4ad4108B72d1bbe884a0f91 = "e6be2762-e4ad-4108-b72d-1bbe884a0f91"
+}
+export declare class UserRole extends SpeakeasyBase {
+    display?: string;
+    /**
+     * Is the role a primary role for the user.
+     */
+    primary?: boolean;
+    type?: string;
+    /**
+     * The role value representing a user role in GitHub.
+     */
+    value: UserRoleValueEnum;
+}

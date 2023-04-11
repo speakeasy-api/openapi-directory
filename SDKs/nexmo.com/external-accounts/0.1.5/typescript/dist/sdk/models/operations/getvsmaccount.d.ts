@@ -1,19 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetVsmAccountPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetVSMAccountSecurity extends SpeakeasyBase {
+    basicAuth?: shared.SchemeBasicAuth;
+    bearerAuth?: string;
+}
+export declare class GetVSMAccountRequest extends SpeakeasyBase {
+    /**
+     * External id of the account you want to retrieve. In this case it will be your Viber Service Message ID.
+     */
     externalId: string;
 }
-export declare class GetVsmAccountSecurity extends SpeakeasyBase {
-    bearerAuth?: shared.SchemeBearerAuth;
-    basicAuth?: shared.SchemeBasicAuth;
-}
-export declare class GetVsmAccountRequest extends SpeakeasyBase {
-    pathParams: GetVsmAccountPathParams;
-    security: GetVsmAccountSecurity;
-}
-export declare class GetVsmAccountResponse extends SpeakeasyBase {
+export declare class GetVSMAccountResponse extends SpeakeasyBase {
+    /**
+     * Unauthorized.
+     */
     fourHundredAndOneResponse?: shared.FourHundredAndOneResponse;
     contentType: string;
     statusCode: number;
-    vsmAccountResponse?: shared.VsmAccountResponse;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK.
+     */
+    vsmAccountResponse?: shared.VSMAccountResponse;
 }

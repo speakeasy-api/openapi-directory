@@ -1,18 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdateGlobalJwtVerifierPathParams extends SpeakeasyBase {
-    verifierId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UpdateGlobalJwtVerifierSecurity extends SpeakeasyBase {
-    otoroshiAuth: shared.SchemeOtoroshiAuth;
+    password: string;
+    username: string;
 }
 export declare class UpdateGlobalJwtVerifierRequest extends SpeakeasyBase {
-    pathParams: UpdateGlobalJwtVerifierPathParams;
-    request?: shared.GlobalJwtVerifier;
-    security: UpdateGlobalJwtVerifierSecurity;
+    globalJwtVerifier?: shared.GlobalJwtVerifier;
+    /**
+     * The jwt verifier id
+     */
+    verifierId: string;
 }
 export declare class UpdateGlobalJwtVerifierResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful operation
+     */
     globalJwtVerifier?: shared.GlobalJwtVerifier;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

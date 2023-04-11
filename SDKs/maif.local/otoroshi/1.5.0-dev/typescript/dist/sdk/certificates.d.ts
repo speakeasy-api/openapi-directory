@@ -1,5 +1,9 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Everything about Otoroshi SSL/TLS certificates
+ */
 export declare class Certificates {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,39 +13,45 @@ export declare class Certificates {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * allCerts - Get all certificates
-     *
      * Get all certificates
-    **/
-    allCerts(req: operations.AllCertsRequest, config?: AxiosRequestConfig): Promise<operations.AllCertsResponse>;
-    /**
-     * createCert - Create one certificate
      *
+     * @remarks
+     * Get all certificates
+     */
+    allCerts(config?: AxiosRequestConfig): Promise<operations.AllCertsResponse>;
+    /**
      * Create one certificate
-    **/
-    createCert(req: operations.CreateCertRequest, config?: AxiosRequestConfig): Promise<operations.CreateCertResponse>;
-    /**
-     * deleteCert - Delete one certificate by id
      *
+     * @remarks
+     * Create one certificate
+     */
+    createCert(req: shared.Certificate, security: operations.CreateCertSecurity, config?: AxiosRequestConfig): Promise<operations.CreateCertResponse>;
+    /**
      * Delete one certificate by id
-    **/
-    deleteCert(req: operations.DeleteCertRequest, config?: AxiosRequestConfig): Promise<operations.DeleteCertResponse>;
-    /**
-     * oneCert - Get one certificate by id
      *
+     * @remarks
+     * Delete one certificate by id
+     */
+    deleteCert(req: operations.DeleteCertRequest, security: operations.DeleteCertSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteCertResponse>;
+    /**
      * Get one certificate by id
-    **/
-    oneCert(req: operations.OneCertRequest, config?: AxiosRequestConfig): Promise<operations.OneCertResponse>;
-    /**
-     * patchCert - Update one certificate by id
      *
-     * Update one certificate by id
-    **/
-    patchCert(req: operations.PatchCertRequest, config?: AxiosRequestConfig): Promise<operations.PatchCertResponse>;
+     * @remarks
+     * Get one certificate by id
+     */
+    oneCert(req: operations.OneCertRequest, security: operations.OneCertSecurity, config?: AxiosRequestConfig): Promise<operations.OneCertResponse>;
     /**
-     * putCert - Update one certificate by id
-     *
      * Update one certificate by id
-    **/
-    putCert(req: operations.PutCertRequest, config?: AxiosRequestConfig): Promise<operations.PutCertResponse>;
+     *
+     * @remarks
+     * Update one certificate by id
+     */
+    patchCert(req: operations.PatchCertRequest, security: operations.PatchCertSecurity, config?: AxiosRequestConfig): Promise<operations.PatchCertResponse>;
+    /**
+     * Update one certificate by id
+     *
+     * @remarks
+     * Update one certificate by id
+     */
+    putCert(req: operations.PutCertRequest, security: operations.PutCertSecurity, config?: AxiosRequestConfig): Promise<operations.PutCertResponse>;
 }

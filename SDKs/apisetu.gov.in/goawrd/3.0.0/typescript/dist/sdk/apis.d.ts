@@ -1,6 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class ApIs {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+export declare class APIs {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,21 +9,24 @@ export declare class ApIs {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * ercer - Registration Certificate of Establishment Employing Contract Labour
+     * Registration Certificate of Establishment Employing Contract Labour
      *
+     * @remarks
      * API to verify Registration Certificate of Establishment Employing Contract Labour.
-    **/
-    ercer(req: operations.ErcerRequest, config?: AxiosRequestConfig): Promise<operations.ErcerResponse>;
+     */
+    ercer(req: operations.ErcerRequestBody, security: operations.ErcerSecurity, config?: AxiosRequestConfig): Promise<operations.ErcerResponse>;
     /**
-     * pfdaw - Permission/ Certificate for Well
+     * Permission/ Certificate for Well
      *
+     * @remarks
      * API to verify Permission/ Certificate for Well.
-    **/
-    pfdaw(req: operations.PfdawRequest, config?: AxiosRequestConfig): Promise<operations.PfdawResponse>;
+     */
+    pfdaw(req: operations.PfdawRequestBody, security: operations.PfdawSecurity, config?: AxiosRequestConfig): Promise<operations.PfdawResponse>;
     /**
-     * tpcer - Permission/ Certificate for Transportation (Petroleum Products, Water etc.)
+     * Permission/ Certificate for Transportation (Petroleum Products, Water etc.)
      *
+     * @remarks
      * API to verify Permission/ Certificate for Transportation (Petroleum Products, Water etc.).
-    **/
-    tpcer(req: operations.TpcerRequest, config?: AxiosRequestConfig): Promise<operations.TpcerResponse>;
+     */
+    tpcer(req: operations.TpcerRequestBody, security: operations.TpcerSecurity, config?: AxiosRequestConfig): Promise<operations.TpcerResponse>;
 }

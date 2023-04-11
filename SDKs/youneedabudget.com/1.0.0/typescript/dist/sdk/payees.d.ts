@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * The payees for a budget
+ */
 export declare class Payees {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,15 +12,17 @@ export declare class Payees {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getPayeeById - Single payee
+     * Single payee
      *
+     * @remarks
      * Returns a single payee
-    **/
+     */
     getPayeeById(req: operations.GetPayeeByIdRequest, config?: AxiosRequestConfig): Promise<operations.GetPayeeByIdResponse>;
     /**
-     * getPayees - List payees
+     * List payees
      *
+     * @remarks
      * Returns all payees
-    **/
+     */
     getPayees(req: operations.GetPayeesRequest, config?: AxiosRequestConfig): Promise<operations.GetPayeesResponse>;
 }

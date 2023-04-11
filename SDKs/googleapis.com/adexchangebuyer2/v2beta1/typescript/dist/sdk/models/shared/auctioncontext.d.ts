@@ -5,7 +5,10 @@ export declare enum AuctionContextAuctionTypesEnum {
 }
 /**
  * Output only. The auction type the restriction applies to.
-**/
+ */
 export declare class AuctionContext extends SpeakeasyBase {
+    /**
+     * The auction types this restriction applies to.
+     */
     auctionTypes?: AuctionContextAuctionTypesEnum[];
 }

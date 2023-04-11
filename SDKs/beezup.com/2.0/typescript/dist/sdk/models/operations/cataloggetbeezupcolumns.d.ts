@@ -1,8 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CatalogGetBeezUpColumnsResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+import { AxiosResponse } from "axios";
+export declare class CatalogGetBeezUPColumnsResponse extends SpeakeasyBase {
+    /**
+     * Occurs when something goes wrong
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
     statusCode: number;
-    beezUPColumnConfigurations?: shared.BeezUpColumnConfiguration[];
+    rawResponse?: AxiosResponse;
+    /**
+     * The catalog API index
+     */
+    beezUPColumnConfigurations?: shared.BeezUPColumnConfiguration[];
 }

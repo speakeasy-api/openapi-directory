@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum StopWorkspacesXAmzTargetEnum {
     WorkspacesServiceStopWorkspaces = "WorkspacesService.StopWorkspaces"
 }
-export declare class StopWorkspacesHeaders extends SpeakeasyBase {
+export declare class StopWorkspacesRequest extends SpeakeasyBase {
+    stopWorkspacesRequest: shared.StopWorkspacesRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,12 +15,12 @@ export declare class StopWorkspacesHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: StopWorkspacesXAmzTargetEnum;
 }
-export declare class StopWorkspacesRequest extends SpeakeasyBase {
-    headers: StopWorkspacesHeaders;
-    request: shared.StopWorkspacesRequest;
-}
 export declare class StopWorkspacesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     stopWorkspacesResult?: shared.StopWorkspacesResult;
 }

@@ -1,10 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ContainerDependency } from "./containerdependency";
-import { KeyValuePair } from "./keyvaluepair";
 import { EnvironmentFile } from "./environmentfile";
-import { HostEntry } from "./hostentry";
 import { FirelensConfiguration } from "./firelensconfiguration";
 import { HealthCheck } from "./healthcheck";
+import { HostEntry } from "./hostentry";
+import { KeyValuePair } from "./keyvaluepair";
 import { LinuxParameters } from "./linuxparameters";
 import { LogConfiguration } from "./logconfiguration";
 import { MountPoint } from "./mountpoint";
@@ -17,7 +17,7 @@ import { Ulimit } from "./ulimit";
 import { VolumeFrom } from "./volumefrom";
 /**
  * Container definitions are used in task definitions to describe the different containers that are launched as part of a task.
-**/
+ */
 export declare class ContainerDefinition extends SpeakeasyBase {
     command?: string[];
     cpu?: number;

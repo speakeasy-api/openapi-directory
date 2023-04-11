@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteVpcPeeringConnectionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteVpcPeeringConnectionActionEnum {
     DeleteVpcPeeringConnection = "DeleteVpcPeeringConnection"
 }
-export declare enum PostDeleteVpcPeeringConnectionVersionEnum {
+export declare enum POSTDeleteVpcPeeringConnectionVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDeleteVpcPeeringConnectionQueryParams extends SpeakeasyBase {
-    action: PostDeleteVpcPeeringConnectionActionEnum;
-    version: PostDeleteVpcPeeringConnectionVersionEnum;
-}
-export declare class PostDeleteVpcPeeringConnectionHeaders extends SpeakeasyBase {
+export declare class POSTDeleteVpcPeeringConnectionRequest extends SpeakeasyBase {
+    action: POSTDeleteVpcPeeringConnectionActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteVpcPeeringConnectionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteVpcPeeringConnectionHeaders extends SpeakeasyBase
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteVpcPeeringConnectionRequest extends SpeakeasyBase {
-    queryParams: PostDeleteVpcPeeringConnectionQueryParams;
-    headers: PostDeleteVpcPeeringConnectionHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteVpcPeeringConnectionResponse extends SpeakeasyBase {
+export declare class POSTDeleteVpcPeeringConnectionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

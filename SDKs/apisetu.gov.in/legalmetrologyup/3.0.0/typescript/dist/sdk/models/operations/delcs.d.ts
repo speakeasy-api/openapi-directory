@@ -1,116 +1,174 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class DelcsSecurity extends SpeakeasyBase {
+    apiKey: string;
+    clientId: string;
+}
 export declare class DelcsRequestBodyCertificateParameters extends SpeakeasyBase {
+    /**
+     * Application No.
+     */
     applicationNo: string;
+    /**
+     * License No.
+     */
     licenseNo: string;
 }
+/**
+ * The format of the certificate in response.
+ */
 export declare enum DelcsRequestBodyFormatEnum {
     Pdf = "pdf"
 }
+/**
+ * Request format
+ */
 export declare class DelcsRequestBody extends SpeakeasyBase {
     certificateParameters?: DelcsRequestBodyCertificateParameters;
-    consentArtifact?: any;
+    consentArtifact?: shared.ConsentArtifactSchema;
+    /**
+     * The format of the certificate in response.
+     */
     format: DelcsRequestBodyFormatEnum;
+    /**
+     * A unique transaction id for this request in UUID format. It is used for tracking the request.
+     */
     txnId: string;
 }
-export declare class DelcsSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
-    clientId: shared.SchemeClientId;
+export declare enum Delcs504ApplicationJSONErrorEnum {
+    GatewayTimeout = "gateway_timeout"
 }
-export declare enum Delcs400ApplicationJsonErrorEnum {
+export declare enum Delcs504ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
+}
+/**
+ * Gateway timeout
+ */
+export declare class Delcs504ApplicationJSON extends SpeakeasyBase {
+    error?: Delcs504ApplicationJSONErrorEnum;
+    errorDescription?: Delcs504ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Delcs503ApplicationJSONErrorEnum {
+    ServiceUnavailable = "service_unavailable"
+}
+export declare enum Delcs503ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
+}
+/**
+ * Service unavailable
+ */
+export declare class Delcs503ApplicationJSON extends SpeakeasyBase {
+    error?: Delcs503ApplicationJSONErrorEnum;
+    errorDescription?: Delcs503ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Delcs502ApplicationJSONErrorEnum {
+    BadGatewy = "bad_gatewy"
+}
+export declare enum Delcs502ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
+}
+/**
+ * Bad gateway
+ */
+export declare class Delcs502ApplicationJSON extends SpeakeasyBase {
+    error?: Delcs502ApplicationJSONErrorEnum;
+    errorDescription?: Delcs502ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Delcs500ApplicationJSONErrorEnum {
+    InternalServerError = "internal_server_error"
+}
+export declare enum Delcs500ApplicationJSONErrorDescriptionEnum {
+    InternalServerError = "Internal server error"
+}
+/**
+ * Internal server error
+ */
+export declare class Delcs500ApplicationJSON extends SpeakeasyBase {
+    error?: Delcs500ApplicationJSONErrorEnum;
+    errorDescription?: Delcs500ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Delcs404ApplicationJSONErrorEnum {
+    RecordNotFound = "record_not_found",
+    UrlNotFound = "url_not_found"
+}
+export declare enum Delcs404ApplicationJSONErrorDescriptionEnum {
+    NoRecordFound = "No record found",
+    YourAPIUrlOrPathIsIncorrect = "Your API url or path is incorrect"
+}
+/**
+ * No record found
+ */
+export declare class Delcs404ApplicationJSON extends SpeakeasyBase {
+    error?: Delcs404ApplicationJSONErrorEnum;
+    errorDescription?: Delcs404ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Delcs401ApplicationJSONErrorEnum {
+    InvalidAuthentication = "invalid_authentication",
+    InvalidAuthorization = "invalid_authorization"
+}
+export declare enum Delcs401ApplicationJSONErrorDescriptionEnum {
+    AuthenticationFailed = "Authentication failed",
+    YouAreNotAuthorizedToUseThisAPI = "You are not authorized to use this API"
+}
+/**
+ * Unauthorized access
+ */
+export declare class Delcs401ApplicationJSON extends SpeakeasyBase {
+    error?: Delcs401ApplicationJSONErrorEnum;
+    errorDescription?: Delcs401ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Delcs400ApplicationJSONErrorEnum {
     MissingParameter = "missing_parameter",
     InvalidParameter = "invalid_parameter",
     InvalidFormat = "invalid_format",
     InvalidTxnid = "invalid_txnid",
     InvalidConsentid = "invalid_consentid"
 }
-export declare enum Delcs400ApplicationJsonErrorDescriptionEnum {
+export declare enum Delcs400ApplicationJSONErrorDescriptionEnum {
     PleaseProvideAllMandatoryParameters = "Please provide all mandatory parameters",
     BadRequest = "Bad request",
     TheFormatParameterIsInvalid = "The format parameter is invalid",
-    TheTxnIdParameterMustBeInUuidFormat = "The txnId parameter must be in UUID format",
-    TheConsentIdParameterMustBeInUuidFormat = "The consentId parameter must be in UUID format"
+    TheTxnIdParameterMustBeInUUIDFormat = "The txnId parameter must be in UUID format",
+    TheConsentIdParameterMustBeInUUIDFormat = "The consentId parameter must be in UUID format"
 }
-export declare class Delcs400ApplicationJson extends SpeakeasyBase {
-    error?: Delcs400ApplicationJsonErrorEnum;
-    errorDescription?: Delcs400ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Delcs401ApplicationJsonErrorEnum {
-    InvalidAuthentication = "invalid_authentication",
-    InvalidAuthorization = "invalid_authorization"
-}
-export declare enum Delcs401ApplicationJsonErrorDescriptionEnum {
-    AuthenticationFailed = "Authentication failed",
-    YouAreNotAuthorizedToUseThisApi = "You are not authorized to use this API"
-}
-export declare class Delcs401ApplicationJson extends SpeakeasyBase {
-    error?: Delcs401ApplicationJsonErrorEnum;
-    errorDescription?: Delcs401ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Delcs404ApplicationJsonErrorEnum {
-    RecordNotFound = "record_not_found",
-    UrlNotFound = "url_not_found"
-}
-export declare enum Delcs404ApplicationJsonErrorDescriptionEnum {
-    NoRecordFound = "No record found",
-    YourApiUrlOrPathIsIncorrect = "Your API url or path is incorrect"
-}
-export declare class Delcs404ApplicationJson extends SpeakeasyBase {
-    error?: Delcs404ApplicationJsonErrorEnum;
-    errorDescription?: Delcs404ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Delcs500ApplicationJsonErrorEnum {
-    InternalServerError = "internal_server_error"
-}
-export declare enum Delcs500ApplicationJsonErrorDescriptionEnum {
-    InternalServerError = "Internal server error"
-}
-export declare class Delcs500ApplicationJson extends SpeakeasyBase {
-    error?: Delcs500ApplicationJsonErrorEnum;
-    errorDescription?: Delcs500ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Delcs502ApplicationJsonErrorEnum {
-    BadGatewy = "bad_gatewy"
-}
-export declare enum Delcs502ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
-}
-export declare class Delcs502ApplicationJson extends SpeakeasyBase {
-    error?: Delcs502ApplicationJsonErrorEnum;
-    errorDescription?: Delcs502ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Delcs503ApplicationJsonErrorEnum {
-    ServiceUnavailable = "service_unavailable"
-}
-export declare enum Delcs503ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
-}
-export declare class Delcs503ApplicationJson extends SpeakeasyBase {
-    error?: Delcs503ApplicationJsonErrorEnum;
-    errorDescription?: Delcs503ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Delcs504ApplicationJsonErrorEnum {
-    GatewayTimeout = "gateway_timeout"
-}
-export declare enum Delcs504ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
-}
-export declare class Delcs504ApplicationJson extends SpeakeasyBase {
-    error?: Delcs504ApplicationJsonErrorEnum;
-    errorDescription?: Delcs504ApplicationJsonErrorDescriptionEnum;
-}
-export declare class DelcsRequest extends SpeakeasyBase {
-    request?: DelcsRequestBody;
-    security: DelcsSecurity;
+/**
+ * Bad request
+ */
+export declare class Delcs400ApplicationJSON extends SpeakeasyBase {
+    error?: Delcs400ApplicationJSONErrorEnum;
+    errorDescription?: Delcs400ApplicationJSONErrorDescriptionEnum;
 }
 export declare class DelcsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    delcs400ApplicationJSONObject?: Delcs400ApplicationJson;
-    delcs401ApplicationJSONObject?: Delcs401ApplicationJson;
-    delcs404ApplicationJSONObject?: Delcs404ApplicationJson;
-    delcs500ApplicationJSONObject?: Delcs500ApplicationJson;
-    delcs502ApplicationJSONObject?: Delcs502ApplicationJson;
-    delcs503ApplicationJSONObject?: Delcs503ApplicationJson;
-    delcs504ApplicationJSONObject?: Delcs504ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad request
+     */
+    delcs400ApplicationJSONObject?: Delcs400ApplicationJSON;
+    /**
+     * Unauthorized access
+     */
+    delcs401ApplicationJSONObject?: Delcs401ApplicationJSON;
+    /**
+     * No record found
+     */
+    delcs404ApplicationJSONObject?: Delcs404ApplicationJSON;
+    /**
+     * Internal server error
+     */
+    delcs500ApplicationJSONObject?: Delcs500ApplicationJSON;
+    /**
+     * Bad gateway
+     */
+    delcs502ApplicationJSONObject?: Delcs502ApplicationJSON;
+    /**
+     * Service unavailable
+     */
+    delcs503ApplicationJSONObject?: Delcs503ApplicationJSON;
+    /**
+     * Gateway timeout
+     */
+    delcs504ApplicationJSONObject?: Delcs504ApplicationJSON;
 }

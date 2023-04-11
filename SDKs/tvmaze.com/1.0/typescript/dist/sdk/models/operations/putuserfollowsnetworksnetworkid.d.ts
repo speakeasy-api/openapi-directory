@@ -1,13 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PutUserFollowsNetworksNetworkIdPathParams extends SpeakeasyBase {
-    networkId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class PutUserFollowsNetworksNetworkIdRequest extends SpeakeasyBase {
-    pathParams: PutUserFollowsNetworksNetworkIdPathParams;
+    networkId: number;
 }
 export declare class PutUserFollowsNetworksNetworkIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * this network is now followed
+     */
     networkFollow?: shared.NetworkFollow;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

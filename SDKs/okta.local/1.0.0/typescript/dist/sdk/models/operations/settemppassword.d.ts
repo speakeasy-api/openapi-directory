@@ -1,16 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SetTempPasswordPathParams extends SpeakeasyBase {
-    userId: string;
-}
-export declare class SetTempPasswordQueryParams extends SpeakeasyBase {
-    tempPassword?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class SetTempPasswordRequest extends SpeakeasyBase {
-    pathParams: SetTempPasswordPathParams;
-    queryParams: SetTempPasswordQueryParams;
-    request?: Uint8Array;
+    requestBody?: Uint8Array;
+    tempPassword?: string;
+    userId: string;
 }
 export declare class SetTempPasswordResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

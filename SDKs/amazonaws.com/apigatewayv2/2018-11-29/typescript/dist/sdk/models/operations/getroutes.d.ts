@@ -1,13 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetRoutesPathParams extends SpeakeasyBase {
-    apiId: string;
-}
-export declare class GetRoutesQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
-export declare class GetRoutesHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetRoutesRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -15,17 +9,37 @@ export declare class GetRoutesHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class GetRoutesRequest extends SpeakeasyBase {
-    pathParams: GetRoutesPathParams;
-    queryParams: GetRoutesQueryParams;
-    headers: GetRoutesHeaders;
+    /**
+     * The API identifier.
+     */
+    apiId: string;
+    /**
+     * The maximum number of elements to be returned for this resource.
+     */
+    maxResults?: string;
+    /**
+     * The next page of elements from this collection. Not valid for the last element of the collection.
+     */
+    nextToken?: string;
 }
 export declare class GetRoutesResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getRoutesResponse?: shared.GetRoutesResponse;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

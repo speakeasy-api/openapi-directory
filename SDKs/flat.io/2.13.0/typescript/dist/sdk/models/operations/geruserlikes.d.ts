@@ -1,22 +1,32 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GerUserLikesPathParams extends SpeakeasyBase {
-    user: string;
-}
-export declare class GerUserLikesQueryParams extends SpeakeasyBase {
-    ids?: boolean;
-}
+import { AxiosResponse } from "axios";
 export declare class GerUserLikesSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class GerUserLikesRequest extends SpeakeasyBase {
-    pathParams: GerUserLikesPathParams;
-    queryParams: GerUserLikesQueryParams;
-    security: GerUserLikesSecurity;
+    /**
+     * Return only the identifiers of the scores
+     */
+    ids?: boolean;
+    /**
+     * Unique identifier of a Flat user. If you authenticated, you can use `me` to refer to the current user.
+     *
+     * @remarks
+     *
+     */
+    user: string;
 }
 export declare class GerUserLikesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Error
+     */
     flatErrorResponse?: shared.FlatErrorResponse;
+    /**
+     * List of liked scores
+     */
     scoreDetails?: shared.ScoreDetails[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

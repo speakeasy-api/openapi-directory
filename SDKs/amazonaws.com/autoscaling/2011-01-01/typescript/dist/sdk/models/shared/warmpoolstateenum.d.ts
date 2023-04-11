@@ -1,4 +1,5 @@
 export declare enum WarmPoolStateEnum {
     Stopped = "Stopped",
-    Running = "Running"
+    Running = "Running",
+    Hibernated = "Hibernated"
 }

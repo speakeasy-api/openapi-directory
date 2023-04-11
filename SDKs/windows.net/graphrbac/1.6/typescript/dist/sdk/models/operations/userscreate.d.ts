@@ -1,23 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UsersCreatePathParams extends SpeakeasyBase {
-    tenantID: string;
-}
-export declare class UsersCreateQueryParams extends SpeakeasyBase {
-    apiVersion: string;
-}
-export declare class UsersCreateRequests extends SpeakeasyBase {
-    userCreateParameters?: Record<string, Record<string, any>>;
-    userCreateParameters1?: Record<string, Record<string, any>>;
-}
+import { AxiosResponse } from "axios";
 export declare class UsersCreateRequest extends SpeakeasyBase {
-    pathParams: UsersCreatePathParams;
-    queryParams: UsersCreateQueryParams;
-    request: UsersCreateRequests;
+    /**
+     * Parameters to create a user.
+     */
+    requestBody: Record<string, Record<string, any>>;
+    /**
+     * Client API version.
+     */
+    apiVersion: string;
+    /**
+     * The tenant ID.
+     */
+    tenantID: string;
 }
 export declare class UsersCreateResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Error response describing why the operation failed.
+     */
     graphError?: shared.GraphError;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Created. Indicates success. The new user is returned in the response body.
+     */
     user?: Record<string, Record<string, any>>;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum CreateAdditionalAssignmentsForHitxAmzTargetEnum {
-    MTurkRequesterServiceV20170117CreateAdditionalAssignmentsForHit = "MTurkRequesterServiceV20170117.CreateAdditionalAssignmentsForHIT"
+import { AxiosResponse } from "axios";
+export declare enum CreateAdditionalAssignmentsForHITXAmzTargetEnum {
+    MTurkRequesterServiceV20170117CreateAdditionalAssignmentsForHIT = "MTurkRequesterServiceV20170117.CreateAdditionalAssignmentsForHIT"
 }
-export declare class CreateAdditionalAssignmentsForHitHeaders extends SpeakeasyBase {
+export declare class CreateAdditionalAssignmentsForHITRequest extends SpeakeasyBase {
+    createAdditionalAssignmentsForHITRequest: shared.CreateAdditionalAssignmentsForHITRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,16 +13,22 @@ export declare class CreateAdditionalAssignmentsForHitHeaders extends SpeakeasyB
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: CreateAdditionalAssignmentsForHitxAmzTargetEnum;
+    xAmzTarget: CreateAdditionalAssignmentsForHITXAmzTargetEnum;
 }
-export declare class CreateAdditionalAssignmentsForHitRequest extends SpeakeasyBase {
-    headers: CreateAdditionalAssignmentsForHitHeaders;
-    request: shared.CreateAdditionalAssignmentsForHitRequest;
-}
-export declare class CreateAdditionalAssignmentsForHitResponse extends SpeakeasyBase {
+export declare class CreateAdditionalAssignmentsForHITResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     createAdditionalAssignmentsForHITResponse?: Record<string, any>;
+    /**
+     * RequestError
+     */
     requestError?: any;
+    /**
+     * ServiceFault
+     */
     serviceFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Search API for 'NOAA Carbon Measurements' entry type
+ */
 export declare class TypeTypePointNoaaCarbon {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,10 @@ export declare class TypeTypePointNoaaCarbon {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * searchTypePointNoaaCarbon - Search API for 'NOAA Carbon Measurements' entry type
+     * Search API for 'NOAA Carbon Measurements' entry type
      *
+     * @remarks
      * API to search for entries of type NOAA Carbon Measurements
-    **/
+     */
     searchTypePointNoaaCarbon(req: operations.SearchTypePointNoaaCarbonRequest, config?: AxiosRequestConfig): Promise<operations.SearchTypePointNoaaCarbonResponse>;
 }

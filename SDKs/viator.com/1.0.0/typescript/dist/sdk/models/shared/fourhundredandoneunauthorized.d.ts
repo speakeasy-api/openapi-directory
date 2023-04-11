@@ -1,13 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum FourHundredAndOneUnauthorizedCodeEnum {
+export declare enum FourHundredAndOneUNAUTHORIZEDCodeEnum {
     Unauthorized = "UNAUTHORIZED"
 }
-export declare enum FourHundredAndOneUnauthorizedMessageEnum {
-    InvalidApiKey = "Invalid API key"
+export declare enum FourHundredAndOneUNAUTHORIZEDMessageEnum {
+    InvalidAPIKey = "Invalid API key"
 }
-export declare class FourHundredAndOneUnauthorized extends SpeakeasyBase {
-    code?: FourHundredAndOneUnauthorizedCodeEnum;
-    message?: FourHundredAndOneUnauthorizedMessageEnum;
+/**
+ * Unauthorized
+ */
+export declare class FourHundredAndOneUNAUTHORIZED extends SpeakeasyBase {
+    code?: FourHundredAndOneUNAUTHORIZEDCodeEnum;
+    message?: FourHundredAndOneUNAUTHORIZEDMessageEnum;
+    /**
+     * Timestamp of the request
+     *
+     * @remarks
+     *
+     *   * e.g.: `2019-09-17T03:20:45.737043Z`
+     *
+     */
     timestamp?: string;
+    /**
+     * Tracking identifier for this error response
+     */
     trackingId?: string;
 }

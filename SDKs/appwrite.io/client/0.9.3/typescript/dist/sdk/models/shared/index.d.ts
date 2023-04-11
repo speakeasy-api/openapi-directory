@@ -19,7 +19,6 @@ export * from "./membership";
 export * from "./membershiplist";
 export * from "./phone";
 export * from "./phonelist";
-export * from "./security";
 export * from "./session";
 export * from "./sessionlist";
 export * from "./team";

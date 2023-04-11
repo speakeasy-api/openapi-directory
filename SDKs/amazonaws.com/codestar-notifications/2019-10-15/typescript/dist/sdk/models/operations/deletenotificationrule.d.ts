@@ -1,6 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteNotificationRuleHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteNotificationRuleRequestBody extends SpeakeasyBase {
+    /**
+     * The Amazon Resource Name (ARN) of the notification rule you want to delete.
+     */
+    arn: string;
+}
+export declare class DeleteNotificationRuleRequest extends SpeakeasyBase {
+    requestBody: DeleteNotificationRuleRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -9,18 +17,24 @@ export declare class DeleteNotificationRuleHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeleteNotificationRuleRequestBody extends SpeakeasyBase {
-    arn: string;
-}
-export declare class DeleteNotificationRuleRequest extends SpeakeasyBase {
-    headers: DeleteNotificationRuleHeaders;
-    request: DeleteNotificationRuleRequestBody;
-}
 export declare class DeleteNotificationRuleResponse extends SpeakeasyBase {
+    /**
+     * ConcurrentModificationException
+     */
     concurrentModificationException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteNotificationRuleResult?: shared.DeleteNotificationRuleResult;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

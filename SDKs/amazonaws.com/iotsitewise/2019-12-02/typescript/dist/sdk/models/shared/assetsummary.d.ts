@@ -3,11 +3,12 @@ import { AssetHierarchy } from "./assethierarchy";
 import { AssetStatus } from "./assetstatus";
 /**
  * Contains a summary of an asset.
-**/
+ */
 export declare class AssetSummary extends SpeakeasyBase {
     arn: string;
     assetModelId: string;
     creationDate: Date;
+    description?: string;
     hierarchies: AssetHierarchy[];
     id: string;
     lastUpdateDate: Date;

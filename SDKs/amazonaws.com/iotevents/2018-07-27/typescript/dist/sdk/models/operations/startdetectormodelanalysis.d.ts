@@ -1,6 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class StartDetectorModelAnalysisHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+/**
+ * Information that defines how a detector operates.
+ */
+export declare class StartDetectorModelAnalysisRequestBodyDetectorModelDefinition extends SpeakeasyBase {
+    initialStateName?: string;
+    states?: shared.State[];
+}
+export declare class StartDetectorModelAnalysisRequestBody extends SpeakeasyBase {
+    /**
+     * Information that defines how a detector operates.
+     */
+    detectorModelDefinition: StartDetectorModelAnalysisRequestBodyDetectorModelDefinition;
+}
+export declare class StartDetectorModelAnalysisRequest extends SpeakeasyBase {
+    requestBody: StartDetectorModelAnalysisRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -9,27 +24,32 @@ export declare class StartDetectorModelAnalysisHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-/**
- * Information that defines how a detector operates.
-**/
-export declare class StartDetectorModelAnalysisRequestBodyDetectorModelDefinition extends SpeakeasyBase {
-    initialStateName?: string;
-    states?: shared.State[];
-}
-export declare class StartDetectorModelAnalysisRequestBody extends SpeakeasyBase {
-    detectorModelDefinition: StartDetectorModelAnalysisRequestBodyDetectorModelDefinition;
-}
-export declare class StartDetectorModelAnalysisRequest extends SpeakeasyBase {
-    headers: StartDetectorModelAnalysisHeaders;
-    request: StartDetectorModelAnalysisRequestBody;
-}
 export declare class StartDetectorModelAnalysisResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalFailureException
+     */
     internalFailureException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * ServiceUnavailableException
+     */
     serviceUnavailableException?: any;
+    /**
+     * Success
+     */
     startDetectorModelAnalysisResponse?: shared.StartDetectorModelAnalysisResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

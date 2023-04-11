@@ -1,7 +1,0 @@
-import { SpeakeasyBase } from "../../../internal/utils";
-export declare class Operation extends SpeakeasyBase {
-    from?: string;
-    op?: string;
-    path?: string;
-    value?: Record<string, any>;
-}

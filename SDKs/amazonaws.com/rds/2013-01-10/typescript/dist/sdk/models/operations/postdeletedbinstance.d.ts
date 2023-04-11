@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteDbInstanceActionEnum {
-    DeleteDbInstance = "DeleteDBInstance"
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteDBInstanceActionEnum {
+    DeleteDBInstance = "DeleteDBInstance"
 }
-export declare enum PostDeleteDbInstanceVersionEnum {
+export declare enum POSTDeleteDBInstanceVersionEnum {
     TwoThousandAndThirteen0110 = "2013-01-10"
 }
-export declare class PostDeleteDbInstanceQueryParams extends SpeakeasyBase {
-    action: PostDeleteDbInstanceActionEnum;
-    version: PostDeleteDbInstanceVersionEnum;
-}
-export declare class PostDeleteDbInstanceHeaders extends SpeakeasyBase {
+export declare class POSTDeleteDBInstanceRequest extends SpeakeasyBase {
+    action: POSTDeleteDBInstanceActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteDBInstanceVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteDbInstanceHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteDbInstanceRequest extends SpeakeasyBase {
-    queryParams: PostDeleteDbInstanceQueryParams;
-    headers: PostDeleteDbInstanceHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteDbInstanceResponse extends SpeakeasyBase {
+export declare class POSTDeleteDBInstanceResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

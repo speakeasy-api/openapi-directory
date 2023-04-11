@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateSecretVersionStageXAmzTargetEnum {
     SecretsmanagerUpdateSecretVersionStage = "secretsmanager.UpdateSecretVersionStage"
 }
-export declare class UpdateSecretVersionStageHeaders extends SpeakeasyBase {
+export declare class UpdateSecretVersionStageRequest extends SpeakeasyBase {
+    updateSecretVersionStageRequest: shared.UpdateSecretVersionStageRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class UpdateSecretVersionStageHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateSecretVersionStageXAmzTargetEnum;
 }
-export declare class UpdateSecretVersionStageRequest extends SpeakeasyBase {
-    headers: UpdateSecretVersionStageHeaders;
-    request: shared.UpdateSecretVersionStageRequest;
-}
 export declare class UpdateSecretVersionStageResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServiceError
+     */
     internalServiceError?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * Success
+     */
     updateSecretVersionStageResponse?: shared.UpdateSecretVersionStageResponse;
 }

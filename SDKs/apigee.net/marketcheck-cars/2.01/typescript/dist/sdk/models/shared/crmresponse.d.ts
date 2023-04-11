@@ -1,4 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CrmResponse extends SpeakeasyBase {
+/**
+ * CRM check for given vin
+ */
+export declare class CRMResponse extends SpeakeasyBase {
+    /**
+     * Boolean to indicate whether given vin has had listing after given date or not
+     */
     forSale?: string;
 }

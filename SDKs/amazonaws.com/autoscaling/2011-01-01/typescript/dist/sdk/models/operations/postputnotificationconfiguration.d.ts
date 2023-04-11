@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostPutNotificationConfigurationActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTPutNotificationConfigurationActionEnum {
     PutNotificationConfiguration = "PutNotificationConfiguration"
 }
-export declare enum PostPutNotificationConfigurationVersionEnum {
+export declare enum POSTPutNotificationConfigurationVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class PostPutNotificationConfigurationQueryParams extends SpeakeasyBase {
-    action: PostPutNotificationConfigurationActionEnum;
-    version: PostPutNotificationConfigurationVersionEnum;
-}
-export declare class PostPutNotificationConfigurationHeaders extends SpeakeasyBase {
+export declare class POSTPutNotificationConfigurationRequest extends SpeakeasyBase {
+    action: POSTPutNotificationConfigurationActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTPutNotificationConfigurationVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostPutNotificationConfigurationHeaders extends SpeakeasyBa
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostPutNotificationConfigurationRequest extends SpeakeasyBase {
-    queryParams: PostPutNotificationConfigurationQueryParams;
-    headers: PostPutNotificationConfigurationHeaders;
-    request?: Uint8Array;
-}
-export declare class PostPutNotificationConfigurationResponse extends SpeakeasyBase {
+export declare class POSTPutNotificationConfigurationResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

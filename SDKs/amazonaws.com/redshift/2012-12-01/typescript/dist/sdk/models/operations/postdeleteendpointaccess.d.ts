@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteEndpointAccessActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteEndpointAccessActionEnum {
     DeleteEndpointAccess = "DeleteEndpointAccess"
 }
-export declare enum PostDeleteEndpointAccessVersionEnum {
+export declare enum POSTDeleteEndpointAccessVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostDeleteEndpointAccessQueryParams extends SpeakeasyBase {
-    action: PostDeleteEndpointAccessActionEnum;
-    version: PostDeleteEndpointAccessVersionEnum;
-}
-export declare class PostDeleteEndpointAccessHeaders extends SpeakeasyBase {
+export declare class POSTDeleteEndpointAccessRequest extends SpeakeasyBase {
+    action: POSTDeleteEndpointAccessActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteEndpointAccessVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteEndpointAccessHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteEndpointAccessRequest extends SpeakeasyBase {
-    queryParams: PostDeleteEndpointAccessQueryParams;
-    headers: PostDeleteEndpointAccessHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteEndpointAccessResponse extends SpeakeasyBase {
+export declare class POSTDeleteEndpointAccessResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

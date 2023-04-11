@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class RetrieveNearEarthObjectByIdPathParams extends SpeakeasyBase {
-    asteroidId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class RetrieveNearEarthObjectByIdRequest extends SpeakeasyBase {
-    pathParams: RetrieveNearEarthObjectByIdPathParams;
+    /**
+     * ID of Near Earth Object - (ex: 3729835)
+     */
+    asteroidId: string;
 }
 export declare class RetrieveNearEarthObjectByIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * OK
+     */
     nearEarthObject?: shared.NearEarthObject;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

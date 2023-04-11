@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum DeleteBgpPeerXAmzTargetEnum {
-    OvertureServiceDeleteBgpPeer = "OvertureService.DeleteBGPPeer"
+import { AxiosResponse } from "axios";
+export declare enum DeleteBGPPeerXAmzTargetEnum {
+    OvertureServiceDeleteBGPPeer = "OvertureService.DeleteBGPPeer"
 }
-export declare class DeleteBgpPeerHeaders extends SpeakeasyBase {
+export declare class DeleteBGPPeerRequest extends SpeakeasyBase {
+    deleteBGPPeerRequest: shared.DeleteBGPPeerRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,16 +13,22 @@ export declare class DeleteBgpPeerHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: DeleteBgpPeerXAmzTargetEnum;
+    xAmzTarget: DeleteBGPPeerXAmzTargetEnum;
 }
-export declare class DeleteBgpPeerRequest extends SpeakeasyBase {
-    headers: DeleteBgpPeerHeaders;
-    request: shared.DeleteBgpPeerRequest;
-}
-export declare class DeleteBgpPeerResponse extends SpeakeasyBase {
+export declare class DeleteBGPPeerResponse extends SpeakeasyBase {
     contentType: string;
-    deleteBGPPeerResponse?: shared.DeleteBgpPeerResponse;
+    /**
+     * Success
+     */
+    deleteBGPPeerResponse?: shared.DeleteBGPPeerResponse;
+    /**
+     * DirectConnectClientException
+     */
     directConnectClientException?: any;
+    /**
+     * DirectConnectServerException
+     */
     directConnectServerException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

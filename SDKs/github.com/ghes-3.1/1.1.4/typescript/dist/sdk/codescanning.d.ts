@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Retrieve code scanning alerts from a repository.
+ */
 export declare class CodeScanning {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +12,9 @@ export declare class CodeScanning {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * codeScanningDeleteAnalysis - Delete a code scanning analysis from a repository
+     * Delete a code scanning analysis from a repository
      *
+     * @remarks
      * Deletes a specified code scanning analysis from a repository. For
      * private repositories, you must use an access token with the `repo` scope. For public repositories,
      * you must use an access token with `public_repo` and `repo:security_events` scopes.
@@ -83,23 +87,25 @@ export declare class CodeScanning {
      *
      * The above process assumes that you want to remove all trace of the tool's analyses from the GitHub user interface, for the specified repository, and it therefore uses the `confirm_delete_url` value. Alternatively, you could use the `next_analysis_url` value, which would leave the last analysis in each set undeleted to avoid removing a tool's analysis entirely.
      *
-     * https://docs.github.com/enterprise-server@3.1/rest/reference/code-scanning#delete-a-code-scanning-analysis-from-a-repository - API method documentation
-    **/
+     * @see {@link https://docs.github.com/enterprise-server@3.1/rest/reference/code-scanning#delete-a-code-scanning-analysis-from-a-repository} - API method documentation
+     */
     codeScanningDeleteAnalysis(req: operations.CodeScanningDeleteAnalysisRequest, config?: AxiosRequestConfig): Promise<operations.CodeScanningDeleteAnalysisResponse>;
     /**
-     * codeScanningGetAlert - Get a code scanning alert
+     * Get a code scanning alert
      *
+     * @remarks
      * Gets a single code scanning alert. You must use an access token with the `security_events` scope to use this endpoint. GitHub Apps must have the `security_events` read permission to use this endpoint.
      *
      * **Deprecation notice**:
      * The instances field is deprecated and will, in future, not be included in the response for this endpoint. The example response reflects this change. The same information can now be retrieved via a GET request to the URL specified by `instances_url`.
      *
-     * https://docs.github.com/enterprise-server@3.1/rest/reference/code-scanning#get-a-code-scanning-alert - API method documentation
-    **/
+     * @see {@link https://docs.github.com/enterprise-server@3.1/rest/reference/code-scanning#get-a-code-scanning-alert} - API method documentation
+     */
     codeScanningGetAlert(req: operations.CodeScanningGetAlertRequest, config?: AxiosRequestConfig): Promise<operations.CodeScanningGetAlertResponse>;
     /**
-     * codeScanningGetAnalysis - Get a code scanning analysis for a repository
+     * Get a code scanning analysis for a repository
      *
+     * @remarks
      * Gets a specified code scanning analysis for a repository.
      * You must use an access token with the `security_events` scope to use this endpoint.
      * GitHub Apps must have the `security_events` read permission to use this endpoint.
@@ -118,33 +124,35 @@ export declare class CodeScanning {
      * the response contains the analysis data that was uploaded.
      * This is formatted as
      * [SARIF version 2.1.0](https://docs.oasis-open.org/sarif/sarif/v2.1.0/cs01/sarif-v2.1.0-cs01.html).
-     * For an example response, see "[Custom media type for code scanning](#custom-media-type-for-code-scanning)."
      *
      * **Deprecation notice**:
      * The `tool_name` field is deprecated and will, in future, not be included in the response for this endpoint. The example response reflects this change. The tool name can now be found inside the `tool` field.
      *
-     * https://docs.github.com/enterprise-server@3.1/rest/reference/code-scanning#get-a-code-scanning-analysis-for-a-repository - API method documentation
-    **/
+     * @see {@link https://docs.github.com/enterprise-server@3.1/rest/reference/code-scanning#get-a-code-scanning-analysis-for-a-repository} - API method documentation
+     */
     codeScanningGetAnalysis(req: operations.CodeScanningGetAnalysisRequest, config?: AxiosRequestConfig): Promise<operations.CodeScanningGetAnalysisResponse>;
     /**
-     * codeScanningGetSarif - Get information about a SARIF upload
+     * Get information about a SARIF upload
      *
+     * @remarks
      * Gets information about a SARIF upload, including the status and the URL of the analysis that was uploaded so that you can retrieve details of the analysis. For more information, see "[Get a code scanning analysis for a repository](/rest/reference/code-scanning#get-a-code-scanning-analysis-for-a-repository)." You must use an access token with the `security_events` scope to use this endpoint. GitHub Apps must have the `security_events` read permission to use this endpoint.
      *
-     * https://docs.github.com/enterprise-server@3.1/rest/reference/code-scanning#list-recent-code-scanning-analyses-for-a-repository - API method documentation
-    **/
+     * @see {@link https://docs.github.com/enterprise-server@3.1/rest/reference/code-scanning#list-recent-code-scanning-analyses-for-a-repository} - API method documentation
+     */
     codeScanningGetSarif(req: operations.CodeScanningGetSarifRequest, config?: AxiosRequestConfig): Promise<operations.CodeScanningGetSarifResponse>;
     /**
-     * codeScanningListAlertInstances - List instances of a code scanning alert
+     * List instances of a code scanning alert
      *
+     * @remarks
      * Lists all instances of the specified code scanning alert. You must use an access token with the `security_events` scope to use this endpoint. GitHub Apps must have the `security_events` read permission to use this endpoint.
      *
-     * https://docs.github.com/enterprise-server@3.1/rest/reference/code-scanning#list-instances-of-a-code-scanning-alert - API method documentation
-    **/
+     * @see {@link https://docs.github.com/enterprise-server@3.1/rest/reference/code-scanning#list-instances-of-a-code-scanning-alert} - API method documentation
+     */
     codeScanningListAlertInstances(req: operations.CodeScanningListAlertInstancesRequest, config?: AxiosRequestConfig): Promise<operations.CodeScanningListAlertInstancesResponse>;
     /**
-     * codeScanningListAlertsForRepo - List code scanning alerts for a repository
+     * List code scanning alerts for a repository
      *
+     * @remarks
      * Lists all open code scanning alerts for the default branch (usually `main`
      * or `master`). You must use an access token with the `security_events` scope to use
      * this endpoint. GitHub Apps must have the `security_events` read permission to use
@@ -155,12 +163,13 @@ export declare class CodeScanning {
      * for the default branch or for the specified Git reference
      * (if you used `ref` in the request).
      *
-     * https://docs.github.com/enterprise-server@3.1/rest/reference/code-scanning#list-code-scanning-alerts-for-a-repository - API method documentation
-    **/
+     * @see {@link https://docs.github.com/enterprise-server@3.1/rest/reference/code-scanning#list-code-scanning-alerts-for-a-repository} - API method documentation
+     */
     codeScanningListAlertsForRepo(req: operations.CodeScanningListAlertsForRepoRequest, config?: AxiosRequestConfig): Promise<operations.CodeScanningListAlertsForRepoResponse>;
     /**
-     * codeScanningListRecentAnalyses - List code scanning analyses for a repository
+     * List code scanning analyses for a repository
      *
+     * @remarks
      * Lists the details of all code scanning analyses for a repository,
      * starting with the most recent.
      * The response is paginated and you can use the `page` and `per_page` parameters
@@ -178,20 +187,22 @@ export declare class CodeScanning {
      * **Deprecation notice**:
      * The `tool_name` field is deprecated and will, in future, not be included in the response for this endpoint. The example response reflects this change. The tool name can now be found inside the `tool` field.
      *
-     * https://docs.github.com/enterprise-server@3.1/rest/reference/code-scanning#list-code-scanning-analyses-for-a-repository - API method documentation
-    **/
+     * @see {@link https://docs.github.com/enterprise-server@3.1/rest/reference/code-scanning#list-code-scanning-analyses-for-a-repository} - API method documentation
+     */
     codeScanningListRecentAnalyses(req: operations.CodeScanningListRecentAnalysesRequest, config?: AxiosRequestConfig): Promise<operations.CodeScanningListRecentAnalysesResponse>;
     /**
-     * codeScanningUpdateAlert - Update a code scanning alert
+     * Update a code scanning alert
      *
+     * @remarks
      * Updates the status of a single code scanning alert. You must use an access token with the `security_events` scope to use this endpoint. GitHub Apps must have the `security_events` write permission to use this endpoint.
      *
-     * https://docs.github.com/enterprise-server@3.1/rest/reference/code-scanning#update-a-code-scanning-alert - API method documentation
-    **/
+     * @see {@link https://docs.github.com/enterprise-server@3.1/rest/reference/code-scanning#update-a-code-scanning-alert} - API method documentation
+     */
     codeScanningUpdateAlert(req: operations.CodeScanningUpdateAlertRequest, config?: AxiosRequestConfig): Promise<operations.CodeScanningUpdateAlertResponse>;
     /**
-     * codeScanningUploadSarif - Upload an analysis as SARIF data
+     * Upload an analysis as SARIF data
      *
+     * @remarks
      * Uploads SARIF data containing the results of a code scanning analysis to make the results available in a repository. You must use an access token with the `security_events` scope to use this endpoint. GitHub Apps must have the `security_events` write permission to use this endpoint.
      *
      * There are two places where you can upload code scanning results.
@@ -210,7 +221,7 @@ export declare class CodeScanning {
      * You can use this ID to check the status of the upload by using this for the `/sarifs/{sarif_id}` endpoint.
      * For more information, see "[Get information about a SARIF upload](/rest/reference/code-scanning#get-information-about-a-sarif-upload)."
      *
-     * https://docs.github.com/enterprise-server@3.1/rest/reference/code-scanning#upload-a-sarif-file - API method documentation
-    **/
+     * @see {@link https://docs.github.com/enterprise-server@3.1/rest/reference/code-scanning#upload-a-sarif-file} - API method documentation
+     */
     codeScanningUploadSarif(req: operations.CodeScanningUploadSarifRequest, config?: AxiosRequestConfig): Promise<operations.CodeScanningUploadSarifResponse>;
 }

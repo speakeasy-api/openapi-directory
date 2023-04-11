@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Forms {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,15 +9,17 @@ export declare class Forms {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * findFormByFormName - Find form by form name
+     * Find form by form name
      *
+     * @remarks
      * Returns a single form and the full revision history
-    **/
-    findFormByFormName(req: operations.FindFormByFormNameRequest, config?: AxiosRequestConfig): Promise<operations.FindFormByFormNameResponse>;
+     */
+    findFormByFormName(req: operations.FindFormByFormNameRequest, security: operations.FindFormByFormNameSecurity, config?: AxiosRequestConfig): Promise<operations.FindFormByFormNameResponse>;
     /**
-     * findForms - Returns all VA Forms and their last revision date
+     * Returns all VA Forms and their last revision date
      *
+     * @remarks
      * Returns an index of all available VA forms. Optionally, pass a query parameter to filter forms by form number or title.
-    **/
-    findForms(req: operations.FindFormsRequest, config?: AxiosRequestConfig): Promise<operations.FindFormsResponse>;
+     */
+    findForms(req: operations.FindFormsRequest, security: operations.FindFormsSecurity, config?: AxiosRequestConfig): Promise<operations.FindFormsResponse>;
 }

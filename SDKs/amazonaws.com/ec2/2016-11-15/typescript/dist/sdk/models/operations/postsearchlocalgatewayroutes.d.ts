@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostSearchLocalGatewayRoutesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTSearchLocalGatewayRoutesActionEnum {
     SearchLocalGatewayRoutes = "SearchLocalGatewayRoutes"
 }
-export declare enum PostSearchLocalGatewayRoutesVersionEnum {
+export declare enum POSTSearchLocalGatewayRoutesVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostSearchLocalGatewayRoutesQueryParams extends SpeakeasyBase {
-    action: PostSearchLocalGatewayRoutesActionEnum;
+export declare class POSTSearchLocalGatewayRoutesRequest extends SpeakeasyBase {
+    action: POSTSearchLocalGatewayRoutesActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostSearchLocalGatewayRoutesVersionEnum;
-}
-export declare class PostSearchLocalGatewayRoutesHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTSearchLocalGatewayRoutesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostSearchLocalGatewayRoutesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostSearchLocalGatewayRoutesRequest extends SpeakeasyBase {
-    queryParams: PostSearchLocalGatewayRoutesQueryParams;
-    headers: PostSearchLocalGatewayRoutesHeaders;
-    request?: Uint8Array;
-}
-export declare class PostSearchLocalGatewayRoutesResponse extends SpeakeasyBase {
+export declare class POSTSearchLocalGatewayRoutesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

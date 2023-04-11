@@ -1,20 +1,28 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetPlaylistsIdPathParams extends SpeakeasyBase {
-    id: number;
-}
-export declare class GetPlaylistsIdQueryParams extends SpeakeasyBase {
-    expand?: string[];
-    fields?: string[];
-}
+import { AxiosResponse } from "axios";
 export declare class GetPlaylistsIdRequest extends SpeakeasyBase {
-    pathParams: GetPlaylistsIdPathParams;
-    queryParams: GetPlaylistsIdQueryParams;
+    /**
+     * Allows to select extra fields
+     */
+    expand?: string[];
+    /**
+     * Allows to select only needed fields
+     */
+    fields?: string[];
+    id: number;
 }
 export declare class GetPlaylistsIdResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
+    /**
+     * Playlist not found or is in the future
+     */
     error?: shared.ErrorT;
+    /**
+     * The playlist
+     */
     playlist?: shared.Playlist;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

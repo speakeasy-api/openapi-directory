@@ -16,14 +16,18 @@ export declare class TagModelHaljsonEmbeddedProductLinks extends SpeakeasyBase {
     environments?: string;
     members?: string;
     permissionGroups?: string;
+    segments?: string;
     self?: string;
     tags?: string;
 }
 export declare class TagModelHaljsonEmbeddedProduct extends SpeakeasyBase {
     embedded?: TagModelHaljsonEmbeddedProductEmbedded;
     links?: TagModelHaljsonEmbeddedProductLinks;
+    description?: string;
     name?: string;
+    order?: number;
     productId?: string;
+    reasonRequired?: boolean;
 }
 export declare class TagModelHaljsonEmbedded extends SpeakeasyBase {
     product?: TagModelHaljsonEmbeddedProduct;
@@ -31,6 +35,9 @@ export declare class TagModelHaljsonEmbedded extends SpeakeasyBase {
 export declare class TagModelHaljsonLinks extends SpeakeasyBase {
     self?: string;
 }
+/**
+ * When the creation was successful.
+ */
 export declare class TagModelHaljson extends SpeakeasyBase {
     embedded?: TagModelHaljsonEmbedded;
     links?: TagModelHaljsonLinks;

@@ -1,14 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CertificateCreateHeaders extends SpeakeasyBase {
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class CertificateCreateRequest extends SpeakeasyBase {
+    /**
+     * The certificate order information
+     */
+    certificateCreate: shared.CertificateCreate;
+    /**
+     * Setting locale for communications such as emails and error messages
+     */
     xMarketId?: string;
 }
-export declare class CertificateCreateRequest extends SpeakeasyBase {
-    headers: CertificateCreateHeaders;
-    request: any;
-}
 export declare class CertificateCreateResponse extends SpeakeasyBase {
-    certificateIdentifier?: any;
+    /**
+     * Request was successful
+     */
+    certificateIdentifier?: shared.CertificateIdentifier;
     contentType: string;
-    error?: any;
+    /**
+     * Request was malformed
+     */
+    error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

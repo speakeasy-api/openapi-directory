@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Story Collaborators
+ */
 export declare class StoryCollaborators {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,39 +12,45 @@ export declare class StoryCollaborators {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * storyIdCollaboratorsGet - Story Collaborators: List
+     * Story Collaborators: List
      *
+     * @remarks
      * Gets a list users that can read or edit this story
-    **/
+     */
     storyIdCollaboratorsGet(req: operations.StoryIdCollaboratorsGetRequest, config?: AxiosRequestConfig): Promise<operations.StoryIdCollaboratorsGetResponse>;
     /**
-     * storyIdCollaboratorsInactivePost - Story Collaborators: Edit Inactive User Permission
+     * Story Collaborators: Edit Inactive User Permission
      *
+     * @remarks
      * Edit story permissions for inactive users.  Requires admin rights.
-    **/
+     */
     storyIdCollaboratorsInactivePost(req: operations.StoryIdCollaboratorsInactivePostRequest, config?: AxiosRequestConfig): Promise<operations.StoryIdCollaboratorsInactivePostResponse>;
     /**
-     * storyIdCollaboratorsPost - Story Collaborators: Add New User
+     * Story Collaborators: Add New User
      *
+     * @remarks
      * Add a colloborator to this story
-    **/
+     */
     storyIdCollaboratorsPost(req: operations.StoryIdCollaboratorsPostRequest, config?: AxiosRequestConfig): Promise<operations.StoryIdCollaboratorsPostResponse>;
     /**
-     * storyIdCollaboratorsUseridDelete - Story Collaborators: Remove User
+     * Story Collaborators: Remove User
      *
+     * @remarks
      * Remove a collaborator from this story
-    **/
+     */
     storyIdCollaboratorsUseridDelete(req: operations.StoryIdCollaboratorsUseridDeleteRequest, config?: AxiosRequestConfig): Promise<operations.StoryIdCollaboratorsUseridDeleteResponse>;
     /**
-     * storyIdCollaboratorsUseridGet - Story Collaborators: Access Permissions
+     * Story Collaborators: Access Permissions
      *
+     * @remarks
      * Data to help you understand the access rights of a particular collaborator on this story
-    **/
+     */
     storyIdCollaboratorsUseridGet(req: operations.StoryIdCollaboratorsUseridGetRequest, config?: AxiosRequestConfig): Promise<operations.StoryIdCollaboratorsUseridGetResponse>;
     /**
-     * storyIdCollaboratorsUseridPut - Story Collaborators: Edit Access Rights
+     * Story Collaborators: Edit Access Rights
      *
+     * @remarks
      * Modify a user's access right to this story (e.g., grant edit permissions)
-    **/
+     */
     storyIdCollaboratorsUseridPut(req: operations.StoryIdCollaboratorsUseridPutRequest, config?: AxiosRequestConfig): Promise<operations.StoryIdCollaboratorsUseridPutResponse>;
 }

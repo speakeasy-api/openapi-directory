@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class MarketplacesChannelCatalogsPublications {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,11 +9,11 @@ export declare class MarketplacesChannelCatalogsPublications {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getPublications - Fetch the publication history for an account, sorted by descending start date
-    **/
+     * Fetch the publication history for an account, sorted by descending start date
+     */
     getPublications(req: operations.GetPublicationsRequest, config?: AxiosRequestConfig): Promise<operations.GetPublicationsResponse>;
     /**
-     * publishCatalogToMarketplace - [PREVIEW] Launch a publication of the catalog to the marketplace
-    **/
+     * [PREVIEW] Launch a publication of the catalog to the marketplace
+     */
     publishCatalogToMarketplace(req: operations.PublishCatalogToMarketplaceRequest, config?: AxiosRequestConfig): Promise<operations.PublishCatalogToMarketplaceResponse>;
 }

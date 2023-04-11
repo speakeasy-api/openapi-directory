@@ -1,34 +1,36 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AssociateConfigurationItemsToApplicationRequest, AssociateConfigurationItemsToApplicationResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  AssociateConfigurationItemsToApplicationRequest,
+  AssociateConfigurationItemsToApplicationResponse,
+  AssociateConfigurationItemsToApplicationXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: AssociateConfigurationItemsToApplicationRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "AWSPoseidonService_V2015_11_01.AssociateConfigurationItemsToApplication",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
-    applicationConfigurationId: "fugit",
+});
+
+const req: AssociateConfigurationItemsToApplicationRequest = {
+  associateConfigurationItemsToApplicationRequest: {
+    applicationConfigurationId: "corrupti",
     configurationIds: [
-      "nihil",
+      "distinctio",
+      "quibusdam",
+      "unde",
     ],
   },
+  xAmzAlgorithm: "nulla",
+  xAmzContentSha256: "corrupti",
+  xAmzCredential: "illum",
+  xAmzDate: "vel",
+  xAmzSecurityToken: "error",
+  xAmzSignature: "deserunt",
+  xAmzSignedHeaders: "suscipit",
+  xAmzTarget: AssociateConfigurationItemsToApplicationXAmzTargetEnum.AWSPoseidonServiceV20151101AssociateConfigurationItemsToApplication,
 };
 
 sdk.associateConfigurationItemsToApplication(req).then((res: AssociateConfigurationItemsToApplicationResponse | AxiosError) => {

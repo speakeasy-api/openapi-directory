@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Proxy {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,79 +9,91 @@ export declare class Proxy {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * protocolProxyGetArgs - Show the agent's PROXY argument structure
+     * Show the agent's PROXY argument structure
      *
+     * @remarks
      * Agent's PROXY configuration with port,rule,prompt,paging_prompt,userdb,keymap
-    **/
+     */
     protocolProxyGetArgs(req: operations.ProtocolProxyGetArgsRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolProxyGetArgsResponse>;
     /**
-     * protocolProxyGetConfig - Show the agent's PROXY configuration
+     * Show the agent's PROXY configuration
      *
+     * @remarks
      * Agent's PROXY configuration with port,rule,prompt,paging_prompt,userdb,keymap
-    **/
+     */
     protocolProxyGetConfig(req: operations.ProtocolProxyGetConfigRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolProxyGetConfigResponse>;
     /**
-     * protocolProxyGetStatistics - Show the agent's PROXY statistics
+     * Show the agent's PROXY statistics
      *
+     * @remarks
      * Statistics of fields indicated in the headers
-    **/
+     */
     protocolProxyGetStatistics(req: operations.ProtocolProxyGetStatisticsRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolProxyGetStatisticsResponse>;
     /**
-     * protocolProxyGetStatsHdr - Show the PROXY statistics headers
+     * Show the PROXY statistics headers
      *
+     * @remarks
      * The headers of statistics fields
-    **/
+     */
     protocolProxyGetStatsHdr(config?: AxiosRequestConfig): Promise<operations.ProtocolProxyGetStatsHdrResponse>;
     /**
-     * protocolProxyGetTrace - Show the agent's PROXY traffic tracing
+     * Show the agent's PROXY traffic tracing
      *
+     * @remarks
      * Trace 1 means enabled, 0 means not
-    **/
+     */
     protocolProxyGetTrace(req: operations.ProtocolProxyGetTraceRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolProxyGetTraceResponse>;
     /**
-     * protocolProxyPortAdd - Add individual proxy target on the agent and the simulator host
+     * Add individual proxy target on the agent and the simulator host
      *
+     * @remarks
      * Additional proxy target
-    **/
+     */
     protocolProxyPortAdd(req: operations.ProtocolProxyPortAddRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolProxyPortAddResponse>;
     /**
-     * protocolProxyPortIsstarted - Check individual target
-     *
      * Check individual target
-    **/
+     *
+     * @remarks
+     * Check individual target
+     */
     protocolProxyPortIsstarted(req: operations.ProtocolProxyPortIsstartedRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolProxyPortIsstartedResponse>;
     /**
-     * protocolProxyPortList - List all proxy targets
-    **/
+     * List all proxy targets
+     */
     protocolProxyPortList(req: operations.ProtocolProxyPortListRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolProxyPortListResponse>;
     /**
-     * protocolProxyPortRemove - Remove individual proxy target on the agent and the simulator host
+     * Remove individual proxy target on the agent and the simulator host
      *
+     * @remarks
      * Remove proxy target
-    **/
+     */
     protocolProxyPortRemove(req: operations.ProtocolProxyPortRemoveRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolProxyPortRemoveResponse>;
     /**
-     * protocolProxyPortStart - Start additional target
-     *
      * Start additional target
-    **/
+     *
+     * @remarks
+     * Start additional target
+     */
     protocolProxyPortStart(req: operations.ProtocolProxyPortStartRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolProxyPortStartResponse>;
     /**
-     * protocolProxyPortStop - Stop additional target
-     *
      * Stop additional target
-    **/
+     *
+     * @remarks
+     * Stop additional target
+     */
     protocolProxyPortStop(req: operations.ProtocolProxyPortStopRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolProxyPortStopResponse>;
     /**
-     * protocolProxySetConfig - Set the agent's PROXY configuration
+     * Set the agent's PROXY configuration
      *
+     * @remarks
      * Agent's PROXY configuration with port,rule,prompt,paging_prompt,userdb,keymap
-    **/
+     */
     protocolProxySetConfig(req: operations.ProtocolProxySetConfigRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolProxySetConfigResponse>;
     /**
-     * protocolProxySetTrace - Set the agent's PROXY traffic tracing
+     * Set the agent's PROXY traffic tracing
      *
+     * @remarks
      * 1 to enable, 0 to disable
-    **/
+     */
     protocolProxySetTrace(req: operations.ProtocolProxySetTraceRequest, config?: AxiosRequestConfig): Promise<operations.ProtocolProxySetTraceResponse>;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetEnrollmentStatusXAmzTargetEnum {
     ComputeOptimizerServiceGetEnrollmentStatus = "ComputeOptimizerService.GetEnrollmentStatus"
 }
-export declare class GetEnrollmentStatusHeaders extends SpeakeasyBase {
+export declare class GetEnrollmentStatusRequest extends SpeakeasyBase {
+    requestBody: Record<string, any>;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class GetEnrollmentStatusHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetEnrollmentStatusXAmzTargetEnum;
 }
-export declare class GetEnrollmentStatusRequest extends SpeakeasyBase {
-    headers: GetEnrollmentStatusHeaders;
-    request: Record<string, any>;
-}
 export declare class GetEnrollmentStatusResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getEnrollmentStatusResponse?: shared.GetEnrollmentStatusResponse;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
+    /**
+     * MissingAuthenticationToken
+     */
     missingAuthenticationToken?: any;
-    serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceUnavailableException
+     */
+    serviceUnavailableException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

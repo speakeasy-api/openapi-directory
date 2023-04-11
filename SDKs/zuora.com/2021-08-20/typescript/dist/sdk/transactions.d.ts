@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Transactions {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,21 +9,23 @@ export declare class Transactions {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getTransactionInvoice - List all invoices for an account
+     * List all invoices for an account
      *
+     * @remarks
      * Retrieves invoices for a specified account.
      * Invoices are returned in reverse chronological order by **updatedDate**.
      *
      * For a use case of this operation, see [View invoices](https://www.zuora.com/developer/api-guides/#View-invoices).
      *
-    **/
-    getTransactionInvoice(req: operations.GetTransactionInvoiceRequest, config?: AxiosRequestConfig): Promise<operations.GetTransactionInvoiceResponse>;
+     */
+    getTransactionInvoice(req: operations.GETTransactionInvoiceRequest, config?: AxiosRequestConfig): Promise<operations.GETTransactionInvoiceResponse>;
     /**
-     * getTransactionPayment - List all payments for an account
+     * List all payments for an account
      *
+     * @remarks
      * Retrieves payments for a specified account. Payments are returned in
      * reverse chronological order by **updatedDate**.
      *
-    **/
-    getTransactionPayment(req: operations.GetTransactionPaymentRequest, config?: AxiosRequestConfig): Promise<operations.GetTransactionPaymentResponse>;
+     */
+    getTransactionPayment(req: operations.GETTransactionPaymentRequest, config?: AxiosRequestConfig): Promise<operations.GETTransactionPaymentResponse>;
 }

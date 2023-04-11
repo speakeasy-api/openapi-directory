@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum ListAllowedNodeTypeUpdatesXAmzTargetEnum {
-    AmazonMemoryDbListAllowedNodeTypeUpdates = "AmazonMemoryDB.ListAllowedNodeTypeUpdates"
+    AmazonMemoryDBListAllowedNodeTypeUpdates = "AmazonMemoryDB.ListAllowedNodeTypeUpdates"
 }
-export declare class ListAllowedNodeTypeUpdatesHeaders extends SpeakeasyBase {
+export declare class ListAllowedNodeTypeUpdatesRequest extends SpeakeasyBase {
+    listAllowedNodeTypeUpdatesRequest: shared.ListAllowedNodeTypeUpdatesRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class ListAllowedNodeTypeUpdatesHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListAllowedNodeTypeUpdatesXAmzTargetEnum;
 }
-export declare class ListAllowedNodeTypeUpdatesRequest extends SpeakeasyBase {
-    headers: ListAllowedNodeTypeUpdatesHeaders;
-    request: shared.ListAllowedNodeTypeUpdatesRequest;
-}
 export declare class ListAllowedNodeTypeUpdatesResponse extends SpeakeasyBase {
+    /**
+     * ClusterNotFoundFault
+     */
     clusterNotFoundFault?: any;
     contentType: string;
+    /**
+     * InvalidParameterCombinationException
+     */
     invalidParameterCombinationException?: any;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
+    /**
+     * Success
+     */
     listAllowedNodeTypeUpdatesResponse?: shared.ListAllowedNodeTypeUpdatesResponse;
-    serviceLinkedRoleNotFoundFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceLinkedRoleNotFoundFault
+     */
+    serviceLinkedRoleNotFoundFault?: any;
 }

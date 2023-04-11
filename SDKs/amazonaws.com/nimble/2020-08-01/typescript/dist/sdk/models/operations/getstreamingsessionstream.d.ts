@@ -1,11 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetStreamingSessionStreamPathParams extends SpeakeasyBase {
-    sessionId: string;
-    streamId: string;
-    studioId: string;
-}
-export declare class GetStreamingSessionStreamHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetStreamingSessionStreamRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,20 +9,53 @@ export declare class GetStreamingSessionStreamHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class GetStreamingSessionStreamRequest extends SpeakeasyBase {
-    pathParams: GetStreamingSessionStreamPathParams;
-    headers: GetStreamingSessionStreamHeaders;
+    /**
+     * The streaming session ID.
+     */
+    sessionId: string;
+    /**
+     * The streaming session stream ID.
+     */
+    streamId: string;
+    /**
+     * The studio ID.
+     */
+    studioId: string;
 }
 export declare class GetStreamingSessionStreamResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getStreamingSessionStreamResponse?: shared.GetStreamingSessionStreamResponse;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
-    serviceQuotaExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceQuotaExceededException
+     */
+    serviceQuotaExceededException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

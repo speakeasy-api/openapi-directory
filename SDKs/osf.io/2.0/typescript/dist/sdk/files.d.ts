@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Files {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,14 +9,15 @@ export declare class Files {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * filesDetail - Retrieve a file
+     * Retrieve a file
      *
+     * @remarks
      * Retrieves the details of a file (or folder)
      * #### Returns
      * Returns a JSON object with a `data` key containing the representation of the requested file, if the request was successful.
      *
      * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
-     * ###Waterbutler API actions
+     * ### Waterbutler API actions
      *
      * Files can be modified through the Waterbutler API routes found in `links` (`new_folder`, `move`, `upload`, `download`, and `delete`).
      *
@@ -51,32 +52,35 @@ export declare class Files {
      * #### Delete (file, folders)
      *
      * To delete a file or folder send a DELETE request to the delete link. Nothing will be returned in the response body.
-    **/
+     */
     filesDetail(req: operations.FilesDetailRequest, config?: AxiosRequestConfig): Promise<operations.FilesDetailResponse>;
     /**
-     * filesPatch - Update a file
+     * Update a file
      *
+     * @remarks
      * Updates the specified file by setting the values of the parameters passed. Any parameters not provided will be left unchanged.
      * #### Returns
      * Returns JSON with a `data` key containing the new representation of the updated file, if the request is successful.
      *
      * If the request is unsuccessful, JSON with an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
-    **/
+     */
     filesPatch(req: operations.FilesPatchRequest, config?: AxiosRequestConfig): Promise<operations.FilesPatchResponse>;
     /**
-     * filesVersionDetail - Retrieve a file version
+     * Retrieve a file version
      *
+     * @remarks
      * Retrieves the details of a file version
      * #### Returns
      *
      * Returns a JSON object with a `data` key containing the representation of the requested file, if the request was successful.
      *
      * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
-    **/
+     */
     filesVersionDetail(req: operations.FilesVersionDetailRequest, config?: AxiosRequestConfig): Promise<operations.FilesVersionDetailResponse>;
     /**
-     * filesVersions - List all file versions
+     * List all file versions
      *
+     * @remarks
      *
      * A paginated list of all file versions.
      * #### Returns
@@ -87,6 +91,6 @@ export declare class Files {
      * The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
      *
      * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
-    **/
+     */
     filesVersions(req: operations.FilesVersionsRequest, config?: AxiosRequestConfig): Promise<operations.FilesVersionsResponse>;
 }

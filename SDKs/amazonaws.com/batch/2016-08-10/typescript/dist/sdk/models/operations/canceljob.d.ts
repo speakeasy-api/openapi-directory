@@ -1,5 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CancelJobHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class CancelJobRequestBody extends SpeakeasyBase {
+    /**
+     * The Batch job ID of the job to cancel.
+     */
+    jobId: string;
+    /**
+     * A message to attach to the job that explains the reason for canceling it. This message is returned by future <a>DescribeJobs</a> operations on the job. This message is also recorded in the Batch activity logs.
+     */
+    reason: string;
+}
+export declare class CancelJobRequest extends SpeakeasyBase {
+    requestBody: CancelJobRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -8,18 +20,20 @@ export declare class CancelJobHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class CancelJobRequestBody extends SpeakeasyBase {
-    jobId: string;
-    reason: string;
-}
-export declare class CancelJobRequest extends SpeakeasyBase {
-    headers: CancelJobHeaders;
-    request: CancelJobRequestBody;
-}
 export declare class CancelJobResponse extends SpeakeasyBase {
+    /**
+     * Success
+     */
     cancelJobResponse?: Record<string, any>;
+    /**
+     * ClientException
+     */
     clientException?: any;
     contentType: string;
-    serverException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServerException
+     */
+    serverException?: any;
 }

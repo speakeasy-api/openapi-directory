@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostReleaseHostsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTReleaseHostsActionEnum {
     ReleaseHosts = "ReleaseHosts"
 }
-export declare enum PostReleaseHostsVersionEnum {
+export declare enum POSTReleaseHostsVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostReleaseHostsQueryParams extends SpeakeasyBase {
-    action: PostReleaseHostsActionEnum;
-    version: PostReleaseHostsVersionEnum;
-}
-export declare class PostReleaseHostsHeaders extends SpeakeasyBase {
+export declare class POSTReleaseHostsRequest extends SpeakeasyBase {
+    action: POSTReleaseHostsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTReleaseHostsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostReleaseHostsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostReleaseHostsRequest extends SpeakeasyBase {
-    queryParams: PostReleaseHostsQueryParams;
-    headers: PostReleaseHostsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostReleaseHostsResponse extends SpeakeasyBase {
+export declare class POSTReleaseHostsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

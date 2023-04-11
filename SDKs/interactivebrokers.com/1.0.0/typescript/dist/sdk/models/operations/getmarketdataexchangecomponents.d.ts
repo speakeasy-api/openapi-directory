@@ -1,16 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetMarketdataExchangeComponents200ApplicationJsonMapping extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetMarketdataExchangeComponents200ApplicationJSONMapping extends SpeakeasyBase {
     bit?: number;
     code?: string;
     exchange?: string;
 }
-export declare class GetMarketdataExchangeComponents200ApplicationJson extends SpeakeasyBase {
+export declare class GetMarketdataExchangeComponents200ApplicationJSON extends SpeakeasyBase {
     complete?: boolean;
     conId?: number;
-    mapping?: GetMarketdataExchangeComponents200ApplicationJsonMapping[];
+    mapping?: GetMarketdataExchangeComponents200ApplicationJSONMapping[];
 }
 export declare class GetMarketdataExchangeComponentsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getMarketdataExchangeComponents200ApplicationJSONObjects?: GetMarketdataExchangeComponents200ApplicationJson[];
+    rawResponse?: AxiosResponse;
+    /**
+     * Exchange Components
+     */
+    getMarketdataExchangeComponents200ApplicationJSONObjects?: GetMarketdataExchangeComponents200ApplicationJSON[];
 }

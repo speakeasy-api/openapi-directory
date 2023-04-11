@@ -1,16 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class PostMarketingV3MarketingEventsEventsCreateSecurity extends SpeakeasyBase {
-    privateAppsLegacy?: shared.SchemePrivateAppsLegacy;
-    oauth2Legacy?: shared.SchemeOauth2Legacy;
-}
-export declare class PostMarketingV3MarketingEventsEventsCreateRequest extends SpeakeasyBase {
-    request: shared.MarketingEventCreateRequestParams;
-    security: PostMarketingV3MarketingEventsEventsCreateSecurity;
+    oauth2Legacy?: string;
+    privateAppsLegacy?: string;
 }
 export declare class PostMarketingV3MarketingEventsEventsCreateResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
+    /**
+     * successful operation
+     */
     marketingEventDefaultResponse?: shared.MarketingEventDefaultResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

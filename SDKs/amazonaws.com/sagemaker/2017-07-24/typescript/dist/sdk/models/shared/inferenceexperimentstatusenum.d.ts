@@ -1,0 +1,10 @@
+export declare enum InferenceExperimentStatusEnum {
+    Creating = "Creating",
+    Created = "Created",
+    Updating = "Updating",
+    Running = "Running",
+    Starting = "Starting",
+    Stopping = "Stopping",
+    Completed = "Completed",
+    Cancelled = "Cancelled"
+}

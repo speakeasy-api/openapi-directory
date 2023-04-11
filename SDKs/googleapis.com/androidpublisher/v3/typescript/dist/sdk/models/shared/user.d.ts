@@ -17,6 +17,30 @@ export declare enum UserDeveloperAccountPermissionsEnum {
     CanChangeManagedPlaySettingGlobal = "CAN_CHANGE_MANAGED_PLAY_SETTING_GLOBAL",
     CanManageOrdersGlobal = "CAN_MANAGE_ORDERS_GLOBAL"
 }
+/**
+ * A user resource.
+ */
+export declare class UserInput extends SpeakeasyBase {
+    /**
+     * Permissions for the user which apply across the developer account.
+     */
+    developerAccountPermissions?: UserDeveloperAccountPermissionsEnum[];
+    /**
+     * Immutable. The user's email address.
+     */
+    email?: string;
+    /**
+     * The time at which the user's access expires, if set. When setting this value, it must always be in the future.
+     */
+    expirationTime?: string;
+    /**
+     * Required. Resource name for this user, following the pattern "developers/{developer}/users/{email}".
+     */
+    name?: string;
+}
+/**
+ * Output only. The state of the user's access to the Play Console.
+ */
 export declare enum UserAccessStateEnum {
     AccessStateUnspecified = "ACCESS_STATE_UNSPECIFIED",
     Invited = "INVITED",
@@ -26,22 +50,34 @@ export declare enum UserAccessStateEnum {
 }
 /**
  * A user resource.
-**/
-export declare class UserInput extends SpeakeasyBase {
-    developerAccountPermissions?: UserDeveloperAccountPermissionsEnum[];
-    email?: string;
-    expirationTime?: string;
-    name?: string;
-}
-/**
- * A user resource.
-**/
+ */
 export declare class User extends SpeakeasyBase {
+    /**
+     * Output only. The state of the user's access to the Play Console.
+     */
     accessState?: UserAccessStateEnum;
+    /**
+     * Permissions for the user which apply across the developer account.
+     */
     developerAccountPermissions?: UserDeveloperAccountPermissionsEnum[];
+    /**
+     * Immutable. The user's email address.
+     */
     email?: string;
+    /**
+     * The time at which the user's access expires, if set. When setting this value, it must always be in the future.
+     */
     expirationTime?: string;
+    /**
+     * Output only. Per-app permissions for the user.
+     */
     grants?: Grant[];
+    /**
+     * Required. Resource name for this user, following the pattern "developers/{developer}/users/{email}".
+     */
     name?: string;
+    /**
+     * Output only. Whether there are more permissions for the user that are not represented here. This can happen if the caller does not have permission to manage all apps in the account. This is also `true` if this user is the account owner. If this field is `true`, it should be taken as a signal that this user cannot be fully managed via the API. That is, the API caller is not be able to manage all of the permissions this user holds, either because it doesn't know about them or because the user is the account owner.
+     */
     partial?: boolean;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeRefreshSchemasStatusXAmzTargetEnum {
-    AmazonDmSv20160101DescribeRefreshSchemasStatus = "AmazonDMSv20160101.DescribeRefreshSchemasStatus"
+    AmazonDMSv20160101DescribeRefreshSchemasStatus = "AmazonDMSv20160101.DescribeRefreshSchemasStatus"
 }
-export declare class DescribeRefreshSchemasStatusHeaders extends SpeakeasyBase {
+export declare class DescribeRefreshSchemasStatusRequest extends SpeakeasyBase {
+    describeRefreshSchemasStatusMessage: shared.DescribeRefreshSchemasStatusMessage;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class DescribeRefreshSchemasStatusHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeRefreshSchemasStatusXAmzTargetEnum;
 }
-export declare class DescribeRefreshSchemasStatusRequest extends SpeakeasyBase {
-    headers: DescribeRefreshSchemasStatusHeaders;
-    request: shared.DescribeRefreshSchemasStatusMessage;
-}
 export declare class DescribeRefreshSchemasStatusResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeRefreshSchemasStatusResponse?: shared.DescribeRefreshSchemasStatusResponse;
+    /**
+     * InvalidResourceStateFault
+     */
     invalidResourceStateFault?: any;
-    resourceNotFoundFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundFault
+     */
+    resourceNotFoundFault?: any;
 }

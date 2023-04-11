@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetEnableEbsEncryptionByDefaultActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETEnableEbsEncryptionByDefaultActionEnum {
     EnableEbsEncryptionByDefault = "EnableEbsEncryptionByDefault"
 }
-export declare enum GetEnableEbsEncryptionByDefaultVersionEnum {
+export declare enum GETEnableEbsEncryptionByDefaultVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetEnableEbsEncryptionByDefaultQueryParams extends SpeakeasyBase {
-    action: GetEnableEbsEncryptionByDefaultActionEnum;
+export declare class GETEnableEbsEncryptionByDefaultRequest extends SpeakeasyBase {
+    action: GETEnableEbsEncryptionByDefaultActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
-    version: GetEnableEbsEncryptionByDefaultVersionEnum;
-}
-export declare class GetEnableEbsEncryptionByDefaultHeaders extends SpeakeasyBase {
+    version: GETEnableEbsEncryptionByDefaultVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetEnableEbsEncryptionByDefaultHeaders extends SpeakeasyBas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetEnableEbsEncryptionByDefaultRequest extends SpeakeasyBase {
-    queryParams: GetEnableEbsEncryptionByDefaultQueryParams;
-    headers: GetEnableEbsEncryptionByDefaultHeaders;
-}
-export declare class GetEnableEbsEncryptionByDefaultResponse extends SpeakeasyBase {
+export declare class GETEnableEbsEncryptionByDefaultResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

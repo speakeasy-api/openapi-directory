@@ -1,37 +1,42 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetCreateJobActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETCreateJobActionEnum {
     CreateJob = "CreateJob"
 }
-export declare enum GetCreateJobJobTypeEnum {
+/**
+ * Specifies whether the job to initiate is an import or export job.
+ */
+export declare enum GETCreateJobJobTypeEnum {
     Import = "Import",
     Export = "Export"
 }
-export declare enum GetCreateJobOperationEnum {
+export declare enum GETCreateJobOperationEnum {
     CreateJob = "CreateJob"
 }
-export declare enum GetCreateJobVersionEnum {
+export declare enum GETCreateJobVersionEnum {
     TwoThousandAndTen0601 = "2010-06-01"
 }
-export declare class GetCreateJobQueryParams extends SpeakeasyBase {
+export declare class GETCreateJobRequest extends SpeakeasyBase {
     apiVersion?: string;
     awsAccessKeyId: string;
-    action: GetCreateJobActionEnum;
-    jobType: GetCreateJobJobTypeEnum;
+    action: GETCreateJobActionEnum;
+    /**
+     * Specifies whether the job to initiate is an import or export job.
+     */
+    jobType: GETCreateJobJobTypeEnum;
     manifest: string;
     manifestAddendum?: string;
-    operation: GetCreateJobOperationEnum;
+    operation: GETCreateJobOperationEnum;
     signature: string;
     signatureMethod: string;
     signatureVersion: string;
     timestamp: string;
     validateOnly: boolean;
-    version: GetCreateJobVersionEnum;
+    version: GETCreateJobVersionEnum;
 }
-export declare class GetCreateJobRequest extends SpeakeasyBase {
-    queryParams: GetCreateJobQueryParams;
-}
-export declare class GetCreateJobResponse extends SpeakeasyBase {
+export declare class GETCreateJobResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

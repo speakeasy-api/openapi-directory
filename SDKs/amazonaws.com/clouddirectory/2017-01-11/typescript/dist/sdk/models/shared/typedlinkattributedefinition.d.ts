@@ -1,11 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { TypedAttributeValue } from "./typedattributevalue";
+import { FacetAttributeTypeEnum } from "./facetattributetypeenum";
 import { RequiredAttributeBehaviorEnum } from "./requiredattributebehaviorenum";
 import { Rule } from "./rule";
-import { FacetAttributeTypeEnum } from "./facetattributetypeenum";
+import { TypedAttributeValue } from "./typedattributevalue";
 /**
  * A typed link attribute definition.
-**/
+ */
 export declare class TypedLinkAttributeDefinition extends SpeakeasyBase {
     defaultValue?: TypedAttributeValue;
     isImmutable?: boolean;

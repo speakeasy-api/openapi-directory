@@ -1,19 +1,20 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetCityRequest, GetCityResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetCityRequest,
+  GetCityResponse,
+  GetCityFormatEnum,
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetCityRequest = {
-  queryParams: {
-    format: "json",
-    key: "voluptas",
-    lat: 53.099998,
-    lng: 15.100000,
-  },
+  format: GetCityFormatEnum.Xml,
+  key: "provident",
+  lat: 7151.9,
+  lng: 8442.66,
 };
 
 sdk.getCity(req).then((res: GetCityResponse | AxiosError) => {

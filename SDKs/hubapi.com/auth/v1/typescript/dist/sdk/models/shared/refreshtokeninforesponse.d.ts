@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * successful operation
+ */
 export declare class RefreshTokenInfoResponse extends SpeakeasyBase {
     clientId: string;
     hubDomain?: string;

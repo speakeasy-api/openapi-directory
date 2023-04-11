@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteSchemaXAmzTargetEnum {
-    AwsGlueDeleteSchema = "AWSGlue.DeleteSchema"
+    AWSGlueDeleteSchema = "AWSGlue.DeleteSchema"
 }
-export declare class DeleteSchemaHeaders extends SpeakeasyBase {
+export declare class DeleteSchemaRequest extends SpeakeasyBase {
+    deleteSchemaInput: shared.DeleteSchemaInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class DeleteSchemaHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteSchemaXAmzTargetEnum;
 }
-export declare class DeleteSchemaRequest extends SpeakeasyBase {
-    headers: DeleteSchemaHeaders;
-    request: shared.DeleteSchemaInput;
-}
 export declare class DeleteSchemaResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConcurrentModificationException
+     */
     concurrentModificationException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteSchemaResponse?: shared.DeleteSchemaResponse;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

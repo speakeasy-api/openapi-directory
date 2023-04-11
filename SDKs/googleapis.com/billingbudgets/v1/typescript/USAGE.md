@@ -1,120 +1,127 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { BillingbudgetsBillingAccountsBudgetsCreateRequest, BillingbudgetsBillingAccountsBudgetsCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  BillingbudgetsBillingAccountsBudgetsCreateRequest,
+  BillingbudgetsBillingAccountsBudgetsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  GoogleCloudBillingBudgetsV1ThresholdRuleSpendBasisEnum,
+  GoogleCloudBillingBudgetsV1FilterCalendarPeriodEnum,
+  GoogleCloudBillingBudgetsV1FilterCreditTypesTreatmentEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: BillingbudgetsBillingAccountsBudgetsCreateRequest = {
-  security: {
-    option1: {
-      oauth2: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-      oauth2c: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  googleCloudBillingBudgetsV1BudgetInput: {
     amount: {
       lastPeriodAmount: {
-        "debitis": "voluptatum",
-        "et": "ut",
-        "dolorem": "et",
+        "distinctio": "quibusdam",
+        "unde": "nulla",
+        "corrupti": "illum",
       },
       specifiedAmount: {
-        currencyCode: "voluptate",
-        nanos: 3287288577352441706,
-        units: "vitae",
+        currencyCode: "vel",
+        nanos: 623564,
+        units: "deserunt",
       },
     },
     budgetFilter: {
-      calendarPeriod: "QUARTER",
+      calendarPeriod: GoogleCloudBillingBudgetsV1FilterCalendarPeriodEnum.Month,
       creditTypes: [
-        "illum",
+        "magnam",
+        "debitis",
       ],
-      creditTypesTreatment: "EXCLUDE_ALL_CREDITS",
+      creditTypesTreatment: GoogleCloudBillingBudgetsV1FilterCreditTypesTreatmentEnum.CreditTypesTreatmentUnspecified,
       customPeriod: {
         endDate: {
-          day: 3706853784096366226,
-          month: 2627038740284806767,
-          year: 6303220950515014660,
+          day: 963663,
+          month: 272656,
+          year: 383441,
         },
         startDate: {
-          day: 4035568504096476779,
-          month: 959367522974354090,
-          year: 2914295034816259174,
+          day: 477665,
+          month: 791725,
+          year: 812169,
         },
       },
       labels: {
-        "commodi": [
-          "est",
-          "aut",
-          "odit",
+        "iusto": [
+          "nisi",
+          "recusandae",
+          "temporibus",
         ],
-        "non": [
-          "omnis",
+        "ab": [
+          "veritatis",
+          "deserunt",
         ],
-        "aut": [
-          "sed",
+        "perferendis": [
+          "repellendus",
+          "sapiente",
         ],
       },
       projects: [
-        "autem",
-        "consectetur",
+        "odit",
+        "at",
+        "at",
+        "maiores",
       ],
       services: [
-        "odio",
+        "quod",
+        "quod",
       ],
       subaccounts: [
-        "recusandae",
+        "totam",
+        "porro",
       ],
     },
-    displayName: "at",
-    etag: "ipsum",
+    displayName: "dolorum",
+    etag: "dicta",
     notificationsRule: {
-      disableDefaultIamRecipients: true,
+      disableDefaultIamRecipients: false,
       monitoringNotificationChannels: [
-        "sint",
-        "inventore",
+        "officia",
+        "occaecati",
+        "fugit",
       ],
-      pubsubTopic: "ut",
-      schemaVersion: "exercitationem",
+      pubsubTopic: "deleniti",
+      schemaVersion: "hic",
     },
     thresholdRules: [
       {
-        spendBasis: "BASIS_UNSPECIFIED",
-        thresholdPercent: 7.200000,
+        spendBasis: GoogleCloudBillingBudgetsV1ThresholdRuleSpendBasisEnum.CurrentSpend,
+        thresholdPercent: 1059.07,
       },
       {
-        spendBasis: "FORECASTED_SPEND",
-        thresholdPercent: 94.199997,
+        spendBasis: GoogleCloudBillingBudgetsV1ThresholdRuleSpendBasisEnum.CurrentSpend,
+        thresholdPercent: 4736,
       },
       {
-        spendBasis: "CURRENT_SPEND",
-        thresholdPercent: 80.199997,
+        spendBasis: GoogleCloudBillingBudgetsV1ThresholdRuleSpendBasisEnum.BasisUnspecified,
+        thresholdPercent: 1863.32,
+      },
+      {
+        spendBasis: GoogleCloudBillingBudgetsV1ThresholdRuleSpendBasisEnum.ForecastedSpend,
+        thresholdPercent: 7369.18,
       },
     ],
   },
+  accessToken: "esse",
+  alt: AltEnum.Json,
+  callback: "excepturi",
+  fields: "aspernatur",
+  key: "perferendis",
+  oauthToken: "ad",
+  parent: "natus",
+  prettyPrint: false,
+  quotaUser: "sed",
+  uploadType: "iste",
+  uploadProtocol: "dolor",
 };
 
 sdk.billingAccounts.billingbudgetsBillingAccountsBudgetsCreate(req).then((res: BillingbudgetsBillingAccountsBudgetsCreateResponse | AxiosError) => {

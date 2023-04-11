@@ -1,19 +1,28 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class PatchQshowQueryParams extends SpeakeasyBase {
-    description?: string;
-    id: string;
-    tags?: string[];
-    title?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PatchQshowSecurity extends SpeakeasyBase {
-    xTheySaidSoApiSecret: shared.SchemeXTheySaidSoApiSecret;
+    xTheySaidSoApiSecret: string;
 }
 export declare class PatchQshowRequest extends SpeakeasyBase {
-    queryParams: PatchQshowQueryParams;
-    security: PatchQshowSecurity;
+    /**
+     * Qshow description
+     */
+    description?: string;
+    /**
+     * Qshow ID
+     */
+    id: string;
+    /**
+     * Tags for the qshow
+     */
+    tags?: string[];
+    /**
+     * Qshow title
+     */
+    title?: string;
 }
 export declare class PatchQshowResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

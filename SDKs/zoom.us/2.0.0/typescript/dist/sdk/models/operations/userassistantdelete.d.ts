@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UserAssistantDeletePathParams extends SpeakeasyBase {
-    assistantId: string;
-    userId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UserAssistantDeleteRequest extends SpeakeasyBase {
-    pathParams: UserAssistantDeletePathParams;
+    /**
+     * Assistant ID.
+     */
+    assistantId: string;
+    /**
+     * The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+     */
+    userId: string;
 }
 export declare class UserAssistantDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

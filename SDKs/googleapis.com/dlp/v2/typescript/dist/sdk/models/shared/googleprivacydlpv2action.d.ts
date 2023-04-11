@@ -4,13 +4,34 @@ import { GooglePrivacyDlpV2PublishToPubSub } from "./googleprivacydlpv2publishto
 import { GooglePrivacyDlpV2SaveFindings } from "./googleprivacydlpv2savefindings";
 /**
  * A task to execute on the completion of a job. See https://cloud.google.com/dlp/docs/concepts-actions to learn more.
-**/
+ */
 export declare class GooglePrivacyDlpV2Action extends SpeakeasyBase {
+    /**
+     * Create a de-identified copy of the requested table or files. A TransformationDetail will be created for each transformation. If any rows in BigQuery are skipped during de-identification (transformation errors or row size exceeds BigQuery insert API limits) they are placed in the failure output table. If the original row exceeds the BigQuery insert API limit it will be truncated when written to the failure output table. The failure output table can be set in the action.deidentify.output.big_query_output.deidentified_failure_output_table field, if no table is set, a table will be automatically created in the same project and dataset as the original table. Compatible with: Inspect
+     */
     deidentify?: GooglePrivacyDlpV2Deidentify;
+    /**
+     * Sends an email when the job completes. The email goes to IAM project owners and technical [Essential Contacts](https://cloud.google.com/resource-manager/docs/managing-notification-contacts).
+     */
     jobNotificationEmails?: Record<string, any>;
+    /**
+     * Publish a message into a given Pub/Sub topic when DlpJob has completed. The message contains a single field, `DlpJobName`, which is equal to the finished job's [`DlpJob.name`](https://cloud.google.com/dlp/docs/reference/rest/v2/projects.dlpJobs#DlpJob). Compatible with: Inspect, Risk
+     */
     pubSub?: GooglePrivacyDlpV2PublishToPubSub;
+    /**
+     * Publish findings of a DlpJob to Data Catalog. In Data Catalog, tag templates are applied to the resource that Cloud DLP scanned. Data Catalog tag templates are stored in the same project and region where the BigQuery table exists. For Cloud DLP to create and apply the tag template, the Cloud DLP service agent must have the `roles/datacatalog.tagTemplateOwner` permission on the project. The tag template contains fields summarizing the results of the DlpJob. Any field values previously written by another DlpJob are deleted. InfoType naming patterns are strictly enforced when using this feature. Findings are persisted in Data Catalog storage and are governed by service-specific policies for Data Catalog. For more information, see [Service Specific Terms](https://cloud.google.com/terms/service-terms). Only a single instance of this action can be specified. This action is allowed only if all resources being scanned are BigQuery tables. Compatible with: Inspect
+     */
     publishFindingsToCloudDataCatalog?: Record<string, any>;
+    /**
+     * Publish the result summary of a DlpJob to [Security Command Center](https://cloud.google.com/security-command-center). This action is available for only projects that belong to an organization. This action publishes the count of finding instances and their infoTypes. The summary of findings are persisted in Security Command Center and are governed by [service-specific policies for Security Command Center](https://cloud.google.com/terms/service-terms). Only a single instance of this action can be specified. Compatible with: Inspect
+     */
     publishSummaryToCscc?: Record<string, any>;
+    /**
+     * Enable Stackdriver metric dlp.googleapis.com/finding_count. This will publish a metric to stack driver on each infotype requested and how many findings were found for it. CustomDetectors will be bucketed as 'Custom' under the Stackdriver label 'info_type'.
+     */
     publishToStackdriver?: Record<string, any>;
+    /**
+     * If set, the detailed findings will be persisted to the specified OutputStorageConfig. Only a single instance of this action can be specified. Compatible with: Inspect, Risk
+     */
     saveFindings?: GooglePrivacyDlpV2SaveFindings;
 }

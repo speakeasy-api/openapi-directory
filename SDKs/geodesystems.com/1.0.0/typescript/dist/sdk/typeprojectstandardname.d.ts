@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Search API for 'Standard Parameter Name' entry type
+ */
 export declare class TypeProjectStandardName {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,10 @@ export declare class TypeProjectStandardName {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * searchProjectStandardName - Search API for 'Standard Parameter Name' entry type
+     * Search API for 'Standard Parameter Name' entry type
      *
+     * @remarks
      * API to search for entries of type Standard Parameter Name
-    **/
+     */
     searchProjectStandardName(req: operations.SearchProjectStandardNameRequest, config?: AxiosRequestConfig): Promise<operations.SearchProjectStandardNameResponse>;
 }

@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * This section shows how you can create, retrieve and modify subaccounts of a primary account.
+ */
 export declare class SubaccountManagement {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,31 +12,35 @@ export declare class SubaccountManagement {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createSubAccount - Create subaccount
+     * Create subaccount
      *
+     * @remarks
      * Create a subaccount for a given primary account.
      *
-    **/
-    createSubAccount(req: operations.CreateSubAccountRequest, config?: AxiosRequestConfig): Promise<operations.CreateSubAccountResponse>;
+     */
+    createSubAccount(req: operations.CreateSubAccountRequest, security: operations.CreateSubAccountSecurity, config?: AxiosRequestConfig): Promise<operations.CreateSubAccountResponse>;
     /**
-     * modifySubaccount - Modify a subaccount
+     * Modify a subaccount
      *
+     * @remarks
      * Change one or more properties of a subaccount.
      *
-    **/
-    modifySubaccount(req: operations.ModifySubaccountRequest, config?: AxiosRequestConfig): Promise<operations.ModifySubaccountResponse>;
+     */
+    modifySubaccount(req: operations.ModifySubaccountRequest, security: operations.ModifySubaccountSecurity, config?: AxiosRequestConfig): Promise<operations.ModifySubaccountResponse>;
     /**
-     * retrieveSubaccount - Retrieve a subaccount
+     * Retrieve a subaccount
      *
+     * @remarks
      * Get the information of a subaccount specified with its API key.
      *
-    **/
-    retrieveSubaccount(req: operations.RetrieveSubaccountRequest, config?: AxiosRequestConfig): Promise<operations.RetrieveSubaccountResponse>;
+     */
+    retrieveSubaccount(req: operations.RetrieveSubaccountRequest, security: operations.RetrieveSubaccountSecurity, config?: AxiosRequestConfig): Promise<operations.RetrieveSubaccountResponse>;
     /**
-     * retrieveSubaccountsList - Retrieve list of subaccounts
+     * Retrieve list of subaccounts
      *
+     * @remarks
      * Get the information of all the subaccounts owned by the primary account.
      *
-    **/
-    retrieveSubaccountsList(req: operations.RetrieveSubaccountsListRequest, config?: AxiosRequestConfig): Promise<operations.RetrieveSubaccountsListResponse>;
+     */
+    retrieveSubaccountsList(req: operations.RetrieveSubaccountsListRequest, security: operations.RetrieveSubaccountsListSecurity, config?: AxiosRequestConfig): Promise<operations.RetrieveSubaccountsListResponse>;
 }

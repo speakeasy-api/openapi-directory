@@ -1,14 +1,35 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { FormFieldEntity } from "./formfieldentity";
 /**
- * Create Form Field Set
-**/
+ * List Form Field Sets
+ */
 export declare class FormFieldSetEntity extends SpeakeasyBase {
-    formFields?: FormFieldEntity;
-    formLayout?: number;
+    /**
+     * Associated form fields
+     */
+    formFields?: FormFieldEntity[];
+    /**
+     * Layout of the form
+     */
+    formLayout?: number[];
+    /**
+     * Form field set id
+     */
     id?: number;
+    /**
+     * Any associated InboxRegistrations or BundleRegistrations can be saved without providing company
+     */
     skipCompany?: boolean;
+    /**
+     * Any associated InboxRegistrations or BundleRegistrations can be saved without providing email
+     */
     skipEmail?: boolean;
+    /**
+     * Any associated InboxRegistrations or BundleRegistrations can be saved without providing name
+     */
     skipName?: boolean;
+    /**
+     * Title to be displayed
+     */
     title?: string;
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostAttachInternetGatewayActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTAttachInternetGatewayActionEnum {
     AttachInternetGateway = "AttachInternetGateway"
 }
-export declare enum PostAttachInternetGatewayVersionEnum {
+export declare enum POSTAttachInternetGatewayVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostAttachInternetGatewayQueryParams extends SpeakeasyBase {
-    action: PostAttachInternetGatewayActionEnum;
-    version: PostAttachInternetGatewayVersionEnum;
-}
-export declare class PostAttachInternetGatewayHeaders extends SpeakeasyBase {
+export declare class POSTAttachInternetGatewayRequest extends SpeakeasyBase {
+    action: POSTAttachInternetGatewayActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTAttachInternetGatewayVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +18,8 @@ export declare class PostAttachInternetGatewayHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostAttachInternetGatewayRequest extends SpeakeasyBase {
-    queryParams: PostAttachInternetGatewayQueryParams;
-    headers: PostAttachInternetGatewayHeaders;
-    request?: Uint8Array;
-}
-export declare class PostAttachInternetGatewayResponse extends SpeakeasyBase {
+export declare class POSTAttachInternetGatewayResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

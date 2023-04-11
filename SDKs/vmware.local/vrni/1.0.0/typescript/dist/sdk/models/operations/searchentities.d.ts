@@ -1,15 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class SearchEntitiesSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
-}
-export declare class SearchEntitiesRequest extends SpeakeasyBase {
-    request?: shared.SearchRequest;
-    security: SearchEntitiesSecurity;
+    apiKeyAuth: string;
 }
 export declare class SearchEntitiesResponse extends SpeakeasyBase {
+    /**
+     * Bad Request
+     */
     apiError?: shared.ApiError;
     contentType: string;
+    /**
+     * Success
+     */
     pagedListResponseWithTime?: shared.PagedListResponseWithTime;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

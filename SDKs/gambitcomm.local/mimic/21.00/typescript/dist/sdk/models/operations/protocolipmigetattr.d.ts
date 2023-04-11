@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolIpmiGetAttrPathParams extends SpeakeasyBase {
-    agentNum: number;
-    attr: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolIpmiGetAttrRequest extends SpeakeasyBase {
-    pathParams: ProtocolIpmiGetAttrPathParams;
+    /**
+     * Agent to set the IPMI tracing
+     */
+    agentNum: number;
+    /**
+     * Attribute
+     */
+    attr: string;
 }
 export declare class ProtocolIpmiGetAttrResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolIpmiGetAttr200ApplicationJSONString?: string;
 }

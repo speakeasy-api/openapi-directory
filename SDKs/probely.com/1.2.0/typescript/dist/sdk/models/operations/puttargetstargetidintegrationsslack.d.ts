@@ -1,26 +1,55 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PutTargetsTargetIdIntegrationsSlackPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class PutTargetsTargetIdIntegrationsSlackRequest extends SpeakeasyBase {
+    slack: shared.Slack;
+    /**
+     * Target id
+     */
     targetId: string;
 }
-export declare class PutTargetsTargetIdIntegrationsSlack401ApplicationJson extends SpeakeasyBase {
+/**
+ * Not found
+ */
+export declare class PutTargetsTargetIdIntegrationsSlack404ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Not found.
+     */
     detail?: string;
 }
-export declare class PutTargetsTargetIdIntegrationsSlack403ApplicationJson extends SpeakeasyBase {
+/**
+ * Not allowed to perform operation
+ */
+export declare class PutTargetsTargetIdIntegrationsSlack403ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error message.
+     */
     detail?: string;
 }
-export declare class PutTargetsTargetIdIntegrationsSlack404ApplicationJson extends SpeakeasyBase {
+/**
+ * Access token is missing or invalid
+ */
+export declare class PutTargetsTargetIdIntegrationsSlack401ApplicationJSON extends SpeakeasyBase {
     detail?: string;
-}
-export declare class PutTargetsTargetIdIntegrationsSlackRequest extends SpeakeasyBase {
-    pathParams: PutTargetsTargetIdIntegrationsSlackPathParams;
-    request: shared.Slack;
 }
 export declare class PutTargetsTargetIdIntegrationsSlackResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Slack integration
+     */
     slack?: shared.Slack;
     statusCode: number;
-    putTargetsTargetIdIntegrationsSlack401ApplicationJSONObject?: PutTargetsTargetIdIntegrationsSlack401ApplicationJson;
-    putTargetsTargetIdIntegrationsSlack403ApplicationJSONObject?: PutTargetsTargetIdIntegrationsSlack403ApplicationJson;
-    putTargetsTargetIdIntegrationsSlack404ApplicationJSONObject?: PutTargetsTargetIdIntegrationsSlack404ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Access token is missing or invalid
+     */
+    putTargetsTargetIdIntegrationsSlack401ApplicationJSONObject?: PutTargetsTargetIdIntegrationsSlack401ApplicationJSON;
+    /**
+     * Not allowed to perform operation
+     */
+    putTargetsTargetIdIntegrationsSlack403ApplicationJSONObject?: PutTargetsTargetIdIntegrationsSlack403ApplicationJSON;
+    /**
+     * Not found
+     */
+    putTargetsTargetIdIntegrationsSlack404ApplicationJSONObject?: PutTargetsTargetIdIntegrationsSlack404ApplicationJSON;
 }

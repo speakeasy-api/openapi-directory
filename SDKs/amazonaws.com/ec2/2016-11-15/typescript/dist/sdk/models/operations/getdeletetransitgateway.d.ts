@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteTransitGatewayActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteTransitGatewayActionEnum {
     DeleteTransitGateway = "DeleteTransitGateway"
 }
-export declare enum GetDeleteTransitGatewayVersionEnum {
+export declare enum GETDeleteTransitGatewayVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetDeleteTransitGatewayQueryParams extends SpeakeasyBase {
-    action: GetDeleteTransitGatewayActionEnum;
+export declare class GETDeleteTransitGatewayRequest extends SpeakeasyBase {
+    action: GETDeleteTransitGatewayActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
+    /**
+     * The ID of the transit gateway.
+     */
     transitGatewayId: string;
-    version: GetDeleteTransitGatewayVersionEnum;
-}
-export declare class GetDeleteTransitGatewayHeaders extends SpeakeasyBase {
+    version: GETDeleteTransitGatewayVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetDeleteTransitGatewayHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteTransitGatewayRequest extends SpeakeasyBase {
-    queryParams: GetDeleteTransitGatewayQueryParams;
-    headers: GetDeleteTransitGatewayHeaders;
-}
-export declare class GetDeleteTransitGatewayResponse extends SpeakeasyBase {
+export declare class GETDeleteTransitGatewayResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

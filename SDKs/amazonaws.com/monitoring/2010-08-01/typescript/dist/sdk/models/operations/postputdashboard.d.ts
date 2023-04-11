@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostPutDashboardActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTPutDashboardActionEnum {
     PutDashboard = "PutDashboard"
 }
-export declare enum PostPutDashboardVersionEnum {
+export declare enum POSTPutDashboardVersionEnum {
     TwoThousandAndTen0801 = "2010-08-01"
 }
-export declare class PostPutDashboardQueryParams extends SpeakeasyBase {
-    action: PostPutDashboardActionEnum;
-    version: PostPutDashboardVersionEnum;
-}
-export declare class PostPutDashboardHeaders extends SpeakeasyBase {
+export declare class POSTPutDashboardRequest extends SpeakeasyBase {
+    action: POSTPutDashboardActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTPutDashboardVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostPutDashboardHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostPutDashboardRequest extends SpeakeasyBase {
-    queryParams: PostPutDashboardQueryParams;
-    headers: PostPutDashboardHeaders;
-    request?: Uint8Array;
-}
-export declare class PostPutDashboardResponse extends SpeakeasyBase {
+export declare class POSTPutDashboardResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

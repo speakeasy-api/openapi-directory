@@ -10,7 +10,13 @@ export declare class PatientCareContextLinkResponseAcknowledgement extends Speak
 export declare class PatientCareContextLinkResponse extends SpeakeasyBase {
     acknowledgement?: PatientCareContextLinkResponseAcknowledgement;
     error?: ErrorT;
+    /**
+     * a nonce, unique for each HTTP request
+     */
     requestId: string;
     resp: RequestReference;
+    /**
+     * Date time format in UTC, includes miliseconds YYYY-MM-DDThh:mm:ss.vZ
+     */
     timestamp: Date;
 }

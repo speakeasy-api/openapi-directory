@@ -21,7 +21,6 @@ export * from "./issuetokenrequest";
 export * from "./issuetokenresponse";
 export * from "./rpcrequest";
 export * from "./rpcresponse";
-export * from "./security";
 export * from "./sendtokenrequest";
 export * from "./sendtokenresponse";
 export * from "./sendtxrequest";

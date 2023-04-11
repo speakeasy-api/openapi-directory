@@ -1,17 +1,17 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DistrictsInARegionRequest, DistrictsInARegionResponse } from "openapi/src/sdk/models/operations";
+import {
+  DistrictsInARegionRequest,
+  DistrictsInARegionResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: DistrictsInARegionRequest = {
-  pathParams: {
-    country: "sit",
-    region: "voluptas",
-  },
+  country: "Malta",
+  region: "provident",
 };
 
 sdk.districtsInRegion.districtsInARegion(req).then((res: DistrictsInARegionResponse | AxiosError) => {

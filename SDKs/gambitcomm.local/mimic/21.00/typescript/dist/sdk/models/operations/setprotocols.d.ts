@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SetProtocolsPathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class SetProtocolsRequest extends SpeakeasyBase {
-    pathParams: SetProtocolsPathParams;
-    request: string[];
+    /**
+     * Created agent object
+     */
+    requestBody: string[];
+    /**
+     * Agent to return the protocols arrary
+     */
+    agentNum: number;
 }
 export declare class SetProtocolsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     setProtocols200ApplicationJSONStringIntegers?: number[];
 }

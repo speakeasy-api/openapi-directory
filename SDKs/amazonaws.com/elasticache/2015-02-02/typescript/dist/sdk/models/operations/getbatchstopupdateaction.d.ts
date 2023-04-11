@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetBatchStopUpdateActionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETBatchStopUpdateActionActionEnum {
     BatchStopUpdateAction = "BatchStopUpdateAction"
 }
-export declare enum GetBatchStopUpdateActionVersionEnum {
+export declare enum GETBatchStopUpdateActionVersionEnum {
     TwoThousandAndFifteen0202 = "2015-02-02"
 }
-export declare class GetBatchStopUpdateActionQueryParams extends SpeakeasyBase {
-    action: GetBatchStopUpdateActionActionEnum;
+export declare class GETBatchStopUpdateActionRequest extends SpeakeasyBase {
+    action: GETBatchStopUpdateActionActionEnum;
+    /**
+     * The cache cluster IDs
+     */
     cacheClusterIds?: string[];
+    /**
+     * The replication group IDs
+     */
     replicationGroupIds?: string[];
+    /**
+     * The unique ID of the service update
+     */
     serviceUpdateName: string;
-    version: GetBatchStopUpdateActionVersionEnum;
-}
-export declare class GetBatchStopUpdateActionHeaders extends SpeakeasyBase {
+    version: GETBatchStopUpdateActionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +29,9 @@ export declare class GetBatchStopUpdateActionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetBatchStopUpdateActionRequest extends SpeakeasyBase {
-    queryParams: GetBatchStopUpdateActionQueryParams;
-    headers: GetBatchStopUpdateActionHeaders;
-}
-export declare class GetBatchStopUpdateActionResponse extends SpeakeasyBase {
+export declare class GETBatchStopUpdateActionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

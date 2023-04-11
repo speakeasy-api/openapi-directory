@@ -1,20 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { LinksOptimiseLink } from "./linksoptimiselink";
-import { LinksOptimiseAllLink } from "./linksoptimisealllink";
-import { LinksOptimiseByCategoryLink } from "./linksoptimisebycategorylink";
-import { LinksOptimiseByChannelLink } from "./linksoptimisebychannellink";
-import { LinksOptimiseByProductLink } from "./linksoptimisebyproductlink";
+import { LinksAnalyticsIndexLink } from "./linksanalyticsindexlink";
+import { LinksGetReportFiltersLink } from "./linksgetreportfilterslink";
+import { LinksGetRulesLink } from "./linksgetruleslink";
 import { LinksGetStoreReportByCategoryLink } from "./linksgetstorereportbycategorylink";
 import { LinksGetStoreReportByChannelLink } from "./linksgetstorereportbychannellink";
 import { LinksGetStoreReportByDayLink } from "./linksgetstorereportbydaylink";
 import { LinksGetStoreReportByProductLink } from "./linksgetstorereportbyproductlink";
-import { LinksGetReportFiltersLink } from "./linksgetreportfilterslink";
-import { LinksGetRulesLink } from "./linksgetruleslink";
-import { LinksAnalyticsIndexLink } from "./linksanalyticsindexlink";
 import { LinksGetStoreTrackedClicksLink } from "./linksgetstoretrackedclickslink";
 import { LinksGetStoreTrackedExternalOrdersLink } from "./linksgetstoretrackedexternalorderslink";
 import { LinksGetStoreTrackedOrdersLink } from "./linksgetstoretrackedorderslink";
 import { LinksGetStoreTrackingStatusLink } from "./linksgetstoretrackingstatuslink";
+import { LinksOptimiseAllLink } from "./linksoptimisealllink";
+import { LinksOptimiseByCategoryLink } from "./linksoptimisebycategorylink";
+import { LinksOptimiseByChannelLink } from "./linksoptimisebychannellink";
+import { LinksOptimiseByProductLink } from "./linksoptimisebyproductlink";
+import { LinksOptimiseLink } from "./linksoptimiselink";
 export declare class AnalyticsStoreIndexLinks extends SpeakeasyBase {
     optimise?: LinksOptimiseLink;
     optimiseAll?: LinksOptimiseAllLink;

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum StartExportLabelsTaskRunXAmzTargetEnum {
-    AwsGlueStartExportLabelsTaskRun = "AWSGlue.StartExportLabelsTaskRun"
+    AWSGlueStartExportLabelsTaskRun = "AWSGlue.StartExportLabelsTaskRun"
 }
-export declare class StartExportLabelsTaskRunHeaders extends SpeakeasyBase {
+export declare class StartExportLabelsTaskRunRequest extends SpeakeasyBase {
+    startExportLabelsTaskRunRequest: shared.StartExportLabelsTaskRunRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class StartExportLabelsTaskRunHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: StartExportLabelsTaskRunXAmzTargetEnum;
 }
-export declare class StartExportLabelsTaskRunRequest extends SpeakeasyBase {
-    headers: StartExportLabelsTaskRunHeaders;
-    request: shared.StartExportLabelsTaskRunRequest;
-}
 export declare class StartExportLabelsTaskRunResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
+    /**
+     * Success
+     */
     startExportLabelsTaskRunResponse?: shared.StartExportLabelsTaskRunResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

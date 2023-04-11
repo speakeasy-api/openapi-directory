@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeJobXAmzTargetEnum {
-    AwsieSnowballJobManagementServiceDescribeJob = "AWSIESnowballJobManagementService.DescribeJob"
+    AWSIESnowballJobManagementServiceDescribeJob = "AWSIESnowballJobManagementService.DescribeJob"
 }
-export declare class DescribeJobHeaders extends SpeakeasyBase {
+export declare class DescribeJobRequest extends SpeakeasyBase {
+    describeJobRequest: shared.DescribeJobRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,13 +15,16 @@ export declare class DescribeJobHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeJobXAmzTargetEnum;
 }
-export declare class DescribeJobRequest extends SpeakeasyBase {
-    headers: DescribeJobHeaders;
-    request: shared.DescribeJobRequest;
-}
 export declare class DescribeJobResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeJobResult?: shared.DescribeJobResult;
+    /**
+     * InvalidResourceException
+     */
     invalidResourceException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

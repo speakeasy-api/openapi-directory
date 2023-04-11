@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeNotificationConfigurationsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeNotificationConfigurationsActionEnum {
     DescribeNotificationConfigurations = "DescribeNotificationConfigurations"
 }
-export declare enum PostDescribeNotificationConfigurationsVersionEnum {
+export declare enum POSTDescribeNotificationConfigurationsVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class PostDescribeNotificationConfigurationsQueryParams extends SpeakeasyBase {
-    action: PostDescribeNotificationConfigurationsActionEnum;
+export declare class POSTDescribeNotificationConfigurationsRequest extends SpeakeasyBase {
+    action: POSTDescribeNotificationConfigurationsActionEnum;
+    /**
+     * Pagination limit
+     */
     maxRecords?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostDescribeNotificationConfigurationsVersionEnum;
-}
-export declare class PostDescribeNotificationConfigurationsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeNotificationConfigurationsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeNotificationConfigurationsHeaders extends Speak
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeNotificationConfigurationsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeNotificationConfigurationsQueryParams;
-    headers: PostDescribeNotificationConfigurationsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeNotificationConfigurationsResponse extends SpeakeasyBase {
+export declare class POSTDescribeNotificationConfigurationsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

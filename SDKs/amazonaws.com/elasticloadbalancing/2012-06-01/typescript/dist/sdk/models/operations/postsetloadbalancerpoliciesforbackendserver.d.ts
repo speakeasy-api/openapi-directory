@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostSetLoadBalancerPoliciesForBackendServerActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTSetLoadBalancerPoliciesForBackendServerActionEnum {
     SetLoadBalancerPoliciesForBackendServer = "SetLoadBalancerPoliciesForBackendServer"
 }
-export declare enum PostSetLoadBalancerPoliciesForBackendServerVersionEnum {
+export declare enum POSTSetLoadBalancerPoliciesForBackendServerVersionEnum {
     TwoThousandAndTwelve0601 = "2012-06-01"
 }
-export declare class PostSetLoadBalancerPoliciesForBackendServerQueryParams extends SpeakeasyBase {
-    action: PostSetLoadBalancerPoliciesForBackendServerActionEnum;
-    version: PostSetLoadBalancerPoliciesForBackendServerVersionEnum;
-}
-export declare class PostSetLoadBalancerPoliciesForBackendServerHeaders extends SpeakeasyBase {
+export declare class POSTSetLoadBalancerPoliciesForBackendServerRequest extends SpeakeasyBase {
+    action: POSTSetLoadBalancerPoliciesForBackendServerActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTSetLoadBalancerPoliciesForBackendServerVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostSetLoadBalancerPoliciesForBackendServerHeaders extends 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostSetLoadBalancerPoliciesForBackendServerRequest extends SpeakeasyBase {
-    queryParams: PostSetLoadBalancerPoliciesForBackendServerQueryParams;
-    headers: PostSetLoadBalancerPoliciesForBackendServerHeaders;
-    request?: Uint8Array;
-}
-export declare class PostSetLoadBalancerPoliciesForBackendServerResponse extends SpeakeasyBase {
+export declare class POSTSetLoadBalancerPoliciesForBackendServerResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

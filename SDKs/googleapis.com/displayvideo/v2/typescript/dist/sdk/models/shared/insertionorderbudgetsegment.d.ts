@@ -1,0 +1,23 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { DateRange } from "./daterange";
+/**
+ * Settings that control the budget of a single budget segment.
+ */
+export declare class InsertionOrderBudgetSegment extends SpeakeasyBase {
+    /**
+     * Required. The budget amount the insertion order will spend for the given date_range. The amount is in micros. Must be greater than 0. For example, 500000000 represents 500 standard units of the currency.
+     */
+    budgetAmountMicros?: string;
+    /**
+     * The budget_id of the campaign budget that this insertion order budget segment is a part of.
+     */
+    campaignBudgetId?: string;
+    /**
+     * A date range.
+     */
+    dateRange?: DateRange;
+    /**
+     * The budget segment description. It can be used to enter Purchase Order information for each budget segment and have that information printed on the invoices. Must be UTF-8 encoded.
+     */
+    description?: string;
+}

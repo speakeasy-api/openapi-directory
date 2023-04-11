@@ -1,20 +1,33 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteEarningByEarningCodeAndStartDatePathParams extends SpeakeasyBase {
-    companyId: string;
-    earningCode: string;
-    employeeId: string;
-    startDate: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteEarningByEarningCodeAndStartDateSecurity extends SpeakeasyBase {
-    paylocityAuth: shared.SchemePaylocityAuth;
+    paylocityAuth: string;
 }
 export declare class DeleteEarningByEarningCodeAndStartDateRequest extends SpeakeasyBase {
-    pathParams: DeleteEarningByEarningCodeAndStartDatePathParams;
-    security: DeleteEarningByEarningCodeAndStartDateSecurity;
+    /**
+     * Company Id
+     */
+    companyId: string;
+    /**
+     * Earning Code
+     */
+    earningCode: string;
+    /**
+     * Employee Id
+     */
+    employeeId: string;
+    /**
+     * Start Date
+     */
+    startDate: string;
 }
 export declare class DeleteEarningByEarningCodeAndStartDateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad Request
+     */
     errors?: shared.ErrorT[];
 }

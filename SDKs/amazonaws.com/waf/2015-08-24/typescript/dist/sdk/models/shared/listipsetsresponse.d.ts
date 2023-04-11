@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { IpSetSummary } from "./ipsetsummary";
-export declare class ListIpSetsResponse extends SpeakeasyBase {
-    ipSets?: IpSetSummary[];
+import { IPSetSummary } from "./ipsetsummary";
+/**
+ * Success
+ */
+export declare class ListIPSetsResponse extends SpeakeasyBase {
+    ipSets?: IPSetSummary[];
     nextMarker?: string;
 }

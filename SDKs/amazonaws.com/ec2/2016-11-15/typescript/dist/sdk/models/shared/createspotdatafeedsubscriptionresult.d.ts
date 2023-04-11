@@ -1,24 +1,31 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * The fault codes for the Spot Instance request, if any.
-**/
+ */
 export declare class CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscriptionFault extends SpeakeasyBase {
-    code?: Record<string, any>;
-    message?: Record<string, any>;
+    code?: string;
+    message?: string;
+}
+/**
+ * The state of the Spot Instance data feed subscription.
+ */
+export declare enum CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscriptionStateEnum {
+    Active = "Active",
+    Inactive = "Inactive"
 }
 /**
  * The Spot Instance data feed subscription.
-**/
+ */
 export declare class CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscription extends SpeakeasyBase {
-    bucket?: Record<string, any>;
+    bucket?: string;
     fault?: CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscriptionFault;
-    ownerId?: Record<string, any>;
-    prefix?: Record<string, any>;
-    state?: Record<string, any>;
+    ownerId?: string;
+    prefix?: string;
+    state?: CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscriptionStateEnum;
 }
 /**
  * Contains the output of CreateSpotDatafeedSubscription.
-**/
+ */
 export declare class CreateSpotDatafeedSubscriptionResult extends SpeakeasyBase {
     spotDatafeedSubscription?: CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscription;
 }

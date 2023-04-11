@@ -1,15 +1,33 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetPullRequestHostedPropertyValuePathParams extends SpeakeasyBase {
-    appKey: string;
-    propertyName: string;
-    pullrequestId: string;
-    repoSlug: string;
-    workspace: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetPullRequestHostedPropertyValueRequest extends SpeakeasyBase {
-    pathParams: GetPullRequestHostedPropertyValuePathParams;
+    /**
+     * The key of the Connect app.
+     */
+    appKey: string;
+    /**
+     * The name of the property.
+     */
+    propertyName: string;
+    /**
+     * The pull request ID.
+     */
+    pullrequestId: string;
+    /**
+     * The repository.
+     */
+    repoSlug: string;
+    /**
+     * The repository container; either the workspace slug or the UUID in curly braces.
+     */
+    workspace: string;
 }
 export declare class GetPullRequestHostedPropertyValueResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The value of the property.
+     */
+    applicationProperty?: Record<string, any>;
 }

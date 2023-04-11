@@ -1,19 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GroupsGetGroupMembersPathParams extends SpeakeasyBase {
-    objectId: string;
-    tenantID: string;
-}
-export declare class GroupsGetGroupMembersQueryParams extends SpeakeasyBase {
-    apiVersion: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GroupsGetGroupMembersRequest extends SpeakeasyBase {
-    pathParams: GroupsGetGroupMembersPathParams;
-    queryParams: GroupsGetGroupMembersQueryParams;
+    /**
+     * Client API version.
+     */
+    apiVersion: string;
+    /**
+     * The object ID of the group whose members should be retrieved.
+     */
+    objectId: string;
+    /**
+     * The tenant ID.
+     */
+    tenantID: string;
 }
 export declare class GroupsGetGroupMembersResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * OK. The operation was successful.
+     */
     directoryObjectListResult?: shared.DirectoryObjectListResult;
+    /**
+     * Error response describing why the operation failed.
+     */
     graphError?: shared.GraphError;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

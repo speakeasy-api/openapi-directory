@@ -1,0 +1,30 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * An EffectiveTag represents a tag that applies to a resource during policy evaluation. Tags can be either directly bound to a resource or inherited from its ancestor. EffectiveTag contains the name and namespaced_name of the tag value and tag key, with additional fields of `inherited` to indicate the inheritance status of the effective tag.
+ */
+export declare class EffectiveTag extends SpeakeasyBase {
+    /**
+     * Indicates the inheritance status of a tag value attached to the given resource. If the tag value is inherited from one of the resource's ancestors, inherited will be true. If false, then the tag value is directly attached to the resource, inherited will be false.
+     */
+    inherited?: boolean;
+    /**
+     * The namespaced_name of the TagKey. Now only supported in the format of `{organization_id}/{tag_key_short_name}`. Other formats will be supported when we add non-org parented tags.
+     */
+    namespacedTagKey?: string;
+    /**
+     * Namespaced name of the TagValue. Now only supported in the format `{organization_id}/{tag_key_short_name}/{tag_value_short_name}`. Other formats will be supported when we add non-org parented tags.
+     */
+    namespacedTagValue?: string;
+    /**
+     * The name of the TagKey, in the format `tagKeys/{id}`, such as `tagKeys/123`.
+     */
+    tagKey?: string;
+    /**
+     * The parent name of the tag key. Must be in the format `organizations/{organization_id}`.
+     */
+    tagKeyParentName?: string;
+    /**
+     * Resource name for TagValue in the format `tagValues/456`.
+     */
+    tagValue?: string;
+}

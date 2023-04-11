@@ -1,20 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SchemeApiKey extends SpeakeasyBase {
-    apiKey: string;
-}
-export declare class SchemeApiSecret extends SpeakeasyBase {
-    apiKey: string;
-}
 export declare class SecurityOption1 extends SpeakeasyBase {
-    apiKey: SchemeApiKey;
-    apiSecret: SchemeApiSecret;
-}
-export declare class SchemeApiSig extends SpeakeasyBase {
     apiKey: string;
+    apiSecret: string;
 }
 export declare class SecurityOption2 extends SpeakeasyBase {
-    apiKey: SchemeApiKey;
-    apiSig: SchemeApiSig;
+    apiKey: string;
+    apiSig: string;
 }
 export declare class Security extends SpeakeasyBase {
     option1?: SecurityOption1;

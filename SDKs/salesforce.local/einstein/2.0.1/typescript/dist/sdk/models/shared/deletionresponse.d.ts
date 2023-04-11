@@ -12,6 +12,9 @@ export declare enum DeletionResponseObjectThatSBeingDeletedEnum {
     Dataset = "DATASET",
     Model = "MODEL"
 }
+/**
+ * Success
+ */
 export declare class DeletionResponse extends SpeakeasyBase {
     deletedObjectId?: string;
     id?: string;

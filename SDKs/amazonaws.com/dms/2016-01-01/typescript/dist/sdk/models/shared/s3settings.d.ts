@@ -9,9 +9,10 @@ import { EncryptionModeValueEnum } from "./encryptionmodevalueenum";
 import { ParquetVersionValueEnum } from "./parquetversionvalueenum";
 /**
  * Settings for exporting data to Amazon S3.
-**/
+ */
 export declare class S3Settings extends SpeakeasyBase {
     addColumnName?: boolean;
+    addTrailingPaddingCharacter?: boolean;
     bucketFolder?: string;
     bucketName?: string;
     cannedAclForObjects?: CannedAclForObjectsValueEnum;
@@ -30,11 +31,14 @@ export declare class S3Settings extends SpeakeasyBase {
     datePartitionDelimiter?: DatePartitionDelimiterValueEnum;
     datePartitionEnabled?: boolean;
     datePartitionSequence?: DatePartitionSequenceValueEnum;
+    datePartitionTimezone?: string;
     dictPageSizeLimit?: number;
     enableStatistics?: boolean;
     encodingType?: EncodingTypeValueEnum;
     encryptionMode?: EncryptionModeValueEnum;
+    expectedBucketOwner?: string;
     externalTableDefinition?: string;
+    glueCatalogGeneration?: boolean;
     ignoreHeaderRows?: number;
     includeOpForFullLoad?: boolean;
     maxFileSize?: number;
@@ -47,4 +51,5 @@ export declare class S3Settings extends SpeakeasyBase {
     serviceAccessRoleArn?: string;
     timestampColumnName?: string;
     useCsvNoSupValue?: boolean;
+    useTaskStartTimeForFullLoadTimestamp?: boolean;
 }

@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeClientVpnTargetNetworksActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeClientVpnTargetNetworksActionEnum {
     DescribeClientVpnTargetNetworks = "DescribeClientVpnTargetNetworks"
 }
-export declare enum PostDescribeClientVpnTargetNetworksVersionEnum {
+export declare enum POSTDescribeClientVpnTargetNetworksVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDescribeClientVpnTargetNetworksQueryParams extends SpeakeasyBase {
-    action: PostDescribeClientVpnTargetNetworksActionEnum;
+export declare class POSTDescribeClientVpnTargetNetworksRequest extends SpeakeasyBase {
+    action: POSTDescribeClientVpnTargetNetworksActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostDescribeClientVpnTargetNetworksVersionEnum;
-}
-export declare class PostDescribeClientVpnTargetNetworksHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeClientVpnTargetNetworksVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeClientVpnTargetNetworksHeaders extends Speakeas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeClientVpnTargetNetworksRequest extends SpeakeasyBase {
-    queryParams: PostDescribeClientVpnTargetNetworksQueryParams;
-    headers: PostDescribeClientVpnTargetNetworksHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeClientVpnTargetNetworksResponse extends SpeakeasyBase {
+export declare class POSTDescribeClientVpnTargetNetworksResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

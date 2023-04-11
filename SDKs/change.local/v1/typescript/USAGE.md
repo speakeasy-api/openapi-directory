@@ -1,26 +1,21 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetApiV1DonationsCarbonCalculateRequest, GetApiV1DonationsCarbonCalculateResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetApiV1DonationsCarbonCalculateRequest,
+  GetApiV1DonationsCarbonCalculateResponse,
+  GetApiV1DonationsCarbonCalculateTransportationMethodEnum,
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetApiV1DonationsCarbonCalculateRequest = {
-  security: {
-    basicAuth: {
-      password: "YOUR_PASSWORD_HERE",
-      username: "YOUR_USERNAME_HERE",
-    },
-  },
-  queryParams: {
-    destinationAddress: 74.099998,
-    distanceMi: 53.099998,
-    originAddress: 15.100000,
-    transportationMethod: "sea",
-    weightLb: 77.099998,
-  },
+  destinationAddress: 5488.14,
+  distanceMi: 5928.45,
+  originAddress: 7151.9,
+  transportationMethod: GetApiV1DonationsCarbonCalculateTransportationMethodEnum.Sea,
+  weightLb: 6027.63,
 };
 
 sdk.getApiV1DonationsCarbonCalculate(req).then((res: GetApiV1DonationsCarbonCalculateResponse | AxiosError) => {

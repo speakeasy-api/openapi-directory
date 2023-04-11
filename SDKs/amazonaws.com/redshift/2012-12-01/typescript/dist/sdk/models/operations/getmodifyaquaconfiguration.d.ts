@@ -1,22 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetModifyAquaConfigurationActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETModifyAquaConfigurationActionEnum {
     ModifyAquaConfiguration = "ModifyAquaConfiguration"
 }
-export declare enum GetModifyAquaConfigurationAquaConfigurationStatusEnum {
+/**
+ * This parameter is retired. Amazon Redshift automatically determines whether to use AQUA (Advanced Query Accelerator).
+ */
+export declare enum GETModifyAquaConfigurationAquaConfigurationStatusEnum {
     Enabled = "enabled",
     Disabled = "disabled",
     Auto = "auto"
 }
-export declare enum GetModifyAquaConfigurationVersionEnum {
+export declare enum GETModifyAquaConfigurationVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class GetModifyAquaConfigurationQueryParams extends SpeakeasyBase {
-    action: GetModifyAquaConfigurationActionEnum;
-    aquaConfigurationStatus?: GetModifyAquaConfigurationAquaConfigurationStatusEnum;
+export declare class GETModifyAquaConfigurationRequest extends SpeakeasyBase {
+    action: GETModifyAquaConfigurationActionEnum;
+    /**
+     * This parameter is retired. Amazon Redshift automatically determines whether to use AQUA (Advanced Query Accelerator).
+     */
+    aquaConfigurationStatus?: GETModifyAquaConfigurationAquaConfigurationStatusEnum;
+    /**
+     * The identifier of the cluster to be modified.
+     */
     clusterIdentifier: string;
-    version: GetModifyAquaConfigurationVersionEnum;
-}
-export declare class GetModifyAquaConfigurationHeaders extends SpeakeasyBase {
+    version: GETModifyAquaConfigurationVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -25,12 +33,9 @@ export declare class GetModifyAquaConfigurationHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetModifyAquaConfigurationRequest extends SpeakeasyBase {
-    queryParams: GetModifyAquaConfigurationQueryParams;
-    headers: GetModifyAquaConfigurationHeaders;
-}
-export declare class GetModifyAquaConfigurationResponse extends SpeakeasyBase {
+export declare class GETModifyAquaConfigurationResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

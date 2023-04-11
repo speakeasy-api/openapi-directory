@@ -1,16 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class StoryIdCollaboratorsUseridPutPathParams extends SpeakeasyBase {
-    id: string;
-    storyCollaboratorUserid: string;
-}
+import { AxiosResponse } from "axios";
 export declare class StoryIdCollaboratorsUseridPutRequest extends SpeakeasyBase {
-    pathParams: StoryIdCollaboratorsUseridPutPathParams;
-    request: shared.StoryCollaborator;
+    /**
+     * the id from the story object
+     */
+    id: string;
+    /**
+     * Collaborator user id (presalytics userid) and permission type
+     */
+    storyCollaborator: shared.StoryCollaborator;
+    /**
+     * The presalytics userid (NOT the Id of the story_collaborator object)
+     */
+    storyCollaboratorUserid: string;
 }
 export declare class StoryIdCollaboratorsUseridPutResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    problemDetail?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad Request
+     */
+    problemDetail?: shared.ProblemDetail;
+    /**
+     * Collaborator data
+     */
     storyCollaborator?: shared.StoryCollaborator;
 }

@@ -1,7 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UpdateEnvironmentPathParams extends SpeakeasyBase {
-    environmentUid: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UpdateEnvironmentRequestBodyEnvironmentValues extends SpeakeasyBase {
     key?: string;
     value?: string;
@@ -13,28 +11,41 @@ export declare class UpdateEnvironmentRequestBodyEnvironment extends SpeakeasyBa
 export declare class UpdateEnvironmentRequestBody extends SpeakeasyBase {
     environment?: UpdateEnvironmentRequestBodyEnvironment;
 }
-export declare class UpdateEnvironment200ApplicationJsonEnvironment extends SpeakeasyBase {
+export declare class UpdateEnvironmentRequest extends SpeakeasyBase {
+    requestBody?: UpdateEnvironmentRequestBody;
+    environmentUid: string;
+}
+export declare class UpdateEnvironment400ApplicationJSONError extends SpeakeasyBase {
+    message?: string;
+    name?: string;
+}
+/**
+ * Failure Response
+ */
+export declare class UpdateEnvironment400ApplicationJSON extends SpeakeasyBase {
+    error?: UpdateEnvironment400ApplicationJSONError;
+}
+export declare class UpdateEnvironment200ApplicationJSONEnvironment extends SpeakeasyBase {
     id?: string;
     name?: string;
     uid?: string;
 }
-export declare class UpdateEnvironment200ApplicationJson extends SpeakeasyBase {
-    environment?: UpdateEnvironment200ApplicationJsonEnvironment;
-}
-export declare class UpdateEnvironment400ApplicationJsonError extends SpeakeasyBase {
-    message?: string;
-    name?: string;
-}
-export declare class UpdateEnvironment400ApplicationJson extends SpeakeasyBase {
-    error?: UpdateEnvironment400ApplicationJsonError;
-}
-export declare class UpdateEnvironmentRequest extends SpeakeasyBase {
-    pathParams: UpdateEnvironmentPathParams;
-    request?: UpdateEnvironmentRequestBody;
+/**
+ * Successful Response
+ */
+export declare class UpdateEnvironment200ApplicationJSON extends SpeakeasyBase {
+    environment?: UpdateEnvironment200ApplicationJSONEnvironment;
 }
 export declare class UpdateEnvironmentResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateEnvironment200ApplicationJSONObject?: UpdateEnvironment200ApplicationJson;
-    updateEnvironment400ApplicationJSONObject?: UpdateEnvironment400ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful Response
+     */
+    updateEnvironment200ApplicationJSONObject?: UpdateEnvironment200ApplicationJSON;
+    /**
+     * Failure Response
+     */
+    updateEnvironment400ApplicationJSONObject?: UpdateEnvironment400ApplicationJSON;
 }

@@ -1,23 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbSubnetGroup } from "./dbsubnetgroup";
+import { DBInstanceStatusInfoList } from "./dbinstancestatusinfolist";
+import { DBSubnetGroup } from "./dbsubnetgroup";
 import { Endpoint } from "./endpoint";
 import { PendingModifiedValues } from "./pendingmodifiedvalues";
-import { DbInstanceStatusInfoList } from "./dbinstancestatusinfolist";
 import { VpcSecurityGroupMembershipList } from "./vpcsecuritygroupmembershiplist";
 /**
  * Detailed information about an instance.
-**/
-export declare class DbInstance extends SpeakeasyBase {
+ */
+export declare class DBInstance extends SpeakeasyBase {
     autoMinorVersionUpgrade?: boolean;
     availabilityZone?: string;
     backupRetentionPeriod?: number;
     caCertificateIdentifier?: string;
+    copyTagsToSnapshot?: boolean;
     dbClusterIdentifier?: string;
     dbInstanceArn?: string;
     dbInstanceClass?: string;
     dbInstanceIdentifier?: string;
     dbInstanceStatus?: string;
-    dbSubnetGroup?: DbSubnetGroup;
+    dbSubnetGroup?: DBSubnetGroup;
     dbiResourceId?: string;
     enabledCloudwatchLogsExports?: string[];
     endpoint?: Endpoint;
@@ -31,7 +32,7 @@ export declare class DbInstance extends SpeakeasyBase {
     preferredMaintenanceWindow?: string;
     promotionTier?: number;
     publiclyAccessible?: boolean;
-    statusInfos?: DbInstanceStatusInfoList[];
+    statusInfos?: DBInstanceStatusInfoList[];
     storageEncrypted?: boolean;
     vpcSecurityGroups?: VpcSecurityGroupMembershipList[];
 }

@@ -1,11 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetCommissionsByFilterRequest extends SpeakeasyBase {
-    request?: shared.ReportFilter;
-}
+import { AxiosResponse } from "axios";
 export declare class GetCommissionsByFilterResponse extends SpeakeasyBase {
+    /**
+     * Commissions for client.
+     */
     commissionList?: shared.CommissionList;
     contentType: string;
+    /**
+     * UnauthorizedUser
+     */
     error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

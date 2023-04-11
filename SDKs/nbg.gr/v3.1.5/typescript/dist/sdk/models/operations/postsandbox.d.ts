@@ -1,20 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PostSandboxRequests extends SpeakeasyBase {
-    sandboxRequest?: shared.SandboxRequest;
-    sandboxRequest1?: shared.SandboxRequest;
-}
+import { AxiosResponse } from "axios";
 export declare class PostSandboxSecurity extends SpeakeasyBase {
-    authorizationCodeToken: shared.SchemeAuthorizationCodeToken;
-    clientId: shared.SchemeClientId;
-}
-export declare class PostSandboxRequest extends SpeakeasyBase {
-    request?: PostSandboxRequests;
-    security: PostSandboxSecurity;
+    authorizationCodeToken: string;
+    clientId: string;
 }
 export declare class PostSandboxResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Bad request
+     */
     errorResponse?: shared.ErrorResponse;
+    /**
+     * Created
+     */
     sandbox?: shared.Sandbox;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

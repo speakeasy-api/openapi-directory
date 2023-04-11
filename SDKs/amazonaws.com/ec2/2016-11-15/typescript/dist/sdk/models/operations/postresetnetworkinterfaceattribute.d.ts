@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostResetNetworkInterfaceAttributeActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTResetNetworkInterfaceAttributeActionEnum {
     ResetNetworkInterfaceAttribute = "ResetNetworkInterfaceAttribute"
 }
-export declare enum PostResetNetworkInterfaceAttributeVersionEnum {
+export declare enum POSTResetNetworkInterfaceAttributeVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostResetNetworkInterfaceAttributeQueryParams extends SpeakeasyBase {
-    action: PostResetNetworkInterfaceAttributeActionEnum;
-    version: PostResetNetworkInterfaceAttributeVersionEnum;
-}
-export declare class PostResetNetworkInterfaceAttributeHeaders extends SpeakeasyBase {
+export declare class POSTResetNetworkInterfaceAttributeRequest extends SpeakeasyBase {
+    action: POSTResetNetworkInterfaceAttributeActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTResetNetworkInterfaceAttributeVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +18,8 @@ export declare class PostResetNetworkInterfaceAttributeHeaders extends Speakeasy
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostResetNetworkInterfaceAttributeRequest extends SpeakeasyBase {
-    queryParams: PostResetNetworkInterfaceAttributeQueryParams;
-    headers: PostResetNetworkInterfaceAttributeHeaders;
-    request?: Uint8Array;
-}
-export declare class PostResetNetworkInterfaceAttributeResponse extends SpeakeasyBase {
+export declare class POSTResetNetworkInterfaceAttributeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

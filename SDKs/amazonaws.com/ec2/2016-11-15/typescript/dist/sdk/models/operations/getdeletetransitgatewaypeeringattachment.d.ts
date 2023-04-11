@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteTransitGatewayPeeringAttachmentActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteTransitGatewayPeeringAttachmentActionEnum {
     DeleteTransitGatewayPeeringAttachment = "DeleteTransitGatewayPeeringAttachment"
 }
-export declare enum GetDeleteTransitGatewayPeeringAttachmentVersionEnum {
+export declare enum GETDeleteTransitGatewayPeeringAttachmentVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetDeleteTransitGatewayPeeringAttachmentQueryParams extends SpeakeasyBase {
-    action: GetDeleteTransitGatewayPeeringAttachmentActionEnum;
+export declare class GETDeleteTransitGatewayPeeringAttachmentRequest extends SpeakeasyBase {
+    action: GETDeleteTransitGatewayPeeringAttachmentActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
+    /**
+     * The ID of the transit gateway peering attachment.
+     */
     transitGatewayAttachmentId: string;
-    version: GetDeleteTransitGatewayPeeringAttachmentVersionEnum;
-}
-export declare class GetDeleteTransitGatewayPeeringAttachmentHeaders extends SpeakeasyBase {
+    version: GETDeleteTransitGatewayPeeringAttachmentVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetDeleteTransitGatewayPeeringAttachmentHeaders extends Spe
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteTransitGatewayPeeringAttachmentRequest extends SpeakeasyBase {
-    queryParams: GetDeleteTransitGatewayPeeringAttachmentQueryParams;
-    headers: GetDeleteTransitGatewayPeeringAttachmentHeaders;
-}
-export declare class GetDeleteTransitGatewayPeeringAttachmentResponse extends SpeakeasyBase {
+export declare class GETDeleteTransitGatewayPeeringAttachmentResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -4,31 +4,91 @@ import { Rotation } from "./rotation";
 import { Topic } from "./topic";
 /**
  * A Secret is a logical secret whose value and versions can be accessed. A Secret is made up of zero or more SecretVersions that represent the secret data.
-**/
+ */
 export declare class SecretInput extends SpeakeasyBase {
+    /**
+     * Optional. Custom metadata about the secret. Annotations are distinct from various forms of labels. Annotations exist to allow client tools to store their own state information without requiring a database. Annotation keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, begin and end with an alphanumeric character ([a-z0-9A-Z]), and may have dashes (-), underscores (_), dots (.), and alphanumerics in between these symbols. The total size of annotation keys and values must be less than 16KiB.
+     */
     annotations?: Record<string, string>;
+    /**
+     * Optional. Etag of the currently stored Secret.
+     */
     etag?: string;
+    /**
+     * Optional. Timestamp in UTC when the Secret is scheduled to expire. This is always provided on output, regardless of what was sent on input.
+     */
     expireTime?: string;
+    /**
+     * The labels assigned to this Secret. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: `\p{Ll}\p{Lo}{0,62}` Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: `[\p{Ll}\p{Lo}\p{N}_-]{0,63}` No more than 64 labels can be assigned to a given resource.
+     */
     labels?: Record<string, string>;
+    /**
+     * A policy that defines the replication and encryption configuration of data.
+     */
     replication?: Replication;
+    /**
+     * The rotation time and period for a Secret. At next_rotation_time, Secret Manager will send a Pub/Sub notification to the topics configured on the Secret. Secret.topics must be set to configure rotation.
+     */
     rotation?: Rotation;
+    /**
+     * Optional. A list of up to 10 Pub/Sub topics to which messages are published when control plane operations are called on the secret or its versions.
+     */
     topics?: Topic[];
+    /**
+     * Input only. The TTL for the Secret.
+     */
     ttl?: string;
+    /**
+     * Optional. Mapping from version alias to version name. A version alias is a string with a maximum length of 63 characters and can contain uppercase and lowercase letters, numerals, and the hyphen (`-`) and underscore ('_') characters. An alias string must start with a letter and cannot be the string 'latest' or 'NEW'. No more than 50 aliases can be assigned to a given secret. Version-Alias pairs will be viewable via GetSecret and modifiable via UpdateSecret. At launch Access by Allias will only be supported on GetSecretVersion and AccessSecretVersion.
+     */
     versionAliases?: Record<string, string>;
 }
 /**
  * A Secret is a logical secret whose value and versions can be accessed. A Secret is made up of zero or more SecretVersions that represent the secret data.
-**/
+ */
 export declare class Secret extends SpeakeasyBase {
+    /**
+     * Optional. Custom metadata about the secret. Annotations are distinct from various forms of labels. Annotations exist to allow client tools to store their own state information without requiring a database. Annotation keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, begin and end with an alphanumeric character ([a-z0-9A-Z]), and may have dashes (-), underscores (_), dots (.), and alphanumerics in between these symbols. The total size of annotation keys and values must be less than 16KiB.
+     */
     annotations?: Record<string, string>;
+    /**
+     * Output only. The time at which the Secret was created.
+     */
     createTime?: string;
+    /**
+     * Optional. Etag of the currently stored Secret.
+     */
     etag?: string;
+    /**
+     * Optional. Timestamp in UTC when the Secret is scheduled to expire. This is always provided on output, regardless of what was sent on input.
+     */
     expireTime?: string;
+    /**
+     * The labels assigned to this Secret. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: `\p{Ll}\p{Lo}{0,62}` Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: `[\p{Ll}\p{Lo}\p{N}_-]{0,63}` No more than 64 labels can be assigned to a given resource.
+     */
     labels?: Record<string, string>;
+    /**
+     * Output only. The resource name of the Secret in the format `projects/* /secrets/*`.
+     */
     name?: string;
+    /**
+     * A policy that defines the replication and encryption configuration of data.
+     */
     replication?: Replication;
+    /**
+     * The rotation time and period for a Secret. At next_rotation_time, Secret Manager will send a Pub/Sub notification to the topics configured on the Secret. Secret.topics must be set to configure rotation.
+     */
     rotation?: Rotation;
+    /**
+     * Optional. A list of up to 10 Pub/Sub topics to which messages are published when control plane operations are called on the secret or its versions.
+     */
     topics?: Topic[];
+    /**
+     * Input only. The TTL for the Secret.
+     */
     ttl?: string;
+    /**
+     * Optional. Mapping from version alias to version name. A version alias is a string with a maximum length of 63 characters and can contain uppercase and lowercase letters, numerals, and the hyphen (`-`) and underscore ('_') characters. An alias string must start with a letter and cannot be the string 'latest' or 'NEW'. No more than 50 aliases can be assigned to a given secret. Version-Alias pairs will be viewable via GetSecret and modifiable via UpdateSecret. At launch Access by Allias will only be supported on GetSecretVersion and AccessSecretVersion.
+     */
     versionAliases?: Record<string, string>;
 }

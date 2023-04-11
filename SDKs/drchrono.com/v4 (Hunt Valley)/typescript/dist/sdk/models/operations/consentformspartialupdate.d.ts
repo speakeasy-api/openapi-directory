@@ -1,20 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class ConsentFormsPartialUpdatePathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class ConsentFormsPartialUpdateQueryParams extends SpeakeasyBase {
-    doctor?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ConsentFormsPartialUpdateSecurity extends SpeakeasyBase {
-    drchronoOauth2: shared.SchemeDrchronoOauth2;
+    drchronoOauth2: string;
 }
 export declare class ConsentFormsPartialUpdateRequest extends SpeakeasyBase {
-    pathParams: ConsentFormsPartialUpdatePathParams;
-    queryParams: ConsentFormsPartialUpdateQueryParams;
-    security: ConsentFormsPartialUpdateSecurity;
+    doctor?: number;
+    id: string;
 }
 export declare class ConsentFormsPartialUpdateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

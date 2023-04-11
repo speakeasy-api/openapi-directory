@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class SessionAnalytics {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class SessionAnalytics {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * appSessionsByTime - App Sessions by Time
+     * App Sessions by Time
      *
+     * @remarks
      * This endpoint allows you to retrieve a series of the number of sessions for your app over a designated time period.
      *
      * ### Components Used
@@ -32,6 +33,6 @@ export declare class SessionAnalytics {
      *     ]
      * }
      * ```
-    **/
+     */
     appSessionsByTime(req: operations.AppSessionsByTimeRequest, config?: AxiosRequestConfig): Promise<operations.AppSessionsByTimeResponse>;
 }

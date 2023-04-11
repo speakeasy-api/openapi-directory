@@ -7,6 +7,9 @@ export declare class ShortlinkResponseEtatEtat extends SpeakeasyBase {
 export declare class ShortlinkResponseEtat extends SpeakeasyBase {
     etat?: ShortlinkResponseEtatEtat[];
 }
+/**
+ * Reponse OK
+ */
 export declare class ShortlinkResponse extends SpeakeasyBase {
     etat?: ShortlinkResponseEtat;
 }

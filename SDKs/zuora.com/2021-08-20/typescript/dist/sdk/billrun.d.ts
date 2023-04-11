@@ -1,5 +1,11 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Use the Bill Run call to create ad hoc bill runs and Post, Cancel, Query, and Delete bill runs.
+ *
+ * @remarks
+ *
+ */
 export declare class BillRun {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,39 +15,43 @@ export declare class BillRun {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * objectDeleteBillRun - CRUD: Delete a bill run
+     * CRUD: Delete a bill run
      *
+     * @remarks
      * Deletes a bill run.
      *
      *
      * When deleting a bill run, the logic is the same as when using the UI to delete a bill run. The only required parameter is `BillRunId`. The Status for the bill run must be `Canceled` in order to delete a bill run.
      *
-    **/
-    objectDeleteBillRun(req: operations.ObjectDeleteBillRunRequest, config?: AxiosRequestConfig): Promise<operations.ObjectDeleteBillRunResponse>;
+     */
+    objectDELETEBillRun(req: operations.ObjectDELETEBillRunRequest, config?: AxiosRequestConfig): Promise<operations.ObjectDELETEBillRunResponse>;
     /**
-     * objectGetBillRun - CRUD: Retrieve a bill run
+     * CRUD: Retrieve a bill run
      *
+     * @remarks
      * Retrieves information about a bill run.
      *
      *
      * Business operations depending on the completion of the bill run will not be available while the bill run query returns `PostInProgress`. Upon completion of the bill run, a query will return `Posted`.
      *
-    **/
-    objectGetBillRun(req: operations.ObjectGetBillRunRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGetBillRunResponse>;
+     */
+    objectGETBillRun(req: operations.ObjectGETBillRunRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGETBillRunResponse>;
     /**
-     * objectPostBillRun - CRUD: Create a bill run
+     * CRUD: Create a bill run
      *
+     * @remarks
      * Creates an ad hoc bill run or a single account or multiple customer accounts.
      *
      * When creating a single account ad hoc bill run, your request must include `AccountId` and must not include `Batch` or `BillCycleDay`.
      *
      * If more than 500 bill runs created by using this operation are in Pending status, no more bill runs can be created by using this operation.
      *
-    **/
-    objectPostBillRun(req: operations.ObjectPostBillRunRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPostBillRunResponse>;
+     */
+    objectPOSTBillRun(req: operations.ObjectPOSTBillRunRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPOSTBillRunResponse>;
     /**
-     * objectPutBillRun - CRUD: Post or cancel a bill run
+     * CRUD: Post or cancel a bill run
      *
+     * @remarks
      * Posts or cancels a bill run.
      *
      *
@@ -67,11 +77,12 @@ export declare class BillRun {
      *
      * The Cancel operation may not be successful. Its success depends on its current business validation. Only a bill run that has no posted invoices can be canceled. If any posted invoices belong to the bill run then an invalid value exception will be thrown with the message, "The Bill Run cannot be Cancelled, There are Posted invoices."
      *
-    **/
-    objectPutBillRun(req: operations.ObjectPutBillRunRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPutBillRunResponse>;
+     */
+    objectPUTBillRun(req: operations.ObjectPUTBillRunRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPUTBillRunResponse>;
     /**
-     * postEmailBillingDocumentsfromBillRun - Email billing documents generated from a bill run
+     * Email billing documents generated from a bill run
      *
+     * @remarks
      * Manually emails all the billing documents that are generated from a specified bill run to your customers.
      *
      *
@@ -108,6 +119,6 @@ export declare class BillRun {
      *
      *
      *
-    **/
-    postEmailBillingDocumentsfromBillRun(req: operations.PostEmailBillingDocumentsfromBillRunRequest, config?: AxiosRequestConfig): Promise<operations.PostEmailBillingDocumentsfromBillRunResponse>;
+     */
+    postEmailBillingDocumentsfromBillRun(req: operations.POSTEmailBillingDocumentsfromBillRunRequest, config?: AxiosRequestConfig): Promise<operations.POSTEmailBillingDocumentsfromBillRunResponse>;
 }

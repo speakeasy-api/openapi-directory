@@ -1,9 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetAnApiVersionPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetAnApiVersionRequest extends SpeakeasyBase {
     apiId: string;
     apiVersionId: string;
 }
-export declare class GetAnApiVersion200ApplicationJsonVersion extends SpeakeasyBase {
+export declare class GetAnApiVersion200ApplicationJSONVersion extends SpeakeasyBase {
     api?: string;
     createdAt?: string;
     createdBy?: string;
@@ -13,14 +14,18 @@ export declare class GetAnApiVersion200ApplicationJsonVersion extends SpeakeasyB
     updatedAt?: string;
     updatedBy?: string;
 }
-export declare class GetAnApiVersion200ApplicationJson extends SpeakeasyBase {
-    version?: GetAnApiVersion200ApplicationJsonVersion;
-}
-export declare class GetAnApiVersionRequest extends SpeakeasyBase {
-    pathParams: GetAnApiVersionPathParams;
+/**
+ * Get an API version
+ */
+export declare class GetAnApiVersion200ApplicationJSON extends SpeakeasyBase {
+    version?: GetAnApiVersion200ApplicationJSONVersion;
 }
 export declare class GetAnApiVersionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getAnApiVersion200ApplicationJSONObject?: GetAnApiVersion200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Get an API version
+     */
+    getAnApiVersion200ApplicationJSONObject?: GetAnApiVersion200ApplicationJSON;
 }

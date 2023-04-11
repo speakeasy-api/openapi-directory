@@ -1,8 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { BeezUpCommonInfoSummaries } from "./beezupcommoninfosummaries";
+import { BeezUPCommonInfoSummaries } from "./beezupcommoninfosummaries";
 import { ChannelCatalogMarketplacePropertiesLinks } from "./channelcatalogmarketplacepropertieslinks";
+import { ChannelCatalogMarketplacePropertyGroup } from "./channelcatalogmarketplacepropertygroup";
+/**
+ * Successfully fetched channel catalog properties
+ */
 export declare class ChannelCatalogMarketplaceProperties extends SpeakeasyBase {
-    info?: BeezUpCommonInfoSummaries;
+    info?: BeezUPCommonInfoSummaries;
     links: ChannelCatalogMarketplacePropertiesLinks;
-    propertyGroups: any[];
+    /**
+     * The groups settings with constraints
+     */
+    propertyGroups: ChannelCatalogMarketplacePropertyGroup[];
 }

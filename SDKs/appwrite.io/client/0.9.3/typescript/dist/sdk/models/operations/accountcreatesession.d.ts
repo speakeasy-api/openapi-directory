@@ -1,18 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AccountCreateSessionRequestBody extends SpeakeasyBase {
-    email: string;
-    password: string;
-}
+import { AxiosResponse } from "axios";
 export declare class AccountCreateSessionSecurity extends SpeakeasyBase {
-    project: shared.SchemeProject;
+    project: string;
 }
-export declare class AccountCreateSessionRequest extends SpeakeasyBase {
-    request?: AccountCreateSessionRequestBody;
-    security: AccountCreateSessionSecurity;
+export declare class AccountCreateSessionRequestBody extends SpeakeasyBase {
+    /**
+     * User email.
+     */
+    email: string;
+    /**
+     * User password. Must be between 6 to 32 chars.
+     */
+    password: string;
 }
 export declare class AccountCreateSessionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Session
+     */
     session?: shared.Session;
 }

@@ -1,31 +1,62 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyPathParams extends SpeakeasyBase {
-    key: string;
-}
-export declare class RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyQueryParams extends SpeakeasyBase {
-    dollarXgafv?: shared.XgafvEnum;
-    accessToken?: string;
-    alt?: shared.AltEnum;
-    callback?: string;
-    fields?: string;
-    oauthToken?: string;
-    prettyPrint?: boolean;
-    quotaUser?: string;
-    uploadType?: string;
-    uploadProtocol?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeySecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyRequest extends SpeakeasyBase {
-    pathParams: RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyPathParams;
-    queryParams: RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyQueryParams;
-    security: RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeySecurity;
+    /**
+     * V1 error format.
+     */
+    dollarXgafv?: shared.XgafvEnum;
+    /**
+     * OAuth access token.
+     */
+    accessToken?: string;
+    /**
+     * Data format for response.
+     */
+    alt?: shared.AltEnum;
+    /**
+     * JSONP
+     */
+    callback?: string;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * Required. The public key name linked to the requested secret key in the format "projects/{project}/keys/{key}".
+     */
+    key: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauthToken?: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    uploadType?: string;
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    uploadProtocol?: string;
 }
 export declare class RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful response
+     */
     googleCloudRecaptchaenterpriseV1RetrieveLegacySecretKeyResponse?: shared.GoogleCloudRecaptchaenterpriseV1RetrieveLegacySecretKeyResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

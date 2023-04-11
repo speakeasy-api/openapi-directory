@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteFleetsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteFleetsActionEnum {
     DeleteFleets = "DeleteFleets"
 }
-export declare enum PostDeleteFleetsVersionEnum {
+export declare enum POSTDeleteFleetsVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDeleteFleetsQueryParams extends SpeakeasyBase {
-    action: PostDeleteFleetsActionEnum;
-    version: PostDeleteFleetsVersionEnum;
-}
-export declare class PostDeleteFleetsHeaders extends SpeakeasyBase {
+export declare class POSTDeleteFleetsRequest extends SpeakeasyBase {
+    action: POSTDeleteFleetsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteFleetsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteFleetsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteFleetsRequest extends SpeakeasyBase {
-    queryParams: PostDeleteFleetsQueryParams;
-    headers: PostDeleteFleetsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteFleetsResponse extends SpeakeasyBase {
+export declare class POSTDeleteFleetsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,15 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetGetAccountSendingEnabledActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETGETAccountSendingEnabledActionEnum {
     GetAccountSendingEnabled = "GetAccountSendingEnabled"
 }
-export declare enum GetGetAccountSendingEnabledVersionEnum {
+export declare enum GETGETAccountSendingEnabledVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetGetAccountSendingEnabledQueryParams extends SpeakeasyBase {
-    action: GetGetAccountSendingEnabledActionEnum;
-    version: GetGetAccountSendingEnabledVersionEnum;
-}
-export declare class GetGetAccountSendingEnabledHeaders extends SpeakeasyBase {
+export declare class GETGETAccountSendingEnabledRequest extends SpeakeasyBase {
+    action: GETGETAccountSendingEnabledActionEnum;
+    version: GETGETAccountSendingEnabledVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +17,9 @@ export declare class GetGetAccountSendingEnabledHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetGetAccountSendingEnabledRequest extends SpeakeasyBase {
-    queryParams: GetGetAccountSendingEnabledQueryParams;
-    headers: GetGetAccountSendingEnabledHeaders;
-}
-export declare class GetGetAccountSendingEnabledResponse extends SpeakeasyBase {
+export declare class GETGETAccountSendingEnabledResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

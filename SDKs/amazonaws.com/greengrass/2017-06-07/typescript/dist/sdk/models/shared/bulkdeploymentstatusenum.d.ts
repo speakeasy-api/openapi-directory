@@ -1,3 +1,6 @@
+/**
+ * The current status of the bulk deployment.
+ */
 export declare enum BulkDeploymentStatusEnum {
     Initializing = "Initializing",
     Running = "Running",

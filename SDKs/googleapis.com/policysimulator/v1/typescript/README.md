@@ -6,149 +6,366 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/policysimulator/v1/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/policysimulator/v1/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { PolicysimulatorProjectsLocationsReplaysCreateRequest, PolicysimulatorProjectsLocationsReplaysCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  PolicysimulatorProjectsLocationsReplaysCreateRequest,
+  PolicysimulatorProjectsLocationsReplaysCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  GoogleCloudPolicysimulatorV1ReplayConfigLogSourceEnum,
+  GoogleIamV1AuditLogConfigLogTypeEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: PolicysimulatorProjectsLocationsReplaysCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  googleCloudPolicysimulatorV1ReplayInput: {
     config: {
-      logSource: "RECENT_ACCESSES",
+      logSource: GoogleCloudPolicysimulatorV1ReplayConfigLogSourceEnum.RecentAccesses,
       policyOverlay: {
-        "voluptatum": {
+        "quibusdam": {
           auditConfigs: [
             {
               auditLogConfigs: [
                 {
                   exemptedMembers: [
-                    "et",
-                    "voluptate",
-                    "iste",
-                  ],
-                  logType: "LOG_TYPE_UNSPECIFIED",
-                },
-                {
-                  exemptedMembers: [
-                    "dolores",
                     "illum",
-                    "debitis",
+                    "vel",
+                    "error",
                   ],
-                  logType: "LOG_TYPE_UNSPECIFIED",
+                  logType: GoogleIamV1AuditLogConfigLogTypeEnum.DataWrite,
                 },
                 {
                   exemptedMembers: [
-                    "dolore",
+                    "iure",
+                    "magnam",
                   ],
-                  logType: "LOG_TYPE_UNSPECIFIED",
+                  logType: GoogleIamV1AuditLogConfigLogTypeEnum.DataRead,
+                },
+                {
+                  exemptedMembers: [
+                    "delectus",
+                  ],
+                  logType: GoogleIamV1AuditLogConfigLogTypeEnum.AdminRead,
+                },
+                {
+                  exemptedMembers: [
+                    "molestiae",
+                    "minus",
+                  ],
+                  logType: GoogleIamV1AuditLogConfigLogTypeEnum.DataRead,
                 },
               ],
-              service: "aspernatur",
+              service: "voluptatum",
+            },
+            {
+              auditLogConfigs: [
+                {
+                  exemptedMembers: [
+                    "nisi",
+                    "recusandae",
+                    "temporibus",
+                  ],
+                  logType: GoogleIamV1AuditLogConfigLogTypeEnum.LogTypeUnspecified,
+                },
+                {
+                  exemptedMembers: [
+                    "veritatis",
+                    "deserunt",
+                  ],
+                  logType: GoogleIamV1AuditLogConfigLogTypeEnum.LogTypeUnspecified,
+                },
+              ],
+              service: "ipsam",
+            },
+            {
+              auditLogConfigs: [
+                {
+                  exemptedMembers: [
+                    "quo",
+                    "odit",
+                    "at",
+                    "at",
+                  ],
+                  logType: GoogleIamV1AuditLogConfigLogTypeEnum.DataRead,
+                },
+                {
+                  exemptedMembers: [
+                    "quod",
+                    "quod",
+                  ],
+                  logType: GoogleIamV1AuditLogConfigLogTypeEnum.AdminRead,
+                },
+                {
+                  exemptedMembers: [
+                    "porro",
+                    "dolorum",
+                    "dicta",
+                  ],
+                  logType: GoogleIamV1AuditLogConfigLogTypeEnum.DataWrite,
+                },
+                {
+                  exemptedMembers: [
+                    "occaecati",
+                    "fugit",
+                    "deleniti",
+                  ],
+                  logType: GoogleIamV1AuditLogConfigLogTypeEnum.DataRead,
+                },
+              ],
+              service: "optio",
             },
           ],
           bindings: [
             {
               condition: {
-                description: "totam",
+                description: "beatae",
                 expression: "commodi",
-                location: "quis",
-                title: "est",
+                location: "molestiae",
+                title: "Mrs.",
               },
               members: [
-                "odit",
-                "non",
-                "voluptas",
+                "impedit",
               ],
-              role: "omnis",
+              role: "cum",
             },
             {
               condition: {
-                description: "aut",
-                expression: "illo",
-                location: "sed",
-                title: "officiis",
+                description: "esse",
+                expression: "ipsum",
+                location: "excepturi",
+                title: "Mr.",
               },
               members: [
-                "consectetur",
-                "nobis",
+                "ad",
               ],
-              role: "odio",
+              role: "natus",
             },
             {
               condition: {
-                description: "qui",
-                expression: "recusandae",
-                location: "at",
-                title: "ipsum",
+                description: "sed",
+                expression: "iste",
+                location: "dolor",
+                title: "Miss",
               },
               members: [
-                "modi",
-                "sint",
+                "hic",
+                "saepe",
               ],
-              role: "inventore",
+              role: "fuga",
             },
           ],
-          etag: "ut",
-          version: 406703151708498928,
+          etag: "in",
+          version: 359508,
+        },
+        "iste": {
+          auditConfigs: [
+            {
+              auditLogConfigs: [
+                {
+                  exemptedMembers: [
+                    "architecto",
+                    "ipsa",
+                    "reiciendis",
+                  ],
+                  logType: GoogleIamV1AuditLogConfigLogTypeEnum.DataWrite,
+                },
+                {
+                  exemptedMembers: [
+                    "laborum",
+                    "dolores",
+                    "dolorem",
+                  ],
+                  logType: GoogleIamV1AuditLogConfigLogTypeEnum.AdminRead,
+                },
+                {
+                  exemptedMembers: [
+                    "nobis",
+                  ],
+                  logType: GoogleIamV1AuditLogConfigLogTypeEnum.AdminRead,
+                },
+                {
+                  exemptedMembers: [
+                    "nemo",
+                    "minima",
+                    "excepturi",
+                  ],
+                  logType: GoogleIamV1AuditLogConfigLogTypeEnum.LogTypeUnspecified,
+                },
+              ],
+              service: "iure",
+            },
+            {
+              auditLogConfigs: [
+                {
+                  exemptedMembers: [
+                    "sapiente",
+                    "architecto",
+                    "mollitia",
+                    "dolorem",
+                  ],
+                  logType: GoogleIamV1AuditLogConfigLogTypeEnum.DataWrite,
+                },
+                {
+                  exemptedMembers: [
+                    "repellat",
+                  ],
+                  logType: GoogleIamV1AuditLogConfigLogTypeEnum.DataWrite,
+                },
+                {
+                  exemptedMembers: [
+                    "numquam",
+                    "commodi",
+                    "quam",
+                  ],
+                  logType: GoogleIamV1AuditLogConfigLogTypeEnum.AdminRead,
+                },
+              ],
+              service: "velit",
+            },
+          ],
+          bindings: [
+            {
+              condition: {
+                description: "quia",
+                expression: "quis",
+                location: "vitae",
+                title: "Miss",
+              },
+              members: [
+                "enim",
+                "odit",
+                "quo",
+              ],
+              role: "sequi",
+            },
+            {
+              condition: {
+                description: "tenetur",
+                expression: "ipsam",
+                location: "id",
+                title: "Dr.",
+              },
+              members: [
+                "quasi",
+              ],
+              role: "error",
+            },
+            {
+              condition: {
+                description: "temporibus",
+                expression: "laborum",
+                location: "quasi",
+                title: "Dr.",
+              },
+              members: [
+                "vero",
+                "nihil",
+                "praesentium",
+                "voluptatibus",
+              ],
+              role: "ipsa",
+            },
+          ],
+          etag: "omnis",
+          version: 451159,
+        },
+        "cum": {
+          auditConfigs: [
+            {
+              auditLogConfigs: [
+                {
+                  exemptedMembers: [
+                    "ut",
+                    "maiores",
+                  ],
+                  logType: GoogleIamV1AuditLogConfigLogTypeEnum.LogTypeUnspecified,
+                },
+              ],
+              service: "corporis",
+            },
+          ],
+          bindings: [
+            {
+              condition: {
+                description: "iusto",
+                expression: "dicta",
+                location: "harum",
+                title: "Mrs.",
+              },
+              members: [
+                "commodi",
+                "repudiandae",
+                "quae",
+                "ipsum",
+              ],
+              role: "quidem",
+            },
+            {
+              condition: {
+                description: "molestias",
+                expression: "excepturi",
+                location: "pariatur",
+                title: "Mrs.",
+              },
+              members: [
+                "rem",
+                "voluptates",
+                "quasi",
+              ],
+              role: "repudiandae",
+            },
+          ],
+          etag: "sint",
+          version: 83112,
         },
       },
     },
     resultsSummary: {
-      differenceCount: 4756106358532488297,
-      errorCount: 5837486892148644279,
-      logCount: 4736217237333769909,
+      differenceCount: 929297,
+      errorCount: 277718,
+      logCount: 318569,
       newestDate: {
-        day: 2264299874001785192,
-        month: 1061380815263676471,
-        year: 7242748068272024738,
+        day: 9356,
+        month: 667411,
+        year: 842342,
       },
       oldestDate: {
-        day: 7719717197379695442,
-        month: 4112921325496946042,
-        year: 2671030200101705776,
+        day: 131797,
+        month: 647174,
+        year: 716327,
       },
-      unchangedCount: 3508963237347473586,
+      unchangedCount: 841386,
     },
   },
+  accessToken: "labore",
+  alt: AltEnum.Json,
+  callback: "qui",
+  fields: "aliquid",
+  key: "cupiditate",
+  oauthToken: "quos",
+  parent: "perferendis",
+  prettyPrint: false,
+  quotaUser: "magni",
+  uploadType: "assumenda",
+  uploadProtocol: "ipsam",
 };
 
 sdk.projects.policysimulatorProjectsLocationsReplaysCreate(req).then((res: PolicysimulatorProjectsLocationsReplaysCreateResponse | AxiosError) => {
@@ -158,14 +375,26 @@ sdk.projects.policysimulatorProjectsLocationsReplaysCreate(req).then((res: Polic
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### projects
 
 * `policysimulatorProjectsLocationsReplaysCreate` - Creates and starts a Replay using the given ReplayConfig.
-* `policysimulatorProjectsLocationsReplaysOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+* `policysimulatorProjectsLocationsReplaysOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 * `policysimulatorProjectsLocationsReplaysResultsList` - Lists the results of running a Replay.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

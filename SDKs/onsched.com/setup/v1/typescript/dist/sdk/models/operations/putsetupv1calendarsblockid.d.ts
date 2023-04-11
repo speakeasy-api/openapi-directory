@@ -1,20 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PutSetupV1CalendarsBlockIdPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class PutSetupV1CalendarsBlockIdRequest extends SpeakeasyBase {
+    /**
+     * Resource Block input model
+     */
+    calendarBlockUpdateModel?: shared.CalendarBlockUpdateModel;
+    /**
+     * id of calendarBlock object
+     */
     id: string;
 }
-export declare class PutSetupV1CalendarsBlockIdRequests extends SpeakeasyBase {
-    calendarBlockInputModel?: shared.CalendarBlockInputModel;
-    calendarBlockInputModel1?: shared.CalendarBlockInputModel;
-    calendarBlockInputModel2?: shared.CalendarBlockInputModel;
-    calendarBlockInputModel3?: shared.CalendarBlockInputModel;
-}
-export declare class PutSetupV1CalendarsBlockIdRequest extends SpeakeasyBase {
-    pathParams: PutSetupV1CalendarsBlockIdPathParams;
-    request?: PutSetupV1CalendarsBlockIdRequests;
-}
 export declare class PutSetupV1CalendarsBlockIdResponse extends SpeakeasyBase {
+    /**
+     * Success
+     */
     calendarBlockViewModel?: shared.CalendarBlockViewModel;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

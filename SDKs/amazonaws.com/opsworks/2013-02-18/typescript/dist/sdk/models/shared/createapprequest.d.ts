@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Source } from "./source";
+import { AppTypeEnum } from "./apptypeenum";
 import { DataSource } from "./datasource";
 import { EnvironmentVariable } from "./environmentvariable";
+import { Source } from "./source";
 import { SslConfiguration } from "./sslconfiguration";
-import { AppTypeEnum } from "./apptypeenum";
 export declare class CreateAppRequest extends SpeakeasyBase {
     appSource?: Source;
     attributes?: Record<string, string>;

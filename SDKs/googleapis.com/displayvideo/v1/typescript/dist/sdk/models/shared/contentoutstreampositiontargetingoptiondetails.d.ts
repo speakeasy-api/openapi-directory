@@ -1,0 +1,21 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Output only. The content outstream position.
+ */
+export declare enum ContentOutstreamPositionTargetingOptionDetailsContentOutstreamPositionEnum {
+    ContentOutstreamPositionUnspecified = "CONTENT_OUTSTREAM_POSITION_UNSPECIFIED",
+    ContentOutstreamPositionUnknown = "CONTENT_OUTSTREAM_POSITION_UNKNOWN",
+    ContentOutstreamPositionInArticle = "CONTENT_OUTSTREAM_POSITION_IN_ARTICLE",
+    ContentOutstreamPositionInBanner = "CONTENT_OUTSTREAM_POSITION_IN_BANNER",
+    ContentOutstreamPositionInFeed = "CONTENT_OUTSTREAM_POSITION_IN_FEED",
+    ContentOutstreamPositionInterstitial = "CONTENT_OUTSTREAM_POSITION_INTERSTITIAL"
+}
+/**
+ * Represents a targetable content outstream position, which could be used by display and video ads. This will be populated in the content_outstream_position_details field when targeting_type is `TARGETING_TYPE_CONTENT_OUTSTREAM_POSITION`.
+ */
+export declare class ContentOutstreamPositionTargetingOptionDetails extends SpeakeasyBase {
+    /**
+     * Output only. The content outstream position.
+     */
+    contentOutstreamPosition?: ContentOutstreamPositionTargetingOptionDetailsContentOutstreamPositionEnum;
+}

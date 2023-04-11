@@ -1,32 +1,45 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReposMergePathParams extends SpeakeasyBase {
-    owner: string;
-    repo: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ReposMergeRequestBody extends SpeakeasyBase {
+    /**
+     * The name of the base branch that the head will be merged into.
+     */
     base: string;
+    /**
+     * Commit message to use for the merge commit. If omitted, a default message will be used.
+     */
     commitMessage?: string;
+    /**
+     * The head to merge. This can be a branch name or a commit SHA1.
+     */
     head: string;
 }
-export declare class ReposMerge404ApplicationJson extends SpeakeasyBase {
-    documentationUrl?: string;
-    message?: string;
-}
-export declare class ReposMerge409ApplicationJson extends SpeakeasyBase {
-    documentationUrl?: string;
-    message?: string;
-}
 export declare class ReposMergeRequest extends SpeakeasyBase {
-    pathParams: ReposMergePathParams;
-    request?: ReposMergeRequestBody;
+    requestBody: ReposMergeRequestBody;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    owner: string;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    repo: string;
 }
 export declare class ReposMergeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Forbidden
+     */
     basicError?: shared.BasicError;
+    /**
+     * Successful Response (The resulting merge commit)
+     */
     commit?: shared.Commit;
-    reposMerge404ApplicationJSONObject?: ReposMerge404ApplicationJson;
-    reposMerge409ApplicationJSONObject?: ReposMerge409ApplicationJson;
+    /**
+     * Validation failed, or the endpoint has been spammed.
+     */
     validationError?: shared.ValidationError;
 }

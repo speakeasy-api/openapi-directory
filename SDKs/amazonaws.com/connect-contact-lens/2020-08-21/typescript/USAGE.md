@@ -1,37 +1,34 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { ListRealtimeContactAnalysisSegmentsRequest, ListRealtimeContactAnalysisSegmentsResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  ListRealtimeContactAnalysisSegmentsRequest,
+  ListRealtimeContactAnalysisSegmentsResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    hmac: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: ListRealtimeContactAnalysisSegmentsRequest = {
-  queryParams: {
-    maxResults: "sit",
-    nextToken: "voluptas",
+  maxResults: "corrupti",
+  nextToken: "provident",
+  requestBody: {
+    contactId: "distinctio",
+    instanceId: "quibusdam",
+    maxResults: 602763,
+    nextToken: "nulla",
   },
-  headers: {
-    xAmzAlgorithm: "culpa",
-    xAmzContentSha256: "expedita",
-    xAmzCredential: "consequuntur",
-    xAmzDate: "dolor",
-    xAmzSecurityToken: "expedita",
-    xAmzSignature: "voluptas",
-    xAmzSignedHeaders: "fugit",
-  },
-  request: {
-    contactId: "et",
-    instanceId: "nihil",
-    maxResults: 8325060299420976708,
-    nextToken: "dicta",
-  },
+  xAmzAlgorithm: "corrupti",
+  xAmzContentSha256: "illum",
+  xAmzCredential: "vel",
+  xAmzDate: "error",
+  xAmzSecurityToken: "deserunt",
+  xAmzSignature: "suscipit",
+  xAmzSignedHeaders: "iure",
 };
 
 sdk.listRealtimeContactAnalysisSegments(req).then((res: ListRealtimeContactAnalysisSegmentsResponse | AxiosError) => {

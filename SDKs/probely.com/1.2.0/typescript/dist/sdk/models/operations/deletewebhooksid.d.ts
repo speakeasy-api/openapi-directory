@@ -1,23 +1,49 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteWebhooksIdPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteWebhooksIdRequest extends SpeakeasyBase {
+    /**
+     * Object Id
+     */
     id: string;
 }
-export declare class DeleteWebhooksId401ApplicationJson extends SpeakeasyBase {
+/**
+ * Not found
+ */
+export declare class DeleteWebhooksId404ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Not found.
+     */
     detail?: string;
 }
-export declare class DeleteWebhooksId403ApplicationJson extends SpeakeasyBase {
+/**
+ * Not allowed to perform operation
+ */
+export declare class DeleteWebhooksId403ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error message.
+     */
     detail?: string;
 }
-export declare class DeleteWebhooksId404ApplicationJson extends SpeakeasyBase {
+/**
+ * Access token is missing or invalid
+ */
+export declare class DeleteWebhooksId401ApplicationJSON extends SpeakeasyBase {
     detail?: string;
-}
-export declare class DeleteWebhooksIdRequest extends SpeakeasyBase {
-    pathParams: DeleteWebhooksIdPathParams;
 }
 export declare class DeleteWebhooksIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deleteWebhooksId401ApplicationJSONObject?: DeleteWebhooksId401ApplicationJson;
-    deleteWebhooksId403ApplicationJSONObject?: DeleteWebhooksId403ApplicationJson;
-    deleteWebhooksId404ApplicationJSONObject?: DeleteWebhooksId404ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Access token is missing or invalid
+     */
+    deleteWebhooksId401ApplicationJSONObject?: DeleteWebhooksId401ApplicationJSON;
+    /**
+     * Not allowed to perform operation
+     */
+    deleteWebhooksId403ApplicationJSONObject?: DeleteWebhooksId403ApplicationJSON;
+    /**
+     * Not found
+     */
+    deleteWebhooksId404ApplicationJSONObject?: DeleteWebhooksId404ApplicationJSON;
 }

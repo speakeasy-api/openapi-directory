@@ -1,6 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { GetEntitiesType } from "./getentitiestype";
-export declare class GetEntitiesResponseType extends SpeakeasyBase {
-    entities?: GetEntitiesType[];
+import { GETEntitiesType } from "./getentitiestype";
+export declare class GETEntitiesResponseType extends SpeakeasyBase {
+    /**
+     * Container for one or more entities in a multi-entity hierarchy.
+     */
+    entities?: GETEntitiesType[];
+    /**
+     * Returns `true` if the request is successful.
+     */
     success?: boolean;
 }

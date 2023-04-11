@@ -2,6 +2,12 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { ClusterCustomerAddress } from "./clustercustomeraddress";
 export declare class ClusterCustomer extends SpeakeasyBase {
     address?: ClusterCustomerAddress;
+    /**
+     * id of customer
+     */
     id?: string;
+    /**
+     * demand of customer
+     */
     quantity?: number;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum ImportCertificateXAmzTargetEnum {
-    AmazonDmSv20160101ImportCertificate = "AmazonDMSv20160101.ImportCertificate"
+    AmazonDMSv20160101ImportCertificate = "AmazonDMSv20160101.ImportCertificate"
 }
-export declare class ImportCertificateHeaders extends SpeakeasyBase {
+export declare class ImportCertificateRequest extends SpeakeasyBase {
+    importCertificateMessage: shared.ImportCertificateMessage;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class ImportCertificateHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ImportCertificateXAmzTargetEnum;
 }
-export declare class ImportCertificateRequest extends SpeakeasyBase {
-    headers: ImportCertificateHeaders;
-    request: shared.ImportCertificateMessage;
-}
 export declare class ImportCertificateResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     importCertificateResponse?: shared.ImportCertificateResponse;
+    /**
+     * InvalidCertificateFault
+     */
     invalidCertificateFault?: any;
+    /**
+     * ResourceAlreadyExistsFault
+     */
     resourceAlreadyExistsFault?: any;
-    resourceQuotaExceededFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceQuotaExceededFault
+     */
+    resourceQuotaExceededFault?: any;
 }

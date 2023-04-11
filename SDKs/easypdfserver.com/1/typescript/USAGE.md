@@ -1,18 +1,18 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { PostMakePdfRequest, PostMakePdfResponse } from "openapi/src/sdk/models/operations";
+import {
+  PostMakePdfRequestBody,
+  PostMakePdfResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: PostMakePdfRequest = {
-  request: {
-    html: "sit",
-    key: "voluptas",
-    url: "culpa",
-  },
+
+const req: PostMakePdfRequestBody = {
+  html: "corrupti",
+  key: "provident",
+  url: "distinctio",
 };
 
 sdk.postMakePdf(req).then((res: PostMakePdfResponse | AxiosError) => {

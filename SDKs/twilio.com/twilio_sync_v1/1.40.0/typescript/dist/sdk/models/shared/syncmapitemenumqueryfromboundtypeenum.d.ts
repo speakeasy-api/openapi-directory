@@ -1,0 +1,7 @@
+/**
+ * Whether to include the Map Item referenced by the `from` parameter. Can be: `inclusive` to include the Map Item referenced by the `from` parameter or `exclusive` to start with the next Map Item. The default value is `inclusive`.
+ */
+export declare enum SyncMapItemEnumQueryFromBoundTypeEnum {
+    Inclusive = "inclusive",
+    Exclusive = "exclusive"
+}

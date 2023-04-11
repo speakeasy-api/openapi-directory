@@ -1,26 +1,88 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
- * Information about the subnet.
-**/
-export declare class CreateDefaultSubnetResultSubnet extends SpeakeasyBase {
-    assignIpv6AddressOnCreation?: Record<string, any>;
-    availabilityZone?: Record<string, any>;
-    availabilityZoneId?: Record<string, any>;
-    availableIpAddressCount?: Record<string, any>;
-    cidrBlock?: Record<string, any>;
-    customerOwnedIpv4Pool?: Record<string, any>;
-    defaultForAz?: Record<string, any>;
-    ipv6CidrBlockAssociationSet?: Record<string, any>;
-    mapCustomerOwnedIpOnLaunch?: Record<string, any>;
-    mapPublicIpOnLaunch?: Record<string, any>;
-    outpostArn?: Record<string, any>;
-    ownerId?: Record<string, any>;
-    state?: Record<string, any>;
-    subnetArn?: Record<string, any>;
-    subnetId?: Record<string, any>;
-    tags?: Record<string, any>;
-    vpcId?: Record<string, any>;
+ * The state of a CIDR block.
+ */
+export declare enum CreateDefaultSubnetResultSubnetIpv6CidrBlockAssociationSetIpv6CidrBlockStateStateEnum {
+    Associating = "associating",
+    Associated = "associated",
+    Disassociating = "disassociating",
+    Disassociated = "disassociated",
+    Failing = "failing",
+    Failed = "failed"
 }
+/**
+ * The state of the CIDR block.
+ */
+export declare class CreateDefaultSubnetResultSubnetIpv6CidrBlockAssociationSetIpv6CidrBlockState extends SpeakeasyBase {
+    state?: CreateDefaultSubnetResultSubnetIpv6CidrBlockAssociationSetIpv6CidrBlockStateStateEnum;
+    statusMessage?: string;
+}
+/**
+ * Describes an association between a subnet and an IPv6 CIDR block.
+ */
+export declare class CreateDefaultSubnetResultSubnetIpv6CidrBlockAssociationSet extends SpeakeasyBase {
+    associationId?: string;
+    ipv6CidrBlock?: string;
+    ipv6CidrBlockState?: CreateDefaultSubnetResultSubnetIpv6CidrBlockAssociationSetIpv6CidrBlockState;
+}
+/**
+ * The type of hostname for EC2 instances. For IPv4 only subnets, an instance DNS name must be based on the instance IPv4 address. For IPv6 only subnets, an instance DNS name must be based on the instance ID. For dual-stack subnets, you can specify whether DNS names use the instance IPv4 address or the instance ID.
+ */
+export declare enum CreateDefaultSubnetResultSubnetPrivateDnsNameOptionsOnLaunchHostnameTypeEnum {
+    IpName = "ip-name",
+    ResourceName = "resource-name"
+}
+/**
+ * The type of hostnames to assign to instances in the subnet at launch. An instance hostname is based on the IPv4 address or ID of the instance.
+ */
+export declare class CreateDefaultSubnetResultSubnetPrivateDnsNameOptionsOnLaunch extends SpeakeasyBase {
+    enableResourceNameDnsAAAARecord?: boolean;
+    enableResourceNameDnsARecord?: boolean;
+    hostnameType?: CreateDefaultSubnetResultSubnetPrivateDnsNameOptionsOnLaunchHostnameTypeEnum;
+}
+/**
+ * The current state of the subnet.
+ */
+export declare enum CreateDefaultSubnetResultSubnetStateEnum {
+    Pending = "pending",
+    Available = "available"
+}
+/**
+ * Describes a tag.
+ */
+export declare class CreateDefaultSubnetResultSubnetTags extends SpeakeasyBase {
+    key?: string;
+    value?: string;
+}
+/**
+ * Information about the subnet.
+ */
+export declare class CreateDefaultSubnetResultSubnet extends SpeakeasyBase {
+    assignIpv6AddressOnCreation?: boolean;
+    availabilityZone?: string;
+    availabilityZoneId?: string;
+    availableIpAddressCount?: number;
+    cidrBlock?: string;
+    customerOwnedIpv4Pool?: string;
+    defaultForAz?: boolean;
+    enableDns64?: boolean;
+    enableLniAtDeviceIndex?: number;
+    ipv6CidrBlockAssociationSet?: CreateDefaultSubnetResultSubnetIpv6CidrBlockAssociationSet[];
+    ipv6Native?: boolean;
+    mapCustomerOwnedIpOnLaunch?: boolean;
+    mapPublicIpOnLaunch?: boolean;
+    outpostArn?: string;
+    ownerId?: string;
+    privateDnsNameOptionsOnLaunch?: CreateDefaultSubnetResultSubnetPrivateDnsNameOptionsOnLaunch;
+    state?: CreateDefaultSubnetResultSubnetStateEnum;
+    subnetArn?: string;
+    subnetId?: string;
+    tags?: CreateDefaultSubnetResultSubnetTags[];
+    vpcId?: string;
+}
+/**
+ * Success
+ */
 export declare class CreateDefaultSubnetResult extends SpeakeasyBase {
     subnet?: CreateDefaultSubnetResultSubnet;
 }

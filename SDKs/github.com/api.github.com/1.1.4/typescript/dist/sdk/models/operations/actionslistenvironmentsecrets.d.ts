@@ -1,24 +1,38 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ActionsListEnvironmentSecretsPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ActionsListEnvironmentSecretsRequest extends SpeakeasyBase {
+    /**
+     * The name of the environment.
+     */
     environmentName: string;
+    /**
+     * Page number of the results to fetch.
+     */
+    page?: number;
+    /**
+     * The number of results per page (max 100).
+     */
+    perPage?: number;
+    /**
+     * The unique identifier of the repository.
+     */
     repositoryId: number;
 }
-export declare class ActionsListEnvironmentSecretsQueryParams extends SpeakeasyBase {
-    page?: number;
-    perPage?: number;
-}
-export declare class ActionsListEnvironmentSecrets200ApplicationJson extends SpeakeasyBase {
+/**
+ * Response
+ */
+export declare class ActionsListEnvironmentSecrets200ApplicationJSON extends SpeakeasyBase {
     secrets: shared.ActionsSecret[];
     totalCount: number;
 }
-export declare class ActionsListEnvironmentSecretsRequest extends SpeakeasyBase {
-    pathParams: ActionsListEnvironmentSecretsPathParams;
-    queryParams: ActionsListEnvironmentSecretsQueryParams;
-}
 export declare class ActionsListEnvironmentSecretsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
-    actionsListEnvironmentSecrets200ApplicationJSONObject?: ActionsListEnvironmentSecrets200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
+    actionsListEnvironmentSecrets200ApplicationJSONObject?: ActionsListEnvironmentSecrets200ApplicationJSON;
 }

@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteConfigurationSetEventDestinationActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteConfigurationSetEventDestinationActionEnum {
     DeleteConfigurationSetEventDestination = "DeleteConfigurationSetEventDestination"
 }
-export declare enum GetDeleteConfigurationSetEventDestinationVersionEnum {
+export declare enum GETDeleteConfigurationSetEventDestinationVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetDeleteConfigurationSetEventDestinationQueryParams extends SpeakeasyBase {
-    action: GetDeleteConfigurationSetEventDestinationActionEnum;
+export declare class GETDeleteConfigurationSetEventDestinationRequest extends SpeakeasyBase {
+    action: GETDeleteConfigurationSetEventDestinationActionEnum;
+    /**
+     * The name of the configuration set from which to delete the event destination.
+     */
     configurationSetName: string;
+    /**
+     * The name of the event destination to delete.
+     */
     eventDestinationName: string;
-    version: GetDeleteConfigurationSetEventDestinationVersionEnum;
-}
-export declare class GetDeleteConfigurationSetEventDestinationHeaders extends SpeakeasyBase {
+    version: GETDeleteConfigurationSetEventDestinationVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetDeleteConfigurationSetEventDestinationHeaders extends Sp
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteConfigurationSetEventDestinationRequest extends SpeakeasyBase {
-    queryParams: GetDeleteConfigurationSetEventDestinationQueryParams;
-    headers: GetDeleteConfigurationSetEventDestinationHeaders;
-}
-export declare class GetDeleteConfigurationSetEventDestinationResponse extends SpeakeasyBase {
+export declare class GETDeleteConfigurationSetEventDestinationResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

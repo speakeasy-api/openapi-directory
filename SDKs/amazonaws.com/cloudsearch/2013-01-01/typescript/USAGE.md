@@ -1,35 +1,34 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetBuildSuggestersRequest, GetBuildSuggestersResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GETBuildSuggestersRequest,
+  GETBuildSuggestersResponse,
+  GETBuildSuggestersActionEnum,
+  GETBuildSuggestersVersionEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: GetBuildSuggestersRequest = {
-  queryParams: {
-    action: "BuildSuggesters",
-    domainName: "voluptas",
-    version: "2013-01-01",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  headers: {
-    xAmzAlgorithm: "expedita",
-    xAmzContentSha256: "consequuntur",
-    xAmzCredential: "dolor",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "voluptas",
-    xAmzSignature: "fugit",
-    xAmzSignedHeaders: "et",
-  },
+});
+
+const req: GETBuildSuggestersRequest = {
+  action: GETBuildSuggestersActionEnum.BuildSuggesters,
+  domainName: "corrupti",
+  version: GETBuildSuggestersVersionEnum.TwoThousandAndThirteen0101,
+  xAmzAlgorithm: "provident",
+  xAmzContentSha256: "distinctio",
+  xAmzCredential: "quibusdam",
+  xAmzDate: "unde",
+  xAmzSecurityToken: "nulla",
+  xAmzSignature: "corrupti",
+  xAmzSignedHeaders: "illum",
 };
 
-sdk.getBuildSuggesters(req).then((res: GetBuildSuggestersResponse | AxiosError) => {
+sdk.getBuildSuggesters(req).then((res: GETBuildSuggestersResponse | AxiosError) => {
    // handle response
 });
 ```

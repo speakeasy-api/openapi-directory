@@ -1,13 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CertificateResendEmailPathParams extends SpeakeasyBase {
-    certificateId: string;
-    emailId: string;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class CertificateResendEmailRequest extends SpeakeasyBase {
-    pathParams: CertificateResendEmailPathParams;
+    /**
+     * Certificate id to resend email
+     */
+    certificateId: string;
+    /**
+     * Email id for email to resend
+     */
+    emailId: string;
 }
 export declare class CertificateResendEmailResponse extends SpeakeasyBase {
     contentType: string;
-    error?: any;
+    /**
+     * Certificate not found
+     */
+    error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

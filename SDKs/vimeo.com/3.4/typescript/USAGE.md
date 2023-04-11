@@ -1,21 +1,20 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetEndpointsRequest, GetEndpointsResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GetEndpointsRequest,
+  GetEndpointsResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  }
-));
-    
-const req: GetEndpointsRequest = {
-  queryParams: {
-    openapi: false,
+    oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
   },
+});
+
+const req: GetEndpointsRequest = {
+  openapi: true,
 };
 
 sdk.apiInformation.getEndpoints(req).then((res: GetEndpointsResponse | AxiosError) => {

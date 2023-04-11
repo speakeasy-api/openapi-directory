@@ -1,22 +1,20 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetAccessTokensAccessTokensRequest, GetAccessTokensAccessTokensResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetAccessTokensAccessTokensRequest,
+  GetAccessTokensAccessTokensResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetAccessTokensAccessTokensRequest = {
-  pathParams: {
-    accessTokens: "sit",
-  },
-  queryParams: {
-    callback: "voluptas",
-    filter: "culpa",
-    page: 501233450539197794,
-    pagesize: 3390393562759376202,
-  },
+  accessTokens: "corrupti",
+  callback: "provident",
+  filter: "distinctio",
+  page: 844266,
+  pagesize: 602763,
 };
 
 sdk.getAccessTokensAccessTokens(req).then((res: GetAccessTokensAccessTokensResponse | AxiosError) => {

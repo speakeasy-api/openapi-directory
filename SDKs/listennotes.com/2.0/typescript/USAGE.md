@@ -1,24 +1,27 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetBestPodcastsRequest, GetBestPodcastsResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetBestPodcastsRequest,
+  GetBestPodcastsResponse,
+  GetBestPodcastsSortEnum,
+} from "openapi/dist/sdk/models/operations";
+import {
+  SafeModeParamEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetBestPodcastsRequest = {
-  queryParams: {
-    genreId: "sit",
-    language: "voluptas",
-    page: 6050128673802995827,
-    publisherRegion: "expedita",
-    region: "consequuntur",
-    safeMode: 2669985732393126063,
-  },
-  headers: {
-    xListenAPIKey: "expedita",
-  },
+  xListenAPIKey: "corrupti",
+  genreId: "provident",
+  language: "distinctio",
+  page: 844266,
+  publisherRegion: "unde",
+  region: "nulla",
+  safeMode: SafeModeParamEnum.One,
+  sort: GetBestPodcastsSortEnum.ListenScore,
 };
 
 sdk.directoryAPI.getBestPodcasts(req).then((res: GetBestPodcastsResponse | AxiosError) => {

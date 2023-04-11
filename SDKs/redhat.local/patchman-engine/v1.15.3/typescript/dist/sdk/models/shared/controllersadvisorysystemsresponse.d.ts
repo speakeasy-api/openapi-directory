@@ -1,7 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ControllersSystemItem } from "./controllerssystemitem";
 import { ControllersLinks } from "./controllerslinks";
 import { ControllersListMeta } from "./controllerslistmeta";
+import { ControllersSystemItem } from "./controllerssystemitem";
+/**
+ * OK
+ */
 export declare class ControllersAdvisorySystemsResponse extends SpeakeasyBase {
     data?: ControllersSystemItem[];
     links?: ControllersLinks;

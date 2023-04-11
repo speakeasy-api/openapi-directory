@@ -11,6 +11,5 @@ export * from "./associationsession";
 export * from "./customchannel";
 export * from "./customchannels";
 export * from "./report";
-export * from "./security";
 export * from "./urlchannel";
 export * from "./urlchannels";

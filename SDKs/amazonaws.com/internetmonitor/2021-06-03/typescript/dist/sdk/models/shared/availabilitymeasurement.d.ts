@@ -1,0 +1,9 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * <p>Measurements about the availability for your application on the internet, calculated by Amazon CloudWatch Internet Monitor. Amazon Web Services has substantial historical data about internet performance and availability between Amazon Web Services services and different network providers and geographies. By applying statistical analysis to the data, Internet Monitor can detect when the performance and availability for your application has dropped, compared to an estimated baseline that's already calculated. To make it easier to see those drops, we report that information to you in the form of health scores: a performance score and an availability score.</p> <p>Availability in Internet Monitor represents the estimated percentage of traffic that is not seeing an availability drop. For example, an availability score of 99% for an end user and service location pair is equivalent to 1% of the traffic experiencing an availability drop for that pair.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMExperienceScores"> How Internet Monitor calculates performance and availability scores</a> in the Amazon CloudWatch Internet Monitor section of the Amazon CloudWatch User Guide.</p>
+ */
+export declare class AvailabilityMeasurement extends SpeakeasyBase {
+    experienceScore?: number;
+    percentOfClientLocationImpacted?: number;
+    percentOfTotalTrafficImpacted?: number;
+}

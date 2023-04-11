@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The current rolled-up state of the test matrix. If this state is already final, then the cancelation request will have no effect.
+ */
 export declare enum CancelTestMatrixResponseTestStateEnum {
     TestStateUnspecified = "TEST_STATE_UNSPECIFIED",
     Validating = "VALIDATING",
@@ -14,7 +17,10 @@ export declare enum CancelTestMatrixResponseTestStateEnum {
 }
 /**
  * Response containing the current state of the specified test matrix.
-**/
+ */
 export declare class CancelTestMatrixResponse extends SpeakeasyBase {
+    /**
+     * The current rolled-up state of the test matrix. If this state is already final, then the cancelation request will have no effect.
+     */
     testState?: CancelTestMatrixResponseTestStateEnum;
 }

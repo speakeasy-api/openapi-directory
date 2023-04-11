@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetRelationByEfoidPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetRelationByEFOIDRequest extends SpeakeasyBase {
+    /**
+     * An EFO gene identifier.
+     */
     disease: string;
 }
-export declare class GetRelationByEfoidRequest extends SpeakeasyBase {
-    pathParams: GetRelationByEfoidPathParams;
-}
-export declare class GetRelationByEfoidResponse extends SpeakeasyBase {
+export declare class GetRelationByEFOIDResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

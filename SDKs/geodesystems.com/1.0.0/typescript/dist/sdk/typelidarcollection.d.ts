@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Search API for 'LiDAR Collection' entry type
+ */
 export declare class TypeLidarCollection {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,10 @@ export declare class TypeLidarCollection {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * searchLidarCollection - Search API for 'LiDAR Collection' entry type
+     * Search API for 'LiDAR Collection' entry type
      *
+     * @remarks
      * API to search for entries of type LiDAR Collection
-    **/
+     */
     searchLidarCollection(req: operations.SearchLidarCollectionRequest, config?: AxiosRequestConfig): Promise<operations.SearchLidarCollectionResponse>;
 }

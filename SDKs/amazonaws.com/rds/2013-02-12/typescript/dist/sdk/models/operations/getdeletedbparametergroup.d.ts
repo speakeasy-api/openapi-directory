@@ -1,16 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteDbParameterGroupActionEnum {
-    DeleteDbParameterGroup = "DeleteDBParameterGroup"
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteDBParameterGroupActionEnum {
+    DeleteDBParameterGroup = "DeleteDBParameterGroup"
 }
-export declare enum GetDeleteDbParameterGroupVersionEnum {
+export declare enum GETDeleteDBParameterGroupVersionEnum {
     TwoThousandAndThirteen0212 = "2013-02-12"
 }
-export declare class GetDeleteDbParameterGroupQueryParams extends SpeakeasyBase {
-    action: GetDeleteDbParameterGroupActionEnum;
+export declare class GETDeleteDBParameterGroupRequest extends SpeakeasyBase {
+    action: GETDeleteDBParameterGroupActionEnum;
     dbParameterGroupName: string;
-    version: GetDeleteDbParameterGroupVersionEnum;
-}
-export declare class GetDeleteDbParameterGroupHeaders extends SpeakeasyBase {
+    version: GETDeleteDBParameterGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +18,9 @@ export declare class GetDeleteDbParameterGroupHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteDbParameterGroupRequest extends SpeakeasyBase {
-    queryParams: GetDeleteDbParameterGroupQueryParams;
-    headers: GetDeleteDbParameterGroupHeaders;
-}
-export declare class GetDeleteDbParameterGroupResponse extends SpeakeasyBase {
+export declare class GETDeleteDBParameterGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,12 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListTagsQueryParams extends SpeakeasyBase {
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListTagsXAmzTargetEnum {
     ComAmazonawsCloudtrailV20131101CloudTrail20131101ListTags = "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.ListTags"
 }
-export declare class ListTagsHeaders extends SpeakeasyBase {
+export declare class ListTagsRequest extends SpeakeasyBase {
+    listTagsRequest: shared.ListTagsRequest;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,20 +19,52 @@ export declare class ListTagsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListTagsXAmzTargetEnum;
 }
-export declare class ListTagsRequest extends SpeakeasyBase {
-    queryParams: ListTagsQueryParams;
-    headers: ListTagsHeaders;
-    request: shared.ListTagsRequest;
-}
 export declare class ListTagsResponse extends SpeakeasyBase {
+    /**
+     * CloudTrailARNInvalidException
+     */
     cloudTrailARNInvalidException?: any;
     contentType: string;
+    /**
+     * EventDataStoreNotFoundException
+     */
+    eventDataStoreNotFoundException?: any;
+    /**
+     * InactiveEventDataStoreException
+     */
+    inactiveEventDataStoreException?: any;
+    /**
+     * InvalidTokenException
+     */
     invalidTokenException?: any;
+    /**
+     * InvalidTrailNameException
+     */
     invalidTrailNameException?: any;
+    /**
+     * Success
+     */
     listTagsResponse?: shared.ListTagsResponse;
+    /**
+     * NoManagementAccountSLRExistsException
+     */
+    noManagementAccountSLRExistsException?: any;
+    /**
+     * OperationNotPermittedException
+     */
     operationNotPermittedException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
-    resourceTypeNotSupportedException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceTypeNotSupportedException
+     */
+    resourceTypeNotSupportedException?: any;
+    /**
+     * UnsupportedOperationException
+     */
     unsupportedOperationException?: any;
 }

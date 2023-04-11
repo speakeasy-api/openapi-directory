@@ -2,7 +2,10 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { StackTraceElement } from "./stacktraceelement";
 /**
  * A collection of stack elements (frames) where an error occurred.
-**/
+ */
 export declare class StackTrace extends SpeakeasyBase {
+    /**
+     * An array of stack elements.
+     */
     elements?: StackTraceElement[];
 }

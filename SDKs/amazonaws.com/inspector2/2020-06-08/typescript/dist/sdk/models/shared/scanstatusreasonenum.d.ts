@@ -1,0 +1,20 @@
+export declare enum ScanStatusReasonEnum {
+    PendingInitialScan = "PENDING_INITIAL_SCAN",
+    AccessDenied = "ACCESS_DENIED",
+    InternalError = "INTERNAL_ERROR",
+    UnmanagedEc2Instance = "UNMANAGED_EC2_INSTANCE",
+    UnsupportedOs = "UNSUPPORTED_OS",
+    ScanEligibilityExpired = "SCAN_ELIGIBILITY_EXPIRED",
+    ResourceTerminated = "RESOURCE_TERMINATED",
+    Successful = "SUCCESSFUL",
+    NoResourcesFound = "NO_RESOURCES_FOUND",
+    ImageSizeExceeded = "IMAGE_SIZE_EXCEEDED",
+    ScanFrequencyManual = "SCAN_FREQUENCY_MANUAL",
+    ScanFrequencyScanOnPush = "SCAN_FREQUENCY_SCAN_ON_PUSH",
+    Ec2InstanceStopped = "EC2_INSTANCE_STOPPED",
+    PendingDisable = "PENDING_DISABLE",
+    NoInventory = "NO_INVENTORY",
+    StaleInventory = "STALE_INVENTORY",
+    ExcludedByTag = "EXCLUDED_BY_TAG",
+    UnsupportedRuntime = "UNSUPPORTED_RUNTIME"
+}

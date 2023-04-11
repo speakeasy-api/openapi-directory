@@ -3,8 +3,11 @@ import { ActionTypeId } from "./actiontypeid";
 import { ArtifactDetail } from "./artifactdetail";
 /**
  * Input information used for an action execution.
-**/
+ */
 export declare class ActionExecutionInput extends SpeakeasyBase {
+    /**
+     * Represents information about an action type.
+     */
     actionTypeId?: ActionTypeId;
     configuration?: Record<string, string>;
     inputArtifacts?: ArtifactDetail[];

@@ -1,44 +1,67 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ListSessionsOfAuthorUsingGetQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListSessionsOfAuthorUsingGETRequest extends SpeakeasyBase {
     authorID?: string;
 }
-export declare class ListSessionsOfAuthorUsingGet200ApplicationJsonDataSessions extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class ListSessionsOfAuthorUsingGet500ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class ListSessionsOfAuthorUsingGet401ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+/**
+ * generic api error (code 1)
+ */
+export declare class ListSessionsOfAuthorUsingGet400ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+export declare class ListSessionsOfAuthorUsingGet200ApplicationJSONDataSessions extends SpeakeasyBase {
     authorID?: string;
     groupID?: string;
     id?: string;
     validUntil?: number;
 }
-export declare class ListSessionsOfAuthorUsingGet200ApplicationJsonData extends SpeakeasyBase {
-    sessions?: ListSessionsOfAuthorUsingGet200ApplicationJsonDataSessions[];
+export declare class ListSessionsOfAuthorUsingGet200ApplicationJSONData extends SpeakeasyBase {
+    sessions?: ListSessionsOfAuthorUsingGet200ApplicationJSONDataSessions[];
 }
-export declare class ListSessionsOfAuthorUsingGet200ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class ListSessionsOfAuthorUsingGet200ApplicationJSON extends SpeakeasyBase {
     code?: number;
-    data?: ListSessionsOfAuthorUsingGet200ApplicationJsonData;
+    data?: ListSessionsOfAuthorUsingGet200ApplicationJSONData;
     message?: string;
 }
-export declare class ListSessionsOfAuthorUsingGet400ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class ListSessionsOfAuthorUsingGet401ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class ListSessionsOfAuthorUsingGet500ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class ListSessionsOfAuthorUsingGetRequest extends SpeakeasyBase {
-    queryParams: ListSessionsOfAuthorUsingGetQueryParams;
-}
-export declare class ListSessionsOfAuthorUsingGetResponse extends SpeakeasyBase {
+export declare class ListSessionsOfAuthorUsingGETResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    listSessionsOfAuthorUsingGET200ApplicationJSONObject?: ListSessionsOfAuthorUsingGet200ApplicationJson;
-    listSessionsOfAuthorUsingGET400ApplicationJSONObject?: ListSessionsOfAuthorUsingGet400ApplicationJson;
-    listSessionsOfAuthorUsingGET401ApplicationJSONObject?: ListSessionsOfAuthorUsingGet401ApplicationJson;
-    listSessionsOfAuthorUsingGET500ApplicationJSONObject?: ListSessionsOfAuthorUsingGet500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    listSessionsOfAuthorUsingGET200ApplicationJSONObject?: ListSessionsOfAuthorUsingGet200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    listSessionsOfAuthorUsingGET400ApplicationJSONObject?: ListSessionsOfAuthorUsingGet400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    listSessionsOfAuthorUsingGET401ApplicationJSONObject?: ListSessionsOfAuthorUsingGet401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    listSessionsOfAuthorUsingGET500ApplicationJSONObject?: ListSessionsOfAuthorUsingGet500ApplicationJSON;
 }

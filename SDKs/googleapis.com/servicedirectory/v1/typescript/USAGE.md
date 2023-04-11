@@ -1,40 +1,34 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { ServicedirectoryProjectsLocationsListRequest, ServicedirectoryProjectsLocationsListResponse } from "openapi/src/sdk/models/operations";
+import {
+  ServicedirectoryProjectsLocationsListRequest,
+  ServicedirectoryProjectsLocationsListResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: ServicedirectoryProjectsLocationsListRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    name: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    filter: "expedita",
-    key: "voluptas",
-    oauthToken: "fugit",
-    pageSize: 1543572285742637646,
-    pageToken: "nihil",
-    prettyPrint: true,
-    quotaUser: "dicta",
-    uploadType: "debitis",
-    uploadProtocol: "voluptatum",
-  },
+  dollarXgafv: XgafvEnum.Two,
+  accessToken: "provident",
+  alt: AltEnum.Proto,
+  callback: "quibusdam",
+  fields: "unde",
+  filter: "nulla",
+  key: "corrupti",
+  name: "illum",
+  oauthToken: "vel",
+  pageSize: 623564,
+  pageToken: "deserunt",
+  prettyPrint: false,
+  quotaUser: "suscipit",
+  uploadType: "iure",
+  uploadProtocol: "magnam",
 };
 
 sdk.projects.servicedirectoryProjectsLocationsList(req).then((res: ServicedirectoryProjectsLocationsListResponse | AxiosError) => {

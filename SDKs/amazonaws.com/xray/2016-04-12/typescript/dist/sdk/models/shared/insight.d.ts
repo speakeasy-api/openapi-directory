@@ -1,12 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AnomalousService } from "./anomalousservice";
 import { InsightCategoryEnum } from "./insightcategoryenum";
+import { InsightStateEnum } from "./insightstateenum";
 import { RequestImpactStatistics } from "./requestimpactstatistics";
 import { ServiceId } from "./serviceid";
-import { InsightStateEnum } from "./insightstateenum";
-import { AnomalousService } from "./anomalousservice";
 /**
  * When fault rates go outside of the expected range, X-Ray creates an insight. Insights tracks emergent issues within your applications.
-**/
+ */
 export declare class Insight extends SpeakeasyBase {
     categories?: InsightCategoryEnum[];
     clientRequestImpactStatistics?: RequestImpactStatistics;
@@ -14,6 +14,9 @@ export declare class Insight extends SpeakeasyBase {
     groupARN?: string;
     groupName?: string;
     insightId?: string;
+    /**
+     * <p/>
+     */
     rootCauseServiceId?: ServiceId;
     rootCauseServiceRequestImpactStatistics?: RequestImpactStatistics;
     startTime?: Date;

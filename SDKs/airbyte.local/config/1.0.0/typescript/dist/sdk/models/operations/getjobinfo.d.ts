@@ -1,12 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetJobInfoRequest extends SpeakeasyBase {
-    request: shared.JobIdRequestBody;
-}
+import { AxiosResponse } from "axios";
 export declare class GetJobInfoResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Input failed validation
+     */
     invalidInputExceptionInfo?: shared.InvalidInputExceptionInfo;
+    /**
+     * Successful operation
+     */
     jobInfoRead?: shared.JobInfoRead;
+    /**
+     * Object with given id was not found.
+     */
     notFoundKnownExceptionInfo?: shared.NotFoundKnownExceptionInfo;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

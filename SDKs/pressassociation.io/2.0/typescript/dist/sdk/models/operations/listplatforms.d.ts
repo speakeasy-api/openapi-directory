@@ -1,17 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class ListPlatformsQueryParams extends SpeakeasyBase {
-    aliases?: boolean;
-}
+import { AxiosResponse } from "axios";
 export declare class ListPlatformsSecurity extends SpeakeasyBase {
-    apikey: shared.SchemeApikey;
+    apikey: string;
 }
 export declare class ListPlatformsRequest extends SpeakeasyBase {
-    queryParams: ListPlatformsQueryParams;
-    security: ListPlatformsSecurity;
+    /**
+     * Flag to display Legacy and Provider Ids.
+     */
+    aliases?: boolean;
 }
 export declare class ListPlatformsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
     listPlatforms200ApplicationJSONObject?: Record<string, any>;
 }

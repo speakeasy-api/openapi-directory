@@ -1,20 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetRevokeDbSecurityGroupIngressActionEnum {
-    RevokeDbSecurityGroupIngress = "RevokeDBSecurityGroupIngress"
+import { AxiosResponse } from "axios";
+export declare enum GETRevokeDBSecurityGroupIngressActionEnum {
+    RevokeDBSecurityGroupIngress = "RevokeDBSecurityGroupIngress"
 }
-export declare enum GetRevokeDbSecurityGroupIngressVersionEnum {
+export declare enum GETRevokeDBSecurityGroupIngressVersionEnum {
     TwoThousandAndThirteen0110 = "2013-01-10"
 }
-export declare class GetRevokeDbSecurityGroupIngressQueryParams extends SpeakeasyBase {
-    action: GetRevokeDbSecurityGroupIngressActionEnum;
+export declare class GETRevokeDBSecurityGroupIngressRequest extends SpeakeasyBase {
+    action: GETRevokeDBSecurityGroupIngressActionEnum;
     cidrip?: string;
     dbSecurityGroupName: string;
     ec2SecurityGroupId?: string;
     ec2SecurityGroupName?: string;
     ec2SecurityGroupOwnerId?: string;
-    version: GetRevokeDbSecurityGroupIngressVersionEnum;
-}
-export declare class GetRevokeDbSecurityGroupIngressHeaders extends SpeakeasyBase {
+    version: GETRevokeDBSecurityGroupIngressVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -23,12 +22,9 @@ export declare class GetRevokeDbSecurityGroupIngressHeaders extends SpeakeasyBas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetRevokeDbSecurityGroupIngressRequest extends SpeakeasyBase {
-    queryParams: GetRevokeDbSecurityGroupIngressQueryParams;
-    headers: GetRevokeDbSecurityGroupIngressHeaders;
-}
-export declare class GetRevokeDbSecurityGroupIngressResponse extends SpeakeasyBase {
+export declare class GETRevokeDBSecurityGroupIngressResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

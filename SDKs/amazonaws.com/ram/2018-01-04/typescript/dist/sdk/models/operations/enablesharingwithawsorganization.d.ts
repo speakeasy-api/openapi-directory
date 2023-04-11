@@ -1,6 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class EnableSharingWithAwsOrganizationHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class EnableSharingWithAwsOrganizationRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -9,14 +10,24 @@ export declare class EnableSharingWithAwsOrganizationHeaders extends SpeakeasyBa
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class EnableSharingWithAwsOrganizationRequest extends SpeakeasyBase {
-    headers: EnableSharingWithAwsOrganizationHeaders;
-}
 export declare class EnableSharingWithAwsOrganizationResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     enableSharingWithAwsOrganizationResponse?: shared.EnableSharingWithAwsOrganizationResponse;
+    /**
+     * OperationNotPermittedException
+     */
     operationNotPermittedException?: any;
-    serverInternalException?: any;
+    /**
+     * ServiceUnavailableException
+     */
     serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServerInternalException
+     */
+    serverInternalException?: any;
 }

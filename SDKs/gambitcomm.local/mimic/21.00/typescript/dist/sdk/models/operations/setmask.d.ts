@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SetMaskPathParams extends SpeakeasyBase {
-    agentNum: number;
-    mask: string;
-}
+import { AxiosResponse } from "axios";
 export declare class SetMaskRequest extends SpeakeasyBase {
-    pathParams: SetMaskPathParams;
+    /**
+     * Agent to set the primary IP address mask
+     */
+    agentNum: number;
+    /**
+     * Mask to set for the agent primary IP address
+     */
+    mask: string;
 }
 export declare class SetMaskResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     setMask200ApplicationJSONString?: string;
 }

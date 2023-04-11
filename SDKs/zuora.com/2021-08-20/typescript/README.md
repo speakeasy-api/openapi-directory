@@ -6,46 +6,45 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/zuora.com/2021-08-20/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/zuora.com/2021-08-20/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DeleteAccountingCodeRequest, DeleteAccountingCodeResponse } from "openapi/src/sdk/models/operations";
+import {
+  DELETEAccountingCodeRequest,
+  DELETEAccountingCodeResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: DeleteAccountingCodeRequest = {
-  pathParams: {
-    acId: "sit",
-  },
-  headers: {
-    zuoraEntityIds: "voluptas",
-    zuoraTrackId: "culpa",
-  },
+
+const req: DELETEAccountingCodeRequest = {
+  zuoraEntityIds: "corrupti",
+  zuoraTrackId: "provident",
+  acId: "distinctio",
 };
 
-sdk.accountingCodes.deleteAccountingCode(req).then((res: DeleteAccountingCodeResponse | AxiosError) => {
+sdk.accountingCodes.deleteAccountingCode(req).then((res: DELETEAccountingCodeResponse | AxiosError) => {
    // handle response
 });
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### Accounting Codes
+
+### accountingCodes
 
 * `deleteAccountingCode` - Delete an accounting code
 * `getAccountingCode` - Retrieve an accounting code
@@ -55,7 +54,7 @@ sdk.accountingCodes.deleteAccountingCode(req).then((res: DeleteAccountingCodeRes
 * `putActivateAccountingCode` - Activate an accounting code
 * `putDeactivateAccountingCode` - Deactivate an accounting code
 
-### Accounting Periods
+### accountingPeriods
 
 * `deleteAccountingPeriod` - Delete an accounting period
 * `getAccountingPeriod` - Retrieve an accounting period
@@ -67,38 +66,38 @@ sdk.accountingCodes.deleteAccountingCode(req).then((res: DeleteAccountingCodeRes
 * `putRunTrialBalance` - Run trial balance
 * `putUpdateAccountingPeriod` - Update an accounting period
 
-### Accounts
+### accounts
 
 * `getAccount` - Retrieve an account
 * `getAccountSummary` - Retrieve an account summary
-* `objectDeleteAccount` - CRUD: Delete an account
-* `objectGetAccount` - CRUD: Retrieve an account
-* `objectPostAccount` - CRUD: Create an account
-* `objectPutAccount` - CRUD: Update an account
+* `objectDELETEAccount` - CRUD: Delete an account
+* `objectGETAccount` - CRUD: Retrieve an account
+* `objectPOSTAccount` - CRUD: Create an account
+* `objectPUTAccount` - CRUD: Update an account
 * `postAccount` - Create an account
 * `putAccount` - Update an account
 
-### Actions
+### actions
 
-* `actionPosTamend` - Amend
-* `actionPosTcreate` - Create
-* `actionPosTdelete` - Delete
-* `actionPosTexecute` - Execute
-* `actionPosTgenerate` - Generate
-* `actionPosTquery` - Query
-* `actionPosTqueryMore` - QueryMore
-* `actionPosTsubscribe` - Subscribe
-* `actionPosTupdate` - Update
+* `actionPOSTamend` - Amend
+* `actionPOSTcreate` - Create
+* `actionPOSTdelete` - Delete
+* `actionPOSTexecute` - Execute
+* `actionPOSTgenerate` - Generate
+* `actionPOSTquery` - Query
+* `actionPOSTqueryMore` - QueryMore
+* `actionPOSTsubscribe` - Subscribe
+* `actionPOSTupdate` - Update
 
-### Amendments
+### amendments
 
 * `getAmendmentsByKey` - Retrieve an amendment
-* `getAmendmentsBySubscriptionId` - List all amendments of a subscription
-* `objectDeleteAmendment` - CRUD: Delete an amendment
-* `objectGetAmendment` - CRUD: Retrieve an amendment
-* `objectPutAmendment` - CRUD: Update an amendment
+* `getAmendmentsBySubscriptionID` - List all amendments of a subscription
+* `objectDELETEAmendment` - CRUD: Delete an amendment
+* `objectGETAmendment` - CRUD: Retrieve an amendment
+* `objectPUTAmendment` - CRUD: Update an amendment
 
-### Attachments
+### attachments
 
 * `deleteAttachments` - Delete an attachment
 * `getAttachments` - Retrieve an attachment
@@ -106,65 +105,65 @@ sdk.accountingCodes.deleteAccountingCode(req).then((res: DeleteAccountingCodeRes
 * `postAttachments` - Create an attachment
 * `putAttachments` - Update an attachment
 
-### Bill Run
+### billRun
 
-* `objectDeleteBillRun` - CRUD: Delete a bill run
-* `objectGetBillRun` - CRUD: Retrieve a bill run
-* `objectPostBillRun` - CRUD: Create a bill run
-* `objectPutBillRun` - CRUD: Post or cancel a bill run
+* `objectDELETEBillRun` - CRUD: Delete a bill run
+* `objectGETBillRun` - CRUD: Retrieve a bill run
+* `objectPOSTBillRun` - CRUD: Create a bill run
+* `objectPUTBillRun` - CRUD: Post or cancel a bill run
 * `postEmailBillingDocumentsfromBillRun` - Email billing documents generated from a bill run
 
-### Billing Documents
+### billingDocuments
 
 * `getBillingDocumentFilesDeletionJob` - Retrieve a job of hard deleting billing document files
 * `getBillingDocuments` - List billing documents for an account
 * `postBillingDocumentFilesDeletionJob` - Create a job to hard delete billing document files
 * `postGenerateBillingDocuments` - Generate billing documents by account ID
 
-### Billing Preview Run
+### billingPreviewRun
 
 * `getBillingPreviewRun` - Retrieve a billing preview run
 * `postBillingPreviewRun` - Create a billing preview run
 
-### Catalog
+### catalog
 
 * `getCatalog` - List all products
 * `getProduct` - Retrieve a product
 * `postCatalog` - Multi-entity: Share a product with an entity
 
-### Charge Metrics
+### chargeMetrics
 
 * `getChargeMetrics` - List charge metrics by time range
 * `getChargeMetricsDiscountAllocationDetails` - List discount allocation details by time range
 
-### Charge Revenue Summaries
+### chargeRevenueSummaries
 
-* `getCrsByCrsNumber` - List all details of a charge revenue summary
-* `getCrsByChargeId` - Retrieve a charge revenue summary by charge ID
+* `getCRSByCRSNumber` - List all details of a charge revenue summary
+* `getCRSByChargeID` - Retrieve a charge revenue summary by charge ID
 
-### Communication Profiles
+### communicationProfiles
 
-* `objectGetCommunicationProfile` - CRUD: Retrieve a communication profile
+* `objectGETCommunicationProfile` - CRUD: Retrieve a communication profile
 
-### Connections
+### connections
 
 * `postConnections` - Establish a connection to Zuora REST API
 
-### Contacts
+### contacts
 
-* `objectDeleteContact` - CRUD: Delete a contact
-* `objectGetContact` - CRUD: Retrieve a contact
-* `objectPostContact` - CRUD: Create a contact
-* `objectPutContact` - CRUD: Update a contact
+* `objectDELETEContact` - CRUD: Delete a contact
+* `objectGETContact` - CRUD: Retrieve a contact
+* `objectPOSTContact` - CRUD: Create a contact
+* `objectPUTContact` - CRUD: Update a contact
 * `putScrubContact` - Scrub a contact
 
-### Credit Balance Adjustments
+### creditBalanceAdjustments
 
-* `objectGetCreditBalanceAdjustment` - CRUD: Retrieve a credit balance adjustment
-* `objectPostCreditBalanceAdjustment` - CRUD: Create a credit balance adjustment
-* `objectPutCreditBalanceAdjustment` - CRUD: Update a credit balance adjustment
+* `objectGETCreditBalanceAdjustment` - CRUD: Retrieve a credit balance adjustment
+* `objectPOSTCreditBalanceAdjustment` - CRUD: Create a credit balance adjustment
+* `objectPUTCreditBalanceAdjustment` - CRUD: Update a credit balance adjustment
 
-### Credit Memos
+### creditMemos
 
 * `deleteCreditMemo` - Delete a credit memo
 * `getCreditMemo` - Retrieve a credit memo
@@ -176,9 +175,9 @@ sdk.accountingCodes.deleteAccountingCode(req).then((res: DeleteAccountingCodeRes
 * `getCreditMemoParts` - List all parts of a credit memo
 * `getCreditMemos` - List credit memos
 * `getTaxationItemsOfCreditMemoItem` - List all taxation items of a credit memo item
-* `postCmTaxationItems` - Create taxation items for a credit memo
+* `postCMTaxationItems` - Create taxation items for a credit memo
 * `postCreditMemoFromPrpc` - Create a credit memo from a charge
-* `postCreditMemoPdf` - Generate a credit memo PDF file
+* `postCreditMemoPDF` - Generate a credit memo PDF file
 * `postEmailCreditMemo` - Email a credit memo
 * `postRefundCreditMemo` - Refund a credit memo
 * `postUploadFileForCreditMemo` - Upload a file for a credit memo
@@ -189,11 +188,11 @@ sdk.accountingCodes.deleteAccountingCode(req).then((res: DeleteAccountingCodeRes
 * `putUnpostCreditMemo` - Unpost a credit memo
 * `putUpdateCreditMemo` - Update a credit memo
 
-### Custom Exchange Rates
+### customExchangeRates
 
 * `getCustomExchangeRates` - List custom exchange rates by currency
 
-### Custom Object Definitions
+### customObjectDefinitions
 
 * `deleteCustomObjectDefinitionByType` - Delete a custom object definition
 * `getAllCustomObjectDefinitionsInNamespace` - List custom object definitions
@@ -201,7 +200,7 @@ sdk.accountingCodes.deleteAccountingCode(req).then((res: DeleteAccountingCodeRes
 * `postCustomObjectDefinitions` - Create custom object definitions
 * `postUpdateCustomObjectDefinition` - Update a custom object definition
 
-### Custom Object Jobs
+### customObjectJobs
 
 * `getAllCustomObjectBulkJobs` - List all custom object bulk jobs
 * `getCustomObjectBulkJob` - Retrieve a custom object bulk job
@@ -209,24 +208,24 @@ sdk.accountingCodes.deleteAccountingCode(req).then((res: DeleteAccountingCodeRes
 * `postCustomObjectBulkJob` - Submit a custom object bulk job
 * `postUploadFileForCustomObjectBulkJob` - Upload a file for a custom object bulk job
 
-### Custom Object Records
+### customObjectRecords
 
-* `deleteCustomObjectRecordById` - Delete a custom object record
+* `deleteCustomObjectRecordByID` - Delete a custom object record
 * `getAllRecordsForCustomObjectType` - List records for a custom object
-* `getCustomObjectRecordById` - Retrieve a custom object record
+* `getCustomObjectRecordByID` - Retrieve a custom object record
 * `postCustomObjectRecords` - Create custom object records
 * `postCustomObjectRecordsBatchUpdateOrDelete` - Update or delete custom object records
 * `putCustomObjectRecord` - Update a custom object record
 * `patchPartialUpdateCustomObjectRecord` - Partially update a custom object record
 
-### Data Queries
+### dataQueries
 
 * `deleteDataQueryJob` - Cancel a data query job
 * `getDataQueryJob` - Retrieve a data query job
 * `getDataQueryJobs` - List data query jobs
 * `postDataQueryJob` - Submit a data query
 
-### Debit Memos
+### debitMemos
 
 * `deleteDebitMemo` - Delete a debit memo
 * `getDebitMemo` - Retrieve a debit memo
@@ -235,10 +234,10 @@ sdk.accountingCodes.deleteAccountingCode(req).then((res: DeleteAccountingCodeRes
 * `getDebitMemoItems` - List debit memo items
 * `getDebitMemos` - List debit memos
 * `getTaxationItemsOfDebitMemoItem` - List all taxation items of a debit memo item
-* `postDmTaxationItems` - Create taxation items for a debit memo
+* `postDMTaxationItems` - Create taxation items for a debit memo
 * `postDebitMemoCollect` - Collect a posted debit memo
 * `postDebitMemoFromPrpc` - Create a debit memo from a charge
-* `postDebitMemoPdf` - Generate a debit memo PDF file
+* `postDebitMemoPDF` - Generate a debit memo PDF file
 * `postEmailDebitMemo` - Email a debit memo
 * `postUploadFileForDebitMemo` - Upload a file for a debit memo
 * `putBatchUpdateDebitMemos` - Update debit memos
@@ -247,18 +246,18 @@ sdk.accountingCodes.deleteAccountingCode(req).then((res: DeleteAccountingCodeRes
 * `putPostDebitMemo` - Post a debit memo
 * `putUnpostDebitMemo` - Unpost a debit memo
 
-### Describe
+### describe
 
 * `getDescribe` - Describe an object
 
-### Document Properties
+### documentProperties
 
 * `deleteDocumentProperties` - Delete document properties
 * `getDocumentProperies` - List all properties of a billing document
 * `postDocumentProperties` - Create document properties
 * `putDocumentProperties` - Update document properties
 
-### Entities
+### entities
 
 * `deleteEntities` - Multi-entity: Delete an entity
 * `getEntities` - Multi-entity: List entities
@@ -267,7 +266,7 @@ sdk.accountingCodes.deleteAccountingCode(req).then((res: DeleteAccountingCodeRes
 * `putEntities` - Multi-entity: Update an entity
 * `putProvisionEntity` - Multi-entity: Provision an entity
 
-### Entity Connections
+### entityConnections
 
 * `getEntityConnections` - Multi-entity: List connections
 * `postEntityConnections` - Multi-entity: Initiate a connection request
@@ -275,7 +274,7 @@ sdk.accountingCodes.deleteAccountingCode(req).then((res: DeleteAccountingCodeRes
 * `putEntityConnectionsDeny` - Multi-entity: Deny a connection request
 * `putEntityConnectionsDisconnect` - Multi-entity: Disconnect a connection
 
-### Event Triggers
+### eventTriggers
 
 * `deleteEventTrigger` - Delete an event trigger
 * `getEventTrigger` - Retrieve an event trigger
@@ -283,74 +282,74 @@ sdk.accountingCodes.deleteAccountingCode(req).then((res: DeleteAccountingCodeRes
 * `postEventTrigger` - Create an event trigger
 * `putEventTrigger` - Update an event trigger
 
-### Exports
+### exports
 
-* `objectGetExport` - CRUD: Retrieve an export
-* `objectPostExport` - CRUD: Create an export
+* `objectGETExport` - CRUD: Retrieve an export
+* `objectPOSTExport` - CRUD: Create an export
 
-### Features
+### features
 
-* `objectDeleteFeature` - CRUD: Delete a feature
-* `objectGetFeature` - CRUD: Retrieve a feature
-* `objectPostFeature` - CRUD: Create a feature
-* `objectPutFeature` - CRUD: Update a feature
+* `objectDELETEFeature` - CRUD: Delete a feature
+* `objectGETFeature` - CRUD: Retrieve a feature
+* `objectPOSTFeature` - CRUD: Create a feature
+* `objectPUTFeature` - CRUD: Update a feature
 
-### Files
+### files
 
 * `getFiles` - Retrieve a file
 
-### HMAC Signatures
+### hmacSignatures
 
-* `postHmacSignatures` - Generate an HMAC signature
+* `postHMACSignatures` - Generate an HMAC signature
 
-### Hosted Pages
+### hostedPages
 
 * `getHostedPages` - List hosted pages
 
-### Imports
+### imports
 
-* `objectGetImport` - CRUD: Retrieve an import
-* `objectPostImport` - CRUD: Create an import
+* `objectGETImport` - CRUD: Retrieve an import
+* `objectPOSTImport` - CRUD: Create an import
 
-### Invoice Adjustments
+### invoiceAdjustments
 
-* `objectDeleteInvoiceAdjustment` - CRUD: Delete an invoice adjustment
-* `objectGetInvoiceAdjustment` - CRUD: Retrieve an invoice adjustment
-* `objectPostInvoiceAdjustment` - CRUD: Create an invoice adjustment
-* `objectPutInvoiceAdjustment` - CRUD: Update an invoice adjustment
+* `objectDELETEInvoiceAdjustment` - CRUD: Delete an invoice adjustment
+* `objectGETInvoiceAdjustment` - CRUD: Retrieve an invoice adjustment
+* `objectPOSTInvoiceAdjustment` - CRUD: Create an invoice adjustment
+* `objectPUTInvoiceAdjustment` - CRUD: Update an invoice adjustment
 
-### Invoice Item Adjustments
+### invoiceItemAdjustments
 
-* `objectDeleteInvoiceItemAdjustment` - CRUD: Delete an invoice item adjustment
-* `objectGetInvoiceItemAdjustment` - CRUD: Retrieve an invoice item adjustment
+* `objectDELETEInvoiceItemAdjustment` - CRUD: Delete an invoice item adjustment
+* `objectGETInvoiceItemAdjustment` - CRUD: Retrieve an invoice item adjustment
 
-### Invoice Items
+### invoiceItems
 
-* `objectGetInvoiceItem` - CRUD: Retrieve an invoice item
+* `objectGETInvoiceItem` - CRUD: Retrieve an invoice item
 
-### Invoice Payments
+### invoicePayments
 
-* `objectGetInvoicePayment` - CRUD: Retrieve an invoice payment
-* `objectPostInvoicePayment` - CRUD: Create an invoice payment
-* `objectPutInvoicePayment` - CRUD: Update an invoice payment
+* `objectGETInvoicePayment` - CRUD: Retrieve an invoice payment
+* `objectPOSTInvoicePayment` - CRUD: Create an invoice payment
+* `objectPUTInvoicePayment` - CRUD: Update an invoice payment
 
-### Invoice Split Items
+### invoiceSplitItems
 
-* `objectGetInvoiceSplitItem` - CRUD: Retrieve an invoice split item
+* `objectGETInvoiceSplitItem` - CRUD: Retrieve an invoice split item
 
-### Invoice Splits
+### invoiceSplits
 
-* `objectGetInvoiceSplit` - CRUD: Retrieve an invoice split
+* `objectGETInvoiceSplit` - CRUD: Retrieve an invoice split
 
-### Invoices
+### invoices
 
 * `getInvoiceApplicationParts` - List all application parts of an invoice
 * `getInvoiceFiles` - List all files of an invoice
 * `getInvoiceItems` - List all items of an invoice
 * `getTaxationItemsOfInvoiceItem` - List all taxation items of an invoice item
-* `objectDeleteInvoice` - CRUD: Delete an invoice
-* `objectGetInvoice` - CRUD: Retrieve an invoice
-* `objectPutInvoice` - CRUD: Update an invoice
+* `objectDELETEInvoice` - CRUD: Delete an invoice
+* `objectGETInvoice` - CRUD: Retrieve an invoice
+* `objectPUTInvoice` - CRUD: Update an invoice
 * `postCreditMemoFromInvoice` - Create a credit memo from an invoice
 * `postDebitMemoFromInvoice` - Create a debit memo from an invoice
 * `postEmailInvoice` - Email an invoice
@@ -361,29 +360,29 @@ sdk.accountingCodes.deleteAccountingCode(req).then((res: DeleteAccountingCodeRes
 * `putUpdateInvoice` - Update an invoice
 * `putWriteOffInvoice` - Write off an invoice
 
-### Journal Runs
+### journalRuns
 
 * `deleteJournalRun` - Delete a journal run
 * `getJournalRun` - Retrieve a journal run
 * `postJournalRun` - Create a journal run
 * `putJournalRun` - Cancel a journal run
 
-### Mass Updater
+### massUpdater
 
 * `getMassUpdater` - List all results of a mass action
 * `postMassUpdater` - Perform a mass action
 * `putMassUpdater` - Stop a mass action
 
-### Notifications
+### notifications
 
-* `deleteDeleteEmailTemplate` - Delete an email template
-* `deleteDeleteNotificationDefinition` - Delete a notification definition
-* `deleteDeleteNotificationHistoryForAccount` - Delete notification histories for an account
+* `deleteDELETEEmailTemplate` - Delete an email template
+* `deleteDELETENotificationDefinition` - Delete a notification definition
+* `deleteDELETENotificationHistoryForAccount` - Delete notification histories for an account
 * `getCalloutHistory` - List callout notification histories
 * `getEmailHistory` - List email notification histories
-* `getGetEmailTemplate` - Retrieve an email template
-* `getGetNotificationDefinition` - Retrieve a notification definition
-* `getGetNotificationHistoryDeletionTask` - Retrieve a notification history deletion task
+* `getGETEmailTemplate` - Retrieve an email template
+* `getGETNotificationDefinition` - Retrieve a notification definition
+* `getGETNotificationHistoryDeletionTask` - Retrieve a notification history deletion task
 * `getQueryEmailTemplates` - List email templates
 * `getQueryNotificationDefinitions` - List notification definitions
 * `postCreateEmailTemplate` - Create an email template
@@ -391,22 +390,22 @@ sdk.accountingCodes.deleteAccountingCode(req).then((res: DeleteAccountingCodeRes
 * `putUpdateEmailTemplate` - Update an email template
 * `putUpdateNotificationDefinition` - Update a notification definition
 
-### OAuth
+### oAuth
 
 * `createToken` - Create an OAuth token
 
-### Operations
+### operations
 
 * `postBillingPreview` - Generate a billing preview
 * `postTransactionInvoicePayment` - Invoice and collect
 
-### Order Line Items
+### orderLineItems
 
 * `getOrderLineItem` - Retrieve an order line item
 * `putOrderLineItem` - Update an order line item
 * `postOrderLineItems` - Update order line items
 
-### Orders
+### orders
 
 * `deleteOrder` - Delete an order
 * `getAllOrders` - List orders
@@ -425,35 +424,35 @@ sdk.accountingCodes.deleteAccountingCode(req).then((res: DeleteAccountingCodeRes
 * `putUpdateOrderCustomFields` - Update order custom fields
 * `putUpdateSubscriptionCustomFields` - Update subscription custom fields
 
-### Payment Gateway Reconciliation
+### paymentGatewayReconciliation
 
 * `postReconcileRefund` - Reconcile a refund
 * `postRejectPayment` - Reject a payment
 * `postReversePayment` - Reverse a payment
 * `postSettlePayment` - Settle a payment
 
-### Payment Gateways
+### paymentGateways
 
 * `getPaymentgateways` - List all payment gateways
 
-### Payment Method Snapshots
+### paymentMethodSnapshots
 
-* `objectGetPaymentMethodSnapshot` - CRUD: Retrieve a payment method snapshot
+* `objectGETPaymentMethodSnapshot` - CRUD: Retrieve a payment method snapshot
 
-### Payment Method Transaction Logs
+### paymentMethodTransactionLogs
 
-* `objectGetPaymentMethodTransactionLog` - CRUD: Retrieve a payment method transaction log
+* `objectGETPaymentMethodTransactionLog` - CRUD: Retrieve a payment method transaction log
 
-### Payment Methods
+### paymentMethods
 
 * `deletePaymentMethods` - Delete a payment method
 * `getPaymentMethod` - Retrieve a payment method
 * `getPaymentMethodsCreditCard` - List all credit card payment methods of an account
 * `getStoredCredentialProfiles` - List stored credential profiles of a payment method
-* `objectDeletePaymentMethod` - CRUD: Delete a payment method
-* `objectGetPaymentMethod` - CRUD: Retrieve a payment method
-* `objectPostPaymentMethod` - CRUD: Create a payment method
-* `objectPutPaymentMethod` - CRUD: Update a payment method
+* `objectDELETEPaymentMethod` - CRUD: Delete a payment method
+* `objectGETPaymentMethod` - CRUD: Retrieve a payment method
+* `objectPOSTPaymentMethod` - CRUD: Create a payment method
+* `objectPUTPaymentMethod` - CRUD: Update a payment method
 * `postCancelAuthorization` - Cancel authorization
 * `postCancelStoredCredentialProfile` - Cancel a stored credential profile
 * `postCreateAuthorization` - Create authorization
@@ -467,7 +466,7 @@ sdk.accountingCodes.deleteAccountingCode(req).then((res: DeleteAccountingCodeRes
 * `putScrubPaymentMethods` - Scrub a payment method
 * `putVerifyPaymentMethods` - Verify a payment method
 
-### Payment Runs
+### paymentRuns
 
 * `deletePaymentRun` - Delete a payment run
 * `getPaymentRun` - Retrieve a payment run
@@ -477,11 +476,11 @@ sdk.accountingCodes.deleteAccountingCode(req).then((res: DeleteAccountingCodeRes
 * `postPaymentRun` - Create a payment run
 * `putPaymentRun` - Update a payment run
 
-### Payment Transaction Logs
+### paymentTransactionLogs
 
-* `objectGetPaymentTransactionLog` - CRUD: Retrieve a payment transaction log
+* `objectGETPaymentTransactionLog` - CRUD: Retrieve a payment transaction log
 
-### Payments
+### payments
 
 * `deletePayment` - Delete a payment
 * `getPayment` - Retrieve a payment
@@ -490,10 +489,10 @@ sdk.accountingCodes.deleteAccountingCode(req).then((res: DeleteAccountingCodeRes
 * `getPaymentPart` - Retrieve a payment part
 * `getPaymentParts` - List all parts of a payment
 * `getRetrieveAllPayments` - List payments
-* `objectDeletePayment` - CRUD: Delete a payment
-* `objectGetPayment` - CRUD: Retrieve a payment
-* `objectPostPayment` - CRUD: Create a payment
-* `objectPutPayment` - CRUD: Update a payment
+* `objectDELETEPayment` - CRUD: Delete a payment
+* `objectGETPayment` - CRUD: Retrieve a payment
+* `objectPOSTPayment` - CRUD: Create a payment
+* `objectPUTPayment` - CRUD: Update a payment
 * `postCreatePayment` - Create a payment
 * `postRefundPayment` - Refund a payment
 * `putApplyPayment` - Apply a payment
@@ -502,48 +501,48 @@ sdk.accountingCodes.deleteAccountingCode(req).then((res: DeleteAccountingCodeRes
 * `putUnapplyPayment` - Unapply a payment
 * `putUpdatePayment` - Update a payment
 
-### Product Features
+### productFeatures
 
-* `objectDeleteProductFeature` - CRUD: Delete a product feature
-* `objectGetProductFeature` - CRUD: Retrieve a product feature
+* `objectDELETEProductFeature` - CRUD: Delete a product feature
+* `objectGETProductFeature` - CRUD: Retrieve a product feature
 
-### Product Rate Plan Charge Tiers
+### productRatePlanChargeTiers
 
-* `objectGetProductRatePlanChargeTier` - CRUD: Retrieve a product rate plan charge tier
-* `objectPutProductRatePlanChargeTier` - CRUD: Update a product rate plan charge tier
+* `objectGETProductRatePlanChargeTier` - CRUD: Retrieve a product rate plan charge tier
+* `objectPUTProductRatePlanChargeTier` - CRUD: Update a product rate plan charge tier
 
-### Product Rate Plan Charges
+### productRatePlanCharges
 
-* `objectDeleteProductRatePlanCharge` - CRUD: Delete a product rate plan charge
-* `objectGetProductRatePlanCharge` - CRUD: Retrieve a product rate plan charge
-* `objectPostProductRatePlanCharge` - CRUD: Create a product rate plan charge
-* `objectPutProductRatePlanCharge` - CRUD: Update a product rate plan charge
+* `objectDELETEProductRatePlanCharge` - CRUD: Delete a product rate plan charge
+* `objectGETProductRatePlanCharge` - CRUD: Retrieve a product rate plan charge
+* `objectPOSTProductRatePlanCharge` - CRUD: Create a product rate plan charge
+* `objectPUTProductRatePlanCharge` - CRUD: Update a product rate plan charge
 
-### Product Rate Plans
+### productRatePlans
 
 * `getProductRatePlans` - List all product rate plans of a product
-* `objectDeleteProductRatePlan` - CRUD: Delete a product rate plan
-* `objectGetProductRatePlan` - CRUD: Retrieve a product rate plan
-* `objectPostProductRatePlan` - CRUD: Create a product rate plan
-* `objectPutProductRatePlan` - CRUD: Update a product rate plan
+* `objectDELETEProductRatePlan` - CRUD: Delete a product rate plan
+* `objectGETProductRatePlan` - CRUD: Retrieve a product rate plan
+* `objectPOSTProductRatePlan` - CRUD: Create a product rate plan
+* `objectPUTProductRatePlan` - CRUD: Update a product rate plan
 
-### Products
+### products
 
-* `objectDeleteProduct` - CRUD: Delete a product
-* `objectGetProduct` - CRUD: Retrieve a product
-* `objectPostProduct` - CRUD: Create a product
-* `objectPutProduct` - CRUD: Update a product
+* `objectDELETEProduct` - CRUD: Delete a product
+* `objectGETProduct` - CRUD: Retrieve a product
+* `objectPOSTProduct` - CRUD: Create a product
+* `objectPUTProduct` - CRUD: Update a product
 
-### Quotes Document
+### quotesDocument
 
 * `postQuotesDocument` - Generate a quote document
 
-### RSA Signatures
+### rsaSignatures
 
-* `postDecryptRsaSignatures` - Decrypt an RSA signature
-* `postRsaSignatures` - Generate an RSA signature
+* `postDecryptRSASignatures` - Decrypt an RSA signature
+* `postRSASignatures` - Generate an RSA signature
 
-### Ramps
+### ramps
 
 * `getRampByRampNumber` - Retrieve a ramp
 * `getRampMetricsByOrderNumber` - List ramp metrics by order number
@@ -551,28 +550,28 @@ sdk.accountingCodes.deleteAccountingCode(req).then((res: DeleteAccountingCodeRes
 * `getRampMetricsBySubscriptionKey` - List ramp metrics by subscription key
 * `getRampsBySubscriptionKey` - Retrieve a ramp by subscription key
 
-### Rate Plan Charge Tiers
+### ratePlanChargeTiers
 
-* `objectGetRatePlanChargeTier` - CRUD: Retrieve a rate plan charge tier
+* `objectGETRatePlanChargeTier` - CRUD: Retrieve a rate plan charge tier
 
-### Rate Plan Charges
+### ratePlanCharges
 
-* `objectGetRatePlanCharge` - CRUD: Retrieve a rate plan charge
-* `objectPutRatePlanCharge` - CRUD: Update a rate plan charge
+* `objectGETRatePlanCharge` - CRUD: Retrieve a rate plan charge
+* `objectPUTRatePlanCharge` - CRUD: Update a rate plan charge
 
-### Rate Plans
+### ratePlans
 
-* `objectGetRatePlan` - CRUD: Retrieve a rate plan
+* `objectGETRatePlan` - CRUD: Retrieve a rate plan
 
-### Refund Invoice Payments
+### refundInvoicePayments
 
-* `objectGetRefundInvoicePayment` - CRUD: Retrieve a refund invoice payment
+* `objectGETRefundInvoicePayment` - CRUD: Retrieve a refund invoice payment
 
-### Refund Transaction Logs
+### refundTransactionLogs
 
-* `objectGetRefundTransactionLog` - CRUD: Retrieve a refund transaction log
+* `objectGETRefundTransactionLog` - CRUD: Retrieve a refund transaction log
 
-### Refunds
+### refunds
 
 * `deleteRefund` - Delete a refund
 * `getRefund` - Retrieve a refund
@@ -581,19 +580,19 @@ sdk.accountingCodes.deleteAccountingCode(req).then((res: DeleteAccountingCodeRes
 * `getRefundPart` - Retrieve a refund part
 * `getRefundParts` - List all parts of a refund
 * `getRefunds` - List refunds
-* `objectDeleteRefund` - CRUD: Delete a refund
-* `objectGetRefund` - CRUD: Retrieve a refund
-* `objectPostRefund` - CRUD: Create a refund
-* `objectPutRefund` - CRUD: Update a refund
+* `objectDELETERefund` - CRUD: Delete a refund
+* `objectGETRefund` - CRUD: Retrieve a refund
+* `objectPOSTRefund` - CRUD: Create a refund
+* `objectPUTRefund` - CRUD: Update a refund
 * `putCancelRefund` - Cancel a refund
 * `putUpdateRefund` - Update a refund
 
-### Revenue Events
+### revenueEvents
 
 * `getRevenueEventDetails` - Retrieve a revenue event
 * `getRevenueEventForRevenueSchedule` - List all revenue events of a revenue schedule
 
-### Revenue Items
+### revenueItems
 
 * `getRevenueItemsByChargeRevenueEventNumber` - List revenue items by revenue event number
 * `getRevenueItemsByChargeRevenueSummaryNumber` - List revenue items by charge revenue summary number
@@ -601,13 +600,13 @@ sdk.accountingCodes.deleteAccountingCode(req).then((res: DeleteAccountingCodeRes
 * `putCustomFieldsonRevenueItemsByRevenueEvent` - Update custom fields on revenue items by revenue event number
 * `putCustomFieldsonRevenueItemsByRevenueSchedule` - Update custom fields on revenue items by revenue schedule number
 
-### Revenue Rules
+### revenueRules
 
 * `getRevenueAutomationStartDate` - Retrieve a revenue automation start date
 * `getRevenueRecRulebyProductRatePlanCharge` - Retrieve a revenue recognition rule by product rate plan charge ID
 * `getRevenueRecRules` - Retrieve a revenue recognition rule by subscription charge ID
 
-### Revenue Schedules
+### revenueSchedules
 
 * `deleteRs` - Delete a revenue schedule
 * `getRs` - List all details of a revenue schedule
@@ -633,12 +632,12 @@ sdk.accountingCodes.deleteAccountingCode(req).then((res: DeleteAccountingCodeRes
 * `postRSforInvoiceItemDistributeByDateRange` - Create a revenue schedule for an invoice item (distribute by date range)
 * `postRSforInvoiceItemManualDistribution` - Create a revenue schedule for an invoice item (manual distribution)
 * `postRSforSubscCharge` - Create a revenue schedule by subscription charge key
-* `putRsBasicInfo` - Update a revenue schedule
-* `putRevenueAcrossAp` - Distribute revenue across accounting periods
+* `putRSBasicInfo` - Update a revenue schedule
+* `putRevenueAcrossAP` - Distribute revenue across accounting periods
 * `putRevenueByRecognitionStartandEndDates` - Distribute revenue in a recognition period
 * `putRevenueSpecificDate` - Distribute revenue on a specific date
 
-### Sequence Sets
+### sequenceSets
 
 * `deleteSequenceSet` - Delete a sequence set
 * `getSequenceSet` - Retrieve a sequence set
@@ -646,23 +645,23 @@ sdk.accountingCodes.deleteAccountingCode(req).then((res: DeleteAccountingCodeRes
 * `postSequenceSets` - Create sequence sets
 * `putSequenceSet` - Update a sequence set
 
-### Settings
+### settings
 
 * `getListAllSettings` - List all settings
 * `postProcessSettingsBatchRequest` - Submit settings requests
 
-### Subscription Product Features
+### subscriptionProductFeatures
 
-* `objectGetSubscriptionProductFeature` - CRUD: Retrieve a subscription product feature
+* `objectGETSubscriptionProductFeature` - CRUD: Retrieve a subscription product feature
 
-### Subscriptions
+### subscriptions
 
 * `getSubscriptionsByAccount` - List subscriptions by account key
 * `getSubscriptionsByKey` - Retrieve a subscription by key
 * `getSubscriptionsByKeyAndVersion` - Retrieve a subscription by key and version
-* `objectDeleteSubscription` - CRUD: Delete a subscription
-* `objectGetSubscription` - CRUD: Retrieve a subscription
-* `objectPutSubscription` - CRUD: Update a subscription
+* `objectDELETESubscription` - CRUD: Delete a subscription
+* `objectGETSubscription` - CRUD: Retrieve a subscription
+* `objectPUTSubscription` - CRUD: Update a subscription
 * `postPreviewSubscription` - Preview a subscription
 * `postSubscription` - Create a subscription
 * `putCancelSubscription` - Cancel a subscription
@@ -672,7 +671,7 @@ sdk.accountingCodes.deleteAccountingCode(req).then((res: DeleteAccountingCodeRes
 * `putSuspendSubscription` - Suspend a subscription
 * `putUpdateSubscriptionCustomFieldsOfASpecifiedVersion` - Update subscription custom fields of a subscription version
 
-### Summary Journal Entries
+### summaryJournalEntries
 
 * `deleteSummaryJournalEntry` - Delete a summary journal entry
 * `getAllSummaryJournalEntries` - List all summary journal entries in a journal run
@@ -681,46 +680,46 @@ sdk.accountingCodes.deleteAccountingCode(req).then((res: DeleteAccountingCodeRes
 * `putBasicSummaryJournalEntry` - Update a summary journal entry
 * `putSummaryJournalEntry` - Cancel a summary journal entry
 
-### Taxation Items
+### taxationItems
 
 * `deleteTaxationItem` - Delete a taxation item
 * `getTaxationItem` - Retrieve a taxation item
 
-* `objectDeleteTaxationItem` - CRUD: Delete a taxation item
-* `objectGetTaxationItem` - CRUD: Retrieve a taxation item
-* `objectPostTaxationItem` - CRUD: Create a taxation item
-* `objectPutTaxationItem` - CRUD: Update a taxation item
+* `objectDELETETaxationItem` - CRUD: Delete a taxation item
+* `objectGETTaxationItem` - CRUD: Retrieve a taxation item
+* `objectPOSTTaxationItem` - CRUD: Create a taxation item
+* `objectPUTTaxationItem` - CRUD: Update a taxation item
 * `putTaxationItem` - Update a taxation item
 
-### Transactions
+### transactions
 
 * `getTransactionInvoice` - List all invoices for an account
 * `getTransactionPayment` - List all payments for an account
 
-### Unit Of Measure
+### unitOfMeasure
 
-* `objectDeleteUnitOfMeasure` - CRUD: Delete a unit of measure
-* `objectGetUnitOfMeasure` - CRUD: Retrieve a unit of measure
-* `objectPostUnitOfMeasure` - CRUD: Create a unit of measure
-* `objectPutUnitOfMeasure` - CRUD: Update a unit of measure
+* `objectDELETEUnitOfMeasure` - CRUD: Delete a unit of measure
+* `objectGETUnitOfMeasure` - CRUD: Retrieve a unit of measure
+* `objectPOSTUnitOfMeasure` - CRUD: Create a unit of measure
+* `objectPUTUnitOfMeasure` - CRUD: Update a unit of measure
 
-### Usage
+### usage
 
 * `getUsage` - Retrieve a usage record
-* `objectDeleteUsage` - CRUD: Delete a usage record
-* `objectGetUsage` - CRUD: Retrieve a usage record
-* `objectPostUsage` - CRUD: Create a usage record
-* `objectPutUsage` - CRUD: Update a usage record
+* `objectDELETEUsage` - CRUD: Delete a usage record
+* `objectGETUsage` - CRUD: Retrieve a usage record
+* `objectPOSTUsage` - CRUD: Create a usage record
+* `objectPUTUsage` - CRUD: Update a usage record
 * `postUsage` - Upload a usage file
 
-### Users
+### users
 
 * `getEntitiesUserAccessible` - Multi-entity: List all entities that a user can access
 * `putAcceptUserAccess` - Multi-entity: Accept user access
 * `putDenyUserAccess` - Multi-entity: Deny user access
 * `putSendUserAccessRequests` - Multi-entity: Send user access requests
 
-### Workflows
+### workflows
 
 * `deleteWorkflow` - Delete a workflow
 * `getWorkflow` - Retrieve a workflow
@@ -735,10 +734,21 @@ sdk.accountingCodes.deleteAccountingCode(req).then((res: DeleteAccountingCodeRes
 * `postWorkflowsTaskRerun` - Rerun a workflow task
 * `putWorkflowsTasksUpdate` - Update workflow tasks
 
-### Zuora Revenue Integration
+### zuoraRevenueIntegration
 
 * `putRevProAccountingCodes` - Update a Zuora Revenue accounting code
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

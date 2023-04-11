@@ -1,28 +1,72 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetAllRecordsForCustomObjectTypePathParams extends SpeakeasyBase {
-    object: string;
-}
-export declare class GetAllRecordsForCustomObjectTypeQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETAllRecordsForCustomObjectTypeRequest extends SpeakeasyBase {
+    /**
+     * `Bearer {token}` for a valid OAuth token.
+     *
+     * @remarks
+     *
+     */
+    authorization: string;
+    /**
+     * An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+     *
+     * @remarks
+     *
+     */
+    zuoraEntityIds?: string;
+    /**
+     * A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+     *
+     * @remarks
+     *
+     * The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+     *
+     */
+    zuoraTrackId?: string;
+    /**
+     * API version that determines the response schema. The default version is used if this parameter is not included. Specify `Zuora-Version` in the request header if you expect a specific response schema.
+     */
+    zuoraVersion?: Date;
+    /**
+     * The `cursor` points to the last record of the previous result set. The cursor record is not included in the query result. The call returns the first page if `cursor` is not provided and `pageSize` is valid.
+     */
     cursor?: string;
+    /**
+     * UUIDs of the records to be queried. For example:
+     *
+     * @remarks
+     *
+     * `GET /objects/records/default/passenger?ids=258d65b2-7bc6-4142-88bc-5184931af493&ids=82ecc9f7-b192-4f88-a4a3-4b2af6c750a1`
+     *
+     */
     ids?: string;
+    /**
+     * Specifies the custom object's API name as object. It is case-sensitive.
+     */
+    object: string;
+    /**
+     * Page size. The value must be between 1 and 1000.
+     */
     pageSize?: number;
+    /**
+     * The query string to filter the records of a custom object. See the [Query syntax of custom object records](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Data_Model/Custom_object_records/Query_syntax_of_custom_object_records) for more information.
+     *
+     * @remarks
+     *
+     * Note that the `q` parameter only applies to filterable fields.
+     *
+     */
     q?: string;
 }
-export declare class GetAllRecordsForCustomObjectTypeHeaders extends SpeakeasyBase {
-    authorization: string;
-    zuoraEntityIds?: string;
-    zuoraTrackId?: string;
-    zuoraVersion?: Date;
-}
-export declare class GetAllRecordsForCustomObjectTypeRequest extends SpeakeasyBase {
-    pathParams: GetAllRecordsForCustomObjectTypePathParams;
-    queryParams: GetAllRecordsForCustomObjectTypeQueryParams;
-    headers: GetAllRecordsForCustomObjectTypeHeaders;
-}
-export declare class GetAllRecordsForCustomObjectTypeResponse extends SpeakeasyBase {
+export declare class GETAllRecordsForCustomObjectTypeResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
+    /**
+     * OK
+     */
     queryCustomObjectRecordsResponse?: shared.QueryCustomObjectRecordsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

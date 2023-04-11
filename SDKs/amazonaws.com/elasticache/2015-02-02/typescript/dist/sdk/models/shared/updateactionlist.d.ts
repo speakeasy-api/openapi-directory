@@ -8,7 +8,7 @@ import { SlaMetEnum } from "./slametenum";
 import { UpdateActionStatusEnum } from "./updateactionstatusenum";
 /**
  * The status of the service update for a specific replication group
-**/
+ */
 export declare class UpdateActionList extends SpeakeasyBase {
     cacheClusterId?: string;
     cacheNodeUpdateStatus?: CacheNodeUpdateStatusList[];

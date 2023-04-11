@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class OnDemandPromotions {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,23 +9,23 @@ export declare class OnDemandPromotions {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createVodPromotion - Add a promotion to an On Demand page
-    **/
-    createVodPromotion(req: operations.CreateVodPromotionRequest, config?: AxiosRequestConfig): Promise<operations.CreateVodPromotionResponse>;
+     * Add a promotion to an On Demand page
+     */
+    createVodPromotion(req: operations.CreateVodPromotionRequest, security: operations.CreateVodPromotionSecurity, config?: AxiosRequestConfig): Promise<operations.CreateVodPromotionResponse>;
     /**
-     * deleteVodPromotion - Remove a promotion from an On Demand page
-    **/
-    deleteVodPromotion(req: operations.DeleteVodPromotionRequest, config?: AxiosRequestConfig): Promise<operations.DeleteVodPromotionResponse>;
+     * Remove a promotion from an On Demand page
+     */
+    deleteVodPromotion(req: operations.DeleteVodPromotionRequest, security: operations.DeleteVodPromotionSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteVodPromotionResponse>;
     /**
-     * getVodPromotion - Get a specific promotion on an On Demand page
-    **/
-    getVodPromotion(req: operations.GetVodPromotionRequest, config?: AxiosRequestConfig): Promise<operations.GetVodPromotionResponse>;
+     * Get a specific promotion on an On Demand page
+     */
+    getVodPromotion(req: operations.GetVodPromotionRequest, security: operations.GetVodPromotionSecurity, config?: AxiosRequestConfig): Promise<operations.GetVodPromotionResponse>;
     /**
-     * getVodPromotionCodes - Get all the codes of a promotion on an On Demand page
-    **/
-    getVodPromotionCodes(req: operations.GetVodPromotionCodesRequest, config?: AxiosRequestConfig): Promise<operations.GetVodPromotionCodesResponse>;
+     * Get all the codes of a promotion on an On Demand page
+     */
+    getVodPromotionCodes(req: operations.GetVodPromotionCodesRequest, security: operations.GetVodPromotionCodesSecurity, config?: AxiosRequestConfig): Promise<operations.GetVodPromotionCodesResponse>;
     /**
-     * getVodPromotions - Get all the promotions on an On Demand page
-    **/
-    getVodPromotions(req: operations.GetVodPromotionsRequest, config?: AxiosRequestConfig): Promise<operations.GetVodPromotionsResponse>;
+     * Get all the promotions on an On Demand page
+     */
+    getVodPromotions(req: operations.GetVodPromotionsRequest, security: operations.GetVodPromotionsSecurity, config?: AxiosRequestConfig): Promise<operations.GetVodPromotionsResponse>;
 }

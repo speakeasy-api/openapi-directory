@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateColumnStatisticsForPartitionXAmzTargetEnum {
-    AwsGlueUpdateColumnStatisticsForPartition = "AWSGlue.UpdateColumnStatisticsForPartition"
+    AWSGlueUpdateColumnStatisticsForPartition = "AWSGlue.UpdateColumnStatisticsForPartition"
 }
-export declare class UpdateColumnStatisticsForPartitionHeaders extends SpeakeasyBase {
+export declare class UpdateColumnStatisticsForPartitionRequest extends SpeakeasyBase {
+    updateColumnStatisticsForPartitionRequest: shared.UpdateColumnStatisticsForPartitionRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class UpdateColumnStatisticsForPartitionHeaders extends Speakeasy
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateColumnStatisticsForPartitionXAmzTargetEnum;
 }
-export declare class UpdateColumnStatisticsForPartitionRequest extends SpeakeasyBase {
-    headers: UpdateColumnStatisticsForPartitionHeaders;
-    request: shared.UpdateColumnStatisticsForPartitionRequest;
-}
 export declare class UpdateColumnStatisticsForPartitionResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * GlueEncryptionException
+     */
     glueEncryptionException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     updateColumnStatisticsForPartitionResponse?: shared.UpdateColumnStatisticsForPartitionResponse;
 }

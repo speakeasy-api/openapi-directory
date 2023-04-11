@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Meta } from "./meta";
 import { MediaTypeHolder } from "./mediatypeholder";
+import { Meta } from "./meta";
 export declare class MediaTypeHolderWrapped extends SpeakeasyBase {
     callback?: string;
     meta?: Meta;

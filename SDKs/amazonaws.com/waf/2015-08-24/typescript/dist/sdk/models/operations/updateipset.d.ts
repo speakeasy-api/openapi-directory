@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum UpdateIpSetXAmzTargetEnum {
-    Awswaf20150824UpdateIpSet = "AWSWAF_20150824.UpdateIPSet"
+import { AxiosResponse } from "axios";
+export declare enum UpdateIPSetXAmzTargetEnum {
+    AWSWAF20150824UpdateIPSet = "AWSWAF_20150824.UpdateIPSet"
 }
-export declare class UpdateIpSetHeaders extends SpeakeasyBase {
+export declare class UpdateIPSetRequest extends SpeakeasyBase {
+    updateIPSetRequest: shared.UpdateIPSetRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,23 +13,50 @@ export declare class UpdateIpSetHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: UpdateIpSetXAmzTargetEnum;
+    xAmzTarget: UpdateIPSetXAmzTargetEnum;
 }
-export declare class UpdateIpSetRequest extends SpeakeasyBase {
-    headers: UpdateIpSetHeaders;
-    request: shared.UpdateIpSetRequest;
-}
-export declare class UpdateIpSetResponse extends SpeakeasyBase {
+export declare class UpdateIPSetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateIPSetResponse?: shared.UpdateIpSetResponse;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
+    updateIPSetResponse?: shared.UpdateIPSetResponse;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFInvalidAccountException
+     */
     wafInvalidAccountException?: any;
+    /**
+     * WAFInvalidOperationException
+     */
     wafInvalidOperationException?: any;
+    /**
+     * WAFInvalidParameterException
+     */
     wafInvalidParameterException?: any;
+    /**
+     * WAFLimitsExceededException
+     */
     wafLimitsExceededException?: any;
+    /**
+     * WAFNonexistentContainerException
+     */
     wafNonexistentContainerException?: any;
+    /**
+     * WAFNonexistentItemException
+     */
     wafNonexistentItemException?: any;
+    /**
+     * WAFReferencedItemException
+     */
     wafReferencedItemException?: any;
+    /**
+     * WAFStaleDataException
+     */
     wafStaleDataException?: any;
 }

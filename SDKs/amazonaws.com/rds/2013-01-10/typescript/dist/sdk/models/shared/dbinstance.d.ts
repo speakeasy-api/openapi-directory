@@ -1,12 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbParameterGroupStatusList } from "./dbparametergroupstatuslist";
-import { DbSecurityGroupMembershipList } from "./dbsecuritygroupmembershiplist";
-import { DbSubnetGroup } from "./dbsubnetgroup";
+import { DBParameterGroupStatusList } from "./dbparametergroupstatuslist";
+import { DBSecurityGroupMembershipList } from "./dbsecuritygroupmembershiplist";
+import { DBSubnetGroup } from "./dbsubnetgroup";
 import { Endpoint } from "./endpoint";
 import { OptionGroupMembership } from "./optiongroupmembership";
 import { PendingModifiedValues } from "./pendingmodifiedvalues";
 import { VpcSecurityGroupMembershipList } from "./vpcsecuritygroupmembershiplist";
-export declare class DbInstance extends SpeakeasyBase {
+export declare class DBInstance extends SpeakeasyBase {
     allocatedStorage?: number;
     autoMinorVersionUpgrade?: boolean;
     availabilityZone?: string;
@@ -16,9 +16,9 @@ export declare class DbInstance extends SpeakeasyBase {
     dbInstanceIdentifier?: string;
     dbInstanceStatus?: string;
     dbName?: string;
-    dbParameterGroups?: DbParameterGroupStatusList[];
-    dbSecurityGroups?: DbSecurityGroupMembershipList[];
-    dbSubnetGroup?: DbSubnetGroup;
+    dbParameterGroups?: DBParameterGroupStatusList[];
+    dbSecurityGroups?: DBSecurityGroupMembershipList[];
+    dbSubnetGroup?: DBSubnetGroup;
     endpoint?: Endpoint;
     engine?: string;
     engineVersion?: string;
@@ -33,7 +33,7 @@ export declare class DbInstance extends SpeakeasyBase {
     preferredBackupWindow?: string;
     preferredMaintenanceWindow?: string;
     publiclyAccessible?: boolean;
-    readReplicaDBInstanceIdentifiers?: Record<string, any>[];
+    readReplicaDBInstanceIdentifiers?: string[];
     readReplicaSourceDBInstanceIdentifier?: string;
     secondaryAvailabilityZone?: string;
     vpcSecurityGroups?: VpcSecurityGroupMembershipList[];

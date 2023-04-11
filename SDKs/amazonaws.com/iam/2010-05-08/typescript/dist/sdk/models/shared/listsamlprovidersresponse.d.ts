@@ -1,8 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { SamlProviderListEntry } from "./samlproviderlistentry";
+import { SAMLProviderListEntry } from "./samlproviderlistentry";
 /**
  * Contains the response to a successful <a>ListSAMLProviders</a> request.
-**/
-export declare class ListSamlProvidersResponse extends SpeakeasyBase {
-    samlProviderList?: SamlProviderListEntry[];
+ */
+export declare class ListSAMLProvidersResponse extends SpeakeasyBase {
+    samlProviderList?: SAMLProviderListEntry[];
 }

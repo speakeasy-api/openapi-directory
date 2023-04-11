@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostSetDesiredCapacityActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTSetDesiredCapacityActionEnum {
     SetDesiredCapacity = "SetDesiredCapacity"
 }
-export declare enum PostSetDesiredCapacityVersionEnum {
+export declare enum POSTSetDesiredCapacityVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class PostSetDesiredCapacityQueryParams extends SpeakeasyBase {
-    action: PostSetDesiredCapacityActionEnum;
-    version: PostSetDesiredCapacityVersionEnum;
-}
-export declare class PostSetDesiredCapacityHeaders extends SpeakeasyBase {
+export declare class POSTSetDesiredCapacityRequest extends SpeakeasyBase {
+    action: POSTSetDesiredCapacityActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTSetDesiredCapacityVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostSetDesiredCapacityHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostSetDesiredCapacityRequest extends SpeakeasyBase {
-    queryParams: PostSetDesiredCapacityQueryParams;
-    headers: PostSetDesiredCapacityHeaders;
-    request?: Uint8Array;
-}
-export declare class PostSetDesiredCapacityResponse extends SpeakeasyBase {
+export declare class POSTSetDesiredCapacityResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

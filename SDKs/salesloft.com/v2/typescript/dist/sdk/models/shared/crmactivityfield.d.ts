@@ -1,0 +1,62 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+export declare class CrmActivityField extends SpeakeasyBase {
+    /**
+     * Datetime of when the CrmActivityField was created
+     */
+    createdAt?: Date;
+    /**
+     * The CRM object type that this field maps to. Valid object types are CRM dependent: Task, Phonecall, Email.
+     *
+     * @remarks
+     *
+     */
+    crmObjectType?: string;
+    /**
+     * The CRM field name
+     */
+    field?: string;
+    /**
+     * The type of this field in your CRM. Certain field types can only accept structured input.
+     */
+    fieldType?: string;
+    /**
+     * ID of CrmActivityField
+     */
+    id?: number;
+    /**
+     * Valid picklist values, if present for this field. The format is {label => value}. If present, only
+     *
+     * @remarks
+     * values in the picklist structure can be used as a crm param.
+     *
+     */
+    picklistValues?: Record<string, any>;
+    /**
+     * The Salesforce object type that this field maps to. Valid object types are: Task.
+     *
+     * @remarks
+     * More object types may be added in the future.
+     *
+     */
+    salesforceObjectType?: string;
+    /**
+     * SalesLoft object that this field is mapped for. Valid sources are: email, phone
+     */
+    source?: string;
+    /**
+     * A human friendly title for this field
+     */
+    title?: string;
+    /**
+     * Datetime of when the CrmActivityField was last updated
+     */
+    updatedAt?: Date;
+    /**
+     * A value to always be written. This value does not need to be sent to other endpoints' crm params,
+     *
+     * @remarks
+     * but must be the exact value if sent. Email source fields will always have a value present.
+     *
+     */
+    value?: string;
+}

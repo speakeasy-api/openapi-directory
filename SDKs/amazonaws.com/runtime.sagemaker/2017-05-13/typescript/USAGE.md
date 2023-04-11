@@ -1,40 +1,38 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { InvokeEndpointRequest, InvokeEndpointResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  InvokeEndpointRequest,
+  InvokeEndpointResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    hmac: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: InvokeEndpointRequest = {
-  pathParams: {
-    endpointName: "sit",
+  accept: "corrupti",
+  contentType: "provident",
+  endpointName: "distinctio",
+  requestBody: {
+    body: "quibusdam",
   },
-  headers: {
-    accept: "voluptas",
-    contentType: "culpa",
-    xAmzAlgorithm: "expedita",
-    xAmzContentSha256: "consequuntur",
-    xAmzCredential: "dolor",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "voluptas",
-    xAmzSignature: "fugit",
-    xAmzSignedHeaders: "et",
-    xAmznSageMakerCustomAttributes: "nihil",
-    xAmznSageMakerInferenceId: "rerum",
-    xAmznSageMakerTargetContainerHostname: "dicta",
-    xAmznSageMakerTargetModel: "debitis",
-    xAmznSageMakerTargetVariant: "voluptatum",
-  },
-  request: {
-    body: "et",
-  },
+  xAmzAlgorithm: "unde",
+  xAmzContentSha256: "nulla",
+  xAmzCredential: "corrupti",
+  xAmzDate: "illum",
+  xAmzSecurityToken: "vel",
+  xAmzSignature: "error",
+  xAmzSignedHeaders: "deserunt",
+  xAmznSageMakerCustomAttributes: "suscipit",
+  xAmznSageMakerEnableExplanations: "iure",
+  xAmznSageMakerInferenceId: "magnam",
+  xAmznSageMakerTargetContainerHostname: "debitis",
+  xAmznSageMakerTargetModel: "ipsa",
+  xAmznSageMakerTargetVariant: "delectus",
 };
 
 sdk.invokeEndpoint(req).then((res: InvokeEndpointResponse | AxiosError) => {

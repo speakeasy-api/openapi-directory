@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * State postal code of the address
+ */
 export declare enum AgentLocationCreateRequestAddressStateEnum {
     Ak = "AK",
     Al = "AL",
@@ -63,17 +66,44 @@ export declare enum AgentLocationCreateRequestAddressStateEnum {
 }
 /**
  * Address of the agent location
-**/
+ */
 export declare class AgentLocationCreateRequestAddress extends SpeakeasyBase {
+    /**
+     * City of the address
+     */
     city: string;
+    /**
+     * County of the address
+     */
     county?: string;
+    /**
+     * State postal code of the address
+     */
     state: AgentLocationCreateRequestAddressStateEnum;
+    /**
+     * Line one of the address
+     */
     streetOne: string;
+    /**
+     * Line two of the address
+     */
     streetTwo?: string;
+    /**
+     * Zip code of the address
+     */
     zipCode: string;
 }
 export declare class AgentLocationCreateRequest extends SpeakeasyBase {
+    /**
+     * Address of the agent location
+     */
     address: AgentLocationCreateRequestAddress;
+    /**
+     * Display name for the agent location
+     */
     displayName: string;
+    /**
+     * Boolean field to determine whether the agent location should be used as the primary agent location
+     */
     primaryLocation: boolean;
 }

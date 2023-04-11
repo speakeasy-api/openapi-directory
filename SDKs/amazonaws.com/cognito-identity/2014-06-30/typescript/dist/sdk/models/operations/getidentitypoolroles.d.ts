@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetIdentityPoolRolesXAmzTargetEnum {
-    AwsCognitoIdentityServiceGetIdentityPoolRoles = "AWSCognitoIdentityService.GetIdentityPoolRoles"
+    AWSCognitoIdentityServiceGetIdentityPoolRoles = "AWSCognitoIdentityService.GetIdentityPoolRoles"
 }
-export declare class GetIdentityPoolRolesHeaders extends SpeakeasyBase {
+export declare class GetIdentityPoolRolesRequest extends SpeakeasyBase {
+    getIdentityPoolRolesInput: shared.GetIdentityPoolRolesInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class GetIdentityPoolRolesHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetIdentityPoolRolesXAmzTargetEnum;
 }
-export declare class GetIdentityPoolRolesRequest extends SpeakeasyBase {
-    headers: GetIdentityPoolRolesHeaders;
-    request: shared.GetIdentityPoolRolesInput;
-}
 export declare class GetIdentityPoolRolesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getIdentityPoolRolesResponse?: shared.GetIdentityPoolRolesResponse;
+    /**
+     * InternalErrorException
+     */
     internalErrorException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * NotAuthorizedException
+     */
     notAuthorizedException?: any;
-    resourceConflictException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceConflictException
+     */
+    resourceConflictException?: any;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

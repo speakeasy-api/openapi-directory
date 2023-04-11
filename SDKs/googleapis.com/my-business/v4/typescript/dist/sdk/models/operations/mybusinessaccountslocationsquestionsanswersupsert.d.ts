@@ -1,28 +1,63 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class MybusinessAccountsLocationsQuestionsAnswersUpsertPathParams extends SpeakeasyBase {
-    parent: string;
-}
-export declare class MybusinessAccountsLocationsQuestionsAnswersUpsertQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class MybusinessAccountsLocationsQuestionsAnswersUpsertRequest extends SpeakeasyBase {
+    /**
+     * V1 error format.
+     */
     dollarXgafv?: shared.XgafvEnum;
+    upsertAnswerRequest?: shared.UpsertAnswerRequest;
+    /**
+     * OAuth access token.
+     */
     accessToken?: string;
+    /**
+     * Data format for response.
+     */
     alt?: shared.AltEnum;
+    /**
+     * JSONP
+     */
     callback?: string;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
     fields?: string;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
     key?: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
     oauthToken?: string;
+    /**
+     * The name of the question to write an answer for.
+     */
+    parent: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
     prettyPrint?: boolean;
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
     quotaUser?: string;
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
     uploadType?: string;
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
     uploadProtocol?: string;
 }
-export declare class MybusinessAccountsLocationsQuestionsAnswersUpsertRequest extends SpeakeasyBase {
-    pathParams: MybusinessAccountsLocationsQuestionsAnswersUpsertPathParams;
-    queryParams: MybusinessAccountsLocationsQuestionsAnswersUpsertQueryParams;
-    request?: shared.UpsertAnswerRequest;
-}
 export declare class MybusinessAccountsLocationsQuestionsAnswersUpsertResponse extends SpeakeasyBase {
+    /**
+     * Successful response
+     */
     answer?: shared.Answer;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

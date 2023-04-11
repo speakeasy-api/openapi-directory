@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeRuleGroupXAmzTargetEnum {
     NetworkFirewall20201112DescribeRuleGroup = "NetworkFirewall_20201112.DescribeRuleGroup"
 }
-export declare class DescribeRuleGroupHeaders extends SpeakeasyBase {
+export declare class DescribeRuleGroupRequest extends SpeakeasyBase {
+    describeRuleGroupRequest: shared.DescribeRuleGroupRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class DescribeRuleGroupHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeRuleGroupXAmzTargetEnum;
 }
-export declare class DescribeRuleGroupRequest extends SpeakeasyBase {
-    headers: DescribeRuleGroupHeaders;
-    request: shared.DescribeRuleGroupRequest;
-}
 export declare class DescribeRuleGroupResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeRuleGroupResponse?: shared.DescribeRuleGroupResponse;
+    /**
+     * InternalServerError
+     */
     internalServerError?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

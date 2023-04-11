@@ -1,22 +1,44 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetOrderInvoicePreviewPathParams extends SpeakeasyBase {
-    accountId: string;
-    beezUPOrderUUID: string;
-    marketplaceTechnicalCode: string;
-}
-export declare class GetOrderInvoicePreviewHeaders extends SpeakeasyBase {
-    acceptEncoding: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetOrderInvoicePreviewRequest extends SpeakeasyBase {
-    pathParams: GetOrderInvoicePreviewPathParams;
-    headers: GetOrderInvoicePreviewHeaders;
-    request: shared.PreviewOrderInvoiceRequest;
+    /**
+     * Allows the client to indicate wether it accepts a compressed encoding to reduce traffic size
+     */
+    acceptEncoding: string;
+    /**
+     * The Account Identifier
+     */
+    accountId: string;
+    /**
+     * The BeezUP Order UUID
+     */
+    beezUPOrderUUID: string;
+    /**
+     * The Marketplace Technical Code
+     */
+    marketplaceTechnicalCode: string;
+    previewOrderInvoiceRequest: shared.PreviewOrderInvoiceRequest;
 }
 export declare class GetOrderInvoicePreviewResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     * Occurs when something goes wrong
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * OwnerId not authorized
+     *
+     * @remarks
+     * The required order invoice settings have not been set
+     * BeezUPOrderStatus forbidden
+     *
+     */
     errorResponseMessage?: shared.ErrorResponseMessage;
+    /**
+     * Order Invoice preview successfully returned.
+     */
     previewOrderInvoiceResponse?: shared.PreviewOrderInvoiceResponse;
 }

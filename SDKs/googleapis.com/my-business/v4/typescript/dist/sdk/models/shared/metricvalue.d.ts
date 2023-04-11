@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { DimensionalMetricValue } from "./dimensionalmetricvalue";
+/**
+ * The metric for which the value applies.
+ */
 export declare enum MetricValueMetricEnum {
     MetricUnspecified = "METRIC_UNSPECIFIED",
     All = "ALL",
@@ -20,9 +23,18 @@ export declare enum MetricValueMetricEnum {
 }
 /**
  * A value for a single Metric from a starting time.
-**/
+ */
 export declare class MetricValue extends SpeakeasyBase {
+    /**
+     * Dimensional values for this metric.
+     */
     dimensionalValues?: DimensionalMetricValue[];
+    /**
+     * The metric for which the value applies.
+     */
     metric?: MetricValueMetricEnum;
+    /**
+     * A value for a single metric with a given time dimension.
+     */
     totalValue?: DimensionalMetricValue;
 }

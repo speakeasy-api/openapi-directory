@@ -1,12 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetGeneByMapKeyUsingGetPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETGeneByMapKeyUsingGETRequest extends SpeakeasyBase {
+    /**
+     * A list of RGD assembly map keys can be found in the lookup service
+     */
     mapKey: number;
 }
-export declare class GetGeneByMapKeyUsingGetRequest extends SpeakeasyBase {
-    pathParams: GetGeneByMapKeyUsingGetPathParams;
-}
-export declare class GetGeneByMapKeyUsingGetResponse extends SpeakeasyBase {
+export declare class GETGeneByMapKeyUsingGETResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

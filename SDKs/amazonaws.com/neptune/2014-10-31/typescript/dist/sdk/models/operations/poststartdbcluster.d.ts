@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostStartDbClusterActionEnum {
-    StartDbCluster = "StartDBCluster"
+import { AxiosResponse } from "axios";
+export declare enum POSTStartDBClusterActionEnum {
+    StartDBCluster = "StartDBCluster"
 }
-export declare enum PostStartDbClusterVersionEnum {
+export declare enum POSTStartDBClusterVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class PostStartDbClusterQueryParams extends SpeakeasyBase {
-    action: PostStartDbClusterActionEnum;
-    version: PostStartDbClusterVersionEnum;
-}
-export declare class PostStartDbClusterHeaders extends SpeakeasyBase {
+export declare class POSTStartDBClusterRequest extends SpeakeasyBase {
+    action: POSTStartDBClusterActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTStartDBClusterVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostStartDbClusterHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostStartDbClusterRequest extends SpeakeasyBase {
-    queryParams: PostStartDbClusterQueryParams;
-    headers: PostStartDbClusterHeaders;
-    request?: Uint8Array;
-}
-export declare class PostStartDbClusterResponse extends SpeakeasyBase {
+export declare class POSTStartDBClusterResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

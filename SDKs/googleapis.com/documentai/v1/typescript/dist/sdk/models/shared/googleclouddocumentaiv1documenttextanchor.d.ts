@@ -1,0 +1,15 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { GoogleCloudDocumentaiV1DocumentTextAnchorTextSegment } from "./googleclouddocumentaiv1documenttextanchortextsegment";
+/**
+ * Text reference indexing into the Document.text.
+ */
+export declare class GoogleCloudDocumentaiV1DocumentTextAnchor extends SpeakeasyBase {
+    /**
+     * Contains the content of the text span so that users do not have to look it up in the text_segments. It is always populated for formFields.
+     */
+    content?: string;
+    /**
+     * The text segments from the Document.text.
+     */
+    textSegments?: GoogleCloudDocumentaiV1DocumentTextAnchorTextSegment[];
+}

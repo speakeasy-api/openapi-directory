@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum StartDataCollectionByAgentIdsXAmzTargetEnum {
-    AwsPoseidonServiceV20151101StartDataCollectionByAgentIds = "AWSPoseidonService_V2015_11_01.StartDataCollectionByAgentIds"
+    AWSPoseidonServiceV20151101StartDataCollectionByAgentIds = "AWSPoseidonService_V2015_11_01.StartDataCollectionByAgentIds"
 }
-export declare class StartDataCollectionByAgentIdsHeaders extends SpeakeasyBase {
+export declare class StartDataCollectionByAgentIdsRequest extends SpeakeasyBase {
+    startDataCollectionByAgentIdsRequest: shared.StartDataCollectionByAgentIdsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class StartDataCollectionByAgentIdsHeaders extends SpeakeasyBase 
     xAmzSignedHeaders?: string;
     xAmzTarget: StartDataCollectionByAgentIdsXAmzTargetEnum;
 }
-export declare class StartDataCollectionByAgentIdsRequest extends SpeakeasyBase {
-    headers: StartDataCollectionByAgentIdsHeaders;
-    request: shared.StartDataCollectionByAgentIdsRequest;
-}
 export declare class StartDataCollectionByAgentIdsResponse extends SpeakeasyBase {
+    /**
+     * AuthorizationErrorException
+     */
     authorizationErrorException?: any;
     contentType: string;
+    /**
+     * HomeRegionNotSetException
+     */
     homeRegionNotSetException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
+    /**
+     * ServerInternalErrorException
+     */
     serverInternalErrorException?: any;
+    /**
+     * Success
+     */
     startDataCollectionByAgentIdsResponse?: shared.StartDataCollectionByAgentIdsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

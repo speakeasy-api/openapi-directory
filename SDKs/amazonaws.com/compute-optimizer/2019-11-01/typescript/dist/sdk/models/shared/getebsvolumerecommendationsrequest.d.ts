@@ -1,8 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { EbsFilter } from "./ebsfilter";
-export declare class GetEbsVolumeRecommendationsRequest extends SpeakeasyBase {
+import { EBSFilter } from "./ebsfilter";
+export declare class GetEBSVolumeRecommendationsRequest extends SpeakeasyBase {
     accountIds?: string[];
-    filters?: EbsFilter[];
+    filters?: EBSFilter[];
     maxResults?: number;
     nextToken?: string;
     volumeArns?: string[];

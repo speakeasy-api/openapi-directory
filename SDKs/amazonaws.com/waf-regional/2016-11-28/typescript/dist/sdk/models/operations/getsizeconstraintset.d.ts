@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetSizeConstraintSetXAmzTargetEnum {
-    AwswafRegional20161128GetSizeConstraintSet = "AWSWAF_Regional_20161128.GetSizeConstraintSet"
+    AWSWAFRegional20161128GetSizeConstraintSet = "AWSWAF_Regional_20161128.GetSizeConstraintSet"
 }
-export declare class GetSizeConstraintSetHeaders extends SpeakeasyBase {
+export declare class GetSizeConstraintSetRequest extends SpeakeasyBase {
+    getSizeConstraintSetRequest: shared.GetSizeConstraintSetRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class GetSizeConstraintSetHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetSizeConstraintSetXAmzTargetEnum;
 }
-export declare class GetSizeConstraintSetRequest extends SpeakeasyBase {
-    headers: GetSizeConstraintSetHeaders;
-    request: shared.GetSizeConstraintSetRequest;
-}
 export declare class GetSizeConstraintSetResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getSizeConstraintSetResponse?: shared.GetSizeConstraintSetResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFInvalidAccountException
+     */
     wafInvalidAccountException?: any;
+    /**
+     * WAFNonexistentItemException
+     */
     wafNonexistentItemException?: any;
 }

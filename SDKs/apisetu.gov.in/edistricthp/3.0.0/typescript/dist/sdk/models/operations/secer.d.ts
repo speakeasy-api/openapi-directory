@@ -1,115 +1,170 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class SecerSecurity extends SpeakeasyBase {
+    apiKey: string;
+    clientId: string;
+}
 export declare class SecerRequestBodyCertificateParameters extends SpeakeasyBase {
+    /**
+     * ApplicationNumber
+     */
     udf1: string;
 }
+/**
+ * The format of the certificate in response.
+ */
 export declare enum SecerRequestBodyFormatEnum {
     Pdf = "pdf"
 }
+/**
+ * Request format
+ */
 export declare class SecerRequestBody extends SpeakeasyBase {
     certificateParameters?: SecerRequestBodyCertificateParameters;
-    consentArtifact?: any;
+    consentArtifact?: shared.ConsentArtifactSchema;
+    /**
+     * The format of the certificate in response.
+     */
     format: SecerRequestBodyFormatEnum;
+    /**
+     * A unique transaction id for this request in UUID format. It is used for tracking the request.
+     */
     txnId: string;
 }
-export declare class SecerSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
-    clientId: shared.SchemeClientId;
+export declare enum Secer504ApplicationJSONErrorEnum {
+    GatewayTimeout = "gateway_timeout"
 }
-export declare enum Secer400ApplicationJsonErrorEnum {
+export declare enum Secer504ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
+}
+/**
+ * Gateway timeout
+ */
+export declare class Secer504ApplicationJSON extends SpeakeasyBase {
+    error?: Secer504ApplicationJSONErrorEnum;
+    errorDescription?: Secer504ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Secer503ApplicationJSONErrorEnum {
+    ServiceUnavailable = "service_unavailable"
+}
+export declare enum Secer503ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
+}
+/**
+ * Service unavailable
+ */
+export declare class Secer503ApplicationJSON extends SpeakeasyBase {
+    error?: Secer503ApplicationJSONErrorEnum;
+    errorDescription?: Secer503ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Secer502ApplicationJSONErrorEnum {
+    BadGatewy = "bad_gatewy"
+}
+export declare enum Secer502ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
+}
+/**
+ * Bad gateway
+ */
+export declare class Secer502ApplicationJSON extends SpeakeasyBase {
+    error?: Secer502ApplicationJSONErrorEnum;
+    errorDescription?: Secer502ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Secer500ApplicationJSONErrorEnum {
+    InternalServerError = "internal_server_error"
+}
+export declare enum Secer500ApplicationJSONErrorDescriptionEnum {
+    InternalServerError = "Internal server error"
+}
+/**
+ * Internal server error
+ */
+export declare class Secer500ApplicationJSON extends SpeakeasyBase {
+    error?: Secer500ApplicationJSONErrorEnum;
+    errorDescription?: Secer500ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Secer404ApplicationJSONErrorEnum {
+    RecordNotFound = "record_not_found",
+    UrlNotFound = "url_not_found"
+}
+export declare enum Secer404ApplicationJSONErrorDescriptionEnum {
+    NoRecordFound = "No record found",
+    YourAPIUrlOrPathIsIncorrect = "Your API url or path is incorrect"
+}
+/**
+ * No record found
+ */
+export declare class Secer404ApplicationJSON extends SpeakeasyBase {
+    error?: Secer404ApplicationJSONErrorEnum;
+    errorDescription?: Secer404ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Secer401ApplicationJSONErrorEnum {
+    InvalidAuthentication = "invalid_authentication",
+    InvalidAuthorization = "invalid_authorization"
+}
+export declare enum Secer401ApplicationJSONErrorDescriptionEnum {
+    AuthenticationFailed = "Authentication failed",
+    YouAreNotAuthorizedToUseThisAPI = "You are not authorized to use this API"
+}
+/**
+ * Unauthorized access
+ */
+export declare class Secer401ApplicationJSON extends SpeakeasyBase {
+    error?: Secer401ApplicationJSONErrorEnum;
+    errorDescription?: Secer401ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Secer400ApplicationJSONErrorEnum {
     MissingParameter = "missing_parameter",
     InvalidParameter = "invalid_parameter",
     InvalidFormat = "invalid_format",
     InvalidTxnid = "invalid_txnid",
     InvalidConsentid = "invalid_consentid"
 }
-export declare enum Secer400ApplicationJsonErrorDescriptionEnum {
+export declare enum Secer400ApplicationJSONErrorDescriptionEnum {
     PleaseProvideAllMandatoryParameters = "Please provide all mandatory parameters",
     BadRequest = "Bad request",
     TheFormatParameterIsInvalid = "The format parameter is invalid",
-    TheTxnIdParameterMustBeInUuidFormat = "The txnId parameter must be in UUID format",
-    TheConsentIdParameterMustBeInUuidFormat = "The consentId parameter must be in UUID format"
+    TheTxnIdParameterMustBeInUUIDFormat = "The txnId parameter must be in UUID format",
+    TheConsentIdParameterMustBeInUUIDFormat = "The consentId parameter must be in UUID format"
 }
-export declare class Secer400ApplicationJson extends SpeakeasyBase {
-    error?: Secer400ApplicationJsonErrorEnum;
-    errorDescription?: Secer400ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Secer401ApplicationJsonErrorEnum {
-    InvalidAuthentication = "invalid_authentication",
-    InvalidAuthorization = "invalid_authorization"
-}
-export declare enum Secer401ApplicationJsonErrorDescriptionEnum {
-    AuthenticationFailed = "Authentication failed",
-    YouAreNotAuthorizedToUseThisApi = "You are not authorized to use this API"
-}
-export declare class Secer401ApplicationJson extends SpeakeasyBase {
-    error?: Secer401ApplicationJsonErrorEnum;
-    errorDescription?: Secer401ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Secer404ApplicationJsonErrorEnum {
-    RecordNotFound = "record_not_found",
-    UrlNotFound = "url_not_found"
-}
-export declare enum Secer404ApplicationJsonErrorDescriptionEnum {
-    NoRecordFound = "No record found",
-    YourApiUrlOrPathIsIncorrect = "Your API url or path is incorrect"
-}
-export declare class Secer404ApplicationJson extends SpeakeasyBase {
-    error?: Secer404ApplicationJsonErrorEnum;
-    errorDescription?: Secer404ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Secer500ApplicationJsonErrorEnum {
-    InternalServerError = "internal_server_error"
-}
-export declare enum Secer500ApplicationJsonErrorDescriptionEnum {
-    InternalServerError = "Internal server error"
-}
-export declare class Secer500ApplicationJson extends SpeakeasyBase {
-    error?: Secer500ApplicationJsonErrorEnum;
-    errorDescription?: Secer500ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Secer502ApplicationJsonErrorEnum {
-    BadGatewy = "bad_gatewy"
-}
-export declare enum Secer502ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
-}
-export declare class Secer502ApplicationJson extends SpeakeasyBase {
-    error?: Secer502ApplicationJsonErrorEnum;
-    errorDescription?: Secer502ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Secer503ApplicationJsonErrorEnum {
-    ServiceUnavailable = "service_unavailable"
-}
-export declare enum Secer503ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
-}
-export declare class Secer503ApplicationJson extends SpeakeasyBase {
-    error?: Secer503ApplicationJsonErrorEnum;
-    errorDescription?: Secer503ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Secer504ApplicationJsonErrorEnum {
-    GatewayTimeout = "gateway_timeout"
-}
-export declare enum Secer504ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
-}
-export declare class Secer504ApplicationJson extends SpeakeasyBase {
-    error?: Secer504ApplicationJsonErrorEnum;
-    errorDescription?: Secer504ApplicationJsonErrorDescriptionEnum;
-}
-export declare class SecerRequest extends SpeakeasyBase {
-    request?: SecerRequestBody;
-    security: SecerSecurity;
+/**
+ * Bad request
+ */
+export declare class Secer400ApplicationJSON extends SpeakeasyBase {
+    error?: Secer400ApplicationJSONErrorEnum;
+    errorDescription?: Secer400ApplicationJSONErrorDescriptionEnum;
 }
 export declare class SecerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    secer400ApplicationJSONObject?: Secer400ApplicationJson;
-    secer401ApplicationJSONObject?: Secer401ApplicationJson;
-    secer404ApplicationJSONObject?: Secer404ApplicationJson;
-    secer500ApplicationJSONObject?: Secer500ApplicationJson;
-    secer502ApplicationJSONObject?: Secer502ApplicationJson;
-    secer503ApplicationJSONObject?: Secer503ApplicationJson;
-    secer504ApplicationJSONObject?: Secer504ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad request
+     */
+    secer400ApplicationJSONObject?: Secer400ApplicationJSON;
+    /**
+     * Unauthorized access
+     */
+    secer401ApplicationJSONObject?: Secer401ApplicationJSON;
+    /**
+     * No record found
+     */
+    secer404ApplicationJSONObject?: Secer404ApplicationJSON;
+    /**
+     * Internal server error
+     */
+    secer500ApplicationJSONObject?: Secer500ApplicationJSON;
+    /**
+     * Bad gateway
+     */
+    secer502ApplicationJSONObject?: Secer502ApplicationJSON;
+    /**
+     * Service unavailable
+     */
+    secer503ApplicationJSONObject?: Secer503ApplicationJSON;
+    /**
+     * Gateway timeout
+     */
+    secer504ApplicationJSONObject?: Secer504ApplicationJSON;
 }

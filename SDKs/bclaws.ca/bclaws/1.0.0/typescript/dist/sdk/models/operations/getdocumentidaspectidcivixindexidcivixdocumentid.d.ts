@@ -1,5 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdAspectIdEnum {
+import { AxiosResponse } from "axios";
+/**
+ * The identifier of the 'aspect' (content group) to search
+ */
+export declare enum GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDAspectIDEnum {
     Complete = "complete",
     Corpreg = "corpreg",
     Bcgaz1 = "bcgaz1",
@@ -10,15 +14,22 @@ export declare enum GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdAspectIdEnum
     Hscr = "hscr",
     ArchOic = "arch_oic"
 }
-export declare class GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdPathParams extends SpeakeasyBase {
-    aspectId: GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdAspectIdEnum;
-    civixDocumentId: string;
-    civixIndexId: string;
-}
 export declare class GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdRequest extends SpeakeasyBase {
-    pathParams: GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdPathParams;
+    /**
+     * The identifier of the 'aspect' (content group) to search
+     */
+    aspectId: GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDAspectIDEnum;
+    /**
+     * The document identification code for an index or directory
+     */
+    civixDocumentId: string;
+    /**
+     * Index identification code
+     */
+    civixIndexId: string;
 }
 export declare class GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

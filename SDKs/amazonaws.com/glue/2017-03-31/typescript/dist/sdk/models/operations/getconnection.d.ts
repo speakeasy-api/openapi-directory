@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetConnectionXAmzTargetEnum {
-    AwsGlueGetConnection = "AWSGlue.GetConnection"
+    AWSGlueGetConnection = "AWSGlue.GetConnection"
 }
-export declare class GetConnectionHeaders extends SpeakeasyBase {
+export declare class GetConnectionRequest extends SpeakeasyBase {
+    getConnectionRequest: shared.GetConnectionRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class GetConnectionHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetConnectionXAmzTargetEnum;
 }
-export declare class GetConnectionRequest extends SpeakeasyBase {
-    headers: GetConnectionHeaders;
-    request: shared.GetConnectionRequest;
-}
 export declare class GetConnectionResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * Success
+     */
     getConnectionResponse?: shared.GetConnectionResponse;
+    /**
+     * GlueEncryptionException
+     */
     glueEncryptionException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

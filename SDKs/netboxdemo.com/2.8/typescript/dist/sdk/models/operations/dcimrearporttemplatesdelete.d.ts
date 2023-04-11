@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DcimRearPortTemplatesDeletePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DcimRearPortTemplatesDeleteRequest extends SpeakeasyBase {
-    pathParams: DcimRearPortTemplatesDeletePathParams;
+    /**
+     * A unique integer value identifying this rear port template.
+     */
+    id: number;
 }
 export declare class DcimRearPortTemplatesDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

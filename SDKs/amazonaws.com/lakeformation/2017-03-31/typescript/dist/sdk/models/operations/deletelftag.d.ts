@@ -1,9 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare enum DeleteLfTagXAmzTargetEnum {
-    AwsLakeFormationDeleteLfTag = "AWSLakeFormation.DeleteLFTag"
+import { AxiosResponse } from "axios";
+export declare class DeleteLFTagRequestBody extends SpeakeasyBase {
+    /**
+     * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata store. It contains database definitions, table definitions, and other control information to manage your Lake Formation environment.
+     */
+    catalogId?: string;
+    /**
+     * The key-name for the LF-tag to delete.
+     */
+    tagKey: string;
 }
-export declare class DeleteLfTagHeaders extends SpeakeasyBase {
+export declare class DeleteLFTagRequest extends SpeakeasyBase {
+    requestBody: DeleteLFTagRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,19 +19,33 @@ export declare class DeleteLfTagHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: DeleteLfTagXAmzTargetEnum;
 }
-export declare class DeleteLfTagRequest extends SpeakeasyBase {
-    headers: DeleteLfTagHeaders;
-    request: shared.DeleteLfTagRequest;
-}
-export declare class DeleteLfTagResponse extends SpeakeasyBase {
+export declare class DeleteLFTagResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteLFTagResponse?: Record<string, any>;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

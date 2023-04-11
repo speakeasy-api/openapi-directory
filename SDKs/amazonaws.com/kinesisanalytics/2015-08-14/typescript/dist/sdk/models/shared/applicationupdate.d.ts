@@ -5,7 +5,7 @@ import { OutputUpdate } from "./outputupdate";
 import { ReferenceDataSourceUpdate } from "./referencedatasourceupdate";
 /**
  * Describes updates to apply to an existing Amazon Kinesis Analytics application.
-**/
+ */
 export declare class ApplicationUpdate extends SpeakeasyBase {
     applicationCodeUpdate?: string;
     cloudWatchLoggingOptionUpdates?: CloudWatchLoggingOptionUpdate[];

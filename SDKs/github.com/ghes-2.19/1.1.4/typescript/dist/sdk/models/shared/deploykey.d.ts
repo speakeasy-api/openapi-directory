@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * An SSH key granting access to a single repository.
-**/
+ */
 export declare class DeployKey extends SpeakeasyBase {
     createdAt: string;
     id: number;

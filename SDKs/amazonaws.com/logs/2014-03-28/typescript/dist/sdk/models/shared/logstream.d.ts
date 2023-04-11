@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Represents a log stream, which is a sequence of log events from a single emitter of logs.
-**/
+ */
 export declare class LogStream extends SpeakeasyBase {
     arn?: string;
     creationTime?: number;
@@ -9,6 +9,6 @@ export declare class LogStream extends SpeakeasyBase {
     lastEventTimestamp?: number;
     lastIngestionTime?: number;
     logStreamName?: string;
-    storedBytes?: Record<string, any>;
+    storedBytes?: number;
     uploadSequenceToken?: string;
 }

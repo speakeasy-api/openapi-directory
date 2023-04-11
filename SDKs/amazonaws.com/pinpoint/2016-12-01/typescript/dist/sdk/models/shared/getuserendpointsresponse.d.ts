@@ -1,5 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { EndpointsResponse } from "./endpointsresponse";
+/**
+ * Success
+ */
 export declare class GetUserEndpointsResponse extends SpeakeasyBase {
+    /**
+     * Provides information about all the endpoints that are associated with a user ID.
+     */
     endpointsResponse: EndpointsResponse;
 }

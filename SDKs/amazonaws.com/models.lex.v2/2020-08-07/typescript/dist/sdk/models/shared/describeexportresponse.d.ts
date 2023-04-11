@@ -1,7 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { ExportResourceSpecification } from "./exportresourcespecification";
 import { ExportStatusEnum } from "./exportstatusenum";
 import { ImportExportFileFormatEnum } from "./importexportfileformatenum";
-import { ExportResourceSpecification } from "./exportresourcespecification";
+/**
+ * Success
+ */
 export declare class DescribeExportResponse extends SpeakeasyBase {
     creationDateTime?: Date;
     downloadUrl?: string;

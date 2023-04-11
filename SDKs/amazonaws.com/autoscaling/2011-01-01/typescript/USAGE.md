@@ -1,39 +1,39 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetAttachInstancesRequest, GetAttachInstancesResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GETAttachInstancesRequest,
+  GETAttachInstancesResponse,
+  GETAttachInstancesActionEnum,
+  GETAttachInstancesVersionEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: GetAttachInstancesRequest = {
-  queryParams: {
-    action: "AttachInstances",
-    autoScalingGroupName: "voluptas",
-    instanceIds: [
-      "expedita",
-      "consequuntur",
-    ],
-    version: "2011-01-01",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  headers: {
-    xAmzAlgorithm: "expedita",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "fugit",
-    xAmzDate: "et",
-    xAmzSecurityToken: "nihil",
-    xAmzSignature: "rerum",
-    xAmzSignedHeaders: "dicta",
-  },
+});
+
+const req: GETAttachInstancesRequest = {
+  action: GETAttachInstancesActionEnum.AttachInstances,
+  autoScalingGroupName: "corrupti",
+  instanceIds: [
+    "distinctio",
+    "quibusdam",
+    "unde",
+  ],
+  version: GETAttachInstancesVersionEnum.TwoThousandAndEleven0101,
+  xAmzAlgorithm: "nulla",
+  xAmzContentSha256: "corrupti",
+  xAmzCredential: "illum",
+  xAmzDate: "vel",
+  xAmzSecurityToken: "error",
+  xAmzSignature: "deserunt",
+  xAmzSignedHeaders: "suscipit",
 };
 
-sdk.getAttachInstances(req).then((res: GetAttachInstancesResponse | AxiosError) => {
+sdk.getAttachInstances(req).then((res: GETAttachInstancesResponse | AxiosError) => {
    // handle response
 });
 ```

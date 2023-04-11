@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeTransitGatewayMulticastDomainsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeTransitGatewayMulticastDomainsActionEnum {
     DescribeTransitGatewayMulticastDomains = "DescribeTransitGatewayMulticastDomains"
 }
-export declare enum PostDescribeTransitGatewayMulticastDomainsVersionEnum {
+export declare enum POSTDescribeTransitGatewayMulticastDomainsVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDescribeTransitGatewayMulticastDomainsQueryParams extends SpeakeasyBase {
-    action: PostDescribeTransitGatewayMulticastDomainsActionEnum;
+export declare class POSTDescribeTransitGatewayMulticastDomainsRequest extends SpeakeasyBase {
+    action: POSTDescribeTransitGatewayMulticastDomainsActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostDescribeTransitGatewayMulticastDomainsVersionEnum;
-}
-export declare class PostDescribeTransitGatewayMulticastDomainsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeTransitGatewayMulticastDomainsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeTransitGatewayMulticastDomainsHeaders extends S
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeTransitGatewayMulticastDomainsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeTransitGatewayMulticastDomainsQueryParams;
-    headers: PostDescribeTransitGatewayMulticastDomainsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeTransitGatewayMulticastDomainsResponse extends SpeakeasyBase {
+export declare class POSTDescribeTransitGatewayMulticastDomainsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

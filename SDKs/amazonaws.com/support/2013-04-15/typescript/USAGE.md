@@ -1,37 +1,45 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AddAttachmentsToSetRequest, AddAttachmentsToSetResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  AddAttachmentsToSetRequest,
+  AddAttachmentsToSetResponse,
+  AddAttachmentsToSetXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: AddAttachmentsToSetRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "AWSSupport_20130415.AddAttachmentsToSet",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
-    attachmentSetId: "fugit",
+});
+
+const req: AddAttachmentsToSetRequest = {
+  addAttachmentsToSetRequest: {
+    attachmentSetId: "corrupti",
     attachments: [
       {
-        data: "nihil",
-        fileName: "rerum",
+        data: "distinctio",
+        fileName: "quibusdam",
+      },
+      {
+        data: "unde",
+        fileName: "nulla",
+      },
+      {
+        data: "corrupti",
+        fileName: "illum",
       },
     ],
   },
+  xAmzAlgorithm: "vel",
+  xAmzContentSha256: "error",
+  xAmzCredential: "deserunt",
+  xAmzDate: "suscipit",
+  xAmzSecurityToken: "iure",
+  xAmzSignature: "magnam",
+  xAmzSignedHeaders: "debitis",
+  xAmzTarget: AddAttachmentsToSetXAmzTargetEnum.AWSSupport20130415AddAttachmentsToSet,
 };
 
 sdk.addAttachmentsToSet(req).then((res: AddAttachmentsToSetResponse | AxiosError) => {

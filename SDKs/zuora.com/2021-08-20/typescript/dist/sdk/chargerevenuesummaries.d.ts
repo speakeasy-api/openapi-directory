@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class ChargeRevenueSummaries {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,17 +9,19 @@ export declare class ChargeRevenueSummaries {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getCrsByCrsNumber - List all details of a charge revenue summary
+     * List all details of a charge revenue summary
      *
+     * @remarks
      * Retrieves the details of a charge revenue summary by specifying the charge revenue summary number. The response includes all revenue items associated with the charge revenue summary.
      *
-    **/
-    getCrsByCrsNumber(req: operations.GetCrsByCrsNumberRequest, config?: AxiosRequestConfig): Promise<operations.GetCrsByCrsNumberResponse>;
+     */
+    getCRSByCRSNumber(req: operations.GETCRSByCRSNumberRequest, config?: AxiosRequestConfig): Promise<operations.GETCRSByCRSNumberResponse>;
     /**
-     * getCrsByChargeId - Retrieve a charge revenue summary by charge ID
+     * Retrieve a charge revenue summary by charge ID
      *
+     * @remarks
      * Retrieves the details of a charge revenue summary by specifying the subscription charge ID. This response retrieves all revenue items associated with a charge revenue summary.
      *
-    **/
-    getCrsByChargeId(req: operations.GetCrsByChargeIdRequest, config?: AxiosRequestConfig): Promise<operations.GetCrsByChargeIdResponse>;
+     */
+    getCRSByChargeID(req: operations.GETCRSByChargeIDRequest, config?: AxiosRequestConfig): Promise<operations.GETCRSByChargeIDResponse>;
 }

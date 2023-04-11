@@ -1,35 +1,52 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * The destination port range assigned to the Traffic Mirror rule.
-**/
+ */
 export declare class CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleDestinationPortRange extends SpeakeasyBase {
-    fromPort?: Record<string, any>;
-    toPort?: Record<string, any>;
+    fromPort?: number;
+    toPort?: number;
+}
+/**
+ * The action assigned to the Traffic Mirror rule.
+ */
+export declare enum CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleRuleActionEnum {
+    Accept = "accept",
+    Reject = "reject"
 }
 /**
  * The source port range assigned to the Traffic Mirror rule.
-**/
+ */
 export declare class CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleSourcePortRange extends SpeakeasyBase {
-    fromPort?: Record<string, any>;
-    toPort?: Record<string, any>;
+    fromPort?: number;
+    toPort?: number;
+}
+/**
+ * The traffic direction assigned to the Traffic Mirror rule.
+ */
+export declare enum CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleTrafficDirectionEnum {
+    Ingress = "ingress",
+    Egress = "egress"
 }
 /**
  * The Traffic Mirror rule.
-**/
+ */
 export declare class CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule extends SpeakeasyBase {
-    description?: Record<string, any>;
-    destinationCidrBlock?: Record<string, any>;
+    description?: string;
+    destinationCidrBlock?: string;
     destinationPortRange?: CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleDestinationPortRange;
-    protocol?: Record<string, any>;
-    ruleAction?: Record<string, any>;
-    ruleNumber?: Record<string, any>;
-    sourceCidrBlock?: Record<string, any>;
+    protocol?: number;
+    ruleAction?: CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleRuleActionEnum;
+    ruleNumber?: number;
+    sourceCidrBlock?: string;
     sourcePortRange?: CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleSourcePortRange;
-    trafficDirection?: Record<string, any>;
-    trafficMirrorFilterId?: Record<string, any>;
-    trafficMirrorFilterRuleId?: Record<string, any>;
+    trafficDirection?: CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleTrafficDirectionEnum;
+    trafficMirrorFilterId?: string;
+    trafficMirrorFilterRuleId?: string;
 }
+/**
+ * Success
+ */
 export declare class CreateTrafficMirrorFilterRuleResult extends SpeakeasyBase {
-    clientToken?: Record<string, any>;
+    clientToken?: string;
     trafficMirrorFilterRule?: CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule;
 }

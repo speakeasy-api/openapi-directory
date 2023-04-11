@@ -1,10 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreateGroupRequest extends SpeakeasyBase {
-    request: shared.GroupCreateRequest;
-}
+import { AxiosResponse } from "axios";
 export declare class CreateGroupResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful Response - Returns the new Group
+     */
     groupResult?: shared.GroupResult;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

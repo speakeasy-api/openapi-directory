@@ -1,22 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationRequest extends SpeakeasyBase {
     org: string;
-}
-export declare class ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationQueryParams extends SpeakeasyBase {
+    /**
+     * Page number of the results to fetch.
+     */
     page?: number;
+    /**
+     * Results per page (max 100)
+     */
     perPage?: number;
 }
-export declare class ActionsListSelectedRepositoriesEnabledGithubActionsOrganization200ApplicationJson extends SpeakeasyBase {
+/**
+ * Response
+ */
+export declare class ActionsListSelectedRepositoriesEnabledGithubActionsOrganization200ApplicationJSON extends SpeakeasyBase {
     repositories: shared.Repository[];
     totalCount: number;
-}
-export declare class ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationRequest extends SpeakeasyBase {
-    pathParams: ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationPathParams;
-    queryParams: ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationQueryParams;
 }
 export declare class ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    actionsListSelectedRepositoriesEnabledGithubActionsOrganization200ApplicationJSONObject?: ActionsListSelectedRepositoriesEnabledGithubActionsOrganization200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
+    actionsListSelectedRepositoriesEnabledGithubActionsOrganization200ApplicationJSONObject?: ActionsListSelectedRepositoriesEnabledGithubActionsOrganization200ApplicationJSON;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeSeverityLevelsXAmzTargetEnum {
-    AwsSupport20130415DescribeSeverityLevels = "AWSSupport_20130415.DescribeSeverityLevels"
+    AWSSupport20130415DescribeSeverityLevels = "AWSSupport_20130415.DescribeSeverityLevels"
 }
-export declare class DescribeSeverityLevelsHeaders extends SpeakeasyBase {
+export declare class DescribeSeverityLevelsRequest extends SpeakeasyBase {
+    describeSeverityLevelsRequest: shared.DescribeSeverityLevelsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,13 +15,16 @@ export declare class DescribeSeverityLevelsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeSeverityLevelsXAmzTargetEnum;
 }
-export declare class DescribeSeverityLevelsRequest extends SpeakeasyBase {
-    headers: DescribeSeverityLevelsHeaders;
-    request: shared.DescribeSeverityLevelsRequest;
-}
 export declare class DescribeSeverityLevelsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeSeverityLevelsResponse?: shared.DescribeSeverityLevelsResponse;
+    /**
+     * InternalServerError
+     */
     internalServerError?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

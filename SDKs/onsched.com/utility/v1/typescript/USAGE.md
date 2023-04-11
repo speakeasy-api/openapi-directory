@@ -1,16 +1,16 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetUtilityV1HealthHeartbeatResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GetUtilityV1HealthHeartbeatResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  }
-));
+    oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+  },
+});
 
 sdk.health.getUtilityV1HealthHeartbeat().then((res: GetUtilityV1HealthHeartbeatResponse | AxiosError) => {
    // handle response

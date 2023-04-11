@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UpdateWebAclResponse extends SpeakeasyBase {
+/**
+ * Success
+ */
+export declare class UpdateWebACLResponse extends SpeakeasyBase {
     changeToken?: string;
 }

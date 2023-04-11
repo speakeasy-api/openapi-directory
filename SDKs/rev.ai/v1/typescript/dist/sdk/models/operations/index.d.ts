@@ -4,4 +4,5 @@ export * from "./getcaptions";
 export * from "./getjobbyid";
 export * from "./getlistofjobs";
 export * from "./gettranscriptbyid";
-export * from "./submittranscriptionjob";
+export * from "./submittranscriptionjobjson";
+export * from "./submittranscriptionjobmultipart";

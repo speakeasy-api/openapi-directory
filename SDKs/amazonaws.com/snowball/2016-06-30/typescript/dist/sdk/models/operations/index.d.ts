@@ -19,6 +19,7 @@ export * from "./listclusters";
 export * from "./listcompatibleimages";
 export * from "./listjobs";
 export * from "./listlongtermpricing";
+export * from "./listserviceversions";
 export * from "./updatecluster";
 export * from "./updatejob";
 export * from "./updatejobshipmentstate";

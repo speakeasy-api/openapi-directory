@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetSsoStrategiesIdPathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetSsoStrategiesIdRequest extends SpeakeasyBase {
-    pathParams: GetSsoStrategiesIdPathParams;
+    /**
+     * Sso Strategy ID.
+     */
+    id: number;
 }
 export declare class GetSsoStrategiesIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * The SsoStrategies object.
+     */
     ssoStrategyEntity?: shared.SsoStrategyEntity;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

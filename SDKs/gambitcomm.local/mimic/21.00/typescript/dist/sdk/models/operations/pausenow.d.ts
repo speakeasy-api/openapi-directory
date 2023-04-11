@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PauseNowPathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class PauseNowRequest extends SpeakeasyBase {
-    pathParams: PauseNowPathParams;
+    /**
+     * Agent to return the primary IP
+     */
+    agentNum: number;
 }
 export declare class PauseNowResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     pauseNow200ApplicationJSONString?: string;
 }

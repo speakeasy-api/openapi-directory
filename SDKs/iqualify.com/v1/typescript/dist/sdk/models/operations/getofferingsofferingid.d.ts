@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetOfferingsOfferingIdPathParams extends SpeakeasyBase {
-    offeringId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetOfferingsOfferingIdRequest extends SpeakeasyBase {
-    pathParams: GetOfferingsOfferingIdPathParams;
+    /**
+     * offering's id
+     */
+    offeringId: string;
 }
 export declare class GetOfferingsOfferingIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * No authorization token was found.
+     */
     error?: shared.ErrorT;
+    /**
+     * offering
+     */
     offeringMetadataResponse?: shared.OfferingMetadataResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

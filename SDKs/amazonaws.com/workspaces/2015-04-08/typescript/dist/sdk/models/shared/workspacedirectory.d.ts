@@ -1,15 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { WorkspaceDirectoryTypeEnum } from "./workspacedirectorytypeenum";
+import { CertificateBasedAuthProperties } from "./certificatebasedauthproperties";
+import { DefaultWorkspaceCreationProperties } from "./defaultworkspacecreationproperties";
+import { SamlProperties } from "./samlproperties";
 import { SelfservicePermissions } from "./selfservicepermissions";
-import { WorkspaceDirectoryStateEnum } from "./workspacedirectorystateenum";
 import { TenancyEnum } from "./tenancyenum";
 import { WorkspaceAccessProperties } from "./workspaceaccessproperties";
-import { DefaultWorkspaceCreationProperties } from "./defaultworkspacecreationproperties";
+import { WorkspaceDirectoryStateEnum } from "./workspacedirectorystateenum";
+import { WorkspaceDirectoryTypeEnum } from "./workspacedirectorytypeenum";
 /**
  * Describes a directory that is used with Amazon WorkSpaces.
-**/
+ */
 export declare class WorkspaceDirectory extends SpeakeasyBase {
     alias?: string;
+    certificateBasedAuthProperties?: CertificateBasedAuthProperties;
     customerUserName?: string;
     directoryId?: string;
     directoryName?: string;
@@ -17,6 +20,7 @@ export declare class WorkspaceDirectory extends SpeakeasyBase {
     dnsIpAddresses?: string[];
     iamRoleId?: string;
     registrationCode?: string;
+    samlProperties?: SamlProperties;
     selfservicePermissions?: SelfservicePermissions;
     state?: WorkspaceDirectoryStateEnum;
     subnetIds?: string[];

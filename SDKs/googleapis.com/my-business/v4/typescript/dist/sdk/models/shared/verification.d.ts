@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The method of the verification.
+ */
 export declare enum VerificationMethodEnum {
     VerificationMethodUnspecified = "VERIFICATION_METHOD_UNSPECIFIED",
     Address = "ADDRESS",
@@ -7,6 +10,9 @@ export declare enum VerificationMethodEnum {
     Sms = "SMS",
     Auto = "AUTO"
 }
+/**
+ * The state of the verification.
+ */
 export declare enum VerificationStateEnum {
     VerificationStateUnspecified = "VERIFICATION_STATE_UNSPECIFIED",
     Pending = "PENDING",
@@ -15,10 +21,22 @@ export declare enum VerificationStateEnum {
 }
 /**
  * A verification represents a verification attempt on a location.
-**/
+ */
 export declare class Verification extends SpeakeasyBase {
+    /**
+     * The timestamp when the verification is requested.
+     */
     createTime?: string;
+    /**
+     * The method of the verification.
+     */
     method?: VerificationMethodEnum;
+    /**
+     * Resource name of the verification.
+     */
     name?: string;
+    /**
+     * The state of the verification.
+     */
     state?: VerificationStateEnum;
 }

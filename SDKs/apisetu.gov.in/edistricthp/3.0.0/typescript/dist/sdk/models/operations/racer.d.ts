@@ -1,115 +1,170 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class RacerSecurity extends SpeakeasyBase {
+    apiKey: string;
+    clientId: string;
+}
 export declare class RacerRequestBodyCertificateParameters extends SpeakeasyBase {
+    /**
+     * ApplicationNumber
+     */
     udf1: string;
 }
+/**
+ * The format of the certificate in response.
+ */
 export declare enum RacerRequestBodyFormatEnum {
     Pdf = "pdf"
 }
+/**
+ * Request format
+ */
 export declare class RacerRequestBody extends SpeakeasyBase {
     certificateParameters?: RacerRequestBodyCertificateParameters;
-    consentArtifact?: any;
+    consentArtifact?: shared.ConsentArtifactSchema;
+    /**
+     * The format of the certificate in response.
+     */
     format: RacerRequestBodyFormatEnum;
+    /**
+     * A unique transaction id for this request in UUID format. It is used for tracking the request.
+     */
     txnId: string;
 }
-export declare class RacerSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
-    clientId: shared.SchemeClientId;
+export declare enum Racer504ApplicationJSONErrorEnum {
+    GatewayTimeout = "gateway_timeout"
 }
-export declare enum Racer400ApplicationJsonErrorEnum {
+export declare enum Racer504ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
+}
+/**
+ * Gateway timeout
+ */
+export declare class Racer504ApplicationJSON extends SpeakeasyBase {
+    error?: Racer504ApplicationJSONErrorEnum;
+    errorDescription?: Racer504ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Racer503ApplicationJSONErrorEnum {
+    ServiceUnavailable = "service_unavailable"
+}
+export declare enum Racer503ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
+}
+/**
+ * Service unavailable
+ */
+export declare class Racer503ApplicationJSON extends SpeakeasyBase {
+    error?: Racer503ApplicationJSONErrorEnum;
+    errorDescription?: Racer503ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Racer502ApplicationJSONErrorEnum {
+    BadGatewy = "bad_gatewy"
+}
+export declare enum Racer502ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
+}
+/**
+ * Bad gateway
+ */
+export declare class Racer502ApplicationJSON extends SpeakeasyBase {
+    error?: Racer502ApplicationJSONErrorEnum;
+    errorDescription?: Racer502ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Racer500ApplicationJSONErrorEnum {
+    InternalServerError = "internal_server_error"
+}
+export declare enum Racer500ApplicationJSONErrorDescriptionEnum {
+    InternalServerError = "Internal server error"
+}
+/**
+ * Internal server error
+ */
+export declare class Racer500ApplicationJSON extends SpeakeasyBase {
+    error?: Racer500ApplicationJSONErrorEnum;
+    errorDescription?: Racer500ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Racer404ApplicationJSONErrorEnum {
+    RecordNotFound = "record_not_found",
+    UrlNotFound = "url_not_found"
+}
+export declare enum Racer404ApplicationJSONErrorDescriptionEnum {
+    NoRecordFound = "No record found",
+    YourAPIUrlOrPathIsIncorrect = "Your API url or path is incorrect"
+}
+/**
+ * No record found
+ */
+export declare class Racer404ApplicationJSON extends SpeakeasyBase {
+    error?: Racer404ApplicationJSONErrorEnum;
+    errorDescription?: Racer404ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Racer401ApplicationJSONErrorEnum {
+    InvalidAuthentication = "invalid_authentication",
+    InvalidAuthorization = "invalid_authorization"
+}
+export declare enum Racer401ApplicationJSONErrorDescriptionEnum {
+    AuthenticationFailed = "Authentication failed",
+    YouAreNotAuthorizedToUseThisAPI = "You are not authorized to use this API"
+}
+/**
+ * Unauthorized access
+ */
+export declare class Racer401ApplicationJSON extends SpeakeasyBase {
+    error?: Racer401ApplicationJSONErrorEnum;
+    errorDescription?: Racer401ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Racer400ApplicationJSONErrorEnum {
     MissingParameter = "missing_parameter",
     InvalidParameter = "invalid_parameter",
     InvalidFormat = "invalid_format",
     InvalidTxnid = "invalid_txnid",
     InvalidConsentid = "invalid_consentid"
 }
-export declare enum Racer400ApplicationJsonErrorDescriptionEnum {
+export declare enum Racer400ApplicationJSONErrorDescriptionEnum {
     PleaseProvideAllMandatoryParameters = "Please provide all mandatory parameters",
     BadRequest = "Bad request",
     TheFormatParameterIsInvalid = "The format parameter is invalid",
-    TheTxnIdParameterMustBeInUuidFormat = "The txnId parameter must be in UUID format",
-    TheConsentIdParameterMustBeInUuidFormat = "The consentId parameter must be in UUID format"
+    TheTxnIdParameterMustBeInUUIDFormat = "The txnId parameter must be in UUID format",
+    TheConsentIdParameterMustBeInUUIDFormat = "The consentId parameter must be in UUID format"
 }
-export declare class Racer400ApplicationJson extends SpeakeasyBase {
-    error?: Racer400ApplicationJsonErrorEnum;
-    errorDescription?: Racer400ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Racer401ApplicationJsonErrorEnum {
-    InvalidAuthentication = "invalid_authentication",
-    InvalidAuthorization = "invalid_authorization"
-}
-export declare enum Racer401ApplicationJsonErrorDescriptionEnum {
-    AuthenticationFailed = "Authentication failed",
-    YouAreNotAuthorizedToUseThisApi = "You are not authorized to use this API"
-}
-export declare class Racer401ApplicationJson extends SpeakeasyBase {
-    error?: Racer401ApplicationJsonErrorEnum;
-    errorDescription?: Racer401ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Racer404ApplicationJsonErrorEnum {
-    RecordNotFound = "record_not_found",
-    UrlNotFound = "url_not_found"
-}
-export declare enum Racer404ApplicationJsonErrorDescriptionEnum {
-    NoRecordFound = "No record found",
-    YourApiUrlOrPathIsIncorrect = "Your API url or path is incorrect"
-}
-export declare class Racer404ApplicationJson extends SpeakeasyBase {
-    error?: Racer404ApplicationJsonErrorEnum;
-    errorDescription?: Racer404ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Racer500ApplicationJsonErrorEnum {
-    InternalServerError = "internal_server_error"
-}
-export declare enum Racer500ApplicationJsonErrorDescriptionEnum {
-    InternalServerError = "Internal server error"
-}
-export declare class Racer500ApplicationJson extends SpeakeasyBase {
-    error?: Racer500ApplicationJsonErrorEnum;
-    errorDescription?: Racer500ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Racer502ApplicationJsonErrorEnum {
-    BadGatewy = "bad_gatewy"
-}
-export declare enum Racer502ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
-}
-export declare class Racer502ApplicationJson extends SpeakeasyBase {
-    error?: Racer502ApplicationJsonErrorEnum;
-    errorDescription?: Racer502ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Racer503ApplicationJsonErrorEnum {
-    ServiceUnavailable = "service_unavailable"
-}
-export declare enum Racer503ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
-}
-export declare class Racer503ApplicationJson extends SpeakeasyBase {
-    error?: Racer503ApplicationJsonErrorEnum;
-    errorDescription?: Racer503ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Racer504ApplicationJsonErrorEnum {
-    GatewayTimeout = "gateway_timeout"
-}
-export declare enum Racer504ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
-}
-export declare class Racer504ApplicationJson extends SpeakeasyBase {
-    error?: Racer504ApplicationJsonErrorEnum;
-    errorDescription?: Racer504ApplicationJsonErrorDescriptionEnum;
-}
-export declare class RacerRequest extends SpeakeasyBase {
-    request?: RacerRequestBody;
-    security: RacerSecurity;
+/**
+ * Bad request
+ */
+export declare class Racer400ApplicationJSON extends SpeakeasyBase {
+    error?: Racer400ApplicationJSONErrorEnum;
+    errorDescription?: Racer400ApplicationJSONErrorDescriptionEnum;
 }
 export declare class RacerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    racer400ApplicationJSONObject?: Racer400ApplicationJson;
-    racer401ApplicationJSONObject?: Racer401ApplicationJson;
-    racer404ApplicationJSONObject?: Racer404ApplicationJson;
-    racer500ApplicationJSONObject?: Racer500ApplicationJson;
-    racer502ApplicationJSONObject?: Racer502ApplicationJson;
-    racer503ApplicationJSONObject?: Racer503ApplicationJson;
-    racer504ApplicationJSONObject?: Racer504ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad request
+     */
+    racer400ApplicationJSONObject?: Racer400ApplicationJSON;
+    /**
+     * Unauthorized access
+     */
+    racer401ApplicationJSONObject?: Racer401ApplicationJSON;
+    /**
+     * No record found
+     */
+    racer404ApplicationJSONObject?: Racer404ApplicationJSON;
+    /**
+     * Internal server error
+     */
+    racer500ApplicationJSONObject?: Racer500ApplicationJSON;
+    /**
+     * Bad gateway
+     */
+    racer502ApplicationJSONObject?: Racer502ApplicationJSON;
+    /**
+     * Service unavailable
+     */
+    racer503ApplicationJSONObject?: Racer503ApplicationJSON;
+    /**
+     * Gateway timeout
+     */
+    racer504ApplicationJSONObject?: Racer504ApplicationJSON;
 }

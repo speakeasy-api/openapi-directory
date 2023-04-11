@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeAlarmsForMetricActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeAlarmsForMetricActionEnum {
     DescribeAlarmsForMetric = "DescribeAlarmsForMetric"
 }
-export declare enum PostDescribeAlarmsForMetricVersionEnum {
+export declare enum POSTDescribeAlarmsForMetricVersionEnum {
     TwoThousandAndTen0801 = "2010-08-01"
 }
-export declare class PostDescribeAlarmsForMetricQueryParams extends SpeakeasyBase {
-    action: PostDescribeAlarmsForMetricActionEnum;
-    version: PostDescribeAlarmsForMetricVersionEnum;
-}
-export declare class PostDescribeAlarmsForMetricHeaders extends SpeakeasyBase {
+export declare class POSTDescribeAlarmsForMetricRequest extends SpeakeasyBase {
+    action: POSTDescribeAlarmsForMetricActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDescribeAlarmsForMetricVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDescribeAlarmsForMetricHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeAlarmsForMetricRequest extends SpeakeasyBase {
-    queryParams: PostDescribeAlarmsForMetricQueryParams;
-    headers: PostDescribeAlarmsForMetricHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeAlarmsForMetricResponse extends SpeakeasyBase {
+export declare class POSTDescribeAlarmsForMetricResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Detailed information about a cluster snapshot.
-**/
-export declare class DbClusterSnapshot extends SpeakeasyBase {
-    availabilityZones?: Record<string, any>[];
+ */
+export declare class DBClusterSnapshot extends SpeakeasyBase {
+    availabilityZones?: string[];
     clusterCreateTime?: Date;
     dbClusterIdentifier?: string;
     dbClusterSnapshotArn?: string;

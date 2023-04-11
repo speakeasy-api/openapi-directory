@@ -1,23 +1,37 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetApiV2ListMarketsHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetApiV2ListMarketsRequest extends SpeakeasyBase {
+    /**
+     * Your key obtained from https://boggio-analytics.com/fp-api/
+     */
     xRapidApiKey?: string;
 }
-export declare class GetApiV2ListMarkets200ApplicationJsonData extends SpeakeasyBase {
+/**
+ * Bad request, check response for detailed errors.
+ */
+export declare class GetApiV2ListMarkets404ApplicationJSON extends SpeakeasyBase {
+    errors?: Record<string, any>;
+}
+export declare class GetApiV2ListMarkets200ApplicationJSONData extends SpeakeasyBase {
     all?: string[];
     allowedForYourSubscription?: string[];
 }
-export declare class GetApiV2ListMarkets200ApplicationJson extends SpeakeasyBase {
-    data?: GetApiV2ListMarkets200ApplicationJsonData;
-}
-export declare class GetApiV2ListMarkets404ApplicationJson extends SpeakeasyBase {
-    errors?: Record<string, any>;
-}
-export declare class GetApiV2ListMarketsRequest extends SpeakeasyBase {
-    headers: GetApiV2ListMarketsHeaders;
+/**
+ * Static response, shows available markets for the current subscription and all available markets in general.
+ */
+export declare class GetApiV2ListMarkets200ApplicationJSON extends SpeakeasyBase {
+    data?: GetApiV2ListMarkets200ApplicationJSONData;
 }
 export declare class GetApiV2ListMarketsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getApiV2ListMarkets200ApplicationJSONObject?: GetApiV2ListMarkets200ApplicationJson;
-    getApiV2ListMarkets404ApplicationJSONObject?: GetApiV2ListMarkets404ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Static response, shows available markets for the current subscription and all available markets in general.
+     */
+    getApiV2ListMarkets200ApplicationJSONObject?: GetApiV2ListMarkets200ApplicationJSON;
+    /**
+     * Bad request, check response for detailed errors.
+     */
+    getApiV2ListMarkets404ApplicationJSONObject?: GetApiV2ListMarkets404ApplicationJSON;
 }

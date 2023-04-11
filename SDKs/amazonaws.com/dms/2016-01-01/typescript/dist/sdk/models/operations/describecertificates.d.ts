@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeCertificatesQueryParams extends SpeakeasyBase {
-    marker?: string;
-    maxRecords?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum DescribeCertificatesXAmzTargetEnum {
-    AmazonDmSv20160101DescribeCertificates = "AmazonDMSv20160101.DescribeCertificates"
+    AmazonDMSv20160101DescribeCertificates = "AmazonDMSv20160101.DescribeCertificates"
 }
-export declare class DescribeCertificatesHeaders extends SpeakeasyBase {
+export declare class DescribeCertificatesRequest extends SpeakeasyBase {
+    describeCertificatesMessage: shared.DescribeCertificatesMessage;
+    /**
+     * Pagination token
+     */
+    marker?: string;
+    /**
+     * Pagination limit
+     */
+    maxRecords?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,14 +23,16 @@ export declare class DescribeCertificatesHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeCertificatesXAmzTargetEnum;
 }
-export declare class DescribeCertificatesRequest extends SpeakeasyBase {
-    queryParams: DescribeCertificatesQueryParams;
-    headers: DescribeCertificatesHeaders;
-    request: shared.DescribeCertificatesMessage;
-}
 export declare class DescribeCertificatesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeCertificatesResponse?: shared.DescribeCertificatesResponse;
+    /**
+     * ResourceNotFoundFault
+     */
     resourceNotFoundFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,10 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class MessagesPartialUpdatePathParams extends SpeakeasyBase {
-    id: string;
+import { AxiosResponse } from "axios";
+export declare class MessagesPartialUpdateSecurity extends SpeakeasyBase {
+    drchronoOauth2: string;
 }
-export declare class MessagesPartialUpdateQueryParams extends SpeakeasyBase {
+export declare class MessagesPartialUpdateRequest extends SpeakeasyBase {
     doctor?: number;
+    id: string;
     owner?: number;
     patient?: number;
     receivedSince?: string;
@@ -12,15 +13,8 @@ export declare class MessagesPartialUpdateQueryParams extends SpeakeasyBase {
     type?: string;
     updatedSince?: string;
 }
-export declare class MessagesPartialUpdateSecurity extends SpeakeasyBase {
-    drchronoOauth2: shared.SchemeDrchronoOauth2;
-}
-export declare class MessagesPartialUpdateRequest extends SpeakeasyBase {
-    pathParams: MessagesPartialUpdatePathParams;
-    queryParams: MessagesPartialUpdateQueryParams;
-    security: MessagesPartialUpdateSecurity;
-}
 export declare class MessagesPartialUpdateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

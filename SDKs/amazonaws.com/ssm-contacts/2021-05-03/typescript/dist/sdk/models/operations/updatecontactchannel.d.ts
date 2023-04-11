@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateContactChannelXAmzTargetEnum {
-    SsmContactsUpdateContactChannel = "SSMContacts.UpdateContactChannel"
+    SSMContactsUpdateContactChannel = "SSMContacts.UpdateContactChannel"
 }
-export declare class UpdateContactChannelHeaders extends SpeakeasyBase {
+export declare class UpdateContactChannelRequest extends SpeakeasyBase {
+    updateContactChannelRequest: shared.UpdateContactChannelRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,19 +15,40 @@ export declare class UpdateContactChannelHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateContactChannelXAmzTargetEnum;
 }
-export declare class UpdateContactChannelRequest extends SpeakeasyBase {
-    headers: UpdateContactChannelHeaders;
-    request: shared.UpdateContactChannelRequest;
-}
 export declare class UpdateContactChannelResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * DataEncryptionException
+     */
     dataEncryptionException?: any;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * Success
+     */
     updateContactChannelResult?: Record<string, any>;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

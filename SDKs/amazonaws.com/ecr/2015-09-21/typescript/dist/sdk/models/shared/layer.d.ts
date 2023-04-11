@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { LayerAvailabilityEnum } from "./layeravailabilityenum";
 /**
  * An object representing an Amazon ECR image layer.
-**/
+ */
 export declare class Layer extends SpeakeasyBase {
     layerAvailability?: LayerAvailabilityEnum;
     layerDigest?: string;

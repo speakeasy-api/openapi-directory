@@ -1,56 +1,117 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class AddUserSettingPathParams extends SpeakeasyBase {
-    settingType: string;
-    userId: string;
-}
-/**
- * Update the voicemail setting.
-**/
-export declare class AddUserSettingApplicationJsonVoiceMail extends SpeakeasyBase {
-    accessUserId?: string;
-    delete?: boolean;
-    download?: boolean;
-}
-export declare class AddUserSettingApplicationJson extends SpeakeasyBase {
-    voiceMail?: AddUserSettingApplicationJsonVoiceMail;
-}
-/**
- * Update the voicemail setting.
-**/
-export declare class AddUserSettingMultipartFormDataVoiceMail extends SpeakeasyBase {
-    accessUserId?: string;
-    delete?: boolean;
-    download?: boolean;
-}
-export declare class AddUserSettingMultipartFormData extends SpeakeasyBase {
-    voiceMail?: AddUserSettingMultipartFormDataVoiceMail;
-}
-export declare class AddUserSettingRequests extends SpeakeasyBase {
-    object?: AddUserSettingApplicationJson;
-    object1?: AddUserSettingMultipartFormData;
-}
+import { AxiosResponse } from "axios";
 export declare class AddUserSettingSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
+    oAuth: string;
 }
-export declare class AddUserSetting201ApplicationJsonVoiceMail extends SpeakeasyBase {
+/**
+ * Update the voicemail setting.
+ */
+export declare class AddUserSettingApplicationJSONVoiceMail extends SpeakeasyBase {
+    /**
+     * Specify the user ID of a user with whom to share voicemail access permissions.
+     */
     accessUserId?: string;
+    /**
+     * Specifies whether the user has delete permissions. The default is **false**.
+     */
     delete?: boolean;
+    /**
+     * Specifies whether the user has download permissions. The default is **false**.
+     */
     download?: boolean;
-    sharedId?: string;
 }
-export declare class AddUserSetting201ApplicationJson extends SpeakeasyBase {
-    voiceMail?: AddUserSetting201ApplicationJsonVoiceMail;
+export declare class AddUserSettingApplicationJSON extends SpeakeasyBase {
+    /**
+     * Update the voicemail setting.
+     */
+    voiceMail?: AddUserSettingApplicationJSONVoiceMail;
 }
 export declare class AddUserSettingRequest extends SpeakeasyBase {
-    pathParams: AddUserSettingPathParams;
-    request?: AddUserSettingRequests;
-    security: AddUserSettingSecurity;
+    requestBody?: AddUserSettingApplicationJSON;
+    /**
+     * Corresponds to the setting item you wish to modify. Allowed values: `voice_mail`
+     */
+    settingType: string;
+    /**
+     * Unique identifier of the user.
+     */
+    userId: string;
+}
+export declare class AddUserSetting201ApplicationXMLVoiceMail extends SpeakeasyBase {
+    /**
+     * The user that is allowed to access voicemail messages for the extension.
+     */
+    accessUserId?: string;
+    /**
+     * Specifies whether the user has delete permissions. The default is **false**.
+     */
+    delete?: boolean;
+    /**
+     * Specifies whether the user has download permissions. The default is **false**.
+     */
+    download?: boolean;
+    /**
+     * Unique identifier of the voicemail that the user can access.
+     */
+    sharedId?: string;
+}
+/**
+ * **HTTP Status Code** `201` <br>
+ *
+ * @remarks
+ * Created Successfully.
+ */
+export declare class AddUserSetting201ApplicationXML extends SpeakeasyBase {
+    voiceMail?: AddUserSetting201ApplicationXMLVoiceMail;
+}
+export declare class AddUserSetting201ApplicationJSONVoiceMail extends SpeakeasyBase {
+    /**
+     * The user that is allowed to access voicemail messages for the extension.
+     */
+    accessUserId?: string;
+    /**
+     * Specifies whether the user has delete permissions. The default is **false**.
+     */
+    delete?: boolean;
+    /**
+     * Specifies whether the user has download permissions. The default is **false**.
+     */
+    download?: boolean;
+    /**
+     * Unique identifier of the voicemail that the user can access.
+     */
+    sharedId?: string;
+}
+/**
+ * **HTTP Status Code** `201` <br>
+ *
+ * @remarks
+ * Created Successfully.
+ */
+export declare class AddUserSetting201ApplicationJSON extends SpeakeasyBase {
+    voiceMail?: AddUserSetting201ApplicationJSONVoiceMail;
 }
 export declare class AddUserSettingResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    addUserSetting201ApplicationJSONObject?: AddUserSetting201ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * **HTTP Status Code** `201` <br>
+     *
+     * @remarks
+     * Created Successfully.
+     */
+    addUserSetting201ApplicationJSONObject?: AddUserSetting201ApplicationJSON;
+    /**
+     * **HTTP Response Code:** `400`<br>
+     *
+     * @remarks
+     * Voicemail option has been disabled.<br>
+     *
+     * **Error Code:** `300`<br>
+     * Invalid user sub setting type.<br>
+     * Voicemail has already been shared to the user.<br>
+     */
     addUserSetting400ApplicationJSONAny?: any;
 }

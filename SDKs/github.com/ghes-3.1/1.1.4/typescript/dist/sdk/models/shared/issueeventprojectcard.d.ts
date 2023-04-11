@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Issue Event Project Card
-**/
+ */
 export declare class IssueEventProjectCard extends SpeakeasyBase {
     columnName: string;
     id: number;

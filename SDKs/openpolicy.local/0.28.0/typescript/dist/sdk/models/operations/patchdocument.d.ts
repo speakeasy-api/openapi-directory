@@ -1,15 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PatchDocumentPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class PatchDocumentRequest extends SpeakeasyBase {
+    /**
+     * The list of JSON patch operations.
+     */
+    requestBody: shared.PatchesSchema[];
+    /**
+     * A backslash (/) delimited path to access values inside object and array documents. If the path points to an array, the server will attempt to convert the array index to an integer. If the path element cannot be converted to an integer, the server will respond with 404.
+     */
     path: string;
 }
-export declare class PatchDocumentRequest extends SpeakeasyBase {
-    pathParams: PatchDocumentPathParams;
-    request: shared.PatchesSchema[];
-}
 export declare class PatchDocumentResponse extends SpeakeasyBase {
+    /**
+     * Bad request
+     */
     fourHundred?: shared.FourHundred;
+    /**
+     * Not found (for example, a requested policy module or document does not exist)
+     */
     fourHundredAndFour?: shared.FourHundredAndFour;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

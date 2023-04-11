@@ -1,0 +1,114 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+/**
+ * Details on the criteria used to define the filter.
+ */
+export declare class CreateFindingsReportRequestBodyFilterCriteria extends SpeakeasyBase {
+    awsAccountId?: shared.StringFilter[];
+    componentId?: shared.StringFilter[];
+    componentType?: shared.StringFilter[];
+    ec2InstanceImageId?: shared.StringFilter[];
+    ec2InstanceSubnetId?: shared.StringFilter[];
+    ec2InstanceVpcId?: shared.StringFilter[];
+    ecrImageArchitecture?: shared.StringFilter[];
+    ecrImageHash?: shared.StringFilter[];
+    ecrImagePushedAt?: shared.DateFilter[];
+    ecrImageRegistry?: shared.StringFilter[];
+    ecrImageRepositoryName?: shared.StringFilter[];
+    ecrImageTags?: shared.StringFilter[];
+    exploitAvailable?: shared.StringFilter[];
+    findingArn?: shared.StringFilter[];
+    findingStatus?: shared.StringFilter[];
+    findingType?: shared.StringFilter[];
+    firstObservedAt?: shared.DateFilter[];
+    fixAvailable?: shared.StringFilter[];
+    inspectorScore?: shared.NumberFilter[];
+    lambdaFunctionExecutionRoleArn?: shared.StringFilter[];
+    lambdaFunctionLastModifiedAt?: shared.DateFilter[];
+    lambdaFunctionLayers?: shared.StringFilter[];
+    lambdaFunctionName?: shared.StringFilter[];
+    lambdaFunctionRuntime?: shared.StringFilter[];
+    lastObservedAt?: shared.DateFilter[];
+    networkProtocol?: shared.StringFilter[];
+    portRange?: shared.PortRangeFilter[];
+    relatedVulnerabilities?: shared.StringFilter[];
+    resourceId?: shared.StringFilter[];
+    resourceTags?: shared.MapFilter[];
+    resourceType?: shared.StringFilter[];
+    severity?: shared.StringFilter[];
+    title?: shared.StringFilter[];
+    updatedAt?: shared.DateFilter[];
+    vendorSeverity?: shared.StringFilter[];
+    vulnerabilityId?: shared.StringFilter[];
+    vulnerabilitySource?: shared.StringFilter[];
+    vulnerablePackages?: shared.PackageFilter[];
+}
+/**
+ * The format to generate the report in.
+ */
+export declare enum CreateFindingsReportRequestBodyReportFormatEnum {
+    Csv = "CSV",
+    Json = "JSON"
+}
+/**
+ * Contains details of the Amazon S3 bucket and KMS key used to export findings.
+ */
+export declare class CreateFindingsReportRequestBodyS3Destination extends SpeakeasyBase {
+    bucketName?: string;
+    keyPrefix?: string;
+    kmsKeyArn?: string;
+}
+export declare class CreateFindingsReportRequestBody extends SpeakeasyBase {
+    /**
+     * Details on the criteria used to define the filter.
+     */
+    filterCriteria?: CreateFindingsReportRequestBodyFilterCriteria;
+    /**
+     * The format to generate the report in.
+     */
+    reportFormat: CreateFindingsReportRequestBodyReportFormatEnum;
+    /**
+     * Contains details of the Amazon S3 bucket and KMS key used to export findings.
+     */
+    s3Destination: CreateFindingsReportRequestBodyS3Destination;
+}
+export declare class CreateFindingsReportRequest extends SpeakeasyBase {
+    requestBody: CreateFindingsReportRequestBody;
+    xAmzAlgorithm?: string;
+    xAmzContentSha256?: string;
+    xAmzCredential?: string;
+    xAmzDate?: string;
+    xAmzSecurityToken?: string;
+    xAmzSignature?: string;
+    xAmzSignedHeaders?: string;
+}
+export declare class CreateFindingsReportResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
+    accessDeniedException?: any;
+    contentType: string;
+    /**
+     * Success
+     */
+    createFindingsReportResponse?: shared.CreateFindingsReportResponse;
+    /**
+     * InternalServerException
+     */
+    internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
+    throttlingException?: any;
+    /**
+     * ValidationException
+     */
+    validationException?: any;
+}

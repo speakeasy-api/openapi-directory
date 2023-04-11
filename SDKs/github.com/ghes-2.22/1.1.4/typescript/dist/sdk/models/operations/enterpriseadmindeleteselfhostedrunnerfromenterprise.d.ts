@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class EnterpriseAdminDeleteSelfHostedRunnerFromEnterprisePathParams extends SpeakeasyBase {
-    enterprise: string;
-    runnerId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class EnterpriseAdminDeleteSelfHostedRunnerFromEnterpriseRequest extends SpeakeasyBase {
-    pathParams: EnterpriseAdminDeleteSelfHostedRunnerFromEnterprisePathParams;
+    /**
+     * The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+     */
+    enterprise: string;
+    /**
+     * Unique identifier of the self-hosted runner.
+     */
+    runnerId: number;
 }
 export declare class EnterpriseAdminDeleteSelfHostedRunnerFromEnterpriseResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

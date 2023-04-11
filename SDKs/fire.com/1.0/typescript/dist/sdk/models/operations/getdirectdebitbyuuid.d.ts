@@ -1,13 +1,183 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetDirectDebitByUuidPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetDirectDebitByUuidRequest extends SpeakeasyBase {
     directDebitUuid: string;
 }
-export declare class GetDirectDebitByUuidRequest extends SpeakeasyBase {
-    pathParams: GetDirectDebitByUuidPathParams;
+/**
+ * The three letter code for the currency - either `EUR` or `GBP`.
+ */
+export declare enum GetDirectDebitByUuidDirectDebitCurrencyCodeEnum {
+    Eur = "EUR",
+    Gbp = "GBP"
+}
+/**
+ * The currency.
+ */
+export declare class GetDirectDebitByUuidDirectDebitCurrency extends SpeakeasyBase {
+    /**
+     * The three letter code for the currency - either `EUR` or `GBP`.
+     */
+    code?: GetDirectDebitByUuidDirectDebitCurrencyCodeEnum;
+    /**
+     * The name of the currency
+     */
+    description?: string;
+}
+/**
+ * The reject code returned by the bank indicating an issue with the direct debit. Each ARRUD code represents a rejection reason.
+ */
+export declare enum GetDirectDebitByUuidDirectDebitSchemeRejectReasonCodeEnum {
+    Zero = "0",
+    One = "1",
+    Two = "2",
+    Three = "3",
+    Four = "4",
+    Five = "5",
+    Six = "6",
+    Seven = "7",
+    Eight = "8",
+    Nine = "9",
+    A = "A",
+    B = "B"
+}
+/**
+ * The statuses of the direct debit payments associated with the mandate.
+ *
+ * @remarks
+ * * 'RECIEVED' - Direct Debit has been recieved
+ * * 'REJECT_REQUESTED' - The direct debit has a rejected request associated with it
+ * * 'REJECT_READY_FOR_PROCESSING'
+ * * 'REJECT_RECORD_IN_PROGRESS'
+ * * 'REJECT_RECORDED'
+ * * 'REJECT_FILE_CREATED'
+ * * 'REJECT_FILE_SENT'
+ * * 'COLLECTED' - Direct debit collected
+ * * 'REFUND_REQUESTED' - Refund requested on direct debit
+ * * 'REFUND_RECORD_IN_PROGRESS' - Refund in progress on direct debit
+ * * 'REFUND_RECORDED'
+ * * 'REFUND_FILE_CREATED'
+ * * 'REFUND_FILE_SENT'
+ *
+ */
+export declare enum GetDirectDebitByUuidDirectDebitStatusEnum {
+    Recieved = "RECIEVED",
+    RejectRequested = "REJECT_REQUESTED",
+    RejectReadyForProcessing = "REJECT_READY_FOR_PROCESSING",
+    RejectRecordInProgress = "REJECT_RECORD_IN_PROGRESS",
+    RejectRecorded = "REJECT_RECORDED",
+    RejectFileCreated = "REJECT_FILE_CREATED",
+    RejectFileSent = "REJECT_FILE_SENT",
+    Collected = "COLLECTED",
+    RefundRequested = "REFUND_REQUESTED",
+    RefundRecordInProgress = "REFUND_RECORD_IN_PROGRESS",
+    RefundRecorded = "REFUND_RECORDED",
+    RefundFileCreated = "REFUND_FILE_CREATED",
+    RefundFileSent = "REFUND_FILE_SENT"
+}
+/**
+ * The type of the direct debit.
+ */
+export declare enum GetDirectDebitByUuidDirectDebitTypeEnum {
+    FirstCollection = "FIRST_COLLECTION",
+    OngoingCollection = "ONGOING_COLLECTION",
+    RepresentedCollection = "REPRESENTED_COLLECTION",
+    FinalCollection = "FINAL_COLLECTION"
+}
+/**
+ * Retrieve all details of a single direct debit collection/payment
+ */
+export declare class GetDirectDebitByUuidDirectDebit extends SpeakeasyBase {
+    /**
+     * Value of the payment
+     */
+    amount?: number;
+    /**
+     * The currency.
+     */
+    currency?: GetDirectDebitByUuidDirectDebitCurrency;
+    /**
+     * Date the direct debit was created. Milliseconds since the epoch (1970).
+     */
+    dateCreated?: Date;
+    /**
+     * The direct debit reference.
+     */
+    directDebitReference?: string;
+    /**
+     * The UUID for the direct debit payment
+     */
+    directDebitUuid?: string;
+    /**
+     * DDIC is a Direct Debit Indemnity Claim (i.e.a refund). If if the DD is requested to be refunded it is marked isDDIC true.
+     */
+    isDDIC?: boolean;
+    /**
+     * Date the direct debit was last updated. Milliseconds since the epoch (1970).
+     */
+    lastUpdated?: Date;
+    /**
+     * The UUID for the mandate
+     */
+    mandateUUid?: string;
+    /**
+     * The Alias of the party who sets up the direct debit.
+     */
+    originatorAlias?: string;
+    /**
+     * The creator of the party who sets up the direct debit.
+     */
+    originatorName?: string;
+    /**
+     * Set by party who sets up the direct debit.
+     */
+    originatorReference?: string;
+    /**
+     * Reason why rejected
+     */
+    schemeRejectReason?: string;
+    /**
+     * The reject code returned by the bank indicating an issue with the direct debit. Each ARRUD code represents a rejection reason.
+     */
+    schemeRejectReasonCode?: GetDirectDebitByUuidDirectDebitSchemeRejectReasonCodeEnum;
+    /**
+     * The statuses of the direct debit payments associated with the mandate.
+     *
+     * @remarks
+     * * 'RECIEVED' - Direct Debit has been recieved
+     * * 'REJECT_REQUESTED' - The direct debit has a rejected request associated with it
+     * * 'REJECT_READY_FOR_PROCESSING'
+     * * 'REJECT_RECORD_IN_PROGRESS'
+     * * 'REJECT_RECORDED'
+     * * 'REJECT_FILE_CREATED'
+     * * 'REJECT_FILE_SENT'
+     * * 'COLLECTED' - Direct debit collected
+     * * 'REFUND_REQUESTED' - Refund requested on direct debit
+     * * 'REFUND_RECORD_IN_PROGRESS' - Refund in progress on direct debit
+     * * 'REFUND_RECORDED'
+     * * 'REFUND_FILE_CREATED'
+     * * 'REFUND_FILE_SENT'
+     *
+     */
+    status?: GetDirectDebitByUuidDirectDebitStatusEnum;
+    /**
+     * The ican of your fire account that the money was taken from
+     */
+    targetIcan?: number;
+    /**
+     * The payee that was created when the DD was processed
+     */
+    targetPayeeId?: number;
+    /**
+     * The type of the direct debit.
+     */
+    type?: GetDirectDebitByUuidDirectDebitTypeEnum;
 }
 export declare class GetDirectDebitByUuidResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    onedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItems?: shared.OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItems;
+    rawResponse?: AxiosResponse;
+    /**
+     * Retrieve all details of a single direct debit collection/payment
+     */
+    directDebit?: GetDirectDebitByUuidDirectDebit;
 }

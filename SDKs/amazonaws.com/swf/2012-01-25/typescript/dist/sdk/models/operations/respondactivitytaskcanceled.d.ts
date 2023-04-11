@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum RespondActivityTaskCanceledXAmzTargetEnum {
     SimpleWorkflowServiceRespondActivityTaskCanceled = "SimpleWorkflowService.RespondActivityTaskCanceled"
 }
-export declare class RespondActivityTaskCanceledHeaders extends SpeakeasyBase {
+export declare class RespondActivityTaskCanceledRequest extends SpeakeasyBase {
+    respondActivityTaskCanceledInput: shared.RespondActivityTaskCanceledInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,13 +15,16 @@ export declare class RespondActivityTaskCanceledHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: RespondActivityTaskCanceledXAmzTargetEnum;
 }
-export declare class RespondActivityTaskCanceledRequest extends SpeakeasyBase {
-    headers: RespondActivityTaskCanceledHeaders;
-    request: shared.RespondActivityTaskCanceledInput;
-}
 export declare class RespondActivityTaskCanceledResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * OperationNotPermittedFault
+     */
     operationNotPermittedFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnknownResourceFault
+     */
     unknownResourceFault?: any;
 }

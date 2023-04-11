@@ -1,18 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class LeaveChannelPathParams extends SpeakeasyBase {
-    channelId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class LeaveChannelSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
+    oAuth: string;
 }
 export declare class LeaveChannelRequest extends SpeakeasyBase {
-    pathParams: LeaveChannelPathParams;
-    security: LeaveChannelSecurity;
+    /**
+     * Channel ID: Unique Identifier of a channel.
+     */
+    channelId: string;
 }
 export declare class LeaveChannelResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * **HTTP Status Code:** `204`<br>
+     *
+     * @remarks
+     * Left channel successfully.
+     */
     leaveChannel204ApplicationJSONAny?: any;
 }

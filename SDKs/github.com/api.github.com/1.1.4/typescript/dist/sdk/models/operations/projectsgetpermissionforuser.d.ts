@@ -1,21 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ProjectsGetPermissionForUserPathParams extends SpeakeasyBase {
-    projectId: number;
-    username: string;
-}
-export declare class ProjectsGetPermissionForUser415ApplicationJson extends SpeakeasyBase {
-    documentationUrl: string;
-    message: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ProjectsGetPermissionForUserRequest extends SpeakeasyBase {
-    pathParams: ProjectsGetPermissionForUserPathParams;
+    /**
+     * The unique identifier of the project.
+     */
+    projectId: number;
+    /**
+     * The handle for the GitHub user account.
+     */
+    username: string;
 }
 export declare class ProjectsGetPermissionForUserResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Requires authentication
+     */
     basicError?: shared.BasicError;
-    projectsGetPermissionForUser415ApplicationJSONObject?: ProjectsGetPermissionForUser415ApplicationJson;
-    repositoryCollaboratorPermission?: shared.RepositoryCollaboratorPermission;
+    /**
+     * Response
+     */
+    projectCollaboratorPermission?: shared.ProjectCollaboratorPermission;
+    /**
+     * Validation failed, or the endpoint has been spammed.
+     */
     validationError?: shared.ValidationError;
 }

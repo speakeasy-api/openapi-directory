@@ -1,20 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PatchCrmV3ExtensionsCardsAppIdCardIdUpdatePathParams extends SpeakeasyBase {
-    appId: number;
-    cardId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PatchCrmV3ExtensionsCardsAppIdCardIdUpdateSecurity extends SpeakeasyBase {
-    developerHapikey: shared.SchemeDeveloperHapikey;
+    developerHapikey: string;
 }
 export declare class PatchCrmV3ExtensionsCardsAppIdCardIdUpdateRequest extends SpeakeasyBase {
-    pathParams: PatchCrmV3ExtensionsCardsAppIdCardIdUpdatePathParams;
-    request: shared.CardPatchRequest;
-    security: PatchCrmV3ExtensionsCardsAppIdCardIdUpdateSecurity;
+    /**
+     * Card definition fields to be updated.
+     */
+    cardPatchRequest: shared.CardPatchRequest;
+    /**
+     * The ID of the target app.
+     */
+    appId: number;
+    /**
+     * The ID of the card to update.
+     */
+    cardId: string;
 }
 export declare class PatchCrmV3ExtensionsCardsAppIdCardIdUpdateResponse extends SpeakeasyBase {
     body?: Uint8Array;
+    /**
+     * successful operation
+     */
     cardResponse?: shared.CardResponse;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,18 +1,18 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest, ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgResponse } from "openapi/src/sdk/models/operations";
+import {
+  ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest,
+  ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest = {
-  pathParams: {
-    org: "sit",
-    repositoryId: 2259404117704393152,
-    runnerGroupId: 6050128673802995827,
-  },
+  org: "corrupti",
+  repositoryId: 592845,
+  runnerGroupId: 715190,
 };
 
 sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgResponse | AxiosError) => {

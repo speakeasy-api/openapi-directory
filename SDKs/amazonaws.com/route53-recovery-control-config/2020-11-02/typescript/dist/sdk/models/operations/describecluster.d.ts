@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeClusterPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DescribeClusterRequest extends SpeakeasyBase {
+    /**
+     * The Amazon Resource Name (ARN) of the cluster.
+     */
     clusterArn: string;
-}
-export declare class DescribeClusterHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,18 +14,36 @@ export declare class DescribeClusterHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DescribeClusterRequest extends SpeakeasyBase {
-    pathParams: DescribeClusterPathParams;
-    headers: DescribeClusterHeaders;
-}
 export declare class DescribeClusterResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     describeClusterResponse?: shared.DescribeClusterResponse;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { InputStatusEnum } from "./inputstatusenum";
 /**
  * Information about the input.
-**/
+ */
 export declare class InputSummary extends SpeakeasyBase {
     creationTime?: Date;
     inputArn?: string;

@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolProxyPortRemovePathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ProtocolProxyPortRemoveRequest extends SpeakeasyBase {
+    /**
+     * Agent to manipulate PROXY target
+     */
     agentNum: number;
     port: number;
-}
-export declare class ProtocolProxyPortRemoveRequest extends SpeakeasyBase {
-    pathParams: ProtocolProxyPortRemovePathParams;
 }
 export declare class ProtocolProxyPortRemoveResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolProxyPortRemove200ApplicationJSONString?: string;
 }

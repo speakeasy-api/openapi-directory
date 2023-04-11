@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeAnalysisSchemesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeAnalysisSchemesActionEnum {
     DescribeAnalysisSchemes = "DescribeAnalysisSchemes"
 }
-export declare enum GetDescribeAnalysisSchemesVersionEnum {
+export declare enum GETDescribeAnalysisSchemesVersionEnum {
     TwoThousandAndThirteen0101 = "2013-01-01"
 }
-export declare class GetDescribeAnalysisSchemesQueryParams extends SpeakeasyBase {
-    action: GetDescribeAnalysisSchemesActionEnum;
+export declare class GETDescribeAnalysisSchemesRequest extends SpeakeasyBase {
+    action: GETDescribeAnalysisSchemesActionEnum;
+    /**
+     * The analysis schemes you want to describe.
+     */
     analysisSchemeNames?: string[];
+    /**
+     * Whether to display the deployed configuration (<code>true</code>) or include any pending changes (<code>false</code>). Defaults to <code>false</code>.
+     */
     deployed?: boolean;
+    /**
+     * The name of the domain you want to describe.
+     */
     domainName: string;
-    version: GetDescribeAnalysisSchemesVersionEnum;
-}
-export declare class GetDescribeAnalysisSchemesHeaders extends SpeakeasyBase {
+    version: GETDescribeAnalysisSchemesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +29,9 @@ export declare class GetDescribeAnalysisSchemesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeAnalysisSchemesRequest extends SpeakeasyBase {
-    queryParams: GetDescribeAnalysisSchemesQueryParams;
-    headers: GetDescribeAnalysisSchemesHeaders;
-}
-export declare class GetDescribeAnalysisSchemesResponse extends SpeakeasyBase {
+export declare class GETDescribeAnalysisSchemesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

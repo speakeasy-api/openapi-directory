@@ -1,9 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetNotificationConfigurationPathParams extends SpeakeasyBase {
-    profilingGroupName: string;
-}
-export declare class GetNotificationConfigurationHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetNotificationConfigurationRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,17 +9,33 @@ export declare class GetNotificationConfigurationHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class GetNotificationConfigurationRequest extends SpeakeasyBase {
-    pathParams: GetNotificationConfigurationPathParams;
-    headers: GetNotificationConfigurationHeaders;
+    /**
+     * The name of the profiling group we want to get the notification configuration for.
+     */
+    profilingGroupName: string;
 }
 export declare class GetNotificationConfigurationResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getNotificationConfigurationResponse?: shared.GetNotificationConfigurationResponse;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

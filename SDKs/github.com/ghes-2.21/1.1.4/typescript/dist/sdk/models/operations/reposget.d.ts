@@ -1,15 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReposGetPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ReposGetRequest extends SpeakeasyBase {
     owner: string;
     repo: string;
-}
-export declare class ReposGetRequest extends SpeakeasyBase {
-    pathParams: ReposGetPathParams;
 }
 export declare class ReposGetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Moved permanently
+     */
     basicError?: shared.BasicError;
+    /**
+     * Response
+     */
     fullRepository?: shared.FullRepository;
 }

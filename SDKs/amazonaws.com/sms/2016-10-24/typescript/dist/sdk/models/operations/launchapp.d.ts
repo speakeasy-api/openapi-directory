@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum LaunchAppXAmzTargetEnum {
-    AwsServerMigrationServiceV20161024LaunchApp = "AWSServerMigrationService_V2016_10_24.LaunchApp"
+    AWSServerMigrationServiceV20161024LaunchApp = "AWSServerMigrationService_V2016_10_24.LaunchApp"
 }
-export declare class LaunchAppHeaders extends SpeakeasyBase {
+export declare class LaunchAppRequest extends SpeakeasyBase {
+    launchAppRequest: shared.LaunchAppRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class LaunchAppHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: LaunchAppXAmzTargetEnum;
 }
-export declare class LaunchAppRequest extends SpeakeasyBase {
-    headers: LaunchAppHeaders;
-    request: shared.LaunchAppRequest;
-}
 export declare class LaunchAppResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalError
+     */
     internalError?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * Success
+     */
     launchAppResponse?: Record<string, any>;
+    /**
+     * MissingRequiredParameterException
+     */
     missingRequiredParameterException?: any;
+    /**
+     * OperationNotPermittedException
+     */
     operationNotPermittedException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnauthorizedOperationException
+     */
     unauthorizedOperationException?: any;
 }

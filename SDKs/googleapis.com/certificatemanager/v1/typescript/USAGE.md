@@ -1,55 +1,50 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest, CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest,
+  CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  CertificateIssuanceConfigKeyAlgorithmEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    certificateIssuanceConfigId: "dolor",
-    fields: "expedita",
-    key: "voluptas",
-    oauthToken: "fugit",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    uploadType: "rerum",
-    uploadProtocol: "dicta",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  certificateIssuanceConfigInput: {
     certificateAuthorityConfig: {
       certificateAuthorityServiceConfig: {
-        caPool: "debitis",
+        caPool: "provident",
       },
     },
-    description: "voluptatum",
-    keyAlgorithm: "KEY_ALGORITHM_UNSPECIFIED",
+    description: "distinctio",
+    keyAlgorithm: CertificateIssuanceConfigKeyAlgorithmEnum.EcdsaP256,
     labels: {
-      "dolorem": "et",
-      "voluptate": "iste",
-      "vitae": "totam",
+      "nulla": "corrupti",
+      "illum": "vel",
+      "error": "deserunt",
     },
-    lifetime: "dolores",
-    name: "illum",
-    rotationWindowPercentage: 6392442863481646880,
+    lifetime: "suscipit",
+    name: "iure",
+    rotationWindowPercentage: 297534,
   },
+  accessToken: "debitis",
+  alt: AltEnum.Json,
+  callback: "delectus",
+  certificateIssuanceConfigId: "tempora",
+  fields: "suscipit",
+  key: "molestiae",
+  oauthToken: "minus",
+  parent: "placeat",
+  prettyPrint: false,
+  quotaUser: "voluptatum",
+  uploadType: "iusto",
+  uploadProtocol: "excepturi",
 };
 
 sdk.projects.certificatemanagerProjectsLocationsCertificateIssuanceConfigsCreate(req).then((res: CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateResponse | AxiosError) => {

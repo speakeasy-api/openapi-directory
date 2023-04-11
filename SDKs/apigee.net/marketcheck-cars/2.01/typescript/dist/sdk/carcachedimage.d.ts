@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class CarCachedImage {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +9,10 @@ export declare class CarCachedImage {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getCachedImage - Fetch cached image
+     * Fetch cached image
      *
+     * @remarks
      * Fetch the cached car image
-    **/
+     */
     getCachedImage(req: operations.GetCachedImageRequest, config?: AxiosRequestConfig): Promise<operations.GetCachedImageResponse>;
 }

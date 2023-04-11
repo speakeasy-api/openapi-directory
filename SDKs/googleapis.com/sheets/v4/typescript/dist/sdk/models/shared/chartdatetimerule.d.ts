@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The type of date-time grouping to apply.
+ */
 export declare enum ChartDateTimeRuleTypeEnum {
     ChartDateTimeRuleTypeUnspecified = "CHART_DATE_TIME_RULE_TYPE_UNSPECIFIED",
     Second = "SECOND",
@@ -19,7 +22,10 @@ export declare enum ChartDateTimeRuleTypeEnum {
 }
 /**
  * Allows you to organize the date-time values in a source data column into buckets based on selected parts of their date or time values.
-**/
+ */
 export declare class ChartDateTimeRule extends SpeakeasyBase {
+    /**
+     * The type of date-time grouping to apply.
+     */
     type?: ChartDateTimeRuleTypeEnum;
 }

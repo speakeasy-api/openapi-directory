@@ -1,6 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdateServiceIntegrationHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+/**
+ *  Information about updating the integration status of an Amazon Web Services service, such as Amazon Web Services Systems Manager, with DevOps Guru.
+ */
+export declare class UpdateServiceIntegrationRequestBodyServiceIntegration extends SpeakeasyBase {
+    logsAnomalyDetection?: shared.LogsAnomalyDetectionIntegrationConfig;
+    /**
+     *  Information about whether DevOps Guru is configured to create an OpsItem in Amazon Web Services Systems Manager OpsCenter for each created insight. You can use this to update the configuration.
+     */
+    opsCenter?: shared.OpsCenterIntegrationConfig;
+}
+export declare class UpdateServiceIntegrationRequestBody extends SpeakeasyBase {
+    /**
+     *  Information about updating the integration status of an Amazon Web Services service, such as Amazon Web Services Systems Manager, with DevOps Guru.
+     */
+    serviceIntegration: UpdateServiceIntegrationRequestBodyServiceIntegration;
+}
+export declare class UpdateServiceIntegrationRequest extends SpeakeasyBase {
+    requestBody: UpdateServiceIntegrationRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -9,26 +27,32 @@ export declare class UpdateServiceIntegrationHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-/**
- *  Information about updating the integration status of an AWS service, such as AWS Systems Manager, with DevOps Guru.
-**/
-export declare class UpdateServiceIntegrationRequestBodyServiceIntegration extends SpeakeasyBase {
-    opsCenter?: shared.OpsCenterIntegrationConfig;
-}
-export declare class UpdateServiceIntegrationRequestBody extends SpeakeasyBase {
-    serviceIntegration: UpdateServiceIntegrationRequestBodyServiceIntegration;
-}
-export declare class UpdateServiceIntegrationRequest extends SpeakeasyBase {
-    headers: UpdateServiceIntegrationHeaders;
-    request: UpdateServiceIntegrationRequestBody;
-}
 export declare class UpdateServiceIntegrationResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * Success
+     */
     updateServiceIntegrationResponse?: Record<string, any>;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

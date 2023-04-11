@@ -1,116 +1,152 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateRequest, RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateRequest,
+  RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockStateEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  googleCloudRecommendationengineV1beta1CatalogItem: {
     categoryHierarchies: [
       {
         categories: [
-          "voluptatum",
+          "quibusdam",
+          "unde",
+          "nulla",
         ],
       },
       {
         categories: [
-          "ut",
+          "illum",
+          "vel",
+          "error",
         ],
       },
       {
         categories: [
-          "et",
-          "voluptate",
-          "iste",
+          "suscipit",
+          "iure",
+          "magnam",
         ],
       },
     ],
-    description: "vitae",
-    id: "totam",
+    description: "debitis",
+    id: "ipsa",
     itemAttributes: {
       categoricalFeatures: {
-        "illum": {
+        "tempora": {
           value: [
-            "vel",
+            "molestiae",
+            "minus",
+          ],
+        },
+        "placeat": {
+          value: [
+            "iusto",
+            "excepturi",
+            "nisi",
+          ],
+        },
+        "recusandae": {
+          value: [
+            "ab",
+            "quis",
+            "veritatis",
+            "deserunt",
+          ],
+        },
+        "perferendis": {
+          value: [
+            "repellendus",
+            "sapiente",
           ],
         },
       },
       numericalFeatures: {
-        "dolore": {
+        "odit": {
           value: [
-            57.099998,
-            45.099998,
+            8700.88,
+            9786.19,
+            4736.08,
+            7991.59,
+          ],
+        },
+        "quod": {
+          value: [
+            5204.78,
+            7805.29,
+          ],
+        },
+        "dolorum": {
+          value: [
+            7206.33,
+          ],
+        },
+        "officia": {
+          value: [
+            1433.53,
+            5373.73,
+            9446.69,
           ],
         },
       },
     },
-    itemGroupId: "quis",
-    languageCode: "est",
+    itemGroupId: "optio",
+    languageCode: "totam",
     productMetadata: {
-      availableQuantity: "aut",
-      canonicalProductUri: "odit",
+      availableQuantity: "beatae",
+      canonicalProductUri: "commodi",
       costs: {
-        "voluptas": 87.099998,
-        "illo": 78.199997,
-        "autem": 68.099998,
+        "modi": 1863.32,
+        "impedit": 7369.18,
       },
-      currencyCode: "odio",
+      currencyCode: "esse",
       exactPrice: {
-        displayPrice: 77.099998,
-        originalPrice: 88.099998,
+        displayPrice: 2165.5,
+        originalPrice: 5684.34,
       },
       images: [
         {
-          height: 303089054982227392,
-          uri: "sint",
-          width: 5392504858645185670,
-        },
-        {
-          height: 7847956203786849690,
-          uri: "exercitationem",
-          width: 4756106358532488297,
+          height: 18789,
+          uri: "http://perky-charset.name",
+          width: 222321,
         },
       ],
       priceRange: {
-        max: 30.200001,
-        min: 97.099998,
+        max: 6169.34,
+        min: 3864.89,
       },
-      stockState: "BACKORDER",
+      stockState: GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockStateEnum.Backorder,
     },
     tags: [
-      "veritatis",
+      "fuga",
       "in",
-      "et",
+      "corporis",
+      "iste",
     ],
-    title: "omnis",
+    title: "Ms.",
   },
+  accessToken: "saepe",
+  alt: AltEnum.Proto,
+  callback: "architecto",
+  fields: "ipsa",
+  key: "reiciendis",
+  oauthToken: "est",
+  parent: "mollitia",
+  prettyPrint: false,
+  quotaUser: "laborum",
+  uploadType: "dolores",
+  uploadProtocol: "dolorem",
 };
 
 sdk.projects.recommendationengineProjectsLocationsCatalogsCatalogItemsCreate(req).then((res: RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateResponse | AxiosError) => {

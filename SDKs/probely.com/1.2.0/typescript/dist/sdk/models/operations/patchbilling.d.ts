@@ -1,18 +1,35 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PatchBilling401ApplicationJson extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+/**
+ * Not allowed to perform operation
+ */
+export declare class PatchBilling403ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error message.
+     */
     detail?: string;
 }
-export declare class PatchBilling403ApplicationJson extends SpeakeasyBase {
+/**
+ * Access token is missing or invalid
+ */
+export declare class PatchBilling401ApplicationJSON extends SpeakeasyBase {
     detail?: string;
-}
-export declare class PatchBillingRequest extends SpeakeasyBase {
-    request: shared.Billing;
 }
 export declare class PatchBillingResponse extends SpeakeasyBase {
+    /**
+     * Billing information
+     */
     billing?: shared.Billing;
     contentType: string;
     statusCode: number;
-    patchBilling401ApplicationJSONObject?: PatchBilling401ApplicationJson;
-    patchBilling403ApplicationJSONObject?: PatchBilling403ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Access token is missing or invalid
+     */
+    patchBilling401ApplicationJSONObject?: PatchBilling401ApplicationJSON;
+    /**
+     * Not allowed to perform operation
+     */
+    patchBilling403ApplicationJSONObject?: PatchBilling403ApplicationJSON;
 }

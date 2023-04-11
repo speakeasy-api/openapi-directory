@@ -1,8 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
- * The type that defines the fields for the createTask method.
-**/
+ * The type that defines the fields for the <b> createTask</b> method.
+ */
 export declare class CreateTaskRequest extends SpeakeasyBase {
+    /**
+     * The feed type associated with the task. Only use a <strong>feedType</strong> that is available for your API. Available feed types:<ul><li><a href="/api-docs/sell/static/feed/lms-feeds-quick-reference.html#trading-upload-feed-types" target="_blank">Inventory upload feed types</a></li><li><a href="/api-docs/sell/static/feed/lms-feeds-quick-reference.html#merchant-data-upload-feed-types" target="_blank">Fulfillment upload feed types</a></li><li><a href="/api-docs/sell/static/feed/fx-feeds-quick-reference.html#availabl" target="_blank">Seller Hub feed types</a></li></ul>
+     */
     feedType?: string;
+    /**
+     * The schemaVersion/version number of the file format (use the schema version of the API to which you are programming):<ul><li><a href="/api-docs/sell/static/feed/lms-feeds-quick-reference.html#Version" target="_blank">Version Details / Schema Version</a></li><li><a href="/api-docs/sell/static/feed/fx-feeds-quick-reference.html#schema" target="_blank">Seller Hub feed schema version</a></li></ul>
+     */
     schemaVersion?: string;
 }

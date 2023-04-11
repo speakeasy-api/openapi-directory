@@ -1,0 +1,8 @@
+export declare enum NoPreferenceTargetDestinationEnum {
+    NoneSpecified = "None specified",
+    AWSElasticBeanStalk = "AWS Elastic BeanStalk",
+    AWSFargate = "AWS Fargate",
+    AmazonElasticCloudComputeEc2 = "Amazon Elastic Cloud Compute (EC2)",
+    AmazonElasticContainerServiceECS = "Amazon Elastic Container Service (ECS)",
+    AmazonElasticKubernetesServiceEKS = "Amazon Elastic Kubernetes Service (EKS)"
+}

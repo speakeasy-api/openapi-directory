@@ -46,7 +46,6 @@ export * from "./runtimeshieldedinstanceconfig";
 export * from "./runtimesoftwareconfig";
 export * from "./schedule";
 export * from "./scheduleracceleratorconfig";
-export * from "./security";
 export * from "./setiampolicyrequest";
 export * from "./setinstanceacceleratorrequest";
 export * from "./setinstancelabelsrequest";

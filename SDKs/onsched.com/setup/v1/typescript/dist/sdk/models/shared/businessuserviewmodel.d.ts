@@ -1,4 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { BusinessUserPermissionViewModel } from "./businessuserpermissionviewmodel";
+/**
+ * Success
+ */
 export declare class BusinessUserViewModel extends SpeakeasyBase {
     accountId?: string;
     businessName?: string;
@@ -7,7 +11,8 @@ export declare class BusinessUserViewModel extends SpeakeasyBase {
     identityAccount?: boolean;
     locationId?: string;
     name?: string;
-    objectName?: string;
+    object?: string;
+    permissions?: BusinessUserPermissionViewModel[];
     resourceId?: string;
     resourceName?: string;
     role?: string;

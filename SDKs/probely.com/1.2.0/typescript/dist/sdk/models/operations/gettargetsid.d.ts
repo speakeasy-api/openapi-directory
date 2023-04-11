@@ -1,25 +1,51 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetTargetsIdPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetTargetsIdRequest extends SpeakeasyBase {
+    /**
+     * Object Id
+     */
     id: string;
 }
-export declare class GetTargetsId401ApplicationJson extends SpeakeasyBase {
+/**
+ * Internal server error
+ */
+export declare class GetTargetsId500ApplicationJSON extends SpeakeasyBase {
     detail?: string;
 }
-export declare class GetTargetsId404ApplicationJson extends SpeakeasyBase {
+/**
+ * Not found
+ */
+export declare class GetTargetsId404ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Not found.
+     */
     detail?: string;
 }
-export declare class GetTargetsId500ApplicationJson extends SpeakeasyBase {
+/**
+ * Access token is missing or invalid
+ */
+export declare class GetTargetsId401ApplicationJSON extends SpeakeasyBase {
     detail?: string;
-}
-export declare class GetTargetsIdRequest extends SpeakeasyBase {
-    pathParams: GetTargetsIdPathParams;
 }
 export declare class GetTargetsIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Target object
+     */
     target?: shared.Target;
-    getTargetsId401ApplicationJSONObject?: GetTargetsId401ApplicationJson;
-    getTargetsId404ApplicationJSONObject?: GetTargetsId404ApplicationJson;
-    getTargetsId500ApplicationJSONObject?: GetTargetsId500ApplicationJson;
+    /**
+     * Access token is missing or invalid
+     */
+    getTargetsId401ApplicationJSONObject?: GetTargetsId401ApplicationJSON;
+    /**
+     * Not found
+     */
+    getTargetsId404ApplicationJSONObject?: GetTargetsId404ApplicationJSON;
+    /**
+     * Internal server error
+     */
+    getTargetsId500ApplicationJSONObject?: GetTargetsId500ApplicationJSON;
 }

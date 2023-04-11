@@ -1,18 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class PutRiddleQueryParams extends SpeakeasyBase {
-    answer: string;
-    category: string;
-    question: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PutRiddleSecurity extends SpeakeasyBase {
-    xFungeneratorsApiSecret: shared.SchemeXFungeneratorsApiSecret;
+    xFungeneratorsApiSecret: string;
 }
 export declare class PutRiddleRequest extends SpeakeasyBase {
-    queryParams: PutRiddleQueryParams;
-    security: PutRiddleSecurity;
+    /**
+     * Answer(s) to the riddle question
+     */
+    answer: string;
+    /**
+     * Category of the riddle
+     */
+    category: string;
+    /**
+     * Riddle Question
+     */
+    question: string;
 }
 export declare class PutRiddleResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

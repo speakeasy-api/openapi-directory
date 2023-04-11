@@ -1,4 +1,5 @@
 export * from "./sasportalcustomerslist";
+export * from "./sasportalcustomersprovisiondeployment";
 export * from "./sasportalinstallergeneratesecret";
 export * from "./sasportalinstallervalidate";
 export * from "./sasportalnodesdevicessigndevice";

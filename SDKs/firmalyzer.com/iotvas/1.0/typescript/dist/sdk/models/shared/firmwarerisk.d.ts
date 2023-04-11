@@ -6,6 +6,9 @@ export declare class FirmwareRiskRiskSummary extends SpeakeasyBase {
     kernelRisk?: string;
     netServicesRisk?: string;
 }
+/**
+ * Successful Response
+ */
 export declare class FirmwareRisk extends SpeakeasyBase {
     riskSummary?: FirmwareRiskRiskSummary;
     vulnerableComponents?: VulnerableComponent[];

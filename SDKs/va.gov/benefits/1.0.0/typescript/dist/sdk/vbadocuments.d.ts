@@ -1,6 +1,10 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class VbaDocuments {
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * VA Benefits document upload functionality
+ */
+export declare class VBADocuments {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,27 +13,54 @@ export declare class VbaDocuments {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getBenefitsDocumentUploadDownload - Download zip of "what the server sees"
+     * Download zip of "what the server sees"
      *
+     * @remarks
      * An endpoint that will allow you to see exactly what the server sees. We split apart all submitted docs and metadata and zip the file to make it available to you to help with debugging purposes. Files are deleted after 10 days. Only available in testing environments, not production.
-    **/
-    getBenefitsDocumentUploadDownload(req: operations.GetBenefitsDocumentUploadDownloadRequest, config?: AxiosRequestConfig): Promise<operations.GetBenefitsDocumentUploadDownloadResponse>;
+     */
+    getBenefitsDocumentUploadDownload(req: operations.GetBenefitsDocumentUploadDownloadRequest, security: operations.GetBenefitsDocumentUploadDownloadSecurity, config?: AxiosRequestConfig): Promise<operations.GetBenefitsDocumentUploadDownloadResponse>;
     /**
-     * getBenefitsDocumentUploadStatus - Get status for a previous benefits document upload
-    **/
-    getBenefitsDocumentUploadStatus(req: operations.GetBenefitsDocumentUploadStatusRequest, config?: AxiosRequestConfig): Promise<operations.GetBenefitsDocumentUploadStatusResponse>;
+     * Get status for a previous benefits document upload
+     */
+    getBenefitsDocumentUploadStatus(req: operations.GetBenefitsDocumentUploadStatusRequest, security: operations.GetBenefitsDocumentUploadStatusSecurity, config?: AxiosRequestConfig): Promise<operations.GetBenefitsDocumentUploadStatusResponse>;
     /**
-     * getBenefitsDocumentUploadStatusReport - Get a bulk status report for a list of previous uploads
-    **/
-    getBenefitsDocumentUploadStatusReport(req: operations.GetBenefitsDocumentUploadStatusReportRequest, config?: AxiosRequestConfig): Promise<operations.GetBenefitsDocumentUploadStatusReportResponse>;
+     * Get a bulk status report for a list of previous uploads
+     */
+    getBenefitsDocumentUploadStatusReport(req: shared.DocumentUploadStatusGuidList, security: operations.GetBenefitsDocumentUploadStatusReportSecurity, config?: AxiosRequestConfig): Promise<operations.GetBenefitsDocumentUploadStatusReportResponse>;
     /**
-     * postBenefitsDocumentUpload - Get a location for subsequent document upload PUT request
-    **/
-    postBenefitsDocumentUpload(req: operations.PostBenefitsDocumentUploadRequest, config?: AxiosRequestConfig): Promise<operations.PostBenefitsDocumentUploadResponse>;
+     * Get a location for subsequent document upload PUT request
+     */
+    postBenefitsDocumentUpload(config?: AxiosRequestConfig): Promise<operations.PostBenefitsDocumentUploadResponse>;
     /**
-     * putBenefitsDocumentUpload - Accepts document upload.
+     * Validate an individual document against system file requirements
      *
-     * Accepts document metadata, document binary, and attachment binaries.Full URL, including
+     * @remarks
+     * Using this endpoint will decrease the likelihood of errors associated with individual documents during
+     * the submission process. Validations performed:
+     * * Document is a valid PDF (Note: `Content-Type` header value must be "application/pdf")
+     * * Document does not have a user password (an owner password is acceptable)
+     * * File size does not exceed 100 MB
+     * * Page size does not exceed 21" x 21"
+     *
+     * Each PDF document is sent as a direct file upload. The request body should contain nothing other than the document in
+     * binary format. Binary multipart/form-data encoding is not supported. This endpoint does NOT validate metadata in JSON
+     * format.
+     *
+     * This endpoint does NOT initiate the claims intake process or submit data to that process. After using this endpoint,
+     * individual PDF documents can be combined and submitted as a payload using PUT `/path`.
+     *
+     * A `200` response confirms that the individual document provided passes the system requirements.
+     *
+     * A `422` response indicates one or more problems with the document that should be resolved before submitting it in the
+     * full document submission payload.
+     *
+     */
+    postBenefitsDocumentUploadValidateDocument(config?: AxiosRequestConfig): Promise<operations.PostBenefitsDocumentUploadValidateDocumentResponse>;
+    /**
+     * Accepts document upload.
+     *
+     * @remarks
+     * Accepts document metadata, document binary, and attachment binaries. Full URL, including
      * query parameters, provided from POST `/document_uploads`.
      *
      * ## Example Payload
@@ -80,6 +111,6 @@ export declare class VbaDocuments {
      * curl -v -L -X PUT '<Location from \uploads>' -F 'metadata="{\"veteranFirstName\": \"Jane\",\"veteranLastName\": \"Doe\",\"fileNumber\": \"012345678\",\"zipCode\": \"97202\",\"source\": \"MyVSO\",\"docType\": \"21-22\",\"businessLine\": \"CMP\"}";type=application/json' -F 'content=@"content.pdf"' -F 'attachment1=@"file1.pdf"' -F 'attachment2=@"another_file.pdf"'
      * ```
      *
-    **/
+     */
     putBenefitsDocumentUpload(req: operations.PutBenefitsDocumentUploadRequest, config?: AxiosRequestConfig): Promise<operations.PutBenefitsDocumentUploadResponse>;
 }

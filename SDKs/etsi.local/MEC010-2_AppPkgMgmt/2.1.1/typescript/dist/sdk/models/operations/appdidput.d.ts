@@ -1,14 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AppDIdPutPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class AppDIdPUTRequest extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    /**
+     * Identifier of an application descriptor
+     */
     appDId: string;
 }
-export declare class AppDIdPutRequest extends SpeakeasyBase {
-    pathParams: AppDIdPutPathParams;
-    request?: Uint8Array;
-}
-export declare class AppDIdPutResponse extends SpeakeasyBase {
+export declare class AppDIdPUTResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Bad Request : used to indicate that incorrect parameters were passed to the request.
+     */
     problemDetails?: shared.ProblemDetails;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,30 +1,74 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { Destination } from "./destination";
 import { MatchingCriteria } from "./matchingcriteria";
-import { Transport } from "./transport";
-import { TransportInput } from "./transport";
+import { Transport, TransportInput } from "./transport";
 /**
  * A representation of the trigger resource.
-**/
-export declare class Trigger extends SpeakeasyBase {
-    createTime?: string;
+ */
+export declare class TriggerInput extends SpeakeasyBase {
+    /**
+     * Represents a target of an invocation over HTTP.
+     */
     destination?: Destination;
-    etag?: string;
+    /**
+     * Optional. User labels attached to the triggers that can be used to group resources.
+     */
     labels?: Record<string, string>;
+    /**
+     * Required. Unordered list. The criteria by which events are filtered. Only events that match with this criteria will be sent to the destination.
+     */
     matchingCriteria?: MatchingCriteria[];
+    /**
+     * Required. The resource name of the trigger. Must be unique within the location on the project and must in `projects/{project}/locations/{location}/triggers/{trigger}` format.
+     */
     name?: string;
+    /**
+     * Optional. The IAM service account email associated with the trigger. The service account represents the identity of the trigger. The principal who calls this API must have `iam.serviceAccounts.actAs` permission in the service account. See https://cloud.google.com/iam/docs/understanding-service-accounts?hl=en#sa_common for more information. For Cloud Run destinations, this service account is used to generate identity tokens when invoking the service. See https://cloud.google.com/run/docs/triggering/pubsub-push#create-service-account for information on how to invoke authenticated Cloud Run services. In order to create Audit Log triggers, the service account should also have 'eventarc.events.receiveAuditLogV1Written' permission.
+     */
     serviceAccount?: string;
-    transport?: Transport;
-    updateTime?: string;
+    /**
+     * Represents the transport intermediaries created for the trigger in order to deliver events.
+     */
+    transport?: TransportInput;
 }
 /**
  * A representation of the trigger resource.
-**/
-export declare class TriggerInput extends SpeakeasyBase {
+ */
+export declare class Trigger extends SpeakeasyBase {
+    /**
+     * Output only. The creation time.
+     */
+    createTime?: string;
+    /**
+     * Represents a target of an invocation over HTTP.
+     */
     destination?: Destination;
+    /**
+     * Output only. This checksum is computed by the server based on the value of other fields, and may be sent only on create requests to ensure the client has an up-to-date value before proceeding.
+     */
+    etag?: string;
+    /**
+     * Optional. User labels attached to the triggers that can be used to group resources.
+     */
     labels?: Record<string, string>;
+    /**
+     * Required. Unordered list. The criteria by which events are filtered. Only events that match with this criteria will be sent to the destination.
+     */
     matchingCriteria?: MatchingCriteria[];
+    /**
+     * Required. The resource name of the trigger. Must be unique within the location on the project and must in `projects/{project}/locations/{location}/triggers/{trigger}` format.
+     */
     name?: string;
+    /**
+     * Optional. The IAM service account email associated with the trigger. The service account represents the identity of the trigger. The principal who calls this API must have `iam.serviceAccounts.actAs` permission in the service account. See https://cloud.google.com/iam/docs/understanding-service-accounts?hl=en#sa_common for more information. For Cloud Run destinations, this service account is used to generate identity tokens when invoking the service. See https://cloud.google.com/run/docs/triggering/pubsub-push#create-service-account for information on how to invoke authenticated Cloud Run services. In order to create Audit Log triggers, the service account should also have 'eventarc.events.receiveAuditLogV1Written' permission.
+     */
     serviceAccount?: string;
-    transport?: TransportInput;
+    /**
+     * Represents the transport intermediaries created for the trigger in order to deliver events.
+     */
+    transport?: Transport;
+    /**
+     * Output only. The last-modified time.
+     */
+    updateTime?: string;
 }

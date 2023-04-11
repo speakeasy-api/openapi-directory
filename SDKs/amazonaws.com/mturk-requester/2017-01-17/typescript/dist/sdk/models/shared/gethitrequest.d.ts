@@ -1,4 +1,4 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetHitRequest extends SpeakeasyBase {
+export declare class GetHITRequest extends SpeakeasyBase {
     hitId: string;
 }

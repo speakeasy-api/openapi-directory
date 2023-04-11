@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UsersFollowPathParams extends SpeakeasyBase {
-    username: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UsersFollowRequest extends SpeakeasyBase {
-    pathParams: UsersFollowPathParams;
+    /**
+     * The handle for the GitHub user account.
+     */
+    username: string;
 }
 export declare class UsersFollowResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Requires authentication
+     */
     basicError?: shared.BasicError;
 }

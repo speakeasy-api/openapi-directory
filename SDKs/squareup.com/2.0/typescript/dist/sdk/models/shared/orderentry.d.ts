@@ -1,0 +1,27 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * A lightweight description of an [order](https://developer.squareup.com/reference/square_2021-08-18/objects/Order) that is returned when
+ *
+ * @remarks
+ * `returned_entries` is `true` on a [SearchOrdersRequest](https://developer.squareup.com/reference/square_2021-08-18/orders-api/search-orders).
+ */
+export declare class OrderEntry extends SpeakeasyBase {
+    /**
+     * The location ID the order belongs to.
+     */
+    locationId?: string;
+    /**
+     * The ID of the order.
+     */
+    orderId?: string;
+    /**
+     * The version number, which is incremented each time an update is committed to the order.
+     *
+     * @remarks
+     * Orders that were not created through the API do not include a version number and
+     * therefore cannot be updated.
+     *
+     * [Read more about working with versions.](https://developer.squareup.com/docs/orders-api/manage-orders#update-orders)
+     */
+    version?: number;
+}

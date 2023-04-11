@@ -1,22 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class TopOndQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class TopONDSecurity extends SpeakeasyBase {
+    auth: string;
+}
+export declare class TopONDRequest extends SpeakeasyBase {
+    /**
+     * Mandatory http header:  application/xml or application/json
+     */
+    accept: string;
+    /**
+     * Carrier for which the OND will be retrieved (e.g. 'LH')
+     */
     catalogues?: string;
+    /**
+     * Enter the origin country code (e.g. 'DE'). Leave empty to search Top OND across all countries
+     */
     origin?: string;
 }
-export declare class TopOndHeaders extends SpeakeasyBase {
-    accept: string;
-}
-export declare class TopOndSecurity extends SpeakeasyBase {
-    auth: shared.SchemeAuth;
-}
-export declare class TopOndRequest extends SpeakeasyBase {
-    queryParams: TopOndQueryParams;
-    headers: TopOndHeaders;
-    security: TopOndSecurity;
-}
-export declare class TopOndResponse extends SpeakeasyBase {
+export declare class TopONDResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
     topOND200ApplicationJSONString?: string;
 }

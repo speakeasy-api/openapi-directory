@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetAddRoleToInstanceProfileActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETAddRoleToInstanceProfileActionEnum {
     AddRoleToInstanceProfile = "AddRoleToInstanceProfile"
 }
-export declare enum GetAddRoleToInstanceProfileVersionEnum {
+export declare enum GETAddRoleToInstanceProfileVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class GetAddRoleToInstanceProfileQueryParams extends SpeakeasyBase {
-    action: GetAddRoleToInstanceProfileActionEnum;
+export declare class GETAddRoleToInstanceProfileRequest extends SpeakeasyBase {
+    action: GETAddRoleToInstanceProfileActionEnum;
+    /**
+     * <p>The name of the instance profile to update.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
+     */
     instanceProfileName: string;
+    /**
+     * <p>The name of the role to add.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
+     */
     roleName: string;
-    version: GetAddRoleToInstanceProfileVersionEnum;
-}
-export declare class GetAddRoleToInstanceProfileHeaders extends SpeakeasyBase {
+    version: GETAddRoleToInstanceProfileVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetAddRoleToInstanceProfileHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetAddRoleToInstanceProfileRequest extends SpeakeasyBase {
-    queryParams: GetAddRoleToInstanceProfileQueryParams;
-    headers: GetAddRoleToInstanceProfileHeaders;
-}
-export declare class GetAddRoleToInstanceProfileResponse extends SpeakeasyBase {
+export declare class GETAddRoleToInstanceProfileResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

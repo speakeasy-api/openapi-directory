@@ -3,7 +3,7 @@ import { ModeEnum } from "./modeenum";
 import { RuntimeEnum } from "./runtimeenum";
 /**
  * A complex type that describes function metadata.
-**/
+ */
 export declare class FunctionConfiguration extends SpeakeasyBase {
     codeSize?: number;
     configurationId?: string;

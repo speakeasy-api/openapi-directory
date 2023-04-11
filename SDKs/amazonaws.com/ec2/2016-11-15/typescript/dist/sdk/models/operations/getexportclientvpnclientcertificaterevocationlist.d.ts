@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetExportClientVpnClientCertificateRevocationListActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETExportClientVpnClientCertificateRevocationListActionEnum {
     ExportClientVpnClientCertificateRevocationList = "ExportClientVpnClientCertificateRevocationList"
 }
-export declare enum GetExportClientVpnClientCertificateRevocationListVersionEnum {
+export declare enum GETExportClientVpnClientCertificateRevocationListVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetExportClientVpnClientCertificateRevocationListQueryParams extends SpeakeasyBase {
-    action: GetExportClientVpnClientCertificateRevocationListActionEnum;
+export declare class GETExportClientVpnClientCertificateRevocationListRequest extends SpeakeasyBase {
+    action: GETExportClientVpnClientCertificateRevocationListActionEnum;
+    /**
+     * The ID of the Client VPN endpoint.
+     */
     clientVpnEndpointId: string;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
-    version: GetExportClientVpnClientCertificateRevocationListVersionEnum;
-}
-export declare class GetExportClientVpnClientCertificateRevocationListHeaders extends SpeakeasyBase {
+    version: GETExportClientVpnClientCertificateRevocationListVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetExportClientVpnClientCertificateRevocationListHeaders ex
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetExportClientVpnClientCertificateRevocationListRequest extends SpeakeasyBase {
-    queryParams: GetExportClientVpnClientCertificateRevocationListQueryParams;
-    headers: GetExportClientVpnClientCertificateRevocationListHeaders;
-}
-export declare class GetExportClientVpnClientCertificateRevocationListResponse extends SpeakeasyBase {
+export declare class GETExportClientVpnClientCertificateRevocationListResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,25 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDomainMetadataActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDomainMetadataActionEnum {
     DomainMetadata = "DomainMetadata"
 }
-export declare enum GetDomainMetadataVersionEnum {
+export declare enum GETDomainMetadataVersionEnum {
     TwoThousandAndNine0415 = "2009-04-15"
 }
-export declare class GetDomainMetadataQueryParams extends SpeakeasyBase {
+export declare class GETDomainMetadataRequest extends SpeakeasyBase {
     awsAccessKeyId: string;
-    action: GetDomainMetadataActionEnum;
+    action: GETDomainMetadataActionEnum;
+    /**
+     * The name of the domain for which to display the metadata of.
+     */
     domainName: string;
     signature: string;
     signatureMethod: string;
     signatureVersion: string;
     timestamp: string;
-    version: GetDomainMetadataVersionEnum;
+    version: GETDomainMetadataVersionEnum;
 }
-export declare class GetDomainMetadataRequest extends SpeakeasyBase {
-    queryParams: GetDomainMetadataQueryParams;
-}
-export declare class GetDomainMetadataResponse extends SpeakeasyBase {
+export declare class GETDomainMetadataResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

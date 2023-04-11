@@ -1,5 +1,17 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * # Introduction
+ *
+ * @remarks
+ * The methods are required to have an admin authentication.
+ *
+ * # How to get admin credentials
+ * Please create admin credentials in [Datahub](https://userdatahub.com) and use method v1/Auth/Login (1. User management)
+ *
+ * # Scheme
+ * ![Admin statistics integration](https://website-cliparts-datamotion.s3.us-east-2.amazonaws.com/Dev.portal/admin+statistics+integration.png)
+ */
 export declare class ThreeForBackEndOptional {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,27 +21,31 @@ export declare class ThreeForBackEndOptional {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * rootV1ScoringsConsolidated - /v1/Scorings/consolidated
-     *
      * /v1/Scorings/consolidated
-    **/
+     *
+     * @remarks
+     * /v1/Scorings/consolidated
+     */
     rootV1ScoringsConsolidated(req: operations.RootV1ScoringsConsolidatedRequest, config?: AxiosRequestConfig): Promise<operations.RootV1ScoringsConsolidatedResponse>;
     /**
-     * rootV1ScoringsConsolidatedDaily - /v1/Scorings/consolidated/daily
-     *
      * /v1/Scorings/consolidated/daily
-    **/
+     *
+     * @remarks
+     * /v1/Scorings/consolidated/daily
+     */
     rootV1ScoringsConsolidatedDaily(req: operations.RootV1ScoringsConsolidatedDailyRequest, config?: AxiosRequestConfig): Promise<operations.RootV1ScoringsConsolidatedDailyResponse>;
     /**
-     * rootV1StatisticsConsolidated - /v1/Statistics/consolidated
-     *
      * /v1/Statistics/consolidated
-    **/
+     *
+     * @remarks
+     * /v1/Statistics/consolidated
+     */
     rootV1StatisticsConsolidated(req: operations.RootV1StatisticsConsolidatedRequest, config?: AxiosRequestConfig): Promise<operations.RootV1StatisticsConsolidatedResponse>;
     /**
-     * rootV1StatisticsConsolidatedDaily - /v1/Statistics/consolidated/daily
-     *
      * /v1/Statistics/consolidated/daily
-    **/
+     *
+     * @remarks
+     * /v1/Statistics/consolidated/daily
+     */
     rootV1StatisticsConsolidatedDaily(req: operations.RootV1StatisticsConsolidatedDailyRequest, config?: AxiosRequestConfig): Promise<operations.RootV1StatisticsConsolidatedDailyResponse>;
 }

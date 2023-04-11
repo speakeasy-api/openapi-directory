@@ -1,10 +1,30 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://api.vonage.com/t/vbc.prod/provisioning"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * The Vonage Business Cloud User API enables you to retrieve information about users.
+ *
+ * @remarks
+ *
+ * Your application must subscribe to the Provisioning API suite to use this API.
+ *
+ */
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -12,13 +32,14 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
     /**
-     * userCtrlGetUserById - Get user data by account ID and user ID
-    **/
-    userCtrlGetUserById(req: operations.UserCtrlGetUserByIdRequest, config?: AxiosRequestConfig): Promise<operations.UserCtrlGetUserByIdResponse>;
+     * Get user data by account ID and user ID
+     */
+    userCtrlGetUserByID(req: operations.UserCtrlGetUserByIDRequest, security: operations.UserCtrlGetUserByIDSecurity, config?: AxiosRequestConfig): Promise<operations.UserCtrlGetUserByIDResponse>;
     /**
-     * userCtrlGetUsers - Get account users data by account ID
-    **/
-    userCtrlGetUsers(req: operations.UserCtrlGetUsersRequest, config?: AxiosRequestConfig): Promise<operations.UserCtrlGetUsersResponse>;
+     * Get account users data by account ID
+     */
+    userCtrlGetUsers(req: operations.UserCtrlGetUsersRequest, security: operations.UserCtrlGetUsersSecurity, config?: AxiosRequestConfig): Promise<operations.UserCtrlGetUsersResponse>;
 }

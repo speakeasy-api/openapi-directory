@@ -3,7 +3,7 @@ import { StartChildWorkflowExecutionFailedCauseEnum } from "./startchildworkflow
 import { WorkflowType } from "./workflowtype";
 /**
  * Provides the details of the <code>StartChildWorkflowExecutionFailed</code> event.
-**/
+ */
 export declare class StartChildWorkflowExecutionFailedEventAttributes extends SpeakeasyBase {
     cause: StartChildWorkflowExecutionFailedCauseEnum;
     control?: string;

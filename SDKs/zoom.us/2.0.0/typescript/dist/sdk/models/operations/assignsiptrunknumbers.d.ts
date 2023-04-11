@@ -1,29 +1,32 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class AssignSipTrunkNumbersPathParams extends SpeakeasyBase {
-    accountId: string;
-}
-export declare class AssignSipTrunkNumbersApplicationJson extends SpeakeasyBase {
-    phoneNumbers?: string[];
-}
-export declare class AssignSipTrunkNumbersMultipartFormData extends SpeakeasyBase {
-    phoneNumbers?: string[];
-}
-export declare class AssignSipTrunkNumbersRequests extends SpeakeasyBase {
-    object?: AssignSipTrunkNumbersApplicationJson;
-    object1?: AssignSipTrunkNumbersMultipartFormData;
-}
+import { AxiosResponse } from "axios";
 export declare class AssignSipTrunkNumbersSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
+    oAuth: string;
+}
+export declare class AssignSipTrunkNumbersApplicationJSON extends SpeakeasyBase {
+    /**
+     * Phone number(s) to be assigned to the sub account.
+     */
+    phoneNumbers?: string[];
 }
 export declare class AssignSipTrunkNumbersRequest extends SpeakeasyBase {
-    pathParams: AssignSipTrunkNumbersPathParams;
-    request?: AssignSipTrunkNumbersRequests;
-    security: AssignSipTrunkNumbersSecurity;
+    requestBody?: AssignSipTrunkNumbersApplicationJSON;
+    /**
+     * Unique Identifier of the sub account.
+     */
+    accountId: string;
 }
 export declare class AssignSipTrunkNumbersResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * **HTTP Status Code:** `201` **Created**<br>
+     *
+     * @remarks
+     * Numbers assigned successfully.
+     *
+     */
     assignSipTrunkNumbers201ApplicationJSONAny?: any;
 }

@@ -1,104 +1,70 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AuthorAssociationEnum } from "./authorassociationenum";
 import { Link } from "./link";
+import { NullableMilestone } from "./nullablemilestone";
+import { NullableSimpleUser } from "./nullablesimpleuser";
 import { Repository } from "./repository";
 import { SimpleUser } from "./simpleuser";
-import { AuthorAssociationEnum } from "./authorassociationenum";
-import { TeamSimple } from "./teamsimple";
+import { Team } from "./team";
 export declare class PullRequestSimpleLinks extends SpeakeasyBase {
+    /**
+     * Hypermedia Link
+     */
     comments: Link;
+    /**
+     * Hypermedia Link
+     */
     commits: Link;
+    /**
+     * Hypermedia Link
+     */
     html: Link;
+    /**
+     * Hypermedia Link
+     */
     issue: Link;
+    /**
+     * Hypermedia Link
+     */
     reviewComment: Link;
+    /**
+     * Hypermedia Link
+     */
     reviewComments: Link;
+    /**
+     * Hypermedia Link
+     */
     self: Link;
+    /**
+     * Hypermedia Link
+     */
     statuses: Link;
-}
-/**
- * Simple User
-**/
-export declare class PullRequestSimpleSimpleUser extends SpeakeasyBase {
-    avatarUrl: string;
-    eventsUrl: string;
-    followersUrl: string;
-    followingUrl: string;
-    gistsUrl: string;
-    gravatarId: string;
-    htmlUrl: string;
-    id: number;
-    login: string;
-    nodeId: string;
-    organizationsUrl: string;
-    receivedEventsUrl: string;
-    reposUrl: string;
-    siteAdmin: boolean;
-    starredAt?: string;
-    starredUrl: string;
-    subscriptionsUrl: string;
-    type: string;
-    url: string;
-}
-/**
- * Simple User
-**/
-export declare class PullRequestSimpleBaseSimpleUser extends SpeakeasyBase {
-    avatarUrl: string;
-    eventsUrl: string;
-    followersUrl: string;
-    followingUrl: string;
-    gistsUrl: string;
-    gravatarId: string;
-    htmlUrl: string;
-    id: number;
-    login: string;
-    nodeId: string;
-    organizationsUrl: string;
-    receivedEventsUrl: string;
-    reposUrl: string;
-    siteAdmin: boolean;
-    starredAt?: string;
-    starredUrl: string;
-    subscriptionsUrl: string;
-    type: string;
-    url: string;
 }
 export declare class PullRequestSimpleBase extends SpeakeasyBase {
     label: string;
     ref: string;
+    /**
+     * A git repository
+     */
     repo: Repository;
     sha: string;
-    user: PullRequestSimpleBaseSimpleUser;
-}
-/**
- * Simple User
-**/
-export declare class PullRequestSimpleHeadSimpleUser extends SpeakeasyBase {
-    avatarUrl: string;
-    eventsUrl: string;
-    followersUrl: string;
-    followingUrl: string;
-    gistsUrl: string;
-    gravatarId: string;
-    htmlUrl: string;
-    id: number;
-    login: string;
-    nodeId: string;
-    organizationsUrl: string;
-    receivedEventsUrl: string;
-    reposUrl: string;
-    siteAdmin: boolean;
-    starredAt?: string;
-    starredUrl: string;
-    subscriptionsUrl: string;
-    type: string;
-    url: string;
+    /**
+     * Simple User
+     */
+    user: NullableSimpleUser;
 }
 export declare class PullRequestSimpleHead extends SpeakeasyBase {
     label: string;
     ref: string;
+    /**
+     * A git repository
+     */
     repo: Repository;
     sha: string;
-    user: PullRequestSimpleHeadSimpleUser;
+    /**
+     * Simple User
+     */
+    user: NullableSimpleUser;
 }
 export declare class PullRequestSimpleLabels extends SpeakeasyBase {
     color?: string;
@@ -110,62 +76,19 @@ export declare class PullRequestSimpleLabels extends SpeakeasyBase {
     url?: string;
 }
 /**
- * Simple User
-**/
-export declare class PullRequestSimpleMilestoneSimpleUser extends SpeakeasyBase {
-    avatarUrl: string;
-    eventsUrl: string;
-    followersUrl: string;
-    followingUrl: string;
-    gistsUrl: string;
-    gravatarId: string;
-    htmlUrl: string;
-    id: number;
-    login: string;
-    nodeId: string;
-    organizationsUrl: string;
-    receivedEventsUrl: string;
-    reposUrl: string;
-    siteAdmin: boolean;
-    starredAt?: string;
-    starredUrl: string;
-    subscriptionsUrl: string;
-    type: string;
-    url: string;
-}
-export declare enum PullRequestSimpleMilestoneStateEnum {
-    Open = "open",
-    Closed = "closed"
-}
-/**
- * A collection of related issues and pull requests.
-**/
-export declare class PullRequestSimpleMilestone extends SpeakeasyBase {
-    closedAt: Date;
-    closedIssues: number;
-    createdAt: Date;
-    creator: PullRequestSimpleMilestoneSimpleUser;
-    description: string;
-    dueOn: Date;
-    htmlUrl: string;
-    id: number;
-    labelsUrl: string;
-    nodeId: string;
-    number: number;
-    openIssues: number;
-    state: PullRequestSimpleMilestoneStateEnum;
-    title: string;
-    updatedAt: Date;
-    url: string;
-}
-/**
  * Pull Request Simple
-**/
+ */
 export declare class PullRequestSimple extends SpeakeasyBase {
     links: PullRequestSimpleLinks;
     activeLockReason?: string;
-    assignee: PullRequestSimpleSimpleUser;
+    /**
+     * Simple User
+     */
+    assignee: NullableSimpleUser;
     assignees?: SimpleUser[];
+    /**
+     * How the author is associated with the repository.
+     */
     authorAssociation: AuthorAssociationEnum;
     base: PullRequestSimpleBase;
     body: string;
@@ -174,6 +97,9 @@ export declare class PullRequestSimple extends SpeakeasyBase {
     commitsUrl: string;
     createdAt: Date;
     diffUrl: string;
+    /**
+     * Indicates whether or not the pull request is a draft.
+     */
     draft?: boolean;
     head: PullRequestSimpleHead;
     htmlUrl: string;
@@ -183,12 +109,15 @@ export declare class PullRequestSimple extends SpeakeasyBase {
     locked: boolean;
     mergeCommitSha: string;
     mergedAt: Date;
-    milestone: PullRequestSimpleMilestone;
+    /**
+     * A collection of related issues and pull requests.
+     */
+    milestone: NullableMilestone;
     nodeId: string;
     number: number;
     patchUrl: string;
     requestedReviewers?: SimpleUser[];
-    requestedTeams?: TeamSimple[];
+    requestedTeams?: Team[];
     reviewCommentUrl: string;
     reviewCommentsUrl: string;
     state: string;
@@ -196,5 +125,8 @@ export declare class PullRequestSimple extends SpeakeasyBase {
     title: string;
     updatedAt: Date;
     url: string;
-    user: PullRequestSimpleSimpleUser;
+    /**
+     * Simple User
+     */
+    user: NullableSimpleUser;
 }

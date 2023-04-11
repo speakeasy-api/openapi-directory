@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostAcceptVpcEndpointConnectionsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTAcceptVpcEndpointConnectionsActionEnum {
     AcceptVpcEndpointConnections = "AcceptVpcEndpointConnections"
 }
-export declare enum PostAcceptVpcEndpointConnectionsVersionEnum {
+export declare enum POSTAcceptVpcEndpointConnectionsVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostAcceptVpcEndpointConnectionsQueryParams extends SpeakeasyBase {
-    action: PostAcceptVpcEndpointConnectionsActionEnum;
-    version: PostAcceptVpcEndpointConnectionsVersionEnum;
-}
-export declare class PostAcceptVpcEndpointConnectionsHeaders extends SpeakeasyBase {
+export declare class POSTAcceptVpcEndpointConnectionsRequest extends SpeakeasyBase {
+    action: POSTAcceptVpcEndpointConnectionsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTAcceptVpcEndpointConnectionsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostAcceptVpcEndpointConnectionsHeaders extends SpeakeasyBa
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostAcceptVpcEndpointConnectionsRequest extends SpeakeasyBase {
-    queryParams: PostAcceptVpcEndpointConnectionsQueryParams;
-    headers: PostAcceptVpcEndpointConnectionsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostAcceptVpcEndpointConnectionsResponse extends SpeakeasyBase {
+export declare class POSTAcceptVpcEndpointConnectionsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

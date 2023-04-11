@@ -1,0 +1,30 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { AcEntryDto } from "./acentrydto";
+import { AcudfValueDto } from "./acudfvaluedto";
+import { VatEntryDto } from "./vatentrydto";
+/**
+ * Information of Sales Entry to create.
+ */
+export declare class SalesEntryDto extends SpeakeasyBase {
+    acCode?: string;
+    acEntries?: AcEntryDto[];
+    bookTranTypeId?: number;
+    customFields?: AcudfValueDto[];
+    customerId?: number;
+    detailCollection?: string[];
+    details?: string;
+    entryDate?: Date;
+    id?: number;
+    netGoods?: number;
+    netServices?: number;
+    note?: string;
+    procDate?: Date;
+    reference?: string;
+    timestamp?: string;
+    total?: number;
+    totalNet?: number;
+    totalVAT?: number;
+    unpaid?: number;
+    vatEntries?: VatEntryDto[];
+    vatTypeId?: number;
+}

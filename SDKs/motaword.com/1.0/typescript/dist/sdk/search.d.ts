@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Search {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,15 +9,18 @@ export declare class Search {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * checkDocumentsReindex - Check reindex status of the client source and translation documents.
-    **/
+     * Check reindex status of the client source and translation documents.
+     */
     checkDocumentsReindex(req: operations.CheckDocumentsReindexRequest, config?: AxiosRequestConfig): Promise<operations.CheckDocumentsReindexResponse>;
     /**
-     * reindexDocuments - Reindex for search all of the client source and translation documents.
-    **/
+     * Reindex for search all of the client source and translation documents.
+     */
     reindexDocuments(config?: AxiosRequestConfig): Promise<operations.ReindexDocumentsResponse>;
     /**
-     * searchEverywhere - Search everywhere! Including projects, documents, translations...
-    **/
+     * Search everything in your account
+     *
+     * @remarks
+     * Search through everything in your account, from projects to documents, from source strings to translations...
+     */
     searchEverywhere(req: operations.SearchEverywhereRequest, config?: AxiosRequestConfig): Promise<operations.SearchEverywhereResponse>;
 }

@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteCustomerGatewayActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteCustomerGatewayActionEnum {
     DeleteCustomerGateway = "DeleteCustomerGateway"
 }
-export declare enum GetDeleteCustomerGatewayVersionEnum {
+export declare enum GETDeleteCustomerGatewayVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetDeleteCustomerGatewayQueryParams extends SpeakeasyBase {
-    action: GetDeleteCustomerGatewayActionEnum;
+export declare class GETDeleteCustomerGatewayRequest extends SpeakeasyBase {
+    action: GETDeleteCustomerGatewayActionEnum;
+    /**
+     * The ID of the customer gateway.
+     */
     customerGatewayId: string;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
-    version: GetDeleteCustomerGatewayVersionEnum;
-}
-export declare class GetDeleteCustomerGatewayHeaders extends SpeakeasyBase {
+    version: GETDeleteCustomerGatewayVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,11 +25,8 @@ export declare class GetDeleteCustomerGatewayHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteCustomerGatewayRequest extends SpeakeasyBase {
-    queryParams: GetDeleteCustomerGatewayQueryParams;
-    headers: GetDeleteCustomerGatewayHeaders;
-}
-export declare class GetDeleteCustomerGatewayResponse extends SpeakeasyBase {
+export declare class GETDeleteCustomerGatewayResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

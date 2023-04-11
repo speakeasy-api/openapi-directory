@@ -1,15 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class MigrationsUnlockRepoForOrgPathParams extends SpeakeasyBase {
-    migrationId: number;
-    org: string;
-    repoName: string;
-}
+import { AxiosResponse } from "axios";
 export declare class MigrationsUnlockRepoForOrgRequest extends SpeakeasyBase {
-    pathParams: MigrationsUnlockRepoForOrgPathParams;
+    /**
+     * The unique identifier of the migration.
+     */
+    migrationId: number;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    org: string;
+    /**
+     * repo_name parameter
+     */
+    repoName: string;
 }
 export declare class MigrationsUnlockRepoForOrgResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Resource not found
+     */
     basicError?: shared.BasicError;
 }

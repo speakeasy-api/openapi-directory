@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostGetUserActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTGetUserActionEnum {
     GetUser = "GetUser"
 }
-export declare enum PostGetUserVersionEnum {
+export declare enum POSTGetUserVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostGetUserQueryParams extends SpeakeasyBase {
-    action: PostGetUserActionEnum;
-    version: PostGetUserVersionEnum;
-}
-export declare class PostGetUserHeaders extends SpeakeasyBase {
+export declare class POSTGetUserRequest extends SpeakeasyBase {
+    action: POSTGetUserActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTGetUserVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostGetUserHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostGetUserRequest extends SpeakeasyBase {
-    queryParams: PostGetUserQueryParams;
-    headers: PostGetUserHeaders;
-    request?: Uint8Array;
-}
-export declare class PostGetUserResponse extends SpeakeasyBase {
+export declare class POSTGetUserResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

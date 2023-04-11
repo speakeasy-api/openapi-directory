@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
- * Provides a summary of the properties of a campaign. For a complete listing, call the <a>DescribeCampaign</a> API.
-**/
+ * Provides a summary of the properties of a campaign. For a complete listing, call the <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeCampaign.html">DescribeCampaign</a> API.
+ */
 export declare class CampaignSummary extends SpeakeasyBase {
     campaignArn?: string;
     creationDateTime?: Date;

@@ -1,7 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { CloneStep } from "./clonestep";
 import { ComputeEngineTargetDetails } from "./computeenginetargetdetails";
 import { Status } from "./status";
-import { CloneStep } from "./clonestep";
+/**
+ * Output only. State of the clone job.
+ */
 export declare enum CloneJobStateEnum {
     StateUnspecified = "STATE_UNSPECIFIED",
     Pending = "PENDING",
@@ -14,21 +17,51 @@ export declare enum CloneJobStateEnum {
 }
 /**
  * CloneJob describes the process of creating a clone of a MigratingVM to the requested target based on the latest successful uploaded snapshots. While the migration cycles of a MigratingVm take place, it is possible to verify the uploaded VM can be started in the cloud, by creating a clone. The clone can be created without any downtime, and it is created using the latest snapshots which are already in the cloud. The cloneJob is only responsible for its work, not its products, which means once it is finished, it will never touch the instance it created. It will only delete it in case of the CloneJob being cancelled or upon failure to clone.
-**/
+ */
 export declare class CloneJob extends SpeakeasyBase {
+    /**
+     * ComputeEngineTargetDetails is a collection of details for creating a VM in a target Compute Engine project.
+     */
     computeEngineTargetDetails?: ComputeEngineTargetDetails;
+    /**
+     * Output only. The time the clone job was created (as an API call, not when it was actually created in the target).
+     */
     createTime?: string;
+    /**
+     * Output only. The time the clone job was ended.
+     */
     endTime?: string;
+    /**
+     * The `Status` type defines a logical error model that is suitable for different programming environments, including REST APIs and RPC APIs. It is used by [gRPC](https://github.com/grpc). Each `Status` message contains three pieces of data: error code, error message, and error details. You can find out more about this error model and how to work with it in the [API Design Guide](https://cloud.google.com/apis/design/errors).
+     */
     error?: Status;
+    /**
+     * Output only. The name of the clone.
+     */
     name?: string;
+    /**
+     * Output only. State of the clone job.
+     */
     state?: CloneJobStateEnum;
+    /**
+     * Output only. The time the state was last updated.
+     */
     stateTime?: string;
+    /**
+     * Output only. The clone steps list representing its progress.
+     */
     steps?: CloneStep[];
 }
 /**
  * CloneJob describes the process of creating a clone of a MigratingVM to the requested target based on the latest successful uploaded snapshots. While the migration cycles of a MigratingVm take place, it is possible to verify the uploaded VM can be started in the cloud, by creating a clone. The clone can be created without any downtime, and it is created using the latest snapshots which are already in the cloud. The cloneJob is only responsible for its work, not its products, which means once it is finished, it will never touch the instance it created. It will only delete it in case of the CloneJob being cancelled or upon failure to clone.
-**/
+ */
 export declare class CloneJobInput extends SpeakeasyBase {
+    /**
+     * ComputeEngineTargetDetails is a collection of details for creating a VM in a target Compute Engine project.
+     */
     computeEngineTargetDetails?: ComputeEngineTargetDetails;
+    /**
+     * The `Status` type defines a logical error model that is suitable for different programming environments, including REST APIs and RPC APIs. It is used by [gRPC](https://github.com/grpc). Each `Status` message contains three pieces of data: error code, error message, and error details. You can find out more about this error model and how to work with it in the [API Design Guide](https://cloud.google.com/apis/design/errors).
+     */
     error?: Status;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GenerateTemplateXAmzTargetEnum {
-    AwsServerMigrationServiceV20161024GenerateTemplate = "AWSServerMigrationService_V2016_10_24.GenerateTemplate"
+    AWSServerMigrationServiceV20161024GenerateTemplate = "AWSServerMigrationService_V2016_10_24.GenerateTemplate"
 }
-export declare class GenerateTemplateHeaders extends SpeakeasyBase {
+export declare class GenerateTemplateRequest extends SpeakeasyBase {
+    generateTemplateRequest: shared.GenerateTemplateRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class GenerateTemplateHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GenerateTemplateXAmzTargetEnum;
 }
-export declare class GenerateTemplateRequest extends SpeakeasyBase {
-    headers: GenerateTemplateHeaders;
-    request: shared.GenerateTemplateRequest;
-}
 export declare class GenerateTemplateResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     generateTemplateResponse?: shared.GenerateTemplateResponse;
+    /**
+     * InternalError
+     */
     internalError?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * MissingRequiredParameterException
+     */
     missingRequiredParameterException?: any;
+    /**
+     * OperationNotPermittedException
+     */
     operationNotPermittedException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnauthorizedOperationException
+     */
     unauthorizedOperationException?: any;
 }

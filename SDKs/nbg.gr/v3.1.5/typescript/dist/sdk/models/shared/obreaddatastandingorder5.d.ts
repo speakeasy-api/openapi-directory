@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ObStandingOrder5 } from "./obstandingorder5";
-export declare class ObReadDataStandingOrder5 extends SpeakeasyBase {
-    standingOrder?: ObStandingOrder5[];
+import { OBStandingOrder5 } from "./obstandingorder5";
+export declare class OBReadDataStandingOrder5 extends SpeakeasyBase {
+    standingOrder?: OBStandingOrder5[];
 }

@@ -1,19 +1,36 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
 export declare class PostResetRequestBody extends SpeakeasyBase {
     email: string;
 }
-export declare class PostReset200ApplicationJson extends SpeakeasyBase {
-    message?: string;
-}
-export declare class PostReset400ApplicationJson extends SpeakeasyBase {
+/**
+ * Bad Request
+ */
+export declare class PostReset400ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error message
+     */
     error?: string;
 }
-export declare class PostResetRequest extends SpeakeasyBase {
-    request: PostResetRequestBody;
+/**
+ * Success
+ */
+export declare class PostReset200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Message
+     */
+    message?: string;
 }
 export declare class PostResetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    postReset200ApplicationJSONObject?: PostReset200ApplicationJson;
-    postReset400ApplicationJSONObject?: PostReset400ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
+    postReset200ApplicationJSONObject?: PostReset200ApplicationJSON;
+    /**
+     * Bad Request
+     */
+    postReset400ApplicationJSONObject?: PostReset400ApplicationJSON;
 }

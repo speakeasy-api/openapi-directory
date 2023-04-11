@@ -1,3 +1,17 @@
+/**
+ * The type of a target determines what the limitations imposed on a
+ *
+ * @remarks
+ * target.
+ * * free - Every account is allowed to have 5 free targets, these targets
+ * do not need to be verified but can only perform lightning
+ * scans.
+ * * single - Single environment targets need to be verified but are
+ * allowed to run any type of scan allowed by the plan.
+ * * multi - Multi environment targets are used when you want
+ * to scan the same application in different environments.
+ *
+ */
 export declare enum TargetTypeEnum {
     Free = "free",
     Single = "single",

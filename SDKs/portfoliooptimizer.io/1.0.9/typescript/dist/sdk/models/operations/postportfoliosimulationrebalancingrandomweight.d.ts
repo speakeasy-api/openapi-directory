@@ -1,22 +1,36 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
 export declare class PostPortfolioSimulationRebalancingRandomWeightRequestBodyAssets extends SpeakeasyBase {
+    /**
+     * assetPrices[t] is the price of the asset at the time t
+     */
     assetPrices: number[];
 }
 export declare class PostPortfolioSimulationRebalancingRandomWeightRequestBody extends SpeakeasyBase {
     assets: PostPortfolioSimulationRebalancingRandomWeightRequestBodyAssets[];
+    /**
+     * The number of portfolios to simulate
+     */
     portfolios?: number;
 }
-export declare class PostPortfolioSimulationRebalancingRandomWeight200ApplicationJsonPortfolios extends SpeakeasyBase {
+export declare class PostPortfolioSimulationRebalancingRandomWeight200ApplicationJSONPortfolios extends SpeakeasyBase {
+    /**
+     * portfolioValues[t] is the value of the portfolio at the time t
+     */
     portfolioValues: number[];
 }
-export declare class PostPortfolioSimulationRebalancingRandomWeight200ApplicationJson extends SpeakeasyBase {
-    portfolios: PostPortfolioSimulationRebalancingRandomWeight200ApplicationJsonPortfolios[];
-}
-export declare class PostPortfolioSimulationRebalancingRandomWeightRequest extends SpeakeasyBase {
-    request: PostPortfolioSimulationRebalancingRandomWeightRequestBody;
+/**
+ * OK
+ */
+export declare class PostPortfolioSimulationRebalancingRandomWeight200ApplicationJSON extends SpeakeasyBase {
+    portfolios: PostPortfolioSimulationRebalancingRandomWeight200ApplicationJSONPortfolios[];
 }
 export declare class PostPortfolioSimulationRebalancingRandomWeightResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    postPortfolioSimulationRebalancingRandomWeight200ApplicationJSONObject?: PostPortfolioSimulationRebalancingRandomWeight200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
+    postPortfolioSimulationRebalancingRandomWeight200ApplicationJSONObject?: PostPortfolioSimulationRebalancingRandomWeight200ApplicationJSON;
 }

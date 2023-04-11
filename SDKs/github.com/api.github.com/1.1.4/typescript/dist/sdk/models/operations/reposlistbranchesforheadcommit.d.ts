@@ -1,21 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReposListBranchesForHeadCommitPathParams extends SpeakeasyBase {
-    commitSha: string;
-    owner: string;
-    repo: string;
-}
-export declare class ReposListBranchesForHeadCommit415ApplicationJson extends SpeakeasyBase {
-    documentationUrl: string;
-    message: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ReposListBranchesForHeadCommitRequest extends SpeakeasyBase {
-    pathParams: ReposListBranchesForHeadCommitPathParams;
+    /**
+     * The SHA of the commit.
+     */
+    commitSha: string;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    owner: string;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    repo: string;
 }
 export declare class ReposListBranchesForHeadCommitResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     branchShorts?: shared.BranchShort[];
-    reposListBranchesForHeadCommit415ApplicationJSONObject?: ReposListBranchesForHeadCommit415ApplicationJson;
+    /**
+     * Validation failed, or the endpoint has been spammed.
+     */
     validationError?: shared.ValidationError;
 }

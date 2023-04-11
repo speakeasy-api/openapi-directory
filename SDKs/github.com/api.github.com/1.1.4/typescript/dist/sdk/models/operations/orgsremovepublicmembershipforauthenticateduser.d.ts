@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class OrgsRemovePublicMembershipForAuthenticatedUserPathParams extends SpeakeasyBase {
-    org: string;
-    username: string;
-}
+import { AxiosResponse } from "axios";
 export declare class OrgsRemovePublicMembershipForAuthenticatedUserRequest extends SpeakeasyBase {
-    pathParams: OrgsRemovePublicMembershipForAuthenticatedUserPathParams;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    org: string;
+    /**
+     * The handle for the GitHub user account.
+     */
+    username: string;
 }
 export declare class OrgsRemovePublicMembershipForAuthenticatedUserResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

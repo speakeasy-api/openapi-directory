@@ -1,16 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetNumbersNumeralRomanQueryParams extends SpeakeasyBase {
-    number?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetNumbersNumeralRomanSecurity extends SpeakeasyBase {
-    xMathtoolsApiSecret: shared.SchemeXMathtoolsApiSecret;
+    xMathtoolsApiSecret: string;
 }
 export declare class GetNumbersNumeralRomanRequest extends SpeakeasyBase {
-    queryParams: GetNumbersNumeralRomanQueryParams;
-    security: GetNumbersNumeralRomanSecurity;
+    /**
+     * Number to convert
+     */
+    number?: number;
 }
 export declare class GetNumbersNumeralRomanResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

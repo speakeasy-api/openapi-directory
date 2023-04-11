@@ -1,21 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class GetChannelPathParams extends SpeakeasyBase {
-    channelId: string;
-}
-export declare class GetChannelQueryParams extends SpeakeasyBase {
-    aliases?: boolean;
-}
+import { AxiosResponse } from "axios";
 export declare class GetChannelSecurity extends SpeakeasyBase {
-    apikey: shared.SchemeApikey;
+    apikey: string;
 }
 export declare class GetChannelRequest extends SpeakeasyBase {
-    pathParams: GetChannelPathParams;
-    queryParams: GetChannelQueryParams;
-    security: GetChannelSecurity;
+    /**
+     * Flag to display Legacy and Provider Ids.
+     */
+    aliases?: boolean;
+    /**
+     * The identifier for the selected channel.
+     */
+    channelId: string;
 }
 export declare class GetChannelResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
     getChannel200ApplicationJSONObject?: Record<string, any>;
 }

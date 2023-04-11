@@ -1,31 +1,66 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PatchTargetsIdPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class PatchTargetsIdRequest extends SpeakeasyBase {
+    targetInput?: shared.TargetInput;
+    /**
+     * Object Id
+     */
     id: string;
 }
-export declare class PatchTargetsId400ApplicationJson extends SpeakeasyBase {
+/**
+ * Not found
+ */
+export declare class PatchTargetsId404ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Not found.
+     */
+    detail?: string;
+}
+/**
+ * Not allowed to perform operation
+ */
+export declare class PatchTargetsId403ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error message.
+     */
+    detail?: string;
+}
+/**
+ * Access token is missing or invalid
+ */
+export declare class PatchTargetsId401ApplicationJSON extends SpeakeasyBase {
+    detail?: string;
+}
+/**
+ * Bad Request
+ */
+export declare class PatchTargetsId400ApplicationJSON extends SpeakeasyBase {
     lessThanFieldNameGreaterThan?: string[];
     nonFieldErrors?: string[];
-}
-export declare class PatchTargetsId401ApplicationJson extends SpeakeasyBase {
-    detail?: string;
-}
-export declare class PatchTargetsId403ApplicationJson extends SpeakeasyBase {
-    detail?: string;
-}
-export declare class PatchTargetsId404ApplicationJson extends SpeakeasyBase {
-    detail?: string;
-}
-export declare class PatchTargetsIdRequest extends SpeakeasyBase {
-    pathParams: PatchTargetsIdPathParams;
-    request?: shared.TargetInput;
 }
 export declare class PatchTargetsIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Target object
+     */
     target?: shared.Target;
-    patchTargetsId400ApplicationJSONObject?: PatchTargetsId400ApplicationJson;
-    patchTargetsId401ApplicationJSONObject?: PatchTargetsId401ApplicationJson;
-    patchTargetsId403ApplicationJSONObject?: PatchTargetsId403ApplicationJson;
-    patchTargetsId404ApplicationJSONObject?: PatchTargetsId404ApplicationJson;
+    /**
+     * Bad Request
+     */
+    patchTargetsId400ApplicationJSONObject?: PatchTargetsId400ApplicationJSON;
+    /**
+     * Access token is missing or invalid
+     */
+    patchTargetsId401ApplicationJSONObject?: PatchTargetsId401ApplicationJSON;
+    /**
+     * Not allowed to perform operation
+     */
+    patchTargetsId403ApplicationJSONObject?: PatchTargetsId403ApplicationJSON;
+    /**
+     * Not found
+     */
+    patchTargetsId404ApplicationJSONObject?: PatchTargetsId404ApplicationJSON;
 }

@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReactionsCreateForTeamDiscussionLegacyPathParams extends SpeakeasyBase {
-    discussionNumber: number;
-    teamId: number;
-}
+import { AxiosResponse } from "axios";
+/**
+ * The [reaction type](https://docs.github.com/rest/reference/reactions#reaction-types) to add to the team discussion.
+ */
 export declare enum ReactionsCreateForTeamDiscussionLegacyRequestBodyContentEnum {
     Plus1 = "+1",
     Minus1 = "-1",
@@ -15,14 +15,28 @@ export declare enum ReactionsCreateForTeamDiscussionLegacyRequestBodyContentEnum
     Eyes = "eyes"
 }
 export declare class ReactionsCreateForTeamDiscussionLegacyRequestBody extends SpeakeasyBase {
+    /**
+     * The [reaction type](https://docs.github.com/rest/reference/reactions#reaction-types) to add to the team discussion.
+     */
     content: ReactionsCreateForTeamDiscussionLegacyRequestBodyContentEnum;
 }
 export declare class ReactionsCreateForTeamDiscussionLegacyRequest extends SpeakeasyBase {
-    pathParams: ReactionsCreateForTeamDiscussionLegacyPathParams;
-    request?: ReactionsCreateForTeamDiscussionLegacyRequestBody;
+    requestBody: ReactionsCreateForTeamDiscussionLegacyRequestBody;
+    /**
+     * The number that identifies the discussion.
+     */
+    discussionNumber: number;
+    /**
+     * The unique identifier of the team.
+     */
+    teamId: number;
 }
 export declare class ReactionsCreateForTeamDiscussionLegacyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     reaction?: shared.Reaction;
 }

@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Platform {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,21 +9,24 @@ export declare class Platform {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getPlatform - Platform Detail
+     * Platform Detail
      *
+     * @remarks
      * Return the content of the selected platform.
-    **/
-    getPlatform(req: operations.GetPlatformRequest, config?: AxiosRequestConfig): Promise<operations.GetPlatformResponse>;
+     */
+    getPlatform(req: operations.GetPlatformRequest, security: operations.GetPlatformSecurity, config?: AxiosRequestConfig): Promise<operations.GetPlatformResponse>;
     /**
-     * listPlatformRegions - Platform Region Collection
+     * Platform Region Collection
      *
+     * @remarks
      * Return a list of regions for a platform.
-    **/
-    listPlatformRegions(req: operations.ListPlatformRegionsRequest, config?: AxiosRequestConfig): Promise<operations.ListPlatformRegionsResponse>;
+     */
+    listPlatformRegions(req: operations.ListPlatformRegionsRequest, security: operations.ListPlatformRegionsSecurity, config?: AxiosRequestConfig): Promise<operations.ListPlatformRegionsResponse>;
     /**
-     * listPlatforms - Platform Collection
+     * Platform Collection
      *
+     * @remarks
      * Return a list of available platforms.
-    **/
-    listPlatforms(req: operations.ListPlatformsRequest, config?: AxiosRequestConfig): Promise<operations.ListPlatformsResponse>;
+     */
+    listPlatforms(req: operations.ListPlatformsRequest, security: operations.ListPlatformsSecurity, config?: AxiosRequestConfig): Promise<operations.ListPlatformsResponse>;
 }

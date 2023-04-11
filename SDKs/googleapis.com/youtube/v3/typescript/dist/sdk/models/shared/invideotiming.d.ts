@@ -1,0 +1,25 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Describes a timing type. If the value is offsetFromStart, then the offsetMs field represents an offset from the start of the video. If the value is offsetFromEnd, then the offsetMs field represents an offset from the end of the video.
+ */
+export declare enum InvideoTimingTypeEnum {
+    OffsetFromStart = "offsetFromStart",
+    OffsetFromEnd = "offsetFromEnd"
+}
+/**
+ * Describes a temporal position of a visual widget inside a video.
+ */
+export declare class InvideoTiming extends SpeakeasyBase {
+    /**
+     * Defines the duration in milliseconds for which the promotion should be displayed. If missing, the client should use the default.
+     */
+    durationMs?: string;
+    /**
+     * Defines the time at which the promotion will appear. Depending on the value of type the value of the offsetMs field will represent a time offset from the start or from the end of the video, expressed in milliseconds.
+     */
+    offsetMs?: string;
+    /**
+     * Describes a timing type. If the value is offsetFromStart, then the offsetMs field represents an offset from the start of the video. If the value is offsetFromEnd, then the offsetMs field represents an offset from the end of the video.
+     */
+    type?: InvideoTimingTypeEnum;
+}

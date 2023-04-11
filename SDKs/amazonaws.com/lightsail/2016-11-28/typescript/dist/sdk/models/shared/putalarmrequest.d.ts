@@ -1,8 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AlarmStateEnum } from "./alarmstateenum";
 import { ComparisonOperatorEnum } from "./comparisonoperatorenum";
 import { ContactProtocolEnum } from "./contactprotocolenum";
 import { MetricNameEnum } from "./metricnameenum";
-import { AlarmStateEnum } from "./alarmstateenum";
 import { TreatMissingDataEnum } from "./treatmissingdataenum";
 export declare class PutAlarmRequest extends SpeakeasyBase {
     alarmName: string;

@@ -1,16 +1,17 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetFamilyDetailsRequest, GetFamilyDetailsResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetFamilyDetailsRequest,
+  GetFamilyDetailsResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetFamilyDetailsRequest = {
-  queryParams: {
-    id: "sit",
-  },
+  ocpApimSubscriptionKey: "{{apiKey}}",
+  id: "{family_id}",
 };
 
 sdk.languageModelDirectAccess.getFamilyDetails(req).then((res: GetFamilyDetailsResponse | AxiosError) => {

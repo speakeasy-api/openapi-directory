@@ -1,15 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CatalogGetProductByProductIdPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class CatalogGetProductByProductIdRequest extends SpeakeasyBase {
+    /**
+     * The product identifier you want to get
+     */
     productId: string;
+    /**
+     * Your store identifier
+     */
     storeId: string;
 }
-export declare class CatalogGetProductByProductIdRequest extends SpeakeasyBase {
-    pathParams: CatalogGetProductByProductIdPathParams;
-}
 export declare class CatalogGetProductByProductIdResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     * StoreId not found
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
     statusCode: number;
-    product?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * Product
+     */
+    product?: shared.Product;
 }

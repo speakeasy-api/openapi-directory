@@ -1,19 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AddOrUpdateNonPrimaryStateTaxPathParams extends SpeakeasyBase {
-    companyId: string;
-    employeeId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class AddOrUpdateNonPrimaryStateTaxSecurity extends SpeakeasyBase {
-    paylocityAuth: shared.SchemePaylocityAuth;
+    paylocityAuth: string;
 }
 export declare class AddOrUpdateNonPrimaryStateTaxRequest extends SpeakeasyBase {
-    pathParams: AddOrUpdateNonPrimaryStateTaxPathParams;
-    request: shared.NonPrimaryStateTax;
-    security: AddOrUpdateNonPrimaryStateTaxSecurity;
+    /**
+     * Company Id
+     */
+    companyId: string;
+    /**
+     * Employee Id
+     */
+    employeeId: string;
+    /**
+     * Non-Primary State Tax Model
+     */
+    nonPrimaryStateTax: shared.NonPrimaryStateTax;
 }
 export declare class AddOrUpdateNonPrimaryStateTaxResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad Request
+     */
     errors?: shared.ErrorT[];
 }

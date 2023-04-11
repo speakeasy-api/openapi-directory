@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Pricing {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,24 +9,27 @@ export declare class Pricing {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * retrievePrefixPricing - Retrieve outbound pricing for a specific dialing prefix.
+     * Retrieve outbound pricing for a specific dialing prefix.
      *
+     * @remarks
      * Retrieves the pricing information based on the dialing prefix.
      *
-    **/
+     */
     retrievePrefixPricing(req: operations.RetrievePrefixPricingRequest, config?: AxiosRequestConfig): Promise<operations.RetrievePrefixPricingResponse>;
     /**
-     * retrievePricingAllCountries - Retrieve outbound pricing for all countries.
+     * Retrieve outbound pricing for all countries.
      *
+     * @remarks
      * Retrieves the pricing information for all countries.
      *
-    **/
+     */
     retrievePricingAllCountries(req: operations.RetrievePricingAllCountriesRequest, config?: AxiosRequestConfig): Promise<operations.RetrievePricingAllCountriesResponse>;
     /**
-     * retrievePricingCountry - Retrieve outbound pricing for a specific country.
+     * Retrieve outbound pricing for a specific country.
      *
+     * @remarks
      * Retrieves the pricing information based on the specified country.
      *
-    **/
+     */
     retrievePricingCountry(req: operations.RetrievePricingCountryRequest, config?: AxiosRequestConfig): Promise<operations.RetrievePricingCountryResponse>;
 }

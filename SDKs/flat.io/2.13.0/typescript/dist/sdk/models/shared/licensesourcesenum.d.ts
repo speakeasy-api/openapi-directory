@@ -1,3 +1,6 @@
+/**
+ * Source of the license
+ */
 export declare enum LicenseSourcesEnum {
     Order = "order",
     Trial = "trial",

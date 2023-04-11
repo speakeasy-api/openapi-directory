@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class RatePlanChargeTiers {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +9,7 @@ export declare class RatePlanChargeTiers {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * objectGetRatePlanChargeTier - CRUD: Retrieve a rate plan charge tier
-    **/
-    objectGetRatePlanChargeTier(req: operations.ObjectGetRatePlanChargeTierRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGetRatePlanChargeTierResponse>;
+     * CRUD: Retrieve a rate plan charge tier
+     */
+    objectGETRatePlanChargeTier(req: operations.ObjectGETRatePlanChargeTierRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGETRatePlanChargeTierResponse>;
 }

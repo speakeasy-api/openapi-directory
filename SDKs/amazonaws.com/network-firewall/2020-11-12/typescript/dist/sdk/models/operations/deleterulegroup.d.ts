@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteRuleGroupXAmzTargetEnum {
     NetworkFirewall20201112DeleteRuleGroup = "NetworkFirewall_20201112.DeleteRuleGroup"
 }
-export declare class DeleteRuleGroupHeaders extends SpeakeasyBase {
+export declare class DeleteRuleGroupRequest extends SpeakeasyBase {
+    deleteRuleGroupRequest: shared.DeleteRuleGroupRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class DeleteRuleGroupHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteRuleGroupXAmzTargetEnum;
 }
-export declare class DeleteRuleGroupRequest extends SpeakeasyBase {
-    headers: DeleteRuleGroupHeaders;
-    request: shared.DeleteRuleGroupRequest;
-}
 export declare class DeleteRuleGroupResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deleteRuleGroupResponse?: shared.DeleteRuleGroupResponse;
+    /**
+     * InternalServerError
+     */
     internalServerError?: any;
+    /**
+     * InvalidOperationException
+     */
     invalidOperationException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * UnsupportedOperationException
+     */
     unsupportedOperationException?: any;
 }

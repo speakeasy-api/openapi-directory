@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetComplianceDetailsByConfigRuleQueryParams extends SpeakeasyBase {
-    limit?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum GetComplianceDetailsByConfigRuleXAmzTargetEnum {
     StarlingDoveServiceGetComplianceDetailsByConfigRule = "StarlingDoveService.GetComplianceDetailsByConfigRule"
 }
-export declare class GetComplianceDetailsByConfigRuleHeaders extends SpeakeasyBase {
+export declare class GetComplianceDetailsByConfigRuleRequest extends SpeakeasyBase {
+    getComplianceDetailsByConfigRuleRequest: shared.GetComplianceDetailsByConfigRuleRequest;
+    /**
+     * Pagination limit
+     */
+    limit?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,16 +23,24 @@ export declare class GetComplianceDetailsByConfigRuleHeaders extends SpeakeasyBa
     xAmzSignedHeaders?: string;
     xAmzTarget: GetComplianceDetailsByConfigRuleXAmzTargetEnum;
 }
-export declare class GetComplianceDetailsByConfigRuleRequest extends SpeakeasyBase {
-    queryParams: GetComplianceDetailsByConfigRuleQueryParams;
-    headers: GetComplianceDetailsByConfigRuleHeaders;
-    request: shared.GetComplianceDetailsByConfigRuleRequest;
-}
 export declare class GetComplianceDetailsByConfigRuleResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getComplianceDetailsByConfigRuleResponse?: shared.GetComplianceDetailsByConfigRuleResponse;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
+    /**
+     * NoSuchConfigRuleException
+     */
     noSuchConfigRuleException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

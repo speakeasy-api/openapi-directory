@@ -1,22 +1,22 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DriverDetailsRequest, DriverDetailsResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  DriverDetailsRequest,
+  DriverDetailsResponse,
+  DriverDetailsFormatEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    apiKeyHeader: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: DriverDetailsRequest = {
-  pathParams: {
-    driverid: "sit",
-    format: "xml",
+    apiKeyHeader: "YOUR_API_KEY_HERE",
   },
+});
+
+const req: DriverDetailsRequest = {
+  driverid: "corrupti",
+  format: DriverDetailsFormatEnum.Json,
 };
 
 sdk.driverDetails(req).then((res: DriverDetailsResponse | AxiosError) => {

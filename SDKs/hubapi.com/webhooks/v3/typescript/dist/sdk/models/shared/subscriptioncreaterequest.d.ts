@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Type of event to listen for. Can be one of `create`, `delete`, `deletedForPrivacy`, or `propertyChange`.
+ */
 export declare enum SubscriptionCreateRequestEventTypeEnum {
     ContactPropertyChange = "contact.propertyChange",
     CompanyPropertyChange = "company.propertyChange",
@@ -27,9 +30,18 @@ export declare enum SubscriptionCreateRequestEventTypeEnum {
 }
 /**
  * New webhook settings for an app.
-**/
+ */
 export declare class SubscriptionCreateRequest extends SpeakeasyBase {
+    /**
+     * Determines if the subscription is active or paused. Defaults to false.
+     */
     active?: boolean;
+    /**
+     * Type of event to listen for. Can be one of `create`, `delete`, `deletedForPrivacy`, or `propertyChange`.
+     */
     eventType: SubscriptionCreateRequestEventTypeEnum;
+    /**
+     * The internal name of the property to monitor for changes. Only applies when `eventType` is `propertyChange`.
+     */
     propertyName?: string;
 }

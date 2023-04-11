@@ -1,27 +1,67 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetOrdersBySubscriptionNumberPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETOrdersBySubscriptionNumberRequest extends SpeakeasyBase {
+    /**
+     * An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+     *
+     * @remarks
+     *
+     */
+    zuoraEntityIds?: string;
+    /**
+     * A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+     *
+     * @remarks
+     *
+     * The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+     *
+     */
+    zuoraTrackId?: string;
+    /**
+     * The date type to filter on. This field value can be 'orderDate' or 'updatedDate'. Default is orderDate.
+     *
+     * @remarks
+     *
+     */
+    dateFilterOption?: string;
+    /**
+     * The result will only contain the orders with the date of 'dateFilterOption' earlier than or equal to this date.
+     *
+     * @remarks
+     *
+     */
+    endDate?: Date;
+    /**
+     * The page number of the orders retrieved. The default is '1'.
+     *
+     * @remarks
+     *
+     */
+    page?: number;
+    /**
+     * Number of rows returned per page.
+     *
+     * @remarks
+     *
+     */
+    pageSize?: number;
+    /**
+     * The result will only contain the orders with the date of 'dateFilterOption' later than or equal to this date.
+     *
+     * @remarks
+     *
+     */
+    startDate?: Date;
+    /**
+     * The subscription number.
+     */
     subscriptionNumber: string;
 }
-export declare class GetOrdersBySubscriptionNumberQueryParams extends SpeakeasyBase {
-    dateFilterOption?: string;
-    endDate?: Date;
-    page?: number;
-    pageSize?: number;
-    startDate?: Date;
-}
-export declare class GetOrdersBySubscriptionNumberHeaders extends SpeakeasyBase {
-    zuoraEntityIds?: string;
-    zuoraTrackId?: string;
-}
-export declare class GetOrdersBySubscriptionNumberRequest extends SpeakeasyBase {
-    pathParams: GetOrdersBySubscriptionNumberPathParams;
-    queryParams: GetOrdersBySubscriptionNumberQueryParams;
-    headers: GetOrdersBySubscriptionNumberHeaders;
-}
-export declare class GetOrdersBySubscriptionNumberResponse extends SpeakeasyBase {
+export declare class GETOrdersBySubscriptionNumberResponse extends SpeakeasyBase {
     contentType: string;
     getOrdersResponse?: shared.GetOrdersResponse;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,5 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { AvailabilityInputModel } from "./availabilityinputmodel";
+import { CustomFieldUpdateModel } from "./customfieldupdatemodel";
 import { ServiceFeesUpdateModel } from "./servicefeesupdatemodel";
 import { ServiceOptionsUpdateModel } from "./serviceoptionsupdatemodel";
 import { ServiceSettingsUpdateModel } from "./servicesettingsupdatemodel";
@@ -7,6 +8,7 @@ export declare class ServiceUpdateModel extends SpeakeasyBase {
     availability?: AvailabilityInputModel;
     bookingInterval?: number;
     bookingLimit?: number;
+    customFields?: CustomFieldUpdateModel;
     description?: string;
     duration?: number;
     fees?: ServiceFeesUpdateModel;

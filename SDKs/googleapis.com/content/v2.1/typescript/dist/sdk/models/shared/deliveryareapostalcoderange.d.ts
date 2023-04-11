@@ -1,0 +1,14 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * A range of postal codes that defines the delivery area. Only set `firstPostalCode` when specifying a single postal code.
+ */
+export declare class DeliveryAreaPostalCodeRange extends SpeakeasyBase {
+    /**
+     * Required. A postal code or a pattern of the form prefix* denoting the inclusive lower bound of the range defining the area. Examples values: `"94108"`, `"9410*"`, `"9*"`.
+     */
+    firstPostalCode?: string;
+    /**
+     * A postal code or a pattern of the form prefix* denoting the inclusive upper bound of the range defining the area (for example [070* - 078*] results in the range [07000 - 07899]). It must have the same length as `firstPostalCode`: if `firstPostalCode` is a postal code then `lastPostalCode` must be a postal code too; if firstPostalCode is a pattern then `lastPostalCode` must be a pattern with the same prefix length. Ignored if not set, then the area is defined as being all the postal codes matching `firstPostalCode`.
+     */
+    lastPostalCode?: string;
+}

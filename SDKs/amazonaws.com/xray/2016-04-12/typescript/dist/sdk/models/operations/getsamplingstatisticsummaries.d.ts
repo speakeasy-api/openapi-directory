@@ -1,9 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetSamplingStatisticSummariesQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetSamplingStatisticSummariesRequestBody extends SpeakeasyBase {
+    /**
+     * Pagination token.
+     */
     nextToken?: string;
 }
-export declare class GetSamplingStatisticSummariesHeaders extends SpeakeasyBase {
+export declare class GetSamplingStatisticSummariesRequest extends SpeakeasyBase {
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
+    requestBody: GetSamplingStatisticSummariesRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,18 +21,20 @@ export declare class GetSamplingStatisticSummariesHeaders extends SpeakeasyBase 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetSamplingStatisticSummariesRequestBody extends SpeakeasyBase {
-    nextToken?: string;
-}
-export declare class GetSamplingStatisticSummariesRequest extends SpeakeasyBase {
-    queryParams: GetSamplingStatisticSummariesQueryParams;
-    headers: GetSamplingStatisticSummariesHeaders;
-    request: GetSamplingStatisticSummariesRequestBody;
-}
 export declare class GetSamplingStatisticSummariesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getSamplingStatisticSummariesResult?: shared.GetSamplingStatisticSummariesResult;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottledException
+     */
     throttledException?: any;
 }

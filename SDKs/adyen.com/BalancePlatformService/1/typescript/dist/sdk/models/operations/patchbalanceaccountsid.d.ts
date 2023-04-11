@@ -1,20 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PatchBalanceAccountsIdPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PatchBalanceAccountsIdSecurity extends SpeakeasyBase {
+    apiKeyAuth?: string;
     basicAuth?: shared.SchemeBasicAuth;
-    apiKeyAuth?: shared.SchemeApiKeyAuth;
 }
 export declare class PatchBalanceAccountsIdRequest extends SpeakeasyBase {
-    pathParams: PatchBalanceAccountsIdPathParams;
-    request?: any;
-    security: PatchBalanceAccountsIdSecurity;
+    balanceAccountUpdateRequestInput?: shared.BalanceAccountUpdateRequestInput;
+    /**
+     * The unique identifier of the balance account.
+     */
+    id: string;
 }
 export declare class PatchBalanceAccountsIdResponse extends SpeakeasyBase {
-    balanceAccount?: any;
+    /**
+     * OK - the request has succeeded.
+     */
+    balanceAccount?: shared.BalanceAccount;
     contentType: string;
-    restServiceError?: any;
+    /**
+     * Bad Request - a problem reading or understanding the request.
+     */
+    restServiceError?: shared.RestServiceError;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

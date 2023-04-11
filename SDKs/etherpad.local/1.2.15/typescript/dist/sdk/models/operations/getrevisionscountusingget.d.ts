@@ -1,38 +1,61 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetRevisionsCountUsingGetQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETRevisionsCountUsingGETRequest extends SpeakeasyBase {
     padID?: string;
 }
-export declare class GetRevisionsCountUsingGet200ApplicationJsonData extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class GETRevisionsCountUsingGet500ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class GETRevisionsCountUsingGet401ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+/**
+ * generic api error (code 1)
+ */
+export declare class GETRevisionsCountUsingGet400ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+export declare class GETRevisionsCountUsingGet200ApplicationJSONData extends SpeakeasyBase {
     revisions?: number;
 }
-export declare class GetRevisionsCountUsingGet200ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class GETRevisionsCountUsingGet200ApplicationJSON extends SpeakeasyBase {
     code?: number;
-    data?: GetRevisionsCountUsingGet200ApplicationJsonData;
+    data?: GETRevisionsCountUsingGet200ApplicationJSONData;
     message?: string;
 }
-export declare class GetRevisionsCountUsingGet400ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class GetRevisionsCountUsingGet401ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class GetRevisionsCountUsingGet500ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class GetRevisionsCountUsingGetRequest extends SpeakeasyBase {
-    queryParams: GetRevisionsCountUsingGetQueryParams;
-}
-export declare class GetRevisionsCountUsingGetResponse extends SpeakeasyBase {
+export declare class GETRevisionsCountUsingGETResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getRevisionsCountUsingGET200ApplicationJSONObject?: GetRevisionsCountUsingGet200ApplicationJson;
-    getRevisionsCountUsingGET400ApplicationJSONObject?: GetRevisionsCountUsingGet400ApplicationJson;
-    getRevisionsCountUsingGET401ApplicationJSONObject?: GetRevisionsCountUsingGet401ApplicationJson;
-    getRevisionsCountUsingGET500ApplicationJSONObject?: GetRevisionsCountUsingGet500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    getRevisionsCountUsingGET200ApplicationJSONObject?: GETRevisionsCountUsingGet200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    getRevisionsCountUsingGET400ApplicationJSONObject?: GETRevisionsCountUsingGet400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    getRevisionsCountUsingGET401ApplicationJSONObject?: GETRevisionsCountUsingGet401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    getRevisionsCountUsingGET500ApplicationJSONObject?: GETRevisionsCountUsingGet500ApplicationJSON;
 }

@@ -1,18 +1,41 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class TinVerificationNameLookupQueryParams extends SpeakeasyBase {
-    tin: string;
-}
+import { AxiosResponse } from "axios";
 export declare class TinVerificationNameLookupSecurity extends SpeakeasyBase {
-    userKey: shared.SchemeUserKey;
+    userKey: string;
 }
 export declare class TinVerificationNameLookupRequest extends SpeakeasyBase {
-    queryParams: TinVerificationNameLookupQueryParams;
-    security: TinVerificationNameLookupSecurity;
+    /**
+     * Nine letter TIN number with or without hyphens
+     */
+    tin: string;
+}
+/**
+ * Detailed information about the error
+ */
+export declare class TinVerificationNameLookupDefaultApplicationJSON extends SpeakeasyBase {
+    code: number;
+    fault?: string;
+    message: string;
+    tag: string;
+}
+/**
+ * Result of a EIN name lookup with TIN number
+ */
+export declare class TinVerificationNameLookup200ApplicationJSON extends SpeakeasyBase {
+    matchStatus: string;
+    possibleMatch: string;
+    tin: string;
 }
 export declare class TinVerificationNameLookupResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    tinVerificationNameLookup200ApplicationJSONAny?: any;
-    tinVerificationNameLookupDefaultApplicationJSONAny?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * Result of a EIN name lookup with TIN number
+     */
+    tinVerificationNameLookup200ApplicationJSONObject?: TinVerificationNameLookup200ApplicationJSON;
+    /**
+     * Detailed information about the error
+     */
+    tinVerificationNameLookupDefaultApplicationJSONObject?: TinVerificationNameLookupDefaultApplicationJSON;
 }

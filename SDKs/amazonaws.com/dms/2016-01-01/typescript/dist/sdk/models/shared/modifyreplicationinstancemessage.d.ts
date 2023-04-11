@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * <p/>
-**/
+ */
 export declare class ModifyReplicationInstanceMessage extends SpeakeasyBase {
     allocatedStorage?: number;
     allowMajorVersionUpgrade?: boolean;
@@ -9,6 +9,7 @@ export declare class ModifyReplicationInstanceMessage extends SpeakeasyBase {
     autoMinorVersionUpgrade?: boolean;
     engineVersion?: string;
     multiAZ?: boolean;
+    networkType?: string;
     preferredMaintenanceWindow?: string;
     replicationInstanceArn: string;
     replicationInstanceClass?: string;

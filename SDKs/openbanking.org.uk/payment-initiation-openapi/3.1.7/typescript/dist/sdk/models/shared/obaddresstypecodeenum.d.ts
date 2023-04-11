@@ -1,0 +1,13 @@
+/**
+ * Identifies the nature of the postal address.
+ */
+export declare enum OBAddressTypeCodeEnum {
+    Business = "Business",
+    Correspondence = "Correspondence",
+    DeliveryTo = "DeliveryTo",
+    MailTo = "MailTo",
+    POBox = "POBox",
+    Postal = "Postal",
+    Residential = "Residential",
+    Statement = "Statement"
+}

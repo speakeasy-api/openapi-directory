@@ -1,7 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PatchConnectorPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
+/**
+ * Include connector properties to update here
+ */
 export declare class PatchConnectorRequestBody extends SpeakeasyBase {
     chargestation?: string;
     format?: string;
@@ -10,17 +11,30 @@ export declare class PatchConnectorRequestBody extends SpeakeasyBase {
     rate?: string;
     type?: string;
 }
-export declare class PatchConnector201ApplicationJson extends SpeakeasyBase {
+export declare class PatchConnectorRequest extends SpeakeasyBase {
+    /**
+     * Include connector properties to update here
+     */
+    requestBody: PatchConnectorRequestBody;
+    /**
+     * ID of connector that needs to be updated
+     */
+    id: string;
+}
+/**
+ * Returns the updated connector object
+ */
+export declare class PatchConnector201ApplicationJSON extends SpeakeasyBase {
     message?: string;
     ok?: boolean;
     result?: Record<string, any>;
 }
-export declare class PatchConnectorRequest extends SpeakeasyBase {
-    pathParams: PatchConnectorPathParams;
-    request: PatchConnectorRequestBody;
-}
 export declare class PatchConnectorResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    patchConnector201ApplicationJSONObject?: PatchConnector201ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Returns the updated connector object
+     */
+    patchConnector201ApplicationJSONObject?: PatchConnector201ApplicationJSON;
 }

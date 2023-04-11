@@ -1,26 +1,25 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { ChromeFromHtmlPostRequest, ChromeFromHtmlPostResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  shared.ChromeHtmlToPdfRequest,
+  ChromeFromHtmlPostResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    headerApiKey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: ChromeFromHtmlPostRequest = {
-  request: {
-    fileName: "sit",
-    html: "voluptas",
-    inlinePdf: true,
-    options: {
-      landscape: "expedita",
-      printBackground: true,
-    },
+    headerApiKey: "YOUR_API_KEY_HERE",
+  },
+});
+
+const req: shared.ChromeHtmlToPdfRequest = {
+  fileName: "test.pdf",
+  html: "<p>Hello World</p>",
+  inlinePdf: true,
+  options: {
+    landscape: "true",
+    printBackground: false,
   },
 };
 

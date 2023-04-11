@@ -1,12 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListSamplesQueryParams extends SpeakeasyBase {
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListSamplesXAmzTargetEnum {
     DeviceFarm20150623ListSamples = "DeviceFarm_20150623.ListSamples"
 }
-export declare class ListSamplesHeaders extends SpeakeasyBase {
+export declare class ListSamplesRequest extends SpeakeasyBase {
+    listSamplesRequest: shared.ListSamplesRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -15,18 +14,33 @@ export declare class ListSamplesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: ListSamplesXAmzTargetEnum;
-}
-export declare class ListSamplesRequest extends SpeakeasyBase {
-    queryParams: ListSamplesQueryParams;
-    headers: ListSamplesHeaders;
-    request: shared.ListSamplesRequest;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class ListSamplesResponse extends SpeakeasyBase {
+    /**
+     * ArgumentException
+     */
     argumentException?: any;
     contentType: string;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * Success
+     */
     listSamplesResult?: shared.ListSamplesResult;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
+    /**
+     * ServiceAccountException
+     */
     serviceAccountException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,18 +1,45 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class PepMonitorUnregisterPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PepMonitorUnregisterSecurity extends SpeakeasyBase {
-    userKey: shared.SchemeUserKey;
+    userKey: string;
 }
 export declare class PepMonitorUnregisterRequest extends SpeakeasyBase {
-    pathParams: PepMonitorUnregisterPathParams;
-    security: PepMonitorUnregisterSecurity;
+    /**
+     * The identifier of the Monitor
+     */
+    id: string;
+}
+/**
+ * Detailed information about the error
+ */
+export declare class PepMonitorUnregisterDefaultApplicationJSON extends SpeakeasyBase {
+    code: number;
+    fault?: string;
+    message: string;
+    tag: string;
+}
+/**
+ * View a monitor for a Pep Sanction Report
+ */
+export declare class PepMonitorUnregister200ApplicationJSON extends SpeakeasyBase {
+    active?: boolean;
+    caseId?: string;
+    created?: Date;
+    identifier?: string;
+    structured?: string;
+    updated?: string;
+    webhook?: string;
 }
 export declare class PepMonitorUnregisterResponse extends SpeakeasyBase {
     contentType: string;
-    pepMonitorUnregister200ApplicationJSONAny?: any;
-    pepMonitorUnregisterDefaultApplicationJSONAny?: any;
+    /**
+     * View a monitor for a Pep Sanction Report
+     */
+    pepMonitorUnregister200ApplicationJSONObject?: PepMonitorUnregister200ApplicationJSON;
+    /**
+     * Detailed information about the error
+     */
+    pepMonitorUnregisterDefaultApplicationJSONObject?: PepMonitorUnregisterDefaultApplicationJSON;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

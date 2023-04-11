@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Source info
+ */
 export declare class Source extends SpeakeasyBase {
     archivedAt?: Date;
     availabilityMessage?: string;
@@ -6,6 +9,9 @@ export declare class Source extends SpeakeasyBase {
     cloudConnectorId?: string;
     createdAt?: Date;
     enabled?: boolean;
+    /**
+     * ID of the resource
+     */
     id?: string;
     info?: Record<string, any>;
     lastAvailableAt?: Date;

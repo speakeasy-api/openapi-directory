@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ConfigSsh extends SpeakeasyBase {
+/**
+ * successful operation
+ */
+export declare class ConfigSSH extends SpeakeasyBase {
     port?: number;
     version?: string;
 }

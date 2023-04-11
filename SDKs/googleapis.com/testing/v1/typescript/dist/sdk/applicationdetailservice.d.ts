@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class ApplicationDetailService {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +9,7 @@ export declare class ApplicationDetailService {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * testingApplicationDetailServiceGetApkDetails - Gets the details of an Android application APK.
-    **/
-    testingApplicationDetailServiceGetApkDetails(req: operations.TestingApplicationDetailServiceGetApkDetailsRequest, config?: AxiosRequestConfig): Promise<operations.TestingApplicationDetailServiceGetApkDetailsResponse>;
+     * Gets the details of an Android application APK.
+     */
+    testingApplicationDetailServiceGetApkDetails(req: operations.TestingApplicationDetailServiceGetApkDetailsRequest, security: operations.TestingApplicationDetailServiceGetApkDetailsSecurity, config?: AxiosRequestConfig): Promise<operations.TestingApplicationDetailServiceGetApkDetailsResponse>;
 }

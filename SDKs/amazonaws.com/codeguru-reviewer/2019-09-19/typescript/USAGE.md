@@ -1,56 +1,59 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AssociateRepositoryRequest, AssociateRepositoryResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  AssociateRepositoryRequest,
+  AssociateRepositoryResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  EncryptionOptionEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: AssociateRepositoryRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
-    clientRequestToken: "voluptas",
+});
+
+const req: AssociateRepositoryRequest = {
+  requestBody: {
+    clientRequestToken: "corrupti",
     kmsKeyDetails: {
-      encryptionOption: "AWS_OWNED_CMK",
-      kmsKeyId: "et",
+      encryptionOption: EncryptionOptionEnum.CustomerManagedCmk,
+      kmsKeyId: "distinctio",
     },
     repository: {
       bitbucket: {
-        connectionArn: "nihil",
-        name: "rerum",
-        owner: "dicta",
+        connectionArn: "quibusdam",
+        name: "unde",
+        owner: "nulla",
       },
       codeCommit: {
-        name: "debitis",
+        name: "corrupti",
       },
       gitHubEnterpriseServer: {
-        connectionArn: "voluptatum",
-        name: "et",
-        owner: "ut",
+        connectionArn: "illum",
+        name: "vel",
+        owner: "error",
       },
       s3Bucket: {
-        bucketName: "dolorem",
-        name: "et",
+        bucketName: "deserunt",
+        name: "suscipit",
       },
     },
     tags: {
-      "iste": "vitae",
+      "magnam": "debitis",
+      "ipsa": "delectus",
     },
   },
+  xAmzAlgorithm: "tempora",
+  xAmzContentSha256: "suscipit",
+  xAmzCredential: "molestiae",
+  xAmzDate: "minus",
+  xAmzSecurityToken: "placeat",
+  xAmzSignature: "voluptatum",
+  xAmzSignedHeaders: "iusto",
 };
 
 sdk.associateRepository(req).then((res: AssociateRepositoryResponse | AxiosError) => {

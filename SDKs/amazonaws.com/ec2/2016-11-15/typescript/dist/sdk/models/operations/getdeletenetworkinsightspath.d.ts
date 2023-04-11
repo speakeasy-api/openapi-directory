@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteNetworkInsightsPathActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteNetworkInsightsPathActionEnum {
     DeleteNetworkInsightsPath = "DeleteNetworkInsightsPath"
 }
-export declare enum GetDeleteNetworkInsightsPathVersionEnum {
+export declare enum GETDeleteNetworkInsightsPathVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetDeleteNetworkInsightsPathQueryParams extends SpeakeasyBase {
-    action: GetDeleteNetworkInsightsPathActionEnum;
+export declare class GETDeleteNetworkInsightsPathRequest extends SpeakeasyBase {
+    action: GETDeleteNetworkInsightsPathActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
+    /**
+     * The ID of the path.
+     */
     networkInsightsPathId: string;
-    version: GetDeleteNetworkInsightsPathVersionEnum;
-}
-export declare class GetDeleteNetworkInsightsPathHeaders extends SpeakeasyBase {
+    version: GETDeleteNetworkInsightsPathVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetDeleteNetworkInsightsPathHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteNetworkInsightsPathRequest extends SpeakeasyBase {
-    queryParams: GetDeleteNetworkInsightsPathQueryParams;
-    headers: GetDeleteNetworkInsightsPathHeaders;
-}
-export declare class GetDeleteNetworkInsightsPathResponse extends SpeakeasyBase {
+export declare class GETDeleteNetworkInsightsPathResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

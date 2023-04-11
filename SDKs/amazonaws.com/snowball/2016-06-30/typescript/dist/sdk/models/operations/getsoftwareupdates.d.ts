@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetSoftwareUpdatesXAmzTargetEnum {
-    AwsieSnowballJobManagementServiceGetSoftwareUpdates = "AWSIESnowballJobManagementService.GetSoftwareUpdates"
+    AWSIESnowballJobManagementServiceGetSoftwareUpdates = "AWSIESnowballJobManagementService.GetSoftwareUpdates"
 }
-export declare class GetSoftwareUpdatesHeaders extends SpeakeasyBase {
+export declare class GetSoftwareUpdatesRequest extends SpeakeasyBase {
+    getSoftwareUpdatesRequest: shared.GetSoftwareUpdatesRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class GetSoftwareUpdatesHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetSoftwareUpdatesXAmzTargetEnum;
 }
-export declare class GetSoftwareUpdatesRequest extends SpeakeasyBase {
-    headers: GetSoftwareUpdatesHeaders;
-    request: shared.GetSoftwareUpdatesRequest;
-}
 export declare class GetSoftwareUpdatesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getSoftwareUpdatesResult?: shared.GetSoftwareUpdatesResult;
+    /**
+     * InvalidJobStateException
+     */
     invalidJobStateException?: any;
+    /**
+     * InvalidResourceException
+     */
     invalidResourceException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

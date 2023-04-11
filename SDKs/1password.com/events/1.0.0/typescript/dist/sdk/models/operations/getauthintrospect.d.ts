@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetAuthIntrospectSecurity extends SpeakeasyBase {
-    jwtsa: shared.SchemeJwtsa;
-}
-export declare class GetAuthIntrospectRequest extends SpeakeasyBase {
-    security: GetAuthIntrospectSecurity;
-}
+import { AxiosResponse } from "axios";
 export declare class GetAuthIntrospectResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Unauthorized
+     */
     error?: shared.ErrorT;
+    /**
+     * Introspection object
+     */
     introspection?: shared.Introspection;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

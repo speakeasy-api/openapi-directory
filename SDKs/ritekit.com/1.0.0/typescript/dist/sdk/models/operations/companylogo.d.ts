@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CompanyLogoQueryParams extends SpeakeasyBase {
-    domain: string;
-}
+import { AxiosResponse } from "axios";
 export declare class CompanyLogoRequest extends SpeakeasyBase {
-    queryParams: CompanyLogoQueryParams;
+    /**
+     * URL of the company
+     */
+    domain: string;
 }
 export declare class CompanyLogoResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

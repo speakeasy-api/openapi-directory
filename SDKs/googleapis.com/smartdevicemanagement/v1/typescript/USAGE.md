@@ -1,43 +1,39 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { SmartdevicemanagementEnterprisesDevicesExecuteCommandRequest, SmartdevicemanagementEnterprisesDevicesExecuteCommandResponse } from "openapi/src/sdk/models/operations";
+import {
+  SmartdevicemanagementEnterprisesDevicesExecuteCommandRequest,
+  SmartdevicemanagementEnterprisesDevicesExecuteCommandResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: SmartdevicemanagementEnterprisesDevicesExecuteCommandRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    name: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
-    command: "dicta",
+  dollarXgafv: XgafvEnum.Two,
+  googleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest: {
+    command: "provident",
     params: {
-      "voluptatum": "et",
+      "quibusdam": "unde",
+      "nulla": "corrupti",
+      "illum": "vel",
     },
   },
+  accessToken: "error",
+  alt: AltEnum.Media,
+  callback: "suscipit",
+  fields: "iure",
+  key: "magnam",
+  name: "debitis",
+  oauthToken: "ipsa",
+  prettyPrint: false,
+  quotaUser: "delectus",
+  uploadType: "tempora",
+  uploadProtocol: "suscipit",
 };
 
 sdk.enterprises.smartdevicemanagementEnterprisesDevicesExecuteCommand(req).then((res: SmartdevicemanagementEnterprisesDevicesExecuteCommandResponse | AxiosError) => {

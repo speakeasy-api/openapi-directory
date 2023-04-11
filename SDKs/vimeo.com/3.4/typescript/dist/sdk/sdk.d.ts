@@ -1,10 +1,8 @@
-import { AxiosInstance } from "axios";
-import { Security } from "./models/shared";
-import { ApiInformation } from "./apiinformation";
 import { AlbumsAlbumVideos } from "./albumsalbumvideos";
 import { AlbumsCustomAlbumLogos } from "./albumscustomalbumlogos";
 import { AlbumsCustomAlbumThumbnails } from "./albumscustomalbumthumbnails";
 import { AlbumsEssentials } from "./albumsessentials";
+import { APIInformation } from "./apiinformation";
 import { AuthenticationExtrasEssentials } from "./authenticationextrasessentials";
 import { CategoriesChannels } from "./categorieschannels";
 import { CategoriesEssentials } from "./categoriesessentials";
@@ -26,6 +24,7 @@ import { GroupsSubscription } from "./groupssubscription";
 import { GroupsUsers } from "./groupsusers";
 import { GroupsVideos } from "./groupsvideos";
 import { LikesEssentials } from "./likesessentials";
+import * as shared from "./models/shared";
 import { OnDemandBackgrounds } from "./ondemandbackgrounds";
 import { OnDemandEssentials } from "./ondemandessentials";
 import { OnDemandGenres } from "./ondemandgenres";
@@ -61,14 +60,30 @@ import { VideosUpload } from "./videosupload";
 import { VideosVersions } from "./videosversions";
 import { VideosViewingPrivacy } from "./videosviewingprivacy";
 import { WatchLaterQueueEssentials } from "./watchlaterqueueessentials";
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://api.vimeo.com"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * The security details required to authenticate the SDK
+     */
+    security?: shared.Security;
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    security?: Security;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
 export declare class SDK {
-    apiInformation: ApiInformation;
+    apiInformation: APIInformation;
     albumsAlbumVideos: AlbumsAlbumVideos;
     albumsCustomAlbumLogos: AlbumsCustomAlbumLogos;
     albumsCustomAlbumThumbnails: AlbumsCustomAlbumThumbnails;
@@ -135,5 +150,6 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
 }

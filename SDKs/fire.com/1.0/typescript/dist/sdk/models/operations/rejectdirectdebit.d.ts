@@ -1,11 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class RejectDirectDebitPathParams extends SpeakeasyBase {
-    directDebitUuid: string;
-}
+import { AxiosResponse } from "axios";
 export declare class RejectDirectDebitRequest extends SpeakeasyBase {
-    pathParams: RejectDirectDebitPathParams;
+    directDebitUuid: string;
 }
 export declare class RejectDirectDebitResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,17 +1,17 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetAccountBalanceRequest, GetAccountBalanceResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetAccountBalanceRequest,
+  GetAccountBalanceResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetAccountBalanceRequest = {
-  queryParams: {
-    apiKey: "sit",
-    apiSecret: "voluptas",
-  },
+  apiKey: "abcd1234",
+  apiSecret: "ABCDEFGH01234abc",
 };
 
 sdk.balance.getAccountBalance(req).then((res: GetAccountBalanceResponse | AxiosError) => {

@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * successful operation
+ */
 export declare class ProductDetailsResponse extends SpeakeasyBase {
     answeredQuestions?: number;
     asin?: string;

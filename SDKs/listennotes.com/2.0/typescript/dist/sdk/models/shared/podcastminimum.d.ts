@@ -1,11 +1,49 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class PodcastMinimum extends SpeakeasyBase {
+    /**
+     * Podcast id, which can be used to further fetch detailed podcast metadata via `GET /podcasts/{id}`.
+     */
     id?: string;
+    /**
+     * Image url for this podcast's artwork. If you are using PRO/ENTERPRISE plan, then it's
+     *
+     * @remarks
+     * a high resolution image (1400x1400). If you are using FREE plan, then it's the same as **thumbnail**,
+     * low resolution image (300x300).
+     *
+     */
     image?: string;
+    /**
+     * The estimated popularity score of a podcast compared to all other rss-based public podcasts in the world on a scale from 0 to 100.
+     *
+     * @remarks
+     * If the score is not available, it'll be null. Learn more at listennotes.com/listen-score
+     *
+     */
     listenScore?: number;
+    /**
+     * The estimated popularity ranking of a podcast compared to all other rss-based public podcasts in the world.
+     *
+     * @remarks
+     * For example, if the value is 0.5%, then this podcast is one of the top 0.5% most popular shows out of all podcasts globally, ranked by Listen Score.
+     * If the ranking is not available, it'll be null. Learn more at listennotes.com/listen-score
+     *
+     */
     listenScoreGlobalRank?: string;
+    /**
+     * The url of this podcast on [ListenNotes.com](https://www.ListenNotes.com).
+     */
     listennotesUrl?: string;
+    /**
+     * Podcast publisher name.
+     */
     publisher?: string;
+    /**
+     * Thumbnail image url for this podcast's artwork (300x300).
+     */
     thumbnail?: string;
+    /**
+     * Podcast name.
+     */
     title?: string;
 }

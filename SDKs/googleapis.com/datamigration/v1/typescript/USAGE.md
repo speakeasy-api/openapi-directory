@@ -1,161 +1,207 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DatamigrationProjectsLocationsConnectionProfilesCreateRequest, DatamigrationProjectsLocationsConnectionProfilesCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  DatamigrationProjectsLocationsConnectionProfilesCreateRequest,
+  DatamigrationProjectsLocationsConnectionProfilesCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  ConnectionProfileProviderEnum,
+  ConnectionProfileStateEnum,
+  CloudSqlSettingsActivationPolicyEnum,
+  CloudSqlSettingsAvailabilityTypeEnum,
+  CloudSqlSettingsDataDiskTypeEnum,
+  CloudSqlSettingsDatabaseVersionEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: DatamigrationProjectsLocationsConnectionProfilesCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    connectionProfileId: "dolor",
-    fields: "expedita",
-    key: "voluptas",
-    oauthToken: "fugit",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    requestId: "rerum",
-    uploadType: "dicta",
-    uploadProtocol: "debitis",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  connectionProfileInput: {
     alloydb: {
-      clusterId: "voluptatum",
+      clusterId: "provident",
       settings: {
         initialUser: {
-          password: "et",
-          user: "ut",
+          password: "distinctio",
+          user: "quibusdam",
         },
         labels: {
-          "et": "voluptate",
-          "iste": "vitae",
-          "totam": "dolores",
+          "nulla": "corrupti",
+          "illum": "vel",
+          "error": "deserunt",
         },
         primaryInstanceSettings: {
           databaseFlags: {
-            "debitis": "vel",
-            "odio": "dolore",
-            "id": "aspernatur",
+            "iure": "magnam",
+            "debitis": "ipsa",
           },
-          id: "accusantium",
+          id: "delectus",
           labels: {
-            "commodi": "quis",
-            "est": "aut",
-            "odit": "non",
+            "suscipit": "molestiae",
+            "minus": "placeat",
           },
           machineConfig: {
-            cpuCount: 167566062957544642,
+            cpuCount: 528895,
           },
         },
-        vpcNetwork: "omnis",
+        vpcNetwork: "iusto",
       },
     },
     cloudsql: {
       settings: {
-        activationPolicy: "SQL_ACTIVATION_POLICY_UNSPECIFIED",
-        autoStorageIncrease: true,
-        availabilityType: "REGIONAL",
-        cmekKeyName: "officiis",
-        collation: "autem",
-        dataDiskSizeGb: "consectetur",
-        dataDiskType: "SQL_DATA_DISK_TYPE_UNSPECIFIED",
+        activationPolicy: CloudSqlSettingsActivationPolicyEnum.Always,
+        autoStorageIncrease: false,
+        availabilityType: CloudSqlSettingsAvailabilityTypeEnum.Zonal,
+        cmekKeyName: "recusandae",
+        collation: "temporibus",
+        dataDiskSizeGb: "ab",
+        dataDiskType: CloudSqlSettingsDataDiskTypeEnum.PdSsd,
         databaseFlags: {
-          "qui": "recusandae",
+          "deserunt": "perferendis",
         },
-        databaseVersion: "POSTGRES_13",
+        databaseVersion: CloudSqlSettingsDatabaseVersionEnum.Postgres96,
         ipConfig: {
           authorizedNetworks: [
             {
-              expireTime: "eveniet",
-              label: "modi",
-              ttl: "sint",
-              value: "inventore",
+              expireTime: "sapiente",
+              label: "quo",
+              ttl: "odit",
+              value: "at",
+            },
+            {
+              expireTime: "at",
+              label: "maiores",
+              ttl: "molestiae",
+              value: "quod",
+            },
+            {
+              expireTime: "quod",
+              label: "esse",
+              ttl: "totam",
+              value: "porro",
+            },
+            {
+              expireTime: "dolorum",
+              label: "dicta",
+              ttl: "nam",
+              value: "officia",
             },
           ],
-          enableIpv4: true,
-          privateNetwork: "exercitationem",
-          requireSsl: true,
+          enableIpv4: false,
+          privateNetwork: "occaecati",
+          requireSsl: false,
         },
-        rootPassword: "reprehenderit",
-        secondaryZone: "tempore",
-        sourceId: "maiores",
-        storageAutoResizeLimit: "incidunt",
-        tier: "dolor",
+        rootPassword: "fugit",
+        secondaryZone: "deleniti",
+        sourceId: "hic",
+        storageAutoResizeLimit: "optio",
+        tier: "totam",
         userLabels: {
-          "veritatis": "in",
-          "et": "omnis",
-          "ipsum": "ex",
+          "commodi": "molestiae",
         },
-        zone: "dolores",
+        zone: "modi",
       },
     },
-    displayName: "placeat",
+    displayName: "qui",
     error: {
-      code: 2118716725206170867,
+      code: 774234,
       details: [
         {
-          "voluptas": "quam",
-          "reprehenderit": "qui",
+          "ipsum": "excepturi",
+          "aspernatur": "perferendis",
         },
         {
-          "unde": "in",
+          "natus": "sed",
+          "iste": "dolor",
         },
         {
-          "qui": "ut",
-          "itaque": "ab",
+          "laboriosam": "hic",
+          "saepe": "fuga",
+          "in": "corporis",
         },
       ],
-      message: "neque",
+      message: "iste",
     },
     labels: {
-      "et": "accusantium",
-      "esse": "architecto",
-      "quam": "velit",
+      "saepe": "quidem",
+      "architecto": "ipsa",
     },
     mysql: {
-      cloudSqlId: "cumque",
-      host: "soluta",
-      password: "sunt",
-      port: 2408550365227740434,
+      cloudSqlId: "reiciendis",
+      host: "est",
+      password: "mollitia",
+      port: 670638,
       ssl: {
-        caCertificate: "magni",
-        clientCertificate: "et",
-        clientKey: "optio",
+        caCertificate: "dolores",
+        clientCertificate: "dolorem",
+        clientKey: "corporis",
       },
-      username: "qui",
+      username: "Braulio60",
     },
-    name: "earum",
+    name: "nemo",
+    oracle: {
+      databaseService: "minima",
+      forwardSshConnectivity: {
+        hostname: "nippy-apse.info",
+        password: "culpa",
+        port: 988374,
+        privateKey: "sapiente",
+        username: "Bart63",
+      },
+      host: "consequuntur",
+      password: "repellat",
+      port: 653108,
+      privateConnectivity: {
+        privateConnection: "occaecati",
+      },
+      staticServiceIpConnectivity: {
+        "commodi": "quam",
+        "molestiae": "velit",
+      },
+      username: "Linda.Cronin",
+    },
     postgresql: {
-      cloudSqlId: "illo",
-      host: "omnis",
-      password: "ut",
-      port: 7442289190031176026,
-      ssl: {
-        caCertificate: "dolor",
-        clientCertificate: "commodi",
-        clientKey: "error",
+      cloudSqlId: "laborum",
+      host: "animi",
+      password: "enim",
+      port: 138183,
+      privateServiceConnectConnectivity: {
+        serviceAttachment: "quo",
       },
-      username: "reprehenderit",
+      ssl: {
+        caCertificate: "sequi",
+        clientCertificate: "tenetur",
+        clientKey: "ipsam",
+      },
+      staticIpConnectivity: {
+        "possimus": "aut",
+        "quasi": "error",
+        "temporibus": "laborum",
+      },
+      username: "Austyn_Witting46",
     },
-    provider: "AURORA",
-    state: "READY",
+    provider: ConnectionProfileProviderEnum.Rds,
+    state: ConnectionProfileStateEnum.Failed,
   },
+  accessToken: "ipsa",
+  alt: AltEnum.Media,
+  callback: "voluptate",
+  connectionProfileId: "cum",
+  fields: "perferendis",
+  key: "doloremque",
+  oauthToken: "reprehenderit",
+  parent: "ut",
+  prettyPrint: false,
+  quotaUser: "maiores",
+  requestId: "dicta",
+  skipValidation: false,
+  uploadType: "corporis",
+  uploadProtocol: "dolore",
+  validateOnly: false,
 };
 
 sdk.projects.datamigrationProjectsLocationsConnectionProfilesCreate(req).then((res: DatamigrationProjectsLocationsConnectionProfilesCreateResponse | AxiosError) => {

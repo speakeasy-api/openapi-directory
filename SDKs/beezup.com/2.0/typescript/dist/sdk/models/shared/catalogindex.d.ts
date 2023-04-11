@@ -1,9 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { CatalogIndexLinks } from "./catalogindexlinks";
-import { CatalogIndexLovLinks } from "./catalogindexlovlinks";
+import { CatalogIndexLOVLinks } from "./catalogindexlovlinks";
 import { CatalogStoreIndexList } from "./catalogstoreindexlist";
+/**
+ * OK
+ */
 export declare class CatalogIndex extends SpeakeasyBase {
     links: CatalogIndexLinks;
-    lovLinks: CatalogIndexLovLinks;
+    lovLinks: CatalogIndexLOVLinks;
     storeLinks?: CatalogStoreIndexList;
 }

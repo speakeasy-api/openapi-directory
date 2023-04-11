@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CatalogDeleteCustomColumnPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class CatalogDeleteCustomColumnRequest extends SpeakeasyBase {
+    /**
+     * The custom column identifier
+     */
     columnId: string;
+    /**
+     * Your store identifier
+     */
     storeId: string;
 }
-export declare class CatalogDeleteCustomColumnRequest extends SpeakeasyBase {
-    pathParams: CatalogDeleteCustomColumnPathParams;
-}
 export declare class CatalogDeleteCustomColumnResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     * Occurs when the parent category is not found.
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

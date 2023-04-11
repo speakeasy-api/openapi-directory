@@ -1,19 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class ExportSubmissionsReviewsAsCsvPathParams extends SpeakeasyBase {
-    assignment: string;
-    class: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ExportSubmissionsReviewsAsCsvSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class ExportSubmissionsReviewsAsCsvRequest extends SpeakeasyBase {
-    pathParams: ExportSubmissionsReviewsAsCsvPathParams;
-    security: ExportSubmissionsReviewsAsCsvSecurity;
+    /**
+     * Unique identifier of the assignment
+     */
+    assignment: string;
+    /**
+     * Unique identifier of the class
+     */
+    class: string;
 }
 export declare class ExportSubmissionsReviewsAsCsvResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * List of submissions
+     */
     exportSubmissionsReviewsAsCsv200TextCsvBinaryString?: Uint8Array;
 }

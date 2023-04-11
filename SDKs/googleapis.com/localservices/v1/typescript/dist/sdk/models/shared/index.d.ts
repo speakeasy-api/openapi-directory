@@ -8,5 +8,4 @@ export * from "./googleadshomeserviceslocalservicesv1phonelead";
 export * from "./googleadshomeserviceslocalservicesv1searchaccountreportsresponse";
 export * from "./googleadshomeserviceslocalservicesv1searchdetailedleadreportsresponse";
 export * from "./googletypetimezone";
-export * from "./security";
 export * from "./xgafvenum";

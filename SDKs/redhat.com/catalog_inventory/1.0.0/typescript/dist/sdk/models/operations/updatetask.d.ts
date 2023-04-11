@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdateTaskPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UpdateTaskRequest extends SpeakeasyBase {
-    pathParams: UpdateTaskPathParams;
-    request: shared.TaskInput;
+    /**
+     * Task attributes to update
+     */
+    taskInput: shared.TaskInput;
+    /**
+     * UUID of task
+     */
+    id: string;
 }
 export declare class UpdateTaskResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Not found
+     */
     errorNotFound?: shared.ErrorNotFound;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

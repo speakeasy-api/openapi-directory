@@ -1,16 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeletePaymentPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeletePaymentRequest extends SpeakeasyBase {
     id: number;
 }
-export declare class DeletePaymentRequest extends SpeakeasyBase {
-    pathParams: DeletePaymentPathParams;
-}
 export declare class DeletePaymentResponse extends SpeakeasyBase {
+    /**
+     * The request is malformed.
+     */
     clientErrorResponse?: shared.ClientErrorResponse;
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
+    /**
+     * Payment history deleted successfully.
+     */
     paymentHistories?: shared.PaymentHistory[];
-    serverErrorResponse?: shared.ServerErrorResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Internal server error.
+     */
+    serverErrorResponse?: shared.ServerErrorResponse;
 }

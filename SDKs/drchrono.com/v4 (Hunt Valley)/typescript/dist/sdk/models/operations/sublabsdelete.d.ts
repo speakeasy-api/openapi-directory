@@ -1,16 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class SublabsDeletePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class SublabsDeleteSecurity extends SpeakeasyBase {
-    drchronoOauth2: shared.SchemeDrchronoOauth2;
+    drchronoOauth2: string;
 }
 export declare class SublabsDeleteRequest extends SpeakeasyBase {
-    pathParams: SublabsDeletePathParams;
-    security: SublabsDeleteSecurity;
+    id: number;
 }
 export declare class SublabsDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

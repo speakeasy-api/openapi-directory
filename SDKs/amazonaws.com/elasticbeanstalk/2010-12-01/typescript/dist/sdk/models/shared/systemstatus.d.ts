@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { CpuUtilization } from "./cpuutilization";
+import { CPUUtilization } from "./cpuutilization";
 /**
  * CPU utilization and load average metrics for an Amazon EC2 instance.
-**/
+ */
 export declare class SystemStatus extends SpeakeasyBase {
-    cpuUtilization?: CpuUtilization;
+    cpuUtilization?: CPUUtilization;
     loadAverage?: number[];
 }

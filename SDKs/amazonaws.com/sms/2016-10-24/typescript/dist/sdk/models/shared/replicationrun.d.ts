@@ -4,7 +4,7 @@ import { ReplicationRunStateEnum } from "./replicationrunstateenum";
 import { ReplicationRunTypeEnum } from "./replicationruntypeenum";
 /**
  * Represents a replication run.
-**/
+ */
 export declare class ReplicationRun extends SpeakeasyBase {
     amiId?: string;
     completedTime?: Date;

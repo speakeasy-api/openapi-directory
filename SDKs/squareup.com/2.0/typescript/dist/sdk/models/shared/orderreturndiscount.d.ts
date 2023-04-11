@@ -1,0 +1,83 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { Money } from "./money";
+/**
+ * Represents a discount being returned that applies to one or more return line items in an
+ *
+ * @remarks
+ * order.
+ *
+ * Fixed-amount, order-scoped discounts are distributed across all non-zero return line item totals.
+ * The amount distributed to each return line item is relative to that item’s contribution to the
+ * order subtotal.
+ */
+export declare class OrderReturnDiscount extends SpeakeasyBase {
+    /**
+     * Represents an amount of money. `Money` fields can be signed or unsigned.
+     *
+     * @remarks
+     * Fields that do not explicitly define whether they are signed or unsigned are
+     * considered unsigned and can only hold positive amounts. For signed fields, the
+     * sign of the value indicates the purpose of the money transfer. See
+     * [Working with Monetary Amounts](https://developer.squareup.com/docs/build-basics/working-with-monetary-amounts)
+     * for more information.
+     */
+    amountMoney?: Money;
+    /**
+     * Represents an amount of money. `Money` fields can be signed or unsigned.
+     *
+     * @remarks
+     * Fields that do not explicitly define whether they are signed or unsigned are
+     * considered unsigned and can only hold positive amounts. For signed fields, the
+     * sign of the value indicates the purpose of the money transfer. See
+     * [Working with Monetary Amounts](https://developer.squareup.com/docs/build-basics/working-with-monetary-amounts)
+     * for more information.
+     */
+    appliedMoney?: Money;
+    /**
+     * The catalog object ID referencing [CatalogDiscount](https://developer.squareup.com/reference/square_2021-08-18/objects/CatalogDiscount).
+     */
+    catalogObjectId?: string;
+    /**
+     * The version of the catalog object that this discount references.
+     */
+    catalogVersion?: number;
+    /**
+     * The discount's name.
+     */
+    name?: string;
+    /**
+     * The percentage of the tax, as a string representation of a decimal number.
+     *
+     * @remarks
+     * A value of `"7.25"` corresponds to a percentage of 7.25%.
+     *
+     * `percentage` is not set for amount-based discounts.
+     */
+    percentage?: string;
+    /**
+     * Indicates the level at which the `OrderReturnDiscount` applies. For `ORDER` scoped
+     *
+     * @remarks
+     * discounts, the server generates references in `applied_discounts` on all
+     * `OrderReturnLineItem`s. For `LINE_ITEM` scoped discounts, the discount is only applied to
+     * `OrderReturnLineItem`s with references in their `applied_discounts` field.
+     */
+    scope?: string;
+    /**
+     * The discount `uid` from the order that contains the original application of this discount.
+     */
+    sourceDiscountUid?: string;
+    /**
+     * The type of the discount. If it is created by the API, it is `FIXED_PERCENTAGE` or `FIXED_AMOUNT`.
+     *
+     * @remarks
+     *
+     * Discounts that do not reference a catalog object ID must have a type of
+     * `FIXED_PERCENTAGE` or `FIXED_AMOUNT`.
+     */
+    type?: string;
+    /**
+     * A unique ID that identifies the returned discount only within this order.
+     */
+    uid?: string;
+}

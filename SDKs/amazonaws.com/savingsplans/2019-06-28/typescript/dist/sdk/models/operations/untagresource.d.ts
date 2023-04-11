@@ -1,5 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UntagResourceHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class UntagResourceRequestBody extends SpeakeasyBase {
+    /**
+     * The Amazon Resource Name (ARN) of the resource.
+     */
+    resourceArn: string;
+    /**
+     * The tag keys.
+     */
+    tagKeys: string[];
+}
+export declare class UntagResourceRequest extends SpeakeasyBase {
+    requestBody: UntagResourceRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -8,19 +20,24 @@ export declare class UntagResourceHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class UntagResourceRequestBody extends SpeakeasyBase {
-    resourceArn: string;
-    tagKeys: string[];
-}
-export declare class UntagResourceRequest extends SpeakeasyBase {
-    headers: UntagResourceHeaders;
-    request: UntagResourceRequestBody;
-}
 export declare class UntagResourceResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * Success
+     */
     untagResourceResponse?: Record<string, any>;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

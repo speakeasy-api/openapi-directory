@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostListInstanceProfilesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTListInstanceProfilesActionEnum {
     ListInstanceProfiles = "ListInstanceProfiles"
 }
-export declare enum PostListInstanceProfilesVersionEnum {
+export declare enum POSTListInstanceProfilesVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostListInstanceProfilesQueryParams extends SpeakeasyBase {
-    action: PostListInstanceProfilesActionEnum;
+export declare class POSTListInstanceProfilesRequest extends SpeakeasyBase {
+    action: POSTListInstanceProfilesActionEnum;
+    /**
+     * Pagination token
+     */
     marker?: string;
+    /**
+     * Pagination limit
+     */
     maxItems?: string;
-    version: PostListInstanceProfilesVersionEnum;
-}
-export declare class PostListInstanceProfilesHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTListInstanceProfilesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostListInstanceProfilesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostListInstanceProfilesRequest extends SpeakeasyBase {
-    queryParams: PostListInstanceProfilesQueryParams;
-    headers: PostListInstanceProfilesHeaders;
-    request?: Uint8Array;
-}
-export declare class PostListInstanceProfilesResponse extends SpeakeasyBase {
+export declare class POSTListInstanceProfilesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

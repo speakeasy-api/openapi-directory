@@ -6,13 +6,13 @@ export declare enum ConsoleServerPortTemplateTypeLabelEnum {
     Rj11 = "RJ-11",
     Rj12 = "RJ-12",
     Rj45 = "RJ-45",
-    UsbTypeA = "USB Type A",
-    UsbTypeB = "USB Type B",
-    UsbTypeC = "USB Type C",
-    UsbMiniA = "USB Mini A",
-    UsbMiniB = "USB Mini B",
-    UsbMicroA = "USB Micro A",
-    UsbMicroB = "USB Micro B",
+    USBTypeA = "USB Type A",
+    USBTypeB = "USB Type B",
+    USBTypeC = "USB Type C",
+    USBMiniA = "USB Mini A",
+    USBMiniB = "USB Mini B",
+    USBMicroA = "USB Micro A",
+    USBMicroB = "USB Micro B",
     Other = "Other"
 }
 export declare enum ConsoleServerPortTemplateTypeValueEnum {

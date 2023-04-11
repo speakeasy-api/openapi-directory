@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ServiceMeshStatusDetails } from "./servicemeshstatusdetails";
+/**
+ * Lifecycle status of data plane management.
+ */
 export declare enum ServiceMeshDataPlaneManagementStateEnum {
     LifecycleStateUnspecified = "LIFECYCLE_STATE_UNSPECIFIED",
     Disabled = "DISABLED",
@@ -12,8 +15,14 @@ export declare enum ServiceMeshDataPlaneManagementStateEnum {
 }
 /**
  * Status of data plane management. Only reported per-member.
-**/
+ */
 export declare class ServiceMeshDataPlaneManagement extends SpeakeasyBase {
+    /**
+     * Explanation of the status.
+     */
     details?: ServiceMeshStatusDetails[];
+    /**
+     * Lifecycle status of data plane management.
+     */
     state?: ServiceMeshDataPlaneManagementStateEnum;
 }

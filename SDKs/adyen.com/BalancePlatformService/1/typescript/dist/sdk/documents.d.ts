@@ -1,5 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Documents {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,29 +10,35 @@ export declare class Documents {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteDocumentsId - Delete a document.
+     * Delete a document
      *
+     * @remarks
      * Deletes a document.
-    **/
-    deleteDocumentsId(req: operations.DeleteDocumentsIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteDocumentsIdResponse>;
+     */
+    deleteDocumentsId(req: operations.DeleteDocumentsIdRequest, security: operations.DeleteDocumentsIdSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteDocumentsIdResponse>;
     /**
-     * getDocumentsId - Retrieve a document.
+     * Get a document
      *
-     * Returns a specific document.
-    **/
-    getDocumentsId(req: operations.GetDocumentsIdRequest, config?: AxiosRequestConfig): Promise<operations.GetDocumentsIdResponse>;
+     * @remarks
+     * Returns a document.
+     */
+    getDocumentsId(req: operations.GetDocumentsIdRequest, security: operations.GetDocumentsIdSecurity, config?: AxiosRequestConfig): Promise<operations.GetDocumentsIdResponse>;
     /**
-     * patchDocumentsId - Update a document.
+     * Update a document
      *
-     * Updates a specific document.
-    **/
-    patchDocumentsId(req: operations.PatchDocumentsIdRequest, config?: AxiosRequestConfig): Promise<operations.PatchDocumentsIdResponse>;
+     * @remarks
+     * Updates a document.
+     */
+    patchDocumentsId(req: operations.PatchDocumentsIdRequest, security: operations.PatchDocumentsIdSecurity, config?: AxiosRequestConfig): Promise<operations.PatchDocumentsIdResponse>;
     /**
-     * postDocuments - Upload a document for verification checks.
+     * Upload a document for verification checks
      *
-     * Uploads a document for verification checks. Adyen uses the information from the [legal entity](https://docs.adyen.com/api-explorer/#/balanceplatform/latest/post/legalEntities) to run automated Know Your Customer checks. If these checks fail, your Adyen contact will inform you so you can provide additional documents. Adyen uses the documents to validate the identity of the individual or organization legal entity, or the legal entity's bank account details.
+     * @remarks
+     * Uploads a document for verification checks.
      *
-     *  You should only upload documents when your Adyen contact informs you to provide additional information for the legal entity. For more information, refer to [Onboard and verify account holders](https://docs.adyen.com/issuing/kyc-verification).
-    **/
-    postDocuments(req: operations.PostDocumentsRequest, config?: AxiosRequestConfig): Promise<operations.PostDocumentsResponse>;
+     *  Adyen uses the information from the [legal entity](https://docs.adyen.com/api-explorer/#/legalentity/latest/post/legalEntities) to run automated verification checks. If these checks fail, you will be notified to provide additional documents.
+     *
+     *  You should only upload documents when Adyen requests additional information for the legal entity.
+     */
+    postDocuments(req: shared.DocumentInput, security: operations.PostDocumentsSecurity, config?: AxiosRequestConfig): Promise<operations.PostDocumentsResponse>;
 }

@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeNetworkAclsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeNetworkAclsActionEnum {
     DescribeNetworkAcls = "DescribeNetworkAcls"
 }
-export declare enum PostDescribeNetworkAclsVersionEnum {
+export declare enum POSTDescribeNetworkAclsVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDescribeNetworkAclsQueryParams extends SpeakeasyBase {
-    action: PostDescribeNetworkAclsActionEnum;
+export declare class POSTDescribeNetworkAclsRequest extends SpeakeasyBase {
+    action: POSTDescribeNetworkAclsActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostDescribeNetworkAclsVersionEnum;
-}
-export declare class PostDescribeNetworkAclsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeNetworkAclsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeNetworkAclsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeNetworkAclsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeNetworkAclsQueryParams;
-    headers: PostDescribeNetworkAclsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeNetworkAclsResponse extends SpeakeasyBase {
+export declare class POSTDescribeNetworkAclsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

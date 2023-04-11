@@ -4,9 +4,12 @@ import { StageExecution } from "./stageexecution";
 import { TransitionState } from "./transitionstate";
 /**
  * Represents information about the state of the stage.
-**/
+ */
 export declare class StageState extends SpeakeasyBase {
     actionStates?: ActionState[];
+    /**
+     * Represents information about the run of a stage.
+     */
     inboundExecution?: StageExecution;
     inboundTransitionState?: TransitionState;
     latestExecution?: StageExecution;

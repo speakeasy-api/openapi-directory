@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class OsBrowsersQueryParams extends SpeakeasyBase {
-    os?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class OsBrowsersSecurity extends SpeakeasyBase {
-    basicAuth: shared.SchemeBasicAuth;
+    password: string;
+    username: string;
 }
 export declare class OsBrowsersRequest extends SpeakeasyBase {
-    queryParams: OsBrowsersQueryParams;
-    security: OsBrowsersSecurity;
+    /**
+     * Fetch details for a particular OS
+     */
+    os?: string;
 }
 export declare class OsBrowsersResponse extends SpeakeasyBase {
-    accessDenied?: any;
+    /**
+     * Access denied. Auth error.
+     */
+    accessDenied?: shared.AccessDenied;
     contentType: string;
     statusCode: number;
-    osBrowsers?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
+    osBrowsers?: shared.OsBrowsers;
 }

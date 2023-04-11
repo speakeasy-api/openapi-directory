@@ -1,0 +1,13 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { EntityStateEnum } from "./entitystateenum";
+/**
+ * The representation of an WorkMail group.
+ */
+export declare class Group extends SpeakeasyBase {
+    disabledDate?: Date;
+    email?: string;
+    enabledDate?: Date;
+    id?: string;
+    name?: string;
+    state?: EntityStateEnum;
+}

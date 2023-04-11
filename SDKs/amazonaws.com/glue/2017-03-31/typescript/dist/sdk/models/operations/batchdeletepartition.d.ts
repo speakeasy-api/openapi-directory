@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum BatchDeletePartitionXAmzTargetEnum {
-    AwsGlueBatchDeletePartition = "AWSGlue.BatchDeletePartition"
+    AWSGlueBatchDeletePartition = "AWSGlue.BatchDeletePartition"
 }
-export declare class BatchDeletePartitionHeaders extends SpeakeasyBase {
+export declare class BatchDeletePartitionRequest extends SpeakeasyBase {
+    batchDeletePartitionRequest: shared.BatchDeletePartitionRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class BatchDeletePartitionHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: BatchDeletePartitionXAmzTargetEnum;
 }
-export declare class BatchDeletePartitionRequest extends SpeakeasyBase {
-    headers: BatchDeletePartitionHeaders;
-    request: shared.BatchDeletePartitionRequest;
-}
 export declare class BatchDeletePartitionResponse extends SpeakeasyBase {
+    /**
+     * Success
+     */
     batchDeletePartitionResponse?: shared.BatchDeletePartitionResponse;
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

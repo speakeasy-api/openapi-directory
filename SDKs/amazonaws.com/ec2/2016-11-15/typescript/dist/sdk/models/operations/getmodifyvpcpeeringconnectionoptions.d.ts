@@ -1,35 +1,46 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
 /**
- * The VPC peering connection options.
-**/
-export declare class GetModifyVpcPeeringConnectionOptionsAccepterPeeringConnectionOptions extends SpeakeasyBase {
+ * <note> <p>We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p> </note> <p>The VPC peering connection options.</p>
+ */
+export declare class GETModifyVpcPeeringConnectionOptionsAccepterPeeringConnectionOptions extends SpeakeasyBase {
     allowDnsResolutionFromRemoteVpc?: boolean;
     allowEgressFromLocalClassicLinkToRemoteVpc?: boolean;
     allowEgressFromLocalVpcToRemoteClassicLink?: boolean;
 }
-export declare enum GetModifyVpcPeeringConnectionOptionsActionEnum {
+export declare enum GETModifyVpcPeeringConnectionOptionsActionEnum {
     ModifyVpcPeeringConnectionOptions = "ModifyVpcPeeringConnectionOptions"
 }
 /**
- * The VPC peering connection options.
-**/
-export declare class GetModifyVpcPeeringConnectionOptionsRequesterPeeringConnectionOptions extends SpeakeasyBase {
+ * <note> <p>We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p> </note> <p>The VPC peering connection options.</p>
+ */
+export declare class GETModifyVpcPeeringConnectionOptionsRequesterPeeringConnectionOptions extends SpeakeasyBase {
     allowDnsResolutionFromRemoteVpc?: boolean;
     allowEgressFromLocalClassicLinkToRemoteVpc?: boolean;
     allowEgressFromLocalVpcToRemoteClassicLink?: boolean;
 }
-export declare enum GetModifyVpcPeeringConnectionOptionsVersionEnum {
+export declare enum GETModifyVpcPeeringConnectionOptionsVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetModifyVpcPeeringConnectionOptionsQueryParams extends SpeakeasyBase {
-    accepterPeeringConnectionOptions?: GetModifyVpcPeeringConnectionOptionsAccepterPeeringConnectionOptions;
-    action: GetModifyVpcPeeringConnectionOptionsActionEnum;
+export declare class GETModifyVpcPeeringConnectionOptionsRequest extends SpeakeasyBase {
+    /**
+     * The VPC peering connection options for the accepter VPC.
+     */
+    accepterPeeringConnectionOptions?: GETModifyVpcPeeringConnectionOptionsAccepterPeeringConnectionOptions;
+    action: GETModifyVpcPeeringConnectionOptionsActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
-    requesterPeeringConnectionOptions?: GetModifyVpcPeeringConnectionOptionsRequesterPeeringConnectionOptions;
-    version: GetModifyVpcPeeringConnectionOptionsVersionEnum;
+    /**
+     * The VPC peering connection options for the requester VPC.
+     */
+    requesterPeeringConnectionOptions?: GETModifyVpcPeeringConnectionOptionsRequesterPeeringConnectionOptions;
+    version: GETModifyVpcPeeringConnectionOptionsVersionEnum;
+    /**
+     * The ID of the VPC peering connection.
+     */
     vpcPeeringConnectionId: string;
-}
-export declare class GetModifyVpcPeeringConnectionOptionsHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -38,12 +49,9 @@ export declare class GetModifyVpcPeeringConnectionOptionsHeaders extends Speakea
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetModifyVpcPeeringConnectionOptionsRequest extends SpeakeasyBase {
-    queryParams: GetModifyVpcPeeringConnectionOptionsQueryParams;
-    headers: GetModifyVpcPeeringConnectionOptionsHeaders;
-}
-export declare class GetModifyVpcPeeringConnectionOptionsResponse extends SpeakeasyBase {
+export declare class GETModifyVpcPeeringConnectionOptionsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

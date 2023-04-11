@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class CreateClientValidatorSecurity extends SpeakeasyBase {
-    otoroshiAuth: shared.SchemeOtoroshiAuth;
-}
-export declare class CreateClientValidatorRequest extends SpeakeasyBase {
-    request?: shared.ValidationAuthority;
-    security: CreateClientValidatorSecurity;
+    password: string;
+    username: string;
 }
 export declare class CreateClientValidatorResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful operation
+     */
     validationAuthority?: shared.ValidationAuthority;
 }

@@ -1,31 +1,68 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * The cost associated with the Reserved Instance.
-**/
+ */
 export declare class GetReservedInstancesExchangeQuoteResultReservedInstanceValueRollup extends SpeakeasyBase {
-    hourlyPrice?: Record<string, any>;
-    remainingTotalValue?: Record<string, any>;
-    remainingUpfrontValue?: Record<string, any>;
+    hourlyPrice?: string;
+    remainingTotalValue?: string;
+    remainingUpfrontValue?: string;
+}
+/**
+ * The total value of the Convertible Reserved Instance that you are exchanging.
+ */
+export declare class GetReservedInstancesExchangeQuoteResultReservedInstanceValueSetReservationValue extends SpeakeasyBase {
+    hourlyPrice?: string;
+    remainingTotalValue?: string;
+    remainingUpfrontValue?: string;
+}
+/**
+ * The total value of the Convertible Reserved Instance.
+ */
+export declare class GetReservedInstancesExchangeQuoteResultReservedInstanceValueSet extends SpeakeasyBase {
+    reservationValue?: GetReservedInstancesExchangeQuoteResultReservedInstanceValueSetReservationValue;
+    reservedInstanceId?: string;
 }
 /**
  * The cost associated with the Reserved Instance.
-**/
+ */
 export declare class GetReservedInstancesExchangeQuoteResultTargetConfigurationValueRollup extends SpeakeasyBase {
-    hourlyPrice?: Record<string, any>;
-    remainingTotalValue?: Record<string, any>;
-    remainingUpfrontValue?: Record<string, any>;
+    hourlyPrice?: string;
+    remainingTotalValue?: string;
+    remainingUpfrontValue?: string;
+}
+/**
+ * The total value of the Convertible Reserved Instances that make up the exchange. This is the sum of the list value, remaining upfront price, and additional upfront cost of the exchange.
+ */
+export declare class GetReservedInstancesExchangeQuoteResultTargetConfigurationValueSetReservationValue extends SpeakeasyBase {
+    hourlyPrice?: string;
+    remainingTotalValue?: string;
+    remainingUpfrontValue?: string;
+}
+/**
+ * The configuration of the Convertible Reserved Instances that make up the exchange.
+ */
+export declare class GetReservedInstancesExchangeQuoteResultTargetConfigurationValueSetTargetConfiguration extends SpeakeasyBase {
+    instanceCount?: number;
+    offeringId?: string;
+}
+/**
+ * The total value of the new Convertible Reserved Instances.
+ */
+export declare class GetReservedInstancesExchangeQuoteResultTargetConfigurationValueSet extends SpeakeasyBase {
+    reservationValue?: GetReservedInstancesExchangeQuoteResultTargetConfigurationValueSetReservationValue;
+    targetConfiguration?: GetReservedInstancesExchangeQuoteResultTargetConfigurationValueSetTargetConfiguration;
 }
 /**
  * Contains the output of GetReservedInstancesExchangeQuote.
-**/
+ */
 export declare class GetReservedInstancesExchangeQuoteResult extends SpeakeasyBase {
-    currencyCode?: Record<string, any>;
-    isValidExchange?: Record<string, any>;
-    outputReservedInstancesWillExpireAt?: Record<string, any>;
-    paymentDue?: Record<string, any>;
+    currencyCode?: string;
+    isValidExchange?: boolean;
+    outputReservedInstancesWillExpireAt?: Date;
+    paymentDue?: string;
     reservedInstanceValueRollup?: GetReservedInstancesExchangeQuoteResultReservedInstanceValueRollup;
-    reservedInstanceValueSet?: Record<string, any>;
+    reservedInstanceValueSet?: GetReservedInstancesExchangeQuoteResultReservedInstanceValueSet[];
     targetConfigurationValueRollup?: GetReservedInstancesExchangeQuoteResultTargetConfigurationValueRollup;
-    targetConfigurationValueSet?: Record<string, any>;
-    validationFailureReason?: Record<string, any>;
+    targetConfigurationValueSet?: GetReservedInstancesExchangeQuoteResultTargetConfigurationValueSet[];
+    validationFailureReason?: string;
 }

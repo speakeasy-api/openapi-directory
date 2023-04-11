@@ -1,44 +1,117 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateEventIntegrationRequest, CreateEventIntegrationResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CreateDataIntegrationRequest,
+  CreateDataIntegrationResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: CreateEventIntegrationRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
-    clientToken: "voluptas",
-    description: "fugit",
-    eventBridgeBus: "et",
-    eventFilter: {
-      source: "nihil",
+});
+
+const req: CreateDataIntegrationRequest = {
+  requestBody: {
+    clientToken: "corrupti",
+    description: "provident",
+    fileConfiguration: {
+      filters: {
+        "quibusdam": [
+          "nulla",
+          "corrupti",
+          "illum",
+        ],
+        "vel": [
+          "deserunt",
+          "suscipit",
+          "iure",
+        ],
+        "magnam": [
+          "ipsa",
+          "delectus",
+          "tempora",
+          "suscipit",
+        ],
+      },
+      folders: [
+        "minus",
+        "placeat",
+      ],
     },
-    name: "rerum",
+    kmsKey: "voluptatum",
+    name: "iusto",
+    objectConfiguration: {
+      "nisi": {
+        "temporibus": [
+          "quis",
+        ],
+        "veritatis": [
+          "perferendis",
+          "ipsam",
+          "repellendus",
+        ],
+        "sapiente": [
+          "odit",
+          "at",
+          "at",
+          "maiores",
+        ],
+        "molestiae": [
+          "quod",
+          "esse",
+          "totam",
+          "porro",
+        ],
+      },
+      "dolorum": {
+        "nam": [
+          "occaecati",
+          "fugit",
+          "deleniti",
+        ],
+      },
+      "hic": {
+        "totam": [
+          "commodi",
+        ],
+        "molestiae": [
+          "qui",
+          "impedit",
+        ],
+        "cum": [
+          "ipsum",
+          "excepturi",
+        ],
+        "aspernatur": [
+          "ad",
+        ],
+      },
+    },
+    scheduleConfig: {
+      firstExecutionFrom: "natus",
+      object: "sed",
+      scheduleExpression: "iste",
+    },
+    sourceURI: "dolor",
     tags: {
-      "debitis": "voluptatum",
-      "et": "ut",
-      "dolorem": "et",
+      "laboriosam": "hic",
+      "saepe": "fuga",
+      "in": "corporis",
     },
   },
+  xAmzAlgorithm: "iste",
+  xAmzContentSha256: "iure",
+  xAmzCredential: "saepe",
+  xAmzDate: "quidem",
+  xAmzSecurityToken: "architecto",
+  xAmzSignature: "ipsa",
+  xAmzSignedHeaders: "reiciendis",
 };
 
-sdk.createEventIntegration(req).then((res: CreateEventIntegrationResponse | AxiosError) => {
+sdk.createDataIntegration(req).then((res: CreateDataIntegrationResponse | AxiosError) => {
    // handle response
 });
 ```

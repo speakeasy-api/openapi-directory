@@ -1,10 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteRouteSettingsPathParams extends SpeakeasyBase {
-    apiId: string;
-    routeKey: string;
-    stageName: string;
-}
-export declare class DeleteRouteSettingsHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteRouteSettingsRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,14 +8,29 @@ export declare class DeleteRouteSettingsHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DeleteRouteSettingsRequest extends SpeakeasyBase {
-    pathParams: DeleteRouteSettingsPathParams;
-    headers: DeleteRouteSettingsHeaders;
+    /**
+     * The API identifier.
+     */
+    apiId: string;
+    /**
+     * The route key.
+     */
+    routeKey: string;
+    /**
+     * The stage name. Stage names can only contain alphanumeric characters, hyphens, and underscores. Maximum length is 128 characters.
+     */
+    stageName: string;
 }
 export declare class DeleteRouteSettingsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

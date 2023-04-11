@@ -1,134 +1,341 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetPricing200ApplicationJsonPricingFloatingIpPriceMonthly extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetPricing200ApplicationJSONPricingFloatingIpPriceMonthly extends SpeakeasyBase {
+    /**
+     * Price with VAT added
+     */
     gross: string;
+    /**
+     * Price without VAT
+     */
     net: string;
 }
 /**
  * The cost of one Floating IP per month
-**/
-export declare class GetPricing200ApplicationJsonPricingFloatingIp extends SpeakeasyBase {
-    priceMonthly: GetPricing200ApplicationJsonPricingFloatingIpPriceMonthly;
+ */
+export declare class GetPricing200ApplicationJSONPricingFloatingIp extends SpeakeasyBase {
+    priceMonthly: GetPricing200ApplicationJSONPricingFloatingIpPriceMonthly;
 }
 /**
  * Monthly costs for a Floating IP type in this Location
-**/
-export declare class GetPricing200ApplicationJsonPricingFloatingIpsPricesPriceMonthly extends SpeakeasyBase {
+ */
+export declare class GetPricing200ApplicationJSONPricingFloatingIpsPricesPriceMonthly extends SpeakeasyBase {
+    /**
+     * Price with VAT added
+     */
     gross: string;
+    /**
+     * Price without VAT
+     */
     net: string;
 }
-export declare class GetPricing200ApplicationJsonPricingFloatingIpsPrices extends SpeakeasyBase {
+export declare class GetPricing200ApplicationJSONPricingFloatingIpsPrices extends SpeakeasyBase {
+    /**
+     * Name of the Location the price is for
+     */
     location: string;
-    priceMonthly: GetPricing200ApplicationJsonPricingFloatingIpsPricesPriceMonthly;
+    /**
+     * Monthly costs for a Floating IP type in this Location
+     */
+    priceMonthly: GetPricing200ApplicationJSONPricingFloatingIpsPricesPriceMonthly;
 }
-export declare enum GetPricing200ApplicationJsonPricingFloatingIpsTypeEnum {
+/**
+ * The type of the Floating IP
+ */
+export declare enum GetPricing200ApplicationJSONPricingFloatingIpsTypeEnum {
     Ipv4 = "ipv4",
     Ipv6 = "ipv6"
 }
-export declare class GetPricing200ApplicationJsonPricingFloatingIps extends SpeakeasyBase {
-    prices: GetPricing200ApplicationJsonPricingFloatingIpsPrices[];
-    type: GetPricing200ApplicationJsonPricingFloatingIpsTypeEnum;
+export declare class GetPricing200ApplicationJSONPricingFloatingIps extends SpeakeasyBase {
+    /**
+     * Floating IP type costs per Location
+     */
+    prices: GetPricing200ApplicationJSONPricingFloatingIpsPrices[];
+    /**
+     * The type of the Floating IP
+     */
+    type: GetPricing200ApplicationJSONPricingFloatingIpsTypeEnum;
 }
-export declare class GetPricing200ApplicationJsonPricingImagePricePerGbMonth extends SpeakeasyBase {
+export declare class GetPricing200ApplicationJSONPricingImagePricePerGbMonth extends SpeakeasyBase {
+    /**
+     * Price with VAT added
+     */
     gross: string;
+    /**
+     * Price without VAT
+     */
     net: string;
 }
 /**
  * The cost of Image per GB/month
-**/
-export declare class GetPricing200ApplicationJsonPricingImage extends SpeakeasyBase {
-    pricePerGbMonth: GetPricing200ApplicationJsonPricingImagePricePerGbMonth;
+ */
+export declare class GetPricing200ApplicationJSONPricingImage extends SpeakeasyBase {
+    pricePerGbMonth: GetPricing200ApplicationJSONPricingImagePricePerGbMonth;
 }
 /**
  * Hourly costs for a Load Balancer type in this network zone
-**/
-export declare class GetPricing200ApplicationJsonPricingLoadBalancerTypesPricesPriceHourly extends SpeakeasyBase {
+ */
+export declare class GetPricing200ApplicationJSONPricingLoadBalancerTypesPricesPriceHourly extends SpeakeasyBase {
+    /**
+     * Price with VAT added
+     */
     gross: string;
+    /**
+     * Price without VAT
+     */
     net: string;
 }
 /**
  * Monthly costs for a Load Balancer type in this network zone
-**/
-export declare class GetPricing200ApplicationJsonPricingLoadBalancerTypesPricesPriceMonthly extends SpeakeasyBase {
+ */
+export declare class GetPricing200ApplicationJSONPricingLoadBalancerTypesPricesPriceMonthly extends SpeakeasyBase {
+    /**
+     * Price with VAT added
+     */
     gross: string;
+    /**
+     * Price without VAT
+     */
     net: string;
 }
-export declare class GetPricing200ApplicationJsonPricingLoadBalancerTypesPrices extends SpeakeasyBase {
+export declare class GetPricing200ApplicationJSONPricingLoadBalancerTypesPrices extends SpeakeasyBase {
+    /**
+     * Name of the Location the price is for
+     */
     location: string;
-    priceHourly: GetPricing200ApplicationJsonPricingLoadBalancerTypesPricesPriceHourly;
-    priceMonthly: GetPricing200ApplicationJsonPricingLoadBalancerTypesPricesPriceMonthly;
+    /**
+     * Hourly costs for a Load Balancer type in this network zone
+     */
+    priceHourly: GetPricing200ApplicationJSONPricingLoadBalancerTypesPricesPriceHourly;
+    /**
+     * Monthly costs for a Load Balancer type in this network zone
+     */
+    priceMonthly: GetPricing200ApplicationJSONPricingLoadBalancerTypesPricesPriceMonthly;
 }
-export declare class GetPricing200ApplicationJsonPricingLoadBalancerTypes extends SpeakeasyBase {
+export declare class GetPricing200ApplicationJSONPricingLoadBalancerTypes extends SpeakeasyBase {
+    /**
+     * ID of the Load Balancer type the price is for
+     */
     id: number;
+    /**
+     * Name of the Load Balancer type the price is for
+     */
     name: string;
-    prices: GetPricing200ApplicationJsonPricingLoadBalancerTypesPrices[];
+    /**
+     * Load Balancer type costs per Location
+     */
+    prices: GetPricing200ApplicationJSONPricingLoadBalancerTypesPrices[];
+}
+/**
+ * Hourly costs for a Primary IP type in this Location
+ */
+export declare class GetPricing200ApplicationJSONPricingPrimaryIpsPricesPriceHourly extends SpeakeasyBase {
+    /**
+     * Price with VAT added
+     */
+    gross: string;
+    /**
+     * Price without VAT
+     */
+    net: string;
+}
+/**
+ * Monthly costs for a Primary IP type in this Location
+ */
+export declare class GetPricing200ApplicationJSONPricingPrimaryIpsPricesPriceMonthly extends SpeakeasyBase {
+    /**
+     * Price with VAT added
+     */
+    gross: string;
+    /**
+     * Price without VAT
+     */
+    net: string;
+}
+export declare class GetPricing200ApplicationJSONPricingPrimaryIpsPrices extends SpeakeasyBase {
+    /**
+     * Name of the Location the price is for
+     */
+    location: string;
+    /**
+     * Hourly costs for a Primary IP type in this Location
+     */
+    priceHourly: GetPricing200ApplicationJSONPricingPrimaryIpsPricesPriceHourly;
+    /**
+     * Monthly costs for a Primary IP type in this Location
+     */
+    priceMonthly: GetPricing200ApplicationJSONPricingPrimaryIpsPricesPriceMonthly;
+}
+/**
+ * The type of the Primary IP
+ */
+export declare enum GetPricing200ApplicationJSONPricingPrimaryIpsTypeEnum {
+    Ipv4 = "ipv4",
+    Ipv6 = "ipv6"
+}
+export declare class GetPricing200ApplicationJSONPricingPrimaryIps extends SpeakeasyBase {
+    /**
+     * Primary IP type costs per Location
+     */
+    prices: GetPricing200ApplicationJSONPricingPrimaryIpsPrices[];
+    /**
+     * The type of the Primary IP
+     */
+    type: GetPricing200ApplicationJSONPricingPrimaryIpsTypeEnum;
 }
 /**
  * Will increase base Server costs by specific percentage
-**/
-export declare class GetPricing200ApplicationJsonPricingServerBackup extends SpeakeasyBase {
+ */
+export declare class GetPricing200ApplicationJSONPricingServerBackup extends SpeakeasyBase {
+    /**
+     * Percentage by how much the base price will increase
+     */
     percentage: string;
 }
 /**
  * Hourly costs for a Server type in this Location
-**/
-export declare class GetPricing200ApplicationJsonPricingServerTypesPricesPriceHourly extends SpeakeasyBase {
+ */
+export declare class GetPricing200ApplicationJSONPricingServerTypesPricesPriceHourly extends SpeakeasyBase {
+    /**
+     * Price with VAT added
+     */
     gross: string;
+    /**
+     * Price without VAT
+     */
     net: string;
 }
 /**
  * Monthly costs for a Server type in this Location
-**/
-export declare class GetPricing200ApplicationJsonPricingServerTypesPricesPriceMonthly extends SpeakeasyBase {
+ */
+export declare class GetPricing200ApplicationJSONPricingServerTypesPricesPriceMonthly extends SpeakeasyBase {
+    /**
+     * Price with VAT added
+     */
     gross: string;
+    /**
+     * Price without VAT
+     */
     net: string;
 }
-export declare class GetPricing200ApplicationJsonPricingServerTypesPrices extends SpeakeasyBase {
+export declare class GetPricing200ApplicationJSONPricingServerTypesPrices extends SpeakeasyBase {
+    /**
+     * Name of the Location the price is for
+     */
     location: string;
-    priceHourly: GetPricing200ApplicationJsonPricingServerTypesPricesPriceHourly;
-    priceMonthly: GetPricing200ApplicationJsonPricingServerTypesPricesPriceMonthly;
+    /**
+     * Hourly costs for a Server type in this Location
+     */
+    priceHourly: GetPricing200ApplicationJSONPricingServerTypesPricesPriceHourly;
+    /**
+     * Monthly costs for a Server type in this Location
+     */
+    priceMonthly: GetPricing200ApplicationJSONPricingServerTypesPricesPriceMonthly;
 }
-export declare class GetPricing200ApplicationJsonPricingServerTypes extends SpeakeasyBase {
+export declare class GetPricing200ApplicationJSONPricingServerTypes extends SpeakeasyBase {
+    /**
+     * ID of the Server type the price is for
+     */
     id: number;
+    /**
+     * Name of the Server type the price is for
+     */
     name: string;
-    prices: GetPricing200ApplicationJsonPricingServerTypesPrices[];
+    /**
+     * Server type costs per Location
+     */
+    prices: GetPricing200ApplicationJSONPricingServerTypesPrices[];
 }
-export declare class GetPricing200ApplicationJsonPricingTrafficPricePerTb extends SpeakeasyBase {
+export declare class GetPricing200ApplicationJSONPricingTrafficPricePerTb extends SpeakeasyBase {
+    /**
+     * Price with VAT added
+     */
     gross: string;
+    /**
+     * Price without VAT
+     */
     net: string;
 }
 /**
  * The cost of additional traffic per TB
-**/
-export declare class GetPricing200ApplicationJsonPricingTraffic extends SpeakeasyBase {
-    pricePerTb: GetPricing200ApplicationJsonPricingTrafficPricePerTb;
+ */
+export declare class GetPricing200ApplicationJSONPricingTraffic extends SpeakeasyBase {
+    pricePerTb: GetPricing200ApplicationJSONPricingTrafficPricePerTb;
 }
-export declare class GetPricing200ApplicationJsonPricingVolumePricePerGbMonth extends SpeakeasyBase {
+export declare class GetPricing200ApplicationJSONPricingVolumePricePerGbMonth extends SpeakeasyBase {
+    /**
+     * Price with VAT added
+     */
     gross: string;
+    /**
+     * Price without VAT
+     */
     net: string;
 }
 /**
  * The cost of Volume per GB/month
-**/
-export declare class GetPricing200ApplicationJsonPricingVolume extends SpeakeasyBase {
-    pricePerGbMonth: GetPricing200ApplicationJsonPricingVolumePricePerGbMonth;
+ */
+export declare class GetPricing200ApplicationJSONPricingVolume extends SpeakeasyBase {
+    pricePerGbMonth: GetPricing200ApplicationJSONPricingVolumePricePerGbMonth;
 }
-export declare class GetPricing200ApplicationJsonPricing extends SpeakeasyBase {
+export declare class GetPricing200ApplicationJSONPricing extends SpeakeasyBase {
+    /**
+     * Currency the returned prices are expressed in, coded according to ISO 4217
+     */
     currency: string;
-    floatingIp: GetPricing200ApplicationJsonPricingFloatingIp;
-    floatingIps: GetPricing200ApplicationJsonPricingFloatingIps[];
-    image: GetPricing200ApplicationJsonPricingImage;
-    loadBalancerTypes: GetPricing200ApplicationJsonPricingLoadBalancerTypes[];
-    serverBackup: GetPricing200ApplicationJsonPricingServerBackup;
-    serverTypes: GetPricing200ApplicationJsonPricingServerTypes[];
-    traffic: GetPricing200ApplicationJsonPricingTraffic;
+    /**
+     * The cost of one Floating IP per month
+     */
+    floatingIp: GetPricing200ApplicationJSONPricingFloatingIp;
+    /**
+     * Costs of Floating IPs types per Location and type
+     */
+    floatingIps: GetPricing200ApplicationJSONPricingFloatingIps[];
+    /**
+     * The cost of Image per GB/month
+     */
+    image: GetPricing200ApplicationJSONPricingImage;
+    /**
+     * Costs of Load Balancer types per Location and type
+     */
+    loadBalancerTypes: GetPricing200ApplicationJSONPricingLoadBalancerTypes[];
+    /**
+     * Costs of Primary IPs types per Location
+     */
+    primaryIps: GetPricing200ApplicationJSONPricingPrimaryIps[];
+    /**
+     * Will increase base Server costs by specific percentage
+     */
+    serverBackup: GetPricing200ApplicationJSONPricingServerBackup;
+    /**
+     * Costs of Server types per Location and type
+     */
+    serverTypes: GetPricing200ApplicationJSONPricingServerTypes[];
+    /**
+     * The cost of additional traffic per TB
+     */
+    traffic: GetPricing200ApplicationJSONPricingTraffic;
+    /**
+     * The VAT rate used for calculating prices with VAT
+     */
     vatRate: string;
-    volume: GetPricing200ApplicationJsonPricingVolume;
+    /**
+     * The cost of Volume per GB/month
+     */
+    volume: GetPricing200ApplicationJSONPricingVolume;
 }
-export declare class GetPricing200ApplicationJson extends SpeakeasyBase {
-    pricing: GetPricing200ApplicationJsonPricing;
+/**
+ * The `pricing` key in the reply contains an pricing object with this structure
+ */
+export declare class GetPricing200ApplicationJSON extends SpeakeasyBase {
+    pricing: GetPricing200ApplicationJSONPricing;
 }
 export declare class GetPricingResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getPricing200ApplicationJSONObject?: GetPricing200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * The `pricing` key in the reply contains an pricing object with this structure
+     */
+    getPricing200ApplicationJSONObject?: GetPricing200ApplicationJSON;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum TerminateAppXAmzTargetEnum {
-    AwsServerMigrationServiceV20161024TerminateApp = "AWSServerMigrationService_V2016_10_24.TerminateApp"
+    AWSServerMigrationServiceV20161024TerminateApp = "AWSServerMigrationService_V2016_10_24.TerminateApp"
 }
-export declare class TerminateAppHeaders extends SpeakeasyBase {
+export declare class TerminateAppRequest extends SpeakeasyBase {
+    terminateAppRequest: shared.TerminateAppRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class TerminateAppHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: TerminateAppXAmzTargetEnum;
 }
-export declare class TerminateAppRequest extends SpeakeasyBase {
-    headers: TerminateAppHeaders;
-    request: shared.TerminateAppRequest;
-}
 export declare class TerminateAppResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalError
+     */
     internalError?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * MissingRequiredParameterException
+     */
     missingRequiredParameterException?: any;
+    /**
+     * OperationNotPermittedException
+     */
     operationNotPermittedException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     terminateAppResponse?: Record<string, any>;
+    /**
+     * UnauthorizedOperationException
+     */
     unauthorizedOperationException?: any;
 }

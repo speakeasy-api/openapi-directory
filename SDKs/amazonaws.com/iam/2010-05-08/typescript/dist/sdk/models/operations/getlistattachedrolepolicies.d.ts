@@ -1,19 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetListAttachedRolePoliciesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETListAttachedRolePoliciesActionEnum {
     ListAttachedRolePolicies = "ListAttachedRolePolicies"
 }
-export declare enum GetListAttachedRolePoliciesVersionEnum {
+export declare enum GETListAttachedRolePoliciesVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class GetListAttachedRolePoliciesQueryParams extends SpeakeasyBase {
-    action: GetListAttachedRolePoliciesActionEnum;
+export declare class GETListAttachedRolePoliciesRequest extends SpeakeasyBase {
+    action: GETListAttachedRolePoliciesActionEnum;
+    /**
+     * Use this parameter only when paginating results and only after you receive a response indicating that the results are truncated. Set it to the value of the <code>Marker</code> element in the response that you received to indicate where the next call should start.
+     */
     marker?: string;
+    /**
+     * <p>Use this only when paginating results to indicate the maximum number of items you want in the response. If additional items exist beyond the maximum you specify, the <code>IsTruncated</code> response element is <code>true</code>.</p> <p>If you do not include this parameter, the number of items defaults to 100. Note that IAM might return fewer results, even when there are more results available. In that case, the <code>IsTruncated</code> response element returns <code>true</code>, and <code>Marker</code> contains a value to include in the subsequent call that tells the service where to continue from.</p>
+     */
     maxItems?: number;
+    /**
+     * <p>The path prefix for filtering the results. This parameter is optional. If it is not included, it defaults to a slash (/), listing all policies.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of either a forward slash (/) by itself or a string that must begin and end with forward slashes. In addition, it can contain any ASCII character from the ! (<code>\u0021</code>) through the DEL character (<code>\u007F</code>), including most punctuation characters, digits, and upper and lowercased letters.</p>
+     */
     pathPrefix?: string;
+    /**
+     * <p>The name (friendly name, not ARN) of the role to list attached policies for.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
+     */
     roleName: string;
-    version: GetListAttachedRolePoliciesVersionEnum;
-}
-export declare class GetListAttachedRolePoliciesHeaders extends SpeakeasyBase {
+    version: GETListAttachedRolePoliciesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -22,12 +33,9 @@ export declare class GetListAttachedRolePoliciesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetListAttachedRolePoliciesRequest extends SpeakeasyBase {
-    queryParams: GetListAttachedRolePoliciesQueryParams;
-    headers: GetListAttachedRolePoliciesHeaders;
-}
-export declare class GetListAttachedRolePoliciesResponse extends SpeakeasyBase {
+export declare class GETListAttachedRolePoliciesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

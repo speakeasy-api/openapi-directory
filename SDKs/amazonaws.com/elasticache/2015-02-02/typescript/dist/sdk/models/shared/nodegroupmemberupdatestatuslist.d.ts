@@ -3,7 +3,7 @@ import { NodeUpdateInitiatedByEnum } from "./nodeupdateinitiatedbyenum";
 import { NodeUpdateStatusEnum } from "./nodeupdatestatusenum";
 /**
  * The status of the service update on the node group member
-**/
+ */
 export declare class NodeGroupMemberUpdateStatusList extends SpeakeasyBase {
     cacheClusterId?: string;
     cacheNodeId?: string;

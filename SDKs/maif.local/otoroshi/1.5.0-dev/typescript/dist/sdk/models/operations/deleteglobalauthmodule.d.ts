@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteGlobalAuthModulePathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteGlobalAuthModuleSecurity extends SpeakeasyBase {
-    otoroshiAuth: shared.SchemeOtoroshiAuth;
+    password: string;
+    username: string;
 }
 export declare class DeleteGlobalAuthModuleRequest extends SpeakeasyBase {
-    pathParams: DeleteGlobalAuthModulePathParams;
-    security: DeleteGlobalAuthModuleSecurity;
+    /**
+     * The auth. config id id
+     */
+    id: string;
 }
 export declare class DeleteGlobalAuthModuleResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful operation
+     */
     deleted?: shared.Deleted;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

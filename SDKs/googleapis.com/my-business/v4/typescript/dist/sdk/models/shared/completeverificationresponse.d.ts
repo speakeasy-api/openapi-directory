@@ -2,7 +2,10 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { Verification } from "./verification";
 /**
  * Response message for Verifications.CompleteVerificationAction.
-**/
+ */
 export declare class CompleteVerificationResponse extends SpeakeasyBase {
+    /**
+     * A verification represents a verification attempt on a location.
+     */
     verification?: Verification;
 }

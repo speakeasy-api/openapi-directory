@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeTargetGroupAttributesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeTargetGroupAttributesActionEnum {
     DescribeTargetGroupAttributes = "DescribeTargetGroupAttributes"
 }
-export declare enum GetDescribeTargetGroupAttributesVersionEnum {
+export declare enum GETDescribeTargetGroupAttributesVersionEnum {
     TwoThousandAndFifteen1201 = "2015-12-01"
 }
-export declare class GetDescribeTargetGroupAttributesQueryParams extends SpeakeasyBase {
-    action: GetDescribeTargetGroupAttributesActionEnum;
+export declare class GETDescribeTargetGroupAttributesRequest extends SpeakeasyBase {
+    action: GETDescribeTargetGroupAttributesActionEnum;
+    /**
+     * The Amazon Resource Name (ARN) of the target group.
+     */
     targetGroupArn: string;
-    version: GetDescribeTargetGroupAttributesVersionEnum;
-}
-export declare class GetDescribeTargetGroupAttributesHeaders extends SpeakeasyBase {
+    version: GETDescribeTargetGroupAttributesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDescribeTargetGroupAttributesHeaders extends SpeakeasyBa
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeTargetGroupAttributesRequest extends SpeakeasyBase {
-    queryParams: GetDescribeTargetGroupAttributesQueryParams;
-    headers: GetDescribeTargetGroupAttributesHeaders;
-}
-export declare class GetDescribeTargetGroupAttributesResponse extends SpeakeasyBase {
+export declare class GETDescribeTargetGroupAttributesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

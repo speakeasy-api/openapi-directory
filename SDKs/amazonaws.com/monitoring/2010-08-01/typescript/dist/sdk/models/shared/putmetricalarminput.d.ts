@@ -1,0 +1,31 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { ComparisonOperatorEnum } from "./comparisonoperatorenum";
+import { Dimension } from "./dimension";
+import { MetricDataQuery } from "./metricdataquery";
+import { StandardUnitEnum } from "./standardunitenum";
+import { StatisticEnum } from "./statisticenum";
+import { Tag } from "./tag";
+export declare class PutMetricAlarmInput extends SpeakeasyBase {
+    actionsEnabled?: boolean;
+    alarmActions?: string[];
+    alarmDescription?: string;
+    alarmName: string;
+    comparisonOperator: ComparisonOperatorEnum;
+    datapointsToAlarm?: number;
+    dimensions?: Dimension[];
+    evaluateLowSampleCountPercentile?: string;
+    evaluationPeriods: number;
+    extendedStatistic?: string;
+    insufficientDataActions?: string[];
+    metricName?: string;
+    metrics?: MetricDataQuery[];
+    namespace?: string;
+    okActions?: string[];
+    period?: number;
+    statistic?: StatisticEnum;
+    tags?: Tag[];
+    threshold?: number;
+    thresholdMetricId?: string;
+    treatMissingData?: string;
+    unit?: StandardUnitEnum;
+}

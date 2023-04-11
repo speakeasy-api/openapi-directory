@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListServiceQuotasQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListServiceQuotasXAmzTargetEnum {
     ServiceQuotasV20190624ListServiceQuotas = "ServiceQuotasV20190624.ListServiceQuotas"
 }
-export declare class ListServiceQuotasHeaders extends SpeakeasyBase {
+export declare class ListServiceQuotasRequest extends SpeakeasyBase {
+    listServiceQuotasRequest: shared.ListServiceQuotasRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,19 +23,36 @@ export declare class ListServiceQuotasHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListServiceQuotasXAmzTargetEnum;
 }
-export declare class ListServiceQuotasRequest extends SpeakeasyBase {
-    queryParams: ListServiceQuotasQueryParams;
-    headers: ListServiceQuotasHeaders;
-    request: shared.ListServiceQuotasRequest;
-}
 export declare class ListServiceQuotasResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * IllegalArgumentException
+     */
     illegalArgumentException?: any;
+    /**
+     * InvalidPaginationTokenException
+     */
     invalidPaginationTokenException?: any;
+    /**
+     * Success
+     */
     listServiceQuotasResponse?: shared.ListServiceQuotasResponse;
+    /**
+     * NoSuchResourceException
+     */
     noSuchResourceException?: any;
+    /**
+     * ServiceException
+     */
     serviceException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

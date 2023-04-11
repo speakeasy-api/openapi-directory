@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum PredictXAmzTargetEnum {
-    AmazonMl20141212Predict = "AmazonML_20141212.Predict"
+    AmazonML20141212Predict = "AmazonML_20141212.Predict"
 }
-export declare class PredictHeaders extends SpeakeasyBase {
+export declare class PredictRequest extends SpeakeasyBase {
+    predictInput: shared.PredictInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class PredictHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: PredictXAmzTargetEnum;
 }
-export declare class PredictRequest extends SpeakeasyBase {
-    headers: PredictHeaders;
-    request: shared.PredictInput;
-}
 export declare class PredictResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * Success
+     */
     predictOutput?: shared.PredictOutput;
+    /**
+     * PredictorNotMountedException
+     */
     predictorNotMountedException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
 }

@@ -12,8 +12,14 @@ export declare enum DataSourceRefreshWeeklyScheduleDaysOfWeekEnum {
 }
 /**
  * A weekly schedule for data to refresh on specific days in a given time interval.
-**/
+ */
 export declare class DataSourceRefreshWeeklySchedule extends SpeakeasyBase {
+    /**
+     * Days of the week to refresh. At least one day must be specified.
+     */
     daysOfWeek?: DataSourceRefreshWeeklyScheduleDaysOfWeekEnum[];
+    /**
+     * Represents a time of day. The date and time zone are either not significant or are specified elsewhere. An API may choose to allow leap seconds. Related types are google.type.Date and `google.protobuf.Timestamp`.
+     */
     startTime?: TimeOfDay;
 }

@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetUpdateConfigurationSetReputationMetricsEnabledActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETUpdateConfigurationSetReputationMetricsEnabledActionEnum {
     UpdateConfigurationSetReputationMetricsEnabled = "UpdateConfigurationSetReputationMetricsEnabled"
 }
-export declare enum GetUpdateConfigurationSetReputationMetricsEnabledVersionEnum {
+export declare enum GETUpdateConfigurationSetReputationMetricsEnabledVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetUpdateConfigurationSetReputationMetricsEnabledQueryParams extends SpeakeasyBase {
-    action: GetUpdateConfigurationSetReputationMetricsEnabledActionEnum;
+export declare class GETUpdateConfigurationSetReputationMetricsEnabledRequest extends SpeakeasyBase {
+    action: GETUpdateConfigurationSetReputationMetricsEnabledActionEnum;
+    /**
+     * The name of the configuration set that you want to update.
+     */
     configurationSetName: string;
+    /**
+     * Describes whether or not Amazon SES will publish reputation metrics for the configuration set, such as bounce and complaint rates, to Amazon CloudWatch.
+     */
     enabled: boolean;
-    version: GetUpdateConfigurationSetReputationMetricsEnabledVersionEnum;
-}
-export declare class GetUpdateConfigurationSetReputationMetricsEnabledHeaders extends SpeakeasyBase {
+    version: GETUpdateConfigurationSetReputationMetricsEnabledVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetUpdateConfigurationSetReputationMetricsEnabledHeaders ex
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetUpdateConfigurationSetReputationMetricsEnabledRequest extends SpeakeasyBase {
-    queryParams: GetUpdateConfigurationSetReputationMetricsEnabledQueryParams;
-    headers: GetUpdateConfigurationSetReputationMetricsEnabledHeaders;
-}
-export declare class GetUpdateConfigurationSetReputationMetricsEnabledResponse extends SpeakeasyBase {
+export declare class GETUpdateConfigurationSetReputationMetricsEnabledResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

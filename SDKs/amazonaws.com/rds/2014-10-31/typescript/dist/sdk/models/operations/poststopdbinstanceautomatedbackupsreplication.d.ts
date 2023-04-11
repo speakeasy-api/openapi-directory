@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostStopDbInstanceAutomatedBackupsReplicationActionEnum {
-    StopDbInstanceAutomatedBackupsReplication = "StopDBInstanceAutomatedBackupsReplication"
+import { AxiosResponse } from "axios";
+export declare enum POSTStopDBInstanceAutomatedBackupsReplicationActionEnum {
+    StopDBInstanceAutomatedBackupsReplication = "StopDBInstanceAutomatedBackupsReplication"
 }
-export declare enum PostStopDbInstanceAutomatedBackupsReplicationVersionEnum {
+export declare enum POSTStopDBInstanceAutomatedBackupsReplicationVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class PostStopDbInstanceAutomatedBackupsReplicationQueryParams extends SpeakeasyBase {
-    action: PostStopDbInstanceAutomatedBackupsReplicationActionEnum;
-    version: PostStopDbInstanceAutomatedBackupsReplicationVersionEnum;
-}
-export declare class PostStopDbInstanceAutomatedBackupsReplicationHeaders extends SpeakeasyBase {
+export declare class POSTStopDBInstanceAutomatedBackupsReplicationRequest extends SpeakeasyBase {
+    action: POSTStopDBInstanceAutomatedBackupsReplicationActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTStopDBInstanceAutomatedBackupsReplicationVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostStopDbInstanceAutomatedBackupsReplicationHeaders extend
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostStopDbInstanceAutomatedBackupsReplicationRequest extends SpeakeasyBase {
-    queryParams: PostStopDbInstanceAutomatedBackupsReplicationQueryParams;
-    headers: PostStopDbInstanceAutomatedBackupsReplicationHeaders;
-    request?: Uint8Array;
-}
-export declare class PostStopDbInstanceAutomatedBackupsReplicationResponse extends SpeakeasyBase {
+export declare class POSTStopDBInstanceAutomatedBackupsReplicationResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

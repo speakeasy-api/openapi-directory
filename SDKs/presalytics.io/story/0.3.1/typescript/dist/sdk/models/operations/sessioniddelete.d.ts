@@ -1,12 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SessionIdDeletePathParams extends SpeakeasyBase {
-    sessionId: string;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class SessionIdDeleteRequest extends SpeakeasyBase {
-    pathParams: SessionIdDeletePathParams;
+    /**
+     * The primary key for a view session
+     */
+    sessionId: string;
 }
 export declare class SessionIdDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    problemDetail?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad Request
+     */
+    problemDetail?: shared.ProblemDetail;
 }

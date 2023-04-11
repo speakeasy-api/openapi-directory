@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateConnectionAliasPermissionXAmzTargetEnum {
     WorkspacesServiceUpdateConnectionAliasPermission = "WorkspacesService.UpdateConnectionAliasPermission"
 }
-export declare class UpdateConnectionAliasPermissionHeaders extends SpeakeasyBase {
+export declare class UpdateConnectionAliasPermissionRequest extends SpeakeasyBase {
+    updateConnectionAliasPermissionRequest: shared.UpdateConnectionAliasPermissionRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,19 +15,40 @@ export declare class UpdateConnectionAliasPermissionHeaders extends SpeakeasyBas
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateConnectionAliasPermissionXAmzTargetEnum;
 }
-export declare class UpdateConnectionAliasPermissionRequest extends SpeakeasyBase {
-    headers: UpdateConnectionAliasPermissionHeaders;
-    request: shared.UpdateConnectionAliasPermissionRequest;
-}
 export declare class UpdateConnectionAliasPermissionResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InvalidParameterValuesException
+     */
     invalidParameterValuesException?: any;
+    /**
+     * InvalidResourceStateException
+     */
     invalidResourceStateException?: any;
+    /**
+     * OperationNotSupportedException
+     */
     operationNotSupportedException?: any;
+    /**
+     * ResourceAssociatedException
+     */
     resourceAssociatedException?: any;
+    /**
+     * ResourceLimitExceededException
+     */
     resourceLimitExceededException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * Success
+     */
     updateConnectionAliasPermissionResult?: Record<string, any>;
 }

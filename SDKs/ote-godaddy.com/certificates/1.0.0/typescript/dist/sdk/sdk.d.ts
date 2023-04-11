@@ -1,10 +1,22 @@
-import { AxiosInstance } from "axios";
 import { V1 } from "./v1";
 import { V2 } from "./v2";
-export declare const ServerList: readonly ["https://ote-godaddy.com//api.ote-godaddy.com"];
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
+export declare const ServerList: readonly ["//api.ote-godaddy.com"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
 export declare class SDK {
     v1: V1;
@@ -15,5 +27,6 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
 }

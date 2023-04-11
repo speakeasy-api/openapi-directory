@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Identifies the type of error.
+ */
 export declare enum ErrorTypeEnum {
     InvalidRequest = "invalid-request",
     InvalidApplication = "invalid-application",
@@ -23,10 +26,22 @@ export declare enum ErrorTypeEnum {
 }
 /**
  * On error, the API consumer will receive an HTTP response with a HTTP Status Code of 4xx or 5xx and a Content-Type of application/problem+json.
-**/
+ */
 export declare class ErrorT extends SpeakeasyBase {
+    /**
+     * Human readable detailed error description.
+     */
     detail?: string;
+    /**
+     * The numeric HTTP Status Code, e.g. 404
+     */
     status?: number;
+    /**
+     * Human readable high level error description.
+     */
     title?: string;
+    /**
+     * Identifies the type of error.
+     */
     type?: ErrorTypeEnum;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum PutConfigRuleXAmzTargetEnum {
     StarlingDoveServicePutConfigRule = "StarlingDoveService.PutConfigRule"
 }
-export declare class PutConfigRuleHeaders extends SpeakeasyBase {
+export declare class PutConfigRuleRequest extends SpeakeasyBase {
+    putConfigRuleRequest: shared.PutConfigRuleRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class PutConfigRuleHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: PutConfigRuleXAmzTargetEnum;
 }
-export declare class PutConfigRuleRequest extends SpeakeasyBase {
-    headers: PutConfigRuleHeaders;
-    request: shared.PutConfigRuleRequest;
-}
 export declare class PutConfigRuleResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InsufficientPermissionsException
+     */
     insufficientPermissionsException?: any;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
+    /**
+     * MaxNumberOfConfigRulesExceededException
+     */
     maxNumberOfConfigRulesExceededException?: any;
+    /**
+     * NoAvailableConfigurationRecorderException
+     */
     noAvailableConfigurationRecorderException?: any;
-    resourceInUseException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceInUseException
+     */
+    resourceInUseException?: any;
 }

@@ -1,13 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListProjectAssetsPathParams extends SpeakeasyBase {
-    projectId: string;
-}
-export declare class ListProjectAssetsQueryParams extends SpeakeasyBase {
-    maxResults?: number;
-    nextToken?: string;
-}
-export declare class ListProjectAssetsHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListProjectAssetsRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -15,17 +9,37 @@ export declare class ListProjectAssetsHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class ListProjectAssetsRequest extends SpeakeasyBase {
-    pathParams: ListProjectAssetsPathParams;
-    queryParams: ListProjectAssetsQueryParams;
-    headers: ListProjectAssetsHeaders;
+    /**
+     * <p>The maximum number of results to return for each paginated request.</p> <p>Default: 50</p>
+     */
+    maxResults?: number;
+    /**
+     * The token to be used for the next set of paginated results.
+     */
+    nextToken?: string;
+    /**
+     * The ID of the project.
+     */
+    projectId: string;
 }
 export declare class ListProjectAssetsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalFailureException
+     */
     internalFailureException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * Success
+     */
     listProjectAssetsResponse?: shared.ListProjectAssetsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

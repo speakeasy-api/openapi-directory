@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetMlTransformsQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare enum GetMLTransformsXAmzTargetEnum {
+    AWSGlueGetMLTransforms = "AWSGlue.GetMLTransforms"
+}
+export declare class GetMLTransformsRequest extends SpeakeasyBase {
+    getMLTransformsRequest: shared.GetMLTransformsRequest;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-}
-export declare enum GetMlTransformsXAmzTargetEnum {
-    AwsGlueGetMlTransforms = "AWSGlue.GetMLTransforms"
-}
-export declare class GetMlTransformsHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -15,19 +21,30 @@ export declare class GetMlTransformsHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: GetMlTransformsXAmzTargetEnum;
+    xAmzTarget: GetMLTransformsXAmzTargetEnum;
 }
-export declare class GetMlTransformsRequest extends SpeakeasyBase {
-    queryParams: GetMlTransformsQueryParams;
-    headers: GetMlTransformsHeaders;
-    request: shared.GetMlTransformsRequest;
-}
-export declare class GetMlTransformsResponse extends SpeakeasyBase {
+export declare class GetMLTransformsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
-    getMLTransformsResponse?: shared.GetMlTransformsResponse;
+    /**
+     * Success
+     */
+    getMLTransformsResponse?: shared.GetMLTransformsResponse;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

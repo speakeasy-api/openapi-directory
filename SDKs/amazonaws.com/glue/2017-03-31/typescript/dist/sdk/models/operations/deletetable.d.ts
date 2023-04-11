@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteTableXAmzTargetEnum {
-    AwsGlueDeleteTable = "AWSGlue.DeleteTable"
+    AWSGlueDeleteTable = "AWSGlue.DeleteTable"
 }
-export declare class DeleteTableHeaders extends SpeakeasyBase {
+export declare class DeleteTableRequest extends SpeakeasyBase {
+    deleteTableRequest: shared.DeleteTableRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,36 @@ export declare class DeleteTableHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteTableXAmzTargetEnum;
 }
-export declare class DeleteTableRequest extends SpeakeasyBase {
-    headers: DeleteTableHeaders;
-    request: shared.DeleteTableRequest;
-}
 export declare class DeleteTableResponse extends SpeakeasyBase {
+    /**
+     * ConcurrentModificationException
+     */
     concurrentModificationException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteTableResponse?: Record<string, any>;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
+    /**
+     * ResourceNotReadyException
+     */
+    resourceNotReadyException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

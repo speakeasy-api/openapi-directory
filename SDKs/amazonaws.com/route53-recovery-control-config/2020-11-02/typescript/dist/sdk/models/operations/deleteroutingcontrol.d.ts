@@ -1,8 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteRoutingControlPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteRoutingControlRequest extends SpeakeasyBase {
+    /**
+     * The Amazon Resource Name (ARN) of the routing control that you're deleting.
+     */
     routingControlArn: string;
-}
-export declare class DeleteRoutingControlHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,18 +13,36 @@ export declare class DeleteRoutingControlHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeleteRoutingControlRequest extends SpeakeasyBase {
-    pathParams: DeleteRoutingControlPathParams;
-    headers: DeleteRoutingControlHeaders;
-}
 export declare class DeleteRoutingControlResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteRoutingControlResponse?: Record<string, any>;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

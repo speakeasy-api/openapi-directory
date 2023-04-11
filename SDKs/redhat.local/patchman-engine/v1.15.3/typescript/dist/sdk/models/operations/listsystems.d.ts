@@ -1,5 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class ListSystemsSecurity extends SpeakeasyBase {
+    rhIdentity: string;
+}
+/**
+ * Sort field
+ */
 export declare enum ListSystemsSortEnum {
     Id = "id",
     DisplayName = "display_name",
@@ -13,40 +20,106 @@ export declare enum ListSystemsSortEnum {
     PackagesInstalled = "packages_installed",
     PackagesUpdatable = "packages_updatable"
 }
-export declare class ListSystemsQueryParams extends SpeakeasyBase {
-    filterCreated?: string;
-    filterCulledTimestamp?: string;
-    filterDisplayName?: string;
-    filterId?: string;
-    filterInsightsId?: string;
-    filterLastEvaluation?: string;
-    filterLastUpload?: string;
-    filterOtherCount?: string;
-    filterPackagesInstalled?: string;
-    filterPackagesUpdatable?: string;
-    filterRhbaCount?: string;
-    filterRheaCount?: string;
-    filterRhsaCount?: string;
-    filterStale?: string;
-    filterStaleTimestamp?: string;
-    filterStaleWarningTimestamp?: string;
-    filterSystemProfileSapSidsIn?: string[];
-    filterSystemProfileSapSystem?: string;
-    limit?: number;
-    offset?: number;
-    search?: string;
-    sort?: ListSystemsSortEnum;
-    tags?: string[];
-}
-export declare class ListSystemsSecurity extends SpeakeasyBase {
-    rhIdentity: shared.SchemeRhIdentity;
-}
 export declare class ListSystemsRequest extends SpeakeasyBase {
-    queryParams: ListSystemsQueryParams;
-    security: ListSystemsSecurity;
+    /**
+     * Filter
+     */
+    filterCreated?: string;
+    /**
+     * Filter
+     */
+    filterCulledTimestamp?: string;
+    /**
+     * Filter
+     */
+    filterDisplayName?: string;
+    /**
+     * Filter
+     */
+    filterId?: string;
+    /**
+     * Filter
+     */
+    filterInsightsId?: string;
+    /**
+     * Filter
+     */
+    filterLastEvaluation?: string;
+    /**
+     * Filter
+     */
+    filterLastUpload?: string;
+    /**
+     * Filter
+     */
+    filterOtherCount?: string;
+    /**
+     * Filter
+     */
+    filterPackagesInstalled?: string;
+    /**
+     * Filter
+     */
+    filterPackagesUpdatable?: string;
+    /**
+     * Filter
+     */
+    filterRhbaCount?: string;
+    /**
+     * Filter
+     */
+    filterRheaCount?: string;
+    /**
+     * Filter
+     */
+    filterRhsaCount?: string;
+    /**
+     * Filter
+     */
+    filterStale?: string;
+    /**
+     * Filter
+     */
+    filterStaleTimestamp?: string;
+    /**
+     * Filter
+     */
+    filterStaleWarningTimestamp?: string;
+    /**
+     * Filter systems by their SAP SIDs
+     */
+    filterSystemProfileSapSidsIn?: string[];
+    /**
+     * Filter only SAP systems
+     */
+    filterSystemProfileSapSystem?: string;
+    /**
+     * Limit for paging, set -1 to return all
+     */
+    limit?: number;
+    /**
+     * Offset for paging
+     */
+    offset?: number;
+    /**
+     * Find matching text
+     */
+    search?: string;
+    /**
+     * Sort field
+     */
+    sort?: ListSystemsSortEnum;
+    /**
+     * Tag filter
+     */
+    tags?: string[];
 }
 export declare class ListSystemsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
     controllersSystemsResponse?: shared.ControllersSystemsResponse;
 }

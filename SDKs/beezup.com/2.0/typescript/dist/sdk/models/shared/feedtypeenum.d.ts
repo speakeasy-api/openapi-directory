@@ -1,3 +1,6 @@
+/**
+ * The Feed Type
+ */
 export declare enum FeedTypeEnum {
     Products = "Products",
     Inventory = "Inventory",

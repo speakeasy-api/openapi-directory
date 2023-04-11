@@ -1,15 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetOrganizationPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class GetOrganizationQueryParams extends SpeakeasyBase {
-    includeLocations?: boolean;
-}
+import { AxiosResponse } from "axios";
 export declare class GetOrganizationRequest extends SpeakeasyBase {
-    pathParams: GetOrganizationPathParams;
-    queryParams: GetOrganizationQueryParams;
+    /**
+     * ID of organization that needs to be fetched
+     */
+    id: string;
+    /**
+     * Populate locations
+     */
+    includeLocations?: boolean;
 }
 export declare class GetOrganizationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

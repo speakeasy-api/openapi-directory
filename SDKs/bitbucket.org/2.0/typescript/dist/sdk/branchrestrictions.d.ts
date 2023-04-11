@@ -1,5 +1,18 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Repository owners and administrators can set branch management
+ *
+ * @remarks
+ * rules on a repository that control what can be pushed by whom.
+ * Through these rules, you can enforce a project or team
+ * workflow. For example, owners or administrators can:
+ *
+ * * Limit push powers
+ * * Prevent branch deletion
+ * * Prevent history re-writes (Git only)
+ *
+ */
 export declare class BranchRestrictions {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,20 +22,32 @@ export declare class BranchRestrictions {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteRepositoriesWorkspaceRepoSlugBranchRestrictionsId - Deletes an existing branch restriction rule.
-    **/
-    deleteRepositoriesWorkspaceRepoSlugBranchRestrictionsId(req: operations.DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse>;
+     * Delete a branch restriction rule
+     *
+     * @remarks
+     * Deletes an existing branch restriction rule.
+     */
+    deleteRepositoriesWorkspaceRepoSlugBranchRestrictionsId(req: operations.DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsIdRequest, security: operations.DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsIdSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugBranchRestrictions - Returns a paginated list of all branch restrictions on the
+     * List branch restrictions
+     *
+     * @remarks
+     * Returns a paginated list of all branch restrictions on the
      * repository.
-    **/
-    getRepositoriesWorkspaceRepoSlugBranchRestrictions(req: operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugBranchRestrictions(req: operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest, security: operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugBranchRestrictionsId - Returns a specific branch restriction rule.
-    **/
-    getRepositoriesWorkspaceRepoSlugBranchRestrictionsId(req: operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIdRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse>;
+     * Get a branch restriction rule
+     *
+     * @remarks
+     * Returns a specific branch restriction rule.
+     */
+    getRepositoriesWorkspaceRepoSlugBranchRestrictionsId(req: operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIdRequest, security: operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIdSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse>;
     /**
-     * postRepositoriesWorkspaceRepoSlugBranchRestrictions - Creates a new branch restriction rule for a repository.
+     * Create a branch restriction rule
+     *
+     * @remarks
+     * Creates a new branch restriction rule for a repository.
      *
      * `kind` describes what will be restricted. Allowed values include:
      * `push`, `force`, `delete` and `restrict_merges`.
@@ -62,14 +87,17 @@ export declare class BranchRestrictions {
      *
      * Note that branch restrictions with overlapping matchers is allowed,
      * but the resulting behavior may be surprising.
-    **/
-    postRepositoriesWorkspaceRepoSlugBranchRestrictions(req: operations.PostRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse>;
+     */
+    postRepositoriesWorkspaceRepoSlugBranchRestrictions(req: operations.PostRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest, security: operations.PostRepositoriesWorkspaceRepoSlugBranchRestrictionsSecurity, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse>;
     /**
-     * putRepositoriesWorkspaceRepoSlugBranchRestrictionsId - Updates an existing branch restriction rule.
+     * Update a branch restriction rule
+     *
+     * @remarks
+     * Updates an existing branch restriction rule.
      *
      * Fields not present in the request body are ignored.
      *
-     * See [`POST`](../branch-restrictions#post) for details.
-    **/
-    putRepositoriesWorkspaceRepoSlugBranchRestrictionsId(req: operations.PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdRequest, config?: AxiosRequestConfig): Promise<operations.PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse>;
+     * See [`POST`](/cloud/bitbucket/rest/api-group-branch-restrictions/#api-repositories-workspace-repo-slug-branch-restrictions-post) for details.
+     */
+    putRepositoriesWorkspaceRepoSlugBranchRestrictionsId(req: operations.PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdRequest, security: operations.PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdSecurity, config?: AxiosRequestConfig): Promise<operations.PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse>;
 }

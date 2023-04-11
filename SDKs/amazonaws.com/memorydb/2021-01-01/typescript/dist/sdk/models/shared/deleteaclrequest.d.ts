@@ -1,4 +1,4 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteAclRequest extends SpeakeasyBase {
+export declare class DeleteACLRequest extends SpeakeasyBase {
     aclName: string;
 }

@@ -57,25 +57,46 @@ export declare enum RackWidthLabelEnum {
     TwentyOneInches = "21 inches",
     TwentyThreeInches = "23 inches"
 }
+export declare enum RackWidthValueEnum {
+    Ten = "10",
+    Nineteen = "19",
+    TwentyOne = "21",
+    TwentyThree = "23"
+}
 export declare class RackWidth extends SpeakeasyBase {
     label: RackWidthLabelEnum;
-    value: number;
+    value: RackWidthValueEnum;
 }
 export declare class Rack extends SpeakeasyBase {
+    /**
+     * A unique tag used to identify this rack
+     */
     assetTag?: string;
     comments?: string;
     created?: Date;
     customFields?: Record<string, any>;
+    /**
+     * Units are numbered top-to-bottom
+     */
     descUnits?: boolean;
     deviceCount?: number;
     displayName?: string;
+    /**
+     * Locally-assigned identifier
+     */
     facilityId?: string;
     group?: NestedRackGroup;
     id?: number;
     lastUpdated?: Date;
     name: string;
+    /**
+     * Outer dimension of rack (depth)
+     */
     outerDepth?: number;
     outerUnit?: RackOuterUnit;
+    /**
+     * Outer dimension of rack (width)
+     */
     outerWidth?: number;
     powerfeedCount?: number;
     role?: NestedRackRole;
@@ -85,6 +106,9 @@ export declare class Rack extends SpeakeasyBase {
     tags?: string[];
     tenant?: NestedTenant;
     type?: RackType;
+    /**
+     * Height in rack units
+     */
     uHeight?: number;
     width?: RackWidth;
 }

@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetSendDiagnosticInterruptActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETSendDiagnosticInterruptActionEnum {
     SendDiagnosticInterrupt = "SendDiagnosticInterrupt"
 }
-export declare enum GetSendDiagnosticInterruptVersionEnum {
+export declare enum GETSendDiagnosticInterruptVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetSendDiagnosticInterruptQueryParams extends SpeakeasyBase {
-    action: GetSendDiagnosticInterruptActionEnum;
+export declare class GETSendDiagnosticInterruptRequest extends SpeakeasyBase {
+    action: GETSendDiagnosticInterruptActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
+    /**
+     * The ID of the instance.
+     */
     instanceId: string;
-    version: GetSendDiagnosticInterruptVersionEnum;
-}
-export declare class GetSendDiagnosticInterruptHeaders extends SpeakeasyBase {
+    version: GETSendDiagnosticInterruptVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,11 +25,8 @@ export declare class GetSendDiagnosticInterruptHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetSendDiagnosticInterruptRequest extends SpeakeasyBase {
-    queryParams: GetSendDiagnosticInterruptQueryParams;
-    headers: GetSendDiagnosticInterruptHeaders;
-}
-export declare class GetSendDiagnosticInterruptResponse extends SpeakeasyBase {
+export declare class GETSendDiagnosticInterruptResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

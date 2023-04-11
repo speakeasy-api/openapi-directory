@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetCompleteMigrationActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETCompleteMigrationActionEnum {
     CompleteMigration = "CompleteMigration"
 }
-export declare enum GetCompleteMigrationVersionEnum {
+export declare enum GETCompleteMigrationVersionEnum {
     TwoThousandAndFifteen0202 = "2015-02-02"
 }
-export declare class GetCompleteMigrationQueryParams extends SpeakeasyBase {
-    action: GetCompleteMigrationActionEnum;
+export declare class GETCompleteMigrationRequest extends SpeakeasyBase {
+    action: GETCompleteMigrationActionEnum;
+    /**
+     * Forces the migration to stop without ensuring that data is in sync. It is recommended to use this option only to abort the migration and not recommended when application wants to continue migration to ElastiCache.
+     */
     force?: boolean;
+    /**
+     * The ID of the replication group to which data is being migrated.
+     */
     replicationGroupId: string;
-    version: GetCompleteMigrationVersionEnum;
-}
-export declare class GetCompleteMigrationHeaders extends SpeakeasyBase {
+    version: GETCompleteMigrationVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetCompleteMigrationHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetCompleteMigrationRequest extends SpeakeasyBase {
-    queryParams: GetCompleteMigrationQueryParams;
-    headers: GetCompleteMigrationHeaders;
-}
-export declare class GetCompleteMigrationResponse extends SpeakeasyBase {
+export declare class GETCompleteMigrationResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

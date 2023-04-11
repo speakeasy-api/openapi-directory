@@ -1,10 +1,25 @@
-import { AxiosInstance } from "axios";
 import { Osdb } from "./osdb";
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://osdb.openlinksw.com/osdb"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * An OpenAPI description of the OpenLink Smart Data Bot REST API v1
+ */
 export declare class SDK {
     osdb: Osdb;
     _defaultClient: AxiosInstance;
@@ -13,5 +28,6 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
 }

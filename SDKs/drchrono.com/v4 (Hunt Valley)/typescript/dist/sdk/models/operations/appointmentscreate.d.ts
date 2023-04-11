@@ -1,6 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AppointmentsCreateQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class AppointmentsCreateSecurity extends SpeakeasyBase {
+    drchronoOauth2: string;
+}
+export declare class AppointmentsCreateRequest extends SpeakeasyBase {
     date?: string;
     dateRange?: string;
     doctor?: number;
@@ -9,15 +13,12 @@ export declare class AppointmentsCreateQueryParams extends SpeakeasyBase {
     since?: string;
     status?: string;
 }
-export declare class AppointmentsCreateSecurity extends SpeakeasyBase {
-    drchronoOauth2: shared.SchemeDrchronoOauth2;
-}
-export declare class AppointmentsCreateRequest extends SpeakeasyBase {
-    queryParams: AppointmentsCreateQueryParams;
-    security: AppointmentsCreateSecurity;
-}
 export declare class AppointmentsCreateResponse extends SpeakeasyBase {
+    /**
+     * Created
+     */
     appointment?: shared.Appointment;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

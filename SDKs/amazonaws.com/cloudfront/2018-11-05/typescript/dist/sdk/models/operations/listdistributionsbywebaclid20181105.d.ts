@@ -1,12 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ListDistributionsByWebAclId20181105PathParams extends SpeakeasyBase {
-    webACLId: string;
-}
-export declare class ListDistributionsByWebAclId20181105QueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListDistributionsByWebACLId20181105Request extends SpeakeasyBase {
+    /**
+     * Use <code>Marker</code> and <code>MaxItems</code> to control pagination of results. If you have more than <code>MaxItems</code> distributions that satisfy the request, the response includes a <code>NextMarker</code> element. To get the next page of results, submit another request. For the value of <code>Marker</code>, specify the value of <code>NextMarker</code> from the last response. (For the first request, omit <code>Marker</code>.)
+     */
     marker?: string;
+    /**
+     * The maximum number of distributions that you want CloudFront to return in the response body. The maximum and default values are both 100.
+     */
     maxItems?: string;
-}
-export declare class ListDistributionsByWebAclId20181105Headers extends SpeakeasyBase {
+    /**
+     * The ID of the AWS WAF web ACL that you want to list the associated distributions. If you specify "null" for the ID, the request returns a list of the distributions that aren't associated with a web ACL.
+     */
+    webACLId: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -15,13 +21,9 @@ export declare class ListDistributionsByWebAclId20181105Headers extends Speakeas
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class ListDistributionsByWebAclId20181105Request extends SpeakeasyBase {
-    pathParams: ListDistributionsByWebAclId20181105PathParams;
-    queryParams: ListDistributionsByWebAclId20181105QueryParams;
-    headers: ListDistributionsByWebAclId20181105Headers;
-}
-export declare class ListDistributionsByWebAclId20181105Response extends SpeakeasyBase {
+export declare class ListDistributionsByWebACLId20181105Response extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

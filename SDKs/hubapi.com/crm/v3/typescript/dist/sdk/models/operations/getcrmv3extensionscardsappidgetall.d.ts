@@ -1,18 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetCrmV3ExtensionsCardsAppIdGetAllPathParams extends SpeakeasyBase {
-    appId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetCrmV3ExtensionsCardsAppIdGetAllSecurity extends SpeakeasyBase {
-    developerHapikey: shared.SchemeDeveloperHapikey;
+    developerHapikey: string;
 }
 export declare class GetCrmV3ExtensionsCardsAppIdGetAllRequest extends SpeakeasyBase {
-    pathParams: GetCrmV3ExtensionsCardsAppIdGetAllPathParams;
-    security: GetCrmV3ExtensionsCardsAppIdGetAllSecurity;
+    /**
+     * The ID of the target app.
+     */
+    appId: number;
 }
 export declare class GetCrmV3ExtensionsCardsAppIdGetAllResponse extends SpeakeasyBase {
     body?: Uint8Array;
+    /**
+     * successful operation
+     */
     cardListResponse?: shared.CardListResponse;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

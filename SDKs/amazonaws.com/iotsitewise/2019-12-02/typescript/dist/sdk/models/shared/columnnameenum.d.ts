@@ -1,0 +1,10 @@
+export declare enum ColumnNameEnum {
+    Alias = "ALIAS",
+    AssetId = "ASSET_ID",
+    PropertyId = "PROPERTY_ID",
+    DataType = "DATA_TYPE",
+    TimestampSeconds = "TIMESTAMP_SECONDS",
+    TimestampNanoOffset = "TIMESTAMP_NANO_OFFSET",
+    Quality = "QUALITY",
+    Value = "VALUE"
+}

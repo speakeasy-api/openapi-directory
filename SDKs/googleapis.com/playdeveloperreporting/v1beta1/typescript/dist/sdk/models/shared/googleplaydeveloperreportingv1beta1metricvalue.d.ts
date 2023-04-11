@@ -1,9 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { GooglePlayDeveloperReportingV1beta1DecimalConfidenceInterval } from "./googleplaydeveloperreportingv1beta1decimalconfidenceinterval";
 import { GoogleTypeDecimal } from "./googletypedecimal";
 /**
  * Represents the value of a metric.
-**/
+ */
 export declare class GooglePlayDeveloperReportingV1beta1MetricValue extends SpeakeasyBase {
+    /**
+     * A representation of a decimal value, such as 2.5. Clients may convert values into language-native decimal formats, such as Java's BigDecimal or Python's decimal.Decimal. [BigDecimal]: https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/math/BigDecimal.html [decimal.Decimal]: https://docs.python.org/3/library/decimal.html
+     */
     decimalValue?: GoogleTypeDecimal;
+    /**
+     * Represents the confidence interval of a metric.
+     */
+    decimalValueConfidenceInterval?: GooglePlayDeveloperReportingV1beta1DecimalConfidenceInterval;
+    /**
+     * Name of the metric.
+     */
     metric?: string;
 }

@@ -1,34 +1,49 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AddNotificationChannelRequest, AddNotificationChannelResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  AddNotificationChannelRequest,
+  AddNotificationChannelResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  InsightSeverityEnum,
+  NotificationMessageTypeEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: AddNotificationChannelRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
+});
+
+const req: AddNotificationChannelRequest = {
+  requestBody: {
     config: {
+      filters: {
+        messageTypes: [
+          NotificationMessageTypeEnum.NewAssociation,
+          NotificationMessageTypeEnum.SeverityUpgraded,
+          NotificationMessageTypeEnum.NewRecommendation,
+        ],
+        severities: [
+          InsightSeverityEnum.High,
+          InsightSeverityEnum.Medium,
+          InsightSeverityEnum.High,
+        ],
+      },
       sns: {
-        topicArn: "voluptas",
+        topicArn: "vel",
       },
     },
   },
+  xAmzAlgorithm: "error",
+  xAmzContentSha256: "deserunt",
+  xAmzCredential: "suscipit",
+  xAmzDate: "iure",
+  xAmzSecurityToken: "magnam",
+  xAmzSignature: "debitis",
+  xAmzSignedHeaders: "ipsa",
 };
 
 sdk.addNotificationChannel(req).then((res: AddNotificationChannelResponse | AxiosError) => {

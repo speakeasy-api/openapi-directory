@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetInterfacePathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetInterfaceRequest extends SpeakeasyBase {
-    pathParams: GetInterfacePathParams;
+    /**
+     * Agent to return the primary interface
+     */
+    agentNum: number;
 }
 export declare class GetInterfaceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     getInterface200ApplicationJSONString?: string;
 }

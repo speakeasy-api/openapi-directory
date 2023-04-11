@@ -1,28 +1,30 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateAccountRequest, CreateAccountResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CreateAccountRequest,
+  CreateAccountResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AccountTypeEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    bearer: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    bearer: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: CreateAccountRequest = {
-  pathParams: {
-    budgetId: "sit",
-  },
-  request: {
+  postAccountWrapper: {
     account: {
-      balance: 2259404117704393152,
-      name: "culpa",
-      type: "lineOfCredit",
+      balance: 548814,
+      name: "provident",
+      type: AccountTypeEnum.StudentLoan,
     },
   },
+  budgetId: "quibusdam",
 };
 
 sdk.accounts.createAccount(req).then((res: CreateAccountResponse | AxiosError) => {

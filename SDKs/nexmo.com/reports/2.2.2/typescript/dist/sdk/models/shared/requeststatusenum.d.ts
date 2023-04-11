@@ -1,3 +1,6 @@
+/**
+ * Status of the request.
+ */
 export declare enum RequestStatusEnum {
     Pending = "PENDING",
     Processing = "PROCESSING",

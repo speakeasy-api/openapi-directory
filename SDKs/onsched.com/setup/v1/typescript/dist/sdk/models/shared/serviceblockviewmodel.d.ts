@@ -1,17 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { RepeatViewModel } from "./repeatviewmodel";
+/**
+ * Success
+ */
 export declare class ServiceBlockViewModel extends SpeakeasyBase {
     deletedStatus?: boolean;
     deletedTime?: string;
-    endDate?: Date;
+    endDate?: string;
     endTime?: number;
     id?: string;
     locationId?: string;
-    objectName?: string;
+    object?: string;
     reason?: string;
     repeat?: RepeatViewModel;
     repeats?: boolean;
     serviceId?: string;
-    startDate?: Date;
+    startDate?: string;
     startTime?: number;
 }

@@ -3,6 +3,9 @@ import { DetailTypeEnum } from "./detailtypeenum";
 import { EventTypeSummary } from "./eventtypesummary";
 import { NotificationRuleStatusEnum } from "./notificationrulestatusenum";
 import { TargetSummary } from "./targetsummary";
+/**
+ * Success
+ */
 export declare class DescribeNotificationRuleResult extends SpeakeasyBase {
     arn: string;
     createdBy?: string;

@@ -1,18 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeEventSubscriptionsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeEventSubscriptionsActionEnum {
     DescribeEventSubscriptions = "DescribeEventSubscriptions"
 }
-export declare enum GetDescribeEventSubscriptionsVersionEnum {
+export declare enum GETDescribeEventSubscriptionsVersionEnum {
     TwoThousandAndThirteen0110 = "2013-01-10"
 }
-export declare class GetDescribeEventSubscriptionsQueryParams extends SpeakeasyBase {
-    action: GetDescribeEventSubscriptionsActionEnum;
+export declare class GETDescribeEventSubscriptionsRequest extends SpeakeasyBase {
+    action: GETDescribeEventSubscriptionsActionEnum;
     marker?: string;
     maxRecords?: number;
     subscriptionName?: string;
-    version: GetDescribeEventSubscriptionsVersionEnum;
-}
-export declare class GetDescribeEventSubscriptionsHeaders extends SpeakeasyBase {
+    version: GETDescribeEventSubscriptionsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +20,9 @@ export declare class GetDescribeEventSubscriptionsHeaders extends SpeakeasyBase 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeEventSubscriptionsRequest extends SpeakeasyBase {
-    queryParams: GetDescribeEventSubscriptionsQueryParams;
-    headers: GetDescribeEventSubscriptionsHeaders;
-}
-export declare class GetDescribeEventSubscriptionsResponse extends SpeakeasyBase {
+export declare class GETDescribeEventSubscriptionsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -4,9 +4,12 @@ export declare class ContentSubmoduleLinks extends SpeakeasyBase {
     html: string;
     self: string;
 }
+export declare enum ContentSubmoduleTypeEnum {
+    Submodule = "submodule"
+}
 /**
- * An object describing a symlink
-**/
+ * An object describing a submodule
+ */
 export declare class ContentSubmodule extends SpeakeasyBase {
     links: ContentSubmoduleLinks;
     downloadUrl: string;
@@ -17,6 +20,6 @@ export declare class ContentSubmodule extends SpeakeasyBase {
     sha: string;
     size: number;
     submoduleGitUrl: string;
-    type: string;
+    type: ContentSubmoduleTypeEnum;
     url: string;
 }

@@ -6,7 +6,7 @@ import { ExecutionStatusEnum } from "./executionstatusenum";
 import { TestTypeEnum } from "./testtypeenum";
 /**
  * Represents a collection of one or more tests.
-**/
+ */
 export declare class Suite extends SpeakeasyBase {
     arn?: string;
     counters?: Counters;

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostAssociateInstanceEventWindowActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTAssociateInstanceEventWindowActionEnum {
     AssociateInstanceEventWindow = "AssociateInstanceEventWindow"
 }
-export declare enum PostAssociateInstanceEventWindowVersionEnum {
+export declare enum POSTAssociateInstanceEventWindowVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostAssociateInstanceEventWindowQueryParams extends SpeakeasyBase {
-    action: PostAssociateInstanceEventWindowActionEnum;
-    version: PostAssociateInstanceEventWindowVersionEnum;
-}
-export declare class PostAssociateInstanceEventWindowHeaders extends SpeakeasyBase {
+export declare class POSTAssociateInstanceEventWindowRequest extends SpeakeasyBase {
+    action: POSTAssociateInstanceEventWindowActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTAssociateInstanceEventWindowVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostAssociateInstanceEventWindowHeaders extends SpeakeasyBa
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostAssociateInstanceEventWindowRequest extends SpeakeasyBase {
-    queryParams: PostAssociateInstanceEventWindowQueryParams;
-    headers: PostAssociateInstanceEventWindowHeaders;
-    request?: Uint8Array;
-}
-export declare class PostAssociateInstanceEventWindowResponse extends SpeakeasyBase {
+export declare class POSTAssociateInstanceEventWindowResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

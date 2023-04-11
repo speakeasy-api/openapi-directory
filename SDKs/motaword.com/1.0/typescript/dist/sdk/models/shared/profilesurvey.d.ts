@@ -1,0 +1,36 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+export declare class ProfileSurvey extends SpeakeasyBase {
+    currentServices?: string;
+    dailyProofreadingCapacity?: string;
+    dailyTranslationCapacity?: string;
+    dtpSoftware?: string;
+    experience?: string;
+    isCertifiedTranslator?: string;
+    isSwornTranslator?: string;
+    memoq?: string;
+    memsource?: string;
+    omegat?: string;
+    proofreaderExperience?: string;
+    providesCreativeWritingService?: string;
+    providesPosteditService?: string;
+    reference?: string;
+    sdlTrados?: string;
+    skypeId?: string;
+    smartcat?: string;
+    smartling?: string;
+    software?: string;
+    specialization?: string;
+    subtitleEdit?: string;
+    subtitleWorkshop?: string;
+    translatorAssociation?: string;
+    transsuite2000?: string;
+    vendorProfileLsp?: string;
+    wordbee?: string;
+    wordfast?: string;
+    workType?: string;
+    workWith?: string;
+    workingAs?: string;
+    workingTimezone?: string;
+    xbench?: string;
+    xtm?: string;
+}

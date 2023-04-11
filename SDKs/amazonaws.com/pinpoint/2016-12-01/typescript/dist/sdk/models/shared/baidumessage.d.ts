@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { ActionEnum } from "./actionenum";
 /**
  * Specifies the settings for a one-time message that's sent directly to an endpoint through the Baidu (Baidu Cloud Push) channel.
-**/
+ */
 export declare class BaiduMessage extends SpeakeasyBase {
     action?: ActionEnum;
     body?: string;

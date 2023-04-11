@@ -1,24 +1,56 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ProjectSettings } from "./projectsettings";
-import { ProjectSettingsInput } from "./projectsettings";
+import { ProjectSettings, ProjectSettingsInput } from "./projectsettings";
 /**
  * Represents a project.
-**/
-export declare class Project extends SpeakeasyBase {
-    created?: Date;
+ */
+export declare class ProjectInput extends SpeakeasyBase {
+    /**
+     * Gets or sets the description of the project.
+     */
     description: string;
-    drModeEnabled?: boolean;
-    id?: string;
-    lastModified?: Date;
+    /**
+     * Gets or sets the name of the project.
+     */
     name: string;
-    settings: ProjectSettings;
-    thumbnailUri?: string;
+    /**
+     * Represents settings associated with a project.
+     */
+    settings: ProjectSettingsInput;
 }
 /**
  * Represents a project.
-**/
-export declare class ProjectInput extends SpeakeasyBase {
+ */
+export declare class Project extends SpeakeasyBase {
+    /**
+     * Gets the date this project was created.
+     */
+    created?: Date;
+    /**
+     * Gets or sets the description of the project.
+     */
     description: string;
+    /**
+     * Gets if the Disaster Recovery (DR) mode is on, indicating the project is temporarily read-only.
+     */
+    drModeEnabled?: boolean;
+    /**
+     * Gets the project id.
+     */
+    id?: string;
+    /**
+     * Gets the date this project was last modified.
+     */
+    lastModified?: Date;
+    /**
+     * Gets or sets the name of the project.
+     */
     name: string;
-    settings: ProjectSettingsInput;
+    /**
+     * Represents settings associated with a project.
+     */
+    settings: ProjectSettings;
+    /**
+     * Gets the thumbnail url representing the image.
+     */
+    thumbnailUri?: string;
 }

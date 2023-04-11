@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetUsersUserEmailOfferingsPathParams extends SpeakeasyBase {
-    userEmail: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetUsersUserEmailOfferingsRequest extends SpeakeasyBase {
-    pathParams: GetUsersUserEmailOfferingsPathParams;
+    /**
+     * user's email
+     */
+    userEmail: string;
 }
 export declare class GetUsersUserEmailOfferingsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Bad Request
+     */
     error?: shared.ErrorT;
+    /**
+     * user's offerings
+     */
     offeringMetadataResponses?: shared.OfferingMetadataResponse[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetRemoveSourceIdentifierFromSubscriptionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETRemoveSourceIdentifierFromSubscriptionActionEnum {
     RemoveSourceIdentifierFromSubscription = "RemoveSourceIdentifierFromSubscription"
 }
-export declare enum GetRemoveSourceIdentifierFromSubscriptionVersionEnum {
+export declare enum GETRemoveSourceIdentifierFromSubscriptionVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class GetRemoveSourceIdentifierFromSubscriptionQueryParams extends SpeakeasyBase {
-    action: GetRemoveSourceIdentifierFromSubscriptionActionEnum;
+export declare class GETRemoveSourceIdentifierFromSubscriptionRequest extends SpeakeasyBase {
+    action: GETRemoveSourceIdentifierFromSubscriptionActionEnum;
+    /**
+     *  The source identifier to be removed from the subscription, such as the <b>DB instance identifier</b> for a DB instance or the name of a security group.
+     */
     sourceIdentifier: string;
+    /**
+     * The name of the event notification subscription you want to remove a source identifier from.
+     */
     subscriptionName: string;
-    version: GetRemoveSourceIdentifierFromSubscriptionVersionEnum;
-}
-export declare class GetRemoveSourceIdentifierFromSubscriptionHeaders extends SpeakeasyBase {
+    version: GETRemoveSourceIdentifierFromSubscriptionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetRemoveSourceIdentifierFromSubscriptionHeaders extends Sp
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetRemoveSourceIdentifierFromSubscriptionRequest extends SpeakeasyBase {
-    queryParams: GetRemoveSourceIdentifierFromSubscriptionQueryParams;
-    headers: GetRemoveSourceIdentifierFromSubscriptionHeaders;
-}
-export declare class GetRemoveSourceIdentifierFromSubscriptionResponse extends SpeakeasyBase {
+export declare class GETRemoveSourceIdentifierFromSubscriptionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

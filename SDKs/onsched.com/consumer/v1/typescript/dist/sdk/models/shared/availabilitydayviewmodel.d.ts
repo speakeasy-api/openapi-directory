@@ -1,6 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AvailableDayViewModel } from "./availabledayviewmodel";
+/**
+ * Success
+ */
 export declare class AvailabilityDayViewModel extends SpeakeasyBase {
-    objectName?: string;
+    availableDays?: AvailableDayViewModel[];
+    object?: string;
     resourceDescription?: string;
     resourceId?: string;
     resourceName?: string;
@@ -8,4 +13,5 @@ export declare class AvailabilityDayViewModel extends SpeakeasyBase {
     serviceId?: string;
     serviceName?: string;
     tzRequested?: number;
+    url?: string;
 }

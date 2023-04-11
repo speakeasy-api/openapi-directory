@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Accounts {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,19 +9,19 @@ export declare class Accounts {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * adexchangebuyerAccountsGet - Gets one account by ID.
-    **/
-    adexchangebuyerAccountsGet(req: operations.AdexchangebuyerAccountsGetRequest, config?: AxiosRequestConfig): Promise<operations.AdexchangebuyerAccountsGetResponse>;
+     * Gets one account by ID.
+     */
+    adexchangebuyerAccountsGet(req: operations.AdexchangebuyerAccountsGetRequest, security: operations.AdexchangebuyerAccountsGetSecurity, config?: AxiosRequestConfig): Promise<operations.AdexchangebuyerAccountsGetResponse>;
     /**
-     * adexchangebuyerAccountsList - Retrieves the authenticated user's list of accounts.
-    **/
-    adexchangebuyerAccountsList(req: operations.AdexchangebuyerAccountsListRequest, config?: AxiosRequestConfig): Promise<operations.AdexchangebuyerAccountsListResponse>;
+     * Retrieves the authenticated user's list of accounts.
+     */
+    adexchangebuyerAccountsList(req: operations.AdexchangebuyerAccountsListRequest, security: operations.AdexchangebuyerAccountsListSecurity, config?: AxiosRequestConfig): Promise<operations.AdexchangebuyerAccountsListResponse>;
     /**
-     * adexchangebuyerAccountsPatch - Updates an existing account. This method supports patch semantics.
-    **/
-    adexchangebuyerAccountsPatch(req: operations.AdexchangebuyerAccountsPatchRequest, config?: AxiosRequestConfig): Promise<operations.AdexchangebuyerAccountsPatchResponse>;
+     * Updates an existing account. This method supports patch semantics.
+     */
+    adexchangebuyerAccountsPatch(req: operations.AdexchangebuyerAccountsPatchRequest, security: operations.AdexchangebuyerAccountsPatchSecurity, config?: AxiosRequestConfig): Promise<operations.AdexchangebuyerAccountsPatchResponse>;
     /**
-     * adexchangebuyerAccountsUpdate - Updates an existing account.
-    **/
-    adexchangebuyerAccountsUpdate(req: operations.AdexchangebuyerAccountsUpdateRequest, config?: AxiosRequestConfig): Promise<operations.AdexchangebuyerAccountsUpdateResponse>;
+     * Updates an existing account.
+     */
+    adexchangebuyerAccountsUpdate(req: operations.AdexchangebuyerAccountsUpdateRequest, security: operations.AdexchangebuyerAccountsUpdateSecurity, config?: AxiosRequestConfig): Promise<operations.AdexchangebuyerAccountsUpdateResponse>;
 }

@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListDevEndpointsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListDevEndpointsXAmzTargetEnum {
-    AwsGlueListDevEndpoints = "AWSGlue.ListDevEndpoints"
+    AWSGlueListDevEndpoints = "AWSGlue.ListDevEndpoints"
 }
-export declare class ListDevEndpointsHeaders extends SpeakeasyBase {
+export declare class ListDevEndpointsRequest extends SpeakeasyBase {
+    listDevEndpointsRequest: shared.ListDevEndpointsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,17 +23,28 @@ export declare class ListDevEndpointsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListDevEndpointsXAmzTargetEnum;
 }
-export declare class ListDevEndpointsRequest extends SpeakeasyBase {
-    queryParams: ListDevEndpointsQueryParams;
-    headers: ListDevEndpointsHeaders;
-    request: shared.ListDevEndpointsRequest;
-}
 export declare class ListDevEndpointsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * Success
+     */
     listDevEndpointsResponse?: shared.ListDevEndpointsResponse;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

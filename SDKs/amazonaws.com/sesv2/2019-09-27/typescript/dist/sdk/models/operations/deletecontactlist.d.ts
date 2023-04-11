@@ -1,8 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteContactListPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteContactListRequest extends SpeakeasyBase {
+    /**
+     * The name of the contact list.
+     */
     contactListName: string;
-}
-export declare class DeleteContactListHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,16 +13,28 @@ export declare class DeleteContactListHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeleteContactListRequest extends SpeakeasyBase {
-    pathParams: DeleteContactListPathParams;
-    headers: DeleteContactListHeaders;
-}
 export declare class DeleteContactListResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
+    /**
+     * ConcurrentModificationException
+     */
     concurrentModificationException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteContactListResponse?: Record<string, any>;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

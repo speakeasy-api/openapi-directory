@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeDomainEndpointOptionsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeDomainEndpointOptionsActionEnum {
     DescribeDomainEndpointOptions = "DescribeDomainEndpointOptions"
 }
-export declare enum PostDescribeDomainEndpointOptionsVersionEnum {
+export declare enum POSTDescribeDomainEndpointOptionsVersionEnum {
     TwoThousandAndThirteen0101 = "2013-01-01"
 }
-export declare class PostDescribeDomainEndpointOptionsQueryParams extends SpeakeasyBase {
-    action: PostDescribeDomainEndpointOptionsActionEnum;
-    version: PostDescribeDomainEndpointOptionsVersionEnum;
-}
-export declare class PostDescribeDomainEndpointOptionsHeaders extends SpeakeasyBase {
+export declare class POSTDescribeDomainEndpointOptionsRequest extends SpeakeasyBase {
+    action: POSTDescribeDomainEndpointOptionsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDescribeDomainEndpointOptionsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDescribeDomainEndpointOptionsHeaders extends SpeakeasyB
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeDomainEndpointOptionsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeDomainEndpointOptionsQueryParams;
-    headers: PostDescribeDomainEndpointOptionsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeDomainEndpointOptionsResponse extends SpeakeasyBase {
+export declare class POSTDescribeDomainEndpointOptionsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

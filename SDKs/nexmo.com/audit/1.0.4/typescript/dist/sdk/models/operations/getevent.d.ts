@@ -1,19 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetEventPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetEventSecurity extends SpeakeasyBase {
-    basicAuth: shared.SchemeBasicAuth;
+    password: string;
+    username: string;
 }
 export declare class GetEventRequest extends SpeakeasyBase {
-    pathParams: GetEventPathParams;
-    security: GetEventSecurity;
+    /**
+     * The UUID of the audit event to retrieve
+     */
+    id: string;
 }
 export declare class GetEventResponse extends SpeakeasyBase {
+    /**
+     * OK
+     */
     auditEvent?: shared.AuditEvent;
     contentType: string;
+    /**
+     * Not Found
+     */
     errorNotFound?: shared.ErrorNotFound;
+    /**
+     * Unauthorized
+     */
     errorUnauthorized?: shared.ErrorUnauthorized;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

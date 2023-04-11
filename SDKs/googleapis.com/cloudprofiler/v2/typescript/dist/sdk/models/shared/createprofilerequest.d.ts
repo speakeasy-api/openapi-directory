@@ -12,8 +12,14 @@ export declare enum CreateProfileRequestProfileTypeEnum {
 }
 /**
  * CreateProfileRequest describes a profile resource online creation request. The deployment field must be populated. The profile_type specifies the list of profile types supported by the agent. The creation call will hang until a profile of one of these types needs to be collected.
-**/
+ */
 export declare class CreateProfileRequest extends SpeakeasyBase {
+    /**
+     * Deployment contains the deployment identification information.
+     */
     deployment?: Deployment;
+    /**
+     * Required. One or more profile types that the agent is capable of providing.
+     */
     profileType?: CreateProfileRequestProfileTypeEnum[];
 }

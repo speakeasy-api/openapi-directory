@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteRolePermissionsBoundaryActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteRolePermissionsBoundaryActionEnum {
     DeleteRolePermissionsBoundary = "DeleteRolePermissionsBoundary"
 }
-export declare enum GetDeleteRolePermissionsBoundaryVersionEnum {
+export declare enum GETDeleteRolePermissionsBoundaryVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class GetDeleteRolePermissionsBoundaryQueryParams extends SpeakeasyBase {
-    action: GetDeleteRolePermissionsBoundaryActionEnum;
+export declare class GETDeleteRolePermissionsBoundaryRequest extends SpeakeasyBase {
+    action: GETDeleteRolePermissionsBoundaryActionEnum;
+    /**
+     * The name (friendly name, not ARN) of the IAM role from which you want to remove the permissions boundary.
+     */
     roleName: string;
-    version: GetDeleteRolePermissionsBoundaryVersionEnum;
-}
-export declare class GetDeleteRolePermissionsBoundaryHeaders extends SpeakeasyBase {
+    version: GETDeleteRolePermissionsBoundaryVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDeleteRolePermissionsBoundaryHeaders extends SpeakeasyBa
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteRolePermissionsBoundaryRequest extends SpeakeasyBase {
-    queryParams: GetDeleteRolePermissionsBoundaryQueryParams;
-    headers: GetDeleteRolePermissionsBoundaryHeaders;
-}
-export declare class GetDeleteRolePermissionsBoundaryResponse extends SpeakeasyBase {
+export declare class GETDeleteRolePermissionsBoundaryResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

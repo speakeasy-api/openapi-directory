@@ -1,6 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PutItemsHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class PutItemsRequestBody extends SpeakeasyBase {
+    /**
+     * The Amazon Resource Name (ARN) of the Items dataset you are adding the item or items to.
+     */
+    datasetArn: string;
+    /**
+     * A list of item data.
+     */
+    items: shared.Item[];
+}
+export declare class PutItemsRequest extends SpeakeasyBase {
+    requestBody: PutItemsRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -9,18 +21,20 @@ export declare class PutItemsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PutItemsRequestBody extends SpeakeasyBase {
-    datasetArn: string;
-    items: shared.Item[];
-}
-export declare class PutItemsRequest extends SpeakeasyBase {
-    headers: PutItemsHeaders;
-    request: PutItemsRequestBody;
-}
 export declare class PutItemsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * ResourceInUseException
+     */
     resourceInUseException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

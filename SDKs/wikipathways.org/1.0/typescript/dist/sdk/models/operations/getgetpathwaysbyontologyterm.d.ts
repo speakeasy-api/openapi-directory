@@ -1,4 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
 export declare enum GetGetPathwaysByOntologyTermFormatEnum {
     Json = "json",
     Xml = "xml",
@@ -7,14 +8,15 @@ export declare enum GetGetPathwaysByOntologyTermFormatEnum {
     Jpg = "jpg",
     Pdf = "pdf"
 }
-export declare class GetGetPathwaysByOntologyTermQueryParams extends SpeakeasyBase {
-    format?: GetGetPathwaysByOntologyTermFormatEnum;
-    term: string;
-}
 export declare class GetGetPathwaysByOntologyTermRequest extends SpeakeasyBase {
-    queryParams: GetGetPathwaysByOntologyTermQueryParams;
+    format?: GetGetPathwaysByOntologyTermFormatEnum;
+    /**
+     * The Ontology term
+     */
+    term: string;
 }
 export declare class GetGetPathwaysByOntologyTermResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

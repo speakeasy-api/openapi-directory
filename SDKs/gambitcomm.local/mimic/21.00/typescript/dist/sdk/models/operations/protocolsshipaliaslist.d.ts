@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ProtocolSshIpaliasListPathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolSshIpaliasListRequest extends SpeakeasyBase {
-    pathParams: ProtocolSshIpaliasListPathParams;
+    /**
+     * Agent to manipulate SSH IP alias
+     */
+    agentNum: number;
 }
 export declare class ProtocolSshIpaliasListResponse extends SpeakeasyBase {
     contentType: string;
-    ipAliases?: shared.IpAlias[];
+    /**
+     * successful operation
+     */
+    ipAliases?: shared.IPAlias[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

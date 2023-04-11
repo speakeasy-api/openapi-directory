@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostSetIdentityNotificationTopicActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTSetIdentityNotificationTopicActionEnum {
     SetIdentityNotificationTopic = "SetIdentityNotificationTopic"
 }
-export declare enum PostSetIdentityNotificationTopicVersionEnum {
+export declare enum POSTSetIdentityNotificationTopicVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostSetIdentityNotificationTopicQueryParams extends SpeakeasyBase {
-    action: PostSetIdentityNotificationTopicActionEnum;
-    version: PostSetIdentityNotificationTopicVersionEnum;
-}
-export declare class PostSetIdentityNotificationTopicHeaders extends SpeakeasyBase {
+export declare class POSTSetIdentityNotificationTopicRequest extends SpeakeasyBase {
+    action: POSTSetIdentityNotificationTopicActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTSetIdentityNotificationTopicVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostSetIdentityNotificationTopicHeaders extends SpeakeasyBa
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostSetIdentityNotificationTopicRequest extends SpeakeasyBase {
-    queryParams: PostSetIdentityNotificationTopicQueryParams;
-    headers: PostSetIdentityNotificationTopicHeaders;
-    request?: Uint8Array;
-}
-export declare class PostSetIdentityNotificationTopicResponse extends SpeakeasyBase {
+export declare class POSTSetIdentityNotificationTopicResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

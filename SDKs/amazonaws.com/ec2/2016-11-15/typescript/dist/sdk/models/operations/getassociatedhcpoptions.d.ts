@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetAssociateDhcpOptionsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETAssociateDhcpOptionsActionEnum {
     AssociateDhcpOptions = "AssociateDhcpOptions"
 }
-export declare enum GetAssociateDhcpOptionsVersionEnum {
+export declare enum GETAssociateDhcpOptionsVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetAssociateDhcpOptionsQueryParams extends SpeakeasyBase {
-    action: GetAssociateDhcpOptionsActionEnum;
+export declare class GETAssociateDhcpOptionsRequest extends SpeakeasyBase {
+    action: GETAssociateDhcpOptionsActionEnum;
+    /**
+     * The ID of the DHCP options set, or <code>default</code> to associate no DHCP options with the VPC.
+     */
     dhcpOptionsId: string;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
-    version: GetAssociateDhcpOptionsVersionEnum;
+    version: GETAssociateDhcpOptionsVersionEnum;
+    /**
+     * The ID of the VPC.
+     */
     vpcId: string;
-}
-export declare class GetAssociateDhcpOptionsHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,11 +29,8 @@ export declare class GetAssociateDhcpOptionsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetAssociateDhcpOptionsRequest extends SpeakeasyBase {
-    queryParams: GetAssociateDhcpOptionsQueryParams;
-    headers: GetAssociateDhcpOptionsHeaders;
-}
-export declare class GetAssociateDhcpOptionsResponse extends SpeakeasyBase {
+export declare class GETAssociateDhcpOptionsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

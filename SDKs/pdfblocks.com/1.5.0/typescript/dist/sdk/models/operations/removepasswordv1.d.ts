@@ -1,24 +1,38 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
 export declare class RemovePasswordV1RequestBodyFile extends SpeakeasyBase {
     content: Uint8Array;
     file: string;
 }
 export declare class RemovePasswordV1RequestBody extends SpeakeasyBase {
+    /**
+     * The input PDF document
+     */
     file: RemovePasswordV1RequestBodyFile;
+    /**
+     * The password required to open the file.
+     */
     password: string;
 }
-export declare class RemovePasswordV14XxApplicationProblemPlusJson extends SpeakeasyBase {
+/**
+ * Error
+ */
+export declare class RemovePasswordV14XXApplicationProblemPlusJson extends SpeakeasyBase {
     errors?: Record<string, any>;
     status?: number;
     title?: string;
     type?: string;
 }
-export declare class RemovePasswordV1Request extends SpeakeasyBase {
-    request: RemovePasswordV1RequestBody;
-}
 export declare class RemovePasswordV1Response extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The document was processed succesfully.
+     */
     removePasswordV1200ApplicationPdfBinaryString?: Uint8Array;
-    removePasswordV14XXApplicationProblemPlusJsonObject?: RemovePasswordV14XxApplicationProblemPlusJson;
+    /**
+     * Error
+     */
+    removePasswordV14XXApplicationProblemPlusJsonObject?: RemovePasswordV14XXApplicationProblemPlusJson;
 }

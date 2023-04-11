@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostSendMessageBatchActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTSendMessageBatchActionEnum {
     SendMessageBatch = "SendMessageBatch"
 }
-export declare enum PostSendMessageBatchVersionEnum {
+export declare enum POSTSendMessageBatchVersionEnum {
     TwoThousandAndTwelve1105 = "2012-11-05"
 }
-export declare class PostSendMessageBatchQueryParams extends SpeakeasyBase {
-    action: PostSendMessageBatchActionEnum;
-    version: PostSendMessageBatchVersionEnum;
-}
-export declare class PostSendMessageBatchHeaders extends SpeakeasyBase {
+export declare class POSTSendMessageBatchRequest extends SpeakeasyBase {
+    action: POSTSendMessageBatchActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTSendMessageBatchVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostSendMessageBatchHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostSendMessageBatchRequest extends SpeakeasyBase {
-    queryParams: PostSendMessageBatchQueryParams;
-    headers: PostSendMessageBatchHeaders;
-    request?: Uint8Array;
-}
-export declare class PostSendMessageBatchResponse extends SpeakeasyBase {
+export declare class POSTSendMessageBatchResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

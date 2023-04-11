@@ -4,9 +4,12 @@ export declare class ContentSymlinkLinks extends SpeakeasyBase {
     html: string;
     self: string;
 }
+export declare enum ContentSymlinkTypeEnum {
+    Symlink = "symlink"
+}
 /**
  * An object describing a symlink
-**/
+ */
 export declare class ContentSymlink extends SpeakeasyBase {
     links: ContentSymlinkLinks;
     downloadUrl: string;
@@ -17,6 +20,6 @@ export declare class ContentSymlink extends SpeakeasyBase {
     sha: string;
     size: number;
     target: string;
-    type: string;
+    type: ContentSymlinkTypeEnum;
     url: string;
 }

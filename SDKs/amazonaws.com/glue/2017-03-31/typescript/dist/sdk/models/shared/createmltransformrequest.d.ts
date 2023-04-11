@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { GlueTable } from "./gluetable";
-import { TransformParameters } from "./transformparameters";
 import { TransformEncryption } from "./transformencryption";
+import { TransformParameters } from "./transformparameters";
 import { WorkerTypeEnum } from "./workertypeenum";
-export declare class CreateMlTransformRequest extends SpeakeasyBase {
+export declare class CreateMLTransformRequest extends SpeakeasyBase {
     description?: string;
     glueVersion?: string;
     inputRecordTables: GlueTable[];

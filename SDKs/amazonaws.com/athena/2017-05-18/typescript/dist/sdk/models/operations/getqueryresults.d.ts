@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetQueryResultsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum GetQueryResultsXAmzTargetEnum {
     AmazonAthenaGetQueryResults = "AmazonAthena.GetQueryResults"
 }
-export declare class GetQueryResultsHeaders extends SpeakeasyBase {
+export declare class GetQueryResultsRequest extends SpeakeasyBase {
+    getQueryResultsInput: shared.GetQueryResultsInput;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,15 +23,24 @@ export declare class GetQueryResultsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetQueryResultsXAmzTargetEnum;
 }
-export declare class GetQueryResultsRequest extends SpeakeasyBase {
-    queryParams: GetQueryResultsQueryParams;
-    headers: GetQueryResultsHeaders;
-    request: shared.GetQueryResultsInput;
-}
 export declare class GetQueryResultsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getQueryResultsOutput?: shared.GetQueryResultsOutput;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
+    tooManyRequestsException?: any;
 }

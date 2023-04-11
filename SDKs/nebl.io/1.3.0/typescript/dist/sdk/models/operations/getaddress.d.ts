@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetAddressPathParams extends SpeakeasyBase {
-    address: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetAddressRequest extends SpeakeasyBase {
-    pathParams: GetAddressPathParams;
+    /**
+     * Address
+     */
+    address: string;
 }
 export declare class GetAddressResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Object containing address info
+     */
     getAddressResponse?: shared.GetAddressResponse;
 }

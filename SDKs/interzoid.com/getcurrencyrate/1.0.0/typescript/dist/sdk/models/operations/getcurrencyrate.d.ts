@@ -1,9 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetcurrencyrateQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetcurrencyrateRequest extends SpeakeasyBase {
+    /**
+     * Your Interzoid license API key. Register at www.interzoid.com/register
+     */
     license: string;
+    /**
+     * Currency symbol to retrieve current rate for
+     */
     symbol: string;
 }
-export declare class Getcurrencyrate200ApplicationJson extends SpeakeasyBase {
+/**
+ * Currency rate data to one US Dollar
+ */
+export declare class Getcurrencyrate200ApplicationJSON extends SpeakeasyBase {
     code?: string;
     country?: string;
     credits?: string;
@@ -11,11 +21,12 @@ export declare class Getcurrencyrate200ApplicationJson extends SpeakeasyBase {
     rate?: string;
     symbol?: string;
 }
-export declare class GetcurrencyrateRequest extends SpeakeasyBase {
-    queryParams: GetcurrencyrateQueryParams;
-}
 export declare class GetcurrencyrateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getcurrencyrate200ApplicationJSONObject?: Getcurrencyrate200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Currency rate data to one US Dollar
+     */
+    getcurrencyrate200ApplicationJSONObject?: Getcurrencyrate200ApplicationJSON;
 }

@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class DisassociateTrunkInterfaceResult extends SpeakeasyBase {
-    clientToken?: Record<string, any>;
-    return?: Record<string, any>;
+    clientToken?: string;
+    return?: boolean;
 }

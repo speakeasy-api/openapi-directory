@@ -1,22 +1,48 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetTargetsTargetIdKeysIdPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetTargetsTargetIdKeysIdRequest extends SpeakeasyBase {
+    /**
+     * Object Id
+     */
     id: string;
+    /**
+     * Target id
+     */
     targetId: string;
 }
-export declare class GetTargetsTargetIdKeysId403ApplicationJson extends SpeakeasyBase {
+/**
+ * Not found
+ */
+export declare class GetTargetsTargetIdKeysId404ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Not found.
+     */
     detail?: string;
 }
-export declare class GetTargetsTargetIdKeysId404ApplicationJson extends SpeakeasyBase {
+/**
+ * Not allowed to perform operation
+ */
+export declare class GetTargetsTargetIdKeysId403ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error message.
+     */
     detail?: string;
-}
-export declare class GetTargetsTargetIdKeysIdRequest extends SpeakeasyBase {
-    pathParams: GetTargetsTargetIdKeysIdPathParams;
 }
 export declare class GetTargetsTargetIdKeysIdResponse extends SpeakeasyBase {
-    apiKey?: shared.ApiKey;
+    /**
+     * API Key object
+     */
+    apiKey?: shared.APIKey;
     contentType: string;
     statusCode: number;
-    getTargetsTargetIdKeysId403ApplicationJSONObject?: GetTargetsTargetIdKeysId403ApplicationJson;
-    getTargetsTargetIdKeysId404ApplicationJSONObject?: GetTargetsTargetIdKeysId404ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Not allowed to perform operation
+     */
+    getTargetsTargetIdKeysId403ApplicationJSONObject?: GetTargetsTargetIdKeysId403ApplicationJSON;
+    /**
+     * Not found
+     */
+    getTargetsTargetIdKeysId404ApplicationJSONObject?: GetTargetsTargetIdKeysId404ApplicationJSON;
 }

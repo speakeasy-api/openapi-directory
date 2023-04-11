@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum ReportTaskRunnerHeartbeatXAmzTargetEnum {
     DataPipelineReportTaskRunnerHeartbeat = "DataPipeline.ReportTaskRunnerHeartbeat"
 }
-export declare class ReportTaskRunnerHeartbeatHeaders extends SpeakeasyBase {
+export declare class ReportTaskRunnerHeartbeatRequest extends SpeakeasyBase {
+    reportTaskRunnerHeartbeatInput: shared.ReportTaskRunnerHeartbeatInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class ReportTaskRunnerHeartbeatHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ReportTaskRunnerHeartbeatXAmzTargetEnum;
 }
-export declare class ReportTaskRunnerHeartbeatRequest extends SpeakeasyBase {
-    headers: ReportTaskRunnerHeartbeatHeaders;
-    request: shared.ReportTaskRunnerHeartbeatInput;
-}
 export declare class ReportTaskRunnerHeartbeatResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServiceError
+     */
     internalServiceError?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * Success
+     */
     reportTaskRunnerHeartbeatOutput?: shared.ReportTaskRunnerHeartbeatOutput;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

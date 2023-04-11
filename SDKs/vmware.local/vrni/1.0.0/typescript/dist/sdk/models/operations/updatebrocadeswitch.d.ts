@@ -1,19 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdateBrocadeSwitchPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UpdateBrocadeSwitchSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
+    apiKeyAuth: string;
 }
 export declare class UpdateBrocadeSwitchRequest extends SpeakeasyBase {
-    pathParams: UpdateBrocadeSwitchPathParams;
-    request?: shared.SwitchDataSource;
-    security: UpdateBrocadeSwitchSecurity;
+    switchDataSource?: shared.SwitchDataSource;
+    /**
+     * entity id
+     */
+    id: string;
 }
 export declare class UpdateBrocadeSwitchResponse extends SpeakeasyBase {
+    /**
+     * Bad Request
+     */
     apiError?: shared.ApiError;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
     switchDataSource?: shared.SwitchDataSource;
 }

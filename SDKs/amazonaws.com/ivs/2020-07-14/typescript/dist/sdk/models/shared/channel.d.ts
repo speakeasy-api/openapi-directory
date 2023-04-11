@@ -3,7 +3,7 @@ import { ChannelLatencyModeEnum } from "./channellatencymodeenum";
 import { ChannelTypeEnum } from "./channeltypeenum";
 /**
  * Object specifying a channel.
-**/
+ */
 export declare class Channel extends SpeakeasyBase {
     arn?: string;
     authorized?: boolean;

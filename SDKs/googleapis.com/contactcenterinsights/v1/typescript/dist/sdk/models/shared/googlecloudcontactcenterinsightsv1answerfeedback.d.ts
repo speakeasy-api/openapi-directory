@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The correctness level of an answer.
+ */
 export declare enum GoogleCloudContactcenterinsightsV1AnswerFeedbackCorrectnessLevelEnum {
     CorrectnessLevelUnspecified = "CORRECTNESS_LEVEL_UNSPECIFIED",
     NotCorrect = "NOT_CORRECT",
@@ -7,9 +10,18 @@ export declare enum GoogleCloudContactcenterinsightsV1AnswerFeedbackCorrectnessL
 }
 /**
  * The feedback that the customer has about a certain answer in the conversation.
-**/
+ */
 export declare class GoogleCloudContactcenterinsightsV1AnswerFeedback extends SpeakeasyBase {
+    /**
+     * Indicates whether an answer or item was clicked by the human agent.
+     */
     clicked?: boolean;
+    /**
+     * The correctness level of an answer.
+     */
     correctnessLevel?: GoogleCloudContactcenterinsightsV1AnswerFeedbackCorrectnessLevelEnum;
+    /**
+     * Indicates whether an answer or item was displayed to the human agent in the agent desktop UI.
+     */
     displayed?: boolean;
 }

@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteTokenPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteTokenRequest extends SpeakeasyBase {
-    pathParams: DeleteTokenPathParams;
+    /**
+     * The token id that needs to be deleted
+     */
+    id: string;
 }
 export declare class DeleteTokenResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

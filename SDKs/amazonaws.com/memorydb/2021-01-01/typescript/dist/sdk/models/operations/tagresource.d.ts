@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum TagResourceXAmzTargetEnum {
-    AmazonMemoryDbTagResource = "AmazonMemoryDB.TagResource"
+    AmazonMemoryDBTagResource = "AmazonMemoryDB.TagResource"
 }
-export declare class TagResourceHeaders extends SpeakeasyBase {
+export declare class TagResourceRequest extends SpeakeasyBase {
+    tagResourceRequest: shared.TagResourceRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,22 +15,52 @@ export declare class TagResourceHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: TagResourceXAmzTargetEnum;
 }
-export declare class TagResourceRequest extends SpeakeasyBase {
-    headers: TagResourceHeaders;
-    request: shared.TagResourceRequest;
-}
 export declare class TagResourceResponse extends SpeakeasyBase {
+    /**
+     * ACLNotFoundFault
+     */
     aclNotFoundFault?: any;
+    /**
+     * ClusterNotFoundFault
+     */
     clusterNotFoundFault?: any;
     contentType: string;
+    /**
+     * InvalidARNFault
+     */
     invalidARNFault?: any;
+    /**
+     * InvalidClusterStateFault
+     */
     invalidClusterStateFault?: any;
+    /**
+     * ParameterGroupNotFoundFault
+     */
     parameterGroupNotFoundFault?: any;
+    /**
+     * ServiceLinkedRoleNotFoundFault
+     */
     serviceLinkedRoleNotFoundFault?: any;
+    /**
+     * SnapshotNotFoundFault
+     */
     snapshotNotFoundFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * SubnetGroupNotFoundFault
+     */
     subnetGroupNotFoundFault?: any;
+    /**
+     * TagQuotaPerResourceExceeded
+     */
     tagQuotaPerResourceExceeded?: any;
+    /**
+     * Success
+     */
     tagResourceResponse?: shared.TagResourceResponse;
+    /**
+     * UserNotFoundFault
+     */
     userNotFoundFault?: any;
 }

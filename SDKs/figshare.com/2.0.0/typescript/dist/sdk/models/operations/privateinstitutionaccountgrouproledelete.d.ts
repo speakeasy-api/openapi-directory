@@ -1,19 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PrivateInstitutionAccountGroupRoleDeletePathParams extends SpeakeasyBase {
-    accountId: number;
-    groupId: number;
-    roleId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class PrivateInstitutionAccountGroupRoleDeleteSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class PrivateInstitutionAccountGroupRoleDeleteRequest extends SpeakeasyBase {
-    pathParams: PrivateInstitutionAccountGroupRoleDeletePathParams;
-    security: PrivateInstitutionAccountGroupRoleDeleteSecurity;
+    /**
+     * Account identifier for which to remove the role
+     */
+    accountId: number;
+    /**
+     * Group identifier for which to remove the role
+     */
+    groupId: number;
+    /**
+     * Role identifier
+     */
+    roleId: number;
 }
 export declare class PrivateInstitutionAccountGroupRoleDeleteResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Forbidden
+     */
     errorMessage?: shared.ErrorMessage;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

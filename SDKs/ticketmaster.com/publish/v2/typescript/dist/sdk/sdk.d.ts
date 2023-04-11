@@ -1,10 +1,25 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare const ServerList: readonly ["https://ticketmaster.com//www.ticketmaster.com/publish/v2"];
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
+export declare const ServerList: readonly ["//www.ticketmaster.com/publish/v2"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * Publish API
+ */
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -12,65 +27,76 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
     /**
-     * patchAttraction - Publish a patch on an attraction
+     * Publish a patch on an attraction
      *
+     * @remarks
      * Since 1.0.0
-    **/
+     */
     patchAttraction(req: operations.PatchAttractionRequest, config?: AxiosRequestConfig): Promise<operations.PatchAttractionResponse>;
     /**
-     * patchEvent - Publish a patch on an event
+     * Publish a patch on an event
      *
+     * @remarks
      * Since 1.0.0
-    **/
+     */
     patchEvent(req: operations.PatchEventRequest, config?: AxiosRequestConfig): Promise<operations.PatchEventResponse>;
     /**
-     * patchVenue - Publish a patch on a venue
+     * Publish a patch on a venue
      *
+     * @remarks
      * Since 1.0.0
-    **/
+     */
     patchVenue(req: operations.PatchVenueRequest, config?: AxiosRequestConfig): Promise<operations.PatchVenueResponse>;
     /**
-     * publishAttraction - Publish an attractions
+     * Publish an attractions
      *
+     * @remarks
      * Since 1.0.0
-    **/
+     */
     publishAttraction(req: operations.PublishAttractionRequest, config?: AxiosRequestConfig): Promise<operations.PublishAttractionResponse>;
     /**
-     * publishAttractionVideos - Publish a video on an attraction
+     * Publish a video on an attraction
      *
+     * @remarks
      * Since 1.0.0
-    **/
+     */
     publishAttractionVideos(req: operations.PublishAttractionVideosRequest, config?: AxiosRequestConfig): Promise<operations.PublishAttractionVideosResponse>;
     /**
-     * publishEntitlements - Publish entitlements on an entity
+     * Publish entitlements on an entity
      *
+     * @remarks
      * Since 2.0.0
-    **/
+     */
     publishEntitlements(req: operations.PublishEntitlementsRequest, config?: AxiosRequestConfig): Promise<operations.PublishEntitlementsResponse>;
     /**
-     * publishEvent - Publish an event
+     * Publish an event
      *
+     * @remarks
      * Since 1.0.0
-    **/
+     */
     publishEvent(req: operations.PublishEventRequest, config?: AxiosRequestConfig): Promise<operations.PublishEventResponse>;
     /**
-     * publishEventVideos - Publish a video on an event
+     * Publish a video on an event
      *
+     * @remarks
      * Since 1.0.0
-    **/
+     */
     publishEventVideos(req: operations.PublishEventVideosRequest, config?: AxiosRequestConfig): Promise<operations.PublishEventVideosResponse>;
     /**
-     * publishExtension - Publish extension on an entity
+     * Publish extension on an entity
      *
+     * @remarks
      * Since 1.0.0
-    **/
+     */
     publishExtension(req: operations.PublishExtensionRequest, config?: AxiosRequestConfig): Promise<operations.PublishExtensionResponse>;
     /**
-     * publishVenue - Publish a venue
+     * Publish a venue
      *
+     * @remarks
      * Since 1.0.0
-    **/
+     */
     publishVenue(req: operations.PublishVenueRequest, config?: AxiosRequestConfig): Promise<operations.PublishVenueResponse>;
 }

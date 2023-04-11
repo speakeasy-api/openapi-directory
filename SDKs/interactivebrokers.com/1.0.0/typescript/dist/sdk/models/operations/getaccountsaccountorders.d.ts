@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetAccountsAccountOrdersPathParams extends SpeakeasyBase {
-    account: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetAccountsAccountOrdersRequest extends SpeakeasyBase {
-    pathParams: GetAccountsAccountOrdersPathParams;
+    /**
+     * Account Number
+     */
+    account: string;
 }
 export declare class GetAccountsAccountOrdersResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Returns a list of orders for the indicated account
+     */
     orderStates?: shared.OrderState[];
 }

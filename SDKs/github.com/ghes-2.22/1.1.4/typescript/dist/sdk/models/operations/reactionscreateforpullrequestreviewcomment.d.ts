@@ -1,10 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReactionsCreateForPullRequestReviewCommentPathParams extends SpeakeasyBase {
-    commentId: number;
-    owner: string;
-    repo: string;
-}
+import { AxiosResponse } from "axios";
+/**
+ * The [reaction type](https://docs.github.com/enterprise-server@2.22/rest/reference/reactions#reaction-types) to add to the pull request review comment.
+ */
 export declare enum ReactionsCreateForPullRequestReviewCommentRequestBodyContentEnum {
     Plus1 = "+1",
     Minus1 = "-1",
@@ -16,20 +15,30 @@ export declare enum ReactionsCreateForPullRequestReviewCommentRequestBodyContent
     Eyes = "eyes"
 }
 export declare class ReactionsCreateForPullRequestReviewCommentRequestBody extends SpeakeasyBase {
+    /**
+     * The [reaction type](https://docs.github.com/enterprise-server@2.22/rest/reference/reactions#reaction-types) to add to the pull request review comment.
+     */
     content: ReactionsCreateForPullRequestReviewCommentRequestBodyContentEnum;
 }
-export declare class ReactionsCreateForPullRequestReviewComment415ApplicationJson extends SpeakeasyBase {
-    documentationUrl: string;
-    message: string;
-}
 export declare class ReactionsCreateForPullRequestReviewCommentRequest extends SpeakeasyBase {
-    pathParams: ReactionsCreateForPullRequestReviewCommentPathParams;
-    request?: ReactionsCreateForPullRequestReviewCommentRequestBody;
+    requestBody: ReactionsCreateForPullRequestReviewCommentRequestBody;
+    /**
+     * comment_id parameter
+     */
+    commentId: number;
+    owner: string;
+    repo: string;
 }
 export declare class ReactionsCreateForPullRequestReviewCommentResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Reaction exists
+     */
     reaction?: shared.Reaction;
-    reactionsCreateForPullRequestReviewComment415ApplicationJSONObject?: ReactionsCreateForPullRequestReviewComment415ApplicationJson;
+    /**
+     * Validation failed
+     */
     validationError?: shared.ValidationError;
 }

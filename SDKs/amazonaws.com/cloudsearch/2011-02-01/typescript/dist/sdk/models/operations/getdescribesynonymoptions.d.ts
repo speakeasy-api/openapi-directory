@@ -1,16 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeSynonymOptionsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeSynonymOptionsActionEnum {
     DescribeSynonymOptions = "DescribeSynonymOptions"
 }
-export declare enum GetDescribeSynonymOptionsVersionEnum {
+export declare enum GETDescribeSynonymOptionsVersionEnum {
     TwoThousandAndEleven0201 = "2011-02-01"
 }
-export declare class GetDescribeSynonymOptionsQueryParams extends SpeakeasyBase {
-    action: GetDescribeSynonymOptionsActionEnum;
+export declare class GETDescribeSynonymOptionsRequest extends SpeakeasyBase {
+    action: GETDescribeSynonymOptionsActionEnum;
     domainName: string;
-    version: GetDescribeSynonymOptionsVersionEnum;
-}
-export declare class GetDescribeSynonymOptionsHeaders extends SpeakeasyBase {
+    version: GETDescribeSynonymOptionsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +18,9 @@ export declare class GetDescribeSynonymOptionsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeSynonymOptionsRequest extends SpeakeasyBase {
-    queryParams: GetDescribeSynonymOptionsQueryParams;
-    headers: GetDescribeSynonymOptionsHeaders;
-}
-export declare class GetDescribeSynonymOptionsResponse extends SpeakeasyBase {
+export declare class GETDescribeSynonymOptionsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

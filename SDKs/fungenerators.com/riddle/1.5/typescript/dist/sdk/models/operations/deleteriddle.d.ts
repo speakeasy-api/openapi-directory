@@ -1,16 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class DeleteRiddleQueryParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteRiddleSecurity extends SpeakeasyBase {
-    xFungeneratorsApiSecret: shared.SchemeXFungeneratorsApiSecret;
+    xFungeneratorsApiSecret: string;
 }
 export declare class DeleteRiddleRequest extends SpeakeasyBase {
-    queryParams: DeleteRiddleQueryParams;
-    security: DeleteRiddleSecurity;
+    /**
+     * Riddle ID
+     */
+    id: string;
 }
 export declare class DeleteRiddleResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

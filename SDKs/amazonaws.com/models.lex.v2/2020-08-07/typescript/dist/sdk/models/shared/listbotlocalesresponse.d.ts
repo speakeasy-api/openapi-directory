@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { BotLocaleSummary } from "./botlocalesummary";
+/**
+ * Success
+ */
 export declare class ListBotLocalesResponse extends SpeakeasyBase {
     botId?: string;
     botLocaleSummaries?: BotLocaleSummary[];

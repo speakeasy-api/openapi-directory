@@ -1,4 +1,4 @@
-export declare enum EbsFindingEnum {
+export declare enum EBSFindingEnum {
     Optimized = "Optimized",
     NotOptimized = "NotOptimized"
 }

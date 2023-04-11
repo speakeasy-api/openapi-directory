@@ -1,11 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CancelBatchPaymentPathParams extends SpeakeasyBase {
-    batchUuid: string;
-}
+import { AxiosResponse } from "axios";
 export declare class CancelBatchPaymentRequest extends SpeakeasyBase {
-    pathParams: CancelBatchPaymentPathParams;
+    batchUuid: string;
 }
 export declare class CancelBatchPaymentResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

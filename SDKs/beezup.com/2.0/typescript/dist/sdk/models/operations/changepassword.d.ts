@@ -1,10 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ChangePasswordRequest extends SpeakeasyBase {
-    request: shared.ChangePasswordRequest;
-}
+import { AxiosResponse } from "axios";
 export declare class ChangePasswordResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     * Old password is invalid or the new password does not respect the password's constraints
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

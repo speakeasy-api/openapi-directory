@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteHsmClientCertificateActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteHsmClientCertificateActionEnum {
     DeleteHsmClientCertificate = "DeleteHsmClientCertificate"
 }
-export declare enum GetDeleteHsmClientCertificateVersionEnum {
+export declare enum GETDeleteHsmClientCertificateVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class GetDeleteHsmClientCertificateQueryParams extends SpeakeasyBase {
-    action: GetDeleteHsmClientCertificateActionEnum;
+export declare class GETDeleteHsmClientCertificateRequest extends SpeakeasyBase {
+    action: GETDeleteHsmClientCertificateActionEnum;
+    /**
+     * The identifier of the HSM client certificate to be deleted.
+     */
     hsmClientCertificateIdentifier: string;
-    version: GetDeleteHsmClientCertificateVersionEnum;
-}
-export declare class GetDeleteHsmClientCertificateHeaders extends SpeakeasyBase {
+    version: GETDeleteHsmClientCertificateVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDeleteHsmClientCertificateHeaders extends SpeakeasyBase 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteHsmClientCertificateRequest extends SpeakeasyBase {
-    queryParams: GetDeleteHsmClientCertificateQueryParams;
-    headers: GetDeleteHsmClientCertificateHeaders;
-}
-export declare class GetDeleteHsmClientCertificateResponse extends SpeakeasyBase {
+export declare class GETDeleteHsmClientCertificateResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

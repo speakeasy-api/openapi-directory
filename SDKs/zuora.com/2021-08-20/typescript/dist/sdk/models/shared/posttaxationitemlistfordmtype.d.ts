@@ -1,4 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PostTaxationItemListForDmType extends SpeakeasyBase {
-    taxationItems?: Record<string, any>[];
+import { POSTTaxationItemForDMType } from "./posttaxationitemfordmtype";
+export declare class POSTTaxationItemListForDMType extends SpeakeasyBase {
+    /**
+     * Container for taxation items.
+     *
+     * @remarks
+     *
+     */
+    taxationItems?: POSTTaxationItemForDMType[];
 }

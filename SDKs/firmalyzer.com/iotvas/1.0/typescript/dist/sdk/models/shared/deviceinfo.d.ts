@@ -7,6 +7,9 @@ export declare class DeviceInfoFirmwareInfo extends SpeakeasyBase {
     sha2?: string;
     version?: string;
 }
+/**
+ * Successful Response
+ */
 export declare class DeviceInfo extends SpeakeasyBase {
     cveList?: Vulnerability[];
     deviceType?: string;

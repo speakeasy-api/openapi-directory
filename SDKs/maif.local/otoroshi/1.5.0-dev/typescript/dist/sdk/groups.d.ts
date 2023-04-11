@@ -1,5 +1,9 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Everything about Otoroshi service groups
+ */
 export declare class Groups {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,39 +13,45 @@ export declare class Groups {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * allServiceGroups - Get all service groups
-     *
      * Get all service groups
-    **/
-    allServiceGroups(req: operations.AllServiceGroupsRequest, config?: AxiosRequestConfig): Promise<operations.AllServiceGroupsResponse>;
-    /**
-     * createGroup - Create a new service group
      *
+     * @remarks
+     * Get all service groups
+     */
+    allServiceGroups(config?: AxiosRequestConfig): Promise<operations.AllServiceGroupsResponse>;
+    /**
      * Create a new service group
-    **/
-    createGroup(req: operations.CreateGroupRequest, config?: AxiosRequestConfig): Promise<operations.CreateGroupResponse>;
-    /**
-     * deleteGroup - Delete a service group
      *
+     * @remarks
+     * Create a new service group
+     */
+    createGroup(req: shared.Group, security: operations.CreateGroupSecurity, config?: AxiosRequestConfig): Promise<operations.CreateGroupResponse>;
+    /**
      * Delete a service group
-    **/
-    deleteGroup(req: operations.DeleteGroupRequest, config?: AxiosRequestConfig): Promise<operations.DeleteGroupResponse>;
-    /**
-     * patchGroup - Update a service group with a diff
      *
+     * @remarks
+     * Delete a service group
+     */
+    deleteGroup(req: operations.DeleteGroupRequest, security: operations.DeleteGroupSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteGroupResponse>;
+    /**
      * Update a service group with a diff
-    **/
-    patchGroup(req: operations.PatchGroupRequest, config?: AxiosRequestConfig): Promise<operations.PatchGroupResponse>;
-    /**
-     * serviceGroup - Get a service group
      *
+     * @remarks
+     * Update a service group with a diff
+     */
+    patchGroup(req: operations.PatchGroupRequest, security: operations.PatchGroupSecurity, config?: AxiosRequestConfig): Promise<operations.PatchGroupResponse>;
+    /**
      * Get a service group
-    **/
-    serviceGroup(req: operations.ServiceGroupRequest, config?: AxiosRequestConfig): Promise<operations.ServiceGroupResponse>;
-    /**
-     * updateGroup - Update a service group
      *
+     * @remarks
+     * Get a service group
+     */
+    serviceGroup(req: operations.ServiceGroupRequest, security: operations.ServiceGroupSecurity, config?: AxiosRequestConfig): Promise<operations.ServiceGroupResponse>;
+    /**
      * Update a service group
-    **/
-    updateGroup(req: operations.UpdateGroupRequest, config?: AxiosRequestConfig): Promise<operations.UpdateGroupResponse>;
+     *
+     * @remarks
+     * Update a service group
+     */
+    updateGroup(req: operations.UpdateGroupRequest, security: operations.UpdateGroupSecurity, config?: AxiosRequestConfig): Promise<operations.UpdateGroupResponse>;
 }

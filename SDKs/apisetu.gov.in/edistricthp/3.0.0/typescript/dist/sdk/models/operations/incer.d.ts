@@ -1,115 +1,170 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class IncerSecurity extends SpeakeasyBase {
+    apiKey: string;
+    clientId: string;
+}
 export declare class IncerRequestBodyCertificateParameters extends SpeakeasyBase {
+    /**
+     * ApplicationNumber
+     */
     udf1: string;
 }
+/**
+ * The format of the certificate in response.
+ */
 export declare enum IncerRequestBodyFormatEnum {
     Pdf = "pdf"
 }
+/**
+ * Request format
+ */
 export declare class IncerRequestBody extends SpeakeasyBase {
     certificateParameters?: IncerRequestBodyCertificateParameters;
-    consentArtifact?: any;
+    consentArtifact?: shared.ConsentArtifactSchema;
+    /**
+     * The format of the certificate in response.
+     */
     format: IncerRequestBodyFormatEnum;
+    /**
+     * A unique transaction id for this request in UUID format. It is used for tracking the request.
+     */
     txnId: string;
 }
-export declare class IncerSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
-    clientId: shared.SchemeClientId;
+export declare enum Incer504ApplicationJSONErrorEnum {
+    GatewayTimeout = "gateway_timeout"
 }
-export declare enum Incer400ApplicationJsonErrorEnum {
+export declare enum Incer504ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
+}
+/**
+ * Gateway timeout
+ */
+export declare class Incer504ApplicationJSON extends SpeakeasyBase {
+    error?: Incer504ApplicationJSONErrorEnum;
+    errorDescription?: Incer504ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Incer503ApplicationJSONErrorEnum {
+    ServiceUnavailable = "service_unavailable"
+}
+export declare enum Incer503ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
+}
+/**
+ * Service unavailable
+ */
+export declare class Incer503ApplicationJSON extends SpeakeasyBase {
+    error?: Incer503ApplicationJSONErrorEnum;
+    errorDescription?: Incer503ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Incer502ApplicationJSONErrorEnum {
+    BadGatewy = "bad_gatewy"
+}
+export declare enum Incer502ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
+}
+/**
+ * Bad gateway
+ */
+export declare class Incer502ApplicationJSON extends SpeakeasyBase {
+    error?: Incer502ApplicationJSONErrorEnum;
+    errorDescription?: Incer502ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Incer500ApplicationJSONErrorEnum {
+    InternalServerError = "internal_server_error"
+}
+export declare enum Incer500ApplicationJSONErrorDescriptionEnum {
+    InternalServerError = "Internal server error"
+}
+/**
+ * Internal server error
+ */
+export declare class Incer500ApplicationJSON extends SpeakeasyBase {
+    error?: Incer500ApplicationJSONErrorEnum;
+    errorDescription?: Incer500ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Incer404ApplicationJSONErrorEnum {
+    RecordNotFound = "record_not_found",
+    UrlNotFound = "url_not_found"
+}
+export declare enum Incer404ApplicationJSONErrorDescriptionEnum {
+    NoRecordFound = "No record found",
+    YourAPIUrlOrPathIsIncorrect = "Your API url or path is incorrect"
+}
+/**
+ * No record found
+ */
+export declare class Incer404ApplicationJSON extends SpeakeasyBase {
+    error?: Incer404ApplicationJSONErrorEnum;
+    errorDescription?: Incer404ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Incer401ApplicationJSONErrorEnum {
+    InvalidAuthentication = "invalid_authentication",
+    InvalidAuthorization = "invalid_authorization"
+}
+export declare enum Incer401ApplicationJSONErrorDescriptionEnum {
+    AuthenticationFailed = "Authentication failed",
+    YouAreNotAuthorizedToUseThisAPI = "You are not authorized to use this API"
+}
+/**
+ * Unauthorized access
+ */
+export declare class Incer401ApplicationJSON extends SpeakeasyBase {
+    error?: Incer401ApplicationJSONErrorEnum;
+    errorDescription?: Incer401ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Incer400ApplicationJSONErrorEnum {
     MissingParameter = "missing_parameter",
     InvalidParameter = "invalid_parameter",
     InvalidFormat = "invalid_format",
     InvalidTxnid = "invalid_txnid",
     InvalidConsentid = "invalid_consentid"
 }
-export declare enum Incer400ApplicationJsonErrorDescriptionEnum {
+export declare enum Incer400ApplicationJSONErrorDescriptionEnum {
     PleaseProvideAllMandatoryParameters = "Please provide all mandatory parameters",
     BadRequest = "Bad request",
     TheFormatParameterIsInvalid = "The format parameter is invalid",
-    TheTxnIdParameterMustBeInUuidFormat = "The txnId parameter must be in UUID format",
-    TheConsentIdParameterMustBeInUuidFormat = "The consentId parameter must be in UUID format"
+    TheTxnIdParameterMustBeInUUIDFormat = "The txnId parameter must be in UUID format",
+    TheConsentIdParameterMustBeInUUIDFormat = "The consentId parameter must be in UUID format"
 }
-export declare class Incer400ApplicationJson extends SpeakeasyBase {
-    error?: Incer400ApplicationJsonErrorEnum;
-    errorDescription?: Incer400ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Incer401ApplicationJsonErrorEnum {
-    InvalidAuthentication = "invalid_authentication",
-    InvalidAuthorization = "invalid_authorization"
-}
-export declare enum Incer401ApplicationJsonErrorDescriptionEnum {
-    AuthenticationFailed = "Authentication failed",
-    YouAreNotAuthorizedToUseThisApi = "You are not authorized to use this API"
-}
-export declare class Incer401ApplicationJson extends SpeakeasyBase {
-    error?: Incer401ApplicationJsonErrorEnum;
-    errorDescription?: Incer401ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Incer404ApplicationJsonErrorEnum {
-    RecordNotFound = "record_not_found",
-    UrlNotFound = "url_not_found"
-}
-export declare enum Incer404ApplicationJsonErrorDescriptionEnum {
-    NoRecordFound = "No record found",
-    YourApiUrlOrPathIsIncorrect = "Your API url or path is incorrect"
-}
-export declare class Incer404ApplicationJson extends SpeakeasyBase {
-    error?: Incer404ApplicationJsonErrorEnum;
-    errorDescription?: Incer404ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Incer500ApplicationJsonErrorEnum {
-    InternalServerError = "internal_server_error"
-}
-export declare enum Incer500ApplicationJsonErrorDescriptionEnum {
-    InternalServerError = "Internal server error"
-}
-export declare class Incer500ApplicationJson extends SpeakeasyBase {
-    error?: Incer500ApplicationJsonErrorEnum;
-    errorDescription?: Incer500ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Incer502ApplicationJsonErrorEnum {
-    BadGatewy = "bad_gatewy"
-}
-export declare enum Incer502ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
-}
-export declare class Incer502ApplicationJson extends SpeakeasyBase {
-    error?: Incer502ApplicationJsonErrorEnum;
-    errorDescription?: Incer502ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Incer503ApplicationJsonErrorEnum {
-    ServiceUnavailable = "service_unavailable"
-}
-export declare enum Incer503ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
-}
-export declare class Incer503ApplicationJson extends SpeakeasyBase {
-    error?: Incer503ApplicationJsonErrorEnum;
-    errorDescription?: Incer503ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Incer504ApplicationJsonErrorEnum {
-    GatewayTimeout = "gateway_timeout"
-}
-export declare enum Incer504ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
-}
-export declare class Incer504ApplicationJson extends SpeakeasyBase {
-    error?: Incer504ApplicationJsonErrorEnum;
-    errorDescription?: Incer504ApplicationJsonErrorDescriptionEnum;
-}
-export declare class IncerRequest extends SpeakeasyBase {
-    request?: IncerRequestBody;
-    security: IncerSecurity;
+/**
+ * Bad request
+ */
+export declare class Incer400ApplicationJSON extends SpeakeasyBase {
+    error?: Incer400ApplicationJSONErrorEnum;
+    errorDescription?: Incer400ApplicationJSONErrorDescriptionEnum;
 }
 export declare class IncerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    incer400ApplicationJSONObject?: Incer400ApplicationJson;
-    incer401ApplicationJSONObject?: Incer401ApplicationJson;
-    incer404ApplicationJSONObject?: Incer404ApplicationJson;
-    incer500ApplicationJSONObject?: Incer500ApplicationJson;
-    incer502ApplicationJSONObject?: Incer502ApplicationJson;
-    incer503ApplicationJSONObject?: Incer503ApplicationJson;
-    incer504ApplicationJSONObject?: Incer504ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad request
+     */
+    incer400ApplicationJSONObject?: Incer400ApplicationJSON;
+    /**
+     * Unauthorized access
+     */
+    incer401ApplicationJSONObject?: Incer401ApplicationJSON;
+    /**
+     * No record found
+     */
+    incer404ApplicationJSONObject?: Incer404ApplicationJSON;
+    /**
+     * Internal server error
+     */
+    incer500ApplicationJSONObject?: Incer500ApplicationJSON;
+    /**
+     * Bad gateway
+     */
+    incer502ApplicationJSONObject?: Incer502ApplicationJSON;
+    /**
+     * Service unavailable
+     */
+    incer503ApplicationJSONObject?: Incer503ApplicationJSON;
+    /**
+     * Gateway timeout
+     */
+    incer504ApplicationJSONObject?: Incer504ApplicationJSON;
 }

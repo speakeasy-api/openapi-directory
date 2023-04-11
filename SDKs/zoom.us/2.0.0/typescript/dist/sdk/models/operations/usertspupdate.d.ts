@@ -1,45 +1,82 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum UserTspUpdateTspIdEnum {
-    One = "1",
-    Two = "2"
-}
-export declare class UserTspUpdatePathParams extends SpeakeasyBase {
-    tspId: UserTspUpdateTspIdEnum;
-    userId: string;
-}
-export declare enum UserTspUpdateTspAccountDialInNumbersTypeEnum {
+import { AxiosResponse } from "axios";
+/**
+ * Dial-in number types:<br>`toll` - Toll number.<br>`tollfree` -Toll free number.<br>`media_link` - Media Link Phone Number. It is used for PSTN integration instead of paid bridge number.
+ */
+export declare enum UserTSPUpdateTSPAccountDialInNumbersTypeEnum {
     Toll = "toll",
     Tollfree = "tollfree",
     MediaLink = "media_link"
 }
-export declare class UserTspUpdateTspAccountDialInNumbers extends SpeakeasyBase {
+export declare class UserTSPUpdateTSPAccountDialInNumbers extends SpeakeasyBase {
+    /**
+     * Country code.
+     */
     code?: string;
+    /**
+     * Country Label, if passed, will display in place of code.
+     */
     countryLabel?: string;
+    /**
+     * Dial-in number: length is less than 16.
+     */
     number?: string;
-    type?: UserTspUpdateTspAccountDialInNumbersTypeEnum;
+    /**
+     * Dial-in number types:<br>`toll` - Toll number.<br>`tollfree` -Toll free number.<br>`media_link` - Media Link Phone Number. It is used for PSTN integration instead of paid bridge number.
+     */
+    type?: UserTSPUpdateTSPAccountDialInNumbersTypeEnum;
 }
-export declare enum UserTspUpdateTspAccountTspBridgeEnum {
+/**
+ * Telephony bridge
+ */
+export declare enum UserTSPUpdateTSPAccountTSPBridgeEnum {
     UsTspTb = "US_TSP_TB",
     EuTspTb = "EU_TSP_TB"
 }
 /**
  * TSP account.
-**/
-export declare class UserTspUpdateTspAccount extends SpeakeasyBase {
+ */
+export declare class UserTSPUpdateTSPAccount extends SpeakeasyBase {
+    /**
+     * Conference code: numeric value, length is less than 16.
+     */
     conferenceCode: string;
-    dialInNumbers?: UserTspUpdateTspAccountDialInNumbers[];
+    /**
+     * List of dial in numbers.
+     */
+    dialInNumbers?: UserTSPUpdateTSPAccountDialInNumbers[];
+    /**
+     * Leader PIN: numeric value, length is less than 16.
+     */
     leaderPin: string;
-    tspBridge?: UserTspUpdateTspAccountTspBridgeEnum;
+    /**
+     * Telephony bridge
+     */
+    tspBridge?: UserTSPUpdateTSPAccountTSPBridgeEnum;
 }
-export declare class UserTspUpdateRequests extends SpeakeasyBase {
-    tspAccount?: UserTspUpdateTspAccount;
-    tspAccount1?: UserTspUpdateTspAccount;
+/**
+ * TSP account ID.
+ */
+export declare enum UserTSPUpdateTSPIDEnum {
+    One = "1",
+    Two = "2"
 }
-export declare class UserTspUpdateRequest extends SpeakeasyBase {
-    pathParams: UserTspUpdatePathParams;
-    request: UserTspUpdateRequests;
+export declare class UserTSPUpdateRequest extends SpeakeasyBase {
+    /**
+     * TSP account.
+     */
+    requestBody: UserTSPUpdateTSPAccount;
+    /**
+     * TSP account ID.
+     */
+    tspId: UserTSPUpdateTSPIDEnum;
+    /**
+     * The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+     */
+    userId: string;
 }
-export declare class UserTspUpdateResponse extends SpeakeasyBase {
+export declare class UserTSPUpdateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

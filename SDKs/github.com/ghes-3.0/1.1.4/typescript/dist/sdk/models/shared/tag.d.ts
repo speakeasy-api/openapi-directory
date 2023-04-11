@@ -5,7 +5,7 @@ export declare class TagCommit extends SpeakeasyBase {
 }
 /**
  * Tag
-**/
+ */
 export declare class Tag extends SpeakeasyBase {
     commit: TagCommit;
     name: string;

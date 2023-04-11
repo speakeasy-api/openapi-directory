@@ -5,10 +5,10 @@ export declare enum EventTypeEnum {
     AssignmentSubmitted = "AssignmentSubmitted",
     AssignmentRejected = "AssignmentRejected",
     AssignmentApproved = "AssignmentApproved",
-    HitCreated = "HITCreated",
-    HitExpired = "HITExpired",
-    HitReviewable = "HITReviewable",
-    HitExtended = "HITExtended",
-    HitDisposed = "HITDisposed",
+    HITCreated = "HITCreated",
+    HITExpired = "HITExpired",
+    HITReviewable = "HITReviewable",
+    HITExtended = "HITExtended",
+    HITDisposed = "HITDisposed",
     Ping = "Ping"
 }

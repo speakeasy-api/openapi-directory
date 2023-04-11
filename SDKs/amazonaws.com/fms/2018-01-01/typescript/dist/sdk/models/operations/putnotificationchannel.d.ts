@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum PutNotificationChannelXAmzTargetEnum {
-    Awsfms20180101PutNotificationChannel = "AWSFMS_20180101.PutNotificationChannel"
+    AWSFMS20180101PutNotificationChannel = "AWSFMS_20180101.PutNotificationChannel"
 }
-export declare class PutNotificationChannelHeaders extends SpeakeasyBase {
+export declare class PutNotificationChannelRequest extends SpeakeasyBase {
+    putNotificationChannelRequest: shared.PutNotificationChannelRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class PutNotificationChannelHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: PutNotificationChannelXAmzTargetEnum;
 }
-export declare class PutNotificationChannelRequest extends SpeakeasyBase {
-    headers: PutNotificationChannelHeaders;
-    request: shared.PutNotificationChannelRequest;
-}
 export declare class PutNotificationChannelResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalErrorException
+     */
     internalErrorException?: any;
+    /**
+     * InvalidOperationException
+     */
     invalidOperationException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

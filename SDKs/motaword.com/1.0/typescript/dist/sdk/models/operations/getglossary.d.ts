@@ -1,15 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetGlossaryPathParams extends SpeakeasyBase {
-    glossaryId: number;
-    projectId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetGlossaryRequest extends SpeakeasyBase {
-    pathParams: GetGlossaryPathParams;
+    /**
+     * Glossary ID
+     */
+    glossaryId: number;
+    /**
+     * Project ID
+     */
+    projectId: number;
 }
 export declare class GetGlossaryResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * GlossaryNotFound
+     */
     error?: shared.ErrorT;
+    /**
+     * Glossary model
+     */
     glossary?: shared.Glossary;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

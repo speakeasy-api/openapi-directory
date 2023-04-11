@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetAddressInfoPathParams extends SpeakeasyBase {
-    address: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetAddressInfoRequest extends SpeakeasyBase {
-    pathParams: GetAddressInfoPathParams;
+    /**
+     * Neblio Address to get information on.
+     */
+    address: string;
 }
 export declare class GetAddressInfoResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Unexpected error
+     */
     error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * An object with an array of UTXOs for this address
+     */
     getAddressInfoResponse?: shared.GetAddressInfoResponse;
 }

@@ -3,7 +3,7 @@ import { TaskRunProperties } from "./taskrunproperties";
 import { TaskStatusTypeEnum } from "./taskstatustypeenum";
 /**
  * The sampling parameters that are associated with the machine learning transform.
-**/
+ */
 export declare class TaskRun extends SpeakeasyBase {
     completedOn?: Date;
     errorString?: string;

@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeClientVpnAuthorizationRulesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeClientVpnAuthorizationRulesActionEnum {
     DescribeClientVpnAuthorizationRules = "DescribeClientVpnAuthorizationRules"
 }
-export declare enum PostDescribeClientVpnAuthorizationRulesVersionEnum {
+export declare enum POSTDescribeClientVpnAuthorizationRulesVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDescribeClientVpnAuthorizationRulesQueryParams extends SpeakeasyBase {
-    action: PostDescribeClientVpnAuthorizationRulesActionEnum;
+export declare class POSTDescribeClientVpnAuthorizationRulesRequest extends SpeakeasyBase {
+    action: POSTDescribeClientVpnAuthorizationRulesActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostDescribeClientVpnAuthorizationRulesVersionEnum;
-}
-export declare class PostDescribeClientVpnAuthorizationRulesHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeClientVpnAuthorizationRulesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeClientVpnAuthorizationRulesHeaders extends Spea
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeClientVpnAuthorizationRulesRequest extends SpeakeasyBase {
-    queryParams: PostDescribeClientVpnAuthorizationRulesQueryParams;
-    headers: PostDescribeClientVpnAuthorizationRulesHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeClientVpnAuthorizationRulesResponse extends SpeakeasyBase {
+export declare class POSTDescribeClientVpnAuthorizationRulesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

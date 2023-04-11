@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { SitemapsReportSitemap } from "./sitemapsreportsitemap";
 import { SitemapsReportOnly } from "./sitemapsreportonly";
+import { SitemapsReportSitemap } from "./sitemapsreportsitemap";
+/**
+ * Successful operation
+ */
 export declare class SitemapsReport extends SpeakeasyBase {
     count: number;
     errors: SitemapsReportSitemap[];

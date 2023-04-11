@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class FilterLogEventsQueryParams extends SpeakeasyBase {
-    limit?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum FilterLogEventsXAmzTargetEnum {
     Logs20140328FilterLogEvents = "Logs_20140328.FilterLogEvents"
 }
-export declare class FilterLogEventsHeaders extends SpeakeasyBase {
+export declare class FilterLogEventsRequest extends SpeakeasyBase {
+    filterLogEventsRequest: shared.FilterLogEventsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,17 +14,33 @@ export declare class FilterLogEventsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: FilterLogEventsXAmzTargetEnum;
-}
-export declare class FilterLogEventsRequest extends SpeakeasyBase {
-    queryParams: FilterLogEventsQueryParams;
-    headers: FilterLogEventsHeaders;
-    request: shared.FilterLogEventsRequest;
+    /**
+     * Pagination limit
+     */
+    limit?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class FilterLogEventsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     filterLogEventsResponse?: shared.FilterLogEventsResponse;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
-    resourceNotFoundException?: any;
+    /**
+     * ServiceUnavailableException
+     */
     serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
 }

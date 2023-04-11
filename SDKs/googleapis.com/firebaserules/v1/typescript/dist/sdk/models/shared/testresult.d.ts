@@ -1,0 +1,42 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { ExpressionReport } from "./expressionreport";
+import { FunctionCall } from "./functioncall";
+import { SourcePosition } from "./sourceposition";
+import { VisitedExpression } from "./visitedexpression";
+/**
+ * State of the test.
+ */
+export declare enum TestResultStateEnum {
+    StateUnspecified = "STATE_UNSPECIFIED",
+    Success = "SUCCESS",
+    Failure = "FAILURE"
+}
+/**
+ * Test result message containing the state of the test as well as a description and source position for test failures.
+ */
+export declare class TestResult extends SpeakeasyBase {
+    /**
+     * Debug messages related to test execution issues encountered during evaluation. Debug messages may be related to too many or too few invocations of function mocks or to runtime errors that occur during evaluation. For example: ```Unable to read variable [name: "resource"]```
+     */
+    debugMessages?: string[];
+    /**
+     * Position in the `Source` content including its line, column number, and an index of the `File` in the `Source` message. Used for debug purposes.
+     */
+    errorPosition?: SourcePosition;
+    /**
+     * The mapping from expression in the ruleset AST to the values they were evaluated to. Partially-nested to mirror AST structure. Note that this field is actually tracking expressions and not permission statements in contrast to the "visited_expressions" field above. Literal expressions are omitted.
+     */
+    expressionReports?: ExpressionReport[];
+    /**
+     * The set of function calls made to service-defined methods. Function calls are included in the order in which they are encountered during evaluation, are provided for both mocked and unmocked functions, and included on the response regardless of the test `state`.
+     */
+    functionCalls?: FunctionCall[];
+    /**
+     * State of the test.
+     */
+    state?: TestResultStateEnum;
+    /**
+     * The set of visited permission expressions for a given test. This returns the positions and evaluation results of all visited permission expressions which were relevant to the test case, e.g. ``` match /path { allow read if: } ``` For a detailed report of the intermediate evaluation states, see the `expression_reports` field
+     */
+    visitedExpressions?: VisitedExpression[];
+}

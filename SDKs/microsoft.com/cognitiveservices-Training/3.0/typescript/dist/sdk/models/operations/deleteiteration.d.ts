@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteIterationPathParams extends SpeakeasyBase {
-    iterationId: string;
-    projectId: string;
-}
-export declare class DeleteIterationHeaders extends SpeakeasyBase {
-    trainingKey: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteIterationRequest extends SpeakeasyBase {
-    pathParams: DeleteIterationPathParams;
-    headers: DeleteIterationHeaders;
+    /**
+     * API key.
+     */
+    trainingKey: string;
+    /**
+     * The iteration id.
+     */
+    iterationId: string;
+    /**
+     * The project id.
+     */
+    projectId: string;
 }
 export declare class DeleteIterationResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

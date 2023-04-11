@@ -1,16 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteReviewsReviewIdPathParams extends SpeakeasyBase {
-    reviewId: string;
-}
-export declare class DeleteReviewsReviewIdQueryParams extends SpeakeasyBase {
-    userAccountId?: string;
-    userId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteReviewsReviewIdRequest extends SpeakeasyBase {
-    pathParams: DeleteReviewsReviewIdPathParams;
-    queryParams: DeleteReviewsReviewIdQueryParams;
+    /**
+     * The id of the Review to be updated
+     */
+    reviewId: string;
+    /**
+     * The id of the User account that is emoving this review
+     */
+    userAccountId?: string;
+    /**
+     * The id of the User that is removing this review
+     */
+    userId: string;
 }
 export declare class DeleteReviewsReviewIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

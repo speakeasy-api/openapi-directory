@@ -1,4 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
 export declare enum GetFindPathwaysByTextFormatEnum {
     Json = "json",
     Xml = "xml",
@@ -7,15 +8,19 @@ export declare enum GetFindPathwaysByTextFormatEnum {
     Jpg = "jpg",
     Pdf = "pdf"
 }
-export declare class GetFindPathwaysByTextQueryParams extends SpeakeasyBase {
-    format?: GetFindPathwaysByTextFormatEnum;
-    query: string;
-    species?: string;
-}
 export declare class GetFindPathwaysByTextRequest extends SpeakeasyBase {
-    queryParams: GetFindPathwaysByTextQueryParams;
+    format?: GetFindPathwaysByTextFormatEnum;
+    /**
+     * The query, e.g. 'apoptosis'
+     */
+    query: string;
+    /**
+     * Optional, limit the query by species. Leave
+     */
+    species?: string;
 }
 export declare class GetFindPathwaysByTextResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

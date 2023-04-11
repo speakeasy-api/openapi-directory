@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostFailoverDbClusterActionEnum {
-    FailoverDbCluster = "FailoverDBCluster"
+import { AxiosResponse } from "axios";
+export declare enum POSTFailoverDBClusterActionEnum {
+    FailoverDBCluster = "FailoverDBCluster"
 }
-export declare enum PostFailoverDbClusterVersionEnum {
+export declare enum POSTFailoverDBClusterVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class PostFailoverDbClusterQueryParams extends SpeakeasyBase {
-    action: PostFailoverDbClusterActionEnum;
-    version: PostFailoverDbClusterVersionEnum;
-}
-export declare class PostFailoverDbClusterHeaders extends SpeakeasyBase {
+export declare class POSTFailoverDBClusterRequest extends SpeakeasyBase {
+    action: POSTFailoverDBClusterActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTFailoverDBClusterVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostFailoverDbClusterHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostFailoverDbClusterRequest extends SpeakeasyBase {
-    queryParams: PostFailoverDbClusterQueryParams;
-    headers: PostFailoverDbClusterHeaders;
-    request?: Uint8Array;
-}
-export declare class PostFailoverDbClusterResponse extends SpeakeasyBase {
+export declare class POSTFailoverDBClusterResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

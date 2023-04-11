@@ -1,5 +1,7 @@
 export * from "./recaptchaenterpriseprojectsassessmentsannotate";
 export * from "./recaptchaenterpriseprojectsassessmentscreate";
+export * from "./recaptchaenterpriseprojectsfirewallpoliciescreate";
+export * from "./recaptchaenterpriseprojectsfirewallpolicieslist";
 export * from "./recaptchaenterpriseprojectskeyscreate";
 export * from "./recaptchaenterpriseprojectskeysdelete";
 export * from "./recaptchaenterpriseprojectskeysgetmetrics";

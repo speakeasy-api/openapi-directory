@@ -1,16 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostListDashboardsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTListDashboardsActionEnum {
     ListDashboards = "ListDashboards"
 }
-export declare enum PostListDashboardsVersionEnum {
+export declare enum POSTListDashboardsVersionEnum {
     TwoThousandAndTen0801 = "2010-08-01"
 }
-export declare class PostListDashboardsQueryParams extends SpeakeasyBase {
-    action: PostListDashboardsActionEnum;
+export declare class POSTListDashboardsRequest extends SpeakeasyBase {
+    action: POSTListDashboardsActionEnum;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostListDashboardsVersionEnum;
-}
-export declare class PostListDashboardsHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTListDashboardsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,13 +22,9 @@ export declare class PostListDashboardsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostListDashboardsRequest extends SpeakeasyBase {
-    queryParams: PostListDashboardsQueryParams;
-    headers: PostListDashboardsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostListDashboardsResponse extends SpeakeasyBase {
+export declare class POSTListDashboardsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

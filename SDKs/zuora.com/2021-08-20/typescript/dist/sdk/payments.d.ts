@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Payments {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,64 +9,71 @@ export declare class Payments {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deletePayment - Delete a payment
+     * Delete a payment
      *
+     * @remarks
      * **Note:** This operation is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * Deletes a payment. Only payments with the Cancelled status can be deleted.
      *
      * If you have the Invoice Settlement feature enabled, overpayments applied to credit balance cannot be deleted.
      *
-    **/
-    deletePayment(req: operations.DeletePaymentRequest, config?: AxiosRequestConfig): Promise<operations.DeletePaymentResponse>;
+     */
+    deletePayment(req: operations.DELETEPaymentRequest, config?: AxiosRequestConfig): Promise<operations.DELETEPaymentResponse>;
     /**
-     * getPayment - Retrieve a payment
+     * Retrieve a payment
      *
+     * @remarks
      * **Note:** This operation is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * Retrieves the information about one specific payment.
      *
-    **/
-    getPayment(req: operations.GetPaymentRequest, config?: AxiosRequestConfig): Promise<operations.GetPaymentResponse>;
+     */
+    getPayment(req: operations.GETPaymentRequest, config?: AxiosRequestConfig): Promise<operations.GETPaymentResponse>;
     /**
-     * getPaymentItemPart - Retrieve a payment part item
+     * Retrieve a payment part item
      *
+     * @remarks
      * **Note:** This operation is only available if you have the [Invoice Item Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/C_Invoice_Item_Settlement) feature enabled. Invoice Item Settlement must be used together with other Invoice Settlement features (Unapplied Payments, and Credit and Debit memos).  If you wish to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * Retrieves the information about a specific payment part item. A payment part item is a single line item in a payment part. A payment part can consist of several different types of items.
      *
-    **/
-    getPaymentItemPart(req: operations.GetPaymentItemPartRequest, config?: AxiosRequestConfig): Promise<operations.GetPaymentItemPartResponse>;
+     */
+    getPaymentItemPart(req: operations.GETPaymentItemPartRequest, config?: AxiosRequestConfig): Promise<operations.GETPaymentItemPartResponse>;
     /**
-     * getPaymentItemParts - List all payment part items
+     * List all payment part items
      *
+     * @remarks
      * **Note:** This operation is only available if you have the [Invoice Item Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/C_Invoice_Item_Settlement) feature enabled. Invoice Item Settlement must be used together with other Invoice Settlement features (Unapplied Payments, and Credit and Debit memos).  If you wish to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * Retrieves the information about all items of a payment part. A payment part item is a single line item in a payment part. A payment part can consist of several different types of items.
      *
-    **/
-    getPaymentItemParts(req: operations.GetPaymentItemPartsRequest, config?: AxiosRequestConfig): Promise<operations.GetPaymentItemPartsResponse>;
+     */
+    getPaymentItemParts(req: operations.GETPaymentItemPartsRequest, config?: AxiosRequestConfig): Promise<operations.GETPaymentItemPartsResponse>;
     /**
-     * getPaymentPart - Retrieve a payment part
+     * Retrieve a payment part
      *
+     * @remarks
      * **Note:** This operation is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * Retrieves the information about a specific payment part. A payment can consist of an unapplied part, and several parts applied to invoices and debit memos.
      *
-    **/
-    getPaymentPart(req: operations.GetPaymentPartRequest, config?: AxiosRequestConfig): Promise<operations.GetPaymentPartResponse>;
+     */
+    getPaymentPart(req: operations.GETPaymentPartRequest, config?: AxiosRequestConfig): Promise<operations.GETPaymentPartResponse>;
     /**
-     * getPaymentParts - List all parts of a payment
+     * List all parts of a payment
      *
+     * @remarks
      * **Note:** This operation is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * Retrieves the information about all parts of a payment. A payment can consist of an unapplied part, and several parts applied to invoices and debit memos. You can use this operation to get all the applied and unapplied portions of a payment.
      *
-    **/
-    getPaymentParts(req: operations.GetPaymentPartsRequest, config?: AxiosRequestConfig): Promise<operations.GetPaymentPartsResponse>;
+     */
+    getPaymentParts(req: operations.GETPaymentPartsRequest, config?: AxiosRequestConfig): Promise<operations.GETPaymentPartsResponse>;
     /**
-     * getRetrieveAllPayments - List payments
+     * List payments
      *
+     * @remarks
      * **Note:** This operation is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * Retrieves the information about all payments from all your customer accounts.
@@ -85,39 +92,44 @@ export declare class Payments {
      *
      * - /v1/payments?status=Processed&type=External&sort=+number
      *
-    **/
-    getRetrieveAllPayments(req: operations.GetRetrieveAllPaymentsRequest, config?: AxiosRequestConfig): Promise<operations.GetRetrieveAllPaymentsResponse>;
+     */
+    getRetrieveAllPayments(req: operations.GETRetrieveAllPaymentsRequest, config?: AxiosRequestConfig): Promise<operations.GETRetrieveAllPaymentsResponse>;
     /**
-     * objectDeletePayment - CRUD: Delete a payment
+     * CRUD: Delete a payment
      *
+     * @remarks
      * Deletes a payment. Only payments with the Cancelled status can be deleted.
      *
-    **/
-    objectDeletePayment(req: operations.ObjectDeletePaymentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectDeletePaymentResponse>;
+     */
+    objectDELETEPayment(req: operations.ObjectDELETEPaymentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectDELETEPaymentResponse>;
     /**
-     * objectGetPayment - CRUD: Retrieve a payment
+     * CRUD: Retrieve a payment
      *
+     * @remarks
      * Retrieves the information about one specific payment.
      *
-    **/
-    objectGetPayment(req: operations.ObjectGetPaymentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGetPaymentResponse>;
+     */
+    objectGETPayment(req: operations.ObjectGETPaymentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectGETPaymentResponse>;
     /**
-     * objectPostPayment - CRUD: Create a payment
+     * CRUD: Create a payment
      *
+     * @remarks
      * Creates a payment for one or multiple invoices.
      *
-    **/
-    objectPostPayment(req: operations.ObjectPostPaymentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPostPaymentResponse>;
+     */
+    objectPOSTPayment(req: operations.ObjectPOSTPaymentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPOSTPaymentResponse>;
     /**
-     * objectPutPayment - CRUD: Update a payment
+     * CRUD: Update a payment
      *
+     * @remarks
      * Updates a payment.
      *
-    **/
-    objectPutPayment(req: operations.ObjectPutPaymentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPutPaymentResponse>;
+     */
+    objectPUTPayment(req: operations.ObjectPUTPaymentRequest, config?: AxiosRequestConfig): Promise<operations.ObjectPUTPaymentResponse>;
     /**
-     * postCreatePayment - Create a payment
+     * Create a payment
      *
+     * @remarks
      * **Note:** This operation is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * Creates a payment in the following scenarios:
@@ -141,11 +153,12 @@ export declare class Payments {
      * For more information, see [Create Payments](https://knowledgecenter.zuora.com/CB_Billing/Invoice_Settlement/A_Unapplied_Payments/Management_of_Unapplied_Payments/AA_Create_Payments) and [Create Payments Without Specifying Customer Accounts](https://knowledgecenter.zuora.com/CB_Billing/Invoice_Settlement/A_Unapplied_Payments/Management_of_Unapplied_Payments/AA_Create_Payments_Without_Specifying_Customer_Accounts).
      *
      *
-    **/
-    postCreatePayment(req: operations.PostCreatePaymentRequest, config?: AxiosRequestConfig): Promise<operations.PostCreatePaymentResponse>;
+     */
+    postCreatePayment(req: operations.POSTCreatePaymentRequest, config?: AxiosRequestConfig): Promise<operations.POSTCreatePaymentResponse>;
     /**
-     * postRefundPayment - Refund a payment
+     * Refund a payment
      *
+     * @remarks
      * **Note:** This operation is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * Refunds a full or partial unapplied payment to your customers. To refund applied payments, you must unapply the applied payments from the invoices or debit memos, and then refund the unapplied payments to customers.
@@ -154,11 +167,12 @@ export declare class Payments {
      *
      * For a use case of this operation, see [Refund processing](https://www.zuora.com/developer/api-guides/#Refund-processing).
      *
-    **/
-    postRefundPayment(req: operations.PostRefundPaymentRequest, config?: AxiosRequestConfig): Promise<operations.PostRefundPaymentResponse>;
+     */
+    postRefundPayment(req: operations.POSTRefundPaymentRequest, config?: AxiosRequestConfig): Promise<operations.POSTRefundPaymentResponse>;
     /**
-     * putApplyPayment - Apply a payment
+     * Apply a payment
      *
+     * @remarks
      * **Note:** This operation is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * Applies an unapplied payment to invoices and debit memos.
@@ -171,33 +185,36 @@ export declare class Payments {
      *
      * For more information, see [Apply Unapplied Payments to Invoices and Debit Memos](https://knowledgecenter.zuora.com/CB_Billing/Invoice_Settlement/A_Unapplied_Payments/Management_of_Unapplied_Payments/Apply_Unapplied_Payments_to_Invoices_and_Debit_Memos).
      *
-    **/
-    putApplyPayment(req: operations.PutApplyPaymentRequest, config?: AxiosRequestConfig): Promise<operations.PutApplyPaymentResponse>;
+     */
+    putApplyPayment(req: operations.PUTApplyPaymentRequest, config?: AxiosRequestConfig): Promise<operations.PUTApplyPaymentResponse>;
     /**
-     * putCancelPayment - Cancel a payment
+     * Cancel a payment
      *
+     * @remarks
      * **Note:** This operation is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * Cancels a payment.
      *
      * If you have the Invoice Settlement feature enabled, overpayments applied to credit balance cannot be cancelled.
      *
-    **/
-    putCancelPayment(req: operations.PutCancelPaymentRequest, config?: AxiosRequestConfig): Promise<operations.PutCancelPaymentResponse>;
+     */
+    putCancelPayment(req: operations.PUTCancelPaymentRequest, config?: AxiosRequestConfig): Promise<operations.PUTCancelPaymentResponse>;
     /**
-     * putTransferPayment - Transfer a payment
+     * Transfer a payment
      *
+     * @remarks
      * **Note:** This operation is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * Transfers an unapplied payment.
      *
      * For more information, see [Transfer Unapplied Payments](https://knowledgecenter.zuora.com/CB_Billing/Invoice_Settlement/A_Unapplied_Payments/Management_of_Unapplied_Payments/Transfer_Unapplied_Payments).
      *
-    **/
-    putTransferPayment(req: operations.PutTransferPaymentRequest, config?: AxiosRequestConfig): Promise<operations.PutTransferPaymentResponse>;
+     */
+    putTransferPayment(req: operations.PUTTransferPaymentRequest, config?: AxiosRequestConfig): Promise<operations.PUTTransferPaymentResponse>;
     /**
-     * putUnapplyPayment - Unapply a payment
+     * Unapply a payment
      *
+     * @remarks
      * **Note:** This operation is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * Unapplies an applied payment from invoices and debit memos.
@@ -211,15 +228,16 @@ export declare class Payments {
      *
      * For more information, see [Unapply Payments from Invoices and Debit Memos](https://knowledgecenter.zuora.com/CB_Billing/Invoice_Settlement/A_Unapplied_Payments/Management_of_Unapplied_Payments/Unapply_Payments_from_Invoices_and_Debit_Memos).
      *
-    **/
-    putUnapplyPayment(req: operations.PutUnapplyPaymentRequest, config?: AxiosRequestConfig): Promise<operations.PutUnapplyPaymentResponse>;
+     */
+    putUnapplyPayment(req: operations.PUTUnapplyPaymentRequest, config?: AxiosRequestConfig): Promise<operations.PUTUnapplyPaymentResponse>;
     /**
-     * putUpdatePayment - Update a payment
+     * Update a payment
      *
+     * @remarks
      * **Note:** This operation is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * Updates a payment.
      *
-    **/
-    putUpdatePayment(req: operations.PutUpdatePaymentRequest, config?: AxiosRequestConfig): Promise<operations.PutUpdatePaymentResponse>;
+     */
+    putUpdatePayment(req: operations.PUTUpdatePaymentRequest, config?: AxiosRequestConfig): Promise<operations.PUTUpdatePaymentResponse>;
 }

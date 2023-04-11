@@ -1,5 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class PaymentInstrumentGroups {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,21 +10,24 @@ export declare class PaymentInstrumentGroups {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getPaymentInstrumentGroupsId - Retrieve a payment instrument group.
+     * Get a payment instrument group
      *
-     * Returns a specific payment instrument group.
-    **/
-    getPaymentInstrumentGroupsId(req: operations.GetPaymentInstrumentGroupsIdRequest, config?: AxiosRequestConfig): Promise<operations.GetPaymentInstrumentGroupsIdResponse>;
+     * @remarks
+     * Returns the details of a payment instrument group.
+     */
+    getPaymentInstrumentGroupsId(req: operations.GetPaymentInstrumentGroupsIdRequest, security: operations.GetPaymentInstrumentGroupsIdSecurity, config?: AxiosRequestConfig): Promise<operations.GetPaymentInstrumentGroupsIdResponse>;
     /**
-     * getPaymentInstrumentGroupsIdTransactionRules - Retrieve all transaction rules for a specific payment instruments group.
+     * Get all transaction rules for a payment instrument group
      *
-     * Returns a list of all the transaction rules associated with a specific payment instrument group.
-    **/
-    getPaymentInstrumentGroupsIdTransactionRules(req: operations.GetPaymentInstrumentGroupsIdTransactionRulesRequest, config?: AxiosRequestConfig): Promise<operations.GetPaymentInstrumentGroupsIdTransactionRulesResponse>;
+     * @remarks
+     * Returns a list of all the transaction rules associated with a payment instrument group.
+     */
+    getPaymentInstrumentGroupsIdTransactionRules(req: operations.GetPaymentInstrumentGroupsIdTransactionRulesRequest, security: operations.GetPaymentInstrumentGroupsIdTransactionRulesSecurity, config?: AxiosRequestConfig): Promise<operations.GetPaymentInstrumentGroupsIdTransactionRulesResponse>;
     /**
-     * postPaymentInstrumentGroups - Create a payment instrument group.
+     * Create a payment instrument group
      *
-     * Creates a payment instrument group, which you use to associate and group payment instrument resources together. You can apply a transaction rule to a payment instrument group.
-    **/
-    postPaymentInstrumentGroups(req: operations.PostPaymentInstrumentGroupsRequest, config?: AxiosRequestConfig): Promise<operations.PostPaymentInstrumentGroupsResponse>;
+     * @remarks
+     * Creates a payment instrument group to associate and group payment instrument resources together. You can apply a transaction rule to a payment instrument group.
+     */
+    postPaymentInstrumentGroups(req: shared.PaymentInstrumentGroupInfo, security: operations.PostPaymentInstrumentGroupsSecurity, config?: AxiosRequestConfig): Promise<operations.PostPaymentInstrumentGroupsResponse>;
 }

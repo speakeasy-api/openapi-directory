@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Config {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +9,7 @@ export declare class Config {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * extensionConfiguration - Configuration Resource
-    **/
+     * Configuration Resource
+     */
     extensionConfiguration(req: operations.ExtensionConfigurationRequest, config?: AxiosRequestConfig): Promise<operations.ExtensionConfigurationResponse>;
 }

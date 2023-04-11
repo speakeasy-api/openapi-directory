@@ -1,0 +1,3 @@
+export declare enum DeletableCertificateBasedAuthPropertyEnum {
+    CertificateBasedAuthPropertiesCertificateAuthorityArn = "CERTIFICATE_BASED_AUTH_PROPERTIES_CERTIFICATE_AUTHORITY_ARN"
+}

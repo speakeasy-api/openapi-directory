@@ -12,5 +12,4 @@ export * from "./apigatewaysetiampolicyrequest";
 export * from "./apigatewaystatus";
 export * from "./apigatewaytestiampermissionsrequest";
 export * from "./apigatewaytestiampermissionsresponse";
-export * from "./security";
 export * from "./xgafvenum";

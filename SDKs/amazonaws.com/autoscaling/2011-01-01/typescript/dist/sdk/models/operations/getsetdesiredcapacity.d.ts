@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetSetDesiredCapacityActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETSetDesiredCapacityActionEnum {
     SetDesiredCapacity = "SetDesiredCapacity"
 }
-export declare enum GetSetDesiredCapacityVersionEnum {
+export declare enum GETSetDesiredCapacityVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class GetSetDesiredCapacityQueryParams extends SpeakeasyBase {
-    action: GetSetDesiredCapacityActionEnum;
+export declare class GETSetDesiredCapacityRequest extends SpeakeasyBase {
+    action: GETSetDesiredCapacityActionEnum;
+    /**
+     * The name of the Auto Scaling group.
+     */
     autoScalingGroupName: string;
+    /**
+     * The desired capacity is the initial capacity of the Auto Scaling group after this operation completes and the capacity it attempts to maintain.
+     */
     desiredCapacity: number;
+    /**
+     * Indicates whether Amazon EC2 Auto Scaling waits for the cooldown period to complete before initiating a scaling activity to set your Auto Scaling group to its new capacity. By default, Amazon EC2 Auto Scaling does not honor the cooldown period during manual scaling activities.
+     */
     honorCooldown?: boolean;
-    version: GetSetDesiredCapacityVersionEnum;
-}
-export declare class GetSetDesiredCapacityHeaders extends SpeakeasyBase {
+    version: GETSetDesiredCapacityVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +29,9 @@ export declare class GetSetDesiredCapacityHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetSetDesiredCapacityRequest extends SpeakeasyBase {
-    queryParams: GetSetDesiredCapacityQueryParams;
-    headers: GetSetDesiredCapacityHeaders;
-}
-export declare class GetSetDesiredCapacityResponse extends SpeakeasyBase {
+export declare class GETSetDesiredCapacityResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

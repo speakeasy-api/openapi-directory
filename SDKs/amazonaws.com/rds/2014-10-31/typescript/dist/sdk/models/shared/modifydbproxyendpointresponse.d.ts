@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbProxyEndpoint } from "./dbproxyendpoint";
-export declare class ModifyDbProxyEndpointResponse extends SpeakeasyBase {
-    dbProxyEndpoint?: DbProxyEndpoint;
+import { DBProxyEndpoint } from "./dbproxyendpoint";
+/**
+ * Success
+ */
+export declare class ModifyDBProxyEndpointResponse extends SpeakeasyBase {
+    dbProxyEndpoint?: DBProxyEndpoint;
 }

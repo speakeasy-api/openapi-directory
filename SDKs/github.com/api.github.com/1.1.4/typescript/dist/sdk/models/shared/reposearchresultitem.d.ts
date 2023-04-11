@@ -1,49 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { NullableLicenseSimple } from "./nullablelicensesimple";
+import { NullableSimpleUser } from "./nullablesimpleuser";
 import { SearchResultTextMatches } from "./searchresulttextmatches";
-/**
- * License Simple
-**/
-export declare class RepoSearchResultItemLicenseSimple extends SpeakeasyBase {
-    htmlUrl?: string;
-    key: string;
-    name: string;
-    nodeId: string;
-    spdxId: string;
-    url: string;
-}
-/**
- * Simple User
-**/
-export declare class RepoSearchResultItemSimpleUser extends SpeakeasyBase {
-    avatarUrl: string;
-    eventsUrl: string;
-    followersUrl: string;
-    followingUrl: string;
-    gistsUrl: string;
-    gravatarId: string;
-    htmlUrl: string;
-    id: number;
-    login: string;
-    nodeId: string;
-    organizationsUrl: string;
-    receivedEventsUrl: string;
-    reposUrl: string;
-    siteAdmin: boolean;
-    starredAt?: string;
-    starredUrl: string;
-    subscriptionsUrl: string;
-    type: string;
-    url: string;
-}
 export declare class RepoSearchResultItemPermissions extends SpeakeasyBase {
     admin: boolean;
+    maintain?: boolean;
     pull: boolean;
     push: boolean;
+    triage?: boolean;
 }
 /**
  * Repo Search Result Item
-**/
+ */
 export declare class RepoSearchResultItem extends SpeakeasyBase {
+    allowAutoMerge?: boolean;
+    allowForking?: boolean;
     allowMergeCommit?: boolean;
     allowRebaseMerge?: boolean;
     allowSquashMerge?: boolean;
@@ -64,6 +35,9 @@ export declare class RepoSearchResultItem extends SpeakeasyBase {
     deleteBranchOnMerge?: boolean;
     deploymentsUrl: string;
     description: string;
+    /**
+     * Returns whether or not this repository disabled.
+     */
     disabled: boolean;
     downloadsUrl: string;
     eventsUrl: string;
@@ -76,6 +50,7 @@ export declare class RepoSearchResultItem extends SpeakeasyBase {
     gitRefsUrl: string;
     gitTagsUrl: string;
     gitUrl: string;
+    hasDiscussions?: boolean;
     hasDownloads: boolean;
     hasIssues: boolean;
     hasPages: boolean;
@@ -85,6 +60,7 @@ export declare class RepoSearchResultItem extends SpeakeasyBase {
     hooksUrl: string;
     htmlUrl: string;
     id: number;
+    isTemplate?: boolean;
     issueCommentUrl: string;
     issueEventsUrl: string;
     issuesUrl: string;
@@ -92,7 +68,10 @@ export declare class RepoSearchResultItem extends SpeakeasyBase {
     labelsUrl: string;
     language: string;
     languagesUrl: string;
-    license: RepoSearchResultItemLicenseSimple;
+    /**
+     * License Simple
+     */
+    license: NullableLicenseSimple;
     masterBranch?: string;
     mergesUrl: string;
     milestonesUrl: string;
@@ -102,7 +81,10 @@ export declare class RepoSearchResultItem extends SpeakeasyBase {
     notificationsUrl: string;
     openIssues: number;
     openIssuesCount: number;
-    owner: RepoSearchResultItemSimpleUser;
+    /**
+     * A GitHub user.
+     */
+    owner: NullableSimpleUser;
     permissions?: RepoSearchResultItemPermissions;
     private: boolean;
     pullsUrl: string;
@@ -125,6 +107,11 @@ export declare class RepoSearchResultItem extends SpeakeasyBase {
     treesUrl: string;
     updatedAt: Date;
     url: string;
+    /**
+     * The repository visibility: public, private, or internal.
+     */
+    visibility?: string;
     watchers: number;
     watchersCount: number;
+    webCommitSignoffRequired?: boolean;
 }

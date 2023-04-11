@@ -1,20 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PostSetupV1LocationsIdServicesPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class PostSetupV1LocationsIdServicesRequests extends SpeakeasyBase {
-    strings?: string[];
-    strings1?: string[];
-    strings2?: string[];
-    strings3?: string[];
-}
+import { AxiosResponse } from "axios";
 export declare class PostSetupV1LocationsIdServicesRequest extends SpeakeasyBase {
-    pathParams: PostSetupV1LocationsIdServicesPathParams;
-    request?: PostSetupV1LocationsIdServicesRequests;
+    /**
+     * array of valid service object id's
+     */
+    requestBody?: string[];
+    /**
+     * id of business location, defaults to primary business location
+     */
+    id: string;
 }
 export declare class PostSetupV1LocationsIdServicesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     locationViewModel?: shared.LocationViewModel;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

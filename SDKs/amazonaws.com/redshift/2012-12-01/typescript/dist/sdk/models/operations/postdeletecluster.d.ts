@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteClusterActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteClusterActionEnum {
     DeleteCluster = "DeleteCluster"
 }
-export declare enum PostDeleteClusterVersionEnum {
+export declare enum POSTDeleteClusterVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostDeleteClusterQueryParams extends SpeakeasyBase {
-    action: PostDeleteClusterActionEnum;
-    version: PostDeleteClusterVersionEnum;
-}
-export declare class PostDeleteClusterHeaders extends SpeakeasyBase {
+export declare class POSTDeleteClusterRequest extends SpeakeasyBase {
+    action: POSTDeleteClusterActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteClusterVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeleteClusterHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteClusterRequest extends SpeakeasyBase {
-    queryParams: PostDeleteClusterQueryParams;
-    headers: PostDeleteClusterHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteClusterResponse extends SpeakeasyBase {
+export declare class POSTDeleteClusterResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

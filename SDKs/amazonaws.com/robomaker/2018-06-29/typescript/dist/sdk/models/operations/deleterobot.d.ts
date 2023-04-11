@@ -1,5 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteRobotHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteRobotRequestBody extends SpeakeasyBase {
+    /**
+     * The Amazon Resource Name (ARN) of the robot.
+     */
+    robot: string;
+}
+export declare class DeleteRobotRequest extends SpeakeasyBase {
+    requestBody: DeleteRobotRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -8,18 +16,24 @@ export declare class DeleteRobotHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeleteRobotRequestBody extends SpeakeasyBase {
-    robot: string;
-}
-export declare class DeleteRobotRequest extends SpeakeasyBase {
-    headers: DeleteRobotHeaders;
-    request: DeleteRobotRequestBody;
-}
 export declare class DeleteRobotResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deleteRobotResponse?: Record<string, any>;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

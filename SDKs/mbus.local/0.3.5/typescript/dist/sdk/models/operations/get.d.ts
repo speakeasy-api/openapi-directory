@@ -1,15 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetPathParams extends SpeakeasyBase {
-    address: string;
-    baudrate: number;
-    device: string;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class GetRequest extends SpeakeasyBase {
-    pathParams: GetPathParams;
+    /**
+     * The slave device to get data from
+     */
+    address: string;
+    /**
+     * Baudrate to communicate with M-Bus devices
+     */
+    baudrate: shared.BaudrateEnum;
+    /**
+     * The serial device to scan - /dev/ is pre-pended to {device} by M-Bus HTTPD before scanning
+     */
+    device: string;
 }
 export declare class GetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
     mbusData?: string;
+    /**
+     * Bad request
+     */
     textError?: string;
 }

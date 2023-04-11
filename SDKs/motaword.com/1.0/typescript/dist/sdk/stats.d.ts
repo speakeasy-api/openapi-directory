@@ -1,5 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Stats {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,23 +10,23 @@ export declare class Stats {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getCommissionStats - Returns the total commissions stats.
-    **/
+     * Returns the total commissions stats.
+     */
     getCommissionStats(config?: AxiosRequestConfig): Promise<operations.GetCommissionStatsResponse>;
     /**
-     * getCommissionStatsByFilter - Returns the total commissions stats by report filter.
-    **/
-    getCommissionStatsByFilter(req: operations.GetCommissionStatsByFilterRequest, config?: AxiosRequestConfig): Promise<operations.GetCommissionStatsByFilterResponse>;
+     * Returns the total commissions stats by report filter.
+     */
+    getCommissionStatsByFilter(req: shared.ReportFilter, config?: AxiosRequestConfig): Promise<operations.GetCommissionStatsByFilterResponse>;
     /**
-     * getPopularPairs - Returns the language pairs that you have ordered most.
-    **/
+     * View your popular language pairs
+     */
     getPopularPairs(config?: AxiosRequestConfig): Promise<operations.GetPopularPairsResponse>;
     /**
-     * getProjectStats - Returns your project statistics.
-    **/
+     * View your project statistics
+     */
     getProjectStats(config?: AxiosRequestConfig): Promise<operations.GetProjectStatsResponse>;
     /**
-     * getStringStats - Returns your string statistics.
-    **/
+     * View your translation statistics
+     */
     getStringStats(config?: AxiosRequestConfig): Promise<operations.GetStringStatsResponse>;
 }

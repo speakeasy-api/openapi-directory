@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DisableStageTransitionXAmzTargetEnum {
     CodePipeline20150709DisableStageTransition = "CodePipeline_20150709.DisableStageTransition"
 }
-export declare class DisableStageTransitionHeaders extends SpeakeasyBase {
+export declare class DisableStageTransitionRequest extends SpeakeasyBase {
+    disableStageTransitionInput: shared.DisableStageTransitionInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class DisableStageTransitionHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DisableStageTransitionXAmzTargetEnum;
 }
-export declare class DisableStageTransitionRequest extends SpeakeasyBase {
-    headers: DisableStageTransitionHeaders;
-    request: shared.DisableStageTransitionInput;
-}
 export declare class DisableStageTransitionResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * PipelineNotFoundException
+     */
     pipelineNotFoundException?: any;
+    /**
+     * StageNotFoundException
+     */
     stageNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

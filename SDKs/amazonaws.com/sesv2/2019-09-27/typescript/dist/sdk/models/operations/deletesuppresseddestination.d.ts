@@ -1,8 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteSuppressedDestinationPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteSuppressedDestinationRequest extends SpeakeasyBase {
+    /**
+     * The suppressed email destination to remove from the account suppression list.
+     */
     emailAddress: string;
-}
-export declare class DeleteSuppressedDestinationHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,15 +13,24 @@ export declare class DeleteSuppressedDestinationHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeleteSuppressedDestinationRequest extends SpeakeasyBase {
-    pathParams: DeleteSuppressedDestinationPathParams;
-    headers: DeleteSuppressedDestinationHeaders;
-}
 export declare class DeleteSuppressedDestinationResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteSuppressedDestinationResponse?: Record<string, any>;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetImportJobPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetImportJobRequest extends SpeakeasyBase {
+    /**
+     * The ID of the import job.
+     */
     jobId: string;
-}
-export declare class GetImportJobHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,15 +14,24 @@ export declare class GetImportJobHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetImportJobRequest extends SpeakeasyBase {
-    pathParams: GetImportJobPathParams;
-    headers: GetImportJobHeaders;
-}
 export declare class GetImportJobResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getImportJobResponse?: shared.GetImportJobResponse;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

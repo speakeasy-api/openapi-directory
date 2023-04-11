@@ -1,10 +1,25 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://api.deutschebahn.com/reisezentren/v1", "http://api.deutschebahn.com/reisezentren/v1"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * This REST-API enables you to query information about travel centers in Germany.
+ */
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -12,29 +27,34 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
     /**
-     * getReisezentren - Get all station infos
-     *
      * Get all station infos
-    **/
+     *
+     * @remarks
+     * Get all station infos
+     */
     getReisezentren(req: operations.GetReisezentrenRequest, config?: AxiosRequestConfig): Promise<operations.GetReisezentrenResponse>;
     /**
-     * getReisezentrenLocLatLon - Get information about a station near a location
-     *
      * Get information about a station near a location
-    **/
+     *
+     * @remarks
+     * Get information about a station near a location
+     */
     getReisezentrenLocLatLon(req: operations.GetReisezentrenLocLatLonRequest, config?: AxiosRequestConfig): Promise<operations.GetReisezentrenLocLatLonResponse>;
     /**
-     * getReisezentrenLocLatLonDist - Get stations in a given radius
-     *
      * Get stations in a given radius
-    **/
+     *
+     * @remarks
+     * Get stations in a given radius
+     */
     getReisezentrenLocLatLonDist(req: operations.GetReisezentrenLocLatLonDistRequest, config?: AxiosRequestConfig): Promise<operations.GetReisezentrenLocLatLonDistResponse>;
     /**
-     * getReisezentrenId - Get information about a specific station
-     *
      * Get information about a specific station
-    **/
+     *
+     * @remarks
+     * Get information about a specific station
+     */
     getReisezentrenId(req: operations.GetReisezentrenIdRequest, config?: AxiosRequestConfig): Promise<operations.GetReisezentrenIdResponse>;
 }

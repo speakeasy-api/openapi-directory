@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteProtocolsListXAmzTargetEnum {
-    Awsfms20180101DeleteProtocolsList = "AWSFMS_20180101.DeleteProtocolsList"
+    AWSFMS20180101DeleteProtocolsList = "AWSFMS_20180101.DeleteProtocolsList"
 }
-export declare class DeleteProtocolsListHeaders extends SpeakeasyBase {
+export declare class DeleteProtocolsListRequest extends SpeakeasyBase {
+    deleteProtocolsListRequest: shared.DeleteProtocolsListRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class DeleteProtocolsListHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteProtocolsListXAmzTargetEnum;
 }
-export declare class DeleteProtocolsListRequest extends SpeakeasyBase {
-    headers: DeleteProtocolsListHeaders;
-    request: shared.DeleteProtocolsListRequest;
-}
 export declare class DeleteProtocolsListResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalErrorException
+     */
     internalErrorException?: any;
+    /**
+     * InvalidOperationException
+     */
     invalidOperationException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

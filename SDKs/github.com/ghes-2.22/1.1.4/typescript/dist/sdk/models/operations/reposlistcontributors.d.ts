@@ -1,22 +1,33 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReposListContributorsPathParams extends SpeakeasyBase {
-    owner: string;
-    repo: string;
-}
-export declare class ReposListContributorsQueryParams extends SpeakeasyBase {
-    anon?: string;
-    page?: number;
-    perPage?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ReposListContributorsRequest extends SpeakeasyBase {
-    pathParams: ReposListContributorsPathParams;
-    queryParams: ReposListContributorsQueryParams;
+    /**
+     * Set to `1` or `true` to include anonymous contributors in results.
+     */
+    anon?: string;
+    owner: string;
+    /**
+     * Page number of the results to fetch.
+     */
+    page?: number;
+    /**
+     * Results per page (max 100)
+     */
+    perPage?: number;
+    repo: string;
 }
 export declare class ReposListContributorsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Forbidden
+     */
     basicError?: shared.BasicError;
+    /**
+     * if repository contains content
+     */
     contributors?: shared.Contributor[];
 }

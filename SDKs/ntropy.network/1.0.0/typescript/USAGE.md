@@ -1,16 +1,16 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetABatchOfConsumerTransactionClassificationResultsRequest, GetABatchOfConsumerTransactionClassificationResultsResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetABatchOfConsumerTransactionClassificationResultsRequest,
+  GetABatchOfConsumerTransactionClassificationResultsResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetABatchOfConsumerTransactionClassificationResultsRequest = {
-  pathParams: {
-    id: "sit",
-  },
+  id: "247ee045-3d04-4b3c-872b-a9160b810f33",
 };
 
 sdk.batch.getABatchOfConsumerTransactionClassificationResults(req).then((res: GetABatchOfConsumerTransactionClassificationResultsResponse | AxiosError) => {

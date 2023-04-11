@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetModifyVpnTunnelCertificateActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETModifyVpnTunnelCertificateActionEnum {
     ModifyVpnTunnelCertificate = "ModifyVpnTunnelCertificate"
 }
-export declare enum GetModifyVpnTunnelCertificateVersionEnum {
+export declare enum GETModifyVpnTunnelCertificateVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetModifyVpnTunnelCertificateQueryParams extends SpeakeasyBase {
-    action: GetModifyVpnTunnelCertificateActionEnum;
+export declare class GETModifyVpnTunnelCertificateRequest extends SpeakeasyBase {
+    action: GETModifyVpnTunnelCertificateActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
-    version: GetModifyVpnTunnelCertificateVersionEnum;
+    version: GETModifyVpnTunnelCertificateVersionEnum;
+    /**
+     * The ID of the Amazon Web Services Site-to-Site VPN connection.
+     */
     vpnConnectionId: string;
+    /**
+     * The external IP address of the VPN tunnel.
+     */
     vpnTunnelOutsideIpAddress: string;
-}
-export declare class GetModifyVpnTunnelCertificateHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +29,9 @@ export declare class GetModifyVpnTunnelCertificateHeaders extends SpeakeasyBase 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetModifyVpnTunnelCertificateRequest extends SpeakeasyBase {
-    queryParams: GetModifyVpnTunnelCertificateQueryParams;
-    headers: GetModifyVpnTunnelCertificateHeaders;
-}
-export declare class GetModifyVpnTunnelCertificateResponse extends SpeakeasyBase {
+export declare class GETModifyVpnTunnelCertificateResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

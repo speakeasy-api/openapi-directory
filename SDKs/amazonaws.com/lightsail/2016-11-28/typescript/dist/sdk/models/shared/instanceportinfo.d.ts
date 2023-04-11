@@ -1,10 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { AccessDirectionEnum } from "./accessdirectionenum";
-import { PortAccessTypeEnum } from "./portaccesstypeenum";
 import { NetworkProtocolEnum } from "./networkprotocolenum";
+import { PortAccessTypeEnum } from "./portaccesstypeenum";
 /**
  * Describes information about ports for an Amazon Lightsail instance.
-**/
+ */
 export declare class InstancePortInfo extends SpeakeasyBase {
     accessDirection?: AccessDirectionEnum;
     accessFrom?: string;

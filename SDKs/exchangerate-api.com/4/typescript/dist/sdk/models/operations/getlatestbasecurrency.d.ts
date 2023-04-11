@@ -1,23 +1,49 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetLatestBaseCurrencyPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetLatestBaseCurrencyRequest extends SpeakeasyBase {
+    /**
+     * **Base Currency**. *Example: USD*. You an use any of the ISO 4217 currency codes we support. See https://www.exchangerate-api.com/docs/supported-currencies
+     */
     baseCurrency: string;
 }
-export declare class GetLatestBaseCurrency200ApplicationJson extends SpeakeasyBase {
-    base?: string;
-    date?: string;
-    rates?: Record<string, number>;
-    timeLastUpdated?: number;
-}
-export declare class GetLatestBaseCurrency404ApplicationJson extends SpeakeasyBase {
+/**
+ * Currency code not supported
+ */
+export declare class GetLatestBaseCurrency404ApplicationJSON extends SpeakeasyBase {
     errorType?: string;
     result?: string;
 }
-export declare class GetLatestBaseCurrencyRequest extends SpeakeasyBase {
-    pathParams: GetLatestBaseCurrencyPathParams;
+/**
+ * Successful response
+ */
+export declare class GetLatestBaseCurrency200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * The currency code you supplied as base in your request
+     */
+    base?: string;
+    /**
+     * The date these exchange rates are for
+     */
+    date?: string;
+    /**
+     * Each supported currency code in terms of the base currency
+     */
+    rates?: Record<string, number>;
+    /**
+     * The epoch time this set of exchange rates was generated
+     */
+    timeLastUpdated?: number;
 }
 export declare class GetLatestBaseCurrencyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getLatestBaseCurrency200ApplicationJSONObject?: GetLatestBaseCurrency200ApplicationJson;
-    getLatestBaseCurrency404ApplicationJSONObject?: GetLatestBaseCurrency404ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful response
+     */
+    getLatestBaseCurrency200ApplicationJSONObject?: GetLatestBaseCurrency200ApplicationJSON;
+    /**
+     * Currency code not supported
+     */
+    getLatestBaseCurrency404ApplicationJSONObject?: GetLatestBaseCurrency404ApplicationJSON;
 }

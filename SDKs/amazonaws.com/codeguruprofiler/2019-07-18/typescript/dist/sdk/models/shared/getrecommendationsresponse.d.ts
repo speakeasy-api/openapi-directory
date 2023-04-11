@@ -3,7 +3,7 @@ import { Anomaly } from "./anomaly";
 import { Recommendation } from "./recommendation";
 /**
  * The structure representing the GetRecommendationsResponse.
-**/
+ */
 export declare class GetRecommendationsResponse extends SpeakeasyBase {
     anomalies: Anomaly[];
     profileEndTime: Date;

@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDisableVpcClassicLinkActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDisableVpcClassicLinkActionEnum {
     DisableVpcClassicLink = "DisableVpcClassicLink"
 }
-export declare enum GetDisableVpcClassicLinkVersionEnum {
+export declare enum GETDisableVpcClassicLinkVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetDisableVpcClassicLinkQueryParams extends SpeakeasyBase {
-    action: GetDisableVpcClassicLinkActionEnum;
+export declare class GETDisableVpcClassicLinkRequest extends SpeakeasyBase {
+    action: GETDisableVpcClassicLinkActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
-    version: GetDisableVpcClassicLinkVersionEnum;
+    version: GETDisableVpcClassicLinkVersionEnum;
+    /**
+     * The ID of the VPC.
+     */
     vpcId: string;
-}
-export declare class GetDisableVpcClassicLinkHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetDisableVpcClassicLinkHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDisableVpcClassicLinkRequest extends SpeakeasyBase {
-    queryParams: GetDisableVpcClassicLinkQueryParams;
-    headers: GetDisableVpcClassicLinkHeaders;
-}
-export declare class GetDisableVpcClassicLinkResponse extends SpeakeasyBase {
+export declare class GETDisableVpcClassicLinkResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

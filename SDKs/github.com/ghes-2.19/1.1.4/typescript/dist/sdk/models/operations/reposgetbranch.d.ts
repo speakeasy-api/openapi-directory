@@ -1,21 +1,35 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReposGetBranchPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ReposGetBranchRequest extends SpeakeasyBase {
+    /**
+     * The name of the branch.
+     */
     branch: string;
     owner: string;
     repo: string;
 }
-export declare class ReposGetBranch415ApplicationJson extends SpeakeasyBase {
+/**
+ * Preview header missing
+ */
+export declare class ReposGetBranch415ApplicationJSON extends SpeakeasyBase {
     documentationUrl: string;
     message: string;
-}
-export declare class ReposGetBranchRequest extends SpeakeasyBase {
-    pathParams: ReposGetBranchPathParams;
 }
 export declare class ReposGetBranchResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Moved permanently
+     */
     basicError?: shared.BasicError;
+    /**
+     * Response
+     */
     branchWithProtection?: shared.BranchWithProtection;
-    reposGetBranch415ApplicationJSONObject?: ReposGetBranch415ApplicationJson;
+    /**
+     * Preview header missing
+     */
+    reposGetBranch415ApplicationJSONObject?: ReposGetBranch415ApplicationJSON;
 }

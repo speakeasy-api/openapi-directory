@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { MetricDatapoint } from "./metricdatapoint";
 import { ContainerServiceMetricNameEnum } from "./containerservicemetricnameenum";
+import { MetricDatapoint } from "./metricdatapoint";
+/**
+ * Success
+ */
 export declare class GetContainerServiceMetricDataResult extends SpeakeasyBase {
     metricData?: MetricDatapoint[];
     metricName?: ContainerServiceMetricNameEnum;

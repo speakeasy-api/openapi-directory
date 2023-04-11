@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Managing your [Facebook Messenger](https://developer.nexmo.com/messages/concepts/facebook) account
+ */
 export declare class FacebookMessenger {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,19 +12,19 @@ export declare class FacebookMessenger {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createMessengerAccount - Create a Messenger account
-    **/
-    createMessengerAccount(req: operations.CreateMessengerAccountRequest, config?: AxiosRequestConfig): Promise<operations.CreateMessengerAccountResponse>;
+     * Create a Messenger account
+     */
+    createMessengerAccount(req: operations.CreateMessengerAccountRequestBody, security: operations.CreateMessengerAccountSecurity, config?: AxiosRequestConfig): Promise<operations.CreateMessengerAccountResponse>;
     /**
-     * deleteMessengerAccount - Delete a Messenger account
-    **/
-    deleteMessengerAccount(req: operations.DeleteMessengerAccountRequest, config?: AxiosRequestConfig): Promise<operations.DeleteMessengerAccountResponse>;
+     * Delete a Messenger account
+     */
+    deleteMessengerAccount(req: operations.DeleteMessengerAccountRequest, security: operations.DeleteMessengerAccountSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteMessengerAccountResponse>;
     /**
-     * getMessengerAccount - Retrieve a Messenger account
-    **/
-    getMessengerAccount(req: operations.GetMessengerAccountRequest, config?: AxiosRequestConfig): Promise<operations.GetMessengerAccountResponse>;
+     * Retrieve a Messenger account
+     */
+    getMessengerAccount(req: operations.GetMessengerAccountRequest, security: operations.GetMessengerAccountSecurity, config?: AxiosRequestConfig): Promise<operations.GetMessengerAccountResponse>;
     /**
-     * updateMessengerAccount - Update a Messenger account
-    **/
-    updateMessengerAccount(req: operations.UpdateMessengerAccountRequest, config?: AxiosRequestConfig): Promise<operations.UpdateMessengerAccountResponse>;
+     * Update a Messenger account
+     */
+    updateMessengerAccount(req: operations.UpdateMessengerAccountRequest, security: operations.UpdateMessengerAccountSecurity, config?: AxiosRequestConfig): Promise<operations.UpdateMessengerAccountResponse>;
 }

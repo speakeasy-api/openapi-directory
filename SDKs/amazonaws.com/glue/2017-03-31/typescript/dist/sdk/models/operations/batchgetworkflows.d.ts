@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum BatchGetWorkflowsXAmzTargetEnum {
-    AwsGlueBatchGetWorkflows = "AWSGlue.BatchGetWorkflows"
+    AWSGlueBatchGetWorkflows = "AWSGlue.BatchGetWorkflows"
 }
-export declare class BatchGetWorkflowsHeaders extends SpeakeasyBase {
+export declare class BatchGetWorkflowsRequest extends SpeakeasyBase {
+    batchGetWorkflowsRequest: shared.BatchGetWorkflowsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class BatchGetWorkflowsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: BatchGetWorkflowsXAmzTargetEnum;
 }
-export declare class BatchGetWorkflowsRequest extends SpeakeasyBase {
-    headers: BatchGetWorkflowsHeaders;
-    request: shared.BatchGetWorkflowsRequest;
-}
 export declare class BatchGetWorkflowsResponse extends SpeakeasyBase {
+    /**
+     * Success
+     */
     batchGetWorkflowsResponse?: shared.BatchGetWorkflowsResponse;
     contentType: string;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

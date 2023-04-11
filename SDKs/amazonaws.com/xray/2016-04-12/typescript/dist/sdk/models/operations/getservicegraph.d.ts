@@ -1,9 +1,34 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetServiceGraphQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetServiceGraphRequestBody extends SpeakeasyBase {
+    /**
+     * The end of the timeframe for which to generate a graph.
+     */
+    endTime: Date;
+    /**
+     * The Amazon Resource Name (ARN) of a group based on which you want to generate a graph.
+     */
+    groupARN?: string;
+    /**
+     * The name of a group based on which you want to generate a graph.
+     */
+    groupName?: string;
+    /**
+     * Pagination token.
+     */
     nextToken?: string;
+    /**
+     * The start of the time frame for which to generate a graph.
+     */
+    startTime: Date;
 }
-export declare class GetServiceGraphHeaders extends SpeakeasyBase {
+export declare class GetServiceGraphRequest extends SpeakeasyBase {
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
+    requestBody: GetServiceGraphRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,22 +37,20 @@ export declare class GetServiceGraphHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetServiceGraphRequestBody extends SpeakeasyBase {
-    endTime: Date;
-    groupARN?: string;
-    groupName?: string;
-    nextToken?: string;
-    startTime: Date;
-}
-export declare class GetServiceGraphRequest extends SpeakeasyBase {
-    queryParams: GetServiceGraphQueryParams;
-    headers: GetServiceGraphHeaders;
-    request: GetServiceGraphRequestBody;
-}
 export declare class GetServiceGraphResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getServiceGraphResult?: shared.GetServiceGraphResult;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottledException
+     */
     throttledException?: any;
 }

@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { OrderableDbInstanceOptionsList } from "./orderabledbinstanceoptionslist";
-export declare class OrderableDbInstanceOptionsMessage extends SpeakeasyBase {
+import { OrderableDBInstanceOptionsList } from "./orderabledbinstanceoptionslist";
+/**
+ * Success
+ */
+export declare class OrderableDBInstanceOptionsMessage extends SpeakeasyBase {
     marker?: string;
-    orderableDBInstanceOptions?: OrderableDbInstanceOptionsList[];
+    orderableDBInstanceOptions?: OrderableDBInstanceOptionsList[];
 }

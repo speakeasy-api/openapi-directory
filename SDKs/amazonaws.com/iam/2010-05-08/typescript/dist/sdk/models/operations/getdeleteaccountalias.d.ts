@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteAccountAliasActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteAccountAliasActionEnum {
     DeleteAccountAlias = "DeleteAccountAlias"
 }
-export declare enum GetDeleteAccountAliasVersionEnum {
+export declare enum GETDeleteAccountAliasVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class GetDeleteAccountAliasQueryParams extends SpeakeasyBase {
+export declare class GETDeleteAccountAliasRequest extends SpeakeasyBase {
+    /**
+     * <p>The name of the account alias to delete.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of lowercase letters, digits, and dashes. You cannot start or finish with a dash, nor can you have two dashes in a row.</p>
+     */
     accountAlias: string;
-    action: GetDeleteAccountAliasActionEnum;
-    version: GetDeleteAccountAliasVersionEnum;
-}
-export declare class GetDeleteAccountAliasHeaders extends SpeakeasyBase {
+    action: GETDeleteAccountAliasActionEnum;
+    version: GETDeleteAccountAliasVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDeleteAccountAliasHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteAccountAliasRequest extends SpeakeasyBase {
-    queryParams: GetDeleteAccountAliasQueryParams;
-    headers: GetDeleteAccountAliasHeaders;
-}
-export declare class GetDeleteAccountAliasResponse extends SpeakeasyBase {
+export declare class GETDeleteAccountAliasResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

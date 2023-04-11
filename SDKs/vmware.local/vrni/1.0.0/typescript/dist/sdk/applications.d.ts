@@ -1,5 +1,9 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Applications APIs
+ */
 export declare class Applications {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,59 +13,68 @@ export declare class Applications {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * addApplication - Create an application
+     * Create an application
      *
+     * @remarks
      * Application is a group of tiers. A tier is a group of virtual machines based on membership criteria. Tiers are bound to single
      * application. An application name is unique and should not conflict with another application name.
-    **/
-    addApplication(req: operations.AddApplicationRequest, config?: AxiosRequestConfig): Promise<operations.AddApplicationResponse>;
+     */
+    addApplication(req: shared.ApplicationRequest, security: operations.AddApplicationSecurity, config?: AxiosRequestConfig): Promise<operations.AddApplicationResponse>;
     /**
-     * addTier - Create tier in application
+     * Create tier in application
      *
+     * @remarks
      * Create a tier of an application by with specified membership criteria. The membership criteria id defined in terms of
      * virtual machines or ip addresses/subnet. Please refer to API Guide on how to construct membership criteria.
-    **/
-    addTier(req: operations.AddTierRequest, config?: AxiosRequestConfig): Promise<operations.AddTierResponse>;
+     */
+    addTier(req: operations.AddTierRequest, security: operations.AddTierSecurity, config?: AxiosRequestConfig): Promise<operations.AddTierResponse>;
     /**
-     * deleteApplication - Delete an application
+     * Delete an application
      *
+     * @remarks
      * Deleting an application deletes all the tiers of the application along with the application
-    **/
-    deleteApplication(req: operations.DeleteApplicationRequest, config?: AxiosRequestConfig): Promise<operations.DeleteApplicationResponse>;
+     */
+    deleteApplication(req: operations.DeleteApplicationRequest, security: operations.DeleteApplicationSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteApplicationResponse>;
     /**
-     * deleteTier - Delete tier
+     * Delete tier
      *
+     * @remarks
      * Delete tier of an application
-    **/
-    deleteTier(req: operations.DeleteTierRequest, config?: AxiosRequestConfig): Promise<operations.DeleteTierResponse>;
+     */
+    deleteTier(req: operations.DeleteTierRequest, security: operations.DeleteTierSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteTierResponse>;
     /**
-     * getApplication - Show application details
-     *
      * Show application details
-    **/
-    getApplication(req: operations.GetApplicationRequest, config?: AxiosRequestConfig): Promise<operations.GetApplicationResponse>;
-    /**
-     * getApplicationTier - Show tier details
      *
+     * @remarks
+     * Show application details
+     */
+    getApplication(req: operations.GetApplicationRequest, security: operations.GetApplicationSecurity, config?: AxiosRequestConfig): Promise<operations.GetApplicationResponse>;
+    /**
      * Show tier details
-    **/
-    getApplicationTier(req: operations.GetApplicationTierRequest, config?: AxiosRequestConfig): Promise<operations.GetApplicationTierResponse>;
-    /**
-     * getTier - Show tier details
      *
+     * @remarks
      * Show tier details
-    **/
-    getTier(req: operations.GetTierRequest, config?: AxiosRequestConfig): Promise<operations.GetTierResponse>;
+     */
+    getApplicationTier(req: operations.GetApplicationTierRequest, security: operations.GetApplicationTierSecurity, config?: AxiosRequestConfig): Promise<operations.GetApplicationTierResponse>;
     /**
-     * listApplicationTiers - List tiers of an application
+     * Show tier details
      *
+     * @remarks
+     * Show tier details
+     */
+    getTier(req: operations.GetTierRequest, security: operations.GetTierSecurity, config?: AxiosRequestConfig): Promise<operations.GetTierResponse>;
+    /**
      * List tiers of an application
-    **/
-    listApplicationTiers(req: operations.ListApplicationTiersRequest, config?: AxiosRequestConfig): Promise<operations.ListApplicationTiersResponse>;
-    /**
-     * listApplications - List applications
      *
+     * @remarks
+     * List tiers of an application
+     */
+    listApplicationTiers(req: operations.ListApplicationTiersRequest, security: operations.ListApplicationTiersSecurity, config?: AxiosRequestConfig): Promise<operations.ListApplicationTiersResponse>;
+    /**
      * List applications
-    **/
-    listApplications(req: operations.ListApplicationsRequest, config?: AxiosRequestConfig): Promise<operations.ListApplicationsResponse>;
+     *
+     * @remarks
+     * List applications
+     */
+    listApplications(req: operations.ListApplicationsRequest, security: operations.ListApplicationsSecurity, config?: AxiosRequestConfig): Promise<operations.ListApplicationsResponse>;
 }

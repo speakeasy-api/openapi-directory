@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Projects {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,67 +9,71 @@ export declare class Projects {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * connectorsProjectsLocationsConnectionsCreate - Creates a new Connection in a given project and location.
-    **/
-    connectorsProjectsLocationsConnectionsCreate(req: operations.ConnectorsProjectsLocationsConnectionsCreateRequest, config?: AxiosRequestConfig): Promise<operations.ConnectorsProjectsLocationsConnectionsCreateResponse>;
+     * Refresh runtime schema of a connection.
+     */
+    connectorsProjectsLocationsConnectionsConnectionSchemaMetadataRefresh(req: operations.ConnectorsProjectsLocationsConnectionsConnectionSchemaMetadataRefreshRequest, security: operations.ConnectorsProjectsLocationsConnectionsConnectionSchemaMetadataRefreshSecurity, config?: AxiosRequestConfig): Promise<operations.ConnectorsProjectsLocationsConnectionsConnectionSchemaMetadataRefreshResponse>;
     /**
-     * connectorsProjectsLocationsConnectionsList - Lists Connections in a given project and location.
-    **/
-    connectorsProjectsLocationsConnectionsList(req: operations.ConnectorsProjectsLocationsConnectionsListRequest, config?: AxiosRequestConfig): Promise<operations.ConnectorsProjectsLocationsConnectionsListResponse>;
+     * Creates a new Connection in a given project and location.
+     */
+    connectorsProjectsLocationsConnectionsCreate(req: operations.ConnectorsProjectsLocationsConnectionsCreateRequest, security: operations.ConnectorsProjectsLocationsConnectionsCreateSecurity, config?: AxiosRequestConfig): Promise<operations.ConnectorsProjectsLocationsConnectionsCreateResponse>;
     /**
-     * connectorsProjectsLocationsConnectionsPatch - Updates the parameters of a single Connection.
-    **/
-    connectorsProjectsLocationsConnectionsPatch(req: operations.ConnectorsProjectsLocationsConnectionsPatchRequest, config?: AxiosRequestConfig): Promise<operations.ConnectorsProjectsLocationsConnectionsPatchResponse>;
+     * Lists Connections in a given project and location.
+     */
+    connectorsProjectsLocationsConnectionsList(req: operations.ConnectorsProjectsLocationsConnectionsListRequest, security: operations.ConnectorsProjectsLocationsConnectionsListSecurity, config?: AxiosRequestConfig): Promise<operations.ConnectorsProjectsLocationsConnectionsListResponse>;
     /**
-     * connectorsProjectsLocationsConnectionsRuntimeActionSchemasList - List schema of a runtime actions filtered by action name.
-    **/
-    connectorsProjectsLocationsConnectionsRuntimeActionSchemasList(req: operations.ConnectorsProjectsLocationsConnectionsRuntimeActionSchemasListRequest, config?: AxiosRequestConfig): Promise<operations.ConnectorsProjectsLocationsConnectionsRuntimeActionSchemasListResponse>;
+     * Updates the parameters of a single Connection.
+     */
+    connectorsProjectsLocationsConnectionsPatch(req: operations.ConnectorsProjectsLocationsConnectionsPatchRequest, security: operations.ConnectorsProjectsLocationsConnectionsPatchSecurity, config?: AxiosRequestConfig): Promise<operations.ConnectorsProjectsLocationsConnectionsPatchResponse>;
     /**
-     * connectorsProjectsLocationsConnectionsRuntimeEntitySchemasList - List schema of a runtime entities filtered by entity name.
-    **/
-    connectorsProjectsLocationsConnectionsRuntimeEntitySchemasList(req: operations.ConnectorsProjectsLocationsConnectionsRuntimeEntitySchemasListRequest, config?: AxiosRequestConfig): Promise<operations.ConnectorsProjectsLocationsConnectionsRuntimeEntitySchemasListResponse>;
+     * List schema of a runtime actions filtered by action name.
+     */
+    connectorsProjectsLocationsConnectionsRuntimeActionSchemasList(req: operations.ConnectorsProjectsLocationsConnectionsRuntimeActionSchemasListRequest, security: operations.ConnectorsProjectsLocationsConnectionsRuntimeActionSchemasListSecurity, config?: AxiosRequestConfig): Promise<operations.ConnectorsProjectsLocationsConnectionsRuntimeActionSchemasListResponse>;
     /**
-     * connectorsProjectsLocationsList - Lists information about the supported locations for this service.
-    **/
-    connectorsProjectsLocationsList(req: operations.ConnectorsProjectsLocationsListRequest, config?: AxiosRequestConfig): Promise<operations.ConnectorsProjectsLocationsListResponse>;
+     * List schema of a runtime entities filtered by entity name.
+     */
+    connectorsProjectsLocationsConnectionsRuntimeEntitySchemasList(req: operations.ConnectorsProjectsLocationsConnectionsRuntimeEntitySchemasListRequest, security: operations.ConnectorsProjectsLocationsConnectionsRuntimeEntitySchemasListSecurity, config?: AxiosRequestConfig): Promise<operations.ConnectorsProjectsLocationsConnectionsRuntimeEntitySchemasListResponse>;
     /**
-     * connectorsProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-    **/
-    connectorsProjectsLocationsOperationsCancel(req: operations.ConnectorsProjectsLocationsOperationsCancelRequest, config?: AxiosRequestConfig): Promise<operations.ConnectorsProjectsLocationsOperationsCancelResponse>;
+     * Lists information about the supported locations for this service.
+     */
+    connectorsProjectsLocationsList(req: operations.ConnectorsProjectsLocationsListRequest, security: operations.ConnectorsProjectsLocationsListSecurity, config?: AxiosRequestConfig): Promise<operations.ConnectorsProjectsLocationsListResponse>;
     /**
-     * connectorsProjectsLocationsOperationsDelete - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-    **/
-    connectorsProjectsLocationsOperationsDelete(req: operations.ConnectorsProjectsLocationsOperationsDeleteRequest, config?: AxiosRequestConfig): Promise<operations.ConnectorsProjectsLocationsOperationsDeleteResponse>;
+     * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
+     */
+    connectorsProjectsLocationsOperationsCancel(req: operations.ConnectorsProjectsLocationsOperationsCancelRequest, security: operations.ConnectorsProjectsLocationsOperationsCancelSecurity, config?: AxiosRequestConfig): Promise<operations.ConnectorsProjectsLocationsOperationsCancelResponse>;
     /**
-     * connectorsProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/* /operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
-    **/
-    connectorsProjectsLocationsOperationsList(req: operations.ConnectorsProjectsLocationsOperationsListRequest, config?: AxiosRequestConfig): Promise<operations.ConnectorsProjectsLocationsOperationsListResponse>;
+     * Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
+     */
+    connectorsProjectsLocationsOperationsDelete(req: operations.ConnectorsProjectsLocationsOperationsDeleteRequest, security: operations.ConnectorsProjectsLocationsOperationsDeleteSecurity, config?: AxiosRequestConfig): Promise<operations.ConnectorsProjectsLocationsOperationsDeleteResponse>;
     /**
-     * connectorsProjectsLocationsProvidersConnectorsList - Lists Connectors in a given project and location.
-    **/
-    connectorsProjectsLocationsProvidersConnectorsList(req: operations.ConnectorsProjectsLocationsProvidersConnectorsListRequest, config?: AxiosRequestConfig): Promise<operations.ConnectorsProjectsLocationsProvidersConnectorsListResponse>;
+     * Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
+     */
+    connectorsProjectsLocationsOperationsList(req: operations.ConnectorsProjectsLocationsOperationsListRequest, security: operations.ConnectorsProjectsLocationsOperationsListSecurity, config?: AxiosRequestConfig): Promise<operations.ConnectorsProjectsLocationsOperationsListResponse>;
     /**
-     * connectorsProjectsLocationsProvidersConnectorsVersionsGet - Gets details of a single connector version.
-    **/
-    connectorsProjectsLocationsProvidersConnectorsVersionsGet(req: operations.ConnectorsProjectsLocationsProvidersConnectorsVersionsGetRequest, config?: AxiosRequestConfig): Promise<operations.ConnectorsProjectsLocationsProvidersConnectorsVersionsGetResponse>;
+     * Lists Connectors in a given project and location.
+     */
+    connectorsProjectsLocationsProvidersConnectorsList(req: operations.ConnectorsProjectsLocationsProvidersConnectorsListRequest, security: operations.ConnectorsProjectsLocationsProvidersConnectorsListSecurity, config?: AxiosRequestConfig): Promise<operations.ConnectorsProjectsLocationsProvidersConnectorsListResponse>;
     /**
-     * connectorsProjectsLocationsProvidersConnectorsVersionsList - Lists Connector Versions in a given project and location.
-    **/
-    connectorsProjectsLocationsProvidersConnectorsVersionsList(req: operations.ConnectorsProjectsLocationsProvidersConnectorsVersionsListRequest, config?: AxiosRequestConfig): Promise<operations.ConnectorsProjectsLocationsProvidersConnectorsVersionsListResponse>;
+     * Gets details of a single connector version.
+     */
+    connectorsProjectsLocationsProvidersConnectorsVersionsGet(req: operations.ConnectorsProjectsLocationsProvidersConnectorsVersionsGetRequest, security: operations.ConnectorsProjectsLocationsProvidersConnectorsVersionsGetSecurity, config?: AxiosRequestConfig): Promise<operations.ConnectorsProjectsLocationsProvidersConnectorsVersionsGetResponse>;
     /**
-     * connectorsProjectsLocationsProvidersGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-    **/
-    connectorsProjectsLocationsProvidersGetIamPolicy(req: operations.ConnectorsProjectsLocationsProvidersGetIamPolicyRequest, config?: AxiosRequestConfig): Promise<operations.ConnectorsProjectsLocationsProvidersGetIamPolicyResponse>;
+     * Lists Connector Versions in a given project and location.
+     */
+    connectorsProjectsLocationsProvidersConnectorsVersionsList(req: operations.ConnectorsProjectsLocationsProvidersConnectorsVersionsListRequest, security: operations.ConnectorsProjectsLocationsProvidersConnectorsVersionsListSecurity, config?: AxiosRequestConfig): Promise<operations.ConnectorsProjectsLocationsProvidersConnectorsVersionsListResponse>;
     /**
-     * connectorsProjectsLocationsProvidersList - Lists Providers in a given project and location.
-    **/
-    connectorsProjectsLocationsProvidersList(req: operations.ConnectorsProjectsLocationsProvidersListRequest, config?: AxiosRequestConfig): Promise<operations.ConnectorsProjectsLocationsProvidersListResponse>;
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     */
+    connectorsProjectsLocationsProvidersGetIamPolicy(req: operations.ConnectorsProjectsLocationsProvidersGetIamPolicyRequest, security: operations.ConnectorsProjectsLocationsProvidersGetIamPolicySecurity, config?: AxiosRequestConfig): Promise<operations.ConnectorsProjectsLocationsProvidersGetIamPolicyResponse>;
     /**
-     * connectorsProjectsLocationsProvidersSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
-    **/
-    connectorsProjectsLocationsProvidersSetIamPolicy(req: operations.ConnectorsProjectsLocationsProvidersSetIamPolicyRequest, config?: AxiosRequestConfig): Promise<operations.ConnectorsProjectsLocationsProvidersSetIamPolicyResponse>;
+     * Lists Providers in a given project and location.
+     */
+    connectorsProjectsLocationsProvidersList(req: operations.ConnectorsProjectsLocationsProvidersListRequest, security: operations.ConnectorsProjectsLocationsProvidersListSecurity, config?: AxiosRequestConfig): Promise<operations.ConnectorsProjectsLocationsProvidersListResponse>;
     /**
-     * connectorsProjectsLocationsProvidersTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-    **/
-    connectorsProjectsLocationsProvidersTestIamPermissions(req: operations.ConnectorsProjectsLocationsProvidersTestIamPermissionsRequest, config?: AxiosRequestConfig): Promise<operations.ConnectorsProjectsLocationsProvidersTestIamPermissionsResponse>;
+     * Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+     */
+    connectorsProjectsLocationsProvidersSetIamPolicy(req: operations.ConnectorsProjectsLocationsProvidersSetIamPolicyRequest, security: operations.ConnectorsProjectsLocationsProvidersSetIamPolicySecurity, config?: AxiosRequestConfig): Promise<operations.ConnectorsProjectsLocationsProvidersSetIamPolicyResponse>;
+    /**
+     * Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
+     */
+    connectorsProjectsLocationsProvidersTestIamPermissions(req: operations.ConnectorsProjectsLocationsProvidersTestIamPermissionsRequest, security: operations.ConnectorsProjectsLocationsProvidersTestIamPermissionsSecurity, config?: AxiosRequestConfig): Promise<operations.ConnectorsProjectsLocationsProvidersTestIamPermissionsResponse>;
 }

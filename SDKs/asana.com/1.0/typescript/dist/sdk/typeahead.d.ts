@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * The typeahead search API provides search for objects from a single workspace.
+ */
 export declare class Typeahead {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +12,9 @@ export declare class Typeahead {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * typeaheadForWorkspace - Get objects via typeahead
+     * Get objects via typeahead
      *
+     * @remarks
      * Retrieves objects in the workspace based via an auto-completion/typeahead
      * search algorithm. This feature is meant to provide results quickly, so do
      * not rely on this API to provide extremely accurate search results. The
@@ -41,9 +45,12 @@ export declare class Typeahead {
      * Resources with type `task` are returned with priority placed on tasks
      * the user is following, but no guarantee on the order of those tasks.
      *
+     * Resources with type `project_template` are returned with priority
+     * placed on favorited project templates.
+     *
      * Leaving the `query` string empty or omitted will give you results, still
      * following the resource ordering above. This could be used to list users or
      * projects that are relevant for the requesting user's api token.
-    **/
+     */
     typeaheadForWorkspace(req: operations.TypeaheadForWorkspaceRequest, config?: AxiosRequestConfig): Promise<operations.TypeaheadForWorkspaceResponse>;
 }

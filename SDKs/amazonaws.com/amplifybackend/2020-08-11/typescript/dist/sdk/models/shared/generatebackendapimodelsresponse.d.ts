@@ -1,9 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GenerateBackendApiModelsResponse extends SpeakeasyBase {
-    appId?: Record<string, any>;
-    backendEnvironmentName?: Record<string, any>;
-    error?: Record<string, any>;
-    jobId?: Record<string, any>;
-    operation?: Record<string, any>;
-    status?: Record<string, any>;
+/**
+ * Success
+ */
+export declare class GenerateBackendAPIModelsResponse extends SpeakeasyBase {
+    appId?: string;
+    backendEnvironmentName?: string;
+    error?: string;
+    jobId?: string;
+    operation?: string;
+    status?: string;
 }

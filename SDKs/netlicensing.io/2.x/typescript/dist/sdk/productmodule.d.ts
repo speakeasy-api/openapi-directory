@@ -1,5 +1,10 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Product Module operations
+ *
+ * @see {@link https://netlicensing.io/wiki/product-module-services} - Product Module Services
+ */
 export declare class ProductModule {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,33 +14,38 @@ export declare class ProductModule {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createProductModule - Create Product Module
+     * Create Product Module
      *
+     * @remarks
      * Creates a new Product Module
-    **/
-    createProductModule(req: operations.CreateProductModuleRequest, config?: AxiosRequestConfig): Promise<operations.CreateProductModuleResponse>;
+     */
+    createProductModule(req: operations.CreateProductModuleRequestBody, security: operations.CreateProductModuleSecurity, config?: AxiosRequestConfig): Promise<operations.CreateProductModuleResponse>;
     /**
-     * deleteProductModule - Delete Product Module
+     * Delete Product Module
      *
+     * @remarks
      * Delete a Product Module by 'number'
-    **/
-    deleteProductModule(req: operations.DeleteProductModuleRequest, config?: AxiosRequestConfig): Promise<operations.DeleteProductModuleResponse>;
+     */
+    deleteProductModule(req: operations.DeleteProductModuleRequest, security: operations.DeleteProductModuleSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteProductModuleResponse>;
     /**
-     * getProductModule - Get Product Module
+     * Get Product Module
      *
+     * @remarks
      * Return a Product Module by 'productModuleNumber'
-    **/
-    getProductModule(req: operations.GetProductModuleRequest, config?: AxiosRequestConfig): Promise<operations.GetProductModuleResponse>;
+     */
+    getProductModule(req: operations.GetProductModuleRequest, security: operations.GetProductModuleSecurity, config?: AxiosRequestConfig): Promise<operations.GetProductModuleResponse>;
     /**
-     * listProductModules - List Product Modules
+     * List Product Modules
      *
+     * @remarks
      * Return a list of all Product Modules for the current Vendor
-    **/
-    listProductModules(req: operations.ListProductModulesRequest, config?: AxiosRequestConfig): Promise<operations.ListProductModulesResponse>;
+     */
+    listProductModules(config?: AxiosRequestConfig): Promise<operations.ListProductModulesResponse>;
     /**
-     * updateProductModule - Update Product Module
+     * Update Product Module
      *
+     * @remarks
      * Sets the provided properties to a Product Module. Return an updated Product Module
-    **/
-    updateProductModule(req: operations.UpdateProductModuleRequest, config?: AxiosRequestConfig): Promise<operations.UpdateProductModuleResponse>;
+     */
+    updateProductModule(req: operations.UpdateProductModuleRequest, security: operations.UpdateProductModuleSecurity, config?: AxiosRequestConfig): Promise<operations.UpdateProductModuleResponse>;
 }

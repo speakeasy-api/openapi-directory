@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostRetrieveEnvironmentInfoActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTRetrieveEnvironmentInfoActionEnum {
     RetrieveEnvironmentInfo = "RetrieveEnvironmentInfo"
 }
-export declare enum PostRetrieveEnvironmentInfoVersionEnum {
+export declare enum POSTRetrieveEnvironmentInfoVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostRetrieveEnvironmentInfoQueryParams extends SpeakeasyBase {
-    action: PostRetrieveEnvironmentInfoActionEnum;
-    version: PostRetrieveEnvironmentInfoVersionEnum;
-}
-export declare class PostRetrieveEnvironmentInfoHeaders extends SpeakeasyBase {
+export declare class POSTRetrieveEnvironmentInfoRequest extends SpeakeasyBase {
+    action: POSTRetrieveEnvironmentInfoActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTRetrieveEnvironmentInfoVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostRetrieveEnvironmentInfoHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostRetrieveEnvironmentInfoRequest extends SpeakeasyBase {
-    queryParams: PostRetrieveEnvironmentInfoQueryParams;
-    headers: PostRetrieveEnvironmentInfoHeaders;
-    request?: Uint8Array;
-}
-export declare class PostRetrieveEnvironmentInfoResponse extends SpeakeasyBase {
+export declare class POSTRetrieveEnvironmentInfoResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

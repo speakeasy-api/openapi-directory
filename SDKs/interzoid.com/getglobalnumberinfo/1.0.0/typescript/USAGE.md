@@ -1,17 +1,17 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetglobalnumberinfoRequest, GetglobalnumberinfoResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetglobalnumberinfoRequest,
+  GetglobalnumberinfoResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetglobalnumberinfoRequest = {
-  queryParams: {
-    intlnumber: "sit",
-    license: "voluptas",
-  },
+  intlnumber: "corrupti",
+  license: "provident",
 };
 
 sdk.globalPhoneNumberInformation.getglobalnumberinfo(req).then((res: GetglobalnumberinfoResponse | AxiosError) => {

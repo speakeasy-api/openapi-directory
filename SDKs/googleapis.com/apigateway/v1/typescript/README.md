@@ -6,107 +6,174 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/apigateway/v1/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/apigateway/v1/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { ApigatewayProjectsLocationsApisConfigsCreateRequest, ApigatewayProjectsLocationsApisConfigsCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  ApigatewayProjectsLocationsApisConfigsCreateRequest,
+  ApigatewayProjectsLocationsApisConfigsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: ApigatewayProjectsLocationsApisConfigsCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    apiConfigId: "consequuntur",
-    callback: "dolor",
-    fields: "expedita",
-    key: "voluptas",
-    oauthToken: "fugit",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    uploadType: "rerum",
-    uploadProtocol: "dicta",
-  },
-  request: {
-    displayName: "debitis",
-    gatewayServiceAccount: "voluptatum",
+  dollarXgafv: XgafvEnum.Two,
+  apigatewayApiConfigInput: {
+    displayName: "provident",
+    gatewayServiceAccount: "distinctio",
     grpcServices: [
       {
         fileDescriptorSet: {
-          contents: "ut",
-          path: "dolorem",
+          contents: "unde",
+          path: "nulla",
         },
         source: [
           {
-            contents: "voluptate",
-            path: "iste",
+            contents: "illum",
+            path: "vel",
           },
           {
-            contents: "vitae",
-            path: "totam",
+            contents: "error",
+            path: "deserunt",
+          },
+          {
+            contents: "suscipit",
+            path: "iure",
+          },
+        ],
+      },
+      {
+        fileDescriptorSet: {
+          contents: "magnam",
+          path: "debitis",
+        },
+        source: [
+          {
+            contents: "delectus",
+            path: "tempora",
+          },
+        ],
+      },
+      {
+        fileDescriptorSet: {
+          contents: "suscipit",
+          path: "molestiae",
+        },
+        source: [
+          {
+            contents: "placeat",
+            path: "voluptatum",
+          },
+          {
+            contents: "iusto",
+            path: "excepturi",
+          },
+          {
+            contents: "nisi",
+            path: "recusandae",
+          },
+          {
+            contents: "temporibus",
+            path: "ab",
+          },
+        ],
+      },
+      {
+        fileDescriptorSet: {
+          contents: "quis",
+          path: "veritatis",
+        },
+        source: [
+          {
+            contents: "perferendis",
+            path: "ipsam",
+          },
+          {
+            contents: "repellendus",
+            path: "sapiente",
+          },
+          {
+            contents: "quo",
+            path: "odit",
           },
         ],
       },
     ],
     labels: {
-      "illum": "debitis",
+      "at": "maiores",
+      "molestiae": "quod",
+      "quod": "esse",
+      "totam": "porro",
     },
     managedServiceConfigs: [
       {
-        contents: "odio",
-        path: "dolore",
+        contents: "dicta",
+        path: "nam",
       },
       {
-        contents: "id",
-        path: "aspernatur",
+        contents: "officia",
+        path: "occaecati",
+      },
+      {
+        contents: "fugit",
+        path: "deleniti",
       },
     ],
     openapiDocuments: [
       {
         document: {
-          contents: "totam",
+          contents: "optio",
+          path: "totam",
+        },
+      },
+      {
+        document: {
+          contents: "beatae",
           path: "commodi",
         },
       },
       {
         document: {
-          contents: "quis",
-          path: "est",
+          contents: "molestiae",
+          path: "modi",
         },
       },
       {
         document: {
-          contents: "aut",
-          path: "odit",
+          contents: "qui",
+          path: "impedit",
         },
       },
     ],
   },
+  accessToken: "cum",
+  alt: AltEnum.Media,
+  apiConfigId: "ipsum",
+  callback: "excepturi",
+  fields: "aspernatur",
+  key: "perferendis",
+  oauthToken: "ad",
+  parent: "natus",
+  prettyPrint: false,
+  quotaUser: "sed",
+  uploadType: "iste",
+  uploadProtocol: "dolor",
 };
 
 sdk.projects.apigatewayProjectsLocationsApisConfigsCreate(req).then((res: ApigatewayProjectsLocationsApisConfigsCreateResponse | AxiosError) => {
@@ -116,7 +183,8 @@ sdk.projects.apigatewayProjectsLocationsApisConfigsCreate(req).then((res: Apigat
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### projects
 
@@ -134,8 +202,19 @@ sdk.projects.apigatewayProjectsLocationsApisConfigsCreate(req).then((res: Apigat
 * `apigatewayProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 * `apigatewayProjectsLocationsOperationsDelete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 * `apigatewayProjectsLocationsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-* `apigatewayProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
-
+* `apigatewayProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum DeleteVpceConfigurationXAmzTargetEnum {
-    DeviceFarm20150623DeleteVpceConfiguration = "DeviceFarm_20150623.DeleteVPCEConfiguration"
+import { AxiosResponse } from "axios";
+export declare enum DeleteVPCEConfigurationXAmzTargetEnum {
+    DeviceFarm20150623DeleteVPCEConfiguration = "DeviceFarm_20150623.DeleteVPCEConfiguration"
 }
-export declare class DeleteVpceConfigurationHeaders extends SpeakeasyBase {
+export declare class DeleteVPCEConfigurationRequest extends SpeakeasyBase {
+    deleteVPCEConfigurationRequest: shared.DeleteVPCEConfigurationRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,18 +13,30 @@ export declare class DeleteVpceConfigurationHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: DeleteVpceConfigurationXAmzTargetEnum;
+    xAmzTarget: DeleteVPCEConfigurationXAmzTargetEnum;
 }
-export declare class DeleteVpceConfigurationRequest extends SpeakeasyBase {
-    headers: DeleteVpceConfigurationHeaders;
-    request: shared.DeleteVpceConfigurationRequest;
-}
-export declare class DeleteVpceConfigurationResponse extends SpeakeasyBase {
+export declare class DeleteVPCEConfigurationResponse extends SpeakeasyBase {
+    /**
+     * ArgumentException
+     */
     argumentException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteVPCEConfigurationResult?: Record<string, any>;
+    /**
+     * InvalidOperationException
+     */
     invalidOperationException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
-    serviceAccountException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceAccountException
+     */
+    serviceAccountException?: any;
 }

@@ -1,18 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreateFolderHeaders extends SpeakeasyBase {
-    xeroTenantId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class CreateFolderSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class CreateFolderRequest extends SpeakeasyBase {
-    headers: CreateFolderHeaders;
-    request?: any;
-    security: CreateFolderSecurity;
+    folder?: shared.Folder;
+    /**
+     * Xero identifier for Tenant
+     */
+    xeroTenantId: string;
 }
 export declare class CreateFolderResponse extends SpeakeasyBase {
     contentType: string;
-    folder?: any;
+    /**
+     * search results matching criteria
+     */
+    folder?: shared.Folder;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

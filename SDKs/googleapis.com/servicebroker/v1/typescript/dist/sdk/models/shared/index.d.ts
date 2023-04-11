@@ -5,5 +5,4 @@ export * from "./googleiamv1setiampolicyrequest";
 export * from "./googleiamv1testiampermissionsrequest";
 export * from "./googleiamv1testiampermissionsresponse";
 export * from "./googletypeexpr";
-export * from "./security";
 export * from "./xgafvenum";

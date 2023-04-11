@@ -6,104 +6,101 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/firebasedynamiclinks/v1/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/firebasedynamiclinks/v1/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { FirebasedynamiclinksManagedShortLinksCreateRequest, FirebasedynamiclinksManagedShortLinksCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  FirebasedynamiclinksManagedShortLinksCreateRequest,
+  FirebasedynamiclinksManagedShortLinksCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  SuffixOptionEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: FirebasedynamiclinksManagedShortLinksCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "voluptas",
-    alt: "media",
-    callback: "expedita",
-    fields: "consequuntur",
-    key: "dolor",
-    oauthToken: "expedita",
-    prettyPrint: true,
-    quotaUser: "fugit",
-    uploadType: "et",
-    uploadProtocol: "nihil",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  createManagedShortLinkRequest: {
     dynamicLinkInfo: {
       analyticsInfo: {
         googlePlayAnalytics: {
-          gclid: "rerum",
-          utmCampaign: "dicta",
-          utmContent: "debitis",
-          utmMedium: "voluptatum",
-          utmSource: "et",
-          utmTerm: "ut",
+          gclid: "provident",
+          utmCampaign: "distinctio",
+          utmContent: "quibusdam",
+          utmMedium: "unde",
+          utmSource: "nulla",
+          utmTerm: "corrupti",
         },
         itunesConnectAnalytics: {
-          at: "dolorem",
-          ct: "et",
-          mt: "voluptate",
-          pt: "iste",
+          at: "illum",
+          ct: "vel",
+          mt: "error",
+          pt: "deserunt",
         },
       },
       androidInfo: {
-        androidFallbackLink: "vitae",
-        androidLink: "totam",
-        androidMinPackageVersionCode: "dolores",
-        androidPackageName: "illum",
+        androidFallbackLink: "suscipit",
+        androidLink: "iure",
+        androidMinPackageVersionCode: "magnam",
+        androidPackageName: "debitis",
       },
       desktopInfo: {
-        desktopFallbackLink: "debitis",
+        desktopFallbackLink: "ipsa",
       },
-      domainUriPrefix: "vel",
-      dynamicLinkDomain: "odio",
+      domainUriPrefix: "delectus",
+      dynamicLinkDomain: "tempora",
       iosInfo: {
-        iosAppStoreId: "dolore",
-        iosBundleId: "id",
-        iosCustomScheme: "aspernatur",
-        iosFallbackLink: "accusantium",
-        iosIpadBundleId: "totam",
-        iosIpadFallbackLink: "commodi",
-        iosMinimumVersion: "quis",
+        iosAppStoreId: "suscipit",
+        iosBundleId: "molestiae",
+        iosCustomScheme: "minus",
+        iosFallbackLink: "placeat",
+        iosIpadBundleId: "voluptatum",
+        iosIpadFallbackLink: "iusto",
+        iosMinimumVersion: "excepturi",
       },
-      link: "est",
+      link: "nisi",
       navigationInfo: {
-        enableForcedRedirect: true,
+        enableForcedRedirect: false,
       },
       socialMetaTagInfo: {
-        socialDescription: "odit",
-        socialImageLink: "non",
-        socialTitle: "voluptas",
+        socialDescription: "recusandae",
+        socialImageLink: "temporibus",
+        socialTitle: "ab",
       },
     },
-    longDynamicLink: "omnis",
-    name: "aut",
-    sdkVersion: "illo",
+    longDynamicLink: "quis",
+    name: "veritatis",
+    sdkVersion: "deserunt",
     suffix: {
-      customSuffix: "sed",
-      option: "CUSTOM",
+      customSuffix: "perferendis",
+      option: SuffixOptionEnum.Unguessable,
     },
   },
+  accessToken: "repellendus",
+  alt: AltEnum.Proto,
+  callback: "quo",
+  fields: "odit",
+  key: "at",
+  oauthToken: "at",
+  prettyPrint: false,
+  quotaUser: "maiores",
+  uploadType: "molestiae",
+  uploadProtocol: "quod",
 };
 
 sdk.managedShortLinks.firebasedynamiclinksManagedShortLinksCreate(req).then((res: FirebasedynamiclinksManagedShortLinksCreateResponse | AxiosError) => {
@@ -113,7 +110,8 @@ sdk.managedShortLinks.firebasedynamiclinksManagedShortLinksCreate(req).then((res
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### managedShortLinks
 
@@ -128,7 +126,18 @@ sdk.managedShortLinks.firebasedynamiclinksManagedShortLinksCreate(req).then((res
 * `firebasedynamiclinksGetLinkStats` - Fetches analytics stats of a short Dynamic Link for a given duration. Metrics include number of clicks, redirects, installs, app first opens, and app reopens.
 * `firebasedynamiclinksInstallAttribution` - Get iOS strong/weak-match info for post-install attribution.
 * `firebasedynamiclinksReopenAttribution` - Get iOS reopen attribution for app universal link open deeplinking.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum BatchGetImageXAmzTargetEnum {
     AmazonEc2ContainerRegistryV20150921BatchGetImage = "AmazonEC2ContainerRegistry_V20150921.BatchGetImage"
 }
-export declare class BatchGetImageHeaders extends SpeakeasyBase {
+export declare class BatchGetImageRequest extends SpeakeasyBase {
+    batchGetImageRequest: shared.BatchGetImageRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class BatchGetImageHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: BatchGetImageXAmzTargetEnum;
 }
-export declare class BatchGetImageRequest extends SpeakeasyBase {
-    headers: BatchGetImageHeaders;
-    request: shared.BatchGetImageRequest;
-}
 export declare class BatchGetImageResponse extends SpeakeasyBase {
+    /**
+     * Success
+     */
     batchGetImageResponse?: shared.BatchGetImageResponse;
     contentType: string;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * RepositoryNotFoundException
+     */
     repositoryNotFoundException?: any;
+    /**
+     * ServerException
+     */
     serverException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

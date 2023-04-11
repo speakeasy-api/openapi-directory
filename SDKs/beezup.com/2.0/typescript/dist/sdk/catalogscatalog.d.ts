@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class CatalogsCatalog {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,71 +9,73 @@ export declare class CatalogsCatalog {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * catalogStoreIndex - Get the index of the catalog API for this store
+     * Get the index of the catalog API for this store
      *
+     * @remarks
      * The operation will give you all the operations you will be able to do on this store for this API.
-    **/
+     */
     catalogStoreIndex(req: operations.CatalogStoreIndexRequest, config?: AxiosRequestConfig): Promise<operations.CatalogStoreIndexResponse>;
     /**
-     * catalogChangeCatalogColumnUserName - Change Catalog Column User Name
-    **/
+     * Change Catalog Column User Name
+     */
     catalogChangeCatalogColumnUserName(req: operations.CatalogChangeCatalogColumnUserNameRequest, config?: AxiosRequestConfig): Promise<operations.CatalogChangeCatalogColumnUserNameResponse>;
     /**
-     * catalogChangeCustomColumnExpression - Change custom column expression
-    **/
+     * Change custom column expression
+     */
     catalogChangeCustomColumnExpression(req: operations.CatalogChangeCustomColumnExpressionRequest, config?: AxiosRequestConfig): Promise<operations.CatalogChangeCustomColumnExpressionResponse>;
     /**
-     * catalogChangeCustomColumnUserName - Change Custom Column User Name
-    **/
+     * Change Custom Column User Name
+     */
     catalogChangeCustomColumnUserName(req: operations.CatalogChangeCustomColumnUserNameRequest, config?: AxiosRequestConfig): Promise<operations.CatalogChangeCustomColumnUserNameResponse>;
     /**
-     * catalogComputeExpression - Compute the expression for this catalog.
-    **/
+     * Compute the expression for this catalog.
+     */
     catalogComputeExpression(req: operations.CatalogComputeExpressionRequest, config?: AxiosRequestConfig): Promise<operations.CatalogComputeExpressionResponse>;
     /**
-     * catalogDeleteCustomColumn - Delete custom column
-    **/
+     * Delete custom column
+     */
     catalogDeleteCustomColumn(req: operations.CatalogDeleteCustomColumnRequest, config?: AxiosRequestConfig): Promise<operations.CatalogDeleteCustomColumnResponse>;
     /**
-     * catalogGetCatalogColumns - Get catalog column list
-    **/
+     * Get catalog column list
+     */
     catalogGetCatalogColumns(req: operations.CatalogGetCatalogColumnsRequest, config?: AxiosRequestConfig): Promise<operations.CatalogGetCatalogColumnsResponse>;
     /**
-     * catalogGetCategories - Get category list
-    **/
+     * Get category list
+     */
     catalogGetCategories(req: operations.CatalogGetCategoriesRequest, config?: AxiosRequestConfig): Promise<operations.CatalogGetCategoriesResponse>;
     /**
-     * catalogGetCustomColumnExpression - Get the encrypted custom column expression
-    **/
+     * Get the encrypted custom column expression
+     */
     catalogGetCustomColumnExpression(req: operations.CatalogGetCustomColumnExpressionRequest, config?: AxiosRequestConfig): Promise<operations.CatalogGetCustomColumnExpressionResponse>;
     /**
-     * catalogGetCustomColumns - Get custom column list
-    **/
+     * Get custom column list
+     */
     catalogGetCustomColumns(req: operations.CatalogGetCustomColumnsRequest, config?: AxiosRequestConfig): Promise<operations.CatalogGetCustomColumnsResponse>;
     /**
-     * catalogGetProductByProductId - Get product by ProductId
-    **/
+     * Get product by ProductId
+     */
     catalogGetProductByProductId(req: operations.CatalogGetProductByProductIdRequest, config?: AxiosRequestConfig): Promise<operations.CatalogGetProductByProductIdResponse>;
     /**
-     * catalogGetProductBySku - Get product by Sku
-    **/
+     * Get product by Sku
+     */
     catalogGetProductBySku(req: operations.CatalogGetProductBySkuRequest, config?: AxiosRequestConfig): Promise<operations.CatalogGetProductBySkuResponse>;
     /**
-     * catalogGetProducts - Get product list
-    **/
+     * Get product list
+     */
     catalogGetProducts(req: operations.CatalogGetProductsRequest, config?: AxiosRequestConfig): Promise<operations.CatalogGetProductsResponse>;
     /**
-     * catalogGetRandomProducts - Get random product list
+     * Get random product list
      *
+     * @remarks
      * We will return 10 products randomly selected with all product values
-    **/
+     */
     catalogGetRandomProducts(req: operations.CatalogGetRandomProductsRequest, config?: AxiosRequestConfig): Promise<operations.CatalogGetRandomProductsResponse>;
     /**
-     * catalogSaveCustomColumn - Create or replace a custom column
-    **/
+     * Create or replace a custom column
+     */
     catalogSaveCustomColumn(req: operations.CatalogSaveCustomColumnRequest, config?: AxiosRequestConfig): Promise<operations.CatalogSaveCustomColumnResponse>;
     /**
-     * importationGetManualUpdateLastInputConfig - Get the last input configuration
-    **/
+     * Get the last input configuration
+     */
     importationGetManualUpdateLastInputConfig(req: operations.ImportationGetManualUpdateLastInputConfigRequest, config?: AxiosRequestConfig): Promise<operations.ImportationGetManualUpdateLastInputConfigResponse>;
 }

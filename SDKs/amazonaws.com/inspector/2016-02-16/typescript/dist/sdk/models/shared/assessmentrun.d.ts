@@ -1,11 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { AssessmentRunNotification } from "./assessmentrunnotification";
-import { AssessmentRunStateEnum } from "./assessmentrunstateenum";
 import { AssessmentRunStateChange } from "./assessmentrunstatechange";
+import { AssessmentRunStateEnum } from "./assessmentrunstateenum";
 import { Attribute } from "./attribute";
 /**
  * <p>A snapshot of an Amazon Inspector assessment run that contains the findings of the assessment run .</p> <p>Used as the response element in the <a>DescribeAssessmentRuns</a> action.</p>
-**/
+ */
 export declare class AssessmentRun extends SpeakeasyBase {
     arn: string;
     assessmentTemplateArn: string;

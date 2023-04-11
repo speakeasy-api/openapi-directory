@@ -1,11 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { SourceAuth } from "./sourceauth";
 import { BuildStatusConfig } from "./buildstatusconfig";
 import { GitSubmodulesConfig } from "./gitsubmodulesconfig";
+import { SourceAuth } from "./sourceauth";
 import { SourceTypeEnum } from "./sourcetypeenum";
 /**
  * Information about the build input source code for the build project.
-**/
+ */
 export declare class ProjectSource extends SpeakeasyBase {
     auth?: SourceAuth;
     buildStatusConfig?: BuildStatusConfig;

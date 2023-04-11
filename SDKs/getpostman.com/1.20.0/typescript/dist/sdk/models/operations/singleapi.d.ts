@@ -1,8 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SingleApiPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class SingleApiRequest extends SpeakeasyBase {
     apiId: string;
 }
-export declare class SingleApi200ApplicationJsonApi extends SpeakeasyBase {
+export declare class SingleApi200ApplicationJSONApi extends SpeakeasyBase {
     createdAt?: string;
     createdBy?: string;
     description?: string;
@@ -11,14 +12,18 @@ export declare class SingleApi200ApplicationJsonApi extends SpeakeasyBase {
     summary?: string;
     updatedAt?: string;
 }
-export declare class SingleApi200ApplicationJson extends SpeakeasyBase {
-    api?: SingleApi200ApplicationJsonApi;
-}
-export declare class SingleApiRequest extends SpeakeasyBase {
-    pathParams: SingleApiPathParams;
+/**
+ * Get single API
+ */
+export declare class SingleApi200ApplicationJSON extends SpeakeasyBase {
+    api?: SingleApi200ApplicationJSONApi;
 }
 export declare class SingleApiResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    singleApi200ApplicationJSONObject?: SingleApi200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Get single API
+     */
+    singleApi200ApplicationJSONObject?: SingleApi200ApplicationJSON;
 }

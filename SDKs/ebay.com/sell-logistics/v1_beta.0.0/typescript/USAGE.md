@@ -1,21 +1,16 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CancelShipmentRequest, CancelShipmentResponse } from "openapi/src/sdk/models/operations";
+import {
+  CancelShipmentRequest,
+  CancelShipmentResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: CancelShipmentRequest = {
-  security: {
-    apiAuth: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    shipmentId: "sit",
-  },
+  shipmentId: "corrupti",
 };
 
 sdk.shipment.cancelShipment(req).then((res: CancelShipmentResponse | AxiosError) => {

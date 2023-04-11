@@ -6,7 +6,7 @@ export declare enum GeoFacilityTypeEnum {
 }
 /**
  * GeoJSON-complaint Feature object describing a VA Facility
-**/
+ */
 export declare class GeoFacility extends SpeakeasyBase {
     geometry: Geometry;
     properties: Properties;

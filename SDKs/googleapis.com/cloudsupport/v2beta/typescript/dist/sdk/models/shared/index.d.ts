@@ -23,5 +23,4 @@ export * from "./media";
 export * from "./objectid";
 export * from "./searchcaseclassificationsresponse";
 export * from "./searchcasesresponse";
-export * from "./security";
 export * from "./xgafvenum";

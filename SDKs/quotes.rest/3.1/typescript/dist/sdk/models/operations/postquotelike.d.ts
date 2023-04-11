@@ -1,16 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class PostQuoteLikeQueryParams extends SpeakeasyBase {
-    quoteId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PostQuoteLikeSecurity extends SpeakeasyBase {
-    xTheySaidSoApiSecret: shared.SchemeXTheySaidSoApiSecret;
+    xTheySaidSoApiSecret: string;
 }
 export declare class PostQuoteLikeRequest extends SpeakeasyBase {
-    queryParams: PostQuoteLikeQueryParams;
-    security: PostQuoteLikeSecurity;
+    /**
+     * Quote ID
+     */
+    quoteId: string;
 }
 export declare class PostQuoteLikeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

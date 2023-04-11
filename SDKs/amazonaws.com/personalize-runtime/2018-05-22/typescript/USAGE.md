@@ -1,43 +1,47 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetPersonalizedRankingRequest, GetPersonalizedRankingResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GetPersonalizedRankingRequest,
+  GetPersonalizedRankingResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: GetPersonalizedRankingRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
-    campaignArn: "voluptas",
+});
+
+const req: GetPersonalizedRankingRequest = {
+  requestBody: {
+    campaignArn: "corrupti",
     context: {
-      "et": "nihil",
+      "distinctio": "quibusdam",
+      "unde": "nulla",
+      "corrupti": "illum",
     },
-    filterArn: "rerum",
+    filterArn: "vel",
     filterValues: {
-      "debitis": "voluptatum",
-      "et": "ut",
-      "dolorem": "et",
+      "deserunt": "suscipit",
+      "iure": "magnam",
+      "debitis": "ipsa",
     },
     inputList: [
-      "iste",
+      "tempora",
+      "suscipit",
+      "molestiae",
+      "minus",
     ],
-    userId: "vitae",
+    userId: "placeat",
   },
+  xAmzAlgorithm: "voluptatum",
+  xAmzContentSha256: "iusto",
+  xAmzCredential: "excepturi",
+  xAmzDate: "nisi",
+  xAmzSecurityToken: "recusandae",
+  xAmzSignature: "temporibus",
+  xAmzSignedHeaders: "ab",
 };
 
 sdk.getPersonalizedRanking(req).then((res: GetPersonalizedRankingResponse | AxiosError) => {

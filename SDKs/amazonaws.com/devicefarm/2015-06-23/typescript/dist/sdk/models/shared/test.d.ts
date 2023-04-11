@@ -6,7 +6,7 @@ import { ExecutionStatusEnum } from "./executionstatusenum";
 import { TestTypeEnum } from "./testtypeenum";
 /**
  * Represents a condition that is evaluated.
-**/
+ */
 export declare class Test extends SpeakeasyBase {
     arn?: string;
     counters?: Counters;

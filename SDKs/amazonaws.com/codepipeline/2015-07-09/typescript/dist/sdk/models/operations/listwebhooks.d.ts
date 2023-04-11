@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListWebhooksQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListWebhooksXAmzTargetEnum {
     CodePipeline20150709ListWebhooks = "CodePipeline_20150709.ListWebhooks"
 }
-export declare class ListWebhooksHeaders extends SpeakeasyBase {
+export declare class ListWebhooksRequest extends SpeakeasyBase {
+    listWebhooksInput: shared.ListWebhooksInput;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,15 +23,20 @@ export declare class ListWebhooksHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListWebhooksXAmzTargetEnum;
 }
-export declare class ListWebhooksRequest extends SpeakeasyBase {
-    queryParams: ListWebhooksQueryParams;
-    headers: ListWebhooksHeaders;
-    request: shared.ListWebhooksInput;
-}
 export declare class ListWebhooksResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * Success
+     */
     listWebhooksOutput?: shared.ListWebhooksOutput;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

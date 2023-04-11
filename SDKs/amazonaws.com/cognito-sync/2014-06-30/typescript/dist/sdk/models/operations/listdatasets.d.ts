@@ -1,14 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListDatasetsPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListDatasetsRequest extends SpeakeasyBase {
+    /**
+     * A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. GUID generation is unique within a region.
+     */
     identityId: string;
+    /**
+     * A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. GUID generation is unique within a region.
+     */
     identityPoolId: string;
-}
-export declare class ListDatasetsQueryParams extends SpeakeasyBase {
-    maxResults?: number;
-    nextToken?: string;
-}
-export declare class ListDatasetsHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,18 +17,37 @@ export declare class ListDatasetsHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class ListDatasetsRequest extends SpeakeasyBase {
-    pathParams: ListDatasetsPathParams;
-    queryParams: ListDatasetsQueryParams;
-    headers: ListDatasetsHeaders;
+    /**
+     * The maximum number of results to be returned.
+     */
+    maxResults?: number;
+    /**
+     * A pagination token for obtaining the next page of results.
+     */
+    nextToken?: string;
 }
 export declare class ListDatasetsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalErrorException
+     */
     internalErrorException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * Success
+     */
     listDatasetsResponse?: shared.ListDatasetsResponse;
+    /**
+     * NotAuthorizedException
+     */
     notAuthorizedException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

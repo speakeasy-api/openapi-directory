@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Properties {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,87 +9,91 @@ export declare class Properties {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * analyticsadminPropertiesAcknowledgeUserDataCollection - Acknowledges the terms of user data collection for the specified property. This acknowledgement must be completed (either in the Google Analytics UI or via this API) before MeasurementProtocolSecret resources may be created.
-    **/
-    analyticsadminPropertiesAcknowledgeUserDataCollection(req: operations.AnalyticsadminPropertiesAcknowledgeUserDataCollectionRequest, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesAcknowledgeUserDataCollectionResponse>;
+     * Acknowledges the terms of user data collection for the specified property. This acknowledgement must be completed (either in the Google Analytics UI or through this API) before MeasurementProtocolSecret resources may be created.
+     */
+    analyticsadminPropertiesAcknowledgeUserDataCollection(req: operations.AnalyticsadminPropertiesAcknowledgeUserDataCollectionRequest, security: operations.AnalyticsadminPropertiesAcknowledgeUserDataCollectionSecurity, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesAcknowledgeUserDataCollectionResponse>;
     /**
-     * analyticsadminPropertiesConversionEventsCreate - Creates a conversion event with the specified attributes.
-    **/
-    analyticsadminPropertiesConversionEventsCreate(req: operations.AnalyticsadminPropertiesConversionEventsCreateRequest, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesConversionEventsCreateResponse>;
+     * Creates a conversion event with the specified attributes.
+     */
+    analyticsadminPropertiesConversionEventsCreate(req: operations.AnalyticsadminPropertiesConversionEventsCreateRequest, security: operations.AnalyticsadminPropertiesConversionEventsCreateSecurity, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesConversionEventsCreateResponse>;
     /**
-     * analyticsadminPropertiesConversionEventsList - Returns a list of conversion events in the specified parent property. Returns an empty list if no conversion events are found.
-    **/
-    analyticsadminPropertiesConversionEventsList(req: operations.AnalyticsadminPropertiesConversionEventsListRequest, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesConversionEventsListResponse>;
+     * Returns a list of conversion events in the specified parent property. Returns an empty list if no conversion events are found.
+     */
+    analyticsadminPropertiesConversionEventsList(req: operations.AnalyticsadminPropertiesConversionEventsListRequest, security: operations.AnalyticsadminPropertiesConversionEventsListSecurity, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesConversionEventsListResponse>;
     /**
-     * analyticsadminPropertiesCreate - Creates an "GA4" property with the specified location and attributes.
-    **/
-    analyticsadminPropertiesCreate(req: operations.AnalyticsadminPropertiesCreateRequest, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesCreateResponse>;
+     * Creates an "GA4" property with the specified location and attributes.
+     */
+    analyticsadminPropertiesCreate(req: operations.AnalyticsadminPropertiesCreateRequest, security: operations.AnalyticsadminPropertiesCreateSecurity, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesCreateResponse>;
     /**
-     * analyticsadminPropertiesCustomDimensionsCreate - Creates a CustomDimension.
-    **/
-    analyticsadminPropertiesCustomDimensionsCreate(req: operations.AnalyticsadminPropertiesCustomDimensionsCreateRequest, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesCustomDimensionsCreateResponse>;
+     * Creates a CustomDimension.
+     */
+    analyticsadminPropertiesCustomDimensionsCreate(req: operations.AnalyticsadminPropertiesCustomDimensionsCreateRequest, security: operations.AnalyticsadminPropertiesCustomDimensionsCreateSecurity, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesCustomDimensionsCreateResponse>;
     /**
-     * analyticsadminPropertiesCustomDimensionsList - Lists CustomDimensions on a property.
-    **/
-    analyticsadminPropertiesCustomDimensionsList(req: operations.AnalyticsadminPropertiesCustomDimensionsListRequest, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesCustomDimensionsListResponse>;
+     * Lists CustomDimensions on a property.
+     */
+    analyticsadminPropertiesCustomDimensionsList(req: operations.AnalyticsadminPropertiesCustomDimensionsListRequest, security: operations.AnalyticsadminPropertiesCustomDimensionsListSecurity, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesCustomDimensionsListResponse>;
     /**
-     * analyticsadminPropertiesCustomMetricsArchive - Archives a CustomMetric on a property.
-    **/
-    analyticsadminPropertiesCustomMetricsArchive(req: operations.AnalyticsadminPropertiesCustomMetricsArchiveRequest, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesCustomMetricsArchiveResponse>;
+     * Archives a CustomMetric on a property.
+     */
+    analyticsadminPropertiesCustomMetricsArchive(req: operations.AnalyticsadminPropertiesCustomMetricsArchiveRequest, security: operations.AnalyticsadminPropertiesCustomMetricsArchiveSecurity, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesCustomMetricsArchiveResponse>;
     /**
-     * analyticsadminPropertiesCustomMetricsCreate - Creates a CustomMetric.
-    **/
-    analyticsadminPropertiesCustomMetricsCreate(req: operations.AnalyticsadminPropertiesCustomMetricsCreateRequest, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesCustomMetricsCreateResponse>;
+     * Creates a CustomMetric.
+     */
+    analyticsadminPropertiesCustomMetricsCreate(req: operations.AnalyticsadminPropertiesCustomMetricsCreateRequest, security: operations.AnalyticsadminPropertiesCustomMetricsCreateSecurity, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesCustomMetricsCreateResponse>;
     /**
-     * analyticsadminPropertiesCustomMetricsList - Lists CustomMetrics on a property.
-    **/
-    analyticsadminPropertiesCustomMetricsList(req: operations.AnalyticsadminPropertiesCustomMetricsListRequest, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesCustomMetricsListResponse>;
+     * Lists CustomMetrics on a property.
+     */
+    analyticsadminPropertiesCustomMetricsList(req: operations.AnalyticsadminPropertiesCustomMetricsListRequest, security: operations.AnalyticsadminPropertiesCustomMetricsListSecurity, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesCustomMetricsListResponse>;
     /**
-     * analyticsadminPropertiesDataStreamsCreate - Creates a DataStream.
-    **/
-    analyticsadminPropertiesDataStreamsCreate(req: operations.AnalyticsadminPropertiesDataStreamsCreateRequest, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesDataStreamsCreateResponse>;
+     * Creates a DataStream.
+     */
+    analyticsadminPropertiesDataStreamsCreate(req: operations.AnalyticsadminPropertiesDataStreamsCreateRequest, security: operations.AnalyticsadminPropertiesDataStreamsCreateSecurity, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesDataStreamsCreateResponse>;
     /**
-     * analyticsadminPropertiesDataStreamsList - Lists DataStreams on a property.
-    **/
-    analyticsadminPropertiesDataStreamsList(req: operations.AnalyticsadminPropertiesDataStreamsListRequest, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesDataStreamsListResponse>;
+     * Lists DataStreams on a property.
+     */
+    analyticsadminPropertiesDataStreamsList(req: operations.AnalyticsadminPropertiesDataStreamsListRequest, security: operations.AnalyticsadminPropertiesDataStreamsListSecurity, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesDataStreamsListResponse>;
     /**
-     * analyticsadminPropertiesDataStreamsMeasurementProtocolSecretsCreate - Creates a measurement protocol secret.
-    **/
-    analyticsadminPropertiesDataStreamsMeasurementProtocolSecretsCreate(req: operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsCreateRequest, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsCreateResponse>;
+     * Creates a measurement protocol secret.
+     */
+    analyticsadminPropertiesDataStreamsMeasurementProtocolSecretsCreate(req: operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsCreateRequest, security: operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsCreateSecurity, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsCreateResponse>;
     /**
-     * analyticsadminPropertiesDataStreamsMeasurementProtocolSecretsGet - Lookup for a single "GA4" MeasurementProtocolSecret.
-    **/
-    analyticsadminPropertiesDataStreamsMeasurementProtocolSecretsGet(req: operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsGetRequest, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsGetResponse>;
+     * Lookup for a single "GA4" MeasurementProtocolSecret.
+     */
+    analyticsadminPropertiesDataStreamsMeasurementProtocolSecretsGet(req: operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsGetRequest, security: operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsGetSecurity, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsGetResponse>;
     /**
-     * analyticsadminPropertiesDataStreamsMeasurementProtocolSecretsList - Returns child MeasurementProtocolSecrets under the specified parent Property.
-    **/
-    analyticsadminPropertiesDataStreamsMeasurementProtocolSecretsList(req: operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsListRequest, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsListResponse>;
+     * Returns child MeasurementProtocolSecrets under the specified parent Property.
+     */
+    analyticsadminPropertiesDataStreamsMeasurementProtocolSecretsList(req: operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsListRequest, security: operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsListSecurity, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsListResponse>;
     /**
-     * analyticsadminPropertiesFirebaseLinksCreate - Creates a FirebaseLink. Properties can have at most one FirebaseLink.
-    **/
-    analyticsadminPropertiesFirebaseLinksCreate(req: operations.AnalyticsadminPropertiesFirebaseLinksCreateRequest, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesFirebaseLinksCreateResponse>;
+     * Creates a FirebaseLink. Properties can have at most one FirebaseLink.
+     */
+    analyticsadminPropertiesFirebaseLinksCreate(req: operations.AnalyticsadminPropertiesFirebaseLinksCreateRequest, security: operations.AnalyticsadminPropertiesFirebaseLinksCreateSecurity, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesFirebaseLinksCreateResponse>;
     /**
-     * analyticsadminPropertiesFirebaseLinksList - Lists FirebaseLinks on a property. Properties can have at most one FirebaseLink.
-    **/
-    analyticsadminPropertiesFirebaseLinksList(req: operations.AnalyticsadminPropertiesFirebaseLinksListRequest, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesFirebaseLinksListResponse>;
+     * Lists FirebaseLinks on a property. Properties can have at most one FirebaseLink.
+     */
+    analyticsadminPropertiesFirebaseLinksList(req: operations.AnalyticsadminPropertiesFirebaseLinksListRequest, security: operations.AnalyticsadminPropertiesFirebaseLinksListSecurity, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesFirebaseLinksListResponse>;
     /**
-     * analyticsadminPropertiesGoogleAdsLinksCreate - Creates a GoogleAdsLink.
-    **/
-    analyticsadminPropertiesGoogleAdsLinksCreate(req: operations.AnalyticsadminPropertiesGoogleAdsLinksCreateRequest, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesGoogleAdsLinksCreateResponse>;
+     * Creates a GoogleAdsLink.
+     */
+    analyticsadminPropertiesGoogleAdsLinksCreate(req: operations.AnalyticsadminPropertiesGoogleAdsLinksCreateRequest, security: operations.AnalyticsadminPropertiesGoogleAdsLinksCreateSecurity, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesGoogleAdsLinksCreateResponse>;
     /**
-     * analyticsadminPropertiesGoogleAdsLinksDelete - Deletes a GoogleAdsLink on a property
-    **/
-    analyticsadminPropertiesGoogleAdsLinksDelete(req: operations.AnalyticsadminPropertiesGoogleAdsLinksDeleteRequest, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesGoogleAdsLinksDeleteResponse>;
+     * Deletes a GoogleAdsLink on a property
+     */
+    analyticsadminPropertiesGoogleAdsLinksDelete(req: operations.AnalyticsadminPropertiesGoogleAdsLinksDeleteRequest, security: operations.AnalyticsadminPropertiesGoogleAdsLinksDeleteSecurity, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesGoogleAdsLinksDeleteResponse>;
     /**
-     * analyticsadminPropertiesGoogleAdsLinksList - Lists GoogleAdsLinks on a property.
-    **/
-    analyticsadminPropertiesGoogleAdsLinksList(req: operations.AnalyticsadminPropertiesGoogleAdsLinksListRequest, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesGoogleAdsLinksListResponse>;
+     * Lists GoogleAdsLinks on a property.
+     */
+    analyticsadminPropertiesGoogleAdsLinksList(req: operations.AnalyticsadminPropertiesGoogleAdsLinksListRequest, security: operations.AnalyticsadminPropertiesGoogleAdsLinksListSecurity, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesGoogleAdsLinksListResponse>;
     /**
-     * analyticsadminPropertiesGoogleAdsLinksPatch - Updates a GoogleAdsLink on a property
-    **/
-    analyticsadminPropertiesGoogleAdsLinksPatch(req: operations.AnalyticsadminPropertiesGoogleAdsLinksPatchRequest, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesGoogleAdsLinksPatchResponse>;
+     * Updates a GoogleAdsLink on a property
+     */
+    analyticsadminPropertiesGoogleAdsLinksPatch(req: operations.AnalyticsadminPropertiesGoogleAdsLinksPatchRequest, security: operations.AnalyticsadminPropertiesGoogleAdsLinksPatchSecurity, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesGoogleAdsLinksPatchResponse>;
     /**
-     * analyticsadminPropertiesList - Returns child Properties under the specified parent Account. Only "GA4" properties will be returned. Properties will be excluded if the caller does not have access. Soft-deleted (ie: "trashed") properties are excluded by default. Returns an empty list if no relevant properties are found.
-    **/
-    analyticsadminPropertiesList(req: operations.AnalyticsadminPropertiesListRequest, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesListResponse>;
+     * Returns child Properties under the specified parent Account. Only "GA4" properties will be returned. Properties will be excluded if the caller does not have access. Soft-deleted (ie: "trashed") properties are excluded by default. Returns an empty list if no relevant properties are found.
+     */
+    analyticsadminPropertiesList(req: operations.AnalyticsadminPropertiesListRequest, security: operations.AnalyticsadminPropertiesListSecurity, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesListResponse>;
+    /**
+     * Returns a customized report of data access records. The report provides records of each time a user reads Google Analytics reporting data. Access records are retained for up to 2 years. Data Access Reports can be requested for a property. The property must be in Google Analytics 360. This method is only available to Administrators. These data access records include GA4 UI Reporting, GA4 UI Explorations, GA4 Data API, and other products like Firebase & Admob that can retrieve data from Google Analytics through a linkage. These records don't include property configuration changes like adding a stream or changing a property's time zone. For configuration change history, see [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+     */
+    analyticsadminPropertiesRunAccessReport(req: operations.AnalyticsadminPropertiesRunAccessReportRequest, security: operations.AnalyticsadminPropertiesRunAccessReportSecurity, config?: AxiosRequestConfig): Promise<operations.AnalyticsadminPropertiesRunAccessReportResponse>;
 }

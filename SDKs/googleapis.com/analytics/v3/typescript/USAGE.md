@@ -1,45 +1,40 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AnalyticsDataGaGetRequest, AnalyticsDataGaGetResponse } from "openapi/src/sdk/models/operations";
+import {
+  AnalyticsDataGaGetRequest,
+  AnalyticsDataGaGetResponse,
+  AnalyticsDataGaGetOutputEnum,
+  AnalyticsDataGaGetSamplingLevelEnum,
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: AnalyticsDataGaGetRequest = {
-  security: {
-    option1: {
-      oauth2: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-      oauth2c: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-    },
-  },
-  queryParams: {
-    alt: "json",
-    dimensions: "voluptas",
-    endDate: "culpa",
-    fields: "expedita",
-    filters: "consequuntur",
-    ids: "dolor",
-    includeEmptyRows: true,
-    key: "voluptas",
-    maxResults: 8274930044578894929,
-    metrics: "et",
-    oauthToken: "nihil",
-    output: "json",
-    prettyPrint: false,
-    quotaUser: "debitis",
-    samplingLevel: "DEFAULT",
-    segment: "et",
-    sort: "ut",
-    startDate: "dolorem",
-    startIndex: 7259475919510918339,
-    userIp: "voluptate",
-  },
+  alt: AltEnum.Json,
+  dimensions: "corrupti",
+  endDate: "provident",
+  fields: "distinctio",
+  filters: "quibusdam",
+  ids: "unde",
+  includeEmptyRows: false,
+  key: "nulla",
+  maxResults: 544883,
+  metrics: "illum",
+  oauthToken: "vel",
+  output: AnalyticsDataGaGetOutputEnum.Json,
+  prettyPrint: false,
+  quotaUser: "deserunt",
+  samplingLevel: AnalyticsDataGaGetSamplingLevelEnum.Faster,
+  segment: "iure",
+  sort: "magnam",
+  startDate: "debitis",
+  startIndex: 56713,
+  userIp: "delectus",
 };
 
 sdk.data.analyticsDataGaGet(req).then((res: AnalyticsDataGaGetResponse | AxiosError) => {

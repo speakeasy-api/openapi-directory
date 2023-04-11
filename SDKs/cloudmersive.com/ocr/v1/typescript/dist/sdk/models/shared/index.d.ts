@@ -21,7 +21,6 @@ export * from "./phototowordswithlocationresult";
 export * from "./point";
 export * from "./receiptlineitem";
 export * from "./receiptrecognitionresult";
-export * from "./security";
 export * from "./tablecellresult";
 export * from "./tableresult";
 export * from "./tablerowresult";

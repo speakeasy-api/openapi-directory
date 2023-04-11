@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class RemoveEventSourcePathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class RemoveEventSourceRequest extends SpeakeasyBase {
+    /**
+     * The event source mapping ID.
+     */
     uuid: string;
-}
-export declare class RemoveEventSourceHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,14 +14,20 @@ export declare class RemoveEventSourceHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class RemoveEventSourceRequest extends SpeakeasyBase {
-    pathParams: RemoveEventSourcePathParams;
-    headers: RemoveEventSourceHeaders;
-}
 export declare class RemoveEventSourceResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: shared.InvalidParameterValueException;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: shared.ResourceNotFoundException;
-    serviceException?: shared.ServiceException;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceException
+     */
+    serviceException?: shared.ServiceException;
 }

@@ -1,14 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ContainerServiceDeployment } from "./containerservicedeployment";
-import { ResourceLocation } from "./resourcelocation";
 import { ContainerServicePowerNameEnum } from "./containerservicepowernameenum";
-import { ResourceTypeEnum } from "./resourcetypeenum";
-import { ContainerServiceStateEnum } from "./containerservicestateenum";
 import { ContainerServiceStateDetail } from "./containerservicestatedetail";
+import { ContainerServiceStateEnum } from "./containerservicestateenum";
+import { PrivateRegistryAccess } from "./privateregistryaccess";
+import { ResourceLocation } from "./resourcelocation";
+import { ResourceTypeEnum } from "./resourcetypeenum";
 import { Tag } from "./tag";
 /**
  * Describes an Amazon Lightsail container service.
-**/
+ */
 export declare class ContainerService extends SpeakeasyBase {
     arn?: string;
     containerServiceName?: string;
@@ -21,6 +22,7 @@ export declare class ContainerService extends SpeakeasyBase {
     powerId?: string;
     principalArn?: string;
     privateDomainName?: string;
+    privateRegistryAccess?: PrivateRegistryAccess;
     publicDomainNames?: Record<string, string[]>;
     resourceType?: ResourceTypeEnum;
     scale?: number;

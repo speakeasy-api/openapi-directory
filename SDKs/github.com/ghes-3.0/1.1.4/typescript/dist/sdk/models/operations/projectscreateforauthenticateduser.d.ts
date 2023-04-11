@@ -1,21 +1,41 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class ProjectsCreateForAuthenticatedUserRequestBody extends SpeakeasyBase {
+    /**
+     * Body of the project
+     */
     body?: string;
+    /**
+     * Name of the project
+     */
     name: string;
 }
-export declare class ProjectsCreateForAuthenticatedUser415ApplicationJson extends SpeakeasyBase {
+/**
+ * Preview header missing
+ */
+export declare class ProjectsCreateForAuthenticatedUser415ApplicationJSON extends SpeakeasyBase {
     documentationUrl: string;
     message: string;
-}
-export declare class ProjectsCreateForAuthenticatedUserRequest extends SpeakeasyBase {
-    request?: ProjectsCreateForAuthenticatedUserRequestBody;
 }
 export declare class ProjectsCreateForAuthenticatedUserResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Requires authentication
+     */
     basicError?: shared.BasicError;
+    /**
+     * Response
+     */
     project?: shared.Project;
-    projectsCreateForAuthenticatedUser415ApplicationJSONObject?: ProjectsCreateForAuthenticatedUser415ApplicationJson;
+    /**
+     * Preview header missing
+     */
+    projectsCreateForAuthenticatedUser415ApplicationJSONObject?: ProjectsCreateForAuthenticatedUser415ApplicationJSON;
+    /**
+     * Validation failed
+     */
     validationErrorSimple?: shared.ValidationErrorSimple;
 }

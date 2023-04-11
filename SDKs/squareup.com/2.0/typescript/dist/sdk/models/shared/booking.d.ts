@@ -1,0 +1,57 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { AppointmentSegment } from "./appointmentsegment";
+/**
+ * Represents a booking as a time-bound service contract for a seller's staff member to provide a specified service
+ *
+ * @remarks
+ * at a given location to a requesting customer in one or more appointment segments.
+ */
+export declare class Booking extends SpeakeasyBase {
+    /**
+     * A list of appointment segments for this booking.
+     */
+    appointmentSegments?: AppointmentSegment[];
+    /**
+     * The timestamp specifying the creation time of this booking, in RFC 3339 format.
+     */
+    createdAt?: string;
+    /**
+     * The ID of the [Customer](https://developer.squareup.com/reference/square_2021-08-18/objects/Customer) object representing the customer attending this booking
+     */
+    customerId?: string;
+    /**
+     * The free-text field for the customer to supply notes about the booking. For example, the note can be preferences that cannot be expressed by supported attributes of a relevant [CatalogObject](https://developer.squareup.com/reference/square_2021-08-18/objects/CatalogObject) instance.
+     */
+    customerNote?: string;
+    /**
+     * A unique ID of this object representing a booking.
+     */
+    id?: string;
+    /**
+     * The ID of the [Location](https://developer.squareup.com/reference/square_2021-08-18/objects/Location) object representing the location where the booked service is provided.
+     */
+    locationId?: string;
+    /**
+     * The free-text field for the seller to supply notes about the booking. For example, the note can be preferences that cannot be expressed by supported attributes of a specific [CatalogObject](https://developer.squareup.com/reference/square_2021-08-18/objects/CatalogObject) instance.
+     *
+     * @remarks
+     * This field should not be visible to customers.
+     */
+    sellerNote?: string;
+    /**
+     * The timestamp specifying the starting time of this booking, in RFC 3339 format.
+     */
+    startAt?: string;
+    /**
+     * The status of the booking, describing where the booking stands with respect to the booking state machine.
+     */
+    status?: string;
+    /**
+     * The timestamp specifying the most recent update time of this booking, in RFC 3339 format.
+     */
+    updatedAt?: string;
+    /**
+     * The revision number for the booking used for optimistic concurrency.
+     */
+    version?: number;
+}

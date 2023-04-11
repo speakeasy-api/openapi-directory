@@ -1,4 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
+/**
+ * Describes the nature of the address location. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#locationDescriptor target="_blank">locationDescriptor</a>
+ */
+export declare enum GetSitesWithinOutputFormatLocationDescriptorEnum {
+    Any = "any",
+    AccessPoint = "accessPoint",
+    FrontDoorPoint = "frontDoorPoint",
+    ParcelPoint = "parcelPoint",
+    RooftopPoint = "rooftopPoint",
+    RoutingPoint = "routingPoint"
+}
+/**
+ * Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
+ *
+ * @remarks
+ *
+ * Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
+ */
 export declare enum GetSitesWithinOutputFormatOutputFormatEnum {
     Json = "json",
     Geojson = "geojson",
@@ -8,32 +27,63 @@ export declare enum GetSitesWithinOutputFormatOutputFormatEnum {
     Csv = "csv",
     Shpz = "shpz"
 }
-export declare class GetSitesWithinOutputFormatPathParams extends SpeakeasyBase {
-    outputFormat: GetSitesWithinOutputFormatOutputFormatEnum;
-}
-export declare enum GetSitesWithinOutputFormatLocationDescriptorEnum {
-    Any = "any",
-    AccessPoint = "accessPoint",
-    FrontDoorPoint = "frontDoorPoint",
-    ParcelPoint = "parcelPoint",
-    RooftopPoint = "rooftopPoint",
-    RoutingPoint = "routingPoint"
-}
-export declare class GetSitesWithinOutputFormatQueryParams extends SpeakeasyBase {
-    bbox: string;
-    brief?: boolean;
-    excludeUnits?: boolean;
-    locationDescriptor?: GetSitesWithinOutputFormatLocationDescriptorEnum;
-    maxResults?: number;
-    onlyCivic?: boolean;
-    outputSRS?: number;
-    setBack?: number;
+/**
+ * The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
+ */
+export declare enum GetSitesWithinOutputFormatOutputSrsEnum {
+    FourThousandThreeHundredAndTwentySix = "4326",
+    FourThousandTwoHundredAndSixtyNine = "4269",
+    ThreeThousandAndFive = "3005",
+    TwentySixThousandNineHundredAndSeven = "26907",
+    TwentySixThousandNineHundredAndEight = "26908",
+    TwentySixThousandNineHundredAndNine = "26909",
+    TwentySixThousandNineHundredAndTen = "26910",
+    TwentySixThousandNineHundredAndEleven = "26911"
 }
 export declare class GetSitesWithinOutputFormatRequest extends SpeakeasyBase {
-    pathParams: GetSitesWithinOutputFormatPathParams;
-    queryParams: GetSitesWithinOutputFormatQueryParams;
+    /**
+     * A bounding box (xmin,ymin,xmax,ymax) used to limit the search area. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#bbox target="_blank">bbox</a>
+     */
+    bbox: string;
+    /**
+     * If true, include only basic match and address details in results. Not supported for shp, csv, and gml formats.
+     */
+    brief?: boolean;
+    /**
+     * If true, excludes sites that are units of a parent site
+     */
+    excludeUnits?: boolean;
+    /**
+     * Describes the nature of the address location. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#locationDescriptor target="_blank">locationDescriptor</a>
+     */
+    locationDescriptor?: GetSitesWithinOutputFormatLocationDescriptorEnum;
+    /**
+     * The maximum number of search results to return.
+     */
+    maxResults?: number;
+    /**
+     * If true, excludes sites without a civic address
+     */
+    onlyCivic?: boolean;
+    /**
+     * Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
+     *
+     * @remarks
+     *
+     * Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
+     */
+    outputFormat: GetSitesWithinOutputFormatOutputFormatEnum;
+    /**
+     * The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
+     */
+    outputSRS?: GetSitesWithinOutputFormatOutputSrsEnum;
+    /**
+     * The distance to move the accessPoint away from the curb and towards the inside of the parcel (in metres). Ignored if locationDescriptor not set to accessPoint.
+     */
+    setBack?: number;
 }
 export declare class GetSitesWithinOutputFormatResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

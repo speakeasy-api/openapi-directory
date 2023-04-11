@@ -9,7 +9,7 @@ import { StabilityStatusEnum } from "./stabilitystatusenum";
 import { Tag } from "./tag";
 /**
  * Information about a set of Amazon ECS tasks in either an CodeDeploy or an <code>EXTERNAL</code> deployment. An Amazon ECS task set includes details such as the desired number of tasks, how many tasks are running, and whether the task set serves production traffic.
-**/
+ */
 export declare class TaskSet extends SpeakeasyBase {
     capacityProviderStrategy?: CapacityProviderStrategyItem[];
     clusterArn?: string;
@@ -21,6 +21,7 @@ export declare class TaskSet extends SpeakeasyBase {
     loadBalancers?: LoadBalancer[];
     networkConfiguration?: NetworkConfiguration;
     pendingCount?: number;
+    platformFamily?: string;
     platformVersion?: string;
     runningCount?: number;
     scale?: Scale;

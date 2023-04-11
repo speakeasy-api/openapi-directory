@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class IpamVrfsDeletePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class IpamVrfsDeleteRequest extends SpeakeasyBase {
-    pathParams: IpamVrfsDeletePathParams;
+    /**
+     * A unique integer value identifying this VRF.
+     */
+    id: number;
 }
 export declare class IpamVrfsDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

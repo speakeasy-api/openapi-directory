@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetStopDbInstanceActionEnum {
-    StopDbInstance = "StopDBInstance"
+import { AxiosResponse } from "axios";
+export declare enum GETStopDBInstanceActionEnum {
+    StopDBInstance = "StopDBInstance"
 }
-export declare enum GetStopDbInstanceVersionEnum {
+export declare enum GETStopDBInstanceVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class GetStopDbInstanceQueryParams extends SpeakeasyBase {
-    action: GetStopDbInstanceActionEnum;
+export declare class GETStopDBInstanceRequest extends SpeakeasyBase {
+    action: GETStopDBInstanceActionEnum;
+    /**
+     * The user-supplied instance identifier.
+     */
     dbInstanceIdentifier: string;
+    /**
+     * The user-supplied instance identifier of the DB Snapshot created immediately before the DB instance is stopped.
+     */
     dbSnapshotIdentifier?: string;
-    version: GetStopDbInstanceVersionEnum;
-}
-export declare class GetStopDbInstanceHeaders extends SpeakeasyBase {
+    version: GETStopDBInstanceVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetStopDbInstanceHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetStopDbInstanceRequest extends SpeakeasyBase {
-    queryParams: GetStopDbInstanceQueryParams;
-    headers: GetStopDbInstanceHeaders;
-}
-export declare class GetStopDbInstanceResponse extends SpeakeasyBase {
+export declare class GETStopDBInstanceResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

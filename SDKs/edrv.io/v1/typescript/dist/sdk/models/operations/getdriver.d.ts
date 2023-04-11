@@ -1,17 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetDriverPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class GetDriverQueryParams extends SpeakeasyBase {
-    includeGroup?: boolean;
-    includeOrganization?: boolean;
-    includeTokens?: boolean;
-}
+import { AxiosResponse } from "axios";
 export declare class GetDriverRequest extends SpeakeasyBase {
-    pathParams: GetDriverPathParams;
-    queryParams: GetDriverQueryParams;
+    /**
+     * The driver id that needs to be fetched
+     */
+    id: string;
+    /**
+     * Populate group
+     */
+    includeGroup?: boolean;
+    /**
+     * Populate organization
+     */
+    includeOrganization?: boolean;
+    /**
+     * Populate tokens
+     */
+    includeTokens?: boolean;
 }
 export declare class GetDriverResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

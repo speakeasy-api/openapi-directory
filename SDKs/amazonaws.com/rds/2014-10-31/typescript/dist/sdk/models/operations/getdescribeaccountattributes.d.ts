@@ -1,15 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeAccountAttributesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeAccountAttributesActionEnum {
     DescribeAccountAttributes = "DescribeAccountAttributes"
 }
-export declare enum GetDescribeAccountAttributesVersionEnum {
+export declare enum GETDescribeAccountAttributesVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class GetDescribeAccountAttributesQueryParams extends SpeakeasyBase {
-    action: GetDescribeAccountAttributesActionEnum;
-    version: GetDescribeAccountAttributesVersionEnum;
-}
-export declare class GetDescribeAccountAttributesHeaders extends SpeakeasyBase {
+export declare class GETDescribeAccountAttributesRequest extends SpeakeasyBase {
+    action: GETDescribeAccountAttributesActionEnum;
+    version: GETDescribeAccountAttributesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +17,9 @@ export declare class GetDescribeAccountAttributesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeAccountAttributesRequest extends SpeakeasyBase {
-    queryParams: GetDescribeAccountAttributesQueryParams;
-    headers: GetDescribeAccountAttributesHeaders;
-}
-export declare class GetDescribeAccountAttributesResponse extends SpeakeasyBase {
+export declare class GETDescribeAccountAttributesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

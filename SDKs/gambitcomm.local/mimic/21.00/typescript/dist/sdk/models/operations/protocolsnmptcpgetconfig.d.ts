@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ProtocolSnmptcpGetConfigPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ProtocolSnmptcpGetConfigRequest extends SpeakeasyBase {
+    /**
+     * Agent to show the SNMPTCP configuration
+     */
     agentNum: number;
 }
-export declare class ProtocolSnmptcpGetConfigRequest extends SpeakeasyBase {
-    pathParams: ProtocolSnmptcpGetConfigPathParams;
-}
 export declare class ProtocolSnmptcpGetConfigResponse extends SpeakeasyBase {
-    configSNMPTCP?: shared.ConfigSnmptcp;
+    /**
+     * successful operation
+     */
+    configSNMPTCP?: shared.ConfigSNMPTCP;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

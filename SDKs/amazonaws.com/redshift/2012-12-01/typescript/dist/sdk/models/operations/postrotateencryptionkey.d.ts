@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostRotateEncryptionKeyActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTRotateEncryptionKeyActionEnum {
     RotateEncryptionKey = "RotateEncryptionKey"
 }
-export declare enum PostRotateEncryptionKeyVersionEnum {
+export declare enum POSTRotateEncryptionKeyVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostRotateEncryptionKeyQueryParams extends SpeakeasyBase {
-    action: PostRotateEncryptionKeyActionEnum;
-    version: PostRotateEncryptionKeyVersionEnum;
-}
-export declare class PostRotateEncryptionKeyHeaders extends SpeakeasyBase {
+export declare class POSTRotateEncryptionKeyRequest extends SpeakeasyBase {
+    action: POSTRotateEncryptionKeyActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTRotateEncryptionKeyVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostRotateEncryptionKeyHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostRotateEncryptionKeyRequest extends SpeakeasyBase {
-    queryParams: PostRotateEncryptionKeyQueryParams;
-    headers: PostRotateEncryptionKeyHeaders;
-    request?: Uint8Array;
-}
-export declare class PostRotateEncryptionKeyResponse extends SpeakeasyBase {
+export declare class POSTRotateEncryptionKeyResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

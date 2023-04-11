@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDisableLoggingActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDisableLoggingActionEnum {
     DisableLogging = "DisableLogging"
 }
-export declare enum GetDisableLoggingVersionEnum {
+export declare enum GETDisableLoggingVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class GetDisableLoggingQueryParams extends SpeakeasyBase {
-    action: GetDisableLoggingActionEnum;
+export declare class GETDisableLoggingRequest extends SpeakeasyBase {
+    action: GETDisableLoggingActionEnum;
+    /**
+     * <p>The identifier of the cluster on which logging is to be stopped.</p> <p>Example: <code>examplecluster</code> </p>
+     */
     clusterIdentifier: string;
-    version: GetDisableLoggingVersionEnum;
-}
-export declare class GetDisableLoggingHeaders extends SpeakeasyBase {
+    version: GETDisableLoggingVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDisableLoggingHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDisableLoggingRequest extends SpeakeasyBase {
-    queryParams: GetDisableLoggingQueryParams;
-    headers: GetDisableLoggingHeaders;
-}
-export declare class GetDisableLoggingResponse extends SpeakeasyBase {
+export declare class GETDisableLoggingResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

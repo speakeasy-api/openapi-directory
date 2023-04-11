@@ -1,23 +1,37 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterprisePathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest extends SpeakeasyBase {
+    /**
+     * The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+     */
     enterprise: string;
+    /**
+     * Page number of the results to fetch.
+     */
+    page?: number;
+    /**
+     * The number of results per page (max 100).
+     */
+    perPage?: number;
+    /**
+     * Unique identifier of the self-hosted runner group.
+     */
     runnerGroupId: number;
 }
-export declare class EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseQueryParams extends SpeakeasyBase {
-    page?: number;
-    perPage?: number;
-}
-export declare class EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterprise200ApplicationJson extends SpeakeasyBase {
+/**
+ * Response
+ */
+export declare class EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterprise200ApplicationJSON extends SpeakeasyBase {
     organizations: shared.OrganizationSimple[];
     totalCount: number;
-}
-export declare class EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest extends SpeakeasyBase {
-    pathParams: EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterprisePathParams;
-    queryParams: EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseQueryParams;
 }
 export declare class EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    enterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterprise200ApplicationJSONObject?: EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterprise200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
+    enterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterprise200ApplicationJSONObject?: EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterprise200ApplicationJSON;
 }

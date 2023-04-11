@@ -1,17 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AppoinmentBookingFormsViewModel } from "./appoinmentbookingformsviewmodel";
 import { AppointmentAuditViewModel } from "./appointmentauditviewmodel";
-import { CustomFieldViewModel } from "./customfieldviewmodel";
 import { AppointmentCustomerViewModel } from "./appointmentcustomerviewmodel";
 import { AppointmentResourceViewModel } from "./appointmentresourceviewmodel";
+import { BookingFieldViewModel } from "./bookingfieldviewmodel";
+import { CustomFieldViewModel } from "./customfieldviewmodel";
+/**
+ * Success
+ */
 export declare class AppointmentInitialViewModel extends SpeakeasyBase {
+    appointmentBookingFields?: BookingFieldViewModel[];
     auditTrail?: AppointmentAuditViewModel[];
     bookedBy?: string;
+    bookingForms?: AppoinmentBookingFormsViewModel;
     businessName?: string;
     calendarId?: string;
     confirmationNumber?: string;
     confirmed?: boolean;
     createDate?: string;
     customFields?: Record<string, CustomFieldViewModel>;
+    customerBookingFields?: BookingFieldViewModel[];
     customerId?: string;
     customerMessage?: string;
     customers?: AppointmentCustomerViewModel[];
@@ -36,13 +44,14 @@ export declare class AppointmentInitialViewModel extends SpeakeasyBase {
     longitude?: string;
     name?: string;
     notes?: string;
-    objectName?: string;
+    object?: string;
     onlineBooking?: boolean;
     paymentStatus?: number;
     phone?: string;
     phoneExt?: string;
     phoneType?: string;
     rescheduledId?: string;
+    resourceEmail?: string;
     resourceGroupId?: string;
     resourceGroupName?: string;
     resourceId?: string;

@@ -1,6 +1,35 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AddFacetToObjectHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+/**
+ * The reference that identifies an object.
+ */
+export declare class AddFacetToObjectRequestBodyObjectReference extends SpeakeasyBase {
+    selector?: string;
+}
+/**
+ * A facet.
+ */
+export declare class AddFacetToObjectRequestBodySchemaFacet extends SpeakeasyBase {
+    facetName?: string;
+    schemaArn?: string;
+}
+export declare class AddFacetToObjectRequestBody extends SpeakeasyBase {
+    /**
+     * Attributes on the facet that you are adding to the object.
+     */
+    objectAttributeList?: shared.AttributeKeyAndValue[];
+    /**
+     * The reference that identifies an object.
+     */
+    objectReference: AddFacetToObjectRequestBodyObjectReference;
+    /**
+     * A facet.
+     */
+    schemaFacet: AddFacetToObjectRequestBodySchemaFacet;
+}
+export declare class AddFacetToObjectRequest extends SpeakeasyBase {
+    requestBody: AddFacetToObjectRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -8,41 +37,53 @@ export declare class AddFacetToObjectHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
+    /**
+     * The Amazon Resource Name (ARN) that is associated with the <a>Directory</a> where the object resides. For more information, see <a>arns</a>.
+     */
     xAmzDataPartition: string;
 }
-/**
- * The reference that identifies an object.
-**/
-export declare class AddFacetToObjectRequestBodyObjectReference extends SpeakeasyBase {
-    selector?: string;
-}
-/**
- * A facet.
-**/
-export declare class AddFacetToObjectRequestBodySchemaFacet extends SpeakeasyBase {
-    facetName?: string;
-    schemaArn?: string;
-}
-export declare class AddFacetToObjectRequestBody extends SpeakeasyBase {
-    objectAttributeList?: shared.AttributeKeyAndValue[];
-    objectReference: AddFacetToObjectRequestBodyObjectReference;
-    schemaFacet: AddFacetToObjectRequestBodySchemaFacet;
-}
-export declare class AddFacetToObjectRequest extends SpeakeasyBase {
-    headers: AddFacetToObjectHeaders;
-    request: AddFacetToObjectRequestBody;
-}
 export declare class AddFacetToObjectResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: shared.AccessDeniedException;
+    /**
+     * Success
+     */
     addFacetToObjectResponse?: Record<string, any>;
     contentType: string;
+    /**
+     * DirectoryNotEnabledException
+     */
     directoryNotEnabledException?: shared.DirectoryNotEnabledException;
+    /**
+     * FacetValidationException
+     */
     facetValidationException?: shared.FacetValidationException;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: shared.InternalServiceException;
+    /**
+     * InvalidArnException
+     */
     invalidArnException?: shared.InvalidArnException;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: shared.LimitExceededException;
-    resourceNotFoundException?: shared.ResourceNotFoundException;
-    retryableConflictException?: shared.RetryableConflictException;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: shared.ResourceNotFoundException;
+    /**
+     * RetryableConflictException
+     */
+    retryableConflictException?: shared.RetryableConflictException;
+    /**
+     * ValidationException
+     */
     validationException?: shared.ValidationException;
 }

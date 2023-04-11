@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostModifyVpcEndpointServicePermissionsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTModifyVpcEndpointServicePermissionsActionEnum {
     ModifyVpcEndpointServicePermissions = "ModifyVpcEndpointServicePermissions"
 }
-export declare enum PostModifyVpcEndpointServicePermissionsVersionEnum {
+export declare enum POSTModifyVpcEndpointServicePermissionsVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostModifyVpcEndpointServicePermissionsQueryParams extends SpeakeasyBase {
-    action: PostModifyVpcEndpointServicePermissionsActionEnum;
-    version: PostModifyVpcEndpointServicePermissionsVersionEnum;
-}
-export declare class PostModifyVpcEndpointServicePermissionsHeaders extends SpeakeasyBase {
+export declare class POSTModifyVpcEndpointServicePermissionsRequest extends SpeakeasyBase {
+    action: POSTModifyVpcEndpointServicePermissionsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTModifyVpcEndpointServicePermissionsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostModifyVpcEndpointServicePermissionsHeaders extends Spea
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostModifyVpcEndpointServicePermissionsRequest extends SpeakeasyBase {
-    queryParams: PostModifyVpcEndpointServicePermissionsQueryParams;
-    headers: PostModifyVpcEndpointServicePermissionsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostModifyVpcEndpointServicePermissionsResponse extends SpeakeasyBase {
+export declare class POSTModifyVpcEndpointServicePermissionsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

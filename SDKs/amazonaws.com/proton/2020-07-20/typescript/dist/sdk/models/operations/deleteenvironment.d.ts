@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteEnvironmentXAmzTargetEnum {
     AwsProton20200720DeleteEnvironment = "AwsProton20200720.DeleteEnvironment"
 }
-export declare class DeleteEnvironmentHeaders extends SpeakeasyBase {
+export declare class DeleteEnvironmentRequest extends SpeakeasyBase {
+    deleteEnvironmentInput: shared.DeleteEnvironmentInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class DeleteEnvironmentHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteEnvironmentXAmzTargetEnum;
 }
-export declare class DeleteEnvironmentRequest extends SpeakeasyBase {
-    headers: DeleteEnvironmentHeaders;
-    request: shared.DeleteEnvironmentInput;
-}
 export declare class DeleteEnvironmentResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteEnvironmentOutput?: shared.DeleteEnvironmentOutput;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

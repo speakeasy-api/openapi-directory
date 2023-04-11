@@ -1,12 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetStrainByRgdIdUsingGetPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETStrainByRgdIdUsingGETRequest extends SpeakeasyBase {
+    /**
+     * RGD ID of the strain
+     */
     rgdId: number;
 }
-export declare class GetStrainByRgdIdUsingGetRequest extends SpeakeasyBase {
-    pathParams: GetStrainByRgdIdUsingGetPathParams;
-}
-export declare class GetStrainByRgdIdUsingGetResponse extends SpeakeasyBase {
+export declare class GETStrainByRgdIdUsingGETResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

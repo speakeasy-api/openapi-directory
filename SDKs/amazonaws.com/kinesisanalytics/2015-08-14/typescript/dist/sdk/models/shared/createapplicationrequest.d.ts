@@ -5,7 +5,7 @@ import { Output } from "./output";
 import { Tag } from "./tag";
 /**
  * TBD
-**/
+ */
 export declare class CreateApplicationRequest extends SpeakeasyBase {
     applicationCode?: string;
     applicationDescription?: string;

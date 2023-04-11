@@ -1,12 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetDeviceEnergyUsagePathParams extends SpeakeasyBase {
-    deviceId: number;
-}
+import { AxiosResponse } from "axios";
+/**
+ * Subdivision of the period for which you wish to retrieve energy usage data.
+ */
 export declare enum GetDeviceEnergyUsageBasisEnum {
     Monthly = "MONTHLY",
     Daily = "DAILY",
     Hourly = "HOURLY"
 }
+/**
+ * The period for which you wish to retrieve energy usage data.
+ */
 export declare enum GetDeviceEnergyUsageRollPeriodEnum {
     OneDay = "ONE_DAY",
     OneWeek = "ONE_WEEK",
@@ -14,16 +18,23 @@ export declare enum GetDeviceEnergyUsageRollPeriodEnum {
     SixMonths = "SIX_MONTHS",
     OneYear = "ONE_YEAR"
 }
-export declare class GetDeviceEnergyUsageQueryParams extends SpeakeasyBase {
-    basis?: GetDeviceEnergyUsageBasisEnum;
-    rollPeriod?: GetDeviceEnergyUsageRollPeriodEnum;
-}
 export declare class GetDeviceEnergyUsageRequest extends SpeakeasyBase {
-    pathParams: GetDeviceEnergyUsagePathParams;
-    queryParams: GetDeviceEnergyUsageQueryParams;
+    /**
+     * Subdivision of the period for which you wish to retrieve energy usage data.
+     */
+    basis?: GetDeviceEnergyUsageBasisEnum;
+    /**
+     * The ID of the device.
+     */
+    deviceId: number;
+    /**
+     * The period for which you wish to retrieve energy usage data.
+     */
+    rollPeriod?: GetDeviceEnergyUsageRollPeriodEnum;
 }
 export declare class GetDeviceEnergyUsageResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

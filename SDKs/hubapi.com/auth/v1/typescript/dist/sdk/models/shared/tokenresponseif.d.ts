@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class TokenResponseIf extends SpeakeasyBase {
+/**
+ * successful operation
+ */
+export declare class TokenResponseIF extends SpeakeasyBase {
     accessToken: string;
     expiresIn: number;
     idToken?: string;

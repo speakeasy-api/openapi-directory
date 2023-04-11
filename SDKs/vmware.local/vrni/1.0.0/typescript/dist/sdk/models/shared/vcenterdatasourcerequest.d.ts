@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { PasswordCredentials } from "./passwordcredentials";
+/**
+ * VCenter Credentials
+ */
 export declare class VCenterDataSourceRequest extends SpeakeasyBase {
     credentials?: PasswordCredentials;
     enabled?: boolean;
@@ -7,5 +10,8 @@ export declare class VCenterDataSourceRequest extends SpeakeasyBase {
     ip?: string;
     nickname: string;
     notes?: string;
+    /**
+     * proxy vm which should register this vcenter
+     */
     proxyId: string;
 }

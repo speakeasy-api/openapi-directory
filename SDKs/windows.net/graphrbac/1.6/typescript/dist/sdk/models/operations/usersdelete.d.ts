@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UsersDeletePathParams extends SpeakeasyBase {
-    tenantID: string;
-    upnOrObjectId: string;
-}
-export declare class UsersDeleteQueryParams extends SpeakeasyBase {
-    apiVersion: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UsersDeleteRequest extends SpeakeasyBase {
-    pathParams: UsersDeletePathParams;
-    queryParams: UsersDeleteQueryParams;
+    /**
+     * Client API version.
+     */
+    apiVersion: string;
+    /**
+     * The tenant ID.
+     */
+    tenantID: string;
+    /**
+     * The object ID or principal name of the user to delete.
+     */
+    upnOrObjectId: string;
 }
 export declare class UsersDeleteResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Error response describing why the operation failed.
+     */
     graphError?: shared.GraphError;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

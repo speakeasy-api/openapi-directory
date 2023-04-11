@@ -1,23 +1,33 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetSuperfundProductsQueryParams extends SpeakeasyBase {
-    abn?: string;
-    usi?: string;
-}
-export declare class GetSuperfundProductsHeaders extends SpeakeasyBase {
-    xeroTenantId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetSuperfundProductsSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class GetSuperfundProductsRequest extends SpeakeasyBase {
-    queryParams: GetSuperfundProductsQueryParams;
-    headers: GetSuperfundProductsHeaders;
-    security: GetSuperfundProductsSecurity;
+    /**
+     * The ABN of the Regulated SuperFund
+     */
+    abn?: string;
+    /**
+     * The USI of the Regulated SuperFund
+     */
+    usi?: string;
+    /**
+     * Xero identifier for Tenant
+     */
+    xeroTenantId: string;
 }
 export declare class GetSuperfundProductsResponse extends SpeakeasyBase {
-    apiException?: shared.ApiException;
+    /**
+     * validation error for a bad request
+     */
+    apiException?: shared.APIException;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * search results matching criteria
+     */
     superFundProducts?: shared.SuperFundProducts;
 }

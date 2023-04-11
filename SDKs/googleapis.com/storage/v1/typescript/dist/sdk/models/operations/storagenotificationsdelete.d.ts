@@ -1,31 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class StorageNotificationsDeletePathParams extends SpeakeasyBase {
-    bucket: string;
-    notification: string;
-}
-export declare class StorageNotificationsDeleteQueryParams extends SpeakeasyBase {
-    alt?: shared.AltEnum;
-    fields?: string;
-    key?: string;
-    oauthToken?: string;
-    prettyPrint?: boolean;
-    quotaUser?: string;
-    uploadType?: string;
-    userIp?: string;
-    userProject?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class StorageNotificationsDeleteSecurityOption1 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class StorageNotificationsDeleteSecurityOption2 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class StorageNotificationsDeleteSecurityOption3 extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class StorageNotificationsDeleteSecurity extends SpeakeasyBase {
     option1?: StorageNotificationsDeleteSecurityOption1;
@@ -33,11 +19,53 @@ export declare class StorageNotificationsDeleteSecurity extends SpeakeasyBase {
     option3?: StorageNotificationsDeleteSecurityOption3;
 }
 export declare class StorageNotificationsDeleteRequest extends SpeakeasyBase {
-    pathParams: StorageNotificationsDeletePathParams;
-    queryParams: StorageNotificationsDeleteQueryParams;
-    security: StorageNotificationsDeleteSecurity;
+    /**
+     * Data format for the response.
+     */
+    alt?: shared.AltEnum;
+    /**
+     * The parent bucket of the notification.
+     */
+    bucket: string;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * ID of the notification to delete.
+     */
+    notification: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauthToken?: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * Upload protocol for media (e.g. "media", "multipart", "resumable").
+     */
+    uploadType?: string;
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    userIp?: string;
+    /**
+     * The project to be billed for this request. Required for Requester Pays buckets.
+     */
+    userProject?: string;
 }
 export declare class StorageNotificationsDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

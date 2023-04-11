@@ -1,20 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReposDeletePagesSitePathParams extends SpeakeasyBase {
-    owner: string;
-    repo: string;
-}
-export declare class ReposDeletePagesSite415ApplicationJson extends SpeakeasyBase {
-    documentationUrl: string;
-    message: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ReposDeletePagesSiteRequest extends SpeakeasyBase {
-    pathParams: ReposDeletePagesSitePathParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    owner: string;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    repo: string;
 }
 export declare class ReposDeletePagesSiteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Resource not found
+     */
     basicError?: shared.BasicError;
-    reposDeletePagesSite415ApplicationJSONObject?: ReposDeletePagesSite415ApplicationJson;
+    /**
+     * Validation failed, or the endpoint has been spammed.
+     */
     validationError?: shared.ValidationError;
 }

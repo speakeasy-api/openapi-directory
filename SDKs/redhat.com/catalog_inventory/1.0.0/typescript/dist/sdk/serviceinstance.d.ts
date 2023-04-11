@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class ServiceInstance {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,15 +9,17 @@ export declare class ServiceInstance {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * listServiceInstances - List ServiceInstances
+     * List ServiceInstances
      *
+     * @remarks
      * Returns an array of ServiceInstance objects
-    **/
+     */
     listServiceInstances(req: operations.ListServiceInstancesRequest, config?: AxiosRequestConfig): Promise<operations.ListServiceInstancesResponse>;
     /**
-     * showServiceInstance - Show an existing ServiceInstance
+     * Show an existing ServiceInstance
      *
+     * @remarks
      * Returns a ServiceInstance object
-    **/
+     */
     showServiceInstance(req: operations.ShowServiceInstanceRequest, config?: AxiosRequestConfig): Promise<operations.ShowServiceInstanceResponse>;
 }

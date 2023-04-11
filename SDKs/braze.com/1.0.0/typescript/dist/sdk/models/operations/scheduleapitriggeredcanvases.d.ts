@@ -1,14 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ScheduleApiTriggeredCanvasesRequestBodyAudienceAndCustomAttribute extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ScheduleApiTriggeredCanvasesRequestBodyAudienceANDCustomAttribute extends SpeakeasyBase {
     comparison?: string;
     customAttributeName?: string;
     value?: string;
 }
-export declare class ScheduleApiTriggeredCanvasesRequestBodyAudienceAnd extends SpeakeasyBase {
-    customAttribute?: ScheduleApiTriggeredCanvasesRequestBodyAudienceAndCustomAttribute;
+export declare class ScheduleApiTriggeredCanvasesRequestBodyAudienceAND extends SpeakeasyBase {
+    customAttribute?: ScheduleApiTriggeredCanvasesRequestBodyAudienceANDCustomAttribute;
 }
 export declare class ScheduleApiTriggeredCanvasesRequestBodyAudience extends SpeakeasyBase {
-    and?: ScheduleApiTriggeredCanvasesRequestBodyAudienceAnd[];
+    and?: ScheduleApiTriggeredCanvasesRequestBodyAudienceAND[];
 }
 export declare class ScheduleApiTriggeredCanvasesRequestBodyRecipients extends SpeakeasyBase {
     canvasEntryProperties?: Record<string, any>;
@@ -29,10 +30,8 @@ export declare class ScheduleApiTriggeredCanvasesRequestBody extends SpeakeasyBa
     recipients?: ScheduleApiTriggeredCanvasesRequestBodyRecipients[];
     schedule?: ScheduleApiTriggeredCanvasesRequestBodySchedule;
 }
-export declare class ScheduleApiTriggeredCanvasesRequest extends SpeakeasyBase {
-    request?: ScheduleApiTriggeredCanvasesRequestBody;
-}
 export declare class ScheduleApiTriggeredCanvasesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

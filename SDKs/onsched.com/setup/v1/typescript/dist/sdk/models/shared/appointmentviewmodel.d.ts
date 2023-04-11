@@ -1,8 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { AppointmentAuditViewModel } from "./appointmentauditviewmodel";
-import { CustomFieldViewModel } from "./customfieldviewmodel";
 import { AppointmentCustomerViewModel } from "./appointmentcustomerviewmodel";
 import { AppointmentResourceViewModel } from "./appointmentresourceviewmodel";
+import { CustomFieldViewModel } from "./customfieldviewmodel";
+/**
+ * Success
+ */
 export declare class AppointmentViewModel extends SpeakeasyBase {
     auditTrail?: AppointmentAuditViewModel[];
     bookedBy?: string;
@@ -36,13 +39,14 @@ export declare class AppointmentViewModel extends SpeakeasyBase {
     longitude?: string;
     name?: string;
     notes?: string;
-    objectName?: string;
+    object?: string;
     onlineBooking?: boolean;
     paymentStatus?: number;
     phone?: string;
     phoneExt?: string;
     phoneType?: string;
     rescheduledId?: string;
+    resourceEmail?: string;
     resourceGroupId?: string;
     resourceGroupName?: string;
     resourceId?: string;

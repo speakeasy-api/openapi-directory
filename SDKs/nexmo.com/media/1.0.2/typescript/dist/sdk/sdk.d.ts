@@ -1,10 +1,25 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://api.nexmo.com/v3/media"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * The Media API can be used to query, download and delete media items such as audio files for use with other Nexmo APIs.
+ */
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -12,29 +27,34 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
     /**
-     * deleteAMediaItem - Delete a media item
+     * Delete a media item
      *
+     * @remarks
      * Delete a previously created media item by ID.
-    **/
+     */
     deleteAMediaItem(config?: AxiosRequestConfig): Promise<operations.DeleteAMediaItemResponse>;
     /**
-     * listAndSearchMediaItems - List and search media items
+     * List and search media items
      *
+     * @remarks
      * Retrieve information about multiple media items with the ability to search and paginate.
-    **/
+     */
     listAndSearchMediaItems(req: operations.ListAndSearchMediaItemsRequest, config?: AxiosRequestConfig): Promise<operations.ListAndSearchMediaItemsResponse>;
     /**
-     * retrieveAMediaItem - Retrieve a media item
+     * Retrieve a media item
      *
+     * @remarks
      * Retrieve information about a single media item
-    **/
+     */
     retrieveAMediaItem(config?: AxiosRequestConfig): Promise<operations.RetrieveAMediaItemResponse>;
     /**
-     * updateAMediaItem - Update a media item
+     * Update a media item
      *
+     * @remarks
      * Update a previously created media item by ID.
-    **/
-    updateAMediaItem(req: operations.UpdateAMediaItemRequest, config?: AxiosRequestConfig): Promise<operations.UpdateAMediaItemResponse>;
+     */
+    updateAMediaItem(req: operations.UpdateAMediaItemRequestBody, config?: AxiosRequestConfig): Promise<operations.UpdateAMediaItemResponse>;
 }

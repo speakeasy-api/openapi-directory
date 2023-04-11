@@ -1,41 +1,48 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { KgsearchEntitiesSearchRequest, KgsearchEntitiesSearchResponse } from "openapi/src/sdk/models/operations";
+import {
+  KgsearchEntitiesSearchRequest,
+  KgsearchEntitiesSearchResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: KgsearchEntitiesSearchRequest = {
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "voluptas",
-    alt: "media",
-    callback: "expedita",
-    fields: "consequuntur",
-    ids: [
-      "expedita",
-      "voluptas",
-    ],
-    indent: true,
-    key: "et",
-    languages: [
-      "rerum",
-    ],
-    limit: 7837839688282259259,
-    oauthToken: "debitis",
-    prefix: true,
-    prettyPrint: false,
-    query: "ut",
-    quotaUser: "dolorem",
-    types: [
-      "voluptate",
-      "iste",
-    ],
-    uploadType: "vitae",
-    uploadProtocol: "totam",
-  },
+  dollarXgafv: XgafvEnum.Two,
+  accessToken: "provident",
+  alt: AltEnum.Proto,
+  callback: "quibusdam",
+  fields: "unde",
+  ids: [
+    "corrupti",
+    "illum",
+    "vel",
+    "error",
+  ],
+  indent: false,
+  key: "deserunt",
+  languages: [
+    "iure",
+    "magnam",
+  ],
+  limit: 891773,
+  oauthToken: "ipsa",
+  prefix: false,
+  prettyPrint: false,
+  query: "delectus",
+  quotaUser: "tempora",
+  types: [
+    "molestiae",
+    "minus",
+  ],
+  uploadType: "placeat",
+  uploadProtocol: "voluptatum",
 };
 
 sdk.entities.kgsearchEntitiesSearch(req).then((res: KgsearchEntitiesSearchResponse | AxiosError) => {

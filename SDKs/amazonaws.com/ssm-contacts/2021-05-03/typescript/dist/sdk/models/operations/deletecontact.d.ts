@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteContactXAmzTargetEnum {
-    SsmContactsDeleteContact = "SSMContacts.DeleteContact"
+    SSMContactsDeleteContact = "SSMContacts.DeleteContact"
 }
-export declare class DeleteContactHeaders extends SpeakeasyBase {
+export declare class DeleteContactRequest extends SpeakeasyBase {
+    deleteContactRequest: shared.DeleteContactRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,36 @@ export declare class DeleteContactHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteContactXAmzTargetEnum;
 }
-export declare class DeleteContactRequest extends SpeakeasyBase {
-    headers: DeleteContactHeaders;
-    request: shared.DeleteContactRequest;
-}
 export declare class DeleteContactResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
+    conflictException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteContactResult?: Record<string, any>;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

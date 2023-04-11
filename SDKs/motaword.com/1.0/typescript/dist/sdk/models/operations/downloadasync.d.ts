@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DownloadAsyncQueryParams extends SpeakeasyBase {
-    asyncRequestKey: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DownloadAsyncRequest extends SpeakeasyBase {
-    queryParams: DownloadAsyncQueryParams;
+    /**
+     * Async operation key
+     */
+    asyncRequestKey: string;
 }
 export declare class DownloadAsyncResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * ProjectNotFound
+     */
     error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * File
+     */
     downloadAsync200ApplicationOctetStreamBinaryString?: Uint8Array;
 }

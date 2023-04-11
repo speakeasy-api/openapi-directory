@@ -1,37 +1,52 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The event identifier.
+ */
 export declare enum HookEventEventEnum {
-    PullrequestUnapproved = "pullrequest:unapproved",
-    IssueCommentCreated = "issue:comment_created",
-    RepoImported = "repo:imported",
-    RepoCreated = "repo:created",
-    RepoCommitCommentCreated = "repo:commit_comment_created",
-    PullrequestApproved = "pullrequest:approved",
-    PullrequestCommentUpdated = "pullrequest:comment_updated",
-    IssueUpdated = "issue:updated",
-    ProjectUpdated = "project:updated",
-    RepoDeleted = "repo:deleted",
     PullrequestChangesRequestCreated = "pullrequest:changes_request_created",
-    PullrequestCommentCreated = "pullrequest:comment_created",
-    RepoCommitStatusUpdated = "repo:commit_status_updated",
-    PullrequestUpdated = "pullrequest:updated",
-    IssueCreated = "issue:created",
-    RepoFork = "repo:fork",
-    PullrequestCommentDeleted = "pullrequest:comment_deleted",
-    RepoCommitStatusCreated = "repo:commit_status_created",
-    RepoUpdated = "repo:updated",
     PullrequestRejected = "pullrequest:rejected",
-    PullrequestFulfilled = "pullrequest:fulfilled",
-    PullrequestCreated = "pullrequest:created",
+    IssueUpdated = "issue:updated",
+    PullrequestUnapproved = "pullrequest:unapproved",
+    PullrequestCommentDeleted = "pullrequest:comment_deleted",
+    RepoCommitStatusUpdated = "repo:commit_status_updated",
     PullrequestChangesRequestRemoved = "pullrequest:changes_request_removed",
+    PullrequestCommentCreated = "pullrequest:comment_created",
     RepoTransfer = "repo:transfer",
-    RepoPush = "repo:push"
+    PullrequestFulfilled = "pullrequest:fulfilled",
+    RepoCommitCommentCreated = "repo:commit_comment_created",
+    IssueCommentCreated = "issue:comment_created",
+    ProjectUpdated = "project:updated",
+    PullrequestCommentUpdated = "pullrequest:comment_updated",
+    RepoCreated = "repo:created",
+    RepoFork = "repo:fork",
+    RepoUpdated = "repo:updated",
+    RepoPush = "repo:push",
+    PullrequestApproved = "pullrequest:approved",
+    RepoDeleted = "repo:deleted",
+    RepoCommitStatusCreated = "repo:commit_status_created",
+    RepoImported = "repo:imported",
+    IssueCreated = "issue:created",
+    PullrequestUpdated = "pullrequest:updated",
+    PullrequestCreated = "pullrequest:created"
 }
 /**
  * An event, associated with a resource or subject type.
-**/
+ */
 export declare class HookEvent extends SpeakeasyBase {
+    /**
+     * The category this event belongs to.
+     */
     category?: string;
+    /**
+     * More detailed description of the webhook event type.
+     */
     description?: string;
+    /**
+     * The event identifier.
+     */
     event?: HookEventEventEnum;
+    /**
+     * Summary of the webhook event type.
+     */
     label?: string;
 }

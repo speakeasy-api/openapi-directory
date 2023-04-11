@@ -1,19 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetDocumentsIdPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetDocumentsIdSecurity extends SpeakeasyBase {
+    apiKeyAuth?: string;
     basicAuth?: shared.SchemeBasicAuth;
-    apiKeyAuth?: shared.SchemeApiKeyAuth;
 }
 export declare class GetDocumentsIdRequest extends SpeakeasyBase {
-    pathParams: GetDocumentsIdPathParams;
-    security: GetDocumentsIdSecurity;
+    /**
+     * The unique identifier of the document.
+     */
+    id: string;
 }
 export declare class GetDocumentsIdResponse extends SpeakeasyBase {
     contentType: string;
-    document?: any;
-    serviceError?: any;
+    /**
+     * OK - the request has succeeded.
+     */
+    document?: shared.Document;
+    /**
+     * Bad Request - a problem reading or understanding the request.
+     */
+    serviceError?: shared.ServiceError;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,39 +1,39 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateSavingsPlanRequest, CreateSavingsPlanResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CreateSavingsPlanRequest,
+  CreateSavingsPlanResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    hmac: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: CreateSavingsPlanRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-  },
-  request: {
-    clientToken: "voluptas",
-    commitment: "fugit",
-    purchaseTime: "2011-08-12T10:11:12Z",
-    savingsPlanOfferingId: "nihil",
+  requestBody: {
+    clientToken: "corrupti",
+    commitment: "provident",
+    purchaseTime: "2021-04-24T16:27:50.833Z",
+    savingsPlanOfferingId: "unde",
     tags: {
-      "dicta": "debitis",
-      "voluptatum": "et",
-      "ut": "dolorem",
+      "corrupti": "illum",
+      "vel": "error",
+      "deserunt": "suscipit",
+      "iure": "magnam",
     },
-    upfrontPaymentAmount: "et",
+    upfrontPaymentAmount: "debitis",
   },
+  xAmzAlgorithm: "ipsa",
+  xAmzContentSha256: "delectus",
+  xAmzCredential: "tempora",
+  xAmzDate: "suscipit",
+  xAmzSecurityToken: "molestiae",
+  xAmzSignature: "minus",
+  xAmzSignedHeaders: "placeat",
 };
 
 sdk.createSavingsPlan(req).then((res: CreateSavingsPlanResponse | AxiosError) => {

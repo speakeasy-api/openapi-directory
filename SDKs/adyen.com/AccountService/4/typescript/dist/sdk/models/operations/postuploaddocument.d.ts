@@ -1,16 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class PostUploadDocumentSecurity extends SpeakeasyBase {
+    apiKeyAuth?: string;
     basicAuth?: shared.SchemeBasicAuth;
-    apiKeyAuth?: shared.SchemeApiKeyAuth;
-}
-export declare class PostUploadDocumentRequest extends SpeakeasyBase {
-    request?: any;
-    security: PostUploadDocumentSecurity;
 }
 export declare class PostUploadDocumentResponse extends SpeakeasyBase {
     contentType: string;
-    serviceError?: any;
     statusCode: number;
-    updateAccountHolderResponse?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad Request - a problem reading or understanding the request.
+     */
+    serviceError?: shared.ServiceError;
+    /**
+     * OK - the request has succeeded.
+     */
+    updateAccountHolderResponse?: shared.UpdateAccountHolderResponse;
 }

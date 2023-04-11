@@ -1,0 +1,21 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { GoogleCloudDialogflowV2EventInput } from "./googleclouddialogflowv2eventinput";
+import { GoogleCloudDialogflowV2InputAudioConfig } from "./googleclouddialogflowv2inputaudioconfig";
+import { GoogleCloudDialogflowV2TextInput } from "./googleclouddialogflowv2textinput";
+/**
+ * Represents the query input. It can contain either: 1. An audio config which instructs the speech recognizer how to process the speech audio. 2. A conversational query in the form of text,. 3. An event that specifies which intent to trigger.
+ */
+export declare class GoogleCloudDialogflowV2QueryInput extends SpeakeasyBase {
+    /**
+     * Instructs the speech recognizer how to process the audio content.
+     */
+    audioConfig?: GoogleCloudDialogflowV2InputAudioConfig;
+    /**
+     * Events allow for matching intents by event name instead of the natural language input. For instance, input `` can trigger a personalized welcome response. The parameter `name` may be used by the agent in the response: `"Hello #welcome_event.name! What can I do for you today?"`.
+     */
+    event?: GoogleCloudDialogflowV2EventInput;
+    /**
+     * ============================================================================ Auxiliary proto messages. Represents the natural language text to be processed.
+     */
+    text?: GoogleCloudDialogflowV2TextInput;
+}

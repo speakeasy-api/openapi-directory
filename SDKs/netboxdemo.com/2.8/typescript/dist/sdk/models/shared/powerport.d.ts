@@ -5,9 +5,13 @@ export declare enum PowerPortConnectionStatusLabelEnum {
     NotConnected = "Not Connected",
     Connected = "Connected"
 }
+export declare enum PowerPortConnectionStatusValueEnum {
+    False = "false",
+    True = "true"
+}
 export declare class PowerPortConnectionStatus extends SpeakeasyBase {
     label: PowerPortConnectionStatusLabelEnum;
-    value: boolean;
+    value: PowerPortConnectionStatusValueEnum;
 }
 export declare enum PowerPortTypeLabelEnum {
     C6 = "C6",
@@ -64,18 +68,18 @@ export declare enum PowerPortTypeLabelEnum {
     Cs8265C = "CS8265C",
     Cs8365C = "CS8365C",
     Cs8465C = "CS8465C",
-    ItaTypeECee75 = "ITA Type E (CEE 7/5)",
-    ItaTypeFCee74 = "ITA Type F (CEE 7/4)",
-    ItaTypeEFCee77 = "ITA Type E/F (CEE 7/7)",
-    ItaTypeGBs1363 = "ITA Type G (BS 1363)",
-    ItaTypeH = "ITA Type H",
-    ItaTypeI = "ITA Type I",
-    ItaTypeJ = "ITA Type J",
-    ItaTypeK = "ITA Type K",
-    ItaTypeLCei2350 = "ITA Type L (CEI 23-50)",
-    ItaTypeMBs546 = "ITA Type M (BS 546)",
-    ItaTypeN = "ITA Type N",
-    ItaTypeO = "ITA Type O"
+    ITATypeECEE75 = "ITA Type E (CEE 7/5)",
+    ITATypeFCEE74 = "ITA Type F (CEE 7/4)",
+    ITATypeEFCEE77 = "ITA Type E/F (CEE 7/7)",
+    ITATypeGBS1363 = "ITA Type G (BS 1363)",
+    ITATypeH = "ITA Type H",
+    ITATypeI = "ITA Type I",
+    ITATypeJ = "ITA Type J",
+    ITATypeK = "ITA Type K",
+    ITATypeLCEI2350 = "ITA Type L (CEI 23-50)",
+    ITATypeMBS546 = "ITA Type M (BS 546)",
+    ITATypeN = "ITA Type N",
+    ITATypeO = "ITA Type O"
 }
 export declare enum PowerPortTypeValueEnum {
     Iec60320C6 = "iec-60320-c6",
@@ -150,14 +154,26 @@ export declare class PowerPortType extends SpeakeasyBase {
     value: PowerPortTypeValueEnum;
 }
 export declare class PowerPort extends SpeakeasyBase {
+    /**
+     * Allocated power draw (watts)
+     */
     allocatedDraw?: number;
     cable?: NestedCable;
+    /**
+     *
+     * @remarks
+     * Return the appropriate serializer for the type of connected object.
+     *
+     */
     connectedEndpoint?: Record<string, string>;
     connectedEndpointType?: string;
     connectionStatus?: PowerPortConnectionStatus;
     description?: string;
     device: NestedDevice;
     id?: number;
+    /**
+     * Maximum power draw (watts)
+     */
     maximumDraw?: number;
     name: string;
     tags?: string[];

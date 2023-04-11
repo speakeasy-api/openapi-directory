@@ -1,20 +1,28 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { CEStateEnum } from "./cestateenum";
+import { CEStatusEnum } from "./cestatusenum";
+import { CETypeEnum } from "./cetypeenum";
 import { ComputeResource } from "./computeresource";
-import { CeStateEnum } from "./cestateenum";
-import { CeStatusEnum } from "./cestatusenum";
-import { CeTypeEnum } from "./cetypeenum";
+import { EksConfiguration } from "./eksconfiguration";
+import { OrchestrationTypeEnum } from "./orchestrationtypeenum";
+import { UpdatePolicy } from "./updatepolicy";
 /**
- * An object representing an Batch compute environment.
-**/
+ * An object that represents an Batch compute environment.
+ */
 export declare class ComputeEnvironmentDetail extends SpeakeasyBase {
     computeEnvironmentArn: string;
     computeEnvironmentName: string;
     computeResources?: ComputeResource;
-    ecsClusterArn: string;
+    containerOrchestrationType?: OrchestrationTypeEnum;
+    ecsClusterArn?: string;
+    eksConfiguration?: EksConfiguration;
     serviceRole?: string;
-    state?: CeStateEnum;
-    status?: CeStatusEnum;
+    state?: CEStateEnum;
+    status?: CEStatusEnum;
     statusReason?: string;
     tags?: Record<string, string>;
-    type?: CeTypeEnum;
+    type?: CETypeEnum;
+    unmanagedvCpus?: number;
+    updatePolicy?: UpdatePolicy;
+    uuid?: string;
 }

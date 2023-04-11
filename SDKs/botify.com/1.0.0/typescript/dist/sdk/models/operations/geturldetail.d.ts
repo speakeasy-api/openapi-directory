@@ -1,21 +1,38 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetUrlDetailPathParams extends SpeakeasyBase {
-    analysisSlug: string;
-    projectSlug: string;
-    url: string;
-    username: string;
-}
-export declare class GetUrlDetailQueryParams extends SpeakeasyBase {
-    fields?: string[];
-}
+import { AxiosResponse } from "axios";
 export declare class GetUrlDetailRequest extends SpeakeasyBase {
-    pathParams: GetUrlDetailPathParams;
-    queryParams: GetUrlDetailQueryParams;
+    /**
+     * Analysis' identifier
+     */
+    analysisSlug: string;
+    /**
+     * comma separated list of fields to return (c.f. URLs Datamodel)
+     */
+    fields?: string[];
+    /**
+     * Project's identifier
+     */
+    projectSlug: string;
+    /**
+     * (Urlencoded) Searched URL
+     */
+    url: string;
+    /**
+     * User's identifier
+     */
+    username: string;
 }
 export declare class GetUrlDetailResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * error payload
+     */
     defaultPayload?: shared.DefaultPayload;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful operation
+     */
     urlDetail?: Record<string, any>;
 }

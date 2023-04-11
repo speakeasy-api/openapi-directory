@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteLaunchConfigurationActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteLaunchConfigurationActionEnum {
     DeleteLaunchConfiguration = "DeleteLaunchConfiguration"
 }
-export declare enum GetDeleteLaunchConfigurationVersionEnum {
+export declare enum GETDeleteLaunchConfigurationVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class GetDeleteLaunchConfigurationQueryParams extends SpeakeasyBase {
-    action: GetDeleteLaunchConfigurationActionEnum;
+export declare class GETDeleteLaunchConfigurationRequest extends SpeakeasyBase {
+    action: GETDeleteLaunchConfigurationActionEnum;
+    /**
+     * The name of the launch configuration.
+     */
     launchConfigurationName: string;
-    version: GetDeleteLaunchConfigurationVersionEnum;
-}
-export declare class GetDeleteLaunchConfigurationHeaders extends SpeakeasyBase {
+    version: GETDeleteLaunchConfigurationVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDeleteLaunchConfigurationHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteLaunchConfigurationRequest extends SpeakeasyBase {
-    queryParams: GetDeleteLaunchConfigurationQueryParams;
-    headers: GetDeleteLaunchConfigurationHeaders;
-}
-export declare class GetDeleteLaunchConfigurationResponse extends SpeakeasyBase {
+export declare class GETDeleteLaunchConfigurationResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

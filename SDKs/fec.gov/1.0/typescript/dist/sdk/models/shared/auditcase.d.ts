@@ -12,6 +12,12 @@ export declare class AuditCase extends SpeakeasyBase {
     committeeType?: string;
     cycle?: number;
     farReleaseDate?: Date;
+    /**
+     *
+     * @remarks
+     * URL for retrieving the PDF document
+     *
+     */
     linkToReport?: string;
     primaryCategoryList?: AuditCaseCategoryRelation[];
 }

@@ -1,41 +1,36 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class UserStatusPathParams extends SpeakeasyBase {
-    userId: string;
-}
-export declare enum UserStatusApplicationJsonActionEnum {
-    Activate = "activate",
-    Deactivate = "deactivate"
-}
-/**
- * The action.
-**/
-export declare class UserStatusApplicationJson extends SpeakeasyBase {
-    action: UserStatusApplicationJsonActionEnum;
-}
-export declare enum UserStatusMultipartFormDataActionEnum {
-    Activate = "activate",
-    Deactivate = "deactivate"
-}
-/**
- * The action.
-**/
-export declare class UserStatusMultipartFormData extends SpeakeasyBase {
-    action: UserStatusMultipartFormDataActionEnum;
-}
-export declare class UserStatusRequests extends SpeakeasyBase {
-    object?: UserStatusApplicationJson;
-    object1?: UserStatusMultipartFormData;
-}
+import { AxiosResponse } from "axios";
 export declare class UserStatusSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
+    oAuth: string;
+}
+/**
+ * The action types:<br>`activate` - Activate a deactivated user.<br>`deactivate` - Deactivate a user.
+ */
+export declare enum UserStatusApplicationJSONActionEnum {
+    Activate = "activate",
+    Deactivate = "deactivate"
+}
+/**
+ * The action.
+ */
+export declare class UserStatusApplicationJSON extends SpeakeasyBase {
+    /**
+     * The action types:<br>`activate` - Activate a deactivated user.<br>`deactivate` - Deactivate a user.
+     */
+    action: UserStatusApplicationJSONActionEnum;
 }
 export declare class UserStatusRequest extends SpeakeasyBase {
-    pathParams: UserStatusPathParams;
-    request: UserStatusRequests;
-    security: UserStatusSecurity;
+    /**
+     * User status.
+     */
+    requestBody: UserStatusApplicationJSON;
+    /**
+     * The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+     */
+    userId: string;
 }
 export declare class UserStatusResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

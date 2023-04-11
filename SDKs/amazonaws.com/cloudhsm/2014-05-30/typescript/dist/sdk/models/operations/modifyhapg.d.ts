@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum ModifyHapgXAmzTargetEnum {
     CloudHsmFrontendServiceModifyHapg = "CloudHsmFrontendService.ModifyHapg"
 }
-export declare class ModifyHapgHeaders extends SpeakeasyBase {
+export declare class ModifyHapgRequest extends SpeakeasyBase {
+    modifyHapgRequest: shared.ModifyHapgRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class ModifyHapgHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ModifyHapgXAmzTargetEnum;
 }
-export declare class ModifyHapgRequest extends SpeakeasyBase {
-    headers: ModifyHapgHeaders;
-    request: shared.ModifyHapgRequest;
-}
 export declare class ModifyHapgResponse extends SpeakeasyBase {
+    /**
+     * CloudHsmInternalException
+     */
     cloudHsmInternalException?: any;
+    /**
+     * CloudHsmServiceException
+     */
     cloudHsmServiceException?: any;
     contentType: string;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * Success
+     */
     modifyHapgResponse?: shared.ModifyHapgResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

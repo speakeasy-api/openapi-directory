@@ -1,9 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetInvalidation20190326PathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetInvalidation20190326Request extends SpeakeasyBase {
+    /**
+     * The distribution's ID.
+     */
     distributionId: string;
+    /**
+     * The identifier for the invalidation request, for example, <code>IDFDVBD632BHDS5</code>.
+     */
     id: string;
-}
-export declare class GetInvalidation20190326Headers extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,12 +17,9 @@ export declare class GetInvalidation20190326Headers extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetInvalidation20190326Request extends SpeakeasyBase {
-    pathParams: GetInvalidation20190326PathParams;
-    headers: GetInvalidation20190326Headers;
-}
 export declare class GetInvalidation20190326Response extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

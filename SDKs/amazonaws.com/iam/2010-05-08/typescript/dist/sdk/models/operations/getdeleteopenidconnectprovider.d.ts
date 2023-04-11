@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteOpenIdConnectProviderActionEnum {
-    DeleteOpenIdConnectProvider = "DeleteOpenIDConnectProvider"
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteOpenIDConnectProviderActionEnum {
+    DeleteOpenIDConnectProvider = "DeleteOpenIDConnectProvider"
 }
-export declare enum GetDeleteOpenIdConnectProviderVersionEnum {
+export declare enum GETDeleteOpenIDConnectProviderVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class GetDeleteOpenIdConnectProviderQueryParams extends SpeakeasyBase {
-    action: GetDeleteOpenIdConnectProviderActionEnum;
+export declare class GETDeleteOpenIDConnectProviderRequest extends SpeakeasyBase {
+    action: GETDeleteOpenIDConnectProviderActionEnum;
+    /**
+     * The Amazon Resource Name (ARN) of the IAM OpenID Connect provider resource object to delete. You can get a list of OpenID Connect provider resource ARNs by using the <a>ListOpenIDConnectProviders</a> operation.
+     */
     openIDConnectProviderArn: string;
-    version: GetDeleteOpenIdConnectProviderVersionEnum;
-}
-export declare class GetDeleteOpenIdConnectProviderHeaders extends SpeakeasyBase {
+    version: GETDeleteOpenIDConnectProviderVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDeleteOpenIdConnectProviderHeaders extends SpeakeasyBase
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteOpenIdConnectProviderRequest extends SpeakeasyBase {
-    queryParams: GetDeleteOpenIdConnectProviderQueryParams;
-    headers: GetDeleteOpenIdConnectProviderHeaders;
-}
-export declare class GetDeleteOpenIdConnectProviderResponse extends SpeakeasyBase {
+export declare class GETDeleteOpenIDConnectProviderResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

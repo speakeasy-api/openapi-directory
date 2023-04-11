@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateRouteTableActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateRouteTableActionEnum {
     CreateRouteTable = "CreateRouteTable"
 }
-export declare enum PostCreateRouteTableVersionEnum {
+export declare enum POSTCreateRouteTableVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostCreateRouteTableQueryParams extends SpeakeasyBase {
-    action: PostCreateRouteTableActionEnum;
-    version: PostCreateRouteTableVersionEnum;
-}
-export declare class PostCreateRouteTableHeaders extends SpeakeasyBase {
+export declare class POSTCreateRouteTableRequest extends SpeakeasyBase {
+    action: POSTCreateRouteTableActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateRouteTableVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateRouteTableHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateRouteTableRequest extends SpeakeasyBase {
-    queryParams: PostCreateRouteTableQueryParams;
-    headers: PostCreateRouteTableHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateRouteTableResponse extends SpeakeasyBase {
+export declare class POSTCreateRouteTableResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,21 +1,21 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AreasCountriesRequest, AreasCountriesResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  AreasCountriesRequest,
+  AreasCountriesResponse,
+  AreasCountriesFormatEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    apiKeyHeader: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: AreasCountriesRequest = {
-  pathParams: {
-    format: "xml",
+    apiKeyHeader: "YOUR_API_KEY_HERE",
   },
+});
+
+const req: AreasCountriesRequest = {
+  format: AreasCountriesFormatEnum.Json,
 };
 
 sdk.areasCountries(req).then((res: AreasCountriesResponse | AxiosError) => {

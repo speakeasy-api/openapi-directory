@@ -1,0 +1,26 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * An app's DeviceCheck configuration object. This configuration is used by ExchangeDeviceCheckToken to validate device tokens issued to apps by DeviceCheck. It also controls certain properties of the returned `AppCheckToken`, such as its ttl. Note that the Team ID registered with your app is used as part of the validation process. Please register it via the Firebase Console or programmatically via the [Firebase Management Service](https://firebase.google.com/docs/projects/api/reference/rest/v1beta1/projects.iosApps/patch).
+ */
+export declare class GoogleFirebaseAppcheckV1betaDeviceCheckConfig extends SpeakeasyBase {
+    /**
+     * Required. The key identifier of a private key enabled with DeviceCheck, created in your Apple Developer account.
+     */
+    keyId?: string;
+    /**
+     * Required. The relative resource name of the DeviceCheck configuration object, in the format: ``` projects/{project_number}/apps/{app_id}/deviceCheckConfig ```
+     */
+    name?: string;
+    /**
+     * Required. Input only. The contents of the private key (`.p8`) file associated with the key specified by `key_id`. For security reasons, this field will never be populated in any response.
+     */
+    privateKey?: string;
+    /**
+     * Output only. Whether the `private_key` field was previously set. Since we will never return the `private_key` field, this field is the only way to find out whether it was previously set.
+     */
+    privateKeySet?: boolean;
+    /**
+     * Specifies the duration for which App Check tokens exchanged from DeviceCheck tokens will be valid. If unset, a default value of 1 hour is assumed. Must be between 30 minutes and 7 days, inclusive.
+     */
+    tokenTtl?: string;
+}

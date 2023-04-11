@@ -1,12 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetOfferingStatusQueryParams extends SpeakeasyBase {
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum GetOfferingStatusXAmzTargetEnum {
     DeviceFarm20150623GetOfferingStatus = "DeviceFarm_20150623.GetOfferingStatus"
 }
-export declare class GetOfferingStatusHeaders extends SpeakeasyBase {
+export declare class GetOfferingStatusRequest extends SpeakeasyBase {
+    getOfferingStatusRequest: shared.GetOfferingStatusRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -15,19 +14,37 @@ export declare class GetOfferingStatusHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: GetOfferingStatusXAmzTargetEnum;
-}
-export declare class GetOfferingStatusRequest extends SpeakeasyBase {
-    queryParams: GetOfferingStatusQueryParams;
-    headers: GetOfferingStatusHeaders;
-    request: shared.GetOfferingStatusRequest;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class GetOfferingStatusResponse extends SpeakeasyBase {
+    /**
+     * ArgumentException
+     */
     argumentException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getOfferingStatusResult?: shared.GetOfferingStatusResult;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * NotEligibleException
+     */
     notEligibleException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
+    /**
+     * ServiceAccountException
+     */
     serviceAccountException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

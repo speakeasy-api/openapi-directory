@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The log type that this config enables.
+ */
 export declare enum GoogleIamV1AuditLogConfigLogTypeEnum {
     LogTypeUnspecified = "LOG_TYPE_UNSPECIFIED",
     AdminRead = "ADMIN_READ",
@@ -7,6 +10,8 @@ export declare enum GoogleIamV1AuditLogConfigLogTypeEnum {
 }
 /**
  * Provides the configuration for logging a type of permissions.
+ *
+ * @remarks
  * Example:
  *
  *     {
@@ -25,8 +30,18 @@ export declare enum GoogleIamV1AuditLogConfigLogTypeEnum {
  *
  * This enables 'DATA_READ' and 'DATA_WRITE' logging, while exempting
  * jose@example.com from DATA_READ logging.
-**/
+ */
 export declare class GoogleIamV1AuditLogConfig extends SpeakeasyBase {
+    /**
+     * Specifies the identities that do not cause logging for this type of
+     *
+     * @remarks
+     * permission.
+     * Follows the same format of Binding.members.
+     */
     exemptedMembers?: string[];
+    /**
+     * The log type that this config enables.
+     */
     logType?: GoogleIamV1AuditLogConfigLogTypeEnum;
 }

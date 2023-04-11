@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { TestCaseRun } from "./testcaserun";
 /**
  * Show Group Result.
-**/
+ */
 export declare class GroupResult extends SpeakeasyBase {
     groupId?: string;
     groupName?: string;

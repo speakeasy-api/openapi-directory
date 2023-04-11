@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeLagsXAmzTargetEnum {
     OvertureServiceDescribeLags = "OvertureService.DescribeLags"
 }
-export declare class DescribeLagsHeaders extends SpeakeasyBase {
+export declare class DescribeLagsRequest extends SpeakeasyBase {
+    describeLagsRequest: shared.DescribeLagsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class DescribeLagsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeLagsXAmzTargetEnum;
 }
-export declare class DescribeLagsRequest extends SpeakeasyBase {
-    headers: DescribeLagsHeaders;
-    request: shared.DescribeLagsRequest;
-}
 export declare class DescribeLagsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * DirectConnectClientException
+     */
     directConnectClientException?: any;
+    /**
+     * DirectConnectServerException
+     */
     directConnectServerException?: any;
+    /**
+     * Success
+     */
     lags?: shared.Lags;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

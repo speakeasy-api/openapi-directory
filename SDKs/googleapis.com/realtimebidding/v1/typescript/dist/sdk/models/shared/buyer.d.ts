@@ -1,12 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * RTB Buyer account information.
-**/
+ */
 export declare class Buyer extends SpeakeasyBase {
+    /**
+     * Output only. The number of creatives that this buyer submitted through the API or bid with in the last 30 days. This is counted against the maximum number of active creatives.
+     */
     activeCreativeCount?: string;
+    /**
+     * Output only. The name of the bidder resource that is responsible for receiving bidding traffic for this account. The bidder name must follow the pattern `bidders/{bidderAccountId}`, where `{bidderAccountId}` is the account ID of the bidder receiving traffic for this buyer.
+     */
     bidder?: string;
+    /**
+     * Output only. A list of billing IDs associated with this account. These IDs appear on: 1. A bid request, to signal which buyers are eligible to bid on a given opportunity, and which pretargeting configurations were matched for each eligible buyer. 2. The bid response, to attribute a winning impression to a specific account for billing, reporting, policy and publisher block enforcement.
+     */
     billingIds?: string[];
+    /**
+     * Output only. The diplay name associated with this buyer account, as visible to sellers.
+     */
     displayName?: string;
+    /**
+     * Output only. The maximum number of active creatives that this buyer can have.
+     */
     maximumActiveCreativeCount?: string;
+    /**
+     * Output only. Name of the buyer resource that must follow the pattern `buyers/{buyerAccountId}`, where `{buyerAccountId}` is the account ID of the buyer account whose information is to be received. One can get their account ID on the Authorized Buyers or Open Bidding UI, or by contacting their Google account manager.
+     */
     name?: string;
 }

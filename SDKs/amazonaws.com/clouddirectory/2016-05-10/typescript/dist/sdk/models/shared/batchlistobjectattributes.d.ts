@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { SchemaFacet } from "./schemafacet";
 import { ObjectReference } from "./objectreference";
+import { SchemaFacet } from "./schemafacet";
 /**
  * Represents the output of a <a>ListObjectAttributes</a> operation.
-**/
+ */
 export declare class BatchListObjectAttributes extends SpeakeasyBase {
     facetFilter?: SchemaFacet;
     maxResults?: number;

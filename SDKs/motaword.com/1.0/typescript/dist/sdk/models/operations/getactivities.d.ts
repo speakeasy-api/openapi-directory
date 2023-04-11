@@ -1,19 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetActivitiesPathParams extends SpeakeasyBase {
-    projectId: number;
-}
-export declare class GetActivitiesQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetActivitiesRequest extends SpeakeasyBase {
     page?: number;
     perPage?: number;
-}
-export declare class GetActivitiesRequest extends SpeakeasyBase {
-    pathParams: GetActivitiesPathParams;
-    queryParams: GetActivitiesQueryParams;
+    /**
+     * Project ID
+     */
+    projectId: number;
 }
 export declare class GetActivitiesResponse extends SpeakeasyBase {
+    /**
+     * A list of activity models
+     */
     activityList?: shared.ActivityList;
     contentType: string;
+    /**
+     * ProjectNotFound
+     */
     error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

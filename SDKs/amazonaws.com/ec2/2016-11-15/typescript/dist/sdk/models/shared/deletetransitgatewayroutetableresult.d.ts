@@ -1,16 +1,35 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
- * Information about the deleted transit gateway route table.
-**/
-export declare class DeleteTransitGatewayRouteTableResultTransitGatewayRouteTable extends SpeakeasyBase {
-    creationTime?: Record<string, any>;
-    defaultAssociationRouteTable?: Record<string, any>;
-    defaultPropagationRouteTable?: Record<string, any>;
-    state?: Record<string, any>;
-    tags?: Record<string, any>;
-    transitGatewayId?: Record<string, any>;
-    transitGatewayRouteTableId?: Record<string, any>;
+ * The state of the transit gateway route table.
+ */
+export declare enum DeleteTransitGatewayRouteTableResultTransitGatewayRouteTableStateEnum {
+    Pending = "pending",
+    Available = "available",
+    Deleting = "deleting",
+    Deleted = "deleted"
 }
+/**
+ * Describes a tag.
+ */
+export declare class DeleteTransitGatewayRouteTableResultTransitGatewayRouteTableTags extends SpeakeasyBase {
+    key?: string;
+    value?: string;
+}
+/**
+ * Information about the deleted transit gateway route table.
+ */
+export declare class DeleteTransitGatewayRouteTableResultTransitGatewayRouteTable extends SpeakeasyBase {
+    creationTime?: Date;
+    defaultAssociationRouteTable?: boolean;
+    defaultPropagationRouteTable?: boolean;
+    state?: DeleteTransitGatewayRouteTableResultTransitGatewayRouteTableStateEnum;
+    tags?: DeleteTransitGatewayRouteTableResultTransitGatewayRouteTableTags[];
+    transitGatewayId?: string;
+    transitGatewayRouteTableId?: string;
+}
+/**
+ * Success
+ */
 export declare class DeleteTransitGatewayRouteTableResult extends SpeakeasyBase {
     transitGatewayRouteTable?: DeleteTransitGatewayRouteTableResultTransitGatewayRouteTable;
 }

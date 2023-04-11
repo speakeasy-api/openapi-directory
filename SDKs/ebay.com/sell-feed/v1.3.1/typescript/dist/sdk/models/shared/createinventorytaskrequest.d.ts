@@ -1,8 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { InventoryFilterCriteria } from "./inventoryfiltercriteria";
+/**
+ * The request payload containing the version, feedType, and optional filterCriteria.
+ */
 export declare class CreateInventoryTaskRequest extends SpeakeasyBase {
+    /**
+     * The feed type associated with the inventory task you are about to create. Use a <strong>feedType</strong> that is available for your API. Presently, only one feed type is available:<ul><li><code>LMS_ACTIVE_INVENTORY_REPORT</code></li></ul><br/>See <a href="/api-docs/sell/static/feed/lms-feeds-quick-reference.html#merchant-data-reports-download-feed-types" target="_blank">Report download feed types</a> for more information.
+     */
     feedType?: string;
+    /**
+     * The container for the filter fields. This container is used to set the filter criteria for the order report. A seller can retrieve listings for a specified format.
+     */
     filterCriteria?: InventoryFilterCriteria;
-    inventoryFileTemplate?: string;
+    /**
+     * The schemaVersion/version number of the file format (use the schema version of the API to which you are programming):<ul><li><a href="/api-docs/sell/static/feed/lms-feeds-quick-reference.html#Version" target="_blank">Version Details / Schema Version</a></li><li><a href="/api-docs/sell/static/feed/fx-feeds-quick-reference.html#schema" target="_blank">Seller Hub feed schema version</a></li></ul>
+     */
     schemaVersion?: string;
 }

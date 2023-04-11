@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCopyImageActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCopyImageActionEnum {
     CopyImage = "CopyImage"
 }
-export declare enum PostCopyImageVersionEnum {
+export declare enum POSTCopyImageVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostCopyImageQueryParams extends SpeakeasyBase {
-    action: PostCopyImageActionEnum;
-    version: PostCopyImageVersionEnum;
-}
-export declare class PostCopyImageHeaders extends SpeakeasyBase {
+export declare class POSTCopyImageRequest extends SpeakeasyBase {
+    action: POSTCopyImageActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCopyImageVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCopyImageHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCopyImageRequest extends SpeakeasyBase {
-    queryParams: PostCopyImageQueryParams;
-    headers: PostCopyImageHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCopyImageResponse extends SpeakeasyBase {
+export declare class POSTCopyImageResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

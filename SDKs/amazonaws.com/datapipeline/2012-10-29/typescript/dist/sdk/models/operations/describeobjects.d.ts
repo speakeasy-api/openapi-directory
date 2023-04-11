@@ -1,12 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeObjectsQueryParams extends SpeakeasyBase {
-    marker?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum DescribeObjectsXAmzTargetEnum {
     DataPipelineDescribeObjects = "DataPipeline.DescribeObjects"
 }
-export declare class DescribeObjectsHeaders extends SpeakeasyBase {
+export declare class DescribeObjectsRequest extends SpeakeasyBase {
+    describeObjectsInput: shared.DescribeObjectsInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -15,18 +14,33 @@ export declare class DescribeObjectsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeObjectsXAmzTargetEnum;
-}
-export declare class DescribeObjectsRequest extends SpeakeasyBase {
-    queryParams: DescribeObjectsQueryParams;
-    headers: DescribeObjectsHeaders;
-    request: shared.DescribeObjectsInput;
+    /**
+     * Pagination token
+     */
+    marker?: string;
 }
 export declare class DescribeObjectsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeObjectsOutput?: shared.DescribeObjectsOutput;
+    /**
+     * InternalServiceError
+     */
     internalServiceError?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * PipelineDeletedException
+     */
     pipelineDeletedException?: any;
+    /**
+     * PipelineNotFoundException
+     */
     pipelineNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

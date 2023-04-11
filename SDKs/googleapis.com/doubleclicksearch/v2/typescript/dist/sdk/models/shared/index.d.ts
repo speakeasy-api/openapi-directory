@@ -9,7 +9,6 @@ export * from "./reportapicolumnspec";
 export * from "./reportrequest";
 export * from "./savedcolumn";
 export * from "./savedcolumnlist";
-export * from "./security";
 export * from "./updateavailabilityrequest";
 export * from "./updateavailabilityresponse";
 export * from "./xgafvenum";

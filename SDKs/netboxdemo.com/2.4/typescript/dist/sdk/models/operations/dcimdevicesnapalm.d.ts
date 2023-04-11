@@ -1,13 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DcimDevicesNapalmPathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DcimDevicesNapalmRequest extends SpeakeasyBase {
-    pathParams: DcimDevicesNapalmPathParams;
+    /**
+     * A unique integer value identifying this device.
+     */
+    id: number;
 }
 export declare class DcimDevicesNapalmResponse extends SpeakeasyBase {
     contentType: string;
     device?: shared.Device;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

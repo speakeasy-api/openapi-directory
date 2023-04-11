@@ -6,143 +6,310 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/baremetalsolution/v1alpha1/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/baremetalsolution/v1alpha1/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest, BaremetalsolutionProjectsLocationsSubmitProvisioningConfigResponse } from "openapi/src/sdk/models/operations";
+import {
+  BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest,
+  BaremetalsolutionProjectsLocationsSubmitProvisioningConfigResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  VolumeConfigProtocolEnum,
+  VolumeConfigTypeEnum,
+  NfsExportPermissionsEnum,
+  NetworkConfigBandwidthEnum,
+  NetworkConfigServiceCidrEnum,
+  NetworkConfigTypeEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    location: "sit",
-    project: "voluptas",
-  },
-  queryParams: {
-    dollarXgafv: "2",
-    accessToken: "expedita",
-    alt: "proto",
-    callback: "dolor",
-    fields: "expedita",
-    key: "voluptas",
-    oauthToken: "fugit",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    uploadType: "rerum",
-    uploadProtocol: "dicta",
-  },
-  request: {
-    email: "debitis",
+  dollarXgafv: XgafvEnum.Two,
+  submitProvisioningConfigRequest: {
+    email: "Micheal_Sporer@yahoo.com",
     provisioningConfig: {
       instances: [
         {
           clientNetwork: {
-            address: "et",
-            existingNetworkId: "ut",
-            networkId: "dolorem",
+            address: "466 Hunter Fort",
+            existingNetworkId: "debitis",
+            networkId: "ipsa",
           },
           hyperthreading: false,
-          id: "voluptate",
-          instanceType: "iste",
-          location: "vitae",
-          osImage: "totam",
+          id: "delectus",
+          instanceType: "tempora",
+          location: "suscipit",
+          osImage: "molestiae",
           privateNetwork: {
-            address: "dolores",
-            existingNetworkId: "illum",
-            networkId: "debitis",
+            address: "854 Huel Via",
+            existingNetworkId: "temporibus",
+            networkId: "ab",
           },
-          userNote: "vel",
+          userNote: "quis",
+        },
+        {
+          clientNetwork: {
+            address: "60389 Connelly Trace",
+            existingNetworkId: "at",
+            networkId: "maiores",
+          },
+          hyperthreading: false,
+          id: "molestiae",
+          instanceType: "quod",
+          location: "quod",
+          osImage: "esse",
+          privateNetwork: {
+            address: "7617 McCullough Coves",
+            existingNetworkId: "deleniti",
+            networkId: "hic",
+          },
+          userNote: "optio",
+        },
+        {
+          clientNetwork: {
+            address: "1442 Ona River",
+            existingNetworkId: "esse",
+            networkId: "ipsum",
+          },
+          hyperthreading: false,
+          id: "excepturi",
+          instanceType: "aspernatur",
+          location: "perferendis",
+          osImage: "ad",
+          privateNetwork: {
+            address: "1626 Tyra Union",
+            existingNetworkId: "fuga",
+            networkId: "in",
+          },
+          userNote: "corporis",
         },
       ],
       networks: [
         {
-          bandwidth: "BW_1_GBPS",
-          cidr: "id",
-          id: "aspernatur",
-          location: "accusantium",
-          serviceCidr: "SERVICE_CIDR_UNSPECIFIED",
-          type: "CLIENT",
-          userNote: "quis",
+          bandwidth: NetworkConfigBandwidthEnum.Bw2Gbps,
+          cidr: "saepe",
+          id: "quidem",
+          location: "architecto",
+          serviceCidr: NetworkConfigServiceCidrEnum.ServiceCidrUnspecified,
+          type: NetworkConfigTypeEnum.Private,
+          userNote: "est",
           vlanAttachments: [
             {
-              id: "aut",
-              pairingKey: "odit",
+              id: "laborum",
+              pairingKey: "dolores",
             },
             {
-              id: "non",
-              pairingKey: "voluptas",
+              id: "dolorem",
+              pairingKey: "corporis",
+            },
+            {
+              id: "explicabo",
+              pairingKey: "nobis",
+            },
+          ],
+        },
+        {
+          bandwidth: NetworkConfigBandwidthEnum.Bw1Gbps,
+          cidr: "omnis",
+          id: "nemo",
+          location: "minima",
+          serviceCidr: NetworkConfigServiceCidrEnum.High26,
+          type: NetworkConfigTypeEnum.TypeUnspecified,
+          userNote: "iure",
+          vlanAttachments: [
+            {
+              id: "doloribus",
+              pairingKey: "sapiente",
+            },
+            {
+              id: "architecto",
+              pairingKey: "mollitia",
+            },
+            {
+              id: "dolorem",
+              pairingKey: "culpa",
+            },
+          ],
+        },
+        {
+          bandwidth: NetworkConfigBandwidthEnum.BandwidthUnspecified,
+          cidr: "repellat",
+          id: "mollitia",
+          location: "occaecati",
+          serviceCidr: NetworkConfigServiceCidrEnum.Disabled,
+          type: NetworkConfigTypeEnum.Client,
+          userNote: "quam",
+          vlanAttachments: [
+            {
+              id: "velit",
+              pairingKey: "error",
+            },
+            {
+              id: "quia",
+              pairingKey: "quis",
             },
           ],
         },
       ],
-      ticketId: "omnis",
+      ticketId: "vitae",
       volumes: [
         {
-          id: "illo",
-          location: "sed",
+          id: "animi",
+          location: "enim",
           lunRanges: [
             {
-              quantity: 771642788862502430,
-              sizeGb: 8514850266767180993,
-            },
-            {
-              quantity: 8683452355129068124,
-              sizeGb: 4345851588384648695,
+              quantity: 778346,
+              sizeGb: 196582,
             },
           ],
           machineIds: [
-            "recusandae",
+            "ipsam",
+            "id",
+            "possimus",
+            "aut",
           ],
           nfsExports: [
             {
               allowDev: false,
-              allowSuid: true,
-              cidr: "modi",
-              machineId: "sint",
-              networkId: "inventore",
-              noRootSquash: true,
-              permissions: "READ_WRITE",
-            },
-            {
-              allowDev: true,
               allowSuid: false,
-              cidr: "tempore",
-              machineId: "maiores",
-              networkId: "incidunt",
+              cidr: "error",
+              machineId: "temporibus",
+              networkId: "laborum",
               noRootSquash: false,
-              permissions: "READ_WRITE",
+              permissions: NfsExportPermissionsEnum.PermissionsUnspecified,
             },
           ],
-          protocol: "PROTOCOL_FC",
-          sizeGb: 2671030200101705776,
+          protocol: VolumeConfigProtocolEnum.ProtocolNfs,
+          sizeGb: 976460,
           snapshotsEnabled: false,
-          type: "FLASH",
-          userNote: "ipsum",
+          type: VolumeConfigTypeEnum.Disk,
+          userNote: "nihil",
+        },
+        {
+          id: "praesentium",
+          location: "voluptatibus",
+          lunRanges: [
+            {
+              quantity: 604846,
+              sizeGb: 451159,
+            },
+          ],
+          machineIds: [
+            "perferendis",
+            "doloremque",
+            "reprehenderit",
+          ],
+          nfsExports: [
+            {
+              allowDev: false,
+              allowSuid: false,
+              cidr: "maiores",
+              machineId: "dicta",
+              networkId: "corporis",
+              noRootSquash: false,
+              permissions: NfsExportPermissionsEnum.PermissionsUnspecified,
+            },
+            {
+              allowDev: false,
+              allowSuid: false,
+              cidr: "iusto",
+              machineId: "dicta",
+              networkId: "harum",
+              noRootSquash: false,
+              permissions: NfsExportPermissionsEnum.PermissionsUnspecified,
+            },
+          ],
+          protocol: VolumeConfigProtocolEnum.ProtocolNfs,
+          sizeGb: 414263,
+          snapshotsEnabled: false,
+          type: VolumeConfigTypeEnum.Disk,
+          userNote: "quae",
+        },
+        {
+          id: "ipsum",
+          location: "quidem",
+          lunRanges: [
+            {
+              quantity: 566602,
+              sizeGb: 865103,
+            },
+            {
+              quantity: 265389,
+              sizeGb: 508969,
+            },
+            {
+              quantity: 523248,
+              sizeGb: 916723,
+            },
+          ],
+          machineIds: [
+            "repudiandae",
+          ],
+          nfsExports: [
+            {
+              allowDev: false,
+              allowSuid: false,
+              cidr: "veritatis",
+              machineId: "itaque",
+              networkId: "incidunt",
+              noRootSquash: false,
+              permissions: NfsExportPermissionsEnum.PermissionsUnspecified,
+            },
+            {
+              allowDev: false,
+              allowSuid: false,
+              cidr: "consequatur",
+              machineId: "est",
+              networkId: "quibusdam",
+              noRootSquash: false,
+              permissions: NfsExportPermissionsEnum.PermissionsUnspecified,
+            },
+            {
+              allowDev: false,
+              allowSuid: false,
+              cidr: "deserunt",
+              machineId: "distinctio",
+              networkId: "quibusdam",
+              noRootSquash: false,
+              permissions: NfsExportPermissionsEnum.PermissionsUnspecified,
+            },
+          ],
+          protocol: VolumeConfigProtocolEnum.ProtocolUnspecified,
+          sizeGb: 183191,
+          snapshotsEnabled: false,
+          type: VolumeConfigTypeEnum.Flash,
+          userNote: "cupiditate",
         },
       ],
     },
   },
+  accessToken: "quos",
+  alt: AltEnum.Json,
+  callback: "magni",
+  fields: "assumenda",
+  key: "ipsam",
+  location: "alias",
+  oauthToken: "fugit",
+  prettyPrint: false,
+  project: "dolorum",
+  quotaUser: "excepturi",
+  uploadType: "tempora",
+  uploadProtocol: "facilis",
 };
 
 sdk.projects.baremetalsolutionProjectsLocationsSubmitProvisioningConfig(req).then((res: BaremetalsolutionProjectsLocationsSubmitProvisioningConfigResponse | AxiosError) => {
@@ -152,13 +319,25 @@ sdk.projects.baremetalsolutionProjectsLocationsSubmitProvisioningConfig(req).the
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### projects
 
 * `baremetalsolutionProjectsLocationsSubmitProvisioningConfig` - Submit a provisiong configuration for a given project.
 * `baremetalsolutionProjectsProvisioningQuotasList` - List the budget details to provision resources on a given project.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

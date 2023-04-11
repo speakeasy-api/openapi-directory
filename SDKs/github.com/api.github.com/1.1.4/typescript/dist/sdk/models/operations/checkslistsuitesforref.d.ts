@@ -1,27 +1,50 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ChecksListSuitesForRefPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ChecksListSuitesForRefRequest extends SpeakeasyBase {
+    /**
+     * Filters check suites by GitHub App `id`.
+     */
+    appId?: number;
+    /**
+     * Returns check runs with the specified `name`.
+     */
+    checkName?: string;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
     owner: string;
+    /**
+     * Page number of the results to fetch.
+     */
+    page?: number;
+    /**
+     * The number of results per page (max 100).
+     */
+    perPage?: number;
+    /**
+     * ref parameter
+     */
     ref: string;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
     repo: string;
 }
-export declare class ChecksListSuitesForRefQueryParams extends SpeakeasyBase {
-    appId?: number;
-    checkName?: string;
-    page?: number;
-    perPage?: number;
-}
-export declare class ChecksListSuitesForRef200ApplicationJson extends SpeakeasyBase {
+/**
+ * Response
+ */
+export declare class ChecksListSuitesForRef200ApplicationJSON extends SpeakeasyBase {
     checkSuites: shared.CheckSuite[];
     totalCount: number;
 }
-export declare class ChecksListSuitesForRefRequest extends SpeakeasyBase {
-    pathParams: ChecksListSuitesForRefPathParams;
-    queryParams: ChecksListSuitesForRefQueryParams;
-}
 export declare class ChecksListSuitesForRefResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
-    checksListSuitesForRef200ApplicationJSONObject?: ChecksListSuitesForRef200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
+    checksListSuitesForRef200ApplicationJSONObject?: ChecksListSuitesForRef200ApplicationJSON;
 }

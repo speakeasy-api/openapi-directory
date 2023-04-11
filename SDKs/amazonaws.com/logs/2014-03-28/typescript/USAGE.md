@@ -1,32 +1,32 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AssociateKmsKeyRequest, AssociateKmsKeyResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  AssociateKmsKeyRequest,
+  AssociateKmsKeyResponse,
+  AssociateKmsKeyXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    hmac: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: AssociateKmsKeyRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "Logs_20140328.AssociateKmsKey",
+  associateKmsKeyRequest: {
+    kmsKeyId: "corrupti",
+    logGroupName: "provident",
   },
-  request: {
-    kmsKeyId: "fugit",
-    logGroupName: "et",
-  },
+  xAmzAlgorithm: "distinctio",
+  xAmzContentSha256: "quibusdam",
+  xAmzCredential: "unde",
+  xAmzDate: "nulla",
+  xAmzSecurityToken: "corrupti",
+  xAmzSignature: "illum",
+  xAmzSignedHeaders: "vel",
+  xAmzTarget: AssociateKmsKeyXAmzTargetEnum.Logs20140328AssociateKmsKey,
 };
 
 sdk.associateKmsKey(req).then((res: AssociateKmsKeyResponse | AxiosError) => {

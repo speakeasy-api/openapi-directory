@@ -1,5 +1,7 @@
+/**
+ * The time frame to display results for.
+ */
 export declare enum PerEnum {
-    Unknown = "",
     Day = "day",
     Week = "week"
 }

@@ -1,24 +1,37 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class MessagesFetchAllPathParams extends SpeakeasyBase {
-    accountId: string;
-}
-export declare class MessagesFetchAllQueryParams extends SpeakeasyBase {
-    contactId?: string;
-    conversationId?: string;
-    limit?: number;
-    offset?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class MessagesFetchAllSecurity extends SpeakeasyBase {
-    sakariAuth: shared.SchemeSakariAuth;
+    sakariAuth: string;
 }
 export declare class MessagesFetchAllRequest extends SpeakeasyBase {
-    pathParams: MessagesFetchAllPathParams;
-    queryParams: MessagesFetchAllQueryParams;
-    security: MessagesFetchAllSecurity;
+    /**
+     * Account to apply operations to
+     */
+    accountId: string;
+    /**
+     * ID of contact
+     */
+    contactId?: string;
+    /**
+     * ID of conversation
+     */
+    conversationId?: string;
+    /**
+     * Maximum number of results to return
+     */
+    limit?: number;
+    /**
+     * Results to skip when paginating through a result set
+     */
+    offset?: number;
 }
 export declare class MessagesFetchAllResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * successful operation
+     */
     messagesResponse?: shared.MessagesResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

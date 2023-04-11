@@ -1,26 +1,52 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetIsosIdPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetIsosIdRequest extends SpeakeasyBase {
+    /**
+     * ID of the ISO
+     */
     id: number;
 }
-export declare enum GetIsosId200ApplicationJsonIsoTypeEnum {
+/**
+ * Type of the ISO
+ */
+export declare enum GetIsosId200ApplicationJSONIsoTypeEnum {
     Public = "public",
     Private = "private"
 }
-export declare class GetIsosId200ApplicationJsonIso extends SpeakeasyBase {
+export declare class GetIsosId200ApplicationJSONIso extends SpeakeasyBase {
+    /**
+     * ISO 8601 timestamp of deprecation, null if ISO is still available. After the deprecation time it will no longer be possible to attach the ISO to Servers.
+     */
     deprecated: string;
+    /**
+     * Description of the ISO
+     */
     description: string;
+    /**
+     * ID of the Resource
+     */
     id: number;
+    /**
+     * Unique identifier of the ISO. Only set for public ISOs
+     */
     name: string;
-    type: GetIsosId200ApplicationJsonIsoTypeEnum;
+    /**
+     * Type of the ISO
+     */
+    type: GetIsosId200ApplicationJSONIsoTypeEnum;
 }
-export declare class GetIsosId200ApplicationJson extends SpeakeasyBase {
-    iso: GetIsosId200ApplicationJsonIso;
-}
-export declare class GetIsosIdRequest extends SpeakeasyBase {
-    pathParams: GetIsosIdPathParams;
+/**
+ * The `iso` key in the reply contains an array of ISO objects with this structure
+ */
+export declare class GetIsosId200ApplicationJSON extends SpeakeasyBase {
+    iso: GetIsosId200ApplicationJSONIso;
 }
 export declare class GetIsosIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getIsosId200ApplicationJSONObject?: GetIsosId200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * The `iso` key in the reply contains an array of ISO objects with this structure
+     */
+    getIsosId200ApplicationJSONObject?: GetIsosId200ApplicationJSON;
 }

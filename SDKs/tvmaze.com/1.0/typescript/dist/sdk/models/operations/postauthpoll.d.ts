@@ -1,16 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
 export declare class PostAuthPollRequestBody extends SpeakeasyBase {
     token?: string;
 }
-export declare class PostAuthPoll200ApplicationJson extends SpeakeasyBase {
+/**
+ * The user confirmed the authentication request
+ */
+export declare class PostAuthPoll200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * The user's API key
+     */
     apikey?: string;
+    /**
+     * The user's username
+     */
     username?: string;
-}
-export declare class PostAuthPollRequest extends SpeakeasyBase {
-    request: PostAuthPollRequestBody;
 }
 export declare class PostAuthPollResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    postAuthPoll200ApplicationJSONObject?: PostAuthPoll200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * The user confirmed the authentication request
+     */
+    postAuthPoll200ApplicationJSONObject?: PostAuthPoll200ApplicationJSON;
 }

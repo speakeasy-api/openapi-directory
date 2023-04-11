@@ -1,44 +1,39 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { EssentialcontactsProjectsContactsComputeRequest, EssentialcontactsProjectsContactsComputeResponse } from "openapi/src/sdk/models/operations";
+import {
+  EssentialcontactsProjectsContactsComputeRequest,
+  EssentialcontactsProjectsContactsComputeResponse,
+  EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum,
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: EssentialcontactsProjectsContactsComputeRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    notificationCategories: [
-      "NOTIFICATION_CATEGORY_UNSPECIFIED",
-      "SECURITY",
-      "LEGAL",
-    ],
-    oauthToken: "rerum",
-    pageSize: 7837839688282259259,
-    pageToken: "debitis",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "ut",
-    uploadProtocol: "dolorem",
-  },
+  dollarXgafv: XgafvEnum.Two,
+  accessToken: "provident",
+  alt: AltEnum.Proto,
+  callback: "quibusdam",
+  fields: "unde",
+  key: "nulla",
+  notificationCategories: [
+    EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum.ProductUpdates,
+    EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum.Security,
+    EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum.Billing,
+  ],
+  oauthToken: "deserunt",
+  pageSize: 384382,
+  pageToken: "iure",
+  parent: "magnam",
+  prettyPrint: false,
+  quotaUser: "debitis",
+  uploadType: "ipsa",
+  uploadProtocol: "delectus",
 };
 
 sdk.projects.essentialcontactsProjectsContactsCompute(req).then((res: EssentialcontactsProjectsContactsComputeResponse | AxiosError) => {

@@ -1,83 +1,75 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { FitnessUsersDataSourcesCreateRequest, FitnessUsersDataSourcesCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  FitnessUsersDataSourcesCreateRequest,
+  FitnessUsersDataSourcesCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  DataSourceDataQualityStandardEnum,
+  DataSourceTypeEnum,
+  DeviceTypeEnum,
+  DataTypeFieldFormatEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: FitnessUsersDataSourcesCreateRequest = {
-  security: {
-    option1: {
-      oauth2: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-      oauth2c: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-    },
-  },
-  pathParams: {
-    userId: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  dataSource: {
     application: {
-      detailsUrl: "dicta",
-      name: "debitis",
-      packageName: "voluptatum",
-      version: "et",
+      detailsUrl: "provident",
+      name: "distinctio",
+      packageName: "quibusdam",
+      version: "unde",
     },
     dataQualityStandard: [
-      "dataQualityUnknown",
-      "dataQualityUnknown",
-      "dataQualityBloodPressureBhsAA",
+      DataSourceDataQualityStandardEnum.DataQualityBloodPressureBhsAB,
+      DataSourceDataQualityStandardEnum.DataQualityBloodGlucoseIso151972003,
+      DataSourceDataQualityStandardEnum.DataQualityBloodPressureBhsAA,
+      DataSourceDataQualityStandardEnum.DataQualityBloodPressureBhsBA,
     ],
-    dataStreamId: "iste",
-    dataStreamName: "vitae",
+    dataStreamId: "deserunt",
+    dataStreamName: "suscipit",
     dataType: {
       field: [
         {
-          format: "map",
-          name: "illum",
-          optional: true,
+          format: DataTypeFieldFormatEnum.String,
+          name: "debitis",
+          optional: false,
         },
         {
-          format: "floatPoint",
-          name: "odio",
-          optional: true,
-        },
-        {
-          format: "integerList",
-          name: "aspernatur",
-          optional: true,
+          format: DataTypeFieldFormatEnum.Integer,
+          name: "delectus",
+          optional: false,
         },
       ],
-      name: "totam",
+      name: "tempora",
     },
     device: {
-      manufacturer: "commodi",
-      model: "quis",
-      type: "phone",
-      uid: "aut",
-      version: "odit",
+      manufacturer: "suscipit",
+      model: "molestiae",
+      type: DeviceTypeEnum.HeadMounted,
+      uid: "placeat",
+      version: "voluptatum",
     },
-    name: "non",
-    type: "raw",
+    name: "iusto",
+    type: DataSourceTypeEnum.Derived,
   },
+  accessToken: "nisi",
+  alt: AltEnum.Proto,
+  callback: "temporibus",
+  fields: "ab",
+  key: "quis",
+  oauthToken: "veritatis",
+  prettyPrint: false,
+  quotaUser: "deserunt",
+  uploadType: "perferendis",
+  uploadProtocol: "ipsam",
+  userId: "repellendus",
 };
 
 sdk.users.fitnessUsersDataSourcesCreate(req).then((res: FitnessUsersDataSourcesCreateResponse | AxiosError) => {

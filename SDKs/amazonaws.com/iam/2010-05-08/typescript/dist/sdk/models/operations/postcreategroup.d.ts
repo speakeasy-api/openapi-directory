@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCreateGroupActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCreateGroupActionEnum {
     CreateGroup = "CreateGroup"
 }
-export declare enum PostCreateGroupVersionEnum {
+export declare enum POSTCreateGroupVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostCreateGroupQueryParams extends SpeakeasyBase {
-    action: PostCreateGroupActionEnum;
-    version: PostCreateGroupVersionEnum;
-}
-export declare class PostCreateGroupHeaders extends SpeakeasyBase {
+export declare class POSTCreateGroupRequest extends SpeakeasyBase {
+    action: POSTCreateGroupActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCreateGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCreateGroupHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCreateGroupRequest extends SpeakeasyBase {
-    queryParams: PostCreateGroupQueryParams;
-    headers: PostCreateGroupHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCreateGroupResponse extends SpeakeasyBase {
+export declare class POSTCreateGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

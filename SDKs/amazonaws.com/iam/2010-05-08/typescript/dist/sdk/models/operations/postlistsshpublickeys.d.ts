@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostListSshPublicKeysActionEnum {
-    ListSshPublicKeys = "ListSSHPublicKeys"
+import { AxiosResponse } from "axios";
+export declare enum POSTListSSHPublicKeysActionEnum {
+    ListSSHPublicKeys = "ListSSHPublicKeys"
 }
-export declare enum PostListSshPublicKeysVersionEnum {
+export declare enum POSTListSSHPublicKeysVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostListSshPublicKeysQueryParams extends SpeakeasyBase {
-    action: PostListSshPublicKeysActionEnum;
+export declare class POSTListSSHPublicKeysRequest extends SpeakeasyBase {
+    action: POSTListSSHPublicKeysActionEnum;
+    /**
+     * Pagination token
+     */
     marker?: string;
+    /**
+     * Pagination limit
+     */
     maxItems?: string;
-    version: PostListSshPublicKeysVersionEnum;
-}
-export declare class PostListSshPublicKeysHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTListSSHPublicKeysVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostListSshPublicKeysHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostListSshPublicKeysRequest extends SpeakeasyBase {
-    queryParams: PostListSshPublicKeysQueryParams;
-    headers: PostListSshPublicKeysHeaders;
-    request?: Uint8Array;
-}
-export declare class PostListSshPublicKeysResponse extends SpeakeasyBase {
+export declare class POSTListSSHPublicKeysResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,7 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * End previous overlay animation from the video. Without AnimationEnd, the overlay object will keep the state of previous animation until the end of the video.
-**/
+ */
 export declare class AnimationEnd extends SpeakeasyBase {
+    /**
+     * The time to end overlay object, in seconds. Default: 0
+     */
     startTimeOffset?: string;
 }

@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * System overview
+ */
 export declare class V1System {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,21 +12,24 @@ export declare class V1System {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * healthCheck - Returns the health information for the official business registers based on usage.
-     *
      * Returns the health information for the official business registers based on usage.
-    **/
-    healthCheck(req: operations.HealthCheckRequest, config?: AxiosRequestConfig): Promise<operations.HealthCheckResponse>;
-    /**
-     * systemCountries - Returns a list of countries
      *
+     * @remarks
+     * Returns the health information for the official business registers based on usage.
+     */
+    healthCheck(config?: AxiosRequestConfig): Promise<operations.HealthCheckResponse>;
+    /**
+     * Returns a list of countries
+     *
+     * @remarks
      * Retrieve the list of all currently enabled countries
-    **/
-    systemCountries(req: operations.SystemCountriesRequest, config?: AxiosRequestConfig): Promise<operations.SystemCountriesResponse>;
+     */
+    systemCountries(config?: AxiosRequestConfig): Promise<operations.SystemCountriesResponse>;
     /**
-     * systemPricelist - Returns a list of products with prices
+     * Returns a list of products with prices
      *
+     * @remarks
      * Retrieve pricing rules for your subscription plan
-    **/
-    systemPricelist(req: operations.SystemPricelistRequest, config?: AxiosRequestConfig): Promise<operations.SystemPricelistResponse>;
+     */
+    systemPricelist(config?: AxiosRequestConfig): Promise<operations.SystemPricelistResponse>;
 }

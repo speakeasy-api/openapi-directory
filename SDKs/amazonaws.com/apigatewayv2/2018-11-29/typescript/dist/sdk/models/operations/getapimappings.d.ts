@@ -1,13 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetApiMappingsPathParams extends SpeakeasyBase {
-    domainName: string;
-}
-export declare class GetApiMappingsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
-export declare class GetApiMappingsHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetApiMappingsRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -15,17 +9,37 @@ export declare class GetApiMappingsHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class GetApiMappingsRequest extends SpeakeasyBase {
-    pathParams: GetApiMappingsPathParams;
-    queryParams: GetApiMappingsQueryParams;
-    headers: GetApiMappingsHeaders;
+    /**
+     * The domain name.
+     */
+    domainName: string;
+    /**
+     * The maximum number of elements to be returned for this resource.
+     */
+    maxResults?: string;
+    /**
+     * The next page of elements from this collection. Not valid for the last element of the collection.
+     */
+    nextToken?: string;
 }
 export declare class GetApiMappingsResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getApiMappingsResponse?: shared.GetApiMappingsResponse;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

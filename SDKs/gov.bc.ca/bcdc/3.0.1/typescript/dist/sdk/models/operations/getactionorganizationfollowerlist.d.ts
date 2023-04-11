@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetActionOrganizationFollowerListQueryParams extends SpeakeasyBase {
-    id?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetActionOrganizationFollowerListRequest extends SpeakeasyBase {
-    queryParams: GetActionOrganizationFollowerListQueryParams;
+    /**
+     * The id or name of the organization
+     */
+    id?: string;
 }
 export declare class GetActionOrganizationFollowerListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

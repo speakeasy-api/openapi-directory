@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteListenerXAmzTargetEnum {
     GlobalAcceleratorV20180706DeleteListener = "GlobalAccelerator_V20180706.DeleteListener"
 }
-export declare class DeleteListenerHeaders extends SpeakeasyBase {
+export declare class DeleteListenerRequest extends SpeakeasyBase {
+    deleteListenerRequest: shared.DeleteListenerRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class DeleteListenerHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteListenerXAmzTargetEnum;
 }
-export declare class DeleteListenerRequest extends SpeakeasyBase {
-    headers: DeleteListenerHeaders;
-    request: shared.DeleteListenerRequest;
-}
 export declare class DeleteListenerResponse extends SpeakeasyBase {
+    /**
+     * AssociatedEndpointGroupFoundException
+     */
     associatedEndpointGroupFoundException?: any;
     contentType: string;
+    /**
+     * InternalServiceErrorException
+     */
     internalServiceErrorException?: any;
+    /**
+     * InvalidArgumentException
+     */
     invalidArgumentException?: any;
+    /**
+     * ListenerNotFoundException
+     */
     listenerNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

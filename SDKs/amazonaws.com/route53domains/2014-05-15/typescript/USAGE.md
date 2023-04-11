@@ -1,32 +1,32 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AcceptDomainTransferFromAnotherAwsAccountRequest, AcceptDomainTransferFromAnotherAwsAccountResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  AcceptDomainTransferFromAnotherAwsAccountRequest,
+  AcceptDomainTransferFromAnotherAwsAccountResponse,
+  AcceptDomainTransferFromAnotherAwsAccountXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    hmac: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: AcceptDomainTransferFromAnotherAwsAccountRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "Route53Domains_v20140515.AcceptDomainTransferFromAnotherAwsAccount",
+  acceptDomainTransferFromAnotherAwsAccountRequest: {
+    domainName: "corrupti",
+    password: "provident",
   },
-  request: {
-    domainName: "fugit",
-    password: "et",
-  },
+  xAmzAlgorithm: "distinctio",
+  xAmzContentSha256: "quibusdam",
+  xAmzCredential: "unde",
+  xAmzDate: "nulla",
+  xAmzSecurityToken: "corrupti",
+  xAmzSignature: "illum",
+  xAmzSignedHeaders: "vel",
+  xAmzTarget: AcceptDomainTransferFromAnotherAwsAccountXAmzTargetEnum.Route53DomainsV20140515AcceptDomainTransferFromAnotherAwsAccount,
 };
 
 sdk.acceptDomainTransferFromAnotherAwsAccount(req).then((res: AcceptDomainTransferFromAnotherAwsAccountResponse | AxiosError) => {

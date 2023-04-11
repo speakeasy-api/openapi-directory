@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateContactXAmzTargetEnum {
-    SsmContactsUpdateContact = "SSMContacts.UpdateContact"
+    SSMContactsUpdateContact = "SSMContacts.UpdateContact"
 }
-export declare class UpdateContactHeaders extends SpeakeasyBase {
+export declare class UpdateContactRequest extends SpeakeasyBase {
+    updateContactRequest: shared.UpdateContactRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,19 +15,40 @@ export declare class UpdateContactHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateContactXAmzTargetEnum;
 }
-export declare class UpdateContactRequest extends SpeakeasyBase {
-    headers: UpdateContactHeaders;
-    request: shared.UpdateContactRequest;
-}
 export declare class UpdateContactResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * DataEncryptionException
+     */
     dataEncryptionException?: any;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
-    serviceQuotaExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceQuotaExceededException
+     */
+    serviceQuotaExceededException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * Success
+     */
     updateContactResult?: Record<string, any>;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

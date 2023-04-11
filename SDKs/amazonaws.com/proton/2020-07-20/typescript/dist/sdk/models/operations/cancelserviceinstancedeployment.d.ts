@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum CancelServiceInstanceDeploymentXAmzTargetEnum {
     AwsProton20200720CancelServiceInstanceDeployment = "AwsProton20200720.CancelServiceInstanceDeployment"
 }
-export declare class CancelServiceInstanceDeploymentHeaders extends SpeakeasyBase {
+export declare class CancelServiceInstanceDeploymentRequest extends SpeakeasyBase {
+    cancelServiceInstanceDeploymentInput: shared.CancelServiceInstanceDeploymentInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class CancelServiceInstanceDeploymentHeaders extends SpeakeasyBas
     xAmzSignedHeaders?: string;
     xAmzTarget: CancelServiceInstanceDeploymentXAmzTargetEnum;
 }
-export declare class CancelServiceInstanceDeploymentRequest extends SpeakeasyBase {
-    headers: CancelServiceInstanceDeploymentHeaders;
-    request: shared.CancelServiceInstanceDeploymentInput;
-}
 export declare class CancelServiceInstanceDeploymentResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * Success
+     */
     cancelServiceInstanceDeploymentOutput?: shared.CancelServiceInstanceDeploymentOutput;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

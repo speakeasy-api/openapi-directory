@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateServiceXAmzTargetEnum {
     AwsProton20200720UpdateService = "AwsProton20200720.UpdateService"
 }
-export declare class UpdateServiceHeaders extends SpeakeasyBase {
+export declare class UpdateServiceRequest extends SpeakeasyBase {
+    updateServiceInput: shared.UpdateServiceInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,19 +15,40 @@ export declare class UpdateServiceHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateServiceXAmzTargetEnum;
 }
-export declare class UpdateServiceRequest extends SpeakeasyBase {
-    headers: UpdateServiceHeaders;
-    request: shared.UpdateServiceInput;
-}
 export declare class UpdateServiceResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
-    resourceNotFoundException?: any;
-    serviceQuotaExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ServiceQuotaExceededException
+     */
+    serviceQuotaExceededException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * Success
+     */
     updateServiceOutput?: shared.UpdateServiceOutput;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

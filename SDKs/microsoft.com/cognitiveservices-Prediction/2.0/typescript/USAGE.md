@@ -1,29 +1,25 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { PredictImageRequest, PredictImageResponse } from "openapi/src/sdk/models/operations";
+import {
+  PredictImageRequest,
+  PredictImageResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: PredictImageRequest = {
-  pathParams: {
-    projectId: "sit",
-  },
-  queryParams: {
-    application: "voluptas",
-    iterationId: "culpa",
-  },
-  headers: {
-    predictionKey: "expedita",
-  },
-  request: {
+  predictionKey: "corrupti",
+  requestBody: {
     imageData: {
-      content: "consequuntur".encode(),
-      imageData: "dolor",
+      content: "provident".encode(),
+      imageData: "distinctio",
     },
   },
+  application: "quibusdam",
+  iterationId: "9d8d69a6-74e0-4f46-bcc8-796ed151a05d",
+  projectId: "fc2ddf7c-c78c-4a1b-a928-fc816742cb73",
 };
 
 sdk.imagePredictionApi.predictImage(req).then((res: PredictImageResponse | AxiosError) => {

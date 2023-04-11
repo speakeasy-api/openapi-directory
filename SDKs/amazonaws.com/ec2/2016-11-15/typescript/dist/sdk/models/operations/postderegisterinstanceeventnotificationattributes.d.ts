@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeregisterInstanceEventNotificationAttributesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeregisterInstanceEventNotificationAttributesActionEnum {
     DeregisterInstanceEventNotificationAttributes = "DeregisterInstanceEventNotificationAttributes"
 }
-export declare enum PostDeregisterInstanceEventNotificationAttributesVersionEnum {
+export declare enum POSTDeregisterInstanceEventNotificationAttributesVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDeregisterInstanceEventNotificationAttributesQueryParams extends SpeakeasyBase {
-    action: PostDeregisterInstanceEventNotificationAttributesActionEnum;
-    version: PostDeregisterInstanceEventNotificationAttributesVersionEnum;
-}
-export declare class PostDeregisterInstanceEventNotificationAttributesHeaders extends SpeakeasyBase {
+export declare class POSTDeregisterInstanceEventNotificationAttributesRequest extends SpeakeasyBase {
+    action: POSTDeregisterInstanceEventNotificationAttributesActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeregisterInstanceEventNotificationAttributesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDeregisterInstanceEventNotificationAttributesHeaders ex
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeregisterInstanceEventNotificationAttributesRequest extends SpeakeasyBase {
-    queryParams: PostDeregisterInstanceEventNotificationAttributesQueryParams;
-    headers: PostDeregisterInstanceEventNotificationAttributesHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeregisterInstanceEventNotificationAttributesResponse extends SpeakeasyBase {
+export declare class POSTDeregisterInstanceEventNotificationAttributesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

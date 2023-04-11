@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetAppReplicationConfigurationXAmzTargetEnum {
-    AwsServerMigrationServiceV20161024GetAppReplicationConfiguration = "AWSServerMigrationService_V2016_10_24.GetAppReplicationConfiguration"
+    AWSServerMigrationServiceV20161024GetAppReplicationConfiguration = "AWSServerMigrationService_V2016_10_24.GetAppReplicationConfiguration"
 }
-export declare class GetAppReplicationConfigurationHeaders extends SpeakeasyBase {
+export declare class GetAppReplicationConfigurationRequest extends SpeakeasyBase {
+    getAppReplicationConfigurationRequest: shared.GetAppReplicationConfigurationRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class GetAppReplicationConfigurationHeaders extends SpeakeasyBase
     xAmzSignedHeaders?: string;
     xAmzTarget: GetAppReplicationConfigurationXAmzTargetEnum;
 }
-export declare class GetAppReplicationConfigurationRequest extends SpeakeasyBase {
-    headers: GetAppReplicationConfigurationHeaders;
-    request: shared.GetAppReplicationConfigurationRequest;
-}
 export declare class GetAppReplicationConfigurationResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getAppReplicationConfigurationResponse?: shared.GetAppReplicationConfigurationResponse;
+    /**
+     * InternalError
+     */
     internalError?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * MissingRequiredParameterException
+     */
     missingRequiredParameterException?: any;
+    /**
+     * OperationNotPermittedException
+     */
     operationNotPermittedException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnauthorizedOperationException
+     */
     unauthorizedOperationException?: any;
 }

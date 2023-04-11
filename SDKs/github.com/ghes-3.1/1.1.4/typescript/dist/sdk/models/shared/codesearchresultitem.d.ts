@@ -3,7 +3,7 @@ import { MinimalRepository } from "./minimalrepository";
 import { SearchResultTextMatches } from "./searchresulttextmatches";
 /**
  * Code Search Result Item
-**/
+ */
 export declare class CodeSearchResultItem extends SpeakeasyBase {
     fileSize?: number;
     gitUrl: string;
@@ -13,6 +13,9 @@ export declare class CodeSearchResultItem extends SpeakeasyBase {
     lineNumbers?: string[];
     name: string;
     path: string;
+    /**
+     * Minimal Repository
+     */
     repository: MinimalRepository;
     score: number;
     sha: string;

@@ -1,61 +1,72 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { MybusinessAccountsCreateRequest, MybusinessAccountsCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  MybusinessAccountsCreateRequest,
+  MybusinessAccountsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  AccountPermissionLevelEnum,
+  AccountRoleEnum,
+  AccountTypeEnum,
+  AccountStateStatusEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: MybusinessAccountsCreateRequest = {
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "voluptas",
-    alt: "media",
-    callback: "expedita",
-    fields: "consequuntur",
-    key: "dolor",
-    oauthToken: "expedita",
-    prettyPrint: true,
-    primaryOwner: "fugit",
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
-    accountName: "dicta",
-    accountNumber: "debitis",
-    name: "voluptatum",
+  dollarXgafv: XgafvEnum.Two,
+  account: {
+    accountName: "provident",
+    accountNumber: "distinctio",
+    name: "quibusdam",
     organizationInfo: {
-      phoneNumber: "et",
+      phoneNumber: "unde",
       postalAddress: {
         addressLines: [
-          "dolorem",
-          "et",
-          "voluptate",
-        ],
-        administrativeArea: "iste",
-        languageCode: "vitae",
-        locality: "totam",
-        organization: "dolores",
-        postalCode: "illum",
-        recipients: [
+          "corrupti",
+          "illum",
           "vel",
+          "error",
         ],
-        regionCode: "odio",
-        revision: 6303220950515014660,
-        sortingCode: "id",
-        sublocality: "aspernatur",
+        administrativeArea: "deserunt",
+        languageCode: "suscipit",
+        locality: "iure",
+        organization: "magnam",
+        postalCode: "09234-7854",
+        recipients: [
+          "nisi",
+          "recusandae",
+          "temporibus",
+        ],
+        regionCode: "ab",
+        revision: 337396,
+        sortingCode: "veritatis",
+        sublocality: "deserunt",
       },
-      registeredDomain: "accusantium",
+      registeredDomain: "perferendis",
     },
-    permissionLevel: "MEMBER_LEVEL",
-    role: "COMMUNITY_MANAGER",
+    permissionLevel: AccountPermissionLevelEnum.OwnerLevel,
+    role: AccountRoleEnum.CommunityManager,
     state: {
-      status: "UNVERIFIED",
+      status: AccountStateStatusEnum.VerificationRequested,
     },
-    type: "USER_GROUP",
+    type: AccountTypeEnum.UserGroup,
   },
+  accessToken: "odit",
+  alt: AltEnum.Proto,
+  callback: "at",
+  fields: "maiores",
+  key: "molestiae",
+  oauthToken: "quod",
+  prettyPrint: false,
+  primaryOwner: "quod",
+  quotaUser: "esse",
+  uploadType: "totam",
+  uploadProtocol: "porro",
 };
 
 sdk.accounts.mybusinessAccountsCreate(req).then((res: MybusinessAccountsCreateResponse | AxiosError) => {

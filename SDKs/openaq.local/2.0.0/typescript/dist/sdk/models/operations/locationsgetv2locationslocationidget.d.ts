@@ -1,40 +1,116 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class LocationsGetV2LocationsLocationIdGetPathParams extends SpeakeasyBase {
-    locationId: number;
+import { AxiosResponse } from "axios";
+/**
+ * An enumeration.
+ */
+export declare enum LocationsGetV2LocationsLocationIdGetOrderByLocationsOrderEnum {
+    City = "city",
+    Country = "country",
+    Location = "location",
+    SourceName = "sourceName",
+    FirstUpdated = "firstUpdated",
+    LastUpdated = "lastUpdated",
+    Count = "count",
+    Random = "random"
 }
-export declare class LocationsGetV2LocationsLocationIdGetQueryParams extends SpeakeasyBase {
+/**
+ * An enumeration.
+ */
+export declare enum LocationsGetV2LocationsLocationIdGetSortSortEnum {
+    Asc = "asc",
+    Desc = "desc"
+}
+export declare class LocationsGetV2LocationsLocationIdGetRequest extends SpeakeasyBase {
+    /**
+     *
+     * @remarks
+     *         Limit results by a certain city or cities.
+     *         (ex. ?city=Chicago or ?city=Chicago&city=Boston)
+     *
+     */
     city?: string[];
     coordinates?: string;
+    /**
+     *
+     * @remarks
+     *         Limit results by a certain country using two letter country code.
+     *         (ex. ?country=US or ?country=US&country=MX)
+     *
+     */
     country?: string[];
+    /**
+     *
+     * @remarks
+     *         Limit results by a certain country using two letter country code.
+     *         (ex. /US)
+     *
+     */
     countryId?: string;
     dumpRaw?: boolean;
+    /**
+     * Source entity type.
+     */
     entity?: shared.EntityTypesEnum;
     hasGeo?: boolean;
+    /**
+     * Data is the product of a previous analysis/aggregation and not raw measurements
+     */
     isAnalysis?: boolean;
+    /**
+     * Location is mobile
+     */
     isMobile?: boolean;
+    /**
+     * Change the number of results returned.
+     */
     limit?: number;
     location?: any[];
+    locationId: number;
+    /**
+     * Manufacturer of Sensor
+     */
     manufacturerName?: string[];
+    /**
+     * Model Name of Sensor
+     */
     modelName?: string[];
     offset?: number;
-    orderBy?: Record<string, any>;
+    /**
+     * Order by a field
+     */
+    orderBy?: LocationsGetV2LocationsLocationIdGetOrderByLocationsOrderEnum;
+    /**
+     * Paginate through results.
+     */
     page?: number;
     parameter?: any[];
     parameterId?: number;
     radius?: number;
+    /**
+     * Type of Sensor
+     */
     sensorType?: shared.SensorTypesEnum;
-    sort?: Record<string, any>;
+    /**
+     * Sort Direction
+     */
+    sort?: LocationsGetV2LocationsLocationIdGetSortSortEnum;
+    /**
+     * Name of the data source
+     */
     sourceName?: string[];
     unit?: string[];
 }
-export declare class LocationsGetV2LocationsLocationIdGetRequest extends SpeakeasyBase {
-    pathParams: LocationsGetV2LocationsLocationIdGetPathParams;
-    queryParams: LocationsGetV2LocationsLocationIdGetQueryParams;
-}
 export declare class LocationsGetV2LocationsLocationIdGetResponse extends SpeakeasyBase {
     contentType: string;
-    httpValidationError?: shared.HttpValidationError;
-    openAQResult?: shared.OpenAqResult;
+    /**
+     * Validation Error
+     */
+    httpValidationError?: shared.HTTPValidationError;
+    /**
+     * Successful Response
+     */
+    openAQResult?: shared.OpenAQResult;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

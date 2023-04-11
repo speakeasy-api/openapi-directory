@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Fields to be used while uploading the attachment.
-**/
+ */
 export declare class UploadMetadata extends SpeakeasyBase {
     headersToInclude?: Record<string, string>;
     url?: string;

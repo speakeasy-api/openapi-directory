@@ -1,37 +1,33 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AppsactivityActivitiesListRequest, AppsactivityActivitiesListResponse } from "openapi/src/sdk/models/operations";
+import {
+  AppsactivityActivitiesListRequest,
+  AppsactivityActivitiesListResponse,
+  AppsactivityActivitiesListGroupingStrategyEnum,
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: AppsactivityActivitiesListRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  queryParams: {
-    alt: "json",
-    driveAncestorId: "voluptas",
-    driveFileId: "culpa",
-    fields: "expedita",
-    groupingStrategy: "none",
-    key: "dolor",
-    oauthToken: "expedita",
-    pageSize: 6044372234677422456,
-    pageToken: "fugit",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    source: "rerum",
-    userId: "dicta",
-    userIp: "debitis",
-  },
+  alt: AltEnum.Json,
+  driveAncestorId: "corrupti",
+  driveFileId: "provident",
+  fields: "distinctio",
+  groupingStrategy: AppsactivityActivitiesListGroupingStrategyEnum.None,
+  key: "unde",
+  oauthToken: "nulla",
+  pageSize: 544883,
+  pageToken: "illum",
+  prettyPrint: false,
+  quotaUser: "vel",
+  source: "error",
+  userId: "deserunt",
+  userIp: "suscipit",
 };
 
 sdk.activities.appsactivityActivitiesList(req).then((res: AppsactivityActivitiesListResponse | AxiosError) => {

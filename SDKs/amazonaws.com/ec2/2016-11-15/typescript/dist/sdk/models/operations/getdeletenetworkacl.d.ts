@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteNetworkAclActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteNetworkAclActionEnum {
     DeleteNetworkAcl = "DeleteNetworkAcl"
 }
-export declare enum GetDeleteNetworkAclVersionEnum {
+export declare enum GETDeleteNetworkAclVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetDeleteNetworkAclQueryParams extends SpeakeasyBase {
-    action: GetDeleteNetworkAclActionEnum;
+export declare class GETDeleteNetworkAclRequest extends SpeakeasyBase {
+    action: GETDeleteNetworkAclActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
+    /**
+     * The ID of the network ACL.
+     */
     networkAclId: string;
-    version: GetDeleteNetworkAclVersionEnum;
-}
-export declare class GetDeleteNetworkAclHeaders extends SpeakeasyBase {
+    version: GETDeleteNetworkAclVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,11 +25,8 @@ export declare class GetDeleteNetworkAclHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteNetworkAclRequest extends SpeakeasyBase {
-    queryParams: GetDeleteNetworkAclQueryParams;
-    headers: GetDeleteNetworkAclHeaders;
-}
-export declare class GetDeleteNetworkAclResponse extends SpeakeasyBase {
+export declare class GETDeleteNetworkAclResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

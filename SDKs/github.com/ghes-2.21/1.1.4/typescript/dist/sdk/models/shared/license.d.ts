@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * License
-**/
+ */
 export declare class License extends SpeakeasyBase {
     body: string;
     conditions: string[];

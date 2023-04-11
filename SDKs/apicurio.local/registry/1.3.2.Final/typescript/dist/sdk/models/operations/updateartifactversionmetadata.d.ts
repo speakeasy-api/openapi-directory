@@ -1,15 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdateArtifactVersionMetaDataPathParams extends SpeakeasyBase {
-    artifactId: string;
-    version: number;
-}
+import { AxiosResponse } from "axios";
 export declare class UpdateArtifactVersionMetaDataRequest extends SpeakeasyBase {
-    pathParams: UpdateArtifactVersionMetaDataPathParams;
-    request: shared.EditableMetaData;
+    editableMetaData: shared.EditableMetaData;
+    /**
+     * The artifact ID.  Can be a string (client-provided) or integer (server-generated) representing the unique artifact identifier.
+     */
+    artifactId: string;
+    /**
+     * The unique identifier of a specific version of the artifact content.
+     */
+    version: number;
 }
 export declare class UpdateArtifactVersionMetaDataResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Common response for all operations that can return a `404` error.
+     */
     error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

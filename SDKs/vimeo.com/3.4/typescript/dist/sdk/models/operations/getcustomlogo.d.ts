@@ -1,15 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetCustomLogoPathParams extends SpeakeasyBase {
-    logoId: number;
-    userId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetCustomLogoRequest extends SpeakeasyBase {
-    pathParams: GetCustomLogoPathParams;
+    /**
+     * The ID of the custom logo.
+     */
+    logoId: number;
+    /**
+     * The ID of the user.
+     */
+    userId: number;
 }
 export declare class GetCustomLogoResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The user can't view custom logos.
+     */
     legacyError?: shared.LegacyError;
+    /**
+     * The custom logo was returned.
+     */
     picture?: shared.Picture;
 }

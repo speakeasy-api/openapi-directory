@@ -1,6 +1,12 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class SigningBasketsServiceSbs {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Signing basket methods are used for authorising several transactions and resp. or consents with one SCA operation.
+ *
+ * @remarks
+ *
+ */
+export declare class SigningBasketsServiceSBS {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,56 +15,63 @@ export declare class SigningBasketsServiceSbs {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createSigningBasket - Create a signing basket resource
+     * Create a signing basket resource
      *
+     * @remarks
      * Create a signing basket resource for authorising several transactions with one SCA method.
      * The resource identifications of these transactions are contained in the payload of this access method
      *
-    **/
-    createSigningBasket(req: operations.CreateSigningBasketRequest, config?: AxiosRequestConfig): Promise<operations.CreateSigningBasketResponse>;
+     */
+    createSigningBasket(req: operations.CreateSigningBasketRequest, security: operations.CreateSigningBasketSecurity, config?: AxiosRequestConfig): Promise<operations.CreateSigningBasketResponse>;
     /**
-     * deleteSigningBasket - Delete the signing basket
+     * Delete the signing basket
      *
+     * @remarks
      * Delete the signing basket structure as long as no (partial) authorisation has yet been applied.
      * The undlerying transactions are not affected by this deletion.
      *
      * Remark: The signing basket as such is not deletable after a first (partial) authorisation has been applied.
      * Nevertheless, single transactions might be cancelled on an individual basis on the XS2A interface.
      *
-    **/
-    deleteSigningBasket(req: operations.DeleteSigningBasketRequest, config?: AxiosRequestConfig): Promise<operations.DeleteSigningBasketResponse>;
+     */
+    deleteSigningBasket(req: operations.DeleteSigningBasketRequest, security: operations.DeleteSigningBasketSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteSigningBasketResponse>;
     /**
-     * getSigningBasket - Returns the content of an signing basket object
+     * Returns the content of an signing basket object
      *
+     * @remarks
      * Returns the content of a signing basket object.
-    **/
-    getSigningBasket(req: operations.GetSigningBasketRequest, config?: AxiosRequestConfig): Promise<operations.GetSigningBasketResponse>;
+     */
+    getSigningBasket(req: operations.GetSigningBasketRequest, security: operations.GetSigningBasketSecurity, config?: AxiosRequestConfig): Promise<operations.GetSigningBasketResponse>;
     /**
-     * getSigningBasketAuthorisation - Get signing basket authorisation sub-resources request
+     * Get signing basket authorisation sub-resources request
      *
+     * @remarks
      * Read a list of all authorisation subresources IDs which have been created.
      *
      * This function returns an array of hyperlinks to all generated authorisation sub-resources.
      *
-    **/
-    getSigningBasketAuthorisation(req: operations.GetSigningBasketAuthorisationRequest, config?: AxiosRequestConfig): Promise<operations.GetSigningBasketAuthorisationResponse>;
+     */
+    getSigningBasketAuthorisation(req: operations.GetSigningBasketAuthorisationRequest, security: operations.GetSigningBasketAuthorisationSecurity, config?: AxiosRequestConfig): Promise<operations.GetSigningBasketAuthorisationResponse>;
     /**
-     * getSigningBasketScaStatus - Read the SCA status of the signing basket authorisation
+     * Read the SCA status of the signing basket authorisation
      *
+     * @remarks
      * This method returns the SCA status of a signing basket's authorisation sub-resource.
      *
-    **/
-    getSigningBasketScaStatus(req: operations.GetSigningBasketScaStatusRequest, config?: AxiosRequestConfig): Promise<operations.GetSigningBasketScaStatusResponse>;
+     */
+    getSigningBasketScaStatus(req: operations.GetSigningBasketScaStatusRequest, security: operations.GetSigningBasketScaStatusSecurity, config?: AxiosRequestConfig): Promise<operations.GetSigningBasketScaStatusResponse>;
     /**
-     * getSigningBasketStatus - Read the status of the signing basket
+     * Read the status of the signing basket
      *
+     * @remarks
      * Returns the status of a signing basket object.
      *
-    **/
-    getSigningBasketStatus(req: operations.GetSigningBasketStatusRequest, config?: AxiosRequestConfig): Promise<operations.GetSigningBasketStatusResponse>;
+     */
+    getSigningBasketStatus(req: operations.GetSigningBasketStatusRequest, security: operations.GetSigningBasketStatusSecurity, config?: AxiosRequestConfig): Promise<operations.GetSigningBasketStatusResponse>;
     /**
-     * startSigningBasketAuthorisation - Start the authorisation process for a signing basket
+     * Start the authorisation process for a signing basket
      *
+     * @remarks
      * Create an authorisation sub-resource and start the authorisation process of a signing basket.
      * The message might in addition transmit authentication and authorisation related data.
      *
@@ -93,11 +106,12 @@ export declare class SigningBasketsServiceSbs {
      *     executing the cancellation.
      *   * The signing basket needs to be authorised yet.
      *
-    **/
-    startSigningBasketAuthorisation(req: operations.StartSigningBasketAuthorisationRequest, config?: AxiosRequestConfig): Promise<operations.StartSigningBasketAuthorisationResponse>;
+     */
+    startSigningBasketAuthorisation(req: operations.StartSigningBasketAuthorisationRequest, security: operations.StartSigningBasketAuthorisationSecurity, config?: AxiosRequestConfig): Promise<operations.StartSigningBasketAuthorisationResponse>;
     /**
-     * updateSigningBasketPsuData - Update PSU data for signing basket
+     * Update PSU data for signing basket
      *
+     * @remarks
      * This method update PSU data on the signing basket resource if needed.
      * It may authorise a igning basket within the embedded SCA approach where needed.
      *
@@ -137,6 +151,6 @@ export declare class SigningBasketsServiceSbs {
      *     therefore many optional elements are not present.
      *     Maybe in a later version the access path will change.
      *
-    **/
-    updateSigningBasketPsuData(req: operations.UpdateSigningBasketPsuDataRequest, config?: AxiosRequestConfig): Promise<operations.UpdateSigningBasketPsuDataResponse>;
+     */
+    updateSigningBasketPsuData(req: operations.UpdateSigningBasketPsuDataRequest, security: operations.UpdateSigningBasketPsuDataSecurity, config?: AxiosRequestConfig): Promise<operations.UpdateSigningBasketPsuDataResponse>;
 }

@@ -1,13 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetSetupV1CompaniesRegionsQueryParams extends SpeakeasyBase {
-    limit?: number;
-    offset?: number;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class GetSetupV1CompaniesRegionsRequest extends SpeakeasyBase {
-    queryParams: GetSetupV1CompaniesRegionsQueryParams;
+    /**
+     * Page limit default 20, max 100
+     */
+    limit?: number;
+    /**
+     * Starting row of page, default 0
+     */
+    offset?: number;
 }
 export declare class GetSetupV1CompaniesRegionsResponse extends SpeakeasyBase {
     contentType: string;
-    regionListViewModel?: Record<string, any>;
+    /**
+     * region object's
+     */
+    regionListViewModel?: shared.RegionListViewModel;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

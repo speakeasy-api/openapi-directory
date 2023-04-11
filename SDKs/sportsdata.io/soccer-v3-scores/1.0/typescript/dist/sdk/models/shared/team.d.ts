@@ -1,0 +1,31 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+export declare class Team extends SpeakeasyBase {
+    active?: boolean;
+    address?: string;
+    areaId?: number;
+    areaName?: string;
+    city?: string;
+    clubColor1?: string;
+    clubColor2?: string;
+    clubColor3?: string;
+    email?: string;
+    fax?: string;
+    founded?: number;
+    fullName?: string;
+    gender?: string;
+    globalTeamId?: number;
+    key?: string;
+    name?: string;
+    nickname1?: string;
+    nickname2?: string;
+    nickname3?: string;
+    phone?: string;
+    teamId?: number;
+    type?: string;
+    venueId?: number;
+    venueName?: string;
+    website?: string;
+    wikipediaLogoUrl?: string;
+    wikipediaWordMarkUrl?: string;
+    zip?: string;
+}

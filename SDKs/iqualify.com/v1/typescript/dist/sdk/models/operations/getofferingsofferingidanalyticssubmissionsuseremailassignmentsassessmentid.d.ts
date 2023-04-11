@@ -1,16 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetOfferingsOfferingIdAnalyticsSubmissionsUserEmailAssignmentsAssessmentIdPathParams extends SpeakeasyBase {
-    assessmentId: string;
-    offeringId: string;
-    userEmail: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetOfferingsOfferingIdAnalyticsSubmissionsUserEmailAssignmentsAssessmentIdRequest extends SpeakeasyBase {
-    pathParams: GetOfferingsOfferingIdAnalyticsSubmissionsUserEmailAssignmentsAssessmentIdPathParams;
+    /**
+     * assessment's id
+     */
+    assessmentId: string;
+    /**
+     * offering's id
+     */
+    offeringId: string;
+    /**
+     * user's email
+     */
+    userEmail: string;
 }
 export declare class GetOfferingsOfferingIdAnalyticsSubmissionsUserEmailAssignmentsAssessmentIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * No authorization token was found.
+     */
     error?: shared.ErrorT;
     statusCode: number;
-    submissionMarkResponses?: any[];
+    rawResponse?: AxiosResponse;
+    /**
+     * Responds with the learner's assessment submission and any marks for the submission.
+     */
+    submissionMarkResponses?: shared.SubmissionMarkResponse[];
 }

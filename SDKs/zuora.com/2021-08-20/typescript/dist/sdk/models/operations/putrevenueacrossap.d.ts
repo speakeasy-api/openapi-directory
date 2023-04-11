@@ -1,20 +1,36 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PutRevenueAcrossApPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class PUTRevenueAcrossAPRequest extends SpeakeasyBase {
+    putAllocateManuallyType: shared.PUTAllocateManuallyType;
+    /**
+     * An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+     *
+     * @remarks
+     *
+     */
+    zuoraEntityIds?: string;
+    /**
+     * A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+     *
+     * @remarks
+     *
+     * The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+     *
+     */
+    zuoraTrackId?: string;
+    /**
+     * Revenue schedule number. The revenue schedule number is always prefixed with "RS", for example, "RS-00000001".
+     *
+     * @remarks
+     *
+     */
     rsNumber: string;
 }
-export declare class PutRevenueAcrossApHeaders extends SpeakeasyBase {
-    zuoraEntityIds?: string;
-    zuoraTrackId?: string;
-}
-export declare class PutRevenueAcrossApRequest extends SpeakeasyBase {
-    pathParams: PutRevenueAcrossApPathParams;
-    headers: PutRevenueAcrossApHeaders;
-    request: Record<string, any>;
-}
-export declare class PutRevenueAcrossApResponse extends SpeakeasyBase {
+export declare class PUTRevenueAcrossAPResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
-    putRevenueScheduleResponseType?: shared.PutRevenueScheduleResponseType;
+    headers?: Record<string, string[]>;
+    putRevenueScheduleResponseType?: shared.PUTRevenueScheduleResponseType;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

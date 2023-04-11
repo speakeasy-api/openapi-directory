@@ -1,15 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class OptimiseAllPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class OptimiseAllRequest extends SpeakeasyBase {
     actionName: shared.OptimisationActionNameGeneralParametersEnum;
+    optimiseAllRequest: shared.OptimiseAllRequest;
+    /**
+     * Your store identifier
+     */
     storeId: string;
 }
-export declare class OptimiseAllRequest extends SpeakeasyBase {
-    pathParams: OptimiseAllPathParams;
-    request: shared.OptimiseAllRequest;
-}
 export declare class OptimiseAllResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     * Invalid request
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

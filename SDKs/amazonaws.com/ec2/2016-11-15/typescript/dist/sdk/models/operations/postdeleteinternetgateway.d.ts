@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDeleteInternetGatewayActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDeleteInternetGatewayActionEnum {
     DeleteInternetGateway = "DeleteInternetGateway"
 }
-export declare enum PostDeleteInternetGatewayVersionEnum {
+export declare enum POSTDeleteInternetGatewayVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDeleteInternetGatewayQueryParams extends SpeakeasyBase {
-    action: PostDeleteInternetGatewayActionEnum;
-    version: PostDeleteInternetGatewayVersionEnum;
-}
-export declare class PostDeleteInternetGatewayHeaders extends SpeakeasyBase {
+export declare class POSTDeleteInternetGatewayRequest extends SpeakeasyBase {
+    action: POSTDeleteInternetGatewayActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDeleteInternetGatewayVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +18,8 @@ export declare class PostDeleteInternetGatewayHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDeleteInternetGatewayRequest extends SpeakeasyBase {
-    queryParams: PostDeleteInternetGatewayQueryParams;
-    headers: PostDeleteInternetGatewayHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDeleteInternetGatewayResponse extends SpeakeasyBase {
+export declare class POSTDeleteInternetGatewayResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

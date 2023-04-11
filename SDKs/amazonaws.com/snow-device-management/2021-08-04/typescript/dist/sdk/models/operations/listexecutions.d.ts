@@ -1,5 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+/**
+ * A structure used to filter the tasks by their current state.
+ */
 export declare enum ListExecutionsStateEnum {
     Queued = "QUEUED",
     InProgress = "IN_PROGRESS",
@@ -9,13 +13,7 @@ export declare enum ListExecutionsStateEnum {
     Rejected = "REJECTED",
     TimedOut = "TIMED_OUT"
 }
-export declare class ListExecutionsQueryParams extends SpeakeasyBase {
-    maxResults?: number;
-    nextToken?: string;
-    state?: ListExecutionsStateEnum;
-    taskId: string;
-}
-export declare class ListExecutionsHeaders extends SpeakeasyBase {
+export declare class ListExecutionsRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -23,18 +21,49 @@ export declare class ListExecutionsHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class ListExecutionsRequest extends SpeakeasyBase {
-    queryParams: ListExecutionsQueryParams;
-    headers: ListExecutionsHeaders;
+    /**
+     * The maximum number of tasks to list per page.
+     */
+    maxResults?: number;
+    /**
+     * A pagination token to continue to the next page of tasks.
+     */
+    nextToken?: string;
+    /**
+     * A structure used to filter the tasks by their current state.
+     */
+    state?: ListExecutionsStateEnum;
+    /**
+     * The ID of the task.
+     */
+    taskId: string;
 }
 export declare class ListExecutionsResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * Success
+     */
     listExecutionsOutput?: shared.ListExecutionsOutput;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

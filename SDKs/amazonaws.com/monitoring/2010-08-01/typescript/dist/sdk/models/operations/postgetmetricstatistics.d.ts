@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostGetMetricStatisticsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTGetMetricStatisticsActionEnum {
     GetMetricStatistics = "GetMetricStatistics"
 }
-export declare enum PostGetMetricStatisticsVersionEnum {
+export declare enum POSTGetMetricStatisticsVersionEnum {
     TwoThousandAndTen0801 = "2010-08-01"
 }
-export declare class PostGetMetricStatisticsQueryParams extends SpeakeasyBase {
-    action: PostGetMetricStatisticsActionEnum;
-    version: PostGetMetricStatisticsVersionEnum;
-}
-export declare class PostGetMetricStatisticsHeaders extends SpeakeasyBase {
+export declare class POSTGetMetricStatisticsRequest extends SpeakeasyBase {
+    action: POSTGetMetricStatisticsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTGetMetricStatisticsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostGetMetricStatisticsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostGetMetricStatisticsRequest extends SpeakeasyBase {
-    queryParams: PostGetMetricStatisticsQueryParams;
-    headers: PostGetMetricStatisticsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostGetMetricStatisticsResponse extends SpeakeasyBase {
+export declare class POSTGetMetricStatisticsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

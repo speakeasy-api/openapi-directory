@@ -1,55 +1,139 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetMultiNodeInventoryForAllSkuAndAllShipNodesQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetMultiNodeInventoryForAllSkuAndAllShipNodesRequest extends SpeakeasyBase {
+    /**
+     * A unique ID to track the consumer request by channel. Use the Consumer Channel Type received during onboarding
+     */
+    wmConsumerChannelType?: string;
+    /**
+     * A unique ID which identifies each API call and used to track and debug issues; use a random generated GUID for this ID
+     */
+    wmQosCorrelationId: string;
+    /**
+     * The access token retrieved in the Token API call
+     */
+    wmSecAccessToken: string;
+    /**
+     * Walmart Service Name
+     */
+    wmSvcName: string;
+    /**
+     * The number of items returned. Cannot be more than 50.
+     */
     limit?: string;
+    /**
+     * String returned from initial API call to indicate pagination. Specify nextCursor value to retrieve the next 50 items.
+     */
     nextCursor?: string;
 }
-export declare class GetMultiNodeInventoryForAllSkuAndAllShipNodesHeaders extends SpeakeasyBase {
-    authorization: string;
-    wmCONSUMERCHANNELTYPE: string;
-    wmQOSCORRELATIONID: string;
-    wmSECACCESSTOKEN: string;
-    wmSVCNAME: string;
-}
-export declare enum GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJsonElementsInventoriesNodesAvailToSellQtyUnitEnum {
+/**
+ * The unit of measurement. Example: 'EACH'
+ */
+export declare enum GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesAvailToSellQtyUnitEnum {
     Each = "EACH"
 }
-export declare class GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJsonElementsInventoriesNodesAvailToSellQty extends SpeakeasyBase {
+/**
+ * Quantity of an item that is available to be allocated to orders
+ */
+export declare class GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesAvailToSellQty extends SpeakeasyBase {
+    /**
+     * Inventory Count
+     */
     amount: number;
-    unit: GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJsonElementsInventoriesNodesAvailToSellQtyUnitEnum;
+    /**
+     * The unit of measurement. Example: 'EACH'
+     */
+    unit: GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesAvailToSellQtyUnitEnum;
 }
-export declare enum GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJsonElementsInventoriesNodesInputQtyUnitEnum {
+/**
+ * The unit of measurement. Example: 'EACH'
+ */
+export declare enum GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesInputQtyUnitEnum {
     Each = "EACH"
 }
-export declare class GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJsonElementsInventoriesNodesInputQty extends SpeakeasyBase {
+/**
+ * Quantity of an item that is input by the seller
+ */
+export declare class GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesInputQty extends SpeakeasyBase {
+    /**
+     * Inventory Count
+     */
     amount: number;
-    unit: GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJsonElementsInventoriesNodesInputQtyUnitEnum;
+    /**
+     * The unit of measurement. Example: 'EACH'
+     */
+    unit: GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesInputQtyUnitEnum;
 }
-export declare class GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJsonElementsInventoriesNodes extends SpeakeasyBase {
-    availToSellQty?: GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJsonElementsInventoriesNodesAvailToSellQty;
-    inputQty?: GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJsonElementsInventoriesNodesInputQty;
+/**
+ * The unit of measurement. Example: 'EACH'
+ */
+export declare enum GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesReservedQtyUnitEnum {
+    Each = "EACH"
+}
+/**
+ * Quantity that has been ordered by the customers but not yet shipped
+ */
+export declare class GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesReservedQty extends SpeakeasyBase {
+    /**
+     * Inventory Count
+     */
+    amount: number;
+    /**
+     * The unit of measurement. Example: 'EACH'
+     */
+    unit: GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesReservedQtyUnitEnum;
+}
+export declare class GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodes extends SpeakeasyBase {
+    /**
+     * Quantity of an item that is available to be allocated to orders
+     */
+    availToSellQty?: GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesAvailToSellQty;
+    /**
+     * Quantity of an item that is input by the seller
+     */
+    inputQty?: GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesInputQty;
+    /**
+     * Quantity that has been ordered by the customers but not yet shipped
+     */
+    reservedQty?: GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesReservedQty;
+    /**
+     * ShipNode Id of the ship node for which the inventory is requested
+     */
     shipNode?: string;
 }
-export declare class GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJsonElementsInventories extends SpeakeasyBase {
-    nodes?: GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJsonElementsInventoriesNodes[];
+export declare class GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventories extends SpeakeasyBase {
+    nodes?: GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodes[];
+    /**
+     * An arbitrary alphanumeric unique ID, specified by the seller, which identifies each item.
+     */
     sku?: string;
 }
-export declare class GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJsonElements extends SpeakeasyBase {
-    inventories?: GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJsonElementsInventories[];
+export declare class GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElements extends SpeakeasyBase {
+    inventories?: GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventories[];
 }
-export declare class GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJsonMeta extends SpeakeasyBase {
+export declare class GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONMeta extends SpeakeasyBase {
+    /**
+     * Used for pagination to fetch the next set of items.
+     */
     nextCursor?: string;
+    /**
+     * Total number of Skus of the Seller. Example: '235'
+     */
     totalCount?: number;
 }
-export declare class GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJson extends SpeakeasyBase {
-    elements?: GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJsonElements;
-    meta?: GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJsonMeta;
-}
-export declare class GetMultiNodeInventoryForAllSkuAndAllShipNodesRequest extends SpeakeasyBase {
-    queryParams: GetMultiNodeInventoryForAllSkuAndAllShipNodesQueryParams;
-    headers: GetMultiNodeInventoryForAllSkuAndAllShipNodesHeaders;
+/**
+ * Successful Operation
+ */
+export declare class GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSON extends SpeakeasyBase {
+    elements?: GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElements;
+    meta?: GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONMeta;
 }
 export declare class GetMultiNodeInventoryForAllSkuAndAllShipNodesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONObject?: GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful Operation
+     */
+    getMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONObject?: GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSON;
 }

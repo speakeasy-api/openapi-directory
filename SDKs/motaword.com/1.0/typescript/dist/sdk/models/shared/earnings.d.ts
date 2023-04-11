@@ -1,7 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { EarningWithTqs } from "./earningwithtqs";
+import { EarningWithTQS } from "./earningwithtqs";
+/**
+ * Earnings for vendors
+ */
 export declare class Earnings extends SpeakeasyBase {
-    completed?: EarningWithTqs[];
-    ongoing?: EarningWithTqs[];
+    completed?: EarningWithTQS[];
+    ongoing?: EarningWithTQS[];
     total?: number;
 }

@@ -1,36 +1,82 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListPathParams extends SpeakeasyBase {
-    parent: string;
-}
-export declare class GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListQueryParams extends SpeakeasyBase {
-    dollarXgafv?: shared.XgafvEnum;
-    accessToken?: string;
-    alt?: shared.AltEnum;
-    callback?: string;
-    fields?: string;
-    filter?: string;
-    key?: string;
-    oauthToken?: string;
-    orderBy?: string;
-    pageSize?: number;
-    pageToken?: string;
-    prettyPrint?: boolean;
-    quotaUser?: string;
-    uploadType?: string;
-    uploadProtocol?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListSecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListRequest extends SpeakeasyBase {
-    pathParams: GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListPathParams;
-    queryParams: GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListQueryParams;
-    security: GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListSecurity;
+    /**
+     * V1 error format.
+     */
+    dollarXgafv?: shared.XgafvEnum;
+    /**
+     * OAuth access token.
+     */
+    accessToken?: string;
+    /**
+     * Data format for response.
+     */
+    alt?: shared.AltEnum;
+    /**
+     * JSONP
+     */
+    callback?: string;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * Field match expression used to filter the results.
+     */
+    filter?: string;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauthToken?: string;
+    /**
+     * Field by which to sort the results.
+     */
+    orderBy?: string;
+    /**
+     * The target number of results to return in a single response. If not specified, a default value will be chosen by the service. Note that the response may inclue a partial list and a caller should only rely on the response's next_page_token to determine if there are more instances left to be queried.
+     */
+    pageSize?: number;
+    /**
+     * The value of next_page_token received from a previous `ListVolumeRestores` call. Provide this to retrieve the subsequent page in a multi-page list of results. When paginating, all other parameters provided to `ListVolumeRestores` must match the call that provided the page token.
+     */
+    pageToken?: string;
+    /**
+     * Required. The Restore that contains the VolumeRestores to list. Format: `projects/* /locations/* /restorePlans/* /restores/*`
+     */
+    parent: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    uploadType?: string;
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    uploadProtocol?: string;
 }
 export declare class GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful response
+     */
     listVolumeRestoresResponse?: shared.ListVolumeRestoresResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteReceiptFilterActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteReceiptFilterActionEnum {
     DeleteReceiptFilter = "DeleteReceiptFilter"
 }
-export declare enum GetDeleteReceiptFilterVersionEnum {
+export declare enum GETDeleteReceiptFilterVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetDeleteReceiptFilterQueryParams extends SpeakeasyBase {
-    action: GetDeleteReceiptFilterActionEnum;
+export declare class GETDeleteReceiptFilterRequest extends SpeakeasyBase {
+    action: GETDeleteReceiptFilterActionEnum;
+    /**
+     * The name of the IP address filter to delete.
+     */
     filterName: string;
-    version: GetDeleteReceiptFilterVersionEnum;
-}
-export declare class GetDeleteReceiptFilterHeaders extends SpeakeasyBase {
+    version: GETDeleteReceiptFilterVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDeleteReceiptFilterHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteReceiptFilterRequest extends SpeakeasyBase {
-    queryParams: GetDeleteReceiptFilterQueryParams;
-    headers: GetDeleteReceiptFilterHeaders;
-}
-export declare class GetDeleteReceiptFilterResponse extends SpeakeasyBase {
+export declare class GETDeleteReceiptFilterResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

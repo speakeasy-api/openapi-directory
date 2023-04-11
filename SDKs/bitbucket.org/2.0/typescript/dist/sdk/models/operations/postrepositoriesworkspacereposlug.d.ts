@@ -1,22 +1,43 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PostRepositoriesWorkspaceRepoSlugPathParams extends SpeakeasyBase {
-    repoSlug: string;
-    workspace: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PostRepositoriesWorkspaceRepoSlugSecurity extends SpeakeasyBase {
-    oauth2?: shared.SchemeOauth2;
+    apiKey?: string;
     basic?: shared.SchemeBasic;
-    apiKey?: shared.SchemeApiKey;
+    oauth2?: string;
 }
 export declare class PostRepositoriesWorkspaceRepoSlugRequest extends SpeakeasyBase {
-    pathParams: PostRepositoriesWorkspaceRepoSlugPathParams;
-    request?: Record<string, any>;
-    security: PostRepositoriesWorkspaceRepoSlugSecurity;
+    /**
+     * The repository that is to be created. Note that most object elements are optional. Elements "owner" and "full_name" are ignored as the URL implies them.
+     */
+    requestBody?: Record<string, any>;
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     *
+     * @remarks
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     *
+     */
+    repoSlug: string;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     *
+     * @remarks
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     *
+     */
+    workspace: string;
 }
 export declare class PostRepositoriesWorkspaceRepoSlugResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * If the input document was invalid, or if the caller lacks the privilege to create repositories under the targeted account.
+     */
     error?: Record<string, any>;
+    /**
+     * The newly created repository.
+     */
     repository?: Record<string, any>;
 }

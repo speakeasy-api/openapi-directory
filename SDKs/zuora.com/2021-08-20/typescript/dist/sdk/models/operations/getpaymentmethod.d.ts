@@ -1,18 +1,32 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetPaymentMethodPathParams extends SpeakeasyBase {
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class GETPaymentMethodRequest extends SpeakeasyBase {
+    /**
+     * An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+     *
+     * @remarks
+     *
+     */
+    zuoraEntityIds?: string;
+    /**
+     * A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+     *
+     * @remarks
+     *
+     * The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+     *
+     */
+    zuoraTrackId?: string;
+    /**
+     * Unique ID of the payment method to update.
+     */
     paymentMethodId: string;
 }
-export declare class GetPaymentMethodHeaders extends SpeakeasyBase {
-    zuoraEntityIds?: string;
-    zuoraTrackId?: string;
-}
-export declare class GetPaymentMethodRequest extends SpeakeasyBase {
-    pathParams: GetPaymentMethodPathParams;
-    headers: GetPaymentMethodHeaders;
-}
-export declare class GetPaymentMethodResponse extends SpeakeasyBase {
+export declare class GETPaymentMethodResponse extends SpeakeasyBase {
     contentType: string;
-    getPaymentMethodResponse?: Record<string, any>;
-    headers: Record<string, string[]>;
+    getPaymentMethodResponse?: shared.GETPaymentMethodResponse;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

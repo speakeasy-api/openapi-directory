@@ -1,4 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
 export declare class CreateMonitorRequestBodyMonitorSchedule extends SpeakeasyBase {
     cron?: string;
     timezone?: string;
@@ -12,31 +13,41 @@ export declare class CreateMonitorRequestBodyMonitor extends SpeakeasyBase {
 export declare class CreateMonitorRequestBody extends SpeakeasyBase {
     monitor?: CreateMonitorRequestBodyMonitor;
 }
-export declare class CreateMonitor200ApplicationJsonMonitor extends SpeakeasyBase {
+export declare class CreateMonitor400ApplicationJSONErrorDetails extends SpeakeasyBase {
+    param?: string;
+}
+export declare class CreateMonitor400ApplicationJSONError extends SpeakeasyBase {
+    details?: CreateMonitor400ApplicationJSONErrorDetails;
+    message?: string;
+    name?: string;
+}
+/**
+ * Parameter Missing
+ */
+export declare class CreateMonitor400ApplicationJSON extends SpeakeasyBase {
+    error?: CreateMonitor400ApplicationJSONError;
+}
+export declare class CreateMonitor200ApplicationJSONMonitor extends SpeakeasyBase {
     id?: string;
     name?: string;
     uid?: string;
 }
-export declare class CreateMonitor200ApplicationJson extends SpeakeasyBase {
-    monitor?: CreateMonitor200ApplicationJsonMonitor;
-}
-export declare class CreateMonitor400ApplicationJsonErrorDetails extends SpeakeasyBase {
-    param?: string;
-}
-export declare class CreateMonitor400ApplicationJsonError extends SpeakeasyBase {
-    details?: CreateMonitor400ApplicationJsonErrorDetails;
-    message?: string;
-    name?: string;
-}
-export declare class CreateMonitor400ApplicationJson extends SpeakeasyBase {
-    error?: CreateMonitor400ApplicationJsonError;
-}
-export declare class CreateMonitorRequest extends SpeakeasyBase {
-    request?: CreateMonitorRequestBody;
+/**
+ * Create Monitor in a Workspace
+ */
+export declare class CreateMonitor200ApplicationJSON extends SpeakeasyBase {
+    monitor?: CreateMonitor200ApplicationJSONMonitor;
 }
 export declare class CreateMonitorResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createMonitor200ApplicationJSONObject?: CreateMonitor200ApplicationJson;
-    createMonitor400ApplicationJSONObject?: CreateMonitor400ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Create Monitor in a Workspace
+     */
+    createMonitor200ApplicationJSONObject?: CreateMonitor200ApplicationJSON;
+    /**
+     * Parameter Missing
+     */
+    createMonitor400ApplicationJSONObject?: CreateMonitor400ApplicationJSON;
 }

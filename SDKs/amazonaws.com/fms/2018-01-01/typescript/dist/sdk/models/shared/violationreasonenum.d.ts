@@ -13,6 +13,7 @@ export declare enum ViolationReasonEnum {
     MissingFirewallSubnetInAz = "MISSING_FIREWALL_SUBNET_IN_AZ",
     MissingExpectedRouteTable = "MISSING_EXPECTED_ROUTE_TABLE",
     NetworkFirewallPolicyModified = "NETWORK_FIREWALL_POLICY_MODIFIED",
+    FirewallSubnetIsOutOfScope = "FIREWALL_SUBNET_IS_OUT_OF_SCOPE",
     InternetGatewayMissingExpectedRoute = "INTERNET_GATEWAY_MISSING_EXPECTED_ROUTE",
     FirewallSubnetMissingExpectedRoute = "FIREWALL_SUBNET_MISSING_EXPECTED_ROUTE",
     UnexpectedFirewallRoutes = "UNEXPECTED_FIREWALL_ROUTES",
@@ -23,5 +24,7 @@ export declare enum ViolationReasonEnum {
     InternetTrafficNotInspected = "INTERNET_TRAFFIC_NOT_INSPECTED",
     BlackHoleRouteDetected = "BLACK_HOLE_ROUTE_DETECTED",
     BlackHoleRouteDetectedInFirewallSubnet = "BLACK_HOLE_ROUTE_DETECTED_IN_FIREWALL_SUBNET",
-    ResourceMissingDnsFirewall = "RESOURCE_MISSING_DNS_FIREWALL"
+    ResourceMissingDnsFirewall = "RESOURCE_MISSING_DNS_FIREWALL",
+    RouteHasOutOfScopeEndpoint = "ROUTE_HAS_OUT_OF_SCOPE_ENDPOINT",
+    FirewallSubnetMissingVpceEndpoint = "FIREWALL_SUBNET_MISSING_VPCE_ENDPOINT"
 }

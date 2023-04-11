@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class PortfolioOptimization {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,70 +9,118 @@ export declare class PortfolioOptimization {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * postPortfolioOptimizationEqualRiskContributions - Equal Risk Contributions Portfolio
+     * Equal Risk Contributions Portfolio
      *
-     * Compute the assets weights of the equal risk contributions portfolio, optionally subject to:
+     * @remarks
+     * Compute the asset weights of the equal risk contributions portfolio, optionally subject to:
      * * Minimum and maximum weights constraints
      *
      * References
      *  * [Richard, Jean-Charles and Roncalli, Thierry, Constrained Risk Budgeting Portfolios: Theory, Algorithms, Applications & Puzzles](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3331184)
      *
-    **/
-    postPortfolioOptimizationEqualRiskContributions(req: operations.PostPortfolioOptimizationEqualRiskContributionsRequest, config?: AxiosRequestConfig): Promise<operations.PostPortfolioOptimizationEqualRiskContributionsResponse>;
+     */
+    postPortfolioOptimizationEqualRiskContributions(req: operations.PostPortfolioOptimizationEqualRiskContributionsRequestBody, config?: AxiosRequestConfig): Promise<operations.PostPortfolioOptimizationEqualRiskContributionsResponse>;
     /**
-     * postPortfolioOptimizationEqualSharpeRatioContributions - Equal Sharpe Ratio Contributions Portfolio
+     * Equal Sharpe Ratio Contributions Portfolio
      *
-     * Compute the assets weights of the equal Sharpe Ratio contributions portfolio.
+     * @remarks
+     * Compute the asset weights of the equal Sharpe Ratio contributions portfolio.
      *
      * References
      *  * [Andreas Steiner, Sharpe Ratio Contribution and Attribution Analysis](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1839166")
      *
-    **/
-    postPortfolioOptimizationEqualSharpeRatioContributions(req: operations.PostPortfolioOptimizationEqualSharpeRatioContributionsRequest, config?: AxiosRequestConfig): Promise<operations.PostPortfolioOptimizationEqualSharpeRatioContributionsResponse>;
+     */
+    postPortfolioOptimizationEqualSharpeRatioContributions(req: operations.PostPortfolioOptimizationEqualSharpeRatioContributionsRequestBody, config?: AxiosRequestConfig): Promise<operations.PostPortfolioOptimizationEqualSharpeRatioContributionsResponse>;
     /**
-     * postPortfolioOptimizationEqualWeighted - Equal Weighted Portfolio
+     * Equal Volatility Weighted Portfolio
      *
-     * Compute the assets weights of the equal-weighted portfolio.
+     * @remarks
+     * Compute the asset weights of the equal volatility-weighted portfolio.
+     *
+     * References
+     *  * [Tristan Froidure, Khalid Jalalzai and Yves Choueifaty, Portfolio Rho-Representativity, International Journal of Theoretical and Applied FinanceVol. 22, No. 07, 1950034 (2019)](https://www.worldscientific.com/doi/10.1142/S0219024919500341)
+     *
+     */
+    postPortfolioOptimizationEqualVolatilityWeighted(req: operations.PostPortfolioOptimizationEqualVolatilityWeightedRequestBody, config?: AxiosRequestConfig): Promise<operations.PostPortfolioOptimizationEqualVolatilityWeightedResponse>;
+    /**
+     * Equal Weighted Portfolio
+     *
+     * @remarks
+     * Compute the asset weights of the equal-weighted portfolio.
      *
      * References
      *  * [Victor DeMiguel and al., Optimal Versus Naive Diversification: How Inefficient is the 1/N Portfolio Strategy?](https://academic.oup.com/rfs/article-abstract/22/5/1915/1592901?redirectedFrom=fulltext)
      *
-    **/
-    postPortfolioOptimizationEqualWeighted(req: operations.PostPortfolioOptimizationEqualWeightedRequest, config?: AxiosRequestConfig): Promise<operations.PostPortfolioOptimizationEqualWeightedResponse>;
+     */
+    postPortfolioOptimizationEqualWeighted(req: operations.PostPortfolioOptimizationEqualWeightedRequestBody, config?: AxiosRequestConfig): Promise<operations.PostPortfolioOptimizationEqualWeightedResponse>;
     /**
-     * postPortfolioOptimizationInverseVarianceWeighted - Inverse Variance Weighted Portfolio
+     * Hierarchical Risk Parity Portfolio
      *
-     * Compute the assets weights of the inverse variance-weighted portfolio.
+     * @remarks
+     * Compute the asset weights of the hierarchical risk parity portfolio, optionally subject to:
+     * * Minimum and maximum weights constraints
+     * * Minimum and maximum portfolio exposure constraints
+     *
+     * References
+     *  * [Lopez de Prado, M. (2016). Building diversified portfolios that outperform out-of-sample. Journal of Portfolio Management, 42(4), 59–69](https://jpm.pm-research.com/content/42/4/59)
+     *  * [Johann Pfitzinger & Nico Katzke, 2019. A constrained hierarchical risk parity algorithm with cluster-based capital allocation. Working Papers 14/2019, Stellenbosch University, Department of Economics](https://ideas.repec.org/p/sza/wpaper/wpapers328.html)
+     *
+     */
+    postPortfolioOptimizationHierarchicalRiskParity(req: operations.PostPortfolioOptimizationHierarchicalRiskParityRequestBody, config?: AxiosRequestConfig): Promise<operations.PostPortfolioOptimizationHierarchicalRiskParityResponse>;
+    /**
+     * Hierarchical Clustering-Based Risk Parity Portfolio
+     *
+     * @remarks
+     * Compute the asset weights of the hierarchical clustering-based risk parity portfolio, optionally subject to:
+     * * Minimum and maximum weights constraints
+     * * Minimum and maximum portfolio exposure constraints
+     *
+     * References
+     *  * [Machine Learning for Asset Management: New Developments and Financial Applications, Emmanuel Jurczenko, Chapter 9, Harald Lohre,Carsten Rother,Kilian Axel Schäfer, Hierarchical Risk Parity: Accounting for Tail Dependencies in Multi-asset Multi-factor Allocations](https://onlinelibrary.wiley.com/doi/10.1002/9781119751182.ch9)
+     *  * [Thomas Raffinot, Hierarchical Clustering-Based Asset Allocation, The Journal of Portfolio Management Multi-Asset Special Issue 2018, 44 (2) 89-99](https://jpm.pm-research.com/content/44/2/89.abstract)
+     *  * [Raffinot, Thomas, The Hierarchical Equal Risk Contribution Portfolio](https://ssrn.com/abstract=3237540)
+     *  * [Johann Pfitzinger & Nico Katzke, 2019. A constrained hierarchical risk parity algorithm with cluster-based capital allocation. Working Papers 14/2019, Stellenbosch University, Department of Economics](https://ideas.repec.org/p/sza/wpaper/wpapers328.html)
+     *
+     */
+    postPortfolioOptimizationHierarchicalRiskParityClusteringBased(req: operations.PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedRequestBody, config?: AxiosRequestConfig): Promise<operations.PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedResponse>;
+    /**
+     * Inverse Variance Weighted Portfolio
+     *
+     * @remarks
+     * Compute the asset weights of the inverse variance-weighted portfolio.
      *
      * References
      *  * [Raul Leote de Carvalho and al., Demystifying Equity Risk-Based Strategies: A Simple Alpha Plus Beta Description](https://doi.org/10.3905/jpm.2012.38.3.056)
      *
-    **/
-    postPortfolioOptimizationInverseVarianceWeighted(req: operations.PostPortfolioOptimizationInverseVarianceWeightedRequest, config?: AxiosRequestConfig): Promise<operations.PostPortfolioOptimizationInverseVarianceWeightedResponse>;
+     */
+    postPortfolioOptimizationInverseVarianceWeighted(req: operations.PostPortfolioOptimizationInverseVarianceWeightedRequestBody, config?: AxiosRequestConfig): Promise<operations.PostPortfolioOptimizationInverseVarianceWeightedResponse>;
     /**
-     * postPortfolioOptimizationInverseVolatilityWeighted - Inverse Volatility Weighted Portfolio
+     * Inverse Volatility Weighted Portfolio
      *
-     * Compute the assets weights of the inverse volatility-weighted portfolio, also known as the naive-risk parity portfolio.
+     * @remarks
+     * Compute the asset weights of the inverse volatility-weighted portfolio.
      *
      * References
      *  * [Raul Leote de Carvalho and al., Demystifying Equity Risk-Based Strategies: A Simple Alpha Plus Beta Description](https://doi.org/10.3905/jpm.2012.38.3.056)
      *
-    **/
-    postPortfolioOptimizationInverseVolatilityWeighted(req: operations.PostPortfolioOptimizationInverseVolatilityWeightedRequest, config?: AxiosRequestConfig): Promise<operations.PostPortfolioOptimizationInverseVolatilityWeightedResponse>;
+     */
+    postPortfolioOptimizationInverseVolatilityWeighted(req: operations.PostPortfolioOptimizationInverseVolatilityWeightedRequestBody, config?: AxiosRequestConfig): Promise<operations.PostPortfolioOptimizationInverseVolatilityWeightedResponse>;
     /**
-     * postPortfolioOptimizationMarketCapitalizationWeighted - Market Capitalization Weighted Portfolio
+     * Market Capitalization Weighted Portfolio
      *
-     * Compute the assets weights of the market capitalization-weighted portfolio.
+     * @remarks
+     * Compute the asset weights of the market capitalization-weighted portfolio.
      *
      * References
      *  * [Wikipedia, Capitalization-weighted Index](https://en.wikipedia.org/wiki/Capitalization-weighted_index)
      *
-    **/
-    postPortfolioOptimizationMarketCapitalizationWeighted(req: operations.PostPortfolioOptimizationMarketCapitalizationWeightedRequest, config?: AxiosRequestConfig): Promise<operations.PostPortfolioOptimizationMarketCapitalizationWeightedResponse>;
+     */
+    postPortfolioOptimizationMarketCapitalizationWeighted(req: operations.PostPortfolioOptimizationMarketCapitalizationWeightedRequestBody, config?: AxiosRequestConfig): Promise<operations.PostPortfolioOptimizationMarketCapitalizationWeightedResponse>;
     /**
-     * postPortfolioOptimizationMaximumDecorrelation - Maximum Decorrelation Portfolio
+     * Maximum Decorrelation Portfolio
      *
-     * Compute the assets weights of the maximum decorrelation portfolio, optionally subject to:
+     * @remarks
+     * Compute the asset weights of the maximum decorrelation portfolio, optionally subject to:
      * * Minimum and maximum weights constraints
      * * Maximum group weights constraints
      * * Minimum and maximum portfolio exposure constraints
@@ -80,78 +128,59 @@ export declare class PortfolioOptimization {
      * References
      *  * [F. Goltz, S. Sivasubramanian, Scientific Beta Maximum Decorrelation Indices](http://www.scientificbeta.com/download/file/scientific-beta-max-decorrelation-indices)
      *
-     *
-     * https://docs.portfoliooptimizer.io/#maximum-decorrelation-portfolio
-    **/
-    postPortfolioOptimizationMaximumDecorrelation(req: operations.PostPortfolioOptimizationMaximumDecorrelationRequest, config?: AxiosRequestConfig): Promise<operations.PostPortfolioOptimizationMaximumDecorrelationResponse>;
+     */
+    postPortfolioOptimizationMaximumDecorrelation(req: operations.PostPortfolioOptimizationMaximumDecorrelationRequestBody, config?: AxiosRequestConfig): Promise<operations.PostPortfolioOptimizationMaximumDecorrelationResponse>;
     /**
-     * postPortfolioOptimizationMaximumReturn - Maximum Return Portfolio
+     * Maximum Ulcer Performance Index Portfolio
      *
-     * Compute the assets weights of the maximum return portfolio, optionally subject to:
+     * @remarks
+     * Compute the asset weights of the maximum Ulcer Performance Index portfolio, optionally subject to:
      * * Minimum and maximum weights constraints
      * * Maximum group weights constraints
      * * Minimum and maximum portfolio exposure constraints
      *
-     * References
-     *  * Harry M. Markowitz, Portfolio Selection, Efficient Diversification of Investments, Second edition, Blackwell Publishers Inc.
-     *
-    **/
-    postPortfolioOptimizationMaximumReturn(req: operations.PostPortfolioOptimizationMaximumReturnRequest, config?: AxiosRequestConfig): Promise<operations.PostPortfolioOptimizationMaximumReturnResponse>;
-    /**
-     * postPortfolioOptimizationMaximumSharpeRatio - Maximum Sharpe Ratio Portfolio
-     *
-     * Compute the assets weights of the maximum Sharpe ratio portfolio, optionally subject to:
-     * * Minimum and maximum weights constraints
-     * * Maximum group weights constraints
-     * * Minimum and maximum portfolio exposure constraints
+     * Notes:
+     * * This endpoint will return an error if the maximum Ulcer Performance Index portfolio has a negative Ulcer Performance Index
      *
      * References
-     *  * Harry M. Markowitz, Portfolio Selection, Efficient Diversification of Investments, Second edition, Blackwell Publishers Inc.
+     *  * [Peter G. Martin, Ulcer Index, An Alternative Approach to the Measurement of Investment Risk & Risk-Adjusted Performance](http://www.tangotools.com/ui/ui.htm)
+     *  * [A. Chekhlov, S. Uryasev, M. Zabarankin, Portfolio Optimization with Drawdown Constraints, Supply Chain and Finance, p 209-228](https://doi.org/10.1142/9789812562586_0013)
+     *  * [A. Chekhlov, S. Uryasev, M. Zabarankin, Drawdown Measure in Portfolio Optimization, International Journal of Theoretical and Applied FinanceVol. 08, No. 01, pp. 13-58 (2005)](https://www.worldscientific.com/doi/10.1142/S0219024905002767)
      *
-    **/
-    postPortfolioOptimizationMaximumSharpeRatio(req: operations.PostPortfolioOptimizationMaximumSharpeRatioRequest, config?: AxiosRequestConfig): Promise<operations.PostPortfolioOptimizationMaximumSharpeRatioResponse>;
+     */
+    postPortfolioOptimizationMaximumUlcerPerformanceIndex(req: operations.PostPortfolioOptimizationMaximumUlcerPerformanceIndexRequestBody, config?: AxiosRequestConfig): Promise<operations.PostPortfolioOptimizationMaximumUlcerPerformanceIndexResponse>;
     /**
-     * postPortfolioOptimizationMeanVarianceEfficient - Mean-Variance Efficient Portfolio
+     * Minimum Correlation Portfolio
      *
-     * Compute the assets weights of a mean-variance efficient portfolio, optionally subject to:
-     * * Minimum and maximum weights constraints
-     * * Maximum group weights constraints
-     * * Minimum and maximum portfolio exposure constraints
-     *
-     * > A mean-variance efficient portfolio is a portfolio belonging to [the mean-variance efficient frontier](#post-/portfolio/analysis/mean-variance/efficient-frontier).
-     *
-     * References
-     *  * Harry M. Markowitz, Portfolio Selection, Efficient Diversification of Investments, Second edition, Blackwell Publishers Inc.
-     *
-    **/
-    postPortfolioOptimizationMeanVarianceEfficient(req: operations.PostPortfolioOptimizationMeanVarianceEfficientRequest, config?: AxiosRequestConfig): Promise<operations.PostPortfolioOptimizationMeanVarianceEfficientResponse>;
-    /**
-     * postPortfolioOptimizationMinimumCorrelation - Minimum Correlation Portfolio
-     *
-     * Compute the assets weights of the (heuristic) minimum correlation portfolio, which is a portfolio built using the Minimum Correlation Algorithm discovered by [David Varadi](https://cssanalytics.wordpress.com/).
+     * @remarks
+     * Compute the asset weights of the (heuristic) minimum correlation portfolio, which is a portfolio built using the Minimum Correlation Algorithm discovered by [David Varadi](https://cssanalytics.wordpress.com/).
      *
      * References
      *  * [CSSA, Minimum Correlation Algorithm Paper Release](https://cssanalytics.wordpress.com/2012/09/21/minimum-correlation-algorithm-paper-release/)
      *
-    **/
-    postPortfolioOptimizationMinimumCorrelation(req: operations.PostPortfolioOptimizationMinimumCorrelationRequest, config?: AxiosRequestConfig): Promise<operations.PostPortfolioOptimizationMinimumCorrelationResponse>;
+     */
+    postPortfolioOptimizationMinimumCorrelation(req: operations.PostPortfolioOptimizationMinimumCorrelationRequestBody, config?: AxiosRequestConfig): Promise<operations.PostPortfolioOptimizationMinimumCorrelationResponse>;
     /**
-     * postPortfolioOptimizationMinimumVariance - Minimum Variance Portfolio
+     * Minimum Ulcer Index Portfolio
      *
-     * Compute the assets weights of the minimum variance portfolio, optionally subject to:
+     * @remarks
+     * Compute the asset weights of the minimum Ulcer Index portfolio, optionally subject to:
      * * Minimum and maximum weights constraints
      * * Maximum group weights constraints
      * * Minimum and maximum portfolio exposure constraints
      *
      * References
-     *  * Harry M. Markowitz, Portfolio Selection, Efficient Diversification of Investments, Second edition, Blackwell Publishers Inc.
+     *  * [Peter G. Martin, Ulcer Index, An Alternative Approach to the Measurement of Investment Risk & Risk-Adjusted Performance](http://www.tangotools.com/ui/ui.htm)
+     *  * [A. Chekhlov, S. Uryasev, M. Zabarankin, Portfolio Optimization with Drawdown Constraints, Supply Chain and Finance, p 209-228](https://doi.org/10.1142/9789812562586_0013)
+     *  * [A. Chekhlov, S. Uryasev, M. Zabarankin, Drawdown Measure in Portfolio Optimization, International Journal of Theoretical and Applied FinanceVol. 08, No. 01, pp. 13-58 (2005)](https://www.worldscientific.com/doi/10.1142/S0219024905002767)
      *
-    **/
-    postPortfolioOptimizationMinimumVariance(req: operations.PostPortfolioOptimizationMinimumVarianceRequest, config?: AxiosRequestConfig): Promise<operations.PostPortfolioOptimizationMinimumVarianceResponse>;
+     */
+    postPortfolioOptimizationMinimumUlcerIndex(req: operations.PostPortfolioOptimizationMinimumUlcerIndexRequestBody, config?: AxiosRequestConfig): Promise<operations.PostPortfolioOptimizationMinimumUlcerIndexResponse>;
     /**
-     * postPortfolioOptimizationMostDiversified - Most Diversified Portfolio
+     * Most Diversified Portfolio
      *
-     * Compute the assets weights of the most diversified portfolio, optionally subject to:
+     * @remarks
+     * Compute the asset weights of the most diversified portfolio, optionally subject to:
      * * Minimum and maximum weights constraints
      * * Maximum group weights constraints
      * * Minimum and maximum portfolio exposure constraints
@@ -159,6 +188,6 @@ export declare class PortfolioOptimization {
      * References
      *  * [Yves Choueifaty and Yves Coignard, Toward Maximum Diversification, The Journal of Portfolio Management Fall 2008, 35 (1) 40-51](https://doi.org/10.3905/JPM.2008.35.1.40)
      *
-    **/
-    postPortfolioOptimizationMostDiversified(req: operations.PostPortfolioOptimizationMostDiversifiedRequest, config?: AxiosRequestConfig): Promise<operations.PostPortfolioOptimizationMostDiversifiedResponse>;
+     */
+    postPortfolioOptimizationMostDiversified(req: operations.PostPortfolioOptimizationMostDiversifiedRequestBody, config?: AxiosRequestConfig): Promise<operations.PostPortfolioOptimizationMostDiversifiedResponse>;
 }

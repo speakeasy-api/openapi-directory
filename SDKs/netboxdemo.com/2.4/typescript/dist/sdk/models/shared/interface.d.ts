@@ -1,8 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { InterfaceCircuitTermination } from "./interfacecircuittermination";
+import { InterfaceVLAN } from "./interfacevlan";
 import { NestedDevice } from "./nesteddevice";
 import { NestedInterface } from "./nestedinterface";
-import { InterfaceVlan } from "./interfacevlan";
 export declare class InterfaceFormFactor extends SpeakeasyBase {
     label: string;
     value: number;
@@ -22,11 +22,14 @@ export declare class Interface extends SpeakeasyBase {
     isConnected?: string;
     lag?: NestedInterface;
     macAddress?: string;
+    /**
+     * This interface is used only for out-of-band management
+     */
     mgmtOnly?: boolean;
     mode?: InterfaceMode;
     mtu?: number;
     name: string;
-    taggedVlans?: InterfaceVlan[];
+    taggedVlans?: InterfaceVLAN[];
     tags?: string[];
-    untaggedVlan?: InterfaceVlan;
+    untaggedVlan?: InterfaceVLAN;
 }

@@ -1,15 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { AddOn } from "./addon";
 import { InstanceHardware } from "./instancehardware";
+import { InstanceMetadataOptions } from "./instancemetadataoptions";
+import { InstanceNetworking } from "./instancenetworking";
+import { InstanceState } from "./instancestate";
 import { IpAddressTypeEnum } from "./ipaddresstypeenum";
 import { ResourceLocation } from "./resourcelocation";
-import { InstanceNetworking } from "./instancenetworking";
 import { ResourceTypeEnum } from "./resourcetypeenum";
-import { InstanceState } from "./instancestate";
 import { Tag } from "./tag";
 /**
  * Describes an instance (a virtual private server).
-**/
+ */
 export declare class Instance extends SpeakeasyBase {
     addOns?: AddOn[];
     arn?: string;
@@ -22,6 +23,7 @@ export declare class Instance extends SpeakeasyBase {
     ipv6Addresses?: string[];
     isStaticIp?: boolean;
     location?: ResourceLocation;
+    metadataOptions?: InstanceMetadataOptions;
     name?: string;
     networking?: InstanceNetworking;
     privateIpAddress?: string;

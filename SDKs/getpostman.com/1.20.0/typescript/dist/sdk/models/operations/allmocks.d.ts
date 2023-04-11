@@ -1,5 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class AllMocks200ApplicationJsonMocks extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class AllMocks200ApplicationJSONMocks extends SpeakeasyBase {
     collection?: string;
     environment?: string;
     id?: string;
@@ -7,11 +8,18 @@ export declare class AllMocks200ApplicationJsonMocks extends SpeakeasyBase {
     owner?: string;
     uid?: string;
 }
-export declare class AllMocks200ApplicationJson extends SpeakeasyBase {
-    mocks?: AllMocks200ApplicationJsonMocks[];
+/**
+ * Successful Response
+ */
+export declare class AllMocks200ApplicationJSON extends SpeakeasyBase {
+    mocks?: AllMocks200ApplicationJSONMocks[];
 }
 export declare class AllMocksResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    allMocks200ApplicationJSONObject?: AllMocks200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful Response
+     */
+    allMocks200ApplicationJSONObject?: AllMocks200ApplicationJSON;
 }

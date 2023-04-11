@@ -15,6 +15,9 @@ export declare class Rack extends SpeakeasyBase {
     comments?: string;
     created?: Date;
     customFields?: Record<string, any>;
+    /**
+     * Units are numbered top-to-bottom
+     */
     descUnits?: boolean;
     displayName?: string;
     facilityId?: string;

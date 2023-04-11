@@ -32,7 +32,6 @@ export * from "./overlay";
 export * from "./pad";
 export * from "./preprocessingconfig";
 export * from "./pubsubdestination";
-export * from "./security";
 export * from "./segmentsettings";
 export * from "./spritesheet";
 export * from "./status";

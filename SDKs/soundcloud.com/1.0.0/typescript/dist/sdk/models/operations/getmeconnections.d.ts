@@ -1,19 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetMeConnectionsQueryParams extends SpeakeasyBase {
-    limit?: number;
-    offset?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetMeConnectionsSecurity extends SpeakeasyBase {
-    authHeader: shared.SchemeAuthHeader;
+    authHeader: string;
 }
 export declare class GetMeConnectionsRequest extends SpeakeasyBase {
-    queryParams: GetMeConnectionsQueryParams;
-    security: GetMeConnectionsSecurity;
+    /**
+     * Number of results to return in the collection.
+     */
+    limit?: number;
+    /**
+     * Offset of first result. Deprecated, use `linked_partitioning` instead.
+     */
+    offset?: number;
 }
 export declare class GetMeConnectionsResponse extends SpeakeasyBase {
+    /**
+     * Success
+     */
     connections?: shared.Connection[];
     contentType: string;
+    /**
+     * Unauthorized
+     */
     error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

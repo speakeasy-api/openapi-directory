@@ -1,13 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetUserProjectsPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetUserProjectsRequest extends SpeakeasyBase {
+    /**
+     * Page Number
+     */
+    page?: number;
+    /**
+     * Page Size
+     */
+    size?: number;
+    /**
+     * User's identifier
+     */
     username: string;
 }
-export declare class GetUserProjectsQueryParams extends SpeakeasyBase {
-    page?: number;
-    size?: number;
-}
-export declare class GetUserProjects200ApplicationJson extends SpeakeasyBase {
+/**
+ * Successful operation
+ */
+export declare class GetUserProjects200ApplicationJSON extends SpeakeasyBase {
     count?: number;
     next?: string;
     page?: number;
@@ -15,13 +26,16 @@ export declare class GetUserProjects200ApplicationJson extends SpeakeasyBase {
     results?: shared.Project[];
     size?: number;
 }
-export declare class GetUserProjectsRequest extends SpeakeasyBase {
-    pathParams: GetUserProjectsPathParams;
-    queryParams: GetUserProjectsQueryParams;
-}
 export declare class GetUserProjectsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * error payload
+     */
     defaultPayload?: shared.DefaultPayload;
     statusCode: number;
-    getUserProjects200ApplicationJSONObject?: GetUserProjects200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful operation
+     */
+    getUserProjects200ApplicationJSONObject?: GetUserProjects200ApplicationJSON;
 }

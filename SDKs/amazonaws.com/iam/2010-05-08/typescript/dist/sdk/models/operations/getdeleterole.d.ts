@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteRoleActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteRoleActionEnum {
     DeleteRole = "DeleteRole"
 }
-export declare enum GetDeleteRoleVersionEnum {
+export declare enum GETDeleteRoleVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class GetDeleteRoleQueryParams extends SpeakeasyBase {
-    action: GetDeleteRoleActionEnum;
+export declare class GETDeleteRoleRequest extends SpeakeasyBase {
+    action: GETDeleteRoleActionEnum;
+    /**
+     * <p>The name of the role to delete.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
+     */
     roleName: string;
-    version: GetDeleteRoleVersionEnum;
-}
-export declare class GetDeleteRoleHeaders extends SpeakeasyBase {
+    version: GETDeleteRoleVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDeleteRoleHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteRoleRequest extends SpeakeasyBase {
-    queryParams: GetDeleteRoleQueryParams;
-    headers: GetDeleteRoleHeaders;
-}
-export declare class GetDeleteRoleResponse extends SpeakeasyBase {
+export declare class GETDeleteRoleResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

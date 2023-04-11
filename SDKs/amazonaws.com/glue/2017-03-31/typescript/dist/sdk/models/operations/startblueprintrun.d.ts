@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum StartBlueprintRunXAmzTargetEnum {
-    AwsGlueStartBlueprintRun = "AWSGlue.StartBlueprintRun"
+    AWSGlueStartBlueprintRun = "AWSGlue.StartBlueprintRun"
 }
-export declare class StartBlueprintRunHeaders extends SpeakeasyBase {
+export declare class StartBlueprintRunRequest extends SpeakeasyBase {
+    startBlueprintRunRequest: shared.StartBlueprintRunRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class StartBlueprintRunHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: StartBlueprintRunXAmzTargetEnum;
 }
-export declare class StartBlueprintRunRequest extends SpeakeasyBase {
-    headers: StartBlueprintRunHeaders;
-    request: shared.StartBlueprintRunRequest;
-}
 export declare class StartBlueprintRunResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * IllegalBlueprintStateException
+     */
     illegalBlueprintStateException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
+    /**
+     * ResourceNumberLimitExceededException
+     */
     resourceNumberLimitExceededException?: any;
+    /**
+     * Success
+     */
     startBlueprintRunResponse?: shared.StartBlueprintRunResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

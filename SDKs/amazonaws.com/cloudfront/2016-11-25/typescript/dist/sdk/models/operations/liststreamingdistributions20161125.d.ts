@@ -1,9 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ListStreamingDistributions20161125QueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListStreamingDistributions20161125Request extends SpeakeasyBase {
+    /**
+     * The value that you provided for the <code>Marker</code> request parameter.
+     */
     marker?: string;
+    /**
+     * The value that you provided for the <code>MaxItems</code> request parameter.
+     */
     maxItems?: string;
-}
-export declare class ListStreamingDistributions20161125Headers extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,12 +17,9 @@ export declare class ListStreamingDistributions20161125Headers extends Speakeasy
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class ListStreamingDistributions20161125Request extends SpeakeasyBase {
-    queryParams: ListStreamingDistributions20161125QueryParams;
-    headers: ListStreamingDistributions20161125Headers;
-}
 export declare class ListStreamingDistributions20161125Response extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeLogStreamsQueryParams extends SpeakeasyBase {
-    limit?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum DescribeLogStreamsXAmzTargetEnum {
     Logs20140328DescribeLogStreams = "Logs_20140328.DescribeLogStreams"
 }
-export declare class DescribeLogStreamsHeaders extends SpeakeasyBase {
+export declare class DescribeLogStreamsRequest extends SpeakeasyBase {
+    describeLogStreamsRequest: shared.DescribeLogStreamsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,17 +14,33 @@ export declare class DescribeLogStreamsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeLogStreamsXAmzTargetEnum;
-}
-export declare class DescribeLogStreamsRequest extends SpeakeasyBase {
-    queryParams: DescribeLogStreamsQueryParams;
-    headers: DescribeLogStreamsHeaders;
-    request: shared.DescribeLogStreamsRequest;
+    /**
+     * Pagination limit
+     */
+    limit?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class DescribeLogStreamsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeLogStreamsResponse?: shared.DescribeLogStreamsResponse;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
-    resourceNotFoundException?: any;
+    /**
+     * ServiceUnavailableException
+     */
     serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
 }

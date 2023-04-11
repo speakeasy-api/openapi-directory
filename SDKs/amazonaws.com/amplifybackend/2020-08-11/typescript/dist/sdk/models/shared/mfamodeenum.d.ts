@@ -1,4 +1,4 @@
-export declare enum MfaModeEnum {
+export declare enum MFAModeEnum {
     On = "ON",
     Off = "OFF",
     Optional = "OPTIONAL"

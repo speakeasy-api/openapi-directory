@@ -1,15 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetFiltersCreateQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetFiltersCreateRequest extends SpeakeasyBase {
     base?: string;
+    /**
+     * String list (semicolon delimited).
+     */
     exclude?: string;
+    /**
+     * String list (semicolon delimited).
+     */
     include?: string;
     unsafe?: boolean;
-}
-export declare class GetFiltersCreateRequest extends SpeakeasyBase {
-    queryParams: GetFiltersCreateQueryParams;
 }
 export declare class GetFiltersCreateResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

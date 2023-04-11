@@ -1,5 +1,15 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * The refs resource allows you access branches and tags in a repository.
+ *
+ * @remarks
+ * By default, results will be in the order the underlying source control
+ * system returns them and identical to the ordering one sees when running
+ * "$ git show-ref". Note that this follows simple lexical ordering of the
+ *  ref names.
+ *
+ */
 export declare class Refs {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,25 +19,32 @@ export declare class Refs {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteRepositoriesWorkspaceRepoSlugRefsBranchesName - Delete a branch in the specified repository.
+     * Delete a branch
+     *
+     * @remarks
+     * Delete a branch in the specified repository.
      *
      * The main branch is not allowed to be deleted and will return a 400
      * response.
      *
      * The branch name should not include any prefixes (e.g.
      * refs/heads).
-    **/
-    deleteRepositoriesWorkspaceRepoSlugRefsBranchesName(req: operations.DeleteRepositoriesWorkspaceRepoSlugRefsBranchesNameRequest, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoriesWorkspaceRepoSlugRefsBranchesNameResponse>;
+     */
+    deleteRepositoriesWorkspaceRepoSlugRefsBranchesName(req: operations.DeleteRepositoriesWorkspaceRepoSlugRefsBranchesNameRequest, security: operations.DeleteRepositoriesWorkspaceRepoSlugRefsBranchesNameSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoriesWorkspaceRepoSlugRefsBranchesNameResponse>;
     /**
-     * deleteRepositoriesWorkspaceRepoSlugRefsTagsName - Delete a tag in the specified repository.
+     * Delete a tag
      *
-     * For Git, the tag name should not include any prefixes (e.g. refs/tags).
-     * For Mercurial, this adds a commit to the main branch that removes the
-     * specified tag.
-    **/
-    deleteRepositoriesWorkspaceRepoSlugRefsTagsName(req: operations.DeleteRepositoriesWorkspaceRepoSlugRefsTagsNameRequest, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoriesWorkspaceRepoSlugRefsTagsNameResponse>;
+     * @remarks
+     * Delete a tag in the specified repository.
+     *
+     * The tag name should not include any prefixes (e.g. refs/tags).
+     */
+    deleteRepositoriesWorkspaceRepoSlugRefsTagsName(req: operations.DeleteRepositoriesWorkspaceRepoSlugRefsTagsNameRequest, security: operations.DeleteRepositoriesWorkspaceRepoSlugRefsTagsNameSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoriesWorkspaceRepoSlugRefsTagsNameResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugRefs - Returns the branches and tags in the repository.
+     * List branches and tags
+     *
+     * @remarks
+     * Returns the branches and tags in the repository.
      *
      * By default, results will be in the order the underlying source control system returns them and identical to
      * the ordering one sees when running "$ git show-ref". Note that this follows simple
@@ -39,10 +56,13 @@ export declare class Refs {
      *
      * Sorting can be changed using the ?sort= query parameter. When using ?sort=name to explicitly sort on ref name,
      * Bitbucket will apply natural sorting and interpret numerical values as numbers instead of strings.
-    **/
-    getRepositoriesWorkspaceRepoSlugRefs(req: operations.GetRepositoriesWorkspaceRepoSlugRefsRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugRefsResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugRefs(req: operations.GetRepositoriesWorkspaceRepoSlugRefsRequest, security: operations.GetRepositoriesWorkspaceRepoSlugRefsSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugRefsResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugRefsBranches - Returns a list of all open branches within the specified repository.
+     * List open branches
+     *
+     * @remarks
+     * Returns a list of all open branches within the specified repository.
      *         Results will be in the order the source control manager returns them.
      *
      *         ```
@@ -161,7 +181,7 @@ export declare class Refs {
      *         }
      *         ```
      *
-     *         Branches support [filtering and sorting](../../../../../meta/filtering)
+     *         Branches support [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering)
      *         that can be used to search for specific branches. For instance, to find
      *         all branches that have "stab" in their name:
      *
@@ -170,7 +190,7 @@ export declare class Refs {
      *         ```
      *
      *         By default, results will be in the order the underlying source control system returns them and identical to
-     *         the ordering one sees when running "$ hg branches" or "$ git branch --list". Note that this follows simple
+     *         the ordering one sees when running "$ git branch --list". Note that this follows simple
      *         lexical ordering of the ref names.
      *
      *         This can be undesirable as it does apply any natural sorting semantics, meaning for instance that tags are
@@ -178,10 +198,13 @@ export declare class Refs {
      *
      *         Sorting can be changed using the ?q= query parameter. When using ?q=name to explicitly sort on ref name,
      *         Bitbucket will apply natural sorting and interpret numerical values as numbers instead of strings.
-    **/
-    getRepositoriesWorkspaceRepoSlugRefsBranches(req: operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugRefsBranches(req: operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesRequest, security: operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugRefsBranchesName - Returns a branch object within the specified repository.
+     * Get a branch
+     *
+     * @remarks
+     * Returns a branch object within the specified repository.
      *
      *         ```
      *         $ curl -s https://api.bitbucket.org/2.0/repositories/atlassian/aui/refs/branches/master | jq .
@@ -301,13 +324,16 @@ export declare class Refs {
      *
      *         For Git, the branch name should not include any prefixes (e.g.
      *         refs/heads).
-    **/
-    getRepositoriesWorkspaceRepoSlugRefsBranchesName(req: operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesNameRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesNameResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugRefsBranchesName(req: operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesNameRequest, security: operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesNameSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesNameResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugRefsTags - Returns the tags in the repository.
+     * List tags
+     *
+     * @remarks
+     * Returns the tags in the repository.
      *
      * By default, results will be in the order the underlying source control system returns them and identical to
-     * the ordering one sees when running "$ hg tags" or "$ git tag --list". Note that this follows simple
+     * the ordering one sees when running "$ git tag --list". Note that this follows simple
      * lexical ordering of the ref names.
      *
      * This can be undesirable as it does apply any natural sorting semantics, meaning for instance that tags are
@@ -315,10 +341,13 @@ export declare class Refs {
      *
      * Sorting can be changed using the ?sort= query parameter. When using ?sort=name to explicitly sort on ref name,
      * Bitbucket will apply natural sorting and interpret numerical values as numbers instead of strings.
-    **/
-    getRepositoriesWorkspaceRepoSlugRefsTags(req: operations.GetRepositoriesWorkspaceRepoSlugRefsTagsRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugRefsTagsResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugRefsTags(req: operations.GetRepositoriesWorkspaceRepoSlugRefsTagsRequest, security: operations.GetRepositoriesWorkspaceRepoSlugRefsTagsSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugRefsTagsResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugRefsTagsName - Returns the specified tag.
+     * Get a tag
+     *
+     * @remarks
+     * Returns the specified tag.
      *
      * ```
      * $ curl -s https://api.bitbucket.org/2.0/repositories/seanfarley/hg/refs/tags/3.8 -G | jq .
@@ -444,10 +473,13 @@ export declare class Refs {
      *   }
      * }
      * ```
-    **/
-    getRepositoriesWorkspaceRepoSlugRefsTagsName(req: operations.GetRepositoriesWorkspaceRepoSlugRefsTagsNameRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugRefsTagsNameResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugRefsTagsName(req: operations.GetRepositoriesWorkspaceRepoSlugRefsTagsNameRequest, security: operations.GetRepositoriesWorkspaceRepoSlugRefsTagsNameSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugRefsTagsNameResponse>;
     /**
-     * postRepositoriesWorkspaceRepoSlugRefsBranches - Creates a new branch in the specified repository.
+     * Create a branch
+     *
+     * @remarks
+     * Creates a new branch in the specified repository.
      *
      * The payload of the POST should consist of a JSON document that
      * contains the name of the tag and the target hash.
@@ -472,10 +504,13 @@ export declare class Refs {
      * the commit hash, but it may return a 400 response if the provided
      * prefix is ambiguous. Using a full commit hash is the preferred
      * approach.
-    **/
-    postRepositoriesWorkspaceRepoSlugRefsBranches(req: operations.PostRepositoriesWorkspaceRepoSlugRefsBranchesRequest, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugRefsBranchesResponse>;
+     */
+    postRepositoriesWorkspaceRepoSlugRefsBranches(req: operations.PostRepositoriesWorkspaceRepoSlugRefsBranchesRequest, security: operations.PostRepositoriesWorkspaceRepoSlugRefsBranchesSecurity, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugRefsBranchesResponse>;
     /**
-     * postRepositoriesWorkspaceRepoSlugRefsTags - Creates a new tag in the specified repository.
+     * Create a tag
+     *
+     * @remarks
+     * Creates a new tag in the specified repository.
      *
      * The payload of the POST should consist of a JSON document that
      * contains the name of the tag and the target hash.
@@ -494,6 +529,6 @@ export declare class Refs {
      * This endpoint does support using short hash prefixes for the commit
      * hash, but it may return a 400 response if the provided prefix is
      * ambiguous. Using a full commit hash is the preferred approach.
-    **/
-    postRepositoriesWorkspaceRepoSlugRefsTags(req: operations.PostRepositoriesWorkspaceRepoSlugRefsTagsRequest, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugRefsTagsResponse>;
+     */
+    postRepositoriesWorkspaceRepoSlugRefsTags(req: operations.PostRepositoriesWorkspaceRepoSlugRefsTagsRequest, security: operations.PostRepositoriesWorkspaceRepoSlugRefsTagsSecurity, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugRefsTagsResponse>;
 }

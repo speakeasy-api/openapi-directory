@@ -1,17 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SessionControllerChangePasswordPathParams extends SpeakeasyBase {
-    shortName: string;
-}
-export declare class SessionControllerChangePasswordQueryParams extends SpeakeasyBase {
-    newPassword: string;
-    oldPassword: string;
-    token: string;
-}
+import { AxiosResponse } from "axios";
 export declare class SessionControllerChangePasswordRequest extends SpeakeasyBase {
-    pathParams: SessionControllerChangePasswordPathParams;
-    queryParams: SessionControllerChangePasswordQueryParams;
+    /**
+     * The customer's new password.
+     */
+    newPassword: string;
+    /**
+     * The customer's existing password.
+     */
+    oldPassword: string;
+    /**
+     * The unique client short-name
+     */
+    shortName: string;
+    /**
+     * The login token returned from the /session POST call
+     */
+    token: string;
 }
 export declare class SessionControllerChangePasswordResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,116 +1,174 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class HmipcSecurity extends SpeakeasyBase {
+    apiKey: string;
+    clientId: string;
+}
 export declare class HmipcRequestBodyCertificateParameters extends SpeakeasyBase {
+    /**
+     * Full name
+     */
     fullName: string;
+    /**
+     * Policy Number
+     */
     policyno: string;
 }
+/**
+ * The format of the certificate in response.
+ */
 export declare enum HmipcRequestBodyFormatEnum {
     Pdf = "pdf"
 }
+/**
+ * Request format
+ */
 export declare class HmipcRequestBody extends SpeakeasyBase {
     certificateParameters?: HmipcRequestBodyCertificateParameters;
-    consentArtifact?: any;
+    consentArtifact?: shared.ConsentArtifactSchema;
+    /**
+     * The format of the certificate in response.
+     */
     format: HmipcRequestBodyFormatEnum;
+    /**
+     * A unique transaction id for this request in UUID format. It is used for tracking the request.
+     */
     txnId: string;
 }
-export declare class HmipcSecurity extends SpeakeasyBase {
-    apiKey: shared.SchemeApiKey;
-    clientId: shared.SchemeClientId;
+export declare enum Hmipc504ApplicationJSONErrorEnum {
+    GatewayTimeout = "gateway_timeout"
 }
-export declare enum Hmipc400ApplicationJsonErrorEnum {
+export declare enum Hmipc504ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
+}
+/**
+ * Gateway timeout
+ */
+export declare class Hmipc504ApplicationJSON extends SpeakeasyBase {
+    error?: Hmipc504ApplicationJSONErrorEnum;
+    errorDescription?: Hmipc504ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Hmipc503ApplicationJSONErrorEnum {
+    ServiceUnavailable = "service_unavailable"
+}
+export declare enum Hmipc503ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
+}
+/**
+ * Service unavailable
+ */
+export declare class Hmipc503ApplicationJSON extends SpeakeasyBase {
+    error?: Hmipc503ApplicationJSONErrorEnum;
+    errorDescription?: Hmipc503ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Hmipc502ApplicationJSONErrorEnum {
+    BadGatewy = "bad_gatewy"
+}
+export declare enum Hmipc502ApplicationJSONErrorDescriptionEnum {
+    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
+}
+/**
+ * Bad gateway
+ */
+export declare class Hmipc502ApplicationJSON extends SpeakeasyBase {
+    error?: Hmipc502ApplicationJSONErrorEnum;
+    errorDescription?: Hmipc502ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Hmipc500ApplicationJSONErrorEnum {
+    InternalServerError = "internal_server_error"
+}
+export declare enum Hmipc500ApplicationJSONErrorDescriptionEnum {
+    InternalServerError = "Internal server error"
+}
+/**
+ * Internal server error
+ */
+export declare class Hmipc500ApplicationJSON extends SpeakeasyBase {
+    error?: Hmipc500ApplicationJSONErrorEnum;
+    errorDescription?: Hmipc500ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Hmipc404ApplicationJSONErrorEnum {
+    RecordNotFound = "record_not_found",
+    UrlNotFound = "url_not_found"
+}
+export declare enum Hmipc404ApplicationJSONErrorDescriptionEnum {
+    NoRecordFound = "No record found",
+    YourAPIUrlOrPathIsIncorrect = "Your API url or path is incorrect"
+}
+/**
+ * No record found
+ */
+export declare class Hmipc404ApplicationJSON extends SpeakeasyBase {
+    error?: Hmipc404ApplicationJSONErrorEnum;
+    errorDescription?: Hmipc404ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Hmipc401ApplicationJSONErrorEnum {
+    InvalidAuthentication = "invalid_authentication",
+    InvalidAuthorization = "invalid_authorization"
+}
+export declare enum Hmipc401ApplicationJSONErrorDescriptionEnum {
+    AuthenticationFailed = "Authentication failed",
+    YouAreNotAuthorizedToUseThisAPI = "You are not authorized to use this API"
+}
+/**
+ * Unauthorized access
+ */
+export declare class Hmipc401ApplicationJSON extends SpeakeasyBase {
+    error?: Hmipc401ApplicationJSONErrorEnum;
+    errorDescription?: Hmipc401ApplicationJSONErrorDescriptionEnum;
+}
+export declare enum Hmipc400ApplicationJSONErrorEnum {
     MissingParameter = "missing_parameter",
     InvalidParameter = "invalid_parameter",
     InvalidFormat = "invalid_format",
     InvalidTxnid = "invalid_txnid",
     InvalidConsentid = "invalid_consentid"
 }
-export declare enum Hmipc400ApplicationJsonErrorDescriptionEnum {
+export declare enum Hmipc400ApplicationJSONErrorDescriptionEnum {
     PleaseProvideAllMandatoryParameters = "Please provide all mandatory parameters",
     BadRequest = "Bad request",
     TheFormatParameterIsInvalid = "The format parameter is invalid",
-    TheTxnIdParameterMustBeInUuidFormat = "The txnId parameter must be in UUID format",
-    TheConsentIdParameterMustBeInUuidFormat = "The consentId parameter must be in UUID format"
+    TheTxnIdParameterMustBeInUUIDFormat = "The txnId parameter must be in UUID format",
+    TheConsentIdParameterMustBeInUUIDFormat = "The consentId parameter must be in UUID format"
 }
-export declare class Hmipc400ApplicationJson extends SpeakeasyBase {
-    error?: Hmipc400ApplicationJsonErrorEnum;
-    errorDescription?: Hmipc400ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Hmipc401ApplicationJsonErrorEnum {
-    InvalidAuthentication = "invalid_authentication",
-    InvalidAuthorization = "invalid_authorization"
-}
-export declare enum Hmipc401ApplicationJsonErrorDescriptionEnum {
-    AuthenticationFailed = "Authentication failed",
-    YouAreNotAuthorizedToUseThisApi = "You are not authorized to use this API"
-}
-export declare class Hmipc401ApplicationJson extends SpeakeasyBase {
-    error?: Hmipc401ApplicationJsonErrorEnum;
-    errorDescription?: Hmipc401ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Hmipc404ApplicationJsonErrorEnum {
-    RecordNotFound = "record_not_found",
-    UrlNotFound = "url_not_found"
-}
-export declare enum Hmipc404ApplicationJsonErrorDescriptionEnum {
-    NoRecordFound = "No record found",
-    YourApiUrlOrPathIsIncorrect = "Your API url or path is incorrect"
-}
-export declare class Hmipc404ApplicationJson extends SpeakeasyBase {
-    error?: Hmipc404ApplicationJsonErrorEnum;
-    errorDescription?: Hmipc404ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Hmipc500ApplicationJsonErrorEnum {
-    InternalServerError = "internal_server_error"
-}
-export declare enum Hmipc500ApplicationJsonErrorDescriptionEnum {
-    InternalServerError = "Internal server error"
-}
-export declare class Hmipc500ApplicationJson extends SpeakeasyBase {
-    error?: Hmipc500ApplicationJsonErrorEnum;
-    errorDescription?: Hmipc500ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Hmipc502ApplicationJsonErrorEnum {
-    BadGatewy = "bad_gatewy"
-}
-export declare enum Hmipc502ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceReturnedAnInvalidResponse = "Publisher service returned an invalid response"
-}
-export declare class Hmipc502ApplicationJson extends SpeakeasyBase {
-    error?: Hmipc502ApplicationJsonErrorEnum;
-    errorDescription?: Hmipc502ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Hmipc503ApplicationJsonErrorEnum {
-    ServiceUnavailable = "service_unavailable"
-}
-export declare enum Hmipc503ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceIsTemporarilyUnavailable = "Publisher service is temporarily unavailable"
-}
-export declare class Hmipc503ApplicationJson extends SpeakeasyBase {
-    error?: Hmipc503ApplicationJsonErrorEnum;
-    errorDescription?: Hmipc503ApplicationJsonErrorDescriptionEnum;
-}
-export declare enum Hmipc504ApplicationJsonErrorEnum {
-    GatewayTimeout = "gateway_timeout"
-}
-export declare enum Hmipc504ApplicationJsonErrorDescriptionEnum {
-    PublisherServiceDidNotRespondInTime = "Publisher service did not respond in time"
-}
-export declare class Hmipc504ApplicationJson extends SpeakeasyBase {
-    error?: Hmipc504ApplicationJsonErrorEnum;
-    errorDescription?: Hmipc504ApplicationJsonErrorDescriptionEnum;
-}
-export declare class HmipcRequest extends SpeakeasyBase {
-    request?: HmipcRequestBody;
-    security: HmipcSecurity;
+/**
+ * Bad request
+ */
+export declare class Hmipc400ApplicationJSON extends SpeakeasyBase {
+    error?: Hmipc400ApplicationJSONErrorEnum;
+    errorDescription?: Hmipc400ApplicationJSONErrorDescriptionEnum;
 }
 export declare class HmipcResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    hmipc400ApplicationJSONObject?: Hmipc400ApplicationJson;
-    hmipc401ApplicationJSONObject?: Hmipc401ApplicationJson;
-    hmipc404ApplicationJSONObject?: Hmipc404ApplicationJson;
-    hmipc500ApplicationJSONObject?: Hmipc500ApplicationJson;
-    hmipc502ApplicationJSONObject?: Hmipc502ApplicationJson;
-    hmipc503ApplicationJSONObject?: Hmipc503ApplicationJson;
-    hmipc504ApplicationJSONObject?: Hmipc504ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad request
+     */
+    hmipc400ApplicationJSONObject?: Hmipc400ApplicationJSON;
+    /**
+     * Unauthorized access
+     */
+    hmipc401ApplicationJSONObject?: Hmipc401ApplicationJSON;
+    /**
+     * No record found
+     */
+    hmipc404ApplicationJSONObject?: Hmipc404ApplicationJSON;
+    /**
+     * Internal server error
+     */
+    hmipc500ApplicationJSONObject?: Hmipc500ApplicationJSON;
+    /**
+     * Bad gateway
+     */
+    hmipc502ApplicationJSONObject?: Hmipc502ApplicationJSON;
+    /**
+     * Service unavailable
+     */
+    hmipc503ApplicationJSONObject?: Hmipc503ApplicationJSON;
+    /**
+     * Gateway timeout
+     */
+    hmipc504ApplicationJSONObject?: Hmipc504ApplicationJSON;
 }

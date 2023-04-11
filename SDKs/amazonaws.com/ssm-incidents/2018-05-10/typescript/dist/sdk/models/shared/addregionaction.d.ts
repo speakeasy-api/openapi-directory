@@ -1,0 +1,8 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Defines the Amazon Web Services Region and KMS key to add to the replication set.
+ */
+export declare class AddRegionAction extends SpeakeasyBase {
+    regionName: string;
+    sseKmsKeyId?: string;
+}

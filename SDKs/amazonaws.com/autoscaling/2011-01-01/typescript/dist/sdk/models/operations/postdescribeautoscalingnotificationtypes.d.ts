@@ -1,15 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeAutoScalingNotificationTypesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeAutoScalingNotificationTypesActionEnum {
     DescribeAutoScalingNotificationTypes = "DescribeAutoScalingNotificationTypes"
 }
-export declare enum PostDescribeAutoScalingNotificationTypesVersionEnum {
+export declare enum POSTDescribeAutoScalingNotificationTypesVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class PostDescribeAutoScalingNotificationTypesQueryParams extends SpeakeasyBase {
-    action: PostDescribeAutoScalingNotificationTypesActionEnum;
-    version: PostDescribeAutoScalingNotificationTypesVersionEnum;
-}
-export declare class PostDescribeAutoScalingNotificationTypesHeaders extends SpeakeasyBase {
+export declare class POSTDescribeAutoScalingNotificationTypesRequest extends SpeakeasyBase {
+    action: POSTDescribeAutoScalingNotificationTypesActionEnum;
+    version: POSTDescribeAutoScalingNotificationTypesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +17,9 @@ export declare class PostDescribeAutoScalingNotificationTypesHeaders extends Spe
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeAutoScalingNotificationTypesRequest extends SpeakeasyBase {
-    queryParams: PostDescribeAutoScalingNotificationTypesQueryParams;
-    headers: PostDescribeAutoScalingNotificationTypesHeaders;
-}
-export declare class PostDescribeAutoScalingNotificationTypesResponse extends SpeakeasyBase {
+export declare class POSTDescribeAutoScalingNotificationTypesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

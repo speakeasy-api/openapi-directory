@@ -1,12 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeletePortalPathParams extends SpeakeasyBase {
-    portalId: string;
-}
-export declare class DeletePortalQueryParams extends SpeakeasyBase {
-    clientToken?: string;
-}
-export declare class DeletePortalHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeletePortalRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -14,19 +9,41 @@ export declare class DeletePortalHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DeletePortalRequest extends SpeakeasyBase {
-    pathParams: DeletePortalPathParams;
-    queryParams: DeletePortalQueryParams;
-    headers: DeletePortalHeaders;
+    /**
+     * A unique case-sensitive identifier that you can provide to ensure the idempotency of the request. Don't reuse this client token if a new idempotent request is required.
+     */
+    clientToken?: string;
+    /**
+     * The ID of the portal to delete.
+     */
+    portalId: string;
 }
 export declare class DeletePortalResponse extends SpeakeasyBase {
+    /**
+     * ConflictingOperationException
+     */
     conflictingOperationException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deletePortalResponse?: shared.DeletePortalResponse;
+    /**
+     * InternalFailureException
+     */
     internalFailureException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

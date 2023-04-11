@@ -1,10 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class GetConnectionResponseIdentity extends SpeakeasyBase {
-    sourceIp: Record<string, any>;
-    userAgent: Record<string, any>;
+    sourceIp: string;
+    userAgent: string;
 }
+/**
+ * Success
+ */
 export declare class GetConnectionResponse extends SpeakeasyBase {
-    connectedAt?: Record<string, any>;
+    connectedAt?: Date;
     identity?: GetConnectionResponseIdentity;
-    lastActiveAt?: Record<string, any>;
+    lastActiveAt?: Date;
 }

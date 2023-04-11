@@ -1,11 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { DiskSnapshotStateEnum } from "./disksnapshotstateenum";
 import { ResourceLocation } from "./resourcelocation";
 import { ResourceTypeEnum } from "./resourcetypeenum";
-import { DiskSnapshotStateEnum } from "./disksnapshotstateenum";
 import { Tag } from "./tag";
 /**
  * Describes a block storage disk snapshot.
-**/
+ */
 export declare class DiskSnapshot extends SpeakeasyBase {
     arn?: string;
     createdAt?: Date;

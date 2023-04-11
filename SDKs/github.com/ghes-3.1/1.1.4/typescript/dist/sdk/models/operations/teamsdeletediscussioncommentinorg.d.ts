@@ -1,14 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class TeamsDeleteDiscussionCommentInOrgPathParams extends SpeakeasyBase {
-    commentNumber: number;
-    discussionNumber: number;
-    org: string;
-    teamSlug: string;
-}
+import { AxiosResponse } from "axios";
 export declare class TeamsDeleteDiscussionCommentInOrgRequest extends SpeakeasyBase {
-    pathParams: TeamsDeleteDiscussionCommentInOrgPathParams;
+    /**
+     * The number that identifies the comment.
+     */
+    commentNumber: number;
+    /**
+     * The number that identifies the discussion.
+     */
+    discussionNumber: number;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    org: string;
+    /**
+     * The slug of the team name.
+     */
+    teamSlug: string;
 }
 export declare class TeamsDeleteDiscussionCommentInOrgResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

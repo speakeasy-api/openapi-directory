@@ -1,5 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { Api } from "./api";
+/**
+ * Success
+ */
 export declare class GetApisResponse extends SpeakeasyBase {
-    items?: Record<string, any>;
-    nextToken?: Record<string, any>;
+    items?: Api[];
+    nextToken?: string;
 }

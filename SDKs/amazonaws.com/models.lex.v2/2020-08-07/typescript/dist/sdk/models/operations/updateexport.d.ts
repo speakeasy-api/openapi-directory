@@ -1,9 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdateExportPathParams extends SpeakeasyBase {
-    exportId: string;
+import { AxiosResponse } from "axios";
+export declare class UpdateExportRequestBody extends SpeakeasyBase {
+    /**
+     * The new password to use to encrypt the export zip archive.
+     */
+    filePassword?: string;
 }
-export declare class UpdateExportHeaders extends SpeakeasyBase {
+export declare class UpdateExportRequest extends SpeakeasyBase {
+    requestBody: UpdateExportRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,23 +16,41 @@ export declare class UpdateExportHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class UpdateExportRequestBody extends SpeakeasyBase {
-    filePassword?: string;
-}
-export declare class UpdateExportRequest extends SpeakeasyBase {
-    pathParams: UpdateExportPathParams;
-    headers: UpdateExportHeaders;
-    request: UpdateExportRequestBody;
+    /**
+     * The unique identifier Amazon Lex assigned to the export.
+     */
+    exportId: string;
 }
 export declare class UpdateExportResponse extends SpeakeasyBase {
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
-    serviceQuotaExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceQuotaExceededException
+     */
+    serviceQuotaExceededException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * Success
+     */
     updateExportResponse?: shared.UpdateExportResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

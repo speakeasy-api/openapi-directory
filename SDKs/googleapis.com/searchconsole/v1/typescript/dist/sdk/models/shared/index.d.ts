@@ -21,7 +21,6 @@ export * from "./runmobilefriendlytestrequest";
 export * from "./runmobilefriendlytestresponse";
 export * from "./searchanalyticsqueryrequest";
 export * from "./searchanalyticsqueryresponse";
-export * from "./security";
 export * from "./sitemapslistresponse";
 export * from "./siteslistresponse";
 export * from "./teststatus";

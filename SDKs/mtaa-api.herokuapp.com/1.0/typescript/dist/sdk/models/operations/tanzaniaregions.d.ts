@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class TanzaniaRegionsPathParams extends SpeakeasyBase {
-    country: string;
-}
+import { AxiosResponse } from "axios";
 export declare class TanzaniaRegionsRequest extends SpeakeasyBase {
-    pathParams: TanzaniaRegionsPathParams;
+    /**
+     * Country name in lowercase eg (Tanzania)
+     */
+    country: string;
 }
 export declare class TanzaniaRegionsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

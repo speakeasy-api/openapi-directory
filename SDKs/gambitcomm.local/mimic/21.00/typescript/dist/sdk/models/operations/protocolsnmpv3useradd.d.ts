@@ -1,18 +1,41 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolSnmpv3UserAddPathParams extends SpeakeasyBase {
-    agentNum: number;
-    authKey: string;
-    authProtocol: string;
-    privKey: string;
-    privProtocol: string;
-    securityName: string;
-    userName: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolSnmpv3UserAddRequest extends SpeakeasyBase {
-    pathParams: ProtocolSnmpv3UserAddPathParams;
+    /**
+     * Agent to add the SNMPv3 user
+     */
+    agentNum: number;
+    /**
+     * SNMPv3 user authentication key
+     */
+    authKey: string;
+    /**
+     * SNMPv3 user authentication protocol
+     */
+    authProtocol: string;
+    /**
+     * SNMPv3 user privacy encryption key
+     */
+    privKey: string;
+    /**
+     * SNMPv3 user privacy encryption protocol
+     */
+    privProtocol: string;
+    /**
+     * SNMPv3 user security name
+     */
+    securityName: string;
+    /**
+     * SNMPv3 user name
+     */
+    userName: string;
 }
 export declare class ProtocolSnmpv3UserAddResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolSnmpv3UserAdd200ApplicationJSONString?: string;
 }

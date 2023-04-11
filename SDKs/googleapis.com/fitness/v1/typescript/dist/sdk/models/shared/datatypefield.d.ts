@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The different supported formats for each field in a data type.
+ */
 export declare enum DataTypeFieldFormatEnum {
     Integer = "integer",
     FloatPoint = "floatPoint",
@@ -10,9 +13,15 @@ export declare enum DataTypeFieldFormatEnum {
 }
 /**
  * In case of multi-dimensional data (such as an accelerometer with x, y, and z axes) each field represents one dimension. Each data type field has a unique name which identifies it. The field also defines the format of the data (int, float, etc.). This message is only instantiated in code and not used for wire comms or stored in any way.
-**/
+ */
 export declare class DataTypeField extends SpeakeasyBase {
+    /**
+     * The different supported formats for each field in a data type.
+     */
     format?: DataTypeFieldFormatEnum;
+    /**
+     * Defines the name and format of data. Unlike data type names, field names are not namespaced, and only need to be unique within the data type.
+     */
     name?: string;
     optional?: boolean;
 }

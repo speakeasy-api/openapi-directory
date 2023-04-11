@@ -1,11 +1,33 @@
-import { AxiosInstance } from "axios";
 import { Projects } from "./projects";
 import { V1beta1 } from "./v1beta1";
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://servicebroker.googleapis.com/"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * The Google Cloud Platform Service Broker API provides Google hosted
+ *
+ * @remarks
+ * implementation of the Open Service Broker API
+ * (https://www.openservicebrokerapi.org/).
+ *
+ *
+ * @see {@link https://cloud.google.com/kubernetes-engine/docs/concepts/add-on/service-broker}
+ */
 export declare class SDK {
     projects: Projects;
     v1beta1: V1beta1;
@@ -15,5 +37,6 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
 }

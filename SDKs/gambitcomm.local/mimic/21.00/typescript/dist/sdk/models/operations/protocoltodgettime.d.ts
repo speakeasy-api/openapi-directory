@@ -1,17 +1,37 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolTodGettimePathParams extends SpeakeasyBase {
-    agentNum: number;
-    numRetries: number;
-    portNum: number;
-    scriptName: string;
-    serverAddr: string;
-    timeSec: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolTodGettimeRequest extends SpeakeasyBase {
-    pathParams: ProtocolTodGettimePathParams;
+    /**
+     * Agent to show TOD return
+     */
+    agentNum: number;
+    /**
+     * numRetries
+     */
+    numRetries: number;
+    /**
+     * portNum
+     */
+    portNum: number;
+    /**
+     * scriptName
+     */
+    scriptName: string;
+    /**
+     * serverAddr
+     */
+    serverAddr: string;
+    /**
+     * timeSec
+     */
+    timeSec: number;
 }
 export declare class ProtocolTodGettimeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolTodGettime200ApplicationJSONStrings?: string[];
 }

@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteClusterParameterGroupActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteClusterParameterGroupActionEnum {
     DeleteClusterParameterGroup = "DeleteClusterParameterGroup"
 }
-export declare enum GetDeleteClusterParameterGroupVersionEnum {
+export declare enum GETDeleteClusterParameterGroupVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class GetDeleteClusterParameterGroupQueryParams extends SpeakeasyBase {
-    action: GetDeleteClusterParameterGroupActionEnum;
+export declare class GETDeleteClusterParameterGroupRequest extends SpeakeasyBase {
+    action: GETDeleteClusterParameterGroupActionEnum;
+    /**
+     * <p>The name of the parameter group to be deleted.</p> <p>Constraints:</p> <ul> <li> <p>Must be the name of an existing cluster parameter group.</p> </li> <li> <p>Cannot delete a default cluster parameter group.</p> </li> </ul>
+     */
     parameterGroupName: string;
-    version: GetDeleteClusterParameterGroupVersionEnum;
-}
-export declare class GetDeleteClusterParameterGroupHeaders extends SpeakeasyBase {
+    version: GETDeleteClusterParameterGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDeleteClusterParameterGroupHeaders extends SpeakeasyBase
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteClusterParameterGroupRequest extends SpeakeasyBase {
-    queryParams: GetDeleteClusterParameterGroupQueryParams;
-    headers: GetDeleteClusterParameterGroupHeaders;
-}
-export declare class GetDeleteClusterParameterGroupResponse extends SpeakeasyBase {
+export declare class GETDeleteClusterParameterGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

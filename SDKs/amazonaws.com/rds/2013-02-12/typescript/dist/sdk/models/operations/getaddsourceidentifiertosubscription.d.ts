@@ -1,17 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetAddSourceIdentifierToSubscriptionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETAddSourceIdentifierToSubscriptionActionEnum {
     AddSourceIdentifierToSubscription = "AddSourceIdentifierToSubscription"
 }
-export declare enum GetAddSourceIdentifierToSubscriptionVersionEnum {
+export declare enum GETAddSourceIdentifierToSubscriptionVersionEnum {
     TwoThousandAndThirteen0212 = "2013-02-12"
 }
-export declare class GetAddSourceIdentifierToSubscriptionQueryParams extends SpeakeasyBase {
-    action: GetAddSourceIdentifierToSubscriptionActionEnum;
+export declare class GETAddSourceIdentifierToSubscriptionRequest extends SpeakeasyBase {
+    action: GETAddSourceIdentifierToSubscriptionActionEnum;
     sourceIdentifier: string;
     subscriptionName: string;
-    version: GetAddSourceIdentifierToSubscriptionVersionEnum;
-}
-export declare class GetAddSourceIdentifierToSubscriptionHeaders extends SpeakeasyBase {
+    version: GETAddSourceIdentifierToSubscriptionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +19,9 @@ export declare class GetAddSourceIdentifierToSubscriptionHeaders extends Speakea
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetAddSourceIdentifierToSubscriptionRequest extends SpeakeasyBase {
-    queryParams: GetAddSourceIdentifierToSubscriptionQueryParams;
-    headers: GetAddSourceIdentifierToSubscriptionHeaders;
-}
-export declare class GetAddSourceIdentifierToSubscriptionResponse extends SpeakeasyBase {
+export declare class GETAddSourceIdentifierToSubscriptionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostModifyFleetActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTModifyFleetActionEnum {
     ModifyFleet = "ModifyFleet"
 }
-export declare enum PostModifyFleetVersionEnum {
+export declare enum POSTModifyFleetVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostModifyFleetQueryParams extends SpeakeasyBase {
-    action: PostModifyFleetActionEnum;
-    version: PostModifyFleetVersionEnum;
-}
-export declare class PostModifyFleetHeaders extends SpeakeasyBase {
+export declare class POSTModifyFleetRequest extends SpeakeasyBase {
+    action: POSTModifyFleetActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTModifyFleetVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostModifyFleetHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostModifyFleetRequest extends SpeakeasyBase {
-    queryParams: PostModifyFleetQueryParams;
-    headers: PostModifyFleetHeaders;
-    request?: Uint8Array;
-}
-export declare class PostModifyFleetResponse extends SpeakeasyBase {
+export declare class POSTModifyFleetResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

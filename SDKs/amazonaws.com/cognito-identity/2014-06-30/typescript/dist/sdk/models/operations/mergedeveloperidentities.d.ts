@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum MergeDeveloperIdentitiesXAmzTargetEnum {
-    AwsCognitoIdentityServiceMergeDeveloperIdentities = "AWSCognitoIdentityService.MergeDeveloperIdentities"
+    AWSCognitoIdentityServiceMergeDeveloperIdentities = "AWSCognitoIdentityService.MergeDeveloperIdentities"
 }
-export declare class MergeDeveloperIdentitiesHeaders extends SpeakeasyBase {
+export declare class MergeDeveloperIdentitiesRequest extends SpeakeasyBase {
+    mergeDeveloperIdentitiesInput: shared.MergeDeveloperIdentitiesInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class MergeDeveloperIdentitiesHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: MergeDeveloperIdentitiesXAmzTargetEnum;
 }
-export declare class MergeDeveloperIdentitiesRequest extends SpeakeasyBase {
-    headers: MergeDeveloperIdentitiesHeaders;
-    request: shared.MergeDeveloperIdentitiesInput;
-}
 export declare class MergeDeveloperIdentitiesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalErrorException
+     */
     internalErrorException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * Success
+     */
     mergeDeveloperIdentitiesResponse?: shared.MergeDeveloperIdentitiesResponse;
+    /**
+     * NotAuthorizedException
+     */
     notAuthorizedException?: any;
-    resourceConflictException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceConflictException
+     */
+    resourceConflictException?: any;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

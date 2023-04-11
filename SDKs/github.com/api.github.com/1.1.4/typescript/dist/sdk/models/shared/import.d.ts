@@ -24,7 +24,7 @@ export declare enum ImportStatusEnum {
 }
 /**
  * A repository import from an external source.
-**/
+ */
 export declare class Import extends SpeakeasyBase {
     authorsCount?: number;
     authorsUrl: string;
@@ -46,7 +46,10 @@ export declare class Import extends SpeakeasyBase {
     svnRoot?: string;
     tfvcProject?: string;
     url: string;
-    useLfs?: string;
+    useLfs?: boolean;
     vcs: string;
+    /**
+     * The URL of the originating repository.
+     */
     vcsUrl: string;
 }

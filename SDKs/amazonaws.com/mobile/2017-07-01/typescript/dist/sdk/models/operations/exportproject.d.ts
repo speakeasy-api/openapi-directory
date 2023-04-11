@@ -1,9 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ExportProjectPathParams extends SpeakeasyBase {
-    projectId: string;
-}
-export declare class ExportProjectHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ExportProjectRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,19 +9,41 @@ export declare class ExportProjectHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class ExportProjectRequest extends SpeakeasyBase {
-    pathParams: ExportProjectPathParams;
-    headers: ExportProjectHeaders;
+    /**
+     *  Unique project identifier.
+     */
+    projectId: string;
 }
 export declare class ExportProjectResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: shared.BadRequestException;
     contentType: string;
+    /**
+     * Success
+     */
     exportProjectResult?: shared.ExportProjectResult;
+    /**
+     * InternalFailureException
+     */
     internalFailureException?: shared.InternalFailureException;
+    /**
+     * NotFoundException
+     */
     notFoundException?: shared.NotFoundException;
-    serviceUnavailableException?: shared.ServiceUnavailableException;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceUnavailableException
+     */
+    serviceUnavailableException?: shared.ServiceUnavailableException;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: shared.TooManyRequestsException;
+    /**
+     * UnauthorizedException
+     */
     unauthorizedException?: shared.UnauthorizedException;
 }

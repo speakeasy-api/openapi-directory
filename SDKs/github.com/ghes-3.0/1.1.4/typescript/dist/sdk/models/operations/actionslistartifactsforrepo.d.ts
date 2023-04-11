@@ -1,24 +1,32 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ActionsListArtifactsForRepoPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ActionsListArtifactsForRepoRequest extends SpeakeasyBase {
     owner: string;
+    /**
+     * Page number of the results to fetch.
+     */
+    page?: number;
+    /**
+     * Results per page (max 100)
+     */
+    perPage?: number;
     repo: string;
 }
-export declare class ActionsListArtifactsForRepoQueryParams extends SpeakeasyBase {
-    page?: number;
-    perPage?: number;
-}
-export declare class ActionsListArtifactsForRepo200ApplicationJson extends SpeakeasyBase {
+/**
+ * Response
+ */
+export declare class ActionsListArtifactsForRepo200ApplicationJSON extends SpeakeasyBase {
     artifacts: shared.Artifact[];
     totalCount: number;
 }
-export declare class ActionsListArtifactsForRepoRequest extends SpeakeasyBase {
-    pathParams: ActionsListArtifactsForRepoPathParams;
-    queryParams: ActionsListArtifactsForRepoQueryParams;
-}
 export declare class ActionsListArtifactsForRepoResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
-    actionsListArtifactsForRepo200ApplicationJSONObject?: ActionsListArtifactsForRepo200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
+    actionsListArtifactsForRepo200ApplicationJSONObject?: ActionsListArtifactsForRepo200ApplicationJSON;
 }

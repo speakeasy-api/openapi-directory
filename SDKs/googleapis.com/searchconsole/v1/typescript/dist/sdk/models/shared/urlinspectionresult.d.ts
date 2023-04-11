@@ -5,11 +5,26 @@ import { MobileUsabilityInspectionResult } from "./mobileusabilityinspectionresu
 import { RichResultsInspectionResult } from "./richresultsinspectionresult";
 /**
  * URL inspection result, including all inspection results.
-**/
+ */
 export declare class UrlInspectionResult extends SpeakeasyBase {
+    /**
+     * AMP inspection result of the live page or the current information from Google's index, depending on whether you requested a live inspection or not.
+     */
     ampResult?: AmpInspectionResult;
+    /**
+     * Results of index status inspection for either the live page or the version in Google's index, depending on whether you requested a live inspection or not. For more information, see the [Index coverage report documentation](https://support.google.com/webmasters/answer/7440203).
+     */
     indexStatusResult?: IndexStatusInspectionResult;
+    /**
+     * Link to Search Console URL inspection.
+     */
     inspectionResultLink?: string;
+    /**
+     * Mobile-usability inspection results.
+     */
     mobileUsabilityResult?: MobileUsabilityInspectionResult;
+    /**
+     * Rich-Results inspection result, including any rich results found at this URL.
+     */
     richResultsResult?: RichResultsInspectionResult;
 }

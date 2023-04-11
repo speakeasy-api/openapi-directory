@@ -1,6 +1,9 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class GeocodingApi {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Everything about geocoding
+ */
+export declare class GeocodingAPI {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,8 +12,9 @@ export declare class GeocodingApi {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getGeocode - Geocoding Endpoint
+     * Geocoding Endpoint
      *
+     * @remarks
      *
      * ### Introduction
      *
@@ -21,6 +25,6 @@ export declare class GeocodingApi {
      *
      * _Reverse geocoding_ converts a coordinate to a textual address representation or place name. Find out more about Geocoding itself on [Wikipedia](http://en.wikipedia.org/wiki/Geocoding).
      *
-    **/
+     */
     getGeocode(req: operations.GetGeocodeRequest, config?: AxiosRequestConfig): Promise<operations.GetGeocodeResponse>;
 }

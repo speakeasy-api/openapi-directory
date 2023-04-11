@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Head {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,12 +9,12 @@ export declare class Head {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * headKeyPk - HEAD info on Authentiq ID
+     * HEAD info on Authentiq ID
      *
-    **/
-    headKeyPk(req: operations.HeadKeyPkRequest, config?: AxiosRequestConfig): Promise<operations.HeadKeyPkResponse>;
+     */
+    headKeyPK(req: operations.HeadKeyPKRequest, config?: AxiosRequestConfig): Promise<operations.HeadKeyPKResponse>;
     /**
-     * signRetrieveHead - HEAD to get the status of a verification job
-    **/
+     * HEAD to get the status of a verification job
+     */
     signRetrieveHead(req: operations.SignRetrieveHeadRequest, config?: AxiosRequestConfig): Promise<operations.SignRetrieveHeadResponse>;
 }

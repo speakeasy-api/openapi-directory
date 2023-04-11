@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class ChannelsCategories {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,27 +9,31 @@ export declare class ChannelsCategories {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * addChannelCategories - Add a list of categories to a channel
+     * Add a list of categories to a channel
      *
+     * @remarks
      * This method adds multiple categories to the specified channel.
-    **/
+     */
     addChannelCategories(req: operations.AddChannelCategoriesRequest, config?: AxiosRequestConfig): Promise<operations.AddChannelCategoriesResponse>;
     /**
-     * categorizeChannel - Categorize a channel
+     * Categorize a channel
      *
+     * @remarks
      * This method adds a channel to a category.
-    **/
-    categorizeChannel(req: operations.CategorizeChannelRequest, config?: AxiosRequestConfig): Promise<operations.CategorizeChannelResponse>;
+     */
+    categorizeChannel(req: operations.CategorizeChannelRequest, security: operations.CategorizeChannelSecurity, config?: AxiosRequestConfig): Promise<operations.CategorizeChannelResponse>;
     /**
-     * deleteChannelCategory - Remove a category from a channel
+     * Remove a category from a channel
      *
+     * @remarks
      * This method removes a single category from the specified channel.
-    **/
-    deleteChannelCategory(req: operations.DeleteChannelCategoryRequest, config?: AxiosRequestConfig): Promise<operations.DeleteChannelCategoryResponse>;
+     */
+    deleteChannelCategory(req: operations.DeleteChannelCategoryRequest, security: operations.DeleteChannelCategorySecurity, config?: AxiosRequestConfig): Promise<operations.DeleteChannelCategoryResponse>;
     /**
-     * getChannelCategories - Get all the categories in a channel
+     * Get all the categories in a channel
      *
+     * @remarks
      * This method gets all the categories in the specified channel.
-    **/
+     */
     getChannelCategories(req: operations.GetChannelCategoriesRequest, config?: AxiosRequestConfig): Promise<operations.GetChannelCategoriesResponse>;
 }

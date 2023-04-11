@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetGetConsoleOutputActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETGETConsoleOutputActionEnum {
     GetConsoleOutput = "GetConsoleOutput"
 }
-export declare enum GetGetConsoleOutputVersionEnum {
+export declare enum GETGETConsoleOutputVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetGetConsoleOutputQueryParams extends SpeakeasyBase {
-    action: GetGetConsoleOutputActionEnum;
+export declare class GETGETConsoleOutputRequest extends SpeakeasyBase {
+    action: GETGETConsoleOutputActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
+    /**
+     * The ID of the instance.
+     */
     instanceId: string;
+    /**
+     * <p>When enabled, retrieves the latest console output for the instance.</p> <p>Default: disabled (<code>false</code>)</p>
+     */
     latest?: boolean;
-    version: GetGetConsoleOutputVersionEnum;
-}
-export declare class GetGetConsoleOutputHeaders extends SpeakeasyBase {
+    version: GETGETConsoleOutputVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +29,9 @@ export declare class GetGetConsoleOutputHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetGetConsoleOutputRequest extends SpeakeasyBase {
-    queryParams: GetGetConsoleOutputQueryParams;
-    headers: GetGetConsoleOutputHeaders;
-}
-export declare class GetGetConsoleOutputResponse extends SpeakeasyBase {
+export declare class GETGETConsoleOutputResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,21 +1,21 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { RotoballerArticlesRequest, RotoballerArticlesResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  RotoballerArticlesRequest,
+  RotoballerArticlesResponse,
+  RotoballerArticlesFormatEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    apiKeyHeader: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: RotoballerArticlesRequest = {
-  pathParams: {
-    format: "xml",
+    apiKeyHeader: "YOUR_API_KEY_HERE",
   },
+});
+
+const req: RotoballerArticlesRequest = {
+  format: RotoballerArticlesFormatEnum.Json,
 };
 
 sdk.rotoballerArticles(req).then((res: RotoballerArticlesResponse | AxiosError) => {

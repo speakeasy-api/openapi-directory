@@ -1,8 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SetCognitoEventsPathParams extends SpeakeasyBase {
-    identityPoolId: string;
+import { AxiosResponse } from "axios";
+export declare class SetCognitoEventsRequestBody extends SpeakeasyBase {
+    /**
+     * The events to configure
+     */
+    events: Record<string, string>;
 }
-export declare class SetCognitoEventsHeaders extends SpeakeasyBase {
+export declare class SetCognitoEventsRequest extends SpeakeasyBase {
+    /**
+     * The Cognito Identity Pool to use when configuring Cognito Events
+     */
+    identityPoolId: string;
+    requestBody: SetCognitoEventsRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,20 +20,28 @@ export declare class SetCognitoEventsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class SetCognitoEventsRequestBody extends SpeakeasyBase {
-    events: Record<string, string>;
-}
-export declare class SetCognitoEventsRequest extends SpeakeasyBase {
-    pathParams: SetCognitoEventsPathParams;
-    headers: SetCognitoEventsHeaders;
-    request: SetCognitoEventsRequestBody;
-}
 export declare class SetCognitoEventsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalErrorException
+     */
     internalErrorException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * NotAuthorizedException
+     */
     notAuthorizedException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

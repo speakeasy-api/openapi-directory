@@ -1,18 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetQuoteIdFromInternalIdPathParams extends SpeakeasyBase {
-    projectId: number;
-}
-export declare class GetQuoteIdFromInternalId200ApplicationJson extends SpeakeasyBase {
-    internalId?: number;
-    publicId?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetQuoteIdFromInternalIdRequest extends SpeakeasyBase {
-    pathParams: GetQuoteIdFromInternalIdPathParams;
+    /**
+     * Project ID
+     */
+    projectId: number;
 }
 export declare class GetQuoteIdFromInternalIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * ProjectNotFound
+     */
     error?: shared.ErrorT;
+    /**
+     * QuoteId
+     */
+    projectId?: shared.ProjectId;
     statusCode: number;
-    getQuoteIdFromInternalId200ApplicationJSONObject?: GetQuoteIdFromInternalId200ApplicationJson;
+    rawResponse?: AxiosResponse;
 }

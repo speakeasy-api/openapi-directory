@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteIdentityActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteIdentityActionEnum {
     DeleteIdentity = "DeleteIdentity"
 }
-export declare enum GetDeleteIdentityVersionEnum {
+export declare enum GETDeleteIdentityVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class GetDeleteIdentityQueryParams extends SpeakeasyBase {
-    action: GetDeleteIdentityActionEnum;
+export declare class GETDeleteIdentityRequest extends SpeakeasyBase {
+    action: GETDeleteIdentityActionEnum;
+    /**
+     * The identity to be removed from the list of identities for the AWS Account.
+     */
     identity: string;
-    version: GetDeleteIdentityVersionEnum;
-}
-export declare class GetDeleteIdentityHeaders extends SpeakeasyBase {
+    version: GETDeleteIdentityVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDeleteIdentityHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteIdentityRequest extends SpeakeasyBase {
-    queryParams: GetDeleteIdentityQueryParams;
-    headers: GetDeleteIdentityHeaders;
-}
-export declare class GetDeleteIdentityResponse extends SpeakeasyBase {
+export declare class GETDeleteIdentityResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,15 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum SaveAccountTypeEnum {
-    Checking = "checking",
-    Savings = "savings",
-    CreditCard = "creditCard",
-    Cash = "cash",
-    LineOfCredit = "lineOfCredit",
-    OtherAsset = "otherAsset",
-    OtherLiability = "otherLiability"
-}
+import { AccountTypeEnum } from "./accounttypeenum";
 export declare class SaveAccount extends SpeakeasyBase {
+    /**
+     * The current balance of the account in milliunits format
+     */
     balance: number;
+    /**
+     * The name of the account
+     */
     name: string;
-    type: SaveAccountTypeEnum;
+    /**
+     * The type of account
+     */
+    type: AccountTypeEnum;
 }

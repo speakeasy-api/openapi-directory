@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { MigrationTypeValueEnum } from "./migrationtypevalueenum";
 /**
  * <p/>
-**/
+ */
 export declare class ModifyReplicationTaskMessage extends SpeakeasyBase {
     cdcStartPosition?: string;
     cdcStartTime?: Date;

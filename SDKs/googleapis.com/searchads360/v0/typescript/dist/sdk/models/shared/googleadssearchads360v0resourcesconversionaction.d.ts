@@ -1,0 +1,154 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { GoogleAdsSearchads360V0ResourcesConversionActionAttributionModelSettings } from "./googleadssearchads360v0resourcesconversionactionattributionmodelsettings";
+import { GoogleAdsSearchads360V0ResourcesConversionActionFloodlightSettings } from "./googleadssearchads360v0resourcesconversionactionfloodlightsettings";
+import { GoogleAdsSearchads360V0ResourcesConversionActionValueSettings } from "./googleadssearchads360v0resourcesconversionactionvaluesettings";
+/**
+ * The category of conversions reported for this conversion action.
+ */
+export declare enum GoogleAdsSearchads360V0ResourcesConversionActionCategoryEnum {
+    Unspecified = "UNSPECIFIED",
+    Unknown = "UNKNOWN",
+    Default = "DEFAULT",
+    PageView = "PAGE_VIEW",
+    Purchase = "PURCHASE",
+    Signup = "SIGNUP",
+    Lead = "LEAD",
+    Download = "DOWNLOAD",
+    AddToCart = "ADD_TO_CART",
+    BeginCheckout = "BEGIN_CHECKOUT",
+    SubscribePaid = "SUBSCRIBE_PAID",
+    PhoneCallLead = "PHONE_CALL_LEAD",
+    ImportedLead = "IMPORTED_LEAD",
+    SubmitLeadForm = "SUBMIT_LEAD_FORM",
+    BookAppointment = "BOOK_APPOINTMENT",
+    RequestQuote = "REQUEST_QUOTE",
+    GetDirections = "GET_DIRECTIONS",
+    OutboundClick = "OUTBOUND_CLICK",
+    Contact = "CONTACT",
+    Engagement = "ENGAGEMENT",
+    StoreVisit = "STORE_VISIT",
+    StoreSale = "STORE_SALE",
+    QualifiedLead = "QUALIFIED_LEAD",
+    ConvertedLead = "CONVERTED_LEAD"
+}
+/**
+ * The status of this conversion action for conversion event accrual.
+ */
+export declare enum GoogleAdsSearchads360V0ResourcesConversionActionStatusEnum {
+    Unspecified = "UNSPECIFIED",
+    Unknown = "UNKNOWN",
+    Enabled = "ENABLED",
+    Removed = "REMOVED",
+    Hidden = "HIDDEN"
+}
+/**
+ * Immutable. The type of this conversion action.
+ */
+export declare enum GoogleAdsSearchads360V0ResourcesConversionActionTypeEnum {
+    Unspecified = "UNSPECIFIED",
+    Unknown = "UNKNOWN",
+    AdCall = "AD_CALL",
+    ClickToCall = "CLICK_TO_CALL",
+    GooglePlayDownload = "GOOGLE_PLAY_DOWNLOAD",
+    GooglePlayInAppPurchase = "GOOGLE_PLAY_IN_APP_PURCHASE",
+    UploadCalls = "UPLOAD_CALLS",
+    UploadClicks = "UPLOAD_CLICKS",
+    Webpage = "WEBPAGE",
+    WebsiteCall = "WEBSITE_CALL",
+    StoreSalesDirectUpload = "STORE_SALES_DIRECT_UPLOAD",
+    StoreSales = "STORE_SALES",
+    FirebaseAndroidFirstOpen = "FIREBASE_ANDROID_FIRST_OPEN",
+    FirebaseAndroidInAppPurchase = "FIREBASE_ANDROID_IN_APP_PURCHASE",
+    FirebaseAndroidCustom = "FIREBASE_ANDROID_CUSTOM",
+    FirebaseIosFirstOpen = "FIREBASE_IOS_FIRST_OPEN",
+    FirebaseIosInAppPurchase = "FIREBASE_IOS_IN_APP_PURCHASE",
+    FirebaseIosCustom = "FIREBASE_IOS_CUSTOM",
+    ThirdPartyAppAnalyticsAndroidFirstOpen = "THIRD_PARTY_APP_ANALYTICS_ANDROID_FIRST_OPEN",
+    ThirdPartyAppAnalyticsAndroidInAppPurchase = "THIRD_PARTY_APP_ANALYTICS_ANDROID_IN_APP_PURCHASE",
+    ThirdPartyAppAnalyticsAndroidCustom = "THIRD_PARTY_APP_ANALYTICS_ANDROID_CUSTOM",
+    ThirdPartyAppAnalyticsIosFirstOpen = "THIRD_PARTY_APP_ANALYTICS_IOS_FIRST_OPEN",
+    ThirdPartyAppAnalyticsIosInAppPurchase = "THIRD_PARTY_APP_ANALYTICS_IOS_IN_APP_PURCHASE",
+    ThirdPartyAppAnalyticsIosCustom = "THIRD_PARTY_APP_ANALYTICS_IOS_CUSTOM",
+    AndroidAppPreRegistration = "ANDROID_APP_PRE_REGISTRATION",
+    AndroidInstallsAllOtherApps = "ANDROID_INSTALLS_ALL_OTHER_APPS",
+    FloodlightAction = "FLOODLIGHT_ACTION",
+    FloodlightTransaction = "FLOODLIGHT_TRANSACTION",
+    GoogleHosted = "GOOGLE_HOSTED",
+    LeadFormSubmit = "LEAD_FORM_SUBMIT",
+    Salesforce = "SALESFORCE",
+    SearchAds360 = "SEARCH_ADS_360",
+    SmartCampaignAdClicksToCall = "SMART_CAMPAIGN_AD_CLICKS_TO_CALL",
+    SmartCampaignMapClicksToCall = "SMART_CAMPAIGN_MAP_CLICKS_TO_CALL",
+    SmartCampaignMapDirections = "SMART_CAMPAIGN_MAP_DIRECTIONS",
+    SmartCampaignTrackedCalls = "SMART_CAMPAIGN_TRACKED_CALLS",
+    StoreVisits = "STORE_VISITS"
+}
+/**
+ * A conversion action.
+ */
+export declare class GoogleAdsSearchads360V0ResourcesConversionAction extends SpeakeasyBase {
+    /**
+     * App ID for an app conversion action.
+     */
+    appId?: string;
+    /**
+     * Settings related to this conversion action's attribution model.
+     */
+    attributionModelSettings?: GoogleAdsSearchads360V0ResourcesConversionActionAttributionModelSettings;
+    /**
+     * The category of conversions reported for this conversion action.
+     */
+    category?: GoogleAdsSearchads360V0ResourcesConversionActionCategoryEnum;
+    /**
+     * The maximum number of days that may elapse between an interaction (for example, a click) and a conversion event.
+     */
+    clickThroughLookbackWindowDays?: string;
+    /**
+     * Output only. Timestamp of the Floodlight activity's creation, formatted in ISO 8601.
+     */
+    creationTime?: string;
+    /**
+     * Settings related to a Floodlight conversion action.
+     */
+    floodlightSettings?: GoogleAdsSearchads360V0ResourcesConversionActionFloodlightSettings;
+    /**
+     * Output only. The ID of the conversion action.
+     */
+    id?: string;
+    /**
+     * Whether this conversion action should be included in the "client_account_conversions" metric.
+     */
+    includeInClientAccountConversionsMetric?: boolean;
+    /**
+     * Output only. Whether this conversion action should be included in the "conversions" metric.
+     */
+    includeInConversionsMetric?: boolean;
+    /**
+     * The name of the conversion action. This field is required and should not be empty when creating new conversion actions.
+     */
+    name?: string;
+    /**
+     * Output only. The resource name of the conversion action owner customer, or null if this is a system-defined conversion action.
+     */
+    ownerCustomer?: string;
+    /**
+     * If a conversion action's primary_for_goal bit is false, the conversion action is non-biddable for all campaigns regardless of their customer conversion goal or campaign conversion goal. However, custom conversion goals do not respect primary_for_goal, so if a campaign has a custom conversion goal configured with a primary_for_goal = false conversion action, that conversion action is still biddable. By default, primary_for_goal will be true if not set. In V9, primary_for_goal can only be set to false after creation through an 'update' operation because it's not declared as optional.
+     */
+    primaryForGoal?: boolean;
+    /**
+     * Immutable. The resource name of the conversion action. Conversion action resource names have the form: `customers/{customer_id}/conversionActions/{conversion_action_id}`
+     */
+    resourceName?: string;
+    /**
+     * The status of this conversion action for conversion event accrual.
+     */
+    status?: GoogleAdsSearchads360V0ResourcesConversionActionStatusEnum;
+    /**
+     * Immutable. The type of this conversion action.
+     */
+    type?: GoogleAdsSearchads360V0ResourcesConversionActionTypeEnum;
+    /**
+     * Settings related to the value for conversion events associated with this conversion action.
+     */
+    valueSettings?: GoogleAdsSearchads360V0ResourcesConversionActionValueSettings;
+}

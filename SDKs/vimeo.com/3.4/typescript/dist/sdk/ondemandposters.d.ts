@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class OnDemandPosters {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,19 +9,19 @@ export declare class OnDemandPosters {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * addVodPoster - Add a poster to an On Demand page
-    **/
-    addVodPoster(req: operations.AddVodPosterRequest, config?: AxiosRequestConfig): Promise<operations.AddVodPosterResponse>;
+     * Add a poster to an On Demand page
+     */
+    addVodPoster(req: operations.AddVodPosterRequest, security: operations.AddVodPosterSecurity, config?: AxiosRequestConfig): Promise<operations.AddVodPosterResponse>;
     /**
-     * editVodPoster - Edit a poster of an On Demand page
-    **/
-    editVodPoster(req: operations.EditVodPosterRequest, config?: AxiosRequestConfig): Promise<operations.EditVodPosterResponse>;
+     * Edit a poster of an On Demand page
+     */
+    editVodPoster(req: operations.EditVodPosterRequest, security: operations.EditVodPosterSecurity, config?: AxiosRequestConfig): Promise<operations.EditVodPosterResponse>;
     /**
-     * getVodPoster - Get a specific poster of an On Demand page
-    **/
+     * Get a specific poster of an On Demand page
+     */
     getVodPoster(req: operations.GetVodPosterRequest, config?: AxiosRequestConfig): Promise<operations.GetVodPosterResponse>;
     /**
-     * getVodPosters - Get all the posters of an On Demand page
-    **/
+     * Get all the posters of an On Demand page
+     */
     getVodPosters(req: operations.GetVodPostersRequest, config?: AxiosRequestConfig): Promise<operations.GetVodPostersResponse>;
 }

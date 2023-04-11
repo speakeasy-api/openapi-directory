@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteRolePolicyActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteRolePolicyActionEnum {
     DeleteRolePolicy = "DeleteRolePolicy"
 }
-export declare enum GetDeleteRolePolicyVersionEnum {
+export declare enum GETDeleteRolePolicyVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class GetDeleteRolePolicyQueryParams extends SpeakeasyBase {
-    action: GetDeleteRolePolicyActionEnum;
+export declare class GETDeleteRolePolicyRequest extends SpeakeasyBase {
+    action: GETDeleteRolePolicyActionEnum;
+    /**
+     * <p>The name of the inline policy to delete from the specified IAM role.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
+     */
     policyName: string;
+    /**
+     * <p>The name (friendly name, not ARN) identifying the role that the policy is embedded in.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
+     */
     roleName: string;
-    version: GetDeleteRolePolicyVersionEnum;
-}
-export declare class GetDeleteRolePolicyHeaders extends SpeakeasyBase {
+    version: GETDeleteRolePolicyVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetDeleteRolePolicyHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteRolePolicyRequest extends SpeakeasyBase {
-    queryParams: GetDeleteRolePolicyQueryParams;
-    headers: GetDeleteRolePolicyHeaders;
-}
-export declare class GetDeleteRolePolicyResponse extends SpeakeasyBase {
+export declare class GETDeleteRolePolicyResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

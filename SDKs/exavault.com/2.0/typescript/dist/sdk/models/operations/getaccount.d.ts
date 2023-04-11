@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetAccountQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetAccountRequest extends SpeakeasyBase {
+    /**
+     * Access Token for the request
+     */
+    evAccessToken: string;
+    /**
+     * API Key required for the request
+     */
+    evApiKey: string;
+    /**
+     * Related records to include in the response. Valid option is **masterUser**
+     */
     include?: string;
 }
-export declare class GetAccountHeaders extends SpeakeasyBase {
-    evAccessToken: string;
-    evApiKey: string;
-}
-export declare class GetAccountRequest extends SpeakeasyBase {
-    queryParams: GetAccountQueryParams;
-    headers: GetAccountHeaders;
-}
 export declare class GetAccountResponse extends SpeakeasyBase {
+    /**
+     * Successful operation
+     */
     accountResponse?: shared.AccountResponse;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

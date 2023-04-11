@@ -3,7 +3,7 @@ import { ConfigurationDeploymentStatusEnum } from "./configurationdeploymentstat
 import { ConfigurationOptionSetting } from "./configurationoptionsetting";
 /**
  * Describes the settings for a configuration set.
-**/
+ */
 export declare class ConfigurationSettingsDescription extends SpeakeasyBase {
     applicationName?: string;
     dateCreated?: Date;

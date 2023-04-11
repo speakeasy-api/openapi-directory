@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum SubscribeToEventXAmzTargetEnum {
     InspectorServiceSubscribeToEvent = "InspectorService.SubscribeToEvent"
 }
-export declare class SubscribeToEventHeaders extends SpeakeasyBase {
+export declare class SubscribeToEventRequest extends SpeakeasyBase {
+    subscribeToEventRequest: shared.SubscribeToEventRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class SubscribeToEventHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: SubscribeToEventXAmzTargetEnum;
 }
-export declare class SubscribeToEventRequest extends SpeakeasyBase {
-    headers: SubscribeToEventHeaders;
-    request: shared.SubscribeToEventRequest;
-}
 export declare class SubscribeToEventResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InternalException
+     */
     internalException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * NoSuchEntityException
+     */
     noSuchEntityException?: any;
+    /**
+     * ServiceTemporarilyUnavailableException
+     */
     serviceTemporarilyUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

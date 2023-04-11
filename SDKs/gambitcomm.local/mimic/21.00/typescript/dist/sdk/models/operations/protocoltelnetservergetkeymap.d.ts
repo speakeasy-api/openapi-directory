@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolTelnetServerGetKeymapPathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolTelnetServerGetKeymapRequest extends SpeakeasyBase {
-    pathParams: ProtocolTelnetServerGetKeymapPathParams;
+    /**
+     * Agent to show TELNET statistics
+     */
+    agentNum: number;
 }
 export declare class ProtocolTelnetServerGetKeymapResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolTelnetServerGetKeymap200ApplicationJSONStrings?: string[];
 }

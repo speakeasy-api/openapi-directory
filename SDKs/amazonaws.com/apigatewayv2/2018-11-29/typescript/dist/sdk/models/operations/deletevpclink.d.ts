@@ -1,8 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteVpcLinkPathParams extends SpeakeasyBase {
-    vpcLinkId: string;
-}
-export declare class DeleteVpcLinkHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteVpcLinkRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -10,15 +8,25 @@ export declare class DeleteVpcLinkHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DeleteVpcLinkRequest extends SpeakeasyBase {
-    pathParams: DeleteVpcLinkPathParams;
-    headers: DeleteVpcLinkHeaders;
+    /**
+     * The ID of the VPC link.
+     */
+    vpcLinkId: string;
 }
 export declare class DeleteVpcLinkResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deleteVpcLinkResponse?: Record<string, any>;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

@@ -1,150 +1,158 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DataprocProjectsLocationsBatchesCreateRequest, DataprocProjectsLocationsBatchesCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  DataprocProjectsLocationsBatchesCreateRequest,
+  DataprocProjectsLocationsBatchesCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: DataprocProjectsLocationsBatchesCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    batchId: "consequuntur",
-    callback: "dolor",
-    fields: "expedita",
-    key: "voluptas",
-    oauthToken: "fugit",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    requestId: "rerum",
-    uploadType: "dicta",
-    uploadProtocol: "debitis",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  batchInput: {
     environmentConfig: {
       executionConfig: {
-        idleTtl: "voluptatum",
-        kmsKey: "et",
+        idleTtl: "provident",
+        kmsKey: "distinctio",
         networkTags: [
-          "dolorem",
-          "et",
-          "voluptate",
+          "unde",
+          "nulla",
+          "corrupti",
+          "illum",
         ],
-        networkUri: "iste",
-        serviceAccount: "vitae",
-        subnetworkUri: "totam",
+        networkUri: "vel",
+        serviceAccount: "error",
+        stagingBucket: "deserunt",
+        subnetworkUri: "suscipit",
+        ttl: "iure",
       },
       peripheralsConfig: {
-        metastoreService: "dolores",
+        metastoreService: "magnam",
         sparkHistoryServerConfig: {
-          dataprocCluster: "illum",
+          dataprocCluster: "debitis",
         },
       },
     },
     labels: {
-      "vel": "odio",
+      "delectus": "tempora",
     },
     pysparkBatch: {
       archiveUris: [
-        "id",
-        "aspernatur",
+        "molestiae",
+        "minus",
       ],
       args: [
-        "totam",
-        "commodi",
-        "quis",
+        "voluptatum",
+        "iusto",
+        "excepturi",
+        "nisi",
       ],
       fileUris: [
-        "aut",
-        "odit",
+        "temporibus",
+        "ab",
+        "quis",
+        "veritatis",
       ],
       jarFileUris: [
-        "voluptas",
-        "omnis",
-        "aut",
+        "perferendis",
+        "ipsam",
+        "repellendus",
       ],
-      mainPythonFileUri: "illo",
+      mainPythonFileUri: "sapiente",
       pythonFileUris: [
-        "officiis",
-        "autem",
-        "consectetur",
+        "odit",
+        "at",
+        "at",
+        "maiores",
       ],
     },
     runtimeConfig: {
-      containerImage: "nobis",
+      containerImage: "molestiae",
       properties: {
-        "qui": "recusandae",
+        "quod": "esse",
+        "totam": "porro",
+        "dolorum": "dicta",
+        "nam": "officia",
       },
-      version: "at",
+      version: "occaecati",
     },
     runtimeInfo: {
       approximateUsage: {
-        milliDcuSeconds: "ipsum",
-        shuffleStorageGbSeconds: "eveniet",
+        milliDcuSeconds: "fugit",
+        shuffleStorageGbSeconds: "deleniti",
+      },
+      currentUsage: {
+        milliDcu: "hic",
+        shuffleStorageGb: "optio",
+        snapshotTime: "totam",
       },
     },
     sparkBatch: {
       archiveUris: [
-        "sint",
-        "inventore",
+        "commodi",
       ],
       args: [
-        "exercitationem",
-        "aut",
-        "reprehenderit",
+        "modi",
+        "qui",
       ],
       fileUris: [
-        "maiores",
-        "incidunt",
-        "dolor",
+        "cum",
+        "esse",
+        "ipsum",
+        "excepturi",
       ],
       jarFileUris: [
-        "veritatis",
-        "in",
-        "et",
+        "perferendis",
       ],
-      mainClass: "omnis",
-      mainJarFileUri: "ipsum",
+      mainClass: "ad",
+      mainJarFileUri: "natus",
     },
     sparkRBatch: {
       archiveUris: [
-        "dolores",
+        "iste",
       ],
       args: [
-        "vel",
+        "natus",
       ],
       fileUris: [
-        "mollitia",
-        "voluptas",
-        "quam",
+        "hic",
+        "saepe",
       ],
-      mainRFileUri: "reprehenderit",
+      mainRFileUri: "fuga",
     },
     sparkSqlBatch: {
       jarFileUris: [
-        "qui",
+        "corporis",
+        "iste",
       ],
-      queryFileUri: "unde",
+      queryFileUri: "iure",
       queryVariables: {
-        "autem": "qui",
-        "ut": "itaque",
+        "quidem": "architecto",
+        "ipsa": "reiciendis",
+        "est": "mollitia",
+        "laborum": "dolores",
       },
     },
   },
+  accessToken: "dolorem",
+  alt: AltEnum.Media,
+  batchId: "explicabo",
+  callback: "nobis",
+  fields: "enim",
+  key: "omnis",
+  oauthToken: "nemo",
+  parent: "minima",
+  prettyPrint: false,
+  quotaUser: "excepturi",
+  requestId: "accusantium",
+  uploadType: "iure",
+  uploadProtocol: "culpa",
 };
 
 sdk.projects.dataprocProjectsLocationsBatchesCreate(req).then((res: DataprocProjectsLocationsBatchesCreateResponse | AxiosError) => {

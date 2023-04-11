@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreateCliTokenPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class CreateCliTokenRequest extends SpeakeasyBase {
+    /**
+     * The name of the Amazon MWAA environment. For example, <code>MyMWAAEnvironment</code>.
+     */
     name: string;
-}
-export declare class CreateCliTokenHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,13 +14,16 @@ export declare class CreateCliTokenHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class CreateCliTokenRequest extends SpeakeasyBase {
-    pathParams: CreateCliTokenPathParams;
-    headers: CreateCliTokenHeaders;
-}
 export declare class CreateCliTokenResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     createCliTokenResponse?: shared.CreateCliTokenResponse;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

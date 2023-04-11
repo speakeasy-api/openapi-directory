@@ -1,0 +1,16 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class DeleteQueueRequest extends SpeakeasyBase {
+    confirm?: boolean;
+    queueName: string;
+}
+export declare class DeleteQueueResponse extends SpeakeasyBase {
+    /**
+     * successful operation
+     */
+    apiResponse?: shared.ApiResponse;
+    contentType: string;
+    statusCode: number;
+    rawResponse?: AxiosResponse;
+}

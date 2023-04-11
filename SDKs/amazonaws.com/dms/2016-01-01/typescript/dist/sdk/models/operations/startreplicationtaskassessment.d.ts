@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum StartReplicationTaskAssessmentXAmzTargetEnum {
-    AmazonDmSv20160101StartReplicationTaskAssessment = "AmazonDMSv20160101.StartReplicationTaskAssessment"
+    AmazonDMSv20160101StartReplicationTaskAssessment = "AmazonDMSv20160101.StartReplicationTaskAssessment"
 }
-export declare class StartReplicationTaskAssessmentHeaders extends SpeakeasyBase {
+export declare class StartReplicationTaskAssessmentRequest extends SpeakeasyBase {
+    startReplicationTaskAssessmentMessage: shared.StartReplicationTaskAssessmentMessage;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class StartReplicationTaskAssessmentHeaders extends SpeakeasyBase
     xAmzSignedHeaders?: string;
     xAmzTarget: StartReplicationTaskAssessmentXAmzTargetEnum;
 }
-export declare class StartReplicationTaskAssessmentRequest extends SpeakeasyBase {
-    headers: StartReplicationTaskAssessmentHeaders;
-    request: shared.StartReplicationTaskAssessmentMessage;
-}
 export declare class StartReplicationTaskAssessmentResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidResourceStateFault
+     */
     invalidResourceStateFault?: any;
+    /**
+     * ResourceNotFoundFault
+     */
     resourceNotFoundFault?: any;
+    /**
+     * Success
+     */
     startReplicationTaskAssessmentResponse?: shared.StartReplicationTaskAssessmentResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

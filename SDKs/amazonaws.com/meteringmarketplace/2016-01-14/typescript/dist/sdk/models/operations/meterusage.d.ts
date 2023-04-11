@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum MeterUsageXAmzTargetEnum {
-    AwsmpMeteringServiceMeterUsage = "AWSMPMeteringService.MeterUsage"
+    AWSMPMeteringServiceMeterUsage = "AWSMPMeteringService.MeterUsage"
 }
-export declare class MeterUsageHeaders extends SpeakeasyBase {
+export declare class MeterUsageRequest extends SpeakeasyBase {
+    meterUsageRequest: shared.MeterUsageRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,22 +15,52 @@ export declare class MeterUsageHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: MeterUsageXAmzTargetEnum;
 }
-export declare class MeterUsageRequest extends SpeakeasyBase {
-    headers: MeterUsageHeaders;
-    request: shared.MeterUsageRequest;
-}
 export declare class MeterUsageResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * CustomerNotEntitledException
+     */
     customerNotEntitledException?: any;
+    /**
+     * DuplicateRequestException
+     */
     duplicateRequestException?: any;
+    /**
+     * InternalServiceErrorException
+     */
     internalServiceErrorException?: any;
+    /**
+     * InvalidEndpointRegionException
+     */
     invalidEndpointRegionException?: any;
+    /**
+     * InvalidProductCodeException
+     */
     invalidProductCodeException?: any;
+    /**
+     * InvalidTagException
+     */
     invalidTagException?: any;
+    /**
+     * InvalidUsageAllocationsException
+     */
     invalidUsageAllocationsException?: any;
+    /**
+     * InvalidUsageDimensionException
+     */
     invalidUsageDimensionException?: any;
+    /**
+     * Success
+     */
     meterUsageResult?: shared.MeterUsageResult;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * TimestampOutOfBoundsException
+     */
     timestampOutOfBoundsException?: any;
 }

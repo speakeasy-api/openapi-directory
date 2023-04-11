@@ -1,0 +1,31 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { AutoDeployment } from "./autodeployment";
+import { CallAsEnum } from "./callasenum";
+import { CapabilityEnum } from "./capabilityenum";
+import { DeploymentTargets } from "./deploymenttargets";
+import { ManagedExecution } from "./managedexecution";
+import { Parameter } from "./parameter";
+import { PermissionModelsEnum } from "./permissionmodelsenum";
+import { StackSetOperationPreferences } from "./stacksetoperationpreferences";
+import { Tag } from "./tag";
+export declare class UpdateStackSetInput extends SpeakeasyBase {
+    accounts?: string[];
+    administrationRoleARN?: string;
+    autoDeployment?: AutoDeployment;
+    callAs?: CallAsEnum;
+    capabilities?: CapabilityEnum[];
+    deploymentTargets?: DeploymentTargets;
+    description?: string;
+    executionRoleName?: string;
+    managedExecution?: ManagedExecution;
+    operationId?: string;
+    operationPreferences?: StackSetOperationPreferences;
+    parameters?: Parameter[];
+    permissionModel?: PermissionModelsEnum;
+    regions?: string[];
+    stackSetName: string;
+    tags?: Tag[];
+    templateBody?: string;
+    templateURL?: string;
+    usePreviousTemplate?: boolean;
+}

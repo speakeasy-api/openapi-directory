@@ -3,7 +3,7 @@ import { OrderExportationReportingProcessingStatusEnum } from "./orderexportatio
 import { SourceTypeEnum } from "./sourcetypeenum";
 /**
  * Represent the reporting of the Order report exportations
-**/
+ */
 export declare class OrderExportationReporting extends SpeakeasyBase {
     abortionUtcDate?: Date;
     beginUtcDate?: Date;
@@ -15,13 +15,22 @@ export declare class OrderExportationReporting extends SpeakeasyBase {
     expirationUtcDate?: Date;
     failureUtcDate?: Date;
     ipAddress: string;
+    /**
+     * Raw representation of the JSON
+     */
     jsonCriteria?: string;
     lastUpdateUtcDate?: Date;
     orderCount?: number;
     processingStatus: OrderExportationReportingProcessingStatusEnum;
     remainingOrderCount?: number;
     resumedUtcDate?: Date;
+    /**
+     * Indicates the origin of the operation
+     */
     sourceType: SourceTypeEnum;
+    /**
+     * The user identifier
+     */
     sourceUserId?: string;
     sourceUserName: string;
     suspendedUtcDate?: Date;

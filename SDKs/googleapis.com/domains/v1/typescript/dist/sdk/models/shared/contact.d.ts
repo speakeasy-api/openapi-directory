@@ -2,10 +2,22 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { PostalAddress } from "./postaladdress";
 /**
  * Details required for a contact associated with a `Registration`.
-**/
+ */
 export declare class Contact extends SpeakeasyBase {
+    /**
+     * Required. Email address of the contact.
+     */
     email?: string;
+    /**
+     * Fax number of the contact in international format. For example, `"+1-800-555-0123"`.
+     */
     faxNumber?: string;
+    /**
+     * Required. Phone number of the contact in international format. For example, `"+1-800-555-0123"`.
+     */
     phoneNumber?: string;
+    /**
+     * Represents a postal address, e.g. for postal delivery or payments addresses. Given a postal address, a postal service can deliver items to a premise, P.O. Box or similar. It is not intended to model geographical locations (roads, towns, mountains). In typical usage an address would be created via user input or from importing existing data, depending on the type of process. Advice on address input / editing: - Use an internationalization-ready address widget such as https://github.com/google/libaddressinput) - Users should not be presented with UI elements for input or editing of fields outside countries where that field is used. For more guidance on how to use this schema, please see: https://support.google.com/business/answer/6397478
+     */
     postalAddress?: PostalAddress;
 }

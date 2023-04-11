@@ -1,5 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+export declare class CreateTransactionSecurity extends SpeakeasyBase {
+    password: string;
+    username: string;
+}
+/**
+ * AUTO Transaction for internal use only
+ */
 export declare enum CreateTransactionRequestBodySourceEnum {
     Shop = "SHOP"
 }
@@ -9,25 +17,31 @@ export declare enum CreateTransactionRequestBodyStatusEnum {
     Pending = "PENDING"
 }
 export declare class CreateTransactionRequestBody extends SpeakeasyBase {
+    /**
+     * Always 'true' for Transactions
+     */
     active: boolean;
     dateClosed?: Date;
     dateCreated?: Date;
     licenseeNumber?: string;
+    /**
+     * Unique number (across all Products of a Vendor) that identifies the Transaction
+     */
     number?: string;
     paymentMethod?: string;
+    /**
+     * AUTO Transaction for internal use only
+     */
     source: CreateTransactionRequestBodySourceEnum;
     status: CreateTransactionRequestBodyStatusEnum;
-}
-export declare class CreateTransactionSecurity extends SpeakeasyBase {
-    basicAuth: shared.SchemeBasicAuth;
-}
-export declare class CreateTransactionRequest extends SpeakeasyBase {
-    request?: CreateTransactionRequestBody;
-    security: CreateTransactionSecurity;
 }
 export declare class CreateTransactionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    netlicensing?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful request
+     */
+    netlicensing?: shared.Netlicensing;
 }

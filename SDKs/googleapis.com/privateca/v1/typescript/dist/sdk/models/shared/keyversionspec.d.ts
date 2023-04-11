@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The algorithm to use for creating a managed Cloud KMS key for a for a simplified experience. All managed keys will be have their ProtectionLevel as `HSM`.
+ */
 export declare enum KeyVersionSpecAlgorithmEnum {
     SignHashAlgorithmUnspecified = "SIGN_HASH_ALGORITHM_UNSPECIFIED",
     RsaPss2048Sha256 = "RSA_PSS_2048_SHA256",
@@ -12,8 +15,14 @@ export declare enum KeyVersionSpecAlgorithmEnum {
 }
 /**
  * A Cloud KMS key configuration that a CertificateAuthority will use.
-**/
+ */
 export declare class KeyVersionSpec extends SpeakeasyBase {
+    /**
+     * The algorithm to use for creating a managed Cloud KMS key for a for a simplified experience. All managed keys will be have their ProtectionLevel as `HSM`.
+     */
     algorithm?: KeyVersionSpecAlgorithmEnum;
+    /**
+     * The resource name for an existing Cloud KMS CryptoKeyVersion in the format `projects/* /locations/* /keyRings/* /cryptoKeys/* /cryptoKeyVersions/*`. This option enables full flexibility in the key's capabilities and properties.
+     */
     cloudKmsKeyVersion?: string;
 }

@@ -1,15 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { RepeatViewModel } from "./repeatviewmodel";
+/**
+ * Success
+ */
 export declare class ResourceBlockViewModel extends SpeakeasyBase {
     businessId?: number;
-    endDate?: Date;
+    deletedStatus?: boolean;
+    deletedTime?: string;
+    endDate?: string;
     endTime?: number;
     id?: number;
-    objectName?: string;
+    object?: string;
     reason?: string;
     repeat?: RepeatViewModel;
     repeats?: boolean;
     resourceId?: number;
-    startDate?: Date;
+    startDate?: string;
     startTime?: number;
 }

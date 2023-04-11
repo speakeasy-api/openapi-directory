@@ -1,10 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class SearchDevicesQueryParams extends SpeakeasyBase {
-    maxResults?: string;
+import { AxiosResponse } from "axios";
+export declare class SearchDevicesRequestBody extends SpeakeasyBase {
+    /**
+     * The filter values to use to search for a device.
+     */
+    filters: shared.SearchDevicesFilter[];
+    /**
+     * The maximum number of results to return in the response.
+     */
+    maxResults?: number;
+    /**
+     * A token used for pagination of results returned in the response. Use the token returned from the previous request continue results where the previous request ended.
+     */
     nextToken?: string;
 }
-export declare class SearchDevicesHeaders extends SpeakeasyBase {
+export declare class SearchDevicesRequest extends SpeakeasyBase {
+    requestBody: SearchDevicesRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,23 +24,37 @@ export declare class SearchDevicesHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class SearchDevicesRequestBody extends SpeakeasyBase {
-    filters: shared.SearchDevicesFilter[];
-    maxResults?: number;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
 }
-export declare class SearchDevicesRequest extends SpeakeasyBase {
-    queryParams: SearchDevicesQueryParams;
-    headers: SearchDevicesHeaders;
-    request: SearchDevicesRequestBody;
-}
 export declare class SearchDevicesResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * Success
+     */
     searchDevicesResponse?: shared.SearchDevicesResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

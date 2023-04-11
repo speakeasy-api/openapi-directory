@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetSurveyPathParams extends SpeakeasyBase {
-    surveyId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetSurveyRequest extends SpeakeasyBase {
-    pathParams: GetSurveyPathParams;
+    /**
+     * ID of survey (eg. SV_123)
+     */
+    surveyId: string;
 }
 export declare class GetSurveyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Survey data
+     */
     surveyResponse?: Record<string, any>;
 }

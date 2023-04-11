@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetBatchPredictionXAmzTargetEnum {
-    AmazonMl20141212GetBatchPrediction = "AmazonML_20141212.GetBatchPrediction"
+    AmazonML20141212GetBatchPrediction = "AmazonML_20141212.GetBatchPrediction"
 }
-export declare class GetBatchPredictionHeaders extends SpeakeasyBase {
+export declare class GetBatchPredictionRequest extends SpeakeasyBase {
+    getBatchPredictionInput: shared.GetBatchPredictionInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class GetBatchPredictionHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetBatchPredictionXAmzTargetEnum;
 }
-export declare class GetBatchPredictionRequest extends SpeakeasyBase {
-    headers: GetBatchPredictionHeaders;
-    request: shared.GetBatchPredictionInput;
-}
 export declare class GetBatchPredictionResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getBatchPredictionOutput?: shared.GetBatchPredictionOutput;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
 }

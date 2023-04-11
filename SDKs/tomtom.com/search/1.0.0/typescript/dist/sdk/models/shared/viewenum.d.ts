@@ -1,3 +1,6 @@
+/**
+ * Geopolitical View.
+ */
 export declare enum ViewEnum {
     Unified = "Unified",
     In = "IN",

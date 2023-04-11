@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeBatchInferenceJobXAmzTargetEnum {
     AmazonPersonalizeDescribeBatchInferenceJob = "AmazonPersonalize.DescribeBatchInferenceJob"
 }
-export declare class DescribeBatchInferenceJobHeaders extends SpeakeasyBase {
+export declare class DescribeBatchInferenceJobRequest extends SpeakeasyBase {
+    describeBatchInferenceJobRequest: shared.DescribeBatchInferenceJobRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class DescribeBatchInferenceJobHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeBatchInferenceJobXAmzTargetEnum;
 }
-export declare class DescribeBatchInferenceJobRequest extends SpeakeasyBase {
-    headers: DescribeBatchInferenceJobHeaders;
-    request: shared.DescribeBatchInferenceJobRequest;
-}
 export declare class DescribeBatchInferenceJobResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeBatchInferenceJobResponse?: shared.DescribeBatchInferenceJobResponse;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
 }

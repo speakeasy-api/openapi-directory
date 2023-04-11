@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteGeoMatchSetXAmzTargetEnum {
-    Awswaf20150824DeleteGeoMatchSet = "AWSWAF_20150824.DeleteGeoMatchSet"
+    AWSWAF20150824DeleteGeoMatchSet = "AWSWAF_20150824.DeleteGeoMatchSet"
 }
-export declare class DeleteGeoMatchSetHeaders extends SpeakeasyBase {
+export declare class DeleteGeoMatchSetRequest extends SpeakeasyBase {
+    deleteGeoMatchSetRequest: shared.DeleteGeoMatchSetRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class DeleteGeoMatchSetHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteGeoMatchSetXAmzTargetEnum;
 }
-export declare class DeleteGeoMatchSetRequest extends SpeakeasyBase {
-    headers: DeleteGeoMatchSetHeaders;
-    request: shared.DeleteGeoMatchSetRequest;
-}
 export declare class DeleteGeoMatchSetResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deleteGeoMatchSetResponse?: shared.DeleteGeoMatchSetResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFInvalidAccountException
+     */
     wafInvalidAccountException?: any;
+    /**
+     * WAFNonEmptyEntityException
+     */
     wafNonEmptyEntityException?: any;
+    /**
+     * WAFNonexistentItemException
+     */
     wafNonexistentItemException?: any;
+    /**
+     * WAFReferencedItemException
+     */
     wafReferencedItemException?: any;
+    /**
+     * WAFStaleDataException
+     */
     wafStaleDataException?: any;
 }

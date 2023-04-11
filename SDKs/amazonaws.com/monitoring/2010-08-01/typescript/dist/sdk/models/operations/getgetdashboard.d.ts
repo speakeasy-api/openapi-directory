@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetGetDashboardActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETGETDashboardActionEnum {
     GetDashboard = "GetDashboard"
 }
-export declare enum GetGetDashboardVersionEnum {
+export declare enum GETGETDashboardVersionEnum {
     TwoThousandAndTen0801 = "2010-08-01"
 }
-export declare class GetGetDashboardQueryParams extends SpeakeasyBase {
-    action: GetGetDashboardActionEnum;
+export declare class GETGETDashboardRequest extends SpeakeasyBase {
+    action: GETGETDashboardActionEnum;
+    /**
+     * The name of the dashboard to be described.
+     */
     dashboardName: string;
-    version: GetGetDashboardVersionEnum;
-}
-export declare class GetGetDashboardHeaders extends SpeakeasyBase {
+    version: GETGETDashboardVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetGetDashboardHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetGetDashboardRequest extends SpeakeasyBase {
-    queryParams: GetGetDashboardQueryParams;
-    headers: GetGetDashboardHeaders;
-}
-export declare class GetGetDashboardResponse extends SpeakeasyBase {
+export declare class GETGETDashboardResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

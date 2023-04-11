@@ -8,5 +8,7 @@ export declare enum DataReplicationStateEnum {
     Paused = "PAUSED",
     Rescan = "RESCAN",
     Stalled = "STALLED",
-    Disconnected = "DISCONNECTED"
+    Disconnected = "DISCONNECTED",
+    PendingSnapshotShipping = "PENDING_SNAPSHOT_SHIPPING",
+    ShippingSnapshot = "SHIPPING_SNAPSHOT"
 }

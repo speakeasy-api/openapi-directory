@@ -1,23 +1,14 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetRepositoriesWorkspaceRepoSlugPipelinesPipelineUuidStepsStepUuidLogsLogUuidRequest, GetRepositoriesWorkspaceRepoSlugPipelinesPipelineUuidStepsStepUuidLogsLogUuidResponse } from "openapi/src/sdk/models/operations";
+import {
+  DeleteAddonResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: GetRepositoriesWorkspaceRepoSlugPipelinesPipelineUuidStepsStepUuidLogsLogUuidRequest = {
-  pathParams: {
-    logUuid: "sit",
-    pipelineUuid: "voluptas",
-    repoSlug: "culpa",
-    stepUuid: "expedita",
-    workspace: "consequuntur",
-  },
-};
 
-sdk.getRepositoriesWorkspaceRepoSlugPipelinesPipelineUuidStepsStepUuidLogsLogUuid(req).then((res: GetRepositoriesWorkspaceRepoSlugPipelinesPipelineUuidStepsStepUuidLogsLogUuidResponse | AxiosError) => {
+sdk.addon.deleteAddon().then((res: DeleteAddonResponse | AxiosError) => {
    // handle response
 });
 ```

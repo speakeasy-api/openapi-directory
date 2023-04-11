@@ -1,14 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class CompanyMonitorChangeTypesListSecurity extends SpeakeasyBase {
-    userKey: shared.SchemeUserKey;
-}
-export declare class CompanyMonitorChangeTypesListRequest extends SpeakeasyBase {
-    security: CompanyMonitorChangeTypesListSecurity;
+import { AxiosResponse } from "axios";
+/**
+ * Detailed information about the error
+ */
+export declare class CompanyMonitorChangeTypesListDefaultApplicationJSON extends SpeakeasyBase {
+    code: number;
+    fault?: string;
+    message: string;
+    tag: string;
 }
 export declare class CompanyMonitorChangeTypesListResponse extends SpeakeasyBase {
+    /**
+     * List of ChangeTypes
+     */
     companyMonitorChangeTypesList200ApplicationJSONStrings?: string[];
-    companyMonitorChangeTypesListDefaultApplicationJSONAny?: any;
+    /**
+     * Detailed information about the error
+     */
+    companyMonitorChangeTypesListDefaultApplicationJSONObject?: CompanyMonitorChangeTypesListDefaultApplicationJSON;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

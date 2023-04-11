@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeLoggingStatusActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeLoggingStatusActionEnum {
     DescribeLoggingStatus = "DescribeLoggingStatus"
 }
-export declare enum PostDescribeLoggingStatusVersionEnum {
+export declare enum POSTDescribeLoggingStatusVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostDescribeLoggingStatusQueryParams extends SpeakeasyBase {
-    action: PostDescribeLoggingStatusActionEnum;
-    version: PostDescribeLoggingStatusVersionEnum;
-}
-export declare class PostDescribeLoggingStatusHeaders extends SpeakeasyBase {
+export declare class POSTDescribeLoggingStatusRequest extends SpeakeasyBase {
+    action: POSTDescribeLoggingStatusActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDescribeLoggingStatusVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDescribeLoggingStatusHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeLoggingStatusRequest extends SpeakeasyBase {
-    queryParams: PostDescribeLoggingStatusQueryParams;
-    headers: PostDescribeLoggingStatusHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeLoggingStatusResponse extends SpeakeasyBase {
+export declare class POSTDescribeLoggingStatusResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

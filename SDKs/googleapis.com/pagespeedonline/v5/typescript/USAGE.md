@@ -1,44 +1,44 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { PagespeedonlinePagespeedapiRunpagespeedRequest, PagespeedonlinePagespeedapiRunpagespeedResponse } from "openapi/src/sdk/models/operations";
+import {
+  PagespeedonlinePagespeedapiRunpagespeedRequest,
+  PagespeedonlinePagespeedapiRunpagespeedResponse,
+  PagespeedonlinePagespeedapiRunpagespeedCategoryEnum,
+  PagespeedonlinePagespeedapiRunpagespeedStrategyEnum,
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: PagespeedonlinePagespeedapiRunpagespeedRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "voluptas",
-    alt: "media",
-    callback: "expedita",
-    captchaToken: "consequuntur",
-    category: [
-      "ACCESSIBILITY",
-      "SEO",
-    ],
-    fields: "fugit",
-    key: "et",
-    locale: "nihil",
-    oauthToken: "rerum",
-    prettyPrint: false,
-    quotaUser: "debitis",
-    strategy: "STRATEGY_UNSPECIFIED",
-    uploadType: "et",
-    uploadProtocol: "ut",
-    url: "dolorem",
-    utmCampaign: "et",
-    utmSource: "voluptate",
-  },
+  dollarXgafv: XgafvEnum.Two,
+  accessToken: "provident",
+  alt: AltEnum.Proto,
+  callback: "quibusdam",
+  captchaToken: "unde",
+  category: [
+    PagespeedonlinePagespeedapiRunpagespeedCategoryEnum.Performance,
+    PagespeedonlinePagespeedapiRunpagespeedCategoryEnum.Seo,
+    PagespeedonlinePagespeedapiRunpagespeedCategoryEnum.BestPractices,
+    PagespeedonlinePagespeedapiRunpagespeedCategoryEnum.Performance,
+  ],
+  fields: "deserunt",
+  key: "suscipit",
+  locale: "iure",
+  oauthToken: "magnam",
+  prettyPrint: false,
+  quotaUser: "debitis",
+  strategy: PagespeedonlinePagespeedapiRunpagespeedStrategyEnum.StrategyUnspecified,
+  uploadType: "delectus",
+  uploadProtocol: "tempora",
+  url: "suscipit",
+  utmCampaign: "molestiae",
+  utmSource: "minus",
 };
 
 sdk.pagespeedapi.pagespeedonlinePagespeedapiRunpagespeed(req).then((res: PagespeedonlinePagespeedapiRunpagespeedResponse | AxiosError) => {

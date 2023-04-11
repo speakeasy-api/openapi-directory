@@ -1,0 +1,98 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Performance metrics. Values are only set for metrics requested explicitly in the request's search query.
+ */
+export declare class Metrics extends SpeakeasyBase {
+    /**
+     * Average order size - the average number of items in an order. **This metric cannot be segmented by product dimensions and customer_country_code.**
+     */
+    aos?: number;
+    /**
+     * Average order value in micros (1 millionth of a standard unit, 1 USD = 1000000 micros) - the average value (total price of items) of all placed orders. The currency of the returned value is stored in the currency_code segment. If this metric is selected, 'segments.currency_code' is automatically added to the SELECT clause in the search query (unless it is explicitly selected by the user) and the currency_code segment is populated in the response. **This metric cannot be segmented by product dimensions and customer_country_code.**
+     */
+    aovMicros?: number;
+    /**
+     * Number of clicks.
+     */
+    clicks?: string;
+    /**
+     * Number of conversions divided by the number of clicks, reported on the impression date. The metric is currently available only for the FREE_PRODUCT_LISTING program.
+     */
+    conversionRate?: number;
+    /**
+     * Value of conversions in micros (1 millionth of a standard unit, 1 USD = 1000000 micros) attributed to the product, reported on the conversion date. The metric is currently available only for the FREE_PRODUCT_LISTING program. The currency of the returned value is stored in the currency_code segment. If this metric is selected, 'segments.currency_code' is automatically added to the SELECT clause in the search query (unless it is explicitly selected by the user) and the currency_code segment is populated in the response.
+     */
+    conversionValueMicros?: string;
+    /**
+     * Number of conversions attributed to the product, reported on the conversion date. Depending on the attribution model, a conversion might be distributed across multiple clicks, where each click gets its own credit assigned. This metric is a sum of all such credits. The metric is currently available only for the FREE_PRODUCT_LISTING program.
+     */
+    conversions?: number;
+    /**
+     * Click-through rate - the number of clicks merchant's products receive (clicks) divided by the number of times the products are shown (impressions).
+     */
+    ctr?: number;
+    /**
+     * Average number of days between an order being placed and the order being fully shipped, reported on the last shipment date. **This metric cannot be segmented by product dimensions and customer_country_code.**
+     */
+    daysToShip?: number;
+    /**
+     * Number of times merchant's products are shown.
+     */
+    impressions?: string;
+    /**
+     * Average number of days between an item being ordered and the item being **This metric cannot be segmented by customer_country_code.**
+     */
+    itemDaysToShip?: number;
+    /**
+     * Percentage of shipped items in relation to all finalized items (shipped or rejected by the merchant; unshipped items are not taken into account), reported on the order date. Item fill rate is lowered by merchant rejections. **This metric cannot be segmented by customer_country_code.**
+     */
+    itemFillRate?: number;
+    /**
+     * Total price of ordered items in micros (1 millionth of a standard unit, 1 USD = 1000000 micros). Excludes shipping, taxes (US only), and customer cancellations that happened within 30 minutes of placing the order. The currency of the returned value is stored in the currency_code segment. If this metric is selected, 'segments.currency_code' is automatically added to the SELECT clause in the search query (unless it is explicitly selected by the user) and the currency_code segment is populated in the response. **This metric cannot be segmented by customer_country_code.**
+     */
+    orderedItemSalesMicros?: string;
+    /**
+     * Number of ordered items. Excludes customer cancellations that happened within 30 minutes of placing the order. **This metric cannot be segmented by customer_country_code.**
+     */
+    orderedItems?: string;
+    /**
+     * Number of placed orders. Excludes customer cancellations that happened within 30 minutes of placing the order. **This metric cannot be segmented by product dimensions and customer_country_code.**
+     */
+    orders?: string;
+    /**
+     * Number of ordered items canceled by the merchant, reported on the order date. **This metric cannot be segmented by customer_country_code.**
+     */
+    rejectedItems?: string;
+    /**
+     * Total price of returned items divided by the total price of shipped items, reported on the order date. If this metric is selected, 'segments.currency_code' is automatically added to the SELECT clause in the search query (unless it is explicitly selected by the user) and the currency_code segment is populated in the response. **This metric cannot be segmented by customer_country_code.**
+     */
+    returnRate?: number;
+    /**
+     * Number of ordered items sent back for return, reported on the date when the merchant accepted the return. **This metric cannot be segmented by customer_country_code.**
+     */
+    returnedItems?: string;
+    /**
+     * Total price of ordered items sent back for return in micros (1 millionth of a standard unit, 1 USD = 1000000 micros), reported on the date when the merchant accepted the return. The currency of the returned value is stored in the currency_code segment. If this metric is selected, 'segments.currency_code' is automatically added to the SELECT clause in the search query (unless it is explicitly selected by the user) and the currency_code segment is populated in the response. **This metric cannot be segmented by customer_country_code.**
+     */
+    returnsMicros?: string;
+    /**
+     * Total price of shipped items in micros (1 millionth of a standard unit, 1 USD = 1000000 micros), reported on the order date. Excludes shipping and taxes (US only). The currency of the returned value is stored in the currency_code segment. If this metric is selected, 'segments.currency_code' is automatically added to the SELECT clause in the search query (unless it is explicitly selected by the user) and the currency_code segment is populated in the response. **This metric cannot be segmented by customer_country_code.**
+     */
+    shippedItemSalesMicros?: string;
+    /**
+     * Number of shipped items, reported on the shipment date. **This metric cannot be segmented by customer_country_code.**
+     */
+    shippedItems?: string;
+    /**
+     * Number of fully shipped orders, reported on the last shipment date. **This metric cannot be segmented by product dimensions and customer_country_code.**
+     */
+    shippedOrders?: string;
+    /**
+     * Number of ordered items not shipped up until the end of the queried day. If a multi-day period is specified in the search query, the returned value is the average number of unshipped items over the days in the queried period. **This metric cannot be segmented by customer_country_code.**
+     */
+    unshippedItems?: number;
+    /**
+     * Number of orders not shipped or partially shipped up until the end of the queried day. If a multi-day period is specified in the search query, the returned value is the average number of unshipped orders over the days in the queried period. **This metric cannot be segmented by product dimensions and customer_country_code.**
+     */
+    unshippedOrders?: number;
+}

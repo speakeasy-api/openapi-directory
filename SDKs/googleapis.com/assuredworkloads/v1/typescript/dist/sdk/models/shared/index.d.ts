@@ -11,6 +11,7 @@ export * from "./googlecloudassuredworkloadsv1violationremediationinstructionsco
 export * from "./googlecloudassuredworkloadsv1violationremediationinstructionsgcloud";
 export * from "./googlecloudassuredworkloadsv1workload";
 export * from "./googlecloudassuredworkloadsv1workloadcompliancestatus";
+export * from "./googlecloudassuredworkloadsv1workloadekmprovisioningresponse";
 export * from "./googlecloudassuredworkloadsv1workloadkmssettings";
 export * from "./googlecloudassuredworkloadsv1workloadpartnerpermissions";
 export * from "./googlecloudassuredworkloadsv1workloadresourceinfo";
@@ -19,5 +20,4 @@ export * from "./googlecloudassuredworkloadsv1workloadsaaenrollmentresponse";
 export * from "./googlelongrunninglistoperationsresponse";
 export * from "./googlelongrunningoperation";
 export * from "./googlerpcstatus";
-export * from "./security";
 export * from "./xgafvenum";

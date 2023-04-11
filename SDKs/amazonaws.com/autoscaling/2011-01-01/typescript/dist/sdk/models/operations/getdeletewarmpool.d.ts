@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteWarmPoolActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteWarmPoolActionEnum {
     DeleteWarmPool = "DeleteWarmPool"
 }
-export declare enum GetDeleteWarmPoolVersionEnum {
+export declare enum GETDeleteWarmPoolVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class GetDeleteWarmPoolQueryParams extends SpeakeasyBase {
-    action: GetDeleteWarmPoolActionEnum;
+export declare class GETDeleteWarmPoolRequest extends SpeakeasyBase {
+    action: GETDeleteWarmPoolActionEnum;
+    /**
+     * The name of the Auto Scaling group.
+     */
     autoScalingGroupName: string;
+    /**
+     * Specifies that the warm pool is to be deleted along with all of its associated instances, without waiting for all instances to be terminated. This parameter also deletes any outstanding lifecycle actions associated with the warm pool instances.
+     */
     forceDelete?: boolean;
-    version: GetDeleteWarmPoolVersionEnum;
-}
-export declare class GetDeleteWarmPoolHeaders extends SpeakeasyBase {
+    version: GETDeleteWarmPoolVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetDeleteWarmPoolHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteWarmPoolRequest extends SpeakeasyBase {
-    queryParams: GetDeleteWarmPoolQueryParams;
-    headers: GetDeleteWarmPoolHeaders;
-}
-export declare class GetDeleteWarmPoolResponse extends SpeakeasyBase {
+export declare class GETDeleteWarmPoolResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

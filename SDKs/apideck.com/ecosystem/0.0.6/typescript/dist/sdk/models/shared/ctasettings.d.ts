@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CtaSettings extends SpeakeasyBase {
+export declare class CTASettings extends SpeakeasyBase {
     backgroundColor?: string;
     buttonBackgroundColor?: string;
     buttonColor?: string;

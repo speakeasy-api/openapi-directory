@@ -38,7 +38,6 @@ export * from "./querydriveactivityresponse";
 export * from "./rename";
 export * from "./restore";
 export * from "./restrictionchange";
-export * from "./security";
 export * from "./selection";
 export * from "./selectionlist";
 export * from "./settingschange";

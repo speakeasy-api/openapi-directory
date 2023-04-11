@@ -1,11 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListControlPanelsQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListControlPanelsRequest extends SpeakeasyBase {
+    /**
+     * The Amazon Resource Name (ARN) of a cluster.
+     */
     clusterArn?: string;
+    /**
+     * The number of objects that you want to return with this call.
+     */
     maxResults?: number;
+    /**
+     * The token that identifies which batch of results you want to see.
+     */
     nextToken?: string;
-}
-export declare class ListControlPanelsHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -14,17 +22,32 @@ export declare class ListControlPanelsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class ListControlPanelsRequest extends SpeakeasyBase {
-    queryParams: ListControlPanelsQueryParams;
-    headers: ListControlPanelsHeaders;
-}
 export declare class ListControlPanelsResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * Success
+     */
     listControlPanelsResponse?: shared.ListControlPanelsResponse;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

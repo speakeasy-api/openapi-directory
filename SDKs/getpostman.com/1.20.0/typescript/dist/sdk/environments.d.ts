@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Environments {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,18 +9,20 @@ export declare class Environments {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * allEnvironments - All Environments
+     * All Environments
      *
+     * @remarks
      * The `/environments` endpoint returns a list of all [environments](https://www.getpostman.com/docs/environments) that belong to you..
      *
      * The response contains an array of environments' information containing the `name`, `id`, `owner` and `uid` of each environment.
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
+     */
     allEnvironments(config?: AxiosRequestConfig): Promise<operations.AllEnvironmentsResponse>;
     /**
-     * createEnvironment - Create Environment
+     * Create Environment
      *
+     * @remarks
      * A sample body is added to the request that conforms to the following JSON schema:
      *
      * ```json
@@ -66,27 +68,30 @@ export declare class Environments {
      * You can also specify the context of a workspace to create an environment in directly by passing the `workspace` as a query param.
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
-    createEnvironment(req: operations.CreateEnvironmentRequest, config?: AxiosRequestConfig): Promise<operations.CreateEnvironmentResponse>;
+     */
+    createEnvironment(req: operations.CreateEnvironmentRequestBody, config?: AxiosRequestConfig): Promise<operations.CreateEnvironmentResponse>;
     /**
-     * deleteEnvironment - Delete Environment
+     * Delete Environment
      *
+     * @remarks
      * This endpoint allows you to delete a single environment based on an environment's unique `uid`.
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
+     */
     deleteEnvironment(req: operations.DeleteEnvironmentRequest, config?: AxiosRequestConfig): Promise<operations.DeleteEnvironmentResponse>;
     /**
-     * singleEnvironment - Single Environment
+     * Single Environment
      *
+     * @remarks
      * Access the contents of an environment that is accessible to you using its unique id (`uid`).
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
+     */
     singleEnvironment(req: operations.SingleEnvironmentRequest, config?: AxiosRequestConfig): Promise<operations.SingleEnvironmentResponse>;
     /**
-     * updateEnvironment - Update Environment
+     * Update Environment
      *
+     * @remarks
      * This endpoint replaces an existing environment.
      *
      * A sample body is added to the request that conforms to the following JSON schema:
@@ -145,6 +150,6 @@ export declare class Environments {
      * On successful updation of the environment, the API returns the environment name and `id`.
      *
      * > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-    **/
+     */
     updateEnvironment(req: operations.UpdateEnvironmentRequest, config?: AxiosRequestConfig): Promise<operations.UpdateEnvironmentResponse>;
 }

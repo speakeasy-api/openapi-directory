@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum PutOrganizationConformancePackXAmzTargetEnum {
     StarlingDoveServicePutOrganizationConformancePack = "StarlingDoveService.PutOrganizationConformancePack"
 }
-export declare class PutOrganizationConformancePackHeaders extends SpeakeasyBase {
+export declare class PutOrganizationConformancePackRequest extends SpeakeasyBase {
+    putOrganizationConformancePackRequest: shared.PutOrganizationConformancePackRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,20 +15,44 @@ export declare class PutOrganizationConformancePackHeaders extends SpeakeasyBase
     xAmzSignedHeaders?: string;
     xAmzTarget: PutOrganizationConformancePackXAmzTargetEnum;
 }
-export declare class PutOrganizationConformancePackRequest extends SpeakeasyBase {
-    headers: PutOrganizationConformancePackHeaders;
-    request: shared.PutOrganizationConformancePackRequest;
-}
 export declare class PutOrganizationConformancePackResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InsufficientPermissionsException
+     */
     insufficientPermissionsException?: any;
+    /**
+     * MaxNumberOfOrganizationConformancePacksExceededException
+     */
     maxNumberOfOrganizationConformancePacksExceededException?: any;
+    /**
+     * NoAvailableOrganizationException
+     */
     noAvailableOrganizationException?: any;
+    /**
+     * OrganizationAccessDeniedException
+     */
     organizationAccessDeniedException?: any;
+    /**
+     * OrganizationAllFeaturesNotEnabledException
+     */
     organizationAllFeaturesNotEnabledException?: any;
+    /**
+     * OrganizationConformancePackTemplateValidationException
+     */
     organizationConformancePackTemplateValidationException?: any;
+    /**
+     * Success
+     */
     putOrganizationConformancePackResponse?: shared.PutOrganizationConformancePackResponse;
-    resourceInUseException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceInUseException
+     */
+    resourceInUseException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

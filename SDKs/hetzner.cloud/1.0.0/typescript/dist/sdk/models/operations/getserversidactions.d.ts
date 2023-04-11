@@ -1,7 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetServersIdActionsPathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
+/**
+ * Can be used multiple times.
+ */
 export declare enum GetServersIdActionsSortParameterSortEnum {
     Id = "id",
     IdAsc = "id:asc",
@@ -22,62 +23,135 @@ export declare enum GetServersIdActionsSortParameterSortEnum {
     FinishedAsc = "finished:asc",
     FinishedDesc = "finished:desc"
 }
+/**
+ * Can be used multiple times, the response will contain only Actions with specified statuses
+ */
 export declare enum GetServersIdActionsStatusParameterStatusEnum {
     Running = "running",
     Success = "success",
     Error = "error"
 }
-export declare class GetServersIdActionsQueryParams extends SpeakeasyBase {
+export declare class GetServersIdActionsRequest extends SpeakeasyBase {
+    /**
+     * ID of the Resource
+     */
+    id: number;
+    /**
+     * Can be used multiple times.
+     */
     sort?: GetServersIdActionsSortParameterSortEnum;
+    /**
+     * Can be used multiple times, the response will contain only Actions with specified statuses
+     */
     status?: GetServersIdActionsStatusParameterStatusEnum;
 }
 /**
  * Error message for the Action if error occurred, otherwise null
-**/
+ */
 export declare class GetServersIdActionsActionsResponseActionError extends SpeakeasyBase {
+    /**
+     * Fixed machine readable code
+     */
     code: string;
+    /**
+     * Humanized error message
+     */
     message: string;
 }
 export declare class GetServersIdActionsActionsResponseActionResources extends SpeakeasyBase {
+    /**
+     * ID of the Resource
+     */
     id: number;
+    /**
+     * Type of resource referenced
+     */
     type: string;
 }
+/**
+ * Status of the Action
+ */
 export declare enum GetServersIdActionsActionsResponseActionStatusEnum {
     Success = "success",
     Running = "running",
     Error = "error"
 }
 export declare class GetServersIdActionsActionsResponseAction extends SpeakeasyBase {
+    /**
+     * Command executed in the Action
+     */
     command: string;
+    /**
+     * Error message for the Action if error occurred, otherwise null
+     */
     error: GetServersIdActionsActionsResponseActionError;
+    /**
+     * Point in time when the Action was finished (in ISO-8601 format). Only set if the Action is finished otherwise null.
+     */
     finished: string;
+    /**
+     * ID of the Resource
+     */
     id: number;
+    /**
+     * Progress of Action in percent
+     */
     progress: number;
+    /**
+     * Resources the Action relates to
+     */
     resources: GetServersIdActionsActionsResponseActionResources[];
+    /**
+     * Point in time when the Action was started (in ISO-8601 format)
+     */
     started: string;
+    /**
+     * Status of the Action
+     */
     status: GetServersIdActionsActionsResponseActionStatusEnum;
 }
 export declare class GetServersIdActionsActionsResponseMetaPagination extends SpeakeasyBase {
+    /**
+     * ID of the last page available. Can be null if the current page is the last one.
+     */
     lastPage: number;
+    /**
+     * ID of the next page. Can be null if the current page is the last one.
+     */
     nextPage: number;
+    /**
+     * Current page number
+     */
     page: number;
+    /**
+     * Maximum number of items shown per page in the response
+     */
     perPage: number;
+    /**
+     * ID of the previous page. Can be null if the current page is the first one.
+     */
     previousPage: number;
+    /**
+     * The total number of entries that exist in the database for this query. Nullable if unknown.
+     */
     totalEntries: number;
 }
 export declare class GetServersIdActionsActionsResponseMeta extends SpeakeasyBase {
     pagination: GetServersIdActionsActionsResponseMetaPagination;
 }
+/**
+ * The `actions` key contains a list of Actions
+ */
 export declare class GetServersIdActionsActionsResponse extends SpeakeasyBase {
     actions: GetServersIdActionsActionsResponseAction[];
     meta?: GetServersIdActionsActionsResponseMeta;
 }
-export declare class GetServersIdActionsRequest extends SpeakeasyBase {
-    pathParams: GetServersIdActionsPathParams;
-    queryParams: GetServersIdActionsQueryParams;
-}
 export declare class GetServersIdActionsResponse extends SpeakeasyBase {
+    /**
+     * The `actions` key contains a list of Actions
+     */
     actionsResponse?: GetServersIdActionsActionsResponse;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

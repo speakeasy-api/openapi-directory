@@ -1,16 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+/**
+ * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+ */
 export declare enum MembershipsHistoricalFormatEnum {
     Xml = "xml",
     Json = "json"
 }
-export declare class MembershipsHistoricalPathParams extends SpeakeasyBase {
-    format: MembershipsHistoricalFormatEnum;
-}
 export declare class MembershipsHistoricalRequest extends SpeakeasyBase {
-    pathParams: MembershipsHistoricalPathParams;
+    /**
+     * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+     */
+    format: MembershipsHistoricalFormatEnum;
 }
 export declare class MembershipsHistoricalResponse extends SpeakeasyBase {
     contentType: string;
-    memberships?: any[];
+    memberships?: shared.Membership[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

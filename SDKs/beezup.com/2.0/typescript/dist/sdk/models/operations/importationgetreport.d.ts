@@ -1,14 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ImportationGetReportPathParams extends SpeakeasyBase {
-    executionId: string;
-    storeId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ImportationGetReportRequest extends SpeakeasyBase {
-    pathParams: ImportationGetReportPathParams;
+    /**
+     * The execution identifier of you catalog importation
+     */
+    executionId: string;
+    /**
+     * Your store identifier
+     */
+    storeId: string;
 }
 export declare class ImportationGetReportResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Get Report Response
+     */
     getImportationReportResponse?: shared.GetImportationReportResponse;
 }

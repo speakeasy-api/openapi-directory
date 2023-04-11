@@ -1,18 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PrivateArticleUploadCompletePathParams extends SpeakeasyBase {
-    articleId: number;
-    fileId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class PrivateArticleUploadCompleteSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class PrivateArticleUploadCompleteRequest extends SpeakeasyBase {
-    pathParams: PrivateArticleUploadCompletePathParams;
-    security: PrivateArticleUploadCompleteSecurity;
+    /**
+     * Article unique identifier
+     */
+    articleId: number;
+    /**
+     * File unique identifier
+     */
+    fileId: number;
 }
 export declare class PrivateArticleUploadCompleteResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Forbidden
+     */
     errorMessage?: shared.ErrorMessage;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

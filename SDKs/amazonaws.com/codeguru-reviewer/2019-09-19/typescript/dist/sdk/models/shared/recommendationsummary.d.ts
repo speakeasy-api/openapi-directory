@@ -3,8 +3,8 @@ import { RecommendationCategoryEnum } from "./recommendationcategoryenum";
 import { RuleMetadata } from "./rulemetadata";
 import { SeverityEnum } from "./severityenum";
 /**
- *  Information about recommendations.
-**/
+ * Information about recommendations.
+ */
 export declare class RecommendationSummary extends SpeakeasyBase {
     description?: string;
     endLine?: number;

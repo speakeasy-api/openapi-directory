@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum PutDestinationPolicyXAmzTargetEnum {
     Logs20140328PutDestinationPolicy = "Logs_20140328.PutDestinationPolicy"
 }
-export declare class PutDestinationPolicyHeaders extends SpeakeasyBase {
+export declare class PutDestinationPolicyRequest extends SpeakeasyBase {
+    putDestinationPolicyRequest: shared.PutDestinationPolicyRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class PutDestinationPolicyHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: PutDestinationPolicyXAmzTargetEnum;
 }
-export declare class PutDestinationPolicyRequest extends SpeakeasyBase {
-    headers: PutDestinationPolicyHeaders;
-    request: shared.PutDestinationPolicyRequest;
-}
 export declare class PutDestinationPolicyResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * OperationAbortedException
+     */
     operationAbortedException?: any;
-    serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceUnavailableException
+     */
+    serviceUnavailableException?: any;
 }

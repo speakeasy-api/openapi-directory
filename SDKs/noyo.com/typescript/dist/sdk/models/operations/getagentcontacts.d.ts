@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetAgentContactsPathParams extends SpeakeasyBase {
-    agentId: string;
-}
-export declare class GetAgentContactsQueryParams extends SpeakeasyBase {
-    offset?: number;
-    pageSize?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetAgentContactsRequest extends SpeakeasyBase {
-    pathParams: GetAgentContactsPathParams;
-    queryParams: GetAgentContactsQueryParams;
+    /**
+     * The unique identifier of the agent in Noyo
+     */
+    agentId: string;
+    /**
+     * The integer offset at which to start the page. Possible values are 0 to total_records - 1.
+     */
+    offset?: number;
+    /**
+     * The max size of each page of results
+     */
+    pageSize?: number;
 }
 export declare class GetAgentContactsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful Response - Returns all matching Agents
+     */
     paginatedAgentContactResults?: shared.PaginatedAgentContactResults;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,18 +1,18 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetfullnameparsedmatchRequest, GetfullnameparsedmatchResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetfullnameparsedmatchRequest,
+  GetfullnameparsedmatchResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetfullnameparsedmatchRequest = {
-  queryParams: {
-    firstname: "sit",
-    lastname: "voluptas",
-    license: "culpa",
-  },
+  firstname: "Katharina",
+  lastname: "Medhurst",
+  license: "distinctio",
 };
 
 sdk.fullNameParsedSimilarityKey.getfullnameparsedmatch(req).then((res: GetfullnameparsedmatchResponse | AxiosError) => {

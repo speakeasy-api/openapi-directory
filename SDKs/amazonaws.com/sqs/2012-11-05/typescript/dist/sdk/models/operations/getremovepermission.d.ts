@@ -1,20 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetRemovePermissionPathParams extends SpeakeasyBase {
-    accountNumber: number;
-    queueName: string;
-}
-export declare enum GetRemovePermissionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETRemovePermissionActionEnum {
     RemovePermission = "RemovePermission"
 }
-export declare enum GetRemovePermissionVersionEnum {
+export declare enum GETRemovePermissionVersionEnum {
     TwoThousandAndTwelve1105 = "2012-11-05"
 }
-export declare class GetRemovePermissionQueryParams extends SpeakeasyBase {
-    action: GetRemovePermissionActionEnum;
+export declare class GETRemovePermissionRequest extends SpeakeasyBase {
+    /**
+     * The AWS account number
+     */
+    accountNumber: number;
+    action: GETRemovePermissionActionEnum;
+    /**
+     * The identification of the permission to remove. This is the label added using the <code> <a>AddPermission</a> </code> action.
+     */
     label: string;
-    version: GetRemovePermissionVersionEnum;
-}
-export declare class GetRemovePermissionHeaders extends SpeakeasyBase {
+    /**
+     * The name of the queue
+     */
+    queueName: string;
+    version: GETRemovePermissionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -23,12 +29,8 @@ export declare class GetRemovePermissionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetRemovePermissionRequest extends SpeakeasyBase {
-    pathParams: GetRemovePermissionPathParams;
-    queryParams: GetRemovePermissionQueryParams;
-    headers: GetRemovePermissionHeaders;
-}
-export declare class GetRemovePermissionResponse extends SpeakeasyBase {
+export declare class GETRemovePermissionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

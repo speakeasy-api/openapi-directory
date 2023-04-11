@@ -1,22 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdateFolderPathParams extends SpeakeasyBase {
-    folderId: string;
-}
-export declare class UpdateFolderHeaders extends SpeakeasyBase {
-    xeroTenantId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UpdateFolderSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class UpdateFolderRequest extends SpeakeasyBase {
-    pathParams: UpdateFolderPathParams;
-    headers: UpdateFolderHeaders;
-    request: any;
-    security: UpdateFolderSecurity;
+    folder: shared.Folder;
+    /**
+     * Folder id for single object
+     */
+    folderId: string;
+    /**
+     * Xero identifier for Tenant
+     */
+    xeroTenantId: string;
 }
 export declare class UpdateFolderResponse extends SpeakeasyBase {
     contentType: string;
-    folder?: any;
+    /**
+     * return the updated object
+     */
+    folder?: shared.Folder;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

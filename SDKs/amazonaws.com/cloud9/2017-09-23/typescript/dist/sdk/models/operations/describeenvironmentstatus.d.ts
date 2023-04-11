@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeEnvironmentStatusXAmzTargetEnum {
-    AwsCloud9WorkspaceManagementServiceDescribeEnvironmentStatus = "AWSCloud9WorkspaceManagementService.DescribeEnvironmentStatus"
+    AWSCloud9WorkspaceManagementServiceDescribeEnvironmentStatus = "AWSCloud9WorkspaceManagementService.DescribeEnvironmentStatus"
 }
-export declare class DescribeEnvironmentStatusHeaders extends SpeakeasyBase {
+export declare class DescribeEnvironmentStatusRequest extends SpeakeasyBase {
+    describeEnvironmentStatusRequest: shared.DescribeEnvironmentStatusRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,19 +15,40 @@ export declare class DescribeEnvironmentStatusHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeEnvironmentStatusXAmzTargetEnum;
 }
-export declare class DescribeEnvironmentStatusRequest extends SpeakeasyBase {
-    headers: DescribeEnvironmentStatusHeaders;
-    request: shared.DescribeEnvironmentStatusRequest;
-}
 export declare class DescribeEnvironmentStatusResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     describeEnvironmentStatusResult?: shared.DescribeEnvironmentStatusResult;
+    /**
+     * ForbiddenException
+     */
     forbiddenException?: any;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

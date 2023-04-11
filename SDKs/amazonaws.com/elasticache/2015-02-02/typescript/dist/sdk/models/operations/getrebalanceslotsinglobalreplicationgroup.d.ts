@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetRebalanceSlotsInGlobalReplicationGroupActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETRebalanceSlotsInGlobalReplicationGroupActionEnum {
     RebalanceSlotsInGlobalReplicationGroup = "RebalanceSlotsInGlobalReplicationGroup"
 }
-export declare enum GetRebalanceSlotsInGlobalReplicationGroupVersionEnum {
+export declare enum GETRebalanceSlotsInGlobalReplicationGroupVersionEnum {
     TwoThousandAndFifteen0202 = "2015-02-02"
 }
-export declare class GetRebalanceSlotsInGlobalReplicationGroupQueryParams extends SpeakeasyBase {
-    action: GetRebalanceSlotsInGlobalReplicationGroupActionEnum;
+export declare class GETRebalanceSlotsInGlobalReplicationGroupRequest extends SpeakeasyBase {
+    action: GETRebalanceSlotsInGlobalReplicationGroupActionEnum;
+    /**
+     * If <code>True</code>, redistribution is applied immediately.
+     */
     applyImmediately: boolean;
+    /**
+     * The name of the Global datastore
+     */
     globalReplicationGroupId: string;
-    version: GetRebalanceSlotsInGlobalReplicationGroupVersionEnum;
-}
-export declare class GetRebalanceSlotsInGlobalReplicationGroupHeaders extends SpeakeasyBase {
+    version: GETRebalanceSlotsInGlobalReplicationGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetRebalanceSlotsInGlobalReplicationGroupHeaders extends Sp
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetRebalanceSlotsInGlobalReplicationGroupRequest extends SpeakeasyBase {
-    queryParams: GetRebalanceSlotsInGlobalReplicationGroupQueryParams;
-    headers: GetRebalanceSlotsInGlobalReplicationGroupHeaders;
-}
-export declare class GetRebalanceSlotsInGlobalReplicationGroupResponse extends SpeakeasyBase {
+export declare class GETRebalanceSlotsInGlobalReplicationGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

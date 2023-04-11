@@ -1,15 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteActiveWidgetPathParams extends SpeakeasyBase {
-    projectId: number;
-    widgetId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteActiveWidgetRequest extends SpeakeasyBase {
-    pathParams: DeleteActiveWidgetPathParams;
+    /**
+     * Continuous Project ID
+     */
+    projectId: number;
+    /**
+     * Active widget ID belonging to this Continuous Project
+     */
+    widgetId: number;
 }
 export declare class DeleteActiveWidgetResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * ProjectNotFound | ActiveWidgetNotFound | UnauthorizedUser
+     */
     error?: shared.ErrorT;
+    /**
+     * Delete operation result
+     */
     operationStatus?: shared.OperationStatus;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

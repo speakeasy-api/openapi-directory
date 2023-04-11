@@ -1,13 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ListHypernymsQueryParams extends SpeakeasyBase {
-    family?: string;
-    maxLevel?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ListHypernymsRequest extends SpeakeasyBase {
-    queryParams: ListHypernymsQueryParams;
+    /**
+     * {{apiKeyDescription}}
+     */
+    ocpApimSubscriptionKey?: string;
+    /**
+     * (Required) a numeric identifier of the family
+     */
+    family?: string;
+    /**
+     * (Required) maximum distance from the family
+     */
+    maxLevel?: string;
 }
 export declare class ListHypernymsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    listHypernyms200ApplicationJSONArrays?: number[][];
+    rawResponse?: AxiosResponse;
+    /**
+     * Hypernyms of Darth Vader
+     */
+    listHypernyms200ApplicationJSONArrays?: any[][];
 }

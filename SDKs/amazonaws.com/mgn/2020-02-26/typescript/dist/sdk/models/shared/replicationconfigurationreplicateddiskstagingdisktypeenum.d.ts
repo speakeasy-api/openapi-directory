@@ -4,5 +4,7 @@ export declare enum ReplicationConfigurationReplicatedDiskStagingDiskTypeEnum {
     Io1 = "IO1",
     Sc1 = "SC1",
     St1 = "ST1",
-    Standard = "STANDARD"
+    Standard = "STANDARD",
+    Gp3 = "GP3",
+    Io2 = "IO2"
 }

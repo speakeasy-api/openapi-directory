@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostResetImageAttributeActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTResetImageAttributeActionEnum {
     ResetImageAttribute = "ResetImageAttribute"
 }
-export declare enum PostResetImageAttributeVersionEnum {
+export declare enum POSTResetImageAttributeVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostResetImageAttributeQueryParams extends SpeakeasyBase {
-    action: PostResetImageAttributeActionEnum;
-    version: PostResetImageAttributeVersionEnum;
-}
-export declare class PostResetImageAttributeHeaders extends SpeakeasyBase {
+export declare class POSTResetImageAttributeRequest extends SpeakeasyBase {
+    action: POSTResetImageAttributeActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTResetImageAttributeVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +18,8 @@ export declare class PostResetImageAttributeHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostResetImageAttributeRequest extends SpeakeasyBase {
-    queryParams: PostResetImageAttributeQueryParams;
-    headers: PostResetImageAttributeHeaders;
-    request?: Uint8Array;
-}
-export declare class PostResetImageAttributeResponse extends SpeakeasyBase {
+export declare class POSTResetImageAttributeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

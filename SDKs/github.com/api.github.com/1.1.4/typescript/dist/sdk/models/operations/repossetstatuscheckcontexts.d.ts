@@ -1,21 +1,41 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ReposSetStatusCheckContextsPathParams extends SpeakeasyBase {
-    branch: string;
-    owner: string;
-    repo: string;
-}
-export declare class ReposSetStatusCheckContextsRequestBody extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ReposSetStatusCheckContextsRequestBody1 extends SpeakeasyBase {
+    /**
+     * The name of the status checks
+     */
     contexts: string[];
 }
 export declare class ReposSetStatusCheckContextsRequest extends SpeakeasyBase {
-    pathParams: ReposSetStatusCheckContextsPathParams;
-    request?: ReposSetStatusCheckContextsRequestBody;
+    requestBody?: any;
+    /**
+     * The name of the branch. Cannot contain wildcard characters. To use wildcard characters in branch names, use [the GraphQL API](https://docs.github.com/graphql).
+     */
+    branch: string;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    owner: string;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    repo: string;
 }
 export declare class ReposSetStatusCheckContextsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Resource not found
+     */
     basicError?: shared.BasicError;
+    /**
+     * Response
+     */
     reposSetStatusCheckContexts200ApplicationJSONStrings?: string[];
+    /**
+     * Validation failed, or the endpoint has been spammed.
+     */
     validationError?: shared.ValidationError;
 }

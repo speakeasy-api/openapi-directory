@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum CreateWebAclMigrationStackXAmzTargetEnum {
-    Awswaf20150824CreateWebAclMigrationStack = "AWSWAF_20150824.CreateWebACLMigrationStack"
+import { AxiosResponse } from "axios";
+export declare enum CreateWebACLMigrationStackXAmzTargetEnum {
+    AWSWAF20150824CreateWebACLMigrationStack = "AWSWAF_20150824.CreateWebACLMigrationStack"
 }
-export declare class CreateWebAclMigrationStackHeaders extends SpeakeasyBase {
+export declare class CreateWebACLMigrationStackRequest extends SpeakeasyBase {
+    createWebACLMigrationStackRequest: shared.CreateWebACLMigrationStackRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,19 +13,34 @@ export declare class CreateWebAclMigrationStackHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: CreateWebAclMigrationStackXAmzTargetEnum;
+    xAmzTarget: CreateWebACLMigrationStackXAmzTargetEnum;
 }
-export declare class CreateWebAclMigrationStackRequest extends SpeakeasyBase {
-    headers: CreateWebAclMigrationStackHeaders;
-    request: shared.CreateWebAclMigrationStackRequest;
-}
-export declare class CreateWebAclMigrationStackResponse extends SpeakeasyBase {
+export declare class CreateWebACLMigrationStackResponse extends SpeakeasyBase {
     contentType: string;
-    createWebACLMigrationStackResponse?: shared.CreateWebAclMigrationStackResponse;
+    /**
+     * Success
+     */
+    createWebACLMigrationStackResponse?: shared.CreateWebACLMigrationStackResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * WAFEntityMigrationException
+     */
     wafEntityMigrationException?: any;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFInvalidOperationException
+     */
     wafInvalidOperationException?: any;
+    /**
+     * WAFInvalidParameterException
+     */
     wafInvalidParameterException?: any;
+    /**
+     * WAFNonexistentItemException
+     */
     wafNonexistentItemException?: any;
 }

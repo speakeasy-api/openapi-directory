@@ -1,0 +1,6 @@
+export declare enum SortKeyTypeEnum {
+    ServiceNamespaceAscending = "SERVICE_NAMESPACE_ASCENDING",
+    ServiceNamespaceDescending = "SERVICE_NAMESPACE_DESCENDING",
+    LastAuthenticatedTimeAscending = "LAST_AUTHENTICATED_TIME_ASCENDING",
+    LastAuthenticatedTimeDescending = "LAST_AUTHENTICATED_TIME_DESCENDING"
+}

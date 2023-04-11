@@ -1,15 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class EditCoveragePlanPathParams extends SpeakeasyBase {
-    planId: string;
-    version: string;
-}
+import { AxiosResponse } from "axios";
 export declare class EditCoveragePlanRequest extends SpeakeasyBase {
-    pathParams: EditCoveragePlanPathParams;
-    request: shared.CoveragePlanEditRequest;
+    coveragePlanEditRequest: shared.CoveragePlanEditRequest;
+    /**
+     * The unique identifier of the coverage plan in Noyo
+     */
+    planId: string;
+    /**
+     * The current version identifier of the coverage plan
+     */
+    version: string;
 }
 export declare class EditCoveragePlanResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful Response - Returns the modified Coverage Plan
+     */
     coveragePlanResult?: shared.CoveragePlanResult;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

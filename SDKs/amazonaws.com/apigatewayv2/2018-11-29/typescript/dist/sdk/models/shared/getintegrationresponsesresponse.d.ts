@@ -1,5 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { IntegrationResponse } from "./integrationresponse";
+/**
+ * Success
+ */
 export declare class GetIntegrationResponsesResponse extends SpeakeasyBase {
-    items?: Record<string, any>;
-    nextToken?: Record<string, any>;
+    items?: IntegrationResponse[];
+    nextToken?: string;
 }

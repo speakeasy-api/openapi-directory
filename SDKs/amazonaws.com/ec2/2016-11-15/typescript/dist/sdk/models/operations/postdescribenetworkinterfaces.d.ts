@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeNetworkInterfacesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeNetworkInterfacesActionEnum {
     DescribeNetworkInterfaces = "DescribeNetworkInterfaces"
 }
-export declare enum PostDescribeNetworkInterfacesVersionEnum {
+export declare enum POSTDescribeNetworkInterfacesVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostDescribeNetworkInterfacesQueryParams extends SpeakeasyBase {
-    action: PostDescribeNetworkInterfacesActionEnum;
+export declare class POSTDescribeNetworkInterfacesRequest extends SpeakeasyBase {
+    action: POSTDescribeNetworkInterfacesActionEnum;
+    /**
+     * Pagination limit
+     */
     maxResults?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
-    version: PostDescribeNetworkInterfacesVersionEnum;
-}
-export declare class PostDescribeNetworkInterfacesHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeNetworkInterfacesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeNetworkInterfacesHeaders extends SpeakeasyBase 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeNetworkInterfacesRequest extends SpeakeasyBase {
-    queryParams: PostDescribeNetworkInterfacesQueryParams;
-    headers: PostDescribeNetworkInterfacesHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeNetworkInterfacesResponse extends SpeakeasyBase {
+export declare class POSTDescribeNetworkInterfacesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

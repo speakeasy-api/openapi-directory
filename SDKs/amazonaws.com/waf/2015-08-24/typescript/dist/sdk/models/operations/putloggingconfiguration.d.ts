@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum PutLoggingConfigurationXAmzTargetEnum {
-    Awswaf20150824PutLoggingConfiguration = "AWSWAF_20150824.PutLoggingConfiguration"
+    AWSWAF20150824PutLoggingConfiguration = "AWSWAF_20150824.PutLoggingConfiguration"
 }
-export declare class PutLoggingConfigurationHeaders extends SpeakeasyBase {
+export declare class PutLoggingConfigurationRequest extends SpeakeasyBase {
+    putLoggingConfigurationRequest: shared.PutLoggingConfigurationRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class PutLoggingConfigurationHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: PutLoggingConfigurationXAmzTargetEnum;
 }
-export declare class PutLoggingConfigurationRequest extends SpeakeasyBase {
-    headers: PutLoggingConfigurationHeaders;
-    request: shared.PutLoggingConfigurationRequest;
-}
 export declare class PutLoggingConfigurationResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     putLoggingConfigurationResponse?: shared.PutLoggingConfigurationResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFNonexistentItemException
+     */
     wafNonexistentItemException?: any;
+    /**
+     * WAFServiceLinkedRoleErrorException
+     */
     wafServiceLinkedRoleErrorException?: any;
+    /**
+     * WAFStaleDataException
+     */
     wafStaleDataException?: any;
 }

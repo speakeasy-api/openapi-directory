@@ -1,20 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ImportLibraryV2PathParams extends SpeakeasyBase {
-    organizationUuid: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ImportLibraryV2Security extends SpeakeasyBase {
-    zettleApiKey?: shared.SchemeZettleApiKey;
-    zettleOauth?: shared.SchemeZettleOauth;
+    zettleOauth: string;
 }
 export declare class ImportLibraryV2Request extends SpeakeasyBase {
-    pathParams: ImportLibraryV2PathParams;
-    request: shared.BulkImportRequest;
-    security: ImportLibraryV2Security;
+    bulkImportRequest: shared.BulkImportRequest;
+    organizationUuid: string;
 }
 export declare class ImportLibraryV2Response extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Invalid request body
+     */
     errorResponse?: shared.ErrorResponse;
+    /**
+     * Import status
+     */
     importResponse?: shared.ImportResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class IpamServicesUpdatePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class IpamServicesUpdateRequest extends SpeakeasyBase {
-    pathParams: IpamServicesUpdatePathParams;
-    request: shared.WritableServiceInput;
+    writableServiceInput: shared.WritableServiceInput;
+    /**
+     * A unique integer value identifying this service.
+     */
+    id: number;
 }
 export declare class IpamServicesUpdateResponse extends SpeakeasyBase {
     contentType: string;
     service?: shared.Service;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

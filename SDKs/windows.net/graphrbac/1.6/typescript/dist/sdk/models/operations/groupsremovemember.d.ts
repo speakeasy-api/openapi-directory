@@ -1,19 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GroupsRemoveMemberPathParams extends SpeakeasyBase {
-    groupObjectId: string;
-    memberObjectId: string;
-    tenantID: string;
-}
-export declare class GroupsRemoveMemberQueryParams extends SpeakeasyBase {
-    apiVersion: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GroupsRemoveMemberRequest extends SpeakeasyBase {
-    pathParams: GroupsRemoveMemberPathParams;
-    queryParams: GroupsRemoveMemberQueryParams;
+    /**
+     * Client API version.
+     */
+    apiVersion: string;
+    /**
+     * The object ID of the group from which to remove the member.
+     */
+    groupObjectId: string;
+    /**
+     * Member object id
+     */
+    memberObjectId: string;
+    /**
+     * The tenant ID.
+     */
+    tenantID: string;
 }
 export declare class GroupsRemoveMemberResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Error response describing why the operation failed.
+     */
     graphError?: shared.GraphError;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

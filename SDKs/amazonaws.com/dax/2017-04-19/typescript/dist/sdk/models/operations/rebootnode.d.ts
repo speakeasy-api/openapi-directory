@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum RebootNodeXAmzTargetEnum {
     AmazonDaxv3RebootNode = "AmazonDAXV3.RebootNode"
 }
-export declare class RebootNodeHeaders extends SpeakeasyBase {
+export declare class RebootNodeRequest extends SpeakeasyBase {
+    rebootNodeRequest: shared.RebootNodeRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class RebootNodeHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: RebootNodeXAmzTargetEnum;
 }
-export declare class RebootNodeRequest extends SpeakeasyBase {
-    headers: RebootNodeHeaders;
-    request: shared.RebootNodeRequest;
-}
 export declare class RebootNodeResponse extends SpeakeasyBase {
+    /**
+     * ClusterNotFoundFault
+     */
     clusterNotFoundFault?: any;
     contentType: string;
+    /**
+     * InvalidClusterStateFault
+     */
     invalidClusterStateFault?: any;
+    /**
+     * InvalidParameterCombinationException
+     */
     invalidParameterCombinationException?: any;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
+    /**
+     * NodeNotFoundFault
+     */
     nodeNotFoundFault?: any;
+    /**
+     * Success
+     */
     rebootNodeResponse?: shared.RebootNodeResponse;
+    /**
+     * ServiceLinkedRoleNotFoundFault
+     */
     serviceLinkedRoleNotFoundFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

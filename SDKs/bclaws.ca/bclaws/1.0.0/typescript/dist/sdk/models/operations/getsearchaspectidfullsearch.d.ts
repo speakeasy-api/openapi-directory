@@ -1,5 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetSearchAspectIdFullsearchAspectIdEnum {
+import { AxiosResponse } from "axios";
+/**
+ * The identifier of the 'aspect' (content group) to search
+ */
+export declare enum GetSearchAspectIDFullsearchAspectIDEnum {
     Complete = "complete",
     Corpreg = "corpreg",
     Bcgaz1 = "bcgaz1",
@@ -10,21 +14,34 @@ export declare enum GetSearchAspectIdFullsearchAspectIdEnum {
     Hscr = "hscr",
     ArchOic = "arch_oic"
 }
-export declare class GetSearchAspectIdFullsearchPathParams extends SpeakeasyBase {
-    aspectId: GetSearchAspectIdFullsearchAspectIdEnum;
-}
-export declare class GetSearchAspectIdFullsearchQueryParams extends SpeakeasyBase {
-    e: number;
-    lFrag: number;
-    nFrag: number;
-    q: string;
-    s: string;
-}
 export declare class GetSearchAspectIdFullsearchRequest extends SpeakeasyBase {
-    pathParams: GetSearchAspectIdFullsearchPathParams;
-    queryParams: GetSearchAspectIdFullsearchQueryParams;
+    /**
+     * The identifier of the 'aspect' (content group) to search
+     */
+    aspectId: GetSearchAspectIDFullsearchAspectIDEnum;
+    /**
+     * last hit (end index)
+     */
+    e: number;
+    /**
+     * length of fragment snippets (< 200)
+     */
+    lFrag: number;
+    /**
+     * number of fragment snippets to return (< 10)
+     */
+    nFrag: number;
+    /**
+     * query term
+     */
+    q: string;
+    /**
+     * first hit (start index)
+     */
+    s: string;
 }
 export declare class GetSearchAspectIdFullsearchResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

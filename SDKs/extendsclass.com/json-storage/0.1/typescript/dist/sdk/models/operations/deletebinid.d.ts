@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteBinIdPathParams extends SpeakeasyBase {
-    id: string;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class DeleteBinIdRequest extends SpeakeasyBase {
-    pathParams: DeleteBinIdPathParams;
+    id: string;
 }
 export declare class DeleteBinIdResponse extends SpeakeasyBase {
     contentType: string;
-    deleteStatus?: any;
-    error?: any;
+    /**
+     * Status of the deletion
+     */
+    deleteStatus?: shared.DeleteStatus;
+    /**
+     * Wrong security key
+     */
+    error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

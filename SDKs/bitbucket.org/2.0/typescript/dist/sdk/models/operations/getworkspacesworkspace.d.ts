@@ -1,20 +1,31 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetWorkspacesWorkspacePathParams extends SpeakeasyBase {
-    workspace: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetWorkspacesWorkspaceSecurity extends SpeakeasyBase {
-    oauth2?: shared.SchemeOauth2;
+    apiKey?: string;
     basic?: shared.SchemeBasic;
-    apiKey?: shared.SchemeApiKey;
+    oauth2?: string;
 }
 export declare class GetWorkspacesWorkspaceRequest extends SpeakeasyBase {
-    pathParams: GetWorkspacesWorkspacePathParams;
-    security: GetWorkspacesWorkspaceSecurity;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     *
+     * @remarks
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     *
+     */
+    workspace: string;
 }
 export declare class GetWorkspacesWorkspaceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * If no workspace exists for the specified name or UUID.
+     */
     error?: Record<string, any>;
+    /**
+     * The workspace.
+     */
     workspace?: Record<string, any>;
 }

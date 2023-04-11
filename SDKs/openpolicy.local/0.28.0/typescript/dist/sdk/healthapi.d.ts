@@ -1,6 +1,9 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class HealthApi {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Executes a simple built-in policy query to verify that the server is operational
+ */
+export declare class HealthAPI {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,8 +12,9 @@ export declare class HealthApi {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getHealth - Health
+     * Health
      *
+     * @remarks
      * This API endpoint verifies that the server is operational.
      *
      * The response from the server is either 200 or 500:
@@ -25,7 +29,7 @@ export declare class HealthApi {
      *
      * ---
      *
-     * https://www.openpolicyagent.org/docs/latest/management/#bundles - Bundles
-    **/
+     * @see {@link https://www.openpolicyagent.org/docs/latest/management/#bundles} - Bundles
+     */
     getHealth(req: operations.GetHealthRequest, config?: AxiosRequestConfig): Promise<operations.GetHealthResponse>;
 }

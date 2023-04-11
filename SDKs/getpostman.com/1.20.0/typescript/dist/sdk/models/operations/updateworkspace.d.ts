@@ -1,7 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UpdateWorkspacePathParams extends SpeakeasyBase {
-    workspaceId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UpdateWorkspaceRequestBodyWorkspaceCollections extends SpeakeasyBase {
     id?: string;
     name?: string;
@@ -29,35 +27,54 @@ export declare class UpdateWorkspaceRequestBodyWorkspace extends SpeakeasyBase {
 export declare class UpdateWorkspaceRequestBody extends SpeakeasyBase {
     workspace?: UpdateWorkspaceRequestBodyWorkspace;
 }
-export declare class UpdateWorkspace200ApplicationJsonWorkspace extends SpeakeasyBase {
+export declare class UpdateWorkspaceRequest extends SpeakeasyBase {
+    requestBody?: UpdateWorkspaceRequestBody;
+    workspaceId: string;
+}
+export declare class UpdateWorkspace404ApplicationJSONError extends SpeakeasyBase {
+    message?: string;
+    name?: string;
+}
+/**
+ * Specified workspace/entities do not exist
+ */
+export declare class UpdateWorkspace404ApplicationJSON extends SpeakeasyBase {
+    error?: UpdateWorkspace404ApplicationJSONError;
+}
+export declare class UpdateWorkspace403ApplicationJSONError extends SpeakeasyBase {
+    message?: string;
+    name?: string;
+}
+/**
+ * Not enough permissions
+ */
+export declare class UpdateWorkspace403ApplicationJSON extends SpeakeasyBase {
+    error?: UpdateWorkspace403ApplicationJSONError;
+}
+export declare class UpdateWorkspace200ApplicationJSONWorkspace extends SpeakeasyBase {
     id?: string;
     name?: string;
 }
-export declare class UpdateWorkspace200ApplicationJson extends SpeakeasyBase {
-    workspace?: UpdateWorkspace200ApplicationJsonWorkspace;
-}
-export declare class UpdateWorkspace403ApplicationJsonError extends SpeakeasyBase {
-    message?: string;
-    name?: string;
-}
-export declare class UpdateWorkspace403ApplicationJson extends SpeakeasyBase {
-    error?: UpdateWorkspace403ApplicationJsonError;
-}
-export declare class UpdateWorkspace404ApplicationJsonError extends SpeakeasyBase {
-    message?: string;
-    name?: string;
-}
-export declare class UpdateWorkspace404ApplicationJson extends SpeakeasyBase {
-    error?: UpdateWorkspace404ApplicationJsonError;
-}
-export declare class UpdateWorkspaceRequest extends SpeakeasyBase {
-    pathParams: UpdateWorkspacePathParams;
-    request?: UpdateWorkspaceRequestBody;
+/**
+ * Successful Response
+ */
+export declare class UpdateWorkspace200ApplicationJSON extends SpeakeasyBase {
+    workspace?: UpdateWorkspace200ApplicationJSONWorkspace;
 }
 export declare class UpdateWorkspaceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateWorkspace200ApplicationJSONObject?: UpdateWorkspace200ApplicationJson;
-    updateWorkspace403ApplicationJSONObject?: UpdateWorkspace403ApplicationJson;
-    updateWorkspace404ApplicationJSONObject?: UpdateWorkspace404ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful Response
+     */
+    updateWorkspace200ApplicationJSONObject?: UpdateWorkspace200ApplicationJSON;
+    /**
+     * Not enough permissions
+     */
+    updateWorkspace403ApplicationJSONObject?: UpdateWorkspace403ApplicationJSON;
+    /**
+     * Specified workspace/entities do not exist
+     */
+    updateWorkspace404ApplicationJSONObject?: UpdateWorkspace404ApplicationJSON;
 }

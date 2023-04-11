@@ -1,20 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PrivateProjectNotesCreatePathParams extends SpeakeasyBase {
-    projectId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class PrivateProjectNotesCreateSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class PrivateProjectNotesCreateRequest extends SpeakeasyBase {
-    pathParams: PrivateProjectNotesCreatePathParams;
-    request: shared.ProjectNoteCreate;
-    security: PrivateProjectNotesCreateSecurity;
+    /**
+     * Note message
+     */
+    projectNoteCreate: shared.ProjectNoteCreate;
+    /**
+     * Project unique identifier
+     */
+    projectId: number;
 }
 export declare class PrivateProjectNotesCreateResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Forbidden
+     */
     errorMessage?: shared.ErrorMessage;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
+    /**
+     * Created
+     */
     location?: shared.Location;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

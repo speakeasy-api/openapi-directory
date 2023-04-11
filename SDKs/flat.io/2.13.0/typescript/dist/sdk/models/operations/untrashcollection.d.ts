@@ -1,17 +1,28 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UntrashCollectionPathParams extends SpeakeasyBase {
-    collection: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UntrashCollectionSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class UntrashCollectionRequest extends SpeakeasyBase {
-    pathParams: UntrashCollectionPathParams;
-    security: UntrashCollectionSecurity;
+    /**
+     * Unique identifier of the collection.
+     *
+     * @remarks
+     * The following aliases are supported:
+     * - `root`: The root collection of the account
+     * - `sharedWithMe`: Automatically contains new resources that have been shared individually
+     * - `trash`: Automatically contains resources that have been deleted
+     *
+     */
+    collection: string;
 }
 export declare class UntrashCollectionResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Not granted to manage this score
+     */
     flatErrorResponse?: shared.FlatErrorResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

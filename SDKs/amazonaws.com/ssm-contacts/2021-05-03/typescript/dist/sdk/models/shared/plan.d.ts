@@ -1,8 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { Stage } from "./stage";
 /**
- * The stages that an escalation plan or engagement plan engages contacts and contact methods in.
-**/
+ * Information about the stages and on-call rotation teams associated with an escalation plan or engagement plan.
+ */
 export declare class Plan extends SpeakeasyBase {
-    stages: Stage[];
+    rotationIds?: string[];
+    stages?: Stage[];
 }

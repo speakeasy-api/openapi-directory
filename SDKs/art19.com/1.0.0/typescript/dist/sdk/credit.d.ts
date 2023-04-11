@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Credit {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,11 +9,11 @@ export declare class Credit {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getCredits - Get a list of credits
-    **/
-    getCredits(req: operations.GetCreditsRequest, config?: AxiosRequestConfig): Promise<operations.GetCreditsResponse>;
+     * Get a list of credits
+     */
+    getCredits(req: operations.GetCreditsRequest, security: operations.GetCreditsSecurity, config?: AxiosRequestConfig): Promise<operations.GetCreditsResponse>;
     /**
-     * getCreditsId - Get a specific credit
-    **/
-    getCreditsId(req: operations.GetCreditsIdRequest, config?: AxiosRequestConfig): Promise<operations.GetCreditsIdResponse>;
+     * Get a specific credit
+     */
+    getCreditsId(req: operations.GetCreditsIdRequest, security: operations.GetCreditsIdSecurity, config?: AxiosRequestConfig): Promise<operations.GetCreditsIdResponse>;
 }

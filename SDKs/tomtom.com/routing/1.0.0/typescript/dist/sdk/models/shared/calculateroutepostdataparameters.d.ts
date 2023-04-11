@@ -14,9 +14,13 @@ export declare class CalculateRoutePostDataParametersAvoidAreasRectangles extend
 export declare class CalculateRoutePostDataParametersAvoidAreas extends SpeakeasyBase {
     rectangles?: CalculateRoutePostDataParametersAvoidAreasRectangles[];
 }
+export declare class CalculateRoutePostDataParametersSupportingPoints extends SpeakeasyBase {
+    latitude?: string;
+    longitude?: string;
+}
 export declare class CalculateRoutePostDataParameters extends SpeakeasyBase {
     allowVignette?: string[];
     avoidAreas?: CalculateRoutePostDataParametersAvoidAreas;
     avoidVignette?: string[];
-    supportingPoints?: any[];
+    supportingPoints?: CalculateRoutePostDataParametersSupportingPoints[];
 }

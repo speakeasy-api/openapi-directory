@@ -1,5 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetBackendApiModelsResponse extends SpeakeasyBase {
-    models?: Record<string, any>;
-    status?: Record<string, any>;
+/**
+ * The current status of the request.
+ */
+export declare enum GetBackendAPIModelsResponseStatusEnum {
+    Latest = "LATEST",
+    Stale = "STALE"
+}
+/**
+ * Success
+ */
+export declare class GetBackendAPIModelsResponse extends SpeakeasyBase {
+    modelIntrospectionSchema?: string;
+    models?: string;
+    status?: GetBackendAPIModelsResponseStatusEnum;
 }

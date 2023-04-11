@@ -6,80 +6,165 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/searchconsole/v1/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/searchconsole/v1/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { WebmastersSearchanalyticsQueryRequest, WebmastersSearchanalyticsQueryResponse } from "openapi/src/sdk/models/operations";
+import {
+  WebmastersSearchanalyticsQueryRequest,
+  WebmastersSearchanalyticsQueryResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  SearchAnalyticsQueryRequestAggregationTypeEnum,
+  SearchAnalyticsQueryRequestDataStateEnum,
+  SearchAnalyticsQueryRequestDimensionsEnum,
+  SearchAnalyticsQueryRequestSearchTypeEnum,
+  SearchAnalyticsQueryRequestTypeEnum,
+  ApiDimensionFilterGroupGroupTypeEnum,
+  ApiDimensionFilterDimensionEnum,
+  ApiDimensionFilterOperatorEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: WebmastersSearchanalyticsQueryRequest = {
-  security: {
-    option1: {
-      oauth2: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-      oauth2c: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-    },
-  },
-  pathParams: {
-    siteUrl: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
-    aggregationType: "BY_PAGE",
-    dataState: "DATA_STATE_UNSPECIFIED",
+  dollarXgafv: XgafvEnum.Two,
+  searchAnalyticsQueryRequest: {
+    aggregationType: SearchAnalyticsQueryRequestAggregationTypeEnum.ByProperty,
+    dataState: SearchAnalyticsQueryRequestDataStateEnum.All,
     dimensionFilterGroups: [
       {
         filters: [
           {
-            dimension: "PAGE",
-            expression: "dolorem",
-            operator: "INCLUDING_REGEX",
+            dimension: ApiDimensionFilterDimensionEnum.SearchAppearance,
+            expression: "corrupti",
+            operator: ApiDimensionFilterOperatorEnum.ExcludingRegex,
+          },
+          {
+            dimension: ApiDimensionFilterDimensionEnum.Country,
+            expression: "error",
+            operator: ApiDimensionFilterOperatorEnum.NotContains,
+          },
+          {
+            dimension: ApiDimensionFilterDimensionEnum.Page,
+            expression: "iure",
+            operator: ApiDimensionFilterOperatorEnum.NotEquals,
           },
         ],
-        groupType: "AND",
+        groupType: ApiDimensionFilterGroupGroupTypeEnum.And,
+      },
+      {
+        filters: [
+          {
+            dimension: ApiDimensionFilterDimensionEnum.Query,
+            expression: "delectus",
+            operator: ApiDimensionFilterOperatorEnum.NotEquals,
+          },
+          {
+            dimension: ApiDimensionFilterDimensionEnum.Page,
+            expression: "molestiae",
+            operator: ApiDimensionFilterOperatorEnum.IncludingRegex,
+          },
+          {
+            dimension: ApiDimensionFilterDimensionEnum.SearchAppearance,
+            expression: "voluptatum",
+            operator: ApiDimensionFilterOperatorEnum.Contains,
+          },
+          {
+            dimension: ApiDimensionFilterDimensionEnum.Country,
+            expression: "nisi",
+            operator: ApiDimensionFilterOperatorEnum.ExcludingRegex,
+          },
+        ],
+        groupType: ApiDimensionFilterGroupGroupTypeEnum.And,
+      },
+      {
+        filters: [
+          {
+            dimension: ApiDimensionFilterDimensionEnum.Query,
+            expression: "quis",
+            operator: ApiDimensionFilterOperatorEnum.Equals,
+          },
+          {
+            dimension: ApiDimensionFilterDimensionEnum.Device,
+            expression: "perferendis",
+            operator: ApiDimensionFilterOperatorEnum.Contains,
+          },
+          {
+            dimension: ApiDimensionFilterDimensionEnum.SearchAppearance,
+            expression: "sapiente",
+            operator: ApiDimensionFilterOperatorEnum.IncludingRegex,
+          },
+          {
+            dimension: ApiDimensionFilterDimensionEnum.Query,
+            expression: "at",
+            operator: ApiDimensionFilterOperatorEnum.ExcludingRegex,
+          },
+        ],
+        groupType: ApiDimensionFilterGroupGroupTypeEnum.And,
+      },
+      {
+        filters: [
+          {
+            dimension: ApiDimensionFilterDimensionEnum.Country,
+            expression: "quod",
+            operator: ApiDimensionFilterOperatorEnum.IncludingRegex,
+          },
+          {
+            dimension: ApiDimensionFilterDimensionEnum.Country,
+            expression: "totam",
+            operator: ApiDimensionFilterOperatorEnum.IncludingRegex,
+          },
+          {
+            dimension: ApiDimensionFilterDimensionEnum.Device,
+            expression: "dicta",
+            operator: ApiDimensionFilterOperatorEnum.IncludingRegex,
+          },
+          {
+            dimension: ApiDimensionFilterDimensionEnum.Device,
+            expression: "occaecati",
+            operator: ApiDimensionFilterOperatorEnum.Equals,
+          },
+        ],
+        groupType: ApiDimensionFilterGroupGroupTypeEnum.And,
       },
     ],
     dimensions: [
-      "DATE",
-      "PAGE",
-      "DATE",
+      SearchAnalyticsQueryRequestDimensionsEnum.SearchAppearance,
+      SearchAnalyticsQueryRequestDimensionsEnum.Device,
+      SearchAnalyticsQueryRequestDimensionsEnum.Country,
     ],
-    endDate: "illum",
-    rowLimit: 6392442863481646880,
-    searchType: "DISCOVER",
-    startDate: "odio",
-    startRow: 6303220950515014660,
-    type: "DISCOVER",
+    endDate: "beatae",
+    rowLimit: 414662,
+    searchType: SearchAnalyticsQueryRequestSearchTypeEnum.Video,
+    startDate: "modi",
+    startRow: 186332,
+    type: SearchAnalyticsQueryRequestTypeEnum.Discover,
   },
+  accessToken: "cum",
+  alt: AltEnum.Media,
+  callback: "ipsum",
+  fields: "excepturi",
+  key: "aspernatur",
+  oauthToken: "perferendis",
+  prettyPrint: false,
+  quotaUser: "ad",
+  siteUrl: "natus",
+  uploadType: "sed",
+  uploadProtocol: "iste",
 };
 
 sdk.searchanalytics.webmastersSearchanalyticsQuery(req).then((res: WebmastersSearchanalyticsQueryResponse | AxiosError) => {
@@ -89,7 +174,8 @@ sdk.searchanalytics.webmastersSearchanalyticsQuery(req).then((res: WebmastersSea
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### searchanalytics
 
@@ -116,7 +202,18 @@ sdk.searchanalytics.webmastersSearchanalyticsQuery(req).then((res: WebmastersSea
 ### urlTestingTools
 
 * `searchconsoleUrlTestingToolsMobileFriendlyTestRun` - Runs Mobile-Friendly Test for a given URL.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

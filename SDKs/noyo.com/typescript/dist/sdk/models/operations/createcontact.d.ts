@@ -1,14 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreateContactPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class CreateContactRequest extends SpeakeasyBase {
+    contactCreateRequest: shared.ContactCreateRequest;
+    /**
+     * The unique identifier of the group in Noyo
+     */
     groupId: string;
 }
-export declare class CreateContactRequest extends SpeakeasyBase {
-    pathParams: CreateContactPathParams;
-    request: shared.ContactCreateRequest;
-}
 export declare class CreateContactResponse extends SpeakeasyBase {
+    /**
+     * Successful Response - Returns the new Contact
+     */
     contactResult?: shared.ContactResult;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

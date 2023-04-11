@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolSnmpv3GroupClearPathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolSnmpv3GroupClearRequest extends SpeakeasyBase {
-    pathParams: ProtocolSnmpv3GroupClearPathParams;
+    /**
+     * Agent to add the SNMPv3 group
+     */
+    agentNum: number;
 }
 export declare class ProtocolSnmpv3GroupClearResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolSnmpv3GroupClear200ApplicationJSONString?: string;
 }

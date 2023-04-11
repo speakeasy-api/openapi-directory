@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCopyClusterSnapshotActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCopyClusterSnapshotActionEnum {
     CopyClusterSnapshot = "CopyClusterSnapshot"
 }
-export declare enum PostCopyClusterSnapshotVersionEnum {
+export declare enum POSTCopyClusterSnapshotVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostCopyClusterSnapshotQueryParams extends SpeakeasyBase {
-    action: PostCopyClusterSnapshotActionEnum;
-    version: PostCopyClusterSnapshotVersionEnum;
-}
-export declare class PostCopyClusterSnapshotHeaders extends SpeakeasyBase {
+export declare class POSTCopyClusterSnapshotRequest extends SpeakeasyBase {
+    action: POSTCopyClusterSnapshotActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCopyClusterSnapshotVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCopyClusterSnapshotHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCopyClusterSnapshotRequest extends SpeakeasyBase {
-    queryParams: PostCopyClusterSnapshotQueryParams;
-    headers: PostCopyClusterSnapshotHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCopyClusterSnapshotResponse extends SpeakeasyBase {
+export declare class POSTCopyClusterSnapshotResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

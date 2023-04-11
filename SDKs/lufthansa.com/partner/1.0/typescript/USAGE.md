@@ -1,24 +1,17 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { BaggageTripAndContactRequest, BaggageTripAndContactResponse } from "openapi/src/sdk/models/operations";
+import {
+  BaggageTripAndContactRequest,
+  BaggageTripAndContactResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: BaggageTripAndContactRequest = {
-  security: {
-    auth: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    searchID: "sit",
-  },
-  headers: {
-    accept: "voluptas",
-  },
+  accept: "corrupti",
+  searchID: "provident",
 };
 
 sdk.baggage.baggageTripAndContact(req).then((res: BaggageTripAndContactResponse | AxiosError) => {

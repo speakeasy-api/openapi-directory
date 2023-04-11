@@ -1,37 +1,83 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ToolresultsProjectsHistoriesExecutionsStepsPatchPathParams extends SpeakeasyBase {
-    executionId: string;
-    historyId: string;
-    projectId: string;
-    stepId: string;
-}
-export declare class ToolresultsProjectsHistoriesExecutionsStepsPatchQueryParams extends SpeakeasyBase {
-    dollarXgafv?: shared.XgafvEnum;
-    accessToken?: string;
-    alt?: shared.AltEnum;
-    callback?: string;
-    fields?: string;
-    key?: string;
-    oauthToken?: string;
-    prettyPrint?: boolean;
-    quotaUser?: string;
-    requestId?: string;
-    uploadType?: string;
-    uploadProtocol?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ToolresultsProjectsHistoriesExecutionsStepsPatchSecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class ToolresultsProjectsHistoriesExecutionsStepsPatchRequest extends SpeakeasyBase {
-    pathParams: ToolresultsProjectsHistoriesExecutionsStepsPatchPathParams;
-    queryParams: ToolresultsProjectsHistoriesExecutionsStepsPatchQueryParams;
-    request?: shared.Step;
-    security: ToolresultsProjectsHistoriesExecutionsStepsPatchSecurity;
+    /**
+     * V1 error format.
+     */
+    dollarXgafv?: shared.XgafvEnum;
+    step?: shared.Step;
+    /**
+     * OAuth access token.
+     */
+    accessToken?: string;
+    /**
+     * Data format for response.
+     */
+    alt?: shared.AltEnum;
+    /**
+     * JSONP
+     */
+    callback?: string;
+    /**
+     * A Execution id. Required.
+     */
+    executionId: string;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * A History id. Required.
+     */
+    historyId: string;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauthToken?: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * A Project id. Required.
+     */
+    projectId: string;
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * A unique request ID for server to detect duplicated requests. For example, a UUID. Optional, but strongly recommended.
+     */
+    requestId?: string;
+    /**
+     * A Step id. Required.
+     */
+    stepId: string;
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    uploadType?: string;
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    uploadProtocol?: string;
 }
 export declare class ToolresultsProjectsHistoriesExecutionsStepsPatchResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful response
+     */
     step?: shared.Step;
 }

@@ -6,44 +6,44 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/fire.com/1.0/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/fire.com/1.0/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CreateApiApplicationRequest, CreateApiApplicationResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CreateApiApplicationNewApiApplication,
+  CreateApiApplicationResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    bearerAuth: {
-      authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-    },
-  }
-));
-    
-const req: CreateApiApplicationRequest = {
-  request: {
-    applicationName: "sit",
-    enabled: false,
-    expiry: "1978-05-13T03:50:47Z",
-    ican: 501233450539197794,
-    numberOfPayeeApprovalsRequired: 3390393562759376202,
-    numberOfPaymentApprovalsRequired: 2669985732393126063,
-    permissions: [
-      "voluptas",
-      "fugit",
-    ],
+    bearerAuth: "Bearer YOUR_BEARER_TOKEN_HERE",
   },
+});
+
+const req: CreateApiApplicationNewApiApplication = {
+  applicationName: "Batch Processing API",
+  enabled: true,
+  expiry: "2019-08-22T07:48:56.460Z",
+  ican: 548814,
+  numberOfPayeeApprovalsRequired: 1,
+  numberOfPaymentApprovalsRequired: 1,
+  permissions: [
+    "distinctio",
+    "quibusdam",
+    "unde",
+  ],
 };
 
 sdk.api.createApiApplication(req).then((res: CreateApiApplicationResponse | AxiosError) => {
@@ -53,54 +53,58 @@ sdk.api.createApiApplication(req).then((res: CreateApiApplicationResponse | Axio
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### API
+
+### api
 
 * `createApiApplication` - Create a new API Application
 
-### Accounts
+### accounts
 
 * `addAccount` - Add a new account
 * `getAccountById` - Retrieve the details of a fire.com Account
 * `getAccounts` - List all fire.com Accounts
 
-### Authentication
+### authentication
 
 * `authenticate` - Authenticate with the API.
 
-### Cards
+### cards
 
+* `blockCard` - Block a card
 * `createNewCard` - Create a new debit card.
+* `getListofCardTransactions` - List Card Transactions.
 * `getListofCards` - View List of Cards.
+* `unblockCard` - Unblock a card
 
-### Direct Debits
+### directDebits
 
 * `activateMandate` - Activate a direct debit mandate
 * `cancelMandateByUuid` - Cancel a direct debit mandate
-* `getDirectDebitByUuid` - Get the deails of a direct debit
+* `getDirectDebitByUuid` - Get the details of a direct debit
 * `getDirectDebitMandates` - List all direct debit mandates
 * `getDirectDebitsForMandateUuid` - Get all DD payments associated with a direct debit mandate
 * `getMandate` - Get direct debit mandate details
 * `rejectDirectDebit` - Reject a direct debit payment
 * `updateMandateAlias` - Update a direct debit mandate alias
 
-### Open Banking
+### openBanking
 
 * `getListOfAspsps` - Get list of ASPSPs / Banks
 * `getPaymentDetails` - Get Payment Details
 * `newPaymentRequest` - Create a Fire Open Payment request
 
-### Payee Bank Accounts
+### payeeBankAccounts
 
 * `getPayees` - List all Payee Bank Accounts
 
-### Payment Batches
+### paymentBatches
 
-* `addBankTransferBatchPayment` - Add payment for an bank transfers
-* `addInternalTransferBatchPayment` - Add payment for an internal transfers
+* `addBankTransferBatchPayment` - Add a bank transfer payment to the batch.
+* `addInternalTransferBatchPayment` - Add an internal transfer payment to the batch
 * `cancelBatchPayment` - Cancel a batch
-* `createBatchPayment` - Create a new bath of payments
+* `createBatchPayment` - Create a new batch of payments
 * `deleteBankTransferBatchPayment` - Remove a Payment from the Batch (Bank Transfers)
 * `deleteInternalTransferBatchPayment` - Remove a Payment from the Batch (Internal Transfer)
 * `getBatches` - List batches
@@ -110,16 +114,28 @@ sdk.api.createApiApplication(req).then((res: CreateApiApplicationResponse | Axio
 * `getListofApproversForBatch` - List Approvers for a Batch
 * `submitBatch` - Submit a batch for approval
 
-### Transactions
+### transactions
 
-* `getTransactionsById` - List transactions for an account
-* `getTransactionsFilteredById` - Filtered list of transactions for an account
+* `getTransactionsByIdv1` - List transactions for an account (v1)
+* `getTransactionsByIdv3` - List transactions for an account (v3)
+* `getTransactionsFilteredById` - Filtered list of transactions for an account (v1)
 
-### Users
+### users
 
 * `getUser` - Returns details of a specific fire.com user.
 * `getUsers` - Returns list of all users on your fire.com account
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

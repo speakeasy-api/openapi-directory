@@ -1,0 +1,15 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { GoogleCloudBillingBudgetsV1beta1BudgetInput } from "./googlecloudbillingbudgetsv1beta1budget";
+/**
+ * Request for UpdateBudget
+ */
+export declare class GoogleCloudBillingBudgetsV1beta1UpdateBudgetRequestInput extends SpeakeasyBase {
+    /**
+     * A budget is a plan that describes what you expect to spend on Cloud projects, plus the rules to execute as spend is tracked against that plan, (for example, send an alert when 90% of the target spend is met). The budget time period is configurable, with options such as month (default), quarter, year, or custom time period.
+     */
+    budget?: GoogleCloudBillingBudgetsV1beta1BudgetInput;
+    /**
+     * Optional. Indicates which fields in the provided budget to update. Read-only fields (such as `name`) cannot be changed. If this is not provided, then only fields with non-default values from the request are updated. See https://developers.google.com/protocol-buffers/docs/proto3#default for more details about default values.
+     */
+    updateMask?: string;
+}

@@ -1,19 +1,19 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetAffectedGenomicModelsUsingGetRequest, GetAffectedGenomicModelsUsingGetResponse } from "openapi/src/sdk/models/operations";
+import {
+  GETAffectedGenomicModelsUsingGETRequest,
+  GETAffectedGenomicModelsUsingGETResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: GetAffectedGenomicModelsUsingGetRequest = {
-  pathParams: {
-    taxonId: "sit",
-  },
+
+const req: GETAffectedGenomicModelsUsingGETRequest = {
+  taxonId: "corrupti",
 };
 
-sdk.agr.getAffectedGenomicModelsUsingGet(req).then((res: GetAffectedGenomicModelsUsingGetResponse | AxiosError) => {
+sdk.agr.getAffectedGenomicModelsUsingGET(req).then((res: GETAffectedGenomicModelsUsingGETResponse | AxiosError) => {
    // handle response
 });
 ```

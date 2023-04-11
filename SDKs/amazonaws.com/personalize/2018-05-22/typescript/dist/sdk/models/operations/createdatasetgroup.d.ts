@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum CreateDatasetGroupXAmzTargetEnum {
     AmazonPersonalizeCreateDatasetGroup = "AmazonPersonalize.CreateDatasetGroup"
 }
-export declare class CreateDatasetGroupHeaders extends SpeakeasyBase {
+export declare class CreateDatasetGroupRequest extends SpeakeasyBase {
+    createDatasetGroupRequest: shared.CreateDatasetGroupRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,28 @@ export declare class CreateDatasetGroupHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: CreateDatasetGroupXAmzTargetEnum;
 }
-export declare class CreateDatasetGroupRequest extends SpeakeasyBase {
-    headers: CreateDatasetGroupHeaders;
-    request: shared.CreateDatasetGroupRequest;
-}
 export declare class CreateDatasetGroupResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     createDatasetGroupResponse?: shared.CreateDatasetGroupResponse;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
-    resourceAlreadyExistsException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceAlreadyExistsException
+     */
+    resourceAlreadyExistsException?: any;
+    /**
+     * TooManyTagsException
+     */
+    tooManyTagsException?: any;
 }

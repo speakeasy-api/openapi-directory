@@ -1,18 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetLicenseTemplatePathParams extends SpeakeasyBase {
-    licenseTemplateNumber: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetLicenseTemplateSecurity extends SpeakeasyBase {
-    basicAuth: shared.SchemeBasicAuth;
+    password: string;
+    username: string;
 }
 export declare class GetLicenseTemplateRequest extends SpeakeasyBase {
-    pathParams: GetLicenseTemplatePathParams;
-    security: GetLicenseTemplateSecurity;
+    /**
+     * Unique number (across all Products of a Vendor) that identifies the License Template. Vendor can assign this number when creating a License Template or let NetLicensing generate one. Read-only after creation of the first License from this License Template.
+     */
+    licenseTemplateNumber: string;
 }
 export declare class GetLicenseTemplateResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    netlicensing?: any;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful request
+     */
+    netlicensing?: shared.Netlicensing;
 }

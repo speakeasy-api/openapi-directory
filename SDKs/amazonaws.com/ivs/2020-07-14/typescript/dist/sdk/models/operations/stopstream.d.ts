@@ -1,5 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class StopStreamHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class StopStreamRequestBody extends SpeakeasyBase {
+    /**
+     * ARN of the channel for which the stream is to be stopped.
+     */
+    channelArn: string;
+}
+export declare class StopStreamRequest extends SpeakeasyBase {
+    requestBody: StopStreamRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -8,20 +16,32 @@ export declare class StopStreamHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class StopStreamRequestBody extends SpeakeasyBase {
-    channelArn: string;
-}
-export declare class StopStreamRequest extends SpeakeasyBase {
-    headers: StopStreamHeaders;
-    request: StopStreamRequestBody;
-}
 export declare class StopStreamResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ChannelNotBroadcasting
+     */
     channelNotBroadcasting?: any;
     contentType: string;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * Success
+     */
     stopStreamResponse?: Record<string, any>;
+    /**
+     * StreamUnavailable
+     */
     streamUnavailable?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

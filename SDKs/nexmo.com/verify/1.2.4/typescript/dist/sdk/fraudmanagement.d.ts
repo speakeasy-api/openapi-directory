@@ -1,5 +1,9 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Fraud Management
+ */
 export declare class FraudManagement {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +13,9 @@ export declare class FraudManagement {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * networkUnblock - Request a network unblock
+     * Request a network unblock
      *
+     * @remarks
      * Request to unblock a network that has been blocked due to potential fraud detection
      * <div class="Vlt-callout Vlt-callout--critical">
      *   <div class="Vlt-callout__content">
@@ -18,6 +23,6 @@ export declare class FraudManagement {
      *     Please contact Sales to enable the Network Unblock API for your account.
      *   </div>
      * </div>
-    **/
-    networkUnblock(req: operations.NetworkUnblockRequest, config?: AxiosRequestConfig): Promise<operations.NetworkUnblockResponse>;
+     */
+    networkUnblock(req: shared.NetworkUnblock, config?: AxiosRequestConfig): Promise<operations.NetworkUnblockResponse>;
 }

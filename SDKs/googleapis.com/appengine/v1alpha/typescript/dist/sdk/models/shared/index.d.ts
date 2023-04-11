@@ -12,7 +12,6 @@ export * from "./location";
 export * from "./managedcertificate";
 export * from "./operation";
 export * from "./resourcerecord";
-export * from "./security";
 export * from "./sslsettings";
 export * from "./status";
 export * from "./xgafvenum";

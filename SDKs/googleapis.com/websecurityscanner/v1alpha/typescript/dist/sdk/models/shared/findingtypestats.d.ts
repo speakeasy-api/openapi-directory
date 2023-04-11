@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The finding type associated with the stats.
+ */
 export declare enum FindingTypeStatsFindingTypeEnum {
     FindingTypeUnspecified = "FINDING_TYPE_UNSPECIFIED",
     MixedContent = "MIXED_CONTENT",
@@ -15,8 +18,14 @@ export declare enum FindingTypeStatsFindingTypeEnum {
 }
 /**
  * A FindingTypeStats resource represents stats regarding a specific FindingType of Findings under a given ScanRun.
-**/
+ */
 export declare class FindingTypeStats extends SpeakeasyBase {
+    /**
+     * The count of findings belonging to this finding type.
+     */
     findingCount?: number;
+    /**
+     * The finding type associated with the stats.
+     */
     findingType?: FindingTypeStatsFindingTypeEnum;
 }

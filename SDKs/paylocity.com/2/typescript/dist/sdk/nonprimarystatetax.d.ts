@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class NonPrimaryStateTax {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +9,10 @@ export declare class NonPrimaryStateTax {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * addOrUpdateNonPrimaryStateTax - Add/update non-primary state tax
+     * Add/update non-primary state tax
      *
+     * @remarks
      * Sends new or updated employee non-primary state tax information directly to Web Pay.
-    **/
-    addOrUpdateNonPrimaryStateTax(req: operations.AddOrUpdateNonPrimaryStateTaxRequest, config?: AxiosRequestConfig): Promise<operations.AddOrUpdateNonPrimaryStateTaxResponse>;
+     */
+    addOrUpdateNonPrimaryStateTax(req: operations.AddOrUpdateNonPrimaryStateTaxRequest, security: operations.AddOrUpdateNonPrimaryStateTaxSecurity, config?: AxiosRequestConfig): Promise<operations.AddOrUpdateNonPrimaryStateTaxResponse>;
 }

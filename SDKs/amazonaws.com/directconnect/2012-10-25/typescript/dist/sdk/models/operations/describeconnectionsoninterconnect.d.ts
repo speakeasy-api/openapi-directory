@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeConnectionsOnInterconnectXAmzTargetEnum {
     OvertureServiceDescribeConnectionsOnInterconnect = "OvertureService.DescribeConnectionsOnInterconnect"
 }
-export declare class DescribeConnectionsOnInterconnectHeaders extends SpeakeasyBase {
+export declare class DescribeConnectionsOnInterconnectRequest extends SpeakeasyBase {
+    describeConnectionsOnInterconnectRequest: shared.DescribeConnectionsOnInterconnectRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class DescribeConnectionsOnInterconnectHeaders extends SpeakeasyB
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeConnectionsOnInterconnectXAmzTargetEnum;
 }
-export declare class DescribeConnectionsOnInterconnectRequest extends SpeakeasyBase {
-    headers: DescribeConnectionsOnInterconnectHeaders;
-    request: shared.DescribeConnectionsOnInterconnectRequest;
-}
 export declare class DescribeConnectionsOnInterconnectResponse extends SpeakeasyBase {
+    /**
+     * Success
+     */
     connections?: shared.Connections;
     contentType: string;
+    /**
+     * DirectConnectClientException
+     */
     directConnectClientException?: any;
+    /**
+     * DirectConnectServerException
+     */
     directConnectServerException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

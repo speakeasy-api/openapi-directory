@@ -1,14 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreateMemberElectionPathParams extends SpeakeasyBase {
-    planId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class CreateMemberElectionRequest extends SpeakeasyBase {
-    pathParams: CreateMemberElectionPathParams;
-    request: shared.MemberElectionCreateRequest;
+    memberElectionCreateRequest: shared.MemberElectionCreateRequest;
+    /**
+     * The unique identifier of the coverage plan in Noyo
+     */
+    planId: string;
 }
 export declare class CreateMemberElectionResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful Response - Returns the new Member Election
+     */
     memberElectionResult?: shared.MemberElectionResult;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

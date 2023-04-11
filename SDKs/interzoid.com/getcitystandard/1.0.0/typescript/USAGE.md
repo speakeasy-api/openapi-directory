@@ -1,17 +1,17 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetcitystandardRequest, GetcitystandardResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetcitystandardRequest,
+  GetcitystandardResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetcitystandardRequest = {
-  queryParams: {
-    city: "sit",
-    license: "voluptas",
-  },
+  city: "Laruecester",
+  license: "quibusdam",
 };
 
 sdk.cityDataStandardization.getcitystandard(req).then((res: GetcitystandardResponse | AxiosError) => {

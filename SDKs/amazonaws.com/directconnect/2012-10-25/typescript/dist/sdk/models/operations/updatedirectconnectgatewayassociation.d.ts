@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateDirectConnectGatewayAssociationXAmzTargetEnum {
     OvertureServiceUpdateDirectConnectGatewayAssociation = "OvertureService.UpdateDirectConnectGatewayAssociation"
 }
-export declare class UpdateDirectConnectGatewayAssociationHeaders extends SpeakeasyBase {
+export declare class UpdateDirectConnectGatewayAssociationRequest extends SpeakeasyBase {
+    updateDirectConnectGatewayAssociationRequest: shared.UpdateDirectConnectGatewayAssociationRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class UpdateDirectConnectGatewayAssociationHeaders extends Speake
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateDirectConnectGatewayAssociationXAmzTargetEnum;
 }
-export declare class UpdateDirectConnectGatewayAssociationRequest extends SpeakeasyBase {
-    headers: UpdateDirectConnectGatewayAssociationHeaders;
-    request: shared.UpdateDirectConnectGatewayAssociationRequest;
-}
 export declare class UpdateDirectConnectGatewayAssociationResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * DirectConnectClientException
+     */
     directConnectClientException?: any;
+    /**
+     * DirectConnectServerException
+     */
     directConnectServerException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     updateDirectConnectGatewayAssociationResult?: shared.UpdateDirectConnectGatewayAssociationResult;
 }

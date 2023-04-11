@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeSchemaXAmzTargetEnum {
     AmazonPersonalizeDescribeSchema = "AmazonPersonalize.DescribeSchema"
 }
-export declare class DescribeSchemaHeaders extends SpeakeasyBase {
+export declare class DescribeSchemaRequest extends SpeakeasyBase {
+    describeSchemaRequest: shared.DescribeSchemaRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class DescribeSchemaHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeSchemaXAmzTargetEnum;
 }
-export declare class DescribeSchemaRequest extends SpeakeasyBase {
-    headers: DescribeSchemaHeaders;
-    request: shared.DescribeSchemaRequest;
-}
 export declare class DescribeSchemaResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeSchemaResponse?: shared.DescribeSchemaResponse;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
 }

@@ -1,17 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetConnectorPathParams extends SpeakeasyBase {
-    id: string;
-}
-export declare class GetConnectorQueryParams extends SpeakeasyBase {
-    includeEvse?: boolean;
-    includeOrganization?: boolean;
-    includeRate?: boolean;
-}
+import { AxiosResponse } from "axios";
 export declare class GetConnectorRequest extends SpeakeasyBase {
-    pathParams: GetConnectorPathParams;
-    queryParams: GetConnectorQueryParams;
+    /**
+     * ID of connector that needs to be fetched
+     */
+    id: string;
+    /**
+     * Populate evse
+     */
+    includeEvse?: boolean;
+    /**
+     * Populate organization
+     */
+    includeOrganization?: boolean;
+    /**
+     * Populate rate
+     */
+    includeRate?: boolean;
 }
 export declare class GetConnectorResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

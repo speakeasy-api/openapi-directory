@@ -1,0 +1,8 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * A complex type that contains a <code>Timestamp</code> value and <code>Message</code> for changes that you make to an accelerator in Global Accelerator. Messages stored here provide progress or error information when you update an accelerator from IPv4 to dual-stack, or from dual-stack to IPv4. Global Accelerator stores a maximum of ten event messages.
+ */
+export declare class AcceleratorEvent extends SpeakeasyBase {
+    message?: string;
+    timestamp?: Date;
+}

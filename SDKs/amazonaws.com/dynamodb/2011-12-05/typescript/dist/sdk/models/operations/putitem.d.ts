@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum PutItemXAmzTargetEnum {
-    DynamoDb20111205PutItem = "DynamoDB_20111205.PutItem"
+    DynamoDB20111205PutItem = "DynamoDB_20111205.PutItem"
 }
-export declare class PutItemHeaders extends SpeakeasyBase {
+export declare class PutItemRequest extends SpeakeasyBase {
+    putItemInput: shared.PutItemInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class PutItemHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: PutItemXAmzTargetEnum;
 }
-export declare class PutItemRequest extends SpeakeasyBase {
-    headers: PutItemHeaders;
-    request: shared.PutItemInput;
-}
 export declare class PutItemResponse extends SpeakeasyBase {
+    /**
+     * ConditionalCheckFailedException
+     */
     conditionalCheckFailedException?: any;
     contentType: string;
+    /**
+     * InternalServerError
+     */
     internalServerError?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * ProvisionedThroughputExceededException
+     */
     provisionedThroughputExceededException?: any;
+    /**
+     * Success
+     */
     putItemOutput?: shared.PutItemOutput;
-    requestLimitExceeded?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * RequestLimitExceeded
+     */
+    requestLimitExceeded?: any;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
 }

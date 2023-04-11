@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbSecurityGroup } from "./dbsecuritygroup";
-export declare class RevokeDbSecurityGroupIngressResult extends SpeakeasyBase {
-    dbSecurityGroup?: DbSecurityGroup;
+import { DBSecurityGroup } from "./dbsecuritygroup";
+/**
+ * Success
+ */
+export declare class RevokeDBSecurityGroupIngressResult extends SpeakeasyBase {
+    dbSecurityGroup?: DBSecurityGroup;
 }

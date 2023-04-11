@@ -4,6 +4,9 @@ export declare enum HeartbeatResponseStatusEnum {
     Up = "UP",
     Down = "DOWN"
 }
+/**
+ * OK
+ */
 export declare class HeartbeatResponse extends SpeakeasyBase {
     error?: ErrorT;
     status?: HeartbeatResponseStatusEnum;

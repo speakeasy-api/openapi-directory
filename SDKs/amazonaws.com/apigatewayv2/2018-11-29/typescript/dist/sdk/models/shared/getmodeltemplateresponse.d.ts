@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class GetModelTemplateResponse extends SpeakeasyBase {
-    value?: Record<string, any>;
+    value?: string;
 }

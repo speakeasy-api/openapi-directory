@@ -1,13 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetPermissionGroupsPathParams extends SpeakeasyBase {
-    productId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetPermissionGroupsRequest extends SpeakeasyBase {
-    pathParams: GetPermissionGroupsPathParams;
+    /**
+     * The identifier of the Product.
+     */
+    productId: string;
 }
 export declare class GetPermissionGroupsResponse extends SpeakeasyBase {
     contentType: string;
+    permissionGroupModelHaljsons?: shared.PermissionGroupModelHaljson[];
     permissionGroupModels?: shared.PermissionGroupModel[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostRegisterImageActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTRegisterImageActionEnum {
     RegisterImage = "RegisterImage"
 }
-export declare enum PostRegisterImageVersionEnum {
+export declare enum POSTRegisterImageVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostRegisterImageQueryParams extends SpeakeasyBase {
-    action: PostRegisterImageActionEnum;
-    version: PostRegisterImageVersionEnum;
-}
-export declare class PostRegisterImageHeaders extends SpeakeasyBase {
+export declare class POSTRegisterImageRequest extends SpeakeasyBase {
+    action: POSTRegisterImageActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTRegisterImageVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostRegisterImageHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostRegisterImageRequest extends SpeakeasyBase {
-    queryParams: PostRegisterImageQueryParams;
-    headers: PostRegisterImageHeaders;
-    request?: Uint8Array;
-}
-export declare class PostRegisterImageResponse extends SpeakeasyBase {
+export declare class POSTRegisterImageResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

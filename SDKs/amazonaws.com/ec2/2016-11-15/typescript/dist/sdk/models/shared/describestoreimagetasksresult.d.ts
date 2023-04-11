@@ -1,5 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The information about the AMI store task, including the progress of the task.
+ */
+export declare class DescribeStoreImageTasksResultStoreImageTaskResults extends SpeakeasyBase {
+    amiId?: string;
+    bucket?: string;
+    progressPercentage?: number;
+    s3objectKey?: string;
+    storeTaskFailureReason?: string;
+    storeTaskState?: string;
+    taskStartTime?: Date;
+}
+/**
+ * Success
+ */
 export declare class DescribeStoreImageTasksResult extends SpeakeasyBase {
-    nextToken?: Record<string, any>;
-    storeImageTaskResults?: Record<string, any>;
+    nextToken?: string;
+    storeImageTaskResults?: DescribeStoreImageTasksResultStoreImageTaskResults[];
 }

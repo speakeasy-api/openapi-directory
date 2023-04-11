@@ -1,0 +1,112 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { CommuteFilter } from "./commutefilter";
+import { CompensationFilter } from "./compensationfilter";
+import { LocationFilter } from "./locationfilter";
+import { TimestampRange } from "./timestamprange";
+export declare enum JobQueryEmploymentTypesEnum {
+    EmploymentTypeUnspecified = "EMPLOYMENT_TYPE_UNSPECIFIED",
+    FullTime = "FULL_TIME",
+    PartTime = "PART_TIME",
+    Contractor = "CONTRACTOR",
+    ContractToHire = "CONTRACT_TO_HIRE",
+    Temporary = "TEMPORARY",
+    Intern = "INTERN",
+    Volunteer = "VOLUNTEER",
+    PerDiem = "PER_DIEM",
+    FlyInFlyOut = "FLY_IN_FLY_OUT",
+    OtherEmploymentType = "OTHER_EMPLOYMENT_TYPE"
+}
+export declare enum JobQueryJobCategoriesEnum {
+    JobCategoryUnspecified = "JOB_CATEGORY_UNSPECIFIED",
+    AccountingAndFinance = "ACCOUNTING_AND_FINANCE",
+    AdministrativeAndOffice = "ADMINISTRATIVE_AND_OFFICE",
+    AdvertisingAndMarketing = "ADVERTISING_AND_MARKETING",
+    AnimalCare = "ANIMAL_CARE",
+    ArtFashionAndDesign = "ART_FASHION_AND_DESIGN",
+    BusinessOperations = "BUSINESS_OPERATIONS",
+    CleaningAndFacilities = "CLEANING_AND_FACILITIES",
+    ComputerAndIt = "COMPUTER_AND_IT",
+    Construction = "CONSTRUCTION",
+    CustomerService = "CUSTOMER_SERVICE",
+    Education = "EDUCATION",
+    EntertainmentAndTravel = "ENTERTAINMENT_AND_TRAVEL",
+    FarmingAndOutdoors = "FARMING_AND_OUTDOORS",
+    Healthcare = "HEALTHCARE",
+    HumanResources = "HUMAN_RESOURCES",
+    InstallationMaintenanceAndRepair = "INSTALLATION_MAINTENANCE_AND_REPAIR",
+    Legal = "LEGAL",
+    Management = "MANAGEMENT",
+    ManufacturingAndWarehouse = "MANUFACTURING_AND_WAREHOUSE",
+    MediaCommunicationsAndWriting = "MEDIA_COMMUNICATIONS_AND_WRITING",
+    OilGasAndMining = "OIL_GAS_AND_MINING",
+    PersonalCareAndServices = "PERSONAL_CARE_AND_SERVICES",
+    ProtectiveServices = "PROTECTIVE_SERVICES",
+    RealEstate = "REAL_ESTATE",
+    RestaurantAndHospitality = "RESTAURANT_AND_HOSPITALITY",
+    SalesAndRetail = "SALES_AND_RETAIL",
+    ScienceAndEngineering = "SCIENCE_AND_ENGINEERING",
+    SocialServicesAndNonProfit = "SOCIAL_SERVICES_AND_NON_PROFIT",
+    SportsFitnessAndRecreation = "SPORTS_FITNESS_AND_RECREATION",
+    TransportationAndLogistics = "TRANSPORTATION_AND_LOGISTICS"
+}
+/**
+ * The query required to perform a search query.
+ */
+export declare class JobQuery extends SpeakeasyBase {
+    /**
+     * Parameters needed for commute search.
+     */
+    commuteFilter?: CommuteFilter;
+    /**
+     * This filter specifies the company entities to search against. If a value isn't specified, jobs are searched for against all companies. If multiple values are specified, jobs are searched against the companies specified. The format is "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}". For example, "projects/foo/tenants/bar/companies/baz". At most 20 company filters are allowed.
+     */
+    companies?: string[];
+    /**
+     * This filter specifies the company Company.display_name of the jobs to search against. The company name must match the value exactly. Alternatively, the value being searched for can be wrapped in different match operators. `SUBSTRING_MATCH([value])` The company name must contain a case insensitive substring match of the value. Using this function may increase latency. Sample Value: `SUBSTRING_MATCH(google)` `MULTI_WORD_TOKEN_MATCH([value])` The value will be treated as a multi word token and the company name must contain a case insensitive match of the value. Using this function may increase latency. Sample Value: `MULTI_WORD_TOKEN_MATCH(google)` If a value isn't specified, jobs within the search results are associated with any company. If multiple values are specified, jobs within the search results may be associated with any of the specified companies. At most 20 company display name filters are allowed.
+     */
+    companyDisplayNames?: string[];
+    /**
+     * Filter on job compensation type and amount.
+     */
+    compensationFilter?: CompensationFilter;
+    /**
+     * This filter specifies a structured syntax to match against the Job.custom_attributes marked as `filterable`. The syntax for this expression is a subset of SQL syntax. Supported operators are: `=`, `!=`, `<`, `<=`, `>`, and `>=` where the left of the operator is a custom field key and the right of the operator is a number or a quoted string. You must escape backslash (\\) and quote (\") characters. Supported functions are `LOWER([field_name])` to perform a case insensitive match and `EMPTY([field_name])` to filter on the existence of a key. Boolean expressions (AND/OR/NOT) are supported up to 3 levels of nesting (for example, "((A AND B AND C) OR NOT D) AND E"), a maximum of 100 comparisons or functions are allowed in the expression. The expression must be < 10000 bytes in length. Sample Query: `(LOWER(driving_license)="class \"a\"" OR EMPTY(driving_license)) AND driving_years > 10`
+     */
+    customAttributeFilter?: string;
+    /**
+     * This flag controls the spell-check feature. If false, the service attempts to correct a misspelled query, for example, "enginee" is corrected to "engineer". Defaults to false: a spell check is performed.
+     */
+    disableSpellCheck?: boolean;
+    /**
+     * The employment type filter specifies the employment type of jobs to search against, such as EmploymentType.FULL_TIME. If a value isn't specified, jobs in the search results includes any employment type. If multiple values are specified, jobs in the search results include any of the specified employment types.
+     */
+    employmentTypes?: JobQueryEmploymentTypesEnum[];
+    /**
+     * This filter specifies a list of job names to be excluded during search. At most 400 excluded job names are allowed.
+     */
+    excludedJobs?: string[];
+    /**
+     * The category filter specifies the categories of jobs to search against. See JobCategory for more information. If a value isn't specified, jobs from any category are searched against. If multiple values are specified, jobs from any of the specified categories are searched against.
+     */
+    jobCategories?: JobQueryJobCategoriesEnum[];
+    /**
+     * This filter specifies the locale of jobs to search against, for example, "en-US". If a value isn't specified, the search results can contain jobs in any locale. Language codes should be in BCP-47 format, such as "en-US" or "sr-Latn". For more information, see [Tags for Identifying Languages](https://tools.ietf.org/html/bcp47). At most 10 language code filters are allowed.
+     */
+    languageCodes?: string[];
+    /**
+     * The location filter specifies geo-regions containing the jobs to search against. See LocationFilter for more information. If a location value isn't specified, jobs fitting the other search criteria are retrieved regardless of where they're located. If multiple values are specified, jobs are retrieved from any of the specified locations. If different values are specified for the LocationFilter.distance_in_miles parameter, the maximum provided distance is used for all locations. At most 5 location filters are allowed.
+     */
+    locationFilters?: LocationFilter[];
+    /**
+     * Message representing a period of time between two timestamps.
+     */
+    publishTimeRange?: TimestampRange;
+    /**
+     * The query string that matches against the job title, description, and location fields. The maximum number of allowed characters is 255.
+     */
+    query?: string;
+    /**
+     * The language code of query. For example, "en-US". This field helps to better interpret the query. If a value isn't specified, the query language code is automatically detected, which may not be accurate. Language code should be in BCP-47 format, such as "en-US" or "sr-Latn". For more information, see [Tags for Identifying Languages](https://tools.ietf.org/html/bcp47).
+     */
+    queryLanguageCode?: string;
+}

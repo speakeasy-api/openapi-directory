@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Describes an individual setting that controls some aspect of MemoryDB behavior.
-**/
+ */
 export declare class Parameter extends SpeakeasyBase {
     allowedValues?: string;
     dataType?: string;

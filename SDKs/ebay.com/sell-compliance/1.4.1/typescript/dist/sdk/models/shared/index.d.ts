@@ -7,6 +7,5 @@ export * from "./correctiverecommendations";
 export * from "./namevaluelist";
 export * from "./pagedcomplianceviolationcollection";
 export * from "./productrecommendation";
-export * from "./security";
 export * from "./suppressviolationrequest";
 export * from "./variationdetails";

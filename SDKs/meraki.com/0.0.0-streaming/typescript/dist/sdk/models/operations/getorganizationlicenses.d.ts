@@ -1,0 +1,50 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
+/**
+ * Filter the licenses to those in a particular state. Can be one of 'active', 'expired', 'expiring', 'recentlyQueued', 'unused' or 'unusedActive'
+ */
+export declare enum GetOrganizationLicensesStateEnum {
+    Active = "active",
+    Expired = "expired",
+    Expiring = "expiring",
+    RecentlyQueued = "recentlyQueued",
+    Unused = "unused",
+    UnusedActive = "unusedActive"
+}
+export declare class GetOrganizationLicensesRequest extends SpeakeasyBase {
+    /**
+     * Filter the licenses to those assigned to a particular device
+     */
+    deviceSerial?: string;
+    /**
+     * A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+     */
+    endingBefore?: string;
+    /**
+     * Filter the licenses to those assigned in a particular network
+     */
+    networkId?: string;
+    organizationId: string;
+    /**
+     * The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
+     */
+    perPage?: number;
+    /**
+     * A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+     */
+    startingAfter?: string;
+    /**
+     * Filter the licenses to those in a particular state. Can be one of 'active', 'expired', 'expiring', 'recentlyQueued', 'unused' or 'unusedActive'
+     */
+    state?: GetOrganizationLicensesStateEnum;
+}
+export declare class GetOrganizationLicensesResponse extends SpeakeasyBase {
+    contentType: string;
+    headers?: Record<string, string[]>;
+    statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful operation
+     */
+    getOrganizationLicenses200ApplicationJSONObjects?: Record<string, any>[];
+}

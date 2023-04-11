@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbInstance } from "./dbinstance";
+import { DBInstance } from "./dbinstance";
+/**
+ * Success
+ */
 export declare class PromoteReadReplicaResult extends SpeakeasyBase {
-    dbInstance?: DbInstance;
+    dbInstance?: DBInstance;
 }

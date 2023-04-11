@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostRegisterTransitGatewayMulticastGroupSourcesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTRegisterTransitGatewayMulticastGroupSourcesActionEnum {
     RegisterTransitGatewayMulticastGroupSources = "RegisterTransitGatewayMulticastGroupSources"
 }
-export declare enum PostRegisterTransitGatewayMulticastGroupSourcesVersionEnum {
+export declare enum POSTRegisterTransitGatewayMulticastGroupSourcesVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostRegisterTransitGatewayMulticastGroupSourcesQueryParams extends SpeakeasyBase {
-    action: PostRegisterTransitGatewayMulticastGroupSourcesActionEnum;
-    version: PostRegisterTransitGatewayMulticastGroupSourcesVersionEnum;
-}
-export declare class PostRegisterTransitGatewayMulticastGroupSourcesHeaders extends SpeakeasyBase {
+export declare class POSTRegisterTransitGatewayMulticastGroupSourcesRequest extends SpeakeasyBase {
+    action: POSTRegisterTransitGatewayMulticastGroupSourcesActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTRegisterTransitGatewayMulticastGroupSourcesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostRegisterTransitGatewayMulticastGroupSourcesHeaders exte
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostRegisterTransitGatewayMulticastGroupSourcesRequest extends SpeakeasyBase {
-    queryParams: PostRegisterTransitGatewayMulticastGroupSourcesQueryParams;
-    headers: PostRegisterTransitGatewayMulticastGroupSourcesHeaders;
-    request?: Uint8Array;
-}
-export declare class PostRegisterTransitGatewayMulticastGroupSourcesResponse extends SpeakeasyBase {
+export declare class POSTRegisterTransitGatewayMulticastGroupSourcesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

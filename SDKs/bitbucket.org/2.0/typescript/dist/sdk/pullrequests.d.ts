@@ -1,5 +1,14 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Pull requests are a feature that makes it easier for developers
+ *
+ * @remarks
+ * to collaborate using Bitbucket. They provide a user-friendly web
+ * interface for discussing proposed changes before integrating them
+ * into the official project.
+ *
+ */
 export declare class Pullrequests {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,25 +18,43 @@ export declare class Pullrequests {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsername - Removes a default reviewer from the repository.
-    **/
-    deleteRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsername(req: operations.DeleteRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameRequest, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameResponse>;
+     * Remove a user from the default reviewers
+     *
+     * @remarks
+     * Removes a default reviewer from the repository.
+     */
+    deleteRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsername(req: operations.DeleteRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameRequest, security: operations.DeleteRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameResponse>;
     /**
-     * deleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdApprove - Redact the authenticated user's approval of the specified pull
+     * Unapprove a pull request
+     *
+     * @remarks
+     * Redact the authenticated user's approval of the specified pull
      * request.
-    **/
-    deleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdApprove(req: operations.DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdApproveRequest, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdApproveResponse>;
+     */
+    deleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdApprove(req: operations.DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdApproveRequest, security: operations.DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdApproveSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdApproveResponse>;
     /**
-     * deleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentId - Deletes a specific pull request comment.
-    **/
-    deleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentId(req: operations.DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdResponse>;
-    deleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdRequestChanges(req: operations.DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdRequestChangesRequest, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdRequestChangesResponse>;
+     * Delete a comment on a pull request
+     *
+     * @remarks
+     * Deletes a specific pull request comment.
+     */
+    deleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentId(req: operations.DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdRequest, security: operations.DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdResponse>;
     /**
-     * getPullrequestsForCommit - Returns a paginated list of all pull requests as part of which this commit was reviewed. Pull Request Commit Links app must be installed first before using this API; installation automatically occurs when 'Go to pull request' is clicked from the web interface for a commit's details.
-    **/
+     * Remove change request for a pull request
+     */
+    deleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdRequestChanges(req: operations.DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdRequestChangesRequest, security: operations.DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdRequestChangesSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdRequestChangesResponse>;
+    /**
+     * List pull requests that contain a commit
+     *
+     * @remarks
+     * Returns a paginated list of all pull requests as part of which this commit was reviewed. Pull Request Commit Links app must be installed first before using this API; installation automatically occurs when 'Go to pull request' is clicked from the web interface for a commit's details.
+     */
     getPullrequestsForCommit(req: operations.GetPullrequestsForCommitRequest, config?: AxiosRequestConfig): Promise<operations.GetPullrequestsForCommitResponse>;
     /**
-     * getPullrequestsSelectedUser - Returns all pull requests authored by the specified user.
+     * List pull requests for a user
+     *
+     * @remarks
+     * Returns all pull requests authored by the specified user.
      *
      * By default only open pull requests are returned. This can be controlled
      * using the `state` query parameter. To retrieve pull requests that are
@@ -35,26 +62,75 @@ export declare class Pullrequests {
      * individual state.
      *
      * This endpoint also supports filtering and sorting of the results. See
-     * [filtering and sorting](../../../../meta/filtering) for more details.
-    **/
-    getPullrequestsSelectedUser(req: operations.GetPullrequestsSelectedUserRequest, config?: AxiosRequestConfig): Promise<operations.GetPullrequestsSelectedUserResponse>;
+     * [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering) for more details.
+     */
+    getPullrequestsSelectedUser(req: operations.GetPullrequestsSelectedUserRequest, security: operations.GetPullrequestsSelectedUserSecurity, config?: AxiosRequestConfig): Promise<operations.GetPullrequestsSelectedUserResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugDefaultReviewers - Returns the repository's default reviewers.
+     * List default reviewers
+     *
+     * @remarks
+     * Returns the repository's default reviewers.
      *
      * These are the users that are automatically added as reviewers on every
-     * new pull request that is created.
-    **/
-    getRepositoriesWorkspaceRepoSlugDefaultReviewers(req: operations.GetRepositoriesWorkspaceRepoSlugDefaultReviewersRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugDefaultReviewersResponse>;
+     * new pull request that is created. To obtain the repository's default reviewers
+     * as well as the default reviewers inherited from the project, use the
+     * [effective-default-reveiwers](#api-repositories-workspace-repo-slug-effective-default-reviewers-get) endpoint.
+     */
+    getRepositoriesWorkspaceRepoSlugDefaultReviewers(req: operations.GetRepositoriesWorkspaceRepoSlugDefaultReviewersRequest, security: operations.GetRepositoriesWorkspaceRepoSlugDefaultReviewersSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugDefaultReviewersResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsername - Returns the specified reviewer.
+     * Get a default reviewer
+     *
+     * @remarks
+     * Returns the specified reviewer.
      *
      * This can be used to test whether a user is among the repository's
      * default reviewers list. A 404 indicates that that specified user is not
      * a default reviewer.
-    **/
-    getRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsername(req: operations.GetRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsername(req: operations.GetRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameRequest, security: operations.GetRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugPullrequests - Returns all pull requests on the specified repository.
+     * List effective default reviewers
+     *
+     * @remarks
+     * Returns the repository's effective default reviewers. This includes both default
+     * reviewers defined at the repository level as well as those inherited from its project.
+     *
+     * These are the users that are automatically added as reviewers on every
+     * new pull request that is created.
+     *
+     * ```
+     * $ curl https://api.bitbucket.org/2.0/repositories/{workspace_slug}/{repo_slug}/effective-default-reviewers?page=1&pagelen=20
+     * {
+     *     "pagelen": 20,
+     *     "values": [
+     *         {
+     *             "user": {
+     *                 "display_name": "Patrick Wolf",
+     *                 "uuid": "{9565301a-a3cf-4b5d-88f4-dd6af8078d7e}"
+     *             },
+     *             "reviewer_type": "project",
+     *             "type": "default_reviewer",
+     *         },
+     *         {
+     *             "user": {
+     *                 "display_name": "Davis Lee",
+     *                 "uuid": "{f0e0e8e9-66c1-4b85-a784-44a9eb9ef1a6}"
+     *             },
+     *             "reviewer_type": "repository",
+     *             "type": "default_reviewer",
+     *         }
+     *     ],
+     *     "page": 1,
+     *     "size": 2
+     * }
+     * ```
+     */
+    getRepositoriesWorkspaceRepoSlugEffectiveDefaultReviewers(req: operations.GetRepositoriesWorkspaceRepoSlugEffectiveDefaultReviewersRequest, security: operations.GetRepositoriesWorkspaceRepoSlugEffectiveDefaultReviewersSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugEffectiveDefaultReviewersResponse>;
+    /**
+     * List pull requests
+     *
+     * @remarks
+     * Returns all pull requests on the specified repository.
      *
      * By default only open pull requests are returned. This can be controlled
      * using the `state` query parameter. To retrieve pull requests that are
@@ -62,11 +138,14 @@ export declare class Pullrequests {
      * individual state.
      *
      * This endpoint also supports filtering and sorting of the results. See
-     * [filtering and sorting](../../../../meta/filtering) for more details.
-    **/
-    getRepositoriesWorkspaceRepoSlugPullrequests(req: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugPullrequestsResponse>;
+     * [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering) for more details.
+     */
+    getRepositoriesWorkspaceRepoSlugPullrequests(req: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsRequest, security: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugPullrequestsResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugPullrequestsActivity - Returns a paginated list of the pull request's activity log.
+     * List a pull request activity log
+     *
+     * @remarks
+     * Returns a paginated list of the pull request's activity log.
      *
      * This handler serves both a v20 and internal endpoint. The v20 endpoint
      * returns reviewer comments, updates, approvals and request changes. The internal
@@ -83,7 +162,7 @@ export declare class Pullrequests {
      *             "comment": {
      *                 "links": {
      *                     "self": {
-     *                         "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695/comments/118571088"
+     *                         "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695/comments/118571088"
      *                     },
      *                     "html": {
      *                         "href": "https://bitbucket.org/atlassian/atlaskit-mk-2/pull-requests/5695/_/diff#comment-118571088"
@@ -95,7 +174,7 @@ export declare class Pullrequests {
      *                     "id": 5695,
      *                     "links": {
      *                         "self": {
-     *                             "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
+     *                             "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
      *                         },
      *                         "html": {
      *                             "href": "https://bitbucket.org/atlassian/atlaskit-mk-2/pull-requests/5695"
@@ -115,7 +194,7 @@ export declare class Pullrequests {
      *                     "uuid": "{}",
      *                     "links": {
      *                         "self": {
-     *                             "href": "https://bitbucket.org/!api/2.0/users/%7B%7D"
+     *                             "href": "https://api.bitbucket.org/2.0/users/%7B%7D"
      *                         },
      *                         "html": {
      *                             "href": "https://bitbucket.org/%7B%7D/"
@@ -134,7 +213,7 @@ export declare class Pullrequests {
      *                     "uuid": "{}",
      *                     "links": {
      *                         "self": {
-     *                             "href": "https://bitbucket.org/!api/2.0/users/%7B%7D"
+     *                             "href": "https://api.bitbucket.org/2.0/users/%7B%7D"
      *                         },
      *                         "html": {
      *                             "href": "https://bitbucket.org/%7B%7D/"
@@ -163,7 +242,7 @@ export declare class Pullrequests {
      *                 "id": 5695,
      *                 "links": {
      *                     "self": {
-     *                         "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
+     *                         "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
      *                     },
      *                     "html": {
      *                         "href": "https://bitbucket.org/atlassian/atlaskit-mk-2/pull-requests/5695"
@@ -193,7 +272,7 @@ export declare class Pullrequests {
      *                         "hash": "6a2c16e4a152",
      *                         "links": {
      *                             "self": {
-     *                                 "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2/commit/6a2c16e4a152"
+     *                                 "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2/commit/6a2c16e4a152"
      *                             },
      *                             "html": {
      *                                 "href": "https://bitbucket.org/atlassian/atlaskit-mk-2/commits/6a2c16e4a152"
@@ -209,7 +288,7 @@ export declare class Pullrequests {
      *                         "full_name": "atlassian/atlaskit-mk-2",
      *                         "links": {
      *                             "self": {
-     *                                 "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2"
+     *                                 "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2"
      *                             },
      *                             "html": {
      *                                 "href": "https://bitbucket.org/atlassian/atlaskit-mk-2"
@@ -228,7 +307,7 @@ export declare class Pullrequests {
      *                         "hash": "728c8bad1813",
      *                         "links": {
      *                             "self": {
-     *                                 "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2/commit/728c8bad1813"
+     *                                 "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2/commit/728c8bad1813"
      *                             },
      *                             "html": {
      *                                 "href": "https://bitbucket.org/atlassian/atlaskit-mk-2/commits/728c8bad1813"
@@ -244,7 +323,7 @@ export declare class Pullrequests {
      *                         "full_name": "atlassian/atlaskit-mk-2",
      *                         "links": {
      *                             "self": {
-     *                                 "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2"
+     *                                 "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2"
      *                             },
      *                             "html": {
      *                                 "href": "https://bitbucket.org/atlassian/atlaskit-mk-2"
@@ -262,7 +341,7 @@ export declare class Pullrequests {
      *                     "uuid": "{}",
      *                     "links": {
      *                         "self": {
-     *                             "href": "https://bitbucket.org/!api/2.0/users/%7B%7D"
+     *                             "href": "https://api.bitbucket.org/2.0/users/%7B%7D"
      *                         },
      *                         "html": {
      *                             "href": "https://bitbucket.org/%7B%7D/"
@@ -282,7 +361,7 @@ export declare class Pullrequests {
      *                 "id": 5695,
      *                 "links": {
      *                     "self": {
-     *                         "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
+     *                         "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
      *                     },
      *                     "html": {
      *                         "href": "https://bitbucket.org/atlassian/atlaskit-mk-2/pull-requests/5695"
@@ -308,7 +387,7 @@ export declare class Pullrequests {
      *                     "id": 5695,
      *                     "links": {
      *                         "self": {
-     *                             "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
+     *                             "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
      *                         },
      *                         "html": {
      *                             "href": "https://bitbucket.org/atlassian/atlaskit-mk-2/pull-requests/5695"
@@ -321,7 +400,7 @@ export declare class Pullrequests {
      *                     "uuid": "{}",
      *                     "links": {
      *                         "self": {
-     *                             "href": "https://bitbucket.org/!api/2.0/users/%7B%7D"
+     *                             "href": "https://api.bitbucket.org/2.0/users/%7B%7D"
      *                         },
      *                         "html": {
      *                             "href": "https://bitbucket.org/%7B%7D/"
@@ -340,7 +419,7 @@ export declare class Pullrequests {
      *                 "id": 5695,
      *                 "links": {
      *                     "self": {
-     *                         "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
+     *                         "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
      *                     },
      *                     "html": {
      *                         "href": "https://bitbucket.org/atlassian/atlaskit-mk-2/pull-requests/5695"
@@ -352,14 +431,20 @@ export declare class Pullrequests {
      *     ]
      * }
      * ```
-    **/
-    getRepositoriesWorkspaceRepoSlugPullrequestsActivity(req: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsActivityRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugPullrequestsActivityResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugPullrequestsActivity(req: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsActivityRequest, security: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsActivitySecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugPullrequestsActivityResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestId - Returns the specified pull request.
-    **/
-    getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestId(req: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdResponse>;
+     * Get a pull request
+     *
+     * @remarks
+     * Returns the specified pull request.
+     */
+    getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestId(req: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdRequest, security: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdActivity - Returns a paginated list of the pull request's activity log.
+     * List a pull request activity log
+     *
+     * @remarks
+     * Returns a paginated list of the pull request's activity log.
      *
      * This handler serves both a v20 and internal endpoint. The v20 endpoint
      * returns reviewer comments, updates, approvals and request changes. The internal
@@ -376,7 +461,7 @@ export declare class Pullrequests {
      *             "comment": {
      *                 "links": {
      *                     "self": {
-     *                         "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695/comments/118571088"
+     *                         "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695/comments/118571088"
      *                     },
      *                     "html": {
      *                         "href": "https://bitbucket.org/atlassian/atlaskit-mk-2/pull-requests/5695/_/diff#comment-118571088"
@@ -388,7 +473,7 @@ export declare class Pullrequests {
      *                     "id": 5695,
      *                     "links": {
      *                         "self": {
-     *                             "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
+     *                             "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
      *                         },
      *                         "html": {
      *                             "href": "https://bitbucket.org/atlassian/atlaskit-mk-2/pull-requests/5695"
@@ -408,7 +493,7 @@ export declare class Pullrequests {
      *                     "uuid": "{}",
      *                     "links": {
      *                         "self": {
-     *                             "href": "https://bitbucket.org/!api/2.0/users/%7B%7D"
+     *                             "href": "https://api.bitbucket.org/2.0/users/%7B%7D"
      *                         },
      *                         "html": {
      *                             "href": "https://bitbucket.org/%7B%7D/"
@@ -427,7 +512,7 @@ export declare class Pullrequests {
      *                     "uuid": "{}",
      *                     "links": {
      *                         "self": {
-     *                             "href": "https://bitbucket.org/!api/2.0/users/%7B%7D"
+     *                             "href": "https://api.bitbucket.org/2.0/users/%7B%7D"
      *                         },
      *                         "html": {
      *                             "href": "https://bitbucket.org/%7B%7D/"
@@ -456,7 +541,7 @@ export declare class Pullrequests {
      *                 "id": 5695,
      *                 "links": {
      *                     "self": {
-     *                         "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
+     *                         "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
      *                     },
      *                     "html": {
      *                         "href": "https://bitbucket.org/atlassian/atlaskit-mk-2/pull-requests/5695"
@@ -486,7 +571,7 @@ export declare class Pullrequests {
      *                         "hash": "6a2c16e4a152",
      *                         "links": {
      *                             "self": {
-     *                                 "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2/commit/6a2c16e4a152"
+     *                                 "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2/commit/6a2c16e4a152"
      *                             },
      *                             "html": {
      *                                 "href": "https://bitbucket.org/atlassian/atlaskit-mk-2/commits/6a2c16e4a152"
@@ -502,7 +587,7 @@ export declare class Pullrequests {
      *                         "full_name": "atlassian/atlaskit-mk-2",
      *                         "links": {
      *                             "self": {
-     *                                 "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2"
+     *                                 "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2"
      *                             },
      *                             "html": {
      *                                 "href": "https://bitbucket.org/atlassian/atlaskit-mk-2"
@@ -521,7 +606,7 @@ export declare class Pullrequests {
      *                         "hash": "728c8bad1813",
      *                         "links": {
      *                             "self": {
-     *                                 "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2/commit/728c8bad1813"
+     *                                 "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2/commit/728c8bad1813"
      *                             },
      *                             "html": {
      *                                 "href": "https://bitbucket.org/atlassian/atlaskit-mk-2/commits/728c8bad1813"
@@ -537,7 +622,7 @@ export declare class Pullrequests {
      *                         "full_name": "atlassian/atlaskit-mk-2",
      *                         "links": {
      *                             "self": {
-     *                                 "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2"
+     *                                 "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2"
      *                             },
      *                             "html": {
      *                                 "href": "https://bitbucket.org/atlassian/atlaskit-mk-2"
@@ -555,7 +640,7 @@ export declare class Pullrequests {
      *                     "uuid": "{}",
      *                     "links": {
      *                         "self": {
-     *                             "href": "https://bitbucket.org/!api/2.0/users/%7B%7D"
+     *                             "href": "https://api.bitbucket.org/2.0/users/%7B%7D"
      *                         },
      *                         "html": {
      *                             "href": "https://bitbucket.org/%7B%7D/"
@@ -575,7 +660,7 @@ export declare class Pullrequests {
      *                 "id": 5695,
      *                 "links": {
      *                     "self": {
-     *                         "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
+     *                         "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
      *                     },
      *                     "html": {
      *                         "href": "https://bitbucket.org/atlassian/atlaskit-mk-2/pull-requests/5695"
@@ -601,7 +686,7 @@ export declare class Pullrequests {
      *                     "id": 5695,
      *                     "links": {
      *                         "self": {
-     *                             "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
+     *                             "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
      *                         },
      *                         "html": {
      *                             "href": "https://bitbucket.org/atlassian/atlaskit-mk-2/pull-requests/5695"
@@ -614,7 +699,7 @@ export declare class Pullrequests {
      *                     "uuid": "{}",
      *                     "links": {
      *                         "self": {
-     *                             "href": "https://bitbucket.org/!api/2.0/users/%7B%7D"
+     *                             "href": "https://api.bitbucket.org/2.0/users/%7B%7D"
      *                         },
      *                         "html": {
      *                             "href": "https://bitbucket.org/%7B%7D/"
@@ -633,7 +718,7 @@ export declare class Pullrequests {
      *                 "id": 5695,
      *                 "links": {
      *                     "self": {
-     *                         "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
+     *                         "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
      *                     },
      *                     "html": {
      *                         "href": "https://bitbucket.org/atlassian/atlaskit-mk-2/pull-requests/5695"
@@ -645,10 +730,13 @@ export declare class Pullrequests {
      *     ]
      * }
      * ```
-    **/
-    getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdActivity(req: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdActivityRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdActivityResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdActivity(req: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdActivityRequest, security: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdActivitySecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdActivityResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdComments - Returns a paginated list of the pull request's comments.
+     * List comments on a pull request
+     *
+     * @remarks
+     * Returns a paginated list of the pull request's comments.
      *
      * This includes both global, inline comments and replies.
      *
@@ -656,33 +744,48 @@ export declare class Pullrequests {
      * the `sort` query parameter.
      *
      * This endpoint also supports filtering and sorting of the results. See
-     * [filtering and sorting](../../../../../../meta/filtering) for more
+     * [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering) for more
      * details.
-    **/
-    getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdComments(req: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdComments(req: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsRequest, security: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentId - Returns a specific pull request comment.
-    **/
-    getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentId(req: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdResponse>;
+     * Get a comment on a pull request
+     *
+     * @remarks
+     * Returns a specific pull request comment.
+     */
+    getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentId(req: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdRequest, security: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommits - Returns a paginated list of the pull request's commits.
+     * List commits on a pull request
+     *
+     * @remarks
+     * Returns a paginated list of the pull request's commits.
      *
      * These are the commits that are being merged into the destination
      * branch when the pull requests gets accepted.
-    **/
-    getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommits(req: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommitsRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommitsResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommits(req: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommitsRequest, security: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommitsSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommitsResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdDiff - Redirects to the [repository diff](../../diff/%7Bspec%7D)
+     * List changes in a pull request
+     *
+     * @remarks
+     * Redirects to the [repository diff](/cloud/bitbucket/rest/api-group-commits/#api-repositories-workspace-repo-slug-diff-spec-get)
      * with the revspec that corresponds to the pull request.
-    **/
-    getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdDiff(req: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdDiffRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdDiffResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdDiff(req: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdDiffRequest, security: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdDiffSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdDiffResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdDiffstat - Redirects to the [repository diffstat](../../diffstat/%7Bspec%7D)
+     * Get the diff stat for a pull request
+     *
+     * @remarks
+     * Redirects to the [repository diffstat](/cloud/bitbucket/rest/api-group-commits/#api-repositories-workspace-repo-slug-diffstat-spec-get)
      * with the revspec that corresponds to the pull request.
-    **/
-    getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdDiffstat(req: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdDiffstatRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdDiffstatResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdDiffstat(req: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdDiffstatRequest, security: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdDiffstatSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdDiffstatResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeTaskStatusTaskId - When merging a pull request takes too long, the client receives a
+     * Get the merge task status for a pull request
+     *
+     * @remarks
+     * When merging a pull request takes too long, the client receives a
      * task ID along with a 202 status code. The task ID can be used in a call
      * to this endpoint to check the status of a merge task.
      *
@@ -729,27 +832,36 @@ export declare class Pullrequests {
      *     }
      * }
      * ```
-    **/
-    getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeTaskStatusTaskId(req: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeTaskStatusTaskIdRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeTaskStatusTaskIdResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeTaskStatusTaskId(req: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeTaskStatusTaskIdRequest, security: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeTaskStatusTaskIdSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeTaskStatusTaskIdResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdPatch - Redirects to the [repository patch](../../patch/%7Bspec%7D)
+     * Get the patch for a pull request
+     *
+     * @remarks
+     * Redirects to the [repository patch](/cloud/bitbucket/rest/api-group-commits/#api-repositories-workspace-repo-slug-patch-spec-get)
      * with the revspec that corresponds to pull request.
-    **/
-    getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdPatch(req: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdPatchRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdPatchResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdPatch(req: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdPatchRequest, security: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdPatchSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdPatchResponse>;
     /**
-     * getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatuses - Returns all statuses (e.g. build results) for the given pull
+     * List commit statuses for a pull request
+     *
+     * @remarks
+     * Returns all statuses (e.g. build results) for the given pull
      * request.
-    **/
-    getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatuses(req: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesResponse>;
+     */
+    getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatuses(req: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesRequest, security: operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesSecurity, config?: AxiosRequestConfig): Promise<operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesResponse>;
     /**
-     * postRepositoriesWorkspaceRepoSlugPullrequests - Creates a new pull request where the destination repository is
+     * Create a pull request
+     *
+     * @remarks
+     * Creates a new pull request where the destination repository is
      * this repository and the author is the authenticated user.
      *
      * The minimum required fields to create a pull request are `title` and
      * `source`, specified by a branch name.
      *
      * ```
-     * curl https://api.bitbucket.org/2.0/repositories/my-username/my-repository/pullrequests \
+     * curl https://api.bitbucket.org/2.0/repositories/my-workspace/my-repository/pullrequests \
      *     -u my-username:my-password \
      *     --request POST \
      *     --header 'Content-Type: application/json' \
@@ -807,44 +919,68 @@ export declare class Pullrequests {
      *
      * * `description` - a string
      * * `close_source_branch` - boolean that specifies if the source branch should be closed upon merging
-    **/
-    postRepositoriesWorkspaceRepoSlugPullrequests(req: operations.PostRepositoriesWorkspaceRepoSlugPullrequestsRequest, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugPullrequestsResponse>;
+     */
+    postRepositoriesWorkspaceRepoSlugPullrequests(req: operations.PostRepositoriesWorkspaceRepoSlugPullrequestsRequest, security: operations.PostRepositoriesWorkspaceRepoSlugPullrequestsSecurity, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugPullrequestsResponse>;
     /**
-     * postRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdApprove - Approve the specified pull request as the authenticated user.
-    **/
-    postRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdApprove(req: operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdApproveRequest, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdApproveResponse>;
+     * Approve a pull request
+     *
+     * @remarks
+     * Approve the specified pull request as the authenticated user.
+     */
+    postRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdApprove(req: operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdApproveRequest, security: operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdApproveSecurity, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdApproveResponse>;
     /**
-     * postRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdComments - Creates a new pull request comment.
+     * Create a comment on a pull request
+     *
+     * @remarks
+     * Creates a new pull request comment.
      *
      * Returns the newly created pull request comment.
-    **/
-    postRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdComments(req: operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsRequest, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsResponse>;
+     */
+    postRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdComments(req: operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsRequest, security: operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsSecurity, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsResponse>;
     /**
-     * postRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdDecline - Declines the pull request.
-    **/
-    postRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdDecline(req: operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdDeclineRequest, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdDeclineResponse>;
+     * Decline a pull request
+     *
+     * @remarks
+     * Declines the pull request.
+     */
+    postRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdDecline(req: operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdDeclineRequest, security: operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdDeclineSecurity, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdDeclineResponse>;
     /**
-     * postRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMerge - Merges the pull request.
-    **/
-    postRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMerge(req: operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeRequest, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeResponse>;
-    postRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdRequestChanges(req: operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdRequestChangesRequest, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdRequestChangesResponse>;
+     * Merge a pull request
+     *
+     * @remarks
+     * Merges the pull request.
+     */
+    postRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMerge(req: operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeRequest, security: operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeSecurity, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeResponse>;
     /**
-     * putRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsername - Adds the specified user to the repository's list of default
+     * Request changes for a pull request
+     */
+    postRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdRequestChanges(req: operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdRequestChangesRequest, security: operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdRequestChangesSecurity, config?: AxiosRequestConfig): Promise<operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdRequestChangesResponse>;
+    /**
+     * Add a user to the default reviewers
+     *
+     * @remarks
+     * Adds the specified user to the repository's list of default
      * reviewers.
      *
      * This method is idempotent. Adding a user a second time has no effect.
-    **/
-    putRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsername(req: operations.PutRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameRequest, config?: AxiosRequestConfig): Promise<operations.PutRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameResponse>;
+     */
+    putRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsername(req: operations.PutRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameRequest, security: operations.PutRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameSecurity, config?: AxiosRequestConfig): Promise<operations.PutRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameResponse>;
     /**
-     * putRepositoriesWorkspaceRepoSlugPullrequestsPullRequestId - Mutates the specified pull request.
+     * Update a pull request
+     *
+     * @remarks
+     * Mutates the specified pull request.
      *
      * This can be used to change the pull request's branches or description.
      *
      * Only open pull requests can be mutated.
-    **/
-    putRepositoriesWorkspaceRepoSlugPullrequestsPullRequestId(req: operations.PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdRequest, config?: AxiosRequestConfig): Promise<operations.PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdResponse>;
+     */
+    putRepositoriesWorkspaceRepoSlugPullrequestsPullRequestId(req: operations.PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdRequest, security: operations.PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdSecurity, config?: AxiosRequestConfig): Promise<operations.PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdResponse>;
     /**
-     * putRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentId - Updates a specific pull request comment.
-    **/
-    putRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentId(req: operations.PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdRequest, config?: AxiosRequestConfig): Promise<operations.PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdResponse>;
+     * Update a comment on a pull request
+     *
+     * @remarks
+     * Updates a specific pull request comment.
+     */
+    putRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentId(req: operations.PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdRequest, security: operations.PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdSecurity, config?: AxiosRequestConfig): Promise<operations.PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdResponse>;
 }

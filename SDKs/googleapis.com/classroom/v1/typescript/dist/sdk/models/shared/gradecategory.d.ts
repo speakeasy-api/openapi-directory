@@ -1,10 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Details for a grade category in a course. Coursework may have zero or one grade category, and the category may be used in computing the overall grade. See the [help center article](https://support.google.com/edu/classroom/answer/9184995) for details.
-**/
+ */
 export declare class GradeCategory extends SpeakeasyBase {
+    /**
+     * Default value of denominator. Only applicable when grade calculation type is TOTAL_POINTS.
+     */
     defaultGradeDenominator?: number;
+    /**
+     * ID of the grade category.
+     */
     id?: string;
+    /**
+     * Name of the grade category.
+     */
     name?: string;
+    /**
+     * The weight of the category average as part of overall average. A weight of 12.34% is represented as 123400 (100% is 1,000,000). The last two digits should always be zero since we use two decimal precision. Only applicable when grade calculation type is WEIGHTED_CATEGORIES.
+     */
     weight?: number;
 }

@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ApiKeysPathParams extends SpeakeasyBase {
-    serviceId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ApiKeysSecurity extends SpeakeasyBase {
-    otoroshiAuth: shared.SchemeOtoroshiAuth;
+    password: string;
+    username: string;
 }
 export declare class ApiKeysRequest extends SpeakeasyBase {
-    pathParams: ApiKeysPathParams;
-    security: ApiKeysSecurity;
+    /**
+     * The api key service id
+     */
+    serviceId: string;
 }
 export declare class ApiKeysResponse extends SpeakeasyBase {
+    /**
+     * Successful operation
+     */
     apiKeys?: shared.ApiKey[];
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

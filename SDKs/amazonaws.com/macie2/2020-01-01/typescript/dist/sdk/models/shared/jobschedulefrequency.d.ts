@@ -3,7 +3,7 @@ import { MonthlySchedule } from "./monthlyschedule";
 import { WeeklySchedule } from "./weeklyschedule";
 /**
  * Specifies the recurrence pattern for running a classification job.
-**/
+ */
 export declare class JobScheduleFrequency extends SpeakeasyBase {
     dailySchedule?: Record<string, any>;
     monthlySchedule?: MonthlySchedule;

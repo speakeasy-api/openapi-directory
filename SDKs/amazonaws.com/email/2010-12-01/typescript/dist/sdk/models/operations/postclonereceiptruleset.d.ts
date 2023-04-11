@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostCloneReceiptRuleSetActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTCloneReceiptRuleSetActionEnum {
     CloneReceiptRuleSet = "CloneReceiptRuleSet"
 }
-export declare enum PostCloneReceiptRuleSetVersionEnum {
+export declare enum POSTCloneReceiptRuleSetVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostCloneReceiptRuleSetQueryParams extends SpeakeasyBase {
-    action: PostCloneReceiptRuleSetActionEnum;
-    version: PostCloneReceiptRuleSetVersionEnum;
-}
-export declare class PostCloneReceiptRuleSetHeaders extends SpeakeasyBase {
+export declare class POSTCloneReceiptRuleSetRequest extends SpeakeasyBase {
+    action: POSTCloneReceiptRuleSetActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTCloneReceiptRuleSetVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostCloneReceiptRuleSetHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostCloneReceiptRuleSetRequest extends SpeakeasyBase {
-    queryParams: PostCloneReceiptRuleSetQueryParams;
-    headers: PostCloneReceiptRuleSetHeaders;
-    request?: Uint8Array;
-}
-export declare class PostCloneReceiptRuleSetResponse extends SpeakeasyBase {
+export declare class POSTCloneReceiptRuleSetResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostAttachGroupPolicyActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTAttachGroupPolicyActionEnum {
     AttachGroupPolicy = "AttachGroupPolicy"
 }
-export declare enum PostAttachGroupPolicyVersionEnum {
+export declare enum POSTAttachGroupPolicyVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostAttachGroupPolicyQueryParams extends SpeakeasyBase {
-    action: PostAttachGroupPolicyActionEnum;
-    version: PostAttachGroupPolicyVersionEnum;
-}
-export declare class PostAttachGroupPolicyHeaders extends SpeakeasyBase {
+export declare class POSTAttachGroupPolicyRequest extends SpeakeasyBase {
+    action: POSTAttachGroupPolicyActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTAttachGroupPolicyVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostAttachGroupPolicyHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostAttachGroupPolicyRequest extends SpeakeasyBase {
-    queryParams: PostAttachGroupPolicyQueryParams;
-    headers: PostAttachGroupPolicyHeaders;
-    request?: Uint8Array;
-}
-export declare class PostAttachGroupPolicyResponse extends SpeakeasyBase {
+export declare class POSTAttachGroupPolicyResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

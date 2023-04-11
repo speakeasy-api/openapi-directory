@@ -6,134 +6,158 @@
 ### NPM
 
 ```bash
-npm add openapi
+npm add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/videointelligence/v1p2beta1/typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add openapi
+yarn add https://gitpkg.now.sh/speakeasy-api/openapi-directory/SDKs/googleapis.com/videointelligence/v1p2beta1/typescript
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { VideointelligenceVideosAnnotateRequest, VideointelligenceVideosAnnotateResponse } from "openapi/src/sdk/models/operations";
+import {
+  VideointelligenceVideosAnnotateRequest,
+  VideointelligenceVideosAnnotateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequestFeaturesEnum,
+  GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfigLabelDetectionModeEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: VideointelligenceVideosAnnotateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "voluptas",
-    alt: "media",
-    callback: "expedita",
-    fields: "consequuntur",
-    key: "dolor",
-    oauthToken: "expedita",
-    prettyPrint: true,
-    quotaUser: "fugit",
-    uploadType: "et",
-    uploadProtocol: "nihil",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  googleCloudVideointelligenceV1p2beta1AnnotateVideoRequest: {
     features: [
-      "PERSON_DETECTION",
-      "LOGO_RECOGNITION",
-      "SHOT_CHANGE_DETECTION",
+      GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequestFeaturesEnum.ObjectTracking,
+      GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequestFeaturesEnum.LogoRecognition,
+      GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequestFeaturesEnum.TextDetection,
     ],
-    inputContent: "et",
-    inputUri: "ut",
-    locationId: "dolorem",
-    outputUri: "et",
+    inputContent: "nulla",
+    inputUri: "corrupti",
+    locationId: "illum",
+    outputUri: "vel",
     videoContext: {
       explicitContentDetectionConfig: {
-        model: "voluptate",
+        model: "error",
       },
       faceDetectionConfig: {
-        includeAttributes: true,
-        includeBoundingBoxes: true,
-        model: "totam",
+        includeAttributes: false,
+        includeBoundingBoxes: false,
+        model: "deserunt",
       },
       labelDetectionConfig: {
-        frameConfidenceThreshold: 80.199997,
-        labelDetectionMode: "FRAME_MODE",
-        model: "vel",
+        frameConfidenceThreshold: 3843.82,
+        labelDetectionMode: GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfigLabelDetectionModeEnum.ShotMode,
+        model: "magnam",
         stationaryCamera: false,
-        videoConfidenceThreshold: 91.099998,
+        videoConfidenceThreshold: 8917.73,
       },
       objectTrackingConfig: {
-        model: "aspernatur",
+        model: "ipsa",
       },
       personDetectionConfig: {
-        includeAttributes: true,
+        includeAttributes: false,
         includeBoundingBoxes: false,
         includePoseLandmarks: false,
       },
       segments: [
         {
-          endTimeOffset: "est",
-          startTimeOffset: "aut",
+          endTimeOffset: "tempora",
+          startTimeOffset: "suscipit",
         },
         {
-          endTimeOffset: "odit",
-          startTimeOffset: "non",
+          endTimeOffset: "molestiae",
+          startTimeOffset: "minus",
         },
         {
-          endTimeOffset: "voluptas",
-          startTimeOffset: "omnis",
+          endTimeOffset: "placeat",
+          startTimeOffset: "voluptatum",
+        },
+        {
+          endTimeOffset: "iusto",
+          startTimeOffset: "excepturi",
         },
       ],
       shotChangeDetectionConfig: {
-        model: "aut",
+        model: "nisi",
       },
       speechTranscriptionConfig: {
         audioTracks: [
-          5558237345453186302,
+          836079,
+          71036,
+          337396,
+          87129,
         ],
-        diarizationSpeakerCount: 7845762441295307478,
-        enableAutomaticPunctuation: true,
-        enableSpeakerDiarization: true,
+        diarizationSpeakerCount: 648172,
+        enableAutomaticPunctuation: false,
+        enableSpeakerDiarization: false,
         enableWordConfidence: false,
         filterProfanity: false,
-        languageCode: "qui",
-        maxAlternatives: 388440063886460141,
+        languageCode: "perferendis",
+        maxAlternatives: 368241,
         speechContexts: [
           {
             phrases: [
-              "eveniet",
+              "quo",
+              "odit",
+              "at",
+              "at",
             ],
           },
           {
             phrases: [
-              "sint",
-              "inventore",
+              "molestiae",
+              "quod",
+              "quod",
+              "esse",
+            ],
+          },
+          {
+            phrases: [
+              "porro",
+              "dolorum",
+              "dicta",
+            ],
+          },
+          {
+            phrases: [
+              "officia",
+              "occaecati",
+              "fugit",
             ],
           },
         ],
       },
       textDetectionConfig: {
         languageHints: [
-          "exercitationem",
-          "aut",
-          "reprehenderit",
+          "hic",
+          "optio",
+          "totam",
         ],
-        model: "tempore",
+        model: "beatae",
       },
     },
   },
+  accessToken: "commodi",
+  alt: AltEnum.Media,
+  callback: "modi",
+  fields: "qui",
+  key: "impedit",
+  oauthToken: "cum",
+  prettyPrint: false,
+  quotaUser: "esse",
+  uploadType: "ipsum",
+  uploadProtocol: "excepturi",
 };
 
 sdk.videos.videointelligenceVideosAnnotate(req).then((res: VideointelligenceVideosAnnotateResponse | AxiosError) => {
@@ -143,12 +167,24 @@ sdk.videos.videointelligenceVideosAnnotate(req).then((res: VideointelligenceVide
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### videos
 
 * `videointelligenceVideosAnnotate` - Performs asynchronous video annotation. Progress and results can be retrieved through the `google.longrunning.Operations` interface. `Operation.metadata` contains `AnnotateVideoProgress` (progress). `Operation.response` contains `AnnotateVideoResponse` (results).
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+

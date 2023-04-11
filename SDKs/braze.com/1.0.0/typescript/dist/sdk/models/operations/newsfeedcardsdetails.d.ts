@@ -1,11 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class NewsFeedCardsDetailsQueryParams extends SpeakeasyBase {
-    cardId?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class NewsFeedCardsDetailsRequest extends SpeakeasyBase {
-    queryParams: NewsFeedCardsDetailsQueryParams;
+    /**
+     * (Required) String
+     *
+     * @remarks
+     *
+     * Card API identifier
+     */
+    cardId?: string;
 }
 export declare class NewsFeedCardsDetailsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { FindingsFilterActionEnum } from "./findingsfilteractionenum";
 import { FindingCriteria } from "./findingcriteria";
+import { FindingsFilterActionEnum } from "./findingsfilteractionenum";
+/**
+ * Success
+ */
 export declare class GetFindingsFilterResponse extends SpeakeasyBase {
     action?: FindingsFilterActionEnum;
     arn?: string;

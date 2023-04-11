@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListSecretVersionIdsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListSecretVersionIdsXAmzTargetEnum {
     SecretsmanagerListSecretVersionIds = "secretsmanager.ListSecretVersionIds"
 }
-export declare class ListSecretVersionIdsHeaders extends SpeakeasyBase {
+export declare class ListSecretVersionIdsRequest extends SpeakeasyBase {
+    listSecretVersionIdsRequest: shared.ListSecretVersionIdsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,17 +23,28 @@ export declare class ListSecretVersionIdsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListSecretVersionIdsXAmzTargetEnum;
 }
-export declare class ListSecretVersionIdsRequest extends SpeakeasyBase {
-    queryParams: ListSecretVersionIdsQueryParams;
-    headers: ListSecretVersionIdsHeaders;
-    request: shared.ListSecretVersionIdsRequest;
-}
 export declare class ListSecretVersionIdsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServiceError
+     */
     internalServiceError?: any;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * Success
+     */
     listSecretVersionIdsResponse?: shared.ListSecretVersionIdsResponse;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
 }

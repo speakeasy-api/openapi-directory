@@ -1,20 +1,31 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ExportChannelCatalogProductInfoListPathParams extends SpeakeasyBase {
-    channelCatalogId: string;
-}
-export declare class ExportChannelCatalogProductInfoListQueryParams extends SpeakeasyBase {
-    format: shared.ExportFormatInQueryGeneralParameterEnum;
-}
+import { AxiosResponse } from "axios";
 export declare class ExportChannelCatalogProductInfoListRequest extends SpeakeasyBase {
-    pathParams: ExportChannelCatalogProductInfoListPathParams;
-    queryParams: ExportChannelCatalogProductInfoListQueryParams;
-    request: shared.GetChannelCatalogProductInfoListRequest;
+    /**
+     * The channel catalog identifier
+     */
+    channelCatalogId: string;
+    /**
+     * The file type of the exportation
+     */
+    format: shared.ExportFormatInQueryGeneralParameterEnum;
+    /**
+     * The channel catalog product list filter
+     */
+    getChannelCatalogProductInfoListRequest: shared.GetChannelCatalogProductInfoListRequest;
 }
 export declare class ExportChannelCatalogProductInfoListResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
-    beezUPCommonLink3?: shared.BeezUpCommonLink3;
+    /**
+     * ChannelCatalogId not found or not authorized
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
+    /**
+     * Channel catalog product information list exported
+     */
+    beezUPCommonLink3?: shared.BeezUPCommonLink3;
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

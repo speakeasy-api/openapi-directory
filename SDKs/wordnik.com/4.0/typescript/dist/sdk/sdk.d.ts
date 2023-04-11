@@ -1,21 +1,30 @@
-import { AxiosInstance } from "axios";
-import { Security } from "./models/shared";
-import { Account } from "./account";
 import { Word } from "./word";
-import { WordList } from "./wordlist";
-import { WordLists } from "./wordlists";
 import { Words } from "./words";
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://api.wordnik.com/v4"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    security?: Security;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * Wordnik is the worlds biggest online English dictionary, by number of words
+ *
+ * @see {@link http://developer.wordnik.com/}
+ */
 export declare class SDK {
-    account: Account;
     word: Word;
-    wordList: WordList;
-    wordLists: WordLists;
     words: Words;
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -23,5 +32,6 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
 }

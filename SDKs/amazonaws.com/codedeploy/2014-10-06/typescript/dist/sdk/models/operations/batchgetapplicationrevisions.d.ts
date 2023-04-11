@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum BatchGetApplicationRevisionsXAmzTargetEnum {
     CodeDeploy20141006BatchGetApplicationRevisions = "CodeDeploy_20141006.BatchGetApplicationRevisions"
 }
-export declare class BatchGetApplicationRevisionsHeaders extends SpeakeasyBase {
+export declare class BatchGetApplicationRevisionsRequest extends SpeakeasyBase {
+    batchGetApplicationRevisionsInput: shared.BatchGetApplicationRevisionsInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class BatchGetApplicationRevisionsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: BatchGetApplicationRevisionsXAmzTargetEnum;
 }
-export declare class BatchGetApplicationRevisionsRequest extends SpeakeasyBase {
-    headers: BatchGetApplicationRevisionsHeaders;
-    request: shared.BatchGetApplicationRevisionsInput;
-}
 export declare class BatchGetApplicationRevisionsResponse extends SpeakeasyBase {
+    /**
+     * ApplicationDoesNotExistException
+     */
     applicationDoesNotExistException?: any;
+    /**
+     * ApplicationNameRequiredException
+     */
     applicationNameRequiredException?: any;
+    /**
+     * Success
+     */
     batchGetApplicationRevisionsOutput?: shared.BatchGetApplicationRevisionsOutput;
+    /**
+     * BatchLimitExceededException
+     */
     batchLimitExceededException?: any;
     contentType: string;
+    /**
+     * InvalidApplicationNameException
+     */
     invalidApplicationNameException?: any;
+    /**
+     * InvalidRevisionException
+     */
     invalidRevisionException?: any;
+    /**
+     * RevisionRequiredException
+     */
     revisionRequiredException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

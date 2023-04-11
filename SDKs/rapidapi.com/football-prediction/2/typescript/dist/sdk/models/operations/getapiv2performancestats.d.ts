@@ -1,64 +1,78 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetApiV2PerformanceStatsHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetApiV2PerformanceStatsRequest extends SpeakeasyBase {
+    /**
+     * Your key obtained from https://boggio-analytics.com/fp-api/
+     */
     xRapidApiKey?: string;
 }
-export declare class GetApiV2PerformanceStats200ApplicationJsonDataAccuracy extends SpeakeasyBase {
+/**
+ * Bad request, check response for detailed errors.
+ */
+export declare class GetApiV2PerformanceStats404ApplicationJSON extends SpeakeasyBase {
+    errors?: Record<string, any>;
+}
+export declare class GetApiV2PerformanceStats200ApplicationJSONDataAccuracy extends SpeakeasyBase {
     last14Days?: number;
     last30Days?: number;
     last7Days?: number;
     yesterday?: number;
 }
-export declare class GetApiV2PerformanceStats200ApplicationJsonDataDetailsLast14Days extends SpeakeasyBase {
+export declare class GetApiV2PerformanceStats200ApplicationJSONDataDetailsLast14Days extends SpeakeasyBase {
     lost?: number;
     pending?: number;
     postponed?: number;
     total?: number;
     won?: number;
 }
-export declare class GetApiV2PerformanceStats200ApplicationJsonDataDetailsLast30Days extends SpeakeasyBase {
+export declare class GetApiV2PerformanceStats200ApplicationJSONDataDetailsLast30Days extends SpeakeasyBase {
     lost?: number;
     pending?: number;
     postponed?: number;
     total?: number;
     won?: number;
 }
-export declare class GetApiV2PerformanceStats200ApplicationJsonDataDetailsLast7Days extends SpeakeasyBase {
+export declare class GetApiV2PerformanceStats200ApplicationJSONDataDetailsLast7Days extends SpeakeasyBase {
     lost?: number;
     pending?: number;
     postponed?: number;
     total?: number;
     won?: number;
 }
-export declare class GetApiV2PerformanceStats200ApplicationJsonDataDetailsYesterday extends SpeakeasyBase {
+export declare class GetApiV2PerformanceStats200ApplicationJSONDataDetailsYesterday extends SpeakeasyBase {
     lost?: number;
     pending?: number;
     postponed?: number;
     total?: number;
     won?: number;
 }
-export declare class GetApiV2PerformanceStats200ApplicationJsonDataDetails extends SpeakeasyBase {
-    last14Days?: GetApiV2PerformanceStats200ApplicationJsonDataDetailsLast14Days;
-    last30Days?: GetApiV2PerformanceStats200ApplicationJsonDataDetailsLast30Days;
-    last7Days?: GetApiV2PerformanceStats200ApplicationJsonDataDetailsLast7Days;
-    yesterday?: GetApiV2PerformanceStats200ApplicationJsonDataDetailsYesterday;
+export declare class GetApiV2PerformanceStats200ApplicationJSONDataDetails extends SpeakeasyBase {
+    last14Days?: GetApiV2PerformanceStats200ApplicationJSONDataDetailsLast14Days;
+    last30Days?: GetApiV2PerformanceStats200ApplicationJSONDataDetailsLast30Days;
+    last7Days?: GetApiV2PerformanceStats200ApplicationJSONDataDetailsLast7Days;
+    yesterday?: GetApiV2PerformanceStats200ApplicationJSONDataDetailsYesterday;
 }
-export declare class GetApiV2PerformanceStats200ApplicationJsonData extends SpeakeasyBase {
-    accuracy?: GetApiV2PerformanceStats200ApplicationJsonDataAccuracy;
-    details?: GetApiV2PerformanceStats200ApplicationJsonDataDetails;
+export declare class GetApiV2PerformanceStats200ApplicationJSONData extends SpeakeasyBase {
+    accuracy?: GetApiV2PerformanceStats200ApplicationJSONDataAccuracy;
+    details?: GetApiV2PerformanceStats200ApplicationJSONDataDetails;
     market?: string;
 }
-export declare class GetApiV2PerformanceStats200ApplicationJson extends SpeakeasyBase {
-    data?: GetApiV2PerformanceStats200ApplicationJsonData;
-}
-export declare class GetApiV2PerformanceStats404ApplicationJson extends SpeakeasyBase {
-    errors?: Record<string, any>;
-}
-export declare class GetApiV2PerformanceStatsRequest extends SpeakeasyBase {
-    headers: GetApiV2PerformanceStatsHeaders;
+/**
+ * Good request, returns object that contains accuracy and other datails about predictions.
+ */
+export declare class GetApiV2PerformanceStats200ApplicationJSON extends SpeakeasyBase {
+    data?: GetApiV2PerformanceStats200ApplicationJSONData;
 }
 export declare class GetApiV2PerformanceStatsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getApiV2PerformanceStats200ApplicationJSONObject?: GetApiV2PerformanceStats200ApplicationJson;
-    getApiV2PerformanceStats404ApplicationJSONObject?: GetApiV2PerformanceStats404ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Good request, returns object that contains accuracy and other datails about predictions.
+     */
+    getApiV2PerformanceStats200ApplicationJSONObject?: GetApiV2PerformanceStats200ApplicationJSON;
+    /**
+     * Bad request, check response for detailed errors.
+     */
+    getApiV2PerformanceStats404ApplicationJSONObject?: GetApiV2PerformanceStats404ApplicationJSON;
 }

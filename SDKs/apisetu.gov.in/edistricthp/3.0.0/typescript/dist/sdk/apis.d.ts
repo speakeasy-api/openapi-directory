@@ -1,6 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class ApIs {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+export declare class APIs {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,195 +9,227 @@ export declare class ApIs {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * aecmw - Application for Renewal of Contractor Migrant Workmen license
+     * Application for Renewal of Contractor Migrant Workmen license
      *
+     * @remarks
      * API to verify Application for Renewal of Contractor Migrant Workmen license.
-    **/
-    aecmw(req: operations.AecmwRequest, config?: AxiosRequestConfig): Promise<operations.AecmwResponse>;
+     */
+    aecmw(req: operations.AecmwRequestBody, security: operations.AecmwSecurity, config?: AxiosRequestConfig): Promise<operations.AecmwResponse>;
     /**
-     * aemtw - Application for Renewal of Motor Transport Worker Registration
+     * Application for Renewal of Motor Transport Worker Registration
      *
+     * @remarks
      * API to verify Application for Renewal of Motor Transport Worker Registration.
-    **/
-    aemtw(req: operations.AemtwRequest, config?: AxiosRequestConfig): Promise<operations.AemtwResponse>;
+     */
+    aemtw(req: operations.AemtwRequestBody, security: operations.AemtwSecurity, config?: AxiosRequestConfig): Promise<operations.AemtwResponse>;
     /**
-     * agcer - Agriculture/ Agriculturist Certificate
+     * Agriculture/ Agriculturist Certificate
      *
+     * @remarks
      * API to verify Agriculture/ Agriculturist Certificate.
-    **/
-    agcer(req: operations.AgcerRequest, config?: AxiosRequestConfig): Promise<operations.AgcerResponse>;
+     */
+    agcer(req: operations.AgcerRequestBody, security: operations.AgcerSecurity, config?: AxiosRequestConfig): Promise<operations.AgcerResponse>;
     /**
-     * alimw - Application for License for Inter State Migrant Workmen
+     * Application for License for Inter State Migrant Workmen
      *
+     * @remarks
      * API to verify Application for License for Inter State Migrant Workmen.
-    **/
-    alimw(req: operations.AlimwRequest, config?: AxiosRequestConfig): Promise<operations.AlimwResponse>;
+     */
+    alimw(req: operations.AlimwRequestBody, security: operations.AlimwSecurity, config?: AxiosRequestConfig): Promise<operations.AlimwResponse>;
     /**
-     * arcmw - Application for Registration of Contractor Migrant Workmen license
+     * Application for Registration of Contractor Migrant Workmen license
      *
+     * @remarks
      * API to verify Application for Registration of Contractor Migrant Workmen license.
-    **/
-    arcmw(req: operations.ArcmwRequest, config?: AxiosRequestConfig): Promise<operations.ArcmwResponse>;
+     */
+    arcmw(req: operations.ArcmwRequestBody, security: operations.ArcmwSecurity, config?: AxiosRequestConfig): Promise<operations.ArcmwResponse>;
     /**
-     * armtw - Application for Registration of Motor Transport Worker Registration
+     * Application for Registration of Motor Transport Worker Registration
      *
+     * @remarks
      * API to verify Application for Registration of Motor Transport Worker Registration.
-    **/
-    armtw(req: operations.ArmtwRequest, config?: AxiosRequestConfig): Promise<operations.ArmtwResponse>;
+     */
+    armtw(req: operations.ArmtwRequestBody, security: operations.ArmtwSecurity, config?: AxiosRequestConfig): Promise<operations.ArmtwResponse>;
     /**
-     * bacer - Backward Area Certificate
+     * Backward Area Certificate
      *
+     * @remarks
      * API to verify Backward Area Certificate.
-    **/
-    bacer(req: operations.BacerRequest, config?: AxiosRequestConfig): Promise<operations.BacerResponse>;
+     */
+    bacer(req: operations.BacerRequestBody, security: operations.BacerSecurity, config?: AxiosRequestConfig): Promise<operations.BacerResponse>;
     /**
-     * bhcer - Bonafide Certificate
+     * Bonafide Certificate
      *
+     * @remarks
      * API to verify Bonafide Certificate.
-    **/
-    bhcer(req: operations.BhcerRequest, config?: AxiosRequestConfig): Promise<operations.BhcerResponse>;
+     */
+    bhcer(req: operations.BhcerRequestBody, security: operations.BhcerSecurity, config?: AxiosRequestConfig): Promise<operations.BhcerResponse>;
     /**
-     * bpcrd - BPL Card
+     * BPL Card
      *
+     * @remarks
      * API to verify BPL Card.
-    **/
-    bpcrd(req: operations.BpcrdRequest, config?: AxiosRequestConfig): Promise<operations.BpcrdResponse>;
+     */
+    bpcrd(req: operations.BpcrdRequestBody, security: operations.BpcrdSecurity, config?: AxiosRequestConfig): Promise<operations.BpcrdResponse>;
     /**
-     * btcer - Birth Certificate
+     * Birth Certificate
      *
+     * @remarks
      * API to verify Birth Certificate.
-    **/
-    btcer(req: operations.BtcerRequest, config?: AxiosRequestConfig): Promise<operations.BtcerResponse>;
+     */
+    btcer(req: operations.BtcerRequestBody, security: operations.BtcerSecurity, config?: AxiosRequestConfig): Promise<operations.BtcerResponse>;
     /**
-     * cecer - Renewal Certificate of Contract Labour License
+     * Renewal Certificate of Contract Labour License
      *
+     * @remarks
      * API to verify Renewal Certificate of Contract Labour License.
-    **/
-    cecer(req: operations.CecerRequest, config?: AxiosRequestConfig): Promise<operations.CecerResponse>;
+     */
+    cecer(req: operations.CecerRequestBody, security: operations.CecerSecurity, config?: AxiosRequestConfig): Promise<operations.CecerResponse>;
     /**
-     * chcer - Character Certificate
+     * Character Certificate
      *
+     * @remarks
      * API to verify Character Certificate.
-    **/
-    chcer(req: operations.ChcerRequest, config?: AxiosRequestConfig): Promise<operations.ChcerResponse>;
+     */
+    chcer(req: operations.ChcerRequestBody, security: operations.ChcerSecurity, config?: AxiosRequestConfig): Promise<operations.ChcerResponse>;
     /**
-     * clcer - Registration Certificate for Contract Labour License
+     * Registration Certificate for Contract Labour License
      *
+     * @remarks
      * API to verify Registration Certificate for Contract Labour License.
-    **/
-    clcer(req: operations.ClcerRequest, config?: AxiosRequestConfig): Promise<operations.ClcerResponse>;
+     */
+    clcer(req: operations.ClcerRequestBody, security: operations.ClcerSecurity, config?: AxiosRequestConfig): Promise<operations.ClcerResponse>;
     /**
-     * coprg - Copy of Pariwar Register
+     * Copy of Pariwar Register
      *
+     * @remarks
      * API to verify Copy of Pariwar Register.
-    **/
-    coprg(req: operations.CoprgRequest, config?: AxiosRequestConfig): Promise<operations.CoprgResponse>;
+     */
+    coprg(req: operations.CoprgRequestBody, security: operations.CoprgSecurity, config?: AxiosRequestConfig): Promise<operations.CoprgResponse>;
     /**
-     * dccer - Dogra Class Certificate
+     * Dogra Class Certificate
      *
+     * @remarks
      * API to verify Dogra Class Certificate.
-    **/
-    dccer(req: operations.DccerRequest, config?: AxiosRequestConfig): Promise<operations.DccerResponse>;
+     */
+    dccer(req: operations.DccerRequestBody, security: operations.DccerSecurity, config?: AxiosRequestConfig): Promise<operations.DccerResponse>;
     /**
-     * dmcer - Domicile Certificate
+     * Domicile Certificate
      *
+     * @remarks
      * API to verify Domicile Certificate.
-    **/
-    dmcer(req: operations.DmcerRequest, config?: AxiosRequestConfig): Promise<operations.DmcerResponse>;
+     */
+    dmcer(req: operations.DmcerRequestBody, security: operations.DmcerSecurity, config?: AxiosRequestConfig): Promise<operations.DmcerResponse>;
     /**
-     * dpicr - Disabled Person Identity Card/ Certificate
+     * Disabled Person Identity Card/ Certificate
      *
+     * @remarks
      * API to verify Disabled Person Identity Card/ Certificate.
-    **/
-    dpicr(req: operations.DpicrRequest, config?: AxiosRequestConfig): Promise<operations.DpicrResponse>;
+     */
+    dpicr(req: operations.DpicrRequestBody, security: operations.DpicrSecurity, config?: AxiosRequestConfig): Promise<operations.DpicrResponse>;
     /**
-     * dtcer - Death Certificate
+     * Death Certificate
      *
+     * @remarks
      * API to verify Death Certificate.
-    **/
-    dtcer(req: operations.DtcerRequest, config?: AxiosRequestConfig): Promise<operations.DtcerResponse>;
+     */
+    dtcer(req: operations.DtcerRequestBody, security: operations.DtcerSecurity, config?: AxiosRequestConfig): Promise<operations.DtcerResponse>;
     /**
-     * ercer - Registration Certificate of Establishment Employing Contract Labour
+     * Registration Certificate of Establishment Employing Contract Labour
      *
+     * @remarks
      * API to verify Registration Certificate of Establishment Employing Contract Labour.
-    **/
-    ercer(req: operations.ErcerRequest, config?: AxiosRequestConfig): Promise<operations.ErcerResponse>;
+     */
+    ercer(req: operations.ErcerRequestBody, security: operations.ErcerSecurity, config?: AxiosRequestConfig): Promise<operations.ErcerResponse>;
     /**
-     * ffcer - Freedom Fighter Certificate
+     * Freedom Fighter Certificate
      *
+     * @remarks
      * API to verify Freedom Fighter Certificate.
-    **/
-    ffcer(req: operations.FfcerRequest, config?: AxiosRequestConfig): Promise<operations.FfcerResponse>;
+     */
+    ffcer(req: operations.FfcerRequestBody, security: operations.FfcerSecurity, config?: AxiosRequestConfig): Promise<operations.FfcerResponse>;
     /**
-     * igcer - Indigent (Needy Person) Certificate
+     * Indigent (Needy Person) Certificate
      *
+     * @remarks
      * API to verify Indigent (Needy Person) Certificate.
-    **/
-    igcer(req: operations.IgcerRequest, config?: AxiosRequestConfig): Promise<operations.IgcerResponse>;
+     */
+    igcer(req: operations.IgcerRequestBody, security: operations.IgcerSecurity, config?: AxiosRequestConfig): Promise<operations.IgcerResponse>;
     /**
-     * incer - Income Certificate
+     * Income Certificate
      *
+     * @remarks
      * API to verify Income Certificate.
-    **/
-    incer(req: operations.IncerRequest, config?: AxiosRequestConfig): Promise<operations.IncerResponse>;
+     */
+    incer(req: operations.IncerRequestBody, security: operations.IncerSecurity, config?: AxiosRequestConfig): Promise<operations.IncerResponse>;
     /**
-     * lhcer - Legal Heir Certificate
+     * Legal Heir Certificate
      *
+     * @remarks
      * API to verify Legal Heir Certificate.
-    **/
-    lhcer(req: operations.LhcerRequest, config?: AxiosRequestConfig): Promise<operations.LhcerResponse>;
+     */
+    lhcer(req: operations.LhcerRequestBody, security: operations.LhcerSecurity, config?: AxiosRequestConfig): Promise<operations.LhcerResponse>;
     /**
-     * mncer - Minority Certificate
+     * Minority Certificate
      *
+     * @remarks
      * API to verify Minority Certificate.
-    **/
-    mncer(req: operations.MncerRequest, config?: AxiosRequestConfig): Promise<operations.MncerResponse>;
+     */
+    mncer(req: operations.MncerRequestBody, security: operations.MncerSecurity, config?: AxiosRequestConfig): Promise<operations.MncerResponse>;
     /**
-     * mnrga - MNREGA Job Card
+     * MNREGA Job Card
      *
+     * @remarks
      * API to verify MNREGA Job Card.
-    **/
-    mnrga(req: operations.MnrgaRequest, config?: AxiosRequestConfig): Promise<operations.MnrgaResponse>;
+     */
+    mnrga(req: operations.MnrgaRequestBody, security: operations.MnrgaSecurity, config?: AxiosRequestConfig): Promise<operations.MnrgaResponse>;
     /**
-     * obcer - OBC Certificate
+     * OBC Certificate
      *
+     * @remarks
      * API to verify OBC Certificate.
-    **/
-    obcer(req: operations.ObcerRequest, config?: AxiosRequestConfig): Promise<operations.ObcerResponse>;
+     */
+    obcer(req: operations.ObcerRequestBody, security: operations.ObcerSecurity, config?: AxiosRequestConfig): Promise<operations.ObcerResponse>;
     /**
-     * racer - Rural Area Certificate
+     * Rural Area Certificate
      *
+     * @remarks
      * API to verify Rural Area Certificate.
-    **/
-    racer(req: operations.RacerRequest, config?: AxiosRequestConfig): Promise<operations.RacerResponse>;
+     */
+    racer(req: operations.RacerRequestBody, security: operations.RacerSecurity, config?: AxiosRequestConfig): Promise<operations.RacerResponse>;
     /**
-     * rmcer - Marriage Certificate
+     * Marriage Certificate
      *
+     * @remarks
      * API to verify Marriage Certificate.
-    **/
-    rmcer(req: operations.RmcerRequest, config?: AxiosRequestConfig): Promise<operations.RmcerResponse>;
+     */
+    rmcer(req: operations.RmcerRequestBody, security: operations.RmcerSecurity, config?: AxiosRequestConfig): Promise<operations.RmcerResponse>;
     /**
-     * secer - Renewal Certificate of Shops And Commercial Establishment
+     * Renewal Certificate of Shops And Commercial Establishment
      *
+     * @remarks
      * API to verify Renewal Certificate of Shops And Commercial Establishment.
-    **/
-    secer(req: operations.SecerRequest, config?: AxiosRequestConfig): Promise<operations.SecerResponse>;
+     */
+    secer(req: operations.SecerRequestBody, security: operations.SecerSecurity, config?: AxiosRequestConfig): Promise<operations.SecerResponse>;
     /**
-     * shcer - SC/ST  Certificate
+     * SC/ST  Certificate
      *
+     * @remarks
      * API to verify SC/ST  Certificate.
-    **/
-    shcer(req: operations.ShcerRequest, config?: AxiosRequestConfig): Promise<operations.ShcerResponse>;
+     */
+    shcer(req: operations.ShcerRequestBody, security: operations.ShcerSecurity, config?: AxiosRequestConfig): Promise<operations.ShcerResponse>;
     /**
-     * sicrd - Senior Citizen Identity Card/ Certificate
+     * Senior Citizen Identity Card/ Certificate
      *
+     * @remarks
      * API to verify Senior Citizen Identity Card/ Certificate.
-    **/
-    sicrd(req: operations.SicrdRequest, config?: AxiosRequestConfig): Promise<operations.SicrdResponse>;
+     */
+    sicrd(req: operations.SicrdRequestBody, security: operations.SicrdSecurity, config?: AxiosRequestConfig): Promise<operations.SicrdResponse>;
     /**
-     * srcer - Registration Certificate of Shops And Commercial Establishment
+     * Registration Certificate of Shops And Commercial Establishment
      *
+     * @remarks
      * API to verify Registration Certificate of Shops And Commercial Establishment.
-    **/
-    srcer(req: operations.SrcerRequest, config?: AxiosRequestConfig): Promise<operations.SrcerResponse>;
+     */
+    srcer(req: operations.SrcerRequestBody, security: operations.SrcerSecurity, config?: AxiosRequestConfig): Promise<operations.SrcerResponse>;
 }

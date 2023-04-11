@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum ActivateContactChannelXAmzTargetEnum {
-    SsmContactsActivateContactChannel = "SSMContacts.ActivateContactChannel"
+    SSMContactsActivateContactChannel = "SSMContacts.ActivateContactChannel"
 }
-export declare class ActivateContactChannelHeaders extends SpeakeasyBase {
+export declare class ActivateContactChannelRequest extends SpeakeasyBase {
+    activateContactChannelRequest: shared.ActivateContactChannelRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class ActivateContactChannelHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ActivateContactChannelXAmzTargetEnum;
 }
-export declare class ActivateContactChannelRequest extends SpeakeasyBase {
-    headers: ActivateContactChannelHeaders;
-    request: shared.ActivateContactChannelRequest;
-}
 export declare class ActivateContactChannelResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * Success
+     */
     activateContactChannelResult?: Record<string, any>;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

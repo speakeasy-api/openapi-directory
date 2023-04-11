@@ -1,5 +1,9 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ *
+ * @see {@link https://sms77.io/en/docs/gateway/http-api/voice} - Issue voice call to phone number
+ */
 export declare class Voice {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;

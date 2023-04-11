@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteCacheSubnetGroupActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteCacheSubnetGroupActionEnum {
     DeleteCacheSubnetGroup = "DeleteCacheSubnetGroup"
 }
-export declare enum GetDeleteCacheSubnetGroupVersionEnum {
+export declare enum GETDeleteCacheSubnetGroupVersionEnum {
     TwoThousandAndFifteen0202 = "2015-02-02"
 }
-export declare class GetDeleteCacheSubnetGroupQueryParams extends SpeakeasyBase {
-    action: GetDeleteCacheSubnetGroupActionEnum;
+export declare class GETDeleteCacheSubnetGroupRequest extends SpeakeasyBase {
+    action: GETDeleteCacheSubnetGroupActionEnum;
+    /**
+     * <p>The name of the cache subnet group to delete.</p> <p>Constraints: Must contain no more than 255 alphanumeric characters or hyphens.</p>
+     */
     cacheSubnetGroupName: string;
-    version: GetDeleteCacheSubnetGroupVersionEnum;
-}
-export declare class GetDeleteCacheSubnetGroupHeaders extends SpeakeasyBase {
+    version: GETDeleteCacheSubnetGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDeleteCacheSubnetGroupHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteCacheSubnetGroupRequest extends SpeakeasyBase {
-    queryParams: GetDeleteCacheSubnetGroupQueryParams;
-    headers: GetDeleteCacheSubnetGroupHeaders;
-}
-export declare class GetDeleteCacheSubnetGroupResponse extends SpeakeasyBase {
+export declare class GETDeleteCacheSubnetGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

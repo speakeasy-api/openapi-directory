@@ -8,7 +8,7 @@ export declare class OrganizationFullPlan extends SpeakeasyBase {
 }
 /**
  * Organization Full
-**/
+ */
 export declare class OrganizationFull extends SpeakeasyBase {
     avatarUrl: string;
     billingEmail?: string;

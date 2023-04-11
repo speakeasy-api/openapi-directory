@@ -1,18 +1,41 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class CompanyMonitorIdPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class CompanyMonitorIdSecurity extends SpeakeasyBase {
-    userKey: shared.SchemeUserKey;
+    userKey: string;
 }
 export declare class CompanyMonitorIdRequest extends SpeakeasyBase {
-    pathParams: CompanyMonitorIdPathParams;
-    security: CompanyMonitorIdSecurity;
+    /**
+     * Company Hex ID
+     */
+    id: string;
+}
+/**
+ * Detailed information about the error
+ */
+export declare class CompanyMonitorIdDefaultApplicationJSON extends SpeakeasyBase {
+    code: number;
+    fault?: string;
+    message: string;
+    tag: string;
+}
+export declare class CompanyMonitorId200ApplicationJSON extends SpeakeasyBase {
+    callbackCount?: number;
+    callbackUrl?: string;
+    created?: Date;
+    monitorStatus?: string;
+    notificationId?: string;
+    subjectId?: string;
 }
 export declare class CompanyMonitorIdResponse extends SpeakeasyBase {
-    companyMonitorId200ApplicationJSONAnies?: any[];
-    companyMonitorIdDefaultApplicationJSONAny?: any;
+    /**
+     * List of monitor webhooks
+     */
+    companyMonitorId200ApplicationJSONObjects?: CompanyMonitorId200ApplicationJSON[];
+    /**
+     * Detailed information about the error
+     */
+    companyMonitorIdDefaultApplicationJSONObject?: CompanyMonitorIdDefaultApplicationJSON;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

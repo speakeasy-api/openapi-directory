@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListTablesQueryParams extends SpeakeasyBase {
-    exclusiveStartTableName?: string;
-    limit?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListTablesXAmzTargetEnum {
-    DynamoDb20111205ListTables = "DynamoDB_20111205.ListTables"
+    DynamoDB20111205ListTables = "DynamoDB_20111205.ListTables"
 }
-export declare class ListTablesHeaders extends SpeakeasyBase {
+export declare class ListTablesRequest extends SpeakeasyBase {
+    /**
+     * Pagination token
+     */
+    exclusiveStartTableName?: string;
+    /**
+     * Pagination limit
+     */
+    limit?: string;
+    listTablesInput: shared.ListTablesInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,14 +23,16 @@ export declare class ListTablesHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListTablesXAmzTargetEnum;
 }
-export declare class ListTablesRequest extends SpeakeasyBase {
-    queryParams: ListTablesQueryParams;
-    headers: ListTablesHeaders;
-    request: shared.ListTablesInput;
-}
 export declare class ListTablesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServerError
+     */
     internalServerError?: any;
+    /**
+     * Success
+     */
     listTablesOutput?: shared.ListTablesOutput;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,19 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdateVcenterPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UpdateVcenterSecurity extends SpeakeasyBase {
-    apiKeyAuth: shared.SchemeApiKeyAuth;
+    apiKeyAuth: string;
 }
 export declare class UpdateVcenterRequest extends SpeakeasyBase {
-    pathParams: UpdateVcenterPathParams;
-    request?: shared.VCenterDataSource;
-    security: UpdateVcenterSecurity;
+    vCenterDataSource?: shared.VCenterDataSource;
+    /**
+     * entity id
+     */
+    id: string;
 }
 export declare class UpdateVcenterResponse extends SpeakeasyBase {
+    /**
+     * Bad Request
+     */
     apiError?: shared.ApiError;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
     vCenterDataSource?: shared.VCenterDataSource;
 }

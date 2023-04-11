@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Search API for 'CZO Display File Format' entry type
+ */
 export declare class TypeTypePointCzo {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,10 @@ export declare class TypeTypePointCzo {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * searchTypePointCzo - Search API for 'CZO Display File Format' entry type
+     * Search API for 'CZO Display File Format' entry type
      *
+     * @remarks
      * API to search for entries of type CZO Display File Format
-    **/
+     */
     searchTypePointCzo(req: operations.SearchTypePointCzoRequest, config?: AxiosRequestConfig): Promise<operations.SearchTypePointCzoResponse>;
 }

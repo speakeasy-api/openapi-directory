@@ -1,17 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+/**
+ * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+ */
 export declare enum PlayersByTeamFormatEnum {
     Xml = "XML",
     Json = "JSON"
 }
-export declare class PlayersByTeamPathParams extends SpeakeasyBase {
-    format: PlayersByTeamFormatEnum;
-    team: string;
-}
 export declare class PlayersByTeamRequest extends SpeakeasyBase {
-    pathParams: PlayersByTeamPathParams;
+    /**
+     * Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+     */
+    format: PlayersByTeamFormatEnum;
+    /**
+     * The abbreviation of the requested team.
+     *
+     * @remarks
+     * <br>Examples: <code>SF</code>, <code>NYY</code>.
+     */
+    team: string;
 }
 export declare class PlayersByTeamResponse extends SpeakeasyBase {
     contentType: string;
-    players?: any[];
+    players?: shared.Player[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

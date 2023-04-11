@@ -1,13 +1,30 @@
-import { AxiosInstance } from "axios";
 import { Operations } from "./operations";
 import { Projects } from "./projects";
 import { Text } from "./text";
 import { Voices } from "./voices";
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://texttospeech.googleapis.com/"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * Synthesizes natural-sounding speech by applying powerful neural network models.
+ *
+ * @see {@link https://cloud.google.com/text-to-speech/}
+ */
 export declare class SDK {
     operations: Operations;
     projects: Projects;
@@ -19,5 +36,6 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
 }

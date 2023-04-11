@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostGenerateOrganizationsAccessReportActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTGenerateOrganizationsAccessReportActionEnum {
     GenerateOrganizationsAccessReport = "GenerateOrganizationsAccessReport"
 }
-export declare enum PostGenerateOrganizationsAccessReportVersionEnum {
+export declare enum POSTGenerateOrganizationsAccessReportVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostGenerateOrganizationsAccessReportQueryParams extends SpeakeasyBase {
-    action: PostGenerateOrganizationsAccessReportActionEnum;
-    version: PostGenerateOrganizationsAccessReportVersionEnum;
-}
-export declare class PostGenerateOrganizationsAccessReportHeaders extends SpeakeasyBase {
+export declare class POSTGenerateOrganizationsAccessReportRequest extends SpeakeasyBase {
+    action: POSTGenerateOrganizationsAccessReportActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTGenerateOrganizationsAccessReportVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostGenerateOrganizationsAccessReportHeaders extends Speake
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostGenerateOrganizationsAccessReportRequest extends SpeakeasyBase {
-    queryParams: PostGenerateOrganizationsAccessReportQueryParams;
-    headers: PostGenerateOrganizationsAccessReportHeaders;
-    request?: Uint8Array;
-}
-export declare class PostGenerateOrganizationsAccessReportResponse extends SpeakeasyBase {
+export declare class POSTGenerateOrganizationsAccessReportResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

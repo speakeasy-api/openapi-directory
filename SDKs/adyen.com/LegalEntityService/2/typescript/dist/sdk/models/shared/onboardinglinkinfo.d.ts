@@ -1,0 +1,33 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+export declare class OnboardingLinkInfo extends SpeakeasyBase {
+    /**
+     * The language that will be used for the page, specified by a combination of two letter [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) language and [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) country codes. See [possible values](https://docs.adyen.com/marketplaces-and-platforms/collect-verification-details/hosted#supported-languages).
+     *
+     * @remarks
+     *
+     * If not specified in the request or if the language is not supported, the page uses the browser language. If the browser language is not supported, the page uses **en-US** by default.
+     */
+    locale?: string;
+    /**
+     * The URL where the user is redirected after they complete hosted onboarding.
+     */
+    redirectUrl?: string;
+    /**
+     * Boolean key-value pairs indicating the settings for the hosted onboarding page. The keys are the settings. By default, the values are set to **true**. Set to **false** to not allow the action.
+     *
+     * @remarks
+     *
+     * Possible keys:
+     *
+     * - **changeLegalEntityType**: The user can change their legal entity type.
+     *
+     * - **editPrefilledCountry**: The user can change the country of their legal entity's address, for example the registered address of an organization.
+     *
+     *
+     */
+    settings?: Record<string, boolean>;
+    /**
+     * The unique identifier of the hosted onboarding theme.
+     */
+    themeId?: string;
+}

@@ -1,14 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SetStatePathParams extends SpeakeasyBase {
-    agentNum: number;
-    object: string;
-    state: number;
-}
+import { AxiosResponse } from "axios";
 export declare class SetStateRequest extends SpeakeasyBase {
-    pathParams: SetStatePathParams;
+    /**
+     * Agent of the value space
+     */
+    agentNum: number;
+    /**
+     * Object
+     */
+    object: string;
+    /**
+     * State
+     */
+    state: number;
 }
 export declare class SetStateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     setState200ApplicationJSONString?: string;
 }

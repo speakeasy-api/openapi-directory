@@ -1,25 +1,41 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetPayrollCalendarsQueryParams extends SpeakeasyBase {
-    order?: string;
-    page?: number;
-    where?: string;
-}
-export declare class GetPayrollCalendarsHeaders extends SpeakeasyBase {
-    ifModifiedSince?: string;
-    xeroTenantId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetPayrollCalendarsSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class GetPayrollCalendarsRequest extends SpeakeasyBase {
-    queryParams: GetPayrollCalendarsQueryParams;
-    headers: GetPayrollCalendarsHeaders;
-    security: GetPayrollCalendarsSecurity;
+    /**
+     * Only records created or modified since this timestamp will be returned
+     */
+    ifModifiedSince?: string;
+    /**
+     * Xero identifier for Tenant
+     */
+    xeroTenantId: string;
+    /**
+     * Order by an any element
+     */
+    order?: string;
+    /**
+     * e.g. page=1 – Up to 100 objects will be returned in a single API call
+     */
+    page?: number;
+    /**
+     * Filter by an any element
+     */
+    where?: string;
 }
 export declare class GetPayrollCalendarsResponse extends SpeakeasyBase {
-    apiException?: shared.ApiException;
+    /**
+     * validation error for a bad request
+     */
+    apiException?: shared.APIException;
     contentType: string;
+    /**
+     * search results matching criteria
+     */
     payrollCalendars?: shared.PayrollCalendars;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

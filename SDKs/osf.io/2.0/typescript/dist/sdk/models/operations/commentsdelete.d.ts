@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CommentsDeletePathParams extends SpeakeasyBase {
-    commentId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class CommentsDeleteRequest extends SpeakeasyBase {
-    pathParams: CommentsDeletePathParams;
+    /**
+     * The unique identifier of the comment you wish to delete.
+     */
+    commentId: string;
 }
 export declare class CommentsDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

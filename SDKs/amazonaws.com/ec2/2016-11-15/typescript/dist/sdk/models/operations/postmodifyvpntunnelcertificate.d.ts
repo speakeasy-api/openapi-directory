@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostModifyVpnTunnelCertificateActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTModifyVpnTunnelCertificateActionEnum {
     ModifyVpnTunnelCertificate = "ModifyVpnTunnelCertificate"
 }
-export declare enum PostModifyVpnTunnelCertificateVersionEnum {
+export declare enum POSTModifyVpnTunnelCertificateVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostModifyVpnTunnelCertificateQueryParams extends SpeakeasyBase {
-    action: PostModifyVpnTunnelCertificateActionEnum;
-    version: PostModifyVpnTunnelCertificateVersionEnum;
-}
-export declare class PostModifyVpnTunnelCertificateHeaders extends SpeakeasyBase {
+export declare class POSTModifyVpnTunnelCertificateRequest extends SpeakeasyBase {
+    action: POSTModifyVpnTunnelCertificateActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTModifyVpnTunnelCertificateVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostModifyVpnTunnelCertificateHeaders extends SpeakeasyBase
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostModifyVpnTunnelCertificateRequest extends SpeakeasyBase {
-    queryParams: PostModifyVpnTunnelCertificateQueryParams;
-    headers: PostModifyVpnTunnelCertificateHeaders;
-    request?: Uint8Array;
-}
-export declare class PostModifyVpnTunnelCertificateResponse extends SpeakeasyBase {
+export declare class POSTModifyVpnTunnelCertificateResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

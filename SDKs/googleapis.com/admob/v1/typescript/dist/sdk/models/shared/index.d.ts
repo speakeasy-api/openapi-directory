@@ -26,6 +26,5 @@ export * from "./reportrow";
 export * from "./reportrowdimensionvalue";
 export * from "./reportrowmetricvalue";
 export * from "./reportwarning";
-export * from "./security";
 export * from "./stringlist";
 export * from "./xgafvenum";

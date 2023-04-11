@@ -17,14 +17,18 @@ export declare class SettingModelHaljsonEmbeddedTagsEmbeddedProductLinks extends
     environments?: string;
     members?: string;
     permissionGroups?: string;
+    segments?: string;
     self?: string;
     tags?: string;
 }
 export declare class SettingModelHaljsonEmbeddedTagsEmbeddedProduct extends SpeakeasyBase {
     embedded?: SettingModelHaljsonEmbeddedTagsEmbeddedProductEmbedded;
     links?: SettingModelHaljsonEmbeddedTagsEmbeddedProductLinks;
+    description?: string;
     name?: string;
+    order?: number;
     productId?: string;
+    reasonRequired?: boolean;
 }
 export declare class SettingModelHaljsonEmbeddedTagsEmbedded extends SpeakeasyBase {
     product?: SettingModelHaljsonEmbeddedTagsEmbeddedProduct;
@@ -45,17 +49,18 @@ export declare class SettingModelHaljsonEmbedded extends SpeakeasyBase {
 export declare class SettingModelHaljsonLinks extends SpeakeasyBase {
     self?: string;
 }
+/**
+ * When the creation was successful.
+ */
 export declare class SettingModelHaljson extends SpeakeasyBase {
     embedded?: SettingModelHaljsonEmbedded;
     links?: SettingModelHaljsonLinks;
     configId?: string;
     configName?: string;
-    expirationWarningAt?: Date;
     hint?: string;
     key?: string;
     name?: string;
-    ownerUserEmail?: string;
-    ownerUserFullName?: string;
+    order?: number;
     settingId?: number;
     settingType?: SettingTypeEnum;
 }

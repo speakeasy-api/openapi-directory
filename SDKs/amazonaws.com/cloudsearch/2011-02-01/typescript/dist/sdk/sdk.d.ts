@@ -1,12 +1,32 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-import { Security } from "./models/shared";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["http://cloudsearch.{region}.amazonaws.com", "https://cloudsearch.{region}.amazonaws.com", "http://cloudsearch.{region}.amazonaws.com.cn", "https://cloudsearch.{region}.amazonaws.com.cn"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * The security details required to authenticate the SDK
+     */
+    security?: shared.Security;
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    security?: Security;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * <fullname>Amazon CloudSearch Configuration Service</fullname> <p>You use the configuration service to create, configure, and manage search domains. Configuration service requests are submitted using the AWS Query protocol. AWS Query requests are HTTP or HTTPS requests submitted via HTTP GET or POST with a query parameter named Action.</p> <p>The endpoint for configuration service requests is region-specific: cloudsearch.<i>region</i>.amazonaws.com. For example, cloudsearch.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a href="http://docs.aws.amazon.com/general/latest/gr/rande.html#cloudsearch_region">Regions and Endpoints</a>.</p>
+ *
+ * @see {@link https://docs.aws.amazon.com/cloudsearch/} - Amazon Web Services documentation
+ */
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -14,177 +34,178 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
     /**
-     * getCreateDomain - Creates a new search domain.
-    **/
-    getCreateDomain(req: operations.GetCreateDomainRequest, config?: AxiosRequestConfig): Promise<operations.GetCreateDomainResponse>;
+     * Creates a new search domain.
+     */
+    getCreateDomain(req: operations.GETCreateDomainRequest, config?: AxiosRequestConfig): Promise<operations.GETCreateDomainResponse>;
     /**
-     * getDefineRankExpression - Configures a <code>RankExpression</code> for the search domain. Used to create new rank expressions and modify existing ones. If the expression exists, the new configuration replaces the old one. You can configure a maximum of 50 rank expressions.
-    **/
-    getDefineRankExpression(req: operations.GetDefineRankExpressionRequest, config?: AxiosRequestConfig): Promise<operations.GetDefineRankExpressionResponse>;
+     * Configures a <code>RankExpression</code> for the search domain. Used to create new rank expressions and modify existing ones. If the expression exists, the new configuration replaces the old one. You can configure a maximum of 50 rank expressions.
+     */
+    getDefineRankExpression(req: operations.GETDefineRankExpressionRequest, config?: AxiosRequestConfig): Promise<operations.GETDefineRankExpressionResponse>;
     /**
-     * getDeleteDomain - Permanently deletes a search domain and all of its data.
-    **/
-    getDeleteDomain(req: operations.GetDeleteDomainRequest, config?: AxiosRequestConfig): Promise<operations.GetDeleteDomainResponse>;
+     * Permanently deletes a search domain and all of its data.
+     */
+    getDeleteDomain(req: operations.GETDeleteDomainRequest, config?: AxiosRequestConfig): Promise<operations.GETDeleteDomainResponse>;
     /**
-     * getDeleteIndexField - Removes an <code>IndexField</code> from the search domain.
-    **/
-    getDeleteIndexField(req: operations.GetDeleteIndexFieldRequest, config?: AxiosRequestConfig): Promise<operations.GetDeleteIndexFieldResponse>;
+     * Removes an <code>IndexField</code> from the search domain.
+     */
+    getDeleteIndexField(req: operations.GETDeleteIndexFieldRequest, config?: AxiosRequestConfig): Promise<operations.GETDeleteIndexFieldResponse>;
     /**
-     * getDeleteRankExpression - Removes a <code>RankExpression</code> from the search domain.
-    **/
-    getDeleteRankExpression(req: operations.GetDeleteRankExpressionRequest, config?: AxiosRequestConfig): Promise<operations.GetDeleteRankExpressionResponse>;
+     * Removes a <code>RankExpression</code> from the search domain.
+     */
+    getDeleteRankExpression(req: operations.GETDeleteRankExpressionRequest, config?: AxiosRequestConfig): Promise<operations.GETDeleteRankExpressionResponse>;
     /**
-     * getDescribeAvailabilityOptions - Gets the availability options configured for a domain. By default, shows the configuration with any pending changes. Set the <code>Deployed</code> option to <code>true</code> to show the active configuration and exclude pending changes. For more information, see <a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-availability-options.html" target="_blank">Configuring Availability Options</a> in the <i>Amazon CloudSearch Developer Guide</i>.
-    **/
-    getDescribeAvailabilityOptions(req: operations.GetDescribeAvailabilityOptionsRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeAvailabilityOptionsResponse>;
+     * Gets the availability options configured for a domain. By default, shows the configuration with any pending changes. Set the <code>Deployed</code> option to <code>true</code> to show the active configuration and exclude pending changes. For more information, see <a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-availability-options.html" target="_blank">Configuring Availability Options</a> in the <i>Amazon CloudSearch Developer Guide</i>.
+     */
+    getDescribeAvailabilityOptions(req: operations.GETDescribeAvailabilityOptionsRequest, config?: AxiosRequestConfig): Promise<operations.GETDescribeAvailabilityOptionsResponse>;
     /**
-     * getDescribeDefaultSearchField - Gets the default search field configured for the search domain.
-    **/
-    getDescribeDefaultSearchField(req: operations.GetDescribeDefaultSearchFieldRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeDefaultSearchFieldResponse>;
+     * Gets the default search field configured for the search domain.
+     */
+    getDescribeDefaultSearchField(req: operations.GETDescribeDefaultSearchFieldRequest, config?: AxiosRequestConfig): Promise<operations.GETDescribeDefaultSearchFieldResponse>;
     /**
-     * getDescribeDomains - Gets information about the search domains owned by this account. Can be limited to specific domains. Shows all domains by default.
-    **/
-    getDescribeDomains(req: operations.GetDescribeDomainsRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeDomainsResponse>;
+     * Gets information about the search domains owned by this account. Can be limited to specific domains. Shows all domains by default.
+     */
+    getDescribeDomains(req: operations.GETDescribeDomainsRequest, config?: AxiosRequestConfig): Promise<operations.GETDescribeDomainsResponse>;
     /**
-     * getDescribeIndexFields - Gets information about the index fields configured for the search domain. Can be limited to specific fields by name. Shows all fields by default.
-    **/
-    getDescribeIndexFields(req: operations.GetDescribeIndexFieldsRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeIndexFieldsResponse>;
+     * Gets information about the index fields configured for the search domain. Can be limited to specific fields by name. Shows all fields by default.
+     */
+    getDescribeIndexFields(req: operations.GETDescribeIndexFieldsRequest, config?: AxiosRequestConfig): Promise<operations.GETDescribeIndexFieldsResponse>;
     /**
-     * getDescribeRankExpressions - Gets the rank expressions configured for the search domain. Can be limited to specific rank expressions by name. Shows all rank expressions by default.
-    **/
-    getDescribeRankExpressions(req: operations.GetDescribeRankExpressionsRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeRankExpressionsResponse>;
+     * Gets the rank expressions configured for the search domain. Can be limited to specific rank expressions by name. Shows all rank expressions by default.
+     */
+    getDescribeRankExpressions(req: operations.GETDescribeRankExpressionsRequest, config?: AxiosRequestConfig): Promise<operations.GETDescribeRankExpressionsResponse>;
     /**
-     * getDescribeServiceAccessPolicies - Gets information about the resource-based policies that control access to the domain's document and search services.
-    **/
-    getDescribeServiceAccessPolicies(req: operations.GetDescribeServiceAccessPoliciesRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeServiceAccessPoliciesResponse>;
+     * Gets information about the resource-based policies that control access to the domain's document and search services.
+     */
+    getDescribeServiceAccessPolicies(req: operations.GETDescribeServiceAccessPoliciesRequest, config?: AxiosRequestConfig): Promise<operations.GETDescribeServiceAccessPoliciesResponse>;
     /**
-     * getDescribeStemmingOptions - Gets the stemming dictionary configured for the search domain.
-    **/
-    getDescribeStemmingOptions(req: operations.GetDescribeStemmingOptionsRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeStemmingOptionsResponse>;
+     * Gets the stemming dictionary configured for the search domain.
+     */
+    getDescribeStemmingOptions(req: operations.GETDescribeStemmingOptionsRequest, config?: AxiosRequestConfig): Promise<operations.GETDescribeStemmingOptionsResponse>;
     /**
-     * getDescribeStopwordOptions - Gets the stopwords configured for the search domain.
-    **/
-    getDescribeStopwordOptions(req: operations.GetDescribeStopwordOptionsRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeStopwordOptionsResponse>;
+     * Gets the stopwords configured for the search domain.
+     */
+    getDescribeStopwordOptions(req: operations.GETDescribeStopwordOptionsRequest, config?: AxiosRequestConfig): Promise<operations.GETDescribeStopwordOptionsResponse>;
     /**
-     * getDescribeSynonymOptions - Gets the synonym dictionary configured for the search domain.
-    **/
-    getDescribeSynonymOptions(req: operations.GetDescribeSynonymOptionsRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeSynonymOptionsResponse>;
+     * Gets the synonym dictionary configured for the search domain.
+     */
+    getDescribeSynonymOptions(req: operations.GETDescribeSynonymOptionsRequest, config?: AxiosRequestConfig): Promise<operations.GETDescribeSynonymOptionsResponse>;
     /**
-     * getIndexDocuments - Tells the search domain to start indexing its documents using the latest text processing options and <code>IndexFields</code>. This operation must be invoked to make options whose <a>OptionStatus</a> has <code>OptionState</code> of <code>RequiresIndexDocuments</code> visible in search results.
-    **/
-    getIndexDocuments(req: operations.GetIndexDocumentsRequest, config?: AxiosRequestConfig): Promise<operations.GetIndexDocumentsResponse>;
+     * Tells the search domain to start indexing its documents using the latest text processing options and <code>IndexFields</code>. This operation must be invoked to make options whose <a>OptionStatus</a> has <code>OptionState</code> of <code>RequiresIndexDocuments</code> visible in search results.
+     */
+    getIndexDocuments(req: operations.GETIndexDocumentsRequest, config?: AxiosRequestConfig): Promise<operations.GETIndexDocumentsResponse>;
     /**
-     * getUpdateAvailabilityOptions - Configures the availability options for a domain. Enabling the Multi-AZ option expands an Amazon CloudSearch domain to an additional Availability Zone in the same Region to increase fault tolerance in the event of a service disruption. Changes to the Multi-AZ option can take about half an hour to become active. For more information, see <a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-availability-options.html" target="_blank">Configuring Availability Options</a> in the <i>Amazon CloudSearch Developer Guide</i>.
-    **/
-    getUpdateAvailabilityOptions(req: operations.GetUpdateAvailabilityOptionsRequest, config?: AxiosRequestConfig): Promise<operations.GetUpdateAvailabilityOptionsResponse>;
+     * Configures the availability options for a domain. Enabling the Multi-AZ option expands an Amazon CloudSearch domain to an additional Availability Zone in the same Region to increase fault tolerance in the event of a service disruption. Changes to the Multi-AZ option can take about half an hour to become active. For more information, see <a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-availability-options.html" target="_blank">Configuring Availability Options</a> in the <i>Amazon CloudSearch Developer Guide</i>.
+     */
+    getUpdateAvailabilityOptions(req: operations.GETUpdateAvailabilityOptionsRequest, config?: AxiosRequestConfig): Promise<operations.GETUpdateAvailabilityOptionsResponse>;
     /**
-     * getUpdateDefaultSearchField - Configures the default search field for the search domain. The default search field is the text field that is searched when a search request does not specify which fields to search. By default, it is configured to include the contents of all of the domain's text fields.
-    **/
-    getUpdateDefaultSearchField(req: operations.GetUpdateDefaultSearchFieldRequest, config?: AxiosRequestConfig): Promise<operations.GetUpdateDefaultSearchFieldResponse>;
+     * Configures the default search field for the search domain. The default search field is the text field that is searched when a search request does not specify which fields to search. By default, it is configured to include the contents of all of the domain's text fields.
+     */
+    getUpdateDefaultSearchField(req: operations.GETUpdateDefaultSearchFieldRequest, config?: AxiosRequestConfig): Promise<operations.GETUpdateDefaultSearchFieldResponse>;
     /**
-     * getUpdateServiceAccessPolicies - Configures the policies that control access to the domain's document and search services. The maximum size of an access policy document is 100 KB.
-    **/
-    getUpdateServiceAccessPolicies(req: operations.GetUpdateServiceAccessPoliciesRequest, config?: AxiosRequestConfig): Promise<operations.GetUpdateServiceAccessPoliciesResponse>;
+     * Configures the policies that control access to the domain's document and search services. The maximum size of an access policy document is 100 KB.
+     */
+    getUpdateServiceAccessPolicies(req: operations.GETUpdateServiceAccessPoliciesRequest, config?: AxiosRequestConfig): Promise<operations.GETUpdateServiceAccessPoliciesResponse>;
     /**
-     * getUpdateStemmingOptions - Configures a stemming dictionary for the search domain. The stemming dictionary is used during indexing and when processing search requests. The maximum size of the stemming dictionary is 500 KB.
-    **/
-    getUpdateStemmingOptions(req: operations.GetUpdateStemmingOptionsRequest, config?: AxiosRequestConfig): Promise<operations.GetUpdateStemmingOptionsResponse>;
+     * Configures a stemming dictionary for the search domain. The stemming dictionary is used during indexing and when processing search requests. The maximum size of the stemming dictionary is 500 KB.
+     */
+    getUpdateStemmingOptions(req: operations.GETUpdateStemmingOptionsRequest, config?: AxiosRequestConfig): Promise<operations.GETUpdateStemmingOptionsResponse>;
     /**
-     * getUpdateStopwordOptions - Configures stopwords for the search domain. Stopwords are used during indexing and when processing search requests. The maximum size of the stopwords dictionary is 10 KB.
-    **/
-    getUpdateStopwordOptions(req: operations.GetUpdateStopwordOptionsRequest, config?: AxiosRequestConfig): Promise<operations.GetUpdateStopwordOptionsResponse>;
+     * Configures stopwords for the search domain. Stopwords are used during indexing and when processing search requests. The maximum size of the stopwords dictionary is 10 KB.
+     */
+    getUpdateStopwordOptions(req: operations.GETUpdateStopwordOptionsRequest, config?: AxiosRequestConfig): Promise<operations.GETUpdateStopwordOptionsResponse>;
     /**
-     * getUpdateSynonymOptions - Configures a synonym dictionary for the search domain. The synonym dictionary is used during indexing to configure mappings for terms that occur in text fields. The maximum size of the synonym dictionary is 100 KB.
-    **/
-    getUpdateSynonymOptions(req: operations.GetUpdateSynonymOptionsRequest, config?: AxiosRequestConfig): Promise<operations.GetUpdateSynonymOptionsResponse>;
+     * Configures a synonym dictionary for the search domain. The synonym dictionary is used during indexing to configure mappings for terms that occur in text fields. The maximum size of the synonym dictionary is 100 KB.
+     */
+    getUpdateSynonymOptions(req: operations.GETUpdateSynonymOptionsRequest, config?: AxiosRequestConfig): Promise<operations.GETUpdateSynonymOptionsResponse>;
     /**
-     * postCreateDomain - Creates a new search domain.
-    **/
-    postCreateDomain(req: operations.PostCreateDomainRequest, config?: AxiosRequestConfig): Promise<operations.PostCreateDomainResponse>;
+     * Creates a new search domain.
+     */
+    postCreateDomain(req: operations.POSTCreateDomainRequest, config?: AxiosRequestConfig): Promise<operations.POSTCreateDomainResponse>;
     /**
-     * postDefineIndexField - Configures an <code>IndexField</code> for the search domain. Used to create new fields and modify existing ones. If the field exists, the new configuration replaces the old one. You can configure a maximum of 200 index fields.
-    **/
-    postDefineIndexField(req: operations.PostDefineIndexFieldRequest, config?: AxiosRequestConfig): Promise<operations.PostDefineIndexFieldResponse>;
+     * Configures an <code>IndexField</code> for the search domain. Used to create new fields and modify existing ones. If the field exists, the new configuration replaces the old one. You can configure a maximum of 200 index fields.
+     */
+    postDefineIndexField(req: operations.POSTDefineIndexFieldRequest, config?: AxiosRequestConfig): Promise<operations.POSTDefineIndexFieldResponse>;
     /**
-     * postDefineRankExpression - Configures a <code>RankExpression</code> for the search domain. Used to create new rank expressions and modify existing ones. If the expression exists, the new configuration replaces the old one. You can configure a maximum of 50 rank expressions.
-    **/
-    postDefineRankExpression(req: operations.PostDefineRankExpressionRequest, config?: AxiosRequestConfig): Promise<operations.PostDefineRankExpressionResponse>;
+     * Configures a <code>RankExpression</code> for the search domain. Used to create new rank expressions and modify existing ones. If the expression exists, the new configuration replaces the old one. You can configure a maximum of 50 rank expressions.
+     */
+    postDefineRankExpression(req: operations.POSTDefineRankExpressionRequest, config?: AxiosRequestConfig): Promise<operations.POSTDefineRankExpressionResponse>;
     /**
-     * postDeleteDomain - Permanently deletes a search domain and all of its data.
-    **/
-    postDeleteDomain(req: operations.PostDeleteDomainRequest, config?: AxiosRequestConfig): Promise<operations.PostDeleteDomainResponse>;
+     * Permanently deletes a search domain and all of its data.
+     */
+    postDeleteDomain(req: operations.POSTDeleteDomainRequest, config?: AxiosRequestConfig): Promise<operations.POSTDeleteDomainResponse>;
     /**
-     * postDeleteIndexField - Removes an <code>IndexField</code> from the search domain.
-    **/
-    postDeleteIndexField(req: operations.PostDeleteIndexFieldRequest, config?: AxiosRequestConfig): Promise<operations.PostDeleteIndexFieldResponse>;
+     * Removes an <code>IndexField</code> from the search domain.
+     */
+    postDeleteIndexField(req: operations.POSTDeleteIndexFieldRequest, config?: AxiosRequestConfig): Promise<operations.POSTDeleteIndexFieldResponse>;
     /**
-     * postDeleteRankExpression - Removes a <code>RankExpression</code> from the search domain.
-    **/
-    postDeleteRankExpression(req: operations.PostDeleteRankExpressionRequest, config?: AxiosRequestConfig): Promise<operations.PostDeleteRankExpressionResponse>;
+     * Removes a <code>RankExpression</code> from the search domain.
+     */
+    postDeleteRankExpression(req: operations.POSTDeleteRankExpressionRequest, config?: AxiosRequestConfig): Promise<operations.POSTDeleteRankExpressionResponse>;
     /**
-     * postDescribeAvailabilityOptions - Gets the availability options configured for a domain. By default, shows the configuration with any pending changes. Set the <code>Deployed</code> option to <code>true</code> to show the active configuration and exclude pending changes. For more information, see <a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-availability-options.html" target="_blank">Configuring Availability Options</a> in the <i>Amazon CloudSearch Developer Guide</i>.
-    **/
-    postDescribeAvailabilityOptions(req: operations.PostDescribeAvailabilityOptionsRequest, config?: AxiosRequestConfig): Promise<operations.PostDescribeAvailabilityOptionsResponse>;
+     * Gets the availability options configured for a domain. By default, shows the configuration with any pending changes. Set the <code>Deployed</code> option to <code>true</code> to show the active configuration and exclude pending changes. For more information, see <a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-availability-options.html" target="_blank">Configuring Availability Options</a> in the <i>Amazon CloudSearch Developer Guide</i>.
+     */
+    postDescribeAvailabilityOptions(req: operations.POSTDescribeAvailabilityOptionsRequest, config?: AxiosRequestConfig): Promise<operations.POSTDescribeAvailabilityOptionsResponse>;
     /**
-     * postDescribeDefaultSearchField - Gets the default search field configured for the search domain.
-    **/
-    postDescribeDefaultSearchField(req: operations.PostDescribeDefaultSearchFieldRequest, config?: AxiosRequestConfig): Promise<operations.PostDescribeDefaultSearchFieldResponse>;
+     * Gets the default search field configured for the search domain.
+     */
+    postDescribeDefaultSearchField(req: operations.POSTDescribeDefaultSearchFieldRequest, config?: AxiosRequestConfig): Promise<operations.POSTDescribeDefaultSearchFieldResponse>;
     /**
-     * postDescribeDomains - Gets information about the search domains owned by this account. Can be limited to specific domains. Shows all domains by default.
-    **/
-    postDescribeDomains(req: operations.PostDescribeDomainsRequest, config?: AxiosRequestConfig): Promise<operations.PostDescribeDomainsResponse>;
+     * Gets information about the search domains owned by this account. Can be limited to specific domains. Shows all domains by default.
+     */
+    postDescribeDomains(req: operations.POSTDescribeDomainsRequest, config?: AxiosRequestConfig): Promise<operations.POSTDescribeDomainsResponse>;
     /**
-     * postDescribeIndexFields - Gets information about the index fields configured for the search domain. Can be limited to specific fields by name. Shows all fields by default.
-    **/
-    postDescribeIndexFields(req: operations.PostDescribeIndexFieldsRequest, config?: AxiosRequestConfig): Promise<operations.PostDescribeIndexFieldsResponse>;
+     * Gets information about the index fields configured for the search domain. Can be limited to specific fields by name. Shows all fields by default.
+     */
+    postDescribeIndexFields(req: operations.POSTDescribeIndexFieldsRequest, config?: AxiosRequestConfig): Promise<operations.POSTDescribeIndexFieldsResponse>;
     /**
-     * postDescribeRankExpressions - Gets the rank expressions configured for the search domain. Can be limited to specific rank expressions by name. Shows all rank expressions by default.
-    **/
-    postDescribeRankExpressions(req: operations.PostDescribeRankExpressionsRequest, config?: AxiosRequestConfig): Promise<operations.PostDescribeRankExpressionsResponse>;
+     * Gets the rank expressions configured for the search domain. Can be limited to specific rank expressions by name. Shows all rank expressions by default.
+     */
+    postDescribeRankExpressions(req: operations.POSTDescribeRankExpressionsRequest, config?: AxiosRequestConfig): Promise<operations.POSTDescribeRankExpressionsResponse>;
     /**
-     * postDescribeServiceAccessPolicies - Gets information about the resource-based policies that control access to the domain's document and search services.
-    **/
-    postDescribeServiceAccessPolicies(req: operations.PostDescribeServiceAccessPoliciesRequest, config?: AxiosRequestConfig): Promise<operations.PostDescribeServiceAccessPoliciesResponse>;
+     * Gets information about the resource-based policies that control access to the domain's document and search services.
+     */
+    postDescribeServiceAccessPolicies(req: operations.POSTDescribeServiceAccessPoliciesRequest, config?: AxiosRequestConfig): Promise<operations.POSTDescribeServiceAccessPoliciesResponse>;
     /**
-     * postDescribeStemmingOptions - Gets the stemming dictionary configured for the search domain.
-    **/
-    postDescribeStemmingOptions(req: operations.PostDescribeStemmingOptionsRequest, config?: AxiosRequestConfig): Promise<operations.PostDescribeStemmingOptionsResponse>;
+     * Gets the stemming dictionary configured for the search domain.
+     */
+    postDescribeStemmingOptions(req: operations.POSTDescribeStemmingOptionsRequest, config?: AxiosRequestConfig): Promise<operations.POSTDescribeStemmingOptionsResponse>;
     /**
-     * postDescribeStopwordOptions - Gets the stopwords configured for the search domain.
-    **/
-    postDescribeStopwordOptions(req: operations.PostDescribeStopwordOptionsRequest, config?: AxiosRequestConfig): Promise<operations.PostDescribeStopwordOptionsResponse>;
+     * Gets the stopwords configured for the search domain.
+     */
+    postDescribeStopwordOptions(req: operations.POSTDescribeStopwordOptionsRequest, config?: AxiosRequestConfig): Promise<operations.POSTDescribeStopwordOptionsResponse>;
     /**
-     * postDescribeSynonymOptions - Gets the synonym dictionary configured for the search domain.
-    **/
-    postDescribeSynonymOptions(req: operations.PostDescribeSynonymOptionsRequest, config?: AxiosRequestConfig): Promise<operations.PostDescribeSynonymOptionsResponse>;
+     * Gets the synonym dictionary configured for the search domain.
+     */
+    postDescribeSynonymOptions(req: operations.POSTDescribeSynonymOptionsRequest, config?: AxiosRequestConfig): Promise<operations.POSTDescribeSynonymOptionsResponse>;
     /**
-     * postIndexDocuments - Tells the search domain to start indexing its documents using the latest text processing options and <code>IndexFields</code>. This operation must be invoked to make options whose <a>OptionStatus</a> has <code>OptionState</code> of <code>RequiresIndexDocuments</code> visible in search results.
-    **/
-    postIndexDocuments(req: operations.PostIndexDocumentsRequest, config?: AxiosRequestConfig): Promise<operations.PostIndexDocumentsResponse>;
+     * Tells the search domain to start indexing its documents using the latest text processing options and <code>IndexFields</code>. This operation must be invoked to make options whose <a>OptionStatus</a> has <code>OptionState</code> of <code>RequiresIndexDocuments</code> visible in search results.
+     */
+    postIndexDocuments(req: operations.POSTIndexDocumentsRequest, config?: AxiosRequestConfig): Promise<operations.POSTIndexDocumentsResponse>;
     /**
-     * postUpdateAvailabilityOptions - Configures the availability options for a domain. Enabling the Multi-AZ option expands an Amazon CloudSearch domain to an additional Availability Zone in the same Region to increase fault tolerance in the event of a service disruption. Changes to the Multi-AZ option can take about half an hour to become active. For more information, see <a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-availability-options.html" target="_blank">Configuring Availability Options</a> in the <i>Amazon CloudSearch Developer Guide</i>.
-    **/
-    postUpdateAvailabilityOptions(req: operations.PostUpdateAvailabilityOptionsRequest, config?: AxiosRequestConfig): Promise<operations.PostUpdateAvailabilityOptionsResponse>;
+     * Configures the availability options for a domain. Enabling the Multi-AZ option expands an Amazon CloudSearch domain to an additional Availability Zone in the same Region to increase fault tolerance in the event of a service disruption. Changes to the Multi-AZ option can take about half an hour to become active. For more information, see <a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-availability-options.html" target="_blank">Configuring Availability Options</a> in the <i>Amazon CloudSearch Developer Guide</i>.
+     */
+    postUpdateAvailabilityOptions(req: operations.POSTUpdateAvailabilityOptionsRequest, config?: AxiosRequestConfig): Promise<operations.POSTUpdateAvailabilityOptionsResponse>;
     /**
-     * postUpdateDefaultSearchField - Configures the default search field for the search domain. The default search field is the text field that is searched when a search request does not specify which fields to search. By default, it is configured to include the contents of all of the domain's text fields.
-    **/
-    postUpdateDefaultSearchField(req: operations.PostUpdateDefaultSearchFieldRequest, config?: AxiosRequestConfig): Promise<operations.PostUpdateDefaultSearchFieldResponse>;
+     * Configures the default search field for the search domain. The default search field is the text field that is searched when a search request does not specify which fields to search. By default, it is configured to include the contents of all of the domain's text fields.
+     */
+    postUpdateDefaultSearchField(req: operations.POSTUpdateDefaultSearchFieldRequest, config?: AxiosRequestConfig): Promise<operations.POSTUpdateDefaultSearchFieldResponse>;
     /**
-     * postUpdateServiceAccessPolicies - Configures the policies that control access to the domain's document and search services. The maximum size of an access policy document is 100 KB.
-    **/
-    postUpdateServiceAccessPolicies(req: operations.PostUpdateServiceAccessPoliciesRequest, config?: AxiosRequestConfig): Promise<operations.PostUpdateServiceAccessPoliciesResponse>;
+     * Configures the policies that control access to the domain's document and search services. The maximum size of an access policy document is 100 KB.
+     */
+    postUpdateServiceAccessPolicies(req: operations.POSTUpdateServiceAccessPoliciesRequest, config?: AxiosRequestConfig): Promise<operations.POSTUpdateServiceAccessPoliciesResponse>;
     /**
-     * postUpdateStemmingOptions - Configures a stemming dictionary for the search domain. The stemming dictionary is used during indexing and when processing search requests. The maximum size of the stemming dictionary is 500 KB.
-    **/
-    postUpdateStemmingOptions(req: operations.PostUpdateStemmingOptionsRequest, config?: AxiosRequestConfig): Promise<operations.PostUpdateStemmingOptionsResponse>;
+     * Configures a stemming dictionary for the search domain. The stemming dictionary is used during indexing and when processing search requests. The maximum size of the stemming dictionary is 500 KB.
+     */
+    postUpdateStemmingOptions(req: operations.POSTUpdateStemmingOptionsRequest, config?: AxiosRequestConfig): Promise<operations.POSTUpdateStemmingOptionsResponse>;
     /**
-     * postUpdateStopwordOptions - Configures stopwords for the search domain. Stopwords are used during indexing and when processing search requests. The maximum size of the stopwords dictionary is 10 KB.
-    **/
-    postUpdateStopwordOptions(req: operations.PostUpdateStopwordOptionsRequest, config?: AxiosRequestConfig): Promise<operations.PostUpdateStopwordOptionsResponse>;
+     * Configures stopwords for the search domain. Stopwords are used during indexing and when processing search requests. The maximum size of the stopwords dictionary is 10 KB.
+     */
+    postUpdateStopwordOptions(req: operations.POSTUpdateStopwordOptionsRequest, config?: AxiosRequestConfig): Promise<operations.POSTUpdateStopwordOptionsResponse>;
     /**
-     * postUpdateSynonymOptions - Configures a synonym dictionary for the search domain. The synonym dictionary is used during indexing to configure mappings for terms that occur in text fields. The maximum size of the synonym dictionary is 100 KB.
-    **/
-    postUpdateSynonymOptions(req: operations.PostUpdateSynonymOptionsRequest, config?: AxiosRequestConfig): Promise<operations.PostUpdateSynonymOptionsResponse>;
+     * Configures a synonym dictionary for the search domain. The synonym dictionary is used during indexing to configure mappings for terms that occur in text fields. The maximum size of the synonym dictionary is 100 KB.
+     */
+    postUpdateSynonymOptions(req: operations.POSTUpdateSynonymOptionsRequest, config?: AxiosRequestConfig): Promise<operations.POSTUpdateSynonymOptionsResponse>;
 }

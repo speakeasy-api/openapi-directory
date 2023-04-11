@@ -1,18 +1,36 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class KeyBindPathParams extends SpeakeasyBase {
-    pk: string;
-}
-export declare class KeyBind200ApplicationJson extends SpeakeasyBase {
-    status?: string;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class KeyBindRequest extends SpeakeasyBase {
-    pathParams: KeyBindPathParams;
-    request: Uint8Array;
+    /**
+     * Public Signing Key - Authentiq ID (43 chars)
+     */
+    pk: string;
+    /**
+     * Authentiq ID to register
+     */
+    requestBody: Uint8Array;
+}
+/**
+ * Successfully updated
+ */
+export declare class KeyBind200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * confirmed
+     */
+    status?: string;
 }
 export declare class KeyBindResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    error?: any;
+    /**
+     * Unknown key `unknown-key`
+     */
+    error?: shared.ErrorT;
     statusCode: number;
-    keyBind200ApplicationJSONObject?: KeyBind200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successfully updated
+     */
+    keyBind200ApplicationJSONObject?: KeyBind200ApplicationJSON;
 }

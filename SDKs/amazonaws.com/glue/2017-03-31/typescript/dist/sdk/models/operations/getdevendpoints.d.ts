@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetDevEndpointsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum GetDevEndpointsXAmzTargetEnum {
-    AwsGlueGetDevEndpoints = "AWSGlue.GetDevEndpoints"
+    AWSGlueGetDevEndpoints = "AWSGlue.GetDevEndpoints"
 }
-export declare class GetDevEndpointsHeaders extends SpeakeasyBase {
+export declare class GetDevEndpointsRequest extends SpeakeasyBase {
+    getDevEndpointsRequest: shared.GetDevEndpointsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,17 +23,28 @@ export declare class GetDevEndpointsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetDevEndpointsXAmzTargetEnum;
 }
-export declare class GetDevEndpointsRequest extends SpeakeasyBase {
-    queryParams: GetDevEndpointsQueryParams;
-    headers: GetDevEndpointsHeaders;
-    request: shared.GetDevEndpointsRequest;
-}
 export declare class GetDevEndpointsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * Success
+     */
     getDevEndpointsResponse?: shared.GetDevEndpointsResponse;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

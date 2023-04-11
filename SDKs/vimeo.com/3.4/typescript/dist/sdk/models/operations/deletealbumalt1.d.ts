@@ -1,17 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteAlbumAlt1PathParams extends SpeakeasyBase {
-    albumId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteAlbumAlt1Security extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
+    oauth2: string;
 }
 export declare class DeleteAlbumAlt1Request extends SpeakeasyBase {
-    pathParams: DeleteAlbumAlt1PathParams;
-    security: DeleteAlbumAlt1Security;
+    /**
+     * The ID of the album.
+     */
+    albumId: number;
 }
 export declare class DeleteAlbumAlt1Response extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The supplied token doesn't have the proper scopes, or the authenticated user can't delete the album.
+     */
     legacyError?: shared.LegacyError;
 }

@@ -1,9 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SubmitFeedbackPathParams extends SpeakeasyBase {
-    anomalyInstanceId: string;
-    profilingGroupName: string;
+import { AxiosResponse } from "axios";
+/**
+ *  The feedback tpye. Thee are two valid values, <code>Positive</code> and <code>Negative</code>.
+ */
+export declare enum SubmitFeedbackRequestBodyTypeEnum {
+    Positive = "Positive",
+    Negative = "Negative"
 }
-export declare class SubmitFeedbackHeaders extends SpeakeasyBase {
+export declare class SubmitFeedbackRequestBody extends SpeakeasyBase {
+    /**
+     * Optional feedback about this anomaly.
+     */
+    comment?: string;
+    /**
+     *  The feedback tpye. Thee are two valid values, <code>Positive</code> and <code>Negative</code>.
+     */
+    type: SubmitFeedbackRequestBodyTypeEnum;
+}
+export declare class SubmitFeedbackRequest extends SpeakeasyBase {
+    requestBody: SubmitFeedbackRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,26 +26,37 @@ export declare class SubmitFeedbackHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare enum SubmitFeedbackRequestBodyTypeEnum {
-    Positive = "Positive",
-    Negative = "Negative"
-}
-export declare class SubmitFeedbackRequestBody extends SpeakeasyBase {
-    comment?: string;
-    type: SubmitFeedbackRequestBodyTypeEnum;
-}
-export declare class SubmitFeedbackRequest extends SpeakeasyBase {
-    pathParams: SubmitFeedbackPathParams;
-    headers: SubmitFeedbackHeaders;
-    request: SubmitFeedbackRequestBody;
+    /**
+     * The universally unique identifier (UUID) of the <a href="https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_AnomalyInstance.html"> <code>AnomalyInstance</code> </a> object that is included in the analysis data.
+     */
+    anomalyInstanceId: string;
+    /**
+     * The name of the profiling group that is associated with the analysis data.
+     */
+    profilingGroupName: string;
 }
 export declare class SubmitFeedbackResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * Success
+     */
     submitFeedbackResponse?: Record<string, any>;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

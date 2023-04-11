@@ -1,10 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetStudioComponentPathParams extends SpeakeasyBase {
-    studioComponentId: string;
-    studioId: string;
-}
-export declare class GetStudioComponentHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetStudioComponentRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,20 +9,49 @@ export declare class GetStudioComponentHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class GetStudioComponentRequest extends SpeakeasyBase {
-    pathParams: GetStudioComponentPathParams;
-    headers: GetStudioComponentHeaders;
+    /**
+     * The studio component ID.
+     */
+    studioComponentId: string;
+    /**
+     * The studio ID.
+     */
+    studioId: string;
 }
 export declare class GetStudioComponentResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getStudioComponentResponse?: shared.GetStudioComponentResponse;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
-    serviceQuotaExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceQuotaExceededException
+     */
+    serviceQuotaExceededException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetDataSourceXAmzTargetEnum {
-    AmazonMl20141212GetDataSource = "AmazonML_20141212.GetDataSource"
+    AmazonML20141212GetDataSource = "AmazonML_20141212.GetDataSource"
 }
-export declare class GetDataSourceHeaders extends SpeakeasyBase {
+export declare class GetDataSourceRequest extends SpeakeasyBase {
+    getDataSourceInput: shared.GetDataSourceInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,15 +15,24 @@ export declare class GetDataSourceHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetDataSourceXAmzTargetEnum;
 }
-export declare class GetDataSourceRequest extends SpeakeasyBase {
-    headers: GetDataSourceHeaders;
-    request: shared.GetDataSourceInput;
-}
 export declare class GetDataSourceResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getDataSourceOutput?: shared.GetDataSourceOutput;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
 }

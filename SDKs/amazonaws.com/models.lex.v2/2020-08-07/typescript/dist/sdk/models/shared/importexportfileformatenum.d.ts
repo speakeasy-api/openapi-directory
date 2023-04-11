@@ -1,3 +1,4 @@
 export declare enum ImportExportFileFormatEnum {
-    LexJson = "LexJson"
+    LexJson = "LexJson",
+    Tsv = "TSV"
 }

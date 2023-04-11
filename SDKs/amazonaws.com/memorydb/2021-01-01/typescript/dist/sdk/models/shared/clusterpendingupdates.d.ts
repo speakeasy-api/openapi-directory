@@ -1,12 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { AcLsUpdateStatus } from "./aclsupdatestatus";
-import { ReshardingStatus } from "./reshardingstatus";
+import { ACLsUpdateStatus } from "./aclsupdatestatus";
 import { PendingModifiedServiceUpdate } from "./pendingmodifiedserviceupdate";
+import { ReshardingStatus } from "./reshardingstatus";
 /**
  * A list of updates being applied to the cluster
-**/
+ */
 export declare class ClusterPendingUpdates extends SpeakeasyBase {
-    acLs?: AcLsUpdateStatus;
+    acLs?: ACLsUpdateStatus;
     resharding?: ReshardingStatus;
     serviceUpdates?: PendingModifiedServiceUpdate[];
 }

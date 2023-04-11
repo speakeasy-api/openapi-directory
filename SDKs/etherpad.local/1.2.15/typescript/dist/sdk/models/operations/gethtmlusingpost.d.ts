@@ -1,39 +1,62 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetHtmlUsingPostQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetHTMLUsingPOSTRequest extends SpeakeasyBase {
     padID?: string;
     rev?: string;
 }
-export declare class GetHtmlUsingPost200ApplicationJsonData extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class GetHTMLUsingPost500ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class GetHTMLUsingPost401ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+/**
+ * generic api error (code 1)
+ */
+export declare class GetHTMLUsingPost400ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+export declare class GetHTMLUsingPost200ApplicationJSONData extends SpeakeasyBase {
     html?: string;
 }
-export declare class GetHtmlUsingPost200ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class GetHTMLUsingPost200ApplicationJSON extends SpeakeasyBase {
     code?: number;
-    data?: GetHtmlUsingPost200ApplicationJsonData;
+    data?: GetHTMLUsingPost200ApplicationJSONData;
     message?: string;
 }
-export declare class GetHtmlUsingPost400ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class GetHtmlUsingPost401ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class GetHtmlUsingPost500ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class GetHtmlUsingPostRequest extends SpeakeasyBase {
-    queryParams: GetHtmlUsingPostQueryParams;
-}
-export declare class GetHtmlUsingPostResponse extends SpeakeasyBase {
+export declare class GetHTMLUsingPOSTResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getHTMLUsingPOST200ApplicationJSONObject?: GetHtmlUsingPost200ApplicationJson;
-    getHTMLUsingPOST400ApplicationJSONObject?: GetHtmlUsingPost400ApplicationJson;
-    getHTMLUsingPOST401ApplicationJSONObject?: GetHtmlUsingPost401ApplicationJson;
-    getHTMLUsingPOST500ApplicationJSONObject?: GetHtmlUsingPost500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    getHTMLUsingPOST200ApplicationJSONObject?: GetHTMLUsingPost200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    getHTMLUsingPOST400ApplicationJSONObject?: GetHTMLUsingPost400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    getHTMLUsingPOST401ApplicationJSONObject?: GetHTMLUsingPost401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    getHTMLUsingPOST500ApplicationJSONObject?: GetHTMLUsingPost500ApplicationJSON;
 }

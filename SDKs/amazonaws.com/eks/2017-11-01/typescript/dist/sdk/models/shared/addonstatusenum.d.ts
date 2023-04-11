@@ -5,5 +5,6 @@ export declare enum AddonStatusEnum {
     Updating = "UPDATING",
     Deleting = "DELETING",
     DeleteFailed = "DELETE_FAILED",
-    Degraded = "DEGRADED"
+    Degraded = "DEGRADED",
+    UpdateFailed = "UPDATE_FAILED"
 }

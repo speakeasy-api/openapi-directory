@@ -1,6 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetRefundCollectionType extends SpeakeasyBase {
+import { GETRefundTypewithSuccess } from "./getrefundtypewithsuccess";
+export declare class GETRefundCollectionType extends SpeakeasyBase {
+    /**
+     * URL to retrieve the next page of the response if it exists; otherwise absent.
+     *
+     * @remarks
+     *
+     */
     nextPage?: string;
-    refunds?: Record<string, any>[];
+    /**
+     * Container for refunds.
+     *
+     * @remarks
+     *
+     */
+    refunds?: GETRefundTypewithSuccess[];
+    /**
+     * Returns `true` if the request was processed successfully.
+     */
     success?: boolean;
 }

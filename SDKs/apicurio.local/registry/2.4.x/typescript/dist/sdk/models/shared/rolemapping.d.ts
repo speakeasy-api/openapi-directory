@@ -1,0 +1,13 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { RoleTypeEnum } from "./roletypeenum";
+/**
+ * The mapping between a user/principal and their role.
+ */
+export declare class RoleMapping extends SpeakeasyBase {
+    principalId: string;
+    /**
+     * A friendly name for the principal.
+     */
+    principalName?: string;
+    role: RoleTypeEnum;
+}

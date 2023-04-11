@@ -1,106 +1,120 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CloudschedulerProjectsLocationsJobsCreateRequest, CloudschedulerProjectsLocationsJobsCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  CloudschedulerProjectsLocationsJobsCreateRequest,
+  CloudschedulerProjectsLocationsJobsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  JobStateEnum,
+  HttpTargetHttpMethodEnum,
+  AppEngineHttpTargetHttpMethodEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: CloudschedulerProjectsLocationsJobsCreateRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  job: {
     appEngineHttpTarget: {
       appEngineRouting: {
-        host: "dicta",
-        instance: "debitis",
-        service: "voluptatum",
-        version: "et",
+        host: "provident",
+        instance: "distinctio",
+        service: "quibusdam",
+        version: "unde",
       },
-      body: "ut",
+      body: "nulla",
       headers: {
-        "et": "voluptate",
-        "iste": "vitae",
-        "totam": "dolores",
+        "illum": "vel",
+        "error": "deserunt",
+        "suscipit": "iure",
       },
-      httpMethod: "POST",
+      httpMethod: AppEngineHttpTargetHttpMethodEnum.Get,
       relativeUri: "debitis",
     },
-    attemptDeadline: "vel",
-    description: "odio",
+    attemptDeadline: "ipsa",
+    description: "delectus",
     httpTarget: {
-      body: "dolore",
+      body: "tempora",
       headers: {
-        "aspernatur": "accusantium",
-        "totam": "commodi",
+        "molestiae": "minus",
+        "placeat": "voluptatum",
       },
-      httpMethod: "PATCH",
+      httpMethod: HttpTargetHttpMethodEnum.Head,
       oauthToken: {
-        scope: "est",
-        serviceAccountEmail: "aut",
+        scope: "excepturi",
+        serviceAccountEmail: "nisi",
       },
       oidcToken: {
-        audience: "odit",
-        serviceAccountEmail: "non",
+        audience: "recusandae",
+        serviceAccountEmail: "temporibus",
       },
-      uri: "voluptas",
+      uri: "http://gloomy-blanket.name",
     },
-    lastAttemptTime: "omnis",
-    name: "aut",
+    lastAttemptTime: "perferendis",
+    name: "ipsam",
     pubsubTarget: {
       attributes: {
-        "sed": "officiis",
+        "sapiente": "quo",
+        "odit": "at",
+        "at": "maiores",
+        "molestiae": "quod",
       },
-      data: "autem",
-      topicName: "consectetur",
+      data: "quod",
+      topicName: "esse",
     },
     retryConfig: {
-      maxBackoffDuration: "nobis",
-      maxDoublings: 4345851588384648695,
-      maxRetryDuration: "qui",
-      minBackoffDuration: "recusandae",
-      retryCount: 7561811714888168464,
+      maxBackoffDuration: "totam",
+      maxDoublings: 780529,
+      maxRetryDuration: "dolorum",
+      minBackoffDuration: "dicta",
+      retryCount: 720633,
     },
-    schedule: "ipsum",
-    scheduleTime: "eveniet",
-    state: "UPDATE_FAILED",
+    schedule: "officia",
+    scheduleTime: "occaecati",
+    state: JobStateEnum.StateUnspecified,
     status: {
-      code: 7338728586234333996,
+      code: 537373,
       details: [
         {
-          "exercitationem": "aut",
-          "reprehenderit": "tempore",
-          "maiores": "incidunt",
+          "totam": "beatae",
+          "commodi": "molestiae",
+          "modi": "qui",
+          "impedit": "cum",
+        },
+        {
+          "ipsum": "excepturi",
+          "aspernatur": "perferendis",
+        },
+        {
+          "natus": "sed",
+          "iste": "dolor",
+        },
+        {
+          "laboriosam": "hic",
+          "saepe": "fuga",
+          "in": "corporis",
         },
       ],
-      message: "dolor",
+      message: "iste",
     },
-    timeZone: "beatae",
-    userUpdateTime: "veritatis",
+    timeZone: "iure",
+    userUpdateTime: "saepe",
   },
+  accessToken: "quidem",
+  alt: AltEnum.Json,
+  callback: "ipsa",
+  fields: "reiciendis",
+  key: "est",
+  oauthToken: "mollitia",
+  parent: "laborum",
+  prettyPrint: false,
+  quotaUser: "dolores",
+  uploadType: "dolorem",
+  uploadProtocol: "corporis",
 };
 
 sdk.projects.cloudschedulerProjectsLocationsJobsCreate(req).then((res: CloudschedulerProjectsLocationsJobsCreateResponse | AxiosError) => {

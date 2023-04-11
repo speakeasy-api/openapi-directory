@@ -1,22 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ObjectsGetObjectsByObjectIdsPathParams extends SpeakeasyBase {
-    tenantID: string;
-}
-export declare class ObjectsGetObjectsByObjectIdsQueryParams extends SpeakeasyBase {
-    apiVersion: string;
-}
-export declare class ObjectsGetObjectsByObjectIdsRequests extends SpeakeasyBase {
-    getObjectsParameters?: Record<string, Record<string, any>>;
-    getObjectsParameters1?: Record<string, Record<string, any>>;
-}
+import { AxiosResponse } from "axios";
 export declare class ObjectsGetObjectsByObjectIdsRequest extends SpeakeasyBase {
-    pathParams: ObjectsGetObjectsByObjectIdsPathParams;
-    queryParams: ObjectsGetObjectsByObjectIdsQueryParams;
-    request: ObjectsGetObjectsByObjectIdsRequests;
+    /**
+     * Objects filtering parameters.
+     */
+    requestBody: Record<string, Record<string, any>>;
+    /**
+     * Client API version.
+     */
+    apiVersion: string;
+    /**
+     * The tenant ID.
+     */
+    tenantID: string;
 }
 export declare class ObjectsGetObjectsByObjectIdsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * OK. The operation was successful.
+     */
     directoryObjectListResult?: shared.DirectoryObjectListResult;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

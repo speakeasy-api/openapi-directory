@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { CitiesRow } from "./citiesrow";
-export declare class OpenAqCitiesResultMeta extends SpeakeasyBase {
+export declare class OpenAQCitiesResultMeta extends SpeakeasyBase {
     found?: number;
     license?: string;
     limit?: number;
@@ -8,7 +8,10 @@ export declare class OpenAqCitiesResultMeta extends SpeakeasyBase {
     page?: number;
     website?: string;
 }
-export declare class OpenAqCitiesResult extends SpeakeasyBase {
-    meta?: OpenAqCitiesResultMeta;
+/**
+ * Successful Response
+ */
+export declare class OpenAQCitiesResult extends SpeakeasyBase {
+    meta?: OpenAQCitiesResultMeta;
     results: CitiesRow[];
 }

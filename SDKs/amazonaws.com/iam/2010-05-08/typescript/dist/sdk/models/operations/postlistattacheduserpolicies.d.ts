@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostListAttachedUserPoliciesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTListAttachedUserPoliciesActionEnum {
     ListAttachedUserPolicies = "ListAttachedUserPolicies"
 }
-export declare enum PostListAttachedUserPoliciesVersionEnum {
+export declare enum POSTListAttachedUserPoliciesVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostListAttachedUserPoliciesQueryParams extends SpeakeasyBase {
-    action: PostListAttachedUserPoliciesActionEnum;
+export declare class POSTListAttachedUserPoliciesRequest extends SpeakeasyBase {
+    action: POSTListAttachedUserPoliciesActionEnum;
+    /**
+     * Pagination token
+     */
     marker?: string;
+    /**
+     * Pagination limit
+     */
     maxItems?: string;
-    version: PostListAttachedUserPoliciesVersionEnum;
-}
-export declare class PostListAttachedUserPoliciesHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTListAttachedUserPoliciesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostListAttachedUserPoliciesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostListAttachedUserPoliciesRequest extends SpeakeasyBase {
-    queryParams: PostListAttachedUserPoliciesQueryParams;
-    headers: PostListAttachedUserPoliciesHeaders;
-    request?: Uint8Array;
-}
-export declare class PostListAttachedUserPoliciesResponse extends SpeakeasyBase {
+export declare class POSTListAttachedUserPoliciesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

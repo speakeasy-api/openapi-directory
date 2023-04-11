@@ -1,19 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetVodBackgroundsPathParams extends SpeakeasyBase {
-    ondemandId: number;
-}
-export declare class GetVodBackgroundsQueryParams extends SpeakeasyBase {
-    page?: number;
-    perPage?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetVodBackgroundsRequest extends SpeakeasyBase {
-    pathParams: GetVodBackgroundsPathParams;
-    queryParams: GetVodBackgroundsQueryParams;
+    /**
+     * The ID of the On Demand.
+     */
+    ondemandId: number;
+    /**
+     * The page number of the results to show.
+     */
+    page?: number;
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    perPage?: number;
 }
 export declare class GetVodBackgroundsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * No such On Demand page exists.
+     */
     legacyError?: shared.LegacyError;
+    /**
+     * The background images were returned.
+     */
     pictures?: shared.Picture[];
 }

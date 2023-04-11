@@ -1,0 +1,86 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { Dimension } from "./dimension";
+import { LineConnection } from "./lineconnection";
+import { LineFill } from "./linefill";
+import { Link } from "./link";
+/**
+ * The dash style of the line.
+ */
+export declare enum LinePropertiesDashStyleEnum {
+    DashStyleUnspecified = "DASH_STYLE_UNSPECIFIED",
+    Solid = "SOLID",
+    Dot = "DOT",
+    Dash = "DASH",
+    DashDot = "DASH_DOT",
+    LongDash = "LONG_DASH",
+    LongDashDot = "LONG_DASH_DOT"
+}
+/**
+ * The style of the arrow at the end of the line.
+ */
+export declare enum LinePropertiesEndArrowEnum {
+    ArrowStyleUnspecified = "ARROW_STYLE_UNSPECIFIED",
+    None = "NONE",
+    StealthArrow = "STEALTH_ARROW",
+    FillArrow = "FILL_ARROW",
+    FillCircle = "FILL_CIRCLE",
+    FillSquare = "FILL_SQUARE",
+    FillDiamond = "FILL_DIAMOND",
+    OpenArrow = "OPEN_ARROW",
+    OpenCircle = "OPEN_CIRCLE",
+    OpenSquare = "OPEN_SQUARE",
+    OpenDiamond = "OPEN_DIAMOND"
+}
+/**
+ * The style of the arrow at the beginning of the line.
+ */
+export declare enum LinePropertiesStartArrowEnum {
+    ArrowStyleUnspecified = "ARROW_STYLE_UNSPECIFIED",
+    None = "NONE",
+    StealthArrow = "STEALTH_ARROW",
+    FillArrow = "FILL_ARROW",
+    FillCircle = "FILL_CIRCLE",
+    FillSquare = "FILL_SQUARE",
+    FillDiamond = "FILL_DIAMOND",
+    OpenArrow = "OPEN_ARROW",
+    OpenCircle = "OPEN_CIRCLE",
+    OpenSquare = "OPEN_SQUARE",
+    OpenDiamond = "OPEN_DIAMOND"
+}
+/**
+ * The properties of the Line. When unset, these fields default to values that match the appearance of new lines created in the Slides editor.
+ */
+export declare class LineProperties extends SpeakeasyBase {
+    /**
+     * The dash style of the line.
+     */
+    dashStyle?: LinePropertiesDashStyleEnum;
+    /**
+     * The style of the arrow at the end of the line.
+     */
+    endArrow?: LinePropertiesEndArrowEnum;
+    /**
+     * The properties for one end of a Line connection.
+     */
+    endConnection?: LineConnection;
+    /**
+     * The fill of the line.
+     */
+    lineFill?: LineFill;
+    /**
+     * A hypertext link.
+     */
+    link?: Link;
+    /**
+     * The style of the arrow at the beginning of the line.
+     */
+    startArrow?: LinePropertiesStartArrowEnum;
+    /**
+     * The properties for one end of a Line connection.
+     */
+    startConnection?: LineConnection;
+    /**
+     * A magnitude in a single direction in the specified units.
+     */
+    weight?: Dimension;
+}

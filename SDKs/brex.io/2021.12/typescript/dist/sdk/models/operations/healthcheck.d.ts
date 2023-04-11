@@ -1,14 +1,28 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class HealthCheckSecurity extends SpeakeasyBase {
-    userKey: shared.SchemeUserKey;
+import { AxiosResponse } from "axios";
+/**
+ * Detailed information about the error
+ */
+export declare class HealthCheckDefaultApplicationJSON extends SpeakeasyBase {
+    code: number;
+    fault?: string;
+    message: string;
+    tag: string;
 }
-export declare class HealthCheckRequest extends SpeakeasyBase {
-    security: HealthCheckSecurity;
+export declare class HealthCheck200ApplicationJSON extends SpeakeasyBase {
+    name?: string;
+    status?: string;
 }
 export declare class HealthCheckResponse extends SpeakeasyBase {
     contentType: string;
-    healthCheck200ApplicationJSONAnies?: any[];
-    healthCheckDefaultApplicationJSONAny?: any;
+    /**
+     * List of the commercial registers and their health data
+     */
+    healthCheck200ApplicationJSONObjects?: HealthCheck200ApplicationJSON[];
+    /**
+     * Detailed information about the error
+     */
+    healthCheckDefaultApplicationJSONObject?: HealthCheckDefaultApplicationJSON;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,9 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeResourcePolicyPathParams extends SpeakeasyBase {
-    resourceArn: string;
-}
-export declare class DescribeResourcePolicyHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DescribeResourcePolicyRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,16 +9,29 @@ export declare class DescribeResourcePolicyHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DescribeResourcePolicyRequest extends SpeakeasyBase {
-    pathParams: DescribeResourcePolicyPathParams;
-    headers: DescribeResourcePolicyHeaders;
+    /**
+     * The Amazon Resource Name (ARN) of the bot or bot alias that the resource policy is attached to.
+     */
+    resourceArn: string;
 }
 export declare class DescribeResourcePolicyResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeResourcePolicyResponse?: shared.DescribeResourcePolicyResponse;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

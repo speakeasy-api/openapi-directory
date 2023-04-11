@@ -1,26 +1,25 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetNameConceptTypeSpecificConceptJsonRequest, GetNameConceptTypeSpecificConceptJsonResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GetNameConceptTypeSpecificConceptJsonRequest,
+  GetNameConceptTypeSpecificConceptJsonResponse,
+  GetNameConceptTypeSpecificConceptJsonConceptTypeEnum,
+  GetNameConceptTypeSpecificConceptJsonFieldsEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    apikey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
+    apikey: "YOUR_API_KEY_HERE",
+  },
+});
+
 const req: GetNameConceptTypeSpecificConceptJsonRequest = {
-  pathParams: {
-    conceptType: "nytd_org",
-    specificConcept: "voluptas",
-  },
-  queryParams: {
-    fields: "links",
-    query: "expedita",
-  },
+  conceptType: GetNameConceptTypeSpecificConceptJsonConceptTypeEnum.NytdOrg,
+  fields: GetNameConceptTypeSpecificConceptJsonFieldsEnum.Combinations,
+  query: "distinctio",
+  specificConcept: "quibusdam",
 };
 
 sdk.getNameConceptTypeSpecificConceptJson(req).then((res: GetNameConceptTypeSpecificConceptJsonResponse | AxiosError) => {

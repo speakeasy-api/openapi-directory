@@ -4,7 +4,7 @@ import { Relationship } from "./relationship";
 import { ResourceTypeEnum } from "./resourcetypeenum";
 /**
  * A list that contains detailed configurations of a specified resource.
-**/
+ */
 export declare class ConfigurationItem extends SpeakeasyBase {
     accountId?: string;
     arn?: string;

@@ -1,8 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
 export declare enum DisassociateAdminAccountXAmzTargetEnum {
-    Awsfms20180101DisassociateAdminAccount = "AWSFMS_20180101.DisassociateAdminAccount"
+    AWSFMS20180101DisassociateAdminAccount = "AWSFMS_20180101.DisassociateAdminAccount"
 }
-export declare class DisassociateAdminAccountHeaders extends SpeakeasyBase {
+export declare class DisassociateAdminAccountRequest extends SpeakeasyBase {
+    requestBody: Record<string, any>;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,14 +14,20 @@ export declare class DisassociateAdminAccountHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DisassociateAdminAccountXAmzTargetEnum;
 }
-export declare class DisassociateAdminAccountRequest extends SpeakeasyBase {
-    headers: DisassociateAdminAccountHeaders;
-    request: Record<string, any>;
-}
 export declare class DisassociateAdminAccountResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalErrorException
+     */
     internalErrorException?: any;
+    /**
+     * InvalidOperationException
+     */
     invalidOperationException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,0 +1,87 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { Amount } from "./amount";
+import { Buyer } from "./buyer";
+import { FeeJurisdiction } from "./feejurisdiction";
+import { OrderLineItem } from "./orderlineitem";
+import { Reference } from "./reference";
+/**
+ * This type is used to express the details of one of the following monetary transactions: a buyer's payment for an order, a refund to the buyer for a returned item or cancelled order, or a credit issued by eBay to the seller's account.
+ */
+export declare class Transaction extends SpeakeasyBase {
+    /**
+     * This type is used to express the dollar value and currency used for any transaction retrieved with the <strong>Finances API</strong>, including an order total, a seller payout, a buyer refund, or a seller credit.
+     */
+    amount?: Amount;
+    /**
+     * The enumeration value returned in this field indicates if the monetary transaction amount is a (<code>CREDIT</code>) or a (<code>DEBIT</code>) to the seller's account. Typically, the <code>SALE</code> and <code>CREDIT</code> transaction types are credits to the seller's account, and the <code>REFUND</code>, <code>DISPUTE</code>, <code>SHIPPING_LABEL</code>, and <code>TRANSFER</code> transaction types are debits to the seller's account. For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/finances/types/pay:BookingEntryEnum'>eBay API documentation</a>
+     */
+    bookingEntry?: string;
+    /**
+     * This type is used to express details about the buyer associated with an order. At this time, the only field in this type is the eBay user ID of the buyer, but more fields may get added at a later date.
+     */
+    buyer?: Buyer;
+    /**
+     * This type is used to express the dollar value and currency used for any transaction retrieved with the <strong>Finances API</strong>, including an order total, a seller payout, a buyer refund, or a seller credit.
+     */
+    eBayCollectedTaxAmount?: Amount;
+    /**
+     * This container returns jurisdiction information about region-specific fees that are charged to sellers.
+     */
+    feeJurisdiction?: FeeJurisdiction;
+    /**
+     * The type of fee. For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/finances/types/api:FeeTypeEnum'>eBay API documentation</a>
+     */
+    feeType?: string;
+    /**
+     * The unique identifier of the eBay order associated with the monetary transaction.
+     */
+    orderId?: string;
+    /**
+     * This array shows the fees that are deducted from a seller payout for each line item in an order.<br><br><span class="tablenote"><strong>Note:</strong> In some cases, a transaction fee might be returned asynchronously from the associated order. In such cases, you can determine the order to which the fee applies by examining the referenceID value of the fee, which should match the ID of the order.
+     */
+    orderLineItems?: OrderLineItem[];
+    /**
+     * This string value indicates the entity that is processing  the payment.
+     */
+    paymentsEntity?: string;
+    /**
+     * The unique identifier of the seller payout associated with the monetary transaction. This identifier is generated once eBay begins processing the payout for the corresponding order. This field will not be returned if eBay has not yet begun processing the payout for an order.
+     */
+    payoutId?: string;
+    /**
+     * This field contains reference information for the transaction fee. This includes an ID and the type of ID provided (such as item ID).
+     */
+    references?: Reference[];
+    /**
+     * The Sales Record Number associated with a sales order. Sales Record Numbers are Selling Manager/Selling Manager Pro identifiers that are created at order checkout.<br><br><span class="tablenote"><strong>Note:</strong> For all orders originating after February 1, 2020, a value of <code>0</code> will be returned in this field. The Sales Record Number field has also been removed from Seller Hub. Instead of <strong>salesRecordReference</strong>, depend on <strong>orderId</strong> instead as the identifier of the order. The <strong>salesRecordReference</strong> field has been scheduled for deprecation, and a date for when this field will no longer be returned at all will be announced soon.</span>
+     */
+    salesRecordReference?: string;
+    /**
+     * This type is used to express the dollar value and currency used for any transaction retrieved with the <strong>Finances API</strong>, including an order total, a seller payout, a buyer refund, or a seller credit.
+     */
+    totalFeeAmount?: Amount;
+    /**
+     * This type is used to express the dollar value and currency used for any transaction retrieved with the <strong>Finances API</strong>, including an order total, a seller payout, a buyer refund, or a seller credit.
+     */
+    totalFeeBasisAmount?: Amount;
+    /**
+     * This timestamp indicates when the monetary transaction (order purchase, buyer refund, seller credit) occurred. The following (UTC) format is used: <code>YYYY-MM-DDTHH:MM:SS.SSSZ</code>. For example, <code>2015-08-04T19:09:02.768Z</code>.
+     */
+    transactionDate?: string;
+    /**
+     * The unique identifier of the monetary transaction. A monetary transaction can be a sales order, an order refund to the buyer, a credit to the seller's account, a debit to the seller for the purchase of a shipping label, or a transaction where eBay recouped money from the seller if the seller lost a buyer-initiated payment dispute.
+     */
+    transactionId?: string;
+    /**
+     * This field provides more details on shipping label transactions and transactions where the funds are being held by eBay. For shipping label transactions, the <b>transactionMemo</b> gives details about a purchase, a refund, or a price adjustment to the cost of the shipping label. For on-hold transactions, the <b>transactionMemo</b> provides information on the reason for the hold or when the hold will be released (e.g., "Funds on hold. Estimated release on Jun 1").<br><br>This field is only returned if applicable/available.
+     */
+    transactionMemo?: string;
+    /**
+     * This enumeration value indicates the current status of the seller payout associated with the monetary transaction. See the <code>TransactionStatusEnum</code> type for more information on the different states. For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/finances/types/pay:TransactionStatusEnum'>eBay API documentation</a>
+     */
+    transactionStatus?: string;
+    /**
+     * This enumeration value indicates the type of monetary transaction. Examples of monetary transactions include a buyer's payment for an order, a refund to the buyer for a returned item or cancelled order, or a credit issued by eBay to the seller's account. For a complete list of monetary transaction types within the <strong>Finances API</strong>, see the <a href="/api-docs/sell/finances/types/pay:TransactionTypeEnum">TransactionTypeEnum</a> type. For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/finances/types/pay:TransactionTypeEnum'>eBay API documentation</a>
+     */
+    transactionType?: string;
+}

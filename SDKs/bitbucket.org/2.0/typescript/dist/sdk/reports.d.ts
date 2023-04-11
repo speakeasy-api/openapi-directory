@@ -1,5 +1,15 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Code insights provides reports, annotations, and metrics to help you
+ *
+ * @remarks
+ * and your team improve code quality in pull requests throughout the code
+ * review process. Some of the available code insights are static analysis
+ * reports, security scan results, artifact links, unit tests, and build
+ * status.
+ *
+ */
 export declare class Reports {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +19,10 @@ export declare class Reports {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * bulkCreateOrUpdateAnnotations - Bulk upload of annotations.
+     * Bulk create or update annotations
+     *
+     * @remarks
+     * Bulk upload of annotations.
      * Annotations are individual findings that have been identified as part of a report, for example, a line of code that represents a vulnerability. These annotations can be attached to a specific file and even a specific line in that file, however, that is optional. Annotations are not mandatory and a report can contain up to 1000 annotations.
      *
      * Add the annotations you want to upload as objects in a JSON array and make sure each annotation has the external_id field set to a unique value. If you want to use an existing id from your own system, we recommend prefixing it with your system's name to avoid collisions, for example, mySystem-annotation001. The external id can later be used to identify the report as an alternative to the generated [UUID](https://developer.atlassian.com/bitbucket/api/2/reference/meta/uri-uuid#uuid). You can upload up to 100 annotations per POST request.
@@ -48,10 +61,13 @@ export declare class Reports {
      *
      * Please refer to the [Code Insights documentation](https://confluence.atlassian.com/bitbucket/code-insights-994316785.html) for more information.
      *
-    **/
+     */
     bulkCreateOrUpdateAnnotations(req: operations.BulkCreateOrUpdateAnnotationsRequest, config?: AxiosRequestConfig): Promise<operations.BulkCreateOrUpdateAnnotationsResponse>;
     /**
-     * createOrUpdateAnnotation - Creates or updates an individual annotation for the specified report.
+     * Create or update an annotation
+     *
+     * @remarks
+     * Creates or updates an individual annotation for the specified report.
      * Annotations are individual findings that have been identified as part of a report, for example, a line of code that represents a vulnerability. These annotations can be attached to a specific file and even a specific line in that file, however, that is optional. Annotations are not mandatory and a report can contain up to 1000 annotations.
      *
      * Just as reports, annotation needs to be uploaded with a unique ID that can later be used to identify the report as an alternative to the generated [UUID](https://developer.atlassian.com/bitbucket/api/2/reference/meta/uri-uuid#uuid). If you want to use an existing id from your own system, we recommend prefixing it with your system's name to avoid collisions, for example, mySystem-annotation001.
@@ -77,10 +93,13 @@ export declare class Reports {
      *
      * Please refer to the [Code Insights documentation](https://confluence.atlassian.com/bitbucket/code-insights-994316785.html) for more information.
      *
-    **/
+     */
     createOrUpdateAnnotation(req: operations.CreateOrUpdateAnnotationRequest, config?: AxiosRequestConfig): Promise<operations.CreateOrUpdateAnnotationResponse>;
     /**
-     * createOrUpdateReport - Creates or updates a report for the specified commit.
+     * Create or update a report
+     *
+     * @remarks
+     * Creates or updates a report for the specified commit.
      * To upload a report, make sure to generate an ID that is unique across all reports for that commit. If you want to use an existing id from your own system, we recommend prefixing it with your system's name to avoid collisions, for example, mySystem-001.
      *
      * ### Sample cURL request:
@@ -128,30 +147,48 @@ export declare class Reports {
      *
      * Please refer to the [Code Insights documentation](https://confluence.atlassian.com/bitbucket/code-insights-994316785.html) for more information.
      *
-    **/
+     */
     createOrUpdateReport(req: operations.CreateOrUpdateReportRequest, config?: AxiosRequestConfig): Promise<operations.CreateOrUpdateReportResponse>;
     /**
-     * deleteAnnotation - Deletes a single Annotation matching the provided ID.
-    **/
+     * Delete an annotation
+     *
+     * @remarks
+     * Deletes a single Annotation matching the provided ID.
+     */
     deleteAnnotation(req: operations.DeleteAnnotationRequest, config?: AxiosRequestConfig): Promise<operations.DeleteAnnotationResponse>;
     /**
-     * deleteReport - Deletes a single Report matching the provided ID.
-    **/
+     * Delete a report
+     *
+     * @remarks
+     * Deletes a single Report matching the provided ID.
+     */
     deleteReport(req: operations.DeleteReportRequest, config?: AxiosRequestConfig): Promise<operations.DeleteReportResponse>;
     /**
-     * getAnnotation - Returns a single Annotation matching the provided ID.
-    **/
+     * Get an annotation
+     *
+     * @remarks
+     * Returns a single Annotation matching the provided ID.
+     */
     getAnnotation(req: operations.GetAnnotationRequest, config?: AxiosRequestConfig): Promise<operations.GetAnnotationResponse>;
     /**
-     * getAnnotationsForReport - Returns a paginated list of Annotations for a specified report.
-    **/
+     * List annotations
+     *
+     * @remarks
+     * Returns a paginated list of Annotations for a specified report.
+     */
     getAnnotationsForReport(req: operations.GetAnnotationsForReportRequest, config?: AxiosRequestConfig): Promise<operations.GetAnnotationsForReportResponse>;
     /**
-     * getReport - Returns a single Report matching the provided ID.
-    **/
+     * Get a report
+     *
+     * @remarks
+     * Returns a single Report matching the provided ID.
+     */
     getReport(req: operations.GetReportRequest, config?: AxiosRequestConfig): Promise<operations.GetReportResponse>;
     /**
-     * getReportsForCommit - Returns a paginated list of Reports linked to this commit.
-    **/
+     * List reports
+     *
+     * @remarks
+     * Returns a paginated list of Reports linked to this commit.
+     */
     getReportsForCommit(req: operations.GetReportsForCommitRequest, config?: AxiosRequestConfig): Promise<operations.GetReportsForCommitResponse>;
 }

@@ -1,13 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListTaskDefinitionsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListTaskDefinitionsXAmzTargetEnum {
     AmazonEc2ContainerServiceV20141113ListTaskDefinitions = "AmazonEC2ContainerServiceV20141113.ListTaskDefinitions"
 }
-export declare class ListTaskDefinitionsHeaders extends SpeakeasyBase {
+export declare class ListTaskDefinitionsRequest extends SpeakeasyBase {
+    listTaskDefinitionsRequest: shared.ListTaskDefinitionsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,17 +14,33 @@ export declare class ListTaskDefinitionsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
     xAmzTarget: ListTaskDefinitionsXAmzTargetEnum;
-}
-export declare class ListTaskDefinitionsRequest extends SpeakeasyBase {
-    queryParams: ListTaskDefinitionsQueryParams;
-    headers: ListTaskDefinitionsHeaders;
-    request: shared.ListTaskDefinitionsRequest;
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
 }
 export declare class ListTaskDefinitionsResponse extends SpeakeasyBase {
+    /**
+     * ClientException
+     */
     clientException?: any;
     contentType: string;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * Success
+     */
     listTaskDefinitionsResponse?: shared.ListTaskDefinitionsResponse;
+    /**
+     * ServerException
+     */
     serverException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

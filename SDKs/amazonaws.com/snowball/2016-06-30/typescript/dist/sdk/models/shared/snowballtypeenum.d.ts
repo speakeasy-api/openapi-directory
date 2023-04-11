@@ -5,5 +5,6 @@ export declare enum SnowballTypeEnum {
     EdgeCg = "EDGE_CG",
     EdgeS = "EDGE_S",
     Snc1Hdd = "SNC1_HDD",
-    Snc1Ssd = "SNC1_SSD"
+    Snc1Ssd = "SNC1_SSD",
+    V35C = "V3_5C"
 }

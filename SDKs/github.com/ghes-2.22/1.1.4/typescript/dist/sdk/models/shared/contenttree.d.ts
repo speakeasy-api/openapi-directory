@@ -24,7 +24,7 @@ export declare class ContentTreeEntries extends SpeakeasyBase {
 }
 /**
  * Content Tree
-**/
+ */
 export declare class ContentTree extends SpeakeasyBase {
     links: ContentTreeLinks;
     downloadUrl: string;

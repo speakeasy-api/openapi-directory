@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Discovery {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -8,5 +8,5 @@ export declare class Discovery {
     _sdkVersion: string;
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
-    trafficdirectorDiscoveryClientStatus(req: operations.TrafficdirectorDiscoveryClientStatusRequest, config?: AxiosRequestConfig): Promise<operations.TrafficdirectorDiscoveryClientStatusResponse>;
+    trafficdirectorDiscoveryClientStatus(req: operations.TrafficdirectorDiscoveryClientStatusRequest, security: operations.TrafficdirectorDiscoveryClientStatusSecurity, config?: AxiosRequestConfig): Promise<operations.TrafficdirectorDiscoveryClientStatusResponse>;
 }

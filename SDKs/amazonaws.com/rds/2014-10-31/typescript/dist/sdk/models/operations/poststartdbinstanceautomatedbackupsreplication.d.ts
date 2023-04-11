@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostStartDbInstanceAutomatedBackupsReplicationActionEnum {
-    StartDbInstanceAutomatedBackupsReplication = "StartDBInstanceAutomatedBackupsReplication"
+import { AxiosResponse } from "axios";
+export declare enum POSTStartDBInstanceAutomatedBackupsReplicationActionEnum {
+    StartDBInstanceAutomatedBackupsReplication = "StartDBInstanceAutomatedBackupsReplication"
 }
-export declare enum PostStartDbInstanceAutomatedBackupsReplicationVersionEnum {
+export declare enum POSTStartDBInstanceAutomatedBackupsReplicationVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class PostStartDbInstanceAutomatedBackupsReplicationQueryParams extends SpeakeasyBase {
-    action: PostStartDbInstanceAutomatedBackupsReplicationActionEnum;
-    version: PostStartDbInstanceAutomatedBackupsReplicationVersionEnum;
-}
-export declare class PostStartDbInstanceAutomatedBackupsReplicationHeaders extends SpeakeasyBase {
+export declare class POSTStartDBInstanceAutomatedBackupsReplicationRequest extends SpeakeasyBase {
+    action: POSTStartDBInstanceAutomatedBackupsReplicationActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTStartDBInstanceAutomatedBackupsReplicationVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostStartDbInstanceAutomatedBackupsReplicationHeaders exten
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostStartDbInstanceAutomatedBackupsReplicationRequest extends SpeakeasyBase {
-    queryParams: PostStartDbInstanceAutomatedBackupsReplicationQueryParams;
-    headers: PostStartDbInstanceAutomatedBackupsReplicationHeaders;
-    request?: Uint8Array;
-}
-export declare class PostStartDbInstanceAutomatedBackupsReplicationResponse extends SpeakeasyBase {
+export declare class POSTStartDBInstanceAutomatedBackupsReplicationResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

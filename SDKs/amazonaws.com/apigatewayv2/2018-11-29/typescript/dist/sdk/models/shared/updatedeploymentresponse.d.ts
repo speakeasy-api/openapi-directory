@@ -1,9 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * The status of the deployment: PENDING, FAILED, or SUCCEEDED.
+ */
+export declare enum UpdateDeploymentResponseDeploymentStatusEnum {
+    Pending = "PENDING",
+    Failed = "FAILED",
+    Deployed = "DEPLOYED"
+}
+/**
+ * Success
+ */
 export declare class UpdateDeploymentResponse extends SpeakeasyBase {
-    autoDeployed?: Record<string, any>;
-    createdDate?: Record<string, any>;
-    deploymentId?: Record<string, any>;
-    deploymentStatus?: Record<string, any>;
-    deploymentStatusMessage?: Record<string, any>;
-    description?: Record<string, any>;
+    autoDeployed?: boolean;
+    createdDate?: Date;
+    deploymentId?: string;
+    deploymentStatus?: UpdateDeploymentResponseDeploymentStatusEnum;
+    deploymentStatusMessage?: string;
+    description?: string;
 }

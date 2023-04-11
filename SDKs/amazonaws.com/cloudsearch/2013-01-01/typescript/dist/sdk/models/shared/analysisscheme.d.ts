@@ -3,9 +3,18 @@ import { AnalysisOptions } from "./analysisoptions";
 import { AnalysisSchemeLanguageEnum } from "./analysisschemelanguageenum";
 /**
  * Configuration information for an analysis scheme. Each analysis scheme has a unique name and specifies the language of the text to be processed. The following options can be configured for an analysis scheme: <code>Synonyms</code>, <code>Stopwords</code>, <code>StemmingDictionary</code>, <code>JapaneseTokenizationDictionary</code> and <code>AlgorithmicStemming</code>.
-**/
+ */
 export declare class AnalysisScheme extends SpeakeasyBase {
+    /**
+     * Synonyms, stopwords, and stemming options for an analysis scheme. Includes tokenization dictionary for Japanese.
+     */
     analysisOptions?: AnalysisOptions;
+    /**
+     * An <a href="http://tools.ietf.org/html/rfc4646" target="_blank">IETF RFC 4646</a> language code or <code>mul</code> for multiple languages.
+     */
     analysisSchemeLanguage: AnalysisSchemeLanguageEnum;
+    /**
+     * Names must begin with a letter and can contain the following characters: a-z (lowercase), 0-9, and _ (underscore).
+     */
     analysisSchemeName: string;
 }

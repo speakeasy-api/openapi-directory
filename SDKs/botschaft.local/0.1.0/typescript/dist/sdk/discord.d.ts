@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Discord {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,11 +9,11 @@ export declare class Discord {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * discordGetDiscordGet - Discord Get
-    **/
+     * Discord Get
+     */
     discordGetDiscordGet(req: operations.DiscordGetDiscordGetRequest, config?: AxiosRequestConfig): Promise<operations.DiscordGetDiscordGetResponse>;
     /**
-     * discordPostDiscordPost - Discord Post
-    **/
+     * Discord Post
+     */
     discordPostDiscordPost(req: operations.DiscordPostDiscordPostRequest, config?: AxiosRequestConfig): Promise<operations.DiscordPostDiscordPostResponse>;
 }

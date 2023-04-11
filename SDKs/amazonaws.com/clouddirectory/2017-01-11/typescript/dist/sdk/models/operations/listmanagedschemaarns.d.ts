@@ -1,10 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListManagedSchemaArnsQueryParams extends SpeakeasyBase {
-    maxResults?: string;
+import { AxiosResponse } from "axios";
+export declare class ListManagedSchemaArnsRequestBody extends SpeakeasyBase {
+    /**
+     * The maximum number of results to retrieve.
+     */
+    maxResults?: number;
+    /**
+     * The pagination token.
+     */
     nextToken?: string;
+    /**
+     * The response for ListManagedSchemaArns. When this parameter is used, all minor version ARNs for a major version are listed.
+     */
+    schemaArn?: string;
 }
-export declare class ListManagedSchemaArnsHeaders extends SpeakeasyBase {
+export declare class ListManagedSchemaArnsRequest extends SpeakeasyBase {
+    /**
+     * Pagination limit
+     */
+    maxResults?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
+    requestBody: ListManagedSchemaArnsRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,24 +33,36 @@ export declare class ListManagedSchemaArnsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class ListManagedSchemaArnsRequestBody extends SpeakeasyBase {
-    maxResults?: number;
-    nextToken?: string;
-    schemaArn?: string;
-}
-export declare class ListManagedSchemaArnsRequest extends SpeakeasyBase {
-    queryParams: ListManagedSchemaArnsQueryParams;
-    headers: ListManagedSchemaArnsHeaders;
-    request: ListManagedSchemaArnsRequestBody;
-}
 export declare class ListManagedSchemaArnsResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidArnException
+     */
     invalidArnException?: any;
+    /**
+     * InvalidNextTokenException
+     */
     invalidNextTokenException?: any;
+    /**
+     * Success
+     */
     listManagedSchemaArnsResponse?: shared.ListManagedSchemaArnsResponse;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

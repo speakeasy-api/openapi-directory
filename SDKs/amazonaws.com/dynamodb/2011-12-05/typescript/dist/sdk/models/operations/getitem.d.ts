@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum GetItemXAmzTargetEnum {
-    DynamoDb20111205GetItem = "DynamoDB_20111205.GetItem"
+    DynamoDB20111205GetItem = "DynamoDB_20111205.GetItem"
 }
-export declare class GetItemHeaders extends SpeakeasyBase {
+export declare class GetItemRequest extends SpeakeasyBase {
+    getItemInput: shared.GetItemInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class GetItemHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: GetItemXAmzTargetEnum;
 }
-export declare class GetItemRequest extends SpeakeasyBase {
-    headers: GetItemHeaders;
-    request: shared.GetItemInput;
-}
 export declare class GetItemResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     getItemOutput?: shared.GetItemOutput;
+    /**
+     * InternalServerError
+     */
     internalServerError?: any;
+    /**
+     * ProvisionedThroughputExceededException
+     */
     provisionedThroughputExceededException?: any;
+    /**
+     * RequestLimitExceeded
+     */
     requestLimitExceeded?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
 }

@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeDomainEndpointOptionsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeDomainEndpointOptionsActionEnum {
     DescribeDomainEndpointOptions = "DescribeDomainEndpointOptions"
 }
-export declare enum GetDescribeDomainEndpointOptionsVersionEnum {
+export declare enum GETDescribeDomainEndpointOptionsVersionEnum {
     TwoThousandAndThirteen0101 = "2013-01-01"
 }
-export declare class GetDescribeDomainEndpointOptionsQueryParams extends SpeakeasyBase {
-    action: GetDescribeDomainEndpointOptionsActionEnum;
+export declare class GETDescribeDomainEndpointOptionsRequest extends SpeakeasyBase {
+    action: GETDescribeDomainEndpointOptionsActionEnum;
+    /**
+     * Whether to retrieve the latest configuration (which might be in a Processing state) or the current, active configuration. Defaults to <code>false</code>.
+     */
     deployed?: boolean;
+    /**
+     * A string that represents the name of a domain.
+     */
     domainName: string;
-    version: GetDescribeDomainEndpointOptionsVersionEnum;
-}
-export declare class GetDescribeDomainEndpointOptionsHeaders extends SpeakeasyBase {
+    version: GETDescribeDomainEndpointOptionsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetDescribeDomainEndpointOptionsHeaders extends SpeakeasyBa
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeDomainEndpointOptionsRequest extends SpeakeasyBase {
-    queryParams: GetDescribeDomainEndpointOptionsQueryParams;
-    headers: GetDescribeDomainEndpointOptionsHeaders;
-}
-export declare class GetDescribeDomainEndpointOptionsResponse extends SpeakeasyBase {
+export declare class GETDescribeDomainEndpointOptionsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

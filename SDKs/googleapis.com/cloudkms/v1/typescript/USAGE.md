@@ -1,61 +1,88 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CloudkmsProjectsLocationsEkmConnectionsCreateRequest, CloudkmsProjectsLocationsEkmConnectionsCreateResponse } from "openapi/src/sdk/models/operations";
+import {
+  CloudkmsProjectsLocationsEkmConnectionsCreateRequest,
+  CloudkmsProjectsLocationsEkmConnectionsCreateResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  EkmConnectionKeyManagementModeEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: CloudkmsProjectsLocationsEkmConnectionsCreateRequest = {
-  security: {
-    option1: {
-      oauth2: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-      oauth2c: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-    },
-  },
-  pathParams: {
-    parent: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    ekmConnectionId: "dolor",
-    fields: "expedita",
-    key: "voluptas",
-    oauthToken: "fugit",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    uploadType: "rerum",
-    uploadProtocol: "dicta",
-  },
-  request: {
-    etag: "debitis",
+  dollarXgafv: XgafvEnum.Two,
+  ekmConnectionInput: {
+    cryptoSpacePath: "provident",
+    etag: "distinctio",
+    keyManagementMode: EkmConnectionKeyManagementModeEnum.CloudKms,
     serviceResolvers: [
       {
-        endpointFilter: "et",
-        hostname: "ut",
+        endpointFilter: "nulla",
+        hostname: "moral-star.info",
         serverCertificates: [
           {
-            rawDer: "et",
+            rawDer: "deserunt",
           },
           {
-            rawDer: "voluptate",
+            rawDer: "suscipit",
           },
           {
-            rawDer: "iste",
+            rawDer: "iure",
           },
         ],
-        serviceDirectoryService: "vitae",
+        serviceDirectoryService: "magnam",
+      },
+      {
+        endpointFilter: "debitis",
+        hostname: "awesome-voter.biz",
+        serverCertificates: [
+          {
+            rawDer: "molestiae",
+          },
+          {
+            rawDer: "minus",
+          },
+        ],
+        serviceDirectoryService: "placeat",
+      },
+      {
+        endpointFilter: "voluptatum",
+        hostname: "lawful-missionary.info",
+        serverCertificates: [
+          {
+            rawDer: "temporibus",
+          },
+          {
+            rawDer: "ab",
+          },
+          {
+            rawDer: "quis",
+          },
+          {
+            rawDer: "veritatis",
+          },
+        ],
+        serviceDirectoryService: "deserunt",
       },
     ],
   },
+  accessToken: "perferendis",
+  alt: AltEnum.Media,
+  callback: "repellendus",
+  ekmConnectionId: "sapiente",
+  fields: "quo",
+  key: "odit",
+  oauthToken: "at",
+  parent: "at",
+  prettyPrint: false,
+  quotaUser: "maiores",
+  uploadType: "molestiae",
+  uploadProtocol: "quod",
 };
 
 sdk.projects.cloudkmsProjectsLocationsEkmConnectionsCreate(req).then((res: CloudkmsProjectsLocationsEkmConnectionsCreateResponse | AxiosError) => {

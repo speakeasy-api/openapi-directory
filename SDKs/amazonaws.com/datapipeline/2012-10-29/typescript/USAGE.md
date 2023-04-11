@@ -1,38 +1,46 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { ActivatePipelineRequest, ActivatePipelineResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  ActivatePipelineRequest,
+  ActivatePipelineResponse,
+  ActivatePipelineXAmzTargetEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: ActivatePipelineRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzTarget: "DataPipeline.ActivatePipeline",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
+});
+
+const req: ActivatePipelineRequest = {
+  activatePipelineInput: {
     parameterValues: [
       {
-        id: "et",
-        stringValue: "nihil",
+        id: "provident",
+        stringValue: "distinctio",
+      },
+      {
+        id: "quibusdam",
+        stringValue: "unde",
+      },
+      {
+        id: "nulla",
+        stringValue: "corrupti",
       },
     ],
-    pipelineId: "rerum",
-    startTimestamp: "2004-06-02T10:14:12Z",
+    pipelineId: "illum",
+    startTimestamp: "2022-05-18T09:34:54.894Z",
   },
+  xAmzAlgorithm: "deserunt",
+  xAmzContentSha256: "suscipit",
+  xAmzCredential: "iure",
+  xAmzDate: "magnam",
+  xAmzSecurityToken: "debitis",
+  xAmzSignature: "ipsa",
+  xAmzSignedHeaders: "delectus",
+  xAmzTarget: ActivatePipelineXAmzTargetEnum.DataPipelineActivatePipeline,
 };
 
 sdk.activatePipeline(req).then((res: ActivatePipelineResponse | AxiosError) => {

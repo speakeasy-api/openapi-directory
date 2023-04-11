@@ -1,0 +1,32 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+export declare class DriverRace extends SpeakeasyBase {
+    bonus?: number;
+    created?: string;
+    currentPosition?: number;
+    dateTime?: string;
+    day?: string;
+    draftKingsSalary?: number;
+    driverID?: number;
+    fantasyPoints?: number;
+    fantasyPointsDraftKings?: number;
+    fastestLaps?: number;
+    finalPosition?: number;
+    laps?: number;
+    lapsLed?: number;
+    manufacturer?: string;
+    name?: string;
+    number?: number;
+    numberDisplay?: string;
+    penalty?: number;
+    points?: number;
+    poleFinalPosition?: number;
+    poles?: number;
+    positionDifferential?: number;
+    qualifyingSpeed?: number;
+    raceID?: number;
+    season?: number;
+    startPosition?: number;
+    statID?: number;
+    updated?: string;
+    wins?: number;
+}

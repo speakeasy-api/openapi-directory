@@ -1,14 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class AccessAddPathParams extends SpeakeasyBase {
-    agents: string;
-    mask: string;
-    user: string;
-}
+import { AxiosResponse } from "axios";
 export declare class AccessAddRequest extends SpeakeasyBase {
-    pathParams: AccessAddPathParams;
+    /**
+     * Agent range in minimal range representation
+     */
+    agents: string;
+    /**
+     * Currently not used
+     */
+    mask: string;
+    /**
+     * Username of the simulator hosting system
+     */
+    user: string;
 }
 export declare class AccessAddResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     accessAdd200ApplicationJSONString?: string;
 }

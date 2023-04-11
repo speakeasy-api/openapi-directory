@@ -1,49 +1,55 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { VectortileTerraintilesGetRequest, VectortileTerraintilesGetResponse } from "openapi/src/sdk/models/operations";
+import {
+  VectortileTerraintilesGetRequest,
+  VectortileTerraintilesGetResponse,
+  VectortileTerraintilesGetClientInfoPlatformEnum,
+  VectortileTerraintilesGetTerrainFormatsEnum,
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: VectortileTerraintilesGetRequest = {
-  pathParams: {
-    name: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    altitudePrecisionCentimeters: 3390393562759376202,
-    callback: "dolor",
-    clientInfoApiClient: "expedita",
-    clientInfoApplicationId: "voluptas",
-    clientInfoApplicationVersion: "fugit",
-    clientInfoDeviceModel: "et",
-    clientInfoOperatingSystem: "nihil",
-    clientInfoPlatform: "WINDOWS",
-    clientInfoUserId: "dicta",
-    enableModeledVolumes: true,
-    enablePoliticalFeatures: true,
-    enablePrivateRoads: false,
-    enableUnclippedBuildings: false,
-    fields: "dolorem",
-    key: "et",
-    languageCode: "voluptate",
-    maxElevationResolutionCells: 3287288577352441706,
-    minElevationResolutionCells: 3930927879439176946,
-    oauthToken: "totam",
-    prettyPrint: true,
-    quotaUser: "illum",
-    regionCode: "debitis",
-    terrainFormats: [
-      "TERRAIN_FORMAT_UNKNOWN",
-      "FIRST_DERIVATIVE",
-    ],
-    uploadType: "id",
-    uploadProtocol: "aspernatur",
-  },
+  dollarXgafv: XgafvEnum.Two,
+  accessToken: "provident",
+  alt: AltEnum.Proto,
+  altitudePrecisionCentimeters: 844266,
+  callback: "unde",
+  clientInfoApiClient: "nulla",
+  clientInfoApplicationId: "corrupti",
+  clientInfoApplicationVersion: "illum",
+  clientInfoDeviceModel: "vel",
+  clientInfoOperatingSystem: "error",
+  clientInfoPlatform: VectortileTerraintilesGetClientInfoPlatformEnum.Android,
+  clientInfoUserId: "suscipit",
+  enableModeledVolumes: false,
+  enablePoliticalFeatures: false,
+  enablePrivateRoads: false,
+  enableUnclippedBuildings: false,
+  fields: "iure",
+  key: "magnam",
+  languageCode: "debitis",
+  maxElevationResolutionCells: 56713,
+  minElevationResolutionCells: 963663,
+  name: "tempora",
+  oauthToken: "suscipit",
+  prettyPrint: false,
+  quotaUser: "molestiae",
+  regionCode: "minus",
+  terrainFormats: [
+    VectortileTerraintilesGetTerrainFormatsEnum.FirstDerivative,
+    VectortileTerraintilesGetTerrainFormatsEnum.FirstDerivative,
+    VectortileTerraintilesGetTerrainFormatsEnum.FirstDerivative,
+    VectortileTerraintilesGetTerrainFormatsEnum.FirstDerivative,
+  ],
+  uploadType: "recusandae",
+  uploadProtocol: "temporibus",
 };
 
 sdk.terraintiles.vectortileTerraintilesGet(req).then((res: VectortileTerraintilesGetResponse | AxiosError) => {

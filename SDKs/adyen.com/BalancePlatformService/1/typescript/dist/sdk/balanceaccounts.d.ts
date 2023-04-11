@@ -1,5 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class BalanceAccounts {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,31 +10,33 @@ export declare class BalanceAccounts {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getBalanceAccountsId - Retrieve a balance account.
+     * Get a balance account
      *
-     * Returns a specific balance account.
-    **/
-    getBalanceAccountsId(req: operations.GetBalanceAccountsIdRequest, config?: AxiosRequestConfig): Promise<operations.GetBalanceAccountsIdResponse>;
+     * @remarks
+     * Returns a balance account and its balances for the default currency and other currencies with a non-zero balance.
+     */
+    getBalanceAccountsId(req: operations.GetBalanceAccountsIdRequest, security: operations.GetBalanceAccountsIdSecurity, config?: AxiosRequestConfig): Promise<operations.GetBalanceAccountsIdResponse>;
     /**
-     * getBalanceAccountsIdPaymentInstruments - Retrieve all payment instruments for a specific balance account.
+     * Get all payment instruments for a balance account
      *
-     * Returns a paginated list of the payment instruments associated with a specific balance account. To fetch multiple pages, use the query parameters.
+     * @remarks
+     * Returns a paginated list of the payment instruments associated with a balance account.
      *
-     * For example, to limit the page to 3 payment instruments and to skip the first 6: `/balanceAccounts/{id}/paymentInstruments?limit=3&offset=6`
-    **/
-    getBalanceAccountsIdPaymentInstruments(req: operations.GetBalanceAccountsIdPaymentInstrumentsRequest, config?: AxiosRequestConfig): Promise<operations.GetBalanceAccountsIdPaymentInstrumentsResponse>;
+     * To fetch multiple pages, use the query parameters.For example, to limit the page to 3 payment instruments and to skip the first 6, use `/balanceAccounts/{id}/paymentInstruments?limit=3&offset=6`.
+     */
+    getBalanceAccountsIdPaymentInstruments(req: operations.GetBalanceAccountsIdPaymentInstrumentsRequest, security: operations.GetBalanceAccountsIdPaymentInstrumentsSecurity, config?: AxiosRequestConfig): Promise<operations.GetBalanceAccountsIdPaymentInstrumentsResponse>;
     /**
-     * patchBalanceAccountsId - Update a balance account.
+     * Update a balance account
      *
+     * @remarks
      * Updates a balance account.
-    **/
-    patchBalanceAccountsId(req: operations.PatchBalanceAccountsIdRequest, config?: AxiosRequestConfig): Promise<operations.PatchBalanceAccountsIdResponse>;
+     */
+    patchBalanceAccountsId(req: operations.PatchBalanceAccountsIdRequest, security: operations.PatchBalanceAccountsIdSecurity, config?: AxiosRequestConfig): Promise<operations.PatchBalanceAccountsIdResponse>;
     /**
-     * postBalanceAccounts - Create a balance account.
+     * Create a balance account
      *
-     * Creates a balance account. The balance account resource holds the funds of the associated account holder.
-     *
-     * For more information, refer to [Create accounts](https://docs.adyen.com/issuing/create-accounts).
-    **/
-    postBalanceAccounts(req: operations.PostBalanceAccountsRequest, config?: AxiosRequestConfig): Promise<operations.PostBalanceAccountsResponse>;
+     * @remarks
+     * Creates a balance account that holds the funds of the associated account holder.
+     */
+    postBalanceAccounts(req: shared.BalanceAccountInfoInput, security: operations.PostBalanceAccountsSecurity, config?: AxiosRequestConfig): Promise<operations.PostBalanceAccountsResponse>;
 }

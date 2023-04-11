@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Channels {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +9,7 @@ export declare class Channels {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * calendarChannelsStop - Stop watching resources through this channel
-    **/
-    calendarChannelsStop(req: operations.CalendarChannelsStopRequest, config?: AxiosRequestConfig): Promise<operations.CalendarChannelsStopResponse>;
+     * Stop watching resources through this channel
+     */
+    calendarChannelsStop(req: operations.CalendarChannelsStopRequest, security: operations.CalendarChannelsStopSecurity, config?: AxiosRequestConfig): Promise<operations.CalendarChannelsStopResponse>;
 }

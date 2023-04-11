@@ -1,22 +1,53 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class CompanyNotificationRegisterPathParams extends SpeakeasyBase {
-    id: string;
+import { AxiosResponse } from "axios";
+export declare class CompanyNotificationRegisterSecurity extends SpeakeasyBase {
+    userKey: string;
 }
+/**
+ * Callback URL where the notifications will be sent to
+ */
 export declare class CompanyNotificationRegisterRequestBody extends SpeakeasyBase {
+    /**
+     * Callback URL
+     */
     callbackUrl: string;
 }
-export declare class CompanyNotificationRegisterSecurity extends SpeakeasyBase {
-    userKey: shared.SchemeUserKey;
-}
 export declare class CompanyNotificationRegisterRequest extends SpeakeasyBase {
-    pathParams: CompanyNotificationRegisterPathParams;
-    request?: CompanyNotificationRegisterRequestBody;
-    security: CompanyNotificationRegisterSecurity;
+    /**
+     * Callback URL where the notifications will be sent to
+     */
+    requestBody?: CompanyNotificationRegisterRequestBody;
+    /**
+     * Company Hex ID
+     */
+    id: string;
+}
+/**
+ * Detailed information about the error
+ */
+export declare class CompanyNotificationRegisterDefaultApplicationJSON extends SpeakeasyBase {
+    code: number;
+    fault?: string;
+    message: string;
+    tag: string;
+}
+/**
+ * Successful webhook registration response
+ */
+export declare class CompanyNotificationRegister200ApplicationJSON extends SpeakeasyBase {
+    monitorStatus: string;
+    notificationId: string;
 }
 export declare class CompanyNotificationRegisterResponse extends SpeakeasyBase {
-    companyNotificationRegister200ApplicationJSONAny?: any;
-    companyNotificationRegisterDefaultApplicationJSONAny?: any;
+    /**
+     * Successful webhook registration response
+     */
+    companyNotificationRegister200ApplicationJSONObject?: CompanyNotificationRegister200ApplicationJSON;
+    /**
+     * Detailed information about the error
+     */
+    companyNotificationRegisterDefaultApplicationJSONObject?: CompanyNotificationRegisterDefaultApplicationJSON;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

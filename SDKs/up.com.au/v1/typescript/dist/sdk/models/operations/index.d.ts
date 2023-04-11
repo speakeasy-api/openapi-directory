@@ -12,6 +12,7 @@ export * from "./getutilping";
 export * from "./getwebhooks";
 export * from "./getwebhooksid";
 export * from "./getwebhookswebhookidlogs";
+export * from "./patchtransactionstransactionidrelationshipscategory";
 export * from "./posttransactionstransactionidrelationshipstags";
 export * from "./postwebhooks";
 export * from "./postwebhookswebhookidping";

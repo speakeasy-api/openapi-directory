@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { WafAction } from "./wafaction";
 import { Tag } from "./tag";
-export declare class CreateWebAclRequest extends SpeakeasyBase {
+import { WafAction } from "./wafaction";
+export declare class CreateWebACLRequest extends SpeakeasyBase {
     changeToken: string;
     defaultAction: WafAction;
     metricName: string;

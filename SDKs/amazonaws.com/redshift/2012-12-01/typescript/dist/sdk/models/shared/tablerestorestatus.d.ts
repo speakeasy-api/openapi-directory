@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { TableRestoreStatusTypeEnum } from "./tablerestorestatustypeenum";
 /**
  * Describes the status of a <a>RestoreTableFromClusterSnapshot</a> operation.
-**/
+ */
 export declare class TableRestoreStatus extends SpeakeasyBase {
     clusterIdentifier?: string;
     message?: string;

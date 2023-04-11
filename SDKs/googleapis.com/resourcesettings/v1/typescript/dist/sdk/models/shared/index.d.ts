@@ -6,5 +6,4 @@ export * from "./googlecloudresourcesettingsv1value";
 export * from "./googlecloudresourcesettingsv1valueenumvalue";
 export * from "./googlecloudresourcesettingsv1valuestringmap";
 export * from "./googlecloudresourcesettingsv1valuestringset";
-export * from "./security";
 export * from "./xgafvenum";

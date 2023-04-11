@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ApiKeyFromGroupPathParams extends SpeakeasyBase {
-    clientId: string;
-    groupId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ApiKeyFromGroupSecurity extends SpeakeasyBase {
-    otoroshiAuth: shared.SchemeOtoroshiAuth;
+    password: string;
+    username: string;
 }
 export declare class ApiKeyFromGroupRequest extends SpeakeasyBase {
-    pathParams: ApiKeyFromGroupPathParams;
-    security: ApiKeyFromGroupSecurity;
+    /**
+     * the api key id
+     */
+    clientId: string;
+    /**
+     * The api key group id
+     */
+    groupId: string;
 }
 export declare class ApiKeyFromGroupResponse extends SpeakeasyBase {
+    /**
+     * Successful operation
+     */
     apiKey?: shared.ApiKey;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

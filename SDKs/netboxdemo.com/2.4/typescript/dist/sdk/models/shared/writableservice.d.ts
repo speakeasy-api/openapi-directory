@@ -1,4 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+export declare enum WritableServiceProtocolEnum {
+    Six = "6",
+    Seventeen = "17"
+}
 export declare class WritableServiceInput extends SpeakeasyBase {
     customFields?: Record<string, any>;
     description?: string;
@@ -6,6 +10,6 @@ export declare class WritableServiceInput extends SpeakeasyBase {
     ipaddresses?: number[];
     name: string;
     port: number;
-    protocol: number;
+    protocol: WritableServiceProtocolEnum;
     virtualMachine?: number;
 }

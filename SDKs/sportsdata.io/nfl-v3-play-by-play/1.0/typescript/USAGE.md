@@ -1,24 +1,24 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { PlayByPlayRequest, PlayByPlayResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  PlayByPlayRequest,
+  PlayByPlayResponse,
+  PlayByPlayFormatEnum,
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    apiKeyHeader: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: PlayByPlayRequest = {
-  pathParams: {
-    format: "XML",
-    hometeam: "voluptas",
-    season: "culpa",
-    week: "expedita",
+    apiKeyHeader: "YOUR_API_KEY_HERE",
   },
+});
+
+const req: PlayByPlayRequest = {
+  format: PlayByPlayFormatEnum.Json,
+  hometeam: "provident",
+  season: "distinctio",
+  week: "quibusdam",
 };
 
 sdk.playByPlay(req).then((res: PlayByPlayResponse | AxiosError) => {

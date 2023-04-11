@@ -1,9 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeWorkspacePathParams extends SpeakeasyBase {
-    workspaceId: string;
-}
-export declare class DescribeWorkspaceHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DescribeWorkspaceRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,18 +9,37 @@ export declare class DescribeWorkspaceHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DescribeWorkspaceRequest extends SpeakeasyBase {
-    pathParams: DescribeWorkspacePathParams;
-    headers: DescribeWorkspaceHeaders;
+    /**
+     * The ID of the workspace to describe.
+     */
+    workspaceId: string;
 }
 export declare class DescribeWorkspaceResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     describeWorkspaceResponse?: shared.DescribeWorkspaceResponse;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

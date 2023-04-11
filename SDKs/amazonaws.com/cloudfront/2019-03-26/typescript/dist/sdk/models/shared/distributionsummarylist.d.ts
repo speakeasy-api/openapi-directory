@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { AliasIcpRecordals } from "./aliasicprecordals";
 import { Aliases } from "./aliases";
+import { AliasICPRecordals } from "./aliasicprecordals";
 import { CacheBehaviors } from "./cachebehaviors";
 import { CustomErrorResponses } from "./customerrorresponses";
 import { DefaultCacheBehavior } from "./defaultcachebehavior";
@@ -12,10 +12,10 @@ import { Restrictions } from "./restrictions";
 import { ViewerCertificate } from "./viewercertificate";
 /**
  * A summary of the information about a CloudFront distribution.
-**/
+ */
 export declare class DistributionSummaryList extends SpeakeasyBase {
     arn: string;
-    aliasICPRecordals?: AliasIcpRecordals[];
+    aliasICPRecordals?: AliasICPRecordals[];
     aliases: Aliases;
     cacheBehaviors: CacheBehaviors;
     comment: string;

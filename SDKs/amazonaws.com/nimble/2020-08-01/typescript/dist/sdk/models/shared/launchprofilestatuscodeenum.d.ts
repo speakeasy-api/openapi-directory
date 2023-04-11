@@ -11,5 +11,7 @@ export declare enum LaunchProfileStatusCodeEnum {
     LaunchProfileWithStreamSessionsNotDeleted = "LAUNCH_PROFILE_WITH_STREAM_SESSIONS_NOT_DELETED",
     EncryptionKeyAccessDenied = "ENCRYPTION_KEY_ACCESS_DENIED",
     EncryptionKeyNotFound = "ENCRYPTION_KEY_NOT_FOUND",
-    InvalidSubnetsProvided = "INVALID_SUBNETS_PROVIDED"
+    InvalidSubnetsProvided = "INVALID_SUBNETS_PROVIDED",
+    InvalidInstanceTypesProvided = "INVALID_INSTANCE_TYPES_PROVIDED",
+    InvalidSubnetsCombination = "INVALID_SUBNETS_COMBINATION"
 }

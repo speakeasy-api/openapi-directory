@@ -1,33 +1,40 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { PagespeedonlinePagespeedapiRunpagespeedRequest, PagespeedonlinePagespeedapiRunpagespeedResponse } from "openapi/src/sdk/models/operations";
+import {
+  PagespeedonlinePagespeedapiRunpagespeedRequest,
+  PagespeedonlinePagespeedapiRunpagespeedResponse,
+  PagespeedonlinePagespeedapiRunpagespeedStrategyEnum,
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: PagespeedonlinePagespeedapiRunpagespeedRequest = {
-  queryParams: {
-    alt: "json",
-    fields: "voluptas",
-    filterThirdPartyResources: true,
-    key: "expedita",
-    locale: "consequuntur",
-    oauthToken: "dolor",
-    prettyPrint: true,
-    quotaUser: "voluptas",
-    rule: [
-      "et",
-    ],
-    screenshot: true,
-    snapshots: true,
-    strategy: "mobile",
-    url: "debitis",
-    userIp: "voluptatum",
-    utmCampaign: "et",
-    utmSource: "ut",
-  },
+  alt: AltEnum.Json,
+  fields: "corrupti",
+  filterThirdPartyResources: false,
+  key: "provident",
+  locale: "distinctio",
+  oauthToken: "quibusdam",
+  prettyPrint: false,
+  quotaUser: "unde",
+  rule: [
+    "corrupti",
+    "illum",
+    "vel",
+    "error",
+  ],
+  screenshot: false,
+  snapshots: false,
+  strategy: PagespeedonlinePagespeedapiRunpagespeedStrategyEnum.Mobile,
+  url: "suscipit",
+  userIp: "iure",
+  utmCampaign: "magnam",
+  utmSource: "debitis",
 };
 
 sdk.pagespeedapi.pagespeedonlinePagespeedapiRunpagespeed(req).then((res: PagespeedonlinePagespeedapiRunpagespeedResponse | AxiosError) => {

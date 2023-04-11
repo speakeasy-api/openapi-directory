@@ -1,0 +1,16 @@
+export declare enum MigrationWorkflowStatusEnumEnum {
+    Creating = "CREATING",
+    NotStarted = "NOT_STARTED",
+    CreationFailed = "CREATION_FAILED",
+    Starting = "STARTING",
+    InProgress = "IN_PROGRESS",
+    WorkflowFailed = "WORKFLOW_FAILED",
+    Paused = "PAUSED",
+    Pausing = "PAUSING",
+    PausingFailed = "PAUSING_FAILED",
+    UserAttentionRequired = "USER_ATTENTION_REQUIRED",
+    Deleting = "DELETING",
+    DeletionFailed = "DELETION_FAILED",
+    Deleted = "DELETED",
+    Completed = "COMPLETED"
+}

@@ -4,7 +4,7 @@ import { Deployment } from "./deployment";
 import { SystemStatus } from "./systemstatus";
 /**
  * Detailed health information about an Amazon EC2 instance in your Elastic Beanstalk environment.
-**/
+ */
 export declare class SingleInstanceHealth extends SpeakeasyBase {
     applicationMetrics?: ApplicationMetrics;
     availabilityZone?: string;

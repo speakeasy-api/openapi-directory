@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeRepositoryAssociationPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DescribeRepositoryAssociationRequest extends SpeakeasyBase {
+    /**
+     * The Amazon Resource Name (ARN) of the <a href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociation.html">RepositoryAssociation</a> object. You can retrieve this ARN by calling <a href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_ListRepositoryAssociations.html">ListRepositoryAssociations</a>.
+     */
     associationArn: string;
-}
-export declare class DescribeRepositoryAssociationHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,17 +14,32 @@ export declare class DescribeRepositoryAssociationHeaders extends SpeakeasyBase 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DescribeRepositoryAssociationRequest extends SpeakeasyBase {
-    pathParams: DescribeRepositoryAssociationPathParams;
-    headers: DescribeRepositoryAssociationHeaders;
-}
 export declare class DescribeRepositoryAssociationResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     describeRepositoryAssociationResponse?: shared.DescribeRepositoryAssociationResponse;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

@@ -5,11 +5,14 @@ import { RepositoryHeadSourceCodeType } from "./repositoryheadsourcecodetype";
 import { RequestMetadata } from "./requestmetadata";
 import { S3BucketRepository } from "./s3bucketrepository";
 /**
- *  Specifies the source code that is analyzed in a code review.
-**/
+ * Specifies the source code that is analyzed in a code review.
+ */
 export declare class SourceCodeType extends SpeakeasyBase {
     branchDiff?: BranchDiffSourceCodeType;
     commitDiff?: CommitDiffSourceCodeType;
+    /**
+     * A <a href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_SourceCodeType">SourceCodeType</a> that specifies the tip of a branch in an associated repository.
+     */
     repositoryHead?: RepositoryHeadSourceCodeType;
     requestMetadata?: RequestMetadata;
     s3BucketRepository?: S3BucketRepository;

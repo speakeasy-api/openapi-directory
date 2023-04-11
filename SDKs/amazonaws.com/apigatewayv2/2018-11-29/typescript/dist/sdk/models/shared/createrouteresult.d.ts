@@ -1,17 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ParameterConstraints } from "./parameterconstraints";
+/**
+ * The authorization type for the route. For WebSocket APIs, valid values are NONE for open access, AWS_IAM for using AWS IAM permissions, and CUSTOM for using a Lambda authorizer For HTTP APIs, valid values are NONE for open access, JWT for using JSON Web Tokens, AWS_IAM for using AWS IAM permissions, and CUSTOM for using a Lambda authorizer.
+ */
+export declare enum CreateRouteResultAuthorizationTypeEnum {
+    None = "NONE",
+    AwsIam = "AWS_IAM",
+    Custom = "CUSTOM",
+    Jwt = "JWT"
+}
+/**
+ * Success
+ */
 export declare class CreateRouteResult extends SpeakeasyBase {
-    apiGatewayManaged?: Record<string, any>;
-    apiKeyRequired?: Record<string, any>;
-    authorizationScopes?: Record<string, any>;
-    authorizationType?: Record<string, any>;
-    authorizerId?: Record<string, any>;
-    modelSelectionExpression?: Record<string, any>;
-    operationName?: Record<string, any>;
+    apiGatewayManaged?: boolean;
+    apiKeyRequired?: boolean;
+    authorizationScopes?: string[];
+    authorizationType?: CreateRouteResultAuthorizationTypeEnum;
+    authorizerId?: string;
+    modelSelectionExpression?: string;
+    operationName?: string;
     requestModels?: Record<string, string>;
     requestParameters?: Record<string, ParameterConstraints>;
-    routeId?: Record<string, any>;
-    routeKey?: Record<string, any>;
-    routeResponseSelectionExpression?: Record<string, any>;
-    target?: Record<string, any>;
+    routeId?: string;
+    routeKey?: string;
+    routeResponseSelectionExpression?: string;
+    target?: string;
 }

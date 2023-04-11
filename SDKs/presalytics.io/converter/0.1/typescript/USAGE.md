@@ -1,18 +1,18 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { SvgconvertRequest, SvgconvertResponse } from "openapi/src/sdk/models/operations";
+import {
+  SvgconvertFileToConvert,
+  SvgconvertResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: SvgconvertRequest = {
-  request: {
-    file: {
-      content: "sit".encode(),
-      file: "voluptas",
-    },
+
+const req: SvgconvertFileToConvert = {
+  file: {
+    content: "corrupti".encode(),
+    file: "provident",
   },
 };
 

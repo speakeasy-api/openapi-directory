@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CompareStationPathParams extends SpeakeasyBase {
-    stationName: string;
-}
+import { AxiosResponse } from "axios";
 export declare class CompareStationRequest extends SpeakeasyBase {
-    pathParams: CompareStationPathParams;
+    /**
+     * Weather station to compare, values: cnareanl|rcnp | cmsap|boyaenderrocat|areopuertopalma | EWXXX
+     */
+    stationName: string;
 }
 export declare class CompareStationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

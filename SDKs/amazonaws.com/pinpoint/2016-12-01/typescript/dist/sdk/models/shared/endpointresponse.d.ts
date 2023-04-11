@@ -5,7 +5,7 @@ import { EndpointLocation } from "./endpointlocation";
 import { EndpointUser } from "./endpointuser";
 /**
  * Provides information about the channel type and other settings for an endpoint.
-**/
+ */
 export declare class EndpointResponse extends SpeakeasyBase {
     address?: string;
     applicationId?: string;

@@ -77,5 +77,8 @@ export declare enum OperationTypeEnum {
     DeleteBucketAccessKey = "DeleteBucketAccessKey",
     UpdateBucketBundle = "UpdateBucketBundle",
     UpdateBucket = "UpdateBucket",
-    SetResourceAccessForBucket = "SetResourceAccessForBucket"
+    SetResourceAccessForBucket = "SetResourceAccessForBucket",
+    UpdateInstanceMetadataOptions = "UpdateInstanceMetadataOptions",
+    StartGUISession = "StartGUISession",
+    StopGUISession = "StopGUISession"
 }

@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class ImagePredictionApi {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,35 +9,67 @@ export declare class ImagePredictionApi {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * classifyImage - Classify an image and saves the result.
-    **/
+     * Classify an image and saves the result.
+     */
     classifyImage(req: operations.ClassifyImageRequest, config?: AxiosRequestConfig): Promise<operations.ClassifyImageResponse>;
     /**
-     * classifyImageUrl - Classify an image url and saves the result.
-    **/
-    classifyImageUrl(req: operations.ClassifyImageUrlRequest, config?: AxiosRequestConfig): Promise<operations.ClassifyImageUrlResponse>;
+     * Classify an image url without saving the result.
+     */
+    classifyImageUrlWithNoStoreForm(req: operations.ClassifyImageUrlWithNoStoreFormRequest, config?: AxiosRequestConfig): Promise<operations.ClassifyImageUrlWithNoStoreFormResponse>;
     /**
-     * classifyImageUrlWithNoStore - Classify an image url without saving the result.
-    **/
-    classifyImageUrlWithNoStore(req: operations.ClassifyImageUrlWithNoStoreRequest, config?: AxiosRequestConfig): Promise<operations.ClassifyImageUrlWithNoStoreResponse>;
+     * Classify an image url without saving the result.
+     */
+    classifyImageUrlWithNoStoreJson(req: operations.ClassifyImageUrlWithNoStoreJsonRequest, config?: AxiosRequestConfig): Promise<operations.ClassifyImageUrlWithNoStoreJsonResponse>;
     /**
-     * classifyImageWithNoStore - Classify an image without saving the result.
-    **/
+     * Classify an image url without saving the result.
+     */
+    classifyImageUrlWithNoStoreRaw(req: operations.ClassifyImageUrlWithNoStoreRawRequest, config?: AxiosRequestConfig): Promise<operations.ClassifyImageUrlWithNoStoreRawResponse>;
+    /**
+     * Classify an image url and saves the result.
+     */
+    classifyImageUrlForm(req: operations.ClassifyImageUrlFormRequest, config?: AxiosRequestConfig): Promise<operations.ClassifyImageUrlFormResponse>;
+    /**
+     * Classify an image url and saves the result.
+     */
+    classifyImageUrlJson(req: operations.ClassifyImageUrlJsonRequest, config?: AxiosRequestConfig): Promise<operations.ClassifyImageUrlJsonResponse>;
+    /**
+     * Classify an image url and saves the result.
+     */
+    classifyImageUrlRaw(req: operations.ClassifyImageUrlRawRequest, config?: AxiosRequestConfig): Promise<operations.ClassifyImageUrlRawResponse>;
+    /**
+     * Classify an image without saving the result.
+     */
     classifyImageWithNoStore(req: operations.ClassifyImageWithNoStoreRequest, config?: AxiosRequestConfig): Promise<operations.ClassifyImageWithNoStoreResponse>;
     /**
-     * detectImage - Detect objects in an image and saves the result.
-    **/
+     * Detect objects in an image and saves the result.
+     */
     detectImage(req: operations.DetectImageRequest, config?: AxiosRequestConfig): Promise<operations.DetectImageResponse>;
     /**
-     * detectImageUrl - Detect objects in an image url and saves the result.
-    **/
-    detectImageUrl(req: operations.DetectImageUrlRequest, config?: AxiosRequestConfig): Promise<operations.DetectImageUrlResponse>;
+     * Detect objects in an image url without saving the result.
+     */
+    detectImageUrlWithNoStoreForm(req: operations.DetectImageUrlWithNoStoreFormRequest, config?: AxiosRequestConfig): Promise<operations.DetectImageUrlWithNoStoreFormResponse>;
     /**
-     * detectImageUrlWithNoStore - Detect objects in an image url without saving the result.
-    **/
-    detectImageUrlWithNoStore(req: operations.DetectImageUrlWithNoStoreRequest, config?: AxiosRequestConfig): Promise<operations.DetectImageUrlWithNoStoreResponse>;
+     * Detect objects in an image url without saving the result.
+     */
+    detectImageUrlWithNoStoreJson(req: operations.DetectImageUrlWithNoStoreJsonRequest, config?: AxiosRequestConfig): Promise<operations.DetectImageUrlWithNoStoreJsonResponse>;
     /**
-     * detectImageWithNoStore - Detect objects in an image without saving the result.
-    **/
+     * Detect objects in an image url without saving the result.
+     */
+    detectImageUrlWithNoStoreRaw(req: operations.DetectImageUrlWithNoStoreRawRequest, config?: AxiosRequestConfig): Promise<operations.DetectImageUrlWithNoStoreRawResponse>;
+    /**
+     * Detect objects in an image url and saves the result.
+     */
+    detectImageUrlForm(req: operations.DetectImageUrlFormRequest, config?: AxiosRequestConfig): Promise<operations.DetectImageUrlFormResponse>;
+    /**
+     * Detect objects in an image url and saves the result.
+     */
+    detectImageUrlJson(req: operations.DetectImageUrlJsonRequest, config?: AxiosRequestConfig): Promise<operations.DetectImageUrlJsonResponse>;
+    /**
+     * Detect objects in an image url and saves the result.
+     */
+    detectImageUrlRaw(req: operations.DetectImageUrlRawRequest, config?: AxiosRequestConfig): Promise<operations.DetectImageUrlRawResponse>;
+    /**
+     * Detect objects in an image without saving the result.
+     */
     detectImageWithNoStore(req: operations.DetectImageWithNoStoreRequest, config?: AxiosRequestConfig): Promise<operations.DetectImageWithNoStoreResponse>;
 }

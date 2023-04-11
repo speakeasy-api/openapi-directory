@@ -1,25 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class ChangeMainCompanyNumberApplicationJson extends SpeakeasyBase {
-    phoneNumber?: string;
-}
-export declare class ChangeMainCompanyNumberMultipartFormData extends SpeakeasyBase {
-    phoneNumber?: string;
-}
-export declare class ChangeMainCompanyNumberRequests extends SpeakeasyBase {
-    object?: ChangeMainCompanyNumberApplicationJson;
-    object1?: ChangeMainCompanyNumberMultipartFormData;
-}
+import { AxiosResponse } from "axios";
 export declare class ChangeMainCompanyNumberSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
+    oAuth: string;
 }
-export declare class ChangeMainCompanyNumberRequest extends SpeakeasyBase {
-    request?: ChangeMainCompanyNumberRequests;
-    security: ChangeMainCompanyNumberSecurity;
+export declare class ChangeMainCompanyNumberApplicationJSON extends SpeakeasyBase {
+    /**
+     * Provide either the unique identifier of the phone number (id) or the phone number itself in e164 format (e.g: +199955500123).
+     */
+    phoneNumber?: string;
 }
 export declare class ChangeMainCompanyNumberResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * **HTTP Status Code:** `204` **No Content**<br>
+     *
+     * @remarks
+     * Main company number updated successfully.
+     */
     changeMainCompanyNumber204ApplicationJSONAny?: any;
 }

@@ -1,7 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { PasswordCredentials } from "./passwordcredentials";
-import { DataSourceTypeEnum } from "./datasourcetypeenum";
 import { CiscoSwitchTypeEnum } from "./ciscoswitchtypeenum";
+import { DataSourceTypeEnum } from "./datasourcetypeenum";
+import { PasswordCredentials } from "./passwordcredentials";
+/**
+ * OK
+ */
 export declare class CiscoSwitchDataSource extends SpeakeasyBase {
     credentials?: PasswordCredentials;
     enabled?: boolean;
@@ -11,6 +14,9 @@ export declare class CiscoSwitchDataSource extends SpeakeasyBase {
     ip?: string;
     nickname?: string;
     notes?: string;
+    /**
+     * proxy vm which should register this vcenter
+     */
     proxyId?: string;
     switchType?: CiscoSwitchTypeEnum;
 }

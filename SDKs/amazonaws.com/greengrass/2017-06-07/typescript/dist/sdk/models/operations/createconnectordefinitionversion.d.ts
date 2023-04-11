@@ -1,9 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CreateConnectorDefinitionVersionPathParams extends SpeakeasyBase {
-    connectorDefinitionId: string;
+import { AxiosResponse } from "axios";
+export declare class CreateConnectorDefinitionVersionRequestBody extends SpeakeasyBase {
+    /**
+     * A list of references to connectors in this version, with their corresponding configuration settings.
+     */
+    connectors?: shared.Connector[];
 }
-export declare class CreateConnectorDefinitionVersionHeaders extends SpeakeasyBase {
+export declare class CreateConnectorDefinitionVersionRequest extends SpeakeasyBase {
+    /**
+     * The ID of the connector definition.
+     */
+    connectorDefinitionId: string;
+    requestBody: CreateConnectorDefinitionVersionRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,19 +20,21 @@ export declare class CreateConnectorDefinitionVersionHeaders extends SpeakeasyBa
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
+    /**
+     * A client token used to correlate requests and responses.
+     */
     xAmznClientToken?: string;
 }
-export declare class CreateConnectorDefinitionVersionRequestBody extends SpeakeasyBase {
-    connectors?: shared.Connector[];
-}
-export declare class CreateConnectorDefinitionVersionRequest extends SpeakeasyBase {
-    pathParams: CreateConnectorDefinitionVersionPathParams;
-    headers: CreateConnectorDefinitionVersionHeaders;
-    request: CreateConnectorDefinitionVersionRequestBody;
-}
 export declare class CreateConnectorDefinitionVersionResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     createConnectorDefinitionVersionResponse?: shared.CreateConnectorDefinitionVersionResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

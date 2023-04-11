@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum BatchDeleteTableVersionXAmzTargetEnum {
-    AwsGlueBatchDeleteTableVersion = "AWSGlue.BatchDeleteTableVersion"
+    AWSGlueBatchDeleteTableVersion = "AWSGlue.BatchDeleteTableVersion"
 }
-export declare class BatchDeleteTableVersionHeaders extends SpeakeasyBase {
+export declare class BatchDeleteTableVersionRequest extends SpeakeasyBase {
+    batchDeleteTableVersionRequest: shared.BatchDeleteTableVersionRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class BatchDeleteTableVersionHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: BatchDeleteTableVersionXAmzTargetEnum;
 }
-export declare class BatchDeleteTableVersionRequest extends SpeakeasyBase {
-    headers: BatchDeleteTableVersionHeaders;
-    request: shared.BatchDeleteTableVersionRequest;
-}
 export declare class BatchDeleteTableVersionResponse extends SpeakeasyBase {
+    /**
+     * Success
+     */
     batchDeleteTableVersionResponse?: shared.BatchDeleteTableVersionResponse;
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

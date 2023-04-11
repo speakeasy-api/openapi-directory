@@ -1,6 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
- * Enum options are the possible values which an enum custom field can adopt. An enum custom field must contain at least 1 enum option but no more than 50.
+ * Enum options are the possible values which an enum custom field can adopt. An enum custom field must contain at least 1 enum option but no more than 500.
+ *
+ * @remarks
  *
  * You can add enum options to a custom field by using the `POST /custom_fields/custom_field_gid/enum_options` endpoint.
  *
@@ -11,14 +13,33 @@ import { SpeakeasyBase } from "../../../internal/utils";
  * Enum options are an ordered list and by default new enum options are inserted at the end. Ordering in relation to existing enum options can be specified on creation by using `insert_before` or `insert_after` to reference an existing enum option. Only one of `insert_before` and `insert_after` can be provided when creating a new enum option.
  *
  * An enum options list can be reordered with the `POST /custom_fields/custom_field_gid/enum_options/insert` endpoint.
-**/
-export declare class EnumOptionInput extends SpeakeasyBase {
+ */
+export declare class EnumOption extends SpeakeasyBase {
+    /**
+     * The color of the enum option. Defaults to ‘none’.
+     */
     color?: string;
+    /**
+     * Whether or not the enum option is a selectable value for the custom field.
+     */
     enabled?: boolean;
+    /**
+     * Globally unique identifier of the resource, as a string.
+     */
+    gid?: string;
+    /**
+     * The name of the enum option.
+     */
     name?: string;
+    /**
+     * The base type of this resource.
+     */
+    resourceType?: string;
 }
 /**
- * Enum options are the possible values which an enum custom field can adopt. An enum custom field must contain at least 1 enum option but no more than 50.
+ * Enum options are the possible values which an enum custom field can adopt. An enum custom field must contain at least 1 enum option but no more than 500.
+ *
+ * @remarks
  *
  * You can add enum options to a custom field by using the `POST /custom_fields/custom_field_gid/enum_options` endpoint.
  *
@@ -29,11 +50,18 @@ export declare class EnumOptionInput extends SpeakeasyBase {
  * Enum options are an ordered list and by default new enum options are inserted at the end. Ordering in relation to existing enum options can be specified on creation by using `insert_before` or `insert_after` to reference an existing enum option. Only one of `insert_before` and `insert_after` can be provided when creating a new enum option.
  *
  * An enum options list can be reordered with the `POST /custom_fields/custom_field_gid/enum_options/insert` endpoint.
-**/
-export declare class EnumOption extends SpeakeasyBase {
+ */
+export declare class EnumOptionInput extends SpeakeasyBase {
+    /**
+     * The color of the enum option. Defaults to ‘none’.
+     */
     color?: string;
+    /**
+     * Whether or not the enum option is a selectable value for the custom field.
+     */
     enabled?: boolean;
-    gid?: string;
+    /**
+     * The name of the enum option.
+     */
     name?: string;
-    resourceType?: string;
 }

@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetDiseaseByIdPathParams extends SpeakeasyBase {
-    disease: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetDiseaseByIdRequest extends SpeakeasyBase {
-    pathParams: GetDiseaseByIdPathParams;
+    /**
+     * An EFO identifier.
+     */
+    disease: string;
 }
 export declare class GetDiseaseByIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -9,6 +9,9 @@ export declare class SubaccountAddResponseEtatEtat extends SpeakeasyBase {
 export declare class SubaccountAddResponseEtat extends SpeakeasyBase {
     etat?: SubaccountAddResponseEtatEtat[];
 }
+/**
+ * Reponse OK
+ */
 export declare class SubaccountAddResponse extends SpeakeasyBase {
     etat?: SubaccountAddResponseEtat;
 }

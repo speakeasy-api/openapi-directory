@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Retrieve code scanning alerts from a repository.
+ */
 export declare class CodeScanning {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,19 +12,21 @@ export declare class CodeScanning {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * codeScanningGetAlert - Get a code scanning alert
+     * Get a code scanning alert
      *
+     * @remarks
      * Gets a single code scanning alert. You must use an access token with the `security_events` scope to use this endpoint. GitHub Apps must have the `security_events` read permission to use this endpoint.
      *
      * **Deprecation notice**:
      * The instances field is deprecated and will, in future, not be included in the response for this endpoint. The example response reflects this change. The same information can now be retrieved via a GET request to the URL specified by `instances_url`.
      *
-     * https://docs.github.com/enterprise-server@3.0/rest/reference/code-scanning#get-a-code-scanning-alert - API method documentation
-    **/
+     * @see {@link https://docs.github.com/enterprise-server@3.0/rest/reference/code-scanning#get-a-code-scanning-alert} - API method documentation
+     */
     codeScanningGetAlert(req: operations.CodeScanningGetAlertRequest, config?: AxiosRequestConfig): Promise<operations.CodeScanningGetAlertResponse>;
     /**
-     * codeScanningListAlertsForRepo - List code scanning alerts for a repository
+     * List code scanning alerts for a repository
      *
+     * @remarks
      * Lists all open code scanning alerts for the default branch (usually `main`
      * or `master`). You must use an access token with the `security_events` scope to use
      * this endpoint. GitHub Apps must have the `security_events` read permission to use
@@ -32,12 +37,13 @@ export declare class CodeScanning {
      * for the default branch or for the specified Git reference
      * (if you used `ref` in the request).
      *
-     * https://docs.github.com/enterprise-server@3.0/rest/reference/code-scanning#list-code-scanning-alerts-for-a-repository - API method documentation
-    **/
+     * @see {@link https://docs.github.com/enterprise-server@3.0/rest/reference/code-scanning#list-code-scanning-alerts-for-a-repository} - API method documentation
+     */
     codeScanningListAlertsForRepo(req: operations.CodeScanningListAlertsForRepoRequest, config?: AxiosRequestConfig): Promise<operations.CodeScanningListAlertsForRepoResponse>;
     /**
-     * codeScanningListRecentAnalyses - List code scanning analyses for a repository
+     * List code scanning analyses for a repository
      *
+     * @remarks
      * Lists the details of all code scanning analyses for a repository,
      * starting with the most recent.
      * The response is paginated and you can use the `page` and `per_page` parameters
@@ -55,20 +61,22 @@ export declare class CodeScanning {
      * **Deprecation notice**:
      * The `tool_name` field is deprecated and will, in future, not be included in the response for this endpoint. The example response reflects this change. The tool name can now be found inside the `tool` field.
      *
-     * https://docs.github.com/enterprise-server@3.0/rest/reference/code-scanning#list-code-scanning-analyses-for-a-repository - API method documentation
-    **/
+     * @see {@link https://docs.github.com/enterprise-server@3.0/rest/reference/code-scanning#list-code-scanning-analyses-for-a-repository} - API method documentation
+     */
     codeScanningListRecentAnalyses(req: operations.CodeScanningListRecentAnalysesRequest, config?: AxiosRequestConfig): Promise<operations.CodeScanningListRecentAnalysesResponse>;
     /**
-     * codeScanningUpdateAlert - Update a code scanning alert
+     * Update a code scanning alert
      *
+     * @remarks
      * Updates the status of a single code scanning alert. You must use an access token with the `security_events` scope to use this endpoint. GitHub Apps must have the `security_events` write permission to use this endpoint.
      *
-     * https://docs.github.com/enterprise-server@3.0/rest/reference/code-scanning#update-a-code-scanning-alert - API method documentation
-    **/
+     * @see {@link https://docs.github.com/enterprise-server@3.0/rest/reference/code-scanning#update-a-code-scanning-alert} - API method documentation
+     */
     codeScanningUpdateAlert(req: operations.CodeScanningUpdateAlertRequest, config?: AxiosRequestConfig): Promise<operations.CodeScanningUpdateAlertResponse>;
     /**
-     * codeScanningUploadSarif - Upload an analysis as SARIF data
+     * Upload an analysis as SARIF data
      *
+     * @remarks
      * Uploads SARIF data containing the results of a code scanning analysis to make the results available in a repository. You must use an access token with the `security_events` scope to use this endpoint. GitHub Apps must have the `security_events` write permission to use this endpoint.
      *
      * There are two places where you can upload code scanning results.
@@ -87,7 +95,7 @@ export declare class CodeScanning {
      * You can use this ID to check the status of the upload by using this for the `/sarifs/{sarif_id}` endpoint.
      * For more information, see "[Get information about a SARIF upload](/rest/reference/code-scanning#get-information-about-a-sarif-upload)."
      *
-     * https://docs.github.com/enterprise-server@3.0/rest/reference/code-scanning#upload-a-sarif-file - API method documentation
-    **/
+     * @see {@link https://docs.github.com/enterprise-server@3.0/rest/reference/code-scanning#upload-a-sarif-file} - API method documentation
+     */
     codeScanningUploadSarif(req: operations.CodeScanningUploadSarifRequest, config?: AxiosRequestConfig): Promise<operations.CodeScanningUploadSarifResponse>;
 }

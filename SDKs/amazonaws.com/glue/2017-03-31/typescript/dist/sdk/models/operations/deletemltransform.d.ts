@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum DeleteMlTransformXAmzTargetEnum {
-    AwsGlueDeleteMlTransform = "AWSGlue.DeleteMLTransform"
+import { AxiosResponse } from "axios";
+export declare enum DeleteMLTransformXAmzTargetEnum {
+    AWSGlueDeleteMLTransform = "AWSGlue.DeleteMLTransform"
 }
-export declare class DeleteMlTransformHeaders extends SpeakeasyBase {
+export declare class DeleteMLTransformRequest extends SpeakeasyBase {
+    deleteMLTransformRequest: shared.DeleteMLTransformRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,18 +13,30 @@ export declare class DeleteMlTransformHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: DeleteMlTransformXAmzTargetEnum;
+    xAmzTarget: DeleteMLTransformXAmzTargetEnum;
 }
-export declare class DeleteMlTransformRequest extends SpeakeasyBase {
-    headers: DeleteMlTransformHeaders;
-    request: shared.DeleteMlTransformRequest;
-}
-export declare class DeleteMlTransformResponse extends SpeakeasyBase {
+export declare class DeleteMLTransformResponse extends SpeakeasyBase {
     contentType: string;
-    deleteMLTransformResponse?: shared.DeleteMlTransformResponse;
+    /**
+     * Success
+     */
+    deleteMLTransformResponse?: shared.DeleteMLTransformResponse;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

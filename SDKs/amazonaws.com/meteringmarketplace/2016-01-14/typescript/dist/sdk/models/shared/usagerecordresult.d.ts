@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { UsageRecordResultStatusEnum } from "./usagerecordresultstatusenum";
 import { UsageRecord } from "./usagerecord";
+import { UsageRecordResultStatusEnum } from "./usagerecordresultstatusenum";
 /**
- * A UsageRecordResult indicates the status of a given UsageRecord processed by BatchMeterUsage.
-**/
+ * A <code>UsageRecordResult</code> indicates the status of a given <code>UsageRecord</code> processed by <code>BatchMeterUsage</code>.
+ */
 export declare class UsageRecordResult extends SpeakeasyBase {
     meteringRecordId?: string;
     status?: UsageRecordResultStatusEnum;

@@ -2,15 +2,19 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { NestedRole } from "./nestedrole";
 import { NestedSite } from "./nestedsite";
 import { NestedTenant } from "./nestedtenant";
-import { NestedVlan } from "./nestedvlan";
-import { NestedVrf } from "./nestedvrf";
+import { NestedVLAN } from "./nestedvlan";
+import { NestedVRF } from "./nestedvrf";
 export declare enum PrefixFamilyLabelEnum {
     IPv4 = "IPv4",
     IPv6 = "IPv6"
 }
+export declare enum PrefixFamilyValueEnum {
+    Four = "4",
+    Six = "6"
+}
 export declare class PrefixFamily extends SpeakeasyBase {
     label: PrefixFamilyLabelEnum;
-    value: number;
+    value: PrefixFamilyValueEnum;
 }
 export declare enum PrefixStatusLabelEnum {
     Container = "Container",
@@ -34,14 +38,20 @@ export declare class Prefix extends SpeakeasyBase {
     description?: string;
     family?: PrefixFamily;
     id?: number;
+    /**
+     * All IP addresses within this prefix are considered usable
+     */
     isPool?: boolean;
     lastUpdated?: Date;
+    /**
+     * IPv4 or IPv6 network with mask
+     */
     prefix: string;
     role?: NestedRole;
     site?: NestedSite;
     status?: PrefixStatus;
     tags?: string[];
     tenant?: NestedTenant;
-    vlan?: NestedVlan;
-    vrf?: NestedVrf;
+    vlan?: NestedVLAN;
+    vrf?: NestedVRF;
 }

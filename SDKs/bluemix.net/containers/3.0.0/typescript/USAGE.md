@@ -1,17 +1,17 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetContainersMessagesRequest, GetContainersMessagesResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetContainersMessagesRequest,
+  GetContainersMessagesResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetContainersMessagesRequest = {
-  headers: {
-    xAuthProjectId: "sit",
-    xAuthToken: "voluptas",
-  },
+  xAuthProjectId: "corrupti",
+  xAuthToken: "provident",
 };
 
 sdk.apiInfo.getContainersMessages(req).then((res: GetContainersMessagesResponse | AxiosError) => {

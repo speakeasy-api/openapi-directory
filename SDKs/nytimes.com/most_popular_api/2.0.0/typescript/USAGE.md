@@ -1,25 +1,24 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetMostemailedSectionTimePeriodJsonRequest, GetMostemailedSectionTimePeriodJsonResponse } from "openapi/src/sdk/models/operations";
+import {
+  GETMostemailedSectionTimePeriodJsonRequest,
+  GETMostemailedSectionTimePeriodJsonResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  TimePeriodEnum,
+  SectionEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: GetMostemailedSectionTimePeriodJsonRequest = {
-  security: {
-    apiKey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  },
-  pathParams: {
-    section: "Opinion",
-    timePeriod: "1",
-  },
+
+const req: GETMostemailedSectionTimePeriodJsonRequest = {
+  section: SectionEnum.PublicEditor,
+  timePeriod: TimePeriodEnum.Seven,
 };
 
-sdk.getMostemailedSectionTimePeriodJson(req).then((res: GetMostemailedSectionTimePeriodJsonResponse | AxiosError) => {
+sdk.getMostemailedSectionTimePeriodJson(req).then((res: GETMostemailedSectionTimePeriodJsonResponse | AxiosError) => {
    // handle response
 });
 ```

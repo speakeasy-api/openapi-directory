@@ -1,0 +1,13 @@
+export declare enum JobEventTypeEnum {
+    WaitingForPriority = "WAITING_FOR_PRIORITY",
+    QueuedForExecution = "QUEUED_FOR_EXECUTION",
+    StartingInstance = "STARTING_INSTANCE",
+    DownloadingData = "DOWNLOADING_DATA",
+    Running = "RUNNING",
+    DeprioritizedDueToInactivity = "DEPRIORITIZED_DUE_TO_INACTIVITY",
+    UploadingResults = "UPLOADING_RESULTS",
+    Completed = "COMPLETED",
+    Failed = "FAILED",
+    MaxRuntimeExceeded = "MAX_RUNTIME_EXCEEDED",
+    Cancelled = "CANCELLED"
+}

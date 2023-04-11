@@ -1,17 +1,32 @@
-import { AxiosInstance } from "axios";
 import { Applications } from "./applications";
 import { Certificates } from "./certificates";
 import { ComputeNodes } from "./computenodes";
 import { Files } from "./files";
-import { JobSchedules } from "./jobschedules";
 import { Jobs } from "./jobs";
+import { JobSchedules } from "./jobschedules";
 import { Pools } from "./pools";
 import { Tasks } from "./tasks";
+import { AxiosInstance } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["https://batch.core.windows.net"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
+/**
+ * A client for issuing REST requests to the Azure Batch service.
+ */
 export declare class SDK {
     applications: Applications;
     certificates: Certificates;
@@ -27,5 +42,6 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
 }

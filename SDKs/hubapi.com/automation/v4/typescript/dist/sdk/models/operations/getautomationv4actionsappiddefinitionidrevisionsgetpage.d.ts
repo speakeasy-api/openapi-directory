@@ -1,24 +1,31 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPagePathParams extends SpeakeasyBase {
-    appId: number;
-    definitionId: string;
-}
-export declare class GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageQueryParams extends SpeakeasyBase {
-    after?: string;
-    limit?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageSecurity extends SpeakeasyBase {
-    developerHapikey: shared.SchemeDeveloperHapikey;
+    developerHapikey: string;
 }
 export declare class GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageRequest extends SpeakeasyBase {
-    pathParams: GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPagePathParams;
-    queryParams: GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageQueryParams;
-    security: GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageSecurity;
+    /**
+     * The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+     */
+    after?: string;
+    appId: number;
+    /**
+     * The ID of the custom workflow action
+     */
+    definitionId: string;
+    /**
+     * Maximum number of results per page.
+     */
+    limit?: number;
 }
 export declare class GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageResponse extends SpeakeasyBase {
     body?: Uint8Array;
+    /**
+     * successful operation
+     */
     collectionResponseActionRevisionForwardPaging?: shared.CollectionResponseActionRevisionForwardPaging;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

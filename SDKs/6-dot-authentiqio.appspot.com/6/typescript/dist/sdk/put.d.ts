@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Put {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +9,7 @@ export declare class Put {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * keyBind - Update Authentiq ID by replacing the object.
+     * Update Authentiq ID by replacing the object.
      *
      * v4: `JWT(sub,email,phone)` to bind email/phone hash;
      *
@@ -18,12 +18,12 @@ export declare class Put {
      *
      * See: https://github.com/skion/authentiq/wiki/JWT-Examples
      *
-    **/
+     */
     keyBind(req: operations.KeyBindRequest, config?: AxiosRequestConfig): Promise<operations.KeyBindResponse>;
     /**
-     * signUpdate - authority updates a JWT with its signature
+     * authority updates a JWT with its signature
      * See: https://github.com/skion/authentiq/wiki/JWT-Examples
      *
-    **/
+     */
     signUpdate(req: operations.SignUpdateRequest, config?: AxiosRequestConfig): Promise<operations.SignUpdateResponse>;
 }

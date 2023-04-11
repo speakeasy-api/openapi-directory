@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * The activity APIs allow you to get logs from your account. We track multiple types of under the umbrellas; __Activity Logs__ that show an action a user performed or initiated on a file, folder or the account. __Webhooks Logs__ that show records of all outbound webhook calls made by ExaVault. Both can be optionally filtered to only return specific data you’re looking for.
+ */
 export declare class Activity {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +12,9 @@ export declare class Activity {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getSessionLogs - Get activity logs
+     * Get activity logs
      *
+     * @remarks
      * Returns the detailed activity logs for your account. Optional query paramaters will filter the returned results based on a number of options including usernames, activity types, or date ranges.
      *
      * **NOTE:** Total Results will always return as 0 to avoid quering data you're not using and stay as performant as possible.
@@ -50,11 +54,12 @@ export declare class Activity {
      * | _N/A_ | EDIT\_DFA | Update direct link options. Not shown in file manager |
      * | _N/A_ | DELE\_DFA | Deactivate direct link. Not shown in file manager|
      *
-    **/
+     */
     getSessionLogs(req: operations.GetSessionLogsRequest, config?: AxiosRequestConfig): Promise<operations.GetSessionLogsResponse>;
     /**
-     * getWebhookLogs - Get webhook logs
+     * Get webhook logs
      *
+     * @remarks
      * Returns the webhook logs for your account. Use the available query parameters to filter the listing of activity that is returned.
      *
      * **NOTE:** Total Results will always return as 0 to avoid querying data you're not using and stay as performant as possible.
@@ -74,6 +79,6 @@ export declare class Activity {
      * - resources.extract
      * - shares.formSubmit
      *
-    **/
+     */
     getWebhookLogs(req: operations.GetWebhookLogsRequest, config?: AxiosRequestConfig): Promise<operations.GetWebhookLogsResponse>;
 }

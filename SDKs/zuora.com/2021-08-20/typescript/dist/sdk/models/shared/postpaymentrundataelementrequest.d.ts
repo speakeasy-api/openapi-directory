@@ -1,14 +1,86 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostPaymentRunDataElementRequestDocumentTypeEnum {
+/**
+ * The type of a billing document associated with the payment run. The value can be `Invoice` or `DebitMemo`, but `DebitMemo` is only supported if the Invoice Settlement feature is enabled.
+ *
+ * @remarks
+ *
+ * You must either specify both `documentType` and `documentId`, or specify neither of them.
+ *
+ * If neither of `documentType` and `documentId` is specified, all invoices/debit memos with open balance of the account are collected.
+ *
+ */
+export declare enum POSTPaymentRunDataElementRequestDocumentTypeEnum {
     Invoice = "Invoice",
     DebitMemo = "DebitMemo"
 }
-export declare class PostPaymentRunDataElementRequest extends SpeakeasyBase {
+export declare class POSTPaymentRunDataElementRequest extends SpeakeasyBase {
+    /**
+     * A valid account ID associated with the payment run.
+     *
+     * @remarks
+     *
+     * If `consolidatedPayment` is set to `true`, this field is used in processing a single payment for invoices/debit memos due on an account.
+     *
+     */
     accountId: string;
+    /**
+     * The amount to be collected for the specified invoice/debit memo. `amount` must be a positive numeric value no more than the balance of the specified invoice/debit memo.
+     *
+     * @remarks
+     *
+     * This field is only available when `documentId` is specified. If `amount` is not specified, whole balance of the invoice/debit memo is collected.
+     *
+     */
     amount?: number;
+    /**
+     * Additional comments.
+     *
+     * @remarks
+     *
+     */
     comment?: string;
+    /**
+     * The ID of a billing document associated with the payment run. `documentId` must be valid and match with `documentType`.
+     *
+     * @remarks
+     *
+     * You must either specify both `documentId` and `documentType`, or specify neither of them.
+     *
+     * If neither of `documentType` and `documentId` is specified, all invoices/debit memos with open balance of the account are collected.
+     *
+     */
     documentId?: string;
-    documentType?: PostPaymentRunDataElementRequestDocumentTypeEnum;
+    /**
+     * The type of a billing document associated with the payment run. The value can be `Invoice` or `DebitMemo`, but `DebitMemo` is only supported if the Invoice Settlement feature is enabled.
+     *
+     * @remarks
+     *
+     * You must either specify both `documentType` and `documentId`, or specify neither of them.
+     *
+     * If neither of `documentType` and `documentId` is specified, all invoices/debit memos with open balance of the account are collected.
+     *
+     */
+    documentType?: POSTPaymentRunDataElementRequestDocumentTypeEnum;
+    /**
+     * The ID of the payment gateway for collecting invoices/debit memos. The specified payment gateway must be valid and active. If it is not specified, the default payment gateway of the account is used. If no payment gateway is configured for the account, the default payment gateway of the tenant is used.
+     *
+     * @remarks
+     *
+     * If `consolidatedPayment` is set to `true`, this field is used in processing a single payment for invoices/debit memos due on an account.
+     *
+     */
     paymentGatewayId?: string;
+    /**
+     * The ID of the payment method for collecting invoices/debit memos. The specified payment method must be a valid non-system payment method. If it is not specified, the default payment method of the account is used regardless of the `autoPay` value of the account.
+     *
+     * @remarks
+     *
+     * If `processPaymentWithClosedPM` is set to `false`, the payment method cannot be closed.
+     *
+     * If the payment retry rules are enabled, the payment method must meet the rules.
+     *
+     * If `consolidatedPayment` is set to `true`, this field is used in processing a single payment for invoices/debit memos due on an account.
+     *
+     */
     paymentMethodId?: string;
 }

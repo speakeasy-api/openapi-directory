@@ -1,9 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdateVpcLinkPathParams extends SpeakeasyBase {
-    vpcLinkId: string;
+import { AxiosResponse } from "axios";
+export declare class UpdateVpcLinkRequestBody extends SpeakeasyBase {
+    /**
+     * A string with a length between [1-128].
+     */
+    name?: string;
 }
-export declare class UpdateVpcLinkHeaders extends SpeakeasyBase {
+export declare class UpdateVpcLinkRequest extends SpeakeasyBase {
+    requestBody: UpdateVpcLinkRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,20 +16,29 @@ export declare class UpdateVpcLinkHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class UpdateVpcLinkRequestBody extends SpeakeasyBase {
-    name?: string;
-}
-export declare class UpdateVpcLinkRequest extends SpeakeasyBase {
-    pathParams: UpdateVpcLinkPathParams;
-    headers: UpdateVpcLinkHeaders;
-    request: UpdateVpcLinkRequestBody;
+    /**
+     * The ID of the VPC link.
+     */
+    vpcLinkId: string;
 }
 export declare class UpdateVpcLinkResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
+    /**
+     * Success
+     */
     updateVpcLinkResponse?: shared.UpdateVpcLinkResponse;
 }

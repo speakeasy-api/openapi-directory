@@ -1,0 +1,38 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { FacetItem } from "./facetitem";
+export declare class CarSearchFacets extends SpeakeasyBase {
+    baseExteriorColor?: FacetItem[];
+    baseInteriorColor?: FacetItem[];
+    bodySubtype?: FacetItem[];
+    bodyType?: FacetItem[];
+    carType?: FacetItem[];
+    carfax1Owner?: FacetItem[];
+    carfaxCleanTitle?: FacetItem[];
+    city?: FacetItem[];
+    cylinders?: FacetItem[];
+    dataSource?: FacetItem[];
+    dealerId?: FacetItem[];
+    dealerType?: FacetItem[];
+    doors?: FacetItem[];
+    drivetrain?: FacetItem[];
+    engine?: FacetItem[];
+    engineAspiration?: FacetItem[];
+    engineBlock?: FacetItem[];
+    engineSize?: FacetItem[];
+    exteriorColor?: FacetItem[];
+    fuelType?: FacetItem[];
+    interiorColor?: FacetItem[];
+    make?: FacetItem[];
+    model?: FacetItem[];
+    sellerName?: FacetItem[];
+    sellerNameO?: FacetItem[];
+    sellerType?: FacetItem[];
+    source?: FacetItem[];
+    state?: FacetItem[];
+    transmission?: FacetItem[];
+    trim?: FacetItem[];
+    trimO?: FacetItem[];
+    trimR?: FacetItem[];
+    vehicleType?: FacetItem[];
+    year?: FacetItem[];
+}

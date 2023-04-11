@@ -1,4 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
 export declare enum GetGetCurationTagHistoryFormatEnum {
     Json = "json",
     Xml = "xml",
@@ -7,15 +8,19 @@ export declare enum GetGetCurationTagHistoryFormatEnum {
     Jpg = "jpg",
     Pdf = "pdf"
 }
-export declare class GetGetCurationTagHistoryQueryParams extends SpeakeasyBase {
-    format?: GetGetCurationTagHistoryFormatEnum;
-    pwId: string;
-    timestamp?: string;
-}
 export declare class GetGetCurationTagHistoryRequest extends SpeakeasyBase {
-    queryParams: GetGetCurationTagHistoryQueryParams;
+    format?: GetGetCurationTagHistoryFormatEnum;
+    /**
+     * The pathway identifier
+     */
+    pwId: string;
+    /**
+     * Only include history from after the given date
+     */
+    timestamp?: string;
 }
 export declare class GetGetCurationTagHistoryResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

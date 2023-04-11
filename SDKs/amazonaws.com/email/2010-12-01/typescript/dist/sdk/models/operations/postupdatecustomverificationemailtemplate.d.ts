@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostUpdateCustomVerificationEmailTemplateActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTUpdateCustomVerificationEmailTemplateActionEnum {
     UpdateCustomVerificationEmailTemplate = "UpdateCustomVerificationEmailTemplate"
 }
-export declare enum PostUpdateCustomVerificationEmailTemplateVersionEnum {
+export declare enum POSTUpdateCustomVerificationEmailTemplateVersionEnum {
     TwoThousandAndTen1201 = "2010-12-01"
 }
-export declare class PostUpdateCustomVerificationEmailTemplateQueryParams extends SpeakeasyBase {
-    action: PostUpdateCustomVerificationEmailTemplateActionEnum;
-    version: PostUpdateCustomVerificationEmailTemplateVersionEnum;
-}
-export declare class PostUpdateCustomVerificationEmailTemplateHeaders extends SpeakeasyBase {
+export declare class POSTUpdateCustomVerificationEmailTemplateRequest extends SpeakeasyBase {
+    action: POSTUpdateCustomVerificationEmailTemplateActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTUpdateCustomVerificationEmailTemplateVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostUpdateCustomVerificationEmailTemplateHeaders extends Sp
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostUpdateCustomVerificationEmailTemplateRequest extends SpeakeasyBase {
-    queryParams: PostUpdateCustomVerificationEmailTemplateQueryParams;
-    headers: PostUpdateCustomVerificationEmailTemplateHeaders;
-    request?: Uint8Array;
-}
-export declare class PostUpdateCustomVerificationEmailTemplateResponse extends SpeakeasyBase {
+export declare class POSTUpdateCustomVerificationEmailTemplateResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

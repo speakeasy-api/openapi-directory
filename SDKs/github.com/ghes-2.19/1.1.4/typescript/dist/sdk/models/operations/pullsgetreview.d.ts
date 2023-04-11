@@ -1,17 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PullsGetReviewPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class PullsGetReviewRequest extends SpeakeasyBase {
     owner: string;
     pullNumber: number;
     repo: string;
+    /**
+     * review_id parameter
+     */
     reviewId: number;
-}
-export declare class PullsGetReviewRequest extends SpeakeasyBase {
-    pathParams: PullsGetReviewPathParams;
 }
 export declare class PullsGetReviewResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Resource not found
+     */
     basicError?: shared.BasicError;
+    /**
+     * Response
+     */
     pullRequestReview?: shared.PullRequestReview;
 }

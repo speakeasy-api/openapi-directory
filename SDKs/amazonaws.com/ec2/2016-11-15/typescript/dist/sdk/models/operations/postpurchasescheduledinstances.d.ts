@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostPurchaseScheduledInstancesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTPurchaseScheduledInstancesActionEnum {
     PurchaseScheduledInstances = "PurchaseScheduledInstances"
 }
-export declare enum PostPurchaseScheduledInstancesVersionEnum {
+export declare enum POSTPurchaseScheduledInstancesVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostPurchaseScheduledInstancesQueryParams extends SpeakeasyBase {
-    action: PostPurchaseScheduledInstancesActionEnum;
-    version: PostPurchaseScheduledInstancesVersionEnum;
-}
-export declare class PostPurchaseScheduledInstancesHeaders extends SpeakeasyBase {
+export declare class POSTPurchaseScheduledInstancesRequest extends SpeakeasyBase {
+    action: POSTPurchaseScheduledInstancesActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTPurchaseScheduledInstancesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostPurchaseScheduledInstancesHeaders extends SpeakeasyBase
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostPurchaseScheduledInstancesRequest extends SpeakeasyBase {
-    queryParams: PostPurchaseScheduledInstancesQueryParams;
-    headers: PostPurchaseScheduledInstancesHeaders;
-    request?: Uint8Array;
-}
-export declare class PostPurchaseScheduledInstancesResponse extends SpeakeasyBase {
+export declare class POSTPurchaseScheduledInstancesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

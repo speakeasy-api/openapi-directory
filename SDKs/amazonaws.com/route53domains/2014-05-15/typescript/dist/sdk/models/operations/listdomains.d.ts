@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListDomainsQueryParams extends SpeakeasyBase {
-    marker?: string;
-    maxItems?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum ListDomainsXAmzTargetEnum {
     Route53DomainsV20140515ListDomains = "Route53Domains_v20140515.ListDomains"
 }
-export declare class ListDomainsHeaders extends SpeakeasyBase {
+export declare class ListDomainsRequest extends SpeakeasyBase {
+    listDomainsRequest: shared.ListDomainsRequest;
+    /**
+     * Pagination token
+     */
+    marker?: string;
+    /**
+     * Pagination limit
+     */
+    maxItems?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,14 +23,16 @@ export declare class ListDomainsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ListDomainsXAmzTargetEnum;
 }
-export declare class ListDomainsRequest extends SpeakeasyBase {
-    queryParams: ListDomainsQueryParams;
-    headers: ListDomainsHeaders;
-    request: shared.ListDomainsRequest;
-}
 export declare class ListDomainsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InvalidInput
+     */
     invalidInput?: any;
+    /**
+     * Success
+     */
     listDomainsResponse?: shared.ListDomainsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

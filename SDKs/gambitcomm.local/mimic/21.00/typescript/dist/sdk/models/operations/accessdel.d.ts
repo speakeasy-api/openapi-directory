@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class AccessDelPathParams extends SpeakeasyBase {
-    user: string;
-}
+import { AxiosResponse } from "axios";
 export declare class AccessDelRequest extends SpeakeasyBase {
-    pathParams: AccessDelPathParams;
+    /**
+     * username of the simulator hosting system
+     */
+    user: string;
 }
 export declare class AccessDelResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     accessDel200ApplicationJSONString?: string;
 }

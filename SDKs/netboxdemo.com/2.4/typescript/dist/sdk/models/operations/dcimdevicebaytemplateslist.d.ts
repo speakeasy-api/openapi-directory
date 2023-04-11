@@ -1,22 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DcimDeviceBayTemplatesListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DcimDeviceBayTemplatesListRequest extends SpeakeasyBase {
     devicetypeId?: string;
+    /**
+     * Number of results to return per page.
+     */
     limit?: number;
     name?: string;
+    /**
+     * The initial index from which to return the results.
+     */
     offset?: number;
 }
-export declare class DcimDeviceBayTemplatesList200ApplicationJson extends SpeakeasyBase {
+export declare class DcimDeviceBayTemplatesList200ApplicationJSON extends SpeakeasyBase {
     count: number;
     next?: string;
     previous?: string;
     results: shared.DeviceBayTemplate[];
 }
-export declare class DcimDeviceBayTemplatesListRequest extends SpeakeasyBase {
-    queryParams: DcimDeviceBayTemplatesListQueryParams;
-}
 export declare class DcimDeviceBayTemplatesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dcimDeviceBayTemplatesList200ApplicationJSONObject?: DcimDeviceBayTemplatesList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    dcimDeviceBayTemplatesList200ApplicationJSONObject?: DcimDeviceBayTemplatesList200ApplicationJSON;
 }

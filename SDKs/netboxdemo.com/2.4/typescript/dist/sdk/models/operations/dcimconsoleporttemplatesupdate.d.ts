@@ -1,14 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DcimConsolePortTemplatesUpdatePathParams extends SpeakeasyBase {
-    id: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DcimConsolePortTemplatesUpdateRequest extends SpeakeasyBase {
-    pathParams: DcimConsolePortTemplatesUpdatePathParams;
-    request: shared.WritableConsolePortTemplateInput;
+    writableConsolePortTemplateInput: shared.WritableConsolePortTemplateInput;
+    /**
+     * A unique integer value identifying this console port template.
+     */
+    id: number;
 }
 export declare class DcimConsolePortTemplatesUpdateResponse extends SpeakeasyBase {
     consolePortTemplate?: shared.ConsolePortTemplate;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

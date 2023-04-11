@@ -5,7 +5,7 @@ import { TaskSchedule } from "./taskschedule";
 import { TaskStatusEnum } from "./taskstatusenum";
 /**
  * DescribeTaskResponse
-**/
+ */
 export declare class DescribeTaskResponse extends SpeakeasyBase {
     cloudWatchLogGroupArn?: string;
     creationTime?: Date;

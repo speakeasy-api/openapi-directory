@@ -1,4 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+export declare enum ArticleWithCountTypeGeoFacet2Enum {
+    Unknown = ""
+}
+export declare enum ArticleWithCountTypeGeoFacet1Enum {
+    Unknown = ""
+}
 export declare class ArticleWithCountTypeMediaMediaMetadata extends SpeakeasyBase {
     format?: string;
     height?: number;

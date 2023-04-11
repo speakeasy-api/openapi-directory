@@ -4,6 +4,5 @@ export * from "./webriskprojectsoperationsdelete";
 export * from "./webriskprojectsoperationsget";
 export * from "./webriskprojectsoperationslist";
 export * from "./webriskprojectssubmissionscreate";
-export * from "./webriskprojectsurissubmit";
 export * from "./webriskthreatlistscomputediff";
 export * from "./webriskurissearch";

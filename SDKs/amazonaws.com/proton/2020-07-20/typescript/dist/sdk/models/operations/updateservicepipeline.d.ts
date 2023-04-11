@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateServicePipelineXAmzTargetEnum {
     AwsProton20200720UpdateServicePipeline = "AwsProton20200720.UpdateServicePipeline"
 }
-export declare class UpdateServicePipelineHeaders extends SpeakeasyBase {
+export declare class UpdateServicePipelineRequest extends SpeakeasyBase {
+    updateServicePipelineInput: shared.UpdateServicePipelineInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class UpdateServicePipelineHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateServicePipelineXAmzTargetEnum;
 }
-export declare class UpdateServicePipelineRequest extends SpeakeasyBase {
-    headers: UpdateServicePipelineHeaders;
-    request: shared.UpdateServicePipelineInput;
-}
 export declare class UpdateServicePipelineResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * Success
+     */
     updateServicePipelineOutput?: shared.UpdateServicePipelineOutput;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

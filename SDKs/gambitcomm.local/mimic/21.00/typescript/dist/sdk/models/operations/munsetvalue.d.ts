@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class MunsetValuePathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class MunsetValueRequest extends SpeakeasyBase {
-    pathParams: MunsetValuePathParams;
-    request?: string[][];
+    /**
+     * objInsVarArray
+     */
+    requestBody?: string[][];
+    /**
+     * Agent of the value space
+     */
+    agentNum: number;
 }
 export declare class MunsetValueResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     munsetValue200ApplicationJSONString?: string;
 }

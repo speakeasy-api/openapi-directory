@@ -1,9 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PostRequestRequest extends SpeakeasyBase {
-    request: any;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class PostRequestResponse extends SpeakeasyBase {
-    allResponseTypesExample?: any;
+    /**
+     * Responses are received from socket
+     */
+    allResponseTypesExample?: shared.AllResponseTypesExample;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

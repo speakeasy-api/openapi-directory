@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum CreateSnapshotXAmzTargetEnum {
-    AmazonMemoryDbCreateSnapshot = "AmazonMemoryDB.CreateSnapshot"
+    AmazonMemoryDBCreateSnapshot = "AmazonMemoryDB.CreateSnapshot"
 }
-export declare class CreateSnapshotHeaders extends SpeakeasyBase {
+export declare class CreateSnapshotRequest extends SpeakeasyBase {
+    createSnapshotRequest: shared.CreateSnapshotRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,20 +15,44 @@ export declare class CreateSnapshotHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: CreateSnapshotXAmzTargetEnum;
 }
-export declare class CreateSnapshotRequest extends SpeakeasyBase {
-    headers: CreateSnapshotHeaders;
-    request: shared.CreateSnapshotRequest;
-}
 export declare class CreateSnapshotResponse extends SpeakeasyBase {
+    /**
+     * ClusterNotFoundFault
+     */
     clusterNotFoundFault?: any;
     contentType: string;
+    /**
+     * Success
+     */
     createSnapshotResponse?: shared.CreateSnapshotResponse;
+    /**
+     * InvalidClusterStateFault
+     */
     invalidClusterStateFault?: any;
+    /**
+     * InvalidParameterCombinationException
+     */
     invalidParameterCombinationException?: any;
+    /**
+     * InvalidParameterValueException
+     */
     invalidParameterValueException?: any;
+    /**
+     * ServiceLinkedRoleNotFoundFault
+     */
     serviceLinkedRoleNotFoundFault?: any;
+    /**
+     * SnapshotAlreadyExistsFault
+     */
     snapshotAlreadyExistsFault?: any;
+    /**
+     * SnapshotQuotaExceededFault
+     */
     snapshotQuotaExceededFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TagQuotaPerResourceExceeded
+     */
     tagQuotaPerResourceExceeded?: any;
 }

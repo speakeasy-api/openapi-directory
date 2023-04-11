@@ -4,7 +4,7 @@ import { PortRange } from "./portrange";
 import { ProtocolEnum } from "./protocolenum";
 /**
  * A complex type for a listener.
-**/
+ */
 export declare class Listener extends SpeakeasyBase {
     clientAffinity?: ClientAffinityEnum;
     listenerArn?: string;

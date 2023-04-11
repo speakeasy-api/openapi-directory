@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * The sharing APIs allow you create and manage shares. Shares can be used to send a single file, share a folder, or set up a receive folder and its input form.
+ */
 export declare class Shares {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +12,9 @@ export declare class Shares {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * addShare - Creates a share
+     * Creates a share
      *
+     * @remarks
      * Creates a new share object for the given path in your account. We support three types of shares:
      *
      *   - A **shared folder** allows you to let outside parties access a folder in your account (including any files and nested subfolders) using just a link. Shared folders can be restricted; e.g. with an expiration date, password, download-only, etc. Shared folders are 'live'; if someone makes a change to a file in your shared folder, it will be immediately reflected in your account, and vice-versa.
@@ -40,11 +44,12 @@ export declare class Shares {
      * **Notes:**
      *
      * Authenticated user requires [share permission](/docs/account/04-users/00-introduction#managing-user-roles-and-permissions).
-    **/
+     */
     addShare(req: operations.AddShareRequest, config?: AxiosRequestConfig): Promise<operations.AddShareResponse>;
     /**
-     * completeDirectSend - Complete send files
+     * Complete send files
      *
+     * @remarks
      * After uploading the file(s) to be sent, this method will trigger invitation emails and finish the send files setup. If you are not sending files from your own computer in a send, you will not need this step.
      *
      * **How to send files from your computer using the API**:
@@ -55,33 +60,36 @@ export declare class Shares {
      * 2. Use the [POST /resources/upload](#operation/uploadFile) endpoint to upload your files to the send you've created. The "/" path represents the root of the share, not your home directory. **You must send the access token that you received from the first step in the `ev-access-token` header**
      * 3. Use the [POST /shares/complete-send/{id}](#operation/completeDirectSend) endpoint to indicate that you have finished uploading files to your send. This will trigger the system to remove the **upload** permission from the share and send any invitation emails you set up in the first step of the process. **You must send YOUR access token in the `ev-access-token` header, not the temporary access token**
      *
-    **/
+     */
     completeDirectSend(req: operations.CompleteDirectSendRequest, config?: AxiosRequestConfig): Promise<operations.CompleteDirectSendResponse>;
     /**
-     * deleteShareById - Deactivate a share
+     * Deactivate a share
      *
+     * @remarks
      * Deactivate a share. Deactivating a share does not remove the underlying files for **shared_folder** and **receive** share types; it merely removes the access URL. Deleting a **send** share type does remove the associated files, as files that have been sent are only associated with the share, and aren't stored anywhere else in the account.
      *
      * **Notes:**
      *
      * - You must have [sharing permissons](/docs/account/04-users/00-introduction#managing-user-roles-and-permissions) to use this.
      * - You must have [admin-level access](/docs/account/04-users/01-admin-users), or you must be the owner of the specified share you wish to delete.
-    **/
+     */
     deleteShareById(req: operations.DeleteShareByIdRequest, config?: AxiosRequestConfig): Promise<operations.DeleteShareByIdResponse>;
     /**
-     * getShareById - Get a share
+     * Get a share
      *
+     * @remarks
      * Get the details for a specific share entry. You can use the `include` parameter to also get the details of related records, such as the owning user or the resources involved in the share.
      *
      * **Notes:**
      *
      * - Authenticated user requires [share permission](/docs/account/04-users/00-introduction#managing-user-roles-and-permissions).
      * - To get share objects with type send, authenticated user's role must be admin or master.
-    **/
+     */
     getShareById(req: operations.GetShareByIdRequest, config?: AxiosRequestConfig): Promise<operations.GetShareByIdResponse>;
     /**
-     * listShares - Get a list of shares
+     * Get a list of shares
      *
+     * @remarks
      * Get a list of shares that you would have access to view through the web interface. You can limit which results are returned by specifying specific types of shares you wish to view, finding things shared with a specific email address, as well as finding shares for specific folder names.
      *
      *
@@ -89,11 +97,12 @@ export declare class Shares {
      *
      * - Authenticated user requires [share permission](/docs/account/04-users/00-introduction#managing-user-roles-and-permissions).
      * - To get share objects with type send, authenticated user's role must be admin or master.
-    **/
+     */
     listShares(req: operations.ListSharesRequest, config?: AxiosRequestConfig): Promise<operations.ListSharesResponse>;
     /**
-     * updateShareById - Update a share
+     * Update a share
      *
+     * @remarks
      * Change the settings on an active share. Any changes made will affect all users that have access to the share.
      *
      * When updating invitees, pass the `recipients` body paramater with the full list of people who should be included on the share. If you resend the list without an existing recipient, they will be removed from the share.
@@ -113,6 +122,6 @@ export declare class Shares {
      * **Notes:**
      *
      *   - Authenticated user should be the owner of the specified share.
-    **/
+     */
     updateShareById(req: operations.UpdateShareByIdRequest, config?: AxiosRequestConfig): Promise<operations.UpdateShareByIdResponse>;
 }

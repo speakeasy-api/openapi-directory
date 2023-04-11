@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { RepositoryAssociation } from "./repositoryassociation";
+/**
+ * Success
+ */
 export declare class AssociateRepositoryResponse extends SpeakeasyBase {
     repositoryAssociation?: RepositoryAssociation;
     tags?: Record<string, string>;

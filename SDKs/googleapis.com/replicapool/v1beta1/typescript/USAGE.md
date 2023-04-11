@@ -1,42 +1,35 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { ReplicapoolPoolsDeleteRequest, ReplicapoolPoolsDeleteResponse } from "openapi/src/sdk/models/operations";
+import {
+  ReplicapoolPoolsDeleteRequest,
+  ReplicapoolPoolsDeleteResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: ReplicapoolPoolsDeleteRequest = {
-  security: {
-    option1: {
-      oauth2: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-      oauth2c: {
-        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      },
-    },
-  },
-  pathParams: {
-    poolName: "sit",
-    projectName: "voluptas",
-    zone: "culpa",
-  },
-  queryParams: {
-    alt: "json",
-    fields: "consequuntur",
-    key: "dolor",
-    oauthToken: "expedita",
-    prettyPrint: true,
-    quotaUser: "fugit",
-    userIp: "et",
-  },
-  request: {
+  poolsDeleteRequest: {
     abandonInstances: [
-      "rerum",
+      "provident",
+      "distinctio",
+      "quibusdam",
     ],
   },
+  alt: AltEnum.Json,
+  fields: "unde",
+  key: "nulla",
+  oauthToken: "corrupti",
+  poolName: "illum",
+  prettyPrint: false,
+  projectName: "vel",
+  quotaUser: "error",
+  userIp: "deserunt",
+  zone: "suscipit",
 };
 
 sdk.pools.replicapoolPoolsDelete(req).then((res: ReplicapoolPoolsDeleteResponse | AxiosError) => {

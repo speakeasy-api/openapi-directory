@@ -1,12 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetMapsUsingGetPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GETMapsUsingGETRequest extends SpeakeasyBase {
+    /**
+     * RGD species type key. A full list of keys is available throught the lookup service.  1=human, 2=mouse, 3=rat,ect
+     */
     speciesTypeKey: number;
 }
-export declare class GetMapsUsingGetRequest extends SpeakeasyBase {
-    pathParams: GetMapsUsingGetPathParams;
-}
-export declare class GetMapsUsingGetResponse extends SpeakeasyBase {
+export declare class GETMapsUsingGETResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

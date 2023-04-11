@@ -1,19 +1,33 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class IssuesRemoveAssigneesPathParams extends SpeakeasyBase {
-    issueNumber: number;
-    owner: string;
-    repo: string;
-}
+import { AxiosResponse } from "axios";
 export declare class IssuesRemoveAssigneesRequestBody extends SpeakeasyBase {
+    /**
+     * Usernames of assignees to remove from an issue. _NOTE: Only users with push access can remove assignees from an issue. Assignees are silently ignored otherwise._
+     */
     assignees?: string[];
 }
 export declare class IssuesRemoveAssigneesRequest extends SpeakeasyBase {
-    pathParams: IssuesRemoveAssigneesPathParams;
-    request?: IssuesRemoveAssigneesRequestBody;
+    requestBody?: IssuesRemoveAssigneesRequestBody;
+    /**
+     * The number that identifies the issue.
+     */
+    issueNumber: number;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    owner: string;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    repo: string;
 }
 export declare class IssuesRemoveAssigneesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    issueSimple?: shared.IssueSimple;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
+    issue?: shared.Issue;
 }

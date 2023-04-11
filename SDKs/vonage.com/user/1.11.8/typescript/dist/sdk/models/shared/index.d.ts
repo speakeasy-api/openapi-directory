@@ -6,7 +6,6 @@ export * from "./firsthref";
 export * from "./links";
 export * from "./nexthref";
 export * from "./prevhref";
-export * from "./security";
 export * from "./selfhref";
 export * from "./user";
 export * from "./userembeddedobject";

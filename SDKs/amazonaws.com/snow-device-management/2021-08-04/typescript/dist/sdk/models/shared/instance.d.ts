@@ -1,11 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { InstanceBlockDeviceMapping } from "./instanceblockdevicemapping";
 import { CpuOptions } from "./cpuoptions";
-import { SecurityGroupIdentifier } from "./securitygroupidentifier";
+import { InstanceBlockDeviceMapping } from "./instanceblockdevicemapping";
 import { InstanceState } from "./instancestate";
+import { SecurityGroupIdentifier } from "./securitygroupidentifier";
 /**
  * The description of an instance. Currently, Amazon EC2 instances are the only supported instance type.
-**/
+ */
 export declare class Instance extends SpeakeasyBase {
     amiLaunchIndex?: number;
     blockDeviceMappings?: InstanceBlockDeviceMapping[];
@@ -18,6 +18,9 @@ export declare class Instance extends SpeakeasyBase {
     publicIpAddress?: string;
     rootDeviceName?: string;
     securityGroups?: SecurityGroupIdentifier[];
+    /**
+     * The description of the current state of an instance.
+     */
     state?: InstanceState;
     updatedAt?: Date;
 }

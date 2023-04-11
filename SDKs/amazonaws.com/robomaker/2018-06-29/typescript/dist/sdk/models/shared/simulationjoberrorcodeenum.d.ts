@@ -10,7 +10,7 @@ export declare enum SimulationJobErrorCodeEnum {
     BadPermissionsS3Output = "BadPermissionsS3Output",
     BadPermissionsCloudwatchLogs = "BadPermissionsCloudwatchLogs",
     SubnetIpLimitExceeded = "SubnetIpLimitExceeded",
-    EniLimitExceeded = "ENILimitExceeded",
+    ENILimitExceeded = "ENILimitExceeded",
     BadPermissionsUserCredentials = "BadPermissionsUserCredentials",
     InvalidBundleRobotApplication = "InvalidBundleRobotApplication",
     InvalidBundleSimulationApplication = "InvalidBundleSimulationApplication",

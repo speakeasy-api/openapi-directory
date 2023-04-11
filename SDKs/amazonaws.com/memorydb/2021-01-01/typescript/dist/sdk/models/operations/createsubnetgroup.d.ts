@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum CreateSubnetGroupXAmzTargetEnum {
-    AmazonMemoryDbCreateSubnetGroup = "AmazonMemoryDB.CreateSubnetGroup"
+    AmazonMemoryDBCreateSubnetGroup = "AmazonMemoryDB.CreateSubnetGroup"
 }
-export declare class CreateSubnetGroupHeaders extends SpeakeasyBase {
+export declare class CreateSubnetGroupRequest extends SpeakeasyBase {
+    createSubnetGroupRequest: shared.CreateSubnetGroupRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,19 +15,40 @@ export declare class CreateSubnetGroupHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: CreateSubnetGroupXAmzTargetEnum;
 }
-export declare class CreateSubnetGroupRequest extends SpeakeasyBase {
-    headers: CreateSubnetGroupHeaders;
-    request: shared.CreateSubnetGroupRequest;
-}
 export declare class CreateSubnetGroupResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     createSubnetGroupResponse?: shared.CreateSubnetGroupResponse;
+    /**
+     * InvalidSubnet
+     */
     invalidSubnet?: any;
-    serviceLinkedRoleNotFoundFault?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceLinkedRoleNotFoundFault
+     */
+    serviceLinkedRoleNotFoundFault?: any;
+    /**
+     * SubnetGroupAlreadyExistsFault
+     */
     subnetGroupAlreadyExistsFault?: any;
+    /**
+     * SubnetGroupQuotaExceededFault
+     */
     subnetGroupQuotaExceededFault?: any;
+    /**
+     * SubnetNotAllowedFault
+     */
     subnetNotAllowedFault?: any;
+    /**
+     * SubnetQuotaExceededFault
+     */
     subnetQuotaExceededFault?: any;
+    /**
+     * TagQuotaPerResourceExceeded
+     */
     tagQuotaPerResourceExceeded?: any;
 }

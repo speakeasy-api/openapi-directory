@@ -1,3 +1,6 @@
+/**
+ * The duration of the interaction restriction. Default: `one_day`.
+ */
 export declare enum InteractionExpiryEnum {
     OneDay = "one_day",
     ThreeDays = "three_days",

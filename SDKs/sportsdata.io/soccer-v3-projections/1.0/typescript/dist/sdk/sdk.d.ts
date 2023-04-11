@@ -1,11 +1,26 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-import { Security } from "./models/shared";
-export declare const ServerList: readonly ["http://api.sportsdata.io", "https://api.sportsdata.io", "http://azure-api.sportsdata.io", "https://azure-api.sportsdata.io"];
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
+export declare const ServerList: readonly ["http://azure-api.sportsdata.io/v3/soccer/projections", "https://azure-api.sportsdata.io/v3/soccer/projections"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * The security details required to authenticate the SDK
+     */
+    security?: shared.Security;
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    security?: Security;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
 export declare class SDK {
     _defaultClient: AxiosInstance;
@@ -14,25 +29,33 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
     /**
-     * dfsSlatesByDate - Dfs Slates By Date
-    **/
+     * Dfs Slates By Date
+     */
     dfsSlatesByDate(req: operations.DfsSlatesByDateRequest, config?: AxiosRequestConfig): Promise<operations.DfsSlatesByDateResponse>;
     /**
-     * projectedPlayerGameStatsByCompetitionWDfsSalaries - Projected Player Game Stats by Competition (w/ DFS Salaries)
-    **/
+     * Injured Players By Competition
+     *
+     * @remarks
+     * This endpoint provides all currently injured soccer players by competition, along with injury details.
+     */
+    injuredPlayersByCompetition(req: operations.InjuredPlayersByCompetitionRequest, config?: AxiosRequestConfig): Promise<operations.InjuredPlayersByCompetitionResponse>;
+    /**
+     * Projected Player Game Stats by Competition (w/ DFS Salaries)
+     */
     projectedPlayerGameStatsByCompetitionWDfsSalaries(req: operations.ProjectedPlayerGameStatsByCompetitionWDfsSalariesRequest, config?: AxiosRequestConfig): Promise<operations.ProjectedPlayerGameStatsByCompetitionWDfsSalariesResponse>;
     /**
-     * projectedPlayerGameStatsByDateWDfsSalaries - Projected Player Game Stats by Date (w/ DFS Salaries)
-    **/
+     * Projected Player Game Stats by Date (w/ DFS Salaries)
+     */
     projectedPlayerGameStatsByDateWDfsSalaries(req: operations.ProjectedPlayerGameStatsByDateWDfsSalariesRequest, config?: AxiosRequestConfig): Promise<operations.ProjectedPlayerGameStatsByDateWDfsSalariesResponse>;
     /**
-     * projectedPlayerGameStatsByPlayerWDfsSalaries - Projected Player Game Stats by Player (w/ DFS Salaries)
-    **/
+     * Projected Player Game Stats by Player (w/ DFS Salaries)
+     */
     projectedPlayerGameStatsByPlayerWDfsSalaries(req: operations.ProjectedPlayerGameStatsByPlayerWDfsSalariesRequest, config?: AxiosRequestConfig): Promise<operations.ProjectedPlayerGameStatsByPlayerWDfsSalariesResponse>;
     /**
-     * upcomingDfsSlatesByCompetition - Upcoming Dfs Slates By Competition
-    **/
+     * Upcoming Dfs Slates By Competition
+     */
     upcomingDfsSlatesByCompetition(req: operations.UpcomingDfsSlatesByCompetitionRequest, config?: AxiosRequestConfig): Promise<operations.UpcomingDfsSlatesByCompetitionResponse>;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeletePolicyXAmzTargetEnum {
-    Awsfms20180101DeletePolicy = "AWSFMS_20180101.DeletePolicy"
+    AWSFMS20180101DeletePolicy = "AWSFMS_20180101.DeletePolicy"
 }
-export declare class DeletePolicyHeaders extends SpeakeasyBase {
+export declare class DeletePolicyRequest extends SpeakeasyBase {
+    deletePolicyRequest: shared.DeletePolicyRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,16 +15,28 @@ export declare class DeletePolicyHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeletePolicyXAmzTargetEnum;
 }
-export declare class DeletePolicyRequest extends SpeakeasyBase {
-    headers: DeletePolicyHeaders;
-    request: shared.DeletePolicyRequest;
-}
 export declare class DeletePolicyResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalErrorException
+     */
     internalErrorException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * InvalidOperationException
+     */
     invalidOperationException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

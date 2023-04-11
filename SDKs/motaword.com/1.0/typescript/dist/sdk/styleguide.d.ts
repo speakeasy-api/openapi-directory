@@ -1,5 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class StyleGuide {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,51 +10,80 @@ export declare class StyleGuide {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createStyleGuide - Upload a new style guide
-     *
      * Upload a new style guide
-    **/
-    createStyleGuide(req: operations.CreateStyleGuideRequest, config?: AxiosRequestConfig): Promise<operations.CreateStyleGuideResponse>;
-    /**
-     * deleteStyleGuide - Delete the style guide
      *
-     * Delete the style guide
-    **/
+     * @remarks
+     * Upload a new style guide
+     */
+    createStyleGuideJson(req: operations.CreateStyleGuideJsonRequest, config?: AxiosRequestConfig): Promise<operations.CreateStyleGuideJsonResponse>;
+    /**
+     * Upload a new style guide
+     *
+     * @remarks
+     * Upload a new style guide
+     */
+    createStyleGuideMultipart(req: operations.CreateStyleGuideMultipartRequest, config?: AxiosRequestConfig): Promise<operations.CreateStyleGuideMultipartResponse>;
+    /**
+     * Delete a style guide
+     *
+     * @remarks
+     * Delete the existing style guide from the project.
+     */
     deleteStyleGuide(req: operations.DeleteStyleGuideRequest, config?: AxiosRequestConfig): Promise<operations.DeleteStyleGuideResponse>;
     /**
-     * downloadGlobalStyleGuide - Download the global style guide.
+     * Download account style guide
      *
-     * Download your corporate account's global style guide. This endpoint is available only for corporate account customers.
-    **/
+     * @remarks
+     * Download your account's global style guide. This endpoint is available only for corporate account customers. This style guide will be automatically attached to each new project under your account.
+     */
     downloadGlobalStyleGuide(config?: AxiosRequestConfig): Promise<operations.DownloadGlobalStyleGuideResponse>;
     /**
-     * downloadStyleGuide - Download a style guide
-     *
      * Download a style guide
-    **/
+     *
+     * @remarks
+     * Download a previously uploaded style guide file.
+     */
     downloadStyleGuide(req: operations.DownloadStyleGuideRequest, config?: AxiosRequestConfig): Promise<operations.DownloadStyleGuideResponse>;
     /**
-     * getStyleGuide - Get single style guide
+     * View a style guide
      *
-     * Get single style guide
-    **/
+     * @remarks
+     * View the details of a style guide uploaded to a project
+     */
     getStyleGuide(req: operations.GetStyleGuideRequest, config?: AxiosRequestConfig): Promise<operations.GetStyleGuideResponse>;
     /**
-     * getStyleGuides - Get a list of style guides
+     * View style guides
      *
-     * Get a list of style guides
-    **/
+     * @remarks
+     * View a list of style guides in your project.
+     */
     getStyleGuides(req: operations.GetStyleGuidesRequest, config?: AxiosRequestConfig): Promise<operations.GetStyleGuidesResponse>;
     /**
-     * updateGlobalStyleGuide - Create or update the global style guide.
+     * Create or update the account style guide
      *
-     * Update your corporate account's global style guide. This endpoint is available only for corporate account customers.
-    **/
-    updateGlobalStyleGuide(req: operations.UpdateGlobalStyleGuideRequest, config?: AxiosRequestConfig): Promise<operations.UpdateGlobalStyleGuideResponse>;
+     * @remarks
+     * Update your corporate account's global style guide. This endpoint is available only for corporate account customers. This style guide will be automatically attached to each new project under your account.
+     */
+    updateGlobalStyleGuideJson(req: shared.AccountStyleGuideUploadRequest, config?: AxiosRequestConfig): Promise<operations.UpdateGlobalStyleGuideJsonResponse>;
     /**
-     * updateStyleGuide - Update the style guide.
+     * Create or update the account style guide
      *
-     * Update the style guide. File name and contents will replaced with the new one.
-    **/
-    updateStyleGuide(req: operations.UpdateStyleGuideRequest, config?: AxiosRequestConfig): Promise<operations.UpdateStyleGuideResponse>;
+     * @remarks
+     * Update your corporate account's global style guide. This endpoint is available only for corporate account customers. This style guide will be automatically attached to each new project under your account.
+     */
+    updateGlobalStyleGuideMultipart(req: shared.AccountStyleGuideUploadRequest1, config?: AxiosRequestConfig): Promise<operations.UpdateGlobalStyleGuideMultipartResponse>;
+    /**
+     * Update a style guide
+     *
+     * @remarks
+     * Update the existing style guide in the project. Public users are allowed to have only 1 style guide per project and file name and contents will replaced with the new style guide that you are uploading via this endpoint.
+     */
+    updateStyleGuideJson(req: operations.UpdateStyleGuideJsonRequest, config?: AxiosRequestConfig): Promise<operations.UpdateStyleGuideJsonResponse>;
+    /**
+     * Update a style guide
+     *
+     * @remarks
+     * Update the existing style guide in the project. Public users are allowed to have only 1 style guide per project and file name and contents will replaced with the new style guide that you are uploading via this endpoint.
+     */
+    updateStyleGuideMultipart(req: operations.UpdateStyleGuideMultipartRequest, config?: AxiosRequestConfig): Promise<operations.UpdateStyleGuideMultipartResponse>;
 }

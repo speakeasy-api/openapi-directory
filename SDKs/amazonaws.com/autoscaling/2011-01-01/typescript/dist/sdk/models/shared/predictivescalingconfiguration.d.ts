@@ -4,7 +4,7 @@ import { PredictiveScalingMetricSpecification } from "./predictivescalingmetrics
 import { PredictiveScalingModeEnum } from "./predictivescalingmodeenum";
 /**
  * Represents a predictive scaling policy configuration to use with Amazon EC2 Auto Scaling.
-**/
+ */
 export declare class PredictiveScalingConfiguration extends SpeakeasyBase {
     maxCapacityBreachBehavior?: PredictiveScalingMaxCapacityBreachBehaviorEnum;
     maxCapacityBuffer?: number;

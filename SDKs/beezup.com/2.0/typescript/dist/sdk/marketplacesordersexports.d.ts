@@ -1,5 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class MarketplacesOrdersExports {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,13 +10,14 @@ export declare class MarketplacesOrdersExports {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * exportOrders - Request a new Order report exportation to be generated
+     * Request a new Order report exportation to be generated
      *
+     * @remarks
      * A new file will be generated containing a summary of all the Orders matching the requested filter settings.
-    **/
-    exportOrders(req: operations.ExportOrdersRequest, config?: AxiosRequestConfig): Promise<operations.ExportOrdersResponse>;
+     */
+    exportOrders(req: shared.ExportOrderListRequest, config?: AxiosRequestConfig): Promise<operations.ExportOrdersResponse>;
     /**
-     * getOrderExportations - Get a paginated list of Order report exportations
-    **/
+     * Get a paginated list of Order report exportations
+     */
     getOrderExportations(req: operations.GetOrderExportationsRequest, config?: AxiosRequestConfig): Promise<operations.GetOrderExportationsResponse>;
 }

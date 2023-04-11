@@ -1,19 +1,30 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetRestoreManagedPrefixListVersionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETRestoreManagedPrefixListVersionActionEnum {
     RestoreManagedPrefixListVersion = "RestoreManagedPrefixListVersion"
 }
-export declare enum GetRestoreManagedPrefixListVersionVersionEnum {
+export declare enum GETRestoreManagedPrefixListVersionVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetRestoreManagedPrefixListVersionQueryParams extends SpeakeasyBase {
-    action: GetRestoreManagedPrefixListVersionActionEnum;
+export declare class GETRestoreManagedPrefixListVersionRequest extends SpeakeasyBase {
+    action: GETRestoreManagedPrefixListVersionActionEnum;
+    /**
+     * The current version number for the prefix list.
+     */
     currentVersion: number;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
+    /**
+     * The ID of the prefix list.
+     */
     prefixListId: string;
+    /**
+     * The version to restore.
+     */
     previousVersion: number;
-    version: GetRestoreManagedPrefixListVersionVersionEnum;
-}
-export declare class GetRestoreManagedPrefixListVersionHeaders extends SpeakeasyBase {
+    version: GETRestoreManagedPrefixListVersionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -22,12 +33,9 @@ export declare class GetRestoreManagedPrefixListVersionHeaders extends Speakeasy
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetRestoreManagedPrefixListVersionRequest extends SpeakeasyBase {
-    queryParams: GetRestoreManagedPrefixListVersionQueryParams;
-    headers: GetRestoreManagedPrefixListVersionHeaders;
-}
-export declare class GetRestoreManagedPrefixListVersionResponse extends SpeakeasyBase {
+export declare class GETRestoreManagedPrefixListVersionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

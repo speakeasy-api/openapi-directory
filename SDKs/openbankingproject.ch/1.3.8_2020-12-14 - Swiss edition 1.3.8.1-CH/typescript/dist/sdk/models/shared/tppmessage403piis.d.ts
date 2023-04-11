@@ -1,9 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { MessageCode403PIISEnum } from "./messagecode403piisenum";
 import { TppMessageCategoryEnum } from "./tppmessagecategoryenum";
-import { MessageCode403PiisEnum } from "./messagecode403piisenum";
-export declare class TppMessage403Piis extends SpeakeasyBase {
+export declare class TppMessage403PIIS extends SpeakeasyBase {
+    /**
+     * Category of the TPP message category.
+     */
     category: TppMessageCategoryEnum;
-    code: MessageCode403PiisEnum;
+    /**
+     * Message codes defined for PIIS for HTTP Error code 403 (FORBIDDEN).
+     */
+    code: MessageCode403PIISEnum;
     path?: string;
+    /**
+     * Additional explaining text to the TPP.
+     */
     text?: string;
 }

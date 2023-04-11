@@ -1,21 +1,20 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetContactRequest, GetContactResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  GetContactRequest,
+  GetContactResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    oauth: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  }
-));
-    
-const req: GetContactRequest = {
-  pathParams: {
-    id: "sit",
+    oauth: "Bearer YOUR_ACCESS_TOKEN_HERE",
   },
+});
+
+const req: GetContactRequest = {
+  id: "corrupti",
 };
 
 sdk.contacts.getContact(req).then((res: GetContactResponse | AxiosError) => {

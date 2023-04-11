@@ -1,27 +1,32 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostListDomainsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTListDomainsActionEnum {
     ListDomains = "ListDomains"
 }
-export declare enum PostListDomainsVersionEnum {
+export declare enum POSTListDomainsVersionEnum {
     TwoThousandAndNine0415 = "2009-04-15"
 }
-export declare class PostListDomainsQueryParams extends SpeakeasyBase {
+export declare class POSTListDomainsRequest extends SpeakeasyBase {
     awsAccessKeyId: string;
-    action: PostListDomainsActionEnum;
+    action: POSTListDomainsActionEnum;
+    /**
+     * Pagination limit
+     */
     maxNumberOfDomains?: string;
+    /**
+     * Pagination token
+     */
     nextToken?: string;
+    requestBody?: Uint8Array;
     signature: string;
     signatureMethod: string;
     signatureVersion: string;
     timestamp: string;
-    version: PostListDomainsVersionEnum;
+    version: POSTListDomainsVersionEnum;
 }
-export declare class PostListDomainsRequest extends SpeakeasyBase {
-    queryParams: PostListDomainsQueryParams;
-    request?: Uint8Array;
-}
-export declare class PostListDomainsResponse extends SpeakeasyBase {
+export declare class POSTListDomainsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

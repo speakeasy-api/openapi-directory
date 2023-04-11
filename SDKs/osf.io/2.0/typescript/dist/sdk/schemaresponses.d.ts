@@ -1,0 +1,92 @@
+import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Schema Responses contain user supplied responses to a Registration Schema. A Schema Response aggregates all of the the responses for a given version of a Registration's Registration Schema. Schema Responses are created when a Registration is completed. Once a Registration is completed the Schema Responses for a Registration can be revisied and updated by using it's associated action endpoints.
+ *
+ * @remarks
+ *
+ * There are a few states for Schema Responses:
+ *
+ *   - `initial` is the state of a Schema Response on a newly registered Registration, to edit a Schema Response you
+ *   must create a Schema Response Action that triggers a new submission.
+ *
+ *   - `in_progess` is the state of a Schema Response where the response is editable and still private, Schema
+ *   Responses are editted via a PATCH request as specified below.
+ *
+ *   - `unapproved` is the state of a Schema Response where edits have been made and "locked-in", now contributors
+ *   have the ability to reject the changes, however if they are not rejected changes are automatically approved
+ *   after 48 hours. If `unapproved` Schema Responses are rejected, they are returned to the `in_progress` state. If
+ *   `unapproved` Schema Responses are approved they either enter an `approved` state or go into a
+ *   `pending_moderation` to be accepted or denied by a moderator.
+ *
+ *   - `pending_moderation` is the state of a Schema Response where moderators have an opportunity to reject or
+ *   approve a Schema Response that has been approved by it's contributors. This state is only reachable for Schema
+ *   Responses that are associated with a Registration that has Registration Provider a moderated workflow.
+ *
+ *   - `approved` is the state of a Schema Response where it is public and immutable, in order to update an approved
+ *   Schema Response a new one must be created.
+ */
+export declare class SchemaResponses {
+    _defaultClient: AxiosInstance;
+    _securityClient: AxiosInstance;
+    _serverURL: string;
+    _language: string;
+    _sdkVersion: string;
+    _genVersion: string;
+    constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
+    /**
+     * Delete a Incomplete Schema Response
+     *
+     * @remarks
+     * This endpoint deletes a new Schema Response. Schema Responses can only be deleted in the `in_progress` state. Once a Schema Response is transitioned to an `approved` it is immutable and another Schema Response must be created to update the Schema Response for that registration.
+     * #### Returns
+     * Returns a JSON object with a `data` key containing an updated representation of the requested Schema Response, if the request is successful.
+     * #### Errors
+     * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
+     */
+    schemaResponseDelete(req: operations.SchemaResponseDeleteRequest, config?: AxiosRequestConfig): Promise<operations.SchemaResponseDeleteResponse>;
+    /**
+     * Update a Registration's Schema Response
+     *
+     * @remarks
+     * Patching to this endpoint allows one to directly edit the revision responses on the Schema Response of a Registration if that Schema Response is in an `in_progress` state.
+     * #### Returns
+     * Returns a JSON object with a `data` key containing an updated representation of the requested Schema Response, if the request is successful.
+     * #### Errors
+     * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
+     */
+    schemaResponsePatch(req: operations.SchemaResponsePatchRequest, config?: AxiosRequestConfig): Promise<operations.SchemaResponsePatchResponse>;
+    /**
+     * Create a new Schema Response
+     *
+     * @remarks
+     * This endpoint creates a new Schema Response with an `in_progress` state. A new response can only be created if the current schema response is in an `approved` state.
+     * #### Returns
+     * Returns a JSON object with a `data` key containing an updated representation of the requested Schema Response, if the request is successful.
+     * #### Errors
+     * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
+     */
+    schemaResponsePpost(req: operations.SchemaResponsePpostSchemaResponsesInput, config?: AxiosRequestConfig): Promise<operations.SchemaResponsePpostResponse>;
+    /**
+     * List all Schema Responses
+     *
+     * @remarks
+     * This retrieves a paginated list of all active Schema Responses that are public.
+     * #### Returns
+     * Returns a JSON object containing `data` and `links` keys. The `data` key contains an array of 10 Schema Responses. Each resource in the array is a separate Registration Schemas object. The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
+     * #### Errors
+     * This request should never return an error.
+     */
+    schemaResponsesList(config?: AxiosRequestConfig): Promise<operations.SchemaResponsesListResponse>;
+    /**
+     * Retrieve a Schema Response
+     *
+     * @remarks
+     * This retrieves a single Schema response using it's id.
+     * #### Returns
+     * Returns a JSON object with a `data` key containing the representation of the requested Schema Response, if the request is successful.
+     * #### Errors
+     * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
+     */
+    schemaResponsesRead(req: operations.SchemaResponsesReadRequest, config?: AxiosRequestConfig): Promise<operations.SchemaResponsesReadResponse>;
+}

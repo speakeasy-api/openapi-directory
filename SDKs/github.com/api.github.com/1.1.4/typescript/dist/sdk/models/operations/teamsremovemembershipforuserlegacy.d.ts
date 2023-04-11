@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class TeamsRemoveMembershipForUserLegacyPathParams extends SpeakeasyBase {
-    teamId: number;
-    username: string;
-}
+import { AxiosResponse } from "axios";
 export declare class TeamsRemoveMembershipForUserLegacyRequest extends SpeakeasyBase {
-    pathParams: TeamsRemoveMembershipForUserLegacyPathParams;
+    /**
+     * The unique identifier of the team.
+     */
+    teamId: number;
+    /**
+     * The handle for the GitHub user account.
+     */
+    username: string;
 }
 export declare class TeamsRemoveMembershipForUserLegacyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

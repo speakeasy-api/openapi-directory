@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class DebitMemos {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,46 +9,51 @@ export declare class DebitMemos {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteDebitMemo - Delete a debit memo
+     * Delete a debit memo
      *
+     * @remarks
      * **Note:** This operation is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * Deletes a debit memo. Only debit memos with the Cancelled status can be deleted.
      *
      * You can delete a debit memo only if you have the user permission. See [Billing Roles](https://knowledgecenter.zuora.com/CF_Users_and_Administrators/A_Administrator_Settings/User_Roles/d_Billing_Roles) for more information.
      *
-    **/
-    deleteDebitMemo(req: operations.DeleteDebitMemoRequest, config?: AxiosRequestConfig): Promise<operations.DeleteDebitMemoResponse>;
+     */
+    deleteDebitMemo(req: operations.DELETEDebitMemoRequest, config?: AxiosRequestConfig): Promise<operations.DELETEDebitMemoResponse>;
     /**
-     * getDebitMemo - Retrieve a debit memo
+     * Retrieve a debit memo
      *
+     * @remarks
      * **Note:** This operation is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * Retrieves the information about a specific debit memo.
      *
-    **/
-    getDebitMemo(req: operations.GetDebitMemoRequest, config?: AxiosRequestConfig): Promise<operations.GetDebitMemoResponse>;
+     */
+    getDebitMemo(req: operations.GETDebitMemoRequest, config?: AxiosRequestConfig): Promise<operations.GETDebitMemoResponse>;
     /**
-     * getDebitMemoApplicationParts - List all application parts of a debit memo
+     * List all application parts of a debit memo
      *
+     * @remarks
      * **Note:** This operation is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * Retrieves information about the payments or credit memos that are applied to a specified debit memo.
      *
-    **/
-    getDebitMemoApplicationParts(req: operations.GetDebitMemoApplicationPartsRequest, config?: AxiosRequestConfig): Promise<operations.GetDebitMemoApplicationPartsResponse>;
+     */
+    getDebitMemoApplicationParts(req: operations.GETDebitMemoApplicationPartsRequest, config?: AxiosRequestConfig): Promise<operations.GETDebitMemoApplicationPartsResponse>;
     /**
-     * getDebitMemoItem - Retrieve a debit memo item
+     * Retrieve a debit memo item
      *
+     * @remarks
      * **Note:** This operation is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * Retrieves information about a specific item of a debit memo. A debit memo item is a single line item in a debit memo.
      *
-    **/
-    getDebitMemoItem(req: operations.GetDebitMemoItemRequest, config?: AxiosRequestConfig): Promise<operations.GetDebitMemoItemResponse>;
+     */
+    getDebitMemoItem(req: operations.GETDebitMemoItemRequest, config?: AxiosRequestConfig): Promise<operations.GETDebitMemoItemResponse>;
     /**
-     * getDebitMemoItems - List debit memo items
+     * List debit memo items
      *
+     * @remarks
      * **Note:** This operation is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * Retrieves the information about all items of a debit memo. A debit memo item is a single line item in a debit memo.
@@ -65,11 +70,12 @@ export declare class DebitMemos {
      *
      * - /v1/debitmemos/402890245c7ca371015c7cb40b28001f/items?amount=100&sort=createdDate
      *
-    **/
-    getDebitMemoItems(req: operations.GetDebitMemoItemsRequest, config?: AxiosRequestConfig): Promise<operations.GetDebitMemoItemsResponse>;
+     */
+    getDebitMemoItems(req: operations.GETDebitMemoItemsRequest, config?: AxiosRequestConfig): Promise<operations.GETDebitMemoItemsResponse>;
     /**
-     * getDebitMemos - List debit memos
+     * List debit memos
      *
+     * @remarks
      * **Note:** This operation is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * Retrieves the information about all debit memos associated with all customer accounts.
@@ -88,29 +94,32 @@ export declare class DebitMemos {
      *
      * - /v1/debitmemos?status=Posted&type=External&sort=+number
      *
-    **/
-    getDebitMemos(req: operations.GetDebitMemosRequest, config?: AxiosRequestConfig): Promise<operations.GetDebitMemosResponse>;
+     */
+    getDebitMemos(req: operations.GETDebitMemosRequest, config?: AxiosRequestConfig): Promise<operations.GETDebitMemosResponse>;
     /**
-     * getTaxationItemsOfDebitMemoItem - List all taxation items of a debit memo item
+     * List all taxation items of a debit memo item
      *
+     * @remarks
      * **Note:** This operation is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * Retrieves information about the taxation items of a specific debit memo item.
      *
-    **/
-    getTaxationItemsOfDebitMemoItem(req: operations.GetTaxationItemsOfDebitMemoItemRequest, config?: AxiosRequestConfig): Promise<operations.GetTaxationItemsOfDebitMemoItemResponse>;
+     */
+    getTaxationItemsOfDebitMemoItem(req: operations.GETTaxationItemsOfDebitMemoItemRequest, config?: AxiosRequestConfig): Promise<operations.GETTaxationItemsOfDebitMemoItemResponse>;
     /**
-     * postDmTaxationItems - Create taxation items for a debit memo
+     * Create taxation items for a debit memo
      *
+     * @remarks
      * **Note:** This operation is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * Creates taxation items for a debit memo.
      *
-    **/
-    postDmTaxationItems(req: operations.PostDmTaxationItemsRequest, config?: AxiosRequestConfig): Promise<operations.PostDmTaxationItemsResponse>;
+     */
+    postDMTaxationItems(req: operations.POSTDMTaxationItemsRequest, config?: AxiosRequestConfig): Promise<operations.POSTDMTaxationItemsResponse>;
     /**
-     * postDebitMemoCollect - Collect a posted debit memo
+     * Collect a posted debit memo
      *
+     * @remarks
      * **Note:** This operation is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * This API operation provides an easy way to let the client-side to collect an existing posted debit memo.
@@ -127,11 +136,12 @@ export declare class DebitMemos {
      *   3. If `CreditMemo` is specified in `applicationOrder`, when there are more than 100 credit memo items will be used to apply to the debit memo, the request will be rejected.
      *   4. If `UnappliedPayment` is specified in `applicationOrder`, when there are more than 25 payments will be used to apply to the debit memo, the request will be rejected.
      *
-    **/
-    postDebitMemoCollect(req: operations.PostDebitMemoCollectRequest, config?: AxiosRequestConfig): Promise<operations.PostDebitMemoCollectResponse>;
+     */
+    postDebitMemoCollect(req: operations.POSTDebitMemoCollectRequest, config?: AxiosRequestConfig): Promise<operations.POSTDebitMemoCollectResponse>;
     /**
-     * postDebitMemoFromPrpc - Create a debit memo from a charge
+     * Create a debit memo from a charge
      *
+     * @remarks
      * **Note:** This operation is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * Creates an ad-hoc debit memo from a product rate plan charge. Zuora supports the creation of debit memos from any type of product rate plan charge. The charges can also have any amount and any charge model, except for discout charge models.
@@ -140,22 +150,24 @@ export declare class DebitMemos {
      *
      * You can create a debit memo only if you have the user permission. See [Billing Roles](https://knowledgecenter.zuora.com/CF_Users_and_Administrators/A_Administrator_Settings/User_Roles/d_Billing_Roles) for more information.
      *
-    **/
-    postDebitMemoFromPrpc(req: operations.PostDebitMemoFromPrpcRequest, config?: AxiosRequestConfig): Promise<operations.PostDebitMemoFromPrpcResponse>;
+     */
+    postDebitMemoFromPrpc(req: operations.POSTDebitMemoFromPrpcRequest, config?: AxiosRequestConfig): Promise<operations.POSTDebitMemoFromPrpcResponse>;
     /**
-     * postDebitMemoPdf - Generate a debit memo PDF file
+     * Generate a debit memo PDF file
      *
+     * @remarks
      * **Note:** This operation is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * Creates a PDF file for a specified debit memo. To access the generated PDF file, you can download it by clicking **View PDF** on the detailed debit memo page through the Zuora UI.
      *
      * This REST API operation can be used only if you have the billing document file generation feature and the Billing user permission "Regenerate PDF" enabled.
      *
-    **/
-    postDebitMemoPdf(req: operations.PostDebitMemoPdfRequest, config?: AxiosRequestConfig): Promise<operations.PostDebitMemoPdfResponse>;
+     */
+    postDebitMemoPDF(req: operations.POSTDebitMemoPDFRequest, config?: AxiosRequestConfig): Promise<operations.POSTDebitMemoPDFResponse>;
     /**
-     * postEmailDebitMemo - Email a debit memo
+     * Email a debit memo
      *
+     * @remarks
      * **Note:** This operation is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * Sends a posted debit memo to the specified email addresses manually.
@@ -174,11 +186,12 @@ export declare class DebitMemos {
      *     * The `useEmailTemplateSetting` field is set to `false`.
      *     * The email addresses are not specified in the `emailAddresses` field.
      *
-    **/
-    postEmailDebitMemo(req: operations.PostEmailDebitMemoRequest, config?: AxiosRequestConfig): Promise<operations.PostEmailDebitMemoResponse>;
+     */
+    postEmailDebitMemo(req: operations.POSTEmailDebitMemoRequest, config?: AxiosRequestConfig): Promise<operations.POSTEmailDebitMemoResponse>;
     /**
-     * postUploadFileForDebitMemo - Upload a file for a debit memo
+     * Upload a file for a debit memo
      *
+     * @remarks
      * **Note:** This operation is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * Uploads an externally generated PDF file for a debit memo that is in Draft or Posted status.
@@ -190,31 +203,34 @@ export declare class DebitMemos {
      * - The maximum size of the PDF file to upload is 4 MB.
      * - A maximum of 50 PDF files can be uploaded for one debit memo.
      *
-    **/
-    postUploadFileForDebitMemo(req: operations.PostUploadFileForDebitMemoRequest, config?: AxiosRequestConfig): Promise<operations.PostUploadFileForDebitMemoResponse>;
+     */
+    postUploadFileForDebitMemo(req: operations.POSTUploadFileForDebitMemoRequest, config?: AxiosRequestConfig): Promise<operations.POSTUploadFileForDebitMemoResponse>;
     /**
-     * putBatchUpdateDebitMemos - Update debit memos
+     * Update debit memos
      *
+     * @remarks
      * **Note:** This operation is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * Updates the due date for multiple debit memos in batches with one call.
      *
-    **/
-    putBatchUpdateDebitMemos(req: operations.PutBatchUpdateDebitMemosRequest, config?: AxiosRequestConfig): Promise<operations.PutBatchUpdateDebitMemosResponse>;
+     */
+    putBatchUpdateDebitMemos(req: operations.PUTBatchUpdateDebitMemosRequest, config?: AxiosRequestConfig): Promise<operations.PUTBatchUpdateDebitMemosResponse>;
     /**
-     * putCancelDebitMemo - Cancel a debit memo
+     * Cancel a debit memo
      *
+     * @remarks
      * **Note:** This operation is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * Cancels a debit memo. Only debit memos with the Draft status can be cancelled.
      *
      * You can cancel a debit memo only if you have the user permission. See [Billing Roles](https://knowledgecenter.zuora.com/CF_Users_and_Administrators/A_Administrator_Settings/User_Roles/d_Billing_Roles) for more information.
      *
-    **/
-    putCancelDebitMemo(req: operations.PutCancelDebitMemoRequest, config?: AxiosRequestConfig): Promise<operations.PutCancelDebitMemoResponse>;
+     */
+    putCancelDebitMemo(req: operations.PUTCancelDebitMemoRequest, config?: AxiosRequestConfig): Promise<operations.PUTCancelDebitMemoResponse>;
     /**
-     * putDebitMemo - Update a debit memo
+     * Update a debit memo
      *
+     * @remarks
      * **Note:** This operation is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * Updates the basic and finance information about a debit memo. Currently, Zuora supports updating tax-exclusive memo items, but does not support updating tax-inclusive memo items.
@@ -225,26 +241,28 @@ export declare class DebitMemos {
      *
      * You can update a debit memo only if you have the user permission. See [Billing Roles](https://knowledgecenter.zuora.com/CF_Users_and_Administrators/A_Administrator_Settings/User_Roles/d_Billing_Roles) for more information.
      *
-    **/
-    putDebitMemo(req: operations.PutDebitMemoRequest, config?: AxiosRequestConfig): Promise<operations.PutDebitMemoResponse>;
+     */
+    putDebitMemo(req: operations.PUTDebitMemoRequest, config?: AxiosRequestConfig): Promise<operations.PUTDebitMemoResponse>;
     /**
-     * putPostDebitMemo - Post a debit memo
+     * Post a debit memo
      *
+     * @remarks
      * **Note:** This operation is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * Posts a debit memo to activate it. You can post debit memos only if you have the [Billing permissions](https://knowledgecenter.zuora.com/CF_Users_and_Administrators/A_Administrator_Settings/User_Roles/d_Billing_Roles#Billing_Permissions).
      *
-    **/
-    putPostDebitMemo(req: operations.PutPostDebitMemoRequest, config?: AxiosRequestConfig): Promise<operations.PutPostDebitMemoResponse>;
+     */
+    putPostDebitMemo(req: operations.PUTPostDebitMemoRequest, config?: AxiosRequestConfig): Promise<operations.PUTPostDebitMemoResponse>;
     /**
-     * putUnpostDebitMemo - Unpost a debit memo
+     * Unpost a debit memo
      *
+     * @remarks
      * **Note:** This operation is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
      *
      * Unposts a debit memo that is in Posted status. If any credit memo or payment has been applied to a debit memo, you are not allowed to unpost the debit memo. After a debit memo is unposted, its status becomes Draft.
      *
      * You can unpost debit memos only if you have the [Billing permissions](https://knowledgecenter.zuora.com/CF_Users_and_Administrators/A_Administrator_Settings/User_Roles/d_Billing_Roles#Billing_Permissions).
      *
-    **/
-    putUnpostDebitMemo(req: operations.PutUnpostDebitMemoRequest, config?: AxiosRequestConfig): Promise<operations.PutUnpostDebitMemoResponse>;
+     */
+    putUnpostDebitMemo(req: operations.PUTUnpostDebitMemoRequest, config?: AxiosRequestConfig): Promise<operations.PUTUnpostDebitMemoResponse>;
 }

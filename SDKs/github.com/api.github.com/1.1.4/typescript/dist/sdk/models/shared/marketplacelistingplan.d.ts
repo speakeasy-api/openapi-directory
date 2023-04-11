@@ -1,7 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+export declare enum MarketplaceListingPlanPriceModelEnum {
+    Free = "FREE",
+    FlatRate = "FLAT_RATE",
+    PerUnit = "PER_UNIT"
+}
 /**
  * Marketplace Listing Plan
-**/
+ */
 export declare class MarketplaceListingPlan extends SpeakeasyBase {
     accountsUrl: string;
     bullets: string[];
@@ -11,7 +16,7 @@ export declare class MarketplaceListingPlan extends SpeakeasyBase {
     monthlyPriceInCents: number;
     name: string;
     number: number;
-    priceModel: string;
+    priceModel: MarketplaceListingPlanPriceModelEnum;
     state: string;
     unitName: string;
     url: string;

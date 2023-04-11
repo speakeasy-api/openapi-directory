@@ -1,21 +1,41 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetFrameworksIdPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetFrameworksIdRequest extends SpeakeasyBase {
+    /**
+     * Object Id
+     */
     id: string;
 }
-export declare class GetFrameworksId401ApplicationJson extends SpeakeasyBase {
+/**
+ * Not found
+ */
+export declare class GetFrameworksId404ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Not found.
+     */
     detail?: string;
 }
-export declare class GetFrameworksId404ApplicationJson extends SpeakeasyBase {
+/**
+ * Access token is missing or invalid
+ */
+export declare class GetFrameworksId401ApplicationJSON extends SpeakeasyBase {
     detail?: string;
-}
-export declare class GetFrameworksIdRequest extends SpeakeasyBase {
-    pathParams: GetFrameworksIdPathParams;
 }
 export declare class GetFrameworksIdResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Framework object
+     */
     framework?: shared.Framework;
     statusCode: number;
-    getFrameworksId401ApplicationJSONObject?: GetFrameworksId401ApplicationJson;
-    getFrameworksId404ApplicationJSONObject?: GetFrameworksId404ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Access token is missing or invalid
+     */
+    getFrameworksId401ApplicationJSONObject?: GetFrameworksId401ApplicationJSON;
+    /**
+     * Not found
+     */
+    getFrameworksId404ApplicationJSONObject?: GetFrameworksId404ApplicationJSON;
 }

@@ -1,5 +1,13 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Bitbucket Pipelines brings continuous delivery to Bitbucket
+ *
+ * @remarks
+ * Cloud, empowering teams with full branching to deployment
+ * visibility and faster feedback loops.
+ *
+ */
 export declare class Pipelines {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,11 +17,17 @@ export declare class Pipelines {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createDeploymentVariable - Create a deployment environment level variable.
-    **/
+     * Create a variable for an environment
+     *
+     * @remarks
+     * Create a deployment environment level variable.
+     */
     createDeploymentVariable(req: operations.CreateDeploymentVariableRequest, config?: AxiosRequestConfig): Promise<operations.CreateDeploymentVariableResponse>;
     /**
-     * createPipelineForRepository - Endpoint to create and initiate a pipeline.
+     * Run a pipeline
+     *
+     * @remarks
+     * Endpoint to create and initiate a pipeline.
      * There are a couple of different options to initiate a pipeline, where the payload of the request will determine which type of pipeline will be instantiated.
      * # Trigger a Pipeline for a branch
      * One way to trigger pipelines is by specifying the branch for which you want to trigger a pipeline.
@@ -185,214 +199,403 @@ export declare class Pipelines {
      *   }'
      * ```
      *
-    **/
+     */
     createPipelineForRepository(req: operations.CreatePipelineForRepositoryRequest, config?: AxiosRequestConfig): Promise<operations.CreatePipelineForRepositoryResponse>;
     /**
-     * createPipelineVariableForTeam - Create an account level variable.
+     * Create a variable for a user
+     *
+     * @remarks
+     * Create an account level variable.
      * This endpoint has been deprecated, and you should use the new workspaces endpoint. For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).
-    **/
+     */
     createPipelineVariableForTeam(req: operations.CreatePipelineVariableForTeamRequest, config?: AxiosRequestConfig): Promise<operations.CreatePipelineVariableForTeamResponse>;
     /**
-     * createPipelineVariableForUser - Create a user level variable.
+     * Create a variable for a user
+     *
+     * @remarks
+     * Create a user level variable.
      * This endpoint has been deprecated, and you should use the new workspaces endpoint. For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).
-    **/
+     */
     createPipelineVariableForUser(req: operations.CreatePipelineVariableForUserRequest, config?: AxiosRequestConfig): Promise<operations.CreatePipelineVariableForUserResponse>;
     /**
-     * createPipelineVariableForWorkspace - Create a workspace level variable.
-    **/
+     * Create a variable for a workspace
+     *
+     * @remarks
+     * Create a workspace level variable.
+     */
     createPipelineVariableForWorkspace(req: operations.CreatePipelineVariableForWorkspaceRequest, config?: AxiosRequestConfig): Promise<operations.CreatePipelineVariableForWorkspaceResponse>;
     /**
-     * createRepositoryPipelineKnownHost - Create a repository level known host.
-    **/
+     * Create a known host
+     *
+     * @remarks
+     * Create a repository level known host.
+     */
     createRepositoryPipelineKnownHost(req: operations.CreateRepositoryPipelineKnownHostRequest, config?: AxiosRequestConfig): Promise<operations.CreateRepositoryPipelineKnownHostResponse>;
     /**
-     * createRepositoryPipelineSchedule - Create a schedule for the given repository.
-    **/
+     * Create a schedule
+     *
+     * @remarks
+     * Create a schedule for the given repository.
+     */
     createRepositoryPipelineSchedule(req: operations.CreateRepositoryPipelineScheduleRequest, config?: AxiosRequestConfig): Promise<operations.CreateRepositoryPipelineScheduleResponse>;
     /**
-     * createRepositoryPipelineVariable - Create a repository level variable.
-    **/
+     * Create a variable for a repository
+     *
+     * @remarks
+     * Create a repository level variable.
+     */
     createRepositoryPipelineVariable(req: operations.CreateRepositoryPipelineVariableRequest, config?: AxiosRequestConfig): Promise<operations.CreateRepositoryPipelineVariableResponse>;
     /**
-     * deleteDeploymentVariable - Delete a deployment environment level variable.
-    **/
+     * Delete a variable for an environment
+     *
+     * @remarks
+     * Delete a deployment environment level variable.
+     */
     deleteDeploymentVariable(req: operations.DeleteDeploymentVariableRequest, config?: AxiosRequestConfig): Promise<operations.DeleteDeploymentVariableResponse>;
     /**
-     * deletePipelineVariableForTeam - Delete a team level variable.
+     * Delete a variable for a team
+     *
+     * @remarks
+     * Delete a team level variable.
      * This endpoint has been deprecated, and you should use the new workspaces endpoint. For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).
-    **/
+     */
     deletePipelineVariableForTeam(req: operations.DeletePipelineVariableForTeamRequest, config?: AxiosRequestConfig): Promise<operations.DeletePipelineVariableForTeamResponse>;
     /**
-     * deletePipelineVariableForUser - Delete an account level variable.
+     * Delete a variable for a user
+     *
+     * @remarks
+     * Delete an account level variable.
      * This endpoint has been deprecated, and you should use the new workspaces endpoint. For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).
-    **/
+     */
     deletePipelineVariableForUser(req: operations.DeletePipelineVariableForUserRequest, config?: AxiosRequestConfig): Promise<operations.DeletePipelineVariableForUserResponse>;
     /**
-     * deletePipelineVariableForWorkspace - Delete a workspace level variable.
-    **/
+     * Delete a variable for a workspace
+     *
+     * @remarks
+     * Delete a workspace level variable.
+     */
     deletePipelineVariableForWorkspace(req: operations.DeletePipelineVariableForWorkspaceRequest, config?: AxiosRequestConfig): Promise<operations.DeletePipelineVariableForWorkspaceResponse>;
     /**
-     * deleteRepositoryPipelineCache - Delete a repository cache.
-    **/
+     * Delete a cache
+     *
+     * @remarks
+     * Delete a repository cache.
+     */
     deleteRepositoryPipelineCache(req: operations.DeleteRepositoryPipelineCacheRequest, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoryPipelineCacheResponse>;
     /**
-     * deleteRepositoryPipelineKeyPair - Delete the repository SSH key pair.
-    **/
+     * Delete caches
+     *
+     * @remarks
+     * Delete repository cache versions by name.
+     */
+    deleteRepositoryPipelineCaches(req: operations.DeleteRepositoryPipelineCachesRequest, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoryPipelineCachesResponse>;
+    /**
+     * Delete SSH key pair
+     *
+     * @remarks
+     * Delete the repository SSH key pair.
+     */
     deleteRepositoryPipelineKeyPair(req: operations.DeleteRepositoryPipelineKeyPairRequest, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoryPipelineKeyPairResponse>;
     /**
-     * deleteRepositoryPipelineKnownHost - Delete a repository level known host.
-    **/
+     * Delete a known host
+     *
+     * @remarks
+     * Delete a repository level known host.
+     */
     deleteRepositoryPipelineKnownHost(req: operations.DeleteRepositoryPipelineKnownHostRequest, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoryPipelineKnownHostResponse>;
     /**
-     * deleteRepositoryPipelineSchedule - Delete a schedule.
-    **/
+     * Delete a schedule
+     *
+     * @remarks
+     * Delete a schedule.
+     */
     deleteRepositoryPipelineSchedule(req: operations.DeleteRepositoryPipelineScheduleRequest, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoryPipelineScheduleResponse>;
     /**
-     * deleteRepositoryPipelineVariable - Delete a repository level variable.
-    **/
+     * Delete a variable for a repository
+     *
+     * @remarks
+     * Delete a repository level variable.
+     */
     deleteRepositoryPipelineVariable(req: operations.DeleteRepositoryPipelineVariableRequest, config?: AxiosRequestConfig): Promise<operations.DeleteRepositoryPipelineVariableResponse>;
     /**
-     * getDeploymentVariables - Find deployment environment level variables.
-    **/
+     * List variables for an environment
+     *
+     * @remarks
+     * Find deployment environment level variables.
+     */
     getDeploymentVariables(req: operations.GetDeploymentVariablesRequest, config?: AxiosRequestConfig): Promise<operations.GetDeploymentVariablesResponse>;
     /**
-     * getPipelineForRepository - Retrieve a specified pipeline
-    **/
-    getPipelineForRepository(req: operations.GetPipelineForRepositoryRequest, config?: AxiosRequestConfig): Promise<operations.GetPipelineForRepositoryResponse>;
+     * Get OpenID configuration for OIDC in Pipelines
+     *
+     * @remarks
+     * This is part of OpenID Connect for Pipelines, see https://support.atlassian.com/bitbucket-cloud/docs/integrate-pipelines-with-resource-servers-using-oidc/
+     */
+    getOIDCConfiguration(req: operations.GetOIDCConfigurationRequest, config?: AxiosRequestConfig): Promise<operations.GetOIDCConfigurationResponse>;
     /**
-     * getPipelineStepForRepository - Retrieve a given step of a pipeline.
-    **/
-    getPipelineStepForRepository(req: operations.GetPipelineStepForRepositoryRequest, config?: AxiosRequestConfig): Promise<operations.GetPipelineStepForRepositoryResponse>;
+     * Get keys for OIDC in Pipelines
+     *
+     * @remarks
+     * This is part of OpenID Connect for Pipelines, see https://support.atlassian.com/bitbucket-cloud/docs/integrate-pipelines-with-resource-servers-using-oidc/
+     */
+    getOIDCKeys(req: operations.GetOIDCKeysRequest, config?: AxiosRequestConfig): Promise<operations.GetOIDCKeysResponse>;
     /**
-     * getPipelineStepLogForRepository - Retrieve the log file for a given step of a pipeline.
+     * Get the logs for the build container or a service container for a given step of a pipeline.
+     *
+     * @remarks
+     * Retrieve the log file for a build container or service container.
      *
      * This endpoint supports (and encourages!) the use of [HTTP Range requests](https://tools.ietf.org/html/rfc7233) to deal with potentially very large log files.
-    **/
+     */
+    getPipelineContainerLog(req: operations.GetPipelineContainerLogRequest, config?: AxiosRequestConfig): Promise<operations.GetPipelineContainerLogResponse>;
+    /**
+     * Get a pipeline
+     *
+     * @remarks
+     * Retrieve a specified pipeline
+     */
+    getPipelineForRepository(req: operations.GetPipelineForRepositoryRequest, config?: AxiosRequestConfig): Promise<operations.GetPipelineForRepositoryResponse>;
+    /**
+     * Get a step of a pipeline
+     *
+     * @remarks
+     * Retrieve a given step of a pipeline.
+     */
+    getPipelineStepForRepository(req: operations.GetPipelineStepForRepositoryRequest, config?: AxiosRequestConfig): Promise<operations.GetPipelineStepForRepositoryResponse>;
+    /**
+     * Get log file for a step
+     *
+     * @remarks
+     * Retrieve the log file for a given step of a pipeline.
+     *
+     * This endpoint supports (and encourages!) the use of [HTTP Range requests](https://tools.ietf.org/html/rfc7233) to deal with potentially very large log files.
+     */
     getPipelineStepLogForRepository(req: operations.GetPipelineStepLogForRepositoryRequest, config?: AxiosRequestConfig): Promise<operations.GetPipelineStepLogForRepositoryResponse>;
     /**
-     * getPipelineStepsForRepository - Find steps for the given pipeline.
-    **/
+     * List steps for a pipeline
+     *
+     * @remarks
+     * Find steps for the given pipeline.
+     */
     getPipelineStepsForRepository(req: operations.GetPipelineStepsForRepositoryRequest, config?: AxiosRequestConfig): Promise<operations.GetPipelineStepsForRepositoryResponse>;
     /**
-     * getPipelineVariableForTeam - Retrieve a team level variable.
+     * Get test case reasons (output) for a given test case in a step of a pipeline.
+     */
+    getPipelineTestReportTestCaseReasons(req: operations.GetPipelineTestReportTestCaseReasonsRequest, config?: AxiosRequestConfig): Promise<operations.GetPipelineTestReportTestCaseReasonsResponse>;
+    /**
+     * Get test cases for a given step of a pipeline.
+     */
+    getPipelineTestReportTestCases(req: operations.GetPipelineTestReportTestCasesRequest, config?: AxiosRequestConfig): Promise<operations.GetPipelineTestReportTestCasesResponse>;
+    /**
+     * Get a summary of test reports for a given step of a pipeline.
+     */
+    getPipelineTestReports(req: operations.GetPipelineTestReportsRequest, config?: AxiosRequestConfig): Promise<operations.GetPipelineTestReportsResponse>;
+    /**
+     * Get a variable for a team
+     *
+     * @remarks
+     * Retrieve a team level variable.
      * This endpoint has been deprecated, and you should use the new workspaces endpoint. For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).
-    **/
+     */
     getPipelineVariableForTeam(req: operations.GetPipelineVariableForTeamRequest, config?: AxiosRequestConfig): Promise<operations.GetPipelineVariableForTeamResponse>;
     /**
-     * getPipelineVariableForUser - Retrieve a user level variable.
+     * Get a variable for a user
+     *
+     * @remarks
+     * Retrieve a user level variable.
      * This endpoint has been deprecated, and you should use the new workspaces endpoint. For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).
-    **/
+     */
     getPipelineVariableForUser(req: operations.GetPipelineVariableForUserRequest, config?: AxiosRequestConfig): Promise<operations.GetPipelineVariableForUserResponse>;
     /**
-     * getPipelineVariableForWorkspace - Retrieve a workspace level variable.
-    **/
+     * Get variable for a workspace
+     *
+     * @remarks
+     * Retrieve a workspace level variable.
+     */
     getPipelineVariableForWorkspace(req: operations.GetPipelineVariableForWorkspaceRequest, config?: AxiosRequestConfig): Promise<operations.GetPipelineVariableForWorkspaceResponse>;
     /**
-     * getPipelineVariablesForTeam - Find account level variables.
+     * List variables for an account
+     *
+     * @remarks
+     * Find account level variables.
      * This endpoint has been deprecated, and you should use the new workspaces endpoint. For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).
-    **/
+     */
     getPipelineVariablesForTeam(req: operations.GetPipelineVariablesForTeamRequest, config?: AxiosRequestConfig): Promise<operations.GetPipelineVariablesForTeamResponse>;
     /**
-     * getPipelineVariablesForUser - Find user level variables.
+     * List variables for a user
+     *
+     * @remarks
+     * Find user level variables.
      * This endpoint has been deprecated, and you should use the new workspaces endpoint. For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).
-    **/
+     */
     getPipelineVariablesForUser(req: operations.GetPipelineVariablesForUserRequest, config?: AxiosRequestConfig): Promise<operations.GetPipelineVariablesForUserResponse>;
     /**
-     * getPipelineVariablesForWorkspace - Find workspace level variables.
-    **/
+     * List variables for a workspace
+     *
+     * @remarks
+     * Find workspace level variables.
+     */
     getPipelineVariablesForWorkspace(req: operations.GetPipelineVariablesForWorkspaceRequest, config?: AxiosRequestConfig): Promise<operations.GetPipelineVariablesForWorkspaceResponse>;
     /**
-     * getPipelinesForRepository - Find pipelines
-    **/
+     * List pipelines
+     *
+     * @remarks
+     * Find pipelines
+     */
     getPipelinesForRepository(req: operations.GetPipelinesForRepositoryRequest, config?: AxiosRequestConfig): Promise<operations.GetPipelinesForRepositoryResponse>;
     /**
-     * getRepositoryPipelineCacheContentUri - Retrieve the URI of the content of the specified cache.
-    **/
-    getRepositoryPipelineCacheContentUri(req: operations.GetRepositoryPipelineCacheContentUriRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoryPipelineCacheContentUriResponse>;
+     * Get cache content URI
+     *
+     * @remarks
+     * Retrieve the URI of the content of the specified cache.
+     */
+    getRepositoryPipelineCacheContentURI(req: operations.GetRepositoryPipelineCacheContentURIRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoryPipelineCacheContentURIResponse>;
     /**
-     * getRepositoryPipelineCaches - Retrieve the repository pipelines caches.
-    **/
+     * List caches
+     *
+     * @remarks
+     * Retrieve the repository pipelines caches.
+     */
     getRepositoryPipelineCaches(req: operations.GetRepositoryPipelineCachesRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoryPipelineCachesResponse>;
     /**
-     * getRepositoryPipelineConfig - Retrieve the repository pipelines configuration.
-    **/
+     * Get configuration
+     *
+     * @remarks
+     * Retrieve the repository pipelines configuration.
+     */
     getRepositoryPipelineConfig(req: operations.GetRepositoryPipelineConfigRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoryPipelineConfigResponse>;
     /**
-     * getRepositoryPipelineKnownHost - Retrieve a repository level known host.
-    **/
+     * Get a known host
+     *
+     * @remarks
+     * Retrieve a repository level known host.
+     */
     getRepositoryPipelineKnownHost(req: operations.GetRepositoryPipelineKnownHostRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoryPipelineKnownHostResponse>;
     /**
-     * getRepositoryPipelineKnownHosts - Find repository level known hosts.
-    **/
+     * List known hosts
+     *
+     * @remarks
+     * Find repository level known hosts.
+     */
     getRepositoryPipelineKnownHosts(req: operations.GetRepositoryPipelineKnownHostsRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoryPipelineKnownHostsResponse>;
     /**
-     * getRepositoryPipelineSchedule - Retrieve a schedule by its UUID.
-    **/
+     * Get a schedule
+     *
+     * @remarks
+     * Retrieve a schedule by its UUID.
+     */
     getRepositoryPipelineSchedule(req: operations.GetRepositoryPipelineScheduleRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoryPipelineScheduleResponse>;
     /**
-     * getRepositoryPipelineScheduleExecutions - Retrieve the executions of a given schedule.
-    **/
+     * List executions of a schedule
+     *
+     * @remarks
+     * Retrieve the executions of a given schedule.
+     */
     getRepositoryPipelineScheduleExecutions(req: operations.GetRepositoryPipelineScheduleExecutionsRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoryPipelineScheduleExecutionsResponse>;
     /**
-     * getRepositoryPipelineSchedules - Retrieve the configured schedules for the given repository.
-    **/
+     * List schedules
+     *
+     * @remarks
+     * Retrieve the configured schedules for the given repository.
+     */
     getRepositoryPipelineSchedules(req: operations.GetRepositoryPipelineSchedulesRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoryPipelineSchedulesResponse>;
     /**
-     * getRepositoryPipelineSshKeyPair - Retrieve the repository SSH key pair excluding the SSH private key. The private key is a write only field and will never be exposed in the logs or the REST API.
-    **/
+     * Get SSH key pair
+     *
+     * @remarks
+     * Retrieve the repository SSH key pair excluding the SSH private key. The private key is a write only field and will never be exposed in the logs or the REST API.
+     */
     getRepositoryPipelineSshKeyPair(req: operations.GetRepositoryPipelineSshKeyPairRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoryPipelineSshKeyPairResponse>;
     /**
-     * getRepositoryPipelineVariable - Retrieve a repository level variable.
-    **/
+     * Get a variable for a repository
+     *
+     * @remarks
+     * Retrieve a repository level variable.
+     */
     getRepositoryPipelineVariable(req: operations.GetRepositoryPipelineVariableRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoryPipelineVariableResponse>;
     /**
-     * getRepositoryPipelineVariables - Find repository level variables.
-    **/
+     * List variables for a repository
+     *
+     * @remarks
+     * Find repository level variables.
+     */
     getRepositoryPipelineVariables(req: operations.GetRepositoryPipelineVariablesRequest, config?: AxiosRequestConfig): Promise<operations.GetRepositoryPipelineVariablesResponse>;
     /**
-     * stopPipeline - Signal the stop of a pipeline and all of its steps that not have completed yet.
-    **/
+     * Stop a pipeline
+     *
+     * @remarks
+     * Signal the stop of a pipeline and all of its steps that not have completed yet.
+     */
     stopPipeline(req: operations.StopPipelineRequest, config?: AxiosRequestConfig): Promise<operations.StopPipelineResponse>;
     /**
-     * updateDeploymentVariable - Update a deployment environment level variable.
-    **/
+     * Update a variable for an environment
+     *
+     * @remarks
+     * Update a deployment environment level variable.
+     */
     updateDeploymentVariable(req: operations.UpdateDeploymentVariableRequest, config?: AxiosRequestConfig): Promise<operations.UpdateDeploymentVariableResponse>;
     /**
-     * updatePipelineVariableForTeam - Update a team level variable.
+     * Update a variable for a team
+     *
+     * @remarks
+     * Update a team level variable.
      * This endpoint has been deprecated, and you should use the new workspaces endpoint. For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).
-    **/
+     */
     updatePipelineVariableForTeam(req: operations.UpdatePipelineVariableForTeamRequest, config?: AxiosRequestConfig): Promise<operations.UpdatePipelineVariableForTeamResponse>;
     /**
-     * updatePipelineVariableForUser - Update a user level variable.
+     * Update a variable for a user
+     *
+     * @remarks
+     * Update a user level variable.
      * This endpoint has been deprecated, and you should use the new workspaces endpoint. For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).
-    **/
+     */
     updatePipelineVariableForUser(req: operations.UpdatePipelineVariableForUserRequest, config?: AxiosRequestConfig): Promise<operations.UpdatePipelineVariableForUserResponse>;
     /**
-     * updatePipelineVariableForWorkspace - Update a workspace level variable.
-    **/
+     * Update variable for a workspace
+     *
+     * @remarks
+     * Update a workspace level variable.
+     */
     updatePipelineVariableForWorkspace(req: operations.UpdatePipelineVariableForWorkspaceRequest, config?: AxiosRequestConfig): Promise<operations.UpdatePipelineVariableForWorkspaceResponse>;
     /**
-     * updateRepositoryBuildNumber - Update the next build number that should be assigned to a pipeline. The next build number that will be configured has to be strictly higher than the current latest build number for this repository.
-    **/
+     * Update the next build number
+     *
+     * @remarks
+     * Update the next build number that should be assigned to a pipeline. The next build number that will be configured has to be strictly higher than the current latest build number for this repository.
+     */
     updateRepositoryBuildNumber(req: operations.UpdateRepositoryBuildNumberRequest, config?: AxiosRequestConfig): Promise<operations.UpdateRepositoryBuildNumberResponse>;
     /**
-     * updateRepositoryPipelineConfig - Update the pipelines configuration for a repository.
-    **/
+     * Update configuration
+     *
+     * @remarks
+     * Update the pipelines configuration for a repository.
+     */
     updateRepositoryPipelineConfig(req: operations.UpdateRepositoryPipelineConfigRequest, config?: AxiosRequestConfig): Promise<operations.UpdateRepositoryPipelineConfigResponse>;
     /**
-     * updateRepositoryPipelineKeyPair - Create or update the repository SSH key pair. The private key will be set as a default SSH identity in your build container.
-    **/
+     * Update SSH key pair
+     *
+     * @remarks
+     * Create or update the repository SSH key pair. The private key will be set as a default SSH identity in your build container.
+     */
     updateRepositoryPipelineKeyPair(req: operations.UpdateRepositoryPipelineKeyPairRequest, config?: AxiosRequestConfig): Promise<operations.UpdateRepositoryPipelineKeyPairResponse>;
     /**
-     * updateRepositoryPipelineKnownHost - Update a repository level known host.
-    **/
+     * Update a known host
+     *
+     * @remarks
+     * Update a repository level known host.
+     */
     updateRepositoryPipelineKnownHost(req: operations.UpdateRepositoryPipelineKnownHostRequest, config?: AxiosRequestConfig): Promise<operations.UpdateRepositoryPipelineKnownHostResponse>;
     /**
-     * updateRepositoryPipelineSchedule - Update a schedule.
-    **/
+     * Update a schedule
+     *
+     * @remarks
+     * Update a schedule.
+     */
     updateRepositoryPipelineSchedule(req: operations.UpdateRepositoryPipelineScheduleRequest, config?: AxiosRequestConfig): Promise<operations.UpdateRepositoryPipelineScheduleResponse>;
     /**
-     * updateRepositoryPipelineVariable - Update a repository level variable.
-    **/
+     * Update a variable for a repository
+     *
+     * @remarks
+     * Update a repository level variable.
+     */
     updateRepositoryPipelineVariable(req: operations.UpdateRepositoryPipelineVariableRequest, config?: AxiosRequestConfig): Promise<operations.UpdateRepositoryPipelineVariableResponse>;
 }

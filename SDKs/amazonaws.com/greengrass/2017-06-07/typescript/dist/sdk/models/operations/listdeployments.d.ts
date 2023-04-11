@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListDeploymentsPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListDeploymentsRequest extends SpeakeasyBase {
+    /**
+     * The ID of the Greengrass group.
+     */
     groupId: string;
-}
-export declare class ListDeploymentsQueryParams extends SpeakeasyBase {
+    /**
+     * The maximum number of results to be returned per request.
+     */
     maxResults?: string;
+    /**
+     * The token for the next set of results, or ''null'' if there are no additional results.
+     */
     nextToken?: string;
-}
-export declare class ListDeploymentsHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -16,14 +22,16 @@ export declare class ListDeploymentsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class ListDeploymentsRequest extends SpeakeasyBase {
-    pathParams: ListDeploymentsPathParams;
-    queryParams: ListDeploymentsQueryParams;
-    headers: ListDeploymentsHeaders;
-}
 export declare class ListDeploymentsResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     listDeploymentsResponse?: shared.ListDeploymentsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

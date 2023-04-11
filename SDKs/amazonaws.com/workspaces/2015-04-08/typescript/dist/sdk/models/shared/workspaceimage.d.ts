@@ -1,10 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { OperatingSystem } from "./operatingsystem";
+import { UpdateResult } from "./updateresult";
 import { WorkspaceImageRequiredTenancyEnum } from "./workspaceimagerequiredtenancyenum";
 import { WorkspaceImageStateEnum } from "./workspaceimagestateenum";
 /**
  * Describes a WorkSpace image.
-**/
+ */
 export declare class WorkspaceImage extends SpeakeasyBase {
     created?: Date;
     description?: string;
@@ -16,4 +17,5 @@ export declare class WorkspaceImage extends SpeakeasyBase {
     ownerAccountId?: string;
     requiredTenancy?: WorkspaceImageRequiredTenancyEnum;
     state?: WorkspaceImageStateEnum;
+    updates?: UpdateResult;
 }

@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteTransactionsTransactionIdRelationshipsTagsPathParams extends SpeakeasyBase {
-    transactionId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteTransactionsTransactionIdRelationshipsTagsRequest extends SpeakeasyBase {
-    pathParams: DeleteTransactionsTransactionIdRelationshipsTagsPathParams;
-    request?: shared.UpdateTransactionTagsRequest;
+    updateTransactionTagsRequest?: shared.UpdateTransactionTagsRequest;
+    /**
+     * The unique identifier for the transaction.
+     *
+     * @remarks
+     *
+     */
+    transactionId: string;
 }
 export declare class DeleteTransactionsTransactionIdRelationshipsTagsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

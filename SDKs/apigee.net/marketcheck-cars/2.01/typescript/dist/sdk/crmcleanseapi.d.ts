@@ -1,6 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class CrmCleanseApi {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+export declare class CRMCleanseAPI {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,9 +9,10 @@ export declare class CrmCleanseApi {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * crmCheck - CRM check of a particular vin
+     * CRM check of a particular vin
      *
+     * @remarks
      * Check whether particular vin has had a listing after stipulated date or not
-    **/
+     */
     crmCheck(req: operations.CrmCheckRequest, config?: AxiosRequestConfig): Promise<operations.CrmCheckResponse>;
 }

@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class NodesNodeAddonUpdatePathParams extends SpeakeasyBase {
-    nodeId: string;
-    provider: string;
-}
+import { AxiosResponse } from "axios";
 export declare class NodesNodeAddonUpdateRequest extends SpeakeasyBase {
-    pathParams: NodesNodeAddonUpdatePathParams;
-    request: Record<string, any>;
+    requestBody: Record<string, any>;
+    /**
+     * The unique identifier of the node.
+     */
+    nodeId: string;
+    /**
+     * The unique identifier of the addon.
+     */
+    provider: string;
 }
 export declare class NodesNodeAddonUpdateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

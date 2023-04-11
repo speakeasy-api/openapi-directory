@@ -1,16 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetIndexDocumentsActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETIndexDocumentsActionEnum {
     IndexDocuments = "IndexDocuments"
 }
-export declare enum GetIndexDocumentsVersionEnum {
+export declare enum GETIndexDocumentsVersionEnum {
     TwoThousandAndEleven0201 = "2011-02-01"
 }
-export declare class GetIndexDocumentsQueryParams extends SpeakeasyBase {
-    action: GetIndexDocumentsActionEnum;
+export declare class GETIndexDocumentsRequest extends SpeakeasyBase {
+    action: GETIndexDocumentsActionEnum;
     domainName: string;
-    version: GetIndexDocumentsVersionEnum;
-}
-export declare class GetIndexDocumentsHeaders extends SpeakeasyBase {
+    version: GETIndexDocumentsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +18,9 @@ export declare class GetIndexDocumentsHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetIndexDocumentsRequest extends SpeakeasyBase {
-    queryParams: GetIndexDocumentsQueryParams;
-    headers: GetIndexDocumentsHeaders;
-}
-export declare class GetIndexDocumentsResponse extends SpeakeasyBase {
+export declare class GETIndexDocumentsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -2,8 +2,14 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { OptionStatus } from "./optionstatus";
 /**
  * The stemming options configured for this search domain and the current status of those options.
-**/
+ */
 export declare class StemmingOptionsStatus extends SpeakeasyBase {
+    /**
+     * Maps terms to their stems, serialized as a JSON document. The document has a single object with one property "stems" whose value is an object mapping terms to their stems. The maximum size of a stemming document is 500 KB. Example: <code>{ "stems": {"people": "person", "walking": "walk"} }</code>
+     */
     options: string;
+    /**
+     * The status of an option, including when it was last updated and whether it is actively in use for searches.
+     */
     status: OptionStatus;
 }

@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Genre {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,8 +9,9 @@ export declare class Genre {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * genreSearchRead - Return movie genre search result
+     * Return movie genre search result
      *
+     * @remarks
      * Return movie genre search result
      *
      * ### Response Class (Status 200)
@@ -20,11 +21,12 @@ export declare class Genre {
      *
      * For more details on how movies are listed [see here][ref].
      * [ref]: https://etmdb.com/en/movie-list/-updated_date
-    **/
+     */
     genreSearchRead(req: operations.GenreSearchReadRequest, config?: AxiosRequestConfig): Promise<operations.GenreSearchReadResponse>;
     /**
-     * genreSearchallRead - Return movie genre search result
+     * Return movie genre search result
      *
+     * @remarks
      * Return movie genre search result
      *
      * ### Response Class (Status 200)
@@ -33,6 +35,6 @@ export declare class Genre {
      *
      * For more details on how movies are listed [see here][ref].
      * [ref]: https://etmdb.com/en/movie-list/-updated_date
-    **/
+     */
     genreSearchallRead(req: operations.GenreSearchallReadRequest, config?: AxiosRequestConfig): Promise<operations.GenreSearchallReadResponse>;
 }

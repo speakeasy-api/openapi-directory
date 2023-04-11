@@ -1,21 +1,28 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class AddVideosToChannelPathParams extends SpeakeasyBase {
-    channelId: number;
+import { AxiosResponse } from "axios";
+export declare class AddVideosToChannelSecurity extends SpeakeasyBase {
+    oauth2: string;
 }
 export declare class AddVideosToChannelRequestBody extends SpeakeasyBase {
+    /**
+     * The URI of a video to add.
+     */
     videoUri: string;
 }
-export declare class AddVideosToChannelSecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-}
 export declare class AddVideosToChannelRequest extends SpeakeasyBase {
-    pathParams: AddVideosToChannelPathParams;
-    request: AddVideosToChannelRequestBody;
-    security: AddVideosToChannelSecurity;
+    requestBody: AddVideosToChannelRequestBody;
+    /**
+     * The ID of the channel.
+     */
+    channelId: number;
 }
 export declare class AddVideosToChannelResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The authenticated user isn't a moderator of the channel, or the video can't be added to the channel.
+     */
     legacyError?: shared.LegacyError;
 }

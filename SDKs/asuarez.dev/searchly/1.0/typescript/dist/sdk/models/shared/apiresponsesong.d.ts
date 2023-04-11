@@ -1,19 +1,40 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Song item.
-**/
-export declare class ApiResponseSongResponseResults extends SpeakeasyBase {
+ */
+export declare class APIResponseSongResponseResults extends SpeakeasyBase {
+    /**
+     * Song internal identifier.
+     */
     id?: number;
+    /**
+     * Song and Artist name.
+     */
     name?: string;
 }
 /**
  * Contains the response data if the request was successful.
-**/
-export declare class ApiResponseSongResponse extends SpeakeasyBase {
-    results?: ApiResponseSongResponseResults[];
+ */
+export declare class APIResponseSongResponse extends SpeakeasyBase {
+    /**
+     * Contains all the songs.
+     */
+    results?: APIResponseSongResponseResults[];
 }
-export declare class ApiResponseSong extends SpeakeasyBase {
+/**
+ * Standard SearchLy API v1 JSON response. You should check the `error` attribute to determine if there was an error.
+ */
+export declare class APIResponseSong extends SpeakeasyBase {
+    /**
+     * Whether or not the request was successfully processed or not.
+     */
     error?: boolean;
+    /**
+     * Error message if the request was unsuccessful.
+     */
     message?: string;
-    response?: ApiResponseSongResponse;
+    /**
+     * Contains the response data if the request was successful.
+     */
+    response?: APIResponseSongResponse;
 }

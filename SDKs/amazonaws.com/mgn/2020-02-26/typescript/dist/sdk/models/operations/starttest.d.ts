@@ -1,6 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class StartTestHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class StartTestRequestBody extends SpeakeasyBase {
+    /**
+     * Start Test for Source Server IDs.
+     */
+    sourceServerIDs: string[];
+    /**
+     * Start Test by Tags.
+     */
+    tags?: Record<string, string>;
+}
+export declare class StartTestRequest extends SpeakeasyBase {
+    requestBody: StartTestRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -9,19 +21,24 @@ export declare class StartTestHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class StartTestRequestBody extends SpeakeasyBase {
-    sourceServerIDs: string[];
-    tags?: Record<string, string>;
-}
-export declare class StartTestRequest extends SpeakeasyBase {
-    headers: StartTestHeaders;
-    request: StartTestRequestBody;
-}
 export declare class StartTestResponse extends SpeakeasyBase {
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     startTestResponse?: shared.StartTestResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UninitializedAccountException
+     */
     uninitializedAccountException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

@@ -1,15 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeAdjustmentTypesActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeAdjustmentTypesActionEnum {
     DescribeAdjustmentTypes = "DescribeAdjustmentTypes"
 }
-export declare enum GetDescribeAdjustmentTypesVersionEnum {
+export declare enum GETDescribeAdjustmentTypesVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class GetDescribeAdjustmentTypesQueryParams extends SpeakeasyBase {
-    action: GetDescribeAdjustmentTypesActionEnum;
-    version: GetDescribeAdjustmentTypesVersionEnum;
-}
-export declare class GetDescribeAdjustmentTypesHeaders extends SpeakeasyBase {
+export declare class GETDescribeAdjustmentTypesRequest extends SpeakeasyBase {
+    action: GETDescribeAdjustmentTypesActionEnum;
+    version: GETDescribeAdjustmentTypesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +17,9 @@ export declare class GetDescribeAdjustmentTypesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeAdjustmentTypesRequest extends SpeakeasyBase {
-    queryParams: GetDescribeAdjustmentTypesQueryParams;
-    headers: GetDescribeAdjustmentTypesHeaders;
-}
-export declare class GetDescribeAdjustmentTypesResponse extends SpeakeasyBase {
+export declare class GETDescribeAdjustmentTypesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

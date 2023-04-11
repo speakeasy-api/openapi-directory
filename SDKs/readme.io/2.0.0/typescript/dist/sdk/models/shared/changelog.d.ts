@@ -7,9 +7,21 @@ export declare enum ChangelogTypeEnum {
     Deprecated = "deprecated",
     Removed = "removed"
 }
+/**
+ * Changelog object
+ */
 export declare class Changelog extends SpeakeasyBase {
+    /**
+     * Body content of the changelog
+     */
     body: string;
+    /**
+     * Visibility of the changelog
+     */
     hidden?: boolean;
+    /**
+     * Title of the changelog
+     */
     title: string;
     type?: ChangelogTypeEnum;
 }

@@ -1,10 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteRouteRequestParameterPathParams extends SpeakeasyBase {
-    apiId: string;
-    requestParameterKey: string;
-    routeId: string;
-}
-export declare class DeleteRouteRequestParameterHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteRouteRequestParameterRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,14 +8,29 @@ export declare class DeleteRouteRequestParameterHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class DeleteRouteRequestParameterRequest extends SpeakeasyBase {
-    pathParams: DeleteRouteRequestParameterPathParams;
-    headers: DeleteRouteRequestParameterHeaders;
+    /**
+     * The API identifier.
+     */
+    apiId: string;
+    /**
+     * The route request parameter key.
+     */
+    requestParameterKey: string;
+    /**
+     * The route ID.
+     */
+    routeId: string;
 }
 export declare class DeleteRouteRequestParameterResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
 }

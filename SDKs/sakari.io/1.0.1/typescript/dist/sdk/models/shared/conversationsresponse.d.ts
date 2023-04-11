@@ -9,6 +9,9 @@ export declare class ConversationsResponsePagination extends SpeakeasyBase {
     offset?: number;
     totalCount?: number;
 }
+/**
+ * successful operation
+ */
 export declare class ConversationsResponse extends SpeakeasyBase {
     data?: Conversation[];
     error?: ConversationsResponseError;

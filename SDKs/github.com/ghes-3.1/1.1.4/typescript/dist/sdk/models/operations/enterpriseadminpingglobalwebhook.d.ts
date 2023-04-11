@@ -1,15 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class EnterpriseAdminPingGlobalWebhookPathParams extends SpeakeasyBase {
-    hookId: number;
-}
-export declare class EnterpriseAdminPingGlobalWebhookHeaders extends SpeakeasyBase {
-    accept: string;
-}
+import { AxiosResponse } from "axios";
 export declare class EnterpriseAdminPingGlobalWebhookRequest extends SpeakeasyBase {
-    pathParams: EnterpriseAdminPingGlobalWebhookPathParams;
-    headers: EnterpriseAdminPingGlobalWebhookHeaders;
+    /**
+     * The unique identifier of the hook.
+     */
+    hookId: number;
 }
 export declare class EnterpriseAdminPingGlobalWebhookResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

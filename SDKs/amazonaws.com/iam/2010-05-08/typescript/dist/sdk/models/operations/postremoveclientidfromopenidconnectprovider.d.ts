@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostRemoveClientIdFromOpenIdConnectProviderActionEnum {
-    RemoveClientIdFromOpenIdConnectProvider = "RemoveClientIDFromOpenIDConnectProvider"
+import { AxiosResponse } from "axios";
+export declare enum POSTRemoveClientIDFromOpenIDConnectProviderActionEnum {
+    RemoveClientIDFromOpenIDConnectProvider = "RemoveClientIDFromOpenIDConnectProvider"
 }
-export declare enum PostRemoveClientIdFromOpenIdConnectProviderVersionEnum {
+export declare enum POSTRemoveClientIDFromOpenIDConnectProviderVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostRemoveClientIdFromOpenIdConnectProviderQueryParams extends SpeakeasyBase {
-    action: PostRemoveClientIdFromOpenIdConnectProviderActionEnum;
-    version: PostRemoveClientIdFromOpenIdConnectProviderVersionEnum;
-}
-export declare class PostRemoveClientIdFromOpenIdConnectProviderHeaders extends SpeakeasyBase {
+export declare class POSTRemoveClientIDFromOpenIDConnectProviderRequest extends SpeakeasyBase {
+    action: POSTRemoveClientIDFromOpenIDConnectProviderActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTRemoveClientIDFromOpenIDConnectProviderVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostRemoveClientIdFromOpenIdConnectProviderHeaders extends 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostRemoveClientIdFromOpenIdConnectProviderRequest extends SpeakeasyBase {
-    queryParams: PostRemoveClientIdFromOpenIdConnectProviderQueryParams;
-    headers: PostRemoveClientIdFromOpenIdConnectProviderHeaders;
-    request?: Uint8Array;
-}
-export declare class PostRemoveClientIdFromOpenIdConnectProviderResponse extends SpeakeasyBase {
+export declare class POSTRemoveClientIDFromOpenIDConnectProviderResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

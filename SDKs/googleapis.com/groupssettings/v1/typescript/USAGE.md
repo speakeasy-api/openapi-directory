@@ -1,33 +1,26 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GroupsSettingsGroupsGetRequest, GroupsSettingsGroupsGetResponse } from "openapi/src/sdk/models/operations";
+import {
+  GroupsSettingsGroupsGetRequest,
+  GroupsSettingsGroupsGetResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GroupsSettingsGroupsGetRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    groupUniqueId: "sit",
-  },
-  queryParams: {
-    alt: "atom",
-    fields: "culpa",
-    key: "expedita",
-    oauthToken: "consequuntur",
-    prettyPrint: false,
-    quotaUser: "expedita",
-    userIp: "voluptas",
-  },
+  alt: AltEnum.Json,
+  fields: "provident",
+  groupUniqueId: "distinctio",
+  key: "quibusdam",
+  oauthToken: "unde",
+  prettyPrint: false,
+  quotaUser: "nulla",
+  userIp: "corrupti",
 };
 
 sdk.groups.groupsSettingsGroupsGet(req).then((res: GroupsSettingsGroupsGetResponse | AxiosError) => {

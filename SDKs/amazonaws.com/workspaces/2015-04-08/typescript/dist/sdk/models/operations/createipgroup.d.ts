@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum CreateIpGroupXAmzTargetEnum {
     WorkspacesServiceCreateIpGroup = "WorkspacesService.CreateIpGroup"
 }
-export declare class CreateIpGroupHeaders extends SpeakeasyBase {
+export declare class CreateIpGroupRequest extends SpeakeasyBase {
+    createIpGroupRequest: shared.CreateIpGroupRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,17 +15,32 @@ export declare class CreateIpGroupHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: CreateIpGroupXAmzTargetEnum;
 }
-export declare class CreateIpGroupRequest extends SpeakeasyBase {
-    headers: CreateIpGroupHeaders;
-    request: shared.CreateIpGroupRequest;
-}
 export declare class CreateIpGroupResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     createIpGroupResult?: shared.CreateIpGroupResult;
+    /**
+     * InvalidParameterValuesException
+     */
     invalidParameterValuesException?: any;
+    /**
+     * ResourceAlreadyExistsException
+     */
     resourceAlreadyExistsException?: any;
-    resourceCreationFailedException?: any;
-    resourceLimitExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceCreationFailedException
+     */
+    resourceCreationFailedException?: any;
+    /**
+     * ResourceLimitExceededException
+     */
+    resourceLimitExceededException?: any;
 }

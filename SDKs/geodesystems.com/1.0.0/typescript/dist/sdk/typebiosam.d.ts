@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Search API for 'SAM Data' entry type
+ */
 export declare class TypeBioSam {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,10 @@ export declare class TypeBioSam {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * searchBioSam - Search API for 'SAM Data' entry type
+     * Search API for 'SAM Data' entry type
      *
+     * @remarks
      * API to search for entries of type SAM Data
-    **/
+     */
     searchBioSam(req: operations.SearchBioSamRequest, config?: AxiosRequestConfig): Promise<operations.SearchBioSamResponse>;
 }

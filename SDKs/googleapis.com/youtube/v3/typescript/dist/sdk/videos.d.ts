@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class Videos {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,31 +9,31 @@ export declare class Videos {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * youtubeVideosDelete - Deletes a resource.
-    **/
-    youtubeVideosDelete(req: operations.YoutubeVideosDeleteRequest, config?: AxiosRequestConfig): Promise<operations.YoutubeVideosDeleteResponse>;
+     * Deletes a resource.
+     */
+    youtubeVideosDelete(req: operations.YoutubeVideosDeleteRequest, security: operations.YoutubeVideosDeleteSecurity, config?: AxiosRequestConfig): Promise<operations.YoutubeVideosDeleteResponse>;
     /**
-     * youtubeVideosGetRating - Retrieves the ratings that the authorized user gave to a list of specified videos.
-    **/
-    youtubeVideosGetRating(req: operations.YoutubeVideosGetRatingRequest, config?: AxiosRequestConfig): Promise<operations.YoutubeVideosGetRatingResponse>;
+     * Retrieves the ratings that the authorized user gave to a list of specified videos.
+     */
+    youtubeVideosGetRating(req: operations.YoutubeVideosGetRatingRequest, security: operations.YoutubeVideosGetRatingSecurity, config?: AxiosRequestConfig): Promise<operations.YoutubeVideosGetRatingResponse>;
     /**
-     * youtubeVideosInsert - Inserts a new resource into this collection.
-    **/
-    youtubeVideosInsert(req: operations.YoutubeVideosInsertRequest, config?: AxiosRequestConfig): Promise<operations.YoutubeVideosInsertResponse>;
+     * Inserts a new resource into this collection.
+     */
+    youtubeVideosInsert(req: operations.YoutubeVideosInsertRequest, security: operations.YoutubeVideosInsertSecurity, config?: AxiosRequestConfig): Promise<operations.YoutubeVideosInsertResponse>;
     /**
-     * youtubeVideosList - Retrieves a list of resources, possibly filtered.
-    **/
-    youtubeVideosList(req: operations.YoutubeVideosListRequest, config?: AxiosRequestConfig): Promise<operations.YoutubeVideosListResponse>;
+     * Retrieves a list of resources, possibly filtered.
+     */
+    youtubeVideosList(req: operations.YoutubeVideosListRequest, security: operations.YoutubeVideosListSecurity, config?: AxiosRequestConfig): Promise<operations.YoutubeVideosListResponse>;
     /**
-     * youtubeVideosRate - Adds a like or dislike rating to a video or removes a rating from a video.
-    **/
-    youtubeVideosRate(req: operations.YoutubeVideosRateRequest, config?: AxiosRequestConfig): Promise<operations.YoutubeVideosRateResponse>;
+     * Adds a like or dislike rating to a video or removes a rating from a video.
+     */
+    youtubeVideosRate(req: operations.YoutubeVideosRateRequest, security: operations.YoutubeVideosRateSecurity, config?: AxiosRequestConfig): Promise<operations.YoutubeVideosRateResponse>;
     /**
-     * youtubeVideosReportAbuse - Report abuse for a video.
-    **/
-    youtubeVideosReportAbuse(req: operations.YoutubeVideosReportAbuseRequest, config?: AxiosRequestConfig): Promise<operations.YoutubeVideosReportAbuseResponse>;
+     * Report abuse for a video.
+     */
+    youtubeVideosReportAbuse(req: operations.YoutubeVideosReportAbuseRequest, security: operations.YoutubeVideosReportAbuseSecurity, config?: AxiosRequestConfig): Promise<operations.YoutubeVideosReportAbuseResponse>;
     /**
-     * youtubeVideosUpdate - Updates an existing resource.
-    **/
-    youtubeVideosUpdate(req: operations.YoutubeVideosUpdateRequest, config?: AxiosRequestConfig): Promise<operations.YoutubeVideosUpdateResponse>;
+     * Updates an existing resource.
+     */
+    youtubeVideosUpdate(req: operations.YoutubeVideosUpdateRequest, security: operations.YoutubeVideosUpdateSecurity, config?: AxiosRequestConfig): Promise<operations.YoutubeVideosUpdateResponse>;
 }

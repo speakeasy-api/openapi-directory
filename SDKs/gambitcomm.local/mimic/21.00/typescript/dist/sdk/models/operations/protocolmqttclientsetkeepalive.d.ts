@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolMqttClientSetKeepalivePathParams extends SpeakeasyBase {
-    agentNum: number;
-    aliveTime: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolMqttClientSetKeepaliveRequest extends SpeakeasyBase {
-    pathParams: ProtocolMqttClientSetKeepalivePathParams;
+    /**
+     * Agent to set MQTT config
+     */
+    agentNum: number;
+    /**
+     * period to send keepalive messages
+     */
+    aliveTime: number;
 }
 export declare class ProtocolMqttClientSetKeepaliveResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolMqttClientSetKeepalive200ApplicationJSONInt32Integers?: number[];
 }

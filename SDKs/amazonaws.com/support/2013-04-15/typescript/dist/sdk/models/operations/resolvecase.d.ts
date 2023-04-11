@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum ResolveCaseXAmzTargetEnum {
-    AwsSupport20130415ResolveCase = "AWSSupport_20130415.ResolveCase"
+    AWSSupport20130415ResolveCase = "AWSSupport_20130415.ResolveCase"
 }
-export declare class ResolveCaseHeaders extends SpeakeasyBase {
+export declare class ResolveCaseRequest extends SpeakeasyBase {
+    resolveCaseRequest: shared.ResolveCaseRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class ResolveCaseHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: ResolveCaseXAmzTargetEnum;
 }
-export declare class ResolveCaseRequest extends SpeakeasyBase {
-    headers: ResolveCaseHeaders;
-    request: shared.ResolveCaseRequest;
-}
 export declare class ResolveCaseResponse extends SpeakeasyBase {
+    /**
+     * CaseIdNotFound
+     */
     caseIdNotFound?: any;
     contentType: string;
+    /**
+     * InternalServerError
+     */
     internalServerError?: any;
+    /**
+     * Success
+     */
     resolveCaseResponse?: shared.ResolveCaseResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

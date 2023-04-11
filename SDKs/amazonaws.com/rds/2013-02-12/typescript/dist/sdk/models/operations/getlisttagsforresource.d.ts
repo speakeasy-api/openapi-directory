@@ -1,16 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetListTagsForResourceActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETListTagsForResourceActionEnum {
     ListTagsForResource = "ListTagsForResource"
 }
-export declare enum GetListTagsForResourceVersionEnum {
+export declare enum GETListTagsForResourceVersionEnum {
     TwoThousandAndThirteen0212 = "2013-02-12"
 }
-export declare class GetListTagsForResourceQueryParams extends SpeakeasyBase {
-    action: GetListTagsForResourceActionEnum;
+export declare class GETListTagsForResourceRequest extends SpeakeasyBase {
+    action: GETListTagsForResourceActionEnum;
     resourceName: string;
-    version: GetListTagsForResourceVersionEnum;
-}
-export declare class GetListTagsForResourceHeaders extends SpeakeasyBase {
+    version: GETListTagsForResourceVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +18,9 @@ export declare class GetListTagsForResourceHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetListTagsForResourceRequest extends SpeakeasyBase {
-    queryParams: GetListTagsForResourceQueryParams;
-    headers: GetListTagsForResourceHeaders;
-}
-export declare class GetListTagsForResourceResponse extends SpeakeasyBase {
+export declare class GETListTagsForResourceResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

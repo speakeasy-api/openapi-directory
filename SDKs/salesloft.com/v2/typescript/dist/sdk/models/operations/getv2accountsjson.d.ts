@@ -1,0 +1,144 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
+export declare class GetV2AccountsJsonRequest extends SpeakeasyBase {
+    /**
+     * Filters accounts by account_stage_id. Multiple account_stage_ids can be applied. An additional value of "_is_null" can be passed to filter accounts that do not have account_stage_id
+     */
+    accountStageId?: number[];
+    /**
+     * Filters accounts by account_tier_id. Multiple account tier ids can be applied
+     */
+    accountTierId?: number[];
+    /**
+     * Filters accounts by archived_at status. Returns only accounts where archived_at is not null if this field is true. Returns only accounts where archived_at is null if this field is false. Do not pass this parameter to return both archived and unarchived accounts. This filter is not applied if any value other than "true" or "false" is passed.
+     */
+    archived?: boolean;
+    /**
+     * Filters accounts by city by exact match. Supports partial matching
+     */
+    city?: string[];
+    /**
+     * Filters accounts by country by exact match. Supports partial matching
+     */
+    country?: string[];
+    /**
+     * Equality filters that are applied to the created_at field. A single filter can be used by itself or combined with other filters to create a range.
+     *
+     * @remarks
+     *
+     * ---CUSTOM---
+     * {"type":"object","keys":[{"name":"gt","type":"iso8601 string","description":"Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"gte","type":"iso8601 string","description":"Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"lt","type":"iso8601 string","description":"Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"lte","type":"iso8601 string","description":"Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision."}]}
+     *
+     */
+    createdAt?: string[];
+    /**
+     * Filters accounts by crm_id. Multiple crm ids can be applied
+     */
+    crmId?: string[];
+    /**
+     * Filters by accounts matching all given custom fields. The custom field names are case-sensitive, but the provided values are case-insensitive. Example: v2/accounts?custom_fields[custom_field_name]=custom_field_value
+     */
+    customFields?: Record<string, any>;
+    /**
+     * Domain of the accounts to fetch. Domains are unique and lowercase
+     */
+    domain?: string;
+    /**
+     * IDs of accounts to fetch. If a record can't be found, that record won't be returned and your request will be successful
+     */
+    ids?: number[];
+    /**
+     * Whether to include total_pages and total_count in the metadata. Defaults to false
+     */
+    includePagingCounts?: boolean;
+    /**
+     * Filters accounts by industry by exact match. Supports partial matching
+     */
+    industry?: string[];
+    /**
+     * Equality filters that are applied to the last_contacted field. A single filter can be used by itself or combined with other filters to create a range.
+     *
+     * @remarks
+     * Additional values of "_is_null" or "_is_not_null" can be passed to filter records that either have no timestamp value or any timestamp value.
+     * ---CUSTOM---
+     * {"type":"object","keys":[{"name":"gt","type":"iso8601 string","description":"Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"gte","type":"iso8601 string","description":"Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"lt","type":"iso8601 string","description":"Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"lte","type":"iso8601 string","description":"Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision."}]}
+     *
+     */
+    lastContacted?: Record<string, any>;
+    /**
+     * Specifies whether the max limit of 10k records should be applied to pagination counts. Affects the total_count and total_pages data
+     */
+    limitPagingCounts?: boolean;
+    /**
+     * Filters accounts by locale. Multiple locales are allowed
+     */
+    locales?: string[];
+    /**
+     * Names of accounts to fetch. Name matches are exact and case sensitive. Multiple names can be fetched.
+     */
+    name?: string[];
+    /**
+     * Filters accounts by owner_crm_id. Multiple owner_crm_ids can be applied. An additional value of "_is_null" can be passed to filter accounts that are unowned. A "_not_in" modifier can be used to exclude specific owner_crm_ids. Example: v2/accounts?owner_crm_id[_not_in]=id
+     */
+    ownerCrmId?: string[];
+    /**
+     * Filters accounts by owner_id. Multiple owner_ids can be applied. An additional value of "_is_null" can be passed to filter accounts that are unowned
+     */
+    ownerId?: string[];
+    /**
+     * Filters accounts by whether the owner is active or not.
+     */
+    ownerIsActive?: boolean;
+    /**
+     * The current page to fetch results from. Defaults to 1
+     */
+    page?: number;
+    /**
+     * How many records to show per page in the range [1, 100]. Defaults to 25
+     */
+    perPage?: number;
+    /**
+     * Key to sort on, must be one of: created_at, updated_at, last_contacted_at, account_stage, account_stage_name, account_tier, account_tier_name, name, counts_people. Defaults to updated_at
+     */
+    sortBy?: string;
+    /**
+     * Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
+     */
+    sortDirection?: string;
+    /**
+     * Filters accounts by state by exact match. Supports partial matching
+     */
+    state?: string[];
+    /**
+     * Filters accounts by the tags applied to the account. Multiple tags can be applied
+     */
+    tag?: string[];
+    /**
+     * Filters accounts by the tag id's applied to the account. Multiple tag id's can be applied
+     */
+    tagId?: number[];
+    /**
+     * Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range.
+     *
+     * @remarks
+     *
+     * ---CUSTOM---
+     * {"type":"object","keys":[{"name":"gt","type":"iso8601 string","description":"Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"gte","type":"iso8601 string","description":"Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"lt","type":"iso8601 string","description":"Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"lte","type":"iso8601 string","description":"Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision."}]}
+     *
+     */
+    updatedAt?: string[];
+    /**
+     * Filters by accounts matching all given user relationship fields, _is_null or _unmapped can be passed to filter accounts with null or unmapped user relationship values. Example: v2/accounts?user_relationships[name]=value
+     */
+    userRelationships?: Record<string, any>;
+    /**
+     * Filters accounts by website. Multiple websites can be applied. An additional value of "_is_null" can be passed to filter accounts that do not have a website.
+     */
+    website?: string[];
+}
+export declare class GetV2AccountsJsonResponse extends SpeakeasyBase {
+    body?: Uint8Array;
+    contentType: string;
+    statusCode: number;
+    rawResponse?: AxiosResponse;
+}

@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeDbProxiesActionEnum {
-    DescribeDbProxies = "DescribeDBProxies"
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeDBProxiesActionEnum {
+    DescribeDBProxies = "DescribeDBProxies"
 }
-export declare enum PostDescribeDbProxiesVersionEnum {
+export declare enum POSTDescribeDBProxiesVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class PostDescribeDbProxiesQueryParams extends SpeakeasyBase {
-    action: PostDescribeDbProxiesActionEnum;
+export declare class POSTDescribeDBProxiesRequest extends SpeakeasyBase {
+    action: POSTDescribeDBProxiesActionEnum;
+    /**
+     * Pagination token
+     */
     marker?: string;
+    /**
+     * Pagination limit
+     */
     maxRecords?: string;
-    version: PostDescribeDbProxiesVersionEnum;
-}
-export declare class PostDescribeDbProxiesHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDescribeDBProxiesVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDescribeDbProxiesHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeDbProxiesRequest extends SpeakeasyBase {
-    queryParams: PostDescribeDbProxiesQueryParams;
-    headers: PostDescribeDbProxiesHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeDbProxiesResponse extends SpeakeasyBase {
+export declare class POSTDescribeDBProxiesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

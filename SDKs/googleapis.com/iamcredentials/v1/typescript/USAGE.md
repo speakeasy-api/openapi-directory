@@ -1,50 +1,44 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { IamcredentialsProjectsServiceAccountsGenerateAccessTokenRequest, IamcredentialsProjectsServiceAccountsGenerateAccessTokenResponse } from "openapi/src/sdk/models/operations";
+import {
+  IamcredentialsProjectsServiceAccountsGenerateAccessTokenRequest,
+  IamcredentialsProjectsServiceAccountsGenerateAccessTokenResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  AltEnum,
+  XgafvEnum,
+} from "openapi/dist/sdk/models/shared";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: IamcredentialsProjectsServiceAccountsGenerateAccessTokenRequest = {
-  security: {
-    oauth2: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-    oauth2c: {
-      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    },
-  },
-  pathParams: {
-    name: "sit",
-  },
-  queryParams: {
-    dollarXgafv: "1",
-    accessToken: "culpa",
-    alt: "media",
-    callback: "consequuntur",
-    fields: "dolor",
-    key: "expedita",
-    oauthToken: "voluptas",
-    prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nihil",
-    uploadProtocol: "rerum",
-  },
-  request: {
+  dollarXgafv: XgafvEnum.Two,
+  generateAccessTokenRequest: {
     delegates: [
-      "debitis",
-      "voluptatum",
-      "et",
+      "distinctio",
+      "quibusdam",
+      "unde",
     ],
-    lifetime: "ut",
+    lifetime: "nulla",
     scope: [
-      "et",
-      "voluptate",
-      "iste",
+      "illum",
+      "vel",
+      "error",
     ],
   },
+  accessToken: "deserunt",
+  alt: AltEnum.Media,
+  callback: "iure",
+  fields: "magnam",
+  key: "debitis",
+  name: "ipsa",
+  oauthToken: "delectus",
+  prettyPrint: false,
+  quotaUser: "tempora",
+  uploadType: "suscipit",
+  uploadProtocol: "molestiae",
 };
 
 sdk.projects.iamcredentialsProjectsServiceAccountsGenerateAccessToken(req).then((res: IamcredentialsProjectsServiceAccountsGenerateAccessTokenResponse | AxiosError) => {

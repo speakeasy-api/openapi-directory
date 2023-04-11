@@ -1,40 +1,92 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class DeleteAChatbotMessagePathParams extends SpeakeasyBase {
-    messageId: string;
-}
-export declare class DeleteAChatbotMessageApplicationJson extends SpeakeasyBase {
-    accountId: string;
-    robotJid: string;
-    userJid?: string;
-}
-export declare class DeleteAChatbotMessageMultipartFormData extends SpeakeasyBase {
-    accountId: string;
-    robotJid: string;
-    userJid?: string;
-}
-export declare class DeleteAChatbotMessageRequests extends SpeakeasyBase {
-    object?: DeleteAChatbotMessageApplicationJson;
-    object1?: DeleteAChatbotMessageMultipartFormData;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteAChatbotMessageSecurity extends SpeakeasyBase {
-    clientCredentials: shared.SchemeClientCredentials;
+    clientCredentials: string;
 }
-export declare class DeleteAChatbotMessage200ApplicationJson extends SpeakeasyBase {
-    messageId?: string;
-    robotJid?: string;
-    sentTime?: string;
-    toJid?: string;
+export declare class DeleteAChatbotMessageApplicationJSON extends SpeakeasyBase {
+    /**
+     * The AccountID of the Zoom account to which the message was sent. Retrieve this from the Chatbot request sent to your server as shown in the example [here]( https://marketplace.zoom.us/docs/guides/chatbots/sending-messages).
+     */
+    accountId: string;
+    /**
+     * The BotJID found in the Chat Subscription Section on the Features page of your App Dashboard.
+     */
+    robotJid: string;
+    /**
+     * The UserJID of the user on whose behalf the message is being sent. Used to prevent members of a channel from getting notifications that were set up by a user who has left the channel.
+     */
     userJid?: string;
 }
 export declare class DeleteAChatbotMessageRequest extends SpeakeasyBase {
-    pathParams: DeleteAChatbotMessagePathParams;
-    request?: DeleteAChatbotMessageRequests;
-    security: DeleteAChatbotMessageSecurity;
+    requestBody?: DeleteAChatbotMessageApplicationJSON;
+    messageId: string;
+}
+/**
+ * **HTTP Status Code:** `200` **OK**<br>
+ *
+ * @remarks
+ * Message deleted.
+ */
+export declare class DeleteAChatbotMessage200ApplicationXML extends SpeakeasyBase {
+    /**
+     * Unique identifier of the message that was deleted.
+     */
+    messageId?: string;
+    /**
+     * The BotJID of the Chatbot app. It can be found in the Chat Subscription Section on the Features page of your App Dashboard
+     */
+    robotJid?: string;
+    /**
+     * The date and time at which the message was deleted.
+     */
+    sentTime?: string;
+    /**
+     * The JID of the Channel or User to whom the message was sent.
+     */
+    toJid?: string;
+    /**
+     *  The UserJID of the user on whose behalf the message was sent. Used to prevent members of a channel from getting notifications that were set up by a user who has left the channel.
+     */
+    userJid?: string;
+}
+/**
+ * **HTTP Status Code:** `200` **OK**<br>
+ *
+ * @remarks
+ * Message deleted.
+ */
+export declare class DeleteAChatbotMessage200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Unique identifier of the message that was deleted.
+     */
+    messageId?: string;
+    /**
+     * The BotJID of the Chatbot app. It can be found in the Chat Subscription Section on the Features page of your App Dashboard
+     */
+    robotJid?: string;
+    /**
+     * The date and time at which the message was deleted.
+     */
+    sentTime?: string;
+    /**
+     * The JID of the Channel or User to whom the message was sent.
+     */
+    toJid?: string;
+    /**
+     *  The UserJID of the user on whose behalf the message was sent. Used to prevent members of a channel from getting notifications that were set up by a user who has left the channel.
+     */
+    userJid?: string;
 }
 export declare class DeleteAChatbotMessageResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    deleteAChatbotMessage200ApplicationJSONObject?: DeleteAChatbotMessage200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * **HTTP Status Code:** `200` **OK**<br>
+     *
+     * @remarks
+     * Message deleted.
+     */
+    deleteAChatbotMessage200ApplicationJSONObject?: DeleteAChatbotMessage200ApplicationJSON;
 }

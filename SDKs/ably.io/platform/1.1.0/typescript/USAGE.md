@@ -1,29 +1,40 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { RequestAccessTokenRequest, RequestAccessTokenResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  RequestAccessTokenRequest,
+  RequestAccessTokenResponse
+} from "openapi/dist/sdk/models/operations";
+import {
+  ResponseFormatEnum,
+} from "openapi/dist/sdk/models/shared";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
     basicAuth: {
       password: "YOUR_PASSWORD_HERE",
       username: "YOUR_USERNAME_HERE",
     },
-  }
-));
-    
+  },
+});
+
 const req: RequestAccessTokenRequest = {
-  pathParams: {
-    keyName: "sit",
+  requestBody: {
+    capability: {
+      "distinctio": "quibusdam",
+      "unde": "nulla",
+      "corrupti": "illum",
+    },
+    clientId: "vel",
+    keyName: "xVLyHw.LMJZxw",
+    mac: "error",
+    nonce: "deserunt",
+    timestamp: 384382,
   },
-  queryParams: {
-    format: "msgpack",
-  },
-  headers: {
-    xAblyVersion: "culpa",
-  },
-  request: "expedita",
+  xAblyVersion: "iure",
+  format: ResponseFormatEnum.Jsonp,
+  keyName: "debitis",
 };
 
 sdk.authentication.requestAccessToken(req).then((res: RequestAccessTokenResponse | AxiosError) => {

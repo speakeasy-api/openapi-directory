@@ -1,10 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { RatePlanChargeData } from "./rateplanchargedata";
+import { RatePlanDataRatePlan } from "./rateplandatarateplan";
+import { SubscriptionProductFeature } from "./subscriptionproductfeature";
 export declare class RatePlanDataSubscriptionProductFeatureList extends SpeakeasyBase {
-    subscriptionProductFeature?: Record<string, any>[];
+    subscriptionProductFeature?: SubscriptionProductFeature[];
 }
 export declare class RatePlanData extends SpeakeasyBase {
-    ratePlan: Record<string, any>;
+    ratePlan: RatePlanDataRatePlan;
     ratePlanChargeData?: RatePlanChargeData[];
     subscriptionProductFeatureList?: RatePlanDataSubscriptionProductFeatureList;
 }

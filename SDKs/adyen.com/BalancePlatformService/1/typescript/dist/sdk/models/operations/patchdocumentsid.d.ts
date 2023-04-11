@@ -1,20 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PatchDocumentsIdPathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PatchDocumentsIdSecurity extends SpeakeasyBase {
+    apiKeyAuth?: string;
     basicAuth?: shared.SchemeBasicAuth;
-    apiKeyAuth?: shared.SchemeApiKeyAuth;
 }
 export declare class PatchDocumentsIdRequest extends SpeakeasyBase {
-    pathParams: PatchDocumentsIdPathParams;
-    request?: any;
-    security: PatchDocumentsIdSecurity;
+    documentInput?: shared.DocumentInput;
+    /**
+     * The unique identifier of the document to be updated.
+     */
+    id: string;
 }
 export declare class PatchDocumentsIdResponse extends SpeakeasyBase {
     contentType: string;
-    document?: any;
-    serviceError?: any;
+    /**
+     * OK - the request has succeeded.
+     */
+    document?: shared.Document;
+    /**
+     * Bad Request - a problem reading or understanding the request.
+     */
+    serviceError?: shared.ServiceError;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,0 +1,16 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { AccessControlRuleEffectEnum } from "./accesscontrolruleeffectenum";
+export declare class PutAccessControlRuleRequest extends SpeakeasyBase {
+    actions?: string[];
+    description: string;
+    effect: AccessControlRuleEffectEnum;
+    impersonationRoleIds?: string[];
+    ipRanges?: string[];
+    name: string;
+    notActions?: string[];
+    notImpersonationRoleIds?: string[];
+    notIpRanges?: string[];
+    notUserIds?: string[];
+    organizationId: string;
+    userIds?: string[];
+}

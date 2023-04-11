@@ -1,9 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+/**
+ * if this is JSONP or JSON
+ */
 export declare enum GetSectionFormatFormatEnum {
     Json = "json",
     Jsonp = "jsonp"
 }
+/**
+ * The section the story appears in.
+ */
 export declare enum GetSectionFormatSectionEnum {
     Home = "home",
     Opinion = "opinion",
@@ -32,22 +39,35 @@ export declare enum GetSectionFormatSectionEnum {
     Obituaries = "obituaries",
     Insider = "insider"
 }
-export declare class GetSectionFormatPathParams extends SpeakeasyBase {
+export declare class GetSectionFormatRequest extends SpeakeasyBase {
+    /**
+     * The name of the function the API call results will be passed to. Required when using JSONP. This parameter has only one valid value per section. The format is {section_name}TopStoriesCallback.
+     *
+     * @remarks
+     *
+     */
+    callback?: string;
+    /**
+     * if this is JSONP or JSON
+     */
     format: GetSectionFormatFormatEnum;
+    /**
+     * The section the story appears in.
+     */
     section: GetSectionFormatSectionEnum;
 }
-export declare class GetSectionFormatQueryParams extends SpeakeasyBase {
-    callback?: string;
-}
-export declare class GetSectionFormat200ApplicationJson extends SpeakeasyBase {
+/**
+ * An array of articles
+ */
+export declare class GetSectionFormat200ApplicationJSON extends SpeakeasyBase {
     results?: shared.Article[];
-}
-export declare class GetSectionFormatRequest extends SpeakeasyBase {
-    pathParams: GetSectionFormatPathParams;
-    queryParams: GetSectionFormatQueryParams;
 }
 export declare class GetSectionFormatResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getSectionFormat200ApplicationJSONObject?: GetSectionFormat200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * An array of articles
+     */
+    getSectionFormat200ApplicationJSONObject?: GetSectionFormat200ApplicationJSON;
 }

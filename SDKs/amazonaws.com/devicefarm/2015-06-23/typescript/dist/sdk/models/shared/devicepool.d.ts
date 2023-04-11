@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Rule } from "./rule";
 import { DevicePoolTypeEnum } from "./devicepooltypeenum";
+import { Rule } from "./rule";
 /**
  * Represents a collection of device types.
-**/
+ */
 export declare class DevicePool extends SpeakeasyBase {
     arn?: string;
     description?: string;

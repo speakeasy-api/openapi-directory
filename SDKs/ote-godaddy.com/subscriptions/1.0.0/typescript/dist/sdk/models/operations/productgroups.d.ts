@@ -1,16 +1,31 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProductGroupsHeaders extends SpeakeasyBase {
-    xMarketId?: string;
-    xShopperId?: string;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class ProductGroupsRequest extends SpeakeasyBase {
-    headers: ProductGroupsHeaders;
+    /**
+     * The market that the response should be formatted for
+     */
+    xMarketId?: string;
+    /**
+     * Shopper ID to return data for when not using JWT
+     */
+    xShopperId?: string;
 }
 export declare class ProductGroupsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    error?: any;
-    errorLimit?: any;
-    productGroups?: any[];
+    /**
+     * Request was malformed
+     */
+    error?: shared.ErrorT;
+    /**
+     * Too many requests received within interval
+     */
+    errorLimit?: shared.ErrorLimit;
+    /**
+     * Request was successful
+     */
+    productGroups?: shared.ProductGroup[];
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

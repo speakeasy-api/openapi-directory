@@ -1,8 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetUserDocumentsPathParams extends SpeakeasyBase {
-    userId: number;
-}
+import { AxiosResponse } from "axios";
 export declare enum GetUserDocumentsOrderByEnum {
     Id = "id",
     UpdatedAt = "updated_at",
@@ -23,22 +21,32 @@ export declare enum GetUserDocumentsTypeFilterEnum {
     StyleGuides = "STYLE_GUIDES",
     Glossaries = "GLOSSARIES"
 }
-export declare class GetUserDocumentsQueryParams extends SpeakeasyBase {
+export declare class GetUserDocumentsRequest extends SpeakeasyBase {
+    /**
+     * searches in source language of documents, in source and target languages of document's quote
+     */
     languageCode?: string;
     orderBy?: GetUserDocumentsOrderByEnum;
     orderType?: shared.ListOrderTypeEnum;
     page?: number;
     perPage?: number;
+    /**
+     * When true, this will return the most 4 recent active documents.
+     */
     recent?: boolean;
     search?: string;
     typeFilter?: GetUserDocumentsTypeFilterEnum;
-}
-export declare class GetUserDocumentsRequest extends SpeakeasyBase {
-    pathParams: GetUserDocumentsPathParams;
-    queryParams: GetUserDocumentsQueryParams;
+    /**
+     * User ID
+     */
+    userId: number;
 }
 export declare class GetUserDocumentsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Document list
+     */
     documentList?: shared.DocumentList;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,34 +1,65 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CripcRequest, CripcResponse } from "openapi/src/sdk/models/operations";
+import {
+  CripcRequestBody,
+  CripcResponse,
+  CripcRequestBodyFormatEnum,
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: CripcRequest = {
-  security: {
-    apiKey: {
-      apiKey: "YOUR_API_KEY_HERE",
+
+const req: CripcRequestBody = {
+  certificateParameters: {
+    dob: "31-12-1980",
+    fullName: "Sunil Kumar",
+    udf1: "0317002620P100108515",
+    udf2: "DD-MM-YYYY",
+    udf3: "1234234234",
+    uid: "123412341234",
+  },
+  consentArtifact: {
+    consent: {
+      consentId: "ea9c43aa-7f5a-4bf3-a0be-e1caa24737ba",
+      data: {
+        id: "corrupti",
+      },
+      dataConsumer: {
+        id: "provident",
+      },
+      dataProvider: {
+        id: "distinctio",
+      },
+      permission: {
+        access: "quibusdam",
+        dateRange: {
+          from: "2021-04-14T16:47:33.722Z",
+          to: "2021-04-22T12:08:58.275Z",
+        },
+        frequency: {
+          repeats: 4236.55,
+          unit: "error",
+          value: 6458.94,
+        },
+      },
+      purpose: {
+        description: "suscipit",
+      },
+      timestamp: "2022-09-14T09:35:47.986Z",
+      user: {
+        email: "Anahi38@hotmail.com",
+        idNumber: "molestiae",
+        idType: "minus",
+        mobile: "645-598-0306 x03897",
+      },
     },
-    clientId: {
-      apiKey: "YOUR_API_KEY_HERE",
+    signature: {
+      signature: "odit",
     },
   },
-  request: {
-    certificateParameters: {
-      dob: "sit",
-      fullName: "voluptas",
-      udf1: "culpa",
-      udf2: "expedita",
-      udf3: "consequuntur",
-      uid: "dolor",
-    },
-    consentArtifact: "expedita",
-    format: "pdf",
-    txnId: "fugit",
-  },
+  format: CripcRequestBodyFormatEnum.Pdf,
+  txnId: "f7f1469c-29b0-4325-9dfc-c567200a70f7",
 };
 
 sdk.apIs.cripc(req).then((res: CripcResponse | AxiosError) => {

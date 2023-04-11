@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ConnectorDefinitionVersion } from "./connectordefinitionversion";
+/**
+ * Success
+ */
 export declare class GetConnectorDefinitionVersionResponse extends SpeakeasyBase {
     arn?: string;
     creationTimestamp?: string;

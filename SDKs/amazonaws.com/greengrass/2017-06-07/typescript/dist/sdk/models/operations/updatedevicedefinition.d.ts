@@ -1,8 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UpdateDeviceDefinitionPathParams extends SpeakeasyBase {
-    deviceDefinitionId: string;
+import { AxiosResponse } from "axios";
+export declare class UpdateDeviceDefinitionRequestBody extends SpeakeasyBase {
+    /**
+     * The name of the definition.
+     */
+    name?: string;
 }
-export declare class UpdateDeviceDefinitionHeaders extends SpeakeasyBase {
+export declare class UpdateDeviceDefinitionRequest extends SpeakeasyBase {
+    /**
+     * The ID of the device definition.
+     */
+    deviceDefinitionId: string;
+    requestBody: UpdateDeviceDefinitionRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,17 +20,16 @@ export declare class UpdateDeviceDefinitionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class UpdateDeviceDefinitionRequestBody extends SpeakeasyBase {
-    name?: string;
-}
-export declare class UpdateDeviceDefinitionRequest extends SpeakeasyBase {
-    pathParams: UpdateDeviceDefinitionPathParams;
-    headers: UpdateDeviceDefinitionHeaders;
-    request: UpdateDeviceDefinitionRequestBody;
-}
 export declare class UpdateDeviceDefinitionResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Success
+     */
     updateDeviceDefinitionResponse?: Record<string, any>;
 }

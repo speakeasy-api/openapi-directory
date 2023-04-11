@@ -1,5 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
+/**
+ * "all" or comma-separated list of specific optional fields: pages, ticker_symbol, links, taxonomy, combinations, geocodes, article_list, scope_notes, search_api_query
+ *
+ * @remarks
+ *
+ * Optional fields are returned in result_set. They are briefly explained here:
+ *
+ * pages: A list of topic pages associated with a specific concept.
+ * ticker_symbol: If this concept is a publicly traded company, this field contains the ticker symbol.
+ * links: A list of links from this concept to external data resources.
+ * taxonomy: For descriptor concepts, this field returns a list of taxonomic relations to other concepts.
+ * combinations: For descriptor concepts, this field returns a list of the specific meanings tis concept takes on when combined with other concepts.
+ * geocodes: For geographic concepts, the full GIS record from geonames.
+ * article_list: A list of up to 10 articles associated with this concept.
+ * scope_notes: Scope notes contains clarifications and meaning definitions that explicate the relationship between the concept and an article.
+ * search_api_query: Returns the request one would need to submit to the Article Search API to obtain a list of articles annotated with this concept.
+ *
+ */
 export declare enum GetSearchJsonFieldsEnum {
     All = "all",
     Pages = "pages",
@@ -12,22 +31,50 @@ export declare enum GetSearchJsonFieldsEnum {
     ScopeNotes = "scope_notes",
     SearchApiQuery = "search_api_query"
 }
-export declare class GetSearchJsonQueryParams extends SpeakeasyBase {
+export declare class GetSearchJsonRequest extends SpeakeasyBase {
+    /**
+     * "all" or comma-separated list of specific optional fields: pages, ticker_symbol, links, taxonomy, combinations, geocodes, article_list, scope_notes, search_api_query
+     *
+     * @remarks
+     *
+     * Optional fields are returned in result_set. They are briefly explained here:
+     *
+     * pages: A list of topic pages associated with a specific concept.
+     * ticker_symbol: If this concept is a publicly traded company, this field contains the ticker symbol.
+     * links: A list of links from this concept to external data resources.
+     * taxonomy: For descriptor concepts, this field returns a list of taxonomic relations to other concepts.
+     * combinations: For descriptor concepts, this field returns a list of the specific meanings tis concept takes on when combined with other concepts.
+     * geocodes: For geographic concepts, the full GIS record from geonames.
+     * article_list: A list of up to 10 articles associated with this concept.
+     * scope_notes: Scope notes contains clarifications and meaning definitions that explicate the relationship between the concept and an article.
+     * search_api_query: Returns the request one would need to submit to the Article Search API to obtain a list of articles annotated with this concept.
+     *
+     */
     fields?: GetSearchJsonFieldsEnum;
+    /**
+     * Integer value for the index count from the first concept to the last concept, sorted alphabetically. Used in a Search Query. A Search Query will return up to 10 concepts in its results.
+     */
     offset?: number;
+    /**
+     * Precedes the search term string. Used in a Search Query. Except for &lt;specific_concept_name&gt;, Search Query will take the required parameters listed above (&lt;concept_type&gt;, &lt;concept_uri&gt;, &lt;article_uri&gt;) as an optional_parameter in addition to the query=&lt;query_term&gt;.
+     */
     query: string;
 }
-export declare class GetSearchJson200ApplicationJson extends SpeakeasyBase {
+/**
+ * An array of Concepts
+ */
+export declare class GetSearchJson200ApplicationJSON extends SpeakeasyBase {
     copyright?: string;
     numResults?: number;
     results?: shared.ConceptRelation[];
     status?: string;
 }
-export declare class GetSearchJsonRequest extends SpeakeasyBase {
-    queryParams: GetSearchJsonQueryParams;
-}
 export declare class GetSearchJsonResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getSearchJSON200ApplicationJSONObject?: GetSearchJson200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * An array of Concepts
+     */
+    getSearchJSON200ApplicationJSONObject?: GetSearchJson200ApplicationJSON;
 }

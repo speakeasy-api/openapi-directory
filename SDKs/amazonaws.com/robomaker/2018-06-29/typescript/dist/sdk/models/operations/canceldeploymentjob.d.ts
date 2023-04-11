@@ -1,5 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CancelDeploymentJobHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class CancelDeploymentJobRequestBody extends SpeakeasyBase {
+    /**
+     * The deployment job ARN to cancel.
+     */
+    job: string;
+}
+export declare class CancelDeploymentJobRequest extends SpeakeasyBase {
+    requestBody: CancelDeploymentJobRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -8,19 +16,28 @@ export declare class CancelDeploymentJobHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class CancelDeploymentJobRequestBody extends SpeakeasyBase {
-    job: string;
-}
-export declare class CancelDeploymentJobRequest extends SpeakeasyBase {
-    headers: CancelDeploymentJobHeaders;
-    request: CancelDeploymentJobRequestBody;
-}
 export declare class CancelDeploymentJobResponse extends SpeakeasyBase {
+    /**
+     * Success
+     */
     cancelDeploymentJobResponse?: Record<string, any>;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidParameterException
+     */
     invalidParameterException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

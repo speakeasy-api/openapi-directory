@@ -3,6 +3,9 @@ export declare class OneannouncementsPostResponses400ContentApplication1jsonSche
     field: string;
     message: string[];
 }
+/**
+ * Bad query data
+ */
 export declare class OneannouncementsPostResponses400ContentApplication1jsonSchema extends SpeakeasyBase {
     errors: OneannouncementsPostResponses400ContentApplication1jsonSchemaErrors[];
 }

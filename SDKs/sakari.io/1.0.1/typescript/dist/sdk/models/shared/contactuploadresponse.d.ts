@@ -1,7 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { Contact } from "./contact";
 export declare class ContactUploadResponseData extends SpeakeasyBase {
+    /**
+     * Uploaded contacts
+     */
     contacts?: Contact[];
+    /**
+     * Contacts that failed validation
+     */
     errors?: Contact[];
     inserted?: number;
     submitted?: number;

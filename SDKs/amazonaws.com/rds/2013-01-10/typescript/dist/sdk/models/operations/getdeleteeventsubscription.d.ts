@@ -1,16 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteEventSubscriptionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteEventSubscriptionActionEnum {
     DeleteEventSubscription = "DeleteEventSubscription"
 }
-export declare enum GetDeleteEventSubscriptionVersionEnum {
+export declare enum GETDeleteEventSubscriptionVersionEnum {
     TwoThousandAndThirteen0110 = "2013-01-10"
 }
-export declare class GetDeleteEventSubscriptionQueryParams extends SpeakeasyBase {
-    action: GetDeleteEventSubscriptionActionEnum;
+export declare class GETDeleteEventSubscriptionRequest extends SpeakeasyBase {
+    action: GETDeleteEventSubscriptionActionEnum;
     subscriptionName: string;
-    version: GetDeleteEventSubscriptionVersionEnum;
-}
-export declare class GetDeleteEventSubscriptionHeaders extends SpeakeasyBase {
+    version: GETDeleteEventSubscriptionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +18,9 @@ export declare class GetDeleteEventSubscriptionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteEventSubscriptionRequest extends SpeakeasyBase {
-    queryParams: GetDeleteEventSubscriptionQueryParams;
-    headers: GetDeleteEventSubscriptionHeaders;
-}
-export declare class GetDeleteEventSubscriptionResponse extends SpeakeasyBase {
+export declare class GETDeleteEventSubscriptionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

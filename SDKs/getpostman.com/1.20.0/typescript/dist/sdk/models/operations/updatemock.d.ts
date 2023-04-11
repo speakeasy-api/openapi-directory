@@ -1,7 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UpdateMockPathParams extends SpeakeasyBase {
-    mockUid: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UpdateMockRequestBodyMock extends SpeakeasyBase {
     description?: string;
     environment?: string;
@@ -12,15 +10,19 @@ export declare class UpdateMockRequestBodyMock extends SpeakeasyBase {
 export declare class UpdateMockRequestBody extends SpeakeasyBase {
     mock?: UpdateMockRequestBodyMock;
 }
-export declare class UpdateMock200ApplicationJsonMockConfig extends SpeakeasyBase {
+export declare class UpdateMockRequest extends SpeakeasyBase {
+    requestBody?: UpdateMockRequestBody;
+    mockUid: string;
+}
+export declare class UpdateMock200ApplicationJSONMockConfig extends SpeakeasyBase {
     headers?: any[];
     matchBody?: boolean;
     matchQueryParams?: boolean;
     matchWildcards?: boolean;
 }
-export declare class UpdateMock200ApplicationJsonMock extends SpeakeasyBase {
+export declare class UpdateMock200ApplicationJSONMock extends SpeakeasyBase {
     collection?: string;
-    config?: UpdateMock200ApplicationJsonMockConfig;
+    config?: UpdateMock200ApplicationJSONMockConfig;
     environment?: string;
     id?: string;
     mockUrl?: string;
@@ -28,15 +30,18 @@ export declare class UpdateMock200ApplicationJsonMock extends SpeakeasyBase {
     owner?: string;
     uid?: string;
 }
-export declare class UpdateMock200ApplicationJson extends SpeakeasyBase {
-    mock?: UpdateMock200ApplicationJsonMock;
-}
-export declare class UpdateMockRequest extends SpeakeasyBase {
-    pathParams: UpdateMockPathParams;
-    request?: UpdateMockRequestBody;
+/**
+ * success Response
+ */
+export declare class UpdateMock200ApplicationJSON extends SpeakeasyBase {
+    mock?: UpdateMock200ApplicationJSONMock;
 }
 export declare class UpdateMockResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateMock200ApplicationJSONObject?: UpdateMock200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * success Response
+     */
+    updateMock200ApplicationJSONObject?: UpdateMock200ApplicationJSON;
 }

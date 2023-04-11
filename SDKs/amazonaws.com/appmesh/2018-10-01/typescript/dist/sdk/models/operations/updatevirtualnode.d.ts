@@ -1,10 +1,29 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdateVirtualNodePathParams extends SpeakeasyBase {
-    meshName: string;
-    virtualNodeName: string;
+import { AxiosResponse } from "axios";
+/**
+ * An object representing the specification of a virtual node.
+ */
+export declare class UpdateVirtualNodeRequestBodySpec extends SpeakeasyBase {
+    backends?: string[];
+    listeners?: shared.Listener[];
+    serviceDiscovery?: shared.ServiceDiscovery;
 }
-export declare class UpdateVirtualNodeHeaders extends SpeakeasyBase {
+export declare class UpdateVirtualNodeRequestBody extends SpeakeasyBase {
+    /**
+     * Unique, case-sensitive identifier that you provide to ensure the idempotency of the
+     *
+     * @remarks
+     * request. Up to 36 letters, numbers, hyphens, and underscores are allowed.
+     */
+    clientToken?: string;
+    /**
+     * An object representing the specification of a virtual node.
+     */
+    spec: UpdateVirtualNodeRequestBodySpec;
+}
+export declare class UpdateVirtualNodeRequest extends SpeakeasyBase {
+    requestBody: UpdateVirtualNodeRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,34 +31,53 @@ export declare class UpdateVirtualNodeHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-/**
- * An object representing the specification of a virtual node.
-**/
-export declare class UpdateVirtualNodeRequestBodySpec extends SpeakeasyBase {
-    backends?: string[];
-    listeners?: shared.Listener[];
-    serviceDiscovery?: shared.ServiceDiscovery;
-}
-export declare class UpdateVirtualNodeRequestBody extends SpeakeasyBase {
-    clientToken?: string;
-    spec: UpdateVirtualNodeRequestBodySpec;
-}
-export declare class UpdateVirtualNodeRequest extends SpeakeasyBase {
-    pathParams: UpdateVirtualNodePathParams;
-    headers: UpdateVirtualNodeHeaders;
-    request: UpdateVirtualNodeRequestBody;
+    /**
+     * The name of the service mesh in which the virtual node resides.
+     */
+    meshName: string;
+    /**
+     * The name of the virtual node to update.
+     */
+    virtualNodeName: string;
 }
 export declare class UpdateVirtualNodeResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * ForbiddenException
+     */
     forbiddenException?: any;
+    /**
+     * InternalServerErrorException
+     */
     internalServerErrorException?: any;
+    /**
+     * LimitExceededException
+     */
     limitExceededException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
-    serviceUnavailableException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceUnavailableException
+     */
+    serviceUnavailableException?: any;
+    /**
+     * TooManyRequestsException
+     */
     tooManyRequestsException?: any;
+    /**
+     * Success
+     */
     updateVirtualNodeOutput?: shared.UpdateVirtualNodeOutput;
 }

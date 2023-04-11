@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class GetEbsDefaultKmsKeyIdResult extends SpeakeasyBase {
-    kmsKeyId?: Record<string, any>;
+    kmsKeyId?: string;
 }

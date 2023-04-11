@@ -1,8 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PostTargetByEnsgidRequest extends SpeakeasyBase {
-    request: string;
-}
-export declare class PostTargetByEnsgidResponse extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class PostTargetByENSGIDResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

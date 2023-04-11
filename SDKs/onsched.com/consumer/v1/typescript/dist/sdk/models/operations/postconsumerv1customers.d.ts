@@ -1,16 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PostConsumerV1CustomersRequests extends SpeakeasyBase {
-    customerInputModel?: shared.CustomerInputModel;
-    customerInputModel1?: shared.CustomerInputModel;
-    customerInputModel2?: shared.CustomerInputModel;
-    customerInputModel3?: shared.CustomerInputModel;
-}
-export declare class PostConsumerV1CustomersRequest extends SpeakeasyBase {
-    request?: PostConsumerV1CustomersRequests;
-}
+import { AxiosResponse } from "axios";
 export declare class PostConsumerV1CustomersResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     customerViewModel?: shared.CustomerViewModel;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

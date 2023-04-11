@@ -4,9 +4,13 @@ export declare enum NestedInterfaceConnectionStatusLabelEnum {
     NotConnected = "Not Connected",
     Connected = "Connected"
 }
+export declare enum NestedInterfaceConnectionStatusValueEnum {
+    False = "false",
+    True = "true"
+}
 export declare class NestedInterfaceConnectionStatus extends SpeakeasyBase {
     label: NestedInterfaceConnectionStatusLabelEnum;
-    value: boolean;
+    value: NestedInterfaceConnectionStatusValueEnum;
 }
 export declare class NestedInterface extends SpeakeasyBase {
     cable?: number;

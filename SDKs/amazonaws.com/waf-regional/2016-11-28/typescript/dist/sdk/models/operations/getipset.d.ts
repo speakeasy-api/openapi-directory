@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum GetIpSetXAmzTargetEnum {
-    AwswafRegional20161128GetIpSet = "AWSWAF_Regional_20161128.GetIPSet"
+import { AxiosResponse } from "axios";
+export declare enum GetIPSetXAmzTargetEnum {
+    AWSWAFRegional20161128GetIPSet = "AWSWAF_Regional_20161128.GetIPSet"
 }
-export declare class GetIpSetHeaders extends SpeakeasyBase {
+export declare class GetIPSetRequest extends SpeakeasyBase {
+    getIPSetRequest: shared.GetIPSetRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,17 +13,26 @@ export declare class GetIpSetHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-    xAmzTarget: GetIpSetXAmzTargetEnum;
+    xAmzTarget: GetIPSetXAmzTargetEnum;
 }
-export declare class GetIpSetRequest extends SpeakeasyBase {
-    headers: GetIpSetHeaders;
-    request: shared.GetIpSetRequest;
-}
-export declare class GetIpSetResponse extends SpeakeasyBase {
+export declare class GetIPSetResponse extends SpeakeasyBase {
     contentType: string;
-    getIPSetResponse?: shared.GetIpSetResponse;
+    /**
+     * Success
+     */
+    getIPSetResponse?: shared.GetIPSetResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * WAFInternalErrorException
+     */
     wafInternalErrorException?: any;
+    /**
+     * WAFInvalidAccountException
+     */
     wafInvalidAccountException?: any;
+    /**
+     * WAFNonexistentItemException
+     */
     wafNonexistentItemException?: any;
 }

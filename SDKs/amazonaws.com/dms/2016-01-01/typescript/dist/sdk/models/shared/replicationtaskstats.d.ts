@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * In response to a request by the <code>DescribeReplicationTasks</code> operation, this object provides a collection of statistics about a replication task.
-**/
+ */
 export declare class ReplicationTaskStats extends SpeakeasyBase {
     elapsedTimeMillis?: number;
     freshStartDate?: Date;

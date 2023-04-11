@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum StartJobRunXAmzTargetEnum {
-    AwsGlueStartJobRun = "AWSGlue.StartJobRun"
+    AWSGlueStartJobRun = "AWSGlue.StartJobRun"
 }
-export declare class StartJobRunHeaders extends SpeakeasyBase {
+export declare class StartJobRunRequest extends SpeakeasyBase {
+    startJobRunRequest: shared.StartJobRunRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class StartJobRunHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: StartJobRunXAmzTargetEnum;
 }
-export declare class StartJobRunRequest extends SpeakeasyBase {
-    headers: StartJobRunHeaders;
-    request: shared.StartJobRunRequest;
-}
 export declare class StartJobRunResponse extends SpeakeasyBase {
+    /**
+     * ConcurrentRunsExceededException
+     */
     concurrentRunsExceededException?: any;
     contentType: string;
+    /**
+     * EntityNotFoundException
+     */
     entityNotFoundException?: any;
+    /**
+     * InternalServiceException
+     */
     internalServiceException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * OperationTimeoutException
+     */
     operationTimeoutException?: any;
+    /**
+     * ResourceNumberLimitExceededException
+     */
     resourceNumberLimitExceededException?: any;
+    /**
+     * Success
+     */
     startJobRunResponse?: shared.StartJobRunResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,27 +1,59 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PutTargetsTargetIdFindingsIdIntegrationsJiraServerPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class PutTargetsTargetIdFindingsIdIntegrationsJiraServerRequest extends SpeakeasyBase {
+    jiraFinding: shared.JiraFinding;
+    /**
+     * Object Id
+     */
     id: string;
+    /**
+     * Target id
+     */
     targetId: string;
 }
-export declare class PutTargetsTargetIdFindingsIdIntegrationsJiraServer401ApplicationJson extends SpeakeasyBase {
+/**
+ * Not found
+ */
+export declare class PutTargetsTargetIdFindingsIdIntegrationsJiraServer404ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Not found.
+     */
     detail?: string;
 }
-export declare class PutTargetsTargetIdFindingsIdIntegrationsJiraServer403ApplicationJson extends SpeakeasyBase {
+/**
+ * Not allowed to perform operation
+ */
+export declare class PutTargetsTargetIdFindingsIdIntegrationsJiraServer403ApplicationJSON extends SpeakeasyBase {
+    /**
+     * Error message.
+     */
     detail?: string;
 }
-export declare class PutTargetsTargetIdFindingsIdIntegrationsJiraServer404ApplicationJson extends SpeakeasyBase {
+/**
+ * Access token is missing or invalid
+ */
+export declare class PutTargetsTargetIdFindingsIdIntegrationsJiraServer401ApplicationJSON extends SpeakeasyBase {
     detail?: string;
-}
-export declare class PutTargetsTargetIdFindingsIdIntegrationsJiraServerRequest extends SpeakeasyBase {
-    pathParams: PutTargetsTargetIdFindingsIdIntegrationsJiraServerPathParams;
-    request: shared.JiraFinding;
 }
 export declare class PutTargetsTargetIdFindingsIdIntegrationsJiraServerResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Jira Server finding configuration
+     */
     jiraFinding?: shared.JiraFinding;
     statusCode: number;
-    putTargetsTargetIdFindingsIdIntegrationsJiraServer401ApplicationJSONObject?: PutTargetsTargetIdFindingsIdIntegrationsJiraServer401ApplicationJson;
-    putTargetsTargetIdFindingsIdIntegrationsJiraServer403ApplicationJSONObject?: PutTargetsTargetIdFindingsIdIntegrationsJiraServer403ApplicationJson;
-    putTargetsTargetIdFindingsIdIntegrationsJiraServer404ApplicationJSONObject?: PutTargetsTargetIdFindingsIdIntegrationsJiraServer404ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Access token is missing or invalid
+     */
+    putTargetsTargetIdFindingsIdIntegrationsJiraServer401ApplicationJSONObject?: PutTargetsTargetIdFindingsIdIntegrationsJiraServer401ApplicationJSON;
+    /**
+     * Not allowed to perform operation
+     */
+    putTargetsTargetIdFindingsIdIntegrationsJiraServer403ApplicationJSONObject?: PutTargetsTargetIdFindingsIdIntegrationsJiraServer403ApplicationJSON;
+    /**
+     * Not found
+     */
+    putTargetsTargetIdFindingsIdIntegrationsJiraServer404ApplicationJSONObject?: PutTargetsTargetIdFindingsIdIntegrationsJiraServer404ApplicationJSON;
 }

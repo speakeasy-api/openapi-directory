@@ -3,9 +3,36 @@ import { HrefType } from "./hreftype";
 import { ScaStatusAuthorisationConfirmationEnum } from "./scastatusauthorisationconfirmationenum";
 /**
  * Body of the JSON response for an authorisation confirmation request.
-**/
+ */
 export declare class AuthorisationConfirmationResponse extends SpeakeasyBase {
+    /**
+     * A list of hyperlinks to be recognised by the TPP. The actual hyperlinks used in the response depend on the dynamical decisions of the ASPSP when processing the request.
+     *
+     * @remarks
+     *
+     * **Remark:** All links can be relative or full links, to be decided by the ASPSP.
+     *
+     * Type of links admitted in this response, (further links might be added for ASPSP
+     * defined extensions):
+     *
+     * - 'scaStatus': The link to retrieve the status of the corresponding transaction resource.
+     *
+     */
     links: Record<string, HrefType>;
+    /**
+     * Text to be displayed to the PSU.
+     */
     psuMessage?: string;
+    /**
+     * This data element is containing information about the status of the SCA method in an authorisation confirmation response.
+     *
+     * @remarks
+     *
+     * The following codes are defined for this data type.
+     *
+     *   * 'finalised': if the transaction authorisation and confirmation was successfule.
+     *   * 'failed': if the transaction authorisation or confirmation was not successful.
+     *
+     */
     scaStatus: ScaStatusAuthorisationConfirmationEnum;
 }

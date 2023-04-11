@@ -1,12 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteProjectPathParams extends SpeakeasyBase {
-    projectId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteProjectRequest extends SpeakeasyBase {
-    pathParams: DeleteProjectPathParams;
+    /**
+     * The project id.
+     */
+    projectId: string;
 }
 export declare class DeleteProjectResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

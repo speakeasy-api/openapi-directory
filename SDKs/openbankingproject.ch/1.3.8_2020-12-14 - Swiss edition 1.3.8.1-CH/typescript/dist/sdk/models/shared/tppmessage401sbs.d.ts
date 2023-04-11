@@ -1,9 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { MessageCode401SBSEnum } from "./messagecode401sbsenum";
 import { TppMessageCategoryEnum } from "./tppmessagecategoryenum";
-import { MessageCode401SbsEnum } from "./messagecode401sbsenum";
-export declare class TppMessage401Sbs extends SpeakeasyBase {
+export declare class TppMessage401SBS extends SpeakeasyBase {
+    /**
+     * Category of the TPP message category.
+     */
     category: TppMessageCategoryEnum;
-    code: MessageCode401SbsEnum;
+    /**
+     * Message codes defined for signing baskets for HTTP Error code 401 (UNAUTHORIZED).
+     */
+    code: MessageCode401SBSEnum;
     path?: string;
+    /**
+     * Additional explaining text to the TPP.
+     */
     text?: string;
 }

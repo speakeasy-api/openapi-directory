@@ -1,9 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ListApplicationsQueryParams extends SpeakeasyBase {
-    nextToken?: string;
-}
-export declare class ListApplicationsHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ListApplicationsRequest extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,16 +9,29 @@ export declare class ListApplicationsHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class ListApplicationsRequest extends SpeakeasyBase {
-    queryParams: ListApplicationsQueryParams;
-    headers: ListApplicationsHeaders;
+    /**
+     * A token used to get the next set of results.
+     */
+    nextToken?: string;
 }
 export declare class ListApplicationsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * InternalFailureException
+     */
     internalFailureException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * Success
+     */
     listApplicationsResponse?: shared.ListApplicationsResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

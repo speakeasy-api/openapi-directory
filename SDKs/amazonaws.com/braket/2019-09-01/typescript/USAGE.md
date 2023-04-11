@@ -1,36 +1,30 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { CancelQuantumTaskRequest, CancelQuantumTaskResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  CancelJobRequest,
+  CancelJobResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: CancelQuantumTaskRequest = {
-  pathParams: {
-    quantumTaskArn: "sit",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  headers: {
-    xAmzAlgorithm: "voluptas",
-    xAmzContentSha256: "culpa",
-    xAmzCredential: "expedita",
-    xAmzDate: "consequuntur",
-    xAmzSecurityToken: "dolor",
-    xAmzSignature: "expedita",
-    xAmzSignedHeaders: "voluptas",
-  },
-  request: {
-    clientToken: "fugit",
-  },
+});
+
+const req: CancelJobRequest = {
+  xAmzAlgorithm: "corrupti",
+  xAmzContentSha256: "provident",
+  xAmzCredential: "distinctio",
+  xAmzDate: "quibusdam",
+  xAmzSecurityToken: "unde",
+  xAmzSignature: "nulla",
+  xAmzSignedHeaders: "corrupti",
+  jobArn: "illum",
 };
 
-sdk.cancelQuantumTask(req).then((res: CancelQuantumTaskResponse | AxiosError) => {
+sdk.cancelJob(req).then((res: CancelJobResponse | AxiosError) => {
    // handle response
 });
 ```

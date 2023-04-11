@@ -1,14 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetLanguagesHeaders extends SpeakeasyBase {
-    xListenAPIKey: string;
-}
+import { AxiosResponse } from "axios";
 export declare class GetLanguagesRequest extends SpeakeasyBase {
-    headers: GetLanguagesHeaders;
+    /**
+     * Get API Key on listennotes.com/api
+     */
+    xListenAPIKey: string;
 }
 export declare class GetLanguagesResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * OK
+     */
     getLanguagesResponse?: shared.GetLanguagesResponse;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

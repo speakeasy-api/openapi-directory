@@ -41,5 +41,15 @@ export declare enum ExportableInstanceFieldEnum {
     RecommendationOptionsStandardThreeYearNoUpfrontReservedPrice = "RecommendationOptionsStandardThreeYearNoUpfrontReservedPrice",
     RecommendationsSourcesRecommendationSourceArn = "RecommendationsSourcesRecommendationSourceArn",
     RecommendationsSourcesRecommendationSourceType = "RecommendationsSourcesRecommendationSourceType",
-    LastRefreshTimestamp = "LastRefreshTimestamp"
+    LastRefreshTimestamp = "LastRefreshTimestamp",
+    CurrentPerformanceRisk = "CurrentPerformanceRisk",
+    RecommendationOptionsSavingsOpportunityPercentage = "RecommendationOptionsSavingsOpportunityPercentage",
+    RecommendationOptionsEstimatedMonthlySavingsCurrency = "RecommendationOptionsEstimatedMonthlySavingsCurrency",
+    RecommendationOptionsEstimatedMonthlySavingsValue = "RecommendationOptionsEstimatedMonthlySavingsValue",
+    EffectiveRecommendationPreferencesCpuVendorArchitectures = "EffectiveRecommendationPreferencesCpuVendorArchitectures",
+    EffectiveRecommendationPreferencesEnhancedInfrastructureMetrics = "EffectiveRecommendationPreferencesEnhancedInfrastructureMetrics",
+    EffectiveRecommendationPreferencesInferredWorkloadTypes = "EffectiveRecommendationPreferencesInferredWorkloadTypes",
+    InferredWorkloadTypes = "InferredWorkloadTypes",
+    RecommendationOptionsMigrationEffort = "RecommendationOptionsMigrationEffort",
+    EffectiveRecommendationPreferencesExternalMetricsSource = "EffectiveRecommendationPreferencesExternalMetricsSource"
 }

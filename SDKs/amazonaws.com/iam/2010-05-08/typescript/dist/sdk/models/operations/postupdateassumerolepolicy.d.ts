@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostUpdateAssumeRolePolicyActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTUpdateAssumeRolePolicyActionEnum {
     UpdateAssumeRolePolicy = "UpdateAssumeRolePolicy"
 }
-export declare enum PostUpdateAssumeRolePolicyVersionEnum {
+export declare enum POSTUpdateAssumeRolePolicyVersionEnum {
     TwoThousandAndTen0508 = "2010-05-08"
 }
-export declare class PostUpdateAssumeRolePolicyQueryParams extends SpeakeasyBase {
-    action: PostUpdateAssumeRolePolicyActionEnum;
-    version: PostUpdateAssumeRolePolicyVersionEnum;
-}
-export declare class PostUpdateAssumeRolePolicyHeaders extends SpeakeasyBase {
+export declare class POSTUpdateAssumeRolePolicyRequest extends SpeakeasyBase {
+    action: POSTUpdateAssumeRolePolicyActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTUpdateAssumeRolePolicyVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostUpdateAssumeRolePolicyHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostUpdateAssumeRolePolicyRequest extends SpeakeasyBase {
-    queryParams: PostUpdateAssumeRolePolicyQueryParams;
-    headers: PostUpdateAssumeRolePolicyHeaders;
-    request?: Uint8Array;
-}
-export declare class PostUpdateAssumeRolePolicyResponse extends SpeakeasyBase {
+export declare class POSTUpdateAssumeRolePolicyResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

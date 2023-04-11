@@ -1,4 +1,5 @@
 export * from "./addcustomroutingendpoints";
+export * from "./addendpoints";
 export * from "./advertisebyoipcidr";
 export * from "./allowcustomroutingtraffic";
 export * from "./createaccelerator";
@@ -35,6 +36,7 @@ export * from "./listlisteners";
 export * from "./listtagsforresource";
 export * from "./provisionbyoipcidr";
 export * from "./removecustomroutingendpoints";
+export * from "./removeendpoints";
 export * from "./tagresource";
 export * from "./untagresource";
 export * from "./updateaccelerator";

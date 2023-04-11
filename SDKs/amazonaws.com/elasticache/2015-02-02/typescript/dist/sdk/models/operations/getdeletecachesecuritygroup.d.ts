@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteCacheSecurityGroupActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteCacheSecurityGroupActionEnum {
     DeleteCacheSecurityGroup = "DeleteCacheSecurityGroup"
 }
-export declare enum GetDeleteCacheSecurityGroupVersionEnum {
+export declare enum GETDeleteCacheSecurityGroupVersionEnum {
     TwoThousandAndFifteen0202 = "2015-02-02"
 }
-export declare class GetDeleteCacheSecurityGroupQueryParams extends SpeakeasyBase {
-    action: GetDeleteCacheSecurityGroupActionEnum;
+export declare class GETDeleteCacheSecurityGroupRequest extends SpeakeasyBase {
+    action: GETDeleteCacheSecurityGroupActionEnum;
+    /**
+     * <p>The name of the cache security group to delete.</p> <note> <p>You cannot delete the default security group.</p> </note>
+     */
     cacheSecurityGroupName: string;
-    version: GetDeleteCacheSecurityGroupVersionEnum;
-}
-export declare class GetDeleteCacheSecurityGroupHeaders extends SpeakeasyBase {
+    version: GETDeleteCacheSecurityGroupVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDeleteCacheSecurityGroupHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteCacheSecurityGroupRequest extends SpeakeasyBase {
-    queryParams: GetDeleteCacheSecurityGroupQueryParams;
-    headers: GetDeleteCacheSecurityGroupHeaders;
-}
-export declare class GetDeleteCacheSecurityGroupResponse extends SpeakeasyBase {
+export declare class GETDeleteCacheSecurityGroupResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

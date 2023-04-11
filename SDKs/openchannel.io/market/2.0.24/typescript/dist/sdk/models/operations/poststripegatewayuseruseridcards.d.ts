@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class PostStripeGatewayUserUserIdCardsPathParams extends SpeakeasyBase {
-    userId: string;
-}
-export declare class PostStripeGatewayUserUserIdCardsQueryParams extends SpeakeasyBase {
-    isDefault?: boolean;
-    token: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PostStripeGatewayUserUserIdCardsRequest extends SpeakeasyBase {
-    pathParams: PostStripeGatewayUserUserIdCardsPathParams;
-    queryParams: PostStripeGatewayUserUserIdCardsQueryParams;
+    /**
+     * Set to true if this should be set to be the default credit card
+     */
+    isDefault?: boolean;
+    /**
+     * The Stripe token returned by the Stripe.js Stripe.card.createToken call
+     */
+    token: string;
+    /**
+     * The id of the user adding their credit card
+     */
+    userId: string;
 }
 export declare class PostStripeGatewayUserUserIdCardsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

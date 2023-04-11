@@ -1,11 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class SendSmsRequest extends SpeakeasyBase {
-    request: shared.SmsUniqueRequest;
-}
+import { AxiosResponse } from "axios";
 export declare class SendSmsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Dysfonctionnement
+     */
     erreur?: shared.Erreur;
-    smsReponse?: shared.SmsReponse;
+    /**
+     * Reponse OK
+     */
+    smsReponse?: shared.SMSReponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

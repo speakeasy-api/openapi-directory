@@ -1,23 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetChannelCatalogMarketplacePropertiesPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetChannelCatalogMarketplacePropertiesRequest extends SpeakeasyBase {
+    /**
+     * Indicates that the client accepts the following languages.
+     */
+    acceptLanguage?: string[];
     channelCatalogId: string;
-}
-export declare class GetChannelCatalogMarketplacePropertiesQueryParams extends SpeakeasyBase {
     redirectionPageUrl: string;
 }
-export declare class GetChannelCatalogMarketplacePropertiesHeaders extends SpeakeasyBase {
-    acceptLanguage?: string[];
-}
-export declare class GetChannelCatalogMarketplacePropertiesRequest extends SpeakeasyBase {
-    pathParams: GetChannelCatalogMarketplacePropertiesPathParams;
-    queryParams: GetChannelCatalogMarketplacePropertiesQueryParams;
-    headers: GetChannelCatalogMarketplacePropertiesHeaders;
-}
 export declare class GetChannelCatalogMarketplacePropertiesResponse extends SpeakeasyBase {
-    beezUPCommonErrorResponseMessage?: shared.BeezUpCommonErrorResponseMessage;
+    /**
+     * Occurs when something goes wrong
+     */
+    beezUPCommonErrorResponseMessage?: shared.BeezUPCommonErrorResponseMessage;
     contentType: string;
-    headers: Record<string, string[]>;
+    headers?: Record<string, string[]>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successfully fetched channel catalog properties
+     */
     channelCatalogMarketplaceProperties?: shared.ChannelCatalogMarketplaceProperties;
 }

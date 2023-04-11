@@ -1,20 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class DeleteFolderPathParams extends SpeakeasyBase {
-    folderId: string;
-}
-export declare class DeleteFolderHeaders extends SpeakeasyBase {
-    xeroTenantId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteFolderSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class DeleteFolderRequest extends SpeakeasyBase {
-    pathParams: DeleteFolderPathParams;
-    headers: DeleteFolderHeaders;
-    security: DeleteFolderSecurity;
+    /**
+     * Folder id for single object
+     */
+    folderId: string;
+    /**
+     * Xero identifier for Tenant
+     */
+    xeroTenantId: string;
 }
 export declare class DeleteFolderResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

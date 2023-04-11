@@ -1,5 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { CacheSubnetGroup } from "./cachesubnetgroup";
+/**
+ * Success
+ */
 export declare class CreateCacheSubnetGroupResult extends SpeakeasyBase {
+    /**
+     * <p>Represents the output of one of the following operations:</p> <ul> <li> <p> <code>CreateCacheSubnetGroup</code> </p> </li> <li> <p> <code>ModifyCacheSubnetGroup</code> </p> </li> </ul>
+     */
     cacheSubnetGroup?: CacheSubnetGroup;
 }

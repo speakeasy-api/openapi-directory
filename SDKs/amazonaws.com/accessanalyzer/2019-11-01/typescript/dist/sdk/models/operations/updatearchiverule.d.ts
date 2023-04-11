@@ -1,10 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdateArchiveRulePathParams extends SpeakeasyBase {
-    analyzerName: string;
-    ruleName: string;
+import { AxiosResponse } from "axios";
+export declare class UpdateArchiveRuleRequestBody extends SpeakeasyBase {
+    /**
+     * A client token.
+     */
+    clientToken?: string;
+    /**
+     * A filter to match for the rules to update. Only rules that match the filter are updated.
+     */
+    filter: Record<string, shared.Criterion>;
 }
-export declare class UpdateArchiveRuleHeaders extends SpeakeasyBase {
+export declare class UpdateArchiveRuleRequest extends SpeakeasyBase {
+    requestBody: UpdateArchiveRuleRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,22 +20,37 @@ export declare class UpdateArchiveRuleHeaders extends SpeakeasyBase {
     xAmzSecurityToken?: string;
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
-}
-export declare class UpdateArchiveRuleRequestBody extends SpeakeasyBase {
-    clientToken?: string;
-    filter: Record<string, shared.Criterion>;
-}
-export declare class UpdateArchiveRuleRequest extends SpeakeasyBase {
-    pathParams: UpdateArchiveRulePathParams;
-    headers: UpdateArchiveRuleHeaders;
-    request: UpdateArchiveRuleRequestBody;
+    /**
+     * The name of the analyzer to update the archive rules for.
+     */
+    analyzerName: string;
+    /**
+     * The name of the rule to update.
+     */
+    ruleName: string;
 }
 export declare class UpdateArchiveRuleResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

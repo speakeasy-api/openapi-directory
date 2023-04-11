@@ -1,13 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ProtocolProxyGetConfigPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ProtocolProxyGetConfigRequest extends SpeakeasyBase {
+    /**
+     * Agent to show the PROXY configuration
+     */
     agentNum: number;
 }
-export declare class ProtocolProxyGetConfigRequest extends SpeakeasyBase {
-    pathParams: ProtocolProxyGetConfigPathParams;
-}
 export declare class ProtocolProxyGetConfigResponse extends SpeakeasyBase {
-    configPROXY?: shared.ConfigProxy;
+    /**
+     * successful operation
+     */
+    configPROXY?: shared.ConfigPROXY;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

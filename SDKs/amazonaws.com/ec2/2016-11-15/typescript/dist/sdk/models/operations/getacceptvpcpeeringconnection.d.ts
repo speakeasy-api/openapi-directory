@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetAcceptVpcPeeringConnectionActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETAcceptVpcPeeringConnectionActionEnum {
     AcceptVpcPeeringConnection = "AcceptVpcPeeringConnection"
 }
-export declare enum GetAcceptVpcPeeringConnectionVersionEnum {
+export declare enum GETAcceptVpcPeeringConnectionVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetAcceptVpcPeeringConnectionQueryParams extends SpeakeasyBase {
-    action: GetAcceptVpcPeeringConnectionActionEnum;
+export declare class GETAcceptVpcPeeringConnectionRequest extends SpeakeasyBase {
+    action: GETAcceptVpcPeeringConnectionActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
-    version: GetAcceptVpcPeeringConnectionVersionEnum;
-    vpcPeeringConnectionId?: string;
-}
-export declare class GetAcceptVpcPeeringConnectionHeaders extends SpeakeasyBase {
+    version: GETAcceptVpcPeeringConnectionVersionEnum;
+    /**
+     * The ID of the VPC peering connection. You must specify this parameter in the request.
+     */
+    vpcPeeringConnectionId: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetAcceptVpcPeeringConnectionHeaders extends SpeakeasyBase 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetAcceptVpcPeeringConnectionRequest extends SpeakeasyBase {
-    queryParams: GetAcceptVpcPeeringConnectionQueryParams;
-    headers: GetAcceptVpcPeeringConnectionHeaders;
-}
-export declare class GetAcceptVpcPeeringConnectionResponse extends SpeakeasyBase {
+export declare class GETAcceptVpcPeeringConnectionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

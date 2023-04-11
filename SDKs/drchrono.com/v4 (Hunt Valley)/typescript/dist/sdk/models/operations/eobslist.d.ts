@@ -1,27 +1,37 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class EobsListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class EobsListSecurity extends SpeakeasyBase {
+    drchronoOauth2: string;
+}
+export declare class EobsListRequest extends SpeakeasyBase {
     cursor?: string;
     doctor?: number;
     pageSize?: number;
 }
-export declare class EobsListSecurity extends SpeakeasyBase {
-    drchronoOauth2: shared.SchemeDrchronoOauth2;
-}
 /**
  * Paginated Result
-**/
-export declare class EobsList200ApplicationJson extends SpeakeasyBase {
-    data?: shared.EobObject[];
+ */
+export declare class EobsList200ApplicationJSON extends SpeakeasyBase {
+    /**
+     * result data
+     */
+    data?: shared.EOBObject[];
+    /**
+     * Next Paginated page
+     */
     next?: string;
+    /**
+     * Previous paginated page
+     */
     previous?: string;
-}
-export declare class EobsListRequest extends SpeakeasyBase {
-    queryParams: EobsListQueryParams;
-    security: EobsListSecurity;
 }
 export declare class EobsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    eobsList200ApplicationJSONObject?: EobsList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * OK
+     */
+    eobsList200ApplicationJSONObject?: EobsList200ApplicationJSON;
 }

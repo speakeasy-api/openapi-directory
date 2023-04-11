@@ -1,13 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class StartSnowMonkeySecurity extends SpeakeasyBase {
-    otoroshiAuth: shared.SchemeOtoroshiAuth;
-}
-export declare class StartSnowMonkeyRequest extends SpeakeasyBase {
-    security: StartSnowMonkeySecurity;
-}
+import { AxiosResponse } from "axios";
 export declare class StartSnowMonkeyResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful operation
+     */
     done?: shared.Done;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

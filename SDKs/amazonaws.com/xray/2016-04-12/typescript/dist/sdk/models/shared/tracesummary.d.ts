@@ -1,17 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ValueWithServiceIds } from "./valuewithserviceids";
 import { AvailabilityZoneDetail } from "./availabilityzonedetail";
-import { ServiceId } from "./serviceid";
 import { ErrorRootCause } from "./errorrootcause";
 import { FaultRootCause } from "./faultrootcause";
 import { Http } from "./http";
 import { InstanceIdDetail } from "./instanceiddetail";
-import { ResourceArnDetail } from "./resourcearndetail";
+import { ResourceARNDetail } from "./resourcearndetail";
 import { ResponseTimeRootCause } from "./responsetimerootcause";
+import { ServiceId } from "./serviceid";
 import { TraceUser } from "./traceuser";
+import { ValueWithServiceIds } from "./valuewithserviceids";
 /**
  * Metadata generated from the segment documents in a trace.
-**/
+ */
 export declare class TraceSummary extends SpeakeasyBase {
     annotations?: Record<string, ValueWithServiceIds[]>;
     availabilityZones?: AvailabilityZoneDetail[];
@@ -27,7 +27,7 @@ export declare class TraceSummary extends SpeakeasyBase {
     instanceIds?: InstanceIdDetail[];
     isPartial?: boolean;
     matchedEventTime?: Date;
-    resourceARNs?: ResourceArnDetail[];
+    resourceARNs?: ResourceARNDetail[];
     responseTime?: number;
     responseTimeRootCauses?: ResponseTimeRootCause[];
     revision?: number;

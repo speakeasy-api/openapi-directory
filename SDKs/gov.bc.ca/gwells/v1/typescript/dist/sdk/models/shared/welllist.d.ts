@@ -1,7 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+export declare enum WellListAlternativeSpecsSubmittedIfRequiredEnum {
+    False = "false",
+    True = "true"
+}
+export declare enum WellListHydroFracturingPerformedEnum {
+    False = "false",
+    True = "true"
+}
+export declare enum WellListWellDisinfectedEnum {
+    False = "false",
+    True = "true"
+}
+export declare enum WellListOrientationOfWellEnum {
+    True = "true",
+    False = "false"
+}
 export declare class WellList extends SpeakeasyBase {
     alterationEndDate?: Date;
-    alternativeSpecsSubmitted?: boolean;
+    alternativeSpecsSubmitted?: WellListAlternativeSpecsSubmittedIfRequiredEnum;
     analyticSolutionType?: string;
     aquifer?: number;
     aquiferVulnerabilityIndex?: string;
@@ -41,7 +57,7 @@ export declare class WellList extends SpeakeasyBase {
     groundElevation?: string;
     groundElevationMethod?: string;
     hydraulicConductivity?: string;
-    hydroFracturingPerformed?: boolean;
+    hydroFracturingPerformed?: WellListHydroFracturingPerformedEnum;
     hydroFracturingYieldIncrease?: string;
     idPlateAttachedBy?: string;
     identificationPlateNumber?: number;
@@ -103,11 +119,11 @@ export declare class WellList extends SpeakeasyBase {
     waterSupplySystemWellName?: string;
     wellCapType?: string;
     wellClass?: string;
-    wellDisinfected?: boolean;
+    wellDisinfected?: WellListWellDisinfectedEnum;
     wellGuid?: string;
     wellIdentificationPlateAttached?: string;
     wellLocationDescription?: string;
-    wellOrientation?: boolean;
+    wellOrientation?: WellListOrientationOfWellEnum;
     wellStatus?: string;
     wellSubclass?: string;
     wellTagNumber?: number;

@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Required. Algorithm to use when creating a CryptoKeyVersion based on this template. For backwards compatibility, GOOGLE_SYMMETRIC_ENCRYPTION is implied if both this field is omitted and CryptoKey.purpose is ENCRYPT_DECRYPT.
+ */
 export declare enum CryptoKeyVersionTemplateAlgorithmEnum {
     CryptoKeyVersionAlgorithmUnspecified = "CRYPTO_KEY_VERSION_ALGORITHM_UNSPECIFIED",
     GoogleSymmetricEncryption = "GOOGLE_SYMMETRIC_ENCRYPTION",
@@ -30,6 +33,9 @@ export declare enum CryptoKeyVersionTemplateAlgorithmEnum {
     HmacSha224 = "HMAC_SHA224",
     ExternalSymmetricEncryption = "EXTERNAL_SYMMETRIC_ENCRYPTION"
 }
+/**
+ * ProtectionLevel to use when creating a CryptoKeyVersion based on this template. Immutable. Defaults to SOFTWARE.
+ */
 export declare enum CryptoKeyVersionTemplateProtectionLevelEnum {
     ProtectionLevelUnspecified = "PROTECTION_LEVEL_UNSPECIFIED",
     Software = "SOFTWARE",
@@ -39,8 +45,14 @@ export declare enum CryptoKeyVersionTemplateProtectionLevelEnum {
 }
 /**
  * A CryptoKeyVersionTemplate specifies the properties to use when creating a new CryptoKeyVersion, either manually with CreateCryptoKeyVersion or automatically as a result of auto-rotation.
-**/
+ */
 export declare class CryptoKeyVersionTemplate extends SpeakeasyBase {
+    /**
+     * Required. Algorithm to use when creating a CryptoKeyVersion based on this template. For backwards compatibility, GOOGLE_SYMMETRIC_ENCRYPTION is implied if both this field is omitted and CryptoKey.purpose is ENCRYPT_DECRYPT.
+     */
     algorithm?: CryptoKeyVersionTemplateAlgorithmEnum;
+    /**
+     * ProtectionLevel to use when creating a CryptoKeyVersion based on this template. Immutable. Defaults to SOFTWARE.
+     */
     protectionLevel?: CryptoKeyVersionTemplateProtectionLevelEnum;
 }

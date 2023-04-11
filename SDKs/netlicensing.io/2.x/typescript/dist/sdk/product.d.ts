@@ -1,5 +1,10 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Product operations
+ *
+ * @see {@link https://netlicensing.io/wiki/product-services} - Product Services
+ */
 export declare class Product {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,33 +14,38 @@ export declare class Product {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * createProduct - Create Product
+     * Create Product
      *
+     * @remarks
      * Creates a new Product
-    **/
-    createProduct(req: operations.CreateProductRequest, config?: AxiosRequestConfig): Promise<operations.CreateProductResponse>;
+     */
+    createProduct(req: operations.CreateProductRequestBody, security: operations.CreateProductSecurity, config?: AxiosRequestConfig): Promise<operations.CreateProductResponse>;
     /**
-     * deleteProduct - Delete Product
+     * Delete Product
      *
+     * @remarks
      * Delete a Product by 'number'
-    **/
-    deleteProduct(req: operations.DeleteProductRequest, config?: AxiosRequestConfig): Promise<operations.DeleteProductResponse>;
+     */
+    deleteProduct(req: operations.DeleteProductRequest, security: operations.DeleteProductSecurity, config?: AxiosRequestConfig): Promise<operations.DeleteProductResponse>;
     /**
-     * listProducts - List Products
+     * List Products
      *
+     * @remarks
      * Return a list of all configured Products for the current Vendor
-    **/
-    listProducts(req: operations.ListProductsRequest, config?: AxiosRequestConfig): Promise<operations.ListProductsResponse>;
+     */
+    listProducts(config?: AxiosRequestConfig): Promise<operations.ListProductsResponse>;
     /**
-     * productNumber - Get Product
+     * Get Product
      *
+     * @remarks
      * Return a Product by 'productNumber'
-    **/
-    productNumber(req: operations.ProductNumberRequest, config?: AxiosRequestConfig): Promise<operations.ProductNumberResponse>;
+     */
+    productNumber(req: operations.ProductNumberRequest, security: operations.ProductNumberSecurity, config?: AxiosRequestConfig): Promise<operations.ProductNumberResponse>;
     /**
-     * updateProduct - Update Product
+     * Update Product
      *
+     * @remarks
      * Sets the provided properties to a Product. Return an updated Product
-    **/
-    updateProduct(req: operations.UpdateProductRequest, config?: AxiosRequestConfig): Promise<operations.UpdateProductResponse>;
+     */
+    updateProduct(req: operations.UpdateProductRequest, security: operations.UpdateProductSecurity, config?: AxiosRequestConfig): Promise<operations.UpdateProductResponse>;
 }

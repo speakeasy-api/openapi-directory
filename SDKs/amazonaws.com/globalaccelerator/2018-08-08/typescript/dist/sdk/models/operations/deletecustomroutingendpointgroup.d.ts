@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteCustomRoutingEndpointGroupXAmzTargetEnum {
     GlobalAcceleratorV20180706DeleteCustomRoutingEndpointGroup = "GlobalAccelerator_V20180706.DeleteCustomRoutingEndpointGroup"
 }
-export declare class DeleteCustomRoutingEndpointGroupHeaders extends SpeakeasyBase {
+export declare class DeleteCustomRoutingEndpointGroupRequest extends SpeakeasyBase {
+    deleteCustomRoutingEndpointGroupRequest: shared.DeleteCustomRoutingEndpointGroupRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class DeleteCustomRoutingEndpointGroupHeaders extends SpeakeasyBa
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteCustomRoutingEndpointGroupXAmzTargetEnum;
 }
-export declare class DeleteCustomRoutingEndpointGroupRequest extends SpeakeasyBase {
-    headers: DeleteCustomRoutingEndpointGroupHeaders;
-    request: shared.DeleteCustomRoutingEndpointGroupRequest;
-}
 export declare class DeleteCustomRoutingEndpointGroupResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * EndpointGroupNotFoundException
+     */
     endpointGroupNotFoundException?: any;
+    /**
+     * InternalServiceErrorException
+     */
     internalServiceErrorException?: any;
+    /**
+     * InvalidArgumentException
+     */
     invalidArgumentException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -14,9 +14,18 @@ export declare enum GrantAppLevelPermissionsEnum {
 }
 /**
  * An access grant resource.
-**/
+ */
 export declare class Grant extends SpeakeasyBase {
+    /**
+     * The permissions granted to the user for this app.
+     */
     appLevelPermissions?: GrantAppLevelPermissionsEnum[];
+    /**
+     * Required. Resource name for this grant, following the pattern "developers/{developer}/users/{email}/grants/{package_name}". If this grant is for a draft app, the app ID will be used in this resource name instead of the package name.
+     */
     name?: string;
+    /**
+     * Immutable. The package name of the app. This will be empty for draft apps.
+     */
     packageName?: string;
 }

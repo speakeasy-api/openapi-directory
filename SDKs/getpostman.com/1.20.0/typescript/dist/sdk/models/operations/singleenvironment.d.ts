@@ -1,27 +1,32 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class SingleEnvironmentPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class SingleEnvironmentRequest extends SpeakeasyBase {
     environmentUid: string;
 }
-export declare class SingleEnvironment200ApplicationJsonEnvironmentValues extends SpeakeasyBase {
+export declare class SingleEnvironment200ApplicationJSONEnvironmentValues extends SpeakeasyBase {
     enabled?: boolean;
     hovered?: boolean;
     key?: string;
     type?: string;
     value?: string;
 }
-export declare class SingleEnvironment200ApplicationJsonEnvironment extends SpeakeasyBase {
+export declare class SingleEnvironment200ApplicationJSONEnvironment extends SpeakeasyBase {
     id?: string;
     name?: string;
-    values?: SingleEnvironment200ApplicationJsonEnvironmentValues[];
+    values?: SingleEnvironment200ApplicationJSONEnvironmentValues[];
 }
-export declare class SingleEnvironment200ApplicationJson extends SpeakeasyBase {
-    environment?: SingleEnvironment200ApplicationJsonEnvironment;
-}
-export declare class SingleEnvironmentRequest extends SpeakeasyBase {
-    pathParams: SingleEnvironmentPathParams;
+/**
+ * Valid Response
+ */
+export declare class SingleEnvironment200ApplicationJSON extends SpeakeasyBase {
+    environment?: SingleEnvironment200ApplicationJSONEnvironment;
 }
 export declare class SingleEnvironmentResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    singleEnvironment200ApplicationJSONObject?: SingleEnvironment200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Valid Response
+     */
+    singleEnvironment200ApplicationJSONObject?: SingleEnvironment200ApplicationJSON;
 }

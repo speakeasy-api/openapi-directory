@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * OK
+ */
 export declare class SentryImpactRiskObject extends SpeakeasyBase {
     palermoScaleMax?: string;
     absoluteMagnitude?: string;

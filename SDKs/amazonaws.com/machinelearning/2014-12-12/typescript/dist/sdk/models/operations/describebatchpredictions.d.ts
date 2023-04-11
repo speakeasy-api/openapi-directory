@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeBatchPredictionsQueryParams extends SpeakeasyBase {
-    limit?: string;
-    nextToken?: string;
-}
+import { AxiosResponse } from "axios";
 export declare enum DescribeBatchPredictionsXAmzTargetEnum {
-    AmazonMl20141212DescribeBatchPredictions = "AmazonML_20141212.DescribeBatchPredictions"
+    AmazonML20141212DescribeBatchPredictions = "AmazonML_20141212.DescribeBatchPredictions"
 }
-export declare class DescribeBatchPredictionsHeaders extends SpeakeasyBase {
+export declare class DescribeBatchPredictionsRequest extends SpeakeasyBase {
+    describeBatchPredictionsInput: shared.DescribeBatchPredictionsInput;
+    /**
+     * Pagination limit
+     */
+    limit?: string;
+    /**
+     * Pagination token
+     */
+    nextToken?: string;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -17,15 +23,20 @@ export declare class DescribeBatchPredictionsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeBatchPredictionsXAmzTargetEnum;
 }
-export declare class DescribeBatchPredictionsRequest extends SpeakeasyBase {
-    queryParams: DescribeBatchPredictionsQueryParams;
-    headers: DescribeBatchPredictionsHeaders;
-    request: shared.DescribeBatchPredictionsInput;
-}
 export declare class DescribeBatchPredictionsResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeBatchPredictionsOutput?: shared.DescribeBatchPredictionsOutput;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

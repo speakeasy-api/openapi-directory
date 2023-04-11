@@ -1,19 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class CrawlPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class CrawlRequest extends SpeakeasyBase {
     query: string;
 }
-export declare class Crawl200ApplicationJson extends SpeakeasyBase {
+/**
+ * Successful Response
+ */
+export declare class Crawl200ApplicationJSON extends SpeakeasyBase {
     answer?: string;
     results?: string[];
     total?: string;
 }
-export declare class CrawlRequest extends SpeakeasyBase {
-    pathParams: CrawlPathParams;
-}
 export declare class CrawlResponse extends SpeakeasyBase {
     contentType: string;
-    crawl200ApplicationJSONObject?: Crawl200ApplicationJson;
-    httpValidationError?: shared.HttpValidationError;
+    /**
+     * Successful Response
+     */
+    crawl200ApplicationJSONObject?: Crawl200ApplicationJSON;
+    /**
+     * Validation Error
+     */
+    httpValidationError?: shared.HTTPValidationError;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

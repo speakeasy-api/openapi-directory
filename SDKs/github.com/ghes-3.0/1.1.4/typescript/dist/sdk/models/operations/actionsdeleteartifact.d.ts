@@ -1,13 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ActionsDeleteArtifactPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class ActionsDeleteArtifactRequest extends SpeakeasyBase {
+    /**
+     * artifact_id parameter
+     */
     artifactId: number;
     owner: string;
     repo: string;
 }
-export declare class ActionsDeleteArtifactRequest extends SpeakeasyBase {
-    pathParams: ActionsDeleteArtifactPathParams;
-}
 export declare class ActionsDeleteArtifactResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

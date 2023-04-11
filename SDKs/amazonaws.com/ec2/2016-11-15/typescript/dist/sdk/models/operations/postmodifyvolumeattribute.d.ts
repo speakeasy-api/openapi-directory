@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostModifyVolumeAttributeActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTModifyVolumeAttributeActionEnum {
     ModifyVolumeAttribute = "ModifyVolumeAttribute"
 }
-export declare enum PostModifyVolumeAttributeVersionEnum {
+export declare enum POSTModifyVolumeAttributeVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostModifyVolumeAttributeQueryParams extends SpeakeasyBase {
-    action: PostModifyVolumeAttributeActionEnum;
-    version: PostModifyVolumeAttributeVersionEnum;
-}
-export declare class PostModifyVolumeAttributeHeaders extends SpeakeasyBase {
+export declare class POSTModifyVolumeAttributeRequest extends SpeakeasyBase {
+    action: POSTModifyVolumeAttributeActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTModifyVolumeAttributeVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,12 +18,8 @@ export declare class PostModifyVolumeAttributeHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostModifyVolumeAttributeRequest extends SpeakeasyBase {
-    queryParams: PostModifyVolumeAttributeQueryParams;
-    headers: PostModifyVolumeAttributeHeaders;
-    request?: Uint8Array;
-}
-export declare class PostModifyVolumeAttributeResponse extends SpeakeasyBase {
+export declare class POSTModifyVolumeAttributeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

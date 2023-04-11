@@ -1,0 +1,22 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { AxiosResponse } from "axios";
+export declare class ValidateDocumentbyClustersRequest extends SpeakeasyBase {
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand
+     */
+    accept: string;
+    requestBody: any[];
+    /**
+     * Two letter word that identifies the data structure
+     */
+    acronym: string;
+    /**
+     * Id of the document
+     */
+    id: string;
+}
+export declare class ValidateDocumentbyClustersResponse extends SpeakeasyBase {
+    contentType: string;
+    statusCode: number;
+    rawResponse?: AxiosResponse;
+}

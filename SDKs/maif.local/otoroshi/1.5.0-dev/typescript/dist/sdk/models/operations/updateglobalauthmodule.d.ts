@@ -1,18 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class UpdateGlobalAuthModulePathParams extends SpeakeasyBase {
-    id: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UpdateGlobalAuthModuleSecurity extends SpeakeasyBase {
-    otoroshiAuth: shared.SchemeOtoroshiAuth;
+    password: string;
+    username: string;
 }
 export declare class UpdateGlobalAuthModuleRequest extends SpeakeasyBase {
-    pathParams: UpdateGlobalAuthModulePathParams;
-    request?: any;
-    security: UpdateGlobalAuthModuleSecurity;
+    requestBody?: any;
+    /**
+     * The auth. config id
+     */
+    id: string;
 }
 export declare class UpdateGlobalAuthModuleResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Successful operation
+     */
     updateGlobalAuthModule200ApplicationJSONOneOf?: any;
 }

@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DeleteDataCatalogXAmzTargetEnum {
     AmazonAthenaDeleteDataCatalog = "AmazonAthena.DeleteDataCatalog"
 }
-export declare class DeleteDataCatalogHeaders extends SpeakeasyBase {
+export declare class DeleteDataCatalogRequest extends SpeakeasyBase {
+    deleteDataCatalogInput: shared.DeleteDataCatalogInput;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class DeleteDataCatalogHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DeleteDataCatalogXAmzTargetEnum;
 }
-export declare class DeleteDataCatalogRequest extends SpeakeasyBase {
-    headers: DeleteDataCatalogHeaders;
-    request: shared.DeleteDataCatalogInput;
-}
 export declare class DeleteDataCatalogResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     deleteDataCatalogOutput?: Record<string, any>;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

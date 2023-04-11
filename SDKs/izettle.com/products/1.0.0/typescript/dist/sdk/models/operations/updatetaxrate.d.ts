@@ -1,20 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class UpdateTaxRatePathParams extends SpeakeasyBase {
-    taxRateUuid: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UpdateTaxRateSecurity extends SpeakeasyBase {
-    zettleApiKey?: shared.SchemeZettleApiKey;
-    zettleOauth?: shared.SchemeZettleOauth;
+    zettleOauth: string;
 }
 export declare class UpdateTaxRateRequest extends SpeakeasyBase {
-    pathParams: UpdateTaxRatePathParams;
-    request: shared.TaxRateUpdateRequest;
-    security: UpdateTaxRateSecurity;
+    taxRateUpdateRequest: shared.TaxRateUpdateRequest;
+    taxRateUuid: string;
 }
 export declare class UpdateTaxRateResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Invalid request body
+     */
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Updated tax rate
+     */
     taxRate?: shared.TaxRate;
 }

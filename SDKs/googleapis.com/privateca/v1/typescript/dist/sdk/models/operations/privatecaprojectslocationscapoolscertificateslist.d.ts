@@ -1,36 +1,82 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PrivatecaProjectsLocationsCaPoolsCertificatesListPathParams extends SpeakeasyBase {
-    parent: string;
-}
-export declare class PrivatecaProjectsLocationsCaPoolsCertificatesListQueryParams extends SpeakeasyBase {
-    dollarXgafv?: shared.XgafvEnum;
-    accessToken?: string;
-    alt?: shared.AltEnum;
-    callback?: string;
-    fields?: string;
-    filter?: string;
-    key?: string;
-    oauthToken?: string;
-    orderBy?: string;
-    pageSize?: number;
-    pageToken?: string;
-    prettyPrint?: boolean;
-    quotaUser?: string;
-    uploadType?: string;
-    uploadProtocol?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PrivatecaProjectsLocationsCaPoolsCertificatesListSecurity extends SpeakeasyBase {
-    oauth2: shared.SchemeOauth2;
-    oauth2c: shared.SchemeOauth2c;
+    oauth2: string;
+    oauth2c: string;
 }
 export declare class PrivatecaProjectsLocationsCaPoolsCertificatesListRequest extends SpeakeasyBase {
-    pathParams: PrivatecaProjectsLocationsCaPoolsCertificatesListPathParams;
-    queryParams: PrivatecaProjectsLocationsCaPoolsCertificatesListQueryParams;
-    security: PrivatecaProjectsLocationsCaPoolsCertificatesListSecurity;
+    /**
+     * V1 error format.
+     */
+    dollarXgafv?: shared.XgafvEnum;
+    /**
+     * OAuth access token.
+     */
+    accessToken?: string;
+    /**
+     * Data format for response.
+     */
+    alt?: shared.AltEnum;
+    /**
+     * JSONP
+     */
+    callback?: string;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * Optional. Only include resources that match the filter in the response. For details on supported filters and syntax, see [Certificates Filtering documentation](https://cloud.google.com/certificate-authority-service/docs/sorting-filtering-certificates#filtering_support).
+     */
+    filter?: string;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauthToken?: string;
+    /**
+     * Optional. Specify how the results should be sorted. For details on supported fields and syntax, see [Certificates Sorting documentation](https://cloud.google.com/certificate-authority-service/docs/sorting-filtering-certificates#sorting_support).
+     */
+    orderBy?: string;
+    /**
+     * Optional. Limit on the number of Certificates to include in the response. Further Certificates can subsequently be obtained by including the ListCertificatesResponse.next_page_token in a subsequent request. If unspecified, the server will pick an appropriate default.
+     */
+    pageSize?: number;
+    /**
+     * Optional. Pagination token, returned earlier via ListCertificatesResponse.next_page_token.
+     */
+    pageToken?: string;
+    /**
+     * Required. The resource name of the location associated with the Certificates, in the format `projects/* /locations/* /caPools/*`.
+     */
+    parent: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    uploadType?: string;
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    uploadProtocol?: string;
 }
 export declare class PrivatecaProjectsLocationsCaPoolsCertificatesListResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Successful response
+     */
     listCertificatesResponse?: shared.ListCertificatesResponse;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

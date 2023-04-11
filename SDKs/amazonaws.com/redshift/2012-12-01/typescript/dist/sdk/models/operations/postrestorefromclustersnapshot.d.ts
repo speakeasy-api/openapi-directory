@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostRestoreFromClusterSnapshotActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTRestoreFromClusterSnapshotActionEnum {
     RestoreFromClusterSnapshot = "RestoreFromClusterSnapshot"
 }
-export declare enum PostRestoreFromClusterSnapshotVersionEnum {
+export declare enum POSTRestoreFromClusterSnapshotVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class PostRestoreFromClusterSnapshotQueryParams extends SpeakeasyBase {
-    action: PostRestoreFromClusterSnapshotActionEnum;
-    version: PostRestoreFromClusterSnapshotVersionEnum;
-}
-export declare class PostRestoreFromClusterSnapshotHeaders extends SpeakeasyBase {
+export declare class POSTRestoreFromClusterSnapshotRequest extends SpeakeasyBase {
+    action: POSTRestoreFromClusterSnapshotActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTRestoreFromClusterSnapshotVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostRestoreFromClusterSnapshotHeaders extends SpeakeasyBase
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostRestoreFromClusterSnapshotRequest extends SpeakeasyBase {
-    queryParams: PostRestoreFromClusterSnapshotQueryParams;
-    headers: PostRestoreFromClusterSnapshotHeaders;
-    request?: Uint8Array;
-}
-export declare class PostRestoreFromClusterSnapshotResponse extends SpeakeasyBase {
+export declare class POSTRestoreFromClusterSnapshotResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

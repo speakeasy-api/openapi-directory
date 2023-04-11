@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { CognitoIdentityProvider } from "./cognitoidentityprovider";
 /**
  * Input to the CreateIdentityPool action.
-**/
+ */
 export declare class CreateIdentityPoolInput extends SpeakeasyBase {
     allowClassicFlow?: boolean;
     allowUnauthenticatedIdentities: boolean;

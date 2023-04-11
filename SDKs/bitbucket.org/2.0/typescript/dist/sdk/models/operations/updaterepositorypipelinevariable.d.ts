@@ -1,16 +1,33 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UpdateRepositoryPipelineVariablePathParams extends SpeakeasyBase {
-    repoSlug: string;
-    variableUuid: string;
-    workspace: string;
-}
+import { AxiosResponse } from "axios";
 export declare class UpdateRepositoryPipelineVariableRequest extends SpeakeasyBase {
-    pathParams: UpdateRepositoryPipelineVariablePathParams;
-    request: Record<string, any>;
+    /**
+     * The updated variable
+     */
+    requestBody: Record<string, any>;
+    /**
+     * The repository.
+     */
+    repoSlug: string;
+    /**
+     * The UUID of the variable to update.
+     */
+    variableUuid: string;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
+     */
+    workspace: string;
 }
 export declare class UpdateRepositoryPipelineVariableResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * The account, repository or variable with the given UUID was not found.
+     */
     error?: Record<string, any>;
+    /**
+     * The variable was updated.
+     */
     pipelineVariable?: Record<string, any>;
 }

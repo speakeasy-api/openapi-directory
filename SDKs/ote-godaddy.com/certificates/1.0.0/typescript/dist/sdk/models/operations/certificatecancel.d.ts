@@ -1,12 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CertificateCancelPathParams extends SpeakeasyBase {
-    certificateId: string;
-}
+import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare class CertificateCancelRequest extends SpeakeasyBase {
-    pathParams: CertificateCancelPathParams;
+    /**
+     * Certificate id to cancel
+     */
+    certificateId: string;
 }
 export declare class CertificateCancelResponse extends SpeakeasyBase {
     contentType: string;
-    error?: any;
+    /**
+     * Authentication info not sent or invalid
+     */
+    error?: shared.ErrorT;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

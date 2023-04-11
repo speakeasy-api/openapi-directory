@@ -1,9 +1,21 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Contains the list of servers available to the SDK
+ */
 export declare const ServerList: readonly ["http://eos.local", "https://{protocol}://{host}:{port}/v1/"];
+/**
+ * The available configuration options for the SDK
+ */
 export type SDKProps = {
+    /**
+     * Allows overriding the default axios client used by the SDK
+     */
     defaultClient?: AxiosInstance;
-    serverUrl?: string;
+    /**
+     * Allows overriding the default server URL used by the SDK
+     */
+    serverURL?: string;
 };
 export declare class SDK {
     _defaultClient: AxiosInstance;
@@ -12,29 +24,34 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(props: SDKProps);
+    private _globals;
+    constructor(props?: SDKProps);
     /**
-     * connect - connect
+     * connect
      *
+     * @remarks
      * Initiate a connection to a specified peer.
-    **/
-    connect(req: operations.ConnectRequest, config?: AxiosRequestConfig): Promise<operations.ConnectResponse>;
+     */
+    connect(req: operations.ConnectRequestBody, config?: AxiosRequestConfig): Promise<operations.ConnectResponse>;
     /**
-     * connections - connections
+     * connections
      *
+     * @remarks
      * Returns an array of all peer connection statuses.
-    **/
-    connections(req: operations.ConnectionsRequest, config?: AxiosRequestConfig): Promise<operations.ConnectionsResponse>;
+     */
+    connections(req: Record<string, any>, config?: AxiosRequestConfig): Promise<operations.ConnectionsResponse>;
     /**
-     * disconnect - disconnect
+     * disconnect
      *
+     * @remarks
      * Initiate disconnection from a specified peer.
-    **/
-    disconnect(req: operations.DisconnectRequest, config?: AxiosRequestConfig): Promise<operations.DisconnectResponse>;
+     */
+    disconnect(req: operations.DisconnectRequestBody, config?: AxiosRequestConfig): Promise<operations.DisconnectResponse>;
     /**
-     * status - status
+     * status
      *
+     * @remarks
      * Retrieves the connection status for a specified peer.
-    **/
-    status(req: operations.StatusRequest, config?: AxiosRequestConfig): Promise<operations.StatusResponse>;
+     */
+    status(req: operations.StatusRequestBody, config?: AxiosRequestConfig): Promise<operations.StatusResponse>;
 }

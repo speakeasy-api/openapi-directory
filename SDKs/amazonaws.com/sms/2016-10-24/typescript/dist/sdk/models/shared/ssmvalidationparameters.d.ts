@@ -3,8 +3,8 @@ import { ScriptTypeEnum } from "./scripttypeenum";
 import { Source } from "./source";
 /**
  * Contains validation parameters.
-**/
-export declare class SsmValidationParameters extends SpeakeasyBase {
+ */
+export declare class SSMValidationParameters extends SpeakeasyBase {
     command?: string;
     executionTimeoutSeconds?: number;
     instanceId?: string;

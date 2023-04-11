@@ -1,17 +1,17 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { PostAuthRequest, PostAuthResponse } from "openapi/src/sdk/models/operations";
+import {
+  PostAuthRequest,
+  PostAuthResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: PostAuthRequest = {
-  queryParams: {
-    clientId: "sit",
-    clientSecret: "voluptas",
-  },
+  clientId: "corrupti",
+  clientSecret: "provident",
 };
 
 sdk.postAuth(req).then((res: PostAuthResponse | AxiosError) => {

@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Information about an RAM permission.
-**/
+ */
 export declare class ResourceSharePermissionDetail extends SpeakeasyBase {
     arn?: string;
     creationTime?: Date;

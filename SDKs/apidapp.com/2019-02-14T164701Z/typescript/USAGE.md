@@ -1,16 +1,16 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { DeleteKeyKeyRequest, DeleteKeyKeyResponse } from "openapi/src/sdk/models/operations";
+import {
+  DeleteKeyKeyRequest,
+  DeleteKeyKeyResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: DeleteKeyKeyRequest = {
-  pathParams: {
-    key: "sit",
-  },
+  key: "corrupti",
 };
 
 sdk.deleteKeyKey(req).then((res: DeleteKeyKeyResponse | AxiosError) => {

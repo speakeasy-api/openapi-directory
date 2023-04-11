@@ -1,6 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetChannelHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetChannelRequestBody extends SpeakeasyBase {
+    /**
+     * ARN of the channel for which the configuration is to be retrieved.
+     */
+    arn: string;
+}
+export declare class GetChannelRequest extends SpeakeasyBase {
+    requestBody: GetChannelRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -9,18 +17,24 @@ export declare class GetChannelHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetChannelRequestBody extends SpeakeasyBase {
-    arn: string;
-}
-export declare class GetChannelRequest extends SpeakeasyBase {
-    headers: GetChannelHeaders;
-    request: GetChannelRequestBody;
-}
 export declare class GetChannelResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getChannelResponse?: shared.GetChannelResponse;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

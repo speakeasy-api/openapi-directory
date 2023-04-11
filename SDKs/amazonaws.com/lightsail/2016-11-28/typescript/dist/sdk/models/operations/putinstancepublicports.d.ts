@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum PutInstancePublicPortsXAmzTargetEnum {
     Lightsail20161128PutInstancePublicPorts = "Lightsail_20161128.PutInstancePublicPorts"
 }
-export declare class PutInstancePublicPortsHeaders extends SpeakeasyBase {
+export declare class PutInstancePublicPortsRequest extends SpeakeasyBase {
+    putInstancePublicPortsRequest: shared.PutInstancePublicPortsRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,19 +15,40 @@ export declare class PutInstancePublicPortsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: PutInstancePublicPortsXAmzTargetEnum;
 }
-export declare class PutInstancePublicPortsRequest extends SpeakeasyBase {
-    headers: PutInstancePublicPortsHeaders;
-    request: shared.PutInstancePublicPortsRequest;
-}
 export declare class PutInstancePublicPortsResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * AccountSetupInProgressException
+     */
     accountSetupInProgressException?: any;
     contentType: string;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
+    /**
+     * OperationFailureException
+     */
     operationFailureException?: any;
+    /**
+     * Success
+     */
     putInstancePublicPortsResult?: shared.PutInstancePublicPortsResult;
+    /**
+     * ServiceException
+     */
     serviceException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * UnauthenticatedException
+     */
     unauthenticatedException?: any;
 }

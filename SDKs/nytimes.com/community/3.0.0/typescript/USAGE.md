@@ -1,24 +1,19 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetUserContentByDateJsonRequest, GetUserContentByDateJsonResponse } from "openapi/src/sdk/models/operations";
+import {
+  GETUserContentByDateJsonRequest,
+  GETUserContentByDateJsonResponse
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
-const req: GetUserContentByDateJsonRequest = {
-  security: {
-    apiKey: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  },
-  queryParams: {
-    date: "sit",
-  },
+
+const req: GETUserContentByDateJsonRequest = {
+  date: "corrupti",
 };
 
-sdk.getUserContentByDateJson(req).then((res: GetUserContentByDateJsonResponse | AxiosError) => {
+sdk.getUserContentByDateJson(req).then((res: GETUserContentByDateJsonResponse | AxiosError) => {
    // handle response
 });
 ```

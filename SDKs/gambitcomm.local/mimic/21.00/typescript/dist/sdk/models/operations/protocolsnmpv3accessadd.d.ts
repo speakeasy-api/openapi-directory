@@ -1,20 +1,49 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolSnmpv3AccessAddPathParams extends SpeakeasyBase {
-    agentNum: number;
-    contextMatch: string;
-    groupName: string;
-    notifyView: string;
-    prefix: string;
-    readView: string;
-    securityLevel: string;
-    securityModel: string;
-    writeView: string;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolSnmpv3AccessAddRequest extends SpeakeasyBase {
-    pathParams: ProtocolSnmpv3AccessAddPathParams;
+    /**
+     * Agent to add the SNMPv3 access
+     */
+    agentNum: number;
+    /**
+     * SNMPv3 access context match
+     */
+    contextMatch: string;
+    /**
+     * SNMPv3 access name
+     */
+    groupName: string;
+    /**
+     * SNMPv3 access notify view
+     */
+    notifyView: string;
+    /**
+     * SNMPv3 prefix
+     */
+    prefix: string;
+    /**
+     * SNMPv3 access read view
+     */
+    readView: string;
+    /**
+     * SNMPv3 access security level
+     */
+    securityLevel: string;
+    /**
+     * SNMPv3 access security model
+     */
+    securityModel: string;
+    /**
+     * SNMPv3 access write view
+     */
+    writeView: string;
 }
 export declare class ProtocolSnmpv3AccessAddResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolSnmpv3AccessAdd200ApplicationJSONString?: string;
 }

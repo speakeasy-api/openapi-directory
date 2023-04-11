@@ -4,7 +4,7 @@ import { AuthTypeValueEnum } from "./authtypevalueenum";
 import { NestingLevelValueEnum } from "./nestinglevelvalueenum";
 /**
  * Provides information that defines a MongoDB endpoint.
-**/
+ */
 export declare class MongoDbSettings extends SpeakeasyBase {
     authMechanism?: AuthMechanismValueEnum;
     authSource?: string;

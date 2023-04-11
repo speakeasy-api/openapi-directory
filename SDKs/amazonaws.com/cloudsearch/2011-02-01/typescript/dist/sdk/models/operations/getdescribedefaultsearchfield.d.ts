@@ -1,16 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeDefaultSearchFieldActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeDefaultSearchFieldActionEnum {
     DescribeDefaultSearchField = "DescribeDefaultSearchField"
 }
-export declare enum GetDescribeDefaultSearchFieldVersionEnum {
+export declare enum GETDescribeDefaultSearchFieldVersionEnum {
     TwoThousandAndEleven0201 = "2011-02-01"
 }
-export declare class GetDescribeDefaultSearchFieldQueryParams extends SpeakeasyBase {
-    action: GetDescribeDefaultSearchFieldActionEnum;
+export declare class GETDescribeDefaultSearchFieldRequest extends SpeakeasyBase {
+    action: GETDescribeDefaultSearchFieldActionEnum;
     domainName: string;
-    version: GetDescribeDefaultSearchFieldVersionEnum;
-}
-export declare class GetDescribeDefaultSearchFieldHeaders extends SpeakeasyBase {
+    version: GETDescribeDefaultSearchFieldVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +18,9 @@ export declare class GetDescribeDefaultSearchFieldHeaders extends SpeakeasyBase 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeDefaultSearchFieldRequest extends SpeakeasyBase {
-    queryParams: GetDescribeDefaultSearchFieldQueryParams;
-    headers: GetDescribeDefaultSearchFieldHeaders;
-}
-export declare class GetDescribeDefaultSearchFieldResponse extends SpeakeasyBase {
+export declare class GETDescribeDefaultSearchFieldResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

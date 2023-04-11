@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetEventIntegrationPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetEventIntegrationRequest extends SpeakeasyBase {
+    /**
+     * The name of the event integration.
+     */
     name: string;
-}
-export declare class GetEventIntegrationHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,17 +14,32 @@ export declare class GetEventIntegrationHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetEventIntegrationRequest extends SpeakeasyBase {
-    pathParams: GetEventIntegrationPathParams;
-    headers: GetEventIntegrationHeaders;
-}
 export declare class GetEventIntegrationResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     getEventIntegrationResponse?: shared.GetEventIntegrationResponse;
+    /**
+     * InternalServiceError
+     */
     internalServiceError?: any;
+    /**
+     * InvalidRequestException
+     */
     invalidRequestException?: any;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
 }

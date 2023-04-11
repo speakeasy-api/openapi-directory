@@ -1,20 +1,31 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DeleteUsersSelectedUserSshKeysKeyIdPathParams extends SpeakeasyBase {
-    keyId: string;
-    selectedUser: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteUsersSelectedUserSshKeysKeyIdSecurity extends SpeakeasyBase {
-    oauth2?: shared.SchemeOauth2;
+    apiKey?: string;
     basic?: shared.SchemeBasic;
-    apiKey?: shared.SchemeApiKey;
+    oauth2?: string;
 }
 export declare class DeleteUsersSelectedUserSshKeysKeyIdRequest extends SpeakeasyBase {
-    pathParams: DeleteUsersSelectedUserSshKeysKeyIdPathParams;
-    security: DeleteUsersSelectedUserSshKeysKeyIdSecurity;
+    /**
+     * The SSH key's UUID value.
+     */
+    keyId: string;
+    /**
+     * This can either be the UUID of the account, surrounded by curly-braces, for
+     *
+     * @remarks
+     * example: `{account UUID}`, OR an Atlassian Account ID.
+     *
+     */
+    selectedUser: string;
 }
 export declare class DeleteUsersSelectedUserSshKeysKeyIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * If the submitted key or related value is invalid
+     */
     error?: Record<string, any>;
 }

@@ -1,6 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetPaymentsType extends SpeakeasyBase {
+import { GETPaymentType } from "./getpaymenttype";
+export declare class GETPaymentsType extends SpeakeasyBase {
+    /**
+     * URL to retrieve the next page of the response if it exists; otherwise absent.
+     *
+     * @remarks
+     *
+     */
     nextPage?: string;
-    payments?: Record<string, any>[];
+    /**
+     * Information about one or more payments:
+     *
+     * @remarks
+     *
+     */
+    payments?: GETPaymentType[];
+    /**
+     * Returns `true` if the request was processed successfully.
+     *
+     * @remarks
+     *
+     */
     success?: boolean;
 }

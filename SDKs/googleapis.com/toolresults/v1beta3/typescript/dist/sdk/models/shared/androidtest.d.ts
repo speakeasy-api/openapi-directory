@@ -5,11 +5,26 @@ import { AndroidRoboTest } from "./androidrobotest";
 import { Duration } from "./duration";
 /**
  * An Android mobile test specification.
-**/
+ */
 export declare class AndroidTest extends SpeakeasyBase {
+    /**
+     * Android app information.
+     */
     androidAppInfo?: AndroidAppInfo;
+    /**
+     * A test of an Android application that can control an Android component independently of its normal lifecycle. See for more information on types of Android tests.
+     */
     androidInstrumentationTest?: AndroidInstrumentationTest;
+    /**
+     * A test of an android application that explores the application on a virtual or physical Android device, finding culprits and crashes as it goes.
+     */
     androidRoboTest?: AndroidRoboTest;
+    /**
+     * Test Loops are tests that can be launched by the app itself, determining when to run by listening for an intent.
+     */
     androidTestLoop?: Record<string, any>;
+    /**
+     *  A Duration represents a signed, fixed-length span of time represented as a count of seconds and fractions of seconds at nanosecond resolution. It is independent of any calendar and concepts like "day" or "month". It is related to Timestamp in that the difference between two Timestamp values is a Duration and it can be added or subtracted from a Timestamp. Range is approximately +-10,000 years.
+     */
     testTimeout?: Duration;
 }

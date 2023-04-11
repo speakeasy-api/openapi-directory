@@ -1,5 +1,8 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+/**
+ * Search API for 'Transit Trip' entry type
+ */
 export declare class TypeTypeGtfsTrip {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,9 +12,10 @@ export declare class TypeTypeGtfsTrip {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * searchTypeGtfsTrip - Search API for 'Transit Trip' entry type
+     * Search API for 'Transit Trip' entry type
      *
+     * @remarks
      * API to search for entries of type Transit Trip
-    **/
+     */
     searchTypeGtfsTrip(req: operations.SearchTypeGtfsTripRequest, config?: AxiosRequestConfig): Promise<operations.SearchTypeGtfsTripResponse>;
 }

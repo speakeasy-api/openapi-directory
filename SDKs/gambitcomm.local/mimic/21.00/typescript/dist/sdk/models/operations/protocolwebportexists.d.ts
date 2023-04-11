@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ProtocolWebPortExistsPathParams extends SpeakeasyBase {
-    agentNum: number;
-    port: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ProtocolWebPortExistsRequest extends SpeakeasyBase {
-    pathParams: ProtocolWebPortExistsPathParams;
+    /**
+     * Agent to show WEB configuration
+     */
+    agentNum: number;
+    /**
+     * TCP port
+     */
+    port: number;
 }
 export declare class ProtocolWebPortExistsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     protocolWebPortExists200ApplicationJSONStrings?: string[];
 }

@@ -12,6 +12,8 @@ export * from "./failurecodeenum";
 export * from "./filter";
 export * from "./listchangesetsresponse";
 export * from "./listentitiesresponse";
+export * from "./listtagsforresourceresponse";
 export * from "./security";
 export * from "./sortorderenum";
 export * from "./startchangesetresponse";
+export * from "./tag";

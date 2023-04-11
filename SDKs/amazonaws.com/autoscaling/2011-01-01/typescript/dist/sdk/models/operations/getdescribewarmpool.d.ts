@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDescribeWarmPoolActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDescribeWarmPoolActionEnum {
     DescribeWarmPool = "DescribeWarmPool"
 }
-export declare enum GetDescribeWarmPoolVersionEnum {
+export declare enum GETDescribeWarmPoolVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class GetDescribeWarmPoolQueryParams extends SpeakeasyBase {
-    action: GetDescribeWarmPoolActionEnum;
+export declare class GETDescribeWarmPoolRequest extends SpeakeasyBase {
+    action: GETDescribeWarmPoolActionEnum;
+    /**
+     * The name of the Auto Scaling group.
+     */
     autoScalingGroupName: string;
+    /**
+     * The maximum number of instances to return with this call. The maximum value is <code>50</code>.
+     */
     maxRecords?: number;
+    /**
+     * The token for the next set of instances to return. (You received this token from a previous call.)
+     */
     nextToken?: string;
-    version: GetDescribeWarmPoolVersionEnum;
-}
-export declare class GetDescribeWarmPoolHeaders extends SpeakeasyBase {
+    version: GETDescribeWarmPoolVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,12 +29,9 @@ export declare class GetDescribeWarmPoolHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDescribeWarmPoolRequest extends SpeakeasyBase {
-    queryParams: GetDescribeWarmPoolQueryParams;
-    headers: GetDescribeWarmPoolHeaders;
-}
-export declare class GetDescribeWarmPoolResponse extends SpeakeasyBase {
+export declare class GETDescribeWarmPoolResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

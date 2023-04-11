@@ -1,18 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class ActivityListReceivedEventsForUserPathParams extends SpeakeasyBase {
-    username: string;
-}
-export declare class ActivityListReceivedEventsForUserQueryParams extends SpeakeasyBase {
-    page?: number;
-    perPage?: number;
-}
+import { AxiosResponse } from "axios";
 export declare class ActivityListReceivedEventsForUserRequest extends SpeakeasyBase {
-    pathParams: ActivityListReceivedEventsForUserPathParams;
-    queryParams: ActivityListReceivedEventsForUserQueryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    page?: number;
+    /**
+     * Results per page (max 100)
+     */
+    perPage?: number;
+    username: string;
 }
 export declare class ActivityListReceivedEventsForUserResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * Response
+     */
     events?: shared.Event[];
 }

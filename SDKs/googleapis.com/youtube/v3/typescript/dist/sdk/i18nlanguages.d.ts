@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class I18nLanguages {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,7 +9,7 @@ export declare class I18nLanguages {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * youtubeI18nLanguagesList - Retrieves a list of resources, possibly filtered.
-    **/
-    youtubeI18nLanguagesList(req: operations.YoutubeI18nLanguagesListRequest, config?: AxiosRequestConfig): Promise<operations.YoutubeI18nLanguagesListResponse>;
+     * Retrieves a list of resources, possibly filtered.
+     */
+    youtubeI18nLanguagesList(req: operations.YoutubeI18nLanguagesListRequest, security: operations.YoutubeI18nLanguagesListSecurity, config?: AxiosRequestConfig): Promise<operations.YoutubeI18nLanguagesListResponse>;
 }

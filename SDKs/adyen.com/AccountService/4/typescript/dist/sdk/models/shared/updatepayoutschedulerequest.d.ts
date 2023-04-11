@@ -1,0 +1,61 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Direction on how to handle any payouts that have already been scheduled.
+ *
+ * @remarks
+ * Permitted values:
+ * * `CLOSE` will close the existing batch of payouts.
+ * * `UPDATE` will reschedule the existing batch to the new schedule.
+ * * `NOTHING` (**default**) will allow the payout to proceed.
+ */
+export declare enum UpdatePayoutScheduleRequestActionEnum {
+    Close = "CLOSE",
+    Nothing = "NOTHING",
+    Update = "UPDATE"
+}
+/**
+ * The payout schedule to which the account is to be updated.
+ *
+ * @remarks
+ * Permitted values: `DAILY`, `DAILY_US`, `DAILY_EU`, `DAILY_AU`, `DAILY_SG`, `WEEKLY`, `WEEKLY_ON_TUE_FRI_MIDNIGHT`, `BIWEEKLY_ON_1ST_AND_15TH_AT_MIDNIGHT`, `MONTHLY`, `HOLD`.
+ * `HOLD` will prevent scheduled payouts from happening but will still allow manual payouts to occur.
+ */
+export declare enum UpdatePayoutScheduleRequestScheduleEnum {
+    BiweeklyOn1StAnd15ThAtMidnight = "BIWEEKLY_ON_1ST_AND_15TH_AT_MIDNIGHT",
+    Daily = "DAILY",
+    DailyAu = "DAILY_AU",
+    DailyEu = "DAILY_EU",
+    DailySg = "DAILY_SG",
+    DailyUs = "DAILY_US",
+    Hold = "HOLD",
+    Monthly = "MONTHLY",
+    Weekly = "WEEKLY",
+    WeeklyOnTueFriMidnight = "WEEKLY_ON_TUE_FRI_MIDNIGHT"
+}
+export declare class UpdatePayoutScheduleRequest extends SpeakeasyBase {
+    /**
+     * Direction on how to handle any payouts that have already been scheduled.
+     *
+     * @remarks
+     * Permitted values:
+     * * `CLOSE` will close the existing batch of payouts.
+     * * `UPDATE` will reschedule the existing batch to the new schedule.
+     * * `NOTHING` (**default**) will allow the payout to proceed.
+     */
+    action?: UpdatePayoutScheduleRequestActionEnum;
+    /**
+     * The reason for the payout schedule update.
+     *
+     * @remarks
+     * > This field is required when the `schedule` parameter is set to `HOLD`.
+     */
+    reason?: string;
+    /**
+     * The payout schedule to which the account is to be updated.
+     *
+     * @remarks
+     * Permitted values: `DAILY`, `DAILY_US`, `DAILY_EU`, `DAILY_AU`, `DAILY_SG`, `WEEKLY`, `WEEKLY_ON_TUE_FRI_MIDNIGHT`, `BIWEEKLY_ON_1ST_AND_15TH_AT_MIDNIGHT`, `MONTHLY`, `HOLD`.
+     * `HOLD` will prevent scheduled payouts from happening but will still allow manual payouts to occur.
+     */
+    schedule: UpdatePayoutScheduleRequestScheduleEnum;
+}

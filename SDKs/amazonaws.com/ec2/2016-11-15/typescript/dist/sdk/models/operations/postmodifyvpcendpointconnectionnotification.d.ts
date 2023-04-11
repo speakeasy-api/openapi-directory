@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostModifyVpcEndpointConnectionNotificationActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTModifyVpcEndpointConnectionNotificationActionEnum {
     ModifyVpcEndpointConnectionNotification = "ModifyVpcEndpointConnectionNotification"
 }
-export declare enum PostModifyVpcEndpointConnectionNotificationVersionEnum {
+export declare enum POSTModifyVpcEndpointConnectionNotificationVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostModifyVpcEndpointConnectionNotificationQueryParams extends SpeakeasyBase {
-    action: PostModifyVpcEndpointConnectionNotificationActionEnum;
-    version: PostModifyVpcEndpointConnectionNotificationVersionEnum;
-}
-export declare class PostModifyVpcEndpointConnectionNotificationHeaders extends SpeakeasyBase {
+export declare class POSTModifyVpcEndpointConnectionNotificationRequest extends SpeakeasyBase {
+    action: POSTModifyVpcEndpointConnectionNotificationActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTModifyVpcEndpointConnectionNotificationVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostModifyVpcEndpointConnectionNotificationHeaders extends 
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostModifyVpcEndpointConnectionNotificationRequest extends SpeakeasyBase {
-    queryParams: PostModifyVpcEndpointConnectionNotificationQueryParams;
-    headers: PostModifyVpcEndpointConnectionNotificationHeaders;
-    request?: Uint8Array;
-}
-export declare class PostModifyVpcEndpointConnectionNotificationResponse extends SpeakeasyBase {
+export declare class POSTModifyVpcEndpointConnectionNotificationResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,13 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class HealthGetDbSecurity extends SpeakeasyBase {
-    key: shared.SchemeKey;
-    project: shared.SchemeProject;
-}
-export declare class HealthGetDbRequest extends SpeakeasyBase {
-    security: HealthGetDbSecurity;
-}
-export declare class HealthGetDbResponse extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class HealthGetDBResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

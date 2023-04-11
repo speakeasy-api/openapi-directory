@@ -1,0 +1,11 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * An object providing summary information for a particular project for an associated AWS account and region.
+ */
+export declare class ProjectSummary extends SpeakeasyBase {
+    arn?: string;
+    createdDate: Date;
+    projectName: string;
+    tags?: Record<string, string>;
+    updatedDate: Date;
+}

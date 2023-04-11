@@ -1,6 +1,6 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class ApIs {
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+export declare class APIs {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
@@ -9,51 +9,59 @@ export declare class ApIs {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * alltr - Allotment Letter
+     * Allotment Letter
      *
+     * @remarks
      * API to verify Allotment Letter.
-    **/
-    alltr(req: operations.AlltrRequest, config?: AxiosRequestConfig): Promise<operations.AlltrResponse>;
+     */
+    alltr(req: operations.AlltrRequestBody, security: operations.AlltrSecurity, config?: AxiosRequestConfig): Promise<operations.AlltrResponse>;
     /**
-     * bknoc - NOC For Banks
+     * NOC For Banks
      *
+     * @remarks
      * API to verify NOC For Banks.
-    **/
-    bknoc(req: operations.BknocRequest, config?: AxiosRequestConfig): Promise<operations.BknocResponse>;
+     */
+    bknoc(req: operations.BknocRequestBody, security: operations.BknocSecurity, config?: AxiosRequestConfig): Promise<operations.BknocResponse>;
     /**
-     * bpcer - Building Plan
+     * Building Plan
      *
+     * @remarks
      * API to verify Building Plan.
-    **/
-    bpcer(req: operations.BpcerRequest, config?: AxiosRequestConfig): Promise<operations.BpcerResponse>;
+     */
+    bpcer(req: operations.BpcerRequestBody, security: operations.BpcerSecurity, config?: AxiosRequestConfig): Promise<operations.BpcerResponse>;
     /**
-     * cfltr - Confirmatory Letter
+     * Confirmatory Letter
      *
+     * @remarks
      * API to verify Confirmatory Letter.
-    **/
-    cfltr(req: operations.CfltrRequest, config?: AxiosRequestConfig): Promise<operations.CfltrResponse>;
+     */
+    cfltr(req: operations.CfltrRequestBody, security: operations.CfltrSecurity, config?: AxiosRequestConfig): Promise<operations.CfltrResponse>;
     /**
-     * lcsag - Lease cum Sale Agreement
+     * Lease cum Sale Agreement
      *
+     * @remarks
      * API to verify Lease cum Sale Agreement.
-    **/
-    lcsag(req: operations.LcsagRequest, config?: AxiosRequestConfig): Promise<operations.LcsagResponse>;
+     */
+    lcsag(req: operations.LcsagRequestBody, security: operations.LcsagSecurity, config?: AxiosRequestConfig): Promise<operations.LcsagResponse>;
     /**
-     * pscer - Possession Certificate
+     * Possession Certificate
      *
+     * @remarks
      * API to verify Possession Certificate.
-    **/
-    pscer(req: operations.PscerRequest, config?: AxiosRequestConfig): Promise<operations.PscerResponse>;
+     */
+    pscer(req: operations.PscerRequestBody, security: operations.PscerSecurity, config?: AxiosRequestConfig): Promise<operations.PscerResponse>;
     /**
-     * psnoc - NOC for New Power Supply
+     * NOC for New Power Supply
      *
+     * @remarks
      * API to verify NOC for New Power Supply.
-    **/
-    psnoc(req: operations.PsnocRequest, config?: AxiosRequestConfig): Promise<operations.PsnocResponse>;
+     */
+    psnoc(req: operations.PsnocRequestBody, security: operations.PsnocSecurity, config?: AxiosRequestConfig): Promise<operations.PsnocResponse>;
     /**
-     * wtrbl - Water Bill/ Connection
+     * Water Bill/ Connection
      *
+     * @remarks
      * API to verify Water Bill/ Connection.
-    **/
-    wtrbl(req: operations.WtrblRequest, config?: AxiosRequestConfig): Promise<operations.WtrblResponse>;
+     */
+    wtrbl(req: operations.WtrblRequestBody, security: operations.WtrblSecurity, config?: AxiosRequestConfig): Promise<operations.WtrblResponse>;
 }

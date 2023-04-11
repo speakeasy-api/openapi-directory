@@ -1,8 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { Attribute } from "./attribute";
 import { PlatformDevice } from "./platformdevice";
-import { Tag } from "./tag";
 import { Resource } from "./resource";
+import { Tag } from "./tag";
 import { VersionInfo } from "./versioninfo";
 export declare class RegisterContainerInstanceRequest extends SpeakeasyBase {
     attributes?: Attribute[];

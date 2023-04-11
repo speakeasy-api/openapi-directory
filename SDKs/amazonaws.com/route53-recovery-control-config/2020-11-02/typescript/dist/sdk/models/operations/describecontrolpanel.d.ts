@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DescribeControlPanelPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DescribeControlPanelRequest extends SpeakeasyBase {
+    /**
+     * The Amazon Resource Name (ARN) of the control panel.
+     */
     controlPanelArn: string;
-}
-export declare class DescribeControlPanelHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -12,18 +14,36 @@ export declare class DescribeControlPanelHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DescribeControlPanelRequest extends SpeakeasyBase {
-    pathParams: DescribeControlPanelPathParams;
-    headers: DescribeControlPanelHeaders;
-}
 export declare class DescribeControlPanelResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     describeControlPanelResponse?: shared.DescribeControlPanelResponse;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
-    resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ResourceNotFoundException
+     */
+    resourceNotFoundException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

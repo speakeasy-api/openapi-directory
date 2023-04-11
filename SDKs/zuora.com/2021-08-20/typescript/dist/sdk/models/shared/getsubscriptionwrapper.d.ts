@@ -1,6 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetSubscriptionWrapper extends SpeakeasyBase {
+import { GETSubscriptionType } from "./getsubscriptiontype";
+export declare class GETSubscriptionWrapper extends SpeakeasyBase {
+    /**
+     * URL to retrieve the next page of the response if it exists; otherwise absent.
+     *
+     * @remarks
+     *
+     */
     nextPage?: string;
-    subscriptions?: Record<string, any>[];
+    /**
+     * Array of subscriptions.
+     *
+     * @remarks
+     *
+     */
+    subscriptions?: GETSubscriptionType[];
+    /**
+     * Returns `true` if the request was processed successfully.
+     *
+     * @remarks
+     *
+     */
     success?: boolean;
 }

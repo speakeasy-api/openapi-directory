@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum DescribeRaidArraysXAmzTargetEnum {
     OpsWorks20130218DescribeRaidArrays = "OpsWorks_20130218.DescribeRaidArrays"
 }
-export declare class DescribeRaidArraysHeaders extends SpeakeasyBase {
+export declare class DescribeRaidArraysRequest extends SpeakeasyBase {
+    describeRaidArraysRequest: shared.DescribeRaidArraysRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,14 +15,20 @@ export declare class DescribeRaidArraysHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: DescribeRaidArraysXAmzTargetEnum;
 }
-export declare class DescribeRaidArraysRequest extends SpeakeasyBase {
-    headers: DescribeRaidArraysHeaders;
-    request: shared.DescribeRaidArraysRequest;
-}
 export declare class DescribeRaidArraysResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * Success
+     */
     describeRaidArraysResult?: shared.DescribeRaidArraysResult;
+    /**
+     * ResourceNotFoundException
+     */
     resourceNotFoundException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

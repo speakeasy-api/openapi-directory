@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { AutoMlOverrideStrategyEnum } from "./automloverridestrategyenum";
+import { AutoMLOverrideStrategyEnum } from "./automloverridestrategyenum";
 import { EncryptionConfig } from "./encryptionconfig";
 import { EvaluationParameters } from "./evaluationparameters";
 import { FeaturizationConfig } from "./featurizationconfig";
@@ -9,7 +9,7 @@ import { OptimizationMetricEnum } from "./optimizationmetricenum";
 import { Tag } from "./tag";
 export declare class CreatePredictorRequest extends SpeakeasyBase {
     algorithmArn?: string;
-    autoMLOverrideStrategy?: AutoMlOverrideStrategyEnum;
+    autoMLOverrideStrategy?: AutoMLOverrideStrategyEnum;
     encryptionConfig?: EncryptionConfig;
     evaluationParameters?: EvaluationParameters;
     featurizationConfig: FeaturizationConfig;

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDescribeValidDbInstanceModificationsActionEnum {
-    DescribeValidDbInstanceModifications = "DescribeValidDBInstanceModifications"
+import { AxiosResponse } from "axios";
+export declare enum POSTDescribeValidDBInstanceModificationsActionEnum {
+    DescribeValidDBInstanceModifications = "DescribeValidDBInstanceModifications"
 }
-export declare enum PostDescribeValidDbInstanceModificationsVersionEnum {
+export declare enum POSTDescribeValidDBInstanceModificationsVersionEnum {
     TwoThousandAndFourteen1031 = "2014-10-31"
 }
-export declare class PostDescribeValidDbInstanceModificationsQueryParams extends SpeakeasyBase {
-    action: PostDescribeValidDbInstanceModificationsActionEnum;
-    version: PostDescribeValidDbInstanceModificationsVersionEnum;
-}
-export declare class PostDescribeValidDbInstanceModificationsHeaders extends SpeakeasyBase {
+export declare class POSTDescribeValidDBInstanceModificationsRequest extends SpeakeasyBase {
+    action: POSTDescribeValidDBInstanceModificationsActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTDescribeValidDBInstanceModificationsVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostDescribeValidDbInstanceModificationsHeaders extends Spe
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDescribeValidDbInstanceModificationsRequest extends SpeakeasyBase {
-    queryParams: PostDescribeValidDbInstanceModificationsQueryParams;
-    headers: PostDescribeValidDbInstanceModificationsHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDescribeValidDbInstanceModificationsResponse extends SpeakeasyBase {
+export declare class POSTDescribeValidDBInstanceModificationsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

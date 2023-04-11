@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DescribeAcLsRequest extends SpeakeasyBase {
+export declare class DescribeACLsRequest extends SpeakeasyBase {
     aclName?: string;
     maxResults?: number;
     nextToken?: string;

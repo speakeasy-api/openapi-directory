@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum UpdateDistributionBundleXAmzTargetEnum {
     Lightsail20161128UpdateDistributionBundle = "Lightsail_20161128.UpdateDistributionBundle"
 }
-export declare class UpdateDistributionBundleHeaders extends SpeakeasyBase {
+export declare class UpdateDistributionBundleRequest extends SpeakeasyBase {
+    updateDistributionBundleRequest: shared.UpdateDistributionBundleRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,18 +15,36 @@ export declare class UpdateDistributionBundleHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: UpdateDistributionBundleXAmzTargetEnum;
 }
-export declare class UpdateDistributionBundleRequest extends SpeakeasyBase {
-    headers: UpdateDistributionBundleHeaders;
-    request: shared.UpdateDistributionBundleRequest;
-}
 export declare class UpdateDistributionBundleResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
     contentType: string;
+    /**
+     * InvalidInputException
+     */
     invalidInputException?: any;
+    /**
+     * NotFoundException
+     */
     notFoundException?: any;
+    /**
+     * OperationFailureException
+     */
     operationFailureException?: any;
-    serviceException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceException
+     */
+    serviceException?: any;
+    /**
+     * UnauthenticatedException
+     */
     unauthenticatedException?: any;
+    /**
+     * Success
+     */
     updateDistributionBundleResult?: shared.UpdateDistributionBundleResult;
 }

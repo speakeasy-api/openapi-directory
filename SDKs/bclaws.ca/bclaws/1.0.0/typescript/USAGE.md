@@ -1,16 +1,17 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { GetContentAspectIdRequest, GetContentAspectIdResponse } from "openapi/src/sdk/models/operations";
+import {
+  GetContentAspectIdRequest,
+  GetContentAspectIdResponse,
+  GetContentAspectIDAspectIDEnum,
+} from "openapi/dist/sdk/models/operations";
+
 import { AxiosError } from "axios";
-
-
+import { SDK } from "openapi";
 const sdk = new SDK();
-    
+
 const req: GetContentAspectIdRequest = {
-  pathParams: {
-    aspectId: "complete",
-  },
+  aspectId: GetContentAspectIDAspectIDEnum.Oic,
 };
 
 sdk.content.getContentAspectId(req).then((res: GetContentAspectIdResponse | AxiosError) => {

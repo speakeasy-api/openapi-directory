@@ -1,8 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { NestedProvider } from "./nestedprovider";
-import { NestedTenant } from "./nestedtenant";
 import { CircuitCircuitTermination } from "./circuitcircuittermination";
 import { NestedCircuitType } from "./nestedcircuittype";
+import { NestedProvider } from "./nestedprovider";
+import { NestedTenant } from "./nestedtenant";
 export declare enum CircuitStatusLabelEnum {
     Planned = "Planned",
     Provisioning = "Provisioning",

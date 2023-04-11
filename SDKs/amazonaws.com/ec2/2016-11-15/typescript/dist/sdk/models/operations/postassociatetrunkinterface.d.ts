@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostAssociateTrunkInterfaceActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTAssociateTrunkInterfaceActionEnum {
     AssociateTrunkInterface = "AssociateTrunkInterface"
 }
-export declare enum PostAssociateTrunkInterfaceVersionEnum {
+export declare enum POSTAssociateTrunkInterfaceVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostAssociateTrunkInterfaceQueryParams extends SpeakeasyBase {
-    action: PostAssociateTrunkInterfaceActionEnum;
-    version: PostAssociateTrunkInterfaceVersionEnum;
-}
-export declare class PostAssociateTrunkInterfaceHeaders extends SpeakeasyBase {
+export declare class POSTAssociateTrunkInterfaceRequest extends SpeakeasyBase {
+    action: POSTAssociateTrunkInterfaceActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTAssociateTrunkInterfaceVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostAssociateTrunkInterfaceHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostAssociateTrunkInterfaceRequest extends SpeakeasyBase {
-    queryParams: PostAssociateTrunkInterfaceQueryParams;
-    headers: PostAssociateTrunkInterfaceHeaders;
-    request?: Uint8Array;
-}
-export declare class PostAssociateTrunkInterfaceResponse extends SpeakeasyBase {
+export declare class POSTAssociateTrunkInterfaceResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

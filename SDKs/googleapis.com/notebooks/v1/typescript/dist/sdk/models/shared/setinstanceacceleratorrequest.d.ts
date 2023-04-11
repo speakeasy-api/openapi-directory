@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Required. Type of this accelerator.
+ */
 export declare enum SetInstanceAcceleratorRequestTypeEnum {
     AcceleratorTypeUnspecified = "ACCELERATOR_TYPE_UNSPECIFIED",
     NvidiaTeslaK80 = "NVIDIA_TESLA_K80",
@@ -15,8 +18,14 @@ export declare enum SetInstanceAcceleratorRequestTypeEnum {
 }
 /**
  * Request for setting instance accelerator.
-**/
+ */
 export declare class SetInstanceAcceleratorRequest extends SpeakeasyBase {
+    /**
+     * Required. Count of cores of this accelerator. Note that not all combinations of `type` and `core_count` are valid. Check [GPUs on Compute Engine](https://cloud.google.com/compute/docs/gpus/#gpus-list) to find a valid combination. TPUs are not supported.
+     */
     coreCount?: string;
+    /**
+     * Required. Type of this accelerator.
+     */
     type?: SetInstanceAcceleratorRequestTypeEnum;
 }

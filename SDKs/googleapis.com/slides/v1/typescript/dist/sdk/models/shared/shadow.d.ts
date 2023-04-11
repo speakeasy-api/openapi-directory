@@ -1,0 +1,71 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { AffineTransform } from "./affinetransform";
+import { Dimension } from "./dimension";
+import { OpaqueColor } from "./opaquecolor";
+/**
+ * The alignment point of the shadow, that sets the origin for translate, scale and skew of the shadow. This property is read-only.
+ */
+export declare enum ShadowAlignmentEnum {
+    RectanglePositionUnspecified = "RECTANGLE_POSITION_UNSPECIFIED",
+    TopLeft = "TOP_LEFT",
+    TopCenter = "TOP_CENTER",
+    TopRight = "TOP_RIGHT",
+    LeftCenter = "LEFT_CENTER",
+    Center = "CENTER",
+    RightCenter = "RIGHT_CENTER",
+    BottomLeft = "BOTTOM_LEFT",
+    BottomCenter = "BOTTOM_CENTER",
+    BottomRight = "BOTTOM_RIGHT"
+}
+/**
+ * The shadow property state. Updating the shadow on a page element will implicitly update this field to `RENDERED`, unless another value is specified in the same request. To have no shadow on a page element, set this field to `NOT_RENDERED`. In this case, any other shadow fields set in the same request will be ignored.
+ */
+export declare enum ShadowPropertyStateEnum {
+    Rendered = "RENDERED",
+    NotRendered = "NOT_RENDERED",
+    Inherit = "INHERIT"
+}
+/**
+ * The type of the shadow. This property is read-only.
+ */
+export declare enum ShadowTypeEnum {
+    ShadowTypeUnspecified = "SHADOW_TYPE_UNSPECIFIED",
+    Outer = "OUTER"
+}
+/**
+ * The shadow properties of a page element. If these fields are unset, they may be inherited from a parent placeholder if it exists. If there is no parent, the fields will default to the value used for new page elements created in the Slides editor, which may depend on the page element kind.
+ */
+export declare class Shadow extends SpeakeasyBase {
+    /**
+     * The alignment point of the shadow, that sets the origin for translate, scale and skew of the shadow. This property is read-only.
+     */
+    alignment?: ShadowAlignmentEnum;
+    /**
+     * The alpha of the shadow's color, from 0.0 to 1.0.
+     */
+    alpha?: number;
+    /**
+     * A magnitude in a single direction in the specified units.
+     */
+    blurRadius?: Dimension;
+    /**
+     * A themeable solid color value.
+     */
+    color?: OpaqueColor;
+    /**
+     * The shadow property state. Updating the shadow on a page element will implicitly update this field to `RENDERED`, unless another value is specified in the same request. To have no shadow on a page element, set this field to `NOT_RENDERED`. In this case, any other shadow fields set in the same request will be ignored.
+     */
+    propertyState?: ShadowPropertyStateEnum;
+    /**
+     * Whether the shadow should rotate with the shape. This property is read-only.
+     */
+    rotateWithShape?: boolean;
+    /**
+     * AffineTransform uses a 3x3 matrix with an implied last row of [ 0 0 1 ] to transform source coordinates (x,y) into destination coordinates (x', y') according to: x' x = shear_y scale_y translate_y 1 [ 1 ] After transformation, x' = scale_x * x + shear_x * y + translate_x; y' = scale_y * y + shear_y * x + translate_y; This message is therefore composed of these six matrix elements.
+     */
+    transform?: AffineTransform;
+    /**
+     * The type of the shadow. This property is read-only.
+     */
+    type?: ShadowTypeEnum;
+}

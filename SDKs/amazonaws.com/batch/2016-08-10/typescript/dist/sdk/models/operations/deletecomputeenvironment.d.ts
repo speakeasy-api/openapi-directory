@@ -1,5 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteComputeEnvironmentHeaders extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteComputeEnvironmentRequestBody extends SpeakeasyBase {
+    /**
+     * The name or Amazon Resource Name (ARN) of the compute environment to delete.
+     */
+    computeEnvironment: string;
+}
+export declare class DeleteComputeEnvironmentRequest extends SpeakeasyBase {
+    requestBody: DeleteComputeEnvironmentRequestBody;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -8,17 +16,20 @@ export declare class DeleteComputeEnvironmentHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeleteComputeEnvironmentRequestBody extends SpeakeasyBase {
-    computeEnvironment: string;
-}
-export declare class DeleteComputeEnvironmentRequest extends SpeakeasyBase {
-    headers: DeleteComputeEnvironmentHeaders;
-    request: DeleteComputeEnvironmentRequestBody;
-}
 export declare class DeleteComputeEnvironmentResponse extends SpeakeasyBase {
+    /**
+     * ClientException
+     */
     clientException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteComputeEnvironmentResponse?: Record<string, any>;
-    serverException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServerException
+     */
+    serverException?: any;
 }

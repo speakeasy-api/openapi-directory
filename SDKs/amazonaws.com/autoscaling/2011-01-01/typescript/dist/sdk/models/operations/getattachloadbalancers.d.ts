@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetAttachLoadBalancersActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETAttachLoadBalancersActionEnum {
     AttachLoadBalancers = "AttachLoadBalancers"
 }
-export declare enum GetAttachLoadBalancersVersionEnum {
+export declare enum GETAttachLoadBalancersVersionEnum {
     TwoThousandAndEleven0101 = "2011-01-01"
 }
-export declare class GetAttachLoadBalancersQueryParams extends SpeakeasyBase {
-    action: GetAttachLoadBalancersActionEnum;
+export declare class GETAttachLoadBalancersRequest extends SpeakeasyBase {
+    action: GETAttachLoadBalancersActionEnum;
+    /**
+     * The name of the Auto Scaling group.
+     */
     autoScalingGroupName: string;
+    /**
+     * The names of the load balancers. You can specify up to 10 load balancers.
+     */
     loadBalancerNames: string[];
-    version: GetAttachLoadBalancersVersionEnum;
-}
-export declare class GetAttachLoadBalancersHeaders extends SpeakeasyBase {
+    version: GETAttachLoadBalancersVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetAttachLoadBalancersHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetAttachLoadBalancersRequest extends SpeakeasyBase {
-    queryParams: GetAttachLoadBalancersQueryParams;
-    headers: GetAttachLoadBalancersHeaders;
-}
-export declare class GetAttachLoadBalancersResponse extends SpeakeasyBase {
+export declare class GETAttachLoadBalancersResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

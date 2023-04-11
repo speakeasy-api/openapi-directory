@@ -1,18 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDetachInternetGatewayActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDetachInternetGatewayActionEnum {
     DetachInternetGateway = "DetachInternetGateway"
 }
-export declare enum GetDetachInternetGatewayVersionEnum {
+export declare enum GETDetachInternetGatewayVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetDetachInternetGatewayQueryParams extends SpeakeasyBase {
-    action: GetDetachInternetGatewayActionEnum;
+export declare class GETDetachInternetGatewayRequest extends SpeakeasyBase {
+    action: GETDetachInternetGatewayActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
+    /**
+     * The ID of the internet gateway.
+     */
     internetGatewayId: string;
-    version: GetDetachInternetGatewayVersionEnum;
+    version: GETDetachInternetGatewayVersionEnum;
+    /**
+     * The ID of the VPC.
+     */
     vpcId: string;
-}
-export declare class GetDetachInternetGatewayHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -21,11 +29,8 @@ export declare class GetDetachInternetGatewayHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDetachInternetGatewayRequest extends SpeakeasyBase {
-    queryParams: GetDetachInternetGatewayQueryParams;
-    headers: GetDetachInternetGatewayHeaders;
-}
-export declare class GetDetachInternetGatewayResponse extends SpeakeasyBase {
+export declare class GETDetachInternetGatewayResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

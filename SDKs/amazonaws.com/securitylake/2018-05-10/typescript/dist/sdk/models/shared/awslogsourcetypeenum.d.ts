@@ -1,0 +1,6 @@
+export declare enum AwsLogSourceTypeEnum {
+    Route53 = "ROUTE53",
+    VpcFlow = "VPC_FLOW",
+    CloudTrail = "CLOUD_TRAIL",
+    ShFindings = "SH_FINDINGS"
+}

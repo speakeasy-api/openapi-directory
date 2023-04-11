@@ -1,18 +1,24 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export declare class DeleteRolePathParams extends SpeakeasyBase {
-    roleId: string;
-}
+import { AxiosResponse } from "axios";
 export declare class DeleteRoleSecurity extends SpeakeasyBase {
-    oAuth: shared.SchemeOAuth;
+    oAuth: string;
 }
 export declare class DeleteRoleRequest extends SpeakeasyBase {
-    pathParams: DeleteRolePathParams;
-    security: DeleteRoleSecurity;
+    /**
+     * Role Id.
+     */
+    roleId: string;
 }
 export declare class DeleteRoleResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * **Status Code:** `204`<br>
+     *
+     * @remarks
+     * Role deleted.
+     */
     deleteRole204ApplicationJSONObject?: Record<string, any>;
 }

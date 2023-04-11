@@ -1,5 +1,5 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 export declare class CertificateActions {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -9,23 +9,26 @@ export declare class CertificateActions {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getCertificatesIdActions - Get all Actions for a Certificate
+     * Get all Actions for a Certificate
      *
+     * @remarks
      * Returns all Action objects for a Certificate. You can sort the results by using the `sort` URI parameter, and filter them with the `status` parameter.
      *
      * Only type `managed` Certificates can have Actions. For type `uploaded` Certificates the `actions` key will always contain an empty array.
      *
-    **/
+     */
     getCertificatesIdActions(req: operations.GetCertificatesIdActionsRequest, config?: AxiosRequestConfig): Promise<operations.GetCertificatesIdActionsResponse>;
     /**
-     * getCertificatesIdActionsActionId - Get an Action for a Certificate
+     * Get an Action for a Certificate
      *
+     * @remarks
      * Returns a specific Action for a Certificate. Only type `managed` Certificates have Actions.
-    **/
+     */
     getCertificatesIdActionsActionId(req: operations.GetCertificatesIdActionsActionIdRequest, config?: AxiosRequestConfig): Promise<operations.GetCertificatesIdActionsActionIdResponse>;
     /**
-     * postCertificatesIdActionsRetry - Retry Issuance or Renewal
+     * Retry Issuance or Renewal
      *
+     * @remarks
      * Retry a failed Certificate issuance or renewal.
      *
      * Only applicable if the type of the Certificate is `managed` and the issuance or renewal status is `failed`.
@@ -43,6 +46,6 @@ export declare class CertificateActions {
      * | `dns_zone_not_found`                                    | DNS zone not found                                                        |
      * | `dns_zone_is_secondary_zone`                            | DNS zone is a secondary zone                                              |
      *
-    **/
+     */
     postCertificatesIdActionsRetry(req: operations.PostCertificatesIdActionsRetryRequest, config?: AxiosRequestConfig): Promise<operations.PostCertificatesIdActionsRetryResponse>;
 }

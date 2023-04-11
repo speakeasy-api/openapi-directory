@@ -1,12 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { StandardError } from "./standarderror";
 import { MarketingEventPublicDefaultResponse } from "./marketingeventpublicdefaultresponse";
+import { StandardError } from "./standarderror";
 export declare enum BatchResponseMarketingEventPublicDefaultResponseStatusEnum {
     Pending = "PENDING",
     Processing = "PROCESSING",
     Canceled = "CANCELED",
     Complete = "COMPLETE"
 }
+/**
+ * successful operation
+ */
 export declare class BatchResponseMarketingEventPublicDefaultResponse extends SpeakeasyBase {
     completedAt: Date;
     errors?: StandardError[];

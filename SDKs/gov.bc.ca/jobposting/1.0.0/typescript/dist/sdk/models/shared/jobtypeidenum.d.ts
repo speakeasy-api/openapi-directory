@@ -1,0 +1,20 @@
+/**
+ * The type of work.
+ */
+export declare enum JobTypeIDEnum {
+    Undefined0 = "Undefined0",
+    FullTime = "Full-Time",
+    PartTime = "Part-Time",
+    Contract = "Contract",
+    Undefined4 = "Undefined4",
+    Undefined5 = "Undefined5",
+    Student = "Student",
+    Undefined7 = "Undefined7",
+    Undefined8 = "Undefined8",
+    Casual = "Casual",
+    Seasonal = "Seasonal",
+    Temporary = "Temporary",
+    Permanent = "Permanent",
+    CoOp = "Co-op",
+    Apprenticeship = "Apprenticeship"
+}

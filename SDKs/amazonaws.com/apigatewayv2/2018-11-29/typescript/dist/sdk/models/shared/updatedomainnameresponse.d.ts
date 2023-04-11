@@ -1,16 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { DomainNameConfiguration } from "./domainnameconfiguration";
 /**
  * The mutual TLS authentication configuration for a custom domain name.
-**/
+ */
 export declare class UpdateDomainNameResponseMutualTlsAuthentication extends SpeakeasyBase {
-    truststoreUri?: Record<string, any>;
-    truststoreVersion?: Record<string, any>;
-    truststoreWarnings?: Record<string, any>;
+    truststoreUri?: string;
+    truststoreVersion?: string;
+    truststoreWarnings?: string[];
 }
+/**
+ * Success
+ */
 export declare class UpdateDomainNameResponse extends SpeakeasyBase {
-    apiMappingSelectionExpression?: Record<string, any>;
-    domainName?: Record<string, any>;
-    domainNameConfigurations?: Record<string, any>;
+    apiMappingSelectionExpression?: string;
+    domainName?: string;
+    domainNameConfigurations?: DomainNameConfiguration[];
     mutualTlsAuthentication?: UpdateDomainNameResponseMutualTlsAuthentication;
     tags?: Record<string, string>;
 }

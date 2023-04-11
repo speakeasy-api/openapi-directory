@@ -1,53 +1,80 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, withSecurity} from "openapi";
-import { AddFacetToObjectRequest, AddFacetToObjectResponse } from "openapi/src/sdk/models/operations";
-import { AxiosError } from "axios";
+import {
+  AddFacetToObjectRequest,
+  AddFacetToObjectResponse
+} from "openapi/dist/sdk/models/operations";
 
-const sdk = new SDK(withSecurity(
+import { AxiosError } from "axios";
+import { SDK } from "openapi";
+const sdk = new SDK({
   security: {
-    hmac: {
-      apiKey: "YOUR_API_KEY_HERE",
-    },
-  }
-));
-    
-const req: AddFacetToObjectRequest = {
-  headers: {
-    xAmzAlgorithm: "sit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "culpa",
-    xAmzDate: "expedita",
-    xAmzSecurityToken: "consequuntur",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "expedita",
-    xAmzDataPartition: "voluptas",
+    hmac: "YOUR_API_KEY_HERE",
   },
-  request: {
+});
+
+const req: AddFacetToObjectRequest = {
+  requestBody: {
     objectAttributeList: [
       {
         key: {
-          facetName: "et",
-          name: "nihil",
-          schemaArn: "rerum",
+          facetName: "provident",
+          name: "distinctio",
+          schemaArn: "quibusdam",
         },
         value: {
-          binaryValue: "dicta",
-          booleanValue: true,
-          datetimeValue: "1981-07-21T06:30:48Z",
-          numberValue: "et",
-          stringValue: "ut",
+          binaryValue: "unde",
+          booleanValue: false,
+          datetimeValue: "2021-05-14T08:28:11.899Z",
+          numberValue: "illum",
+          stringValue: "vel",
+        },
+      },
+      {
+        key: {
+          facetName: "error",
+          name: "deserunt",
+          schemaArn: "suscipit",
+        },
+        value: {
+          binaryValue: "iure",
+          booleanValue: false,
+          datetimeValue: "2022-02-09T12:04:06.508Z",
+          numberValue: "ipsa",
+          stringValue: "delectus",
+        },
+      },
+      {
+        key: {
+          facetName: "tempora",
+          name: "suscipit",
+          schemaArn: "molestiae",
+        },
+        value: {
+          binaryValue: "minus",
+          booleanValue: false,
+          datetimeValue: "2021-05-31T20:38:28.793Z",
+          numberValue: "iusto",
+          stringValue: "excepturi",
         },
       },
     ],
     objectReference: {
-      selector: "dolorem",
+      selector: "nisi",
     },
     schemaFacet: {
-      facetName: "et",
-      schemaArn: "voluptate",
+      facetName: "recusandae",
+      schemaArn: "temporibus",
     },
   },
+  xAmzAlgorithm: "ab",
+  xAmzContentSha256: "quis",
+  xAmzCredential: "veritatis",
+  xAmzDate: "deserunt",
+  xAmzSecurityToken: "perferendis",
+  xAmzSignature: "ipsam",
+  xAmzSignedHeaders: "repellendus",
+  xAmzDataPartition: "sapiente",
 };
 
 sdk.addFacetToObject(req).then((res: AddFacetToObjectResponse | AxiosError) => {

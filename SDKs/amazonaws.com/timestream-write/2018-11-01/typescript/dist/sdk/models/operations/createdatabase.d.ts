@@ -1,9 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare enum CreateDatabaseXAmzTargetEnum {
     Timestream20181101CreateDatabase = "Timestream_20181101.CreateDatabase"
 }
-export declare class CreateDatabaseHeaders extends SpeakeasyBase {
+export declare class CreateDatabaseRequest extends SpeakeasyBase {
+    createDatabaseRequest: shared.CreateDatabaseRequest;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -13,19 +15,40 @@ export declare class CreateDatabaseHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
     xAmzTarget: CreateDatabaseXAmzTargetEnum;
 }
-export declare class CreateDatabaseRequest extends SpeakeasyBase {
-    headers: CreateDatabaseHeaders;
-    request: shared.CreateDatabaseRequest;
-}
 export declare class CreateDatabaseResponse extends SpeakeasyBase {
+    /**
+     * AccessDeniedException
+     */
     accessDeniedException?: any;
+    /**
+     * ConflictException
+     */
     conflictException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     createDatabaseResponse?: shared.CreateDatabaseResponse;
+    /**
+     * InternalServerException
+     */
     internalServerException?: any;
+    /**
+     * InvalidEndpointException
+     */
     invalidEndpointException?: any;
-    serviceQuotaExceededException?: any;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * ServiceQuotaExceededException
+     */
+    serviceQuotaExceededException?: any;
+    /**
+     * ThrottlingException
+     */
     throttlingException?: any;
+    /**
+     * ValidationException
+     */
     validationException?: any;
 }

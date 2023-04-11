@@ -1,19 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class PutSettingsOrganizationsOrganizationNameReceiversReceiverNamePathParams extends SpeakeasyBase {
-    organizationName: string;
-    receiverName: string;
-}
+import { AxiosResponse } from "axios";
 export declare class PutSettingsOrganizationsOrganizationNameReceiversReceiverNameSecurity extends SpeakeasyBase {
-    oAuth2: shared.SchemeOAuth2;
+    oAuth2: string;
 }
 export declare class PutSettingsOrganizationsOrganizationNameReceiversReceiverNameRequest extends SpeakeasyBase {
-    pathParams: PutSettingsOrganizationsOrganizationNameReceiversReceiverNamePathParams;
-    request?: shared.ReceiverInput;
-    security: PutSettingsOrganizationsOrganizationNameReceiversReceiverNameSecurity;
+    receiverInput?: shared.ReceiverInput;
+    /**
+     * Create receivers under this organization name
+     */
+    organizationName: string;
+    /**
+     * The name of the receiver
+     */
+    receiverName: string;
 }
 export declare class PutSettingsOrganizationsOrganizationNameReceiversReceiverNameResponse extends SpeakeasyBase {
     contentType: string;
+    /**
+     * OK, the receiver setting was updated
+     */
     receiver?: shared.Receiver;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

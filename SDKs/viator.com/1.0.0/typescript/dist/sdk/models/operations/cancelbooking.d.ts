@@ -1,50 +1,99 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
+import { AxiosResponse } from "axios";
 export declare const CancelBookingServerList: readonly ["https://api.sandbox.viator.com/partner"];
-export declare class CancelBookingPathParams extends SpeakeasyBase {
+export declare class CancelBookingRequest extends SpeakeasyBase {
+    /**
+     * Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
+     *
+     * @remarks
+     *
+     */
+    acceptLanguage: string;
+    cancellationRequest?: shared.CancellationRequest;
+    /**
+     * The ID of the booking
+     */
     bookingReference: string;
 }
-export declare class CancelBookingHeaders extends SpeakeasyBase {
-    acceptLanguage: string;
-}
-export declare enum CancelBooking400ApplicationJsonCodeEnum {
-    BadRequest = "BAD_REQUEST"
-}
-export declare enum CancelBooking400ApplicationJsonMessageEnum {
-    MissingCancellationReason = "Missing cancellation reason"
-}
-export declare class CancelBooking400ApplicationJson extends SpeakeasyBase {
-    code?: CancelBooking400ApplicationJsonCodeEnum;
-    message?: CancelBooking400ApplicationJsonMessageEnum;
-    timestamp?: string;
-    trackingId?: string;
-}
-export declare enum CancelBooking404ApplicationJsonCodeEnum {
+export declare enum CancelBooking404ApplicationJSONCodeEnum {
     NotFound = "NOT_FOUND"
 }
-export declare enum CancelBooking404ApplicationJsonMessageEnum {
+/**
+ * The specified booking was not found; or, it was not created with this API key
+ */
+export declare enum CancelBooking404ApplicationJSONMessageEnum {
     BookingNotFound = "Booking not found"
 }
-export declare class CancelBooking404ApplicationJson extends SpeakeasyBase {
-    code?: CancelBooking404ApplicationJsonCodeEnum;
-    message?: CancelBooking404ApplicationJsonMessageEnum;
+/**
+ * Not found
+ */
+export declare class CancelBooking404ApplicationJSON extends SpeakeasyBase {
+    code?: CancelBooking404ApplicationJSONCodeEnum;
+    /**
+     * The specified booking was not found; or, it was not created with this API key
+     */
+    message?: CancelBooking404ApplicationJSONMessageEnum;
+    /**
+     * Timestamp of the request
+     */
     timestamp?: string;
+    /**
+     * Tracking identifier for this error response (useful when seeking support)
+     */
     trackingId?: string;
 }
-export declare class CancelBookingRequest extends SpeakeasyBase {
-    serverURL?: string;
-    pathParams: CancelBookingPathParams;
-    headers: CancelBookingHeaders;
-    request?: shared.CancellationRequest;
+export declare enum CancelBooking400ApplicationJSONCodeEnum {
+    BadRequest = "BAD_REQUEST"
+}
+export declare enum CancelBooking400ApplicationJSONMessageEnum {
+    MissingCancellationReason = "Missing cancellation reason"
+}
+/**
+ * Bad request
+ */
+export declare class CancelBooking400ApplicationJSON extends SpeakeasyBase {
+    code?: CancelBooking400ApplicationJSONCodeEnum;
+    message?: CancelBooking400ApplicationJSONMessageEnum;
+    /**
+     * Timestamp of the request
+     */
+    timestamp?: string;
+    /**
+     * Tracking identifier for this error response (useful when seeking support)
+     */
+    trackingId?: string;
 }
 export declare class CancelBookingResponse extends SpeakeasyBase {
-    fourHundredAndOneUNAUTHORIZED?: shared.FourHundredAndOneUnauthorized;
-    fourHundredAndSixNOTACCEPTABLE?: shared.FourHundredAndSixNotAcceptable;
-    fiveHundredINTERNALSERVERERROR?: shared.FiveHundredInternalServerError;
-    fiveHundredAndThreeSERVICEUNAVAILABLE?: shared.FiveHundredAndThreeServiceUnavailable;
+    /**
+     * Unauthorized
+     */
+    fourHundredAndOneUNAUTHORIZED?: shared.FourHundredAndOneUNAUTHORIZED;
+    /**
+     * Not Acceptable
+     */
+    fourHundredAndSixNOTACCEPTABLE?: shared.FourHundredAndSixNOTACCEPTABLE;
+    /**
+     * Internal Server Error
+     */
+    fiveHundredINTERNALSERVERERROR?: shared.FiveHundredINTERNALSERVERERROR;
+    /**
+     * Service Unavailable
+     */
+    fiveHundredAndThreeSERVICEUNAVAILABLE?: shared.FiveHundredAndThreeSERVICEUNAVAILABLE;
+    /**
+     * Success
+     */
     cancelBookingResponse?: shared.CancelBookingResponse;
     contentType: string;
     statusCode: number;
-    cancelBooking400ApplicationJSONObject?: CancelBooking400ApplicationJson;
-    cancelBooking404ApplicationJSONObject?: CancelBooking404ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * Bad request
+     */
+    cancelBooking400ApplicationJSONObject?: CancelBooking400ApplicationJSON;
+    /**
+     * Not found
+     */
+    cancelBooking404ApplicationJSONObject?: CancelBooking404ApplicationJSON;
 }

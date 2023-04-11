@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { CacheSettings } from "./cachesettings";
-import { CacheBehaviorPerPath } from "./cachebehaviorperpath";
 import { CacheBehavior } from "./cachebehavior";
+import { CacheBehaviorPerPath } from "./cachebehaviorperpath";
+import { CacheSettings } from "./cachesettings";
 import { IpAddressTypeEnum } from "./ipaddresstypeenum";
-import { ResourceLocation } from "./resourcelocation";
 import { Origin } from "./origin";
+import { ResourceLocation } from "./resourcelocation";
 import { ResourceTypeEnum } from "./resourcetypeenum";
 import { Tag } from "./tag";
 /**
  * Describes an Amazon Lightsail content delivery network (CDN) distribution.
-**/
+ */
 export declare class LightsailDistribution extends SpeakeasyBase {
     ableToUpdateBundle?: boolean;
     alternativeDomainNames?: string[];

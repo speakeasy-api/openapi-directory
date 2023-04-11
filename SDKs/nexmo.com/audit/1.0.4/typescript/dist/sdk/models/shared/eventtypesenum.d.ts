@@ -1,3 +1,6 @@
+/**
+ * The type of the audit event.
+ */
 export declare enum EventTypesEnum {
     UserStatus = "USER_STATUS",
     UserUpdate = "USER_UPDATE",

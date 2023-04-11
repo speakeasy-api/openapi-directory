@@ -6,6 +6,9 @@ export declare enum BatchResponseSubscriptionResponseStatusEnum {
     Canceled = "CANCELED",
     Complete = "COMPLETE"
 }
+/**
+ * successful operation
+ */
 export declare class BatchResponseSubscriptionResponse extends SpeakeasyBase {
     completedAt: Date;
     links?: Record<string, string>;

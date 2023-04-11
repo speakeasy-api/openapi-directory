@@ -1,17 +1,22 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDeleteTransitGatewayConnectActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDeleteTransitGatewayConnectActionEnum {
     DeleteTransitGatewayConnect = "DeleteTransitGatewayConnect"
 }
-export declare enum GetDeleteTransitGatewayConnectVersionEnum {
+export declare enum GETDeleteTransitGatewayConnectVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class GetDeleteTransitGatewayConnectQueryParams extends SpeakeasyBase {
-    action: GetDeleteTransitGatewayConnectActionEnum;
+export declare class GETDeleteTransitGatewayConnectRequest extends SpeakeasyBase {
+    action: GETDeleteTransitGatewayConnectActionEnum;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
+     */
     dryRun?: boolean;
+    /**
+     * The ID of the Connect attachment.
+     */
     transitGatewayAttachmentId: string;
-    version: GetDeleteTransitGatewayConnectVersionEnum;
-}
-export declare class GetDeleteTransitGatewayConnectHeaders extends SpeakeasyBase {
+    version: GETDeleteTransitGatewayConnectVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,12 +25,9 @@ export declare class GetDeleteTransitGatewayConnectHeaders extends SpeakeasyBase
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDeleteTransitGatewayConnectRequest extends SpeakeasyBase {
-    queryParams: GetDeleteTransitGatewayConnectQueryParams;
-    headers: GetDeleteTransitGatewayConnectHeaders;
-}
-export declare class GetDeleteTransitGatewayConnectResponse extends SpeakeasyBase {
+export declare class GETDeleteTransitGatewayConnectResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

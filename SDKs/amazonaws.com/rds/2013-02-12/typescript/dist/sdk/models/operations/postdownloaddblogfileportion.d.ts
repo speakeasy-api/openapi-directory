@@ -1,17 +1,23 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostDownloadDbLogFilePortionActionEnum {
-    DownloadDbLogFilePortion = "DownloadDBLogFilePortion"
+import { AxiosResponse } from "axios";
+export declare enum POSTDownloadDBLogFilePortionActionEnum {
+    DownloadDBLogFilePortion = "DownloadDBLogFilePortion"
 }
-export declare enum PostDownloadDbLogFilePortionVersionEnum {
+export declare enum POSTDownloadDBLogFilePortionVersionEnum {
     TwoThousandAndThirteen0212 = "2013-02-12"
 }
-export declare class PostDownloadDbLogFilePortionQueryParams extends SpeakeasyBase {
-    action: PostDownloadDbLogFilePortionActionEnum;
+export declare class POSTDownloadDBLogFilePortionRequest extends SpeakeasyBase {
+    action: POSTDownloadDBLogFilePortionActionEnum;
+    /**
+     * Pagination token
+     */
     marker?: string;
+    /**
+     * Pagination limit
+     */
     numberOfLines?: string;
-    version: PostDownloadDbLogFilePortionVersionEnum;
-}
-export declare class PostDownloadDbLogFilePortionHeaders extends SpeakeasyBase {
+    requestBody?: Uint8Array;
+    version: POSTDownloadDBLogFilePortionVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -20,13 +26,9 @@ export declare class PostDownloadDbLogFilePortionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostDownloadDbLogFilePortionRequest extends SpeakeasyBase {
-    queryParams: PostDownloadDbLogFilePortionQueryParams;
-    headers: PostDownloadDbLogFilePortionHeaders;
-    request?: Uint8Array;
-}
-export declare class PostDownloadDbLogFilePortionResponse extends SpeakeasyBase {
+export declare class POSTDownloadDBLogFilePortionResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum PostResetAddressAttributeActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum POSTResetAddressAttributeActionEnum {
     ResetAddressAttribute = "ResetAddressAttribute"
 }
-export declare enum PostResetAddressAttributeVersionEnum {
+export declare enum POSTResetAddressAttributeVersionEnum {
     TwoThousandAndSixteen1115 = "2016-11-15"
 }
-export declare class PostResetAddressAttributeQueryParams extends SpeakeasyBase {
-    action: PostResetAddressAttributeActionEnum;
-    version: PostResetAddressAttributeVersionEnum;
-}
-export declare class PostResetAddressAttributeHeaders extends SpeakeasyBase {
+export declare class POSTResetAddressAttributeRequest extends SpeakeasyBase {
+    action: POSTResetAddressAttributeActionEnum;
+    requestBody?: Uint8Array;
+    version: POSTResetAddressAttributeVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -18,13 +18,9 @@ export declare class PostResetAddressAttributeHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class PostResetAddressAttributeRequest extends SpeakeasyBase {
-    queryParams: PostResetAddressAttributeQueryParams;
-    headers: PostResetAddressAttributeHeaders;
-    request?: Uint8Array;
-}
-export declare class PostResetAddressAttributeResponse extends SpeakeasyBase {
+export declare class POSTResetAddressAttributeResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

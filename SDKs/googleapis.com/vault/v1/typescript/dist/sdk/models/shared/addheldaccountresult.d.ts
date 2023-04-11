@@ -3,8 +3,14 @@ import { HeldAccount } from "./heldaccount";
 import { Status } from "./status";
 /**
  * The status of each account creation, and the **HeldAccount**, if successful.
-**/
+ */
 export declare class AddHeldAccountResult extends SpeakeasyBase {
+    /**
+     * An account covered by a hold. This structure is immutable. It can be an individual account or a Google Group, depending on the service. To work with Vault resources, the account must have the [required Vault privileges] (https://support.google.com/vault/answer/2799699) and access to the matter. To access a matter, the account must have created the matter, have the matter shared with them, or have the **View All Matters** privilege.
+     */
     account?: HeldAccount;
+    /**
+     * The `Status` type defines a logical error model that is suitable for different programming environments, including REST APIs and RPC APIs. It is used by [gRPC](https://github.com/grpc). Each `Status` message contains three pieces of data: error code, error message, and error details. You can find out more about this error model and how to work with it in the [API Design Guide](https://cloud.google.com/apis/design/errors).
+     */
     status?: Status;
 }

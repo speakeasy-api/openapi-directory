@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { JobResource } from "./jobresource";
 import { JobTypeEnum } from "./jobtypeenum";
 import { Notification } from "./notification";
 import { OnDeviceServiceConfiguration } from "./ondeviceserviceconfiguration";
 import { RemoteManagementEnum } from "./remotemanagementenum";
-import { JobResource } from "./jobresource";
 import { ShippingOptionEnum } from "./shippingoptionenum";
 import { SnowballTypeEnum } from "./snowballtypeenum";
 import { TaxDocuments } from "./taxdocuments";

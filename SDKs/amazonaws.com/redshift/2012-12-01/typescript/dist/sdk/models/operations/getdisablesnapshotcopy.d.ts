@@ -1,16 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetDisableSnapshotCopyActionEnum {
+import { AxiosResponse } from "axios";
+export declare enum GETDisableSnapshotCopyActionEnum {
     DisableSnapshotCopy = "DisableSnapshotCopy"
 }
-export declare enum GetDisableSnapshotCopyVersionEnum {
+export declare enum GETDisableSnapshotCopyVersionEnum {
     TwoThousandAndTwelve1201 = "2012-12-01"
 }
-export declare class GetDisableSnapshotCopyQueryParams extends SpeakeasyBase {
-    action: GetDisableSnapshotCopyActionEnum;
+export declare class GETDisableSnapshotCopyRequest extends SpeakeasyBase {
+    action: GETDisableSnapshotCopyActionEnum;
+    /**
+     * <p>The unique identifier of the source cluster that you want to disable copying of snapshots to a destination region.</p> <p>Constraints: Must be the valid name of an existing cluster that has cross-region snapshot copy enabled.</p>
+     */
     clusterIdentifier: string;
-    version: GetDisableSnapshotCopyVersionEnum;
-}
-export declare class GetDisableSnapshotCopyHeaders extends SpeakeasyBase {
+    version: GETDisableSnapshotCopyVersionEnum;
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -19,12 +21,9 @@ export declare class GetDisableSnapshotCopyHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class GetDisableSnapshotCopyRequest extends SpeakeasyBase {
-    queryParams: GetDisableSnapshotCopyQueryParams;
-    headers: GetDisableSnapshotCopyHeaders;
-}
-export declare class GetDisableSnapshotCopyResponse extends SpeakeasyBase {
+export declare class GETDisableSnapshotCopyResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

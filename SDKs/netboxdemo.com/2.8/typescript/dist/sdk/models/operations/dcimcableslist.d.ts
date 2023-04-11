@@ -1,6 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class DcimCablesListQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DcimCablesListRequest extends SpeakeasyBase {
     color?: string;
     colorN?: string;
     device?: string;
@@ -29,7 +30,13 @@ export declare class DcimCablesListQueryParams extends SpeakeasyBase {
     lengthN?: string;
     lengthUnit?: string;
     lengthUnitN?: string;
+    /**
+     * Number of results to return per page.
+     */
     limit?: number;
+    /**
+     * The initial index from which to return the results.
+     */
     offset?: number;
     q?: string;
     rack?: string;
@@ -43,17 +50,15 @@ export declare class DcimCablesListQueryParams extends SpeakeasyBase {
     type?: string;
     typeN?: string;
 }
-export declare class DcimCablesList200ApplicationJson extends SpeakeasyBase {
+export declare class DcimCablesList200ApplicationJSON extends SpeakeasyBase {
     count: number;
     next?: string;
     previous?: string;
     results: shared.Cable[];
 }
-export declare class DcimCablesListRequest extends SpeakeasyBase {
-    queryParams: DcimCablesListQueryParams;
-}
 export declare class DcimCablesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dcimCablesList200ApplicationJSONObject?: DcimCablesList200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    dcimCablesList200ApplicationJSONObject?: DcimCablesList200ApplicationJSON;
 }

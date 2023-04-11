@@ -34,15 +34,24 @@ export declare class ResourceRelationships extends SpeakeasyBase {
     parentResource?: ResourceRelationshipsParentResource;
     share?: ResourceRelationshipsShare;
 }
+/**
+ * Type of item. "resource"
+ */
 export declare enum ResourceTypeEnum {
     Resource = "resource"
 }
 /**
  * All properties of the resource.
-**/
+ */
 export declare class Resource extends SpeakeasyBase {
+    /**
+     * Attributes of resource
+     */
     attributes?: ResourceAttributes;
     id?: number;
     relationships?: ResourceRelationships;
+    /**
+     * Type of item. "resource"
+     */
     type?: ResourceTypeEnum;
 }

@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Success
+ */
 export declare class ResourceGroupViewModel extends SpeakeasyBase {
     bookingNotification?: number;
     deletedStatus?: boolean;
@@ -8,5 +11,5 @@ export declare class ResourceGroupViewModel extends SpeakeasyBase {
     id?: string;
     locationId?: string;
     name?: string;
-    objectName?: string;
+    object?: string;
 }

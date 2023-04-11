@@ -1,20 +1,43 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteProjectUsernameProjectCheckoutKeyFingerprintPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteProjectUsernameProjectCheckoutKeyFingerprintRequest extends SpeakeasyBase {
+    /**
+     * XXXXXXXXXX
+     *
+     * @remarks
+     *
+     */
     fingerprint: string;
+    /**
+     * XXXXXXXXX
+     *
+     * @remarks
+     *
+     */
     project: string;
+    /**
+     * XXXXXXXXX
+     *
+     * @remarks
+     *
+     */
     username: string;
 }
-export declare enum DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJsonMessageEnum {
+export declare enum DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJSONMessageEnum {
     Ok = "OK"
 }
-export declare class DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJson extends SpeakeasyBase {
-    message?: DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJsonMessageEnum;
-}
-export declare class DeleteProjectUsernameProjectCheckoutKeyFingerprintRequest extends SpeakeasyBase {
-    pathParams: DeleteProjectUsernameProjectCheckoutKeyFingerprintPathParams;
+/**
+ * status message
+ */
+export declare class DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJSON extends SpeakeasyBase {
+    message?: DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJSONMessageEnum;
 }
 export declare class DeleteProjectUsernameProjectCheckoutKeyFingerprintResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJSONObject?: DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * status message
+     */
+    deleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJSONObject?: DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJSON;
 }

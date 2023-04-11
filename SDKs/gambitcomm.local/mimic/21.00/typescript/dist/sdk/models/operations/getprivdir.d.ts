@@ -1,12 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetPrivdirPathParams extends SpeakeasyBase {
-    agentNum: number;
-}
+import { AxiosResponse } from "axios";
 export declare class GetPrivdirRequest extends SpeakeasyBase {
-    pathParams: GetPrivdirPathParams;
+    /**
+     * Agent to return the directory path
+     */
+    agentNum: number;
 }
 export declare class GetPrivdirResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
+    /**
+     * successful operation
+     */
     getPrivdir200ApplicationJSONString?: string;
 }

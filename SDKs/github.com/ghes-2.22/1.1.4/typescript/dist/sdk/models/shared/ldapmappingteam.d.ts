@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Response
+ */
 export declare class LdapMappingTeam extends SpeakeasyBase {
     description?: string;
     htmlUrl?: string;

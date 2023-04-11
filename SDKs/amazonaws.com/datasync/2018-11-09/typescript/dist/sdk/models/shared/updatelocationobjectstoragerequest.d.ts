@@ -5,6 +5,7 @@ export declare class UpdateLocationObjectStorageRequest extends SpeakeasyBase {
     agentArns?: string[];
     locationArn: string;
     secretKey?: string;
+    serverCertificate?: string;
     serverPort?: number;
     serverProtocol?: ObjectStorageServerProtocolEnum;
     subdirectory?: string;

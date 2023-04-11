@@ -1,4 +1,4 @@
-export declare enum CeStatusEnum {
+export declare enum CEStatusEnum {
     Creating = "CREATING",
     Updating = "UPDATING",
     Deleting = "DELETING",

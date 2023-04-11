@@ -1,11 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeletePermissionGroupPathParams extends SpeakeasyBase {
-    permissionGroupId: number;
-}
+import { AxiosResponse } from "axios";
 export declare class DeletePermissionGroupRequest extends SpeakeasyBase {
-    pathParams: DeletePermissionGroupPathParams;
+    /**
+     * The identifier of the Permission Group.
+     */
+    permissionGroupId: number;
 }
 export declare class DeletePermissionGroupResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

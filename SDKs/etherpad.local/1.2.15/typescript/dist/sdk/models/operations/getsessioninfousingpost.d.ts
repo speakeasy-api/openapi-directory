@@ -1,44 +1,67 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetSessionInfoUsingPostQueryParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class GetSessionInfoUsingPOSTRequest extends SpeakeasyBase {
     sessionID?: string;
 }
-export declare class GetSessionInfoUsingPost200ApplicationJsonDataInfo extends SpeakeasyBase {
+/**
+ * internal api error (code 2)
+ */
+export declare class GetSessionInfoUsingPost500ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+/**
+ * no or wrong API key (code 4)
+ */
+export declare class GetSessionInfoUsingPost401ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+/**
+ * generic api error (code 1)
+ */
+export declare class GetSessionInfoUsingPost400ApplicationJSON extends SpeakeasyBase {
+    code?: number;
+    data?: Record<string, any>;
+    message?: string;
+}
+export declare class GetSessionInfoUsingPost200ApplicationJSONDataInfo extends SpeakeasyBase {
     authorID?: string;
     groupID?: string;
     id?: string;
     validUntil?: number;
 }
-export declare class GetSessionInfoUsingPost200ApplicationJsonData extends SpeakeasyBase {
-    info?: GetSessionInfoUsingPost200ApplicationJsonDataInfo;
+export declare class GetSessionInfoUsingPost200ApplicationJSONData extends SpeakeasyBase {
+    info?: GetSessionInfoUsingPost200ApplicationJSONDataInfo;
 }
-export declare class GetSessionInfoUsingPost200ApplicationJson extends SpeakeasyBase {
+/**
+ * ok (code 0)
+ */
+export declare class GetSessionInfoUsingPost200ApplicationJSON extends SpeakeasyBase {
     code?: number;
-    data?: GetSessionInfoUsingPost200ApplicationJsonData;
+    data?: GetSessionInfoUsingPost200ApplicationJSONData;
     message?: string;
 }
-export declare class GetSessionInfoUsingPost400ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class GetSessionInfoUsingPost401ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class GetSessionInfoUsingPost500ApplicationJson extends SpeakeasyBase {
-    code?: number;
-    data?: Record<string, any>;
-    message?: string;
-}
-export declare class GetSessionInfoUsingPostRequest extends SpeakeasyBase {
-    queryParams: GetSessionInfoUsingPostQueryParams;
-}
-export declare class GetSessionInfoUsingPostResponse extends SpeakeasyBase {
+export declare class GetSessionInfoUsingPOSTResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getSessionInfoUsingPOST200ApplicationJSONObject?: GetSessionInfoUsingPost200ApplicationJson;
-    getSessionInfoUsingPOST400ApplicationJSONObject?: GetSessionInfoUsingPost400ApplicationJson;
-    getSessionInfoUsingPOST401ApplicationJSONObject?: GetSessionInfoUsingPost401ApplicationJson;
-    getSessionInfoUsingPOST500ApplicationJSONObject?: GetSessionInfoUsingPost500ApplicationJson;
+    rawResponse?: AxiosResponse;
+    /**
+     * ok (code 0)
+     */
+    getSessionInfoUsingPOST200ApplicationJSONObject?: GetSessionInfoUsingPost200ApplicationJSON;
+    /**
+     * generic api error (code 1)
+     */
+    getSessionInfoUsingPOST400ApplicationJSONObject?: GetSessionInfoUsingPost400ApplicationJSON;
+    /**
+     * no or wrong API key (code 4)
+     */
+    getSessionInfoUsingPOST401ApplicationJSONObject?: GetSessionInfoUsingPost401ApplicationJSON;
+    /**
+     * internal api error (code 2)
+     */
+    getSessionInfoUsingPOST500ApplicationJSONObject?: GetSessionInfoUsingPost500ApplicationJSON;
 }

@@ -1,13 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CreateEventNotificationHeaders extends SpeakeasyBase {
-    xFapiFinancialId: string;
-    xFapiInteractionId?: string;
-}
+import { AxiosResponse } from "axios";
 export declare class CreateEventNotificationRequest extends SpeakeasyBase {
-    headers: CreateEventNotificationHeaders;
-    request: string;
+    /**
+     * Create an Callback URI
+     */
+    requestBody: string;
+    /**
+     * The unique id of the ASPSP to which the request is issued. The unique id will be issued by OB.
+     */
+    xFapiFinancialId: string;
+    /**
+     * An RFC4122 UID used as a correlation id.
+     */
+    xFapiInteractionId?: string;
 }
 export declare class CreateEventNotificationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

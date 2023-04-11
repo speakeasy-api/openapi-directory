@@ -1,8 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DeleteSubscriptionDefinitionPathParams extends SpeakeasyBase {
+import { AxiosResponse } from "axios";
+export declare class DeleteSubscriptionDefinitionRequest extends SpeakeasyBase {
+    /**
+     * The ID of the subscription definition.
+     */
     subscriptionDefinitionId: string;
-}
-export declare class DeleteSubscriptionDefinitionHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
     xAmzContentSha256?: string;
     xAmzCredential?: string;
@@ -11,13 +13,16 @@ export declare class DeleteSubscriptionDefinitionHeaders extends SpeakeasyBase {
     xAmzSignature?: string;
     xAmzSignedHeaders?: string;
 }
-export declare class DeleteSubscriptionDefinitionRequest extends SpeakeasyBase {
-    pathParams: DeleteSubscriptionDefinitionPathParams;
-    headers: DeleteSubscriptionDefinitionHeaders;
-}
 export declare class DeleteSubscriptionDefinitionResponse extends SpeakeasyBase {
+    /**
+     * BadRequestException
+     */
     badRequestException?: any;
     contentType: string;
+    /**
+     * Success
+     */
     deleteSubscriptionDefinitionResponse?: Record<string, any>;
     statusCode: number;
+    rawResponse?: AxiosResponse;
 }

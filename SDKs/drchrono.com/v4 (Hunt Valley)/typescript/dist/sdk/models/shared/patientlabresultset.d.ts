@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * HL7 codified abnormal flag for the result.
+ */
 export declare enum PatientLabResultSetAbnormalFlagEnum {
     Unknown = "",
     L = "L",
@@ -21,6 +24,9 @@ export declare enum PatientLabResultSetAbnormalFlagEnum {
     Ms = "MS",
     Vs = "VS"
 }
+/**
+ * Status of the lab order.
+ */
 export declare enum PatientLabResultSetStatusEnum {
     Unknown = "",
     OrderEntered = "Order Entered",
@@ -30,16 +36,37 @@ export declare enum PatientLabResultSetStatusEnum {
     ResultsReviewedWithPatient = "Results Reviewed with Patient",
     PaperOrder = "Paper Order"
 }
+/**
+ * Created
+ */
 export declare class PatientLabResultSet extends SpeakeasyBase {
     createdAt?: string;
+    /**
+     * Date of lab test.
+     */
     dateTestPerformed?: string;
+    /**
+     * Comment from the doctor on lab result.
+     */
     doctorComments?: string;
+    /**
+     * Check this box when the doctor has reviewed the lab result and taken appropriate action.
+     */
     doctorSignoff?: boolean;
     id?: number;
+    /**
+     * HL7 codified abnormal flag for the result.
+     */
     labAbnormalFlag?: PatientLabResultSetAbnormalFlagEnum;
+    /**
+     * Imported CCR document that contains lab results.
+     */
     labImportedFromCcr?: string;
     labNormalRange?: string;
     labNormalRangeUnits?: string;
+    /**
+     * Status of the lab order.
+     */
     labOrderStatus?: PatientLabResultSetStatusEnum;
     labResultValue?: string;
     labResultValueAsFloat?: number;
@@ -47,6 +74,9 @@ export declare class PatientLabResultSet extends SpeakeasyBase {
     loincCode?: string;
     orderingDoctor: number;
     patient: number;
+    /**
+     * Scanned in PDF for this lab result (optional).
+     */
     scannedInResult?: string;
     title?: string;
     updatedAt?: string;
